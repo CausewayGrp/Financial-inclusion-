@@ -1,5 +1,18 @@
 # Repository Change Log
 
+## 2026-09-26 — F7: sustainability baseline and stewardship note
+
+No Master change.
+- **Baseline.** `audit/SUSTAINABILITY_PRE_DESIGN_BASELINE.json`, measured with `audit/final_integration/f7_measure_baseline.py`
+  (headless Chromium, local static server, 12 route classes × 2 languages, cold and warm, plus the Search interaction).
+  The master logo (10 MB PNG, never redrawn here) is 96–99 % of every cold page; without it a page is 0.09–0.45 MB in
+  four requests; warm loads transfer nothing; the search index (about 2 MB) loads only when Search is opened.
+- **Method.** `docs/SUSTAINABILITY_METHOD.md`: what is measured, the system boundary, what is deliberately not done (no
+  carbon figure, budget, badge or comparison before Design) and when to remeasure.
+- **Stewardship.** `handoff/SUPPORT_AND_PARTNERSHIP_READINESS.md` (not public, not a Design input): public-good proposition,
+  editorial-independence covenant, conflict rules, cost categories, use and impact framework, partnership menu, rights
+  boundary and a DPG gap assessment (not eligible today; nothing claimed).
+
 ## 2026-09-26 — F6: discovery, accessibility, rights, security and privacy (pre-Design)
 
 Record `audit/F6_DISCOVERY_ACCESSIBILITY_RIGHTS_SECURITY_ACCEPTANCE.md`; no Master change.

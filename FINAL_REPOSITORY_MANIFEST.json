@@ -26,8 +26,8 @@
   "AUTHORITY_POINTER": 2,
   "AUTHORITY_RULES": 1,
   "BUILD_AND_GATES": 14,
-  "CURRENT_DOCUMENT": 8,
-  "CURRENT_PROGRAMME_RECORD": 40,
+  "CURRENT_DOCUMENT": 9,
+  "CURRENT_PROGRAMME_RECORD": 42,
   "GENERATED_DIAGRAMS": 9,
   "GENERATED_LITERAL_CLOSURE": 1,
   "GENERATED_PROJECTION": 39,
@@ -35,7 +35,7 @@
   "LOGO_AUTHORITY": 1,
   "PROJECTION_CONTRACT": 11,
   "PROJECTION_GENERATOR": 13,
-  "RECIPIENT_HANDOFF": 10,
+  "RECIPIENT_HANDOFF": 11,
   "REPOSITORY_ENGINEERING": 9,
   "RUNTIME_SOURCE": 4,
   "STANDING_POLICY": 5
@@ -322,6 +322,10 @@
    "class": "AUDIT_HISTORY"
   },
   {
+   "path": "audit/SUSTAINABILITY_PRE_DESIGN_BASELINE.json",
+   "class": "CURRENT_PROGRAMME_RECORD"
+  },
+  {
    "path": "audit/TERMINOLOGY_SWEEP_KEEP_REGISTER.csv",
    "class": "AUDIT_HISTORY"
   },
@@ -383,6 +387,10 @@
   },
   {
    "path": "audit/directives/README.md",
+   "class": "CURRENT_PROGRAMME_RECORD"
+  },
+  {
+   "path": "audit/final_integration/f7_measure_baseline.py",
    "class": "CURRENT_PROGRAMME_RECORD"
   },
   {
@@ -2518,6 +2526,10 @@
    "class": "AUDIT_HISTORY"
   },
   {
+   "path": "docs/SUSTAINABILITY_METHOD.md",
+   "class": "CURRENT_DOCUMENT"
+  },
+  {
    "path": "handoff/CLAUDE_CODE_MASTER_PROMPT.md",
    "class": "RECIPIENT_HANDOFF"
   },
@@ -2551,6 +2563,10 @@
   },
   {
    "path": "handoff/STATIC_RUNTIME_AND_API_CONTRACT.md",
+   "class": "RECIPIENT_HANDOFF"
+  },
+  {
+   "path": "handoff/SUPPORT_AND_PARTNERSHIP_READINESS.md",
    "class": "RECIPIENT_HANDOFF"
   },
   {

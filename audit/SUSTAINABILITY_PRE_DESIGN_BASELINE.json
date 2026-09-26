@@ -1,0 +1,1266 @@
+{
+ "schema": "YFIE_SUSTAINABILITY_BASELINE/1.0",
+ "status": "PRE_DESIGN_REFERENCE_BUILD — not the operational footprint; remeasure after Design, Code and deployment",
+ "method": {
+  "document": "docs/SUSTAINABILITY_METHOD.md",
+  "script": "audit/final_integration/f7_measure_baseline.py",
+  "measurement": "Chrome DevTools Protocol network events: bytes received on the wire (encodedDataLength) and request count per resource type",
+  "model": "None for carbon. Transfer and requests are measured; a gzip-6 transfer size is modelled for a typical static host. No kWh or CO2e figure is computed before Design",
+  "tools": {
+   "browser": "Chromium 141.0.7390.37 (headless, Playwright 1.56.0)",
+   "python": "3.11.15",
+   "server": "Python http.server, local, no compression, no CDN"
+  }
+ },
+ "measured_at": "2026-09-26",
+ "build": {
+  "commit_measured": "5d6ce4c4b458339f51c0e7991a2174f48773573d",
+  "production_master_sha256": "ed3c5796cb0cca0109a0eb56f66d344ab0a5faa550e5235e05d65a6147f33fe1",
+  "html_documents": 288
+ },
+ "system_boundary": "Browser to a local static server on the same machine: the bytes and requests a page asks for. Excludes network hops, CDN, data centre, the reader's device energy, embodied emissions and every third party (there are none).",
+ "viewport": "1440 × 900 CSS px, desktop Chromium; one representative page per route class in each language",
+ "cache_states": {
+  "cold": "new browser context, empty cache",
+  "warm": "the same page opened again in the same context; everything came from the browser cache (0 bytes)"
+ },
+ "hosting_assumption": "Unknown. The release host, compression, HTTP version and caching policy are engineering decisions after Design (docs/DEPLOYMENT.md).",
+ "fonts": "No web font is loaded; the stylesheet names IBM Plex Sans / IBM Plex Sans Arabic and falls back to system fonts",
+ "summary": {
+  "cold_page_transferred_bytes": {
+   "min": 10104040,
+   "max": 10472742
+  },
+  "cold_page_requests": 4,
+  "master_logo_bytes": 10018081,
+  "master_logo_share_of_cold_page": "95.7%–99.1%",
+  "cold_page_bytes_without_logo": {
+   "min": 85767,
+   "max": 454469
+  },
+  "html_document_bytes": {
+   "min": 14113,
+   "max": 382815,
+   "largest": "the source directory (/data/): every source card on one page"
+  },
+  "javascript_bytes": 23663,
+  "css_bytes": 47991,
+  "search_interaction_bytes": 1976885,
+  "search_interaction_modelled_gzip_bytes": 320957,
+  "warm_page_transferred_bytes": 0
+ },
+ "findings": [
+  "The canonical CauseWay master logo (10,018,081-byte PNG, shown at 138-140 CSS px) is about 96-99% of every cold page. It is never redrawn, regenerated, recoloured or cropped here; web-size derivatives approved by the owner are release-only engineering (TOOL-02). This is the one change that dominates the footprint.",
+  "Without the logo a cold page transfers roughly 0.09-0.45 MB in four requests (HTML, one stylesheet, one script); the modelled gzip transfer is a fraction of that.",
+  "Search loads a 1.97 MB local index on first use (about 0.32 MB with gzip); it is fetched only when Search is opened.",
+  "Nothing is loaded from a third party: no web font, analytics, tracker or CDN (gate F6-G05)."
+ ],
+ "uncertainty": "Single run per page on one machine; byte counts are exact for this build and server, request timing is not measured. Real transfer depends on compression, protocol overheads, caching headers and the final design; the modelled gzip figure is an estimate. No figure here may be presented as the operational or carbon footprint of the released site.",
+ "not_claimed": "No green badge, rating, carbon figure or comparison with other sites.",
+ "pages": {
+  "home:en": {
+   "route": "/en/",
+   "cold": {
+    "requests": 4,
+    "transferred_bytes": 10109724,
+    "by_type": {
+     "css": {
+      "requests": 1,
+      "bytes": 47991
+     },
+     "html": {
+      "requests": 1,
+      "bytes": 19797
+     },
+     "images": {
+      "requests": 1,
+      "bytes": 10018273
+     },
+     "js": {
+      "requests": 1,
+      "bytes": 23663
+     }
+    },
+    "modelled_gzip_bytes": 10042688
+   },
+   "warm": {
+    "requests": 4,
+    "transferred_bytes": 0,
+    "by_type": {
+     "css": {
+      "requests": 1,
+      "bytes": 0
+     },
+     "html": {
+      "requests": 1,
+      "bytes": 0
+     },
+     "images": {
+      "requests": 1,
+      "bytes": 0
+     },
+     "js": {
+      "requests": 1,
+      "bytes": 0
+     }
+    },
+    "modelled_gzip_bytes": 10042688
+   }
+  },
+  "home:ar": {
+   "route": "/ar/",
+   "cold": {
+    "requests": 4,
+    "transferred_bytes": 10115296,
+    "by_type": {
+     "css": {
+      "requests": 1,
+      "bytes": 47991
+     },
+     "html": {
+      "requests": 1,
+      "bytes": 25369
+     },
+     "images": {
+      "requests": 1,
+      "bytes": 10018273
+     },
+     "js": {
+      "requests": 1,
+      "bytes": 23663
+     }
+    },
+    "modelled_gzip_bytes": 10043672
+   },
+   "warm": {
+    "requests": 4,
+    "transferred_bytes": 0,
+    "by_type": {
+     "css": {
+      "requests": 1,
+      "bytes": 0
+     },
+     "html": {
+      "requests": 1,
+      "bytes": 0
+     },
+     "images": {
+      "requests": 1,
+      "bytes": 0
+     },
+     "js": {
+      "requests": 1,
+      "bytes": 0
+     }
+    },
+    "modelled_gzip_bytes": 10043672
+   }
+  },
+  "explore:en": {
+   "route": "/en/explore/",
+   "cold": {
+    "requests": 4,
+    "transferred_bytes": 10110634,
+    "by_type": {
+     "css": {
+      "requests": 1,
+      "bytes": 47991
+     },
+     "html": {
+      "requests": 1,
+      "bytes": 20707
+     },
+     "images": {
+      "requests": 1,
+      "bytes": 10018273
+     },
+     "js": {
+      "requests": 1,
+      "bytes": 23663
+     }
+    },
+    "modelled_gzip_bytes": 10042889
+   },
+   "warm": {
+    "requests": 4,
+    "transferred_bytes": 0,
+    "by_type": {
+     "css": {
+      "requests": 1,
+      "bytes": 0
+     },
+     "html": {
+      "requests": 1,
+      "bytes": 0
+     },
+     "images": {
+      "requests": 1,
+      "bytes": 0
+     },
+     "js": {
+      "requests": 1,
+      "bytes": 0
+     }
+    },
+    "modelled_gzip_bytes": 10042889
+   }
+  },
+  "explore:ar": {
+   "route": "/ar/explore/",
+   "cold": {
+    "requests": 4,
+    "transferred_bytes": 10116316,
+    "by_type": {
+     "css": {
+      "requests": 1,
+      "bytes": 47991
+     },
+     "html": {
+      "requests": 1,
+      "bytes": 26389
+     },
+     "images": {
+      "requests": 1,
+      "bytes": 10018273
+     },
+     "js": {
+      "requests": 1,
+      "bytes": 23663
+     }
+    },
+    "modelled_gzip_bytes": 10043857
+   },
+   "warm": {
+    "requests": 4,
+    "transferred_bytes": 0,
+    "by_type": {
+     "css": {
+      "requests": 1,
+      "bytes": 0
+     },
+     "html": {
+      "requests": 1,
+      "bytes": 0
+     },
+     "images": {
+      "requests": 1,
+      "bytes": 0
+     },
+     "js": {
+      "requests": 1,
+      "bytes": 0
+     }
+    },
+    "modelled_gzip_bytes": 10043857
+   }
+  },
+  "domain_answer:en": {
+   "route": "/en/people/",
+   "cold": {
+    "requests": 4,
+    "transferred_bytes": 10116918,
+    "by_type": {
+     "css": {
+      "requests": 1,
+      "bytes": 47991
+     },
+     "html": {
+      "requests": 1,
+      "bytes": 26991
+     },
+     "images": {
+      "requests": 1,
+      "bytes": 10018273
+     },
+     "js": {
+      "requests": 1,
+      "bytes": 23663
+     }
+    },
+    "modelled_gzip_bytes": 10044568
+   },
+   "warm": {
+    "requests": 4,
+    "transferred_bytes": 0,
+    "by_type": {
+     "css": {
+      "requests": 1,
+      "bytes": 0
+     },
+     "html": {
+      "requests": 1,
+      "bytes": 0
+     },
+     "images": {
+      "requests": 1,
+      "bytes": 0
+     },
+     "js": {
+      "requests": 1,
+      "bytes": 0
+     }
+    },
+    "modelled_gzip_bytes": 10044568
+   }
+  },
+  "domain_answer:ar": {
+   "route": "/ar/people/",
+   "cold": {
+    "requests": 4,
+    "transferred_bytes": 10124984,
+    "by_type": {
+     "css": {
+      "requests": 1,
+      "bytes": 47991
+     },
+     "html": {
+      "requests": 1,
+      "bytes": 35057
+     },
+     "images": {
+      "requests": 1,
+      "bytes": 10018273
+     },
+     "js": {
+      "requests": 1,
+      "bytes": 23663
+     }
+    },
+    "modelled_gzip_bytes": 10045895
+   },
+   "warm": {
+    "requests": 4,
+    "transferred_bytes": 0,
+    "by_type": {
+     "css": {
+      "requests": 1,
+      "bytes": 0
+     },
+     "html": {
+      "requests": 1,
+      "bytes": 0
+     },
+     "images": {
+      "requests": 1,
+      "bytes": 0
+     },
+     "js": {
+      "requests": 1,
+      "bytes": 0
+     }
+    },
+    "modelled_gzip_bytes": 10045895
+   }
+  },
+  "evidence_index:en": {
+   "route": "/en/evidence/",
+   "cold": {
+    "requests": 4,
+    "transferred_bytes": 10145340,
+    "by_type": {
+     "css": {
+      "requests": 1,
+      "bytes": 47991
+     },
+     "html": {
+      "requests": 1,
+      "bytes": 55413
+     },
+     "images": {
+      "requests": 1,
+      "bytes": 10018273
+     },
+     "js": {
+      "requests": 1,
+      "bytes": 23663
+     }
+    },
+    "modelled_gzip_bytes": 10050036
+   },
+   "warm": {
+    "requests": 4,
+    "transferred_bytes": 0,
+    "by_type": {
+     "css": {
+      "requests": 1,
+      "bytes": 0
+     },
+     "html": {
+      "requests": 1,
+      "bytes": 0
+     },
+     "images": {
+      "requests": 1,
+      "bytes": 0
+     },
+     "js": {
+      "requests": 1,
+      "bytes": 0
+     }
+    },
+    "modelled_gzip_bytes": 10050036
+   }
+  },
+  "evidence_index:ar": {
+   "route": "/ar/evidence/",
+   "cold": {
+    "requests": 4,
+    "transferred_bytes": 10160726,
+    "by_type": {
+     "css": {
+      "requests": 1,
+      "bytes": 47991
+     },
+     "html": {
+      "requests": 1,
+      "bytes": 70799
+     },
+     "images": {
+      "requests": 1,
+      "bytes": 10018273
+     },
+     "js": {
+      "requests": 1,
+      "bytes": 23663
+     }
+    },
+    "modelled_gzip_bytes": 10052295
+   },
+   "warm": {
+    "requests": 4,
+    "transferred_bytes": 0,
+    "by_type": {
+     "css": {
+      "requests": 1,
+      "bytes": 0
+     },
+     "html": {
+      "requests": 1,
+      "bytes": 0
+     },
+     "images": {
+      "requests": 1,
+      "bytes": 0
+     },
+     "js": {
+      "requests": 1,
+      "bytes": 0
+     }
+    },
+    "modelled_gzip_bytes": 10052295
+   }
+  },
+  "evidence_record:en": {
+   "route": "/en/evidence/CLM-001/",
+   "cold": {
+    "requests": 4,
+    "transferred_bytes": 10110889,
+    "by_type": {
+     "css": {
+      "requests": 1,
+      "bytes": 47991
+     },
+     "html": {
+      "requests": 1,
+      "bytes": 20962
+     },
+     "images": {
+      "requests": 1,
+      "bytes": 10018273
+     },
+     "js": {
+      "requests": 1,
+      "bytes": 23663
+     }
+    },
+    "modelled_gzip_bytes": 10042338
+   },
+   "warm": {
+    "requests": 4,
+    "transferred_bytes": 0,
+    "by_type": {
+     "css": {
+      "requests": 1,
+      "bytes": 0
+     },
+     "html": {
+      "requests": 1,
+      "bytes": 0
+     },
+     "images": {
+      "requests": 1,
+      "bytes": 0
+     },
+     "js": {
+      "requests": 1,
+      "bytes": 0
+     }
+    },
+    "modelled_gzip_bytes": 10042338
+   }
+  },
+  "evidence_record:ar": {
+   "route": "/ar/evidence/CLM-001/",
+   "cold": {
+    "requests": 4,
+    "transferred_bytes": 10116480,
+    "by_type": {
+     "css": {
+      "requests": 1,
+      "bytes": 47991
+     },
+     "html": {
+      "requests": 1,
+      "bytes": 26553
+     },
+     "images": {
+      "requests": 1,
+      "bytes": 10018273
+     },
+     "js": {
+      "requests": 1,
+      "bytes": 23663
+     }
+    },
+    "modelled_gzip_bytes": 10043185
+   },
+   "warm": {
+    "requests": 4,
+    "transferred_bytes": 0,
+    "by_type": {
+     "css": {
+      "requests": 1,
+      "bytes": 0
+     },
+     "html": {
+      "requests": 1,
+      "bytes": 0
+     },
+     "images": {
+      "requests": 1,
+      "bytes": 0
+     },
+     "js": {
+      "requests": 1,
+      "bytes": 0
+     }
+    },
+    "modelled_gzip_bytes": 10043185
+   }
+  },
+  "compare:en": {
+   "route": "/en/evidence/compare/",
+   "cold": {
+    "requests": 4,
+    "transferred_bytes": 10133417,
+    "by_type": {
+     "css": {
+      "requests": 1,
+      "bytes": 47991
+     },
+     "html": {
+      "requests": 1,
+      "bytes": 43490
+     },
+     "images": {
+      "requests": 1,
+      "bytes": 10018273
+     },
+     "js": {
+      "requests": 1,
+      "bytes": 23663
+     }
+    },
+    "modelled_gzip_bytes": 10047444
+   },
+   "warm": {
+    "requests": 4,
+    "transferred_bytes": 0,
+    "by_type": {
+     "css": {
+      "requests": 1,
+      "bytes": 0
+     },
+     "html": {
+      "requests": 1,
+      "bytes": 0
+     },
+     "images": {
+      "requests": 1,
+      "bytes": 0
+     },
+     "js": {
+      "requests": 1,
+      "bytes": 0
+     }
+    },
+    "modelled_gzip_bytes": 10047444
+   }
+  },
+  "compare:ar": {
+   "route": "/ar/evidence/compare/",
+   "cold": {
+    "requests": 4,
+    "transferred_bytes": 10150937,
+    "by_type": {
+     "css": {
+      "requests": 1,
+      "bytes": 47991
+     },
+     "html": {
+      "requests": 1,
+      "bytes": 61010
+     },
+     "images": {
+      "requests": 1,
+      "bytes": 10018273
+     },
+     "js": {
+      "requests": 1,
+      "bytes": 23663
+     }
+    },
+    "modelled_gzip_bytes": 10049607
+   },
+   "warm": {
+    "requests": 4,
+    "transferred_bytes": 0,
+    "by_type": {
+     "css": {
+      "requests": 1,
+      "bytes": 0
+     },
+     "html": {
+      "requests": 1,
+      "bytes": 0
+     },
+     "images": {
+      "requests": 1,
+      "bytes": 0
+     },
+     "js": {
+      "requests": 1,
+      "bytes": 0
+     }
+    },
+    "modelled_gzip_bytes": 10049607
+   }
+  },
+  "sources_directory:en": {
+   "route": "/en/data/",
+   "cold": {
+    "requests": 4,
+    "transferred_bytes": 10414169,
+    "by_type": {
+     "css": {
+      "requests": 1,
+      "bytes": 47991
+     },
+     "html": {
+      "requests": 1,
+      "bytes": 324242
+     },
+     "images": {
+      "requests": 1,
+      "bytes": 10018273
+     },
+     "js": {
+      "requests": 1,
+      "bytes": 23663
+     }
+    },
+    "modelled_gzip_bytes": 10081655
+   },
+   "warm": {
+    "requests": 4,
+    "transferred_bytes": 0,
+    "by_type": {
+     "css": {
+      "requests": 1,
+      "bytes": 0
+     },
+     "html": {
+      "requests": 1,
+      "bytes": 0
+     },
+     "images": {
+      "requests": 1,
+      "bytes": 0
+     },
+     "js": {
+      "requests": 1,
+      "bytes": 0
+     }
+    },
+    "modelled_gzip_bytes": 10081655
+   }
+  },
+  "sources_directory:ar": {
+   "route": "/ar/data/",
+   "cold": {
+    "requests": 4,
+    "transferred_bytes": 10472742,
+    "by_type": {
+     "css": {
+      "requests": 1,
+      "bytes": 47991
+     },
+     "html": {
+      "requests": 1,
+      "bytes": 382815
+     },
+     "images": {
+      "requests": 1,
+      "bytes": 10018273
+     },
+     "js": {
+      "requests": 1,
+      "bytes": 23663
+     }
+    },
+    "modelled_gzip_bytes": 10085303
+   },
+   "warm": {
+    "requests": 4,
+    "transferred_bytes": 0,
+    "by_type": {
+     "css": {
+      "requests": 1,
+      "bytes": 0
+     },
+     "html": {
+      "requests": 1,
+      "bytes": 0
+     },
+     "images": {
+      "requests": 1,
+      "bytes": 0
+     },
+     "js": {
+      "requests": 1,
+      "bytes": 0
+     }
+    },
+    "modelled_gzip_bytes": 10085303
+   }
+  },
+  "readings_index:en": {
+   "route": "/en/readings/",
+   "cold": {
+    "requests": 4,
+    "transferred_bytes": 10104040,
+    "by_type": {
+     "css": {
+      "requests": 1,
+      "bytes": 47991
+     },
+     "html": {
+      "requests": 1,
+      "bytes": 14113
+     },
+     "images": {
+      "requests": 1,
+      "bytes": 10018273
+     },
+     "js": {
+      "requests": 1,
+      "bytes": 23663
+     }
+    },
+    "modelled_gzip_bytes": 10040993
+   },
+   "warm": {
+    "requests": 4,
+    "transferred_bytes": 0,
+    "by_type": {
+     "css": {
+      "requests": 1,
+      "bytes": 0
+     },
+     "html": {
+      "requests": 1,
+      "bytes": 0
+     },
+     "images": {
+      "requests": 1,
+      "bytes": 0
+     },
+     "js": {
+      "requests": 1,
+      "bytes": 0
+     }
+    },
+    "modelled_gzip_bytes": 10040993
+   }
+  },
+  "readings_index:ar": {
+   "route": "/ar/readings/",
+   "cold": {
+    "requests": 4,
+    "transferred_bytes": 10107231,
+    "by_type": {
+     "css": {
+      "requests": 1,
+      "bytes": 47991
+     },
+     "html": {
+      "requests": 1,
+      "bytes": 17304
+     },
+     "images": {
+      "requests": 1,
+      "bytes": 10018273
+     },
+     "js": {
+      "requests": 1,
+      "bytes": 23663
+     }
+    },
+    "modelled_gzip_bytes": 10041669
+   },
+   "warm": {
+    "requests": 4,
+    "transferred_bytes": 0,
+    "by_type": {
+     "css": {
+      "requests": 1,
+      "bytes": 0
+     },
+     "html": {
+      "requests": 1,
+      "bytes": 0
+     },
+     "images": {
+      "requests": 1,
+      "bytes": 0
+     },
+     "js": {
+      "requests": 1,
+      "bytes": 0
+     }
+    },
+    "modelled_gzip_bytes": 10041669
+   }
+  },
+  "reading:en": {
+   "route": "/en/readings/same-year-different-number/",
+   "cold": {
+    "requests": 4,
+    "transferred_bytes": 10119204,
+    "by_type": {
+     "css": {
+      "requests": 1,
+      "bytes": 47991
+     },
+     "html": {
+      "requests": 1,
+      "bytes": 29277
+     },
+     "images": {
+      "requests": 1,
+      "bytes": 10018273
+     },
+     "js": {
+      "requests": 1,
+      "bytes": 23663
+     }
+    },
+    "modelled_gzip_bytes": 10044109
+   },
+   "warm": {
+    "requests": 4,
+    "transferred_bytes": 0,
+    "by_type": {
+     "css": {
+      "requests": 1,
+      "bytes": 0
+     },
+     "html": {
+      "requests": 1,
+      "bytes": 0
+     },
+     "images": {
+      "requests": 1,
+      "bytes": 0
+     },
+     "js": {
+      "requests": 1,
+      "bytes": 0
+     }
+    },
+    "modelled_gzip_bytes": 10044109
+   }
+  },
+  "reading:ar": {
+   "route": "/ar/readings/same-year-different-number/",
+   "cold": {
+    "requests": 4,
+    "transferred_bytes": 10127154,
+    "by_type": {
+     "css": {
+      "requests": 1,
+      "bytes": 47991
+     },
+     "html": {
+      "requests": 1,
+      "bytes": 37227
+     },
+     "images": {
+      "requests": 1,
+      "bytes": 10018273
+     },
+     "js": {
+      "requests": 1,
+      "bytes": 23663
+     }
+    },
+    "modelled_gzip_bytes": 10045419
+   },
+   "warm": {
+    "requests": 4,
+    "transferred_bytes": 0,
+    "by_type": {
+     "css": {
+      "requests": 1,
+      "bytes": 0
+     },
+     "html": {
+      "requests": 1,
+      "bytes": 0
+     },
+     "images": {
+      "requests": 1,
+      "bytes": 0
+     },
+     "js": {
+      "requests": 1,
+      "bytes": 0
+     }
+    },
+    "modelled_gzip_bytes": 10045419
+   }
+  },
+  "methodology:en": {
+   "route": "/en/methodology/",
+   "cold": {
+    "requests": 4,
+    "transferred_bytes": 10122412,
+    "by_type": {
+     "css": {
+      "requests": 1,
+      "bytes": 47991
+     },
+     "html": {
+      "requests": 1,
+      "bytes": 32485
+     },
+     "images": {
+      "requests": 1,
+      "bytes": 10018273
+     },
+     "js": {
+      "requests": 1,
+      "bytes": 23663
+     }
+    },
+    "modelled_gzip_bytes": 10045888
+   },
+   "warm": {
+    "requests": 4,
+    "transferred_bytes": 0,
+    "by_type": {
+     "css": {
+      "requests": 1,
+      "bytes": 0
+     },
+     "html": {
+      "requests": 1,
+      "bytes": 0
+     },
+     "images": {
+      "requests": 1,
+      "bytes": 0
+     },
+     "js": {
+      "requests": 1,
+      "bytes": 0
+     }
+    },
+    "modelled_gzip_bytes": 10045888
+   }
+  },
+  "methodology:ar": {
+   "route": "/ar/methodology/",
+   "cold": {
+    "requests": 4,
+    "transferred_bytes": 10132813,
+    "by_type": {
+     "css": {
+      "requests": 1,
+      "bytes": 47991
+     },
+     "html": {
+      "requests": 1,
+      "bytes": 42886
+     },
+     "images": {
+      "requests": 1,
+      "bytes": 10018273
+     },
+     "js": {
+      "requests": 1,
+      "bytes": 23663
+     }
+    },
+    "modelled_gzip_bytes": 10047731
+   },
+   "warm": {
+    "requests": 4,
+    "transferred_bytes": 0,
+    "by_type": {
+     "css": {
+      "requests": 1,
+      "bytes": 0
+     },
+     "html": {
+      "requests": 1,
+      "bytes": 0
+     },
+     "images": {
+      "requests": 1,
+      "bytes": 0
+     },
+     "js": {
+      "requests": 1,
+      "bytes": 0
+     }
+    },
+    "modelled_gzip_bytes": 10047731
+   }
+  },
+  "measurement:en": {
+   "route": "/en/measurement/",
+   "cold": {
+    "requests": 4,
+    "transferred_bytes": 10129866,
+    "by_type": {
+     "css": {
+      "requests": 1,
+      "bytes": 47991
+     },
+     "html": {
+      "requests": 1,
+      "bytes": 39939
+     },
+     "images": {
+      "requests": 1,
+      "bytes": 10018273
+     },
+     "js": {
+      "requests": 1,
+      "bytes": 23663
+     }
+    },
+    "modelled_gzip_bytes": 10047255
+   },
+   "warm": {
+    "requests": 4,
+    "transferred_bytes": 0,
+    "by_type": {
+     "css": {
+      "requests": 1,
+      "bytes": 0
+     },
+     "html": {
+      "requests": 1,
+      "bytes": 0
+     },
+     "images": {
+      "requests": 1,
+      "bytes": 0
+     },
+     "js": {
+      "requests": 1,
+      "bytes": 0
+     }
+    },
+    "modelled_gzip_bytes": 10047255
+   }
+  },
+  "measurement:ar": {
+   "route": "/ar/measurement/",
+   "cold": {
+    "requests": 4,
+    "transferred_bytes": 10144306,
+    "by_type": {
+     "css": {
+      "requests": 1,
+      "bytes": 47991
+     },
+     "html": {
+      "requests": 1,
+      "bytes": 54379
+     },
+     "images": {
+      "requests": 1,
+      "bytes": 10018273
+     },
+     "js": {
+      "requests": 1,
+      "bytes": 23663
+     }
+    },
+    "modelled_gzip_bytes": 10049205
+   },
+   "warm": {
+    "requests": 4,
+    "transferred_bytes": 0,
+    "by_type": {
+     "css": {
+      "requests": 1,
+      "bytes": 0
+     },
+     "html": {
+      "requests": 1,
+      "bytes": 0
+     },
+     "images": {
+      "requests": 1,
+      "bytes": 0
+     },
+     "js": {
+      "requests": 1,
+      "bytes": 0
+     }
+    },
+    "modelled_gzip_bytes": 10049205
+   }
+  },
+  "trust_about:en": {
+   "route": "/en/about/",
+   "cold": {
+    "requests": 4,
+    "transferred_bytes": 10105384,
+    "by_type": {
+     "css": {
+      "requests": 1,
+      "bytes": 47991
+     },
+     "html": {
+      "requests": 1,
+      "bytes": 15457
+     },
+     "images": {
+      "requests": 1,
+      "bytes": 10018273
+     },
+     "js": {
+      "requests": 1,
+      "bytes": 23663
+     }
+    },
+    "modelled_gzip_bytes": 10041378
+   },
+   "warm": {
+    "requests": 4,
+    "transferred_bytes": 0,
+    "by_type": {
+     "css": {
+      "requests": 1,
+      "bytes": 0
+     },
+     "html": {
+      "requests": 1,
+      "bytes": 0
+     },
+     "images": {
+      "requests": 1,
+      "bytes": 0
+     },
+     "js": {
+      "requests": 1,
+      "bytes": 0
+     }
+    },
+    "modelled_gzip_bytes": 10041378
+   }
+  },
+  "trust_about:ar": {
+   "route": "/ar/about/",
+   "cold": {
+    "requests": 4,
+    "transferred_bytes": 10109298,
+    "by_type": {
+     "css": {
+      "requests": 1,
+      "bytes": 47991
+     },
+     "html": {
+      "requests": 1,
+      "bytes": 19371
+     },
+     "images": {
+      "requests": 1,
+      "bytes": 10018273
+     },
+     "js": {
+      "requests": 1,
+      "bytes": 23663
+     }
+    },
+    "modelled_gzip_bytes": 10042092
+   },
+   "warm": {
+    "requests": 4,
+    "transferred_bytes": 0,
+    "by_type": {
+     "css": {
+      "requests": 1,
+      "bytes": 0
+     },
+     "html": {
+      "requests": 1,
+      "bytes": 0
+     },
+     "images": {
+      "requests": 1,
+      "bytes": 0
+     },
+     "js": {
+      "requests": 1,
+      "bytes": 0
+     }
+    },
+    "modelled_gzip_bytes": 10042092
+   }
+  },
+  "interaction_search:en": {
+   "route": "/en/ + open Search, type a query",
+   "incremental": {
+    "requests": 2,
+    "transferred_bytes": 1976885,
+    "by_type": {
+     "data": {
+      "requests": 2,
+      "bytes": 1976885
+     }
+    },
+    "modelled_gzip_bytes": 320957
+   }
+  },
+  "interaction_search:ar": {
+   "route": "/ar/ + open Search, type a query",
+   "incremental": {
+    "requests": 2,
+    "transferred_bytes": 1976885,
+    "by_type": {
+     "data": {
+      "requests": 2,
+      "bytes": 1976885
+     }
+    },
+    "modelled_gzip_bytes": 320957
+   }
+  }
+ }
+}

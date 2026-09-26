@@ -15,7 +15,7 @@ only the first two groups describe the current state. Every file in `audit/` is 
 | F4 R8.5 subtraction | [`R8_5_REPOSITORY_SUBTRACTION_CLOSURE.md`](R8_5_REPOSITORY_SUBTRACTION_CLOSURE.md), [`R8_5_SUBTRACTION_LEDGER.csv`](R8_5_SUBTRACTION_LEDGER.csv) |
 | F5 public corpus | [`F5_PUBLIC_CORPUS_ACCEPTANCE.md`](F5_PUBLIC_CORPUS_ACCEPTANCE.md), [`F5_CORPUS_FINDINGS_LEDGER.csv`](F5_CORPUS_FINDINGS_LEDGER.csv) (every review finding with the Lead decision) |
 | F6 SEO, accessibility, rights, security | [`F6_DISCOVERY_ACCESSIBILITY_RIGHTS_SECURITY_ACCEPTANCE.md`](F6_DISCOVERY_ACCESSIBILITY_RIGHTS_SECURITY_ACCEPTANCE.md) |
-| F7 sustainability | [`SUSTAINABILITY_PRE_DESIGN_BASELINE.json`](SUSTAINABILITY_PRE_DESIGN_BASELINE.json); method in `docs/SUSTAINABILITY_METHOD.md` |
+| F7 sustainability and stewardship | [`SUSTAINABILITY_PRE_DESIGN_BASELINE.json`](SUSTAINABILITY_PRE_DESIGN_BASELINE.json) (measured with `final_integration/f7_measure_baseline.py`); method in `docs/SUSTAINABILITY_METHOD.md`; non-public stewardship note `handoff/SUPPORT_AND_PARTNERSHIP_READINESS.md` |
 | F8 R8.6 freeze | [`R8_6_DESIGN_HANDOFF_FREEZE_CLOSURE.md`](R8_6_DESIGN_HANDOFF_FREEZE_CLOSURE.md) |
 | F9 clean-room acceptance | [`FINAL_CLEAN_ROOM_ACCEPTANCE.md`](FINAL_CLEAN_ROOM_ACCEPTANCE.md); open items in `FINAL_OPEN_ITEMS_REGISTER.md` (repository root) |
 | Transactions F3–F9 | [`final_integration/`](final_integration/) — scripts, inputs, Master ledgers and run reports |
