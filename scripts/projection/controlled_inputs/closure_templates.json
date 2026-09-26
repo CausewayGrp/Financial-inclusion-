@@ -1,0 +1,62 @@
+{
+ "schema": "YFI_CONTROLLED_INPUT/1.0",
+ "input_id": "closure_templates",
+ "authority_class": "CONTROLLED_TEMPLATE__NOT_MASTER_OWNED",
+ "rule": "Evidence records show only exact bound sources, listed member records, or an explicit unbound or framing state (Tranche B Stage 1, PB-0001/PB-0002). Dataset-level tokens are never expanded into source lists; an input that is not bound to a source stays explicit as unresolved. Never invent a source, title, publisher, date, licence or missing fact.",
+ "closure_states": {
+  "BOUND_EXACT": "CLOSED_TO_SOURCE_ID",
+  "BOUND_PARTIAL": "PARTIALLY_RESOLVED",
+  "COMPOSITE_OF_OBJECTS": "COMPOSITE_OF_OBJECTS",
+  "COMPOSITE_UNLISTED": "COMPOSITE_MEMBERS_NOT_LISTED",
+  "SOURCE_NOT_YET_BOUND": "SOURCE_NOT_YET_BOUND",
+  "FRAMING_NO_FACT": "FRAMING_NO_FACT",
+  "reading_closed": "CLOSED_TO_SOURCE_ID",
+  "reading_partial": "PARTIALLY_RESOLVED",
+  "reading_unbound": "SOURCE_NOT_YET_BOUND",
+  "measurement": "NO_DIRECT_SOURCE_BINDING"
+ },
+ "metadata_state_rule": {
+  "field": "public_card_state",
+  "display_ready_values": [
+   "FULL_PUBLIC_CARD",
+   "CITATION_CARD"
+  ],
+  "display_ready": "DISPLAY_READY",
+  "otherwise": "LOCATOR_ONLY"
+ },
+ "note": "Stage 1 (PB-0001…PB-0008) vocabulary. The entry (legacy) rule is recorded in audit/generator_baseline/ENTRY_BASELINE_CLASSIFICATION.json and scripts/projection/derived.py object_source_closure_legacy.",
+ "lineage_states": [
+  "BOUND_EXACT",
+  "BOUND_PARTIAL",
+  "COMPOSITE_OF_OBJECTS",
+  "SOURCE_NOT_YET_BOUND",
+  "FRAMING_NO_FACT"
+ ],
+ "closed_states": [
+  "CLOSED_TO_SOURCE_ID",
+  "FRAMING_NO_FACT"
+ ],
+ "context_reference_sheets": [
+  "31_REFORMS_REGULATION",
+  "33_ANALYTICS_MASTER",
+  "34_EVIDENCE_PASSPORTS"
+ ],
+ "context_reference_patterns": [
+  "^K04-[A-Z]+-\\d+$",
+  "^AVA-\\d+(\\.\\.\\d+)?$",
+  "^DN-[A-Z]+-\\d+$"
+ ],
+ "open_input_prefix": "UNBOUND:",
+ "verification_templates": {
+  "BOUND_EXACT": "UI-VERIFY-BOUND",
+  "BOUND_UNLISTED": "UI-VERIFY-UNLISTED",
+  "BOUND_PARTIAL": "UI-VERIFY-PARTIAL",
+  "COMPOSITE_OF_OBJECTS": "UI-VERIFY-COMPOSITE",
+  "COMPOSITE_UNLISTED": "UI-VERIFY-COMPOSITE-UNLISTED",
+  "SOURCE_NOT_YET_BOUND": "UI-EVID-UNBOUND",
+  "FRAMING_NO_FACT": "UI-EVID-FRAMING"
+ },
+ "verification_template_exceptions": [
+  "CLM-019"
+ ]
+}

@@ -1,0 +1,236 @@
+[
+  {
+    "link_id": "SL-001",
+    "from": "/payments",
+    "to": "/people",
+    "relationship_type": "comparison",
+    "supported_relationship": "Administrative payment infrastructure/activity can be compared with population measures only as separate evidence classes and dates.",
+    "not_supported": "Infrastructure growth proves population use or inclusion.",
+    "evidence_refs": null
+  },
+  {
+    "link_id": "SL-002",
+    "from": "/people",
+    "to": "/payments",
+    "relationship_type": "context",
+    "supported_relationship": "Population use evidence provides demand-side context for administrative payment-system measures.",
+    "not_supported": "One source can substitute for the other.",
+    "evidence_refs": null
+  },
+  {
+    "link_id": "SL-003",
+    "from": "/providers",
+    "to": "/access",
+    "relationship_type": "dependency",
+    "supported_relationship": "A provider’s authority/listing state is one input to access analysis, but operating location requires separate evidence.",
+    "not_supported": "Licensed/listed provider equals operating point.",
+    "evidence_refs": null
+  },
+  {
+    "link_id": "SL-004",
+    "from": "/access",
+    "to": "/providers",
+    "relationship_type": "context",
+    "supported_relationship": "Verified operating geography can add service-presence context to provider authority records.",
+    "not_supported": "A location proves the complete set of operating providers.",
+    "evidence_refs": null
+  },
+  {
+    "link_id": "SL-005",
+    "from": "/reforms",
+    "to": "/payments",
+    "relationship_type": "mechanism",
+    "supported_relationship": "Payment regulation, projects and institutions may be upstream mechanisms through which payment capacity changes; each downstream state requires evidence.",
+    "not_supported": "Reform milestone caused adoption or inclusion.",
+    "evidence_refs": null
+  },
+  {
+    "link_id": "SL-006",
+    "from": "/payments",
+    "to": "/reforms",
+    "relationship_type": "comparison",
+    "supported_relationship": "Observed payment activity can be placed beside reform milestones to show which downstream states are measured.",
+    "not_supported": "Temporal sequence alone is causal proof.",
+    "evidence_refs": null
+  },
+  {
+    "link_id": "SL-007",
+    "from": "/firms",
+    "to": "/finance",
+    "relationship_type": "context",
+    "supported_relationship": "Firm demand and constraint evidence provides context for institutional finance supply and credit evidence.",
+    "not_supported": "Institutional portfolio growth satisfies firm finance need.",
+    "evidence_refs": null
+  },
+  {
+    "link_id": "SL-008",
+    "from": "/finance",
+    "to": "/firms",
+    "relationship_type": "comparison",
+    "supported_relationship": "Institutional lending/portfolio measures and firm-side credit experience may be compared only when units, populations and periods are explicit.",
+    "not_supported": "Portfolio size equals number of financed firms or welfare.",
+    "evidence_refs": null
+  },
+  {
+    "link_id": "SL-009",
+    "from": "/remittances",
+    "to": "/people",
+    "relationship_type": "context",
+    "supported_relationship": "Macro and corridor remittance evidence can contextualize household financial behavior while remaining separate from household survey measures.",
+    "not_supported": "Macro inflows equal household receipt/use rates.",
+    "evidence_refs": null
+  },
+  {
+    "link_id": "SL-010",
+    "from": "/people",
+    "to": "/remittances",
+    "relationship_type": "comparison",
+    "supported_relationship": "Household survey receipt/channel behavior can be compared conceptually with remittance flow/cost evidence if periods and bases remain visible.",
+    "not_supported": "Household percentages can be converted into macro values without a valid bridge.",
+    "evidence_refs": null
+  },
+  {
+    "link_id": "SL-011",
+    "from": "/measurement",
+    "to": "/people",
+    "relationship_type": "measurement_gap",
+    "supported_relationship": "MA-001 and MA-003 define measurements that would materially improve current people-side decisions.",
+    "not_supported": "The gap itself is evidence of deterioration.",
+    "evidence_refs": null
+  },
+  {
+    "link_id": "SL-012",
+    "from": "/measurement",
+    "to": "/firms",
+    "relationship_type": "measurement_gap",
+    "supported_relationship": "MA-004 defines the missing national firm-finance journey needed to move beyond bounded survey/programme evidence.",
+    "not_supported": "Existing bounded evidence is invalid.",
+    "evidence_refs": null
+  },
+  {
+    "link_id": "SL-013",
+    "from": "/measurement",
+    "to": "/access",
+    "relationship_type": "measurement_gap",
+    "supported_relationship": "MA-005 defines the active access-point register required before a national operating-access atlas is defensible.",
+    "not_supported": "Blank map areas have zero access.",
+    "evidence_refs": null
+  },
+  {
+    "link_id": "SL-014",
+    "from": "/measurement",
+    "to": "/payments",
+    "relationship_type": "measurement_gap",
+    "supported_relationship": "MA-002 and MA-010 define active-use and reform-transmission measurements not supplied by infrastructure totals alone.",
+    "not_supported": "Transactions or terminals equal unique active users.",
+    "evidence_refs": null
+  },
+  {
+    "link_id": "SL-015",
+    "from": "/measurement",
+    "to": "/reforms",
+    "relationship_type": "measurement_gap",
+    "supported_relationship": "MA-006 and MA-010 identify downstream redress/service-quality evidence needed beyond rules and milestones.",
+    "not_supported": "Missing outcome data means reform failure.",
+    "evidence_refs": null
+  },
+  {
+    "link_id": "SL-016",
+    "from": "CLM-003",
+    "to": "/payments",
+    "relationship_type": "context",
+    "supported_relationship": "POS device growth is an administrative infrastructure signal for the Payments page.",
+    "not_supported": "POS devices are people or active merchants.",
+    "evidence_refs": null
+  },
+  {
+    "link_id": "SL-017",
+    "from": "CLM-001",
+    "to": "/people",
+    "relationship_type": "context",
+    "supported_relationship": "Findex account ownership is a representative people-side measure for its wave and fieldwork period.",
+    "not_supported": "It is a 2026 population rate.",
+    "evidence_refs": null
+  },
+  {
+    "link_id": "SL-018",
+    "from": "CLM-008",
+    "to": "/providers",
+    "relationship_type": "context",
+    "supported_relationship": "The bank roster establishes a source-specific listing/licensing state.",
+    "not_supported": "The roster establishes current branch operation or market activity.",
+    "evidence_refs": null
+  },
+  {
+    "link_id": "SL-019",
+    "from": "CLM-060",
+    "to": "/reforms",
+    "relationship_type": "context",
+    "supported_relationship": "The programme KPI is a programme result for MSMEs supported by the Small and Micro Enterprise Promotion Service (SMEPS).",
+    "not_supported": "It is a national MSME access rate.",
+    "evidence_refs": null
+  },
+  {
+    "link_id": "SL-020",
+    "from": "RMT-001",
+    "to": "/remittances",
+    "relationship_type": "context",
+    "supported_relationship": "External-sector remittance vintages describe macro flows under the source’s concept.",
+    "not_supported": "They equal payment-system or informal-channel volumes.",
+    "evidence_refs": null
+  },
+  {
+    "link_id": "SL-021",
+    "from": "/evidence/compare",
+    "to": "/evidence/[id]",
+    "relationship_type": "dependency",
+    "supported_relationship": "Comparison depends on two or more evidence records exposing the same compatibility fields.",
+    "not_supported": "A comparison result can override the source evidence records.",
+    "evidence_refs": null
+  },
+  {
+    "link_id": "SL-022",
+    "from": "DS-V4R3-SYSTEM-CHRONOLOGY",
+    "to": "/finance",
+    "relationship_type": "context",
+    "supported_relationship": "The chronology provides dated context for conflict shocks, liquidity, FX, import finance, external support and banking conditions around financial intermediation.",
+    "not_supported": "The chronology proves that a specific macro/policy event caused a financial-inclusion outcome.",
+    "evidence_refs": "[\"DS-V4R3-SYSTEM-CHRONOLOGY\"]"
+  },
+  {
+    "link_id": "SL-023",
+    "from": "DS-V4R3-SYSTEM-CHRONOLOGY",
+    "to": "/firms",
+    "relationship_type": "dependency",
+    "supported_relationship": "FX availability and import-finance conditions can constrain the environment in which firms trade and seek finance; firm-side effects still require firm evidence.",
+    "not_supported": "A macro FX/import-finance shock quantifies firm credit access or firm outcomes.",
+    "evidence_refs": "[\"DS-V4R3-SYSTEM-CHRONOLOGY\"]"
+  },
+  {
+    "link_id": "SL-024",
+    "from": "DS-V4R3-SYSTEM-CHRONOLOGY",
+    "to": "/remittances",
+    "relationship_type": "context",
+    "supported_relationship": "Remittance flows and revisions can be read alongside FX, reserves and external-balance conditions while preserving source scope and statistical vintage.",
+    "not_supported": "Macro remittance values equal payment-channel volumes, household receipt rates or informal remittances.",
+    "evidence_refs": "[\"DS-V4R3-SYSTEM-CHRONOLOGY\"]"
+  },
+  {
+    "link_id": "SL-025",
+    "from": "DS-V4R3-SYSTEM-CHRONOLOGY",
+    "to": "/payments",
+    "relationship_type": "context",
+    "supported_relationship": "Currency fragmentation, liquidity and institutional changes provide context for the operating environment of payment rails.",
+    "not_supported": "A currency or liquidity event proves payment adoption, reach or user outcome.",
+    "evidence_refs": "[\"DS-V4R3-SYSTEM-CHRONOLOGY\"]"
+  },
+  {
+    "link_id": "SL-026",
+    "from": "DS-V4R3-SYSTEM-CHRONOLOGY",
+    "to": "/reforms",
+    "relationship_type": "context",
+    "supported_relationship": "Dated policy, support and institutional events can be placed beside reform states to show sequence and system conditions.",
+    "not_supported": "Temporal ordering proves reform causality or outcome.",
+    "evidence_refs": "[\"DS-V4R3-SYSTEM-CHRONOLOGY\"]"
+  }
+]

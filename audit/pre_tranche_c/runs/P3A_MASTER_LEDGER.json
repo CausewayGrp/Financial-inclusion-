@@ -1,0 +1,1591 @@
+{
+ "transaction": "P3-A",
+ "scope": "P3 visual-contract truth corrections (Master-first)",
+ "full_copy_regenerated": [
+  "/evidence/CLM-034/ en",
+  "/evidence/CLM-034/ ar",
+  "/remittances/ en",
+  "/remittances/ ar"
+ ],
+ "provider_dates_fixed": 56,
+ "input_master_sha256": "6456add9e419bf2ce9a1e8b72715eb7e0d3a2d9d157deea2dbdbcdee46247672",
+ "output_master_sha256": "ead9082997822a08fc46a66507ae379eea4b6c39b0c92c2523179d50f16ace59",
+ "cells_written": 175,
+ "changes": [
+  {
+   "finding": "P3-F01",
+   "sheet": "11_VISUAL_LIBRARY",
+   "row": 22,
+   "col": 12,
+   "field": "VIS-CAPITAL-CONTEXT.evidence_strength",
+   "old": "HIGH_MACRO",
+   "new": "HUMANITARIAN_CONTEXT_ONLY"
+  },
+  {
+   "finding": "P3-F01",
+   "sheet": "11_VISUAL_LIBRARY",
+   "row": 22,
+   "col": 13,
+   "field": "VIS-CAPITAL-CONTEXT.freshness_profile",
+   "old": "2018–2030: reported history (staff report) / estimate and projections (supplement)",
+   "new": "Event-level flows; 2026 context"
+  },
+  {
+   "finding": "P3-F01",
+   "sheet": "11_VISUAL_LIBRARY",
+   "row": 23,
+   "col": 12,
+   "field": "VIS-FIRM-CONSTRAINTS.evidence_strength",
+   "old": "HIGH_QUOTE_BOUNDED",
+   "new": "PRIMARY_SURVEY"
+  },
+  {
+   "finding": "P3-F01",
+   "sheet": "11_VISUAL_LIBRARY",
+   "row": 23,
+   "col": 13,
+   "field": "VIS-FIRM-CONSTRAINTS.freshness_profile",
+   "old": "2025-Q3",
+   "new": "2022 custom survey"
+  },
+  {
+   "finding": "P3-F01",
+   "sheet": "11_VISUAL_LIBRARY",
+   "row": 25,
+   "col": 12,
+   "field": "VIS-FIRM-FINANCE-SEVERITY.evidence_strength",
+   "old": "HIGH_BUT_COVERAGE_LIMITED",
+   "new": "PRIMARY_SURVEY"
+  },
+  {
+   "finding": "P3-F01",
+   "sheet": "11_VISUAL_LIBRARY",
+   "row": 25,
+   "col": 13,
+   "field": "VIS-FIRM-FINANCE-SEVERITY.freshness_profile",
+   "old": "2022 observation; wave/fieldwork caveats explicit",
+   "new": "2022 custom survey; report-specific filtered tabulation"
+  },
+  {
+   "finding": "P3-F01",
+   "sheet": "11_VISUAL_LIBRARY",
+   "row": 9,
+   "col": 13,
+   "field": "VIS-FCP-REDRESS-PATH.freshness_profile",
+   "old": "2021→2024/current gaps",
+   "new": "2023–2024 framework; outcome evidence open"
+  },
+  {
+   "finding": "P3-F02",
+   "sheet": "11_VISUAL_LIBRARY",
+   "row": 10,
+   "col": 2,
+   "field": "VIS-FINDEX-GAPS.title_en",
+   "old": "Account Ownership — Who is being left behind?",
+   "new": "Account ownership and measured gaps in the latest Yemen survey"
+  },
+  {
+   "finding": "P3-F02",
+   "sheet": "11_VISUAL_LIBRARY",
+   "row": 10,
+   "col": 3,
+   "field": "VIS-FINDEX-GAPS.title_ar",
+   "old": "امتلاك الحساب: من تبقى خارج الوصول؟",
+   "new": "امتلاك الحساب والفجوات المقاسة في أحدث مسح لليمن"
+  },
+  {
+   "finding": "P3-F02",
+   "sheet": "06_EVIDENCE_OBJECTS",
+   "row": 65,
+   "col": 4,
+   "field": "VIS-FINDEX-GAPS.title_en",
+   "old": "Account Ownership — Who is being left behind?",
+   "new": "Account ownership and measured gaps in the latest Yemen survey"
+  },
+  {
+   "finding": "P3-F02",
+   "sheet": "06_EVIDENCE_OBJECTS",
+   "row": 65,
+   "col": 5,
+   "field": "VIS-FINDEX-GAPS.title_ar",
+   "old": "امتلاك الحساب: من تبقى خارج الوصول؟",
+   "new": "امتلاك الحساب والفجوات المقاسة في أحدث مسح لليمن"
+  },
+  {
+   "finding": "P3-F02",
+   "sheet": "11_VISUAL_LIBRARY",
+   "row": 10,
+   "col": 17,
+   "field": "VIS-FINDEX-GAPS.period",
+   "old": "2022 observation",
+   "new": "World Bank reporting year 2022; Global Findex 2021 study; Yemen fieldwork 2022-11-07 to 2023-01-09"
+  },
+  {
+   "finding": "P3-F02",
+   "sheet": "11_VISUAL_LIBRARY",
+   "row": 10,
+   "col": 11,
+   "field": "VIS-FINDEX-GAPS.source_period",
+   "old": "2022 total/female/male/poorest40/richest60/primary-or-less",
+   "new": "Global Findex 2021 study (Yemen fieldwork 2022-11-07 to 2023-01-09): total/female/male/poorest40/richest60/primary-or-less"
+  },
+  {
+   "finding": "P3-F02",
+   "sheet": "11_VISUAL_LIBRARY",
+   "row": 10,
+   "col": 13,
+   "field": "VIS-FINDEX-GAPS.freshness_profile",
+   "old": "2022 observation; wave/fieldwork caveats explicit",
+   "new": "World Bank reporting year 2022; Findex 2021 study; no newer Yemen observation in the Findex 2025 edition"
+  },
+  {
+   "finding": "P3-F02",
+   "sheet": "11_VISUAL_LIBRARY",
+   "row": 10,
+   "col": 16,
+   "field": "VIS-FINDEX-GAPS.denominator_universe",
+   "old": "2022 Findex Yemen observation universe and subgroup definitions",
+   "new": "Adults 15+ in survey coverage; same-wave subgroup definitions"
+  },
+  {
+   "finding": "P3-F02",
+   "sheet": "06_EVIDENCE_OBJECTS",
+   "row": 65,
+   "col": 10,
+   "field": "VIS-FINDEX-GAPS.period_en",
+   "old": "2022 observation",
+   "new": "World Bank reporting year 2022; Global Findex 2021 study; Yemen fieldwork 2022-11-07 to 2023-01-09"
+  },
+  {
+   "finding": "P3-F02",
+   "sheet": "06_EVIDENCE_OBJECTS",
+   "row": 65,
+   "col": 11,
+   "field": "VIS-FINDEX-GAPS.period_ar",
+   "old": "مشاهدة 2022",
+   "new": "سنة الإبلاغ في بيانات البنك الدولي: 2022؛ دراسة Global Findex 2021؛ العمل الميداني في اليمن من 2022-11-07 إلى 2023-01-09"
+  },
+  {
+   "finding": "P3-F02",
+   "sheet": "06_EVIDENCE_OBJECTS",
+   "row": 65,
+   "col": 12,
+   "field": "VIS-FINDEX-GAPS.universe_en",
+   "old": "2022 Findex Yemen observation universe and subgroup definitions",
+   "new": "Adults 15+ in survey coverage; same-wave subgroup definitions"
+  },
+  {
+   "finding": "P3-F02",
+   "sheet": "06_EVIDENCE_OBJECTS",
+   "row": 65,
+   "col": 13,
+   "field": "VIS-FINDEX-GAPS.universe_ar",
+   "old": "مجتمع ملاحظة Findex اليمنية المضبوطة لعام 2022 وتعريفات المجموعات الفرعية المتوافقة داخل الموجة.",
+   "new": "الأشخاص بعمر 15 سنة فأكثر ضمن التغطية التي شملها المسح، وفق تعريفات المجموعات الفرعية داخل الموجة نفسها."
+  },
+  {
+   "finding": "P3-F02",
+   "sheet": "06_EVIDENCE_OBJECTS",
+   "row": 65,
+   "col": 18,
+   "field": "VIS-FINDEX-GAPS.currentness_en",
+   "old": "Currentness is bounded to 2022 observation. Do not carry the value, status or interpretation beyond the latest comparable evidence available from a comparable source without a newer comparable observation.",
+   "new": "As of the Global Findex 2025 edition, Yemen’s latest available account-ownership observation remains the 2022 World Bank value derived from the Yemen Findex 2021 study. Do not relabel it as a 2024, 2025 or 2026 population rate."
+  },
+  {
+   "finding": "P3-F02",
+   "sheet": "06_EVIDENCE_OBJECTS",
+   "row": 65,
+   "col": 19,
+   "field": "VIS-FINDEX-GAPS.currentness_ar",
+   "old": "تقتصر حداثة هذا الدليل على مشاهدة 2022. ولا يجوز ترحيل القيمة أو الحالة أو التفسير إلى فترة لاحقة على أحدث دليل قابل للمقارنة من دون مشاهدة أحدث قابلة للمقارنة.",
+   "new": "حتى نسخة Global Findex 2025، تظل أحدث مشاهدة متاحة لامتلاك الحساب في اليمن هي قيمة البنك الدولي لسنة 2022 المستمدة من دراسة اليمن ضمن موجة Findex 2021. ولا يجوز إعادة وصفها باعتبارها معدلًا سكانيًا لعام 2024 أو 2025 أو 2026."
+  },
+  {
+   "finding": "P3-F03",
+   "sheet": "11_VISUAL_LIBRARY",
+   "row": 28,
+   "col": 16,
+   "field": "VIS-REMITTANCE-MACRO.denominator_universe",
+   "old": "IMF external-sector remittance series; evidence state and source document by year",
+   "new": "IMF external-sector remittance series on the IMF’s analytical scope for areas under the internationally recognized government; evidence state and source document by year"
+  },
+  {
+   "finding": "P3-F03",
+   "sheet": "06_EVIDENCE_OBJECTS",
+   "row": 71,
+   "col": 12,
+   "field": "VIS-REMITTANCE-MACRO.universe_en",
+   "old": "IMF external-sector remittance series; evidence state and source document by year",
+   "new": "IMF external-sector remittance series on the IMF’s analytical scope for areas under the internationally recognized government; evidence state and source document by year"
+  },
+  {
+   "finding": "P3-F03",
+   "sheet": "06_EVIDENCE_OBJECTS",
+   "row": 71,
+   "col": 13,
+   "field": "VIS-REMITTANCE-MACRO.universe_ar",
+   "old": "سلسلة صندوق النقد للتحويلات في القطاع الخارجي، مع حالة كل سنة ووثيقة مصدرها.",
+   "new": "سلسلة صندوق النقد للتحويلات في القطاع الخارجي ضمن النطاق التحليلي للصندوق الخاص بمناطق الحكومة المعترف بها دوليًا، مع حالة كل سنة ووثيقة مصدرها."
+  },
+  {
+   "finding": "P3-F03",
+   "sheet": "06_EVIDENCE_OBJECTS",
+   "row": 71,
+   "col": 18,
+   "field": "VIS-REMITTANCE-MACRO.currentness_en",
+   "old": "Currentness is bounded to 2018–2030. Do not carry the value, status or interpretation beyond the latest comparable evidence available from a comparable source without a newer comparable observation.",
+   "new": "Reported history runs to 2024 (IMF staff report, staff calculations); 2025 is an estimate and 2026–2030 are projections from a later supplement. Estimates and projections are not observations: do not treat 2025–2030 values as current evidence."
+  },
+  {
+   "finding": "P3-F03",
+   "sheet": "06_EVIDENCE_OBJECTS",
+   "row": 71,
+   "col": 19,
+   "field": "VIS-REMITTANCE-MACRO.currentness_ar",
+   "old": "تقتصر حداثة هذا الدليل على 2018–2030. ولا يجوز ترحيل القيمة أو الحالة أو التفسير إلى فترة لاحقة على أحدث دليل قابل للمقارنة من دون مشاهدة أحدث قابلة للمقارنة.",
+   "new": "يمتد التاريخ المبلغ عنه حتى 2024 (تقرير خبراء صندوق النقد، وفق حسابات الخبراء)؛ أما 2025 فتقدير، و2026–2030 توقعات من ملحق لاحق. والتقديرات والتوقعات ليست مشاهدات، فلا تُعامل قيم 2025–2030 بوصفها أدلة حالية."
+  },
+  {
+   "finding": "P3-F03",
+   "sheet": "06_EVIDENCE_OBJECTS",
+   "row": 29,
+   "col": 10,
+   "field": "CLM-007.period_en",
+   "old": "Observed 2018–2024; estimate 2025; projection 2026–2030",
+   "new": "Reported history 2018–2024 (staff calculations); estimate 2025; projection 2026–2030"
+  },
+  {
+   "finding": "P3-F03",
+   "sheet": "06_EVIDENCE_OBJECTS",
+   "row": 29,
+   "col": 11,
+   "field": "CLM-007.period_ar",
+   "old": "مرصود 2018–2024؛ تقدير 2025؛ توقعات 2026–2030",
+   "new": "تاريخ مبلغ عنه 2018–2024 (حسابات الخبراء)؛ تقدير 2025؛ توقعات 2026–2030"
+  },
+  {
+   "finding": "P3-F03",
+   "sheet": "06_EVIDENCE_OBJECTS",
+   "row": 29,
+   "col": 18,
+   "field": "CLM-007.currentness_en",
+   "old": "Currentness is bounded to Observed 2018–2024; estimate 2025; projection 2026–2030. Do not carry the value, status or interpretation beyond the latest comparable evidence available from a comparable source without a newer comparable observation.",
+   "new": "Currentness is bounded to reported history 2018–2024 (staff calculations); estimate 2025; projection 2026–2030. Do not carry the value, status or interpretation beyond the latest comparable evidence available from a comparable source without a newer comparable observation."
+  },
+  {
+   "finding": "P3-F03",
+   "sheet": "06_EVIDENCE_OBJECTS",
+   "row": 29,
+   "col": 19,
+   "field": "CLM-007.currentness_ar",
+   "old": "تقتصر حداثة هذا الدليل على مرصود 2018–2024؛ تقدير 2025؛ توقعات 2026–2030. ولا يجوز ترحيل القيمة أو الحالة أو التفسير إلى فترة لاحقة على أحدث دليل قابل للمقارنة من دون مشاهدة أحدث قابلة للمقارنة.",
+   "new": "تقتصر حداثة هذا الدليل على تاريخ مبلغ عنه 2018–2024 (حسابات الخبراء)؛ تقدير 2025؛ توقعات 2026–2030. ولا يجوز ترحيل القيمة أو الحالة أو التفسير إلى فترة لاحقة على أحدث دليل قابل للمقارنة من دون مشاهدة أحدث قابلة للمقارنة."
+  },
+  {
+   "finding": "P3-F03",
+   "sheet": "34_EVIDENCE_PASSPORTS",
+   "row": 8,
+   "col": 6,
+   "field": "EP-REMITTANCE-MACRO.reference_period",
+   "old": "Observed 2018–2024; estimate 2025; projection 2026–2030",
+   "new": "Reported history 2018–2024 (staff calculations); estimate 2025; projection 2026–2030"
+  },
+  {
+   "finding": "P3-F03",
+   "sheet": "34_EVIDENCE_PASSPORTS",
+   "row": 8,
+   "col": 7,
+   "field": "EP-REMITTANCE-MACRO.universe",
+   "old": "External-sector macro concept",
+   "new": "External-sector macro concept; IMF analytical scope for areas under the internationally recognized government"
+  },
+  {
+   "finding": "P3-F03",
+   "sheet": "34_EVIDENCE_PASSPORTS",
+   "row": 8,
+   "col": 12,
+   "field": "EP-REMITTANCE-MACRO.display_requirements",
+   "old": "Observed and forecast states must be visually separate.",
+   "new": "Reported-history, estimate and projection states must be visually separate, and the line breaks where the source document changes."
+  },
+  {
+   "finding": "P3-F04",
+   "sheet": "11_VISUAL_LIBRARY",
+   "row": 16,
+   "col": 2,
+   "field": "VIS-POS-TERMINALS.title_en",
+   "old": "POS Footprint Pulse",
+   "new": "Reported POS terminals, monthly"
+  },
+  {
+   "finding": "P3-F04",
+   "sheet": "11_VISUAL_LIBRARY",
+   "row": 16,
+   "col": 3,
+   "field": "VIS-POS-TERMINALS.title_ar",
+   "old": "تطور نقاط البيع",
+   "new": "أجهزة نقاط البيع المبلغ عنها شهريًا"
+  },
+  {
+   "finding": "P3-F04",
+   "sheet": "06_EVIDENCE_OBJECTS",
+   "row": 66,
+   "col": 4,
+   "field": "VIS-POS-TERMINALS.title_en",
+   "old": "POS Footprint Pulse",
+   "new": "Reported POS terminals, monthly"
+  },
+  {
+   "finding": "P3-F04",
+   "sheet": "06_EVIDENCE_OBJECTS",
+   "row": 66,
+   "col": 5,
+   "field": "VIS-POS-TERMINALS.title_ar",
+   "old": "تطور نقاط البيع",
+   "new": "أجهزة نقاط البيع المبلغ عنها شهريًا"
+  },
+  {
+   "finding": "P3-F04",
+   "sheet": "11_VISUAL_LIBRARY",
+   "row": 17,
+   "col": 2,
+   "field": "VIS-POS-TRANSACTIONS.title_en",
+   "old": "POS Usage Pulse",
+   "new": "Reported POS transactions, monthly"
+  },
+  {
+   "finding": "P3-F04",
+   "sheet": "11_VISUAL_LIBRARY",
+   "row": 17,
+   "col": 3,
+   "field": "VIS-POS-TRANSACTIONS.title_ar",
+   "old": "تطور استخدام نقاط البيع",
+   "new": "معاملات نقاط البيع المبلغ عنها شهريًا"
+  },
+  {
+   "finding": "P3-F04",
+   "sheet": "06_EVIDENCE_OBJECTS",
+   "row": 67,
+   "col": 4,
+   "field": "VIS-POS-TRANSACTIONS.title_en",
+   "old": "POS Usage Pulse",
+   "new": "Reported POS transactions, monthly"
+  },
+  {
+   "finding": "P3-F04",
+   "sheet": "06_EVIDENCE_OBJECTS",
+   "row": 67,
+   "col": 5,
+   "field": "VIS-POS-TRANSACTIONS.title_ar",
+   "old": "تطور استخدام نقاط البيع",
+   "new": "معاملات نقاط البيع المبلغ عنها شهريًا"
+  },
+  {
+   "finding": "P3-F04",
+   "sheet": "11_VISUAL_LIBRARY",
+   "row": 18,
+   "col": 2,
+   "field": "VIS-POS-VALUE.title_en",
+   "old": "POS Transaction Value",
+   "new": "Nominal value of reported POS transactions, monthly"
+  },
+  {
+   "finding": "P3-F04",
+   "sheet": "11_VISUAL_LIBRARY",
+   "row": 18,
+   "col": 3,
+   "field": "VIS-POS-VALUE.title_ar",
+   "old": "قيمة معاملات نقاط البيع",
+   "new": "القيمة الاسمية لمعاملات نقاط البيع المبلغ عنها شهريًا"
+  },
+  {
+   "finding": "P3-F04",
+   "sheet": "06_EVIDENCE_OBJECTS",
+   "row": 68,
+   "col": 4,
+   "field": "VIS-POS-VALUE.title_en",
+   "old": "POS Transaction Value",
+   "new": "Nominal value of reported POS transactions, monthly"
+  },
+  {
+   "finding": "P3-F04",
+   "sheet": "06_EVIDENCE_OBJECTS",
+   "row": 68,
+   "col": 5,
+   "field": "VIS-POS-VALUE.title_ar",
+   "old": "قيمة معاملات نقاط البيع",
+   "new": "القيمة الاسمية لمعاملات نقاط البيع المبلغ عنها شهريًا"
+  },
+  {
+   "finding": "P3-F04",
+   "sheet": "11_VISUAL_LIBRARY",
+   "row": 17,
+   "col": 21,
+   "field": "VIS-POS-TRANSACTIONS.accessible_summary_en",
+   "old": "Reported POS transactions rose from 8,015 in March 2025 to 24,026 in January 2026. Between December 2025 (21,099) and January 2026 (24,026), the raw totals imply approximately +13.87% growth, while the January source graphic displays +4.9%. The visual keeps both source-reported elements visible as a discrepancy. Transactions are events, not unique users or merchants, so the series does not measure how many people or businesses used POS services.",
+   "new": "Reported POS transactions rose from 8,015 in March 2025 to 24,026 in January 2026, but not steadily: the monthly high was 27,187 in July 2025. Between December 2025 (21,099) and January 2026 (24,026), the raw totals imply approximately +13.87% growth, while the January source graphic displays +4.9%. The visual keeps both source-reported elements visible as a discrepancy. Transactions are events, not unique users or merchants, so the series does not measure how many people or businesses used POS services."
+  },
+  {
+   "finding": "P3-F04",
+   "sheet": "11_VISUAL_LIBRARY",
+   "row": 17,
+   "col": 22,
+   "field": "VIS-POS-TRANSACTIONS.accessible_summary_ar",
+   "old": "ارتفع عدد معاملات نقاط البيع المبلغ عنها من 8,015 معاملة في مارس 2025 إلى 24,026 معاملة في يناير 2026. وبين ديسمبر 2025 (21,099) ويناير 2026 (24,026) تعطي الإجماليات الخام نموًا يقارب +13.87%، بينما يعرض رسم مصدر يناير نسبة +4.9%. يُبقي العرض المعلومتين ظاهرتين بوصفهما حالة اختلاف. والمعاملة حدث وليست مستخدمًا أو تاجرًا فريدًا، لذلك لا تقيس السلسلة عدد الأشخاص أو المنشآت التي استخدمت نقاط البيع.",
+   "new": "ارتفع عدد معاملات نقاط البيع المبلغ عنها من 8,015 معاملة في مارس 2025 إلى 24,026 معاملة في يناير 2026، ولكن ليس بصورة مطردة: فقد بلغ أعلى مستوى شهري 27,187 معاملة في يوليو 2025. وبين ديسمبر 2025 (21,099) ويناير 2026 (24,026) تعطي الإجماليات الخام نموًا يقارب +13.87%، بينما يعرض رسم مصدر يناير نسبة +4.9%. يُبقي العرض المعلومتين ظاهرتين بوصفهما حالة اختلاف. والمعاملة حدث وليست مستخدمًا أو تاجرًا فريدًا، لذلك لا تقيس السلسلة عدد الأشخاص أو المنشآت التي استخدمت نقاط البيع."
+  },
+  {
+   "finding": "P3-F04",
+   "sheet": "06_EVIDENCE_OBJECTS",
+   "row": 67,
+   "col": 6,
+   "field": "VIS-POS-TRANSACTIONS.summary_en",
+   "old": "Reported POS transactions rose from 8,015 in March 2025 to 24,026 in January 2026. The visual uses the raw monthly transaction totals and flags the January source-growth inconsistency rather than repairing it silently. Transactions are events, not unique users, so the series does not measure how many people used POS services.",
+   "new": "Reported POS transactions rose from 8,015 in March 2025 to 24,026 in January 2026, but not steadily: the monthly high was 27,187 in July 2025. The visual uses the raw monthly transaction totals and flags the January source-growth inconsistency rather than repairing it silently. Transactions are events, not unique users, so the series does not measure how many people used POS services."
+  },
+  {
+   "finding": "P3-F04",
+   "sheet": "06_EVIDENCE_OBJECTS",
+   "row": 67,
+   "col": 7,
+   "field": "VIS-POS-TRANSACTIONS.summary_ar",
+   "old": "ارتفع عدد معاملات نقاط البيع المبلغ عنها من 8,015 معاملة في مارس 2025 إلى 24,026 معاملة في يناير 2026. يستخدم العرض الإجماليات الشهرية كما وردت في المصدر ويُظهر عدم الاتساق في نسبة النمو الواردة لشهر يناير بدل تصحيحه بصمت. المعاملة حدث وليست مستخدمًا فريدًا، لذلك لا تقيس السلسلة عدد الأشخاص الذين استخدموا نقاط البيع.",
+   "new": "ارتفع عدد معاملات نقاط البيع المبلغ عنها من 8,015 معاملة في مارس 2025 إلى 24,026 معاملة في يناير 2026، ولكن ليس بصورة مطردة: فقد بلغ أعلى مستوى شهري 27,187 معاملة في يوليو 2025. يستخدم العرض الإجماليات الشهرية كما وردت في المصدر ويُظهر عدم الاتساق في نسبة النمو الواردة لشهر يناير بدل تصحيحه بصمت. المعاملة حدث وليست مستخدمًا فريدًا، لذلك لا تقيس السلسلة عدد الأشخاص الذين استخدموا نقاط البيع."
+  },
+  {
+   "finding": "P3-F05",
+   "sheet": "11_VISUAL_LIBRARY",
+   "row": 16,
+   "col": 8,
+   "field": "VIS-POS-TERMINALS.what_it_shows_ar",
+   "old": "يعرض الإجماليات الشهرية الخام لأجهزة نقاط البيع. وبين ديسمبر 2025 ويناير 2026 تبقى نسبة +11% التي يعرضها المصدر ظاهرة إلى جانب النمو البالغ نحو +8.55% الذي تعطيه الأرقام 1,357→1,473؛ ولا يُصحح المصدر بصمت.",
+   "new": "يعرض الإجماليات الشهرية الخام لأجهزة نقاط البيع. وبين ديسمبر 2025 ويناير 2026 تبقى نسبة +11% التي يعرضها المصدر ظاهرة إلى جانب النمو البالغ نحو +8.55% الذي تعطيه زيادة الأرقام من 1,357 إلى 1,473؛ ولا يُصحح المصدر بصمت."
+  },
+  {
+   "finding": "P3-F05",
+   "sheet": "06_EVIDENCE_OBJECTS",
+   "row": 8,
+   "col": 17,
+   "field": "CLM-010.limitations_ar",
+   "old": "لا يجوز تفسير التسلسل 7→9→8 باعتباره دخولًا وخروجًا فعليًا لمقدمي خدمات أو صافي نمو في عددهم. ولا يجوز وصل 581,075 (الربع الثالث 2024) بـ2,102,484 (النصف الأول 2025) بوصفه نموًا، ولا معاملة المشتركين كأشخاص فريدين أو مستخدمين نشطين.",
+   "new": "لا يجوز تفسير التسلسل 7 ثم 9 ثم 8 باعتباره دخولًا وخروجًا فعليًا لمقدمي خدمات أو صافي نمو في عددهم. ولا يجوز وصل 581,075 (الربع الثالث 2024) بـ2,102,484 (النصف الأول 2025) بوصفه نموًا، ولا معاملة المشتركين كأشخاص فريدين أو مستخدمين نشطين."
+  },
+  {
+   "finding": "P3-F05",
+   "sheet": "07_PUBLIC_CLAIMS",
+   "row": 14,
+   "col": 11,
+   "field": "CLM-010.does_not_prove_ar",
+   "old": "لا يجوز تفسير التسلسل 7→9→8 باعتباره دخولًا وخروجًا فعليًا لمقدمي خدمات أو صافي نمو في عددهم. ولا يجوز وصل 581,075 (الربع الثالث 2024) بـ2,102,484 (النصف الأول 2025) بوصفه نموًا، ولا معاملة المشتركين كأشخاص فريدين أو مستخدمين نشطين.",
+   "new": "لا يجوز تفسير التسلسل 7 ثم 9 ثم 8 باعتباره دخولًا وخروجًا فعليًا لمقدمي خدمات أو صافي نمو في عددهم. ولا يجوز وصل 581,075 (الربع الثالث 2024) بـ2,102,484 (النصف الأول 2025) بوصفه نموًا، ولا معاملة المشتركين كأشخاص فريدين أو مستخدمين نشطين."
+  },
+  {
+   "finding": "P3-F05",
+   "sheet": "33_ANALYTICS_MASTER",
+   "row": 17,
+   "col": 9,
+   "field": "DA corridor note_ar",
+   "old": "فرق متوسط التكلفة المعلنة بين الإمارات→اليمن والسعودية→اليمن لنفس مبلغ التحويل.",
+   "new": "فرق متوسط التكلفة المعلنة بين ممري الإمارات–اليمن والسعودية–اليمن لنفس مبلغ التحويل."
+  },
+  {
+   "finding": "P3-F05",
+   "sheet": "33_ANALYTICS_MASTER",
+   "row": 18,
+   "col": 9,
+   "field": "DA corridor note_ar",
+   "old": "فرق متوسط التكلفة المعلنة بين الإمارات→اليمن والسعودية→اليمن لنفس مبلغ التحويل.",
+   "new": "فرق متوسط التكلفة المعلنة بين ممري الإمارات–اليمن والسعودية–اليمن لنفس مبلغ التحويل."
+  },
+  {
+   "finding": "P3-F06",
+   "sheet": "19_PAYMENTS_DATA",
+   "row": 67,
+   "col": 11,
+   "field": "OBS-00063.source_locator",
+   "old": "one-page monthly POS infographic; web ref turn503833view4",
+   "new": "one-page monthly POS infographic"
+  },
+  {
+   "finding": "P3-F06",
+   "sheet": "19_PAYMENTS_DATA",
+   "row": 68,
+   "col": 11,
+   "field": "OBS-00064.source_locator",
+   "old": "one-page monthly POS infographic; web ref turn503833view4",
+   "new": "one-page monthly POS infographic"
+  },
+  {
+   "finding": "P3-F06",
+   "sheet": "19_PAYMENTS_DATA",
+   "row": 69,
+   "col": 11,
+   "field": "OBS-00065.source_locator",
+   "old": "one-page monthly POS infographic; web ref turn503833view4",
+   "new": "one-page monthly POS infographic"
+  },
+  {
+   "finding": "P3-F06",
+   "sheet": "19_PAYMENTS_DATA",
+   "row": 70,
+   "col": 11,
+   "field": "OBS-00066.source_locator",
+   "old": "one-page monthly POS infographic; web ref turn503833view3",
+   "new": "one-page monthly POS infographic"
+  },
+  {
+   "finding": "P3-F06",
+   "sheet": "19_PAYMENTS_DATA",
+   "row": 71,
+   "col": 11,
+   "field": "OBS-00067.source_locator",
+   "old": "one-page monthly POS infographic; web ref turn503833view3",
+   "new": "one-page monthly POS infographic"
+  },
+  {
+   "finding": "P3-F06",
+   "sheet": "19_PAYMENTS_DATA",
+   "row": 72,
+   "col": 11,
+   "field": "OBS-00068.source_locator",
+   "old": "one-page monthly POS infographic; web ref turn503833view3",
+   "new": "one-page monthly POS infographic"
+  },
+  {
+   "finding": "P3-F06",
+   "sheet": "19_PAYMENTS_DATA",
+   "row": 73,
+   "col": 11,
+   "field": "OBS-00069.source_locator",
+   "old": "one-page monthly POS infographic; web ref turn503833view2",
+   "new": "one-page monthly POS infographic"
+  },
+  {
+   "finding": "P3-F06",
+   "sheet": "19_PAYMENTS_DATA",
+   "row": 74,
+   "col": 11,
+   "field": "OBS-00070.source_locator",
+   "old": "one-page monthly POS infographic; web ref turn503833view2",
+   "new": "one-page monthly POS infographic"
+  },
+  {
+   "finding": "P3-F06",
+   "sheet": "19_PAYMENTS_DATA",
+   "row": 75,
+   "col": 11,
+   "field": "OBS-00071.source_locator",
+   "old": "one-page monthly POS infographic; web ref turn503833view1",
+   "new": "one-page monthly POS infographic"
+  },
+  {
+   "finding": "P3-F06",
+   "sheet": "19_PAYMENTS_DATA",
+   "row": 76,
+   "col": 11,
+   "field": "OBS-00072.source_locator",
+   "old": "one-page monthly POS infographic; web ref turn503833view1",
+   "new": "one-page monthly POS infographic"
+  },
+  {
+   "finding": "P3-F06",
+   "sheet": "19_PAYMENTS_DATA",
+   "row": 77,
+   "col": 11,
+   "field": "OBS-00073.source_locator",
+   "old": "one-page monthly POS infographic; web ref turn503833view1",
+   "new": "one-page monthly POS infographic"
+  },
+  {
+   "finding": "P3-F06",
+   "sheet": "19_PAYMENTS_DATA",
+   "row": 78,
+   "col": 11,
+   "field": "OBS-00074.source_locator",
+   "old": "one-page monthly POS infographic; web ref turn503833view0",
+   "new": "one-page monthly POS infographic"
+  },
+  {
+   "finding": "P3-F06",
+   "sheet": "19_PAYMENTS_DATA",
+   "row": 79,
+   "col": 11,
+   "field": "OBS-00075.source_locator",
+   "old": "one-page monthly POS infographic; web ref turn503833view0",
+   "new": "one-page monthly POS infographic"
+  },
+  {
+   "finding": "P3-F06",
+   "sheet": "19_PAYMENTS_DATA",
+   "row": 80,
+   "col": 11,
+   "field": "OBS-00076.source_locator",
+   "old": "one-page monthly POS infographic; web ref turn503833view0",
+   "new": "one-page monthly POS infographic"
+  },
+  {
+   "finding": "P3-F06",
+   "sheet": "19_PAYMENTS_DATA",
+   "row": 81,
+   "col": 11,
+   "field": "OBS-00077.source_locator",
+   "old": "one-page monthly POS infographic; web ref turn274669view0",
+   "new": "one-page monthly POS infographic"
+  },
+  {
+   "finding": "P3-F06",
+   "sheet": "19_PAYMENTS_DATA",
+   "row": 82,
+   "col": 11,
+   "field": "OBS-00078.source_locator",
+   "old": "one-page monthly POS infographic; web ref turn274669view0",
+   "new": "one-page monthly POS infographic"
+  },
+  {
+   "finding": "P3-F06",
+   "sheet": "19_PAYMENTS_DATA",
+   "row": 83,
+   "col": 11,
+   "field": "OBS-00079.source_locator",
+   "old": "one-page monthly POS infographic; web ref turn274669view0",
+   "new": "one-page monthly POS infographic"
+  },
+  {
+   "finding": "P3-F06",
+   "sheet": "19_PAYMENTS_DATA",
+   "row": 84,
+   "col": 11,
+   "field": "OBS-00080.source_locator",
+   "old": "one-page monthly POS infographic; web ref turn274669view1",
+   "new": "one-page monthly POS infographic"
+  },
+  {
+   "finding": "P3-F06",
+   "sheet": "19_PAYMENTS_DATA",
+   "row": 85,
+   "col": 11,
+   "field": "OBS-00081.source_locator",
+   "old": "one-page monthly POS infographic; web ref turn274669view1",
+   "new": "one-page monthly POS infographic"
+  },
+  {
+   "finding": "P3-F06",
+   "sheet": "19_PAYMENTS_DATA",
+   "row": 86,
+   "col": 11,
+   "field": "OBS-00082.source_locator",
+   "old": "one-page monthly POS infographic; web ref turn274669view1",
+   "new": "one-page monthly POS infographic"
+  },
+  {
+   "finding": "P3-F07",
+   "sheet": "11_VISUAL_LIBRARY",
+   "row": 12,
+   "col": 2,
+   "field": "VIS-INCLUSION-TRANSMISSION.title_en",
+   "old": "Financial inclusion is a transmission system, not a sector score",
+   "new": "Financial inclusion is a connected system, not a sector score"
+  },
+  {
+   "finding": "P3-F07",
+   "sheet": "11_VISUAL_LIBRARY",
+   "row": 12,
+   "col": 3,
+   "field": "VIS-INCLUSION-TRANSMISSION.title_ar",
+   "old": "الشمول المالي منظومة انتقال، لا درجة واحدة",
+   "new": "الشمول المالي منظومة مترابطة، لا درجة واحدة"
+  },
+  {
+   "finding": "P3-F07",
+   "sheet": "06_EVIDENCE_OBJECTS",
+   "row": 11,
+   "col": 4,
+   "field": "VIS-INCLUSION-TRANSMISSION.title_en",
+   "old": "Financial inclusion is a transmission system, not a sector score",
+   "new": "Financial inclusion is a connected system, not a sector score"
+  },
+  {
+   "finding": "P3-F07",
+   "sheet": "06_EVIDENCE_OBJECTS",
+   "row": 11,
+   "col": 5,
+   "field": "VIS-INCLUSION-TRANSMISSION.title_ar",
+   "old": "الشمول المالي منظومة انتقال، لا درجة واحدة",
+   "new": "الشمول المالي منظومة مترابطة، لا درجة واحدة"
+  },
+  {
+   "finding": "P3-F07",
+   "sheet": "11_VISUAL_LIBRARY",
+   "row": 12,
+   "col": 4,
+   "field": "VIS-INCLUSION-TRANSMISSION.visual_form",
+   "old": "LAYERED_SYSTEM_MAP__PEOPLE_FIRMS_PROVIDERS_RAILS_FLOWS_RULES_CONTEXT",
+   "new": "TEXT_FIRST_SYSTEM_RELATIONSHIP_LIST"
+  },
+  {
+   "finding": "P3-F07",
+   "sheet": "11_VISUAL_LIBRARY",
+   "row": 12,
+   "col": 7,
+   "field": "VIS-INCLUSION-TRANSMISSION.what_it_shows_en",
+   "old": "A layered map of the financial-inclusion system linking people and capability, firms and income, providers, payment rails, remittance and capital flows, regulation and protection, and enabling constraints, with the evidence state marked on each link and no composite score.",
+   "new": "The documented relationships between people and capability, firms and income, providers, payment rails, remittance and capital flows, regulation and protection, and enabling constraints. Each relationship states what the evidence supports and what it does not establish; no link carries an evidence-strength rating, and there is no composite score."
+  },
+  {
+   "finding": "P3-F07",
+   "sheet": "11_VISUAL_LIBRARY",
+   "row": 12,
+   "col": 8,
+   "field": "VIS-INCLUSION-TRANSMISSION.what_it_shows_ar",
+   "old": "يستخدم خريطة هادئة متعددة الطبقات تربط الناس والقدرات، والمنشآت والدخل، ومقدمي الخدمات، وسكك الدفع، والتحويلات وتدفقات رأس المال، والتنظيم والحماية، والقيود الممكّنة، مع إظهار نوع الدليل عند كل رابط.",
+   "new": "يعرض العلاقات الموثقة بين الناس والقدرات، والمنشآت والدخل، ومقدمي الخدمات، وبنية المدفوعات، وتدفقات الحوالات ورأس المال، والتنظيم والحماية، والقيود المُمكِّنة أو المعطلة. وتذكر كل علاقة ما تسنده الأدلة وما لا تثبته؛ ولا تحمل أي علاقة تقديرًا لقوة الدليل، ولا توجد درجة مركبة."
+  },
+  {
+   "finding": "P3-F07",
+   "sheet": "11_VISUAL_LIBRARY",
+   "row": 12,
+   "col": 12,
+   "field": "VIS-INCLUSION-TRANSMISSION.evidence_strength",
+   "old": "SYNTHESIS__EVIDENCE_BOUND",
+   "new": "SYNTHESIS__RELATIONSHIP_STATEMENTS_ONLY"
+  },
+  {
+   "finding": "P3-F07",
+   "sheet": "11_VISUAL_LIBRARY",
+   "row": 12,
+   "col": 18,
+   "field": "VIS-INCLUSION-TRANSMISSION.encoding_contract",
+   "old": "6–7 calm layers with evidence-state markers; adjacency not causality.",
+   "new": "Ordered list of documented relationships grouped by system layer; each item names its relationship type and what it does not establish. Adjacency is not causality: no arrows and no evidence-strength marker, because none is governed per link."
+  },
+  {
+   "finding": "P3-F07",
+   "sheet": "06_EVIDENCE_OBJECTS",
+   "row": 11,
+   "col": 14,
+   "field": "VIS-INCLUSION-TRANSMISSION.method_en",
+   "old": "6–7 calm layers with evidence-state markers; adjacency not causality.",
+   "new": "Ordered list of documented relationships grouped by system layer; each item names its relationship type and what it does not establish. Adjacency is not causality: no arrows and no evidence-strength marker, because none is governed per link."
+  },
+  {
+   "finding": "P3-F07",
+   "sheet": "06_EVIDENCE_OBJECTS",
+   "row": 11,
+   "col": 15,
+   "field": "VIS-INCLUSION-TRANSMISSION.method_ar",
+   "old": "يعرض الشكل ستًا إلى سبع طبقات هادئة مع علامات لحالة الدليل؛ ويشير التجاور إلى صلة في النظام لا إلى علاقة سببية.",
+   "new": "قائمة مرتبة بالعلاقات الموثقة مجمعة بحسب طبقات المنظومة؛ يذكر كل بند نوع العلاقة وما لا تثبته. والتجاور لا يعني السببية: فلا أسهم ولا علامة لقوة الدليل، لأن قوة الدليل غير محددة لكل علاقة."
+  },
+  {
+   "finding": "P3-F07",
+   "sheet": "11_VISUAL_LIBRARY",
+   "row": 12,
+   "col": 20,
+   "field": "VIS-INCLUSION-TRANSMISSION.prohibited_inference_ar",
+   "old": "لا مؤشر مركب ولا أسهم سببية ما لم يدعمها دليل مستقل.",
+   "new": "لا أسهم سببية ما لم يدعمها دليل مستقل، ولا مؤشر مركب، ولا إيحاء بأن مجالًا يسبب آخر بصورة آلية."
+  },
+  {
+   "finding": "P3-F07",
+   "sheet": "06_EVIDENCE_OBJECTS",
+   "row": 11,
+   "col": 17,
+   "field": "VIS-INCLUSION-TRANSMISSION.limitations_ar",
+   "old": "لا مؤشر مركب ولا أسهم سببية ما لم يدعمها دليل مستقل.",
+   "new": "لا أسهم سببية ما لم يدعمها دليل مستقل، ولا مؤشر مركب، ولا إيحاء بأن مجالًا يسبب آخر بصورة آلية."
+  },
+  {
+   "finding": "P3-F07",
+   "sheet": "13_SYSTEM_RELATIONSHIPS",
+   "row": 26,
+   "col": 2,
+   "field": "SL-022.from",
+   "old": "DS-SYSTEM-CHRONOLOGY",
+   "new": "DS-V4R3-SYSTEM-CHRONOLOGY"
+  },
+  {
+   "finding": "P3-F07",
+   "sheet": "13_SYSTEM_RELATIONSHIPS",
+   "row": 26,
+   "col": 7,
+   "field": "SL-022.evidence_refs",
+   "old": "[\"DS-SYSTEM-CHRONOLOGY\"]",
+   "new": "[\"DS-V4R3-SYSTEM-CHRONOLOGY\"]"
+  },
+  {
+   "finding": "P3-F07",
+   "sheet": "13_SYSTEM_RELATIONSHIPS",
+   "row": 27,
+   "col": 2,
+   "field": "SL-023.from",
+   "old": "DS-SYSTEM-CHRONOLOGY",
+   "new": "DS-V4R3-SYSTEM-CHRONOLOGY"
+  },
+  {
+   "finding": "P3-F07",
+   "sheet": "13_SYSTEM_RELATIONSHIPS",
+   "row": 27,
+   "col": 7,
+   "field": "SL-023.evidence_refs",
+   "old": "[\"DS-SYSTEM-CHRONOLOGY\"]",
+   "new": "[\"DS-V4R3-SYSTEM-CHRONOLOGY\"]"
+  },
+  {
+   "finding": "P3-F07",
+   "sheet": "13_SYSTEM_RELATIONSHIPS",
+   "row": 28,
+   "col": 2,
+   "field": "SL-024.from",
+   "old": "DS-SYSTEM-CHRONOLOGY",
+   "new": "DS-V4R3-SYSTEM-CHRONOLOGY"
+  },
+  {
+   "finding": "P3-F07",
+   "sheet": "13_SYSTEM_RELATIONSHIPS",
+   "row": 28,
+   "col": 7,
+   "field": "SL-024.evidence_refs",
+   "old": "[\"DS-SYSTEM-CHRONOLOGY\"]",
+   "new": "[\"DS-V4R3-SYSTEM-CHRONOLOGY\"]"
+  },
+  {
+   "finding": "P3-F07",
+   "sheet": "13_SYSTEM_RELATIONSHIPS",
+   "row": 29,
+   "col": 2,
+   "field": "SL-025.from",
+   "old": "DS-SYSTEM-CHRONOLOGY",
+   "new": "DS-V4R3-SYSTEM-CHRONOLOGY"
+  },
+  {
+   "finding": "P3-F07",
+   "sheet": "13_SYSTEM_RELATIONSHIPS",
+   "row": 29,
+   "col": 7,
+   "field": "SL-025.evidence_refs",
+   "old": "[\"DS-SYSTEM-CHRONOLOGY\"]",
+   "new": "[\"DS-V4R3-SYSTEM-CHRONOLOGY\"]"
+  },
+  {
+   "finding": "P3-F07",
+   "sheet": "13_SYSTEM_RELATIONSHIPS",
+   "row": 30,
+   "col": 2,
+   "field": "SL-026.from",
+   "old": "DS-SYSTEM-CHRONOLOGY",
+   "new": "DS-V4R3-SYSTEM-CHRONOLOGY"
+  },
+  {
+   "finding": "P3-F07",
+   "sheet": "13_SYSTEM_RELATIONSHIPS",
+   "row": 30,
+   "col": 7,
+   "field": "SL-026.evidence_refs",
+   "old": "[\"DS-SYSTEM-CHRONOLOGY\"]",
+   "new": "[\"DS-V4R3-SYSTEM-CHRONOLOGY\"]"
+  },
+  {
+   "finding": "P3-F07",
+   "sheet": "13_SYSTEM_RELATIONSHIPS",
+   "row": 23,
+   "col": 2,
+   "field": "SL-019.from",
+   "old": "SMEPS-FINACC-2024",
+   "new": "CLM-060"
+  },
+  {
+   "finding": "P3-F08",
+   "sheet": "11_VISUAL_LIBRARY",
+   "row": 36,
+   "col": 2,
+   "field": "RV-CWR-006.title_en",
+   "old": "Borrowers, savers and portfolio are moving differently",
+   "new": "Borrowers, savers and portfolio: separate anchors, not one trend"
+  },
+  {
+   "finding": "P3-F08",
+   "sheet": "11_VISUAL_LIBRARY",
+   "row": 36,
+   "col": 3,
+   "field": "RV-CWR-006.title_ar",
+   "old": "المقترضون والمدخرون والمحفظة لا يتحركون بالطريقة نفسها",
+   "new": "المقترضون والمدخرون والمحفظة: نقاط مرجعية منفصلة، لا اتجاه واحد"
+  },
+  {
+   "finding": "P3-F09",
+   "sheet": "06_EVIDENCE_OBJECTS",
+   "row": 105,
+   "col": 6,
+   "field": "CLM-034.summary_en",
+   "old": "Within AR2025, the published remittance path rises with unusually similar annual growth rates across overlapping years. That pattern is useful for method scrutiny, but it does not establish smoothing, interpolation, manipulation or low real-world volatility.",
+   "new": "Within AR2025, the published remittance path rises with unusually similar annual growth rates across overlapping years. That pattern is useful for method scrutiny, but it does not establish smoothing, interpolation or low real-world volatility."
+  },
+  {
+   "finding": "P3-F09",
+   "sheet": "06_EVIDENCE_OBJECTS",
+   "row": 105,
+   "col": 7,
+   "field": "CLM-034.summary_ar",
+   "old": "تُظهر سلسلة التحويلات المنشورة في تقرير 2025 معدلات نمو سنوية متقاربة على نحو لافت عبر السنوات المتداخلة. يفيد هذا النمط في فحص المنهج، لكنه لا يثبت وجود تسوية أو استيفاء أو تلاعب أو انخفاض في التقلب الفعلي للتحويلات.",
+   "new": "تُظهر سلسلة التحويلات المنشورة في تقرير 2025 معدلات نمو سنوية متقاربة على نحو لافت عبر السنوات المتداخلة. يفيد هذا النمط في فحص المنهج، لكنه لا يثبت وجود تسوية أو استيفاء أو انخفاض في التقلب الفعلي للتحويلات."
+  },
+  {
+   "finding": "P3-F09",
+   "sheet": "06_EVIDENCE_OBJECTS",
+   "row": 105,
+   "col": 14,
+   "field": "CLM-034.method_en",
+   "old": "Inspect year-on-year growth patterns within a single published vintage as a methods diagnostic. Similar growth rates are a question for scrutiny, not proof of smoothing or manipulation.",
+   "new": "Inspect year-on-year growth patterns within a single published vintage as a methods diagnostic. Similar growth rates are a question for scrutiny, not proof of smoothing or interpolation."
+  },
+  {
+   "finding": "P3-F09",
+   "sheet": "06_EVIDENCE_OBJECTS",
+   "row": 105,
+   "col": 15,
+   "field": "CLM-034.method_ar",
+   "old": "تُفحص أنماط النمو السنوي داخل نسخة منشورة واحدة بوصفها اختبارًا منهجيًا. وتشابه معدلات النمو يفتح سؤالًا للفحص ولا يثبت التنعيم أو الاستيفاء أو التلاعب.",
+   "new": "تُفحص أنماط النمو السنوي داخل نسخة منشورة واحدة بوصفها اختبارًا منهجيًا. وتشابه معدلات النمو يفتح سؤالًا للفحص ولا يثبت التنعيم أو الاستيفاء."
+  },
+  {
+   "finding": "P3-F09",
+   "sheet": "06_EVIDENCE_OBJECTS",
+   "row": 105,
+   "col": 16,
+   "field": "CLM-034.limitations_en",
+   "old": "Do not infer smoothing, interpolation, manipulation or low real-world volatility from the pattern.",
+   "new": "Do not infer smoothing, interpolation or low real-world volatility from the pattern."
+  },
+  {
+   "finding": "P3-F09",
+   "sheet": "06_EVIDENCE_OBJECTS",
+   "row": 105,
+   "col": 17,
+   "field": "CLM-034.limitations_ar",
+   "old": "لا يجوز استنتاج وجود تنعيم أو استيفاء أو تلاعب أو تقلب واقعي منخفض من مجرد النمط الظاهر في السلسلة المنشورة.",
+   "new": "لا يجوز استنتاج وجود تنعيم أو استيفاء أو تقلب واقعي منخفض من مجرد النمط الظاهر في السلسلة المنشورة."
+  },
+  {
+   "finding": "P3-F09",
+   "sheet": "07_PUBLIC_CLAIMS",
+   "row": 38,
+   "col": 6,
+   "field": "CLM-034.copy_en",
+   "old": "Within AR2025, the published remittance path rises with unusually similar annual growth rates across overlapping years. That pattern is useful for method scrutiny, but it does not establish smoothing, interpolation, manipulation or low real-world volatility.",
+   "new": "Within AR2025, the published remittance path rises with unusually similar annual growth rates across overlapping years. That pattern is useful for method scrutiny, but it does not establish smoothing, interpolation or low real-world volatility."
+  },
+  {
+   "finding": "P3-F09",
+   "sheet": "07_PUBLIC_CLAIMS",
+   "row": 38,
+   "col": 7,
+   "field": "CLM-034.copy_ar",
+   "old": "تُظهر سلسلة التحويلات المنشورة في تقرير 2025 معدلات نمو سنوية متقاربة على نحو لافت عبر السنوات المتداخلة. يفيد هذا النمط في فحص المنهج، لكنه لا يثبت وجود تسوية أو استيفاء أو تلاعب أو انخفاض في التقلب الفعلي للتحويلات.",
+   "new": "تُظهر سلسلة التحويلات المنشورة في تقرير 2025 معدلات نمو سنوية متقاربة على نحو لافت عبر السنوات المتداخلة. يفيد هذا النمط في فحص المنهج، لكنه لا يثبت وجود تسوية أو استيفاء أو انخفاض في التقلب الفعلي للتحويلات."
+  },
+  {
+   "finding": "P3-F09",
+   "sheet": "07_PUBLIC_CLAIMS",
+   "row": 38,
+   "col": 10,
+   "field": "CLM-034.does_not_prove_en",
+   "old": "Do not infer smoothing, interpolation, manipulation or low real-world volatility from the pattern.",
+   "new": "Do not infer smoothing, interpolation or low real-world volatility from the pattern."
+  },
+  {
+   "finding": "P3-F09",
+   "sheet": "07_PUBLIC_CLAIMS",
+   "row": 38,
+   "col": 11,
+   "field": "CLM-034.does_not_prove_ar",
+   "old": "لا يجوز استنتاج وجود تنعيم أو استيفاء أو تلاعب أو تقلب واقعي منخفض من مجرد النمط الظاهر في السلسلة المنشورة.",
+   "new": "لا يجوز استنتاج وجود تنعيم أو استيفاء أو تقلب واقعي منخفض من مجرد النمط الظاهر في السلسلة المنشورة."
+  },
+  {
+   "finding": "P3-F09",
+   "sheet": "33_ANALYTICS_MASTER",
+   "row": 82,
+   "col": 7,
+   "field": "DA method boundary",
+   "old": "Do not infer smoothing, manipulation or real-world stability without source-method evidence.",
+   "new": "Do not infer smoothing or real-world stability without source-method evidence."
+  },
+  {
+   "finding": "P3-F09",
+   "sheet": "03_PAGE_SECTIONS",
+   "row": 150,
+   "col": 5,
+   "field": "/evidence/CLM-034/#s1.body_en",
+   "old": "Within AR2025, the published remittance path rises with unusually similar annual growth rates across overlapping years. That pattern is useful for method scrutiny, but it does not establish smoothing, interpolation, manipulation or low real-world volatility.",
+   "new": "Within AR2025, the published remittance path rises with unusually similar annual growth rates across overlapping years. That pattern is useful for method scrutiny, but it does not establish smoothing, interpolation or low real-world volatility."
+  },
+  {
+   "finding": "P3-F09",
+   "sheet": "03_PAGE_SECTIONS",
+   "row": 150,
+   "col": 7,
+   "field": "/evidence/CLM-034/#s1.body_ar",
+   "old": "تُظهر سلسلة التحويلات المنشورة في تقرير 2025 معدلات نمو سنوية متقاربة على نحو لافت عبر السنوات المتداخلة. يفيد هذا النمط في فحص المنهج، لكنه لا يثبت وجود تسوية أو استيفاء أو تلاعب أو انخفاض في التقلب الفعلي للتحويلات.",
+   "new": "تُظهر سلسلة التحويلات المنشورة في تقرير 2025 معدلات نمو سنوية متقاربة على نحو لافت عبر السنوات المتداخلة. يفيد هذا النمط في فحص المنهج، لكنه لا يثبت وجود تسوية أو استيفاء أو انخفاض في التقلب الفعلي للتحويلات."
+  },
+  {
+   "finding": "P3-F09",
+   "sheet": "03_PAGE_SECTIONS",
+   "row": 554,
+   "col": 5,
+   "field": "/remittances/#s3.body_en",
+   "old": "For the 2024 reference year, CBY AR2024 reported US$6.245 billion while AR2025 restated 2024 at about US$3.42 billion. That is a same-year source revision. It must not be graphed as a year-on-year fall. The later path also shows unusually similar growth rates across overlapping years; that invites method scrutiny but does not establish smoothing, interpolation or manipulation.",
+   "new": "For the 2024 reference year, CBY AR2024 reported US$6.245 billion while AR2025 restated 2024 at about US$3.42 billion. That is a same-year source revision. It must not be graphed as a year-on-year fall. The later path also shows unusually similar growth rates across overlapping years; that invites method scrutiny but does not establish smoothing or interpolation."
+  },
+  {
+   "finding": "P3-F09",
+   "sheet": "03_PAGE_SECTIONS",
+   "row": 555,
+   "col": 7,
+   "field": "/remittances/#s3.body_ar",
+   "old": "بالنسبة للسنة المرجعية 2024، أورد تقرير البنك المركزي 2024 قيمة قدرها 6.245 مليارات دولار، بينما أعاد تقرير 2025 عرض 2024 عند 3.42 مليار دولار تقريبًا. هذه مراجعة في المصدر للسنة نفسها، ولا يجوز رسمها كهبوط بين عامين. كما يظهر في المسار اللاحق تقارب لافت في معدلات النمو عبر السنوات المتداخلة؛ وهو ما يستدعي فحص المنهج لكنه لا يثبت التسوية أو الاستيفاء أو التلاعب.",
+   "new": "بالنسبة للسنة المرجعية 2024، أورد تقرير البنك المركزي 2024 قيمة قدرها 6.245 مليارات دولار، بينما أعاد تقرير 2025 عرض 2024 عند 3.42 مليار دولار تقريبًا. هذه مراجعة في المصدر للسنة نفسها، ولا يجوز رسمها كهبوط بين عامين. كما يظهر في المسار اللاحق تقارب لافت في معدلات النمو عبر السنوات المتداخلة؛ وهو ما يستدعي فحص المنهج لكنه لا يثبت التسوية أو الاستيفاء."
+  },
+  {
+   "finding": "P3-F10",
+   "sheet": "22_PROVIDERS_DATA",
+   "row": 5,
+   "col": 8,
+   "field": "PRV-BANK-001.current_state_as_of",
+   "old": "46272",
+   "new": "2026-09-07"
+  },
+  {
+   "finding": "P3-F10",
+   "sheet": "22_PROVIDERS_DATA",
+   "row": 6,
+   "col": 8,
+   "field": "PRV-BANK-002.current_state_as_of",
+   "old": "46272",
+   "new": "2026-09-07"
+  },
+  {
+   "finding": "P3-F10",
+   "sheet": "22_PROVIDERS_DATA",
+   "row": 7,
+   "col": 8,
+   "field": "PRV-BANK-003.current_state_as_of",
+   "old": "46272",
+   "new": "2026-09-07"
+  },
+  {
+   "finding": "P3-F10",
+   "sheet": "22_PROVIDERS_DATA",
+   "row": 8,
+   "col": 8,
+   "field": "PRV-BANK-004.current_state_as_of",
+   "old": "46272",
+   "new": "2026-09-07"
+  },
+  {
+   "finding": "P3-F10",
+   "sheet": "22_PROVIDERS_DATA",
+   "row": 9,
+   "col": 8,
+   "field": "PRV-BANK-005.current_state_as_of",
+   "old": "46272",
+   "new": "2026-09-07"
+  },
+  {
+   "finding": "P3-F10",
+   "sheet": "22_PROVIDERS_DATA",
+   "row": 10,
+   "col": 8,
+   "field": "PRV-BANK-006.current_state_as_of",
+   "old": "46272",
+   "new": "2026-09-07"
+  },
+  {
+   "finding": "P3-F10",
+   "sheet": "22_PROVIDERS_DATA",
+   "row": 11,
+   "col": 8,
+   "field": "PRV-BANK-007.current_state_as_of",
+   "old": "46272",
+   "new": "2026-09-07"
+  },
+  {
+   "finding": "P3-F10",
+   "sheet": "22_PROVIDERS_DATA",
+   "row": 12,
+   "col": 8,
+   "field": "PRV-BANK-008.current_state_as_of",
+   "old": "46272",
+   "new": "2026-09-07"
+  },
+  {
+   "finding": "P3-F10",
+   "sheet": "22_PROVIDERS_DATA",
+   "row": 13,
+   "col": 8,
+   "field": "PRV-BANK-009.current_state_as_of",
+   "old": "46272",
+   "new": "2026-09-07"
+  },
+  {
+   "finding": "P3-F10",
+   "sheet": "22_PROVIDERS_DATA",
+   "row": 14,
+   "col": 8,
+   "field": "PRV-BANK-010.current_state_as_of",
+   "old": "46272",
+   "new": "2026-09-07"
+  },
+  {
+   "finding": "P3-F10",
+   "sheet": "22_PROVIDERS_DATA",
+   "row": 15,
+   "col": 8,
+   "field": "PRV-BANK-011.current_state_as_of",
+   "old": "46272",
+   "new": "2026-09-07"
+  },
+  {
+   "finding": "P3-F10",
+   "sheet": "22_PROVIDERS_DATA",
+   "row": 16,
+   "col": 8,
+   "field": "PRV-BANK-012.current_state_as_of",
+   "old": "46272",
+   "new": "2026-09-07"
+  },
+  {
+   "finding": "P3-F10",
+   "sheet": "22_PROVIDERS_DATA",
+   "row": 17,
+   "col": 8,
+   "field": "PRV-BANK-013.current_state_as_of",
+   "old": "46272",
+   "new": "2026-09-07"
+  },
+  {
+   "finding": "P3-F10",
+   "sheet": "22_PROVIDERS_DATA",
+   "row": 18,
+   "col": 8,
+   "field": "PRV-BANK-014.current_state_as_of",
+   "old": "46272",
+   "new": "2026-09-07"
+  },
+  {
+   "finding": "P3-F10",
+   "sheet": "22_PROVIDERS_DATA",
+   "row": 19,
+   "col": 8,
+   "field": "PRV-BANK-015.current_state_as_of",
+   "old": "46272",
+   "new": "2026-09-07"
+  },
+  {
+   "finding": "P3-F10",
+   "sheet": "22_PROVIDERS_DATA",
+   "row": 20,
+   "col": 8,
+   "field": "PRV-BANK-016.current_state_as_of",
+   "old": "46272",
+   "new": "2026-09-07"
+  },
+  {
+   "finding": "P3-F10",
+   "sheet": "22_PROVIDERS_DATA",
+   "row": 21,
+   "col": 8,
+   "field": "PRV-BANK-017.current_state_as_of",
+   "old": "46272",
+   "new": "2026-09-07"
+  },
+  {
+   "finding": "P3-F10",
+   "sheet": "22_PROVIDERS_DATA",
+   "row": 22,
+   "col": 8,
+   "field": "PRV-BANK-018.current_state_as_of",
+   "old": "46272",
+   "new": "2026-09-07"
+  },
+  {
+   "finding": "P3-F10",
+   "sheet": "22_PROVIDERS_DATA",
+   "row": 23,
+   "col": 8,
+   "field": "PRV-BANK-019.current_state_as_of",
+   "old": "46272",
+   "new": "2026-09-07"
+  },
+  {
+   "finding": "P3-F10",
+   "sheet": "22_PROVIDERS_DATA",
+   "row": 24,
+   "col": 8,
+   "field": "PRV-BANK-020.current_state_as_of",
+   "old": "46272",
+   "new": "2026-09-07"
+  },
+  {
+   "finding": "P3-F10",
+   "sheet": "22_PROVIDERS_DATA",
+   "row": 25,
+   "col": 8,
+   "field": "PRV-BANK-021.current_state_as_of",
+   "old": "46272",
+   "new": "2026-09-07"
+  },
+  {
+   "finding": "P3-F10",
+   "sheet": "22_PROVIDERS_DATA",
+   "row": 26,
+   "col": 8,
+   "field": "PRV-BANK-022.current_state_as_of",
+   "old": "46272",
+   "new": "2026-09-07"
+  },
+  {
+   "finding": "P3-F10",
+   "sheet": "22_PROVIDERS_DATA",
+   "row": 27,
+   "col": 8,
+   "field": "PRV-BANK-023.current_state_as_of",
+   "old": "46272",
+   "new": "2026-09-07"
+  },
+  {
+   "finding": "P3-F10",
+   "sheet": "22_PROVIDERS_DATA",
+   "row": 28,
+   "col": 8,
+   "field": "PRV-BANK-024.current_state_as_of",
+   "old": "46272",
+   "new": "2026-09-07"
+  },
+  {
+   "finding": "P3-F10",
+   "sheet": "22_PROVIDERS_DATA",
+   "row": 29,
+   "col": 8,
+   "field": "PRV-BANK-025.current_state_as_of",
+   "old": "46272",
+   "new": "2026-09-07"
+  },
+  {
+   "finding": "P3-F10",
+   "sheet": "22_PROVIDERS_DATA",
+   "row": 30,
+   "col": 8,
+   "field": "PRV-BANK-026.current_state_as_of",
+   "old": "46272",
+   "new": "2026-09-07"
+  },
+  {
+   "finding": "P3-F10",
+   "sheet": "22_PROVIDERS_DATA",
+   "row": 31,
+   "col": 8,
+   "field": "PRV-EXCH-E001.current_state_as_of",
+   "old": "46272",
+   "new": "2026-09-07"
+  },
+  {
+   "finding": "P3-F10",
+   "sheet": "22_PROVIDERS_DATA",
+   "row": 32,
+   "col": 8,
+   "field": "PRV-EXCH-E002.current_state_as_of",
+   "old": "46272",
+   "new": "2026-09-07"
+  },
+  {
+   "finding": "P3-F10",
+   "sheet": "22_PROVIDERS_DATA",
+   "row": 33,
+   "col": 8,
+   "field": "PRV-EXCH-E003.current_state_as_of",
+   "old": "46272",
+   "new": "2026-09-07"
+  },
+  {
+   "finding": "P3-F10",
+   "sheet": "22_PROVIDERS_DATA",
+   "row": 34,
+   "col": 8,
+   "field": "PRV-EXCH-E004.current_state_as_of",
+   "old": "46272",
+   "new": "2026-09-07"
+  },
+  {
+   "finding": "P3-F10",
+   "sheet": "22_PROVIDERS_DATA",
+   "row": 35,
+   "col": 8,
+   "field": "PRV-EXCH-B004A.current_state_as_of",
+   "old": "46272",
+   "new": "2026-09-07"
+  },
+  {
+   "finding": "P3-F10",
+   "sheet": "22_PROVIDERS_DATA",
+   "row": 36,
+   "col": 8,
+   "field": "PRV-EXCH-E005.current_state_as_of",
+   "old": "46272",
+   "new": "2026-09-07"
+  },
+  {
+   "finding": "P3-F10",
+   "sheet": "22_PROVIDERS_DATA",
+   "row": 37,
+   "col": 8,
+   "field": "PRV-EXCH-B005A.current_state_as_of",
+   "old": "46272",
+   "new": "2026-09-07"
+  },
+  {
+   "finding": "P3-F10",
+   "sheet": "22_PROVIDERS_DATA",
+   "row": 38,
+   "col": 8,
+   "field": "PRV-EXCH-E006.current_state_as_of",
+   "old": "46272",
+   "new": "2026-09-07"
+  },
+  {
+   "finding": "P3-F10",
+   "sheet": "22_PROVIDERS_DATA",
+   "row": 39,
+   "col": 8,
+   "field": "PRV-EXCH-E007.current_state_as_of",
+   "old": "46272",
+   "new": "2026-09-07"
+  },
+  {
+   "finding": "P3-F10",
+   "sheet": "22_PROVIDERS_DATA",
+   "row": 40,
+   "col": 8,
+   "field": "PRV-EXCH-E008.current_state_as_of",
+   "old": "46272",
+   "new": "2026-09-07"
+  },
+  {
+   "finding": "P3-F10",
+   "sheet": "22_PROVIDERS_DATA",
+   "row": 41,
+   "col": 8,
+   "field": "PRV-EXCH-E009.current_state_as_of",
+   "old": "46272",
+   "new": "2026-09-07"
+  },
+  {
+   "finding": "P3-F10",
+   "sheet": "22_PROVIDERS_DATA",
+   "row": 42,
+   "col": 8,
+   "field": "PRV-EXCH-E010.current_state_as_of",
+   "old": "46272",
+   "new": "2026-09-07"
+  },
+  {
+   "finding": "P3-F10",
+   "sheet": "22_PROVIDERS_DATA",
+   "row": 43,
+   "col": 8,
+   "field": "PRV-EXCH-E011.current_state_as_of",
+   "old": "46272",
+   "new": "2026-09-07"
+  },
+  {
+   "finding": "P3-F10",
+   "sheet": "22_PROVIDERS_DATA",
+   "row": 44,
+   "col": 8,
+   "field": "PRV-EXCH-E012.current_state_as_of",
+   "old": "46272",
+   "new": "2026-09-07"
+  },
+  {
+   "finding": "P3-F10",
+   "sheet": "22_PROVIDERS_DATA",
+   "row": 45,
+   "col": 8,
+   "field": "PRV-EXCH-E013.current_state_as_of",
+   "old": "46272",
+   "new": "2026-09-07"
+  },
+  {
+   "finding": "P3-F10",
+   "sheet": "22_PROVIDERS_DATA",
+   "row": 46,
+   "col": 8,
+   "field": "PRV-EXCH-E014.current_state_as_of",
+   "old": "46272",
+   "new": "2026-09-07"
+  },
+  {
+   "finding": "P3-F10",
+   "sheet": "22_PROVIDERS_DATA",
+   "row": 47,
+   "col": 8,
+   "field": "PRV-EXCH-B014A.current_state_as_of",
+   "old": "46272",
+   "new": "2026-09-07"
+  },
+  {
+   "finding": "P3-F10",
+   "sheet": "22_PROVIDERS_DATA",
+   "row": 48,
+   "col": 8,
+   "field": "PRV-REM-E001.current_state_as_of",
+   "old": "46272",
+   "new": "2026-09-07"
+  },
+  {
+   "finding": "P3-F10",
+   "sheet": "22_PROVIDERS_DATA",
+   "row": 49,
+   "col": 8,
+   "field": "PRV-REM-E002.current_state_as_of",
+   "old": "46272",
+   "new": "2026-09-07"
+  },
+  {
+   "finding": "P3-F10",
+   "sheet": "22_PROVIDERS_DATA",
+   "row": 50,
+   "col": 8,
+   "field": "PRV-REM-E003.current_state_as_of",
+   "old": "46272",
+   "new": "2026-09-07"
+  },
+  {
+   "finding": "P3-F10",
+   "sheet": "22_PROVIDERS_DATA",
+   "row": 51,
+   "col": 8,
+   "field": "PRV-EXCH-E015.current_state_as_of",
+   "old": "46272",
+   "new": "2026-09-07"
+  },
+  {
+   "finding": "P3-F10",
+   "sheet": "22_PROVIDERS_DATA",
+   "row": 52,
+   "col": 8,
+   "field": "PRV-EXCH-E016.current_state_as_of",
+   "old": "46272",
+   "new": "2026-09-07"
+  },
+  {
+   "finding": "P3-F10",
+   "sheet": "22_PROVIDERS_DATA",
+   "row": 53,
+   "col": 8,
+   "field": "PRV-REM-E004.current_state_as_of",
+   "old": "46272",
+   "new": "2026-09-07"
+  },
+  {
+   "finding": "P3-F10",
+   "sheet": "22_PROVIDERS_DATA",
+   "row": 54,
+   "col": 8,
+   "field": "PRV-EXCH-E017.current_state_as_of",
+   "old": "46272",
+   "new": "2026-09-07"
+  },
+  {
+   "finding": "P3-F10",
+   "sheet": "22_PROVIDERS_DATA",
+   "row": 55,
+   "col": 8,
+   "field": "PRV-EXCH-E018.current_state_as_of",
+   "old": "46272",
+   "new": "2026-09-07"
+  },
+  {
+   "finding": "P3-F10",
+   "sheet": "22_PROVIDERS_DATA",
+   "row": 56,
+   "col": 8,
+   "field": "PRV-EXCH-E019.current_state_as_of",
+   "old": "46272",
+   "new": "2026-09-07"
+  },
+  {
+   "finding": "P3-F10",
+   "sheet": "22_PROVIDERS_DATA",
+   "row": 57,
+   "col": 8,
+   "field": "PRV-EXCH-E020.current_state_as_of",
+   "old": "46272",
+   "new": "2026-09-07"
+  },
+  {
+   "finding": "P3-F10",
+   "sheet": "22_PROVIDERS_DATA",
+   "row": 58,
+   "col": 8,
+   "field": "PRV-EXCH-E021.current_state_as_of",
+   "old": "46272",
+   "new": "2026-09-07"
+  },
+  {
+   "finding": "P3-F10",
+   "sheet": "22_PROVIDERS_DATA",
+   "row": 59,
+   "col": 8,
+   "field": "PRV-REM-E005.current_state_as_of",
+   "old": "46272",
+   "new": "2026-09-07"
+  },
+  {
+   "finding": "P3-F10",
+   "sheet": "22_PROVIDERS_DATA",
+   "row": 60,
+   "col": 8,
+   "field": "PRV-EXCH-E022.current_state_as_of",
+   "old": "46282",
+   "new": "2026-09-17"
+  },
+  {
+   "finding": "EXF-002",
+   "sheet": "02_SITE_MAP",
+   "row": 44,
+   "col": 7,
+   "field": "/evidence/CLM-034/.full_copy_en",
+   "old": "A smoother published path is a methods question, not a conclusion\n\nWithin AR2025, the published remittance path rises with unusually similar annual growth rates across overlapping years. That pattern is useful for method scrutiny, but it does not establish smoothing, interpolation, manipulation or low real-world volatility.\n\nHow to read this evidence\n\nRead this evidence within the definition, population or group covered, calculation base where relevant, period, geography and method shown on the page. Before reusing or comparing it, check the source, limitations, evidence date and correction history. If a value or source link is unavailable, the page says so rather than filling the gap by inference. Download and reuse are offered only where source rights permit.",
+   "new": "A smoother published path is a methods question, not a conclusion\n\nWithin AR2025, the published remittance path rises with unusually similar annual growth rates across overlapping years. That pattern is useful for method scrutiny, but it does not establish smoothing, interpolation or low real-world volatility.\n\nHow to read this evidence\n\nRead this evidence within the definition, population or group covered, calculation base where relevant, period, geography and method shown on the page. Before reusing or comparing it, check the source, limitations, evidence date and correction history. If a value or source link is unavailable, the page says so rather than filling the gap by inference. Download and reuse are offered only where source rights permit."
+  },
+  {
+   "finding": "EXF-002",
+   "sheet": "02_SITE_MAP",
+   "row": 44,
+   "col": 8,
+   "field": "/evidence/CLM-034/.full_copy_ar",
+   "old": "المسار المنشور الأكثر سلاسة سؤال منهجي، لا استنتاج\n\nتُظهر سلسلة التحويلات المنشورة في تقرير 2025 معدلات نمو سنوية متقاربة على نحو لافت عبر السنوات المتداخلة. يفيد هذا النمط في فحص المنهج، لكنه لا يثبت وجود تسوية أو استيفاء أو تلاعب أو انخفاض في التقلب الفعلي للتحويلات.\n\nكيف تقرأ هذا الدليل\n\nيُقرأ هذا الدليل ضمن التعريف، والمجتمع الذي ينطبق عليه الرقم أو قاعدة الاحتساب عند الحاجة، والفترة، والجغرافيا، والطريقة المبينة في الصفحة. وقبل إعادة استخدامه أو مقارنته، راجع المصدر والحدود وحداثة الدليل وسجل التصحيح. وإذا كانت قيمة أو وصلة مصدر غير متاحة، تُذكر الفجوة صراحةً بدل ملئها بالاستنتاج. ولا يتاح التنزيل أو إعادة الاستخدام إلا حيث تسمح حقوق المصدر.",
+   "new": "المسار المنشور الأكثر سلاسة سؤال منهجي، لا استنتاج\n\nتُظهر سلسلة التحويلات المنشورة في تقرير 2025 معدلات نمو سنوية متقاربة على نحو لافت عبر السنوات المتداخلة. يفيد هذا النمط في فحص المنهج، لكنه لا يثبت وجود تسوية أو استيفاء أو انخفاض في التقلب الفعلي للتحويلات.\n\nكيف تقرأ هذا الدليل\n\nيُقرأ هذا الدليل ضمن التعريف، والمجتمع الذي ينطبق عليه الرقم أو قاعدة الاحتساب عند الحاجة، والفترة، والجغرافيا، والطريقة المبينة في الصفحة. وقبل إعادة استخدامه أو مقارنته، راجع المصدر والحدود وحداثة الدليل وسجل التصحيح. وإذا كانت قيمة أو وصلة مصدر غير متاحة، تُذكر الفجوة صراحةً بدل ملئها بالاستنتاج. ولا يتاح التنزيل أو إعادة الاستخدام إلا حيث تسمح حقوق المصدر."
+  },
+  {
+   "finding": "EXF-002",
+   "sheet": "02_SITE_MAP",
+   "row": 143,
+   "col": 7,
+   "field": "/remittances/.full_copy_en",
+   "old": "There is no single remittance number unless the source, concept and vintage are fixed first.\n\nMacro inflows, corridor prices and household receipt channels answer different questions. Even macro series can be revised for the same reference year. This resource keeps these evidence records separate and makes revisions visible.\n\nReported history, estimates and projections are different evidence states\n\nThe IMF staff report gives 2018–2024 as reported history based on staff calculations; a later supplement to the same consultation gives 2025 as an estimate and 2026–2030 as projections. The chart breaks the line where the source document changes and never extends reported history through the forecast as if all years had the same status. A forecast revision is not an observed economic change, and the macro series is not a measure of informal hawala volume.\n\nThe same reference year can change when the source vintage changes\n\nFor the 2024 reference year, CBY AR2024 reported US$6.245 billion while AR2025 restated 2024 at about US$3.42 billion. That is a same-year source revision. It must not be graphed as a year-on-year fall. The later path also shows unusually similar growth rates across overlapping years; that invites method scrutiny but does not establish smoothing, interpolation or manipulation.\n\nA reconstruction effort is documented; the exact crosswalk is not\n\nIMF documents a 2024–2025 external-sector statistics reconstruction effort with CBY-Aden and a July 2025 mission that produced BOP and IIP statistics for 2014–2024. It also documents a demographic-behavioural personal-transfer model where informal-channel data were limited. This establishes method context, not the exact formula behind every CBY annual-report value. Tested public CBY and IMF components do not support one universal conversion scalar.\n\nCost depends on corridor and transfer size\n\nIn 2025 Q3, quoted averages for Saudi Arabia–Yemen were 2.70% at US$200 and 1.26% at US$500. For UAE–Yemen they were 7.53% and 5.62%. The difference shows why transfer size and corridor must stay visible. These quotes do not cover every provider or informal channel and must not be collapsed into one national remittance-cost rate.\n\nHousehold behaviour is a different evidence layer\n\nThe 2014 weighted World Bank profile reported 18.3% of adults receiving domestic remittances. Among recipients—not all adults—31.1% reported a money-transfer operator, 2.0% a financial institution and 0.0% mobile phone. Those historical channel shares cannot be converted into current monetary-flow shares, but they provide a bounded people-side context for how remittances were received in that survey wave.\n\nBefore ranking external flows, inspect the balancing residual\n\nIn CBY AR2025, net errors and omissions exceed the published remittance line in every year from 2021 through 2025; in 2025 the residual is about US$7.117 billion versus US$3.614 billion in remittances, or about 1.97 times. Net errors and omissions are a balancing residual, not an observed flow and not a hidden-remittance estimate.\n\nWhat remittance evidence does not establish\n\nA macro remittance series does not equal informal hawala volume or household distribution. A source revision is not an economic fall. Similar normalized paths do not prove that two raw series have the same scope or reveal a conversion factor. Corridor prices are not a national cost average. A change in an external stock is not automatically a transaction, and BPM7 does not retroactively rewrite Yemen’s historical series without an explicit conversion.\n\nWhat remains unresolved\n\nThe exact public crosswalk between key CBY and IMF external-sector series remains open, including why some remittance paths align closely after normalization while raw levels differ. Current household receipt/channel behaviour and the scale of informal channels are also not established by the current macro and corridor evidence.",
+   "new": "There is no single remittance number unless the source, concept and vintage are fixed first.\n\nMacro inflows, corridor prices and household receipt channels answer different questions. Even macro series can be revised for the same reference year. This resource keeps these evidence records separate and makes revisions visible.\n\nReported history, estimates and projections are different evidence states\n\nThe IMF staff report gives 2018–2024 as reported history based on staff calculations; a later supplement to the same consultation gives 2025 as an estimate and 2026–2030 as projections. The chart breaks the line where the source document changes and never extends reported history through the forecast as if all years had the same status. A forecast revision is not an observed economic change, and the macro series is not a measure of informal hawala volume.\n\nThe same reference year can change when the source vintage changes\n\nFor the 2024 reference year, CBY AR2024 reported US$6.245 billion while AR2025 restated 2024 at about US$3.42 billion. That is a same-year source revision. It must not be graphed as a year-on-year fall. The later path also shows unusually similar growth rates across overlapping years; that invites method scrutiny but does not establish smoothing or interpolation.\n\nA reconstruction effort is documented; the exact crosswalk is not\n\nIMF documents a 2024–2025 external-sector statistics reconstruction effort with CBY-Aden and a July 2025 mission that produced BOP and IIP statistics for 2014–2024. It also documents a demographic-behavioural personal-transfer model where informal-channel data were limited. This establishes method context, not the exact formula behind every CBY annual-report value. Tested public CBY and IMF components do not support one universal conversion scalar.\n\nCost depends on corridor and transfer size\n\nIn 2025 Q3, quoted averages for Saudi Arabia–Yemen were 2.70% at US$200 and 1.26% at US$500. For UAE–Yemen they were 7.53% and 5.62%. The difference shows why transfer size and corridor must stay visible. These quotes do not cover every provider or informal channel and must not be collapsed into one national remittance-cost rate.\n\nHousehold behaviour is a different evidence layer\n\nThe 2014 weighted World Bank profile reported 18.3% of adults receiving domestic remittances. Among recipients—not all adults—31.1% reported a money-transfer operator, 2.0% a financial institution and 0.0% mobile phone. Those historical channel shares cannot be converted into current monetary-flow shares, but they provide a bounded people-side context for how remittances were received in that survey wave.\n\nBefore ranking external flows, inspect the balancing residual\n\nIn CBY AR2025, net errors and omissions exceed the published remittance line in every year from 2021 through 2025; in 2025 the residual is about US$7.117 billion versus US$3.614 billion in remittances, or about 1.97 times. Net errors and omissions are a balancing residual, not an observed flow and not a hidden-remittance estimate.\n\nWhat remittance evidence does not establish\n\nA macro remittance series does not equal informal hawala volume or household distribution. A source revision is not an economic fall. Similar normalized paths do not prove that two raw series have the same scope or reveal a conversion factor. Corridor prices are not a national cost average. A change in an external stock is not automatically a transaction, and BPM7 does not retroactively rewrite Yemen’s historical series without an explicit conversion.\n\nWhat remains unresolved\n\nThe exact public crosswalk between key CBY and IMF external-sector series remains open, including why some remittance paths align closely after normalization while raw levels differ. Current household receipt/channel behaviour and the scale of informal channels are also not established by the current macro and corridor evidence."
+  },
+  {
+   "finding": "EXF-002",
+   "sheet": "02_SITE_MAP",
+   "row": 143,
+   "col": 8,
+   "field": "/remittances/.full_copy_ar",
+   "old": "لا يوجد رقم واحد للحوالات قبل تحديد المصدر والمفهوم ونسخة البيانات أولًا.\n\nتجيب التدفقات الكلية وتكلفة الممرات وقنوات استلام الأسر عن أسئلة مختلفة. وحتى السلاسل الكلية قد تُراجع للسنة المرجعية نفسها. لذلك يفصل هذا الموقع هذه الأدلة ويُظهر المراجعات بدل إخفائها.\n\nالقيم التاريخية المبلغ عنها والتقديرات والتوقعات حالات مختلفة من الأدلة\n\nيورد تقرير خبراء صندوق النقد قيم 2018–2024 بوصفها تاريخًا مبلغًا عنه يستند إلى حسابات خبراء الصندوق، ويورد ملحق لاحق للمشاورات نفسها قيمة 2025 كتقدير وقيم 2026–2030 كتوقعات. وينقطع الخط في الرسم عند تغير الوثيقة المصدر، ولا يُمد التاريخ المبلغ عنه عبر التوقعات كما لو كانت السنوات كلها من الحالة نفسها. مراجعة التوقع ليست تغيرًا اقتصاديًا مرصودًا، كما أن السلسلة الكلية لا تقيس حجم الحوالات غير الرسمية.\n\nقد تتغير قيمة السنة نفسها عندما تتغير نسخة المصدر\n\nبالنسبة للسنة المرجعية 2024، أورد تقرير البنك المركزي 2024 قيمة قدرها 6.245 مليارات دولار، بينما أعاد تقرير 2025 عرض 2024 عند 3.42 مليار دولار تقريبًا. هذه مراجعة في المصدر للسنة نفسها، ولا يجوز رسمها كهبوط بين عامين. كما يظهر في المسار اللاحق تقارب لافت في معدلات النمو عبر السنوات المتداخلة؛ وهو ما يستدعي فحص المنهج لكنه لا يثبت التسوية أو الاستيفاء أو التلاعب.\n\nجهد إعادة بناء الإحصاءات موثق، لكن المطابقة الدقيقة ليست محسومة\n\nيوثق صندوق النقد جهدًا لإعادة بناء إحصاءات القطاع الخارجي خلال 2024–2025 مع البنك المركزي اليمني – عدن، ومهمة في يوليو 2025 أنتجت إحصاءات ميزان المدفوعات ووضع الاستثمار الدولي للفترة 2014–2024. كما يوثق نموذجًا ديمغرافيًا وسلوكيًا للتحويلات الشخصية في ظل محدودية بيانات القنوات غير الرسمية. يثبت ذلك سياقًا منهجيًا، لكنه لا يثبت الصيغة الدقيقة وراء كل قيمة في التقارير السنوية للبنك المركزي. ولا تدعم المكونات العامة المختبرة لدى البنك المركزي وصندوق النقد معامل تحويل عالميًا واحدًا.\n\nتختلف التكلفة بحسب الممر ومبلغ التحويل\n\nفي الربع الثالث 2025، بلغت المتوسطات المعلنة لممر السعودية–اليمن 2.70% عند تحويل 200 دولار و1.26% عند 500 دولار. أما ممر الإمارات–اليمن فبلغ 7.53% و5.62% على التوالي. ويبين ذلك ضرورة إبقاء الممر ومبلغ التحويل ظاهرين. هذه الأسعار لا تغطي جميع المزودين أو القنوات غير الرسمية ولا يجوز اختزالها في معدل وطني واحد لتكلفة الحوالات.\n\nسلوك الأسر طبقة مختلفة من الأدلة\n\nأفاد الملف الموزون للبنك الدولي لعام 2014 بأن 18.3% من البالغين تلقوا حوالات محلية. ومن بين المتلقين، لا جميع البالغين، أفاد 31.1% باستخدام شركة تحويل أموال، و2.0% مؤسسة مالية، و0.0% الهاتف المحمول. ولا يجوز تحويل هذه الحصص التاريخية للقنوات إلى حصص مالية حالية من التدفقات، لكنها تقدم سياقًا سكانيًا مقيدًا عن كيفية استلام الحوالات في تلك الموجة.\n\nقبل ترتيب التدفقات الخارجية، افحص بند صافي الأخطاء والسهو\n\nفي التقرير السنوي 2025 للبنك المركزي يفوق صافي الأخطاء والسهو بند الحوالات المنشور في كل سنة من 2021 إلى 2025؛ وفي 2025 بلغ المتبقي نحو 7.117 مليارات دولار مقابل 3.614 مليارات دولار للحوالات، أي قرابة 1.97 مرة. صافي الأخطاء والسهو بند موازنة، وليس تدفقًا مرصودًا ولا تقديرًا للحوالات الخفية.\n\nما الذي لا تثبته أدلة الحوالات؟\n\nلا تساوي سلسلة الحوالات الكلية حجم الحوالات غير الرسمية أو توزيعها على الأسر. ومراجعة المصدر ليست هبوطًا اقتصاديًا. كما أن تشابه المسارات بعد التطبيع لا يثبت أن السلسلتين الخام تغطيان النطاق نفسه ولا يكشف قاعدة تحويل. وأسعار الممرات ليست متوسطًا وطنيًا للتكلفة. كذلك فإن تغير رصيد خارجي لا يساوي تلقائيًا معاملة، ولا يعيد معيار BPM7 كتابة سلاسل اليمن التاريخية بأثر رجعي من دون تحويل صريح.\n\nما الذي ما يزال غير محسوم؟\n\nما تزال المطابقة العامة الدقيقة بين أهم سلاسل القطاع الخارجي لدى البنك المركزي وصندوق النقد غير محسومة، بما في ذلك سبب التقارب الشديد لبعض مسارات الحوالات بعد التطبيع رغم اختلاف المستويات الخام. كما أن سلوك الأسر الحالي في استلام الحوالات واختيار القنوات وحجم القنوات غير الرسمية لا تثبته أدلة الاقتصاد الكلي والممرات الحالية.",
+   "new": "لا يوجد رقم واحد للحوالات قبل تحديد المصدر والمفهوم ونسخة البيانات أولًا.\n\nتجيب التدفقات الكلية وتكلفة الممرات وقنوات استلام الأسر عن أسئلة مختلفة. وحتى السلاسل الكلية قد تُراجع للسنة المرجعية نفسها. لذلك يفصل هذا الموقع هذه الأدلة ويُظهر المراجعات بدل إخفائها.\n\nالقيم التاريخية المبلغ عنها والتقديرات والتوقعات حالات مختلفة من الأدلة\n\nيورد تقرير خبراء صندوق النقد قيم 2018–2024 بوصفها تاريخًا مبلغًا عنه يستند إلى حسابات خبراء الصندوق، ويورد ملحق لاحق للمشاورات نفسها قيمة 2025 كتقدير وقيم 2026–2030 كتوقعات. وينقطع الخط في الرسم عند تغير الوثيقة المصدر، ولا يُمد التاريخ المبلغ عنه عبر التوقعات كما لو كانت السنوات كلها من الحالة نفسها. مراجعة التوقع ليست تغيرًا اقتصاديًا مرصودًا، كما أن السلسلة الكلية لا تقيس حجم الحوالات غير الرسمية.\n\nقد تتغير قيمة السنة نفسها عندما تتغير نسخة المصدر\n\nبالنسبة للسنة المرجعية 2024، أورد تقرير البنك المركزي 2024 قيمة قدرها 6.245 مليارات دولار، بينما أعاد تقرير 2025 عرض 2024 عند 3.42 مليار دولار تقريبًا. هذه مراجعة في المصدر للسنة نفسها، ولا يجوز رسمها كهبوط بين عامين. كما يظهر في المسار اللاحق تقارب لافت في معدلات النمو عبر السنوات المتداخلة؛ وهو ما يستدعي فحص المنهج لكنه لا يثبت التسوية أو الاستيفاء.\n\nجهد إعادة بناء الإحصاءات موثق، لكن المطابقة الدقيقة ليست محسومة\n\nيوثق صندوق النقد جهدًا لإعادة بناء إحصاءات القطاع الخارجي خلال 2024–2025 مع البنك المركزي اليمني – عدن، ومهمة في يوليو 2025 أنتجت إحصاءات ميزان المدفوعات ووضع الاستثمار الدولي للفترة 2014–2024. كما يوثق نموذجًا ديمغرافيًا وسلوكيًا للتحويلات الشخصية في ظل محدودية بيانات القنوات غير الرسمية. يثبت ذلك سياقًا منهجيًا، لكنه لا يثبت الصيغة الدقيقة وراء كل قيمة في التقارير السنوية للبنك المركزي. ولا تدعم المكونات العامة المختبرة لدى البنك المركزي وصندوق النقد معامل تحويل عالميًا واحدًا.\n\nتختلف التكلفة بحسب الممر ومبلغ التحويل\n\nفي الربع الثالث 2025، بلغت المتوسطات المعلنة لممر السعودية–اليمن 2.70% عند تحويل 200 دولار و1.26% عند 500 دولار. أما ممر الإمارات–اليمن فبلغ 7.53% و5.62% على التوالي. ويبين ذلك ضرورة إبقاء الممر ومبلغ التحويل ظاهرين. هذه الأسعار لا تغطي جميع المزودين أو القنوات غير الرسمية ولا يجوز اختزالها في معدل وطني واحد لتكلفة الحوالات.\n\nسلوك الأسر طبقة مختلفة من الأدلة\n\nأفاد الملف الموزون للبنك الدولي لعام 2014 بأن 18.3% من البالغين تلقوا حوالات محلية. ومن بين المتلقين، لا جميع البالغين، أفاد 31.1% باستخدام شركة تحويل أموال، و2.0% مؤسسة مالية، و0.0% الهاتف المحمول. ولا يجوز تحويل هذه الحصص التاريخية للقنوات إلى حصص مالية حالية من التدفقات، لكنها تقدم سياقًا سكانيًا مقيدًا عن كيفية استلام الحوالات في تلك الموجة.\n\nقبل ترتيب التدفقات الخارجية، افحص بند صافي الأخطاء والسهو\n\nفي التقرير السنوي 2025 للبنك المركزي يفوق صافي الأخطاء والسهو بند الحوالات المنشور في كل سنة من 2021 إلى 2025؛ وفي 2025 بلغ المتبقي نحو 7.117 مليارات دولار مقابل 3.614 مليارات دولار للحوالات، أي قرابة 1.97 مرة. صافي الأخطاء والسهو بند موازنة، وليس تدفقًا مرصودًا ولا تقديرًا للحوالات الخفية.\n\nما الذي لا تثبته أدلة الحوالات؟\n\nلا تساوي سلسلة الحوالات الكلية حجم الحوالات غير الرسمية أو توزيعها على الأسر. ومراجعة المصدر ليست هبوطًا اقتصاديًا. كما أن تشابه المسارات بعد التطبيع لا يثبت أن السلسلتين الخام تغطيان النطاق نفسه ولا يكشف قاعدة تحويل. وأسعار الممرات ليست متوسطًا وطنيًا للتكلفة. كذلك فإن تغير رصيد خارجي لا يساوي تلقائيًا معاملة، ولا يعيد معيار BPM7 كتابة سلاسل اليمن التاريخية بأثر رجعي من دون تحويل صريح.\n\nما الذي ما يزال غير محسوم؟\n\nما تزال المطابقة العامة الدقيقة بين أهم سلاسل القطاع الخارجي لدى البنك المركزي وصندوق النقد غير محسومة، بما في ذلك سبب التقارب الشديد لبعض مسارات الحوالات بعد التطبيع رغم اختلاف المستويات الخام. كما أن سلوك الأسر الحالي في استلام الحوالات واختيار القنوات وحجم القنوات غير الرسمية لا تثبته أدلة الاقتصاد الكلي والممرات الحالية."
+  }
+ ]
+}

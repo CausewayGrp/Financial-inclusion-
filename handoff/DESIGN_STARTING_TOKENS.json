@@ -1,0 +1,91 @@
+{
+  "schema_version": "1.0",
+  "role": "design-starting-baseline-not-semantic-authority",
+  "brand_asset": "site-src/assets/CauseWay_Master_Logo.png",
+  "color_tokens": {
+    "ink": "#082D4F",
+    "ink_secondary": "#17445F",
+    "teal": "#0B6A63",
+    "mint": "#E8F3EF",
+    "gold": "#D7A642",
+    "sand": "#F7F2E8",
+    "paper": "#FCFBF7",
+    "white": "#FFFFFF",
+    "slate": "#526777",
+    "line": "#DCE3E5",
+    "soft": "#F4F7F6"
+  },
+  "typography": {
+    "arabic": {
+      "family": "IBM Plex Sans Arabic",
+      "weights": [
+        300,
+        400,
+        500,
+        600,
+        700
+      ],
+      "direction": "rtl",
+      "role": "primary and display"
+    },
+    "english": {
+      "family": "IBM Plex Sans",
+      "weights": [
+        300,
+        400,
+        500,
+        600,
+        700
+      ],
+      "direction": "ltr",
+      "role": "primary and display"
+    },
+    "rule": "Default final system is IBM Plex Sans / IBM Plex Sans Arabic. Do not inherit Arial or Newsreader from the baseline unless Claude Design documents a deliberate exception."
+  },
+  "layout": {
+    "max_content_width_px": 1240,
+    "required_viewports_px": [
+      320,
+      390,
+      400,
+      640,
+      1440
+    ],
+    "rtl_first_class": true,
+    "content_reading_measure_ch": "68-76",
+    "grid_desktop_columns": 12,
+    "grid_compact_columns": 6,
+    "grid_mobile_columns": 4
+  },
+  "semantic_constraints": {
+    "meaning_not_by_colour_alone": true,
+    "quant_visual_text_fallback_required": true,
+    "focus_visible_required": true,
+    "reduced_motion_required": true
+  },
+  "design_instruction": "Use these as the controlled starting language. Claude Design owns visual refinement, but must preserve CauseWay identity, accessibility, semantic boundaries and bilingual parity. Any token change must be documented in the design package and must not change product meaning.",
+  "spacing_scale_px": [
+    4,
+    8,
+    12,
+    16,
+    24,
+    32,
+    48,
+    64,
+    96,
+    128
+  ],
+  "radius_scale_px": {
+    "small": 4,
+    "medium": 8,
+    "large": 12,
+    "pill": 999
+  },
+  "motion": {
+    "principle": "restrained and functional",
+    "reduced_motion_required": true,
+    "default_transition_ms": 160
+  },
+  "visual_direction": "Editorial evidence institution: typography, spatial hierarchy, line and annotation before card chrome or decorative effects."
+}

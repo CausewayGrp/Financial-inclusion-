@@ -1,0 +1,491 @@
+{
+ "transaction": "P4-A",
+ "scope": "P4.2 Reading ownership; P4.3 bilingual boundary delimiter; CLM-047 Arabic",
+ "full_copy_regenerated": [
+  "/readings/microfinance-structural-divergence/ en",
+  "/readings/microfinance-structural-divergence/ ar"
+ ],
+ "arabic_delimiters_inserted": 38,
+ "input_master_sha256": "49cbfe3326e3825714bb47ae7752d4b4b4b8c8e5d45be74a466a77691d3c6286",
+ "output_master_sha256": "fb5b0bf64f39b12d7b11556516740c617f1a0418902a4259e5026e758a46b6f5",
+ "cells_written": 53,
+ "changes": [
+  {
+   "finding": "P4-R01",
+   "sheet": "03_PAGE_SECTIONS",
+   "row": 509,
+   "col": 5,
+   "field": "/readings/microfinance-structural-divergence/#s5.body_en",
+   "old": "It does not establish unique people, real credit growth, improved borrower outcomes or a verified 2023 provider stock share. Saver/depositor growth, nominal portfolio growth and changes in provider structure do not, on their own, establish broader inclusion, real credit deepening, market dominance, unique-person growth or improved borrower outcomes.",
+   "new": "It does not establish unique people, real credit growth, welfare change or a verified 2023 provider stock share. Saver/depositor growth, nominal portfolio growth and changes in provider structure do not, on their own, establish broader inclusion, real credit deepening, market dominance, unique-person growth or improved borrower outcomes."
+  },
+  {
+   "finding": "P4-R01",
+   "sheet": "03_PAGE_SECTIONS",
+   "row": 509,
+   "col": 7,
+   "field": "/readings/microfinance-structural-divergence/#s5.body_ar",
+   "old": "لا تثبت القراءة عددًا من الأشخاص الفريدين، أو نموًا حقيقيًا للائتمان، أو تحسن نتائج المقترضين، أو حصة محققة لمقدم خدمة في 2023. لا يثبت نمو المدخرين أو المودعين، أو نمو المحفظة الاسمية، أو تغير هيكل مقدمي الخدمة، في حد ذاته اتساع الشمول أو تعمق الائتمان الحقيقي أو الهيمنة السوقية أو نمو عدد الأشخاص الفريدين أو تحسن نتائج المقترضين.",
+   "new": "لا تثبت القراءة عددًا من الأشخاص الفريدين، ولا نموًا حقيقيًا للائتمان، ولا تغيرًا في الرفاه، ولا حصة محققة لمقدم خدمة في 2023. كما أن نمو المدخرين أو المودعين، ونمو المحفظة الاسمية، وتغير هيكل مقدمي الخدمة لا يثبت في حد ذاته اتساع الشمول أو تعمق الائتمان الحقيقي أو الهيمنة السوقية أو نمو عدد الأشخاص الفريدين أو تحسن نتائج المقترضين."
+  },
+  {
+   "finding": "P4-R01",
+   "sheet": "09_READING_SECTIONS",
+   "row": 69,
+   "col": 6,
+   "field": "CWR-008.s2.copy_en",
+   "old": "Finance was not the most frequently cited constraint in this survey: In the 2022 seven-governorate custom firm survey, electricity and fuel shortages were reported more often as business challenges than access to finance.\n\nFinance severity within a specific denominator: Among the firms in the report's finance-obstacle tabulation, which excludes firms that said they did not need a loan, major plus moderate finance obstacles sum to 91.84%.\n\nThe SMEPS KPI is programme evidence, not a national rate: SMEPS's 2024 Annual Report reports that 19% of supported MSMEs accessed financial services in 2024, while the 2021–2024 total achieved is 15% against a 40% programme target. The table does not fully specify the metric-specific assessment base or operational definition of 'accessed financial services'. The KPI is therefore interpretable only within its programme universe, with that limitation visible; it is not a national MSME access rate.",
+   "new": "Finance was not the most frequently cited constraint in this survey: In the 2022 seven-governorate custom firm survey, electricity and fuel shortages were reported more often as business challenges than access to finance.\n\nFinance severity within a specific denominator: Among the firms in the report's finance-obstacle tabulation, which excludes firms that said they did not need a loan, major plus moderate finance obstacles sum to 91.84%.\n\nThe SMEPS financial-services KPI is a programme result, not a national MSME rate: SMEPS's 2024 Annual Report reports that 19% of supported MSMEs accessed financial services in 2024, while the 2021–2024 total achieved is 15% against a 40% programme target. The table does not fully specify the metric-specific assessment base or operational definition of 'accessed financial services'. The KPI is therefore interpretable only within its programme universe, with that limitation visible; it is not a national MSME access rate."
+  },
+  {
+   "finding": "P4-R01",
+   "sheet": "09_READING_SECTIONS",
+   "row": 69,
+   "col": 7,
+   "field": "CWR-008.s2.copy_ar",
+   "old": "التمويل ليس التحدي الأكثر ذكرًا في هذا المسح: في المسح المخصص للمنشآت الذي غطى سبع محافظات عام 2022، ذُكرت أزمتا الكهرباء والوقود كتحديين للأعمال بوتيرة أعلى من الوصول إلى التمويل.\n\nشدة قيد التمويل ضمن قاعدة قياس محددة: ضمن المنشآت التي شملها جدول عوائق التمويل في التقرير، بعد استبعاد المنشآت التي قالت إنها لا تحتاج إلى قرض، بلغت نسبة من صنفوا عوائق التمويل كبيرة أو متوسطة 91.84%.\n\nمؤشر SMEPS دليل برامجي، لا معدل وطني: يورد التقرير السنوي 2024 لوكالة SMEPS أن 19% من المنشآت التي دعمها البرنامج «وصلت إلى خدمات مالية» في 2024، وأن النتيجة الإجمالية المحققة للفترة 2021–2024 بلغت 15% مقابل مستهدف برامجي قدره 40%. ولا يوضح جدول المؤشرات بصورة كاملة قاعدة القياس الخاصة بهذا المؤشر أو التعريف التشغيلي لعبارة «الوصول إلى خدمات مالية». ولذلك تُفهم النسبة داخل نطاق البرنامج فقط، مع إبقاء هذا القيد ظاهرًا؛ ولا تمثل معدلًا وطنيًا لوصول المنشآت إلى الخدمات المالية.",
+   "new": "التمويل ليس التحدي الأكثر ذكرًا في هذا المسح: في المسح المخصص للمنشآت الذي غطى سبع محافظات عام 2022، ذُكرت أزمتا الكهرباء والوقود كتحديين للأعمال بوتيرة أعلى من الوصول إلى التمويل.\n\nشدة قيد التمويل ضمن قاعدة قياس محددة: ضمن المنشآت التي شملها جدول عوائق التمويل في التقرير، بعد استبعاد المنشآت التي قالت إنها لا تحتاج إلى قرض، بلغت نسبة من صنفوا عوائق التمويل كبيرة أو متوسطة 91.84%.\n\nمؤشر SMEPS للوصول إلى الخدمات المالية نتيجة برنامجية، لا معدل وطني للمنشآت: يورد التقرير السنوي 2024 لوكالة SMEPS أن 19% من المنشآت التي دعمها البرنامج «وصلت إلى خدمات مالية» في 2024، وأن النتيجة الإجمالية المحققة للفترة 2021–2024 بلغت 15% مقابل مستهدف برامجي قدره 40%. ولا يوضح جدول المؤشرات بصورة كاملة قاعدة القياس الخاصة بهذا المؤشر أو التعريف التشغيلي لعبارة «الوصول إلى خدمات مالية». ولذلك تُفهم النسبة داخل نطاق البرنامج فقط، مع إبقاء هذا القيد ظاهرًا؛ ولا تمثل معدلًا وطنيًا لوصول المنشآت إلى الخدمات المالية."
+  },
+  {
+   "finding": "P4-R01",
+   "sheet": "09_READING_SECTIONS",
+   "row": 32,
+   "col": 6,
+   "field": "CWR-004.s1.copy_en",
+   "old": "Yemen now has multiple recent reform/infrastructure events, while the latest representative population-level inclusion observation available here is older. These evidence streams can be read together without freezing the system at the older population observation or inferring the unmeasured population outcome from newer administrative change.",
+   "new": "Yemen now has multiple recent reform and infrastructure events, while the latest representative population-level inclusion observation available here is older. The evidence therefore has to be read across several clocks: recent administrative change does not establish a population outcome, and the older population measure does not erase newer institutional change."
+  },
+  {
+   "finding": "P4-R01",
+   "sheet": "09_READING_SECTIONS",
+   "row": 32,
+   "col": 7,
+   "field": "CWR-004.s1.copy_ar",
+   "old": "شهد اليمن إصلاحات وتغيرات حديثة في البنية التحتية، بينما يظل أحدث القياس السكاني الممثل المتاح أقدم زمنيًا. ويمكن قراءة مسارات الأدلة هذه معًا من دون تجميد وصف النظام عند القياس السكاني الأقدم أو استنتاج نتيجة سكانية غير مقاسة من التغير الإداري الأحدث.",
+   "new": "شهد اليمن إصلاحات وتغيرات حديثة في البنية التحتية، بينما يظل أحدث القياس السكاني الممثل المتاح أقدم زمنيًا. لذلك تُقرأ الأدلة عبر ساعات قياس متعددة: فالتغير الإداري الحديث لا يثبت نتيجة سكانية، كما أن قدم القياس السكاني لا يلغي التغير المؤسسي الأحدث."
+  },
+  {
+   "finding": "P4-R01",
+   "sheet": "09_READING_SECTIONS",
+   "row": 59,
+   "col": 6,
+   "field": "CWR-007.s1.copy_en",
+   "old": "Within the same Findex observation (the 2021 wave, with Yemen fieldwork in 2022–23), 5.44% of women and 18.35% of men had an account — a difference of 12.91 percentage points. That is a measured disparity. Documentation, phone access, income, work, distance, trust, household dynamics and product design are mechanisms to test — not causes to declare without evidence.",
+   "new": "Within the same Findex observation (the 2021 wave, with Yemen fieldwork in 2022–23), 5.44% of women and 18.35% of men had an account — a difference of 12.91 percentage points. That is a measured disparity. Documentation, phone access, income, work, distance, trust, household dynamics and product design are plausible mechanisms for investigation; the measured gap does not establish any of them as causes."
+  },
+  {
+   "finding": "P4-R01",
+   "sheet": "09_READING_SECTIONS",
+   "row": 59,
+   "col": 7,
+   "field": "CWR-007.s1.copy_ar",
+   "old": "في موجة Findex 2021 (التي نُفذ عملها الميداني في اليمن خلال 2022–2023) كان لدى 5.44% من النساء و18.35% من الرجال حساب؛ والفارق البالغ 12.91 نقطة مئوية فجوة مقاسة. أما الوثائق والهاتف والدخل والعمل والمسافة والثقة وديناميات الأسرة وتصميم المنتج فهي آليات يمكن اختبارها، لا أسبابًا يجوز إعلانها بلا دليل.",
+   "new": "ضمن مشاهدة Findex نفسها (موجة 2021، التي نُفذ عملها الميداني في اليمن خلال 2022–2023)، كان لدى 5.44% من النساء و18.35% من الرجال حساب، بفارق 12.91 نقطة مئوية. هذه فجوة مقاسة. أما الوثائق والهاتف والدخل والعمل والمسافة والثقة وديناميات الأسرة وتصميم المنتج فهي آليات محتملة للبحث؛ ولا تثبت الفجوة المقاسة أيًا منها بوصفه سببًا."
+  },
+  {
+   "finding": "P4-R01",
+   "sheet": "09_READING_SECTIONS",
+   "row": 2,
+   "col": 1,
+   "field": "09.description",
+   "old": "Single master table for direct analysis and implementation.",
+   "new": "Section index of the Readings. Copy is owned by 08_READINGS (section 1 = thesis) and 03_PAGE_SECTIONS (sections 2-9); the generator derives reading_sections.json from them and stops if this sheet differs. Edit the owners, not this sheet."
+  },
+  {
+   "finding": "P4-L01",
+   "sheet": "06_EVIDENCE_OBJECTS",
+   "row": 5,
+   "col": 17,
+   "field": "CLM-001.limitations_ar",
+   "old": "لا يجوز تقديم هذه النسبة على أنها معدل لعام 2026 أو إسقاطها على المحافظات. ويستبعد إطار المسح جغرافيا تمثل نحو 23% من السكان، كما استُبدل أكثر من ربع (1/4) وحدات المعاينة الأولية.",
+   "new": "لا يجوز تقديم هذه النسبة على أنها معدل لعام 2026 أو إسقاطها على المحافظات. | ويستبعد إطار المسح جغرافيا تمثل نحو 23% من السكان، كما استُبدل أكثر من ربع (1/4) وحدات المعاينة الأولية."
+  },
+  {
+   "finding": "P4-L01",
+   "sheet": "06_EVIDENCE_OBJECTS",
+   "row": 9,
+   "col": 17,
+   "field": "CLM-011.limitations_ar",
+   "old": "لا يجوز اعتبار وجود النظام دليلًا على فعاليته أو سرعة عمله عمليًا أو تطبيقه بصورة شاملة. النشرة تثبت بنية منسوبة إلى المصدر، وليست رأيًا قانونيًا ولا دليلًا على الامتثال أو الأداء؛ ولا توجد في قاعدة الأدلة سلسلة إدارية موثقة لأحجام الشكاوى أو أزمنة حلها أو الإنفاذ أو النتائج.",
+   "new": "لا يجوز اعتبار وجود النظام دليلًا على فعاليته أو سرعة عمله عمليًا أو تطبيقه بصورة شاملة. | النشرة تثبت بنية منسوبة إلى المصدر، وليست رأيًا قانونيًا ولا دليلًا على الامتثال أو الأداء؛ ولا توجد في قاعدة الأدلة سلسلة إدارية موثقة لأحجام الشكاوى أو أزمنة حلها أو الإنفاذ أو النتائج."
+  },
+  {
+   "finding": "P4-L01",
+   "sheet": "06_EVIDENCE_OBJECTS",
+   "row": 10,
+   "col": 17,
+   "field": "CLM-015.limitations_ar",
+   "old": "لا يجوز حمل هذه الحالة إلى 2026 من دون دليل أحدث، ولا اشتقاق القائمة الإيجابية للجهات المرخصة من القائمة السلبية. وهي حالة سلبية مؤرخة فقط؛ ولا تثبت التشغيل الحالي ولا قائمة الجهات المرخصة.",
+   "new": "لا يجوز حمل هذه الحالة إلى 2026 من دون دليل أحدث، ولا اشتقاق القائمة الإيجابية للجهات المرخصة من القائمة السلبية. | وهي حالة سلبية مؤرخة فقط؛ ولا تثبت التشغيل الحالي ولا قائمة الجهات المرخصة."
+  },
+  {
+   "finding": "P4-L01",
+   "sheet": "06_EVIDENCE_OBJECTS",
+   "row": 21,
+   "col": 17,
+   "field": "CLM-016.limitations_ar",
+   "old": "لا يجوز تقديم الرقم 382 بوصفه عدد 2026 أو عدد شركات فريدة حالية أو مقدمي خدمات عاملين أو شبكة فروع. إنه خط أساس تاريخي سابق، ولا يثبت العضوية الحالية أو التشغيل أو الحصة السوقية أو عدد الشركات الفريدة.",
+   "new": "لا يجوز تقديم الرقم 382 بوصفه عدد 2026 أو عدد شركات فريدة حالية أو مقدمي خدمات عاملين أو شبكة فروع. | إنه خط أساس تاريخي سابق، ولا يثبت العضوية الحالية أو التشغيل أو الحصة السوقية أو عدد الشركات الفريدة."
+  },
+  {
+   "finding": "P4-L01",
+   "sheet": "06_EVIDENCE_OBJECTS",
+   "row": 23,
+   "col": 17,
+   "field": "CLM-018.limitations_ar",
+   "old": "لا يجوز وصف YPCC أو FPS أو RTGS بأنها تعمل بالكامل، ولا استنتاج التبني أو تغطية المعاملات أو الموثوقية أو أثر الشمول المالي. الدليل يثبت حالة مؤسسية/تنفيذية فقط، لا التشغيل الكامل أو المشاركة الشاملة أو نتائج المستخدمين.",
+   "new": "لا يجوز وصف YPCC أو FPS أو RTGS بأنها تعمل بالكامل، ولا استنتاج التبني أو تغطية المعاملات أو الموثوقية أو أثر الشمول المالي. | الدليل يثبت حالة مؤسسية/تنفيذية فقط، لا التشغيل الكامل أو المشاركة الشاملة أو نتائج المستخدمين."
+  },
+  {
+   "finding": "P4-L01",
+   "sheet": "06_EVIDENCE_OBJECTS",
+   "row": 25,
+   "col": 17,
+   "field": "CLM-020.limitations_ar",
+   "old": "لا يجوز اعتماد أي من التاريخين كتاريخ وحيد ونهائي لـ«ميلاد» القطاع أو اعتبار أحد المصدرين ناقضًا للآخر. فالتاريخان يصفان طبقتين مختلفتين من التطور المؤسسي/البرامجي.",
+   "new": "لا يجوز اعتماد أي من التاريخين كتاريخ وحيد ونهائي لـ«ميلاد» القطاع أو اعتبار أحد المصدرين ناقضًا للآخر. | فالتاريخان يصفان طبقتين مختلفتين من التطور المؤسسي/البرامجي."
+  },
+  {
+   "finding": "P4-L01",
+   "sheet": "06_EVIDENCE_OBJECTS",
+   "row": 26,
+   "col": 17,
+   "field": "CLM-021.limitations_ar",
+   "old": "لا يجوز تقدير أثر سببي للنزاع أو استيفاء القيم بين اللقطات. يمكن عرض التدهور المرصود، لكن حجم الأثر السببي غير محدد؛ كما يجب إبقاء التناقض الداخلي في مصدر محفظة الربع الرابع (Q4) ظاهرًا.",
+   "new": "لا يجوز تقدير أثر سببي للنزاع أو استيفاء القيم بين اللقطات. | يمكن عرض التدهور المرصود، لكن حجم الأثر السببي غير محدد؛ كما يجب إبقاء التناقض الداخلي في مصدر محفظة الربع الرابع (Q4) ظاهرًا."
+  },
+  {
+   "finding": "P4-L01",
+   "sheet": "06_EVIDENCE_OBJECTS",
+   "row": 28,
+   "col": 17,
+   "field": "CLM-002.limitations_ar",
+   "old": "لا يجوز استنتاج سبب الفجوة بين الرجال والنساء أو تقديمها كفجوة راهنة لعام 2026. ويستبعد إطار المسح جغرافيا تمثل نحو 23% من السكان، كما استُبدل أكثر من ربع وحدات المعاينة الأولية.",
+   "new": "لا يجوز استنتاج سبب الفجوة بين الرجال والنساء أو تقديمها كفجوة راهنة لعام 2026. | ويستبعد إطار المسح جغرافيا تمثل نحو 23% من السكان، كما استُبدل أكثر من ربع وحدات المعاينة الأولية."
+  },
+  {
+   "finding": "P4-L01",
+   "sheet": "06_EVIDENCE_OBJECTS",
+   "row": 29,
+   "col": 17,
+   "field": "CLM-007.limitations_ar",
+   "old": "لا يجوز استنتاج حجم الحوالات عبر الحوالة غير الرسمية، أو حجم التسوية عبر نظام المدفوعات، أو كيفية توزيع التدفقات بين الأسر. فهذا مفهوم اقتصادي كلي للقطاع الخارجي، وليس قياسًا مباشرًا لتسوية المدفوعات أو حجم الحوالة غير الرسمية.",
+   "new": "لا يجوز استنتاج حجم الحوالات عبر الحوالة غير الرسمية، أو حجم التسوية عبر نظام المدفوعات، أو كيفية توزيع التدفقات بين الأسر. | فهذا مفهوم اقتصادي كلي للقطاع الخارجي، وليس قياسًا مباشرًا لتسوية المدفوعات أو حجم الحوالة غير الرسمية."
+  },
+  {
+   "finding": "P4-L01",
+   "sheet": "06_EVIDENCE_OBJECTS",
+   "row": 31,
+   "col": 17,
+   "field": "CLM-012.limitations_ar",
+   "old": "لا يجوز استنتاج إطلاق المنتجات أو توافر مقدمي الخدمات أو الأرصدة أو توزيع المعاملات أو التبني. فالقواعد والسقوف لا تحدد المجموعة الحالية لمقدمي الخدمات ولا التوافر الفعلي ولا الامتثال ولا عدد المستخدمين الفريدين.",
+   "new": "لا يجوز استنتاج إطلاق المنتجات أو توافر مقدمي الخدمات أو الأرصدة أو توزيع المعاملات أو التبني. | فالقواعد والسقوف لا تحدد المجموعة الحالية لمقدمي الخدمات ولا التوافر الفعلي ولا الامتثال ولا عدد المستخدمين الفريدين."
+  },
+  {
+   "finding": "P4-L01",
+   "sheet": "06_EVIDENCE_OBJECTS",
+   "row": 40,
+   "col": 17,
+   "field": "CLM-025.limitations_ar",
+   "old": "لا يجوز إنشاء خرائط للشمول المالي على مستوى المحافظات من هذه الموجة أو وصفها بأنها تغطية جغرافية كاملة. ويستبعد إطار المسح جغرافيا تمثل نحو 23% من السكان، كما استُبدل أكثر من ربع وحدات المعاينة الأولية.",
+   "new": "لا يجوز إنشاء خرائط للشمول المالي على مستوى المحافظات من هذه الموجة أو وصفها بأنها تغطية جغرافية كاملة. | ويستبعد إطار المسح جغرافيا تمثل نحو 23% من السكان، كما استُبدل أكثر من ربع وحدات المعاينة الأولية."
+  },
+  {
+   "finding": "P4-L01",
+   "sheet": "06_EVIDENCE_OBJECTS",
+   "row": 47,
+   "col": 17,
+   "field": "CLM-027.limitations_ar",
+   "old": "لا يجوز استيفاء السنوات المفقودة أو افتراض مسار نمو سلس أو تقديم 11.9% بوصفها نسبة لعام 2026. كما تختلف صياغة مقياس 2011 عن مفهوم الحساب اللاحق، وقيم 2014 مقربة، وتظل قيود العمل الميداني (2022–2023) والتغطية الجغرافية مهمة.",
+   "new": "لا يجوز استيفاء السنوات المفقودة أو افتراض مسار نمو سلس أو تقديم 11.9% بوصفها نسبة لعام 2026. | كما تختلف صياغة مقياس 2011 عن مفهوم الحساب اللاحق، وقيم 2014 مقربة، وتظل قيود العمل الميداني (2022–2023) والتغطية الجغرافية مهمة."
+  },
+  {
+   "finding": "P4-L01",
+   "sheet": "06_EVIDENCE_OBJECTS",
+   "row": 48,
+   "col": 17,
+   "field": "CLM-028.limitations_ar",
+   "old": "لا يجوز تحويل المؤشرات إلى حصص متبادلة الاستبعاد للمقترضين أو جمعها إلى 100% أو وصفها بأنها راهنة. هذه أدلة تاريخية؛ والرمز «..» يعني عدم وجود ملاحظة. كما يمكن أن تتداخل مؤشرات الادخار والاقتراض، وقواعد احتساب قنوات التحويل مشروطة.",
+   "new": "لا يجوز تحويل المؤشرات إلى حصص متبادلة الاستبعاد للمقترضين أو جمعها إلى 100% أو وصفها بأنها راهنة. | هذه أدلة تاريخية؛ والرمز «..» يعني عدم وجود ملاحظة. كما يمكن أن تتداخل مؤشرات الادخار والاقتراض، وقواعد احتساب قنوات التحويل مشروطة."
+  },
+  {
+   "finding": "P4-L01",
+   "sheet": "06_EVIDENCE_OBJECTS",
+   "row": 49,
+   "col": 17,
+   "field": "CLM-029.limitations_ar",
+   "old": "لا يجوز تفسير الفرق على أنه «حصة الادخار غير الرسمي» أو اعتبار الطرق حصصًا شاملة لكل المدخرين. هذه أدلة تاريخية؛ والرمز «..» يعني عدم وجود ملاحظة، ويمكن أن تتداخل مؤشرات الادخار والاقتراض.",
+   "new": "لا يجوز تفسير الفرق على أنه «حصة الادخار غير الرسمي» أو اعتبار الطرق حصصًا شاملة لكل المدخرين. | هذه أدلة تاريخية؛ والرمز «..» يعني عدم وجود ملاحظة، ويمكن أن تتداخل مؤشرات الادخار والاقتراض."
+  },
+  {
+   "finding": "P4-L01",
+   "sheet": "06_EVIDENCE_OBJECTS",
+   "row": 50,
+   "col": 17,
+   "field": "CLM-030.limitations_ar",
+   "old": "لا يجوز عرض قيم القنوات بوصفها نسبًا من جميع البالغين، أو استنتاج حصص من التدفقات النقدية منها، أو اعتبار الملف راهنًا. هذه أدلة تاريخية، وقواعد احتساب قنوات التحويل تخص مجتمعات فرعية مشروطة.",
+   "new": "لا يجوز عرض قيم القنوات بوصفها نسبًا من جميع البالغين، أو استنتاج حصص من التدفقات النقدية منها، أو اعتبار الملف راهنًا. | هذه أدلة تاريخية، وقواعد احتساب قنوات التحويل تخص مجتمعات فرعية مشروطة."
+  },
+  {
+   "finding": "P4-L01",
+   "sheet": "06_EVIDENCE_OBJECTS",
+   "row": 60,
+   "col": 17,
+   "field": "CLM-005.limitations_ar",
+   "old": "لا يجوز تقديم ترتيب القيود بوصفه ممثلًا وطنيًا لجميع منشآت اليمن. المسح ليس وطنيًا، وبعض الجداول لها قواعد احتساب شرطية صغيرة، كما أن جدول عوائق التمويل يستخدم قاعدة مفلترة.",
+   "new": "لا يجوز تقديم ترتيب القيود بوصفه ممثلًا وطنيًا لجميع منشآت اليمن. | المسح ليس وطنيًا، وبعض الجداول لها قواعد احتساب شرطية صغيرة، كما أن جدول عوائق التمويل يستخدم قاعدة مفلترة."
+  },
+  {
+   "finding": "P4-L01",
+   "sheet": "06_EVIDENCE_OBJECTS",
+   "row": 61,
+   "col": 17,
+   "field": "CLM-006.limitations_ar",
+   "old": "لا يجوز القول إن 91.84% من جميع منشآت اليمن تواجه عوائق تمويل كبيرة أو متوسطة. النسبة تخص قاعدة احتساب مفلترة في مسح غير وطني، وبعض الجداول تستند إلى قواعد احتساب شرطية صغيرة.",
+   "new": "لا يجوز القول إن 91.84% من جميع منشآت اليمن تواجه عوائق تمويل كبيرة أو متوسطة. | النسبة تخص قاعدة احتساب مفلترة في مسح غير وطني، وبعض الجداول تستند إلى قواعد احتساب شرطية صغيرة."
+  },
+  {
+   "finding": "P4-L01",
+   "sheet": "06_EVIDENCE_OBJECTS",
+   "row": 62,
+   "col": 17,
+   "field": "CLM-008.limitations_ar",
+   "old": "لا يجوز استنتاج الفروع العاملة أو المنتجات أو الحصة السوقية أو المشاركة في أنظمة الدفع. الظهور في القائمة يثبت الإدراج/الترخيص في المصدر فقط، ولا يثبت التشغيل أو جميع الفروع أو المشاركة أو التغطية الوطنية خارج نطاق سلطة المصدر.",
+   "new": "لا يجوز استنتاج الفروع العاملة أو المنتجات أو الحصة السوقية أو المشاركة في أنظمة الدفع. | الظهور في القائمة يثبت الإدراج/الترخيص في المصدر فقط، ولا يثبت التشغيل أو جميع الفروع أو المشاركة أو التغطية الوطنية خارج نطاق سلطة المصدر."
+  },
+  {
+   "finding": "P4-L01",
+   "sheet": "06_EVIDENCE_OBJECTS",
+   "row": 84,
+   "col": 17,
+   "field": "CLM-040.limitations_ar",
+   "old": "لا يجوز الادعاء بأن كل صف في تقرير البنك المركزي لعام 2025 مطابق عدديًا لمخرجات بعثة صندوق النقد. تم التحقق من حدث إعادة البناء، لكن المطابقة التفصيلية صفًا بصف مع تقرير البنك المركزي غير متاحة علنًا.",
+   "new": "لا يجوز الادعاء بأن كل صف في تقرير البنك المركزي لعام 2025 مطابق عدديًا لمخرجات بعثة صندوق النقد. | تم التحقق من حدث إعادة البناء، لكن المطابقة التفصيلية صفًا بصف مع تقرير البنك المركزي غير متاحة علنًا."
+  },
+  {
+   "finding": "P4-L01",
+   "sheet": "06_EVIDENCE_OBJECTS",
+   "row": 86,
+   "col": 17,
+   "field": "CLM-042.limitations_ar",
+   "old": "لا يجوز وصف المعامل بأنه تحويل للسكان أو الجغرافيا أو الحصة غير الرسمية أو التغطية. قابلية المقارنة هنا خاصة بالمكوّن، وتظل فروق الإشارة والنطاق والمنهج جوهرية.",
+   "new": "لا يجوز وصف المعامل بأنه تحويل للسكان أو الجغرافيا أو الحصة غير الرسمية أو التغطية. | قابلية المقارنة هنا خاصة بالمكوّن، وتظل فروق الإشارة والنطاق والمنهج جوهرية."
+  },
+  {
+   "finding": "P4-L01",
+   "sheet": "06_EVIDENCE_OBJECTS",
+   "row": 87,
+   "col": 17,
+   "field": "CLM-043.limitations_ar",
+   "old": "لا يجوز وصف السهو والخطأ بأنه تحويلات مخفية، أو تقديم رأس المال غير المسجل بوصفه تفكيكًا مثبتًا، أو معاملته كتدفق مرصود. بند السهو والخطأ متبقٍ صافٍ للموازنة ولا يحدد مكونًا مفقودًا بعينه أو الأخطاء الإجمالية المتقابلة.",
+   "new": "لا يجوز وصف السهو والخطأ بأنه تحويلات مخفية، أو تقديم رأس المال غير المسجل بوصفه تفكيكًا مثبتًا، أو معاملته كتدفق مرصود. | بند السهو والخطأ متبقٍ صافٍ للموازنة ولا يحدد مكونًا مفقودًا بعينه أو الأخطاء الإجمالية المتقابلة."
+  },
+  {
+   "finding": "P4-L01",
+   "sheet": "06_EVIDENCE_OBJECTS",
+   "row": 88,
+   "col": 17,
+   "field": "CLM-044.limitations_ar",
+   "old": "لا يجوز تقديم 7.4 مليارات دولار بوصفها قيمة رسمية أو وطنية مرصودة، ولا تعريف الباقي باعتباره تحويلات غير رسمية مرصودة مباشرة. كما تنتقل أخطاء مكونات ميزان المدفوعات الأخرى وافتراض بند الأخطاء والسهو إلى هذا الباقي؛ فالتحويلات غير الرسمية ليست مرصودة مباشرة.",
+   "new": "لا يجوز تقديم 7.4 مليارات دولار بوصفها قيمة رسمية أو وطنية مرصودة، ولا تعريف الباقي باعتباره تحويلات غير رسمية مرصودة مباشرة. | كما تنتقل أخطاء مكونات ميزان المدفوعات الأخرى وافتراض بند الأخطاء والسهو إلى هذا الباقي؛ فالتحويلات غير الرسمية ليست مرصودة مباشرة."
+  },
+  {
+   "finding": "P4-L01",
+   "sheet": "06_EVIDENCE_OBJECTS",
+   "row": 89,
+   "col": 17,
+   "field": "CLM-045.limitations_ar",
+   "old": "لا يجوز عدّ مستفيدي التحويلات النقدية أو مجموعات الادخار والإقراض أو مستهدفات الهوية أو الحسابات المفتوحة بوصفها استخدامًا ماليًا مستدامًا. توجد أدلة مفيدة على حلقات وسيطة، لكن الاستخدام المستمر للحساب/المحفظة بعد التحويل ما يزال غير مرصود.",
+   "new": "لا يجوز عدّ مستفيدي التحويلات النقدية أو مجموعات الادخار والإقراض أو مستهدفات الهوية أو الحسابات المفتوحة بوصفها استخدامًا ماليًا مستدامًا. | توجد أدلة مفيدة على حلقات وسيطة، لكن الاستخدام المستمر للحساب/المحفظة بعد التحويل ما يزال غير مرصود."
+  },
+  {
+   "finding": "P4-L01",
+   "sheet": "06_EVIDENCE_OBJECTS",
+   "row": 90,
+   "col": 17,
+   "field": "CLM-046.limitations_ar",
+   "old": "لا يجوز بناء رقم تراكمي للدعم السعودي بجمع حالات مالية مختلفة أو متداخلة. لا يوجد دفتر عام موحد ومطابق بالكامل للتدفقات، وقد تتداخل الحزم الأم والفرعية وحالات الالتزام والإيداع والإتاحة والصرف والاستخدام.",
+   "new": "لا يجوز بناء رقم تراكمي للدعم السعودي بجمع حالات مالية مختلفة أو متداخلة. | لا يوجد دفتر عام موحد ومطابق بالكامل للتدفقات، وقد تتداخل الحزم الأم والفرعية وحالات الالتزام والإيداع والإتاحة والصرف والاستخدام."
+  },
+  {
+   "finding": "P4-L01",
+   "sheet": "06_EVIDENCE_OBJECTS",
+   "row": 91,
+   "col": 17,
+   "field": "CLM-047.limitations_ar",
+   "old": "لا يجوز استنتاج معاملات ميزان المدفوعات من الفرق بين رصيد وضع الاستثمار الدولي في أول الفترة وآخرها فقط. المواصفة التشغيلية جاهزة، لكن مراكز وضع الاستثمار الدولي ومدخلات المطابقة لليمن ليست متاحة بعد في corpus العام المعتمد.",
+   "new": "لا يجوز استنتاج معاملات ميزان المدفوعات من الفرق بين رصيد وضع الاستثمار الدولي في أول الفترة وآخرها فقط. | المواصفة التشغيلية جاهزة، لكن مراكز وضع الاستثمار الدولي ومدخلات المطابقة لليمن ليست متاحة بعد في corpus العام المعتمد."
+  },
+  {
+   "finding": "P4-L01",
+   "sheet": "06_EVIDENCE_OBJECTS",
+   "row": 94,
+   "col": 17,
+   "field": "CLM-050.limitations_ar",
+   "old": "لا يجوز وصف الإجمالي بأنه عدد مستخدمين نشطين أو أشخاص فريدين أو معدل شمول وطني أو مستوى حالي لعام 2026. الحسابات لا تساوي أشخاصًا فريدين ولا تكون نشطة تلقائيًا؛ ونسبة 23% متوسط يورده المصدر وليست نسبة خاصة بكل مقدم خدمة أو نسبة حالية.",
+   "new": "لا يجوز وصف الإجمالي بأنه عدد مستخدمين نشطين أو أشخاص فريدين أو معدل شمول وطني أو مستوى حالي لعام 2026. | الحسابات لا تساوي أشخاصًا فريدين ولا تكون نشطة تلقائيًا؛ ونسبة 23% متوسط يورده المصدر وليست نسبة خاصة بكل مقدم خدمة أو نسبة حالية."
+  },
+  {
+   "finding": "P4-L01",
+   "sheet": "06_EVIDENCE_OBJECTS",
+   "row": 95,
+   "col": 17,
+   "field": "CLM-051.limitations_ar",
+   "old": "لا يجوز استنتاج عدد المستخدمين الفريدين أو تغطية منظومة التجار أو رفاه الأسر أو السببية أو الاستدامة. قيمة المعاملات لا تقيس المستخدمين الفريدين أو تبني التجار أو الرفاه؛ والتجميع مشتق من CauseWay وليس تصنيفًا أصليًا في المصدر.",
+   "new": "لا يجوز استنتاج عدد المستخدمين الفريدين أو تغطية منظومة التجار أو رفاه الأسر أو السببية أو الاستدامة. | قيمة المعاملات لا تقيس المستخدمين الفريدين أو تبني التجار أو الرفاه؛ والتجميع مشتق من CauseWay وليس تصنيفًا أصليًا في المصدر."
+  },
+  {
+   "finding": "P4-L01",
+   "sheet": "06_EVIDENCE_OBJECTS",
+   "row": 96,
+   "col": 17,
+   "field": "CLM-052.limitations_ar",
+   "old": "لا يجوز استنتاج فجوة وطنية بين النساء والرجال لعام 2026 أو معدل وصول ريفي أو توافر خدمة محلية. الدليل ليس تقديرًا وطنيًا لانتشار الخدمة بين البالغين، ولا يعكس الجغرافيا الحالية، ولا يقارن مباشرة مع Findex من دون جسر للمنهج والمجتمع؛ كما أن مسح 611 مستخدمًا له تركيبة عينة مختلفة.",
+   "new": "لا يجوز استنتاج فجوة وطنية بين النساء والرجال لعام 2026 أو معدل وصول ريفي أو توافر خدمة محلية. | الدليل ليس تقديرًا وطنيًا لانتشار الخدمة بين البالغين، ولا يعكس الجغرافيا الحالية، ولا يقارن مباشرة مع Findex من دون جسر للمنهج والمجتمع؛ كما أن مسح 611 مستخدمًا له تركيبة عينة مختلفة."
+  },
+  {
+   "finding": "P4-L01",
+   "sheet": "06_EVIDENCE_OBJECTS",
+   "row": 97,
+   "col": 17,
+   "field": "CLM-053.limitations_ar",
+   "old": "لا يجوز وصف هذا المستوى بأنه متحقق من مصدر أولي، أو اعتباره مستوى لعام 2026، أو عدد أسر فريدة، أو معدلًا وطنيًا للشمول المالي للبالغين. المصدر الأولي لعام 2023 والربط الدقيق بين نطاقات مقدمي الخدمات عبر الفترات لم يصبحا متاحين بعد للتحقق المباشر.",
+   "new": "لا يجوز وصف هذا المستوى بأنه متحقق من مصدر أولي، أو اعتباره مستوى لعام 2026، أو عدد أسر فريدة، أو معدلًا وطنيًا للشمول المالي للبالغين. | المصدر الأولي لعام 2023 والربط الدقيق بين نطاقات مقدمي الخدمات عبر الفترات لم يصبحا متاحين بعد للتحقق المباشر."
+  },
+  {
+   "finding": "P4-L01",
+   "sheet": "06_EVIDENCE_OBJECTS",
+   "row": 99,
+   "col": 17,
+   "field": "CLM-055.limitations_ar",
+   "old": "لا يجوز وصف البنوك الاثني عشر بأنها جميعًا عاملة أو مكتملة وطنيًا أو نشطة أو خاضعة عمليًا للرقابة بنفس الدرجة، ولا اعتبار القائمة دليلًا على زيادة الانتشار. الظهور يثبت الإدراج/الترخيص فقط ولا يثبت التشغيل أو الفروع أو المشاركة في الأنظمة أو المنتجات أو الحصة السوقية.",
+   "new": "لا يجوز وصف البنوك الاثني عشر بأنها جميعًا عاملة أو مكتملة وطنيًا أو نشطة أو خاضعة عمليًا للرقابة بنفس الدرجة، ولا اعتبار القائمة دليلًا على زيادة الانتشار. | الظهور يثبت الإدراج/الترخيص فقط ولا يثبت التشغيل أو الفروع أو المشاركة في الأنظمة أو المنتجات أو الحصة السوقية."
+  },
+  {
+   "finding": "P4-L01",
+   "sheet": "06_EVIDENCE_OBJECTS",
+   "row": 103,
+   "col": 17,
+   "field": "CLM-032.limitations_ar",
+   "old": "لا يجوز وصف مراجعة السنة نفسها بأنها انهيار اقتصادي أو تغير فعلي على أساس سنوي. إعادة بناء المنهج مدعومة بقوة، لكن المطابقة الدقيقة بين مستويات البنك المركزي وصندوق النقد من حيث الجغرافيا والمفهوم الإحصائي غير منشورة؛ وتظل مراجعة النسخة منفصلة عن التغير الزمني.",
+   "new": "لا يجوز وصف مراجعة السنة نفسها بأنها انهيار اقتصادي أو تغير فعلي على أساس سنوي. | إعادة بناء المنهج مدعومة بقوة، لكن المطابقة الدقيقة بين مستويات البنك المركزي وصندوق النقد من حيث الجغرافيا والمفهوم الإحصائي غير منشورة؛ وتظل مراجعة النسخة منفصلة عن التغير الزمني."
+  },
+  {
+   "finding": "P4-L01",
+   "sheet": "06_EVIDENCE_OBJECTS",
+   "row": 104,
+   "col": 17,
+   "field": "CLM-033.limitations_ar",
+   "old": "لا يجوز وصف إعادة التقييم بأنها طفرة في الأصول أو الودائع أو الائتمان أو استنتاج أثر على الملاءة. الانقطاع المنهجي/التقييمي يغير قيم السنة المرجعية نفسها بصورة جوهرية، ويظل إسناد التغيرات التفصيلية إلى ملاحظة التقييم ضمن الحدود التي يثبتها المصدر.",
+   "new": "لا يجوز وصف إعادة التقييم بأنها طفرة في الأصول أو الودائع أو الائتمان أو استنتاج أثر على الملاءة. | الانقطاع المنهجي/التقييمي يغير قيم السنة المرجعية نفسها بصورة جوهرية، ويظل إسناد التغيرات التفصيلية إلى ملاحظة التقييم ضمن الحدود التي يثبتها المصدر."
+  },
+  {
+   "finding": "P4-L01",
+   "sheet": "06_EVIDENCE_OBJECTS",
+   "row": 107,
+   "col": 17,
+   "field": "CLM-036.limitations_ar",
+   "old": "لا يجوز الادعاء بأن الأدلة العامة تثبت الصيغة الدقيقة المستخدمة في تقرير البنك المركزي 2025 أو أن نطاق مستوى البنك المركزي وصندوق النقد متطابق. تم التحقق من إنتاج إعادة البناء، لكن المطابقة التفصيلية صفًا بصف ليست متاحة علنًا.",
+   "new": "لا يجوز الادعاء بأن الأدلة العامة تثبت الصيغة الدقيقة المستخدمة في تقرير البنك المركزي 2025 أو أن نطاق مستوى البنك المركزي وصندوق النقد متطابق. | تم التحقق من إنتاج إعادة البناء، لكن المطابقة التفصيلية صفًا بصف ليست متاحة علنًا."
+  },
+  {
+   "finding": "P4-L01",
+   "sheet": "06_EVIDENCE_OBJECTS",
+   "row": 108,
+   "col": 17,
+   "field": "CLM-037.limitations_ar",
+   "old": "لا يجوز مقارنة المستويات الخام للبنك المركزي وصندوق النقد بوصفها متكافئة أو تفسير ثبات نسبة المستويات تاريخيًا كمعامل تحويل جغرافي. تطابق المسار بعد التطبيع قوي، لكن المطابقة الدقيقة في المستوى والجغرافيا والمفهوم الإحصائي غير منشورة، ومراجعة السنة نفسها منفصلة عن التغير عبر الزمن.",
+   "new": "لا يجوز مقارنة المستويات الخام للبنك المركزي وصندوق النقد بوصفها متكافئة أو تفسير ثبات نسبة المستويات تاريخيًا كمعامل تحويل جغرافي. | تطابق المسار بعد التطبيع قوي، لكن المطابقة الدقيقة في المستوى والجغرافيا والمفهوم الإحصائي غير منشورة، ومراجعة السنة نفسها منفصلة عن التغير عبر الزمن."
+  },
+  {
+   "finding": "P4-L01",
+   "sheet": "06_EVIDENCE_OBJECTS",
+   "row": 109,
+   "col": 17,
+   "field": "CLM-038.limitations_ar",
+   "old": "لا يجوز وصف يناير 2023 بأنه أول استخدام للتقييم بسعر السوق في اليمن أو افتراض أن المعيار التاريخي والمعيار المعاصر متطابقان. وجود سابقة تاريخية لا يثبت الاستمرارية أو التكافؤ مع نظام 2023، وتظل تفاصيل التعميم والسلسلة القانونية/الإحصائية مفتوحة.",
+   "new": "لا يجوز وصف يناير 2023 بأنه أول استخدام للتقييم بسعر السوق في اليمن أو افتراض أن المعيار التاريخي والمعيار المعاصر متطابقان. | وجود سابقة تاريخية لا يثبت الاستمرارية أو التكافؤ مع نظام 2023، وتظل تفاصيل التعميم والسلسلة القانونية/الإحصائية مفتوحة."
+  },
+  {
+   "finding": "P4-L01",
+   "sheet": "06_EVIDENCE_OBJECTS",
+   "row": 110,
+   "col": 17,
+   "field": "CLM-039.limitations_ar",
+   "old": "لا يجوز استنتاج أن البيانات حُذفت أو سُحبت أو معرفة سبب التصحيح، ولا يجوز إكمال واجهة عامة صامتًا من واجهة أخرى. اختلاف الواجهة لا يثبت غياب البيانات الأساسية أو حذفها أو سبب مراجعتها.",
+   "new": "لا يجوز استنتاج أن البيانات حُذفت أو سُحبت أو معرفة سبب التصحيح، ولا يجوز إكمال واجهة عامة صامتًا من واجهة أخرى. | اختلاف الواجهة لا يثبت غياب البيانات الأساسية أو حذفها أو سبب مراجعتها."
+  },
+  {
+   "finding": "P4-L01",
+   "sheet": "06_EVIDENCE_OBJECTS",
+   "row": 111,
+   "col": 17,
+   "field": "CLM-059.limitations_ar",
+   "old": "لا يجوز تقديم المنشآت التي دعمها البرنامج بوصفها مجموع المنشآت الصغيرة والأصغر على المستوى الوطني، أو تقديم صرف البرنامج بوصفه إقراضًا من القطاع المالي، أو تحويل المخرجات البرنامجية إلى نتائج وطنية أو سببية. كما لا يثبت الدليل البرامجي الانتشار الوطني أو عدد الشركات الوطنية الفريدة أو خلق الوظائف وطنيًا أو الأثر السببي.",
+   "new": "لا يجوز تقديم المنشآت التي دعمها البرنامج بوصفها مجموع المنشآت الصغيرة والأصغر على المستوى الوطني، أو تقديم صرف البرنامج بوصفه إقراضًا من القطاع المالي، أو تحويل المخرجات البرنامجية إلى نتائج وطنية أو سببية. | كما لا يثبت الدليل البرامجي الانتشار الوطني أو عدد الشركات الوطنية الفريدة أو خلق الوظائف وطنيًا أو الأثر السببي."
+  },
+  {
+   "finding": "P4-L01",
+   "sheet": "06_EVIDENCE_OBJECTS",
+   "row": 112,
+   "col": 17,
+   "field": "CLM-060.limitations_ar",
+   "old": "لا يجوز تفسير النسبة بوصفها معدلًا وطنيًا لوصول المنشآت إلى الخدمات المالية، أو تقديرًا من مسح ممثل، أو معدلًا وطنيًا للمنشآت الفريدة، أو دليلًا على أن SMEPS سبب الوصول. ولا يوضح جدول المؤشر بصورة كاملة قاعدة التقييم الخاصة بالمؤشر أو التعريف التشغيلي لـ«الوصول إلى خدمات مالية»؛ وهذا يضيق نطاق الخلاصة ولا يلغي المؤشر الذي أورده المصدر.",
+   "new": "لا يجوز تفسير النسبة بوصفها معدلًا وطنيًا لوصول المنشآت إلى الخدمات المالية، أو تقديرًا من مسح ممثل، أو معدلًا وطنيًا للمنشآت الفريدة، أو دليلًا على أن SMEPS سبب الوصول. | ولا يوضح جدول المؤشر بصورة كاملة قاعدة التقييم الخاصة بالمؤشر أو التعريف التشغيلي لـ«الوصول إلى خدمات مالية»؛ وهذا يضيق نطاق الخلاصة ولا يلغي المؤشر الذي أورده المصدر."
+  },
+  {
+   "finding": "P4-E01",
+   "sheet": "06_EVIDENCE_OBJECTS",
+   "row": 91,
+   "col": 17,
+   "field": "CLM-047.limitations_ar",
+   "old": "لا يجوز استنتاج معاملات ميزان المدفوعات من الفرق بين رصيد وضع الاستثمار الدولي في أول الفترة وآخرها فقط. | المواصفة التشغيلية جاهزة، لكن مراكز وضع الاستثمار الدولي ومدخلات المطابقة لليمن ليست متاحة بعد في corpus العام المعتمد.",
+   "new": "لا يجوز استنتاج معاملات ميزان المدفوعات من الفرق بين رصيد وضع الاستثمار الدولي في أول الفترة وآخرها فقط. | المواصفة التشغيلية جاهزة، لكن مراكز وضع الاستثمار الدولي ومدخلات المطابقة لليمن ليست متاحة بعد في قاعدة الأدلة العامة المعتمدة."
+  },
+  {
+   "finding": "P4-E01",
+   "sheet": "07_PUBLIC_CLAIMS",
+   "row": 50,
+   "col": 11,
+   "field": "CLM-047.does_not_prove_ar",
+   "old": "لا يجوز استنتاج معاملات ميزان المدفوعات من الفرق بين رصيد وضع الاستثمار الدولي في أول الفترة وآخرها فقط. المواصفة التشغيلية جاهزة، لكن مراكز وضع الاستثمار الدولي ومدخلات المطابقة لليمن ليست متاحة بعد في corpus العام المعتمد.",
+   "new": "لا يجوز استنتاج معاملات ميزان المدفوعات من الفرق بين رصيد وضع الاستثمار الدولي في أول الفترة وآخرها فقط. المواصفة التشغيلية جاهزة، لكن مراكز وضع الاستثمار الدولي ومدخلات المطابقة لليمن ليست متاحة بعد في قاعدة الأدلة العامة المعتمدة."
+  },
+  {
+   "finding": "P4-L02",
+   "sheet": "04_NAV_UX",
+   "row": null,
+   "col": null,
+   "field": "UI-EVID-DOES-NOT-ESTABLISH",
+   "old": null,
+   "new": "What this evidence does not establish || ما لا يثبته هذا الدليل"
+  },
+  {
+   "finding": "P4-L02",
+   "sheet": "04_NAV_UX",
+   "row": null,
+   "col": null,
+   "field": "UI-EVID-MEASUREMENT-LIMITS",
+   "old": null,
+   "new": "Limits of the measure || حدود القياس"
+  },
+  {
+   "finding": "EXF-002",
+   "sheet": "02_SITE_MAP",
+   "row": 139,
+   "col": 7,
+   "field": "/readings/microfinance-structural-divergence/.full_copy_en",
+   "old": "More institutions and deposits do not automatically mean broader credit reach\n\nWhat supports this reading\n\nThe evidence moves on several different axes; these observations do not form one harmonized growth series.\n\nBorrower reach: verified primary anchors record 93,118 active borrowers at end-2015 and 88,445 at end-2020. A strong secondary 2024 source citing SFD/SMED reports 78,686 at end-2023. A separate June-2023 point of roughly 80,800 comes through a different source chain and is not joined to the year-end point as a trend.\n\nSavings relationships and nominal portfolio: the verified 2020 anchors are 1.611 million savers/depositors and YER33.379 billion in portfolio. The 2024 secondary source reports what it calls 3.3 million “active savers” and a nominal portfolio of about YER44 billion for 2023. “Active savers” and “savers/depositors” have not been shown to be the same measure, and the portfolio figures are nominal rials whose valuation across Yemen's divided monetary areas is not recorded in the evidence base, so no real or US-dollar change can be derived by comparing them. The set of providers covered by the evidence, the saver definition/deduplication rules and the period bridge are not fully harmonized, so these are separate bounded anchors rather than one continuous series.\n\nProvider structure and the 91% statement: the current CBY-Aden list of licensed banks names 26 banks, 12 of which are classified as microfinance banks on the basis of their names in the source; listing does not establish operation or outreach. The 2024 MFB paper attributes 91% to Al-Kuraimi's share of saver growth, not a verified 2023 depositor stock share. Historical data show why that distinction matters: from 2016 to 2019 Al-Kuraimi accounts for about 91.98% of industry saver growth while its 2019 stock share is about 82.45%. The exact 2023 provider-level numerator, denominator and calculation have not been reproduced, so the later stock-share restatement is not promoted.\n\nHistorical context through 2021: World Bank Financial Sector Diagnostics reports an active microfinance borrower base broadly around 80,000–90,000 while average loan amounts rose, suggesting that subsector growth through that period reflected larger loans more than net borrower growth. This is historical context, not a 2023 or 2026 conclusion.\n\nWhat qualifies or complicates the reading\n\nThe 2023 borrower, saver and portfolio values enter through a strong secondary source that cites SFD/SMED, while the underlying 2023 primary source has not yet been directly verified. Provider coverage, saver/depositor definitions, deduplication and the bridge between observation dates are not fully harmonized. The 91% statement is therefore retained only as a source-attributed growth share; no 2023 stock share is inferred. Nominal portfolio growth is not real credit growth without an explicit price/FX method, and listed or licensed providers are not assumed to be operating.\n\nHow this fits into the wider system\n\nMicrofinance can change along several dimensions at once: institutional form, borrower reach, savings relationships, loan size and nominal portfolio. A sector can become larger on one dimension while serving no more—or fewer—borrowers on another. Reading all of these as one growth story hides the decision question: is change coming from broader reach, larger balances, a different product mix or a different provider structure?\n\nWhat the evidence does not establish\n\nIt does not establish unique people, real credit growth, improved borrower outcomes or a verified 2023 provider stock share. Saver/depositor growth, nominal portfolio growth and changes in provider structure do not, on their own, establish broader inclusion, real credit deepening, market dominance, unique-person growth or improved borrower outcomes.\n\nImplication for decision use\n\nBorrower reach, saver/depositor relationships and nominal portfolio are separate indicators. Interpreting nominal portfolio growth as real deepening requires an explicit price/FX treatment; interpreting saver growth as inclusion of unique people requires reconciled definitions and deduplication.\n\nWhat remains unknown\n\nThe evidence base does not yet provide a harmonized 2023 primary provider panel with consistent borrower, saver and portfolio definitions, nor a fully agreed real-value conversion convention.\n\nWhat evidence would change the reading\n\nA primary provider-level 2023–2026 panel with consistent definitions, activity windows and nominal/real conversion rules would show whether changes in balances and saver/depositor relationships are accompanied by wider borrower reach.\n\nTrace the reading back to evidence\n\nOpen the linked claims and evidence records to inspect the definition, period, population or scope, source, derivation, reuse conditions, limitations, evidence date and correction history. Compare unlike evidence without forcing it onto one scale.",
+   "new": "More institutions and deposits do not automatically mean broader credit reach\n\nWhat supports this reading\n\nThe evidence moves on several different axes; these observations do not form one harmonized growth series.\n\nBorrower reach: verified primary anchors record 93,118 active borrowers at end-2015 and 88,445 at end-2020. A strong secondary 2024 source citing SFD/SMED reports 78,686 at end-2023. A separate June-2023 point of roughly 80,800 comes through a different source chain and is not joined to the year-end point as a trend.\n\nSavings relationships and nominal portfolio: the verified 2020 anchors are 1.611 million savers/depositors and YER33.379 billion in portfolio. The 2024 secondary source reports what it calls 3.3 million “active savers” and a nominal portfolio of about YER44 billion for 2023. “Active savers” and “savers/depositors” have not been shown to be the same measure, and the portfolio figures are nominal rials whose valuation across Yemen's divided monetary areas is not recorded in the evidence base, so no real or US-dollar change can be derived by comparing them. The set of providers covered by the evidence, the saver definition/deduplication rules and the period bridge are not fully harmonized, so these are separate bounded anchors rather than one continuous series.\n\nProvider structure and the 91% statement: the current CBY-Aden list of licensed banks names 26 banks, 12 of which are classified as microfinance banks on the basis of their names in the source; listing does not establish operation or outreach. The 2024 MFB paper attributes 91% to Al-Kuraimi's share of saver growth, not a verified 2023 depositor stock share. Historical data show why that distinction matters: from 2016 to 2019 Al-Kuraimi accounts for about 91.98% of industry saver growth while its 2019 stock share is about 82.45%. The exact 2023 provider-level numerator, denominator and calculation have not been reproduced, so the later stock-share restatement is not promoted.\n\nHistorical context through 2021: World Bank Financial Sector Diagnostics reports an active microfinance borrower base broadly around 80,000–90,000 while average loan amounts rose, suggesting that subsector growth through that period reflected larger loans more than net borrower growth. This is historical context, not a 2023 or 2026 conclusion.\n\nWhat qualifies or complicates the reading\n\nThe 2023 borrower, saver and portfolio values enter through a strong secondary source that cites SFD/SMED, while the underlying 2023 primary source has not yet been directly verified. Provider coverage, saver/depositor definitions, deduplication and the bridge between observation dates are not fully harmonized. The 91% statement is therefore retained only as a source-attributed growth share; no 2023 stock share is inferred. Nominal portfolio growth is not real credit growth without an explicit price/FX method, and listed or licensed providers are not assumed to be operating.\n\nHow this fits into the wider system\n\nMicrofinance can change along several dimensions at once: institutional form, borrower reach, savings relationships, loan size and nominal portfolio. A sector can become larger on one dimension while serving no more—or fewer—borrowers on another. Reading all of these as one growth story hides the decision question: is change coming from broader reach, larger balances, a different product mix or a different provider structure?\n\nWhat the evidence does not establish\n\nIt does not establish unique people, real credit growth, welfare change or a verified 2023 provider stock share. Saver/depositor growth, nominal portfolio growth and changes in provider structure do not, on their own, establish broader inclusion, real credit deepening, market dominance, unique-person growth or improved borrower outcomes.\n\nImplication for decision use\n\nBorrower reach, saver/depositor relationships and nominal portfolio are separate indicators. Interpreting nominal portfolio growth as real deepening requires an explicit price/FX treatment; interpreting saver growth as inclusion of unique people requires reconciled definitions and deduplication.\n\nWhat remains unknown\n\nThe evidence base does not yet provide a harmonized 2023 primary provider panel with consistent borrower, saver and portfolio definitions, nor a fully agreed real-value conversion convention.\n\nWhat evidence would change the reading\n\nA primary provider-level 2023–2026 panel with consistent definitions, activity windows and nominal/real conversion rules would show whether changes in balances and saver/depositor relationships are accompanied by wider borrower reach.\n\nTrace the reading back to evidence\n\nOpen the linked claims and evidence records to inspect the definition, period, population or scope, source, derivation, reuse conditions, limitations, evidence date and correction history. Compare unlike evidence without forcing it onto one scale."
+  },
+  {
+   "finding": "EXF-002",
+   "sheet": "02_SITE_MAP",
+   "row": 139,
+   "col": 8,
+   "field": "/readings/microfinance-structural-divergence/.full_copy_ar",
+   "old": "مؤسسات أكثر وودائع أكبر لا تعني تلقائيًا وصولًا ائتمانيًا أوسع\n\nما الأدلة التي تسند هذه القراءة\n\nتتحرك أدلة التمويل الأصغر على محاور مختلفة؛ ولا تشكل هذه المشاهدات سلسلة نمو موحدة.\n\nوصول المقترضين: تسجل النقاط الأولية الموثقة 93,118 مقترضًا نشطًا في نهاية 2015 و88,445 في نهاية 2020، بينما يورد مصدر ثانوي قوي منشور في 2024 ومستند إلى SFD/SMED عدد 78,686 في نهاية 2023. وتأتي نقطة منفصلة تقارب 80,800 مقترض في يونيو 2023 عبر سلسلة مصدر مختلفة، ولذلك لا تُربط بنقطة نهاية العام بوصفهما اتجاهًا واحدًا.\n\nعلاقات الادخار والمحفظة الاسمية: تبلغ النقاط الموثقة لعام 2020 نحو 1.611 مليون مدخر أو مودع ومحفظة قدرها 33.379 مليار ريال. ويورد المصدر الثانوي المنشور في 2024 ما يسميه نحو 3.3 ملايين «مدخر نشط» ومحفظة اسمية تقارب 44 مليار ريال لعام 2023. ولم يثبت أن «المدخر النشط» و«المدخر/المودع» مقياس واحد، وقيم المحفظة اسمية بالريال ولا تسجل قاعدة الأدلة أساس تقييمها في ظل انقسام المناطق النقدية، ولذلك لا يمكن استخلاص تغير حقيقي أو تغير بالدولار من مقارنتها. ولا تزال مجموعة مقدمي الخدمة وتعريف المدخر وقواعد إزالة التكرار والجسر الزمني غير موحدة بالكامل، لذلك تمثل هذه القيم نقاطًا مرجعية منفصلة ومقيدة لا سلسلة مستمرة واحدة.\n\nهيكل مقدمي الخدمة ورقم 91%: تضم قائمة البنك المركزي اليمني – عدن الحالية 26 بنكًا مدرجًا في المصدر، منها 12 بنكًا مصنفة بنوكَ تمويل أصغر استنادًا إلى تسمياتها في المصدر؛ ولا يثبت الإدراج التشغيل أو الوصول الفعلي. وتنسب ورقة 2024 نسبة 91% إلى حصة الكريمي من نمو المدخرين، لا إلى حصة محققة من رصيد المودعين في 2023. وتوضح البيانات التاريخية سبب أهمية هذا الفصل: بين 2016 و2019 يمثل الكريمي نحو 91.98% من نمو مدخري القطاع، بينما تبلغ حصته من الرصيد في 2019 نحو 82.45%. ولم يُعَد إنتاج البسط وقاعدة الاحتساب وطريقة حساب 2023 على مستوى مقدمي الخدمة، لذلك لا تُرفع إعادة العرض اللاحقة لحصة الرصيد إلى حقيقة إنتاجية.\n\nسياق تاريخي حتى 2021: يفيد تشخيص القطاع المالي للبنك الدولي بأن قاعدة المقترضين النشطين ظلت عمومًا في نطاق 80,000–90,000 بينما ارتفع متوسط حجم التمويل، بما يشير إلى أن نمو القطاع الفرعي حتى تلك الفترة ارتبط بأحجام تمويل أكبر أكثر من ارتباطه بزيادة صافية في عدد المقترضين. وهذه قراءة تاريخية لا استنتاجًا عن 2023 أو 2026.\n\nما الذي يقيّد هذه القراءة أو يعقّدها\n\nتدخل قيم المقترضين والمدخرين والمحفظة لعام 2023 عبر مصدر ثانوي قوي يستند إلى SFD/SMED، بينما لم يصبح المصدر الأولي لعام 2023 متاحًا بعد للتحقق المباشر. كما أن تغطية مقدمي الخدمة وتعريفات المدخرين أو المودعين وقواعد إزالة التكرار والجسر بين تواريخ الرصد ليست موحدة بالكامل. لذلك تُحفظ نسبة 91% فقط بوصفها حصة نمو منسوبة إلى المصدر، ولا تُستنتج منها حصة رصيد لعام 2023. ولا يساوي نمو المحفظة الاسمية نموًا حقيقيًا للائتمان من دون منهج صريح للأسعار أو سعر الصرف، كما لا يعني الإدراج أو الترخيص أن مقدم الخدمة يعمل فعليًا.\n\nكيف يرتبط ذلك بالنظام الأوسع\n\nيمكن للتمويل الأصغر أن يتغير في عدة أبعاد في الوقت نفسه: الشكل المؤسسي، وعدد المقترضين، وعلاقات الادخار، وحجم القرض، والمحفظة الاسمية. وقد يكبر القطاع في بُعد من دون زيادة عدد المقترضين في بُعد آخر. وقراءة كل ذلك كقصة نمو واحدة تخفي سؤال القرار: هل يأتي التغير من اتساع الوصول، أم من أرصدة أكبر، أم من تغير مزيج المنتجات، أم من تغير هيكل مقدمي الخدمة؟\n\nما الذي لا تثبته الأدلة\n\nلا تثبت القراءة عددًا من الأشخاص الفريدين، أو نموًا حقيقيًا للائتمان، أو تحسن نتائج المقترضين، أو حصة محققة لمقدم خدمة في 2023. لا يثبت نمو المدخرين أو المودعين، أو نمو المحفظة الاسمية، أو تغير هيكل مقدمي الخدمة، في حد ذاته اتساع الشمول أو تعمق الائتمان الحقيقي أو الهيمنة السوقية أو نمو عدد الأشخاص الفريدين أو تحسن نتائج المقترضين.\n\nما الذي يعنيه ذلك عند استخدام الدليل في القرار\n\nوصول المقترضين وعلاقات الادخار أو الإيداع والمحفظة الاسمية مؤشرات منفصلة. ويتطلب تفسير نمو المحفظة الاسمية كتعمق حقيقي معالجة صريحة للأسعار أو سعر الصرف؛ كما يتطلب تفسير نمو المدخرين كشمول لأشخاص فريدين توحيد التعريفات وقواعد إزالة التكرار.\n\nما الذي ما زلنا لا نعرفه\n\nلا تحتوي قاعدة الأدلة بعد على لوحة أولية موحدة لعام 2023 لمقدمي الخدمة تستخدم تعريفات متسقة للمقترضين والمدخرين والمحفظة، كما لم يُثبت بعد منهج موحد للتحويل إلى قيم حقيقية.\n\nما الدليل الذي سيغير هذه القراءة\n\nستوضح لوحة أولية على مستوى مقدمي الخدمة للفترة 2023–2026، بتعريفات متسقة وفترات نشاط وقواعد واضحة للتحويل بين القيم الاسمية والحقيقية، ما إذا كانت التغيرات في الأرصدة وعلاقات الادخار أو الإيداع تترافق مع اتساع وصول المقترضين.\n\nتتبّع القراءة إلى أدلتها\n\nافتح الخلاصات وسجلات الأدلة المرتبطة لمراجعة التعريف والفترة والمجتمع أو النطاق والمصدر وطريقة الاشتقاق وشروط إعادة الاستخدام والحدود وحداثة الدليل وسجل التصحيح. وقارن الأدلة المختلفة من دون إجبارها على مقياس واحد.",
+   "new": "مؤسسات أكثر وودائع أكبر لا تعني تلقائيًا وصولًا ائتمانيًا أوسع\n\nما الأدلة التي تسند هذه القراءة\n\nتتحرك أدلة التمويل الأصغر على محاور مختلفة؛ ولا تشكل هذه المشاهدات سلسلة نمو موحدة.\n\nوصول المقترضين: تسجل النقاط الأولية الموثقة 93,118 مقترضًا نشطًا في نهاية 2015 و88,445 في نهاية 2020، بينما يورد مصدر ثانوي قوي منشور في 2024 ومستند إلى SFD/SMED عدد 78,686 في نهاية 2023. وتأتي نقطة منفصلة تقارب 80,800 مقترض في يونيو 2023 عبر سلسلة مصدر مختلفة، ولذلك لا تُربط بنقطة نهاية العام بوصفهما اتجاهًا واحدًا.\n\nعلاقات الادخار والمحفظة الاسمية: تبلغ النقاط الموثقة لعام 2020 نحو 1.611 مليون مدخر أو مودع ومحفظة قدرها 33.379 مليار ريال. ويورد المصدر الثانوي المنشور في 2024 ما يسميه نحو 3.3 ملايين «مدخر نشط» ومحفظة اسمية تقارب 44 مليار ريال لعام 2023. ولم يثبت أن «المدخر النشط» و«المدخر/المودع» مقياس واحد، وقيم المحفظة اسمية بالريال ولا تسجل قاعدة الأدلة أساس تقييمها في ظل انقسام المناطق النقدية، ولذلك لا يمكن استخلاص تغير حقيقي أو تغير بالدولار من مقارنتها. ولا تزال مجموعة مقدمي الخدمة وتعريف المدخر وقواعد إزالة التكرار والجسر الزمني غير موحدة بالكامل، لذلك تمثل هذه القيم نقاطًا مرجعية منفصلة ومقيدة لا سلسلة مستمرة واحدة.\n\nهيكل مقدمي الخدمة ورقم 91%: تضم قائمة البنك المركزي اليمني – عدن الحالية 26 بنكًا مدرجًا في المصدر، منها 12 بنكًا مصنفة بنوكَ تمويل أصغر استنادًا إلى تسمياتها في المصدر؛ ولا يثبت الإدراج التشغيل أو الوصول الفعلي. وتنسب ورقة 2024 نسبة 91% إلى حصة الكريمي من نمو المدخرين، لا إلى حصة محققة من رصيد المودعين في 2023. وتوضح البيانات التاريخية سبب أهمية هذا الفصل: بين 2016 و2019 يمثل الكريمي نحو 91.98% من نمو مدخري القطاع، بينما تبلغ حصته من الرصيد في 2019 نحو 82.45%. ولم يُعَد إنتاج البسط وقاعدة الاحتساب وطريقة حساب 2023 على مستوى مقدمي الخدمة، لذلك لا تُرفع إعادة العرض اللاحقة لحصة الرصيد إلى حقيقة إنتاجية.\n\nسياق تاريخي حتى 2021: يفيد تشخيص القطاع المالي للبنك الدولي بأن قاعدة المقترضين النشطين ظلت عمومًا في نطاق 80,000–90,000 بينما ارتفع متوسط حجم التمويل، بما يشير إلى أن نمو القطاع الفرعي حتى تلك الفترة ارتبط بأحجام تمويل أكبر أكثر من ارتباطه بزيادة صافية في عدد المقترضين. وهذه قراءة تاريخية لا استنتاجًا عن 2023 أو 2026.\n\nما الذي يقيّد هذه القراءة أو يعقّدها\n\nتدخل قيم المقترضين والمدخرين والمحفظة لعام 2023 عبر مصدر ثانوي قوي يستند إلى SFD/SMED، بينما لم يصبح المصدر الأولي لعام 2023 متاحًا بعد للتحقق المباشر. كما أن تغطية مقدمي الخدمة وتعريفات المدخرين أو المودعين وقواعد إزالة التكرار والجسر بين تواريخ الرصد ليست موحدة بالكامل. لذلك تُحفظ نسبة 91% فقط بوصفها حصة نمو منسوبة إلى المصدر، ولا تُستنتج منها حصة رصيد لعام 2023. ولا يساوي نمو المحفظة الاسمية نموًا حقيقيًا للائتمان من دون منهج صريح للأسعار أو سعر الصرف، كما لا يعني الإدراج أو الترخيص أن مقدم الخدمة يعمل فعليًا.\n\nكيف يرتبط ذلك بالنظام الأوسع\n\nيمكن للتمويل الأصغر أن يتغير في عدة أبعاد في الوقت نفسه: الشكل المؤسسي، وعدد المقترضين، وعلاقات الادخار، وحجم القرض، والمحفظة الاسمية. وقد يكبر القطاع في بُعد من دون زيادة عدد المقترضين في بُعد آخر. وقراءة كل ذلك كقصة نمو واحدة تخفي سؤال القرار: هل يأتي التغير من اتساع الوصول، أم من أرصدة أكبر، أم من تغير مزيج المنتجات، أم من تغير هيكل مقدمي الخدمة؟\n\nما الذي لا تثبته الأدلة\n\nلا تثبت القراءة عددًا من الأشخاص الفريدين، ولا نموًا حقيقيًا للائتمان، ولا تغيرًا في الرفاه، ولا حصة محققة لمقدم خدمة في 2023. كما أن نمو المدخرين أو المودعين، ونمو المحفظة الاسمية، وتغير هيكل مقدمي الخدمة لا يثبت في حد ذاته اتساع الشمول أو تعمق الائتمان الحقيقي أو الهيمنة السوقية أو نمو عدد الأشخاص الفريدين أو تحسن نتائج المقترضين.\n\nما الذي يعنيه ذلك عند استخدام الدليل في القرار\n\nوصول المقترضين وعلاقات الادخار أو الإيداع والمحفظة الاسمية مؤشرات منفصلة. ويتطلب تفسير نمو المحفظة الاسمية كتعمق حقيقي معالجة صريحة للأسعار أو سعر الصرف؛ كما يتطلب تفسير نمو المدخرين كشمول لأشخاص فريدين توحيد التعريفات وقواعد إزالة التكرار.\n\nما الذي ما زلنا لا نعرفه\n\nلا تحتوي قاعدة الأدلة بعد على لوحة أولية موحدة لعام 2023 لمقدمي الخدمة تستخدم تعريفات متسقة للمقترضين والمدخرين والمحفظة، كما لم يُثبت بعد منهج موحد للتحويل إلى قيم حقيقية.\n\nما الدليل الذي سيغير هذه القراءة\n\nستوضح لوحة أولية على مستوى مقدمي الخدمة للفترة 2023–2026، بتعريفات متسقة وفترات نشاط وقواعد واضحة للتحويل بين القيم الاسمية والحقيقية، ما إذا كانت التغيرات في الأرصدة وعلاقات الادخار أو الإيداع تترافق مع اتساع وصول المقترضين.\n\nتتبّع القراءة إلى أدلتها\n\nافتح الخلاصات وسجلات الأدلة المرتبطة لمراجعة التعريف والفترة والمجتمع أو النطاق والمصدر وطريقة الاشتقاق وشروط إعادة الاستخدام والحدود وحداثة الدليل وسجل التصحيح. وقارن الأدلة المختلفة من دون إجبارها على مقياس واحد."
+  }
+ ]
+}

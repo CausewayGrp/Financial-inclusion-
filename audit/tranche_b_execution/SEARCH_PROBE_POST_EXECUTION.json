@@ -1,0 +1,859 @@
+{
+ "rule": "PASS = an expected route in the top 3; WEAK = in the top 10; FAIL = absent (browser scoring mirror incl. PB-0491/0492/0493)",
+ "grades": {
+  "PASS": 44,
+  "WEAK": 12
+ },
+ "entry_grades": {
+  "PASS": 25,
+  "WEAK": 20,
+  "FAIL": 11
+ },
+ "terms": [
+  {
+   "term": "account ownership",
+   "expected": [
+    "/people/",
+    "/evidence/CLM-001/"
+   ],
+   "en": {
+    "query": "account ownership",
+    "grade": "PASS",
+    "best_rank": 2,
+    "top5": [
+     "/evidence/VIS-FINDEX-GAPS/",
+     "/evidence/CLM-001/",
+     "/evidence/VIS-FINDEX-OBSERVED-WAVES/",
+     "/finance/",
+     "/evidence/CLM-050/"
+    ]
+   },
+   "ar": {
+    "query": "امتلاك الحساب",
+    "grade": "PASS",
+    "best_rank": 2,
+    "top5": [
+     "/evidence/VIS-FINDEX-GAPS/",
+     "/evidence/CLM-001/",
+     "/evidence/VIS-FINDEX-BARRIERS/",
+     "/finance/",
+     "/evidence/CLM-050/"
+    ]
+   }
+  },
+  {
+   "term": "gender gap",
+   "expected": [
+    "/people/",
+    "/readings/gender-gap-measured-causes-open/"
+   ],
+   "en": {
+    "query": "gender gap",
+    "grade": "PASS",
+    "best_rank": 1,
+    "top5": [
+     "/readings/gender-gap-measured-causes-open/",
+     "/evidence/CLM-002/",
+     "/evidence/VIS-EVIDENCE-GAPS/",
+     "/evidence/VIS-FINDEX-GAPS/",
+     "/data/"
+    ]
+   },
+   "ar": {
+    "query": "الفجوة بين الرجال والنساء",
+    "grade": "PASS",
+    "best_rank": 2,
+    "top5": [
+     "/evidence/CLM-002/",
+     "/readings/gender-gap-measured-causes-open/",
+     "/",
+     "/evidence/CLM-014/",
+     "/evidence/CLM-041/"
+    ]
+   }
+  },
+  {
+   "term": "income",
+   "expected": [
+    "/people/"
+   ],
+   "en": {
+    "query": "income",
+    "grade": "PASS",
+    "best_rank": 1,
+    "top5": [
+     "/people/",
+     "/evidence/CLM-026/",
+     "/evidence/VIS-FINDEX-GAPS/",
+     "/evidence/VIS-INCLUSION-TRANSMISSION/",
+     "/readings/gender-gap-measured-causes-open/"
+    ]
+   },
+   "ar": {
+    "query": "الدخل",
+    "grade": "PASS",
+    "best_rank": 1,
+    "top5": [
+     "/people/",
+     "/contact/",
+     "/evidence/CLM-026/",
+     "/evidence/CLM-059/",
+     "/evidence/VIS-FINDEX-GAPS/"
+    ]
+   }
+  },
+  {
+   "term": "financial literacy",
+   "expected": [
+    "/people/",
+    "/reforms/"
+   ],
+   "en": {
+    "query": "financial literacy",
+    "grade": "PASS",
+    "best_rank": 1,
+    "top5": [
+     "/people/",
+     "/reforms/",
+     "/evidence/CLM-013/",
+     "/evidence/VIS-FL-EVIDENCE-LADDER/",
+     "/data/"
+    ]
+   },
+   "ar": {
+    "query": "الثقافة المالية",
+    "grade": "PASS",
+    "best_rank": 1,
+    "top5": [
+     "/people/",
+     "/reforms/",
+     "/evidence/VIS-FL-EVIDENCE-LADDER/",
+     "/data/",
+     "/evidence/CLM-046/"
+    ]
+   }
+  },
+  {
+   "term": "microfinance",
+   "expected": [
+    "/finance/",
+    "/readings/microfinance-structural-divergence/"
+   ],
+   "en": {
+    "query": "microfinance",
+    "grade": "PASS",
+    "best_rank": 1,
+    "top5": [
+     "/finance/",
+     "/evidence/CLM-021/",
+     "/evidence/CLM-055/",
+     "/evidence/MFI-SPINE-2015-Q4/",
+     "/evidence/VIS-MFI-2014-PANEL/"
+    ]
+   },
+   "ar": {
+    "query": "التمويل الأصغر",
+    "grade": "PASS",
+    "best_rank": 1,
+    "top5": [
+     "/finance/",
+     "/evidence/CLM-021/",
+     "/evidence/CLM-055/",
+     "/evidence/MFI-SPINE-2015-Q4/",
+     "/evidence/VIS-MFI-2014-PANEL/"
+    ]
+   }
+  },
+  {
+   "term": "credit",
+   "expected": [
+    "/finance/",
+    "/firms/"
+   ],
+   "en": {
+    "query": "credit",
+    "grade": "PASS",
+    "best_rank": 1,
+    "top5": [
+     "/firms/",
+     "/finance/",
+     "/evidence/VIS-FIRM-FINANCE-PATH/",
+     "/readings/microfinance-structural-divergence/",
+     "/measurement/"
+    ]
+   },
+   "ar": {
+    "query": "الائتمان",
+    "grade": "PASS",
+    "best_rank": 1,
+    "top5": [
+     "/finance/",
+     "/firms/",
+     "/evidence/VIS-FIRM-FINANCE-PATH/",
+     "/readings/microfinance-structural-divergence/",
+     "/measurement/"
+    ]
+   }
+  },
+  {
+   "term": "deposits",
+   "expected": [
+    "/finance/"
+   ],
+   "en": {
+    "query": "deposits",
+    "grade": "WEAK",
+    "best_rank": 8,
+    "top5": [
+     "/data/",
+     "/data/",
+     "/evidence/CLM-046/",
+     "/evidence/CLM-056/",
+     "/readings/microfinance-structural-divergence/"
+    ]
+   },
+   "ar": {
+    "query": "الودائع",
+    "grade": "WEAK",
+    "best_rank": 4,
+    "top5": [
+     "/readings/microfinance-structural-divergence/",
+     "/readings/banking-jump-measurement-basis/",
+     "/evidence/CLM-033/",
+     "/finance/"
+    ]
+   }
+  },
+  {
+   "term": "SME finance",
+   "expected": [
+    "/firms/"
+   ],
+   "en": {
+    "query": "SME finance",
+    "grade": "WEAK",
+    "best_rank": 10,
+    "top5": [
+     "/readings/finance-constraint-different-questions/",
+     "/data/",
+     "/evidence/VIS-FIRM-FINANCE-SEVERITY/",
+     "/measurement/",
+     "/evidence/CLM-059/"
+    ]
+   },
+   "ar": {
+    "query": "تمويل المنشآت الصغيرة",
+    "grade": "PASS",
+    "best_rank": 1,
+    "top5": [
+     "/firms/",
+     "/measurement/",
+     "/data/",
+     "/readings/finance-constraint-different-questions/",
+     "/evidence/VIS-FIRM-CONSTRAINTS/"
+    ]
+   }
+  },
+  {
+   "term": "POS terminals",
+   "expected": [
+    "/payments/"
+   ],
+   "en": {
+    "query": "POS terminals",
+    "grade": "PASS",
+    "best_rank": 1,
+    "top5": [
+     "/payments/",
+     "/evidence/VIS-POS-TERMINALS/",
+     "/evidence/VIS-POS-TRANSACTIONS/",
+     "/evidence/VIS-POS-VALUE/",
+     "/evidence/CLM-003/"
+    ]
+   },
+   "ar": {
+    "query": "نقاط البيع",
+    "grade": "PASS",
+    "best_rank": 1,
+    "top5": [
+     "/payments/",
+     "/evidence/CLM-003/",
+     "/evidence/CLM-017/",
+     "/evidence/CLM-017/",
+     "/evidence/VIS-POS-TERMINALS/"
+    ]
+   }
+  },
+  {
+   "term": "e-wallet",
+   "expected": [
+    "/payments/",
+    "/providers/"
+   ],
+   "en": {
+    "query": "e-wallet",
+    "grade": "PASS",
+    "best_rank": 1,
+    "top5": [
+     "/payments/",
+     "/evidence/CLM-004/",
+     "/evidence/CLM-010/",
+     "/evidence/CLM-045/",
+     "/readings/after-transfer-persistence/"
+    ]
+   },
+   "ar": {
+    "query": "المحافظ الإلكترونية",
+    "grade": "PASS",
+    "best_rank": 1,
+    "top5": [
+     "/payments/",
+     "/evidence/CLM-010/",
+     "/evidence/CLM-012/",
+     "/evidence/CLM-051/",
+     "/evidence/VIS-E-MONEY-RULE-STACK/"
+    ]
+   }
+  },
+  {
+   "term": "RTGS",
+   "expected": [
+    "/payments/",
+    "/reforms/"
+   ],
+   "en": {
+    "query": "RTGS",
+    "grade": "WEAK",
+    "best_rank": 4,
+    "top5": [
+     "/data/",
+     "/data/",
+     "/evidence/CLM-018/",
+     "/payments/",
+     "/reforms/"
+    ]
+   },
+   "ar": {
+    "query": "التسوية الإجمالية الفورية",
+    "grade": "WEAK",
+    "best_rank": 9,
+    "top5": [
+     "/data/",
+     "/data/",
+     "/evidence/CLM-013/",
+     "/evidence/CLM-034/",
+     "/evidence/CLM-060/"
+    ]
+   }
+  },
+  {
+   "term": "remittances",
+   "expected": [
+    "/remittances/"
+   ],
+   "en": {
+    "query": "remittances",
+    "grade": "PASS",
+    "best_rank": 1,
+    "top5": [
+     "/remittances/",
+     "/evidence/VIS-DOMESTIC-REMITTANCE-PATH-2014/",
+     "/evidence/VIS-REMITTANCE-MACRO/",
+     "/evidence/VIS-REMITTANCE-COST/",
+     "/evidence/PSE-011/"
+    ]
+   },
+   "ar": {
+    "query": "الحوالات",
+    "grade": "PASS",
+    "best_rank": 1,
+    "top5": [
+     "/remittances/",
+     "/evidence/PSE-011/",
+     "/evidence/VIS-REMITTANCE-MACRO/",
+     "/evidence/CLM-016/",
+     "/evidence/CLM-030/"
+    ]
+   }
+  },
+  {
+   "term": "remittance cost",
+   "expected": [
+    "/remittances/"
+   ],
+   "en": {
+    "query": "remittance cost",
+    "grade": "PASS",
+    "best_rank": 1,
+    "top5": [
+     "/remittances/",
+     "/evidence/VIS-REMITTANCE-COST/",
+     "/evidence/VIS-DOMESTIC-REMITTANCE-PATH-2014/",
+     "/evidence/VIS-REMITTANCE-MACRO/",
+     "/evidence/PSE-011/"
+    ]
+   },
+   "ar": {
+    "query": "تكلفة التحويل",
+    "grade": "PASS",
+    "best_rank": 1,
+    "top5": [
+     "/remittances/",
+     "/evidence/CLM-041/",
+     "/evidence/CLM-042/",
+     "/evidence/CLM-044/",
+     "/evidence/CLM-035/"
+    ]
+   }
+  },
+  {
+   "term": "exchange companies",
+   "expected": [
+    "/providers/",
+    "/access/"
+   ],
+   "en": {
+    "query": "exchange companies",
+    "grade": "PASS",
+    "best_rank": 1,
+    "top5": [
+     "/providers/",
+     "/evidence/CLM-016/",
+     "/evidence/CLM-009/",
+     "/evidence/CLM-009/",
+     "/evidence/CLM-015/"
+    ]
+   },
+   "ar": {
+    "query": "شركات الصرافة",
+    "grade": "PASS",
+    "best_rank": 1,
+    "top5": [
+     "/providers/",
+     "/evidence/CLM-016/",
+     "/evidence/CLM-009/",
+     "/evidence/CLM-015/",
+     "/evidence/CLM-009/"
+    ]
+   }
+  },
+  {
+   "term": "licensed banks",
+   "expected": [
+    "/providers/"
+   ],
+   "en": {
+    "query": "licensed banks",
+    "grade": "PASS",
+    "best_rank": 1,
+    "top5": [
+     "/providers/",
+     "/evidence/CLM-008/",
+     "/evidence/CLM-055/",
+     "/data/",
+     "/data/"
+    ]
+   },
+   "ar": {
+    "query": "البنوك المرخصة",
+    "grade": "PASS",
+    "best_rank": 1,
+    "top5": [
+     "/providers/",
+     "/evidence/NEG-EW-011/",
+     "/data/",
+     "/evidence/CLM-015/",
+     "/evidence/CLM-055/"
+    ]
+   }
+  },
+  {
+   "term": "Aden",
+   "expected": [
+    "/providers/",
+    "/data/"
+   ],
+   "en": {
+    "query": "Aden",
+    "grade": "PASS",
+    "best_rank": 1,
+    "top5": [
+     "/providers/",
+     "/data/",
+     "/data/",
+     "/evidence/CLM-008/",
+     "/evidence/CLM-009/"
+    ]
+   },
+   "ar": {
+    "query": "عدن",
+    "grade": "PASS",
+    "best_rank": 1,
+    "top5": [
+     "/providers/",
+     "/data/",
+     "/evidence/CLM-008/",
+     "/evidence/CLM-009/",
+     "/evidence/CLM-010/"
+    ]
+   }
+  },
+  {
+   "term": "Sanaa",
+   "expected": [
+    "/providers/",
+    "/data/"
+   ],
+   "en": {
+    "query": "Sanaa",
+    "grade": "PASS",
+    "best_rank": 1,
+    "top5": [
+     "/data/",
+     "/data/",
+     "/data/",
+     "/data/",
+     "/data/"
+    ]
+   },
+   "ar": {
+    "query": "صنعاء",
+    "grade": "PASS",
+    "best_rank": 1,
+    "top5": [
+     "/providers/"
+    ]
+   }
+  },
+  {
+   "term": "decision",
+   "expected": [
+    "/data/",
+    "/providers/",
+    "/reforms/"
+   ],
+   "en": {
+    "query": "decision",
+    "grade": "PASS",
+    "best_rank": 2,
+    "top5": [
+     "/measurement/",
+     "/providers/",
+     "/reforms/",
+     "/data/",
+     "/data/"
+    ]
+   },
+   "ar": {
+    "query": "قرار",
+    "grade": "PASS",
+    "best_rank": 2,
+    "top5": [
+     "/measurement/",
+     "/providers/",
+     "/reforms/",
+     "/evidence/CLM-019/",
+     "/readings/"
+    ]
+   }
+  },
+  {
+   "term": "law",
+   "expected": [
+    "/data/",
+    "/reforms/"
+   ],
+   "en": {
+    "query": "law",
+    "grade": "PASS",
+    "best_rank": 1,
+    "top5": [
+     "/data/",
+     "/reforms/",
+     "/methodology/"
+    ]
+   },
+   "ar": {
+    "query": "قانون",
+    "grade": "PASS",
+    "best_rank": 1,
+    "top5": [
+     "/reforms/",
+     "/data/",
+     "/evidence/CLM-011/",
+     "/evidence/CLM-038/",
+     "/methodology/"
+    ]
+   }
+  },
+  {
+   "term": "regulation",
+   "expected": [
+    "/data/",
+    "/reforms/"
+   ],
+   "en": {
+    "query": "regulation",
+    "grade": "PASS",
+    "best_rank": 1,
+    "top5": [
+     "/data/",
+     "/reforms/",
+     "/data/",
+     "/data/",
+     "/data/"
+    ]
+   },
+   "ar": {
+    "query": "لائحة",
+    "grade": "PASS",
+    "best_rank": 1,
+    "top5": [
+     "/data/",
+     "/reforms/",
+     "/data/",
+     "/data/",
+     "/data/"
+    ]
+   }
+  },
+  {
+   "term": "consumer protection",
+   "expected": [
+    "/reforms/"
+   ],
+   "en": {
+    "query": "consumer protection",
+    "grade": "WEAK",
+    "best_rank": 7,
+    "top5": [
+     "/evidence/DS-FCP-ARCH/",
+     "/evidence/VIS-OECD-FCP-TIMELINE/",
+     "/measurement/",
+     "/evidence/CLM-011/",
+     "/evidence/VIS-E-MONEY-RULE-STACK/"
+    ]
+   },
+   "ar": {
+    "query": "حماية المستهلك",
+    "grade": "WEAK",
+    "best_rank": 7,
+    "top5": [
+     "/evidence/DS-FCP-ARCH/",
+     "/evidence/VIS-OECD-FCP-TIMELINE/",
+     "/measurement/",
+     "/evidence/CLM-011/",
+     "/evidence/VIS-E-MONEY-RULE-STACK/"
+    ]
+   }
+  },
+  {
+   "term": "complaints",
+   "expected": [
+    "/reforms/"
+   ],
+   "en": {
+    "query": "complaints",
+    "grade": "WEAK",
+    "best_rank": 5,
+    "top5": [
+     "/evidence/CLM-011/",
+     "/evidence/VIS-FCP-REDRESS-PATH/",
+     "/evidence/DS-FCP-ARCH/",
+     "/evidence/VIS-OECD-FCP-TIMELINE/",
+     "/reforms/"
+    ]
+   },
+   "ar": {
+    "query": "الشكاوى",
+    "grade": "WEAK",
+    "best_rank": 5,
+    "top5": [
+     "/evidence/CLM-011/",
+     "/evidence/VIS-FCP-REDRESS-PATH/",
+     "/evidence/DS-FCP-ARCH/",
+     "/evidence/VIS-OECD-FCP-TIMELINE/",
+     "/reforms/"
+    ]
+   }
+  },
+  {
+   "term": "FMIIP",
+   "expected": [
+    "/reforms/",
+    "/payments/"
+   ],
+   "en": {
+    "query": "FMIIP",
+    "grade": "WEAK",
+    "best_rank": 7,
+    "top5": [
+     "/data/",
+     "/data/",
+     "/data/",
+     "/data/",
+     "/evidence/XW-FMIIP-005/"
+    ]
+   },
+   "ar": {
+    "query": "FMIIP",
+    "grade": "WEAK",
+    "best_rank": 7,
+    "top5": [
+     "/data/",
+     "/data/",
+     "/data/",
+     "/data/",
+     "/evidence/XW-FMIIP-005/"
+    ]
+   }
+  },
+  {
+   "term": "cash transfer",
+   "expected": [
+    "/readings/after-transfer-persistence/",
+    "/payments/"
+   ],
+   "en": {
+    "query": "cash transfer",
+    "grade": "PASS",
+    "best_rank": 1,
+    "top5": [
+     "/readings/after-transfer-persistence/",
+     "/evidence/CLM-051/",
+     "/evidence/CLM-045/",
+     "/evidence/VIS-FINDEX-FLOW-CHANNELS/",
+     "/data/"
+    ]
+   },
+   "ar": {
+    "query": "التحويل النقدي",
+    "grade": "WEAK",
+    "best_rank": 4,
+    "top5": [
+     "/data/",
+     "/evidence/CLM-045/",
+     "/evidence/CLM-051/",
+     "/readings/after-transfer-persistence/",
+     "/measurement/"
+    ]
+   }
+  },
+  {
+   "term": "KYC",
+   "expected": [
+    "/payments/",
+    "/people/",
+    "/measurement/"
+   ],
+   "en": {
+    "query": "KYC",
+    "grade": "PASS",
+    "best_rank": 1,
+    "top5": [
+     "/measurement/"
+    ]
+   },
+   "ar": {
+    "query": "اعرف عميلك",
+    "grade": "PASS",
+    "best_rank": 1,
+    "top5": [
+     "/measurement/",
+     "/evidence/VIS-FINDEX-BARRIERS/"
+    ]
+   }
+  },
+  {
+   "term": "access points",
+   "expected": [
+    "/access/"
+   ],
+   "en": {
+    "query": "access points",
+    "grade": "PASS",
+    "best_rank": 1,
+    "top5": [
+     "/access/",
+     "/accessibility/",
+     "/evidence/XW-FMIIP-005/",
+     "/evidence/VIS-FINDEX-ACCESS-USE/",
+     "/measurement/"
+    ]
+   },
+   "ar": {
+    "query": "نقاط الوصول",
+    "grade": "PASS",
+    "best_rank": 3,
+    "top5": [
+     "/evidence/XW-FMIIP-005/",
+     "/measurement/",
+     "/access/",
+     "/evidence/VIS-FINDEX-GAPS/",
+     "/readings/microfinance-structural-divergence/"
+    ]
+   }
+  },
+  {
+   "term": "exchange rate",
+   "expected": [
+    "/finance/",
+    "/data/"
+   ],
+   "en": {
+    "query": "exchange rate",
+    "grade": "PASS",
+    "best_rank": 1,
+    "top5": [
+     "/finance/",
+     "/evidence/CLM-009/",
+     "/evidence/CLM-060/",
+     "/evidence/CLM-007/",
+     "/evidence/CLM-016/"
+    ]
+   },
+   "ar": {
+    "query": "سعر الصرف",
+    "grade": "PASS",
+    "best_rank": 1,
+    "top5": [
+     "/finance/",
+     "/evidence/CLM-033/",
+     "/evidence/CLM-046/",
+     "/evidence/CLM-038/",
+     "/evidence/CLM-054/"
+    ]
+   }
+  },
+  {
+   "term": "measurement",
+   "expected": [
+    "/measurement/"
+   ],
+   "en": {
+    "query": "measurement",
+    "grade": "PASS",
+    "best_rank": 1,
+    "top5": [
+     "/measurement/",
+     "/data/",
+     "/readings/banking-jump-measurement-basis/",
+     "/evidence/DS-FINDEX-HISTORY-CROSSWALK/",
+     "/evidence/VIS-FINDEX-RESILIENCE/"
+    ]
+   },
+   "ar": {
+    "query": "القياس",
+    "grade": "PASS",
+    "best_rank": 1,
+    "top5": [
+     "/measurement/",
+     "/evidence/VIS-SOURCE-COMPARISON/",
+     "/evidence/CLM-001/",
+     "/evidence/compare/",
+     "/readings/after-transfer-persistence/"
+    ]
+   }
+  }
+ ]
+}

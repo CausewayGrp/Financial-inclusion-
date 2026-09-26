@@ -1,0 +1,85 @@
+{
+ "schema": "YFI_CONTROLLED_INPUT/1.0",
+ "input_id": "local_dataset_catalog_template",
+ "authority_class": "CONTROLLED_TEMPLATE__NOT_MASTER_OWNED",
+ "rule": "Runtime-role metadata for the local raw-snapshot payloads. Carries no facts; record_rows is computed by the generator from the regenerated snapshot.",
+ "datasets": [
+  {
+   "dataset_id": "LOCAL-CBY-MONETARY",
+   "file": "data/cby_monetary.json",
+   "domain": "Banking and macro context relevant to inclusion",
+   "runtime_role": "LOCAL_STATIC_INPUT",
+   "future_adapter_rule": "Future APIs/connectors must emit the same semantic fields and stable IDs; UI meaning and evidence state may not change silently."
+  },
+  {
+   "dataset_id": "LOCAL-PAYMENTS",
+   "file": "data/payments_data.json",
+   "domain": "Payments and digital-finance administrative evidence",
+   "runtime_role": "LOCAL_STATIC_INPUT",
+   "future_adapter_rule": "Future APIs/connectors must emit the same semantic fields and stable IDs; UI meaning and evidence state may not change silently."
+  },
+  {
+   "dataset_id": "LOCAL-FIRM-FINANCE",
+   "file": "data/firm_finance.json",
+   "domain": "Firms and access to finance",
+   "runtime_role": "LOCAL_STATIC_INPUT",
+   "future_adapter_rule": "Future APIs/connectors must emit the same semantic fields and stable IDs; UI meaning and evidence state may not change silently."
+  },
+  {
+   "dataset_id": "LOCAL-MFI",
+   "file": "data/mfi_data.json",
+   "domain": "Microfinance evidence",
+   "runtime_role": "LOCAL_STATIC_INPUT",
+   "future_adapter_rule": "Future APIs/connectors must emit the same semantic fields and stable IDs; UI meaning and evidence state may not change silently."
+  },
+  {
+   "dataset_id": "LOCAL-PROVIDERS",
+   "file": "data/providers_data.json",
+   "domain": "Provider identity/status evidence",
+   "runtime_role": "LOCAL_STATIC_INPUT",
+   "future_adapter_rule": "Future APIs/connectors must emit the same semantic fields and stable IDs; UI meaning and evidence state may not change silently."
+  },
+  {
+   "dataset_id": "LOCAL-REMITTANCES",
+   "file": "data/remittances.json",
+   "domain": "Remittances",
+   "runtime_role": "LOCAL_STATIC_INPUT",
+   "future_adapter_rule": "Future APIs/connectors must emit the same semantic fields and stable IDs; UI meaning and evidence state may not change silently."
+  },
+  {
+   "dataset_id": "LOCAL-FINDEX-CODEBOOK",
+   "file": "data/findex_codebook.json",
+   "domain": "Demand-side survey definitions",
+   "runtime_role": "LOCAL_STATIC_INPUT",
+   "future_adapter_rule": "Future APIs/connectors must emit the same semantic fields and stable IDs; UI meaning and evidence state may not change silently."
+  },
+  {
+   "dataset_id": "LOCAL-FINDEX-BASELINE",
+   "file": "data/findex_baseline.json",
+   "domain": "Demand-side representative baseline",
+   "runtime_role": "LOCAL_STATIC_INPUT",
+   "future_adapter_rule": "Future APIs/connectors must emit the same semantic fields and stable IDs; UI meaning and evidence state may not change silently."
+  },
+  {
+   "dataset_id": "LOCAL-FINDEX-HISTORY",
+   "file": "data/findex_history.json",
+   "domain": "Demand-side wave history",
+   "runtime_role": "LOCAL_STATIC_INPUT",
+   "future_adapter_rule": "Future APIs/connectors must emit the same semantic fields and stable IDs; UI meaning and evidence state may not change silently."
+  },
+  {
+   "dataset_id": "LOCAL-FINDEX-SUBGROUPS",
+   "file": "data/findex_subgroups.json",
+   "domain": "Demand-side subgroup evidence",
+   "runtime_role": "LOCAL_STATIC_INPUT",
+   "future_adapter_rule": "Future APIs/connectors must emit the same semantic fields and stable IDs; UI meaning and evidence state may not change silently."
+  },
+  {
+   "dataset_id": "LOCAL-REFORMS",
+   "file": "data/reforms_regulation.json",
+   "domain": "Reforms, regulation and programme evidence",
+   "runtime_role": "LOCAL_STATIC_INPUT",
+   "future_adapter_rule": "Future APIs/connectors must emit the same semantic fields and stable IDs; UI meaning and evidence state may not change silently."
+  }
+ ]
+}

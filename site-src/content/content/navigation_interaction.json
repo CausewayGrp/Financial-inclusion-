@@ -1,0 +1,3966 @@
+{
+  "schema_version": "1.0",
+  "purpose": "Deterministic navigation, wayfinding and end-to-end journey contract. It is presentation/interaction metadata only and cannot change evidence meaning.",
+  "authority_scope": "NAVIGATION_AND_INTERACTION_ONLY",
+  "semantic_authority": "Production Master via current Page Specs; this contract cannot alter facts, claims, values, units, universes, periods, methods, sources, rights, evidence class or publication state.",
+  "authority_binding": {
+    "master_sha256": "f0150122895d88169e9c9ec947633deda04a02c710a28d7b0de2972214547224",
+    "page_specs_sha256": "bd010a2053898a971944ba63ab3276aeb455428069813097dbc8a07037c88295",
+    "page_spec_count": 143
+  },
+  "experience_principle": "UNDERSTAND → EXPLORE → VERIFY",
+  "global_navigation": [
+    {
+      "route": "/explore/",
+      "label_en": "Explore",
+      "label_ar": "استكشف"
+    },
+    {
+      "route": "/evidence/",
+      "label_en": "Evidence",
+      "label_ar": "الأدلة"
+    },
+    {
+      "route": "/readings/",
+      "label_en": "Evidence Readings",
+      "label_ar": "قراءات الأدلة"
+    },
+    {
+      "route": "/data/",
+      "label_en": "Data & sources",
+      "label_ar": "البيانات والمصادر"
+    },
+    {
+      "label_en": "Method & Measurement",
+      "label_ar": "المنهج والقياس",
+      "children": [
+        {
+          "route": "/methodology/",
+          "label_en": "Methodology",
+          "label_ar": "المنهجية"
+        },
+        {
+          "route": "/measurement/",
+          "label_en": "Measurement Agenda",
+          "label_ar": "أولويات القياس"
+        }
+      ]
+    }
+  ],
+  "utilities": [
+    {
+      "id": "search",
+      "label_en": "Search",
+      "label_ar": "بحث"
+    },
+    {
+      "id": "cite",
+      "label_en": "Cite this page",
+      "label_ar": "استشهد بهذه الصفحة"
+    },
+    {
+      "id": "report_issue",
+      "route": "/corrections/",
+      "label_en": "Report an issue",
+      "label_ar": "الإبلاغ عن مشكلة"
+    },
+    {
+      "id": "language",
+      "behavior": "PRESERVE_OBJECT_AND_ROUTE_WHEN_SWITCHING"
+    }
+  ],
+  "footer_groups": [
+    {
+      "id": "explore_verify",
+      "label_en": "Explore and verify",
+      "label_ar": "الاستكشاف والتحقق",
+      "links": [
+        {
+          "route": "/explore/",
+          "label_en": "Explore",
+          "label_ar": "استكشف"
+        },
+        {
+          "route": "/evidence/",
+          "label_en": "Evidence",
+          "label_ar": "الأدلة"
+        },
+        {
+          "route": "/readings/",
+          "label_en": "Evidence Readings",
+          "label_ar": "قراءات الأدلة"
+        },
+        {
+          "route": "/data/",
+          "label_en": "Data & sources",
+          "label_ar": "البيانات والمصادر"
+        }
+      ]
+    },
+    {
+      "id": "method_measure",
+      "label_en": "Method & Measurement",
+      "label_ar": "المنهج والقياس",
+      "links": [
+        {
+          "route": "/methodology/",
+          "label_en": "Methodology",
+          "label_ar": "المنهجية"
+        },
+        {
+          "route": "/measurement/",
+          "label_en": "Measurement Agenda",
+          "label_ar": "أولويات القياس"
+        }
+      ]
+    },
+    {
+      "id": "trust_use",
+      "label_en": "Trust and responsible use",
+      "label_ar": "الثقة والاستخدام المسؤول",
+      "links": [
+        {
+          "route": "/about/",
+          "label_en": "About",
+          "label_ar": "عن الموقع"
+        },
+        {
+          "route": "/accessibility/",
+          "label_en": "Accessibility",
+          "label_ar": "إتاحة الوصول"
+        },
+        {
+          "route": "/corrections/",
+          "label_en": "Corrections",
+          "label_ar": "التصحيحات"
+        },
+        {
+          "route": "/privacy/",
+          "label_en": "Privacy",
+          "label_ar": "الخصوصية"
+        },
+        {
+          "route": "/rights/",
+          "label_en": "Rights & reuse",
+          "label_ar": "الحقوق وإعادة الاستخدام"
+        },
+        {
+          "route": "/terms/",
+          "label_en": "Terms",
+          "label_ar": "شروط الاستخدام"
+        },
+        {
+          "route": "/contact/",
+          "label_en": "Contact",
+          "label_ar": "التواصل"
+        }
+      ]
+    }
+  ],
+  "breadcrumbs": {
+    "Evidence Record": {
+      "parent_route": "/evidence/",
+      "parent_label_en": "Evidence",
+      "parent_label_ar": "الأدلة",
+      "current_label_mode": "STABLE_OBJECT_ID"
+    },
+    "Reading": {
+      "parent_route": "/readings/",
+      "parent_label_en": "Evidence Readings",
+      "parent_label_ar": "قراءات الأدلة",
+      "current_label_mode": "STABLE_OBJECT_ID"
+    }
+  },
+  "route_next_actions": {
+    "/about/": [
+      "/explore/",
+      "/methodology/"
+    ],
+    "/methodology/": [
+      "/evidence/",
+      "/data/",
+      "/corrections/"
+    ],
+    "/data/": [
+      "/evidence/",
+      "/rights/",
+      "/methodology/"
+    ],
+    "/measurement/": [
+      "/explore/",
+      "/evidence/"
+    ],
+    "/accessibility/": [
+      "/contact/",
+      "/explore/"
+    ],
+    "/contact/": [
+      "/corrections/",
+      "/evidence/"
+    ],
+    "/corrections/": [
+      "/evidence/",
+      "/contact/"
+    ],
+    "/privacy/": [
+      "/contact/",
+      "/terms/"
+    ],
+    "/rights/": [
+      "/data/",
+      "/terms/",
+      "/contact/"
+    ],
+    "/terms/": [
+      "/rights/",
+      "/privacy/",
+      "/contact/"
+    ],
+    "/evidence/": [
+      "/evidence/compare/",
+      "/data/",
+      "/methodology/"
+    ],
+    "/evidence/compare/": [
+      "/evidence/",
+      "/data/",
+      "/methodology/"
+    ],
+    "/readings/": [
+      "/measurement/",
+      "/evidence/"
+    ]
+  },
+  "page_families": [
+    {
+      "page_family": "Orientation",
+      "route_count": 1,
+      "unique_user_value_role": "ORIENT_TO_SYSTEM",
+      "primary_next_action_policy": "TASK_OR_QUESTION",
+      "depth_role": "ORIENTATION",
+      "navigation_prominence": "IDENTITY_ENTRY"
+    },
+    {
+      "page_family": "Question Entry",
+      "route_count": 1,
+      "unique_user_value_role": "QUESTION_LED_ENTRY",
+      "primary_next_action_policy": "DOMAIN_ANSWER",
+      "depth_role": "DISCOVERY",
+      "navigation_prominence": "GLOBAL_PRIMARY"
+    },
+    {
+      "page_family": "Domain Answer",
+      "route_count": 8,
+      "unique_user_value_role": "BOUNDED_DOMAIN_ANSWER",
+      "primary_next_action_policy": "VERIFY_PRIMARY_EVIDENCE",
+      "depth_role": "ANSWER",
+      "navigation_prominence": "CONTEXTUAL"
+    },
+    {
+      "page_family": "Evidence Directory",
+      "route_count": 1,
+      "unique_user_value_role": "DISCOVER_VERIFICATION_RECORDS",
+      "primary_next_action_policy": "OPEN_EVIDENCE_RECORD_OR_COMPARE",
+      "depth_role": "DISCOVERY",
+      "navigation_prominence": "GLOBAL_PRIMARY"
+    },
+    {
+      "page_family": "Evidence Record",
+      "route_count": 110,
+      "unique_user_value_role": "CANONICAL_PUBLIC_VERIFICATION_ENDPOINT",
+      "primary_next_action_policy": "SOURCE_RELATED_CORRECTION_OR_REUSE",
+      "depth_role": "VERIFICATION",
+      "navigation_prominence": "ADDRESSABLE_VERIFICATION"
+    },
+    {
+      "page_family": "Comparison",
+      "route_count": 1,
+      "unique_user_value_role": "COMPARABILITY_TEST",
+      "primary_next_action_policy": "OPEN_SELECTED_EVIDENCE_RECORD",
+      "depth_role": "VERIFICATION",
+      "navigation_prominence": "CONTEXTUAL"
+    },
+    {
+      "page_family": "Reading Index",
+      "route_count": 1,
+      "unique_user_value_role": "DISCOVER_ANALYTICAL_READINGS",
+      "primary_next_action_policy": "OPEN_READING",
+      "depth_role": "DISCOVERY",
+      "navigation_prominence": "GLOBAL_PRIMARY"
+    },
+    {
+      "page_family": "Reading",
+      "route_count": 10,
+      "unique_user_value_role": "BOUNDED_CROSS_SOURCE_SYNTHESIS",
+      "primary_next_action_policy": "VERIFY_BOUND_EVIDENCE_RECORDS",
+      "depth_role": "SYNTHESIS",
+      "navigation_prominence": "CONTEXTUAL"
+    },
+    {
+      "page_family": "Data & Source",
+      "route_count": 1,
+      "unique_user_value_role": "SOURCE_AND_DATA_DIRECTORY",
+      "primary_next_action_policy": "SOURCE_TO_DEPENDENT_EVIDENCE",
+      "depth_role": "VERIFICATION_REFERENCE",
+      "navigation_prominence": "GLOBAL_PRIMARY"
+    },
+    {
+      "page_family": "Measurement",
+      "route_count": 1,
+      "unique_user_value_role": "DECISION_LINKED_EVIDENCE_GAPS",
+      "primary_next_action_policy": "RETURN_TO_DOMAIN_OR_VERIFY_EVIDENCE",
+      "depth_role": "DECISION_GAP",
+      "navigation_prominence": "PRIMARY_CHILD"
+    },
+    {
+      "page_family": "Reference / Trust",
+      "route_count": 8,
+      "unique_user_value_role": "REFERENCE_OR_PUBLIC_TRUST",
+      "primary_next_action_policy": "CONTEXTUAL_NEXT_ACTION",
+      "depth_role": "REFERENCE_TRUST",
+      "navigation_prominence": "MIXED_GLOBAL_AND_FOOTER"
+    }
+  ],
+  "routes": [
+    {
+      "route": "/about/",
+      "page_class": "static",
+      "page_family": "Reference / Trust",
+      "stable_object_id": null,
+      "entry_modes": [
+        "deep_link",
+        "trust_navigation",
+        "footer",
+        "search"
+      ],
+      "search_record_count": 1,
+      "unique_value_role": "REFERENCE_OR_PUBLIC_TRUST",
+      "value_basis": "CURRENT_PAGE_SPEC_AND_BOUND_GOVERNED_OBJECTS",
+      "next_action_policy": "CONTEXTUAL_NEXT_ACTION",
+      "explicit_next_actions": [
+        "/explore/",
+        "/methodology/"
+      ],
+      "deletion_disposition": "KEEP",
+      "deletion_reason_code": "UNIQUE_PRODUCT_JOB",
+      "depth_role": "REFERENCE_TRUST",
+      "navigation_prominence": "SECONDARY_TRUST"
+    },
+    {
+      "route": "/access/",
+      "page_class": "static",
+      "page_family": "Domain Answer",
+      "stable_object_id": null,
+      "entry_modes": [
+        "deep_link",
+        "question_entry",
+        "search"
+      ],
+      "search_record_count": 2,
+      "unique_value_role": "BOUNDED_DOMAIN_ANSWER",
+      "value_basis": "CURRENT_PAGE_SPEC_AND_BOUND_GOVERNED_OBJECTS",
+      "next_action_policy": "VERIFY_PRIMARY_EVIDENCE",
+      "explicit_next_actions": [],
+      "deletion_disposition": "KEEP",
+      "deletion_reason_code": "UNIQUE_PRODUCT_JOB",
+      "depth_role": "ANSWER",
+      "navigation_prominence": "CONTEXTUAL"
+    },
+    {
+      "route": "/accessibility/",
+      "page_class": "operational",
+      "page_family": "Reference / Trust",
+      "stable_object_id": null,
+      "entry_modes": [
+        "deep_link",
+        "trust_navigation",
+        "footer",
+        "search"
+      ],
+      "search_record_count": 1,
+      "unique_value_role": "REFERENCE_OR_PUBLIC_TRUST",
+      "value_basis": "CURRENT_PAGE_SPEC_AND_BOUND_GOVERNED_OBJECTS",
+      "next_action_policy": "CONTEXTUAL_NEXT_ACTION",
+      "explicit_next_actions": [
+        "/contact/",
+        "/explore/"
+      ],
+      "deletion_disposition": "KEEP",
+      "deletion_reason_code": "UNIQUE_PRODUCT_JOB",
+      "depth_role": "REFERENCE_TRUST",
+      "navigation_prominence": "SECONDARY_TRUST"
+    },
+    {
+      "route": "/contact/",
+      "page_class": "operational",
+      "page_family": "Reference / Trust",
+      "stable_object_id": null,
+      "entry_modes": [
+        "deep_link",
+        "trust_navigation",
+        "footer",
+        "search"
+      ],
+      "search_record_count": 1,
+      "unique_value_role": "REFERENCE_OR_PUBLIC_TRUST",
+      "value_basis": "CURRENT_PAGE_SPEC_AND_BOUND_GOVERNED_OBJECTS",
+      "next_action_policy": "CONTEXTUAL_NEXT_ACTION",
+      "explicit_next_actions": [
+        "/corrections/",
+        "/evidence/"
+      ],
+      "deletion_disposition": "KEEP",
+      "deletion_reason_code": "UNIQUE_PRODUCT_JOB",
+      "depth_role": "REFERENCE_TRUST",
+      "navigation_prominence": "SECONDARY_TRUST"
+    },
+    {
+      "route": "/corrections/",
+      "page_class": "operational",
+      "page_family": "Reference / Trust",
+      "stable_object_id": null,
+      "entry_modes": [
+        "deep_link",
+        "trust_navigation",
+        "footer",
+        "search"
+      ],
+      "search_record_count": 1,
+      "unique_value_role": "REFERENCE_OR_PUBLIC_TRUST",
+      "value_basis": "CURRENT_PAGE_SPEC_AND_BOUND_GOVERNED_OBJECTS",
+      "next_action_policy": "CONTEXTUAL_NEXT_ACTION",
+      "explicit_next_actions": [
+        "/evidence/",
+        "/contact/"
+      ],
+      "deletion_disposition": "KEEP",
+      "deletion_reason_code": "UNIQUE_PRODUCT_JOB",
+      "depth_role": "REFERENCE_TRUST",
+      "navigation_prominence": "SECONDARY_TRUST"
+    },
+    {
+      "route": "/data/",
+      "page_class": "static",
+      "page_family": "Data & Source",
+      "stable_object_id": null,
+      "entry_modes": [
+        "deep_link",
+        "global_navigation",
+        "footer",
+        "search"
+      ],
+      "search_record_count": 152,
+      "unique_value_role": "SOURCE_AND_DATA_DIRECTORY",
+      "value_basis": "CURRENT_PAGE_SPEC_AND_BOUND_GOVERNED_OBJECTS",
+      "next_action_policy": "SOURCE_TO_DEPENDENT_EVIDENCE",
+      "explicit_next_actions": [
+        "/evidence/",
+        "/rights/",
+        "/methodology/"
+      ],
+      "deletion_disposition": "KEEP",
+      "deletion_reason_code": "UNIQUE_PRODUCT_JOB",
+      "depth_role": "VERIFICATION_REFERENCE",
+      "navigation_prominence": "GLOBAL_PRIMARY"
+    },
+    {
+      "route": "/evidence/CLM-001/",
+      "page_class": "evidence_detail",
+      "page_family": "Evidence Record",
+      "stable_object_id": "CLM-001",
+      "entry_modes": [
+        "deep_link",
+        "search",
+        "verification_link_or_search"
+      ],
+      "search_record_count": 2,
+      "unique_value_role": "CANONICAL_PUBLIC_VERIFICATION_ENDPOINT",
+      "value_basis": "CURRENT_PAGE_SPEC_AND_BOUND_GOVERNED_OBJECTS",
+      "next_action_policy": "SOURCE_RELATED_CORRECTION_OR_REUSE",
+      "explicit_next_actions": [],
+      "deletion_disposition": "KEEP",
+      "deletion_reason_code": "STABLE_VERIFICATION_ENDPOINT",
+      "depth_role": "VERIFICATION",
+      "navigation_prominence": "ADDRESSABLE_VERIFICATION"
+    },
+    {
+      "route": "/evidence/CLM-002/",
+      "page_class": "evidence_detail",
+      "page_family": "Evidence Record",
+      "stable_object_id": "CLM-002",
+      "entry_modes": [
+        "deep_link",
+        "search",
+        "verification_link_or_search"
+      ],
+      "search_record_count": 2,
+      "unique_value_role": "CANONICAL_PUBLIC_VERIFICATION_ENDPOINT",
+      "value_basis": "CURRENT_PAGE_SPEC_AND_BOUND_GOVERNED_OBJECTS",
+      "next_action_policy": "SOURCE_RELATED_CORRECTION_OR_REUSE",
+      "explicit_next_actions": [],
+      "deletion_disposition": "KEEP",
+      "deletion_reason_code": "STABLE_VERIFICATION_ENDPOINT",
+      "depth_role": "VERIFICATION",
+      "navigation_prominence": "ADDRESSABLE_VERIFICATION"
+    },
+    {
+      "route": "/evidence/CLM-003/",
+      "page_class": "evidence_detail",
+      "page_family": "Evidence Record",
+      "stable_object_id": "CLM-003",
+      "entry_modes": [
+        "deep_link",
+        "search",
+        "verification_link_or_search"
+      ],
+      "search_record_count": 2,
+      "unique_value_role": "CANONICAL_PUBLIC_VERIFICATION_ENDPOINT",
+      "value_basis": "CURRENT_PAGE_SPEC_AND_BOUND_GOVERNED_OBJECTS",
+      "next_action_policy": "SOURCE_RELATED_CORRECTION_OR_REUSE",
+      "explicit_next_actions": [],
+      "deletion_disposition": "KEEP",
+      "deletion_reason_code": "STABLE_VERIFICATION_ENDPOINT",
+      "depth_role": "VERIFICATION",
+      "navigation_prominence": "ADDRESSABLE_VERIFICATION"
+    },
+    {
+      "route": "/evidence/CLM-004/",
+      "page_class": "evidence_detail",
+      "page_family": "Evidence Record",
+      "stable_object_id": "CLM-004",
+      "entry_modes": [
+        "deep_link",
+        "search",
+        "verification_link_or_search"
+      ],
+      "search_record_count": 2,
+      "unique_value_role": "CANONICAL_PUBLIC_VERIFICATION_ENDPOINT",
+      "value_basis": "CURRENT_PAGE_SPEC_AND_BOUND_GOVERNED_OBJECTS",
+      "next_action_policy": "SOURCE_RELATED_CORRECTION_OR_REUSE",
+      "explicit_next_actions": [],
+      "deletion_disposition": "KEEP",
+      "deletion_reason_code": "STABLE_VERIFICATION_ENDPOINT",
+      "depth_role": "VERIFICATION",
+      "navigation_prominence": "ADDRESSABLE_VERIFICATION"
+    },
+    {
+      "route": "/evidence/CLM-005/",
+      "page_class": "evidence_detail",
+      "page_family": "Evidence Record",
+      "stable_object_id": "CLM-005",
+      "entry_modes": [
+        "deep_link",
+        "search",
+        "verification_link_or_search"
+      ],
+      "search_record_count": 2,
+      "unique_value_role": "CANONICAL_PUBLIC_VERIFICATION_ENDPOINT",
+      "value_basis": "CURRENT_PAGE_SPEC_AND_BOUND_GOVERNED_OBJECTS",
+      "next_action_policy": "SOURCE_RELATED_CORRECTION_OR_REUSE",
+      "explicit_next_actions": [],
+      "deletion_disposition": "KEEP",
+      "deletion_reason_code": "STABLE_VERIFICATION_ENDPOINT",
+      "depth_role": "VERIFICATION",
+      "navigation_prominence": "ADDRESSABLE_VERIFICATION"
+    },
+    {
+      "route": "/evidence/CLM-006/",
+      "page_class": "evidence_detail",
+      "page_family": "Evidence Record",
+      "stable_object_id": "CLM-006",
+      "entry_modes": [
+        "deep_link",
+        "search",
+        "verification_link_or_search"
+      ],
+      "search_record_count": 2,
+      "unique_value_role": "CANONICAL_PUBLIC_VERIFICATION_ENDPOINT",
+      "value_basis": "CURRENT_PAGE_SPEC_AND_BOUND_GOVERNED_OBJECTS",
+      "next_action_policy": "SOURCE_RELATED_CORRECTION_OR_REUSE",
+      "explicit_next_actions": [],
+      "deletion_disposition": "KEEP",
+      "deletion_reason_code": "STABLE_VERIFICATION_ENDPOINT",
+      "depth_role": "VERIFICATION",
+      "navigation_prominence": "ADDRESSABLE_VERIFICATION"
+    },
+    {
+      "route": "/evidence/CLM-007/",
+      "page_class": "evidence_detail",
+      "page_family": "Evidence Record",
+      "stable_object_id": "CLM-007",
+      "entry_modes": [
+        "deep_link",
+        "search",
+        "verification_link_or_search"
+      ],
+      "search_record_count": 2,
+      "unique_value_role": "CANONICAL_PUBLIC_VERIFICATION_ENDPOINT",
+      "value_basis": "CURRENT_PAGE_SPEC_AND_BOUND_GOVERNED_OBJECTS",
+      "next_action_policy": "SOURCE_RELATED_CORRECTION_OR_REUSE",
+      "explicit_next_actions": [],
+      "deletion_disposition": "KEEP",
+      "deletion_reason_code": "STABLE_VERIFICATION_ENDPOINT",
+      "depth_role": "VERIFICATION",
+      "navigation_prominence": "ADDRESSABLE_VERIFICATION"
+    },
+    {
+      "route": "/evidence/CLM-008/",
+      "page_class": "evidence_detail",
+      "page_family": "Evidence Record",
+      "stable_object_id": "CLM-008",
+      "entry_modes": [
+        "deep_link",
+        "search",
+        "verification_link_or_search"
+      ],
+      "search_record_count": 2,
+      "unique_value_role": "CANONICAL_PUBLIC_VERIFICATION_ENDPOINT",
+      "value_basis": "CURRENT_PAGE_SPEC_AND_BOUND_GOVERNED_OBJECTS",
+      "next_action_policy": "SOURCE_RELATED_CORRECTION_OR_REUSE",
+      "explicit_next_actions": [],
+      "deletion_disposition": "KEEP",
+      "deletion_reason_code": "STABLE_VERIFICATION_ENDPOINT",
+      "depth_role": "VERIFICATION",
+      "navigation_prominence": "ADDRESSABLE_VERIFICATION"
+    },
+    {
+      "route": "/evidence/CLM-009/",
+      "page_class": "evidence_detail",
+      "page_family": "Evidence Record",
+      "stable_object_id": "CLM-009",
+      "entry_modes": [
+        "deep_link",
+        "search",
+        "verification_link_or_search"
+      ],
+      "search_record_count": 2,
+      "unique_value_role": "CANONICAL_PUBLIC_VERIFICATION_ENDPOINT",
+      "value_basis": "CURRENT_PAGE_SPEC_AND_BOUND_GOVERNED_OBJECTS",
+      "next_action_policy": "SOURCE_RELATED_CORRECTION_OR_REUSE",
+      "explicit_next_actions": [],
+      "deletion_disposition": "KEEP",
+      "deletion_reason_code": "STABLE_VERIFICATION_ENDPOINT",
+      "depth_role": "VERIFICATION",
+      "navigation_prominence": "ADDRESSABLE_VERIFICATION"
+    },
+    {
+      "route": "/evidence/CLM-010/",
+      "page_class": "evidence_detail",
+      "page_family": "Evidence Record",
+      "stable_object_id": "CLM-010",
+      "entry_modes": [
+        "deep_link",
+        "search",
+        "verification_link_or_search"
+      ],
+      "search_record_count": 2,
+      "unique_value_role": "CANONICAL_PUBLIC_VERIFICATION_ENDPOINT",
+      "value_basis": "CURRENT_PAGE_SPEC_AND_BOUND_GOVERNED_OBJECTS",
+      "next_action_policy": "SOURCE_RELATED_CORRECTION_OR_REUSE",
+      "explicit_next_actions": [],
+      "deletion_disposition": "KEEP",
+      "deletion_reason_code": "STABLE_VERIFICATION_ENDPOINT",
+      "depth_role": "VERIFICATION",
+      "navigation_prominence": "ADDRESSABLE_VERIFICATION"
+    },
+    {
+      "route": "/evidence/CLM-011/",
+      "page_class": "evidence_detail",
+      "page_family": "Evidence Record",
+      "stable_object_id": "CLM-011",
+      "entry_modes": [
+        "deep_link",
+        "search",
+        "verification_link_or_search"
+      ],
+      "search_record_count": 2,
+      "unique_value_role": "CANONICAL_PUBLIC_VERIFICATION_ENDPOINT",
+      "value_basis": "CURRENT_PAGE_SPEC_AND_BOUND_GOVERNED_OBJECTS",
+      "next_action_policy": "SOURCE_RELATED_CORRECTION_OR_REUSE",
+      "explicit_next_actions": [],
+      "deletion_disposition": "KEEP",
+      "deletion_reason_code": "STABLE_VERIFICATION_ENDPOINT",
+      "depth_role": "VERIFICATION",
+      "navigation_prominence": "ADDRESSABLE_VERIFICATION"
+    },
+    {
+      "route": "/evidence/CLM-012/",
+      "page_class": "evidence_detail",
+      "page_family": "Evidence Record",
+      "stable_object_id": "CLM-012",
+      "entry_modes": [
+        "deep_link",
+        "search",
+        "verification_link_or_search"
+      ],
+      "search_record_count": 2,
+      "unique_value_role": "CANONICAL_PUBLIC_VERIFICATION_ENDPOINT",
+      "value_basis": "CURRENT_PAGE_SPEC_AND_BOUND_GOVERNED_OBJECTS",
+      "next_action_policy": "SOURCE_RELATED_CORRECTION_OR_REUSE",
+      "explicit_next_actions": [],
+      "deletion_disposition": "KEEP",
+      "deletion_reason_code": "STABLE_VERIFICATION_ENDPOINT",
+      "depth_role": "VERIFICATION",
+      "navigation_prominence": "ADDRESSABLE_VERIFICATION"
+    },
+    {
+      "route": "/evidence/CLM-013/",
+      "page_class": "evidence_detail",
+      "page_family": "Evidence Record",
+      "stable_object_id": "CLM-013",
+      "entry_modes": [
+        "deep_link",
+        "search",
+        "verification_link_or_search"
+      ],
+      "search_record_count": 2,
+      "unique_value_role": "CANONICAL_PUBLIC_VERIFICATION_ENDPOINT",
+      "value_basis": "CURRENT_PAGE_SPEC_AND_BOUND_GOVERNED_OBJECTS",
+      "next_action_policy": "SOURCE_RELATED_CORRECTION_OR_REUSE",
+      "explicit_next_actions": [],
+      "deletion_disposition": "KEEP",
+      "deletion_reason_code": "STABLE_VERIFICATION_ENDPOINT",
+      "depth_role": "VERIFICATION",
+      "navigation_prominence": "ADDRESSABLE_VERIFICATION"
+    },
+    {
+      "route": "/evidence/CLM-014/",
+      "page_class": "evidence_detail",
+      "page_family": "Evidence Record",
+      "stable_object_id": "CLM-014",
+      "entry_modes": [
+        "deep_link",
+        "search",
+        "verification_link_or_search"
+      ],
+      "search_record_count": 2,
+      "unique_value_role": "CANONICAL_PUBLIC_VERIFICATION_ENDPOINT",
+      "value_basis": "CURRENT_PAGE_SPEC_AND_BOUND_GOVERNED_OBJECTS",
+      "next_action_policy": "SOURCE_RELATED_CORRECTION_OR_REUSE",
+      "explicit_next_actions": [],
+      "deletion_disposition": "KEEP",
+      "deletion_reason_code": "STABLE_VERIFICATION_ENDPOINT",
+      "depth_role": "VERIFICATION",
+      "navigation_prominence": "ADDRESSABLE_VERIFICATION"
+    },
+    {
+      "route": "/evidence/CLM-015/",
+      "page_class": "evidence_detail",
+      "page_family": "Evidence Record",
+      "stable_object_id": "CLM-015",
+      "entry_modes": [
+        "deep_link",
+        "search",
+        "verification_link_or_search"
+      ],
+      "search_record_count": 2,
+      "unique_value_role": "CANONICAL_PUBLIC_VERIFICATION_ENDPOINT",
+      "value_basis": "CURRENT_PAGE_SPEC_AND_BOUND_GOVERNED_OBJECTS",
+      "next_action_policy": "SOURCE_RELATED_CORRECTION_OR_REUSE",
+      "explicit_next_actions": [],
+      "deletion_disposition": "KEEP",
+      "deletion_reason_code": "STABLE_VERIFICATION_ENDPOINT",
+      "depth_role": "VERIFICATION",
+      "navigation_prominence": "ADDRESSABLE_VERIFICATION"
+    },
+    {
+      "route": "/evidence/CLM-016/",
+      "page_class": "evidence_detail",
+      "page_family": "Evidence Record",
+      "stable_object_id": "CLM-016",
+      "entry_modes": [
+        "deep_link",
+        "search",
+        "verification_link_or_search"
+      ],
+      "search_record_count": 2,
+      "unique_value_role": "CANONICAL_PUBLIC_VERIFICATION_ENDPOINT",
+      "value_basis": "CURRENT_PAGE_SPEC_AND_BOUND_GOVERNED_OBJECTS",
+      "next_action_policy": "SOURCE_RELATED_CORRECTION_OR_REUSE",
+      "explicit_next_actions": [],
+      "deletion_disposition": "KEEP",
+      "deletion_reason_code": "STABLE_VERIFICATION_ENDPOINT",
+      "depth_role": "VERIFICATION",
+      "navigation_prominence": "ADDRESSABLE_VERIFICATION"
+    },
+    {
+      "route": "/evidence/CLM-017/",
+      "page_class": "evidence_detail",
+      "page_family": "Evidence Record",
+      "stable_object_id": "CLM-017",
+      "entry_modes": [
+        "deep_link",
+        "search",
+        "verification_link_or_search"
+      ],
+      "search_record_count": 2,
+      "unique_value_role": "CANONICAL_PUBLIC_VERIFICATION_ENDPOINT",
+      "value_basis": "CURRENT_PAGE_SPEC_AND_BOUND_GOVERNED_OBJECTS",
+      "next_action_policy": "SOURCE_RELATED_CORRECTION_OR_REUSE",
+      "explicit_next_actions": [],
+      "deletion_disposition": "KEEP",
+      "deletion_reason_code": "STABLE_VERIFICATION_ENDPOINT",
+      "depth_role": "VERIFICATION",
+      "navigation_prominence": "ADDRESSABLE_VERIFICATION"
+    },
+    {
+      "route": "/evidence/CLM-018/",
+      "page_class": "evidence_detail",
+      "page_family": "Evidence Record",
+      "stable_object_id": "CLM-018",
+      "entry_modes": [
+        "deep_link",
+        "search",
+        "verification_link_or_search"
+      ],
+      "search_record_count": 2,
+      "unique_value_role": "CANONICAL_PUBLIC_VERIFICATION_ENDPOINT",
+      "value_basis": "CURRENT_PAGE_SPEC_AND_BOUND_GOVERNED_OBJECTS",
+      "next_action_policy": "SOURCE_RELATED_CORRECTION_OR_REUSE",
+      "explicit_next_actions": [],
+      "deletion_disposition": "KEEP",
+      "deletion_reason_code": "STABLE_VERIFICATION_ENDPOINT",
+      "depth_role": "VERIFICATION",
+      "navigation_prominence": "ADDRESSABLE_VERIFICATION"
+    },
+    {
+      "route": "/evidence/CLM-019/",
+      "page_class": "evidence_detail",
+      "page_family": "Evidence Record",
+      "stable_object_id": "CLM-019",
+      "entry_modes": [
+        "deep_link",
+        "search",
+        "verification_link_or_search"
+      ],
+      "search_record_count": 2,
+      "unique_value_role": "CANONICAL_PUBLIC_VERIFICATION_ENDPOINT",
+      "value_basis": "CURRENT_PAGE_SPEC_AND_BOUND_GOVERNED_OBJECTS",
+      "next_action_policy": "SOURCE_RELATED_CORRECTION_OR_REUSE",
+      "explicit_next_actions": [],
+      "deletion_disposition": "KEEP",
+      "deletion_reason_code": "STABLE_VERIFICATION_ENDPOINT",
+      "depth_role": "VERIFICATION",
+      "navigation_prominence": "ADDRESSABLE_VERIFICATION"
+    },
+    {
+      "route": "/evidence/CLM-020/",
+      "page_class": "evidence_detail",
+      "page_family": "Evidence Record",
+      "stable_object_id": "CLM-020",
+      "entry_modes": [
+        "deep_link",
+        "search",
+        "verification_link_or_search"
+      ],
+      "search_record_count": 2,
+      "unique_value_role": "CANONICAL_PUBLIC_VERIFICATION_ENDPOINT",
+      "value_basis": "CURRENT_PAGE_SPEC_AND_BOUND_GOVERNED_OBJECTS",
+      "next_action_policy": "SOURCE_RELATED_CORRECTION_OR_REUSE",
+      "explicit_next_actions": [],
+      "deletion_disposition": "KEEP",
+      "deletion_reason_code": "STABLE_VERIFICATION_ENDPOINT",
+      "depth_role": "VERIFICATION",
+      "navigation_prominence": "ADDRESSABLE_VERIFICATION"
+    },
+    {
+      "route": "/evidence/CLM-021/",
+      "page_class": "evidence_detail",
+      "page_family": "Evidence Record",
+      "stable_object_id": "CLM-021",
+      "entry_modes": [
+        "deep_link",
+        "search",
+        "verification_link_or_search"
+      ],
+      "search_record_count": 2,
+      "unique_value_role": "CANONICAL_PUBLIC_VERIFICATION_ENDPOINT",
+      "value_basis": "CURRENT_PAGE_SPEC_AND_BOUND_GOVERNED_OBJECTS",
+      "next_action_policy": "SOURCE_RELATED_CORRECTION_OR_REUSE",
+      "explicit_next_actions": [],
+      "deletion_disposition": "KEEP",
+      "deletion_reason_code": "STABLE_VERIFICATION_ENDPOINT",
+      "depth_role": "VERIFICATION",
+      "navigation_prominence": "ADDRESSABLE_VERIFICATION"
+    },
+    {
+      "route": "/evidence/CLM-022/",
+      "page_class": "evidence_detail",
+      "page_family": "Evidence Record",
+      "stable_object_id": "CLM-022",
+      "entry_modes": [
+        "deep_link",
+        "search",
+        "verification_link_or_search"
+      ],
+      "search_record_count": 2,
+      "unique_value_role": "CANONICAL_PUBLIC_VERIFICATION_ENDPOINT",
+      "value_basis": "CURRENT_PAGE_SPEC_AND_BOUND_GOVERNED_OBJECTS",
+      "next_action_policy": "SOURCE_RELATED_CORRECTION_OR_REUSE",
+      "explicit_next_actions": [],
+      "deletion_disposition": "KEEP",
+      "deletion_reason_code": "STABLE_VERIFICATION_ENDPOINT",
+      "depth_role": "VERIFICATION",
+      "navigation_prominence": "ADDRESSABLE_VERIFICATION"
+    },
+    {
+      "route": "/evidence/CLM-023/",
+      "page_class": "evidence_detail",
+      "page_family": "Evidence Record",
+      "stable_object_id": "CLM-023",
+      "entry_modes": [
+        "deep_link",
+        "search",
+        "verification_link_or_search"
+      ],
+      "search_record_count": 2,
+      "unique_value_role": "CANONICAL_PUBLIC_VERIFICATION_ENDPOINT",
+      "value_basis": "CURRENT_PAGE_SPEC_AND_BOUND_GOVERNED_OBJECTS",
+      "next_action_policy": "SOURCE_RELATED_CORRECTION_OR_REUSE",
+      "explicit_next_actions": [],
+      "deletion_disposition": "KEEP",
+      "deletion_reason_code": "STABLE_VERIFICATION_ENDPOINT",
+      "depth_role": "VERIFICATION",
+      "navigation_prominence": "ADDRESSABLE_VERIFICATION"
+    },
+    {
+      "route": "/evidence/CLM-024/",
+      "page_class": "evidence_detail",
+      "page_family": "Evidence Record",
+      "stable_object_id": "CLM-024",
+      "entry_modes": [
+        "deep_link",
+        "search",
+        "verification_link_or_search"
+      ],
+      "search_record_count": 2,
+      "unique_value_role": "CANONICAL_PUBLIC_VERIFICATION_ENDPOINT",
+      "value_basis": "CURRENT_PAGE_SPEC_AND_BOUND_GOVERNED_OBJECTS",
+      "next_action_policy": "SOURCE_RELATED_CORRECTION_OR_REUSE",
+      "explicit_next_actions": [],
+      "deletion_disposition": "KEEP",
+      "deletion_reason_code": "STABLE_VERIFICATION_ENDPOINT",
+      "depth_role": "VERIFICATION",
+      "navigation_prominence": "ADDRESSABLE_VERIFICATION"
+    },
+    {
+      "route": "/evidence/CLM-025/",
+      "page_class": "evidence_detail",
+      "page_family": "Evidence Record",
+      "stable_object_id": "CLM-025",
+      "entry_modes": [
+        "deep_link",
+        "search",
+        "verification_link_or_search"
+      ],
+      "search_record_count": 2,
+      "unique_value_role": "CANONICAL_PUBLIC_VERIFICATION_ENDPOINT",
+      "value_basis": "CURRENT_PAGE_SPEC_AND_BOUND_GOVERNED_OBJECTS",
+      "next_action_policy": "SOURCE_RELATED_CORRECTION_OR_REUSE",
+      "explicit_next_actions": [],
+      "deletion_disposition": "KEEP",
+      "deletion_reason_code": "STABLE_VERIFICATION_ENDPOINT",
+      "depth_role": "VERIFICATION",
+      "navigation_prominence": "ADDRESSABLE_VERIFICATION"
+    },
+    {
+      "route": "/evidence/CLM-026/",
+      "page_class": "evidence_detail",
+      "page_family": "Evidence Record",
+      "stable_object_id": "CLM-026",
+      "entry_modes": [
+        "deep_link",
+        "search",
+        "verification_link_or_search"
+      ],
+      "search_record_count": 2,
+      "unique_value_role": "CANONICAL_PUBLIC_VERIFICATION_ENDPOINT",
+      "value_basis": "CURRENT_PAGE_SPEC_AND_BOUND_GOVERNED_OBJECTS",
+      "next_action_policy": "SOURCE_RELATED_CORRECTION_OR_REUSE",
+      "explicit_next_actions": [],
+      "deletion_disposition": "KEEP",
+      "deletion_reason_code": "STABLE_VERIFICATION_ENDPOINT",
+      "depth_role": "VERIFICATION",
+      "navigation_prominence": "ADDRESSABLE_VERIFICATION"
+    },
+    {
+      "route": "/evidence/CLM-027/",
+      "page_class": "evidence_detail",
+      "page_family": "Evidence Record",
+      "stable_object_id": "CLM-027",
+      "entry_modes": [
+        "deep_link",
+        "search",
+        "verification_link_or_search"
+      ],
+      "search_record_count": 2,
+      "unique_value_role": "CANONICAL_PUBLIC_VERIFICATION_ENDPOINT",
+      "value_basis": "CURRENT_PAGE_SPEC_AND_BOUND_GOVERNED_OBJECTS",
+      "next_action_policy": "SOURCE_RELATED_CORRECTION_OR_REUSE",
+      "explicit_next_actions": [],
+      "deletion_disposition": "KEEP",
+      "deletion_reason_code": "STABLE_VERIFICATION_ENDPOINT",
+      "depth_role": "VERIFICATION",
+      "navigation_prominence": "ADDRESSABLE_VERIFICATION"
+    },
+    {
+      "route": "/evidence/CLM-028/",
+      "page_class": "evidence_detail",
+      "page_family": "Evidence Record",
+      "stable_object_id": "CLM-028",
+      "entry_modes": [
+        "deep_link",
+        "search",
+        "verification_link_or_search"
+      ],
+      "search_record_count": 2,
+      "unique_value_role": "CANONICAL_PUBLIC_VERIFICATION_ENDPOINT",
+      "value_basis": "CURRENT_PAGE_SPEC_AND_BOUND_GOVERNED_OBJECTS",
+      "next_action_policy": "SOURCE_RELATED_CORRECTION_OR_REUSE",
+      "explicit_next_actions": [],
+      "deletion_disposition": "KEEP",
+      "deletion_reason_code": "STABLE_VERIFICATION_ENDPOINT",
+      "depth_role": "VERIFICATION",
+      "navigation_prominence": "ADDRESSABLE_VERIFICATION"
+    },
+    {
+      "route": "/evidence/CLM-029/",
+      "page_class": "evidence_detail",
+      "page_family": "Evidence Record",
+      "stable_object_id": "CLM-029",
+      "entry_modes": [
+        "deep_link",
+        "search",
+        "verification_link_or_search"
+      ],
+      "search_record_count": 2,
+      "unique_value_role": "CANONICAL_PUBLIC_VERIFICATION_ENDPOINT",
+      "value_basis": "CURRENT_PAGE_SPEC_AND_BOUND_GOVERNED_OBJECTS",
+      "next_action_policy": "SOURCE_RELATED_CORRECTION_OR_REUSE",
+      "explicit_next_actions": [],
+      "deletion_disposition": "KEEP",
+      "deletion_reason_code": "STABLE_VERIFICATION_ENDPOINT",
+      "depth_role": "VERIFICATION",
+      "navigation_prominence": "ADDRESSABLE_VERIFICATION"
+    },
+    {
+      "route": "/evidence/CLM-030/",
+      "page_class": "evidence_detail",
+      "page_family": "Evidence Record",
+      "stable_object_id": "CLM-030",
+      "entry_modes": [
+        "deep_link",
+        "search",
+        "verification_link_or_search"
+      ],
+      "search_record_count": 2,
+      "unique_value_role": "CANONICAL_PUBLIC_VERIFICATION_ENDPOINT",
+      "value_basis": "CURRENT_PAGE_SPEC_AND_BOUND_GOVERNED_OBJECTS",
+      "next_action_policy": "SOURCE_RELATED_CORRECTION_OR_REUSE",
+      "explicit_next_actions": [],
+      "deletion_disposition": "KEEP",
+      "deletion_reason_code": "STABLE_VERIFICATION_ENDPOINT",
+      "depth_role": "VERIFICATION",
+      "navigation_prominence": "ADDRESSABLE_VERIFICATION"
+    },
+    {
+      "route": "/evidence/CLM-031/",
+      "page_class": "evidence_detail",
+      "page_family": "Evidence Record",
+      "stable_object_id": "CLM-031",
+      "entry_modes": [
+        "deep_link",
+        "search",
+        "verification_link_or_search"
+      ],
+      "search_record_count": 2,
+      "unique_value_role": "CANONICAL_PUBLIC_VERIFICATION_ENDPOINT",
+      "value_basis": "CURRENT_PAGE_SPEC_AND_BOUND_GOVERNED_OBJECTS",
+      "next_action_policy": "SOURCE_RELATED_CORRECTION_OR_REUSE",
+      "explicit_next_actions": [],
+      "deletion_disposition": "KEEP",
+      "deletion_reason_code": "STABLE_VERIFICATION_ENDPOINT",
+      "depth_role": "VERIFICATION",
+      "navigation_prominence": "ADDRESSABLE_VERIFICATION"
+    },
+    {
+      "route": "/evidence/CLM-032/",
+      "page_class": "evidence_detail",
+      "page_family": "Evidence Record",
+      "stable_object_id": "CLM-032",
+      "entry_modes": [
+        "deep_link",
+        "search",
+        "verification_link_or_search"
+      ],
+      "search_record_count": 2,
+      "unique_value_role": "CANONICAL_PUBLIC_VERIFICATION_ENDPOINT",
+      "value_basis": "CURRENT_PAGE_SPEC_AND_BOUND_GOVERNED_OBJECTS",
+      "next_action_policy": "SOURCE_RELATED_CORRECTION_OR_REUSE",
+      "explicit_next_actions": [],
+      "deletion_disposition": "KEEP",
+      "deletion_reason_code": "STABLE_VERIFICATION_ENDPOINT",
+      "depth_role": "VERIFICATION",
+      "navigation_prominence": "ADDRESSABLE_VERIFICATION"
+    },
+    {
+      "route": "/evidence/CLM-033/",
+      "page_class": "evidence_detail",
+      "page_family": "Evidence Record",
+      "stable_object_id": "CLM-033",
+      "entry_modes": [
+        "deep_link",
+        "search",
+        "verification_link_or_search"
+      ],
+      "search_record_count": 2,
+      "unique_value_role": "CANONICAL_PUBLIC_VERIFICATION_ENDPOINT",
+      "value_basis": "CURRENT_PAGE_SPEC_AND_BOUND_GOVERNED_OBJECTS",
+      "next_action_policy": "SOURCE_RELATED_CORRECTION_OR_REUSE",
+      "explicit_next_actions": [],
+      "deletion_disposition": "KEEP",
+      "deletion_reason_code": "STABLE_VERIFICATION_ENDPOINT",
+      "depth_role": "VERIFICATION",
+      "navigation_prominence": "ADDRESSABLE_VERIFICATION"
+    },
+    {
+      "route": "/evidence/CLM-034/",
+      "page_class": "evidence_detail",
+      "page_family": "Evidence Record",
+      "stable_object_id": "CLM-034",
+      "entry_modes": [
+        "deep_link",
+        "search",
+        "verification_link_or_search"
+      ],
+      "search_record_count": 2,
+      "unique_value_role": "CANONICAL_PUBLIC_VERIFICATION_ENDPOINT",
+      "value_basis": "CURRENT_PAGE_SPEC_AND_BOUND_GOVERNED_OBJECTS",
+      "next_action_policy": "SOURCE_RELATED_CORRECTION_OR_REUSE",
+      "explicit_next_actions": [],
+      "deletion_disposition": "KEEP",
+      "deletion_reason_code": "STABLE_VERIFICATION_ENDPOINT",
+      "depth_role": "VERIFICATION",
+      "navigation_prominence": "ADDRESSABLE_VERIFICATION"
+    },
+    {
+      "route": "/evidence/CLM-035/",
+      "page_class": "evidence_detail",
+      "page_family": "Evidence Record",
+      "stable_object_id": "CLM-035",
+      "entry_modes": [
+        "deep_link",
+        "search",
+        "verification_link_or_search"
+      ],
+      "search_record_count": 2,
+      "unique_value_role": "CANONICAL_PUBLIC_VERIFICATION_ENDPOINT",
+      "value_basis": "CURRENT_PAGE_SPEC_AND_BOUND_GOVERNED_OBJECTS",
+      "next_action_policy": "SOURCE_RELATED_CORRECTION_OR_REUSE",
+      "explicit_next_actions": [],
+      "deletion_disposition": "KEEP",
+      "deletion_reason_code": "STABLE_VERIFICATION_ENDPOINT",
+      "depth_role": "VERIFICATION",
+      "navigation_prominence": "ADDRESSABLE_VERIFICATION"
+    },
+    {
+      "route": "/evidence/CLM-036/",
+      "page_class": "evidence_detail",
+      "page_family": "Evidence Record",
+      "stable_object_id": "CLM-036",
+      "entry_modes": [
+        "deep_link",
+        "search",
+        "verification_link_or_search"
+      ],
+      "search_record_count": 2,
+      "unique_value_role": "CANONICAL_PUBLIC_VERIFICATION_ENDPOINT",
+      "value_basis": "CURRENT_PAGE_SPEC_AND_BOUND_GOVERNED_OBJECTS",
+      "next_action_policy": "SOURCE_RELATED_CORRECTION_OR_REUSE",
+      "explicit_next_actions": [],
+      "deletion_disposition": "KEEP",
+      "deletion_reason_code": "STABLE_VERIFICATION_ENDPOINT",
+      "depth_role": "VERIFICATION",
+      "navigation_prominence": "ADDRESSABLE_VERIFICATION"
+    },
+    {
+      "route": "/evidence/CLM-037/",
+      "page_class": "evidence_detail",
+      "page_family": "Evidence Record",
+      "stable_object_id": "CLM-037",
+      "entry_modes": [
+        "deep_link",
+        "search",
+        "verification_link_or_search"
+      ],
+      "search_record_count": 2,
+      "unique_value_role": "CANONICAL_PUBLIC_VERIFICATION_ENDPOINT",
+      "value_basis": "CURRENT_PAGE_SPEC_AND_BOUND_GOVERNED_OBJECTS",
+      "next_action_policy": "SOURCE_RELATED_CORRECTION_OR_REUSE",
+      "explicit_next_actions": [],
+      "deletion_disposition": "KEEP",
+      "deletion_reason_code": "STABLE_VERIFICATION_ENDPOINT",
+      "depth_role": "VERIFICATION",
+      "navigation_prominence": "ADDRESSABLE_VERIFICATION"
+    },
+    {
+      "route": "/evidence/CLM-038/",
+      "page_class": "evidence_detail",
+      "page_family": "Evidence Record",
+      "stable_object_id": "CLM-038",
+      "entry_modes": [
+        "deep_link",
+        "search",
+        "verification_link_or_search"
+      ],
+      "search_record_count": 2,
+      "unique_value_role": "CANONICAL_PUBLIC_VERIFICATION_ENDPOINT",
+      "value_basis": "CURRENT_PAGE_SPEC_AND_BOUND_GOVERNED_OBJECTS",
+      "next_action_policy": "SOURCE_RELATED_CORRECTION_OR_REUSE",
+      "explicit_next_actions": [],
+      "deletion_disposition": "KEEP",
+      "deletion_reason_code": "STABLE_VERIFICATION_ENDPOINT",
+      "depth_role": "VERIFICATION",
+      "navigation_prominence": "ADDRESSABLE_VERIFICATION"
+    },
+    {
+      "route": "/evidence/CLM-039/",
+      "page_class": "evidence_detail",
+      "page_family": "Evidence Record",
+      "stable_object_id": "CLM-039",
+      "entry_modes": [
+        "deep_link",
+        "search",
+        "verification_link_or_search"
+      ],
+      "search_record_count": 2,
+      "unique_value_role": "CANONICAL_PUBLIC_VERIFICATION_ENDPOINT",
+      "value_basis": "CURRENT_PAGE_SPEC_AND_BOUND_GOVERNED_OBJECTS",
+      "next_action_policy": "SOURCE_RELATED_CORRECTION_OR_REUSE",
+      "explicit_next_actions": [],
+      "deletion_disposition": "KEEP",
+      "deletion_reason_code": "STABLE_VERIFICATION_ENDPOINT",
+      "depth_role": "VERIFICATION",
+      "navigation_prominence": "ADDRESSABLE_VERIFICATION"
+    },
+    {
+      "route": "/evidence/CLM-040/",
+      "page_class": "evidence_detail",
+      "page_family": "Evidence Record",
+      "stable_object_id": "CLM-040",
+      "entry_modes": [
+        "deep_link",
+        "search",
+        "verification_link_or_search"
+      ],
+      "search_record_count": 2,
+      "unique_value_role": "CANONICAL_PUBLIC_VERIFICATION_ENDPOINT",
+      "value_basis": "CURRENT_PAGE_SPEC_AND_BOUND_GOVERNED_OBJECTS",
+      "next_action_policy": "SOURCE_RELATED_CORRECTION_OR_REUSE",
+      "explicit_next_actions": [],
+      "deletion_disposition": "KEEP",
+      "deletion_reason_code": "STABLE_VERIFICATION_ENDPOINT",
+      "depth_role": "VERIFICATION",
+      "navigation_prominence": "ADDRESSABLE_VERIFICATION"
+    },
+    {
+      "route": "/evidence/CLM-041/",
+      "page_class": "evidence_detail",
+      "page_family": "Evidence Record",
+      "stable_object_id": "CLM-041",
+      "entry_modes": [
+        "deep_link",
+        "search",
+        "verification_link_or_search"
+      ],
+      "search_record_count": 2,
+      "unique_value_role": "CANONICAL_PUBLIC_VERIFICATION_ENDPOINT",
+      "value_basis": "CURRENT_PAGE_SPEC_AND_BOUND_GOVERNED_OBJECTS",
+      "next_action_policy": "SOURCE_RELATED_CORRECTION_OR_REUSE",
+      "explicit_next_actions": [],
+      "deletion_disposition": "KEEP",
+      "deletion_reason_code": "STABLE_VERIFICATION_ENDPOINT",
+      "depth_role": "VERIFICATION",
+      "navigation_prominence": "ADDRESSABLE_VERIFICATION"
+    },
+    {
+      "route": "/evidence/CLM-042/",
+      "page_class": "evidence_detail",
+      "page_family": "Evidence Record",
+      "stable_object_id": "CLM-042",
+      "entry_modes": [
+        "deep_link",
+        "search",
+        "verification_link_or_search"
+      ],
+      "search_record_count": 2,
+      "unique_value_role": "CANONICAL_PUBLIC_VERIFICATION_ENDPOINT",
+      "value_basis": "CURRENT_PAGE_SPEC_AND_BOUND_GOVERNED_OBJECTS",
+      "next_action_policy": "SOURCE_RELATED_CORRECTION_OR_REUSE",
+      "explicit_next_actions": [],
+      "deletion_disposition": "KEEP",
+      "deletion_reason_code": "STABLE_VERIFICATION_ENDPOINT",
+      "depth_role": "VERIFICATION",
+      "navigation_prominence": "ADDRESSABLE_VERIFICATION"
+    },
+    {
+      "route": "/evidence/CLM-043/",
+      "page_class": "evidence_detail",
+      "page_family": "Evidence Record",
+      "stable_object_id": "CLM-043",
+      "entry_modes": [
+        "deep_link",
+        "search",
+        "verification_link_or_search"
+      ],
+      "search_record_count": 2,
+      "unique_value_role": "CANONICAL_PUBLIC_VERIFICATION_ENDPOINT",
+      "value_basis": "CURRENT_PAGE_SPEC_AND_BOUND_GOVERNED_OBJECTS",
+      "next_action_policy": "SOURCE_RELATED_CORRECTION_OR_REUSE",
+      "explicit_next_actions": [],
+      "deletion_disposition": "KEEP",
+      "deletion_reason_code": "STABLE_VERIFICATION_ENDPOINT",
+      "depth_role": "VERIFICATION",
+      "navigation_prominence": "ADDRESSABLE_VERIFICATION"
+    },
+    {
+      "route": "/evidence/CLM-044/",
+      "page_class": "evidence_detail",
+      "page_family": "Evidence Record",
+      "stable_object_id": "CLM-044",
+      "entry_modes": [
+        "deep_link",
+        "search",
+        "verification_link_or_search"
+      ],
+      "search_record_count": 2,
+      "unique_value_role": "CANONICAL_PUBLIC_VERIFICATION_ENDPOINT",
+      "value_basis": "CURRENT_PAGE_SPEC_AND_BOUND_GOVERNED_OBJECTS",
+      "next_action_policy": "SOURCE_RELATED_CORRECTION_OR_REUSE",
+      "explicit_next_actions": [],
+      "deletion_disposition": "KEEP",
+      "deletion_reason_code": "STABLE_VERIFICATION_ENDPOINT",
+      "depth_role": "VERIFICATION",
+      "navigation_prominence": "ADDRESSABLE_VERIFICATION"
+    },
+    {
+      "route": "/evidence/CLM-045/",
+      "page_class": "evidence_detail",
+      "page_family": "Evidence Record",
+      "stable_object_id": "CLM-045",
+      "entry_modes": [
+        "deep_link",
+        "search",
+        "verification_link_or_search"
+      ],
+      "search_record_count": 2,
+      "unique_value_role": "CANONICAL_PUBLIC_VERIFICATION_ENDPOINT",
+      "value_basis": "CURRENT_PAGE_SPEC_AND_BOUND_GOVERNED_OBJECTS",
+      "next_action_policy": "SOURCE_RELATED_CORRECTION_OR_REUSE",
+      "explicit_next_actions": [],
+      "deletion_disposition": "KEEP",
+      "deletion_reason_code": "STABLE_VERIFICATION_ENDPOINT",
+      "depth_role": "VERIFICATION",
+      "navigation_prominence": "ADDRESSABLE_VERIFICATION"
+    },
+    {
+      "route": "/evidence/CLM-046/",
+      "page_class": "evidence_detail",
+      "page_family": "Evidence Record",
+      "stable_object_id": "CLM-046",
+      "entry_modes": [
+        "deep_link",
+        "search",
+        "verification_link_or_search"
+      ],
+      "search_record_count": 2,
+      "unique_value_role": "CANONICAL_PUBLIC_VERIFICATION_ENDPOINT",
+      "value_basis": "CURRENT_PAGE_SPEC_AND_BOUND_GOVERNED_OBJECTS",
+      "next_action_policy": "SOURCE_RELATED_CORRECTION_OR_REUSE",
+      "explicit_next_actions": [],
+      "deletion_disposition": "KEEP",
+      "deletion_reason_code": "STABLE_VERIFICATION_ENDPOINT",
+      "depth_role": "VERIFICATION",
+      "navigation_prominence": "ADDRESSABLE_VERIFICATION"
+    },
+    {
+      "route": "/evidence/CLM-047/",
+      "page_class": "evidence_detail",
+      "page_family": "Evidence Record",
+      "stable_object_id": "CLM-047",
+      "entry_modes": [
+        "deep_link",
+        "search",
+        "verification_link_or_search"
+      ],
+      "search_record_count": 2,
+      "unique_value_role": "CANONICAL_PUBLIC_VERIFICATION_ENDPOINT",
+      "value_basis": "CURRENT_PAGE_SPEC_AND_BOUND_GOVERNED_OBJECTS",
+      "next_action_policy": "SOURCE_RELATED_CORRECTION_OR_REUSE",
+      "explicit_next_actions": [],
+      "deletion_disposition": "KEEP",
+      "deletion_reason_code": "STABLE_VERIFICATION_ENDPOINT",
+      "depth_role": "VERIFICATION",
+      "navigation_prominence": "ADDRESSABLE_VERIFICATION"
+    },
+    {
+      "route": "/evidence/CLM-048/",
+      "page_class": "evidence_detail",
+      "page_family": "Evidence Record",
+      "stable_object_id": "CLM-048",
+      "entry_modes": [
+        "deep_link",
+        "search",
+        "verification_link_or_search"
+      ],
+      "search_record_count": 2,
+      "unique_value_role": "CANONICAL_PUBLIC_VERIFICATION_ENDPOINT",
+      "value_basis": "CURRENT_PAGE_SPEC_AND_BOUND_GOVERNED_OBJECTS",
+      "next_action_policy": "SOURCE_RELATED_CORRECTION_OR_REUSE",
+      "explicit_next_actions": [],
+      "deletion_disposition": "KEEP",
+      "deletion_reason_code": "STABLE_VERIFICATION_ENDPOINT",
+      "depth_role": "VERIFICATION",
+      "navigation_prominence": "ADDRESSABLE_VERIFICATION"
+    },
+    {
+      "route": "/evidence/CLM-049/",
+      "page_class": "evidence_detail",
+      "page_family": "Evidence Record",
+      "stable_object_id": "CLM-049",
+      "entry_modes": [
+        "deep_link",
+        "search",
+        "verification_link_or_search"
+      ],
+      "search_record_count": 2,
+      "unique_value_role": "CANONICAL_PUBLIC_VERIFICATION_ENDPOINT",
+      "value_basis": "CURRENT_PAGE_SPEC_AND_BOUND_GOVERNED_OBJECTS",
+      "next_action_policy": "SOURCE_RELATED_CORRECTION_OR_REUSE",
+      "explicit_next_actions": [],
+      "deletion_disposition": "KEEP",
+      "deletion_reason_code": "STABLE_VERIFICATION_ENDPOINT",
+      "depth_role": "VERIFICATION",
+      "navigation_prominence": "ADDRESSABLE_VERIFICATION"
+    },
+    {
+      "route": "/evidence/CLM-050/",
+      "page_class": "evidence_detail",
+      "page_family": "Evidence Record",
+      "stable_object_id": "CLM-050",
+      "entry_modes": [
+        "deep_link",
+        "search",
+        "verification_link_or_search"
+      ],
+      "search_record_count": 2,
+      "unique_value_role": "CANONICAL_PUBLIC_VERIFICATION_ENDPOINT",
+      "value_basis": "CURRENT_PAGE_SPEC_AND_BOUND_GOVERNED_OBJECTS",
+      "next_action_policy": "SOURCE_RELATED_CORRECTION_OR_REUSE",
+      "explicit_next_actions": [],
+      "deletion_disposition": "KEEP",
+      "deletion_reason_code": "STABLE_VERIFICATION_ENDPOINT",
+      "depth_role": "VERIFICATION",
+      "navigation_prominence": "ADDRESSABLE_VERIFICATION"
+    },
+    {
+      "route": "/evidence/CLM-051/",
+      "page_class": "evidence_detail",
+      "page_family": "Evidence Record",
+      "stable_object_id": "CLM-051",
+      "entry_modes": [
+        "deep_link",
+        "search",
+        "verification_link_or_search"
+      ],
+      "search_record_count": 2,
+      "unique_value_role": "CANONICAL_PUBLIC_VERIFICATION_ENDPOINT",
+      "value_basis": "CURRENT_PAGE_SPEC_AND_BOUND_GOVERNED_OBJECTS",
+      "next_action_policy": "SOURCE_RELATED_CORRECTION_OR_REUSE",
+      "explicit_next_actions": [],
+      "deletion_disposition": "KEEP",
+      "deletion_reason_code": "STABLE_VERIFICATION_ENDPOINT",
+      "depth_role": "VERIFICATION",
+      "navigation_prominence": "ADDRESSABLE_VERIFICATION"
+    },
+    {
+      "route": "/evidence/CLM-052/",
+      "page_class": "evidence_detail",
+      "page_family": "Evidence Record",
+      "stable_object_id": "CLM-052",
+      "entry_modes": [
+        "deep_link",
+        "search",
+        "verification_link_or_search"
+      ],
+      "search_record_count": 2,
+      "unique_value_role": "CANONICAL_PUBLIC_VERIFICATION_ENDPOINT",
+      "value_basis": "CURRENT_PAGE_SPEC_AND_BOUND_GOVERNED_OBJECTS",
+      "next_action_policy": "SOURCE_RELATED_CORRECTION_OR_REUSE",
+      "explicit_next_actions": [],
+      "deletion_disposition": "KEEP",
+      "deletion_reason_code": "STABLE_VERIFICATION_ENDPOINT",
+      "depth_role": "VERIFICATION",
+      "navigation_prominence": "ADDRESSABLE_VERIFICATION"
+    },
+    {
+      "route": "/evidence/CLM-053/",
+      "page_class": "evidence_detail",
+      "page_family": "Evidence Record",
+      "stable_object_id": "CLM-053",
+      "entry_modes": [
+        "deep_link",
+        "search",
+        "verification_link_or_search"
+      ],
+      "search_record_count": 2,
+      "unique_value_role": "CANONICAL_PUBLIC_VERIFICATION_ENDPOINT",
+      "value_basis": "CURRENT_PAGE_SPEC_AND_BOUND_GOVERNED_OBJECTS",
+      "next_action_policy": "SOURCE_RELATED_CORRECTION_OR_REUSE",
+      "explicit_next_actions": [],
+      "deletion_disposition": "KEEP",
+      "deletion_reason_code": "STABLE_VERIFICATION_ENDPOINT",
+      "depth_role": "VERIFICATION",
+      "navigation_prominence": "ADDRESSABLE_VERIFICATION"
+    },
+    {
+      "route": "/evidence/CLM-054/",
+      "page_class": "evidence_detail",
+      "page_family": "Evidence Record",
+      "stable_object_id": "CLM-054",
+      "entry_modes": [
+        "deep_link",
+        "search",
+        "verification_link_or_search"
+      ],
+      "search_record_count": 2,
+      "unique_value_role": "CANONICAL_PUBLIC_VERIFICATION_ENDPOINT",
+      "value_basis": "CURRENT_PAGE_SPEC_AND_BOUND_GOVERNED_OBJECTS",
+      "next_action_policy": "SOURCE_RELATED_CORRECTION_OR_REUSE",
+      "explicit_next_actions": [],
+      "deletion_disposition": "KEEP",
+      "deletion_reason_code": "STABLE_VERIFICATION_ENDPOINT",
+      "depth_role": "VERIFICATION",
+      "navigation_prominence": "ADDRESSABLE_VERIFICATION"
+    },
+    {
+      "route": "/evidence/CLM-055/",
+      "page_class": "evidence_detail",
+      "page_family": "Evidence Record",
+      "stable_object_id": "CLM-055",
+      "entry_modes": [
+        "deep_link",
+        "search",
+        "verification_link_or_search"
+      ],
+      "search_record_count": 2,
+      "unique_value_role": "CANONICAL_PUBLIC_VERIFICATION_ENDPOINT",
+      "value_basis": "CURRENT_PAGE_SPEC_AND_BOUND_GOVERNED_OBJECTS",
+      "next_action_policy": "SOURCE_RELATED_CORRECTION_OR_REUSE",
+      "explicit_next_actions": [],
+      "deletion_disposition": "KEEP",
+      "deletion_reason_code": "STABLE_VERIFICATION_ENDPOINT",
+      "depth_role": "VERIFICATION",
+      "navigation_prominence": "ADDRESSABLE_VERIFICATION"
+    },
+    {
+      "route": "/evidence/CLM-056/",
+      "page_class": "evidence_detail",
+      "page_family": "Evidence Record",
+      "stable_object_id": "CLM-056",
+      "entry_modes": [
+        "deep_link",
+        "search",
+        "verification_link_or_search"
+      ],
+      "search_record_count": 2,
+      "unique_value_role": "CANONICAL_PUBLIC_VERIFICATION_ENDPOINT",
+      "value_basis": "CURRENT_PAGE_SPEC_AND_BOUND_GOVERNED_OBJECTS",
+      "next_action_policy": "SOURCE_RELATED_CORRECTION_OR_REUSE",
+      "explicit_next_actions": [],
+      "deletion_disposition": "KEEP",
+      "deletion_reason_code": "STABLE_VERIFICATION_ENDPOINT",
+      "depth_role": "VERIFICATION",
+      "navigation_prominence": "ADDRESSABLE_VERIFICATION"
+    },
+    {
+      "route": "/evidence/CLM-057/",
+      "page_class": "evidence_detail",
+      "page_family": "Evidence Record",
+      "stable_object_id": "CLM-057",
+      "entry_modes": [
+        "deep_link",
+        "search",
+        "verification_link_or_search"
+      ],
+      "search_record_count": 2,
+      "unique_value_role": "CANONICAL_PUBLIC_VERIFICATION_ENDPOINT",
+      "value_basis": "CURRENT_PAGE_SPEC_AND_BOUND_GOVERNED_OBJECTS",
+      "next_action_policy": "SOURCE_RELATED_CORRECTION_OR_REUSE",
+      "explicit_next_actions": [],
+      "deletion_disposition": "KEEP",
+      "deletion_reason_code": "STABLE_VERIFICATION_ENDPOINT",
+      "depth_role": "VERIFICATION",
+      "navigation_prominence": "ADDRESSABLE_VERIFICATION"
+    },
+    {
+      "route": "/evidence/CLM-058/",
+      "page_class": "evidence_detail",
+      "page_family": "Evidence Record",
+      "stable_object_id": "CLM-058",
+      "entry_modes": [
+        "deep_link",
+        "search",
+        "verification_link_or_search"
+      ],
+      "search_record_count": 2,
+      "unique_value_role": "CANONICAL_PUBLIC_VERIFICATION_ENDPOINT",
+      "value_basis": "CURRENT_PAGE_SPEC_AND_BOUND_GOVERNED_OBJECTS",
+      "next_action_policy": "SOURCE_RELATED_CORRECTION_OR_REUSE",
+      "explicit_next_actions": [],
+      "deletion_disposition": "KEEP",
+      "deletion_reason_code": "STABLE_VERIFICATION_ENDPOINT",
+      "depth_role": "VERIFICATION",
+      "navigation_prominence": "ADDRESSABLE_VERIFICATION"
+    },
+    {
+      "route": "/evidence/CLM-059/",
+      "page_class": "evidence_detail",
+      "page_family": "Evidence Record",
+      "stable_object_id": "CLM-059",
+      "entry_modes": [
+        "deep_link",
+        "search",
+        "verification_link_or_search"
+      ],
+      "search_record_count": 2,
+      "unique_value_role": "CANONICAL_PUBLIC_VERIFICATION_ENDPOINT",
+      "value_basis": "CURRENT_PAGE_SPEC_AND_BOUND_GOVERNED_OBJECTS",
+      "next_action_policy": "SOURCE_RELATED_CORRECTION_OR_REUSE",
+      "explicit_next_actions": [],
+      "deletion_disposition": "KEEP",
+      "deletion_reason_code": "STABLE_VERIFICATION_ENDPOINT",
+      "depth_role": "VERIFICATION",
+      "navigation_prominence": "ADDRESSABLE_VERIFICATION"
+    },
+    {
+      "route": "/evidence/CLM-060/",
+      "page_class": "evidence_detail",
+      "page_family": "Evidence Record",
+      "stable_object_id": "CLM-060",
+      "entry_modes": [
+        "deep_link",
+        "search",
+        "verification_link_or_search"
+      ],
+      "search_record_count": 2,
+      "unique_value_role": "CANONICAL_PUBLIC_VERIFICATION_ENDPOINT",
+      "value_basis": "CURRENT_PAGE_SPEC_AND_BOUND_GOVERNED_OBJECTS",
+      "next_action_policy": "SOURCE_RELATED_CORRECTION_OR_REUSE",
+      "explicit_next_actions": [],
+      "deletion_disposition": "KEEP",
+      "deletion_reason_code": "STABLE_VERIFICATION_ENDPOINT",
+      "depth_role": "VERIFICATION",
+      "navigation_prominence": "ADDRESSABLE_VERIFICATION"
+    },
+    {
+      "route": "/evidence/DS-DEMAND-VINTAGE-LENS/",
+      "page_class": "evidence_detail",
+      "page_family": "Evidence Record",
+      "stable_object_id": "DS-DEMAND-VINTAGE-LENS",
+      "entry_modes": [
+        "deep_link",
+        "search",
+        "verification_link_or_search"
+      ],
+      "search_record_count": 2,
+      "unique_value_role": "CANONICAL_PUBLIC_VERIFICATION_ENDPOINT",
+      "value_basis": "CURRENT_PAGE_SPEC_AND_BOUND_GOVERNED_OBJECTS",
+      "next_action_policy": "SOURCE_RELATED_CORRECTION_OR_REUSE",
+      "explicit_next_actions": [],
+      "deletion_disposition": "KEEP",
+      "deletion_reason_code": "STABLE_VERIFICATION_ENDPOINT",
+      "depth_role": "VERIFICATION",
+      "navigation_prominence": "ADDRESSABLE_VERIFICATION"
+    },
+    {
+      "route": "/evidence/DS-FCP-ARCH/",
+      "page_class": "evidence_detail",
+      "page_family": "Evidence Record",
+      "stable_object_id": "DS-FCP-ARCH",
+      "entry_modes": [
+        "deep_link",
+        "search",
+        "verification_link_or_search"
+      ],
+      "search_record_count": 2,
+      "unique_value_role": "CANONICAL_PUBLIC_VERIFICATION_ENDPOINT",
+      "value_basis": "CURRENT_PAGE_SPEC_AND_BOUND_GOVERNED_OBJECTS",
+      "next_action_policy": "SOURCE_RELATED_CORRECTION_OR_REUSE",
+      "explicit_next_actions": [],
+      "deletion_disposition": "KEEP",
+      "deletion_reason_code": "STABLE_VERIFICATION_ENDPOINT",
+      "depth_role": "VERIFICATION",
+      "navigation_prominence": "ADDRESSABLE_VERIFICATION"
+    },
+    {
+      "route": "/evidence/DS-FINDEX-HISTORY-CROSSWALK/",
+      "page_class": "evidence_detail",
+      "page_family": "Evidence Record",
+      "stable_object_id": "DS-FINDEX-HISTORY-CROSSWALK",
+      "entry_modes": [
+        "deep_link",
+        "search",
+        "verification_link_or_search"
+      ],
+      "search_record_count": 2,
+      "unique_value_role": "CANONICAL_PUBLIC_VERIFICATION_ENDPOINT",
+      "value_basis": "CURRENT_PAGE_SPEC_AND_BOUND_GOVERNED_OBJECTS",
+      "next_action_policy": "SOURCE_RELATED_CORRECTION_OR_REUSE",
+      "explicit_next_actions": [],
+      "deletion_disposition": "KEEP",
+      "deletion_reason_code": "STABLE_VERIFICATION_ENDPOINT",
+      "depth_role": "VERIFICATION",
+      "navigation_prominence": "ADDRESSABLE_VERIFICATION"
+    },
+    {
+      "route": "/evidence/DS-FINDEX-PUBLIC-HISTORY/",
+      "page_class": "evidence_detail",
+      "page_family": "Evidence Record",
+      "stable_object_id": "DS-FINDEX-PUBLIC-HISTORY",
+      "entry_modes": [
+        "deep_link",
+        "search",
+        "verification_link_or_search"
+      ],
+      "search_record_count": 2,
+      "unique_value_role": "CANONICAL_PUBLIC_VERIFICATION_ENDPOINT",
+      "value_basis": "CURRENT_PAGE_SPEC_AND_BOUND_GOVERNED_OBJECTS",
+      "next_action_policy": "SOURCE_RELATED_CORRECTION_OR_REUSE",
+      "explicit_next_actions": [],
+      "deletion_disposition": "KEEP",
+      "deletion_reason_code": "STABLE_VERIFICATION_ENDPOINT",
+      "depth_role": "VERIFICATION",
+      "navigation_prominence": "ADDRESSABLE_VERIFICATION"
+    },
+    {
+      "route": "/evidence/DS-QUAL-EVIDENCE/",
+      "page_class": "evidence_detail",
+      "page_family": "Evidence Record",
+      "stable_object_id": "DS-QUAL-EVIDENCE",
+      "entry_modes": [
+        "deep_link",
+        "search",
+        "verification_link_or_search"
+      ],
+      "search_record_count": 2,
+      "unique_value_role": "CANONICAL_PUBLIC_VERIFICATION_ENDPOINT",
+      "value_basis": "CURRENT_PAGE_SPEC_AND_BOUND_GOVERNED_OBJECTS",
+      "next_action_policy": "SOURCE_RELATED_CORRECTION_OR_REUSE",
+      "explicit_next_actions": [],
+      "deletion_disposition": "KEEP",
+      "deletion_reason_code": "STABLE_VERIFICATION_ENDPOINT",
+      "depth_role": "VERIFICATION",
+      "navigation_prominence": "ADDRESSABLE_VERIFICATION"
+    },
+    {
+      "route": "/evidence/MF-ORIG-001+002/",
+      "page_class": "evidence_detail",
+      "page_family": "Evidence Record",
+      "stable_object_id": "MF-ORIG-001+002",
+      "entry_modes": [
+        "deep_link",
+        "search",
+        "verification_link_or_search"
+      ],
+      "search_record_count": 2,
+      "unique_value_role": "CANONICAL_PUBLIC_VERIFICATION_ENDPOINT",
+      "value_basis": "CURRENT_PAGE_SPEC_AND_BOUND_GOVERNED_OBJECTS",
+      "next_action_policy": "SOURCE_RELATED_CORRECTION_OR_REUSE",
+      "explicit_next_actions": [],
+      "deletion_disposition": "KEEP",
+      "deletion_reason_code": "STABLE_VERIFICATION_ENDPOINT",
+      "depth_role": "VERIFICATION",
+      "navigation_prominence": "ADDRESSABLE_VERIFICATION"
+    },
+    {
+      "route": "/evidence/MFI-SPINE-2015-Q4/",
+      "page_class": "evidence_detail",
+      "page_family": "Evidence Record",
+      "stable_object_id": "MFI-SPINE-2015-Q4",
+      "entry_modes": [
+        "deep_link",
+        "search",
+        "verification_link_or_search"
+      ],
+      "search_record_count": 2,
+      "unique_value_role": "CANONICAL_PUBLIC_VERIFICATION_ENDPOINT",
+      "value_basis": "CURRENT_PAGE_SPEC_AND_BOUND_GOVERNED_OBJECTS",
+      "next_action_policy": "SOURCE_RELATED_CORRECTION_OR_REUSE",
+      "explicit_next_actions": [],
+      "deletion_disposition": "KEEP",
+      "deletion_reason_code": "STABLE_VERIFICATION_ENDPOINT",
+      "depth_role": "VERIFICATION",
+      "navigation_prominence": "ADDRESSABLE_VERIFICATION"
+    },
+    {
+      "route": "/evidence/NEG-EW-011/",
+      "page_class": "evidence_detail",
+      "page_family": "Evidence Record",
+      "stable_object_id": "NEG-EW-011",
+      "entry_modes": [
+        "deep_link",
+        "search",
+        "verification_link_or_search"
+      ],
+      "search_record_count": 2,
+      "unique_value_role": "CANONICAL_PUBLIC_VERIFICATION_ENDPOINT",
+      "value_basis": "CURRENT_PAGE_SPEC_AND_BOUND_GOVERNED_OBJECTS",
+      "next_action_policy": "SOURCE_RELATED_CORRECTION_OR_REUSE",
+      "explicit_next_actions": [],
+      "deletion_disposition": "KEEP",
+      "deletion_reason_code": "STABLE_VERIFICATION_ENDPOINT",
+      "depth_role": "VERIFICATION",
+      "navigation_prominence": "ADDRESSABLE_VERIFICATION"
+    },
+    {
+      "route": "/evidence/PSE-011/",
+      "page_class": "evidence_detail",
+      "page_family": "Evidence Record",
+      "stable_object_id": "PSE-011",
+      "entry_modes": [
+        "deep_link",
+        "search",
+        "verification_link_or_search"
+      ],
+      "search_record_count": 2,
+      "unique_value_role": "CANONICAL_PUBLIC_VERIFICATION_ENDPOINT",
+      "value_basis": "CURRENT_PAGE_SPEC_AND_BOUND_GOVERNED_OBJECTS",
+      "next_action_policy": "SOURCE_RELATED_CORRECTION_OR_REUSE",
+      "explicit_next_actions": [],
+      "deletion_disposition": "KEEP",
+      "deletion_reason_code": "STABLE_VERIFICATION_ENDPOINT",
+      "depth_role": "VERIFICATION",
+      "navigation_prominence": "ADDRESSABLE_VERIFICATION"
+    },
+    {
+      "route": "/evidence/QUAL-001/",
+      "page_class": "evidence_detail",
+      "page_family": "Evidence Record",
+      "stable_object_id": "QUAL-001",
+      "entry_modes": [
+        "deep_link",
+        "search",
+        "verification_link_or_search"
+      ],
+      "search_record_count": 2,
+      "unique_value_role": "CANONICAL_PUBLIC_VERIFICATION_ENDPOINT",
+      "value_basis": "CURRENT_PAGE_SPEC_AND_BOUND_GOVERNED_OBJECTS",
+      "next_action_policy": "SOURCE_RELATED_CORRECTION_OR_REUSE",
+      "explicit_next_actions": [],
+      "deletion_disposition": "KEEP",
+      "deletion_reason_code": "STABLE_VERIFICATION_ENDPOINT",
+      "depth_role": "VERIFICATION",
+      "navigation_prominence": "ADDRESSABLE_VERIFICATION"
+    },
+    {
+      "route": "/evidence/VIS-BORROWING-SOURCES-2014/",
+      "page_class": "evidence_detail",
+      "page_family": "Evidence Record",
+      "stable_object_id": "VIS-BORROWING-SOURCES-2014",
+      "entry_modes": [
+        "deep_link",
+        "search",
+        "verification_link_or_search"
+      ],
+      "search_record_count": 2,
+      "unique_value_role": "CANONICAL_PUBLIC_VERIFICATION_ENDPOINT",
+      "value_basis": "CURRENT_PAGE_SPEC_AND_BOUND_GOVERNED_OBJECTS",
+      "next_action_policy": "SOURCE_RELATED_CORRECTION_OR_REUSE",
+      "explicit_next_actions": [],
+      "deletion_disposition": "KEEP",
+      "deletion_reason_code": "STABLE_VERIFICATION_ENDPOINT",
+      "depth_role": "VERIFICATION",
+      "navigation_prominence": "ADDRESSABLE_VERIFICATION"
+    },
+    {
+      "route": "/evidence/VIS-CAPITAL-CONTEXT/",
+      "page_class": "evidence_detail",
+      "page_family": "Evidence Record",
+      "stable_object_id": "VIS-CAPITAL-CONTEXT",
+      "entry_modes": [
+        "deep_link",
+        "search",
+        "verification_link_or_search"
+      ],
+      "search_record_count": 2,
+      "unique_value_role": "CANONICAL_PUBLIC_VERIFICATION_ENDPOINT",
+      "value_basis": "CURRENT_PAGE_SPEC_AND_BOUND_GOVERNED_OBJECTS",
+      "next_action_policy": "SOURCE_RELATED_CORRECTION_OR_REUSE",
+      "explicit_next_actions": [],
+      "deletion_disposition": "KEEP",
+      "deletion_reason_code": "STABLE_VERIFICATION_ENDPOINT",
+      "depth_role": "VERIFICATION",
+      "navigation_prominence": "ADDRESSABLE_VERIFICATION"
+    },
+    {
+      "route": "/evidence/VIS-DEMAND-VINTAGE-LADDER/",
+      "page_class": "evidence_detail",
+      "page_family": "Evidence Record",
+      "stable_object_id": "VIS-DEMAND-VINTAGE-LADDER",
+      "entry_modes": [
+        "deep_link",
+        "search",
+        "verification_link_or_search"
+      ],
+      "search_record_count": 2,
+      "unique_value_role": "CANONICAL_PUBLIC_VERIFICATION_ENDPOINT",
+      "value_basis": "CURRENT_PAGE_SPEC_AND_BOUND_GOVERNED_OBJECTS",
+      "next_action_policy": "SOURCE_RELATED_CORRECTION_OR_REUSE",
+      "explicit_next_actions": [],
+      "deletion_disposition": "KEEP",
+      "deletion_reason_code": "STABLE_VERIFICATION_ENDPOINT",
+      "depth_role": "VERIFICATION",
+      "navigation_prominence": "ADDRESSABLE_VERIFICATION"
+    },
+    {
+      "route": "/evidence/VIS-DOMESTIC-REMITTANCE-PATH-2014/",
+      "page_class": "evidence_detail",
+      "page_family": "Evidence Record",
+      "stable_object_id": "VIS-DOMESTIC-REMITTANCE-PATH-2014",
+      "entry_modes": [
+        "deep_link",
+        "search",
+        "verification_link_or_search"
+      ],
+      "search_record_count": 2,
+      "unique_value_role": "CANONICAL_PUBLIC_VERIFICATION_ENDPOINT",
+      "value_basis": "CURRENT_PAGE_SPEC_AND_BOUND_GOVERNED_OBJECTS",
+      "next_action_policy": "SOURCE_RELATED_CORRECTION_OR_REUSE",
+      "explicit_next_actions": [],
+      "deletion_disposition": "KEEP",
+      "deletion_reason_code": "STABLE_VERIFICATION_ENDPOINT",
+      "depth_role": "VERIFICATION",
+      "navigation_prominence": "ADDRESSABLE_VERIFICATION"
+    },
+    {
+      "route": "/evidence/VIS-E-MONEY-RULE-STACK/",
+      "page_class": "evidence_detail",
+      "page_family": "Evidence Record",
+      "stable_object_id": "VIS-E-MONEY-RULE-STACK",
+      "entry_modes": [
+        "deep_link",
+        "search",
+        "verification_link_or_search"
+      ],
+      "search_record_count": 2,
+      "unique_value_role": "CANONICAL_PUBLIC_VERIFICATION_ENDPOINT",
+      "value_basis": "CURRENT_PAGE_SPEC_AND_BOUND_GOVERNED_OBJECTS",
+      "next_action_policy": "SOURCE_RELATED_CORRECTION_OR_REUSE",
+      "explicit_next_actions": [],
+      "deletion_disposition": "KEEP",
+      "deletion_reason_code": "STABLE_VERIFICATION_ENDPOINT",
+      "depth_role": "VERIFICATION",
+      "navigation_prominence": "ADDRESSABLE_VERIFICATION"
+    },
+    {
+      "route": "/evidence/VIS-EVIDENCE-CLASS-LADDER/",
+      "page_class": "evidence_detail",
+      "page_family": "Evidence Record",
+      "stable_object_id": "VIS-EVIDENCE-CLASS-LADDER",
+      "entry_modes": [
+        "deep_link",
+        "search",
+        "verification_link_or_search"
+      ],
+      "search_record_count": 2,
+      "unique_value_role": "CANONICAL_PUBLIC_VERIFICATION_ENDPOINT",
+      "value_basis": "CURRENT_PAGE_SPEC_AND_BOUND_GOVERNED_OBJECTS",
+      "next_action_policy": "SOURCE_RELATED_CORRECTION_OR_REUSE",
+      "explicit_next_actions": [],
+      "deletion_disposition": "KEEP",
+      "deletion_reason_code": "STABLE_VERIFICATION_ENDPOINT",
+      "depth_role": "VERIFICATION",
+      "navigation_prominence": "ADDRESSABLE_VERIFICATION"
+    },
+    {
+      "route": "/evidence/VIS-EVIDENCE-FRESHNESS/",
+      "page_class": "evidence_detail",
+      "page_family": "Evidence Record",
+      "stable_object_id": "VIS-EVIDENCE-FRESHNESS",
+      "entry_modes": [
+        "deep_link",
+        "search",
+        "verification_link_or_search"
+      ],
+      "search_record_count": 2,
+      "unique_value_role": "CANONICAL_PUBLIC_VERIFICATION_ENDPOINT",
+      "value_basis": "CURRENT_PAGE_SPEC_AND_BOUND_GOVERNED_OBJECTS",
+      "next_action_policy": "SOURCE_RELATED_CORRECTION_OR_REUSE",
+      "explicit_next_actions": [],
+      "deletion_disposition": "KEEP",
+      "deletion_reason_code": "STABLE_VERIFICATION_ENDPOINT",
+      "depth_role": "VERIFICATION",
+      "navigation_prominence": "ADDRESSABLE_VERIFICATION"
+    },
+    {
+      "route": "/evidence/VIS-EVIDENCE-GAPS/",
+      "page_class": "evidence_detail",
+      "page_family": "Evidence Record",
+      "stable_object_id": "VIS-EVIDENCE-GAPS",
+      "entry_modes": [
+        "deep_link",
+        "search",
+        "verification_link_or_search"
+      ],
+      "search_record_count": 2,
+      "unique_value_role": "CANONICAL_PUBLIC_VERIFICATION_ENDPOINT",
+      "value_basis": "CURRENT_PAGE_SPEC_AND_BOUND_GOVERNED_OBJECTS",
+      "next_action_policy": "SOURCE_RELATED_CORRECTION_OR_REUSE",
+      "explicit_next_actions": [],
+      "deletion_disposition": "KEEP",
+      "deletion_reason_code": "STABLE_VERIFICATION_ENDPOINT",
+      "depth_role": "VERIFICATION",
+      "navigation_prominence": "ADDRESSABLE_VERIFICATION"
+    },
+    {
+      "route": "/evidence/VIS-FCP-REDRESS-PATH/",
+      "page_class": "evidence_detail",
+      "page_family": "Evidence Record",
+      "stable_object_id": "VIS-FCP-REDRESS-PATH",
+      "entry_modes": [
+        "deep_link",
+        "search",
+        "verification_link_or_search"
+      ],
+      "search_record_count": 2,
+      "unique_value_role": "CANONICAL_PUBLIC_VERIFICATION_ENDPOINT",
+      "value_basis": "CURRENT_PAGE_SPEC_AND_BOUND_GOVERNED_OBJECTS",
+      "next_action_policy": "SOURCE_RELATED_CORRECTION_OR_REUSE",
+      "explicit_next_actions": [],
+      "deletion_disposition": "KEEP",
+      "deletion_reason_code": "STABLE_VERIFICATION_ENDPOINT",
+      "depth_role": "VERIFICATION",
+      "navigation_prominence": "ADDRESSABLE_VERIFICATION"
+    },
+    {
+      "route": "/evidence/VIS-FINDEX-ACCESS-USE/",
+      "page_class": "evidence_detail",
+      "page_family": "Evidence Record",
+      "stable_object_id": "VIS-FINDEX-ACCESS-USE",
+      "entry_modes": [
+        "deep_link",
+        "search",
+        "verification_link_or_search"
+      ],
+      "search_record_count": 2,
+      "unique_value_role": "CANONICAL_PUBLIC_VERIFICATION_ENDPOINT",
+      "value_basis": "CURRENT_PAGE_SPEC_AND_BOUND_GOVERNED_OBJECTS",
+      "next_action_policy": "SOURCE_RELATED_CORRECTION_OR_REUSE",
+      "explicit_next_actions": [],
+      "deletion_disposition": "KEEP",
+      "deletion_reason_code": "STABLE_VERIFICATION_ENDPOINT",
+      "depth_role": "VERIFICATION",
+      "navigation_prominence": "ADDRESSABLE_VERIFICATION"
+    },
+    {
+      "route": "/evidence/VIS-FINDEX-BARRIERS/",
+      "page_class": "evidence_detail",
+      "page_family": "Evidence Record",
+      "stable_object_id": "VIS-FINDEX-BARRIERS",
+      "entry_modes": [
+        "deep_link",
+        "search",
+        "verification_link_or_search"
+      ],
+      "search_record_count": 2,
+      "unique_value_role": "CANONICAL_PUBLIC_VERIFICATION_ENDPOINT",
+      "value_basis": "CURRENT_PAGE_SPEC_AND_BOUND_GOVERNED_OBJECTS",
+      "next_action_policy": "SOURCE_RELATED_CORRECTION_OR_REUSE",
+      "explicit_next_actions": [],
+      "deletion_disposition": "KEEP",
+      "deletion_reason_code": "STABLE_VERIFICATION_ENDPOINT",
+      "depth_role": "VERIFICATION",
+      "navigation_prominence": "ADDRESSABLE_VERIFICATION"
+    },
+    {
+      "route": "/evidence/VIS-FINDEX-FLOW-CHANNELS/",
+      "page_class": "evidence_detail",
+      "page_family": "Evidence Record",
+      "stable_object_id": "VIS-FINDEX-FLOW-CHANNELS",
+      "entry_modes": [
+        "deep_link",
+        "search",
+        "verification_link_or_search"
+      ],
+      "search_record_count": 2,
+      "unique_value_role": "CANONICAL_PUBLIC_VERIFICATION_ENDPOINT",
+      "value_basis": "CURRENT_PAGE_SPEC_AND_BOUND_GOVERNED_OBJECTS",
+      "next_action_policy": "SOURCE_RELATED_CORRECTION_OR_REUSE",
+      "explicit_next_actions": [],
+      "deletion_disposition": "KEEP",
+      "deletion_reason_code": "STABLE_VERIFICATION_ENDPOINT",
+      "depth_role": "VERIFICATION",
+      "navigation_prominence": "ADDRESSABLE_VERIFICATION"
+    },
+    {
+      "route": "/evidence/VIS-FINDEX-GAPS/",
+      "page_class": "evidence_detail",
+      "page_family": "Evidence Record",
+      "stable_object_id": "VIS-FINDEX-GAPS",
+      "entry_modes": [
+        "deep_link",
+        "search",
+        "verification_link_or_search"
+      ],
+      "search_record_count": 2,
+      "unique_value_role": "CANONICAL_PUBLIC_VERIFICATION_ENDPOINT",
+      "value_basis": "CURRENT_PAGE_SPEC_AND_BOUND_GOVERNED_OBJECTS",
+      "next_action_policy": "SOURCE_RELATED_CORRECTION_OR_REUSE",
+      "explicit_next_actions": [],
+      "deletion_disposition": "KEEP",
+      "deletion_reason_code": "STABLE_VERIFICATION_ENDPOINT",
+      "depth_role": "VERIFICATION",
+      "navigation_prominence": "ADDRESSABLE_VERIFICATION"
+    },
+    {
+      "route": "/evidence/VIS-FINDEX-OBSERVED-WAVES/",
+      "page_class": "evidence_detail",
+      "page_family": "Evidence Record",
+      "stable_object_id": "VIS-FINDEX-OBSERVED-WAVES",
+      "entry_modes": [
+        "deep_link",
+        "search",
+        "verification_link_or_search"
+      ],
+      "search_record_count": 2,
+      "unique_value_role": "CANONICAL_PUBLIC_VERIFICATION_ENDPOINT",
+      "value_basis": "CURRENT_PAGE_SPEC_AND_BOUND_GOVERNED_OBJECTS",
+      "next_action_policy": "SOURCE_RELATED_CORRECTION_OR_REUSE",
+      "explicit_next_actions": [],
+      "deletion_disposition": "KEEP",
+      "deletion_reason_code": "STABLE_VERIFICATION_ENDPOINT",
+      "depth_role": "VERIFICATION",
+      "navigation_prominence": "ADDRESSABLE_VERIFICATION"
+    },
+    {
+      "route": "/evidence/VIS-FINDEX-RESILIENCE/",
+      "page_class": "evidence_detail",
+      "page_family": "Evidence Record",
+      "stable_object_id": "VIS-FINDEX-RESILIENCE",
+      "entry_modes": [
+        "deep_link",
+        "search",
+        "verification_link_or_search"
+      ],
+      "search_record_count": 2,
+      "unique_value_role": "CANONICAL_PUBLIC_VERIFICATION_ENDPOINT",
+      "value_basis": "CURRENT_PAGE_SPEC_AND_BOUND_GOVERNED_OBJECTS",
+      "next_action_policy": "SOURCE_RELATED_CORRECTION_OR_REUSE",
+      "explicit_next_actions": [],
+      "deletion_disposition": "KEEP",
+      "deletion_reason_code": "STABLE_VERIFICATION_ENDPOINT",
+      "depth_role": "VERIFICATION",
+      "navigation_prominence": "ADDRESSABLE_VERIFICATION"
+    },
+    {
+      "route": "/evidence/VIS-FINDEX-SAMPLE-SUPPORT/",
+      "page_class": "evidence_detail",
+      "page_family": "Evidence Record",
+      "stable_object_id": "VIS-FINDEX-SAMPLE-SUPPORT",
+      "entry_modes": [
+        "deep_link",
+        "search",
+        "verification_link_or_search"
+      ],
+      "search_record_count": 2,
+      "unique_value_role": "CANONICAL_PUBLIC_VERIFICATION_ENDPOINT",
+      "value_basis": "CURRENT_PAGE_SPEC_AND_BOUND_GOVERNED_OBJECTS",
+      "next_action_policy": "SOURCE_RELATED_CORRECTION_OR_REUSE",
+      "explicit_next_actions": [],
+      "deletion_disposition": "KEEP",
+      "deletion_reason_code": "STABLE_VERIFICATION_ENDPOINT",
+      "depth_role": "VERIFICATION",
+      "navigation_prominence": "ADDRESSABLE_VERIFICATION"
+    },
+    {
+      "route": "/evidence/VIS-FIRM-CONSTRAINTS/",
+      "page_class": "evidence_detail",
+      "page_family": "Evidence Record",
+      "stable_object_id": "VIS-FIRM-CONSTRAINTS",
+      "entry_modes": [
+        "deep_link",
+        "search",
+        "verification_link_or_search"
+      ],
+      "search_record_count": 2,
+      "unique_value_role": "CANONICAL_PUBLIC_VERIFICATION_ENDPOINT",
+      "value_basis": "CURRENT_PAGE_SPEC_AND_BOUND_GOVERNED_OBJECTS",
+      "next_action_policy": "SOURCE_RELATED_CORRECTION_OR_REUSE",
+      "explicit_next_actions": [],
+      "deletion_disposition": "KEEP",
+      "deletion_reason_code": "STABLE_VERIFICATION_ENDPOINT",
+      "depth_role": "VERIFICATION",
+      "navigation_prominence": "ADDRESSABLE_VERIFICATION"
+    },
+    {
+      "route": "/evidence/VIS-FIRM-FINANCE-PATH/",
+      "page_class": "evidence_detail",
+      "page_family": "Evidence Record",
+      "stable_object_id": "VIS-FIRM-FINANCE-PATH",
+      "entry_modes": [
+        "deep_link",
+        "search",
+        "verification_link_or_search"
+      ],
+      "search_record_count": 2,
+      "unique_value_role": "CANONICAL_PUBLIC_VERIFICATION_ENDPOINT",
+      "value_basis": "CURRENT_PAGE_SPEC_AND_BOUND_GOVERNED_OBJECTS",
+      "next_action_policy": "SOURCE_RELATED_CORRECTION_OR_REUSE",
+      "explicit_next_actions": [],
+      "deletion_disposition": "KEEP",
+      "deletion_reason_code": "STABLE_VERIFICATION_ENDPOINT",
+      "depth_role": "VERIFICATION",
+      "navigation_prominence": "ADDRESSABLE_VERIFICATION"
+    },
+    {
+      "route": "/evidence/VIS-FIRM-FINANCE-SEVERITY/",
+      "page_class": "evidence_detail",
+      "page_family": "Evidence Record",
+      "stable_object_id": "VIS-FIRM-FINANCE-SEVERITY",
+      "entry_modes": [
+        "deep_link",
+        "search",
+        "verification_link_or_search"
+      ],
+      "search_record_count": 2,
+      "unique_value_role": "CANONICAL_PUBLIC_VERIFICATION_ENDPOINT",
+      "value_basis": "CURRENT_PAGE_SPEC_AND_BOUND_GOVERNED_OBJECTS",
+      "next_action_policy": "SOURCE_RELATED_CORRECTION_OR_REUSE",
+      "explicit_next_actions": [],
+      "deletion_disposition": "KEEP",
+      "deletion_reason_code": "STABLE_VERIFICATION_ENDPOINT",
+      "depth_role": "VERIFICATION",
+      "navigation_prominence": "ADDRESSABLE_VERIFICATION"
+    },
+    {
+      "route": "/evidence/VIS-FL-EVIDENCE-LADDER/",
+      "page_class": "evidence_detail",
+      "page_family": "Evidence Record",
+      "stable_object_id": "VIS-FL-EVIDENCE-LADDER",
+      "entry_modes": [
+        "deep_link",
+        "search",
+        "verification_link_or_search"
+      ],
+      "search_record_count": 2,
+      "unique_value_role": "CANONICAL_PUBLIC_VERIFICATION_ENDPOINT",
+      "value_basis": "CURRENT_PAGE_SPEC_AND_BOUND_GOVERNED_OBJECTS",
+      "next_action_policy": "SOURCE_RELATED_CORRECTION_OR_REUSE",
+      "explicit_next_actions": [],
+      "deletion_disposition": "KEEP",
+      "deletion_reason_code": "STABLE_VERIFICATION_ENDPOINT",
+      "depth_role": "VERIFICATION",
+      "navigation_prominence": "ADDRESSABLE_VERIFICATION"
+    },
+    {
+      "route": "/evidence/VIS-INCLUSION-TRANSMISSION/",
+      "page_class": "evidence_detail",
+      "page_family": "Evidence Record",
+      "stable_object_id": "VIS-INCLUSION-TRANSMISSION",
+      "entry_modes": [
+        "deep_link",
+        "search",
+        "verification_link_or_search"
+      ],
+      "search_record_count": 2,
+      "unique_value_role": "CANONICAL_PUBLIC_VERIFICATION_ENDPOINT",
+      "value_basis": "CURRENT_PAGE_SPEC_AND_BOUND_GOVERNED_OBJECTS",
+      "next_action_policy": "SOURCE_RELATED_CORRECTION_OR_REUSE",
+      "explicit_next_actions": [],
+      "deletion_disposition": "KEEP",
+      "deletion_reason_code": "STABLE_VERIFICATION_ENDPOINT",
+      "depth_role": "VERIFICATION",
+      "navigation_prominence": "ADDRESSABLE_VERIFICATION"
+    },
+    {
+      "route": "/evidence/VIS-MECHANISM-METRIC-BRIDGE/",
+      "page_class": "evidence_detail",
+      "page_family": "Evidence Record",
+      "stable_object_id": "VIS-MECHANISM-METRIC-BRIDGE",
+      "entry_modes": [
+        "deep_link",
+        "search",
+        "verification_link_or_search"
+      ],
+      "search_record_count": 2,
+      "unique_value_role": "CANONICAL_PUBLIC_VERIFICATION_ENDPOINT",
+      "value_basis": "CURRENT_PAGE_SPEC_AND_BOUND_GOVERNED_OBJECTS",
+      "next_action_policy": "SOURCE_RELATED_CORRECTION_OR_REUSE",
+      "explicit_next_actions": [],
+      "deletion_disposition": "KEEP",
+      "deletion_reason_code": "STABLE_VERIFICATION_ENDPOINT",
+      "depth_role": "VERIFICATION",
+      "navigation_prominence": "ADDRESSABLE_VERIFICATION"
+    },
+    {
+      "route": "/evidence/VIS-MFI-2014-PANEL/",
+      "page_class": "evidence_detail",
+      "page_family": "Evidence Record",
+      "stable_object_id": "VIS-MFI-2014-PANEL",
+      "entry_modes": [
+        "deep_link",
+        "search",
+        "verification_link_or_search"
+      ],
+      "search_record_count": 2,
+      "unique_value_role": "CANONICAL_PUBLIC_VERIFICATION_ENDPOINT",
+      "value_basis": "CURRENT_PAGE_SPEC_AND_BOUND_GOVERNED_OBJECTS",
+      "next_action_policy": "SOURCE_RELATED_CORRECTION_OR_REUSE",
+      "explicit_next_actions": [],
+      "deletion_disposition": "KEEP",
+      "deletion_reason_code": "STABLE_VERIFICATION_ENDPOINT",
+      "depth_role": "VERIFICATION",
+      "navigation_prominence": "ADDRESSABLE_VERIFICATION"
+    },
+    {
+      "route": "/evidence/VIS-MFI-RUPTURE-LENS/",
+      "page_class": "evidence_detail",
+      "page_family": "Evidence Record",
+      "stable_object_id": "VIS-MFI-RUPTURE-LENS",
+      "entry_modes": [
+        "deep_link",
+        "search",
+        "verification_link_or_search"
+      ],
+      "search_record_count": 2,
+      "unique_value_role": "CANONICAL_PUBLIC_VERIFICATION_ENDPOINT",
+      "value_basis": "CURRENT_PAGE_SPEC_AND_BOUND_GOVERNED_OBJECTS",
+      "next_action_policy": "SOURCE_RELATED_CORRECTION_OR_REUSE",
+      "explicit_next_actions": [],
+      "deletion_disposition": "KEEP",
+      "deletion_reason_code": "STABLE_VERIFICATION_ENDPOINT",
+      "depth_role": "VERIFICATION",
+      "navigation_prominence": "ADDRESSABLE_VERIFICATION"
+    },
+    {
+      "route": "/evidence/VIS-MFI-SPINE/",
+      "page_class": "evidence_detail",
+      "page_family": "Evidence Record",
+      "stable_object_id": "VIS-MFI-SPINE",
+      "entry_modes": [
+        "deep_link",
+        "search",
+        "verification_link_or_search"
+      ],
+      "search_record_count": 2,
+      "unique_value_role": "CANONICAL_PUBLIC_VERIFICATION_ENDPOINT",
+      "value_basis": "CURRENT_PAGE_SPEC_AND_BOUND_GOVERNED_OBJECTS",
+      "next_action_policy": "SOURCE_RELATED_CORRECTION_OR_REUSE",
+      "explicit_next_actions": [],
+      "deletion_disposition": "KEEP",
+      "deletion_reason_code": "STABLE_VERIFICATION_ENDPOINT",
+      "depth_role": "VERIFICATION",
+      "navigation_prominence": "ADDRESSABLE_VERIFICATION"
+    },
+    {
+      "route": "/evidence/VIS-OECD-FCP-TIMELINE/",
+      "page_class": "evidence_detail",
+      "page_family": "Evidence Record",
+      "stable_object_id": "VIS-OECD-FCP-TIMELINE",
+      "entry_modes": [
+        "deep_link",
+        "search",
+        "verification_link_or_search"
+      ],
+      "search_record_count": 2,
+      "unique_value_role": "CANONICAL_PUBLIC_VERIFICATION_ENDPOINT",
+      "value_basis": "CURRENT_PAGE_SPEC_AND_BOUND_GOVERNED_OBJECTS",
+      "next_action_policy": "SOURCE_RELATED_CORRECTION_OR_REUSE",
+      "explicit_next_actions": [],
+      "deletion_disposition": "KEEP",
+      "deletion_reason_code": "STABLE_VERIFICATION_ENDPOINT",
+      "depth_role": "VERIFICATION",
+      "navigation_prominence": "ADDRESSABLE_VERIFICATION"
+    },
+    {
+      "route": "/evidence/VIS-PAYMENT-ANATOMY/",
+      "page_class": "evidence_detail",
+      "page_family": "Evidence Record",
+      "stable_object_id": "VIS-PAYMENT-ANATOMY",
+      "entry_modes": [
+        "deep_link",
+        "search",
+        "verification_link_or_search"
+      ],
+      "search_record_count": 2,
+      "unique_value_role": "CANONICAL_PUBLIC_VERIFICATION_ENDPOINT",
+      "value_basis": "CURRENT_PAGE_SPEC_AND_BOUND_GOVERNED_OBJECTS",
+      "next_action_policy": "SOURCE_RELATED_CORRECTION_OR_REUSE",
+      "explicit_next_actions": [],
+      "deletion_disposition": "KEEP",
+      "deletion_reason_code": "STABLE_VERIFICATION_ENDPOINT",
+      "depth_role": "VERIFICATION",
+      "navigation_prominence": "ADDRESSABLE_VERIFICATION"
+    },
+    {
+      "route": "/evidence/VIS-PAYMENT-RAILS/",
+      "page_class": "evidence_detail",
+      "page_family": "Evidence Record",
+      "stable_object_id": "VIS-PAYMENT-RAILS",
+      "entry_modes": [
+        "deep_link",
+        "search",
+        "verification_link_or_search"
+      ],
+      "search_record_count": 2,
+      "unique_value_role": "CANONICAL_PUBLIC_VERIFICATION_ENDPOINT",
+      "value_basis": "CURRENT_PAGE_SPEC_AND_BOUND_GOVERNED_OBJECTS",
+      "next_action_policy": "SOURCE_RELATED_CORRECTION_OR_REUSE",
+      "explicit_next_actions": [],
+      "deletion_disposition": "KEEP",
+      "deletion_reason_code": "STABLE_VERIFICATION_ENDPOINT",
+      "depth_role": "VERIFICATION",
+      "navigation_prominence": "ADDRESSABLE_VERIFICATION"
+    },
+    {
+      "route": "/evidence/VIS-POS-TERMINALS/",
+      "page_class": "evidence_detail",
+      "page_family": "Evidence Record",
+      "stable_object_id": "VIS-POS-TERMINALS",
+      "entry_modes": [
+        "deep_link",
+        "search",
+        "verification_link_or_search"
+      ],
+      "search_record_count": 2,
+      "unique_value_role": "CANONICAL_PUBLIC_VERIFICATION_ENDPOINT",
+      "value_basis": "CURRENT_PAGE_SPEC_AND_BOUND_GOVERNED_OBJECTS",
+      "next_action_policy": "SOURCE_RELATED_CORRECTION_OR_REUSE",
+      "explicit_next_actions": [],
+      "deletion_disposition": "KEEP",
+      "deletion_reason_code": "STABLE_VERIFICATION_ENDPOINT",
+      "depth_role": "VERIFICATION",
+      "navigation_prominence": "ADDRESSABLE_VERIFICATION"
+    },
+    {
+      "route": "/evidence/VIS-POS-TRANSACTIONS/",
+      "page_class": "evidence_detail",
+      "page_family": "Evidence Record",
+      "stable_object_id": "VIS-POS-TRANSACTIONS",
+      "entry_modes": [
+        "deep_link",
+        "search",
+        "verification_link_or_search"
+      ],
+      "search_record_count": 2,
+      "unique_value_role": "CANONICAL_PUBLIC_VERIFICATION_ENDPOINT",
+      "value_basis": "CURRENT_PAGE_SPEC_AND_BOUND_GOVERNED_OBJECTS",
+      "next_action_policy": "SOURCE_RELATED_CORRECTION_OR_REUSE",
+      "explicit_next_actions": [],
+      "deletion_disposition": "KEEP",
+      "deletion_reason_code": "STABLE_VERIFICATION_ENDPOINT",
+      "depth_role": "VERIFICATION",
+      "navigation_prominence": "ADDRESSABLE_VERIFICATION"
+    },
+    {
+      "route": "/evidence/VIS-POS-VALUE/",
+      "page_class": "evidence_detail",
+      "page_family": "Evidence Record",
+      "stable_object_id": "VIS-POS-VALUE",
+      "entry_modes": [
+        "deep_link",
+        "search",
+        "verification_link_or_search"
+      ],
+      "search_record_count": 2,
+      "unique_value_role": "CANONICAL_PUBLIC_VERIFICATION_ENDPOINT",
+      "value_basis": "CURRENT_PAGE_SPEC_AND_BOUND_GOVERNED_OBJECTS",
+      "next_action_policy": "SOURCE_RELATED_CORRECTION_OR_REUSE",
+      "explicit_next_actions": [],
+      "deletion_disposition": "KEEP",
+      "deletion_reason_code": "STABLE_VERIFICATION_ENDPOINT",
+      "depth_role": "VERIFICATION",
+      "navigation_prominence": "ADDRESSABLE_VERIFICATION"
+    },
+    {
+      "route": "/evidence/VIS-PROVIDER-OBSERVABILITY/",
+      "page_class": "evidence_detail",
+      "page_family": "Evidence Record",
+      "stable_object_id": "VIS-PROVIDER-OBSERVABILITY",
+      "entry_modes": [
+        "deep_link",
+        "search",
+        "verification_link_or_search"
+      ],
+      "search_record_count": 2,
+      "unique_value_role": "CANONICAL_PUBLIC_VERIFICATION_ENDPOINT",
+      "value_basis": "CURRENT_PAGE_SPEC_AND_BOUND_GOVERNED_OBJECTS",
+      "next_action_policy": "SOURCE_RELATED_CORRECTION_OR_REUSE",
+      "explicit_next_actions": [],
+      "deletion_disposition": "KEEP",
+      "deletion_reason_code": "STABLE_VERIFICATION_ENDPOINT",
+      "depth_role": "VERIFICATION",
+      "navigation_prominence": "ADDRESSABLE_VERIFICATION"
+    },
+    {
+      "route": "/evidence/VIS-PROVIDER-TIME/",
+      "page_class": "evidence_detail",
+      "page_family": "Evidence Record",
+      "stable_object_id": "VIS-PROVIDER-TIME",
+      "entry_modes": [
+        "deep_link",
+        "search",
+        "verification_link_or_search"
+      ],
+      "search_record_count": 2,
+      "unique_value_role": "CANONICAL_PUBLIC_VERIFICATION_ENDPOINT",
+      "value_basis": "CURRENT_PAGE_SPEC_AND_BOUND_GOVERNED_OBJECTS",
+      "next_action_policy": "SOURCE_RELATED_CORRECTION_OR_REUSE",
+      "explicit_next_actions": [],
+      "deletion_disposition": "KEEP",
+      "deletion_reason_code": "STABLE_VERIFICATION_ENDPOINT",
+      "depth_role": "VERIFICATION",
+      "navigation_prominence": "ADDRESSABLE_VERIFICATION"
+    },
+    {
+      "route": "/evidence/VIS-REMITTANCE-COST/",
+      "page_class": "evidence_detail",
+      "page_family": "Evidence Record",
+      "stable_object_id": "VIS-REMITTANCE-COST",
+      "entry_modes": [
+        "deep_link",
+        "search",
+        "verification_link_or_search"
+      ],
+      "search_record_count": 2,
+      "unique_value_role": "CANONICAL_PUBLIC_VERIFICATION_ENDPOINT",
+      "value_basis": "CURRENT_PAGE_SPEC_AND_BOUND_GOVERNED_OBJECTS",
+      "next_action_policy": "SOURCE_RELATED_CORRECTION_OR_REUSE",
+      "explicit_next_actions": [],
+      "deletion_disposition": "KEEP",
+      "deletion_reason_code": "STABLE_VERIFICATION_ENDPOINT",
+      "depth_role": "VERIFICATION",
+      "navigation_prominence": "ADDRESSABLE_VERIFICATION"
+    },
+    {
+      "route": "/evidence/VIS-REMITTANCE-MACRO/",
+      "page_class": "evidence_detail",
+      "page_family": "Evidence Record",
+      "stable_object_id": "VIS-REMITTANCE-MACRO",
+      "entry_modes": [
+        "deep_link",
+        "search",
+        "verification_link_or_search"
+      ],
+      "search_record_count": 2,
+      "unique_value_role": "CANONICAL_PUBLIC_VERIFICATION_ENDPOINT",
+      "value_basis": "CURRENT_PAGE_SPEC_AND_BOUND_GOVERNED_OBJECTS",
+      "next_action_policy": "SOURCE_RELATED_CORRECTION_OR_REUSE",
+      "explicit_next_actions": [],
+      "deletion_disposition": "KEEP",
+      "deletion_reason_code": "STABLE_VERIFICATION_ENDPOINT",
+      "depth_role": "VERIFICATION",
+      "navigation_prominence": "ADDRESSABLE_VERIFICATION"
+    },
+    {
+      "route": "/evidence/VIS-SOURCE-COMPARISON/",
+      "page_class": "evidence_detail",
+      "page_family": "Evidence Record",
+      "stable_object_id": "VIS-SOURCE-COMPARISON",
+      "entry_modes": [
+        "deep_link",
+        "search",
+        "verification_link_or_search"
+      ],
+      "search_record_count": 2,
+      "unique_value_role": "CANONICAL_PUBLIC_VERIFICATION_ENDPOINT",
+      "value_basis": "CURRENT_PAGE_SPEC_AND_BOUND_GOVERNED_OBJECTS",
+      "next_action_policy": "SOURCE_RELATED_CORRECTION_OR_REUSE",
+      "explicit_next_actions": [],
+      "deletion_disposition": "KEEP",
+      "deletion_reason_code": "STABLE_VERIFICATION_ENDPOINT",
+      "depth_role": "VERIFICATION",
+      "navigation_prominence": "ADDRESSABLE_VERIFICATION"
+    },
+    {
+      "route": "/evidence/VIS-TARGET-RESULT-STATE/",
+      "page_class": "evidence_detail",
+      "page_family": "Evidence Record",
+      "stable_object_id": "VIS-TARGET-RESULT-STATE",
+      "entry_modes": [
+        "deep_link",
+        "search",
+        "verification_link_or_search"
+      ],
+      "search_record_count": 2,
+      "unique_value_role": "CANONICAL_PUBLIC_VERIFICATION_ENDPOINT",
+      "value_basis": "CURRENT_PAGE_SPEC_AND_BOUND_GOVERNED_OBJECTS",
+      "next_action_policy": "SOURCE_RELATED_CORRECTION_OR_REUSE",
+      "explicit_next_actions": [],
+      "deletion_disposition": "KEEP",
+      "deletion_reason_code": "STABLE_VERIFICATION_ENDPOINT",
+      "depth_role": "VERIFICATION",
+      "navigation_prominence": "ADDRESSABLE_VERIFICATION"
+    },
+    {
+      "route": "/evidence/XW-FMIIP-005/",
+      "page_class": "evidence_detail",
+      "page_family": "Evidence Record",
+      "stable_object_id": "XW-FMIIP-005",
+      "entry_modes": [
+        "deep_link",
+        "search",
+        "verification_link_or_search"
+      ],
+      "search_record_count": 2,
+      "unique_value_role": "CANONICAL_PUBLIC_VERIFICATION_ENDPOINT",
+      "value_basis": "CURRENT_PAGE_SPEC_AND_BOUND_GOVERNED_OBJECTS",
+      "next_action_policy": "SOURCE_RELATED_CORRECTION_OR_REUSE",
+      "explicit_next_actions": [],
+      "deletion_disposition": "KEEP",
+      "deletion_reason_code": "STABLE_VERIFICATION_ENDPOINT",
+      "depth_role": "VERIFICATION",
+      "navigation_prominence": "ADDRESSABLE_VERIFICATION"
+    },
+    {
+      "route": "/evidence/compare/",
+      "page_class": "static",
+      "page_family": "Comparison",
+      "stable_object_id": null,
+      "entry_modes": [
+        "deep_link",
+        "search",
+        "evidence_hub"
+      ],
+      "search_record_count": 1,
+      "unique_value_role": "COMPARABILITY_TEST",
+      "value_basis": "CURRENT_PAGE_SPEC_AND_BOUND_GOVERNED_OBJECTS",
+      "next_action_policy": "OPEN_SELECTED_EVIDENCE_RECORD",
+      "explicit_next_actions": [
+        "/evidence/",
+        "/data/",
+        "/methodology/"
+      ],
+      "deletion_disposition": "KEEP",
+      "deletion_reason_code": "UNIQUE_PRODUCT_JOB",
+      "depth_role": "VERIFICATION",
+      "navigation_prominence": "CONTEXTUAL"
+    },
+    {
+      "route": "/evidence/",
+      "page_class": "static",
+      "page_family": "Evidence Directory",
+      "stable_object_id": null,
+      "entry_modes": [
+        "deep_link",
+        "global_navigation",
+        "footer",
+        "search"
+      ],
+      "search_record_count": 2,
+      "unique_value_role": "DISCOVER_VERIFICATION_RECORDS",
+      "value_basis": "CURRENT_PAGE_SPEC_AND_BOUND_GOVERNED_OBJECTS",
+      "next_action_policy": "OPEN_EVIDENCE_RECORD_OR_COMPARE",
+      "explicit_next_actions": [
+        "/evidence/compare/",
+        "/data/",
+        "/methodology/"
+      ],
+      "deletion_disposition": "KEEP",
+      "deletion_reason_code": "UNIQUE_PRODUCT_JOB",
+      "depth_role": "DISCOVERY",
+      "navigation_prominence": "GLOBAL_PRIMARY"
+    },
+    {
+      "route": "/explore/",
+      "page_class": "static",
+      "page_family": "Question Entry",
+      "stable_object_id": null,
+      "entry_modes": [
+        "deep_link",
+        "global_navigation",
+        "footer",
+        "search"
+      ],
+      "search_record_count": 1,
+      "unique_value_role": "QUESTION_LED_ENTRY",
+      "value_basis": "CURRENT_PAGE_SPEC_AND_BOUND_GOVERNED_OBJECTS",
+      "next_action_policy": "DOMAIN_ANSWER",
+      "explicit_next_actions": [],
+      "deletion_disposition": "KEEP",
+      "deletion_reason_code": "UNIQUE_PRODUCT_JOB",
+      "depth_role": "DISCOVERY",
+      "navigation_prominence": "GLOBAL_PRIMARY"
+    },
+    {
+      "route": "/finance/",
+      "page_class": "static",
+      "page_family": "Domain Answer",
+      "stable_object_id": null,
+      "entry_modes": [
+        "deep_link",
+        "question_entry",
+        "search"
+      ],
+      "search_record_count": 2,
+      "unique_value_role": "BOUNDED_DOMAIN_ANSWER",
+      "value_basis": "CURRENT_PAGE_SPEC_AND_BOUND_GOVERNED_OBJECTS",
+      "next_action_policy": "VERIFY_PRIMARY_EVIDENCE",
+      "explicit_next_actions": [],
+      "deletion_disposition": "KEEP",
+      "deletion_reason_code": "UNIQUE_PRODUCT_JOB",
+      "depth_role": "ANSWER",
+      "navigation_prominence": "CONTEXTUAL"
+    },
+    {
+      "route": "/firms/",
+      "page_class": "static",
+      "page_family": "Domain Answer",
+      "stable_object_id": null,
+      "entry_modes": [
+        "deep_link",
+        "question_entry",
+        "search"
+      ],
+      "search_record_count": 2,
+      "unique_value_role": "BOUNDED_DOMAIN_ANSWER",
+      "value_basis": "CURRENT_PAGE_SPEC_AND_BOUND_GOVERNED_OBJECTS",
+      "next_action_policy": "VERIFY_PRIMARY_EVIDENCE",
+      "explicit_next_actions": [],
+      "deletion_disposition": "KEEP",
+      "deletion_reason_code": "UNIQUE_PRODUCT_JOB",
+      "depth_role": "ANSWER",
+      "navigation_prominence": "CONTEXTUAL"
+    },
+    {
+      "route": "/",
+      "page_class": "static",
+      "page_family": "Orientation",
+      "stable_object_id": null,
+      "entry_modes": [
+        "deep_link",
+        "identity",
+        "search"
+      ],
+      "search_record_count": 2,
+      "unique_value_role": "ORIENT_TO_SYSTEM",
+      "value_basis": "CURRENT_PAGE_SPEC_AND_BOUND_GOVERNED_OBJECTS",
+      "next_action_policy": "TASK_OR_QUESTION",
+      "explicit_next_actions": [],
+      "deletion_disposition": "KEEP",
+      "deletion_reason_code": "UNIQUE_PRODUCT_JOB",
+      "depth_role": "ORIENTATION",
+      "navigation_prominence": "IDENTITY_ENTRY"
+    },
+    {
+      "route": "/measurement/",
+      "page_class": "static",
+      "page_family": "Measurement",
+      "stable_object_id": null,
+      "entry_modes": [
+        "deep_link",
+        "global_navigation",
+        "footer",
+        "search"
+      ],
+      "search_record_count": 12,
+      "unique_value_role": "DECISION_LINKED_EVIDENCE_GAPS",
+      "value_basis": "CURRENT_PAGE_SPEC_AND_BOUND_GOVERNED_OBJECTS",
+      "next_action_policy": "RETURN_TO_DOMAIN_OR_VERIFY_EVIDENCE",
+      "explicit_next_actions": [
+        "/explore/",
+        "/evidence/"
+      ],
+      "deletion_disposition": "KEEP",
+      "deletion_reason_code": "UNIQUE_PRODUCT_JOB",
+      "depth_role": "DECISION_GAP",
+      "navigation_prominence": "PRIMARY_CHILD"
+    },
+    {
+      "route": "/methodology/",
+      "page_class": "static",
+      "page_family": "Reference / Trust",
+      "stable_object_id": null,
+      "entry_modes": [
+        "deep_link",
+        "global_navigation",
+        "footer",
+        "search"
+      ],
+      "search_record_count": 1,
+      "unique_value_role": "REFERENCE_OR_PUBLIC_TRUST",
+      "value_basis": "CURRENT_PAGE_SPEC_AND_BOUND_GOVERNED_OBJECTS",
+      "next_action_policy": "CONTEXTUAL_NEXT_ACTION",
+      "explicit_next_actions": [
+        "/evidence/",
+        "/data/",
+        "/corrections/"
+      ],
+      "deletion_disposition": "KEEP",
+      "deletion_reason_code": "UNIQUE_PRODUCT_JOB",
+      "depth_role": "REFERENCE_TRUST",
+      "navigation_prominence": "PRIMARY_CHILD"
+    },
+    {
+      "route": "/payments/",
+      "page_class": "static",
+      "page_family": "Domain Answer",
+      "stable_object_id": null,
+      "entry_modes": [
+        "deep_link",
+        "question_entry",
+        "search"
+      ],
+      "search_record_count": 2,
+      "unique_value_role": "BOUNDED_DOMAIN_ANSWER",
+      "value_basis": "CURRENT_PAGE_SPEC_AND_BOUND_GOVERNED_OBJECTS",
+      "next_action_policy": "VERIFY_PRIMARY_EVIDENCE",
+      "explicit_next_actions": [],
+      "deletion_disposition": "KEEP",
+      "deletion_reason_code": "UNIQUE_PRODUCT_JOB",
+      "depth_role": "ANSWER",
+      "navigation_prominence": "CONTEXTUAL"
+    },
+    {
+      "route": "/people/",
+      "page_class": "static",
+      "page_family": "Domain Answer",
+      "stable_object_id": null,
+      "entry_modes": [
+        "deep_link",
+        "question_entry",
+        "search"
+      ],
+      "search_record_count": 2,
+      "unique_value_role": "BOUNDED_DOMAIN_ANSWER",
+      "value_basis": "CURRENT_PAGE_SPEC_AND_BOUND_GOVERNED_OBJECTS",
+      "next_action_policy": "VERIFY_PRIMARY_EVIDENCE",
+      "explicit_next_actions": [],
+      "deletion_disposition": "KEEP",
+      "deletion_reason_code": "UNIQUE_PRODUCT_JOB",
+      "depth_role": "ANSWER",
+      "navigation_prominence": "CONTEXTUAL"
+    },
+    {
+      "route": "/privacy/",
+      "page_class": "operational",
+      "page_family": "Reference / Trust",
+      "stable_object_id": null,
+      "entry_modes": [
+        "deep_link",
+        "trust_navigation",
+        "footer",
+        "search"
+      ],
+      "search_record_count": 1,
+      "unique_value_role": "REFERENCE_OR_PUBLIC_TRUST",
+      "value_basis": "CURRENT_PAGE_SPEC_AND_BOUND_GOVERNED_OBJECTS",
+      "next_action_policy": "CONTEXTUAL_NEXT_ACTION",
+      "explicit_next_actions": [
+        "/contact/",
+        "/terms/"
+      ],
+      "deletion_disposition": "KEEP",
+      "deletion_reason_code": "UNIQUE_PRODUCT_JOB",
+      "depth_role": "REFERENCE_TRUST",
+      "navigation_prominence": "SECONDARY_TRUST"
+    },
+    {
+      "route": "/providers/",
+      "page_class": "static",
+      "page_family": "Domain Answer",
+      "stable_object_id": null,
+      "entry_modes": [
+        "deep_link",
+        "question_entry",
+        "search"
+      ],
+      "search_record_count": 2,
+      "unique_value_role": "BOUNDED_DOMAIN_ANSWER",
+      "value_basis": "CURRENT_PAGE_SPEC_AND_BOUND_GOVERNED_OBJECTS",
+      "next_action_policy": "VERIFY_PRIMARY_EVIDENCE",
+      "explicit_next_actions": [],
+      "deletion_disposition": "KEEP",
+      "deletion_reason_code": "UNIQUE_PRODUCT_JOB",
+      "depth_role": "ANSWER",
+      "navigation_prominence": "CONTEXTUAL"
+    },
+    {
+      "route": "/readings/after-transfer-persistence/",
+      "page_class": "reading_detail",
+      "page_family": "Reading",
+      "stable_object_id": "CWR-010",
+      "entry_modes": [
+        "deep_link",
+        "reading_index",
+        "search"
+      ],
+      "search_record_count": 2,
+      "unique_value_role": "BOUNDED_CROSS_SOURCE_SYNTHESIS",
+      "value_basis": "CURRENT_PAGE_SPEC_AND_BOUND_GOVERNED_OBJECTS",
+      "next_action_policy": "VERIFY_BOUND_EVIDENCE_RECORDS",
+      "explicit_next_actions": [],
+      "deletion_disposition": "KEEP",
+      "deletion_reason_code": "UNIQUE_ANALYTICAL_OBJECT",
+      "depth_role": "SYNTHESIS",
+      "navigation_prominence": "CONTEXTUAL"
+    },
+    {
+      "route": "/readings/banking-jump-measurement-basis/",
+      "page_class": "reading_detail",
+      "page_family": "Reading",
+      "stable_object_id": "CWR-002",
+      "entry_modes": [
+        "deep_link",
+        "reading_index",
+        "search"
+      ],
+      "search_record_count": 2,
+      "unique_value_role": "BOUNDED_CROSS_SOURCE_SYNTHESIS",
+      "value_basis": "CURRENT_PAGE_SPEC_AND_BOUND_GOVERNED_OBJECTS",
+      "next_action_policy": "VERIFY_BOUND_EVIDENCE_RECORDS",
+      "explicit_next_actions": [],
+      "deletion_disposition": "KEEP",
+      "deletion_reason_code": "UNIQUE_ANALYTICAL_OBJECT",
+      "depth_role": "SYNTHESIS",
+      "navigation_prominence": "CONTEXTUAL"
+    },
+    {
+      "route": "/readings/define-what-you-count/",
+      "page_class": "reading_detail",
+      "page_family": "Reading",
+      "stable_object_id": "CWR-003",
+      "entry_modes": [
+        "deep_link",
+        "reading_index",
+        "search"
+      ],
+      "search_record_count": 2,
+      "unique_value_role": "BOUNDED_CROSS_SOURCE_SYNTHESIS",
+      "value_basis": "CURRENT_PAGE_SPEC_AND_BOUND_GOVERNED_OBJECTS",
+      "next_action_policy": "VERIFY_BOUND_EVIDENCE_RECORDS",
+      "explicit_next_actions": [],
+      "deletion_disposition": "KEEP",
+      "deletion_reason_code": "UNIQUE_ANALYTICAL_OBJECT",
+      "depth_role": "SYNTHESIS",
+      "navigation_prominence": "CONTEXTUAL"
+    },
+    {
+      "route": "/readings/digital-workaround-not-yet-durable-inclusion/",
+      "page_class": "reading_detail",
+      "page_family": "Reading",
+      "stable_object_id": "CWR-005",
+      "entry_modes": [
+        "deep_link",
+        "reading_index",
+        "search"
+      ],
+      "search_record_count": 2,
+      "unique_value_role": "BOUNDED_CROSS_SOURCE_SYNTHESIS",
+      "value_basis": "CURRENT_PAGE_SPEC_AND_BOUND_GOVERNED_OBJECTS",
+      "next_action_policy": "VERIFY_BOUND_EVIDENCE_RECORDS",
+      "explicit_next_actions": [],
+      "deletion_disposition": "KEEP",
+      "deletion_reason_code": "UNIQUE_ANALYTICAL_OBJECT",
+      "depth_role": "SYNTHESIS",
+      "navigation_prominence": "CONTEXTUAL"
+    },
+    {
+      "route": "/readings/finance-constraint-different-questions/",
+      "page_class": "reading_detail",
+      "page_family": "Reading",
+      "stable_object_id": "CWR-008",
+      "entry_modes": [
+        "deep_link",
+        "reading_index",
+        "search"
+      ],
+      "search_record_count": 2,
+      "unique_value_role": "BOUNDED_CROSS_SOURCE_SYNTHESIS",
+      "value_basis": "CURRENT_PAGE_SPEC_AND_BOUND_GOVERNED_OBJECTS",
+      "next_action_policy": "VERIFY_BOUND_EVIDENCE_RECORDS",
+      "explicit_next_actions": [],
+      "deletion_disposition": "KEEP",
+      "deletion_reason_code": "UNIQUE_ANALYTICAL_OBJECT",
+      "depth_role": "SYNTHESIS",
+      "navigation_prominence": "CONTEXTUAL"
+    },
+    {
+      "route": "/readings/from-rail-to-result-missing-middle/",
+      "page_class": "reading_detail",
+      "page_family": "Reading",
+      "stable_object_id": "CWR-009",
+      "entry_modes": [
+        "deep_link",
+        "reading_index",
+        "search"
+      ],
+      "search_record_count": 2,
+      "unique_value_role": "BOUNDED_CROSS_SOURCE_SYNTHESIS",
+      "value_basis": "CURRENT_PAGE_SPEC_AND_BOUND_GOVERNED_OBJECTS",
+      "next_action_policy": "VERIFY_BOUND_EVIDENCE_RECORDS",
+      "explicit_next_actions": [],
+      "deletion_disposition": "KEEP",
+      "deletion_reason_code": "UNIQUE_ANALYTICAL_OBJECT",
+      "depth_role": "SYNTHESIS",
+      "navigation_prominence": "CONTEXTUAL"
+    },
+    {
+      "route": "/readings/gender-gap-measured-causes-open/",
+      "page_class": "reading_detail",
+      "page_family": "Reading",
+      "stable_object_id": "CWR-007",
+      "entry_modes": [
+        "deep_link",
+        "reading_index",
+        "search"
+      ],
+      "search_record_count": 2,
+      "unique_value_role": "BOUNDED_CROSS_SOURCE_SYNTHESIS",
+      "value_basis": "CURRENT_PAGE_SPEC_AND_BOUND_GOVERNED_OBJECTS",
+      "next_action_policy": "VERIFY_BOUND_EVIDENCE_RECORDS",
+      "explicit_next_actions": [],
+      "deletion_disposition": "KEEP",
+      "deletion_reason_code": "UNIQUE_ANALYTICAL_OBJECT",
+      "depth_role": "SYNTHESIS",
+      "navigation_prominence": "CONTEXTUAL"
+    },
+    {
+      "route": "/readings/",
+      "page_class": "static",
+      "page_family": "Reading Index",
+      "stable_object_id": null,
+      "entry_modes": [
+        "deep_link",
+        "global_navigation",
+        "footer",
+        "search"
+      ],
+      "search_record_count": 1,
+      "unique_value_role": "DISCOVER_ANALYTICAL_READINGS",
+      "value_basis": "CURRENT_PAGE_SPEC_AND_BOUND_GOVERNED_OBJECTS",
+      "next_action_policy": "OPEN_READING",
+      "explicit_next_actions": [
+        "/measurement/",
+        "/evidence/"
+      ],
+      "deletion_disposition": "KEEP",
+      "deletion_reason_code": "UNIQUE_PRODUCT_JOB",
+      "depth_role": "DISCOVERY",
+      "navigation_prominence": "GLOBAL_PRIMARY"
+    },
+    {
+      "route": "/readings/microfinance-structural-divergence/",
+      "page_class": "reading_detail",
+      "page_family": "Reading",
+      "stable_object_id": "CWR-006",
+      "entry_modes": [
+        "deep_link",
+        "reading_index",
+        "search"
+      ],
+      "search_record_count": 2,
+      "unique_value_role": "BOUNDED_CROSS_SOURCE_SYNTHESIS",
+      "value_basis": "CURRENT_PAGE_SPEC_AND_BOUND_GOVERNED_OBJECTS",
+      "next_action_policy": "VERIFY_BOUND_EVIDENCE_RECORDS",
+      "explicit_next_actions": [],
+      "deletion_disposition": "KEEP",
+      "deletion_reason_code": "UNIQUE_ANALYTICAL_OBJECT",
+      "depth_role": "SYNTHESIS",
+      "navigation_prominence": "CONTEXTUAL"
+    },
+    {
+      "route": "/readings/reforms-newer-than-people-evidence/",
+      "page_class": "reading_detail",
+      "page_family": "Reading",
+      "stable_object_id": "CWR-004",
+      "entry_modes": [
+        "deep_link",
+        "reading_index",
+        "search"
+      ],
+      "search_record_count": 2,
+      "unique_value_role": "BOUNDED_CROSS_SOURCE_SYNTHESIS",
+      "value_basis": "CURRENT_PAGE_SPEC_AND_BOUND_GOVERNED_OBJECTS",
+      "next_action_policy": "VERIFY_BOUND_EVIDENCE_RECORDS",
+      "explicit_next_actions": [],
+      "deletion_disposition": "KEEP",
+      "deletion_reason_code": "UNIQUE_ANALYTICAL_OBJECT",
+      "depth_role": "SYNTHESIS",
+      "navigation_prominence": "CONTEXTUAL"
+    },
+    {
+      "route": "/readings/same-year-different-number/",
+      "page_class": "reading_detail",
+      "page_family": "Reading",
+      "stable_object_id": "CWR-001",
+      "entry_modes": [
+        "deep_link",
+        "reading_index",
+        "search"
+      ],
+      "search_record_count": 2,
+      "unique_value_role": "BOUNDED_CROSS_SOURCE_SYNTHESIS",
+      "value_basis": "CURRENT_PAGE_SPEC_AND_BOUND_GOVERNED_OBJECTS",
+      "next_action_policy": "VERIFY_BOUND_EVIDENCE_RECORDS",
+      "explicit_next_actions": [],
+      "deletion_disposition": "KEEP",
+      "deletion_reason_code": "UNIQUE_ANALYTICAL_OBJECT",
+      "depth_role": "SYNTHESIS",
+      "navigation_prominence": "CONTEXTUAL"
+    },
+    {
+      "route": "/reforms/",
+      "page_class": "static",
+      "page_family": "Domain Answer",
+      "stable_object_id": null,
+      "entry_modes": [
+        "deep_link",
+        "question_entry",
+        "search"
+      ],
+      "search_record_count": 2,
+      "unique_value_role": "BOUNDED_DOMAIN_ANSWER",
+      "value_basis": "CURRENT_PAGE_SPEC_AND_BOUND_GOVERNED_OBJECTS",
+      "next_action_policy": "VERIFY_PRIMARY_EVIDENCE",
+      "explicit_next_actions": [],
+      "deletion_disposition": "KEEP",
+      "deletion_reason_code": "UNIQUE_PRODUCT_JOB",
+      "depth_role": "ANSWER",
+      "navigation_prominence": "CONTEXTUAL"
+    },
+    {
+      "route": "/remittances/",
+      "page_class": "static",
+      "page_family": "Domain Answer",
+      "stable_object_id": null,
+      "entry_modes": [
+        "deep_link",
+        "question_entry",
+        "search"
+      ],
+      "search_record_count": 2,
+      "unique_value_role": "BOUNDED_DOMAIN_ANSWER",
+      "value_basis": "CURRENT_PAGE_SPEC_AND_BOUND_GOVERNED_OBJECTS",
+      "next_action_policy": "VERIFY_PRIMARY_EVIDENCE",
+      "explicit_next_actions": [],
+      "deletion_disposition": "KEEP",
+      "deletion_reason_code": "UNIQUE_PRODUCT_JOB",
+      "depth_role": "ANSWER",
+      "navigation_prominence": "CONTEXTUAL"
+    },
+    {
+      "route": "/rights/",
+      "page_class": "operational",
+      "page_family": "Reference / Trust",
+      "stable_object_id": null,
+      "entry_modes": [
+        "deep_link",
+        "trust_navigation",
+        "footer",
+        "search"
+      ],
+      "search_record_count": 1,
+      "unique_value_role": "REFERENCE_OR_PUBLIC_TRUST",
+      "value_basis": "CURRENT_PAGE_SPEC_AND_BOUND_GOVERNED_OBJECTS",
+      "next_action_policy": "CONTEXTUAL_NEXT_ACTION",
+      "explicit_next_actions": [
+        "/data/",
+        "/terms/",
+        "/contact/"
+      ],
+      "deletion_disposition": "KEEP",
+      "deletion_reason_code": "UNIQUE_PRODUCT_JOB",
+      "depth_role": "REFERENCE_TRUST",
+      "navigation_prominence": "SECONDARY_TRUST"
+    },
+    {
+      "route": "/terms/",
+      "page_class": "operational",
+      "page_family": "Reference / Trust",
+      "stable_object_id": null,
+      "entry_modes": [
+        "deep_link",
+        "trust_navigation",
+        "footer",
+        "search"
+      ],
+      "search_record_count": 1,
+      "unique_value_role": "REFERENCE_OR_PUBLIC_TRUST",
+      "value_basis": "CURRENT_PAGE_SPEC_AND_BOUND_GOVERNED_OBJECTS",
+      "next_action_policy": "CONTEXTUAL_NEXT_ACTION",
+      "explicit_next_actions": [
+        "/rights/",
+        "/privacy/",
+        "/contact/"
+      ],
+      "deletion_disposition": "KEEP",
+      "deletion_reason_code": "UNIQUE_PRODUCT_JOB",
+      "depth_role": "REFERENCE_TRUST",
+      "navigation_prominence": "SECONDARY_TRUST"
+    },
+    {
+      "route": "/evidence/CLM-062/",
+      "page_class": "evidence_detail",
+      "page_family": "Evidence Record",
+      "stable_object_id": "CLM-062",
+      "entry_modes": [
+        "deep_link",
+        "search",
+        "verification_link_or_search"
+      ],
+      "search_record_count": 2,
+      "unique_value_role": "CANONICAL_PUBLIC_VERIFICATION_ENDPOINT",
+      "value_basis": "CURRENT_PAGE_SPEC_AND_BOUND_GOVERNED_OBJECTS",
+      "next_action_policy": "SOURCE_RELATED_CORRECTION_OR_REUSE",
+      "explicit_next_actions": [],
+      "deletion_disposition": "KEEP",
+      "deletion_reason_code": "STABLE_VERIFICATION_ENDPOINT",
+      "depth_role": "VERIFICATION",
+      "navigation_prominence": "ADDRESSABLE_VERIFICATION"
+    },
+    {
+      "route": "/evidence/FMIIP-BASELINE-2025-01/",
+      "page_class": "evidence_detail",
+      "page_family": "Evidence Record",
+      "stable_object_id": "FMIIP-BASELINE-2025-01",
+      "entry_modes": [
+        "deep_link",
+        "search",
+        "verification_link_or_search"
+      ],
+      "search_record_count": 2,
+      "unique_value_role": "CANONICAL_PUBLIC_VERIFICATION_ENDPOINT",
+      "value_basis": "CURRENT_PAGE_SPEC_AND_BOUND_GOVERNED_OBJECTS",
+      "next_action_policy": "SOURCE_RELATED_CORRECTION_OR_REUSE",
+      "explicit_next_actions": [],
+      "deletion_disposition": "KEEP",
+      "deletion_reason_code": "STABLE_VERIFICATION_ENDPOINT",
+      "depth_role": "VERIFICATION",
+      "navigation_prominence": "ADDRESSABLE_VERIFICATION"
+    }
+  ],
+  "journeys": [
+    {
+      "journey_id": "J01_FIRST_TIME_PUBLIC",
+      "persona": "First-time public reader / citizen / student",
+      "job": "Understand the strongest people-side evidence without learning the site taxonomy first.",
+      "entry_mode": "identity",
+      "path": [
+        "/",
+        "/explore/",
+        "/people/",
+        "/evidence/CLM-001/"
+      ],
+      "success_condition": "Plain answer precedes method depth; the verification record exposes scope, period, limitation and source."
+    },
+    {
+      "journey_id": "J02_JOURNALIST_NUMBER_VERIFY",
+      "persona": "Journalist",
+      "job": "Verify a quoted 11.9% figure safely.",
+      "entry_mode": "search",
+      "search_query_en": "11.9",
+      "search_query_ar": "11.9",
+      "expected_search_routes": [
+        "/evidence/CLM-001/",
+        "/people/"
+      ],
+      "path": [
+        "/evidence/CLM-001/",
+        "/data/"
+      ],
+      "success_condition": "The record makes the observation clock, population/base, limitation and original-source path visible before reuse."
+    },
+    {
+      "journey_id": "J03_JOURNALIST_READING_TO_EVIDENCE",
+      "persona": "Journalist / editor",
+      "job": "Challenge an analytical Reading and reach the evidence it relies on.",
+      "entry_mode": "deep_link",
+      "path": [
+        "/readings/gender-gap-measured-causes-open/",
+        "/evidence/CLM-002/",
+        "/data/"
+      ],
+      "success_condition": "Reading detail provides direct links to bound Evidence Records rather than asking the user to rediscover them."
+    },
+    {
+      "journey_id": "J04_RESEARCHER_COMPARABILITY",
+      "persona": "Researcher / PhD student",
+      "job": "Decide whether two evidence objects are legitimately comparable.",
+      "entry_mode": "global_navigation",
+      "path": [
+        "/evidence/",
+        "/evidence/compare/"
+      ],
+      "success_condition": "Compatibility is tested before values are compared, and selected records can be opened directly."
+    },
+    {
+      "journey_id": "J05_REGULATOR_REFORM_CHAIN",
+      "persona": "Regulator / senior decision-maker",
+      "job": "Understand how far reform evidence reaches without treating a rule as an outcome.",
+      "entry_mode": "question_entry",
+      "path": [
+        "/",
+        "/explore/",
+        "/reforms/",
+        "/evidence/CLM-011/"
+      ],
+      "success_condition": "Rule, implementation and outcome states remain separated and the primary verification route is explicit."
+    },
+    {
+      "journey_id": "J06_TECHNICAL_PAYMENTS",
+      "persona": "Central-bank / payments technical analyst",
+      "job": "Inspect POS infrastructure change and verify the underlying administrative evidence.",
+      "entry_mode": "search",
+      "search_query_en": "POS terminals",
+      "search_query_ar": "نقاط البيع",
+      "expected_search_routes": [
+        "/payments/",
+        "/evidence/CLM-003/"
+      ],
+      "path": [
+        "/payments/",
+        "/evidence/CLM-003/",
+        "/data/"
+      ],
+      "success_condition": "Terminals, transactions, value, people and use are not collapsed; source records are reachable."
+    },
+    {
+      "journey_id": "J07_PROVIDER_MARKET_SIGNAL",
+      "persona": "Bank / MFB / MFI / PSP / exchange provider",
+      "job": "Understand evidenced provider status without inferring operation or national reach.",
+      "entry_mode": "question_entry",
+      "path": [
+        "/explore/",
+        "/providers/",
+        "/evidence/CLM-009/"
+      ],
+      "success_condition": "Listing/licensing and dated status are visible while operation remains a separate evidence question."
+    },
+    {
+      "journey_id": "J08_DEVELOPMENT_PARTNER",
+      "persona": "World Bank / IMF / DFI / donor analyst",
+      "job": "Move from a domain answer to method and source verification.",
+      "entry_mode": "global_navigation",
+      "path": [
+        "/people/",
+        "/evidence/CLM-001/",
+        "/methodology/"
+      ],
+      "success_condition": "The same evidence object can be checked at answer, record and method depth without a second source of truth."
+    },
+    {
+      "journey_id": "J09_HUMANITARIAN_FLOWS",
+      "persona": "Humanitarian / cash-transfer / social-protection practitioner",
+      "job": "Distinguish cash-transfer delivery, remittance/macro flows and durable financial use rather than treating successful payment delivery as inclusion.",
+      "entry_mode": "search_or_question_entry",
+      "path": [
+        "/readings/after-transfer-persistence/",
+        "/evidence/CLM-045/",
+        "/payments/",
+        "/data/"
+      ],
+      "success_condition": "The journey separates payment delivery from post-transfer persistence, keeps programme evidence bounded and reconnects the question to the wider payment system and source path.",
+      "search_query_en": "cash transfer durable use",
+      "search_query_ar": "التحويل النقدي استمرار الاستخدام",
+      "expected_search_routes": [
+        "/readings/after-transfer-persistence/",
+        "/evidence/CLM-045/"
+      ]
+    },
+    {
+      "journey_id": "J10_CHALLENGE_CORRECTION",
+      "persona": "Any user challenging a public record",
+      "job": "Report a suspected error while preserving the public record until review.",
+      "entry_mode": "deep_link",
+      "path": [
+        "/evidence/CLM-001/",
+        "/corrections/",
+        "/contact/"
+      ],
+      "success_condition": "Stable record identity and correction/report pathways remain connected; no silent change is implied."
+    },
+    {
+      "journey_id": "J11_REUSE_RIGHTS",
+      "persona": "Researcher / journalist / reuser",
+      "job": "Determine what may be cited, factually used or redistributed.",
+      "entry_mode": "footer",
+      "path": [
+        "/data/",
+        "/rights/",
+        "/terms/"
+      ],
+      "success_condition": "Rights and reuse are discoverable from data/source work and remain separate from factual use and citation."
+    },
+    {
+      "journey_id": "J12_ACCESSIBILITY_REPORT",
+      "persona": "Keyboard / screen-reader / accessibility user",
+      "job": "Find the accessibility position and report a problem.",
+      "entry_mode": "footer",
+      "path": [
+        "/accessibility/",
+        "/contact/"
+      ],
+      "success_condition": "Accessibility status and the monitored report path are both discoverable without a hidden route."
+    },
+    {
+      "journey_id": "J13_PAYMENT_RAIL_EXPLAINER",
+      "persona": "Public / merchant / financial-provider / programme user",
+      "job": "Understand what FPS, RTGS, QR/e-wallet interconnection and YPCC mean in the current reform sequence without mistaking milestones for live adoption.",
+      "entry_mode": "search",
+      "search_query_en": "RTGS",
+      "search_query_ar": "التسوية الإجمالية الفورية",
+      "expected_search_routes": [
+        "/payments/",
+        "/reforms/"
+      ],
+      "path": [
+        "/payments/",
+        "/reforms/",
+        "/evidence/CLM-018/",
+        "/data/"
+      ],
+      "success_condition": "The product explains the rail/institution roles in plain language, separates project/design/integration/institutional states from observed use, and provides a verification path."
+    }
+  ],
+  "search_smoke_tests": [
+    {
+      "query_en": "CLM-002",
+      "query_ar": "CLM-002",
+      "expected_routes": [
+        "/evidence/CLM-002/"
+      ]
+    },
+    {
+      "query_en": "11.9",
+      "query_ar": "11.9",
+      "expected_routes": [
+        "/evidence/CLM-001/",
+        "/people/"
+      ]
+    },
+    {
+      "query_en": "POS terminals",
+      "query_ar": "نقاط البيع",
+      "expected_routes": [
+        "/payments/",
+        "/evidence/CLM-003/"
+      ]
+    },
+    {
+      "query_en": "gender gap",
+      "query_ar": "الفجوة بين الرجال والنساء",
+      "expected_routes": [
+        "/readings/gender-gap-measured-causes-open/",
+        "/evidence/CLM-002/",
+        "/people/"
+      ]
+    },
+    {
+      "query_en": "same year different number",
+      "query_ar": "العام نفسه رقم مختلف",
+      "expected_routes": [
+        "/readings/same-year-different-number/"
+      ]
+    },
+    {
+      "query_en": "RTGS",
+      "query_ar": "التسوية الإجمالية الفورية",
+      "expected_routes": [
+        "/payments/",
+        "/reforms/"
+      ]
+    },
+    {
+      "query_en": "Fast Payment System",
+      "query_ar": "نظام الدفع السريع",
+      "expected_routes": [
+        "/payments/",
+        "/reforms/"
+      ]
+    },
+    {
+      "query_en": "FMIIP",
+      "query_ar": "FMIIP",
+      "expected_routes": [
+        "/payments/",
+        "/reforms/"
+      ]
+    },
+    {
+      "query_en": "cash transfer durable use",
+      "query_ar": "التحويل النقدي استمرار الاستخدام",
+      "expected_routes": [
+        "/readings/after-transfer-persistence/",
+        "/evidence/CLM-045/"
+      ]
+    },
+    {
+      "query_en": "law",
+      "query_ar": "قانون",
+      "expected_routes": [
+        "/reforms/",
+        "/data/"
+      ],
+      "rule": "PRIMARY_EXPECTED_ROUTE_IN_TOP_3",
+      "basis": "PB-0494 (SEARCH_DISCOVERY_CLOSURE.md §2)"
+    },
+    {
+      "query_en": "regulation",
+      "query_ar": "لائحة",
+      "expected_routes": [
+        "/reforms/",
+        "/data/"
+      ],
+      "rule": "PRIMARY_EXPECTED_ROUTE_IN_TOP_3",
+      "basis": "PB-0494 (SEARCH_DISCOVERY_CLOSURE.md §2)"
+    },
+    {
+      "query_en": "decision",
+      "query_ar": "قرار",
+      "expected_routes": [
+        "/providers/",
+        "/reforms/",
+        "/data/"
+      ],
+      "rule": "PRIMARY_EXPECTED_ROUTE_IN_TOP_3",
+      "basis": "PB-0494 (SEARCH_DISCOVERY_CLOSURE.md §2)"
+    },
+    {
+      "query_en": "remittances",
+      "query_ar": "الحوالات",
+      "expected_routes": [
+        "/remittances/"
+      ],
+      "rule": "PRIMARY_EXPECTED_ROUTE_IN_TOP_3",
+      "basis": "PB-0494 (SEARCH_DISCOVERY_CLOSURE.md §2)"
+    },
+    {
+      "query_en": "POS terminals",
+      "query_ar": "نقاط البيع",
+      "expected_routes": [
+        "/payments/"
+      ],
+      "rule": "PRIMARY_EXPECTED_ROUTE_IN_TOP_3",
+      "basis": "PB-0494 (SEARCH_DISCOVERY_CLOSURE.md §2)"
+    },
+    {
+      "query_en": "income",
+      "query_ar": "الدخل",
+      "expected_routes": [
+        "/people/"
+      ],
+      "rule": "PRIMARY_EXPECTED_ROUTE_IN_TOP_3",
+      "basis": "PB-0494 (SEARCH_DISCOVERY_CLOSURE.md §2)"
+    },
+    {
+      "query_en": "financial literacy",
+      "query_ar": "الثقافة المالية",
+      "expected_routes": [
+        "/people/",
+        "/reforms/"
+      ],
+      "rule": "PRIMARY_EXPECTED_ROUTE_IN_TOP_3",
+      "basis": "PB-0494 (SEARCH_DISCOVERY_CLOSURE.md §2)"
+    },
+    {
+      "query_en": "microfinance",
+      "query_ar": "التمويل الأصغر",
+      "expected_routes": [
+        "/finance/",
+        "/readings/microfinance-structural-divergence/"
+      ],
+      "rule": "PRIMARY_EXPECTED_ROUTE_IN_TOP_3",
+      "basis": "PB-0494 (SEARCH_DISCOVERY_CLOSURE.md §2)"
+    },
+    {
+      "query_en": "exchange rate",
+      "query_ar": "سعر الصرف",
+      "expected_routes": [
+        "/finance/",
+        "/data/"
+      ],
+      "rule": "PRIMARY_EXPECTED_ROUTE_IN_TOP_3",
+      "basis": "PB-0494 (SEARCH_DISCOVERY_CLOSURE.md §2)"
+    },
+    {
+      "query_en": "measurement agenda",
+      "query_ar": "أجندة القياس",
+      "expected_routes": [
+        "/measurement/"
+      ],
+      "rule": "PRIMARY_EXPECTED_ROUTE_IN_TOP_3",
+      "basis": "PB-0494 (SEARCH_DISCOVERY_CLOSURE.md §2)"
+    },
+    {
+      "query_en": "e-wallet",
+      "query_ar": "المحافظ الإلكترونية",
+      "expected_routes": [
+        "/payments/",
+        "/providers/"
+      ],
+      "rule": "PRIMARY_EXPECTED_ROUTE_IN_TOP_3",
+      "basis": "PB-0494 (SEARCH_DISCOVERY_CLOSURE.md §2)"
+    },
+    {
+      "query_en": "credit",
+      "query_ar": "الائتمان",
+      "expected_routes": [
+        "/finance/",
+        "/firms/"
+      ],
+      "rule": "PRIMARY_EXPECTED_ROUTE_IN_TOP_3",
+      "basis": "PB-0494 (SEARCH_DISCOVERY_CLOSURE.md §2)"
+    }
+  ],
+  "route_deletion_test": {
+    "decision": "NO_CONTROLLED_ROUTE_DELETION_IN_R4",
+    "rationale": "The apparent redundancy is functional depth, not duplicate truth: indexes discover, domain pages answer, Evidence Records verify stable objects, Readings synthesize, and trust routes carry distinct public obligations. R4 removes navigation dead-ends and duplicate discovery burden rather than deleting stable verification endpoints.",
+    "evidence_record_rule": "All Evidence Record routes remain addressable. Search/deep-link-only records may be intentionally non-prominent; lack of a global/static menu link is not by itself grounds for deletion because stable verification and citation value would be lost.",
+    "reading_rule": "All 10 Reading detail routes remain because each is a bounded analytical object with its own thesis, evidence bindings and prohibited inference.",
+    "trust_rule": "Accessibility, Contact, Corrections, Privacy, Rights and Terms remain distinct public trust jobs; they are grouped in the footer rather than hidden or merged into one legal page.",
+    "prominence_rule": "Keeping a route does not mean promoting it in navigation: only six global items are primary. Evidence Records remain stable, addressable verification endpoints reached through search, Evidence, Readings or contextual links; domain and trust surfaces remain contextual.",
+    "counterfactual_result": "Deleting the stable Evidence Record routes would break citation, Source Reference Closure and direct verification. Deleting domain pages would remove bounded answers. Deleting index pages would remove discovery. Deleting trust pages would remove distinct public obligations. No route family can be removed without material loss; prominence is therefore reduced instead of route identity."
+  },
+  "legacy_challenge_disposition": {
+    "accepted_lessons": [
+      "Human-centered task framing is useful when it routes into controlled evidence rather than practical advice or uncontrolled calculators.",
+      "Question-first entry and progressive depth are retained; Home orients while Explore carries the complete question map.",
+      "Deep Evidence and Reading routes need explicit backtracking/verification wayfinding.",
+      "Footer links should be grouped by product, method/measurement and trust/reuse rather than behaving as an unexplained second sitemap.",
+      "Legacy citizen-journey material contributes only the idea of starting from a practical human question; all calculators, advice and factual assumptions are rejected unless replaced by controlled evidence."
+    ],
+    "rejected_or_not_promoted": [
+      "No citizen-versus-expert fact mode or audience-specific source of truth.",
+      "No legacy calculators, advice, unsupported prevalence claims, old 29-route taxonomy, generic four-KPI page template or old visual identity is promoted.",
+      "No archive factual proposition changes current controlled evidence in R4."
+    ]
+  },
+  "public_search_record_count": 435,
+  "r6_information_design_contract": {
+    "status": "R6_CLOSED",
+    "principle": "ONE_TRUTH__MULTIPLE_DEPTHS__TASK_LED_ENTRY__VERIFICATION_ALWAYS_AVAILABLE",
+    "first_screen_rule": "Every reader-facing page must establish its job, strongest supported answer or orientation, evidence clock/scope when consequential, and the primary next action before secondary detail.",
+    "depth_model": [
+      {
+        "level": "ORIENT",
+        "job": "What is this and where should I start?",
+        "families": [
+          "Orientation",
+          "Question Entry"
+        ]
+      },
+      {
+        "level": "ANSWER",
+        "job": "What does the evidence currently support for this question/domain?",
+        "families": [
+          "Domain Answer"
+        ]
+      },
+      {
+        "level": "SYNTHESISE",
+        "job": "How should multiple evidence objects be read together without flattening differences?",
+        "families": [
+          "Reading",
+          "Reading Index"
+        ]
+      },
+      {
+        "level": "VERIFY",
+        "job": "What exactly is this evidence, when/for whom, and where did it come from?",
+        "families": [
+          "Evidence Directory",
+          "Evidence Record",
+          "Comparison",
+          "Data & Source"
+        ]
+      },
+      {
+        "level": "MEASURE",
+        "job": "What missing evidence would materially change the answer?",
+        "families": [
+          "Measurement"
+        ]
+      },
+      {
+        "level": "TRUST",
+        "job": "How is the product governed, corrected, reused and accessed?",
+        "families": [
+          "Reference / Trust"
+        ]
+      }
+    ],
+    "dashboard_policy": {
+      "universal_dashboard": "PROHIBITED",
+      "reason": "The evidence does not share one clock, unit, denominator or universe.",
+      "allowed_surface": "HETEROGENEOUS_EVIDENCE_SNAPSHOT",
+      "required_per_signal": [
+        "metric_or_object",
+        "unit",
+        "universe_or_scope",
+        "period",
+        "evidence_state",
+        "verification_link"
+      ],
+      "forbidden": [
+        "composite_score",
+        "traffic_light_overall_status",
+        "ranked_winner",
+        "single_current_state_kpi",
+        "silent_normalisation"
+      ]
+    },
+    "progressive_disclosure_rule": "Hide density, never hide material limitations. A limitation that changes interpretation must be visible in the first meaningful evidence layer.",
+    "visual_rule": "Use a visual only when it reduces cognitive work while preserving unit, denominator/universe, period/currentness and prohibited inference; otherwise use ordered text or a table.",
+    "mobile_rule": "At 320–400px preserve answer, scope/clock, limitation and verification action before secondary narrative; no hover-only meaning and no horizontal page-level scroll.",
+    "rtl_rule": "Arabic is composed natively in RTL; component order may differ from English when required for reading logic while stable objects and meanings remain invariant."
+  },
+  "interaction_tools": [
+    {
+      "tool_id": "global_search",
+      "label": "Global bilingual search",
+      "runtime": "STATIC_LOCAL_REQUIRED",
+      "state": "query in URL where practical; dialog state ephemeral",
+      "inputs": [
+        "public search records (count: content/public_inventory.json search_records)",
+        "Arabic-normalised and English search text"
+      ],
+      "core_behaviour": [
+        "query-as-you-type with deterministic local ranking",
+        "exact stable-ID match outranks title, then summary, then body text",
+        "result-type labels for page/evidence/reading/source/measurement",
+        "facets may filter by result type and domain but may not alter evidence meaning",
+        "deep-link directly to the governed object/source anchor",
+        "no-results explains that absence from search is not evidence of absence"
+      ],
+      "accessibility": [
+        "Ctrl/Cmd+K and / open search when not typing",
+        "dialog focus enters query and returns to opener",
+        "results are keyboard reachable and announced",
+        "no result depends on colour alone"
+      ],
+      "failure": "If the local index fails, navigation and direct routes remain usable; show a technical-unavailable state, not an evidence-absence state."
+    },
+    {
+      "tool_id": "evidence_workbench",
+      "label": "Evidence discovery and verification",
+      "runtime": "STATIC_LOCAL_REQUIRED",
+      "state": "filters may be encoded in URL for shareable discovery state",
+      "inputs": [
+        "Evidence Records (count: content/public_inventory.json evidence_records)",
+        "Evidence Passports",
+        "public claims (count: content/public_inventory.json public_claims)",
+        "source closure"
+      ],
+      "core_behaviour": [
+        "search/facet before browse-all",
+        "show evidence family, period/currentness, universe/scope and material limitation clues in result rows",
+        "open canonical Evidence Record as the verification endpoint",
+        "allow add-to-Compare only for public evidence records",
+        "never expose backend-only objects or raw governance enums"
+      ]
+    },
+    {
+      "tool_id": "compare",
+      "label": "Compatibility-first evidence comparison",
+      "runtime": "STATIC_LOCAL_REQUIRED",
+      "state": "2–4 selected evidence IDs encoded in URL query for shareable/deep-linkable comparison",
+      "inputs": [
+        "public evidence record fields only"
+      ],
+      "core_behaviour": [
+        "show compatibility/boundary rows before numeric values",
+        "compare definition, universe, geography, unit, period, method, source/currentness and limitation",
+        "state whether records are directly comparable, comparable only with qualification, or not directly comparable based on field differences; do not convert this into a truth score",
+        "provide one-click path back to each Evidence Record"
+      ],
+      "forbidden": [
+        "averaging unlike values",
+        "normalising to a common score without governed method",
+        "winner selection",
+        "policy ranking"
+      ]
+    },
+    {
+      "tool_id": "source_resource_library",
+      "label": "Source locator register and curated Resource Library",
+      "runtime": "STATIC_LOCAL_REQUIRED",
+      "state": "source/category filter encoded in URL where useful",
+      "inputs": [
+        "source records (count: content/public_inventory.json sources)",
+        "public original locators (count: content/public_inventory.json public_locators)",
+        "curated resource cards (count: content/public_inventory.json curated_resources)"
+      ],
+      "core_behaviour": [
+        "distinguish original evidence sources from interpretive/implementation references",
+        "filter by controlled resource_category where present",
+        "deep-link to source anchor from evidence and search",
+        "outbound links open original publisher locations",
+        "do not mirror/download third-party source files unless redistribution is explicitly permitted"
+      ]
+    },
+    {
+      "tool_id": "citation",
+      "label": "Context-preserving citation",
+      "runtime": "STATIC_LOCAL_REQUIRED",
+      "state": "no server state",
+      "core_behaviour": [
+        "copy governed citation plus canonical route",
+        "preserve stable evidence/source identifier when relevant",
+        "do not imply CauseWay is the original publisher of third-party data"
+      ],
+      "inputs": null
+    },
+    {
+      "tool_id": "language_switch",
+      "label": "Object-preserving Arabic/English switch",
+      "runtime": "STATIC_LOCAL_REQUIRED",
+      "state": "local preference may persist; route/query/hash must be preserved",
+      "core_behaviour": [
+        "switch edition without changing object, filter, comparison set or source anchor",
+        "no locale-specific fact differences"
+      ],
+      "inputs": null
+    },
+    {
+      "tool_id": "correction",
+      "label": "Correction/report path",
+      "runtime": "STATIC_LOCAL_REQUIRED_WITH_OPTIONAL_FUTURE_SUBMISSION_ADAPTER",
+      "state": "originating record/route may be passed in URL",
+      "core_behaviour": [
+        "prefill the evidence/source ID and originating route where available",
+        "static path remains usable even when no submission API exists",
+        "future submission cannot directly mutate evidence"
+      ],
+      "inputs": null
+    }
+  ],
+  "hard_state_acceptance": [
+    {
+      "state_id": "dense_domain",
+      "route": "/people/",
+      "must_prove": "High evidence density remains scannable; survey wave/fieldwork/universe/limitation are not detached from the headline figure."
+    },
+    {
+      "state_id": "sparse_unknown",
+      "route": "/access/",
+      "must_prove": "Unknown geography is visibly unknown, not rendered as zero or an empty-map implication."
+    },
+    {
+      "state_id": "institutional_sequence",
+      "route": "/payments/",
+      "must_prove": "FPS, RTGS, interoperability, institution-building, operation, use and outcome are visually distinct states."
+    },
+    {
+      "state_id": "vintage_conflict",
+      "route": "/remittances/",
+      "must_prove": "Same-year revisions and observed/estimated/projected states are visually legible without selecting a winner."
+    },
+    {
+      "state_id": "verification_dense",
+      "route": "/evidence/CLM-003/",
+      "must_prove": "Raw totals and source-displayed percentages can coexist with the discrepancy visible and the limitation prominent."
+    },
+    {
+      "state_id": "verification_sparse",
+      "route": "/evidence/CLM-015/",
+      "must_prove": "A semantic/control object with no source expected is not styled as missing evidence or an error."
+    },
+    {
+      "state_id": "compare_unlike",
+      "route": "/evidence/compare/",
+      "must_prove": "The UI prevents visual pressure to compare unlike units/universes and makes the boundary the first conclusion."
+    },
+    {
+      "state_id": "source_scale",
+      "route": "/data/",
+      "must_prove": "All source records remain discoverable without a wall-of-links interface; the curated resource cards are visibly curated, not a separate authority."
+    },
+    {
+      "state_id": "reading_longform",
+      "route": "/readings/same-year-different-number/",
+      "must_prove": "Analytical narrative remains bounded, readable and directly traceable to verification records."
+    },
+    {
+      "state_id": "measurement_nonranking",
+      "route": "/measurement/",
+      "must_prove": "P0/P1 reads as evidence-sequencing within this agenda, never as national policy or spending priority."
+    },
+    {
+      "state_id": "trust_plain_language",
+      "route": "/about/",
+      "must_prove": "Purpose, CauseWay role, limits, source authority and correction are understandable without backend terminology."
+    },
+    {
+      "state_id": "mobile_rtl",
+      "route": "/ar/payments/",
+      "must_prove": "At 320–400px Arabic order, numeric/Latin isolation, tables, controls and verification path remain coherent."
+    }
+  ],
+  "static_progressive_enhancement_boundary": {
+    "must_work_without_backend": [
+      "all controlled routes (one per Page Spec) in both languages",
+      "navigation/deep links",
+      "search",
+      "Evidence discovery",
+      "Compare",
+      "source/resource filtering",
+      "citation copy/fallback",
+      "language switching",
+      "correction context",
+      "all governed visual/table/text fallbacks"
+    ],
+    "may_be_optional_adapter_later": [
+      "analytics",
+      "server-side issue submission",
+      "remote data refresh",
+      "CMS/editorial workflow",
+      "live status feeds"
+    ],
+    "never_runtime_authority": [
+      "remote API response",
+      "CMS value",
+      "analytics event",
+      "user-submitted correction",
+      "third-party source page"
+    ]
+  },
+  "trust_navigation": [
+    {
+      "route": "/about/",
+      "label_en": "About",
+      "label_ar": "عن الموقع"
+    },
+    {
+      "route": "/corrections/",
+      "label_en": "Corrections",
+      "label_ar": "التصحيحات"
+    },
+    {
+      "route": "/rights/",
+      "label_en": "Rights & reuse",
+      "label_ar": "الحقوق وإعادة الاستخدام"
+    },
+    {
+      "route": "/accessibility/",
+      "label_en": "Accessibility",
+      "label_ar": "إتاحة الوصول"
+    },
+    {
+      "route": "/privacy/",
+      "label_en": "Privacy",
+      "label_ar": "الخصوصية"
+    },
+    {
+      "route": "/terms/",
+      "label_en": "Terms",
+      "label_ar": "شروط الاستخدام"
+    },
+    {
+      "route": "/contact/",
+      "label_en": "Contact",
+      "label_ar": "التواصل"
+    }
+  ]
+}

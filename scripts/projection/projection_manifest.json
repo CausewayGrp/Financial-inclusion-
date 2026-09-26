@@ -1,0 +1,602 @@
+{
+  "schema": "YFI_PROJECTION_MANIFEST/1.0",
+  "generator": {
+    "name": "yfi-projection-generator",
+    "version": "1.3.0"
+  },
+  "controlled_inputs": {
+    "local_dataset_catalog_template": {
+      "path": "scripts/projection/controlled_inputs/local_dataset_catalog_template.json"
+    },
+    "closure_templates": {
+      "path": "scripts/projection/controlled_inputs/closure_templates.json"
+    },
+    "source_reference_templates": {
+      "path": "scripts/projection/controlled_inputs/source_reference_templates.json"
+    },
+    "search_templates": {
+      "path": "scripts/projection/controlled_inputs/search_templates.json"
+    },
+    "page_spec_templates": {
+      "path": "scripts/projection/controlled_inputs/page_spec_templates.json"
+    },
+    "page_spec_design_intent": {
+      "path": "scripts/projection/controlled_inputs/page_spec_design_intent.json"
+    },
+    "page_spec_binding_overrides": {
+      "path": "scripts/projection/controlled_inputs/page_spec_binding_overrides.json"
+    },
+    "public_inventory_contract": {
+      "path": "scripts/projection/controlled_inputs/public_inventory_contract.json"
+    },
+    "visual_design_contract": {
+      "path": "scripts/projection/controlled_inputs/visual_design_contract.json"
+    }
+  },
+  "outputs": [
+    {
+      "path": "content/questions.json",
+      "kind": "GENERATED",
+      "rule_id": "keyed_projection",
+      "sheet": "05_QUESTIONS",
+      "block": "main",
+      "stable_key": "question_id",
+      "transformation": "One record per non-blank main-block row, keys in header order, values verbatim unless a field transform is declared.",
+      "trailing_newline": true
+    },
+    {
+      "path": "content/interface_copy.json",
+      "kind": "GENERATED",
+      "rule_id": "block_projection",
+      "sheet": "04_NAV_UX",
+      "block": "Governed interface copy",
+      "stable_key": "ui_id",
+      "transformation": "One record per non-blank row of the 04 titled block 'Governed interface copy' (Stage 1: PB-0006, PB-0008 and Lead additions), keys in header order, values verbatim.",
+      "trailing_newline": true
+    },
+    {
+      "path": "content/search_aliases.json",
+      "kind": "GENERATED",
+      "rule_id": "block_projection",
+      "sheet": "04_NAV_UX",
+      "block": "Search aliases",
+      "stable_key": "alias_id",
+      "transformation": "One record per row of the 04 titled block 'Search aliases' (PB-0492): governed bilingual discovery aliases; an alias never asserts that two things mean the same.",
+      "trailing_newline": true
+    },
+    {
+      "path": "evidence/evidence_objects.json",
+      "kind": "GENERATED",
+      "rule_id": "keyed_projection",
+      "sheet": "06_EVIDENCE_OBJECTS",
+      "block": "main",
+      "stable_key": "object_id",
+      "fields": {
+        "public_routes": "pipe_route_list",
+        "source_dependencies": "semicolon_list",
+        "source_links": "json"
+      },
+      "derived_fields": [
+        {
+          "name": "public_route_list",
+          "from": "public_routes",
+          "rule": "route_list_slash"
+        },
+        {
+          "name": "does_not_establish_en",
+          "from": "limitations_en",
+          "rule": "boundary_head"
+        },
+        {
+          "name": "does_not_establish_ar",
+          "from": "limitations_ar",
+          "rule": "boundary_head"
+        },
+        {
+          "name": "measurement_limitation_en",
+          "from": "limitations_en",
+          "rule": "boundary_tail"
+        },
+        {
+          "name": "measurement_limitation_ar",
+          "from": "limitations_ar",
+          "rule": "boundary_tail"
+        }
+      ],
+      "transformation": "One record per non-blank main-block row, keys in header order, values verbatim unless a field transform is declared. source_dependencies is projected as its ';'-separated token list and lineage_state verbatim (PB-0003). limitations_* carries part A (what the evidence does not establish) and, when recorded, part B (the limit of the measure) after the authored delimiter ' | '; both languages must carry the same structure. does_not_establish_* and measurement_limitation_* are the two parts (Pre-Tranche-C P4.3). public_routes is the authored ' | ' route list, projected as a list of routes with a trailing slash (Tranche C JRN-02).",
+      "trailing_newline": false,
+      "boundary_parity": [
+        [
+          "limitations_en",
+          "limitations_ar"
+        ]
+      ]
+    },
+    {
+      "path": "evidence/public_claims.json",
+      "kind": "DERIVED",
+      "rule_id": "public_claims",
+      "sheet": "07_PUBLIC_CLAIMS",
+      "block": "main",
+      "stable_key": "claim_id",
+      "fields": {
+        "evidence_inputs": "json",
+        "public_routes": "json"
+      },
+      "derived_fields": [
+        {
+          "name": "public_route_list",
+          "from": "public_routes",
+          "rule": "route_list_slash"
+        }
+      ],
+      "transformation": "07 holds claim metadata only (theme, type, badge, inputs, routes); headline, copy, does-not-prove and change trigger are the claim's Evidence Record fields in 06. Tranche C one-owner rule.",
+      "trailing_newline": false,
+      "dependencies": [
+        "evidence/evidence_objects.json"
+      ]
+    },
+    {
+      "path": "content/page_sections.json",
+      "kind": "DERIVED",
+      "rule_id": "page_sections",
+      "sheet": "03_PAGE_SECTIONS",
+      "block": "main",
+      "stable_key": null,
+      "transformation": "03 sections of every route except Evidence Record routes; each Evidence Record route gets two derived sections (06 summary; governed reading guidance UI-EVID-READING-GUIDANCE-H / UI-EVID-READING-GUIDANCE). Tranche C one-owner rule.",
+      "trailing_newline": true,
+      "dependencies": [
+        "evidence/evidence_objects.json",
+        "content/interface_copy.json"
+      ]
+    },
+    {
+      "path": "content/readings.json",
+      "kind": "GENERATED",
+      "rule_id": "keyed_projection",
+      "sheet": "08_READINGS",
+      "block": "main",
+      "stable_key": "reading_id",
+      "fields": {
+        "route": "slash",
+        "claim_bindings": "json",
+        "evidence_bindings": "json",
+        "source_bindings": "json",
+        "visual_bindings": "json",
+        "audiences": "json",
+        "verification_bindings": "json",
+        "domain_surface_routes": "semicolon_list",
+        "domain_context_routes": "semicolon_list"
+      },
+      "transformation": "One record per non-blank main-block row, keys in header order, values verbatim unless a field transform is declared.",
+      "trailing_newline": false
+    },
+    {
+      "path": "content/site_map.json",
+      "kind": "DERIVED",
+      "rule_id": "site_map",
+      "sheet": "02_SITE_MAP",
+      "block": "main",
+      "stable_key": "route",
+      "transformation": "One record per 02 route. Evidence Record and Reading routes take their titles from 06 / 08 (their 02 title cells are blank); full_copy is derived as title + page sections (no longer stored in the Master). Tranche C one-owner rule.",
+      "trailing_newline": true,
+      "dependencies": [
+        "evidence/evidence_objects.json",
+        "content/readings.json",
+        "content/page_sections.json"
+      ]
+    },
+    {
+      "path": "content/reading_sections.json",
+      "kind": "DERIVED",
+      "rule_id": "reading_sections",
+      "sheet": "09_READING_SECTIONS",
+      "block": "main",
+      "owners": "08_READINGS thesis (section 1) + 03_PAGE_SECTIONS (sections 2-9), via projections; 09 is the section index only",
+      "stable_key": null,
+      "transformation": "One record per 09 index row (reading_id, section_order, section_id; the section-1 title labels the thesis). Copy is taken from its owner: section 1 from 08 thesis_en/ar; sections 2-9 heading and body from the 03 section of the Reading route. The 09 copy cells (all orders) and title cells (orders 2-9) are empty; generation stops if text is written into them, if an owner is empty, or if a 03 Reading section falls outside the index (Pre-Tranche-C P4.2, tightened in P4-D).",
+      "trailing_newline": false,
+      "dependencies": [
+        "content/readings.json",
+        "content/page_sections.json"
+      ]
+    },
+    {
+      "path": "content/measurement_agenda.json",
+      "kind": "GENERATED",
+      "rule_id": "keyed_projection",
+      "sheet": "10_MEASUREMENT_AGENDA",
+      "block": "main",
+      "stable_key": "measurement_id",
+      "fields": {
+        "dimensions_en": "json",
+        "affected_routes": "json"
+      },
+      "derived_fields": [
+        {
+          "name": "affected_route_list",
+          "from": "affected_routes",
+          "rule": "route_list_slash"
+        }
+      ],
+      "transformation": "One record per non-blank main-block row, keys in header order, values verbatim unless a field transform is declared.",
+      "trailing_newline": false
+    },
+    {
+      "path": "visuals/visual_library.json",
+      "kind": "GENERATED",
+      "rule_id": "keyed_projection",
+      "sheet": "11_VISUAL_LIBRARY",
+      "block": "main",
+      "stable_key": "visual_id",
+      "fields": {
+        "public_routes": "json"
+      },
+      "derived_fields": [
+        {
+          "name": "public_route_list",
+          "from": "public_routes",
+          "rule": "route_list_copy"
+        }
+      ],
+      "transformation": "One record per non-blank main-block row, keys in header order, values verbatim unless a field transform is declared.",
+      "trailing_newline": false
+    },
+    {
+      "path": "visuals/system_relationships.json",
+      "kind": "GENERATED",
+      "rule_id": "keyed_projection",
+      "sheet": "13_SYSTEM_RELATIONSHIPS",
+      "block": "main",
+      "stable_key": "link_id",
+      "transformation": "One record per non-blank main-block row, keys in header order, values verbatim unless a field transform is declared.",
+      "trailing_newline": true
+    },
+    {
+      "path": "visuals/system_chronology.json",
+      "kind": "GENERATED",
+      "rule_id": "keyed_projection",
+      "sheet": "14_SYSTEM_CHRONOLOGY",
+      "block": "main",
+      "stable_key": "event_id",
+      "transformation": "One record per non-blank main-block row, keys in header order, values verbatim unless a field transform is declared.",
+      "trailing_newline": true
+    },
+    {
+      "path": "sources/source_library.json",
+      "kind": "GENERATED",
+      "rule_id": "keyed_projection",
+      "sheet": "15_SOURCE_LIBRARY",
+      "block": "main",
+      "stable_key": "source_id",
+      "transformation": "One record per non-blank main-block row, keys in header order, values verbatim unless a field transform is declared.",
+      "trailing_newline": true
+    },
+    {
+      "path": "sources/master_dataset_catalog.json",
+      "kind": "GENERATED",
+      "rule_id": "keyed_projection",
+      "sheet": "16_DATASET_CATALOG",
+      "block": "main",
+      "stable_key": "dataset_id",
+      "transformation": "One record per non-blank main-block row, keys in header order, values verbatim unless a field transform is declared.",
+      "trailing_newline": false
+    },
+    {
+      "path": "sources/indicator_library.json",
+      "kind": "GENERATED",
+      "rule_id": "keyed_projection",
+      "sheet": "17_INDICATOR_LIBRARY",
+      "block": "main",
+      "stable_key": null,
+      "fields": {
+        "period_min": "numeric_text",
+        "period_max": "numeric_text"
+      },
+      "transformation": "One record per non-blank main-block row, keys in header order, values verbatim unless a field transform is declared.",
+      "trailing_newline": true
+    },
+    {
+      "path": "evidence/evidence_passports.json",
+      "kind": "GENERATED",
+      "rule_id": "keyed_projection",
+      "sheet": "34_EVIDENCE_PASSPORTS",
+      "block": "main",
+      "stable_key": "passport_id",
+      "derived_fields": [
+        {
+          "name": "route_list",
+          "from": "route",
+          "rule": "pipe_list"
+        },
+        {
+          "name": "related_routes",
+          "from": "route",
+          "rule": "pipe_list_tail"
+        }
+      ],
+      "post_fields": {
+        "route": "first_pipe"
+      },
+      "transformation": "One record per non-blank main-block row, keys in header order, values verbatim unless a field transform is declared.",
+      "trailing_newline": true
+    },
+    {
+      "path": "data/cby_monetary.json",
+      "kind": "GENERATED",
+      "rule_id": "raw_snapshot",
+      "sheet": "18_CBY_MONETARY",
+      "block": "whole sheet (all blocks)",
+      "stable_key": "Excel row order",
+      "transformation": "Whole-sheet value grid (rows 1..max_row, columns 1..max_col) as {sheet, rows}; declared numeric_text_columns emit numeric-looking text as JSON numbers.",
+      "trailing_newline": true
+    },
+    {
+      "path": "data/payments_data.json",
+      "kind": "GENERATED",
+      "rule_id": "raw_snapshot",
+      "sheet": "19_PAYMENTS_DATA",
+      "block": "whole sheet (all blocks)",
+      "stable_key": "Excel row order",
+      "transformation": "Whole-sheet value grid (rows 1..max_row, columns 1..max_col) as {sheet, rows}; declared numeric_text_columns emit numeric-looking text as JSON numbers.",
+      "trailing_newline": true
+    },
+    {
+      "path": "data/firm_finance.json",
+      "kind": "GENERATED",
+      "rule_id": "raw_snapshot",
+      "sheet": "20_FIRM_FINANCE",
+      "block": "whole sheet (all blocks)",
+      "stable_key": "Excel row order",
+      "transformation": "Whole-sheet value grid (rows 1..max_row, columns 1..max_col) as {sheet, rows}; declared numeric_text_columns emit numeric-looking text as JSON numbers.",
+      "trailing_newline": true
+    },
+    {
+      "path": "data/mfi_data.json",
+      "kind": "GENERATED",
+      "rule_id": "raw_snapshot",
+      "sheet": "21_MFI_DATA",
+      "block": "whole sheet (all blocks)",
+      "stable_key": "Excel row order",
+      "transformation": "Whole-sheet value grid (rows 1..max_row, columns 1..max_col) as {sheet, rows}; declared numeric_text_columns emit numeric-looking text as JSON numbers.",
+      "trailing_newline": true
+    },
+    {
+      "path": "data/providers_data.json",
+      "kind": "GENERATED",
+      "rule_id": "raw_snapshot",
+      "sheet": "22_PROVIDERS_DATA",
+      "block": "whole sheet (all blocks)",
+      "stable_key": "Excel row order",
+      "transformation": "Whole-sheet value grid (rows 1..max_row, columns 1..max_col) as {sheet, rows}; declared numeric_text_columns emit numeric-looking text as JSON numbers.",
+      "trailing_newline": false
+    },
+    {
+      "path": "data/remittances.json",
+      "kind": "GENERATED",
+      "rule_id": "raw_snapshot",
+      "sheet": "23_REMITTANCES",
+      "block": "whole sheet (all blocks)",
+      "stable_key": "Excel row order",
+      "transformation": "Whole-sheet value grid (rows 1..max_row, columns 1..max_col) as {sheet, rows}; declared numeric_text_columns emit numeric-looking text as JSON numbers.",
+      "trailing_newline": true
+    },
+    {
+      "path": "data/findex_codebook.json",
+      "kind": "GENERATED",
+      "rule_id": "raw_snapshot",
+      "sheet": "24_FINDEX_CODEBOOK",
+      "block": "whole sheet (all blocks)",
+      "stable_key": "Excel row order",
+      "transformation": "Whole-sheet value grid (rows 1..max_row, columns 1..max_col) as {sheet, rows}; declared numeric_text_columns emit numeric-looking text as JSON numbers.",
+      "trailing_newline": true
+    },
+    {
+      "path": "data/findex_baseline.json",
+      "kind": "GENERATED",
+      "rule_id": "raw_snapshot",
+      "sheet": "25_FINDEX_BASELINE",
+      "block": "whole sheet (all blocks)",
+      "stable_key": "Excel row order",
+      "transformation": "Whole-sheet value grid (rows 1..max_row, columns 1..max_col) as {sheet, rows}; declared numeric_text_columns emit numeric-looking text as JSON numbers.",
+      "trailing_newline": true
+    },
+    {
+      "path": "data/findex_history.json",
+      "kind": "GENERATED",
+      "rule_id": "raw_snapshot",
+      "sheet": "26_FINDEX_HISTORY",
+      "block": "whole sheet (all blocks)",
+      "stable_key": "Excel row order",
+      "transformation": "Whole-sheet value grid (rows 1..max_row, columns 1..max_col) as {sheet, rows}; declared numeric_text_columns emit numeric-looking text as JSON numbers.",
+      "trailing_newline": true
+    },
+    {
+      "path": "data/findex_subgroups.json",
+      "kind": "GENERATED",
+      "rule_id": "raw_snapshot",
+      "sheet": "27_FINDEX_SUBGROUPS",
+      "block": "whole sheet (all blocks)",
+      "stable_key": "Excel row order",
+      "transformation": "Whole-sheet value grid (rows 1..max_row, columns 1..max_col) as {sheet, rows}; declared numeric_text_columns emit numeric-looking text as JSON numbers.",
+      "trailing_newline": true
+    },
+    {
+      "path": "data/reforms_regulation.json",
+      "kind": "GENERATED",
+      "rule_id": "raw_snapshot",
+      "sheet": "31_REFORMS_REGULATION",
+      "block": "whole sheet (all blocks)",
+      "stable_key": "Excel row order",
+      "transformation": "Whole-sheet value grid (rows 1..max_row, columns 1..max_col) as {sheet, rows}; declared numeric_text_columns emit numeric-looking text as JSON numbers.",
+      "trailing_newline": true
+    },
+    {
+      "path": "content/master_principles.json",
+      "kind": "GENERATED",
+      "rule_id": "raw_snapshot",
+      "sheet": "00_MASTER",
+      "block": "whole sheet (all blocks)",
+      "stable_key": "Excel row order",
+      "transformation": "Whole-sheet value grid (rows 1..max_row, columns 1..max_col) as {sheet, rows}; declared numeric_text_columns emit numeric-looking text as JSON numbers.",
+      "trailing_newline": true
+    },
+    {
+      "path": "data/local_data_index.json",
+      "kind": "DERIVED",
+      "rule_id": "local_data_index",
+      "sheet": "(derived from data/*.json snapshots)",
+      "transformation": "One record per data/ snapshot: file, source sheet, rows = snapshot row count - 1.",
+      "trailing_newline": true
+    },
+    {
+      "path": "sources/local_dataset_catalog.json",
+      "kind": "DERIVED",
+      "rule_id": "local_dataset_catalog",
+      "sheet": "(derived from data/*.json snapshots + controlled template)",
+      "transformation": "Template rows (dataset_id, file, domain, runtime_role, future_adapter_rule) with record_rows computed from the regenerated snapshot.",
+      "trailing_newline": true
+    },
+    {
+      "path": "sources/public_object_source_closure.json",
+      "kind": "DERIVED",
+      "rule_id": "object_source_closure",
+      "sheet": "06, 07, 08, 10, 11 (+ 15, 16 for resolution)",
+      "stable_key": "(object_type, object_id)",
+      "transformation": "Closure rule v2 (Stage 1, PB-0002). Evidence objects: tokens of 06.source_dependencies classified as SOURCE (15 source ID), MEMBER (06 object ID), CONTEXT (31/33/34 row ID or declared import-reference pattern), or OPEN (UNBOUND:*, dataset ID/origin table/numeric prefix, unrecognised). Dataset tokens are never expanded. The 06 lineage_state is authoritative and must agree with the token classes. Claims and visuals take the lineage of their 06 record (Reading visuals: of their Reading); Readings: source_bindings plus member evidence records (open when a member is not closed); measurement priorities carry no direct binding.",
+      "dependencies": [
+        "evidence/evidence_objects.json",
+        "evidence/public_claims.json",
+        "content/readings.json",
+        "visuals/visual_library.json",
+        "content/measurement_agenda.json",
+        "sources/source_library.json",
+        "sources/master_dataset_catalog.json",
+        "content/interface_copy.json"
+      ],
+      "trailing_newline": true
+    },
+    {
+      "path": "sources/source_reference_map.json",
+      "kind": "DERIVED",
+      "rule_id": "source_reference_map",
+      "sheet": "15_SOURCE_LIBRARY (+ closure links)",
+      "stable_key": "source_id",
+      "transformation": "One record per 15_SOURCE_LIBRARY row. metadata_state = DISPLAY_READY when public_card_state is FULL_PUBLIC_CARD or CITATION_CARD, else LOCATOR_ONLY; display fields (title, publisher, document label and date, and the curated summary where present) are carried only when DISPLAY_READY; standalone_resource_card_eligible only for FULL_PUBLIC_CARD (curated); linked_* = sorted object IDs whose closure resolves to the source.",
+      "dependencies": [
+        "sources/source_library.json",
+        "sources/public_object_source_closure.json"
+      ],
+      "trailing_newline": true
+    },
+    {
+      "path": "content/search_index.json",
+      "kind": "DERIVED",
+      "rule_id": "search_index",
+      "sheet": "02, 06, 08, 10, 15 (via projections)",
+      "stable_key": "(type, id)",
+      "transformation": "Records in order: pages (02 order; summary = whitespace-normalised full copy truncated to 1,200 characters; search text = full copy), evidence records (summary; search text = summary + definition + period + universe + method + limitations + currentness), Readings (thesis; question + thesis), measurement priorities (route /measurement/#<id>; missing evidence; current + missing + unlocked decision + priority basis), then every source with a primary URL in 15 order: DISPLAY_READY as a source card record, otherwise a generic locator record. Page text resolves {{n:key}} inventory tokens through the public inventory contract (P1.2); an unresolved template token raises.",
+      "dependencies": [
+        "content/site_map.json",
+        "evidence/evidence_objects.json",
+        "content/readings.json",
+        "content/measurement_agenda.json",
+        "sources/source_reference_map.json"
+      ],
+      "trailing_newline": true
+    },
+    {
+      "path": "page_specs.json",
+      "kind": "DERIVED",
+      "rule_id": "page_specs",
+      "sheet": "02, 03, 06, 07, 08, 10, 11 (+ closure, source map) + controlled design inputs",
+      "stable_key": "route",
+      "transformation": "One Page Spec per 02 route (02 order): 02 prose; 03 sections; bindings by route membership (claims 07, evidence objects 06 + evidence_detail instance, visuals 11, measurement 10, Readings 08; /readings/ binds all Readings) with declared overrides; governed arrays are the bound projection records; verification payload = closure records of bound objects; source references = sources resolved by that payload (evidence_detail fallback to the same-ID claim/visual closure); numeric inventory and prohibited inferences per declared rule; constant design fields and per-route internal design intent from controlled inputs. Index sorted by route slug (collection index routes after their children). Section text, full copy and default meta descriptions resolve {{n:key}} inventory tokens through the public inventory contract; each section records resolved_inventory_tokens; a token in a title or authored meta description, or any unresolved template token, raises (P1.2).",
+      "dependencies": [
+        "content/site_map.json",
+        "content/page_sections.json",
+        "evidence/public_claims.json",
+        "evidence/evidence_objects.json",
+        "visuals/visual_library.json",
+        "content/readings.json",
+        "content/measurement_agenda.json",
+        "sources/public_object_source_closure.json",
+        "sources/source_reference_map.json"
+      ],
+      "trailing_newline": true
+    },
+    {
+      "path": "content/public_inventory.json",
+      "kind": "DERIVED",
+      "rule_id": "public_inventory",
+      "sheet": "05, 06, 07, 08, 10, 11, 14, 15, 34 (via projections) + controlled input public_inventory_contract",
+      "stable_key": "key",
+      "transformation": "One record per count declared in controlled_inputs/public_inventory_contract.json, in contract order: key, value (derived from the named projection by the declared rule: count_records, count_where_http_primary_url, count_where_true or spec_count), projection, rule, public_token, definition. Public copy may reference only counts with public_token true, as {{n:key}}.",
+      "dependencies": [
+        "evidence/evidence_objects.json",
+        "evidence/public_claims.json",
+        "visuals/system_chronology.json",
+        "sources/source_library.json",
+        "sources/source_reference_map.json",
+        "content/readings.json",
+        "content/measurement_agenda.json",
+        "content/questions.json",
+        "visuals/visual_library.json",
+        "evidence/evidence_passports.json",
+        "content/search_index.json",
+        "page_specs.json"
+      ],
+      "trailing_newline": true
+    },
+    {
+      "path": "content/navigation_interaction.json",
+      "kind": "CONTROLLED_CONTRACT",
+      "rule_id": "navigation_contract",
+      "sheet": "04_NAV_UX main block (global navigation only)",
+      "stable_key": "route",
+      "transformation": "Hand-governed navigation and interaction contract maintained in place (NOT generated from the Master). The generator requires its route list to equal 02, rewrites global_navigation (items and routed children, PB-0424) and trust_navigation from 04_NAV_UX, and rebinds authority_binding (Master and Page Spec SHA-256, spec count), per-route search_record_count and public_search_record_count. It also aligns, from that navigation and the route list, the footer link labels, the footer group that mirrors a navigation family (label and order), breadcrumb parent labels, page-family route counts, and a family's prominence when all its routes share one (Pre-Tranche-C P4).",
+      "dependencies": [
+        "content/site_map.json",
+        "page_specs.json",
+        "content/search_index.json"
+      ],
+      "trailing_newline": true
+    },
+    {
+      "path": "presentation_priority.json",
+      "kind": "CONTROLLED_CONTRACT",
+      "rule_id": "presentation_contract",
+      "sheet": "(none — presentation depth contract)",
+      "stable_key": "route",
+      "transformation": "Hand-governed presentation-depth contract maintained in place (NOT generated from the Master). The generator validates every referenced section (route, section_order) against 03 and every referenced visual against 11, and fails otherwise.",
+      "dependencies": [
+        "content/page_sections.json",
+        "visuals/visual_library.json"
+      ],
+      "trailing_newline": false
+    },
+    {
+      "path": "visuals/visual_design_contracts.json",
+      "kind": "DERIVED",
+      "rule_id": "visual_design_contracts",
+      "sheet": "11, 06, 34, 15, 04 (interface copy) and data sheets 19, 20, 21, 22, 23, 25, 31 (via projections) + controlled input visual_design_contract",
+      "stable_key": "visual_id",
+      "transformation": "One record per governed visual (11), in controlled-input order: tier and rationale; governed title, question, prohibited inference, analytical alt text (accessible summary + UI-VIS-DOES-NOT-ESTABLISH + prohibited inference), period and universe from the Evidence Record when one exists, canonical route. For SIGNATURE and CORE_ANALYTICAL visuals: the declared rows resolved from the data projections with guards, grammar state and markers per value, missing periods, derived differences checked against governed values, the governed credit line, blockers, and the bilingual detached caption. Fails on any untiered visual, unresolved row, failed guard or ungoverned grammar label.",
+      "dependencies": [
+        "visuals/visual_library.json",
+        "evidence/evidence_objects.json",
+        "evidence/evidence_passports.json",
+        "sources/source_library.json",
+        "content/interface_copy.json",
+        "data/payments_data.json",
+        "data/firm_finance.json",
+        "data/mfi_data.json",
+        "data/providers_data.json",
+        "data/remittances.json",
+        "data/findex_baseline.json",
+        "data/reforms_regulation.json"
+      ],
+      "trailing_newline": true
+    }
+  ]
+}

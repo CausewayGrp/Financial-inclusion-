@@ -1,0 +1,1294 @@
+[
+ {
+  "object_id": "CLM-015",
+  "class": "CLAIM",
+  "routes": "/providers/ | /payments/",
+  "title_en": "A dated negative list, not a permanent current status",
+  "alt_state": "CLOSED_VIA_CONTROLLED_DEPENDENCIES",
+  "alt_via": [
+   "67_PROVIDER_NEGATIVE_AUTHORITY"
+  ],
+  "alt_sources": [
+   "SRC-CBY-UNLICENSED-EWALLET-2024-001"
+  ],
+  "alt_unresolved": [
+   "EP-CBY-NEG-AUTH-2024",
+   "PSE-001"
+  ],
+  "named_in_text": [],
+  "visual_data_inputs": "",
+  "claim_evidence_inputs": "[\"67_PROVIDER_NEGATIVE_AUTHORITY\",\"PSE-001\",\"EP-CBY-NEG-AUTH-2024\"]"
+ },
+ {
+  "object_id": "VIS-INCLUSION-TRANSMISSION",
+  "class": "VISUAL",
+  "routes": "/",
+  "title_en": "Financial inclusion is a transmission system, not a sector score",
+  "alt_state": "NO_SOURCE_EXPECTED",
+  "alt_via": [],
+  "alt_sources": [],
+  "alt_unresolved": [],
+  "named_in_text": [],
+  "visual_data_inputs": "System relationship objects + public page bindings",
+  "claim_evidence_inputs": ""
+ },
+ {
+  "object_id": "VIS-EVIDENCE-FRESHNESS",
+  "class": "VISUAL",
+  "routes": "/evidence/",
+  "title_en": "Where is the evidence current — and where is it old?",
+  "alt_state": "CLOSED_VIA_CONTROLLED_DEPENDENCIES",
+  "alt_via": [
+   "45_EVIDENCE_PASSPORTS"
+  ],
+  "alt_sources": [
+   "SRC-CBY-FCP-BROCHURE-2024-001",
+   "SRC-CBY-FCP-INSTR-2023-001",
+   "SRC-CBY-GMW-2023-001",
+   "SRC-CBY-GMW-2024-001",
+   "SRC-CBY-GMW-2024-CLOSE-001",
+   "SRC-CBY-GMW-2025-001"
+  ],
+  "alt_unresolved": [
+   "01_DATASET_INDEX",
+   "22_RESEARCH_COVERAGE",
+   "57_EVIDENCE_FUSION_MAP"
+  ],
+  "named_in_text": [],
+  "visual_data_inputs": "01_DATASET_INDEX + 22_RESEARCH_COVERAGE + 45_EVIDENCE_PASSPORTS + 57_EVIDENCE_FUSION_MAP",
+  "claim_evidence_inputs": ""
+ },
+ {
+  "object_id": "VIS-SOURCE-COMPARISON",
+  "class": "VISUAL",
+  "routes": "/evidence/compare/",
+  "title_en": "Source Comparison Lab — same word, different metric",
+  "alt_state": "CLOSED_VIA_CONTROLLED_DEPENDENCIES",
+  "alt_via": [
+   "49_METRIC_CROSSWALK"
+  ],
+  "alt_sources": [
+   "SRC-UNDP-FMIIP-001"
+  ],
+  "alt_unresolved": [],
+  "named_in_text": [],
+  "visual_data_inputs": "49_METRIC_CROSSWALK + Evidence Passports",
+  "claim_evidence_inputs": ""
+ },
+ {
+  "object_id": "VIS-PROVIDER-TIME",
+  "class": "VISUAL",
+  "routes": "/providers/",
+  "title_en": "Provider Time Machine",
+  "alt_state": null,
+  "alt_via": null,
+  "alt_sources": null,
+  "alt_unresolved": null,
+  "named_in_text": [],
+  "visual_data_inputs": "",
+  "claim_evidence_inputs": ""
+ },
+ {
+  "object_id": "VIS-FCP-REDRESS-PATH",
+  "class": "VISUAL",
+  "routes": "/reforms/",
+  "title_en": "If a complaint is not resolved, what happens?",
+  "alt_state": "CLOSED_VIA_CONTROLLED_DEPENDENCIES",
+  "alt_via": [
+   "45_EVIDENCE_PASSPORTS",
+   "54_PRIMARY_AUTHORITY",
+   "55_FCP_ARCHITECTURE"
+  ],
+  "alt_sources": [
+   "SRC-CBY-DIGITAL-EXPO-2026-001",
+   "SRC-CBY-EMONEY-2023-001",
+   "SRC-CBY-EMONEY-AMD-2025-001",
+   "SRC-CBY-EXCH-LIST-2026-001",
+   "SRC-CBY-FCP-AWARE-2024-001",
+   "SRC-CBY-FCP-BROCHURE-2024-001",
+   "SRC-CBY-FCP-INSTR-2023-001",
+   "SRC-CBY-GMW-2023-001",
+   "SRC-CBY-GMW-2024-001",
+   "SRC-CBY-GMW-2024-CLOSE-001",
+   "SRC-CBY-GMW-2025-001",
+   "SRC-CBY-PAY-BOARD-2026-001",
+   "SRC-CBY-PSP-RULES-2022-001"
+  ],
+  "alt_unresolved": [],
+  "named_in_text": [],
+  "visual_data_inputs": "55_FCP_ARCHITECTURE + 54_PRIMARY_AUTHORITY + 45_EVIDENCE_PASSPORTS",
+  "claim_evidence_inputs": ""
+ },
+ {
+  "object_id": "VIS-E-MONEY-RULE-STACK",
+  "class": "VISUAL",
+  "routes": "/payments/",
+  "title_en": "What must sit underneath a mobile wallet?",
+  "alt_state": "CLOSED_VIA_CONTROLLED_DEPENDENCIES",
+  "alt_via": [
+   "40_PAYMENT_DICT",
+   "54_PRIMARY_AUTHORITY",
+   "56_E_MONEY_REGULATORY"
+  ],
+  "alt_sources": [
+   "SRC-CBY-DIGITAL-EXPO-2026-001",
+   "SRC-CBY-EMONEY-2023-001",
+   "SRC-CBY-EMONEY-AMD-2025-001",
+   "SRC-CBY-EXCH-LIST-2026-001",
+   "SRC-CBY-FCP-AWARE-2024-001",
+   "SRC-CBY-FCP-BROCHURE-2024-001",
+   "SRC-CBY-FCP-INSTR-2023-001",
+   "SRC-CBY-GMW-2023-001",
+   "SRC-CBY-GMW-2024-001",
+   "SRC-CBY-GMW-2024-CLOSE-001",
+   "SRC-CBY-GMW-2025-001",
+   "SRC-CBY-PAY-BOARD-2026-001",
+   "SRC-CBY-PAYREPORT-H1-2025",
+   "SRC-CBY-PAYREPORT-Q3-2024",
+   "SRC-CBY-PSP-RULES-2022-001"
+  ],
+  "alt_unresolved": [],
+  "named_in_text": [],
+  "visual_data_inputs": "56_E_MONEY_REGULATORY + 54_PRIMARY_AUTHORITY + 40_PAYMENT_DICT",
+  "claim_evidence_inputs": ""
+ },
+ {
+  "object_id": "VIS-MECHANISM-METRIC-BRIDGE",
+  "class": "VISUAL",
+  "routes": "/evidence/",
+  "title_en": "What may explain the number — without pretending to prove it?",
+  "alt_state": "NO_SOURCE_EXPECTED",
+  "alt_via": [],
+  "alt_sources": [],
+  "alt_unresolved": [],
+  "named_in_text": [],
+  "visual_data_inputs": "Qualitative evidence objects + mechanism taxonomy + qualitative/quantitative links + quantitative evidence objects",
+  "claim_evidence_inputs": ""
+ },
+ {
+  "object_id": "VIS-PROVIDER-OBSERVABILITY",
+  "class": "VISUAL",
+  "routes": "/providers/",
+  "title_en": "What do we actually know about each provider class?",
+  "alt_state": "CLOSED_VIA_CONTROLLED_DEPENDENCIES",
+  "alt_via": [
+   "16_PROVIDER_UNIVERSE",
+   "65_PROVIDER_OBSERVABILITY",
+   "66_PROVIDER_STATUS_EVENTS",
+   "67_PROVIDER_NEGATIVE_AUTHORITY"
+  ],
+  "alt_sources": [
+   "SRC-CBY-BANKLIST-AR-2026-001",
+   "SRC-CBY-ENF-01-2026",
+   "SRC-CBY-ENF-02-2026",
+   "SRC-CBY-ENF-03-2026",
+   "SRC-CBY-ENF-04-2026",
+   "SRC-CBY-ENF-05-2026",
+   "SRC-CBY-ENF-06-2026",
+   "SRC-CBY-ENF-09-2026",
+   "SRC-CBY-ENF-10-2026",
+   "SRC-CBY-ENF-11-2026",
+   "SRC-CBY-ENF-13-2026",
+   "SRC-CBY-ENF-14-2026",
+   "SRC-CBY-ENF-15-2026",
+   "SRC-CBY-ENF-17-2026",
+   "SRC-CBY-EXCH-LIST-2025-001",
+   "SRC-CBY-EXCH-LIST-2026-001",
+   "SRC-CBY-FMIIP-WORKSHOP-2025",
+   "SRC-CBY-UNLICENSED-EWALLET-2024-001",
+   "SRC-YMN-MEMBERS-2026-001"
+  ],
+  "alt_unresolved": [],
+  "named_in_text": [],
+  "visual_data_inputs": "65_PROVIDER_OBSERVABILITY + 66_PROVIDER_STATUS_EVENTS + 67_PROVIDER_NEGATIVE_AUTHORITY + 16_PROVIDER_UNIVERSE",
+  "claim_evidence_inputs": ""
+ },
+ {
+  "object_id": "DS-FCP-ARCH",
+  "class": "DATASET",
+  "routes": "/evidence/",
+  "title_en": "Consumer protection / redress architecture",
+  "alt_state": null,
+  "alt_via": null,
+  "alt_sources": null,
+  "alt_unresolved": null,
+  "named_in_text": [],
+  "visual_data_inputs": "",
+  "claim_evidence_inputs": ""
+ },
+ {
+  "object_id": "DS-QUAL-EVIDENCE",
+  "class": "DATASET",
+  "routes": "/evidence/",
+  "title_en": "Qualitative evidence register",
+  "alt_state": null,
+  "alt_via": null,
+  "alt_sources": null,
+  "alt_unresolved": null,
+  "named_in_text": [],
+  "visual_data_inputs": "",
+  "claim_evidence_inputs": ""
+ },
+ {
+  "object_id": "CLM-016",
+  "class": "CLAIM",
+  "routes": "/providers/",
+  "title_en": "Historical exchange and remittance roster baseline",
+  "alt_state": "CLOSED_VIA_CONTROLLED_DEPENDENCIES",
+  "alt_via": [
+   "71_PROVIDER_BASELINE_2025"
+  ],
+  "alt_sources": [
+   "SRC-CBY-EXCH-LIST-2025-001"
+  ],
+  "alt_unresolved": [
+   "EP-CBY-EXCH-ROSTER-2025"
+  ],
+  "named_in_text": [],
+  "visual_data_inputs": "",
+  "claim_evidence_inputs": "[\"71_PROVIDER_BASELINE_2025\",\"EP-CBY-EXCH-ROSTER-2025\"]"
+ },
+ {
+  "object_id": "CLM-018",
+  "class": "CLAIM",
+  "routes": "/payments/ | /reforms/",
+  "title_en": "Institutional progress is not operation or outcome",
+  "alt_state": "CLOSED_VIA_CONTROLLED_DEPENDENCIES",
+  "alt_via": [
+   "73_PAYMENT_CURRENTNESS"
+  ],
+  "alt_sources": [
+   "SRC-CBY-BANK-NETWORK-MTG-2026-001",
+   "SRC-CBY-FMIIP-WORKSHOP-2025",
+   "SRC-CBY-PAYREPORT-H1-2025",
+   "SRC-CBY-POS-2026-01",
+   "SRC-CBY-POS-PUBLICATION-PAGE-2026-001",
+   "SRC-CBY-UNIFIED-NET-2026-001",
+   "SRC-CBY-YPCC-BOARD-2026-001",
+   "SRC-CBY-YPCC-FOUND-2026-001"
+  ],
+  "alt_unresolved": [
+   "EP-CBY-PAY-INSTITUTIONAL-2026",
+   "REF-PAY-010..013"
+  ],
+  "named_in_text": [],
+  "visual_data_inputs": "",
+  "claim_evidence_inputs": "[\"73_PAYMENT_CURRENTNESS\",\"REF-PAY-010..013\",\"EP-CBY-PAY-INSTITUTIONAL-2026\"]"
+ },
+ {
+  "object_id": "CLM-019",
+  "class": "CLAIM",
+  "routes": "/providers/ | /evidence/",
+  "title_en": "Enforcement decisions are events, not a market census",
+  "alt_state": "CLOSED_VIA_CONTROLLED_DEPENDENCIES",
+  "alt_via": [
+   "15_PROVIDER_MASTER",
+   "16_PROVIDER_UNIVERSE",
+   "66_PROVIDER_STATUS_EVENTS",
+   "DS-CBY-EXCHANGE-ROSTER-2026-COUNTS"
+  ],
+  "alt_sources": [
+   "SRC-CBY-BANKLIST-AR-2026-001",
+   "SRC-CBY-ENF-01-2026",
+   "SRC-CBY-ENF-02-2026",
+   "SRC-CBY-ENF-03-2026",
+   "SRC-CBY-ENF-04-2026",
+   "SRC-CBY-ENF-05-2026",
+   "SRC-CBY-ENF-06-2026",
+   "SRC-CBY-ENF-09-2026",
+   "SRC-CBY-ENF-10-2026",
+   "SRC-CBY-ENF-11-2026",
+   "SRC-CBY-ENF-13-2026",
+   "SRC-CBY-ENF-14-2026",
+   "SRC-CBY-ENF-15-2026",
+   "SRC-CBY-ENF-17-2026",
+   "SRC-CBY-EXCH-LIST-2026-001",
+   "SRC-CBY-FMIIP-WORKSHOP-2025",
+   "SRC-CBY-UNLICENSED-EWALLET-2024-001",
+   "SRC-YMN-MEMBERS-2026-001"
+  ],
+  "alt_unresolved": [
+   "EP-CBY-PROVIDER-STATUS-2026",
+   "PUC-EXCH-2026-01"
+  ],
+  "named_in_text": [],
+  "visual_data_inputs": "",
+  "claim_evidence_inputs": "[\"66_PROVIDER_STATUS_EVENTS\", \"15_PROVIDER_MASTER\", \"16_PROVIDER_UNIVERSE\", \"PUC-EXCH-2026-01\", \"DS-CBY-EXCHANGE-ROSTER-2026-COUNTS\", \"EP-CBY-PROVIDER-STATUS-2026\"]"
+ },
+ {
+  "object_id": "CLM-020",
+  "class": "CLAIM",
+  "routes": "/finance/",
+  "title_en": "1997 and 1998 are distinct milestones",
+  "alt_state": "CLOSED_VIA_CONTROLLED_DEPENDENCIES",
+  "alt_via": [
+   "76_MF_ORIGIN_CHRONOLOGY"
+  ],
+  "alt_sources": [
+   "SRC-SFD-HIST-2004-Q3-001",
+   "SRC-SFD-MF-HISTORY-TOR-2012-001",
+   "SRC-SFD-NEWSLETTER-2000-Q4-001",
+   "SRC-SFD-Q1-2015-001",
+   "SRC-SFD-Q3-2015-001",
+   "SRC-SFD-Q4-2012-001",
+   "SRC-SFD-Q4-2015-001",
+   "SRC-YMN-IMPACT-2021-001"
+  ],
+  "alt_unresolved": [
+   "CTR-005",
+   "EP-SFD-MFI-ORIGIN-1997-98"
+  ],
+  "named_in_text": [],
+  "visual_data_inputs": "",
+  "claim_evidence_inputs": "[\"76_MF_ORIGIN_CHRONOLOGY\",\"CTR-005\",\"EP-SFD-MFI-ORIGIN-1997-98\"]"
+ },
+ {
+  "object_id": "VIS-MFI-SPINE",
+  "class": "VISUAL",
+  "routes": "/finance/",
+  "title_en": "Microfinance Evidence Spine",
+  "alt_state": null,
+  "alt_via": null,
+  "alt_sources": null,
+  "alt_unresolved": null,
+  "named_in_text": [],
+  "visual_data_inputs": "",
+  "claim_evidence_inputs": ""
+ },
+ {
+  "object_id": "CLM-024",
+  "class": "CLAIM",
+  "routes": "/methodology/ | /evidence/",
+  "title_en": "Raw case shares are not population estimates",
+  "alt_state": "CLOSED_VIA_CONTROLLED_DEPENDENCIES",
+  "alt_via": [
+   "29_FINDEX_RULES",
+   "87_FINDEX_DENOMINATOR_STRESS"
+  ],
+  "alt_sources": [
+   "SRC-WB-FINDEX-001"
+  ],
+  "alt_unresolved": [],
+  "named_in_text": [],
+  "visual_data_inputs": "",
+  "claim_evidence_inputs": "[\"87_FINDEX_DENOMINATOR_STRESS\",\"29_FINDEX_RULES\"]"
+ },
+ {
+  "object_id": "CLM-026",
+  "class": "CLAIM",
+  "routes": "/people/ | /methodology/",
+  "title_en": "Demand-side measures defined; custom estimates not yet published",
+  "alt_state": "CLOSED_VIA_CONTROLLED_DEPENDENCIES",
+  "alt_via": [
+   "85_FINDEX_PANEL_CATALOG",
+   "86_FINDEX_SUBGROUP_MATRIX",
+   "89_FINDEX_MICRODATA_GATE"
+  ],
+  "alt_sources": [
+   "SRC-WB-FINDEX-001",
+   "SRC-WB-FINDEX-AGG-2022"
+  ],
+  "alt_unresolved": [],
+  "named_in_text": [],
+  "visual_data_inputs": "",
+  "claim_evidence_inputs": "[\"85_FINDEX_PANEL_CATALOG\",\"86_FINDEX_SUBGROUP_MATRIX\",\"89_FINDEX_MICRODATA_GATE\"]"
+ },
+ {
+  "object_id": "VIS-FINDEX-SAMPLE-SUPPORT",
+  "class": "VISUAL",
+  "routes": "/methodology/ | /evidence/",
+  "title_en": "Before the percentage: how many respondents were actually asked?",
+  "alt_state": null,
+  "alt_via": null,
+  "alt_sources": null,
+  "alt_unresolved": null,
+  "named_in_text": [],
+  "visual_data_inputs": "",
+  "claim_evidence_inputs": ""
+ },
+ {
+  "object_id": "VIS-FINDEX-ACCESS-USE",
+  "class": "VISUAL",
+  "routes": "/people/",
+  "title_en": "Access is not use — and use is not digital use",
+  "alt_state": null,
+  "alt_via": null,
+  "alt_sources": null,
+  "alt_unresolved": null,
+  "named_in_text": [],
+  "visual_data_inputs": "",
+  "claim_evidence_inputs": ""
+ },
+ {
+  "object_id": "VIS-FINDEX-BARRIERS",
+  "class": "VISUAL",
+  "routes": "/people/",
+  "title_en": "Why adults without an account say they remain outside",
+  "alt_state": null,
+  "alt_via": null,
+  "alt_sources": null,
+  "alt_unresolved": null,
+  "named_in_text": [],
+  "visual_data_inputs": "",
+  "claim_evidence_inputs": ""
+ },
+ {
+  "object_id": "VIS-FINDEX-RESILIENCE",
+  "class": "VISUAL",
+  "routes": "/people/",
+  "title_en": "Can an adult raise emergency funds — in 7 days versus 30?",
+  "alt_state": null,
+  "alt_via": null,
+  "alt_sources": null,
+  "alt_unresolved": null,
+  "named_in_text": [],
+  "visual_data_inputs": "",
+  "claim_evidence_inputs": ""
+ },
+ {
+  "object_id": "VIS-FINDEX-FLOW-CHANNELS",
+  "class": "VISUAL",
+  "routes": "/people/ | /remittances/",
+  "title_en": "How money reaches people — wages, transfers, agriculture and domestic remittances",
+  "alt_state": null,
+  "alt_via": null,
+  "alt_sources": null,
+  "alt_unresolved": null,
+  "named_in_text": [],
+  "visual_data_inputs": "",
+  "claim_evidence_inputs": ""
+ },
+ {
+  "object_id": "CLM-027",
+  "class": "CLAIM",
+  "routes": "/people/",
+  "title_en": "Observed wave anchors, not an annual series",
+  "alt_state": "CLOSED_VIA_CONTROLLED_DEPENDENCIES",
+  "alt_via": [
+   "107_FINDEX_PUBLIC_HISTORY",
+   "108_FINDEX_HISTORY_CROSSWALK",
+   "28_FINDEX_OBS"
+  ],
+  "alt_sources": [
+   "SRC-WB-FINDEX-001",
+   "SRC-WB-FINDEX-003",
+   "SRC-WB-FINDEX-2014-001",
+   "SRC-WB-FINDEX-AGG-2022",
+   "SRC-WB-FINDEX-LDB-2015-001"
+  ],
+  "alt_unresolved": [
+   "DA-021",
+   "DA-022",
+   "EP-FINDEX-HIST-WAVE-SPINE"
+  ],
+  "named_in_text": [],
+  "visual_data_inputs": "",
+  "claim_evidence_inputs": "[\"107_FINDEX_PUBLIC_HISTORY\",\"108_FINDEX_HISTORY_CROSSWALK\",\"28_FINDEX_OBS\",\"DA-021\",\"DA-022\",\"EP-FINDEX-HIST-WAVE-SPINE\"]"
+ },
+ {
+  "object_id": "CLM-028",
+  "class": "CLAIM",
+  "routes": "/people/",
+  "title_en": "Historical borrowing patterns in 2014",
+  "alt_state": "CLOSED_VIA_CONTROLLED_DEPENDENCIES",
+  "alt_via": [
+   "107_FINDEX_PUBLIC_HISTORY",
+   "108_FINDEX_HISTORY_CROSSWALK"
+  ],
+  "alt_sources": [
+   "SRC-WB-FINDEX-001",
+   "SRC-WB-FINDEX-003",
+   "SRC-WB-FINDEX-2014-001",
+   "SRC-WB-FINDEX-LDB-2015-001"
+  ],
+  "alt_unresolved": [
+   "EP-FINDEX-2014-NEEDS-FLOWS"
+  ],
+  "named_in_text": [],
+  "visual_data_inputs": "",
+  "claim_evidence_inputs": "[\"107_FINDEX_PUBLIC_HISTORY\",\"108_FINDEX_HISTORY_CROSSWALK\",\"EP-FINDEX-2014-NEEDS-FLOWS\"]"
+ },
+ {
+  "object_id": "CLM-029",
+  "class": "CLAIM",
+  "routes": "/people/",
+  "title_en": "Historical saving patterns in 2014",
+  "alt_state": "CLOSED_VIA_CONTROLLED_DEPENDENCIES",
+  "alt_via": [
+   "107_FINDEX_PUBLIC_HISTORY",
+   "108_FINDEX_HISTORY_CROSSWALK"
+  ],
+  "alt_sources": [
+   "SRC-WB-FINDEX-001",
+   "SRC-WB-FINDEX-003",
+   "SRC-WB-FINDEX-2014-001",
+   "SRC-WB-FINDEX-LDB-2015-001"
+  ],
+  "alt_unresolved": [
+   "EP-FINDEX-2014-NEEDS-FLOWS"
+  ],
+  "named_in_text": [],
+  "visual_data_inputs": "",
+  "claim_evidence_inputs": "[\"107_FINDEX_PUBLIC_HISTORY\",\"108_FINDEX_HISTORY_CROSSWALK\",\"EP-FINDEX-2014-NEEDS-FLOWS\"]"
+ },
+ {
+  "object_id": "CLM-030",
+  "class": "CLAIM",
+  "routes": "/people/ | /remittances/",
+  "title_en": "Domestic-remittance pathways in 2014",
+  "alt_state": "CLOSED_VIA_CONTROLLED_DEPENDENCIES",
+  "alt_via": [
+   "107_FINDEX_PUBLIC_HISTORY",
+   "108_FINDEX_HISTORY_CROSSWALK"
+  ],
+  "alt_sources": [
+   "SRC-WB-FINDEX-001",
+   "SRC-WB-FINDEX-003",
+   "SRC-WB-FINDEX-2014-001",
+   "SRC-WB-FINDEX-LDB-2015-001"
+  ],
+  "alt_unresolved": [
+   "EP-FINDEX-2014-NEEDS-FLOWS"
+  ],
+  "named_in_text": [],
+  "visual_data_inputs": "",
+  "claim_evidence_inputs": "[\"107_FINDEX_PUBLIC_HISTORY\",\"108_FINDEX_HISTORY_CROSSWALK\",\"EP-FINDEX-2014-NEEDS-FLOWS\"]"
+ },
+ {
+  "object_id": "CLM-031",
+  "class": "CLAIM",
+  "routes": "/people/ | /evidence/",
+  "title_en": "There is no single latest year for all people-side evidence",
+  "alt_state": "CLOSED_VIA_CONTROLLED_DEPENDENCIES",
+  "alt_via": [
+   "107_FINDEX_PUBLIC_HISTORY",
+   "109_DEMAND_VINTAGE_LENS",
+   "85_FINDEX_PANEL_CATALOG"
+  ],
+  "alt_sources": [
+   "SRC-WB-FINDEX-001",
+   "SRC-WB-FINDEX-003",
+   "SRC-WB-FINDEX-2014-001",
+   "SRC-WB-FINDEX-AGG-2022",
+   "SRC-WB-FINDEX-LDB-2015-001"
+  ],
+  "alt_unresolved": [],
+  "named_in_text": [],
+  "visual_data_inputs": "",
+  "claim_evidence_inputs": "[\"109_DEMAND_VINTAGE_LENS\",\"107_FINDEX_PUBLIC_HISTORY\",\"85_FINDEX_PANEL_CATALOG\"]"
+ },
+ {
+  "object_id": "VIS-FINDEX-OBSERVED-WAVES",
+  "class": "VISUAL",
+  "routes": "/people/",
+  "title_en": "Account ownership — observed waves, not an annual line",
+  "alt_state": null,
+  "alt_via": null,
+  "alt_sources": null,
+  "alt_unresolved": null,
+  "named_in_text": [],
+  "visual_data_inputs": "",
+  "claim_evidence_inputs": ""
+ },
+ {
+  "object_id": "VIS-DEMAND-VINTAGE-LADDER",
+  "class": "VISUAL",
+  "routes": "/people/ | /evidence/",
+  "title_en": "What do people do with money — and how fresh is each layer?",
+  "alt_state": null,
+  "alt_via": null,
+  "alt_sources": null,
+  "alt_unresolved": null,
+  "named_in_text": [],
+  "visual_data_inputs": "",
+  "claim_evidence_inputs": ""
+ },
+ {
+  "object_id": "VIS-BORROWING-SOURCES-2014",
+  "class": "VISUAL",
+  "routes": "/people/",
+  "title_en": "Borrowing was widespread — but sources are not a pie",
+  "alt_state": null,
+  "alt_via": null,
+  "alt_sources": null,
+  "alt_unresolved": null,
+  "named_in_text": [],
+  "visual_data_inputs": "",
+  "claim_evidence_inputs": ""
+ },
+ {
+  "object_id": "VIS-DOMESTIC-REMITTANCE-PATH-2014",
+  "class": "VISUAL",
+  "routes": "/people/ | /remittances/",
+  "title_en": "Domestic remittances — population reach vs recipient channels",
+  "alt_state": null,
+  "alt_via": null,
+  "alt_sources": null,
+  "alt_unresolved": null,
+  "named_in_text": [],
+  "visual_data_inputs": "",
+  "claim_evidence_inputs": ""
+ },
+ {
+  "object_id": "DS-FINDEX-PUBLIC-HISTORY",
+  "class": "DATASET",
+  "routes": "/people/ | /evidence/",
+  "title_en": "Demand-side / weighted historical public Findex",
+  "alt_state": null,
+  "alt_via": null,
+  "alt_sources": null,
+  "alt_unresolved": null,
+  "named_in_text": [],
+  "visual_data_inputs": "",
+  "claim_evidence_inputs": ""
+ },
+ {
+  "object_id": "DS-FINDEX-HISTORY-CROSSWALK",
+  "class": "DATASET",
+  "routes": "/people/ | /methodology/",
+  "title_en": "Demand-side / historical-to-latest-wave comparability",
+  "alt_state": null,
+  "alt_via": null,
+  "alt_sources": null,
+  "alt_unresolved": null,
+  "named_in_text": [],
+  "visual_data_inputs": "",
+  "claim_evidence_inputs": ""
+ },
+ {
+  "object_id": "DS-DEMAND-VINTAGE-LENS",
+  "class": "DATASET",
+  "routes": "/people/ | /evidence/",
+  "title_en": "Demand-side / function-level evidence clocks",
+  "alt_state": null,
+  "alt_via": null,
+  "alt_sources": null,
+  "alt_unresolved": null,
+  "named_in_text": [],
+  "visual_data_inputs": "",
+  "claim_evidence_inputs": ""
+ },
+ {
+  "object_id": "CLM-004",
+  "class": "CLAIM",
+  "routes": "/payments/ | /methodology/",
+  "title_en": "Accounts and transactions are not unique people",
+  "alt_state": "CLOSED_VIA_CONTROLLED_DEPENDENCIES",
+  "alt_via": [
+   "11_CBY_PAYMENTS",
+   "49_METRIC_CROSSWALK"
+  ],
+  "alt_sources": [
+   "SRC-CBY-PAYREPORT-H1-2025",
+   "SRC-CBY-PAYREPORT-Q3-2024",
+   "SRC-CBY-POS-2025-03",
+   "SRC-CBY-POS-2025-04",
+   "SRC-CBY-POS-2025-05",
+   "SRC-CBY-POS-2025-06",
+   "SRC-CBY-POS-2025-07",
+   "SRC-CBY-POS-2025-08",
+   "SRC-CBY-POS-2025-09",
+   "SRC-CBY-POS-2025-10",
+   "SRC-CBY-POS-2025-11",
+   "SRC-CBY-POS-2025-12",
+   "SRC-CBY-POS-2026-01",
+   "SRC-UNDP-FMIIP-001"
+  ],
+  "alt_unresolved": [
+   "CTR-006"
+  ],
+  "named_in_text": [],
+  "visual_data_inputs": "",
+  "claim_evidence_inputs": "[\"11_CBY_PAYMENTS\",\"49_METRIC_CROSSWALK\",\"CTR-006\"]"
+ },
+ {
+  "object_id": "CLM-005",
+  "class": "CLAIM",
+  "routes": "/firms/",
+  "title_en": "Finance was not the most frequently cited constraint in this survey",
+  "alt_state": "CLOSED_VIA_CONTROLLED_DEPENDENCIES",
+  "alt_via": [
+   "12_FIRM_FINANCE"
+  ],
+  "alt_sources": [
+   "SRC-WB-ES-2013-PROFILE-001",
+   "SRC-WB-FSD-2024-001"
+  ],
+  "alt_unresolved": [
+   "EP-FIRM-2022",
+   "INS-004"
+  ],
+  "named_in_text": [],
+  "visual_data_inputs": "",
+  "claim_evidence_inputs": "[\"12_FIRM_FINANCE\",\"INS-004\",\"EP-FIRM-2022\"]"
+ },
+ {
+  "object_id": "CLM-006",
+  "class": "CLAIM",
+  "routes": "/firms/",
+  "title_en": "Finance severity within a specific denominator",
+  "alt_state": "CLOSED_VIA_CONTROLLED_DEPENDENCIES",
+  "alt_via": [
+   "12_FIRM_FINANCE"
+  ],
+  "alt_sources": [
+   "SRC-WB-ES-2013-PROFILE-001",
+   "SRC-WB-FSD-2024-001"
+  ],
+  "alt_unresolved": [
+   "DA-020",
+   "EP-FIRM-2022"
+  ],
+  "named_in_text": [],
+  "visual_data_inputs": "",
+  "claim_evidence_inputs": "[\"12_FIRM_FINANCE\",\"DA-020\",\"EP-FIRM-2022\"]"
+ },
+ {
+  "object_id": "CLM-008",
+  "class": "CLAIM",
+  "routes": "/providers/",
+  "title_en": "Listing or licensing does not establish operation",
+  "alt_state": "CLOSED_VIA_CONTROLLED_DEPENDENCIES",
+  "alt_via": [
+   "15_PROVIDER_MASTER"
+  ],
+  "alt_sources": [
+   "SRC-CBY-BANKLIST-AR-2026-001",
+   "SRC-CBY-ENF-01-2026",
+   "SRC-CBY-ENF-02-2026",
+   "SRC-CBY-ENF-03-2026",
+   "SRC-CBY-ENF-04-2026",
+   "SRC-CBY-ENF-05-2026",
+   "SRC-CBY-ENF-06-2026",
+   "SRC-CBY-ENF-09-2026",
+   "SRC-CBY-ENF-10-2026",
+   "SRC-CBY-ENF-11-2026",
+   "SRC-CBY-ENF-13-2026",
+   "SRC-CBY-ENF-14-2026",
+   "SRC-CBY-ENF-15-2026",
+   "SRC-CBY-ENF-17-2026"
+  ],
+  "alt_unresolved": [
+   "EP-CBY-BANK-ROSTER-2026",
+   "POB-001",
+   "PUC-BANK-2026-01"
+  ],
+  "named_in_text": [],
+  "visual_data_inputs": "",
+  "claim_evidence_inputs": "[\"15_PROVIDER_MASTER\",\"PUC-BANK-2026-01\",\"POB-001\",\"EP-CBY-BANK-ROSTER-2026\"]"
+ },
+ {
+  "object_id": "CLM-014",
+  "class": "CLAIM",
+  "routes": "/evidence/ | /methodology/",
+  "title_en": "Evidence freshness differs by domain",
+  "alt_state": "CLOSED_VIA_CONTROLLED_DEPENDENCIES",
+  "alt_via": [
+   "11_CBY_PAYMENTS",
+   "27_FINDEX_WAVES",
+   "54_PRIMARY_AUTHORITY"
+  ],
+  "alt_sources": [
+   "SRC-CBY-DIGITAL-EXPO-2026-001",
+   "SRC-CBY-EMONEY-2023-001",
+   "SRC-CBY-EMONEY-AMD-2025-001",
+   "SRC-CBY-EXCH-LIST-2026-001",
+   "SRC-CBY-FCP-AWARE-2024-001",
+   "SRC-CBY-FCP-BROCHURE-2024-001",
+   "SRC-CBY-FCP-INSTR-2023-001",
+   "SRC-CBY-GMW-2023-001",
+   "SRC-CBY-GMW-2024-001",
+   "SRC-CBY-GMW-2024-CLOSE-001",
+   "SRC-CBY-GMW-2025-001",
+   "SRC-CBY-PAY-BOARD-2026-001",
+   "SRC-CBY-PAYREPORT-H1-2025",
+   "SRC-CBY-PAYREPORT-Q3-2024",
+   "SRC-CBY-POS-2025-03",
+   "SRC-CBY-POS-2025-04",
+   "SRC-CBY-POS-2025-05",
+   "SRC-CBY-POS-2025-06",
+   "SRC-CBY-POS-2025-07",
+   "SRC-CBY-POS-2025-08",
+   "SRC-CBY-POS-2025-09",
+   "SRC-CBY-POS-2025-10",
+   "SRC-CBY-POS-2025-11",
+   "SRC-CBY-POS-2025-12",
+   "SRC-CBY-POS-2026-01",
+   "SRC-CBY-PSP-RULES-2022-001",
+   "SRC-WB-FINDEX-001",
+   "SRC-WB-FINDEX-003",
+   "SRC-WB-FINDEX-2014-001",
+   "SRC-WB-FINDEX-AGG-2022"
+  ],
+  "alt_unresolved": [
+   "01_DATASET_INDEX"
+  ],
+  "named_in_text": [],
+  "visual_data_inputs": "",
+  "claim_evidence_inputs": "[\"01_DATASET_INDEX\",\"27_FINDEX_WAVES\",\"11_CBY_PAYMENTS\",\"54_PRIMARY_AUTHORITY\"]"
+ },
+ {
+  "object_id": "CLM-022",
+  "class": "CLAIM",
+  "routes": "/finance/ | /methodology/",
+  "title_en": "Informative history without a continuous annual series",
+  "alt_state": "CLOSED_VIA_CONTROLLED_DEPENDENCIES",
+  "alt_via": [
+   "75_SFD_SMED_YEAR_COVERAGE",
+   "77_MFI_TEMPORAL_SPINE",
+   "78_MFI_METRIC_COVERAGE"
+  ],
+  "alt_sources": [
+   "SRC-SFD-MF-HISTORY-TOR-2012-001",
+   "SRC-SFD-Q1-2012-001",
+   "SRC-SFD-Q1-2015-001",
+   "SRC-SFD-Q1-2019-001",
+   "SRC-SFD-Q2-2013-001",
+   "SRC-SFD-Q2-2014-001",
+   "SRC-SFD-Q3-2015-001",
+   "SRC-SFD-Q3-2016-001",
+   "SRC-SFD-Q4-2009-001",
+   "SRC-SFD-Q4-2010-001",
+   "SRC-SFD-Q4-2011-001",
+   "SRC-SFD-Q4-2012-001",
+   "SRC-SFD-Q4-2015-001",
+   "SRC-SFD-Q4-2017-001",
+   "SRC-SFD-Q4-2018-001",
+   "SRC-SFD-Q4-2020-001"
+  ],
+  "alt_unresolved": [],
+  "named_in_text": [],
+  "visual_data_inputs": "",
+  "claim_evidence_inputs": "[\"75_SFD_SMED_YEAR_COVERAGE\",\"77_MFI_TEMPORAL_SPINE\",\"78_MFI_METRIC_COVERAGE\"]"
+ },
+ {
+  "object_id": "VIS-FINDEX-GAPS",
+  "class": "VISUAL",
+  "routes": "/people/",
+  "title_en": "Account Ownership — Who is being left behind?",
+  "alt_state": "CLOSED_VIA_CONTROLLED_DEPENDENCIES",
+  "alt_via": [
+   "28_FINDEX_OBS"
+  ],
+  "alt_sources": [
+   "SRC-WB-FINDEX-AGG-2022"
+  ],
+  "alt_unresolved": [
+   "41_DERIVED_ANALYTICS"
+  ],
+  "named_in_text": [],
+  "visual_data_inputs": "28_FINDEX_OBS + 41_DERIVED_ANALYTICS",
+  "claim_evidence_inputs": ""
+ },
+ {
+  "object_id": "VIS-POS-TERMINALS",
+  "class": "VISUAL",
+  "routes": "/payments/",
+  "title_en": "POS Footprint Pulse",
+  "alt_state": "CLOSED_VIA_CONTROLLED_DEPENDENCIES",
+  "alt_via": [
+   "11_CBY_PAYMENTS"
+  ],
+  "alt_sources": [
+   "SRC-CBY-PAYREPORT-H1-2025",
+   "SRC-CBY-PAYREPORT-Q3-2024",
+   "SRC-CBY-POS-2025-03",
+   "SRC-CBY-POS-2025-04",
+   "SRC-CBY-POS-2025-05",
+   "SRC-CBY-POS-2025-06",
+   "SRC-CBY-POS-2025-07",
+   "SRC-CBY-POS-2025-08",
+   "SRC-CBY-POS-2025-09",
+   "SRC-CBY-POS-2025-10",
+   "SRC-CBY-POS-2025-11",
+   "SRC-CBY-POS-2025-12",
+   "SRC-CBY-POS-2026-01"
+  ],
+  "alt_unresolved": [],
+  "named_in_text": [],
+  "visual_data_inputs": "11_CBY_PAYMENTS IND-0002",
+  "claim_evidence_inputs": ""
+ },
+ {
+  "object_id": "VIS-POS-TRANSACTIONS",
+  "class": "VISUAL",
+  "routes": "/payments/",
+  "title_en": "POS Usage Pulse",
+  "alt_state": "CLOSED_VIA_CONTROLLED_DEPENDENCIES",
+  "alt_via": [
+   "11_CBY_PAYMENTS"
+  ],
+  "alt_sources": [
+   "SRC-CBY-PAYREPORT-H1-2025",
+   "SRC-CBY-PAYREPORT-Q3-2024",
+   "SRC-CBY-POS-2025-03",
+   "SRC-CBY-POS-2025-04",
+   "SRC-CBY-POS-2025-05",
+   "SRC-CBY-POS-2025-06",
+   "SRC-CBY-POS-2025-07",
+   "SRC-CBY-POS-2025-08",
+   "SRC-CBY-POS-2025-09",
+   "SRC-CBY-POS-2025-10",
+   "SRC-CBY-POS-2025-11",
+   "SRC-CBY-POS-2025-12",
+   "SRC-CBY-POS-2026-01"
+  ],
+  "alt_unresolved": [
+   "CTR-002"
+  ],
+  "named_in_text": [],
+  "visual_data_inputs": "11_CBY_PAYMENTS IND-0003 + CTR-002",
+  "claim_evidence_inputs": ""
+ },
+ {
+  "object_id": "VIS-POS-VALUE",
+  "class": "VISUAL",
+  "routes": "/payments/",
+  "title_en": "POS Transaction Value",
+  "alt_state": "CLOSED_VIA_CONTROLLED_DEPENDENCIES",
+  "alt_via": [
+   "11_CBY_PAYMENTS"
+  ],
+  "alt_sources": [
+   "SRC-CBY-PAYREPORT-H1-2025",
+   "SRC-CBY-PAYREPORT-Q3-2024",
+   "SRC-CBY-POS-2025-03",
+   "SRC-CBY-POS-2025-04",
+   "SRC-CBY-POS-2025-05",
+   "SRC-CBY-POS-2025-06",
+   "SRC-CBY-POS-2025-07",
+   "SRC-CBY-POS-2025-08",
+   "SRC-CBY-POS-2025-09",
+   "SRC-CBY-POS-2025-10",
+   "SRC-CBY-POS-2025-11",
+   "SRC-CBY-POS-2025-12",
+   "SRC-CBY-POS-2026-01"
+  ],
+  "alt_unresolved": [],
+  "named_in_text": [],
+  "visual_data_inputs": "11_CBY_PAYMENTS IND-0004",
+  "claim_evidence_inputs": ""
+ },
+ {
+  "object_id": "VIS-PAYMENT-ANATOMY",
+  "class": "VISUAL",
+  "routes": "/payments/",
+  "title_en": "What does the payment system actually count?",
+  "alt_state": "NO_SOURCE_EXPECTED",
+  "alt_via": [],
+  "alt_sources": [],
+  "alt_unresolved": [],
+  "named_in_text": [],
+  "visual_data_inputs": "2025 H1 CBY cards, ATMs, POS, transactions, wallets, subscribers, accounts, composition",
+  "claim_evidence_inputs": ""
+ },
+ {
+  "object_id": "VIS-MFI-2014-PANEL",
+  "class": "VISUAL",
+  "routes": "/finance/",
+  "title_en": "Microfinance — a comparable quarter, not a fake long trend",
+  "alt_state": null,
+  "alt_via": null,
+  "alt_sources": null,
+  "alt_unresolved": null,
+  "named_in_text": [],
+  "visual_data_inputs": "",
+  "claim_evidence_inputs": ""
+ },
+ {
+  "object_id": "VIS-REMITTANCE-MACRO",
+  "class": "VISUAL",
+  "routes": "/remittances/",
+  "title_en": "Remittances — observed history vs outlook",
+  "alt_state": "CLOSED_VIA_CONTROLLED_DEPENDENCIES",
+  "alt_via": [
+   "17_REMITTANCES"
+  ],
+  "alt_sources": [
+   "SRC-IMF-AIV-2025-STAFF-001",
+   "SRC-IMF-AIV-2025-SUPP-001",
+   "SRC-WB-RPW-SA-YEM-2025Q3-001",
+   "SRC-WB-RPW-UAE-YEM-2025Q3-001"
+  ],
+  "alt_unresolved": [],
+  "named_in_text": [],
+  "visual_data_inputs": "17_REMITTANCES IMF series + DA-008/009",
+  "claim_evidence_inputs": ""
+ },
+ {
+  "object_id": "VIS-REMITTANCE-COST",
+  "class": "VISUAL",
+  "routes": "/remittances/",
+  "title_en": "What it costs to send money to Yemen",
+  "alt_state": "CLOSED_VIA_CONTROLLED_DEPENDENCIES",
+  "alt_via": [
+   "17_REMITTANCES"
+  ],
+  "alt_sources": [
+   "SRC-IMF-AIV-2025-STAFF-001",
+   "SRC-IMF-AIV-2025-SUPP-001",
+   "SRC-WB-RPW-SA-YEM-2025Q3-001",
+   "SRC-WB-RPW-UAE-YEM-2025Q3-001"
+  ],
+  "alt_unresolved": [
+   "DA-010..013"
+  ],
+  "named_in_text": [],
+  "visual_data_inputs": "17_REMITTANCES RPW corridor quotes + DA-010..013",
+  "claim_evidence_inputs": ""
+ },
+ {
+  "object_id": "VIS-FIRM-CONSTRAINTS",
+  "class": "VISUAL",
+  "routes": "/firms/",
+  "title_en": "Finance is not the only last mile",
+  "alt_state": "CLOSED_VIA_CONTROLLED_DEPENDENCIES",
+  "alt_via": [
+   "12_FIRM_FINANCE"
+  ],
+  "alt_sources": [
+   "SRC-WB-ES-2013-PROFILE-001",
+   "SRC-WB-FSD-2024-001"
+  ],
+  "alt_unresolved": [],
+  "named_in_text": [],
+  "visual_data_inputs": "12_FIRM_FINANCE FFM-007",
+  "claim_evidence_inputs": ""
+ },
+ {
+  "object_id": "VIS-FIRM-FINANCE-PATH",
+  "class": "VISUAL",
+  "routes": "/firms/",
+  "title_en": "When firms do borrow, where does credit come from?",
+  "alt_state": "CLOSED_VIA_CONTROLLED_DEPENDENCIES",
+  "alt_via": [
+   "12_FIRM_FINANCE"
+  ],
+  "alt_sources": [
+   "SRC-WB-ES-2013-PROFILE-001",
+   "SRC-WB-FSD-2024-001"
+  ],
+  "alt_unresolved": [
+   "DA-017..019"
+  ],
+  "named_in_text": [],
+  "visual_data_inputs": "12_FIRM_FINANCE loan-source rows + DA-017..019",
+  "claim_evidence_inputs": ""
+ },
+ {
+  "object_id": "VIS-FIRM-FINANCE-SEVERITY",
+  "class": "VISUAL",
+  "routes": "/firms/",
+  "title_en": "For firms that need finance, how severe is the obstacle?",
+  "alt_state": "CLOSED_VIA_CONTROLLED_DEPENDENCIES",
+  "alt_via": [
+   "12_FIRM_FINANCE"
+  ],
+  "alt_sources": [
+   "SRC-WB-ES-2013-PROFILE-001",
+   "SRC-WB-FSD-2024-001"
+  ],
+  "alt_unresolved": [
+   "DA-020"
+  ],
+  "named_in_text": [],
+  "visual_data_inputs": "12_FIRM_FINANCE FFM-006 + DA-020",
+  "claim_evidence_inputs": ""
+ },
+ {
+  "object_id": "VIS-OECD-FCP-TIMELINE",
+  "class": "VISUAL",
+  "routes": "/reforms/",
+  "title_en": "Consumer Protection & Capability — framework to implementation",
+  "alt_state": "CLOSED_VIA_CONTROLLED_DEPENDENCIES",
+  "alt_via": [
+   "30_OECD_NARRATIVE",
+   "42_CONTRADICTIONS",
+   "54_PRIMARY_AUTHORITY"
+  ],
+  "alt_sources": [
+   "SRC-CBY-DIGITAL-EXPO-2026-001",
+   "SRC-CBY-EMONEY-2023-001",
+   "SRC-CBY-EMONEY-AMD-2025-001",
+   "SRC-CBY-EXCH-LIST-2026-001",
+   "SRC-CBY-FCP-AWARE-2024-001",
+   "SRC-CBY-FCP-BROCHURE-2024-001",
+   "SRC-CBY-FCP-INSTR-2023-001",
+   "SRC-CBY-GMW-2023-001",
+   "SRC-CBY-GMW-2024-001",
+   "SRC-CBY-GMW-2024-CLOSE-001",
+   "SRC-CBY-GMW-2025-001",
+   "SRC-CBY-PAY-BOARD-2026-001",
+   "SRC-CBY-PSP-RULES-2022-001",
+   "SRC-KFW-RMMV-2023-001",
+   "SRC-OECD-YEM-RESILIENCE-001",
+   "SRC-SFD-Q4-2015-001",
+   "SRC-SFD-Q4-2018-001"
+  ],
+  "alt_unresolved": [],
+  "named_in_text": [],
+  "visual_data_inputs": "54_PRIMARY_AUTHORITY + 30_OECD_NARRATIVE + 42_CONTRADICTIONS",
+  "claim_evidence_inputs": ""
+ },
+ {
+  "object_id": "VIS-CAPITAL-CONTEXT",
+  "class": "VISUAL",
+  "routes": "/reforms/",
+  "title_en": "Capital & programme pathways",
+  "alt_state": "CLOSED_VIA_CONTROLLED_DEPENDENCIES",
+  "alt_via": [
+   "33_OCHA_FTS_2026"
+  ],
+  "alt_sources": [
+   "SRC-OCHA-FTS-YEM-2026-001"
+  ],
+  "alt_unresolved": [],
+  "named_in_text": [],
+  "visual_data_inputs": "33_OCHA_FTS_2026 + project/finance relationship tables",
+  "claim_evidence_inputs": ""
+ },
+ {
+  "object_id": "VIS-EVIDENCE-GAPS",
+  "class": "VISUAL",
+  "routes": "/measurement/",
+  "title_en": "What we still do not know",
+  "alt_state": "NO_SOURCE_EXPECTED",
+  "alt_via": [],
+  "alt_sources": [],
+  "alt_unresolved": [],
+  "named_in_text": [],
+  "visual_data_inputs": "Documented evidence blockers + research coverage + source availability",
+  "claim_evidence_inputs": ""
+ },
+ {
+  "object_id": "VIS-PAYMENT-RAILS",
+  "class": "VISUAL",
+  "routes": "/reforms/",
+  "title_en": "How the payment architecture is changing",
+  "alt_state": "CLOSED_VIA_CONTROLLED_DEPENDENCIES",
+  "alt_via": [
+   "48_REFORM_EVENTS"
+  ],
+  "alt_sources": [
+   "SRC-CBY-BANK-NETWORK-MTG-2026-001",
+   "SRC-CBY-DIGITAL-EXPO-2026-001",
+   "SRC-CBY-EMONEY-2023-001",
+   "SRC-CBY-EMONEY-AMD-2025-001",
+   "SRC-CBY-FCP-INSTR-2023-001",
+   "SRC-CBY-PAY-BOARD-2026-001",
+   "SRC-CBY-UNIFIED-NET-2026-001",
+   "SRC-CBY-YPCC-BOARD-2026-001",
+   "SRC-CBY-YPCC-FOUND-2026-001",
+   "SRC-WB-FMIIP-ISR2-2026-001"
+  ],
+  "alt_unresolved": [],
+  "named_in_text": [],
+  "visual_data_inputs": "48_REFORM_EVENTS + FMIIP source + CBY regulatory/events",
+  "claim_evidence_inputs": ""
+ },
+ {
+  "object_id": "VIS-EVIDENCE-CLASS-LADDER",
+  "class": "VISUAL",
+  "routes": "/evidence/",
+  "title_en": "What kind of evidence is this?",
+  "alt_state": "CLOSED_VIA_CONTROLLED_DEPENDENCIES",
+  "alt_via": [
+   "30_OECD_NARRATIVE",
+   "42_CONTRADICTIONS",
+   "45_EVIDENCE_PASSPORTS",
+   "48_REFORM_EVENTS",
+   "51_LITERATURE_EVIDENCE"
+  ],
+  "alt_sources": [
+   "SRC-AJMBFS-CBY-FI-2025-001",
+   "SRC-CBY-BANK-NETWORK-MTG-2026-001",
+   "SRC-CBY-DIGITAL-EXPO-2026-001",
+   "SRC-CBY-EMONEY-2023-001",
+   "SRC-CBY-EMONEY-AMD-2025-001",
+   "SRC-CBY-FCP-BROCHURE-2024-001",
+   "SRC-CBY-FCP-INSTR-2023-001",
+   "SRC-CBY-GMW-2023-001",
+   "SRC-CBY-GMW-2024-001",
+   "SRC-CBY-GMW-2024-CLOSE-001",
+   "SRC-CBY-GMW-2025-001",
+   "SRC-CBY-PAY-BOARD-2026-001",
+   "SRC-CBY-UNIFIED-NET-2026-001",
+   "SRC-CBY-YPCC-BOARD-2026-001",
+   "SRC-CBY-YPCC-FOUND-2026-001",
+   "SRC-IBS-EPAY-YEM-2020",
+   "SRC-KFW-RMMV-2023-001",
+   "SRC-MDPI-UTAUT-YEM-2022",
+   "SRC-OECD-YEM-RESILIENCE-001",
+   "SRC-SANAA-EMONEY-2022",
+   "SRC-SANAA-MF-2020",
+   "SRC-SANAA-MFB-2024",
+   "SRC-SFD-Q4-2015-001",
+   "SRC-SFD-Q4-2018-001",
+   "SRC-WB-FMIIP-ISR2-2026-001"
+  ],
+  "alt_unresolved": [],
+  "named_in_text": [],
+  "visual_data_inputs": "45_EVIDENCE_PASSPORTS + 51_LITERATURE_EVIDENCE + 30_OECD_NARRATIVE + 48_REFORM_EVENTS + 42_CONTRADICTIONS",
+  "claim_evidence_inputs": ""
+ },
+ {
+  "object_id": "VIS-FL-EVIDENCE-LADDER",
+  "class": "VISUAL",
+  "routes": "/people/",
+  "title_en": "Financial literacy — activity is not outcome",
+  "alt_state": "CLOSED_VIA_CONTROLLED_DEPENDENCIES",
+  "alt_via": [
+   "45_EVIDENCE_PASSPORTS",
+   "54_PRIMARY_AUTHORITY"
+  ],
+  "alt_sources": [
+   "SRC-CBY-DIGITAL-EXPO-2026-001",
+   "SRC-CBY-EMONEY-2023-001",
+   "SRC-CBY-EMONEY-AMD-2025-001",
+   "SRC-CBY-EXCH-LIST-2026-001",
+   "SRC-CBY-FCP-AWARE-2024-001",
+   "SRC-CBY-FCP-BROCHURE-2024-001",
+   "SRC-CBY-FCP-INSTR-2023-001",
+   "SRC-CBY-GMW-2023-001",
+   "SRC-CBY-GMW-2024-001",
+   "SRC-CBY-GMW-2024-CLOSE-001",
+   "SRC-CBY-GMW-2025-001",
+   "SRC-CBY-PAY-BOARD-2026-001",
+   "SRC-CBY-PSP-RULES-2022-001"
+  ],
+  "alt_unresolved": [],
+  "named_in_text": [],
+  "visual_data_inputs": "54_PRIMARY_AUTHORITY + OECD/INFE capability evidence + 45_EVIDENCE_PASSPORTS",
+  "claim_evidence_inputs": ""
+ },
+ {
+  "object_id": "VIS-MFI-RUPTURE-LENS",
+  "class": "VISUAL",
+  "routes": "/finance/",
+  "title_en": "2015 — when an annual number would hide the rupture",
+  "alt_state": null,
+  "alt_via": null,
+  "alt_sources": null,
+  "alt_unresolved": null,
+  "named_in_text": [],
+  "visual_data_inputs": "",
+  "claim_evidence_inputs": ""
+ },
+ {
+  "object_id": "VIS-TARGET-RESULT-STATE",
+  "class": "VISUAL",
+  "routes": "/reforms/",
+  "title_en": "Target is not achievement",
+  "alt_state": "CLOSED_VIA_CONTROLLED_DEPENDENCIES",
+  "alt_via": [
+   "49_METRIC_CROSSWALK"
+  ],
+  "alt_sources": [
+   "SRC-UNDP-FMIIP-001"
+  ],
+  "alt_unresolved": [],
+  "named_in_text": [],
+  "visual_data_inputs": "49_METRIC_CROSSWALK + project target/result objects",
+  "claim_evidence_inputs": ""
+ }
+]

@@ -1,0 +1,639 @@
+{
+ "stage": "STAGE-3",
+ "input_master_sha256": "4e3d9158f6c762bd7b06f7047337cde9eeb10a690c86d023181041566a11b0ad",
+ "output_master_sha256": "3064257b518de9e2dfe28a3ce7fb6d201ab06b53908a488714ecd3761054da9d",
+ "cells_and_ops": 260,
+ "presentation_changes": [
+  "/finance/: section 4 added to primary; later section references shifted +1",
+  "/methodology/: not a presentation-contract route (rendered in order by the generic section renderer)",
+  "/methodology/: not a presentation-contract route (rendered in order by the generic section renderer)",
+  "/methodology/: not a presentation-contract route (rendered in order by the generic section renderer)"
+ ],
+ "results": {
+  "PB-0202": {
+   "disposition": "APPLIED",
+   "stage": "STAGE-3",
+   "detail": [
+    "PB-0202.01: 06_EVIDENCE_OBJECTS!r62.limitations_en ×1",
+    "PB-0202.02: 07_PUBLIC_CLAIMS!r12.does_not_prove_en ×1"
+   ]
+  },
+  "PB-0230": {
+   "disposition": "APPLIED",
+   "stage": "STAGE-3",
+   "detail": [
+    "PB-0230.05: 03_PAGE_SECTIONS!r118.body_ar ×1",
+    "PB-0230.06: 03_PAGE_SECTIONS!r400.body_ar ×1",
+    "PB-0230.07: 03_PAGE_SECTIONS!r490.body_ar ×1",
+    "PB-0230.08: 03_PAGE_SECTIONS!r540.body_ar ×1",
+    "PB-0230.09: 06_EVIDENCE_OBJECTS!r23.summary_ar ×1",
+    "PB-0230.10: 07_PUBLIC_CLAIMS!r22.copy_ar ×1",
+    "PB-0230.11: 09_READING_SECTIONS!r78.copy_ar ×1",
+    "full_copy rows superseded by EXF-002 derivation: PB-0230.01, PB-0230.02, PB-0230.03, PB-0230.04"
+   ]
+  },
+  "PB-0313": {
+   "disposition": "APPLIED",
+   "stage": "STAGE-3",
+   "detail": [
+    "PB-0313.02: 03_PAGE_SECTIONS!r554.body_en ×1",
+    "full_copy rows superseded by EXF-002 derivation: PB-0313.01"
+   ]
+  },
+  "PB-0314": {
+   "disposition": "APPLIED",
+   "stage": "STAGE-3",
+   "detail": [
+    "PB-0314.04: 03_PAGE_SECTIONS!r146.body_ar ×1",
+    "PB-0314.05: 03_PAGE_SECTIONS!r522.body_ar ×1",
+    "PB-0314.06: 03_PAGE_SECTIONS!r555.body_ar ×1",
+    "PB-0314.07: 06_EVIDENCE_OBJECTS!r103.summary_ar ×1",
+    "PB-0314.08: 07_PUBLIC_CLAIMS!r36.copy_ar ×1",
+    "PB-0314.09: 09_READING_SECTIONS!r6.copy_ar ×1",
+    "full_copy rows superseded by EXF-002 derivation: PB-0314.01, PB-0314.02, PB-0314.03"
+   ]
+  },
+  "PB-0320": {
+   "disposition": "APPLIED",
+   "stage": "STAGE-3",
+   "detail": [
+    "PB-0320: 10_MEASUREMENT_AGENDA!r7.current_evidence_en"
+   ]
+  },
+  "PB-0321": {
+   "disposition": "APPLIED",
+   "stage": "STAGE-3",
+   "detail": [
+    "PB-0321: 10_MEASUREMENT_AGENDA!r7.current_evidence_ar"
+   ]
+  },
+  "PB-0322": {
+   "disposition": "HELD",
+   "stage": "STAGE-3",
+   "detail": "A new public claim CLM-061 would add the public route /evidence/CLM-061/; the route baseline (284) is fixed for this tranche. The income-group gap is published on /people/ (PB-0302/0303) and in MA-003 (PB-0320/0321) with its governed sources; the standalone claim is carried to the unresolved queue."
+  },
+  "PB-0325": {
+   "disposition": "APPLIED",
+   "stage": "STAGE-3",
+   "detail": [
+    "PB-0325: 10_MEASUREMENT_AGENDA!r5.affected_routes"
+   ]
+  },
+  "PB-0326": {
+   "disposition": "APPLIED",
+   "stage": "STAGE-3",
+   "detail": [
+    "PB-0326.01: 10_MEASUREMENT_AGENDA!r5.current_evidence_en ×1"
+   ]
+  },
+  "PB-0327": {
+   "disposition": "APPLIED",
+   "stage": "STAGE-3",
+   "detail": [
+    "PB-0327.01: 10_MEASUREMENT_AGENDA!r5.current_evidence_ar ×1"
+   ]
+  },
+  "PB-0328": {
+   "disposition": "APPLIED",
+   "stage": "STAGE-3",
+   "detail": [
+    "PB-0328.01: 10_MEASUREMENT_AGENDA!r5.missing_evidence_en ×1"
+   ]
+  },
+  "PB-0329": {
+   "disposition": "APPLIED",
+   "stage": "STAGE-3",
+   "detail": [
+    "PB-0329.01: 10_MEASUREMENT_AGENDA!r5.missing_evidence_ar ×1"
+   ]
+  },
+  "PB-0330": {
+   "disposition": "APPLIED",
+   "stage": "STAGE-3",
+   "detail": [
+    "PB-0330.01: 10_MEASUREMENT_AGENDA!r5.guardrail_en ×1"
+   ]
+  },
+  "PB-0340": {
+   "disposition": "APPLIED",
+   "stage": "STAGE-3",
+   "detail": [
+    "PB-0340.02: 03_PAGE_SECTIONS!r539.body_en ×1",
+    "full_copy rows superseded by EXF-002 derivation: PB-0340.01"
+   ]
+  },
+  "PB-0341": {
+   "disposition": "APPLIED",
+   "stage": "STAGE-3",
+   "detail": [
+    "PB-0341.02: 03_PAGE_SECTIONS!r540.body_ar ×1",
+    "full_copy rows superseded by EXF-002 derivation: PB-0341.01"
+   ]
+  },
+  "PB-0342": {
+   "disposition": "APPLIED",
+   "stage": "STAGE-3",
+   "detail": {
+    "implemented_in": "scripts/projection/structure.py blocks()/keyed_records(block=title) and master_structure.json declare and read 31 'FMIIP results framework' by its own title/header; no value change."
+   }
+  },
+  "PB-0345": {
+   "disposition": "HELD",
+   "stage": "STAGE-3",
+   "detail": "Literal-closure rule: the new section states verified Master values (11.9%, 1,062,441 active bank accounts, 375,252 active e-wallet accounts), but no source-closed record bound to /evidence/compare/ carries them, so a reader could not trace these public numbers to an Evidence Record on the page. Making them traceable needs either new Evidence Records (new public routes; the route baseline 284 is fixed for this tranche) or a governed extension of existing records and their route bindings (an IA change outside this spec). Carried to the unresolved queue with the exact text ready."
+  },
+  "PB-0360": {
+   "disposition": "APPLIED",
+   "stage": "STAGE-3",
+   "detail": [
+    "PB-0360.01: 03_PAGE_SECTIONS!r450.body_en ×1"
+   ]
+  },
+  "PB-0361": {
+   "disposition": "APPLIED",
+   "stage": "STAGE-3",
+   "detail": [
+    "PB-0361.01: 03_PAGE_SECTIONS!r450.body_ar ×1"
+   ]
+  },
+  "PB-0362": {
+   "disposition": "APPLIED",
+   "stage": "STAGE-3",
+   "detail": [
+    "PB-0362.02: 03_PAGE_SECTIONS!r525.body_en ×1",
+    "PB-0362.03: 08_READINGS!r5.prohibited_inference_en ×1",
+    "PB-0362.04: 09_READING_SECTIONS!r9.copy_en ×1",
+    "full_copy rows superseded by EXF-002 derivation: PB-0362.01"
+   ]
+  },
+  "PB-0363": {
+   "disposition": "APPLIED",
+   "stage": "STAGE-3",
+   "detail": [
+    "PB-0363.02: 03_PAGE_SECTIONS!r525.body_ar ×1",
+    "PB-0363.03: 08_READINGS!r5.prohibited_inference_ar ×1",
+    "PB-0363.04: 09_READING_SECTIONS!r9.copy_ar ×1",
+    "full_copy rows superseded by EXF-002 derivation: PB-0363.01"
+   ]
+  },
+  "PB-0374": {
+   "disposition": "HELD",
+   "stage": "STAGE-3",
+   "detail": "Splitting 06 limitations_* into measurement_limitation_* and prohibited_inference_* for 108 records (216 cells) is a per-record editorial adjudication in two languages; a mechanical sentence split would move meaning. Carried to the unresolved queue with its rule."
+  },
+  "PB-0470": {
+   "disposition": "HELD",
+   "stage": "STAGE-3",
+   "detail": "The rule has three parts. Two are implemented through EXF-002 (03 is the canonical rendered page copy; 02.full_copy_* is derived from title + rendered sections and enforced by the generator). The third — generating reading-page sections from 09_READING_SECTIONS — would replace the rendered copy of all ten Reading pages: the 03 and 09 bodies differ in every section (0 of 80 identical), so the switch needs a bilingual editorial adjudication. The root is therefore held as a whole; the switch is carried to the unresolved queue."
+  },
+  "PB-0471": {
+   "disposition": "HELD",
+   "stage": "STAGE-3",
+   "detail": "Generating embedded object blocks from the owning objects at build time requires removing embedded copies from 03 section cells across the product; this tranche keeps the spec's explicit per-cell patches of every embedding cell (consistency verified by the literal and parity gates). Carried to R8.5 with PB-0470."
+  },
+  "PB-0472": {
+   "disposition": "SUPERSEDED",
+   "stage": "STAGE-3",
+   "detail": "Its target cells (02 r139 full_copy_en/ar of /readings/microfinance-structural-divergence/) are regenerated by EXF-002 from the rendered, post-patch 03 sections, which carry the corrected PB-0120…PB-0147 wording; generating them from 09 would make full_copy differ from the rendered page."
+  },
+  "PB-0480": {
+   "disposition": "APPLIED",
+   "stage": "STAGE-3",
+   "detail": [
+    "PB-0480.02: 03_PAGE_SECTIONS!r549.body_en ×1",
+    "full_copy rows superseded by EXF-002 derivation: PB-0480.01"
+   ]
+  },
+  "PB-0481": {
+   "disposition": "APPLIED",
+   "stage": "STAGE-3",
+   "detail": [
+    "PB-0481.02: 03_PAGE_SECTIONS!r550.body_ar ×1",
+    "full_copy rows superseded by EXF-002 derivation: PB-0481.01"
+   ]
+  },
+  "PB-0147": {
+   "disposition": "APPLIED",
+   "stage": "STAGE-3",
+   "detail": [
+    "PB-0147.01: 34_EVIDENCE_PASSPORTS!r56.metric_or_scope ×1"
+   ]
+  },
+  "PB-0315": {
+   "disposition": "APPLIED",
+   "stage": "STAGE-3",
+   "detail": [
+    "PB-0315.03: 03_PAGE_SECTIONS!r146.body_en ×1",
+    "PB-0315.04: 03_PAGE_SECTIONS!r522.body_en ×1",
+    "PB-0315.05: 06_EVIDENCE_OBJECTS!r103.summary_en ×1",
+    "PB-0315.06: 07_PUBLIC_CLAIMS!r36.copy_en ×1",
+    "PB-0315.07: 09_READING_SECTIONS!r6.copy_en ×1",
+    "full_copy rows superseded by EXF-002 derivation: PB-0315.01, PB-0315.02"
+   ]
+  },
+  "PB-0426": {
+   "disposition": "APPLIED",
+   "stage": "STAGE-3",
+   "detail": [
+    "CWR-001: surface=/remittances/ context=—",
+    "CWR-002: surface=/finance/ context=—",
+    "CWR-003: surface=— context=/people/; /payments/; /reforms/",
+    "CWR-004: surface=/people/; /reforms/ context=/access/",
+    "CWR-005: surface=/payments/ context=—",
+    "CWR-006: surface=/finance/ context=/providers/",
+    "CWR-007: surface=/people/ context=—",
+    "CWR-008: surface=/firms/ context=/finance/",
+    "CWR-009: surface=/payments/; /access/; /reforms/ context=—",
+    "CWR-010: surface=— context=/people/; /payments/"
+   ]
+  },
+  "PB-0520": {
+   "disposition": "HELD",
+   "stage": "STAGE-3",
+   "detail": "Literal-closure rule: the new section states verified Master values (20_FIRM_FINANCE 2022 survey: 58.2% (191 of 328), working-capital shares 69.12/16.66/10.15/0.56%, intermediaries 73.48/24.39%, informal 80.18% of 217), but no source-closed record bound to /firms/ carries them, so a reader could not trace these public numbers to an Evidence Record on the page. Making them traceable needs either new Evidence Records (new public routes; the route baseline 284 is fixed for this tranche) or a governed extension of existing records and their route bindings (an IA change outside this spec). Carried to the unresolved queue with the exact text ready."
+  },
+  "PB-0521": {
+   "disposition": "HELD",
+   "stage": "STAGE-3",
+   "detail": "Literal-closure rule: the new section states verified Master values (19_PAYMENTS_DATA e-wallet subscribers 414,631 / 507,585 / 581,075 (2024 Q1–Q3) and 2,102,484 (H1 2025)), but no source-closed record bound to /payments/ carries them, so a reader could not trace these public numbers to an Evidence Record on the page. Making them traceable needs either new Evidence Records (new public routes; the route baseline 284 is fixed for this tranche) or a governed extension of existing records and their route bindings (an IA change outside this spec). Carried to the unresolved queue with the exact text ready."
+  },
+  "PB-0522": {
+   "disposition": "HELD",
+   "stage": "STAGE-3",
+   "detail": "Literal-closure rule: the new section states verified Master values (2026 roster counts 98 / 225 / 106, 26 listed banks, FMIIP 817 access points vs 1,021 target), but no source-closed record bound to /access/ carries them, so a reader could not trace these public numbers to an Evidence Record on the page. Making them traceable needs either new Evidence Records (new public routes; the route baseline 284 is fixed for this tranche) or a governed extension of existing records and their route bindings (an IA change outside this spec). Carried to the unresolved queue with the exact text ready."
+  },
+  "PB-0523": {
+   "disposition": "APPLIED",
+   "stage": "STAGE-3",
+   "detail": {
+    "implemented_in": "scripts/projection/derived.py page_specs: prohibited_inferences de-duplicated per language across claims, visuals and Readings of the page."
+   }
+  },
+  "PB-0524": {
+   "disposition": "APPLIED",
+   "stage": "STAGE-3",
+   "detail": {
+    "route": "/finance/",
+    "section_order": 4,
+    "rows_appended": [
+     583,
+     584
+    ],
+    "follows_section": 3
+   }
+  },
+  "PB-0525": {
+   "disposition": "HELD",
+   "stage": "STAGE-3",
+   "detail": "The 22 'Provider status events' block holds English-only event descriptions and non-proof notes; a public status-event table on the bilingual /providers/ page needs governed Arabic event text and Arabic entity names taken from the source instruments. Carried to the unresolved queue; the Master rows (PSE-001…PSE-015) are ready for it."
+  },
+  "PB-0517": {
+   "disposition": "APPLIED",
+   "stage": "STAGE-3",
+   "detail": {
+    "implemented_in": "22 'Provider status events' is read by title/header (structure.keyed_records(block=...)); PSE-015 appended by PB-0519."
+   }
+  },
+  "PB-0473": {
+   "disposition": "APPLIED",
+   "stage": "STAGE-3",
+   "detail": {
+    "implemented_in": "scripts/projection/master_structure.json declares every titled block (43 at entry, incl. the unseparated 31 'OECD policy' block); families.validate_structure fails on any undeclared or missing block; tests in scripts/projection/tests."
+   }
+  },
+  "PB-0518": {
+   "disposition": "APPLIED",
+   "stage": "STAGE-3",
+   "detail": {
+    "row": 164,
+    "values": {
+     "source_id": "SRC-CBY-ENF-18-2026",
+     "primary_url": "https://cby-ye.com/news/975",
+     "datasets_or_use": "DS-PROVIDER-STATUS-EVENTS",
+     "row_count": 1,
+     "public_card_state": "LOCATOR_ONLY"
+    },
+    "note": "Locator verified by the Claude team at cby-ye.com/news/975 (dated 2026-09-24; page text names no entity; names only in the scanned PDF). Display fields and publisher stay empty on a LOCATOR_ONLY card (acceptance correction F; PB-0390P governs publisher population). Retrieval date is recorded with the PB-0390 columns in Stage 4."
+   }
+  },
+  "PB-0519": {
+   "disposition": "APPLIED",
+   "stage": "STAGE-3",
+   "detail": {
+    "inserted_row": 87,
+    "event": "PSE-015",
+    "note": "Rows of 22 at and below r87 move down by one; no later spec row targets them."
+   }
+  },
+  "PB-0526": {
+   "disposition": "APPLIED",
+   "stage": "STAGE-3",
+   "detail": [
+    "PB-0526.01: 02_SITE_MAP!r128.title_ar ×1"
+   ]
+  },
+  "PB-0527": {
+   "disposition": "APPLIED",
+   "stage": "STAGE-3",
+   "detail": [
+    "PB-0527.01: 07_PUBLIC_CLAIMS!r35.copy_ar ×1"
+   ]
+  },
+  "PB-0528": {
+   "disposition": "APPLIED",
+   "stage": "STAGE-3",
+   "detail": [
+    "PB-0528.01: 06_EVIDENCE_OBJECTS!r51.summary_en ×1",
+    "PB-0528.02: 07_PUBLIC_CLAIMS!r35.copy_en ×1"
+   ]
+  },
+  "PB-0529": {
+   "disposition": "APPLIED",
+   "stage": "STAGE-3",
+   "detail": [
+    "PB-0529.01: 06_EVIDENCE_OBJECTS!r47.limitations_ar ×1",
+    "PB-0529.02: 07_PUBLIC_CLAIMS!r31.does_not_prove_ar ×1"
+   ]
+  },
+  "PB-0560": {
+   "disposition": "APPLIED",
+   "stage": "STAGE-3",
+   "detail": [
+    "PB-0560.01: 06_EVIDENCE_OBJECTS!r27.universe_en ×1"
+   ]
+  },
+  "PB-0561": {
+   "disposition": "APPLIED",
+   "stage": "STAGE-3",
+   "detail": [
+    "PB-0561.01: 06_EVIDENCE_OBJECTS!r42.universe_en ×1"
+   ]
+  },
+  "PB-0562": {
+   "disposition": "APPLIED",
+   "stage": "STAGE-3",
+   "detail": [
+    "PB-0562.01: 06_EVIDENCE_OBJECTS!r43.universe_en ×1"
+   ]
+  },
+  "PB-0563": {
+   "disposition": "APPLIED",
+   "stage": "STAGE-3",
+   "detail": [
+    "PB-0563.01: 06_EVIDENCE_OBJECTS!r44.universe_en ×1"
+   ]
+  },
+  "PB-0564": {
+   "disposition": "APPLIED",
+   "stage": "STAGE-3",
+   "detail": [
+    "PB-0564.01: 06_EVIDENCE_OBJECTS!r45.universe_en ×1"
+   ]
+  },
+  "PB-0565": {
+   "disposition": "APPLIED",
+   "stage": "STAGE-3",
+   "detail": [
+    "PB-0565.01: 06_EVIDENCE_OBJECTS!r46.universe_en ×1"
+   ]
+  },
+  "PB-0566": {
+   "disposition": "APPLIED",
+   "stage": "STAGE-3",
+   "detail": [
+    "PB-0566.01: 06_EVIDENCE_OBJECTS!r52.universe_en ×1"
+   ]
+  },
+  "PB-0567": {
+   "disposition": "APPLIED",
+   "stage": "STAGE-3",
+   "detail": [
+    "PB-0567.01: 06_EVIDENCE_OBJECTS!r53.universe_en ×1"
+   ]
+  },
+  "PB-0568": {
+   "disposition": "APPLIED",
+   "stage": "STAGE-3",
+   "detail": [
+    "PB-0568.01: 06_EVIDENCE_OBJECTS!r54.universe_en ×1"
+   ]
+  },
+  "PB-0569": {
+   "disposition": "APPLIED",
+   "stage": "STAGE-3",
+   "detail": [
+    "PB-0569.01: 06_EVIDENCE_OBJECTS!r55.universe_en ×1"
+   ]
+  },
+  "PB-0570": {
+   "disposition": "APPLIED",
+   "stage": "STAGE-3",
+   "detail": [
+    "PB-0570.01: 06_EVIDENCE_OBJECTS!r70.universe_en ×1"
+   ]
+  },
+  "PB-0571": {
+   "disposition": "APPLIED",
+   "stage": "STAGE-3",
+   "detail": [
+    "PB-0571.01: 06_EVIDENCE_OBJECTS!r82.universe_en ×1"
+   ]
+  },
+  "PB-0572": {
+   "disposition": "APPLIED",
+   "stage": "STAGE-3",
+   "detail": [
+    "PB-0572.01: 02_SITE_MAP!r81.title_en ×1",
+    "PB-0572.03: 06_EVIDENCE_OBJECTS!r54.title_en ×1",
+    "full_copy rows superseded by EXF-002 derivation: PB-0572.02"
+   ]
+  },
+  "PB-0573": {
+   "disposition": "APPLIED",
+   "stage": "STAGE-3",
+   "detail": [
+    "PB-0573.01: 02_SITE_MAP!r84.title_en ×1",
+    "PB-0573.03: 06_EVIDENCE_OBJECTS!r55.title_en ×1",
+    "full_copy rows superseded by EXF-002 derivation: PB-0573.02"
+   ]
+  },
+  "PB-0574": {
+   "disposition": "APPLIED",
+   "stage": "STAGE-3",
+   "detail": [
+    "PB-0574.01: 02_SITE_MAP!r103.title_en ×1",
+    "PB-0574.03: 06_EVIDENCE_OBJECTS!r70.title_en ×1",
+    "full_copy rows superseded by EXF-002 derivation: PB-0574.02"
+   ]
+  },
+  "PB-0575": {
+   "disposition": "APPLIED",
+   "stage": "STAGE-3",
+   "detail": [
+    "PB-0575.01: 02_SITE_MAP!r104.title_ar ×1",
+    "PB-0575.03: 06_EVIDENCE_OBJECTS!r82.title_ar ×1",
+    "full_copy rows superseded by EXF-002 derivation: PB-0575.02"
+   ]
+  },
+  "PB-0576": {
+   "disposition": "APPLIED",
+   "stage": "STAGE-3",
+   "detail": [
+    "PB-0576.01: 06_EVIDENCE_OBJECTS!r47.limitations_en ×1",
+    "PB-0576.02: 34_EVIDENCE_PASSPORTS!r16.critical_limit ×1"
+   ]
+  },
+  "PB-0594": {
+   "disposition": "APPLIED",
+   "stage": "STAGE-3",
+   "detail": [
+    "PB-0594.01: 06_EVIDENCE_OBJECTS!r83.limitations_en ×1",
+    "PB-0594.02: 11_VISUAL_LIBRARY!r21.prohibited_inference_en ×1"
+   ]
+  },
+  "PB-0595": {
+   "disposition": "APPLIED",
+   "stage": "STAGE-3",
+   "detail": [
+    "PB-0595.01: 06_EVIDENCE_OBJECTS!r83.limitations_ar ×1",
+    "PB-0595.02: 11_VISUAL_LIBRARY!r21.prohibited_inference_ar ×1"
+   ]
+  },
+  "PB-0580A": {
+   "disposition": "APPLIED",
+   "stage": "STAGE-3",
+   "detail": [
+    "PB-0580A.02: 03_PAGE_SECTIONS!r394.heading_ar ×1",
+    "full_copy rows superseded by EXF-002 derivation: PB-0580A.01"
+   ]
+  },
+  "PB-0581A": {
+   "disposition": "APPLIED",
+   "stage": "STAGE-3",
+   "detail": [
+    "PB-0581A.02: 03_PAGE_SECTIONS!r394.body_ar ×1",
+    "full_copy rows superseded by EXF-002 derivation: PB-0581A.01"
+   ]
+  },
+  "PB-0585A": {
+   "disposition": "APPLIED",
+   "stage": "STAGE-3",
+   "detail": [
+    "PB-0585A.02: 03_PAGE_SECTIONS!r102.body_ar ×1",
+    "PB-0585A.03: 06_EVIDENCE_OBJECTS!r8.summary_ar ×1",
+    "PB-0585A.04: 07_PUBLIC_CLAIMS!r14.copy_ar ×1",
+    "full_copy rows superseded by EXF-002 derivation: PB-0585A.01"
+   ]
+  },
+  "PB-0577": {
+   "disposition": "APPLIED",
+   "stage": "STAGE-3",
+   "detail": [
+    "PB-0577.01: 34_EVIDENCE_PASSPORTS!r16.display_requirements ×1"
+   ]
+  },
+  "PB-0611": {
+   "disposition": "APPLIED",
+   "stage": "STAGE-3",
+   "detail": {
+    "route": "/methodology/",
+    "section_order": 4,
+    "rows_appended": [
+     585,
+     586
+    ],
+    "follows_section": 3
+   }
+  },
+  "PB-0612": {
+   "disposition": "APPLIED",
+   "stage": "STAGE-3",
+   "detail": {
+    "route": "/methodology/",
+    "section_order": 5,
+    "rows_appended": [
+     587,
+     588
+    ],
+    "follows_section": 4
+   }
+  },
+  "PB-0613": {
+   "disposition": "APPLIED",
+   "stage": "STAGE-3",
+   "detail": {
+    "route": "/methodology/",
+    "section_order": 6,
+    "rows_appended": [
+     589,
+     590
+    ],
+    "follows_section": 5
+   }
+  },
+  "PB-0614": {
+   "disposition": "HELD",
+   "stage": "STAGE-3",
+   "detail": "Literal-closure rule: the new section states verified Master values (the illustrative 15.5% / 6.5% / 9.0-point example), but no source-closed record bound to /methodology/ carries them, so a reader could not trace these public numbers to an Evidence Record on the page. Making them traceable needs either new Evidence Records (new public routes; the route baseline 284 is fixed for this tranche) or a governed extension of existing records and their route bindings (an IA change outside this spec). Carried to the unresolved queue with the exact text ready."
+  },
+  "PB-0615": {
+   "disposition": "APPLIED",
+   "stage": "STAGE-3",
+   "detail": [
+    "17_INDICATOR_LIBRARY!A2 sheet description"
+   ]
+  },
+  "EXF-002": {
+   "disposition": "APPLIED",
+   "stage": "STAGE-3",
+   "detail": [
+    "/data/ en",
+    "/data/ ar",
+    "/evidence/CLM-010/ ar",
+    "/evidence/CLM-018/ ar",
+    "/evidence/CLM-032/ en",
+    "/evidence/CLM-032/ ar",
+    "/evidence/VIS-BORROWING-SOURCES-2014/ en",
+    "/evidence/VIS-DOMESTIC-REMITTANCE-PATH-2014/ en",
+    "/evidence/VIS-MFI-2014-PANEL/ en",
+    "/evidence/VIS-MFI-RUPTURE-LENS/ ar",
+    "/evidence/ ar",
+    "/finance/ en",
+    "/finance/ ar",
+    "/firms/ ar",
+    "/measurement/ en",
+    "/measurement/ ar",
+    "/methodology/ en",
+    "/methodology/ ar",
+    "/payments/ ar",
+    "/people/ ar",
+    "/providers/ en",
+    "/providers/ ar",
+    "/readings/after-transfer-persistence/ en",
+    "/readings/after-transfer-persistence/ ar",
+    "/readings/banking-jump-measurement-basis/ en",
+    "/readings/banking-jump-measurement-basis/ ar",
+    "/readings/define-what-you-count/ en",
+    "/readings/define-what-you-count/ ar",
+    "/readings/digital-workaround-not-yet-durable-inclusion/ en",
+    "/readings/digital-workaround-not-yet-durable-inclusion/ ar",
+    "/readings/finance-constraint-different-questions/ en",
+    "/readings/finance-constraint-different-questions/ ar",
+    "/readings/from-rail-to-result-missing-middle/ en",
+    "/readings/from-rail-to-result-missing-middle/ ar",
+    "/readings/gender-gap-measured-causes-open/ en",
+    "/readings/gender-gap-measured-causes-open/ ar",
+    "/readings/microfinance-structural-divergence/ en",
+    "/readings/microfinance-structural-divergence/ ar",
+    "/readings/reforms-newer-than-people-evidence/ en",
+    "/readings/reforms-newer-than-people-evidence/ ar",
+    "/readings/same-year-different-number/ en",
+    "/readings/same-year-different-number/ ar",
+    "/reforms/ en",
+    "/reforms/ ar",
+    "/remittances/ en",
+    "/remittances/ ar"
+   ]
+  }
+ }
+}

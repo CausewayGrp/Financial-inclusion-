@@ -1,0 +1,99 @@
+{
+ "transaction": "P3-C",
+ "scope": "P3 grammar labels REPORTED/WITHHELD; RV-CWR-001 title; six publishers for RV-CWR-009 credit",
+ "input_master_sha256": "334f801a4354665038fdb3f939708422fdc6a96eb43b5ea6735a37eeb9d81548",
+ "output_master_sha256": "ed85f47bda919da14437bf088e315e2e38e66190ec72c67d9e6ce428f3f29eaa",
+ "cells_written": 10,
+ "changes": [
+  {
+   "finding": "P3-G01",
+   "sheet": "04_NAV_UX",
+   "row": null,
+   "col": null,
+   "field": "UI-VIS-STATE-REPORTED",
+   "old": null,
+   "new": "Reported by the source (official statistics) || مبلغ عنه في المصدر (إحصاءات رسمية)"
+  },
+  {
+   "finding": "P3-G01",
+   "sheet": "04_NAV_UX",
+   "row": null,
+   "col": null,
+   "field": "UI-VIS-WITHHELD",
+   "old": null,
+   "new": "Figure held back until its definition is documented || يُحجب الرقم إلى أن يُوثَّق تعريفه"
+  },
+  {
+   "finding": "P3-F08",
+   "sheet": "11_VISUAL_LIBRARY",
+   "row": 31,
+   "col": 2,
+   "field": "RV-CWR-001.title_en",
+   "old": "Same year, two published baselines",
+   "new": "Same year, two published values"
+  },
+  {
+   "finding": "P3-F08",
+   "sheet": "11_VISUAL_LIBRARY",
+   "row": 31,
+   "col": 3,
+   "field": "RV-CWR-001.title_ar",
+   "old": "السنة نفسها وخطا أساس منشوران",
+   "new": "السنة نفسها وقيمتان منشورتان"
+  },
+  {
+   "finding": "P3-F12",
+   "sheet": "15_SOURCE_LIBRARY",
+   "row": 66,
+   "col": 7,
+   "field": "SRC-CBY-BANK-NETWORK-MTG-2026-001.publisher",
+   "old": null,
+   "new": "Central Bank of Yemen — Aden"
+  },
+  {
+   "finding": "P3-F12",
+   "sheet": "15_SOURCE_LIBRARY",
+   "row": 59,
+   "col": 7,
+   "field": "SRC-CBY-PAY-BOARD-2026-001.publisher",
+   "old": null,
+   "new": "Central Bank of Yemen — Aden"
+  },
+  {
+   "finding": "P3-F12",
+   "sheet": "15_SOURCE_LIBRARY",
+   "row": 63,
+   "col": 7,
+   "field": "SRC-CBY-DIGITAL-EXPO-2026-001.publisher",
+   "old": null,
+   "new": "Central Bank of Yemen — Aden"
+  },
+  {
+   "finding": "P3-F12",
+   "sheet": "15_SOURCE_LIBRARY",
+   "row": 67,
+   "col": 7,
+   "field": "SRC-CBY-UNIFIED-NET-2026-001.publisher",
+   "old": null,
+   "new": "Central Bank of Yemen — Aden"
+  },
+  {
+   "finding": "P3-F12",
+   "sheet": "15_SOURCE_LIBRARY",
+   "row": 68,
+   "col": 7,
+   "field": "SRC-CBY-YPCC-FOUND-2026-001.publisher",
+   "old": null,
+   "new": "Central Bank of Yemen — Aden"
+  },
+  {
+   "finding": "P3-F12",
+   "sheet": "15_SOURCE_LIBRARY",
+   "row": 69,
+   "col": 7,
+   "field": "SRC-CBY-YPCC-BOARD-2026-001.publisher",
+   "old": null,
+   "new": "Central Bank of Yemen — Aden"
+  }
+ ]
+}

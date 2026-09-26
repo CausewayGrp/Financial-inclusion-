@@ -1,0 +1,98 @@
+{
+ "schema": "YFI_CONTROLLED_INPUT/1.0",
+ "input_id": "page_spec_templates",
+ "authority_class": "CONTROLLED_TEMPLATE__NOT_MASTER_OWNED",
+ "rule": "Constant design-contract fields of every Page Spec. They carry no facts and are never rendered as reader prose.",
+ "schema_version": "1.0",
+ "page_spec_version": "1.0",
+ "index_rule": "Page Specs are deterministic design bindings to the current Production Master/projections. They are not a parallel semantic authority. Any factual change must be Master-first.",
+ "accessibility_requirements": {
+  "visuals_must_expose_accessible_summary": "PENDING_DESIGN_IMPLEMENTATION",
+  "tables_or_text_alternative_for_quantitative_visuals": "PENDING_DESIGN_IMPLEMENTATION",
+  "meaning_not_carried_by_colour_alone": true,
+  "technical_error_must_not_look_like_evidence_absence": true,
+  "text_alternative_table_contract": {
+   "applies_to": "any record or visual carrying three or more quantities",
+   "required_independently_of_design": true,
+   "caption": "states what is measured, for whom and when",
+   "headers": "scoped column and row headers",
+   "columns": [
+    "unit",
+    "population or base",
+    "period"
+   ],
+   "source_line": "names the bound source record(s)"
+  }
+ },
+ "mobile_priority_internal": "Put the strongest answer, observation clock/scope boundary and verification action before secondary context; never hide denominator/currentness behind hover-only interaction.",
+ "rtl_requirements_internal": "Arabic is co-authoritative and must use native RTL composition and reading order; do not mirror an English layout mechanically.",
+ "render_rule": "Render reader-facing prose from the Page Spec and explicitly public fields of bound governed objects. Governed arrays are reference payloads, not blocks to dump onto the page. Never invent evidence or expose backend/control terminology.",
+ "frontend_render_policy": {
+  "primary_public_prose_fields": [
+   "title_en",
+   "title_ar",
+   "full_copy_en",
+   "full_copy_ar",
+   "sections"
+  ],
+  "governed_arrays_role": "REFERENCE_AND_VERIFICATION_PAYLOAD__NOT_BLOCKS_TO_RENDER_VERBATIM",
+  "never_render_directly": [
+   "*_internal",
+   "stable IDs unless citation/reference requires them",
+   "raw enum/status codes",
+   "file paths",
+   "QA/build labels",
+   "backend governance terminology"
+  ],
+  "editorial_rule": "Professional compression is allowed only when number, unit, universe/denominator, geography, period, source, evidence strength, uncertainty, limitation and prohibited inference remain unchanged."
+ },
+ "numeric_inventory": {
+  "tokenizer": "(?<!\\w)(?:USD |YER ?|~|\\+)?\\d[\\d,]*(?:\\.\\d+)?(?: ?%| percentage points| Q\\d| million| billion| M| m)?",
+  "object_order": [
+   "claim",
+   "evidence_object",
+   "visual"
+  ],
+  "fields": {
+   "claim": [
+    "headline_en",
+    "headline_ar",
+    "copy_en",
+    "copy_ar",
+    "does_not_prove_en",
+    "does_not_prove_ar"
+   ],
+   "evidence_object": [
+    "title_en",
+    "title_ar",
+    "summary_en",
+    "summary_ar",
+    "definition_en",
+    "definition_ar",
+    "period_en",
+    "period_ar",
+    "universe_en",
+    "universe_ar",
+    "method_en",
+    "method_ar",
+    "limitations_en",
+    "limitations_ar",
+    "currentness_en",
+    "currentness_ar"
+   ],
+   "visual": [
+    "what_it_shows_en",
+    "what_it_shows_ar",
+    "decision_value_en",
+    "decision_value_ar",
+    "period",
+    "denominator_universe",
+    "prohibited_inference_en",
+    "prohibited_inference_ar",
+    "accessible_summary_en",
+    "accessible_summary_ar"
+   ]
+  },
+  "note": "Canonical rule adopted at generator reconstruction. The entry inventory was produced by several historical passes (mixed de-duplication, partial field sets, stale contexts); see audit/GENERATOR_BASELINE_GATE.md."
+ }
+}

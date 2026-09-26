@@ -1,0 +1,117 @@
+{
+ "transaction": "TC-G",
+ "summary": "VER-18 bindings; CLM-046 declarative; PAY-11 POS release-form note",
+ "input_master_sha256": "df36c54c42d372572c5389ccd89dfd17738d2ec13ad058ba529d15886dcc20fd",
+ "output_master_sha256": "4efc816f71adbef6045f54cf9d0a0709b265b74ef58279da845b80b64f919abd",
+ "cells_written": 12,
+ "changes": [
+  {
+   "finding": "TC-G:VER-18",
+   "sheet": "06_EVIDENCE_OBJECTS",
+   "row": 90,
+   "col": 24,
+   "field": "CLM-046.source_dependencies",
+   "old": "SRC-AIDDATA-SAUDI-YEM-2015; EP-SAUDI-SUPPORT-FLOWSTATE-K04; DS-K04-SAUDI-SUPPORT-TRANSMISSION",
+   "new": "SRC-AIDDATA-SAUDI-YEM-2015; EP-SAUDI-SUPPORT-FLOWSTATE-K04; DS-K04-SAUDI-SUPPORT-TRANSMISSION; SRC-SPA-SAU-CBY-DEPOSIT-2018-001; SRC-SPA-SAU-CBY-DEPOSIT-2023-001; SRC-SPA-SAU-BUDGET-2026-001"
+  },
+  {
+   "finding": "TC-G:VER-18",
+   "sheet": "06_EVIDENCE_OBJECTS",
+   "row": 90,
+   "col": 28,
+   "field": "CLM-046.source_use_roles",
+   "old": null,
+   "new": "SRC-SPA-SAU-CBY-DEPOSIT-2018-001=primary factual evidence; SRC-SPA-SAU-CBY-DEPOSIT-2023-001=primary factual evidence; SRC-SPA-SAU-BUDGET-2026-001=primary factual evidence"
+  },
+  {
+   "finding": "TC-G:EN-07",
+   "sheet": "06_EVIDENCE_OBJECTS",
+   "row": 90,
+   "col": 6,
+   "field": "CLM-046.summary_en",
+   "old": "Saudi support must be read by financial state. A pledge, commitment, signed agreement, deposited amount, amount made available, budget disbursement, FX-auction use, in-kind support and project cost are not interchangeable and must not be automatically added into a cumulative total.",
+   "new": "Saudi support is recorded by financial state. A pledge, commitment, signed agreement, deposited amount, amount made available, budget disbursement, FX-auction use, in-kind support and project cost are not interchangeable, and they are not added into a cumulative total here."
+  },
+  {
+   "finding": "TC-G:EN-07",
+   "sheet": "06_EVIDENCE_OBJECTS",
+   "row": 90,
+   "col": 7,
+   "field": "CLM-046.summary_ar",
+   "old": "يجب قراءة الدعم السعودي بحسب حالته المالية. فالتعهد والالتزام والاتفاق الموقّع والمبلغ المودع والمبلغ المتاح والصرف للموازنة والاستخدام في مزادات النقد الأجنبي والدعم العيني وتكلفة المشروع ليست حالات مترادفة، ولا يجوز جمعها تلقائيًا في إجمالي تراكمي واحد.",
+   "new": "يُسجَّل الدعم السعودي بحسب حالته المالية. فالتعهد والالتزام والاتفاق الموقّع والمبلغ المودع والمبلغ المتاح والصرف للموازنة والاستخدام في مزادات النقد الأجنبي والدعم العيني وتكلفة المشروع ليست حالات مترادفة، ولا تُجمع هنا في إجمالي تراكمي واحد."
+  },
+  {
+   "finding": "TC-G:VER-18",
+   "sheet": "06_EVIDENCE_OBJECTS",
+   "row": 97,
+   "col": 24,
+   "field": "CLM-053.source_dependencies",
+   "old": "SRC-SANAA-MFB-2024; EP-MFB-BORROWERS-2023-K04",
+   "new": "SRC-SANAA-MFB-2024; EP-MFB-BORROWERS-2023-K04; SRC-SFD-SMED-LP-2023-NOV"
+  },
+  {
+   "finding": "TC-G:VER-18",
+   "sheet": "06_EVIDENCE_OBJECTS",
+   "row": 97,
+   "col": 28,
+   "field": "CLM-053.source_use_roles",
+   "old": null,
+   "new": "SRC-SFD-SMED-LP-2023-NOV=context"
+  },
+  {
+   "finding": "TC-G:PAY-11",
+   "sheet": "06_EVIDENCE_OBJECTS",
+   "row": 66,
+   "col": 16,
+   "field": "VIS-POS-TERMINALS.limitations_en",
+   "old": "Growth in terminal numbers does not show merchant adoption, active use of POS services, growth in unique users or an inclusion outcome. The +11% displayed in the January 2026 release and the 8.55% change derived from the raw totals are not arithmetically consistent. The totals fall within the reporting scope of the Central Bank of Yemen – Aden (CBY-Aden) and are not shown to cover all of Yemen.",
+   "new": "Growth in terminal numbers does not show merchant adoption, active use of POS services, growth in unique users or an inclusion outcome. The +11% displayed in the January 2026 release and the 8.55% change derived from the raw totals are not arithmetically consistent. The totals fall within the reporting scope of the Central Bank of Yemen – Aden (CBY-Aden) and are not shown to cover all of Yemen. | From July 2025 the monthly releases take the form of a one-page infographic; continuity of the reporting scope across that change has not been verified."
+  },
+  {
+   "finding": "TC-G:PAY-11",
+   "sheet": "06_EVIDENCE_OBJECTS",
+   "row": 66,
+   "col": 17,
+   "field": "VIS-POS-TERMINALS.limitations_ar",
+   "old": "لا يثبت نمو عدد الأجهزة تبنّي التجار لها، ولا الاستخدام النشط لخدمات نقاط البيع، ولا نموًا في عدد المستخدمين الفريدين، ولا نتيجة في الشمول المالي. وليست نسبة +11% المعروضة في إصدار يناير 2026 ونسبة التغير البالغة 8.55% المشتقة من الإجماليات الخام متسقتين حسابيًا. والإجماليات تخص نطاق الإبلاغ لدى البنك المركزي اليمني – عدن، ولا يثبت الدليل أنها تغطي اليمن كله.",
+   "new": "لا يثبت نمو عدد الأجهزة تبنّي التجار لها، ولا الاستخدام النشط لخدمات نقاط البيع، ولا نموًا في عدد المستخدمين الفريدين، ولا نتيجة في الشمول المالي. وليست نسبة +11% المعروضة في إصدار يناير 2026 ونسبة التغير البالغة 8.55% المشتقة من الإجماليات الخام متسقتين حسابيًا. والإجماليات تخص نطاق الإبلاغ لدى البنك المركزي اليمني – عدن، ولا يثبت الدليل أنها تغطي اليمن كله. | وابتداءً من يوليو 2025 تصدر الإصدارات الشهرية في صورة إنفوغرافيك من صفحة واحدة، ولم يُتحقق من استمرارية نطاق الإبلاغ عبر هذا التغير."
+  },
+  {
+   "finding": "TC-G:PAY-11",
+   "sheet": "06_EVIDENCE_OBJECTS",
+   "row": 67,
+   "col": 16,
+   "field": "VIS-POS-TRANSACTIONS.limitations_en",
+   "old": "Transactions are events, not unique users or merchants, so the series does not show how many people or businesses used POS services. The monthly values are shown as published, without smoothing or interpolation, and the +4.9% displayed in the January 2026 release and the 13.87% change derived from the raw totals are not arithmetically consistent. The totals fall within the reporting scope of the Central Bank of Yemen – Aden (CBY-Aden) and are not shown to cover all of Yemen.",
+   "new": "Transactions are events, not unique users or merchants, so the series does not show how many people or businesses used POS services. The monthly values are shown as published, without smoothing or interpolation, and the +4.9% displayed in the January 2026 release and the 13.87% change derived from the raw totals are not arithmetically consistent. The totals fall within the reporting scope of the Central Bank of Yemen – Aden (CBY-Aden) and are not shown to cover all of Yemen. | From July 2025 the monthly releases take the form of a one-page infographic; continuity of the reporting scope across that change has not been verified."
+  },
+  {
+   "finding": "TC-G:PAY-11",
+   "sheet": "06_EVIDENCE_OBJECTS",
+   "row": 67,
+   "col": 17,
+   "field": "VIS-POS-TRANSACTIONS.limitations_ar",
+   "old": "المعاملات أحداث وليست مستخدمين أو تجارًا فريدين، لذلك لا تبيّن السلسلة عدد الأشخاص أو المنشآت الذين استخدموا نقاط البيع. وتُعرض القيم الشهرية كما نُشرت من دون تنعيم أو استيفاء، وليست نسبة +4.9% المعروضة في إصدار يناير 2026 ونسبة التغير البالغة 13.87% المشتقة من الإجماليات الخام متسقتين حسابيًا. والإجماليات تخص نطاق الإبلاغ لدى البنك المركزي اليمني – عدن، ولا يثبت الدليل أنها تغطي اليمن كله.",
+   "new": "المعاملات أحداث وليست مستخدمين أو تجارًا فريدين، لذلك لا تبيّن السلسلة عدد الأشخاص أو المنشآت الذين استخدموا نقاط البيع. وتُعرض القيم الشهرية كما نُشرت من دون تنعيم أو استيفاء، وليست نسبة +4.9% المعروضة في إصدار يناير 2026 ونسبة التغير البالغة 13.87% المشتقة من الإجماليات الخام متسقتين حسابيًا. والإجماليات تخص نطاق الإبلاغ لدى البنك المركزي اليمني – عدن، ولا يثبت الدليل أنها تغطي اليمن كله. | وابتداءً من يوليو 2025 تصدر الإصدارات الشهرية في صورة إنفوغرافيك من صفحة واحدة، ولم يُتحقق من استمرارية نطاق الإبلاغ عبر هذا التغير."
+  },
+  {
+   "finding": "TC-G:PAY-11",
+   "sheet": "06_EVIDENCE_OBJECTS",
+   "row": 68,
+   "col": 16,
+   "field": "VIS-POS-VALUE.limitations_en",
+   "old": "The values are nominal rials: they do not show real growth, a change in purchasing power, more users or an effect on financial inclusion, and no inflation-adjusted series is established here. September 2025 has no verified value, and none is interpolated. The totals fall within the reporting scope of the Central Bank of Yemen – Aden (CBY-Aden) and are not shown to cover all of Yemen.",
+   "new": "The values are nominal rials: they do not show real growth, a change in purchasing power, more users or an effect on financial inclusion, and no inflation-adjusted series is established here. September 2025 has no verified value, and none is interpolated. The totals fall within the reporting scope of the Central Bank of Yemen – Aden (CBY-Aden) and are not shown to cover all of Yemen. | From July 2025 the monthly releases take the form of a one-page infographic; continuity of the reporting scope across that change has not been verified."
+  },
+  {
+   "finding": "TC-G:PAY-11",
+   "sheet": "06_EVIDENCE_OBJECTS",
+   "row": 68,
+   "col": 17,
+   "field": "VIS-POS-VALUE.limitations_ar",
+   "old": "القيم بالريال الاسمي: فلا تثبت نموًا حقيقيًا ولا تغيرًا في القوة الشرائية ولا زيادة في المستخدمين ولا أثرًا على الشمول المالي، ولا يثبت هذا الدليل أي سلسلة معدلة لأثر التضخم. ولا قيمة متحقق منها لشهر سبتمبر 2025، ولا تُقدَّر بالاستيفاء. والإجماليات تخص نطاق الإبلاغ لدى البنك المركزي اليمني – عدن، ولا يثبت الدليل أنها تغطي اليمن كله.",
+   "new": "القيم بالريال الاسمي: فلا تثبت نموًا حقيقيًا ولا تغيرًا في القوة الشرائية ولا زيادة في المستخدمين ولا أثرًا على الشمول المالي، ولا يثبت هذا الدليل أي سلسلة معدلة لأثر التضخم. ولا قيمة متحقق منها لشهر سبتمبر 2025، ولا تُقدَّر بالاستيفاء. والإجماليات تخص نطاق الإبلاغ لدى البنك المركزي اليمني – عدن، ولا يثبت الدليل أنها تغطي اليمن كله. | وابتداءً من يوليو 2025 تصدر الإصدارات الشهرية في صورة إنفوغرافيك من صفحة واحدة، ولم يُتحقق من استمرارية نطاق الإبلاغ عبر هذا التغير."
+  }
+ ]
+}

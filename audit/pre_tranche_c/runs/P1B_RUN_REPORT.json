@@ -1,0 +1,68 @@
+{
+ "stage": "P1-B",
+ "staged_master_sha256": "1d0a6cb10b48af75b73e9c0bfa4388ae2b9bb4fdb926ed7547e5991989c3cdda",
+ "installed": [],
+ "steps": [
+  {
+   "step": "generate",
+   "exit": 0,
+   "tail": [
+    "  \"content/navigation_interaction.json\",",
+    "  \"presentation_priority.json\"",
+    " ],",
+    " \"output_sha256\": 39",
+    "}",
+    "PROJECTIONS GENERATED"
+   ]
+  },
+  {
+   "step": "rebind",
+   "exit": 0,
+   "tail": [
+    "  \"README.md\",",
+    "  \"handoff/MASTER_IMPLEMENTATION_PROMPT.md\",",
+    "  \"handoff/CLAUDE_DESIGN_MASTER_PROMPT.md\",",
+    "  \"handoff/CLAUDE_CODE_MASTER_PROMPT.md\"",
+    " ]",
+    "}"
+   ]
+  },
+  {
+   "step": "build",
+   "exit": 0,
+   "tail": [
+    "Built 284 HTML files from 141 controlled page specs."
+   ]
+  },
+  {
+   "step": "public_literal_audit",
+   "exit": 0,
+   "tail": [
+    "PUBLIC_LITERAL_CLOSURE records=7483 unresolved=0"
+   ]
+  },
+  {
+   "step": "validate",
+   "exit": 0,
+   "tail": [
+    "HTML=284 ERRORS=0 WARN=0",
+    "WEBSITE REPOSITORY VALIDATION PASS"
+   ]
+  },
+  {
+   "step": "generator_idempotence",
+   "exit": 0,
+   "tail": [
+    " \"master_sha256\": \"1d0a6cb10b48af75b73e9c0bfa4388ae2b9bb4fdb926ed7547e5991989c3cdda\",",
+    " \"outputs\": 39,",
+    " \"differences\": [],",
+    " \"output_sha256\": 39",
+    "}",
+    "PROJECTION CHECK PASS"
+   ]
+  }
+ ],
+ "result": "COMMITTED",
+ "master_sha256": "1d0a6cb10b48af75b73e9c0bfa4388ae2b9bb4fdb926ed7547e5991989c3cdda",
+ "page_specs_sha256": "397fc060f26ff51f0bfba2825edffb9d35e34e905f18dc3876c82112b3cdc663"
+}

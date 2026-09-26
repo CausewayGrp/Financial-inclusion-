@@ -1,0 +1,4665 @@
+[
+ {
+  "visual_id": "VIS-E-MONEY-RULE-STACK",
+  "readiness": "STATE_ONLY",
+  "master_row_11": 5,
+  "current_bindings": [
+   {
+    "sheet": "31_REFORMS_REGULATION",
+    "rows": "62-74",
+    "ids": [
+     "EMR-001",
+     "EMR-002",
+     "EMR-003",
+     "EMR-004",
+     "EMR-005",
+     "EMR-006",
+     "EMR-007",
+     "EMR-008",
+     "EMR-009",
+     "EMR-010",
+     "EMR-011",
+     "EMR-012",
+     "EMR-013"
+    ]
+   },
+   {
+    "sheet": "31_REFORMS_REGULATION",
+    "rows": "15-16",
+    "ids": [
+     "REF-EMONEY-001",
+     "REF-EMONEY-002"
+    ]
+   },
+   {
+    "sheet": "32_QUAL_LITERATURE",
+    "rows": "105,108,109",
+    "ids": [
+     "PA-CBY-PSP-001",
+     "PA-CBY-EMONEY-001",
+     "PA-CBY-EMONEY-002"
+    ]
+   },
+   {
+    "sheet": "34_EVIDENCE_PASSPORTS",
+    "rows": "15",
+    "ids": [
+     "EP-CBY-EMONEY-2023-25"
+    ]
+   },
+   {
+    "sheet": "07_PUBLIC_CLAIMS",
+    "rows": "16",
+    "ids": [
+     "CLM-012"
+    ]
+   },
+   {
+    "sheet": "06_EVIDENCE_OBJECTS",
+    "rows": "16",
+    "ids": [
+     "VIS-E-MONEY-RULE-STACK"
+    ]
+   }
+  ],
+  "unresolved_legacy_inputs": [
+   "56_E_MONEY_REGULATORY (resolves to 31_REFORMS_REGULATION section \"E-money regulation\" rows 60-74)",
+   "54_PRIMARY_AUTHORITY (resolves to 32_QUAL_LITERATURE section \"Primary authority notes\" rows 96-113)",
+   "40_PAYMENT_DICT (DOES NOT RESOLVE: catalogued only as DS-PAYMENT-DICT in 16_DATASET_CATALOG r33; no rows in current Master)"
+  ],
+  "plotted_values": [
+   {
+    "id": "EMR-004",
+    "period": "2023-08-09",
+    "value": "10",
+    "unit": "business days maximum (complaint processing)",
+    "flag": "rule, not performance"
+   },
+   {
+    "id": "EMR-005/EMR-011",
+    "period": "2025-07-09",
+    "value": "USD; SAR; AED + YER",
+    "unit": "permitted currencies",
+    "flag": "rule"
+   },
+   {
+    "id": "EMR-006",
+    "period": "2025-07-09",
+    "value": "YER -> foreign currency prohibited",
+    "unit": "restriction",
+    "flag": "rule"
+   },
+   {
+    "id": "EMR-007",
+    "period": "2025-07-09",
+    "value": "1,000,000 | 2,000,000 | 5,000,000 | 50,000,000",
+    "unit": "YER: single | daily | monthly | annual",
+    "flag": "ceiling, not use; four values packed in one cell"
+   },
+   {
+    "id": "EMR-008",
+    "period": "2025-07-09",
+    "value": "400 | 500 | 1,000 | 10,000",
+    "unit": "USD or equivalent: single | daily | monthly | annual",
+    "flag": "ceiling, not use; four values packed in one cell"
+   },
+   {
+    "id": "EMR-009",
+    "period": "2025-07-09",
+    "value": "8,000,000 | 1,500",
+    "unit": "YER | USD or equivalent (max individual balance)",
+    "flag": "ceiling, not balance"
+   },
+   {
+    "id": "EMR-010",
+    "period": "2025-07-09",
+    "value": "Issuer-assessed + prior CBY written approval",
+    "unit": "corporate-account limits",
+    "flag": "rule"
+   },
+   {
+    "id": "EMR-013",
+    "period": "current release",
+    "value": "Open provider-universe gap",
+    "unit": "N/A",
+    "flag": "universe badge = OPEN"
+   }
+  ],
+  "missing_or_breaks": [
+   "No governed named current wallet/e-money issuer universe (EMR-013; 22_PROVIDERS_DATA r67 PUC-WALLET-2025-01 universe_count empty) - badge must read OPEN.",
+   "Ceiling values are stored as pipe-delimited strings inside single cells (EMR-007/008/009 value_or_limit and currency_or_unit); there is no one-row-per-ceiling structure, so a chart must parse text."
+  ],
+  "inconsistencies": [
+   {
+    "field": "period",
+    "contract_text": "2023 base rules + 2025 amendment",
+    "other_text": "source_period: \"2022 PSP framework → 2023 mobile e-money rule → 2025 amendment → current gap...\" and 06 source_dependencies include SRC-CBY-PSP-RULES-2022-001",
+    "other_location": "11_VISUAL_LIBRARY r5 source_period; 06_EVIDENCE_OBJECTS r16 source_dependencies",
+    "severity": "EDITORIAL"
+   },
+   {
+    "field": "denominator_universe",
+    "contract_text": "regulated mobile e-money accounts under the cited CBY instruments",
+    "other_text": "Non-bank financial institutions / e-money issuers within instrument scope",
+    "other_location": "34_EVIDENCE_PASSPORTS r15 universe (EP-CBY-EMONEY-2023-25)",
+    "severity": "MATERIAL"
+   }
+  ],
+  "artefacts": [
+   "visual_form token and evidence_strength token (HIGH_REGULATORY__MARKET_UNIVERSE_OPEN) are internal and must not be displayed."
+  ],
+  "notes": "Drawable as a rule stack from governed text; no numeric market value is plotted. Contract prohibited_inference_en and prohibited_inference_ar differ in scope (EN also forbids treating a regulatory class as a roster; AR only covers ceilings)."
+ },
+ {
+  "visual_id": "VIS-EVIDENCE-CLASS-LADDER",
+  "readiness": "STATE_ONLY",
+  "master_row_11": 6,
+  "current_bindings": [
+   {
+    "sheet": "11_VISUAL_LIBRARY",
+    "rows": "6",
+    "ids": [
+     "VIS-EVIDENCE-CLASS-LADDER (rung labels and boundaries are contract text)"
+    ]
+   },
+   {
+    "sheet": "34_EVIDENCE_PASSPORTS",
+    "rows": "5-59",
+    "ids": [
+     "authority_class (49 distinct tokens over 55 passports)"
+    ]
+   },
+   {
+    "sheet": "32_QUAL_LITERATURE",
+    "rows": "6-22, 25-44",
+    "ids": [
+     "LIT-*",
+     "QUAL-001..020 (evidence_class / evidence_type)"
+    ]
+   },
+   {
+    "sheet": "31_REFORMS_REGULATION",
+    "rows": "6-26, 29-43",
+    "ids": [
+     "REF-*",
+     "OECD-POL-01..15"
+    ]
+   },
+   {
+    "sheet": "33_ANALYTICS_MASTER",
+    "rows": "108-147",
+    "ids": [
+     "CTR-001..012",
+     "CON-032..059"
+    ]
+   },
+   {
+    "sheet": "12_VISUAL_PREVIEWS",
+    "rows": "4-6",
+    "ids": [
+     "preview ladder: Observed | Derived | Historical | Bounded | Conflicting | Unknown"
+    ]
+   }
+  ],
+  "unresolved_legacy_inputs": [
+   "45_EVIDENCE_PASSPORTS (-> 34_EVIDENCE_PASSPORTS)",
+   "51_LITERATURE_EVIDENCE (-> 32_QUAL_LITERATURE rows 4-22)",
+   "30_OECD_NARRATIVE (DOES NOT RESOLVE as a table; nearest governed rows 29_OECD_BENCHMARKS r33-52 and 32 QUAL-001..009)",
+   "48_REFORM_EVENTS (-> 31_REFORMS_REGULATION rows 4-26)",
+   "42_CONTRADICTIONS (-> 33_ANALYTICS_MASTER rows 106-147)"
+  ],
+  "plotted_values": [],
+  "missing_or_breaks": [
+   "No governed per-object evidence-class field mapping objects to the six rungs: 06 has no evidence-class column; 07 evidence_badge has 57 distinct values over 60 claims; 34 authority_class has 49 distinct values. Placing example objects on rungs requires a new governed crosswalk."
+  ],
+  "inconsistencies": [
+   {
+    "field": "what_it_shows_en (rung vocabulary)",
+    "contract_text": "weighted population measures, administrative objects, institutional/employee perception studies, official secondary analysis, recommendations and project/reform states",
+    "other_text": "Observed | Derived | Historical | Bounded | Conflicting | Unknown",
+    "other_location": "12_VISUAL_PREVIEWS r6 (Evidence ladder preview)",
+    "severity": "MATERIAL"
+   },
+   {
+    "field": "denominator_universe",
+    "contract_text": "evidence objects admitted for public use",
+    "other_text": "documented evidence objects only",
+    "other_location": "06_EVIDENCE_OBJECTS r80 universe_en",
+    "severity": "EDITORIAL"
+   },
+   {
+    "field": "prohibited_inference_ar vs _en",
+    "contract_text": "EN: never promote one evidence class into another (perception ≠ outcome; recommendation ≠ implementation; milestone ≠ usage; account ≠ person)",
+    "other_text": "AR: لا تُحوَّل فئة الدليل إلى درجة احتمال أو يقين، ولا يُرقّى مصدر بفعل تصميم الرسم (different content)",
+    "other_location": "11_VISUAL_LIBRARY r6 prohibited_inference_ar",
+    "severity": "MATERIAL"
+   }
+  ],
+  "artefacts": [],
+  "notes": "Rungs can be drawn from contract text; any example objects need a governed class crosswalk first."
+ },
+ {
+  "visual_id": "VIS-EVIDENCE-FRESHNESS",
+  "readiness": "NOT_DRAWABLE",
+  "master_row_11": 7,
+  "current_bindings": [
+   {
+    "sheet": "16_DATASET_CATALOG",
+    "rows": "5-215",
+    "ids": [
+     "dataset_id, domain (free text, ~200 values), period_min, period_max (free text)"
+    ]
+   },
+   {
+    "sheet": "17_INDICATOR_LIBRARY",
+    "rows": "5-220",
+    "ids": [
+     "indicator period_min/period_max"
+    ]
+   },
+   {
+    "sheet": "34_EVIDENCE_PASSPORTS",
+    "rows": "5-59",
+    "ids": [
+     "reference_period (free text), authority_class"
+    ]
+   },
+   {
+    "sheet": "22_PROVIDERS_DATA",
+    "rows": "124-129",
+    "ids": [
+     "PAYCUR-001..006 latest_period_or_date (payments only)"
+    ]
+   },
+   {
+    "sheet": "25_FINDEX_BASELINE",
+    "rows": "11",
+    "ids": [
+     "WB-FINDEX-CURRENTNESS-2025-001 (people only)"
+    ]
+   },
+   {
+    "sheet": "33_ANALYTICS_MASTER",
+    "rows": "124, 175",
+    "ids": [
+     "CON-036 (rule: store currentness per series)",
+     "Q-012 fusion row (DS tokens by evidence family, no dates)"
+    ]
+   },
+   {
+    "sheet": "07_PUBLIC_CLAIMS",
+    "rows": "18, 35",
+    "ids": [
+     "CLM-014",
+     "CLM-031"
+    ]
+   }
+  ],
+  "unresolved_legacy_inputs": [
+   "01_DATASET_INDEX (nearest: 16_DATASET_CATALOG)",
+   "22_RESEARCH_COVERAGE (DOES NOT RESOLVE: catalogued as DS-RESEARCH-COVERAGE 16 r15; no rows)",
+   "45_EVIDENCE_PASSPORTS (-> 34)",
+   "57_EVIDENCE_FUSION_MAP (-> 33 rows 162-212)"
+  ],
+  "plotted_values": [],
+  "missing_or_breaks": [
+   "No governed machine-readable vintage per domain x evidence class exists.",
+   "Domain would have to be derived from 06 public_routes (8 domain routes) - 16.domain is uncontrolled free text.",
+   "Evidence class would have to be derived by a new crosswalk from 34.authority_class / 07.evidence_badge / 32.evidence_class / 35.evidence_class to the five badge classes (representative survey, administrative, regulatory, secondary, gap).",
+   "Observation vintage would have to be derived from row-level period fields (19.period_label, 20.period, 21 spine Observation date, 23.period, 25.year + CLM-001 fieldwork, 26.reference_year, 31.date, 22.event_date/source_date, 35.snapshot_date); several are unparseable free text (e.g. 14 YSC-013 period \"2024 value revised across CBY annual-report vintages\", 29 \"since 2017\").",
+   "Publication vintage cannot be derived: 15_SOURCE_LIBRARY has no publication-date field and retrieval_date is populated on 1 of 159 rows."
+  ],
+  "inconsistencies": [
+   {
+    "field": "source_period",
+    "contract_text": "historical 2004 → current 2026 objects",
+    "other_text": "Earlier governed evidence exists: MF-ORIG-001 1997 (21 r78); WB2004-CHRON-001 1997 (35 r102); SFD newsletter 2000-12-31 (21 r81, MF-ORIG-004); EP-CBY-LEGAL-FOUNDATIONS-K04 \"1995–2010 instruments\" (34 r31)",
+    "other_location": "21_MFI_DATA r78, r81; 35_OCHA_WB_CONTEXT r102; 34_EVIDENCE_PASSPORTS r31",
+    "severity": "EDITORIAL"
+   },
+   {
+    "field": "evidence_strength",
+    "contract_text": "HIGH_GOVERNANCE",
+    "other_text": "no governed input table exists for the plotted quantity",
+    "other_location": "this audit",
+    "severity": "MATERIAL"
+   }
+  ],
+  "artefacts": [],
+  "notes": "Signature candidate. Must not be drawn until a governed derived table (object_id, domain route, evidence class, observation date, publication date, source_id) is added to the Master (e.g. a section in 33)."
+ },
+ {
+  "visual_id": "VIS-EVIDENCE-GAPS",
+  "readiness": "PARTIAL",
+  "master_row_11": 8,
+  "current_bindings": [
+   {
+    "sheet": "10_MEASUREMENT_AGENDA",
+    "rows": "5-14",
+    "ids": [
+     "MA-001..MA-010 (missing_evidence / blocked_evidence text)"
+    ]
+   },
+   {
+    "sheet": "21_MFI_DATA",
+    "rows": "107,109,114-130",
+    "ids": [
+     "spine 2022 NO_DATA",
+     "spine 2024 NO_DATA",
+     "MFI metric coverage states"
+    ]
+   },
+   {
+    "sheet": "19_PAYMENTS_DATA",
+    "rows": "(absent) IND-0004 2025-09",
+    "ids": [
+     "missing observation between OBS-00068 and OBS-00073"
+    ]
+   },
+   {
+    "sheet": "20_FIRM_FINANCE",
+    "rows": "19-26, 27-46",
+    "ids": [
+     "FFM-005 DENOMINATOR_UNRESOLVED",
+     "FFM-006/FFM-007 denominator_n empty"
+    ]
+   },
+   {
+    "sheet": "22_PROVIDERS_DATA",
+    "rows": "67,68,119",
+    "ids": [
+     "PUC-WALLET-2025-01",
+     "PUC-MFI-2026-01",
+     "WCR-005"
+    ]
+   },
+   {
+    "sheet": "31_REFORMS_REGULATION",
+    "rows": "57,74",
+    "ids": [
+     "FCP-ARCH-010",
+     "EMR-013"
+    ]
+   }
+  ],
+  "unresolved_legacy_inputs": [
+   "\"Documented evidence blockers\" (legacy 21_RC0_BLOCKERS: catalogued DS-RC0-BLOCKERS 16 r14; no rows)",
+   "\"research coverage\" (legacy 22_RESEARCH_COVERAGE: DS-RESEARCH-COVERAGE 16 r15; no rows)",
+   "\"source availability\" (no governed table)"
+  ],
+  "plotted_values": [],
+  "missing_or_breaks": [
+   "No typed gap register with a gap_type field (missing period / missing base / missing primary file / blocked map / unresolved universe). Instances are scattered across 10, 19, 20, 21, 22, 31 and must be assembled."
+  ],
+  "inconsistencies": [
+   {
+    "field": "data_inputs",
+    "contract_text": "Documented evidence blockers + research coverage + source availability",
+    "other_text": "none of these is a current Master table",
+    "other_location": "16_DATASET_CATALOG r14-r15",
+    "severity": "MATERIAL"
+   }
+  ],
+  "artefacts": [],
+  "notes": "Gap types exist as contract text; instances exist; the join does not."
+ },
+ {
+  "visual_id": "VIS-FCP-REDRESS-PATH",
+  "readiness": "STATE_ONLY",
+  "master_row_11": 9,
+  "current_bindings": [
+   {
+    "sheet": "31_REFORMS_REGULATION",
+    "rows": "48-57",
+    "ids": [
+     "FCP-ARCH-001..010"
+    ]
+   },
+   {
+    "sheet": "31_REFORMS_REGULATION",
+    "rows": "13, 65",
+    "ids": [
+     "REF-FCP-001",
+     "EMR-004"
+    ]
+   },
+   {
+    "sheet": "32_QUAL_LITERATURE",
+    "rows": "102,107",
+    "ids": [
+     "PA-CBY-FCP-001",
+     "PA-CBY-FCP-003"
+    ]
+   },
+   {
+    "sheet": "34_EVIDENCE_PASSPORTS",
+    "rows": "13,14",
+    "ids": [
+     "EP-CBY-FCP-2023",
+     "EP-CBY-FCP-REDRESS-2024"
+    ]
+   },
+   {
+    "sheet": "07_PUBLIC_CLAIMS",
+    "rows": "15",
+    "ids": [
+     "CLM-011"
+    ]
+   }
+  ],
+  "unresolved_legacy_inputs": [
+   "55_FCP_ARCHITECTURE (-> 31 rows 46-57)",
+   "54_PRIMARY_AUTHORITY (-> 32 rows 96-113)",
+   "45_EVIDENCE_PASSPORTS (-> 34)"
+  ],
+  "plotted_values": [
+   {
+    "id": "FCP-ARCH-005",
+    "period": "2024-03-23 brochure",
+    "value": "10",
+    "unit": "business days (provider settlement window)",
+    "flag": "source-stated rule"
+   },
+   {
+    "id": "FCP-ARCH-006",
+    "period": "2024-03-23 brochure",
+    "value": "similar period",
+    "unit": "extension, customer informed",
+    "flag": "source-stated rule"
+   },
+   {
+    "id": "FCP-ARCH-007",
+    "period": "2024-03-23 brochure",
+    "value": "no response in time / dissatisfied",
+    "unit": "escalation triggers",
+    "flag": "source-stated rule"
+   },
+   {
+    "id": "FCP-ARCH-008",
+    "period": "2024-03-23 brochure",
+    "value": "14",
+    "unit": "business days (escalation window to CBY)",
+    "flag": "source-stated rule"
+   },
+   {
+    "id": "FCP-ARCH-010",
+    "period": "current",
+    "value": "OPEN",
+    "unit": "performance evidence",
+    "flag": "terminal node open"
+   }
+  ],
+  "missing_or_breaks": [],
+  "inconsistencies": [
+   {
+    "field": "freshness_profile",
+    "contract_text": "2021→2024/current gaps",
+    "other_text": "own period \"2023–2024 framework; outcome evidence open\"; own source_period \"Aug-2023 framework → Mar-2024 official guidance → ...\"; no governed 2021 FCP object",
+    "other_location": "11_VISUAL_LIBRARY r9 period/source_period; 06_EVIDENCE_OBJECTS r15 period_en",
+    "severity": "MATERIAL"
+   },
+   {
+    "field": "evidence_strength",
+    "contract_text": "MEDIUM_MULTI_CLASS",
+    "other_text": "all path steps come from one primary official brochure; passport authority_class PRIMARY_OFFICIAL_GUIDANCE",
+    "other_location": "31 r51-55 source_id SRC-CBY-FCP-BROCHURE-2024-001; 34_EVIDENCE_PASSPORTS r14 authority_class",
+    "severity": "MATERIAL"
+   }
+  ],
+  "artefacts": [],
+  "notes": "freshness_profile and evidence_strength are identical to VIS-OECD-FCP-TIMELINE (r14) - probable copy error of the same kind as VIS-CAPITAL-CONTEXT."
+ },
+ {
+  "visual_id": "VIS-FINDEX-GAPS",
+  "readiness": "DRAWABLE_FROM_MASTER",
+  "master_row_11": 10,
+  "current_bindings": [
+   {
+    "sheet": "25_FINDEX_BASELINE",
+    "rows": "5-10",
+    "ids": [
+     "WB-FINDEX-OBS-2022-001..006"
+    ]
+   },
+   {
+    "sheet": "33_ANALYTICS_MASTER",
+    "rows": "6,7",
+    "ids": [
+     "DA-001",
+     "DA-002"
+    ]
+   },
+   {
+    "sheet": "07_PUBLIC_CLAIMS",
+    "rows": "5,6,29",
+    "ids": [
+     "CLM-001",
+     "CLM-002",
+     "CLM-025"
+    ]
+   },
+   {
+    "sheet": "34_EVIDENCE_PASSPORTS",
+    "rows": "5",
+    "ids": [
+     "EP-FINDEX-2022-ACCOUNT"
+    ]
+   },
+   {
+    "sheet": "33_ANALYTICS_MASTER",
+    "rows": "110,111",
+    "ids": [
+     "CTR-003",
+     "CTR-004"
+    ]
+   }
+  ],
+  "unresolved_legacy_inputs": [
+   "28_FINDEX_OBS (-> 25_FINDEX_BASELINE r5-10)",
+   "41_DERIVED_ANALYTICS (-> 33_ANALYTICS_MASTER r5-37)"
+  ],
+  "plotted_values": [
+   {
+    "id": "WB-FINDEX-OBS-2022-001",
+    "sheet_row": "25_FINDEX_BASELINE r5",
+    "period": "reporting year 2022 (Findex 2021 study; fieldwork 2022-11-07 to 2023-01-09)",
+    "value": 11.9,
+    "unit": "percent of population ages 15+",
+    "group": "total",
+    "flag": "PUBLIC_PRIMARY_AGGREGATE"
+   },
+   {
+    "id": "WB-FINDEX-OBS-2022-002",
+    "sheet_row": "25_FINDEX_BASELINE r6",
+    "period": "reporting year 2022 (Findex 2021 study; fieldwork 2022-11-07 to 2023-01-09)",
+    "value": 5.44,
+    "unit": "percent of population ages 15+",
+    "group": "female",
+    "flag": "PUBLIC_PRIMARY_AGGREGATE"
+   },
+   {
+    "id": "WB-FINDEX-OBS-2022-003",
+    "sheet_row": "25_FINDEX_BASELINE r7",
+    "period": "reporting year 2022 (Findex 2021 study; fieldwork 2022-11-07 to 2023-01-09)",
+    "value": 18.35,
+    "unit": "percent of population ages 15+",
+    "group": "male",
+    "flag": "PUBLIC_PRIMARY_AGGREGATE"
+   },
+   {
+    "id": "WB-FINDEX-OBS-2022-004",
+    "sheet_row": "25_FINDEX_BASELINE r8",
+    "period": "reporting year 2022 (Findex 2021 study; fieldwork 2022-11-07 to 2023-01-09)",
+    "value": 6.5,
+    "unit": "percent of population ages 15+",
+    "group": "poorest 40%",
+    "flag": "PUBLIC_PRIMARY_AGGREGATE"
+   },
+   {
+    "id": "WB-FINDEX-OBS-2022-005",
+    "sheet_row": "25_FINDEX_BASELINE r9",
+    "period": "reporting year 2022 (Findex 2021 study; fieldwork 2022-11-07 to 2023-01-09)",
+    "value": 15.5,
+    "unit": "percent of population ages 15+",
+    "group": "richest 60%",
+    "flag": "PUBLIC_PRIMARY_AGGREGATE"
+   },
+   {
+    "id": "WB-FINDEX-OBS-2022-006",
+    "sheet_row": "25_FINDEX_BASELINE r10",
+    "period": "reporting year 2022 (Findex 2021 study; fieldwork 2022-11-07 to 2023-01-09)",
+    "value": 6.98,
+    "unit": "percent of population ages 15+",
+    "group": "primary education or less",
+    "flag": "PUBLIC_PRIMARY_AGGREGATE"
+   },
+   {
+    "id": "DA-001",
+    "sheet_row": "33_ANALYTICS_MASTER r6",
+    "period": "same wave",
+    "value": 12.91,
+    "unit": "percentage points (male − female)",
+    "flag": "DERIVED"
+   },
+   {
+    "id": "DA-002",
+    "sheet_row": "33_ANALYTICS_MASTER r7",
+    "period": "same wave",
+    "value": 9,
+    "unit": "percentage points (richest 60% − poorest 40%)",
+    "flag": "DERIVED"
+   }
+  ],
+  "missing_or_breaks": [
+   "No comparison value for adults with more than primary education - education bar is level-only (no gap annotation).",
+   "No base n / design-based intervals for subgroups (U-08; not in Master)."
+  ],
+  "inconsistencies": [
+   {
+    "field": "period",
+    "contract_text": "2022 observation",
+    "other_text": "World Bank reporting year 2022; Global Findex 2021 study; Yemen fieldwork 2022-11-07 to 2023-01-09",
+    "other_location": "06_EVIDENCE_OBJECTS r5 period_en (CLM-001); 34 r5 reference_period; 33 r110 CTR-003 resolution DISPLAY_BOTH_WAVE_AND_FIELDWORK",
+    "severity": "MATERIAL"
+   },
+   {
+    "field": "source_period / freshness_profile",
+    "contract_text": "2022 total/female/male/poorest40/richest60/primary-or-less; \"2022 observation; wave/fieldwork caveats explicit\"",
+    "other_text": "RV-CWR-007 (same values) uses \"2021 wave; Yemen fieldwork 2022–23\"",
+    "other_location": "11_VISUAL_LIBRARY r37 period",
+    "severity": "MATERIAL"
+   },
+   {
+    "field": "denominator_universe",
+    "contract_text": "2022 Findex Yemen observation universe and subgroup definitions",
+    "other_text": "Adults 15+ in survey coverage",
+    "other_location": "06_EVIDENCE_OBJECTS r5 universe_en; 34 r5 universe",
+    "severity": "EDITORIAL"
+   },
+   {
+    "field": "06 period_en / currentness_en",
+    "contract_text": "06 r65: \"2022 observation\"; \"Currentness is bounded to 2022 observation.\"",
+    "other_text": "CLM-001 currentness_en (06 r5)",
+    "other_location": "06_EVIDENCE_OBJECTS r65",
+    "severity": "MATERIAL"
+   },
+   {
+    "field": "derived-analytics binding",
+    "contract_text": "Horizontal bars at same-wave levels",
+    "other_text": "DA-023 (women 2014→2022, 3.7 pp) and DA-024 (poorest-40 2014→2022, 2.5 pp) are cross-wave changes whose visual_id = VIS-FINDEX-GAPS",
+    "other_location": "33_ANALYTICS_MASTER r28-29 visual_id",
+    "severity": "MATERIAL"
+   }
+  ],
+  "artefacts": [],
+  "notes": "All six levels and both gaps reconcile exactly (18.35−5.44=12.91; 15.5−6.5=9.0)."
+ },
+ {
+  "visual_id": "VIS-FL-EVIDENCE-LADDER",
+  "readiness": "STATE_ONLY",
+  "master_row_11": 11,
+  "current_bindings": [
+   {
+    "sheet": "32_QUAL_LITERATURE",
+    "rows": "98-101",
+    "ids": [
+     "PA-CBY-FL-001",
+     "PA-CBY-FL-002",
+     "PA-CBY-FL-003",
+     "PA-CBY-FL-004"
+    ]
+   },
+   {
+    "sheet": "29_OECD_BENCHMARKS",
+    "rows": "35,36,52",
+    "ids": [
+     "OECD-YEM-001 (15/100, CONFIRMED)",
+     "OECD-YEM-002 (42/100, CONFIRMED)",
+     "OECD-YEM-018 (scope, fieldwork 11 Mar-1 Apr 2023)"
+    ]
+   },
+   {
+    "sheet": "28_METHODS_RIGHTS",
+    "rows": "38",
+    "ids": [
+     "OECD/INFE target 70/100"
+    ]
+   },
+   {
+    "sheet": "31_REFORMS_REGULATION",
+    "rows": "98,99",
+    "ids": [
+     "FMIIP-RF-019",
+     "FMIIP-RF-020 (campaign targets, optional)"
+    ]
+   },
+   {
+    "sheet": "07_PUBLIC_CLAIMS",
+    "rows": "17",
+    "ids": [
+     "CLM-013"
+    ]
+   },
+   {
+    "sheet": "34_EVIDENCE_PASSPORTS",
+    "rows": "12",
+    "ids": [
+     "EP-CBY-GMW-2023-25"
+    ]
+   }
+  ],
+  "unresolved_legacy_inputs": [
+   "54_PRIMARY_AUTHORITY (-> 32 r96-113)",
+   "\"OECD/INFE capability evidence\" (-> 29 r35-36, r52; 28 r38)",
+   "45_EVIDENCE_PASSPORTS (-> 34)"
+  ],
+  "plotted_values": [
+   {
+    "id": "PA-CBY-FL-001",
+    "period": "2023-03-20 to 2023-03-26",
+    "value": "activity",
+    "unit": "state",
+    "flag": "activity"
+   },
+   {
+    "id": "PA-CBY-FL-002",
+    "period": "2024-03-18",
+    "value": "29 participating entities",
+    "unit": "bodies (not persons)",
+    "flag": "activity"
+   },
+   {
+    "id": "PA-CBY-FL-003",
+    "period": "2024-04-03",
+    "value": "completion",
+    "unit": "state",
+    "flag": "output"
+   },
+   {
+    "id": "PA-CBY-FL-004",
+    "period": "2025-03-16 to 2025-03-22",
+    "value": "activity",
+    "unit": "state",
+    "flag": "activity"
+   },
+   {
+    "id": "OECD-YEM-002",
+    "period": "OECD/INFE 2023 (fieldwork 11 Mar–1 Apr 2023)",
+    "value": 42,
+    "unit": "score / 100",
+    "flag": "CONFIRMED; population capability"
+   },
+   {
+    "id": "OECD-YEM-001",
+    "period": "OECD/INFE 2023",
+    "value": 15,
+    "unit": "score / 100 (financial well-being)",
+    "flag": "CONFIRMED"
+   },
+   {
+    "id": "(none)",
+    "period": "-",
+    "value": "OPEN",
+    "unit": "evaluated outcome",
+    "flag": "no evaluation evidence"
+   }
+  ],
+  "missing_or_breaks": [],
+  "inconsistencies": [
+   {
+    "field": "population-capability rung",
+    "contract_text": "\"latest available population capability reference\"",
+    "other_text": "audit/VISUAL_CONTRACT_CLOSURE.md row 19 says the rung has no Yemen value; Master now holds CONFIRMED 42/100 and 15/100",
+    "other_location": "29_OECD_BENCHMARKS r35-36 verification_state",
+    "severity": "EDITORIAL"
+   }
+  ],
+  "artefacts": [],
+  "notes": "Design caution: OECD/INFE fieldwork (11 Mar–1 Apr 2023) overlaps GMW 2023 (20–26 Mar 2023); a shared time axis would invite the prohibited attribution."
+ },
+ {
+  "visual_id": "VIS-INCLUSION-TRANSMISSION",
+  "readiness": "PARTIAL",
+  "master_row_11": 12,
+  "current_bindings": [
+   {
+    "sheet": "13_SYSTEM_RELATIONSHIPS",
+    "rows": "5-30",
+    "ids": [
+     "SL-001..SL-026"
+    ]
+   },
+   {
+    "sheet": "14_SYSTEM_CHRONOLOGY",
+    "rows": "5-28",
+    "ids": [
+     "YSC-001..YSC-024"
+    ]
+   },
+   {
+    "sheet": "32_QUAL_LITERATURE",
+    "rows": "49-73, 78, 87",
+    "ids": [
+     "MECH-* taxonomy",
+     "QQL-001 (names this visual)",
+     "QQL-010 (names this visual)"
+    ]
+   },
+   {
+    "sheet": "12_VISUAL_PREVIEWS",
+    "rows": "10-17",
+    "ids": [
+     "system preview: People / Firms / Providers / Payments & flows / Infrastructure / Rules & programmes"
+    ]
+   }
+  ],
+  "unresolved_legacy_inputs": [
+   "\"System relationship objects\" (-> 13)",
+   "\"public page bindings\" (no governed table; link nodes are routes)",
+   "SL-022..026 evidence_refs \"DS-SYSTEM-CHRONOLOGY\" (DOES NOT RESOLVE: not in 16; catalogue has DS-V4R3-SYSTEM-CHRONOLOGY r211)",
+   "SL-019 node \"SMEPS-FINACC-2024\" (DOES NOT RESOLVE: exists only in 13)",
+   "SL-020 node \"RMT-001\" (metric_id in 23, not an evidence object)"
+  ],
+  "plotted_values": [],
+  "missing_or_breaks": [
+   "No evidence_state column in 13 - the contract's \"evidence state marked on each link\" cannot be drawn from governed data.",
+   "21 of 26 links (SL-001..SL-021) have empty evidence_refs; the other 5 cite only an unregistered dataset token.",
+   "Link classification: SYSTEM (9) SL-003, SL-005, SL-007, SL-009, SL-022..SL-026; EVIDENCE-COMPARISON RULES, reverse edges (6) SL-001, SL-002, SL-004, SL-006, SL-008, SL-010; MEASUREMENT-AGENDA (5) SL-011..SL-015; OBJECT→PAGE PLACEMENT (5) SL-016..SL-020; NAVIGATION (1) SL-021.",
+   "Contract layers with no node: capability, income, enabling constraints (only DS-SYSTEM-CHRONOLOGY), consumer protection (only via /reforms).",
+   "14_SYSTEM_CHRONOLOGY relationship_type + linked_routes could supply per-link event refs by derivation (e.g. SL-023 /firms: YSC-002, 005, 008, 010, 011, 015, 016, 017, 021)."
+  ],
+  "inconsistencies": [
+   {
+    "field": "layer taxonomy",
+    "contract_text": "people & capability, firms & income, providers, payment rails, remittance & capital flows, regulation & protection, enabling constraints (7)",
+    "other_text": "People / Firms / Providers / Payments & flows / Infrastructure / Rules & programmes (6)",
+    "other_location": "12_VISUAL_PREVIEWS r12, r17",
+    "severity": "MATERIAL"
+   },
+   {
+    "field": "what_it_shows_en",
+    "contract_text": "with the evidence state marked on each link",
+    "other_text": "13 has no evidence-state field; SL-001..021 evidence_refs empty",
+    "other_location": "13_SYSTEM_RELATIONSHIPS header r4",
+    "severity": "BLOCKER"
+   }
+  ],
+  "artefacts": [],
+  "notes": "Signature candidate. Only 9 links are genuine system relationships; the rest are epistemic comparison rules or site structure. Drawing the current 13 as a system map would present navigation as system mechanics."
+ },
+ {
+  "visual_id": "VIS-MECHANISM-METRIC-BRIDGE",
+  "readiness": "PARTIAL",
+  "master_row_11": 13,
+  "current_bindings": [
+   {
+    "sheet": "32_QUAL_LITERATURE",
+    "rows": "25-44",
+    "ids": [
+     "QUAL-001..QUAL-020"
+    ]
+   },
+   {
+    "sheet": "32_QUAL_LITERATURE",
+    "rows": "49-73",
+    "ids": [
+     "MECH-* (25)"
+    ]
+   },
+   {
+    "sheet": "32_QUAL_LITERATURE",
+    "rows": "78-93",
+    "ids": [
+     "QQL-001..QQL-016"
+    ]
+   }
+  ],
+  "unresolved_legacy_inputs": [
+   "\"Qualitative evidence objects\" (-> 32 r23-44)",
+   "\"mechanism taxonomy\" (-> 32 r47-73)",
+   "\"qualitative/quantitative links\" (-> 32 r76-93)",
+   "\"quantitative evidence objects\" (QQL quant side = dataset tokens; QQL-011..016 point to DS-K04-* datasets with no rows in the Master)"
+  ],
+  "plotted_values": [],
+  "missing_or_breaks": [
+   "Quantitative anchor is a dataset token (e.g. \"DS-FINDEX-WB-OBS + DS-CBY-PAYMENTS\"), not one object as the contract requires."
+  ],
+  "inconsistencies": [
+   {
+    "field": "encoding_contract (edge labels)",
+    "contract_text": "contextualizes / policy proposition / research priority / verification bridge (4)",
+    "other_text": "16 relationship_type values, e.g. EXPLAINS_WHY_IMPLEMENTATION_LAYER_IS_SEPARATE, EVIDENCE_DESIGN_SIGNAL, CONCEPTUAL_PATHWAY, MODEL_VS_RESIDUAL_CONTROL, LOCAL_MECHANISM, HOUSEHOLD_CONTEXT, PAYMENT_QUALITY_CONTEXT, FLOW_STATE_HISTORY, METHOD_TO_RECONCILIATION",
+    "other_location": "32_QUAL_LITERATURE r78-93 relationship_type",
+    "severity": "MATERIAL"
+   },
+   {
+    "field": "denominator_universe",
+    "contract_text": "one quantitative object linked only to qualified qualitative mechanisms",
+    "other_text": "quant_object_or_dataset holds dataset tokens",
+    "other_location": "32 r78-93",
+    "severity": "MATERIAL"
+   }
+  ],
+  "artefacts": [],
+  "notes": ""
+ },
+ {
+  "visual_id": "VIS-OECD-FCP-TIMELINE",
+  "readiness": "PARTIAL",
+  "master_row_11": 14,
+  "current_bindings": [
+   {
+    "sheet": "31_REFORMS_REGULATION",
+    "rows": "13, 43, 48-57",
+    "ids": [
+     "REF-FCP-001",
+     "OECD-POL-15",
+     "FCP-ARCH-001..010"
+    ]
+   },
+   {
+    "sheet": "32_QUAL_LITERATURE",
+    "rows": "27, 102, 103, 107",
+    "ids": [
+     "QUAL-003",
+     "PA-CBY-FCP-001",
+     "PA-CBY-FCP-002",
+     "PA-CBY-FCP-003"
+    ]
+   },
+   {
+    "sheet": "29_OECD_BENCHMARKS",
+    "rows": "45",
+    "ids": [
+     "OECD-YEM-011 (CONFIRMED)"
+    ]
+   }
+  ],
+  "unresolved_legacy_inputs": [
+   "54_PRIMARY_AUTHORITY (-> 32 r96-113)",
+   "30_OECD_NARRATIVE (DOES NOT RESOLVE as a table)",
+   "42_CONTRADICTIONS (-> 33 r106-147; CTR-008 r115)"
+  ],
+  "plotted_values": [
+   {
+    "id": "REF-FCP-001 / FCP-ARCH-001",
+    "period": "2023-08-28",
+    "value": "framework issued",
+    "unit": "state",
+    "flag": "primary"
+   },
+   {
+    "id": "PA-CBY-FCP-002",
+    "period": "2024-03-23",
+    "value": "awareness output",
+    "unit": "state",
+    "flag": "primary"
+   },
+   {
+    "id": "FCP-ARCH-002",
+    "period": "2024-03-23",
+    "value": "dedicated department (source-reported)",
+    "unit": "state",
+    "flag": "primary"
+   },
+   {
+    "id": "QUAL-003 / OECD-YEM-011",
+    "period": "2023 onward, 2026 publication",
+    "value": "implementation still developing",
+    "unit": "state",
+    "flag": "OFFICIAL_SECONDARY"
+   },
+   {
+    "id": "FCP-ARCH-004..008",
+    "period": "2024-03-23",
+    "value": "complaint/redress architecture",
+    "unit": "state",
+    "flag": "primary guidance"
+   },
+   {
+    "id": "(none)",
+    "period": "-",
+    "value": "OPEN",
+    "unit": "enforcement",
+    "flag": "no governed row"
+   },
+   {
+    "id": "FCP-ARCH-010",
+    "period": "current",
+    "value": "OPEN",
+    "unit": "consumer outcome",
+    "flag": "gap object"
+   }
+  ],
+  "missing_or_breaks": [
+   "\"2021 baseline\" node has no governed FCP row (the only 2021 references are 16 DS-OECD-NARRATIVE period_min \"2021 context\" and an AML circular in 29 r65)."
+  ],
+  "inconsistencies": [
+   {
+    "field": "source_period / freshness_profile / period",
+    "contract_text": "2021 baseline → Aug-2023 instrument → ...; 2021→2024/current gaps",
+    "other_text": "no governed 2021 FCP object; earliest governed FCP state 2023-08-28",
+    "other_location": "31_REFORMS_REGULATION r13, r48",
+    "severity": "MATERIAL"
+   }
+  ],
+  "artefacts": [],
+  "notes": ""
+ },
+ {
+  "visual_id": "VIS-PAYMENT-ANATOMY",
+  "readiness": "DRAWABLE_FROM_MASTER",
+  "master_row_11": 15,
+  "current_bindings": [
+   {
+    "sheet": "19_PAYMENTS_DATA",
+    "rows": "35-54",
+    "ids": [
+     "OBS-00031..OBS-00050"
+    ]
+   },
+   {
+    "sheet": "17_INDICATOR_LIBRARY",
+    "rows": "54-82",
+    "ids": [
+     "IND-0001..IND-0030"
+    ]
+   },
+   {
+    "sheet": "34_EVIDENCE_PASSPORTS",
+    "rows": "26",
+    "ids": [
+     "EP-CBY-PAY-H1-2025"
+    ]
+   },
+   {
+    "sheet": "33_ANALYTICS_MASTER",
+    "rows": "113",
+    "ids": [
+     "CTR-006"
+    ]
+   },
+   {
+    "sheet": "22_PROVIDERS_DATA",
+    "rows": "116,125",
+    "ids": [
+     "WCR-002",
+     "PAYCUR-002"
+    ]
+   }
+  ],
+  "unresolved_legacy_inputs": [
+   "data_inputs is prose (\"2025 H1 CBY cards, ATMs, ...\") - resolves to 19 r35-54",
+   "34 r26 display_requirements cite DN-CBY-001/002/004/005: no DN-CBY rows exist in the current Master"
+  ],
+  "plotted_values": [
+   {
+    "id": "OBS-00031 (IND-0001)",
+    "sheet_row": "19_PAYMENTS_DATA r35",
+    "period": "2025 H1",
+    "value": 2341752,
+    "unit": "count",
+    "flag": "BREAK_IN_SERIES"
+   },
+   {
+    "id": "OBS-00032 (IND-0006)",
+    "sheet_row": "19_PAYMENTS_DATA r36",
+    "period": "2025 H1",
+    "value": 914,
+    "unit": "count",
+    "flag": "BREAK_IN_SERIES"
+   },
+   {
+    "id": "OBS-00033 (IND-0010)",
+    "sheet_row": "19_PAYMENTS_DATA r37",
+    "period": "2025 H1",
+    "value": 9,
+    "unit": "count",
+    "flag": "BREAK_IN_SERIES"
+   },
+   {
+    "id": "OBS-00034 (IND-0011)",
+    "sheet_row": "19_PAYMENTS_DATA r38",
+    "period": "2025 H1",
+    "value": 2102484,
+    "unit": "count",
+    "flag": "BREAK_IN_SERIES"
+   },
+   {
+    "id": "OBS-00035 (IND-0002)",
+    "sheet_row": "19_PAYMENTS_DATA r39",
+    "period": "2025 H1",
+    "value": 791,
+    "unit": "count",
+    "flag": "BREAK_IN_SERIES"
+   },
+   {
+    "id": "OBS-00036 (IND-0003)",
+    "sheet_row": "19_PAYMENTS_DATA r40",
+    "period": "2025 H1",
+    "value": 58512,
+    "unit": "count",
+    "flag": "UNKNOWN"
+   },
+   {
+    "id": "OBS-00037 (IND-0017)",
+    "sheet_row": "19_PAYMENTS_DATA r41",
+    "period": "2025 H1",
+    "value": 5202019,
+    "unit": "count",
+    "flag": "UNKNOWN"
+   },
+   {
+    "id": "OBS-00038 (IND-0018)",
+    "sheet_row": "19_PAYMENTS_DATA r42",
+    "period": "2025 H1",
+    "value": 81,
+    "unit": "percent",
+    "flag": "UNKNOWN"
+   },
+   {
+    "id": "OBS-00039 (IND-0019)",
+    "sheet_row": "19_PAYMENTS_DATA r43",
+    "period": "2025 H1",
+    "value": 18,
+    "unit": "percent",
+    "flag": "UNKNOWN"
+   },
+   {
+    "id": "OBS-00040 (IND-0020)",
+    "sheet_row": "19_PAYMENTS_DATA r44",
+    "period": "2025 H1",
+    "value": 1,
+    "unit": "percent",
+    "flag": "UNKNOWN"
+   },
+   {
+    "id": "OBS-00041 (IND-0021)",
+    "sheet_row": "19_PAYMENTS_DATA r45",
+    "period": "2025 H1",
+    "value": 84,
+    "unit": "percent",
+    "flag": "UNKNOWN"
+   },
+   {
+    "id": "OBS-00042 (IND-0022)",
+    "sheet_row": "19_PAYMENTS_DATA r46",
+    "period": "2025 H1",
+    "value": 16,
+    "unit": "percent",
+    "flag": "UNKNOWN"
+   },
+   {
+    "id": "OBS-00043 (IND-0023)",
+    "sheet_row": "19_PAYMENTS_DATA r47",
+    "period": "2025 H1",
+    "value": 98,
+    "unit": "percent",
+    "flag": "UNKNOWN"
+   },
+   {
+    "id": "OBS-00044 (IND-0024)",
+    "sheet_row": "19_PAYMENTS_DATA r48",
+    "period": "2025 H1",
+    "value": 1,
+    "unit": "percent",
+    "flag": "UNKNOWN"
+   },
+   {
+    "id": "OBS-00045 (IND-0025)",
+    "sheet_row": "19_PAYMENTS_DATA r49",
+    "period": "2025 H1",
+    "value": 1,
+    "unit": "percent",
+    "flag": "UNKNOWN"
+   },
+   {
+    "id": "OBS-00046 (IND-0026)",
+    "sheet_row": "19_PAYMENTS_DATA r50",
+    "period": "2025 H1",
+    "value": 35,
+    "unit": "percent",
+    "flag": "UNKNOWN"
+   },
+   {
+    "id": "OBS-00047 (IND-0027)",
+    "sheet_row": "19_PAYMENTS_DATA r51",
+    "period": "2025 H1",
+    "value": 20,
+    "unit": "percent",
+    "flag": "UNKNOWN"
+   },
+   {
+    "id": "OBS-00048 (IND-0028)",
+    "sheet_row": "19_PAYMENTS_DATA r52",
+    "period": "2025 H1",
+    "value": 13,
+    "unit": "percent",
+    "flag": "UNKNOWN"
+   },
+   {
+    "id": "OBS-00049 (IND-0029)",
+    "sheet_row": "19_PAYMENTS_DATA r53",
+    "period": "2025 H1",
+    "value": 11,
+    "unit": "percent",
+    "flag": "UNKNOWN"
+   },
+   {
+    "id": "OBS-00050 (IND-0030)",
+    "sheet_row": "19_PAYMENTS_DATA r54",
+    "period": "2025 H1",
+    "value": 4,
+    "unit": "percent",
+    "flag": "UNKNOWN"
+   }
+  ],
+  "missing_or_breaks": [
+   "Cards/ATMs/e-wallets/subscribers/POS carry BREAK_IN_SERIES vs 2024 Q3.",
+   "Accounts (5,202,019), POS transactions (58,512) and all composition shares are comparability_state UNKNOWN with caveat \"require methodology note before public use\"."
+  ],
+  "inconsistencies": [
+   {
+    "field": "evidence_strength",
+    "contract_text": "HIGH_SEMANTIC",
+    "other_text": "7 of 20 rows UNKNOWN \"Source aggregate; definition/period semantics require methodology note before public use\"",
+    "other_location": "19_PAYMENTS_DATA r40-54 comparability_state/caveats",
+    "severity": "MATERIAL"
+   },
+   {
+    "field": "unit (POS terminals H1)",
+    "contract_text": "791 terminals (H1 2025)",
+    "other_text": "same value 791 for 2025-06 flagged DIRECTLY_COMPARABLE (OBS-00060) but BREAK_IN_SERIES as H1 (OBS-00035)",
+    "other_location": "19 r39 vs r64",
+    "severity": "EDITORIAL"
+   }
+  ],
+  "artefacts": [],
+  "notes": ""
+ },
+ {
+  "visual_id": "VIS-POS-TERMINALS",
+  "readiness": "DRAWABLE_FROM_MASTER",
+  "master_row_11": 16,
+  "current_bindings": [
+   {
+    "sheet": "19_PAYMENTS_DATA",
+    "rows": "55,58,61,64,67,70,73,75,78,81,84",
+    "ids": [
+     "OBS-00051",
+     "OBS-00054",
+     "OBS-00057",
+     "OBS-00060",
+     "OBS-00063",
+     "OBS-00066",
+     "OBS-00069",
+     "OBS-00071",
+     "OBS-00074",
+     "OBS-00077",
+     "OBS-00080"
+    ]
+   },
+   {
+    "sheet": "33_ANALYTICS_MASTER",
+    "rows": "8,11,108",
+    "ids": [
+     "DA-003",
+     "DA-006",
+     "CTR-001"
+    ]
+   },
+   {
+    "sheet": "34_EVIDENCE_PASSPORTS",
+    "rows": "6",
+    "ids": [
+     "EP-CBY-POS-MONTHLY"
+    ]
+   },
+   {
+    "sheet": "07_PUBLIC_CLAIMS",
+    "rows": "7,21",
+    "ids": [
+     "CLM-003",
+     "CLM-017"
+    ]
+   },
+   {
+    "sheet": "22_PROVIDERS_DATA",
+    "rows": "124",
+    "ids": [
+     "PAYCUR-001"
+    ]
+   }
+  ],
+  "unresolved_legacy_inputs": [
+   "11_CBY_PAYMENTS IND-0002 (-> 19_PAYMENTS_DATA; IND-0002 resolves)"
+  ],
+  "plotted_values": [
+   {
+    "id": "OBS-00051",
+    "sheet_row": "19_PAYMENTS_DATA r55",
+    "period": "2025-03",
+    "value": 561,
+    "unit": "count",
+    "flag": "DIRECTLY_COMPARABLE",
+    "source_id": "SRC-CBY-POS-2025-03"
+   },
+   {
+    "id": "OBS-00054",
+    "sheet_row": "19_PAYMENTS_DATA r58",
+    "period": "2025-04",
+    "value": 629,
+    "unit": "count",
+    "flag": "DIRECTLY_COMPARABLE",
+    "source_id": "SRC-CBY-POS-2025-04"
+   },
+   {
+    "id": "OBS-00057",
+    "sheet_row": "19_PAYMENTS_DATA r61",
+    "period": "2025-05",
+    "value": 733,
+    "unit": "count",
+    "flag": "DIRECTLY_COMPARABLE",
+    "source_id": "SRC-CBY-POS-2025-05"
+   },
+   {
+    "id": "OBS-00060",
+    "sheet_row": "19_PAYMENTS_DATA r64",
+    "period": "2025-06",
+    "value": 791,
+    "unit": "count",
+    "flag": "DIRECTLY_COMPARABLE_WITH_MINOR_SOURCE_INTERNAL_PERCENT_DISCREPANCY",
+    "source_id": "SRC-CBY-POS-2025-06"
+   },
+   {
+    "id": "OBS-00063",
+    "sheet_row": "19_PAYMENTS_DATA r67",
+    "period": "2025-07",
+    "value": 893,
+    "unit": "count",
+    "flag": "DIRECTLY_COMPARABLE",
+    "source_id": "SRC-CBY-POS-2025-07"
+   },
+   {
+    "id": "OBS-00066",
+    "sheet_row": "19_PAYMENTS_DATA r70",
+    "period": "2025-08",
+    "value": 967,
+    "unit": "count",
+    "flag": "DIRECTLY_COMPARABLE",
+    "source_id": "SRC-CBY-POS-2025-08"
+   },
+   {
+    "id": "OBS-00069",
+    "sheet_row": "19_PAYMENTS_DATA r73",
+    "period": "2025-09",
+    "value": 1060,
+    "unit": "count",
+    "flag": "DIRECTLY_COMPARABLE",
+    "source_id": "SRC-CBY-POS-2025-09"
+   },
+   {
+    "id": "OBS-00071",
+    "sheet_row": "19_PAYMENTS_DATA r75",
+    "period": "2025-10",
+    "value": 1149,
+    "unit": "count",
+    "flag": "DIRECTLY_COMPARABLE",
+    "source_id": "SRC-CBY-POS-2025-10"
+   },
+   {
+    "id": "OBS-00074",
+    "sheet_row": "19_PAYMENTS_DATA r78",
+    "period": "2025-11",
+    "value": 1226,
+    "unit": "count",
+    "flag": "DIRECTLY_COMPARABLE",
+    "source_id": "SRC-CBY-POS-2025-11"
+   },
+   {
+    "id": "OBS-00077",
+    "sheet_row": "19_PAYMENTS_DATA r81",
+    "period": "2025-12",
+    "value": 1357,
+    "unit": "count",
+    "flag": "DIRECTLY_COMPARABLE_WITH_SOURCE_INTERNAL_PERCENT_CONTRADICTION",
+    "source_id": "SRC-CBY-POS-2025-12"
+   },
+   {
+    "id": "OBS-00080",
+    "sheet_row": "19_PAYMENTS_DATA r84",
+    "period": "2026-01",
+    "value": 1473,
+    "unit": "count",
+    "flag": "DIRECTLY_COMPARABLE_WITH_SOURCE_INTERNAL_PERCENT_CONTRADICTION",
+    "source_id": "SRC-CBY-POS-2026-01"
+   },
+   {
+    "id": "DA-006",
+    "sheet_row": "33 r11",
+    "period": "2025-12→2026-01",
+    "value": 0.0854826823876198,
+    "unit": "fraction labelled \"percent change\" (=8.55%)",
+    "flag": "DERIVED; source graphic shows +11%"
+   }
+  ],
+  "missing_or_breaks": [
+   "No missing month (11/11).",
+   "Source-internal % mismatch Jun-2025 (+7.6% shown vs +7.91% implied, 19 r64 caveat; 34 r6) not in the contract encoding."
+  ],
+  "inconsistencies": [
+   {
+    "field": "data_inputs",
+    "contract_text": "11_CBY_PAYMENTS IND-0002",
+    "other_text": "CTR-001 (the governed contradiction row) is not cited, although the encoding annotates it",
+    "other_location": "33_ANALYTICS_MASTER r108",
+    "severity": "EDITORIAL"
+   },
+   {
+    "field": "comparability flag Dec-2025",
+    "contract_text": "contradiction is Dec→Jan as displayed by the January graphic",
+    "other_text": "Dec rows OBS-00077/OBS-00078 carry DIRECTLY_COMPARABLE_WITH_SOURCE_INTERNAL_PERCENT_CONTRADICTION with empty caveats",
+    "other_location": "19_PAYMENTS_DATA r81-r82 comparability_state/caveats",
+    "severity": "EDITORIAL"
+   },
+   {
+    "field": "denominator_universe",
+    "contract_text": "CBY administrative reporting universe",
+    "other_text": "CBY payment-system reporting scope",
+    "other_location": "19 universe col; 34 r6 universe",
+    "severity": "EDITORIAL"
+   },
+   {
+    "field": "DA-003/DA-006 unit",
+    "contract_text": "8.55%",
+    "other_text": "value 0.0854826823876198 with unit \"percent change\" (fraction, not percent); DA-003 = 1.6256… \"percent change\"",
+    "other_location": "33_ANALYTICS_MASTER r8, r11 unit",
+    "severity": "MATERIAL"
+   }
+  ],
+  "artefacts": [
+   "19_PAYMENTS_DATA r67,70,73,75,78,81,84 source_locator contains \"web ref turn503833view4/3/2/1/0\" or \"web ref turn274669view0/1\" (research-tool artefact; 20 rows r67-r86 across the three POS series)."
+  ],
+  "notes": "Monotonic series: 561→629→733→791→893→967→1,060→1,149→1,226→1,357→1,473. 1473/1357−1 = 8.548% (matches)."
+ },
+ {
+  "visual_id": "VIS-POS-TRANSACTIONS",
+  "readiness": "DRAWABLE_FROM_MASTER",
+  "master_row_11": 17,
+  "current_bindings": [
+   {
+    "sheet": "19_PAYMENTS_DATA",
+    "rows": "56,59,62,65,68,71,74,76,79,82,85",
+    "ids": [
+     "OBS-00052",
+     "OBS-00055",
+     "OBS-00058",
+     "OBS-00061",
+     "OBS-00064",
+     "OBS-00067",
+     "OBS-00070",
+     "OBS-00072",
+     "OBS-00075",
+     "OBS-00078",
+     "OBS-00081"
+    ]
+   },
+   {
+    "sheet": "33_ANALYTICS_MASTER",
+    "rows": "9,12,109",
+    "ids": [
+     "DA-004",
+     "DA-007",
+     "CTR-002"
+    ]
+   },
+   {
+    "sheet": "34_EVIDENCE_PASSPORTS",
+    "rows": "6",
+    "ids": [
+     "EP-CBY-POS-MONTHLY"
+    ]
+   }
+  ],
+  "unresolved_legacy_inputs": [
+   "11_CBY_PAYMENTS IND-0003 (-> 19; resolves)",
+   "CTR-002 (resolves: 33 r109)"
+  ],
+  "plotted_values": [
+   {
+    "id": "OBS-00052",
+    "sheet_row": "19_PAYMENTS_DATA r56",
+    "period": "2025-03",
+    "value": 8015,
+    "unit": "count",
+    "flag": "DIRECTLY_COMPARABLE",
+    "source_id": "SRC-CBY-POS-2025-03"
+   },
+   {
+    "id": "OBS-00055",
+    "sheet_row": "19_PAYMENTS_DATA r59",
+    "period": "2025-04",
+    "value": 10143,
+    "unit": "count",
+    "flag": "DIRECTLY_COMPARABLE",
+    "source_id": "SRC-CBY-POS-2025-04"
+   },
+   {
+    "id": "OBS-00058",
+    "sheet_row": "19_PAYMENTS_DATA r62",
+    "period": "2025-05",
+    "value": 12096,
+    "unit": "count",
+    "flag": "DIRECTLY_COMPARABLE",
+    "source_id": "SRC-CBY-POS-2025-05"
+   },
+   {
+    "id": "OBS-00061",
+    "sheet_row": "19_PAYMENTS_DATA r65",
+    "period": "2025-06",
+    "value": 11832,
+    "unit": "count",
+    "flag": "DIRECTLY_COMPARABLE",
+    "source_id": "SRC-CBY-POS-2025-06"
+   },
+   {
+    "id": "OBS-00064",
+    "sheet_row": "19_PAYMENTS_DATA r68",
+    "period": "2025-07",
+    "value": 27187,
+    "unit": "count",
+    "flag": "DIRECTLY_COMPARABLE",
+    "source_id": "SRC-CBY-POS-2025-07"
+   },
+   {
+    "id": "OBS-00067",
+    "sheet_row": "19_PAYMENTS_DATA r71",
+    "period": "2025-08",
+    "value": 22605,
+    "unit": "count",
+    "flag": "DIRECTLY_COMPARABLE",
+    "source_id": "SRC-CBY-POS-2025-08"
+   },
+   {
+    "id": "OBS-00070",
+    "sheet_row": "19_PAYMENTS_DATA r74",
+    "period": "2025-09",
+    "value": 18737,
+    "unit": "count",
+    "flag": "DIRECTLY_COMPARABLE",
+    "source_id": "SRC-CBY-POS-2025-09"
+   },
+   {
+    "id": "OBS-00072",
+    "sheet_row": "19_PAYMENTS_DATA r76",
+    "period": "2025-10",
+    "value": 19548,
+    "unit": "count",
+    "flag": "DIRECTLY_COMPARABLE",
+    "source_id": "SRC-CBY-POS-2025-10"
+   },
+   {
+    "id": "OBS-00075",
+    "sheet_row": "19_PAYMENTS_DATA r79",
+    "period": "2025-11",
+    "value": 22194,
+    "unit": "count",
+    "flag": "DIRECTLY_COMPARABLE",
+    "source_id": "SRC-CBY-POS-2025-11"
+   },
+   {
+    "id": "OBS-00078",
+    "sheet_row": "19_PAYMENTS_DATA r82",
+    "period": "2025-12",
+    "value": 21099,
+    "unit": "count",
+    "flag": "DIRECTLY_COMPARABLE_WITH_SOURCE_INTERNAL_PERCENT_CONTRADICTION",
+    "source_id": "SRC-CBY-POS-2025-12"
+   },
+   {
+    "id": "OBS-00081",
+    "sheet_row": "19_PAYMENTS_DATA r85",
+    "period": "2026-01",
+    "value": 24026,
+    "unit": "count",
+    "flag": "DIRECTLY_COMPARABLE_WITH_SOURCE_INTERNAL_PERCENT_CONTRADICTION",
+    "source_id": "SRC-CBY-POS-2026-01"
+   },
+   {
+    "id": "DA-007",
+    "sheet_row": "33 r12",
+    "period": "2025-12→2026-01",
+    "value": 0.1387269538840703,
+    "unit": "fraction labelled \"percent change\" (=13.87%)",
+    "flag": "DERIVED; source graphic shows +4.9%"
+   }
+  ],
+  "missing_or_breaks": [
+   "No missing month.",
+   "Series is not monotonic: peak 27,187 (Jul-2025, r68) then 22,605 (Aug) and 18,737 (Sep) before 24,026 (Jan-2026); no governed caveat on the July peak."
+  ],
+  "inconsistencies": [
+   {
+    "field": "accessible_summary_en (11 r17) and summary_en (06 r67)",
+    "contract_text": "Reported POS transactions rose from 8,015 in March 2025 to 24,026 in January 2026.",
+    "other_text": "governed monthly values peak at 27,187 in July 2025 and fall to 18,737 in September 2025",
+    "other_location": "19_PAYMENTS_DATA r68, r74, r85",
+    "severity": "MATERIAL"
+   },
+   {
+    "field": "comparability flag Dec-2025",
+    "contract_text": "Dec→Jan contradiction",
+    "other_text": "OBS-00078 flagged contradiction, caveat empty",
+    "other_location": "19 r82",
+    "severity": "EDITORIAL"
+   }
+  ],
+  "artefacts": [
+   "Same \"web ref turn…\" artefacts in 19 source_locator r68,71,74,76,79,82,85."
+  ],
+  "notes": "24026/21099−1 = 13.873% (matches CTR-002/DA-007)."
+ },
+ {
+  "visual_id": "VIS-POS-VALUE",
+  "readiness": "DRAWABLE_FROM_MASTER",
+  "master_row_11": 18,
+  "current_bindings": [
+   {
+    "sheet": "19_PAYMENTS_DATA",
+    "rows": "57,60,63,66,69,72,77,80,83,86",
+    "ids": [
+     "OBS-00053",
+     "OBS-00056",
+     "OBS-00059",
+     "OBS-00062",
+     "OBS-00065",
+     "OBS-00068",
+     "OBS-00073",
+     "OBS-00076",
+     "OBS-00079",
+     "OBS-00082"
+    ]
+   },
+   {
+    "sheet": "33_ANALYTICS_MASTER",
+    "rows": "10",
+    "ids": [
+     "DA-005"
+    ]
+   },
+   {
+    "sheet": "34_EVIDENCE_PASSPORTS",
+    "rows": "6",
+    "ids": [
+     "EP-CBY-POS-MONTHLY"
+    ]
+   }
+  ],
+  "unresolved_legacy_inputs": [
+   "11_CBY_PAYMENTS IND-0004 (-> 19; resolves)"
+  ],
+  "plotted_values": [
+   {
+    "id": "OBS-00053",
+    "sheet_row": "19_PAYMENTS_DATA r57",
+    "period": "2025-03",
+    "value": 320,
+    "unit": "YER_million YER",
+    "flag": "DIRECTLY_COMPARABLE",
+    "source_id": "SRC-CBY-POS-2025-03"
+   },
+   {
+    "id": "OBS-00056",
+    "sheet_row": "19_PAYMENTS_DATA r60",
+    "period": "2025-04",
+    "value": 317.639,
+    "unit": "YER_million YER",
+    "flag": "DIRECTLY_COMPARABLE",
+    "source_id": "SRC-CBY-POS-2025-04"
+   },
+   {
+    "id": "OBS-00059",
+    "sheet_row": "19_PAYMENTS_DATA r63",
+    "period": "2025-05",
+    "value": 386.792,
+    "unit": "YER_million YER",
+    "flag": "DIRECTLY_COMPARABLE",
+    "source_id": "SRC-CBY-POS-2025-05"
+   },
+   {
+    "id": "OBS-00062",
+    "sheet_row": "19_PAYMENTS_DATA r66",
+    "period": "2025-06",
+    "value": 535.189,
+    "unit": "YER_million YER",
+    "flag": "DIRECTLY_COMPARABLE",
+    "source_id": "SRC-CBY-POS-2025-06"
+   },
+   {
+    "id": "OBS-00065",
+    "sheet_row": "19_PAYMENTS_DATA r69",
+    "period": "2025-07",
+    "value": 490.759,
+    "unit": "YER_million YER",
+    "flag": "DIRECTLY_COMPARABLE",
+    "source_id": "SRC-CBY-POS-2025-07"
+   },
+   {
+    "id": "OBS-00068",
+    "sheet_row": "19_PAYMENTS_DATA r72",
+    "period": "2025-08",
+    "value": 580.021,
+    "unit": "YER_million YER",
+    "flag": "DIRECTLY_COMPARABLE",
+    "source_id": "SRC-CBY-POS-2025-08"
+   },
+   {
+    "id": "OBS-00073",
+    "sheet_row": "19_PAYMENTS_DATA r77",
+    "period": "2025-10",
+    "value": 795.006,
+    "unit": "YER_million YER",
+    "flag": "DIRECTLY_COMPARABLE",
+    "source_id": "SRC-CBY-POS-2025-10"
+   },
+   {
+    "id": "OBS-00076",
+    "sheet_row": "19_PAYMENTS_DATA r80",
+    "period": "2025-11",
+    "value": 783.583,
+    "unit": "YER_million YER",
+    "flag": "DIRECTLY_COMPARABLE",
+    "source_id": "SRC-CBY-POS-2025-11"
+   },
+   {
+    "id": "OBS-00079",
+    "sheet_row": "19_PAYMENTS_DATA r83",
+    "period": "2025-12",
+    "value": 910.688,
+    "unit": "YER_million YER",
+    "flag": "DIRECTLY_COMPARABLE_WITH_SOURCE_INTERNAL_PERCENT_CONTRADICTION",
+    "source_id": "SRC-CBY-POS-2025-12"
+   },
+   {
+    "id": "OBS-00082",
+    "sheet_row": "19_PAYMENTS_DATA r86",
+    "period": "2026-01",
+    "value": 1262,
+    "unit": "YER_million YER",
+    "flag": "DIRECTLY_COMPARABLE_WITH_SOURCE_INTERNAL_PERCENT_CONTRADICTION",
+    "source_id": "SRC-CBY-POS-2026-01"
+   }
+  ],
+  "missing_or_breaks": [
+   "2025-09 IND-0004 missing (no row); SRC-CBY-POS-2025-09 exists (15 r29) and supplies terminals and transactions (19 r73-74) but no value.",
+   "Minor non-monotonic dips: Apr (317.639 < 320), Jul (490.759 < 535.189), Nov (783.583 < 795.006)."
+  ],
+  "inconsistencies": [
+   {
+    "field": "unit_or_object",
+    "contract_text": "nominal YER transaction value",
+    "other_text": "YER_million",
+    "other_location": "19 unit col",
+    "severity": "EDITORIAL"
+   },
+   {
+    "field": "comparability flag",
+    "contract_text": "no value contradiction is described",
+    "other_text": "OBS-00079 (Dec) and OBS-00082 (Jan) flagged ..._PERCENT_CONTRADICTION; no CTR row for value",
+    "other_location": "19 r83, r86",
+    "severity": "EDITORIAL"
+   }
+  ],
+  "artefacts": [
+   "\"web ref turn…\" in 19 source_locator r69,72,77,80,83,86."
+  ],
+  "notes": "1262/320−1 = 2.94375 (DA-005 matches)."
+ },
+ {
+  "visual_id": "VIS-PROVIDER-OBSERVABILITY",
+  "readiness": "PARTIAL",
+  "master_row_11": 19,
+  "current_bindings": [
+   {
+    "sheet": "22_PROVIDERS_DATA",
+    "rows": "65-68",
+    "ids": [
+     "PUC-BANK-2026-01",
+     "PUC-EXCH-2026-01",
+     "PUC-WALLET-2025-01",
+     "PUC-MFI-2026-01"
+    ]
+   },
+   {
+    "sheet": "22_PROVIDERS_DATA",
+    "rows": "5-60",
+    "ids": [
+     "PRV-* entity rows (26 banks incl. 12 MFB; 30 exchange/remittance status-event subjects)"
+    ]
+   },
+   {
+    "sheet": "22_PROVIDERS_DATA",
+    "rows": "139-142",
+    "ids": [
+     "CBY-ROSTER-2026-COMP (98)",
+     "CBY-ROSTER-2026-EST (225)",
+     "CBY-ROSTER-2026-AGT (106)",
+     "CBY-ROSTER-2026-ROWS (429)"
+    ]
+   },
+   {
+    "sheet": "22_PROVIDERS_DATA",
+    "rows": "73-87",
+    "ids": [
+     "PSE-001..PSE-015"
+    ]
+   },
+   {
+    "sheet": "22_PROVIDERS_DATA",
+    "rows": "91-102",
+    "ids": [
+     "NEG-EW-001..NEG-EW-012"
+    ]
+   },
+   {
+    "sheet": "22_PROVIDERS_DATA",
+    "rows": "107-110, 115-119, 124-129",
+    "ids": [
+     "PBL-2025-001..004",
+     "WCR-001..005",
+     "PAYCUR-001..006"
+    ]
+   },
+   {
+    "sheet": "32_QUAL_LITERATURE",
+    "rows": "104,105,110",
+    "ids": [
+     "PA-CBY-PROV-001",
+     "PA-CBY-PSP-001",
+     "PA-CBY-PAY-002"
+    ]
+   },
+   {
+    "sheet": "33_ANALYTICS_MASTER",
+    "rows": "116,117,166",
+    "ids": [
+     "CTR-009",
+     "CTR-010",
+     "Q-003"
+    ]
+   }
+  ],
+  "unresolved_legacy_inputs": [
+   "65_PROVIDER_OBSERVABILITY (DOES NOT RESOLVE: the 5-row matrix is catalogued as DS-PROVIDER-OBSERVABILITY 16 r58 but not in the Master)",
+   "66_PROVIDER_STATUS_EVENTS (-> 22 r71-87)",
+   "67_PROVIDER_NEGATIVE_AUTHORITY (-> 22 r89-102)",
+   "16_PROVIDER_UNIVERSE (-> 22 r63-68)"
+  ],
+  "plotted_values": [],
+  "missing_or_breaks": [
+   "Payment-system operators class (named in the contract and in 06 r18 summary) has no PUC row; only institution events (31 REF-PAY-011..013; 22 PAYCUR-005/006).",
+   "No per-class operation/activity field; must be derived from entity operating_state tokens (UNKNOWN_NOT_INFERRED_FROM_LICENCE_LIST / DO_NOT_INFER_BEYOND_EVENT) and attributed activity (REF-PAY-009).",
+   "Negative authority held for wallets only (NEG-EW-001..012 / PSE-001); other classes = \"none held\" (not \"none exist\").",
+   "Status events held for exchange/remittance only; banks explicitly have none applied (PUC-BANK event_overlay_state).",
+   "PUC-WALLET and PUC-MFI universe_count empty; wallet counts 7 / 9 / 8 / >9 are non-comparable (WCR-005)."
+  ],
+  "inconsistencies": [
+   {
+    "field": "freshness_profile",
+    "contract_text": "2024–2026 authority states",
+    "other_text": "PSE-015 2026-09-24 and PBL-2025 rows are included; fine. But 22 entity current_state_as_of is an Excel serial (46272/46282), not a date",
+    "other_location": "22_PROVIDERS_DATA r5-60 current_state_as_of",
+    "severity": "MATERIAL"
+   }
+  ],
+  "artefacts": [
+   "22_PROVIDERS_DATA r5-r60 current_state_as_of = 46272 (= 2026-09-07) on 55 rows and 46282 (= 2026-09-17) on r60; projected unchanged into site-src/content/data/providers_data.json."
+  ],
+  "notes": "Signature candidate. The matrix must be assembled; 4 of 5 classes have a universe row; operation dimension is derived."
+ },
+ {
+  "visual_id": "VIS-SOURCE-COMPARISON",
+  "readiness": "DRAWABLE_FROM_MASTER",
+  "master_row_11": 20,
+  "current_bindings": [
+   {
+    "sheet": "33_ANALYTICS_MASTER",
+    "rows": "152-159",
+    "ids": [
+     "XW-FMIIP-001..005",
+     "XW-WALLET-001..003"
+    ]
+   },
+   {
+    "sheet": "22_PROVIDERS_DATA",
+    "rows": "115-119",
+    "ids": [
+     "WCR-001..005"
+    ]
+   },
+   {
+    "sheet": "34_EVIDENCE_PASSPORTS",
+    "rows": "5-59",
+    "ids": [
+     "EP-*"
+    ]
+   },
+   {
+    "sheet": "33_ANALYTICS_MASTER",
+    "rows": "113,117,174",
+    "ids": [
+     "CTR-006",
+     "CTR-010",
+     "Q-011"
+    ]
+   }
+  ],
+  "unresolved_legacy_inputs": [
+   "49_METRIC_CROSSWALK (-> 33 r150-159)",
+   "\"Evidence Passports\" (-> 34)"
+  ],
+  "plotted_values": [
+   {
+    "id": "XW-FMIIP-001",
+    "sheet_row": "33_ANALYTICS_MASTER r152",
+    "period": "2025 / 2025",
+    "value": "1062441 accounts | 5202019 accounts",
+    "unit": "project vs admin",
+    "flag": "NOT_DIRECTLY_COMPARABLE__ACTIVE_DEFINITION_AND_UNIVERSE_UNRESOLVED"
+   },
+   {
+    "id": "XW-FMIIP-002",
+    "sheet_row": "33_ANALYTICS_MASTER r153",
+    "period": "2025 / 2025",
+    "value": "375252 active e-wallet accounts | 2102484 subscribers",
+    "unit": "project vs admin",
+    "flag": "NOT_SAME_METRIC"
+   },
+   {
+    "id": "XW-FMIIP-003",
+    "sheet_row": "33_ANALYTICS_MASTER r154",
+    "period": "2025 / 2025",
+    "value": "170 merchants | 791 POS terminals",
+    "unit": "project vs admin",
+    "flag": "NOT_SAME_UNIT"
+   },
+   {
+    "id": "XW-FMIIP-004",
+    "sheet_row": "33_ANALYTICS_MASTER r155",
+    "period": "2025 / 2025",
+    "value": "10761 beneficiaries | 58512 transactions",
+    "unit": "project vs admin",
+    "flag": "NOT_SAME_UNIT"
+   },
+   {
+    "id": "XW-FMIIP-005",
+    "sheet_row": "33_ANALYTICS_MASTER r156",
+    "period": "2030 / 2025",
+    "value": "1021 access points | None multiple infrastructure objects",
+    "unit": "project vs admin",
+    "flag": "NO_VALID_ADDITIVE_CROSSWALK"
+   },
+   {
+    "id": "XW-WALLET-001",
+    "sheet_row": "33_ANALYTICS_MASTER r157",
+    "period": "2024 / 2025",
+    "value": "7 e-wallets | 9 e-wallets",
+    "unit": "project vs admin",
+    "flag": "NOT_YET_PROVEN_SAME_UNIVERSE"
+   },
+   {
+    "id": "XW-WALLET-002",
+    "sheet_row": "33_ANALYTICS_MASTER r158",
+    "period": "2025 / 2025",
+    "value": "9 e-wallets | 8 licensed e-wallets",
+    "unit": "project vs admin",
+    "flag": "NOT_SAME_WORDING_OR_REFERENCE_DATE"
+   },
+   {
+    "id": "XW-WALLET-003",
+    "sheet_row": "33_ANALYTICS_MASTER r159",
+    "period": "2025 / 2026",
+    "value": "8 licensed e-wallets | >9 e-wallet participants",
+    "unit": "project vs admin",
+    "flag": "NOT_SAME_UNIT__LICENSING_VS_EVENT_PARTICIPATION"
+   }
+  ],
+  "missing_or_breaks": [
+   "XW-FMIIP-005 admin_value empty (multiple infrastructure objects, no additive crosswalk).",
+   "Admin comparators 5,202,019 accounts and 58,512 transactions are UNKNOWN-state in 19 (r40-41) \"require methodology note before public use\"."
+  ],
+  "inconsistencies": [
+   {
+    "field": "freshness_profile",
+    "contract_text": "2025 H1 snapshot",
+    "other_text": "compared objects span 2024 Q3 (XW-WALLET-001), 2025-09-10 statement and 2026 exhibition (XW-WALLET-002/003) and a 2030 target (XW-FMIIP-005)",
+    "other_location": "33 r156-159",
+    "severity": "EDITORIAL"
+   },
+   {
+    "field": "XW-FMIIP-005 pairing",
+    "contract_text": "(VIS-TARGET-RESULT-STATE rule) never show 1,021 without 817",
+    "other_text": "33 r156 project_state \"FMIIP target\", project_value 1021, no baseline; 06 r32 XW-FMIIP-005 summary includes the 817 baseline",
+    "other_location": "33_ANALYTICS_MASTER r156 vs 06_EVIDENCE_OBJECTS r32",
+    "severity": "MATERIAL"
+   }
+  ],
+  "artefacts": [],
+  "notes": ""
+ },
+ {
+  "visual_id": "VIS-TARGET-RESULT-STATE",
+  "readiness": "DRAWABLE_FROM_MASTER",
+  "master_row_11": 21,
+  "current_bindings": [
+   {
+    "sheet": "31_REFORMS_REGULATION",
+    "rows": "80-103",
+    "ids": [
+     "FMIIP-RF-001..024"
+    ]
+   },
+   {
+    "sheet": "33_ANALYTICS_MASTER",
+    "rows": "152-156",
+    "ids": [
+     "XW-FMIIP-001..005"
+    ]
+   },
+   {
+    "sheet": "06_EVIDENCE_OBJECTS",
+    "rows": "32,114",
+    "ids": [
+     "XW-FMIIP-005",
+     "FMIIP-BASELINE-2025-01"
+    ]
+   },
+   {
+    "sheet": "31_REFORMS_REGULATION",
+    "rows": "25,26",
+    "ids": [
+     "REF-FMIIP-APPROVAL-2025",
+     "REF-FMIIP-ISR2-2026"
+    ]
+   }
+  ],
+  "unresolved_legacy_inputs": [
+   "49_METRIC_CROSSWALK (-> 33 r150-159)",
+   "\"project target/result objects\" (-> 31 r78-103)"
+  ],
+  "plotted_values": [
+   {
+    "id": "FMIIP-RF-001",
+    "sheet_row": "31_REFORMS_REGULATION r80",
+    "period": "baseline Jan-2025 / target Jun-2030",
+    "value": "0 → 20",
+    "unit": "percent",
+    "flag": "Project baseline / target"
+   },
+   {
+    "id": "FMIIP-RF-002",
+    "sheet_row": "31_REFORMS_REGULATION r81",
+    "period": "baseline Jan-2025 / target Jun-2030",
+    "value": "10761 → 1000000",
+    "unit": "beneficiaries",
+    "flag": "Project baseline / target"
+   },
+   {
+    "id": "FMIIP-RF-003",
+    "sheet_row": "31_REFORMS_REGULATION r82",
+    "period": "baseline None / target Jun-2030",
+    "value": "None → 480000",
+    "unit": "female beneficiaries",
+    "flag": "Target only; baseline not stated"
+   },
+   {
+    "id": "FMIIP-RF-004",
+    "sheet_row": "31_REFORMS_REGULATION r83",
+    "period": "baseline Jan-2025 / target Jun-2030",
+    "value": "817 → 1021",
+    "unit": "project-defined access points",
+    "flag": "Project baseline / target"
+   },
+   {
+    "id": "FMIIP-RF-005",
+    "sheet_row": "31_REFORMS_REGULATION r84",
+    "period": "baseline Jan-2025 / target Jun-2030",
+    "value": "0 → 50",
+    "unit": "percent decrease",
+    "flag": "Project baseline / target"
+   },
+   {
+    "id": "FMIIP-RF-006",
+    "sheet_row": "31_REFORMS_REGULATION r85",
+    "period": "baseline Jan-2025 / target Jun-2030",
+    "value": "No → Yes",
+    "unit": "yes/no",
+    "flag": "Infrastructure milestone"
+   },
+   {
+    "id": "FMIIP-RF-007",
+    "sheet_row": "31_REFORMS_REGULATION r86",
+    "period": "baseline Jan-2025 / target Jun-2030",
+    "value": "0 → 600000",
+    "unit": "transactions / source wording",
+    "flag": "Project baseline / target"
+   },
+   {
+    "id": "FMIIP-RF-008",
+    "sheet_row": "31_REFORMS_REGULATION r87",
+    "period": "baseline Jan-2025 / target Jun-2030",
+    "value": "0 → 10",
+    "unit": "institutions",
+    "flag": "Project baseline / target"
+   },
+   {
+    "id": "FMIIP-RF-009",
+    "sheet_row": "31_REFORMS_REGULATION r88",
+    "period": "baseline Jan-2025 / target Jun-2030",
+    "value": "1 → 3",
+    "unit": "use cases",
+    "flag": "Project baseline / target"
+   },
+   {
+    "id": "FMIIP-RF-010",
+    "sheet_row": "31_REFORMS_REGULATION r89",
+    "period": "baseline Jan-2025 / target Jun-2030",
+    "value": "No → Yes",
+    "unit": "yes/no",
+    "flag": "Infrastructure milestone"
+   },
+   {
+    "id": "FMIIP-RF-011",
+    "sheet_row": "31_REFORMS_REGULATION r90",
+    "period": "baseline Jan-2025 / target Jun-2030",
+    "value": "0 → 10",
+    "unit": "PSPs",
+    "flag": "Project baseline / target"
+   },
+   {
+    "id": "FMIIP-RF-012",
+    "sheet_row": "31_REFORMS_REGULATION r91",
+    "period": "baseline Jan-2025 / target Jun-2030",
+    "value": "170 → 500",
+    "unit": "merchants",
+    "flag": "Project baseline / target"
+   },
+   {
+    "id": "FMIIP-RF-013",
+    "sheet_row": "31_REFORMS_REGULATION r92",
+    "period": "baseline Jan-2025 / target Jun-2030",
+    "value": "1062441 → 1381171",
+    "unit": "active accounts",
+    "flag": "Project baseline / target"
+   },
+   {
+    "id": "FMIIP-RF-014",
+    "sheet_row": "31_REFORMS_REGULATION r93",
+    "period": "baseline Jan-2025 / target Jun-2030",
+    "value": "200898 → 261167",
+    "unit": "active accounts",
+    "flag": "Project baseline / target"
+   },
+   {
+    "id": "FMIIP-RF-015",
+    "sheet_row": "31_REFORMS_REGULATION r94",
+    "period": "baseline Jan-2025 / target Jun-2030",
+    "value": "375252 → 487828",
+    "unit": "active e-wallet accounts",
+    "flag": "Project baseline / target"
+   },
+   {
+    "id": "FMIIP-RF-016",
+    "sheet_row": "31_REFORMS_REGULATION r95",
+    "period": "baseline None / target May-2030",
+    "value": "None → 73174",
+    "unit": "active e-wallet accounts",
+    "flag": "Target only; baseline not stated"
+   },
+   {
+    "id": "FMIIP-RF-017",
+    "sheet_row": "31_REFORMS_REGULATION r96",
+    "period": "baseline Jan-2025 / target Jun-2030",
+    "value": "65 → 71",
+    "unit": "agents",
+    "flag": "Project baseline / target"
+   },
+   {
+    "id": "FMIIP-RF-018",
+    "sheet_row": "31_REFORMS_REGULATION r97",
+    "period": "baseline Jan-2025 / target Jun-2030",
+    "value": "1 → 20",
+    "unit": "agents",
+    "flag": "Project baseline / target"
+   },
+   {
+    "id": "FMIIP-RF-019",
+    "sheet_row": "31_REFORMS_REGULATION r98",
+    "period": "baseline Jan-2025 / target Jun-2030",
+    "value": "0 → 10",
+    "unit": "campaigns",
+    "flag": "Project output target"
+   },
+   {
+    "id": "FMIIP-RF-020",
+    "sheet_row": "31_REFORMS_REGULATION r99",
+    "period": "baseline Jan-2025 / target Jun-2030",
+    "value": "0 → 5",
+    "unit": "campaigns",
+    "flag": "Project output target"
+   },
+   {
+    "id": "FMIIP-RF-021",
+    "sheet_row": "31_REFORMS_REGULATION r100",
+    "period": "baseline Jan-2025 / target Jun-2030",
+    "value": "0 → 80",
+    "unit": "percent",
+    "flag": "Project outcome target"
+   },
+   {
+    "id": "FMIIP-RF-022",
+    "sheet_row": "31_REFORMS_REGULATION r101",
+    "period": "baseline Jan-2025 / target Jun-2030",
+    "value": "0 → 80",
+    "unit": "percent",
+    "flag": "Project outcome target"
+   },
+   {
+    "id": "FMIIP-RF-023",
+    "sheet_row": "31_REFORMS_REGULATION r102",
+    "period": "baseline Jan-2025 / target Jun-2030",
+    "value": "0 → 90",
+    "unit": "percent",
+    "flag": "Project grievance target"
+   },
+   {
+    "id": "FMIIP-RF-024",
+    "sheet_row": "31_REFORMS_REGULATION r103",
+    "period": "baseline Jan-2025 / target Jun-2030",
+    "value": "0 → 90",
+    "unit": "percent",
+    "flag": "Project grievance target"
+   }
+  ],
+  "missing_or_breaks": [
+   "No observed result value for any FMIIP indicator (ISR2 r26 exists but carries no values) - result node = \"not observed\".",
+   "FMIIP-RF-003 and FMIIP-RF-016 are target-only (no baseline).",
+   "All XW compatibility states are NOT_* → no progress bar may render."
+  ],
+  "inconsistencies": [
+   {
+    "field": "target_period",
+    "contract_text": "(uniform Jun-2030 horizon)",
+    "other_text": "FMIIP-RF-016 target_period \"May-2030\" (all other rows Jun-2030)",
+    "other_location": "31_REFORMS_REGULATION r95",
+    "severity": "EDITORIAL"
+   },
+   {
+    "field": "period",
+    "contract_text": "project-specific",
+    "other_text": "baseline Jan-2025 / target Jun-2030 are governed",
+    "other_location": "31 r80-103",
+    "severity": "EDITORIAL"
+   },
+   {
+    "field": "pairing rule",
+    "contract_text": "never show the 2030 target of 1,021 without the Jan-2025 baseline of 817",
+    "other_text": "33 XW-FMIIP-005 holds 1,021 with no baseline",
+    "other_location": "33_ANALYTICS_MASTER r156",
+    "severity": "MATERIAL"
+   }
+  ],
+  "artefacts": [],
+  "notes": ""
+ },
+ {
+  "visual_id": "VIS-CAPITAL-CONTEXT",
+  "readiness": "PARTIAL",
+  "master_row_11": 22,
+  "current_bindings": [
+   {
+    "sheet": "35_OCHA_WB_CONTEXT",
+    "rows": "6-79",
+    "ids": [
+     "OCHAFTS-2026-* (74 flows; snapshot 2026-09-07)"
+    ]
+   },
+   {
+    "sheet": "31_REFORMS_REGULATION",
+    "rows": "25",
+    "ids": [
+     "REF-FMIIP-APPROVAL-2025 (US$20m IDA)"
+    ]
+   },
+   {
+    "sheet": "14_SYSTEM_CHRONOLOGY",
+    "rows": "9,13,14,23,24,25,26",
+    "ids": [
+     "YSC-005",
+     "YSC-009",
+     "YSC-010",
+     "YSC-018",
+     "YSC-019",
+     "YSC-021",
+     "YSC-022"
+    ]
+   },
+   {
+    "sheet": "07_PUBLIC_CLAIMS",
+    "rows": "49,62",
+    "ids": [
+     "CLM-046",
+     "CLM-059"
+    ]
+   }
+  ],
+  "unresolved_legacy_inputs": [
+   "33_OCHA_FTS_2026 (-> 35 r4-79)",
+   "\"project/finance relationship tables\" (legacy 34_OCHA_LINKS / 35_OCHA_CONTROLS: DS-OCHA-LINKS 16 r27, DS-OCHA-CONTROLS 16 r28; no rows)"
+  ],
+  "plotted_values": [],
+  "missing_or_breaks": [
+   "Only one of four classes (humanitarian) has governed flow rows; all 74 have evidence_class HUMANITARIAN_FINANCE_CONTEXT.",
+   "Development/project finance exist only as dated events in 14/31; FI finance class has no governed rows.",
+   "71 of 74 flows are fi_relevance_class HUMANITARIAN_CONTEXT_ONLY with candidate_route \"backend/context only\"; 3 are *_REVIEW."
+  ],
+  "inconsistencies": [
+   {
+    "field": "freshness_profile",
+    "contract_text": "2018–2030: reported history (staff report) / estimate and projections (supplement)",
+    "other_text": "own period \"event-level / 2026 context\"; 35 snapshot_date 2026-09-07 on all rows",
+    "other_location": "11_VISUAL_LIBRARY r22 period; 06 r77 period_en; 35 r6-79",
+    "severity": "MATERIAL"
+   },
+   {
+    "field": "evidence_strength",
+    "contract_text": "HIGH_MACRO",
+    "other_text": "35 evidence_class HUMANITARIAN_FINANCE_CONTEXT (74/74)",
+    "other_location": "35_OCHA_WB_CONTEXT r6-79 evidence_class",
+    "severity": "MATERIAL"
+   },
+   {
+    "field": "public route",
+    "contract_text": "[\"/reforms\"]",
+    "other_text": "candidate_route \"backend/context only\" (71 rows)",
+    "other_location": "35 r6-79 candidate_route",
+    "severity": "MATERIAL"
+   }
+  ],
+  "artefacts": [
+   "35 r19 description contains an embedded newline and tab (\"Cash Consortium of Yemen\\nFood Security\\tFood Security Safety Network …\"); 35 r79 description ends \"\\n----- FCDO\"."
+  ],
+  "notes": "freshness_profile/evidence_strength are byte-identical to VIS-REMITTANCE-MACRO r28 - copy error (the REFINE patch PB-0180 appears to have landed on the wrong row)."
+ },
+ {
+  "visual_id": "VIS-FIRM-CONSTRAINTS",
+  "readiness": "DRAWABLE_FROM_MASTER",
+  "master_row_11": 23,
+  "current_bindings": [
+   {
+    "sheet": "20_FIRM_FINANCE",
+    "rows": "31-46",
+    "ids": [
+     "FFO-2022-CH-01..16 (FFM-007)"
+    ]
+   },
+   {
+    "sheet": "34_EVIDENCE_PASSPORTS",
+    "rows": "9",
+    "ids": [
+     "EP-FIRM-2022"
+    ]
+   },
+   {
+    "sheet": "07_PUBLIC_CLAIMS",
+    "rows": "9",
+    "ids": [
+     "CLM-005"
+    ]
+   }
+  ],
+  "unresolved_legacy_inputs": [
+   "12_FIRM_FINANCE FFM-007 (-> 20_FIRM_FINANCE; FFM-007 resolves)"
+  ],
+  "plotted_values": [
+   {
+    "id": "FFO-2022-CH-01",
+    "sheet_row": "20_FIRM_FINANCE r31",
+    "period": "2022-09",
+    "value": 50,
+    "unit": "percent",
+    "label": "Business challenge: Electricity",
+    "flag": "NOT_STANDARD_ES_BIGGEST_OBSTACLE"
+   },
+   {
+    "id": "FFO-2022-CH-02",
+    "sheet_row": "20_FIRM_FINANCE r32",
+    "period": "2022-09",
+    "value": 46,
+    "unit": "percent",
+    "label": "Business challenge: Fuel shortages",
+    "flag": "NOT_STANDARD_ES_BIGGEST_OBSTACLE"
+   },
+   {
+    "id": "FFO-2022-CH-03",
+    "sheet_row": "20_FIRM_FINANCE r33",
+    "period": "2022-09",
+    "value": 32,
+    "unit": "percent",
+    "label": "Business challenge: Transport/road blockade",
+    "flag": "NOT_STANDARD_ES_BIGGEST_OBSTACLE"
+   },
+   {
+    "id": "FFO-2022-CH-04",
+    "sheet_row": "20_FIRM_FINANCE r34",
+    "period": "2022-09",
+    "value": 30,
+    "unit": "percent",
+    "label": "Business challenge: Tax administration/rates",
+    "flag": "NOT_STANDARD_ES_BIGGEST_OBSTACLE"
+   },
+   {
+    "id": "FFO-2022-CH-05",
+    "sheet_row": "20_FIRM_FINANCE r35",
+    "period": "2022-09",
+    "value": 27,
+    "unit": "percent",
+    "label": "Business challenge: Political instability",
+    "flag": "NOT_STANDARD_ES_BIGGEST_OBSTACLE"
+   },
+   {
+    "id": "FFO-2022-CH-06",
+    "sheet_row": "20_FIRM_FINANCE r36",
+    "period": "2022-09",
+    "value": 22,
+    "unit": "percent",
+    "label": "Business challenge: Access to finance",
+    "flag": "NOT_STANDARD_ES_BIGGEST_OBSTACLE"
+   },
+   {
+    "id": "FFO-2022-CH-07",
+    "sheet_row": "20_FIRM_FINANCE r37",
+    "period": "2022-09",
+    "value": 18,
+    "unit": "percent",
+    "label": "Business challenge: Siege",
+    "flag": "NOT_STANDARD_ES_BIGGEST_OBSTACLE"
+   },
+   {
+    "id": "FFO-2022-CH-08",
+    "sheet_row": "20_FIRM_FINANCE r38",
+    "period": "2022-09",
+    "value": 17,
+    "unit": "percent",
+    "label": "Business challenge: Informal competitor practices",
+    "flag": "NOT_STANDARD_ES_BIGGEST_OBSTACLE"
+   },
+   {
+    "id": "FFO-2022-CH-09",
+    "sheet_row": "20_FIRM_FINANCE r39",
+    "period": "2022-09",
+    "value": 15,
+    "unit": "percent",
+    "label": "Business challenge: Labor regulations",
+    "flag": "NOT_STANDARD_ES_BIGGEST_OBSTACLE"
+   },
+   {
+    "id": "FFO-2022-CH-10",
+    "sheet_row": "20_FIRM_FINANCE r40",
+    "period": "2022-09",
+    "value": 14,
+    "unit": "percent",
+    "label": "Business challenge: Customs/trade regulation",
+    "flag": "NOT_STANDARD_ES_BIGGEST_OBSTACLE"
+   },
+   {
+    "id": "FFO-2022-CH-11",
+    "sheet_row": "20_FIRM_FINANCE r41",
+    "period": "2022-09",
+    "value": 10,
+    "unit": "percent",
+    "label": "Business challenge: Corruption",
+    "flag": "NOT_STANDARD_ES_BIGGEST_OBSTACLE"
+   },
+   {
+    "id": "FFO-2022-CH-12",
+    "sheet_row": "20_FIRM_FINANCE r42",
+    "period": "2022-09",
+    "value": 7,
+    "unit": "percent",
+    "label": "Business challenge: Land",
+    "flag": "NOT_STANDARD_ES_BIGGEST_OBSTACLE"
+   },
+   {
+    "id": "FFO-2022-CH-13",
+    "sheet_row": "20_FIRM_FINANCE r43",
+    "period": "2022-09",
+    "value": 6,
+    "unit": "percent",
+    "label": "Business challenge: Business licensing",
+    "flag": "NOT_STANDARD_ES_BIGGEST_OBSTACLE"
+   },
+   {
+    "id": "FFO-2022-CH-14",
+    "sheet_row": "20_FIRM_FINANCE r44",
+    "period": "2022-09",
+    "value": 5,
+    "unit": "percent",
+    "label": "Business challenge: Inadequately educated workforce",
+    "flag": "NOT_STANDARD_ES_BIGGEST_OBSTACLE"
+   },
+   {
+    "id": "FFO-2022-CH-15",
+    "sheet_row": "20_FIRM_FINANCE r45",
+    "period": "2022-09",
+    "value": 1,
+    "unit": "percent",
+    "label": "Business challenge: Courts",
+    "flag": "NOT_STANDARD_ES_BIGGEST_OBSTACLE"
+   },
+   {
+    "id": "FFO-2022-CH-16",
+    "sheet_row": "20_FIRM_FINANCE r46",
+    "period": "2022-09",
+    "value": 0,
+    "unit": "percent",
+    "label": "Business challenge: Crime/theft/disorder",
+    "flag": "NOT_STANDARD_ES_BIGGEST_OBSTACLE"
+   }
+  ],
+  "missing_or_breaks": [
+   "Base (denominator_n) not held for FFM-007.",
+   "16 governed items; contract/summary show 8 (sum 242%); all 16 sum to 300%. No governed selection rule for which items to plot.",
+   "Questionnaire item wording is not a governed field (only metric_label)."
+  ],
+  "inconsistencies": [
+   {
+    "field": "freshness_profile",
+    "contract_text": "2025-Q3",
+    "other_text": "own period 2022; 20 period 2022-09; same-source contract VIS-FIRM-FINANCE-PATH freshness \"2022 custom survey\"",
+    "other_location": "11 r23 period; 20 r31-46 period; 11 r24 freshness_profile",
+    "severity": "MATERIAL"
+   },
+   {
+    "field": "evidence_strength",
+    "contract_text": "HIGH_QUOTE_BOUNDED",
+    "other_text": "(copied from VIS-REMITTANCE-COST r27); 34 EP-FIRM-2022 authority_class PRIMARY_SURVEY; 20 comparability NOT_STANDARD_ES_BIGGEST_OBSTACLE",
+    "other_location": "11 r27; 34 r9; 20 r31-46",
+    "severity": "MATERIAL"
+   }
+  ],
+  "artefacts": [],
+  "notes": ""
+ },
+ {
+  "visual_id": "VIS-FIRM-FINANCE-PATH",
+  "readiness": "DRAWABLE_FROM_MASTER",
+  "master_row_11": 24,
+  "current_bindings": [
+   {
+    "sheet": "20_FIRM_FINANCE",
+    "rows": "8, 11-14",
+    "ids": [
+     "FFO-2022-004",
+     "FFO-2022-LS-01..04"
+    ]
+   },
+   {
+    "sheet": "33_ANALYTICS_MASTER",
+    "rows": "22-24",
+    "ids": [
+     "DA-017",
+     "DA-018",
+     "DA-019"
+    ]
+   },
+   {
+    "sheet": "34_EVIDENCE_PASSPORTS",
+    "rows": "9",
+    "ids": [
+     "EP-FIRM-2022"
+    ]
+   }
+  ],
+  "unresolved_legacy_inputs": [
+   "12_FIRM_FINANCE loan-source rows (-> 20 r11-14)",
+   "DA-017..019 (-> 33 r22-24; resolve)"
+  ],
+  "plotted_values": [
+   {
+    "id": "FFO-2022-004",
+    "sheet_row": "20 r8",
+    "period": "2022-09",
+    "value": 31,
+    "unit": "count of 328 formal firms",
+    "flag": "NOT_DIRECT_WITH_2013"
+   },
+   {
+    "id": "FFO-2022-LS-01",
+    "sheet_row": "20 r11",
+    "period": "2022-09",
+    "value": 10,
+    "unit": "count of 18 valid responses",
+    "label": "Private commercial banks",
+    "flag": "CONDITIONAL_SMALL_N"
+   },
+   {
+    "id": "FFO-2022-LS-02",
+    "sheet_row": "20 r12",
+    "period": "2022-09",
+    "value": 1,
+    "unit": "count of 18 valid responses",
+    "label": "State-owned bank/government agency",
+    "flag": "CONDITIONAL_SMALL_N"
+   },
+   {
+    "id": "FFO-2022-LS-03",
+    "sheet_row": "20 r13",
+    "period": "2022-09",
+    "value": 5,
+    "unit": "count of 18 valid responses",
+    "label": "Non-bank financial institution / microfinance",
+    "flag": "CONDITIONAL_SMALL_N"
+   },
+   {
+    "id": "FFO-2022-LS-04",
+    "sheet_row": "20 r14",
+    "period": "2022-09",
+    "value": 2,
+    "unit": "count of 18 valid responses",
+    "label": "Other non-financial institution",
+    "flag": "CONDITIONAL_SMALL_N"
+   },
+   {
+    "id": "DA-017",
+    "sheet_row": "33 r22",
+    "period": "2022",
+    "value": 0.09451219512195122,
+    "unit": "fraction labelled \"percent\" (31/328)",
+    "flag": "DERIVED"
+   },
+   {
+    "id": "DA-018",
+    "sheet_row": "33 r23",
+    "period": "2022",
+    "value": 0.5555555555555556,
+    "unit": "fraction (10/18)",
+    "flag": "DERIVED, n=18"
+   },
+   {
+    "id": "DA-019",
+    "sheet_row": "33 r24",
+    "period": "2022",
+    "value": 0.2777777777777778,
+    "unit": "fraction (5/18)",
+    "flag": "DERIVED, n=18"
+   }
+  ],
+  "missing_or_breaks": [
+   "Master does not state whether the 18 valid responses are a subset of the 31 line-of-credit firms."
+  ],
+  "inconsistencies": [
+   {
+    "field": "DA unit",
+    "contract_text": "denominators printed at every stage",
+    "other_text": "DA-017..019 stored as fractions with unit \"percent\"",
+    "other_location": "33 r22-24",
+    "severity": "EDITORIAL"
+   }
+  ],
+  "artefacts": [],
+  "notes": "10+1+5+2 = 18 (reconciles)."
+ },
+ {
+  "visual_id": "VIS-FIRM-FINANCE-SEVERITY",
+  "readiness": "DRAWABLE_FROM_MASTER",
+  "master_row_11": 25,
+  "current_bindings": [
+   {
+    "sheet": "20_FIRM_FINANCE",
+    "rows": "27-30",
+    "ids": [
+     "FFO-2022-AFO-01..04 (FFM-006)"
+    ]
+   },
+   {
+    "sheet": "33_ANALYTICS_MASTER",
+    "rows": "25",
+    "ids": [
+     "DA-020"
+    ]
+   },
+   {
+    "sheet": "07_PUBLIC_CLAIMS",
+    "rows": "10",
+    "ids": [
+     "CLM-006"
+    ]
+   },
+   {
+    "sheet": "34_EVIDENCE_PASSPORTS",
+    "rows": "9",
+    "ids": [
+     "EP-FIRM-2022"
+    ]
+   }
+  ],
+  "unresolved_legacy_inputs": [
+   "12_FIRM_FINANCE FFM-006 (-> 20; resolves)",
+   "DA-020 (-> 33 r25; resolves)"
+  ],
+  "plotted_values": [
+   {
+    "id": "FFO-2022-AFO-01",
+    "sheet_row": "20 r27",
+    "period": "2022-09",
+    "value": 68.71,
+    "unit": "percent",
+    "label": "Major obstacle",
+    "flag": "REPORT_SPECIFIC_CONDITIONAL"
+   },
+   {
+    "id": "FFO-2022-AFO-02",
+    "sheet_row": "20 r28",
+    "period": "2022-09",
+    "value": 23.13,
+    "unit": "percent",
+    "label": "Moderate obstacle",
+    "flag": "REPORT_SPECIFIC_CONDITIONAL"
+   },
+   {
+    "id": "FFO-2022-AFO-03",
+    "sheet_row": "20 r29",
+    "period": "2022-09",
+    "value": 3.4,
+    "unit": "percent",
+    "label": "Minor obstacle",
+    "flag": "REPORT_SPECIFIC_CONDITIONAL"
+   },
+   {
+    "id": "FFO-2022-AFO-04",
+    "sheet_row": "20 r30",
+    "period": "2022-09",
+    "value": 4.76,
+    "unit": "percent",
+    "label": "Not at all",
+    "flag": "REPORT_SPECIFIC_CONDITIONAL"
+   },
+   {
+    "id": "DA-020",
+    "sheet_row": "33 r25",
+    "period": "2022",
+    "value": 0.9183999999999999,
+    "unit": "fraction labelled \"percent\" (=91.84%)",
+    "flag": "DERIVED"
+   }
+  ],
+  "missing_or_breaks": [
+   "denominator_n not held; the encoding \"denominator ... adjacent to percentages\" can only show the filter definition, not n."
+  ],
+  "inconsistencies": [
+   {
+    "field": "evidence_strength",
+    "contract_text": "HIGH_BUT_COVERAGE_LIMITED",
+    "other_text": "(copied from VIS-FINDEX-GAPS r10); 34 r9 authority_class PRIMARY_SURVEY; 20 comparability REPORT_SPECIFIC_CONDITIONAL",
+    "other_location": "11 r10; 34 r9; 20 r27-30",
+    "severity": "MATERIAL"
+   },
+   {
+    "field": "freshness_profile",
+    "contract_text": "2022 observation; wave/fieldwork caveats explicit",
+    "other_text": "(copied from VIS-FINDEX-GAPS); same-source VIS-FIRM-FINANCE-PATH freshness \"2022 custom survey\"; 20 period 2022-09",
+    "other_location": "11 r10, r24",
+    "severity": "MATERIAL"
+   },
+   {
+    "field": "denominator_universe",
+    "contract_text": "filtered firms needing/assessing finance in the source tabulation",
+    "other_text": "accessible_summary: \"the report's finance-obstacle tabulation, which excludes firms that said they did not need a loan\" (the PB-0583 wording was not propagated to this field)",
+    "other_location": "11 r25 accessible_summary_en; 20 r27 caveat",
+    "severity": "EDITORIAL"
+   }
+  ],
+  "artefacts": [],
+  "notes": "68.71+23.13+3.4+4.76 = 100.00; 68.71+23.13 = 91.84 (reconciles)."
+ },
+ {
+  "visual_id": "VIS-PAYMENT-RAILS",
+  "readiness": "STATE_ONLY",
+  "master_row_11": 26,
+  "current_bindings": [
+   {
+    "sheet": "31_REFORMS_REGULATION",
+    "rows": "6-12,14,16-21,25,26,85,89",
+    "ids": [
+     "REF-PAY-001..013",
+     "REF-EMONEY-002",
+     "REF-FMIIP-APPROVAL-2025",
+     "REF-FMIIP-ISR2-2026",
+     "FMIIP-RF-006",
+     "FMIIP-RF-010"
+    ]
+   },
+   {
+    "sheet": "22_PROVIDERS_DATA",
+    "rows": "126-129",
+    "ids": [
+     "PAYCUR-003..006"
+    ]
+   },
+   {
+    "sheet": "14_SYSTEM_CHRONOLOGY",
+    "rows": "23",
+    "ids": [
+     "YSC-018"
+    ]
+   },
+   {
+    "sheet": "32_QUAL_LITERATURE",
+    "rows": "106,110",
+    "ids": [
+     "PA-CBY-PAY-001",
+     "PA-CBY-PAY-002"
+    ]
+   },
+   {
+    "sheet": "34_EVIDENCE_PASSPORTS",
+    "rows": "20",
+    "ids": [
+     "EP-CBY-PAY-INSTITUTIONAL-2026"
+    ]
+   },
+   {
+    "sheet": "07_PUBLIC_CLAIMS",
+    "rows": "22",
+    "ids": [
+     "CLM-018"
+    ]
+   }
+  ],
+  "unresolved_legacy_inputs": [
+   "48_REFORM_EVENTS (-> 31 r4-26)",
+   "\"FMIIP source\" (-> 31 r78-103; 15 SRC-WB-FMIIP-P180708 r148)",
+   "\"CBY regulatory/events\" (-> 31, 22 PAYCUR, 32 PA-CBY-PAY-*)",
+   "REF-PAY-001 locator has no source record (06 r79 \"UNBOUND:REF-PAY-001\")"
+  ],
+  "plotted_values": [
+   {
+    "id": "REF-PAY-001",
+    "sheet_row": "31 r6",
+    "period": "2024-06-26",
+    "value": "Unified domestic transfer network",
+    "unit": "state",
+    "flag": "NETWORK_RULE"
+   },
+   {
+    "id": "REF-PAY-002",
+    "sheet_row": "31 r7",
+    "period": "2025-07",
+    "value": "FMIIP starts",
+    "unit": "state",
+    "flag": "PROJECT_START"
+   },
+   {
+    "id": "REF-PAY-003",
+    "sheet_row": "31 r8",
+    "period": "2025-07",
+    "value": "Fast Payment System",
+    "unit": "state",
+    "flag": "PAYMENT_RAIL_COMPONENT"
+   },
+   {
+    "id": "REF-PAY-004",
+    "sheet_row": "31 r9",
+    "period": "2025-07",
+    "value": "RTGS + CBY core banking",
+    "unit": "state",
+    "flag": "PAYMENT_RAIL_COMPONENT"
+   },
+   {
+    "id": "REF-PAY-005",
+    "sheet_row": "31 r10",
+    "period": "2025-07",
+    "value": "Access-point database and usage support",
+    "unit": "state",
+    "flag": "ACCESS_USAGE_COMPONENT"
+   },
+   {
+    "id": "REF-PAY-006",
+    "sheet_row": "31 r11",
+    "period": "2026-06-17",
+    "value": "Unified network as main transfer channel",
+    "unit": "state",
+    "flag": "NETWORK_INTEGRATION"
+   },
+   {
+    "id": "REF-PAY-007",
+    "sheet_row": "31 r12",
+    "period": "2026-08-04",
+    "value": "Yemeni Payments and Clearing Company board begins work",
+    "unit": "state",
+    "flag": "PAYMENTS_GOVERNANCE"
+   },
+   {
+    "id": "REF-PAY-008",
+    "sheet_row": "31 r14",
+    "period": "2026-03-29",
+    "value": "National QR + e-wallet interconnection + FPS operator participation",
+    "unit": "state",
+    "flag": "PAYMENTS_ARCHITECTURE_DECISION"
+   },
+   {
+    "id": "REF-EMONEY-002",
+    "sheet_row": "31 r16",
+    "period": "2025-07-09",
+    "value": "Decision No. 4 — mobile e-money amendment",
+    "unit": "state",
+    "flag": "MOBILE_E_MONEY_AMENDMENT"
+   },
+   {
+    "id": "REF-PAY-009",
+    "sheet_row": "31 r17",
+    "period": "2026-01-22",
+    "value": "Digital-payment exhibition and unified-network activity signal",
+    "unit": "state",
+    "flag": "NETWORK_ACTIVITY_SIGNAL"
+   },
+   {
+    "id": "REF-PAY-010",
+    "sheet_row": "31 r18",
+    "period": "2026-06-17",
+    "value": "Unified network integration with banks and financial-service providers",
+    "unit": "state",
+    "flag": "UNIFIED_NETWORK"
+   },
+   {
+    "id": "REF-PAY-011",
+    "sheet_row": "31 r19",
+    "period": "2026-07-27",
+    "value": "Restructuring, capital increase and broader bank shareholder base",
+    "unit": "state",
+    "flag": "UNIFIED_NETWORK_COMPANY"
+   },
+   {
+    "id": "REF-PAY-012",
+    "sheet_row": "31 r20",
+    "period": "2026-08-03",
+    "value": "Founding assembly of Yemen Payments and Clearing Company",
+    "unit": "state",
+    "flag": "YPCC"
+   },
+   {
+    "id": "REF-PAY-013",
+    "sheet_row": "31 r21",
+    "period": "2026-08-04",
+    "value": "First YPCC board meeting",
+    "unit": "state",
+    "flag": "YPCC"
+   },
+   {
+    "id": "REF-FMIIP-APPROVAL-2025",
+    "sheet_row": "31 r25",
+    "period": "2025-06-17",
+    "value": "FMIIP approved",
+    "unit": "state",
+    "flag": "PROJECT_APPROVAL"
+   },
+   {
+    "id": "REF-FMIIP-ISR2-2026",
+    "sheet_row": "31 r26",
+    "period": "2026-04-08",
+    "value": "FMIIP ISR sequence 2 disclosed",
+    "unit": "state",
+    "flag": "PROJECT_IMPLEMENTATION_REPORT"
+   },
+   {
+    "id": "FMIIP-RF-006",
+    "sheet_row": "31 r85",
+    "period": "Jan-2025 / Jun-2030",
+    "value": "No → Yes (FPS operational)",
+    "unit": "yes/no",
+    "flag": "target; go-live not observed"
+   },
+   {
+    "id": "FMIIP-RF-010",
+    "sheet_row": "31 r89",
+    "period": "Jan-2025 / Jun-2030",
+    "value": "No → Yes (RTGS operational)",
+    "unit": "yes/no",
+    "flag": "target; go-live not observed"
+   }
+  ],
+  "missing_or_breaks": [
+   "Go-live state: no observed event (FPS/RTGS baseline \"No\").",
+   "Usage state: only an attributed statement (REF-PAY-009 \">YER 251bn passed through the unified network in 2024\") and POS series; no rail-level usage."
+  ],
+  "inconsistencies": [
+   {
+    "field": "event rows (duplicates)",
+    "contract_text": "one node per state",
+    "other_text": "REF-PAY-006 and REF-PAY-010 are the same 2026-06-17 event (both cby-ye.com/news/946, classes NETWORK_INTEGRATION vs UNIFIED_NETWORK); REF-PAY-007 and REF-PAY-013 are the same 2026-08-04 first YPCC board meeting (both news/962, classes PAYMENTS_GOVERNANCE vs YPCC)",
+    "other_location": "31_REFORMS_REGULATION r11 & r18; r12 & r21",
+    "severity": "MATERIAL"
+   },
+   {
+    "field": "state vocabulary",
+    "contract_text": "regulation / project / integration / institution / go-live / usage",
+    "other_text": "Q-008: REGULATION → PROJECT → DECISION → INTEGRATION → INSTITUTION → ACTIVITY → USAGE/OUTCOME_GAP; RV-CWR-009: rule/programme → implementation → operation → access → use → quality → outcome",
+    "other_location": "33 r171; 11 r39",
+    "severity": "EDITORIAL"
+   },
+   {
+    "field": "evidence_strength",
+    "contract_text": "HIGH_MULTI_SOURCE_STATEFUL",
+    "other_text": "lineage_state BOUND_PARTIAL",
+    "other_location": "06_EVIDENCE_OBJECTS r79",
+    "severity": "EDITORIAL"
+   }
+  ],
+  "artefacts": [],
+  "notes": "Signature candidate. Drawable as a state timeline after the two duplicate events are merged."
+ },
+ {
+  "visual_id": "VIS-REMITTANCE-COST",
+  "readiness": "DRAWABLE_FROM_MASTER",
+  "master_row_11": 27,
+  "current_bindings": [
+   {
+    "sheet": "23_REMITTANCES",
+    "rows": "18-21",
+    "ids": [
+     "RMO-RPW-SA-2025Q3-200",
+     "RMO-RPW-SA-2025Q3-500",
+     "RMO-RPW-UAE-2025Q3-200",
+     "RMO-RPW-UAE-2025Q3-500"
+    ]
+   },
+   {
+    "sheet": "33_ANALYTICS_MASTER",
+    "rows": "15-18",
+    "ids": [
+     "DA-010..DA-013"
+    ]
+   },
+   {
+    "sheet": "34_EVIDENCE_PASSPORTS",
+    "rows": "51",
+    "ids": [
+     "EP-WB-RPW-KSA-YEM-K04"
+    ]
+   }
+  ],
+  "unresolved_legacy_inputs": [
+   "17_REMITTANCES RPW corridor quotes (-> 23 r18-21)",
+   "DA-010..013 (-> 33 r15-18; resolve)"
+  ],
+  "plotted_values": [
+   {
+    "id": "RMO-RPW-SA-2025Q3-200",
+    "sheet_row": "23 r18",
+    "period": "2025-Q3",
+    "value": 2.7,
+    "unit": "percent of send amount; send US$200; Saudi Arabia→Yemen",
+    "flag": "AMOUNT_SPECIFIC__DO_NOT_COLLAPSE"
+   },
+   {
+    "id": "RMO-RPW-SA-2025Q3-500",
+    "sheet_row": "23 r19",
+    "period": "2025-Q3",
+    "value": 1.26,
+    "unit": "percent of send amount; send US$500; Saudi Arabia→Yemen",
+    "flag": "AMOUNT_SPECIFIC__DO_NOT_COLLAPSE"
+   },
+   {
+    "id": "RMO-RPW-UAE-2025Q3-200",
+    "sheet_row": "23 r20",
+    "period": "2025-Q3",
+    "value": 7.53,
+    "unit": "percent of send amount; send US$200; United Arab Emirates→Yemen",
+    "flag": "AMOUNT_SPECIFIC__DO_NOT_COLLAPSE"
+   },
+   {
+    "id": "RMO-RPW-UAE-2025Q3-500",
+    "sheet_row": "23 r21",
+    "period": "2025-Q3",
+    "value": 5.62,
+    "unit": "percent of send amount; send US$500; United Arab Emirates→Yemen",
+    "flag": "AMOUNT_SPECIFIC__DO_NOT_COLLAPSE"
+   },
+   {
+    "id": "DA-010",
+    "sheet_row": "33 r15",
+    "period": "2025-Q3",
+    "value": 1.44,
+    "unit": "pp (SA $200−$500)",
+    "flag": "DERIVED"
+   },
+   {
+    "id": "DA-011",
+    "sheet_row": "33 r16",
+    "period": "2025-Q3",
+    "value": 1.91,
+    "unit": "pp (UAE $200−$500)",
+    "flag": "DERIVED"
+   },
+   {
+    "id": "DA-012",
+    "sheet_row": "33 r17",
+    "period": "2025-Q3",
+    "value": 4.83,
+    "unit": "pp (UAE−SA at $200)",
+    "flag": "DERIVED"
+   },
+   {
+    "id": "DA-013",
+    "sheet_row": "33 r18",
+    "period": "2025-Q3",
+    "value": 4.36,
+    "unit": "pp (UAE−SA at $500)",
+    "flag": "DERIVED"
+   }
+  ],
+  "missing_or_breaks": [
+   "Provider/quote counts not held (\"where available\" = not available).",
+   "Passport exists only for Saudi corridor at USD200 (34 r51); no passport for UAE corridor or USD500."
+  ],
+  "inconsistencies": [],
+  "artefacts": [],
+  "notes": "All four derivations reconcile."
+ },
+ {
+  "visual_id": "VIS-REMITTANCE-MACRO",
+  "readiness": "DRAWABLE_FROM_MASTER",
+  "master_row_11": 28,
+  "current_bindings": [
+   {
+    "sheet": "23_REMITTANCES",
+    "rows": "5-17",
+    "ids": [
+     "RMO-IMF-2018-HIST..RMO-IMF-2024-HIST",
+     "RMO-IMF-2025-REV",
+     "RMO-IMF-2026-REV..RMO-IMF-2030-REV"
+    ]
+   },
+   {
+    "sheet": "33_ANALYTICS_MASTER",
+    "rows": "13,14",
+    "ids": [
+     "DA-008",
+     "DA-009"
+    ]
+   },
+   {
+    "sheet": "34_EVIDENCE_PASSPORTS",
+    "rows": "8",
+    "ids": [
+     "EP-REMITTANCE-MACRO"
+    ]
+   },
+   {
+    "sheet": "07_PUBLIC_CLAIMS",
+    "rows": "11",
+    "ids": [
+     "CLM-007"
+    ]
+   },
+   {
+    "sheet": "15_SOURCE_LIBRARY",
+    "rows": "34,35",
+    "ids": [
+     "SRC-IMF-AIV-2025-STAFF-001",
+     "SRC-IMF-AIV-2025-SUPP-001"
+    ]
+   }
+  ],
+  "unresolved_legacy_inputs": [
+   "17_REMITTANCES IMF series (-> 23 r5-17)",
+   "DA-008/009 (-> 33 r13-14; resolve)"
+  ],
+  "plotted_values": [
+   {
+    "id": "RMO-IMF-2018-HIST",
+    "sheet_row": "23 r5",
+    "period": "2018",
+    "value": 1329.2,
+    "unit": "USD million",
+    "flag": "HISTORICAL_REPORTED | SRC-IMF-AIV-2025-STAFF-001 | 2025_ARTICLE_IV_STAFF_REPORT"
+   },
+   {
+    "id": "RMO-IMF-2019-HIST",
+    "sheet_row": "23 r6",
+    "period": "2019",
+    "value": 1408.4,
+    "unit": "USD million",
+    "flag": "HISTORICAL_REPORTED | SRC-IMF-AIV-2025-STAFF-001 | 2025_ARTICLE_IV_STAFF_REPORT"
+   },
+   {
+    "id": "RMO-IMF-2020-HIST",
+    "sheet_row": "23 r7",
+    "period": "2020",
+    "value": 1491.1,
+    "unit": "USD million",
+    "flag": "HISTORICAL_REPORTED | SRC-IMF-AIV-2025-STAFF-001 | 2025_ARTICLE_IV_STAFF_REPORT"
+   },
+   {
+    "id": "RMO-IMF-2021-HIST",
+    "sheet_row": "23 r8",
+    "period": "2021",
+    "value": 1577.7,
+    "unit": "USD million",
+    "flag": "HISTORICAL_REPORTED | SRC-IMF-AIV-2025-STAFF-001 | 2025_ARTICLE_IV_STAFF_REPORT"
+   },
+   {
+    "id": "RMO-IMF-2022-HIST",
+    "sheet_row": "23 r9",
+    "period": "2022",
+    "value": 1668.2,
+    "unit": "USD million",
+    "flag": "HISTORICAL_REPORTED | SRC-IMF-AIV-2025-STAFF-001 | 2025_ARTICLE_IV_STAFF_REPORT"
+   },
+   {
+    "id": "RMO-IMF-2023-HIST",
+    "sheet_row": "23 r10",
+    "period": "2023",
+    "value": 1762.8,
+    "unit": "USD million",
+    "flag": "HISTORICAL_REPORTED | SRC-IMF-AIV-2025-STAFF-001 | 2025_ARTICLE_IV_STAFF_REPORT"
+   },
+   {
+    "id": "RMO-IMF-2024-HIST",
+    "sheet_row": "23 r11",
+    "period": "2024",
+    "value": 1861.7,
+    "unit": "USD million",
+    "flag": "HISTORICAL_REPORTED | SRC-IMF-AIV-2025-STAFF-001 | 2025_ARTICLE_IV_STAFF_REPORT"
+   },
+   {
+    "id": "RMO-IMF-2025-REV",
+    "sheet_row": "23 r12",
+    "period": "2025",
+    "value": 1977,
+    "unit": "USD million",
+    "flag": "ESTIMATE | SRC-IMF-AIV-2025-SUPP-001 | 2025_ARTICLE_IV_SUPPLEMENTARY_REVISION"
+   },
+   {
+    "id": "RMO-IMF-2026-REV",
+    "sheet_row": "23 r13",
+    "period": "2026",
+    "value": 2159,
+    "unit": "USD million",
+    "flag": "PROJECTION | SRC-IMF-AIV-2025-SUPP-001 | 2025_ARTICLE_IV_SUPPLEMENTARY_REVISION"
+   },
+   {
+    "id": "RMO-IMF-2027-REV",
+    "sheet_row": "23 r14",
+    "period": "2027",
+    "value": 2364,
+    "unit": "USD million",
+    "flag": "PROJECTION | SRC-IMF-AIV-2025-SUPP-001 | 2025_ARTICLE_IV_SUPPLEMENTARY_REVISION"
+   },
+   {
+    "id": "RMO-IMF-2028-REV",
+    "sheet_row": "23 r15",
+    "period": "2028",
+    "value": 2591,
+    "unit": "USD million",
+    "flag": "PROJECTION | SRC-IMF-AIV-2025-SUPP-001 | 2025_ARTICLE_IV_SUPPLEMENTARY_REVISION"
+   },
+   {
+    "id": "RMO-IMF-2029-REV",
+    "sheet_row": "23 r16",
+    "period": "2029",
+    "value": 2840,
+    "unit": "USD million",
+    "flag": "PROJECTION | SRC-IMF-AIV-2025-SUPP-001 | 2025_ARTICLE_IV_SUPPLEMENTARY_REVISION"
+   },
+   {
+    "id": "RMO-IMF-2030-REV",
+    "sheet_row": "23 r17",
+    "period": "2030",
+    "value": 3110,
+    "unit": "USD million",
+    "flag": "PROJECTION | SRC-IMF-AIV-2025-SUPP-001 | 2025_ARTICLE_IV_SUPPLEMENTARY_REVISION"
+   }
+  ],
+  "missing_or_breaks": [
+   "Document break between 2024 (staff report, HISTORICAL_REPORTED) and 2025 (supplement, ESTIMATE); 2026-2030 PROJECTION.",
+   "The earlier staff-report forecast for 2025-2030 (\"versioned predecessor\" per 23 caveat r12-17) is not held, so only one forecast vintage can be drawn."
+  ],
+  "inconsistencies": [
+   {
+    "field": "passport reference_period / display_requirements",
+    "contract_text": "IMF-reported history (staff calculations); line breaks at the 2024→2025 change of document",
+    "other_text": "\"Observed 2018–2024; estimate 2025; projection 2026–2030\"; \"Observed and forecast states must be visually separate.\"",
+    "other_location": "34_EVIDENCE_PASSPORTS r8",
+    "severity": "MATERIAL"
+   },
+   {
+    "field": "DA-009 interpretation",
+    "contract_text": "reported history",
+    "other_text": "\"Compound annual growth rate across the observed 2018–2024 macro series.\"",
+    "other_location": "33_ANALYTICS_MASTER r14 interpretation_en",
+    "severity": "EDITORIAL"
+   },
+   {
+    "field": "06 currentness_en",
+    "contract_text": "history ≤2024; estimate 2025; projections 2026–2030",
+    "other_text": "\"Currentness is bounded to 2018–2030.\"",
+    "other_location": "06_EVIDENCE_OBJECTS r71 currentness_en",
+    "severity": "MATERIAL"
+   }
+  ],
+  "artefacts": [],
+  "notes": "Signature candidate. 1861.7/1329.2−1 = 40.06% (DA-008) and CAGR 5.78% (DA-009) reconcile."
+ },
+ {
+  "visual_id": "VIS-ACCESS-EVIDENCE-LAYER",
+  "readiness": "PARTIAL",
+  "master_row_11": 29,
+  "current_bindings": [
+   {
+    "sheet": "19_PAYMENTS_DATA",
+    "rows": "36,39,50-54",
+    "ids": [
+     "OBS-00032 (ATMs 914)",
+     "OBS-00035 (POS 791)",
+     "OBS-00046..00050 (ATM concentration IND-0026..0030)"
+    ]
+   },
+   {
+    "sheet": "31_REFORMS_REGULATION",
+    "rows": "83,96",
+    "ids": [
+     "FMIIP-RF-004 (817→1,021)",
+     "FMIIP-RF-017 (65→71 agents)"
+    ]
+   },
+   {
+    "sheet": "07_PUBLIC_CLAIMS",
+    "rows": "55",
+    "ids": [
+     "CLM-052 (IBS 93.8% urban, 2016-2019)"
+    ]
+   },
+   {
+    "sheet": "10_MEASUREMENT_AGENDA",
+    "rows": "9",
+    "ids": [
+     "MA-005"
+    ]
+   },
+   {
+    "sheet": "22_PROVIDERS_DATA",
+    "rows": "5-30",
+    "ids": [
+     "PRV-BANK-* listed_address (list addresses; prohibited as operating points)"
+    ]
+   }
+  ],
+  "unresolved_legacy_inputs": [
+   "\"Provider/status objects\" (-> 22)",
+   "\"payment-infrastructure totals\" (-> 19 r35-54)",
+   "\"historical provider concentration\" (-> CLM-052 text; IBS table not held)",
+   "\"future national access-point register\" (does not exist - MA-005 open)"
+  ],
+  "plotted_values": [],
+  "missing_or_breaks": [
+   "Point layer has zero governed rows (no access-point register).",
+   "ATM concentration shares cover 5 governorates (35/20/13/11/4 = 83%), state UNKNOWN, caveat \"Verify denominator\".",
+   "No 06 evidence object and no /evidence/VIS-ACCESS-EVIDENCE-LAYER/ page."
+  ],
+  "inconsistencies": [
+   {
+    "field": "evidence record",
+    "contract_text": "governed contract",
+    "other_text": "no 06_EVIDENCE_OBJECTS row (audit/VISUAL_CONTRACT_CLOSURE.md claims every contract reaches its own /evidence/VIS-*/ page)",
+    "other_location": "06_EVIDENCE_OBJECTS (absent); 03_PAGE_SECTIONS (absent)",
+    "severity": "MATERIAL"
+   }
+  ],
+  "artefacts": [
+   "freshness_profile holds the token \"OBJECT_SPECIFIC\" in a display field."
+  ],
+  "notes": ""
+ },
+ {
+  "visual_id": "VIS-MFI-DIVERGENCE",
+  "readiness": "DRAWABLE_FROM_MASTER",
+  "master_row_11": 30,
+  "current_bindings": [
+   {
+    "sheet": "21_MFI_DATA",
+    "rows": "99,105,108",
+    "ids": [
+     "SRC-SFD-Q4-2015-001",
+     "SRC-SFD-Q4-2020-001",
+     "SRC-SANAA-MFB-2024"
+    ]
+   },
+   {
+    "sheet": "21_MFI_DATA",
+    "rows": "106,121,126,129",
+    "ids": [
+     "2021-Feb pointer",
+     "coverage 2015/2020/2023"
+    ]
+   },
+   {
+    "sheet": "07_PUBLIC_CLAIMS",
+    "rows": "25,56,57,60,61",
+    "ids": [
+     "CLM-021",
+     "CLM-053",
+     "CLM-054",
+     "CLM-057",
+     "CLM-058"
+    ]
+   },
+   {
+    "sheet": "33_ANALYTICS_MASTER",
+    "rows": "118,145-147",
+    "ids": [
+     "CTR-011",
+     "CON-057",
+     "CON-058",
+     "CON-059"
+    ]
+   },
+   {
+    "sheet": "34_EVIDENCE_PASSPORTS",
+    "rows": "23,55-57",
+    "ids": [
+     "EP-SFD-MFI-RUPTURE-2015",
+     "EP-MFB-BORROWERS-2023-K04",
+     "EP-MFB-SAVERS-2023-K04",
+     "EP-MFB-PORTFOLIO-2023-K04"
+    ]
+   },
+   {
+    "sheet": "18_CBY_MONETARY",
+    "rows": "625,661",
+    "ids": [
+     "OBS-CBY-00621 (792.69)",
+     "OBS-CBY-00657 (1,529.4)"
+    ]
+   }
+  ],
+  "unresolved_legacy_inputs": [
+   "CLM-021/053/054/057/058 resolve (07)",
+   "spine has no row-level observation IDs: bind by 21 row + source_id"
+  ],
+  "plotted_values": [
+   {
+    "id": "21 spine r99 (SRC-SFD-Q4-2015-001)",
+    "period": "end-2015 (2015-12-31)",
+    "value": 93118,
+    "unit": "Borrowers",
+    "flag": "VERIFIED"
+   },
+   {
+    "id": "21 spine r99 (SRC-SFD-Q4-2015-001)",
+    "period": "end-2015 (2015-12-31)",
+    "value": 509590,
+    "unit": "Savers",
+    "flag": "VERIFIED"
+   },
+   {
+    "id": "21 spine r99 (SRC-SFD-Q4-2015-001)",
+    "period": "end-2015 (2015-12-31)",
+    "value": 6741,
+    "unit": "Portfolio YER m",
+    "flag": "CONTRADICTION"
+   },
+   {
+    "id": "21 spine r105 (SRC-SFD-Q4-2020-001)",
+    "period": "end-2020 (2020-12-31)",
+    "value": 88445,
+    "unit": "Borrowers",
+    "flag": "VERIFIED"
+   },
+   {
+    "id": "21 spine r105 (SRC-SFD-Q4-2020-001)",
+    "period": "end-2020 (2020-12-31)",
+    "value": 1611206,
+    "unit": "Savers",
+    "flag": "VERIFIED_DEFINITION_QA"
+   },
+   {
+    "id": "21 spine r105 (SRC-SFD-Q4-2020-001)",
+    "period": "end-2020 (2020-12-31)",
+    "value": 33379,
+    "unit": "Portfolio YER m",
+    "flag": "VERIFIED"
+   },
+   {
+    "id": "21 spine r108 (SRC-SANAA-MFB-2024)",
+    "period": "end-2023 (2023-12-31)",
+    "value": 78686,
+    "unit": "Borrowers",
+    "flag": "SECONDARY_BOUNDED"
+   },
+   {
+    "id": "21 spine r108 (SRC-SANAA-MFB-2024)",
+    "period": "end-2023 (2023-12-31)",
+    "value": 3300000,
+    "unit": "Savers",
+    "flag": "SECONDARY_BOUNDED_DEFINITION_OPEN"
+   },
+   {
+    "id": "21 spine r108 (SRC-SANAA-MFB-2024)",
+    "period": "end-2023 (2023-12-31)",
+    "value": 44000,
+    "unit": "Portfolio YER m",
+    "flag": "SECONDARY_BOUNDED_NOMINAL"
+   },
+   {
+    "id": "CLM-057 / CON-058",
+    "period": "2023-06",
+    "value": "~80,800",
+    "unit": "active borrowers",
+    "flag": "text only - no data row"
+   },
+   {
+    "id": "CLM-058",
+    "period": "through 2021",
+    "value": "80,000–90,000 (range, context)",
+    "unit": "active borrowers",
+    "flag": "text only - contextual finding"
+   }
+  ],
+  "missing_or_breaks": [
+   "2015 portfolio anchor is CONTRADICTION (table 6,741 vs narrative \"nearly YER 9bn\", CTR-011) - not mentioned in the contract.",
+   "2023 values are T2 secondary; saver definition open; portfolio \"about/exceeding\" (34 r57).",
+   "June-2023 point exists only as claim text."
+  ],
+  "inconsistencies": [
+   {
+    "field": "decision_value_en / title_en",
+    "contract_text": "\"Borrowers, savers and nominal portfolio are not moving as one series\"; \"the available evidence points to different movement\"",
+    "other_text": "LEAD-B01 disposition \"anchors, not divergence\"; RV-CWR-006 decision_value \"without manufacturing a trend or a divergence\"",
+    "other_location": "11 r36 decision_value_en; audit/VISUAL_CONTRACT_CLOSURE.md #8",
+    "severity": "MATERIAL"
+   },
+   {
+    "field": "encoding_contract",
+    "contract_text": "Each lane shows only its valid source anchors",
+    "other_text": "2015 portfolio state = CONTRADICTION; 2015 savers 509,590 VERIFIED but absent from summary",
+    "other_location": "21_MFI_DATA r99 Portfolio state",
+    "severity": "MATERIAL"
+   },
+   {
+    "field": "evidence record",
+    "contract_text": "governed contract",
+    "other_text": "no 06 object / no /evidence page",
+    "other_location": "06 (absent)",
+    "severity": "MATERIAL"
+   },
+   {
+    "field": "duplication",
+    "contract_text": "VIS-MFI-DIVERGENCE",
+    "other_text": "RV-CWR-006 plots the same anchors for the same reading (08 CWR-006 binds both)",
+    "other_location": "11 r36; 08_READINGS r10 visual_bindings",
+    "severity": "MATERIAL"
+   }
+  ],
+  "artefacts": [],
+  "notes": ""
+ },
+ {
+  "visual_id": "RV-CWR-001",
+  "readiness": "PARTIAL",
+  "master_row_11": 31,
+  "current_bindings": [
+   {
+    "sheet": "07_PUBLIC_CLAIMS",
+    "rows": "36,40,41",
+    "ids": [
+     "CLM-032",
+     "CLM-036",
+     "CLM-037"
+    ]
+   },
+   {
+    "sheet": "14_SYSTEM_CHRONOLOGY",
+    "rows": "18",
+    "ids": [
+     "YSC-013 (6,245 vs 3,422.16, no unit)"
+    ]
+   },
+   {
+    "sheet": "23_REMITTANCES",
+    "rows": "8-11",
+    "ids": [
+     "RMO-IMF-2021-HIST..RMO-IMF-2024-HIST"
+    ]
+   },
+   {
+    "sheet": "33_ANALYTICS_MASTER",
+    "rows": "129,131",
+    "ids": [
+     "CON-041",
+     "CON-043"
+    ]
+   },
+   {
+    "sheet": "34_EVIDENCE_PASSPORTS",
+    "rows": "39,41",
+    "ids": [
+     "EP-CBY-REMITTANCE-VINTAGE-K04",
+     "EP-IMF-CBY-REMIT-METHOD-K04"
+    ]
+   },
+   {
+    "sheet": "15_SOURCE_LIBRARY",
+    "rows": "107,108",
+    "ids": [
+     "SRC-CBY-AR2025-BOP",
+     "SRC-CBY-AR2024-BOP"
+    ]
+   }
+  ],
+  "unresolved_legacy_inputs": [
+   "181 (_REMITTANCE_METHOD_RECON; 16 r172; no rows)",
+   "186 (_REMITTANCE_REGIMES; 16 r177; no rows)",
+   "191 (_BOP_COMPONENT_CROSSWALK; 16 r182; no rows)"
+  ],
+  "plotted_values": [
+   {
+    "id": "CLM-032 / YSC-013",
+    "period": "2024 (AR2024 vintage)",
+    "value": "6,245",
+    "unit": "USD million (unit stated only in CLM-032 as USD 6.245bn)",
+    "flag": "text only"
+   },
+   {
+    "id": "CLM-032 / YSC-013",
+    "period": "2024 (AR2025 vintage)",
+    "value": "3,422.16",
+    "unit": "USD million (CLM-032 \"about USD 3.42bn\")",
+    "flag": "text only"
+   },
+   {
+    "id": "RMO-IMF-2021-HIST",
+    "period": "2021",
+    "value": 1577.7,
+    "unit": "USD million",
+    "flag": "IMF path for 2021=100 index"
+   },
+   {
+    "id": "RMO-IMF-2022-HIST",
+    "period": "2022",
+    "value": 1668.2,
+    "unit": "USD million",
+    "flag": "IMF path for 2021=100 index"
+   },
+   {
+    "id": "RMO-IMF-2023-HIST",
+    "period": "2023",
+    "value": 1762.8,
+    "unit": "USD million",
+    "flag": "IMF path for 2021=100 index"
+   },
+   {
+    "id": "RMO-IMF-2024-HIST",
+    "period": "2024",
+    "value": 1861.7,
+    "unit": "USD million",
+    "flag": "IMF path for 2021=100 index"
+   }
+  ],
+  "missing_or_breaks": [
+   "CBY AR2025 remittance values for 2021-2023 (needed for the CBY normalized path) are not held anywhere in the Master.",
+   "CBY vintage values are not governed data rows (text in 07/06/14 only)."
+  ],
+  "inconsistencies": [
+   {
+    "field": "unit",
+    "contract_text": "2024 remittance value",
+    "other_text": "YSC-013 states \"6,245\" and \"3,422.16\" with no unit",
+    "other_location": "14_SYSTEM_CHRONOLOGY r18 fact_en",
+    "severity": "MATERIAL"
+   },
+   {
+    "field": "evidence record",
+    "contract_text": "governed contract",
+    "other_text": "no 06_EVIDENCE_OBJECTS row; no /evidence/RV-CWR-001/ page (reached only via the Reading)",
+    "other_location": "06_EVIDENCE_OBJECTS (absent)",
+    "severity": "EDITORIAL"
+   }
+  ],
+  "artefacts": [],
+  "notes": "Signature candidate (with VIS-REMITTANCE-MACRO). IMF 2021=100 path: 100 / 105.74 / 111.73 / 118.00 (derivable). CBY path not derivable."
+ },
+ {
+  "visual_id": "RV-CWR-002",
+  "readiness": "PARTIAL",
+  "master_row_11": 32,
+  "current_bindings": [
+   {
+    "sheet": "18_CBY_MONETARY",
+    "rows": "10-203 (T1 pairs), 247-392 (T4 pairs), 403-572 (T5 pairs)",
+    "ids": [
+     "OBS-CBY-* with period 2022_legacy / 2022_market_revalued (90 rows)"
+    ]
+   },
+   {
+    "sheet": "07_PUBLIC_CLAIMS",
+    "rows": "37,42",
+    "ids": [
+     "CLM-033",
+     "CLM-038"
+    ]
+   },
+   {
+    "sheet": "33_ANALYTICS_MASTER",
+    "rows": "130,132",
+    "ids": [
+     "CON-042",
+     "CON-044"
+    ]
+   },
+   {
+    "sheet": "34_EVIDENCE_PASSPORTS",
+    "rows": "40,42",
+    "ids": [
+     "EP-CBY-BANKING-REVAL-K04",
+     "EP-CBY-BANKING-VALUATION-LINEAGE-K04"
+    ]
+   }
+  ],
+  "unresolved_legacy_inputs": [
+   "173 (_CBY_ANNUAL_VINTAGES; 16 r164; no rows)",
+   "174 (_CBY_VINTAGE_ANALYTICS; 16 r165; no rows)",
+   "185 (_BANKING_VALUATION_RECON; 16 r176; no rows)"
+  ],
+  "plotted_values": [
+   {
+    "id": "OBS-CBY-00243",
+    "sheet_row": "18 r247",
+    "period": "2022_legacy",
+    "value": 5243.5,
+    "unit": "YER billion",
+    "flag": "SOURCE_DEFINED | source SRC-CBY-001",
+    "indicator": "BANK_TOTAL_ASSETS_BN_YER"
+   },
+   {
+    "id": "OBS-CBY-00244",
+    "sheet_row": "18 r248",
+    "period": "2022_market_revalued",
+    "value": 8780.5,
+    "unit": "YER billion",
+    "flag": "QUALIFIED | source SRC-CBY-001",
+    "indicator": "BANK_TOTAL_ASSETS_BN_YER"
+   },
+   {
+    "id": "OBS-CBY-00339",
+    "sheet_row": "18 r343",
+    "period": "2022_legacy",
+    "value": 2264.8,
+    "unit": "YER billion",
+    "flag": "SOURCE_DEFINED | source SRC-CBY-001",
+    "indicator": "BANK_LOANS_ADVANCES_BN_YER"
+   },
+   {
+    "id": "OBS-CBY-00340",
+    "sheet_row": "18 r344",
+    "period": "2022_market_revalued",
+    "value": 3214.8,
+    "unit": "YER billion",
+    "flag": "QUALIFIED | source SRC-CBY-001",
+    "indicator": "BANK_LOANS_ADVANCES_BN_YER"
+   },
+   {
+    "id": "OBS-CBY-00375",
+    "sheet_row": "18 r379",
+    "period": "2022_legacy",
+    "value": 338,
+    "unit": "YER billion",
+    "flag": "SOURCE_DEFINED | source SRC-CBY-001",
+    "indicator": "BANK_CREDIT_PRIVATE_SECTOR_BN_YER"
+   },
+   {
+    "id": "OBS-CBY-00376",
+    "sheet_row": "18 r380",
+    "period": "2022_market_revalued",
+    "value": 1301.6,
+    "unit": "YER billion",
+    "flag": "QUALIFIED | source SRC-CBY-001",
+    "indicator": "BANK_CREDIT_PRIVATE_SECTOR_BN_YER"
+   },
+   {
+    "id": "OBS-CBY-00411",
+    "sheet_row": "18 r415",
+    "period": "2022_legacy",
+    "value": 3811,
+    "unit": "YER billion",
+    "flag": "SOURCE_DEFINED | source SRC-CBY-001",
+    "indicator": "BANK_TOTAL_DEPOSITS_BN_YER"
+   },
+   {
+    "id": "OBS-CBY-00412",
+    "sheet_row": "18 r416",
+    "period": "2022_market_revalued",
+    "value": 6910.6,
+    "unit": "YER billion",
+    "flag": "QUALIFIED | source SRC-CBY-001",
+    "indicator": "BANK_TOTAL_DEPOSITS_BN_YER"
+   },
+   {
+    "id": "OBS-CBY-00471",
+    "sheet_row": "18 r475",
+    "period": "2022_legacy",
+    "value": 1555.3,
+    "unit": "YER billion",
+    "flag": "SOURCE_DEFINED | source SRC-CBY-001",
+    "indicator": "BANK_FX_DEPOSITS_BN_YER"
+   },
+   {
+    "id": "OBS-CBY-00472",
+    "sheet_row": "18 r476",
+    "period": "2022_market_revalued",
+    "value": 4650.1,
+    "unit": "YER billion",
+    "flag": "QUALIFIED | source SRC-CBY-001",
+    "indicator": "BANK_FX_DEPOSITS_BN_YER"
+   }
+  ],
+  "missing_or_breaks": [
+   "Vintage/document identity (AR2022 vs AR2023+) is not held per value: both bases carry the same source_id SRC-CBY-001 (15 r5, display_title empty) and are distinguished only by a period suffix."
+  ],
+  "inconsistencies": [
+   {
+    "field": "encoding_contract",
+    "contract_text": "the same 2022 banking positions as published across vintages",
+    "other_text": "Master labels the pair \"2022_legacy\" vs \"2022_market_revalued\" from one source file",
+    "other_location": "18_CBY_MONETARY period / source_id cols",
+    "severity": "MATERIAL"
+   },
+   {
+    "field": "evidence record",
+    "contract_text": "governed contract",
+    "other_text": "no 06_EVIDENCE_OBJECTS row; no /evidence/RV-CWR-002/ page (reached only via the Reading)",
+    "other_location": "06_EVIDENCE_OBJECTS (absent)",
+    "severity": "EDITORIAL"
+   }
+  ],
+  "artefacts": [],
+  "notes": "Values drawable by valuation basis; vintage labels need governing before the contract is literally drawable."
+ },
+ {
+  "visual_id": "RV-CWR-003",
+  "readiness": "DRAWABLE_FROM_MASTER",
+  "master_row_11": 33,
+  "current_bindings": [
+   {
+    "sheet": "25_FINDEX_BASELINE",
+    "rows": "5",
+    "ids": [
+     "WB-FINDEX-OBS-2022-001"
+    ]
+   },
+   {
+    "sheet": "19_PAYMENTS_DATA",
+    "rows": "35,36,38,39,40,41",
+    "ids": [
+     "OBS-00031",
+     "OBS-00032",
+     "OBS-00034",
+     "OBS-00035",
+     "OBS-00036",
+     "OBS-00037"
+    ]
+   },
+   {
+    "sheet": "31_REFORMS_REGULATION",
+    "rows": "80-103",
+    "ids": [
+     "FMIIP-RF-001..024"
+    ]
+   },
+   {
+    "sheet": "33_ANALYTICS_MASTER",
+    "rows": "152-159",
+    "ids": [
+     "XW-FMIIP-001..005",
+     "XW-WALLET-001..003"
+    ]
+   },
+   {
+    "sheet": "07_PUBLIC_CLAIMS",
+    "rows": "8,27-30",
+    "ids": [
+     "CLM-004",
+     "CLM-023",
+     "CLM-024",
+     "CLM-025",
+     "CLM-026"
+    ]
+   }
+  ],
+  "unresolved_legacy_inputs": [
+   "49_METRIC_CROSSWALK (-> 33 r150-159)",
+   "XW-FMIIP-005 resolves (33 r156; 06 r32)"
+  ],
+  "plotted_values": [
+   {
+    "id": "WB-FINDEX-OBS-2022-001",
+    "period": "2022 (2021 wave)",
+    "value": 11.9,
+    "unit": "% adults 15+",
+    "flag": "people lane"
+   },
+   {
+    "id": "OBS-00037",
+    "period": "2025 H1",
+    "value": 5202019,
+    "unit": "accounts",
+    "flag": "UNKNOWN"
+   },
+   {
+    "id": "OBS-00034",
+    "period": "2025 H1",
+    "value": 2102484,
+    "unit": "e-wallet subscribers",
+    "flag": "BREAK_IN_SERIES"
+   },
+   {
+    "id": "OBS-00036",
+    "period": "2025 H1",
+    "value": 58512,
+    "unit": "POS transactions",
+    "flag": "UNKNOWN"
+   },
+   {
+    "id": "OBS-00035",
+    "period": "2025 H1",
+    "value": 791,
+    "unit": "POS terminals",
+    "flag": "BREAK_IN_SERIES"
+   },
+   {
+    "id": "FMIIP-RF-013",
+    "period": "Jan-2025",
+    "value": 1062441,
+    "unit": "active bank accounts (project)",
+    "flag": "baseline"
+   },
+   {
+    "id": "FMIIP-RF-015",
+    "period": "Jan-2025",
+    "value": 375252,
+    "unit": "active e-wallet accounts (project)",
+    "flag": "baseline"
+   }
+  ],
+  "missing_or_breaks": [
+   "All crosswalk compatibility states are NOT_* → no connector may be drawn."
+  ],
+  "inconsistencies": [
+   {
+    "field": "evidence record",
+    "contract_text": "governed contract",
+    "other_text": "no 06_EVIDENCE_OBJECTS row; no /evidence/RV-CWR-003/ page (reached only via the Reading)",
+    "other_location": "06_EVIDENCE_OBJECTS (absent)",
+    "severity": "EDITORIAL"
+   }
+  ],
+  "artefacts": [],
+  "notes": "Lanes drawable; UNKNOWN-state admin values need their methodology note before public use."
+ },
+ {
+  "visual_id": "RV-CWR-004",
+  "readiness": "DRAWABLE_FROM_MASTER",
+  "master_row_11": 34,
+  "current_bindings": [
+   {
+    "sheet": "25_FINDEX_BASELINE",
+    "rows": "5",
+    "ids": [
+     "WB-FINDEX-OBS-2022-001"
+    ]
+   },
+   {
+    "sheet": "26_FINDEX_HISTORY",
+    "rows": "5-44",
+    "ids": [
+     "FHOBS-*"
+    ]
+   },
+   {
+    "sheet": "19_PAYMENTS_DATA",
+    "rows": "55-84 (IND-0002)",
+    "ids": [
+     "OBS-00051..OBS-00080"
+    ]
+   },
+   {
+    "sheet": "31_REFORMS_REGULATION",
+    "rows": "6-26",
+    "ids": [
+     "REF-*"
+    ]
+   },
+   {
+    "sheet": "22_PROVIDERS_DATA",
+    "rows": "124-129",
+    "ids": [
+     "PAYCUR-001..006"
+    ]
+   },
+   {
+    "sheet": "07_PUBLIC_CLAIMS",
+    "rows": "5,7,52",
+    "ids": [
+     "CLM-001",
+     "CLM-003",
+     "CLM-049"
+    ]
+   },
+   {
+    "sheet": "14_SYSTEM_CHRONOLOGY",
+    "rows": "27",
+    "ids": [
+     "YSC-023"
+    ]
+   }
+  ],
+  "unresolved_legacy_inputs": [
+   "48_REFORM_EVENTS (-> 31 r4-26)",
+   "73_PAYMENT_CURRENTNESS (-> 22 r122-129)",
+   "107_FINDEX_PUBLIC_HISTORY (-> 26 r4-44)"
+  ],
+  "plotted_values": [
+   {
+    "id": "CLM-001",
+    "period": "fieldwork 2022-11-07→2023-01-09",
+    "value": 11.9,
+    "unit": "%",
+    "flag": "people lane end"
+   },
+   {
+    "id": "OBS-00051→OBS-00080",
+    "period": "2025-03→2026-01",
+    "value": "561→1,473",
+    "unit": "POS terminals",
+    "flag": "infrastructure lane"
+   },
+   {
+    "id": "REF-PAY-006/010, 011, 012, 007/013",
+    "period": "2026-06-17 → 2026-08-04",
+    "value": "institutional events",
+    "unit": "state",
+    "flag": "duplicate rows"
+   },
+   {
+    "id": "REF-IMF-001",
+    "period": "2026-07-16",
+    "value": "SMP staff-level agreement",
+    "unit": "state",
+    "flag": "conditional"
+   }
+  ],
+  "missing_or_breaks": [],
+  "inconsistencies": [
+   {
+    "field": "events",
+    "contract_text": "payment institutional events",
+    "other_text": "duplicate event rows REF-PAY-006/010 and REF-PAY-007/013",
+    "other_location": "31 r11/r18, r12/r21",
+    "severity": "MATERIAL"
+   },
+   {
+    "field": "evidence record",
+    "contract_text": "governed contract",
+    "other_text": "no 06_EVIDENCE_OBJECTS row; no /evidence/RV-CWR-004/ page (reached only via the Reading)",
+    "other_location": "06_EVIDENCE_OBJECTS (absent)",
+    "severity": "EDITORIAL"
+   }
+  ],
+  "artefacts": [],
+  "notes": ""
+ },
+ {
+  "visual_id": "RV-CWR-005",
+  "readiness": "PARTIAL",
+  "master_row_11": 35,
+  "current_bindings": [
+   {
+    "sheet": "07_PUBLIC_CLAIMS",
+    "rows": "53-55",
+    "ids": [
+     "CLM-050",
+     "CLM-051",
+     "CLM-052"
+    ]
+   },
+   {
+    "sheet": "32_QUAL_LITERATURE",
+    "rows": "18",
+    "ids": [
+     "LIT-YEM-IBS-2020-001"
+    ]
+   },
+   {
+    "sheet": "33_ANALYTICS_MASTER",
+    "rows": "141-144",
+    "ids": [
+     "CON-053..CON-056"
+    ]
+   },
+   {
+    "sheet": "34_EVIDENCE_PASSPORTS",
+    "rows": "52-54",
+    "ids": [
+     "EP-IBS-EMONEY-2019-K04",
+     "EP-IBS-EMONEY-VALUE-K04",
+     "EP-IBS-GEO-GENDER-K04"
+    ]
+   }
+  ],
+  "unresolved_legacy_inputs": [
+   "198 (_IBS2020_UPSTREAM; 16 r189; no rows)",
+   "199 (_IBS2020_RECON; 16 r190; no rows)",
+   "196 (_CAUSEWAY_READING_002; 16 r187; no rows)"
+  ],
+  "plotted_values": [
+   {
+    "id": "CLM-050",
+    "period": "Dec-2019",
+    "value": 807919,
+    "unit": "e-money accounts (5 providers)",
+    "flag": "text only"
+   },
+   {
+    "id": "CLM-050",
+    "period": "2019 average",
+    "value": "23%",
+    "unit": "dormant/inactive share",
+    "flag": "text only"
+   },
+   {
+    "id": "CLM-051",
+    "period": "2019",
+    "value": "57.03% / 29.97% / 2.41%",
+    "unit": "share of recorded e-money value (cash-in/out; bank↔e-account; bills+purchases)",
+    "flag": "text only; CauseWay-derived grouping"
+   }
+  ],
+  "missing_or_breaks": [
+   "IBS source tables (Tables 3/5/6/7/8) not held as rows.",
+   "Value mix covers 89.41%; the remaining 10.59% categories are not specified, so a complete composition cannot be drawn."
+  ],
+  "inconsistencies": [
+   {
+    "field": "evidence record",
+    "contract_text": "governed contract",
+    "other_text": "no 06_EVIDENCE_OBJECTS row; no /evidence/RV-CWR-005/ page (reached only via the Reading)",
+    "other_location": "06_EVIDENCE_OBJECTS (absent)",
+    "severity": "EDITORIAL"
+   }
+  ],
+  "artefacts": [],
+  "notes": ""
+ },
+ {
+  "visual_id": "RV-CWR-006",
+  "readiness": "DRAWABLE_FROM_MASTER",
+  "master_row_11": 36,
+  "current_bindings": [
+   {
+    "sheet": "21_MFI_DATA",
+    "rows": "99,105,108",
+    "ids": [
+     "SRC-SFD-Q4-2015-001",
+     "SRC-SFD-Q4-2020-001",
+     "SRC-SANAA-MFB-2024"
+    ]
+   },
+   {
+    "sheet": "07_PUBLIC_CLAIMS",
+    "rows": "57-61",
+    "ids": [
+     "CLM-054",
+     "CLM-055",
+     "CLM-056",
+     "CLM-057",
+     "CLM-058"
+    ]
+   },
+   {
+    "sheet": "33_ANALYTICS_MASTER",
+    "rows": "118,145-147",
+    "ids": [
+     "CTR-011",
+     "CON-057",
+     "CON-058",
+     "CON-059"
+    ]
+   }
+  ],
+  "unresolved_legacy_inputs": [
+   "201 (_MFB2023_RECON; 16 r192; no rows)",
+   "202 (_MFB_TRANSFORM_LENS; 16 r193; no rows)"
+  ],
+  "plotted_values": [
+   {
+    "id": "21 spine r99 (SRC-SFD-Q4-2015-001)",
+    "period": "end-2015 (2015-12-31)",
+    "value": 93118,
+    "unit": "Borrowers",
+    "flag": "VERIFIED"
+   },
+   {
+    "id": "21 spine r99 (SRC-SFD-Q4-2015-001)",
+    "period": "end-2015 (2015-12-31)",
+    "value": 509590,
+    "unit": "Savers",
+    "flag": "VERIFIED"
+   },
+   {
+    "id": "21 spine r99 (SRC-SFD-Q4-2015-001)",
+    "period": "end-2015 (2015-12-31)",
+    "value": 6741,
+    "unit": "Portfolio YER m",
+    "flag": "CONTRADICTION"
+   },
+   {
+    "id": "21 spine r105 (SRC-SFD-Q4-2020-001)",
+    "period": "end-2020 (2020-12-31)",
+    "value": 88445,
+    "unit": "Borrowers",
+    "flag": "VERIFIED"
+   },
+   {
+    "id": "21 spine r105 (SRC-SFD-Q4-2020-001)",
+    "period": "end-2020 (2020-12-31)",
+    "value": 1611206,
+    "unit": "Savers",
+    "flag": "VERIFIED_DEFINITION_QA"
+   },
+   {
+    "id": "21 spine r105 (SRC-SFD-Q4-2020-001)",
+    "period": "end-2020 (2020-12-31)",
+    "value": 33379,
+    "unit": "Portfolio YER m",
+    "flag": "VERIFIED"
+   },
+   {
+    "id": "21 spine r108 (SRC-SANAA-MFB-2024)",
+    "period": "end-2023 (2023-12-31)",
+    "value": 78686,
+    "unit": "Borrowers",
+    "flag": "SECONDARY_BOUNDED"
+   },
+   {
+    "id": "21 spine r108 (SRC-SANAA-MFB-2024)",
+    "period": "end-2023 (2023-12-31)",
+    "value": 3300000,
+    "unit": "Savers",
+    "flag": "SECONDARY_BOUNDED_DEFINITION_OPEN"
+   },
+   {
+    "id": "21 spine r108 (SRC-SANAA-MFB-2024)",
+    "period": "end-2023 (2023-12-31)",
+    "value": 44000,
+    "unit": "Portfolio YER m",
+    "flag": "SECONDARY_BOUNDED_NOMINAL"
+   },
+   {
+    "id": "CLM-057 / CON-058",
+    "period": "2023-06",
+    "value": "~80,800",
+    "unit": "active borrowers",
+    "flag": "text only - no data row"
+   },
+   {
+    "id": "CLM-058",
+    "period": "through 2021",
+    "value": "80,000–90,000 (range, context)",
+    "unit": "active borrowers",
+    "flag": "text only - contextual finding"
+   }
+  ],
+  "missing_or_breaks": [
+   "2015 portfolio = CONTRADICTION; June-2023 borrower point is text only."
+  ],
+  "inconsistencies": [
+   {
+    "field": "title_en / accessible_summary_en vs decision_value_en",
+    "contract_text": "\"Borrowers, savers and portfolio are moving differently\"; \"The measures move differently\"",
+    "other_text": "\"Show ... as separate dated points without manufacturing a trend or a divergence.\"",
+    "other_location": "11_VISUAL_LIBRARY r36 (same row)",
+    "severity": "MATERIAL"
+   },
+   {
+    "field": "accessible_summary_ar vs _en",
+    "contract_text": "EN: \"does not establish growth in unique people, real credit deepening, better borrower outcomes or any cause\"",
+    "other_text": "AR: \"من دون أن يثبت اتساع الشمول أو نمو الائتمان بالقيمة الحقيقية أو تحسن نتائج المقترضين\" (no unique-people or causality clause)",
+    "other_location": "11 r36 accessible_summary_ar",
+    "severity": "EDITORIAL"
+   },
+   {
+    "field": "evidence record",
+    "contract_text": "governed contract",
+    "other_text": "no 06_EVIDENCE_OBJECTS row; no /evidence/RV-CWR-006/ page (reached only via the Reading)",
+    "other_location": "06_EVIDENCE_OBJECTS (absent)",
+    "severity": "EDITORIAL"
+   }
+  ],
+  "artefacts": [],
+  "notes": ""
+ },
+ {
+  "visual_id": "RV-CWR-007",
+  "readiness": "PARTIAL",
+  "master_row_11": 37,
+  "current_bindings": [
+   {
+    "sheet": "25_FINDEX_BASELINE",
+    "rows": "6,7",
+    "ids": [
+     "WB-FINDEX-OBS-2022-002",
+     "WB-FINDEX-OBS-2022-003"
+    ]
+   },
+   {
+    "sheet": "33_ANALYTICS_MASTER",
+    "rows": "6",
+    "ids": [
+     "DA-001"
+    ]
+   },
+   {
+    "sheet": "32_QUAL_LITERATURE",
+    "rows": "49-73",
+    "ids": [
+     "MECH-ID-KYC",
+     "MECH-DIGITAL-ACCESS",
+     "MECH-ACCESS-PROX",
+     "MECH-TRUST",
+     "MECH-COST"
+    ]
+   },
+   {
+    "sheet": "09_READING_SECTIONS",
+    "rows": "59,62",
+    "ids": [
+     "CWR-007 sections 1,4"
+    ]
+   }
+  ],
+  "unresolved_legacy_inputs": [
+   "28_FINDEX_OBS (-> 25)",
+   "41_DERIVED_ANALYTICS (-> 33)",
+   "22_RESEARCH_COVERAGE (DOES NOT RESOLVE)"
+  ],
+  "plotted_values": [
+   {
+    "id": "WB-FINDEX-OBS-2022-002",
+    "sheet_row": "25_FINDEX_BASELINE r6",
+    "period": "reporting year 2022 (Findex 2021 study; fieldwork 2022-11-07 to 2023-01-09)",
+    "value": 5.44,
+    "unit": "percent of population ages 15+",
+    "group": "female",
+    "flag": "PUBLIC_PRIMARY_AGGREGATE"
+   },
+   {
+    "id": "WB-FINDEX-OBS-2022-003",
+    "sheet_row": "25_FINDEX_BASELINE r7",
+    "period": "reporting year 2022 (Findex 2021 study; fieldwork 2022-11-07 to 2023-01-09)",
+    "value": 18.35,
+    "unit": "percent of population ages 15+",
+    "group": "male",
+    "flag": "PUBLIC_PRIMARY_AGGREGATE"
+   },
+   {
+    "id": "DA-001",
+    "sheet_row": "33_ANALYTICS_MASTER r6",
+    "period": "same wave",
+    "value": 12.91,
+    "unit": "percentage points (male − female)",
+    "flag": "DERIVED"
+   }
+  ],
+  "missing_or_breaks": [
+   "No governed list of gender-gap mechanisms-to-test; taxonomy has no income, work, household-dynamics or product-design mechanism."
+  ],
+  "inconsistencies": [
+   {
+    "field": "accessible_summary_en (mechanisms)",
+    "contract_text": "identity, mobile-phone access, income, distance and trust (5)",
+    "other_text": "Documentation, phone access, income, work, distance, trust, household dynamics and product design (8)",
+    "other_location": "09_READING_SECTIONS r59 (CWR-007 s1)",
+    "severity": "EDITORIAL"
+   },
+   {
+    "field": "period",
+    "contract_text": "2021 wave; Yemen fieldwork 2022–23",
+    "other_text": "VIS-FINDEX-GAPS: \"2022 observation\"",
+    "other_location": "11 r10",
+    "severity": "MATERIAL"
+   },
+   {
+    "field": "evidence record",
+    "contract_text": "governed contract",
+    "other_text": "no 06_EVIDENCE_OBJECTS row; no /evidence/RV-CWR-007/ page (reached only via the Reading)",
+    "other_location": "06_EVIDENCE_OBJECTS (absent)",
+    "severity": "EDITORIAL"
+   }
+  ],
+  "artefacts": [],
+  "notes": ""
+ },
+ {
+  "visual_id": "RV-CWR-008",
+  "readiness": "PARTIAL",
+  "master_row_11": 38,
+  "current_bindings": [
+   {
+    "sheet": "20_FIRM_FINANCE",
+    "rows": "31-46, 27-30",
+    "ids": [
+     "FFM-007",
+     "FFM-006"
+    ]
+   },
+   {
+    "sheet": "07_PUBLIC_CLAIMS",
+    "rows": "9,10,63",
+    "ids": [
+     "CLM-005",
+     "CLM-006",
+     "CLM-060"
+    ]
+   },
+   {
+    "sheet": "34_EVIDENCE_PASSPORTS",
+    "rows": "58,59",
+    "ids": [
+     "EP-SMEPS-2024-PROGRAMME",
+     "EP-SMEPS-FINACCESS-KPI"
+    ]
+   },
+   {
+    "sheet": "21_MFI_DATA",
+    "rows": "131-135",
+    "ids": [
+     "SMEPS coverage states"
+    ]
+   }
+  ],
+  "unresolved_legacy_inputs": [
+   "12_FIRM_FINANCE (-> 20)",
+   "219_SMEPS_PROGRAMME_EVIDENCE (16 r210; no rows)",
+   "50_STRATEGIC_INSIGHTS (-> 33 r40-105)"
+  ],
+  "plotted_values": [
+   {
+    "id": "FFO-2022-CH-06",
+    "period": "2022-09",
+    "value": 22,
+    "unit": "%",
+    "flag": "multi-response"
+   },
+   {
+    "id": "DA-020",
+    "period": "2022",
+    "value": "91.84%",
+    "unit": "filtered base",
+    "flag": "DERIVED"
+   },
+   {
+    "id": "CLM-060",
+    "period": "2024",
+    "value": "19%",
+    "unit": "SMEPS-supported MSMEs",
+    "flag": "text only"
+   },
+   {
+    "id": "CLM-060",
+    "period": "2021–2024",
+    "value": "15% vs 40% target",
+    "unit": "SMEPS-supported MSMEs",
+    "flag": "text only"
+   }
+  ],
+  "missing_or_breaks": [
+   "SMEPS KPI values exist only as claim text; no data row; assessment base not specified (CLM-060)."
+  ],
+  "inconsistencies": [
+   {
+    "field": "evidence record",
+    "contract_text": "governed contract",
+    "other_text": "no 06_EVIDENCE_OBJECTS row; no /evidence/RV-CWR-008/ page (reached only via the Reading)",
+    "other_location": "06_EVIDENCE_OBJECTS (absent)",
+    "severity": "EDITORIAL"
+   }
+  ],
+  "artefacts": [],
+  "notes": ""
+ },
+ {
+  "visual_id": "RV-CWR-009",
+  "readiness": "STATE_ONLY",
+  "master_row_11": 39,
+  "current_bindings": [
+   {
+    "sheet": "31_REFORMS_REGULATION",
+    "rows": "6-21, 83, 85, 89",
+    "ids": [
+     "REF-PAY-001..013",
+     "FMIIP-RF-004",
+     "FMIIP-RF-006",
+     "FMIIP-RF-010"
+    ]
+   },
+   {
+    "sheet": "33_ANALYTICS_MASTER",
+    "rows": "156",
+    "ids": [
+     "XW-FMIIP-005"
+    ]
+   },
+   {
+    "sheet": "19_PAYMENTS_DATA",
+    "rows": "55-86",
+    "ids": [
+     "POS monthly"
+    ]
+   },
+   {
+    "sheet": "07_PUBLIC_CLAIMS",
+    "rows": "7,8,22",
+    "ids": [
+     "CLM-003",
+     "CLM-004",
+     "CLM-018"
+    ]
+   },
+   {
+    "sheet": "22_PROVIDERS_DATA",
+    "rows": "124-129",
+    "ids": [
+     "PAYCUR-001..006"
+    ]
+   }
+  ],
+  "unresolved_legacy_inputs": [
+   "48_REFORM_EVENTS (-> 31)",
+   "73_PAYMENT_CURRENTNESS (-> 22 r122-129)"
+  ],
+  "plotted_values": [],
+  "missing_or_breaks": [
+   "States evidenced: rule, programme, implementation/integration, access (baseline only), use (POS activity). Open: operation (go-live), quality, outcome."
+  ],
+  "inconsistencies": [
+   {
+    "field": "chain vocabulary",
+    "contract_text": "rule/programme → implementation → operation → access → use → quality → outcome",
+    "other_text": "Q-008 row: REGULATION → PROJECT → DECISION → INTEGRATION → INSTITUTION → ACTIVITY → USAGE/OUTCOME_GAP",
+    "other_location": "33 r171",
+    "severity": "EDITORIAL"
+   },
+   {
+    "field": "evidence record",
+    "contract_text": "governed contract",
+    "other_text": "no 06_EVIDENCE_OBJECTS row; no /evidence/RV-CWR-009/ page (reached only via the Reading)",
+    "other_location": "06_EVIDENCE_OBJECTS (absent)",
+    "severity": "EDITORIAL"
+   }
+  ],
+  "artefacts": [],
+  "notes": ""
+ },
+ {
+  "visual_id": "RV-CWR-010",
+  "readiness": "STATE_ONLY",
+  "master_row_11": 40,
+  "current_bindings": [
+   {
+    "sheet": "07_PUBLIC_CLAIMS",
+    "rows": "48",
+    "ids": [
+     "CLM-045"
+    ]
+   },
+   {
+    "sheet": "14_SYSTEM_CHRONOLOGY",
+    "rows": "17",
+    "ids": [
+     "YSC-024 (45,460 recipients, 8 districts)"
+    ]
+   },
+   {
+    "sheet": "32_QUAL_LITERATURE",
+    "rows": "38,40,42,89-91",
+    "ids": [
+     "QUAL-014",
+     "QUAL-016",
+     "QUAL-018",
+     "QQL-012..014"
+    ]
+   },
+   {
+    "sheet": "33_ANALYTICS_MASTER",
+    "rows": "139,212",
+    "ids": [
+     "CON-051",
+     "Q-049"
+    ]
+   },
+   {
+    "sheet": "10_MEASUREMENT_AGENDA",
+    "rows": "13",
+    "ids": [
+     "MA-009"
+    ]
+   }
+  ],
+  "unresolved_legacy_inputs": [
+   "189_CASH_FINANCE_TRANSMISSION (16 r180; no rows)"
+  ],
+  "plotted_values": [],
+  "missing_or_breaks": [
+   "Evidenced: transfer, delivery, exposure. Open: repeat use, persistence, outcome."
+  ],
+  "inconsistencies": [
+   {
+    "field": "ladder stages",
+    "contract_text": "transfer → delivery → financial exposure → repeat use → persistence → resilience or outcome (6)",
+    "other_text": "Q-049: DELIVERY → USABILITY → RESILIENCE → LINKAGES → FORMAL_ACCESS → DURABLE_USE → OUTCOME (7); CON-051 \"seven-stage cash→finance proof ladder\"",
+    "other_location": "33_ANALYTICS_MASTER r212, r139",
+    "severity": "MATERIAL"
+   },
+   {
+    "field": "evidence record",
+    "contract_text": "governed contract",
+    "other_text": "no 06_EVIDENCE_OBJECTS row; no /evidence/RV-CWR-010/ page (reached only via the Reading)",
+    "other_location": "06_EVIDENCE_OBJECTS (absent)",
+    "severity": "EDITORIAL"
+   }
+  ],
+  "artefacts": [],
+  "notes": ""
+ }
+]

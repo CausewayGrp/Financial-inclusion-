@@ -1,0 +1,986 @@
+{
+ "schema": "YFI_MASTER_STRUCTURE/1.0",
+ "purpose": "Declared block layout of the Production Master. The generator validates the workbook against this contract before generating any projection and fails on any undeclared or missing block. Changing the Master schema requires changing this contract in the same transaction.",
+ "conventions": "main header = first row among rows 1-6 with >=3 non-empty cells; titled block = single-cell row in column A (normally after a blank row) followed by its own header row unless header=false; numeric_text_columns = 0-based columns, per block, whose numeric-looking text is emitted as JSON numbers in raw snapshots.",
+ "sheets": {
+  "00_MASTER": {
+   "main_header_row": 6,
+   "main_labels": [
+    "Principle",
+    "English",
+    "العربية",
+    "col3",
+    "Layer",
+    "Sheets",
+    "What it contains",
+    "col7",
+    "col8",
+    "col9",
+    "col10",
+    "col11",
+    "col12",
+    "col13"
+   ],
+   "blocks": [],
+   "numeric_text_columns": {
+    "__main__": [
+     3,
+     5
+    ]
+   }
+  },
+  "02_SITE_MAP": {
+   "main_header_row": 4,
+   "main_labels": [
+    "route",
+    "page_class",
+    "template_route",
+    "instance_id",
+    "title_en",
+    "title_ar",
+    "meta_description_en",
+    "meta_description_ar"
+   ],
+   "blocks": []
+  },
+  "03_PAGE_SECTIONS": {
+   "main_header_row": 4,
+   "main_labels": [
+    "route",
+    "section_order",
+    "section_role",
+    "heading_en",
+    "body_en",
+    "heading_ar",
+    "body_ar",
+    "col7"
+   ],
+   "blocks": []
+  },
+  "04_NAV_UX": {
+   "main_header_row": 5,
+   "main_labels": [
+    "item_order",
+    "label_en",
+    "label_ar",
+    "route_or_group",
+    "col4",
+    "col5",
+    "col6",
+    "col7"
+   ],
+   "blocks": [
+    {
+     "title": "Route dictionary",
+     "header": true
+    },
+    {
+     "title": "User journeys",
+     "header": true
+    },
+    {
+     "title": "Build grammar",
+     "header": true
+    },
+    {
+     "title": "Governed interface copy",
+     "header": true
+    },
+    {
+     "title": "Trust navigation",
+     "header": true
+    },
+    {
+     "title": "Search aliases",
+     "header": true
+    }
+   ]
+  },
+  "05_QUESTIONS": {
+   "main_header_row": 4,
+   "main_labels": [
+    "question_id",
+    "question_en",
+    "question_ar",
+    "primary_route",
+    "answer_mode",
+    "user_gets_en",
+    "user_gets_ar"
+   ],
+   "blocks": []
+  },
+  "06_EVIDENCE_OBJECTS": {
+   "main_header_row": 4,
+   "main_labels": [
+    "object_id",
+    "object_class",
+    "public_routes",
+    "title_en",
+    "title_ar",
+    "summary_en",
+    "summary_ar",
+    "definition_en",
+    "definition_ar",
+    "period_en",
+    "period_ar",
+    "universe_en",
+    "universe_ar",
+    "method_en",
+    "method_ar",
+    "limitations_en",
+    "limitations_ar",
+    "currentness_en",
+    "currentness_ar",
+    "change_trigger_en",
+    "change_trigger_ar",
+    "verification_en",
+    "verification_ar",
+    "source_dependencies",
+    "source_links",
+    "lineage_state",
+    "visual_contract_state",
+    "source_use_roles"
+   ],
+   "blocks": []
+  },
+  "07_PUBLIC_CLAIMS": {
+   "main_header_row": 4,
+   "main_labels": [
+    "claim_id",
+    "theme",
+    "claim_type",
+    "evidence_badge",
+    "evidence_inputs",
+    "public_routes"
+   ],
+   "blocks": []
+  },
+  "08_READINGS": {
+   "main_header_row": 4,
+   "main_labels": [
+    "reading_id",
+    "slug",
+    "route",
+    "title_en",
+    "title_ar",
+    "question_en",
+    "question_ar",
+    "thesis_en",
+    "thesis_ar",
+    "claim_bindings",
+    "evidence_bindings",
+    "source_bindings",
+    "visual_bindings",
+    "audiences",
+    "prohibited_inference_en",
+    "prohibited_inference_ar",
+    "verification_bindings",
+    "domain_surface_routes",
+    "domain_context_routes"
+   ],
+   "blocks": []
+  },
+  "09_READING_SECTIONS": {
+   "main_header_row": 4,
+   "main_labels": [
+    "reading_id",
+    "section_order",
+    "section_id",
+    "title_en",
+    "title_ar",
+    "copy_en",
+    "copy_ar"
+   ],
+   "blocks": []
+  },
+  "10_MEASUREMENT_AGENDA": {
+   "main_header_row": 4,
+   "main_labels": [
+    "measurement_id",
+    "priority",
+    "title_en",
+    "title_ar",
+    "domain",
+    "dimensions_en",
+    "dimensions_ar",
+    "current_evidence_en",
+    "current_evidence_ar",
+    "missing_evidence_en",
+    "missing_evidence_ar",
+    "guardrail_en",
+    "guardrail_ar",
+    "unlocked_decision_en",
+    "unlocked_decision_ar",
+    "decisions_unlocked_en",
+    "decisions_unlocked_ar",
+    "blocked_evidence_en",
+    "blocked_evidence_ar",
+    "feasibility_en",
+    "feasibility_ar",
+    "priority_basis_en",
+    "priority_basis_ar",
+    "what_changes_en",
+    "what_changes_ar",
+    "recommended_visual_en",
+    "recommended_visual_ar",
+    "affected_routes"
+   ],
+   "blocks": []
+  },
+  "11_VISUAL_LIBRARY": {
+   "main_header_row": 4,
+   "main_labels": [
+    "visual_id",
+    "title_en",
+    "title_ar",
+    "visual_form",
+    "question_en",
+    "question_ar",
+    "what_it_shows_en",
+    "what_it_shows_ar",
+    "decision_value_en",
+    "decision_value_ar",
+    "source_period",
+    "evidence_strength",
+    "freshness_profile",
+    "data_inputs",
+    "unit_or_object",
+    "denominator_universe",
+    "period",
+    "encoding_contract",
+    "prohibited_inference_en",
+    "prohibited_inference_ar",
+    "accessible_summary_en",
+    "accessible_summary_ar",
+    "public_routes",
+    "period_ar",
+    "universe_ar"
+   ],
+   "blocks": []
+  },
+  "13_SYSTEM_RELATIONSHIPS": {
+   "main_header_row": 4,
+   "main_labels": [
+    "link_id",
+    "from",
+    "to",
+    "relationship_type",
+    "supported_relationship",
+    "not_supported",
+    "evidence_refs"
+   ],
+   "blocks": []
+  },
+  "14_SYSTEM_CHRONOLOGY": {
+   "main_header_row": 4,
+   "main_labels": [
+    "event_id",
+    "period_en",
+    "event_class",
+    "fact_en",
+    "fact_ar",
+    "source_ids",
+    "source_scope",
+    "system_implication_en",
+    "system_implication_ar",
+    "fi_relevance_en",
+    "fi_relevance_ar",
+    "does_not_establish_en",
+    "does_not_establish_ar",
+    "relationship_type",
+    "linked_routes",
+    "interpretation_note",
+    "period_ar"
+   ],
+   "blocks": []
+  },
+  "15_SOURCE_LIBRARY": {
+   "main_header_row": 4,
+   "main_labels": [
+    "source_id",
+    "primary_url",
+    "additional_urls",
+    "datasets_or_use",
+    "row_count",
+    "display_title",
+    "publisher",
+    "resource_category",
+    "why_it_matters",
+    "does_not_establish",
+    "public_card_state",
+    "display_title_ar",
+    "resource_category_ar",
+    "why_it_matters_ar",
+    "does_not_establish_ar",
+    "non_public_locator_note",
+    "issuer",
+    "hosting_platform",
+    "rights_state",
+    "licence",
+    "attribution_requirement",
+    "retrieval_date",
+    "document_type",
+    "evidence_roles",
+    "publisher_ar",
+    "document_label",
+    "document_label_ar",
+    "document_date"
+   ],
+   "blocks": []
+  },
+  "16_DATASET_CATALOG": {
+   "main_header_row": 4,
+   "main_labels": [
+    "dataset_id",
+    "origin_table",
+    "domain",
+    "rows",
+    "period_min",
+    "period_max",
+    "source_id_count",
+    "source_url_count",
+    "sample_source_ids",
+    "analytical_role"
+   ],
+   "blocks": []
+  },
+  "17_INDICATOR_LIBRARY": {
+   "main_header_row": 4,
+   "main_labels": [
+    "dataset_id",
+    "indicator_or_metric_id",
+    "label",
+    "domain",
+    "units",
+    "rows",
+    "period_min",
+    "period_max",
+    "use_rule"
+   ],
+   "blocks": []
+  },
+  "18_CBY_MONETARY": {
+   "main_header_row": 4,
+   "main_labels": [
+    "observation_id",
+    "source_id",
+    "source_table",
+    "indicator_id",
+    "indicator_name",
+    "period",
+    "value",
+    "unit",
+    "geography",
+    "comparability_status",
+    "methodology_flag",
+    "notes",
+    "original_url"
+   ],
+   "blocks": [],
+   "numeric_text_columns": {
+    "__main__": [
+     5
+    ]
+   }
+  },
+  "19_PAYMENTS_DATA": {
+   "main_header_row": 4,
+   "main_labels": [
+    "observation_id",
+    "indicator_id",
+    "value",
+    "unit",
+    "currency",
+    "period_label",
+    "geography_id",
+    "territorial_scope_note",
+    "universe",
+    "source_id",
+    "source_locator",
+    "source_value_as_reported",
+    "normalized_value",
+    "comparability_state",
+    "caveats"
+   ],
+   "blocks": [],
+   "numeric_text_columns": {
+    "__main__": [
+     11
+    ]
+   }
+  },
+  "20_FIRM_FINANCE": {
+   "main_header_row": 4,
+   "main_labels": [
+    "observation_id",
+    "source_id",
+    "survey_wave",
+    "universe",
+    "formality",
+    "geography",
+    "period",
+    "metric_id",
+    "metric_label",
+    "value",
+    "unit",
+    "denominator_n",
+    "numerator_n",
+    "breakdown_dimension",
+    "breakdown_value",
+    "evidence_type",
+    "source_page_figure",
+    "comparability_state",
+    "calculation_state",
+    "caveat",
+    "source_url"
+   ],
+   "blocks": []
+  },
+  "21_MFI_DATA": {
+   "main_header_row": 5,
+   "main_labels": [
+    "observation_id",
+    "source_id",
+    "reporting_wave",
+    "universe",
+    "provider_universe_count",
+    "geography",
+    "period",
+    "metric_id",
+    "metric_label_en",
+    "metric_label_ar",
+    "value",
+    "unit",
+    "denominator_n",
+    "numerator_n",
+    "breakdown_dimension",
+    "breakdown_value",
+    "evidence_type",
+    "source_page_figure",
+    "comparability_state",
+    "calculation_state",
+    "coverage_claim",
+    "caveat_en",
+    "caveat_ar",
+    "source_url"
+   ],
+   "blocks": [
+    {
+     "title": "Provider panel",
+     "header": true
+    },
+    {
+     "title": "SFD/SMED year coverage",
+     "header": true
+    },
+    {
+     "title": "Microfinance origin chronology",
+     "header": true
+    },
+    {
+     "title": "MFI temporal spine",
+     "header": true
+    },
+    {
+     "title": "MFI metric coverage",
+     "header": true
+    }
+   ],
+   "numeric_text_columns": {
+    "MFI temporal spine": [
+     2
+    ],
+    "Microfinance origin chronology": [
+     1
+    ],
+    "__main__": [
+     6
+    ]
+   }
+  },
+  "22_PROVIDERS_DATA": {
+   "main_header_row": 4,
+   "main_labels": [
+    "entity_id",
+    "canonical_name_en",
+    "canonical_name_ar",
+    "entity_class",
+    "regulator_scope",
+    "licence_state",
+    "operating_state",
+    "current_state_as_of",
+    "source_id",
+    "source_locator",
+    "territorial_scope",
+    "listed_address",
+    "website_as_source",
+    "public_claim_rule",
+    "notes",
+    "issuing_authority"
+   ],
+   "blocks": [
+    {
+     "title": "Provider universe",
+     "header": true
+    },
+    {
+     "title": "Provider status events",
+     "header": true
+    },
+    {
+     "title": "Provider negative-authority evidence",
+     "header": true
+    },
+    {
+     "title": "Provider baseline",
+     "header": true
+    },
+    {
+     "title": "Wallet count reconciliation",
+     "header": true
+    },
+    {
+     "title": "Payment currentness",
+     "header": true
+    },
+    {
+     "title": "Official CBY 2026 exchange/remittance roster — category counts / أعداد فئات قائمة الصرافة والحوالات الرسمية 2026",
+     "header": true
+    }
+   ]
+  },
+  "23_REMITTANCES": {
+   "main_header_row": 4,
+   "main_labels": [
+    "observation_id",
+    "source_id",
+    "series_vintage",
+    "domain",
+    "geography",
+    "period",
+    "period_state",
+    "metric_id",
+    "metric_label_en",
+    "metric_label_ar",
+    "value",
+    "unit",
+    "transaction_amount_usd",
+    "corridor_origin",
+    "corridor_destination",
+    "evidence_type",
+    "universe",
+    "source_table_or_section",
+    "calculation_state",
+    "comparability_state",
+    "caveat_en",
+    "caveat_ar",
+    "source_url"
+   ],
+   "blocks": [],
+   "numeric_text_columns": {
+    "__main__": [
+     5
+    ]
+   }
+  },
+  "24_FINDEX_CODEBOOK": {
+   "main_header_row": 4,
+   "main_labels": [
+    "variable_object_id",
+    "ddi_id",
+    "variable_name",
+    "source_label",
+    "label_status",
+    "domain",
+    "subdomain",
+    "use_class",
+    "candidate_public_label_en",
+    "priority",
+    "candidate_route",
+    "calculation_rule",
+    "critical_caveat",
+    "source_id",
+    "controlled_source_file",
+    "source_url"
+   ],
+   "blocks": [
+    {
+     "title": "Uploaded predecessor Findex codebook — UNVERIFIED RESEARCH/LINEAGE ONLY; do not use for production claims. Rows 4–117 are the source-extracted World Bank DDI variable architecture. Rows 122 onward in this legacy block contain unverified/inconsistent pseudo-codebook statements and are quarantined pending any future field-by-field source reconstruction.",
+     "header": false
+    }
+   ],
+   "numeric_text_columns": {
+    "Uploaded predecessor Findex codebook — UNVERIFIED RESEARCH/LINEAGE ONLY; do not use for production claims. Rows 4–117 are the source-extracted World Bank DDI variable architecture. Rows 122 onward in this legacy block contain unverified/inconsistent pseudo-codebook statements and are quarantined pending any future field-by-field source reconstruction.": [
+     5
+    ]
+   }
+  },
+  "25_FINDEX_BASELINE": {
+   "main_header_row": 4,
+   "main_labels": [
+    "observation_id",
+    "indicator_code",
+    "indicator",
+    "group",
+    "year",
+    "value",
+    "unit",
+    "publisher",
+    "source_url",
+    "evidence_state",
+    "caveat"
+   ],
+   "blocks": [],
+   "numeric_text_columns": {
+    "__main__": [
+     4
+    ]
+   }
+  },
+  "26_FINDEX_HISTORY": {
+   "main_header_row": 4,
+   "main_labels": [
+    "history_obs_id",
+    "hist_metric_id",
+    "source_id",
+    "reference_year",
+    "metric_family",
+    "metric_code",
+    "metric_label_en",
+    "metric_label_ar",
+    "value",
+    "unit",
+    "denominator_scope",
+    "subgroup",
+    "observation_state",
+    "comparability_group",
+    "publication_state",
+    "critical_caveat",
+    "source_url"
+   ],
+   "blocks": [
+    {
+     "title": "History crosswalk",
+     "header": true
+    }
+   ]
+  },
+  "27_FINDEX_SUBGROUPS": {
+   "main_header_row": 4,
+   "main_labels": [
+    "subgroup_object_id",
+    "panel_metric_id",
+    "variable_name",
+    "metric_label",
+    "subgroup_dimension",
+    "subgroup_variable",
+    "current_state",
+    "published_anchor_state",
+    "calculation_requirement",
+    "comparability_rule",
+    "public_behavior",
+    "route",
+    "forbidden_inference"
+   ],
+   "blocks": [
+    {
+     "title": "Denominator stress tests",
+     "header": true
+    }
+   ]
+  },
+  "28_METHODS_RIGHTS": {
+   "main_header_row": 5,
+   "main_labels": [
+    "field",
+    "value",
+    "source",
+    "control_note",
+    "col4",
+    "col5",
+    "col6",
+    "col7"
+   ],
+   "blocks": [
+    {
+     "title": "Data-use and research requirements",
+     "header": false
+    },
+    {
+     "title": "OECD/INFE 2023 scoring summary",
+     "header": true
+    },
+    {
+     "title": "OECD/INFE Annex A item-level scoring",
+     "header": true
+    }
+   ]
+  },
+  "29_OECD_BENCHMARKS": {
+   "main_header_row": 5,
+   "main_labels": [
+    "Jurisdiction / Cohort Group",
+    "Economic / Regional Category",
+    "Overall Score (0-100)",
+    "Financial Knowledge (0-7)",
+    "Financial Behavior (0-9)",
+    "Financial Attitude (0-4)",
+    "% Achieved Target (>=70)",
+    "Gender Gap (M - F pp)",
+    "Compound Interest (% Correct)",
+    "Public Wi-Fi Security (%)",
+    "Scam Victimization (%)",
+    "Strategic Analytical Takeaway",
+    "public_use"
+   ],
+   "blocks": [
+    {
+     "title": "Yemen values attributed to OECD sources — see verification_state",
+     "header": true
+    },
+    {
+     "title": "OECD Yemen diagnostic 2026",
+     "header": true
+    }
+   ]
+  },
+  "31_REFORMS_REGULATION": {
+   "main_header_row": 5,
+   "main_labels": [
+    "event_id",
+    "date",
+    "actor_event_type",
+    "event",
+    "normalized_description",
+    "event_class",
+    "route",
+    "source_url",
+    "col8",
+    "col9",
+    "col10",
+    "col11",
+    "col12"
+   ],
+   "blocks": [
+    {
+     "title": "OECD policy",
+     "header": true
+    },
+    {
+     "title": "Consumer protection architecture",
+     "header": true
+    },
+    {
+     "title": "E-money regulation",
+     "header": true
+    },
+    {
+     "title": "FMIIP official results framework / إطار النتائج الرسمي لمشروع البنية التحتية للأسواق والشمول المالي",
+     "header": true
+    }
+   ],
+   "unseparated_block_titles": [
+    "OECD policy"
+   ],
+   "numeric_text_columns": {
+    "E-money regulation": [
+     5
+    ]
+   }
+  },
+  "32_QUAL_LITERATURE": {
+   "main_header_row": 5,
+   "main_labels": [
+    "lit_object_id",
+    "source_id",
+    "object_type",
+    "topic",
+    "source_reported_content",
+    "study_population_or_method",
+    "evidence_class",
+    "evidence_system_use",
+    "prohibited_inference",
+    "source_url",
+    "col10",
+    "col11",
+    "col12",
+    "col13",
+    "col14"
+   ],
+   "blocks": [
+    {
+     "title": "Qualitative evidence",
+     "header": true
+    },
+    {
+     "title": "Mechanism taxonomy",
+     "header": true
+    },
+    {
+     "title": "Qualitative–quantitative links",
+     "header": true
+    },
+    {
+     "title": "Primary authority notes",
+     "header": true
+    }
+   ]
+  },
+  "33_ANALYTICS_MASTER": {
+   "main_header_row": 5,
+   "main_labels": [
+    "analysis_id",
+    "theme",
+    "metric",
+    "comparison",
+    "value",
+    "unit",
+    "visual_id",
+    "interpretation_en",
+    "interpretation_ar",
+    "source_family",
+    "critical_caveat",
+    "col11",
+    "col12",
+    "col13"
+   ],
+   "blocks": [
+    {
+     "title": "Strategic insights",
+     "header": true
+    },
+    {
+     "title": "Evidence differences and discrepancies",
+     "header": true
+    },
+    {
+     "title": "Metric crosswalk",
+     "header": true
+    },
+    {
+     "title": "Evidence fusion map",
+     "header": true
+    }
+   ]
+  },
+  "34_EVIDENCE_PASSPORTS": {
+   "main_header_row": 4,
+   "main_labels": [
+    "passport_id",
+    "object_type",
+    "object",
+    "publisher",
+    "metric_or_scope",
+    "reference_period",
+    "universe",
+    "method",
+    "critical_limit",
+    "authority_class",
+    "route",
+    "display_requirements"
+   ],
+   "blocks": []
+  },
+  "35_OCHA_WB_CONTEXT": {
+   "main_header_row": 5,
+   "main_labels": [
+    "flow_object_id",
+    "flow_id",
+    "year",
+    "snapshot_date",
+    "country",
+    "source_org",
+    "destination_org",
+    "description",
+    "sector",
+    "amount_usd",
+    "amount_shared_on_boundary_usd",
+    "total_contribution_usd",
+    "funding_status",
+    "boundary",
+    "source_filter",
+    "fi_relevance_class",
+    "candidate_route",
+    "amount_semantics_rule",
+    "evidence_class",
+    "source_id",
+    "source_url"
+   ],
+   "blocks": [
+    {
+     "title": "World Bank 2004 narrative",
+     "header": true
+    },
+    {
+     "title": "World Bank 2004 cases",
+     "header": true
+    },
+    {
+     "title": "World Bank 2004 chronology",
+     "header": true
+    }
+   ]
+  },
+  "36_SUPPLEMENT_ARCHIVE": {
+   "main_header_row": 4,
+   "main_labels": [
+    "record_id",
+    "source_sheet",
+    "origin_assets",
+    "source_rows",
+    "record_json"
+   ],
+   "blocks": []
+  },
+  "01_SOURCE_ORIGINS": {
+   "main_header_row": 4,
+   "main_labels": [
+    "source_asset",
+    "file_reference",
+    "unique_contribution",
+    "treatment_in_master"
+   ],
+   "blocks": []
+  },
+  "12_VISUAL_PREVIEWS": {
+   "main_header_row": 2,
+   "main_labels": [
+    "These diagrams show the intended semantic logic. The complete 36-object visualization specification — question, data inputs, meaning, interaction and accessibility — is in 11_VISUAL_LIBRARY.",
+    "col1",
+    "col2",
+    "col3",
+    "col4",
+    "col5",
+    "col6",
+    "col7",
+    "col8",
+    "col9",
+    "col10",
+    "col11",
+    "col12",
+    "OECD/INFE",
+    "Score",
+    "col15",
+    "Money-exchange system",
+    "Count",
+    "col18",
+    "POS terminals",
+    "Count"
+   ],
+   "blocks": []
+  },
+  "37_READINESS_CHECKLIST": {
+   "main_header_row": 4,
+   "main_labels": [
+    "Area",
+    "Requirement",
+    "Expected",
+    "Actual",
+    "Status",
+    "Where",
+    "Interpretation"
+   ],
+   "blocks": []
+  }
+ }
+}

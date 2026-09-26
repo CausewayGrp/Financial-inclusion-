@@ -1,0 +1,90 @@
+{
+ "transaction": "P5-A",
+ "scope": "P5.2 source record for REF-PAY-001 (CBY Decision 23/2024); P5.3 CBY AR2025 remittance path 2021-2023 and indexed-unit label",
+ "input_master_sha256": "5f3d9404e93bf48528d487a86a653601166b715026f1884d343da367144b463a",
+ "output_master_sha256": "397b330757de7b1dd720cca49c2609ff5bdbb0f944e09857b701de25b1682d9c",
+ "cells_written": 9,
+ "changes": [
+  {
+   "finding": "P5.2",
+   "sheet": "06_EVIDENCE_OBJECTS",
+   "row": 79,
+   "col": 24,
+   "field": "VIS-PAYMENT-RAILS.source_dependencies",
+   "old": "SRC-UNDP-FMIIP-001; SRC-WB-FMIIP-P180708; SRC-WB-FMIIP-ISR2-2026-001; SRC-CBY-EMONEY-AMD-2025-001; SRC-CBY-DIGITAL-EXPO-2026-001; SRC-CBY-PAY-BOARD-2026-001; SRC-CBY-BANK-NETWORK-MTG-2026-001; SRC-CBY-UNIFIED-NET-2026-001; SRC-CBY-YPCC-FOUND-2026-001; SRC-CBY-YPCC-BOARD-2026-001; UNBOUND:REF-PAY-001",
+   "new": "SRC-UNDP-FMIIP-001; SRC-WB-FMIIP-P180708; SRC-WB-FMIIP-ISR2-2026-001; SRC-CBY-EMONEY-AMD-2025-001; SRC-CBY-DIGITAL-EXPO-2026-001; SRC-CBY-PAY-BOARD-2026-001; SRC-CBY-BANK-NETWORK-MTG-2026-001; SRC-CBY-UNIFIED-NET-2026-001; SRC-CBY-YPCC-FOUND-2026-001; SRC-CBY-YPCC-BOARD-2026-001; SRC-CBY-DEC-23-2024-001"
+  },
+  {
+   "finding": "P5.2",
+   "sheet": "06_EVIDENCE_OBJECTS",
+   "row": 79,
+   "col": 26,
+   "field": "VIS-PAYMENT-RAILS.lineage_state",
+   "old": "BOUND_PARTIAL",
+   "new": "BOUND_EXACT"
+  },
+  {
+   "finding": "P5.2",
+   "sheet": "06_EVIDENCE_OBJECTS",
+   "row": 79,
+   "col": 22,
+   "field": "VIS-PAYMENT-RAILS.verification_en",
+   "old": "Some figures in this record are drawn from the source(s) listed on this page; other inputs have not yet been linked to a specific original source. Check each figure against a listed source before reuse, and treat any figure you cannot match as unverified.",
+   "new": "This record is drawn from the source(s) listed on this page. Open a source record to reach the original document, and check that the definition, period, population and geography match what is stated here."
+  },
+  {
+   "finding": "P5.2",
+   "sheet": "06_EVIDENCE_OBJECTS",
+   "row": 79,
+   "col": 23,
+   "field": "VIS-PAYMENT-RAILS.verification_ar",
+   "old": "تستند بعض أرقام هذا السجل إلى المصدر أو المصادر المدرجة في هذه الصفحة، ولم تُربط مدخلات أخرى بعدُ بمصدر أصلي محدد. فطابِق كل رقم مع أحد المصادر المدرجة قبل إعادة استخدامه، وعامِل الرقم الذي لا تجد له مقابلًا على أنه غير متحقق منه.",
+   "new": "يستند هذا السجل إلى المصدر أو المصادر المدرجة في هذه الصفحة. افتح سجل المصدر للوصول إلى الوثيقة الأصلية، وتحقق من تطابق التعريف والفترة والمجتمع والنطاق الجغرافي مع ما يرد هنا."
+  },
+  {
+   "finding": "P5.2",
+   "sheet": "15_SOURCE_LIBRARY",
+   "row": null,
+   "col": null,
+   "field": "SRC-CBY-DEC-23-2024-001",
+   "old": null,
+   "new": "Central Bank of Yemen — Governor's Decision No. 23 of 2024 on domestic money-transfer activity (26 June 2024; ref. 343/CBY/2024) || https://cby-ye.com/files/667c596ef3bea.pdf"
+  },
+  {
+   "finding": "P5.3",
+   "sheet": "23_REMITTANCES",
+   "row": null,
+   "col": null,
+   "field": "RMO-CBY-2021-AR2025",
+   "old": null,
+   "new": "2900.22 USD million (2021; CBY_ANNUAL_REPORT_2025)"
+  },
+  {
+   "finding": "P5.3",
+   "sheet": "23_REMITTANCES",
+   "row": null,
+   "col": null,
+   "field": "RMO-CBY-2022-AR2025",
+   "old": null,
+   "new": "3066.58 USD million (2022; CBY_ANNUAL_REPORT_2025)"
+  },
+  {
+   "finding": "P5.3",
+   "sheet": "23_REMITTANCES",
+   "row": null,
+   "col": null,
+   "field": "RMO-CBY-2023-AR2025",
+   "old": null,
+   "new": "3240.46 USD million (2023; CBY_ANNUAL_REPORT_2025)"
+  },
+  {
+   "finding": "P5.3",
+   "sheet": "04_NAV_UX",
+   "row": null,
+   "col": null,
+   "field": "UI-VIS-UNIT-INDEX-2021",
+   "old": null,
+   "new": "Index, 2021 = 100 || مؤشر، 2021 = 100"
+  }
+ ]
+}

@@ -1,0 +1,218 @@
+[
+  {
+    "alias_id": "SEARCH-ALIAS-001",
+    "terms_en": "law; laws",
+    "terms_ar": "قانون; قوانين",
+    "targets": "document_type:law | route:/reforms/ | route:/data/",
+    "boundary_note_en": null,
+    "boundary_note_ar": null
+  },
+  {
+    "alias_id": "SEARCH-ALIAS-002",
+    "terms_en": "decision; decisions",
+    "terms_ar": "قرار; قرارات",
+    "targets": "document_type:decision/enforcement | route:/providers/ | route:/reforms/",
+    "boundary_note_en": null,
+    "boundary_note_ar": null
+  },
+  {
+    "alias_id": "SEARCH-ALIAS-003",
+    "terms_en": "circular; circulars",
+    "terms_ar": "تعميم; تعاميم",
+    "targets": "document_type:instruction/circular | route:/reforms/",
+    "boundary_note_en": null,
+    "boundary_note_ar": null
+  },
+  {
+    "alias_id": "SEARCH-ALIAS-004",
+    "terms_en": "regulation; regulations; instructions",
+    "terms_ar": "لائحة; لوائح; تعليمات",
+    "targets": "document_type:regulation | document_type:instruction/circular | route:/reforms/ | route:/data/",
+    "boundary_note_en": null,
+    "boundary_note_ar": null
+  },
+  {
+    "alias_id": "SEARCH-ALIAS-005",
+    "terms_en": "remittance; remittances",
+    "terms_ar": "حوالة; حوالات; تحويلات",
+    "targets": "route:/remittances/",
+    "boundary_note_en": null,
+    "boundary_note_ar": null
+  },
+  {
+    "alias_id": "SEARCH-ALIAS-006",
+    "terms_en": "exchange company; exchange companies",
+    "terms_ar": "صرافة; شركات الصرافة; منشآت الصرافة",
+    "targets": "route:/providers/",
+    "boundary_note_en": null,
+    "boundary_note_ar": null
+  },
+  {
+    "alias_id": "SEARCH-ALIAS-007",
+    "terms_en": "wallet; e-wallet; e-wallets; electronic wallet",
+    "terms_ar": "محفظة; محافظ; المحافظ الإلكترونية; المحفظة الإلكترونية",
+    "targets": "route:/payments/",
+    "boundary_note_en": null,
+    "boundary_note_ar": null
+  },
+  {
+    "alias_id": "SEARCH-ALIAS-008",
+    "terms_en": "POS; point of sale; POS terminals",
+    "terms_ar": "نقاط البيع; نقطة بيع",
+    "targets": "route:/payments/",
+    "boundary_note_en": null,
+    "boundary_note_ar": null
+  },
+  {
+    "alias_id": "SEARCH-ALIAS-009",
+    "terms_en": "microfinance; MFB; MFI",
+    "terms_ar": "التمويل الأصغر; تمويل أصغر",
+    "targets": "route:/finance/",
+    "boundary_note_en": null,
+    "boundary_note_ar": null
+  },
+  {
+    "alias_id": "SEARCH-ALIAS-010",
+    "terms_en": "exchange rate",
+    "terms_ar": "سعر الصرف; أسعار الصرف",
+    "targets": "route:/finance/",
+    "boundary_note_en": null,
+    "boundary_note_ar": null
+  },
+  {
+    "alias_id": "SEARCH-ALIAS-011",
+    "terms_en": "measurement; measurement agenda; measurement priorities",
+    "terms_ar": "أولويات القياس; أجندة القياس; القياس",
+    "targets": "route:/measurement/",
+    "boundary_note_en": null,
+    "boundary_note_ar": null
+  },
+  {
+    "alias_id": "SEARCH-ALIAS-012",
+    "terms_en": "financial literacy; financial education",
+    "terms_ar": "الثقافة المالية; التثقيف المالي",
+    "targets": "route:/people/ | route:/reforms/",
+    "boundary_note_en": "Discovery aid only: financial-education activity is not literacy, capability or behaviour.",
+    "boundary_note_ar": "وسيلة للعثور على المحتوى فقط: النشاط التثقيفي المالي ليس ثقافة مالية ولا قدرة ولا سلوكًا."
+  },
+  {
+    "alias_id": "SEARCH-ALIAS-013",
+    "terms_en": "income; income gap",
+    "terms_ar": "الدخل; فجوة الدخل",
+    "targets": "route:/people/",
+    "boundary_note_en": null,
+    "boundary_note_ar": null
+  },
+  {
+    "alias_id": "SEARCH-ALIAS-014",
+    "terms_en": "credit; lending",
+    "terms_ar": "الائتمان; الإقراض",
+    "targets": "route:/finance/ | route:/firms/",
+    "boundary_note_en": null,
+    "boundary_note_ar": null
+  },
+  {
+    "alias_id": "SEARCH-ALIAS-015",
+    "terms_en": "licensed banks; licensed bank; bank list",
+    "terms_ar": "البنوك المرخصة; بنوك مرخصة; قائمة البنوك",
+    "targets": "route:/providers/",
+    "boundary_note_en": null,
+    "boundary_note_ar": null
+  },
+  {
+    "alias_id": "SEARCH-ALIAS-016",
+    "terms_en": "remittance cost; remittance prices; transfer cost",
+    "terms_ar": "تكلفة التحويل; تكلفة الحوالات; رسوم التحويل",
+    "targets": "route:/remittances/",
+    "boundary_note_en": null,
+    "boundary_note_ar": null
+  },
+  {
+    "alias_id": "SEARCH-ALIAS-017",
+    "terms_en": "Aden; CBY Aden; CBY-Aden",
+    "terms_ar": "عدن; البنك المركزي في عدن",
+    "targets": "route:/providers/ | route:/data/",
+    "boundary_note_en": "Discovery aid only: CBY-Aden lists, decisions and statistics carry the scope of that authority; they do not describe all of Yemen.",
+    "boundary_note_ar": "وسيلة للعثور على المحتوى فقط: قوائم البنك المركزي اليمني في عدن وقراراته وإحصاءاته تحمل نطاق تلك السلطة، ولا تصف اليمن كله."
+  },
+  {
+    "alias_id": "SEARCH-ALIAS-018",
+    "terms_en": "deposits; deposit; bank deposits",
+    "terms_ar": "الودائع; ودائع; الودائع المصرفية",
+    "targets": "route:/finance/",
+    "boundary_note_en": null,
+    "boundary_note_ar": null
+  },
+  {
+    "alias_id": "SEARCH-ALIAS-019",
+    "terms_en": "SME finance; SME; SMEs; MSME; MSMEs; MSME finance; small business finance",
+    "terms_ar": "المنشآت الصغيرة والمتوسطة; تمويل المنشآت الصغيرة والمتوسطة; المنشآت الأصغر والصغيرة والمتوسطة; المنشآت الصغرى والصغيرة والمتوسطة",
+    "targets": "route:/firms/",
+    "boundary_note_en": null,
+    "boundary_note_ar": null
+  },
+  {
+    "alias_id": "SEARCH-ALIAS-020",
+    "terms_en": "RTGS; real-time gross settlement; real time gross settlement",
+    "terms_ar": "التسوية الإجمالية الفورية; نظام التسوية الإجمالية الفورية",
+    "targets": "route:/payments/ | route:/reforms/",
+    "boundary_note_en": null,
+    "boundary_note_ar": null
+  },
+  {
+    "alias_id": "SEARCH-ALIAS-021",
+    "terms_en": "FPS; fast payment system; fast payments",
+    "terms_ar": "نظام الدفع السريع; الدفع السريع; المدفوعات السريعة",
+    "targets": "route:/payments/ | route:/reforms/",
+    "boundary_note_en": null,
+    "boundary_note_ar": null
+  },
+  {
+    "alias_id": "SEARCH-ALIAS-022",
+    "terms_en": "consumer protection; financial consumer protection",
+    "terms_ar": "حماية المستهلك; حماية المستهلك المالي",
+    "targets": "route:/reforms/",
+    "boundary_note_en": null,
+    "boundary_note_ar": null
+  },
+  {
+    "alias_id": "SEARCH-ALIAS-023",
+    "terms_en": "complaints; complaint; complaint handling; redress",
+    "terms_ar": "الشكاوى; شكوى; معالجة الشكاوى; التظلم",
+    "targets": "route:/reforms/",
+    "boundary_note_en": "Discovery aid only: official guidance and instructions describe a complaint path and time limits, not how complaints are handled in practice.",
+    "boundary_note_ar": "وسيلة للعثور على المحتوى فقط: تصف الإرشادات والتعليمات الرسمية مسار الشكوى ومهلها، لا طريقة معالجة الشكاوى فعليًا."
+  },
+  {
+    "alias_id": "SEARCH-ALIAS-024",
+    "terms_en": "FMIIP; Financial Market Infrastructure and Inclusion Project",
+    "terms_ar": "FMIIP; مشروع البنية التحتية للأسواق المالية والشمول المالي; مشروع البنية التحتية للأسواق والشمول المالي",
+    "targets": "route:/reforms/ | route:/payments/",
+    "boundary_note_en": null,
+    "boundary_note_ar": null
+  },
+  {
+    "alias_id": "SEARCH-ALIAS-025",
+    "terms_en": "women; woman; female; gender; gender gap",
+    "terms_ar": "المرأة; امرأة; النساء; نساء; الإناث; النوع الاجتماعي; فجوة النوع الاجتماعي; الفجوة بين الجنسين",
+    "targets": "route:/people/",
+    "boundary_note_en": "Discovery aid only: the measured gap comes from one survey wave (the 2021 Findex wave; Yemen fieldwork 2022–23); it is not a 2026 figure and does not establish causes.",
+    "boundary_note_ar": "أداة اكتشاف فقط: الفجوة المقاسة مأخوذة من موجة مسحية واحدة (موجة Findex لعام 2021؛ العمل الميداني في اليمن 2022–2023)، وليست رقمًا لعام 2026 ولا تثبت الأسباب."
+  },
+  {
+    "alias_id": "SEARCH-ALIAS-026",
+    "terms_en": "humanitarian; cash transfer; cash transfers; social protection; G2P",
+    "terms_ar": "إنساني; المساعدات الإنسانية; التحويلات النقدية; الحماية الاجتماعية; مدفوعات الحكومة للأفراد",
+    "targets": "route:/readings/after-transfer-persistence/ | route:/payments/",
+    "boundary_note_en": null,
+    "boundary_note_ar": null
+  },
+  {
+    "alias_id": "SEARCH-ALIAS-027",
+    "terms_en": "licence; license; licensing; suspension; closure",
+    "terms_ar": "ترخيص; تراخيص; إيقاف; تعليق; إغلاق",
+    "targets": "route:/providers/ | document_type:decision/enforcement",
+    "boundary_note_en": null,
+    "boundary_note_ar": null
+  }
+]

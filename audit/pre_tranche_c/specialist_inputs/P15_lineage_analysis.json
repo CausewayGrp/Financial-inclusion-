@@ -1,0 +1,1744 @@
+{
+ "agent": "P15 Source, Lineage & Analytical Product (read-only)",
+ "master_sha256_observed": "4403a3536e218d537710c12cd0df5340a35c058b35f9f06ef0f401a16b9c6dbd",
+ "rule_applied": "Resolve only from governed Master evidence; dataset tokens never expanded to 'all sources in dataset'; a token is removed from a Reading only when the proposition it served is carried by a bound member record (shown) or it carries no proposition.",
+ "bound_partial": [
+  {
+   "object_id": "CLM-017",
+   "excel_row": 22,
+   "tokens": [
+    "SRC-CBY-POS-2026-01",
+    "UNBOUND:CBY-PAYMENTS-RELEASE-LISTING"
+   ],
+   "open": [
+    "UNBOUND:CBY-PAYMENTS-RELEASE-LISTING"
+   ],
+   "verdict": "CLOSE_TO",
+   "close_to": [
+    "SRC-CBY-POS-2026-01",
+    "SRC-CBY-POS-PUBLICATION-PAGE-2026-001"
+   ],
+   "confidence": "HIGH",
+   "evidence": [
+    "15 r70 SRC-CBY-POS-PUBLICATION-PAGE-2026-001 primary_url https://english.cby-ye.com/pages/27 (AR twin cby-ye.com/pages/11), datasets_or_use DS-PAYMENT-CURRENTNESS",
+    "15 r23-r33: all eleven monthly POS release records SRC-CBY-POS-2025-03..2026-01 carry additional_urls [\"https://english.cby-ye.com/pages/27\"] i.e. the listing page they are published on",
+    "16 r66 DS-PAYMENT-CURRENTNESS (origin 73_PAYMENT_CURRENTNESS = CLM-017's 07 evidence_input) analytical_role 'Controls latest exposed monthly POS period...' first sample source = SRC-CBY-POS-PUBLICATION-PAGE-2026-001",
+    "33 r124 CON-036 'monthly POS reaches Jan-2026' reviewed 2026-09-10 (optional CONTEXT anchor)",
+    "Stage-1 basis ('listing page ... has no source record') is factually superseded: the record exists at 15 r70",
+    "External corroboration (not governing): live fetch 2026-09-26 of english.cby-ye.com/pages/27 lists 'Monthly Point of Sale Transactions' Mar-2025..Jan-2026"
+   ],
+   "master_changes": [
+    {
+     "sheet": "06_EVIDENCE_OBJECTS",
+     "row": 22,
+     "field": "source_dependencies",
+     "from": "SRC-CBY-POS-2026-01; UNBOUND:CBY-PAYMENTS-RELEASE-LISTING",
+     "to": "SRC-CBY-POS-2026-01; SRC-CBY-POS-PUBLICATION-PAGE-2026-001 (optional: ; CON-036)"
+    },
+    {
+     "sheet": "06_EVIDENCE_OBJECTS",
+     "row": 22,
+     "field": "lineage_state",
+     "from": "BOUND_PARTIAL",
+     "to": "BOUND_EXACT"
+    },
+    {
+     "sheet": "06_EVIDENCE_OBJECTS",
+     "row": 22,
+     "field": "verification_en",
+     "from": "UI-VERIFY-PARTIAL text",
+     "to": "This record is drawn from the source(s) listed on this page. Open a source record to reach the original document, and check that the definition, period, population and geography match what is stated here."
+    },
+    {
+     "sheet": "06_EVIDENCE_OBJECTS",
+     "row": 22,
+     "field": "verification_ar",
+     "from": "UI-VERIFY-PARTIAL text",
+     "to": "يستند هذا السجل إلى المصدر أو المصادر المدرجة في هذه الصفحة. افتح سجل المصدر للوصول إلى الوثيقة الأصلية، وتحقق من تطابق التعريف والفترة والمجتمع والنطاق الجغرافي مع ما يرد هنا."
+    },
+    {
+     "sheet": "06_EVIDENCE_OBJECTS",
+     "row": 22,
+     "field": "source_links (optional)",
+     "from": "[SRC-CBY-POS-2026-01]",
+     "to": "+ {source_id: SRC-CBY-POS-PUBLICATION-PAGE-2026-001, url: https://english.cby-ye.com/pages/27}"
+    }
+   ]
+  },
+  {
+   "object_id": "VIS-PAYMENT-RAILS",
+   "excel_row": 79,
+   "open": [
+    "UNBOUND:REF-PAY-001"
+   ],
+   "verdict": "KEEP_PARTIAL",
+   "confidence": "HIGH",
+   "why": "31 r6 REF-PAY-001 (2024-06-26 unified domestic transfer network decision) cites https://cby-ye.com/files/667c596ef3bea.pdf; no 15 record carries that locator (primary or additional). Closure needs a new 15 source record = source promotion (SOURCE->VERIFY->ADJUDICATE->MASTER FIRST), not a binding from existing evidence.",
+   "candidate_promotion": {
+    "locator": "https://cby-ye.com/files/667c596ef3bea.pdf",
+    "governed_origin": "31_REFORMS_REGULATION r6 REF-PAY-001"
+   }
+  },
+  {
+   "object_id": "CLM-045",
+   "excel_row": 89,
+   "open": [
+    "DS-K04-CASH-FIN-TRANSMISSION"
+   ],
+   "verdict": "CLOSE_TO (Lead confirm; renderer precondition)",
+   "close_to": [
+    "SRC-WB-G2PX-YEM-UCT-2024-001",
+    "SRC-CCY-SAM-2024",
+    "SRC-CCY-ISP-2024",
+    "SRC-CCY-PRESSURE-2026"
+   ],
+   "confidence": "MEDIUM-HIGH",
+   "evidence": [
+    "Claim names four links: cash delivery, usability, resilience, local financial relationships (06 r89 summary_en)",
+    "delivery -> SRC-WB-G2PX-YEM-UCT-2024-001 (already bound; 15 r163 why_it_matters)",
+    "usability -> 32 r91 QQL-014 (quant_object DS-K04-CASH-FIN-TRANSMISSION; 'Cash-out friction explains why successful electronic delivery may still fail usability') -> 32 r42 QUAL-018 source_id SRC-CCY-PRESSURE-2026",
+    "resilience / relational finance -> 32 r90 QQL-013 (DS-K04-CASH-FIN-TRANSMISSION; 'contextualize resilience and household finance') -> 32 r40 QUAL-016 SRC-CCY-ISP-2024",
+    "local financial relationships -> 32 r89 QQL-012 (DS-K04-CASH-FIN-TRANSMISSION; local circulation) -> 32 r38 QUAL-014 SRC-CCY-SAM-2024",
+    "Selection is row-level (3 of the dataset's 6 library sources); SRC-CCY-CASH-DURATION-2026, SRC-CCY-AMAL-2025 and SRC-WB-RPW-KSA-YEM-2025Q3 are NOT added (no governed link-level row to CLM-045's named links)"
+   ],
+   "risks": [
+    "Three CCY sources are USER_PROVIDED_FILE with no public locator; build.py evidence_sources() suppresses them and, because a public G2PX card exists and the record would be CLOSED, shows neither the lineage statement nor the 'no public locator' note: the page would imply G2PX is the only source. Precondition: renderer must disclose suppressed bound sources (or keep KEEP_PARTIAL until fixed).",
+    "Rights NOT_ASSESSED for CCY files (same as CLM-044 precedent)."
+   ],
+   "master_changes": [
+    {
+     "sheet": "06_EVIDENCE_OBJECTS",
+     "row": 89,
+     "field": "source_dependencies",
+     "from": "SRC-WB-G2PX-YEM-UCT-2024-001; EP-YEM-CASH-FIN-TRANSMISSION-K04; DS-K04-CASH-FIN-TRANSMISSION",
+     "to": "SRC-WB-G2PX-YEM-UCT-2024-001; SRC-CCY-SAM-2024; SRC-CCY-ISP-2024; SRC-CCY-PRESSURE-2026; EP-YEM-CASH-FIN-TRANSMISSION-K04"
+    },
+    {
+     "sheet": "06_EVIDENCE_OBJECTS",
+     "row": 89,
+     "field": "lineage_state",
+     "from": "BOUND_PARTIAL",
+     "to": "BOUND_EXACT"
+    },
+    {
+     "sheet": "06_EVIDENCE_OBJECTS",
+     "row": 89,
+     "field": "verification_en/ar",
+     "from": "UI-VERIFY-PARTIAL",
+     "to": "UI-VERIFY-BOUND"
+    }
+   ]
+  },
+  {
+   "object_id": "CLM-046",
+   "excel_row": 90,
+   "open": [
+    "DS-K04-SAUDI-SUPPORT-TRANSMISSION"
+   ],
+   "verdict": "KEEP_PARTIAL",
+   "confidence": "HIGH",
+   "why": "The claim's 'in-kind support and project cost' states rest on the Saudi Aid Platform (16 r181 sample source) which has no 15 record; 'pledge/commitment' rests on AidData (bound). Remaining states are demonstrable (see optional precision) but the record cannot close.",
+   "optional_precision": {
+    "add_bound": [
+     "SRC-SPA-SAU-CBY-DEPOSIT-2018-001",
+     "SRC-SPA-SAU-CBY-DEPOSIT-2023-001",
+     "SRC-IMF-AIV-2025-STAFF-001",
+     "SRC-SPA-SAU-BUDGET-2026-001"
+    ],
+    "evidence": "14 r9 YSC-005 (2018 agreement/deposit), r13 YSC-009 (2023 deposit), r14 YSC-010 (IMF: budget support, amount made available, FX auctions), r24 YSC-019 (2026 SDRPY budget-support agreement) - each with source_ids; interpretation notes restate CLM-046's no-summing rule. Link to CLM-046 is by identical subject/state vocabulary, not an explicit ID - Lead decision.",
+    "note": "Stage-1 basis says SPA/SDRPY/IMF documents 'are not' in the library - inaccurate for SPA 2018/2023/2026 and IMF AIV staff report."
+   }
+  },
+  {
+   "object_id": "CLM-056",
+   "excel_row": 100,
+   "open": [
+    "DS-V041-STRICT-COUNSEL"
+   ],
+   "verdict": "KEEP_PARTIAL now -> CLOSE_TO SRC-SANAA-MF-2020 after one Master-first data step",
+   "confidence": "governed pointer HIGH; row-level data ABSENT",
+   "evidence": [
+    "07 r59 CLM-056 evidence_inputs names SRC-SANAA-MF-2020",
+    "08 r10 CWR-006 source_bindings/verification direct_source_ids name SRC-SANAA-MF-2020 (Reading section 2 carries 91.98/82.45)",
+    "33 r102 INS-K04-024 (text = the 91.98/82.45 statement) evidence '201;CON-057;SRC-SANAA-MF-2020;SRC-WB-FSD-2024-001'",
+    "16 r202 DS-V041-STRICT-COUNSEL source_id_count 1, sample 'SRC-SANAA-MF-2020 + governed IMF/SFD/Sana'a sources', role 'reproducible historical arithmetic for ... CLM-056/91%'",
+    "17 r180/181 MFB91-D01/D02 define the two diagnostics but carry no source column",
+    "No 21 row carries Kuraimi or industry saver values for 2016/2019 (21 spine r100 2016-Q3 savers 603,012 from SRC-SFD-Q3-2016-001; 2019 savers UNKNOWN)",
+    "External check (not governing): Sana'a Center 'Rethinking Yemen's Economy No.6' Figure 6 (machine-read) gives Kuraimi 431,756 (2016) / 1,062,962 (2019), industry 603,012 / 1,289,251 -> (1,062,962-431,756)/(1,289,251-603,012)=91.98%; 1,062,962/1,289,251=82.45%. Both figures reproduce exactly. Requires human confirmation against the PDF."
+   ],
+   "path_to_close": "Lead verifies Figure 6 values -> Master-first add governed data rows (e.g. 21 provider panel: KURAIMI 2016 and 2019 voluntary depositors; industry totals) citing SRC-SANAA-MF-2020 -> 06 r100 source_dependencies replace DS-V041-STRICT-COUNSEL with SRC-SANAA-MF-2020 -> BOUND_EXACT."
+  },
+  {
+   "object_id": "CLM-039",
+   "excel_row": 110,
+   "open": [
+    "DS-K04-REMIT-SOURCE-LENSES"
+   ],
+   "verdict": "KEEP_PARTIAL",
+   "confidence": "HIGH",
+   "why": "No governed row identifies which 'other World Bank surfaces' or 'prior documented access vintages' exposed later Yemen observations (33 r133 CON-045 and 34 r43 passport describe them only generically). Candidates in the dataset (SRC-WB-MDB40-2024, SRC-IGC-AIDDATA-REMIT-YEM-2026, SRC-ACAPS-YEM-REMIT-2021) would be dataset expansion."
+  }
+ ],
+ "composites_unlisted": [
+  {
+   "object_id": "VIS-DEMAND-VINTAGE-LADDER",
+   "excel_row": 53,
+   "verdict": "LIST_MEMBERS",
+   "members": [
+    "CLM-001",
+    "CLM-027",
+    "CLM-028",
+    "CLM-029",
+    "CLM-030",
+    "VIS-FINDEX-RESILIENCE",
+    "VIS-FINDEX-BARRIERS"
+   ],
+   "confidence": "HIGH for five CLM (same text and precedent as CLM-031 members); MEDIUM for the two HOLD contracts",
+   "evidence": "06 r53 universe_en enumerates 'access, saving, borrowing, remittances, resilience and barriers'; summary: access 2022 (CLM-001; 2011/2014 anchors CLM-027), saving 2014 (CLM-029), borrowing 2014 (CLM-028), remittance 2014 (CLM-030), resilience/barriers 'await calculation' (VIS-FINDEX-RESILIENCE r45, VIS-FINDEX-BARRIERS r44, HOLD, no estimate). Parity: CLM-031 r51 members CLM-001/027/028/029/030 (Stage-1 PB note).",
+   "master_changes": [
+    {
+     "sheet": "06_EVIDENCE_OBJECTS",
+     "row": 53,
+     "field": "source_dependencies",
+     "from": "(empty)",
+     "to": "CLM-001; CLM-027; CLM-028; CLM-029; CLM-030; VIS-FINDEX-RESILIENCE; VIS-FINDEX-BARRIERS"
+    },
+    {
+     "sheet": "06_EVIDENCE_OBJECTS",
+     "row": 53,
+     "field": "verification_en/ar",
+     "from": "UI-VERIFY-COMPOSITE-UNLISTED",
+     "to": "UI-VERIFY-COMPOSITE"
+    }
+   ]
+  },
+  {
+   "object_id": "DS-FINDEX-HISTORY-CROSSWALK",
+   "excel_row": 57,
+   "verdict": "LIST_MEMBERS",
+   "members": [
+    "DS-FINDEX-PUBLIC-HISTORY",
+    "CLM-026"
+   ],
+   "confidence": "MEDIUM",
+   "evidence": "06 r57 'linking 36 historical Findex metrics to the latest-wave panel contracts'; 16 r101 role 'Maps 36 historical metrics to latest-wave panel contracts'; historical side = 107 = 06 r56 DS-FINDEX-PUBLIC-HISTORY (same ID/title); panel-contract side = 85_FINDEX_PANEL_CATALOG whose governed record is CLM-026 (07 evidence_inputs; 06 r41 '32-metric demand-side panel has been specified').",
+   "caveat": "Comparability rules also rest on Findex methodological notes identified only at dataset level; the crosswalk asserts no figure of its own, so a members-only listing is truthful. Lead may prefer KEEP_UNLISTED.",
+   "master_changes": [
+    {
+     "sheet": "06_EVIDENCE_OBJECTS",
+     "row": 57,
+     "field": "source_dependencies",
+     "from": "(empty)",
+     "to": "DS-FINDEX-PUBLIC-HISTORY; CLM-026"
+    },
+    {
+     "sheet": "06_EVIDENCE_OBJECTS",
+     "row": 57,
+     "field": "verification_en/ar",
+     "from": "UI-VERIFY-COMPOSITE-UNLISTED",
+     "to": "UI-VERIFY-COMPOSITE"
+    }
+   ]
+  },
+  {
+   "object_id": "DS-QUAL-EVIDENCE",
+   "excel_row": 20,
+   "verdict": "KEEP_UNLISTED (members); ALTERNATIVE for Lead: restate BOUND_EXACT",
+   "why": "Register = the 20 rows of 32 block 'Qualitative evidence' (r25-r44); only QUAL-001 is a 06 record, so member listing is impossible without inventing records.",
+   "alternative": {
+    "to_state": "BOUND_EXACT",
+    "sources": [
+     "SRC-OECD-YEM-RESILIENCE-001",
+     "SRC-AJMBFS-CBY-FI-2025-001",
+     "SRC-CCY-REMIT-ESTIMATE-2025",
+     "SRC-CCY-SAM-2024",
+     "SRC-CCY-CASH-DURATION-2026",
+     "SRC-CCY-ISP-2024",
+     "SRC-CCY-AMAL-2025",
+     "SRC-CCY-PRESSURE-2026",
+     "SRC-AIDDATA-SAUDI-YEM-2015",
+     "SRC-IMF-D4D-YEM-ESS-2025"
+    ],
+    "basis": "Row-level: each of the 20 register items carries an exact 15 source_id in 32 (precedent: VIS-MFI-SPINE bound from 21 row-level source_ids). Current UNLISTED text ('not yet linked individually here') implies a linkage that cannot exist. Six sources have no public locator (same renderer caveat as CLM-045)."
+   }
+  },
+  {
+   "object_id": "VIS-INCLUSION-TRANSMISSION",
+   "excel_row": 11,
+   "verdict": "KEEP_UNLISTED",
+   "why": "11 r12 data_inputs 'System relationship objects + public page bindings'; 13 SL-001..026 are route-to-route links (evidence_refs empty except DS-SYSTEM-CHRONOLOGY); only SL-016/017/018 anchor CLM-003/CLM-001/CLM-008 - listing three records would misstate a 6-7 layer map."
+  },
+  {
+   "object_id": "VIS-EVIDENCE-FRESHNESS",
+   "excel_row": 12,
+   "verdict": "KEEP_UNLISTED",
+   "why": "11 r7 data_inputs are dataset/passport-level (01_DATASET_INDEX + 22_RESEARCH_COVERAGE + 45_EVIDENCE_PASSPORTS + 57_EVIDENCE_FUSION_MAP); universe = all records by vintage; no enumerated member set."
+  },
+  {
+   "object_id": "VIS-SOURCE-COMPARISON",
+   "excel_row": 13,
+   "verdict": "KEEP_UNLISTED",
+   "why": "Members are user-selected; 49_METRIC_CROSSWALK rows XW-* are 33 context rows (only XW-FMIIP-005 is a 06 record). Candidate selection set = records routed to /evidence/compare/ (CLM-010,032,033,035,037,041,044,051,054,056) if the Lead wants a fixed list."
+  },
+  {
+   "object_id": "VIS-MECHANISM-METRIC-BRIDGE",
+   "excel_row": 17,
+   "verdict": "KEEP_UNLISTED",
+   "why": "Edges are 32 QQL-001..016 linking QUAL rows (only QUAL-001 is a 06 record) to dataset-level quant objects."
+  },
+  {
+   "object_id": "VIS-PROVIDER-OBSERVABILITY",
+   "excel_row": 18,
+   "verdict": "KEEP_UNLISTED",
+   "why": "No governed badge->record mapping; 'operation/activity' and 'payment-system operator' cells have no records. Inferential candidates: CLM-008, CLM-055, CLM-009, CLM-016, CLM-019, PSE-011, CLM-010, CLM-015, NEG-EW-011, CLM-012, CLM-018."
+  },
+  {
+   "object_id": "DS-DEMAND-VINTAGE-LENS",
+   "excel_row": 58,
+   "verdict": "KEEP_UNLISTED",
+   "why": "Ten functions (109 table not in Master); governed records exist for at most seven (no record for financial worry or connectivity); partial listing would mislead."
+  },
+  {
+   "object_id": "CLM-014",
+   "excel_row": 63,
+   "verdict": "KEEP_UNLISTED",
+   "why": "Text says 'several payments/regulatory observations' and 'key representative people-side evidence' without naming records; 07 evidence_inputs are dataset-level. Editorial candidates: CLM-003, CLM-012, CLM-018 (2025-26) vs CLM-001, CLM-031 (older)."
+  },
+  {
+   "object_id": "VIS-EVIDENCE-GAPS",
+   "excel_row": 78,
+   "verdict": "KEEP_UNLISTED",
+   "why": "11 r8 data_inputs prose; gaps are typed states (governed gap register is 10_MEASUREMENT_AGENDA, not 06 records)."
+  },
+  {
+   "object_id": "VIS-EVIDENCE-CLASS-LADDER",
+   "excel_row": 80,
+   "verdict": "KEEP_UNLISTED",
+   "why": "Universe 'documented evidence objects only' = whole corpus by class; no enumerated member set."
+  }
+ ],
+ "provider_time": {
+  "object_id": "VIS-PROVIDER-TIME",
+  "excel_row": 14,
+  "verdict": "BIND_AS_COMPOSITE",
+  "members": [
+   "CLM-009",
+   "CLM-019"
+  ],
+  "confidence": "HIGH",
+  "evidence": "06 r14 summary 'roster by the classes the source defines' = CLM-009 r7 (98/225/106 by roster class; SRC-CBY-EXCH-LIST-2026-001); 'later dated enforcement events shown separately' + method 'Do not subtract events mechanically' = CLM-019 r24 (roster + 13 ENF decisions; 'must not be mechanically subtracted'). Stage-1 SNYB basis ('BLOCKED ... no public render') is superseded: 06 visual_contract_state now NO_GOVERNED_CONTRACT__TABLE_ONLY; lineage and render state are separate axes.",
+  "master_changes": [
+   {
+    "sheet": "06_EVIDENCE_OBJECTS",
+    "row": 14,
+    "field": "source_dependencies",
+    "from": "(empty)",
+    "to": "CLM-009; CLM-019"
+   },
+   {
+    "sheet": "06_EVIDENCE_OBJECTS",
+    "row": 14,
+    "field": "lineage_state",
+    "from": "SOURCE_NOT_YET_BOUND",
+    "to": "COMPOSITE_OF_OBJECTS"
+   },
+   {
+    "sheet": "06_EVIDENCE_OBJECTS",
+    "row": 14,
+    "field": "verification_en",
+    "from": "UI-EVID-UNBOUND text",
+    "to": "This view assembles other evidence records. Check each linked record against its own source."
+   },
+   {
+    "sheet": "06_EVIDENCE_OBJECTS",
+    "row": 14,
+    "field": "verification_ar",
+    "from": "UI-EVID-UNBOUND text",
+    "to": "يجمع هذا العرض سجلات أدلة أخرى، فتحقق من كل سجل مرتبط مقابل مصدره الخاص."
+   }
+  ]
+ },
+ "readings": {
+  "CWR-001": {
+   "verdict_now": "PARTIAL_PATH",
+   "verdict_after": "FULL_PATH (08-only)",
+   "gaps_now": [
+    "1.838 CBY/IMF ratio (section 5 + prohibited_inference) -> CLM-042/CLM-041 not bound",
+    "IMF 33% population share -> CLM-041 not bound",
+    "E&O not hidden remittances -> CLM-043 not bound",
+    "CCY >=US$7.4bn not a baseline -> CLM-044 not bound (source has no public locator)"
+   ],
+   "propositions": [
+    [
+     "2024 remittance: AR2024 USD 6.245bn vs AR2025 restated ~USD 3.42bn (thesis, s1, s2)",
+     "CLM-032",
+     "SRC-CBY-AR2024-BOP; SRC-CBY-AR2025-BOP",
+     "bound"
+    ],
+    [
+     "IMF 2024-25 ESS reconstruction incl. demographic-behavioural model (s2)",
+     "CLM-036",
+     "SRC-IMF-D4D-YEM-ESS-2025; SRC-IMF-YEM-AIV-2025-2026",
+     "bound"
+    ],
+    [
+     "2021=100 paths ~identical; max growth diff ~0.0032 pp (s2, s3)",
+     "CLM-037",
+     "SRC-CBY-AR2025-BOP; SRC-IMF-YEM-AIV-2025-2026",
+     "bound"
+    ],
+    [
+     "~1.838 constant ratio not a conversion (s5, prohibited)",
+     "CLM-042 (+CLM-041 limitations)",
+     "SRC-CBY-AR2025-BOP; SRC-IMF-YEM-AIV-2025-2026",
+     "NOT BOUND"
+    ],
+    [
+     "IMF 33% population share not universal (s5, prohibited)",
+     "CLM-041",
+     "SRC-CBY-AR2025-BOP; SRC-IMF-YEM-AIV-2025-2026",
+     "NOT BOUND"
+    ],
+    [
+     "E&O not hidden remittances (s5, prohibited)",
+     "CLM-043",
+     "SRC-CBY-AR2025-BOP",
+     "NOT BOUND"
+    ],
+    [
+     "CCY >=US$7.4bn is a model, not a baseline (s5, prohibited)",
+     "CLM-044",
+     "SRC-CCY-REMIT-ESTIMATE-2025 (no public locator)",
+     "NOT BOUND"
+    ]
+   ],
+   "excel_row": 5,
+   "08_changes": {
+    "excel_row": 5,
+    "source_bindings": {
+     "frm": [
+      "K04-CBY-060",
+      "173_CBY_ANNUAL_VINTAGES",
+      "AVA-004",
+      "EP-CBY-REMITTANCE-VINTAGE-K04",
+      "EP-IMF-CBY-REMIT-METHOD-K04",
+      "181_REMITTANCE_METHOD_RECON",
+      "SRC-CBY-AR2024-BOP",
+      "SRC-CBY-AR2025-BOP"
+     ],
+     "to": [
+      "K04-CBY-060",
+      "AVA-004",
+      "EP-CBY-REMITTANCE-VINTAGE-K04",
+      "EP-IMF-CBY-REMIT-METHOD-K04",
+      "SRC-CBY-AR2024-BOP",
+      "SRC-CBY-AR2025-BOP"
+     ]
+    },
+    "evidence_bindings": {
+     "frm": [
+      "CLM-032",
+      "CLM-036",
+      "CLM-037",
+      "181",
+      "186",
+      "191"
+     ],
+     "to": [
+      "CLM-032",
+      "CLM-036",
+      "CLM-037",
+      "CLM-041",
+      "CLM-042",
+      "CLM-043",
+      "CLM-044"
+     ]
+    },
+    "claim_bindings": {
+     "frm": [
+      "CLM-032",
+      "CLM-036",
+      "CLM-037"
+     ],
+     "to": [
+      "CLM-032",
+      "CLM-036",
+      "CLM-037",
+      "CLM-041",
+      "CLM-042",
+      "CLM-043",
+      "CLM-044"
+     ]
+    },
+    "verification_claim_ids": {
+     "frm": [
+      "CLM-032",
+      "CLM-036",
+      "CLM-037"
+     ],
+     "to": [
+      "CLM-032",
+      "CLM-036",
+      "CLM-037",
+      "CLM-041",
+      "CLM-042",
+      "CLM-043",
+      "CLM-044"
+     ]
+    },
+    "verification_dependency_ids": {
+     "frm": [
+      "K04-CBY-060",
+      "173_CBY_ANNUAL_VINTAGES",
+      "AVA-004",
+      "EP-CBY-REMITTANCE-VINTAGE-K04",
+      "EP-IMF-CBY-REMIT-METHOD-K04",
+      "181_REMITTANCE_METHOD_RECON"
+     ],
+     "to": [
+      "K04-CBY-060",
+      "AVA-004",
+      "EP-CBY-REMITTANCE-VINTAGE-K04",
+      "EP-IMF-CBY-REMIT-METHOD-K04"
+     ]
+    }
+   },
+   "removed_token_carriers": {
+    "173_CBY_ANNUAL_VINTAGES": [
+     "CLM-032"
+    ],
+    "181_REMITTANCE_METHOD_RECON": [
+     "CLM-036",
+     "CLM-037",
+     "CLM-042"
+    ],
+    "181": [
+     "CLM-036",
+     "CLM-037",
+     "CLM-042"
+    ],
+    "186": [],
+    "191": [
+     "CLM-041",
+     "CLM-042"
+    ]
+   }
+  },
+  "CWR-002": {
+   "verdict_now": "PARTIAL_PATH (dataset tokens only)",
+   "verdict_after": "FULL_PATH",
+   "gaps_now": [],
+   "propositions": [
+    [
+     "Same 2022 banking positions higher from AR2023 with Jan-2023 valuation shift (thesis, s2)",
+     "CLM-033",
+     "SRC-CBY-AR2022-001; SRC-CBY-AR2023-001",
+     "bound"
+    ],
+    [
+     "1996 precedent vs separate Jan-2023 change; standards not identical (s2, s3)",
+     "CLM-038",
+     "SRC-IMF-YEM-EGDDS-VAL-1996; SRC-CBY-AR2023-001",
+     "bound"
+    ],
+    [
+     "Exact Jan-2023 circular not in evidence base (s7)",
+     "absence statement; context EP-CBY-BANKING-VALUATION-LINEAGE-K04",
+     "-",
+     "n/a"
+    ]
+   ],
+   "excel_row": 6,
+   "08_changes": {
+    "excel_row": 6,
+    "source_bindings": {
+     "frm": [
+      "K04-CBY-061",
+      "173_CBY_ANNUAL_VINTAGES",
+      "AVA-005..008",
+      "EP-CBY-BANKING-REVAL-K04",
+      "185_BANKING_VALUATION_RECON",
+      "EP-CBY-BANKING-VALUATION-LINEAGE-K04",
+      "SRC-CBY-AR2022-001",
+      "SRC-CBY-AR2023-001",
+      "SRC-IMF-YEM-EGDDS-VAL-1996"
+     ],
+     "to": [
+      "K04-CBY-061",
+      "AVA-005..008",
+      "EP-CBY-BANKING-REVAL-K04",
+      "EP-CBY-BANKING-VALUATION-LINEAGE-K04",
+      "SRC-CBY-AR2022-001",
+      "SRC-CBY-AR2023-001",
+      "SRC-IMF-YEM-EGDDS-VAL-1996"
+     ]
+    },
+    "evidence_bindings": {
+     "frm": [
+      "CLM-033",
+      "CLM-038",
+      "173",
+      "174",
+      "185"
+     ],
+     "to": [
+      "CLM-033",
+      "CLM-038"
+     ]
+    },
+    "claim_bindings": {
+     "frm": [
+      "CLM-033",
+      "CLM-038"
+     ],
+     "to": [
+      "CLM-033",
+      "CLM-038"
+     ]
+    },
+    "verification_claim_ids": {
+     "frm": [
+      "CLM-033",
+      "CLM-038"
+     ],
+     "to": [
+      "CLM-033",
+      "CLM-038"
+     ]
+    },
+    "verification_dependency_ids": {
+     "frm": [
+      "K04-CBY-061",
+      "173_CBY_ANNUAL_VINTAGES",
+      "AVA-005..008",
+      "EP-CBY-BANKING-REVAL-K04",
+      "185_BANKING_VALUATION_RECON",
+      "EP-CBY-BANKING-VALUATION-LINEAGE-K04"
+     ],
+     "to": [
+      "K04-CBY-061",
+      "AVA-005..008",
+      "EP-CBY-BANKING-REVAL-K04",
+      "EP-CBY-BANKING-VALUATION-LINEAGE-K04"
+     ]
+    }
+   },
+   "removed_token_carriers": {
+    "173_CBY_ANNUAL_VINTAGES": [
+     "CLM-033"
+    ],
+    "185_BANKING_VALUATION_RECON": [
+     "CLM-038"
+    ],
+    "173": [
+     "CLM-033"
+    ],
+    "174": [],
+    "185": [
+     "CLM-038"
+    ]
+   }
+  },
+  "CWR-003": {
+   "verdict_now": "PARTIAL_PATH (dataset tokens only)",
+   "verdict_after": "FULL_PATH",
+   "gaps_now": [
+    "XW-FMIIP-005 carries the 'target vs unit' thesis but is absent from the 'Verify this reading' list"
+   ],
+   "propositions": [
+    [
+     "Evidence mixes different units; accounts/subscribers/transactions != people (thesis, s2)",
+     "CLM-004",
+     "FRAMING_NO_FACT",
+     "bound"
+    ],
+    [
+     "Targets mislead when unit changes baseline->monitoring->outcome (thesis)",
+     "XW-FMIIP-005",
+     "SRC-UNDP-FMIIP-001; SRC-CBY-PAYREPORT-H1-2025",
+     "bound (evidence_bindings only)"
+    ],
+    [
+     "Findex 2021: 1,000 respondents; fieldwork 7-Nov-2022..9-Jan-2023; weights (s2, s3)",
+     "CLM-023",
+     "SRC-WB-FINDEX-001",
+     "bound"
+    ],
+    [
+     "Raw case shares not population estimates (s2, s3)",
+     "CLM-024",
+     "SRC-WB-FINDEX-001",
+     "bound"
+    ],
+    [
+     "~23% population excluded; >1/4 PSUs replaced (s2)",
+     "CLM-025",
+     "SRC-WB-FINDEX-001",
+     "bound"
+    ]
+   ],
+   "excel_row": 7,
+   "08_changes": {
+    "excel_row": 7,
+    "source_bindings": {
+     "frm": [
+      "11_CBY_PAYMENTS",
+      "49_METRIC_CROSSWALK",
+      "CTR-006",
+      "25_FINDEX_META",
+      "26_FINDEX_VARS",
+      "SRC-WB-FINDEX-001",
+      "87_FINDEX_DENOMINATOR_STRESS",
+      "29_FINDEX_RULES",
+      "EP-FINDEX-2022-ACCOUNT",
+      "85_FINDEX_PANEL_CATALOG",
+      "86_FINDEX_SUBGROUP_MATRIX",
+      "89_FINDEX_MICRODATA_GATE"
+     ],
+     "to": [
+      "CTR-006",
+      "SRC-WB-FINDEX-001",
+      "EP-FINDEX-2022-ACCOUNT"
+     ]
+    },
+    "evidence_bindings": {
+     "frm": [
+      "CLM-004",
+      "CLM-023",
+      "CLM-024",
+      "CLM-025",
+      "CLM-026",
+      "49_METRIC_CROSSWALK",
+      "XW-FMIIP-005"
+     ],
+     "to": [
+      "CLM-004",
+      "CLM-023",
+      "CLM-024",
+      "CLM-025",
+      "CLM-026",
+      "XW-FMIIP-005"
+     ]
+    },
+    "claim_bindings": {
+     "frm": [
+      "CLM-004",
+      "CLM-023",
+      "CLM-024",
+      "CLM-025",
+      "CLM-026"
+     ],
+     "to": [
+      "CLM-004",
+      "CLM-023",
+      "CLM-024",
+      "CLM-025",
+      "CLM-026"
+     ]
+    },
+    "verification_claim_ids": {
+     "frm": [
+      "CLM-004",
+      "CLM-023",
+      "CLM-024",
+      "CLM-025",
+      "CLM-026"
+     ],
+     "to": [
+      "CLM-004",
+      "CLM-023",
+      "CLM-024",
+      "CLM-025",
+      "CLM-026",
+      "XW-FMIIP-005"
+     ]
+    },
+    "verification_dependency_ids": {
+     "frm": [
+      "11_CBY_PAYMENTS",
+      "49_METRIC_CROSSWALK",
+      "CTR-006",
+      "25_FINDEX_META",
+      "26_FINDEX_VARS",
+      "87_FINDEX_DENOMINATOR_STRESS",
+      "29_FINDEX_RULES",
+      "EP-FINDEX-2022-ACCOUNT",
+      "85_FINDEX_PANEL_CATALOG",
+      "86_FINDEX_SUBGROUP_MATRIX",
+      "89_FINDEX_MICRODATA_GATE"
+     ],
+     "to": [
+      "CTR-006",
+      "EP-FINDEX-2022-ACCOUNT"
+     ]
+    }
+   },
+   "removed_token_carriers": {
+    "11_CBY_PAYMENTS": [
+     "CLM-004"
+    ],
+    "49_METRIC_CROSSWALK": [
+     "CLM-004"
+    ],
+    "25_FINDEX_META": [
+     "CLM-023",
+     "CLM-025"
+    ],
+    "26_FINDEX_VARS": [
+     "CLM-023"
+    ],
+    "87_FINDEX_DENOMINATOR_STRESS": [
+     "CLM-024"
+    ],
+    "29_FINDEX_RULES": [
+     "CLM-024"
+    ],
+    "85_FINDEX_PANEL_CATALOG": [
+     "CLM-026"
+    ],
+    "86_FINDEX_SUBGROUP_MATRIX": [
+     "CLM-026"
+    ],
+    "89_FINDEX_MICRODATA_GATE": [
+     "CLM-026"
+    ]
+   }
+  },
+  "CWR-004": {
+   "verdict_now": "PARTIAL_PATH",
+   "verdict_after": "FULL_PATH (08-only)",
+   "gaps_now": [
+    "'material geographic exclusions' (s3) -> CLM-025 not bound",
+    "'official records show payment-architecture institutionalization in 2026' (s3, thesis) -> CLM-018 not bound"
+   ],
+   "propositions": [
+    [
+     "11.9% account ownership, 2021 wave, fieldwork 2022-23 (s2, s3)",
+     "CLM-001",
+     "SRC-WB-FINDEX-AGG-2022; SRC-WB-FINDEX-2025-EDITION",
+     "bound"
+    ],
+    [
+     "POS 561 (Mar-2025) -> 1,473 (Jan-2026) (s2, s3)",
+     "CLM-003",
+     "SRC-CBY-POS-2025-03; SRC-CBY-POS-2026-01",
+     "bound"
+    ],
+    [
+     "IMF SLA 16-Jul-2026, 18-month SMP, conditional (s2, s3)",
+     "CLM-049",
+     "SRC-IMF-YEM-SMP-2026",
+     "bound"
+    ],
+    [
+     "Material geographic exclusions (s3)",
+     "CLM-025",
+     "SRC-WB-FINDEX-001",
+     "NOT BOUND"
+    ],
+    [
+     "2026 payment-architecture institutionalization (thesis, s3)",
+     "CLM-018",
+     "SRC-CBY-UNIFIED-NET-2026-001; SRC-CBY-BANK-NETWORK-MTG-2026-001; SRC-CBY-YPCC-FOUND-2026-001; SRC-CBY-YPCC-BOARD-2026-001",
+     "NOT BOUND"
+    ]
+   ],
+   "excel_row": 8,
+   "08_changes": {
+    "excel_row": 8,
+    "source_bindings": {
+     "frm": [
+      "EP-FINDEX-2022-ACCOUNT",
+      "28_FINDEX_OBS",
+      "11_CBY_PAYMENTS",
+      "EP-CBY-POS-MONTHLY",
+      "194",
+      "SRC-IMF-YEM-SMP-2026"
+     ],
+     "to": [
+      "EP-FINDEX-2022-ACCOUNT",
+      "EP-CBY-POS-MONTHLY",
+      "SRC-IMF-YEM-SMP-2026"
+     ]
+    },
+    "evidence_bindings": {
+     "frm": [
+      "CLM-001",
+      "CLM-003",
+      "CLM-049",
+      "48_REFORM_EVENTS",
+      "73_PAYMENT_CURRENTNESS",
+      "107_FINDEX_PUBLIC_HISTORY"
+     ],
+     "to": [
+      "CLM-001",
+      "CLM-003",
+      "CLM-049",
+      "CLM-018",
+      "CLM-025"
+     ]
+    },
+    "claim_bindings": {
+     "frm": [
+      "CLM-001",
+      "CLM-003",
+      "CLM-049"
+     ],
+     "to": [
+      "CLM-001",
+      "CLM-003",
+      "CLM-049",
+      "CLM-018",
+      "CLM-025"
+     ]
+    },
+    "verification_claim_ids": {
+     "frm": [
+      "CLM-001",
+      "CLM-003",
+      "CLM-049"
+     ],
+     "to": [
+      "CLM-001",
+      "CLM-003",
+      "CLM-049",
+      "CLM-018",
+      "CLM-025"
+     ]
+    },
+    "verification_dependency_ids": {
+     "frm": [
+      "EP-FINDEX-2022-ACCOUNT",
+      "28_FINDEX_OBS",
+      "11_CBY_PAYMENTS",
+      "EP-CBY-POS-MONTHLY",
+      "194"
+     ],
+     "to": [
+      "EP-FINDEX-2022-ACCOUNT",
+      "EP-CBY-POS-MONTHLY"
+     ]
+    }
+   },
+   "removed_token_carriers": {
+    "28_FINDEX_OBS": [
+     "CLM-001"
+    ],
+    "11_CBY_PAYMENTS": [
+     "CLM-003"
+    ],
+    "194": [
+     "CLM-049"
+    ],
+    "48_REFORM_EVENTS": [],
+    "73_PAYMENT_CURRENTNESS": [
+     "CLM-018"
+    ],
+    "107_FINDEX_PUBLIC_HISTORY": []
+   }
+  },
+  "CWR-005": {
+   "verdict_now": "PARTIAL_PATH (dataset tokens only)",
+   "verdict_after": "FULL_PATH",
+   "gaps_now": [],
+   "propositions": [
+    [
+     "807,919 e-money accounts Dec-2019; 23% dormant; one-time/imposed use (thesis, s2, s3)",
+     "CLM-050",
+     "SRC-IBS-EPAY-YEM-2020",
+     "bound"
+    ],
+    [
+     "57.03% cash-in/out, 29.97% bank<->e-account, 2.41% bills+purchases (CauseWay grouping) (s2, s3)",
+     "CLM-051",
+     "SRC-IBS-EPAY-YEM-2020",
+     "bound"
+    ],
+    [
+     "93.8% urban concentration; ~13% women (2016-19) (s2)",
+     "CLM-052",
+     "SRC-IBS-EPAY-YEM-2020",
+     "bound"
+    ]
+   ],
+   "excel_row": 9,
+   "08_changes": {
+    "excel_row": 9,
+    "source_bindings": {
+     "frm": [
+      "198",
+      "199",
+      "EP-IBS-EMONEY-2019-K04",
+      "EP-IBS-EMONEY-VALUE-K04",
+      "EP-IBS-GEO-GENDER-K04"
+     ],
+     "to": [
+      "EP-IBS-EMONEY-2019-K04",
+      "EP-IBS-EMONEY-VALUE-K04",
+      "EP-IBS-GEO-GENDER-K04"
+     ]
+    },
+    "evidence_bindings": {
+     "frm": [
+      "CLM-050",
+      "CLM-051",
+      "CLM-052",
+      "198",
+      "199",
+      "196"
+     ],
+     "to": [
+      "CLM-050",
+      "CLM-051",
+      "CLM-052"
+     ]
+    },
+    "claim_bindings": {
+     "frm": [
+      "CLM-050",
+      "CLM-051",
+      "CLM-052"
+     ],
+     "to": [
+      "CLM-050",
+      "CLM-051",
+      "CLM-052"
+     ]
+    },
+    "verification_claim_ids": {
+     "frm": [
+      "CLM-050",
+      "CLM-051",
+      "CLM-052"
+     ],
+     "to": [
+      "CLM-050",
+      "CLM-051",
+      "CLM-052"
+     ]
+    },
+    "verification_dependency_ids": {
+     "frm": [
+      "198",
+      "199",
+      "EP-IBS-EMONEY-2019-K04",
+      "EP-IBS-EMONEY-VALUE-K04",
+      "EP-IBS-GEO-GENDER-K04"
+     ],
+     "to": [
+      "EP-IBS-EMONEY-2019-K04",
+      "EP-IBS-EMONEY-VALUE-K04",
+      "EP-IBS-GEO-GENDER-K04"
+     ]
+    }
+   },
+   "removed_token_carriers": {
+    "198": [
+     "CLM-050",
+     "CLM-051",
+     "CLM-052"
+    ],
+    "199": [
+     "CLM-050",
+     "CLM-051",
+     "CLM-052"
+    ],
+    "196": []
+   }
+  },
+  "CWR-006": {
+   "verdict_now": "PARTIAL_PATH",
+   "verdict_after": "PARTIAL_PATH until CLM-056 closes; then FULL_PATH",
+   "gaps_now": [
+    "91.98% 2016-19 growth share and 82.45% 2019 stock share -> CLM-056 open input DS-V041-STRICT-COUNSEL"
+   ],
+   "propositions": [
+    [
+     "93,118 (end-2015), 88,445 (end-2020) verified; 78,686 (end-2023) secondary (thesis, s1, s2)",
+     "CLM-054 (78,686 also CLM-053)",
+     "SRC-SFD-Q4-2015-001; SRC-SFD-Q4-2020-001; SRC-SANAA-MFB-2024",
+     "bound"
+    ],
+    [
+     "~80,800 June-2023, separate chain (s2)",
+     "CLM-057",
+     "SRC-SANAA-SOCPROT-2024; SRC-SANAA-MFB-2024",
+     "bound"
+    ],
+    [
+     "1.611m savers/depositors & YER33.379bn (2020); 3.3m 'active savers' & ~YER44bn (2023); nominal, valuation unrecorded (thesis, s2)",
+     "CLM-054",
+     "as above (+ SRC-CBY-001 missing for 792.69/1,529.4, see P15-F1)",
+     "bound"
+    ],
+    [
+     "26 licensed banks, 12 MFBs by name; listing != operation (s2)",
+     "CLM-055",
+     "SRC-CBY-BANKLIST-AR-2026-001",
+     "bound"
+    ],
+    [
+     "91% attributed to saver growth (2024 paper) vs 2025 stock restatement (s2, s3)",
+     "CLM-056",
+     "SRC-SANAA-MFB-2024; SRC-SANAA-YR-2025-Q2-MFB",
+     "bound (member partial)"
+    ],
+    [
+     "~91.98% growth share 2016-19 vs ~82.45% 2019 stock share (s2)",
+     "CLM-056",
+     "OPEN (DS-V041-STRICT-COUNSEL); Reading direct source SRC-SANAA-MF-2020",
+     "GAP"
+    ],
+    [
+     "Borrower base ~80,000-90,000 through 2021; larger loans (s2)",
+     "CLM-058",
+     "SRC-WB-FSD-2024-001",
+     "bound"
+    ]
+   ],
+   "excel_row": 10,
+   "08_changes": {
+    "excel_row": 10,
+    "source_bindings": {
+     "frm": [
+      "202",
+      "203",
+      "INS-K04-023",
+      "15_PROVIDER_MASTER",
+      "16_PROVIDER_UNIVERSE",
+      "EP-CBY-BANK-ROSTER-2026",
+      "201",
+      "CON-057",
+      "SRC-SANAA-MF-2020",
+      "CON-058",
+      "SRC-WB-FSD-2024-001"
+     ],
+     "to": [
+      "INS-K04-023",
+      "EP-CBY-BANK-ROSTER-2026",
+      "CON-057",
+      "SRC-SANAA-MF-2020",
+      "CON-058",
+      "SRC-WB-FSD-2024-001"
+     ]
+    },
+    "evidence_bindings": {
+     "frm": [
+      "CLM-054",
+      "CLM-055",
+      "CLM-056",
+      "CLM-057",
+      "CLM-058",
+      "201",
+      "202"
+     ],
+     "to": [
+      "CLM-054",
+      "CLM-055",
+      "CLM-056",
+      "CLM-057",
+      "CLM-058"
+     ]
+    },
+    "claim_bindings": {
+     "frm": [
+      "CLM-054",
+      "CLM-055",
+      "CLM-056",
+      "CLM-057",
+      "CLM-058"
+     ],
+     "to": [
+      "CLM-054",
+      "CLM-055",
+      "CLM-056",
+      "CLM-057",
+      "CLM-058"
+     ]
+    },
+    "verification_claim_ids": {
+     "frm": [
+      "CLM-054",
+      "CLM-055",
+      "CLM-056",
+      "CLM-057",
+      "CLM-058"
+     ],
+     "to": [
+      "CLM-054",
+      "CLM-055",
+      "CLM-056",
+      "CLM-057",
+      "CLM-058"
+     ]
+    },
+    "verification_dependency_ids": {
+     "frm": [
+      "202",
+      "203",
+      "INS-K04-023",
+      "15_PROVIDER_MASTER",
+      "16_PROVIDER_UNIVERSE",
+      "EP-CBY-BANK-ROSTER-2026",
+      "201",
+      "CON-057",
+      "CON-058"
+     ],
+     "to": [
+      "INS-K04-023",
+      "EP-CBY-BANK-ROSTER-2026",
+      "CON-057",
+      "CON-058"
+     ]
+    }
+   },
+   "removed_token_carriers": {
+    "202": [
+     "CLM-054",
+     "CLM-055"
+    ],
+    "203": [
+     "CLM-054"
+    ],
+    "15_PROVIDER_MASTER": [
+     "CLM-055"
+    ],
+    "16_PROVIDER_UNIVERSE": [
+     "CLM-055"
+    ],
+    "201": [
+     "CLM-056",
+     "CLM-057",
+     "CLM-058"
+    ]
+   }
+  },
+  "CWR-007": {
+   "verdict_now": "PARTIAL_PATH",
+   "verdict_after": "FULL_PATH (08-only)",
+   "gaps_now": [
+    "5.44% women / 18.35% men (thesis, s1-s3) not in CLM-002 (which states only 12.91) -> VIS-FINDEX-GAPS not bound",
+    "11.9% overall (s2) -> CLM-001 not bound",
+    "geographic exclusions (s3) -> CLM-025 not bound"
+   ],
+   "propositions": [
+    [
+     "5.44% women vs 18.35% men (thesis, s1, s2, s3)",
+     "VIS-FINDEX-GAPS",
+     "SRC-WB-FINDEX-AGG-2022",
+     "NOT BOUND"
+    ],
+    [
+     "12.91 pp difference (thesis, s1-s3)",
+     "CLM-002 (+ DA-001 context derivation)",
+     "SRC-WB-FINDEX-AGG-2022",
+     "bound"
+    ],
+    [
+     "11.9% overall, same wave (s2)",
+     "CLM-001 / VIS-FINDEX-GAPS",
+     "SRC-WB-FINDEX-AGG-2022",
+     "NOT BOUND"
+    ],
+    [
+     "Fieldwork 2022-23; material geographic exclusions (s3)",
+     "CLM-025 / CLM-001",
+     "SRC-WB-FINDEX-001",
+     "NOT BOUND"
+    ],
+    [
+     "Documentation, phone, income, work, distance, trust, household, product design = mechanisms to test (thesis, s4)",
+     "no record: hypothesis framing aligned with MA-003 dimensions ('product design' not in MA-003)",
+     "-",
+     "n/a (no figure)"
+    ]
+   ],
+   "excel_row": 11,
+   "08_changes": {
+    "excel_row": 11,
+    "source_bindings": {
+     "frm": [
+      "28_FINDEX_OBS",
+      "DA-001",
+      "EP-FINDEX-2022-ACCOUNT"
+     ],
+     "to": [
+      "DA-001",
+      "EP-FINDEX-2022-ACCOUNT"
+     ]
+    },
+    "evidence_bindings": {
+     "frm": [
+      "CLM-002",
+      "28_FINDEX_OBS",
+      "41_DERIVED_ANALYTICS",
+      "22_RESEARCH_COVERAGE"
+     ],
+     "to": [
+      "CLM-002",
+      "VIS-FINDEX-GAPS",
+      "CLM-001",
+      "CLM-025"
+     ]
+    },
+    "claim_bindings": {
+     "frm": [
+      "CLM-002"
+     ],
+     "to": [
+      "CLM-002",
+      "CLM-001",
+      "CLM-025"
+     ]
+    },
+    "verification_claim_ids": {
+     "frm": [
+      "CLM-002"
+     ],
+     "to": [
+      "CLM-002",
+      "CLM-001",
+      "CLM-025",
+      "VIS-FINDEX-GAPS"
+     ]
+    },
+    "verification_dependency_ids": {
+     "frm": [
+      "28_FINDEX_OBS",
+      "DA-001",
+      "EP-FINDEX-2022-ACCOUNT"
+     ],
+     "to": [
+      "DA-001",
+      "EP-FINDEX-2022-ACCOUNT"
+     ]
+    }
+   },
+   "removed_token_carriers": {
+    "28_FINDEX_OBS": [
+     "CLM-002",
+     "CLM-001",
+     "VIS-FINDEX-GAPS"
+    ],
+    "41_DERIVED_ANALYTICS": [
+     "VIS-FINDEX-GAPS"
+    ],
+    "22_RESEARCH_COVERAGE": []
+   }
+  },
+  "CWR-008": {
+   "verdict_now": "PARTIAL_PATH",
+   "verdict_after": "FULL_PATH (08-only)",
+   "gaps_now": [
+    "22% finance vs 50% electricity, 46% fuel (thesis, s3) reach only 33 context row INS-004 -> VIS-FIRM-CONSTRAINTS not bound"
+   ],
+   "propositions": [
+    [
+     "22% access to finance vs 50% electricity, 46% fuel (thesis, s3)",
+     "VIS-FIRM-CONSTRAINTS",
+     "SRC-WB-FSD-2024-001",
+     "NOT BOUND"
+    ],
+    [
+     "Electricity/fuel cited more often than finance (s2)",
+     "CLM-005",
+     "SRC-WB-FSD-2024-001",
+     "bound"
+    ],
+    [
+     "91.84% major+moderate, filtered denominator (s2, s3)",
+     "CLM-006",
+     "SRC-WB-FSD-2024-001",
+     "bound"
+    ],
+    [
+     "SMEPS 19% (2024), 15% (2021-24) vs 40% target; base underspecified (s2, s3)",
+     "CLM-060",
+     "SRC-SMEPS-AR2024-2025",
+     "bound"
+    ]
+   ],
+   "excel_row": 12,
+   "08_changes": {
+    "excel_row": 12,
+    "source_bindings": {
+     "frm": [
+      "12_FIRM_FINANCE",
+      "INS-004",
+      "EP-FIRM-2022",
+      "DA-020",
+      "219_SMEPS_PROGRAMME_EVIDENCE",
+      "EP-SMEPS-FINACCESS-KPI"
+     ],
+     "to": [
+      "INS-004",
+      "EP-FIRM-2022",
+      "DA-020",
+      "EP-SMEPS-FINACCESS-KPI"
+     ]
+    },
+    "evidence_bindings": {
+     "frm": [
+      "CLM-005",
+      "CLM-006",
+      "CLM-060",
+      "12_FIRM_FINANCE",
+      "219_SMEPS_PROGRAMME_EVIDENCE",
+      "50_STRATEGIC_INSIGHTS"
+     ],
+     "to": [
+      "CLM-005",
+      "CLM-006",
+      "CLM-060",
+      "VIS-FIRM-CONSTRAINTS"
+     ]
+    },
+    "claim_bindings": {
+     "frm": [
+      "CLM-005",
+      "CLM-006",
+      "CLM-060"
+     ],
+     "to": [
+      "CLM-005",
+      "CLM-006",
+      "CLM-060"
+     ]
+    },
+    "verification_claim_ids": {
+     "frm": [
+      "CLM-005",
+      "CLM-006",
+      "CLM-060"
+     ],
+     "to": [
+      "CLM-005",
+      "CLM-006",
+      "CLM-060",
+      "VIS-FIRM-CONSTRAINTS"
+     ]
+    },
+    "verification_dependency_ids": {
+     "frm": [
+      "12_FIRM_FINANCE",
+      "INS-004",
+      "EP-FIRM-2022",
+      "DA-020",
+      "219_SMEPS_PROGRAMME_EVIDENCE",
+      "EP-SMEPS-FINACCESS-KPI"
+     ],
+     "to": [
+      "INS-004",
+      "EP-FIRM-2022",
+      "DA-020",
+      "EP-SMEPS-FINACCESS-KPI"
+     ]
+    }
+   },
+   "removed_token_carriers": {
+    "12_FIRM_FINANCE": [
+     "CLM-005",
+     "CLM-006",
+     "VIS-FIRM-CONSTRAINTS"
+    ],
+    "219_SMEPS_PROGRAMME_EVIDENCE": [
+     "CLM-060"
+    ],
+    "50_STRATEGIC_INSIGHTS": []
+   }
+  },
+  "CWR-009": {
+   "verdict_now": "PARTIAL_PATH (dataset tokens only)",
+   "verdict_after": "FULL_PATH",
+   "gaps_now": [],
+   "propositions": [
+    [
+     "POS 561 -> 1,473 (s2, s3)",
+     "CLM-003",
+     "SRC-CBY-POS-2025-03; SRC-CBY-POS-2026-01",
+     "bound"
+    ],
+    [
+     "Accounts/subscribers/terminals/transactions != people (s2, s3)",
+     "CLM-004",
+     "FRAMING_NO_FACT",
+     "bound"
+    ],
+    [
+     "Jun-Aug 2026 unified network + YPCC institutionalization; not operation/outcome (s2, s3)",
+     "CLM-018",
+     "4 CBY sources",
+     "bound"
+    ],
+    [
+     "Target is not result (thesis context)",
+     "XW-FMIIP-005",
+     "SRC-UNDP-FMIIP-001; SRC-CBY-PAYREPORT-H1-2025",
+     "bound (evidence_bindings only)"
+    ]
+   ],
+   "excel_row": 13,
+   "08_changes": {
+    "excel_row": 13,
+    "source_bindings": {
+     "frm": [
+      "11_CBY_PAYMENTS",
+      "EP-CBY-POS-MONTHLY",
+      "49_METRIC_CROSSWALK",
+      "CTR-006",
+      "73_PAYMENT_CURRENTNESS",
+      "REF-PAY-010..013",
+      "EP-CBY-PAY-INSTITUTIONAL-2026"
+     ],
+     "to": [
+      "EP-CBY-POS-MONTHLY",
+      "CTR-006",
+      "EP-CBY-PAY-INSTITUTIONAL-2026"
+     ]
+    },
+    "evidence_bindings": {
+     "frm": [
+      "CLM-003",
+      "CLM-004",
+      "CLM-018",
+      "XW-FMIIP-005",
+      "48_REFORM_EVENTS",
+      "73_PAYMENT_CURRENTNESS"
+     ],
+     "to": [
+      "CLM-003",
+      "CLM-004",
+      "CLM-018",
+      "XW-FMIIP-005"
+     ]
+    },
+    "claim_bindings": {
+     "frm": [
+      "CLM-003",
+      "CLM-004",
+      "CLM-018"
+     ],
+     "to": [
+      "CLM-003",
+      "CLM-004",
+      "CLM-018"
+     ]
+    },
+    "verification_claim_ids": {
+     "frm": [
+      "CLM-003",
+      "CLM-004",
+      "CLM-018"
+     ],
+     "to": [
+      "CLM-003",
+      "CLM-004",
+      "CLM-018",
+      "XW-FMIIP-005"
+     ]
+    },
+    "verification_dependency_ids": {
+     "frm": [
+      "11_CBY_PAYMENTS",
+      "EP-CBY-POS-MONTHLY",
+      "49_METRIC_CROSSWALK",
+      "CTR-006",
+      "73_PAYMENT_CURRENTNESS",
+      "REF-PAY-010..013",
+      "EP-CBY-PAY-INSTITUTIONAL-2026"
+     ],
+     "to": [
+      "EP-CBY-POS-MONTHLY",
+      "CTR-006",
+      "EP-CBY-PAY-INSTITUTIONAL-2026"
+     ]
+    }
+   },
+   "removed_token_carriers": {
+    "11_CBY_PAYMENTS": [
+     "CLM-003",
+     "CLM-004"
+    ],
+    "49_METRIC_CROSSWALK": [
+     "CLM-004"
+    ],
+    "73_PAYMENT_CURRENTNESS": [
+     "CLM-018"
+    ],
+    "REF-PAY-010..013": [
+     "CLM-018"
+    ],
+    "48_REFORM_EVENTS": []
+   }
+  },
+  "CWR-010": {
+   "verdict_now": "PARTIAL_PATH",
+   "verdict_after": "FULL_PATH iff CLM-045 closes; otherwise PARTIAL_PATH (single gap)",
+   "gaps_now": [
+    "CLM-045 open input DS-K04-CASH-FIN-TRANSMISSION",
+    "G2Px 45,460/8 districts has no Evidence Record (source-direct only)"
+   ],
+   "propositions": [
+    [
+     "G2Px UCT pilot: 8 districts, 45,460 recipients, fully functional accounts (s2)",
+     "no 06 record; direct source",
+     "SRC-WB-G2PX-YEM-UCT-2024-001 (15 r163 why_it_matters names the figure)",
+     "source-direct"
+    ],
+    [
+     "Several links delivery->usability->resilience->local relationships; persistent use not established (thesis, s2, s3)",
+     "CLM-045",
+     "SRC-WB-G2PX-YEM-UCT-2024-001 + OPEN DS-K04-CASH-FIN-TRANSMISSION",
+     "member partial"
+    ]
+   ],
+   "excel_row": 14,
+   "08_changes": {
+    "excel_row": 14,
+    "source_bindings": {
+     "frm": [
+      "189",
+      "EP-YEM-CASH-FIN-TRANSMISSION-K04",
+      "SRC-WB-G2PX-YEM-UCT-2024-001"
+     ],
+     "to": [
+      "EP-YEM-CASH-FIN-TRANSMISSION-K04",
+      "SRC-WB-G2PX-YEM-UCT-2024-001"
+     ]
+    },
+    "evidence_bindings": {
+     "frm": [
+      "CLM-045",
+      "189_CASH_FINANCE_TRANSMISSION"
+     ],
+     "to": [
+      "CLM-045"
+     ]
+    },
+    "claim_bindings": {
+     "frm": [
+      "CLM-045"
+     ],
+     "to": [
+      "CLM-045"
+     ]
+    },
+    "verification_claim_ids": {
+     "frm": [
+      "CLM-045"
+     ],
+     "to": [
+      "CLM-045"
+     ]
+    },
+    "verification_dependency_ids": {
+     "frm": [
+      "189",
+      "EP-YEM-CASH-FIN-TRANSMISSION-K04"
+     ],
+     "to": [
+      "EP-YEM-CASH-FIN-TRANSMISSION-K04"
+     ]
+    }
+   },
+   "removed_token_carriers": {
+    "189": [
+     "CLM-045"
+    ],
+    "189_CASH_FINANCE_TRANSMISSION": [
+     "CLM-045"
+    ]
+   }
+  }
+ },
+ "incidental_findings": [
+  {
+   "id": "P15-F1",
+   "severity": "MATERIAL",
+   "object": "CLM-054 (06 r98)",
+   "issue": "BOUND_EXACT record states CBY-Aden average market rates 792.69 (Dec-2020) and 1,529.4 (Dec-2023) but does not bind their source",
+   "evidence": "18_CBY_MONETARY r625 OBS-CBY-00621 and r661 OBS-CBY-00657, source_id SRC-CBY-001 (T6_Market_Exchange_Rates)",
+   "action": "06 r98 source_dependencies add SRC-CBY-001 (state stays BOUND_EXACT). Same figures appear in 03 /finance/ section and 02 site map (projections)."
+  },
+  {
+   "id": "P15-F2",
+   "severity": "MATERIAL",
+   "object": "build.py evidence_sources()",
+   "issue": "When a CLOSED record binds both public and locator-less sources, suppressed sources vanish without any statement (statement only for non-closed states; 'no public locator' note only when no card shows). Affects CLM-045 (if closed), DS-QUAL-EVIDENCE alternative; Reading CWR-001 after adding CLM-044.",
+   "action": "Renderer rule: if suppressed_count>0, always show the governed no-public-locator note."
+  },
+  {
+   "id": "P15-F3",
+   "severity": "EDITORIAL",
+   "object": "audit/tranche_b_execution/STAGE1_LINEAGE_ADJUDICATION.json",
+   "issue": "Stage-1 bases now inaccurate for CLM-017 (source record exists at 15 r70), CLM-046 (SPA/IMF sources exist), VIS-PROVIDER-TIME (render state changed).",
+   "action": "Record in the Lead ledger; regenerate SOURCE_LINEAGE_TRUTH_TEST.json after any change."
+  },
+  {
+   "id": "P15-F4",
+   "severity": "EDITORIAL",
+   "object": "CWR-010 G2Px proposition",
+   "issue": "'eight districts, 45,460 recipients' has no Evidence Record; path is Reading -> direct source only (15 r163 why_it_matters names the figure; 14 r17 YSC-024 cites it). Closed under the rule but invisible in 'Verify this reading' cards.",
+   "action": "Keep (no invention); optional future Master-first evidence record."
+  },
+  {
+   "id": "P15-F5",
+   "severity": "EDITORIAL",
+   "object": "21_MFI_DATA r102 (SFD Q4-2018)",
+   "issue": "Held 'portfolio' anomaly 943.83 YER m equals, digit-for-digit, the 2018 industry saver count 943,830 in the Sana'a 2020 Figure 6 (external). Possible label transposition in the source or extraction.",
+   "action": "Route to Specialist C for primary check; no change proposed."
+  },
+  {
+   "id": "P15-F6",
+   "severity": "DISCARD",
+   "object": "Reading EN/AR numeric parity",
+   "issue": "All 09 sections and 08 thesis/prohibited fields carry identical figures in EN and AR (only '2022–23' vs '2022–2023' formatting).",
+   "action": "None."
+  }
+ ],
+ "counts": {
+  "06_before": {
+   "BOUND_EXACT": 87,
+   "BOUND_PARTIAL": 6,
+   "COMPOSITE_listed": 1,
+   "COMPOSITE_unlisted": 12,
+   "SOURCE_NOT_YET_BOUND": 1,
+   "FRAMING_NO_FACT": 1
+  },
+  "06_after_firm": {
+   "BOUND_EXACT": 88,
+   "BOUND_PARTIAL": 5,
+   "COMPOSITE_listed": 4,
+   "COMPOSITE_unlisted": 10,
+   "SOURCE_NOT_YET_BOUND": 0,
+   "FRAMING_NO_FACT": 1
+  },
+  "06_after_if_conditionals": {
+   "BOUND_EXACT": "90 (+CLM-045, +CLM-056) or 91 with DS-QUAL-EVIDENCE alternative",
+   "BOUND_PARTIAL": 3
+  },
+  "readings_before": {
+   "FULL_PATH": 0,
+   "PARTIAL_PATH": 10
+  },
+  "readings_after_08_only": {
+   "FULL_PATH": 8,
+   "PARTIAL_PATH": [
+    "CWR-006",
+    "CWR-010"
+   ]
+  },
+  "readings_after_all": {
+   "FULL_PATH": "9 (CWR-010 when CLM-045 closes); 10 when CLM-056 closes"
+  }
+ },
+ "stays_open": [
+  "CLM-039 (DS-K04-REMIT-SOURCE-LENSES)",
+  "CLM-046 (DS-K04-SAUDI-SUPPORT-TRANSMISSION: Saudi Aid Platform in-kind/project states)",
+  "VIS-PAYMENT-RAILS (UNBOUND:REF-PAY-001 until source promotion)",
+  "CLM-056 until Master-first data rows for SRC-SANAA-MF-2020 Figure 6",
+  "CLM-045 if Lead rejects the QQL link-level mapping or the renderer precondition is not met",
+  "CWR-006 (via CLM-056); CWR-010 (via CLM-045)",
+  "10 composites KEEP_UNLISTED"
+ ]
+}

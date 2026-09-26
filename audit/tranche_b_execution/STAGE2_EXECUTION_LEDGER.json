@@ -1,0 +1,1281 @@
+{
+ "stage": "STAGE-2",
+ "input_master_sha256": "905a497cffa824b391e8ead9b019cf3a2e47301dc3b12ca40d112ab97732707d",
+ "output_master_sha256": "4e3d9158f6c762bd7b06f7047337cde9eeb10a690c86d023181041566a11b0ad",
+ "cells_and_ops": 508,
+ "presentation_changes": [
+  "/providers/: section 2 added to primary; later section references shifted +1"
+ ],
+ "results": {
+  "PB-0103": {
+   "disposition": "SUPERSEDED",
+   "stage": "STAGE-2",
+   "detail": "Superseded by recipient acceptance correction (A)."
+  },
+  "PB-0104": {
+   "disposition": "SUPERSEDED",
+   "stage": "STAGE-2",
+   "detail": "Superseded by recipient acceptance correction (A)."
+  },
+  "PB-0107": {
+   "disposition": "SUPERSEDED",
+   "stage": "STAGE-2",
+   "detail": "Superseded by recipient acceptance correction (A)."
+  },
+  "PB-0111": {
+   "disposition": "SUPERSEDED",
+   "stage": "STAGE-2",
+   "detail": "Superseded by recipient acceptance correction (A)."
+  },
+  "PB-0160": {
+   "disposition": "HELD",
+   "stage": "STAGE-2",
+   "detail": "Literal-closure gate: the added magnitude (18_CBY_MONETARY OBS-CBY-00381, BANK_CREDIT_PRIVATE_SECTOR_BN_YER 2026-05 = 1350.4, SRC-CBY-001) is verified in the Master, but no Evidence Record bound to /finance/ carries it or binds SRC-CBY-001, so a reader could not trace the public number to a record. Adding an Evidence Record would add a public route (route baseline 284 is fixed for this tranche). Held for a record-level binding of the CBY monetary series (unresolved queue)."
+  },
+  "PB-0161": {
+   "disposition": "HELD",
+   "stage": "STAGE-2",
+   "detail": "Literal-closure gate: the added magnitude (18_CBY_MONETARY OBS-CBY-00381, BANK_CREDIT_PRIVATE_SECTOR_BN_YER 2026-05 = 1350.4, SRC-CBY-001) is verified in the Master, but no Evidence Record bound to /finance/ carries it or binds SRC-CBY-001, so a reader could not trace the public number to a record. Adding an Evidence Record would add a public route (route baseline 284 is fixed for this tranche). Held for a record-level binding of the CBY monetary series (unresolved queue)."
+  },
+  "PB-0390P": {
+   "disposition": "SOURCE_PENDING",
+   "stage": "STAGE-2",
+   "detail": "Publisher/issuer values populate only when confirmed from the source itself or authoritative metadata; SOURCE_PUBLISHER_PROPOSALS.csv is a resolution aid, not metadata."
+  },
+  "PB-0101": {
+   "disposition": "APPLIED",
+   "stage": "STAGE-2",
+   "detail": [
+    "PB-0101.01: 02_SITE_MAP!r23.full_copy_en ×1",
+    "PB-0101.02: 03_PAGE_SECTIONS!r108.body_en ×1",
+    "PB-0101.03: 06_EVIDENCE_OBJECTS!r37.summary_en ×1",
+    "PB-0101.04: 07_PUBLIC_CLAIMS!r17.copy_en ×1"
+   ]
+  },
+  "PB-0102": {
+   "disposition": "APPLIED",
+   "stage": "STAGE-2",
+   "detail": [
+    "PB-0102.01: 02_SITE_MAP!r23.full_copy_ar ×1",
+    "PB-0102.02: 03_PAGE_SECTIONS!r108.body_ar ×1",
+    "PB-0102.03: 06_EVIDENCE_OBJECTS!r37.summary_ar ×1",
+    "PB-0102.04: 07_PUBLIC_CLAIMS!r17.copy_ar ×1"
+   ]
+  },
+  "PB-0105": {
+   "disposition": "APPLIED",
+   "stage": "STAGE-2",
+   "detail": [
+    "PB-0105.01: 02_SITE_MAP!r128.full_copy_en ×1",
+    "PB-0105.02: 03_PAGE_SECTIONS!r424.body_en ×1"
+   ]
+  },
+  "PB-0106": {
+   "disposition": "APPLIED",
+   "stage": "STAGE-2",
+   "detail": [
+    "PB-0106.01: 02_SITE_MAP!r128.full_copy_ar ×1",
+    "PB-0106.02: 03_PAGE_SECTIONS!r425.body_ar ×1"
+   ]
+  },
+  "PB-0108": {
+   "disposition": "APPLIED",
+   "stage": "STAGE-2",
+   "detail": {
+    "block_title": "Yemen values attributed to OECD sources — see verification_state",
+    "verification_state_rows": 18,
+    "new_row": "r52 OECD-YEM-018 (CONFIRMED)",
+    "ranking_clause_rows": [
+     "PB-0108.R1.01: r35 ×1",
+     "PB-0108.R1.02: r56 ×1",
+     "PB-0108.R2.01: r35 ×1",
+     "PB-0108.R3.01: r36 ×1",
+     "PB-0108.R4.01: r36 ×1"
+    ]
+   }
+  },
+  "PB-0109": {
+   "disposition": "APPLIED",
+   "stage": "STAGE-2",
+   "detail": {
+    "annex_d_rows": "6–30",
+    "diagnostic_rows": "56–66",
+    "note": "Spec cited rows 54–62; the Master block 'OECD Yemen diagnostic 2026' runs to r66 and every row carries the same unverified recommendation text, so the whole block is marked."
+   }
+  },
+  "PB-0110": {
+   "disposition": "APPLIED",
+   "stage": "STAGE-2",
+   "detail": {
+    "header": "r44 D",
+    "public_use_rows": "45–68"
+   }
+  },
+  "PB-0112": {
+   "disposition": "APPLIED",
+   "stage": "STAGE-2",
+   "detail": [
+    "PB-0112.01: 00_MASTER!r41.Layer ×1"
+   ]
+  },
+  "PB-0120": {
+   "disposition": "APPLIED",
+   "stage": "STAGE-2",
+   "detail": [
+    "PB-0120.01: 02_SITE_MAP!r122.full_copy_en ×1",
+    "PB-0120.02: 03_PAGE_SECTIONS!r315.body_en ×1"
+   ]
+  },
+  "PB-0121": {
+   "disposition": "APPLIED",
+   "stage": "STAGE-2",
+   "detail": [
+    "PB-0121.01: 02_SITE_MAP!r122.full_copy_ar ×1",
+    "PB-0121.02: 03_PAGE_SECTIONS!r316.body_ar ×1"
+   ]
+  },
+  "PB-0122": {
+   "disposition": "APPLIED",
+   "stage": "STAGE-2",
+   "detail": [
+    "PB-0122.01: 02_SITE_MAP!r64.full_copy_en ×1",
+    "PB-0122.02: 02_SITE_MAP!r139.full_copy_en ×1",
+    "PB-0122.03: 03_PAGE_SECTIONS!r190.body_en ×1",
+    "PB-0122.04: 06_EVIDENCE_OBJECTS!r98.summary_en ×1",
+    "PB-0122.05: 07_PUBLIC_CLAIMS!r57.copy_en ×1"
+   ]
+  },
+  "PB-0123": {
+   "disposition": "APPLIED",
+   "stage": "STAGE-2",
+   "detail": [
+    "PB-0123.01: 02_SITE_MAP!r64.full_copy_ar ×1",
+    "PB-0123.02: 03_PAGE_SECTIONS!r190.body_ar ×1",
+    "PB-0123.03: 06_EVIDENCE_OBJECTS!r98.summary_ar ×1",
+    "PB-0123.04: 07_PUBLIC_CLAIMS!r57.copy_ar ×1"
+   ]
+  },
+  "PB-0124": {
+   "disposition": "APPLIED",
+   "stage": "STAGE-2",
+   "detail": [
+    "PB-0124.01: 03_PAGE_SECTIONS!r506.body_en ×1",
+    "PB-0124.02: 09_READING_SECTIONS!r51.copy_en ×1"
+   ]
+  },
+  "PB-0125": {
+   "disposition": "APPLIED",
+   "stage": "STAGE-2",
+   "detail": [
+    "PB-0125.01: 03_PAGE_SECTIONS!r506.body_ar ×1",
+    "PB-0125.02: 09_READING_SECTIONS!r51.copy_ar ×1"
+   ]
+  },
+  "PB-0126": {
+   "disposition": "APPLIED",
+   "stage": "STAGE-2",
+   "detail": [
+    "PB-0126.01: 02_SITE_MAP!r64.full_copy_en ×1",
+    "PB-0126.02: 02_SITE_MAP!r139.full_copy_en ×1",
+    "PB-0126.03: 03_PAGE_SECTIONS!r190.body_en ×1",
+    "PB-0126.04: 06_EVIDENCE_OBJECTS!r98.summary_en ×1",
+    "PB-0126.05: 07_PUBLIC_CLAIMS!r57.copy_en ×1"
+   ]
+  },
+  "PB-0127": {
+   "disposition": "APPLIED",
+   "stage": "STAGE-2",
+   "detail": [
+    "PB-0127.01: 02_SITE_MAP!r139.full_copy_ar ×1",
+    "PB-0127.02: 07_PUBLIC_CLAIMS!r57.copy_ar ×1"
+   ]
+  },
+  "PB-0128": {
+   "disposition": "APPLIED",
+   "stage": "STAGE-2",
+   "detail": [
+    "PB-0128.01: 02_SITE_MAP!r64.full_copy_ar ×1",
+    "PB-0128.02: 03_PAGE_SECTIONS!r190.body_ar ×1",
+    "PB-0128.03: 06_EVIDENCE_OBJECTS!r98.summary_ar ×1"
+   ]
+  },
+  "PB-0129": {
+   "disposition": "APPLIED",
+   "stage": "STAGE-2",
+   "detail": [
+    "PB-0129.01: 02_SITE_MAP!r64.title_en ×1",
+    "PB-0129.02: 02_SITE_MAP!r64.full_copy_en ×1",
+    "PB-0129.03: 06_EVIDENCE_OBJECTS!r98.title_en ×1",
+    "PB-0129.04: 07_PUBLIC_CLAIMS!r57.headline_en ×1"
+   ]
+  },
+  "PB-0130": {
+   "disposition": "APPLIED",
+   "stage": "STAGE-2",
+   "detail": [
+    "PB-0130.01: 02_SITE_MAP!r64.title_ar ×1",
+    "PB-0130.02: 02_SITE_MAP!r64.full_copy_ar ×1",
+    "PB-0130.03: 06_EVIDENCE_OBJECTS!r98.title_ar ×1",
+    "PB-0130.04: 07_PUBLIC_CLAIMS!r57.headline_ar ×1"
+   ]
+  },
+  "PB-0131": {
+   "disposition": "APPLIED",
+   "stage": "STAGE-2",
+   "detail": [
+    "PB-0131.01: 07_PUBLIC_CLAIMS!r57.claim_type ×1",
+    "PB-0131.02: 07_PUBLIC_CLAIMS!r57.evidence_badge ×1"
+   ]
+  },
+  "PB-0132": {
+   "disposition": "APPLIED",
+   "stage": "STAGE-2",
+   "detail": [
+    "PB-0132.01: 06_EVIDENCE_OBJECTS!r98.limitations_ar ×1",
+    "PB-0132.02: 07_PUBLIC_CLAIMS!r57.does_not_prove_ar ×1"
+   ]
+  },
+  "PB-0133": {
+   "disposition": "APPLIED",
+   "stage": "STAGE-2",
+   "detail": [
+    "PB-0133.01: 02_SITE_MAP!r122.full_copy_en ×1",
+    "PB-0133.02: 03_PAGE_SECTIONS!r325.body_en ×1"
+   ]
+  },
+  "PB-0134": {
+   "disposition": "APPLIED",
+   "stage": "STAGE-2",
+   "detail": [
+    "PB-0134.01: 02_SITE_MAP!r122.full_copy_ar ×1",
+    "PB-0134.02: 03_PAGE_SECTIONS!r326.body_ar ×1"
+   ]
+  },
+  "PB-0135": {
+   "disposition": "APPLIED",
+   "stage": "STAGE-2",
+   "detail": [
+    "PB-0135.01: 08_READINGS!r10.thesis_en ×1",
+    "PB-0135.02: 09_READING_SECTIONS!r50.copy_en ×1"
+   ]
+  },
+  "PB-0136": {
+   "disposition": "APPLIED",
+   "stage": "STAGE-2",
+   "detail": [
+    "PB-0136.01: 08_READINGS!r10.thesis_ar ×1",
+    "PB-0136.02: 09_READING_SECTIONS!r50.copy_ar ×1"
+   ]
+  },
+  "PB-0137": {
+   "disposition": "APPLIED",
+   "stage": "STAGE-2",
+   "detail": [
+    "PB-0137.01: 11_VISUAL_LIBRARY!r36.decision_value_en ×1"
+   ]
+  },
+  "PB-0138": {
+   "disposition": "APPLIED",
+   "stage": "STAGE-2",
+   "detail": [
+    "PB-0138.01: 11_VISUAL_LIBRARY!r36.decision_value_ar ×1"
+   ]
+  },
+  "PB-0139": {
+   "disposition": "APPLIED",
+   "stage": "STAGE-2",
+   "detail": [
+    "PB-0139.01: 11_VISUAL_LIBRARY!r36.prohibited_inference_en ×1"
+   ]
+  },
+  "PB-0140": {
+   "disposition": "APPLIED",
+   "stage": "STAGE-2",
+   "detail": [
+    "PB-0140.01: 33_ANALYTICS_MASTER!r101.visual_id ×1"
+   ]
+  },
+  "PB-0141": {
+   "disposition": "APPLIED",
+   "stage": "STAGE-2",
+   "detail": [
+    "PB-0141.01: 07_PUBLIC_CLAIMS!r57.change_trigger_en ×1"
+   ]
+  },
+  "PB-0142": {
+   "disposition": "APPLIED",
+   "stage": "STAGE-2",
+   "detail": [
+    "PB-0142.01: 07_PUBLIC_CLAIMS!r57.change_trigger_ar ×1"
+   ]
+  },
+  "PB-0150": {
+   "disposition": "APPLIED",
+   "stage": "STAGE-2",
+   "detail": [
+    "PB-0150.01: 03_PAGE_SECTIONS!r331.body_en ×1"
+   ]
+  },
+  "PB-0151": {
+   "disposition": "APPLIED",
+   "stage": "STAGE-2",
+   "detail": [
+    "PB-0151.01: 03_PAGE_SECTIONS!r332.body_ar ×1"
+   ]
+  },
+  "PB-0162": {
+   "disposition": "APPLIED",
+   "stage": "STAGE-2",
+   "detail": [
+    "PB-0162.01: 02_SITE_MAP!r122.full_copy_en ×1",
+    "PB-0162.02: 03_PAGE_SECTIONS!r329.body_en ×1"
+   ]
+  },
+  "PB-0163": {
+   "disposition": "APPLIED",
+   "stage": "STAGE-2",
+   "detail": [
+    "PB-0163.01: 02_SITE_MAP!r122.full_copy_ar ×1",
+    "PB-0163.02: 03_PAGE_SECTIONS!r330.body_ar ×1"
+   ]
+  },
+  "PB-0165": {
+   "disposition": "APPLIED",
+   "stage": "STAGE-2",
+   "detail": [
+    "PB-0165.01: 02_SITE_MAP!r122.full_copy_en ×1",
+    "PB-0165.02: 03_PAGE_SECTIONS!r333.body_en ×1"
+   ]
+  },
+  "PB-0166": {
+   "disposition": "APPLIED",
+   "stage": "STAGE-2",
+   "detail": [
+    "PB-0166.01: 02_SITE_MAP!r122.full_copy_ar ×1",
+    "PB-0166.02: 03_PAGE_SECTIONS!r334.body_ar ×1"
+   ]
+  },
+  "PB-0170": {
+   "disposition": "APPLIED",
+   "stage": "STAGE-2",
+   "detail": [
+    "PB-0170.01: 02_SITE_MAP!r115.title_en ×1",
+    "PB-0170.02: 02_SITE_MAP!r115.full_copy_en ×1",
+    "PB-0170.03: 06_EVIDENCE_OBJECTS!r71.title_en ×1",
+    "PB-0170.04: 11_VISUAL_LIBRARY!r28.title_en ×1"
+   ]
+  },
+  "PB-0171": {
+   "disposition": "APPLIED",
+   "stage": "STAGE-2",
+   "detail": [
+    "PB-0171.01: 02_SITE_MAP!r115.title_ar ×1",
+    "PB-0171.02: 02_SITE_MAP!r115.full_copy_ar ×1",
+    "PB-0171.03: 06_EVIDENCE_OBJECTS!r71.title_ar ×1",
+    "PB-0171.04: 11_VISUAL_LIBRARY!r28.title_ar ×1"
+   ]
+  },
+  "PB-0172": {
+   "disposition": "APPLIED",
+   "stage": "STAGE-2",
+   "detail": [
+    "PB-0172.01: 02_SITE_MAP!r115.full_copy_en ×1",
+    "PB-0172.02: 03_PAGE_SECTIONS!r292.body_en ×1",
+    "PB-0172.03: 06_EVIDENCE_OBJECTS!r71.summary_en ×1",
+    "PB-0172.04: 11_VISUAL_LIBRARY!r28.accessible_summary_en ×1"
+   ]
+  },
+  "PB-0173": {
+   "disposition": "APPLIED",
+   "stage": "STAGE-2",
+   "detail": [
+    "PB-0173.01: 02_SITE_MAP!r115.full_copy_ar ×1",
+    "PB-0173.02: 03_PAGE_SECTIONS!r292.body_ar ×1",
+    "PB-0173.03: 06_EVIDENCE_OBJECTS!r71.summary_ar ×1",
+    "PB-0173.04: 11_VISUAL_LIBRARY!r28.accessible_summary_ar ×1"
+   ]
+  },
+  "PB-0174": {
+   "disposition": "APPLIED",
+   "stage": "STAGE-2",
+   "detail": [
+    "PB-0174.01: 11_VISUAL_LIBRARY!r28.question_en ×1"
+   ]
+  },
+  "PB-0175": {
+   "disposition": "APPLIED",
+   "stage": "STAGE-2",
+   "detail": [
+    "PB-0175.01: 11_VISUAL_LIBRARY!r28.question_ar ×1"
+   ]
+  },
+  "PB-0176": {
+   "disposition": "APPLIED",
+   "stage": "STAGE-2",
+   "detail": [
+    "PB-0176.01: 11_VISUAL_LIBRARY!r28.what_it_shows_en ×1"
+   ]
+  },
+  "PB-0177": {
+   "disposition": "APPLIED",
+   "stage": "STAGE-2",
+   "detail": [
+    "PB-0177.01: 11_VISUAL_LIBRARY!r28.what_it_shows_ar ×1"
+   ]
+  },
+  "PB-0178": {
+   "disposition": "APPLIED",
+   "stage": "STAGE-2",
+   "detail": [
+    "PB-0178.01: 11_VISUAL_LIBRARY!r28.decision_value_en ×1"
+   ]
+  },
+  "PB-0179": {
+   "disposition": "APPLIED",
+   "stage": "STAGE-2",
+   "detail": [
+    "PB-0179.01: 11_VISUAL_LIBRARY!r28.decision_value_ar ×1"
+   ]
+  },
+  "PB-0180": {
+   "disposition": "APPLIED",
+   "stage": "STAGE-2",
+   "detail": [
+    "PB-0180.01: 11_VISUAL_LIBRARY!r22.freshness_profile ×1",
+    "PB-0180.02: 11_VISUAL_LIBRARY!r28.freshness_profile ×1"
+   ]
+  },
+  "PB-0181": {
+   "disposition": "APPLIED",
+   "stage": "STAGE-2",
+   "detail": [
+    "PB-0181.01: 06_EVIDENCE_OBJECTS!r71.universe_en ×1",
+    "PB-0181.02: 11_VISUAL_LIBRARY!r28.denominator_universe ×1"
+   ]
+  },
+  "PB-0182": {
+   "disposition": "APPLIED",
+   "stage": "STAGE-2",
+   "detail": [
+    "PB-0182.01: 06_EVIDENCE_OBJECTS!r71.universe_ar ×1"
+   ]
+  },
+  "PB-0183": {
+   "disposition": "APPLIED",
+   "stage": "STAGE-2",
+   "detail": [
+    "PB-0183.01: 06_EVIDENCE_OBJECTS!r71.method_en ×1",
+    "PB-0183.02: 11_VISUAL_LIBRARY!r28.encoding_contract ×1"
+   ]
+  },
+  "PB-0184": {
+   "disposition": "APPLIED",
+   "stage": "STAGE-2",
+   "detail": [
+    "PB-0184.01: 06_EVIDENCE_OBJECTS!r71.method_ar ×1"
+   ]
+  },
+  "PB-0185": {
+   "disposition": "APPLIED",
+   "stage": "STAGE-2",
+   "detail": [
+    "PB-0185.01: 06_EVIDENCE_OBJECTS!r71.limitations_en ×1",
+    "PB-0185.02: 11_VISUAL_LIBRARY!r28.prohibited_inference_en ×1"
+   ]
+  },
+  "PB-0186": {
+   "disposition": "APPLIED",
+   "stage": "STAGE-2",
+   "detail": [
+    "PB-0186.01: 06_EVIDENCE_OBJECTS!r71.limitations_ar ×1",
+    "PB-0186.02: 11_VISUAL_LIBRARY!r28.prohibited_inference_ar ×1"
+   ]
+  },
+  "PB-0187": {
+   "disposition": "APPLIED",
+   "stage": "STAGE-2",
+   "detail": [
+    "PB-0187.01: 11_VISUAL_LIBRARY!r28.visual_form ×1"
+   ]
+  },
+  "PB-0188": {
+   "disposition": "APPLIED",
+   "stage": "STAGE-2",
+   "detail": [
+    "PB-0188.01: 02_SITE_MAP!r143.full_copy_en ×1",
+    "PB-0188.02: 03_PAGE_SECTIONS!r552.heading_en ×1"
+   ]
+  },
+  "PB-0189": {
+   "disposition": "APPLIED",
+   "stage": "STAGE-2",
+   "detail": [
+    "PB-0189.01: 02_SITE_MAP!r143.full_copy_ar ×1",
+    "PB-0189.02: 03_PAGE_SECTIONS!r553.heading_ar ×1"
+   ]
+  },
+  "PB-0190": {
+   "disposition": "APPLIED",
+   "stage": "STAGE-2",
+   "detail": [
+    "PB-0190.01: 02_SITE_MAP!r143.full_copy_en ×1",
+    "PB-0190.02: 03_PAGE_SECTIONS!r552.body_en ×1"
+   ]
+  },
+  "PB-0191": {
+   "disposition": "APPLIED",
+   "stage": "STAGE-2",
+   "detail": [
+    "PB-0191.01: 02_SITE_MAP!r143.full_copy_ar ×1",
+    "PB-0191.02: 03_PAGE_SECTIONS!r553.body_ar ×1"
+   ]
+  },
+  "PB-0192": {
+   "disposition": "APPLIED",
+   "stage": "STAGE-2",
+   "detail": [
+    "PB-0192.01: 02_SITE_MAP!r17.title_en ×1",
+    "PB-0192.02: 02_SITE_MAP!r17.full_copy_en ×1",
+    "PB-0192.03: 06_EVIDENCE_OBJECTS!r29.title_en ×1",
+    "PB-0192.04: 07_PUBLIC_CLAIMS!r11.headline_en ×1"
+   ]
+  },
+  "PB-0193": {
+   "disposition": "APPLIED",
+   "stage": "STAGE-2",
+   "detail": [
+    "PB-0193.01: 02_SITE_MAP!r17.title_ar ×1",
+    "PB-0193.02: 02_SITE_MAP!r17.full_copy_ar ×1",
+    "PB-0193.03: 06_EVIDENCE_OBJECTS!r29.title_ar ×1",
+    "PB-0193.04: 07_PUBLIC_CLAIMS!r11.headline_ar ×1"
+   ]
+  },
+  "PB-0194": {
+   "disposition": "APPLIED",
+   "stage": "STAGE-2",
+   "detail": [
+    "PB-0194.01: 02_SITE_MAP!r17.full_copy_en ×1",
+    "PB-0194.02: 03_PAGE_SECTIONS!r96.body_en ×1",
+    "PB-0194.03: 06_EVIDENCE_OBJECTS!r29.summary_en ×1",
+    "PB-0194.04: 07_PUBLIC_CLAIMS!r11.copy_en ×1"
+   ]
+  },
+  "PB-0195": {
+   "disposition": "APPLIED",
+   "stage": "STAGE-2",
+   "detail": [
+    "PB-0195.01: 06_EVIDENCE_OBJECTS!r29.summary_ar ×1",
+    "PB-0195.02: 07_PUBLIC_CLAIMS!r11.copy_ar ×1"
+   ]
+  },
+  "PB-0196": {
+   "disposition": "APPLIED",
+   "stage": "STAGE-2",
+   "detail": [
+    "PB-0196.01: 07_PUBLIC_CLAIMS!r11.claim_type ×1"
+   ]
+  },
+  "PB-0200": {
+   "disposition": "APPLIED",
+   "stage": "STAGE-2",
+   "detail": [
+    "PB-0200.01: 02_SITE_MAP!r18.full_copy_en ×1",
+    "PB-0200.02: 03_PAGE_SECTIONS!r98.body_en ×1",
+    "PB-0200.03: 06_EVIDENCE_OBJECTS!r62.summary_en ×1",
+    "PB-0200.04: 07_PUBLIC_CLAIMS!r12.copy_en ×1"
+   ]
+  },
+  "PB-0201": {
+   "disposition": "APPLIED",
+   "stage": "STAGE-2",
+   "detail": [
+    "PB-0201.01: 02_SITE_MAP!r18.full_copy_ar ×1",
+    "PB-0201.02: 03_PAGE_SECTIONS!r98.body_ar ×1",
+    "PB-0201.03: 06_EVIDENCE_OBJECTS!r62.summary_ar ×1",
+    "PB-0201.04: 07_PUBLIC_CLAIMS!r12.copy_ar ×1"
+   ]
+  },
+  "PB-0210": {
+   "disposition": "APPLIED",
+   "stage": "STAGE-2",
+   "detail": [
+    "PB-0210.01: 02_SITE_MAP!r19.full_copy_en ×1",
+    "PB-0210.02: 02_SITE_MAP!r130.full_copy_en ×1",
+    "PB-0210.03: 03_PAGE_SECTIONS!r100.body_en ×1",
+    "PB-0210.04: 03_PAGE_SECTIONS!r435.body_en ×1",
+    "PB-0210.05: 06_EVIDENCE_OBJECTS!r7.summary_en ×1",
+    "PB-0210.06: 07_PUBLIC_CLAIMS!r13.copy_en ×1"
+   ]
+  },
+  "PB-0211": {
+   "disposition": "APPLIED",
+   "stage": "STAGE-2",
+   "detail": [
+    "PB-0211.01: 02_SITE_MAP!r19.full_copy_ar ×1",
+    "PB-0211.02: 02_SITE_MAP!r130.full_copy_ar ×1",
+    "PB-0211.03: 03_PAGE_SECTIONS!r100.body_ar ×1",
+    "PB-0211.04: 03_PAGE_SECTIONS!r436.body_ar ×1",
+    "PB-0211.05: 06_EVIDENCE_OBJECTS!r7.summary_ar ×1",
+    "PB-0211.06: 06_EVIDENCE_OBJECTS!r7.period_ar ×1",
+    "PB-0211.07: 07_PUBLIC_CLAIMS!r13.copy_ar ×1"
+   ]
+  },
+  "PB-0212": {
+   "disposition": "APPLIED",
+   "stage": "STAGE-2",
+   "detail": [
+    "PB-0212.01: 02_SITE_MAP!r26.full_copy_ar ×1",
+    "PB-0212.02: 03_PAGE_SECTIONS!r114.body_ar ×1",
+    "PB-0212.03: 06_EVIDENCE_OBJECTS!r21.summary_ar ×1",
+    "PB-0212.04: 07_PUBLIC_CLAIMS!r20.copy_ar ×1"
+   ]
+  },
+  "PB-0213": {
+   "disposition": "APPLIED",
+   "stage": "STAGE-2",
+   "detail": [
+    "PB-0213.01: 02_SITE_MAP!r26.full_copy_en ×1",
+    "PB-0213.02: 03_PAGE_SECTIONS!r114.body_en ×1",
+    "PB-0213.03: 06_EVIDENCE_OBJECTS!r21.summary_en ×1",
+    "PB-0213.04: 07_PUBLIC_CLAIMS!r20.copy_en ×1"
+   ]
+  },
+  "PB-0214": {
+   "disposition": "APPLIED",
+   "stage": "STAGE-2",
+   "detail": [
+    "PB-0214.01: 02_SITE_MAP!r130.full_copy_en ×1",
+    "PB-0214.02: 03_PAGE_SECTIONS!r433.body_en ×1"
+   ]
+  },
+  "PB-0215": {
+   "disposition": "APPLIED",
+   "stage": "STAGE-2",
+   "detail": [
+    "PB-0215.01: 02_SITE_MAP!r130.full_copy_ar ×1",
+    "PB-0215.02: 03_PAGE_SECTIONS!r434.body_ar ×1"
+   ]
+  },
+  "PB-0216": {
+   "disposition": "APPLIED",
+   "stage": "STAGE-2",
+   "detail": {
+    "route": "/providers/",
+    "section_order": 2,
+    "rows_appended": [
+     581,
+     582
+    ],
+    "follows_section": 1
+   }
+  },
+  "PB-0217": {
+   "disposition": "APPLIED",
+   "stage": "STAGE-2",
+   "detail": {
+    "issuing_authority_counts": {
+     "CBY_ADEN": 56
+    },
+    "territorial_scope_existing_values": [
+     "CBY-Aden licensed-bank list; address as source-listed",
+     "event-specific"
+    ],
+    "note": "territorial_scope already exists in the Master and holds source-stated scope (no national default found), so it is kept; no public provider-record surface exists in the current build — the render requirement is carried to the status-event table (PB-0525, Stage 3) and the Design contract."
+   }
+  },
+  "PB-0300": {
+   "disposition": "APPLIED",
+   "stage": "STAGE-2",
+   "detail": [
+    "PB-0300.01: 02_SITE_MAP!r128.full_copy_en ×1",
+    "PB-0300.02: 03_PAGE_SECTIONS!r408.heading_en ×1"
+   ]
+  },
+  "PB-0301": {
+   "disposition": "APPLIED",
+   "stage": "STAGE-2",
+   "detail": [
+    "PB-0301.01: 02_SITE_MAP!r128.full_copy_ar ×1",
+    "PB-0301.02: 03_PAGE_SECTIONS!r409.heading_ar ×1"
+   ]
+  },
+  "PB-0302": {
+   "disposition": "APPLIED",
+   "stage": "STAGE-2",
+   "detail": [
+    "PB-0302.01: 02_SITE_MAP!r128.full_copy_en ×1",
+    "PB-0302.02: 03_PAGE_SECTIONS!r408.body_en ×1"
+   ]
+  },
+  "PB-0303": {
+   "disposition": "APPLIED",
+   "stage": "STAGE-2",
+   "detail": [
+    "PB-0303.01: 02_SITE_MAP!r128.full_copy_ar ×1",
+    "PB-0303.02: 03_PAGE_SECTIONS!r409.body_ar ×1"
+   ]
+  },
+  "PB-0304": {
+   "disposition": "APPLIED",
+   "stage": "STAGE-2",
+   "detail": [
+    "PB-0304.01: 02_SITE_MAP!r93.full_copy_en ×1",
+    "PB-0304.02: 02_SITE_MAP!r128.full_copy_en ×2",
+    "PB-0304.03: 03_PAGE_SECTIONS!r248.body_en ×1",
+    "PB-0304.04: 03_PAGE_SECTIONS!r406.body_en ×1",
+    "PB-0304.05: 03_PAGE_SECTIONS!r408.body_en ×1",
+    "PB-0304.06: 06_EVIDENCE_OBJECTS!r65.summary_en ×1",
+    "PB-0304.07: 11_VISUAL_LIBRARY!r10.accessible_summary_en ×1"
+   ]
+  },
+  "PB-0305": {
+   "disposition": "APPLIED",
+   "stage": "STAGE-2",
+   "detail": [
+    "PB-0305.01: 02_SITE_MAP!r93.full_copy_ar ×1",
+    "PB-0305.02: 02_SITE_MAP!r128.full_copy_ar ×2",
+    "PB-0305.03: 03_PAGE_SECTIONS!r248.body_ar ×1",
+    "PB-0305.04: 03_PAGE_SECTIONS!r407.body_ar ×1",
+    "PB-0305.05: 03_PAGE_SECTIONS!r409.body_ar ×1",
+    "PB-0305.06: 06_EVIDENCE_OBJECTS!r65.summary_ar ×1",
+    "PB-0305.07: 11_VISUAL_LIBRARY!r10.accessible_summary_ar ×1"
+   ]
+  },
+  "PB-0309": {
+   "disposition": "APPLIED",
+   "stage": "STAGE-2",
+   "detail": [
+    "PB-0309.01: 02_SITE_MAP!r128.full_copy_en ×1",
+    "PB-0309.02: 03_PAGE_SECTIONS!r410.body_en ×1"
+   ]
+  },
+  "PB-0310": {
+   "disposition": "APPLIED",
+   "stage": "STAGE-2",
+   "detail": [
+    "PB-0310.01: 02_SITE_MAP!r128.full_copy_ar ×1",
+    "PB-0310.02: 03_PAGE_SECTIONS!r411.body_ar ×1"
+   ]
+  },
+  "PB-0311": {
+   "disposition": "APPLIED",
+   "stage": "STAGE-2",
+   "detail": [
+    "PB-0311.01: 02_SITE_MAP!r128.full_copy_en ×1",
+    "PB-0311.02: 03_PAGE_SECTIONS!r410.body_en ×1"
+   ]
+  },
+  "PB-0312": {
+   "disposition": "APPLIED",
+   "stage": "STAGE-2",
+   "detail": [
+    "PB-0312.01: 02_SITE_MAP!r128.full_copy_ar ×1",
+    "PB-0312.02: 03_PAGE_SECTIONS!r411.body_ar ×1"
+   ]
+  },
+  "PB-0350": {
+   "disposition": "APPLIED",
+   "stage": "STAGE-2",
+   "detail": [
+    "PB-0350.01: 02_SITE_MAP!r123.full_copy_en ×1",
+    "PB-0350.02: 03_PAGE_SECTIONS!r336.body_en ×1"
+   ]
+  },
+  "PB-0351": {
+   "disposition": "APPLIED",
+   "stage": "STAGE-2",
+   "detail": [
+    "PB-0351.01: 03_PAGE_SECTIONS!r337.body_ar ×1"
+   ]
+  },
+  "PB-0380": {
+   "disposition": "APPLIED",
+   "stage": "STAGE-2",
+   "detail": [
+    "PB-0380.01: 02_SITE_MAP!r10.full_copy_en ×1",
+    "PB-0380.02: 03_PAGE_SECTIONS!r66.body_en ×1"
+   ]
+  },
+  "PB-0381": {
+   "disposition": "APPLIED",
+   "stage": "STAGE-2",
+   "detail": [
+    "PB-0381.01: 02_SITE_MAP!r10.full_copy_ar ×1",
+    "PB-0381.02: 03_PAGE_SECTIONS!r66.body_ar ×1"
+   ]
+  },
+  "PB-0382": {
+   "disposition": "APPLIED",
+   "stage": "STAGE-2",
+   "detail": [
+    "PB-0382.01: 02_SITE_MAP!r10.full_copy_en ×1",
+    "PB-0382.02: 03_PAGE_SECTIONS!r71.body_en ×1"
+   ]
+  },
+  "PB-0383": {
+   "disposition": "APPLIED",
+   "stage": "STAGE-2",
+   "detail": [
+    "PB-0383.01: 02_SITE_MAP!r10.full_copy_ar ×1",
+    "PB-0383.02: 03_PAGE_SECTIONS!r72.body_ar ×1"
+   ]
+  },
+  "PB-0384": {
+   "disposition": "APPLIED",
+   "stage": "STAGE-2",
+   "detail": [
+    "PB-0384.01: 03_PAGE_SECTIONS!r73.heading_en ×1"
+   ]
+  },
+  "PB-0385": {
+   "disposition": "APPLIED",
+   "stage": "STAGE-2",
+   "detail": [
+    "PB-0385.01: 03_PAGE_SECTIONS!r74.heading_ar ×1"
+   ]
+  },
+  "PB-0386": {
+   "disposition": "APPLIED",
+   "stage": "STAGE-2",
+   "detail": [
+    "PB-0386.01: 02_SITE_MAP!r10.full_copy_en ×1",
+    "PB-0386.02: 03_PAGE_SECTIONS!r73.body_en ×1"
+   ]
+  },
+  "PB-0387": {
+   "disposition": "APPLIED",
+   "stage": "STAGE-2",
+   "detail": [
+    "PB-0387.01: 02_SITE_MAP!r10.full_copy_ar ×1",
+    "PB-0387.02: 03_PAGE_SECTIONS!r74.body_ar ×1"
+   ]
+  },
+  "PB-0388": {
+   "disposition": "APPLIED",
+   "stage": "STAGE-2",
+   "detail": [
+    "PB-0388.01: 02_SITE_MAP!r10.full_copy_en ×1",
+    "PB-0388.02: 03_PAGE_SECTIONS!r77.body_en ×1"
+   ]
+  },
+  "PB-0389": {
+   "disposition": "APPLIED",
+   "stage": "STAGE-2",
+   "detail": [
+    "PB-0389.01: 02_SITE_MAP!r10.full_copy_ar ×1",
+    "PB-0389.02: 03_PAGE_SECTIONS!r78.body_ar ×1"
+   ]
+  },
+  "PB-0400": {
+   "disposition": "APPLIED",
+   "stage": "STAGE-2",
+   "detail": {
+    "change": "scripts/projection/controlled_inputs/page_spec_templates.json: accessibility flags PENDING_DESIGN_IMPLEMENTATION + text_alternative_table_contract"
+   }
+  },
+  "PB-0410": {
+   "disposition": "APPLIED",
+   "stage": "STAGE-2",
+   "detail": {
+    "change": "scripts/build.py: meta description = governed/derived page description, never a *_internal field"
+   }
+  },
+  "PB-0411": {
+   "disposition": "APPLIED",
+   "stage": "STAGE-2",
+   "detail": {
+    "columns": [
+     "meta_description_en",
+     "meta_description_ar"
+    ],
+    "values": "empty = generation default (title + first sentence of the first rendered section, ≤155 characters, per language)"
+   }
+  },
+  "PB-0143": {
+   "disposition": "APPLIED",
+   "stage": "STAGE-2",
+   "detail": [
+    "PB-0143.01: 11_VISUAL_LIBRARY!r30.accessible_summary_en ×1"
+   ]
+  },
+  "PB-0144": {
+   "disposition": "APPLIED",
+   "stage": "STAGE-2",
+   "detail": [
+    "PB-0144.01: 11_VISUAL_LIBRARY!r30.accessible_summary_ar ×1"
+   ]
+  },
+  "PB-0145": {
+   "disposition": "APPLIED",
+   "stage": "STAGE-2",
+   "detail": [
+    "PB-0145.01: 03_PAGE_SECTIONS!r506.body_en ×1",
+    "PB-0145.02: 09_READING_SECTIONS!r51.copy_en ×1"
+   ]
+  },
+  "PB-0146": {
+   "disposition": "APPLIED",
+   "stage": "STAGE-2",
+   "detail": [
+    "PB-0146.01: 03_PAGE_SECTIONS!r506.body_ar ×1",
+    "PB-0146.02: 09_READING_SECTIONS!r51.copy_ar ×1"
+   ]
+  },
+  "PB-0218": {
+   "disposition": "APPLIED",
+   "stage": "STAGE-2",
+   "detail": [
+    "PB-0218.01: 03_PAGE_SECTIONS!r506.body_en ×1",
+    "PB-0218.02: 09_READING_SECTIONS!r51.copy_en ×1"
+   ]
+  },
+  "PB-0219": {
+   "disposition": "APPLIED",
+   "stage": "STAGE-2",
+   "detail": [
+    "PB-0219.01: 02_SITE_MAP!r65.full_copy_en ×1",
+    "PB-0219.02: 02_SITE_MAP!r139.full_copy_en ×1",
+    "PB-0219.03: 03_PAGE_SECTIONS!r192.body_en ×1",
+    "PB-0219.04: 06_EVIDENCE_OBJECTS!r99.summary_en ×1",
+    "PB-0219.05: 07_PUBLIC_CLAIMS!r58.copy_en ×1"
+   ]
+  },
+  "PB-0224": {
+   "disposition": "APPLIED",
+   "stage": "STAGE-2",
+   "detail": [
+    "PB-0224.01: 03_PAGE_SECTIONS!r506.body_ar ×1",
+    "PB-0224.02: 09_READING_SECTIONS!r51.copy_ar ×1"
+   ]
+  },
+  "PB-0225": {
+   "disposition": "APPLIED",
+   "stage": "STAGE-2",
+   "detail": [
+    "PB-0225.01: 02_SITE_MAP!r65.full_copy_ar ×1",
+    "PB-0225.02: 02_SITE_MAP!r139.full_copy_ar ×1",
+    "PB-0225.03: 03_PAGE_SECTIONS!r192.body_ar ×1",
+    "PB-0225.04: 06_EVIDENCE_OBJECTS!r99.summary_ar ×1",
+    "PB-0225.05: 07_PUBLIC_CLAIMS!r58.copy_ar ×1"
+   ]
+  },
+  "PB-0436": {
+   "disposition": "APPLIED",
+   "stage": "STAGE-2",
+   "detail": [
+    "PB-0436.01: 11_VISUAL_LIBRARY!r37.what_it_shows_en ×1"
+   ]
+  },
+  "PB-0445": {
+   "disposition": "APPLIED",
+   "stage": "STAGE-2",
+   "detail": [
+    "PB-0445.01: 11_VISUAL_LIBRARY!r37.accessible_summary_en ×1"
+   ]
+  },
+  "PB-0449": {
+   "disposition": "APPLIED",
+   "stage": "STAGE-2",
+   "detail": [
+    "PB-0449.01: 11_VISUAL_LIBRARY!r37.what_it_shows_ar ×1"
+   ]
+  },
+  "PB-0450": {
+   "disposition": "APPLIED",
+   "stage": "STAGE-2",
+   "detail": [
+    "PB-0450.01: 11_VISUAL_LIBRARY!r37.accessible_summary_ar ×1"
+   ]
+  },
+  "PB-0451": {
+   "disposition": "APPLIED",
+   "stage": "STAGE-2",
+   "detail": [
+    "PB-0451.01: 11_VISUAL_LIBRARY!r30.accessible_summary_en ×1"
+   ]
+  },
+  "PB-0452": {
+   "disposition": "APPLIED",
+   "stage": "STAGE-2",
+   "detail": [
+    "PB-0452.01: 11_VISUAL_LIBRARY!r30.accessible_summary_ar ×1"
+   ]
+  },
+  "PB-0453": {
+   "disposition": "APPLIED",
+   "stage": "STAGE-2",
+   "detail": [
+    "PB-0453.01: 11_VISUAL_LIBRARY!r23.visual_form ×1"
+   ]
+  },
+  "PB-0454": {
+   "disposition": "APPLIED",
+   "stage": "STAGE-2",
+   "detail": [
+    "PB-0454.01: 11_VISUAL_LIBRARY!r23.encoding_contract ×1"
+   ]
+  },
+  "PB-0455": {
+   "disposition": "APPLIED",
+   "stage": "STAGE-2",
+   "detail": [
+    "PB-0455.01: 11_VISUAL_LIBRARY!r23.accessible_summary_en ×1"
+   ]
+  },
+  "PB-0456": {
+   "disposition": "APPLIED",
+   "stage": "STAGE-2",
+   "detail": [
+    "PB-0456.01: 11_VISUAL_LIBRARY!r23.accessible_summary_ar ×1"
+   ]
+  },
+  "PB-0457": {
+   "disposition": "APPLIED",
+   "stage": "STAGE-2",
+   "detail": [
+    "PB-0457.01: 06_EVIDENCE_OBJECTS!r73.method_en ×1"
+   ]
+  },
+  "PB-0500": {
+   "disposition": "APPLIED",
+   "stage": "STAGE-2",
+   "detail": [
+    "PB-0500.01: 06_EVIDENCE_OBJECTS!r14.summary_en ×1"
+   ]
+  },
+  "PB-0501": {
+   "disposition": "APPLIED",
+   "stage": "STAGE-2",
+   "detail": [
+    "PB-0501.01: 06_EVIDENCE_OBJECTS!r27.summary_en ×1"
+   ]
+  },
+  "PB-0502": {
+   "disposition": "APPLIED",
+   "stage": "STAGE-2",
+   "detail": [
+    "PB-0502.01: 02_SITE_MAP!r96.full_copy_en ×1",
+    "PB-0502.02: 03_PAGE_SECTIONS!r254.body_en ×1",
+    "PB-0502.03: 06_EVIDENCE_OBJECTS!r42.summary_en ×1"
+   ]
+  },
+  "PB-0503": {
+   "disposition": "APPLIED",
+   "stage": "STAGE-2",
+   "detail": [
+    "PB-0503.01: 02_SITE_MAP!r90.full_copy_en ×1",
+    "PB-0503.02: 03_PAGE_SECTIONS!r242.body_en ×1",
+    "PB-0503.03: 06_EVIDENCE_OBJECTS!r43.summary_en ×1"
+   ]
+  },
+  "PB-0504": {
+   "disposition": "APPLIED",
+   "stage": "STAGE-2",
+   "detail": [
+    "PB-0504.01: 02_SITE_MAP!r91.full_copy_en ×1",
+    "PB-0504.02: 03_PAGE_SECTIONS!r244.body_en ×1",
+    "PB-0504.03: 06_EVIDENCE_OBJECTS!r44.summary_en ×1"
+   ]
+  },
+  "PB-0505": {
+   "disposition": "APPLIED",
+   "stage": "STAGE-2",
+   "detail": [
+    "PB-0505.01: 02_SITE_MAP!r95.full_copy_en ×1",
+    "PB-0505.02: 03_PAGE_SECTIONS!r252.body_en ×1",
+    "PB-0505.03: 06_EVIDENCE_OBJECTS!r45.summary_en ×1"
+   ]
+  },
+  "PB-0506": {
+   "disposition": "APPLIED",
+   "stage": "STAGE-2",
+   "detail": [
+    "PB-0506.01: 02_SITE_MAP!r92.full_copy_en ×1",
+    "PB-0506.02: 03_PAGE_SECTIONS!r246.body_en ×1",
+    "PB-0506.03: 06_EVIDENCE_OBJECTS!r46.summary_en ×1"
+   ]
+  },
+  "PB-0507": {
+   "disposition": "APPLIED",
+   "stage": "STAGE-2",
+   "detail": [
+    "PB-0507.01: 02_SITE_MAP!r94.full_copy_en ×1",
+    "PB-0507.02: 03_PAGE_SECTIONS!r250.body_en ×1",
+    "PB-0507.03: 06_EVIDENCE_OBJECTS!r52.summary_en ×1"
+   ]
+  },
+  "PB-0508": {
+   "disposition": "APPLIED",
+   "stage": "STAGE-2",
+   "detail": [
+    "PB-0508.01: 06_EVIDENCE_OBJECTS!r53.summary_en ×1"
+   ]
+  },
+  "PB-0509": {
+   "disposition": "APPLIED",
+   "stage": "STAGE-2",
+   "detail": [
+    "PB-0509.01: 02_SITE_MAP!r81.full_copy_en ×1",
+    "PB-0509.02: 03_PAGE_SECTIONS!r224.body_en ×1",
+    "PB-0509.03: 06_EVIDENCE_OBJECTS!r54.summary_en ×1"
+   ]
+  },
+  "PB-0510": {
+   "disposition": "APPLIED",
+   "stage": "STAGE-2",
+   "detail": [
+    "PB-0510.01: 02_SITE_MAP!r84.full_copy_en ×1",
+    "PB-0510.02: 03_PAGE_SECTIONS!r230.body_en ×1",
+    "PB-0510.03: 06_EVIDENCE_OBJECTS!r55.summary_en ×1"
+   ]
+  },
+  "PB-0511": {
+   "disposition": "APPLIED",
+   "stage": "STAGE-2",
+   "detail": [
+    "PB-0511.01: 02_SITE_MAP!r103.full_copy_en ×1",
+    "PB-0511.02: 03_PAGE_SECTIONS!r268.body_en ×1",
+    "PB-0511.03: 06_EVIDENCE_OBJECTS!r70.summary_en ×1"
+   ]
+  },
+  "PB-0512": {
+   "disposition": "APPLIED",
+   "stage": "STAGE-2",
+   "detail": [
+    "PB-0512.01: 02_SITE_MAP!r104.full_copy_en ×1",
+    "PB-0512.02: 03_PAGE_SECTIONS!r270.body_en ×1",
+    "PB-0512.03: 06_EVIDENCE_OBJECTS!r82.summary_en ×1"
+   ]
+  },
+  "PB-0513": {
+   "disposition": "APPLIED",
+   "stage": "STAGE-2",
+   "detail": [
+    "PB-0513.01: 06_EVIDENCE_OBJECTS!r14.summary_ar ×1"
+   ]
+  },
+  "PB-0514": {
+   "disposition": "APPLIED",
+   "stage": "STAGE-2",
+   "detail": [
+    "PB-0514.01: 03_PAGE_SECTIONS!r369.body_en ×1"
+   ]
+  },
+  "PB-0515": {
+   "disposition": "APPLIED",
+   "stage": "STAGE-2",
+   "detail": [
+    "PB-0515.01: 03_PAGE_SECTIONS!r370.body_ar ×1"
+   ]
+  },
+  "PB-0516": {
+   "disposition": "APPLIED",
+   "stage": "STAGE-2",
+   "detail": {
+    "inserted_row": 73,
+    "block": "Build grammar"
+   }
+  },
+  "PB-0195A": {
+   "disposition": "APPLIED",
+   "stage": "STAGE-2",
+   "detail": [
+    "PB-0195A.01: 02_SITE_MAP!r17.full_copy_ar ×1",
+    "PB-0195A.02: 03_PAGE_SECTIONS!r96.body_ar ×1"
+   ]
+  },
+  "PB-0590": {
+   "disposition": "APPLIED",
+   "stage": "STAGE-2",
+   "detail": [
+    "PB-0590.01: 02_SITE_MAP!r137.full_copy_en ×3",
+    "PB-0590.02: 03_PAGE_SECTIONS!r499.body_en ×1",
+    "PB-0590.03: 08_READINGS!r11.thesis_en ×1",
+    "PB-0590.04: 09_READING_SECTIONS!r59.copy_en ×1",
+    "PB-0590.05: 09_READING_SECTIONS!r61.copy_en ×1"
+   ]
+  },
+  "PB-0591": {
+   "disposition": "APPLIED",
+   "stage": "STAGE-2",
+   "detail": [
+    "PB-0591.01: 02_SITE_MAP!r137.full_copy_ar ×2",
+    "PB-0591.02: 08_READINGS!r11.thesis_ar ×1"
+   ]
+  },
+  "PB-0592": {
+   "disposition": "APPLIED",
+   "stage": "STAGE-2",
+   "detail": [
+    "PB-0592.01: 02_SITE_MAP!r137.full_copy_ar ×1",
+    "PB-0592.02: 03_PAGE_SECTIONS!r499.body_ar ×1",
+    "PB-0592.03: 09_READING_SECTIONS!r61.copy_ar ×1"
+   ]
+  },
+  "PB-0593": {
+   "disposition": "APPLIED",
+   "stage": "STAGE-2",
+   "detail": [
+    "PB-0593.01: 09_READING_SECTIONS!r59.copy_ar ×1"
+   ]
+  },
+  "PB-0457A": {
+   "disposition": "APPLIED",
+   "stage": "STAGE-2",
+   "detail": [
+    "PB-0457A.01: 06_EVIDENCE_OBJECTS!r73.method_ar ×1"
+   ]
+  },
+  "PB-0503A": {
+   "disposition": "APPLIED",
+   "stage": "STAGE-2",
+   "detail": [
+    "PB-0503A.01: 02_SITE_MAP!r90.full_copy_ar ×1",
+    "PB-0503A.02: 03_PAGE_SECTIONS!r242.body_ar ×1",
+    "PB-0503A.03: 06_EVIDENCE_OBJECTS!r43.summary_ar ×1"
+   ]
+  },
+  "EXF-001": {
+   "disposition": "APPLIED",
+   "stage": "STAGE-2",
+   "detail": {
+    "moved_to_non_public_locator_note": [
+     "SRC-CCY-REMIT-ESTIMATE-2025",
+     "SRC-CCY-SAM-2024",
+     "SRC-CCY-CASH-DURATION-2026",
+     "SRC-CCY-ISP-2024",
+     "SRC-CCY-AMAL-2025",
+     "SRC-CCY-PRESSURE-2026",
+     "SRC-LIT-ALG-FI-COMPARATIVE",
+     "SRC-LIT-IND-FI-TEMPLATE-2023"
+    ]
+   }
+  },
+  "EXC-0302": {
+   "disposition": "APPLIED",
+   "stage": "STAGE-2",
+   "detail": [
+    "PB-0302: 11_VISUAL_LIBRARY!r10.accessible_summary_en carries the education level (WB-FINDEX-OBS-2022-006)",
+    "PB-0303: 11_VISUAL_LIBRARY!r10.accessible_summary_ar carries the education level (WB-FINDEX-OBS-2022-006)"
+   ]
+  },
+  "PB-0220": {
+   "disposition": "APPLIED",
+   "stage": "STAGE-2",
+   "detail": {
+    "deleted_rows": "12–35 (blank separator rows 12–13 and block rows 14–35)",
+    "archive": "audit/tranche_b_execution/archive/PB-0220_25_FINDEX_BASELINE_rows_14-35.json"
+   }
+  },
+  "PB-0221": {
+   "disposition": "APPLIED",
+   "stage": "STAGE-2",
+   "detail": {
+    "removed_sheet": "30_FCS_CONTEXT",
+    "rows_archived": 41,
+    "archive": "audit/tranche_b_execution/archive/PB-0221_30_FCS_CONTEXT_whole_sheet.json",
+    "app_xml": "docProps/app.xml absent"
+   }
+  }
+ }
+}

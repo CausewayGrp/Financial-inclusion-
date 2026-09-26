@@ -1,0 +1,12 @@
+{
+ "schema": "YFI_CONTROLLED_INPUT/1.0",
+ "input_id": "page_spec_binding_overrides",
+ "authority_class": "CONTROLLED_DESIGN_BINDING__NOT_MASTER_OWNED",
+ "rule": "Declared exceptions to the route-membership binding rules. IDs only; every ID must exist in the Master. Each exception cites the closed decision that created it.",
+ "overrides": {
+  "/": {
+   "evidence_object_ids": "SAME_AS_CLAIM_IDS",
+   "basis": "R8.4A Home decision (audit/R8_4A_HOME_EXPLORE_ENTRY_JOURNEY_CLOSURE.md): Home binds its three governed claims as its evidence records; VIS-INCLUSION-TRANSMISSION is bound as a visual contract only."
+  }
+ }
+}

@@ -1,0 +1,1510 @@
+{
+ "transaction": "P4-G",
+ "scope": "Re-verification resolution: passports firewall, text-first visuals, in-frame text, Arabic labels and terms, limitations part B, page copy",
+ "full_copy_regenerated": [
+  "/data/ en",
+  "/data/ ar",
+  "/evidence/CLM-032/ ar",
+  "/evidence/CLM-043/ ar",
+  "/evidence/MFI-SPINE-2015-Q4/ ar",
+  "/evidence/VIS-EVIDENCE-FRESHNESS/ en",
+  "/evidence/VIS-EVIDENCE-FRESHNESS/ ar",
+  "/evidence/VIS-EVIDENCE-GAPS/ en",
+  "/evidence/VIS-EVIDENCE-GAPS/ ar",
+  "/evidence/VIS-INCLUSION-TRANSMISSION/ en",
+  "/evidence/VIS-INCLUSION-TRANSMISSION/ ar",
+  "/evidence/VIS-MECHANISM-METRIC-BRIDGE/ en",
+  "/evidence/VIS-MECHANISM-METRIC-BRIDGE/ ar",
+  "/evidence/VIS-OECD-FCP-TIMELINE/ en",
+  "/evidence/VIS-OECD-FCP-TIMELINE/ ar",
+  "/evidence/ en",
+  "/evidence/ ar",
+  "/readings/finance-constraint-different-questions/ ar",
+  "/readings/same-year-different-number/ ar",
+  "/remittances/ en",
+  "/remittances/ ar",
+  "/terms/ en",
+  "/terms/ ar"
+ ],
+ "input_master_sha256": "3acea61214b3ef8d00410f832f7d9ee2ba8d1126b48ff046e73ecab2b3935244",
+ "output_master_sha256": "5f3d9404e93bf48528d487a86a653601166b715026f1884d343da367144b463a",
+ "cells_written": 164,
+ "changes": [
+  {
+   "finding": "R1",
+   "sheet": "34_EVIDENCE_PASSPORTS",
+   "row": 46,
+   "col": 3,
+   "field": "EP-CCY-REMIT-RESIDUAL-MODEL-K04.object",
+   "old": "CCY at-least-USD7.4bn 2024 remittance residual estimate",
+   "new": "Residual-model remittance estimate, 2024 (producer and value withheld: no public locator; reuse rights not assessed)"
+  },
+  {
+   "finding": "R1",
+   "sheet": "34_EVIDENCE_PASSPORTS",
+   "row": 46,
+   "col": 4,
+   "field": "EP-CCY-REMIT-RESIDUAL-MODEL-K04.publisher",
+   "old": "Cash Consortium of Yemen / Crisis Analysis",
+   "new": "Withheld — no public locator; reuse rights not assessed"
+  },
+  {
+   "finding": "R1",
+   "sheet": "34_EVIDENCE_PASSPORTS",
+   "row": 46,
+   "col": 8,
+   "field": "EP-CCY-REMIT-RESIDUAL-MODEL-K04.method",
+   "old": "User-provided report; upstream public inputs source-attributed",
+   "new": "Balance-of-payments residual model; the underlying material has no public locator"
+  },
+  {
+   "finding": "R1",
+   "sheet": "34_EVIDENCE_PASSPORTS",
+   "row": 46,
+   "col": 11,
+   "field": "EP-CCY-REMIT-RESIDUAL-MODEL-K04.route",
+   "old": "/remittances/ | /evidence/",
+   "new": "/evidence/CLM-044/"
+  },
+  {
+   "finding": "R1",
+   "sheet": "34_EVIDENCE_PASSPORTS",
+   "row": 46,
+   "col": 12,
+   "field": "EP-CCY-REMIT-RESIDUAL-MODEL-K04.display_requirements",
+   "old": "Never replace official baselines; expose equation, assumptions and sensitivity.",
+   "new": "Never replace official baselines. Do not show the value or name the producer until the material has a public locator and a rights assessment (Master-first)."
+  },
+  {
+   "finding": "R1",
+   "sheet": "34_EVIDENCE_PASSPORTS",
+   "row": 49,
+   "col": 4,
+   "field": "EP-YEM-CASH-FIN-TRANSMISSION-K04.publisher",
+   "old": "CCY/REACH + World Bank/G2Px + RPW",
+   "new": "World Bank/G2Px + RPW + material without a public locator (not named)"
+  },
+  {
+   "finding": "R3",
+   "sheet": "06_EVIDENCE_OBJECTS",
+   "row": 11,
+   "col": 8,
+   "field": "VIS-INCLUSION-TRANSMISSION.definition_en",
+   "old": "A visual summary of the evidence. Read it with the stated question, scope, unit, period, source and limitations.",
+   "new": "A text summary of the evidence. Read it with the stated question, scope, unit, period, source and limitations."
+  },
+  {
+   "finding": "R3",
+   "sheet": "06_EVIDENCE_OBJECTS",
+   "row": 11,
+   "col": 9,
+   "field": "VIS-INCLUSION-TRANSMISSION.definition_ar",
+   "old": "عرض بصري للدليل، يُقرأ مع السؤال والنطاق والوحدة والفترة والمصدر والحدود المبينة له.",
+   "new": "ملخص نصي للدليل، يُقرأ مع السؤال والنطاق والوحدة والفترة والمصدر والحدود المبينة له."
+  },
+  {
+   "finding": "R3",
+   "sheet": "06_EVIDENCE_OBJECTS",
+   "row": 12,
+   "col": 8,
+   "field": "VIS-EVIDENCE-FRESHNESS.definition_en",
+   "old": "A visual summary of the evidence. Read it with the stated question, scope, unit, period, source and limitations.",
+   "new": "A text summary of the evidence. Read it with the stated question, scope, unit, period, source and limitations."
+  },
+  {
+   "finding": "R3",
+   "sheet": "06_EVIDENCE_OBJECTS",
+   "row": 12,
+   "col": 9,
+   "field": "VIS-EVIDENCE-FRESHNESS.definition_ar",
+   "old": "عرض بصري للدليل، يُقرأ مع السؤال والنطاق والوحدة والفترة والمصدر والحدود المبينة له.",
+   "new": "ملخص نصي للدليل، يُقرأ مع السؤال والنطاق والوحدة والفترة والمصدر والحدود المبينة له."
+  },
+  {
+   "finding": "R3",
+   "sheet": "06_EVIDENCE_OBJECTS",
+   "row": 78,
+   "col": 8,
+   "field": "VIS-EVIDENCE-GAPS.definition_en",
+   "old": "A visual summary of the evidence. Read it with the stated question, scope, unit, period, source and limitations.",
+   "new": "A text summary of the evidence. Read it with the stated question, scope, unit, period, source and limitations."
+  },
+  {
+   "finding": "R3",
+   "sheet": "06_EVIDENCE_OBJECTS",
+   "row": 78,
+   "col": 9,
+   "field": "VIS-EVIDENCE-GAPS.definition_ar",
+   "old": "عرض بصري للدليل، يُقرأ مع السؤال والنطاق والوحدة والفترة والمصدر والحدود المبينة له.",
+   "new": "ملخص نصي للدليل، يُقرأ مع السؤال والنطاق والوحدة والفترة والمصدر والحدود المبينة له."
+  },
+  {
+   "finding": "R3",
+   "sheet": "06_EVIDENCE_OBJECTS",
+   "row": 13,
+   "col": 8,
+   "field": "VIS-SOURCE-COMPARISON.definition_en",
+   "old": "A visual summary of the evidence. Read it with the stated question, scope, unit, period, source and limitations.",
+   "new": "A text summary of the evidence. Read it with the stated question, scope, unit, period, source and limitations."
+  },
+  {
+   "finding": "R3",
+   "sheet": "06_EVIDENCE_OBJECTS",
+   "row": 13,
+   "col": 9,
+   "field": "VIS-SOURCE-COMPARISON.definition_ar",
+   "old": "عرض بصري للدليل، يُقرأ مع السؤال والنطاق والوحدة والفترة والمصدر والحدود المبينة له.",
+   "new": "ملخص نصي للدليل، يُقرأ مع السؤال والنطاق والوحدة والفترة والمصدر والحدود المبينة له."
+  },
+  {
+   "finding": "R3",
+   "sheet": "06_EVIDENCE_OBJECTS",
+   "row": 75,
+   "col": 8,
+   "field": "VIS-FIRM-FINANCE-SEVERITY.definition_en",
+   "old": "A visual summary of the evidence. Read it with the stated question, scope, unit, period, source and limitations.",
+   "new": "A text summary of the evidence. Read it with the stated question, scope, unit, period, source and limitations."
+  },
+  {
+   "finding": "R3",
+   "sheet": "06_EVIDENCE_OBJECTS",
+   "row": 75,
+   "col": 9,
+   "field": "VIS-FIRM-FINANCE-SEVERITY.definition_ar",
+   "old": "عرض بصري للدليل، يُقرأ مع السؤال والنطاق والوحدة والفترة والمصدر والحدود المبينة له.",
+   "new": "ملخص نصي للدليل، يُقرأ مع السؤال والنطاق والوحدة والفترة والمصدر والحدود المبينة له."
+  },
+  {
+   "finding": "R3",
+   "sheet": "06_EVIDENCE_OBJECTS",
+   "row": 76,
+   "col": 8,
+   "field": "VIS-OECD-FCP-TIMELINE.definition_en",
+   "old": "A visual summary of the evidence. Read it with the stated question, scope, unit, period, source and limitations.",
+   "new": "A text summary of the evidence. Read it with the stated question, scope, unit, period, source and limitations."
+  },
+  {
+   "finding": "R3",
+   "sheet": "06_EVIDENCE_OBJECTS",
+   "row": 76,
+   "col": 9,
+   "field": "VIS-OECD-FCP-TIMELINE.definition_ar",
+   "old": "عرض بصري للدليل، يُقرأ مع السؤال والنطاق والوحدة والفترة والمصدر والحدود المبينة له.",
+   "new": "ملخص نصي للدليل، يُقرأ مع السؤال والنطاق والوحدة والفترة والمصدر والحدود المبينة له."
+  },
+  {
+   "finding": "R3",
+   "sheet": "06_EVIDENCE_OBJECTS",
+   "row": 17,
+   "col": 8,
+   "field": "VIS-MECHANISM-METRIC-BRIDGE.definition_en",
+   "old": "A visual summary of the evidence. Read it with the stated question, scope, unit, period, source and limitations.",
+   "new": "A text summary of the evidence. Read it with the stated question, scope, unit, period, source and limitations."
+  },
+  {
+   "finding": "R3",
+   "sheet": "06_EVIDENCE_OBJECTS",
+   "row": 17,
+   "col": 9,
+   "field": "VIS-MECHANISM-METRIC-BRIDGE.definition_ar",
+   "old": "عرض بصري للدليل، يُقرأ مع السؤال والنطاق والوحدة والفترة والمصدر والحدود المبينة له.",
+   "new": "ملخص نصي للدليل، يُقرأ مع السؤال والنطاق والوحدة والفترة والمصدر والحدود المبينة له."
+  },
+  {
+   "finding": "R3",
+   "sheet": "06_EVIDENCE_OBJECTS",
+   "row": 77,
+   "col": 8,
+   "field": "VIS-CAPITAL-CONTEXT.definition_en",
+   "old": "A visual summary of the evidence. Read it with the stated question, scope, unit, period, source and limitations.",
+   "new": "A text summary of the evidence. Read it with the stated question, scope, unit, period, source and limitations."
+  },
+  {
+   "finding": "R3",
+   "sheet": "06_EVIDENCE_OBJECTS",
+   "row": 77,
+   "col": 9,
+   "field": "VIS-CAPITAL-CONTEXT.definition_ar",
+   "old": "عرض بصري للدليل، يُقرأ مع السؤال والنطاق والوحدة والفترة والمصدر والحدود المبينة له.",
+   "new": "ملخص نصي للدليل، يُقرأ مع السؤال والنطاق والوحدة والفترة والمصدر والحدود المبينة له."
+  },
+  {
+   "finding": "R3",
+   "sheet": "06_EVIDENCE_OBJECTS",
+   "row": 11,
+   "col": 14,
+   "field": "VIS-INCLUSION-TRANSMISSION.method_en",
+   "old": "Ordered list of documented relationships grouped by system layer; each item names its relationship type and what it does not establish. Adjacency is not causality: no arrows and no evidence-strength marker, because none is governed per link.",
+   "new": "Text summary of the system relationships documented in the evidence base. No arrows or evidence-strength markers are used, because no relationship carries a governed evidence strength."
+  },
+  {
+   "finding": "R3",
+   "sheet": "06_EVIDENCE_OBJECTS",
+   "row": 11,
+   "col": 15,
+   "field": "VIS-INCLUSION-TRANSMISSION.method_ar",
+   "old": "قائمة مرتبة بالعلاقات الموثقة مجمعة بحسب طبقات المنظومة؛ يذكر كل بند نوع العلاقة وما لا تثبته. والتجاور لا يعني السببية: فلا أسهم ولا علامة لقوة الدليل، لأن قوة الدليل غير محددة لكل علاقة.",
+   "new": "ملخص نصي للعلاقات الموثقة بين أجزاء المنظومة في قاعدة الأدلة؛ ولا تُستخدم أسهم ولا علامات لقوة الدليل، لأن أي علاقة لا تحمل قوة دليل محددة."
+  },
+  {
+   "finding": "R3",
+   "sheet": "06_EVIDENCE_OBJECTS",
+   "row": 12,
+   "col": 14,
+   "field": "VIS-EVIDENCE-FRESHNESS.method_en",
+   "old": "Skyline/dot bands by vintage with evidence-class badges; no freshness score.",
+   "new": "Evidence is listed by vintage and evidence class; no freshness score is computed."
+  },
+  {
+   "finding": "R3",
+   "sheet": "06_EVIDENCE_OBJECTS",
+   "row": 12,
+   "col": 15,
+   "field": "VIS-EVIDENCE-FRESHNESS.method_ar",
+   "old": "تُرتب الأدلة في نطاقات أو نقاط بحسب تاريخ القياس أو النشر، مع شارات لفئة الدليل ومن دون إنشاء درجة رقمية للحداثة.",
+   "new": "تُدرج الأدلة بحسب تاريخ القياس أو النشر وفئة الدليل، من دون احتساب درجة رقمية للحداثة."
+  },
+  {
+   "finding": "R3",
+   "sheet": "06_EVIDENCE_OBJECTS",
+   "row": 78,
+   "col": 14,
+   "field": "VIS-EVIDENCE-GAPS.method_en",
+   "old": "Matrix/timeline with explicit gap types; blank/unknown never plotted as zero.",
+   "new": "Gaps are listed by explicit type; a blank or unknown value is never shown as zero."
+  },
+  {
+   "finding": "R3",
+   "sheet": "06_EVIDENCE_OBJECTS",
+   "row": 78,
+   "col": 15,
+   "field": "VIS-EVIDENCE-GAPS.method_ar",
+   "old": "تُعرض مصفوفة أو سلسلة زمنية بفئات فجوة صريحة، ولا يُرسم الفراغ أو المجهول على أنه صفر.",
+   "new": "تُدرج الفجوات بفئات صريحة، ولا يُعرض الفراغ أو المجهول على أنه صفر."
+  },
+  {
+   "finding": "R3",
+   "sheet": "06_EVIDENCE_OBJECTS",
+   "row": 75,
+   "col": 14,
+   "field": "VIS-FIRM-FINANCE-SEVERITY.method_en",
+   "old": "Stacked bar with denominator and filter definition adjacent to percentages.",
+   "new": "Percentages are shown with their calculation base and filter definition beside them."
+  },
+  {
+   "finding": "R3",
+   "sheet": "06_EVIDENCE_OBJECTS",
+   "row": 75,
+   "col": 15,
+   "field": "VIS-FIRM-FINANCE-SEVERITY.method_ar",
+   "old": "يُعرض شريط مكدس مع تعريف المرشح وقاعدة القياس بجوار النسب حتى لا تتحول 91.84% إلى نسبة لجميع المنشآت.",
+   "new": "تُعرض النسب مع تعريف المرشح وقاعدة القياس بجوارها حتى لا تتحول 91.84% إلى نسبة لجميع المنشآت."
+  },
+  {
+   "finding": "R3",
+   "sheet": "06_EVIDENCE_OBJECTS",
+   "row": 76,
+   "col": 14,
+   "field": "VIS-OECD-FCP-TIMELINE.method_en",
+   "old": "Timeline separates framework, purpose, output, implementation, complaints/redress, enforcement, outcome.",
+   "new": "An ordered sequence separates framework, purpose, output, implementation, complaints and redress, enforcement and outcome."
+  },
+  {
+   "finding": "R3",
+   "sheet": "06_EVIDENCE_OBJECTS",
+   "row": 76,
+   "col": 15,
+   "field": "VIS-OECD-FCP-TIMELINE.method_ar",
+   "old": "يفصل الخط الزمني بين الإطار والغرض والمخرج والتنفيذ والشكاوى والتظلم والإنفاذ والنتيجة، مع بقاء الحالات غير المقاسة مفتوحة.",
+   "new": "يفصل تسلسل مرتب بين الإطار والغرض والمخرج والتنفيذ والشكاوى والتظلم والإنفاذ والنتيجة، مع بقاء الحالات غير المقاسة مفتوحة."
+  },
+  {
+   "finding": "R3",
+   "sheet": "06_EVIDENCE_OBJECTS",
+   "row": 17,
+   "col": 14,
+   "field": "VIS-MECHANISM-METRIC-BRIDGE.method_en",
+   "old": "Edges labeled contextualizes / policy proposition / research priority / verification bridge.",
+   "new": "Each link is labelled as context, policy proposition, research priority or verification need; no causal arrow is used without independent evidence."
+  },
+  {
+   "finding": "R3",
+   "sheet": "06_EVIDENCE_OBJECTS",
+   "row": 17,
+   "col": 15,
+   "field": "VIS-MECHANISM-METRIC-BRIDGE.method_ar",
+   "old": "تُسمى الروابط صراحةً: سياق، أو مقترح سياسة، أو أولوية بحث، أو جسر تحقق؛ ولا تُرسم أسهم سببية من دون دليل مستقل.",
+   "new": "تُسمى الروابط صراحةً: سياق، أو مقترح سياسة، أو أولوية بحث، أو حاجة إلى تحقق؛ ولا تُستخدم أسهم سببية من دون دليل مستقل."
+  },
+  {
+   "finding": "R3",
+   "sheet": "06_EVIDENCE_OBJECTS",
+   "row": 77,
+   "col": 14,
+   "field": "VIS-CAPITAL-CONTEXT.method_en",
+   "old": "Relationship graph with flow-class and state badges; no additive total across unlike states.",
+   "new": "Pathways are described in text by flow class and evidence state; unlike funding states are never added into one total."
+  },
+  {
+   "finding": "R3",
+   "sheet": "06_EVIDENCE_OBJECTS",
+   "row": 77,
+   "col": 15,
+   "field": "VIS-CAPITAL-CONTEXT.method_ar",
+   "old": "تُعرض شبكة علاقات تحمل شارات لفئة التدفق وحالته، ولا يُنشأ إجمالي جمعي بين حالات تمويل غير متجانسة.",
+   "new": "تُوصف المسارات نصيًا بحسب فئة التدفق وحالته، ولا يُنشأ إجمالي جمعي بين حالات تمويل غير متجانسة."
+  },
+  {
+   "finding": "R3",
+   "sheet": "06_EVIDENCE_OBJECTS",
+   "row": 11,
+   "col": 13,
+   "field": "VIS-INCLUSION-TRANSMISSION.universe_ar",
+   "old": "الأشخاص والمنشآت ومقدمو الخدمات وبنية المدفوعات والتدفقات والقواعد التنظيمية والقيود المُمكِّنة أو المعطلة التي تغطيها الأدلة المرتبطة بالشكل.",
+   "new": "الأشخاص والمنشآت ومقدمو الخدمات وبنية المدفوعات والتدفقات والقواعد التنظيمية والقيود المُمكِّنة أو المعطلة التي تغطيها الأدلة المرتبطة بهذا الملخص."
+  },
+  {
+   "finding": "R3",
+   "sheet": "06_EVIDENCE_OBJECTS",
+   "row": 12,
+   "col": 6,
+   "field": "VIS-EVIDENCE-FRESHNESS.06.en",
+   "old": "The visual places evidence by its observation or publication vintage across domains and distinguishes representative surveys, administrative records, regulatory material, secondary evidence and unresolved gaps. It shows where this resource relies on older evidence and where newer evidence exists; newer administrative data are not automatically a current population outcome, and older evidence are not automatically invalid.",
+   "new": "Evidence is ordered here by its observation or publication vintage across domains, distinguishing representative surveys, administrative records, regulatory material, secondary evidence and unresolved gaps. It shows where this resource relies on older evidence and where newer evidence exists; newer administrative data are not automatically a current population outcome, and older evidence are not automatically invalid."
+  },
+  {
+   "finding": "R3",
+   "sheet": "11_VISUAL_LIBRARY",
+   "row": 7,
+   "col": 21,
+   "field": "VIS-EVIDENCE-FRESHNESS.11.en",
+   "old": "The visual places evidence by its observation or publication vintage across domains and distinguishes representative surveys, administrative records, regulatory material, secondary evidence and unresolved gaps. It shows where this resource relies on older evidence and where newer evidence exists; newer administrative data are not automatically a current population outcome, and older evidence are not automatically invalid.",
+   "new": "Evidence is ordered here by its observation or publication vintage across domains, distinguishing representative surveys, administrative records, regulatory material, secondary evidence and unresolved gaps. It shows where this resource relies on older evidence and where newer evidence exists; newer administrative data are not automatically a current population outcome, and older evidence are not automatically invalid."
+  },
+  {
+   "finding": "R3",
+   "sheet": "03_PAGE_SECTIONS",
+   "row": 236,
+   "col": 5,
+   "field": "VIS-EVIDENCE-FRESHNESS.03.en",
+   "old": "The visual places evidence by its observation or publication vintage across domains and distinguishes representative surveys, administrative records, regulatory material, secondary evidence and unresolved gaps. It shows where this resource relies on older evidence and where newer evidence exists; newer administrative data are not automatically a current population outcome, and older evidence are not automatically invalid.",
+   "new": "Evidence is ordered here by its observation or publication vintage across domains, distinguishing representative surveys, administrative records, regulatory material, secondary evidence and unresolved gaps. It shows where this resource relies on older evidence and where newer evidence exists; newer administrative data are not automatically a current population outcome, and older evidence are not automatically invalid."
+  },
+  {
+   "finding": "R3",
+   "sheet": "06_EVIDENCE_OBJECTS",
+   "row": 12,
+   "col": 6,
+   "field": "VIS-EVIDENCE-FRESHNESS.06.en",
+   "old": "Evidence is ordered here by its observation or publication vintage across domains, distinguishing representative surveys, administrative records, regulatory material, secondary evidence and unresolved gaps. It shows where this resource relies on older evidence and where newer evidence exists; newer administrative data are not automatically a current population outcome, and older evidence are not automatically invalid.",
+   "new": "Evidence is ordered here by its observation or publication vintage across domains, distinguishing representative surveys, administrative records, regulatory material, secondary evidence and unresolved gaps. This shows where this resource relies on older evidence and where newer evidence exists; newer administrative data are not automatically a current population outcome, and older evidence are not automatically invalid."
+  },
+  {
+   "finding": "R3",
+   "sheet": "11_VISUAL_LIBRARY",
+   "row": 7,
+   "col": 21,
+   "field": "VIS-EVIDENCE-FRESHNESS.11.en",
+   "old": "Evidence is ordered here by its observation or publication vintage across domains, distinguishing representative surveys, administrative records, regulatory material, secondary evidence and unresolved gaps. It shows where this resource relies on older evidence and where newer evidence exists; newer administrative data are not automatically a current population outcome, and older evidence are not automatically invalid.",
+   "new": "Evidence is ordered here by its observation or publication vintage across domains, distinguishing representative surveys, administrative records, regulatory material, secondary evidence and unresolved gaps. This shows where this resource relies on older evidence and where newer evidence exists; newer administrative data are not automatically a current population outcome, and older evidence are not automatically invalid."
+  },
+  {
+   "finding": "R3",
+   "sheet": "03_PAGE_SECTIONS",
+   "row": 236,
+   "col": 5,
+   "field": "VIS-EVIDENCE-FRESHNESS.03.en",
+   "old": "Evidence is ordered here by its observation or publication vintage across domains, distinguishing representative surveys, administrative records, regulatory material, secondary evidence and unresolved gaps. It shows where this resource relies on older evidence and where newer evidence exists; newer administrative data are not automatically a current population outcome, and older evidence are not automatically invalid.",
+   "new": "Evidence is ordered here by its observation or publication vintage across domains, distinguishing representative surveys, administrative records, regulatory material, secondary evidence and unresolved gaps. This shows where this resource relies on older evidence and where newer evidence exists; newer administrative data are not automatically a current population outcome, and older evidence are not automatically invalid."
+  },
+  {
+   "finding": "R3",
+   "sheet": "06_EVIDENCE_OBJECTS",
+   "row": 12,
+   "col": 7,
+   "field": "VIS-EVIDENCE-FRESHNESS.06.ar",
+   "old": "يضع العرض الأدلة بحسب تاريخ القياس أو النشر عبر المجالات، ويميز بين المسوح الممثلة والسجلات الإدارية والمواد التنظيمية والأدلة الثانوية والفجوات غير المحسومة. ويبين أين تعتمد الإجابة على أدلة أقدم وأين توجد أدلة أحدث؛ ولا تعني حداثة البيانات الإدارية أنها تقيس نتيجة سكانية راهنة، كما لا يعني قِدم الدليل أنه غير صالح تلقائيًا.",
+   "new": "تُرتَّب الأدلة هنا بحسب تاريخ القياس أو النشر عبر المجالات، مع التمييز بين المسوح الممثلة والسجلات الإدارية والمواد التنظيمية والأدلة الثانوية والفجوات غير المحسومة. ويبين أين تعتمد الإجابة على أدلة أقدم وأين توجد أدلة أحدث؛ ولا تعني حداثة البيانات الإدارية أنها تقيس نتيجة سكانية راهنة، كما لا يعني قِدم الدليل أنه غير صالح تلقائيًا."
+  },
+  {
+   "finding": "R3",
+   "sheet": "11_VISUAL_LIBRARY",
+   "row": 7,
+   "col": 22,
+   "field": "VIS-EVIDENCE-FRESHNESS.11.ar",
+   "old": "يضع العرض الأدلة بحسب تاريخ القياس أو النشر عبر المجالات، ويميز بين المسوح الممثلة والسجلات الإدارية والمواد التنظيمية والأدلة الثانوية والفجوات غير المحسومة. ويبين أين تعتمد الإجابة على أدلة أقدم وأين توجد أدلة أحدث؛ ولا تعني حداثة البيانات الإدارية أنها تقيس نتيجة سكانية راهنة، كما لا يعني قِدم الدليل أنه غير صالح تلقائيًا.",
+   "new": "تُرتَّب الأدلة هنا بحسب تاريخ القياس أو النشر عبر المجالات، مع التمييز بين المسوح الممثلة والسجلات الإدارية والمواد التنظيمية والأدلة الثانوية والفجوات غير المحسومة. ويبين أين تعتمد الإجابة على أدلة أقدم وأين توجد أدلة أحدث؛ ولا تعني حداثة البيانات الإدارية أنها تقيس نتيجة سكانية راهنة، كما لا يعني قِدم الدليل أنه غير صالح تلقائيًا."
+  },
+  {
+   "finding": "R3",
+   "sheet": "03_PAGE_SECTIONS",
+   "row": 236,
+   "col": 7,
+   "field": "VIS-EVIDENCE-FRESHNESS.03.ar",
+   "old": "يضع العرض الأدلة بحسب تاريخ القياس أو النشر عبر المجالات، ويميز بين المسوح الممثلة والسجلات الإدارية والمواد التنظيمية والأدلة الثانوية والفجوات غير المحسومة. ويبين أين تعتمد الإجابة على أدلة أقدم وأين توجد أدلة أحدث؛ ولا تعني حداثة البيانات الإدارية أنها تقيس نتيجة سكانية راهنة، كما لا يعني قِدم الدليل أنه غير صالح تلقائيًا.",
+   "new": "تُرتَّب الأدلة هنا بحسب تاريخ القياس أو النشر عبر المجالات، مع التمييز بين المسوح الممثلة والسجلات الإدارية والمواد التنظيمية والأدلة الثانوية والفجوات غير المحسومة. ويبين أين تعتمد الإجابة على أدلة أقدم وأين توجد أدلة أحدث؛ ولا تعني حداثة البيانات الإدارية أنها تقيس نتيجة سكانية راهنة، كما لا يعني قِدم الدليل أنه غير صالح تلقائيًا."
+  },
+  {
+   "finding": "R3",
+   "sheet": "06_EVIDENCE_OBJECTS",
+   "row": 12,
+   "col": 7,
+   "field": "VIS-EVIDENCE-FRESHNESS.06.ar",
+   "old": "تُرتَّب الأدلة هنا بحسب تاريخ القياس أو النشر عبر المجالات، مع التمييز بين المسوح الممثلة والسجلات الإدارية والمواد التنظيمية والأدلة الثانوية والفجوات غير المحسومة. ويبين أين تعتمد الإجابة على أدلة أقدم وأين توجد أدلة أحدث؛ ولا تعني حداثة البيانات الإدارية أنها تقيس نتيجة سكانية راهنة، كما لا يعني قِدم الدليل أنه غير صالح تلقائيًا.",
+   "new": "تُرتَّب الأدلة هنا بحسب تاريخ القياس أو النشر عبر المجالات، مع التمييز بين المسوح الممثلة والسجلات الإدارية والمواد التنظيمية والأدلة الثانوية والفجوات غير المحسومة. ويتضح بذلك أين تعتمد الإجابة على أدلة أقدم وأين توجد أدلة أحدث؛ ولا تعني حداثة البيانات الإدارية أنها تقيس نتيجة سكانية راهنة، كما لا يعني قِدم الدليل أنه غير صالح تلقائيًا."
+  },
+  {
+   "finding": "R3",
+   "sheet": "11_VISUAL_LIBRARY",
+   "row": 7,
+   "col": 22,
+   "field": "VIS-EVIDENCE-FRESHNESS.11.ar",
+   "old": "تُرتَّب الأدلة هنا بحسب تاريخ القياس أو النشر عبر المجالات، مع التمييز بين المسوح الممثلة والسجلات الإدارية والمواد التنظيمية والأدلة الثانوية والفجوات غير المحسومة. ويبين أين تعتمد الإجابة على أدلة أقدم وأين توجد أدلة أحدث؛ ولا تعني حداثة البيانات الإدارية أنها تقيس نتيجة سكانية راهنة، كما لا يعني قِدم الدليل أنه غير صالح تلقائيًا.",
+   "new": "تُرتَّب الأدلة هنا بحسب تاريخ القياس أو النشر عبر المجالات، مع التمييز بين المسوح الممثلة والسجلات الإدارية والمواد التنظيمية والأدلة الثانوية والفجوات غير المحسومة. ويتضح بذلك أين تعتمد الإجابة على أدلة أقدم وأين توجد أدلة أحدث؛ ولا تعني حداثة البيانات الإدارية أنها تقيس نتيجة سكانية راهنة، كما لا يعني قِدم الدليل أنه غير صالح تلقائيًا."
+  },
+  {
+   "finding": "R3",
+   "sheet": "03_PAGE_SECTIONS",
+   "row": 236,
+   "col": 7,
+   "field": "VIS-EVIDENCE-FRESHNESS.03.ar",
+   "old": "تُرتَّب الأدلة هنا بحسب تاريخ القياس أو النشر عبر المجالات، مع التمييز بين المسوح الممثلة والسجلات الإدارية والمواد التنظيمية والأدلة الثانوية والفجوات غير المحسومة. ويبين أين تعتمد الإجابة على أدلة أقدم وأين توجد أدلة أحدث؛ ولا تعني حداثة البيانات الإدارية أنها تقيس نتيجة سكانية راهنة، كما لا يعني قِدم الدليل أنه غير صالح تلقائيًا.",
+   "new": "تُرتَّب الأدلة هنا بحسب تاريخ القياس أو النشر عبر المجالات، مع التمييز بين المسوح الممثلة والسجلات الإدارية والمواد التنظيمية والأدلة الثانوية والفجوات غير المحسومة. ويتضح بذلك أين تعتمد الإجابة على أدلة أقدم وأين توجد أدلة أحدث؛ ولا تعني حداثة البيانات الإدارية أنها تقيس نتيجة سكانية راهنة، كما لا يعني قِدم الدليل أنه غير صالح تلقائيًا."
+  },
+  {
+   "finding": "R3",
+   "sheet": "06_EVIDENCE_OBJECTS",
+   "row": 78,
+   "col": 6,
+   "field": "VIS-EVIDENCE-GAPS.06.en",
+   "old": "The visual groups current evidence gaps by type: missing period, missing calculation base, missing primary file, unavailable map layer and unresolved source universe. A gap can close when evidence changes; a blank or missing observation is never plotted as zero or treated as evidence of absence.",
+   "new": "Current evidence gaps are grouped here by type: missing period, missing calculation base, missing primary file, unavailable map layer and unresolved source universe. A gap can close when evidence changes; a blank or missing observation is never plotted as zero or treated as evidence of absence."
+  },
+  {
+   "finding": "R3",
+   "sheet": "11_VISUAL_LIBRARY",
+   "row": 8,
+   "col": 21,
+   "field": "VIS-EVIDENCE-GAPS.11.en",
+   "old": "The visual groups current evidence gaps by type: missing period, missing calculation base, missing primary file, unavailable map layer and unresolved source universe. A gap can close when evidence changes; a blank or missing observation is never plotted as zero or treated as evidence of absence.",
+   "new": "Current evidence gaps are grouped here by type: missing period, missing calculation base, missing primary file, unavailable map layer and unresolved source universe. A gap can close when evidence changes; a blank or missing observation is never plotted as zero or treated as evidence of absence."
+  },
+  {
+   "finding": "R3",
+   "sheet": "03_PAGE_SECTIONS",
+   "row": 238,
+   "col": 5,
+   "field": "VIS-EVIDENCE-GAPS.03.en",
+   "old": "The visual groups current evidence gaps by type: missing period, missing calculation base, missing primary file, unavailable map layer and unresolved source universe. A gap can close when evidence changes; a blank or missing observation is never plotted as zero or treated as evidence of absence.",
+   "new": "Current evidence gaps are grouped here by type: missing period, missing calculation base, missing primary file, unavailable map layer and unresolved source universe. A gap can close when evidence changes; a blank or missing observation is never plotted as zero or treated as evidence of absence."
+  },
+  {
+   "finding": "R3",
+   "sheet": "06_EVIDENCE_OBJECTS",
+   "row": 78,
+   "col": 6,
+   "field": "VIS-EVIDENCE-GAPS.06.en",
+   "old": "Current evidence gaps are grouped here by type: missing period, missing calculation base, missing primary file, unavailable map layer and unresolved source universe. A gap can close when evidence changes; a blank or missing observation is never plotted as zero or treated as evidence of absence.",
+   "new": "Current evidence gaps are grouped here by type: missing period, missing calculation base, missing primary file, unavailable map layer and unresolved source universe. A gap can close when evidence changes; a blank or missing observation is never shown as zero or treated as evidence of absence."
+  },
+  {
+   "finding": "R3",
+   "sheet": "11_VISUAL_LIBRARY",
+   "row": 8,
+   "col": 21,
+   "field": "VIS-EVIDENCE-GAPS.11.en",
+   "old": "Current evidence gaps are grouped here by type: missing period, missing calculation base, missing primary file, unavailable map layer and unresolved source universe. A gap can close when evidence changes; a blank or missing observation is never plotted as zero or treated as evidence of absence.",
+   "new": "Current evidence gaps are grouped here by type: missing period, missing calculation base, missing primary file, unavailable map layer and unresolved source universe. A gap can close when evidence changes; a blank or missing observation is never shown as zero or treated as evidence of absence."
+  },
+  {
+   "finding": "R3",
+   "sheet": "03_PAGE_SECTIONS",
+   "row": 238,
+   "col": 5,
+   "field": "VIS-EVIDENCE-GAPS.03.en",
+   "old": "Current evidence gaps are grouped here by type: missing period, missing calculation base, missing primary file, unavailable map layer and unresolved source universe. A gap can close when evidence changes; a blank or missing observation is never plotted as zero or treated as evidence of absence.",
+   "new": "Current evidence gaps are grouped here by type: missing period, missing calculation base, missing primary file, unavailable map layer and unresolved source universe. A gap can close when evidence changes; a blank or missing observation is never shown as zero or treated as evidence of absence."
+  },
+  {
+   "finding": "R3",
+   "sheet": "06_EVIDENCE_OBJECTS",
+   "row": 78,
+   "col": 7,
+   "field": "VIS-EVIDENCE-GAPS.06.ar",
+   "old": "يجمع العرض فجوات الأدلة الحالية بحسب نوعها: فترة مفقودة، أو قاعدة احتساب غير موثقة، أو ملف أولي غير متاح، أو طبقة مكانية غير قابلة للبناء بعد، أو نطاق مصدر غير محسوم. وقد تُغلق الفجوة عند وصول دليل جديد؛ ولا يُعرض الفراغ أو غياب الرصد على أنه صفر أو دليل على عدم الوجود.",
+   "new": "تُجمع فجوات الأدلة الحالية هنا بحسب نوعها: فترة مفقودة، أو قاعدة احتساب غير موثقة، أو ملف أولي غير متاح، أو طبقة مكانية غير قابلة للبناء بعد، أو نطاق مصدر غير محسوم. وقد تُغلق الفجوة عند وصول دليل جديد؛ ولا يُعرض الفراغ أو غياب الرصد على أنه صفر أو دليل على عدم الوجود."
+  },
+  {
+   "finding": "R3",
+   "sheet": "11_VISUAL_LIBRARY",
+   "row": 8,
+   "col": 22,
+   "field": "VIS-EVIDENCE-GAPS.11.ar",
+   "old": "يجمع العرض فجوات الأدلة الحالية بحسب نوعها: فترة مفقودة، أو قاعدة احتساب غير موثقة، أو ملف أولي غير متاح، أو طبقة مكانية غير قابلة للبناء بعد، أو نطاق مصدر غير محسوم. وقد تُغلق الفجوة عند وصول دليل جديد؛ ولا يُعرض الفراغ أو غياب الرصد على أنه صفر أو دليل على عدم الوجود.",
+   "new": "تُجمع فجوات الأدلة الحالية هنا بحسب نوعها: فترة مفقودة، أو قاعدة احتساب غير موثقة، أو ملف أولي غير متاح، أو طبقة مكانية غير قابلة للبناء بعد، أو نطاق مصدر غير محسوم. وقد تُغلق الفجوة عند وصول دليل جديد؛ ولا يُعرض الفراغ أو غياب الرصد على أنه صفر أو دليل على عدم الوجود."
+  },
+  {
+   "finding": "R3",
+   "sheet": "03_PAGE_SECTIONS",
+   "row": 238,
+   "col": 7,
+   "field": "VIS-EVIDENCE-GAPS.03.ar",
+   "old": "يجمع العرض فجوات الأدلة الحالية بحسب نوعها: فترة مفقودة، أو قاعدة احتساب غير موثقة، أو ملف أولي غير متاح، أو طبقة مكانية غير قابلة للبناء بعد، أو نطاق مصدر غير محسوم. وقد تُغلق الفجوة عند وصول دليل جديد؛ ولا يُعرض الفراغ أو غياب الرصد على أنه صفر أو دليل على عدم الوجود.",
+   "new": "تُجمع فجوات الأدلة الحالية هنا بحسب نوعها: فترة مفقودة، أو قاعدة احتساب غير موثقة، أو ملف أولي غير متاح، أو طبقة مكانية غير قابلة للبناء بعد، أو نطاق مصدر غير محسوم. وقد تُغلق الفجوة عند وصول دليل جديد؛ ولا يُعرض الفراغ أو غياب الرصد على أنه صفر أو دليل على عدم الوجود."
+  },
+  {
+   "finding": "R3",
+   "sheet": "06_EVIDENCE_OBJECTS",
+   "row": 76,
+   "col": 6,
+   "field": "VIS-OECD-FCP-TIMELINE.06.en",
+   "old": "The timeline separates the existence of a framework or instrument, its stated purpose, awareness outputs, implementation, complaints and redress, enforcement, and consumer outcomes. The later performance states remain open where no observed evidence exists; a policy or guidance document is not evidence that protection is effective in practice.",
+   "new": "The sequence separates the existence of a framework or instrument, its stated purpose, awareness outputs, implementation, complaints and redress, enforcement, and consumer outcomes. The later performance states remain open where no observed evidence exists; a policy or guidance document is not evidence that protection is effective in practice."
+  },
+  {
+   "finding": "R3",
+   "sheet": "11_VISUAL_LIBRARY",
+   "row": 14,
+   "col": 21,
+   "field": "VIS-OECD-FCP-TIMELINE.11.en",
+   "old": "The timeline separates the existence of a framework or instrument, its stated purpose, awareness outputs, implementation, complaints and redress, enforcement, and consumer outcomes. The later performance states remain open where no observed evidence exists; a policy or guidance document is not evidence that protection is effective in practice.",
+   "new": "The sequence separates the existence of a framework or instrument, its stated purpose, awareness outputs, implementation, complaints and redress, enforcement, and consumer outcomes. The later performance states remain open where no observed evidence exists; a policy or guidance document is not evidence that protection is effective in practice."
+  },
+  {
+   "finding": "R3",
+   "sheet": "03_PAGE_SECTIONS",
+   "row": 274,
+   "col": 5,
+   "field": "VIS-OECD-FCP-TIMELINE.03.en",
+   "old": "The timeline separates the existence of a framework or instrument, its stated purpose, awareness outputs, implementation, complaints and redress, enforcement, and consumer outcomes. The later performance states remain open where no observed evidence exists; a policy or guidance document is not evidence that protection is effective in practice.",
+   "new": "The sequence separates the existence of a framework or instrument, its stated purpose, awareness outputs, implementation, complaints and redress, enforcement, and consumer outcomes. The later performance states remain open where no observed evidence exists; a policy or guidance document is not evidence that protection is effective in practice."
+  },
+  {
+   "finding": "R3",
+   "sheet": "06_EVIDENCE_OBJECTS",
+   "row": 76,
+   "col": 7,
+   "field": "VIS-OECD-FCP-TIMELINE.06.ar",
+   "old": "يفصل الخط الزمني بين وجود الإطار أو الأداة التنظيمية، وغرضها المعلن، ومخرجات التوعية، والتنفيذ، والشكاوى والتظلم، والإنفاذ، ونتائج المستهلك. وتبقى حالات الأداء اللاحقة مفتوحة عندما لا تتوفر أدلة مرصودة؛ فوجود سياسة أو دليل إرشادي لا يثبت أن الحماية تعمل بفعالية في الواقع.",
+   "new": "يفصل هذا التسلسل بين وجود الإطار أو الأداة التنظيمية، وغرضها المعلن، ومخرجات التوعية، والتنفيذ، والشكاوى والتظلم، والإنفاذ، ونتائج المستهلك. وتبقى حالات الأداء اللاحقة مفتوحة عندما لا تتوفر أدلة مرصودة؛ فوجود سياسة أو دليل إرشادي لا يثبت أن الحماية تعمل بفعالية في الواقع."
+  },
+  {
+   "finding": "R3",
+   "sheet": "11_VISUAL_LIBRARY",
+   "row": 14,
+   "col": 22,
+   "field": "VIS-OECD-FCP-TIMELINE.11.ar",
+   "old": "يفصل الخط الزمني بين وجود الإطار أو الأداة التنظيمية، وغرضها المعلن، ومخرجات التوعية، والتنفيذ، والشكاوى والتظلم، والإنفاذ، ونتائج المستهلك. وتبقى حالات الأداء اللاحقة مفتوحة عندما لا تتوفر أدلة مرصودة؛ فوجود سياسة أو دليل إرشادي لا يثبت أن الحماية تعمل بفعالية في الواقع.",
+   "new": "يفصل هذا التسلسل بين وجود الإطار أو الأداة التنظيمية، وغرضها المعلن، ومخرجات التوعية، والتنفيذ، والشكاوى والتظلم، والإنفاذ، ونتائج المستهلك. وتبقى حالات الأداء اللاحقة مفتوحة عندما لا تتوفر أدلة مرصودة؛ فوجود سياسة أو دليل إرشادي لا يثبت أن الحماية تعمل بفعالية في الواقع."
+  },
+  {
+   "finding": "R3",
+   "sheet": "03_PAGE_SECTIONS",
+   "row": 274,
+   "col": 7,
+   "field": "VIS-OECD-FCP-TIMELINE.03.ar",
+   "old": "يفصل الخط الزمني بين وجود الإطار أو الأداة التنظيمية، وغرضها المعلن، ومخرجات التوعية، والتنفيذ، والشكاوى والتظلم، والإنفاذ، ونتائج المستهلك. وتبقى حالات الأداء اللاحقة مفتوحة عندما لا تتوفر أدلة مرصودة؛ فوجود سياسة أو دليل إرشادي لا يثبت أن الحماية تعمل بفعالية في الواقع.",
+   "new": "يفصل هذا التسلسل بين وجود الإطار أو الأداة التنظيمية، وغرضها المعلن، ومخرجات التوعية، والتنفيذ، والشكاوى والتظلم، والإنفاذ، ونتائج المستهلك. وتبقى حالات الأداء اللاحقة مفتوحة عندما لا تتوفر أدلة مرصودة؛ فوجود سياسة أو دليل إرشادي لا يثبت أن الحماية تعمل بفعالية في الواقع."
+  },
+  {
+   "finding": "R3",
+   "sheet": "06_EVIDENCE_OBJECTS",
+   "row": 17,
+   "col": 6,
+   "field": "VIS-MECHANISM-METRIC-BRIDGE.06.en",
+   "old": "The visual starts from one quantitative measure and links it only to contextual mechanisms, policy propositions, research priorities or primary-verification needs that have an explicit supported relationship. The links help interpret the number; they do not estimate prevalence, effect size or causality.",
+   "new": "This summary starts from one quantitative measure and links it only to contextual mechanisms, policy propositions, research priorities or primary-verification needs that have an explicit supported relationship. The links help interpret the number; they do not estimate prevalence, effect size or causality."
+  },
+  {
+   "finding": "R3",
+   "sheet": "11_VISUAL_LIBRARY",
+   "row": 13,
+   "col": 21,
+   "field": "VIS-MECHANISM-METRIC-BRIDGE.11.en",
+   "old": "The visual starts from one quantitative evidence record and links it only to contextual mechanisms, policy propositions, research priorities or primary-verification needs that have an explicit supported relationship. The links help interpret the number; they do not estimate prevalence, effect size or causality.",
+   "new": "This summary starts from one quantitative evidence record and links it only to contextual mechanisms, policy propositions, research priorities or primary-verification needs that have an explicit supported relationship. The links help interpret the number; they do not estimate prevalence, effect size or causality."
+  },
+  {
+   "finding": "R3",
+   "sheet": "03_PAGE_SECTIONS",
+   "row": 266,
+   "col": 5,
+   "field": "VIS-MECHANISM-METRIC-BRIDGE.03.en",
+   "old": "The visual starts from one quantitative evidence record and links it only to contextual mechanisms, policy propositions, research priorities or primary-verification needs that have an explicitly supported relationship. The links help interpret the number; they do not estimate prevalence, effect size or causality.",
+   "new": "This summary starts from one quantitative evidence record and links it only to contextual mechanisms, policy propositions, research priorities or primary-verification needs that have an explicitly supported relationship. The links help interpret the number; they do not estimate prevalence, effect size or causality."
+  },
+  {
+   "finding": "R3",
+   "sheet": "06_EVIDENCE_OBJECTS",
+   "row": 17,
+   "col": 7,
+   "field": "VIS-MECHANISM-METRIC-BRIDGE.06.ar",
+   "old": "يبدأ العرض من دليل كمي واحد، ثم يربطه فقط بسياقات أو آليات محتملة أو مقترحات سياسات أو أولويات بحث أو احتياجات تحقق أولي لها علاقة موثقة ومحددة. تساعد هذه الروابط على تفسير الرقم، لكنها لا تقيس الانتشار أو حجم الأثر ولا تثبت السببية.",
+   "new": "يبدأ هذا الملخص من دليل كمي واحد، ثم يربطه فقط بسياقات أو آليات محتملة أو مقترحات سياسات أو أولويات بحث أو احتياجات تحقق أولي لها علاقة موثقة ومحددة. تساعد هذه الروابط على تفسير الرقم، لكنها لا تقيس الانتشار أو حجم الأثر ولا تثبت السببية."
+  },
+  {
+   "finding": "R3",
+   "sheet": "11_VISUAL_LIBRARY",
+   "row": 13,
+   "col": 22,
+   "field": "VIS-MECHANISM-METRIC-BRIDGE.11.ar",
+   "old": "يبدأ العرض من دليل كمي واحد، ثم يربطه فقط بسياقات أو آليات محتملة أو مقترحات سياسات أو أولويات بحث أو احتياجات تحقق أولي لها علاقة موثقة ومحددة. تساعد هذه الروابط على تفسير الرقم، لكنها لا تقيس الانتشار أو حجم الأثر ولا تثبت السببية.",
+   "new": "يبدأ هذا الملخص من دليل كمي واحد، ثم يربطه فقط بسياقات أو آليات محتملة أو مقترحات سياسات أو أولويات بحث أو احتياجات تحقق أولي لها علاقة موثقة ومحددة. تساعد هذه الروابط على تفسير الرقم، لكنها لا تقيس الانتشار أو حجم الأثر ولا تثبت السببية."
+  },
+  {
+   "finding": "R3",
+   "sheet": "03_PAGE_SECTIONS",
+   "row": 266,
+   "col": 7,
+   "field": "VIS-MECHANISM-METRIC-BRIDGE.03.ar",
+   "old": "يبدأ العرض من دليل كمي واحد، ثم يربطه فقط بسياقات أو آليات محتملة أو مقترحات سياسات أو أولويات بحث أو احتياجات تحقق أولي لها علاقة موثقة ومحددة. تساعد هذه الروابط على تفسير الرقم، لكنها لا تقيس الانتشار أو حجم الأثر ولا تثبت السببية.",
+   "new": "يبدأ هذا الملخص من دليل كمي واحد، ثم يربطه فقط بسياقات أو آليات محتملة أو مقترحات سياسات أو أولويات بحث أو احتياجات تحقق أولي لها علاقة موثقة ومحددة. تساعد هذه الروابط على تفسير الرقم، لكنها لا تقيس الانتشار أو حجم الأثر ولا تثبت السببية."
+  },
+  {
+   "finding": "R3",
+   "sheet": "06_EVIDENCE_OBJECTS",
+   "row": 11,
+   "col": 6,
+   "field": "VIS-INCLUSION-TRANSMISSION.06.en",
+   "old": "Financial inclusion in Yemen is described here as connected parts: people and capability, firms and income, providers, payment rails, remittance and capital flows, regulation and consumer protection, and enabling constraints. The documented relationships describe context, dependency or plausible mechanisms where evidence supports them; they do not form a composite score and do not claim that one part causes another.",
+   "new": "Financial inclusion in Yemen is described here as a set of connected parts, listed in the scope below. The documented relationships describe context, dependency or plausible mechanisms where evidence supports them; they do not form a composite score and do not claim that one part causes another."
+  },
+  {
+   "finding": "R3",
+   "sheet": "11_VISUAL_LIBRARY",
+   "row": 12,
+   "col": 21,
+   "field": "VIS-INCLUSION-TRANSMISSION.11.en",
+   "old": "Financial inclusion in Yemen is described here as connected parts: people and capability, firms and income, providers, payment rails, remittance and capital flows, regulation and consumer protection, and enabling constraints. The documented relationships describe context, dependency or plausible mechanisms where evidence supports them; they do not form a composite score and do not claim that one part causes another.",
+   "new": "Financial inclusion in Yemen is described here as a set of connected parts, listed in the scope below. The documented relationships describe context, dependency or plausible mechanisms where evidence supports them; they do not form a composite score and do not claim that one part causes another."
+  },
+  {
+   "finding": "R3",
+   "sheet": "03_PAGE_SECTIONS",
+   "row": 264,
+   "col": 5,
+   "field": "VIS-INCLUSION-TRANSMISSION.03.en",
+   "old": "Financial inclusion in Yemen is described here as connected parts: people and capability, firms and income, providers, payment rails, remittance and capital flows, regulation and consumer protection, and enabling constraints. The documented relationships describe context, dependency or plausible mechanisms where evidence supports them; they do not form a composite score and do not claim that one part causes another.",
+   "new": "Financial inclusion in Yemen is described here as a set of connected parts, listed in the scope below. The documented relationships describe context, dependency or plausible mechanisms where evidence supports them; they do not form a composite score and do not claim that one part causes another."
+  },
+  {
+   "finding": "R3",
+   "sheet": "06_EVIDENCE_OBJECTS",
+   "row": 11,
+   "col": 7,
+   "field": "VIS-INCLUSION-TRANSMISSION.06.ar",
+   "old": "يصف هذا العرض الشمول المالي في اليمن بوصفه أجزاء مترابطة: الناس وقدراتهم، والمنشآت والدخل، ومقدمو الخدمات، وبنية المدفوعات، وتدفقات الحوالات ورأس المال، والتنظيم وحماية المستهلك، والقيود المُمكِّنة أو المعطِّلة. وتصف العلاقات الموثقة السياق أو الاعتماد أو آليات محتملة حين تسندها الأدلة؛ ولا تتحول الأجزاء إلى درجة واحدة، ولا تثبت أن جزءًا منها سبب لآخر.",
+   "new": "يصف هذا الملخص الشمول المالي في اليمن بوصفه أجزاء مترابطة، يرد بيانها في النطاق أدناه. وتصف العلاقات الموثقة السياق أو الاعتماد أو آليات محتملة حين تسندها الأدلة؛ ولا تتحول الأجزاء إلى درجة واحدة، ولا تثبت أن جزءًا منها سبب لآخر."
+  },
+  {
+   "finding": "R3",
+   "sheet": "11_VISUAL_LIBRARY",
+   "row": 12,
+   "col": 22,
+   "field": "VIS-INCLUSION-TRANSMISSION.11.ar",
+   "old": "يصف هذا العرض الشمول المالي في اليمن بوصفه أجزاء مترابطة: الناس وقدراتهم، والمنشآت والدخل، ومقدمو الخدمات، وبنية المدفوعات، وتدفقات الحوالات ورأس المال، والتنظيم وحماية المستهلك، والقيود المُمكِّنة أو المعطِّلة. وتصف العلاقات الموثقة السياق أو الاعتماد أو آليات محتملة حين تسندها الأدلة؛ ولا تتحول الأجزاء إلى درجة واحدة، ولا تثبت أن جزءًا منها سبب لآخر.",
+   "new": "يصف هذا الملخص الشمول المالي في اليمن بوصفه أجزاء مترابطة، يرد بيانها في النطاق أدناه. وتصف العلاقات الموثقة السياق أو الاعتماد أو آليات محتملة حين تسندها الأدلة؛ ولا تتحول الأجزاء إلى درجة واحدة، ولا تثبت أن جزءًا منها سبب لآخر."
+  },
+  {
+   "finding": "R3",
+   "sheet": "03_PAGE_SECTIONS",
+   "row": 264,
+   "col": 7,
+   "field": "VIS-INCLUSION-TRANSMISSION.03.ar",
+   "old": "يصف هذا العرض الشمول المالي في اليمن بوصفه أجزاء مترابطة: الناس وقدراتهم، والمنشآت والدخل، ومقدمو الخدمات، وبنية المدفوعات، وتدفقات الحوالات ورأس المال، والتنظيم وحماية المستهلك، والقيود المُمكِّنة أو المعطِّلة. وتصف العلاقات الموثقة السياق أو الاعتماد أو آليات محتملة حين تسندها الأدلة؛ ولا تتحول الأجزاء إلى درجة واحدة، ولا تثبت أن جزءًا منها سبب لآخر.",
+   "new": "يصف هذا الملخص الشمول المالي في اليمن بوصفه أجزاء مترابطة، يرد بيانها في النطاق أدناه. وتصف العلاقات الموثقة السياق أو الاعتماد أو آليات محتملة حين تسندها الأدلة؛ ولا تتحول الأجزاء إلى درجة واحدة، ولا تثبت أن جزءًا منها سبب لآخر."
+  },
+  {
+   "finding": "R4",
+   "sheet": "03_PAGE_SECTIONS",
+   "row": 552,
+   "col": 5,
+   "field": "/remittances/#s2.body_en",
+   "old": "The IMF staff report gives 2018–2024 as reported history based on staff calculations; a later supplement to the same consultation gives 2025 as an estimate and 2026–2030 as projections. The chart breaks the line where the source document changes and never extends reported history through the forecast as if all years had the same status. A forecast revision is not an observed economic change, and the macro series is not a measure of informal hawala volume.",
+   "new": "The IMF staff report gives 2018–2024 as reported history based on staff calculations; a later supplement to the same consultation gives 2025 as an estimate and 2026–2030 as projections. The series is kept apart where the source document changes: reported history is never extended through the forecast as if all years had the same status. A forecast revision is not an observed economic change, and the macro series is not a measure of informal hawala volume."
+  },
+  {
+   "finding": "R4",
+   "sheet": "03_PAGE_SECTIONS",
+   "row": 553,
+   "col": 7,
+   "field": "/remittances/#s2.body_ar",
+   "old": "يورد تقرير خبراء صندوق النقد قيم 2018–2024 بوصفها قيمًا تاريخية تستند إلى حسابات خبراء الصندوق، ويورد ملحق لاحق للمشاورات نفسها قيمة 2025 كتقدير وقيم 2026–2030 كتوقعات. وينقطع الخط في الرسم عند تغير الوثيقة المصدر، ولا تُمد القيم التاريخية عبر التوقعات كما لو كانت السنوات كلها من الحالة نفسها. مراجعة التوقع ليست تغيرًا اقتصاديًا مرصودًا، كما أن السلسلة الكلية لا تقيس حجم الحوالات غير الرسمية.",
+   "new": "يورد تقرير خبراء صندوق النقد قيم 2018–2024 بوصفها قيمًا تاريخية تستند إلى حسابات خبراء الصندوق، ويورد ملحق لاحق للمشاورات نفسها قيمة 2025 كتقدير وقيم 2026–2030 كتوقعات. وتُفصل السلسلة عند تغير الوثيقة المصدر، فلا تُمد القيم التاريخية عبر التوقعات كما لو كانت السنوات كلها من الحالة نفسها. مراجعة التوقع ليست تغيرًا اقتصاديًا مرصودًا، كما أن السلسلة الكلية لا تقيس حجم الحوالات غير الرسمية."
+  },
+  {
+   "finding": "R6",
+   "sheet": "04_NAV_UX",
+   "row": 122,
+   "col": 2,
+   "field": "UI-VIS-STATE-REPORTED.label_en",
+   "old": "Reported by the source (official statistics)",
+   "new": "Reported by the source"
+  },
+  {
+   "finding": "R6",
+   "sheet": "04_NAV_UX",
+   "row": 122,
+   "col": 3,
+   "field": "UI-VIS-STATE-REPORTED.label_ar",
+   "old": "وارد في المصدر (إحصاءات رسمية)",
+   "new": "وارد في المصدر"
+  },
+  {
+   "finding": "R6",
+   "sheet": "04_NAV_UX",
+   "row": 151,
+   "col": 3,
+   "field": "UI-VIS-UNIT-YER-MILLION.label_ar",
+   "old": "مليون ريال يمني (اسمية)",
+   "new": "مليون ريال يمني (بالقيمة الاسمية)"
+  },
+  {
+   "finding": "R6",
+   "sheet": "04_NAV_UX",
+   "row": 196,
+   "col": 2,
+   "field": "UI-VIS-CAT-PRV-COUNT-CURRENT-LIST.label_en",
+   "old": "Count from the current official list",
+   "new": "Count from the official list, as dated in the record"
+  },
+  {
+   "finding": "R6",
+   "sheet": "04_NAV_UX",
+   "row": 196,
+   "col": 3,
+   "field": "UI-VIS-CAT-PRV-COUNT-CURRENT-LIST.label_ar",
+   "old": "عدد مأخوذ من القائمة الرسمية الحالية",
+   "new": "عدد مأخوذ من القائمة الرسمية بتاريخها المسجل"
+  },
+  {
+   "finding": "R6",
+   "sheet": "04_NAV_UX",
+   "row": 203,
+   "col": 3,
+   "field": "UI-VIS-CAT-PRV-NAMED-PARTIAL.label_ar",
+   "old": "عضوية جزئية في الشبكة، وليست المجموعة الخاضعة للتنظيم",
+   "new": "عضوية جزئية في الشبكة، ولا تمثل كامل الجهات الخاضعة للتنظيم"
+  },
+  {
+   "finding": "R6",
+   "sheet": "04_NAV_UX",
+   "row": 206,
+   "col": 3,
+   "field": "UI-VIS-CAT-PRV-EVENTS-WALLETS.label_ar",
+   "old": "قائمة 2024 بالأسماء غير المرخصة وأعداد مؤرخة للمحافظ، ولا يوجد سجل حالي للوضع الترخيصي",
+   "new": "قائمة 2024 بالأسماء غير المرخصة وأعداد مؤرخة للمحافظ، ولا يوجد سجل حالي بحالة الترخيص"
+  },
+  {
+   "finding": "R6",
+   "sheet": "04_NAV_UX",
+   "row": 210,
+   "col": 2,
+   "field": "UI-VIS-CAT-PRV-LIMIT-EWALLETS.label_en",
+   "old": "Official sources report 7 e-wallets (2024 Q3), 9 e-wallets (2025 H1), 8 licensed e-wallets (2025-09-10) and more than 9 event participants (2026-01-22). The counts stay separate; a named current list of licensed wallets and payment service providers remains open.",
+   "new": "Official sources report 7 e-wallets (2024 Q3), 9 e-wallets (2025 H1), 8 licensed e-wallets (2025-09-10) and more than 9 event participants (2026-01-22). The counts stay separate; no named current list of licensed wallets and payment service providers has yet been established."
+  },
+  {
+   "finding": "R6",
+   "sheet": "04_NAV_UX",
+   "row": 210,
+   "col": 3,
+   "field": "UI-VIS-CAT-PRV-LIMIT-EWALLETS.label_ar",
+   "old": "تورد المصادر الرسمية 7 محافظ إلكترونية (الربع الثالث 2024)، و9 محافظ (النصف الأول 2025)، و8 محافظ مرخصة (2025-09-10)، وأكثر من 9 مشاركين في فعالية (2026-01-22). وتبقى هذه الأعداد منفصلة، ولا تزال القائمة الحالية المسماة للمحافظ ومقدمي خدمات الدفع المرخصين مفتوحة.",
+   "new": "تورد المصادر الرسمية 7 محافظ إلكترونية (الربع الثالث 2024)، و9 محافظ (النصف الأول 2025)، و8 محافظ مرخصة (2025-09-10)، وأكثر من 9 مشاركين في فعالية (2026-01-22). وتبقى هذه الأعداد منفصلة، ولم تُحسم بعد قائمة حالية مسماة بالمحافظ ومقدمي خدمات الدفع المرخصين."
+  },
+  {
+   "finding": "R6",
+   "sheet": "04_NAV_UX",
+   "row": 211,
+   "col": 3,
+   "field": "UI-VIS-CAT-PRV-LIMIT-MFI.label_ar",
+   "old": "العضوية في شبكة YMN لا تثبت الترخيص أو التشغيل، وليست مجموعة وطنية مكتملة.",
+   "new": "العضوية في شبكة YMN لا تثبت الترخيص أو التشغيل، ولا تمثل حصرًا وطنيًا مكتملًا."
+  },
+  {
+   "finding": "R6",
+   "sheet": "04_NAV_UX",
+   "row": 221,
+   "col": 2,
+   "field": "UI-VIS-CAT-PRV-STATUS-PROHIBITED.label_en",
+   "old": "Dealing prohibited — unlicensed on the source date",
+   "new": "Dealing prohibited as of the source date (unlicensed on that date)"
+  },
+  {
+   "finding": "R6",
+   "sheet": "04_NAV_UX",
+   "row": 221,
+   "col": 3,
+   "field": "UI-VIS-CAT-PRV-STATUS-PROHIBITED.label_ar",
+   "old": "يُحظر التعامل — غير مرخص في تاريخ المصدر",
+   "new": "حُظر التعامل في تاريخ المصدر (غير مرخص في ذلك التاريخ)"
+  },
+  {
+   "finding": "R6",
+   "sheet": "04_NAV_UX",
+   "row": 224,
+   "col": 3,
+   "field": "UI-VIS-CAT-PRV-STATUS-NAMED-UNLICENSED.label_ar",
+   "old": "مسمّى غير مرخص في تاريخ المصدر",
+   "new": "ورد اسمه بوصفه غير مرخص في تاريخ المصدر"
+  },
+  {
+   "finding": "R7",
+   "sheet": "06_EVIDENCE_OBJECTS",
+   "row": 21,
+   "col": 16,
+   "field": "CLM-016.limitations_en",
+   "old": "Do not call 382 the 2026 count, unique current firms, active providers or branch footprint. | Historical predecessor only. Not 2026 membership, current operation, branch footprint, market share or unique-firm count.",
+   "new": "Do not call 382 the 2026 count, unique current firms, active providers or branch footprint. | The figure is the sum of category entries on the 2025 roster, which the 2026 roster supersedes; entries are counted as listed, not as distinct operating firms."
+  },
+  {
+   "finding": "R7",
+   "sheet": "06_EVIDENCE_OBJECTS",
+   "row": 21,
+   "col": 17,
+   "field": "CLM-016.limitations_ar",
+   "old": "لا يجوز تقديم الرقم 382 بوصفه عدد 2026 أو عدد شركات فريدة حالية أو مقدمي خدمات عاملين أو شبكة فروع. | إنه خط أساس تاريخي سابق، ولا يثبت العضوية الحالية أو التشغيل أو الحصة السوقية أو عدد الشركات الفريدة.",
+   "new": "لا يجوز تقديم الرقم 382 بوصفه عدد 2026 أو عدد شركات فريدة حالية أو مقدمي خدمات عاملين أو شبكة فروع. | الرقم مجموع القيود في قائمة 2025 حسب الفئة، وقد حلت محلها قائمة 2026؛ وتُعدّ القيود كما وردت، لا بوصفها شركات عاملة مستقلة."
+  },
+  {
+   "finding": "R7",
+   "sheet": "06_EVIDENCE_OBJECTS",
+   "row": 95,
+   "col": 16,
+   "field": "CLM-051.limitations_en",
+   "old": "Do not infer unique users, merchant ecosystem coverage, household welfare, causality or durable inclusion. | Transaction value is not unique users, merchant adoption, welfare or durable inclusion; the grouping is this resource's own, not the source's classification.",
+   "new": "Do not infer unique users, merchant ecosystem coverage, household welfare, causality or durable inclusion. | The source table reports transaction values by type; it does not count users or merchants, and the grouping used here is this resource's own, not the source's classification."
+  },
+  {
+   "finding": "R7",
+   "sheet": "06_EVIDENCE_OBJECTS",
+   "row": 95,
+   "col": 17,
+   "field": "CLM-051.limitations_ar",
+   "old": "لا يجوز استنتاج عدد المستخدمين الفريدين أو تغطية منظومة التجار أو رفاه الأسر أو السببية أو الاستدامة. | قيمة المعاملات لا تقيس المستخدمين الفريدين أو تبني التجار أو الرفاه أو الشمول المستدام؛ والتجميع من إعداد هذا المورد، وليس تصنيفًا أصليًا في المصدر.",
+   "new": "لا يجوز استنتاج عدد المستخدمين الفريدين أو تغطية منظومة التجار أو رفاه الأسر أو السببية أو الاستدامة. | يورد جدول المصدر قيم المعاملات حسب نوعها، ولا يعدّ المستخدمين ولا التجار؛ والتجميع المستخدم هنا من إعداد هذا المورد، وليس تصنيفًا أصليًا في المصدر."
+  },
+  {
+   "finding": "R7",
+   "sheet": "06_EVIDENCE_OBJECTS",
+   "row": 108,
+   "col": 16,
+   "field": "CLM-037.limitations_en",
+   "old": "Do not compare raw CBY/IMF levels as equivalent or interpret the stable historical level ratio as a geographic conversion factor. | After normalisation the two series follow closely matching paths, but the exact CBY↔IMF crosswalk of level, geography and statistical concept is not published; a same-year revision remains distinct from change over time.",
+   "new": "Do not compare raw CBY/IMF levels as equivalent or interpret the stable historical level ratio as a geographic conversion factor. | After normalisation the two series move almost identically, but the exact CBY↔IMF crosswalk of level, geography and statistical concept is not published; a same-year revision remains distinct from change over time."
+  },
+  {
+   "finding": "R7",
+   "sheet": "06_EVIDENCE_OBJECTS",
+   "row": 108,
+   "col": 17,
+   "field": "CLM-037.limitations_ar",
+   "old": "لا يجوز مقارنة المستويات الخام للبنك المركزي وصندوق النقد بوصفها متكافئة أو تفسير ثبات نسبة المستويات تاريخيًا كمعامل تحويل جغرافي. | بعد التطبيع يتبع المساران مسارين متطابقين تقريبًا، لكن المطابقة الدقيقة بين البنك المركزي وصندوق النقد في المستوى والجغرافيا والمفهوم الإحصائي غير منشورة؛ وتظل مراجعة السنة نفسها منفصلة عن التغير عبر الزمن.",
+   "new": "لا يجوز مقارنة المستويات الخام للبنك المركزي وصندوق النقد بوصفها متكافئة أو تفسير ثبات نسبة المستويات تاريخيًا كمعامل تحويل جغرافي. | بعد التطبيع تتحرك السلسلتان بصورة شبه متطابقة، لكن المطابقة الدقيقة بين البنك المركزي وصندوق النقد في المستوى والجغرافيا والمفهوم الإحصائي غير منشورة؛ وتظل مراجعة السنة نفسها منفصلة عن التغير عبر الزمن."
+  },
+  {
+   "finding": "R7",
+   "sheet": "06_EVIDENCE_OBJECTS",
+   "row": 107,
+   "col": 16,
+   "field": "CLM-036.limitations_en",
+   "old": "Do not claim the public evidence establishes the exact CBY AR2025 formula or identical CBY/IMF level scope. | Reconstruction production is verified; exact CBY AR2025 line-by-line crosswalk remains unavailable publicly.",
+   "new": "Do not claim the public evidence establishes the exact CBY AR2025 formula or identical CBY/IMF level scope. | The reconstruction work is documented; a line-by-line crosswalk to the CBY 2025 annual report is not public."
+  },
+  {
+   "finding": "R7",
+   "sheet": "06_EVIDENCE_OBJECTS",
+   "row": 107,
+   "col": 17,
+   "field": "CLM-036.limitations_ar",
+   "old": "لا يجوز الادعاء بأن الأدلة العامة تثبت الصيغة الدقيقة المستخدمة في تقرير البنك المركزي 2025 أو أن نطاق مستوى البنك المركزي وصندوق النقد متطابق. | تم التحقق من إنتاج إعادة البناء، لكن المطابقة التفصيلية صفًا بصف ليست متاحة علنًا.",
+   "new": "لا يجوز الادعاء بأن الأدلة العامة تثبت الصيغة الدقيقة المستخدمة في تقرير البنك المركزي 2025 أو أن نطاق مستوى البنك المركزي وصندوق النقد متطابق. | أعمال إعادة البناء موثقة، لكن المطابقة التفصيلية بندًا ببند مع التقرير السنوي للبنك المركزي لعام 2025 غير منشورة."
+  },
+  {
+   "finding": "R7",
+   "sheet": "06_EVIDENCE_OBJECTS",
+   "row": 84,
+   "col": 16,
+   "field": "CLM-040.limitations_en",
+   "old": "Do not claim every CBY AR2025 row is numerically identical to IMF mission output. | Reconstruction production is verified; exact CBY AR2025 line-by-line crosswalk remains unavailable publicly.",
+   "new": "Do not claim every CBY AR2025 row is numerically identical to IMF mission output. | The reconstruction work is documented; a line-by-line crosswalk to the CBY 2025 annual report is not public."
+  },
+  {
+   "finding": "R7",
+   "sheet": "06_EVIDENCE_OBJECTS",
+   "row": 84,
+   "col": 17,
+   "field": "CLM-040.limitations_ar",
+   "old": "لا يجوز الادعاء بأن كل صف في تقرير البنك المركزي لعام 2025 مطابق عدديًا لمخرجات بعثة صندوق النقد. | تم التحقق من حدث إعادة البناء، لكن المطابقة التفصيلية صفًا بصف مع تقرير البنك المركزي غير متاحة علنًا.",
+   "new": "لا يجوز الادعاء بأن كل صف في تقرير البنك المركزي لعام 2025 مطابق عدديًا لمخرجات بعثة صندوق النقد. | أعمال إعادة البناء موثقة، لكن المطابقة التفصيلية بندًا ببند مع التقرير السنوي للبنك المركزي لعام 2025 غير منشورة."
+  },
+  {
+   "finding": "R7",
+   "sheet": "06_EVIDENCE_OBJECTS",
+   "row": 104,
+   "col": 16,
+   "field": "CLM-033.limitations_en",
+   "old": "Do not label the restatement an asset/deposit/credit boom or infer solvency effects. | Method/valuation break materially changes the same reference-year values; line-level causal attribution beyond the documented valuation note remains bounded",
+   "new": "Do not label the restatement an asset/deposit/credit boom or infer solvency effects. | A method or valuation break materially changes the values for the same reference year; line-level attribution beyond the documented valuation note remains bounded."
+  },
+  {
+   "finding": "R7",
+   "sheet": "06_EVIDENCE_OBJECTS",
+   "row": 109,
+   "col": 16,
+   "field": "CLM-038.limitations_en",
+   "old": "Do not call January 2023 the first market-rate valuation in Yemen or assume the historical and contemporary standards are identical. | Historical precedent does not establish continuity/equivalence to the 2023 regime; exact circular text and legal/statistical lineage remain open",
+   "new": "Do not call January 2023 the first market-rate valuation in Yemen or assume the historical and contemporary standards are identical. | Historical precedent does not establish continuity or equivalence with the 2023 regime; the exact circular text and its legal and statistical lineage remain open."
+  },
+  {
+   "finding": "R8/R9",
+   "sheet": "03_PAGE_SECTIONS",
+   "row": 146,
+   "col": 7,
+   "field": "/evidence/CLM-032/.c7",
+   "old": "تنشر التقارير السنوية للبنك المركزي قيمًا مختلفة بصورة جوهرية لتحويلات العاملين للسنة المرجعية نفسها. ففي تقرير 2024 بلغت قيمة عام 2024 نحو 6.245 مليارات دولار، بينما أعاد تقرير 2025 عرض عام 2024 عند 3.42 مليار دولار تقريبًا. هذه مراجعة للسنة نفسها، وليست دليلًا على حركة اقتصادية بين عامين.",
+   "new": "تنشر التقارير السنوية للبنك المركزي قيمًا مختلفة بصورة جوهرية لتحويلات العاملين للسنة المرجعية نفسها. ففي تقرير 2024 بلغت قيمة عام 2024 نحو 6.245 مليار دولار، بينما أعاد تقرير 2025 عرض عام 2024 عند 3.42 مليار دولار تقريبًا. هذه مراجعة للسنة نفسها، وليست دليلًا على حركة اقتصادية بين عامين."
+  },
+  {
+   "finding": "R8/R9",
+   "sheet": "03_PAGE_SECTIONS",
+   "row": 168,
+   "col": 7,
+   "field": "/evidence/CLM-043/.c7",
+   "old": "في التقرير السنوي 2025 للبنك المركزي، يفوق بند صافي الأخطاء والسهو بند التحويلات المنشور في كل سنة من 2021 إلى 2025. وفي 2025 بلغ المتبقي نحو 7.117 مليارات دولار مقابل 3.614 مليارات دولار للتحويلات، أي قرابة 1.97 مرة. وصافي الأخطاء والسهو بند موازنة محاسبي، وليس تدفقًا مرصودًا أو تقديرًا للتحويلات الخفية.",
+   "new": "في التقرير السنوي 2025 للبنك المركزي، يفوق بند صافي الأخطاء والسهو بند التحويلات المنشور في كل سنة من 2021 إلى 2025. وفي 2025 بلغ المتبقي نحو 7.117 مليار دولار مقابل 3.614 مليار دولار للتحويلات، أي قرابة 1.97 مرة. وصافي الأخطاء والسهو بند موازنة محاسبي، وليس تدفقًا مرصودًا أو تقديرًا للتحويلات الخفية."
+  },
+  {
+   "finding": "R8/R9",
+   "sheet": "03_PAGE_SECTIONS",
+   "row": 216,
+   "col": 7,
+   "field": "/evidence/MFI-SPINE-2015-Q4/.c7",
+   "old": "يدعم مصدر الربع الرابع 2015 عدد 93,118 مقترضًا و509,590 مدخرًا، بينما تتعارض قيمة المحفظة داخل المصدر: يورد الجدول 6.741 مليارات ريال ويشير النص السردي إلى قيمة تقارب 9 مليارات ريال.",
+   "new": "يدعم مصدر الربع الرابع 2015 عدد 93,118 مقترضًا و509,590 مدخرًا، بينما تتعارض قيمة المحفظة داخل المصدر: يورد الجدول 6.741 مليار ريال ويشير النص السردي إلى قيمة تقارب 9 مليارات ريال."
+  },
+  {
+   "finding": "R8/R9",
+   "sheet": "03_PAGE_SECTIONS",
+   "row": 488,
+   "col": 7,
+   "field": "/readings/finance-constraint-different-questions/.c7",
+   "old": "سيسمح مسح ممثل لتمويل المنشآت الصغيرة والمتوسطة، إلى جانب تعريفات إدارية وبرامجية موثقة، بالفصل بين الانتشار والشدة ومسار الحصول على الائتمان وتنفيذ البرامج من دون اختزالها في رقم واحد.",
+   "new": "سيسمح مسح ممثل لتمويل المنشآت الصغرى والصغيرة والمتوسطة، إلى جانب تعريفات إدارية وبرامجية موثقة، بالفصل بين الانتشار والشدة ومسار الحصول على الائتمان وتنفيذ البرامج من دون اختزالها في رقم واحد."
+  },
+  {
+   "finding": "R8/R9",
+   "sheet": "03_PAGE_SECTIONS",
+   "row": 522,
+   "col": 7,
+   "field": "/readings/same-year-different-number/.c7",
+   "old": "السنة المرجعية نفسها، وقيمة منشورة مختلفة: تنشر التقارير السنوية للبنك المركزي قيمًا مختلفة بصورة جوهرية لتحويلات العاملين للسنة المرجعية نفسها. ففي تقرير 2024 بلغت قيمة عام 2024 نحو 6.245 مليارات دولار، بينما أعاد تقرير 2025 عرض عام 2024 عند 3.42 مليار دولار تقريبًا. هذه إعادة عرض للسنة نفسها، وليست دليلًا على حركة اقتصادية بين عامين.\n\nإعادة البناء الإحصائي موثقة، أما صيغة البنك المركزي الدقيقة فليست كذلك: يوثق صندوق النقد الدولي جهدًا لإعادة بناء إحصاءات القطاع الخارجي خلال 2024–2025 مع البنك المركزي اليمني – عدن، شمل نموذجًا ديمغرافيًا وسلوكيًا للتحويلات الشخصية في ظل محدودية بيانات القنوات غير الرسمية. يثبت ذلك سياقًا منهجيًا، لكنه لا يثبت الصيغة الدقيقة أو النطاق المستخدم في كل قيمة للتحويلات في تقرير البنك المركزي لعام 2025.\n\nيتطابق المساران تقريبًا بعد التطبيع، لكن مستوياتهما ليست متكافئة: عند تحويل سلسلتي التحويلات إلى مؤشر أساسه 2021=100، يصبح مسارا تقرير البنك المركزي 2025 وتقرير المادة الرابعة لصندوق النقد متطابقين تقريبًا حتى 2024؛ ولا يتجاوز أكبر فرق في معدل النمو السنوي خلال 2022–2024 نحو 0.0032 نقطة مئوية. هذا توافق في المسار، وليس دليلًا على أن المستويات الخام تغطي النطاق نفسه.",
+   "new": "السنة المرجعية نفسها، وقيمة منشورة مختلفة: تنشر التقارير السنوية للبنك المركزي قيمًا مختلفة بصورة جوهرية لتحويلات العاملين للسنة المرجعية نفسها. ففي تقرير 2024 بلغت قيمة عام 2024 نحو 6.245 مليار دولار، بينما أعاد تقرير 2025 عرض عام 2024 عند 3.42 مليار دولار تقريبًا. هذه إعادة عرض للسنة نفسها، وليست دليلًا على حركة اقتصادية بين عامين.\n\nإعادة البناء الإحصائي موثقة، أما صيغة البنك المركزي الدقيقة فليست كذلك: يوثق صندوق النقد الدولي جهدًا لإعادة بناء إحصاءات القطاع الخارجي خلال 2024–2025 مع البنك المركزي اليمني – عدن، شمل نموذجًا ديمغرافيًا وسلوكيًا للتحويلات الشخصية في ظل محدودية بيانات القنوات غير الرسمية. يثبت ذلك سياقًا منهجيًا، لكنه لا يثبت الصيغة الدقيقة أو النطاق المستخدم في كل قيمة للتحويلات في تقرير البنك المركزي لعام 2025.\n\nيتطابق المساران تقريبًا بعد التطبيع، لكن مستوياتهما ليست متكافئة: عند تحويل سلسلتي التحويلات إلى مؤشر أساسه 2021=100، يصبح مسارا تقرير البنك المركزي 2025 وتقرير المادة الرابعة لصندوق النقد متطابقين تقريبًا حتى 2024؛ ولا يتجاوز أكبر فرق في معدل النمو السنوي خلال 2022–2024 نحو 0.0032 نقطة مئوية. هذا توافق في المسار، وليس دليلًا على أن المستويات الخام تغطي النطاق نفسه."
+  },
+  {
+   "finding": "R8/R9",
+   "sheet": "03_PAGE_SECTIONS",
+   "row": 555,
+   "col": 7,
+   "field": "/remittances/.c7",
+   "old": "بالنسبة للسنة المرجعية 2024، أورد تقرير البنك المركزي 2024 قيمة قدرها 6.245 مليارات دولار، بينما أعاد تقرير 2025 عرض 2024 عند 3.42 مليار دولار تقريبًا. هذه مراجعة في المصدر للسنة نفسها، ولا يجوز رسمها كهبوط بين عامين. كما يظهر في المسار اللاحق تقارب لافت في معدلات النمو عبر السنوات المتداخلة؛ وهو ما يستدعي فحص المنهج لكنه لا يثبت التسوية أو الاستيفاء.",
+   "new": "بالنسبة للسنة المرجعية 2024، أورد تقرير البنك المركزي 2024 قيمة قدرها 6.245 مليار دولار، بينما أعاد تقرير 2025 عرض 2024 عند 3.42 مليار دولار تقريبًا. هذه مراجعة في المصدر للسنة نفسها، ولا يجوز رسمها كهبوط بين عامين. كما يظهر في المسار اللاحق تقارب لافت في معدلات النمو عبر السنوات المتداخلة؛ وهو ما يستدعي فحص المنهج لكنه لا يثبت التسوية أو الاستيفاء."
+  },
+  {
+   "finding": "R8/R9",
+   "sheet": "03_PAGE_SECTIONS",
+   "row": 563,
+   "col": 7,
+   "field": "/remittances/.c7",
+   "old": "في التقرير السنوي 2025 للبنك المركزي يفوق صافي الأخطاء والسهو بند الحوالات المنشور في كل سنة من 2021 إلى 2025؛ وفي 2025 بلغ المتبقي نحو 7.117 مليارات دولار مقابل 3.614 مليارات دولار للحوالات، أي قرابة 1.97 مرة. صافي الأخطاء والسهو بند موازنة، وليس تدفقًا مرصودًا ولا تقديرًا للحوالات الخفية.",
+   "new": "في التقرير السنوي 2025 للبنك المركزي يفوق صافي الأخطاء والسهو بند الحوالات المنشور في كل سنة من 2021 إلى 2025؛ وفي 2025 بلغ المتبقي نحو 7.117 مليار دولار مقابل 3.614 مليار دولار للحوالات، أي قرابة 1.97 مرة. صافي الأخطاء والسهو بند موازنة، وليس تدفقًا مرصودًا ولا تقديرًا للحوالات الخفية."
+  },
+  {
+   "finding": "R8/R9",
+   "sheet": "06_EVIDENCE_OBJECTS",
+   "row": 35,
+   "col": 7,
+   "field": "MFI-SPINE-2015-Q4.c7",
+   "old": "يدعم مصدر الربع الرابع 2015 عدد 93,118 مقترضًا و509,590 مدخرًا، بينما تتعارض قيمة المحفظة داخل المصدر: يورد الجدول 6.741 مليارات ريال ويشير النص السردي إلى قيمة تقارب 9 مليارات ريال.",
+   "new": "يدعم مصدر الربع الرابع 2015 عدد 93,118 مقترضًا و509,590 مدخرًا، بينما تتعارض قيمة المحفظة داخل المصدر: يورد الجدول 6.741 مليار ريال ويشير النص السردي إلى قيمة تقارب 9 مليارات ريال."
+  },
+  {
+   "finding": "R8/R9",
+   "sheet": "06_EVIDENCE_OBJECTS",
+   "row": 87,
+   "col": 7,
+   "field": "CLM-043.c7",
+   "old": "في التقرير السنوي 2025 للبنك المركزي، يفوق بند صافي الأخطاء والسهو بند التحويلات المنشور في كل سنة من 2021 إلى 2025. وفي 2025 بلغ المتبقي نحو 7.117 مليارات دولار مقابل 3.614 مليارات دولار للتحويلات، أي قرابة 1.97 مرة. وصافي الأخطاء والسهو بند موازنة محاسبي، وليس تدفقًا مرصودًا أو تقديرًا للتحويلات الخفية.",
+   "new": "في التقرير السنوي 2025 للبنك المركزي، يفوق بند صافي الأخطاء والسهو بند التحويلات المنشور في كل سنة من 2021 إلى 2025. وفي 2025 بلغ المتبقي نحو 7.117 مليار دولار مقابل 3.614 مليار دولار للتحويلات، أي قرابة 1.97 مرة. وصافي الأخطاء والسهو بند موازنة محاسبي، وليس تدفقًا مرصودًا أو تقديرًا للتحويلات الخفية."
+  },
+  {
+   "finding": "R8/R9",
+   "sheet": "06_EVIDENCE_OBJECTS",
+   "row": 103,
+   "col": 7,
+   "field": "CLM-032.c7",
+   "old": "تنشر التقارير السنوية للبنك المركزي قيمًا مختلفة بصورة جوهرية لتحويلات العاملين للسنة المرجعية نفسها. ففي تقرير 2024 بلغت قيمة عام 2024 نحو 6.245 مليارات دولار، بينما أعاد تقرير 2025 عرض عام 2024 عند 3.42 مليار دولار تقريبًا. هذه إعادة عرض للسنة نفسها، وليست دليلًا على حركة اقتصادية بين عامين.",
+   "new": "تنشر التقارير السنوية للبنك المركزي قيمًا مختلفة بصورة جوهرية لتحويلات العاملين للسنة المرجعية نفسها. ففي تقرير 2024 بلغت قيمة عام 2024 نحو 6.245 مليار دولار، بينما أعاد تقرير 2025 عرض عام 2024 عند 3.42 مليار دولار تقريبًا. هذه إعادة عرض للسنة نفسها، وليست دليلًا على حركة اقتصادية بين عامين."
+  },
+  {
+   "finding": "R8/R9",
+   "sheet": "06_EVIDENCE_OBJECTS",
+   "row": 111,
+   "col": 13,
+   "field": "CLM-059.c13",
+   "old": "المنشآت الصغيرة والأصغر التي دعمها برنامج SMEPS ومحفظة البرنامج.",
+   "new": "المنشآت الصغرى والصغيرة والمتوسطة التي دعمها برنامج SMEPS ومحفظة البرنامج."
+  },
+  {
+   "finding": "R8/R9",
+   "sheet": "06_EVIDENCE_OBJECTS",
+   "row": 111,
+   "col": 17,
+   "field": "CLM-059.c17",
+   "old": "لا يجوز تقديم المنشآت التي دعمها البرنامج بوصفها مجموع المنشآت الصغيرة والأصغر على المستوى الوطني، أو تقديم صرف البرنامج بوصفه إقراضًا من القطاع المالي، أو تحويل المخرجات البرنامجية إلى نتائج وطنية أو سببية. | تعدّ أرقام البرنامج المشاركين فيه وما صرفه هو، ولا تستند إلى عينة وطنية من المنشآت.",
+   "new": "لا يجوز تقديم المنشآت التي دعمها البرنامج بوصفها مجموع المنشآت الصغرى والصغيرة والمتوسطة على المستوى الوطني، أو تقديم صرف البرنامج بوصفه إقراضًا من القطاع المالي، أو تحويل المخرجات البرنامجية إلى نتائج وطنية أو سببية. | تعدّ أرقام البرنامج المشاركين فيه وما صرفه هو، ولا تستند إلى عينة وطنية من المنشآت."
+  },
+  {
+   "finding": "R8/R9",
+   "sheet": "06_EVIDENCE_OBJECTS",
+   "row": 112,
+   "col": 13,
+   "field": "CLM-060.c13",
+   "old": "المنشآت الصغيرة والأصغر المدعومة من SMEPS ضمن قاعدة مؤشر الأداء البرامجي.",
+   "new": "المنشآت الصغرى والصغيرة والمتوسطة المدعومة من SMEPS ضمن قاعدة مؤشر الأداء البرامجي."
+  },
+  {
+   "finding": "R8/R9",
+   "sheet": "07_PUBLIC_CLAIMS",
+   "row": 36,
+   "col": 7,
+   "field": "CLM-032.c7",
+   "old": "تنشر التقارير السنوية للبنك المركزي قيمًا مختلفة بصورة جوهرية لتحويلات العاملين للسنة المرجعية نفسها. ففي تقرير 2024 بلغت قيمة عام 2024 نحو 6.245 مليارات دولار، بينما أعاد تقرير 2025 عرض عام 2024 عند 3.42 مليار دولار تقريبًا. هذه إعادة عرض للسنة نفسها، وليست دليلًا على حركة اقتصادية بين عامين.",
+   "new": "تنشر التقارير السنوية للبنك المركزي قيمًا مختلفة بصورة جوهرية لتحويلات العاملين للسنة المرجعية نفسها. ففي تقرير 2024 بلغت قيمة عام 2024 نحو 6.245 مليار دولار، بينما أعاد تقرير 2025 عرض عام 2024 عند 3.42 مليار دولار تقريبًا. هذه إعادة عرض للسنة نفسها، وليست دليلًا على حركة اقتصادية بين عامين."
+  },
+  {
+   "finding": "R8/R9",
+   "sheet": "07_PUBLIC_CLAIMS",
+   "row": 47,
+   "col": 7,
+   "field": "CLM-043.c7",
+   "old": "في التقرير السنوي 2025 للبنك المركزي، يفوق بند صافي الأخطاء والسهو بند التحويلات المنشور في كل سنة من 2021 إلى 2025. وفي 2025 بلغ المتبقي نحو 7.117 مليارات دولار مقابل 3.614 مليارات دولار للتحويلات، أي قرابة 1.97 مرة. وصافي الأخطاء والسهو بند موازنة محاسبي، وليس تدفقًا مرصودًا أو تقديرًا للتحويلات الخفية.",
+   "new": "في التقرير السنوي 2025 للبنك المركزي، يفوق بند صافي الأخطاء والسهو بند التحويلات المنشور في كل سنة من 2021 إلى 2025. وفي 2025 بلغ المتبقي نحو 7.117 مليار دولار مقابل 3.614 مليار دولار للتحويلات، أي قرابة 1.97 مرة. وصافي الأخطاء والسهو بند موازنة محاسبي، وليس تدفقًا مرصودًا أو تقديرًا للتحويلات الخفية."
+  },
+  {
+   "finding": "R8/R9",
+   "sheet": "07_PUBLIC_CLAIMS",
+   "row": 62,
+   "col": 11,
+   "field": "CLM-059.c11",
+   "old": "لا يجوز تقديم المنشآت التي دعمها البرنامج بوصفها مجموع المنشآت الصغيرة والأصغر على المستوى الوطني، أو تقديم صرف البرنامج بوصفه إقراضًا من القطاع المالي، أو تحويل المخرجات البرنامجية إلى نتائج وطنية أو سببية. كما لا يثبت الدليل البرامجي الانتشار الوطني أو عدد الشركات الوطنية الفريدة أو خلق الوظائف وطنيًا أو الأثر السببي.",
+   "new": "لا يجوز تقديم المنشآت التي دعمها البرنامج بوصفها مجموع المنشآت الصغرى والصغيرة والمتوسطة على المستوى الوطني، أو تقديم صرف البرنامج بوصفه إقراضًا من القطاع المالي، أو تحويل المخرجات البرنامجية إلى نتائج وطنية أو سببية. كما لا يثبت الدليل البرامجي الانتشار الوطني أو عدد الشركات الوطنية الفريدة أو خلق الوظائف وطنيًا أو الأثر السببي."
+  },
+  {
+   "finding": "R8/R9",
+   "sheet": "10_MEASUREMENT_AGENDA",
+   "row": 8,
+   "col": 9,
+   "field": "MA-004.c9",
+   "old": "يقدم مسح منشآت 2022 في سبع محافظات وبيانات SMEPS معلومات مفيدة داخل نطاق كل منهما، لكن أيا منهما لا يوفر خط أساس وطنيًا حديثًا وممثلًا لمسار تمويل المنشآت الصغيرة والمتوسطة.",
+   "new": "يقدم مسح منشآت 2022 في سبع محافظات وبيانات SMEPS معلومات مفيدة داخل نطاق كل منهما، لكن أيا منهما لا يوفر خط أساس وطنيًا حديثًا وممثلًا لمسار تمويل المنشآت الصغرى والصغيرة والمتوسطة."
+  },
+  {
+   "finding": "R8/R9",
+   "sheet": "10_MEASUREMENT_AGENDA",
+   "row": 8,
+   "col": 11,
+   "field": "MA-004.c11",
+   "old": "مسح ممثل للمنشآت الصغيرة والمتوسطة، أو مزيج موثوق من البيانات الإدارية وبيانات المنشآت، يغطي الحاجة إلى التمويل والتقديم والموافقة أو الرفض والمبلغ والشروط والمصدر والاستخدام وضغوط السداد والنتيجة.",
+   "new": "مسح ممثل للمنشآت الصغرى والصغيرة والمتوسطة، أو مزيج موثوق من البيانات الإدارية وبيانات المنشآت، يغطي الحاجة إلى التمويل والتقديم والموافقة أو الرفض والمبلغ والشروط والمصدر والاستخدام وضغوط السداد والنتيجة."
+  },
+  {
+   "finding": "R8/R9",
+   "sheet": "10_MEASUREMENT_AGENDA",
+   "row": 8,
+   "col": 13,
+   "field": "MA-004.c13",
+   "old": "لا يجوز إنشاء اتجاه بين أطر 2013 و2022 من دون اختبار المقارنة على مستوى المتغيرات. ويضيف تقرير SMEPS لعام 2024 مؤشرًا برامجيًا أوليًا يفيد بأن 19% من المنشآت التي دعمها البرنامج حصلت على خدمات مالية، لكنه لا يغني عن خط أساس ممثل وحديث لطلب المنشآت الصغيرة والمتوسطة واستخدامها للتمويل، كما أن قاعدة الاحتساب الخاصة بهذا المؤشر ما تزال بحاجة إلى توثيق أوضح.",
+   "new": "لا يجوز إنشاء اتجاه بين أطر 2013 و2022 من دون اختبار المقارنة على مستوى المتغيرات. ويضيف تقرير SMEPS لعام 2024 مؤشرًا برامجيًا أوليًا يفيد بأن 19% من المنشآت التي دعمها البرنامج حصلت على خدمات مالية، لكنه لا يغني عن خط أساس ممثل وحديث لطلب المنشآت الصغرى والصغيرة والمتوسطة واستخدامها للتمويل، كما أن قاعدة الاحتساب الخاصة بهذا المؤشر ما تزال بحاجة إلى توثيق أوضح."
+  },
+  {
+   "finding": "R8/R9",
+   "sheet": "10_MEASUREMENT_AGENDA",
+   "row": 8,
+   "col": 21,
+   "field": "MA-004.c21",
+   "old": "متوسطة — تتطلب مسحًا ممثلًا للمنشآت/المشروعات الصغيرة والمتوسطة و/أو ربطًا متحققًا منه مع بيانات إدارية للمنشآت.",
+   "new": "متوسطة — تتطلب مسحًا ممثلًا للمنشآت/المشروعات الصغرى والصغيرة والمتوسطة و/أو ربطًا متحققًا منه مع بيانات إدارية للمنشآت."
+  },
+  {
+   "finding": "R8/R9",
+   "sheet": "14_SYSTEM_CHRONOLOGY",
+   "row": 8,
+   "col": 5,
+   "field": "YSC-004.c5",
+   "old": "قدرت متابعة البنك الدولي ارتفاع النقد المتداول خارج البنوك من 810.9 مليارات ريال في 2014 إلى 1,673 مليار ريال بنهاية 2017، بالتزامن مع إصدار كبير لأوراق نقدية جديدة وتسارع متوقع في نمو عرض النقود خلال 2018.",
+   "new": "قدرت متابعة البنك الدولي ارتفاع النقد المتداول خارج البنوك من 810.9 مليار ريال في 2014 إلى 1,673 مليار ريال بنهاية 2017، بالتزامن مع إصدار كبير لأوراق نقدية جديدة وتسارع متوقع في نمو عرض النقود خلال 2018."
+  },
+  {
+   "finding": "R8/R9",
+   "sheet": "15_SOURCE_LIBRARY",
+   "row": 161,
+   "col": 12,
+   "field": "SRC-KFW-YEM-MSME-FIN-III-47229.c12",
+   "old": "دعم القطاع المالي للمنشآت متناهية الصغر والصغيرة والمتوسطة III — اليمن (المشروع 47229)",
+   "new": "دعم القطاع المالي للمنشآت الصغرى والصغيرة والمتوسطة III — اليمن (المشروع 47229)"
+  },
+  {
+   "finding": "N2",
+   "sheet": "03_PAGE_SECTIONS",
+   "row": 578,
+   "col": 4,
+   "field": "/terms/#s6.heading_en",
+   "old": null,
+   "new": "Rights stay with the source"
+  },
+  {
+   "finding": "N2",
+   "sheet": "03_PAGE_SECTIONS",
+   "row": 578,
+   "col": 6,
+   "field": "/terms/#s6.heading_ar",
+   "old": null,
+   "new": "تبقى الحقوق لمصدرها"
+  },
+  {
+   "finding": "N4",
+   "sheet": "03_PAGE_SECTIONS",
+   "row": 83,
+   "col": 4,
+   "field": "/evidence/#s1.heading_en",
+   "old": "Find the evidence behind the answer",
+   "new": "How to search, inspect and compare the records"
+  },
+  {
+   "finding": "N4",
+   "sheet": "03_PAGE_SECTIONS",
+   "row": 83,
+   "col": 6,
+   "field": "/evidence/#s1.heading_ar",
+   "old": "اعثر على الدليل وراء الإجابة",
+   "new": "كيف تبحث في السجلات وتفحصها وتقارن بينها"
+  },
+  {
+   "finding": "N4",
+   "sheet": "02_SITE_MAP",
+   "row": 10,
+   "col": 5,
+   "field": "/data/.title_en",
+   "old": "Find the evidence behind the answers — without losing its meaning.",
+   "new": "Find the original source behind each piece of evidence"
+  },
+  {
+   "finding": "N4",
+   "sheet": "02_SITE_MAP",
+   "row": 10,
+   "col": 6,
+   "field": "/data/.title_ar",
+   "old": "اعثر على الدليل وراء الإجابة من دون أن تفقد معناه.",
+   "new": "اعثر على المصدر الأصلي وراء كل دليل"
+  },
+  {
+   "finding": "N4",
+   "sheet": "03_PAGE_SECTIONS",
+   "row": 68,
+   "col": 6,
+   "field": "/data/#s2.heading_ar",
+   "old": "ماذا يتضمن دليل البيانات؟",
+   "new": "ماذا يتضمن فهرس البيانات؟"
+  },
+  {
+   "finding": "N4",
+   "sheet": "03_PAGE_SECTIONS",
+   "row": 78,
+   "col": 7,
+   "field": "/data/#s7.body_ar",
+   "old": "من أي نتيجة في دليل البيانات، افتح سجل الدليل للتحقق من التعريف، والمجتمع أو قاعدة القياس، والفترة، والجغرافيا، وسلطة المصدر، وطريقة الاحتساب، وحداثة الدليل وحالته، وشروط إعادة الاستخدام حيثما سُجلت، والحدود، وسجل التصحيحات.",
+   "new": "من أي نتيجة في فهرس البيانات، افتح سجل الدليل للتحقق من التعريف، والمجتمع أو قاعدة القياس، والفترة، والجغرافيا، وسلطة المصدر، وطريقة الاحتساب، وحداثة الدليل وحالته، وشروط إعادة الاستخدام حيثما سُجلت، والحدود، وسجل التصحيحات."
+  },
+  {
+   "finding": "R5",
+   "sheet": "04_NAV_UX",
+   "row": null,
+   "col": null,
+   "field": "UI-VIS-NOT-PAY-CARDS",
+   "old": null,
+   "new": "Not people, and not active cardholders || ليست أشخاصًا، ولا حاملي بطاقات نشطين"
+  },
+  {
+   "finding": "R5",
+   "sheet": "04_NAV_UX",
+   "row": null,
+   "col": null,
+   "field": "UI-VIS-NOT-PAY-ACCOUNTS",
+   "old": null,
+   "new": "Not people, and not active accounts || ليست أشخاصًا، ولا حسابات نشطة"
+  },
+  {
+   "finding": "R5",
+   "sheet": "04_NAV_UX",
+   "row": null,
+   "col": null,
+   "field": "UI-VIS-NOT-PAY-EWALLETS",
+   "old": null,
+   "new": "Not users: a count of wallet products || ليست مستخدمين: عدد منتجات المحافظ"
+  },
+  {
+   "finding": "R5",
+   "sheet": "04_NAV_UX",
+   "row": null,
+   "col": null,
+   "field": "UI-VIS-NOT-PAY-EWALLET-SUBSCRIBERS",
+   "old": null,
+   "new": "Not unique people, and not active users || ليسوا أشخاصًا فريدين، ولا مستخدمين نشطين"
+  },
+  {
+   "finding": "R5",
+   "sheet": "04_NAV_UX",
+   "row": null,
+   "col": null,
+   "field": "UI-VIS-NOT-PAY-ATMS",
+   "old": null,
+   "new": "Infrastructure, not use || بنية تحتية، لا استخدام"
+  },
+  {
+   "finding": "R5",
+   "sheet": "04_NAV_UX",
+   "row": null,
+   "col": null,
+   "field": "UI-VIS-NOT-PAY-POS-TERMINALS",
+   "old": null,
+   "new": "Infrastructure, not use || بنية تحتية، لا استخدام"
+  },
+  {
+   "finding": "R5",
+   "sheet": "04_NAV_UX",
+   "row": null,
+   "col": null,
+   "field": "UI-VIS-NOT-PAY-POS-TRANSACTIONS",
+   "old": null,
+   "new": "Events, not people || أحداث، لا أشخاص"
+  },
+  {
+   "finding": "R5",
+   "sheet": "04_NAV_UX",
+   "row": null,
+   "col": null,
+   "field": "UI-VIS-RPW-AVERAGE-NOTE",
+   "old": null,
+   "new": "Average of quotes for this amount — not the cost of all remittances || متوسط عروض الأسعار لهذا المبلغ — وليس تكلفة جميع الحوالات"
+  },
+  {
+   "finding": "EXF-002",
+   "sheet": "02_SITE_MAP",
+   "row": 10,
+   "col": 7,
+   "field": "/data/.full_copy_en",
+   "old": "Find the evidence behind the answers — without losing its meaning.\n\nFind an original source by its title or reference, browse the curated reports and method references, or open the full register of sources. Each source record keeps its publisher, date and public locator, and its reuse terms where they have been assessed; the figures themselves are held in the evidence records that cite the source.\n\nWhat is in the catalogue?\n\nPublic evidence records can include observed measures, reproducible derived measures, source records, historical evidence, programme or reform observations, and explicit unknown or conflicting states. Each item keeps a persistent reference and its links to the relevant questions and pages.\n\nA value copied from here still needs its context\n\nA number without its unit, population or base, period, geography and source can become a different claim when reused. When you copy or cite a figure, take its evidence record reference with it so that its meaning travels with the value.\n\nWhat availability does not mean\n\nA public record is not automatically nationally representative, current, comparable to another record or free for unrestricted redistribution. Availability tells you that the record can be displayed; it does not tell you that the underlying data may be redistributed, and it does not remove its methodological limits.\n\nReuse terms belong to the original publisher\n\nSome sources permit public display but not redistribution of the underlying table; others permit source metadata while the values themselves remain restricted. Reuse terms have so far been assessed for only some sources. Where a source record does not state its terms, the original publisher's terms apply and should be checked before any redistribution. Including a source in this library does not mean CauseWay endorses its analysis or conclusions.\n\nWhat you may not find\n\nA missing record may mean the evidence has not been found, is not comparable, is rights-restricted, is unsafe to publish at the requested resolution, or genuinely does not exist in the current evidence base. The catalogue must not turn any of those states into zero.\n\nOpen the evidence record before reuse\n\nFrom any catalogue result, open the evidence record to check definition, universe, period, geography, source authority, derivation, state/currentness, reuse terms where recorded, limitations and correction history.\n\nWhat is currently available\n\nPublic Evidence Records: {{n:evidence_records}}\nDocumented chronology events: {{n:chronology_events}}\nPublic claims (each is also an Evidence Record): {{n:public_claims}}\nRegistered source records: {{n:sources}}\nSource records with a public original locator: {{n:public_locators}}\nCurated source and report cards: {{n:curated_resources}}\nEvidence Readings: {{n:readings}}\nMeasurement Agenda priorities: {{n:measurement_priorities}}\n\nYemen macro-financial system chronology\n\nThe chronology brings together documented events across Yemen’s macro-financial and financial-inclusion system. Each event retains its date, evidence class, source, relevance to financial inclusion and the limit on what it establishes. Read the sequence as context, not causality: support flows, statistical revisions, cash-transfer digitisation pilots, project targets, programme stages and institutional events remain distinct evidence states.\n\nReports, methods and implementation references\n\nThe directory includes a deliberately small set of curated primary Yemen reports and international methods and implementation references alongside the full source-locator register. They help interpret payment infrastructure, financial-inclusion measurement, cash-transfer digitisation, MSME finance and the current reform and economic context. They are reference resources, not substitute evidence for Yemen, and this resource links to the original publisher rather than republishing a source file unless redistribution permission is explicitly established.",
+   "new": "Find the original source behind each piece of evidence\n\nFind an original source by its title or reference, browse the curated reports and method references, or open the full register of sources. Each source record keeps its publisher, date and public locator, and its reuse terms where they have been assessed; the figures themselves are held in the evidence records that cite the source.\n\nWhat is in the catalogue?\n\nPublic evidence records can include observed measures, reproducible derived measures, source records, historical evidence, programme or reform observations, and explicit unknown or conflicting states. Each item keeps a persistent reference and its links to the relevant questions and pages.\n\nA value copied from here still needs its context\n\nA number without its unit, population or base, period, geography and source can become a different claim when reused. When you copy or cite a figure, take its evidence record reference with it so that its meaning travels with the value.\n\nWhat availability does not mean\n\nA public record is not automatically nationally representative, current, comparable to another record or free for unrestricted redistribution. Availability tells you that the record can be displayed; it does not tell you that the underlying data may be redistributed, and it does not remove its methodological limits.\n\nReuse terms belong to the original publisher\n\nSome sources permit public display but not redistribution of the underlying table; others permit source metadata while the values themselves remain restricted. Reuse terms have so far been assessed for only some sources. Where a source record does not state its terms, the original publisher's terms apply and should be checked before any redistribution. Including a source in this library does not mean CauseWay endorses its analysis or conclusions.\n\nWhat you may not find\n\nA missing record may mean the evidence has not been found, is not comparable, is rights-restricted, is unsafe to publish at the requested resolution, or genuinely does not exist in the current evidence base. The catalogue must not turn any of those states into zero.\n\nOpen the evidence record before reuse\n\nFrom any catalogue result, open the evidence record to check definition, universe, period, geography, source authority, derivation, state/currentness, reuse terms where recorded, limitations and correction history.\n\nWhat is currently available\n\nPublic Evidence Records: {{n:evidence_records}}\nDocumented chronology events: {{n:chronology_events}}\nPublic claims (each is also an Evidence Record): {{n:public_claims}}\nRegistered source records: {{n:sources}}\nSource records with a public original locator: {{n:public_locators}}\nCurated source and report cards: {{n:curated_resources}}\nEvidence Readings: {{n:readings}}\nMeasurement Agenda priorities: {{n:measurement_priorities}}\n\nYemen macro-financial system chronology\n\nThe chronology brings together documented events across Yemen’s macro-financial and financial-inclusion system. Each event retains its date, evidence class, source, relevance to financial inclusion and the limit on what it establishes. Read the sequence as context, not causality: support flows, statistical revisions, cash-transfer digitisation pilots, project targets, programme stages and institutional events remain distinct evidence states.\n\nReports, methods and implementation references\n\nThe directory includes a deliberately small set of curated primary Yemen reports and international methods and implementation references alongside the full source-locator register. They help interpret payment infrastructure, financial-inclusion measurement, cash-transfer digitisation, MSME finance and the current reform and economic context. They are reference resources, not substitute evidence for Yemen, and this resource links to the original publisher rather than republishing a source file unless redistribution permission is explicitly established."
+  },
+  {
+   "finding": "EXF-002",
+   "sheet": "02_SITE_MAP",
+   "row": 10,
+   "col": 8,
+   "field": "/data/.full_copy_ar",
+   "old": "اعثر على الدليل وراء الإجابة من دون أن تفقد معناه.\n\nابحث عن مصدر أصلي بعنوانه أو بمرجعه، أو تصفح التقارير والمراجع المنهجية المختارة، أو افتح السجل الكامل للمصادر. ويحتفظ كل سجل مصدر بالجهة الناشرة وتاريخ النشر ورابطه العام، وبشروط إعادة الاستخدام حيثما قُيّمت؛ أما الأرقام نفسها فتحملها سجلات الأدلة التي تستشهد بالمصدر.\n\nماذا يتضمن دليل البيانات؟\n\nقد يتضمن الدليل سجلات لقياسات مرصودة، وقياسات مشتقة يمكن إعادة إنتاج طريقة احتسابها، وسجلات للمصادر، وأدلة تاريخية، ومشاهدات عن البرامج أو الإصلاحات، وحالات مجهولة أو متعارضة موضحة صراحة. يحتفظ كل عنصر بمعرف مرجعي دائم وروابطه بالأسئلة والصفحات ذات الصلة.\n\nالقيمة المنقولة من هنا ما تزال تحتاج إلى سياقها\n\nقد يكتسب الرقم معنى مختلفًا إذا أُعيد استخدامه من دون وحدته، أو المجتمع أو قاعدة القياس، أو الفترة، أو الجغرافيا، أو المصدر. لذلك انقل مع أي رقم تنسخه أو تستشهد به مرجع سجل الدليل الخاص به، كي يبقى معناه مرتبطًا بقيمته.\n\nما الذي لا يعنيه توفر البيانات؟\n\nكون السجل متاحًا للعامة لا يعني تلقائيًا أنه ممثل وطنيًا أو حديث أو قابل للمقارنة مع سجل آخر أو متاح لإعادة التوزيع بلا قيود. الإتاحة تعني أن عرض السجل ممكن، لكنها لا تعني أن إعادة توزيع البيانات الأصلية مسموحة، ولا تلغي حدوده المنهجية.\n\nشروط إعادة الاستخدام تحددها الجهة الناشرة\n\nتسمح بعض المصادر بالعرض العام لكنها لا تسمح بإعادة توزيع الجدول الأصلي، وتسمح مصادر أخرى ببيانات المصدر الوصفية بينما تظل القيم نفسها مقيدة. ولم تُقيَّم شروط إعادة الاستخدام حتى الآن إلا لبعض المصادر؛ وحيث لا يذكر سجل المصدر شروطه، تسري شروط الجهة الناشرة الأصلية ويجب التحقق منها قبل أي إعادة توزيع. كما أن إدراج مصدر في هذه المكتبة لا يعني أن CauseWay تتبنى تحليله أو استنتاجاته.\n\nما الذي قد لا تجده؟\n\nقد يعني غياب السجل أن الدليل لم يُعثر عليه بعد، أو أنه غير قابل للمقارنة، أو مقيد بحقوق، أو غير آمن للنشر بالدقة المطلوبة، أو أنه غير موجود فعلًا ضمن قاعدة الأدلة الحالية. ولا يجوز تحويل أي من هذه الحالات إلى قيمة صفر.\n\nافتح سجل الدليل قبل إعادة الاستخدام\n\nمن أي نتيجة في دليل البيانات، افتح سجل الدليل للتحقق من التعريف، والمجتمع أو قاعدة القياس، والفترة، والجغرافيا، وسلطة المصدر، وطريقة الاحتساب، وحداثة الدليل وحالته، وشروط إعادة الاستخدام حيثما سُجلت، والحدود، وسجل التصحيحات.\n\nما المتاح حاليًا؟\n\nسجلات الأدلة العامة: {{n:evidence_records}}\nأحداث السلسلة الزمنية الموثقة: {{n:chronology_events}}\nالخلاصات العامة (وكل منها سجل دليل أيضًا): {{n:public_claims}}\nسجلات المصادر المسجلة: {{n:sources}}\nسجلات المصادر التي لها رابط أصلي عام: {{n:public_locators}}\nبطاقات المصادر والتقارير المنتقاة: {{n:curated_resources}}\nقراءات الأدلة: {{n:readings}}\nأولويات أجندة القياس: {{n:measurement_priorities}}\n\nالسلسلة الزمنية للنظام الاقتصادي والمالي في اليمن\n\nتجمع السلسلة الزمنية أحداثًا موثقة عبر النظام الاقتصادي والمالي ومنظومة الشمول المالي في اليمن. ويحتفظ كل حدث بتاريخه وفئة دليله ومصدره وصلته بالشمول المالي والحد الذي لا يجوز تجاوزه في الاستنتاج. ويُقرأ التعاقب بوصفه سياقًا لا علاقة سببية؛ لذلك تبقى تدفقات الدعم والمراجعات الإحصائية وتجارب رقمنة التحويلات النقدية ومستهدفات المشروعات ومراحل البرامج والأحداث المؤسسية حالات دليل منفصلة.\n\nتقارير ومناهج ومراجع للتنفيذ\n\nيضم دليل المصادر مجموعة صغيرة ومقصودة من التقارير اليمنية الأصلية والمراجع الدولية للمنهج والتنفيذ، إلى جانب سجل الروابط الكامل للمصادر. تساعد هذه المراجع في تفسير بنية المدفوعات وقياس الشمول المالي ورقمنة التحويلات النقدية وتمويل المنشآت الصغيرة والسياق الاقتصادي والإصلاحي الراهن. وهي مراجع للتفسير والتحقق وليست بديلًا عن الدليل اليمني، ويربط هذا الموقع بالناشر الأصلي بدل إعادة نشر ملف المصدر ما لم تُثبت صراحة صلاحية إعادة التوزيع.",
+   "new": "اعثر على المصدر الأصلي وراء كل دليل\n\nابحث عن مصدر أصلي بعنوانه أو بمرجعه، أو تصفح التقارير والمراجع المنهجية المختارة، أو افتح السجل الكامل للمصادر. ويحتفظ كل سجل مصدر بالجهة الناشرة وتاريخ النشر ورابطه العام، وبشروط إعادة الاستخدام حيثما قُيّمت؛ أما الأرقام نفسها فتحملها سجلات الأدلة التي تستشهد بالمصدر.\n\nماذا يتضمن فهرس البيانات؟\n\nقد يتضمن الدليل سجلات لقياسات مرصودة، وقياسات مشتقة يمكن إعادة إنتاج طريقة احتسابها، وسجلات للمصادر، وأدلة تاريخية، ومشاهدات عن البرامج أو الإصلاحات، وحالات مجهولة أو متعارضة موضحة صراحة. يحتفظ كل عنصر بمعرف مرجعي دائم وروابطه بالأسئلة والصفحات ذات الصلة.\n\nالقيمة المنقولة من هنا ما تزال تحتاج إلى سياقها\n\nقد يكتسب الرقم معنى مختلفًا إذا أُعيد استخدامه من دون وحدته، أو المجتمع أو قاعدة القياس، أو الفترة، أو الجغرافيا، أو المصدر. لذلك انقل مع أي رقم تنسخه أو تستشهد به مرجع سجل الدليل الخاص به، كي يبقى معناه مرتبطًا بقيمته.\n\nما الذي لا يعنيه توفر البيانات؟\n\nكون السجل متاحًا للعامة لا يعني تلقائيًا أنه ممثل وطنيًا أو حديث أو قابل للمقارنة مع سجل آخر أو متاح لإعادة التوزيع بلا قيود. الإتاحة تعني أن عرض السجل ممكن، لكنها لا تعني أن إعادة توزيع البيانات الأصلية مسموحة، ولا تلغي حدوده المنهجية.\n\nشروط إعادة الاستخدام تحددها الجهة الناشرة\n\nتسمح بعض المصادر بالعرض العام لكنها لا تسمح بإعادة توزيع الجدول الأصلي، وتسمح مصادر أخرى ببيانات المصدر الوصفية بينما تظل القيم نفسها مقيدة. ولم تُقيَّم شروط إعادة الاستخدام حتى الآن إلا لبعض المصادر؛ وحيث لا يذكر سجل المصدر شروطه، تسري شروط الجهة الناشرة الأصلية ويجب التحقق منها قبل أي إعادة توزيع. كما أن إدراج مصدر في هذه المكتبة لا يعني أن CauseWay تتبنى تحليله أو استنتاجاته.\n\nما الذي قد لا تجده؟\n\nقد يعني غياب السجل أن الدليل لم يُعثر عليه بعد، أو أنه غير قابل للمقارنة، أو مقيد بحقوق، أو غير آمن للنشر بالدقة المطلوبة، أو أنه غير موجود فعلًا ضمن قاعدة الأدلة الحالية. ولا يجوز تحويل أي من هذه الحالات إلى قيمة صفر.\n\nافتح سجل الدليل قبل إعادة الاستخدام\n\nمن أي نتيجة في فهرس البيانات، افتح سجل الدليل للتحقق من التعريف، والمجتمع أو قاعدة القياس، والفترة، والجغرافيا، وسلطة المصدر، وطريقة الاحتساب، وحداثة الدليل وحالته، وشروط إعادة الاستخدام حيثما سُجلت، والحدود، وسجل التصحيحات.\n\nما المتاح حاليًا؟\n\nسجلات الأدلة العامة: {{n:evidence_records}}\nأحداث السلسلة الزمنية الموثقة: {{n:chronology_events}}\nالخلاصات العامة (وكل منها سجل دليل أيضًا): {{n:public_claims}}\nسجلات المصادر المسجلة: {{n:sources}}\nسجلات المصادر التي لها رابط أصلي عام: {{n:public_locators}}\nبطاقات المصادر والتقارير المنتقاة: {{n:curated_resources}}\nقراءات الأدلة: {{n:readings}}\nأولويات أجندة القياس: {{n:measurement_priorities}}\n\nالسلسلة الزمنية للنظام الاقتصادي والمالي في اليمن\n\nتجمع السلسلة الزمنية أحداثًا موثقة عبر النظام الاقتصادي والمالي ومنظومة الشمول المالي في اليمن. ويحتفظ كل حدث بتاريخه وفئة دليله ومصدره وصلته بالشمول المالي والحد الذي لا يجوز تجاوزه في الاستنتاج. ويُقرأ التعاقب بوصفه سياقًا لا علاقة سببية؛ لذلك تبقى تدفقات الدعم والمراجعات الإحصائية وتجارب رقمنة التحويلات النقدية ومستهدفات المشروعات ومراحل البرامج والأحداث المؤسسية حالات دليل منفصلة.\n\nتقارير ومناهج ومراجع للتنفيذ\n\nيضم دليل المصادر مجموعة صغيرة ومقصودة من التقارير اليمنية الأصلية والمراجع الدولية للمنهج والتنفيذ، إلى جانب سجل الروابط الكامل للمصادر. تساعد هذه المراجع في تفسير بنية المدفوعات وقياس الشمول المالي ورقمنة التحويلات النقدية وتمويل المنشآت الصغيرة والسياق الاقتصادي والإصلاحي الراهن. وهي مراجع للتفسير والتحقق وليست بديلًا عن الدليل اليمني، ويربط هذا الموقع بالناشر الأصلي بدل إعادة نشر ملف المصدر ما لم تُثبت صراحة صلاحية إعادة التوزيع."
+  },
+  {
+   "finding": "EXF-002",
+   "sheet": "02_SITE_MAP",
+   "row": 42,
+   "col": 8,
+   "field": "/evidence/CLM-032/.full_copy_ar",
+   "old": "السنة المرجعية نفسها، وقيمة منشورة مختلفة\n\nتنشر التقارير السنوية للبنك المركزي قيمًا مختلفة بصورة جوهرية لتحويلات العاملين للسنة المرجعية نفسها. ففي تقرير 2024 بلغت قيمة عام 2024 نحو 6.245 مليارات دولار، بينما أعاد تقرير 2025 عرض عام 2024 عند 3.42 مليار دولار تقريبًا. هذه مراجعة للسنة نفسها، وليست دليلًا على حركة اقتصادية بين عامين.\n\nكيف تقرأ هذا الدليل\n\nيُقرأ هذا الدليل ضمن التعريف، والمجتمع الذي ينطبق عليه الرقم أو قاعدة الاحتساب عند الحاجة، والفترة، والجغرافيا، والطريقة المبينة في الصفحة. وقبل إعادة استخدامه أو مقارنته، راجع المصدر والحدود وحداثة الدليل وسجل التصحيح. وإذا كانت قيمة أو وصلة مصدر غير متاحة، تُذكر الفجوة صراحةً بدل ملئها بالاستنتاج. ولا يتاح التنزيل أو إعادة الاستخدام إلا حيث تسمح حقوق المصدر.",
+   "new": "السنة المرجعية نفسها، وقيمة منشورة مختلفة\n\nتنشر التقارير السنوية للبنك المركزي قيمًا مختلفة بصورة جوهرية لتحويلات العاملين للسنة المرجعية نفسها. ففي تقرير 2024 بلغت قيمة عام 2024 نحو 6.245 مليار دولار، بينما أعاد تقرير 2025 عرض عام 2024 عند 3.42 مليار دولار تقريبًا. هذه مراجعة للسنة نفسها، وليست دليلًا على حركة اقتصادية بين عامين.\n\nكيف تقرأ هذا الدليل\n\nيُقرأ هذا الدليل ضمن التعريف، والمجتمع الذي ينطبق عليه الرقم أو قاعدة الاحتساب عند الحاجة، والفترة، والجغرافيا، والطريقة المبينة في الصفحة. وقبل إعادة استخدامه أو مقارنته، راجع المصدر والحدود وحداثة الدليل وسجل التصحيح. وإذا كانت قيمة أو وصلة مصدر غير متاحة، تُذكر الفجوة صراحةً بدل ملئها بالاستنتاج. ولا يتاح التنزيل أو إعادة الاستخدام إلا حيث تسمح حقوق المصدر."
+  },
+  {
+   "finding": "EXF-002",
+   "sheet": "02_SITE_MAP",
+   "row": 53,
+   "col": 8,
+   "field": "/evidence/CLM-043/.full_copy_ar",
+   "old": "قبل ترتيب التدفقات، افحص بند الموازنة غير المفسر\n\nفي التقرير السنوي 2025 للبنك المركزي، يفوق بند صافي الأخطاء والسهو بند التحويلات المنشور في كل سنة من 2021 إلى 2025. وفي 2025 بلغ المتبقي نحو 7.117 مليارات دولار مقابل 3.614 مليارات دولار للتحويلات، أي قرابة 1.97 مرة. وصافي الأخطاء والسهو بند موازنة محاسبي، وليس تدفقًا مرصودًا أو تقديرًا للتحويلات الخفية.\n\nكيف تقرأ هذا الدليل\n\nيُقرأ هذا الدليل ضمن التعريف، والمجتمع الذي ينطبق عليه الرقم أو قاعدة الاحتساب عند الحاجة، والفترة، والجغرافيا، والطريقة المبينة في الصفحة. وقبل إعادة استخدامه أو مقارنته، راجع المصدر والحدود وحداثة الدليل وسجل التصحيح. وإذا كانت قيمة أو وصلة مصدر غير متاحة، تُذكر الفجوة صراحةً بدل ملئها بالاستنتاج. ولا يتاح التنزيل أو إعادة الاستخدام إلا حيث تسمح حقوق المصدر.",
+   "new": "قبل ترتيب التدفقات، افحص بند الموازنة غير المفسر\n\nفي التقرير السنوي 2025 للبنك المركزي، يفوق بند صافي الأخطاء والسهو بند التحويلات المنشور في كل سنة من 2021 إلى 2025. وفي 2025 بلغ المتبقي نحو 7.117 مليار دولار مقابل 3.614 مليار دولار للتحويلات، أي قرابة 1.97 مرة. وصافي الأخطاء والسهو بند موازنة محاسبي، وليس تدفقًا مرصودًا أو تقديرًا للتحويلات الخفية.\n\nكيف تقرأ هذا الدليل\n\nيُقرأ هذا الدليل ضمن التعريف، والمجتمع الذي ينطبق عليه الرقم أو قاعدة الاحتساب عند الحاجة، والفترة، والجغرافيا، والطريقة المبينة في الصفحة. وقبل إعادة استخدامه أو مقارنته، راجع المصدر والحدود وحداثة الدليل وسجل التصحيح. وإذا كانت قيمة أو وصلة مصدر غير متاحة، تُذكر الفجوة صراحةً بدل ملئها بالاستنتاج. ولا يتاح التنزيل أو إعادة الاستخدام إلا حيث تسمح حقوق المصدر."
+  },
+  {
+   "finding": "EXF-002",
+   "sheet": "02_SITE_MAP",
+   "row": 77,
+   "col": 8,
+   "field": "/evidence/MFI-SPINE-2015-Q4/.full_copy_ar",
+   "old": "مشاهدة التمويل الأصغر للربع الرابع 2015 مع تعارض في قيمة المحفظة\n\nيدعم مصدر الربع الرابع 2015 عدد 93,118 مقترضًا و509,590 مدخرًا، بينما تتعارض قيمة المحفظة داخل المصدر: يورد الجدول 6.741 مليارات ريال ويشير النص السردي إلى قيمة تقارب 9 مليارات ريال.\n\nكيف تقرأ هذا الدليل\n\nيُقرأ هذا الدليل ضمن التعريف، والمجتمع الذي ينطبق عليه الرقم أو قاعدة الاحتساب عند الحاجة، والفترة، والجغرافيا، والطريقة المبينة في الصفحة. وقبل إعادة استخدامه أو مقارنته، راجع المصدر والحدود وحداثة الدليل وسجل التصحيح. وإذا كانت قيمة أو وصلة مصدر غير متاحة، تُذكر الفجوة صراحةً بدل ملئها بالاستنتاج. ولا يتاح التنزيل أو إعادة الاستخدام إلا حيث تسمح حقوق المصدر.",
+   "new": "مشاهدة التمويل الأصغر للربع الرابع 2015 مع تعارض في قيمة المحفظة\n\nيدعم مصدر الربع الرابع 2015 عدد 93,118 مقترضًا و509,590 مدخرًا، بينما تتعارض قيمة المحفظة داخل المصدر: يورد الجدول 6.741 مليار ريال ويشير النص السردي إلى قيمة تقارب 9 مليارات ريال.\n\nكيف تقرأ هذا الدليل\n\nيُقرأ هذا الدليل ضمن التعريف، والمجتمع الذي ينطبق عليه الرقم أو قاعدة الاحتساب عند الحاجة، والفترة، والجغرافيا، والطريقة المبينة في الصفحة. وقبل إعادة استخدامه أو مقارنته، راجع المصدر والحدود وحداثة الدليل وسجل التصحيح. وإذا كانت قيمة أو وصلة مصدر غير متاحة، تُذكر الفجوة صراحةً بدل ملئها بالاستنتاج. ولا يتاح التنزيل أو إعادة الاستخدام إلا حيث تسمح حقوق المصدر."
+  },
+  {
+   "finding": "EXF-002",
+   "sheet": "02_SITE_MAP",
+   "row": 87,
+   "col": 7,
+   "field": "/evidence/VIS-EVIDENCE-FRESHNESS/.full_copy_en",
+   "old": "Where is the evidence current — and where is it old?\n\nThe visual places evidence by its observation or publication vintage across domains and distinguishes representative surveys, administrative records, regulatory material, secondary evidence and unresolved gaps. It shows where this resource relies on older evidence and where newer evidence exists; newer administrative data are not automatically a current population outcome, and older evidence are not automatically invalid.\n\nHow to read this evidence\n\nRead this evidence within the definition, population or group covered, calculation base where relevant, period, geography and method shown on the page. Before reusing or comparing it, check the source, limitations, evidence date and correction history. If a value or source link is unavailable, the page says so rather than filling the gap by inference. Download and reuse are offered only where source rights permit.",
+   "new": "Where is the evidence current — and where is it old?\n\nEvidence is ordered here by its observation or publication vintage across domains, distinguishing representative surveys, administrative records, regulatory material, secondary evidence and unresolved gaps. This shows where this resource relies on older evidence and where newer evidence exists; newer administrative data are not automatically a current population outcome, and older evidence are not automatically invalid.\n\nHow to read this evidence\n\nRead this evidence within the definition, population or group covered, calculation base where relevant, period, geography and method shown on the page. Before reusing or comparing it, check the source, limitations, evidence date and correction history. If a value or source link is unavailable, the page says so rather than filling the gap by inference. Download and reuse are offered only where source rights permit."
+  },
+  {
+   "finding": "EXF-002",
+   "sheet": "02_SITE_MAP",
+   "row": 87,
+   "col": 8,
+   "field": "/evidence/VIS-EVIDENCE-FRESHNESS/.full_copy_ar",
+   "old": "حداثة الدليل بحسب المجال\n\nيضع العرض الأدلة بحسب تاريخ القياس أو النشر عبر المجالات، ويميز بين المسوح الممثلة والسجلات الإدارية والمواد التنظيمية والأدلة الثانوية والفجوات غير المحسومة. ويبين أين تعتمد الإجابة على أدلة أقدم وأين توجد أدلة أحدث؛ ولا تعني حداثة البيانات الإدارية أنها تقيس نتيجة سكانية راهنة، كما لا يعني قِدم الدليل أنه غير صالح تلقائيًا.\n\nكيف تقرأ هذا الدليل\n\nيُقرأ هذا الدليل ضمن التعريف، والمجتمع الذي ينطبق عليه الرقم أو قاعدة الاحتساب عند الحاجة، والفترة، والجغرافيا، والطريقة المبينة في الصفحة. وقبل إعادة استخدامه أو مقارنته، راجع المصدر والحدود وحداثة الدليل وسجل التصحيح. وإذا كانت قيمة أو وصلة مصدر غير متاحة، تُذكر الفجوة صراحةً بدل ملئها بالاستنتاج. ولا يتاح التنزيل أو إعادة الاستخدام إلا حيث تسمح حقوق المصدر.",
+   "new": "حداثة الدليل بحسب المجال\n\nتُرتَّب الأدلة هنا بحسب تاريخ القياس أو النشر عبر المجالات، مع التمييز بين المسوح الممثلة والسجلات الإدارية والمواد التنظيمية والأدلة الثانوية والفجوات غير المحسومة. ويتضح بذلك أين تعتمد الإجابة على أدلة أقدم وأين توجد أدلة أحدث؛ ولا تعني حداثة البيانات الإدارية أنها تقيس نتيجة سكانية راهنة، كما لا يعني قِدم الدليل أنه غير صالح تلقائيًا.\n\nكيف تقرأ هذا الدليل\n\nيُقرأ هذا الدليل ضمن التعريف، والمجتمع الذي ينطبق عليه الرقم أو قاعدة الاحتساب عند الحاجة، والفترة، والجغرافيا، والطريقة المبينة في الصفحة. وقبل إعادة استخدامه أو مقارنته، راجع المصدر والحدود وحداثة الدليل وسجل التصحيح. وإذا كانت قيمة أو وصلة مصدر غير متاحة، تُذكر الفجوة صراحةً بدل ملئها بالاستنتاج. ولا يتاح التنزيل أو إعادة الاستخدام إلا حيث تسمح حقوق المصدر."
+  },
+  {
+   "finding": "EXF-002",
+   "sheet": "02_SITE_MAP",
+   "row": 88,
+   "col": 7,
+   "field": "/evidence/VIS-EVIDENCE-GAPS/.full_copy_en",
+   "old": "What we still do not know\n\nThe visual groups current evidence gaps by type: missing period, missing calculation base, missing primary file, unavailable map layer and unresolved source universe. A gap can close when evidence changes; a blank or missing observation is never plotted as zero or treated as evidence of absence.\n\nHow to read this evidence\n\nRead this evidence within the definition, population or group covered, calculation base where relevant, period, geography and method shown on the page. Before reusing or comparing it, check the source, limitations, evidence date and correction history. If a value or source link is unavailable, the page says so rather than filling the gap by inference. Download and reuse are offered only where source rights permit.",
+   "new": "What we still do not know\n\nCurrent evidence gaps are grouped here by type: missing period, missing calculation base, missing primary file, unavailable map layer and unresolved source universe. A gap can close when evidence changes; a blank or missing observation is never shown as zero or treated as evidence of absence.\n\nHow to read this evidence\n\nRead this evidence within the definition, population or group covered, calculation base where relevant, period, geography and method shown on the page. Before reusing or comparing it, check the source, limitations, evidence date and correction history. If a value or source link is unavailable, the page says so rather than filling the gap by inference. Download and reuse are offered only where source rights permit."
+  },
+  {
+   "finding": "EXF-002",
+   "sheet": "02_SITE_MAP",
+   "row": 88,
+   "col": 8,
+   "field": "/evidence/VIS-EVIDENCE-GAPS/.full_copy_ar",
+   "old": "ما الذي ما زلنا لا نعرفه؟\n\nيجمع العرض فجوات الأدلة الحالية بحسب نوعها: فترة مفقودة، أو قاعدة احتساب غير موثقة، أو ملف أولي غير متاح، أو طبقة مكانية غير قابلة للبناء بعد، أو نطاق مصدر غير محسوم. وقد تُغلق الفجوة عند وصول دليل جديد؛ ولا يُعرض الفراغ أو غياب الرصد على أنه صفر أو دليل على عدم الوجود.\n\nكيف تقرأ هذا الدليل\n\nيُقرأ هذا الدليل ضمن التعريف، والمجتمع الذي ينطبق عليه الرقم أو قاعدة الاحتساب عند الحاجة، والفترة، والجغرافيا، والطريقة المبينة في الصفحة. وقبل إعادة استخدامه أو مقارنته، راجع المصدر والحدود وحداثة الدليل وسجل التصحيح. وإذا كانت قيمة أو وصلة مصدر غير متاحة، تُذكر الفجوة صراحةً بدل ملئها بالاستنتاج. ولا يتاح التنزيل أو إعادة الاستخدام إلا حيث تسمح حقوق المصدر.",
+   "new": "ما الذي ما زلنا لا نعرفه؟\n\nتُجمع فجوات الأدلة الحالية هنا بحسب نوعها: فترة مفقودة، أو قاعدة احتساب غير موثقة، أو ملف أولي غير متاح، أو طبقة مكانية غير قابلة للبناء بعد، أو نطاق مصدر غير محسوم. وقد تُغلق الفجوة عند وصول دليل جديد؛ ولا يُعرض الفراغ أو غياب الرصد على أنه صفر أو دليل على عدم الوجود.\n\nكيف تقرأ هذا الدليل\n\nيُقرأ هذا الدليل ضمن التعريف، والمجتمع الذي ينطبق عليه الرقم أو قاعدة الاحتساب عند الحاجة، والفترة، والجغرافيا، والطريقة المبينة في الصفحة. وقبل إعادة استخدامه أو مقارنته، راجع المصدر والحدود وحداثة الدليل وسجل التصحيح. وإذا كانت قيمة أو وصلة مصدر غير متاحة، تُذكر الفجوة صراحةً بدل ملئها بالاستنتاج. ولا يتاح التنزيل أو إعادة الاستخدام إلا حيث تسمح حقوق المصدر."
+  },
+  {
+   "finding": "EXF-002",
+   "sheet": "02_SITE_MAP",
+   "row": 101,
+   "col": 7,
+   "field": "/evidence/VIS-INCLUSION-TRANSMISSION/.full_copy_en",
+   "old": "Financial inclusion is a transmission system, not a sector score\n\nFinancial inclusion in Yemen is described here as connected parts: people and capability, firms and income, providers, payment rails, remittance and capital flows, regulation and consumer protection, and enabling constraints. The documented relationships describe context, dependency or plausible mechanisms where evidence supports them; they do not form a composite score and do not claim that one part causes another.\n\nHow to read this evidence\n\nRead this evidence within the definition, population or group covered, calculation base where relevant, period, geography and method shown on the page. Before reusing or comparing it, check the source, limitations, evidence date and correction history. If a value or source link is unavailable, the page says so rather than filling the gap by inference. Download and reuse are offered only where source rights permit.",
+   "new": "Financial inclusion is a transmission system, not a sector score\n\nFinancial inclusion in Yemen is described here as a set of connected parts, listed in the scope below. The documented relationships describe context, dependency or plausible mechanisms where evidence supports them; they do not form a composite score and do not claim that one part causes another.\n\nHow to read this evidence\n\nRead this evidence within the definition, population or group covered, calculation base where relevant, period, geography and method shown on the page. Before reusing or comparing it, check the source, limitations, evidence date and correction history. If a value or source link is unavailable, the page says so rather than filling the gap by inference. Download and reuse are offered only where source rights permit."
+  },
+  {
+   "finding": "EXF-002",
+   "sheet": "02_SITE_MAP",
+   "row": 101,
+   "col": 8,
+   "field": "/evidence/VIS-INCLUSION-TRANSMISSION/.full_copy_ar",
+   "old": "الشمول المالي منظومة انتقال، لا درجة واحدة\n\nيصف هذا العرض الشمول المالي في اليمن بوصفه أجزاء مترابطة: الناس وقدراتهم، والمنشآت والدخل، ومقدمو الخدمات، وبنية المدفوعات، وتدفقات الحوالات ورأس المال، والتنظيم وحماية المستهلك، والقيود المُمكِّنة أو المعطِّلة. وتصف العلاقات الموثقة السياق أو الاعتماد أو آليات محتملة حين تسندها الأدلة؛ ولا تتحول الأجزاء إلى درجة واحدة، ولا تثبت أن جزءًا منها سبب لآخر.\n\nكيف تقرأ هذا الدليل\n\nيُقرأ هذا الدليل ضمن التعريف، والمجتمع الذي ينطبق عليه الرقم أو قاعدة الاحتساب عند الحاجة، والفترة، والجغرافيا، والطريقة المبينة في الصفحة. وقبل إعادة استخدامه أو مقارنته، راجع المصدر والحدود وحداثة الدليل وسجل التصحيح. وإذا كانت قيمة أو وصلة مصدر غير متاحة، تُذكر الفجوة صراحةً بدل ملئها بالاستنتاج. ولا يتاح التنزيل أو إعادة الاستخدام إلا حيث تسمح حقوق المصدر.",
+   "new": "الشمول المالي منظومة انتقال، لا درجة واحدة\n\nيصف هذا الملخص الشمول المالي في اليمن بوصفه أجزاء مترابطة، يرد بيانها في النطاق أدناه. وتصف العلاقات الموثقة السياق أو الاعتماد أو آليات محتملة حين تسندها الأدلة؛ ولا تتحول الأجزاء إلى درجة واحدة، ولا تثبت أن جزءًا منها سبب لآخر.\n\nكيف تقرأ هذا الدليل\n\nيُقرأ هذا الدليل ضمن التعريف، والمجتمع الذي ينطبق عليه الرقم أو قاعدة الاحتساب عند الحاجة، والفترة، والجغرافيا، والطريقة المبينة في الصفحة. وقبل إعادة استخدامه أو مقارنته، راجع المصدر والحدود وحداثة الدليل وسجل التصحيح. وإذا كانت قيمة أو وصلة مصدر غير متاحة، تُذكر الفجوة صراحةً بدل ملئها بالاستنتاج. ولا يتاح التنزيل أو إعادة الاستخدام إلا حيث تسمح حقوق المصدر."
+  },
+  {
+   "finding": "EXF-002",
+   "sheet": "02_SITE_MAP",
+   "row": 102,
+   "col": 7,
+   "field": "/evidence/VIS-MECHANISM-METRIC-BRIDGE/.full_copy_en",
+   "old": "What may explain the number — without pretending to prove it?\n\nThe visual starts from one quantitative evidence record and links it only to contextual mechanisms, policy propositions, research priorities or primary-verification needs that have an explicitly supported relationship. The links help interpret the number; they do not estimate prevalence, effect size or causality.\n\nHow to read this evidence\n\nRead this evidence within the definition, population or group covered, calculation base where relevant, period, geography and method shown on the page. Before reusing or comparing it, check the source, limitations, evidence date and correction history. If a value or source link is unavailable, the page says so rather than filling the gap by inference. Download and reuse are offered only where source rights permit.",
+   "new": "What may explain the number — without pretending to prove it?\n\nThis summary starts from one quantitative evidence record and links it only to contextual mechanisms, policy propositions, research priorities or primary-verification needs that have an explicitly supported relationship. The links help interpret the number; they do not estimate prevalence, effect size or causality.\n\nHow to read this evidence\n\nRead this evidence within the definition, population or group covered, calculation base where relevant, period, geography and method shown on the page. Before reusing or comparing it, check the source, limitations, evidence date and correction history. If a value or source link is unavailable, the page says so rather than filling the gap by inference. Download and reuse are offered only where source rights permit."
+  },
+  {
+   "finding": "EXF-002",
+   "sheet": "02_SITE_MAP",
+   "row": 102,
+   "col": 8,
+   "field": "/evidence/VIS-MECHANISM-METRIC-BRIDGE/.full_copy_ar",
+   "old": "ما الذي قد يفسر الرقم — من دون ادعاء إثباته؟\n\nيبدأ العرض من دليل كمي واحد، ثم يربطه فقط بسياقات أو آليات محتملة أو مقترحات سياسات أو أولويات بحث أو احتياجات تحقق أولي لها علاقة موثقة ومحددة. تساعد هذه الروابط على تفسير الرقم، لكنها لا تقيس الانتشار أو حجم الأثر ولا تثبت السببية.\n\nكيف تقرأ هذا الدليل\n\nيُقرأ هذا الدليل ضمن التعريف، والمجتمع الذي ينطبق عليه الرقم أو قاعدة الاحتساب عند الحاجة، والفترة، والجغرافيا، والطريقة المبينة في الصفحة. وقبل إعادة استخدامه أو مقارنته، راجع المصدر والحدود وحداثة الدليل وسجل التصحيح. وإذا كانت قيمة أو وصلة مصدر غير متاحة، تُذكر الفجوة صراحةً بدل ملئها بالاستنتاج. ولا يتاح التنزيل أو إعادة الاستخدام إلا حيث تسمح حقوق المصدر.",
+   "new": "ما الذي قد يفسر الرقم — من دون ادعاء إثباته؟\n\nيبدأ هذا الملخص من دليل كمي واحد، ثم يربطه فقط بسياقات أو آليات محتملة أو مقترحات سياسات أو أولويات بحث أو احتياجات تحقق أولي لها علاقة موثقة ومحددة. تساعد هذه الروابط على تفسير الرقم، لكنها لا تقيس الانتشار أو حجم الأثر ولا تثبت السببية.\n\nكيف تقرأ هذا الدليل\n\nيُقرأ هذا الدليل ضمن التعريف، والمجتمع الذي ينطبق عليه الرقم أو قاعدة الاحتساب عند الحاجة، والفترة، والجغرافيا، والطريقة المبينة في الصفحة. وقبل إعادة استخدامه أو مقارنته، راجع المصدر والحدود وحداثة الدليل وسجل التصحيح. وإذا كانت قيمة أو وصلة مصدر غير متاحة، تُذكر الفجوة صراحةً بدل ملئها بالاستنتاج. ولا يتاح التنزيل أو إعادة الاستخدام إلا حيث تسمح حقوق المصدر."
+  },
+  {
+   "finding": "EXF-002",
+   "sheet": "02_SITE_MAP",
+   "row": 106,
+   "col": 7,
+   "field": "/evidence/VIS-OECD-FCP-TIMELINE/.full_copy_en",
+   "old": "Consumer Protection & Capability — framework to implementation\n\nThe timeline separates the existence of a framework or instrument, its stated purpose, awareness outputs, implementation, complaints and redress, enforcement, and consumer outcomes. The later performance states remain open where no observed evidence exists; a policy or guidance document is not evidence that protection is effective in practice.\n\nHow to read this evidence\n\nRead this evidence within the definition, population or group covered, calculation base where relevant, period, geography and method shown on the page. Before reusing or comparing it, check the source, limitations, evidence date and correction history. If a value or source link is unavailable, the page says so rather than filling the gap by inference. Download and reuse are offered only where source rights permit.",
+   "new": "Consumer Protection & Capability — framework to implementation\n\nThe sequence separates the existence of a framework or instrument, its stated purpose, awareness outputs, implementation, complaints and redress, enforcement, and consumer outcomes. The later performance states remain open where no observed evidence exists; a policy or guidance document is not evidence that protection is effective in practice.\n\nHow to read this evidence\n\nRead this evidence within the definition, population or group covered, calculation base where relevant, period, geography and method shown on the page. Before reusing or comparing it, check the source, limitations, evidence date and correction history. If a value or source link is unavailable, the page says so rather than filling the gap by inference. Download and reuse are offered only where source rights permit."
+  },
+  {
+   "finding": "EXF-002",
+   "sheet": "02_SITE_MAP",
+   "row": 106,
+   "col": 8,
+   "field": "/evidence/VIS-OECD-FCP-TIMELINE/.full_copy_ar",
+   "old": "حماية المستهلك والقدرة المالية: من الإطار إلى التنفيذ\n\nيفصل الخط الزمني بين وجود الإطار أو الأداة التنظيمية، وغرضها المعلن، ومخرجات التوعية، والتنفيذ، والشكاوى والتظلم، والإنفاذ، ونتائج المستهلك. وتبقى حالات الأداء اللاحقة مفتوحة عندما لا تتوفر أدلة مرصودة؛ فوجود سياسة أو دليل إرشادي لا يثبت أن الحماية تعمل بفعالية في الواقع.\n\nكيف تقرأ هذا الدليل\n\nيُقرأ هذا الدليل ضمن التعريف، والمجتمع الذي ينطبق عليه الرقم أو قاعدة الاحتساب عند الحاجة، والفترة، والجغرافيا، والطريقة المبينة في الصفحة. وقبل إعادة استخدامه أو مقارنته، راجع المصدر والحدود وحداثة الدليل وسجل التصحيح. وإذا كانت قيمة أو وصلة مصدر غير متاحة، تُذكر الفجوة صراحةً بدل ملئها بالاستنتاج. ولا يتاح التنزيل أو إعادة الاستخدام إلا حيث تسمح حقوق المصدر.",
+   "new": "حماية المستهلك والقدرة المالية: من الإطار إلى التنفيذ\n\nيفصل هذا التسلسل بين وجود الإطار أو الأداة التنظيمية، وغرضها المعلن، ومخرجات التوعية، والتنفيذ، والشكاوى والتظلم، والإنفاذ، ونتائج المستهلك. وتبقى حالات الأداء اللاحقة مفتوحة عندما لا تتوفر أدلة مرصودة؛ فوجود سياسة أو دليل إرشادي لا يثبت أن الحماية تعمل بفعالية في الواقع.\n\nكيف تقرأ هذا الدليل\n\nيُقرأ هذا الدليل ضمن التعريف، والمجتمع الذي ينطبق عليه الرقم أو قاعدة الاحتساب عند الحاجة، والفترة، والجغرافيا، والطريقة المبينة في الصفحة. وقبل إعادة استخدامه أو مقارنته، راجع المصدر والحدود وحداثة الدليل وسجل التصحيح. وإذا كانت قيمة أو وصلة مصدر غير متاحة، تُذكر الفجوة صراحةً بدل ملئها بالاستنتاج. ولا يتاح التنزيل أو إعادة الاستخدام إلا حيث تسمح حقوق المصدر."
+  },
+  {
+   "finding": "EXF-002",
+   "sheet": "02_SITE_MAP",
+   "row": 120,
+   "col": 7,
+   "field": "/evidence/.full_copy_en",
+   "old": "Inspect the evidence behind the answer\n\nFind the evidence behind the answer\n\nUse the Evidence hub to find a claim, indicator, visual or source-backed record, then inspect the definition, group covered, calculation base, period, geography, method, limitations, source and evidence date. Compare records when similar labels may hide different units or populations. Disagreement, series breaks and missing evidence remain visible rather than being averaged or filled in. The hub is an index for verification; detailed evidence lives in the linked records and comparison view.",
+   "new": "Inspect the evidence behind the answer\n\nHow to search, inspect and compare the records\n\nUse the Evidence hub to find a claim, indicator, visual or source-backed record, then inspect the definition, group covered, calculation base, period, geography, method, limitations, source and evidence date. Compare records when similar labels may hide different units or populations. Disagreement, series breaks and missing evidence remain visible rather than being averaged or filled in. The hub is an index for verification; detailed evidence lives in the linked records and comparison view."
+  },
+  {
+   "finding": "EXF-002",
+   "sheet": "02_SITE_MAP",
+   "row": 120,
+   "col": 8,
+   "field": "/evidence/.full_copy_ar",
+   "old": "افحص الدليل خلف الإجابة\n\nاعثر على الدليل وراء الإجابة\n\nاستخدم مركز الأدلة للوصول إلى خلاصة أو مؤشر أو رسم أو سجل يستند إلى مصدر، ثم افحص التعريف، والمجتمع الذي ينطبق عليه الرقم، وقاعدة الاحتساب، والفترة، والجغرافيا، والطريقة، والحدود، والمصدر، وحداثة الدليل. وقارن السجلات عندما تبدو التسميات متشابهة بينما تختلف الوحدات أو المجتمعات التي تقيسها. تبقى الاختلافات وكسور السلاسل والفجوات ظاهرة بدل دمجها أو ملئها بالتقدير. هذه الصفحة مدخل للتحقق؛ أما التفاصيل فتوجد في سجلات الأدلة وصفحة المقارنة.",
+   "new": "افحص الدليل خلف الإجابة\n\nكيف تبحث في السجلات وتفحصها وتقارن بينها\n\nاستخدم مركز الأدلة للوصول إلى خلاصة أو مؤشر أو رسم أو سجل يستند إلى مصدر، ثم افحص التعريف، والمجتمع الذي ينطبق عليه الرقم، وقاعدة الاحتساب، والفترة، والجغرافيا، والطريقة، والحدود، والمصدر، وحداثة الدليل. وقارن السجلات عندما تبدو التسميات متشابهة بينما تختلف الوحدات أو المجتمعات التي تقيسها. تبقى الاختلافات وكسور السلاسل والفجوات ظاهرة بدل دمجها أو ملئها بالتقدير. هذه الصفحة مدخل للتحقق؛ أما التفاصيل فتوجد في سجلات الأدلة وصفحة المقارنة."
+  },
+  {
+   "finding": "EXF-002",
+   "sheet": "02_SITE_MAP",
+   "row": 135,
+   "col": 8,
+   "field": "/readings/finance-constraint-different-questions/.full_copy_ar",
+   "old": "قد يكون التمويل قيدًا شديدًا من دون أن يكون التحدي الأكثر ذكرًا لدى المنشآت\n\nما الأدلة التي تسند هذه القراءة\n\nالتمويل ليس التحدي الأكثر ذكرًا في هذا المسح: في المسح المخصص للمنشآت الذي غطى سبع محافظات عام 2022، ذُكرت أزمتا الكهرباء والوقود كتحديين للأعمال بوتيرة أعلى من الوصول إلى التمويل.\n\nشدة قيد التمويل ضمن قاعدة قياس محددة: ضمن المنشآت التي شملها جدول عوائق التمويل في التقرير، بعد استبعاد المنشآت التي قالت إنها لا تحتاج إلى قرض، بلغت نسبة من صنفوا عوائق التمويل كبيرة أو متوسطة 91.84%.\n\nمؤشر SMEPS للوصول إلى الخدمات المالية نتيجة برنامجية، لا معدل وطني للمنشآت: يورد التقرير السنوي 2024 لوكالة SMEPS أن 19% من المنشآت التي دعمها البرنامج «وصلت إلى خدمات مالية» في 2024، وأن النتيجة الإجمالية المحققة للفترة 2021–2024 بلغت 15% مقابل مستهدف برامجي قدره 40%. ولا يوضح جدول المؤشرات بصورة كاملة قاعدة القياس الخاصة بهذا المؤشر أو التعريف التشغيلي لعبارة «الوصول إلى خدمات مالية». ولذلك تُفهم النسبة داخل نطاق البرنامج فقط، مع إبقاء هذا القيد ظاهرًا؛ ولا تمثل معدلًا وطنيًا لوصول المنشآت إلى الخدمات المالية.\n\nما الذي يقيّد هذه القراءة أو يعقّدها\n\nفي مسح عام 2022 الذي شمل سبع محافظات، ذكرت 22% من المنشآت الوصول إلى التمويل كتحدٍ عام، مقابل 50% للكهرباء و46% للوقود. وبين المنشآت التي شملها جدول عوائق التمويل في التقرير، بعد استبعاد التي قالت إنها لا تحتاج إلى قرض، بلغت العوائق الكبيرة والمتوسطة مجتمعة 91.84%. كما يورد SMEPS أن 19% من المنشآت التي دعمها البرنامج وصلت إلى خدمات مالية في 2024، و15% للفترة 2021–2024 مقابل مستهدف 40%، مع بقاء قاعدة القياس الخاصة بالمؤشر غير موثقة بالكامل.\n\nكيف يرتبط ذلك بالنظام الأوسع\n\nيقع تمويل المنشآت داخل بيئة تشغيل أوسع. فسؤال التحديات العامة يسأل ما الذي تذكره المنشآت بين عدة عوائق، بينما يسأل مؤشر شدة التمويل عن درجة القيد داخل فئة محددة، ويصف المؤشر البرامجي ما حدث داخل المنشآت التي دعمها البرنامج. هذه عدسات متكاملة وليست تقديرات متنافسة لمعدل وطني واحد.\n\nما الذي لا تثبته الأدلة\n\nلا تجعل القراءة مسح المحافظ السبع ممثلًا وطنيًا، ولا تحول 91.84% إلى نسبة من جميع المنشآت، ولا تحول مؤشر SMEPS البالغ 19% إلى معدل وطني أو أثر سببي. لا تُقارن نسبة 22% للتحديات العامة للأعمال مع نتيجة 91.84% لشدة عائق التمويل كما لو كانتا تجيبان عن السؤال نفسه أو تستخدمان قاعدة الاحتساب نفسها، ولا يُعمم إطار المحافظ السبع على جميع منشآت اليمن.\n\nما الذي يعنيه ذلك عند استخدام الدليل في القرار\n\nتكون أدلة تمويل المنشآت قابلة للتفسير عندما يبقى المسار الكامل — الحاجة، والتقديم، والموافقة أو الرفض، والمبلغ، والشروط، والمصدر، والاستخدام، وضغوط السداد — متميزًا عن قيود الكهرباء والوقود والنقل وغيرها. ويمكن لمؤشرات البرامج أن تفيد في فهم أداء البرنامج، لكنها لا تتحول إلى معدلات وطنية.\n\nما الذي ما زلنا لا نعرفه\n\nيفتقر اليمن إلى قياس وطني حالي وممثل لمسار تمويل المنشآت يتضمن قواعد احتساب واضحة لكل سؤال ومؤشرات قابلة للمقارنة للتقديم والموافقة والشروط والنتائج. كما يحتاج مؤشر SMEPS الخاص بالوصول المالي إلى توضيح قاعدة القياس الخاصة به.\n\nما الدليل الذي سيغير هذه القراءة\n\nسيسمح مسح ممثل لتمويل المنشآت الصغيرة والمتوسطة، إلى جانب تعريفات إدارية وبرامجية موثقة، بالفصل بين الانتشار والشدة ومسار الحصول على الائتمان وتنفيذ البرامج من دون اختزالها في رقم واحد.\n\nتتبّع القراءة إلى أدلتها\n\nافتح الخلاصات وسجلات الأدلة المرتبطة لمراجعة التعريف والفترة والمجتمع أو النطاق والمصدر وطريقة الاشتقاق وشروط إعادة الاستخدام والحدود وحداثة الدليل وسجل التصحيح. وقارن الأدلة المختلفة من دون إجبارها على مقياس واحد.",
+   "new": "قد يكون التمويل قيدًا شديدًا من دون أن يكون التحدي الأكثر ذكرًا لدى المنشآت\n\nما الأدلة التي تسند هذه القراءة\n\nالتمويل ليس التحدي الأكثر ذكرًا في هذا المسح: في المسح المخصص للمنشآت الذي غطى سبع محافظات عام 2022، ذُكرت أزمتا الكهرباء والوقود كتحديين للأعمال بوتيرة أعلى من الوصول إلى التمويل.\n\nشدة قيد التمويل ضمن قاعدة قياس محددة: ضمن المنشآت التي شملها جدول عوائق التمويل في التقرير، بعد استبعاد المنشآت التي قالت إنها لا تحتاج إلى قرض، بلغت نسبة من صنفوا عوائق التمويل كبيرة أو متوسطة 91.84%.\n\nمؤشر SMEPS للوصول إلى الخدمات المالية نتيجة برنامجية، لا معدل وطني للمنشآت: يورد التقرير السنوي 2024 لوكالة SMEPS أن 19% من المنشآت التي دعمها البرنامج «وصلت إلى خدمات مالية» في 2024، وأن النتيجة الإجمالية المحققة للفترة 2021–2024 بلغت 15% مقابل مستهدف برامجي قدره 40%. ولا يوضح جدول المؤشرات بصورة كاملة قاعدة القياس الخاصة بهذا المؤشر أو التعريف التشغيلي لعبارة «الوصول إلى خدمات مالية». ولذلك تُفهم النسبة داخل نطاق البرنامج فقط، مع إبقاء هذا القيد ظاهرًا؛ ولا تمثل معدلًا وطنيًا لوصول المنشآت إلى الخدمات المالية.\n\nما الذي يقيّد هذه القراءة أو يعقّدها\n\nفي مسح عام 2022 الذي شمل سبع محافظات، ذكرت 22% من المنشآت الوصول إلى التمويل كتحدٍ عام، مقابل 50% للكهرباء و46% للوقود. وبين المنشآت التي شملها جدول عوائق التمويل في التقرير، بعد استبعاد التي قالت إنها لا تحتاج إلى قرض، بلغت العوائق الكبيرة والمتوسطة مجتمعة 91.84%. كما يورد SMEPS أن 19% من المنشآت التي دعمها البرنامج وصلت إلى خدمات مالية في 2024، و15% للفترة 2021–2024 مقابل مستهدف 40%، مع بقاء قاعدة القياس الخاصة بالمؤشر غير موثقة بالكامل.\n\nكيف يرتبط ذلك بالنظام الأوسع\n\nيقع تمويل المنشآت داخل بيئة تشغيل أوسع. فسؤال التحديات العامة يسأل ما الذي تذكره المنشآت بين عدة عوائق، بينما يسأل مؤشر شدة التمويل عن درجة القيد داخل فئة محددة، ويصف المؤشر البرامجي ما حدث داخل المنشآت التي دعمها البرنامج. هذه عدسات متكاملة وليست تقديرات متنافسة لمعدل وطني واحد.\n\nما الذي لا تثبته الأدلة\n\nلا تجعل القراءة مسح المحافظ السبع ممثلًا وطنيًا، ولا تحول 91.84% إلى نسبة من جميع المنشآت، ولا تحول مؤشر SMEPS البالغ 19% إلى معدل وطني أو أثر سببي. لا تُقارن نسبة 22% للتحديات العامة للأعمال مع نتيجة 91.84% لشدة عائق التمويل كما لو كانتا تجيبان عن السؤال نفسه أو تستخدمان قاعدة الاحتساب نفسها، ولا يُعمم إطار المحافظ السبع على جميع منشآت اليمن.\n\nما الذي يعنيه ذلك عند استخدام الدليل في القرار\n\nتكون أدلة تمويل المنشآت قابلة للتفسير عندما يبقى المسار الكامل — الحاجة، والتقديم، والموافقة أو الرفض، والمبلغ، والشروط، والمصدر، والاستخدام، وضغوط السداد — متميزًا عن قيود الكهرباء والوقود والنقل وغيرها. ويمكن لمؤشرات البرامج أن تفيد في فهم أداء البرنامج، لكنها لا تتحول إلى معدلات وطنية.\n\nما الذي ما زلنا لا نعرفه\n\nيفتقر اليمن إلى قياس وطني حالي وممثل لمسار تمويل المنشآت يتضمن قواعد احتساب واضحة لكل سؤال ومؤشرات قابلة للمقارنة للتقديم والموافقة والشروط والنتائج. كما يحتاج مؤشر SMEPS الخاص بالوصول المالي إلى توضيح قاعدة القياس الخاصة به.\n\nما الدليل الذي سيغير هذه القراءة\n\nسيسمح مسح ممثل لتمويل المنشآت الصغرى والصغيرة والمتوسطة، إلى جانب تعريفات إدارية وبرامجية موثقة، بالفصل بين الانتشار والشدة ومسار الحصول على الائتمان وتنفيذ البرامج من دون اختزالها في رقم واحد.\n\nتتبّع القراءة إلى أدلتها\n\nافتح الخلاصات وسجلات الأدلة المرتبطة لمراجعة التعريف والفترة والمجتمع أو النطاق والمصدر وطريقة الاشتقاق وشروط إعادة الاستخدام والحدود وحداثة الدليل وسجل التصحيح. وقارن الأدلة المختلفة من دون إجبارها على مقياس واحد."
+  },
+  {
+   "finding": "EXF-002",
+   "sheet": "02_SITE_MAP",
+   "row": 141,
+   "col": 8,
+   "field": "/readings/same-year-different-number/.full_copy_ar",
+   "old": "العام نفسه، رقم مختلف\n\nما الأدلة التي تسند هذه القراءة\n\nالسنة المرجعية نفسها، وقيمة منشورة مختلفة: تنشر التقارير السنوية للبنك المركزي قيمًا مختلفة بصورة جوهرية لتحويلات العاملين للسنة المرجعية نفسها. ففي تقرير 2024 بلغت قيمة عام 2024 نحو 6.245 مليارات دولار، بينما أعاد تقرير 2025 عرض عام 2024 عند 3.42 مليار دولار تقريبًا. هذه إعادة عرض للسنة نفسها، وليست دليلًا على حركة اقتصادية بين عامين.\n\nإعادة البناء الإحصائي موثقة، أما صيغة البنك المركزي الدقيقة فليست كذلك: يوثق صندوق النقد الدولي جهدًا لإعادة بناء إحصاءات القطاع الخارجي خلال 2024–2025 مع البنك المركزي اليمني – عدن، شمل نموذجًا ديمغرافيًا وسلوكيًا للتحويلات الشخصية في ظل محدودية بيانات القنوات غير الرسمية. يثبت ذلك سياقًا منهجيًا، لكنه لا يثبت الصيغة الدقيقة أو النطاق المستخدم في كل قيمة للتحويلات في تقرير البنك المركزي لعام 2025.\n\nيتطابق المساران تقريبًا بعد التطبيع، لكن مستوياتهما ليست متكافئة: عند تحويل سلسلتي التحويلات إلى مؤشر أساسه 2021=100، يصبح مسارا تقرير البنك المركزي 2025 وتقرير المادة الرابعة لصندوق النقد متطابقين تقريبًا حتى 2024؛ ولا يتجاوز أكبر فرق في معدل النمو السنوي خلال 2022–2024 نحو 0.0032 نقطة مئوية. هذا توافق في المسار، وليس دليلًا على أن المستويات الخام تغطي النطاق نفسه.\n\nما الذي يقيّد هذه القراءة أو يعقّدها\n\nيتحرك المسار المعاد عرضه لدى البنك المركزي ومسار صندوق النقد بصورة شبه متطابقة بعد تحويلهما إلى مؤشر أساسه 2021=100، لكن تكافؤ النطاق بين المستويات الخام غير مثبت. وتوثق مواد الصندوق أعمال إعادة بناء إحصائي وسياقًا منهجيًا، بينما تبقى المطابقة الدقيقة لكل قيمة أعاد البنك المركزي عرضها غير محسومة.\n\nكيف يرتبط ذلك بالنظام الأوسع\n\nتقع التحويلات في آن واحد داخل معيشة الأسر، وتوافر النقد الأجنبي، وإحصاءات ميزان المدفوعات، وقنوات الدفع. لذلك فإن مراجعة السلسلة الكلية تغيّر خط الأساس الذي تستند إليه قرارات متعددة حتى عندما لا يكون هناك حدث جديد لدى الأسر. ويسمح إبقاء السنة المرجعية ونسخة النشر ظاهرتين بالتمييز بين الحركة الاقتصادية والمراجعة الإحصائية.\n\nما الذي لا تثبته الأدلة\n\nلا تحدد القراءة الصيغة الكاملة الدقيقة وراء كل قيمة معاد عرضها، ولا تقيس توزيع التحويلات على الأسر. لا توجد سلسلة تمثل وحدها المستوى الصحيح؛ ولا يصلح معامل واحد — مثل النسبة الثابتة تقريبًا البالغة نحو 1.838 بين سلسلتي الحوالات لدى البنك المركزي وصندوق النقد، أو حصة السكان البالغة 33% التي استخدمها الصندوق للمناطق التي تديرها عدن — معاملَ تحويل عامًا؛ ولا يمثل صافي الأخطاء والسهو حوالات مخفية؛ ولا يُعتمد تقدير ناتج عن نموذج المتبقي خطَّ أساس.\n\nما الذي يعنيه ذلك عند استخدام الدليل في القرار\n\nفي تحليل التحويلات والنقد الأجنبي والقدرة على الصمود، لا يكون خط الأساس قابلًا للتفسير إلا إذا ظهرت نسخة النشر ونطاق المصدر بوضوح. وإذا أعاد إصدار لاحق عرض السنة المرجعية نفسها، فالسؤال التحليلي الأول هو مطابقة المراجعة وتفسيرها، لا افتراض حدوث تغير اقتصادي. ويمكن إبقاء النسختين في تحليل السيناريو متى ذُكر خط الأساس الذي تستند إليه كل نتيجة.\n\nما الذي ما زلنا لا نعرفه\n\nلا تزال المطابقة المؤسسية الدقيقة بين منهج إعادة بناء إحصاءات القطاع الخارجي وكل قيمة منشورة في تقارير البنك المركزي غير متاحة بصورة مكتملة، كما أن السلسلة الكلية لا تبين توزيع التحويلات بين الأسر أو القنوات.\n\nما الدليل الذي سيغير هذه القراءة\n\nستسمح مطابقة أولية موثقة للصيغة والنطاق وراء السلسلة المعاد عرضها، إلى جانب أدلة محدثة عن الأسر والقنوات، بفصل أثر إعادة البناء الإحصائي عن التغير في التوزيع والقنوات بصورة أدق.\n\nتتبّع القراءة إلى أدلتها\n\nافتح الخلاصات وسجلات الأدلة المرتبطة لمراجعة التعريف والفترة والمجتمع أو النطاق والمصدر وطريقة الاشتقاق وشروط إعادة الاستخدام والحدود وحداثة الدليل وسجل التصحيح. وقارن الأدلة المختلفة من دون إجبارها على مقياس واحد.",
+   "new": "العام نفسه، رقم مختلف\n\nما الأدلة التي تسند هذه القراءة\n\nالسنة المرجعية نفسها، وقيمة منشورة مختلفة: تنشر التقارير السنوية للبنك المركزي قيمًا مختلفة بصورة جوهرية لتحويلات العاملين للسنة المرجعية نفسها. ففي تقرير 2024 بلغت قيمة عام 2024 نحو 6.245 مليار دولار، بينما أعاد تقرير 2025 عرض عام 2024 عند 3.42 مليار دولار تقريبًا. هذه إعادة عرض للسنة نفسها، وليست دليلًا على حركة اقتصادية بين عامين.\n\nإعادة البناء الإحصائي موثقة، أما صيغة البنك المركزي الدقيقة فليست كذلك: يوثق صندوق النقد الدولي جهدًا لإعادة بناء إحصاءات القطاع الخارجي خلال 2024–2025 مع البنك المركزي اليمني – عدن، شمل نموذجًا ديمغرافيًا وسلوكيًا للتحويلات الشخصية في ظل محدودية بيانات القنوات غير الرسمية. يثبت ذلك سياقًا منهجيًا، لكنه لا يثبت الصيغة الدقيقة أو النطاق المستخدم في كل قيمة للتحويلات في تقرير البنك المركزي لعام 2025.\n\nيتطابق المساران تقريبًا بعد التطبيع، لكن مستوياتهما ليست متكافئة: عند تحويل سلسلتي التحويلات إلى مؤشر أساسه 2021=100، يصبح مسارا تقرير البنك المركزي 2025 وتقرير المادة الرابعة لصندوق النقد متطابقين تقريبًا حتى 2024؛ ولا يتجاوز أكبر فرق في معدل النمو السنوي خلال 2022–2024 نحو 0.0032 نقطة مئوية. هذا توافق في المسار، وليس دليلًا على أن المستويات الخام تغطي النطاق نفسه.\n\nما الذي يقيّد هذه القراءة أو يعقّدها\n\nيتحرك المسار المعاد عرضه لدى البنك المركزي ومسار صندوق النقد بصورة شبه متطابقة بعد تحويلهما إلى مؤشر أساسه 2021=100، لكن تكافؤ النطاق بين المستويات الخام غير مثبت. وتوثق مواد الصندوق أعمال إعادة بناء إحصائي وسياقًا منهجيًا، بينما تبقى المطابقة الدقيقة لكل قيمة أعاد البنك المركزي عرضها غير محسومة.\n\nكيف يرتبط ذلك بالنظام الأوسع\n\nتقع التحويلات في آن واحد داخل معيشة الأسر، وتوافر النقد الأجنبي، وإحصاءات ميزان المدفوعات، وقنوات الدفع. لذلك فإن مراجعة السلسلة الكلية تغيّر خط الأساس الذي تستند إليه قرارات متعددة حتى عندما لا يكون هناك حدث جديد لدى الأسر. ويسمح إبقاء السنة المرجعية ونسخة النشر ظاهرتين بالتمييز بين الحركة الاقتصادية والمراجعة الإحصائية.\n\nما الذي لا تثبته الأدلة\n\nلا تحدد القراءة الصيغة الكاملة الدقيقة وراء كل قيمة معاد عرضها، ولا تقيس توزيع التحويلات على الأسر. لا توجد سلسلة تمثل وحدها المستوى الصحيح؛ ولا يصلح معامل واحد — مثل النسبة الثابتة تقريبًا البالغة نحو 1.838 بين سلسلتي الحوالات لدى البنك المركزي وصندوق النقد، أو حصة السكان البالغة 33% التي استخدمها الصندوق للمناطق التي تديرها عدن — معاملَ تحويل عامًا؛ ولا يمثل صافي الأخطاء والسهو حوالات مخفية؛ ولا يُعتمد تقدير ناتج عن نموذج المتبقي خطَّ أساس.\n\nما الذي يعنيه ذلك عند استخدام الدليل في القرار\n\nفي تحليل التحويلات والنقد الأجنبي والقدرة على الصمود، لا يكون خط الأساس قابلًا للتفسير إلا إذا ظهرت نسخة النشر ونطاق المصدر بوضوح. وإذا أعاد إصدار لاحق عرض السنة المرجعية نفسها، فالسؤال التحليلي الأول هو مطابقة المراجعة وتفسيرها، لا افتراض حدوث تغير اقتصادي. ويمكن إبقاء النسختين في تحليل السيناريو متى ذُكر خط الأساس الذي تستند إليه كل نتيجة.\n\nما الذي ما زلنا لا نعرفه\n\nلا تزال المطابقة المؤسسية الدقيقة بين منهج إعادة بناء إحصاءات القطاع الخارجي وكل قيمة منشورة في تقارير البنك المركزي غير متاحة بصورة مكتملة، كما أن السلسلة الكلية لا تبين توزيع التحويلات بين الأسر أو القنوات.\n\nما الدليل الذي سيغير هذه القراءة\n\nستسمح مطابقة أولية موثقة للصيغة والنطاق وراء السلسلة المعاد عرضها، إلى جانب أدلة محدثة عن الأسر والقنوات، بفصل أثر إعادة البناء الإحصائي عن التغير في التوزيع والقنوات بصورة أدق.\n\nتتبّع القراءة إلى أدلتها\n\nافتح الخلاصات وسجلات الأدلة المرتبطة لمراجعة التعريف والفترة والمجتمع أو النطاق والمصدر وطريقة الاشتقاق وشروط إعادة الاستخدام والحدود وحداثة الدليل وسجل التصحيح. وقارن الأدلة المختلفة من دون إجبارها على مقياس واحد."
+  },
+  {
+   "finding": "EXF-002",
+   "sheet": "02_SITE_MAP",
+   "row": 143,
+   "col": 7,
+   "field": "/remittances/.full_copy_en",
+   "old": "There is no single remittance number unless the source, concept and vintage are fixed first.\n\nMacro inflows, corridor prices and household receipt channels answer different questions. Even macro series can be revised for the same reference year. This resource keeps these evidence records separate and makes revisions visible.\n\nReported history, estimates and projections are different evidence states\n\nThe IMF staff report gives 2018–2024 as reported history based on staff calculations; a later supplement to the same consultation gives 2025 as an estimate and 2026–2030 as projections. The chart breaks the line where the source document changes and never extends reported history through the forecast as if all years had the same status. A forecast revision is not an observed economic change, and the macro series is not a measure of informal hawala volume.\n\nThe same reference year can change when the source vintage changes\n\nFor the 2024 reference year, CBY AR2024 reported US$6.245 billion while AR2025 restated 2024 at about US$3.42 billion. That is a same-year source revision. It must not be graphed as a year-on-year fall. The later path also shows unusually similar growth rates across overlapping years; that invites method scrutiny but does not establish smoothing or interpolation.\n\nA reconstruction effort is documented; the exact crosswalk is not\n\nIMF documents a 2024–2025 external-sector statistics reconstruction effort with CBY-Aden and a July 2025 mission that produced BOP and IIP statistics for 2014–2024. It also documents a demographic-behavioural personal-transfer model where informal-channel data were limited. This establishes method context, not the exact formula behind every CBY annual-report value. Tested public CBY and IMF components do not support one universal conversion scalar.\n\nCost depends on corridor and transfer size\n\nIn 2025 Q3, quoted averages for Saudi Arabia–Yemen were 2.70% at US$200 and 1.26% at US$500. For UAE–Yemen they were 7.53% and 5.62%. The difference shows why transfer size and corridor must stay visible. These quotes do not cover every provider or informal channel and must not be collapsed into one national remittance-cost rate.\n\nHousehold behaviour is a different evidence layer\n\nThe 2014 weighted World Bank profile reported 18.3% of adults receiving domestic remittances. Among recipients—not all adults—31.1% reported a money-transfer operator, 2.0% a financial institution and 0.0% mobile phone. Those historical channel shares cannot be converted into current monetary-flow shares, but they provide a bounded people-side context for how remittances were received in that survey wave.\n\nBefore ranking external flows, inspect the balancing residual\n\nIn CBY AR2025, net errors and omissions exceed the published remittance line in every year from 2021 through 2025; in 2025 the residual is about US$7.117 billion versus US$3.614 billion in remittances, or about 1.97 times. Net errors and omissions are a balancing residual, not an observed flow and not a hidden-remittance estimate.\n\nWhat remittance evidence does not establish\n\nA macro remittance series does not equal informal hawala volume or household distribution. A source revision is not an economic fall. Similar normalized paths do not prove that two raw series have the same scope or reveal a conversion factor. Corridor prices are not a national cost average. A change in an external stock is not automatically a transaction, and BPM7 does not retroactively rewrite Yemen’s historical series without an explicit conversion.\n\nWhat remains unresolved\n\nThe exact public crosswalk between key CBY and IMF external-sector series remains open, including why some remittance paths align closely after normalization while raw levels differ. Current household receipt/channel behaviour and the scale of informal channels are also not established by the current macro and corridor evidence.",
+   "new": "There is no single remittance number unless the source, concept and vintage are fixed first.\n\nMacro inflows, corridor prices and household receipt channels answer different questions. Even macro series can be revised for the same reference year. This resource keeps these evidence records separate and makes revisions visible.\n\nReported history, estimates and projections are different evidence states\n\nThe IMF staff report gives 2018–2024 as reported history based on staff calculations; a later supplement to the same consultation gives 2025 as an estimate and 2026–2030 as projections. The series is kept apart where the source document changes: reported history is never extended through the forecast as if all years had the same status. A forecast revision is not an observed economic change, and the macro series is not a measure of informal hawala volume.\n\nThe same reference year can change when the source vintage changes\n\nFor the 2024 reference year, CBY AR2024 reported US$6.245 billion while AR2025 restated 2024 at about US$3.42 billion. That is a same-year source revision. It must not be graphed as a year-on-year fall. The later path also shows unusually similar growth rates across overlapping years; that invites method scrutiny but does not establish smoothing or interpolation.\n\nA reconstruction effort is documented; the exact crosswalk is not\n\nIMF documents a 2024–2025 external-sector statistics reconstruction effort with CBY-Aden and a July 2025 mission that produced BOP and IIP statistics for 2014–2024. It also documents a demographic-behavioural personal-transfer model where informal-channel data were limited. This establishes method context, not the exact formula behind every CBY annual-report value. Tested public CBY and IMF components do not support one universal conversion scalar.\n\nCost depends on corridor and transfer size\n\nIn 2025 Q3, quoted averages for Saudi Arabia–Yemen were 2.70% at US$200 and 1.26% at US$500. For UAE–Yemen they were 7.53% and 5.62%. The difference shows why transfer size and corridor must stay visible. These quotes do not cover every provider or informal channel and must not be collapsed into one national remittance-cost rate.\n\nHousehold behaviour is a different evidence layer\n\nThe 2014 weighted World Bank profile reported 18.3% of adults receiving domestic remittances. Among recipients—not all adults—31.1% reported a money-transfer operator, 2.0% a financial institution and 0.0% mobile phone. Those historical channel shares cannot be converted into current monetary-flow shares, but they provide a bounded people-side context for how remittances were received in that survey wave.\n\nBefore ranking external flows, inspect the balancing residual\n\nIn CBY AR2025, net errors and omissions exceed the published remittance line in every year from 2021 through 2025; in 2025 the residual is about US$7.117 billion versus US$3.614 billion in remittances, or about 1.97 times. Net errors and omissions are a balancing residual, not an observed flow and not a hidden-remittance estimate.\n\nWhat remittance evidence does not establish\n\nA macro remittance series does not equal informal hawala volume or household distribution. A source revision is not an economic fall. Similar normalized paths do not prove that two raw series have the same scope or reveal a conversion factor. Corridor prices are not a national cost average. A change in an external stock is not automatically a transaction, and BPM7 does not retroactively rewrite Yemen’s historical series without an explicit conversion.\n\nWhat remains unresolved\n\nThe exact public crosswalk between key CBY and IMF external-sector series remains open, including why some remittance paths align closely after normalization while raw levels differ. Current household receipt/channel behaviour and the scale of informal channels are also not established by the current macro and corridor evidence."
+  },
+  {
+   "finding": "EXF-002",
+   "sheet": "02_SITE_MAP",
+   "row": 143,
+   "col": 8,
+   "field": "/remittances/.full_copy_ar",
+   "old": "لا يوجد رقم واحد للحوالات قبل تحديد المصدر والمفهوم ونسخة البيانات أولًا.\n\nتجيب التدفقات الكلية وتكلفة الممرات وقنوات استلام الأسر عن أسئلة مختلفة. وحتى السلاسل الكلية قد تُراجع للسنة المرجعية نفسها. لذلك يفصل هذا الموقع هذه الأدلة ويُظهر المراجعات بدل إخفائها.\n\nالقيم التاريخية المبلغ عنها والتقديرات والتوقعات حالات مختلفة من الأدلة\n\nيورد تقرير خبراء صندوق النقد قيم 2018–2024 بوصفها قيمًا تاريخية تستند إلى حسابات خبراء الصندوق، ويورد ملحق لاحق للمشاورات نفسها قيمة 2025 كتقدير وقيم 2026–2030 كتوقعات. وينقطع الخط في الرسم عند تغير الوثيقة المصدر، ولا تُمد القيم التاريخية عبر التوقعات كما لو كانت السنوات كلها من الحالة نفسها. مراجعة التوقع ليست تغيرًا اقتصاديًا مرصودًا، كما أن السلسلة الكلية لا تقيس حجم الحوالات غير الرسمية.\n\nقد تتغير قيمة السنة نفسها عندما تتغير نسخة المصدر\n\nبالنسبة للسنة المرجعية 2024، أورد تقرير البنك المركزي 2024 قيمة قدرها 6.245 مليارات دولار، بينما أعاد تقرير 2025 عرض 2024 عند 3.42 مليار دولار تقريبًا. هذه مراجعة في المصدر للسنة نفسها، ولا يجوز رسمها كهبوط بين عامين. كما يظهر في المسار اللاحق تقارب لافت في معدلات النمو عبر السنوات المتداخلة؛ وهو ما يستدعي فحص المنهج لكنه لا يثبت التسوية أو الاستيفاء.\n\nجهد إعادة بناء الإحصاءات موثق، لكن المطابقة الدقيقة ليست محسومة\n\nيوثق صندوق النقد جهدًا لإعادة بناء إحصاءات القطاع الخارجي خلال 2024–2025 مع البنك المركزي اليمني – عدن، ومهمة في يوليو 2025 أنتجت إحصاءات ميزان المدفوعات ووضع الاستثمار الدولي للفترة 2014–2024. كما يوثق نموذجًا ديمغرافيًا وسلوكيًا للتحويلات الشخصية في ظل محدودية بيانات القنوات غير الرسمية. يثبت ذلك سياقًا منهجيًا، لكنه لا يثبت الصيغة الدقيقة وراء كل قيمة في التقارير السنوية للبنك المركزي. ولا تدعم المكونات العامة المختبرة لدى البنك المركزي وصندوق النقد معامل تحويل عالميًا واحدًا.\n\nتختلف التكلفة بحسب الممر ومبلغ التحويل\n\nفي الربع الثالث 2025، بلغت المتوسطات المعلنة لممر السعودية–اليمن 2.70% عند تحويل 200 دولار و1.26% عند 500 دولار. أما ممر الإمارات–اليمن فبلغ 7.53% و5.62% على التوالي. ويبين ذلك ضرورة إبقاء الممر ومبلغ التحويل ظاهرين. هذه الأسعار لا تغطي جميع المزودين أو القنوات غير الرسمية ولا يجوز اختزالها في معدل وطني واحد لتكلفة الحوالات.\n\nسلوك الأسر طبقة مختلفة من الأدلة\n\nأفاد الملف الموزون للبنك الدولي لعام 2014 بأن 18.3% من البالغين تلقوا حوالات محلية. ومن بين المتلقين، لا جميع البالغين، أفاد 31.1% باستخدام شركة تحويل أموال، و2.0% مؤسسة مالية، و0.0% الهاتف المحمول. ولا يجوز تحويل هذه الحصص التاريخية للقنوات إلى حصص مالية حالية من التدفقات، لكنها تقدم سياقًا سكانيًا مقيدًا عن كيفية استلام الحوالات في تلك الموجة.\n\nقبل ترتيب التدفقات الخارجية، افحص بند صافي الأخطاء والسهو\n\nفي التقرير السنوي 2025 للبنك المركزي يفوق صافي الأخطاء والسهو بند الحوالات المنشور في كل سنة من 2021 إلى 2025؛ وفي 2025 بلغ المتبقي نحو 7.117 مليارات دولار مقابل 3.614 مليارات دولار للحوالات، أي قرابة 1.97 مرة. صافي الأخطاء والسهو بند موازنة، وليس تدفقًا مرصودًا ولا تقديرًا للحوالات الخفية.\n\nما الذي لا تثبته أدلة الحوالات؟\n\nلا تساوي سلسلة الحوالات الكلية حجم الحوالات غير الرسمية أو توزيعها على الأسر. ومراجعة المصدر ليست هبوطًا اقتصاديًا. كما أن تشابه المسارات بعد التطبيع لا يثبت أن السلسلتين الخام تغطيان النطاق نفسه ولا يكشف قاعدة تحويل. وأسعار الممرات ليست متوسطًا وطنيًا للتكلفة. كذلك فإن تغير رصيد خارجي لا يساوي تلقائيًا معاملة، ولا يعيد معيار BPM7 كتابة سلاسل اليمن التاريخية بأثر رجعي من دون تحويل صريح.\n\nما الذي ما يزال غير محسوم؟\n\nما تزال المطابقة العامة الدقيقة بين أهم سلاسل القطاع الخارجي لدى البنك المركزي وصندوق النقد غير محسومة، بما في ذلك سبب التقارب الشديد لبعض مسارات الحوالات بعد التطبيع رغم اختلاف المستويات الخام. كما أن سلوك الأسر الحالي في استلام الحوالات واختيار القنوات وحجم القنوات غير الرسمية لا تثبته أدلة الاقتصاد الكلي والممرات الحالية.",
+   "new": "لا يوجد رقم واحد للحوالات قبل تحديد المصدر والمفهوم ونسخة البيانات أولًا.\n\nتجيب التدفقات الكلية وتكلفة الممرات وقنوات استلام الأسر عن أسئلة مختلفة. وحتى السلاسل الكلية قد تُراجع للسنة المرجعية نفسها. لذلك يفصل هذا الموقع هذه الأدلة ويُظهر المراجعات بدل إخفائها.\n\nالقيم التاريخية المبلغ عنها والتقديرات والتوقعات حالات مختلفة من الأدلة\n\nيورد تقرير خبراء صندوق النقد قيم 2018–2024 بوصفها قيمًا تاريخية تستند إلى حسابات خبراء الصندوق، ويورد ملحق لاحق للمشاورات نفسها قيمة 2025 كتقدير وقيم 2026–2030 كتوقعات. وتُفصل السلسلة عند تغير الوثيقة المصدر، فلا تُمد القيم التاريخية عبر التوقعات كما لو كانت السنوات كلها من الحالة نفسها. مراجعة التوقع ليست تغيرًا اقتصاديًا مرصودًا، كما أن السلسلة الكلية لا تقيس حجم الحوالات غير الرسمية.\n\nقد تتغير قيمة السنة نفسها عندما تتغير نسخة المصدر\n\nبالنسبة للسنة المرجعية 2024، أورد تقرير البنك المركزي 2024 قيمة قدرها 6.245 مليار دولار، بينما أعاد تقرير 2025 عرض 2024 عند 3.42 مليار دولار تقريبًا. هذه مراجعة في المصدر للسنة نفسها، ولا يجوز رسمها كهبوط بين عامين. كما يظهر في المسار اللاحق تقارب لافت في معدلات النمو عبر السنوات المتداخلة؛ وهو ما يستدعي فحص المنهج لكنه لا يثبت التسوية أو الاستيفاء.\n\nجهد إعادة بناء الإحصاءات موثق، لكن المطابقة الدقيقة ليست محسومة\n\nيوثق صندوق النقد جهدًا لإعادة بناء إحصاءات القطاع الخارجي خلال 2024–2025 مع البنك المركزي اليمني – عدن، ومهمة في يوليو 2025 أنتجت إحصاءات ميزان المدفوعات ووضع الاستثمار الدولي للفترة 2014–2024. كما يوثق نموذجًا ديمغرافيًا وسلوكيًا للتحويلات الشخصية في ظل محدودية بيانات القنوات غير الرسمية. يثبت ذلك سياقًا منهجيًا، لكنه لا يثبت الصيغة الدقيقة وراء كل قيمة في التقارير السنوية للبنك المركزي. ولا تدعم المكونات العامة المختبرة لدى البنك المركزي وصندوق النقد معامل تحويل عالميًا واحدًا.\n\nتختلف التكلفة بحسب الممر ومبلغ التحويل\n\nفي الربع الثالث 2025، بلغت المتوسطات المعلنة لممر السعودية–اليمن 2.70% عند تحويل 200 دولار و1.26% عند 500 دولار. أما ممر الإمارات–اليمن فبلغ 7.53% و5.62% على التوالي. ويبين ذلك ضرورة إبقاء الممر ومبلغ التحويل ظاهرين. هذه الأسعار لا تغطي جميع المزودين أو القنوات غير الرسمية ولا يجوز اختزالها في معدل وطني واحد لتكلفة الحوالات.\n\nسلوك الأسر طبقة مختلفة من الأدلة\n\nأفاد الملف الموزون للبنك الدولي لعام 2014 بأن 18.3% من البالغين تلقوا حوالات محلية. ومن بين المتلقين، لا جميع البالغين، أفاد 31.1% باستخدام شركة تحويل أموال، و2.0% مؤسسة مالية، و0.0% الهاتف المحمول. ولا يجوز تحويل هذه الحصص التاريخية للقنوات إلى حصص مالية حالية من التدفقات، لكنها تقدم سياقًا سكانيًا مقيدًا عن كيفية استلام الحوالات في تلك الموجة.\n\nقبل ترتيب التدفقات الخارجية، افحص بند صافي الأخطاء والسهو\n\nفي التقرير السنوي 2025 للبنك المركزي يفوق صافي الأخطاء والسهو بند الحوالات المنشور في كل سنة من 2021 إلى 2025؛ وفي 2025 بلغ المتبقي نحو 7.117 مليار دولار مقابل 3.614 مليار دولار للحوالات، أي قرابة 1.97 مرة. صافي الأخطاء والسهو بند موازنة، وليس تدفقًا مرصودًا ولا تقديرًا للحوالات الخفية.\n\nما الذي لا تثبته أدلة الحوالات؟\n\nلا تساوي سلسلة الحوالات الكلية حجم الحوالات غير الرسمية أو توزيعها على الأسر. ومراجعة المصدر ليست هبوطًا اقتصاديًا. كما أن تشابه المسارات بعد التطبيع لا يثبت أن السلسلتين الخام تغطيان النطاق نفسه ولا يكشف قاعدة تحويل. وأسعار الممرات ليست متوسطًا وطنيًا للتكلفة. كذلك فإن تغير رصيد خارجي لا يساوي تلقائيًا معاملة، ولا يعيد معيار BPM7 كتابة سلاسل اليمن التاريخية بأثر رجعي من دون تحويل صريح.\n\nما الذي ما يزال غير محسوم؟\n\nما تزال المطابقة العامة الدقيقة بين أهم سلاسل القطاع الخارجي لدى البنك المركزي وصندوق النقد غير محسومة، بما في ذلك سبب التقارب الشديد لبعض مسارات الحوالات بعد التطبيع رغم اختلاف المستويات الخام. كما أن سلوك الأسر الحالي في استلام الحوالات واختيار القنوات وحجم القنوات غير الرسمية لا تثبته أدلة الاقتصاد الكلي والممرات الحالية."
+  },
+  {
+   "finding": "EXF-002",
+   "sheet": "02_SITE_MAP",
+   "row": 145,
+   "col": 7,
+   "field": "/terms/.full_copy_en",
+   "old": "Terms and responsible reuse\n\nRules for using, citing and reusing the public product without changing the meaning of the evidence.\n\nWhat this product is\n\nThis is a public evidence resource developed and maintained by CauseWay to support evidence-informed decision-making. It is not a government publication, regulatory instruction or substitute for an original source. Original publishers remain the authoritative source for the data and publications they issue. CauseWay is responsible for its own synthesis, derivations and presentation. Citing or linking to a source does not imply that the source institution endorses CauseWay’s analysis.\n\nReuse\n\nThe site may contain CauseWay-authored summaries and derived outputs alongside third-party source material. Reuse depends on the rights statement and source conditions that apply to the relevant item. Where permission to redistribute or adapt source material is not stated, do not assume that permission exists. Source-specific restrictions continue to apply to underlying data, tables, figures and text.\n\nPreserve evidence meaning\n\nDo not remove the period, unit, applicable population or source limitation in a way that changes the meaning of a figure. Targets must remain targets; historical evidence must remain historical; bounded evidence must not be presented as a national fact.\n\nCitation\n\nCite the original source. Where CauseWay’s processing, calculation or synthesis materially shapes the result, cite the relevant evidence record or analytical reading as well.\n\nAvailability on the site does not grant rights that the underlying source has not granted.",
+   "new": "Terms and responsible reuse\n\nRules for using, citing and reusing the public product without changing the meaning of the evidence.\n\nWhat this product is\n\nThis is a public evidence resource developed and maintained by CauseWay to support evidence-informed decision-making. It is not a government publication, regulatory instruction or substitute for an original source. Original publishers remain the authoritative source for the data and publications they issue. CauseWay is responsible for its own synthesis, derivations and presentation. Citing or linking to a source does not imply that the source institution endorses CauseWay’s analysis.\n\nReuse\n\nThe site may contain CauseWay-authored summaries and derived outputs alongside third-party source material. Reuse depends on the rights statement and source conditions that apply to the relevant item. Where permission to redistribute or adapt source material is not stated, do not assume that permission exists. Source-specific restrictions continue to apply to underlying data, tables, figures and text.\n\nPreserve evidence meaning\n\nDo not remove the period, unit, applicable population or source limitation in a way that changes the meaning of a figure. Targets must remain targets; historical evidence must remain historical; bounded evidence must not be presented as a national fact.\n\nCitation\n\nCite the original source. Where CauseWay’s processing, calculation or synthesis materially shapes the result, cite the relevant evidence record or analytical reading as well.\n\nRights stay with the source\n\nAvailability on the site does not grant rights that the underlying source has not granted."
+  },
+  {
+   "finding": "EXF-002",
+   "sheet": "02_SITE_MAP",
+   "row": 145,
+   "col": 8,
+   "field": "/terms/.full_copy_ar",
+   "old": "الشروط وإعادة الاستخدام المسؤول\n\nقواعد استخدام المنتج العام والاستشهاد به وإعادة استخدامه من دون تغيير معنى الأدلة.\n\nما طبيعة هذا المنتج\n\nهذا مورد عام للأدلة تطوره وتديره CauseWay لدعم اتخاذ القرار المستند إلى الأدلة. وهو ليس منشورًا حكوميًا ولا تعليمات تنظيمية ولا بديلًا عن المصدر الأصلي. وتبقى الجهات الناشرة هي المرجع لما تصدره من بيانات ومنشورات، بينما تتحمل CauseWay مسؤولية تجميعها وتحليلاتها ونتائجها المشتقة وطريقة عرضها. ولا يعني الاستشهاد بمصدر أو الربط به أن الجهة الناشرة تؤيد تحليل CauseWay.\n\nإعادة الاستخدام\n\nقد يجمع الموقع بين ملخصات ونتائج مشتقة أعدتها CauseWay ومواد صادرة عن جهات أخرى. ويعتمد جواز إعادة الاستخدام على بيان الحقوق والشروط الخاصة بالعنصر أو المصدر المعني. وإذا لم تُذكر صراحةً إمكانية إعادة توزيع مادة المصدر أو تعديلها، فلا ينبغي افتراض وجود هذا الإذن. وتبقى القيود الخاصة بكل مصدر سارية على البيانات والجداول والرسوم والنصوص الأصلية.\n\nحافظ على معنى الدليل\n\nلا تحذف الفترة أو الوحدة أو المجتمع الذي ينطبق عليه الرقم أو حدود المصدر على نحو يغير معنى القيمة. يجب أن تبقى المستهدفات مستهدفات، والأدلة التاريخية تاريخية، والأدلة محدودة النطاق غير مقدمة باعتبارها حقيقة وطنية.\n\nالاستشهاد\n\nاستشهد بالمصدر الأصلي. وعندما تكون معالجة CauseWay أو طريقة الاحتساب أو التجميع جزءًا جوهريًا من النتيجة، استشهد أيضًا بسجل الدليل أو القراءة التحليلية ذات الصلة.\n\nإتاحة المحتوى على الموقع لا تمنح حقوقًا لم يمنحها المصدر الأصلي.",
+   "new": "الشروط وإعادة الاستخدام المسؤول\n\nقواعد استخدام المنتج العام والاستشهاد به وإعادة استخدامه من دون تغيير معنى الأدلة.\n\nما طبيعة هذا المنتج\n\nهذا مورد عام للأدلة تطوره وتديره CauseWay لدعم اتخاذ القرار المستند إلى الأدلة. وهو ليس منشورًا حكوميًا ولا تعليمات تنظيمية ولا بديلًا عن المصدر الأصلي. وتبقى الجهات الناشرة هي المرجع لما تصدره من بيانات ومنشورات، بينما تتحمل CauseWay مسؤولية تجميعها وتحليلاتها ونتائجها المشتقة وطريقة عرضها. ولا يعني الاستشهاد بمصدر أو الربط به أن الجهة الناشرة تؤيد تحليل CauseWay.\n\nإعادة الاستخدام\n\nقد يجمع الموقع بين ملخصات ونتائج مشتقة أعدتها CauseWay ومواد صادرة عن جهات أخرى. ويعتمد جواز إعادة الاستخدام على بيان الحقوق والشروط الخاصة بالعنصر أو المصدر المعني. وإذا لم تُذكر صراحةً إمكانية إعادة توزيع مادة المصدر أو تعديلها، فلا ينبغي افتراض وجود هذا الإذن. وتبقى القيود الخاصة بكل مصدر سارية على البيانات والجداول والرسوم والنصوص الأصلية.\n\nحافظ على معنى الدليل\n\nلا تحذف الفترة أو الوحدة أو المجتمع الذي ينطبق عليه الرقم أو حدود المصدر على نحو يغير معنى القيمة. يجب أن تبقى المستهدفات مستهدفات، والأدلة التاريخية تاريخية، والأدلة محدودة النطاق غير مقدمة باعتبارها حقيقة وطنية.\n\nالاستشهاد\n\nاستشهد بالمصدر الأصلي. وعندما تكون معالجة CauseWay أو طريقة الاحتساب أو التجميع جزءًا جوهريًا من النتيجة، استشهد أيضًا بسجل الدليل أو القراءة التحليلية ذات الصلة.\n\nتبقى الحقوق لمصدرها\n\nإتاحة المحتوى على الموقع لا تمنح حقوقًا لم يمنحها المصدر الأصلي."
+  }
+ ]
+}

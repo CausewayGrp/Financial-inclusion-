@@ -1,0 +1,465 @@
+{
+ "schema": "YFI_BASELINE_CLASSIFICATION/1.0",
+ "master_sha256": "e69804106e04d093098688f2d01cea51e13191f255d774a090f3e5dd8dec9bc7",
+ "reviewed_by": "Claude Team Lead (Tranche B execution gate)",
+ "rule": "Every difference between the regenerated and the committed projections must match exactly one explanation here; anything else is UNEXPLAINED and fails the gate.",
+ "explanations": [
+  {
+   "path": "content/readings.json",
+   "pointer_regex": "^/9/verification_bindings/resolution_rule$",
+   "class": "ENTRY_PROJECTION_STALE",
+   "finding": "PROJ-STALE-003",
+   "explanation": "Master 08 CWR-010 verification_bindings.resolution_rule was revised after the committed projection; generated value equals the Master cell."
+  },
+  {
+   "path": "sources/source_library.json",
+   "pointer_regex": "^/158/additional_urls$",
+   "class": "SERIALIZATION_ONLY",
+   "finding": "SER-001",
+   "explanation": "Committed row stores the decoded list; every other row (and the Master cell) stores the JSON text of the same list."
+  },
+  {
+   "path": "sources/source_reference_map.json",
+   "pointer_regex": "^/158/additional_urls$",
+   "class": "SERIALIZATION_ONLY",
+   "finding": "SER-001",
+   "explanation": "Propagates from sources/source_library.json SRC-WB-G2PX-YEM-UCT-2024-001 (decoded list vs JSON text of the same list)."
+  },
+  {
+   "path": "evidence/evidence_passports.json",
+   "pointer_regex": "^/47/(route_list|related_routes)",
+   "class": "ENTRY_PROJECTION_STALE",
+   "finding": "PROJ-STALE-004",
+   "explanation": "Master 34 r52 lists /access/ as a fourth route; committed projection predates it."
+  },
+  {
+   "path": "data/reforms_regulation.json",
+   "pointer_regex": "^/rows/(7|8)/4$",
+   "class": "ENTRY_PROJECTION_STALE",
+   "finding": "PROJ-STALE-001",
+   "explanation": "Master 31 REF-PAY-003/004 descriptions were tightened (FPS in IRG-controlled areas; RTGS by CBY-Aden); committed snapshot predates it."
+  },
+  {
+   "path": "content/master_principles.json",
+   "pointer_regex": "^/rows/",
+   "class": "ENTRY_PROJECTION_STALE",
+   "finding": "PROJ-STALE-002",
+   "explanation": "Master 00 cover counts/labels were updated (572 sections, 24 chronology events, 159 sources, OECD source IDs, cover text); committed snapshot predates them."
+  },
+  {
+   "path": "sources/public_object_source_closure.json",
+   "pointer_regex": "^/79/",
+   "class": "ENTRY_DRIFT__CLOSURE_ORDER_ONLY",
+   "finding": "CLOSURE-DRIFT-001",
+   "explanation": "evidence_object CLM-040: Master 06 dependency cell (or 11 data_inputs / 08 bindings) holds the same identifiers in a different order than when the committed closure was built; resolution unchanged."
+  },
+  {
+   "path": "sources/public_object_source_closure.json",
+   "pointer_regex": "^/81/",
+   "class": "ENTRY_DRIFT__CLOSURE_ORDER_ONLY",
+   "finding": "CLOSURE-DRIFT-001",
+   "explanation": "evidence_object CLM-042: Master 06 dependency cell (or 11 data_inputs / 08 bindings) holds the same identifiers in a different order than when the committed closure was built; resolution unchanged."
+  },
+  {
+   "path": "sources/public_object_source_closure.json",
+   "pointer_regex": "^/82/",
+   "class": "ENTRY_DRIFT__CLOSURE_ORDER_ONLY",
+   "finding": "CLOSURE-DRIFT-001",
+   "explanation": "evidence_object CLM-043: Master 06 dependency cell (or 11 data_inputs / 08 bindings) holds the same identifiers in a different order than when the committed closure was built; resolution unchanged."
+  },
+  {
+   "path": "sources/public_object_source_closure.json",
+   "pointer_regex": "^/83/",
+   "class": "ENTRY_DRIFT__CLOSURE_ORDER_ONLY",
+   "finding": "CLOSURE-DRIFT-001",
+   "explanation": "evidence_object CLM-044: Master 06 dependency cell (or 11 data_inputs / 08 bindings) holds the same identifiers in a different order than when the committed closure was built; resolution unchanged."
+  },
+  {
+   "path": "sources/public_object_source_closure.json",
+   "pointer_regex": "^/84/",
+   "class": "ENTRY_DRIFT__CLOSURE_ORDER_ONLY",
+   "finding": "CLOSURE-DRIFT-001",
+   "explanation": "evidence_object CLM-045: Master 06 dependency cell (or 11 data_inputs / 08 bindings) holds the same identifiers in a different order than when the committed closure was built; resolution unchanged."
+  },
+  {
+   "path": "sources/public_object_source_closure.json",
+   "pointer_regex": "^/85/",
+   "class": "ENTRY_DRIFT__CLOSURE_ORDER_ONLY",
+   "finding": "CLOSURE-DRIFT-001",
+   "explanation": "evidence_object CLM-046: Master 06 dependency cell (or 11 data_inputs / 08 bindings) holds the same identifiers in a different order than when the committed closure was built; resolution unchanged."
+  },
+  {
+   "path": "sources/public_object_source_closure.json",
+   "pointer_regex": "^/86/",
+   "class": "ENTRY_DRIFT__CLOSURE_ORDER_ONLY",
+   "finding": "CLOSURE-DRIFT-001",
+   "explanation": "evidence_object CLM-047: Master 06 dependency cell (or 11 data_inputs / 08 bindings) holds the same identifiers in a different order than when the committed closure was built; resolution unchanged."
+  },
+  {
+   "path": "sources/public_object_source_closure.json",
+   "pointer_regex": "^/88/",
+   "class": "ENTRY_DRIFT__CLOSURE_ORDER_ONLY",
+   "finding": "CLOSURE-DRIFT-001",
+   "explanation": "evidence_object CLM-049: Master 06 dependency cell (or 11 data_inputs / 08 bindings) holds the same identifiers in a different order than when the committed closure was built; resolution unchanged."
+  },
+  {
+   "path": "sources/public_object_source_closure.json",
+   "pointer_regex": "^/89/",
+   "class": "ENTRY_DRIFT__CLOSURE_ORDER_ONLY",
+   "finding": "CLOSURE-DRIFT-001",
+   "explanation": "evidence_object CLM-050: Master 06 dependency cell (or 11 data_inputs / 08 bindings) holds the same identifiers in a different order than when the committed closure was built; resolution unchanged."
+  },
+  {
+   "path": "sources/public_object_source_closure.json",
+   "pointer_regex": "^/90/",
+   "class": "ENTRY_DRIFT__CLOSURE_ORDER_ONLY",
+   "finding": "CLOSURE-DRIFT-001",
+   "explanation": "evidence_object CLM-051: Master 06 dependency cell (or 11 data_inputs / 08 bindings) holds the same identifiers in a different order than when the committed closure was built; resolution unchanged."
+  },
+  {
+   "path": "sources/public_object_source_closure.json",
+   "pointer_regex": "^/91/",
+   "class": "ENTRY_DRIFT__CLOSURE_ORDER_ONLY",
+   "finding": "CLOSURE-DRIFT-001",
+   "explanation": "evidence_object CLM-052: Master 06 dependency cell (or 11 data_inputs / 08 bindings) holds the same identifiers in a different order than when the committed closure was built; resolution unchanged."
+  },
+  {
+   "path": "sources/public_object_source_closure.json",
+   "pointer_regex": "^/92/",
+   "class": "ENTRY_DRIFT__CLOSURE_ORDER_ONLY",
+   "finding": "CLOSURE-DRIFT-001",
+   "explanation": "evidence_object CLM-053: Master 06 dependency cell (or 11 data_inputs / 08 bindings) holds the same identifiers in a different order than when the committed closure was built; resolution unchanged."
+  },
+  {
+   "path": "sources/public_object_source_closure.json",
+   "pointer_regex": "^/94/",
+   "class": "ENTRY_DRIFT__CLOSURE_ORDER_ONLY",
+   "finding": "CLOSURE-DRIFT-001",
+   "explanation": "evidence_object CLM-055: Master 06 dependency cell (or 11 data_inputs / 08 bindings) holds the same identifiers in a different order than when the committed closure was built; resolution unchanged."
+  },
+  {
+   "path": "sources/public_object_source_closure.json",
+   "pointer_regex": "^/97/",
+   "class": "ENTRY_DRIFT__CLOSURE_ORDER_ONLY",
+   "finding": "CLOSURE-DRIFT-001",
+   "explanation": "evidence_object CLM-058: Master 06 dependency cell (or 11 data_inputs / 08 bindings) holds the same identifiers in a different order than when the committed closure was built; resolution unchanged."
+  },
+  {
+   "path": "sources/public_object_source_closure.json",
+   "pointer_regex": "^/98/",
+   "class": "ENTRY_DRIFT__CLOSURE_ORDER_ONLY",
+   "finding": "CLOSURE-DRIFT-001",
+   "explanation": "evidence_object CLM-032: Master 06 dependency cell (or 11 data_inputs / 08 bindings) holds the same identifiers in a different order than when the committed closure was built; resolution unchanged."
+  },
+  {
+   "path": "sources/public_object_source_closure.json",
+   "pointer_regex": "^/99/",
+   "class": "ENTRY_DRIFT__CLOSURE_ORDER_ONLY",
+   "finding": "CLOSURE-DRIFT-001",
+   "explanation": "evidence_object CLM-033: Master 06 dependency cell (or 11 data_inputs / 08 bindings) holds the same identifiers in a different order than when the committed closure was built; resolution unchanged."
+  },
+  {
+   "path": "sources/public_object_source_closure.json",
+   "pointer_regex": "^/100/",
+   "class": "ENTRY_DRIFT__CLOSURE_ORDER_ONLY",
+   "finding": "CLOSURE-DRIFT-001",
+   "explanation": "evidence_object CLM-034: Master 06 dependency cell (or 11 data_inputs / 08 bindings) holds the same identifiers in a different order than when the committed closure was built; resolution unchanged."
+  },
+  {
+   "path": "sources/public_object_source_closure.json",
+   "pointer_regex": "^/101/",
+   "class": "ENTRY_DRIFT__CLOSURE_ORDER_ONLY",
+   "finding": "CLOSURE-DRIFT-001",
+   "explanation": "evidence_object CLM-035: Master 06 dependency cell (or 11 data_inputs / 08 bindings) holds the same identifiers in a different order than when the committed closure was built; resolution unchanged."
+  },
+  {
+   "path": "sources/public_object_source_closure.json",
+   "pointer_regex": "^/103/",
+   "class": "ENTRY_DRIFT__CLOSURE_CONTENT",
+   "finding": "CLOSURE-DRIFT-001",
+   "explanation": "evidence_object CLM-037: Master dependency cell content differs from the one the committed closure was built from (e.g. CLM-037 truncated-ID variant)."
+  },
+  {
+   "path": "sources/public_object_source_closure.json",
+   "pointer_regex": "^/104/",
+   "class": "ENTRY_DRIFT__CLOSURE_ORDER_ONLY",
+   "finding": "CLOSURE-DRIFT-001",
+   "explanation": "evidence_object CLM-038: Master 06 dependency cell (or 11 data_inputs / 08 bindings) holds the same identifiers in a different order than when the committed closure was built; resolution unchanged."
+  },
+  {
+   "path": "sources/public_object_source_closure.json",
+   "pointer_regex": "^/105/",
+   "class": "ENTRY_DRIFT__CLOSURE_ORDER_ONLY",
+   "finding": "CLOSURE-DRIFT-001",
+   "explanation": "evidence_object CLM-039: Master 06 dependency cell (or 11 data_inputs / 08 bindings) holds the same identifiers in a different order than when the committed closure was built; resolution unchanged."
+  },
+  {
+   "path": "sources/public_object_source_closure.json",
+   "pointer_regex": "^/120/",
+   "class": "ENTRY_DRIFT__CLOSURE_HAND_EDITED_RECORD",
+   "finding": "CLOSURE-DRIFT-001",
+   "explanation": "public_claim CLM-013: Committed CLM-013 claim record was edited by hand after generation (no self token); the source map still carries the pre-edit links (PROJ-STALE-005)."
+  },
+  {
+   "path": "sources/public_object_source_closure.json",
+   "pointer_regex": "^/176/",
+   "class": "ENTRY_DRIFT__CLOSURE_MASTER_ROW_EDITED",
+   "finding": "CLOSURE-DRIFT-001",
+   "explanation": "reading CWR-010: 08 CWR-010 row was edited after the committed projections were built (see PROJ-STALE-003); dependency order follows the current row."
+  },
+  {
+   "path": "sources/public_object_source_closure.json",
+   "pointer_regex": "^/211/",
+   "class": "ENTRY_DRIFT__CLOSURE_ORDER_ONLY",
+   "finding": "CLOSURE-DRIFT-001",
+   "explanation": "visual RV-CWR-009: Master 06 dependency cell (or 11 data_inputs / 08 bindings) holds the same identifiers in a different order than when the committed closure was built; resolution unchanged."
+  },
+  {
+   "path": "sources/public_object_source_closure.json",
+   "pointer_regex": "^/144/",
+   "class": "ENTRY_DRIFT__CLOSURE_PROPAGATED",
+   "finding": "CLOSURE-DRIFT-001",
+   "explanation": "public_claim CLM-037: Resolves through an evidence object or Reading whose own record drifted; no independent difference."
+  },
+  {
+   "path": "sources/public_object_source_closure.json",
+   "pointer_regex": "^/151/",
+   "class": "ENTRY_DRIFT__CLOSURE_PROPAGATED",
+   "finding": "CLOSURE-DRIFT-001",
+   "explanation": "public_claim CLM-045: Resolves through an evidence object or Reading whose own record drifted; no independent difference."
+  },
+  {
+   "path": "sources/public_object_source_closure.json",
+   "pointer_regex": "^/159/",
+   "class": "ENTRY_DRIFT__CLOSURE_PROPAGATED",
+   "finding": "CLOSURE-DRIFT-001",
+   "explanation": "public_claim CLM-053: Resolves through an evidence object or Reading whose own record drifted; no independent difference."
+  },
+  {
+   "path": "sources/public_object_source_closure.json",
+   "pointer_regex": "^/161/",
+   "class": "ENTRY_DRIFT__CLOSURE_PROPAGATED",
+   "finding": "CLOSURE-DRIFT-001",
+   "explanation": "public_claim CLM-055: Resolves through an evidence object or Reading whose own record drifted; no independent difference."
+  },
+  {
+   "path": "sources/public_object_source_closure.json",
+   "pointer_regex": "^/164/",
+   "class": "ENTRY_DRIFT__CLOSURE_PROPAGATED",
+   "finding": "CLOSURE-DRIFT-001",
+   "explanation": "public_claim CLM-058: Resolves through an evidence object or Reading whose own record drifted; no independent difference."
+  },
+  {
+   "path": "sources/public_object_source_closure.json",
+   "pointer_regex": "^/167/",
+   "class": "ENTRY_DRIFT__CLOSURE_PROPAGATED",
+   "finding": "CLOSURE-DRIFT-001",
+   "explanation": "reading CWR-001: Resolves through an evidence object or Reading whose own record drifted; no independent difference."
+  },
+  {
+   "path": "sources/public_object_source_closure.json",
+   "pointer_regex": "^/171/",
+   "class": "ENTRY_DRIFT__CLOSURE_PROPAGATED",
+   "finding": "CLOSURE-DRIFT-001",
+   "explanation": "reading CWR-005: Resolves through an evidence object or Reading whose own record drifted; no independent difference."
+  },
+  {
+   "path": "sources/public_object_source_closure.json",
+   "pointer_regex": "^/172/",
+   "class": "ENTRY_DRIFT__CLOSURE_PROPAGATED",
+   "finding": "CLOSURE-DRIFT-001",
+   "explanation": "reading CWR-006: Resolves through an evidence object or Reading whose own record drifted; no independent difference."
+  },
+  {
+   "path": "sources/public_object_source_closure.json",
+   "pointer_regex": "^/202/",
+   "class": "ENTRY_DRIFT__CLOSURE_PROPAGATED",
+   "finding": "CLOSURE-DRIFT-001",
+   "explanation": "visual VIS-MFI-DIVERGENCE: Resolves through an evidence object or Reading whose own record drifted; no independent difference."
+  },
+  {
+   "path": "sources/public_object_source_closure.json",
+   "pointer_regex": "^/203/",
+   "class": "ENTRY_DRIFT__CLOSURE_PROPAGATED",
+   "finding": "CLOSURE-DRIFT-001",
+   "explanation": "visual RV-CWR-001: Resolves through an evidence object or Reading whose own record drifted; no independent difference."
+  },
+  {
+   "path": "sources/public_object_source_closure.json",
+   "pointer_regex": "^/207/",
+   "class": "ENTRY_DRIFT__CLOSURE_PROPAGATED",
+   "finding": "CLOSURE-DRIFT-001",
+   "explanation": "visual RV-CWR-005: Resolves through an evidence object or Reading whose own record drifted; no independent difference."
+  },
+  {
+   "path": "sources/public_object_source_closure.json",
+   "pointer_regex": "^/208/",
+   "class": "ENTRY_DRIFT__CLOSURE_PROPAGATED",
+   "finding": "CLOSURE-DRIFT-001",
+   "explanation": "visual RV-CWR-006: Resolves through an evidence object or Reading whose own record drifted; no independent difference."
+  },
+  {
+   "path": "sources/public_object_source_closure.json",
+   "pointer_regex": "^/212/",
+   "class": "ENTRY_DRIFT__CLOSURE_PROPAGATED",
+   "finding": "CLOSURE-DRIFT-001",
+   "explanation": "visual RV-CWR-010: Resolves through an evidence object or Reading whose own record drifted; no independent difference."
+  },
+  {
+   "path": "sources/public_object_source_closure.json",
+   "pointer_regex": "^/6/",
+   "class": "ENTRY_DRIFT__CLOSURE_R8_4A_HOME_ROUTE",
+   "finding": "CLOSURE-DRIFT-001",
+   "explanation": "evidence_object VIS-INCLUSION-TRANSMISSION: 06 public_routes for VIS-INCLUSION-TRANSMISSION gained '/' in R8.4A (Home renders it); committed closure predates that."
+  },
+  {
+   "path": "sources/public_object_source_closure.json",
+   "pointer_regex": "^/28/",
+   "class": "ENTRY_DRIFT__CLOSURE_SOURCE_CARD_STATE",
+   "finding": "CLOSURE-DRIFT-001",
+   "explanation": "evidence_object QUAL-001: 15.public_card_state was promoted to FULL_PUBLIC_CARD after the committed closure was built; the regenerated locator carries DISPLAY_READY like the committed source map."
+  },
+  {
+   "path": "sources/public_object_source_closure.json",
+   "pointer_regex": "^/93/",
+   "class": "ENTRY_DRIFT__CLOSURE_SOURCE_CARD_STATE",
+   "finding": "CLOSURE-DRIFT-001",
+   "explanation": "evidence_object CLM-054: 15.public_card_state was promoted to FULL_PUBLIC_CARD after the committed closure was built; the regenerated locator carries DISPLAY_READY like the committed source map."
+  },
+  {
+   "path": "sources/public_object_source_closure.json",
+   "pointer_regex": "^/95/",
+   "class": "ENTRY_DRIFT__CLOSURE_SOURCE_CARD_STATE",
+   "finding": "CLOSURE-DRIFT-001",
+   "explanation": "evidence_object CLM-056: 15.public_card_state was promoted to FULL_PUBLIC_CARD after the committed closure was built; the regenerated locator carries DISPLAY_READY like the committed source map."
+  },
+  {
+   "path": "sources/public_object_source_closure.json",
+   "pointer_regex": "^/96/",
+   "class": "ENTRY_DRIFT__CLOSURE_SOURCE_CARD_STATE",
+   "finding": "CLOSURE-DRIFT-001",
+   "explanation": "evidence_object CLM-057: 15.public_card_state was promoted to FULL_PUBLIC_CARD after the committed closure was built; the regenerated locator carries DISPLAY_READY like the committed source map."
+  },
+  {
+   "path": "sources/public_object_source_closure.json",
+   "pointer_regex": "^/160/",
+   "class": "ENTRY_DRIFT__CLOSURE_SOURCE_CARD_STATE",
+   "finding": "CLOSURE-DRIFT-001",
+   "explanation": "public_claim CLM-054: 15.public_card_state was promoted to FULL_PUBLIC_CARD after the committed closure was built; the regenerated locator carries DISPLAY_READY like the committed source map."
+  },
+  {
+   "path": "sources/public_object_source_closure.json",
+   "pointer_regex": "^/162/",
+   "class": "ENTRY_DRIFT__CLOSURE_SOURCE_DATASET_MEMBERSHIP",
+   "finding": "CLOSURE-DRIFT-001",
+   "explanation": "public_claim CLM-056: 15.datasets_or_use membership changed (SRC-SANAA-MF-2020 now resolves via dataset 201), changing resolved-source order only."
+  },
+  {
+   "path": "sources/public_object_source_closure.json",
+   "pointer_regex": "^/163/",
+   "class": "ENTRY_DRIFT__CLOSURE_SOURCE_CARD_STATE",
+   "finding": "CLOSURE-DRIFT-001",
+   "explanation": "public_claim CLM-057: 15.public_card_state was promoted to FULL_PUBLIC_CARD after the committed closure was built; the regenerated locator carries DISPLAY_READY like the committed source map."
+  },
+  {
+   "path": "sources/public_object_source_closure.json",
+   "pointer_regex": "^/178/",
+   "class": "ENTRY_DRIFT__CLOSURE_SOURCE_CARD_STATE",
+   "finding": "CLOSURE-DRIFT-001",
+   "explanation": "visual VIS-EVIDENCE-CLASS-LADDER: 15.public_card_state was promoted to FULL_PUBLIC_CARD after the committed closure was built; the regenerated locator carries DISPLAY_READY like the committed source map."
+  },
+  {
+   "path": "sources/public_object_source_closure.json",
+   "pointer_regex": "^/186/",
+   "class": "ENTRY_DRIFT__CLOSURE_SOURCE_CARD_STATE",
+   "finding": "CLOSURE-DRIFT-001",
+   "explanation": "visual VIS-OECD-FCP-TIMELINE: 15.public_card_state was promoted to FULL_PUBLIC_CARD after the committed closure was built; the regenerated locator carries DISPLAY_READY like the committed source map."
+  },
+  {
+   "path": "sources/source_reference_map.json",
+   "pointer_regex": "^/\\d+/linked_(claim|evidence_object|visual|reading|measurement)_ids",
+   "class": "ENTRY_DRIFT__PROPAGATED",
+   "finding": "CLOSURE-DRIFT-001 / PROJ-STALE-005",
+   "explanation": "linked_* are the sorted objects whose closure resolves to the source; they follow the closure drift above. Counterfactual: with the committed closure the rule reproduces the committed map except the 10 stale CLM-013 claim links (PROJ-STALE-005)."
+  },
+  {
+   "path": "content/search_index.json",
+   "pointer_regex": "^/(116|119)/(summary|search_text)_(en|ar)$",
+   "class": "ENTRY_DRIFT__HAND_EDITED",
+   "finding": "SEARCH-DRIFT-001",
+   "explanation": "Committed Home and Explore search records repeat the page title (R8.4A edit); the rule used for the other 139 pages yields the text without the duplicate title."
+  },
+  {
+   "path": "page_specs.json",
+   "pointer_regex": "^/page_specs/\\d+/numeric_strings_in_governed_copy",
+   "class": "LEGACY_LAYERING__UNRENDERED",
+   "finding": "PS-LAYER-001",
+   "explanation": "Unrendered audit inventory built by several historical passes (mixed de-duplication, partial field sets, stale contexts). Canonical tokenizer and field list adopted (controlled_inputs/page_spec_templates.json). Public-literal closure re-run: 0 unresolved."
+  },
+  {
+   "path": "page_specs.json",
+   "pointer_regex": "^/page_specs/\\d+/(source_reference_closure|source_references)",
+   "class": "LEGACY_LAYERING__UNRENDERED",
+   "finding": "PS-LAYER-002",
+   "explanation": "Unrendered verification payload: committed copies are stale subsets/compact hand records on 13 static pages and embed pre-promotion locator states; regenerated uniformly from the regenerated closure and source map."
+  },
+  {
+   "path": "page_specs.json",
+   "pointer_regex": "^/page_specs/\\d+/prohibited_inferences",
+   "class": "LEGACY_LAYERING__UNRENDERED",
+   "finding": "PS-LAYER-003",
+   "explanation": "Unrendered payload: committed Home and /access/ lists were curated (R8.4A) and /people/ appends CLM-013 out of order; regenerated as claims, visuals, Readings in binding order."
+  },
+  {
+   "path": "page_specs.json",
+   "pointer_regex": "^/page_specs/\\d+/governed_readings/\\d+/verification_bindings/resolution_rule$",
+   "class": "ENTRY_PROJECTION_STALE",
+   "finding": "PROJ-STALE-003",
+   "explanation": "Propagates from content/readings.json CWR-010."
+  },
+  {
+   "path": "page_specs.json",
+   "pointer_regex": "^/index/pages/65/title_(en|ar)$",
+   "class": "ENTRY_PROJECTION_STALE",
+   "finding": "PROJ-STALE-006",
+   "explanation": "Page Spec index title for /evidence/CLM-059/ lags the spec and 02 title (the spec entry itself already carries the current title)."
+  },
+  {
+   "path": "content/navigation_interaction.json",
+   "pointer_regex": "^/authority_binding/page_specs_sha256$",
+   "class": "DERIVED_HASH",
+   "finding": "REBIND",
+   "explanation": "Follows the regenerated Page Specs."
+  },
+  {
+   "path": "page_specs.json",
+   "pointer_regex": "^/page_specs/\\d+/authority_master_sha256$",
+   "class": "DERIVED_HASH",
+   "finding": "REBIND",
+   "explanation": "Authority binding to the Master bytes under test (differs only when the gate runs against a Master other than the entry file, e.g. entry Master + AIR-001)."
+  },
+  {
+   "path": "page_specs.json",
+   "pointer_regex": "^/index/authority_master_sha256$",
+   "class": "DERIVED_HASH",
+   "finding": "REBIND",
+   "explanation": "Authority binding to the Master bytes under test (differs only when the gate runs against a Master other than the entry file, e.g. entry Master + AIR-001)."
+  },
+  {
+   "path": "content/navigation_interaction.json",
+   "pointer_regex": "^/authority_binding/master_sha256$",
+   "class": "DERIVED_HASH",
+   "finding": "REBIND",
+   "explanation": "Authority binding to the Master bytes under test (differs only when the gate runs against a Master other than the entry file, e.g. entry Master + AIR-001)."
+  }
+ ],
+ "build_errors": [
+  {
+   "path": "visuals/system_chronology.json",
+   "error_regex": "duplicate stable key event_id='YSC-013'",
+   "class": "ENTRY_MASTER_INTEGRITY_DEFECT",
+   "finding": "AUTH-INT-001",
+   "explanation": "14_SYSTEM_CHRONOLOGY rows 18–28 are eleven identical copies of YSC-013; YSC-014…YSC-023 are absent from the Master although present in the manifest-certified projection (sha 8d058126…). The generator refuses duplicate stable IDs by design. Remedy: Stage-0 integrity restoration AIR-001 (Master-first), then re-run this gate."
+  }
+ ]
+}

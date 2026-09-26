@@ -1,0 +1,115 @@
+{
+  "schema_version": "1.0",
+  "contract_id": "PUBLIC-INVENTORY-COUNTS",
+  "authority_master_sha256": "f0150122895d88169e9c9ec947633deda04a02c710a28d7b0de2972214547224",
+  "rule": "A repository inventory count is never typed into public copy. Master copy may carry a token {{n:<key>}}; the generator replaces it with the count derived from the named projection, and raises an error for an unknown key, a key not cleared for public display, or any template token left unresolved. Arabic copy uses label-value form ('label: N') so that no counted-noun agreement depends on the number.",
+  "token_pattern": "\\{\\{n:([a-z_]+)\\}\\}",
+  "unresolved_token_pattern": "\\{\\{[^{}]*\\}\\}|\\{[A-Z][A-Z0-9_]{1,40}\\}",
+  "number_format": "Western digits with a comma thousands separator in both languages (the product's numeral convention).",
+  "counts": [
+    {
+      "key": "evidence_records",
+      "value": 110,
+      "projection": "evidence/evidence_objects.json",
+      "rule": "count_records",
+      "public_token": true,
+      "definition_en": "Public Evidence Records (06_EVIDENCE_OBJECTS), each with its own page."
+    },
+    {
+      "key": "public_claims",
+      "value": 60,
+      "projection": "evidence/public_claims.json",
+      "rule": "count_records",
+      "public_token": true,
+      "definition_en": "Public claims (07_PUBLIC_CLAIMS); every claim is also an Evidence Record."
+    },
+    {
+      "key": "chronology_events",
+      "value": 24,
+      "projection": "visuals/system_chronology.json",
+      "rule": "count_records",
+      "public_token": true,
+      "definition_en": "Dated events in the system chronology (14_SYSTEM_CHRONOLOGY)."
+    },
+    {
+      "key": "sources",
+      "value": 160,
+      "projection": "sources/source_library.json",
+      "rule": "count_records",
+      "public_token": true,
+      "definition_en": "Registered source records (15_SOURCE_LIBRARY)."
+    },
+    {
+      "key": "public_locators",
+      "value": 151,
+      "projection": "sources/source_reference_map.json",
+      "rule": "count_where_http_primary_url",
+      "public_token": true,
+      "definition_en": "Source records whose primary URL is a public http(s) locator (EXF-001)."
+    },
+    {
+      "key": "curated_resources",
+      "value": 27,
+      "projection": "sources/source_reference_map.json",
+      "rule": "count_where_true",
+      "public_token": true,
+      "definition_en": "Source records that carry a full public resource card."
+    },
+    {
+      "key": "readings",
+      "value": 10,
+      "projection": "content/readings.json",
+      "rule": "count_records",
+      "public_token": true,
+      "definition_en": "Evidence Readings (08_READINGS)."
+    },
+    {
+      "key": "measurement_priorities",
+      "value": 10,
+      "projection": "content/measurement_agenda.json",
+      "rule": "count_records",
+      "public_token": true,
+      "definition_en": "Measurement Agenda priorities (10_MEASUREMENT_AGENDA)."
+    },
+    {
+      "key": "entry_questions",
+      "value": 11,
+      "projection": "content/questions.json",
+      "rule": "count_records",
+      "public_token": true,
+      "definition_en": "Governed entry questions (05_QUESTIONS)."
+    },
+    {
+      "key": "visual_contracts",
+      "value": 36,
+      "projection": "visuals/visual_library.json",
+      "rule": "count_records",
+      "public_token": false,
+      "definition_en": "Governed visual contracts (11_VISUAL_LIBRARY). Handoff fact; not displayed as a public count."
+    },
+    {
+      "key": "evidence_passports",
+      "value": 55,
+      "projection": "evidence/evidence_passports.json",
+      "rule": "count_records",
+      "public_token": false,
+      "definition_en": "Evidence Passports (34_EVIDENCE_PASSPORTS). Handoff fact."
+    },
+    {
+      "key": "search_records",
+      "value": 435,
+      "projection": "content/search_index.json",
+      "rule": "count_records",
+      "public_token": false,
+      "definition_en": "Public search index records. Handoff fact."
+    },
+    {
+      "key": "page_specs",
+      "value": 143,
+      "projection": "page_specs.json",
+      "rule": "spec_count",
+      "public_token": false,
+      "definition_en": "Page Specs (one per public route); the build writes one HTML page per spec and language."
+    }
+  ]
+}

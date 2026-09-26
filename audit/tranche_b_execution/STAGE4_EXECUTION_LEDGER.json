@@ -1,0 +1,430 @@
+{
+ "stage": "STAGE-4",
+ "input_master_sha256": "3064257b518de9e2dfe28a3ce7fb6d201ab06b53908a488714ecd3761054da9d",
+ "output_master_sha256": "298cd8795edbffb08e0223f5655dfad3187caf889e3cfee889d2aa5051e6b520",
+ "cells_and_ops": 414,
+ "blocks_added": [
+  "Trust navigation",
+  "Search aliases"
+ ],
+ "results": {
+  "PB-0306": {
+   "disposition": "APPLIED",
+   "stage": "STAGE-4",
+   "detail": [
+    "PB-0306.03: 03_PAGE_SECTIONS!r248.body_en ×1",
+    "PB-0306.04: 03_PAGE_SECTIONS!r406.body_en ×1",
+    "PB-0306.05: 03_PAGE_SECTIONS!r408.body_en ×1",
+    "PB-0306.06: 06_EVIDENCE_OBJECTS!r65.summary_en ×1",
+    "PB-0306.07: 11_VISUAL_LIBRARY!r10.accessible_summary_en ×1",
+    "full_copy rows superseded by EXF-002 derivation: PB-0306.01, PB-0306.02"
+   ]
+  },
+  "PB-0307": {
+   "disposition": "APPLIED",
+   "stage": "STAGE-4",
+   "detail": [
+    "PB-0307.04: 03_PAGE_SECTIONS!r84.body_en ×1",
+    "PB-0307.05: 03_PAGE_SECTIONS!r406.body_en ×1",
+    "PB-0307.06: 03_PAGE_SECTIONS!r514.body_en ×1",
+    "PB-0307.07: 07_PUBLIC_CLAIMS!r5.copy_en ×1",
+    "PB-0307.08: 09_READING_SECTIONS!r33.copy_en ×1",
+    "full_copy rows superseded by EXF-002 derivation: PB-0307.01, PB-0307.02, PB-0307.03"
+   ]
+  },
+  "PB-0308": {
+   "disposition": "APPLIED",
+   "stage": "STAGE-4",
+   "detail": [
+    "PB-0308.03: 03_PAGE_SECTIONS!r248.body_ar ×1",
+    "PB-0308.04: 03_PAGE_SECTIONS!r407.body_ar ×1",
+    "PB-0308.05: 03_PAGE_SECTIONS!r409.body_ar ×1",
+    "PB-0308.06: 06_EVIDENCE_OBJECTS!r65.summary_ar ×1",
+    "PB-0308.07: 11_VISUAL_LIBRARY!r10.accessible_summary_ar ×1",
+    "full_copy rows superseded by EXF-002 derivation: PB-0308.01, PB-0308.02"
+   ]
+  },
+  "PB-0370": {
+   "disposition": "APPLIED",
+   "stage": "STAGE-4",
+   "detail": [
+    "PB-0370.02: 03_PAGE_SECTIONS!r300.body_ar ×1",
+    "full_copy rows superseded by EXF-002 derivation: PB-0370.01"
+   ]
+  },
+  "PB-0371": {
+   "disposition": "APPLIED",
+   "stage": "STAGE-4",
+   "detail": [
+    "PB-0371.02: 03_PAGE_SECTIONS!r300.body_en ×1",
+    "full_copy rows superseded by EXF-002 derivation: PB-0371.01"
+   ]
+  },
+  "PB-0372": {
+   "disposition": "APPLIED",
+   "stage": "STAGE-4",
+   "detail": [
+    "PB-0372.01: 03_PAGE_SECTIONS!r79.body_en ×1"
+   ]
+  },
+  "PB-0373": {
+   "disposition": "APPLIED",
+   "stage": "STAGE-4",
+   "detail": [
+    "PB-0373.01: 03_PAGE_SECTIONS!r80.body_ar ×1"
+   ]
+  },
+  "PB-0390": {
+   "disposition": "APPLIED",
+   "stage": "STAGE-4",
+   "detail": {
+    "columns": [
+     "issuer",
+     "hosting_platform",
+     "rights_state",
+     "licence",
+     "attribution_requirement",
+     "retrieval_date",
+     "document_type",
+     "evidence_roles"
+    ],
+    "rights_state": "NOT_ASSESSED on 160 rows",
+    "document_type_rows": 29,
+    "evidence_roles_rows": 23,
+    "issuer_hosting_publisher": "left empty (not confirmed from the source or authoritative metadata; PB-0390P SOURCE_PENDING)",
+    "retrieval_date": "recorded for SRC-CBY-ENF-18-2026 only (verified 2026-09-25); other retrieval dates are not reconstructed",
+    "document_type_basis": {
+     "decision/enforcement": "22 status events name each 'Governor Decision No. N of 2026'; 31 REF-EMONEY-002 'Decision No. 4 — mobile e-money amendment'",
+     "instruction/circular": "31 REF-FCP-001 'Financial Consumer Protection Instructions'; REF-EMONEY-001 'Mobile e-money instructions'",
+     "regulation": "11 VIS-E-MONEY-RULE-STACK names it the 2022 PSP framework",
+     "provider-status instrument": "22 provider rows and roster block (official lists); PSE-001 dated negative-authority list",
+     "method/standard": "06 CLM-047/CLM-048: BPM6 compilation guidance and the BPM7 standard",
+     "survey": "Findex microdata (DDI) and the OECD/INFE International Survey of Adult Financial Literacy",
+     "dataset": "25 Findex aggregate indicator rows; WDI indicator page (06 CLM-039)"
+    }
+   }
+  },
+  "PB-0412": {
+   "disposition": "APPLIED",
+   "stage": "STAGE-4",
+   "detail": [
+    "04 'Governed interface copy' row UI-FOOTER-STRAPLINE",
+    "scripts/build.py footer renders the governed row"
+   ]
+  },
+  "PB-0420": {
+   "disposition": "APPLIED",
+   "stage": "STAGE-4",
+   "detail": [
+    "04 r8 label_en + route_or_group label.en = Evidence Readings",
+    "04 r29 route dictionary R-014 surface_en (propagation)"
+   ]
+  },
+  "PB-0421": {
+   "disposition": "APPLIED",
+   "stage": "STAGE-4",
+   "detail": [
+    "04 r9 labels + JSON = Data & sources / البيانات والمصادر",
+    "04 r32 route dictionary R-017 surfaces (propagation)"
+   ]
+  },
+  "PB-0422": {
+   "disposition": "APPLIED",
+   "stage": "STAGE-4",
+   "detail": [
+    "04 r10 = navigation family Method & Measurement with two routed children (/methodology, /measurement); no route change",
+    "04 r31 route dictionary R-016 /measurement in_primary_nav = True (child)"
+   ]
+  },
+  "PB-0423": {
+   "disposition": "APPLIED",
+   "stage": "STAGE-4",
+   "detail": [
+    "04 r11 NAV-ABOUT leaves the primary navigation (row removed at stage end)",
+    "04 'Trust navigation' block: About · Corrections · Rights & reuse · Accessibility · Privacy · Terms · Contact (AR About = «عن الموقع», correction G)",
+    "04 r34 route dictionary R-019 /about in_primary_nav = False",
+    "navigation_interaction.json: /measurement/ entry_modes + global_navigation, prominence PRIMARY_CHILD; /about/ SECONDARY_TRUST; /about/ removed from footer group method_measure and added to trust_use"
+   ]
+  },
+  "PB-0424": {
+   "disposition": "APPLIED",
+   "stage": "STAGE-4",
+   "detail": {
+    "implemented_in": "scripts/projection/derived.py navigation_contract (global_navigation items with children; trust_navigation) and scripts/validate.py (every child routed; group ≥2 routed children; both Method & Measurement children present)"
+   }
+  },
+  "PB-0430": {
+   "disposition": "APPLIED",
+   "stage": "STAGE-4",
+   "detail": [
+    "PB-0430.01: 11_VISUAL_LIBRARY!r31.what_it_shows_en ×1"
+   ]
+  },
+  "PB-0431": {
+   "disposition": "APPLIED",
+   "stage": "STAGE-4",
+   "detail": [
+    "PB-0431.01: 11_VISUAL_LIBRARY!r32.what_it_shows_en ×1"
+   ]
+  },
+  "PB-0432": {
+   "disposition": "APPLIED",
+   "stage": "STAGE-4",
+   "detail": [
+    "PB-0432.01: 11_VISUAL_LIBRARY!r33.what_it_shows_en ×1"
+   ]
+  },
+  "PB-0433": {
+   "disposition": "APPLIED",
+   "stage": "STAGE-4",
+   "detail": [
+    "PB-0433.01: 11_VISUAL_LIBRARY!r34.what_it_shows_en ×1"
+   ]
+  },
+  "PB-0434": {
+   "disposition": "APPLIED",
+   "stage": "STAGE-4",
+   "detail": [
+    "PB-0434.01: 11_VISUAL_LIBRARY!r35.what_it_shows_en ×1"
+   ]
+  },
+  "PB-0435": {
+   "disposition": "APPLIED",
+   "stage": "STAGE-4",
+   "detail": [
+    "PB-0435.01: 11_VISUAL_LIBRARY!r36.what_it_shows_en ×1"
+   ]
+  },
+  "PB-0437": {
+   "disposition": "APPLIED",
+   "stage": "STAGE-4",
+   "detail": [
+    "PB-0437.01: 11_VISUAL_LIBRARY!r38.what_it_shows_en ×1"
+   ]
+  },
+  "PB-0438": {
+   "disposition": "APPLIED",
+   "stage": "STAGE-4",
+   "detail": [
+    "PB-0438.01: 11_VISUAL_LIBRARY!r39.what_it_shows_en ×1"
+   ]
+  },
+  "PB-0439": {
+   "disposition": "APPLIED",
+   "stage": "STAGE-4",
+   "detail": [
+    "PB-0439.01: 11_VISUAL_LIBRARY!r40.what_it_shows_en ×1"
+   ]
+  },
+  "PB-0440": {
+   "disposition": "APPLIED",
+   "stage": "STAGE-4",
+   "detail": [
+    "PB-0440.01: 11_VISUAL_LIBRARY!r32.accessible_summary_en ×1"
+   ]
+  },
+  "PB-0441": {
+   "disposition": "APPLIED",
+   "stage": "STAGE-4",
+   "detail": [
+    "PB-0441.01: 11_VISUAL_LIBRARY!r33.accessible_summary_en ×1"
+   ]
+  },
+  "PB-0442": {
+   "disposition": "APPLIED",
+   "stage": "STAGE-4",
+   "detail": [
+    "PB-0442.01: 11_VISUAL_LIBRARY!r34.accessible_summary_en ×1"
+   ]
+  },
+  "PB-0443": {
+   "disposition": "APPLIED",
+   "stage": "STAGE-4",
+   "detail": [
+    "PB-0443.01: 11_VISUAL_LIBRARY!r35.accessible_summary_en ×1"
+   ]
+  },
+  "PB-0444": {
+   "disposition": "APPLIED",
+   "stage": "STAGE-4",
+   "detail": [
+    "PB-0444.01: 11_VISUAL_LIBRARY!r36.accessible_summary_en ×1"
+   ]
+  },
+  "PB-0446": {
+   "disposition": "APPLIED",
+   "stage": "STAGE-4",
+   "detail": [
+    "PB-0446.01: 11_VISUAL_LIBRARY!r38.accessible_summary_en ×1"
+   ]
+  },
+  "PB-0447": {
+   "disposition": "APPLIED",
+   "stage": "STAGE-4",
+   "detail": [
+    "PB-0447.01: 11_VISUAL_LIBRARY!r39.accessible_summary_en ×1"
+   ]
+  },
+  "PB-0448": {
+   "disposition": "APPLIED",
+   "stage": "STAGE-4",
+   "detail": [
+    "PB-0448.01: 11_VISUAL_LIBRARY!r40.accessible_summary_en ×1"
+   ]
+  },
+  "PB-0460": {
+   "disposition": "APPLIED",
+   "stage": "STAGE-4",
+   "detail": [
+    "PB-0460.01: 11_VISUAL_LIBRARY!r5.what_it_shows_en ×1"
+   ]
+  },
+  "PB-0461": {
+   "disposition": "APPLIED",
+   "stage": "STAGE-4",
+   "detail": [
+    "PB-0461.01: 11_VISUAL_LIBRARY!r7.what_it_shows_en ×1"
+   ]
+  },
+  "PB-0462": {
+   "disposition": "APPLIED",
+   "stage": "STAGE-4",
+   "detail": [
+    "PB-0462.01: 11_VISUAL_LIBRARY!r9.what_it_shows_en ×1"
+   ]
+  },
+  "PB-0463": {
+   "disposition": "APPLIED",
+   "stage": "STAGE-4",
+   "detail": [
+    "PB-0463.01: 11_VISUAL_LIBRARY!r10.what_it_shows_en ×1"
+   ]
+  },
+  "PB-0464": {
+   "disposition": "APPLIED",
+   "stage": "STAGE-4",
+   "detail": [
+    "PB-0464.01: 11_VISUAL_LIBRARY!r11.what_it_shows_en ×1"
+   ]
+  },
+  "PB-0465": {
+   "disposition": "APPLIED",
+   "stage": "STAGE-4",
+   "detail": [
+    "PB-0465.01: 11_VISUAL_LIBRARY!r12.what_it_shows_en ×1"
+   ]
+  },
+  "PB-0466": {
+   "disposition": "APPLIED",
+   "stage": "STAGE-4",
+   "detail": [
+    "PB-0466.01: 11_VISUAL_LIBRARY!r14.what_it_shows_en ×1"
+   ]
+  },
+  "PB-0467": {
+   "disposition": "APPLIED",
+   "stage": "STAGE-4",
+   "detail": [
+    "PB-0467.01: 11_VISUAL_LIBRARY!r16.what_it_shows_en ×1"
+   ]
+  },
+  "PB-0468": {
+   "disposition": "APPLIED",
+   "stage": "STAGE-4",
+   "detail": [
+    "PB-0468.01: 11_VISUAL_LIBRARY!r17.what_it_shows_en ×1"
+   ]
+  },
+  "PB-0469": {
+   "disposition": "APPLIED",
+   "stage": "STAGE-4",
+   "detail": [
+    "PB-0469.01: 11_VISUAL_LIBRARY!r21.what_it_shows_en ×1"
+   ]
+  },
+  "PB-0458": {
+   "disposition": "APPLIED",
+   "stage": "STAGE-4",
+   "detail": [
+    "PB-0458.01: 11_VISUAL_LIBRARY!r23.what_it_shows_en ×1"
+   ]
+  },
+  "PB-0459": {
+   "disposition": "APPLIED",
+   "stage": "STAGE-4",
+   "detail": [
+    "PB-0459.01: 11_VISUAL_LIBRARY!r27.what_it_shows_en ×1"
+   ]
+  },
+  "PB-0401": {
+   "disposition": "APPLIED",
+   "stage": "STAGE-4",
+   "detail": {
+    "visual_contract_state": "NO_GOVERNED_CONTRACT__TABLE_ONLY on 13 records (method text not rendered while the state holds)",
+    "source_use_roles": "populated for ['PSE-011', 'NEG-EW-011', 'CLM-015', 'CLM-019'] (PB-0493b relationship-level roles where the Master states the use); other records unassigned"
+   }
+  },
+  "PB-0402": {
+   "disposition": "APPLIED",
+   "stage": "STAGE-4",
+   "detail": {
+    "implemented_in": "scripts/projection/derived.py _page_bindings: an /evidence/VIS-*/ page whose instance is an 11 contract binds that contract (and so its prohibited inferences)"
+   }
+  },
+  "PB-0492": {
+   "disposition": "APPLIED",
+   "stage": "STAGE-4",
+   "detail": [
+    "04 block 'Search aliases' rows SEARCH-ALIAS-001…012",
+    "content/search_aliases.json; site-src/app.js and the validator's search mirror apply them"
+   ]
+  },
+  "PB-0493": {
+   "disposition": "APPLIED",
+   "stage": "STAGE-4",
+   "detail": {
+    "implemented_in": "(a) domain-page title/question boost; (b) 15 document_type + evidence_roles, 06 source_use_roles (see PB-0390/PB-0401 details); (c) result cards show record type, evidence period/currentness or document type"
+   }
+  },
+  "PB-0494": {
+   "disposition": "APPLIED",
+   "stage": "STAGE-4",
+   "detail": {
+    "implemented_in": "navigation_interaction.json search_smoke_tests: 9 kept + 12 added; validator requires the primary expected route in the top 3 for the added tests"
+   }
+  },
+  "PB-0425": {
+   "disposition": "SUPERSEDED",
+   "stage": "STAGE-4",
+   "detail": "Superseded by recipient acceptance correction G (the Arabic About label stays «عن الموقع»)."
+  },
+  "PB-0490": {
+   "disposition": "SUPERSEDED",
+   "stage": "STAGE-4",
+   "detail": "Superseded by EXF-001 and acceptance correction F: every source with a public (http/https) locator is indexed; the nine sources without a public locator (eight privately supplied files, SRC-MOPIC-YSEU-2023-080) must not appear in public search; publisher and document type are shown only where confirmed (PB-0390/PB-0493b)."
+  },
+  "PB-0491": {
+   "disposition": "APPLIED",
+   "stage": "STAGE-4",
+   "detail": {
+    "implemented_in": "search_index.json boundary_text_en/ar (does_not_prove / prohibited_inference / limitations, low weight); site-src/app.js normalisation (Arabic hamza/alef/ta-marbuta, definite article; English light stemming) mirrored in scripts/validate.py"
+   }
+  },
+  "EXF-002": {
+   "disposition": "APPLIED",
+   "stage": "STAGE-4",
+   "detail": [
+    "/data/ en",
+    "/data/ ar",
+    "/evidence/CLM-001/ en",
+    "/evidence/VIS-FINDEX-GAPS/ en",
+    "/evidence/VIS-FINDEX-GAPS/ ar",
+    "/evidence/compare/ en",
+    "/evidence/compare/ ar",
+    "/people/ en",
+    "/people/ ar",
+    "/readings/reforms-newer-than-people-evidence/ en"
+   ]
+  }
+ }
+}

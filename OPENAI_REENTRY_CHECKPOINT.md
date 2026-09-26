@@ -1,0 +1,99 @@
+# OpenAI re-entry checkpoint — Yemen Financial Inclusion Evidence
+
+**Programme:** Final finite product programme — Tranche C → R8.5 → R8.6.
+**Position:** Tranche C (whole-product adversarial acceptance) complete. Stopped at the first safe boundary before R8.6,
+as instructed on 26 September 2026, because an independent final Reading package is being closed elsewhere.
+
+**Status: TRANCHE C COMPLETE — READING PROSE HELD FOR THE INDEPENDENT READING PACKAGE.**
+
+- R8.4: CLOSED / PASS for every non-Reading surface. Reading prose is not final-frozen until the Reading package arrives.
+- R8.5 (subtraction and recipient cleanup) and R8.6 (clean-room Design handoff) have **not** been started.
+- This is not DESIGN HANDOFF READY and not PUBLIC RELEASE READY.
+- The design and implementation prompts in `handoff/` remain **DRAFT — DO NOT EXECUTE YET** until R8.6.
+
+**Date:** 2026-09-26.
+
+## 1. Authority state (verify first)
+
+| Item | Value |
+|---|---|
+| Production Master | `authority/Yemen_Financial_Inclusion_Evidence_Master.xlsx` — SHA-256 `f0150122895d88169e9c9ec947633deda04a02c710a28d7b0de2972214547224` |
+| Page Specs | `site-src/content/page_specs.json` — SHA-256 `bd010a2053898a971944ba63ab3276aeb455428069813097dbc8a07037c88295` |
+| Entry state recorded with the Drive IDs (lineage, not current) | Master `e69804106e04d093098688f2d01cea51e13191f255d774a090f3e5dd8dec9bc7`; Page Specs `ff2b0f559cde5fede3fe31d7dfb2539a00921e8b00b816c2863790cd9de49007` |
+| Tranche C entry (P5 close, lineage) | Master `397b3307…` |
+| External (Drive) copies | `EXTERNAL_REPOSITORY_SYNC_PENDING` — the Drive files were not replaced |
+| Generator | `scripts/generate_projections.py`; `PROJECTION CHECK PASS` |
+| Generator tests | 21 of 21 |
+| Build | 288 HTML documents from 143 Page Specs (286 localized + root + 404) |
+| Public-literal audit | 12,720 records, 0 unresolved; identical bytes under 8 `PYTHONHASHSEED` values |
+| Source-lineage truth test | 8 of 8 |
+| Validator | `WEBSITE REPOSITORY VALIDATION PASS`, 0 errors, 0 warnings (gates through TC-G05) |
+| Architecture diagrams | current |
+| Browser behaviour tests | `scripts/tests/test_public_tools.py` — 25 passed, 1 not applicable to the current data |
+| Viewport acceptance | `audit/tranche_c/checks/viewport_acceptance.py` — 168 of 168 |
+| Bilingual numeric invariance | `audit/tranche_c/checks/bilingual_invariance.py` — 6 page pairs differ, all from the three held Reading-prose items (BIL-05) |
+| Current counts | `site-src/content/content/public_inventory.json` (derived from the Master; the only source for counts) |
+
+The Master and Page Specs hashes in this file, `README.md`, `authority/AUTHORITY.json`, the Context and the handoff
+manifest are rebound by `scripts/rebind_authority.py`; validator gate P4-G04 fails if any of them diverges.
+
+## 2. What Tranche C did
+
+Ten Master transactions, each committed through `audit/tranche_b_execution/run_stage.py` (regenerate, rebind, build,
+literal audit, diagrams, validate, generator check; rollback on any failure):
+
+- **TC-S1** one owner per text; **TC-A** evidence-record truth and visual re-tiers; **TC-B** source library display;
+  **TC-C** English and Arabic editorial acceptance; **TC-D** data tables; **TC-E** visual contracts; **TC-F** governed
+  copy for generator and runtime fixes; **TC-G** residual bindings; **TC-H** 28 page-section pairs brought to bilingual
+  parity; **TC-I** chronology dates in both languages, the /payments/ Arabic title and residual record/visual parity.
+- 224 panel findings plus 5 bilingual-invariance findings, each with one disposition. All 9 BLOCKERs are closed.
+- Currentness cut-off 26 September 2026.
+
+Details: `audit/TRANCHE_C_FINAL_ACCEPTANCE.md`. Ledger: `audit/TRANCHE_C_FINDINGS_LEDGER.csv`. Currentness:
+`audit/FINAL_CURRENTNESS_CUTOFF.md`. Per-transaction ledgers and run reports: `audit/tranche_c/runs/`.
+
+## 3. Reading package hold
+
+The Reading sections aligned in TC-H stay as committed; the incoming Reading package supersedes them where it rewrites
+them. Three parity items are passed to it (ledger BIL-05): the Arabic thesis of *Reforms newer than people evidence*
+(fieldwork months missing), the English question of *Finance constraint, different questions* (2022 seven-governorate
+frame missing), and the Arabic of RV-CWR-001/002. The package must enter Master-first through the runner and leave the
+invariance check at zero differing pairs.
+
+## 4. Open items carried forward (not defects of this checkpoint)
+
+- **R8.5 (not started):**
+  - runtime duplicates REF-PAY-006/010 and REF-PAY-007/013;
+  - duplicate `(1)` audit files in `audit/`;
+  - public copy still held in `scripts/build.py` and `site-src/app.js` (AR-29, EN-09, TRUST-25);
+  - template currentness sentences and analytics-sheet labels (P3-D02);
+  - `FINAL_REPOSITORY_MANIFEST.json`, `audit/INDEX.md`, and the permanent gates, including a bilingual-parity gate
+    built on `audit/tranche_c/checks/bilingual_invariance.py`.
+- **Release-only dependencies:** TOOL-02 (logo asset pipeline for the 10 MB master PNG; never redrawn here), TOOL-25
+  (nav-group presentation, Design-owned), TRUST-09 (CauseWay identity and funding statement needs owner input).
+- **Known evidence frontiers:** CLM-044 value withheld (no public locator or rights assessment); the ~147-firm base
+  implied by the 91.84% table; the CBY-Aden↔IMF remittance level crosswalk; the causes of the gender gap; reconciled
+  current operating-provider status; the magnitude of the 2022 banking restatement (EVM-18, VER-23).
+
+## 5. Re-run
+
+```
+python3 scripts/generate_projections.py --check
+python3 -m unittest discover -s scripts/projection/tests -t .
+python3 scripts/build.py && python3 scripts/audit_public_literals.py && python3 scripts/validate.py
+python3 scripts/tests/test_literal_audit_determinism.py
+python3 audit/pre_tranche_c/source_lineage_truth_test.py
+python3 scripts/tests/test_public_tools.py                 # needs Python Playwright + Chromium
+python3 audit/tranche_c/checks/viewport_acceptance.py       # needs Python Playwright + Chromium
+python3 audit/tranche_c/checks/bilingual_invariance.py
+python3 scripts/architecture_diagrams.py --check
+sha256sum -c SHA256SUMS.txt
+```
+
+## 6. Boundaries kept
+
+- One authority. Every content change went into the Master first through the runner. No projection was edited by hand.
+- Nothing completed earlier in the programme was reopened; Reading prose was not final-frozen.
+- **Not claimed:** native Arabic certification, legal review, WCAG conformance, rights clearance, security guarantees,
+  service levels.
+- No external repository was changed.

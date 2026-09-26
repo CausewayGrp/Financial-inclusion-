@@ -1,0 +1,1156 @@
+[
+  {
+    "passport_id": "EP-FINDEX-2022-ACCOUNT",
+    "object_type": "Indicator",
+    "object": "Account ownership — Yemen 2022",
+    "publisher": "World Bank Global Findex",
+    "metric_or_scope": "FX.OWN.TOTL.ZS",
+    "reference_period": "2021 Findex wave; Yemen fieldwork 2022-11-07 to 2023-01-09",
+    "universe": "Adults 15+ in survey coverage",
+    "method": "Weighted survey estimate",
+    "critical_limit": "Approx. 23% population geography excluded; >1/4 PSUs replaced",
+    "authority_class": "PRIMARY_PUBLIC",
+    "route": "/people/",
+    "display_requirements": "Show source, year/wave, fieldwork, geography, weight method, subgroup definition.",
+    "route_list": [
+      "/people/"
+    ],
+    "related_routes": []
+  },
+  {
+    "passport_id": "EP-CBY-POS-MONTHLY",
+    "object_type": "Series",
+    "object": "POS monthly observations",
+    "publisher": "Central Bank of Yemen — Aden",
+    "metric_or_scope": "IND-0002/0003/0004",
+    "reference_period": "Mar-2025–Jan-2026",
+    "universe": "CBY payment-system reporting scope",
+    "method": "Administrative source-reported totals",
+    "critical_limit": "The September 2025 POS transaction-value observation in YER is missing; the September terminal count itself is present at 1,060. For December 2025→January 2026, terminal totals 1,357→1,473 imply approximately +8.55% while the January source graphic displays +11%; transaction totals 21,099→24,026 imply approximately +13.87% while the January source graphic displays +4.9%. A smaller source-internal mismatch also appears in June 2025: 733→791 terminals imply approximately +7.91%, while the June graphic displays +7.6%. Keep raw totals and source-displayed percentages distinct rather than silently reconciling them.",
+    "authority_class": "PRIMARY_OFFICIAL",
+    "route": "/payments/",
+    "display_requirements": "Keep the raw monthly totals and the publisher-displayed percentages visible together where they disagree. Do not silently overwrite either element. Preserve unit, month, source locator and the distinction between terminals, transactions, merchants and users. Show the January 2026 discrepancies prominently; retain the June 2025 mismatch in the evidence detail/method note. Keep the September 2025 gap only on the YER transaction-value series, not on terminal counts.",
+    "route_list": [
+      "/payments/"
+    ],
+    "related_routes": []
+  },
+  {
+    "passport_id": "EP-MFI-2014-Q1Q2",
+    "object_type": "Panel",
+    "object": "Microfinance Q1/Q2 2014 reporting panel",
+    "publisher": "YMN SEEP tables",
+    "metric_or_scope": "MFM-001/002/003",
+    "reference_period": "2014 Q1–Q2",
+    "universe": "Nine reporting institutions shown in source",
+    "method": "Source-reported aggregate panel",
+    "critical_limit": "At least one Q1 provider row uses older reporting vintage",
+    "authority_class": "PRIMARY_TABLE_BUT_MEMBER_NETWORK",
+    "route": "/finance/",
+    "display_requirements": "Never label as national-sector census.",
+    "route_list": [
+      "/finance/"
+    ],
+    "related_routes": []
+  },
+  {
+    "passport_id": "EP-REMITTANCE-MACRO",
+    "object_type": "Series",
+    "object": "External-sector remittances",
+    "publisher": "IMF / Yemeni authorities",
+    "metric_or_scope": "RMT-001",
+    "reference_period": "Reported history 2018–2024 (staff calculations); estimate 2025; projection 2026–2030",
+    "universe": "External-sector macro concept; IMF analytical scope for areas under the internationally recognized government",
+    "method": "Source-reported/staff calculations",
+    "critical_limit": "Not payment-system settlement throughput and not directly measured hawala volume",
+    "authority_class": "PRIMARY_OFFICIAL_MACRO",
+    "route": "/remittances/",
+    "display_requirements": "Reported-history, estimate and projection states must be visually separate, and the line breaks where the source document changes.",
+    "route_list": [
+      "/remittances/"
+    ],
+    "related_routes": []
+  },
+  {
+    "passport_id": "EP-FIRM-2022",
+    "object_type": "Survey",
+    "object": "Formal enterprise finance evidence",
+    "publisher": "World Bank 2022 custom enterprise survey",
+    "metric_or_scope": "FFM-001..007",
+    "reference_period": "2022-09",
+    "universe": "Formal enterprises in seven selected governorates",
+    "method": "Custom enterprise survey",
+    "critical_limit": "Not national; some tables have small conditional denominators; obstacle tabulation has filtered denominator",
+    "authority_class": "PRIMARY_SURVEY",
+    "route": "/firms/",
+    "display_requirements": "Every chart shows sample/universe/denominator.",
+    "route_list": [
+      "/firms/"
+    ],
+    "related_routes": []
+  },
+  {
+    "passport_id": "EP-OECD-YEM-2026",
+    "object_type": "Narrative/Policy",
+    "object": "Promoting Economic Resilience in Yemen — Financial Sector",
+    "publisher": "OECD",
+    "metric_or_scope": "Chapter 2",
+    "reference_period": "Published 2026; analysis includes earlier reference years",
+    "universe": "Institutional analysis / stakeholder synthesis",
+    "method": "Secondary official analysis",
+    "critical_limit": "Numeric/regulatory facts may point to CBY/MOPIC/OECD-INFE primary sources",
+    "authority_class": "OFFICIAL_SECONDARY",
+    "route": "/reforms/",
+    "display_requirements": "Recommendation ≠ implementation; primary source governs current regulatory truth.",
+    "route_list": [
+      "/reforms/",
+      "/evidence/"
+    ],
+    "related_routes": [
+      "/evidence/"
+    ]
+  },
+  {
+    "passport_id": "EP-CBY-STAFF-FI-2025",
+    "object_type": "Academic study",
+    "object": "CBY employee perceptions of efforts to promote financial inclusion",
+    "publisher": "Arab Journal of Management, Banking, and Financial Studies",
+    "metric_or_scope": "Study of CBY efforts/measures; 180 valid employee questionnaires",
+    "reference_period": "Received/accepted 2024; published 2025-04-27",
+    "universe": "Central Bank of Yemen employees in Aden and branches; not adults, firms, FSPs or financial-service users",
+    "method": "Electronic questionnaire; descriptive/inferential statistics using SPSS; structural equation modeling using SmartPLS",
+    "critical_limit": "Employee perceptions cannot establish national prevalence, citizen/MSME outcomes, current regulatory status, provider completeness or payment usage.",
+    "authority_class": "ACADEMIC_SECONDARY_EMPLOYEE_PERCEPTION",
+    "route": "/evidence/",
+    "display_requirements": "Always display respondent universe, n=180, study method, author-reported nature of findings and the primary-source verification boundary.",
+    "route_list": [
+      "/evidence/"
+    ],
+    "related_routes": []
+  },
+  {
+    "passport_id": "EP-CBY-GMW-2023-25",
+    "object_type": "Programme activity series",
+    "object": "CBY Global Money Week activity evidence — 2023 to 2025",
+    "publisher": "Central Bank of Yemen — Aden",
+    "metric_or_scope": "Primary official event/activity records: 2023 launch/programme; 2024 launch and completion; 2025 launch/programme",
+    "reference_period": "2023-03 to 2025-03",
+    "universe": "Source-stated audiences and participating bodies; not a population survey universe",
+    "method": "Official CBY programme/event records, preserved year-by-year",
+    "critical_limit": "Records verify activity, target emphasis and selected outputs/completion only. They do not provide a verified baseline/endline or causal effectiveness estimate.",
+    "authority_class": "PRIMARY_OFFICIAL_PROGRAMME_ACTIVITY",
+    "route": "/people/",
+    "display_requirements": "Always distinguish activity/output from measured capability; show each source year and target wording; never join to OECD/INFE as a causal series.",
+    "route_list": [
+      "/people/",
+      "/reforms/"
+    ],
+    "related_routes": [
+      "/reforms/"
+    ]
+  },
+  {
+    "passport_id": "EP-CBY-FCP-2023",
+    "object_type": "Regulatory instrument",
+    "object": "Financial Consumer Protection Instructions — 2023",
+    "publisher": "Central Bank of Yemen — Aden",
+    "metric_or_scope": "Official instrument existence/listing plus issuance announcement; clause-level extraction pending",
+    "reference_period": "2023-08",
+    "universe": "Banks and other non-bank financial institutions as described in the issuance announcement; exact clause-level scope pending full-text control",
+    "method": "Primary official CBY listing/issuance notice; the full instruction PDF is not yet available in the evidence base for direct verification",
+    "critical_limit": "Instrument existence/title/date/source-stated purpose and adjustment-period announcement are verified. A separate official 2024 brochure verifies the source-attributed complaint/redress architecture. Full legal-text current status, implementation, enforcement and outcomes remain open.",
+    "authority_class": "PRIMARY_OFFICIAL_REGULATORY_INSTRUMENT",
+    "route": "/reforms/",
+    "display_requirements": "Display separate badges: INSTRUMENT EXISTS; OFFICIAL REDRESS ARCHITECTURE AVAILABLE; PERFORMANCE EVIDENCE OPEN. Do not merge these states.",
+    "route_list": [
+      "/reforms/",
+      "/evidence/"
+    ],
+    "related_routes": [
+      "/evidence/"
+    ]
+  },
+  {
+    "passport_id": "EP-CBY-FCP-REDRESS-2024",
+    "object_type": "Official guidance / redress architecture",
+    "object": "Financial consumer-protection complaint path",
+    "publisher": "Central Bank of Yemen — Aden",
+    "metric_or_scope": "Provider complaint responsibilities, 10-business-day settlement window, extension rule, escalation triggers and 14-business-day escalation window to CBY-Aden",
+    "reference_period": "2024-03-23 brochure summarizing the framework",
+    "universe": "Banking and non-bank financial institutions as source-stated covered classes",
+    "method": "Official CBY awareness/guidance brochure",
+    "critical_limit": "The brochure supports a source-attributed architecture, not legal advice or evidence of compliance/performance. No verified complaint-volume/resolution/enforcement/outcome administrative series is currently available.",
+    "authority_class": "PRIMARY_OFFICIAL_GUIDANCE",
+    "route": "/reforms/",
+    "display_requirements": "Show each step/time window and end the path with an explicit PERFORMANCE EVIDENCE OPEN node.",
+    "route_list": [
+      "/reforms/",
+      "/evidence/"
+    ],
+    "related_routes": [
+      "/evidence/"
+    ]
+  },
+  {
+    "passport_id": "EP-CBY-EMONEY-2023-25",
+    "object_type": "Regulatory bundle",
+    "object": "Mobile e-money rules and 2025 amendment",
+    "publisher": "Central Bank of Yemen — Aden",
+    "metric_or_scope": "Non-bank mobile e-money regulatory class; consumer-protection obligations; 2025 permitted currencies, FX restriction and transaction/balance ceilings",
+    "reference_period": "2023-08-09 base instrument; 2025-07-09 signed amendment",
+    "universe": "Non-bank financial institutions / e-money issuers within instrument scope",
+    "method": "Primary official CBY regulatory instruments; signed amendment visually verified",
+    "critical_limit": "Rules and ceilings do not identify the complete current provider set, product availability, actual balances or transactions, compliance, or unique users.",
+    "authority_class": "PRIMARY_OFFICIAL_REGULATORY_BUNDLE",
+    "route": "/payments/",
+    "display_requirements": "Show regulatory ceilings as ceilings, never as activity; keep the completeness of named-provider evidence and usage status visibly separate.",
+    "route_list": [
+      "/payments/",
+      "/reforms/"
+    ],
+    "related_routes": [
+      "/reforms/"
+    ]
+  },
+  {
+    "passport_id": "EP-FINDEX-HIST-WAVE-SPINE",
+    "object_type": "Observed-wave series",
+    "object": "Yemen account ownership — historical/public wave anchors",
+    "publisher": "World Bank Global Findex / Little Data Book",
+    "metric_or_scope": "Selected 2011 FI-account comparator; 2014 account headline; existing 2022 account aggregate",
+    "reference_period": "2011 / 2014 / 2022",
+    "universe": "Adults 15+ under each source wave's survey coverage",
+    "method": "Official weighted public aggregates; no annual interpolation",
+    "critical_limit": "2011 comparator wording differs from later headline account concept; 2014 values are rounded; 2022–23 fieldwork and geographic exclusions remain material.",
+    "authority_class": "PRIMARY_WEIGHTED_PUBLIC_AGGREGATES",
+    "route": "/people/",
+    "display_requirements": "Observed waves only; show source precision, concept note, 2022–23 fieldwork and geographic coverage, and no invented 2017/2024 node.",
+    "route_list": [
+      "/people/"
+    ],
+    "related_routes": []
+  },
+  {
+    "passport_id": "EP-FINDEX-2014-NEEDS-FLOWS",
+    "object_type": "Historical demand profile",
+    "object": "Yemen 2014 financial needs, flows and behavior profile",
+    "publisher": "World Bank — The Little Data Book on Financial Inclusion 2015",
+    "metric_or_scope": "Account use; digital payments; domestic remittances; saving; borrowing; selected 2011 formal-channel comparators",
+    "reference_period": "2014 plus selected 2011 comparators",
+    "universe": "Civilian non-institutionalized population age 15+; some channel measures use sender/recipient/account-holder sub-universes",
+    "method": "Official weighted public country-profile aggregates",
+    "critical_limit": "Historical, not current. '..' means no observation. Saving/borrowing indicators can overlap; remittance-channel denominators are conditional.",
+    "authority_class": "PRIMARY_WEIGHTED_PUBLIC_COUNTRY_PROFILE",
+    "route": "/people/",
+    "display_requirements": "Show date and denominator; non-additive badge; conditional-denominator transition; World Bank attribution/license/adaptation notice.",
+    "route_list": [
+      "/people/",
+      "/remittances/"
+    ],
+    "related_routes": [
+      "/remittances/"
+    ]
+  },
+  {
+    "passport_id": "EP-CBY-NEG-AUTH-2024",
+    "object_type": "Dated authority list",
+    "object": "CBY 2024 unlicensed electronic-wallet/payment-service list",
+    "publisher": "Central Bank of Yemen — Aden",
+    "metric_or_scope": "12 source-named wallets/entities/services plus source-stated prohibition on dealing with unlicensed electronic financial services",
+    "reference_period": "2024-06-26",
+    "universe": "The 12 names/services stated in the circular; not the positive licensed universe",
+    "method": "Primary official CBY circular normalized through 67_PROVIDER_NEGATIVE_AUTHORITY",
+    "critical_limit": "A dated negative-authority state only. Do not carry status to 2026, infer current operation, or derive the positive licensed universe.",
+    "authority_class": "PRIMARY_OFFICIAL_NEGATIVE_AUTHORITY",
+    "route": "/providers/",
+    "display_requirements": "Show source date, authority state and explicit 'does not define current licensed universe' note.",
+    "route_list": [
+      "/providers/",
+      "/payments/"
+    ],
+    "related_routes": [
+      "/payments/"
+    ]
+  },
+  {
+    "passport_id": "EP-CBY-EXCH-ROSTER-2025",
+    "object_type": "Historical provider roster baseline",
+    "object": "CBY 2025 exchange/remittance roster category counts",
+    "publisher": "Central Bank of Yemen — Aden",
+    "metric_or_scope": "79 exchange companies; 195 exchange establishments; 108 remittance agents — category-entry counts",
+    "reference_period": 2025,
+    "universe": "Entries/categories in the official 2025 roster; categories are not proven unique legal entities across sections",
+    "method": "Primary official roster, section-ending/row sequence visually verified in 71_PROVIDER_BASELINE_2025",
+    "critical_limit": "Historical predecessor only. Not 2026 membership, current operation, branch footprint, market share or unique-firm count.",
+    "authority_class": "PRIMARY_OFFICIAL_ROSTER",
+    "route": "/providers/",
+    "display_requirements": "Display 2025 prominently and label 382 as category entries, not a current provider census.",
+    "route_list": [
+      "/providers/"
+    ],
+    "related_routes": []
+  },
+  {
+    "passport_id": "EP-CBY-PAY-INSTITUTIONAL-2026",
+    "object_type": "Institutional reform event sequence",
+    "object": "2026 payment-architecture institutionalization events",
+    "publisher": "Central Bank of Yemen — Aden",
+    "metric_or_scope": "Unified-network integration work, Unified Money Network governance/restructuring, YPCC founding assembly and first board meeting",
+    "reference_period": "2026-06-17 to 2026-08-04",
+    "universe": "Source-stated institutions/events; not user, transaction or system-availability universe",
+    "method": "Primary official event records normalized in 73_PAYMENT_CURRENTNESS / 48_REFORM_EVENTS",
+    "critical_limit": "Institutionalization/implementation-state evidence only. Does not prove system go-live, universal participation, reliability, adoption, transaction coverage or inclusion outcomes.",
+    "authority_class": "PRIMARY_OFFICIAL_INSTITUTIONAL_EVENTS",
+    "route": "/payments/",
+    "display_requirements": "Show exact event dates/state and an explicit usage/outcome evidence-open boundary.",
+    "route_list": [
+      "/payments/",
+      "/reforms/"
+    ],
+    "related_routes": [
+      "/reforms/"
+    ]
+  },
+  {
+    "passport_id": "EP-CBY-PROVIDER-STATUS-2026",
+    "object_type": "Provider status-event series",
+    "object": "CBY-Aden 2026 licence suspension, withdrawal and closure events for exchange and remittance providers",
+    "publisher": "Central Bank of Yemen — Aden",
+    "metric_or_scope": "Dated licence-suspension/withdrawal/closure events for source-named companies, establishments, branches and remittance agents",
+    "reference_period": "1 January to 24 September 2026",
+    "universe": "Only the actors named in the dated status events; not the complete provider set.",
+    "method": "Primary official CBY enforcement and status-event records organized by actor, date and action type.",
+    "critical_limit": "Later enforcement events are not subtracted mechanically from the 2026 annual roster. A current count of operating providers would require entity-by-entity reconciliation, a defined status date and a clear operating criterion. Silence about another provider does not establish that it is active or compliant.",
+    "authority_class": "PRIMARY_OFFICIAL_STATUS_EVENTS",
+    "route": "/providers/",
+    "display_requirements": "Show the decision date, named entity or branch type, action, annual-roster context and the fact that current operation requires entity-level reconciliation.",
+    "route_list": [
+      "/providers/",
+      "/evidence/"
+    ],
+    "related_routes": [
+      "/evidence/"
+    ]
+  },
+  {
+    "passport_id": "EP-SFD-MFI-ORIGIN-1997-98",
+    "object_type": "Layered chronology",
+    "object": "Yemen microfinance institutional-origin and operational-programme milestones",
+    "publisher": "Social Fund for Development",
+    "metric_or_scope": "1997 institutional/microfinance-origin layer and 1998 operational programme/involvement layer",
+    "reference_period": "1997–1998",
+    "universe": "SFD institutional/programme history; not a legal national-sector 'birth date'",
+    "method": "Primary/official SFD historical material normalized in 76_MF_ORIGIN_CHRONOLOGY with YMN corroboration separated",
+    "critical_limit": "The two dates describe different layers. Neither should be presented as disproving the other or as the single definitive start date.",
+    "authority_class": "PRIMARY_OFFICIAL_INSTITUTIONAL_HISTORY",
+    "route": "/finance/",
+    "display_requirements": "Label each milestone by layer/source class; never collapse to one 'birth date'.",
+    "route_list": [
+      "/finance/"
+    ],
+    "related_routes": []
+  },
+  {
+    "passport_id": "EP-SFD-MFI-RUPTURE-2015",
+    "object_type": "Temporal observation sequence",
+    "object": "2015 SFD-supported microfinance borrower/saver/portfolio rupture",
+    "publisher": "Social Fund for Development",
+    "metric_or_scope": "Q1, Q3 and Q4 2015 source-reported borrower/saver/portfolio observations",
+    "reference_period": "2015-03-31 to 2015-12-31",
+    "universe": "SFD-supported reporting programmes in each source snapshot; not a regulatory national census",
+    "method": "Primary SFD administrative/reporting snapshots normalized in 77_MFI_TEMPORAL_SPINE",
+    "critical_limit": "Observed deterioration can be shown; causal conflict-effect size is not identified. Q4 portfolio has an internal source contradiction that must remain visible.",
+    "authority_class": "PRIMARY_ADMINISTRATIVE_WITH_CONTRADICTION",
+    "route": "/finance/",
+    "display_requirements": "Show exact snapshot dates, reporting-universe caveat, no interpolation, and portfolio contradiction at year-end.",
+    "route_list": [
+      "/finance/"
+    ],
+    "related_routes": []
+  },
+  {
+    "passport_id": "EP-CBY-BANK-ROSTER-2026",
+    "object_type": "Authority roster",
+    "object": "CBY-Aden licensed-bank source list — 26 rows",
+    "publisher": "Central Bank of Yemen — Aden",
+    "metric_or_scope": "Twenty-six bank names/list entries in the current CBY-Aden source list in the evidence base",
+    "reference_period": "2026 source-list state",
+    "universe": "Banks appearing in the named authority source list; list presence is not proof of current operation, branch footprint, product availability or market share",
+    "method": "Primary official authority roster normalized into source-listed provider classes while keeping listing separate from operation.",
+    "critical_limit": "Listing/licensing in the source only. Do not infer operation, all branches, rail participation, products, market share or nationwide completeness beyond source jurisdiction/scope.",
+    "authority_class": "PRIMARY_CURRENT_AUTHORITY_ROSTER",
+    "route": "/providers/",
+    "display_requirements": "Show authority/source state and an explicit LISTED/LICENSED ≠ OPERATING boundary.",
+    "route_list": [
+      "/providers/"
+    ],
+    "related_routes": []
+  },
+  {
+    "passport_id": "EP-CBY-BANKING-2025",
+    "object_type": "Annual administrative/statistical report",
+    "object": "Consolidated banking balance-sheet state — 2024/2025",
+    "publisher": "Central Bank of Yemen — Aden",
+    "metric_or_scope": "Assets; loans/advances; private/public/government credit; deposits",
+    "reference_period": "2024 year-end → 2025 year-end",
+    "universe": "Consolidated banks under source reporting framework",
+    "method": "Primary official annual-report table/narrative; K04 arithmetic derivations from reported values",
+    "critical_limit": "Institutional/territorial/reporting scope must be carried; contraction does not identify causal mechanism",
+    "authority_class": "PRIMARY_OFFICIAL_ADMINISTRATIVE",
+    "route": "/finance/",
+    "display_requirements": "Show exact period/unit/source and source-vs-derived flag; no bank-level distress or causal crowding-out inference.",
+    "route_list": [
+      "/finance/",
+      "/firms/"
+    ],
+    "related_routes": [
+      "/firms/"
+    ]
+  },
+  {
+    "passport_id": "EP-CBY-PAY-H1-2025",
+    "object_type": "Administrative payment snapshot",
+    "object": "First Half Payment Report 2025",
+    "publisher": "Central Bank of Yemen — Aden",
+    "metric_or_scope": "Cards; ATMs; POS; bank accounts; e-wallets; subscribers; source-reported composition",
+    "reference_period": "2025 H1",
+    "universe": "CBY Payment Systems Department reporting universe",
+    "method": "Primary official infographic/report",
+    "critical_limit": "Counts are administrative records, not unique people; Q3-2024 cross-snapshot growth is not available pending denominator reconciliation; account denominator is ambiguous",
+    "authority_class": "PRIMARY_OFFICIAL_ADMINISTRATIVE",
+    "route": "/payments/",
+    "display_requirements": "Metric Anatomy required; carry DN-CBY-001/002/004/005 as applicable.",
+    "route_list": [
+      "/payments/",
+      "/people/",
+      "/evidence/"
+    ],
+    "related_routes": [
+      "/people/",
+      "/evidence/"
+    ]
+  },
+  {
+    "passport_id": "EP-CBY-PAY-Q3-2024",
+    "object_type": "Administrative payment snapshot",
+    "object": "Payments Bulletin — Q3 2024",
+    "publisher": "Central Bank of Yemen — Aden",
+    "metric_or_scope": "Cards; wallets; subscribers; ATMs/POS/payment infrastructure",
+    "reference_period": "2024 Q3",
+    "universe": "CBY payment-system reporting scope",
+    "method": "Primary official payment bulletin",
+    "critical_limit": "Do not splice directly to H1-2025 without resolving reporting-universe/definition break",
+    "authority_class": "PRIMARY_OFFICIAL_ADMINISTRATIVE",
+    "route": "/payments/",
+    "display_requirements": "Show quarter/source wording; cross-publication comparison carries DN-CBY-005.",
+    "route_list": [
+      "/payments/",
+      "/evidence/"
+    ],
+    "related_routes": [
+      "/evidence/"
+    ]
+  },
+  {
+    "passport_id": "EP-CBY-BOP-2025",
+    "object_type": "Macro/statistical annual report",
+    "object": "Workers' remittances and BOP quality context",
+    "publisher": "Central Bank of Yemen — Aden",
+    "metric_or_scope": "Workers' remittances 2024/2025 plus 2025 errors-and-omissions residual",
+    "reference_period": "2024→2025",
+    "universe": "Balance-of-payments accounting framework",
+    "method": "Primary official annual-report BOP table plus narrative cross-check",
+    "critical_limit": "Macro remittance item is not formal transfer throughput; residual is material context but does not identify hidden-flow composition",
+    "authority_class": "PRIMARY_OFFICIAL_MACRO",
+    "route": "/remittances/",
+    "display_requirements": "Show accounting lens, years, USD unit and DN-CBY-014; no corridor/household/hawala inference.",
+    "route_list": [
+      "/remittances/",
+      "/finance/"
+    ],
+    "related_routes": [
+      "/finance/"
+    ]
+  },
+  {
+    "passport_id": "EP-CBY-LIQ-2022",
+    "object_type": "Administrative/prudential analytical report",
+    "object": "Banking-sector liquidity lenses — Dec 2022",
+    "publisher": "Central Bank of Yemen — Aden",
+    "metric_or_scope": "Headline 92% and source-adjusted 45.3% excluding Treasury Bills",
+    "reference_period": "2022-12",
+    "universe": "Banking sector under source report definition",
+    "method": "Primary official report; source itself qualifies Treasury Bill liquidity",
+    "critical_limit": "Historical snapshot only; not current liquidity or bank-level distribution",
+    "authority_class": "PRIMARY_OFFICIAL_ADMINISTRATIVE",
+    "route": "/finance/",
+    "display_requirements": "Always show both measurement lenses together and exact date; DN-CBY-012.",
+    "route_list": [
+      "/finance/",
+      "/evidence/compare/"
+    ],
+    "related_routes": [
+      "/evidence/compare/"
+    ]
+  },
+  {
+    "passport_id": "EP-CBY-CROSS-STREAM",
+    "object_type": "Source/provenance control",
+    "object": "CBY publication-stream coverage and access state",
+    "publisher": "Multiple source-attributed CBY publication streams",
+    "metric_or_scope": "Issuer, publication stream, access path and source-carrier metadata",
+    "reference_period": "historical through review 2026-09-10",
+    "universe": "Evidence sources, not population",
+    "method": "Provenance audit across direct official index, historic locator, institutional reproduction, official-news reproduction and mirror",
+    "critical_limit": "Direct access does not equal evidence existence; streams are not merged into one territorial/current authority state",
+    "authority_class": "PROVENANCE_CONTROL",
+    "route": "/evidence/",
+    "display_requirements": "Show issuer and publication stream, original source versus carrier, observation/publication/review dates and conflict-sensitive nomenclature. Do not expose internal acquisition-state labels as user-facing copy.",
+    "route_list": [
+      "/evidence/",
+      "/methodology/"
+    ],
+    "related_routes": [
+      "/methodology/"
+    ]
+  },
+  {
+    "passport_id": "EP-CBY-LEGAL-FOUNDATIONS-K04",
+    "object_type": "Regulatory bundle",
+    "object": "CBY-hosted core financial-sector legal foundations",
+    "publisher": "Central Bank of Yemen — current public law archive",
+    "metric_or_scope": "CBY mandate; banking licensing/branches; exchange/remittance licensing; Islamic banking objectives; AML/CFT customer/transfer controls; public-debt and deposit-insurance source states",
+    "reference_period": "1995–2010 instruments as hosted/located; reviewed 2026-09-10",
+    "universe": "Source-defined regulated institutions/activities; not a measurement population",
+    "method": "Primary CBY-hosted legal texts where readable, with government-source corroboration where CBY retrieval/text extraction is unresolved",
+    "critical_limit": "Historical/current-force and amendment status require instrument-specific legal verification; law existence/clauses ≠ implementation/outcome",
+    "authority_class": "PRIMARY_OFFICIAL_LEGAL_TEXT_WITH_BOUNDED_CORROBORATION",
+    "route": "/reforms/",
+    "display_requirements": "Always show instrument date/amendment state/source locator; never imply implementation or outcome; law-number discrepancies DN-CBY-018/019 must travel with affected citations.",
+    "route_list": [
+      "/reforms/",
+      "/providers/",
+      "/payments/",
+      "/firms/",
+      "/finance/"
+    ],
+    "related_routes": [
+      "/providers/",
+      "/payments/",
+      "/firms/",
+      "/finance/"
+    ]
+  },
+  {
+    "passport_id": "EP-CBY-LEGAL-ID-DISCREPANCIES-K04",
+    "object_type": "Discrepancy bundle",
+    "object": "Legal source-identity discrepancies in CBY-related corpus",
+    "publisher": "CBY + government legal registries",
+    "metric_or_scope": "Exchange-law number 19/1995 vs hosted 20/1995; deposit-insurance law number 21/2008 vs 40/2008",
+    "reference_period": "1995/2008 instruments; reviewed 2026-09-10",
+    "universe": "Legal-source identity only",
+    "method": "Source concordance; no substantive reconciliation by inference",
+    "critical_limit": "A source-identity conflict does not establish invalidity, lack of authority, or implementation failure",
+    "authority_class": "MULTI_OFFICIAL_PUBLIC_SOURCE_CONCORDANCE",
+    "route": "/evidence/compare/",
+    "display_requirements": "Show both source identities, exact dates/locators and resolution condition; no winner badge until authoritative legal-source verification.",
+    "route_list": [
+      "/evidence/compare/",
+      "/reforms/"
+    ],
+    "related_routes": [
+      "/reforms/"
+    ]
+  },
+  {
+    "passport_id": "EP-CBY-TRADE-ONBOARDING-K04",
+    "object_type": "Procedure bundle",
+    "object": "CBY documentary-credit coverage and documentation/KYC procedure",
+    "publisher": "Central Bank of Yemen — Aden",
+    "metric_or_scope": "Six-month account history, commercial/tax/professional/KYC/incorporation documentation, screening, review flow and electronic file submission",
+    "reference_period": "Content date not displayed; reviewed 2026-09-10",
+    "universe": "Source-defined external-sector/LC request workflow; not all firms or all banking customers",
+    "method": "Direct official web procedures",
+    "critical_limit": "Requirements/process architecture do not measure document possession, burden, rejection, informality, throughput or outcome",
+    "authority_class": "PRIMARY_OFFICIAL_PROCEDURE",
+    "route": "/firms/",
+    "display_requirements": "Show REVIEWED ON and CONTENT DATE NOT DISPLAYED; distinguish procedure from measured barrier; do not convert requirements into prevalence.",
+    "route_list": [
+      "/firms/",
+      "/payments/",
+      "/reforms/"
+    ],
+    "related_routes": [
+      "/payments/",
+      "/reforms/"
+    ]
+  },
+  {
+    "passport_id": "EP-CBY-LICENSING-INTERFACE-K04",
+    "object_type": "Administrative interface",
+    "object": "CBY electronic licensing surface",
+    "publisher": "Central Bank of Yemen — Banking Supervision Sector",
+    "metric_or_scope": "Public login surface; version 1.0.9",
+    "reference_period": "Live page reviewed 2026-09-10; deployment/start date not displayed",
+    "universe": "Unknown authorized-user/provider-class scope from public login page",
+    "method": "Direct official application surface",
+    "critical_limit": "Interface availability ≠ complete digital workflow, licence status, application success, uptime or performance",
+    "authority_class": "PRIMARY_OFFICIAL_ADMIN_INTERFACE",
+    "route": "/providers/",
+    "display_requirements": "Show interface existence and review date only; no provider/current-status inference.",
+    "route_list": [
+      "/providers/",
+      "/reforms/",
+      "/evidence/"
+    ],
+    "related_routes": [
+      "/reforms/",
+      "/evidence/"
+    ]
+  },
+  {
+    "passport_id": "EP-CBY-AWARENESS-K04",
+    "object_type": "Institutional communication",
+    "object": "CBY banking-awareness / financial-culture page",
+    "publisher": "Central Bank of Yemen — Aden",
+    "metric_or_scope": "Awareness objectives, trust framing and named campaign concepts",
+    "reference_period": "Content date not displayed; page reviewed 2026-09-10",
+    "universe": "Source-described audiences; no survey population",
+    "method": "Official institutional communication",
+    "critical_limit": "Institutional intent and source hypotheses are not measured capability, trust, exclusion prevalence or outcome",
+    "authority_class": "PRIMARY_OFFICIAL_INSTITUTIONAL_COMMUNICATION",
+    "route": "/people/",
+    "display_requirements": "Attribute objectives/campaigns to CBY; never state source explanations of behavior as measured causes.",
+    "route_list": [
+      "/people/",
+      "/reforms/",
+      "/evidence/"
+    ],
+    "related_routes": [
+      "/reforms/",
+      "/evidence/"
+    ]
+  },
+  {
+    "passport_id": "EP-CBY-DIC-STATE-K04",
+    "object_type": "Institutional state event",
+    "object": "Deposit Insurance Corporation institutional-build state",
+    "publisher": "Central Bank of Yemen — Aden",
+    "metric_or_scope": "Board work on organizational/regulatory/administrative/technical framework completion; governance committee creation",
+    "reference_period": "2026-06-23",
+    "universe": "Institutional state; not depositor/insured-deposit outcome universe",
+    "method": "Primary dated CBY news record",
+    "critical_limit": "Institution-building evidence does not establish full operation, coverage, funding adequacy, payout readiness or outcome",
+    "authority_class": "PRIMARY_OFFICIAL_DATED_INSTITUTIONAL_EVENT",
+    "route": "/finance/",
+    "display_requirements": "Pair with legal-source identity passport; show event date and 'framework completion ongoing' boundary.",
+    "route_list": [
+      "/finance/",
+      "/reforms/",
+      "/evidence/"
+    ],
+    "related_routes": [
+      "/reforms/",
+      "/evidence/"
+    ]
+  },
+  {
+    "passport_id": "EP-CBY-CREDIT-INFO-SPINE-K04",
+    "object_type": "Regulatory/infrastructure chronology",
+    "object": "Credit-risk information and exchange architecture → 2026 defaulters-registry launch",
+    "publisher": "Central Bank of Yemen — Aden",
+    "metric_or_scope": "Pre-credit inquiry rule; credit-exchange reporting architecture/threshold/data fields/cadence; 2026 registry launch event",
+    "reference_period": "Underlying historical rules reference 1991/2000/2006; web posts 2021; launch 2026-08-05",
+    "universe": "Source-defined banks/credit data; not a borrower census",
+    "method": "Official CBY web publications + dated launch event",
+    "critical_limit": "Chronology of documented states is not proof of continuous implementation, database completeness, match quality, lender adoption or credit impact",
+    "authority_class": "PRIMARY_OFFICIAL_MULTI_VINTAGE",
+    "route": "/firms/",
+    "display_requirements": "Show each state/date/source class separately; no arrow implying uninterrupted operation or causal access effect.",
+    "route_list": [
+      "/firms/",
+      "/finance/",
+      "/reforms/",
+      "/evidence/"
+    ],
+    "related_routes": [
+      "/finance/",
+      "/reforms/",
+      "/evidence/"
+    ]
+  },
+  {
+    "passport_id": "EP-CBY-ANNUAL-VINTAGE-K04",
+    "object_type": "Source-vintage control",
+    "object": "CBY annual-report vintage concordance",
+    "publisher": "Central Bank of Yemen — Aden",
+    "metric_or_scope": "Reference year × report vintage × method/source basis for selected decision-critical annual-report metrics",
+    "reference_period": "AR2022–AR2025; reference years 2020–2025",
+    "universe": "Selected BOP and consolidated-banking measures; not full annual-report universe",
+    "method": "Primary annual-report cross-vintage concordance with formula-based revision arithmetic",
+    "critical_limit": "Same-year revision is not temporal economic change; report vintage cannot be dropped from datum identity",
+    "authority_class": "PRIMARY_OFFICIAL_MULTI_VINTAGE",
+    "route": "/evidence/",
+    "display_requirements": "Always show reference year and report vintage; latest-vintage default must retain access to earlier published values; no mixed-vintage trend.",
+    "route_list": [
+      "/evidence/",
+      "/methodology/"
+    ],
+    "related_routes": [
+      "/methodology/"
+    ]
+  },
+  {
+    "passport_id": "EP-CBY-REMITTANCE-VINTAGE-K04",
+    "object_type": "Series-vintage passport",
+    "object": "Remittances across CBY-Aden annual-report vintages",
+    "publisher": "Central Bank of Yemen — Aden",
+    "metric_or_scope": "BOP remittance item, same-year revisions, and relationship to the documented IMF-CBY external-sector statistical rebuild",
+    "reference_period": "Reference 2020–2025 across AR2022–AR2025; IMF method work 2024–2025",
+    "universe": "CBY publication-level BOP remittance series; exact territorial/concept mapping to IMF IRG reconstruction remains open",
+    "method": "Primary CBY annual-report tables + IMF STA/Article IV method history + reproducible normalized-trajectory concordance",
+    "critical_limit": "Method reconstruction is strongly supported, but exact CBY↔IMF level, geography and statistical-concept crosswalk is not stated publicly. Same-year revision remains distinct from temporal change.",
+    "authority_class": "PRIMARY_OFFICIAL_MULTI_SOURCE_METHOD_RECONSTRUCTION_PLUS_DERIVATION",
+    "route": "/remittances/",
+    "display_requirements": "Show reference year, CBY report vintage, IMF scope, normalized trajectory where cross-source comparison is made, and an explicit 'exact mapping open' badge. DN-CBY-021/022 travel with historical charts.",
+    "route_list": [
+      "/remittances/",
+      "/evidence/compare/",
+      "/methodology/"
+    ],
+    "related_routes": [
+      "/evidence/compare/",
+      "/methodology/"
+    ]
+  },
+  {
+    "passport_id": "EP-CBY-BANKING-REVAL-K04",
+    "object_type": "Method-vintage passport",
+    "object": "2022 banking balance-sheet restatement across valuation bases",
+    "publisher": "Central Bank of Yemen — Aden",
+    "metric_or_scope": "Assets, private-sector loans, deposits and FX deposits for the same 2022 reference year",
+    "reference_period": "AR2022 vs AR2023+",
+    "universe": "Consolidated commercial and Islamic bank balance-sheet stocks",
+    "method": "Primary annual reports; AR2023 explicit market-exchange-rate valuation note",
+    "critical_limit": "Method/valuation break materially changes the same reference-year values; line-level causal attribution beyond the documented valuation note remains bounded",
+    "authority_class": "PRIMARY_OFFICIAL_METHOD_BREAK",
+    "route": "/finance/",
+    "display_requirements": "Use before/after same-year bars; never connect AR2022 value to AR2023-restated 2022 as time growth.",
+    "route_list": [
+      "/finance/",
+      "/firms/",
+      "/evidence/compare/"
+    ],
+    "related_routes": [
+      "/firms/",
+      "/evidence/compare/"
+    ]
+  },
+  {
+    "passport_id": "EP-IMF-CBY-REMIT-METHOD-K04",
+    "object_type": "Methodology / reconstruction-regime passport",
+    "object": "IMF-CBY reconstruction of external-sector and personal-transfer statistics",
+    "publisher": "IMF Statistics Department / CBY-Aden engagement",
+    "metric_or_scope": "Sep-2024–Apr-2025 virtual work; July-2025 D4D-II mission produced BOP/IIP 2014–2024; demographic-behavioral personal-transfer model; 33% IRG population allocation; CBY expected to compile 2025 ESS using mission methods.",
+    "reference_period": "2014–2025 reconstruction / 2025–26 publication cycle",
+    "universe": "IRG analytical ESS framework; component scopes/source methods vary",
+    "method": "Primary IMF D4D-II + Article IV statistical annex",
+    "critical_limit": "Reconstruction production is verified; exact CBY AR2025 line-by-line crosswalk remains unavailable publicly.",
+    "authority_class": "PRIMARY_OFFICIAL_METHOD_AND_PRODUCTION_AUTHORITY",
+    "route": "/remittances/",
+    "display_requirements": "Separate documented method, numerical concordance and unresolved level/scope mapping.",
+    "route_list": [
+      "/remittances/",
+      "/methodology/",
+      "/evidence/compare/"
+    ],
+    "related_routes": [
+      "/methodology/",
+      "/evidence/compare/"
+    ]
+  },
+  {
+    "passport_id": "EP-CBY-BANKING-VALUATION-LINEAGE-K04",
+    "object_type": "Method-lineage passport",
+    "object": "Historical and contemporary market-rate valuation of foreign-currency positions in Yemen banking statistics",
+    "publisher": "IMF e-GDDS historical metadata + Central Bank of Yemen — Aden",
+    "metric_or_scope": "Historical market-rate valuation from 1-Jul-1996; contemporary CBY-Aden valuation/reporting change effective Jan-2023; 31-Jan-2023 circular referenced by MFD",
+    "reference_period": "1996 historical metadata; 2023 contemporary change; reviewed 2026-09-10",
+    "universe": "Foreign-currency-denominated accounts / bank foreign-currency positions under source-specific statistical/reporting scopes",
+    "method": "Cross-vintage method lineage from IMF metadata, CBY annual report and CBY MFD",
+    "critical_limit": "Historical precedent does not establish continuity/equivalence to the 2023 regime; exact circular text and legal/statistical lineage remain open",
+    "authority_class": "PRIMARY_OFFICIAL_MULTI_VINTAGE_METHOD_LINEAGE",
+    "route": "/finance/",
+    "display_requirements": "Use a two-era timeline and say 'contemporary January-2023 change'; never claim first-ever market valuation.",
+    "route_list": [
+      "/finance/",
+      "/firms/",
+      "/methodology/",
+      "/evidence/compare/"
+    ],
+    "related_routes": [
+      "/firms/",
+      "/methodology/",
+      "/evidence/compare/"
+    ]
+  },
+  {
+    "passport_id": "EP-WB-WDI-REMITTANCE-VINTAGE-K04",
+    "object_type": "Public-interface / dataset-version passport",
+    "object": "World Bank Yemen personal-remittance availability across public surfaces/access vintages",
+    "publisher": "World Bank Data / WDI",
+    "metric_or_scope": "Exact interface state, indicator concept and retrieval date; prior publications can legitimately reflect earlier access vintages.",
+    "reference_period": "Historical/current surfaces reviewed 2026-09-10",
+    "universe": "Source/interface-specific",
+    "method": "World Bank Data/WDI + documented prior source use",
+    "critical_limit": "An interface endpoint does not establish underlying dataset absence, deletion or revision cause.",
+    "authority_class": "WORLD_BANK_PUBLIC_INTERFACE_AND_VERSION_CONTROL",
+    "route": "/remittances/",
+    "display_requirements": "Preserve exact URL/retrieval date and never silently backfill/reconcile interfaces.",
+    "route_list": [
+      "/remittances/",
+      "/evidence/",
+      "/methodology/"
+    ],
+    "related_routes": [
+      "/evidence/",
+      "/methodology/"
+    ]
+  },
+  {
+    "passport_id": "EP-YEM-BOP-COMPONENT-XWALK-K04",
+    "object_type": "Component-crosswalk passport",
+    "object": "CBY AR2025 ↔ IMF Article IV external-sector component reconciliation",
+    "publisher": "CBY-Aden + IMF",
+    "metric_or_scope": "Nine component method classes; 36 year-component comparisons; remittance constant-scalar fingerprint; global scalar hypothesis rejected.",
+    "reference_period": "2021–2024 overlap; method work 2014–2025",
+    "universe": "CBY publication scope vs IMF IRG analytical scope",
+    "method": "Primary published tables + IMF Annex IV + transparent formulas",
+    "critical_limit": "Component-specific comparability only; sign/scope/method differences remain material.",
+    "authority_class": "PRIMARY_MULTI_SOURCE_PLUS_REPRODUCIBLE_DERIVATION",
+    "route": "/remittances/",
+    "display_requirements": "Never apply one scalar across BOP; use 191 classification.",
+    "route_list": [
+      "/remittances/",
+      "/finance/",
+      "/evidence/compare/"
+    ],
+    "related_routes": [
+      "/finance/",
+      "/evidence/compare/"
+    ]
+  },
+  {
+    "passport_id": "EP-YEM-BOP-RESIDUAL-K04",
+    "object_type": "Residual passport",
+    "object": "Net errors & omissions as external-account uncertainty signal",
+    "publisher": "CBY AR2025 + IMF Article IV",
+    "metric_or_scope": "Source-internal E&O values and ratios; formal BPM identity and interpretation boundary.",
+    "reference_period": "2021–2025",
+    "universe": "Each source's own BOP universe",
+    "method": "Primary BOP tables + reproducible formulas + BPM semantics",
+    "critical_limit": "E&O is a net balancing residual and cannot identify a missing component or gross offsetting errors.",
+    "authority_class": "PRIMARY_OFFICIAL_PLUS_DERIVATION",
+    "route": "/remittances/",
+    "display_requirements": "Residual ≠ hidden remittance; no source-quality ranking from residual size alone.",
+    "route_list": [
+      "/remittances/",
+      "/finance/",
+      "/evidence/"
+    ],
+    "related_routes": [
+      "/finance/",
+      "/evidence/"
+    ]
+  },
+  {
+    "passport_id": "EP-CCY-REMIT-RESIDUAL-MODEL-K04",
+    "object_type": "Alternative-model passport",
+    "object": "Residual-model remittance estimate, 2024 (producer and value withheld: no public locator)",
+    "publisher": "Withheld — no public locator",
+    "metric_or_scope": "BOP residual-identification model using public/KII inputs and an assumed E&O entry.",
+    "reference_period": "2024 estimate",
+    "universe": "Whole-Yemen analytical target",
+    "method": "Balance-of-payments residual model; the underlying material has no public locator",
+    "critical_limit": "Errors in other BOP components and the E&O assumption load into the remittance residual; informal remittances are not directly observed.",
+    "authority_class": "SECONDARY_MODEL_BASED",
+    "route": "/evidence/CLM-044/",
+    "display_requirements": "Never replace official baselines. The value and the producer are not shown until the material has a public locator (Master-first).",
+    "route_list": [
+      "/evidence/CLM-044/"
+    ],
+    "related_routes": []
+  },
+  {
+    "passport_id": "EP-YEM-BOP-IIP-RECON-K04",
+    "object_type": "Reconciliation-method passport",
+    "object": "BOP↔IIP stock-flow reconciliation",
+    "publisher": "IMF statistical standards + future CBY/IMF Yemen inputs",
+    "metric_or_scope": "BOP identity; IIP opening/closing positions; transactions; FX/price/other-volume changes; sign and standard version.",
+    "reference_period": "Current specification; future data population",
+    "universe": "Source-specific",
+    "method": "BPM6 compilation guidance; BPM7 migration strategy",
+    "critical_limit": "The reconciliation specification is defined; Yemen IIP input positions and a reconciliation table are not yet available in the public evidence base.",
+    "authority_class": "PRIMARY_STANDARD_METHOD__INPUTS_OPEN",
+    "route": "/remittances/",
+    "display_requirements": "Do not infer transactions from stock changes or publish blank/template rows as observations.",
+    "route_list": [
+      "/remittances/",
+      "/finance/",
+      "/methodology/"
+    ],
+    "related_routes": [
+      "/finance/",
+      "/methodology/"
+    ]
+  },
+  {
+    "passport_id": "EP-CBY-IMF-XWALK-REQUEST-K04",
+    "object_type": "Evidence-acquisition passport",
+    "object": "Exact CBY–IMF external-statistics crosswalk request",
+    "publisher": "IMF STA / CBY BOP compiler + relevant data owners",
+    "metric_or_scope": "18 precise evidence requests with fallback, confidentiality/public-use treatment and acceptance tests.",
+    "reference_period": "2014–2026 target evidence",
+    "universe": "Component/source-specific",
+    "method": "Research-gap conversion based on documented evidence",
+    "critical_limit": "Request readiness does not imply access or institutional endorsement.",
+    "authority_class": "OPERATIONAL_EVIDENCE_REQUEST",
+    "route": "/evidence/",
+    "display_requirements": "Do not describe requested/internal documents as obtained until receipt and provenance verification.",
+    "route_list": [
+      "/evidence/",
+      "/methodology/"
+    ],
+    "related_routes": [
+      "/methodology/"
+    ]
+  },
+  {
+    "passport_id": "EP-YEM-CASH-FIN-TRANSMISSION-K04",
+    "object_type": "Evidence-fusion passport",
+    "object": "Cash/remittance delivery to durable financial-use pathway",
+    "publisher": "World Bank/G2Px + RPW + material without a public locator (not named)",
+    "metric_or_scope": "Delivery, usability, resilience, local/relational finance, formal-access opportunity, durable use and outcome states.",
+    "reference_period": "2023–2026",
+    "universe": "Source-specific local/programme/project universes",
+    "method": "Evidence synthesis; no synthetic national prevalence",
+    "critical_limit": "Evidence is meaningful through several intermediate links; durable post-transfer account/wallet use remains unobserved.",
+    "authority_class": "MULTI_SOURCE_BOUNDED_FUSION",
+    "route": "/payments/",
+    "display_requirements": "Cash receipt ≠ inclusion; project target ≠ outcome; local association ≠ national causality.",
+    "route_list": [
+      "/payments/",
+      "/people/"
+    ],
+    "related_routes": [
+      "/people/"
+    ]
+  },
+  {
+    "passport_id": "EP-SAUDI-SUPPORT-FLOWSTATE-K04",
+    "object_type": "Flow-state passport",
+    "object": "Saudi support to Yemen — announcement through downstream use",
+    "publisher": "AidData + SPA/SDRPY + IMF",
+    "metric_or_scope": "Pledge, commitment, agreement, deposited custody, availability, budget disbursement, FX-auction use, in-kind support, project cost and platform aggregate.",
+    "reference_period": "2010–2026",
+    "universe": "Source/package-specific",
+    "method": "Primary donor/multilateral evidence plus historical AidData method",
+    "critical_limit": "No single fully reconciled public cash-flow ledger; parent/child packages and states can overlap.",
+    "authority_class": "MULTI_SOURCE_FLOW_STATE_LEDGER",
+    "route": "/evidence/",
+    "display_requirements": "Never add unlike states; custody ≠ availability; downstream auction use ≠ new external support.",
+    "route_list": [
+      "/evidence/"
+    ],
+    "related_routes": []
+  },
+  {
+    "passport_id": "EP-WB-RPW-KSA-YEM-K04",
+    "object_type": "Price-data passport",
+    "object": "Saudi Arabia→Yemen formal remittance corridor cost",
+    "publisher": "World Bank Remittance Prices Worldwide",
+    "metric_or_scope": "USD200-equivalent transfer; provider/product/access/receiving method; fee + FX margin + total cost.",
+    "reference_period": "Q3 2025 documented observation",
+    "universe": "Formal RPW-listed products",
+    "method": "Standardized primary price collection",
+    "critical_limit": "Does not measure informal-channel costs or every nonprice friction.",
+    "authority_class": "PRIMARY_STANDARDIZED_PRICE_DATA",
+    "route": "/remittances/",
+    "display_requirements": "Display quarter, amount and product/service characteristics; never call corridor average universal.",
+    "route_list": [
+      "/remittances/"
+    ],
+    "related_routes": []
+  },
+  {
+    "passport_id": "EP-IBS-EMONEY-2019-K04",
+    "object_type": "Historical indicator passport",
+    "object": "Electronic-money accounts and activity qualifier",
+    "publisher": "Institute of Banking Studies (Yemen)",
+    "metric_or_scope": "807,919 accounts across five study wallets/providers; source reports average 23% dormant/inactive in 2019 and notes some accounts were one-time/imposed.",
+    "reference_period": "Dec-2019; contextual series 2016–2019",
+    "universe": "Five electronic-money providers/wallets captured by the study",
+    "method": "Source-reported sector statistics + source qualifier",
+    "critical_limit": "Accounts are not unique people or automatically active; 23% is a source average, not provider-specific/current.",
+    "authority_class": "PRIMARY_SECTOR_STUDY__HISTORICAL",
+    "route": "/payments/",
+    "display_requirements": null,
+    "route_list": [
+      "/payments/",
+      "/people/",
+      "/methodology/",
+      "/access/"
+    ],
+    "related_routes": [
+      "/people/",
+      "/methodology/",
+      "/access/"
+    ]
+  },
+  {
+    "passport_id": "EP-IBS-EMONEY-VALUE-K04",
+    "object_type": "Historical series/derivation passport",
+    "object": "E-money transaction value and functional mix",
+    "publisher": "Institute of Banking Studies (Yemen) + CauseWay derivation",
+    "metric_or_scope": "Table 8 total YER 118,905,021,167 in 2019; CauseWay transparently groups cash-in/out, bank↔e, transfers and bills/purchases.",
+    "reference_period": "2016–2019; derived comparison 2018–2019",
+    "universe": "Source transactions across the five-provider study universe",
+    "method": "Source-reported table + formula-reproducible grouping",
+    "critical_limit": "Transaction value is not unique users, merchant adoption, welfare or durable inclusion; grouping is CauseWay-derived, not source-native.",
+    "authority_class": "PRIMARY_TABLE_PLUS_APPROVED_DERIVATION",
+    "route": "/payments/",
+    "display_requirements": null,
+    "route_list": [
+      "/payments/",
+      "/evidence/compare/"
+    ],
+    "related_routes": [
+      "/evidence/compare/"
+    ]
+  },
+  {
+    "passport_id": "EP-IBS-GEO-GENDER-K04",
+    "object_type": "Historical distribution passport",
+    "object": "E-money account/user gender and urban-rural distribution",
+    "publisher": "Institute of Banking Studies (Yemen)",
+    "metric_or_scope": "Source reports 87% male/13% female average and 93.8% city concentration over 2016–2019; rural annual shares 4/5/7/9%.",
+    "reference_period": "2016–2019",
+    "universe": "Source/provider e-money account/user evidence",
+    "method": "Source-reported averages/distribution",
+    "critical_limit": "Not national adult prevalence; not current geography; not comparable to Findex without universe/method bridge; 611-user survey has different sample composition.",
+    "authority_class": "PRIMARY_SECTOR_STUDY__HISTORICAL",
+    "route": "/people/",
+    "display_requirements": null,
+    "route_list": [
+      "/people/",
+      "/payments/",
+      "/access/"
+    ],
+    "related_routes": [
+      "/payments/",
+      "/access/"
+    ]
+  },
+  {
+    "passport_id": "EP-MFB-BORROWERS-2023-K04",
+    "object_type": "Historical/current-boundary indicator passport",
+    "object": "Active microfinance borrowers — end-2023",
+    "publisher": "Sana'a Center 2024 citing SFD/SMED Loan Portfolio archive",
+    "metric_or_scope": "78,686 active borrowers",
+    "reference_period": "End-2023",
+    "universe": "Yemen microfinance sector as represented in the cited SFD/SMED source chain; exact provider coverage remains pending the primary object.",
+    "method": "Strong secondary source with identified primary SFD/SMED locator; cross-period derivations are CauseWay-recomputed",
+    "critical_limit": "Primary 2023 source object and universe bridge are not yet available for direct verification; cannot be treated as 2026 or as population prevalence",
+    "authority_class": "T2_STRONG_SECONDARY_WITH_T1_LOCATOR",
+    "route": "/finance/",
+    "display_requirements": "Display end-2023 period, evidence tier, primary-locator-open badge and borrower object; no interpolation to June or 2026.",
+    "route_list": [
+      "/finance/",
+      "/methodology/"
+    ],
+    "related_routes": [
+      "/methodology/"
+    ]
+  },
+  {
+    "passport_id": "EP-MFB-SAVERS-2023-K04",
+    "object_type": "Object/definition passport",
+    "object": "Active savers/depositors — MFB source terminology",
+    "publisher": "Sana'a Center 2024 citing SFD/SMED/YMN upstream material",
+    "metric_or_scope": "3.3 million “active savers” (source term) in 2023; 96/4 concentration wording remains pending denominator reconciliation",
+    "reference_period": "2023 / concentration wording spans 2016–2023",
+    "universe": "MFB saver/depositor objects under source terminology; uniqueness and cross-institution deduplication not established",
+    "method": "Source-reported secondary count with semantic controls; precise concentration split not reconstructed",
+    "critical_limit": "Savers/depositors are not automatically unique people, households, accounts with transactions, or financial-inclusion prevalence",
+    "authority_class": "T2_STRONG_SECONDARY__DEFINITION_OPEN",
+    "route": "/finance/",
+    "display_requirements": "Show object label, source period, denominator/uniqueness warning and contradiction link; no '3.3m financially included Yemenis' wording.",
+    "route_list": [
+      "/finance/",
+      "/people/"
+    ],
+    "related_routes": [
+      "/people/"
+    ]
+  },
+  {
+    "passport_id": "EP-MFB-PORTFOLIO-2023-K04",
+    "object_type": "Historical portfolio passport",
+    "object": "Outstanding microfinance portfolio — nominal YER",
+    "publisher": "Sana'a Center 2024 + Social Protection 2024 citing SFD/SMED Nov-2023 archive",
+    "metric_or_scope": "About/exceeding YER44 billion",
+    "reference_period": "Nov / end-2023",
+    "universe": "Microfinance/SFD-SMED-supported portfolio as represented in the cited source chains; exact November/end-year universe bridge open",
+    "method": "Bounded secondary level with exact upstream locator; CauseWay cross-period changes are nominal formulas only",
+    "critical_limit": "Nominal value does not establish real credit deepening, borrower reach, welfare, or USD-comparable growth across Yemen's currency regimes",
+    "authority_class": "T2_VALUE_WITH_T1_LOCATOR",
+    "route": "/finance/",
+    "display_requirements": "Display nominal YER, approximate/lower-bound wording, exact period/source tier and no real-growth inference.",
+    "route_list": [
+      "/finance/",
+      "/evidence/compare/"
+    ],
+    "related_routes": [
+      "/evidence/compare/"
+    ]
+  },
+  {
+    "passport_id": "EP-SMEPS-2024-PROGRAMME",
+    "object_type": "Programme evidence passport",
+    "object": "SMEPS 2024 programme reach, jobs and disbursement",
+    "publisher": "Small and Micro Enterprise Promotion Service (SMEPS)",
+    "metric_or_scope": "8,217 MSMEs and USD22,865,322 disbursed in 2024; 31,560 MSMEs and USD54.7m across 2021–2024",
+    "reference_period": "2024; cumulative 2021–2024",
+    "universe": "SMEPS-supported MSMEs / programme portfolio",
+    "method": "Primary annual report; source-reported programme outputs and funding",
+    "critical_limit": "Programme evidence does not establish national MSME prevalence, unique national firms, national job creation or causal impact.",
+    "authority_class": "PRIMARY_PROGRAMME_REPORT",
+    "route": "/firms/",
+    "display_requirements": "Show programme universe, period, output/funding state and source; never relabel programme reach as national financial inclusion.",
+    "route_list": [
+      "/firms/"
+    ],
+    "related_routes": []
+  },
+  {
+    "passport_id": "EP-SMEPS-FINACCESS-KPI",
+    "object_type": "Programme KPI passport",
+    "object": "SMEPS-supported MSMEs accessing financial services",
+    "publisher": "Small and Micro Enterprise Promotion Service (SMEPS)",
+    "metric_or_scope": "19% in 2024; 15% total achieved for 2021–2024; 40% programme target",
+    "reference_period": "2024; cumulative/target 2021–2024",
+    "universe": "SMEPS-supported MSMEs under the programme KPI",
+    "method": "Primary annual-report KPI table; source-reported percentage",
+    "critical_limit": "The summary KPI table does not fully specify the metric-specific denominator/assessment base or the operational definition of 'accessed financial services'. This narrows the claim; it does not nullify the source-reported KPI.",
+    "authority_class": "PRIMARY_PROGRAMME_REPORT__METHOD_DETAIL_OPEN",
+    "route": "/firms/",
+    "display_requirements": "Display exact source label, programme universe, observed-vs-target state and denominator-detail-open note. Do not present as Yemen-wide MSME financial-access prevalence or causal programme impact.",
+    "route_list": [
+      "/firms/",
+      "/evidence/"
+    ],
+    "related_routes": [
+      "/evidence/"
+    ]
+  }
+]

@@ -1,0 +1,2227 @@
+{
+ "transaction": "P1-C",
+ "scope": "P1.6 held additions: PB-0521, PB-0522, PB-0345, PB-0520, PB-0614 applied as adjudicated; PB-0160/0161 and PB-0322 rejected",
+ "new_routes": [
+  "/evidence/CLM-062/",
+  "/evidence/FMIIP-BASELINE-2025-01/"
+ ],
+ "input_master_sha256": "1d0a6cb10b48af75b73e9c0bfa4388ae2b9bb4fdb926ed7547e5991989c3cdda",
+ "output_master_sha256": "754daef2b11c4539ea4445e3c1b5a13460c7240851be8c4ee70a8e96bd39818c",
+ "cells_written": 246,
+ "changes": [
+  {
+   "finding": "P1-H01",
+   "sheet": "06_EVIDENCE_OBJECTS",
+   "row": 8,
+   "col": 4,
+   "field": "CLM-010.title_en",
+   "old": "Wallet counts require semantic reconciliation",
+   "new": "Wallet and subscriber counts require semantic reconciliation"
+  },
+  {
+   "finding": "P1-H01",
+   "sheet": "06_EVIDENCE_OBJECTS",
+   "row": 8,
+   "col": 5,
+   "field": "CLM-010.title_ar",
+   "old": "اختلاف أعداد المحافظ يحتاج إلى مطابقة دلالية",
+   "new": "اختلاف أعداد المحافظ ومشتركيها يحتاج إلى مطابقة دلالية"
+  },
+  {
+   "finding": "P1-H01",
+   "sheet": "06_EVIDENCE_OBJECTS",
+   "row": 8,
+   "col": 6,
+   "field": "CLM-010.summary_en",
+   "old": "Official CBY-Aden publications report different wallet counts at different dates/contexts—7 in 2024 Q3, 9 in 2025 H1 and 8 licensed e-wallets in a September 2025 official statement—so they should not be presented as a clean trend until their definitions are reconciled.",
+   "new": "Official CBY-Aden publications report different wallet counts at different dates and in different contexts—7 in 2024 Q3, 9 in 2025 H1 and 8 licensed e-wallets in a September 2025 official statement. The same two payment reports give e-wallet subscriber counts of 414,631, 507,585 and 581,075 for the first three quarters of 2024 (2024 Q3 report) and 2,102,484 for 2025 H1 (H1 2025 infographic). Because definitions and reporting scope have not been reconciled across these publications, neither set is presented as a continuous trend, and subscribers are not unique people or active users."
+  },
+  {
+   "finding": "P1-H01",
+   "sheet": "06_EVIDENCE_OBJECTS",
+   "row": 8,
+   "col": 7,
+   "field": "CLM-010.summary_ar",
+   "old": "تورد وثائق رسمية للبنك المركزي اليمني – عدن أعدادًا مختلفة للمحافظ في تواريخ وسياقات مختلفة: 7 في الربع الثالث 2024، و9 في النصف الأول 2025، و8 محافظ إلكترونية مرخصة في بيان رسمي في سبتمبر 2025. لذلك لا تُعرض هنا كسلسلة اتجاه قبل مطابقة التعريفات والنطاقات.",
+   "new": "تورد وثائق رسمية للبنك المركزي اليمني – عدن أعدادًا مختلفة للمحافظ في تواريخ وسياقات مختلفة: 7 في الربع الثالث 2024، و9 في النصف الأول 2025، و8 محافظ إلكترونية مرخصة في بيان رسمي في سبتمبر 2025. ويورد تقريرا المدفوعات نفسهما أعداد مشتركي المحافظ الإلكترونية: 414,631 و507,585 و581,075 للأرباع الثلاثة الأولى من 2024 (تقرير الربع الثالث 2024)، و2,102,484 للنصف الأول من 2025 (إنفوغرافيك النصف الأول 2025). ولأن التعريفات ونطاق الإبلاغ لم تُطابَق بين هذه الإصدارات، لا تُعرض أيٌّ من المجموعتين كسلسلة اتجاه متصلة، والمشتركون ليسوا أشخاصًا فريدين ولا مستخدمين نشطين."
+  },
+  {
+   "finding": "P1-H01",
+   "sheet": "06_EVIDENCE_OBJECTS",
+   "row": 8,
+   "col": 10,
+   "field": "CLM-010.period_en",
+   "old": "CBY source observations in 2024 Q3, 2025 H1 and September 2025; later official context is retained separately.",
+   "new": "CBY source observations in 2024 Q1–Q3 (subscribers), 2024 Q3, 2025 H1 and September 2025; later official context is retained separately."
+  },
+  {
+   "finding": "P1-H01",
+   "sheet": "06_EVIDENCE_OBJECTS",
+   "row": 8,
+   "col": 11,
+   "field": "CLM-010.period_ar",
+   "old": "مشاهدات من مصادر البنك المركزي للربع الثالث 2024، والنصف الأول 2025، وسبتمبر 2025؛ ويُحفظ أي سياق رسمي أحدث بصورة منفصلة.",
+   "new": "مشاهدات من مصادر البنك المركزي للأرباع الثلاثة الأولى من 2024 (المشتركون)، والربع الثالث 2024، والنصف الأول 2025، وسبتمبر 2025؛ ويُحفظ أي سياق رسمي أحدث بصورة منفصلة."
+  },
+  {
+   "finding": "P1-H01",
+   "sheet": "06_EVIDENCE_OBJECTS",
+   "row": 8,
+   "col": 12,
+   "field": "CLM-010.universe_en",
+   "old": "Wallet/e-wallet provider counts as defined by each cited CBY source; the underlying provider definition and counting basis may differ by source.",
+   "new": "Wallet/e-wallet provider counts and e-wallet subscriber counts as defined by each cited CBY source; the provider definition, subscriber definition and counting basis may differ by source."
+  },
+  {
+   "finding": "P1-H01",
+   "sheet": "06_EVIDENCE_OBJECTS",
+   "row": 8,
+   "col": 13,
+   "field": "CLM-010.universe_ar",
+   "old": "أعداد المحافظ أو مقدمي المحافظ الإلكترونية وفق تعريف كل مصدر من مصادر البنك المركزي؛ وقد يختلف تعريف مقدم الخدمة وقاعدة العد بين المصادر.",
+   "new": "أعداد المحافظ أو مقدمي المحافظ الإلكترونية وأعداد مشتركي المحافظ الإلكترونية وفق تعريف كل مصدر من مصادر البنك المركزي؛ وقد يختلف تعريف مقدم الخدمة وتعريف المشترك وقاعدة العد بين المصادر."
+  },
+  {
+   "finding": "P1-H01",
+   "sheet": "06_EVIDENCE_OBJECTS",
+   "row": 8,
+   "col": 14,
+   "field": "CLM-010.method_en",
+   "old": "Cross-source semantic reconciliation: compare date, label, provider definition and counting basis before treating 7, 9 and 8 as a sequence.",
+   "new": "Cross-source semantic reconciliation: compare date, label, provider definition and counting basis before treating 7, 9 and 8 as a sequence. The same test applies before the 2024 subscriber quarters and the 2025 H1 subscriber count are read together."
+  },
+  {
+   "finding": "P1-H01",
+   "sheet": "06_EVIDENCE_OBJECTS",
+   "row": 8,
+   "col": 15,
+   "field": "CLM-010.method_ar",
+   "old": "مواءمة دلالية بين المصادر: تُقارن التواريخ والتسميات وتعريف مقدم الخدمة وقاعدة العد قبل التعامل مع القيم 7 و9 و8 كسلسلة زمنية.",
+   "new": "مواءمة دلالية بين المصادر: تُقارن التواريخ والتسميات وتعريف مقدم الخدمة وقاعدة العد قبل التعامل مع القيم 7 و9 و8 كسلسلة زمنية. ويُطبق الاختبار نفسه قبل قراءة أرباع المشتركين في 2024 مع عدد المشتركين في النصف الأول 2025 معًا."
+  },
+  {
+   "finding": "P1-H01",
+   "sheet": "06_EVIDENCE_OBJECTS",
+   "row": 8,
+   "col": 16,
+   "field": "CLM-010.limitations_en",
+   "old": "Do not infer entry/exit events or net provider growth from 7→9→8.",
+   "new": "Do not infer entry/exit events or net provider growth from 7→9→8. Do not join 581,075 (2024 Q3) and 2,102,484 (2025 H1) as growth, and do not treat subscribers as unique people or active users."
+  },
+  {
+   "finding": "P1-H01",
+   "sheet": "06_EVIDENCE_OBJECTS",
+   "row": 8,
+   "col": 17,
+   "field": "CLM-010.limitations_ar",
+   "old": "لا يجوز تفسير التسلسل 7→9→8 باعتباره دخولًا وخروجًا فعليًا لمقدمي خدمات أو صافي نمو في عددهم.",
+   "new": "لا يجوز تفسير التسلسل 7→9→8 باعتباره دخولًا وخروجًا فعليًا لمقدمي خدمات أو صافي نمو في عددهم. ولا يجوز وصل 581,075 (الربع الثالث 2024) بـ2,102,484 (النصف الأول 2025) بوصفه نموًا، ولا معاملة المشتركين كأشخاص فريدين أو مستخدمين نشطين."
+  },
+  {
+   "finding": "P1-H01",
+   "sheet": "06_EVIDENCE_OBJECTS",
+   "row": 8,
+   "col": 18,
+   "field": "CLM-010.currentness_en",
+   "old": "The latest comparable count stated in this claim is the September 2025 figure of 8 licensed e-wallets. A later source does not extend the trend unless its definition is shown to be comparable.",
+   "new": "The latest comparable wallet count stated in this claim is the September 2025 figure of 8 licensed e-wallets, and the latest subscriber count is 2,102,484 for 2025 H1. A later source does not extend either series unless its definition is shown to be comparable."
+  },
+  {
+   "finding": "P1-H01",
+   "sheet": "06_EVIDENCE_OBJECTS",
+   "row": 8,
+   "col": 19,
+   "field": "CLM-010.currentness_ar",
+   "old": "أحدث قيمة قابلة للمقارنة في هذه الخلاصة هي 8 محافظ إلكترونية مرخصة في سبتمبر 2025. ولا تُمدد السلسلة بأي مصدر أحدث ما لم يثبت توافق تعريفه وقاعدة عده.",
+   "new": "أحدث قيمة قابلة للمقارنة لعدد المحافظ في هذه الخلاصة هي 8 محافظ إلكترونية مرخصة في سبتمبر 2025، وأحدث عدد للمشتركين هو 2,102,484 للنصف الأول 2025. ولا تُمدد أي من السلسلتين بمصدر أحدث ما لم يثبت توافق تعريفه وقاعدة عده."
+  },
+  {
+   "finding": "P1-H01",
+   "sheet": "06_EVIDENCE_OBJECTS",
+   "row": 8,
+   "col": 3,
+   "field": "CLM-010.public_routes",
+   "old": "/evidence/compare/",
+   "new": "/evidence/compare/ | /payments/ | /providers/"
+  },
+  {
+   "finding": "P1-H01",
+   "sheet": "07_PUBLIC_CLAIMS",
+   "row": 14,
+   "col": 4,
+   "field": "CLM-010.headline_en",
+   "old": "Wallet counts require semantic reconciliation",
+   "new": "Wallet and subscriber counts require semantic reconciliation"
+  },
+  {
+   "finding": "P1-H01",
+   "sheet": "07_PUBLIC_CLAIMS",
+   "row": 14,
+   "col": 5,
+   "field": "CLM-010.headline_ar",
+   "old": "اختلاف أعداد المحافظ يحتاج إلى مطابقة دلالية",
+   "new": "اختلاف أعداد المحافظ ومشتركيها يحتاج إلى مطابقة دلالية"
+  },
+  {
+   "finding": "P1-H01",
+   "sheet": "07_PUBLIC_CLAIMS",
+   "row": 14,
+   "col": 6,
+   "field": "CLM-010.copy_en",
+   "old": "Official CBY-Aden publications report different wallet counts at different dates/contexts—7 in 2024 Q3, 9 in 2025 H1 and 8 licensed e-wallets in a September 2025 official statement—so this resource does not present them as a clean trend without semantic reconciliation.",
+   "new": "Official CBY-Aden publications report different wallet counts at different dates and in different contexts—7 in 2024 Q3, 9 in 2025 H1 and 8 licensed e-wallets in a September 2025 official statement. The same two payment reports give e-wallet subscriber counts of 414,631, 507,585 and 581,075 for the first three quarters of 2024 (2024 Q3 report) and 2,102,484 for 2025 H1 (H1 2025 infographic). Because definitions and reporting scope have not been reconciled across these publications, neither set is presented as a continuous trend, and subscribers are not unique people or active users."
+  },
+  {
+   "finding": "P1-H01",
+   "sheet": "07_PUBLIC_CLAIMS",
+   "row": 14,
+   "col": 7,
+   "field": "CLM-010.copy_ar",
+   "old": "تورد وثائق رسمية للبنك المركزي اليمني – عدن أعدادًا مختلفة للمحافظ في تواريخ وسياقات مختلفة: 7 في الربع الثالث 2024، و9 في النصف الأول 2025، و8 محافظ إلكترونية مرخصة في بيان رسمي في سبتمبر 2025. لذلك لا تُعرض هنا كسلسلة اتجاه قبل مطابقة التعريفات والنطاقات.",
+   "new": "تورد وثائق رسمية للبنك المركزي اليمني – عدن أعدادًا مختلفة للمحافظ في تواريخ وسياقات مختلفة: 7 في الربع الثالث 2024، و9 في النصف الأول 2025، و8 محافظ إلكترونية مرخصة في بيان رسمي في سبتمبر 2025. ويورد تقريرا المدفوعات نفسهما أعداد مشتركي المحافظ الإلكترونية: 414,631 و507,585 و581,075 للأرباع الثلاثة الأولى من 2024 (تقرير الربع الثالث 2024)، و2,102,484 للنصف الأول من 2025 (إنفوغرافيك النصف الأول 2025). ولأن التعريفات ونطاق الإبلاغ لم تُطابَق بين هذه الإصدارات، لا تُعرض أيٌّ من المجموعتين كسلسلة اتجاه متصلة، والمشتركون ليسوا أشخاصًا فريدين ولا مستخدمين نشطين."
+  },
+  {
+   "finding": "P1-H01",
+   "sheet": "07_PUBLIC_CLAIMS",
+   "row": 14,
+   "col": 10,
+   "field": "CLM-010.does_not_prove_en",
+   "old": "Do not infer entry/exit events or net provider growth from 7→9→8.",
+   "new": "Do not infer entry/exit events or net provider growth from 7→9→8. Do not join 581,075 (2024 Q3) and 2,102,484 (2025 H1) as growth, and do not treat subscribers as unique people or active users."
+  },
+  {
+   "finding": "P1-H01",
+   "sheet": "07_PUBLIC_CLAIMS",
+   "row": 14,
+   "col": 11,
+   "field": "CLM-010.does_not_prove_ar",
+   "old": "لا يجوز تفسير التسلسل 7→9→8 باعتباره دخولًا وخروجًا فعليًا لمقدمي خدمات أو صافي نمو في عددهم.",
+   "new": "لا يجوز تفسير التسلسل 7→9→8 باعتباره دخولًا وخروجًا فعليًا لمقدمي خدمات أو صافي نمو في عددهم. ولا يجوز وصل 581,075 (الربع الثالث 2024) بـ2,102,484 (النصف الأول 2025) بوصفه نموًا، ولا معاملة المشتركين كأشخاص فريدين أو مستخدمين نشطين."
+  },
+  {
+   "finding": "P1-H01",
+   "sheet": "07_PUBLIC_CLAIMS",
+   "row": 14,
+   "col": 9,
+   "field": "CLM-010.evidence_inputs",
+   "old": "[\"11_CBY_PAYMENTS\",\"PUC-WALLET-2025-01\",\"POB-003\"]",
+   "new": "[\"11_CBY_PAYMENTS\",\"PUC-WALLET-2025-01\",\"POB-003\",\"OBS-00014\",\"OBS-00015\",\"OBS-00016\",\"OBS-00034\"]"
+  },
+  {
+   "finding": "P1-H01",
+   "sheet": "07_PUBLIC_CLAIMS",
+   "row": 14,
+   "col": 14,
+   "field": "CLM-010.public_routes",
+   "old": "[\"/evidence/compare\"]",
+   "new": "[\"/evidence/compare\",\"/payments\",\"/providers\"]"
+  },
+  {
+   "finding": "P1-H02",
+   "sheet": "06_EVIDENCE_OBJECTS",
+   "row": 7,
+   "col": 3,
+   "field": "CLM-009.public_routes",
+   "old": "/providers/ | /evidence/",
+   "new": "/providers/ | /evidence/ | /access/"
+  },
+  {
+   "finding": "P1-H02",
+   "sheet": "07_PUBLIC_CLAIMS",
+   "row": 13,
+   "col": 14,
+   "field": "CLM-009.public_routes",
+   "old": "[\"/providers\", \"/evidence\", \"/measurement\"]",
+   "new": "[\"/providers\", \"/evidence\", \"/measurement\", \"/access\"]"
+  },
+  {
+   "finding": "P1-H02",
+   "sheet": "06_EVIDENCE_OBJECTS",
+   "row": 62,
+   "col": 3,
+   "field": "CLM-008.public_routes",
+   "old": "/providers/",
+   "new": "/providers/ | /access/"
+  },
+  {
+   "finding": "P1-H02",
+   "sheet": "07_PUBLIC_CLAIMS",
+   "row": 12,
+   "col": 14,
+   "field": "CLM-008.public_routes",
+   "old": "[\"/providers\"]",
+   "new": "[\"/providers\", \"/access\"]"
+  },
+  {
+   "finding": "P1-H02",
+   "sheet": "06_EVIDENCE_OBJECTS",
+   "row": 32,
+   "col": 6,
+   "field": "XW-FMIIP-005.summary_en",
+   "old": "The FMIIP 2030 target of 1,021 access points cannot be added to or directly compared with ATMs, POS terminals or agents unless the project's access-point taxonomy and deduplication rules are documented.",
+   "new": "The FMIIP 2030 target of 1,021 access points, set against a January 2025 project baseline of 817 under the same project definition, cannot be added to or directly compared with ATMs, POS terminals or agents unless the project's access-point taxonomy and deduplication rules are documented."
+  },
+  {
+   "finding": "P1-H02",
+   "sheet": "06_EVIDENCE_OBJECTS",
+   "row": 32,
+   "col": 7,
+   "field": "XW-FMIIP-005.summary_ar",
+   "old": "لا يجوز جمع مستهدف FMIIP البالغ 1,021 نقطة وصول بحلول 2030 أو مقارنته مباشرة بأجهزة الصراف الآلي أو نقاط البيع أو الوكلاء ما لم تُوثق تصنيفات المشروع وقواعد إزالة الازدواج.",
+   "new": "لا يجوز جمع مستهدف FMIIP البالغ 1,021 نقطة وصول بحلول 2030، مقابل خط أساس للمشروع قدره 817 نقطة في يناير 2025 وفق التعريف نفسه، أو مقارنته مباشرة بأجهزة الصراف الآلي أو نقاط البيع أو الوكلاء ما لم تُوثق تصنيفات المشروع وقواعد إزالة الازدواج."
+  },
+  {
+   "finding": "P1-H02",
+   "sheet": "06_EVIDENCE_OBJECTS",
+   "row": 32,
+   "col": 10,
+   "field": "XW-FMIIP-005.period_en",
+   "old": "2025 administrative context / 2030 project target",
+   "new": "January 2025 project baseline / 2030 project target; 2025 administrative context"
+  },
+  {
+   "finding": "P1-H02",
+   "sheet": "06_EVIDENCE_OBJECTS",
+   "row": 32,
+   "col": 11,
+   "field": "XW-FMIIP-005.period_ar",
+   "old": "سياق إداري 2025 / مستهدف المشروع 2030",
+   "new": "خط أساس المشروع في يناير 2025 / مستهدف المشروع 2030؛ سياق إداري 2025"
+  },
+  {
+   "finding": "P1-H02",
+   "sheet": "06_EVIDENCE_OBJECTS",
+   "row": 32,
+   "col": 16,
+   "field": "XW-FMIIP-005.limitations_en",
+   "old": "No valid additive crosswalk is established.",
+   "new": "No valid additive crosswalk is established. The 1,021 target is shown only with its 817 baseline, and no progress percentage is calculated."
+  },
+  {
+   "finding": "P1-H02",
+   "sheet": "06_EVIDENCE_OBJECTS",
+   "row": 32,
+   "col": 17,
+   "field": "XW-FMIIP-005.limitations_ar",
+   "old": "لا توجد مطابقة صالحة تسمح بالجمع بين هذه المقاييس.",
+   "new": "لا توجد مطابقة صالحة تسمح بالجمع بين هذه المقاييس. ولا يُعرض مستهدف 1,021 إلا مع خط أساسه البالغ 817، ولا تُحسب نسبة للتقدم."
+  },
+  {
+   "finding": "P1-H02",
+   "sheet": "06_EVIDENCE_OBJECTS",
+   "row": 32,
+   "col": 18,
+   "field": "XW-FMIIP-005.currentness_en",
+   "old": "Currentness is bounded to 2025 administrative context / 2030 project target. Do not carry the value, status or interpretation beyond the latest comparable evidence available from a comparable source without a newer comparable observation.",
+   "new": "Currentness is bounded to the January 2025 project baseline / 2030 project target; 2025 administrative context. Do not carry the value, status or interpretation beyond the latest comparable evidence available from a comparable source without a newer comparable observation."
+  },
+  {
+   "finding": "P1-H02",
+   "sheet": "06_EVIDENCE_OBJECTS",
+   "row": 32,
+   "col": 19,
+   "field": "XW-FMIIP-005.currentness_ar",
+   "old": "تقتصر حداثة هذا الدليل على سياق إداري 2025 / مستهدف المشروع 2030. ولا يجوز ترحيل القيمة أو الحالة أو التفسير إلى فترة لاحقة على أحدث دليل قابل للمقارنة من دون مشاهدة أحدث قابلة للمقارنة.",
+   "new": "تقتصر حداثة هذا الدليل على خط أساس المشروع في يناير 2025 / مستهدف المشروع 2030؛ سياق إداري 2025. ولا يجوز ترحيل القيمة أو الحالة أو التفسير إلى فترة لاحقة على أحدث دليل قابل للمقارنة من دون مشاهدة أحدث قابلة للمقارنة."
+  },
+  {
+   "finding": "P1-H02",
+   "sheet": "06_EVIDENCE_OBJECTS",
+   "row": 32,
+   "col": 3,
+   "field": "XW-FMIIP-005.public_routes",
+   "old": "/reforms/ | /payments/",
+   "new": "/reforms/ | /payments/ | /access/"
+  },
+  {
+   "finding": "P1-H02",
+   "sheet": "06_EVIDENCE_OBJECTS",
+   "row": 32,
+   "col": 24,
+   "field": "XW-FMIIP-005.source_dependencies",
+   "old": "SRC-UNDP-FMIIP-001; SRC-CBY-PAYREPORT-H1-2025",
+   "new": "SRC-UNDP-FMIIP-001; SRC-CBY-PAYREPORT-H1-2025; SRC-WB-FMIIP-P180708"
+  },
+  {
+   "finding": "P1-H02",
+   "sheet": "06_EVIDENCE_OBJECTS",
+   "row": 32,
+   "col": 25,
+   "field": "XW-FMIIP-005.source_links",
+   "old": "[{\"source_id\":\"SRC-UNDP-FMIIP-001\",\"url\":\"https://www.undp.org/yemen/projects/yemen-financial-market-infrastructure-and-inclusion-project\",\"audit_state\":\"PASS_AUTHORITY_OR_PROVIDER_LOCATOR\"},{\"source_id\":\"SRC-CBY-PAYREPORT-H1-2025\",\"url\":\"https://www.cby-ye.com/files/693a7845e7f26.pdf\",\"audit_state\":\"PASS_AUTHORITY_OR_PROVIDER_LOCATOR\"}]",
+   "new": "[{\"source_id\":\"SRC-UNDP-FMIIP-001\",\"url\":\"https://www.undp.org/yemen/projects/yemen-financial-market-infrastructure-and-inclusion-project\",\"audit_state\":\"PASS_AUTHORITY_OR_PROVIDER_LOCATOR\"},{\"source_id\":\"SRC-CBY-PAYREPORT-H1-2025\",\"url\":\"https://www.cby-ye.com/files/693a7845e7f26.pdf\",\"audit_state\":\"PASS_AUTHORITY_OR_PROVIDER_LOCATOR\"},{\"source_id\":\"SRC-WB-FMIIP-P180708\",\"url\":\"https://maps.worldbank.org/projects/wb/pid/P180708?status=active\",\"audit_state\":\"PASS_AUTHORITY_OR_PROVIDER_LOCATOR\"}]"
+  },
+  {
+   "finding": "P1-H04",
+   "sheet": "06_EVIDENCE_OBJECTS",
+   "row": 5,
+   "col": 3,
+   "field": "CLM-001.public_routes",
+   "old": "/people/ | /",
+   "new": "/people/ | / | /evidence/compare/"
+  },
+  {
+   "finding": "P1-H04",
+   "sheet": "07_PUBLIC_CLAIMS",
+   "row": 5,
+   "col": 14,
+   "field": "CLM-001.public_routes",
+   "old": "[\"/people\",\"/\"]",
+   "new": "[\"/people\",\"/\",\"/evidence/compare\"]"
+  },
+  {
+   "finding": "P1-H03",
+   "sheet": "06_EVIDENCE_OBJECTS",
+   "row": 113,
+   "col": 1,
+   "field": "CLM-062.object_id",
+   "old": null,
+   "new": "CLM-062"
+  },
+  {
+   "finding": "P1-H03",
+   "sheet": "06_EVIDENCE_OBJECTS",
+   "row": 113,
+   "col": 2,
+   "field": "CLM-062.object_class",
+   "old": null,
+   "new": "CLAIM"
+  },
+  {
+   "finding": "P1-H03",
+   "sheet": "06_EVIDENCE_OBJECTS",
+   "row": 113,
+   "col": 3,
+   "field": "CLM-062.public_routes",
+   "old": null,
+   "new": "/firms/ | /evidence/"
+  },
+  {
+   "finding": "P1-H03",
+   "sheet": "06_EVIDENCE_OBJECTS",
+   "row": 113,
+   "col": 4,
+   "field": "CLM-062.title_en",
+   "old": null,
+   "new": "Formal firms in the 2022 survey: accounts were common, bank finance for working capital was not"
+  },
+  {
+   "finding": "P1-H03",
+   "sheet": "06_EVIDENCE_OBJECTS",
+   "row": 113,
+   "col": 5,
+   "field": "CLM-062.title_ar",
+   "old": null,
+   "new": "المنشآت الرسمية في مسح 2022: الحساب المصرفي شائع، أما تمويل البنوك لرأس المال العامل فنادر"
+  },
+  {
+   "finding": "P1-H03",
+   "sheet": "06_EVIDENCE_OBJECTS",
+   "row": 113,
+   "col": 6,
+   "field": "CLM-062.summary_en",
+   "old": null,
+   "new": "Among formal firms in the 2022 seven-governorate survey, 58.2% (191 of 328) reported a checking or savings account. Their working capital came mainly from internal sources: on average, 69.12% came from internal funds or retained earnings, 16.66% from money lenders, friends or relatives, 10.15% from advance payments by clients, 1.97% from non-bank financial institutions, 1.31% from supplier credit and 0.56% from banks. In a separate question on the financial intermediaries they use, 73.48% of responding formal firms named an exchange store or money exchanger and 24.39% a commercial bank; firms could name more than one, so these are not market shares. The evidence base does not hold the number of firms behind the working-capital averages or the intermediary question. Among the 217 informal firms surveyed, 80.18% had no bank account; that sample was drawn from activity and location lists rather than a national register. The formal-firm sample includes micro firms with fewer than five employees, and neither sample represents all Yemeni firms."
+  },
+  {
+   "finding": "P1-H03",
+   "sheet": "06_EVIDENCE_OBJECTS",
+   "row": 113,
+   "col": 7,
+   "field": "CLM-062.summary_ar",
+   "old": null,
+   "new": "أفادت 58.2% من المنشآت الرسمية في مسح عام 2022 الذي شمل سبع محافظات (191 من أصل 328 منشأة) بأن لديها حسابًا جاريًا أو حساب ادخار. غير أن رأس مالها العامل اعتمد أساسًا على مصادر داخلية: ففي المتوسط جاء 69.12% منه من الأموال الذاتية أو الأرباح المحتجزة، و16.66% من المقرضين أو الأصدقاء أو الأقارب، و10.15% من دفعات مقدمة من العملاء، و1.97% من مؤسسات مالية غير مصرفية، و1.31% من ائتمان الموردين، و0.56% فقط من البنوك. وفي سؤال مستقل عن الوسطاء الماليين الذين تتعامل معهم، ذكرت 73.48% من المنشآت الرسمية المجيبة محلات الصرافة أو الصرافين، و24.39% البنوك التجارية؛ ولأن المنشأة كان بإمكانها ذكر أكثر من وسيط، فهذه النسب ليست حصصًا سوقية. ولا تتضمن قاعدة الأدلة عدد المنشآت التي تستند إليها متوسطات رأس المال العامل ولا عدد المجيبين عن سؤال الوسطاء. أما المنشآت غير الرسمية التي شملها المسح، وعددها 217 منشأة، فلم يكن لدى 80.18% منها حساب مصرفي، وقد سُحبت عينتها من قوائم للأنشطة والمواقع لا من سجل وطني. وتضم عينة المنشآت الرسمية منشآت صغرى يقل عدد العاملين فيها عن خمسة، ولا تمثل أيٌّ من العينتين جميع المنشآت في اليمن."
+  },
+  {
+   "finding": "P1-H03",
+   "sheet": "06_EVIDENCE_OBJECTS",
+   "row": 113,
+   "col": 8,
+   "field": "CLM-062.definition_en",
+   "old": null,
+   "new": "Firm-level financial behaviour reported by a World Bank custom enterprise survey: account holding, average working-capital source shares, financial intermediaries used, and informal firms' account holding."
+  },
+  {
+   "finding": "P1-H03",
+   "sheet": "06_EVIDENCE_OBJECTS",
+   "row": 113,
+   "col": 9,
+   "field": "CLM-062.definition_ar",
+   "old": null,
+   "new": "سلوك مالي للمنشآت كما أورده مسح مخصص للمنشآت أجراه البنك الدولي: امتلاك الحساب، ومتوسط حصص مصادر رأس المال العامل، والوسطاء الماليون المستخدمون، وامتلاك المنشآت غير الرسمية للحسابات."
+  },
+  {
+   "finding": "P1-H03",
+   "sheet": "06_EVIDENCE_OBJECTS",
+   "row": 113,
+   "col": 10,
+   "field": "CLM-062.period_en",
+   "old": null,
+   "new": "2022 survey (September 2022); published 2024"
+  },
+  {
+   "finding": "P1-H03",
+   "sheet": "06_EVIDENCE_OBJECTS",
+   "row": 113,
+   "col": 11,
+   "field": "CLM-062.period_ar",
+   "old": null,
+   "new": "مسح 2022 (سبتمبر 2022)؛ نُشر في 2024"
+  },
+  {
+   "finding": "P1-H03",
+   "sheet": "06_EVIDENCE_OBJECTS",
+   "row": 113,
+   "col": 12,
+   "field": "CLM-062.universe_en",
+   "old": null,
+   "new": "Two separate samples in seven selected governorates: 328 formal enterprises (including micro firms with fewer than five employees) and 217 informal enterprises drawn from activity and location lists. Neither sample represents all Yemeni firms."
+  },
+  {
+   "finding": "P1-H03",
+   "sheet": "06_EVIDENCE_OBJECTS",
+   "row": 113,
+   "col": 13,
+   "field": "CLM-062.universe_ar",
+   "old": null,
+   "new": "عينتان منفصلتان في سبع محافظات مختارة: 328 منشأة رسمية (تشمل منشآت صغرى يقل عدد العاملين فيها عن خمسة)، و217 منشأة غير رسمية سُحبت عينتها من قوائم للأنشطة والمواقع. ولا تمثل أيٌّ من العينتين جميع المنشآت في اليمن."
+  },
+  {
+   "finding": "P1-H03",
+   "sheet": "06_EVIDENCE_OBJECTS",
+   "row": 113,
+   "col": 14,
+   "field": "CLM-062.method_en",
+   "old": null,
+   "new": "Source-reported survey tabulations (Annex III, Figures 104, 109, 110 and 114–115): an account share with its numerator and base; average working-capital source shares; a multiple-response question on intermediaries; an informal-firm account share with its base."
+  },
+  {
+   "finding": "P1-H03",
+   "sheet": "06_EVIDENCE_OBJECTS",
+   "row": 113,
+   "col": 15,
+   "field": "CLM-062.method_ar",
+   "old": null,
+   "new": "جداول مسحية كما أوردها المصدر (الملحق الثالث، الأشكال 104 و109 و110 و114–115): حصة امتلاك الحساب مع بسطها وقاعدتها، ومتوسط حصص مصادر رأس المال العامل، وسؤال متعدد الإجابات عن الوسطاء، وحصة امتلاك الحساب بين المنشآت غير الرسمية مع قاعدتها."
+  },
+  {
+   "finding": "P1-H03",
+   "sheet": "06_EVIDENCE_OBJECTS",
+   "row": 113,
+   "col": 16,
+   "field": "CLM-062.limitations_en",
+   "old": null,
+   "new": "The evidence base does not hold the number of firms behind the working-capital averages or the intermediary question. An average working-capital share is not a share of firms, and multiple-response percentages are not market shares. Holding an account does not show that a firm uses bank credit. The formal and informal samples use different frames: they must not be added together or compared with the 2013 survey. Firms are not people, so these shares must not be set beside the Findex account-ownership rate."
+  },
+  {
+   "finding": "P1-H03",
+   "sheet": "06_EVIDENCE_OBJECTS",
+   "row": 113,
+   "col": 17,
+   "field": "CLM-062.limitations_ar",
+   "old": null,
+   "new": "لا تتضمن قاعدة الأدلة عدد المنشآت التي تستند إليها متوسطات رأس المال العامل ولا عدد المجيبين عن سؤال الوسطاء. ومتوسط حصة رأس المال العامل ليس نسبة من المنشآت، ونسب الأسئلة متعددة الإجابات ليست حصصًا سوقية. وامتلاك المنشأة حسابًا لا يثبت أنها تستخدم الائتمان المصرفي. كما يختلف إطار العينتين الرسمية وغير الرسمية، فلا يجوز جمعهما ولا مقارنتهما بمسح 2013. والمنشآت ليست أفرادًا، فلا تُوضع هذه النسب بجانب نسبة امتلاك الحساب في Findex."
+  },
+  {
+   "finding": "P1-H03",
+   "sheet": "06_EVIDENCE_OBJECTS",
+   "row": 113,
+   "col": 18,
+   "field": "CLM-062.currentness_en",
+   "old": null,
+   "new": "Currentness is bounded to the 2022 survey (September 2022). Do not carry the value, status or interpretation beyond the latest comparable evidence available from a comparable source without a newer comparable observation."
+  },
+  {
+   "finding": "P1-H03",
+   "sheet": "06_EVIDENCE_OBJECTS",
+   "row": 113,
+   "col": 19,
+   "field": "CLM-062.currentness_ar",
+   "old": null,
+   "new": "تقتصر حداثة هذا الدليل على مسح 2022 (سبتمبر 2022). ولا يجوز ترحيل القيمة أو الحالة أو التفسير إلى فترة لاحقة على أحدث دليل قابل للمقارنة من دون مشاهدة أحدث قابلة للمقارنة."
+  },
+  {
+   "finding": "P1-H03",
+   "sheet": "06_EVIDENCE_OBJECTS",
+   "row": 113,
+   "col": 24,
+   "field": "CLM-062.source_dependencies",
+   "old": null,
+   "new": "SRC-WB-FSD-2024-001"
+  },
+  {
+   "finding": "P1-H03",
+   "sheet": "06_EVIDENCE_OBJECTS",
+   "row": 113,
+   "col": 26,
+   "field": "CLM-062.lineage_state",
+   "old": null,
+   "new": "BOUND_EXACT"
+  },
+  {
+   "finding": "P1-H03",
+   "sheet": "06_EVIDENCE_OBJECTS",
+   "row": 113,
+   "col": 20,
+   "field": "CLM-062.change_trigger_en",
+   "old": null,
+   "new": "Update this record when an authoritative source is revised or replaced, a newer comparable observation becomes available, the definition, population or method changes, or the conditions for public use change."
+  },
+  {
+   "finding": "P1-H03",
+   "sheet": "06_EVIDENCE_OBJECTS",
+   "row": 113,
+   "col": 21,
+   "field": "CLM-062.change_trigger_ar",
+   "old": null,
+   "new": "يُحدَّث هذا السجل عند مراجعة المصدر المرجعي أو استبداله، أو توفر مشاهدة أحدث قابلة للمقارنة، أو تغير التعريف أو المجتمع أو الطريقة، أو تغير شروط الاستخدام العام."
+  },
+  {
+   "finding": "P1-H03",
+   "sheet": "06_EVIDENCE_OBJECTS",
+   "row": 113,
+   "col": 22,
+   "field": "CLM-062.verification_en",
+   "old": null,
+   "new": "This record is drawn from the source(s) listed on this page. Open a source record to reach the original document, and check that the definition, period, population and geography match what is stated here."
+  },
+  {
+   "finding": "P1-H03",
+   "sheet": "06_EVIDENCE_OBJECTS",
+   "row": 113,
+   "col": 23,
+   "field": "CLM-062.verification_ar",
+   "old": null,
+   "new": "يستند هذا السجل إلى المصدر أو المصادر المدرجة في هذه الصفحة. افتح سجل المصدر للوصول إلى الوثيقة الأصلية، وتحقق من تطابق التعريف والفترة والمجتمع والنطاق الجغرافي مع ما يرد هنا."
+  },
+  {
+   "finding": "P1-H03",
+   "sheet": "06_EVIDENCE_OBJECTS",
+   "row": 113,
+   "col": 25,
+   "field": "CLM-062.source_links",
+   "old": null,
+   "new": "[{\"source_id\":\"SRC-WB-FSD-2024-001\",\"url\":\"https://documents1.worldbank.org/curated/en/099102324070011985/pdf/P177631-d18a7ee4-3fcf-4393-9665-77f98b3e43a7.pdf\",\"audit_state\":\"PASS_AUTHORITY_OR_PROVIDER_LOCATOR\"}]"
+  },
+  {
+   "finding": "P1-H04",
+   "sheet": "06_EVIDENCE_OBJECTS",
+   "row": 114,
+   "col": 1,
+   "field": "FMIIP-BASELINE-2025-01.object_id",
+   "old": null,
+   "new": "FMIIP-BASELINE-2025-01"
+  },
+  {
+   "finding": "P1-H04",
+   "sheet": "06_EVIDENCE_OBJECTS",
+   "row": 114,
+   "col": 2,
+   "field": "FMIIP-BASELINE-2025-01.object_class",
+   "old": null,
+   "new": "TEMPORAL_OBSERVATION"
+  },
+  {
+   "finding": "P1-H04",
+   "sheet": "06_EVIDENCE_OBJECTS",
+   "row": 114,
+   "col": 3,
+   "field": "FMIIP-BASELINE-2025-01.public_routes",
+   "old": null,
+   "new": "/reforms/ | /evidence/compare/"
+  },
+  {
+   "finding": "P1-H04",
+   "sheet": "06_EVIDENCE_OBJECTS",
+   "row": 114,
+   "col": 4,
+   "field": "FMIIP-BASELINE-2025-01.title_en",
+   "old": null,
+   "new": "FMIIP project baselines for January 2025 count accounts, access points, merchants and agents — not people"
+  },
+  {
+   "finding": "P1-H04",
+   "sheet": "06_EVIDENCE_OBJECTS",
+   "row": 114,
+   "col": 5,
+   "field": "FMIIP-BASELINE-2025-01.title_ar",
+   "old": null,
+   "new": "خطوط الأساس لمشروع FMIIP في يناير 2025 تعدّ الحسابات ونقاط الوصول والتجار والوكلاء، لا الأشخاص"
+  },
+  {
+   "finding": "P1-H04",
+   "sheet": "06_EVIDENCE_OBJECTS",
+   "row": 114,
+   "col": 6,
+   "field": "FMIIP-BASELINE-2025-01.summary_en",
+   "old": null,
+   "new": "The results framework of the World Bank-financed Yemen Financial Market Infrastructure and Inclusion Project (FMIIP, P180708) records January 2025 baselines for its own project-defined indicators: 1,062,441 active bank accounts (200,898 of them owned by women), 375,252 active e-wallet accounts, 817 financial access points, 170 merchants accepting electronic payments and 65 agents of licensed financial institutions. These are project baselines that count accounts, access points, merchants and agents — not people."
+  },
+  {
+   "finding": "P1-H04",
+   "sheet": "06_EVIDENCE_OBJECTS",
+   "row": 114,
+   "col": 7,
+   "field": "FMIIP-BASELINE-2025-01.summary_ar",
+   "old": null,
+   "new": "يسجل إطار نتائج مشروع البنية التحتية للأسواق والشمول المالي في اليمن (FMIIP، P180708) الممول من البنك الدولي خطوط أساس في يناير 2025 لمؤشراته المعرّفة داخل المشروع: 1,062,441 حسابًا مصرفيًا نشطًا (منها 200,898 حسابًا مملوكًا لنساء)، و375,252 حساب محفظة إلكترونية نشطًا، و817 نقطة وصول مالي، و170 تاجرًا يقبلون المدفوعات الإلكترونية، و65 وكيلًا لمؤسسات مالية مرخصة. وهذه خطوط أساس للمشروع تعدّ الحسابات ونقاط الوصول والتجار والوكلاء، لا الأشخاص."
+  },
+  {
+   "finding": "P1-H04",
+   "sheet": "06_EVIDENCE_OBJECTS",
+   "row": 114,
+   "col": 8,
+   "field": "FMIIP-BASELINE-2025-01.definition_en",
+   "old": null,
+   "new": "Baseline values recorded in a project results framework for indicators the project itself defines; a baseline is the project's starting reference, not an independent measurement of the financial system."
+  },
+  {
+   "finding": "P1-H04",
+   "sheet": "06_EVIDENCE_OBJECTS",
+   "row": 114,
+   "col": 9,
+   "field": "FMIIP-BASELINE-2025-01.definition_ar",
+   "old": null,
+   "new": "قيم خط الأساس المسجلة في إطار نتائج مشروع لمؤشرات يعرّفها المشروع نفسه؛ وخط الأساس نقطة انطلاق مرجعية للمشروع، لا قياس مستقل للنظام المالي."
+  },
+  {
+   "finding": "P1-H04",
+   "sheet": "06_EVIDENCE_OBJECTS",
+   "row": 114,
+   "col": 10,
+   "field": "FMIIP-BASELINE-2025-01.period_en",
+   "old": null,
+   "new": "January 2025 (project baseline)"
+  },
+  {
+   "finding": "P1-H04",
+   "sheet": "06_EVIDENCE_OBJECTS",
+   "row": 114,
+   "col": 11,
+   "field": "FMIIP-BASELINE-2025-01.period_ar",
+   "old": null,
+   "new": "يناير 2025 (خط أساس المشروع)"
+  },
+  {
+   "finding": "P1-H04",
+   "sheet": "06_EVIDENCE_OBJECTS",
+   "row": 114,
+   "col": 12,
+   "field": "FMIIP-BASELINE-2025-01.universe_en",
+   "old": null,
+   "new": "Project-defined indicators of the FMIIP results framework. The definitions and reporting scope behind each baseline are the project's own and are not documented in the evidence base."
+  },
+  {
+   "finding": "P1-H04",
+   "sheet": "06_EVIDENCE_OBJECTS",
+   "row": 114,
+   "col": 13,
+   "field": "FMIIP-BASELINE-2025-01.universe_ar",
+   "old": null,
+   "new": "مؤشرات يعرّفها إطار نتائج مشروع FMIIP. وتعريفات كل خط أساس ونطاق الإبلاغ الخاص به تعود إلى المشروع نفسه، ولا توثقها قاعدة الأدلة."
+  },
+  {
+   "finding": "P1-H04",
+   "sheet": "06_EVIDENCE_OBJECTS",
+   "row": 114,
+   "col": 14,
+   "field": "FMIIP-BASELINE-2025-01.method_en",
+   "old": null,
+   "new": "Baseline values as reported in the project's results framework."
+  },
+  {
+   "finding": "P1-H04",
+   "sheet": "06_EVIDENCE_OBJECTS",
+   "row": 114,
+   "col": 15,
+   "field": "FMIIP-BASELINE-2025-01.method_ar",
+   "old": null,
+   "new": "قيم خط الأساس كما يوردها إطار نتائج المشروع."
+  },
+  {
+   "finding": "P1-H04",
+   "sheet": "06_EVIDENCE_OBJECTS",
+   "row": 114,
+   "col": 16,
+   "field": "FMIIP-BASELINE-2025-01.limitations_en",
+   "old": null,
+   "new": "Accounts are not unique people, and active e-wallet accounts are not subscribers unless a definition shows otherwise. Accounts classified by owner are not a count of women. Merchants are not POS terminals, and agents are not customers. These baselines have not been reconciled with the Central Bank's payment-report totals or with survey measures of account ownership, and they must not be divided by a population total."
+  },
+  {
+   "finding": "P1-H04",
+   "sheet": "06_EVIDENCE_OBJECTS",
+   "row": 114,
+   "col": 17,
+   "field": "FMIIP-BASELINE-2025-01.limitations_ar",
+   "old": null,
+   "new": "الحسابات ليست أشخاصًا فريدين، وحسابات المحافظ النشطة ليست مرادفة لعدد المشتركين ما لم يثبت التعريف ذلك. والحسابات المصنفة بحسب ملكيتها ليست عددًا للنساء. والتجار ليسوا أجهزة نقاط بيع، والوكلاء ليسوا عملاء. ولم تُطابَق خطوط الأساس هذه مع مجاميع تقارير المدفوعات لدى البنك المركزي ولا مع قياسات امتلاك الحساب في المسوح، ولا يجوز قسمتها على عدد السكان."
+  },
+  {
+   "finding": "P1-H04",
+   "sheet": "06_EVIDENCE_OBJECTS",
+   "row": 114,
+   "col": 18,
+   "field": "FMIIP-BASELINE-2025-01.currentness_en",
+   "old": null,
+   "new": "Currentness is bounded to January 2025 (project baseline). Do not carry the value, status or interpretation beyond the latest comparable evidence available from a comparable source without a newer comparable observation."
+  },
+  {
+   "finding": "P1-H04",
+   "sheet": "06_EVIDENCE_OBJECTS",
+   "row": 114,
+   "col": 19,
+   "field": "FMIIP-BASELINE-2025-01.currentness_ar",
+   "old": null,
+   "new": "تقتصر حداثة هذا الدليل على يناير 2025 (خط أساس المشروع). ولا يجوز ترحيل القيمة أو الحالة أو التفسير إلى فترة لاحقة على أحدث دليل قابل للمقارنة من دون مشاهدة أحدث قابلة للمقارنة."
+  },
+  {
+   "finding": "P1-H04",
+   "sheet": "06_EVIDENCE_OBJECTS",
+   "row": 114,
+   "col": 24,
+   "field": "FMIIP-BASELINE-2025-01.source_dependencies",
+   "old": null,
+   "new": "SRC-WB-FMIIP-P180708"
+  },
+  {
+   "finding": "P1-H04",
+   "sheet": "06_EVIDENCE_OBJECTS",
+   "row": 114,
+   "col": 26,
+   "field": "FMIIP-BASELINE-2025-01.lineage_state",
+   "old": null,
+   "new": "BOUND_EXACT"
+  },
+  {
+   "finding": "P1-H04",
+   "sheet": "06_EVIDENCE_OBJECTS",
+   "row": 114,
+   "col": 20,
+   "field": "FMIIP-BASELINE-2025-01.change_trigger_en",
+   "old": null,
+   "new": "Update this record when an authoritative source is revised or replaced, a newer comparable observation becomes available, the definition, population or method changes, or the conditions for public use change."
+  },
+  {
+   "finding": "P1-H04",
+   "sheet": "06_EVIDENCE_OBJECTS",
+   "row": 114,
+   "col": 21,
+   "field": "FMIIP-BASELINE-2025-01.change_trigger_ar",
+   "old": null,
+   "new": "يُحدَّث هذا السجل عند مراجعة المصدر المرجعي أو استبداله، أو توفر مشاهدة أحدث قابلة للمقارنة، أو تغير التعريف أو المجتمع أو الطريقة، أو تغير شروط الاستخدام العام."
+  },
+  {
+   "finding": "P1-H04",
+   "sheet": "06_EVIDENCE_OBJECTS",
+   "row": 114,
+   "col": 22,
+   "field": "FMIIP-BASELINE-2025-01.verification_en",
+   "old": null,
+   "new": "This record is drawn from the source(s) listed on this page. Open a source record to reach the original document, and check that the definition, period, population and geography match what is stated here."
+  },
+  {
+   "finding": "P1-H04",
+   "sheet": "06_EVIDENCE_OBJECTS",
+   "row": 114,
+   "col": 23,
+   "field": "FMIIP-BASELINE-2025-01.verification_ar",
+   "old": null,
+   "new": "يستند هذا السجل إلى المصدر أو المصادر المدرجة في هذه الصفحة. افتح سجل المصدر للوصول إلى الوثيقة الأصلية، وتحقق من تطابق التعريف والفترة والمجتمع والنطاق الجغرافي مع ما يرد هنا."
+  },
+  {
+   "finding": "P1-H04",
+   "sheet": "06_EVIDENCE_OBJECTS",
+   "row": 114,
+   "col": 25,
+   "field": "FMIIP-BASELINE-2025-01.source_links",
+   "old": null,
+   "new": "[{\"source_id\":\"SRC-WB-FMIIP-P180708\",\"url\":\"https://maps.worldbank.org/projects/wb/pid/P180708?status=active\",\"audit_state\":\"PASS_AUTHORITY_OR_PROVIDER_LOCATOR\"}]"
+  },
+  {
+   "finding": "P1-H03",
+   "sheet": "07_PUBLIC_CLAIMS",
+   "row": 64,
+   "col": 1,
+   "field": "CLM-062.claim_id",
+   "old": null,
+   "new": "CLM-062"
+  },
+  {
+   "finding": "P1-H03",
+   "sheet": "07_PUBLIC_CLAIMS",
+   "row": 64,
+   "col": 2,
+   "field": "CLM-062.theme",
+   "old": null,
+   "new": "Firms / access to finance"
+  },
+  {
+   "finding": "P1-H03",
+   "sheet": "07_PUBLIC_CLAIMS",
+   "row": 64,
+   "col": 3,
+   "field": "CLM-062.claim_type",
+   "old": null,
+   "new": "BOUNDED_SURVEY_COMPARISON"
+  },
+  {
+   "finding": "P1-H03",
+   "sheet": "07_PUBLIC_CLAIMS",
+   "row": 64,
+   "col": 4,
+   "field": "CLM-062.headline_en",
+   "old": null,
+   "new": "Formal firms in the 2022 survey: accounts were common, bank finance for working capital was not"
+  },
+  {
+   "finding": "P1-H03",
+   "sheet": "07_PUBLIC_CLAIMS",
+   "row": 64,
+   "col": 5,
+   "field": "CLM-062.headline_ar",
+   "old": null,
+   "new": "المنشآت الرسمية في مسح 2022: الحساب المصرفي شائع، أما تمويل البنوك لرأس المال العامل فنادر"
+  },
+  {
+   "finding": "P1-H03",
+   "sheet": "07_PUBLIC_CLAIMS",
+   "row": 64,
+   "col": 6,
+   "field": "CLM-062.copy_en",
+   "old": null,
+   "new": "Among formal firms in the 2022 seven-governorate survey, 58.2% (191 of 328) reported a checking or savings account. Their working capital came mainly from internal sources: on average, 69.12% came from internal funds or retained earnings, 16.66% from money lenders, friends or relatives, 10.15% from advance payments by clients, 1.97% from non-bank financial institutions, 1.31% from supplier credit and 0.56% from banks. In a separate question on the financial intermediaries they use, 73.48% of responding formal firms named an exchange store or money exchanger and 24.39% a commercial bank; firms could name more than one, so these are not market shares. The evidence base does not hold the number of firms behind the working-capital averages or the intermediary question. Among the 217 informal firms surveyed, 80.18% had no bank account; that sample was drawn from activity and location lists rather than a national register. The formal-firm sample includes micro firms with fewer than five employees, and neither sample represents all Yemeni firms."
+  },
+  {
+   "finding": "P1-H03",
+   "sheet": "07_PUBLIC_CLAIMS",
+   "row": 64,
+   "col": 7,
+   "field": "CLM-062.copy_ar",
+   "old": null,
+   "new": "أفادت 58.2% من المنشآت الرسمية في مسح عام 2022 الذي شمل سبع محافظات (191 من أصل 328 منشأة) بأن لديها حسابًا جاريًا أو حساب ادخار. غير أن رأس مالها العامل اعتمد أساسًا على مصادر داخلية: ففي المتوسط جاء 69.12% منه من الأموال الذاتية أو الأرباح المحتجزة، و16.66% من المقرضين أو الأصدقاء أو الأقارب، و10.15% من دفعات مقدمة من العملاء، و1.97% من مؤسسات مالية غير مصرفية، و1.31% من ائتمان الموردين، و0.56% فقط من البنوك. وفي سؤال مستقل عن الوسطاء الماليين الذين تتعامل معهم، ذكرت 73.48% من المنشآت الرسمية المجيبة محلات الصرافة أو الصرافين، و24.39% البنوك التجارية؛ ولأن المنشأة كان بإمكانها ذكر أكثر من وسيط، فهذه النسب ليست حصصًا سوقية. ولا تتضمن قاعدة الأدلة عدد المنشآت التي تستند إليها متوسطات رأس المال العامل ولا عدد المجيبين عن سؤال الوسطاء. أما المنشآت غير الرسمية التي شملها المسح، وعددها 217 منشأة، فلم يكن لدى 80.18% منها حساب مصرفي، وقد سُحبت عينتها من قوائم للأنشطة والمواقع لا من سجل وطني. وتضم عينة المنشآت الرسمية منشآت صغرى يقل عدد العاملين فيها عن خمسة، ولا تمثل أيٌّ من العينتين جميع المنشآت في اليمن."
+  },
+  {
+   "finding": "P1-H03",
+   "sheet": "07_PUBLIC_CLAIMS",
+   "row": 64,
+   "col": 8,
+   "field": "CLM-062.evidence_badge",
+   "old": null,
+   "new": "PRIMARY_CUSTOM_SURVEY"
+  },
+  {
+   "finding": "P1-H03",
+   "sheet": "07_PUBLIC_CLAIMS",
+   "row": 64,
+   "col": 9,
+   "field": "CLM-062.evidence_inputs",
+   "old": null,
+   "new": "[\"20_FIRM_FINANCE\",\"FFM-001\",\"FFM-008\",\"FFM-009\",\"FFM-011\"]"
+  },
+  {
+   "finding": "P1-H03",
+   "sheet": "07_PUBLIC_CLAIMS",
+   "row": 64,
+   "col": 10,
+   "field": "CLM-062.does_not_prove_en",
+   "old": null,
+   "new": "The evidence base does not hold the number of firms behind the working-capital averages or the intermediary question. An average working-capital share is not a share of firms, and multiple-response percentages are not market shares. Holding an account does not show that a firm uses bank credit. The formal and informal samples use different frames: they must not be added together or compared with the 2013 survey. Firms are not people, so these shares must not be set beside the Findex account-ownership rate."
+  },
+  {
+   "finding": "P1-H03",
+   "sheet": "07_PUBLIC_CLAIMS",
+   "row": 64,
+   "col": 11,
+   "field": "CLM-062.does_not_prove_ar",
+   "old": null,
+   "new": "لا تتضمن قاعدة الأدلة عدد المنشآت التي تستند إليها متوسطات رأس المال العامل ولا عدد المجيبين عن سؤال الوسطاء. ومتوسط حصة رأس المال العامل ليس نسبة من المنشآت، ونسب الأسئلة متعددة الإجابات ليست حصصًا سوقية. وامتلاك المنشأة حسابًا لا يثبت أنها تستخدم الائتمان المصرفي. كما يختلف إطار العينتين الرسمية وغير الرسمية، فلا يجوز جمعهما ولا مقارنتهما بمسح 2013. والمنشآت ليست أفرادًا، فلا تُوضع هذه النسب بجانب نسبة امتلاك الحساب في Findex."
+  },
+  {
+   "finding": "P1-H03",
+   "sheet": "07_PUBLIC_CLAIMS",
+   "row": 64,
+   "col": 12,
+   "field": "CLM-062.change_trigger_en",
+   "old": null,
+   "new": "A newer enterprise survey with comparable questions, the survey's response bases, or a source correction."
+  },
+  {
+   "finding": "P1-H03",
+   "sheet": "07_PUBLIC_CLAIMS",
+   "row": 64,
+   "col": 13,
+   "field": "CLM-062.change_trigger_ar",
+   "old": null,
+   "new": "مسح أحدث للمنشآت بأسئلة قابلة للمقارنة، أو إتاحة قواعد الاستجابة في المسح، أو تصحيح للمصدر."
+  },
+  {
+   "finding": "P1-H03",
+   "sheet": "07_PUBLIC_CLAIMS",
+   "row": 64,
+   "col": 14,
+   "field": "CLM-062.public_routes",
+   "old": null,
+   "new": "[\"/firms\",\"/evidence\"]"
+  },
+  {
+   "finding": "P1-H0",
+   "sheet": "02_SITE_MAP",
+   "row": 146,
+   "col": 1,
+   "field": "/evidence/CLM-062/.route",
+   "old": null,
+   "new": "/evidence/CLM-062/"
+  },
+  {
+   "finding": "P1-H0",
+   "sheet": "02_SITE_MAP",
+   "row": 146,
+   "col": 2,
+   "field": "/evidence/CLM-062/.page_class",
+   "old": null,
+   "new": "evidence_detail"
+  },
+  {
+   "finding": "P1-H0",
+   "sheet": "02_SITE_MAP",
+   "row": 146,
+   "col": 3,
+   "field": "/evidence/CLM-062/.template_route",
+   "old": null,
+   "new": "/evidence/[id]"
+  },
+  {
+   "finding": "P1-H0",
+   "sheet": "02_SITE_MAP",
+   "row": 146,
+   "col": 4,
+   "field": "/evidence/CLM-062/.instance_id",
+   "old": null,
+   "new": "CLM-062"
+  },
+  {
+   "finding": "P1-H0",
+   "sheet": "02_SITE_MAP",
+   "row": 146,
+   "col": 5,
+   "field": "/evidence/CLM-062/.title_en",
+   "old": null,
+   "new": "Formal firms in the 2022 survey: accounts were common, bank finance for working capital was not"
+  },
+  {
+   "finding": "P1-H0",
+   "sheet": "02_SITE_MAP",
+   "row": 146,
+   "col": 6,
+   "field": "/evidence/CLM-062/.title_ar",
+   "old": null,
+   "new": "المنشآت الرسمية في مسح 2022: الحساب المصرفي شائع، أما تمويل البنوك لرأس المال العامل فنادر"
+  },
+  {
+   "finding": "P1-H0",
+   "sheet": "02_SITE_MAP",
+   "row": 147,
+   "col": 1,
+   "field": "/evidence/FMIIP-BASELINE-2025-01/.route",
+   "old": null,
+   "new": "/evidence/FMIIP-BASELINE-2025-01/"
+  },
+  {
+   "finding": "P1-H0",
+   "sheet": "02_SITE_MAP",
+   "row": 147,
+   "col": 2,
+   "field": "/evidence/FMIIP-BASELINE-2025-01/.page_class",
+   "old": null,
+   "new": "evidence_detail"
+  },
+  {
+   "finding": "P1-H0",
+   "sheet": "02_SITE_MAP",
+   "row": 147,
+   "col": 3,
+   "field": "/evidence/FMIIP-BASELINE-2025-01/.template_route",
+   "old": null,
+   "new": "/evidence/[id]"
+  },
+  {
+   "finding": "P1-H0",
+   "sheet": "02_SITE_MAP",
+   "row": 147,
+   "col": 4,
+   "field": "/evidence/FMIIP-BASELINE-2025-01/.instance_id",
+   "old": null,
+   "new": "FMIIP-BASELINE-2025-01"
+  },
+  {
+   "finding": "P1-H0",
+   "sheet": "02_SITE_MAP",
+   "row": 147,
+   "col": 5,
+   "field": "/evidence/FMIIP-BASELINE-2025-01/.title_en",
+   "old": null,
+   "new": "FMIIP project baselines for January 2025 count accounts, access points, merchants and agents — not people"
+  },
+  {
+   "finding": "P1-H0",
+   "sheet": "02_SITE_MAP",
+   "row": 147,
+   "col": 6,
+   "field": "/evidence/FMIIP-BASELINE-2025-01/.title_ar",
+   "old": null,
+   "new": "خطوط الأساس لمشروع FMIIP في يناير 2025 تعدّ الحسابات ونقاط الوصول والتجار والوكلاء، لا الأشخاص"
+  },
+  {
+   "finding": "P1-H01",
+   "sheet": "03_PAGE_SECTIONS",
+   "row": 397,
+   "col": 2,
+   "field": "/payments/#s5.section_order",
+   "old": "5",
+   "new": 6
+  },
+  {
+   "finding": "P1-H01",
+   "sheet": "03_PAGE_SECTIONS",
+   "row": 398,
+   "col": 2,
+   "field": "/payments/#s5.section_order",
+   "old": "5",
+   "new": 6
+  },
+  {
+   "finding": "P1-H01",
+   "sheet": "03_PAGE_SECTIONS",
+   "row": 399,
+   "col": 2,
+   "field": "/payments/#s6.section_order",
+   "old": "6",
+   "new": 7
+  },
+  {
+   "finding": "P1-H01",
+   "sheet": "03_PAGE_SECTIONS",
+   "row": 400,
+   "col": 2,
+   "field": "/payments/#s6.section_order",
+   "old": "6",
+   "new": 7
+  },
+  {
+   "finding": "P1-H01",
+   "sheet": "03_PAGE_SECTIONS",
+   "row": 401,
+   "col": 2,
+   "field": "/payments/#s7.section_order",
+   "old": "7",
+   "new": 8
+  },
+  {
+   "finding": "P1-H01",
+   "sheet": "03_PAGE_SECTIONS",
+   "row": 402,
+   "col": 2,
+   "field": "/payments/#s7.section_order",
+   "old": "7",
+   "new": 8
+  },
+  {
+   "finding": "P1-H01",
+   "sheet": "03_PAGE_SECTIONS",
+   "row": 403,
+   "col": 2,
+   "field": "/payments/#s8.section_order",
+   "old": "8",
+   "new": 9
+  },
+  {
+   "finding": "P1-H01",
+   "sheet": "03_PAGE_SECTIONS",
+   "row": 404,
+   "col": 2,
+   "field": "/payments/#s8.section_order",
+   "old": "8",
+   "new": 9
+  },
+  {
+   "finding": "P1-H02",
+   "sheet": "03_PAGE_SECTIONS",
+   "row": 38,
+   "col": 2,
+   "field": "/access/#s3.section_order",
+   "old": "3",
+   "new": 4
+  },
+  {
+   "finding": "P1-H02",
+   "sheet": "03_PAGE_SECTIONS",
+   "row": 39,
+   "col": 2,
+   "field": "/access/#s3.section_order",
+   "old": "3",
+   "new": 4
+  },
+  {
+   "finding": "P1-H02",
+   "sheet": "03_PAGE_SECTIONS",
+   "row": 40,
+   "col": 2,
+   "field": "/access/#s4.section_order",
+   "old": "4",
+   "new": 5
+  },
+  {
+   "finding": "P1-H02",
+   "sheet": "03_PAGE_SECTIONS",
+   "row": 41,
+   "col": 2,
+   "field": "/access/#s4.section_order",
+   "old": "4",
+   "new": 5
+  },
+  {
+   "finding": "P1-H02",
+   "sheet": "03_PAGE_SECTIONS",
+   "row": 42,
+   "col": 2,
+   "field": "/access/#s5.section_order",
+   "old": "5",
+   "new": 6
+  },
+  {
+   "finding": "P1-H02",
+   "sheet": "03_PAGE_SECTIONS",
+   "row": 43,
+   "col": 2,
+   "field": "/access/#s5.section_order",
+   "old": "5",
+   "new": 6
+  },
+  {
+   "finding": "P1-H02",
+   "sheet": "03_PAGE_SECTIONS",
+   "row": 44,
+   "col": 2,
+   "field": "/access/#s6.section_order",
+   "old": "6",
+   "new": 7
+  },
+  {
+   "finding": "P1-H02",
+   "sheet": "03_PAGE_SECTIONS",
+   "row": 45,
+   "col": 2,
+   "field": "/access/#s6.section_order",
+   "old": "6",
+   "new": 7
+  },
+  {
+   "finding": "P1-H02",
+   "sheet": "03_PAGE_SECTIONS",
+   "row": 46,
+   "col": 2,
+   "field": "/access/#s7.section_order",
+   "old": "7",
+   "new": 8
+  },
+  {
+   "finding": "P1-H02",
+   "sheet": "03_PAGE_SECTIONS",
+   "row": 47,
+   "col": 2,
+   "field": "/access/#s7.section_order",
+   "old": "7",
+   "new": 8
+  },
+  {
+   "finding": "P1-H02",
+   "sheet": "03_PAGE_SECTIONS",
+   "row": 48,
+   "col": 2,
+   "field": "/access/#s8.section_order",
+   "old": "8",
+   "new": 9
+  },
+  {
+   "finding": "P1-H02",
+   "sheet": "03_PAGE_SECTIONS",
+   "row": 49,
+   "col": 2,
+   "field": "/access/#s8.section_order",
+   "old": "8",
+   "new": 9
+  },
+  {
+   "finding": "P1-H03",
+   "sheet": "03_PAGE_SECTIONS",
+   "row": 342,
+   "col": 2,
+   "field": "/firms/#s5.section_order",
+   "old": "5",
+   "new": 6
+  },
+  {
+   "finding": "P1-H03",
+   "sheet": "03_PAGE_SECTIONS",
+   "row": 343,
+   "col": 2,
+   "field": "/firms/#s5.section_order",
+   "old": "5",
+   "new": 6
+  },
+  {
+   "finding": "P1-H03",
+   "sheet": "03_PAGE_SECTIONS",
+   "row": 344,
+   "col": 2,
+   "field": "/firms/#s6.section_order",
+   "old": "6",
+   "new": 7
+  },
+  {
+   "finding": "P1-H03",
+   "sheet": "03_PAGE_SECTIONS",
+   "row": 345,
+   "col": 2,
+   "field": "/firms/#s6.section_order",
+   "old": "6",
+   "new": 7
+  },
+  {
+   "finding": "P1-H03",
+   "sheet": "03_PAGE_SECTIONS",
+   "row": 346,
+   "col": 2,
+   "field": "/firms/#s7.section_order",
+   "old": "7",
+   "new": 8
+  },
+  {
+   "finding": "P1-H03",
+   "sheet": "03_PAGE_SECTIONS",
+   "row": 347,
+   "col": 2,
+   "field": "/firms/#s7.section_order",
+   "old": "7",
+   "new": 8
+  },
+  {
+   "finding": "P1-H03",
+   "sheet": "03_PAGE_SECTIONS",
+   "row": 348,
+   "col": 2,
+   "field": "/firms/#s8.section_order",
+   "old": "8",
+   "new": 9
+  },
+  {
+   "finding": "P1-H03",
+   "sheet": "03_PAGE_SECTIONS",
+   "row": 349,
+   "col": 2,
+   "field": "/firms/#s8.section_order",
+   "old": "8",
+   "new": 9
+  },
+  {
+   "finding": "P1-H05",
+   "sheet": "03_PAGE_SECTIONS",
+   "row": 376,
+   "col": 2,
+   "field": "/methodology/#s7.section_order",
+   "old": "7",
+   "new": 8
+  },
+  {
+   "finding": "P1-H05",
+   "sheet": "03_PAGE_SECTIONS",
+   "row": 377,
+   "col": 2,
+   "field": "/methodology/#s7.section_order",
+   "old": "7",
+   "new": 8
+  },
+  {
+   "finding": "P1-H05",
+   "sheet": "03_PAGE_SECTIONS",
+   "row": 378,
+   "col": 2,
+   "field": "/methodology/#s8.section_order",
+   "old": "8",
+   "new": 9
+  },
+  {
+   "finding": "P1-H05",
+   "sheet": "03_PAGE_SECTIONS",
+   "row": 379,
+   "col": 2,
+   "field": "/methodology/#s8.section_order",
+   "old": "8",
+   "new": 9
+  },
+  {
+   "finding": "P1-H05",
+   "sheet": "03_PAGE_SECTIONS",
+   "row": 380,
+   "col": 2,
+   "field": "/methodology/#s9.section_order",
+   "old": "9",
+   "new": 10
+  },
+  {
+   "finding": "P1-H05",
+   "sheet": "03_PAGE_SECTIONS",
+   "row": 381,
+   "col": 2,
+   "field": "/methodology/#s9.section_order",
+   "old": "9",
+   "new": 10
+  },
+  {
+   "finding": "P1-H05",
+   "sheet": "03_PAGE_SECTIONS",
+   "row": 382,
+   "col": 2,
+   "field": "/methodology/#s10.section_order",
+   "old": "10",
+   "new": 11
+  },
+  {
+   "finding": "P1-H05",
+   "sheet": "03_PAGE_SECTIONS",
+   "row": 383,
+   "col": 2,
+   "field": "/methodology/#s10.section_order",
+   "old": "10",
+   "new": 11
+  },
+  {
+   "finding": "P1-H05",
+   "sheet": "03_PAGE_SECTIONS",
+   "row": 384,
+   "col": 2,
+   "field": "/methodology/#s11.section_order",
+   "old": "11",
+   "new": 12
+  },
+  {
+   "finding": "P1-H05",
+   "sheet": "03_PAGE_SECTIONS",
+   "row": 385,
+   "col": 2,
+   "field": "/methodology/#s11.section_order",
+   "old": "11",
+   "new": 12
+  },
+  {
+   "finding": "P1-H05",
+   "sheet": "03_PAGE_SECTIONS",
+   "row": 386,
+   "col": 2,
+   "field": "/methodology/#s12.section_order",
+   "old": "12",
+   "new": 13
+  },
+  {
+   "finding": "P1-H05",
+   "sheet": "03_PAGE_SECTIONS",
+   "row": 387,
+   "col": 2,
+   "field": "/methodology/#s12.section_order",
+   "old": "12",
+   "new": 13
+  },
+  {
+   "finding": "P1-H05",
+   "sheet": "03_PAGE_SECTIONS",
+   "row": 388,
+   "col": 2,
+   "field": "/methodology/#s13.section_order",
+   "old": "13",
+   "new": 14
+  },
+  {
+   "finding": "P1-H05",
+   "sheet": "03_PAGE_SECTIONS",
+   "row": 389,
+   "col": 2,
+   "field": "/methodology/#s13.section_order",
+   "old": "13",
+   "new": 14
+  },
+  {
+   "finding": "P1-H0",
+   "sheet": "03_PAGE_SECTIONS",
+   "row": 591,
+   "col": 1,
+   "field": "/evidence/CLM-062/#s1 new",
+   "old": null,
+   "new": "/evidence/CLM-062/"
+  },
+  {
+   "finding": "P1-H0",
+   "sheet": "03_PAGE_SECTIONS",
+   "row": 591,
+   "col": 2,
+   "field": "/evidence/CLM-062/#s1 new",
+   "old": null,
+   "new": 1
+  },
+  {
+   "finding": "P1-H0",
+   "sheet": "03_PAGE_SECTIONS",
+   "row": 591,
+   "col": 5,
+   "field": "/evidence/CLM-062/#s1 new",
+   "old": null,
+   "new": "Among formal firms in the 2022 seven-governorate survey, 58.2% (191 of 328) reported a checking or savings account. Their working capital came mainly from internal sources: on average, 69.12% came from internal funds or retained earnings, 16.66% from money lenders, friends or relatives, 10.15% from advance payments by clients, 1.97% from non-bank financial institutions, 1.31% from supplier credit and 0.56% from banks. In a separate question on the financial intermediaries they use, 73.48% of responding formal firms named an exchange store or money exchanger and 24.39% a commercial bank; firms could name more than one, so these are not market shares. The evidence base does not hold the number of firms behind the working-capital averages or the intermediary question. Among the 217 informal firms surveyed, 80.18% had no bank account; that sample was drawn from activity and location lists rather than a national register. The formal-firm sample includes micro firms with fewer than five employees, and neither sample represents all Yemeni firms."
+  },
+  {
+   "finding": "P1-H0",
+   "sheet": "03_PAGE_SECTIONS",
+   "row": 591,
+   "col": 7,
+   "field": "/evidence/CLM-062/#s1 new",
+   "old": null,
+   "new": "أفادت 58.2% من المنشآت الرسمية في مسح عام 2022 الذي شمل سبع محافظات (191 من أصل 328 منشأة) بأن لديها حسابًا جاريًا أو حساب ادخار. غير أن رأس مالها العامل اعتمد أساسًا على مصادر داخلية: ففي المتوسط جاء 69.12% منه من الأموال الذاتية أو الأرباح المحتجزة، و16.66% من المقرضين أو الأصدقاء أو الأقارب، و10.15% من دفعات مقدمة من العملاء، و1.97% من مؤسسات مالية غير مصرفية، و1.31% من ائتمان الموردين، و0.56% فقط من البنوك. وفي سؤال مستقل عن الوسطاء الماليين الذين تتعامل معهم، ذكرت 73.48% من المنشآت الرسمية المجيبة محلات الصرافة أو الصرافين، و24.39% البنوك التجارية؛ ولأن المنشأة كان بإمكانها ذكر أكثر من وسيط، فهذه النسب ليست حصصًا سوقية. ولا تتضمن قاعدة الأدلة عدد المنشآت التي تستند إليها متوسطات رأس المال العامل ولا عدد المجيبين عن سؤال الوسطاء. أما المنشآت غير الرسمية التي شملها المسح، وعددها 217 منشأة، فلم يكن لدى 80.18% منها حساب مصرفي، وقد سُحبت عينتها من قوائم للأنشطة والمواقع لا من سجل وطني. وتضم عينة المنشآت الرسمية منشآت صغرى يقل عدد العاملين فيها عن خمسة، ولا تمثل أيٌّ من العينتين جميع المنشآت في اليمن."
+  },
+  {
+   "finding": "P1-H0",
+   "sheet": "03_PAGE_SECTIONS",
+   "row": 592,
+   "col": 1,
+   "field": "/evidence/CLM-062/#s2 new",
+   "old": null,
+   "new": "/evidence/CLM-062/"
+  },
+  {
+   "finding": "P1-H0",
+   "sheet": "03_PAGE_SECTIONS",
+   "row": 592,
+   "col": 2,
+   "field": "/evidence/CLM-062/#s2 new",
+   "old": null,
+   "new": 2
+  },
+  {
+   "finding": "P1-H0",
+   "sheet": "03_PAGE_SECTIONS",
+   "row": 592,
+   "col": 3,
+   "field": "/evidence/CLM-062/#s2 new",
+   "old": null,
+   "new": "How to read this evidence"
+  },
+  {
+   "finding": "P1-H0",
+   "sheet": "03_PAGE_SECTIONS",
+   "row": 592,
+   "col": 4,
+   "field": "/evidence/CLM-062/#s2 new",
+   "old": null,
+   "new": "How to read this evidence"
+  },
+  {
+   "finding": "P1-H0",
+   "sheet": "03_PAGE_SECTIONS",
+   "row": 592,
+   "col": 5,
+   "field": "/evidence/CLM-062/#s2 new",
+   "old": null,
+   "new": "Read this evidence within the definition, population or group covered, calculation base where relevant, period, geography and method shown on the page. Before reusing or comparing it, check the source, limitations, evidence date and correction history. If a value or source link is unavailable, the page says so rather than filling the gap by inference. Download and reuse are offered only where source rights permit."
+  },
+  {
+   "finding": "P1-H0",
+   "sheet": "03_PAGE_SECTIONS",
+   "row": 592,
+   "col": 6,
+   "field": "/evidence/CLM-062/#s2 new",
+   "old": null,
+   "new": "كيف تقرأ هذا الدليل"
+  },
+  {
+   "finding": "P1-H0",
+   "sheet": "03_PAGE_SECTIONS",
+   "row": 592,
+   "col": 7,
+   "field": "/evidence/CLM-062/#s2 new",
+   "old": null,
+   "new": "يُقرأ هذا الدليل ضمن التعريف، والمجتمع الذي ينطبق عليه الرقم أو قاعدة الاحتساب عند الحاجة، والفترة، والجغرافيا، والطريقة المبينة في الصفحة. وقبل إعادة استخدامه أو مقارنته، راجع المصدر والحدود وحداثة الدليل وسجل التصحيح. وإذا كانت قيمة أو وصلة مصدر غير متاحة، تُذكر الفجوة صراحةً بدل ملئها بالاستنتاج. ولا يتاح التنزيل أو إعادة الاستخدام إلا حيث تسمح حقوق المصدر."
+  },
+  {
+   "finding": "P1-H0",
+   "sheet": "03_PAGE_SECTIONS",
+   "row": 593,
+   "col": 1,
+   "field": "/evidence/FMIIP-BASELINE-2025-01/#s1 new",
+   "old": null,
+   "new": "/evidence/FMIIP-BASELINE-2025-01/"
+  },
+  {
+   "finding": "P1-H0",
+   "sheet": "03_PAGE_SECTIONS",
+   "row": 593,
+   "col": 2,
+   "field": "/evidence/FMIIP-BASELINE-2025-01/#s1 new",
+   "old": null,
+   "new": 1
+  },
+  {
+   "finding": "P1-H0",
+   "sheet": "03_PAGE_SECTIONS",
+   "row": 593,
+   "col": 5,
+   "field": "/evidence/FMIIP-BASELINE-2025-01/#s1 new",
+   "old": null,
+   "new": "The results framework of the World Bank-financed Yemen Financial Market Infrastructure and Inclusion Project (FMIIP, P180708) records January 2025 baselines for its own project-defined indicators: 1,062,441 active bank accounts (200,898 of them owned by women), 375,252 active e-wallet accounts, 817 financial access points, 170 merchants accepting electronic payments and 65 agents of licensed financial institutions. These are project baselines that count accounts, access points, merchants and agents — not people."
+  },
+  {
+   "finding": "P1-H0",
+   "sheet": "03_PAGE_SECTIONS",
+   "row": 593,
+   "col": 7,
+   "field": "/evidence/FMIIP-BASELINE-2025-01/#s1 new",
+   "old": null,
+   "new": "يسجل إطار نتائج مشروع البنية التحتية للأسواق والشمول المالي في اليمن (FMIIP، P180708) الممول من البنك الدولي خطوط أساس في يناير 2025 لمؤشراته المعرّفة داخل المشروع: 1,062,441 حسابًا مصرفيًا نشطًا (منها 200,898 حسابًا مملوكًا لنساء)، و375,252 حساب محفظة إلكترونية نشطًا، و817 نقطة وصول مالي، و170 تاجرًا يقبلون المدفوعات الإلكترونية، و65 وكيلًا لمؤسسات مالية مرخصة. وهذه خطوط أساس للمشروع تعدّ الحسابات ونقاط الوصول والتجار والوكلاء، لا الأشخاص."
+  },
+  {
+   "finding": "P1-H0",
+   "sheet": "03_PAGE_SECTIONS",
+   "row": 594,
+   "col": 1,
+   "field": "/evidence/FMIIP-BASELINE-2025-01/#s2 new",
+   "old": null,
+   "new": "/evidence/FMIIP-BASELINE-2025-01/"
+  },
+  {
+   "finding": "P1-H0",
+   "sheet": "03_PAGE_SECTIONS",
+   "row": 594,
+   "col": 2,
+   "field": "/evidence/FMIIP-BASELINE-2025-01/#s2 new",
+   "old": null,
+   "new": 2
+  },
+  {
+   "finding": "P1-H0",
+   "sheet": "03_PAGE_SECTIONS",
+   "row": 594,
+   "col": 3,
+   "field": "/evidence/FMIIP-BASELINE-2025-01/#s2 new",
+   "old": null,
+   "new": "How to read this evidence"
+  },
+  {
+   "finding": "P1-H0",
+   "sheet": "03_PAGE_SECTIONS",
+   "row": 594,
+   "col": 4,
+   "field": "/evidence/FMIIP-BASELINE-2025-01/#s2 new",
+   "old": null,
+   "new": "How to read this evidence"
+  },
+  {
+   "finding": "P1-H0",
+   "sheet": "03_PAGE_SECTIONS",
+   "row": 594,
+   "col": 5,
+   "field": "/evidence/FMIIP-BASELINE-2025-01/#s2 new",
+   "old": null,
+   "new": "Read this evidence within the definition, population or group covered, calculation base where relevant, period, geography and method shown on the page. Before reusing or comparing it, check the source, limitations, evidence date and correction history. If a value or source link is unavailable, the page says so rather than filling the gap by inference. Download and reuse are offered only where source rights permit."
+  },
+  {
+   "finding": "P1-H0",
+   "sheet": "03_PAGE_SECTIONS",
+   "row": 594,
+   "col": 6,
+   "field": "/evidence/FMIIP-BASELINE-2025-01/#s2 new",
+   "old": null,
+   "new": "كيف تقرأ هذا الدليل"
+  },
+  {
+   "finding": "P1-H0",
+   "sheet": "03_PAGE_SECTIONS",
+   "row": 594,
+   "col": 7,
+   "field": "/evidence/FMIIP-BASELINE-2025-01/#s2 new",
+   "old": null,
+   "new": "يُقرأ هذا الدليل ضمن التعريف، والمجتمع الذي ينطبق عليه الرقم أو قاعدة الاحتساب عند الحاجة، والفترة، والجغرافيا، والطريقة المبينة في الصفحة. وقبل إعادة استخدامه أو مقارنته، راجع المصدر والحدود وحداثة الدليل وسجل التصحيح. وإذا كانت قيمة أو وصلة مصدر غير متاحة، تُذكر الفجوة صراحةً بدل ملئها بالاستنتاج. ولا يتاح التنزيل أو إعادة الاستخدام إلا حيث تسمح حقوق المصدر."
+  },
+  {
+   "finding": "P1-H0",
+   "sheet": "03_PAGE_SECTIONS",
+   "row": 595,
+   "col": 1,
+   "field": "/payments/#s5 new",
+   "old": null,
+   "new": "/payments/"
+  },
+  {
+   "finding": "P1-H0",
+   "sheet": "03_PAGE_SECTIONS",
+   "row": 595,
+   "col": 2,
+   "field": "/payments/#s5 new",
+   "old": null,
+   "new": 5
+  },
+  {
+   "finding": "P1-H0",
+   "sheet": "03_PAGE_SECTIONS",
+   "row": 595,
+   "col": 3,
+   "field": "/payments/#s5 new",
+   "old": null,
+   "new": "Evidence"
+  },
+  {
+   "finding": "P1-H0",
+   "sheet": "03_PAGE_SECTIONS",
+   "row": 595,
+   "col": 4,
+   "field": "/payments/#s5 new",
+   "old": null,
+   "new": "E-wallet subscribers: figures from two reports that do not form one series"
+  },
+  {
+   "finding": "P1-H0",
+   "sheet": "03_PAGE_SECTIONS",
+   "row": 595,
+   "col": 5,
+   "field": "/payments/#s5 new",
+   "old": null,
+   "new": "The CBY-Aden payments report for the third quarter of 2024 gives e-wallet subscriber counts of 414,631 for Q1, 507,585 for Q2 and 581,075 for Q3. The first-half 2025 infographic reports 2,102,484 subscribers. The two publications' subscriber definitions and reporting scope have not been reconciled, so the 2025 figure is not joined to the 2024 quarters and the difference is not read as growth. A subscriber count is not a count of unique people or of active users, and neither publication measures how many adults use a wallet."
+  },
+  {
+   "finding": "P1-H0",
+   "sheet": "03_PAGE_SECTIONS",
+   "row": 596,
+   "col": 1,
+   "field": "/payments/#s5 new",
+   "old": null,
+   "new": "/payments/"
+  },
+  {
+   "finding": "P1-H0",
+   "sheet": "03_PAGE_SECTIONS",
+   "row": 596,
+   "col": 2,
+   "field": "/payments/#s5 new",
+   "old": null,
+   "new": 5
+  },
+  {
+   "finding": "P1-H0",
+   "sheet": "03_PAGE_SECTIONS",
+   "row": 596,
+   "col": 3,
+   "field": "/payments/#s5 new",
+   "old": null,
+   "new": "الدليل"
+  },
+  {
+   "finding": "P1-H0",
+   "sheet": "03_PAGE_SECTIONS",
+   "row": 596,
+   "col": 6,
+   "field": "/payments/#s5 new",
+   "old": null,
+   "new": "مشتركو المحافظ الإلكترونية: أرقام من تقريرين لا تشكل سلسلة واحدة"
+  },
+  {
+   "finding": "P1-H0",
+   "sheet": "03_PAGE_SECTIONS",
+   "row": 596,
+   "col": 7,
+   "field": "/payments/#s5 new",
+   "old": null,
+   "new": "يورد تقرير المدفوعات الصادر عن البنك المركزي اليمني – عدن للربع الثالث من 2024 أعداد مشتركي المحافظ الإلكترونية: 414,631 في الربع الأول، و507,585 في الربع الثاني، و581,075 في الربع الثالث. أما إنفوغرافيك النصف الأول من 2025 فيورد 2,102,484 مشتركًا. ولم يُطابَق تعريف المشترك ولا نطاق الإبلاغ بين الإصدارين، لذلك لا يُوصل رقم 2025 بأرباع 2024، ولا يُقرأ الفرق بينهما نموًا. وعدد المشتركين ليس عددًا للأشخاص الفريدين ولا للمستخدمين النشطين، ولا يقيس أيٌّ من الإصدارين عدد البالغين الذين يستخدمون المحافظ."
+  },
+  {
+   "finding": "P1-H0",
+   "sheet": "03_PAGE_SECTIONS",
+   "row": 597,
+   "col": 1,
+   "field": "/access/#s3 new",
+   "old": null,
+   "new": "/access/"
+  },
+  {
+   "finding": "P1-H0",
+   "sheet": "03_PAGE_SECTIONS",
+   "row": 597,
+   "col": 2,
+   "field": "/access/#s3 new",
+   "old": null,
+   "new": 3
+  },
+  {
+   "finding": "P1-H0",
+   "sheet": "03_PAGE_SECTIONS",
+   "row": 597,
+   "col": 3,
+   "field": "/access/#s3 new",
+   "old": null,
+   "new": "Evidence"
+  },
+  {
+   "finding": "P1-H0",
+   "sheet": "03_PAGE_SECTIONS",
+   "row": 597,
+   "col": 4,
+   "field": "/access/#s3 new",
+   "old": null,
+   "new": "Lists show who is registered, not where services operate"
+  },
+  {
+   "finding": "P1-H0",
+   "sheet": "03_PAGE_SECTIONS",
+   "row": 597,
+   "col": 5,
+   "field": "/access/#s3 new",
+   "old": null,
+   "new": "Official lists document a substantial exchange and remittance provider presence relevant to the access question. The 2026 CBY-Aden roster lists 98 exchange companies, 225 individual exchange establishments and 106 remittance agents — three source categories, not a deduplicated count of firms — and the current CBY-Aden list of licensed banks names 26 banks. Listing or licensing is not operation, and later suspension or closure decisions are separate status events. Separately, the FMIIP results framework sets a January 2025 baseline of 817 financial access points against a 2030 target of 1,021, under a project definition that the evidence base does not document. None of these figures shows where services operate or how far people are from them."
+  },
+  {
+   "finding": "P1-H0",
+   "sheet": "03_PAGE_SECTIONS",
+   "row": 598,
+   "col": 1,
+   "field": "/access/#s3 new",
+   "old": null,
+   "new": "/access/"
+  },
+  {
+   "finding": "P1-H0",
+   "sheet": "03_PAGE_SECTIONS",
+   "row": 598,
+   "col": 2,
+   "field": "/access/#s3 new",
+   "old": null,
+   "new": 3
+  },
+  {
+   "finding": "P1-H0",
+   "sheet": "03_PAGE_SECTIONS",
+   "row": 598,
+   "col": 3,
+   "field": "/access/#s3 new",
+   "old": null,
+   "new": "الدليل"
+  },
+  {
+   "finding": "P1-H0",
+   "sheet": "03_PAGE_SECTIONS",
+   "row": 598,
+   "col": 6,
+   "field": "/access/#s3 new",
+   "old": null,
+   "new": "القوائم الرسمية تبيّن الجهات المسجلة، لا أماكن تقديم الخدمة"
+  },
+  {
+   "finding": "P1-H0",
+   "sheet": "03_PAGE_SECTIONS",
+   "row": 598,
+   "col": 7,
+   "field": "/access/#s3 new",
+   "old": null,
+   "new": "توثق القوائم الرسمية حضورًا كبيرًا لمقدمي خدمات الصرافة والحوالات يتصل بسؤال الوصول: فقائمة البنك المركزي اليمني – عدن لعام 2026 تضم 98 شركة صرافة و225 منشأة صرافة فردية و106 وكلاء حوالات — وهي ثلاث فئات يحددها المصدر، لا عددًا لمنشآت فريدة بعد إزالة الازدواج — كما تضم قائمته الحالية للبنوك المرخصة 26 بنكًا. والإدراج أو الترخيص لا يعني التشغيل، وقرارات الإيقاف أو الإغلاق اللاحقة أحداث حالة منفصلة. وبصورة مستقلة، يحدد إطار نتائج مشروع FMIIP خط أساس قدره 817 نقطة وصول مالي في يناير 2025 مقابل مستهدف قدره 1,021 نقطة في 2030، وفق تعريف للمشروع لا توثقه قاعدة الأدلة. ولا يبين أي من هذه الأرقام أين تعمل الخدمات ولا مدى بُعد الناس عنها."
+  },
+  {
+   "finding": "P1-H0",
+   "sheet": "03_PAGE_SECTIONS",
+   "row": 599,
+   "col": 1,
+   "field": "/firms/#s5 new",
+   "old": null,
+   "new": "/firms/"
+  },
+  {
+   "finding": "P1-H0",
+   "sheet": "03_PAGE_SECTIONS",
+   "row": 599,
+   "col": 2,
+   "field": "/firms/#s5 new",
+   "old": null,
+   "new": 5
+  },
+  {
+   "finding": "P1-H0",
+   "sheet": "03_PAGE_SECTIONS",
+   "row": 599,
+   "col": 3,
+   "field": "/firms/#s5 new",
+   "old": null,
+   "new": "Evidence"
+  },
+  {
+   "finding": "P1-H0",
+   "sheet": "03_PAGE_SECTIONS",
+   "row": 599,
+   "col": 4,
+   "field": "/firms/#s5 new",
+   "old": null,
+   "new": "Formal firms in this sample: most held a bank account, but banks financed almost none of their working capital"
+  },
+  {
+   "finding": "P1-H0",
+   "sheet": "03_PAGE_SECTIONS",
+   "row": 599,
+   "col": 5,
+   "field": "/firms/#s5 new",
+   "old": null,
+   "new": "Among formal firms in the 2022 seven-governorate survey, 58.2% (191 of 328) reported a checking or savings account. Their working capital came mainly from internal sources: on average, 69.12% came from internal funds or retained earnings, 16.66% from money lenders, friends or relatives, 10.15% from advance payments by clients, 1.97% from non-bank financial institutions, 1.31% from supplier credit and 0.56% from banks. In a separate question on the financial intermediaries they use, 73.48% of responding formal firms named an exchange store or money exchanger and 24.39% a commercial bank; firms could name more than one, so these are not market shares. The evidence base does not hold the number of firms behind the working-capital averages or the intermediary question. Among the 217 informal firms surveyed, 80.18% had no bank account; that sample was drawn from activity and location lists rather than a national register. The formal-firm sample includes micro firms with fewer than five employees, and neither sample represents all Yemeni firms."
+  },
+  {
+   "finding": "P1-H0",
+   "sheet": "03_PAGE_SECTIONS",
+   "row": 600,
+   "col": 1,
+   "field": "/firms/#s5 new",
+   "old": null,
+   "new": "/firms/"
+  },
+  {
+   "finding": "P1-H0",
+   "sheet": "03_PAGE_SECTIONS",
+   "row": 600,
+   "col": 2,
+   "field": "/firms/#s5 new",
+   "old": null,
+   "new": 5
+  },
+  {
+   "finding": "P1-H0",
+   "sheet": "03_PAGE_SECTIONS",
+   "row": 600,
+   "col": 3,
+   "field": "/firms/#s5 new",
+   "old": null,
+   "new": "الدليل"
+  },
+  {
+   "finding": "P1-H0",
+   "sheet": "03_PAGE_SECTIONS",
+   "row": 600,
+   "col": 6,
+   "field": "/firms/#s5 new",
+   "old": null,
+   "new": "المنشآت الرسمية في هذه العينة: لدى أغلبها حساب مصرفي، لكن البنوك لم تموّل إلا جزءًا ضئيلًا جدًا من رأس مالها العامل"
+  },
+  {
+   "finding": "P1-H0",
+   "sheet": "03_PAGE_SECTIONS",
+   "row": 600,
+   "col": 7,
+   "field": "/firms/#s5 new",
+   "old": null,
+   "new": "أفادت 58.2% من المنشآت الرسمية في مسح عام 2022 الذي شمل سبع محافظات (191 من أصل 328 منشأة) بأن لديها حسابًا جاريًا أو حساب ادخار. غير أن رأس مالها العامل اعتمد أساسًا على مصادر داخلية: ففي المتوسط جاء 69.12% منه من الأموال الذاتية أو الأرباح المحتجزة، و16.66% من المقرضين أو الأصدقاء أو الأقارب، و10.15% من دفعات مقدمة من العملاء، و1.97% من مؤسسات مالية غير مصرفية، و1.31% من ائتمان الموردين، و0.56% فقط من البنوك. وفي سؤال مستقل عن الوسطاء الماليين الذين تتعامل معهم، ذكرت 73.48% من المنشآت الرسمية المجيبة محلات الصرافة أو الصرافين، و24.39% البنوك التجارية؛ ولأن المنشأة كان بإمكانها ذكر أكثر من وسيط، فهذه النسب ليست حصصًا سوقية. ولا تتضمن قاعدة الأدلة عدد المنشآت التي تستند إليها متوسطات رأس المال العامل ولا عدد المجيبين عن سؤال الوسطاء. أما المنشآت غير الرسمية التي شملها المسح، وعددها 217 منشأة، فلم يكن لدى 80.18% منها حساب مصرفي، وقد سُحبت عينتها من قوائم للأنشطة والمواقع لا من سجل وطني. وتضم عينة المنشآت الرسمية منشآت صغرى يقل عدد العاملين فيها عن خمسة، ولا تمثل أيٌّ من العينتين جميع المنشآت في اليمن."
+  },
+  {
+   "finding": "P1-H0",
+   "sheet": "03_PAGE_SECTIONS",
+   "row": 601,
+   "col": 1,
+   "field": "/evidence/compare/#s2 new",
+   "old": null,
+   "new": "/evidence/compare/"
+  },
+  {
+   "finding": "P1-H0",
+   "sheet": "03_PAGE_SECTIONS",
+   "row": 601,
+   "col": 2,
+   "field": "/evidence/compare/#s2 new",
+   "old": null,
+   "new": 2
+  },
+  {
+   "finding": "P1-H0",
+   "sheet": "03_PAGE_SECTIONS",
+   "row": 601,
+   "col": 3,
+   "field": "/evidence/compare/#s2 new",
+   "old": null,
+   "new": "Analysis"
+  },
+  {
+   "finding": "P1-H0",
+   "sheet": "03_PAGE_SECTIONS",
+   "row": 601,
+   "col": 4,
+   "field": "/evidence/compare/#s2 new",
+   "old": null,
+   "new": "Three measures that cannot be combined"
+  },
+  {
+   "finding": "P1-H0",
+   "sheet": "03_PAGE_SECTIONS",
+   "row": 601,
+   "col": 5,
+   "field": "/evidence/compare/#s2 new",
+   "old": null,
+   "new": "Three kinds of figure are often set side by side. 11.9% is the share of adults (15+) in the survey's covered areas who had an account in the 2021 Global Findex wave, with fieldwork in 2022–2023. About 3.3 million is what a 2024 secondary source calls “active savers” in microfinance in 2023 — a count that has not been deduplicated into unique people. And 1,062,441 active bank accounts and 375,252 active e-wallet accounts are the FMIIP project's baselines for January 2025 — accounts, not people. These figures measure different things, for different populations and dates, from different kinds of evidence. They cannot be added, subtracted, ranked or converted into one another, and no population total is used here to turn the counts into shares. For these figures, “not comparable” is the correct result."
+  },
+  {
+   "finding": "P1-H0",
+   "sheet": "03_PAGE_SECTIONS",
+   "row": 602,
+   "col": 1,
+   "field": "/evidence/compare/#s2 new",
+   "old": null,
+   "new": "/evidence/compare/"
+  },
+  {
+   "finding": "P1-H0",
+   "sheet": "03_PAGE_SECTIONS",
+   "row": 602,
+   "col": 2,
+   "field": "/evidence/compare/#s2 new",
+   "old": null,
+   "new": 2
+  },
+  {
+   "finding": "P1-H0",
+   "sheet": "03_PAGE_SECTIONS",
+   "row": 602,
+   "col": 3,
+   "field": "/evidence/compare/#s2 new",
+   "old": null,
+   "new": "التحليل"
+  },
+  {
+   "finding": "P1-H0",
+   "sheet": "03_PAGE_SECTIONS",
+   "row": 602,
+   "col": 6,
+   "field": "/evidence/compare/#s2 new",
+   "old": null,
+   "new": "ثلاثة مقاييس لا يصح الجمع بينها"
+  },
+  {
+   "finding": "P1-H0",
+   "sheet": "03_PAGE_SECTIONS",
+   "row": 602,
+   "col": 7,
+   "field": "/evidence/compare/#s2 new",
+   "old": null,
+   "new": "كثيرًا ما توضع ثلاثة أنواع من الأرقام جنبًا إلى جنب. فنسبة 11.9% هي حصة البالغين (15 سنة فأكثر) في المناطق التي غطاها المسح ممن كان لديهم حساب في موجة 2021 من المؤشر العالمي للشمول المالي (Findex)، التي نُفذ عملها الميداني خلال 2022–2023. ونحو 3.3 مليون هو ما يسميه مصدر ثانوي منشور في 2024 «مدخرين نشطين» في قطاع التمويل الأصغر في 2023، وهو عدد لم تُزَل منه الازدواجية، فلا يمثل أشخاصًا فريدين. أما 1,062,441 حسابًا مصرفيًا نشطًا و375,252 حساب محفظة إلكترونية نشطًا فهي خطوط الأساس لمشروع FMIIP في يناير 2025، أي حسابات لا أشخاص. وتقيس هذه الأرقام أشياء مختلفة، لمجتمعات وتواريخ مختلفة، ومن أنواع مختلفة من الأدلة؛ فلا يجوز جمعها أو طرحها أو ترتيبها أو تحويل بعضها إلى بعض، ولا يُستخدم هنا أي عدد للسكان لتحويل الأعداد إلى نسب. والنتيجة الصحيحة في هذه الحالة هي «غير قابلة للمقارنة»."
+  },
+  {
+   "finding": "P1-H0",
+   "sheet": "03_PAGE_SECTIONS",
+   "row": 603,
+   "col": 1,
+   "field": "/methodology/#s7 new",
+   "old": null,
+   "new": "/methodology/"
+  },
+  {
+   "finding": "P1-H0",
+   "sheet": "03_PAGE_SECTIONS",
+   "row": 603,
+   "col": 2,
+   "field": "/methodology/#s7 new",
+   "old": null,
+   "new": 7
+  },
+  {
+   "finding": "P1-H0",
+   "sheet": "03_PAGE_SECTIONS",
+   "row": 603,
+   "col": 3,
+   "field": "/methodology/#s7 new",
+   "old": null,
+   "new": "Analysis"
+  },
+  {
+   "finding": "P1-H0",
+   "sheet": "03_PAGE_SECTIONS",
+   "row": 603,
+   "col": 4,
+   "field": "/methodology/#s7 new",
+   "old": null,
+   "new": "Uncertainty is stated, not manufactured"
+  },
+  {
+   "finding": "P1-H0",
+   "sheet": "03_PAGE_SECTIONS",
+   "row": 603,
+   "col": 5,
+   "field": "/methodology/#s7 new",
+   "old": null,
+   "new": "Survey estimates carry sampling and coverage uncertainty. Where a source publishes a confidence interval or standard error, it is reported with the estimate. Where it does not, no interval, standard error or significance test is added unless it can be reproduced from the survey's own weights and design. A derived value, such as the difference between two percentages, keeps the precision of its inputs, with no added decimal places, and small differences between estimates are not read as a ranking."
+  },
+  {
+   "finding": "P1-H0",
+   "sheet": "03_PAGE_SECTIONS",
+   "row": 604,
+   "col": 1,
+   "field": "/methodology/#s7 new",
+   "old": null,
+   "new": "/methodology/"
+  },
+  {
+   "finding": "P1-H0",
+   "sheet": "03_PAGE_SECTIONS",
+   "row": 604,
+   "col": 2,
+   "field": "/methodology/#s7 new",
+   "old": null,
+   "new": 7
+  },
+  {
+   "finding": "P1-H0",
+   "sheet": "03_PAGE_SECTIONS",
+   "row": 604,
+   "col": 3,
+   "field": "/methodology/#s7 new",
+   "old": null,
+   "new": "التحليل"
+  },
+  {
+   "finding": "P1-H0",
+   "sheet": "03_PAGE_SECTIONS",
+   "row": 604,
+   "col": 6,
+   "field": "/methodology/#s7 new",
+   "old": null,
+   "new": "عدم اليقين يُبيَّن ولا يُصطنع"
+  },
+  {
+   "finding": "P1-H0",
+   "sheet": "03_PAGE_SECTIONS",
+   "row": 604,
+   "col": 7,
+   "field": "/methodology/#s7 new",
+   "old": null,
+   "new": "تنطوي تقديرات المسوح على قدر من عدم اليقين مصدره المعاينة ونطاق التغطية. فإذا نشر المصدر فترة ثقة أو خطأً معياريًا عُرض مع التقدير، وإذا لم ينشره فلا تُضاف فترة ثقة ولا خطأ معياري ولا اختبار دلالة ما لم يمكن إعادة احتسابها من أوزان المسح وتصميمه. وتحتفظ القيمة المشتقة، كالفرق بين نسبتين، بدقة مدخلاتها من دون منازل عشرية إضافية، ولا تُقرأ الفروق الطفيفة بين التقديرات على أنها ترتيب."
+  },
+  {
+   "finding": "EXF-002",
+   "sheet": "02_SITE_MAP",
+   "row": 6,
+   "col": 7,
+   "field": "/access/.full_copy_en",
+   "old": "Access is a geography question — and the evidence is not yet a national map.\n\nAvailable evidence captures parts of the access landscape: provider classes, selected status events, payment-infrastructure totals and historical concentration patterns. It still does not establish, consistently across Yemen, which access points are operating at a particular place and date.\n\nWhat can be observed now\n\nOfficial rosters and decisions can establish listing, licensing or a dated status event. Payment reports can establish national or system totals for specified dates. These are useful pieces of the access picture, but they are not a verified, geocoded network of operating service points.\n\nWhat a roster or infrastructure count cannot establish\n\nA licence or roster entry does not prove current operation at every named location. A national count of terminals or service points does not establish where people can reach a service. Missing geography is unknown, not zero, and spatial overlap with electricity, connectivity, population or conflict does not by itself establish causality.\n\nInfrastructure can expand without telling us who can reach it\n\nCBY-reported POS terminals rose from 561 in March 2025 to 1,473 in January 2026. This establishes a change in the reported terminal stock. It does not show where every terminal is located, how many merchants or unique users it represents, whether the terminals are active, or how evenly access is distributed.\n\nHistorical provider evidence shows concentration, not today’s map\n\nA five-provider study covering 2016–2019 reports that e-money accounts/users were concentrated in cities at an average 93.8%, while women represented about 13% on average. It reports 807,919 e-money accounts in December 2019 and an average dormant/inactive share of 23%. These are historical observations within the study’s provider universe. They are useful for showing why account counts cannot be read as active people or current geographic access; they are not national prevalence or a present-day access map.\n\nThe blank parts of the map are data states\n\nA missing location record is not evidence that no service exists. Where operation cannot be verified, this resource shows the location as not observed or not currently evidenced. It does not turn an unobserved point into zero, or a licence, branch name or historical provider study into current operating presence.\n\nWhat a reliable national access atlas would require\n\nFor each service point, a reliable access atlas would require — subject to safety and rights — the permitted location or geographic level, channel type, operator, operating status, last verification date, available services, and any restriction on publication or spatial precision. Population, travel time, connectivity and conflict/access constraints could then be added as separate dated layers.\n\nWhere access sits in the wider system\n\nAccess sits between the presence of providers or infrastructure and actual use. Understanding it requires evidence on provider authority and operating status, reachable geography, channel and service type, followed separately by evidence on whether people or firms actually use the service and the quality they experience.",
+   "new": "Access is a geography question — and the evidence is not yet a national map.\n\nAvailable evidence captures parts of the access landscape: provider classes, selected status events, payment-infrastructure totals and historical concentration patterns. It still does not establish, consistently across Yemen, which access points are operating at a particular place and date.\n\nWhat can be observed now\n\nOfficial rosters and decisions can establish listing, licensing or a dated status event. Payment reports can establish national or system totals for specified dates. These are useful pieces of the access picture, but they are not a verified, geocoded network of operating service points.\n\nLists show who is registered, not where services operate\n\nOfficial lists document a substantial exchange and remittance provider presence relevant to the access question. The 2026 CBY-Aden roster lists 98 exchange companies, 225 individual exchange establishments and 106 remittance agents — three source categories, not a deduplicated count of firms — and the current CBY-Aden list of licensed banks names 26 banks. Listing or licensing is not operation, and later suspension or closure decisions are separate status events. Separately, the FMIIP results framework sets a January 2025 baseline of 817 financial access points against a 2030 target of 1,021, under a project definition that the evidence base does not document. None of these figures shows where services operate or how far people are from them.\n\nWhat a roster or infrastructure count cannot establish\n\nA licence or roster entry does not prove current operation at every named location. A national count of terminals or service points does not establish where people can reach a service. Missing geography is unknown, not zero, and spatial overlap with electricity, connectivity, population or conflict does not by itself establish causality.\n\nInfrastructure can expand without telling us who can reach it\n\nCBY-reported POS terminals rose from 561 in March 2025 to 1,473 in January 2026. This establishes a change in the reported terminal stock. It does not show where every terminal is located, how many merchants or unique users it represents, whether the terminals are active, or how evenly access is distributed.\n\nHistorical provider evidence shows concentration, not today’s map\n\nA five-provider study covering 2016–2019 reports that e-money accounts/users were concentrated in cities at an average 93.8%, while women represented about 13% on average. It reports 807,919 e-money accounts in December 2019 and an average dormant/inactive share of 23%. These are historical observations within the study’s provider universe. They are useful for showing why account counts cannot be read as active people or current geographic access; they are not national prevalence or a present-day access map.\n\nThe blank parts of the map are data states\n\nA missing location record is not evidence that no service exists. Where operation cannot be verified, this resource shows the location as not observed or not currently evidenced. It does not turn an unobserved point into zero, or a licence, branch name or historical provider study into current operating presence.\n\nWhat a reliable national access atlas would require\n\nFor each service point, a reliable access atlas would require — subject to safety and rights — the permitted location or geographic level, channel type, operator, operating status, last verification date, available services, and any restriction on publication or spatial precision. Population, travel time, connectivity and conflict/access constraints could then be added as separate dated layers.\n\nWhere access sits in the wider system\n\nAccess sits between the presence of providers or infrastructure and actual use. Understanding it requires evidence on provider authority and operating status, reachable geography, channel and service type, followed separately by evidence on whether people or firms actually use the service and the quality they experience."
+  },
+  {
+   "finding": "EXF-002",
+   "sheet": "02_SITE_MAP",
+   "row": 6,
+   "col": 8,
+   "field": "/access/.full_copy_ar",
+   "old": "نعرف أجزاءً من شبكة الوصول إلى الخدمات المالية، لكننا لا نملك بعد خريطة وطنية موثوقة لما يعمل فعليًا على الأرض.\n\nتعرض الأدلة المتاحة بعض ملامح الوصول إلى الخدمات المالية: فئات مقدمي الخدمات، ووقائع موثقة عن أوضاعهم، وإجماليات للبنية التحتية للمدفوعات، وأدلة تاريخية على التركز. لكنها لا تكفي بعد لتحديد نقاط الوصول العاملة في مكان وتاريخ محددين بصورة متسقة على مستوى اليمن.\n\nما الذي نعرفه الآن؟\n\nيمكن للقوائم والقرارات الرسمية أن تثبت الإدراج أو الترخيص أو حدثًا مؤرخًا يخص حالة جهة، كما تستطيع تقارير المدفوعات إثبات إجماليات وطنية أو خاصة بالنظام في تواريخ محددة. لكنها لا تكوّن، مجتمعة أو منفردة، سجلًا وطنيًا موثقًا ومحدد المواقع لنقاط خدمة تعمل فعليًا.\n\nما الذي لا تثبته القائمة أو أعداد البنية التحتية؟\n\nلا يثبت الترخيص أو الإدراج في قائمة أن كل موقع مسمى يعمل حاليًا. كما لا يبين العدد الوطني للأجهزة أو نقاط الخدمة أين يستطيع الناس الوصول إلى الخدمة فعليًا. الجغرافيا غير المرصودة تعني أن المعلومة غير معروفة، لا أن القيمة صفر، كما أن التداخل المكاني مع الكهرباء أو الاتصال أو السكان أو النزاع لا يثبت السببية بذاته.\n\nاتساع البنية لا يخبرنا وحده بمن يستطيع الوصول\n\nارتفع عدد أجهزة نقاط البيع التي أبلغ عنها البنك المركزي من 561 جهازًا في مارس 2025 إلى 1,473 جهازًا في يناير 2026. يثبت ذلك تغيرًا في عدد الأجهزة المبلّغ عنها، لكنه لا يبين مواقع جميع الأجهزة، ولا عدد التجار أو المستخدمين الفريدين الذين تمثلهم، ولا ما إذا كانت الأجهزة نشطة فعليًا، ولا مدى توازن توزيع الوصول إليها جغرافيًا.\n\nالأدلة التاريخية تكشف أن الحسابات قد تتركز من دون أن تعني وصولًا واسعًا\n\nتُظهر دراسة تاريخية شملت خمسة من مقدمي خدمات النقود الإلكترونية خلال 2016–2019 أن بيانات الحسابات والمستخدمين في نطاقها كانت متركزة في المدن بمتوسط 93.8%، وأن النساء مثلن نحو 13% في المتوسط. كما سجلت الدراسة 807,919 حسابًا للنقود الإلكترونية في ديسمبر 2019، بمتوسط 23% للحسابات الخاملة أو غير النشطة. وتبقى هذه مشاهدات تاريخية ضمن نطاق مقدمي الخدمات الذين شملتهم الدراسة؛ فهي تبيّن لماذا لا يمكن مساواة عدد الحسابات بالأشخاص النشطين أو بالوصول الجغرافي الراهن، ولا تمثل معدلًا وطنيًا أو خريطة حالية للوصول.\n\nلماذا لا يعرض هذا الموقع خريطة كاملة الآن؟\n\nغياب سجل لموقع لا يثبت أن الخدمة غير موجودة. وحيث يتعذر التحقق من التشغيل، تُعرض الحالة على أنها غير مرصودة أو لا تتوافر عليها أدلة حالية، لا باعتبارها صفرًا. كما لا يُحوَّل الترخيص أو اسم الفرع أو دراسة تاريخية لمقدم خدمة إلى دليل على وجود تشغيلي حالي.\n\nما الذي تتطلبه خريطة وصول موثوقة؟\n\nتتطلب خريطة وصول موثوقة لكل نقطة خدمة — وفق ما تسمح به اعتبارات السلامة والحقوق — الموقع أو المستوى الجغرافي المسموح بنشره، ونوع القناة، والجهة المشغلة، وحالة التشغيل، وتاريخ آخر تحقق، والخدمات المتاحة، وأي قيود على النشر أو الدقة المكانية. ويمكن بعد ذلك إضافة السكان وزمن السفر والاتصال وقيود النزاع أو الحركة كطبقات مستقلة ومؤرخة.\n\nأين يقع الوصول داخل المنظومة الأوسع؟\n\nيقع الوصول بين وجود مقدم الخدمة أو البنية التحتية وبين الاستخدام الفعلي. ويتطلب فهمه أدلة على الوضع النظامي والتشغيلي لمقدم الخدمة، والجغرافيا التي يمكن الوصول إليها، ونوع القناة والخدمة، ثم أدلة منفصلة على ما إذا كان الناس أو المنشآت يستخدمون الخدمة فعليًا وعلى جودة تجربتهم معها.",
+   "new": "نعرف أجزاءً من شبكة الوصول إلى الخدمات المالية، لكننا لا نملك بعد خريطة وطنية موثوقة لما يعمل فعليًا على الأرض.\n\nتعرض الأدلة المتاحة بعض ملامح الوصول إلى الخدمات المالية: فئات مقدمي الخدمات، ووقائع موثقة عن أوضاعهم، وإجماليات للبنية التحتية للمدفوعات، وأدلة تاريخية على التركز. لكنها لا تكفي بعد لتحديد نقاط الوصول العاملة في مكان وتاريخ محددين بصورة متسقة على مستوى اليمن.\n\nما الذي نعرفه الآن؟\n\nيمكن للقوائم والقرارات الرسمية أن تثبت الإدراج أو الترخيص أو حدثًا مؤرخًا يخص حالة جهة، كما تستطيع تقارير المدفوعات إثبات إجماليات وطنية أو خاصة بالنظام في تواريخ محددة. لكنها لا تكوّن، مجتمعة أو منفردة، سجلًا وطنيًا موثقًا ومحدد المواقع لنقاط خدمة تعمل فعليًا.\n\nالقوائم الرسمية تبيّن الجهات المسجلة، لا أماكن تقديم الخدمة\n\nتوثق القوائم الرسمية حضورًا كبيرًا لمقدمي خدمات الصرافة والحوالات يتصل بسؤال الوصول: فقائمة البنك المركزي اليمني – عدن لعام 2026 تضم 98 شركة صرافة و225 منشأة صرافة فردية و106 وكلاء حوالات — وهي ثلاث فئات يحددها المصدر، لا عددًا لمنشآت فريدة بعد إزالة الازدواج — كما تضم قائمته الحالية للبنوك المرخصة 26 بنكًا. والإدراج أو الترخيص لا يعني التشغيل، وقرارات الإيقاف أو الإغلاق اللاحقة أحداث حالة منفصلة. وبصورة مستقلة، يحدد إطار نتائج مشروع FMIIP خط أساس قدره 817 نقطة وصول مالي في يناير 2025 مقابل مستهدف قدره 1,021 نقطة في 2030، وفق تعريف للمشروع لا توثقه قاعدة الأدلة. ولا يبين أي من هذه الأرقام أين تعمل الخدمات ولا مدى بُعد الناس عنها.\n\nما الذي لا تثبته القائمة أو أعداد البنية التحتية؟\n\nلا يثبت الترخيص أو الإدراج في قائمة أن كل موقع مسمى يعمل حاليًا. كما لا يبين العدد الوطني للأجهزة أو نقاط الخدمة أين يستطيع الناس الوصول إلى الخدمة فعليًا. الجغرافيا غير المرصودة تعني أن المعلومة غير معروفة، لا أن القيمة صفر، كما أن التداخل المكاني مع الكهرباء أو الاتصال أو السكان أو النزاع لا يثبت السببية بذاته.\n\nاتساع البنية لا يخبرنا وحده بمن يستطيع الوصول\n\nارتفع عدد أجهزة نقاط البيع التي أبلغ عنها البنك المركزي من 561 جهازًا في مارس 2025 إلى 1,473 جهازًا في يناير 2026. يثبت ذلك تغيرًا في عدد الأجهزة المبلّغ عنها، لكنه لا يبين مواقع جميع الأجهزة، ولا عدد التجار أو المستخدمين الفريدين الذين تمثلهم، ولا ما إذا كانت الأجهزة نشطة فعليًا، ولا مدى توازن توزيع الوصول إليها جغرافيًا.\n\nالأدلة التاريخية تكشف أن الحسابات قد تتركز من دون أن تعني وصولًا واسعًا\n\nتُظهر دراسة تاريخية شملت خمسة من مقدمي خدمات النقود الإلكترونية خلال 2016–2019 أن بيانات الحسابات والمستخدمين في نطاقها كانت متركزة في المدن بمتوسط 93.8%، وأن النساء مثلن نحو 13% في المتوسط. كما سجلت الدراسة 807,919 حسابًا للنقود الإلكترونية في ديسمبر 2019، بمتوسط 23% للحسابات الخاملة أو غير النشطة. وتبقى هذه مشاهدات تاريخية ضمن نطاق مقدمي الخدمات الذين شملتهم الدراسة؛ فهي تبيّن لماذا لا يمكن مساواة عدد الحسابات بالأشخاص النشطين أو بالوصول الجغرافي الراهن، ولا تمثل معدلًا وطنيًا أو خريطة حالية للوصول.\n\nلماذا لا يعرض هذا الموقع خريطة كاملة الآن؟\n\nغياب سجل لموقع لا يثبت أن الخدمة غير موجودة. وحيث يتعذر التحقق من التشغيل، تُعرض الحالة على أنها غير مرصودة أو لا تتوافر عليها أدلة حالية، لا باعتبارها صفرًا. كما لا يُحوَّل الترخيص أو اسم الفرع أو دراسة تاريخية لمقدم خدمة إلى دليل على وجود تشغيلي حالي.\n\nما الذي تتطلبه خريطة وصول موثوقة؟\n\nتتطلب خريطة وصول موثوقة لكل نقطة خدمة — وفق ما تسمح به اعتبارات السلامة والحقوق — الموقع أو المستوى الجغرافي المسموح بنشره، ونوع القناة، والجهة المشغلة، وحالة التشغيل، وتاريخ آخر تحقق، والخدمات المتاحة، وأي قيود على النشر أو الدقة المكانية. ويمكن بعد ذلك إضافة السكان وزمن السفر والاتصال وقيود النزاع أو الحركة كطبقات مستقلة ومؤرخة.\n\nأين يقع الوصول داخل المنظومة الأوسع؟\n\nيقع الوصول بين وجود مقدم الخدمة أو البنية التحتية وبين الاستخدام الفعلي. ويتطلب فهمه أدلة على الوضع النظامي والتشغيلي لمقدم الخدمة، والجغرافيا التي يمكن الوصول إليها، ونوع القناة والخدمة، ثم أدلة منفصلة على ما إذا كان الناس أو المنشآت يستخدمون الخدمة فعليًا وعلى جودة تجربتهم معها."
+  },
+  {
+   "finding": "EXF-002",
+   "sheet": "02_SITE_MAP",
+   "row": 119,
+   "col": 7,
+   "field": "/evidence/compare/.full_copy_en",
+   "old": "Compare evidence without forcing unlike objects onto one scale\n\nSelect 2–4 records. Compare definition, period, population or calculation base, geography, unit and method before comparing values. A mismatch is a reason to qualify the comparison, not to hide it; when definitions or populations do not match, “not comparable” is a valid result.\nSelect at least two records.",
+   "new": "Compare evidence without forcing unlike objects onto one scale\n\nSelect 2–4 records. Compare definition, period, population or calculation base, geography, unit and method before comparing values. A mismatch is a reason to qualify the comparison, not to hide it; when definitions or populations do not match, “not comparable” is a valid result.\nSelect at least two records.\n\nThree measures that cannot be combined\n\nThree kinds of figure are often set side by side. 11.9% is the share of adults (15+) in the survey's covered areas who had an account in the 2021 Global Findex wave, with fieldwork in 2022–2023. About 3.3 million is what a 2024 secondary source calls “active savers” in microfinance in 2023 — a count that has not been deduplicated into unique people. And 1,062,441 active bank accounts and 375,252 active e-wallet accounts are the FMIIP project's baselines for January 2025 — accounts, not people. These figures measure different things, for different populations and dates, from different kinds of evidence. They cannot be added, subtracted, ranked or converted into one another, and no population total is used here to turn the counts into shares. For these figures, “not comparable” is the correct result."
+  },
+  {
+   "finding": "EXF-002",
+   "sheet": "02_SITE_MAP",
+   "row": 119,
+   "col": 8,
+   "field": "/evidence/compare/.full_copy_ar",
+   "old": "قارن الأدلة من دون فرض مقاييس غير متكافئة على مقياس واحد\n\nاختر من سجلين إلى أربعة. قارن التعريف والفترة ومجتمع القياس أو قاعدة الاحتساب والنطاق الجغرافي والوحدة والطريقة قبل مقارنة القيم. عدم التطابق سبب لتقييد المقارنة لا لإخفائها، وحين لا تتطابق التعريفات أو المجتمعات تكون «غير قابلة للمقارنة» نتيجة صحيحة.\nاختر سجلين على الأقل.",
+   "new": "قارن الأدلة من دون فرض مقاييس غير متكافئة على مقياس واحد\n\nاختر من سجلين إلى أربعة. قارن التعريف والفترة ومجتمع القياس أو قاعدة الاحتساب والنطاق الجغرافي والوحدة والطريقة قبل مقارنة القيم. عدم التطابق سبب لتقييد المقارنة لا لإخفائها، وحين لا تتطابق التعريفات أو المجتمعات تكون «غير قابلة للمقارنة» نتيجة صحيحة.\nاختر سجلين على الأقل.\n\nثلاثة مقاييس لا يصح الجمع بينها\n\nكثيرًا ما توضع ثلاثة أنواع من الأرقام جنبًا إلى جنب. فنسبة 11.9% هي حصة البالغين (15 سنة فأكثر) في المناطق التي غطاها المسح ممن كان لديهم حساب في موجة 2021 من المؤشر العالمي للشمول المالي (Findex)، التي نُفذ عملها الميداني خلال 2022–2023. ونحو 3.3 مليون هو ما يسميه مصدر ثانوي منشور في 2024 «مدخرين نشطين» في قطاع التمويل الأصغر في 2023، وهو عدد لم تُزَل منه الازدواجية، فلا يمثل أشخاصًا فريدين. أما 1,062,441 حسابًا مصرفيًا نشطًا و375,252 حساب محفظة إلكترونية نشطًا فهي خطوط الأساس لمشروع FMIIP في يناير 2025، أي حسابات لا أشخاص. وتقيس هذه الأرقام أشياء مختلفة، لمجتمعات وتواريخ مختلفة، ومن أنواع مختلفة من الأدلة؛ فلا يجوز جمعها أو طرحها أو ترتيبها أو تحويل بعضها إلى بعض، ولا يُستخدم هنا أي عدد للسكان لتحويل الأعداد إلى نسب. والنتيجة الصحيحة في هذه الحالة هي «غير قابلة للمقارنة»."
+  },
+  {
+   "finding": "EXF-002",
+   "sheet": "02_SITE_MAP",
+   "row": 123,
+   "col": 7,
+   "field": "/firms/.full_copy_en",
+   "old": "Finance matters. The denominator determines what “how much” means.\n\nFirm evidence in Yemen answers several different questions: what businesses cite as general constraints, how severe finance is within a finance-relevant subgroup, what formal credit paths look like, and what a programme achieved for the firms it supported. These answers must not be merged into one national percentage.\n\nFinance in the context of other business constraints\n\nIn the seven-governorate 2022 survey, the reported challenge shares were: electricity 50%, fuel 46%, transport 32%, tax 30%, political instability 27%, access to finance 22%, siege 18% and informal competition 17%. Respondents could name more than one challenge, so the shares add up to more than 100%, and the base for this question is not recorded in the evidence base; small differences between adjacent items should not be read as a firm ranking. These results answer “what was cited as a general challenge in this survey?” — not “what is the national ranking of constraints for all Yemeni firms?”\n\nA different question produces a much larger finance number\n\nAmong the firms in the report's finance-obstacle tabulation, which excludes firms that said they did not need a loan, 68.71% rated financing obstacles as major and 23.13% as moderate — 91.84% combined. This is a result for that filtered group, not the share of all Yemeni firms facing a major or moderate finance obstacle.\n\nFormal credit is a narrow path in this sample\n\nWithin the formal-firm sample, 31 of 328 firms reported a line of credit, and only 18 gave a valid response to the loan-source question. The source mix can therefore be described only for those 18 responses — not for all surveyed firms, all borrowers or all Yemeni enterprises.\n\nWhat these figures do not establish\n\nThe 22% general-business challenge measure and the 91.84% finance-severity measure use different questions and bases, so they are not two estimates of the same national rate. The 18 valid loan-source responses describe only that small conditional group. SMEPS programme results describe supported firms and must not be presented as national MSME prevalence or attribution.\n\nProgramme reach is useful evidence — inside the programme universe\n\nSMEPS reports that in 2024 it supported 8,217 MSMEs and disbursed USD 22,865,322, and that across 2021–2024 its support reached 31,560 MSMEs with USD 54.7 million in programme funding or disbursement. These are programme-delivery measures within the programme’s own beneficiary universe; they are not a count of Yemen’s MSME population, a measure of financial-sector lending, or proof of causal impact.\n\nA KPI can be publishable even when its denominator detail is incomplete\n\nSMEPS’s 2024 Annual Report states that 19% of supported MSMEs accessed financial services in 2024, and gives 15% for 2021–2024 against a programme target of 40%. The report does not fully specify the calculation base or the operational definition of “accessed financial services”. The KPI is therefore readable only within the programme’s own universe, with that limitation visible: it is not a national MSME access rate, and the 40% remains a target, not an observed result.\n\nWhat the combined evidence changes\n\nThe finance problem does not begin and end with whether a loan exists. The full journey includes the need for finance, application, approval or rejection, amount, terms, source, use, repayment pressure and what happened to the firm afterwards. Current evidence does not cover that entire journey nationally.",
+   "new": "Finance matters. The denominator determines what “how much” means.\n\nFirm evidence in Yemen answers several different questions: what businesses cite as general constraints, how severe finance is within a finance-relevant subgroup, what formal credit paths look like, and what a programme achieved for the firms it supported. These answers must not be merged into one national percentage.\n\nFinance in the context of other business constraints\n\nIn the seven-governorate 2022 survey, the reported challenge shares were: electricity 50%, fuel 46%, transport 32%, tax 30%, political instability 27%, access to finance 22%, siege 18% and informal competition 17%. Respondents could name more than one challenge, so the shares add up to more than 100%, and the base for this question is not recorded in the evidence base; small differences between adjacent items should not be read as a firm ranking. These results answer “what was cited as a general challenge in this survey?” — not “what is the national ranking of constraints for all Yemeni firms?”\n\nA different question produces a much larger finance number\n\nAmong the firms in the report's finance-obstacle tabulation, which excludes firms that said they did not need a loan, 68.71% rated financing obstacles as major and 23.13% as moderate — 91.84% combined. This is a result for that filtered group, not the share of all Yemeni firms facing a major or moderate finance obstacle.\n\nFormal credit is a narrow path in this sample\n\nWithin the formal-firm sample, 31 of 328 firms reported a line of credit, and only 18 gave a valid response to the loan-source question. The source mix can therefore be described only for those 18 responses — not for all surveyed firms, all borrowers or all Yemeni enterprises.\n\nFormal firms in this sample: most held a bank account, but banks financed almost none of their working capital\n\nAmong formal firms in the 2022 seven-governorate survey, 58.2% (191 of 328) reported a checking or savings account. Their working capital came mainly from internal sources: on average, 69.12% came from internal funds or retained earnings, 16.66% from money lenders, friends or relatives, 10.15% from advance payments by clients, 1.97% from non-bank financial institutions, 1.31% from supplier credit and 0.56% from banks. In a separate question on the financial intermediaries they use, 73.48% of responding formal firms named an exchange store or money exchanger and 24.39% a commercial bank; firms could name more than one, so these are not market shares. The evidence base does not hold the number of firms behind the working-capital averages or the intermediary question. Among the 217 informal firms surveyed, 80.18% had no bank account; that sample was drawn from activity and location lists rather than a national register. The formal-firm sample includes micro firms with fewer than five employees, and neither sample represents all Yemeni firms.\n\nWhat these figures do not establish\n\nThe 22% general-business challenge measure and the 91.84% finance-severity measure use different questions and bases, so they are not two estimates of the same national rate. The 18 valid loan-source responses describe only that small conditional group. SMEPS programme results describe supported firms and must not be presented as national MSME prevalence or attribution.\n\nProgramme reach is useful evidence — inside the programme universe\n\nSMEPS reports that in 2024 it supported 8,217 MSMEs and disbursed USD 22,865,322, and that across 2021–2024 its support reached 31,560 MSMEs with USD 54.7 million in programme funding or disbursement. These are programme-delivery measures within the programme’s own beneficiary universe; they are not a count of Yemen’s MSME population, a measure of financial-sector lending, or proof of causal impact.\n\nA KPI can be publishable even when its denominator detail is incomplete\n\nSMEPS’s 2024 Annual Report states that 19% of supported MSMEs accessed financial services in 2024, and gives 15% for 2021–2024 against a programme target of 40%. The report does not fully specify the calculation base or the operational definition of “accessed financial services”. The KPI is therefore readable only within the programme’s own universe, with that limitation visible: it is not a national MSME access rate, and the 40% remains a target, not an observed result.\n\nWhat the combined evidence changes\n\nThe finance problem does not begin and end with whether a loan exists. The full journey includes the need for finance, application, approval or rejection, amount, terms, source, use, repayment pressure and what happened to the firm afterwards. Current evidence does not cover that entire journey nationally."
+  },
+  {
+   "finding": "EXF-002",
+   "sheet": "02_SITE_MAP",
+   "row": 123,
+   "col": 8,
+   "field": "/firms/.full_copy_ar",
+   "old": "التمويل قيد مهم على المنشآت، لكن حجم المشكلة يتغير باختلاف السؤال ومن نقيسه.\n\nتحتاج قراءة تمويل المنشآت إلى فصل ثلاثة أشياء: قيود الأعمال العامة، وشدة عائق التمويل لدى الفئة التي ينطبق عليها السؤال، والنتائج التي تبلغ عنها البرامج داخل نطاق المستفيدين منها.\n\nالتمويل مهم، لكنه ليس القيد الوحيد\n\nفي المسح المخصص الذي شمل سبع محافظات عام 2022، ذكرت 50% من المنشآت الكهرباء كتحدٍ، و46% الوقود، و32% النقل، و30% الضرائب، و27% عدم الاستقرار السياسي، مقابل 22% للوصول إلى التمويل و18% للحصار و17% للمنافسة غير الرسمية. وكان بإمكان المنشأة ذكر أكثر من تحدٍّ، لذلك يتجاوز مجموع النسب 100%، ولا تتضمن قاعدة الأدلة حجم العينة التي أجابت عن هذا السؤال؛ فلا ينبغي قراءة الفروق الصغيرة بين البنود المتجاورة كترتيب ثابت. وهذه النتائج تخص عينة المسح وجغرافيته، ولا تمثل ترتيبًا وطنيًا لجميع منشآت اليمن.\n\nعندما يركز السؤال على التمويل، تبدو شدة العائق أعلى بكثير\n\nبين المنشآت التي شملها جدول عوائق التمويل في التقرير، بعد استبعاد المنشآت التي قالت إنها لا تحتاج إلى قرض، صنفت 68.71% عوائق التمويل بأنها كبيرة و23.13% بأنها متوسطة، أي 91.84% معًا. وتخص هذه النسبة تلك الفئة المصفاة وقاعدة احتسابها، ولا تعني أن 91.84% من جميع منشآت اليمن تواجه عائقًا تمويليًا كبيرًا أو متوسطًا.\n\nعندما تقترض المنشآت، ماذا نعرف عن مصدر الائتمان؟\n\nداخل عينة المنشآت الرسمية في المسح، أبلغت 31 من أصل 328 منشأة عن وجود خط ائتمان، ولا تتوفر سوى 18 استجابة صالحة لسؤال مصدر القرض. لذلك لا يمكن وصف تركيبة مصادر الائتمان إلا لهذه الاستجابات الثماني عشرة، لا لجميع منشآت العينة ولا لجميع المقترضين ولا لجميع المنشآت اليمنية.\n\nما الذي لا تثبته هذه الأرقام؟\n\nلا تمثل نسبة 22% للتحدي العام ونسبة 91.84% لشدة عوائق التمويل تقديرين لمعدل وطني واحد؛ فالسؤال وقاعدة القياس مختلفان. كما أن 18 استجابة صالحة لمصدر القرض تصف تلك المجموعة الصغيرة فقط. أما نتائج SMEPS فتصف منشآت داخل نطاق البرنامج ولا تمثل معدلًا وطنيًا للمنشآت الصغيرة والمتوسطة ولا تثبت أن البرنامج سبب النتيجة.\n\nما الذي تضيفه أدلة SMEPS؟\n\nتفيد وكالة تنمية المنشآت الصغيرة والأصغر (SMEPS) بأنها دعمت 8,217 منشأة صغرى وصغيرة ومتوسطة في 2024 وصرفت 22,865,322 دولارًا، وأن دعمها خلال 2021–2024 شمل 31,560 منشأة بتمويل أو صرف برامجي قدره 54.7 مليون دولار. وهذه مقاييس لتنفيذ البرنامج داخل نطاق المستفيدين منه، ولا تمثل عدد المنشآت في اليمن ولا حجم إقراض القطاع المالي، ولا تثبت أثرًا سببيًا.\n\nنتيجة البرنامج ليست نسبة وطنية\n\nيورد التقرير السنوي 2024 لوكالة SMEPS أن 19% من المنشآت التي دعمها البرنامج «وصلت إلى خدمات مالية» في 2024، ونسبة 15% للفترة 2021–2024 مقابل مستهدف برامجي قدره 40%. ولا يحدد التقرير بصورة كاملة قاعدة احتساب هذا المؤشر ولا التعريف التشغيلي لعبارة «الوصول إلى خدمات مالية». ولذلك لا يُقرأ المؤشر إلا داخل نطاق البرنامج، مع إبقاء هذا القيد ظاهرًا: فهو ليس معدلًا وطنيًا لوصول المنشآت إلى الخدمات المالية، وتبقى نسبة 40% مستهدفًا لا نتيجة مرصودة.\n\nما الذي يعنيه ذلك؟\n\nمشكلة التمويل لا تبدأ وتنتهي عند سؤال «هل يوجد قرض؟». فالمسار الكامل يشمل الحاجة إلى التمويل، ثم التقديم، والموافقة أو الرفض، وحجم التمويل وشروطه ومصدره، وكيفية استخدامه، وضغوط السداد، وما حدث للمنشأة بعده. والأدلة الحالية لا تغطي هذا المسار كاملًا على المستوى الوطني.",
+   "new": "التمويل قيد مهم على المنشآت، لكن حجم المشكلة يتغير باختلاف السؤال ومن نقيسه.\n\nتحتاج قراءة تمويل المنشآت إلى فصل ثلاثة أشياء: قيود الأعمال العامة، وشدة عائق التمويل لدى الفئة التي ينطبق عليها السؤال، والنتائج التي تبلغ عنها البرامج داخل نطاق المستفيدين منها.\n\nالتمويل مهم، لكنه ليس القيد الوحيد\n\nفي المسح المخصص الذي شمل سبع محافظات عام 2022، ذكرت 50% من المنشآت الكهرباء كتحدٍ، و46% الوقود، و32% النقل، و30% الضرائب، و27% عدم الاستقرار السياسي، مقابل 22% للوصول إلى التمويل و18% للحصار و17% للمنافسة غير الرسمية. وكان بإمكان المنشأة ذكر أكثر من تحدٍّ، لذلك يتجاوز مجموع النسب 100%، ولا تتضمن قاعدة الأدلة حجم العينة التي أجابت عن هذا السؤال؛ فلا ينبغي قراءة الفروق الصغيرة بين البنود المتجاورة كترتيب ثابت. وهذه النتائج تخص عينة المسح وجغرافيته، ولا تمثل ترتيبًا وطنيًا لجميع منشآت اليمن.\n\nعندما يركز السؤال على التمويل، تبدو شدة العائق أعلى بكثير\n\nبين المنشآت التي شملها جدول عوائق التمويل في التقرير، بعد استبعاد المنشآت التي قالت إنها لا تحتاج إلى قرض، صنفت 68.71% عوائق التمويل بأنها كبيرة و23.13% بأنها متوسطة، أي 91.84% معًا. وتخص هذه النسبة تلك الفئة المصفاة وقاعدة احتسابها، ولا تعني أن 91.84% من جميع منشآت اليمن تواجه عائقًا تمويليًا كبيرًا أو متوسطًا.\n\nعندما تقترض المنشآت، ماذا نعرف عن مصدر الائتمان؟\n\nداخل عينة المنشآت الرسمية في المسح، أبلغت 31 من أصل 328 منشأة عن وجود خط ائتمان، ولا تتوفر سوى 18 استجابة صالحة لسؤال مصدر القرض. لذلك لا يمكن وصف تركيبة مصادر الائتمان إلا لهذه الاستجابات الثماني عشرة، لا لجميع منشآت العينة ولا لجميع المقترضين ولا لجميع المنشآت اليمنية.\n\nالمنشآت الرسمية في هذه العينة: لدى أغلبها حساب مصرفي، لكن البنوك لم تموّل إلا جزءًا ضئيلًا جدًا من رأس مالها العامل\n\nأفادت 58.2% من المنشآت الرسمية في مسح عام 2022 الذي شمل سبع محافظات (191 من أصل 328 منشأة) بأن لديها حسابًا جاريًا أو حساب ادخار. غير أن رأس مالها العامل اعتمد أساسًا على مصادر داخلية: ففي المتوسط جاء 69.12% منه من الأموال الذاتية أو الأرباح المحتجزة، و16.66% من المقرضين أو الأصدقاء أو الأقارب، و10.15% من دفعات مقدمة من العملاء، و1.97% من مؤسسات مالية غير مصرفية، و1.31% من ائتمان الموردين، و0.56% فقط من البنوك. وفي سؤال مستقل عن الوسطاء الماليين الذين تتعامل معهم، ذكرت 73.48% من المنشآت الرسمية المجيبة محلات الصرافة أو الصرافين، و24.39% البنوك التجارية؛ ولأن المنشأة كان بإمكانها ذكر أكثر من وسيط، فهذه النسب ليست حصصًا سوقية. ولا تتضمن قاعدة الأدلة عدد المنشآت التي تستند إليها متوسطات رأس المال العامل ولا عدد المجيبين عن سؤال الوسطاء. أما المنشآت غير الرسمية التي شملها المسح، وعددها 217 منشأة، فلم يكن لدى 80.18% منها حساب مصرفي، وقد سُحبت عينتها من قوائم للأنشطة والمواقع لا من سجل وطني. وتضم عينة المنشآت الرسمية منشآت صغرى يقل عدد العاملين فيها عن خمسة، ولا تمثل أيٌّ من العينتين جميع المنشآت في اليمن.\n\nما الذي لا تثبته هذه الأرقام؟\n\nلا تمثل نسبة 22% للتحدي العام ونسبة 91.84% لشدة عوائق التمويل تقديرين لمعدل وطني واحد؛ فالسؤال وقاعدة القياس مختلفان. كما أن 18 استجابة صالحة لمصدر القرض تصف تلك المجموعة الصغيرة فقط. أما نتائج SMEPS فتصف منشآت داخل نطاق البرنامج ولا تمثل معدلًا وطنيًا للمنشآت الصغيرة والمتوسطة ولا تثبت أن البرنامج سبب النتيجة.\n\nما الذي تضيفه أدلة SMEPS؟\n\nتفيد وكالة تنمية المنشآت الصغيرة والأصغر (SMEPS) بأنها دعمت 8,217 منشأة صغرى وصغيرة ومتوسطة في 2024 وصرفت 22,865,322 دولارًا، وأن دعمها خلال 2021–2024 شمل 31,560 منشأة بتمويل أو صرف برامجي قدره 54.7 مليون دولار. وهذه مقاييس لتنفيذ البرنامج داخل نطاق المستفيدين منه، ولا تمثل عدد المنشآت في اليمن ولا حجم إقراض القطاع المالي، ولا تثبت أثرًا سببيًا.\n\nنتيجة البرنامج ليست نسبة وطنية\n\nيورد التقرير السنوي 2024 لوكالة SMEPS أن 19% من المنشآت التي دعمها البرنامج «وصلت إلى خدمات مالية» في 2024، ونسبة 15% للفترة 2021–2024 مقابل مستهدف برامجي قدره 40%. ولا يحدد التقرير بصورة كاملة قاعدة احتساب هذا المؤشر ولا التعريف التشغيلي لعبارة «الوصول إلى خدمات مالية». ولذلك لا يُقرأ المؤشر إلا داخل نطاق البرنامج، مع إبقاء هذا القيد ظاهرًا: فهو ليس معدلًا وطنيًا لوصول المنشآت إلى الخدمات المالية، وتبقى نسبة 40% مستهدفًا لا نتيجة مرصودة.\n\nما الذي يعنيه ذلك؟\n\nمشكلة التمويل لا تبدأ وتنتهي عند سؤال «هل يوجد قرض؟». فالمسار الكامل يشمل الحاجة إلى التمويل، ثم التقديم، والموافقة أو الرفض، وحجم التمويل وشروطه ومصدره، وكيفية استخدامه، وضغوط السداد، وما حدث للمنشأة بعده. والأدلة الحالية لا تغطي هذا المسار كاملًا على المستوى الوطني."
+  },
+  {
+   "finding": "EXF-002",
+   "sheet": "02_SITE_MAP",
+   "row": 126,
+   "col": 7,
+   "field": "/methodology/.full_copy_en",
+   "old": "Preserve the meaning of the evidence before comparing the numbers.\n\nThe method is designed to prevent a common failure: treating different people, accounts, providers, periods, geographies and programme records as if they measured the same thing.\n\nStart with the object being measured\n\nPeople, accounts, active accounts, savers, borrowers, providers, service points, terminals, transactions, balances, programme beneficiaries and reform milestones are different analytical objects. The method never assumes that one can stand in for another.\n\nSeveral evidence clocks can be true at once\n\nPopulation surveys, administrative records, provider rosters, regulations, project milestones and programme results update at different times. This resource preserves observation or fieldwork dates separately from release dates so a newer publication is not mistaken for a newer measurement.\n\nWhat the evidence covers — and what it does not\n\nCoverage differs by topic. A few topics have current observations: the formal status of providers under CBY-Aden lists, bank credit and other monetary statistics, and remittance prices in two corridors. Most people-side topics rest on the latest representative survey wave (fieldwork 2022–23) or on 2014 values, and several — frequency of use, financial resilience, digital capability, affordability and age — are defined in the 2021 survey data but not yet estimated. Payments, regulation and consumer protection are evidenced mainly through administrative and regulatory records, which show systems and rules rather than use or outcomes. There is no current Yemen evidence on service reliability, the geography of operating access points, inclusion by displacement or disability status, digital fraud, insurance or pensions. Gaps are shown as gaps: they are not filled with other countries' figures, and each is linked to a measurement priority.\n\nHow evidence is admitted, and in what role\n\nA source enters the evidence base when its original locator and date can be recorded and its content can be checked against the source itself; its publisher, issuer and reuse terms are recorded when they have been confirmed. A source's role is recorded for each use rather than once for the source: the same report can be primary factual evidence for one record and context for another. The roles are primary factual evidence, a dated status event, Yemen analytical literature, a global method reference and context. The kind of document — a law, decision, survey, dataset or report — is recorded separately, and no numerical quality score is assigned. Primary evidence and status events support public figures directly. A figure known only from a secondary source appears only when it is attributed and labelled as secondary. Analytical literature is attributed to its authors, and global references inform method without standing in for Yemen evidence. A figure that cannot be verified against its stated source is withheld.\n\nMeasuring in a divided, conflict-affected setting\n\nFour features of Yemen change how evidence is read. Central-bank authority has been divided since 2016, so official lists, decisions and statistics carry the scope of the authority that issued them. Rial values can differ between monetary areas, so a nominal figure is read with its valuation basis where the source records it. Survey coverage is incomplete: the latest Findex wave excluded areas holding about 23% of the population and replaced more than a quarter of its sampling units. And programme data describe programme populations. None of this explains a result by itself: conflict is context for interpretation, not a cause the evidence has established.\n\nDerived evidence must be reproducible\n\nWhen this resource calculates a gap, share, ratio, revision or other derived measure, it records the inputs and method needed to reproduce the calculation. A derivation cannot create coverage, comparability or causal meaning that the inputs did not contain.\n\nComparison is conditional on compatibility\n\nBefore values share a scale, this resource checks definition, period, geography, population or base, unit, source universe and method. A material mismatch stays visible and can block a common scale. The purpose is not to prevent comparison; it is to prevent a false one.\n\nPublic states change what this resource may do\n\nObserved, derived, historical, bounded, conditional, unknown, conflicting, rights-restricted, superseded, corrected, unavailable, current and stale states affect whether an item may appear in display, search, Compare, download or export. If a state cannot be interpreted safely, the item is not exposed as reusable public evidence until the state is resolved.\n\nWhat the method does not claim\n\nTraceability is not certainty. A primary source can still be old; a recent administrative record may not measure people; a representative survey may not support governorate estimates; a correct calculation may still use a narrow base. The method preserves those limits rather than turning them into one confidence score.\n\nCorrection is part of the evidence trail\n\nWhen a source is revised or an error is found, the public evidence record is corrected without losing its stable identity. New or conflicting evidence is checked against the original source before it changes a public record. If it materially changes the interpretation, the current record states what changed and why; if the conflict cannot be resolved, the uncertainty remains visible. Superseded evidence remains traceable when public retention is appropriate.\n\nChallenge the answer\n\nFrom a public answer, open the evidence record and inspect the original source, locator/version, unit, population or calculation base, geography, period, method and rights/publication state. Compare it with other evidence only when definitions permit. An unresolved source conflict stays visible rather than being averaged, harmonized or silently repaired. If something is wrong or incomplete, use the correction channel and cite the stable evidence ID.\n\nComposite scores follow survey-round-specific rules\n\nComposite financial-literacy measures combine several constructs and follow scoring rules specific to the survey round that produced them. Reproducing a score therefore requires the definitions, question set and calculation rules for that round; carrying scoring rules across editions can change what the measure represents. A financial-literacy score is not an access rate.",
+   "new": "Preserve the meaning of the evidence before comparing the numbers.\n\nThe method is designed to prevent a common failure: treating different people, accounts, providers, periods, geographies and programme records as if they measured the same thing.\n\nStart with the object being measured\n\nPeople, accounts, active accounts, savers, borrowers, providers, service points, terminals, transactions, balances, programme beneficiaries and reform milestones are different analytical objects. The method never assumes that one can stand in for another.\n\nSeveral evidence clocks can be true at once\n\nPopulation surveys, administrative records, provider rosters, regulations, project milestones and programme results update at different times. This resource preserves observation or fieldwork dates separately from release dates so a newer publication is not mistaken for a newer measurement.\n\nWhat the evidence covers — and what it does not\n\nCoverage differs by topic. A few topics have current observations: the formal status of providers under CBY-Aden lists, bank credit and other monetary statistics, and remittance prices in two corridors. Most people-side topics rest on the latest representative survey wave (fieldwork 2022–23) or on 2014 values, and several — frequency of use, financial resilience, digital capability, affordability and age — are defined in the 2021 survey data but not yet estimated. Payments, regulation and consumer protection are evidenced mainly through administrative and regulatory records, which show systems and rules rather than use or outcomes. There is no current Yemen evidence on service reliability, the geography of operating access points, inclusion by displacement or disability status, digital fraud, insurance or pensions. Gaps are shown as gaps: they are not filled with other countries' figures, and each is linked to a measurement priority.\n\nHow evidence is admitted, and in what role\n\nA source enters the evidence base when its original locator and date can be recorded and its content can be checked against the source itself; its publisher, issuer and reuse terms are recorded when they have been confirmed. A source's role is recorded for each use rather than once for the source: the same report can be primary factual evidence for one record and context for another. The roles are primary factual evidence, a dated status event, Yemen analytical literature, a global method reference and context. The kind of document — a law, decision, survey, dataset or report — is recorded separately, and no numerical quality score is assigned. Primary evidence and status events support public figures directly. A figure known only from a secondary source appears only when it is attributed and labelled as secondary. Analytical literature is attributed to its authors, and global references inform method without standing in for Yemen evidence. A figure that cannot be verified against its stated source is withheld.\n\nMeasuring in a divided, conflict-affected setting\n\nFour features of Yemen change how evidence is read. Central-bank authority has been divided since 2016, so official lists, decisions and statistics carry the scope of the authority that issued them. Rial values can differ between monetary areas, so a nominal figure is read with its valuation basis where the source records it. Survey coverage is incomplete: the latest Findex wave excluded areas holding about 23% of the population and replaced more than a quarter of its sampling units. And programme data describe programme populations. None of this explains a result by itself: conflict is context for interpretation, not a cause the evidence has established.\n\nUncertainty is stated, not manufactured\n\nSurvey estimates carry sampling and coverage uncertainty. Where a source publishes a confidence interval or standard error, it is reported with the estimate. Where it does not, no interval, standard error or significance test is added unless it can be reproduced from the survey's own weights and design. A derived value, such as the difference between two percentages, keeps the precision of its inputs, with no added decimal places, and small differences between estimates are not read as a ranking.\n\nDerived evidence must be reproducible\n\nWhen this resource calculates a gap, share, ratio, revision or other derived measure, it records the inputs and method needed to reproduce the calculation. A derivation cannot create coverage, comparability or causal meaning that the inputs did not contain.\n\nComparison is conditional on compatibility\n\nBefore values share a scale, this resource checks definition, period, geography, population or base, unit, source universe and method. A material mismatch stays visible and can block a common scale. The purpose is not to prevent comparison; it is to prevent a false one.\n\nPublic states change what this resource may do\n\nObserved, derived, historical, bounded, conditional, unknown, conflicting, rights-restricted, superseded, corrected, unavailable, current and stale states affect whether an item may appear in display, search, Compare, download or export. If a state cannot be interpreted safely, the item is not exposed as reusable public evidence until the state is resolved.\n\nWhat the method does not claim\n\nTraceability is not certainty. A primary source can still be old; a recent administrative record may not measure people; a representative survey may not support governorate estimates; a correct calculation may still use a narrow base. The method preserves those limits rather than turning them into one confidence score.\n\nCorrection is part of the evidence trail\n\nWhen a source is revised or an error is found, the public evidence record is corrected without losing its stable identity. New or conflicting evidence is checked against the original source before it changes a public record. If it materially changes the interpretation, the current record states what changed and why; if the conflict cannot be resolved, the uncertainty remains visible. Superseded evidence remains traceable when public retention is appropriate.\n\nChallenge the answer\n\nFrom a public answer, open the evidence record and inspect the original source, locator/version, unit, population or calculation base, geography, period, method and rights/publication state. Compare it with other evidence only when definitions permit. An unresolved source conflict stays visible rather than being averaged, harmonized or silently repaired. If something is wrong or incomplete, use the correction channel and cite the stable evidence ID.\n\nComposite scores follow survey-round-specific rules\n\nComposite financial-literacy measures combine several constructs and follow scoring rules specific to the survey round that produced them. Reproducing a score therefore requires the definitions, question set and calculation rules for that round; carrying scoring rules across editions can change what the measure represents. A financial-literacy score is not an access rate."
+  },
+  {
+   "finding": "EXF-002",
+   "sheet": "02_SITE_MAP",
+   "row": 126,
+   "col": 8,
+   "field": "/methodology/.full_copy_ar",
+   "old": "احفظ معنى الدليل قبل أن تقارن الأرقام.\n\nصُممت المنهجية لمنع خطأ شائع: التعامل مع الأشخاص والحسابات ومقدمي الخدمات والفترات والجغرافيا وسجلات البرامج المختلفة وكأنها تقيس الشيء نفسه.\n\nابدأ بما الذي يجري قياسه\n\nالأشخاص والحسابات والحسابات النشطة والمدخرون والمقترضون ومقدمو الخدمات ونقاط الخدمة والأجهزة والمعاملات والأرصدة ومستفيدو البرامج ومحطات الإصلاح عناصر تحليلية مختلفة. ولا تفترض المنهجية أن أحدها يمكن أن يحل محل الآخر.\n\nقد تكون عدة فترات قياس صحيحة في الوقت نفسه\n\nتتحدث المسوح السكانية والسجلات الإدارية وقوائم مقدمي الخدمات والتنظيمات ومحطات المشروعات ونتائج البرامج في أوقات مختلفة. لذلك يفصل هذا الموقع تاريخ القياس أو العمل الميداني عن تاريخ النشر حتى لا تُفهم وثيقة أحدث نشرًا على أنها قياس أحدث زمنيًا.\n\nما الذي تغطيه الأدلة وما الذي لا تغطيه\n\nتختلف تغطية الأدلة من موضوع إلى آخر. فبعض الموضوعات لها مشاهدات حديثة: الوضع الرسمي لمقدمي الخدمات وفق قوائم البنك المركزي اليمني – عدن، والائتمان المصرفي وغيره من الإحصاءات النقدية، وأسعار التحويل في ممرين. أما معظم موضوعات الأفراد فتستند إلى أحدث موجة مسح ممثلة (نُفذ عملها الميداني خلال 2022–2023) أو إلى قيم 2014، كما أن عددًا منها — كتكرار الاستخدام والصمود المالي والقدرات الرقمية والقدرة على تحمل التكلفة والعمر — معرَّف في بيانات مسح 2021 لكنه لم يُقدَّر بعد. وتستند أدلة المدفوعات والتنظيم وحماية المستهلك أساسًا إلى سجلات إدارية وتنظيمية تبين الأنظمة والقواعد لا الاستخدام أو النتائج. ولا توجد أدلة يمنية حديثة عن موثوقية الخدمات، ولا عن التوزيع الجغرافي لنقاط الوصول العاملة، ولا عن الشمول المالي بحسب النزوح أو الإعاقة، ولا عن الاحتيال الرقمي أو التأمين أو المعاشات. وتُعرض الفجوات بوصفها فجوات: فلا تُملأ بأرقام بلدان أخرى، وترتبط كل منها بأولوية قياس.\n\nكيف تُقبل الأدلة، وبأي دور\n\nيدخل المصدر قاعدة الأدلة عندما يمكن تسجيل رابطه الأصلي وتاريخه والتحقق من محتواه مقابل المصدر نفسه، وتُسجَّل الجهة الناشرة والجهة المُصدِرة وشروط إعادة الاستخدام متى تأكدت. ويُسجَّل دور المصدر في كل استخدام على حدة لا مرة واحدة للمصدر كله: فقد يكون التقرير نفسه دليلًا واقعيًا أوليًا لسجل، وسياقًا لسجل آخر. والأدوار هي: دليل واقعي أولي، أو حدث حالة مؤرخ، أو أدبيات تحليلية عن اليمن، أو مرجع منهجي دولي، أو سياق. ويُسجَّل نوع الوثيقة — قانون أو قرار أو مسح أو مجموعة بيانات أو تقرير — بشكل منفصل، ولا تُمنح المصادر أي درجة رقمية للجودة. ويسند الدليل الأولي وأحداث الحالة الأرقام العامة مباشرة، أما الرقم الذي لا يُعرف إلا من مصدر ثانوي فلا يظهر إلا منسوبًا إلى مصدره وموسومًا بأنه ثانوي. وتُنسب الأدبيات التحليلية إلى أصحابها، وتفيد المراجع الدولية المنهجَ من دون أن تحل محل الأدلة اليمنية. ويُحجب الرقم الذي يتعذر التحقق منه مقابل مصدره المعلن.\n\nالقياس في بيئة منقسمة ومتأثرة بالنزاع\n\nأربع سمات في اليمن تغير طريقة قراءة الأدلة. فقد انقسمت سلطة البنك المركزي منذ 2016، ولذلك تحمل القوائم والقرارات والإحصاءات الرسمية نطاق السلطة التي أصدرتها. وقد تختلف قيم الريال بين المناطق النقدية، فيُقرأ الرقم الاسمي مع أساس تقييمه حيث يسجله المصدر. كما أن تغطية المسوح ناقصة: فقد استبعدت أحدث موجة من Findex مناطق يقطنها نحو 23% من السكان، واستُبدل فيها أكثر من ربع وحدات المعاينة. وتصف بيانات البرامج مجتمعات تلك البرامج. ولا يفسر أي من ذلك نتيجة بذاته؛ فالنزاع سياق للتفسير، لا سبب أثبتته الأدلة.\n\nيجب أن تكون القيم المشتقة قابلة لإعادة الاحتساب\n\nعندما يحسب هذا الموقع فجوة أو حصة أو نسبة أو مراجعة أو قيمة مشتقة أخرى، تسجل المدخلات وطريقة الاحتساب اللازمة لإعادة النتيجة والتحقق منها. ولا يستطيع الاشتقاق أن يخلق تغطية أو قابلية مقارنة أو معنى سببيًا لم تكن موجودة في المدخلات.\n\nالمقارنة مشروطة بالتوافق\n\nقبل وضع القيم على مقياس واحد، يُتحقَّق من التعريف والفترة والجغرافيا والمجتمع أو قاعدة القياس والوحدة ونطاق المصدر والمنهج. يبقى عدم التوافق الجوهري ظاهرًا وقد يمنع إنشاء مقياس مشترك. الهدف ليس منع المقارنة، بل منع المقارنة الزائفة.\n\nحالة الدليل تحدد ما الذي يمكن عرضه\n\nتؤثر حالات الدليل — المرصود والمشتق والتاريخي والمحدود والمشروط والمجهول والمتعارض والمقيّد بالحقوق والمتجاوز والمصحح وغير المتاح والراهن والقديم — في ما إذا كان العنصر يجوز أن يظهر في العرض أو البحث أو المقارنة أو التنزيل أو التصدير. وإذا تعذر تفسير الحالة بصورة آمنة، فلا يُعرض العنصر باعتباره دليلًا عامًا قابلًا لإعادة الاستخدام إلى أن تُحسم حالته.\n\nما الذي لا تدعيه المنهجية؟\n\nقابلية التتبع لا تعني اليقين. قد يكون المصدر الأولي قديمًا، وقد يكون السجل الإداري حديثًا لكنه لا يقيس الأشخاص، وقد يكون المسح ممثلًا لكنه لا يسمح بتقدير حسب المحافظات، وقد يكون الاحتساب صحيحًا لكنه مبني على قاعدة ضيقة. تحفظ المنهجية هذه الحدود بدل اختزالها في درجة ثقة واحدة.\n\nالتصحيح جزء من مسار الدليل\n\nعندما يُراجع المصدر أو يُكتشف خطأ، يُصحح سجل الدليل العام من دون فقدان هويته الثابتة. ويُراجع أي دليل جديد أو متعارض في المصدر الأصلي قبل أن يغيّر سجلًا عامًا. فإذا غيّر تفسير الدليل جوهريًا، يوضح السجل الحالي ما الذي تغير ولماذا؛ وإذا تعذر حسم التعارض، يبقى عدم اليقين ظاهرًا. وتظل الأدلة المستبدلة قابلة للتتبع عندما يكون الاحتفاظ بها علنًا مناسبًا.\n\nاختبر الإجابة\n\nمن أي إجابة عامة، افتح سجل الدليل وافحص المصدر الأصلي وموقعه أو نسخته، والوحدة، والمجتمع أو قاعدة الاحتساب، والجغرافيا، والفترة، والمنهج، وحالة النشر والحقوق. ولا تقارن الدليل بغيره إلا عندما تسمح التعريفات بذلك. وإذا بقي تعارض بين المصادر من دون حسم، يظل ظاهرًا بدل أن يُسوّى بالمتوسط أو المواءمة أو التصحيح الصامت. وإذا وجدت خطأ أو نقصًا، استخدم مسار التصحيح واذكر معرف الدليل الثابت.\n\nللمقاييس المركبة قواعد احتساب خاصة بكل جولة مسحية\n\nتجمع المقاييس المركبة للثقافة المالية أكثر من بُعد، وتخضع لقواعد احتساب خاصة بالجولة المسحية التي أُنتجت فيها. ولذلك تتطلب إعادة احتساب أي نتيجة الرجوع إلى تعريفات تلك الجولة ومجموعة أسئلتها وقواعد الاحتساب الخاصة بها؛ فنقل القواعد بين الإصدارات قد يغيّر ما يمثله المقياس. ودرجة الثقافة المالية ليست معدلًا للوصول إلى الخدمات المالية.",
+   "new": "احفظ معنى الدليل قبل أن تقارن الأرقام.\n\nصُممت المنهجية لمنع خطأ شائع: التعامل مع الأشخاص والحسابات ومقدمي الخدمات والفترات والجغرافيا وسجلات البرامج المختلفة وكأنها تقيس الشيء نفسه.\n\nابدأ بما الذي يجري قياسه\n\nالأشخاص والحسابات والحسابات النشطة والمدخرون والمقترضون ومقدمو الخدمات ونقاط الخدمة والأجهزة والمعاملات والأرصدة ومستفيدو البرامج ومحطات الإصلاح عناصر تحليلية مختلفة. ولا تفترض المنهجية أن أحدها يمكن أن يحل محل الآخر.\n\nقد تكون عدة فترات قياس صحيحة في الوقت نفسه\n\nتتحدث المسوح السكانية والسجلات الإدارية وقوائم مقدمي الخدمات والتنظيمات ومحطات المشروعات ونتائج البرامج في أوقات مختلفة. لذلك يفصل هذا الموقع تاريخ القياس أو العمل الميداني عن تاريخ النشر حتى لا تُفهم وثيقة أحدث نشرًا على أنها قياس أحدث زمنيًا.\n\nما الذي تغطيه الأدلة وما الذي لا تغطيه\n\nتختلف تغطية الأدلة من موضوع إلى آخر. فبعض الموضوعات لها مشاهدات حديثة: الوضع الرسمي لمقدمي الخدمات وفق قوائم البنك المركزي اليمني – عدن، والائتمان المصرفي وغيره من الإحصاءات النقدية، وأسعار التحويل في ممرين. أما معظم موضوعات الأفراد فتستند إلى أحدث موجة مسح ممثلة (نُفذ عملها الميداني خلال 2022–2023) أو إلى قيم 2014، كما أن عددًا منها — كتكرار الاستخدام والصمود المالي والقدرات الرقمية والقدرة على تحمل التكلفة والعمر — معرَّف في بيانات مسح 2021 لكنه لم يُقدَّر بعد. وتستند أدلة المدفوعات والتنظيم وحماية المستهلك أساسًا إلى سجلات إدارية وتنظيمية تبين الأنظمة والقواعد لا الاستخدام أو النتائج. ولا توجد أدلة يمنية حديثة عن موثوقية الخدمات، ولا عن التوزيع الجغرافي لنقاط الوصول العاملة، ولا عن الشمول المالي بحسب النزوح أو الإعاقة، ولا عن الاحتيال الرقمي أو التأمين أو المعاشات. وتُعرض الفجوات بوصفها فجوات: فلا تُملأ بأرقام بلدان أخرى، وترتبط كل منها بأولوية قياس.\n\nكيف تُقبل الأدلة، وبأي دور\n\nيدخل المصدر قاعدة الأدلة عندما يمكن تسجيل رابطه الأصلي وتاريخه والتحقق من محتواه مقابل المصدر نفسه، وتُسجَّل الجهة الناشرة والجهة المُصدِرة وشروط إعادة الاستخدام متى تأكدت. ويُسجَّل دور المصدر في كل استخدام على حدة لا مرة واحدة للمصدر كله: فقد يكون التقرير نفسه دليلًا واقعيًا أوليًا لسجل، وسياقًا لسجل آخر. والأدوار هي: دليل واقعي أولي، أو حدث حالة مؤرخ، أو أدبيات تحليلية عن اليمن، أو مرجع منهجي دولي، أو سياق. ويُسجَّل نوع الوثيقة — قانون أو قرار أو مسح أو مجموعة بيانات أو تقرير — بشكل منفصل، ولا تُمنح المصادر أي درجة رقمية للجودة. ويسند الدليل الأولي وأحداث الحالة الأرقام العامة مباشرة، أما الرقم الذي لا يُعرف إلا من مصدر ثانوي فلا يظهر إلا منسوبًا إلى مصدره وموسومًا بأنه ثانوي. وتُنسب الأدبيات التحليلية إلى أصحابها، وتفيد المراجع الدولية المنهجَ من دون أن تحل محل الأدلة اليمنية. ويُحجب الرقم الذي يتعذر التحقق منه مقابل مصدره المعلن.\n\nالقياس في بيئة منقسمة ومتأثرة بالنزاع\n\nأربع سمات في اليمن تغير طريقة قراءة الأدلة. فقد انقسمت سلطة البنك المركزي منذ 2016، ولذلك تحمل القوائم والقرارات والإحصاءات الرسمية نطاق السلطة التي أصدرتها. وقد تختلف قيم الريال بين المناطق النقدية، فيُقرأ الرقم الاسمي مع أساس تقييمه حيث يسجله المصدر. كما أن تغطية المسوح ناقصة: فقد استبعدت أحدث موجة من Findex مناطق يقطنها نحو 23% من السكان، واستُبدل فيها أكثر من ربع وحدات المعاينة. وتصف بيانات البرامج مجتمعات تلك البرامج. ولا يفسر أي من ذلك نتيجة بذاته؛ فالنزاع سياق للتفسير، لا سبب أثبتته الأدلة.\n\nعدم اليقين يُبيَّن ولا يُصطنع\n\nتنطوي تقديرات المسوح على قدر من عدم اليقين مصدره المعاينة ونطاق التغطية. فإذا نشر المصدر فترة ثقة أو خطأً معياريًا عُرض مع التقدير، وإذا لم ينشره فلا تُضاف فترة ثقة ولا خطأ معياري ولا اختبار دلالة ما لم يمكن إعادة احتسابها من أوزان المسح وتصميمه. وتحتفظ القيمة المشتقة، كالفرق بين نسبتين، بدقة مدخلاتها من دون منازل عشرية إضافية، ولا تُقرأ الفروق الطفيفة بين التقديرات على أنها ترتيب.\n\nيجب أن تكون القيم المشتقة قابلة لإعادة الاحتساب\n\nعندما يحسب هذا الموقع فجوة أو حصة أو نسبة أو مراجعة أو قيمة مشتقة أخرى، تسجل المدخلات وطريقة الاحتساب اللازمة لإعادة النتيجة والتحقق منها. ولا يستطيع الاشتقاق أن يخلق تغطية أو قابلية مقارنة أو معنى سببيًا لم تكن موجودة في المدخلات.\n\nالمقارنة مشروطة بالتوافق\n\nقبل وضع القيم على مقياس واحد، يُتحقَّق من التعريف والفترة والجغرافيا والمجتمع أو قاعدة القياس والوحدة ونطاق المصدر والمنهج. يبقى عدم التوافق الجوهري ظاهرًا وقد يمنع إنشاء مقياس مشترك. الهدف ليس منع المقارنة، بل منع المقارنة الزائفة.\n\nحالة الدليل تحدد ما الذي يمكن عرضه\n\nتؤثر حالات الدليل — المرصود والمشتق والتاريخي والمحدود والمشروط والمجهول والمتعارض والمقيّد بالحقوق والمتجاوز والمصحح وغير المتاح والراهن والقديم — في ما إذا كان العنصر يجوز أن يظهر في العرض أو البحث أو المقارنة أو التنزيل أو التصدير. وإذا تعذر تفسير الحالة بصورة آمنة، فلا يُعرض العنصر باعتباره دليلًا عامًا قابلًا لإعادة الاستخدام إلى أن تُحسم حالته.\n\nما الذي لا تدعيه المنهجية؟\n\nقابلية التتبع لا تعني اليقين. قد يكون المصدر الأولي قديمًا، وقد يكون السجل الإداري حديثًا لكنه لا يقيس الأشخاص، وقد يكون المسح ممثلًا لكنه لا يسمح بتقدير حسب المحافظات، وقد يكون الاحتساب صحيحًا لكنه مبني على قاعدة ضيقة. تحفظ المنهجية هذه الحدود بدل اختزالها في درجة ثقة واحدة.\n\nالتصحيح جزء من مسار الدليل\n\nعندما يُراجع المصدر أو يُكتشف خطأ، يُصحح سجل الدليل العام من دون فقدان هويته الثابتة. ويُراجع أي دليل جديد أو متعارض في المصدر الأصلي قبل أن يغيّر سجلًا عامًا. فإذا غيّر تفسير الدليل جوهريًا، يوضح السجل الحالي ما الذي تغير ولماذا؛ وإذا تعذر حسم التعارض، يبقى عدم اليقين ظاهرًا. وتظل الأدلة المستبدلة قابلة للتتبع عندما يكون الاحتفاظ بها علنًا مناسبًا.\n\nاختبر الإجابة\n\nمن أي إجابة عامة، افتح سجل الدليل وافحص المصدر الأصلي وموقعه أو نسخته، والوحدة، والمجتمع أو قاعدة الاحتساب، والجغرافيا، والفترة، والمنهج، وحالة النشر والحقوق. ولا تقارن الدليل بغيره إلا عندما تسمح التعريفات بذلك. وإذا بقي تعارض بين المصادر من دون حسم، يظل ظاهرًا بدل أن يُسوّى بالمتوسط أو المواءمة أو التصحيح الصامت. وإذا وجدت خطأ أو نقصًا، استخدم مسار التصحيح واذكر معرف الدليل الثابت.\n\nللمقاييس المركبة قواعد احتساب خاصة بكل جولة مسحية\n\nتجمع المقاييس المركبة للثقافة المالية أكثر من بُعد، وتخضع لقواعد احتساب خاصة بالجولة المسحية التي أُنتجت فيها. ولذلك تتطلب إعادة احتساب أي نتيجة الرجوع إلى تعريفات تلك الجولة ومجموعة أسئلتها وقواعد الاحتساب الخاصة بها؛ فنقل القواعد بين الإصدارات قد يغيّر ما يمثله المقياس. ودرجة الثقافة المالية ليست معدلًا للوصول إلى الخدمات المالية."
+  },
+  {
+   "finding": "EXF-002",
+   "sheet": "02_SITE_MAP",
+   "row": 127,
+   "col": 7,
+   "field": "/payments/.full_copy_en",
+   "old": "Payment infrastructure is expanding. That is not the same as knowing how many people use it.\n\nAdministrative payment data can show devices, accounts, transactions and values at high frequency. Those are powerful system signals, but each counts a different object and none should be silently converted into unique people or inclusion outcomes.\n\nPOS: three different signals\n\nFrom March 2025 to January 2026, reported POS terminals rose 561→1,473, transaction counts 8,015→24,026 and nominal transaction value YER 320 million→YER 1.262 billion. The charts keep these three objects separate. A terminal is infrastructure, a transaction is an event and transaction value is a nominal monetary amount; none equals a person.\n\nJanuary 2026 is the latest monthly POS release on the CBY-Aden page reviewed\n\nThe CBY-Aden payment page reviewed publishes monthly POS releases from March 2025 through January 2026. This resource therefore stops the monthly series at January 2026. That does not mean activity stopped; it means no later monthly release is published on the source page reviewed.\n\nBefore comparing payment numbers, ask what each one counts\n\nCards, accounts, e-wallet subscribers, POS terminals and transactions are different measurement objects. Accounts or subscribers may contain duplication or inactivity; terminals are infrastructure; transactions are events. A people-level inclusion rate requires a documented unique-person method rather than a division of administrative totals by population.\n\nHistorical e-money evidence shows why registration cannot be read as durable use\n\nWithin a five-provider IBS study universe, e-money accounts reached 807,919 in December 2019, while the same source reports an average 23% dormant/inactive share and notes that some accounts were used once or because circumstances imposed their use. CauseWay’s reproducible grouping of the source’s 2019 transaction-value table indicates about 57.03% cash-in/cash-out, 29.97% movement between bank and electronic accounts, and about 2.41% for bills and purchases together. These are historical, source-bounded patterns—not current national prevalence.\n\nWhat FPS and RTGS mean — and what they do not yet prove\n\nFMIIP separates three payment-infrastructure jobs. The Fast Payment System (FPS) is the project’s fast electronic-payment component. The Real-Time Gross Settlement system (RTGS), to be managed by CBY-Aden alongside an upgrade of its core banking system, is the settlement backbone the project links to large-value payments between financial institutions. A third component supports access and use through access-point mapping, capacity building for financial institutions and payment service providers, merchant onboarding in underserved areas and outreach. Separately, CBY records in 2026 show a national QR/e-wallet interconnection decision, unified-network integration work and the establishment/governance of YPCC. These records tell us what architecture and institutions are being built; they do not by themselves establish full go-live, reliability, transaction coverage, active use or inclusion outcomes.\n\nWhat payment growth does not establish\n\nMore terminals do not prove more unique users. More transactions do not reveal how many people used the service. Nominal transaction value does not show real purchasing-power growth. Accounts, wallet subscribers and registrations are not necessarily active people. A rule, project or new institution is not observed adoption. And successful cash delivery or opening an account is not proof of durable post-transfer use.\n\nWhat is still missing for a use story\n\nThis resource still lacks a comparable, privacy-safe measure of unique and repeat payment users across providers and rails, with frequency, recency, transaction purpose, failed/abandoned attempts and clear active-use definitions. It also lacks the downstream usage series needed to measure adoption after major payment-rail milestones. The FMIIP results framework itself keeps operational state, participating institutions, use cases, merchant acceptance, active accounts, customer transaction costs and electronic-payment beneficiaries as separate measures; project targets remain targets until they are observed.",
+   "new": "Payment infrastructure is expanding. That is not the same as knowing how many people use it.\n\nAdministrative payment data can show devices, accounts, transactions and values at high frequency. Those are powerful system signals, but each counts a different object and none should be silently converted into unique people or inclusion outcomes.\n\nPOS: three different signals\n\nFrom March 2025 to January 2026, reported POS terminals rose 561→1,473, transaction counts 8,015→24,026 and nominal transaction value YER 320 million→YER 1.262 billion. The charts keep these three objects separate. A terminal is infrastructure, a transaction is an event and transaction value is a nominal monetary amount; none equals a person.\n\nJanuary 2026 is the latest monthly POS release on the CBY-Aden page reviewed\n\nThe CBY-Aden payment page reviewed publishes monthly POS releases from March 2025 through January 2026. This resource therefore stops the monthly series at January 2026. That does not mean activity stopped; it means no later monthly release is published on the source page reviewed.\n\nBefore comparing payment numbers, ask what each one counts\n\nCards, accounts, e-wallet subscribers, POS terminals and transactions are different measurement objects. Accounts or subscribers may contain duplication or inactivity; terminals are infrastructure; transactions are events. A people-level inclusion rate requires a documented unique-person method rather than a division of administrative totals by population.\n\nE-wallet subscribers: figures from two reports that do not form one series\n\nThe CBY-Aden payments report for the third quarter of 2024 gives e-wallet subscriber counts of 414,631 for Q1, 507,585 for Q2 and 581,075 for Q3. The first-half 2025 infographic reports 2,102,484 subscribers. The two publications' subscriber definitions and reporting scope have not been reconciled, so the 2025 figure is not joined to the 2024 quarters and the difference is not read as growth. A subscriber count is not a count of unique people or of active users, and neither publication measures how many adults use a wallet.\n\nHistorical e-money evidence shows why registration cannot be read as durable use\n\nWithin a five-provider IBS study universe, e-money accounts reached 807,919 in December 2019, while the same source reports an average 23% dormant/inactive share and notes that some accounts were used once or because circumstances imposed their use. CauseWay’s reproducible grouping of the source’s 2019 transaction-value table indicates about 57.03% cash-in/cash-out, 29.97% movement between bank and electronic accounts, and about 2.41% for bills and purchases together. These are historical, source-bounded patterns—not current national prevalence.\n\nWhat FPS and RTGS mean — and what they do not yet prove\n\nFMIIP separates three payment-infrastructure jobs. The Fast Payment System (FPS) is the project’s fast electronic-payment component. The Real-Time Gross Settlement system (RTGS), to be managed by CBY-Aden alongside an upgrade of its core banking system, is the settlement backbone the project links to large-value payments between financial institutions. A third component supports access and use through access-point mapping, capacity building for financial institutions and payment service providers, merchant onboarding in underserved areas and outreach. Separately, CBY records in 2026 show a national QR/e-wallet interconnection decision, unified-network integration work and the establishment/governance of YPCC. These records tell us what architecture and institutions are being built; they do not by themselves establish full go-live, reliability, transaction coverage, active use or inclusion outcomes.\n\nWhat payment growth does not establish\n\nMore terminals do not prove more unique users. More transactions do not reveal how many people used the service. Nominal transaction value does not show real purchasing-power growth. Accounts, wallet subscribers and registrations are not necessarily active people. A rule, project or new institution is not observed adoption. And successful cash delivery or opening an account is not proof of durable post-transfer use.\n\nWhat is still missing for a use story\n\nThis resource still lacks a comparable, privacy-safe measure of unique and repeat payment users across providers and rails, with frequency, recency, transaction purpose, failed/abandoned attempts and clear active-use definitions. It also lacks the downstream usage series needed to measure adoption after major payment-rail milestones. The FMIIP results framework itself keeps operational state, participating institutions, use cases, merchant acceptance, active accounts, customer transaction costs and electronic-payment beneficiaries as separate measures; project targets remain targets until they are observed."
+  },
+  {
+   "finding": "EXF-002",
+   "sheet": "02_SITE_MAP",
+   "row": 127,
+   "col": 8,
+   "field": "/payments/.full_copy_ar",
+   "old": "تتوسع البنية التحتية للمدفوعات، لكن ذلك لا يساوي معرفة عدد الأشخاص الذين يستخدمونها.\n\nتستطيع البيانات الإدارية للمدفوعات إظهار الأجهزة والحسابات والمعاملات والقيم بوتيرة عالية. وهي إشارات مهمة عن النظام، لكن كل مؤشر يعد شيئًا مختلفًا، ولا يجوز تحويل أي منها بصمت إلى عدد أشخاص فريدين أو إلى نتيجة للشمول المالي.\n\nنقاط البيع: ثلاث إشارات مختلفة\n\nبين مارس 2025 ويناير 2026 ارتفع عدد أجهزة نقاط البيع المبلغ عنها من 561 إلى 1,473 جهازًا، وعدد المعاملات من 8,015 إلى 24,026، والقيمة الاسمية من 320 مليون ريال إلى 1.262 مليار ريال. وتبقي الرسوم هذه المقاييس منفصلة: الجهاز بنية تحتية، والمعاملة حدث، وقيمة المعاملة مبلغ مالي اسمي؛ ولا يساوي أي منها شخصًا.\n\nيناير 2026 هو أحدث إصدار شهري لنقاط البيع منشور في صفحة البنك المركزي اليمني – عدن التي جرت مراجعتها\n\nتعرض صفحة المدفوعات التي جرت مراجعتها لدى البنك المركزي اليمني – عدن إصدارات شهرية لنقاط البيع من مارس 2025 حتى يناير 2026. لذلك تنتهي السلسلة الشهرية عند يناير 2026. ولا يعني ذلك أن النشاط توقف؛ بل يعني أن الصفحة المصدر التي جرت مراجعتها لا تعرض إصدارًا شهريًا أحدث.\n\nقبل مقارنة أرقام المدفوعات، اسأل ما الذي يعدّه كل رقم\n\nالبطاقات والحسابات ومشتركو المحافظ وأجهزة نقاط البيع والمعاملات وحدات قياس مختلفة. وقد تتضمن الحسابات أو الاشتراكات ازدواجًا أو خمولًا، والأجهزة بنية تحتية، والمعاملات أحداث. ويحتاج قياس الشمول على مستوى الأشخاص إلى طريقة موثقة لتحديد الأشخاص الفريدين، لا إلى قسمة إجماليات إدارية على السكان.\n\nتوضح أدلة النقود الإلكترونية التاريخية لماذا لا يساوي التسجيل استخدامًا مستدامًا\n\nضمن نطاق دراسة لمعهد الدراسات المصرفية شملت خمسة مزودين، بلغ عدد حسابات النقود الإلكترونية 807,919 حسابًا في ديسمبر 2019، بينما يذكر المصدر نفسه متوسطًا قدره 23% للحسابات الخاملة أو غير النشطة، ويشير إلى أن بعض الحسابات استُخدمت مرة واحدة أو فرضت الظروف استخدامها. ويشير تجميع CauseWay القابل لإعادة الإنتاج لجدول قيمة المعاملات لعام 2019 إلى نحو 57.03% للإيداع والسحب النقدي، و29.97% للحركة بين الحسابات المصرفية والإلكترونية، ونحو 2.41% للفواتير والمشتريات معًا. هذه أنماط تاريخية داخل نطاق المصدر، وليست تقديرات وطنية حالية.\n\nماذا يعني نظاما FPS وRTGS — وما الذي لا يثبتانه بعد؟\n\nيفصل مشروع FMIIP بين ثلاث وظائف في البنية التحتية للمدفوعات. فنظام الدفع السريع (FPS) هو مكوّن المشروع للمدفوعات الإلكترونية السريعة. أما نظام التسوية الإجمالية الفورية (RTGS)، المقرر أن يديره البنك المركزي في عدن إلى جانب تحديث نظامه البنكي الأساسي، فهو بنية التسوية التي يربطها المشروع بالمدفوعات الكبيرة بين المؤسسات المالية. ويخصص مكوّن ثالث لدعم الوصول والاستخدام عبر حصر نقاط الوصول جغرافيًا، وبناء قدرات المؤسسات المالية ومقدمي خدمات الدفع، ودعم انضمام التجار في المناطق المحرومة، والتوعية. وبصورة منفصلة، تُظهر سجلات البنك المركزي في 2026 قرارًا بشأن معيار QR وطني وربط المحافظ الإلكترونية، وأعمال تكامل الشبكة الموحدة، وإنشاء الشركة اليمنية للمدفوعات والمقاصة وحوكمته. توضح هذه السجلات البنية والمؤسسات التي يجري بناؤها؛ ولا تثبت بذاتها بدء التشغيل الكامل أو الاعتمادية أو تغطية المعاملات أو الاستخدام النشط أو نتائج الشمول.\n\nما الذي لا يثبته نمو المدفوعات؟\n\nزيادة الأجهزة لا تثبت زيادة المستخدمين الفريدين. وزيادة المعاملات لا تكشف عدد الأشخاص الذين استخدموا الخدمة. ونمو القيمة الاسمية لا يثبت نموًا حقيقيًا في القوة الشرائية. كما أن الحسابات ومشتركي المحافظ والتسجيلات لا يساوون بالضرورة أشخاصًا نشطين. والقاعدة التنظيمية أو المشروع أو المؤسسة الجديدة ليست استخدامًا مرصودًا. كما أن نجاح دفع نقدي أو فتح حساب لا يثبت استمرار الاستخدام بعد التحويل.\n\nما الذي ينقصنا لفهم الاستخدام فعليًا؟\n\nما تزال قاعدة الأدلة تفتقر إلى قياس قابل للمقارنة وآمن للخصوصية للمستخدمين الفريدين والمتكررين عبر مقدمي الخدمة وأنظمة الدفع، يشمل التكرار وحداثة الاستخدام وغرض المعاملة والمحاولات الفاشلة أو المتروكة وتعريفًا واضحًا للاستخدام النشط. كما تفتقر إلى سلسلة استخدام لاحقة تسمح بقياس التبني بعد المحطات الرئيسية في بناء أنظمة الدفع. ويفصل إطار نتائج FMIIP نفسه بين حالة التشغيل، والمؤسسات المشاركة، وحالات الاستخدام، وقبول التجار للمدفوعات الإلكترونية، والحسابات النشطة، وتكلفة المعاملة على العميل، والمستفيدين من المدفوعات الإلكترونية؛ وتظل مستهدفات المشروع مستهدفات إلى أن تُرصد النتائج فعليًا.",
+   "new": "تتوسع البنية التحتية للمدفوعات، لكن ذلك لا يساوي معرفة عدد الأشخاص الذين يستخدمونها.\n\nتستطيع البيانات الإدارية للمدفوعات إظهار الأجهزة والحسابات والمعاملات والقيم بوتيرة عالية. وهي إشارات مهمة عن النظام، لكن كل مؤشر يعد شيئًا مختلفًا، ولا يجوز تحويل أي منها بصمت إلى عدد أشخاص فريدين أو إلى نتيجة للشمول المالي.\n\nنقاط البيع: ثلاث إشارات مختلفة\n\nبين مارس 2025 ويناير 2026 ارتفع عدد أجهزة نقاط البيع المبلغ عنها من 561 إلى 1,473 جهازًا، وعدد المعاملات من 8,015 إلى 24,026، والقيمة الاسمية من 320 مليون ريال إلى 1.262 مليار ريال. وتبقي الرسوم هذه المقاييس منفصلة: الجهاز بنية تحتية، والمعاملة حدث، وقيمة المعاملة مبلغ مالي اسمي؛ ولا يساوي أي منها شخصًا.\n\nيناير 2026 هو أحدث إصدار شهري لنقاط البيع منشور في صفحة البنك المركزي اليمني – عدن التي جرت مراجعتها\n\nتعرض صفحة المدفوعات التي جرت مراجعتها لدى البنك المركزي اليمني – عدن إصدارات شهرية لنقاط البيع من مارس 2025 حتى يناير 2026. لذلك تنتهي السلسلة الشهرية عند يناير 2026. ولا يعني ذلك أن النشاط توقف؛ بل يعني أن الصفحة المصدر التي جرت مراجعتها لا تعرض إصدارًا شهريًا أحدث.\n\nقبل مقارنة أرقام المدفوعات، اسأل ما الذي يعدّه كل رقم\n\nالبطاقات والحسابات ومشتركو المحافظ وأجهزة نقاط البيع والمعاملات وحدات قياس مختلفة. وقد تتضمن الحسابات أو الاشتراكات ازدواجًا أو خمولًا، والأجهزة بنية تحتية، والمعاملات أحداث. ويحتاج قياس الشمول على مستوى الأشخاص إلى طريقة موثقة لتحديد الأشخاص الفريدين، لا إلى قسمة إجماليات إدارية على السكان.\n\nمشتركو المحافظ الإلكترونية: أرقام من تقريرين لا تشكل سلسلة واحدة\n\nيورد تقرير المدفوعات الصادر عن البنك المركزي اليمني – عدن للربع الثالث من 2024 أعداد مشتركي المحافظ الإلكترونية: 414,631 في الربع الأول، و507,585 في الربع الثاني، و581,075 في الربع الثالث. أما إنفوغرافيك النصف الأول من 2025 فيورد 2,102,484 مشتركًا. ولم يُطابَق تعريف المشترك ولا نطاق الإبلاغ بين الإصدارين، لذلك لا يُوصل رقم 2025 بأرباع 2024، ولا يُقرأ الفرق بينهما نموًا. وعدد المشتركين ليس عددًا للأشخاص الفريدين ولا للمستخدمين النشطين، ولا يقيس أيٌّ من الإصدارين عدد البالغين الذين يستخدمون المحافظ.\n\nتوضح أدلة النقود الإلكترونية التاريخية لماذا لا يساوي التسجيل استخدامًا مستدامًا\n\nضمن نطاق دراسة لمعهد الدراسات المصرفية شملت خمسة مزودين، بلغ عدد حسابات النقود الإلكترونية 807,919 حسابًا في ديسمبر 2019، بينما يذكر المصدر نفسه متوسطًا قدره 23% للحسابات الخاملة أو غير النشطة، ويشير إلى أن بعض الحسابات استُخدمت مرة واحدة أو فرضت الظروف استخدامها. ويشير تجميع CauseWay القابل لإعادة الإنتاج لجدول قيمة المعاملات لعام 2019 إلى نحو 57.03% للإيداع والسحب النقدي، و29.97% للحركة بين الحسابات المصرفية والإلكترونية، ونحو 2.41% للفواتير والمشتريات معًا. هذه أنماط تاريخية داخل نطاق المصدر، وليست تقديرات وطنية حالية.\n\nماذا يعني نظاما FPS وRTGS — وما الذي لا يثبتانه بعد؟\n\nيفصل مشروع FMIIP بين ثلاث وظائف في البنية التحتية للمدفوعات. فنظام الدفع السريع (FPS) هو مكوّن المشروع للمدفوعات الإلكترونية السريعة. أما نظام التسوية الإجمالية الفورية (RTGS)، المقرر أن يديره البنك المركزي في عدن إلى جانب تحديث نظامه البنكي الأساسي، فهو بنية التسوية التي يربطها المشروع بالمدفوعات الكبيرة بين المؤسسات المالية. ويخصص مكوّن ثالث لدعم الوصول والاستخدام عبر حصر نقاط الوصول جغرافيًا، وبناء قدرات المؤسسات المالية ومقدمي خدمات الدفع، ودعم انضمام التجار في المناطق المحرومة، والتوعية. وبصورة منفصلة، تُظهر سجلات البنك المركزي في 2026 قرارًا بشأن معيار QR وطني وربط المحافظ الإلكترونية، وأعمال تكامل الشبكة الموحدة، وإنشاء الشركة اليمنية للمدفوعات والمقاصة وحوكمته. توضح هذه السجلات البنية والمؤسسات التي يجري بناؤها؛ ولا تثبت بذاتها بدء التشغيل الكامل أو الاعتمادية أو تغطية المعاملات أو الاستخدام النشط أو نتائج الشمول.\n\nما الذي لا يثبته نمو المدفوعات؟\n\nزيادة الأجهزة لا تثبت زيادة المستخدمين الفريدين. وزيادة المعاملات لا تكشف عدد الأشخاص الذين استخدموا الخدمة. ونمو القيمة الاسمية لا يثبت نموًا حقيقيًا في القوة الشرائية. كما أن الحسابات ومشتركي المحافظ والتسجيلات لا يساوون بالضرورة أشخاصًا نشطين. والقاعدة التنظيمية أو المشروع أو المؤسسة الجديدة ليست استخدامًا مرصودًا. كما أن نجاح دفع نقدي أو فتح حساب لا يثبت استمرار الاستخدام بعد التحويل.\n\nما الذي ينقصنا لفهم الاستخدام فعليًا؟\n\nما تزال قاعدة الأدلة تفتقر إلى قياس قابل للمقارنة وآمن للخصوصية للمستخدمين الفريدين والمتكررين عبر مقدمي الخدمة وأنظمة الدفع، يشمل التكرار وحداثة الاستخدام وغرض المعاملة والمحاولات الفاشلة أو المتروكة وتعريفًا واضحًا للاستخدام النشط. كما تفتقر إلى سلسلة استخدام لاحقة تسمح بقياس التبني بعد المحطات الرئيسية في بناء أنظمة الدفع. ويفصل إطار نتائج FMIIP نفسه بين حالة التشغيل، والمؤسسات المشاركة، وحالات الاستخدام، وقبول التجار للمدفوعات الإلكترونية، والحسابات النشطة، وتكلفة المعاملة على العميل، والمستفيدين من المدفوعات الإلكترونية؛ وتظل مستهدفات المشروع مستهدفات إلى أن تُرصد النتائج فعليًا."
+  },
+  {
+   "finding": "EXF-002",
+   "sheet": "02_SITE_MAP",
+   "row": 146,
+   "col": 7,
+   "field": "/evidence/CLM-062/.full_copy_en",
+   "old": null,
+   "new": "Formal firms in the 2022 survey: accounts were common, bank finance for working capital was not\n\nAmong formal firms in the 2022 seven-governorate survey, 58.2% (191 of 328) reported a checking or savings account. Their working capital came mainly from internal sources: on average, 69.12% came from internal funds or retained earnings, 16.66% from money lenders, friends or relatives, 10.15% from advance payments by clients, 1.97% from non-bank financial institutions, 1.31% from supplier credit and 0.56% from banks. In a separate question on the financial intermediaries they use, 73.48% of responding formal firms named an exchange store or money exchanger and 24.39% a commercial bank; firms could name more than one, so these are not market shares. The evidence base does not hold the number of firms behind the working-capital averages or the intermediary question. Among the 217 informal firms surveyed, 80.18% had no bank account; that sample was drawn from activity and location lists rather than a national register. The formal-firm sample includes micro firms with fewer than five employees, and neither sample represents all Yemeni firms.\n\nHow to read this evidence\n\nRead this evidence within the definition, population or group covered, calculation base where relevant, period, geography and method shown on the page. Before reusing or comparing it, check the source, limitations, evidence date and correction history. If a value or source link is unavailable, the page says so rather than filling the gap by inference. Download and reuse are offered only where source rights permit."
+  },
+  {
+   "finding": "EXF-002",
+   "sheet": "02_SITE_MAP",
+   "row": 146,
+   "col": 8,
+   "field": "/evidence/CLM-062/.full_copy_ar",
+   "old": null,
+   "new": "المنشآت الرسمية في مسح 2022: الحساب المصرفي شائع، أما تمويل البنوك لرأس المال العامل فنادر\n\nأفادت 58.2% من المنشآت الرسمية في مسح عام 2022 الذي شمل سبع محافظات (191 من أصل 328 منشأة) بأن لديها حسابًا جاريًا أو حساب ادخار. غير أن رأس مالها العامل اعتمد أساسًا على مصادر داخلية: ففي المتوسط جاء 69.12% منه من الأموال الذاتية أو الأرباح المحتجزة، و16.66% من المقرضين أو الأصدقاء أو الأقارب، و10.15% من دفعات مقدمة من العملاء، و1.97% من مؤسسات مالية غير مصرفية، و1.31% من ائتمان الموردين، و0.56% فقط من البنوك. وفي سؤال مستقل عن الوسطاء الماليين الذين تتعامل معهم، ذكرت 73.48% من المنشآت الرسمية المجيبة محلات الصرافة أو الصرافين، و24.39% البنوك التجارية؛ ولأن المنشأة كان بإمكانها ذكر أكثر من وسيط، فهذه النسب ليست حصصًا سوقية. ولا تتضمن قاعدة الأدلة عدد المنشآت التي تستند إليها متوسطات رأس المال العامل ولا عدد المجيبين عن سؤال الوسطاء. أما المنشآت غير الرسمية التي شملها المسح، وعددها 217 منشأة، فلم يكن لدى 80.18% منها حساب مصرفي، وقد سُحبت عينتها من قوائم للأنشطة والمواقع لا من سجل وطني. وتضم عينة المنشآت الرسمية منشآت صغرى يقل عدد العاملين فيها عن خمسة، ولا تمثل أيٌّ من العينتين جميع المنشآت في اليمن.\n\nكيف تقرأ هذا الدليل\n\nيُقرأ هذا الدليل ضمن التعريف، والمجتمع الذي ينطبق عليه الرقم أو قاعدة الاحتساب عند الحاجة، والفترة، والجغرافيا، والطريقة المبينة في الصفحة. وقبل إعادة استخدامه أو مقارنته، راجع المصدر والحدود وحداثة الدليل وسجل التصحيح. وإذا كانت قيمة أو وصلة مصدر غير متاحة، تُذكر الفجوة صراحةً بدل ملئها بالاستنتاج. ولا يتاح التنزيل أو إعادة الاستخدام إلا حيث تسمح حقوق المصدر."
+  },
+  {
+   "finding": "EXF-002",
+   "sheet": "02_SITE_MAP",
+   "row": 147,
+   "col": 7,
+   "field": "/evidence/FMIIP-BASELINE-2025-01/.full_copy_en",
+   "old": null,
+   "new": "FMIIP project baselines for January 2025 count accounts, access points, merchants and agents — not people\n\nThe results framework of the World Bank-financed Yemen Financial Market Infrastructure and Inclusion Project (FMIIP, P180708) records January 2025 baselines for its own project-defined indicators: 1,062,441 active bank accounts (200,898 of them owned by women), 375,252 active e-wallet accounts, 817 financial access points, 170 merchants accepting electronic payments and 65 agents of licensed financial institutions. These are project baselines that count accounts, access points, merchants and agents — not people.\n\nHow to read this evidence\n\nRead this evidence within the definition, population or group covered, calculation base where relevant, period, geography and method shown on the page. Before reusing or comparing it, check the source, limitations, evidence date and correction history. If a value or source link is unavailable, the page says so rather than filling the gap by inference. Download and reuse are offered only where source rights permit."
+  },
+  {
+   "finding": "EXF-002",
+   "sheet": "02_SITE_MAP",
+   "row": 147,
+   "col": 8,
+   "field": "/evidence/FMIIP-BASELINE-2025-01/.full_copy_ar",
+   "old": null,
+   "new": "خطوط الأساس لمشروع FMIIP في يناير 2025 تعدّ الحسابات ونقاط الوصول والتجار والوكلاء، لا الأشخاص\n\nيسجل إطار نتائج مشروع البنية التحتية للأسواق والشمول المالي في اليمن (FMIIP، P180708) الممول من البنك الدولي خطوط أساس في يناير 2025 لمؤشراته المعرّفة داخل المشروع: 1,062,441 حسابًا مصرفيًا نشطًا (منها 200,898 حسابًا مملوكًا لنساء)، و375,252 حساب محفظة إلكترونية نشطًا، و817 نقطة وصول مالي، و170 تاجرًا يقبلون المدفوعات الإلكترونية، و65 وكيلًا لمؤسسات مالية مرخصة. وهذه خطوط أساس للمشروع تعدّ الحسابات ونقاط الوصول والتجار والوكلاء، لا الأشخاص.\n\nكيف تقرأ هذا الدليل\n\nيُقرأ هذا الدليل ضمن التعريف، والمجتمع الذي ينطبق عليه الرقم أو قاعدة الاحتساب عند الحاجة، والفترة، والجغرافيا، والطريقة المبينة في الصفحة. وقبل إعادة استخدامه أو مقارنته، راجع المصدر والحدود وحداثة الدليل وسجل التصحيح. وإذا كانت قيمة أو وصلة مصدر غير متاحة، تُذكر الفجوة صراحةً بدل ملئها بالاستنتاج. ولا يتاح التنزيل أو إعادة الاستخدام إلا حيث تسمح حقوق المصدر."
+  }
+ ]
+}

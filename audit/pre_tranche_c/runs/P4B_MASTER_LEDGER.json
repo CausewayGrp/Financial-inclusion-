@@ -1,0 +1,153 @@
+{
+ "transaction": "P4-B",
+ "scope": "P4.3 English part-B prose for passport shorthand",
+ "input_master_sha256": "fb5b0bf64f39b12d7b11556516740c617f1a0418902a4259e5026e758a46b6f5",
+ "output_master_sha256": "904630fe84ddeee5fec6aa5bb2589e5485c3cb15a8f2e56b9854a1040d8ce85c",
+ "cells_written": 16,
+ "changes": [
+  {
+   "finding": "P4-E02",
+   "sheet": "06_EVIDENCE_OBJECTS",
+   "row": 5,
+   "col": 16,
+   "field": "CLM-001.limitations_en[B]",
+   "old": "Do not call this a 2026 rate or map it to governorates. | Approx. 23% population geography excluded; >1/4 PSUs replaced",
+   "new": "Do not call this a 2026 rate or map it to governorates. | The survey frame excludes areas holding about 23% of the population, and more than a quarter (1/4) of primary sampling units were replaced."
+  },
+  {
+   "finding": "P4-E02",
+   "sheet": "06_EVIDENCE_OBJECTS",
+   "row": 28,
+   "col": 16,
+   "field": "CLM-002.limitations_en[B]",
+   "old": "Do not infer cause or current 2026 gender gap. | Approx. 23% population geography excluded; >1/4 PSUs replaced",
+   "new": "Do not infer cause or current 2026 gender gap. | The survey frame excludes areas holding about 23% of the population, and more than a quarter (1/4) of primary sampling units were replaced."
+  },
+  {
+   "finding": "P4-E02",
+   "sheet": "06_EVIDENCE_OBJECTS",
+   "row": 40,
+   "col": 16,
+   "field": "CLM-025.limitations_en[B]",
+   "old": "Do not create governorate-level inclusion maps or describe the wave as complete geographic coverage. | Approx. 23% population geography excluded; >1/4 PSUs replaced",
+   "new": "Do not create governorate-level inclusion maps or describe the wave as complete geographic coverage. | The survey frame excludes areas holding about 23% of the population, and more than a quarter (1/4) of primary sampling units were replaced."
+  },
+  {
+   "finding": "P4-E02",
+   "sheet": "06_EVIDENCE_OBJECTS",
+   "row": 60,
+   "col": 16,
+   "field": "CLM-005.limitations_en[B]",
+   "old": "Do not label the ranking as nationally representative for all Yemeni firms. | Not national; some tables have small conditional denominators; obstacle tabulation has filtered denominator",
+   "new": "Do not label the ranking as nationally representative for all Yemeni firms. | The survey is not national; some tables rest on small conditional bases, and the finance-obstacle table uses a filtered base."
+  },
+  {
+   "finding": "P4-E02",
+   "sheet": "06_EVIDENCE_OBJECTS",
+   "row": 61,
+   "col": 16,
+   "field": "CLM-006.limitations_en[B]",
+   "old": "Do not state 91.84% of all Yemeni firms face major/moderate finance obstacles. | Not national; some tables have small conditional denominators; obstacle tabulation has filtered denominator",
+   "new": "Do not state 91.84% of all Yemeni firms face major/moderate finance obstacles. | The survey is not national; some tables rest on small conditional bases, and the finance-obstacle table uses a filtered base."
+  },
+  {
+   "finding": "P4-E02",
+   "sheet": "06_EVIDENCE_OBJECTS",
+   "row": 29,
+   "col": 16,
+   "field": "CLM-007.limitations_en[B]",
+   "old": "Do not infer hawala volume, payment-system settlement or household distribution. | Not payment-system settlement throughput and not directly measured hawala volume",
+   "new": "Do not infer hawala volume, payment-system settlement or household distribution. | This is an external-sector macro concept, not payment-system settlement throughput and not a direct measure of informal hawala volume."
+  },
+  {
+   "finding": "P4-E02",
+   "sheet": "06_EVIDENCE_OBJECTS",
+   "row": 10,
+   "col": 16,
+   "field": "CLM-015.limitations_en[B]",
+   "old": "Do not carry the status forward to 2026 without new evidence and do not infer the positive licensed-wallet universe from the negative list. | A dated negative-authority state only. Do not carry status to 2026, infer current operation, or derive the positive licensed universe.",
+   "new": "Do not carry the status forward to 2026 without new evidence and do not infer the positive licensed-wallet universe from the negative list. | This is a dated list of names declared unlicensed on the source date only. It cannot be carried to 2026, and it shows neither current operation nor which wallets are licensed."
+  },
+  {
+   "finding": "P4-E02",
+   "sheet": "06_EVIDENCE_OBJECTS",
+   "row": 23,
+   "col": 16,
+   "field": "CLM-018.limitations_en[B]",
+   "old": "Do not call YPCC/FPS/RTGS fully live or infer adoption, transaction coverage, reliability or inclusion effect. | Institutionalization/implementation-state evidence only. Does not prove system go-live, universal participation, reliability, adoption, transaction coverage or inclusion outcomes.",
+   "new": "Do not call YPCC/FPS/RTGS fully live or infer adoption, transaction coverage, reliability or inclusion effect. | This is evidence of institutional and implementation states only; it does not prove system go-live, universal participation, reliability, adoption, transaction coverage or inclusion outcomes."
+  },
+  {
+   "finding": "P4-E02",
+   "sheet": "06_EVIDENCE_OBJECTS",
+   "row": 86,
+   "col": 16,
+   "field": "CLM-042.limitations_en[B]",
+   "old": "Do not label the scalar a population, geography, informal-share or coverage conversion. | Component-specific comparability only; sign/scope/method differences remain material.",
+   "new": "Do not label the scalar a population, geography, informal-share or coverage conversion. | Comparability is component-specific only; differences of sign, scope and method remain material."
+  },
+  {
+   "finding": "P4-E02",
+   "sheet": "06_EVIDENCE_OBJECTS",
+   "row": 87,
+   "col": 16,
+   "field": "CLM-043.limitations_en[B]",
+   "old": "Do not call E&O hidden remittances, unrecorded capital as an established decomposition, or an observed flow. | E&O is a net balancing residual and cannot identify a missing component or gross offsetting errors.",
+   "new": "Do not call E&O hidden remittances, unrecorded capital as an established decomposition, or an observed flow. | Errors and omissions is a net balancing residual; it cannot identify a missing component or gross offsetting errors."
+  },
+  {
+   "finding": "P4-E02",
+   "sheet": "06_EVIDENCE_OBJECTS",
+   "row": 88,
+   "col": 16,
+   "field": "CLM-044.limitations_en[B]",
+   "old": "Do not present USD7.4bn as official or national observed truth, or identify the residual as directly observed informal remittances. | Errors in other BOP components and the E&O assumption load into the remittance residual; informal remittances are not directly observed.",
+   "new": "Do not present USD7.4bn as official or national observed truth, or identify the residual as directly observed informal remittances. | Errors in other balance-of-payments components, and the assumption made about errors and omissions, flow into the remittance residual; informal remittances are not directly observed."
+  },
+  {
+   "finding": "P4-E02",
+   "sheet": "06_EVIDENCE_OBJECTS",
+   "row": 91,
+   "col": 16,
+   "field": "CLM-047.limitations_en[B]",
+   "old": "Do not infer BOP transactions from opening-to-closing IIP stock change alone. | Specification is operational; Yemen IIP input positions/reconciliation table are not yet available in the current public evidence base.",
+   "new": "Do not infer BOP transactions from opening-to-closing IIP stock change alone. | The specification is operational, but Yemen's international investment position inputs and reconciliation table are not yet in the current public evidence base."
+  },
+  {
+   "finding": "P4-E02",
+   "sheet": "06_EVIDENCE_OBJECTS",
+   "row": 94,
+   "col": 16,
+   "field": "CLM-050.limitations_en[B]",
+   "old": "Do not call the total active users, unique people, a national inclusion rate or a current 2026 level. | Accounts are not unique people or automatically active; 23% is a source average, not provider-specific/current.",
+   "new": "Do not call the total active users, unique people, a national inclusion rate or a current 2026 level. | Accounts are not unique people and are not automatically active; the 23% is a source-wide average, not a provider-specific or current rate."
+  },
+  {
+   "finding": "P4-E02",
+   "sheet": "06_EVIDENCE_OBJECTS",
+   "row": 95,
+   "col": 16,
+   "field": "CLM-051.limitations_en[B]",
+   "old": "Do not infer unique users, merchant ecosystem coverage, household welfare, causality or durable inclusion. | Transaction value is not unique users, merchant adoption, welfare or durable inclusion; grouping is CauseWay-derived, not source-native.",
+   "new": "Do not infer unique users, merchant ecosystem coverage, household welfare, causality or durable inclusion. | Transaction value is not unique users, merchant adoption, welfare or durable inclusion; the grouping is this resource's own, not the source's classification."
+  },
+  {
+   "finding": "P4-E02",
+   "sheet": "06_EVIDENCE_OBJECTS",
+   "row": 96,
+   "col": 16,
+   "field": "CLM-052.limitations_en[B]",
+   "old": "Do not infer a 2026 national gender gap, rural access rate, or local service availability. | Not national adult prevalence; not current geography; not comparable to Findex without universe/method bridge; 611-user survey has different sample composition.",
+   "new": "Do not infer a 2026 national gender gap, rural access rate, or local service availability. | This is not national adult prevalence and not current geography; it is not comparable with Findex without a bridge between their populations and methods, and the 611-user survey has a different sample composition."
+  },
+  {
+   "finding": "P4-E02",
+   "sheet": "06_EVIDENCE_OBJECTS",
+   "row": 97,
+   "col": 16,
+   "field": "CLM-053.limitations_en[B]",
+   "old": "Do not call this primary-verified, a 2026 level, unique households or a national adult financial-inclusion rate. | Primary 2023 source object and universe bridge are not yet available for direct verification; cannot be treated as 2026 or as population prevalence",
+   "new": "Do not call this primary-verified, a 2026 level, unique households or a national adult financial-inclusion rate. | The primary 2023 source and the bridge between provider coverage across periods are not yet available for direct verification; the figure cannot be treated as a 2026 level or as population prevalence."
+  }
+ ]
+}

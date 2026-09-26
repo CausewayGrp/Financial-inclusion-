@@ -1,0 +1,772 @@
+{
+ "VIS-POS-TERMINALS": {
+  "lineage_state": "BOUND_EXACT",
+  "source_dependencies": [
+   "SRC-CBY-POS-2025-03",
+   "SRC-CBY-POS-2025-04",
+   "SRC-CBY-POS-2025-05",
+   "SRC-CBY-POS-2025-06",
+   "SRC-CBY-POS-2025-07",
+   "SRC-CBY-POS-2025-08",
+   "SRC-CBY-POS-2025-09",
+   "SRC-CBY-POS-2025-10",
+   "SRC-CBY-POS-2025-11",
+   "SRC-CBY-POS-2025-12",
+   "SRC-CBY-POS-2026-01"
+  ],
+  "basis": "As specified in the PB-0010…PB-0069 binding row: 19_PAYMENTS_DATA rows IND-0002 filtered to contracted period Mar-2025–Jan-2026; excludes SRC-CBY-PAYREPORT-Q3-2024 and -H1-2025 (different publications, break-in-series)."
+ },
+ "VIS-POS-TRANSACTIONS": {
+  "lineage_state": "BOUND_EXACT",
+  "source_dependencies": [
+   "SRC-CBY-POS-2025-03",
+   "SRC-CBY-POS-2025-04",
+   "SRC-CBY-POS-2025-05",
+   "SRC-CBY-POS-2025-06",
+   "SRC-CBY-POS-2025-07",
+   "SRC-CBY-POS-2025-08",
+   "SRC-CBY-POS-2025-09",
+   "SRC-CBY-POS-2025-10",
+   "SRC-CBY-POS-2025-11",
+   "SRC-CBY-POS-2025-12",
+   "SRC-CBY-POS-2026-01"
+  ],
+  "basis": "As specified in the PB-0010…PB-0069 binding row: 19_PAYMENTS_DATA rows IND-0003 filtered to contracted period Mar-2025–Jan-2026; excludes the two cross-publication snapshots."
+ },
+ "VIS-POS-VALUE": {
+  "lineage_state": "BOUND_EXACT",
+  "source_dependencies": [
+   "SRC-CBY-POS-2025-03",
+   "SRC-CBY-POS-2025-04",
+   "SRC-CBY-POS-2025-05",
+   "SRC-CBY-POS-2025-06",
+   "SRC-CBY-POS-2025-07",
+   "SRC-CBY-POS-2025-08",
+   "SRC-CBY-POS-2025-10",
+   "SRC-CBY-POS-2025-11",
+   "SRC-CBY-POS-2025-12",
+   "SRC-CBY-POS-2026-01"
+  ],
+  "basis": "As specified in the PB-0010…PB-0069 binding row: 19_PAYMENTS_DATA rows IND-0004, Mar-2025–Jan-2026; Sep-2025 has no source value and therefore no source."
+ },
+ "VIS-REMITTANCE-MACRO": {
+  "lineage_state": "BOUND_EXACT",
+  "source_dependencies": [
+   "SRC-IMF-AIV-2025-STAFF-001",
+   "SRC-IMF-AIV-2025-SUPP-001"
+  ],
+  "basis": "As specified in the PB-0010…PB-0069 binding row: 23_REMITTANCES metric RMT-001 only; removes the two World Bank RPW corridor-price sources the dataset-level resolution attached."
+ },
+ "VIS-REMITTANCE-COST": {
+  "lineage_state": "BOUND_EXACT",
+  "source_dependencies": [
+   "SRC-WB-RPW-SA-YEM-2025Q3-001",
+   "SRC-WB-RPW-UAE-YEM-2025Q3-001"
+  ],
+  "basis": "As specified in the PB-0010…PB-0069 binding row: 23_REMITTANCES metric RMT-002 only; removes the two IMF Article IV documents the dataset-level resolution attached."
+ },
+ "VIS-FIRM-CONSTRAINTS": {
+  "lineage_state": "BOUND_EXACT",
+  "source_dependencies": [
+   "SRC-WB-FSD-2024-001"
+  ],
+  "basis": "As specified in the PB-0010…PB-0069 binding row: 20_FIRM_FINANCE metric FFM-007 only; removes SRC-WB-ES-2013-PROFILE-001 (a different survey)."
+ },
+ "VIS-FIRM-FINANCE-SEVERITY": {
+  "lineage_state": "BOUND_EXACT",
+  "source_dependencies": [
+   "SRC-WB-FSD-2024-001"
+  ],
+  "basis": "As specified in the PB-0010…PB-0069 binding row: 20_FIRM_FINANCE metric FFM-006 only; removes SRC-WB-ES-2013-PROFILE-001."
+ },
+ "VIS-FIRM-FINANCE-PATH": {
+  "lineage_state": "BOUND_EXACT",
+  "source_dependencies": [
+   "SRC-WB-FSD-2024-001"
+  ],
+  "basis": "As specified in the PB-0010…PB-0069 binding row: Loan-source rows of the 2022 custom survey only; removes SRC-WB-ES-2013-PROFILE-001."
+ },
+ "VIS-FINDEX-GAPS": {
+  "lineage_state": "BOUND_EXACT",
+  "source_dependencies": [
+   "SRC-WB-FINDEX-AGG-2022"
+  ],
+  "basis": "As specified in the PB-0010…PB-0069 binding row: 25_FINDEX_BASELINE rows WB-FINDEX-OBS-2022-001..006 (all source_url data.worldbank.org FX.OWN.* )."
+ },
+ "VIS-PAYMENT-ANATOMY": {
+  "lineage_state": "BOUND_EXACT",
+  "source_dependencies": [
+   "SRC-CBY-PAYREPORT-H1-2025"
+  ],
+  "basis": "As specified in the PB-0010…PB-0069 binding row: Contract period 2025 H1; 19_PAYMENTS_DATA rows labelled '2025 H1' resolve to this single publication."
+ },
+ "VIS-MFI-2014-PANEL": {
+  "lineage_state": "BOUND_EXACT",
+  "source_dependencies": [
+   "SRC-YMN-MFMAG-2014-Q1-001",
+   "SRC-YMN-MFMAG-2014-Q2-001"
+  ],
+  "basis": "As specified in the PB-0010…PB-0069 binding row: 21_MFI_DATA rows with period 2014 Q1/Q2."
+ },
+ "VIS-MFI-RUPTURE-LENS": {
+  "lineage_state": "BOUND_EXACT",
+  "source_dependencies": [
+   "SRC-SFD-Q1-2015-001",
+   "SRC-SFD-Q3-2015-001",
+   "SRC-SFD-Q4-2015-001"
+  ],
+  "basis": "As specified in the PB-0010…PB-0069 binding row: Contracted snapshots 2015-03/09/12 = SFD Q1/Q3/Q4-2015 reports (21_MFI_DATA holds no 2015 rows; lineage token 77_MFI_TEMPORAL_SPINE is catalogued in 16_DATASET_CATALOG)."
+ },
+ "VIS-MFI-SPINE": {
+  "lineage_state": "BOUND_EXACT",
+  "source_dependencies": [
+   "SRC-SFD-MF-HISTORY-TOR-2012-001",
+   "SRC-SFD-Q1-2012-001",
+   "SRC-SFD-Q1-2015-001",
+   "SRC-SFD-Q1-2019-001",
+   "SRC-SFD-Q2-2013-001",
+   "SRC-SFD-Q2-2014-001",
+   "SRC-SFD-Q3-2015-001",
+   "SRC-SFD-Q3-2016-001",
+   "SRC-SFD-Q4-2009-001",
+   "SRC-SFD-Q4-2010-001",
+   "SRC-SFD-Q4-2011-001",
+   "SRC-SFD-Q4-2012-001",
+   "SRC-SFD-Q4-2015-001",
+   "SRC-SFD-Q4-2017-001",
+   "SRC-SFD-Q4-2018-001",
+   "SRC-SFD-Q4-2020-001",
+   "SRC-YMN-IMPACT-2021-001"
+  ],
+  "basis": "Execution check (PB-0022): the spine plots the sixteen SFD reports (same set as CLM-022) and a 2021 pointer; 21_MFI_DATA 2021_FEB provider rows cite SRC-YMN-IMPACT-2021-001, so that source is added."
+ },
+ "VIS-CAPITAL-CONTEXT": {
+  "lineage_state": "BOUND_EXACT",
+  "source_dependencies": [
+   "SRC-OCHA-FTS-YEM-2026-001"
+  ],
+  "basis": "As specified in the PB-0010…PB-0069 binding row: Single controlled input (OCHA FTS 2026)."
+ },
+ "VIS-E-MONEY-RULE-STACK": {
+  "lineage_state": "BOUND_EXACT",
+  "source_dependencies": [
+   "SRC-CBY-PSP-RULES-2022-001",
+   "SRC-CBY-EMONEY-2023-001",
+   "SRC-CBY-EMONEY-AMD-2025-001"
+  ],
+  "basis": "As specified in the PB-0010…PB-0069 binding row: Contract names exactly: 2022 PSP framework → 2023 mobile e-money rule → 2025 amendment."
+ },
+ "VIS-FCP-REDRESS-PATH": {
+  "lineage_state": "BOUND_EXACT",
+  "source_dependencies": [
+   "SRC-CBY-FCP-INSTR-2023-001",
+   "SRC-CBY-FCP-BROCHURE-2024-001"
+  ],
+  "basis": "As specified in the PB-0010…PB-0069 binding row: Aug-2023 instrument + Mar-2024 official guidance brochure (the redress windows come from the brochure)."
+ },
+ "VIS-OECD-FCP-TIMELINE": {
+  "lineage_state": "BOUND_EXACT",
+  "source_dependencies": [
+   "SRC-CBY-FCP-INSTR-2023-001",
+   "SRC-CBY-FCP-AWARE-2024-001",
+   "SRC-CBY-FCP-BROCHURE-2024-001",
+   "SRC-OECD-YEM-RESILIENCE-001"
+  ],
+  "basis": "Execution check: 11 data_inputs = 54_PRIMARY_AUTHORITY + 30_OECD_NARRATIVE + 42_CONTRADICTIONS; the three CBY consumer-protection records and the OECD 2026 narrative are the drawn inputs. Binding records lineage only; it does not upgrade the verification state of the OECD narrative."
+ },
+ "VIS-FL-EVIDENCE-LADDER": {
+  "lineage_state": "BOUND_EXACT",
+  "source_dependencies": [
+   "SRC-CBY-GMW-2023-001",
+   "SRC-CBY-GMW-2024-001",
+   "SRC-CBY-GMW-2024-CLOSE-001",
+   "SRC-CBY-GMW-2025-001",
+   "SRC-OECD-INFE-2023"
+  ],
+  "basis": "Execution check: activity rungs = four CBY Global Money Week records; capability rung = OECD/INFE 2023 (Yemen values verified, acceptance correction A)."
+ },
+ "VIS-PAYMENT-RAILS": {
+  "lineage_state": "BOUND_PARTIAL",
+  "source_dependencies": [
+   "SRC-UNDP-FMIIP-001",
+   "SRC-WB-FMIIP-P180708",
+   "SRC-WB-FMIIP-ISR2-2026-001",
+   "SRC-CBY-EMONEY-AMD-2025-001",
+   "SRC-CBY-DIGITAL-EXPO-2026-001",
+   "SRC-CBY-PAY-BOARD-2026-001",
+   "SRC-CBY-BANK-NETWORK-MTG-2026-001",
+   "SRC-CBY-UNIFIED-NET-2026-001",
+   "SRC-CBY-YPCC-FOUND-2026-001",
+   "SRC-CBY-YPCC-BOARD-2026-001",
+   "UNBOUND:REF-PAY-001"
+  ],
+  "basis": "Execution check revises the candidate: the contract scope (2024–2026; regulation/project/integration/institution/go-live/usage) selects the 31_REFORMS_REGULATION payment events dated 2024–2026 (REF-PAY-001…013, REF-EMONEY-002, REF-FMIIP-APPROVAL-2025, REF-FMIIP-ISR2-2026); their locators map to these ten source records. The 2023 consumer-protection and 2023 e-money records are outside the contract period and are dropped. REF-PAY-001 (2024-06-26 unified domestic transfer network rule) has a locator with no source record, so it stays an explicit open input."
+ },
+ "VIS-TARGET-RESULT-STATE": {
+  "lineage_state": "BOUND_EXACT",
+  "source_dependencies": [
+   "SRC-WB-FMIIP-P180708"
+  ],
+  "basis": "As specified in the PB-0010…PB-0069 binding row: All FMIIP-RF targets/baselines in 31_REFORMS_REGULATION cite SRC-WB-FMIIP-P180708; replaces SRC-UNDP-FMIIP-001 reached via 49_METRIC_CROSSWALK."
+ },
+ "VIS-FINDEX-ACCESS-USE": {
+  "lineage_state": "BOUND_EXACT",
+  "source_dependencies": [
+   "SRC-WB-FINDEX-001"
+  ],
+  "basis": "As specified in the PB-0010…PB-0069 binding row: Method/contract visual on HOLD_WEIGHTED_MICRODATA; publishes no estimate. Source = Findex microdata catalogue."
+ },
+ "VIS-FINDEX-BARRIERS": {
+  "lineage_state": "BOUND_EXACT",
+  "source_dependencies": [
+   "SRC-WB-FINDEX-001"
+  ],
+  "basis": "As specified in the PB-0010…PB-0069 binding row: As above (HOLD)."
+ },
+ "VIS-FINDEX-RESILIENCE": {
+  "lineage_state": "BOUND_EXACT",
+  "source_dependencies": [
+   "SRC-WB-FINDEX-001"
+  ],
+  "basis": "As specified in the PB-0010…PB-0069 binding row: As above (HOLD)."
+ },
+ "VIS-FINDEX-FLOW-CHANNELS": {
+  "lineage_state": "BOUND_EXACT",
+  "source_dependencies": [
+   "SRC-WB-FINDEX-001"
+  ],
+  "basis": "As specified in the PB-0010…PB-0069 binding row: As above (HOLD)."
+ },
+ "VIS-FINDEX-SAMPLE-SUPPORT": {
+  "lineage_state": "BOUND_EXACT",
+  "source_dependencies": [
+   "SRC-WB-FINDEX-001"
+  ],
+  "basis": "As specified in the PB-0010…PB-0069 binding row: Sample-support metadata from the DDI; not a population estimate."
+ },
+ "VIS-FINDEX-OBSERVED-WAVES": {
+  "lineage_state": "BOUND_EXACT",
+  "source_dependencies": [
+   "SRC-WB-FINDEX-LDB-2015-001",
+   "SRC-WB-FINDEX-AGG-2022"
+  ],
+  "basis": "Execution finding: the 2011 and 2014 anchors come from the 2015 Little Data Book rows in 26_FINDEX_HISTORY; SRC-WB-FINDEX-2014-001 (microdata catalogue) supplies none of the plotted values and is removed from the proposed list."
+ },
+ "VIS-BORROWING-SOURCES-2014": {
+  "lineage_state": "BOUND_EXACT",
+  "source_dependencies": [
+   "SRC-WB-FINDEX-LDB-2015-001"
+  ],
+  "basis": "As specified in the PB-0010…PB-0069 binding row: Passport EP-FINDEX-2014-NEEDS-FLOWS: The Little Data Book on Financial Inclusion 2015."
+ },
+ "VIS-DOMESTIC-REMITTANCE-PATH-2014": {
+  "lineage_state": "BOUND_EXACT",
+  "source_dependencies": [
+   "SRC-WB-FINDEX-LDB-2015-001"
+  ],
+  "basis": "As specified in the PB-0010…PB-0069 binding row: As above."
+ },
+ "VIS-SOURCE-COMPARISON": {
+  "lineage_state": "COMPOSITE_OF_OBJECTS",
+  "source_dependencies": [],
+  "basis": "As specified in the PB-0010…PB-0069 binding row: Compares definitions of other records; each compared record carries its own lineage."
+ },
+ "VIS-EVIDENCE-CLASS-LADDER": {
+  "lineage_state": "COMPOSITE_OF_OBJECTS",
+  "source_dependencies": [],
+  "basis": "As specified in the PB-0010…PB-0069 binding row: Classifies other records by evidence class; asserts no new fact."
+ },
+ "VIS-EVIDENCE-FRESHNESS": {
+  "lineage_state": "COMPOSITE_OF_OBJECTS",
+  "source_dependencies": [],
+  "basis": "As specified in the PB-0010…PB-0069 binding row: Plots the vintage of other records; each point opens its own record."
+ },
+ "VIS-EVIDENCE-GAPS": {
+  "lineage_state": "COMPOSITE_OF_OBJECTS",
+  "source_dependencies": [],
+  "basis": "As specified in the PB-0010…PB-0069 binding row: Gap matrix over other records; a gap cites the record whose absence it describes."
+ },
+ "VIS-INCLUSION-TRANSMISSION": {
+  "lineage_state": "COMPOSITE_OF_OBJECTS",
+  "source_dependencies": [],
+  "basis": "As specified in the PB-0010…PB-0069 binding row: System map; each node must link to the evidence records it summarises, not to sources directly."
+ },
+ "VIS-MECHANISM-METRIC-BRIDGE": {
+  "lineage_state": "COMPOSITE_OF_OBJECTS",
+  "source_dependencies": [],
+  "basis": "As specified in the PB-0010…PB-0069 binding row: Edges link 32_QUAL_LITERATURE rows (each with its own source_id) to quantitative records."
+ },
+ "VIS-PROVIDER-OBSERVABILITY": {
+  "lineage_state": "COMPOSITE_OF_OBJECTS",
+  "source_dependencies": [],
+  "basis": "As specified in the PB-0010…PB-0069 binding row: Each class×dimension badge must cite the record it summarises."
+ },
+ "VIS-DEMAND-VINTAGE-LADDER": {
+  "lineage_state": "COMPOSITE_OF_OBJECTS",
+  "source_dependencies": [],
+  "basis": "As specified in the PB-0010…PB-0069 binding row: One rung per financial function; each rung opens its own Findex record."
+ },
+ "VIS-PROVIDER-TIME": {
+  "lineage_state": "SOURCE_NOT_YET_BOUND",
+  "source_dependencies": [],
+  "basis": "As specified in the PB-0010…PB-0069 binding row: Visual contract state BLOCKED_BY_2026_ROSTER_EXTRACTION_AND_WALLET_UNIVERSE; no public render until unblocked."
+ },
+ "CLM-004": {
+  "lineage_state": "FRAMING_NO_FACT",
+  "source_dependencies": [],
+  "basis": "Execution check revises the candidate: the claim states a unit-of-observation rule (accounts, subscribers and transactions are not unique people) and reports no figure, so no source is bound."
+ },
+ "CLM-005": {
+  "lineage_state": "BOUND_EXACT",
+  "source_dependencies": [
+   "SRC-WB-FSD-2024-001"
+  ],
+  "basis": "As specified in the PB-0010…PB-0069 binding row: 2022 seven-governorate custom survey only; removes SRC-WB-ES-2013-PROFILE-001."
+ },
+ "CLM-006": {
+  "lineage_state": "BOUND_EXACT",
+  "source_dependencies": [
+   "SRC-WB-FSD-2024-001"
+  ],
+  "basis": "As specified in the PB-0010…PB-0069 binding row: As above."
+ },
+ "CLM-008": {
+  "lineage_state": "BOUND_EXACT",
+  "source_dependencies": [
+   "SRC-CBY-BANKLIST-AR-2026-001"
+  ],
+  "basis": "As specified in the PB-0010…PB-0069 binding row: The claim concerns the 26-row licensed-bank list only; removes 13 exchange/remittance enforcement decisions attached via 15_PROVIDER_MASTER."
+ },
+ "CLM-014": {
+  "lineage_state": "COMPOSITE_OF_OBJECTS",
+  "source_dependencies": [],
+  "basis": "As specified in the PB-0010…PB-0069 binding row: Freshness-by-domain claim; cite the per-domain evidence records, not a 30-source union."
+ },
+ "CLM-015": {
+  "lineage_state": "BOUND_EXACT",
+  "source_dependencies": [
+   "SRC-CBY-UNLICENSED-EWALLET-2024-001"
+  ],
+  "basis": "As specified in the PB-0010…PB-0069 binding row: Single dated negative-authority circular."
+ },
+ "CLM-016": {
+  "lineage_state": "BOUND_EXACT",
+  "source_dependencies": [
+   "SRC-CBY-EXCH-LIST-2025-001"
+  ],
+  "basis": "As specified in the PB-0010…PB-0069 binding row: Single 2025 roster."
+ },
+ "CLM-018": {
+  "lineage_state": "BOUND_EXACT",
+  "source_dependencies": [
+   "SRC-CBY-UNIFIED-NET-2026-001",
+   "SRC-CBY-BANK-NETWORK-MTG-2026-001",
+   "SRC-CBY-YPCC-FOUND-2026-001",
+   "SRC-CBY-YPCC-BOARD-2026-001"
+  ],
+  "basis": "Execution check: evidence_inputs REF-PAY-010…013 → locators cby-ye.com/news/946, 957, 961, 962 = these four source records."
+ },
+ "CLM-019": {
+  "lineage_state": "BOUND_EXACT",
+  "source_dependencies": [
+   "SRC-CBY-EXCH-LIST-2026-001",
+   "SRC-CBY-ENF-01-2026",
+   "SRC-CBY-ENF-02-2026",
+   "SRC-CBY-ENF-03-2026",
+   "SRC-CBY-ENF-04-2026",
+   "SRC-CBY-ENF-05-2026",
+   "SRC-CBY-ENF-06-2026",
+   "SRC-CBY-ENF-09-2026",
+   "SRC-CBY-ENF-10-2026",
+   "SRC-CBY-ENF-11-2026",
+   "SRC-CBY-ENF-13-2026",
+   "SRC-CBY-ENF-14-2026",
+   "SRC-CBY-ENF-15-2026",
+   "SRC-CBY-ENF-17-2026"
+  ],
+  "basis": "As specified in the PB-0010…PB-0069 binding row: 2026 roster + the thirteen dated enforcement decisions; drops bank list, FMIIP workshop, e-wallet negative list and YMN membership."
+ },
+ "CLM-020": {
+  "lineage_state": "BOUND_EXACT",
+  "source_dependencies": [
+   "SRC-SFD-MF-HISTORY-TOR-2012-001",
+   "SRC-SFD-Q4-2012-001",
+   "SRC-SFD-HIST-2004-Q3-001"
+  ],
+  "basis": "Execution check revises the candidate: 21_MFI_DATA MF-ORIG-001 (1997 layer) cites SRC-SFD-MF-HISTORY-TOR-2012-001 and SRC-SFD-Q4-2012-001; MF-ORIG-002 (1998 layer) cites SRC-SFD-HIST-2004-Q3-001. The YMN corroboration (MF-ORIG-003) is kept separate, as the record's method states; SRC-SFD-NEWSLETTER-2000-Q4-001 is not cited by these rows."
+ },
+ "CLM-022": {
+  "lineage_state": "BOUND_EXACT",
+  "source_dependencies": [
+   "SRC-SFD-MF-HISTORY-TOR-2012-001",
+   "SRC-SFD-Q1-2012-001",
+   "SRC-SFD-Q1-2015-001",
+   "SRC-SFD-Q1-2019-001",
+   "SRC-SFD-Q2-2013-001",
+   "SRC-SFD-Q2-2014-001",
+   "SRC-SFD-Q3-2015-001",
+   "SRC-SFD-Q3-2016-001",
+   "SRC-SFD-Q4-2009-001",
+   "SRC-SFD-Q4-2010-001",
+   "SRC-SFD-Q4-2011-001",
+   "SRC-SFD-Q4-2012-001",
+   "SRC-SFD-Q4-2015-001",
+   "SRC-SFD-Q4-2017-001",
+   "SRC-SFD-Q4-2018-001",
+   "SRC-SFD-Q4-2020-001"
+  ],
+  "basis": "As specified in the PB-0010…PB-0069 binding row: The sixteen SFD reports are exactly the spine inputs."
+ },
+ "CLM-024": {
+  "lineage_state": "BOUND_EXACT",
+  "source_dependencies": [
+   "SRC-WB-FINDEX-001"
+  ],
+  "basis": "As specified in the PB-0010…PB-0069 binding row: Findex microdata DDI (raw case shares)."
+ },
+ "CLM-026": {
+  "lineage_state": "BOUND_EXACT",
+  "source_dependencies": [
+   "SRC-WB-FINDEX-001",
+   "SRC-WB-FINDEX-AGG-2022"
+  ],
+  "basis": "As specified in the PB-0010…PB-0069 binding row: Microdata catalogue + published aggregate."
+ },
+ "CLM-027": {
+  "lineage_state": "BOUND_EXACT",
+  "source_dependencies": [
+   "SRC-WB-FINDEX-LDB-2015-001",
+   "SRC-WB-FINDEX-AGG-2022"
+  ],
+  "basis": "Execution check: 26_FINDEX_HISTORY FHOBS-2011-006 (3.7) and FHOBS-2014-001 (6.4) cite SRC-WB-FINDEX-LDB-2015-001; 11.9 (2022) is SRC-WB-FINDEX-AGG-2022. SRC-WB-FINDEX-2014-001 supplies no value used here."
+ },
+ "CLM-028": {
+  "lineage_state": "BOUND_EXACT",
+  "source_dependencies": [
+   "SRC-WB-FINDEX-LDB-2015-001"
+  ],
+  "basis": "As specified in the PB-0010…PB-0069 binding row: 2014 needs/flows profile."
+ },
+ "CLM-029": {
+  "lineage_state": "BOUND_EXACT",
+  "source_dependencies": [
+   "SRC-WB-FINDEX-LDB-2015-001"
+  ],
+  "basis": "As specified in the PB-0010…PB-0069 binding row: 2014 needs/flows profile."
+ },
+ "CLM-030": {
+  "lineage_state": "BOUND_EXACT",
+  "source_dependencies": [
+   "SRC-WB-FINDEX-LDB-2015-001"
+  ],
+  "basis": "As specified in the PB-0010…PB-0069 binding row: 2014 needs/flows profile."
+ },
+ "CLM-031": {
+  "lineage_state": "COMPOSITE_OF_OBJECTS",
+  "source_dependencies": [
+   "CLM-001",
+   "CLM-027",
+   "CLM-028",
+   "CLM-029",
+   "CLM-030"
+  ],
+  "basis": "Members as named in the PB binding note: the 2022 account record (CLM-001), the wave anchors (CLM-027) and the three 2014 needs/flows profiles (CLM-028/029/030)."
+ },
+ "DS-FCP-ARCH": {
+  "lineage_state": "BOUND_EXACT",
+  "source_dependencies": [
+   "SRC-CBY-FCP-INSTR-2023-001",
+   "SRC-CBY-FCP-AWARE-2024-001",
+   "SRC-CBY-FCP-BROCHURE-2024-001"
+  ],
+  "basis": "As specified in the PB-0010…PB-0069 binding row: Instrument (ref. 589, 20-Aug-2023), awareness material, redress brochure."
+ },
+ "DS-QUAL-EVIDENCE": {
+  "lineage_state": "COMPOSITE_OF_OBJECTS",
+  "source_dependencies": [],
+  "basis": "As specified in the PB-0010…PB-0069 binding row: Register of 32_QUAL_LITERATURE rows, each with its own source_id."
+ },
+ "DS-FINDEX-PUBLIC-HISTORY": {
+  "lineage_state": "BOUND_EXACT",
+  "source_dependencies": [
+   "SRC-WB-FINDEX-LDB-2015-001"
+  ],
+  "basis": "Execution check: every 26_FINDEX_HISTORY public row (2011 and 2014) cites SRC-WB-FINDEX-LDB-2015-001; the dataset holds no 2022 value and no row cites SRC-WB-FINDEX-2014-001."
+ },
+ "DS-FINDEX-HISTORY-CROSSWALK": {
+  "lineage_state": "COMPOSITE_OF_OBJECTS",
+  "source_dependencies": [],
+  "basis": "As specified in the PB-0010…PB-0069 binding row: Method crosswalk between waves; asserts comparability rules, not values."
+ },
+ "DS-DEMAND-VINTAGE-LENS": {
+  "lineage_state": "COMPOSITE_OF_OBJECTS",
+  "source_dependencies": [],
+  "basis": "As specified in the PB-0010…PB-0069 binding row: Function-level evidence clocks over other records."
+ },
+ "CLM-032": {
+  "lineage_state": "BOUND_EXACT",
+  "source_dependencies": [
+   "SRC-CBY-AR2024-BOP",
+   "SRC-CBY-AR2025-BOP",
+   "K04-CBY-060",
+   "AVA-004",
+   "EP-CBY-REMITTANCE-VINTAGE-K04"
+  ],
+  "basis": "The record's figures are AR2024 (USD 6.245bn) and AR2025 (restated USD 3.42216bn); both are the record's own source_links. The dataset token 173_CBY_ANNUAL_VINTAGES is replaced by the two exact sources."
+ },
+ "CLM-033": {
+  "lineage_state": "BOUND_EXACT",
+  "source_dependencies": [
+   "SRC-CBY-AR2022-001",
+   "SRC-CBY-AR2023-001",
+   "K04-CBY-061",
+   "AVA-005..008",
+   "EP-CBY-BANKING-REVAL-K04"
+  ],
+  "basis": "AR2022 vs AR2023+ restatement and the AR2023 valuation note (method). SRC-IMF-YEM-EGDDS-VAL-1996 is not used by this record's statement (it belongs to CLM-038) and is removed from source_links.",
+  "source_links_keep": [
+   "SRC-CBY-AR2022-001",
+   "SRC-CBY-AR2023-001"
+  ]
+ },
+ "CLM-034": {
+  "lineage_state": "BOUND_EXACT",
+  "source_dependencies": [
+   "SRC-CBY-AR2025-BOP",
+   "K04-CBY-060",
+   "DN-CBY-022"
+  ],
+  "basis": "Single-vintage AR2025 growth-pattern diagnostic; source_links = AR2025."
+ },
+ "CLM-035": {
+  "lineage_state": "BOUND_EXACT",
+  "source_dependencies": [
+   "SRC-CBY-AR2024-BOP",
+   "SRC-CBY-AR2025-BOP",
+   "K04-CBY-062"
+  ],
+  "basis": "Ratio computed within AR2024 and within AR2025; source_links = the two reports."
+ },
+ "CLM-036": {
+  "lineage_state": "BOUND_EXACT",
+  "source_dependencies": [
+   "SRC-IMF-D4D-YEM-ESS-2025",
+   "SRC-IMF-YEM-AIV-2025-2026",
+   "EP-IMF-CBY-REMIT-METHOD-K04",
+   "K04-CBY-060"
+  ],
+  "basis": "Method field: 'Primary IMF D4D-II + Article IV statistical annex'."
+ },
+ "CLM-037": {
+  "lineage_state": "BOUND_EXACT",
+  "source_dependencies": [
+   "SRC-CBY-AR2025-BOP",
+   "SRC-IMF-YEM-AIV-2025-2026",
+   "EP-CBY-REMITTANCE-VINTAGE-K04",
+   "EP-IMF-CBY-REMIT-METHOD-K04"
+  ],
+  "basis": "Summary compares the CBY AR2025 and IMF Article IV series. Also repairs the truncated Master token 'EP-IMF-CBY-REMIT-ME...' to the passport ID EP-IMF-CBY-REMIT-METHOD-K04."
+ },
+ "CLM-038": {
+  "lineage_state": "BOUND_EXACT",
+  "source_dependencies": [
+   "SRC-IMF-YEM-EGDDS-VAL-1996",
+   "SRC-CBY-AR2023-001",
+   "EP-CBY-BANKING-VALUATION-LINEAGE-K04"
+  ],
+  "basis": "1996 precedent = IMF e-GDDS metadata; the January-2023 valuation change is documented in AR2023 (CLM-033 method: 'AR2023 explicit market-exchange-rate valuation note')."
+ },
+ "CLM-039": {
+  "lineage_state": "BOUND_PARTIAL",
+  "source_dependencies": [
+   "SRC-WB-WDI-REMIT-YEM-CURRENT",
+   "EP-WB-WDI-REMITTANCE-VINTAGE-K04",
+   "CON-045",
+   "DS-K04-REMIT-SOURCE-LENSES"
+  ],
+  "basis": "The reviewed surface is the WDI indicator page; the 'other World Bank surfaces and prior access vintages' are identified only at dataset level (DS-K04-REMIT-SOURCE-LENSES) and stay an open input."
+ },
+ "CLM-040": {
+  "lineage_state": "BOUND_EXACT",
+  "source_dependencies": [
+   "SRC-IMF-D4D-YEM-ESS-2025",
+   "EP-IMF-CBY-REMIT-METHOD-K04"
+  ],
+  "basis": "Summary: 'IMF's D4D-II record states…'."
+ },
+ "CLM-041": {
+  "lineage_state": "BOUND_EXACT",
+  "source_dependencies": [
+   "SRC-CBY-AR2025-BOP",
+   "SRC-IMF-YEM-AIV-2025-2026",
+   "CON-046"
+  ],
+  "basis": "Components tested = CBY AR2025 and IMF Article IV IRG balance of payments (passport EP-YEM-BOP-COMPONENT-XWALK-K04: 'CBY AR2025 ↔ IMF Article IV')."
+ },
+ "CLM-042": {
+  "lineage_state": "BOUND_EXACT",
+  "source_dependencies": [
+   "SRC-CBY-AR2025-BOP",
+   "SRC-IMF-YEM-AIV-2025-2026",
+   "EP-YEM-BOP-COMPONENT-XWALK-K04"
+  ],
+  "basis": "Summary: 'The CBY AR2025 and IMF Article IV remittance series…'."
+ },
+ "CLM-043": {
+  "lineage_state": "BOUND_EXACT",
+  "source_dependencies": [
+   "SRC-CBY-AR2025-BOP",
+   "EP-YEM-BOP-RESIDUAL-K04"
+  ],
+  "basis": "Summary: 'In CBY AR2025, net errors and omissions…'."
+ },
+ "CLM-044": {
+  "lineage_state": "BOUND_EXACT",
+  "source_dependencies": [
+   "SRC-CCY-REMIT-ESTIMATE-2025",
+   "EP-CCY-REMIT-RESIDUAL-MODEL-K04"
+  ],
+  "basis": "Summary: 'CCY estimates at least USD 7.4 billion…' = the CCY remittance estimate report (user-provided file; no public locator, so no public link is offered)."
+ },
+ "CLM-046": {
+  "lineage_state": "BOUND_PARTIAL",
+  "source_dependencies": [
+   "SRC-AIDDATA-SAUDI-YEM-2015",
+   "EP-SAUDI-SUPPORT-FLOWSTATE-K04",
+   "DS-K04-SAUDI-SUPPORT-TRANSMISSION"
+  ],
+  "basis": "Method: 'Primary donor/multilateral evidence plus historical AidData method'. AidData is in the library; the donor/multilateral (SPA/SDRPY/IMF) documents named in the passport are not, so they stay a dataset-level open input."
+ },
+ "CLM-047": {
+  "lineage_state": "BOUND_EXACT",
+  "source_dependencies": [
+   "SRC-IMF-BPM6",
+   "SRC-IMF-BPM6-COMP-GUIDE",
+   "SRC-IMF-BPM7-IMPLEMENTATION",
+   "EP-YEM-BOP-IIP-RECON-K04"
+  ],
+  "basis": "Method: 'BPM6 compilation guidance; BPM7 migration strategy'."
+ },
+ "CLM-048": {
+  "lineage_state": "BOUND_EXACT",
+  "source_dependencies": [
+   "SRC-IMF-BPM7-IMPLEMENTATION",
+   "SRC-IMF-BPM6"
+  ],
+  "basis": "The record states the BPM7 transition rule; sources = BPM7 implementation strategy and BPM6."
+ },
+ "CLM-050": {
+  "lineage_state": "BOUND_EXACT",
+  "source_dependencies": [
+   "SRC-IBS-EPAY-YEM-2020",
+   "EP-IBS-EMONEY-2019-K04"
+  ],
+  "basis": "IBS study (passport publisher: Institute of Banking Studies)."
+ },
+ "CLM-051": {
+  "lineage_state": "BOUND_EXACT",
+  "source_dependencies": [
+   "SRC-IBS-EPAY-YEM-2020",
+   "EP-IBS-EMONEY-VALUE-K04"
+  ],
+  "basis": "IBS Table 8 with CauseWay grouping (derivation from the bound source)."
+ },
+ "CLM-052": {
+  "lineage_state": "BOUND_EXACT",
+  "source_dependencies": [
+   "SRC-IBS-EPAY-YEM-2020",
+   "EP-IBS-GEO-GENDER-K04"
+  ],
+  "basis": "IBS source-reported averages."
+ },
+ "CLM-053": {
+  "lineage_state": "BOUND_EXACT",
+  "source_dependencies": [
+   "SRC-SANAA-MFB-2024",
+   "EP-MFB-BORROWERS-2023-K04"
+  ],
+  "basis": "'A 2024 Yemen policy source, citing the SFD/SMED…' = SRC-SANAA-MFB-2024 (passport EP-MFB-BORROWERS-2023-K04)."
+ },
+ "CLM-054": {
+  "lineage_state": "BOUND_EXACT",
+  "source_dependencies": [
+   "SRC-SFD-Q4-2015-001",
+   "SRC-SFD-Q4-2020-001",
+   "SRC-SANAA-MFB-2024",
+   "INS-K04-023"
+  ],
+  "basis": "End-2015 anchor 93,118 = 21_MFI_DATA SRC-SFD-Q4-2015-001; end-2020 anchors 88,445 / 1,611,206 / YER 33,379m = SRC-SFD-Q4-2020-001; 2023 secondary values = SRC-SANAA-MFB-2024."
+ },
+ "CLM-055": {
+  "lineage_state": "BOUND_EXACT",
+  "source_dependencies": [
+   "SRC-CBY-BANKLIST-AR-2026-001",
+   "EP-CBY-BANK-ROSTER-2026"
+  ],
+  "basis": "The 26-row CBY-Aden licensed-bank list; the provider register classification derives from the same list."
+ },
+ "CLM-056": {
+  "lineage_state": "BOUND_PARTIAL",
+  "source_dependencies": [
+   "SRC-SANAA-MFB-2024",
+   "SRC-SANAA-YR-2025-Q2-MFB",
+   "CON-057",
+   "DS-V041-STRICT-COUNSEL"
+  ],
+  "basis": "The 2024 MFB paper and the 2025 Yemen Review are named in the record. The 2016–2019 growth-share and stock-share calculation (91.98%, 82.45%) comes from historical provider data identified only at dataset level (DS-V041-STRICT-COUNSEL), so it stays an open input."
+ },
+ "CLM-057": {
+  "lineage_state": "BOUND_EXACT",
+  "source_dependencies": [
+   "SRC-SANAA-SOCPROT-2024",
+   "SRC-SANAA-MFB-2024",
+   "CON-058"
+  ],
+  "basis": "June 2023 ~80,800 = 2024 social-protection paper (32_QUAL_LITERATURE LIT-YEM-2024-002, SRC-SANAA-SOCPROT-2024); end-2023 78,686 = 2024 MFB paper (SRC-SANAA-MFB-2024) (33 CON-058)."
+ },
+ "CLM-017": {
+  "lineage_state": "BOUND_PARTIAL",
+  "source_dependencies": [
+   "SRC-CBY-POS-2026-01",
+   "UNBOUND:CBY-PAYMENTS-RELEASE-LISTING"
+  ],
+  "basis": "January 2026 release is bound; the statement that the payment page lists releases from March 2025 to January 2026 rests on the CBY payments listing page, which has no source record (entry token 'current CBY payments page')."
+ },
+ "CLM-045": {
+  "lineage_state": "BOUND_PARTIAL",
+  "source_dependencies": [
+   "SRC-WB-G2PX-YEM-UCT-2024-001",
+   "EP-YEM-CASH-FIN-TRANSMISSION-K04",
+   "DS-K04-CASH-FIN-TRANSMISSION"
+  ],
+  "basis": "Evidence synthesis: the G2PX programme record is bound; the other links are identified only at dataset level (entry token '189' = DS-K04-CASH-FIN-TRANSMISSION)."
+ },
+ "CLM-049": {
+  "lineage_state": "BOUND_EXACT",
+  "source_dependencies": [
+   "SRC-IMF-YEM-SMP-2026"
+  ],
+  "basis": "Every statement is from the IMF press release; the dataset token '194' adds no input."
+ },
+ "CLM-058": {
+  "lineage_state": "BOUND_EXACT",
+  "source_dependencies": [
+   "SRC-WB-FSD-2024-001"
+  ],
+  "basis": "'World Bank Financial Sector Diagnostics reports…'; the dataset token '201' adds no input."
+ },
+ "CLM-059": {
+  "lineage_state": "BOUND_EXACT",
+  "source_dependencies": [
+   "SRC-SMEPS-AR2024-2025"
+  ],
+  "basis": "Primary SMEPS annual report; the dataset token adds no input."
+ },
+ "CLM-060": {
+  "lineage_state": "BOUND_EXACT",
+  "source_dependencies": [
+   "SRC-SMEPS-AR2024-2025"
+  ],
+  "basis": "Primary SMEPS annual-report KPI table; the dataset token adds no input."
+ }
+}

@@ -1,0 +1,402 @@
+{
+  "review": "S01_REFERENCE_ARCHIVE_DISPOSITION",
+  "review_date": "2026-09-22",
+  "archive_folder": "99_REFERENCE_ARCHIVE_INBOX__NON_PRODUCTION",
+  "archive_top_level_items_reviewed": 70,
+  "authority_rule": "Archive materials may challenge production but never become semantic/evidence/source/rights/publication authority. Material factual changes require Production Master adjudication first.",
+  "status_definitions": {
+    "INTEGRATED_IMPLEMENTATION_LESSON": "A non-semantic implementation/review lesson has already been re-authored into current production source; archive file remains non-production.",
+    "DEFERRED_DESIGN_INPUT": "Potential UX/design/test value to revisit in later sessions without importing factual state.",
+    "MASTER_SOURCE_CHALLENGE_QUEUE": "Potential factual/source/rights proposition requiring original-source and Production Master adjudication before any promotion.",
+    "REJECTED_STALE_OR_UNSAFE": "Conflicts with current architecture/evidence controls or contains unsafe/uncontrolled claims; not to be used as production input.",
+    "REJECTED_AUTHORITY_COLLISION": "Claims/looks like authority but fails current authority identity/state; explicitly quarantined.",
+    "ARCHIVE_LINEAGE_ONLY": "Historical/generated/duplicate material useful only for lineage or regression comparison.",
+    "IDENTICAL_ASSET_NO_ACTION": "Asset matches current production asset; no action required.",
+    "ARCHIVE_CONTROL": "Instruction/control that belongs only to the archive folder."
+  },
+  "items": [
+    {
+      "file": "CauseWay_Master_Logo.png",
+      "status": "IDENTICAL_ASSET_NO_ACTION",
+      "reason": "Byte-identical to the current production logo; no replacement required."
+    },
+    {
+      "file": "site-data.js",
+      "status": "ARCHIVE_LINEAGE_ONLY",
+      "reason": "Compiled/generated predecessor runtime payload; not a first-hand source and must not become a runtime dependency."
+    },
+    {
+      "file": "Yemen_Financial_Inclusion_Evidence_Master_FINAL.xlsx",
+      "status": "REJECTED_AUTHORITY_COLLISION",
+      "reason": "SHA-256 91ed6906e46a3fe85c65b07b5068af067e510aff693d4fcb2d7cda354a8d5a26 does not match the controlled Production Master hash."
+    },
+    {
+      "file": "evidence.zip",
+      "status": "ARCHIVE_LINEAGE_ONLY",
+      "reason": "Generated evidence-route subtree (330 ZIP entries, CRC clean); useful only for visual/regression comparison, never source truth."
+    },
+    {
+      "file": "YFIE_FULL_STACK_SYSTEM_ARCHITECTURE.png",
+      "status": "DEFERRED_DESIGN_INPUT",
+      "reason": "Useful high-level layered-system communication pattern; technical labels do not exactly match the current Python/static-first repository and must be redrawn if used."
+    },
+    {
+      "file": "YFSI_Master_Enterprise_Suite_v7.0_Ultimate.xlsx",
+      "status": "REJECTED_AUTHORITY_COLLISION",
+      "reason": "SHA-256 125112029a60c3b03e09614aa0cb9ff8cf4ef850f87932bc7b9ec0b00178d64e does not match the controlled Production Master hash."
+    },
+    {
+      "file": "Copy of Financial Inclusion in Yemen — A Critical Review of the Evidence 1995–2026.docx",
+      "status": "MASTER_SOURCE_CHALLENGE_QUEUE",
+      "reason": "High-value research/method challenge; contains candidate interpretations and precision/source critiques that require original-source and Production Master adjudication before any promotion."
+    },
+    {
+      "file": "YFSI Corpus Inventory v1.0 — 46 items A–Z.docx",
+      "status": "MASTER_SOURCE_CHALLENGE_QUEUE",
+      "reason": "Useful custody, duplicate, rights and provenance challenge; its ADMIT/HOLD/DROP decisions are predecessor analysis, not current Source Library authority."
+    },
+    {
+      "file": "YFSI Evidence Synthesis v1.1 — Session 2 Delta.docx",
+      "status": "MASTER_SOURCE_CHALLENGE_QUEUE",
+      "reason": "Potentially material candidates on Findex precision, OECD/INFE coverage, exchange-rate construction and payment rails; all remain candidate-only until Master adjudication."
+    },
+    {
+      "file": "IMPLEMENTATION_STATUS.json",
+      "status": "ARCHIVE_LINEAGE_ONLY",
+      "reason": "Self-reported predecessor PASS state is not acceptance evidence for the current repository/runtime."
+    },
+    {
+      "file": "visual_contracts_36.json",
+      "status": "REJECTED_STALE_OR_UNSAFE",
+      "reason": "Different VC-* visual set from current canonical VIS-* library; matching count does not establish equivalence."
+    },
+    {
+      "file": "MASTER_BUILD_PROMPT.md",
+      "status": "DEFERRED_DESIGN_INPUT",
+      "reason": "Strong clean-room/public-language/progressive-disclosure principles; package paths and bundled-Master assumptions are stale, so use only as a challenge checklist."
+    },
+    {
+      "file": "readings_corpus.json",
+      "status": "MASTER_SOURCE_CHALLENGE_QUEUE",
+      "reason": "Contains strong/loaded analytical theses beyond current controlled Readings; no substitution for the Master-bound ten Readings."
+    },
+    {
+      "file": "YFSI_Citizen_Journey_Interactive_Experience.html.docx",
+      "status": "DEFERRED_DESIGN_INPUT",
+      "reason": "Human-centered task framing is useful; substantive claims/calculator assumptions and predecessor branding are not controlled for current publication."
+    },
+    {
+      "file": "UNIVERSAL END-TO-END BUILD MASTER PROMPT.md",
+      "status": "REJECTED_AUTHORITY_COLLISION",
+      "reason": "Names stale authority/package state; generic invariants may inform review but cannot operate the current repository."
+    },
+    {
+      "file": "routes_content_corpus.json",
+      "status": "REJECTED_STALE_OR_UNSAFE",
+      "reason": "Old route/content canon with repetitive promotional language and obsolete shard bindings; current Page Specs govern route copy."
+    },
+    {
+      "file": "editorial_readings_en.json",
+      "status": "MASTER_SOURCE_CHALLENGE_QUEUE",
+      "reason": "Predecessor editorial corpus; may be compared during Reading review but cannot replace current Master-controlled English Readings."
+    },
+    {
+      "file": "editorial_readings_ar.json",
+      "status": "MASTER_SOURCE_CHALLENGE_QUEUE",
+      "reason": "Predecessor editorial corpus; may be compared during Reading review but cannot replace current Master-controlled Arabic Readings."
+    },
+    {
+      "file": "styles.css",
+      "status": "DEFERRED_DESIGN_INPUT",
+      "reason": "Visual techniques may inspire later S03/S05 work, but palette/font/system are not current design authority and are not promoted in S01."
+    },
+    {
+      "file": "routes_manifest.json",
+      "status": "REJECTED_STALE_OR_UNSAFE",
+      "reason": "Contains obsolete routes and multiple non-current/unsupported KPIs; never use as site-map or data authority."
+    },
+    {
+      "file": "SYSTEM_ARCHITECTURE_AND_RELATIONSHIPS.md",
+      "status": "REJECTED_STALE_OR_UNSAFE",
+      "reason": "Obsolete 29-route Next.js architecture and unsafe embedded metrics; abstract separation of rules/systems/entities/use/outcomes already survives in current doctrine."
+    },
+    {
+      "file": "START_HERE_CLAUDE_ENGINEER.md",
+      "status": "REJECTED_STALE_OR_UNSAFE",
+      "reason": "Obsolete Next.js/Tailwind architecture, 29-route model, universal KPI-card pattern and uncontrolled metrics."
+    },
+    {
+      "file": "FRONTEND_BUILDER_MASTER_PROMPT 2.md",
+      "status": "ARCHIVE_LINEAGE_ONLY",
+      "reason": "Duplicate/superseded predecessor engineering prompt; no independent authority or additional user value."
+    },
+    {
+      "file": "FRONTEND_BUILDER_MASTER_PROMPT.md",
+      "status": "REJECTED_STALE_OR_UNSAFE",
+      "reason": "Obsolete predecessor engineering prompt; no current implementation authority."
+    },
+    {
+      "file": "catalog.json",
+      "status": "MASTER_SOURCE_CHALLENGE_QUEUE",
+      "reason": "Old source/catalog assertions may be useful for S06 comparison but cannot replace the current 149-record source model."
+    },
+    {
+      "file": "measurement_agenda.json",
+      "status": "MASTER_SOURCE_CHALLENGE_QUEUE",
+      "reason": "Some gaps align conceptually, but IDs, wording and values are noncanonical; current Measurement Agenda remains authority."
+    },
+    {
+      "file": "social_media_campaign_master.json",
+      "status": "ARCHIVE_LINEAGE_ONLY",
+      "reason": "Out of scope for the public evidence website repository and explicitly not a production dependency."
+    },
+    {
+      "file": "banking_sector_schedules.json",
+      "status": "MASTER_SOURCE_CHALLENGE_QUEUE",
+      "reason": "High-risk bank-level financial/operational assertions; quarantine for source-owner/Master review and never publish directly."
+    },
+    {
+      "file": "econometric_models_spec.json",
+      "status": "REJECTED_STALE_OR_UNSAFE",
+      "reason": "Contains synthetic indices, arbitrary weights and causal/model claims not admitted by current evidence authority."
+    },
+    {
+      "file": "citizen_journey_scrollytelling.json",
+      "status": "DEFERRED_DESIGN_INPUT",
+      "reason": "Retain only the plain-language/task-based interaction concept; factual claims and practical advice require controlled replacement if such a route survives S02."
+    },
+    {
+      "file": "404.html",
+      "status": "INTEGRATED_IMPLEMENTATION_LESSON",
+      "reason": "Recovery-path concept was re-authored into the current bilingual 404; old markup/copy is not a dependency."
+    },
+    {
+      "file": "FINAL_DESIGN_EXECUTION_PROMPT.md",
+      "status": "DEFERRED_DESIGN_INPUT",
+      "reason": "High-value design challenge: calm question-first experience, differentiated page families, screenshot-safe claim anatomy and Arabic-first composition. Exact fonts/palette remain candidates for S03/S05."
+    },
+    {
+      "file": "FINAL_RED_TEAM.md",
+      "status": "INTEGRATED_IMPLEMENTATION_LESSON",
+      "reason": "Useful distinction between handoff readiness and live release, plus source-owner/blind-reader challenge lenses; no factual promotion."
+    },
+    {
+      "file": "macro_bifurcation.json",
+      "status": "MASTER_SOURCE_CHALLENGE_QUEUE",
+      "reason": "Potential macro/FX candidate evidence; not current production truth."
+    },
+    {
+      "file": "causeway_institutional_narrative.json",
+      "status": "DEFERRED_DESIGN_INPUT",
+      "reason": "May inform future About/stewardship articulation only after current institutional wording review; contains promotional assertions not automatically publishable."
+    },
+    {
+      "file": "CAUSEWAY_FOUNDATIONAL_CHARTER.md",
+      "status": "ARCHIVE_LINEAGE_ONLY",
+      "reason": "Institutional lineage/reference only; not website evidence or current product authority."
+    },
+    {
+      "file": "mfb_baseline.json",
+      "status": "MASTER_SOURCE_CHALLENGE_QUEUE",
+      "reason": "Provider/microfinance figures and inferred concentration states require source-owner/Master adjudication."
+    },
+    {
+      "file": "claims.json",
+      "status": "MASTER_SOURCE_CHALLENGE_QUEUE",
+      "reason": "Old claim set; compare only by stable meaning/source, never merge into current 59 controlled public claims by filename."
+    },
+    {
+      "file": "geospatial_access_census.json",
+      "status": "MASTER_SOURCE_CHALLENGE_QUEUE",
+      "reason": "Geospatial/provider access counts are high-risk and must not bypass current geographic/source controls."
+    },
+    {
+      "file": "app.js",
+      "status": "INTEGRATED_IMPLEMENTATION_LESSON",
+      "reason": "Arabic-aware search-normalization idea was selectively re-authored; old runtime code is not used."
+    },
+    {
+      "file": "reform_roadmap.json",
+      "status": "MASTER_SOURCE_CHALLENGE_QUEUE",
+      "reason": "Reform-stage assertions are candidate evidence only; regulation/project stage must remain distinct from implementation/outcomes."
+    },
+    {
+      "file": "SYSTEM_METHODOLOGY_AND_TECHNICAL_FRAMEWORK.md",
+      "status": "REJECTED_STALE_OR_UNSAFE",
+      "reason": "Stale counts/architecture plus indefensible technical guarantees such as absolute cyber immunity and sub-50ms performance."
+    },
+    {
+      "file": "ROUTE_REGISTRY_29_PATHS.json",
+      "status": "REJECTED_STALE_OR_UNSAFE",
+      "reason": "Obsolete 29-route architecture; current 141 Page Specs and S02 IA challenge govern."
+    },
+    {
+      "file": "PUBLIC_DATA_RENDER_POLICY.json",
+      "status": "INTEGRATED_IMPLEMENTATION_LESSON",
+      "reason": "Deny-by-default/no-invention rendering principle is retained and re-authored in current source/search handling; archive file is not runtime authority."
+    },
+    {
+      "file": "master_source_registry.json",
+      "status": "MASTER_SOURCE_CHALLENGE_QUEUE",
+      "reason": "Old source registry may expose source-closure gaps but cannot supersede the current Source Library/reference map."
+    },
+    {
+      "file": "product_constitution.json",
+      "status": "ARCHIVE_LINEAGE_ONLY",
+      "reason": "Predecessor structured principles; current repository protocol and Production Master control product state."
+    },
+    {
+      "file": "public_trust_surfaces.json",
+      "status": "DEFERRED_DESIGN_INPUT",
+      "reason": "Trust-surface structure is useful for S04/S07; specific contact/policy copy must be verified against current Page Specs/operator/legal state."
+    },
+    {
+      "file": "PRODUCT_CONSTITUTION.md",
+      "status": "ARCHIVE_LINEAGE_ONLY",
+      "reason": "Predecessor product doctrine; retain only as lineage/challenge, not parallel governance."
+    },
+    {
+      "file": "AUTHORITY.json",
+      "status": "REJECTED_AUTHORITY_COLLISION",
+      "reason": "Archived authority state cannot supersede the current production AUTHORITY.json/controlled hash."
+    },
+    {
+      "file": "exchange_universe.json",
+      "status": "MASTER_SOURCE_CHALLENGE_QUEUE",
+      "reason": "Provider universe/status candidate; listing/licensing must remain separate from operation and current Master controls publication."
+    },
+    {
+      "file": "fintech_sandbox_state.json",
+      "status": "MASTER_SOURCE_CHALLENGE_QUEUE",
+      "reason": "Programme/regulatory stage candidate; requires source-owner/Master validation."
+    },
+    {
+      "file": "components_contract_manifest.json",
+      "status": "REJECTED_STALE_OR_UNSAFE",
+      "reason": "Obsolete framework/component assumptions including universal KPI/citizen-expert patterns; no current implementation authority."
+    },
+    {
+      "file": "TYPESCRIPT_INTERFACES.d.ts",
+      "status": "ARCHIVE_LINEAGE_ONLY",
+      "reason": "Predecessor type layer for a different runtime architecture."
+    },
+    {
+      "file": "text.txt",
+      "status": "REJECTED_AUTHORITY_COLLISION",
+      "reason": "Compact launcher names stale Master hash/package paths. Generic invariants already exist in current protocol; do not execute it."
+    },
+    {
+      "file": "cby_roster_2026_audit.json",
+      "status": "MASTER_SOURCE_CHALLENGE_QUEUE",
+      "reason": "Regulatory roster candidate; current Master already controls provider/listing state and must adjudicate any difference."
+    },
+    {
+      "file": "banking_sector.json",
+      "status": "MASTER_SOURCE_CHALLENGE_QUEUE",
+      "reason": "Banking aggregate candidate; cannot bypass current source/universe/currentness controls."
+    },
+    {
+      "file": "CURRENT_STATE.json",
+      "status": "ARCHIVE_LINEAGE_ONLY",
+      "reason": "Stale predecessor state snapshot; current HANDOFF_STATE.json controls repository status."
+    },
+    {
+      "file": "data_ethics_and_license_cc4.md",
+      "status": "REJECTED_STALE_OR_UNSAFE",
+      "reason": "Blanket CC BY treatment conflicts with source-level rights/publication distinctions; current rights state must remain object/source specific."
+    },
+    {
+      "file": "README 2.md",
+      "status": "ARCHIVE_LINEAGE_ONLY",
+      "reason": "Predecessor readme only."
+    },
+    {
+      "file": "findex-public-history.json",
+      "status": "MASTER_SOURCE_CHALLENGE_QUEUE",
+      "reason": "Candidate historical demand-side values; compare to current Findex objects only through Master/source validation."
+    },
+    {
+      "file": "peer_review_and_corrections_log.json",
+      "status": "DEFERRED_DESIGN_INPUT",
+      "reason": "Useful correction/transparency interaction concept for S04; predecessor entries are not current correction state."
+    },
+    {
+      "file": "FINAL_UNIVERSAL_HANDOFF_VERIFICATION.md",
+      "status": "ARCHIVE_LINEAGE_ONLY",
+      "reason": "Historical verification statement for a predecessor package; not evidence of current runtime acceptance."
+    },
+    {
+      "file": "README.md",
+      "status": "ARCHIVE_LINEAGE_ONLY",
+      "reason": "Predecessor package instructions; no production authority."
+    },
+    {
+      "file": "qa_acceptance_tests.json",
+      "status": "DEFERRED_DESIGN_INPUT",
+      "reason": "May supply test ideas for S05/S07/S08, but old PASS criteria are not current acceptance evidence."
+    },
+    {
+      "file": "IMPLEMENTATION_MANIFEST.json",
+      "status": "ARCHIVE_LINEAGE_ONLY",
+      "reason": "Predecessor implementation manifest for another package/runtime."
+    },
+    {
+      "file": "visual_identity_tokens.json",
+      "status": "REJECTED_STALE_OR_UNSAFE",
+      "reason": "Old navy/teal/gold and Cairo/Inter design direction; not current style authority."
+    },
+    {
+      "file": "findex-public-history.csv",
+      "status": "MASTER_SOURCE_CHALLENGE_QUEUE",
+      "reason": "Same candidate historical-data family as JSON; no direct production use."
+    },
+    {
+      "file": "README_REFERENCE_ARCHIVE.md",
+      "status": "ARCHIVE_CONTROL",
+      "reason": "Correct archive-use notice; retain in 99_REFERENCE only."
+    },
+    {
+      "file": "Yemen_Financial_Inclusion_Evidence_Website_Repository_FINAL.zip",
+      "status": "ARCHIVE_LINEAGE_ONLY",
+      "reason": "Former website repository snapshot; superseded by the live first-hand Drive folder."
+    },
+    {
+      "file": "Yemen_Financial_Inclusion_Evidence_FINAL_HANDOFF.zip",
+      "status": "ARCHIVE_LINEAGE_ONLY",
+      "reason": "Former handoff snapshot; superseded by the live first-hand Drive folder."
+    }
+  ],
+  "archive_point_in_time_verified": "2026-09-22T13:24Z",
+  "archive_top_level_items_still_present_after_review": 70,
+  "archive_binary_checks": {
+    "evidence.zip": {
+      "sha256": "fd261b25d7c142557d19480e5d2f439657878be16f0c365c7851d055e16f1695",
+      "entries": 330,
+      "zip_crc": "PASS"
+    },
+    "CauseWay_Master_Logo.png": {
+      "sha256": "5830163d50f9badbef3227ec44e7705548e2fcc8a06b2d6ae33d56ade60c6a90",
+      "production_asset_match": true
+    },
+    "Yemen_Financial_Inclusion_Evidence_Master_FINAL.xlsx": {
+      "sha256": "91ed6906e46a3fe85c65b07b5068af067e510aff693d4fcb2d7cda354a8d5a26",
+      "matches_production_master": false
+    },
+    "YFSI_Master_Enterprise_Suite_v7.0_Ultimate.xlsx": {
+      "sha256": "125112029a60c3b03e09614aa0cb9ff8cf4ef850f87932bc7b9ec0b00178d64e",
+      "matches_production_master": false
+    }
+  },
+  "post_s01_deltas": [
+    {
+      "file": "Old drafts",
+      "file_id": "1BckYimgynYGVAABN1aPYIMQpgsyy8wj34THmyF4re9k",
+      "linked_folder_id": "1Mqa2OQ4VDzWIfff554kFXuq40_9OixrR",
+      "reviewed_at": "2026-09-22",
+      "status": "DESIGN_REFERENCE_ONLY",
+      "reason": "New post-S01 pointer to high-fidelity mobile-review mockups. Reviewed only for answer-first hierarchy, scope adjacency, mobile composition and visual restraint. No facts, numbers, routes, source states, rights states or evidence semantics were promoted.",
+      "destination": "04_DESIGN_REFERENCES__REVIEWED",
+      "production_effect": "IMPLEMENTATION_CHALLENGE_ONLY"
+    }
+  ]
+}

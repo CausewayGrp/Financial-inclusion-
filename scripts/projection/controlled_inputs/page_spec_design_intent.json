@@ -1,0 +1,580 @@
+{
+  "schema": "YFI_CONTROLLED_INPUT/1.0",
+  "input_id": "page_spec_design_intent",
+  "authority_class": "CONTROLLED_DESIGN_INTENT__NOT_MASTER_OWNED__NOT_PUBLIC",
+  "rule": "Internal design intent per route (the *_internal fields). Never rendered as reader prose and never used as public metadata. Carries no facts.",
+  "routes": {
+    "/about/": {
+      "user_job_internal": "Explain purpose, CauseWay's role, scope boundaries and stewardship.",
+      "primary_user_question_internal": "Why does this product exist, and what does CauseWay contribute without becoming a source authority?"
+    },
+    "/access/": {
+      "user_job_internal": "Show what access geography can and cannot be established without fabricating a national map.",
+      "primary_user_question_internal": "What can we map or infer about access, and where does the evidence stop?"
+    },
+    "/accessibility/": {
+      "user_job_internal": "Explain accessibility commitments and implementation behavior.",
+      "primary_user_question_internal": "How should the product remain usable across visual, keyboard, screen-reader and low-bandwidth contexts?"
+    },
+    "/contact/": {
+      "user_job_internal": "Provide the governed contact/report pathway without creating evidence claims.",
+      "primary_user_question_internal": "How can a user contact the product team or report an issue?"
+    },
+    "/corrections/": {
+      "user_job_internal": "Explain material correction, supersession and release history.",
+      "primary_user_question_internal": "How can the public record be challenged, corrected and traced over time?"
+    },
+    "/data/": {
+      "user_job_internal": "Expose governed downloadable/searchable data and evidence records with rights/publication limits.",
+      "primary_user_question_internal": "What controlled data and evidence records are available?"
+    },
+    "/evidence/CLM-001/": {
+      "user_job_internal": "Let the user verify one governed evidence object without losing definition, scope, period, method, source, limits or correction state.",
+      "primary_user_question_internal": "What exactly supports and limits “Latest representative account-ownership measure available”?"
+    },
+    "/evidence/CLM-002/": {
+      "user_job_internal": "Let the user verify one governed evidence object without losing definition, scope, period, method, source, limits or correction state.",
+      "primary_user_question_internal": "What exactly supports and limits “A measured gender gap”?"
+    },
+    "/evidence/CLM-003/": {
+      "user_job_internal": "Let the user verify one governed evidence object without losing definition, scope, period, method, source, limits or correction state.",
+      "primary_user_question_internal": "What exactly supports and limits “POS infrastructure expanded”?"
+    },
+    "/evidence/CLM-004/": {
+      "user_job_internal": "Let the user verify one governed evidence object without losing definition, scope, period, method, source, limits or correction state.",
+      "primary_user_question_internal": "What exactly supports and limits “Accounts and transactions are not unique people”?"
+    },
+    "/evidence/CLM-005/": {
+      "user_job_internal": "Let the user verify one governed evidence object without losing definition, scope, period, method, source, limits or correction state.",
+      "primary_user_question_internal": "What exactly supports and limits “Finance was not the most frequently cited constraint in this survey”?"
+    },
+    "/evidence/CLM-006/": {
+      "user_job_internal": "Let the user verify one governed evidence object without losing definition, scope, period, method, source, limits or correction state.",
+      "primary_user_question_internal": "What exactly supports and limits “Finance severity within a specific denominator”?"
+    },
+    "/evidence/CLM-007/": {
+      "user_job_internal": "Let the user verify one governed evidence object without losing definition, scope, period, method, source, limits or correction state.",
+      "primary_user_question_internal": "What exactly supports and limits “Observed values, estimates and projections remain separate”?"
+    },
+    "/evidence/CLM-008/": {
+      "user_job_internal": "Let the user verify one governed evidence object without losing definition, scope, period, method, source, limits or correction state.",
+      "primary_user_question_internal": "What exactly supports and limits “Listing or licensing does not establish operation”?"
+    },
+    "/evidence/CLM-009/": {
+      "user_job_internal": "Let the user verify one governed evidence object without losing definition, scope, period, method, source, limits or correction state.",
+      "primary_user_question_internal": "What exactly supports and limits “The official 2026 exchange/remittance roster is countable; current operation is a different question”?"
+    },
+    "/evidence/CLM-010/": {
+      "user_job_internal": "Let the user verify one governed evidence object without losing definition, scope, period, method, source, limits or correction state.",
+      "primary_user_question_internal": "What exactly supports and limits “Wallet counts require semantic reconciliation”?"
+    },
+    "/evidence/CLM-011/": {
+      "user_job_internal": "Let the user verify one governed evidence object without losing definition, scope, period, method, source, limits or correction state.",
+      "primary_user_question_internal": "What exactly supports and limits “The complaint path is documented; performance remains open”?"
+    },
+    "/evidence/CLM-012/": {
+      "user_job_internal": "Let the user verify one governed evidence object without losing definition, scope, period, method, source, limits or correction state.",
+      "primary_user_question_internal": "What exactly supports and limits “E-money rules are not observed usage”?"
+    },
+    "/evidence/CLM-013/": {
+      "user_job_internal": "Let the user verify one governed evidence object without losing definition, scope, period, method, source, limits or correction state.",
+      "primary_user_question_internal": "What exactly supports and limits “Financial-literacy activity does not establish capability outcomes”?"
+    },
+    "/evidence/CLM-014/": {
+      "user_job_internal": "Let the user verify one governed evidence object without losing definition, scope, period, method, source, limits or correction state.",
+      "primary_user_question_internal": "What exactly supports and limits “Evidence freshness differs by domain”?"
+    },
+    "/evidence/CLM-015/": {
+      "user_job_internal": "Let the user verify one governed evidence object without losing definition, scope, period, method, source, limits or correction state.",
+      "primary_user_question_internal": "What exactly supports and limits “A dated negative list, not a permanent current status”?"
+    },
+    "/evidence/CLM-016/": {
+      "user_job_internal": "Let the user verify one governed evidence object without losing definition, scope, period, method, source, limits or correction state.",
+      "primary_user_question_internal": "What exactly supports and limits “Historical exchange and remittance roster baseline”?"
+    },
+    "/evidence/CLM-017/": {
+      "user_job_internal": "Let the user verify one governed evidence object without losing definition, scope, period, method, source, limits or correction state.",
+      "primary_user_question_internal": "What exactly supports and limits “January 2026 is the latest exposed monthly POS release”?"
+    },
+    "/evidence/CLM-018/": {
+      "user_job_internal": "Let the user verify one governed evidence object without losing definition, scope, period, method, source, limits or correction state.",
+      "primary_user_question_internal": "What exactly supports and limits “Institutional progress is not operation or outcome”?"
+    },
+    "/evidence/CLM-019/": {
+      "user_job_internal": "Let the user verify one governed evidence object without losing definition, scope, period, method, source, limits or correction state.",
+      "primary_user_question_internal": "What exactly supports and limits “Enforcement decisions are events, not a market census”?"
+    },
+    "/evidence/CLM-020/": {
+      "user_job_internal": "Let the user verify one governed evidence object without losing definition, scope, period, method, source, limits or correction state.",
+      "primary_user_question_internal": "What exactly supports and limits “1997 and 1998 are distinct milestones”?"
+    },
+    "/evidence/CLM-021/": {
+      "user_job_internal": "Let the user verify one governed evidence object without losing definition, scope, period, method, source, limits or correction state.",
+      "primary_user_question_internal": "What exactly supports and limits “Observed microfinance rupture during 2015”?"
+    },
+    "/evidence/CLM-022/": {
+      "user_job_internal": "Let the user verify one governed evidence object without losing definition, scope, period, method, source, limits or correction state.",
+      "primary_user_question_internal": "What exactly supports and limits “Informative history without a continuous annual series”?"
+    },
+    "/evidence/CLM-023/": {
+      "user_job_internal": "Let the user verify one governed evidence object without losing definition, scope, period, method, source, limits or correction state.",
+      "primary_user_question_internal": "What exactly supports and limits “Yemen Findex study contract”?"
+    },
+    "/evidence/CLM-024/": {
+      "user_job_internal": "Let the user verify one governed evidence object without losing definition, scope, period, method, source, limits or correction state.",
+      "primary_user_question_internal": "What exactly supports and limits “Raw case shares are not population estimates”?"
+    },
+    "/evidence/CLM-025/": {
+      "user_job_internal": "Let the user verify one governed evidence object without losing definition, scope, period, method, source, limits or correction state.",
+      "primary_user_question_internal": "What exactly supports and limits “Geographic coverage limits of the latest Findex wave”?"
+    },
+    "/evidence/CLM-026/": {
+      "user_job_internal": "Let the user verify one governed evidence object without losing definition, scope, period, method, source, limits or correction state.",
+      "primary_user_question_internal": "What exactly supports and limits “Demand panel specified; custom values withheld”?"
+    },
+    "/evidence/CLM-027/": {
+      "user_job_internal": "Let the user verify one governed evidence object without losing definition, scope, period, method, source, limits or correction state.",
+      "primary_user_question_internal": "What exactly supports and limits “Observed wave anchors, not an annual series”?"
+    },
+    "/evidence/CLM-028/": {
+      "user_job_internal": "Let the user verify one governed evidence object without losing definition, scope, period, method, source, limits or correction state.",
+      "primary_user_question_internal": "What exactly supports and limits “Historical borrowing patterns in 2014”?"
+    },
+    "/evidence/CLM-029/": {
+      "user_job_internal": "Let the user verify one governed evidence object without losing definition, scope, period, method, source, limits or correction state.",
+      "primary_user_question_internal": "What exactly supports and limits “Historical saving patterns in 2014”?"
+    },
+    "/evidence/CLM-030/": {
+      "user_job_internal": "Let the user verify one governed evidence object without losing definition, scope, period, method, source, limits or correction state.",
+      "primary_user_question_internal": "What exactly supports and limits “Domestic-remittance pathways in 2014”?"
+    },
+    "/evidence/CLM-031/": {
+      "user_job_internal": "Let the user verify one governed evidence object without losing definition, scope, period, method, source, limits or correction state.",
+      "primary_user_question_internal": "What exactly supports and limits “There is no single latest year for all people-side evidence”?"
+    },
+    "/evidence/CLM-032/": {
+      "user_job_internal": "Let the user verify one governed evidence object without losing definition, scope, period, method, source, limits or correction state.",
+      "primary_user_question_internal": "What exactly supports and limits “Same reference year, different published value”?"
+    },
+    "/evidence/CLM-033/": {
+      "user_job_internal": "Let the user verify one governed evidence object without losing definition, scope, period, method, source, limits or correction state.",
+      "primary_user_question_internal": "What exactly supports and limits “A measured banking jump can partly be a valuation change”?"
+    },
+    "/evidence/CLM-034/": {
+      "user_job_internal": "Let the user verify one governed evidence object without losing definition, scope, period, method, source, limits or correction state.",
+      "primary_user_question_internal": "What exactly supports and limits “A smoother published path is a methods question, not a conclusion”?"
+    },
+    "/evidence/CLM-035/": {
+      "user_job_internal": "Let the user verify one governed evidence object without losing definition, scope, period, method, source, limits or correction state.",
+      "primary_user_question_internal": "What exactly supports and limits “The apparent balance between remittances and donor financing changes with vintage”?"
+    },
+    "/evidence/CLM-036/": {
+      "user_job_internal": "Let the user verify one governed evidence object without losing definition, scope, period, method, source, limits or correction state.",
+      "primary_user_question_internal": "What exactly supports and limits “A reconstruction programme is documented; the exact CBY formula is not”?"
+    },
+    "/evidence/CLM-037/": {
+      "user_job_internal": "Let the user verify one governed evidence object without losing definition, scope, period, method, source, limits or correction state.",
+      "primary_user_question_internal": "What exactly supports and limits “The paths align after normalization; their levels are not equivalent”?"
+    },
+    "/evidence/CLM-038/": {
+      "user_job_internal": "Let the user verify one governed evidence object without losing definition, scope, period, method, source, limits or correction state.",
+      "primary_user_question_internal": "What exactly supports and limits “The 2023 valuation change has history, not a clean “first-ever” boundary”?"
+    },
+    "/evidence/CLM-039/": {
+      "user_job_internal": "Let the user verify one governed evidence object without losing definition, scope, period, method, source, limits or correction state.",
+      "primary_user_question_internal": "What exactly supports and limits “A public interface is not the same thing as the underlying dataset”?"
+    },
+    "/evidence/CLM-040/": {
+      "user_job_internal": "Let the user verify one governed evidence object without losing definition, scope, period, method, source, limits or correction state.",
+      "primary_user_question_internal": "What exactly supports and limits “The 2025 ESS mission produced a 2014–2024 external-sector history”?"
+    },
+    "/evidence/CLM-041/": {
+      "user_job_internal": "Let the user verify one governed evidence object without losing definition, scope, period, method, source, limits or correction state.",
+      "primary_user_question_internal": "What exactly supports and limits “The tested public CBY and IMF BOP components do not support a single conversion scalar”?"
+    },
+    "/evidence/CLM-042/": {
+      "user_job_internal": "Let the user verify one governed evidence object without losing definition, scope, period, method, source, limits or correction state.",
+      "primary_user_question_internal": "What exactly supports and limits “A stable remittance ratio exists; its meaning remains unknown”?"
+    },
+    "/evidence/CLM-043/": {
+      "user_job_internal": "Let the user verify one governed evidence object without losing definition, scope, period, method, source, limits or correction state.",
+      "primary_user_question_internal": "What exactly supports and limits “Before ranking flows, look at the balancing residual”?"
+    },
+    "/evidence/CLM-044/": {
+      "user_job_internal": "Let the user verify one governed evidence object without losing definition, scope, period, method, source, limits or correction state.",
+      "primary_user_question_internal": "What exactly supports and limits “An alternative residual model is not the canonical remittance baseline”?"
+    },
+    "/evidence/CLM-045/": {
+      "user_job_internal": "Let the user verify one governed evidence object without losing definition, scope, period, method, source, limits or correction state.",
+      "primary_user_question_internal": "What exactly supports and limits “A successful cash payment is not yet durable financial use”?"
+    },
+    "/evidence/CLM-046/": {
+      "user_job_internal": "Let the user verify one governed evidence object without losing definition, scope, period, method, source, limits or correction state.",
+      "primary_user_question_internal": "What exactly supports and limits “Pledge, agreement, deposit and disbursement are different financial states”?"
+    },
+    "/evidence/CLM-047/": {
+      "user_job_internal": "Let the user verify one governed evidence object without losing definition, scope, period, method, source, limits or correction state.",
+      "primary_user_question_internal": "What exactly supports and limits “A change in an external position is not automatically a transaction”?"
+    },
+    "/evidence/CLM-048/": {
+      "user_job_internal": "Let the user verify one governed evidence object without losing definition, scope, period, method, source, limits or correction state.",
+      "primary_user_question_internal": "What exactly supports and limits “BPM7 updates the standard; it does not rewrite Yemen’s history overnight”?"
+    },
+    "/evidence/CLM-049/": {
+      "user_job_internal": "Let the user verify one governed evidence object without losing definition, scope, period, method, source, limits or correction state.",
+      "primary_user_question_internal": "What exactly supports and limits “The July 2026 Yemen SMP state is staff-level and conditional”?"
+    },
+    "/evidence/CLM-050/": {
+      "user_job_internal": "Let the user verify one governed evidence object without losing definition, scope, period, method, source, limits or correction state.",
+      "primary_user_question_internal": "What exactly supports and limits “807,919 accounts did not mean 807,919 active people”?"
+    },
+    "/evidence/CLM-051/": {
+      "user_job_internal": "Let the user verify one governed evidence object without losing definition, scope, period, method, source, limits or correction state.",
+      "primary_user_question_internal": "What exactly supports and limits “Most recorded 2019 e-money value still revolved around cash and account transfers”?"
+    },
+    "/evidence/CLM-052/": {
+      "user_job_internal": "Let the user verify one governed evidence object without losing definition, scope, period, method, source, limits or correction state.",
+      "primary_user_question_internal": "What exactly supports and limits “Historical provider data show concentration in cities and low female representation”?"
+    },
+    "/evidence/CLM-053/": {
+      "user_job_internal": "Let the user verify one governed evidence object without losing definition, scope, period, method, source, limits or correction state.",
+      "primary_user_question_internal": "What exactly supports and limits “End-2023 borrower evidence is useful, but still secondary”?"
+    },
+    "/evidence/CLM-054/": {
+      "user_job_internal": "Let the user verify one governed evidence object without losing definition, scope, period, method, source, limits or correction state.",
+      "primary_user_question_internal": "What exactly supports and limits “Available evidence points to a divergence between borrower counts and reported saver/depositor and nominal-portfolio measures”?"
+    },
+    "/evidence/CLM-055/": {
+      "user_job_internal": "Let the user verify one governed evidence object without losing definition, scope, period, method, source, limits or correction state.",
+      "primary_user_question_internal": "What exactly supports and limits “Listed as a microfinance bank does not establish operation or outreach”?"
+    },
+    "/evidence/CLM-056/": {
+      "user_job_internal": "Let the user verify one governed evidence object without losing definition, scope, period, method, source, limits or correction state.",
+      "primary_user_question_internal": "What exactly supports and limits “The 91% figure is supportable only as a source-attributed share of saver growth—not as a verified 2023 depositor stock share”?"
+    },
+    "/evidence/CLM-057/": {
+      "user_job_internal": "Let the user verify one governed evidence object without losing definition, scope, period, method, source, limits or correction state.",
+      "primary_user_question_internal": "What exactly supports and limits “June and end-2023 borrower points are not one continuous series”?"
+    },
+    "/evidence/CLM-058/": {
+      "user_job_internal": "Let the user verify one governed evidence object without losing definition, scope, period, method, source, limits or correction state.",
+      "primary_user_question_internal": "What exactly supports and limits “Through 2021, larger loans mattered more than net borrower growth”?"
+    },
+    "/evidence/CLM-059/": {
+      "user_job_internal": "Let the user verify one governed evidence object without losing definition, scope, period, method, source, limits or correction state.",
+      "primary_user_question_internal": "What exactly supports and limits “SMEPS programme reach is evidence about the programme — not the national MSME universe”?"
+    },
+    "/evidence/CLM-060/": {
+      "user_job_internal": "Let the user verify one governed evidence object without losing definition, scope, period, method, source, limits or correction state.",
+      "primary_user_question_internal": "What exactly supports and limits “A programme KPI can be publishable even when its denominator documentation is incomplete”?"
+    },
+    "/evidence/DS-DEMAND-VINTAGE-LENS/": {
+      "user_job_internal": "Let the user verify one governed evidence object without losing definition, scope, period, method, source, limits or correction state.",
+      "primary_user_question_internal": "What exactly supports and limits “Demand-side / function-level evidence clocks”?"
+    },
+    "/evidence/DS-FCP-ARCH/": {
+      "user_job_internal": "Let the user verify one governed evidence object without losing definition, scope, period, method, source, limits or correction state.",
+      "primary_user_question_internal": "What exactly supports and limits “Consumer protection / redress architecture”?"
+    },
+    "/evidence/DS-FINDEX-HISTORY-CROSSWALK/": {
+      "user_job_internal": "Let the user verify one governed evidence object without losing definition, scope, period, method, source, limits or correction state.",
+      "primary_user_question_internal": "What exactly supports and limits “Demand-side / historical-to-latest-wave comparability”?"
+    },
+    "/evidence/DS-FINDEX-PUBLIC-HISTORY/": {
+      "user_job_internal": "Let the user verify one governed evidence object without losing definition, scope, period, method, source, limits or correction state.",
+      "primary_user_question_internal": "What exactly supports and limits “Demand-side / weighted historical public Findex”?"
+    },
+    "/evidence/DS-QUAL-EVIDENCE/": {
+      "user_job_internal": "Let the user verify one governed evidence object without losing definition, scope, period, method, source, limits or correction state.",
+      "primary_user_question_internal": "What exactly supports and limits “Qualitative evidence register”?"
+    },
+    "/evidence/MF-ORIG-001+002/": {
+      "user_job_internal": "Let the user verify one governed evidence object without losing definition, scope, period, method, source, limits or correction state.",
+      "primary_user_question_internal": "What exactly supports and limits “1997 institutional origin and 1998 operational programme start”?"
+    },
+    "/evidence/MFI-SPINE-2015-Q4/": {
+      "user_job_internal": "Let the user verify one governed evidence object without losing definition, scope, period, method, source, limits or correction state.",
+      "primary_user_question_internal": "What exactly supports and limits “2015 Q4 microfinance observation with a portfolio contradiction”?"
+    },
+    "/evidence/NEG-EW-011/": {
+      "user_job_internal": "Let the user verify one governed evidence object without losing definition, scope, period, method, source, limits or correction state.",
+      "primary_user_question_internal": "What exactly supports and limits “Named wallet/service on an official unlicensed negative-authority list”?"
+    },
+    "/evidence/PSE-011/": {
+      "user_job_internal": "Let the user verify one governed evidence object without losing definition, scope, period, method, source, limits or correction state.",
+      "primary_user_question_internal": "What exactly supports and limits “Dated remittance-agent licence suspension and closure event”?"
+    },
+    "/evidence/QUAL-001/": {
+      "user_job_internal": "Let the user verify one governed evidence object without losing definition, scope, period, method, source, limits or correction state.",
+      "primary_user_question_internal": "What exactly supports and limits “Institutional fragility and formal-access mechanism interpretation”?"
+    },
+    "/evidence/VIS-BORROWING-SOURCES-2014/": {
+      "user_job_internal": "Let the user verify one governed evidence object without losing definition, scope, period, method, source, limits or correction state.",
+      "primary_user_question_internal": "What exactly supports and limits “Borrowing was widespread — but sources are not a pie”?"
+    },
+    "/evidence/VIS-CAPITAL-CONTEXT/": {
+      "user_job_internal": "Let the user verify one governed evidence object without losing definition, scope, period, method, source, limits or correction state.",
+      "primary_user_question_internal": "What exactly supports and limits “Capital & programme pathways”?"
+    },
+    "/evidence/VIS-DEMAND-VINTAGE-LADDER/": {
+      "user_job_internal": "Let the user verify one governed evidence object without losing definition, scope, period, method, source, limits or correction state.",
+      "primary_user_question_internal": "What exactly supports and limits “What do people do with money — and how fresh is each layer?”?"
+    },
+    "/evidence/VIS-DOMESTIC-REMITTANCE-PATH-2014/": {
+      "user_job_internal": "Let the user verify one governed evidence object without losing definition, scope, period, method, source, limits or correction state.",
+      "primary_user_question_internal": "What exactly supports and limits “Domestic remittances — population reach vs recipient channels”?"
+    },
+    "/evidence/VIS-E-MONEY-RULE-STACK/": {
+      "user_job_internal": "Let the user verify one governed evidence object without losing definition, scope, period, method, source, limits or correction state.",
+      "primary_user_question_internal": "What exactly supports and limits “What must sit underneath a mobile wallet?”?"
+    },
+    "/evidence/VIS-EVIDENCE-CLASS-LADDER/": {
+      "user_job_internal": "Let the user verify one governed evidence object without losing definition, scope, period, method, source, limits or correction state.",
+      "primary_user_question_internal": "What exactly supports and limits “What kind of evidence is this?”?"
+    },
+    "/evidence/VIS-EVIDENCE-FRESHNESS/": {
+      "user_job_internal": "Let the user verify one governed evidence object without losing definition, scope, period, method, source, limits or correction state.",
+      "primary_user_question_internal": "What exactly supports and limits “Where is the evidence current — and where is it old?”?"
+    },
+    "/evidence/VIS-EVIDENCE-GAPS/": {
+      "user_job_internal": "Let the user verify one governed evidence object without losing definition, scope, period, method, source, limits or correction state.",
+      "primary_user_question_internal": "What exactly supports and limits “What we still do not know”?"
+    },
+    "/evidence/VIS-FCP-REDRESS-PATH/": {
+      "user_job_internal": "Let the user verify one governed evidence object without losing definition, scope, period, method, source, limits or correction state.",
+      "primary_user_question_internal": "What exactly supports and limits “If a complaint is not resolved, what happens?”?"
+    },
+    "/evidence/VIS-FINDEX-ACCESS-USE/": {
+      "user_job_internal": "Let the user verify one governed evidence object without losing definition, scope, period, method, source, limits or correction state.",
+      "primary_user_question_internal": "What exactly supports and limits “Access is not use — and use is not digital use”?"
+    },
+    "/evidence/VIS-FINDEX-BARRIERS/": {
+      "user_job_internal": "Let the user verify one governed evidence object without losing definition, scope, period, method, source, limits or correction state.",
+      "primary_user_question_internal": "What exactly supports and limits “Why adults without an account say they remain outside”?"
+    },
+    "/evidence/VIS-FINDEX-FLOW-CHANNELS/": {
+      "user_job_internal": "Let the user verify one governed evidence object without losing definition, scope, period, method, source, limits or correction state.",
+      "primary_user_question_internal": "What exactly supports and limits “How money reaches people — wages, transfers, agriculture and domestic remittances”?"
+    },
+    "/evidence/VIS-FINDEX-GAPS/": {
+      "user_job_internal": "Let the user verify one governed evidence object without losing definition, scope, period, method, source, limits or correction state.",
+      "primary_user_question_internal": "What exactly supports and limits “Account Ownership — Who is being left behind?”?"
+    },
+    "/evidence/VIS-FINDEX-OBSERVED-WAVES/": {
+      "user_job_internal": "Let the user verify one governed evidence object without losing definition, scope, period, method, source, limits or correction state.",
+      "primary_user_question_internal": "What exactly supports and limits “Account ownership — observed waves, not an annual line”?"
+    },
+    "/evidence/VIS-FINDEX-RESILIENCE/": {
+      "user_job_internal": "Let the user verify one governed evidence object without losing definition, scope, period, method, source, limits or correction state.",
+      "primary_user_question_internal": "What exactly supports and limits “Can an adult raise emergency funds — in 7 days versus 30?”?"
+    },
+    "/evidence/VIS-FINDEX-SAMPLE-SUPPORT/": {
+      "user_job_internal": "Let the user verify one governed evidence object without losing definition, scope, period, method, source, limits or correction state.",
+      "primary_user_question_internal": "What exactly supports and limits “Before the percentage: how many respondents were actually asked?”?"
+    },
+    "/evidence/VIS-FIRM-CONSTRAINTS/": {
+      "user_job_internal": "Let the user verify one governed evidence object without losing definition, scope, period, method, source, limits or correction state.",
+      "primary_user_question_internal": "What exactly supports and limits “Finance is not the only last mile”?"
+    },
+    "/evidence/VIS-FIRM-FINANCE-PATH/": {
+      "user_job_internal": "Let the user verify one governed evidence object without losing definition, scope, period, method, source, limits or correction state.",
+      "primary_user_question_internal": "What exactly supports and limits “When firms do borrow, where does credit come from?”?"
+    },
+    "/evidence/VIS-FIRM-FINANCE-SEVERITY/": {
+      "user_job_internal": "Let the user verify one governed evidence object without losing definition, scope, period, method, source, limits or correction state.",
+      "primary_user_question_internal": "What exactly supports and limits “For firms that need finance, how severe is the obstacle?”?"
+    },
+    "/evidence/VIS-FL-EVIDENCE-LADDER/": {
+      "user_job_internal": "Let the user verify one governed evidence object without losing definition, scope, period, method, source, limits or correction state.",
+      "primary_user_question_internal": "What exactly supports and limits “Financial literacy — activity is not outcome”?"
+    },
+    "/evidence/VIS-INCLUSION-TRANSMISSION/": {
+      "user_job_internal": "Let the user verify one governed evidence object without losing definition, scope, period, method, source, limits or correction state.",
+      "primary_user_question_internal": "What exactly supports and limits “Financial inclusion is a transmission system, not a sector score”?"
+    },
+    "/evidence/VIS-MECHANISM-METRIC-BRIDGE/": {
+      "user_job_internal": "Let the user verify one governed evidence object without losing definition, scope, period, method, source, limits or correction state.",
+      "primary_user_question_internal": "What exactly supports and limits “What may explain the number — without pretending to prove it?”?"
+    },
+    "/evidence/VIS-MFI-2014-PANEL/": {
+      "user_job_internal": "Let the user verify one governed evidence object without losing definition, scope, period, method, source, limits or correction state.",
+      "primary_user_question_internal": "What exactly supports and limits “Microfinance — a comparable quarter, not a fake long trend”?"
+    },
+    "/evidence/VIS-MFI-RUPTURE-LENS/": {
+      "user_job_internal": "Let the user verify one governed evidence object without losing definition, scope, period, method, source, limits or correction state.",
+      "primary_user_question_internal": "What exactly supports and limits “2015 — when an annual number would hide the rupture”?"
+    },
+    "/evidence/VIS-MFI-SPINE/": {
+      "user_job_internal": "Let the user verify one governed evidence object without losing definition, scope, period, method, source, limits or correction state.",
+      "primary_user_question_internal": "What exactly supports and limits “Microfinance Evidence Spine”?"
+    },
+    "/evidence/VIS-OECD-FCP-TIMELINE/": {
+      "user_job_internal": "Let the user verify one governed evidence object without losing definition, scope, period, method, source, limits or correction state.",
+      "primary_user_question_internal": "What exactly supports and limits “Consumer Protection & Capability — framework to implementation”?"
+    },
+    "/evidence/VIS-PAYMENT-ANATOMY/": {
+      "user_job_internal": "Let the user verify one governed evidence object without losing definition, scope, period, method, source, limits or correction state.",
+      "primary_user_question_internal": "What exactly supports and limits “What does the payment system actually count?”?"
+    },
+    "/evidence/VIS-PAYMENT-RAILS/": {
+      "user_job_internal": "Let the user verify one governed evidence object without losing definition, scope, period, method, source, limits or correction state.",
+      "primary_user_question_internal": "What exactly supports and limits “How the payment architecture is changing”?"
+    },
+    "/evidence/VIS-POS-TERMINALS/": {
+      "user_job_internal": "Let the user verify one governed evidence object without losing definition, scope, period, method, source, limits or correction state.",
+      "primary_user_question_internal": "What exactly supports and limits “POS Footprint Pulse”?"
+    },
+    "/evidence/VIS-POS-TRANSACTIONS/": {
+      "user_job_internal": "Let the user verify one governed evidence object without losing definition, scope, period, method, source, limits or correction state.",
+      "primary_user_question_internal": "What exactly supports and limits “POS Usage Pulse”?"
+    },
+    "/evidence/VIS-POS-VALUE/": {
+      "user_job_internal": "Let the user verify one governed evidence object without losing definition, scope, period, method, source, limits or correction state.",
+      "primary_user_question_internal": "What exactly supports and limits “POS Transaction Value”?"
+    },
+    "/evidence/VIS-PROVIDER-OBSERVABILITY/": {
+      "user_job_internal": "Let the user verify one governed evidence object without losing definition, scope, period, method, source, limits or correction state.",
+      "primary_user_question_internal": "What exactly supports and limits “What do we actually know about each provider class?”?"
+    },
+    "/evidence/VIS-PROVIDER-TIME/": {
+      "user_job_internal": "Let the user verify one governed evidence object without losing definition, scope, period, method, source, limits or correction state.",
+      "primary_user_question_internal": "What exactly supports and limits “Provider Time Machine”?"
+    },
+    "/evidence/VIS-REMITTANCE-COST/": {
+      "user_job_internal": "Let the user verify one governed evidence object without losing definition, scope, period, method, source, limits or correction state.",
+      "primary_user_question_internal": "What exactly supports and limits “What it costs to send money to Yemen”?"
+    },
+    "/evidence/VIS-REMITTANCE-MACRO/": {
+      "user_job_internal": "Let the user verify one governed evidence object without losing definition, scope, period, method, source, limits or correction state.",
+      "primary_user_question_internal": "What exactly supports and limits “Remittances — observed history vs outlook”?"
+    },
+    "/evidence/VIS-SOURCE-COMPARISON/": {
+      "user_job_internal": "Let the user verify one governed evidence object without losing definition, scope, period, method, source, limits or correction state.",
+      "primary_user_question_internal": "What exactly supports and limits “Source Comparison Lab — same word, different metric”?"
+    },
+    "/evidence/VIS-TARGET-RESULT-STATE/": {
+      "user_job_internal": "Let the user verify one governed evidence object without losing definition, scope, period, method, source, limits or correction state.",
+      "primary_user_question_internal": "What exactly supports and limits “Target is not achievement”?"
+    },
+    "/evidence/XW-FMIIP-005/": {
+      "user_job_internal": "Let the user verify one governed evidence object without losing definition, scope, period, method, source, limits or correction state.",
+      "primary_user_question_internal": "What exactly supports and limits “Financial access-point target versus current administrative objects”?"
+    },
+    "/evidence/compare/": {
+      "user_job_internal": "Help users decide whether two pieces of evidence are comparable and make incompatibilities explicit.",
+      "primary_user_question_internal": "Can these pieces of evidence actually be compared?"
+    },
+    "/evidence/": {
+      "user_job_internal": "Provide a verification hub into governed evidence objects and Passports.",
+      "primary_user_question_internal": "How can I inspect and verify the evidence behind a claim?"
+    },
+    "/explore/": {
+      "user_job_internal": "Let the user enter through consequential questions rather than a dashboard taxonomy.",
+      "primary_user_question_internal": "Which question should I explore first?"
+    },
+    "/finance/": {
+      "user_job_internal": "Explain formal finance and microfinance evidence while preserving breaks, provider universes and non-comparable measures.",
+      "primary_user_question_internal": "What can the evidence support about finance and microfinance?"
+    },
+    "/firms/": {
+      "user_job_internal": "Present bounded firm evidence, finance constraints and programme evidence without nationalizing narrow denominators.",
+      "primary_user_question_internal": "What do we know about firms and finance, and within which survey/programme universes?"
+    },
+    "/": {
+      "user_job_internal": "Orient the user to the evidence system and the strongest current picture without collapsing different evidence clocks.",
+      "primary_user_question_internal": "What can we responsibly say about financial inclusion in Yemen, and where should I start?"
+    },
+    "/measurement/": {
+      "user_job_internal": "Translate material unknowns into decision-relevant measurement priorities.",
+      "primary_user_question_internal": "What do we still need to know, and what decision would better measurement unlock?"
+    },
+    "/methodology/": {
+      "user_job_internal": "Explain how the system preserves evidence meaning, comparability, derivation, states and corrections.",
+      "primary_user_question_internal": "How does the system prevent unlike evidence from being treated as the same thing?"
+    },
+    "/payments/": {
+      "user_job_internal": "Show payments infrastructure and activity while separating terminals, transactions, value, accounts and people.",
+      "primary_user_question_internal": "How is the payment system changing, and what does that not tell us about inclusion?"
+    },
+    "/people/": {
+      "user_job_internal": "Present the strongest bounded people-side evidence, measured gaps and currentness limits.",
+      "primary_user_question_internal": "What does the strongest representative evidence say about people?"
+    },
+    "/privacy/": {
+      "user_job_internal": "State privacy boundaries for the public product.",
+      "primary_user_question_internal": "What personal-data/privacy rules apply to this product?"
+    },
+    "/providers/": {
+      "user_job_internal": "Show provider observability, licensing/listing and status limits without implying operation or national reach.",
+      "primary_user_question_internal": "Which providers are evidenced, and what does a listing actually establish?"
+    },
+    "/readings/after-transfer-persistence/": {
+      "user_job_internal": "Present one bounded analytical Reading, separating thesis, supporting evidence, qualifications, unknowns and verification.",
+      "primary_user_question_internal": "When does a successful cash or social payment become sustained financial use?"
+    },
+    "/readings/banking-jump-measurement-basis/": {
+      "user_job_internal": "Present one bounded analytical Reading, separating thesis, supporting evidence, qualifications, unknowns and verification.",
+      "primary_user_question_internal": "How much of a measured banking jump is economic change and how much is reporting/valuation change?"
+    },
+    "/readings/define-what-you-count/": {
+      "user_job_internal": "Present one bounded analytical Reading, separating thesis, supporting evidence, qualifications, unknowns and verification.",
+      "primary_user_question_internal": "Are we counting people, accounts, active accounts, subscribers, wallets, terminals or transactions?"
+    },
+    "/readings/digital-workaround-not-yet-durable-inclusion/": {
+      "user_job_internal": "Present one bounded analytical Reading, separating thesis, supporting evidence, qualifications, unknowns and verification.",
+      "primary_user_question_internal": "Does growth in electronic-money accounts and transactions represent durable voluntary financial use?"
+    },
+    "/readings/finance-constraint-different-questions/": {
+      "user_job_internal": "Present one bounded analytical Reading, separating thesis, supporting evidence, qualifications, unknowns and verification.",
+      "primary_user_question_internal": "How can access to finance be reported by 22% as a business challenge while finance severity is very high in a different question?"
+    },
+    "/readings/from-rail-to-result-missing-middle/": {
+      "user_job_internal": "Present one bounded analytical Reading, separating thesis, supporting evidence, qualifications, unknowns and verification.",
+      "primary_user_question_internal": "When a new rail, regulation or programme exists, what evidence would show that it changed financial inclusion?"
+    },
+    "/readings/gender-gap-measured-causes-open/": {
+      "user_job_internal": "Present one bounded analytical Reading, separating thesis, supporting evidence, qualifications, unknowns and verification.",
+      "primary_user_question_internal": "What do we know about the gender gap in account ownership, and what would it take to explain it?"
+    },
+    "/readings/": {
+      "user_job_internal": "Provide bounded analytical synthesis across governed evidence without widening claims.",
+      "primary_user_question_internal": "What interpretations emerge when controlled evidence is read together?"
+    },
+    "/readings/microfinance-structural-divergence/": {
+      "user_job_internal": "Present one bounded analytical Reading, separating thesis, supporting evidence, qualifications, unknowns and verification.",
+      "primary_user_question_internal": "What does the microfinance record say when borrowers, savers, portfolio and institutional form move differently?"
+    },
+    "/readings/reforms-newer-than-people-evidence/": {
+      "user_job_internal": "Present one bounded analytical Reading, separating thesis, supporting evidence, qualifications, unknowns and verification.",
+      "primary_user_question_internal": "What can we say when regulations, projects and payment infrastructure change after the latest population measurement?"
+    },
+    "/readings/same-year-different-number/": {
+      "user_job_internal": "Present one bounded analytical Reading, separating thesis, supporting evidence, qualifications, unknowns and verification.",
+      "primary_user_question_internal": "How can the evidence be interpreted when the same remittance reference year changes between published vintages?"
+    },
+    "/reforms/": {
+      "user_job_internal": "Show rules, projects and infrastructure as stages, not outcomes.",
+      "primary_user_question_internal": "What reforms and infrastructure are documented, and how far along the evidence chain are they?"
+    },
+    "/remittances/": {
+      "user_job_internal": "Present macro remittance evidence with publication vintages, observed/estimate/projection states and unresolved crosswalks.",
+      "primary_user_question_internal": "What do we know about remittances, and which series can actually be compared?"
+    },
+    "/rights/": {
+      "user_job_internal": "Explain factual use, citation and redistribution boundaries.",
+      "primary_user_question_internal": "What may be used, cited or redistributed?"
+    },
+    "/terms/": {
+      "user_job_internal": "State public terms of use without changing evidence meaning.",
+      "primary_user_question_internal": "What terms govern use of the public product?"
+    },
+    "/evidence/CLM-062/": {
+      "user_job_internal": "Let the user verify one governed evidence object without losing definition, scope, period, method, source, limits or correction state.",
+      "primary_user_question_internal": "What exactly supports and limits “Formal firms in the 2022 survey: accounts were common, bank finance for working capital was not”?"
+    },
+    "/evidence/FMIIP-BASELINE-2025-01/": {
+      "user_job_internal": "Let the user verify one governed evidence object without losing definition, scope, period, method, source, limits or correction state.",
+      "primary_user_question_internal": "What exactly supports and limits “FMIIP project baselines for January 2025 count accounts, access points, merchants and agents — not people”?"
+    }
+  }
+}

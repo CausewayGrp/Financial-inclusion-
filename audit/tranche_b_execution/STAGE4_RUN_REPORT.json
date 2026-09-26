@@ -1,0 +1,71 @@
+{
+ "stage": "STAGE-4",
+ "staged_master_sha256": "298cd8795edbffb08e0223f5655dfad3187caf889e3cfee889d2aa5051e6b520",
+ "installed": [
+  "scripts/projection/master_structure.json",
+  "site-src/content/content/navigation_interaction.json"
+ ],
+ "steps": [
+  {
+   "step": "generate",
+   "exit": 0,
+   "tail": [
+    "  \"content/navigation_interaction.json\",",
+    "  \"presentation_priority.json\"",
+    " ],",
+    " \"output_sha256\": 38",
+    "}",
+    "PROJECTIONS GENERATED"
+   ]
+  },
+  {
+   "step": "rebind",
+   "exit": 0,
+   "tail": [
+    "  \"README.md\",",
+    "  \"handoff/MASTER_IMPLEMENTATION_PROMPT.md\",",
+    "  \"handoff/CLAUDE_DESIGN_MASTER_PROMPT.md\",",
+    "  \"handoff/CLAUDE_CODE_MASTER_PROMPT.md\"",
+    " ]",
+    "}"
+   ]
+  },
+  {
+   "step": "build",
+   "exit": 0,
+   "tail": [
+    "Built 284 HTML files from 141 controlled page specs."
+   ]
+  },
+  {
+   "step": "public_literal_audit",
+   "exit": 0,
+   "tail": [
+    "PUBLIC_LITERAL_CLOSURE records=7521 unresolved=0"
+   ]
+  },
+  {
+   "step": "validate",
+   "exit": 0,
+   "tail": [
+    "HTML=284 ERRORS=0 WARN=0",
+    "WEBSITE REPOSITORY VALIDATION PASS"
+   ]
+  },
+  {
+   "step": "generator_idempotence",
+   "exit": 0,
+   "tail": [
+    " \"master_sha256\": \"298cd8795edbffb08e0223f5655dfad3187caf889e3cfee889d2aa5051e6b520\",",
+    " \"outputs\": 38,",
+    " \"differences\": [],",
+    " \"output_sha256\": 38",
+    "}",
+    "PROJECTION CHECK PASS"
+   ]
+  }
+ ],
+ "result": "COMMITTED",
+ "master_sha256": "298cd8795edbffb08e0223f5655dfad3187caf889e3cfee889d2aa5051e6b520",
+ "page_specs_sha256": "992be3ae5be20e12024b5f1e54495a5c5afcdf0b0bc3efa6185a6abf6d24c2fc"
+}

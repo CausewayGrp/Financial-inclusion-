@@ -1,0 +1,725 @@
+{
+  "sheet": "04_NAV_UX",
+  "rows": [
+    [
+      "Navigation, journeys and build grammar / التنقل والرحلات وقواعد البناء",
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null
+    ],
+    [
+      "Related tables are stacked without changing their source meaning.",
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null
+    ],
+    [
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null
+    ],
+    [
+      "Primary navigation",
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null
+    ],
+    [
+      "item_order",
+      "label_en",
+      "label_ar",
+      "route_or_group",
+      null,
+      null,
+      null,
+      null
+    ],
+    [
+      1,
+      "Explore",
+      "استكشف",
+      "{\"id\":\"NAV-EXPLORE\",\"label\":{\"en\":\"Explore\",\"ar\":\"استكشف\"},\"route\":\"/explore\",\"kind\":\"DIRECT\"}",
+      null,
+      null,
+      null,
+      null
+    ],
+    [
+      2,
+      "Evidence",
+      "الأدلة",
+      "{\"id\":\"NAV-EVIDENCE\",\"label\":{\"en\":\"Evidence\",\"ar\":\"الأدلة\"},\"route\":\"/evidence\",\"kind\":\"DIRECT\"}",
+      null,
+      null,
+      null,
+      null
+    ],
+    [
+      3,
+      "Readings",
+      "قراءات الأدلة",
+      "{\"id\":\"NAV-READINGS\",\"label\":{\"en\":\"Readings\",\"ar\":\"قراءات الأدلة\"},\"route\":\"/readings\",\"kind\":\"DIRECT\"}",
+      null,
+      null,
+      null,
+      null
+    ],
+    [
+      4,
+      "Data",
+      "البيانات",
+      "{\"id\":\"NAV-DATA\",\"label\":{\"en\":\"Data\",\"ar\":\"البيانات\"},\"route\":\"/data\",\"kind\":\"DIRECT\"}",
+      null,
+      null,
+      null,
+      null
+    ],
+    [
+      5,
+      "Methodology",
+      "المنهجية",
+      "{\"id\":\"NAV-METHODOLOGY\",\"label\":{\"en\":\"Methodology\",\"ar\":\"المنهجية\"},\"route\":\"/methodology\",\"kind\":\"DIRECT\"}",
+      null,
+      null,
+      null,
+      null
+    ],
+    [
+      6,
+      "About",
+      "عن المنظومة",
+      "{\"id\":\"NAV-ABOUT\",\"label\":{\"en\":\"About\",\"ar\":\"عن المنظومة\"},\"route\":\"/about\",\"kind\":\"DIRECT\"}",
+      null,
+      null,
+      null,
+      null
+    ],
+    [
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null
+    ],
+    [
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null
+    ],
+    [
+      "Route dictionary",
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null
+    ],
+    [
+      "route_id",
+      "route",
+      "surface_en",
+      "surface_ar",
+      "type",
+      "in_primary_nav",
+      "aliases",
+      "purpose"
+    ],
+    [
+      "R-001",
+      "/",
+      "Home",
+      "الرئيسية",
+      "static",
+      false,
+      null,
+      "Question-first system entry; Home is reached through product identity."
+    ],
+    [
+      "R-002",
+      "/explore",
+      "Explore",
+      "استكشف",
+      "static",
+      true,
+      null,
+      "Question-led exploration."
+    ],
+    [
+      "R-003",
+      "/people",
+      "People & Needs",
+      "الناس والاحتياجات",
+      "static",
+      false,
+      null,
+      "Population access, use, gaps and evidence clocks."
+    ],
+    [
+      "R-004",
+      "/firms",
+      "Firms & Finance",
+      "المنشآت والتمويل",
+      "static",
+      false,
+      null,
+      "Firm constraints, finance paths and bounded programme evidence."
+    ],
+    [
+      "R-005",
+      "/finance",
+      "Finance & Institutions",
+      "التمويل والمؤسسات",
+      "static",
+      false,
+      null,
+      "Intermediation context relevant to inclusion; not a generic banking dashboard."
+    ],
+    [
+      "R-006",
+      "/providers",
+      "Providers",
+      "مقدمو الخدمات",
+      "static",
+      false,
+      null,
+      "Provider authority, observability and dated status; listing/licensing is not operation."
+    ],
+    [
+      "R-007",
+      "/payments",
+      "Payments & Flows",
+      "المدفوعات والتدفقات",
+      "static",
+      false,
+      null,
+      "Rails, channels, activity and evidence connecting infrastructure to use."
+    ],
+    [
+      "R-008",
+      "/remittances",
+      "Remittances",
+      "الحوالات",
+      "static",
+      false,
+      null,
+      "Flow vintages, methods, costs, channels and household connection."
+    ],
+    [
+      "R-009",
+      "/access",
+      "Access & Infrastructure",
+      "الوصول والبنية التحتية",
+      "static",
+      false,
+      null,
+      "Observed access geography and honest evidence-gap states where mapping is unsupported."
+    ],
+    [
+      "R-010",
+      "/reforms",
+      "Reforms & Programmes",
+      "الإصلاحات والبرامج",
+      "static",
+      false,
+      null,
+      "Rule-to-result state and programme target/result separation."
+    ],
+    [
+      "R-011",
+      "/evidence",
+      "Evidence",
+      "الأدلة",
+      "static",
+      true,
+      null,
+      "Evidence classes, currentness, passports, disagreement and verification."
+    ],
+    [
+      "R-012",
+      "/evidence/[id]",
+      "Evidence record",
+      "سجل الدليل",
+      "dynamic",
+      false,
+      null,
+      "End-to-end public verification of one governed evidence object."
+    ],
+    [
+      "R-013",
+      "/evidence/compare",
+      "Compare Evidence",
+      "مقارنة الأدلة",
+      "static",
+      false,
+      null,
+      "Field-by-field comparison without averaging disagreement."
+    ],
+    [
+      "R-014",
+      "/readings",
+      "Readings",
+      "قراءات الأدلة",
+      "static",
+      true,
+      null,
+      "Bounded cross-source evidence arguments."
+    ],
+    [
+      "R-015",
+      "/readings/[reading_id]",
+      "Reading detail",
+      "تفاصيل القراءة",
+      "dynamic",
+      false,
+      null,
+      "Reconstructable long-form interpretation."
+    ],
+    [
+      "R-016",
+      "/measurement",
+      "Measurement Agenda",
+      "أجندة القياس",
+      "static",
+      false,
+      null,
+      "Decision-valued unknowns and measurement specifications."
+    ],
+    [
+      "R-017",
+      "/data",
+      "Data",
+      "البيانات",
+      "static",
+      true,
+      null,
+      "Approved reusable data, metadata, sources, versions, rights and citations."
+    ],
+    [
+      "R-018",
+      "/methodology",
+      "Methodology",
+      "المنهجية",
+      "static",
+      true,
+      null,
+      "Measurement, comparison, derivation, correction and publication rules."
+    ],
+    [
+      "R-019",
+      "/about",
+      "About",
+      "عن المنظومة",
+      "static",
+      true,
+      null,
+      "Purpose, scope, CauseWay stewardship and responsible use."
+    ],
+    [
+      "U-001",
+      "global-search",
+      "Search",
+      "البحث",
+      "utility",
+      false,
+      null,
+      "Question/evidence/source/reading search preserving evidence context."
+    ],
+    [
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null
+    ],
+    [
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null
+    ],
+    [
+      "User journeys",
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null
+    ],
+    [
+      "user",
+      "entry",
+      "path",
+      "success",
+      null,
+      null,
+      null,
+      null
+    ],
+    [
+      "Public decision-maker",
+      "Question or Home",
+      "[\"/\",\"/explore\",\"domain page\",\"/evidence/[id]\"]",
+      "Can state the strongest answer, its limit, the system link and the next evidence need without reading methodology first.",
+      null,
+      null,
+      null,
+      null
+    ],
+    [
+      "Financial provider",
+      "Payments/Providers/Access/Firms",
+      "[\"domain page\",\"relevant evidence object\",\"compare or data\"]",
+      "Can distinguish market/infrastructure signal from actual use and identify what data would support a commercial or operational decision.",
+      null,
+      null,
+      null,
+      null
+    ],
+    [
+      "Development partner / programme team",
+      "Reforms/Firms/Measurement",
+      "[\"/reforms\",\"/firms\",\"/measurement\",\"/evidence/[id]\"]",
+      "Can separate activity, output, access, use and outcome, and see what evidence is needed for attribution.",
+      null,
+      null,
+      null,
+      null
+    ],
+    [
+      "Researcher / analyst",
+      "Evidence/Data",
+      "[\"/evidence\",\"/evidence/compare\",\"/data\",\"/methodology\"]",
+      "Can inspect definition, denominator, vintage, derivation, rights and correction state and reuse only approved data.",
+      null,
+      null,
+      null,
+      null
+    ],
+    [
+      "Journalist",
+      "Search/Reading",
+      "[\"global-search\",\"/readings/[reading_id]\",\"/evidence/[id]\"]",
+      "Can verify a consequential statement and avoid mixing incomparable numbers.",
+      null,
+      null,
+      null,
+      null
+    ],
+    [
+      "Public / student",
+      "Home/Explore",
+      "[\"/\",\"/explore\",\"domain page\"]",
+      "Gets an intelligible answer before encountering technical governance detail.",
+      null,
+      null,
+      null,
+      null
+    ],
+    [
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null
+    ],
+    [
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null
+    ],
+    [
+      "Build grammar",
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null
+    ],
+    [
+      "area",
+      "rule",
+      "requirement",
+      null,
+      null,
+      null,
+      null,
+      null
+    ],
+    [
+      "Evidence",
+      "Rule 1",
+      "Show period and population/universe/base at the point of use.",
+      null,
+      null,
+      null,
+      null,
+      null
+    ],
+    [
+      "Evidence",
+      "Rule 2",
+      "Keep material source disagreement visible rather than averaging it away.",
+      null,
+      null,
+      null,
+      null,
+      null
+    ],
+    [
+      "Evidence",
+      "Rule 3",
+      "Never infer a trend between non-comparable waves.",
+      null,
+      null,
+      null,
+      null,
+      null
+    ],
+    [
+      "Evidence",
+      "Rule 4",
+      "Never infer operating access from a licence/listing.",
+      null,
+      null,
+      null,
+      null,
+      null
+    ],
+    [
+      "Evidence",
+      "Rule 5",
+      "Never treat a programme KPI as national prevalence.",
+      null,
+      null,
+      null,
+      null,
+      null
+    ],
+    [
+      "Evidence",
+      "Rule 6",
+      "Do not create a section solely to satisfy a generic schema.",
+      null,
+      null,
+      null,
+      null,
+      null
+    ],
+    [
+      "Visual",
+      "Rule 1",
+      "Every quantitative visual has a distinct semantic object: question, title, meaning, data inputs, universe/base, period, prohibited inference and route must agree.",
+      null,
+      null,
+      null,
+      null,
+      null
+    ],
+    [
+      "Visual",
+      "Rule 2",
+      "Every public visual has a distinct Arabic analytical alternative description.",
+      null,
+      null,
+      null,
+      null,
+      null
+    ],
+    [
+      "Visual",
+      "Rule 3",
+      "No hover-only information and no colour-only distinction.",
+      null,
+      null,
+      null,
+      null,
+      null
+    ],
+    [
+      "Visual",
+      "Rule 4",
+      "Arabic RTL and Latin/source IDs require bidi-safe rendering.",
+      null,
+      null,
+      null,
+      null,
+      null
+    ],
+    [
+      "Route type",
+      "system_entry_page",
+      "{\"question\":\"REQUIRED\",\"strongest_answer\":\"REQUIRED\",\"evidence\":\"REQUIRED\",\"analysis_or_visual\":\"CONDITIONAL\",\"meaning\":\"REQUIRED\",\"does_not_establish\":\"REQUIRED\",\"system_context\":\"REQUIRED\",\"unknown\":\"REQUIRED\",\"measurement_next\":\"REQUIRED\",\"verify\":\"REQUIRED\",\"interaction\":\"REQUIRED\",\"accessibility\":\"REQUIRED\",\"SEO\":\"REQUIRED\",\"correction_version_behavior\":\"REQUIRED\"}",
+      null,
+      null,
+      null,
+      null,
+      null
+    ],
+    [
+      "Route type",
+      "analytical_domain_page",
+      "{\"question\":\"REQUIRED\",\"strongest_answer\":\"REQUIRED\",\"evidence\":\"REQUIRED\",\"analysis_or_visual\":\"REQUIRED\",\"meaning\":\"REQUIRED\",\"does_not_establish\":\"REQUIRED\",\"system_context\":\"REQUIRED\",\"unknown\":\"REQUIRED\",\"measurement_next\":\"REQUIRED\",\"verify\":\"REQUIRED\",\"interaction\":\"REQUIRED\",\"accessibility\":\"REQUIRED\",\"SEO\":\"REQUIRED\",\"correction_version_behavior\":\"REQUIRED\"}",
+      null,
+      null,
+      null,
+      null,
+      null
+    ],
+    [
+      "Route type",
+      "discovery_explore_page",
+      "{\"question\":\"REQUIRED\",\"strongest_answer\":\"CONDITIONAL\",\"evidence\":\"CONDITIONAL\",\"analysis_or_visual\":\"NOT_APPLICABLE\",\"meaning\":\"REQUIRED\",\"does_not_establish\":\"REQUIRED\",\"system_context\":\"CONDITIONAL\",\"unknown\":\"REQUIRED\",\"measurement_next\":\"REQUIRED\",\"verify\":\"REQUIRED\",\"interaction\":\"REQUIRED\",\"accessibility\":\"REQUIRED\",\"SEO\":\"REQUIRED\",\"correction_version_behavior\":\"REQUIRED\"}",
+      null,
+      null,
+      null,
+      null,
+      null
+    ],
+    [
+      "Route type",
+      "evidence_index_page",
+      "{\"question\":\"REQUIRED\",\"strongest_answer\":\"REQUIRED\",\"evidence\":\"REQUIRED\",\"analysis_or_visual\":\"CONDITIONAL\",\"meaning\":\"REQUIRED\",\"does_not_establish\":\"REQUIRED\",\"system_context\":\"CONDITIONAL\",\"unknown\":\"CONDITIONAL\",\"measurement_next\":\"NOT_APPLICABLE\",\"verify\":\"REQUIRED\",\"interaction\":\"REQUIRED\",\"accessibility\":\"REQUIRED\",\"SEO\":\"REQUIRED\",\"correction_version_behavior\":\"REQUIRED\"}",
+      null,
+      null,
+      null,
+      null,
+      null
+    ],
+    [
+      "Route type",
+      "methodology_page",
+      "{\"question\":\"REQUIRED\",\"strongest_answer\":\"REQUIRED\",\"evidence\":\"REQUIRED\",\"analysis_or_visual\":\"CONDITIONAL\",\"meaning\":\"REQUIRED\",\"does_not_establish\":\"REQUIRED\",\"system_context\":\"REQUIRED\",\"unknown\":\"CONDITIONAL\",\"measurement_next\":\"NOT_APPLICABLE\",\"verify\":\"REQUIRED\",\"interaction\":\"REQUIRED\",\"accessibility\":\"REQUIRED\",\"SEO\":\"REQUIRED\",\"correction_version_behavior\":\"REQUIRED\"}",
+      null,
+      null,
+      null,
+      null,
+      null
+    ],
+    [
+      "Route type",
+      "institutional_about_page",
+      "{\"question\":\"CONDITIONAL\",\"strongest_answer\":\"REQUIRED\",\"evidence\":\"CONDITIONAL\",\"analysis_or_visual\":\"NOT_APPLICABLE\",\"meaning\":\"REQUIRED\",\"does_not_establish\":\"REQUIRED\",\"system_context\":\"REQUIRED\",\"unknown\":\"CONDITIONAL\",\"measurement_next\":\"NOT_APPLICABLE\",\"verify\":\"REQUIRED\",\"interaction\":\"REQUIRED\",\"accessibility\":\"REQUIRED\",\"SEO\":\"REQUIRED\",\"correction_version_behavior\":\"REQUIRED\"}",
+      null,
+      null,
+      null,
+      null,
+      null
+    ],
+    [
+      "Route type",
+      "dynamic_evidence_object_detail",
+      "{\"question\":\"REQUIRED\",\"strongest_answer\":\"REQUIRED\",\"evidence\":\"REQUIRED\",\"analysis_or_visual\":\"CONDITIONAL\",\"meaning\":\"REQUIRED\",\"does_not_establish\":\"REQUIRED\",\"system_context\":\"CONDITIONAL\",\"unknown\":\"CONDITIONAL\",\"measurement_next\":\"CONDITIONAL\",\"verify\":\"REQUIRED\",\"interaction\":\"REQUIRED\",\"accessibility\":\"REQUIRED\",\"SEO\":\"REQUIRED\",\"correction_version_behavior\":\"REQUIRED\"}",
+      null,
+      null,
+      null,
+      null,
+      null
+    ],
+    [
+      "Route type",
+      "evidence_compare_page",
+      "{\"question\":\"REQUIRED\",\"strongest_answer\":\"CONDITIONAL\",\"evidence\":\"REQUIRED\",\"analysis_or_visual\":\"CONDITIONAL\",\"meaning\":\"REQUIRED\",\"does_not_establish\":\"REQUIRED\",\"system_context\":\"CONDITIONAL\",\"unknown\":\"CONDITIONAL\",\"measurement_next\":\"CONDITIONAL\",\"verify\":\"REQUIRED\",\"interaction\":\"REQUIRED\",\"accessibility\":\"REQUIRED\",\"SEO\":\"REQUIRED\",\"correction_version_behavior\":\"REQUIRED\"}",
+      null,
+      null,
+      null,
+      null,
+      null
+    ],
+    [
+      "Route type",
+      "reading_index_page",
+      "{\"question\":\"REQUIRED\",\"strongest_answer\":\"REQUIRED\",\"evidence\":\"CONDITIONAL\",\"analysis_or_visual\":\"NOT_APPLICABLE\",\"meaning\":\"REQUIRED\",\"does_not_establish\":\"REQUIRED\",\"system_context\":\"CONDITIONAL\",\"unknown\":\"CONDITIONAL\",\"measurement_next\":\"NOT_APPLICABLE\",\"verify\":\"REQUIRED\",\"interaction\":\"REQUIRED\",\"accessibility\":\"REQUIRED\",\"SEO\":\"REQUIRED\",\"correction_version_behavior\":\"REQUIRED\"}",
+      null,
+      null,
+      null,
+      null,
+      null
+    ],
+    [
+      "Route type",
+      "reading_detail_page",
+      "{\"question\":\"REQUIRED\",\"strongest_answer\":\"REQUIRED\",\"evidence\":\"REQUIRED\",\"analysis_or_visual\":\"CONDITIONAL\",\"meaning\":\"REQUIRED\",\"does_not_establish\":\"REQUIRED\",\"system_context\":\"REQUIRED\",\"unknown\":\"REQUIRED\",\"measurement_next\":\"CONDITIONAL\",\"verify\":\"REQUIRED\",\"interaction\":\"REQUIRED\",\"accessibility\":\"REQUIRED\",\"SEO\":\"REQUIRED\",\"correction_version_behavior\":\"REQUIRED\"}",
+      null,
+      null,
+      null,
+      null,
+      null
+    ],
+    [
+      "Route type",
+      "data_catalogue_page",
+      "{\"question\":\"REQUIRED\",\"strongest_answer\":\"CONDITIONAL\",\"evidence\":\"REQUIRED\",\"analysis_or_visual\":\"NOT_APPLICABLE\",\"meaning\":\"REQUIRED\",\"does_not_establish\":\"REQUIRED\",\"system_context\":\"CONDITIONAL\",\"unknown\":\"CONDITIONAL\",\"measurement_next\":\"NOT_APPLICABLE\",\"verify\":\"REQUIRED\",\"interaction\":\"REQUIRED\",\"accessibility\":\"REQUIRED\",\"SEO\":\"REQUIRED\",\"correction_version_behavior\":\"REQUIRED\"}",
+      null,
+      null,
+      null,
+      null,
+      null
+    ],
+    [
+      "Route type",
+      "measurement_agenda_page",
+      "{\"question\":\"REQUIRED\",\"strongest_answer\":\"REQUIRED\",\"evidence\":\"REQUIRED\",\"analysis_or_visual\":\"CONDITIONAL\",\"meaning\":\"REQUIRED\",\"does_not_establish\":\"REQUIRED\",\"system_context\":\"REQUIRED\",\"unknown\":\"REQUIRED\",\"measurement_next\":\"REQUIRED\",\"verify\":\"REQUIRED\",\"interaction\":\"REQUIRED\",\"accessibility\":\"REQUIRED\",\"SEO\":\"REQUIRED\",\"correction_version_behavior\":\"REQUIRED\"}",
+      null,
+      null,
+      null,
+      null,
+      null
+    ],
+    [
+      "Route type",
+      "operational_public_surface",
+      "{\"question\":\"NOT_APPLICABLE\",\"strongest_answer\":\"NOT_APPLICABLE\",\"evidence\":\"CONDITIONAL\",\"analysis_or_visual\":\"NOT_APPLICABLE\",\"meaning\":\"REQUIRED\",\"does_not_establish\":\"CONDITIONAL\",\"system_context\":\"CONDITIONAL\",\"unknown\":\"CONDITIONAL\",\"measurement_next\":\"NOT_APPLICABLE\",\"verify\":\"CONDITIONAL\",\"interaction\":\"REQUIRED\",\"accessibility\":\"REQUIRED\",\"SEO\":\"REQUIRED\",\"correction_version_behavior\":\"REQUIRED\"}",
+      null,
+      null,
+      null,
+      null,
+      null
+    ]
+  ]
+}

@@ -1,0 +1,215 @@
+{
+ "rule": "Evidence records show only exact bound sources, listed member records, or an explicit unbound or framing state (Tranche B Stage 1, PB-0001/PB-0002). Dataset-level tokens are never expanded into source lists; an input that is not bound to a source stays explicit as unresolved. Never invent a source, title, publisher, date, licence or missing fact.",
+ "as_of": "Pre-Tranche-C P5",
+ "evidence_record_lineage_state_counts": {
+  "BOUND_EXACT": 93,
+  "COMPOSITE_OF_OBJECTS": 13,
+  "FRAMING_NO_FACT": 1,
+  "BOUND_PARTIAL": 3
+ },
+ "closure_state_counts_by_object_type": {
+  "evidence_object": {
+   "CLOSED_TO_SOURCE_ID": 93,
+   "COMPOSITE_MEMBERS_NOT_LISTED": 9,
+   "COMPOSITE_OF_OBJECTS": 4,
+   "FRAMING_NO_FACT": 1,
+   "PARTIALLY_RESOLVED": 3
+  },
+  "public_claim": {
+   "CLOSED_TO_SOURCE_ID": 54,
+   "FRAMING_NO_FACT": 1,
+   "COMPOSITE_MEMBERS_NOT_LISTED": 1,
+   "COMPOSITE_OF_OBJECTS": 1,
+   "PARTIALLY_RESOLVED": 3
+  },
+  "reading": {
+   "CLOSED_TO_SOURCE_ID": 9,
+   "PARTIALLY_RESOLVED": 1
+  },
+  "visual": {
+   "CLOSED_TO_SOURCE_ID": 26,
+   "COMPOSITE_MEMBERS_NOT_LISTED": 8,
+   "COMPOSITE_OF_OBJECTS": 1,
+   "PARTIALLY_RESOLVED": 1
+  },
+  "measurement": {
+   "NO_DIRECT_SOURCE_BINDING": 10
+  }
+ },
+ "records_not_closed_to_source": {
+  "VIS-INCLUSION-TRANSMISSION": {
+   "state": "COMPOSITE_MEMBERS_NOT_LISTED",
+   "open_inputs": [],
+   "members": []
+  },
+  "VIS-EVIDENCE-FRESHNESS": {
+   "state": "COMPOSITE_MEMBERS_NOT_LISTED",
+   "open_inputs": [],
+   "members": []
+  },
+  "VIS-SOURCE-COMPARISON": {
+   "state": "COMPOSITE_MEMBERS_NOT_LISTED",
+   "open_inputs": [],
+   "members": []
+  },
+  "VIS-PROVIDER-TIME": {
+   "state": "COMPOSITE_OF_OBJECTS",
+   "open_inputs": [],
+   "members": [
+    "CLM-009",
+    "CLM-019"
+   ]
+  },
+  "VIS-MECHANISM-METRIC-BRIDGE": {
+   "state": "COMPOSITE_MEMBERS_NOT_LISTED",
+   "open_inputs": [],
+   "members": []
+  },
+  "VIS-PROVIDER-OBSERVABILITY": {
+   "state": "COMPOSITE_MEMBERS_NOT_LISTED",
+   "open_inputs": [],
+   "members": []
+  },
+  "CLM-031": {
+   "state": "COMPOSITE_OF_OBJECTS",
+   "open_inputs": [],
+   "members": [
+    "CLM-001",
+    "CLM-027",
+    "CLM-028",
+    "CLM-029",
+    "CLM-030"
+   ]
+  },
+  "VIS-DEMAND-VINTAGE-LADDER": {
+   "state": "COMPOSITE_OF_OBJECTS",
+   "open_inputs": [],
+   "members": [
+    "CLM-001",
+    "CLM-027",
+    "CLM-028",
+    "CLM-029",
+    "CLM-030",
+    "VIS-FINDEX-RESILIENCE",
+    "VIS-FINDEX-BARRIERS"
+   ]
+  },
+  "DS-FINDEX-HISTORY-CROSSWALK": {
+   "state": "COMPOSITE_OF_OBJECTS",
+   "open_inputs": [],
+   "members": [
+    "DS-FINDEX-PUBLIC-HISTORY",
+    "CLM-026"
+   ]
+  },
+  "DS-DEMAND-VINTAGE-LENS": {
+   "state": "COMPOSITE_MEMBERS_NOT_LISTED",
+   "open_inputs": [],
+   "members": []
+  },
+  "CLM-004": {
+   "state": "FRAMING_NO_FACT",
+   "open_inputs": [],
+   "members": []
+  },
+  "CLM-014": {
+   "state": "COMPOSITE_MEMBERS_NOT_LISTED",
+   "open_inputs": [],
+   "members": []
+  },
+  "VIS-EVIDENCE-GAPS": {
+   "state": "COMPOSITE_MEMBERS_NOT_LISTED",
+   "open_inputs": [],
+   "members": []
+  },
+  "VIS-EVIDENCE-CLASS-LADDER": {
+   "state": "COMPOSITE_MEMBERS_NOT_LISTED",
+   "open_inputs": [],
+   "members": []
+  },
+  "CLM-046": {
+   "state": "PARTIALLY_RESOLVED",
+   "open_inputs": [
+    "DS-K04-SAUDI-SUPPORT-TRANSMISSION"
+   ],
+   "members": []
+  },
+  "CLM-056": {
+   "state": "PARTIALLY_RESOLVED",
+   "open_inputs": [
+    "DS-V041-STRICT-COUNSEL"
+   ],
+   "members": []
+  },
+  "CLM-039": {
+   "state": "PARTIALLY_RESOLVED",
+   "open_inputs": [
+    "DS-K04-REMIT-SOURCE-LENSES"
+   ],
+   "members": []
+  }
+ },
+ "assertions": [
+  {
+   "check": "no BOUND_CANDIDATE state remains",
+   "result": "PASS"
+  },
+  {
+   "check": "every resolved source is declared on the record and exists in 15",
+   "result": "PASS"
+  },
+  {
+   "check": "CLOSED_TO_SOURCE_ID only with no open input",
+   "result": "PASS"
+  },
+  {
+   "check": "dataset tokens appear only as open inputs (never expanded); record IDs among them are listed members",
+   "result": "PASS",
+   "detail": {
+    "dataset_tokens_on_records": [
+     "DS-FINDEX-PUBLIC-HISTORY",
+     "DS-K04-REMIT-SOURCE-LENSES",
+     "DS-K04-SAUDI-SUPPORT-TRANSMISSION",
+     "DS-V041-STRICT-COUNSEL"
+    ],
+    "member_record_references": [
+     "DS-FINDEX-HISTORY-CROSSWALK -> DS-FINDEX-PUBLIC-HISTORY"
+    ]
+   }
+  },
+  {
+   "check": "REF-PAY-001 locator resolves to a source record with that public locator",
+   "result": "PASS",
+   "detail": {
+    "locator": "https://cby-ye.com/files/667c596ef3bea.pdf",
+    "source_id": "SRC-CBY-DEC-23-2024-001",
+    "display_title": "Governor's Decision No. 23 of 2024 on domestic money-transfer activity (26 June 2024; ref. 343/CBY/2024)",
+    "rights_state": "NOT_ASSESSED"
+   }
+  },
+  {
+   "check": "VIS-PAYMENT-RAILS is closed to source IDs (record and visual)",
+   "result": "PASS",
+   "detail": {
+    "evidence_object": "CLOSED_TO_SOURCE_ID",
+    "visual": "CLOSED_TO_SOURCE_ID"
+   }
+  },
+  {
+   "check": "every locator a data contract credits resolves to a source record",
+   "result": "PASS",
+   "detail": {
+    "orphans": []
+   }
+  },
+  {
+   "check": "no release blocker outside the declared open list",
+   "result": "PASS",
+   "detail": {
+    "blockers": {},
+    "declared_open": {}
+   }
+  }
+ ],
+ "historical_baseline": "audit/tranche_b_execution/SOURCE_LINEAGE_TRUTH_TEST.json (Tranche B; not rewritten)"
+}

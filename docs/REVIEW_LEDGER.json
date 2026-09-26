@@ -1,0 +1,643 @@
+{
+  "program": "POST_BUILD_REVIEW",
+  "opened": "2026-09-22",
+  "authority_rule": "Production Master remains the sole semantic/evidence/source/rights/publication authority. Repository-only changes are limited to implementation, presentation, navigation, accessibility, performance, verification behavior and documentation truthfulness.",
+  "issues": [
+    {
+      "id": "R-001",
+      "severity": "MATERIAL",
+      "area": "repository_truth",
+      "finding": "docs/AUTHORITY.json stated that authority/Yemen_Financial_Inclusion_Evidence_Master.xlsx was bundled, but no authority directory/workbook exists in the website repository.",
+      "disposition": "FIXED",
+      "session": "S00",
+      "action": "Document the Master as external production authority identified by filename/hash; keep frozen projections as runtime inputs."
+    },
+    {
+      "id": "R-002",
+      "severity": "MATERIAL",
+      "area": "repository_truth",
+      "finding": "docs/HANDOFF_STATE.json described design and implementation as NOT_STARTED even though the repository already contains a generated bilingual static implementation.",
+      "disposition": "FIXED",
+      "session": "S00",
+      "action": "Align handoff state with the actual implementation and preserve the remaining host/browser/accessibility/security release boundary."
+    },
+    {
+      "id": "R-003",
+      "severity": "CRITICAL_UX",
+      "area": "mobile_navigation",
+      "finding": "At <=640px the CSS hid all .icon-btn controls, including the menu button, while the primary nav was also hidden at <=960px. Phone users could lose primary navigation.",
+      "disposition": "FIXED",
+      "session": "S01",
+      "action": "Keep search/menu visible, hide only lower-priority cite/issue controls at the smallest width, and implement an explicit mobile nav open state."
+    },
+    {
+      "id": "R-004",
+      "severity": "MATERIAL_UX",
+      "area": "search",
+      "finding": "Search was specified as a global utility, but the header search control only navigated to /evidence/.",
+      "disposition": "FIXED",
+      "session": "S01",
+      "action": "Add a global, bilingual, keyboard-accessible search dialog using only the controlled public search index."
+    },
+    {
+      "id": "R-005",
+      "severity": "MATERIAL_UX",
+      "area": "page_density",
+      "finding": "The generator rendered overlapping governed_claims and governed_evidence_objects as separate public blocks and read the wrong evidence summary field names. Baseline audit found empty answer cards on 238 generated locale pages and duplicate badge IDs on 20 pages.",
+      "disposition": "CLOSED__FULL_EIGHT_ROUTE_DOMAIN_COMPOSITION_PASS",
+      "session": "S01/S03",
+      "action": "Empty/duplicate rendering remains fixed globally; S03.1–S03.4 now apply one answer-first, presentation-contract-driven depth system across all eight Domain Answer routes."
+    },
+    {
+      "id": "R-006",
+      "severity": "CLOSED",
+      "area": "page_density",
+      "finding": "Several domain pages remain long because controlled reference arrays are still rendered after narrative sections. The Page Specs explicitly state that these arrays are reference/verification payloads rather than blocks to dump verbatim.",
+      "disposition": "CLOSED_IN_S03_4__INTENTIONAL_DEPTH_ACROSS_EIGHT_ROUTES",
+      "session": "S03.4",
+      "action": "All eight Domain Answer routes now use explicit primary/supporting/progressive/linked/utility depth from one renderer-consumed contract; full narrative remains available without governed-array dumping."
+    },
+    {
+      "id": "R-007",
+      "severity": "OPEN_BOUNDARY",
+      "area": "accessibility_runtime",
+      "finding": "S05.2 completed local Chromium keyboard, mobile/reflow and browser accessibility-tree structure checks, but an actual named screen-reader application, browser-chrome 200% zoom control, contrast and deployed-environment final accessibility acceptance remain unverified.",
+      "disposition": "PARTIALLY_CLOSED_IN_S05_2__FINAL_AT_ZOOM_CONTRAST_ACCEPTANCE_REMAINS_S08",
+      "session": "S05.2/S08.1",
+      "action": "Carry the remaining real assistive-technology/deployed-browser acceptance into S08.1; do not claim verified WCAG conformance before that pass."
+    },
+    {
+      "id": "R-008",
+      "severity": "OPEN",
+      "area": "source_owner_challenge",
+      "finding": "The repository is evidence-rich, but a source-owner challenge is still required to test whether source-agency material is represented with the right authority, locator, period, universe, rights and currentness on the actual website.",
+      "disposition": "OPEN",
+      "session": "S06",
+      "action": "Challenge admitted material against original publishers. External findings change production content only through a Production Master update/regeneration."
+    },
+    {
+      "id": "R-009",
+      "severity": "MATERIAL_UX",
+      "area": "source_navigation",
+      "finding": "Public search contains source/source_locator records that route to /data/?source=<ID>, but the current Data page does not yet interpret that query as a source-specific focused view. The URL resolves, but the user is not taken directly to the named source object.",
+      "disposition": "FIXED",
+      "session": "S01",
+      "action": "Added a bilingual source directory on Data using the current controlled source_reference_map. DISPLAY_READY records may render controlled public metadata; locator-only records expose only stable source ID + original locator; no-public-locator dependencies are suppressed. Query-aware focus completes /data/?source=<ID>."
+    },
+    {
+      "id": "R-010",
+      "severity": "MATERIAL_UX",
+      "area": "arabic_search",
+      "finding": "The initial global-search normalizer did not fold Arabic diacritics, alef variants or alif maqsura. Exact Arabic wording variations could therefore miss otherwise relevant controlled records.",
+      "disposition": "FIXED",
+      "session": "S01",
+      "action": "Added Arabic-aware normalization while preserving the same controlled search payload; stable record/source IDs also receive explicit search weight."
+    },
+    {
+      "id": "R-011",
+      "severity": "MATERIAL_UX",
+      "area": "error_recovery",
+      "finding": "The generated 404 page was a bare technical dead end with one home link and did not offer a meaningful recovery path for Arabic/English users.",
+      "disposition": "FIXED",
+      "session": "S01",
+      "action": "Replaced it with a bilingual recovery surface linking to Explore, Evidence and Home without introducing new evidence claims."
+    },
+    {
+      "id": "R-012",
+      "severity": "CONTROL",
+      "area": "reference_archive",
+      "finding": "The non-production archive contains mixed predecessor design/code, two authoritative-looking workbooks, evidence-synthesis documents, route registries, governance drafts and prior handoff artifacts. Several conflict with current authority or implementation.",
+      "disposition": "REVIEWED__NO_BLIND_PROMOTION",
+      "session": "S01",
+      "action": "Inventoried and challenged archive additions; integrated only implementation-safe lessons, rejected stale architecture/design authority, and quarantined factual/rights candidates for Master-led review. See docs/S01_REFERENCE_CHALLENGE.md."
+    },
+    {
+      "id": "R-013",
+      "severity": "OPEN",
+      "area": "runtime_dependency",
+      "finding": "The current stylesheet imports web fonts from Google Fonts. An archived QA draft proposed zero runtime external HTTP dependencies; independently, the font request is a low-bandwidth/privacy/resilience release consideration.",
+      "disposition": "OPEN",
+      "session": "S07",
+      "action": "Decide the final font-delivery strategy during release engineering. Do not claim offline/zero-external-request operation while this import remains."
+    },
+    {
+      "id": "R-014",
+      "severity": "CONTROL",
+      "area": "repository_protocol",
+      "finding": "POST_BUILD_REVIEW_PROGRAM.md still contained pre-conversion wording saying the repository ZIP would be updated in place.",
+      "disposition": "FIXED",
+      "session": "S01",
+      "action": "Changed the program to state that the single Google Drive production folder is edited directly and ZIPs are non-production references only."
+    },
+    {
+      "id": "R-015",
+      "severity": "MATERIAL_EDITORIAL",
+      "area": "public_arabic",
+      "finding": "The implementation-authored Home eyebrow used “ساعات أدلة مختلفة”, a backend-style metaphor that should not appear in public Arabic.",
+      "disposition": "FIXED",
+      "session": "S01",
+      "action": "Replaced it with the approved public framing “اختلاف توقيت القياس” and added regression checks for prohibited backend Arabic terms."
+    },
+    {
+      "id": "R-016",
+      "severity": "CONTROL",
+      "area": "repository_truth",
+      "finding": "The latest S01 validator and changelog referenced S01_REFERENCE_CHALLENGE.md and S01_TASK_STRESS_TEST.md, but those controls were not present in the live Drive docs folder.",
+      "disposition": "FIXED",
+      "session": "S01",
+      "action": "Created both controls in the production repository, aligned their content to the actual archive review and stress tests, and kept the validator requirement so the inconsistency cannot silently recur."
+    },
+    {
+      "id": "R-017",
+      "severity": "CONTROL",
+      "area": "authority_collision",
+      "finding": "Archive files named Yemen_Financial_Inclusion_Evidence_Master_FINAL.xlsx and YFSI_Master_Enterprise_Suite_v7.0_Ultimate.xlsx could be mistaken for current authority; their SHA-256 hashes are 91ed6906... and 125112029..., neither matching the controlled Production Master hash d8db3b4e.... An archived universal build prompt also names a stale b2f7272d... hash.",
+      "disposition": "QUARANTINED__CURRENT_AUTHORITY_PROTECTED",
+      "session": "S01",
+      "action": "Record the mismatch, keep archive files non-production, and forbid filename recency/finality from overriding docs/AUTHORITY.json."
+    },
+    {
+      "id": "R-018",
+      "severity": "CONTROL",
+      "area": "reference_archive_completeness",
+      "finding": "The archive expanded to 70 top-level items after the first S01 pass, including generated outputs, two authority-looking workbooks, research syntheses, old visual/route systems and high-risk analytic shards.",
+      "disposition": "FIXED",
+      "session": "S01",
+      "action": "Created an exhaustive file-level disposition register covering all 70 current top-level items and split implementation/design lessons from Master/source challenge candidates."
+    },
+    {
+      "id": "R-019",
+      "severity": "MATERIAL_EVIDENCE_CONTROL",
+      "area": "synthetic_analytics",
+      "finding": "Archived econometric/model and route payloads contain synthetic indices, arbitrary weights, causal language and non-current KPIs that could look production-ready if consumed by a developer.",
+      "disposition": "REJECTED__QUARANTINED",
+      "session": "S01/S06",
+      "action": "Explicitly reject them as production inputs; S06 may validate individual underlying propositions only through original sources and the Production Master."
+    },
+    {
+      "id": "R-020",
+      "severity": "CONTROL",
+      "area": "generated_output_drive_state",
+      "finding": "The production Drive folder still exposed a generated dist/ directory even though repository policy and changelog declared dist noncanonical and removed.",
+      "disposition": "FIXED",
+      "session": "S01",
+      "action": "Deleted the stale Drive dist/ tree after first-hand source/docs synchronization; local dist remains disposable verification output generated by npm run verify."
+    },
+    {
+      "id": "R-021",
+      "severity": "OPEN",
+      "area": "archive_refresh_after_s01",
+      "finding": "The 70-item archive review is a point-in-time S01 baseline. New files may be added to the archive later.",
+      "disposition": "CLOSED_FOR_S01_BASELINE__DELTA_ONLY",
+      "session": "S02-S06",
+      "action": "Use the 70-item baseline register for delta detection; do not re-review unchanged baseline items. New or modified items are reviewed on entry to the relevant session."
+    },
+    {
+      "id": "R-022",
+      "severity": "CONTROL",
+      "area": "drive_repository_cleanliness",
+      "finding": "Duplicate S01/S06 control files appeared in the Drive docs folder during synchronization, creating ambiguous first-hand controls.",
+      "disposition": "FIXED",
+      "session": "S01",
+      "action": "Retained one reconciled canonical instance of S01_REFERENCE_CHALLENGE.md, S01_TASK_STRESS_TEST.md, S01_ARCHIVE_DISPOSITION_REGISTER.json and S06_ARCHIVE_EVIDENCE_CHALLENGE_QUEUE.md; deleted all duplicate Drive copies and re-listed docs to confirm uniqueness."
+    },
+    {
+      "id": "R-023",
+      "severity": "MATERIAL_UX",
+      "area": "home_explore_information_architecture",
+      "finding": "Home and Explore both exposed the full 11-question discovery grid, reducing differentiation between orientation and discovery.",
+      "disposition": "FIXED_IN_S02",
+      "session": "S02",
+      "action": "Home now uses five task-first starts plus four common questions; Explore remains the complete 11-question map grouped by user job."
+    },
+    {
+      "id": "R-024",
+      "severity": "MATERIAL_UX",
+      "area": "first_use_task_orientation",
+      "finding": "A first-time user had to infer which domain route matched the task in front of them even though the global navigation was intentionally compact.",
+      "disposition": "FIXED_IN_S02",
+      "session": "S02",
+      "action": "Added task-first Home entry cards that link only to existing controlled routes and preserve evidence boundaries."
+    },
+    {
+      "id": "R-025",
+      "severity": "CONTROL",
+      "area": "review_progress_and_archive_delta",
+      "finding": "The review programme needed an explicit progress inventory and closed archive baseline so completed review work is not repeatedly reopened.",
+      "disposition": "FIXED_IN_S02",
+      "session": "S02",
+      "action": "Added PROGRESS_INVENTORY.json and a closed 70-item S01 archive baseline rule; only archive deltas or defect-triggered re-challenges are reopened."
+    },
+    {
+      "issue_id": "R-026",
+      "session": "S03.1_ORIENT",
+      "area": "repository_control",
+      "finding": "HANDOFF_STATE.json lagged the already-closed S02 state recorded by README.md and PROGRESS_INVENTORY.json.",
+      "risk": "A later recipient could restart S02 or misread the current gate.",
+      "decision": "FIXED_IN_CURRENT_IMPLEMENTATION",
+      "state": "CLOSED",
+      "action": "Reconciled HANDOFF_STATE.json to S00–S02 complete and S03.1 next; removed the stale SESSION_EXECUTION_MAP reference from the programme control.",
+      "authority_effect": "NONE"
+    },
+    {
+      "issue_id": "R-027",
+      "session": "S03.1_ORIENT",
+      "area": "reference_archive_delta",
+      "finding": "A new top-level archive pointer named Old drafts linked to high-fidelity mobile-review mockups after the S01 baseline.",
+      "risk": "Unreviewed design material could be mistaken for a new production source or parallel implementation.",
+      "decision": "DESIGN_REFERENCE_ONLY",
+      "state": "CLOSED",
+      "action": "Reviewed once for composition lessons only, recorded in the archive register, and moved the pointer to 04_DESIGN_REFERENCES__REVIEWED.",
+      "authority_effect": "NONE"
+    },
+    {
+      "issue_id": "R-028",
+      "session": "S03.1",
+      "area": "domain_composition",
+      "finding": "People used a dense governed-object/card presentation while Access risked reading as an under-populated page rather than an intentional evidence-gap state.",
+      "risk": "Users could take too long to reach the defensible answer, detach numbers from scope/currentness, or mistake sparse evidence for a broken product.",
+      "decision": "FIXED_IN_CURRENT_IMPLEMENTATION",
+      "state": "CLOSED",
+      "action": "Implemented a shared answer-first domain grammar with route-specific density, selected visuals, progressive disclosure, measurement-next and direct verification paths in scripts/build.py and site-src/styles.css.",
+      "authority_effect": "NONE"
+    },
+    {
+      "issue_id": "R-029",
+      "session": "S03.2",
+      "area": "firms_finance_composition",
+      "finding": "Firm-survey, programme-KPI and finance-system evidence could be visually homogenized, obscuring denominators, evidence classes, stocks/flows and valuation/currentness states.",
+      "risk": "Users could read bounded sample/programme percentages as national prevalence or system balances/saver counts as measured inclusion outcomes.",
+      "decision": "FIXED_IN_CURRENT_IMPLEMENTATION",
+      "state": "CLOSED",
+      "action": "Extended the answer-first domain renderer with route-specific Firms and Finance configurations, selected controlled visuals, progressive disclosure and direct verification paths while preserving frozen semantics.",
+      "authority_effect": "NONE"
+    },
+    {
+      "issue_id": "R-030",
+      "session": "S03.3",
+      "area": "payments_remittances_composition",
+      "finding": "Recent administrative payments evidence and macro/remittance vintages could be presented as directly comparable inclusion evidence or smoothed into unsupported trends.",
+      "risk": "Users could infer people/adoption from infrastructure and transactions, treat BOP remittances as settlement/informal volume, or treat estimates/projections/source revisions as observed economic change.",
+      "decision": "FIXED_IN_CURRENT_IMPLEMENTATION",
+      "state": "CLOSED",
+      "action": "Extended the established domain renderer with Payments and Remittances configurations that foreground measurement object, currentness, conceptual boundary, evidence state, source revision and controlled verification paths.",
+      "authority_effect": "NONE"
+    },
+    {
+      "issue_id": "R-031",
+      "session": "WINDOW_1_ACCEPTANCE",
+      "area": "recipient_handoff_and_regression_control",
+      "finding": "README.md and REPOSITORY_BUILD_SUMMARY.json lagged the closed S03.1-S03.3 implementation, R-005/R-006 did not distinguish six-route closure from the still-pending Providers/Reforms work, and validate.py did not yet encode the accepted S03 route-composition regression set.",
+      "risk": "A competent recipient could restart closed work, misread page-density status, or regress accepted Domain Answer hierarchy without machine detection.",
+      "decision": "FIXED_IN_CURRENT_IMPLEMENTATION",
+      "state": "CLOSED",
+      "action": "Reconciled the existing control stack to one current state and added compact six-route S03 regression assertions to validate.py without creating a new status authority or changing evidence semantics.",
+      "authority_effect": "NONE"
+    },
+    {
+      "issue_id": "R-032",
+      "session": "WINDOW_1_ACCEPTANCE",
+      "area": "checksum_integrity",
+      "finding": "Recipient-side checksum verification found SHA256SUMS.txt still carried the predecessor hash for the live frozen page_specs.json even though the live Page Spec bytes and all S03 review controls consistently identified the current frozen projection hash.",
+      "risk": "A recipient verifying first-hand repository integrity could receive a false checksum failure or incorrectly suspect semantic drift despite the live Page Spec projection being unchanged during S03.",
+      "decision": "FIXED_IN_CURRENT_IMPLEMENTATION",
+      "state": "CLOSED",
+      "action": "Re-verified the live page_specs.json bytes against Drive, preserved the current controlled projection, refreshed only the stale manifest entry, and re-ran build/validation plus present-file checksum verification. No Production Master or semantic content change was made.",
+      "authority_effect": "NONE"
+    },
+    {
+      "issue_id": "R-033",
+      "session": "S03.4",
+      "area": "presentation_authority",
+      "finding": "Domain presentation hierarchy was encoded in a hard-coded six-route Python configuration and could not safely scale to Providers/Reforms or future validation without becoming a second manually maintained presentation authority.",
+      "risk": "A separate JSON contract could drift from renderer behavior, or route-specific presentation could remain prompt-only.",
+      "decision": "FIXED_IN_CURRENT_IMPLEMENTATION",
+      "state": "CLOSED",
+      "action": "Created one presentation-only machine-readable contract for all eight Domain Answer routes and made scripts/build.py consume it directly; validator rejects route/reference/drift defects.",
+      "authority_effect": "NONE"
+    },
+    {
+      "issue_id": "R-034",
+      "session": "S03.4",
+      "area": "bilingual_visual_metadata",
+      "finding": "Arabic Providers mobile rendering exposed unlocalized English visual metadata from a raw technical field.",
+      "risk": "Arabic could become a weaker or visibly backend-like edition.",
+      "decision": "FIXED_IN_CURRENT_IMPLEMENTATION",
+      "state": "CLOSED",
+      "action": "Renderer now displays Arabic visual metadata only when localized or language-neutral; substantive visual summary and boundaries remain unchanged.",
+      "authority_effect": "NONE"
+    },
+    {
+      "issue_id": "R-035",
+      "session": "S04.1",
+      "area": "evidence_record_hierarchy",
+      "finding": "Evidence detail routes were rendered as generic governed-object cards, so cold deep links did not deliberately foreground what the evidence establishes, scope/currentness, limitation, source and return-to-interpretation paths.",
+      "risk": "An unfamiliar verifier could reach the evidence but still need backend knowledge or misread scope before reaching source and limitation.",
+      "decision": "FIXED_IN_CURRENT_IMPLEMENTATION",
+      "state": "CLOSED",
+      "action": "Implemented an Evidence Record page family through the existing canonical presentation contract, direct renderer consumption, first-load scope/boundary/source hierarchy, progressive method/verification detail and related-interpretation navigation.",
+      "authority_effect": "NONE"
+    },
+    {
+      "issue_id": "R-036",
+      "session": "S04.1",
+      "area": "controlled_public_arabic",
+      "finding": "Rendering the controlled CLM-060 Evidence Record exposed the prohibited backend-style Arabic term «المقام» in the governed public definition.",
+      "risk": "Arabic public language would be weaker and inconsistent with the controlled terminology standard.",
+      "decision": "ESCALATED_TO_MASTER__FIXED__PROJECTIONS_REGENERATED",
+      "state": "CLOSED",
+      "action": "Updated Production Master 06_EVIDENCE_OBJECTS!I112 from «وثائق المقام» to «وثائق قاعدة الاحتساب», regenerated the affected frozen public projections/search payload, updated the Master hash in current controls and rebuilt validation.",
+      "authority_effect": "MASTER_UPDATED"
+    },
+    {
+      "issue_id": "R-037",
+      "session": "S04.1",
+      "area": "source_to_evidence_navigation",
+      "finding": "The S01 Data/source directory could focus a source but did not expose dependent Evidence Records from that source surface.",
+      "risk": "A user entering through Data/source could verify a source but hit a dead end before the evidence interpretation journey.",
+      "decision": "FIXED_IN_CURRENT_IMPLEMENTATION",
+      "state": "CLOSED",
+      "action": "Added collapsed dependent-Evidence-Record links to existing controlled source cards/locators without changing source metadata or exposing no-public-locator dependencies.",
+      "authority_effect": "NONE"
+    },
+    {
+      "issue_id": "R-038",
+      "session": "S04.2",
+      "area": "comparison_legitimacy",
+      "finding": "Compare rendered its governed comparison objects twice: once through the comparison selector/payload and again as generic governed cards below the tool.",
+      "risk": "The duplicate card wall weakened the compatibility-first task and turned the Page Spec governed array into visually exhaustive first-load content.",
+      "decision": "FIXED_IN_CURRENT_IMPLEMENTATION",
+      "state": "CLOSED",
+      "action": "Kept the governed object set in the contract-driven comparison selector and Evidence Records, removed the redundant generic-card rendering, and added validator enforcement against its return.",
+      "authority_effect": "NONE"
+    },
+    {
+      "issue_id": "R-039",
+      "session": "S04.2",
+      "area": "citation_rights_reuse",
+      "finding": "Existing source surfaces exposed public locators but did not yet make citation and redistribution permissions visibly distinct.",
+      "risk": "A user could interpret a public URL or copyable source reference as permission to republish the underlying source table/document.",
+      "decision": "FIXED_IN_CURRENT_IMPLEMENTATION",
+      "state": "CLOSED",
+      "action": "Added source citation controls and a rights boundary that states current controlled source records do not establish redistribution permission; no download/republication permission is inferred.",
+      "authority_effect": "NONE"
+    },
+    {
+      "issue_id": "R-040",
+      "session": "S04.2",
+      "area": "publication_filtering",
+      "finding": "A no-public-locator dependency (SRC-MOPIC-YSEU-2023-080) was indirectly rendered as a source ID in a Reading source sidebar even though Evidence/Data correctly suppressed it.",
+      "risk": "An indirect public surface could disclose a dependency explicitly designated as having no public locator, violating publication filtering despite direct-route checks passing.",
+      "decision": "FIXED_IN_CURRENT_IMPLEMENTATION",
+      "state": "CLOSED",
+      "action": "Made the shared source renderer consume the same publication-filtered source rows used by Evidence/Data and added a validator scan that rejects any no-public-locator source ID in public HTML or public search payloads.",
+      "authority_effect": "NONE"
+    },
+    {
+      "issue_id": "R-041",
+      "session": "S04.2",
+      "area": "source_reference_closure",
+      "finding": "Source Reference Closure had controlled payloads but had not yet been accepted end-to-end across representative public object classes and publication-state hard cases.",
+      "risk": "A public object could appear verifiable while a source/passport/locator/publication-state link silently failed or a no-public-locator dependency leaked through another surface.",
+      "decision": "VERIFIED_AND_ENFORCED",
+      "state": "CLOSED",
+      "action": "Added validator checks for eight hard-case claims, one derived visual, DISPLAY_READY and no-public-locator cases; citation, search, Compare and Data/source are checked against the same publication firewall.",
+      "authority_effect": "NONE"
+    },
+    {
+      "id": "R-042",
+      "severity": "RELEASE_BLOCKER",
+      "area": "drive_concurrency_security",
+      "finding": "Canonical production repository permissions currently include an anyone-with-link writer grant. Window 2 reconciliation detected no concurrent overwrite, but technical single-writer control is not established.",
+      "disposition": "OPEN__DEFERRED_TO_S07_SECURITY_RELEASE_CONTROL",
+      "session": "WINDOW_2_ACCEPTANCE",
+      "action": "Before release certification, restrict canonical production repository write access to named authorized maintainers, verify effective permissions, and rerun integrity/release checks. Do not treat this as a content defect or silently change collaboration permissions during S05.",
+      "authority_effect": "NONE"
+    },
+    {
+      "id": "R-043",
+      "severity": "MATERIAL_UX",
+      "area": "arabic_measurement_taxonomy",
+      "finding": "Arabic Measurement Agenda cards exposed English-only domain-classification labels beside otherwise native Arabic content.",
+      "disposition": "FIXED",
+      "session": "S05.1",
+      "action": "Render the existing controlled domain classification through a bounded Arabic UI-label map while leaving the controlled domain value unchanged; validator rejects untranslated Arabic card labels.",
+      "authority_effect": "NONE"
+    },
+    {
+      "id": "R-044",
+      "severity": "MATERIAL_UX",
+      "area": "rtl_mixed_script_identifiers",
+      "finding": "Stable Latin evidence/source/reading identifiers and source URLs inherited RTL context and could reorder punctuation or token sequences in Arabic.",
+      "disposition": "FIXED",
+      "session": "S05.1",
+      "action": "Use semantic bidi isolation/LTR direction for stable IDs and locators, with automatic/plaintext direction for mixed source titles and metadata.",
+      "authority_effect": "NONE"
+    },
+    {
+      "id": "R-045",
+      "severity": "MATERIAL_EDITORIAL",
+      "area": "arabic_reading_visual_metadata",
+      "finding": "Reading visual cards could expose English-only implementation metadata pills on Arabic pages when the controlled visual had no Arabic period/unit label.",
+      "disposition": "FIXED",
+      "session": "S05.1",
+      "action": "Do not render an English-only visual metadata pill as Arabic UI when no governed Arabic equivalent exists; retain the localized governed accessible summary and prohibited-inference text as the material meaning carrier. Validator rejects recurrence.",
+      "authority_effect": "NONE"
+    },
+    {
+      "id": "R-046",
+      "severity": "MATERIAL_UX",
+      "area": "mobile_reflow",
+      "finding": "The Home trust/verification CTA retained an inline three-column grid at 320px, causing reproducible page-level horizontal overflow.",
+      "disposition": "FIXED",
+      "session": "S05.2",
+      "action": "Replace the inline desktop grid with a responsive home-cta-grid class; validator/runtime reflow tests prevent recurrence.",
+      "authority_effect": "NONE"
+    },
+    {
+      "id": "R-047",
+      "severity": "MATERIAL_ACCESSIBILITY",
+      "area": "mobile_keyboard_utilities",
+      "finding": "Small-screen CSS hid compact citation/report header icons, leaving those utility tasks without an equivalent visible keyboard-reachable mobile action.",
+      "disposition": "FIXED",
+      "session": "S05.2",
+      "action": "Expose full-text citation/report actions inside the opened mobile navigation and move focus into the nav when it opens; Escape restores the menu trigger.",
+      "authority_effect": "NONE"
+    },
+    {
+      "id": "R-048",
+      "severity": "MATERIAL_ACCESSIBILITY",
+      "area": "compare_assistive_structure",
+      "finding": "The dynamic Compare table lacked caption/header scope/named scroll-region semantics and the entire comparison output was an aria-live region, risking excessive assistive announcement.",
+      "disposition": "FIXED",
+      "session": "S05.2",
+      "action": "Add caption, col/row scopes and a named focusable scroll region; move live updates to a concise verdict-status node.",
+      "authority_effect": "NONE"
+    },
+    {
+      "id": "R-049",
+      "severity": "ACCESSIBILITY",
+      "area": "copy_feedback",
+      "finding": "Citation/source-copy success used a temporary visual checkmark without equivalent live assistive feedback.",
+      "disposition": "FIXED",
+      "session": "S05.2",
+      "action": "Add a localized utility status live region and announce successful copy actions.",
+      "authority_effect": "NONE"
+    },
+    {
+      "id": "R-050",
+      "severity": "CONTROL",
+      "area": "session_state_reconciliation",
+      "finding": "At S05.2 closure, REVIEW_LEDGER session-summary fields and PROGRESS_INVENTORY active-session counters still described the predecessor S05.1 state even though the S05.2 implementation and runtime evidence had passed.",
+      "disposition": "FIXED",
+      "session": "S05.2",
+      "action": "Reconciled the existing control stack to S05.2 CLOSED / S05.3 NEXT, corrected the remaining-session count, and added deterministic validator checks so the summary cannot silently lag again.",
+      "authority_effect": "NONE"
+    },
+    {
+      "id": "R-051",
+      "severity": "MATERIAL_EVIDENCE_CONTROL",
+      "area": "findex_legacy_pseudocodebook",
+      "finding": "S06.1 source-owner challenge found that the legacy 'Uploaded Findex microdata codebook' block in 24_FINDEX_CODEBOOK contains unverified/inconsistent pseudo-codebook statements (including an account_mob construct not present as a Yemen variable and unsupported derivation wording) alongside the verified source-extracted DDI architecture.",
+      "disposition": "FIXED__MASTER_QUARANTINE_LABEL_ADDED",
+      "session": "S06.1",
+      "action": "Production Master 24_FINDEX_CODEBOOK!A121 now explicitly quarantines rows 122 onward as unverified research/lineage only and directs production use to the source-extracted World Bank DDI architecture in rows 4–117. No public Findex number or claim changed.",
+      "authority_effect": "MASTER_UPDATED"
+    },
+    {
+      "id": "R-052",
+      "severity": "MATERIAL_EVIDENCE_CURRENTNESS",
+      "area": "cby_provider_status_currentness",
+      "finding": "S06.2 source-owner challenge found a newer official CBY Decision No. 17 dated 17 September 2026 suspending the licence of Al-Buraq Exchange and Transfers Company and closing its premises, while the canonical provider-status overlay stopped before that event.",
+      "disposition": "FIXED__MASTER_STATUS_EVENT_AND_SOURCE_ADDED",
+      "session": "S06.2",
+      "action": "Added the dated event and original CBY locator to the Production Master, regenerated provider/source/Page Spec/search projections, and retained annual roster categories as source-defined universes rather than subtracting the event mechanically or inferring broader current operation.",
+      "authority_effect": "MASTER_UPDATED"
+    },
+    {
+      "id": "R-053",
+      "severity": "MATERIAL_EVIDENCE_CONCURRENCY",
+      "area": "microfinance_2011_within_source_conflict",
+      "finding": "Recipient-side S06 acceptance found that the live Production Master had a newer post-S06.3 revision. The semantic delta is confined to 21_MFI_DATA and corrects the 2011 Q4 microfinance treatment: the same SFD newsletter has an explicit end-Dec-2011 narrative (~64,000 borrowers; 87,000 savers; YER 4,030m portfolio) while its table is headed end-Dec-2010 and reports 63,568 borrowers, 87,615 savers and YER 3,853m portfolio.",
+      "disposition": "FIXED__CURRENT_MASTER_RETAINED__CONFLICT_PRESERVED__PROJECTIONS_REBOUND",
+      "session": "S06_ACCEPTANCE",
+      "action": "Verified the source-owner contradiction, retained the newer Master rather than restoring the older clean anchor, regenerated the MFI local shard, rebound all Page Specs to the current Master hash, and prevented the 2011 row from joining a continuous time series or presenting either portfolio value as a sole settled 2011 anchor.",
+      "authority_effect": "MASTER_UPDATED_CONCURRENTLY__ACCEPTED_AFTER_SOURCE_OWNER_REVIEW"
+    },
+    {
+      "id": "R-054",
+      "severity": "CONTROL",
+      "area": "s06_repository_truth_state",
+      "finding": "PROGRESS_INVENTORY and several handoff/control summaries lagged the live state: aggregate fields still described S06.1/S06.2 as next even though S06.2 and S06.3 were closed.",
+      "disposition": "FIXED",
+      "session": "S06_ACCEPTANCE",
+      "action": "Reconciled the existing control stack to S06 recipient acceptance, queued S07.1 without starting it, and updated the validator to enforce the accepted S06 boundary rather than the obsolete S05 handoff state.",
+      "authority_effect": "NONE"
+    }
+  ],
+  "sessions": {
+    "S00": "COMPLETE",
+    "S01": "COMPLETE",
+    "next": "S07.1",
+    "S02": "COMPLETE",
+    "S03.1": "COMPLETE",
+    "S03.2": "COMPLETE",
+    "S03.3": "COMPLETE",
+    "S03.4": "COMPLETE",
+    "S04.1": "COMPLETE",
+    "S04.2": "COMPLETE",
+    "S05.1": "COMPLETE",
+    "S05.2": "COMPLETE",
+    "S05.3": "COMPLETE",
+    "WINDOW_3_ACCEPTANCE": "ACCEPTED",
+    "S06.1": "COMPLETE",
+    "S06.2": "COMPLETE",
+    "S06.3": "COMPLETE",
+    "S06_ACCEPTANCE": "ACCEPTED"
+  },
+  "last_integrated_session": "S06_ACCEPTANCE",
+  "reference_archive_baseline": {
+    "reviewed_top_level_items": 70,
+    "disposition_register": "docs/S01_ARCHIVE_DISPOSITION_REGISTER.json",
+    "evidence_challenge_queue": "docs/S06_ARCHIVE_EVIDENCE_CHALLENGE_QUEUE.md",
+    "state": "S01_POINT_IN_TIME_BASELINE__NEW_ARCHIVE_ITEMS_REVIEW_BY_DELTA",
+    "reviewed_baseline_folder_id": "1sP6QzxoSPSkqivifmZqNyGeG1vhBQJZx",
+    "reopen_rule": "Do not re-review baseline items absent a specific production defect, changed file, or S06 source-owner challenge need."
+  },
+  "drive_canonical_state_at_s01_close": {
+    "top_level": [
+      "README.md",
+      "package.json",
+      "SHA256SUMS.txt",
+      "docs/",
+      "scripts/",
+      "site-src/"
+    ],
+    "generated_dist_stored_in_drive": false,
+    "duplicate_s01_controls_present": false,
+    "verified": "2026-09-22"
+  },
+  "drive_canonical_state_at_window_2_close": {
+    "repository_drive_id": "1iAxWukk1xeAXDPibmXXwGlaUXDcr_XvA",
+    "master_drive_id": "1xAbdDHJd5bYo0Pzo_a6dR6HsZ056LzJU",
+    "master_sha256": "6c0f8f18325b4f117de82e8ac8396c70adf0b3f1871878cf614ed01833ea40fd",
+    "generated_dist_stored_in_drive": false,
+    "state": "RECONCILED_AFTER_WINDOW_2_ACCEPTANCE",
+    "sharing_risk": "OPEN__ANYONE_WITH_LINK_WRITER__RELEASE_CERTIFICATION_BLOCKED_UNTIL_RESTRICTED"
+  },
+  "current_boundary": {
+    "session": "S06_ACCEPTANCE",
+    "state": "CLOSED__ACCEPTED",
+    "next": "S07.1_QUEUED_NOT_STARTED",
+    "master_escalation": "RESOLVED__SFD_Q4_2011_WITHIN_SOURCE_PERIOD_AND_PORTFOLIO_CONFLICT_PRESERVED",
+    "s06_window_acceptance": "ACCEPTED",
+    "handoff_freeze": "AUTHORIZED_AND_COMPLETED"
+  },
+  "s05_2_drive_reconciliation": {
+    "repository_drive_id": "1iAxWukk1xeAXDPibmXXwGlaUXDcr_XvA",
+    "state": "RECONCILED_IN_PLACE__GENERATED_DIST_EXCLUDED",
+    "sharing_risk": "OPEN__ANYONE_WITH_LINK_WRITER__OWNER_S07"
+  },
+  "s05_3_drive_reconciliation": {
+    "repository_drive_id": "1iAxWukk1xeAXDPibmXXwGlaUXDcr_XvA",
+    "authority_folder_drive_id": "1iDx5Jia8rXSAiuaIUa4nL1tpDbwSO_tY",
+    "master_drive_id": "1xAbdDHJd5bYo0Pzo_a6dR6HsZ056LzJU",
+    "master_sha256": "d3b0421104d63f830cf40d2b1749dc88f302f54e4d79a6c6faf63abc5ad28d9e",
+    "page_specs_sha256": "453bde9026c2a30f2c0c2125c0e950cd6e468a9540577318e1896c98e61959da",
+    "state": "RECONCILED_IN_PLACE__MASTER_AND_PAGE_SPECS_BOUND__DIST_EXCLUDED",
+    "sharing_risk": "OPEN__ANYONE_WITH_LINK_WRITER__OWNER_S07"
+  },
+  "reference_archive_current_delta": {
+    "folder_id": "1tFewVNnzpNXG9tsNyFpoWHnobaKsoRho",
+    "title": "2026-09-23_SUPPLEMENT__OLD_DRAFTS_AND_SOURCES__UNREVIEWED__NONAUTHORITATIVE",
+    "parent_inbox_id": "1lj5A9hrCDHo7hhQTlLOk-fmIQ7xCfcLs",
+    "registered_date": "2026-09-23",
+    "state": "S06_CHALLENGED__MATERIAL_CANDIDATES_DISPOSITIONED__DEFERRED_ITEMS_REMAIN_NON_PRODUCTION",
+    "authority_effect": "NONE",
+    "note": "Contains predecessor workbooks, drafts, research/source material and legacy packages. Storage or naming changes do not alter the canonical Production Master or production truth."
+  },
+  "s06_1_drive_reconciliation": {
+    "repository_drive_id": "1iAxWukk1xeAXDPibmXXwGlaUXDcr_XvA",
+    "master_drive_id": "1xAbdDHJd5bYo0Pzo_a6dR6HsZ056LzJU",
+    "master_sha256": "ee001adede94642ba001f3ffd9c4dbdb7b8ca30050bb9cc478636fbf71a79ba4",
+    "page_specs_sha256": "28c247c4d55be0bb0b69aa854d3fdb0caa68f16e23657452afb5e5e1b1dac02b",
+    "state": "RECONCILED_IN_PLACE__MASTER_FIRST__PAGE_SPECS_REBOUND",
+    "sharing_risk": "OPEN__ANYONE_WITH_LINK_WRITER__OWNER_S07"
+  },
+  "s06_2_drive_reconciliation": {
+    "repository_drive_id": "1iAxWukk1xeAXDPibmXXwGlaUXDcr_XvA",
+    "master_drive_id": "1xAbdDHJd5bYo0Pzo_a6dR6HsZ056LzJU",
+    "master_sha256": "cfe4599e26026f9ca377b9ac4b9b1120781678b981e09bb0f439091483a37dfe",
+    "page_specs_sha256": "5b5601c043a4857314a4f483db3bf8d8f39a07a838cbac8500324e7f463ba708",
+    "state": "RECONCILED_IN_PLACE__MASTER_FIRST__PROVIDER_SOURCE_AND_PAGE_SPECS_REBOUND",
+    "sharing_risk": "OPEN__ANYONE_WITH_LINK_WRITER__OWNER_S07"
+  },
+  "s06_3_drive_reconciliation": {
+    "repository_drive_id": "1iAxWukk1xeAXDPibmXXwGlaUXDcr_XvA",
+    "master_drive_id": "1xAbdDHJd5bYo0Pzo_a6dR6HsZ056LzJU",
+    "master_sha256": "f94f1f91084b01964a3bb7b3847fd68a19555cc901ab6078146a187efe17e860",
+    "page_specs_sha256": "4e8a0d8f0cf58f78389360c69cf04f3bf0d24f1ba9b3e4ef10ebe93461e69f1a",
+    "state": "CURRENT_NEWER_MASTER_RETAINED__MFI_2011_CONFLICT_RECONCILED__PROJECTIONS_REBOUND",
+    "sharing_risk": "OPEN__ANYONE_WITH_LINK_WRITER__OWNER_S07"
+  }
+}

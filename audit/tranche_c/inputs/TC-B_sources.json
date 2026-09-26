@@ -1,0 +1,3183 @@
+{
+ "transaction": "TC-B",
+ "decided_by": "Team Lead, Tranche C",
+ "rule": "Source citation metadata (TRUST-01): a source is named by its governed title and publisher, never by a bare ID. Titles come from a read of the source or from governed Master rows (basis per record). Where neither supports a title, the source stays a locator card. CITATION_CARD = governed bibliographic metadata without a curated summary; FULL_PUBLIC_CARD = curated resource card.",
+ "excluded": {
+  "SRC-CBY-AR2015-HIST-001": "Title and issuer rest only on the source ID; not verified. Stays a locator card (no invented bibliography).",
+  "SRC-CBY-SANAA-C12-2024": "Number and year rest only on the source ID; the host is a reproduction site. Stays a locator card.",
+  "SRC-CBY-SANAA-C14-2024": "Number and year rest only on the source ID; the file may be a compilation. Stays a locator card.",
+  "SRC-SFD-MF-HISTORY-TOR-2012-001": "Title unresolved (fetch failed). Stays a locator card.",
+  "SRC-ADEN-CBY-LIQ-2016": "Article title and journal unresolved. Stays a locator card.",
+  "SRC-WB-NFID-RFX-2026-001": "Supports internal datasets only and links to no public object; no public card (listing handled in R8.5)."
+ },
+ "ymn_arabic_name": {
+  "old": "شبكة التمويل الأصغر اليمنية",
+  "new": "شبكة اليمن للتمويل الأصغر",
+  "why": "The network's own 2021 report cover reads «شبكة اليمن للتمويل الأصغر» (read 26 Sep 2026)."
+ },
+ "sources": [
+  {
+   "source_id": "SRC-CBY-001",
+   "old": {
+    "display_title": null,
+    "display_title_ar": null,
+    "publisher": null,
+    "public_card_state": "LOCATOR_ONLY",
+    "retrieval_date": null
+   },
+   "new": {
+    "display_title": "Monetary and Financial Developments, Issue No. 54 (May 2026)",
+    "display_title_ar": "التطورات النقدية والمالية، العدد 54 (مايو 2026)",
+    "publisher": "Central Bank of Yemen — Aden",
+    "publisher_ar": "البنك المركزي اليمني – عدن",
+    "document_label": "Periodic statistical report",
+    "document_label_ar": "تقرير إحصائي دوري",
+    "document_date": "2026-05",
+    "public_card_state": "CITATION_CARD",
+    "retrieval_date": "2026-09-26"
+   },
+   "basis": "title/date: one WebFetch of primary_url on 26 Sep 2026 read the cover title 'MONETARY AND FINANCIAL DEVELOPMENTS', issuing body 'General Department of Research and Statistics, Central Bank of Yemen', issue label 'May 2026 (Issue No. 54)', first tables 'Monetary Survey of Yemen', 'Survey of the Central Bank of Yemen', 'Consolidated Balance Sheet of Commercial & Islamic Banks – Assets/Liabilities'; consistent with governed DS-CBY-MONETARY (tables T1/T2/T4/T5/T6, period_max 2026-05) | type: monthly-numbered statistical bulletin | publisher: locator host is cby-ye.com / english.cby-ye.com (Lead rule)",
+   "note": "Governed record held no title. Title and the 'May 2026' issue label come from the WebFetch (tool-summarised read of the PDF cover); the Lead may wish to confirm the issue number. document_date is the issue label printed on the cover, not a verified release day. The Arabic title is a rendering of the English-edition cover; the Arabic edition's own title was not read."
+  },
+  {
+   "source_id": "SRC-CBY-BANKLIST-AR-2026-001",
+   "old": {
+    "display_title": null,
+    "display_title_ar": null,
+    "publisher": null,
+    "public_card_state": "LOCATOR_ONLY",
+    "retrieval_date": null
+   },
+   "new": {
+    "display_title": "List of licensed banks in the Republic of Yemen (undated; as checked on 7 September 2026)",
+    "display_title_ar": "كشف بالبنوك المرخصة بالجمهورية اليمنية (غير مؤرخ؛ كما اطُّلع عليه في 7 سبتمبر 2026)",
+    "publisher": "Central Bank of Yemen — Aden",
+    "publisher_ar": "البنك المركزي اليمني – عدن",
+    "document_label": "Official list or roster",
+    "document_label_ar": "قائمة رسمية",
+    "document_date": null,
+    "public_card_state": "CITATION_CARD",
+    "retrieval_date": "2026-09-26"
+   },
+   "basis": "title: one WebFetch of primary_url on 26 Sep 2026 read the Arabic heading (text-layer ligatures normalised) «كشف بالبنوك المرخصة بالجمهورية اليمنية», no English title, no issuing body printed, no date printed, 26 numbered rows; governed PUC-BANK-2026-01 (reference_state 2026-09-07, 26 banks) and PRV-BANK rows current_state_as_of 2026-09-07 | type: current document_type 'provider-status instrument' + PUC 'current licensed-bank list' | date: none printed | publisher: locator host is cby-ye.com / english.cby-ye.com (Lead rule)",
+   "note": "The document prints no date, so document_date is null and the title carries the governed check date (7 September 2026). The 26 September 2026 read found the same heading and 26 rows. English title is a rendering of the Arabic heading."
+  },
+  {
+   "source_id": "SRC-CBY-ENF-01-2026",
+   "old": {
+    "display_title": null,
+    "display_title_ar": null,
+    "publisher": null,
+    "public_card_state": "LOCATOR_ONLY",
+    "retrieval_date": null
+   },
+   "new": {
+    "display_title": "Governor's Decision No. 1 of 2026 on licence suspensions and closures (1 January 2026)",
+    "display_title_ar": "قرار المحافظ رقم (1) لسنة 2026 بشأن إيقاف تراخيص وإغلاق مقرات (1 يناير 2026)",
+    "publisher": "Central Bank of Yemen — Aden",
+    "publisher_ar": "البنك المركزي اليمني – عدن",
+    "document_label": "Enforcement decision",
+    "document_label_ar": "قرار إنفاذ",
+    "document_date": "2026-01-01",
+    "public_card_state": "CITATION_CARD"
+   },
+   "basis": "title: PSE-002 (22_PROVIDERS_DATA status events) decision number, authority 'Central Bank of Yemen — Aden' and scope: multiple exchange companies/establishments (PSE-002 scope); wording follows Lead example pattern | type: current document_type 'decision/enforcement' + PSE-002 event_state | date: PSE-002 event_date 2026-01-01 (the decision's date as governed) | publisher: locator host is cby-ye.com / english.cby-ye.com (Lead rule)",
+   "note": "Title and Arabic reproduce the Lead's example verbatim."
+  },
+  {
+   "source_id": "SRC-CBY-ENF-02-2026",
+   "old": {
+    "display_title": null,
+    "display_title_ar": null,
+    "publisher": null,
+    "public_card_state": "LOCATOR_ONLY",
+    "retrieval_date": null
+   },
+   "new": {
+    "display_title": "Governor's Decision No. 2 of 2026 on the licence withdrawal of an exchange-company branch (1 January 2026)",
+    "display_title_ar": "قرار المحافظ رقم (2) لسنة 2026 بشأن سحب ترخيص فرع لشركة صرافة (1 يناير 2026)",
+    "publisher": "Central Bank of Yemen — Aden",
+    "publisher_ar": "البنك المركزي اليمني – عدن",
+    "document_label": "Enforcement decision",
+    "document_label_ar": "قرار إنفاذ",
+    "document_date": "2026-01-01",
+    "public_card_state": "CITATION_CARD"
+   },
+   "basis": "title: PSE-006 (22_PROVIDERS_DATA status events) decision number, authority 'Central Bank of Yemen — Aden' and scope: one exchange-company branch; LICENCE_WITHDRAWAL_EVENT (PSE-006; PRV-EXCH-B004A); wording follows Lead example pattern | type: current document_type 'decision/enforcement' + PSE-006 event_state | date: PSE-006 event_date 2026-01-01 (the decision's date as governed) | publisher: locator host is cby-ye.com / english.cby-ye.com (Lead rule)",
+   "note": "Single-subject decision: the governed subject name is publishable under the Provider Master public-use rule but is left out of the title for consistency across the decision series; the Lead may add it."
+  },
+  {
+   "source_id": "SRC-CBY-ENF-03-2026",
+   "old": {
+    "display_title": null,
+    "display_title_ar": null,
+    "publisher": null,
+    "public_card_state": "LOCATOR_ONLY",
+    "retrieval_date": null
+   },
+   "new": {
+    "display_title": "Governor's Decision No. 3 of 2026 on the licence withdrawal of an exchange-company branch (8 January 2026)",
+    "display_title_ar": "قرار المحافظ رقم (3) لسنة 2026 بشأن سحب ترخيص فرع لشركة صرافة (8 يناير 2026)",
+    "publisher": "Central Bank of Yemen — Aden",
+    "publisher_ar": "البنك المركزي اليمني – عدن",
+    "document_label": "Enforcement decision",
+    "document_label_ar": "قرار إنفاذ",
+    "document_date": "2026-01-08",
+    "public_card_state": "CITATION_CARD"
+   },
+   "basis": "title: PSE-007 (22_PROVIDERS_DATA status events) decision number, authority 'Central Bank of Yemen — Aden' and scope: one exchange-company branch; LICENCE_WITHDRAWAL_EVENT (PSE-007; PRV-EXCH-B005A); wording follows Lead example pattern | type: current document_type 'decision/enforcement' + PSE-007 event_state | date: PSE-007 event_date 2026-01-08 (the decision's date as governed) | publisher: locator host is cby-ye.com / english.cby-ye.com (Lead rule)",
+   "note": "Single-subject decision: the governed subject name is publishable under the Provider Master public-use rule but is left out of the title for consistency across the decision series; the Lead may add it."
+  },
+  {
+   "source_id": "SRC-CBY-ENF-04-2026",
+   "old": {
+    "display_title": null,
+    "display_title_ar": null,
+    "publisher": null,
+    "public_card_state": "LOCATOR_ONLY",
+    "retrieval_date": null
+   },
+   "new": {
+    "display_title": "Governor's Decision No. 4 of 2026 on licence suspensions and closures (8 January 2026)",
+    "display_title_ar": "قرار المحافظ رقم (4) لسنة 2026 بشأن إيقاف تراخيص وإغلاق مقرات (8 يناير 2026)",
+    "publisher": "Central Bank of Yemen — Aden",
+    "publisher_ar": "البنك المركزي اليمني – عدن",
+    "document_label": "Enforcement decision",
+    "document_label_ar": "قرار إنفاذ",
+    "document_date": "2026-01-08",
+    "public_card_state": "CITATION_CARD"
+   },
+   "basis": "title: PSE-008 (22_PROVIDERS_DATA status events) decision number, authority 'Central Bank of Yemen — Aden' and scope: a number of exchange establishments (PSE-008 scope); wording follows Lead example pattern | type: current document_type 'decision/enforcement' + PSE-008 event_state | date: PSE-008 event_date 2026-01-08 (the decision's date as governed) | publisher: locator host is cby-ye.com / english.cby-ye.com (Lead rule)",
+   "note": ""
+  },
+  {
+   "source_id": "SRC-CBY-ENF-05-2026",
+   "old": {
+    "display_title": null,
+    "display_title_ar": null,
+    "publisher": null,
+    "public_card_state": "LOCATOR_ONLY",
+    "retrieval_date": null
+   },
+   "new": {
+    "display_title": "Governor's Decision No. 5 of 2026 on licence suspensions and closures (13 January 2026)",
+    "display_title_ar": "قرار المحافظ رقم (5) لسنة 2026 بشأن إيقاف تراخيص وإغلاق مقرات (13 يناير 2026)",
+    "publisher": "Central Bank of Yemen — Aden",
+    "publisher_ar": "البنك المركزي اليمني – عدن",
+    "document_label": "Enforcement decision",
+    "document_label_ar": "قرار إنفاذ",
+    "document_date": "2026-01-13",
+    "public_card_state": "CITATION_CARD"
+   },
+   "basis": "title: PSE-009 (22_PROVIDERS_DATA status events) decision number, authority 'Central Bank of Yemen — Aden' and scope: a number of exchange establishments (PSE-009 scope); wording follows Lead example pattern | type: current document_type 'decision/enforcement' + PSE-009 event_state | date: PSE-009 event_date 2026-01-13 (the decision's date as governed) | publisher: locator host is cby-ye.com / english.cby-ye.com (Lead rule)",
+   "note": ""
+  },
+  {
+   "source_id": "SRC-CBY-ENF-06-2026",
+   "old": {
+    "display_title": null,
+    "display_title_ar": null,
+    "publisher": null,
+    "public_card_state": "LOCATOR_ONLY",
+    "retrieval_date": null
+   },
+   "new": {
+    "display_title": "Governor's Decision No. 6 of 2026 on the licence suspension and closure of an exchange-company branch (13 January 2026)",
+    "display_title_ar": "قرار المحافظ رقم (6) لسنة 2026 بشأن إيقاف ترخيص فرع لشركة صرافة وإغلاق مقره (13 يناير 2026)",
+    "publisher": "Central Bank of Yemen — Aden",
+    "publisher_ar": "البنك المركزي اليمني – عدن",
+    "document_label": "Enforcement decision",
+    "document_label_ar": "قرار إنفاذ",
+    "document_date": "2026-01-13",
+    "public_card_state": "CITATION_CARD"
+   },
+   "basis": "title: PSE-010 (22_PROVIDERS_DATA status events) decision number, authority 'Central Bank of Yemen — Aden' and scope: one exchange-company branch in Al-Mahra (PSE-010; PRV-EXCH-B014A); wording follows Lead example pattern | type: current document_type 'decision/enforcement' + PSE-010 event_state | date: PSE-010 event_date 2026-01-13 (the decision's date as governed) | publisher: locator host is cby-ye.com / english.cby-ye.com (Lead rule)",
+   "note": "Single-subject decision: the governed subject name is publishable under the Provider Master public-use rule but is left out of the title for consistency across the decision series; the Lead may add it."
+  },
+  {
+   "source_id": "SRC-CBY-ENF-09-2026",
+   "old": {
+    "display_title": null,
+    "display_title_ar": null,
+    "publisher": null,
+    "public_card_state": "LOCATOR_ONLY",
+    "retrieval_date": null
+   },
+   "new": {
+    "display_title": "Governor's Decision No. 9 of 2026 on the licence suspension and closure of a remittance agent (21 May 2026)",
+    "display_title_ar": "قرار المحافظ رقم (9) لسنة 2026 بشأن إيقاف ترخيص وكيل حوالة وإغلاق مقره (21 مايو 2026)",
+    "publisher": "Central Bank of Yemen — Aden",
+    "publisher_ar": "البنك المركزي اليمني – عدن",
+    "document_label": "Enforcement decision",
+    "document_label_ar": "قرار إنفاذ",
+    "document_date": "2026-05-21",
+    "public_card_state": "CITATION_CARD"
+   },
+   "basis": "title: PSE-011 (22_PROVIDERS_DATA status events) decision number, authority 'Central Bank of Yemen — Aden' and scope: one remittance agent in Lahj (PSE-011; EO PSE-011 period '21 May 2026'); wording follows Lead example pattern | type: current document_type 'decision/enforcement' + PSE-011 event_state | date: PSE-011 event_date 2026-05-21 (the decision's date as governed) | publisher: locator host is cby-ye.com / english.cby-ye.com (Lead rule)",
+   "note": "Single-subject decision: the governed subject name is publishable under the Provider Master public-use rule but is left out of the title for consistency across the decision series; the Lead may add it."
+  },
+  {
+   "source_id": "SRC-CBY-ENF-10-2026",
+   "old": {
+    "display_title": null,
+    "display_title_ar": null,
+    "publisher": null,
+    "public_card_state": "LOCATOR_ONLY",
+    "retrieval_date": null
+   },
+   "new": {
+    "display_title": "Governor's Decision No. 10 of 2026 on the licence suspension and closure of a remittance agent",
+    "display_title_ar": "قرار المحافظ رقم (10) لسنة 2026 بشأن إيقاف ترخيص وكيل حوالة وإغلاق مقره",
+    "publisher": "Central Bank of Yemen — Aden",
+    "publisher_ar": "البنك المركزي اليمني – عدن",
+    "document_label": "Enforcement decision",
+    "document_label_ar": "قرار إنفاذ",
+    "document_date": null,
+    "public_card_state": "CITATION_CARD"
+   },
+   "basis": "title: PSE-012 normalized_event 'Governor Decision No. 10 of 2026 suspends the licence of ... remittance agent ... and closes the premises'; scope one remittance agent in Shabwa (PSE-012); wording follows Lead example pattern | type: current document_type 'decision/enforcement' + PSE-012 event_state LICENCE_SUSPENSION_AND_CLOSURE_EVENT | date: PSE-012 event_date 2026-06-09 is cross-corroborated only (see lead_note) | publisher: locator host is cby-ye.com / english.cby-ye.com (Lead rule)",
+   "note": "Date deliberately left out of the title and document_date. Governed PSE-012 records event_date 2026-06-09 but marks it PRIMARY_OFFICIAL_PAGE_TITLE_VERIFIED__DATE_CROSS_CORROBORATED, and its public-use rule says that if the exact date is surfaced publicly the cross-corroboration note must be kept until the primary page date is directly readable. A title cannot carry that note. If the Lead confirms the page date, use '(9 June 2026)' / «(9 يونيو 2026)» and document_date 2026-06-09. Subject name (governed, PRV-REM-E002) intentionally not put in the title."
+  },
+  {
+   "source_id": "SRC-CBY-ENF-11-2026",
+   "old": {
+    "display_title": null,
+    "display_title_ar": null,
+    "publisher": null,
+    "public_card_state": "LOCATOR_ONLY",
+    "retrieval_date": null
+   },
+   "new": {
+    "display_title": "Governor's Decision No. 11 of 2026 on the licence suspension and closure of a remittance agent (10 June 2026)",
+    "display_title_ar": "قرار المحافظ رقم (11) لسنة 2026 بشأن إيقاف ترخيص وكيل حوالة وإغلاق مقره (10 يونيو 2026)",
+    "publisher": "Central Bank of Yemen — Aden",
+    "publisher_ar": "البنك المركزي اليمني – عدن",
+    "document_label": "Enforcement decision",
+    "document_label_ar": "قرار إنفاذ",
+    "document_date": "2026-06-10",
+    "public_card_state": "CITATION_CARD"
+   },
+   "basis": "title: PSE-013 (22_PROVIDERS_DATA status events) decision number, authority 'Central Bank of Yemen — Aden' and scope: one remittance agent in Lahj (PSE-013); wording follows Lead example pattern | type: current document_type 'decision/enforcement' + PSE-013 event_state | date: PSE-013 event_date 2026-06-10 (the decision's date as governed) | publisher: locator host is cby-ye.com / english.cby-ye.com (Lead rule)",
+   "note": "Single-subject decision: the governed subject name is publishable under the Provider Master public-use rule but is left out of the title for consistency across the decision series; the Lead may add it."
+  },
+  {
+   "source_id": "SRC-CBY-ENF-13-2026",
+   "old": {
+    "display_title": null,
+    "display_title_ar": null,
+    "publisher": null,
+    "public_card_state": "LOCATOR_ONLY",
+    "retrieval_date": null
+   },
+   "new": {
+    "display_title": "Governor's Decision No. 13 of 2026 on licence suspensions and closures (6 August 2026)",
+    "display_title_ar": "قرار المحافظ رقم (13) لسنة 2026 بشأن إيقاف تراخيص وإغلاق مقرات (6 أغسطس 2026)",
+    "publisher": "Central Bank of Yemen — Aden",
+    "publisher_ar": "البنك المركزي اليمني – عدن",
+    "document_label": "Enforcement decision",
+    "document_label_ar": "قرار إنفاذ",
+    "document_date": "2026-08-06",
+    "public_card_state": "CITATION_CARD"
+   },
+   "basis": "title: PSE-003 (22_PROVIDERS_DATA status events) decision number, authority 'Central Bank of Yemen — Aden' and scope: exchange establishments and a remittance agent (PSE-003 scope); wording follows Lead example pattern | type: current document_type 'decision/enforcement' + PSE-003 event_state | date: PSE-003 event_date 2026-08-06 (the decision's date as governed) | publisher: locator host is cby-ye.com / english.cby-ye.com (Lead rule)",
+   "note": ""
+  },
+  {
+   "source_id": "SRC-CBY-ENF-14-2026",
+   "old": {
+    "display_title": null,
+    "display_title_ar": null,
+    "publisher": null,
+    "public_card_state": "LOCATOR_ONLY",
+    "retrieval_date": null
+   },
+   "new": {
+    "display_title": "Governor's Decision No. 14 of 2026 on licence suspensions and closures (20 August 2026)",
+    "display_title_ar": "قرار المحافظ رقم (14) لسنة 2026 بشأن إيقاف تراخيص وإغلاق مقرات (20 أغسطس 2026)",
+    "publisher": "Central Bank of Yemen — Aden",
+    "publisher_ar": "البنك المركزي اليمني – عدن",
+    "document_label": "Enforcement decision",
+    "document_label_ar": "قرار إنفاذ",
+    "document_date": "2026-08-20",
+    "public_card_state": "CITATION_CARD"
+   },
+   "basis": "title: PSE-004 (22_PROVIDERS_DATA status events) decision number, authority 'Central Bank of Yemen — Aden' and scope: exchange companies/establishment(s) (PSE-004 scope); wording follows Lead example pattern | type: current document_type 'decision/enforcement' + PSE-004 event_state | date: PSE-004 event_date 2026-08-20 (the decision's date as governed) | publisher: locator host is cby-ye.com / english.cby-ye.com (Lead rule)",
+   "note": ""
+  },
+  {
+   "source_id": "SRC-CBY-ENF-15-2026",
+   "old": {
+    "display_title": null,
+    "display_title_ar": null,
+    "publisher": null,
+    "public_card_state": "LOCATOR_ONLY",
+    "retrieval_date": null
+   },
+   "new": {
+    "display_title": "Governor's Decision No. 15 of 2026 on licence suspensions and closures (27 August 2026)",
+    "display_title_ar": "قرار المحافظ رقم (15) لسنة 2026 بشأن إيقاف تراخيص وإغلاق مقرات (27 أغسطس 2026)",
+    "publisher": "Central Bank of Yemen — Aden",
+    "publisher_ar": "البنك المركزي اليمني – عدن",
+    "document_label": "Enforcement decision",
+    "document_label_ar": "قرار إنفاذ",
+    "document_date": "2026-08-27",
+    "public_card_state": "CITATION_CARD"
+   },
+   "basis": "title: PSE-005 (22_PROVIDERS_DATA status events) decision number, authority 'Central Bank of Yemen — Aden' and scope: an exchange company, an establishment and remittance agents (PSE-005 scope); wording follows Lead example pattern | type: current document_type 'decision/enforcement' + PSE-005 event_state | date: PSE-005 event_date 2026-08-27 (the decision's date as governed) | publisher: locator host is cby-ye.com / english.cby-ye.com (Lead rule)",
+   "note": ""
+  },
+  {
+   "source_id": "SRC-CBY-ENF-17-2026",
+   "old": {
+    "display_title": null,
+    "display_title_ar": null,
+    "publisher": null,
+    "public_card_state": "LOCATOR_ONLY",
+    "retrieval_date": null
+   },
+   "new": {
+    "display_title": "Governor's Decision No. 17 of 2026 on the licence suspension and closure of an exchange company (17 September 2026)",
+    "display_title_ar": "قرار المحافظ رقم (17) لسنة 2026 بشأن إيقاف ترخيص شركة صرافة وإغلاق مقرها (17 سبتمبر 2026)",
+    "publisher": "Central Bank of Yemen — Aden",
+    "publisher_ar": "البنك المركزي اليمني – عدن",
+    "document_label": "Enforcement decision",
+    "document_label_ar": "قرار إنفاذ",
+    "document_date": "2026-09-17",
+    "public_card_state": "CITATION_CARD"
+   },
+   "basis": "title: PSE-014 (22_PROVIDERS_DATA status events) decision number, authority 'Central Bank of Yemen — Aden' and scope: one exchange company (PSE-014; PRV-EXCH-E022); wording follows Lead example pattern | type: current document_type 'decision/enforcement' + PSE-014 event_state | date: PSE-014 event_date 2026-09-17 (the decision's date as governed) | publisher: locator host is cby-ye.com / english.cby-ye.com (Lead rule)",
+   "note": "Single-subject decision: the governed subject name is publishable under the Provider Master public-use rule but is left out of the title for consistency across the decision series; the Lead may add it."
+  },
+  {
+   "source_id": "SRC-CBY-ENF-18-2026",
+   "old": {
+    "display_title": null,
+    "display_title_ar": null,
+    "publisher": null,
+    "public_card_state": "LOCATOR_ONLY",
+    "retrieval_date": "2026-09-25"
+   },
+   "new": {
+    "display_title": "Governor's Decision No. 18 of 2026 on licence suspensions and closures (24 September 2026)",
+    "display_title_ar": "قرار المحافظ رقم (18) لسنة 2026 بشأن إيقاف تراخيص وإغلاق مقرات (24 سبتمبر 2026)",
+    "publisher": "Central Bank of Yemen — Aden",
+    "publisher_ar": "البنك المركزي اليمني – عدن",
+    "document_label": "Enforcement decision",
+    "document_label_ar": "قرار إنفاذ",
+    "document_date": "2026-09-24",
+    "public_card_state": "CITATION_CARD"
+   },
+   "basis": "title: PSE-015 (22_PROVIDERS_DATA status events) decision number, authority 'Central Bank of Yemen — Aden' and scope: an exchange company, exchange establishments and a remittance agent; names withheld (PSE-015 scope); wording follows Lead example pattern | type: current document_type 'decision/enforcement' + PSE-015 event_state | date: PSE-015 event_date 2026-09-24 (the decision's date as governed) | publisher: locator host is cby-ye.com / english.cby-ye.com (Lead rule)",
+   "note": "PSE-015 withholds entity names until transcribed (NAMES_PRIMARY_SOURCE_PENDING); the class-level title names none. Source record already carries retrieval_date 2026-09-25."
+  },
+  {
+   "source_id": "SRC-CBY-EXCH-LIST-2026-001",
+   "old": {
+    "display_title": null,
+    "display_title_ar": null,
+    "publisher": null,
+    "public_card_state": "LOCATOR_ONLY",
+    "retrieval_date": null
+   },
+   "new": {
+    "display_title": "Exchange companies, exchange establishments and remittance agents licensed for 2026",
+    "display_title_ar": "شركات ومنشآت الصرافة ووكلاء الحوالات المرخّصة لعام 2026",
+    "publisher": "Central Bank of Yemen — Aden",
+    "publisher_ar": "البنك المركزي اليمني – عدن",
+    "document_label": "Official list or roster",
+    "document_label_ar": "قائمة رسمية",
+    "document_date": null,
+    "public_card_state": "CITATION_CARD"
+   },
+   "basis": "title: governed 32_QUAL_LITERATURE PA-CBY-PROV-001 title_or_event 'Companies and exchange establishments and remittance agents licensed for 2026', object_type OFFICIAL_CURRENT_ROSTER_PDF, date_or_period 2026; PUC-EXCH-2026-01 'Official 2026 annual roster', 'OFFICIAL_11_PAGE_PDF'; Arabic class names from CBY-ROSTER-2026-* rows (شركات الصرافة، منشآت الصرافة الفردية، وكلاء الحوالات) | type: current document_type 'provider-status instrument' | date: 2026 is the roster year, not a governed issue date | publisher: locator host is cby-ye.com / english.cby-ye.com (Lead rule)",
+   "note": "The year is already in the document's own title, so no parenthetical period is added (same treatment as the annual reports). Both language titles render the governed English gloss; the PDF's own Arabic heading was not read. document_date null: the roster's issue date is not governed."
+  },
+  {
+   "source_id": "SRC-CBY-EXCH-LIST-2025-001",
+   "old": {
+    "display_title": null,
+    "display_title_ar": null,
+    "publisher": null,
+    "public_card_state": "LOCATOR_ONLY",
+    "retrieval_date": null
+   },
+   "new": {
+    "display_title": "Roster of exchange companies, exchange establishments and remittance agents (2025)",
+    "display_title_ar": "قائمة شركات ومنشآت الصرافة ووكلاء الحوالات (2025)",
+    "publisher": "Central Bank of Yemen — Aden",
+    "publisher_ar": "البنك المركزي اليمني – عدن",
+    "document_label": "Official list or roster",
+    "document_label_ar": "قائمة رسمية",
+    "document_date": null,
+    "public_card_state": "CITATION_CARD"
+   },
+   "basis": "descriptive, governed facts only: PBL-2025-001..004 (official roster, reference_year 2025, three sections: exchange companies, exchange establishments, remittance agents; PRIMARY_OFFICIAL_ROSTER_VISUALLY_VERIFIED); DS-PROVIDER-BASELINE-2025 | type: current document_type 'provider-status instrument' | date: reference year only | publisher: locator host is cby-ye.com / english.cby-ye.com (Lead rule)",
+   "note": "Document's own title not governed and not fetched (governed facts identify the document). If the heading follows the 2026 roster, the Lead could align it to '... licensed for 2025' after checking the PDF."
+  },
+  {
+   "source_id": "SRC-CBY-UNLICENSED-EWALLET-2024-001",
+   "old": {
+    "display_title": null,
+    "display_title_ar": null,
+    "publisher": null,
+    "public_card_state": "LOCATOR_ONLY",
+    "retrieval_date": null
+   },
+   "new": {
+    "display_title": "Circular prohibiting dealings with unlicensed electronic wallets and payment services (26 June 2024)",
+    "display_title_ar": "تعميم بحظر التعامل مع محافظ إلكترونية وخدمات دفع إلكتروني غير مرخصة (26 يونيو 2024)",
+    "publisher": "Central Bank of Yemen — Aden",
+    "publisher_ar": "البنك المركزي اليمني – عدن",
+    "document_label": "Circular or instruction",
+    "document_label_ar": "تعميم أو تعليمات",
+    "document_date": "2024-06-26",
+    "public_card_state": "CITATION_CARD"
+   },
+   "basis": "title: NEG-EW-001..012 scope 'CBY circular prohibiting direct/indirect dealing'; PSE-001 'CBY directs banks and exchange businesses not to deal directly or indirectly with the listed unlicensed electronic-payment entities/services' (12 named wallets/services + any other unlicensed electronic financial service) | type: governed scope names it a circular (current document_type 'provider-status instrument' has no list equivalent) | date: NEG-EW source_date 2024-06-26 and PSE-001 event_date | publisher: locator host is cby-ye.com / english.cby-ye.com (Lead rule)",
+   "note": "Current document_type 'provider-status instrument' mapped to 'Circular or instruction' because the governed rows call the instrument a circular. Wallet names are not placed in the title."
+  },
+  {
+   "source_id": "SRC-CBY-FMIIP-WORKSHOP-2025",
+   "old": {
+    "display_title": null,
+    "display_title_ar": null,
+    "publisher": null,
+    "public_card_state": "LOCATOR_ONLY",
+    "retrieval_date": null
+   },
+   "new": {
+    "display_title": "Financial Market Infrastructure and Inclusion Project (FMIIP): workshop with the World Bank and UNDP (10 September 2025)",
+    "display_title_ar": "مشروع البنية التحتية للأسواق المالية والشمول المالي في اليمن (FMIIP): ورشة عمل مع البنك الدولي وبرنامج الأمم المتحدة الإنمائي (10 سبتمبر 2025)",
+    "publisher": "Central Bank of Yemen — Aden",
+    "publisher_ar": "البنك المركزي اليمني – عدن",
+    "document_label": "News release",
+    "document_label_ar": "بيان صحفي",
+    "document_date": null,
+    "public_card_state": "CITATION_CARD"
+   },
+   "basis": "title: PAYCUR-003 'CBY/World Bank/UNDP workshop states FPS/RTGS/interoperability programme ...' latest_period_or_date 2025-09-10; WCR-003 reference_period 2025-09-10 (Governor's statement); source_id names FMIIP; project name per RULES C; FMIIP = World Bank-funded, UNDP-implemented (REF-PAY-002) | type: news page (cby-ye.com/news) reporting an event | date: 2025-09-10 is the governed event/statement date, not a governed publication date | publisher: locator host is cby-ye.com / english.cby-ye.com (Lead rule)",
+   "note": "The link between this workshop and FMIIP rests on the Master's source ID plus PAYCUR-003 and REF-PAY-002, not on a read of the page headline. document_date left null because only the event date is governed."
+  },
+  {
+   "source_id": "SRC-CBY-PAYREPORT-H1-2025",
+   "old": {
+    "display_title": null,
+    "display_title_ar": null,
+    "publisher": null,
+    "public_card_state": "LOCATOR_ONLY",
+    "retrieval_date": null
+   },
+   "new": {
+    "display_title": "First Half Payment Report (2025)",
+    "display_title_ar": "تقرير المدفوعات (النصف الأول لعام 2025)",
+    "publisher": "Central Bank of Yemen — Aden",
+    "publisher_ar": "البنك المركزي اليمني – عدن",
+    "document_label": "Periodic statistical report",
+    "document_label_ar": "تقرير إحصائي دوري",
+    "document_date": null,
+    "public_card_state": "CITATION_CARD",
+    "retrieval_date": "2026-09-26"
+   },
+   "basis": "title: one WebFetch of primary_url on 26 Sep 2026 read Arabic title «تقرير المدفوعات - النصف الأول لعام 2025», English title 'FIRST HALF PAYMENT REPORT', source line 'Database CBY - PSD' / «قاعدة بيانات الإدارة العامة لنظم المدفوعات-البنك المركزي», reporting period first half of 2025; governed PAYCUR-002 'official H1 2025 payment report' | type: periodic payment-system report | date: only the reporting period is printed | publisher: locator host is cby-ye.com / english.cby-ye.com (Lead rule)",
+   "note": "additional_urls lists english.cby-ye.com/pages/27, but the 26 September 2026 read of that page showed only the 11 monthly POS releases, not this report; the Lead may want to recheck that locator."
+  },
+  {
+   "source_id": "SRC-CBY-PAYREPORT-Q3-2024",
+   "old": {
+    "display_title": null,
+    "display_title_ar": null,
+    "publisher": null,
+    "public_card_state": "LOCATOR_ONLY",
+    "retrieval_date": null
+   },
+   "new": {
+    "display_title": "Electronic Payments Report (third quarter of 2024)",
+    "display_title_ar": "تقرير المدفوعات الإلكترونية (الربع الثالث 2024)",
+    "publisher": "Central Bank of Yemen — Aden",
+    "publisher_ar": "البنك المركزي اليمني – عدن",
+    "document_label": "Periodic statistical report",
+    "document_label_ar": "تقرير إحصائي دوري",
+    "document_date": null,
+    "public_card_state": "CITATION_CARD",
+    "retrieval_date": "2026-09-26"
+   },
+   "basis": "title: one WebFetch of primary_url on 26 Sep 2026 read Arabic title «تقرير المدفوعات الإلكترونية الربع الثالث 2024», issuing department «الإدارة العامة لنظم المدفوعات» / 'The General Department of Payment Systems', reporting period third quarter 2024; governed OBS-00001..: 'The Q3 2024 bulletin' | type: periodic payment-system report | date: only the reporting period is printed | publisher: locator host is cby-ye.com / english.cby-ye.com (Lead rule)",
+   "note": "English title is a rendering of the Arabic heading (no English title reported). Governed caveats call this 'the Q3 2024 bulletin'; the document calls itself a report. additional_urls lists english.cby-ye.com/pages/27, which on 26 September 2026 listed only monthly POS releases."
+  },
+  {
+   "source_id": "SRC-CBY-POS-2025-03",
+   "old": {
+    "display_title": null,
+    "display_title_ar": null,
+    "publisher": null,
+    "public_card_state": "LOCATOR_ONLY",
+    "retrieval_date": null
+   },
+   "new": {
+    "display_title": "Monthly Point of Sale Transactions (March 2025)",
+    "display_title_ar": "معاملات نقاط البيع الشهرية (مارس 2025)",
+    "publisher": "Central Bank of Yemen — Aden",
+    "publisher_ar": "البنك المركزي اليمني – عدن",
+    "document_label": "Statistical release",
+    "document_label_ar": "إصدار إحصائي",
+    "document_date": null,
+    "public_card_state": "CITATION_CARD"
+   },
+   "basis": "title: Lead-verified label on english.cby-ye.com/pages/27 (26 Sep 2026) 'Monthly Point of Sale Transactions (March 2025)'; governed payments OBS rows period 2025-03, locator 'one-page monthly POS infographic'/'monthly report headline' | type: one-page monthly release | date: the month is the reference period; the release's own issue date is not governed | publisher: locator host is cby-ye.com / english.cby-ye.com (Lead rule)",
+   "note": "Arabic title renders the English-page label; the Arabic site's own label was not checked."
+  },
+  {
+   "source_id": "SRC-CBY-POS-2025-04",
+   "old": {
+    "display_title": null,
+    "display_title_ar": null,
+    "publisher": null,
+    "public_card_state": "LOCATOR_ONLY",
+    "retrieval_date": null
+   },
+   "new": {
+    "display_title": "Monthly Point of Sale Transactions (April 2025)",
+    "display_title_ar": "معاملات نقاط البيع الشهرية (أبريل 2025)",
+    "publisher": "Central Bank of Yemen — Aden",
+    "publisher_ar": "البنك المركزي اليمني – عدن",
+    "document_label": "Statistical release",
+    "document_label_ar": "إصدار إحصائي",
+    "document_date": null,
+    "public_card_state": "CITATION_CARD"
+   },
+   "basis": "title: Lead-verified label on english.cby-ye.com/pages/27 (26 Sep 2026) 'Monthly Point of Sale Transactions (April 2025)'; governed payments OBS rows period 2025-04, locator 'one-page monthly POS infographic'/'monthly report headline' | type: one-page monthly release | date: the month is the reference period; the release's own issue date is not governed | publisher: locator host is cby-ye.com / english.cby-ye.com (Lead rule)",
+   "note": "Arabic title renders the English-page label; the Arabic site's own label was not checked."
+  },
+  {
+   "source_id": "SRC-CBY-POS-2025-05",
+   "old": {
+    "display_title": null,
+    "display_title_ar": null,
+    "publisher": null,
+    "public_card_state": "LOCATOR_ONLY",
+    "retrieval_date": null
+   },
+   "new": {
+    "display_title": "Monthly Point of Sale Transactions (May 2025)",
+    "display_title_ar": "معاملات نقاط البيع الشهرية (مايو 2025)",
+    "publisher": "Central Bank of Yemen — Aden",
+    "publisher_ar": "البنك المركزي اليمني – عدن",
+    "document_label": "Statistical release",
+    "document_label_ar": "إصدار إحصائي",
+    "document_date": null,
+    "public_card_state": "CITATION_CARD"
+   },
+   "basis": "title: Lead-verified label on english.cby-ye.com/pages/27 (26 Sep 2026) 'Monthly Point of Sale Transactions (May 2025)'; governed payments OBS rows period 2025-05, locator 'one-page monthly POS infographic'/'monthly report headline' | type: one-page monthly release | date: the month is the reference period; the release's own issue date is not governed | publisher: locator host is cby-ye.com / english.cby-ye.com (Lead rule)",
+   "note": "Arabic title renders the English-page label; the Arabic site's own label was not checked."
+  },
+  {
+   "source_id": "SRC-CBY-POS-2025-06",
+   "old": {
+    "display_title": null,
+    "display_title_ar": null,
+    "publisher": null,
+    "public_card_state": "LOCATOR_ONLY",
+    "retrieval_date": null
+   },
+   "new": {
+    "display_title": "Monthly Point of Sale Transactions (June 2025)",
+    "display_title_ar": "معاملات نقاط البيع الشهرية (يونيو 2025)",
+    "publisher": "Central Bank of Yemen — Aden",
+    "publisher_ar": "البنك المركزي اليمني – عدن",
+    "document_label": "Statistical release",
+    "document_label_ar": "إصدار إحصائي",
+    "document_date": null,
+    "public_card_state": "CITATION_CARD"
+   },
+   "basis": "title: Lead-verified label on english.cby-ye.com/pages/27 (26 Sep 2026) 'Monthly Point of Sale Transactions (June 2025)'; governed payments OBS rows period 2025-06, locator 'one-page monthly POS infographic'/'monthly report headline' | type: one-page monthly release | date: the month is the reference period; the release's own issue date is not governed | publisher: locator host is cby-ye.com / english.cby-ye.com (Lead rule)",
+   "note": "Arabic title renders the English-page label; the Arabic site's own label was not checked."
+  },
+  {
+   "source_id": "SRC-CBY-POS-2025-07",
+   "old": {
+    "display_title": null,
+    "display_title_ar": null,
+    "publisher": null,
+    "public_card_state": "LOCATOR_ONLY",
+    "retrieval_date": null
+   },
+   "new": {
+    "display_title": "Monthly Point of Sale Transactions (July 2025)",
+    "display_title_ar": "معاملات نقاط البيع الشهرية (يوليو 2025)",
+    "publisher": "Central Bank of Yemen — Aden",
+    "publisher_ar": "البنك المركزي اليمني – عدن",
+    "document_label": "Statistical release",
+    "document_label_ar": "إصدار إحصائي",
+    "document_date": null,
+    "public_card_state": "CITATION_CARD"
+   },
+   "basis": "title: Lead-verified label on english.cby-ye.com/pages/27 (26 Sep 2026) 'Monthly Point of Sale Transactions (Jul 2025)' — month normalised to full name; governed payments OBS rows period 2025-07, locator 'one-page monthly POS infographic'/'monthly report headline' | type: one-page monthly release | date: the month is the reference period; the release's own issue date is not governed | publisher: locator host is cby-ye.com / english.cby-ye.com (Lead rule)",
+   "note": "Arabic title renders the English-page label; the Arabic site's own label was not checked."
+  },
+  {
+   "source_id": "SRC-CBY-POS-2025-08",
+   "old": {
+    "display_title": null,
+    "display_title_ar": null,
+    "publisher": null,
+    "public_card_state": "LOCATOR_ONLY",
+    "retrieval_date": null
+   },
+   "new": {
+    "display_title": "Monthly Point of Sale Transactions (August 2025)",
+    "display_title_ar": "معاملات نقاط البيع الشهرية (أغسطس 2025)",
+    "publisher": "Central Bank of Yemen — Aden",
+    "publisher_ar": "البنك المركزي اليمني – عدن",
+    "document_label": "Statistical release",
+    "document_label_ar": "إصدار إحصائي",
+    "document_date": null,
+    "public_card_state": "CITATION_CARD"
+   },
+   "basis": "title: Lead-verified label on english.cby-ye.com/pages/27 (26 Sep 2026) 'Monthly Point of Sale Transactions (Aug 2025)' — month normalised to full name; governed payments OBS rows period 2025-08, locator 'one-page monthly POS infographic'/'monthly report headline' | type: one-page monthly release | date: the month is the reference period; the release's own issue date is not governed | publisher: locator host is cby-ye.com / english.cby-ye.com (Lead rule)",
+   "note": "Arabic title renders the English-page label; the Arabic site's own label was not checked."
+  },
+  {
+   "source_id": "SRC-CBY-POS-2025-09",
+   "old": {
+    "display_title": null,
+    "display_title_ar": null,
+    "publisher": null,
+    "public_card_state": "LOCATOR_ONLY",
+    "retrieval_date": null
+   },
+   "new": {
+    "display_title": "Monthly Point of Sale Transactions (September 2025)",
+    "display_title_ar": "معاملات نقاط البيع الشهرية (سبتمبر 2025)",
+    "publisher": "Central Bank of Yemen — Aden",
+    "publisher_ar": "البنك المركزي اليمني – عدن",
+    "document_label": "Statistical release",
+    "document_label_ar": "إصدار إحصائي",
+    "document_date": null,
+    "public_card_state": "CITATION_CARD"
+   },
+   "basis": "title: Lead-verified label on english.cby-ye.com/pages/27 (26 Sep 2026) 'Monthly Point of Sale Transactions (Sep 2025)' — month normalised to full name; governed payments OBS rows period 2025-09, locator 'one-page monthly POS infographic'/'monthly report headline' | type: one-page monthly release | date: the month is the reference period; the release's own issue date is not governed | publisher: locator host is cby-ye.com / english.cby-ye.com (Lead rule)",
+   "note": "Arabic title renders the English-page label; the Arabic site's own label was not checked."
+  },
+  {
+   "source_id": "SRC-CBY-POS-2025-10",
+   "old": {
+    "display_title": null,
+    "display_title_ar": null,
+    "publisher": null,
+    "public_card_state": "LOCATOR_ONLY",
+    "retrieval_date": null
+   },
+   "new": {
+    "display_title": "Monthly Point of Sale Transactions (October 2025)",
+    "display_title_ar": "معاملات نقاط البيع الشهرية (أكتوبر 2025)",
+    "publisher": "Central Bank of Yemen — Aden",
+    "publisher_ar": "البنك المركزي اليمني – عدن",
+    "document_label": "Statistical release",
+    "document_label_ar": "إصدار إحصائي",
+    "document_date": null,
+    "public_card_state": "CITATION_CARD"
+   },
+   "basis": "title: Lead-verified label on english.cby-ye.com/pages/27 (26 Sep 2026) 'Monthly Point of Sale Transactions (Oct 2025)' — month normalised to full name; governed payments OBS rows period 2025-10, locator 'one-page monthly POS infographic'/'monthly report headline' | type: one-page monthly release | date: the month is the reference period; the release's own issue date is not governed | publisher: locator host is cby-ye.com / english.cby-ye.com (Lead rule)",
+   "note": "Arabic title renders the English-page label; the Arabic site's own label was not checked."
+  },
+  {
+   "source_id": "SRC-CBY-POS-2025-11",
+   "old": {
+    "display_title": null,
+    "display_title_ar": null,
+    "publisher": null,
+    "public_card_state": "LOCATOR_ONLY",
+    "retrieval_date": null
+   },
+   "new": {
+    "display_title": "Monthly Point of Sale Transactions (November 2025)",
+    "display_title_ar": "معاملات نقاط البيع الشهرية (نوفمبر 2025)",
+    "publisher": "Central Bank of Yemen — Aden",
+    "publisher_ar": "البنك المركزي اليمني – عدن",
+    "document_label": "Statistical release",
+    "document_label_ar": "إصدار إحصائي",
+    "document_date": null,
+    "public_card_state": "CITATION_CARD"
+   },
+   "basis": "title: Lead-verified label on english.cby-ye.com/pages/27 (26 Sep 2026) 'Monthly Point of Sale Transactions (Nov 2025)' — month normalised to full name; governed payments OBS rows period 2025-11, locator 'one-page monthly POS infographic'/'monthly report headline' | type: one-page monthly release | date: the month is the reference period; the release's own issue date is not governed | publisher: locator host is cby-ye.com / english.cby-ye.com (Lead rule)",
+   "note": "Arabic title renders the English-page label; the Arabic site's own label was not checked."
+  },
+  {
+   "source_id": "SRC-CBY-POS-2025-12",
+   "old": {
+    "display_title": null,
+    "display_title_ar": null,
+    "publisher": null,
+    "public_card_state": "LOCATOR_ONLY",
+    "retrieval_date": null
+   },
+   "new": {
+    "display_title": "Monthly Point of Sale Transactions (December 2025)",
+    "display_title_ar": "معاملات نقاط البيع الشهرية (ديسمبر 2025)",
+    "publisher": "Central Bank of Yemen — Aden",
+    "publisher_ar": "البنك المركزي اليمني – عدن",
+    "document_label": "Statistical release",
+    "document_label_ar": "إصدار إحصائي",
+    "document_date": null,
+    "public_card_state": "CITATION_CARD"
+   },
+   "basis": "title: Lead-verified label on english.cby-ye.com/pages/27 (26 Sep 2026) 'Monthly Point of Sale Transactions (Dec 2025)' — month normalised to full name; governed payments OBS rows period 2025-12, locator 'one-page monthly POS infographic'/'monthly report headline' | type: one-page monthly release | date: the month is the reference period; the release's own issue date is not governed | publisher: locator host is cby-ye.com / english.cby-ye.com (Lead rule)",
+   "note": "Arabic title renders the English-page label; the Arabic site's own label was not checked."
+  },
+  {
+   "source_id": "SRC-CBY-POS-2026-01",
+   "old": {
+    "display_title": null,
+    "display_title_ar": null,
+    "publisher": null,
+    "public_card_state": "LOCATOR_ONLY",
+    "retrieval_date": null
+   },
+   "new": {
+    "display_title": "Monthly Point of Sale Transactions (January 2026)",
+    "display_title_ar": "معاملات نقاط البيع الشهرية (يناير 2026)",
+    "publisher": "Central Bank of Yemen — Aden",
+    "publisher_ar": "البنك المركزي اليمني – عدن",
+    "document_label": "Statistical release",
+    "document_label_ar": "إصدار إحصائي",
+    "document_date": null,
+    "public_card_state": "CITATION_CARD"
+   },
+   "basis": "title: Lead-verified label on english.cby-ye.com/pages/27 (26 Sep 2026) 'Monthly Point of Sale Transactions (Jan 2026)' — month normalised to full name; governed payments OBS rows period 2026-01, locator 'one-page monthly POS infographic'/'monthly report headline' | type: one-page monthly release | date: the month is the reference period; the release's own issue date is not governed | publisher: locator host is cby-ye.com / english.cby-ye.com (Lead rule)",
+   "note": "Arabic title renders the English-page label; the Arabic site's own label was not checked."
+  },
+  {
+   "source_id": "SRC-CBY-POS-PUBLICATION-PAGE-2026-001",
+   "old": {
+    "display_title": null,
+    "display_title_ar": null,
+    "publisher": null,
+    "public_card_state": "LOCATOR_ONLY",
+    "retrieval_date": null
+   },
+   "new": {
+    "display_title": "Monthly Point of Sale Transactions: publication page (as checked on 26 September 2026)",
+    "display_title_ar": "معاملات نقاط البيع الشهرية: صفحة الإصدارات (كما اطُّلع عليها في 26 سبتمبر 2026)",
+    "publisher": "Central Bank of Yemen — Aden",
+    "publisher_ar": "البنك المركزي اليمني – عدن",
+    "document_label": "Web page",
+    "document_label_ar": "صفحة إلكترونية",
+    "document_date": null,
+    "public_card_state": "CITATION_CARD",
+    "retrieval_date": "2026-09-26"
+   },
+   "basis": "title: one WebFetch of primary_url on 26 Sep 2026 read browser title '>> Monthly Point of Sale Transactions << | Central Bank Of Yemen - Aden', page heading 'Monthly Point of Sale Transactions', 11 links from March 2025 to Jan 2026 (matches the Lead's 26 Sep check and PAYCUR-001) | type: web listing page | date: a live page has no issue date | publisher: locator host is cby-ye.com / english.cby-ye.com (Lead rule)",
+   "note": "Check date follows RULES C for checks made in this window. Governed PAYCUR-001 records an earlier recheck on 9 September 2026 with the same latest month (January 2026)."
+  },
+  {
+   "source_id": "SRC-CBY-PAY-BOARD-2026-001",
+   "old": {
+    "display_title": null,
+    "display_title_ar": null,
+    "publisher": "Central Bank of Yemen — Aden",
+    "public_card_state": "LOCATOR_ONLY",
+    "retrieval_date": null
+   },
+   "new": {
+    "display_title": "Board of Directors' decisions on a national QR standard, e-wallet interconnection and the fast payment system operator (29 March 2026)",
+    "display_title_ar": "قرارات مجلس الإدارة بشأن معيار QR وطني وربط المحافظ الإلكترونية والشركة المشغّلة لنظام الدفع السريع (29 مارس 2026)",
+    "publisher": "Central Bank of Yemen — Aden",
+    "publisher_ar": "البنك المركزي اليمني – عدن",
+    "document_label": "News release",
+    "document_label_ar": "بيان صحفي",
+    "document_date": null,
+    "public_card_state": "CITATION_CARD"
+   },
+   "basis": "title: PA-CBY-PAY-001 title_or_event 'CBY Board decisions on national QR, e-wallet interconnection and FPS operator participation', date 2026-03-29, object_type OFFICIAL_BOARD_DECISION_EVENT; REF-PAY-008; Arabic phrase «معيار QR وطني وربط المحافظ الإلكترونية» from governed page copy | type: news page reporting board decisions ('CBY reports board approval') | date: 2026-03-29 is the governed decision date; the page's own date is not governed | publisher: current value already 'Central Bank of Yemen — Aden'",
+   "note": "Typed as News release because the locator is a news page that reports the decisions; if the Lead treats the page as the decision instrument, 'Regulatory decision' with document_date 2026-03-29 is the alternative."
+  },
+  {
+   "source_id": "SRC-CBY-DIGITAL-EXPO-2026-001",
+   "old": {
+    "display_title": null,
+    "display_title_ar": null,
+    "publisher": "Central Bank of Yemen — Aden",
+    "public_card_state": "LOCATOR_ONLY",
+    "retrieval_date": null
+   },
+   "new": {
+    "display_title": "Digital payments exhibition, with remarks on the unified transfer network (22 January 2026)",
+    "display_title_ar": "معرض المدفوعات الرقمية، مع تصريحات بشأن الشبكة الموحدة للحوالات (22 يناير 2026)",
+    "publisher": "Central Bank of Yemen — Aden",
+    "publisher_ar": "البنك المركزي اليمني – عدن",
+    "document_label": "News release",
+    "document_label_ar": "بيان صحفي",
+    "document_date": null,
+    "public_card_state": "CITATION_CARD"
+   },
+   "basis": "title: PA-CBY-PAY-002 'Digital-payment exhibition / unified-network activity signal', date '2026-01-22; reports 2024 activity'; REF-PAY-009 (statements attributed to the Director General of Payment Systems); governed AR «معرض المدفوعات الرقمية» | type: news page reporting an event | date: event date only | publisher: current value already 'Central Bank of Yemen — Aden'",
+   "note": ""
+  },
+  {
+   "source_id": "SRC-CBY-BANK-NETWORK-MTG-2026-001",
+   "old": {
+    "display_title": null,
+    "display_title_ar": null,
+    "publisher": "Central Bank of Yemen — Aden",
+    "public_card_state": "LOCATOR_ONLY",
+    "retrieval_date": null
+   },
+   "new": {
+    "display_title": "Meeting on completing integration among banks and financial-service providers through the unified network (17 June 2026)",
+    "display_title_ar": "اجتماع بشأن استكمال الربط بين البنوك ومقدمي الخدمات المالية عبر الشبكة الموحدة (17 يونيو 2026)",
+    "publisher": "Central Bank of Yemen — Aden",
+    "publisher_ar": "البنك المركزي اليمني – عدن",
+    "document_label": "News release",
+    "document_label_ar": "بيان صحفي",
+    "document_date": null,
+    "public_card_state": "CITATION_CARD"
+   },
+   "basis": "title: REF-PAY-010 'CBY banking/payment integration meeting | 2026-06-17 | ... completion of integration/linking among banks and different financial-service providers'; REF-PAY-006; PAYCUR-004 | type: news page reporting a meeting | date: event date only | publisher: current value already 'Central Bank of Yemen — Aden'",
+   "note": ""
+  },
+  {
+   "source_id": "SRC-CBY-UNIFIED-NET-2026-001",
+   "old": {
+    "display_title": null,
+    "display_title_ar": null,
+    "publisher": "Central Bank of Yemen — Aden",
+    "public_card_state": "LOCATOR_ONLY",
+    "retrieval_date": null
+   },
+   "new": {
+    "display_title": "Unified Money Network company: restructuring, capital increase and a wider bank shareholder base (27 July 2026)",
+    "display_title_ar": "شركة الشبكة الموحدة للأموال: إعادة الهيكلة وزيادة رأس المال وتوسيع قاعدة البنوك المساهمة (27 يوليو 2026)",
+    "publisher": "Central Bank of Yemen — Aden",
+    "publisher_ar": "البنك المركزي اليمني – عدن",
+    "document_label": "News release",
+    "document_label_ar": "بيان صحفي",
+    "document_date": null,
+    "public_card_state": "CITATION_CARD"
+   },
+   "basis": "title: REF-PAY-011 'Unified Money Network corporate-governance event | 2026-07-27 | ... restructuring, capital increase and expansion of shareholders with banks joining'; PAYCUR-005; governed AR phrase «إعادة الهيكلة وزيادة رأس المال وتوسيع قاعدة البنوك المساهمة» | type: news page | date: event date only | publisher: current value already 'Central Bank of Yemen — Aden'",
+   "note": "The company's Arabic name is not governed; «شركة الشبكة الموحدة» is a neutral rendering for the Lead or Arabic editor to confirm. | Lead: Company name verified on 26 Sep 2026 against the source page (cby-ye.com/news/957): «شركة الشبكة الموحدة للأموال»."
+  },
+  {
+   "source_id": "SRC-CBY-YPCC-FOUND-2026-001",
+   "old": {
+    "display_title": null,
+    "display_title_ar": null,
+    "publisher": "Central Bank of Yemen — Aden",
+    "public_card_state": "LOCATOR_ONLY",
+    "retrieval_date": null
+   },
+   "new": {
+    "display_title": "Founding general assembly of the Yemeni Payments and Clearing Company (3 August 2026)",
+    "display_title_ar": "الجمعية التأسيسية للشركة اليمنية للمدفوعات والمقاصة (3 أغسطس 2026)",
+    "publisher": "Central Bank of Yemen — Aden",
+    "publisher_ar": "البنك المركزي اليمني – عدن",
+    "document_label": "News release",
+    "document_label_ar": "بيان صحفي",
+    "document_date": null,
+    "public_card_state": "CITATION_CARD"
+   },
+   "basis": "title: REF-PAY-012 'Founding assembly of Yemen Payments and Clearing Company | 2026-08-03'; PAYCUR-006; company name per RULES C (EN 'Yemeni Payments and Clearing Company', AR «الشركة اليمنية للمدفوعات والمقاصة»); governed AR «الجمعية التأسيسية» | type: news page | date: event date only | publisher: current value already 'Central Bank of Yemen — Aden'",
+   "note": "Governed rows and page copy also use 'Yemen Payments and Clearing Company' / «شركة اليمن للمدفوعات والمقاصة»; the RULES C form is used here."
+  },
+  {
+   "source_id": "SRC-CBY-YPCC-BOARD-2026-001",
+   "old": {
+    "display_title": null,
+    "display_title_ar": null,
+    "publisher": "Central Bank of Yemen — Aden",
+    "public_card_state": "LOCATOR_ONLY",
+    "retrieval_date": null
+   },
+   "new": {
+    "display_title": "First board meeting of the Yemeni Payments and Clearing Company (4 August 2026)",
+    "display_title_ar": "أول اجتماع لمجلس إدارة الشركة اليمنية للمدفوعات والمقاصة (4 أغسطس 2026)",
+    "publisher": "Central Bank of Yemen — Aden",
+    "publisher_ar": "البنك المركزي اليمني – عدن",
+    "document_label": "News release",
+    "document_label_ar": "بيان صحفي",
+    "document_date": null,
+    "public_card_state": "CITATION_CARD"
+   },
+   "basis": "title: REF-PAY-013 'First YPCC board meeting | 2026-08-04'; REF-PAY-007; PAYCUR-006; governed AR «أول اجتماع لمجلس إدارة»; company name per RULES C | type: news page | date: event date only | publisher: current value already 'Central Bank of Yemen — Aden'",
+   "note": ""
+  },
+  {
+   "source_id": "SRC-CBY-GMW-2023-001",
+   "old": {
+    "display_title": null,
+    "display_title_ar": null,
+    "publisher": null,
+    "public_card_state": "LOCATOR_ONLY",
+    "retrieval_date": null
+   },
+   "new": {
+    "display_title": "Global Money Week 2023: launch and activity programme (20–26 March 2023)",
+    "display_title_ar": "الأسبوع العالمي للمال 2023: الإطلاق وبرنامج الأنشطة (20–26 مارس 2023)",
+    "publisher": "Central Bank of Yemen — Aden",
+    "publisher_ar": "البنك المركزي اليمني – عدن",
+    "document_label": "News release",
+    "document_label_ar": "بيان صحفي",
+    "document_date": null,
+    "public_card_state": "CITATION_CARD"
+   },
+   "basis": "title: PA-CBY-FL-001 title_or_event 'Global Money Week 2023 — launch and activity programme', date_or_period 2023-03-20 to 2023-03-26; governed AR «الأسبوع العالمي للمال» (CLM-013) | type: news page recording a programme | date: programme period only | publisher: locator host is cby-ye.com / english.cby-ye.com (Lead rule)",
+   "note": ""
+  },
+  {
+   "source_id": "SRC-CBY-GMW-2024-001",
+   "old": {
+    "display_title": null,
+    "display_title_ar": null,
+    "publisher": null,
+    "public_card_state": "LOCATOR_ONLY",
+    "retrieval_date": null
+   },
+   "new": {
+    "display_title": "Launch of Global Money Week 2024 (18 March 2024)",
+    "display_title_ar": "إطلاق الأسبوع العالمي للمال 2024 (18 مارس 2024)",
+    "publisher": "Central Bank of Yemen — Aden",
+    "publisher_ar": "البنك المركزي اليمني – عدن",
+    "document_label": "News release",
+    "document_label_ar": "بيان صحفي",
+    "document_date": null,
+    "public_card_state": "CITATION_CARD"
+   },
+   "basis": "title: PA-CBY-FL-002 title_or_event 'Global Money Week 2024 — launch', date_or_period 2024-03-18 | type: news page | date: event date only | publisher: locator host is cby-ye.com / english.cby-ye.com (Lead rule)",
+   "note": ""
+  },
+  {
+   "source_id": "SRC-CBY-GMW-2024-CLOSE-001",
+   "old": {
+    "display_title": null,
+    "display_title_ar": null,
+    "publisher": null,
+    "public_card_state": "LOCATOR_ONLY",
+    "retrieval_date": null
+   },
+   "new": {
+    "display_title": "Conclusion of Global Money Week 2024 and recognition of participating institutions (3 April 2024)",
+    "display_title_ar": "اختتام الأسبوع العالمي للمال 2024 وتكريم الجهات المشاركة (3 أبريل 2024)",
+    "publisher": "Central Bank of Yemen — Aden",
+    "publisher_ar": "البنك المركزي اليمني – عدن",
+    "document_label": "News release",
+    "document_label_ar": "بيان صحفي",
+    "document_date": null,
+    "public_card_state": "CITATION_CARD"
+   },
+   "basis": "title: PA-CBY-FL-003 title_or_event 'Global Money Week 2024 — completion / recognition', date_or_period 2024-04-03 ('completion of the 18–24 March 2024 activities and recognition of participating banks, financial and educational institutions and the organizing team') | type: news page | date: governed record date is the event/record date, not a governed publication date | publisher: locator host is cby-ye.com / english.cby-ye.com (Lead rule)",
+   "note": ""
+  },
+  {
+   "source_id": "SRC-CBY-GMW-2025-001",
+   "old": {
+    "display_title": null,
+    "display_title_ar": null,
+    "publisher": null,
+    "public_card_state": "LOCATOR_ONLY",
+    "retrieval_date": null
+   },
+   "new": {
+    "display_title": "Global Money Week 2025: launch and programme (16–22 March 2025)",
+    "display_title_ar": "الأسبوع العالمي للمال 2025: الإطلاق والبرنامج (16–22 مارس 2025)",
+    "publisher": "Central Bank of Yemen — Aden",
+    "publisher_ar": "البنك المركزي اليمني – عدن",
+    "document_label": "News release",
+    "document_label_ar": "بيان صحفي",
+    "document_date": null,
+    "public_card_state": "CITATION_CARD"
+   },
+   "basis": "title: PA-CBY-FL-004 title_or_event 'Global Money Week 2025 — launch / programme', date_or_period 2025-03-16 to 2025-03-22 | type: news page | date: programme period only | publisher: locator host is cby-ye.com / english.cby-ye.com (Lead rule)",
+   "note": ""
+  },
+  {
+   "source_id": "SRC-CBY-FCP-INSTR-2023-001",
+   "old": {
+    "display_title": null,
+    "display_title_ar": null,
+    "publisher": null,
+    "public_card_state": "LOCATOR_ONLY",
+    "retrieval_date": null
+   },
+   "new": {
+    "display_title": "Regulatory Instructions for Financial Consumer Protection (issuance announced 28 August 2023)",
+    "display_title_ar": "التعليمات التنظيمية لحماية المستهلك المالي (أُعلن إصدارها في 28 أغسطس 2023)",
+    "publisher": "Central Bank of Yemen — Aden",
+    "publisher_ar": "البنك المركزي اليمني – عدن",
+    "document_label": "Circular or instruction",
+    "document_label_ar": "تعميم أو تعليمات",
+    "document_date": "2023-08-28",
+    "public_card_state": "CITATION_CARD"
+   },
+   "basis": "title: PA-CBY-FCP-001 title_or_event 'Regulatory Instructions for Financial Consumer Protection', date_or_period '2023-08-28 news; instructions listed as 589-20-8-2023'; REF-FCP-001; FCP-ARCH-001 '2023-08-28 issuance notice' | type: current document_type 'instruction/circular' | date: 2023-08-28 is the governed date of the primary locator (the issuance notice, cby-ye.com/news/567) | publisher: locator host is cby-ye.com / english.cby-ye.com (Lead rule)",
+   "note": "The primary locator is the issuance notice; the instructions PDF is the additional URL. The instructions' own date is not governed (the Master records only the listing '589-20-8-2023', which is not interpreted here), so the title says 'issuance announced'. Arabic title is a rendering; the instrument's own Arabic title was not read."
+  },
+  {
+   "source_id": "SRC-CBY-FCP-AWARE-2024-001",
+   "old": {
+    "display_title": null,
+    "display_title_ar": null,
+    "publisher": null,
+    "public_card_state": "LOCATOR_ONLY",
+    "retrieval_date": null
+   },
+   "new": {
+    "display_title": "Awareness brochure 'Financial Consumer Protection in Yemen' issued during Global Money Week (23 March 2024)",
+    "display_title_ar": "إصدار الكتيّب التوعوي «حماية المستهلك المالي في اليمن» خلال الأسبوع العالمي للمال (23 مارس 2024)",
+    "publisher": "Central Bank of Yemen — Aden",
+    "publisher_ar": "البنك المركزي اليمني – عدن",
+    "document_label": "News release",
+    "document_label_ar": "بيان صحفي",
+    "document_date": null,
+    "public_card_state": "CITATION_CARD"
+   },
+   "basis": "title: PA-CBY-FCP-002 title_or_event 'Financial Consumer Protection in Yemen — awareness brochure', date 2024-03-23, 'CBY records issuance of an awareness brochure titled 'Financial Consumer Protection in Yemen' during Global Money Week', object_type OFFICIAL_AWARENESS_OUTPUT | type: news page recording the issuance | date: 2024-03-23 is the brochure-issuance date; the news page's own date is not governed | publisher: locator host is cby-ye.com / english.cby-ye.com (Lead rule)",
+   "note": "The brochure's Arabic title is not governed; «حماية المستهلك المالي في اليمن» renders the governed English title. Same brochure as SRC-CBY-FCP-BROCHURE-2024-001 (whose additional URL is this news page)."
+  },
+  {
+   "source_id": "SRC-CBY-FCP-BROCHURE-2024-001",
+   "old": {
+    "display_title": null,
+    "display_title_ar": null,
+    "publisher": null,
+    "public_card_state": "LOCATOR_ONLY",
+    "retrieval_date": null
+   },
+   "new": {
+    "display_title": "Financial Consumer Protection in Yemen (awareness brochure, 23 March 2024)",
+    "display_title_ar": "حماية المستهلك المالي في اليمن (كتيّب توعوي، 23 مارس 2024)",
+    "publisher": "Central Bank of Yemen — Aden",
+    "publisher_ar": "البنك المركزي اليمني – عدن",
+    "document_label": "Guidance or awareness material",
+    "document_label_ar": "مواد إرشادية أو توعوية",
+    "document_date": "2024-03-23",
+    "public_card_state": "CITATION_CARD"
+   },
+   "basis": "title: brochure title 'Financial Consumer Protection in Yemen' (PA-CBY-FCP-002, PA-CBY-FCP-003); FCP-ARCH-002 'Brochure issued 2024-03-23'; EO CLM-011 method 'Official CBY awareness/guidance brochure' | type: awareness/guidance brochure | date: FCP-ARCH-002 issue date | publisher: locator host is cby-ye.com / english.cby-ye.com (Lead rule)",
+   "note": "Arabic title renders the governed English title; the brochure's printed Arabic title was not read."
+  },
+  {
+   "source_id": "SRC-CBY-PSP-RULES-2022-001",
+   "old": {
+    "display_title": null,
+    "display_title_ar": null,
+    "publisher": null,
+    "public_card_state": "LOCATOR_ONLY",
+    "retrieval_date": null
+   },
+   "new": {
+    "display_title": "Instructions governing payment service providers and payment system operators (14 September 2022)",
+    "display_title_ar": "تعليمات بشأن مقدمي خدمات الدفع ومشغلي أنظمة الدفع (14 سبتمبر 2022)",
+    "publisher": "Central Bank of Yemen — Aden",
+    "publisher_ar": "البنك المركزي اليمني – عدن",
+    "document_label": "Regulation",
+    "document_label_ar": "لائحة تنظيمية",
+    "document_date": "2022-09-14",
+    "public_card_state": "CITATION_CARD"
+   },
+   "basis": "title: PA-CBY-PSP-001 title_or_event 'Instructions governing payment service providers and/or payment system operators/managers', date_or_period 2022-09-14, object_type OFFICIAL_REGULATORY_INSTRUMENT | type: current document_type 'regulation' | date: PA-CBY-PSP-001 instrument date; DS-PRIMARY-AUTHORITY period_min 2022-09-14 | publisher: locator host is cby-ye.com / english.cby-ye.com (Lead rule)",
+   "note": "The governed title hedges ('and/or', 'operators/managers'); the exact title is not verified and the Lead may wish to check the PDF or the news page (additional URL). Type follows the current value 'regulation'; the FCP and e-money instructions are typed 'Circular or instruction' from their current values, so the Lead may prefer to align all three."
+  },
+  {
+   "source_id": "SRC-CBY-EMONEY-2023-001",
+   "old": {
+    "display_title": null,
+    "display_title_ar": null,
+    "publisher": null,
+    "public_card_state": "LOCATOR_ONLY",
+    "retrieval_date": null
+   },
+   "new": {
+    "display_title": "Instructions on mobile e-money services provided by non-bank financial institutions (9 August 2023)",
+    "display_title_ar": "تعليمات خدمات النقود الإلكترونية عبر الهاتف المحمول التي تقدمها المؤسسات المالية غير المصرفية (9 أغسطس 2023)",
+    "publisher": "Central Bank of Yemen — Aden",
+    "publisher_ar": "البنك المركزي اليمني – عدن",
+    "document_label": "Circular or instruction",
+    "document_label_ar": "تعميم أو تعليمات",
+    "document_date": "2023-08-09",
+    "public_card_state": "CITATION_CARD"
+   },
+   "basis": "title: PA-CBY-EMONEY-001 'Mobile e-money instructions for non-bank financial institutions', date 2023-08-09; EMR-001 'CBY issued instructions governing mobile e-money services provided by non-bank financial institutions subject to CBY supervision'; REF-EMONEY-001 | type: current document_type 'instruction/circular' | date: governed issuance date (EMR-001, REF-EMONEY-001) | publisher: locator host is cby-ye.com / english.cby-ye.com (Lead rule)",
+   "note": "Descriptive rendering of the governed title; the instrument's own Arabic title was not read."
+  },
+  {
+   "source_id": "SRC-CBY-EMONEY-AMD-2025-001",
+   "old": {
+    "display_title": null,
+    "display_title_ar": null,
+    "publisher": null,
+    "public_card_state": "LOCATOR_ONLY",
+    "retrieval_date": null
+   },
+   "new": {
+    "display_title": "Governor's Decision No. 4 of 2025 amending the mobile e-money instructions (9 July 2025)",
+    "display_title_ar": "قرار المحافظ رقم (4) لسنة 2025 بتعديل تعليمات خدمات النقود الإلكترونية عبر الهاتف المحمول (9 يوليو 2025)",
+    "publisher": "Central Bank of Yemen — Aden",
+    "publisher_ar": "البنك المركزي اليمني – عدن",
+    "document_label": "Regulatory decision",
+    "document_label_ar": "قرار تنظيمي",
+    "document_date": "2025-07-09",
+    "public_card_state": "CITATION_CARD"
+   },
+   "basis": "title: PA-CBY-EMONEY-002 'Governor Decision No. 4 of 2025 — amendment to mobile e-money rules', date 2025-07-09, object_type OFFICIAL_SIGNED_AMENDMENT_DECISION; REF-EMONEY-002 | type: signed amending decision | date: EMR-012 'takes effect from the date of issuance' 2025-07-09 | publisher: locator host is cby-ye.com / english.cby-ye.com (Lead rule)",
+   "note": "Current document_type is 'decision/enforcement', but the instrument amends rules and enforces nothing against a named party, so it maps to 'Regulatory decision' rather than 'Enforcement decision'."
+  },
+  {
+   "source_id": "SRC-CBY-DEC-23-2024-001",
+   "old": {
+    "display_title": "Central Bank of Yemen — Governor's Decision No. 23 of 2024 on domestic money-transfer activity (26 June 2024; ref. 343/CBY/2024)",
+    "display_title_ar": "البنك المركزي اليمني — قرار المحافظ رقم (23) لسنة 2024 بشأن مزاولة نشاط التحويلات المالية الداخلية (26 يونيو 2024؛ المرجع 343/CBY/2024)",
+    "publisher": "Central Bank of Yemen — Aden",
+    "public_card_state": "FULL_PUBLIC_CARD",
+    "retrieval_date": "2026-09-26"
+   },
+   "new": {
+    "display_title": "Governor's Decision No. 23 of 2024 on domestic money-transfer activity (26 June 2024; ref. 343/CBY/2024)",
+    "display_title_ar": "قرار المحافظ رقم (23) لسنة 2024 بشأن مزاولة نشاط التحويلات المالية الداخلية (26 يونيو 2024؛ المرجع 343/CBY/2024)",
+    "publisher": "Central Bank of Yemen — Aden",
+    "publisher_ar": "البنك المركزي اليمني – عدن",
+    "document_label": "Regulatory decision",
+    "document_label_ar": "قرار تنظيمي",
+    "document_date": "2024-06-26"
+   },
+   "basis": "title: current governed display_title/display_title_ar with the publisher prefix removed | type: current document_type 'regulatory decision' | date: date in current governed title; REF-PAY-001 date 2024-06-26 | publisher: current value already 'Central Bank of Yemen — Aden'",
+   "note": "Format-only change (publisher prefix dropped because publisher is a separate field). Reference number kept because it is governed and aids citation."
+  },
+  {
+   "source_id": "SRC-CBY-AR2025-BOP",
+   "old": {
+    "display_title": "Central Bank of Yemen — Annual Report 2025",
+    "display_title_ar": "البنك المركزي اليمني — التقرير السنوي 2025",
+    "publisher": "Central Bank of Yemen — Aden",
+    "public_card_state": "FULL_PUBLIC_CARD",
+    "retrieval_date": null
+   },
+   "new": {
+    "display_title": "Annual Report 2025",
+    "display_title_ar": "التقرير السنوي 2025",
+    "publisher": "Central Bank of Yemen — Aden",
+    "publisher_ar": "البنك المركزي اليمني – عدن",
+    "document_label": "Annual report",
+    "document_label_ar": "تقرير سنوي",
+    "document_date": null
+   },
+   "basis": "title: current governed display_title 'Central Bank of Yemen — Annual Report 2025' / «البنك المركزي اليمني — التقرير السنوي 2025» with the publisher prefix removed | type: annual report | date: not governed | publisher: current value already 'Central Bank of Yemen — Aden'",
+   "note": "Format-only change: publisher prefix dropped. The year is part of the document's own title, so no parenthetical period is added. Publication date is not governed. Out of scope but noticed: why_it_matters_ar uses «تحويلات العاملين», which RULES C reserves for sources that literally say 'workers' remittances'."
+  },
+  {
+   "source_id": "SRC-CBY-AR2024-BOP",
+   "old": {
+    "display_title": "Central Bank of Yemen — Annual Report 2024",
+    "display_title_ar": "البنك المركزي اليمني — التقرير السنوي 2024",
+    "publisher": "Central Bank of Yemen — Aden",
+    "public_card_state": "FULL_PUBLIC_CARD",
+    "retrieval_date": null
+   },
+   "new": {
+    "display_title": "Annual Report 2024",
+    "display_title_ar": "التقرير السنوي 2024",
+    "publisher": "Central Bank of Yemen — Aden",
+    "publisher_ar": "البنك المركزي اليمني – عدن",
+    "document_label": "Annual report",
+    "document_label_ar": "تقرير سنوي",
+    "document_date": null
+   },
+   "basis": "title: current governed display_title 'Central Bank of Yemen — Annual Report 2024' / «البنك المركزي اليمني — التقرير السنوي 2024» with the publisher prefix removed | type: annual report | date: not governed | publisher: current value already 'Central Bank of Yemen — Aden'",
+   "note": "Format-only change: publisher prefix dropped. The year is part of the document's own title, so no parenthetical period is added. Publication date is not governed. Out of scope but noticed: does_not_establish (EN) is imperative ('must not be treated') and does_not_establish_ar uses «لا يجوز»."
+  },
+  {
+   "source_id": "SRC-CBY-AR2022-001",
+   "old": {
+    "display_title": "Central Bank of Yemen — Annual Report 2022",
+    "display_title_ar": "البنك المركزي اليمني — التقرير السنوي 2022",
+    "publisher": "Central Bank of Yemen — Aden",
+    "public_card_state": "FULL_PUBLIC_CARD",
+    "retrieval_date": null
+   },
+   "new": {
+    "display_title": "Annual Report 2022",
+    "display_title_ar": "التقرير السنوي 2022",
+    "publisher": "Central Bank of Yemen — Aden",
+    "publisher_ar": "البنك المركزي اليمني – عدن",
+    "document_label": "Annual report",
+    "document_label_ar": "تقرير سنوي",
+    "document_date": null
+   },
+   "basis": "title: current governed display_title 'Central Bank of Yemen — Annual Report 2022' / «البنك المركزي اليمني — التقرير السنوي 2022» with the publisher prefix removed | type: annual report | date: not governed | publisher: current value already 'Central Bank of Yemen — Aden'",
+   "note": "Format-only change: publisher prefix dropped. The year is part of the document's own title, so no parenthetical period is added. Publication date is not governed."
+  },
+  {
+   "source_id": "SRC-CBY-AR2023-001",
+   "old": {
+    "display_title": "Central Bank of Yemen — Annual Report 2023",
+    "display_title_ar": "البنك المركزي اليمني — التقرير السنوي 2023",
+    "publisher": "Central Bank of Yemen — Aden",
+    "public_card_state": "FULL_PUBLIC_CARD",
+    "retrieval_date": null
+   },
+   "new": {
+    "display_title": "Annual Report 2023",
+    "display_title_ar": "التقرير السنوي 2023",
+    "publisher": "Central Bank of Yemen — Aden",
+    "publisher_ar": "البنك المركزي اليمني – عدن",
+    "document_label": "Annual report",
+    "document_label_ar": "تقرير سنوي",
+    "document_date": null
+   },
+   "basis": "title: current governed display_title 'Central Bank of Yemen — Annual Report 2023' / «البنك المركزي اليمني — التقرير السنوي 2023» with the publisher prefix removed | type: annual report | date: not governed | publisher: current value already 'Central Bank of Yemen — Aden'",
+   "note": "Format-only change: publisher prefix dropped. The year is part of the document's own title, so no parenthetical period is added. Publication date is not governed."
+  },
+  {
+   "source_id": "SRC-CBY-HIST-METHOD-001",
+   "old": {
+    "display_title": null,
+    "display_title_ar": null,
+    "publisher": null,
+    "public_card_state": "LOCATOR_ONLY",
+    "retrieval_date": null
+   },
+   "new": {
+    "display_title": "Quarterly Bulletin, Issue No. 1 (December 2020)",
+    "display_title_ar": "النشرة الفصلية، العدد 1 (ديسمبر 2020)",
+    "publisher": "Central Bank of Yemen — Aden",
+    "publisher_ar": "البنك المركزي اليمني – عدن",
+    "document_label": "Periodic statistical report",
+    "document_label_ar": "تقرير إحصائي دوري",
+    "document_date": "2020-12",
+    "public_card_state": "CITATION_CARD",
+    "retrieval_date": "2026-09-26"
+   },
+   "basis": "title/date: one WebFetch of primary_url on 26 Sep 2026 read cover title 'Central Bank of Yemen Quarterly Bulletin – December 2020', 'Issue No. 1 (December 2020)', issuing department 'General Department Of Research and Statistics, Central Bank of Yemen'; content described as a quarterly economic and monetary bulletin covering 2019 and the first nine months of 2020 | type: periodic bulletin | publisher: locator host is cby-ye.com / english.cby-ye.com (Lead rule)",
+   "note": "Governed record held nothing beyond the locator and DS-K04-CBY-CORPUS/OBJECTS. Publisher prefix 'Central Bank of Yemen' removed from the cover title. Arabic title is a rendering of the English cover."
+  },
+  {
+   "source_id": "SRC-CBY-SANAA-CURR-2024",
+   "old": {
+    "display_title": null,
+    "display_title_ar": null,
+    "publisher": null,
+    "public_card_state": "LOCATOR_ONLY",
+    "retrieval_date": null
+   },
+   "new": {
+    "display_title": "News item concerning the Central Bank of Yemen — Sana'a (2024)",
+    "display_title_ar": "خبر يتعلق بالبنك المركزي اليمني – صنعاء (2024)",
+    "publisher": "Saba News Agency (saba.ye)",
+    "publisher_ar": "وكالة الأنباء اليمنية سبأ (saba.ye)",
+    "document_label": "Web page",
+    "document_label_ar": "صفحة إلكترونية",
+    "document_date": null,
+    "public_card_state": "CITATION_CARD",
+    "retrieval_date": "2026-09-26"
+   },
+   "basis": "descriptive, governed facts only: source_id 'SRC-CBY-SANAA-CURR-2024' in DS-K04-CBY-CORPUS/OBJECTS; INS-036/CON-033; additional URL on centralbank.gov.ye; one WebFetch of primary_url on 26 Sep 2026 failed (HTTP 500) | publisher: page host saba.ye (Saba News Agency site); the underlying issuer (SRC-CBY-SANAA family) is not the page publisher | type: third-party news page, so not an issuer's news release | date: not governed",
+   "note": "NOT TITLED: nothing governed describes this item's subject, and 'CURR' in the ID is not expanded here. Publisher is based on the host name only (as the audit publisher proposals were); the Lead may prefer to hold this record at locator-only until the page or the centralbank.gov.ye PDF is read."
+  },
+  {
+   "source_id": "SRC-IMF-AIV-2025-STAFF-001",
+   "old": {
+    "display_title": null,
+    "display_title_ar": null,
+    "publisher": null,
+    "public_card_state": "LOCATOR_ONLY",
+    "retrieval_date": null
+   },
+   "new": {
+    "display_title": "Republic of Yemen: 2025 Article IV Consultation — Staff Report (IMF Country Report No. 26/80)",
+    "display_title_ar": "الجمهورية اليمنية: مشاورات المادة الرابعة لعام 2025 — تقرير الخبراء (تقرير صندوق النقد الدولي القُطري رقم 26/80)",
+    "publisher": "International Monetary Fund",
+    "publisher_ar": "صندوق النقد الدولي",
+    "document_label": "Staff report",
+    "document_label_ar": "تقرير خبراء",
+    "document_date": null,
+    "public_card_state": "CITATION_CARD"
+   },
+   "basis": "Governed: 23_REMITTANCES series_vintage 2025_ARTICLE_IV_STAFF_REPORT (Table 4, reported history 2018–2024); VIS-REMITTANCE-MACRO summary (\"the IMF's 2025 Article IV staff report\"); report number from the governed display title of SRC-IMF-YEM-AIV-2025-2026 and the Lead's VER-21 note. No web fetch.",
+   "note": "Component of the Country Report No. 26/80 record (see duplicates). Keep as its own record: its rows are the staff-report vintage (history 2018–2024) and must stay distinct from the supplement's revised 2025 estimate and 2026–2030 projections. Publication date not governed. That A001 is the staff-report section of No. 26/80 rests on the Lead note, not on a read of the page."
+  },
+  {
+   "source_id": "SRC-IMF-AIV-2025-SUPP-001",
+   "old": {
+    "display_title": null,
+    "display_title_ar": null,
+    "publisher": null,
+    "public_card_state": "LOCATOR_ONLY",
+    "retrieval_date": null
+   },
+   "new": {
+    "display_title": "Republic of Yemen: 2025 Article IV Consultation — supplement to the staff report (IMF Country Report No. 26/80)",
+    "display_title_ar": "الجمهورية اليمنية: مشاورات المادة الرابعة لعام 2025 — ملحق تقرير الخبراء (تقرير صندوق النقد الدولي القُطري رقم 26/80)",
+    "publisher": "International Monetary Fund",
+    "publisher_ar": "صندوق النقد الدولي",
+    "document_label": "Staff report",
+    "document_label_ar": "تقرير خبراء",
+    "document_date": null,
+    "public_card_state": "CITATION_CARD"
+   },
+   "basis": "Governed: 23_REMITTANCES series_vintage 2025_ARTICLE_IV_SUPPLEMENTARY_REVISION (\"Supplementary Table 2\"); VIS-REMITTANCE-MACRO (\"a later supplement to the same consultation\"). One WebFetch of primary_url attempted: HTTP 403, nothing read.",
+   "note": "Exact section name (e.g. \"Staff Supplement\" or \"Supplementary Information\") is unverified because the page returned 403; \"supplement to the staff report\" is descriptive. Component of the Country Report No. 26/80 record (see duplicates)."
+  },
+  {
+   "source_id": "SRC-IMF-YEM-AIV-2025-2026",
+   "old": {
+    "display_title": "Republic of Yemen — 2025 Article IV Consultation (IMF Country Report 26/80)",
+    "display_title_ar": "الجمهورية اليمنية — مشاورات المادة الرابعة لعام 2025 (تقرير صندوق النقد الدولي 26/80)",
+    "publisher": "International Monetary Fund",
+    "public_card_state": "FULL_PUBLIC_CARD",
+    "retrieval_date": null
+   },
+   "new": {
+    "display_title": "Republic of Yemen: 2025 Article IV Consultation (IMF Country Report No. 26/80)",
+    "display_title_ar": "الجمهورية اليمنية: مشاورات المادة الرابعة لعام 2025 (تقرير صندوق النقد الدولي القُطري رقم 26/80)",
+    "publisher": "International Monetary Fund",
+    "publisher_ar": "صندوق النقد الدولي",
+    "document_label": "Staff report",
+    "document_label_ar": "تقرير خبراء",
+    "document_date": null
+   },
+   "basis": "Governed display_title (15_SOURCE_LIBRARY), restyled only (colon instead of dash; \"No.\" added). No web fetch.",
+   "note": "Proposed canonical parent for the VER-21 IMF trio. The Arabic now says «تقرير صندوق النقد الدولي القُطري رقم 26/80» (country report), and uses a colon, not a dash. Publication date not governed (the report number alone is not used as a date)."
+  },
+  {
+   "source_id": "SRC-WB-ES-2013-PROFILE-001",
+   "old": {
+    "display_title": null,
+    "display_title_ar": null,
+    "publisher": null,
+    "public_card_state": "LOCATOR_ONLY",
+    "retrieval_date": null
+   },
+   "new": {
+    "display_title": "Enterprise Surveys: Yemen Country Profile 2013 (survey period 2013–2014)",
+    "display_title_ar": "مسوح المنشآت (Enterprise Surveys): الملف القُطري لليمن 2013 (فترة المسح 2013–2014)",
+    "publisher": "World Bank",
+    "publisher_ar": "البنك الدولي",
+    "document_label": "Survey dataset or indicator",
+    "document_label_ar": "مسح أو مؤشر",
+    "document_date": null,
+    "public_card_state": "CITATION_CARD"
+   },
+   "basis": "Governed: 20_FIRM_FINANCE source_page_figure \"Yemen Country Profile 2013, Finance Indicators\", survey_wave \"2013 standard Enterprise Survey\", period 2013-2014. No web fetch.",
+   "note": "Publisher is not named in governed rows; \"World Bank\" rests on the Enterprise Surveys programme being a World Bank Group product (the earlier audit proposal left it UNRESOLVED). Lead to confirm publisher."
+  },
+  {
+   "source_id": "SRC-WB-FSD-2024-001",
+   "old": {
+    "display_title": "Yemen Financial Sector Diagnostics (2024)",
+    "display_title_ar": "التشخيص المالي لليمن (2024)",
+    "publisher": "World Bank",
+    "public_card_state": "FULL_PUBLIC_CARD",
+    "retrieval_date": null
+   },
+   "new": {
+    "display_title": "Yemen Financial Sector Diagnostics (2024)",
+    "display_title_ar": "تشخيص القطاع المالي في اليمن (2024)",
+    "publisher": "World Bank",
+    "publisher_ar": "البنك الدولي",
+    "document_label": "Research or policy paper",
+    "document_label_ar": "ورقة بحثية أو سياساتية",
+    "document_date": "2024"
+   },
+   "basis": "Governed display_title and year (15_SOURCE_LIBRARY). No web fetch.",
+   "note": "English unchanged. Arabic changed from «التشخيص المالي لليمن» to «تشخيص القطاع المالي في اليمن», which is the normal Arabic rendering of a financial-sector diagnostic. document_date is the governed year only."
+  },
+  {
+   "source_id": "SRC-WB-RPW-SA-YEM-2025Q3-001",
+   "old": {
+    "display_title": null,
+    "display_title_ar": null,
+    "publisher": null,
+    "public_card_state": "LOCATOR_ONLY",
+    "retrieval_date": null
+   },
+   "new": {
+    "display_title": "Remittance Prices Worldwide: Saudi Arabia to Yemen corridor (third quarter of 2025)",
+    "display_title_ar": "قاعدة بيانات Remittance Prices Worldwide: ممر الحوالات من المملكة العربية السعودية إلى اليمن (الربع الثالث من 2025)",
+    "publisher": "World Bank",
+    "publisher_ar": "البنك الدولي",
+    "document_label": "Database or web interface",
+    "document_label_ar": "قاعدة بيانات أو واجهة إلكترونية",
+    "document_date": null,
+    "public_card_state": "CITATION_CARD"
+   },
+   "basis": "Governed: 23_REMITTANCES rows RMO-RPW-SA-2025Q3-200/500 (source_table_or_section \"RPW corridor page / Total Average Third Quarter 2025\"; corridor Saudi Arabia to Yemen); passport EP-WB-RPW-KSA-YEM-K04 publisher \"World Bank Remittance Prices Worldwide\". No web fetch.",
+   "note": "Proposed canonical record of the RPW duplicate pair. The corridor page is live and rolls forward, so the title fixes the quarter held in the bound rows. Retrieval: RPW corridor pages were checked on 26 September 2026 (RULES C); retrieval_date is outside this draft."
+  },
+  {
+   "source_id": "SRC-WB-RPW-UAE-YEM-2025Q3-001",
+   "old": {
+    "display_title": null,
+    "display_title_ar": null,
+    "publisher": null,
+    "public_card_state": "LOCATOR_ONLY",
+    "retrieval_date": null
+   },
+   "new": {
+    "display_title": "Remittance Prices Worldwide: United Arab Emirates to Yemen corridor (third quarter of 2025)",
+    "display_title_ar": "قاعدة بيانات Remittance Prices Worldwide: ممر الحوالات من الإمارات العربية المتحدة إلى اليمن (الربع الثالث من 2025)",
+    "publisher": "World Bank",
+    "publisher_ar": "البنك الدولي",
+    "document_label": "Database or web interface",
+    "document_label_ar": "قاعدة بيانات أو واجهة إلكترونية",
+    "document_date": null,
+    "public_card_state": "CITATION_CARD"
+   },
+   "basis": "Governed: 23_REMITTANCES rows RMO-RPW-UAE-2025Q3-200/500 (RPW corridor page / Total Average Third Quarter 2025; corridor United Arab Emirates to Yemen). No web fetch.",
+   "note": "Live page; title fixes the quarter held in the bound rows. Checked on 26 September 2026 per RULES C."
+  },
+  {
+   "source_id": "SRC-WB-RPW-KSA-YEM-2025Q3",
+   "old": {
+    "display_title": null,
+    "display_title_ar": null,
+    "publisher": null,
+    "public_card_state": "LOCATOR_ONLY",
+    "retrieval_date": null
+   },
+   "new": {
+    "display_title": "Remittance Prices Worldwide: Saudi Arabia to Yemen corridor (third quarter of 2025)",
+    "display_title_ar": "قاعدة بيانات Remittance Prices Worldwide: ممر الحوالات من المملكة العربية السعودية إلى اليمن (الربع الثالث من 2025)",
+    "publisher": "World Bank",
+    "publisher_ar": "البنك الدولي",
+    "document_label": "Database or web interface",
+    "document_label_ar": "قاعدة بيانات أو واجهة إلكترونية",
+    "document_date": null,
+    "public_card_state": "CITATION_CARD"
+   },
+   "basis": "Governed: same primary_url as SRC-WB-RPW-SA-YEM-2025Q3-001; passport EP-WB-RPW-KSA-YEM-K04 (\"Saudi Arabia→Yemen formal remittance corridor cost\", \"Q3 2025 documented observation\"). No web fetch.",
+   "note": "Duplicate of SRC-WB-RPW-SA-YEM-2025Q3-001 (VER-21). Title drafted only so that no raw ID is shown if the record survives; recommended disposition is alias/merge (see duplicates), with no separate public card."
+  },
+  {
+   "source_id": "SRC-YMN-AR-2012-001",
+   "old": {
+    "display_title": null,
+    "display_title_ar": null,
+    "publisher": null,
+    "public_card_state": "LOCATOR_ONLY",
+    "retrieval_date": null
+   },
+   "new": {
+    "display_title": "Yemen Microfinance Network (YMN) Annual Report 2012",
+    "display_title_ar": "التقرير السنوي لشبكة التمويل الأصغر اليمنية (YMN) لعام 2012",
+    "publisher": "Yemen Microfinance Network",
+    "publisher_ar": "شبكة اليمن للتمويل الأصغر",
+    "document_label": "Annual report",
+    "document_label_ar": "تقرير سنوي",
+    "document_date": null,
+    "public_card_state": "CITATION_CARD"
+   },
+   "basis": "Governed: 21_MFI_DATA reporting_wave \"YMN Annual Report 2012\", period 2012. No web fetch.",
+   "note": "The issuer name stays in the title because the governed document name is \"YMN Annual Report 2012\". Publisher_ar follows the Lead list («شبكة التمويل الأصغر اليمنية»); the network's own 2021 report cover reads «شبكة اليمن للتمويل الأصغر» — Lead to choose one form and use it everywhere."
+  },
+  {
+   "source_id": "SRC-YMN-IMPACT-2021-001",
+   "old": {
+    "display_title": null,
+    "display_title_ar": null,
+    "publisher": null,
+    "public_card_state": "LOCATOR_ONLY",
+    "retrieval_date": null
+   },
+   "new": {
+    "display_title": "Impact Assessment of Microfinance Services in Yemen (May 2021)",
+    "display_title_ar": "تقييم أثر خدمات التمويل الأصغر في اليمن (مايو 2021)",
+    "publisher": "Yemen Microfinance Network",
+    "publisher_ar": "شبكة اليمن للتمويل الأصغر",
+    "document_label": "Research or policy paper",
+    "document_label_ar": "ورقة بحثية أو سياساتية",
+    "document_date": "2021-05",
+    "public_card_state": "CITATION_CARD"
+   },
+   "basis": "WebFetch of primary_url (PDF cover) read: Arabic title «تقييم أثر خدمات التمويل الأصغر في اليمن» (extracted as \"األصغر\", spelling restored), English line \"Impact Assessment of Microfinance Services in Yemen\", issuer Yemen Microfinance Network, prepared by Afkar for Consultations, dated May 2021. Governed: 21_MFI_DATA (Table 5 cites SFD February 2021 indicators).",
+   "note": "The document is in Arabic. The English title may be the fetch tool's rendering; confirm whether the cover carries it. Afkar is the preparer, not the publisher. Its Table 5 reproduces SFD February 2021 figures and is a pointer only (YMN cannot govern the SFD series). Publisher_ar follows the Lead list («شبكة التمويل الأصغر اليمنية»); the network's own 2021 report cover reads «شبكة اليمن للتمويل الأصغر» — Lead to choose one form and use it everywhere."
+  },
+  {
+   "source_id": "SRC-YMN-MEMBERS-2026-001",
+   "old": {
+    "display_title": null,
+    "display_title_ar": null,
+    "publisher": null,
+    "public_card_state": "LOCATOR_ONLY",
+    "retrieval_date": null
+   },
+   "new": {
+    "display_title": "Yemen Microfinance Network website: membership pages (observed 7 September 2026)",
+    "display_title_ar": "الموقع الإلكتروني لشبكة التمويل الأصغر اليمنية: صفحات العضوية (كما رُصدت في 7 سبتمبر 2026)",
+    "publisher": "Yemen Microfinance Network",
+    "publisher_ar": "شبكة اليمن للتمويل الأصغر",
+    "document_label": "Database or web interface",
+    "document_label_ar": "قاعدة بيانات أو واجهة إلكترونية",
+    "document_date": null,
+    "public_card_state": "CITATION_CARD"
+   },
+   "basis": "Governed: 22_PROVIDERS_DATA PUC-MFI-2026-01 (reference_state \"observed 2026-09-07\", count_state MEMBERSHIP_PAGES_ONLY). Descriptive, governed facts only. No web fetch.",
+   "note": "Card copy must carry the governed limit: membership is not licence or operation verification and not a national provider universe. The observation date is a capture date, not a document date. Publisher_ar follows the Lead list («شبكة التمويل الأصغر اليمنية»); the network's own 2021 report cover reads «شبكة اليمن للتمويل الأصغر» — Lead to choose one form and use it everywhere."
+  },
+  {
+   "source_id": "SRC-YMN-MFMAG-2014-Q1-001",
+   "old": {
+    "display_title": null,
+    "display_title_ar": null,
+    "publisher": null,
+    "public_card_state": "LOCATOR_ONLY",
+    "retrieval_date": null
+   },
+   "new": {
+    "display_title": "MicroFinance Magazine, issue no. 1 (2014)",
+    "display_title_ar": "مجلة التمويل الأصغر، العدد الأول (2014)",
+    "publisher": "Yemen Microfinance Network",
+    "publisher_ar": "شبكة اليمن للتمويل الأصغر",
+    "document_label": "Newsletter",
+    "document_label_ar": "نشرة دورية",
+    "document_date": "2014",
+    "public_card_state": "CITATION_CARD"
+   },
+   "basis": "WebFetch of primary_url (PDF cover) read: \"MicroFinance Magazine\" / «مجلة التمويل الأصغر», issue No. 1, 2014, Yemen Microfinance Network, \"Funded by: Social Fund for Development\", quarterly. Governed: 21_MFI_DATA (\"SEEP Report for First Quarter 2014\", reporting wave YMN_SEEP_Q1_2014).",
+   "note": "The issue carries the SEEP reporting table for the first quarter of 2014 (one provider reported December 2013 data, per the governed caveat). Publisher_ar follows the Lead list («شبكة التمويل الأصغر اليمنية»); the network's own 2021 report cover reads «شبكة اليمن للتمويل الأصغر» — Lead to choose one form and use it everywhere."
+  },
+  {
+   "source_id": "SRC-YMN-MFMAG-2014-Q2-001",
+   "old": {
+    "display_title": null,
+    "display_title_ar": null,
+    "publisher": null,
+    "public_card_state": "LOCATOR_ONLY",
+    "retrieval_date": null
+   },
+   "new": {
+    "display_title": "MicroFinance Magazine, issue no. 2 (2014)",
+    "display_title_ar": "مجلة التمويل الأصغر، العدد الثاني (2014)",
+    "publisher": "Yemen Microfinance Network",
+    "publisher_ar": "شبكة اليمن للتمويل الأصغر",
+    "document_label": "Newsletter",
+    "document_label_ar": "نشرة دورية",
+    "document_date": "2014",
+    "public_card_state": "CITATION_CARD"
+   },
+   "basis": "WebFetch of primary_url (PDF cover) read: \"MicroFinance Magazine\" / «مجلة التمويل الأصغر», issue No. 2 («العدد الثاني»), 2014, Yemen Microfinance Network, funded by SFD. Governed: 21_MFI_DATA (\"MFI's SEEP Report for June 2014\", reporting wave YMN_SEEP_Q2_2014).",
+   "note": "The issue carries the SEEP reporting table for June 2014. Publisher_ar follows the Lead list («شبكة التمويل الأصغر اليمنية»); the network's own 2021 report cover reads «شبكة اليمن للتمويل الأصغر» — Lead to choose one form and use it everywhere."
+  },
+  {
+   "source_id": "SRC-WB-FINDEX-001",
+   "old": {
+    "display_title": null,
+    "display_title_ar": null,
+    "publisher": null,
+    "public_card_state": "LOCATOR_ONLY",
+    "retrieval_date": null
+   },
+   "new": {
+    "display_title": "Global Findex 2021 survey for Yemen: study YEM_2022_FINDEX_v01_M (fieldwork 7 November 2022 to 9 January 2023)",
+    "display_title_ar": "المؤشر العالمي للشمول المالي (Global Findex) 2021 — مسح اليمن: الدراسة YEM_2022_FINDEX_v01_M (العمل الميداني من 7 نوفمبر 2022 إلى 9 يناير 2023)",
+    "publisher": "World Bank",
+    "publisher_ar": "البنك الدولي",
+    "document_label": "Survey dataset or indicator",
+    "document_label_ar": "مسح أو مؤشر",
+    "document_date": "2023-05-19",
+    "public_card_state": "CITATION_CARD"
+   },
+   "basis": "Governed: 28_METHODS_RIGHTS Findex study metadata (survey_id YEM_2022_FINDEX_v01_M; wave_label \"Global Findex 2021\"; fieldwork 2022-11-07 to 2023-01-09; \"Version 01 … Version date 2023-05-19\"). No web fetch.",
+   "note": "document_date is the governed DDI version date, not a release date of the Findex database. Respondent microdata are not held (respondent_microdata_controlled = NO); the catalogue page is public metadata and microdata need a login."
+  },
+  {
+   "source_id": "SRC-WB-FINDEX-AGG-2022",
+   "old": {
+    "display_title": null,
+    "display_title_ar": null,
+    "publisher": null,
+    "public_card_state": "LOCATOR_ONLY",
+    "retrieval_date": null
+   },
+   "new": {
+    "display_title": "Global Findex indicators for Yemen: account ownership, adults 15+, total and by group (World Bank data year 2022)",
+    "display_title_ar": "المؤشر العالمي للشمول المالي (Global Findex) — اليمن: امتلاك الحساب لدى البالغين بعمر 15 سنة فأكثر، إجمالًا وحسب الفئة (سنة البيانات لدى البنك الدولي: 2022)",
+    "publisher": "World Bank",
+    "publisher_ar": "البنك الدولي",
+    "document_label": "Survey dataset or indicator",
+    "document_label_ar": "مسح أو مؤشر",
+    "document_date": null,
+    "public_card_state": "CITATION_CARD"
+   },
+   "basis": "Governed: data/findex_baseline.json rows WB-FINDEX-OBS-2022-001 to -006 (indicator codes FX.OWN.TOTL.ZS, .FE, .MA, .40, .60, .PL; year 2022; unit \"percent of population ages 15+\"; publisher \"World Bank Global Findex\"). Title follows the Lead's example. No web fetch.",
+   "note": "\"total and by group\" is added to the Lead's example because this record also backs the female, male, poorest 40%, richest 60% and primary-or-less pages (see placeholder_fixes). 2022 is the World Bank reporting year. The observation comes from the Global Findex 2021 wave, with Yemen fieldwork from November 2022 to January 2023."
+  },
+  {
+   "source_id": "SRC-WB-FINDEX-003",
+   "old": {
+    "display_title": null,
+    "display_title_ar": null,
+    "publisher": null,
+    "public_card_state": "LOCATOR_ONLY",
+    "retrieval_date": null
+   },
+   "new": {
+    "display_title": "Global Financial Inclusion (Global Findex) Database 2011: Yemen (2011 survey)",
+    "display_title_ar": "قاعدة بيانات المؤشر العالمي للشمول المالي (Global Findex) لعام 2011: اليمن (مسح 2011)",
+    "publisher": "World Bank",
+    "publisher_ar": "البنك الدولي",
+    "document_label": "Survey dataset or indicator",
+    "document_label_ar": "مسح أو مؤشر",
+    "document_date": "2015-04-03",
+    "public_card_state": "CITATION_CARD"
+   },
+   "basis": "WebFetch of primary_url read: study title \"Global Financial Inclusion (Global Findex) Database 2011\", Yemen, Rep., IDNo YEM_2011_FINDEX_v02_M, data collection 2011, producer World Bank Development Research Group (survey by Gallup, Inc.), metadata version 02 dated 3 April 2015. Governed: DS-FINDEX-WAVES / DS-FINDEX-HISTORY-CROSSWALK (wave coverage 2011–2014).",
+   "note": "Governed facts did not tie catalogue 1096 to a wave; the fetch identifies it as the 2011 Yemen study. document_date is the metadata version date, not the survey year. The Lead may prefer null to avoid a 2015 date beside a 2011 survey."
+  },
+  {
+   "source_id": "SRC-WB-FINDEX-2014-001",
+   "old": {
+    "display_title": null,
+    "display_title_ar": null,
+    "publisher": null,
+    "public_card_state": "LOCATOR_ONLY",
+    "retrieval_date": null
+   },
+   "new": {
+    "display_title": "Global Financial Inclusion (Global Findex) Database 2014: Yemen (2014 survey)",
+    "display_title_ar": "قاعدة بيانات المؤشر العالمي للشمول المالي (Global Findex) لعام 2014: اليمن (مسح 2014)",
+    "publisher": "World Bank",
+    "publisher_ar": "البنك الدولي",
+    "document_label": "Survey dataset or indicator",
+    "document_label_ar": "مسح أو مؤشر",
+    "document_date": "2015-08-27",
+    "public_card_state": "CITATION_CARD"
+   },
+   "basis": "WebFetch of primary_url read: study title \"Global Financial Inclusion (Global Findex) Database 2014\", Yemen, Rep., IDNo YEM_2014_FINDEX_v01_M, data collection 2014, producer World Bank Development Research Group (survey by Gallup, Inc.), DDI version 01 dated 27 August 2015. Governed: DS-FINDEX-WAVES / DS-FINDEX-HISTORY-CROSSWALK.",
+   "note": "document_date is the metadata version date, not the survey year. The Lead may prefer null."
+  },
+  {
+   "source_id": "SRC-WB-FINDEX-LDB-2015-001",
+   "old": {
+    "display_title": null,
+    "display_title_ar": null,
+    "publisher": null,
+    "public_card_state": "LOCATOR_ONLY",
+    "retrieval_date": null
+   },
+   "new": {
+    "display_title": "The Little Data Book on Financial Inclusion 2015 (Yemen data for 2014, with selected 2011 comparators)",
+    "display_title_ar": "كتيّب البيانات الموجز عن الشمول المالي 2015 (The Little Data Book on Financial Inclusion): بيانات اليمن لعام 2014 مع مقارنات مختارة لعام 2011",
+    "publisher": "World Bank",
+    "publisher_ar": "البنك الدولي",
+    "document_label": "Survey dataset or indicator",
+    "document_label_ar": "مسح أو مؤشر",
+    "document_date": "2015",
+    "public_card_state": "CITATION_CARD"
+   },
+   "basis": "Governed: passport EP-FINDEX-2014-NEEDS-FLOWS (publisher \"World Bank — The Little Data Book on Financial Inclusion 2015\"; reference period \"2014 plus selected 2011 comparators\"); 26_FINDEX_HISTORY rows. No web fetch.",
+   "note": "document_date is the edition year in the governed title. The additional URL (LDB2015final.pdf) is an alternative locator for the same book, not a separate source."
+  },
+  {
+   "source_id": "SRC-WB-FINDEX-2025-EDITION",
+   "old": {
+    "display_title": "Global Findex Database 2025 — report, data and methodology",
+    "display_title_ar": "قاعدة بيانات Global Findex 2025 — التقرير والبيانات والمنهجية",
+    "publisher": "World Bank",
+    "public_card_state": "FULL_PUBLIC_CARD",
+    "retrieval_date": null
+   },
+   "new": {
+    "display_title": "The Global Findex Database 2025: report, data and methodology",
+    "display_title_ar": "قاعدة بيانات المؤشر العالمي للشمول المالي (Global Findex) 2025: التقرير والبيانات والمنهجية",
+    "publisher": "World Bank",
+    "publisher_ar": "البنك الدولي",
+    "document_label": "Data portal",
+    "document_label_ar": "بوابة بيانات",
+    "document_date": "2025"
+   },
+   "basis": "Governed display_title; DS-FINDEX-CURRENTNESS (\"2025 edition\"). No web fetch.",
+   "note": "Restyled only (colon instead of dash; Arabic first mention per the Findex rule). document_date is the edition year. Its additional_urls repeat the primary locator of SRC-WB-FINDEX-AGG-2022 (see duplicates)."
+  },
+  {
+   "source_id": "SRC-OECD-YEM-RESILIENCE-001",
+   "old": {
+    "display_title": "Promoting Economic Resilience in Yemen",
+    "display_title_ar": "تعزيز المرونة الاقتصادية في اليمن",
+    "publisher": "OECD",
+    "public_card_state": "FULL_PUBLIC_CARD",
+    "retrieval_date": null
+   },
+   "new": {
+    "display_title": "Promoting Economic Resilience in Yemen (2026)",
+    "display_title_ar": "تعزيز المرونة الاقتصادية في اليمن (2026)",
+    "publisher": "OECD",
+    "publisher_ar": "منظمة التعاون الاقتصادي والتنمية",
+    "document_label": "Research or policy paper",
+    "document_label_ar": "ورقة بحثية أو سياساتية",
+    "document_date": "2026"
+   },
+   "basis": "Governed display_title; passport EP-OECD-YEM-2026 (\"Published 2026\"). No web fetch.",
+   "note": "Year added from the governed passport. Title otherwise unchanged."
+  },
+  {
+   "source_id": "SRC-OECD-INFE-2023",
+   "old": {
+    "display_title": "OECD/INFE 2023 International Survey of Adult Financial Literacy",
+    "display_title_ar": "المسح الدولي OECD/INFE لعام 2023 حول الثقافة المالية للبالغين",
+    "publisher": "OECD",
+    "public_card_state": "FULL_PUBLIC_CARD",
+    "retrieval_date": null
+   },
+   "new": {
+    "display_title": "OECD/INFE 2023 International Survey of Adult Financial Literacy",
+    "display_title_ar": "المسح الدولي OECD/INFE لعام 2023 حول الثقافة المالية للبالغين",
+    "publisher": "OECD",
+    "publisher_ar": "منظمة التعاون الاقتصادي والتنمية",
+    "document_label": "Survey dataset or indicator",
+    "document_label_ar": "مسح أو مؤشر",
+    "document_date": "2023"
+   },
+   "basis": "Governed display_title and document_type \"survey\" (15_SOURCE_LIBRARY). No web fetch.",
+   "note": "Unchanged; the year is already in the title. document_date is the survey edition year in the governed title, not a month of release."
+  },
+  {
+   "source_id": "SRC-OECD-YOUTH-DFI-2020-001",
+   "old": {
+    "display_title": "Advancing the Digital Financial Inclusion of Youth",
+    "display_title_ar": "تعزيز الشمول المالي الرقمي للشباب",
+    "publisher": "OECD",
+    "public_card_state": "FULL_PUBLIC_CARD",
+    "retrieval_date": null
+   },
+   "new": {
+    "display_title": "Advancing the Digital Financial Inclusion of Youth",
+    "display_title_ar": "تعزيز الشمول المالي الرقمي للشباب",
+    "publisher": "OECD",
+    "publisher_ar": "منظمة التعاون الاقتصادي والتنمية",
+    "document_label": "Research or policy paper",
+    "document_label_ar": "ورقة بحثية أو سياساتية",
+    "document_date": null
+   },
+   "basis": "Governed display_title (15_SOURCE_LIBRARY). No web fetch.",
+   "note": "Unchanged. Publication date not governed; the year in the source ID is not used as a governed date. No \"(date)\" suffix can be added without a check."
+  },
+  {
+   "source_id": "SRC-OCHA-FTS-YEM-2026-001",
+   "old": {
+    "display_title": null,
+    "display_title_ar": null,
+    "publisher": null,
+    "public_card_state": "LOCATOR_ONLY",
+    "retrieval_date": null
+   },
+   "new": {
+    "display_title": "Financial Tracking Service: Yemen funding flows, 2026 (snapshot of 7 September 2026)",
+    "display_title_ar": "خدمة تتبع التمويل (FTS): تدفقات التمويل إلى اليمن لعام 2026 (لقطة بتاريخ 7 سبتمبر 2026)",
+    "publisher": "UN OCHA",
+    "publisher_ar": "مكتب الأمم المتحدة لتنسيق الشؤون الإنسانية",
+    "document_label": "Database or web interface",
+    "document_label_ar": "قاعدة بيانات أو واجهة إلكترونية",
+    "document_date": null,
+    "public_card_state": "CITATION_CARD"
+   },
+   "basis": "Governed: 35_OCHA_WB_CONTEXT (74 flows, snapshot_date 2026-09-07); DS-OCHA-FTS-2026. Descriptive, governed facts only. No web fetch.",
+   "note": "The snapshot date is a capture date, not a publication date. The card must keep the governed limit: FTS flows are humanitarian context and are not classified as financial-inclusion finance."
+  },
+  {
+   "source_id": "SRC-WB-YEM-MFI-2004-001",
+   "old": {
+    "display_title": null,
+    "display_title_ar": null,
+    "publisher": null,
+    "public_card_state": "LOCATOR_ONLY",
+    "retrieval_date": null
+   },
+   "new": {
+    "display_title": "Yemen: Microfinance for Small Business (3 May 2004)",
+    "display_title_ar": "اليمن: التمويل الأصغر للمنشآت الصغيرة (3 مايو 2004)",
+    "publisher": "World Bank",
+    "publisher_ar": "البنك الدولي",
+    "document_label": "News release",
+    "document_label_ar": "بيان صحفي",
+    "document_date": "2004-05-03",
+    "public_card_state": "CITATION_CARD"
+   },
+   "basis": "WebFetch of primary_url read: title \"Yemen: Microfinance for Small Business\", The World Bank, 3 May 2004. Governed: 35_OCHA_WB_CONTEXT WB2004-CHRON-003 (document date 2004-05-03) and WB2004-EV-006 (\"a short World Bank feature/case story\").",
+   "note": "This is a feature/case story; \"News release\" is the nearest listed type. Borrower anecdotes are not representative, and the poverty figure in it is held from current use."
+  },
+  {
+   "source_id": "SRC-WB-YEM-OUTLOOK-2016-001",
+   "old": {
+    "display_title": null,
+    "display_title_ar": null,
+    "publisher": null,
+    "public_card_state": "LOCATOR_ONLY",
+    "retrieval_date": null
+   },
+   "new": {
+    "display_title": "Yemen's Economic Outlook, Spring 2016",
+    "display_title_ar": "الآفاق الاقتصادية لليمن، ربيع 2016",
+    "publisher": "World Bank",
+    "publisher_ar": "البنك الدولي",
+    "document_label": "Research or policy paper",
+    "document_label_ar": "ورقة بحثية أو سياساتية",
+    "document_date": "2016",
+    "public_card_state": "CITATION_CARD"
+   },
+   "basis": "WebFetch of primary_url read: title \"Yemen's Economic Outlook- Spring 2016\", The World Bank, part of the MENA Economic Monitor Spring 2016; no exact date shown. Governed: 14_SYSTEM_CHRONOLOGY YSC-001/YSC-002 (\"Historical World Bank macroeconomic account\").",
+   "note": "Only the season and year are shown on the page, so document_date is the year alone."
+  },
+  {
+   "source_id": "SRC-WB-YEM-MONITOR-FALL2018-001",
+   "old": {
+    "display_title": null,
+    "display_title_ar": null,
+    "publisher": null,
+    "public_card_state": "LOCATOR_ONLY",
+    "retrieval_date": null
+   },
+   "new": {
+    "display_title": "Yemen Economic Monitoring Brief, Fall 2018",
+    "display_title_ar": "موجز الرصد الاقتصادي لليمن، خريف 2018",
+    "publisher": "World Bank",
+    "publisher_ar": "البنك الدولي",
+    "document_label": "Research or policy paper",
+    "document_label_ar": "ورقة بحثية أو سياساتية",
+    "document_date": "2018",
+    "public_card_state": "CITATION_CARD"
+   },
+   "basis": "WebFetch of primary_url (PDF) read: \"Economic Monitoring Brief\", series \"Yemen Economic Monitoring Brief\", Fall 2018, World Bank Macroeconomics & Fiscal Management Global Practice. Governed: YSC-004 (\"Historical macro/monetary estimate\").",
+   "note": "The additional URL appears to be the Arabic edition of the same brief (not read); keep it as an alternative locator only if confirmed."
+  },
+  {
+   "source_id": "SRC-WB-YEM-MEU-2019-12-001",
+   "old": {
+    "display_title": null,
+    "display_title_ar": null,
+    "publisher": null,
+    "public_card_state": "LOCATOR_ONLY",
+    "retrieval_date": null
+   },
+   "new": {
+    "display_title": "Yemen Monthly Economic Update, December 2019",
+    "display_title_ar": "التحديث الاقتصادي الشهري لليمن، ديسمبر 2019",
+    "publisher": "World Bank",
+    "publisher_ar": "البنك الدولي",
+    "document_label": "Research or policy paper",
+    "document_label_ar": "ورقة بحثية أو سياساتية",
+    "document_date": "2019-12",
+    "public_card_state": "CITATION_CARD"
+   },
+   "basis": "WebFetch of primary_url (PDF) read: title \"Yemen Monthly Economic Update\", December 2019; issuer not shown on the first page. Governed: YSC-006 source_scope (\"World Bank December 2019 monitoring\").",
+   "note": "Publisher comes from the governed chronology, not the PDF cover."
+  },
+  {
+   "source_id": "SRC-WB-YEM-ECON-2020-04-001",
+   "old": {
+    "display_title": null,
+    "display_title_ar": null,
+    "publisher": null,
+    "public_card_state": "LOCATOR_ONLY",
+    "retrieval_date": null
+   },
+   "new": {
+    "display_title": "Yemen's Economic Update, April 2020",
+    "display_title_ar": "المستجدات الاقتصادية في اليمن، أبريل 2020",
+    "publisher": "World Bank",
+    "publisher_ar": "البنك الدولي",
+    "document_label": "Research or policy paper",
+    "document_label_ar": "ورقة بحثية أو سياساتية",
+    "document_date": "2020-04-16",
+    "public_card_state": "CITATION_CARD"
+   },
+   "basis": "WebFetch of primary_url read: title \"Yemen's Economic Update — April 2020\", World Bank, dated 16 April 2020. Governed: YSC-007 (\"World Bank 2020 monitoring and risk assessment\").",
+   "note": "The additional URL points to a separate document (not read). Governed YSC-007 uses end-January 2020 facts that may come from it. Lead to decide whether that document needs its own record, rather than living as an alternative locator of the April 2020 update."
+  },
+  {
+   "source_id": "SRC-WB-YEM-FRAGMENTATION-2025-001",
+   "old": {
+    "display_title": null,
+    "display_title_ar": null,
+    "publisher": null,
+    "public_card_state": "LOCATOR_ONLY",
+    "retrieval_date": null
+   },
+   "new": {
+    "display_title": "Yemen Financial Market Infrastructure and Inclusion Project (FMIIP, P180708): appraisal document (project approved 17 June 2025)",
+    "display_title_ar": "مشروع البنية التحتية للأسواق المالية والشمول المالي في اليمن (FMIIP، P180708): وثيقة التقييم المسبق (أُقرّ المشروع في 17 يونيو 2025)",
+    "publisher": "World Bank",
+    "publisher_ar": "البنك الدولي",
+    "document_label": "Project document",
+    "document_label_ar": "وثيقة مشروع",
+    "document_date": null,
+    "public_card_state": "CITATION_CARD"
+   },
+   "basis": "Governed: 14_SYSTEM_CHRONOLOGY YSC-003 source_scope (\"World Bank FMIIP appraisal historical institutional context\") and YSC-018 (approval 17 June 2025). Descriptive, governed facts only. No web fetch.",
+   "note": "The source ID reflects how the record is used (the 2016 central-bank split), not what the document is. The same PDF is an additional URL on SRC-WB-FMIIP-P180708 (see duplicates). The record's own additional URL (IDU1f65…) is unidentified; verify it or drop it. Document date not governed (approval date used only as context)."
+  },
+  {
+   "source_id": "SRC-AJMBFS-CBY-FI-2025-001",
+   "old": {
+    "display_title": null,
+    "display_title_ar": null,
+    "publisher": null,
+    "public_card_state": "LOCATOR_ONLY",
+    "retrieval_date": null
+   },
+   "new": {
+    "display_title": "The Impact of the Efforts and Measures of the Yemeni Central Bank on Promoting Financial Inclusion in Yemen (April 2025)",
+    "display_title_ar": "أثر جهود وإجراءات البنك المركزي اليمني في تعزيز الشمول المالي في اليمن (أبريل 2025)",
+    "publisher": "Arab Journal of Management, Banking, and Financial Studies",
+    "publisher_ar": "المجلة العربية للإدارة والدراسات المصرفية والمالية",
+    "document_label": "Research or policy paper",
+    "document_label_ar": "ورقة بحثية أو سياساتية",
+    "document_date": "2025-04-27",
+    "public_card_state": "CITATION_CARD"
+   },
+   "basis": "WebFetch of primary_url read: English and Arabic titles as drafted; authors Abdulqaher Mohammed Ahmed and Adel Qaid Al-Ameri; Vol. 1, No. 1 (2025), pp. 51–69; DOI 10.59559/ajmbfs.1.1.4; published 27 April 2025. Governed: passport EP-CBY-STAFF-FI-2025 (journal name; published 2025-04-27).",
+   "note": "\"Yemeni Central Bank\" / «البنك المركزي اليمني» is the article's own title wording, so it is quoted, not an attribution of an issuing authority. The journal's Arabic name is a drafted rendering and is not verified. Respondents were 180 central-bank employees, not the population."
+  },
+  {
+   "source_id": "SRC-IGC-AIDDATA-REMIT-YEM-2026",
+   "old": {
+    "display_title": null,
+    "display_title_ar": null,
+    "publisher": null,
+    "public_card_state": "LOCATOR_ONLY",
+    "retrieval_date": null
+   },
+   "new": {
+    "display_title": "From cash to capital: leveraging remittances for Yemen's economic future (February 2026)",
+    "display_title_ar": "من النقد إلى رأس المال: توظيف التحويلات لمستقبل اليمن الاقتصادي (فبراير 2026)",
+    "publisher": "International Growth Centre (IGC), with AidData",
+    "publisher_ar": "المركز الدولي للنمو (IGC) بالشراكة مع AidData",
+    "document_label": "Research or policy paper",
+    "document_label_ar": "ورقة بحثية أو سياساتية",
+    "document_date": "2026-02",
+    "public_card_state": "CITATION_CARD"
+   },
+   "basis": "WebFetch of primary_url read: title \"From cash to capital: leveraging remittances for Yemen's economic future\"; International Growth Centre in partnership with AidData; February 2026; type \"Project report\"; seven named authors. Governed: 16_DATASET_CATALOG DS-K04-REMIT-SOURCE-LENSES (\"IGC/AidData\").",
+   "note": "Links to no public evidence object; it appears only in source-lens and benchmark datasets. Arabic uses «التحويلات» (flows) per the remittance lexicon."
+  },
+  {
+   "source_id": "SRC-WB-MDB40-2024",
+   "old": {
+    "display_title": null,
+    "display_title_ar": null,
+    "publisher": null,
+    "public_card_state": "LOCATOR_ONLY",
+    "retrieval_date": null
+   },
+   "new": {
+    "display_title": "Remittances Slowed in 2023, Expected to Grow Faster in 2024: Migration and Development Brief 40 (June 2024)",
+    "display_title_ar": "تباطأت التحويلات في 2023 ويُتوقع أن تنمو بوتيرة أسرع في 2024: موجز الهجرة والتنمية رقم 40 (يونيو 2024)",
+    "publisher": "World Bank",
+    "publisher_ar": "البنك الدولي",
+    "document_label": "Research or policy paper",
+    "document_label_ar": "ورقة بحثية أو سياساتية",
+    "document_date": "2024-06",
+    "public_card_state": "CITATION_CARD"
+   },
+   "basis": "WebFetch of primary_url (PDF) read: title \"Remittances Slowed in 2023, Expected to Grow Faster in 2024\", Migration and Development Brief 40, World Bank with KNOMAD, June 2024, five named authors. No governed title facts existed.",
+   "note": "Co-produced under KNOMAD (Global Knowledge Partnership on Migration and Development). Lead may show \"World Bank / KNOMAD\" as publisher. Links to no public evidence object."
+  },
+  {
+   "source_id": "SRC-SC-TRADE-FIN-YEM-2026",
+   "old": {
+    "display_title": null,
+    "display_title_ar": null,
+    "publisher": null,
+    "public_card_state": "LOCATOR_ONLY",
+    "retrieval_date": null
+   },
+   "new": {
+    "display_title": "Supporting Trade Finance in Yemen Amid Uncertainty (February 2026)",
+    "display_title_ar": "دعم تمويل التجارة في اليمن في ظل حالة عدم اليقين (فبراير 2026)",
+    "publisher": "Sana’a Center for Strategic Studies",
+    "publisher_ar": "مركز صنعاء للدراسات الاستراتيجية",
+    "document_label": "Research or policy paper",
+    "document_label_ar": "ورقة بحثية أو سياساتية",
+    "document_date": "2026-02-17",
+    "public_card_state": "CITATION_CARD"
+   },
+   "basis": "WebFetch of primary_url read: title \"Supporting Trade Finance in Yemen Amid Uncertainty\", authors Wadhah Al-Awlaqi and Maryam Abdulrahman, Sana'a Center, 17 February 2026, Policy Research (Rethinking Yemen's Economy). No governed title facts existed.",
+   "note": "Links to no public evidence object (source-lens and benchmark datasets only)."
+  },
+  {
+   "source_id": "SRC-ACAPS-YEM-REMIT-2021",
+   "old": {
+    "display_title": null,
+    "display_title_ar": null,
+    "publisher": null,
+    "public_card_state": "LOCATOR_ONLY",
+    "retrieval_date": null
+   },
+   "new": {
+    "display_title": "The impact of remittances on Yemen's economy (October 2021)",
+    "display_title_ar": "أثر التحويلات في اقتصاد اليمن (أكتوبر 2021)",
+    "publisher": "ACAPS (Yemen Analysis Hub)",
+    "publisher_ar": "ACAPS (مركز تحليل اليمن)",
+    "document_label": "Research or policy paper",
+    "document_label_ar": "ورقة بحثية أو سياساتية",
+    "document_date": "2021-10-15",
+    "public_card_state": "CITATION_CARD"
+   },
+   "basis": "WebFetch of primary_url (PDF) read: title \"The impact of remittances on Yemen's economy\", ACAPS Yemen Analysis Hub, thematic report, 15 October 2021. Governed: DS-K04-REMIT-SOURCE-LENSES (\"ACAPS\").",
+   "note": "The Arabic hub name «مركز تحليل اليمن» is a drafted rendering. Links to no public evidence object."
+  },
+  {
+   "source_id": "SRC-AIDDATA-SAUDI-YEM-2015",
+   "old": {
+    "display_title": null,
+    "display_title_ar": null,
+    "publisher": null,
+    "public_card_state": "LOCATOR_ONLY",
+    "retrieval_date": null
+   },
+   "new": {
+    "display_title": "Saudi aid to Yemen: stability over development? (May 2015)",
+    "display_title_ar": "المساعدات السعودية لليمن: الاستقرار قبل التنمية؟ (مايو 2015)",
+    "publisher": "AidData",
+    "publisher_ar": "AidData",
+    "document_label": "Research or policy paper",
+    "document_label_ar": "ورقة بحثية أو سياساتية",
+    "document_date": "2015-05-08",
+    "public_card_state": "CITATION_CARD"
+   },
+   "basis": "WebFetch of primary_url read: title \"Saudi aid to Yemen: Stability over development?\", author Charles Perla, AidData, 8 May 2015. Governed: 32_QUAL_LITERATURE QUAL-019 (\"AidData's TUFF work\"; reference period 2010–2013).",
+   "note": "This is a blog article; \"Research or policy paper\" is the nearest listed type. The governed use is only the pledge, commitment and disbursement distinction."
+  },
+  {
+   "source_id": "SRC-SANAA-MF-2020",
+   "old": {
+    "display_title": null,
+    "display_title_ar": null,
+    "publisher": null,
+    "public_card_state": "LOCATOR_ONLY",
+    "retrieval_date": null
+   },
+   "new": {
+    "display_title": "Microfinance in Yemen: An Overview of Challenges and Opportunities — Rethinking Yemen's Economy No. 6 (April 2020)",
+    "display_title_ar": "التمويل الأصغر في اليمن: نظرة عامة على التحديات والفرص — سلسلة Rethinking Yemen's Economy، العدد 6 (أبريل 2020)",
+    "publisher": "Sana’a Center for Strategic Studies",
+    "publisher_ar": "مركز صنعاء للدراسات الاستراتيجية",
+    "document_label": "Research or policy paper",
+    "document_label_ar": "ورقة بحثية أو سياساتية",
+    "document_date": "2020-04-30",
+    "public_card_state": "CITATION_CARD"
+   },
+   "basis": "WebFetch of primary_url read: title \"Microfinance in Yemen: An Overview of Challenges and Opportunities\", author Moneef al-Shaibani, Sana'a Center, 30 April 2020, \"Rethinking Yemen's Economy No. 6\". Governed: 32_QUAL LIT-YEM-2020-001 (historical sector/policy synthesis).",
+   "note": "The series name is kept in English inside the Arabic title because its official Arabic name is not verified. The additional URL is the PDF of the same paper."
+  },
+  {
+   "source_id": "SRC-SANAA-EMONEY-2022",
+   "old": {
+    "display_title": "Challenges and Prospects for Electronic Money and Payment Systems in Yemen",
+    "display_title_ar": "تحديات وآفاق النقود الإلكترونية وأنظمة الدفع في اليمن",
+    "publisher": "Sana’a Center for Strategic Studies",
+    "public_card_state": "FULL_PUBLIC_CARD",
+    "retrieval_date": null
+   },
+   "new": {
+    "display_title": "Challenges and Prospects for Electronic Money and Payment Systems in Yemen",
+    "display_title_ar": "تحديات وآفاق النقود الإلكترونية وأنظمة الدفع في اليمن",
+    "publisher": "Sana’a Center for Strategic Studies",
+    "publisher_ar": "مركز صنعاء للدراسات الاستراتيجية",
+    "document_label": "Research or policy paper",
+    "document_label_ar": "ورقة بحثية أو سياساتية",
+    "document_date": null
+   },
+   "basis": "Governed display_title and publisher (15_SOURCE_LIBRARY). No web fetch (title already governed).",
+   "note": "Unchanged. The publication date is not governed (the year in the source ID is not a governed date), so no \"(date)\" suffix is drafted. Lead may confirm the date against the page."
+  },
+  {
+   "source_id": "SRC-SANAA-MFB-2024",
+   "old": {
+    "display_title": "Enhancing the Role of Microfinance Banks for Sustainable Impact in Yemen",
+    "display_title_ar": "تعزيز دور بنوك التمويل الأصغر لتحقيق أثر مستدام في اليمن",
+    "publisher": "Sana’a Center for Strategic Studies",
+    "public_card_state": "FULL_PUBLIC_CARD",
+    "retrieval_date": null
+   },
+   "new": {
+    "display_title": "Enhancing the Role of Microfinance Banks for Sustainable Impact in Yemen (2024)",
+    "display_title_ar": "تعزيز دور بنوك التمويل الأصغر لتحقيق أثر مستدام في اليمن (2024)",
+    "publisher": "Sana’a Center for Strategic Studies",
+    "publisher_ar": "مركز صنعاء للدراسات الاستراتيجية",
+    "document_label": "Research or policy paper",
+    "document_label_ar": "ورقة بحثية أو سياساتية",
+    "document_date": "2024"
+   },
+   "basis": "Governed display_title; year from CLM-053 (\"A 2024 Yemen policy source\") and INS-K04-024 (\"The 2024 MFB paper\"). No web fetch.",
+   "note": "Year added from governed text; title otherwise unchanged."
+  },
+  {
+   "source_id": "SRC-SANAA-SOCPROT-2024",
+   "old": {
+    "display_title": null,
+    "display_title_ar": null,
+    "publisher": null,
+    "public_card_state": "LOCATOR_ONLY",
+    "retrieval_date": null
+   },
+   "new": {
+    "display_title": "From Vulnerability to Empowerment: The Future of Social Protection in Yemen (July 2024)",
+    "display_title_ar": "من الهشاشة إلى التمكين: مستقبل الحماية الاجتماعية في اليمن (يوليو 2024)",
+    "publisher": "Sana’a Center for Strategic Studies",
+    "publisher_ar": "مركز صنعاء للدراسات الاستراتيجية",
+    "document_label": "Research or policy paper",
+    "document_label_ar": "ورقة بحثية أو سياساتية",
+    "document_date": "2024-07-09",
+    "public_card_state": "CITATION_CARD"
+   },
+   "basis": "WebFetch of primary_url read: title \"From Vulnerability to Empowerment: The Future of Social Protection in Yemen\", authors Ziad Saad and Ziad al-Hassan, Sana'a Center for Strategic Studies, 9 July 2024, Policy Research. Governed: 32_QUAL LIT-YEM-2024-002 (\"2024 policy/social-protection synthesis\").",
+   "note": "Its microfinance figures come through different upstream chains (June borrowers vs November portfolio); the card must not merge them."
+  },
+  {
+   "source_id": "SRC-SANAA-YR-2025-Q2-MFB",
+   "old": {
+    "display_title": null,
+    "display_title_ar": null,
+    "publisher": null,
+    "public_card_state": "LOCATOR_ONLY",
+    "retrieval_date": null
+   },
+   "new": {
+    "display_title": "The Economy — The Yemen Review Quarterly: April–June 2025 (July 2025)",
+    "display_title_ar": "باب الاقتصاد في التقرير الفصلي The Yemen Review: أبريل–يونيو 2025 (يوليو 2025)",
+    "publisher": "Sana’a Center for Strategic Studies",
+    "publisher_ar": "مركز صنعاء للدراسات الاستراتيجية",
+    "document_label": "Newsletter",
+    "document_label_ar": "نشرة دورية",
+    "document_date": "2025-07-22",
+    "public_card_state": "CITATION_CARD"
+   },
+   "basis": "WebFetch of primary_url read: title \"The Economy — The Yemen Review Quarterly: April-June 2025\", authors Wadhah Al-Awlaqi and Aylin Junga, Sana'a Center, 22 July 2025. Governed: CLM-056 (\"A 2025 Yemen Review restates 91%…\").",
+   "note": "The Yemen Review is kept in English inside the Arabic title because its official Arabic title is not verified. The governed use is limited to the 91% restatement, which is unresolved as a stock share."
+  },
+  {
+   "source_id": "SRC-MDPI-UTAUT-YEM-2022",
+   "old": {
+    "display_title": null,
+    "display_title_ar": null,
+    "publisher": null,
+    "public_card_state": "LOCATOR_ONLY",
+    "retrieval_date": null
+   },
+   "new": {
+    "display_title": "Intention to Use E-Payments from the Perspective of the Unified Theory of Acceptance and Use of Technology (UTAUT): Evidence from Yemen (October 2022)",
+    "display_title_ar": "نية استخدام المدفوعات الإلكترونية من منظور النظرية الموحدة لقبول التكنولوجيا واستخدامها (UTAUT): أدلة من اليمن (أكتوبر 2022)",
+    "publisher": "Economies (MDPI)",
+    "publisher_ar": "مجلة Economies (الناشر MDPI)",
+    "document_label": "Research or policy paper",
+    "document_label_ar": "ورقة بحثية أو سياساتية",
+    "document_date": "2022-10-18",
+    "public_card_state": "CITATION_CARD"
+   },
+   "basis": "WebFetch of primary_url read: title as drafted; authors Fahd Alduais and Mohammad O. Al-Smadi; journal Economies, Vol. 10, Issue 10, Article 259; DOI 10.3390/economies10100259; published 18 October 2022. Governed: 32_QUAL LIT-YEM-2022-002 (n=486 online convenience sample).",
+   "note": "Peer-reviewed, but the sample is a convenience sample: no national e-payment use or prevalence can be read from it."
+  },
+  {
+   "source_id": "SRC-IBS-EPAY-YEM-2020",
+   "old": {
+    "display_title": null,
+    "display_title_ar": null,
+    "publisher": null,
+    "public_card_state": "LOCATOR_ONLY",
+    "retrieval_date": null
+   },
+   "new": {
+    "display_title": "Electronic Payment Services in Yemen: Challenges and Opportunities for Success (October 2020)",
+    "display_title_ar": "خدمات الدفع الإلكتروني في اليمن: التحديات وفرص النجاح (أكتوبر 2020)",
+    "publisher": "Institute of Banking Studies (IBS)",
+    "publisher_ar": "معهد الدراسات المصرفية",
+    "document_label": "Research or policy paper",
+    "document_label_ar": "ورقة بحثية أو سياساتية",
+    "document_date": "2020-10",
+    "public_card_state": "CITATION_CARD"
+   },
+   "basis": "WebFetch of primary_url (FinDev Gateway page) read: title \"Electronic Payment Services in Yemen: Challenges and Opportunities for Success\", authoring organisation Institute of Banking Studies (four named authors), October 2020, 107 pages, submitted to FinDev Gateway by IBS. Governed: passports EP-IBS-EMONEY-2019-K04 etc. (publisher \"Institute of Banking Studies (Yemen)\").",
+   "note": "Hosted by FinDev Gateway. The publisher is the author institution (IBS, governed), not the host. The two additional URLs are the hosted PDF files (Arabic file names), not separate sources."
+  },
+  {
+   "source_id": "SRC-IMF-YEM-EGDDS-VAL-1996",
+   "old": {
+    "display_title": null,
+    "display_title_ar": null,
+    "publisher": null,
+    "public_card_state": "LOCATOR_ONLY",
+    "retrieval_date": null
+   },
+   "new": {
+    "display_title": "Yemen: e-GDDS metadata on market-rate valuation of foreign-currency accounts (historical reference 1996)",
+    "display_title_ar": "اليمن: البيانات الوصفية ضمن النظام العام المعزَّز لنشر البيانات (e-GDDS) بشأن تقييم حسابات العملات الأجنبية بسعر السوق (مرجع تاريخي: 1996)",
+    "publisher": "International Monetary Fund",
+    "publisher_ar": "صندوق النقد الدولي",
+    "document_label": "Method or standard",
+    "document_label_ar": "منهج أو معيار",
+    "document_date": null,
+    "public_card_state": "CITATION_CARD"
+   },
+   "basis": "Descriptive, governed facts only: CLM-038 and passport EP-CBY-BANKING-VALUATION-LINEAGE-K04 (\"IMF e-GDDS historical metadata\"; \"1996 historical metadata; reviewed 2026-09-10\"). No web fetch.",
+   "note": "The page's own title is not read. \"1996\" is the governed historical reference, not a document date."
+  },
+  {
+   "source_id": "SRC-WB-WDI-REMIT-YEM-CURRENT",
+   "old": {
+    "display_title": null,
+    "display_title_ar": null,
+    "publisher": null,
+    "public_card_state": "LOCATOR_ONLY",
+    "retrieval_date": null
+   },
+   "new": {
+    "display_title": "World Development Indicators: personal remittances received, Yemen (public data page reviewed 10 September 2026)",
+    "display_title_ar": "مؤشرات التنمية العالمية: التحويلات الشخصية الواردة، اليمن (صفحة البيانات العامة كما اطُّلع عليها في 10 سبتمبر 2026)",
+    "publisher": "World Bank",
+    "publisher_ar": "البنك الدولي",
+    "document_label": "Survey dataset or indicator",
+    "document_label_ar": "مسح أو مؤشر",
+    "document_date": null,
+    "public_card_state": "CITATION_CARD"
+   },
+   "basis": "Descriptive, governed facts only: CLM-039 and passport EP-WB-WDI-REMITTANCE-VINTAGE-K04 (publisher \"World Bank Data / WDI\"; \"World Bank Yemen personal-remittance availability across public surfaces\"; reviewed 2026-09-10). No web fetch.",
+   "note": "The indicator's exact published label is not quoted (not read). CLM-039's point is that this interface showed an older span; the title keeps the review date so the card is not read as the full series. Arabic uses «التحويلات» (balance-of-payments series)."
+  },
+  {
+   "source_id": "SRC-IMF-D4D-YEM-ESS-2025",
+   "old": {
+    "display_title": null,
+    "display_title_ar": null,
+    "publisher": null,
+    "public_card_state": "LOCATOR_ONLY",
+    "retrieval_date": null
+   },
+   "new": {
+    "display_title": "D4D-II implementation progress report (January 2026)",
+    "display_title_ar": "تقرير التقدم في التنفيذ لصندوق D4D-II (يناير 2026)",
+    "publisher": "International Monetary Fund",
+    "publisher_ar": "صندوق النقد الدولي",
+    "document_label": "Project document",
+    "document_label_ar": "وثيقة مشروع",
+    "document_date": "2026-01",
+    "public_card_state": "CITATION_CARD"
+   },
+   "basis": "Descriptive, governed facts only: 32_QUAL PA-IMF-ESS-001 (authority \"International Monetary Fund — Statistics Department\"; \"IMF D4D-II\"; \"July 2025; implementation report Jan 2026\"). No web fetch.",
+   "note": "The report's exact title is not read. Placeholder: QUAL-020 in 32_QUAL_LITERATURE has source_url \"IMF D4D-II\" instead of a URL (see placeholder_fixes)."
+  },
+  {
+   "source_id": "SRC-IMF-BPM6",
+   "old": {
+    "display_title": null,
+    "display_title_ar": null,
+    "publisher": null,
+    "public_card_state": "LOCATOR_ONLY",
+    "retrieval_date": null
+   },
+   "new": {
+    "display_title": "Balance of Payments and International Investment Position Manual, sixth edition (BPM6)",
+    "display_title_ar": "دليل ميزان المدفوعات ووضع الاستثمار الدولي، الطبعة السادسة (BPM6)",
+    "publisher": "International Monetary Fund",
+    "publisher_ar": "صندوق النقد الدولي",
+    "document_label": "Method or standard",
+    "document_label_ar": "منهج أو معيار",
+    "document_date": null,
+    "public_card_state": "CITATION_CARD"
+   },
+   "basis": "Governed short name \"BPM6\" (32_QUAL PA-IMF-BPM-001; CLM-047/048; document_type \"method/standard\"). The full name is the standard's published title (bibliographic knowledge, not fetched).",
+   "note": "Lead to confirm the expanded title. Publication date not governed."
+  },
+  {
+   "source_id": "SRC-IMF-BPM6-COMP-GUIDE",
+   "old": {
+    "display_title": null,
+    "display_title_ar": null,
+    "publisher": null,
+    "public_card_state": "LOCATOR_ONLY",
+    "retrieval_date": null
+   },
+   "new": {
+    "display_title": "Balance of Payments and International Investment Position Compilation Guide (companion to BPM6)",
+    "display_title_ar": "دليل تجميع إحصاءات ميزان المدفوعات ووضع الاستثمار الدولي (المرافق للطبعة السادسة BPM6)",
+    "publisher": "International Monetary Fund",
+    "publisher_ar": "صندوق النقد الدولي",
+    "document_label": "Method or standard",
+    "document_label_ar": "منهج أو معيار",
+    "document_date": null,
+    "public_card_state": "CITATION_CARD"
+   },
+   "basis": "Governed: 32_QUAL PA-IMF-BPM-001 title_or_event \"BPM6 and Balance of Payments/IIP Compilation Guide\"; document_type \"method/standard\". No web fetch.",
+   "note": "Publication date not governed."
+  },
+  {
+   "source_id": "SRC-IMF-BPM7-IMPLEMENTATION",
+   "old": {
+    "display_title": null,
+    "display_title_ar": null,
+    "publisher": null,
+    "public_card_state": "LOCATOR_ONLY",
+    "retrieval_date": null
+   },
+   "new": {
+    "display_title": "Release of BPM7 and its implementation strategy (2025)",
+    "display_title_ar": "إصدار الطبعة السابعة من دليل ميزان المدفوعات (BPM7) واستراتيجية تطبيقها (2025)",
+    "publisher": "International Monetary Fund",
+    "publisher_ar": "صندوق النقد الدولي",
+    "document_label": "Method or standard",
+    "document_label_ar": "منهج أو معيار",
+    "document_date": null,
+    "public_card_state": "CITATION_CARD"
+   },
+   "basis": "Governed: 32_QUAL PA-IMF-BPM7-001 (title_or_event \"BPM7 release and implementation strategy\"; date_or_period \"2025 onward\"). No web fetch.",
+   "note": "\"(2025)\" is the governed period start. The exact release date is not governed, so document_date is null."
+  },
+  {
+   "source_id": "SRC-IMF-YEM-SMP-2026",
+   "old": {
+    "display_title": "Yemen — IMF staff-level agreement on a Staff-Monitored Program (16 July 2026)",
+    "display_title_ar": "اليمن — اتفاق على مستوى خبراء صندوق النقد بشأن برنامج يخضع لمراقبة الصندوق (16 يوليو 2026)",
+    "publisher": "International Monetary Fund",
+    "public_card_state": "FULL_PUBLIC_CARD",
+    "retrieval_date": null
+   },
+   "new": {
+    "display_title": "Yemen: staff-level agreement on a proposed Staff-Monitored Program (16 July 2026)",
+    "display_title_ar": "اليمن: اتفاق على مستوى الخبراء بشأن برنامج مقترح يراقبه خبراء صندوق النقد الدولي (SMP) (16 يوليو 2026)",
+    "publisher": "International Monetary Fund",
+    "publisher_ar": "صندوق النقد الدولي",
+    "document_label": "News release",
+    "document_label_ar": "بيان صحفي",
+    "document_date": "2026-07-16"
+   },
+   "basis": "Governed: current display_title; CLM-049 and YSC-023 (16 July 2026; \"proposed 18-month Staff-Monitored Program\"; staff-level stage). No web fetch.",
+   "note": "\"IMF\" removed from the title (it is the publisher) and \"proposed\" added from governed text, so the title cannot be read as Board approval. Arabic uses the SMP name set in RULES C."
+  },
+  {
+   "source_id": "SRC-SMEPS-AR2024-2025",
+   "old": {
+    "display_title": null,
+    "display_title_ar": null,
+    "publisher": null,
+    "public_card_state": "LOCATOR_ONLY",
+    "retrieval_date": null
+   },
+   "new": {
+    "display_title": "Small and Micro Enterprise Promotion Service (SMEPS) Annual Report 2024",
+    "display_title_ar": "التقرير السنوي لوكالة تنمية المنشآت الصغيرة والأصغر (SMEPS) لعام 2024",
+    "publisher": "Small and Micro Enterprise Promotion Service (SMEPS)",
+    "publisher_ar": "وكالة تنمية المنشآت الصغيرة والأصغر",
+    "document_label": "Annual report",
+    "document_label_ar": "تقرير سنوي",
+    "document_date": null,
+    "public_card_state": "CITATION_CARD"
+   },
+   "basis": "Governed: CLM-060 (\"SMEPS's 2024 Annual Report\"); passports EP-SMEPS-2024-PROGRAMME / EP-SMEPS-FINACCESS-KPI (publisher). No web fetch.",
+   "note": "Publication date not governed (the year in the source ID and the file name in additional_urls are not used). The issuer name stays in the title as part of the report's name. Programme KPIs are not national MSME rates."
+  },
+  {
+   "source_id": "SRC-SFD-SMED-LP-2023-NOV",
+   "old": {
+    "display_title": null,
+    "display_title_ar": null,
+    "publisher": null,
+    "public_card_state": "LOCATOR_ONLY",
+    "retrieval_date": null
+   },
+   "new": {
+    "display_title": "Small and Microenterprise Development (SMED) loan portfolio archive: November 2023 page",
+    "display_title_ar": "أرشيف المحفظة الإقراضية لوحدة تنمية المنشآت الصغيرة والأصغر (SMED): صفحة نوفمبر 2023",
+    "publisher": "Social Fund for Development (SFD)",
+    "publisher_ar": "الصندوق الاجتماعي للتنمية",
+    "document_label": "Database or web interface",
+    "document_label_ar": "قاعدة بيانات أو واجهة إلكترونية",
+    "document_date": null,
+    "public_card_state": "CITATION_CARD"
+   },
+   "basis": "Descriptive, governed facts only: 21_MFI_DATA 2023 coverage row (\"SFD/SMED Nov-2023 Loan Portfolio route\"); 32_QUAL LIT-YEM-2024-002 (\"SFD-SMED November 2023 archive locator for portfolio\"); SMED name from 35_OCHA_WB_CONTEXT WB2004-CHRON-002. No web fetch.",
+   "note": "The raw 2023 table has not been inspected (primary custody open). The page is a locator for the November 2023 portfolio figure only. Arabic unit name «وحدة تنمية المنشآت الصغيرة والأصغر» is drafted and should be matched to SFD's own Arabic name."
+  },
+  {
+   "source_id": "SRC-SFD-Q4-2009-001",
+   "old": {
+    "display_title": null,
+    "display_title_ar": null,
+    "publisher": null,
+    "public_card_state": "LOCATOR_ONLY",
+    "retrieval_date": null
+   },
+   "new": {
+    "display_title": "Social Fund for Development (SFD) Newsletter (fourth quarter of 2009)",
+    "display_title_ar": "النشرة الإخبارية للصندوق الاجتماعي للتنمية (الربع الرابع من 2009)",
+    "publisher": "Social Fund for Development (SFD)",
+    "publisher_ar": "الصندوق الاجتماعي للتنمية",
+    "document_label": "Newsletter",
+    "document_label_ar": "نشرة دورية",
+    "document_date": null,
+    "public_card_state": "CITATION_CARD"
+   },
+   "basis": "Governed: data/mfi_data.json \"MFI temporal spine\" and \"SFD/SMED year coverage\" rows (\"2009 Q4 official newsletter is controlled as institutional/activity evidence\"). No web fetch.",
+   "note": "Issue quarter taken from the governed source-object/period label, not from the URL; the issue number is not governed. Document date not governed (the quarter is the reference period). Activity and institutional evidence only; no borrower or portfolio point is taken from it."
+  },
+  {
+   "source_id": "SRC-SFD-Q4-2010-001",
+   "old": {
+    "display_title": null,
+    "display_title_ar": null,
+    "publisher": null,
+    "public_card_state": "LOCATOR_ONLY",
+    "retrieval_date": null
+   },
+   "new": {
+    "display_title": "Social Fund for Development (SFD) Newsletter (fourth quarter of 2010)",
+    "display_title_ar": "النشرة الإخبارية للصندوق الاجتماعي للتنمية (الربع الرابع من 2010)",
+    "publisher": "Social Fund for Development (SFD)",
+    "publisher_ar": "الصندوق الاجتماعي للتنمية",
+    "document_label": "Newsletter",
+    "document_label_ar": "نشرة دورية",
+    "document_date": null,
+    "public_card_state": "CITATION_CARD"
+   },
+   "basis": "Governed: data/mfi_data.json \"MFI temporal spine\" and \"SFD/SMED year coverage\" rows (\"Official SFD Q4 2010 provider-level table\"; spine \"2010 Q4\", \"SFD Q4 2010 provider table\"). No web fetch.",
+   "note": "Issue quarter taken from the governed source-object/period label, not from the URL; the issue number is not governed. Document date not governed (the quarter is the reference period)."
+  },
+  {
+   "source_id": "SRC-SFD-Q4-2011-001",
+   "old": {
+    "display_title": null,
+    "display_title_ar": null,
+    "publisher": null,
+    "public_card_state": "LOCATOR_ONLY",
+    "retrieval_date": null
+   },
+   "new": {
+    "display_title": "Social Fund for Development (SFD) Newsletter (fourth quarter of 2011)",
+    "display_title_ar": "النشرة الإخبارية للصندوق الاجتماعي للتنمية (الربع الرابع من 2011)",
+    "publisher": "Social Fund for Development (SFD)",
+    "publisher_ar": "الصندوق الاجتماعي للتنمية",
+    "document_label": "Newsletter",
+    "document_label_ar": "نشرة دورية",
+    "document_date": null,
+    "public_card_state": "CITATION_CARD"
+   },
+   "basis": "Governed: data/mfi_data.json \"MFI temporal spine\" and \"SFD/SMED year coverage\" rows (\"Official SFD Q4 2011 newsletter\"; spine \"Q4-2011 newsletter\"). No web fetch.",
+   "note": "Issue quarter taken from the governed source-object/period label, not from the URL; the issue number is not governed. Document date not governed (the quarter is the reference period). Same issue holds an end-December 2011 narrative and a table headed end-December 2010, with conflicting portfolio values; the card must not present one settled 2011 portfolio."
+  },
+  {
+   "source_id": "SRC-SFD-Q1-2012-001",
+   "old": {
+    "display_title": null,
+    "display_title_ar": null,
+    "publisher": null,
+    "public_card_state": "LOCATOR_ONLY",
+    "retrieval_date": null
+   },
+   "new": {
+    "display_title": "Social Fund for Development (SFD) Newsletter (first quarter of 2012)",
+    "display_title_ar": "النشرة الإخبارية للصندوق الاجتماعي للتنمية (الربع الأول من 2012)",
+    "publisher": "Social Fund for Development (SFD)",
+    "publisher_ar": "الصندوق الاجتماعي للتنمية",
+    "document_label": "Newsletter",
+    "document_label_ar": "نشرة دورية",
+    "document_date": null,
+    "public_card_state": "CITATION_CARD"
+   },
+   "basis": "Governed: data/mfi_data.json \"MFI temporal spine\" and \"SFD/SMED year coverage\" rows (spine \"2012 Q1\", \"SFD Q1 2012 provider table\" (31 March 2012)). No web fetch.",
+   "note": "Issue quarter taken from the governed source-object/period label, not from the URL; the issue number is not governed. Document date not governed (the quarter is the reference period)."
+  },
+  {
+   "source_id": "SRC-SFD-Q4-2012-001",
+   "old": {
+    "display_title": null,
+    "display_title_ar": null,
+    "publisher": null,
+    "public_card_state": "LOCATOR_ONLY",
+    "retrieval_date": null
+   },
+   "new": {
+    "display_title": "Social Fund for Development (SFD) Newsletter (fourth quarter of 2012)",
+    "display_title_ar": "النشرة الإخبارية للصندوق الاجتماعي للتنمية (الربع الرابع من 2012)",
+    "publisher": "Social Fund for Development (SFD)",
+    "publisher_ar": "الصندوق الاجتماعي للتنمية",
+    "document_label": "Newsletter",
+    "document_label_ar": "نشرة دورية",
+    "document_date": null,
+    "public_card_state": "CITATION_CARD"
+   },
+   "basis": "Governed: data/mfi_data.json \"MFI temporal spine\" and \"SFD/SMED year coverage\" rows (\"Official SFD Q4 2012 provider-level table\"; spine \"2012 Q4\"). No web fetch.",
+   "note": "Issue quarter taken from the governed source-object/period label, not from the URL; the issue number is not governed. Document date not governed (the quarter is the reference period). Also cited for the 1997 origin milestone (MF-ORIG-001)."
+  },
+  {
+   "source_id": "SRC-SFD-Q2-2013-001",
+   "old": {
+    "display_title": null,
+    "display_title_ar": null,
+    "publisher": null,
+    "public_card_state": "LOCATOR_ONLY",
+    "retrieval_date": null
+   },
+   "new": {
+    "display_title": "Social Fund for Development (SFD) Newsletter (second quarter of 2013)",
+    "display_title_ar": "النشرة الإخبارية للصندوق الاجتماعي للتنمية (الربع الثاني من 2013)",
+    "publisher": "Social Fund for Development (SFD)",
+    "publisher_ar": "الصندوق الاجتماعي للتنمية",
+    "document_label": "Newsletter",
+    "document_label_ar": "نشرة دورية",
+    "document_date": null,
+    "public_card_state": "CITATION_CARD"
+   },
+   "basis": "Governed: data/mfi_data.json \"MFI temporal spine\" and \"SFD/SMED year coverage\" rows (spine \"2013 Q2\", \"SFD Q2 2013 provider table\" (30 June 2013)). No web fetch.",
+   "note": "Issue quarter taken from the governed source-object/period label, not from the URL; the issue number is not governed. Document date not governed (the quarter is the reference period). The year-coverage row still says the exact observation date is to be confirmed; the quarter follows the spine label."
+  },
+  {
+   "source_id": "SRC-SFD-Q2-2014-001",
+   "old": {
+    "display_title": null,
+    "display_title_ar": null,
+    "publisher": null,
+    "public_card_state": "LOCATOR_ONLY",
+    "retrieval_date": null
+   },
+   "new": {
+    "display_title": "Social Fund for Development (SFD) Newsletter (second quarter of 2014)",
+    "display_title_ar": "النشرة الإخبارية للصندوق الاجتماعي للتنمية (الربع الثاني من 2014)",
+    "publisher": "Social Fund for Development (SFD)",
+    "publisher_ar": "الصندوق الاجتماعي للتنمية",
+    "document_label": "Newsletter",
+    "document_label_ar": "نشرة دورية",
+    "document_date": null,
+    "public_card_state": "CITATION_CARD"
+   },
+   "basis": "Governed: data/mfi_data.json \"MFI temporal spine\" and \"SFD/SMED year coverage\" rows (\"Official SFD Q2 primary source\"; spine \"2014 Q2\" (30 June 2014)). No web fetch.",
+   "note": "Issue quarter taken from the governed source-object/period label, not from the URL; the issue number is not governed. Document date not governed (the quarter is the reference period)."
+  },
+  {
+   "source_id": "SRC-SFD-Q1-2015-001",
+   "old": {
+    "display_title": null,
+    "display_title_ar": null,
+    "publisher": null,
+    "public_card_state": "LOCATOR_ONLY",
+    "retrieval_date": null
+   },
+   "new": {
+    "display_title": "Social Fund for Development (SFD) Newsletter (first quarter of 2015)",
+    "display_title_ar": "النشرة الإخبارية للصندوق الاجتماعي للتنمية (الربع الأول من 2015)",
+    "publisher": "Social Fund for Development (SFD)",
+    "publisher_ar": "الصندوق الاجتماعي للتنمية",
+    "document_label": "Newsletter",
+    "document_label_ar": "نشرة دورية",
+    "document_date": null,
+    "public_card_state": "CITATION_CARD"
+   },
+   "basis": "Governed: data/mfi_data.json \"MFI temporal spine\" and \"SFD/SMED year coverage\" rows (spine \"2015 Q1\", \"SFD Q1 2015 provider table\" (31 March 2015)). No web fetch.",
+   "note": "Issue quarter taken from the governed source-object/period label, not from the URL; the issue number is not governed. Document date not governed (the quarter is the reference period)."
+  },
+  {
+   "source_id": "SRC-SFD-Q3-2015-001",
+   "old": {
+    "display_title": null,
+    "display_title_ar": null,
+    "publisher": null,
+    "public_card_state": "LOCATOR_ONLY",
+    "retrieval_date": null
+   },
+   "new": {
+    "display_title": "Social Fund for Development (SFD) Newsletter (third quarter of 2015)",
+    "display_title_ar": "النشرة الإخبارية للصندوق الاجتماعي للتنمية (الربع الثالث من 2015)",
+    "publisher": "Social Fund for Development (SFD)",
+    "publisher_ar": "الصندوق الاجتماعي للتنمية",
+    "document_label": "Newsletter",
+    "document_label_ar": "نشرة دورية",
+    "document_date": null,
+    "public_card_state": "CITATION_CARD"
+   },
+   "basis": "Governed: data/mfi_data.json \"MFI temporal spine\" and \"SFD/SMED year coverage\" rows (spine \"2015 Q3\", \"SFD Q3 2015 provider table\" (30 September 2015)). No web fetch.",
+   "note": "Issue quarter taken from the governed source-object/period label, not from the URL; the issue number is not governed. Document date not governed (the quarter is the reference period)."
+  },
+  {
+   "source_id": "SRC-SFD-Q4-2015-001",
+   "old": {
+    "display_title": null,
+    "display_title_ar": null,
+    "publisher": null,
+    "public_card_state": "LOCATOR_ONLY",
+    "retrieval_date": null
+   },
+   "new": {
+    "display_title": "Social Fund for Development (SFD) Newsletter (fourth quarter of 2015)",
+    "display_title_ar": "النشرة الإخبارية للصندوق الاجتماعي للتنمية (الربع الرابع من 2015)",
+    "publisher": "Social Fund for Development (SFD)",
+    "publisher_ar": "الصندوق الاجتماعي للتنمية",
+    "document_label": "Newsletter",
+    "document_label_ar": "نشرة دورية",
+    "document_date": null,
+    "public_card_state": "CITATION_CARD"
+   },
+   "basis": "Governed: data/mfi_data.json \"MFI temporal spine\" and \"SFD/SMED year coverage\" rows (spine \"2015 Q4\", \"SFD Q4 2015 provider table + narrative\" (31 December 2015)). No web fetch.",
+   "note": "Issue quarter taken from the governed source-object/period label, not from the URL; the issue number is not governed. Document date not governed (the quarter is the reference period). Within-source portfolio contradiction (table YER 6.741bn vs narrative near YER 9bn) must remain visible."
+  },
+  {
+   "source_id": "SRC-SFD-Q3-2016-001",
+   "old": {
+    "display_title": null,
+    "display_title_ar": null,
+    "publisher": null,
+    "public_card_state": "LOCATOR_ONLY",
+    "retrieval_date": null
+   },
+   "new": {
+    "display_title": "Social Fund for Development (SFD) Newsletter (third quarter of 2016)",
+    "display_title_ar": "النشرة الإخبارية للصندوق الاجتماعي للتنمية (الربع الثالث من 2016)",
+    "publisher": "Social Fund for Development (SFD)",
+    "publisher_ar": "الصندوق الاجتماعي للتنمية",
+    "document_label": "Newsletter",
+    "document_label_ar": "نشرة دورية",
+    "document_date": null,
+    "public_card_state": "CITATION_CARD"
+   },
+   "basis": "Governed: data/mfi_data.json \"MFI temporal spine\" and \"SFD/SMED year coverage\" rows (spine \"2016 Q3\", \"SFD Q3 2016 provider table\" (30 September 2016)). No web fetch.",
+   "note": "Issue quarter taken from the governed source-object/period label, not from the URL; the issue number is not governed. Document date not governed (the quarter is the reference period)."
+  },
+  {
+   "source_id": "SRC-SFD-Q4-2017-001",
+   "old": {
+    "display_title": null,
+    "display_title_ar": null,
+    "publisher": null,
+    "public_card_state": "LOCATOR_ONLY",
+    "retrieval_date": null
+   },
+   "new": {
+    "display_title": "Social Fund for Development (SFD) Newsletter (fourth quarter of 2017)",
+    "display_title_ar": "النشرة الإخبارية للصندوق الاجتماعي للتنمية (الربع الرابع من 2017)",
+    "publisher": "Social Fund for Development (SFD)",
+    "publisher_ar": "الصندوق الاجتماعي للتنمية",
+    "document_label": "Newsletter",
+    "document_label_ar": "نشرة دورية",
+    "document_date": null,
+    "public_card_state": "CITATION_CARD"
+   },
+   "basis": "Governed: data/mfi_data.json \"MFI temporal spine\" and \"SFD/SMED year coverage\" rows (spine \"2017 Q4\", \"SFD Q4 2017 provider table\"; year row \"Official SFD year-end provider-level loan-portfolio table\"). No web fetch.",
+   "note": "Issue quarter taken from the governed source-object/period label, not from the URL; the issue number is not governed. Document date not governed (the quarter is the reference period)."
+  },
+  {
+   "source_id": "SRC-SFD-Q4-2018-001",
+   "old": {
+    "display_title": null,
+    "display_title_ar": null,
+    "publisher": null,
+    "public_card_state": "LOCATOR_ONLY",
+    "retrieval_date": null
+   },
+   "new": {
+    "display_title": "Social Fund for Development (SFD) Newsletter (fourth quarter of 2018)",
+    "display_title_ar": "النشرة الإخبارية للصندوق الاجتماعي للتنمية (الربع الرابع من 2018)",
+    "publisher": "Social Fund for Development (SFD)",
+    "publisher_ar": "الصندوق الاجتماعي للتنمية",
+    "document_label": "Newsletter",
+    "document_label_ar": "نشرة دورية",
+    "document_date": null,
+    "public_card_state": "CITATION_CARD"
+   },
+   "basis": "Governed: data/mfi_data.json \"MFI temporal spine\" and \"SFD/SMED year coverage\" rows (\"Official SFD Q4 source\"; spine \"2018 Q4\", \"SFD Q4 2018 narrative\"). No web fetch.",
+   "note": "Issue quarter taken from the governed source-object/period label, not from the URL; the issue number is not governed. Document date not governed (the quarter is the reference period). Source-reported portfolio anomaly is on hold; the card must not imply a usable 2018 portfolio value."
+  },
+  {
+   "source_id": "SRC-SFD-Q1-2019-001",
+   "old": {
+    "display_title": null,
+    "display_title_ar": null,
+    "publisher": null,
+    "public_card_state": "LOCATOR_ONLY",
+    "retrieval_date": null
+   },
+   "new": {
+    "display_title": "Social Fund for Development (SFD) Newsletter (first quarter of 2019)",
+    "display_title_ar": "النشرة الإخبارية للصندوق الاجتماعي للتنمية (الربع الأول من 2019)",
+    "publisher": "Social Fund for Development (SFD)",
+    "publisher_ar": "الصندوق الاجتماعي للتنمية",
+    "document_label": "Newsletter",
+    "document_label_ar": "نشرة دورية",
+    "document_date": null,
+    "public_card_state": "CITATION_CARD"
+   },
+   "basis": "Governed: data/mfi_data.json \"MFI temporal spine\" and \"SFD/SMED year coverage\" rows (\"T1 — SFD primary Q1 newsletter\"; spine \"2019 Q1\"). No web fetch.",
+   "note": "Issue quarter taken from the governed source-object/period label, not from the URL; the issue number is not governed. Document date not governed (the quarter is the reference period)."
+  },
+  {
+   "source_id": "SRC-SFD-Q4-2020-001",
+   "old": {
+    "display_title": null,
+    "display_title_ar": null,
+    "publisher": null,
+    "public_card_state": "LOCATOR_ONLY",
+    "retrieval_date": null
+   },
+   "new": {
+    "display_title": "Social Fund for Development (SFD) Newsletter (fourth quarter of 2020)",
+    "display_title_ar": "النشرة الإخبارية للصندوق الاجتماعي للتنمية (الربع الرابع من 2020)",
+    "publisher": "Social Fund for Development (SFD)",
+    "publisher_ar": "الصندوق الاجتماعي للتنمية",
+    "document_label": "Newsletter",
+    "document_label_ar": "نشرة دورية",
+    "document_date": null,
+    "public_card_state": "CITATION_CARD"
+   },
+   "basis": "Governed: data/mfi_data.json \"MFI temporal spine\" and \"SFD/SMED year coverage\" rows (\"Official SFD Q4 provider-level table\"; spine \"2020 Q4\" (31 December 2020)). No web fetch.",
+   "note": "Issue quarter taken from the governed source-object/period label, not from the URL; the issue number is not governed. Document date not governed (the quarter is the reference period)."
+  },
+  {
+   "source_id": "SRC-SFD-HIST-2004-Q3-001",
+   "old": {
+    "display_title": null,
+    "display_title_ar": null,
+    "publisher": null,
+    "public_card_state": "LOCATOR_ONLY",
+    "retrieval_date": null
+   },
+   "new": {
+    "display_title": "Social Fund for Development (SFD) Newsletter (2004)",
+    "display_title_ar": "النشرة الإخبارية للصندوق الاجتماعي للتنمية (2004)",
+    "publisher": "Social Fund for Development (SFD)",
+    "publisher_ar": "الصندوق الاجتماعي للتنمية",
+    "document_label": "Newsletter",
+    "document_label_ar": "نشرة دورية",
+    "document_date": "2004",
+    "public_card_state": "CITATION_CARD"
+   },
+   "basis": "Governed: 21_MFI_DATA MF-ORIG-002 (\"An official 2004 SFD newsletter states…\"). No web fetch.",
+   "note": "The source ID indicates the third-quarter issue, but governed text gives only the year; confirm the quarter from the PDF before adding it."
+  },
+  {
+   "source_id": "SRC-SFD-NEWSLETTER-2000-Q4-001",
+   "old": {
+    "display_title": null,
+    "display_title_ar": null,
+    "publisher": null,
+    "public_card_state": "LOCATOR_ONLY",
+    "retrieval_date": null
+   },
+   "new": {
+    "display_title": "Social Fund for Development (SFD) Newsletter (programme portfolios as of 31 December 2000)",
+    "display_title_ar": "النشرة الإخبارية للصندوق الاجتماعي للتنمية (محافظ البرامج حتى 31 ديسمبر 2000)",
+    "publisher": "Social Fund for Development (SFD)",
+    "publisher_ar": "الصندوق الاجتماعي للتنمية",
+    "document_label": "Newsletter",
+    "document_label_ar": "نشرة دورية",
+    "document_date": null,
+    "public_card_state": "CITATION_CARD"
+   },
+   "basis": "Governed: 21_MFI_DATA MF-ORIG-004 (\"An official SFD newsletter reports portfolios of SMED programmes as of 31 December 2000\"). No web fetch.",
+   "note": "Issue period and number not governed. Early-system evidence only, not a sector benchmark."
+  },
+  {
+   "source_id": "SRC-UNDP-FMIIP-001",
+   "old": {
+    "display_title": "Yemen Financial Market Infrastructure and Inclusion Project (FMIIP)",
+    "display_title_ar": "مشروع البنية التحتية للأسواق والشمول المالي في اليمن (FMIIP)",
+    "publisher": "United Nations Development Programme (UNDP)",
+    "public_card_state": "FULL_PUBLIC_CARD",
+    "retrieval_date": null
+   },
+   "new": {
+    "display_title": "Yemen Financial Market Infrastructure and Inclusion Project (FMIIP): implementation overview (2025–2030)",
+    "display_title_ar": "مشروع البنية التحتية للأسواق المالية والشمول المالي في اليمن (FMIIP): نظرة عامة على التنفيذ (2025–2030)",
+    "publisher": "United Nations Development Programme (UNDP)",
+    "publisher_ar": "برنامج الأمم المتحدة الإنمائي",
+    "document_label": "Event or programme page",
+    "document_label_ar": "صفحة فعالية أو برنامج",
+    "document_date": null
+   },
+   "basis": "Governed: current display_title and why_it_matters (\"Official implementation overview for FMIIP\"); YSC-018 (approved 17 June 2025, closes 30 June 2030, implemented by UNDP). No web fetch.",
+   "note": "Arabic corrected to the official name in RULES C («…للأسواق المالية…»). Its additional_urls repeat two World Bank locators owned by SRC-WB-FMIIP-P180708 (see duplicates)."
+  },
+  {
+   "source_id": "SRC-WB-FMIIP-P180708",
+   "old": {
+    "display_title": "Yemen Financial Market Infrastructure and Inclusion Project — P180708",
+    "display_title_ar": "مشروع البنية التحتية للأسواق والشمول المالي في اليمن — P180708",
+    "publisher": "World Bank",
+    "public_card_state": "FULL_PUBLIC_CARD",
+    "retrieval_date": null
+   },
+   "new": {
+    "display_title": "Yemen Financial Market Infrastructure and Inclusion Project (FMIIP, P180708): project record and results framework (2025–2030)",
+    "display_title_ar": "مشروع البنية التحتية للأسواق المالية والشمول المالي في اليمن (FMIIP، P180708): سجل المشروع وإطار النتائج (2025–2030)",
+    "publisher": "World Bank",
+    "publisher_ar": "البنك الدولي",
+    "document_label": "Project document",
+    "document_label_ar": "وثيقة مشروع",
+    "document_date": null
+   },
+   "basis": "Governed: current display_title and why_it_matters (\"project record and results framework\"); YSC-018; 31_REFORMS_REGULATION FMIIP-RF rows (baseline Jan-2025, target Jun-2030). No web fetch.",
+   "note": "Arabic corrected to the official FMIIP name. The additional URL for the World Bank approval press release has a path that mentions a different amount and scope from governed YSC-018 (US$20 million IDA grant for FMIIP). It was not read; Lead to verify before any card copy cites the release. The appraisal PDF is proposed to be owned by SRC-WB-YEM-FRAGMENTATION-2025-001 (see duplicates)."
+  },
+  {
+   "source_id": "SRC-WB-FMIIP-ISR2-2026-001",
+   "old": {
+    "display_title": "FMIIP Implementation Status and Results Report — Sequence 2 (8 April 2026)",
+    "display_title_ar": "تقرير حالة التنفيذ والنتائج لمشروع FMIIP — التسلسل 2 (8 أبريل 2026)",
+    "publisher": "World Bank",
+    "public_card_state": "FULL_PUBLIC_CARD",
+    "retrieval_date": null
+   },
+   "new": {
+    "display_title": "Yemen Financial Market Infrastructure and Inclusion Project (FMIIP): Implementation Status and Results Report, sequence 2 (8 April 2026)",
+    "display_title_ar": "مشروع البنية التحتية للأسواق المالية والشمول المالي في اليمن (FMIIP): تقرير حالة التنفيذ والنتائج، التسلسل 2 (8 أبريل 2026)",
+    "publisher": "World Bank",
+    "publisher_ar": "البنك الدولي",
+    "document_label": "Project document",
+    "document_label_ar": "وثيقة مشروع",
+    "document_date": "2026-04-08"
+   },
+   "basis": "Governed: current display_title; YSC-018 and DS-FMIIP-IMPLEMENTATION-2026 (\"sequence 2 dated 8 April 2026\"). No web fetch.",
+   "note": "Project name expanded at first use per RULES C. A disclosed status report is not achievement of targets."
+  },
+  {
+   "source_id": "SRC-CGAP-ARAB-MEAS-2017-001",
+   "old": {
+    "display_title": "Financial Inclusion Measurement in the Arab World",
+    "display_title_ar": "قياس الشمول المالي في العالم العربي",
+    "publisher": "CGAP",
+    "public_card_state": "FULL_PUBLIC_CARD",
+    "retrieval_date": null
+   },
+   "new": {
+    "display_title": "Financial Inclusion Measurement in the Arab World",
+    "display_title_ar": "قياس الشمول المالي في العالم العربي",
+    "publisher": "CGAP",
+    "publisher_ar": "المجموعة الاستشارية لمساعدة الفقراء (CGAP)",
+    "document_label": "Research or policy paper",
+    "document_label_ar": "ورقة بحثية أو سياساتية",
+    "document_date": null
+   },
+   "basis": "Governed display_title and publisher (15_SOURCE_LIBRARY). No web fetch.",
+   "note": "Unchanged. Publication date not governed."
+  },
+  {
+   "source_id": "SRC-BIS-CPMI-FPS-RTGS-2021-001",
+   "old": {
+    "display_title": "Developments in Retail Fast Payments and Implications for RTGS Systems",
+    "display_title_ar": "تطورات المدفوعات السريعة للأفراد وانعكاساتها على أنظمة التسوية الإجمالية الفورية",
+    "publisher": "Committee on Payments and Market Infrastructures (BIS)",
+    "public_card_state": "FULL_PUBLIC_CARD",
+    "retrieval_date": null
+   },
+   "new": {
+    "display_title": "Developments in Retail Fast Payments and Implications for RTGS Systems",
+    "display_title_ar": "تطورات المدفوعات السريعة للأفراد وانعكاساتها على أنظمة التسوية الإجمالية الفورية",
+    "publisher": "Committee on Payments and Market Infrastructures (CPMI), Bank for International Settlements",
+    "publisher_ar": "لجنة المدفوعات والبنى التحتية للأسواق (CPMI)، بنك التسويات الدولية",
+    "document_label": "Research or policy paper",
+    "document_label_ar": "ورقة بحثية أو سياساتية",
+    "document_date": null
+   },
+   "basis": "Governed display_title and publisher (15_SOURCE_LIBRARY), publisher restyled. No web fetch.",
+   "note": "Unchanged title. Publication date not governed."
+  },
+  {
+   "source_id": "SRC-BIS-CPMI-PAFI-FINTECH-2020-001",
+   "old": {
+    "display_title": "Payment Aspects of Financial Inclusion in the Fintech Era",
+    "display_title_ar": "جوانب المدفوعات في الشمول المالي في عصر التكنولوجيا المالية",
+    "publisher": "CPMI and World Bank Group",
+    "public_card_state": "FULL_PUBLIC_CARD",
+    "retrieval_date": null
+   },
+   "new": {
+    "display_title": "Payment Aspects of Financial Inclusion in the Fintech Era",
+    "display_title_ar": "جوانب المدفوعات في الشمول المالي في عصر التكنولوجيا المالية",
+    "publisher": "Committee on Payments and Market Infrastructures (CPMI) and World Bank Group",
+    "publisher_ar": "لجنة المدفوعات والبنى التحتية للأسواق (CPMI) ومجموعة البنك الدولي",
+    "document_label": "Research or policy paper",
+    "document_label_ar": "ورقة بحثية أو سياساتية",
+    "document_date": null
+   },
+   "basis": "Governed display_title and publisher (\"CPMI and World Bank Group\"), acronym expanded. No web fetch.",
+   "note": "Unchanged title. Publication date not governed."
+  },
+  {
+   "source_id": "SRC-WB-FASTT-FPS-2021-001",
+   "old": {
+    "display_title": "Considerations and Lessons for the Development and Implementation of Fast Payment Systems",
+    "display_title_ar": "اعتبارات ودروس تطوير وتنفيذ أنظمة الدفع السريع",
+    "publisher": "World Bank",
+    "public_card_state": "FULL_PUBLIC_CARD",
+    "retrieval_date": null
+   },
+   "new": {
+    "display_title": "Considerations and Lessons for the Development and Implementation of Fast Payment Systems",
+    "display_title_ar": "اعتبارات ودروس لتطوير أنظمة الدفع السريع وتنفيذها",
+    "publisher": "World Bank",
+    "publisher_ar": "البنك الدولي",
+    "document_label": "Method or standard",
+    "document_label_ar": "منهج أو معيار",
+    "document_date": null
+   },
+   "basis": "Governed display_title and publisher (15_SOURCE_LIBRARY). No web fetch.",
+   "note": "English unchanged. Arabic lightly edited. Publication date not governed. additional_urls stored as a bare string (see placeholder_fixes)."
+  },
+  {
+   "source_id": "SRC-WB-G2PX-001",
+   "old": {
+    "display_title": "G2Px — Government-to-Person Payments: Overview and Knowledge",
+    "display_title_ar": "G2Px — المدفوعات من الحكومة إلى الأفراد: نظرة عامة ومعرفة تطبيقية",
+    "publisher": "World Bank",
+    "public_card_state": "FULL_PUBLIC_CARD",
+    "retrieval_date": null
+   },
+   "new": {
+    "display_title": "G2Px: government-to-person payments — overview and knowledge resources",
+    "display_title_ar": "G2Px: المدفوعات من الحكومة إلى الأفراد — نظرة عامة وموارد معرفية",
+    "publisher": "World Bank",
+    "publisher_ar": "البنك الدولي",
+    "document_label": "Event or programme page",
+    "document_label_ar": "صفحة فعالية أو برنامج",
+    "document_date": null
+   },
+   "basis": "Governed display_title and publisher (15_SOURCE_LIBRARY), restyled. No web fetch.",
+   "note": "Programme web pages, with no document date. additional_urls stored as a bare string (see placeholder_fixes)."
+  },
+  {
+   "source_id": "SRC-WB-YEM-CPF-2026-2030-001",
+   "old": {
+    "display_title": "Republic of Yemen — Country Partnership Framework FY2026–FY2030",
+    "display_title_ar": "الجمهورية اليمنية — إطار الشراكة القطرية للسنوات المالية 2026–2030",
+    "publisher": "World Bank Group",
+    "public_card_state": "FULL_PUBLIC_CARD",
+    "retrieval_date": null
+   },
+   "new": {
+    "display_title": "Republic of Yemen: Country Partnership Framework for FY2026–FY2030",
+    "display_title_ar": "الجمهورية اليمنية: إطار الشراكة القُطرية للسنوات المالية 2026–2030",
+    "publisher": "World Bank Group",
+    "publisher_ar": "مجموعة البنك الدولي",
+    "document_label": "Research or policy paper",
+    "document_label_ar": "ورقة بحثية أو سياساتية",
+    "document_date": null
+   },
+   "basis": "Governed display_title and publisher; YSC-021 (endorsed 4 June 2026). No web fetch.",
+   "note": "The endorsement date (4 June 2026) is governed, but the document date is not, so it is left null. additional_urls stored as a bare string."
+  },
+  {
+   "source_id": "SRC-WB-YEM-CNL-2026-001",
+   "old": {
+    "display_title": "Cash for Nutrition and Livelihoods Project — Yemen (approved 30 June 2026)",
+    "display_title_ar": "مشروع النقد مقابل التغذية وسبل العيش — اليمن (أُقر في 30 يونيو 2026)",
+    "publisher": "World Bank",
+    "public_card_state": "FULL_PUBLIC_CARD",
+    "retrieval_date": null
+   },
+   "new": {
+    "display_title": "Cash for Nutrition and Livelihoods Project, Yemen (approved 30 June 2026)",
+    "display_title_ar": "مشروع النقد مقابل التغذية وسبل العيش في اليمن (أُقرّ في 30 يونيو 2026)",
+    "publisher": "World Bank",
+    "publisher_ar": "البنك الدولي",
+    "document_label": "News release",
+    "document_label_ar": "بيان صحفي",
+    "document_date": null
+   },
+   "basis": "Governed display_title; YSC-022 (approval of US$100 million IDA grant, 30 June 2026). No web fetch.",
+   "note": "The primary locator is the approval press release. The approval date is governed, but the release date is not separately governed, so document_date is null (Lead may set 2026-06-30 if the release is confirmed to carry that date)."
+  },
+  {
+   "source_id": "SRC-WB-YEM-ECON-MONITOR-2026-SPRING-001",
+   "old": {
+    "display_title": "Yemen Economic Monitor — Spring 2026: Pushing Against the Tide",
+    "display_title_ar": "المرصد الاقتصادي لليمن — ربيع 2026: مواجهة التيار",
+    "publisher": "World Bank",
+    "public_card_state": "FULL_PUBLIC_CARD",
+    "retrieval_date": null
+   },
+   "new": {
+    "display_title": "Yemen Economic Monitor, Spring 2026: Pushing Against the Tide",
+    "display_title_ar": "المرصد الاقتصادي لليمن، ربيع 2026: مواجهة التيار",
+    "publisher": "World Bank",
+    "publisher_ar": "البنك الدولي",
+    "document_label": "Research or policy paper",
+    "document_label_ar": "ورقة بحثية أو سياساتية",
+    "document_date": null
+   },
+   "basis": "Governed display_title and publisher (15_SOURCE_LIBRARY). No web fetch.",
+   "note": "Possible locator mismatch: the title names the report, but primary_url sits on a World Bank news/press-release path. Lead to either repoint primary_url to the report or retitle the card to the release (not read here). additional_urls (Yemen Fund page) is a bare string and does not obviously relate to the report."
+  },
+  {
+   "source_id": "SRC-KFW-YEM-MSME-FIN-III-47229",
+   "old": {
+    "display_title": "Promotion of the Financial Sector for MSMEs III — Yemen (Project 47229)",
+    "display_title_ar": "دعم القطاع المالي للمنشآت الصغرى والصغيرة والمتوسطة III — اليمن (المشروع 47229)",
+    "publisher": "KfW Development Bank",
+    "public_card_state": "FULL_PUBLIC_CARD",
+    "retrieval_date": null
+   },
+   "new": {
+    "display_title": "Promotion of the Financial Sector for Micro, Small and Medium-sized Enterprises (MSMEs) III, Yemen (project 47229)",
+    "display_title_ar": "دعم القطاع المالي للمنشآت الأصغر والصغيرة والمتوسطة (المرحلة الثالثة)، اليمن (المشروع 47229)",
+    "publisher": "KfW Development Bank",
+    "publisher_ar": "بنك التنمية الألماني KfW",
+    "document_label": "Event or programme page",
+    "document_label_ar": "صفحة فعالية أو برنامج",
+    "document_date": null
+   },
+   "basis": "Governed display_title and publisher (15_SOURCE_LIBRARY). No web fetch.",
+   "note": "Arabic corrected per RULES C (MSMEs = «المنشآت الأصغر والصغيرة والمتوسطة», not «الصغرى»). Acronym expanded. KfW project-database page, with no document date."
+  },
+  {
+   "source_id": "SRC-KFW-RMMV-2023-001",
+   "old": {
+    "display_title": null,
+    "display_title_ar": null,
+    "publisher": null,
+    "public_card_state": "LOCATOR_ONLY",
+    "retrieval_date": null
+   },
+   "new": {
+    "display_title": "Interactive Conference on Remote Management, Monitoring and Verification (RMMV) and booklet of RMMV tools and service providers (8–9 February 2023)",
+    "display_title_ar": "المؤتمر التفاعلي حول الإدارة والرصد والتحقق عن بُعد (RMMV) وكتيّب أدوات RMMV ومقدمي خدماتها (8–9 فبراير 2023)",
+    "publisher": "KfW Development Bank",
+    "publisher_ar": "بنك التنمية الألماني KfW",
+    "document_label": "Event or programme page",
+    "document_label_ar": "صفحة فعالية أو برنامج",
+    "document_date": null,
+    "public_card_state": "CITATION_CARD"
+   },
+   "basis": "Governed: 33_ANALYTICS_MASTER CTR-007 (RMMV = Remote Management, Monitoring & Verification; booklet of RMMV tools/service providers; 2023 source). WebFetch of primary_url read: \"Interactive Conference on Remote Management, Monitoring & Verification (RMMV) on 8th/9th February 2023\", KfW with BMZ support, booklet available for download.",
+   "note": "CTR-007: never present this as remittance, exchange-provider or financial-service-provider evidence. \"Service providers\" here are monitoring and verification providers. Links to no public object; the Lead may keep it off public listings. 8–9 February 2023 are the event dates, not a document date."
+  },
+  {
+   "source_id": "SRC-WB-G2PX-YEM-UCT-2024-001",
+   "old": {
+    "display_title": "Digitalizing G2P Payments in Yemen — UCT pilot (2024)",
+    "display_title_ar": "رقمنة مدفوعات الحكومة للأفراد في اليمن — تجربة التحويلات النقدية غير المشروطة (2024)",
+    "publisher": "World Bank — G2Px",
+    "public_card_state": "FULL_PUBLIC_CARD",
+    "retrieval_date": null
+   },
+   "new": {
+    "display_title": "Digitalizing Government-to-Person (G2P) Payments in Yemen: unconditional cash transfer (UCT) pilot (2024)",
+    "display_title_ar": "رقمنة المدفوعات من الحكومة إلى الأفراد (G2P) في اليمن: المرحلة التجريبية في برنامج التحويلات النقدية غير المشروطة (2024)",
+    "publisher": "World Bank (G2Px)",
+    "publisher_ar": "البنك الدولي (G2Px)",
+    "document_label": "Event or programme page",
+    "document_label_ar": "صفحة فعالية أو برنامج",
+    "document_date": null
+   },
+   "basis": "Governed display_title and publisher (\"World Bank — G2Px\"); YSC-024 (\"By 30 May 2024\"). No web fetch.",
+   "note": "Acronyms expanded. Arabic uses «التحويلات النقدية» for social-protection transfers (RULES C). The event date is not governed as a document date. The additional PDF (IDU-a9d1…) was not read."
+  },
+  {
+   "source_id": "SRC-SPA-SAU-CBY-DEPOSIT-2018-001",
+   "old": {
+    "display_title": null,
+    "display_title_ar": null,
+    "publisher": null,
+    "public_card_state": "LOCATOR_ONLY",
+    "retrieval_date": null
+   },
+   "new": {
+    "display_title": "Saudi directive and agreement on a US$2 billion deposit to the Central Bank of Yemen (January–March 2018)",
+    "display_title_ar": "توجيه سعودي واتفاقية بشأن وديعة بقيمة ملياري دولار في البنك المركزي اليمني (يناير–مارس 2018)",
+    "publisher": "Saudi Press Agency",
+    "publisher_ar": "وكالة الأنباء السعودية",
+    "document_label": "News release",
+    "document_label_ar": "بيان صحفي",
+    "document_date": null,
+    "public_card_state": "CITATION_CARD"
+   },
+   "basis": "Descriptive, governed facts only: 14_SYSTEM_CHRONOLOGY YSC-005 (January–March 2018; \"Saudi Arabia directed and then signed an agreement to deliver a US$2 billion deposit to the Central Bank of Yemen\"). No web fetch.",
+   "note": "The record holds two releases: the primary (directive or agreement) and one additional URL. The title covers both. The deposit's later use is a separate evidence state. Governed text names the recipient as \"Central Bank of Yemen\". RULES C would call the Aden authority \"Central Bank of Yemen – Aden\"; the Lead may add \"– Aden\" only if that is governed for this event. The headline of the release was not read (no fetch), so the title is descriptive. The event date is not used as document_date."
+  },
+  {
+   "source_id": "SRC-SPA-SAU-CBY-DEPOSIT-2023-001",
+   "old": {
+    "display_title": null,
+    "display_title_ar": null,
+    "publisher": null,
+    "public_card_state": "LOCATOR_ONLY",
+    "retrieval_date": null
+   },
+   "new": {
+    "display_title": "Agreement on a US$1 billion Saudi deposit to the Central Bank of Yemen (21 February 2023)",
+    "display_title_ar": "اتفاقية وديعة سعودية بقيمة مليار دولار في البنك المركزي اليمني (21 فبراير 2023)",
+    "publisher": "Saudi Press Agency",
+    "publisher_ar": "وكالة الأنباء السعودية",
+    "document_label": "News release",
+    "document_label_ar": "بيان صحفي",
+    "document_date": null,
+    "public_card_state": "CITATION_CARD"
+   },
+   "basis": "Descriptive, governed facts only: YSC-009 (21 February 2023; \"Saudi Arabia signed a US$1 billion deposit agreement with the Central Bank of Yemen and stated that the amount was fully deposited\"). No web fetch.",
+   "note": "Deposit custody is not the same as the amount made available or its use (YSC-010). Governed text names the recipient as \"Central Bank of Yemen\". RULES C would call the Aden authority \"Central Bank of Yemen – Aden\"; the Lead may add \"– Aden\" only if that is governed for this event. The headline of the release was not read (no fetch), so the title is descriptive. The event date is not used as document_date."
+  },
+  {
+   "source_id": "SRC-SPA-SAU-BUDGET-2026-001",
+   "old": {
+    "display_title": null,
+    "display_title_ar": null,
+    "publisher": null,
+    "public_card_state": "LOCATOR_ONLY",
+    "retrieval_date": null
+   },
+   "new": {
+    "display_title": "Agreement between the Saudi Development and Reconstruction Program for Yemen (SDRPY) and Yemen's Ministry of Finance on SAR1.3 billion in economic support (1 March 2026)",
+    "display_title_ar": "اتفاقية بين البرنامج السعودي لتنمية وإعمار اليمن (SDRPY) ووزارة المالية اليمنية بشأن دعم اقتصادي بقيمة 1.3 مليار ريال سعودي (1 مارس 2026)",
+    "publisher": "Saudi Press Agency",
+    "publisher_ar": "وكالة الأنباء السعودية",
+    "document_label": "News release",
+    "document_label_ar": "بيان صحفي",
+    "document_date": null,
+    "public_card_state": "CITATION_CARD"
+   },
+   "basis": "Descriptive, governed facts only: YSC-019 (1 March 2026; SDRPY agreement with Yemen's Ministry of Finance \"to begin depositing SAR1.3 billion in economic support for operating expenses and salaries\"). No web fetch.",
+   "note": "The headline of the release was not read. The agreement is not disbursement. The event date is not used as document_date. The additional URL appears to be a second SPA item on the same event (not read)."
+  }
+ ],
+ "additional_url_fixes": [
+  {
+   "source_id": "SRC-WB-FINDEX-AGG-2022",
+   "old": "[\"Selected subgroup indicator pages\"]",
+   "new": "[\"https://data.worldbank.org/indicator/FX.OWN.TOTL.FE.ZS?locations=YE\", \"https://data.worldbank.org/indicator/FX.OWN.TOTL.MA.ZS?locations=YE\", \"https://data.worldbank.org/indicator/FX.OWN.TOTL.40.ZS?locations=YE\", \"https://data.worldbank.org/indicator/FX.OWN.TOTL.60.ZS?locations=YE\", \"https://data.worldbank.org/indicator/FX.OWN.TOTL.PL.ZS?locations=YE\", \"https://data.worldbank.org/indicator/FX.OWN.TOTL.SO.ZS?locations=YE\", \"https://data.worldbank.org/indicator/FX.OWN.TOTL.YG.ZS?locations=YE\", \"https://data.worldbank.org/indicator/FX.OWN.TOTL.OL.ZS?locations=YE\"]",
+   "why": "source_url of rows WB-FINDEX-OBS-2022-002 (female), -003 (male), -004 (poorest 40%), -005 (richest 60%), -006 (primary education or less) in data/findex_baseline.json (Master 25_FINDEX_BASELINE). The total page stays as primary_url."
+  },
+  {
+   "source_id": "SRC-WB-FASTT-FPS-2021-001",
+   "old": "https://fastpayments.worldbank.org/resources",
+   "new": "[\"https://fastpayments.worldbank.org/resources\"]",
+   "why": "Format only: stored as a bare string, whereas every other record stores a JSON array."
+  },
+  {
+   "source_id": "SRC-WB-G2PX-001",
+   "old": "https://www.worldbank.org/en/programs/g2px/knowledge",
+   "new": "[\"https://www.worldbank.org/en/programs/g2px/knowledge\"]",
+   "why": "Format only (bare string → JSON array)."
+  },
+  {
+   "source_id": "SRC-WB-YEM-CPF-2026-2030-001",
+   "old": "https://www.worldbank.org/ext/en/country/yemen/cpf",
+   "new": "[\"https://www.worldbank.org/ext/en/country/yemen/cpf\"]",
+   "why": "Format only (bare string → JSON array)."
+  },
+  {
+   "source_id": "SRC-WB-YEM-ECON-MONITOR-2026-SPRING-001",
+   "old": "https://www.worldbank.org/en/programs/the-yemen-fund",
+   "new": "[\"https://www.worldbank.org/en/programs/the-yemen-fund\"]",
+   "why": "Format only (bare string → JSON array). Its relevance to the report is also questioned in that source's lead_note."
+  }
+ ],
+ "url_dedupe": [
+  {
+   "source_id": "SRC-WB-FMIIP-P180708",
+   "remove_url_containing": "BOSIB",
+   "why": "VER-21c: the appraisal document is its own record (SRC-WB-YEM-FRAGMENTATION-2025-001); one locator, one source identity."
+  },
+  {
+   "source_id": "SRC-UNDP-FMIIP-001",
+   "remove_url_containing": "worldbank.org",
+   "why": "The World Bank locators belong to SRC-WB-FMIIP-P180708; one locator, one source identity."
+  },
+  {
+   "source_id": "SRC-WB-FINDEX-2025-EDITION",
+   "remove_url_containing": "FX.OWN.TOTL.ZS",
+   "why": "The indicator page belongs to SRC-WB-FINDEX-AGG-2022; one locator, one source identity."
+  }
+ ],
+ "cell_fixes": [
+  {
+   "sheet": "32_QUAL_LITERATURE",
+   "key": "QUAL-020",
+   "field": "source_url",
+   "old": "IMF D4D-II",
+   "new": "https://www.imf.org/-/media/files/capacity-developement/d4d/january-2026/d4d-fund-implementation-progress-fy26-midyear-january-2026.pdf",
+   "why": "A label stood where a URL belongs; the governed primary_url of SRC-IMF-D4D-YEM-ESS-2025 (VER-19)."
+  }
+ ]
+}

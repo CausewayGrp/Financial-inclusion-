@@ -1,0 +1,315 @@
+{
+ "transaction": "TC-E",
+ "summary": "04 visual labels (9 set, 8 new); 11 forms (4 visuals); 25 banner",
+ "input_master_sha256": "73c84b8e43307b80a7243a5732e9271bf972cb329c7ae7d444a5b58bc62aab1e",
+ "output_master_sha256": "1b370e06e19694ddac29a34e351bb51473d40c0d22a54996d23c7cc3a54a9594",
+ "cells_written": 34,
+ "changes": [
+  {
+   "finding": "TC-E:VIS-01",
+   "sheet": "04_NAV_UX",
+   "row": 182,
+   "col": 2,
+   "field": "UI-VIS-CAT-EVT-FPS.label_en",
+   "old": "Fast Payment System",
+   "new": "FMIIP component: support for developing a Fast Payment System"
+  },
+  {
+   "finding": "TC-E:VIS-01",
+   "sheet": "04_NAV_UX",
+   "row": 182,
+   "col": 3,
+   "field": "UI-VIS-CAT-EVT-FPS.label_ar",
+   "old": "نظام الدفع السريع",
+   "new": "مكوّن في مشروع FMIIP: دعم تطوير نظام الدفع السريع"
+  },
+  {
+   "finding": "TC-E:VIS-01",
+   "sheet": "04_NAV_UX",
+   "row": 183,
+   "col": 2,
+   "field": "UI-VIS-CAT-EVT-RTGS-CORE.label_en",
+   "old": "RTGS and CBY core banking",
+   "new": "FMIIP component: support for establishing a real-time gross settlement (RTGS) system and upgrading CBY-Aden core banking"
+  },
+  {
+   "finding": "TC-E:VIS-01",
+   "sheet": "04_NAV_UX",
+   "row": 183,
+   "col": 3,
+   "field": "UI-VIS-CAT-EVT-RTGS-CORE.label_ar",
+   "old": "نظام التسوية الإجمالية الفورية والنظام المصرفي الأساسي للبنك المركزي",
+   "new": "مكوّن في مشروع FMIIP: دعم إنشاء نظام التسوية الإجمالية الفورية (RTGS) وتحديث النظام المصرفي الأساسي للبنك المركزي اليمني – عدن"
+  },
+  {
+   "finding": "TC-E:VIS-01",
+   "sheet": "04_NAV_UX",
+   "row": 184,
+   "col": 2,
+   "field": "UI-VIS-CAT-EVT-ACCESS-DB.label_en",
+   "old": "Access-point database and usage support",
+   "new": "FMIIP component: access-point database"
+  },
+  {
+   "finding": "TC-E:VIS-01",
+   "sheet": "04_NAV_UX",
+   "row": 184,
+   "col": 3,
+   "field": "UI-VIS-CAT-EVT-ACCESS-DB.label_ar",
+   "old": "قاعدة بيانات نقاط الوصول ودعم الاستخدام",
+   "new": "مكوّن في مشروع FMIIP: قاعدة بيانات لنقاط الوصول"
+  },
+  {
+   "finding": "TC-E:VIS-01",
+   "sheet": "04_NAV_UX",
+   "row": 186,
+   "col": 2,
+   "field": "UI-VIS-CAT-EVT-QR-INTEROP.label_en",
+   "old": "National QR code, e-wallet interconnection and operator participation in the Fast Payment System",
+   "new": "CBY-Aden board decision: mandatory national QR standard, linking of e-wallets, and CBY-Aden as a main shareholder in the Fast Payment System operator company"
+  },
+  {
+   "finding": "TC-E:VIS-01",
+   "sheet": "04_NAV_UX",
+   "row": 186,
+   "col": 3,
+   "field": "UI-VIS-CAT-EVT-QR-INTEROP.label_ar",
+   "old": "رمز الاستجابة السريعة الوطني وربط المحافظ الإلكترونية ومشاركة المشغلين في نظام الدفع السريع",
+   "new": "قرار مجلس إدارة البنك المركزي اليمني – عدن: معيار وطني إلزامي لرمز الاستجابة السريعة، وربط المحافظ الإلكترونية، ومساهمة البنك المركزي في عدن مساهمًا رئيسيًا في الشركة المشغلة لنظام الدفع السريع"
+  },
+  {
+   "finding": "TC-E:VIS-01",
+   "sheet": "04_NAV_UX",
+   "row": 188,
+   "col": 2,
+   "field": "UI-VIS-CAT-EVT-NETWORK-COMPANY.label_en",
+   "old": "Restructuring, capital increase and a broader base of bank shareholders",
+   "new": "Unified Money Network company: restructuring, capital increase and new bank shareholders"
+  },
+  {
+   "finding": "TC-E:VIS-01",
+   "sheet": "04_NAV_UX",
+   "row": 188,
+   "col": 3,
+   "field": "UI-VIS-CAT-EVT-NETWORK-COMPANY.label_ar",
+   "old": "إعادة الهيكلة وزيادة رأس المال وتوسيع قاعدة البنوك المساهمة",
+   "new": "شركة الشبكة الموحدة للأموال: إعادة الهيكلة وزيادة رأس المال وانضمام بنوك مساهمة جديدة"
+  },
+  {
+   "finding": "TC-E:PAY-17",
+   "sheet": "04_NAV_UX",
+   "row": 189,
+   "col": 2,
+   "field": "UI-VIS-CAT-EVT-YPCC-FOUNDING.label_en",
+   "old": "Founding assembly of the Yemen Payments and Clearing Company",
+   "new": "Founding assembly of the Yemeni Payments and Clearing Company (YPCC)"
+  },
+  {
+   "finding": "TC-E:PAY-17",
+   "sheet": "04_NAV_UX",
+   "row": 189,
+   "col": 3,
+   "field": "UI-VIS-CAT-EVT-YPCC-FOUNDING.label_ar",
+   "old": "الجمعية التأسيسية لشركة اليمن للمدفوعات والمقاصة",
+   "new": "الجمعية التأسيسية للشركة اليمنية للمدفوعات والمقاصة (YPCC)"
+  },
+  {
+   "finding": "TC-E:PAY-17",
+   "sheet": "04_NAV_UX",
+   "row": 190,
+   "col": 2,
+   "field": "UI-VIS-CAT-EVT-YPCC-BOARD.label_en",
+   "old": "First board meeting of the Yemen Payments and Clearing Company",
+   "new": "First board meeting of the Yemeni Payments and Clearing Company (YPCC)"
+  },
+  {
+   "finding": "TC-E:PAY-17",
+   "sheet": "04_NAV_UX",
+   "row": 190,
+   "col": 3,
+   "field": "UI-VIS-CAT-EVT-YPCC-BOARD.label_ar",
+   "old": "أول اجتماع لمجلس إدارة شركة اليمن للمدفوعات والمقاصة",
+   "new": "أول اجتماع لمجلس إدارة الشركة اليمنية للمدفوعات والمقاصة (YPCC)"
+  },
+  {
+   "finding": "TC-E:VIS-10",
+   "sheet": "04_NAV_UX",
+   "row": 207,
+   "col": 2,
+   "field": "UI-VIS-CAT-PRV-EVENTS-NONE.label_en",
+   "old": "None",
+   "new": "No status events held in this evidence base"
+  },
+  {
+   "finding": "TC-E:VIS-10",
+   "sheet": "04_NAV_UX",
+   "row": 207,
+   "col": 3,
+   "field": "UI-VIS-CAT-PRV-EVENTS-NONE.label_ar",
+   "old": "لا يوجد",
+   "new": "لا تتضمن قاعدة الأدلة أحداثًا لوضع هذه الفئة"
+  },
+  {
+   "finding": "TC-E:VIS-10",
+   "sheet": "04_NAV_UX",
+   "row": 204,
+   "col": 2,
+   "field": "UI-VIS-CAT-PRV-EVENTS-NONE-APPLIED.label_en",
+   "old": "No bank status events applied",
+   "new": "Bank status events not reviewed here"
+  },
+  {
+   "finding": "TC-E:VIS-10",
+   "sheet": "04_NAV_UX",
+   "row": 204,
+   "col": 3,
+   "field": "UI-VIS-CAT-PRV-EVENTS-NONE-APPLIED.label_ar",
+   "old": "لم تُطبَّق أحداث تتعلق بوضع البنوك",
+   "new": "لم تُراجَع هنا أحداث وضع البنوك"
+  },
+  {
+   "finding": "TC-E:VIS",
+   "sheet": "04_NAV_UX",
+   "row": null,
+   "col": null,
+   "field": "UI-VIS-CAT-LANE-PEOPLE-SURVEY",
+   "old": null,
+   "new": "People (survey) || الأفراد (بيانات مسحية)"
+  },
+  {
+   "finding": "TC-E:VIS",
+   "sheet": "04_NAV_UX",
+   "row": null,
+   "col": null,
+   "field": "UI-VIS-CAT-LANE-PAYMENT-INFRA-ADMIN",
+   "old": null,
+   "new": "Payment infrastructure (administrative) || بنية المدفوعات (بيانات إدارية)"
+  },
+  {
+   "finding": "TC-E:VIS",
+   "sheet": "04_NAV_UX",
+   "row": null,
+   "col": null,
+   "field": "UI-VIS-CAT-LANE-INSTITUTIONS-REFORMS",
+   "old": null,
+   "new": "Institutions and reforms || المؤسسات والإصلاحات"
+  },
+  {
+   "finding": "TC-E:VIS",
+   "sheet": "04_NAV_UX",
+   "row": null,
+   "col": null,
+   "field": "UI-VIS-CAT-METRIC-ACCOUNT-OWNERSHIP",
+   "old": null,
+   "new": "Account ownership || امتلاك الحساب"
+  },
+  {
+   "finding": "TC-E:VIS",
+   "sheet": "04_NAV_UX",
+   "row": null,
+   "col": null,
+   "field": "UI-VIS-NOTE-MFI-2023-SECONDARY",
+   "old": null,
+   "new": "Sector figure from a secondary source; provider set not verified || رقم للقطاع من مصدر ثانوي؛ ولم يُتحقق من مجموعة مقدمي الخدمات التي يغطيها"
+  },
+  {
+   "finding": "TC-E:VIS",
+   "sheet": "04_NAV_UX",
+   "row": null,
+   "col": null,
+   "field": "UI-VIS-NOTE-INDEX-CONCORDANCE",
+   "old": null,
+   "new": "The two indexed paths are almost identical, and the ratio between their levels hardly changes. This closeness does not show that the two series independently confirm the trend. || المساران المؤشَّران شبه متطابقين، ونسبة مستوى أحدهما إلى الآخر شبه ثابتة. ولا يبيّن هذا التقارب أن السلسلتين تؤكدان الاتجاه كلٌّ على نحو مستقل."
+  },
+  {
+   "finding": "TC-E:VIS",
+   "sheet": "04_NAV_UX",
+   "row": null,
+   "col": null,
+   "field": "UI-VIS-NOTE-FINDEX-SAMPLE",
+   "old": null,
+   "new": "Survey estimates from 1,000 respondents; margins of error are not shown. || تقديرات مسحية من 1,000 مستجيب؛ ولا تُعرض هوامش الخطأ."
+  },
+  {
+   "finding": "TC-E:VIS",
+   "sheet": "04_NAV_UX",
+   "row": null,
+   "col": null,
+   "field": "UI-VIS-NOTE-NOT-COMPARABLE-2024Q3",
+   "old": null,
+   "new": "Not comparable with the 2024 Q3 bulletin || لا يُقارن بنشرة الربع الثالث 2024"
+  },
+  {
+   "finding": "TC-E:VIS-07",
+   "sheet": "11_VISUAL_LIBRARY",
+   "row": 24,
+   "col": 4,
+   "field": "VIS-FIRM-FINANCE-PATH.visual_form",
+   "old": "FUNNEL_PLUS_CONDITIONAL_COMPOSITION",
+   "new": "TABLE_TEXT_FIRST"
+  },
+  {
+   "finding": "TC-E:VIS-07",
+   "sheet": "11_VISUAL_LIBRARY",
+   "row": 30,
+   "col": 4,
+   "field": "VIS-MFI-DIVERGENCE.visual_form",
+   "old": "THREE_LANE_BOUNDED_ANCHOR_CHART",
+   "new": "TABLE_TEXT_FIRST"
+  },
+  {
+   "finding": "TC-E:VIS-07",
+   "sheet": "11_VISUAL_LIBRARY",
+   "row": 30,
+   "col": 18,
+   "field": "VIS-MFI-DIVERGENCE.encoding_contract",
+   "old": "Do not connect unlike metrics into one line. Each lane shows only its valid source anchors; evidence tier and source break are visible. Nominal portfolio never shares an axis with people/account counts.",
+   "new": "Table of dated anchors: date, borrowers, savers, portfolio (YER million) and the evidence state of each value. No line, lane or shared axis joins the anchors."
+  },
+  {
+   "finding": "TC-E:VIS-07",
+   "sheet": "11_VISUAL_LIBRARY",
+   "row": 21,
+   "col": 4,
+   "field": "VIS-TARGET-RESULT-STATE.visual_form",
+   "old": "TARGET_RESULT_MILESTONE_WITH_COMPATIBILITY_BADGE",
+   "new": "TABLE_TEXT_FIRST"
+  },
+  {
+   "finding": "TC-E:VIS-07",
+   "sheet": "11_VISUAL_LIBRARY",
+   "row": 21,
+   "col": 18,
+   "field": "VIS-TARGET-RESULT-STATE.encoding_contract",
+   "old": "Target and result states visually distinct; progress bar only after compatibility PASS.",
+   "new": "Table: baseline, target and result (not held); no dated axis and no progress bar."
+  },
+  {
+   "finding": "TC-E:VIS-07",
+   "sheet": "11_VISUAL_LIBRARY",
+   "row": 6,
+   "col": 4,
+   "field": "VIS-EVIDENCE-CLASS-LADDER.visual_form",
+   "old": "EVIDENCE_CLASS_LADDER_WITH_CLAIM_BOUNDARIES",
+   "new": "UNORDERED_CATEGORY_CARDS"
+  },
+  {
+   "finding": "TC-E:VIS-07",
+   "sheet": "11_VISUAL_LIBRARY",
+   "row": 6,
+   "col": 18,
+   "field": "VIS-EVIDENCE-CLASS-LADDER.encoding_contract",
+   "old": "Ordered evidence-state ladder; no numeric score/size encoding.",
+   "new": "Unordered category cards; no ranking, score or size encoding."
+  },
+  {
+   "finding": "TC-E:VER-01",
+   "sheet": "25_FINDEX_BASELINE",
+   "row": 2,
+   "col": 1,
+   "field": "25.banner",
+   "old": "Verified World Bank aggregates appear first. The Global Findex 2025 edition contains 2024 observations for many economies, but Yemen's latest available account-ownership observation remains 2022. The attached-workbook analytical inputs below are retained for research only and must not replace the verified public Findex values unless reproduced from source microdata with the documented weights, universe and coverage.",
+   "new": "Verified World Bank aggregates for Yemen. The Global Findex 2025 edition contains 2024 observations for many economies, but Yemen's latest available account-ownership observation remains 2022."
+  }
+ ]
+}

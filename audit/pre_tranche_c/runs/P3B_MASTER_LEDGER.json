@@ -1,0 +1,324 @@
+{
+ "transaction": "P3-B",
+ "scope": "P3 visual grammar vocabulary; data rows for RV-CWR-001; YSC-013 unit",
+ "input_master_sha256": "ead9082997822a08fc46a66507ae379eea4b6c39b0c92c2523179d50f16ace59",
+ "output_master_sha256": "334f801a4354665038fdb3f939708422fdc6a96eb43b5ea6735a37eeb9d81548",
+ "cells_written": 35,
+ "changes": [
+  {
+   "finding": "P3-G01",
+   "sheet": "04_NAV_UX",
+   "row": null,
+   "col": null,
+   "field": "UI-VIS-STATE-MEASURED",
+   "old": null,
+   "new": "Measured in a survey || مقيس في مسح"
+  },
+  {
+   "finding": "P3-G01",
+   "sheet": "04_NAV_UX",
+   "row": null,
+   "col": null,
+   "field": "UI-VIS-STATE-ADMINISTRATIVE",
+   "old": null,
+   "new": "Reported in administrative records || وارد في سجلات إدارية"
+  },
+  {
+   "finding": "P3-G01",
+   "sheet": "04_NAV_UX",
+   "row": null,
+   "col": null,
+   "field": "UI-VIS-STATE-DERIVED",
+   "old": null,
+   "new": "Calculated here from published figures || محسوب هنا من أرقام منشورة"
+  },
+  {
+   "finding": "P3-G01",
+   "sheet": "04_NAV_UX",
+   "row": null,
+   "col": null,
+   "field": "UI-VIS-STATE-HISTORICAL",
+   "old": null,
+   "new": "Historical — not a current value || تاريخي — ليس قيمة حالية"
+  },
+  {
+   "finding": "P3-G01",
+   "sheet": "04_NAV_UX",
+   "row": null,
+   "col": null,
+   "field": "UI-VIS-STATE-PROGRAMME",
+   "old": null,
+   "new": "Programme figure — not a national rate || رقم برنامج — ليس معدلًا وطنيًا"
+  },
+  {
+   "finding": "P3-G01",
+   "sheet": "04_NAV_UX",
+   "row": null,
+   "col": null,
+   "field": "UI-VIS-STATE-ESTIMATED",
+   "old": null,
+   "new": "Estimate — not an observation || تقدير — ليس مشاهدة"
+  },
+  {
+   "finding": "P3-G01",
+   "sheet": "04_NAV_UX",
+   "row": null,
+   "col": null,
+   "field": "UI-VIS-STATE-PROJECTED",
+   "old": null,
+   "new": "Projection — not an observation || توقع — ليس مشاهدة"
+  },
+  {
+   "finding": "P3-G01",
+   "sheet": "04_NAV_UX",
+   "row": null,
+   "col": null,
+   "field": "UI-VIS-STATE-PARTIAL",
+   "old": null,
+   "new": "Partial coverage — not the whole population or sector || تغطية جزئية — لا تشمل المجتمع أو القطاع كله"
+  },
+  {
+   "finding": "P3-G01",
+   "sheet": "04_NAV_UX",
+   "row": null,
+   "col": null,
+   "field": "UI-VIS-STATE-UNKNOWN",
+   "old": null,
+   "new": "Unknown — not zero || غير معروف — ليس صفرًا"
+  },
+  {
+   "finding": "P3-G01",
+   "sheet": "04_NAV_UX",
+   "row": null,
+   "col": null,
+   "field": "UI-VIS-BREAK-VINTAGE",
+   "old": null,
+   "new": "Source document changes here — lines are not joined || تتغير وثيقة المصدر هنا — لا يُوصل الخطان"
+  },
+  {
+   "finding": "P3-G01",
+   "sheet": "04_NAV_UX",
+   "row": null,
+   "col": null,
+   "field": "UI-VIS-BREAK-UNIVERSE",
+   "old": null,
+   "new": "What is counted changes here — lines are not joined || يتغير ما يُعدّ هنا — لا يُوصل الخطان"
+  },
+  {
+   "finding": "P3-G01",
+   "sheet": "04_NAV_UX",
+   "row": null,
+   "col": null,
+   "field": "UI-VIS-SAME-YEAR-REVISION",
+   "old": null,
+   "new": "Same year, different publication || السنة نفسها، إصدار مختلف"
+  },
+  {
+   "finding": "P3-G01",
+   "sheet": "04_NAV_UX",
+   "row": null,
+   "col": null,
+   "field": "UI-VIS-MISSING",
+   "old": null,
+   "new": "No verified value for this period — not zero || لا قيمة معتمدة لهذه الفترة — ليست صفرًا"
+  },
+  {
+   "finding": "P3-G01",
+   "sheet": "04_NAV_UX",
+   "row": null,
+   "col": null,
+   "field": "UI-VIS-DISAGREEMENT",
+   "old": null,
+   "new": "Source figures disagree — both are shown || أرقام المصدر غير متسقة — يُعرض الرقمان"
+  },
+  {
+   "finding": "P3-G01",
+   "sheet": "04_NAV_UX",
+   "row": null,
+   "col": null,
+   "field": "UI-VIS-TARGET",
+   "old": null,
+   "new": "Target — not a result || مستهدف — ليس نتيجة متحققة"
+  },
+  {
+   "finding": "P3-G01",
+   "sheet": "04_NAV_UX",
+   "row": null,
+   "col": null,
+   "field": "UI-VIS-RESULT",
+   "old": null,
+   "new": "Observed value || قيمة مرصودة"
+  },
+  {
+   "finding": "P3-G01",
+   "sheet": "04_NAV_UX",
+   "row": null,
+   "col": null,
+   "field": "UI-VIS-NOT-COMPARABLE",
+   "old": null,
+   "new": "Not directly comparable || غير قابل للمقارنة المباشرة"
+  },
+  {
+   "finding": "P3-G01",
+   "sheet": "04_NAV_UX",
+   "row": null,
+   "col": null,
+   "field": "UI-VIS-NOMINAL",
+   "old": null,
+   "new": "Nominal — not adjusted for prices or exchange rates || اسمية — غير معدلة للأسعار أو لسعر الصرف"
+  },
+  {
+   "finding": "P3-G01",
+   "sheet": "04_NAV_UX",
+   "row": null,
+   "col": null,
+   "field": "UI-VIS-CHAIN-RULE",
+   "old": null,
+   "new": "Rule or programme || قاعدة أو برنامج"
+  },
+  {
+   "finding": "P3-G01",
+   "sheet": "04_NAV_UX",
+   "row": null,
+   "col": null,
+   "field": "UI-VIS-CHAIN-IMPLEMENTATION",
+   "old": null,
+   "new": "Implementation || تنفيذ"
+  },
+  {
+   "finding": "P3-G01",
+   "sheet": "04_NAV_UX",
+   "row": null,
+   "col": null,
+   "field": "UI-VIS-CHAIN-OPERATION",
+   "old": null,
+   "new": "Operation — activity recorded || تشغيل — نشاط مسجَّل"
+  },
+  {
+   "finding": "P3-G01",
+   "sheet": "04_NAV_UX",
+   "row": null,
+   "col": null,
+   "field": "UI-VIS-CHAIN-ACCESS",
+   "old": null,
+   "new": "Access || إتاحة الوصول"
+  },
+  {
+   "finding": "P3-G01",
+   "sheet": "04_NAV_UX",
+   "row": null,
+   "col": null,
+   "field": "UI-VIS-CHAIN-USE",
+   "old": null,
+   "new": "Use by people or firms || استخدام الأفراد أو المنشآت"
+  },
+  {
+   "finding": "P3-G01",
+   "sheet": "04_NAV_UX",
+   "row": null,
+   "col": null,
+   "field": "UI-VIS-CHAIN-QUALITY",
+   "old": null,
+   "new": "Quality || الجودة"
+  },
+  {
+   "finding": "P3-G01",
+   "sheet": "04_NAV_UX",
+   "row": null,
+   "col": null,
+   "field": "UI-VIS-CHAIN-OUTCOME",
+   "old": null,
+   "new": "Outcome for people or firms || الأثر على الأفراد أو المنشآت"
+  },
+  {
+   "finding": "P3-G01",
+   "sheet": "04_NAV_UX",
+   "row": null,
+   "col": null,
+   "field": "UI-VIS-CHAIN-EVIDENCED",
+   "old": null,
+   "new": "Evidence reaches this step || تصل الأدلة إلى هذه الحلقة"
+  },
+  {
+   "finding": "P3-G01",
+   "sheet": "04_NAV_UX",
+   "row": null,
+   "col": null,
+   "field": "UI-VIS-CHAIN-OPEN",
+   "old": null,
+   "new": "Not yet measured — not a failure || لم تُقس بعد — ليس إخفاقًا"
+  },
+  {
+   "finding": "P3-G01",
+   "sheet": "04_NAV_UX",
+   "row": null,
+   "col": null,
+   "field": "UI-VIS-DOES-NOT-ESTABLISH",
+   "old": null,
+   "new": "Does not establish: || لا يثبت:"
+  },
+  {
+   "finding": "P3-G01",
+   "sheet": "04_NAV_UX",
+   "row": null,
+   "col": null,
+   "field": "UI-VIS-SOURCE",
+   "old": null,
+   "new": "Source: || المصدر:"
+  },
+  {
+   "finding": "P3-G01",
+   "sheet": "04_NAV_UX",
+   "row": null,
+   "col": null,
+   "field": "UI-VIS-ISSUER-SCOPE",
+   "old": null,
+   "new": "Status as recorded by the named authority only; absence from its list is not a status elsewhere. || وضعٌ كما سجلته الجهة المسماة وحدها؛ وعدم الإدراج في قائمتها لا يحدد وضعًا لدى جهة أخرى."
+  },
+  {
+   "finding": "P3-G01",
+   "sheet": "04_NAV_UX",
+   "row": null,
+   "col": null,
+   "field": "UI-VIS-FULL-RECORD",
+   "old": null,
+   "new": "Full record: || السجل الكامل:"
+  },
+  {
+   "finding": "P3-F11",
+   "sheet": "23_REMITTANCES",
+   "row": null,
+   "col": null,
+   "field": "RMO-CBY-2024-AR2024",
+   "old": null,
+   "new": "6245 USD million (CBY_ANNUAL_REPORT_2024)"
+  },
+  {
+   "finding": "P3-F11",
+   "sheet": "23_REMITTANCES",
+   "row": null,
+   "col": null,
+   "field": "RMO-CBY-2024-AR2025",
+   "old": null,
+   "new": "3422.16 USD million (CBY_ANNUAL_REPORT_2025)"
+  },
+  {
+   "finding": "P3-F11",
+   "sheet": "14_SYSTEM_CHRONOLOGY",
+   "row": 18,
+   "col": 4,
+   "field": "YSC-013.fact_en",
+   "old": "The CBY vintage comparison in this system shows the same 2024 remittance year at 6,245 in the 2024 annual-report vintage versus 3,422.16 in the 2025 vintage, a downward revision of about 45.2%.",
+   "new": "The CBY vintage comparison in this system shows the same 2024 remittance year at USD 6,245 million in the 2024 annual-report vintage versus USD 3,422.16 million in the 2025 vintage, a downward revision of about 45.2%."
+  },
+  {
+   "finding": "P3-F11",
+   "sheet": "14_SYSTEM_CHRONOLOGY",
+   "row": 18,
+   "col": 5,
+   "field": "YSC-013.fact_ar",
+   "old": "تُظهر مطابقة نسخ تقارير البنك المركزي أن قيمة التحويلات للسنة نفسها 2024 وردت عند 6,245 في نسخة التقرير السنوي لعام 2024 مقابل 3,422.16 في نسخة 2025، أي مراجعة هبوطية بنحو 45.2%.",
+   "new": "تُظهر مطابقة نسخ تقارير البنك المركزي أن قيمة التحويلات للسنة نفسها 2024 وردت عند 6,245 مليون دولار في نسخة التقرير السنوي لعام 2024 مقابل 3,422.16 مليون دولار في نسخة 2025، أي مراجعة هبوطية بنحو 45.2%."
+  }
+ ]
+}

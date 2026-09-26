@@ -1,0 +1,1614 @@
+[
+  {
+    "claim_id": "CLM-001",
+    "theme": "People / access",
+    "claim_type": "MEASURED_LEVEL",
+    "headline_en": "Latest representative account-ownership measure available",
+    "headline_ar": "أحدث قياس سكاني ممثل متاح لامتلاك الحساب",
+    "copy_en": "The World Bank’s latest representative Yemen account-ownership observation remains 11.9%. World Bank Data reports it for 2022; it comes from the Yemen Global Findex 2021 study, fielded from 7 November 2022 to 9 January 2023. The Global Findex 2025 edition adds 2024 observations for many economies, but no newer Yemen observation.",
+    "copy_ar": "تظل أحدث مشاهدة سكانية ممثلة ينشرها البنك الدولي لامتلاك الحساب في اليمن عند 11.9%. ويعرضها موقع بيانات البنك الدولي لسنة 2022، وهي مستمدة من دراسة اليمن ضمن موجة Global Findex 2021 التي نُفذت ميدانيًا من 7 نوفمبر 2022 إلى 9 يناير 2023. وتضيف نسخة Global Findex 2025 مشاهدات لعام 2024 في اقتصادات عديدة، لكنها لا تضيف مشاهدة أحدث لليمن.",
+    "evidence_badge": "PRIMARY_WEIGHTED_SURVEY",
+    "evidence_inputs": [
+      "EP-FINDEX-2022-ACCOUNT",
+      "28_FINDEX_OBS"
+    ],
+    "does_not_prove_en": "It is not a 2026 rate, and it cannot be broken down or mapped by governorate. It is not the share of adults with a bank account: accounts at other financial institutions and personal use of a mobile-money service also count.",
+    "does_not_prove_ar": "ليست هذه النسبة معدلًا لعام 2026، ولا يمكن تجزئتها أو إسقاطها على المحافظات. وليست نسبة من يملكون حسابًا مصرفيًا فحسب، إذ تُحتسب أيضًا الحسابات لدى المؤسسات المالية الأخرى والاستخدام الشخصي لخدمة أموال عبر الهاتف المحمول.",
+    "change_trigger_en": "This record is updated when an authoritative source is revised or replaced, a newer comparable observation becomes available, the definition, population or method changes, or the conditions for public use change.",
+    "change_trigger_ar": "يُحدَّث هذا السجل عند مراجعة المصدر المعتمد أو استبداله، أو توفر مشاهدة أحدث قابلة للمقارنة، أو تغير التعريف أو المجتمع أو الطريقة، أو تغير شروط الاستخدام العام.",
+    "public_routes": [
+      "/people",
+      "/",
+      "/evidence/compare"
+    ],
+    "public_route_list": [
+      "/people/",
+      "/",
+      "/evidence/compare/"
+    ]
+  },
+  {
+    "claim_id": "CLM-002",
+    "theme": "People / inequality",
+    "claim_type": "DERIVED_SAME_WAVE_GAP",
+    "headline_en": "A measured gender gap",
+    "headline_ar": "فجوة مقاسة بين النساء والرجال",
+    "copy_en": "In the 2021 Global Findex wave for Yemen (fieldwork 7 November 2022 – 9 January 2023; World Bank data year 2022), 18.35% of men and 5.44% of women aged 15 and over in the areas the survey covered had an account, a difference of 12.91 percentage points.",
+    "copy_ar": "في موجة 2021 من المؤشر العالمي للشمول المالي (Global Findex) الخاصة باليمن (العمل الميداني من 7 نوفمبر 2022 إلى 9 يناير 2023؛ سنة البيانات لدى البنك الدولي 2022)، بلغت نسبة من يملكون حسابًا 18.35% بين الرجال و5.44% بين النساء بعمر 15 سنة فأكثر في المناطق التي شملها المسح، بفارق 12.91 نقطة مئوية.",
+    "evidence_badge": "PRIMARY_SURVEY_PLUS_APPROVED_DERIVATION",
+    "evidence_inputs": [
+      "28_FINDEX_OBS",
+      "DA-001",
+      "EP-FINDEX-2022-ACCOUNT"
+    ],
+    "does_not_prove_en": "It does not establish why the gap exists, and it is not the gender gap in 2026.",
+    "does_not_prove_ar": "لا يثبت هذا الدليل سبب الفجوة بين الرجال والنساء، ولا يمثل الفجوة القائمة في عام 2026.",
+    "change_trigger_en": "This record is updated when an authoritative source is revised or replaced, a newer comparable observation becomes available, the definition, population or method changes, or the conditions for public use change.",
+    "change_trigger_ar": "يُحدَّث هذا السجل عند مراجعة المصدر المعتمد أو استبداله، أو توفر مشاهدة أحدث قابلة للمقارنة، أو تغير التعريف أو المجتمع أو الطريقة، أو تغير شروط الاستخدام العام.",
+    "public_routes": [
+      "/people",
+      "/"
+    ],
+    "public_route_list": [
+      "/people/",
+      "/"
+    ]
+  },
+  {
+    "claim_id": "CLM-003",
+    "theme": "Payments",
+    "claim_type": "ADMIN_TREND",
+    "headline_en": "POS infrastructure expanded",
+    "headline_ar": "توسع البنية التحتية لنقاط البيع",
+    "copy_en": "POS terminals reported by the Central Bank of Yemen – Aden (CBY-Aden) rose from 561 in March 2025 to 1,473 in January 2026, within CBY-Aden's reporting scope. The December 2025 total of 1,357 and the January 2026 total of 1,473 imply growth of 8.55%, while the January source graphic displays +11%; both are kept as a discrepancy within the source.",
+    "copy_ar": "ارتفع عدد أجهزة نقاط البيع التي يُبلغ عنها البنك المركزي اليمني – عدن من 561 جهازًا في مارس 2025 إلى 1,473 جهازًا في يناير 2026، ضمن نطاق الإبلاغ لدى البنك المركزي في عدن. ويعطي الانتقال من 1,357 جهازًا في ديسمبر 2025 إلى 1,473 جهازًا في يناير 2026 نموًا نسبته 8.55%، بينما يعرض رسم المصدر لشهر يناير +11%؛ وتُحفظ القيمتان بوصفهما اختلافًا داخل المصدر نفسه.",
+    "evidence_badge": "PRIMARY_ADMINISTRATIVE",
+    "evidence_inputs": [
+      "11_CBY_PAYMENTS",
+      "EP-CBY-POS-MONTHLY"
+    ],
+    "does_not_prove_en": "Growth in terminal numbers is not an inclusion rate, and it does not show merchant adoption or growth in unique users. The totals fall within the reporting scope of the Central Bank of Yemen – Aden (CBY-Aden) and are not shown to be national totals. The terminal series also contains a smaller source-internal percentage mismatch in June 2025, and the January 2026 release shows material discrepancies between its displayed growth percentages and the raw terminal and transaction totals. The September 2025 gap applies to the YER transaction-value series, not to the terminal count.",
+    "does_not_prove_ar": "ليس نمو عدد أجهزة نقاط البيع معدلًا للشمول المالي، ولا يثبت تبنّي التجار لها أو نموًا في عدد المستخدمين الفريدين. والإجماليات تخص نطاق الإبلاغ لدى البنك المركزي اليمني – عدن، ولا يثبت الدليل أنها إجماليات وطنية. وفي سلسلة الأجهزة نفسها اختلاف أصغر داخل المصدر في نسبة يونيو 2025، كما يتضمن إصدار يناير 2026 فروقًا جوهرية بين بعض نسب النمو المعروضة والإجماليات الخام للأجهزة والمعاملات. أما فجوة سبتمبر 2025 فتخص سلسلة قيمة المعاملات بالريال اليمني، لا عدد الأجهزة.",
+    "change_trigger_en": "This record is updated when an authoritative source is revised or replaced, a newer comparable observation becomes available, the definition, population or method changes, or the conditions for public use change.",
+    "change_trigger_ar": "يُحدَّث هذا السجل عند مراجعة المصدر المعتمد أو استبداله، أو توفر مشاهدة أحدث قابلة للمقارنة، أو تغير التعريف أو المجتمع أو الطريقة، أو تغير شروط الاستخدام العام.",
+    "public_routes": [
+      "/payments",
+      "/access",
+      "/"
+    ],
+    "public_route_list": [
+      "/payments/",
+      "/access/",
+      "/"
+    ]
+  },
+  {
+    "claim_id": "CLM-004",
+    "theme": "Measurement",
+    "claim_type": "SEMANTIC_BOUNDARY",
+    "headline_en": "Accounts and transactions are not unique people",
+    "headline_ar": "أعداد الحسابات والمعاملات لا تمثل عددًا فريدًا من الأشخاص",
+    "copy_en": "Administrative accounts, e-wallet subscribers and payment transactions are not equivalent to unique people measured by Findex.",
+    "copy_ar": "لا تعادل الحسابات الإدارية ولا مشتركو المحافظ الإلكترونية ولا معاملات الدفع عدد الأشخاص الفريدين الذين تقيسهم بيانات المؤشر العالمي للشمول المالي.",
+    "evidence_badge": "CROSS_SOURCE_SEMANTIC_CONTROL",
+    "evidence_inputs": [
+      "11_CBY_PAYMENTS",
+      "49_METRIC_CROSSWALK",
+      "CTR-006"
+    ],
+    "does_not_prove_en": "Dividing administrative counts by population does not produce a share of people unless a documented unique-person method exists; no such share is established here.",
+    "does_not_prove_ar": "لا تنتج قسمة الأعداد الإدارية على عدد السكان نسبةً من الأشخاص ما لم توجد طريقة موثقة لإزالة التكرار وتحديد الأشخاص الفريدين؛ ولا يثبت هذا الدليل أي نسبة من هذا النوع.",
+    "change_trigger_en": "This record is updated when an authoritative source is revised or replaced, a newer comparable observation becomes available, the definition, population or method changes, or the conditions for public use change.",
+    "change_trigger_ar": "يُحدَّث هذا السجل عند مراجعة المصدر المعتمد أو استبداله، أو توفر مشاهدة أحدث قابلة للمقارنة، أو تغير التعريف أو المجتمع أو الطريقة، أو تغير شروط الاستخدام العام.",
+    "public_routes": [
+      "/payments",
+      "/methodology"
+    ],
+    "public_route_list": [
+      "/payments/",
+      "/methodology/"
+    ]
+  },
+  {
+    "claim_id": "CLM-005",
+    "theme": "Firms",
+    "claim_type": "BOUNDED_SURVEY_COMPARISON",
+    "headline_en": "Finance was not the most frequently cited constraint in this survey",
+    "headline_ar": "التمويل ليس التحدي الأكثر ذكرًا في هذا المسح",
+    "copy_en": "Among formal firms in the 2022 custom enterprise survey of seven governorates, electricity and fuel shortages were each named as a business challenge more often than access to finance.",
+    "copy_ar": "بين المنشآت الرسمية في مسح المنشآت المخصص الذي شمل سبع محافظات عام 2022، ذُكرت الكهرباء ونقص الوقود بوصفهما تحديين للأعمال أكثر مما ذُكر الوصول إلى التمويل.",
+    "evidence_badge": "PRIMARY_CUSTOM_SURVEY",
+    "evidence_inputs": [
+      "12_FIRM_FINANCE",
+      "INS-004",
+      "EP-FIRM-2022"
+    ],
+    "does_not_prove_en": "The comparison is not nationally representative and is not a ranking of constraints for all Yemeni firms.",
+    "does_not_prove_ar": "لا تمثل المقارنة منشآت اليمن تمثيلًا وطنيًا، وليست ترتيبًا للقيود التي تواجهها جميع المنشآت اليمنية.",
+    "change_trigger_en": "This record is updated when an authoritative source is revised or replaced, a newer comparable observation becomes available, the definition, population or method changes, or the conditions for public use change.",
+    "change_trigger_ar": "يُحدَّث هذا السجل عند مراجعة المصدر المعتمد أو استبداله، أو توفر مشاهدة أحدث قابلة للمقارنة، أو تغير التعريف أو المجتمع أو الطريقة، أو تغير شروط الاستخدام العام.",
+    "public_routes": [
+      "/firms"
+    ],
+    "public_route_list": [
+      "/firms/"
+    ]
+  },
+  {
+    "claim_id": "CLM-006",
+    "theme": "Firms",
+    "claim_type": "CONDITIONAL_SEVERITY",
+    "headline_en": "Finance severity within a specific denominator",
+    "headline_ar": "شدة عائق التمويل ضمن قاعدة احتساب محددة",
+    "copy_en": "Among the formal firms in the report's finance-obstacle tabulation, which excludes firms that said they did not need a loan, major plus moderate finance obstacles sum to 91.84%.",
+    "copy_ar": "ضمن المنشآت الرسمية التي شملها جدول عوائق التمويل في التقرير، بعد استبعاد المنشآت التي قالت إنها لا تحتاج إلى قرض، بلغت نسبة المنشآت التي صنّفت عوائق التمويل كبيرة أو متوسطة 91.84%.",
+    "evidence_badge": "PRIMARY_SURVEY_FILTERED_DERIVATION",
+    "evidence_inputs": [
+      "12_FIRM_FINANCE",
+      "DA-020",
+      "EP-FIRM-2022"
+    ],
+    "does_not_prove_en": "The combined 91.84% is not the share of all Yemeni firms that face a major or moderate finance obstacle; it applies only to the firms in the report's filtered tabulation.",
+    "does_not_prove_ar": "لا تمثل النسبة المجمعة البالغة 91.84% حصة جميع منشآت اليمن التي تواجه عوائق تمويل كبيرة أو متوسطة، بل تخص المنشآت المشمولة بالجدول المصفّى في التقرير وحدها.",
+    "change_trigger_en": "This record is updated when an authoritative source is revised or replaced, a newer comparable observation becomes available, the definition, population or method changes, or the conditions for public use change.",
+    "change_trigger_ar": "يُحدَّث هذا السجل عند مراجعة المصدر المعتمد أو استبداله، أو توفر مشاهدة أحدث قابلة للمقارنة، أو تغير التعريف أو المجتمع أو الطريقة، أو تغير شروط الاستخدام العام.",
+    "public_routes": [
+      "/firms"
+    ],
+    "public_route_list": [
+      "/firms/"
+    ]
+  },
+  {
+    "claim_id": "CLM-007",
+    "theme": "Remittances",
+    "claim_type": "REPORTED_HISTORY_VS_OUTLOOK",
+    "headline_en": "Reported history, estimates and projections remain separate",
+    "headline_ar": "القيم التاريخية المنشورة والتقديرات والتوقعات تبقى منفصلة",
+    "copy_en": "The history in the IMF 2025 Article IV staff report shows materially higher remittance inflows in 2024 than in 2018 (both values from the same document); the 2025 estimate and the 2026–2030 projections come from a later supplement and are a separate evidence state. The IMF series covers the IMF's analytical scope for areas under the internationally recognized government, so its level is not a whole-of-Yemen figure and is not comparable in level with the annual-report values of the Central Bank of Yemen – Aden (CBY-Aden).",
+    "copy_ar": "تُظهر القيم التاريخية الواردة في تقرير خبراء صندوق النقد الدولي لمشاورات المادة الرابعة لعام 2025 أن التحويلات الواردة في ميزان المدفوعات كانت في 2024 أعلى بصورة جوهرية منها في 2018 (والقيمتان من الوثيقة نفسها)، أما تقدير 2025 وتوقعات 2026–2030 فمصدرها ملحق لاحق، وهي نوع دليل مختلف. وتغطي سلسلة الصندوق نطاقه التحليلي الخاص بالمناطق الخاضعة للحكومة المعترف بها دوليًا، لذلك لا يمثل مستواها رقمًا لليمن كله، ولا يُقارن مستواها بقيم التقارير السنوية للبنك المركزي اليمني – عدن.",
+    "evidence_badge": "PRIMARY_OFFICIAL_MACRO",
+    "evidence_inputs": [
+      "17_REMITTANCES",
+      "EP-REMITTANCE-MACRO",
+      "INS-005"
+    ],
+    "does_not_prove_en": "It does not measure hawala volume, payment-system settlement or how inflows are distributed among households.",
+    "does_not_prove_ar": "لا يقيس هذا الدليل حجم الحوالة غير الرسمية، ولا التسوية عبر نظام المدفوعات، ولا توزيع التدفقات على الأسر.",
+    "change_trigger_en": "This record is updated when an authoritative source is revised or replaced, a newer comparable observation becomes available, the definition, population or method changes, or the conditions for public use change.",
+    "change_trigger_ar": "يُحدَّث هذا السجل عند مراجعة المصدر المعتمد أو استبداله، أو توفر مشاهدة أحدث قابلة للمقارنة، أو تغير التعريف أو المجتمع أو الطريقة، أو تغير شروط الاستخدام العام.",
+    "public_routes": [
+      "/remittances"
+    ],
+    "public_route_list": [
+      "/remittances/"
+    ]
+  },
+  {
+    "claim_id": "CLM-008",
+    "theme": "Providers",
+    "claim_type": "AUTHORITY_ROSTER",
+    "headline_en": "Listing or licensing does not establish operation",
+    "headline_ar": "الإدراج أو الترخيص لا يثبت التشغيل",
+    "copy_en": "The list of licensed banks of the Central Bank of Yemen – Aden (CBY-Aden), as checked on 7 September 2026, names 26 banks. Appearing on the list establishes listing or licensing in that source, not operation.",
+    "copy_ar": "تضم قائمة البنوك المرخصة الصادرة عن البنك المركزي اليمني – عدن، كما اطُّلع عليها في 7 سبتمبر 2026، 26 بنكًا. ويثبت الظهور في القائمة الإدراج أو الترخيص وفق ذلك المصدر، لا التشغيل الفعلي.",
+    "evidence_badge": "PRIMARY_CURRENT_ROSTER",
+    "evidence_inputs": [
+      "15_PROVIDER_MASTER",
+      "PUC-BANK-2026-01",
+      "POB-001",
+      "EP-CBY-BANK-ROSTER-2026"
+    ],
+    "does_not_prove_en": "It does not establish which branches are active, which products are offered, market share or participation in payment systems.",
+    "does_not_prove_ar": "لا يثبت هذا الدليل أي الفروع عاملة، ولا المنتجات المتاحة، ولا الحصة السوقية، ولا المشاركة في أنظمة الدفع.",
+    "change_trigger_en": "This record is updated when an authoritative source is revised or replaced, a newer comparable observation becomes available, the definition, population or method changes, or the conditions for public use change.",
+    "change_trigger_ar": "يُحدَّث هذا السجل عند مراجعة المصدر المعتمد أو استبداله، أو توفر مشاهدة أحدث قابلة للمقارنة، أو تغير التعريف أو المجتمع أو الطريقة، أو تغير شروط الاستخدام العام.",
+    "public_routes": [
+      "/providers",
+      "/access"
+    ],
+    "public_route_list": [
+      "/providers/",
+      "/access/"
+    ]
+  },
+  {
+    "claim_id": "CLM-009",
+    "theme": "Providers",
+    "claim_type": "BOUNDED_ROSTER_COUNTS",
+    "headline_en": "The official 2026 exchange and remittance roster is countable; current operation is a separate question",
+    "headline_ar": "يمكن عدّ القائمة الرسمية للصرافة والحوالات لعام 2026؛ أما التشغيل الحالي فسؤال مختلف",
+    "copy_en": "The official 2026 roster of exchange and remittance providers issued by the Central Bank of Yemen – Aden (CBY-Aden) lists 98 exchange companies, 225 individual exchange establishments and 106 remittance agents. These are roster entries counted by the roster's own classes: the three class totals are not a count of unique providers, nor a verified count of providers operating now. Because the roster does not state its issue date, CBY-Aden's 2026 decisions suspending, withdrawing or closing named entities (dated January to September 2026) are matched with the roster entity by entity in both directions: a decision may or may not already be reflected in it.",
+    "copy_ar": "تضم القائمة الرسمية لعام 2026 لمقدمي خدمات الصرافة والحوالات، الصادرة عن البنك المركزي اليمني – عدن، كلًّا من 98 شركة صرافة و225 منشأة صرافة فردية و106 وكلاء حوالات. وهذه قيود معدودة بحسب فئات القائمة نفسها: فمجموع الفئات الثلاث ليس عددًا لمقدمي خدمات فريدين، ولا عددًا متحققًا منه لمن يعمل منهم حاليًا. ولأن القائمة لا تذكر تاريخ صدورها، تُطابَق قرارات البنك المركزي في عدن الصادرة خلال 2026 (بين يناير وسبتمبر 2026) بتعليق تراخيص جهات مسماة أو سحبها أو إغلاقها مع القائمة جهةً جهة وفي الاتجاهين، إذ قد يكون أثر القرار منعكسًا فيها وقد لا يكون.",
+    "evidence_badge": "PRIMARY_AUTHORITY_ROSTER_COUNT",
+    "evidence_inputs": [
+      "PUC-EXCH-2026-01",
+      "SRC-CBY-EXCH-LIST-2026-001"
+    ],
+    "does_not_prove_en": "Adding the three classes does not give a count of unique providers, because no rule for identifying the same entity across classes has been applied. Inclusion in the annual roster is not proof of current operation, branch activity or service availability, including for entities named in 2026 enforcement decisions.",
+    "does_not_prove_ar": "لا يعطي جمع الفئات الثلاث عددًا لمقدمي خدمات فريدين، لأنه لم تُطبَّق قاعدة لتحديد الكيان نفسه عبر الفئات. ولا يثبت الإدراج في القائمة السنوية التشغيل الحالي أو نشاط الفروع أو توافر الخدمة، بما في ذلك للجهات التي سمّتها قرارات الإنفاذ الصادرة خلال 2026.",
+    "change_trigger_en": "These counts are updated when the Central Bank of Yemen – Aden (CBY-Aden) publishes a revised or newer annual roster. A statement about current operating status requires official status decisions to be matched to named entities first.",
+    "change_trigger_ar": "تُحدَّث هذه الأعداد إذا نشر البنك المركزي اليمني – عدن قائمة سنوية منقحة أو أحدث. ولا يُستنتج وضع التشغيل الحالي إلا بعد مطابقة قرارات الإنفاذ الرسمية بالجهات المسماة.",
+    "public_routes": [
+      "/providers",
+      "/evidence",
+      "/measurement",
+      "/access"
+    ],
+    "public_route_list": [
+      "/providers/",
+      "/evidence/",
+      "/measurement/",
+      "/access/"
+    ]
+  },
+  {
+    "claim_id": "CLM-010",
+    "theme": "Digital finance",
+    "claim_type": "SOURCE_DISAGREEMENT",
+    "headline_en": "Wallet and subscriber counts from different publications are not yet reconciled",
+    "headline_ar": "أعداد المحافظ ومشتركيها في الإصدارات المختلفة لم تُطابَق بعد",
+    "copy_en": "Official CBY-Aden publications report different wallet counts at different dates and in different contexts—7 in 2024 Q3, 9 in 2025 H1 and 8 licensed e-wallets in a September 2025 official statement. The same two payment reports give e-wallet subscriber counts of 414,631, 507,585 and 581,075 for the first three quarters of 2024 (2024 Q3 report) and 2,102,484 for 2025 H1 (H1 2025 infographic). Because definitions and reporting scope have not been reconciled across these publications, neither set is presented as a continuous trend, and subscribers are not unique people or active users.",
+    "copy_ar": "تورد وثائق رسمية للبنك المركزي اليمني – عدن أعدادًا مختلفة للمحافظ في تواريخ وسياقات مختلفة: 7 في الربع الثالث 2024، و9 في النصف الأول 2025، و8 محافظ إلكترونية مرخصة في بيان رسمي في سبتمبر 2025. ويورد تقريرا المدفوعات نفسهما أعداد مشتركي المحافظ الإلكترونية: 414,631 و507,585 و581,075 للأرباع الثلاثة الأولى من 2024 (تقرير الربع الثالث 2024)، و2,102,484 للنصف الأول من 2025 (إنفوغرافيك النصف الأول 2025). ولأن التعريفات ونطاق الإبلاغ لم تُطابَق بين هذه الإصدارات، لا تُعرض أيٌّ من المجموعتين كسلسلة اتجاه متصلة، والمشتركون ليسوا أشخاصًا فريدين ولا مستخدمين نشطين.",
+    "evidence_badge": "PRIMARY_OFFICIAL_MULTI_SOURCE_SEMANTIC_GAP",
+    "evidence_inputs": [
+      "11_CBY_PAYMENTS",
+      "PUC-WALLET-2025-01",
+      "POB-003",
+      "OBS-00014",
+      "OBS-00015",
+      "OBS-00016",
+      "OBS-00034"
+    ],
+    "does_not_prove_en": "The sequence 7, 9 and 8 does not show providers entering or leaving the market, or net growth in providers. The move from 581,075 subscribers (2024 Q3) to 2,102,484 (2025 H1) is not a measure of growth, and subscribers are not unique people or active users.",
+    "does_not_prove_ar": "لا يثبت التسلسل 7 ثم 9 ثم 8 دخول مقدمي خدمات إلى السوق أو خروجهم منه، ولا صافي نمو في عددهم. وليس الانتقال من 581,075 مشتركًا (الربع الثالث 2024) إلى 2,102,484 (النصف الأول 2025) مقياسًا للنمو، والمشتركون ليسوا أشخاصًا فريدين ولا مستخدمين نشطين.",
+    "change_trigger_en": "This record is updated when an authoritative source is revised or replaced, a newer comparable observation becomes available, the definition, population or method changes, or the conditions for public use change.",
+    "change_trigger_ar": "يُحدَّث هذا السجل عند مراجعة المصدر المعتمد أو استبداله، أو توفر مشاهدة أحدث قابلة للمقارنة، أو تغير التعريف أو المجتمع أو الطريقة، أو تغير شروط الاستخدام العام.",
+    "public_routes": [
+      "/evidence/compare",
+      "/payments",
+      "/providers"
+    ],
+    "public_route_list": [
+      "/evidence/compare/",
+      "/payments/",
+      "/providers/"
+    ]
+  },
+  {
+    "claim_id": "CLM-011",
+    "theme": "Consumer protection",
+    "claim_type": "OFFICIAL_ARCHITECTURE",
+    "headline_en": "The complaint path is documented; performance remains open",
+    "headline_ar": "مسار الشكوى معروف ونتائج الأداء ما تزال مفتوحة",
+    "copy_en": "A 2024 consumer-protection awareness brochure of the Central Bank of Yemen – Aden (CBY-Aden) describes a provider complaint stage of up to 10 business days, a possible extension under conditions it states, and escalation to CBY-Aden within 14 business days after the provider stage ends. These time limits come from the brochure, not from an extracted legal text. Evidence on how complaints are actually handled is not available.",
+    "copy_ar": "يصف كتيّب توعوي لحماية المستهلك أصدره البنك المركزي اليمني – عدن في 2024 مرحلةً لمعالجة الشكوى لدى مقدم الخدمة تصل إلى 10 أيام عمل، مع إمكان التمديد وفق شروط يذكرها، ثم التصعيد إلى البنك المركزي في عدن خلال 14 يوم عمل من انتهاء مرحلة مقدم الخدمة. وهذه المدد مأخوذة من الكتيّب، لا من نص قانوني مستخرج. ولا تتوفر أدلة على كيفية معالجة الشكاوى فعليًا.",
+    "evidence_badge": "PRIMARY_OFFICIAL_GUIDANCE",
+    "evidence_inputs": [
+      "55_FCP_ARCHITECTURE",
+      "EP-CBY-FCP-REDRESS-2024"
+    ],
+    "does_not_prove_en": "It does not establish that the complaint system is effective, that complaints are resolved on time in practice, or that it is applied across all covered institutions.",
+    "does_not_prove_ar": "لا يثبت وجود النظام فعاليته، ولا حل الشكاوى في الوقت المحدد عمليًا، ولا تطبيقه على نحو شامل لدى جميع الجهات المشمولة.",
+    "change_trigger_en": "This record is updated when an authoritative source is revised or replaced, a newer comparable observation becomes available, the definition, population or method changes, or the conditions for public use change.",
+    "change_trigger_ar": "يُحدَّث هذا السجل عند مراجعة المصدر المعتمد أو استبداله، أو توفر مشاهدة أحدث قابلة للمقارنة، أو تغير التعريف أو المجتمع أو الطريقة، أو تغير شروط الاستخدام العام.",
+    "public_routes": [
+      "/reforms"
+    ],
+    "public_route_list": [
+      "/reforms/"
+    ]
+  },
+  {
+    "claim_id": "CLM-012",
+    "theme": "Digital finance regulation",
+    "claim_type": "REGULATORY_STATE",
+    "headline_en": "E-money rules are not observed usage",
+    "headline_ar": "قواعد النقود الإلكترونية ليست قيم استخدام",
+    "copy_en": "The signed 2025 mobile e-money amendment permits specified foreign-currency e-money alongside YER and sets regulatory transaction/balance ceilings; these are rules, not observed usage values.",
+    "copy_ar": "يسمح تعديل النقود الإلكترونية عبر الهاتف المحمول الموقع في 2025 بفئات محددة من النقود الإلكترونية بالعملة الأجنبية إلى جانب الريال اليمني، ويضع حدودًا تنظيمية للمعاملات والأرصدة. هذه أحكام تنظيمية وليست قياسات للاستخدام الفعلي.",
+    "evidence_badge": "PRIMARY_SIGNED_REGULATORY_AMENDMENT",
+    "evidence_inputs": [
+      "56_E_MONEY_REGULATORY",
+      "EP-CBY-EMONEY-2023-25"
+    ],
+    "does_not_prove_en": "It does not establish that products were launched, which providers offer the service, actual balances, how transactions are distributed, or adoption.",
+    "does_not_prove_ar": "لا يثبت هذا الدليل إطلاق المنتجات، ولا توافر مقدمي الخدمة، ولا الأرصدة الفعلية، ولا توزيع المعاملات، ولا التبني.",
+    "change_trigger_en": "This record is updated when an authoritative source is revised or replaced, a newer comparable observation becomes available, the definition, population or method changes, or the conditions for public use change.",
+    "change_trigger_ar": "يُحدَّث هذا السجل عند مراجعة المصدر المعتمد أو استبداله، أو توفر مشاهدة أحدث قابلة للمقارنة، أو تغير التعريف أو المجتمع أو الطريقة، أو تغير شروط الاستخدام العام.",
+    "public_routes": [
+      "/payments",
+      "/reforms"
+    ],
+    "public_route_list": [
+      "/payments/",
+      "/reforms/"
+    ]
+  },
+  {
+    "claim_id": "CLM-013",
+    "theme": "Financial capability",
+    "claim_type": "EVIDENCE_CLASS_BOUNDARY",
+    "headline_en": "Financial-literacy activity does not establish capability outcomes",
+    "headline_ar": "النشاط التوعوي لا يثبت أثرًا على القدرات",
+    "copy_en": "Global Money Week records of the Central Bank of Yemen – Aden (CBY-Aden) document financial-literacy activities during 2023–2025. Separately, the OECD/INFE 2023 adult financial-literacy survey, which covered 1,000 respondents in Yemen between 11 March and 1 April 2023, reports a financial well-being score of 15 out of 100 for Yemen and an overall financial-literacy score of 42 out of 100. These are different evidence classes: evidence that activities took place does not establish population capability or programme effectiveness.",
+    "copy_ar": "توثق سجلات الأسبوع العالمي للمال لدى البنك المركزي اليمني – عدن تنفيذ أنشطة للثقافة المالية خلال 2023–2025. وبشكل منفصل، يسجل مسح OECD/INFE لعام 2023 للثقافة المالية لدى البالغين، الذي شمل في اليمن 1,000 مستجيب خلال الفترة من 11 مارس إلى 1 أبريل 2023، لليمن 15 من 100 في الرفاه المالي و42 من 100 في النتيجة الإجمالية للثقافة المالية. وهذان نوعان مختلفان من الأدلة؛ فإثبات تنفيذ الأنشطة لا يثبت مستوى القدرات المالية لدى السكان ولا فعالية البرنامج.",
+    "evidence_badge": "PRIMARY_PROGRAMME_ACTIVITY_PLUS_SEPARATE_POPULATION_EVIDENCE",
+    "evidence_inputs": [
+      "SRC-CBY-GMW-2023-001",
+      "SRC-CBY-GMW-2024-001",
+      "SRC-CBY-GMW-2025-001",
+      "SRC-OECD-INFE-2023"
+    ],
+    "does_not_prove_en": "The OECD/INFE scores of 15 out of 100 (financial well-being) and 42 out of 100 (financial literacy) are not results of Global Money Week activity. Programme effectiveness is not established: that would require an evaluation with a baseline and appropriate follow-up measurement, which the activity records do not provide.",
+    "does_not_prove_ar": "لا تمثل نتيجتا مسح OECD/INFE، أي 15 من 100 في الرفاه المالي و42 من 100 في الثقافة المالية، نتاجًا لأنشطة الأسبوع العالمي للمال. ولا تثبت هذه الأدلة فعالية البرنامج، إذ يتطلب ذلك تقييمًا يتضمن خط أساس وقياس متابعة مناسبًا، وهو ما لا توفره سجلات الأنشطة.",
+    "change_trigger_en": "This record is updated when a newer comparable population measure of financial capability, a programme evaluation or a correction to the source evidence is published.",
+    "change_trigger_ar": "يُحدَّث هذا السجل عند توفر قياس سكاني أحدث قابل للمقارنة للقدرات، أو تقييم للبرنامج، أو تصحيح في أدلة المصدر.",
+    "public_routes": [
+      "/people",
+      "/reforms"
+    ],
+    "public_route_list": [
+      "/people/",
+      "/reforms/"
+    ]
+  },
+  {
+    "claim_id": "CLM-014",
+    "theme": "Evidence",
+    "claim_type": "FRESHNESS_ASYMMETRY",
+    "headline_en": "Evidence freshness differs by domain",
+    "headline_ar": "حداثة الأدلة غير متساوية بين المجالات",
+    "copy_en": "The evidence here is not equally current across domains: several payments/regulatory observations are from 2025–2026, while key representative people-side evidence is older.",
+    "copy_ar": "لا تتساوى حداثة الأدلة بين مجالات المنظومة: فعدد من مشاهدات المدفوعات والتنظيم يعود إلى 2025–2026، بينما ترجع أدلة سكانية تمثيلية أساسية إلى فترات أقدم.",
+    "evidence_badge": "CROSS_DOMAIN_EVIDENCE_GOVERNANCE",
+    "evidence_inputs": [
+      "01_DATASET_INDEX",
+      "27_FINDEX_WAVES",
+      "11_CBY_PAYMENTS",
+      "54_PRIMARY_AUTHORITY"
+    ],
+    "does_not_prove_en": "Older evidence is not invalid because of its age, and recent administrative evidence does not measure current financial inclusion across the population.",
+    "does_not_prove_ar": "ليس الدليل الأقدم باطلًا لمجرد قدمه، ولا تقيس البيانات الإدارية الحديثة الشمول المالي الراهن على مستوى السكان.",
+    "change_trigger_en": "This record is updated when an authoritative source is revised or replaced, a newer comparable observation becomes available, the definition, population or method changes, or the conditions for public use change.",
+    "change_trigger_ar": "يُحدَّث هذا السجل عند مراجعة المصدر المعتمد أو استبداله، أو توفر مشاهدة أحدث قابلة للمقارنة، أو تغير التعريف أو المجتمع أو الطريقة، أو تغير شروط الاستخدام العام.",
+    "public_routes": [
+      "/evidence",
+      "/methodology"
+    ],
+    "public_route_list": [
+      "/evidence/",
+      "/methodology/"
+    ]
+  },
+  {
+    "claim_id": "CLM-015",
+    "theme": "Digital finance / providers",
+    "claim_type": "DATED_NEGATIVE_AUTHORITY",
+    "headline_en": "A dated list of unlicensed services, not a permanent status",
+    "headline_ar": "قائمة بتاريخ محدد لخدمات غير مرخصة، لا وضعٌ دائم",
+    "copy_en": "A 26 June 2024 circular of the Central Bank of Yemen – Aden (CBY-Aden) names 12 electronic wallets, entities or services as unlicensed by that authority on that date and prohibits banks and exchange businesses from dealing with them. Status under any other authority is not established here.",
+    "copy_ar": "يسمّي تعميم صادر عن البنك المركزي اليمني – عدن بتاريخ 26 يونيو 2024 ما مجموعه 12 محفظة أو جهة أو خدمة إلكترونية بوصفها غير مرخصة لديه في ذلك التاريخ، ويحظر على البنوك وشركات الصرافة التعامل معها. ولا يثبت هذا الدليل وضعها لدى أي سلطة أخرى.",
+    "evidence_badge": "PRIMARY_OFFICIAL_NEGATIVE_AUTHORITY",
+    "evidence_inputs": [
+      "67_PROVIDER_NEGATIVE_AUTHORITY",
+      "PSE-001",
+      "EP-CBY-NEG-AUTH-2024"
+    ],
+    "does_not_prove_en": "The unlicensed status applies to the circular's date and is not a 2026 status without newer evidence; the list does not identify which wallets are licensed, and it does not establish the status of these services under any other authority.",
+    "does_not_prove_ar": "يخص وصف عدم الترخيص تاريخ التعميم، ولا يمثل وضعًا لعام 2026 من دون دليل أحدث؛ ولا تحدد القائمة المحافظ المرخصة، ولا تثبت وضع هذه الخدمات لدى أي سلطة أخرى.",
+    "change_trigger_en": "This record is updated when an authoritative source is revised or replaced, a newer comparable observation becomes available, the definition, population or method changes, or the conditions for public use change.",
+    "change_trigger_ar": "يُحدَّث هذا السجل عند مراجعة المصدر المعتمد أو استبداله، أو توفر مشاهدة أحدث قابلة للمقارنة، أو تغير التعريف أو المجتمع أو الطريقة، أو تغير شروط الاستخدام العام.",
+    "public_routes": [
+      "/providers",
+      "/payments"
+    ],
+    "public_route_list": [
+      "/providers/",
+      "/payments/"
+    ]
+  },
+  {
+    "claim_id": "CLM-016",
+    "theme": "Providers",
+    "claim_type": "HISTORICAL_ROSTER_BASELINE",
+    "headline_en": "Historical exchange and remittance roster baseline",
+    "headline_ar": "خط أساس تاريخي لفئات الصرافة والحوالات",
+    "copy_en": "The official 2025 CBY-Aden roster contains 79 exchange companies, 195 exchange establishments and 108 remittance agents—382 category entries in total.",
+    "copy_ar": "تضم القائمة الرسمية للبنك المركزي اليمني – عدن لعام 2025 عدد 79 شركة صرافة و195 منشأة صرافة و108 وكلاء حوالات، أي 382 قيدًا فئويًا في المجموع.",
+    "evidence_badge": "PRIMARY_OFFICIAL_ROSTER_PLUS_SIMPLE_DERIVATION",
+    "evidence_inputs": [
+      "71_PROVIDER_BASELINE_2025",
+      "EP-CBY-EXCH-ROSTER-2025"
+    ],
+    "does_not_prove_en": "382 is not the 2026 count, a count of unique current firms or active providers, or a measure of branch footprint.",
+    "does_not_prove_ar": "ليس الرقم 382 عدد عام 2026، ولا عددًا لشركات فريدة حالية أو لمقدمي خدمات عاملين، ولا مقياسًا لشبكة الفروع.",
+    "change_trigger_en": "This record is updated when an authoritative source is revised or replaced, a newer comparable observation becomes available, the definition, population or method changes, or the conditions for public use change.",
+    "change_trigger_ar": "يُحدَّث هذا السجل عند مراجعة المصدر المعتمد أو استبداله، أو توفر مشاهدة أحدث قابلة للمقارنة، أو تغير التعريف أو المجتمع أو الطريقة، أو تغير شروط الاستخدام العام.",
+    "public_routes": [
+      "/providers"
+    ],
+    "public_route_list": [
+      "/providers/"
+    ]
+  },
+  {
+    "claim_id": "CLM-017",
+    "theme": "Payments",
+    "claim_type": "LATEST_EXPOSED_MONTHLY_POS",
+    "headline_en": "January 2026 was the latest monthly POS release on the CBY-Aden payments page when checked on 26 September 2026",
+    "headline_ar": "كان يناير 2026 أحدث إصدار شهري لنقاط البيع في صفحة المدفوعات لدى البنك المركزي اليمني – عدن كما اطُّلع عليها في 26 سبتمبر 2026",
+    "copy_en": "The payments page of the Central Bank of Yemen – Aden (CBY-Aden) lists monthly POS releases from March 2025 to January 2026. January 2026 was the latest monthly POS release on the CBY-Aden payments page when checked on 26 September 2026; no later month is inferred.",
+    "copy_ar": "تعرض صفحة المدفوعات لدى البنك المركزي اليمني – عدن إصدارات شهرية لنقاط البيع من مارس 2025 إلى يناير 2026. كان يناير 2026 أحدث إصدار شهري لنقاط البيع في صفحة المدفوعات لدى البنك المركزي اليمني – عدن كما اطُّلع عليها في 26 سبتمبر 2026، من دون استنتاج أي شهر لاحق.",
+    "evidence_badge": "PRIMARY_PUBLICATION_CURRENTNESS_CONTROL",
+    "evidence_inputs": [
+      "73_PAYMENT_CURRENTNESS",
+      "11_CBY_PAYMENTS"
+    ],
+    "does_not_prove_en": "It does not show that POS activity stopped after January 2026; it identifies only the latest monthly release listed on the payments page of the Central Bank of Yemen – Aden (CBY-Aden) when checked on 26 September 2026.",
+    "does_not_prove_ar": "لا يعني ذلك توقف نشاط نقاط البيع بعد يناير 2026؛ بل يحدد فقط أحدث إصدار شهري مدرج في صفحة المدفوعات لدى البنك المركزي اليمني – عدن كما اطُّلع عليها في 26 سبتمبر 2026.",
+    "change_trigger_en": "This record is updated when the Central Bank of Yemen – Aden (CBY-Aden) lists a later monthly POS release or revises a published one, or when the page is checked again.",
+    "change_trigger_ar": "يُحدَّث هذا السجل عند إدراج البنك المركزي اليمني – عدن إصدارًا شهريًا لاحقًا لنقاط البيع أو تعديله إصدارًا منشورًا، أو عند الاطلاع على الصفحة مجددًا.",
+    "public_routes": [
+      "/payments",
+      "/methodology"
+    ],
+    "public_route_list": [
+      "/payments/",
+      "/methodology/"
+    ]
+  },
+  {
+    "claim_id": "CLM-018",
+    "theme": "Payments",
+    "claim_type": "INSTITUTIONAL_STATE",
+    "headline_en": "Institutional progress is not operation or outcome",
+    "headline_ar": "تقدم مؤسسي لا يساوي تشغيلًا أو أثرًا",
+    "copy_en": "Between June and August 2026, official records of the Central Bank of Yemen – Aden (CBY-Aden) show further institution-building in the payment system: integration work on the unified domestic money-transfer network, and the establishment and first governance steps of the Yemeni Payments and Clearing Company (YPCC), whose founding assembly was held on 3 August 2026. These are institutional steps; the operation and use of payment systems and any inclusion outcomes are separate evidence questions.",
+    "copy_ar": "تُظهر السجلات الرسمية للبنك المركزي اليمني – عدن خلال الفترة من يونيو إلى أغسطس 2026 خطوات إضافية في البناء المؤسسي لنظام المدفوعات: أعمال تكامل الشبكة الموحدة للحوالات المالية الداخلية، وتأسيس الشركة اليمنية للمدفوعات والمقاصة (YPCC) وبدء حوكمتها، إذ عُقدت جمعيتها التأسيسية في 3 أغسطس 2026. وهذه خطوات مؤسسية؛ أما تشغيل أنظمة الدفع واستخدامها وأي نتائج للشمول المالي فأسئلة أدلة منفصلة.",
+    "evidence_badge": "PRIMARY_OFFICIAL_EVENT_SEQUENCE",
+    "evidence_inputs": [
+      "73_PAYMENT_CURRENTNESS",
+      "REF-PAY-010..013",
+      "EP-CBY-PAY-INSTITUTIONAL-2026"
+    ],
+    "does_not_prove_en": "It does not show that the Yemeni Payments and Clearing Company (YPCC), the Fast Payment System (FPS) or the Real-Time Gross Settlement system (RTGS) is operating: YPCC is an institution that has been established, not a system in operation, and the results framework of the Financial Market Infrastructure and Inclusion Project (FMIIP) records FPS and RTGS as not yet developed or operational in January 2025, with no participating institutions; no later operational state is recorded here. It does not establish adoption, transaction coverage, reliability or any effect on financial inclusion.",
+    "does_not_prove_ar": "لا يثبت هذا الدليل أن الشركة اليمنية للمدفوعات والمقاصة (YPCC) أو نظام الدفع السريع (FPS) أو نظام التسوية الإجمالية الفورية (RTGS) قيد التشغيل: فالشركة مؤسسة جرى تأسيسها وليست نظامًا قيد التشغيل، ويسجل إطار نتائج مشروع البنية التحتية للأسواق المالية والشمول المالي في اليمن (FMIIP) أن نظامي FPS وRTGS لم يكونا مطوَّرين أو قيد التشغيل في يناير 2025، ولا مؤسسات مشاركة فيهما، ولا يسجل هذا الدليل أي وضع تشغيلي لاحق. ولا يثبت التبني أو تغطية المعاملات أو الموثوقية أو أي أثر على الشمول المالي.",
+    "change_trigger_en": "This record is updated when an authoritative source is revised or replaced, a newer comparable observation becomes available, the definition, population or method changes, or the conditions for public use change.",
+    "change_trigger_ar": "يُحدَّث هذا السجل عند مراجعة المصدر المعتمد أو استبداله، أو توفر مشاهدة أحدث قابلة للمقارنة، أو تغير التعريف أو المجتمع أو الطريقة، أو تغير شروط الاستخدام العام.",
+    "public_routes": [
+      "/payments",
+      "/reforms"
+    ],
+    "public_route_list": [
+      "/payments/",
+      "/reforms/"
+    ]
+  },
+  {
+    "claim_id": "CLM-019",
+    "theme": "Providers",
+    "claim_type": "DATED_STATUS_OVERLAY",
+    "headline_en": "Enforcement decisions are events, not a market census",
+    "headline_ar": "قرارات الإنفاذ طبقة أحداث وليست تعدادًا للسوق",
+    "copy_en": "Governor's decisions of the Central Bank of Yemen – Aden (CBY-Aden) dated January to September 2026 record licence withdrawals, suspensions and closures for specific exchange and remittance providers. This record covers selected CBY-Aden Governor's decisions of 2026 concerning exchange and remittance providers (Nos. 1–6, 9–11, 13–15, 17 and 18); other decision numbers are not included and their subjects are not assessed. The official 2026 roster can be counted by class, but these decisions are matched with it entity by entity and are not subtracted from it to produce a count of providers operating now.",
+    "copy_ar": "تسجل قرارات محافظ البنك المركزي اليمني – عدن المؤرخة بين يناير وسبتمبر 2026 سحب تراخيص أو تعليقها أو إغلاق مقار لجهات محددة من مقدمي خدمات الصرافة والحوالات. ويغطي هذا السجل قرارات مختارة لمحافظ البنك المركزي في عدن صدرت في 2026 وتتعلق بمقدمي خدمات الصرافة والحوالات (الأرقام 1–6 و9–11 و13–15 و17 و18)؛ ولا يشمل أرقام القرارات الأخرى، ولا يقيّم موضوعاتها. ويمكن عدّ القائمة الرسمية لعام 2026 بحسب الفئة، لكن هذه القرارات تُطابَق معها جهةً جهة، ولا تُطرح منها لاستخراج عدد لمقدمي الخدمات العاملين حاليًا.",
+    "evidence_badge": "PRIMARY_OFFICIAL_STATUS_EVENTS_PLUS_ANNUAL_ROSTER",
+    "evidence_inputs": [
+      "66_PROVIDER_STATUS_EVENTS",
+      "15_PROVIDER_MASTER",
+      "16_PROVIDER_UNIVERSE",
+      "PUC-EXCH-2026-01",
+      "DS-CBY-EXCHANGE-ROSTER-2026-COUNTS",
+      "EP-CBY-PROVIDER-STATUS-2026"
+    ],
+    "does_not_prove_en": "The 2026 annual roster can be counted by class, but it is not a census of operating providers. Subtracting suspension, withdrawal and closure decisions from the roster does not give a current count of operating providers: the roster does not state its issue date, so each decision is matched to named entities one by one, in both directions. A provider not named in these decisions is not thereby shown to be active or compliant. The record does not cover 2026 decision numbers other than those listed, and it does not assess their subjects.",
+    "does_not_prove_ar": "يمكن عدّ القائمة السنوية لعام 2026 بحسب الفئة، لكنها ليست تعدادًا لمقدمي الخدمات العاملين. ولا يعطي طرح قرارات التعليق أو سحب الترخيص أو الإغلاق من القائمة عددًا حاليًا لمقدمي الخدمات العاملين: فالقائمة لا تذكر تاريخ صدورها، لذلك يُطابَق كل قرار مع الجهات المسماة جهةً جهة وفي الاتجاهين. ولا يثبت عدم ذكر جهة في هذه القرارات أنها عاملة أو ممتثلة. ولا يشمل السجل أرقام قرارات 2026 غير المذكورة، ولا يقيّم موضوعاتها.",
+    "change_trigger_en": "This record is updated when an authoritative source is revised or replaced, a newer comparable observation becomes available, the definition, population or method changes, or the conditions for public use change.",
+    "change_trigger_ar": "يُحدَّث هذا السجل عند مراجعة المصدر المعتمد أو استبداله، أو توفر مشاهدة أحدث قابلة للمقارنة، أو تغير التعريف أو المجتمع أو الطريقة، أو تغير شروط الاستخدام العام.",
+    "public_routes": [
+      "/providers",
+      "/evidence"
+    ],
+    "public_route_list": [
+      "/providers/",
+      "/evidence/"
+    ]
+  },
+  {
+    "claim_id": "CLM-020",
+    "theme": "Microfinance history",
+    "claim_type": "LAYERED_CHRONOLOGY",
+    "headline_en": "1997 and 1998 are distinct milestones",
+    "headline_ar": "1997 و1998 محطتان مختلفتان",
+    "copy_en": "This resource treats 1997 and 1998 as distinct milestones: material hosted by the Social Fund for Development (SFD) ties the institutional and microfinance origin to 1997, while official SFD history describes active microfinance involvement through its small/micro enterprise programme from the start of operations in 1998.",
+    "copy_ar": "يتعامل هذا المورد مع عامي 1997 و1998 كمحطتين منفصلتين: تربط مواد يستضيفها الصندوق الاجتماعي للتنمية النشأة المؤسسية للتمويل الأصغر بعام 1997، بينما يصف التاريخ الرسمي للصندوق انخراطه الفعلي في التمويل الأصغر عبر برنامج تنمية المنشآت الصغيرة والأصغر منذ بدء عملياته في 1998.",
+    "evidence_badge": "PRIMARY_OFFICIAL_INSTITUTIONAL_HISTORY_PLUS_CORROBORATION",
+    "evidence_inputs": [
+      "76_MF_ORIGIN_CHRONOLOGY",
+      "CTR-005",
+      "EP-SFD-MFI-ORIGIN-1997-98"
+    ],
+    "does_not_prove_en": "It does not establish a single, definitive start date for microfinance in Yemen, and neither source disproves the other.",
+    "does_not_prove_ar": "لا يثبت هذا الدليل تاريخًا وحيدًا ونهائيًا لنشأة التمويل الأصغر في اليمن، ولا ينقض أحد المصدرين الآخر.",
+    "change_trigger_en": "This record is updated when an authoritative source is revised or replaced, a newer comparable observation becomes available, the definition, population or method changes, or the conditions for public use change.",
+    "change_trigger_ar": "يُحدَّث هذا السجل عند مراجعة المصدر المعتمد أو استبداله، أو توفر مشاهدة أحدث قابلة للمقارنة، أو تغير التعريف أو المجتمع أو الطريقة، أو تغير شروط الاستخدام العام.",
+    "public_routes": [
+      "/finance"
+    ],
+    "public_route_list": [
+      "/finance/"
+    ]
+  },
+  {
+    "claim_id": "CLM-021",
+    "theme": "Microfinance history",
+    "claim_type": "OBSERVED_RUPTURE",
+    "headline_en": "Observed fall in microfinance borrowers and portfolio during 2015",
+    "headline_ar": "تراجع مرصود في المقترضين ومحفظة التمويل الأصغر خلال 2015",
+    "copy_en": "Primary tables from the Social Fund for Development (SFD) show active borrowers of SFD-supported reporting programmes falling from 124,917 at end-March 2015 to 106,825 at end-September and 93,118 at end-December, alongside a declining reported portfolio across the verified source snapshots.",
+    "copy_ar": "تُظهر الجداول الأصلية للصندوق الاجتماعي للتنمية تراجع المقترضين النشطين لدى البرامج المدعومة من الصندوق والمُبلِّغة إليه من 124,917 في نهاية مارس 2015 إلى 106,825 في نهاية سبتمبر و93,118 في نهاية ديسمبر، بالتوازي مع انخفاض المحفظة كما وردت في المصدر عبر اللقطات الموثقة.",
+    "evidence_badge": "PRIMARY_ADMINISTRATIVE_OBSERVATIONS",
+    "evidence_inputs": [
+      "77_MFI_TEMPORAL_SPINE",
+      "SRC-SFD-Q1-2015-001",
+      "SRC-SFD-Q3-2015-001",
+      "SRC-SFD-Q4-2015-001",
+      "EP-SFD-MFI-RUPTURE-2015"
+    ],
+    "does_not_prove_en": "It does not estimate the effect of the conflict on microfinance, and it gives no values for dates between the three snapshots.",
+    "does_not_prove_ar": "لا يقدّر هذا الدليل أثر النزاع في التمويل الأصغر، ولا يقدم قيمًا للتواريخ الواقعة بين اللقطات الثلاث.",
+    "change_trigger_en": "This record is updated when an authoritative source is revised or replaced, a newer comparable observation becomes available, the definition, population or method changes, or the conditions for public use change.",
+    "change_trigger_ar": "يُحدَّث هذا السجل عند مراجعة المصدر المعتمد أو استبداله، أو توفر مشاهدة أحدث قابلة للمقارنة، أو تغير التعريف أو المجتمع أو الطريقة، أو تغير شروط الاستخدام العام.",
+    "public_routes": [
+      "/finance"
+    ],
+    "public_route_list": [
+      "/finance/"
+    ]
+  },
+  {
+    "claim_id": "CLM-022",
+    "theme": "Microfinance history",
+    "claim_type": "EVIDENCE_CONTINUITY",
+    "headline_en": "Informative history without a continuous annual series",
+    "headline_ar": "سجل مفيد لكنه غير سنوي متصل",
+    "copy_en": "The historical microfinance evidence is materially informative but not continuously annual: This resource preserves exact quarterly/year-end points, anomalies, pointer-only years and no-data years rather than filling the gaps.",
+    "copy_ar": "توفر الأدلة التاريخية للتمويل الأصغر معلومات جوهرية لكنها لا تشكل سلسلة سنوية متصلة. ويحافظ هذا المورد على النقاط الفصلية ونقاط نهاية العام كما وردت، وعلى الشذوذ والسنوات التي لا تتوافر عنها إلا إحالات والسنوات الخالية من البيانات، من دون ملء الفجوات.",
+    "evidence_badge": "CROSS_SOURCE_EVIDENCE_GOVERNANCE",
+    "evidence_inputs": [
+      "75_SFD_SMED_YEAR_COVERAGE",
+      "77_MFI_TEMPORAL_SPINE",
+      "78_MFI_METRIC_COVERAGE"
+    ],
+    "does_not_prove_en": "A year with no observation does not indicate zero microfinance activity, and the observations do not establish a trend across the missing years.",
+    "does_not_prove_ar": "لا تدل السنة الخالية من المشاهدات على انعدام نشاط التمويل الأصغر، ولا تثبت المشاهدات اتجاهًا زمنيًا عبر السنوات المفقودة.",
+    "change_trigger_en": "This record is updated when an authoritative source is revised or replaced, a newer comparable observation becomes available, the definition, population or method changes, or the conditions for public use change.",
+    "change_trigger_ar": "يُحدَّث هذا السجل عند مراجعة المصدر المعتمد أو استبداله، أو توفر مشاهدة أحدث قابلة للمقارنة، أو تغير التعريف أو المجتمع أو الطريقة، أو تغير شروط الاستخدام العام.",
+    "public_routes": [
+      "/finance",
+      "/methodology"
+    ],
+    "public_route_list": [
+      "/finance/",
+      "/methodology/"
+    ]
+  },
+  {
+    "claim_id": "CLM-023",
+    "theme": "People / methodology",
+    "claim_type": "FINDEX_STUDY_CONTRACT",
+    "headline_en": "What the Yemen Findex 2021 study contains",
+    "headline_ar": "ما تتضمنه دراسة Findex 2021 الخاصة باليمن",
+    "copy_en": "The verified Yemen Global Findex 2021 study has 1,000 respondents and 113 variables; Yemen fieldwork ran from 7 November 2022 to 9 January 2023 and all population estimates require survey weights.",
+    "copy_ar": "تضم دراسة اليمن المعتمدة في قاعدة الأدلة لموجة المؤشر العالمي للشمول المالي 2021 عدد 1,000 مستجيب و113 متغيرًا. ونُفذ العمل الميداني من 7 نوفمبر 2022 إلى 9 يناير 2023، وتتطلب جميع تقديرات السكان استخدام أوزان المسح.",
+    "evidence_badge": "PRIMARY_SURVEY_METADATA",
+    "evidence_inputs": [
+      "25_FINDEX_META",
+      "26_FINDEX_VARS",
+      "SRC-WB-FINDEX-001"
+    ],
+    "does_not_prove_en": "Raw case percentages in the study documentation are not population estimates.",
+    "does_not_prove_ar": "نسب الحالات الخام الواردة في توثيق الدراسة ليست تقديرات سكانية.",
+    "change_trigger_en": "This record is updated when an authoritative source is revised or replaced, a newer comparable observation becomes available, the definition, population or method changes, or the conditions for public use change.",
+    "change_trigger_ar": "يُحدَّث هذا السجل عند مراجعة المصدر المعتمد أو استبداله، أو توفر مشاهدة أحدث قابلة للمقارنة، أو تغير التعريف أو المجتمع أو الطريقة، أو تغير شروط الاستخدام العام.",
+    "public_routes": [
+      "/methodology",
+      "/people"
+    ],
+    "public_route_list": [
+      "/methodology/",
+      "/people/"
+    ]
+  },
+  {
+    "claim_id": "CLM-024",
+    "theme": "People / methodology",
+    "claim_type": "RAW_CASES_NOT_POPULATION",
+    "headline_en": "Raw case shares are not population estimates",
+    "headline_ar": "نسب الحالات الخام ليست تقديرات للسكان",
+    "copy_en": "World Bank variable pages expose raw sample case counts and percentages for the Yemen Findex file, but explicitly warn that those figures cannot be interpreted as summary statistics of the population of interest.",
+    "copy_ar": "تعرض صفحات متغيرات البنك الدولي أعداد الحالات الخام ونسبها في ملف اليمن، لكنها تنبه صراحة إلى أن هذه القيم لا يجوز تفسيرها بوصفها إحصاءات موجزة للسكان محل الاهتمام.",
+    "evidence_badge": "PRIMARY_SURVEY_METADATA_AND_METHOD_WARNING",
+    "evidence_inputs": [
+      "87_FINDEX_DENOMINATOR_STRESS",
+      "29_FINDEX_RULES"
+    ],
+    "does_not_prove_en": "The raw, unweighted case percentages shown on the World Bank variable pages are not estimates for Yemen's adult population and are not reported in this resource.",
+    "does_not_prove_ar": "نسب الحالات الخام غير الموزونة الظاهرة في صفحات المتغيرات لدى البنك الدولي ليست تقديرات لسكان اليمن البالغين، ولا تُعرض في هذا المورد.",
+    "change_trigger_en": "This record is updated when an authoritative source is revised or replaced, a newer comparable observation becomes available, the definition, population or method changes, or the conditions for public use change.",
+    "change_trigger_ar": "يُحدَّث هذا السجل عند مراجعة المصدر المعتمد أو استبداله، أو توفر مشاهدة أحدث قابلة للمقارنة، أو تغير التعريف أو المجتمع أو الطريقة، أو تغير شروط الاستخدام العام.",
+    "public_routes": [
+      "/methodology",
+      "/evidence"
+    ],
+    "public_route_list": [
+      "/methodology/",
+      "/evidence/"
+    ]
+  },
+  {
+    "claim_id": "CLM-025",
+    "theme": "People / evidence",
+    "claim_type": "FINDEX_COVERAGE_LIMIT",
+    "headline_en": "Geographic coverage limits of the latest Findex wave",
+    "headline_ar": "حدود التغطية الجغرافية لموجة Findex",
+    "copy_en": "The latest Yemen Findex wave excludes Al Baydaa, Al Jawf, Mareb, Sadah, Socotra and several districts elsewhere; the source states excluded areas represent approximately 23% of the population, and over one-fourth of primary sampling units were replaced during fieldwork.",
+    "copy_ar": "تستبعد أحدث موجة من المؤشر العالمي للشمول المالي (Global Findex) في اليمن محافظات البيضاء والجوف ومأرب وصعدة وسقطرى وعددًا من المديريات في محافظات أخرى. ويذكر المصدر أن المناطق المستبعدة تمثل نحو 23% من السكان، وأن أكثر من ربع وحدات المعاينة الأولية استُبدل أثناء العمل الميداني.",
+    "evidence_badge": "PRIMARY_SURVEY_METADATA",
+    "evidence_inputs": [
+      "25_FINDEX_META",
+      "EP-FINDEX-2022-ACCOUNT",
+      "SRC-WB-FINDEX-001"
+    ],
+    "does_not_prove_en": "The wave does not cover all of Yemen, and its results cannot be used to map financial inclusion by governorate.",
+    "does_not_prove_ar": "لا تغطي هذه الموجة اليمن كله جغرافيًا، ولا يمكن استخدام نتائجها لرسم خرائط للشمول المالي على مستوى المحافظات.",
+    "change_trigger_en": "This record is updated when an authoritative source is revised or replaced, a newer comparable observation becomes available, the definition, population or method changes, or the conditions for public use change.",
+    "change_trigger_ar": "يُحدَّث هذا السجل عند مراجعة المصدر المعتمد أو استبداله، أو توفر مشاهدة أحدث قابلة للمقارنة، أو تغير التعريف أو المجتمع أو الطريقة، أو تغير شروط الاستخدام العام.",
+    "public_routes": [
+      "/people",
+      "/methodology"
+    ],
+    "public_route_list": [
+      "/people/",
+      "/methodology/"
+    ]
+  },
+  {
+    "claim_id": "CLM-026",
+    "theme": "People",
+    "claim_type": "DEMAND_PANEL_STATE",
+    "headline_en": "Demand-side measures defined; custom estimates not yet published",
+    "headline_ar": "مقاييس جانب الطلب محددة، والتقديرات المخصصة لم تُنشر بعد",
+    "copy_en": "A 32-metric demand-side panel has been specified across access, barriers, digital use, saving, borrowing, resilience, remittances, income flows, financial worry and connectivity. Custom weighted estimates are not published yet because they require authorized respondent-level data, correct survey weights and successful reproduction of the official benchmark values.",
+    "copy_ar": "تم تحديد مجموعة من 32 مقياسًا على جانب الطلب تغطي الوصول والعوائق والاستخدام الرقمي والادخار والاقتراض والقدرة على الصمود والحوالات وتدفقات الدخل والقلق المالي والاتصال. ولم تُنشر التقديرات الموزونة المخصصة بعد، لأنها تتطلب بيانات على مستوى المستجيبين مصرحًا باستخدامها، وأوزان المسح الصحيحة، وإعادة إنتاج القيم المرجعية الرسمية بنجاح.",
+    "evidence_badge": "ANALYTIC_CONTRACT_PLUS_OPEN_MICRODATA_PENDING",
+    "evidence_inputs": [
+      "85_FINDEX_PANEL_CATALOG",
+      "86_FINDEX_SUBGROUP_MATRIX",
+      "89_FINDEX_MICRODATA_GATE"
+    ],
+    "does_not_prove_en": "The 32 specified measures are planned, not measured: none is yet a published indicator, because the weighted estimates have not been reproduced and checked against official benchmarks.",
+    "does_not_prove_ar": "المقاييس المحددة، وعددها 32 مقياسًا، مخططة وليست مقاسة: فلا يمثل أي منها مؤشرًا منشورًا بعد، لأن تقديراتها الموزونة لم يُعَد إنتاجها ولم يُتحقق منها مقابل القيم المرجعية الرسمية.",
+    "change_trigger_en": "This record is updated when an authoritative source is revised or replaced, a newer comparable observation becomes available, the definition, population or method changes, or the conditions for public use change.",
+    "change_trigger_ar": "يُحدَّث هذا السجل عند مراجعة المصدر المعتمد أو استبداله، أو توفر مشاهدة أحدث قابلة للمقارنة، أو تغير التعريف أو المجتمع أو الطريقة، أو تغير شروط الاستخدام العام.",
+    "public_routes": [
+      "/people",
+      "/methodology"
+    ],
+    "public_route_list": [
+      "/people/",
+      "/methodology/"
+    ]
+  },
+  {
+    "claim_id": "CLM-027",
+    "theme": "People / access",
+    "claim_type": "OBSERVED_WAVE_HISTORY",
+    "headline_en": "Three observed survey waves, not an annual series",
+    "headline_ar": "ثلاث موجات مسحية مرصودة، لا سلسلة سنوية",
+    "copy_en": "The World Bank has published three observations of account ownership in Yemen: 3.7% in 2011 (accounts at financial institutions only), 6.4% in 2014 and 11.9% for 2022, from the 2021 Findex wave. This resource treats them as separate observed survey waves, not an annual series.",
+    "copy_ar": "نشر البنك الدولي ثلاث مشاهدات لامتلاك الحساب في اليمن: 3.7% في 2011 (للحسابات لدى المؤسسات المالية فقط)، و6.4% في 2014، و11.9% لسنة 2022 من موجة Findex 2021. ويتعامل هذا المورد معها بوصفها موجات مسحية مرصودة منفصلة، لا سلسلة سنوية.",
+    "evidence_badge": "PRIMARY_WEIGHTED_PUBLIC_AGGREGATES_PLUS_BOUNDED_DERIVATION",
+    "evidence_inputs": [
+      "107_FINDEX_PUBLIC_HISTORY",
+      "108_FINDEX_HISTORY_CROSSWALK",
+      "28_FINDEX_OBS",
+      "DA-021",
+      "DA-022",
+      "EP-FINDEX-HIST-WAVE-SPINE"
+    ],
+    "does_not_prove_en": "It does not establish values for the years between waves or a smooth growth path, and 11.9% is not a 2026 rate.",
+    "does_not_prove_ar": "لا يثبت هذا الدليل قيمًا للسنوات الواقعة بين الموجات ولا مسار نمو سلسًا، وليست نسبة 11.9% معدلًا لعام 2026.",
+    "change_trigger_en": "This record is updated when an authoritative source is revised or replaced, a newer comparable observation becomes available, the definition, population or method changes, or the conditions for public use change.",
+    "change_trigger_ar": "يُحدَّث هذا السجل عند مراجعة المصدر المعتمد أو استبداله، أو توفر مشاهدة أحدث قابلة للمقارنة، أو تغير التعريف أو المجتمع أو الطريقة، أو تغير شروط الاستخدام العام.",
+    "public_routes": [
+      "/people"
+    ],
+    "public_route_list": [
+      "/people/"
+    ]
+  },
+  {
+    "claim_id": "CLM-028",
+    "theme": "People / borrowing",
+    "claim_type": "HISTORICAL_NEEDS_PROFILE",
+    "headline_en": "Historical borrowing patterns in 2014",
+    "headline_ar": "أنماط اقتراض تاريخية في 2014",
+    "copy_en": "In the 2014 World Bank weighted country profile, 65.9% of adults reported borrowing any money, while 51.7% reported borrowing from family or friends, 15.0% from a private informal lender and 0.4% from a financial institution.",
+    "copy_ar": "في الملف القطري الموزون للبنك الدولي لعام 2014، أفاد 65.9% من البالغين بأنهم اقترضوا أي مبلغ، مقابل 51.7% من الأسرة أو الأصدقاء، و15.0% من مقرض خاص غير رسمي، و0.4% من مؤسسة مالية.",
+    "evidence_badge": "PRIMARY_WEIGHTED_PUBLIC_AGGREGATES",
+    "evidence_inputs": [
+      "107_FINDEX_PUBLIC_HISTORY",
+      "108_FINDEX_HISTORY_CROSSWALK",
+      "EP-FINDEX-2014-NEEDS-FLOWS"
+    ],
+    "does_not_prove_en": "The indicators overlap and are shares of all adults, not of borrowers: they cannot be added up to 100% or read as a breakdown of borrowers, and they do not describe borrowing today.",
+    "does_not_prove_ar": "مؤشرات مصادر الاقتراض متداخلة، وهي نسب من جميع البالغين لا من المقترضين؛ فلا تُجمع لتبلغ 100% ولا تُقرأ توزيعًا للمقترضين، ولا تصف الاقتراض في الوقت الحالي.",
+    "change_trigger_en": "This record is updated when an authoritative source is revised or replaced, a newer comparable observation becomes available, the definition, population or method changes, or the conditions for public use change.",
+    "change_trigger_ar": "يُحدَّث هذا السجل عند مراجعة المصدر المعتمد أو استبداله، أو توفر مشاهدة أحدث قابلة للمقارنة، أو تغير التعريف أو المجتمع أو الطريقة، أو تغير شروط الاستخدام العام.",
+    "public_routes": [
+      "/people"
+    ],
+    "public_route_list": [
+      "/people/"
+    ]
+  },
+  {
+    "claim_id": "CLM-029",
+    "theme": "People / saving",
+    "claim_type": "HISTORICAL_NEEDS_PROFILE",
+    "headline_en": "Historical saving patterns in 2014",
+    "headline_ar": "أنماط ادخار تاريخية في 2014",
+    "copy_en": "In the 2014 World Bank weighted country profile, 20.6% of adults reported saving any money, compared with 0.9% reporting saving at a financial institution and 4.5% using a savings club or person outside the family.",
+    "copy_ar": "في الملف القطري الموزون للبنك الدولي لعام 2014، أفاد 20.6% من البالغين بأنهم ادخروا أي مبلغ، مقابل 0.9% ادخروا لدى مؤسسة مالية و4.5% استخدموا جمعية ادخار أو شخصًا من خارج الأسرة.",
+    "evidence_badge": "PRIMARY_WEIGHTED_PUBLIC_AGGREGATES",
+    "evidence_inputs": [
+      "107_FINDEX_PUBLIC_HISTORY",
+      "108_FINDEX_HISTORY_CROSSWALK",
+      "EP-FINDEX-2014-NEEDS-FLOWS"
+    ],
+    "does_not_prove_en": "The gap between saving any money and saving at a financial institution is not an 'informal saving share', and the saving methods are not a complete breakdown of savers.",
+    "does_not_prove_ar": "لا يمثل الفرق بين ادخار أي مبلغ والادخار لدى مؤسسة مالية «حصة الادخار غير الرسمي»، ولا تمثل طرق الادخار توزيعًا شاملًا لكل المدخرين.",
+    "change_trigger_en": "This record is updated when an authoritative source is revised or replaced, a newer comparable observation becomes available, the definition, population or method changes, or the conditions for public use change.",
+    "change_trigger_ar": "يُحدَّث هذا السجل عند مراجعة المصدر المعتمد أو استبداله، أو توفر مشاهدة أحدث قابلة للمقارنة، أو تغير التعريف أو المجتمع أو الطريقة، أو تغير شروط الاستخدام العام.",
+    "public_routes": [
+      "/people"
+    ],
+    "public_route_list": [
+      "/people/"
+    ]
+  },
+  {
+    "claim_id": "CLM-030",
+    "theme": "People / domestic remittances",
+    "claim_type": "CONDITIONAL_PATHWAY",
+    "headline_en": "Domestic-remittance pathways in 2014",
+    "headline_ar": "مسار الحوالات المحلية في 2014",
+    "copy_en": "The 2014 World Bank weighted country profile reports 18.3% of adults receiving domestic remittances. Among recipients, 31.1% received via a money transfer operator, 2.0% via a financial institution and 0.0% via mobile phone in that source profile.",
+    "copy_ar": "يفيد الملف القطري الموزون للبنك الدولي لعام 2014 بأن 18.3% من البالغين تلقوا حوالات محلية. ومن بين المتلقين، استخدم 31.1% مشغل تحويل أموال، و2.0% مؤسسة مالية، و0.0% الهاتف المحمول وفق ذلك المصدر.",
+    "evidence_badge": "PRIMARY_WEIGHTED_PUBLIC_AGGREGATES_WITH_CONDITIONAL_DENOMINATOR",
+    "evidence_inputs": [
+      "107_FINDEX_PUBLIC_HISTORY",
+      "108_FINDEX_HISTORY_CROSSWALK",
+      "EP-FINDEX-2014-NEEDS-FLOWS"
+    ],
+    "does_not_prove_en": "The channel values are shares of adults who received domestic remittances, not of all adults; they do not show what share of the money flowed through each channel, and the profile does not describe the current situation.",
+    "does_not_prove_ar": "قيم القنوات نسب من البالغين الذين تلقوا حوالات محلية لا من جميع البالغين؛ ولا تبين حصة الأموال التي مرت عبر كل قناة، ولا يصف هذا الملف الوضع الراهن.",
+    "change_trigger_en": "This record is updated when an authoritative source is revised or replaced, a newer comparable observation becomes available, the definition, population or method changes, or the conditions for public use change.",
+    "change_trigger_ar": "يُحدَّث هذا السجل عند مراجعة المصدر المعتمد أو استبداله، أو توفر مشاهدة أحدث قابلة للمقارنة، أو تغير التعريف أو المجتمع أو الطريقة، أو تغير شروط الاستخدام العام.",
+    "public_routes": [
+      "/people",
+      "/remittances"
+    ],
+    "public_route_list": [
+      "/people/",
+      "/remittances/"
+    ]
+  },
+  {
+    "claim_id": "CLM-031",
+    "theme": "People / evidence freshness",
+    "claim_type": "FUNCTION_LEVEL_VINTAGE_ASYMMETRY",
+    "headline_en": "There is no single latest year for all people-side evidence",
+    "headline_ar": "لا توجد سنة واحدة هي الأحدث لكل أدلة الأفراد",
+    "copy_en": "The people-side evidence here does not have one latest year: account ownership has a latest verified Yemen aggregate in 2022, while weighted public evidence currently available here for account use, saving, borrowing and domestic-remittance behavior is centered on 2014; latest-wave resilience and barrier values remain unpublished until the required weighted computation is complete. Historical results stay separate from any newer estimate until that computation and its verification are complete.",
+    "copy_ar": "لا توجد سنة حديثة واحدة لجميع أدلة جانب الأفراد: أحدث قياس موزون منشور لامتلاك الحساب يعود إلى 2022، بينما تتركز الأدلة العامة الموزونة المتاحة هنا لاستخدام الحساب والادخار والاقتراض والحوالات المحلية في 2014؛ ولا تُنشر بعد قيم الصمود المالي وأسباب عدم امتلاك الحساب للموجة الأحدث إلى أن تكتمل الحسابات الموزونة اللازمة. وتبقى النتائج التاريخية منفصلة عن أي تقدير أحدث إلى أن يكتمل هذا الاحتساب ويُتحقق منه.",
+    "evidence_badge": "CROSS_WAVE_EVIDENCE_GOVERNANCE",
+    "evidence_inputs": [
+      "109_DEMAND_VINTAGE_LENS",
+      "107_FINDEX_PUBLIC_HISTORY",
+      "85_FINDEX_PANEL_CATALOG"
+    ],
+    "does_not_prove_en": "The 2014 behaviour values do not describe current behaviour, and raw case percentages from the 2021 wave are not a substitute for weighted population estimates.",
+    "does_not_prove_ar": "لا تصف قيم السلوك لعام 2014 السلوك الحالي، ولا تُعد نسب الحالات الخام في موجة 2021 بديلًا عن التقديرات السكانية الموزونة.",
+    "change_trigger_en": "This record is updated when an authoritative source is revised or replaced, a newer comparable observation becomes available, the definition, population or method changes, or the conditions for public use change.",
+    "change_trigger_ar": "يُحدَّث هذا السجل عند مراجعة المصدر المعتمد أو استبداله، أو توفر مشاهدة أحدث قابلة للمقارنة، أو تغير التعريف أو المجتمع أو الطريقة، أو تغير شروط الاستخدام العام.",
+    "public_routes": [
+      "/people",
+      "/evidence"
+    ],
+    "public_route_list": [
+      "/people/",
+      "/evidence/"
+    ]
+  },
+  {
+    "claim_id": "CLM-032",
+    "theme": "Payments / remittances",
+    "claim_type": "SAME_YEAR_VINTAGE_REVISION",
+    "headline_en": "Same reference year, different published value",
+    "headline_ar": "السنة المرجعية نفسها، وقيمة منشورة مختلفة",
+    "copy_en": "Annual reports of the Central Bank of Yemen – Aden (CBY-Aden) publish materially different remittance values for the same reference year. For 2024, the 2024 annual report gave USD 6.245 billion, while the 2025 annual report restated 2024 at USD 3.42 billion. This is a same-year restatement, not evidence of economic movement between years.",
+    "copy_ar": "تنشر التقارير السنوية للبنك المركزي اليمني – عدن قيمًا مختلفة بصورة جوهرية للتحويلات الواردة في ميزان المدفوعات عن السنة المرجعية نفسها. فقد أورد التقرير السنوي 2024 قيمة عام 2024 عند 6.245 مليار دولار، بينما أعاد التقرير السنوي 2025 عرض عام 2024 عند 3.42 مليار دولار. وهذه إعادة عرض للسنة نفسها، وليست دليلًا على حركة اقتصادية بين عامين.",
+    "evidence_badge": "SAME_YEAR_REVISION",
+    "evidence_inputs": [
+      "K04-CBY-060",
+      "173_CBY_ANNUAL_VINTAGES",
+      "AVA-004",
+      "EP-CBY-REMITTANCE-VINTAGE-K04"
+    ],
+    "does_not_prove_en": "The same-year revision is not an economic collapse and not a change between years.",
+    "does_not_prove_ar": "ليست مراجعة قيمة السنة نفسها انهيارًا اقتصاديًا ولا تغيرًا فعليًا بين عامين.",
+    "change_trigger_en": "This record is updated when an authoritative source is revised or replaced, a newer comparable observation becomes available, the definition, population or method changes, or the conditions for public use change.",
+    "change_trigger_ar": "يُحدَّث هذا السجل عند مراجعة المصدر المعتمد أو استبداله، أو توفر مشاهدة أحدث قابلة للمقارنة، أو تغير التعريف أو المجتمع أو الطريقة، أو تغير شروط الاستخدام العام.",
+    "public_routes": [
+      "/remittances",
+      "/evidence/compare"
+    ],
+    "public_route_list": [
+      "/remittances/",
+      "/evidence/compare/"
+    ]
+  },
+  {
+    "claim_id": "CLM-033",
+    "theme": "Banking system",
+    "claim_type": "VALUATION_METHOD_BREAK",
+    "headline_en": "A measured banking jump can partly be a valuation change",
+    "headline_ar": "قد تكون القفزة المصرفية المقاسة جزئيًا تغيرًا في التقييم",
+    "copy_en": "The same 2022 consolidated banking positions are published at materially higher levels from AR2023 onward, alongside a documented January-2023 shift to market-exchange-rate valuation of foreign-currency positions. The published difference therefore does not by itself establish economic change of the same magnitude.",
+    "copy_ar": "تظهر القيم المصرفية المجمعة لعام 2022 بمستويات أعلى بصورة جوهرية ابتداءً من التقرير السنوي 2023، بالتزامن مع توثيق تغيير في يناير 2023 نحو تقييم المراكز بالعملات الأجنبية بسعر الصرف السوقي. ولذلك لا يثبت الفرق المنشور في حد ذاته تغيرًا اقتصاديًا بالحجم نفسه.",
+    "evidence_badge": "METHOD_BREAK",
+    "evidence_inputs": [
+      "K04-CBY-061",
+      "173_CBY_ANNUAL_VINTAGES",
+      "AVA-005..008",
+      "EP-CBY-BANKING-REVAL-K04"
+    ],
+    "does_not_prove_en": "The restatement is not evidence of an asset, deposit or credit boom, or of any change in solvency.",
+    "does_not_prove_ar": "لا تمثل إعادة العرض دليلًا على طفرة في الأصول أو الودائع أو الائتمان، ولا على أي تغير في الملاءة.",
+    "change_trigger_en": "This record is updated when an authoritative source is revised or replaced, a newer comparable observation becomes available, the definition, population or method changes, or the conditions for public use change.",
+    "change_trigger_ar": "يُحدَّث هذا السجل عند مراجعة المصدر المعتمد أو استبداله، أو توفر مشاهدة أحدث قابلة للمقارنة، أو تغير التعريف أو المجتمع أو الطريقة، أو تغير شروط الاستخدام العام.",
+    "public_routes": [
+      "/finance",
+      "/firms",
+      "/evidence/compare"
+    ],
+    "public_route_list": [
+      "/finance/",
+      "/firms/",
+      "/evidence/compare/"
+    ]
+  },
+  {
+    "claim_id": "CLM-034",
+    "theme": "Payments / remittances",
+    "claim_type": "PUBLISHED_SERIES_PATTERN",
+    "headline_en": "A smoother published path is a methods question, not a conclusion",
+    "headline_ar": "المسار المنشور الأكثر سلاسة سؤال منهجي، لا استنتاج",
+    "copy_en": "Within AR2025, the published remittance path rises with unusually similar annual growth rates across overlapping years. That pattern is useful for method scrutiny, but it does not establish smoothing, interpolation or low real-world volatility.",
+    "copy_ar": "تُظهر سلسلة التحويلات المنشورة في التقرير السنوي 2025 للبنك المركزي اليمني – عدن معدلات نمو سنوية متقاربة على نحو لافت عبر السنوات المتداخلة. يفيد هذا النمط في فحص المنهج، لكنه لا يثبت وجود تنعيم أو استيفاء أو انخفاض في التقلب الفعلي للتحويلات.",
+    "evidence_badge": "CAUSE_HELD",
+    "evidence_inputs": [
+      "K04-CBY-060",
+      "173_CBY_ANNUAL_VINTAGES",
+      "177_VINTAGE_VISUAL_LAB",
+      "DN-CBY-022"
+    ],
+    "does_not_prove_en": "The pattern does not establish smoothing, interpolation or low real-world volatility.",
+    "does_not_prove_ar": "لا يثبت النمط الظاهر في السلسلة المنشورة وجود تنعيم أو استيفاء أو انخفاض في التقلب الفعلي.",
+    "change_trigger_en": "This record is updated when an authoritative source is revised or replaced, a newer comparable observation becomes available, the definition, population or method changes, or the conditions for public use change.",
+    "change_trigger_ar": "يُحدَّث هذا السجل عند مراجعة المصدر المعتمد أو استبداله، أو توفر مشاهدة أحدث قابلة للمقارنة، أو تغير التعريف أو المجتمع أو الطريقة، أو تغير شروط الاستخدام العام.",
+    "public_routes": [
+      "/remittances",
+      "/methodology"
+    ],
+    "public_route_list": [
+      "/remittances/",
+      "/methodology/"
+    ]
+  },
+  {
+    "claim_id": "CLM-035",
+    "theme": "External finance",
+    "claim_type": "MATCHED_VINTAGE_COMPOSITION_SENSITIVITY",
+    "headline_en": "The apparent balance between remittances and donor financing changes with vintage",
+    "headline_ar": "تتغير الصورة النسبية للتحويلات وتمويل المانحين باختلاف النسخة المنشورة",
+    "copy_en": "Using two balance-of-payments items of the Central Bank of Yemen – Aden (CBY-Aden), labelled by the source as remittances and donor financing, within the same annual-report edition, the 2024 remittance-to-donor-financing ratio is 1.78 in the 2024 annual report and 0.98 after the 2025 annual report restates 2024. The comparison is limited to those exact labels, not all aid or external finance.",
+    "copy_ar": "عند مقارنة بندين من بنود ميزان المدفوعات لدى البنك المركزي اليمني – عدن، يسميهما المصدر التحويلات وتمويل المانحين، داخل النسخة نفسها من التقرير السنوي، تبلغ نسبة التحويلات إلى تمويل المانحين عن عام 2024 ما مقداره 1.78 في التقرير السنوي 2024، و0.98 بعد أن أعاد التقرير السنوي 2025 عرض عام 2024. ويقتصر هذا القياس على هذين البندين بتسميتهما في المصدر، ولا يمثل كل المساعدات أو التمويل الخارجي.",
+    "evidence_badge": "MATCHED_VINTAGE",
+    "evidence_inputs": [
+      "K04-CBY-062",
+      "173_CBY_ANNUAL_VINTAGES",
+      "177_VINTAGE_VISUAL_LAB"
+    ],
+    "does_not_prove_en": "The ratio does not describe all aid, official development assistance or external finance, and it does not rank flows that are defined differently.",
+    "does_not_prove_ar": "لا تصف النسبة جميع المساعدات أو المساعدة الإنمائية الرسمية أو جميع أشكال التمويل الخارجي، ولا ترتّب تدفقات تختلف تعريفاتها.",
+    "change_trigger_en": "This record is updated when an authoritative source is revised or replaced, a newer comparable observation becomes available, the definition, population or method changes, or the conditions for public use change.",
+    "change_trigger_ar": "يُحدَّث هذا السجل عند مراجعة المصدر المعتمد أو استبداله، أو توفر مشاهدة أحدث قابلة للمقارنة، أو تغير التعريف أو المجتمع أو الطريقة، أو تغير شروط الاستخدام العام.",
+    "public_routes": [
+      "/remittances",
+      "/finance",
+      "/evidence/compare"
+    ],
+    "public_route_list": [
+      "/remittances/",
+      "/finance/",
+      "/evidence/compare/"
+    ]
+  },
+  {
+    "claim_id": "CLM-036",
+    "theme": "Payments / remittances",
+    "claim_type": "METHOD_RECONSTRUCTION_HIGH_CONFIDENCE",
+    "headline_en": "A reconstruction programme is documented; the exact CBY formula is not",
+    "headline_ar": "إعادة البناء الإحصائي موثقة، أما صيغة البنك المركزي الدقيقة فليست كذلك",
+    "copy_en": "IMF documents a 2024–2025 external-sector statistical reconstruction effort with CBY-Aden, including a demographic-behavioural personal-transfer model where informal-channel data were limited. This establishes method context, not the exact formula or scope used in every CBY AR2025 remittance value.",
+    "copy_ar": "يوثق صندوق النقد الدولي جهدًا لإعادة بناء إحصاءات القطاع الخارجي خلال 2024–2025 مع البنك المركزي اليمني – عدن، شمل نموذجًا ديمغرافيًا وسلوكيًا للتحويلات الشخصية في ظل محدودية بيانات القنوات غير الرسمية. يثبت ذلك سياقًا منهجيًا، لكنه لا يثبت الصيغة الدقيقة أو النطاق المستخدم في كل قيمة للتحويلات في تقرير البنك المركزي لعام 2025.",
+    "evidence_badge": "METHOD_CONTEXT_NOT_EXACT_FORMULA",
+    "evidence_inputs": [
+      "EP-IMF-CBY-REMIT-METHOD-K04",
+      "181_REMITTANCE_METHOD_RECON",
+      "K04-CBY-060"
+    ],
+    "does_not_prove_en": "The public evidence does not establish the exact formula behind the values in the Central Bank of Yemen – Aden (CBY-Aden) Annual Report 2025, or that CBY-Aden and IMF levels share the same scope.",
+    "does_not_prove_ar": "لا تثبت الأدلة العامة الصيغة الدقيقة المستخدمة في التقرير السنوي 2025 للبنك المركزي اليمني – عدن، ولا أن نطاق مستويات البنك المركزي في عدن وصندوق النقد الدولي متطابق.",
+    "change_trigger_en": "This record is updated when an authoritative source is revised or replaced, a newer comparable observation becomes available, the definition, population or method changes, or the conditions for public use change.",
+    "change_trigger_ar": "يُحدَّث هذا السجل عند مراجعة المصدر المعتمد أو استبداله، أو توفر مشاهدة أحدث قابلة للمقارنة، أو تغير التعريف أو المجتمع أو الطريقة، أو تغير شروط الاستخدام العام.",
+    "public_routes": [
+      "/remittances",
+      "/methodology"
+    ],
+    "public_route_list": [
+      "/remittances/",
+      "/methodology/"
+    ]
+  },
+  {
+    "claim_id": "CLM-037",
+    "theme": "Payments / remittances",
+    "claim_type": "NORMALIZED_TRAJECTORY_CONCORDANCE",
+    "headline_en": "The paths align after normalization; their levels are not equivalent",
+    "headline_ar": "يتطابق المساران تقريبًا عند تحويلهما إلى رقم قياسي، لكن مستوياتهما ليست متكافئة",
+    "copy_en": "When the remittance series in the Central Bank of Yemen – Aden (CBY-Aden) Annual Report 2025 and in the IMF 2025 Article IV consultation are each indexed to 2021 = 100, the two paths are almost identical through 2024: the largest difference in annual growth over 2022–2024 is 0.0032 percentage points. Over 2021–2024 the ratio of the CBY-Aden level to the IMF level is 1.838 in every year. The two indexed paths move almost identically, but this does not show that the raw levels share the same scope.",
+    "copy_ar": "عند تحويل سلسلتي التحويلات في التقرير السنوي 2025 للبنك المركزي اليمني – عدن وفي مشاورات المادة الرابعة لعام 2025 لصندوق النقد الدولي إلى رقم قياسي (2021 = 100)، يتطابق المساران تقريبًا حتى 2024: إذ لا يتجاوز أكبر فرق في معدل النمو السنوي خلال 2022–2024 مقدار 0.0032 نقطة مئوية. وخلال 2021–2024 تبلغ نسبة مستوى سلسلة البنك المركزي في عدن إلى مستوى سلسلة الصندوق 1.838 في كل سنة. ويتحرك المساران بعد تحويلهما إلى رقم قياسي بصورة شبه متطابقة، لكن ذلك لا يثبت أن المستويات الخام تغطي النطاق نفسه.",
+    "evidence_badge": "NORMALIZED_NOT_LEVEL",
+    "evidence_inputs": [
+      "181_REMITTANCE_METHOD_RECON",
+      "EP-CBY-REMITTANCE-VINTAGE-K04",
+      "EP-IMF-CBY-REMIT-METHOD-K04"
+    ],
+    "does_not_prove_en": "The raw CBY-Aden and IMF levels are not equivalent, and the stable level ratio of 1.838 over 2021–2024 is not a geographic conversion factor.",
+    "does_not_prove_ar": "ليست المستويات الخام للبنك المركزي اليمني – عدن وصندوق النقد الدولي متكافئة، وليست نسبة المستوى الثابتة البالغة 1.838 خلال 2021–2024 معامل تحويل جغرافيًا.",
+    "change_trigger_en": "This record is updated when an authoritative source is revised or replaced, a newer comparable observation becomes available, the definition, population or method changes, or the conditions for public use change.",
+    "change_trigger_ar": "يُحدَّث هذا السجل عند مراجعة المصدر المعتمد أو استبداله، أو توفر مشاهدة أحدث قابلة للمقارنة، أو تغير التعريف أو المجتمع أو الطريقة، أو تغير شروط الاستخدام العام.",
+    "public_routes": [
+      "/remittances",
+      "/evidence/compare"
+    ],
+    "public_route_list": [
+      "/remittances/",
+      "/evidence/compare/"
+    ]
+  },
+  {
+    "claim_id": "CLM-038",
+    "theme": "Banking system",
+    "claim_type": "METHOD_LINEAGE_NARROWED",
+    "headline_en": "The 2023 valuation change has history, not a clean “first-ever” boundary",
+    "headline_ar": "لتغيير التقييم في 2023 سابقة تاريخية، وليس حدًا يصلح وصفه بأنه «الأول»",
+    "copy_en": "Market-rate valuation of foreign-currency accounts has documented precedent in Yemen from 1996, while CBY-Aden separately documents a January-2023 valuation/reporting change affecting current banking series. The two episodes should not be assumed to use identical standards.",
+    "copy_ar": "يوجد في اليمن توثيق سابق منذ 1996 لاستخدام سعر السوق في تقييم حسابات مقومة بالعملات الأجنبية، فيما يوثق البنك المركزي اليمني – عدن بصورة منفصلة تغييرًا في التقييم/الإبلاغ اعتبارًا من يناير 2023 أثّر في عرض السلاسل المصرفية الحالية. ولا يجوز افتراض أن الحدثين يستندان إلى معيار متطابق.",
+    "evidence_badge": "METHOD_LINEAGE",
+    "evidence_inputs": [
+      "185_BANKING_VALUATION_RECON",
+      "EP-CBY-BANKING-VALUATION-LINEAGE-K04"
+    ],
+    "does_not_prove_en": "The January 2023 change was not the first market-rate valuation in Yemen, since a precedent is documented from 1996, and the evidence does not show that the historical and contemporary standards are identical.",
+    "does_not_prove_ar": "لم يكن تغيير يناير 2023 أول استخدام للتقييم بسعر السوق في اليمن، إذ توجد سابقة موثقة منذ 1996، ولا تثبت الأدلة أن المعيار التاريخي والمعيار المعاصر متطابقان.",
+    "change_trigger_en": "This record is updated when an authoritative source is revised or replaced, a newer comparable observation becomes available, the definition, population or method changes, or the conditions for public use change.",
+    "change_trigger_ar": "يُحدَّث هذا السجل عند مراجعة المصدر المعتمد أو استبداله، أو توفر مشاهدة أحدث قابلة للمقارنة، أو تغير التعريف أو المجتمع أو الطريقة، أو تغير شروط الاستخدام العام.",
+    "public_routes": [
+      "/finance",
+      "/firms",
+      "/methodology"
+    ],
+    "public_route_list": [
+      "/finance/",
+      "/firms/",
+      "/methodology/"
+    ]
+  },
+  {
+    "claim_id": "CLM-039",
+    "theme": "Evidence / dataset interface",
+    "claim_type": "PUBLIC_INTERFACE_STATE_DIVERGENCE",
+    "headline_en": "A public interface is not the same thing as the underlying dataset",
+    "headline_ar": "واجهة البيانات العامة ليست هي مجموعة البيانات نفسها",
+    "copy_en": "World Bank public remittance interfaces do not expose Yemen history uniformly. A surface reviewed on 2026-09-10 showed an older span while other World Bank surfaces and prior documented access vintages contained later observations. The difference is an interface/provenance state, not evidence that later underlying data are absent.",
+    "copy_ar": "لا تعرض واجهات البنك الدولي العامة الخاصة بالتحويلات تاريخ اليمن بصورة موحدة. فقد أظهرت واجهةٌ اطُّلع عليها في 10 سبتمبر 2026 نطاقًا أقدم، بينما احتوت واجهات أخرى ونسخ وصول موثقة سابقًا على مشاهدات أحدث. هذا اختلاف في ما تعرضه الواجهات وفي تتبع المصدر، وليس دليلًا على غياب البيانات الأحدث من مجموعة البيانات الأساسية.",
+    "evidence_badge": "INTERFACE_NOT_DATASET",
+    "evidence_inputs": [
+      "182_REMITTANCE_SOURCE_LENSES",
+      "EP-WB-WDI-REMITTANCE-VINTAGE-K04",
+      "CON-045"
+    ],
+    "does_not_prove_en": "The difference does not show that data were deleted or withdrawn, or why any correction was made, and one public surface's observations are not a substitute for another's.",
+    "does_not_prove_ar": "لا يثبت الاختلاف أن البيانات حُذفت أو سُحبت، ولا سبب أي تصحيح، ولا تحل مشاهدات واجهة عامة محل مشاهدات واجهة أخرى.",
+    "change_trigger_en": "This record is updated when an authoritative source is revised or replaced, a newer comparable observation becomes available, the definition, population or method changes, or the conditions for public use change.",
+    "change_trigger_ar": "يُحدَّث هذا السجل عند مراجعة المصدر المعتمد أو استبداله، أو توفر مشاهدة أحدث قابلة للمقارنة، أو تغير التعريف أو المجتمع أو الطريقة، أو تغير شروط الاستخدام العام.",
+    "public_routes": [
+      "/remittances",
+      "/evidence",
+      "/methodology"
+    ],
+    "public_route_list": [
+      "/remittances/",
+      "/evidence/",
+      "/methodology/"
+    ]
+  },
+  {
+    "claim_id": "CLM-040",
+    "theme": "External statistics / method",
+    "claim_type": "RECONSTRUCTION_PRODUCTION_EVENT",
+    "headline_en": "The 2025 external-sector statistics mission produced a 2014–2024 history",
+    "headline_ar": "بعثة إحصاءات القطاع الخارجي في 2025 أنتجت تاريخًا للفترة 2014–2024",
+    "copy_en": "IMF's D4D-II record states that the July 2025 Yemen external-sector statistics mission produced BOP and IIP statistics for 2014–2024. This verifies a historical reconstruction/production event behind the resumed evidence, while the exact publication crosswalk remains open.",
+    "copy_ar": "يفيد سجل D4D-II لصندوق النقد الدولي بأن بعثة إحصاءات القطاع الخارجي لليمن في يوليو 2025 أنتجت إحصاءات ميزان المدفوعات ووضع الاستثمار الدولي للفترة 2014–2024. وهذا يثبت حدوث إعادة بناء/إنتاج تاريخي للبيانات، بينما تظل المطابقة الرقمية الدقيقة مع المنشورات المختلفة مفتوحة.",
+    "evidence_badge": "RECONSTRUCTION_EVENT",
+    "evidence_inputs": [
+      "186",
+      "191",
+      "EP-IMF-CBY-REMIT-METHOD-K04"
+    ],
+    "does_not_prove_en": "The evidence does not show that every row of the Central Bank of Yemen – Aden (CBY-Aden) Annual Report 2025 is numerically identical to the IMF mission's output.",
+    "does_not_prove_ar": "لا تثبت الأدلة أن كل صف في التقرير السنوي 2025 للبنك المركزي اليمني – عدن مطابق عدديًا لمخرجات بعثة صندوق النقد الدولي.",
+    "change_trigger_en": "This record is updated when an authoritative source is revised or replaced, a newer comparable observation becomes available, the definition, population or method changes, or the conditions for public use change.",
+    "change_trigger_ar": "يُحدَّث هذا السجل عند مراجعة المصدر المعتمد أو استبداله، أو توفر مشاهدة أحدث قابلة للمقارنة، أو تغير التعريف أو المجتمع أو الطريقة، أو تغير شروط الاستخدام العام.",
+    "public_routes": [
+      "/remittances"
+    ],
+    "public_route_list": [
+      "/remittances/"
+    ]
+  },
+  {
+    "claim_id": "CLM-041",
+    "theme": "External statistics / crosswalk",
+    "claim_type": "TESTED_PUBLIC_COMPONENT_GLOBAL_SCALAR_REJECTED",
+    "headline_en": "The tested public CBY and IMF BOP components do not support a single conversion scalar",
+    "headline_ar": "لا تدعم مكونات ميزان المدفوعات العامة التي اختبرناها معامل تحويل واحدًا بين بيانات البنك المركزي وصندوق النقد",
+    "copy_en": "Across the public balance-of-payments components tested for 2021–2024, from the Central Bank of Yemen – Aden (CBY-Aden) Annual Report 2025 and from the IMF series for areas under the internationally recognized government, the evidence does not support a single conversion factor. The remittance ratio is almost constant, but the ratios for imports, grants, the current account and net errors and omissions differ materially, and the IMF documents component-specific sources and transformations. This does not rule out component-specific bridges or a future official crosswalk.",
+    "copy_ar": "عبر مكونات ميزان المدفوعات المنشورة التي اختُبرت للفترة 2021–2024، من التقرير السنوي 2025 للبنك المركزي اليمني – عدن ومن سلسلة صندوق النقد الدولي الخاصة بمناطق الحكومة المعترف بها دوليًا، لا تدعم الأدلة معامل تحويل واحدًا. فنسبة التحويلات شبه ثابتة، لكن نسب الواردات والمنح والحساب الجاري وصافي السهو والخطأ تختلف اختلافًا جوهريًا، كما يوثق الصندوق مصادر ومعالجات إحصائية خاصة بكل مكون. ولا يستبعد ذلك وجود جسور خاصة بمكونات بعينها أو مطابقة رسمية مستقبلًا.",
+    "evidence_badge": "TESTED_COMPONENT_GLOBAL_SCALAR_REJECTED",
+    "evidence_inputs": [
+      "191",
+      "CON-046"
+    ],
+    "does_not_prove_en": "The constant ratio of 1.838 between the CBY-Aden and IMF remittance series over 2021–2024, and the 33% population share that the IMF used for areas under the internationally recognized government, do not apply to other balance-of-payments components. The test does not show that a conversion is impossible beyond the public components tested.",
+    "does_not_prove_ar": "لا تنطبق النسبة الثابتة البالغة 1.838 بين سلسلتي التحويلات لدى البنك المركزي اليمني – عدن وصندوق النقد الدولي خلال 2021–2024، ولا حصة السكان البالغة 33% التي استخدمها الصندوق للمناطق الخاضعة للحكومة المعترف بها دوليًا، على مكونات أخرى من ميزان المدفوعات. ولا يثبت الاختبار استحالة التحويل خارج المكونات العامة التي اختُبرت.",
+    "change_trigger_en": "This record is updated when an authoritative source is revised or replaced, a newer comparable observation becomes available, the definition, population or method changes, or the conditions for public use change.",
+    "change_trigger_ar": "يُحدَّث هذا السجل عند مراجعة المصدر المعتمد أو استبداله، أو توفر مشاهدة أحدث قابلة للمقارنة، أو تغير التعريف أو المجتمع أو الطريقة، أو تغير شروط الاستخدام العام.",
+    "public_routes": [
+      "/remittances",
+      "/evidence/compare"
+    ],
+    "public_route_list": [
+      "/remittances/",
+      "/evidence/compare/"
+    ]
+  },
+  {
+    "claim_id": "CLM-042",
+    "theme": "Remittances / crosswalk",
+    "claim_type": "REM_SCALAR_FINGERPRINT_BOUNDED",
+    "headline_en": "A stable remittance ratio exists; its meaning remains unknown",
+    "headline_ar": "توجد نسبة مستقرة بين سلسلتي التحويلات، لكن معناها ما يزال غير محسوم",
+    "copy_en": "Over 2021–2024, the ratio of the remittance series in the Central Bank of Yemen – Aden (CBY-Aden) Annual Report 2025 to the IMF 2025 Article IV series is 1.838 in every year, and the two growth paths are almost identical when indexed to 2021 = 100. The public evidence does not establish what that ratio represents, so it is a numerical regularity with no documented explanation, not a conversion rule.",
+    "copy_ar": "خلال 2021–2024 تبلغ نسبة سلسلة التحويلات في التقرير السنوي 2025 للبنك المركزي اليمني – عدن إلى سلسلة مشاورات المادة الرابعة لعام 2025 لصندوق النقد الدولي 1.838 في كل سنة، ويكاد مسارا النمو يتطابقان بعد تحويلهما إلى رقم قياسي (2021 = 100). ولا تثبت الأدلة العامة ما تمثله هذه النسبة؛ فهي انتظام رقمي بلا تفسير موثق، وليست قاعدة تحويل.",
+    "evidence_badge": "SCALAR_MEANING_OPEN",
+    "evidence_inputs": [
+      "181",
+      "191",
+      "EP-YEM-BOP-COMPONENT-XWALK-K04"
+    ],
+    "does_not_prove_en": "The 1.838 ratio is not a population, geography, informal-share or coverage conversion.",
+    "does_not_prove_ar": "ليست النسبة البالغة 1.838 معامل تحويل للسكان أو الجغرافيا أو الحصة غير الرسمية أو التغطية.",
+    "change_trigger_en": "This record is updated when an authoritative source is revised or replaced, a newer comparable observation becomes available, the definition, population or method changes, or the conditions for public use change.",
+    "change_trigger_ar": "يُحدَّث هذا السجل عند مراجعة المصدر المعتمد أو استبداله، أو توفر مشاهدة أحدث قابلة للمقارنة، أو تغير التعريف أو المجتمع أو الطريقة، أو تغير شروط الاستخدام العام.",
+    "public_routes": [
+      "/remittances",
+      "/methodology"
+    ],
+    "public_route_list": [
+      "/remittances/",
+      "/methodology/"
+    ]
+  },
+  {
+    "claim_id": "CLM-043",
+    "theme": "External sector / uncertainty",
+    "claim_type": "BOP_RESIDUAL_MATERIALITY",
+    "headline_en": "Before ranking flows, look at the balancing residual",
+    "headline_ar": "قبل ترتيب التدفقات الخارجية، افحص البند الموازِن (صافي السهو والخطأ)",
+    "copy_en": "In the Central Bank of Yemen – Aden (CBY-Aden) Annual Report 2025, net errors and omissions are larger than the published remittance line in every year from 2021 to 2025. In 2025 the residual is USD 7.117 billion against USD 3.614 billion for remittances, 1.97 times the remittance line. Net errors and omissions is a balancing residual, not an observed flow or an estimate of hidden remittances.",
+    "copy_ar": "في التقرير السنوي 2025 للبنك المركزي اليمني – عدن، يفوق صافي السهو والخطأ بند التحويلات المنشور في كل سنة من 2021 إلى 2025. ففي 2025 بلغ صافي السهو والخطأ 7.117 مليار دولار مقابل 3.614 مليار دولار للتحويلات، أي إن نسبته إلى بند التحويلات 1.97. وصافي السهو والخطأ بندٌ موازِن محاسبيًا، وليس تدفقًا مرصودًا ولا تقديرًا لتحويلات مخفية.",
+    "evidence_badge": "RESIDUAL_NOT_FLOW",
+    "evidence_inputs": [
+      "187",
+      "EP-YEM-BOP-RESIDUAL-K04"
+    ],
+    "does_not_prove_en": "Net errors and omissions are not hidden remittances or an observed flow, and no established decomposition shows the residual to be unrecorded capital.",
+    "does_not_prove_ar": "ليس صافي السهو والخطأ تحويلات مخفية ولا تدفقًا مرصودًا، ولا يوجد تفكيك مثبت يبين أن المتبقي رأسُ مال غير مسجل.",
+    "change_trigger_en": "This record is updated when an authoritative source is revised or replaced, a newer comparable observation becomes available, the definition, population or method changes, or the conditions for public use change.",
+    "change_trigger_ar": "يُحدَّث هذا السجل عند مراجعة المصدر المعتمد أو استبداله، أو توفر مشاهدة أحدث قابلة للمقارنة، أو تغير التعريف أو المجتمع أو الطريقة، أو تغير شروط الاستخدام العام.",
+    "public_routes": [
+      "/remittances"
+    ],
+    "public_route_list": [
+      "/remittances/"
+    ]
+  },
+  {
+    "claim_id": "CLM-045",
+    "theme": "Cash / financial inclusion",
+    "claim_type": "DURABLE_USE_GAP",
+    "headline_en": "A successful cash payment is not yet durable financial use",
+    "headline_ar": "نجاح الدفع النقدي لا يعني بعدُ استخدامًا ماليًا مستدامًا",
+    "copy_en": "World Bank/G2Px material (May 2024) describes an eight-district digital-payment pilot within Yemen's unconditional cash-transfer programme, reported to have benefited 45,460 recipients, with an emphasis on payments into fully functional accounts and recipient choice. As reported by programme partners, this indicates delivery and exposure to a formal digital service. Yemen evidence can support several links from cash delivery through usability, resilience and local financial relationships, but it does not yet establish persistent post-transfer bank-account or e-wallet use. Beneficiaries, registrations, identities and opened accounts are not measures of durable use.",
+    "copy_ar": "تصف مواد البنك الدولي/مبادرة G2Px (مايو 2024) تجربة للمدفوعات الرقمية ضمن برنامج التحويلات النقدية غير المشروطة في اليمن نُفذت في ثماني مديريات، أُفيد بأن عدد المستفيدين منها بلغ 45,460 مستفيدًا، مع التركيز على الإيداع في حسابات كاملة الوظائف وإتاحة الاختيار للمستفيد. ويشير ذلك، وفق ما أفاد به شركاء البرنامج، إلى إيصال التحويل والاتصال بخدمة رقمية رسمية. وتسمح الأدلة المتاحة في اليمن بتتبع عدة حلقات من إيصال المساعدة النقدية إلى قابلية الاستخدام والقدرة على الصمود والروابط المالية المحلية، لكنها لا تثبت حتى الآن استمرار استخدام الحساب المصرفي أو المحفظة الإلكترونية بعد انتهاء التحويل. وليس عدد المستفيدين أو التسجيلات أو الهويات أو الحسابات المفتوحة مقياسًا للاستخدام المالي المستدام.",
+    "evidence_badge": "DURABLE_USE_OPEN",
+    "evidence_inputs": [
+      "189",
+      "EP-YEM-CASH-FIN-TRANSMISSION-K04"
+    ],
+    "does_not_prove_en": "Cash-transfer beneficiaries, village savings and loan associations (VSLAs), identity targets and opened accounts are not measures of durable financial use. The 45,460 figure is a programme-reported number of recipients, not a count of people who kept using an account.",
+    "does_not_prove_ar": "ليس مستفيدو التحويلات النقدية ولا مجموعات الادخار والإقراض ولا مستهدفات الهوية ولا الحسابات المفتوحة مقاييس للاستخدام المالي المستدام. والرقم 45,460 عدد للمستفيدين يفيد به البرنامج، وليس عددًا لمن واصلوا استخدام حساب.",
+    "change_trigger_en": "This record is updated when an authoritative source is revised or replaced, a newer comparable observation becomes available, the definition, population or method changes, or the conditions for public use change.",
+    "change_trigger_ar": "يُحدَّث هذا السجل عند مراجعة المصدر المعتمد أو استبداله، أو توفر مشاهدة أحدث قابلة للمقارنة، أو تغير التعريف أو المجتمع أو الطريقة، أو تغير شروط الاستخدام العام.",
+    "public_routes": [
+      "/payments",
+      "/people"
+    ],
+    "public_route_list": [
+      "/payments/",
+      "/people/"
+    ]
+  },
+  {
+    "claim_id": "CLM-046",
+    "theme": "External support",
+    "claim_type": "FLOW_STATE_DISTINCTION",
+    "headline_en": "Pledge, agreement, deposit and disbursement are different stages of support",
+    "headline_ar": "التعهد والاتفاق والإيداع والصرف مراحل مختلفة للدعم",
+    "copy_en": "Saudi support is recorded by financial state. A pledge, commitment, signed agreement, deposited amount, amount made available, budget disbursement, FX-auction use, in-kind support and project cost are not interchangeable, and they are not added into a cumulative total here.",
+    "copy_ar": "يُسجَّل الدعم السعودي بحسب حالته المالية. فالتعهد والالتزام والاتفاق الموقّع والمبلغ المودع والمبلغ المتاح والصرف للموازنة والاستخدام في مزادات النقد الأجنبي والدعم العيني وتكلفة المشروع ليست حالات مترادفة، ولا تُجمع هنا في إجمالي تراكمي واحد.",
+    "evidence_badge": "FLOW_STATE",
+    "evidence_inputs": [
+      "190",
+      "EP-SAUDI-SUPPORT-FLOWSTATE-K04"
+    ],
+    "does_not_prove_en": "Adding unlike or overlapping stages does not produce a cumulative total of Saudi support, and no such total is established here.",
+    "does_not_prove_ar": "لا ينتج جمع مراحل مالية مختلفة أو متداخلة رقمًا تراكميًا للدعم السعودي، ولا يثبت هذا الدليل أي رقم من هذا النوع.",
+    "change_trigger_en": "This record is updated when an authoritative source is revised or replaced, a newer comparable observation becomes available, the definition, population or method changes, or the conditions for public use change.",
+    "change_trigger_ar": "يُحدَّث هذا السجل عند مراجعة المصدر المعتمد أو استبداله، أو توفر مشاهدة أحدث قابلة للمقارنة، أو تغير التعريف أو المجتمع أو الطريقة، أو تغير شروط الاستخدام العام.",
+    "public_routes": [
+      "/reforms",
+      "/finance"
+    ],
+    "public_route_list": [
+      "/reforms/",
+      "/finance/"
+    ]
+  },
+  {
+    "claim_id": "CLM-047",
+    "theme": "External statistics / reconciliation",
+    "claim_type": "BOP_IIP_RECON_METHOD",
+    "headline_en": "A change in an external position is not automatically a transaction",
+    "headline_ar": "تغير المركز الخارجي لا يساوي تلقائيًا تدفقًا أو معاملة",
+    "copy_en": "Changes in Yemen's external asset or liability positions should be decomposed into transactions, exchange-rate changes, other price changes and other volume changes before they are interpreted as financial flows. Opening-to-closing IIP stock change alone is not a BOP transaction measure.",
+    "copy_ar": "ينبغي قبل تفسير تغير الأصول أو الخصوم الخارجية لليمن كتدفق مالي فصل أثر المعاملات عن تغيرات أسعار الصرف وتغيرات الأسعار الأخرى وتغيرات الحجم الأخرى. فالفرق بين رصيد وضع الاستثمار الدولي في البداية والنهاية لا يمثل بمفرده معاملات ميزان المدفوعات.",
+    "evidence_badge": "STOCK_NOT_FLOW",
+    "evidence_inputs": [
+      "193",
+      "EP-YEM-BOP-IIP-RECON-K04"
+    ],
+    "does_not_prove_en": "The difference between opening and closing international investment position stocks is not, on its own, a measure of balance-of-payments transactions.",
+    "does_not_prove_ar": "لا يمثل الفرق بين رصيد وضع الاستثمار الدولي في أول الفترة وآخرها، بمفرده، قياسًا لمعاملات ميزان المدفوعات.",
+    "change_trigger_en": "This record is updated when an authoritative source is revised or replaced, a newer comparable observation becomes available, the definition, population or method changes, or the conditions for public use change.",
+    "change_trigger_ar": "يُحدَّث هذا السجل عند مراجعة المصدر المعتمد أو استبداله، أو توفر مشاهدة أحدث قابلة للمقارنة، أو تغير التعريف أو المجتمع أو الطريقة، أو تغير شروط الاستخدام العام.",
+    "public_routes": [
+      "/remittances",
+      "/methodology"
+    ],
+    "public_route_list": [
+      "/remittances/",
+      "/methodology/"
+    ]
+  },
+  {
+    "claim_id": "CLM-048",
+    "theme": "External statistics / standards",
+    "claim_type": "BPM7_MIGRATION_STATE",
+    "headline_en": "BPM7 updates the standard; it does not rewrite Yemen’s history overnight",
+    "headline_ar": "BPM7 يحدّث المعيار، لكنه لا يعيد تسمية تاريخ اليمن فورًا",
+    "copy_en": "BPM7 is the updated global external-sector statistical standard, but implementation is a multi-year transition. Yemen's historical series should retain their source-native standard/version until an explicit conversion or revision is published.",
+    "copy_ar": "يمثل BPM7 التحديث العالمي لمعيار إحصاءات القطاع الخارجي، إلا أن تطبيقه انتقال يمتد لسنوات. لذلك يجب أن تحتفظ السلاسل التاريخية لليمن بالمعيار والنسخة اللذين صدرت بهما إلى أن يُنشر تحويل أو تنقيح صريح.",
+    "evidence_badge": "STANDARD_VERSION",
+    "evidence_inputs": [
+      "193",
+      "194"
+    ],
+    "does_not_prove_en": "The release of BPM7 does not mean that Yemen's historical data have been restated under it, or that Yemeni sources have already adopted it.",
+    "does_not_prove_ar": "لا يعني صدور BPM7 أن البيانات التاريخية لليمن أُعيد عرضها وفقه، ولا أن المصادر اليمنية اعتمدته بالفعل.",
+    "change_trigger_en": "This record is updated when an authoritative Yemen source explicitly adopts BPM7 for a series, or republishes or revises its historical observations under the new standard, or when an authoritative source is revised or replaced.",
+    "change_trigger_ar": "يُحدَّث هذا السجل عندما يعتمد مصدر يمني رسمي معيار BPM7 صراحة لسلسلة معينة، أو يعيد نشر مشاهداته التاريخية أو يراجعها وفق المعيار الجديد، أو عند مراجعة المصدر المعتمد أو استبداله.",
+    "public_routes": [
+      "/methodology",
+      "/remittances"
+    ],
+    "public_route_list": [
+      "/methodology/",
+      "/remittances/"
+    ]
+  },
+  {
+    "claim_id": "CLM-049",
+    "theme": "IMF / currentness",
+    "claim_type": "SMP_CURRENT_INSTITUTIONAL_STATE",
+    "headline_en": "IMF Staff-Monitored Program (SMP) for Yemen: staff-level agreement of July 2026, subject to Management approval",
+    "headline_ar": "برنامج يراقبه خبراء صندوق النقد الدولي (SMP) لليمن: اتفاق على مستوى الخبراء في يوليو 2026، مشروط بموافقة الإدارة",
+    "copy_en": "On 16 July 2026, staff of the International Monetary Fund (IMF) and the Yemeni authorities announced staff-level agreement on key policies and reforms that could underpin a proposed 18-month Staff-Monitored Program (SMP). The IMF stated that the agreement was subject to Management approval and would not result in Board discussion. It is not an IMF financing arrangement.",
+    "copy_ar": "في 16 يوليو 2026 أعلن خبراء صندوق النقد الدولي والسلطات اليمنية التوصل إلى اتفاق على مستوى الخبراء بشأن سياسات وإصلاحات رئيسية يمكن أن يستند إليها برنامج مقترح مدته 18 شهرًا يراقبه خبراء صندوق النقد الدولي (SMP). وأوضح الصندوق أن الاتفاق يخضع لموافقة الإدارة ولن يترتب عليه نقاش في المجلس التنفيذي. وليس هذا ترتيب تمويل من الصندوق.",
+    "evidence_badge": "STAFF_LEVEL__MANAGEMENT_APPROVAL_REQUIRED",
+    "evidence_inputs": [
+      "194",
+      "SRC-IMF-YEM-SMP-2026"
+    ],
+    "does_not_prove_en": "The proposed Staff-Monitored Program (SMP) is not an arrangement approved or endorsed by the Executive Board of the International Monetary Fund (IMF) and does not involve IMF financing; the agreement is also not evidence that external-sector statistics have been reconciled.",
+    "does_not_prove_ar": "ليس البرنامج المقترح الذي يراقبه خبراء صندوق النقد الدولي (SMP) ترتيبًا معتمدًا أو مؤيدًا من المجلس التنفيذي للصندوق، ولا ينطوي على تمويل من الصندوق؛ كما أن الاتفاق ليس دليلًا على اكتمال مطابقة إحصاءات القطاع الخارجي.",
+    "change_trigger_en": "This record is updated when an authoritative source is revised or replaced, a newer comparable observation becomes available, the definition, population or method changes, or the conditions for public use change.",
+    "change_trigger_ar": "يُحدَّث هذا السجل عند مراجعة المصدر المعتمد أو استبداله، أو توفر مشاهدة أحدث قابلة للمقارنة، أو تغير التعريف أو المجتمع أو الطريقة، أو تغير شروط الاستخدام العام.",
+    "public_routes": [
+      "/reforms",
+      "/evidence"
+    ],
+    "public_route_list": [
+      "/reforms/",
+      "/evidence/"
+    ]
+  },
+  {
+    "claim_id": "CLM-050",
+    "theme": "Payments / historical digital finance",
+    "claim_type": "HISTORICAL_ACCOUNT_ACTIVITY_BOUNDARY",
+    "headline_en": "807,919 accounts did not mean 807,919 active people",
+    "headline_ar": "807,919 حسابًا لا تعني 807,919 شخصًا نشطًا",
+    "copy_en": "Within the five e-money providers covered by a study of the Institute of Banking Studies (IBS), electronic-money accounts reached 807,919 in December 2019. The same source reports an average 23% dormant/inactive share and notes that some accounts were used once or because circumstances imposed their use. Registered accounts therefore cannot be read as active or durable inclusion.",
+    "copy_ar": "ضمن نطاق دراسة معهد الدراسات المصرفية لخمسة مزودي/محافظ نقود إلكترونية، بلغ عدد الحسابات 807,919 حسابًا في ديسمبر 2019. ويذكر المصدر نفسه متوسطًا قدره 23% للحسابات الخاملة/غير النشطة، وأن بعض الحسابات استُخدمت مرة واحدة أو فرضت الظروف استخدامها. لذلك لا يجوز قراءة الحسابات المسجلة باعتبارها استخدامًا نشطًا أو شمولًا مستدامًا.",
+    "evidence_badge": "HISTORICAL_ACCOUNT_NOT_PERSON",
+    "evidence_inputs": [
+      "198",
+      "199",
+      "EP-IBS-EMONEY-2019-K04"
+    ],
+    "does_not_prove_en": "The total is not a count of active users or unique people, a national inclusion rate or a 2026 level.",
+    "does_not_prove_ar": "ليس الإجمالي عددًا لمستخدمين نشطين أو لأشخاص فريدين، ولا معدل شمول وطنيًا، ولا مستوى حاليًا لعام 2026.",
+    "change_trigger_en": "This record is updated when an authoritative source is revised or replaced, a newer comparable observation becomes available, the definition, population or method changes, or the conditions for public use change.",
+    "change_trigger_ar": "يُحدَّث هذا السجل عند مراجعة المصدر المعتمد أو استبداله، أو توفر مشاهدة أحدث قابلة للمقارنة، أو تغير التعريف أو المجتمع أو الطريقة، أو تغير شروط الاستخدام العام.",
+    "public_routes": [
+      "/payments",
+      "/people",
+      "/access"
+    ],
+    "public_route_list": [
+      "/payments/",
+      "/people/",
+      "/access/"
+    ]
+  },
+  {
+    "claim_id": "CLM-051",
+    "theme": "Payments / historical use",
+    "claim_type": "DERIVED_TRANSACTION_FUNCTION_MIX",
+    "headline_en": "Most recorded 2019 e-money value still revolved around cash and account transfers",
+    "headline_ar": "معظم قيمة معاملات النقود الإلكترونية المسجلة في 2019 ظلت تدور حول النقد والتحويل بين الحسابات",
+    "copy_en": "A grouping by CauseWay of Table 8 in the Institute of Banking Studies (IBS) study indicates that 57.03% of recorded 2019 e-money transaction value was cash-in or cash-out and 29.97% was movement between bank and electronic accounts; bills and purchases together were 2.41%. The grouping is CauseWay's own, not a headline figure in the source.",
+    "copy_ar": "يشير تجميع أعدّته CauseWay لبيانات الجدول 8 في دراسة معهد الدراسات المصرفية إلى أن 57.03% من قيمة معاملات النقود الإلكترونية المسجلة في 2019 كانت إيداعًا أو سحبًا نقديًا، و29.97% انتقالًا بين الحساب المصرفي والحساب الإلكتروني، بينما بلغت الفواتير والمشتريات معًا 2.41%. والتجميع من إعداد CauseWay، وليس رقمًا رئيسيًا منشورًا في المصدر.",
+    "evidence_badge": "DERIVED_HISTORICAL_FUNCTION_MIX",
+    "evidence_inputs": [
+      "198",
+      "199",
+      "EP-IBS-EMONEY-VALUE-K04"
+    ],
+    "does_not_prove_en": "It does not establish the number of unique users, the coverage of the merchant ecosystem, household welfare, causal effects or durable inclusion.",
+    "does_not_prove_ar": "لا يثبت هذا الدليل عدد المستخدمين الفريدين، ولا تغطية منظومة التجار، ولا رفاه الأسر، ولا علاقات سببية، ولا استدامة الشمول.",
+    "change_trigger_en": "This record is updated when an authoritative source is revised or replaced, a newer comparable observation becomes available, the definition, population or method changes, or the conditions for public use change.",
+    "change_trigger_ar": "يُحدَّث هذا السجل عند مراجعة المصدر المعتمد أو استبداله، أو توفر مشاهدة أحدث قابلة للمقارنة، أو تغير التعريف أو المجتمع أو الطريقة، أو تغير شروط الاستخدام العام.",
+    "public_routes": [
+      "/payments",
+      "/evidence/compare"
+    ],
+    "public_route_list": [
+      "/payments/",
+      "/evidence/compare/"
+    ]
+  },
+  {
+    "claim_id": "CLM-052",
+    "theme": "People / historical distribution",
+    "claim_type": "HISTORICAL_GEO_GENDER_BOUNDARY",
+    "headline_en": "Historical provider data show concentration in cities and low female representation",
+    "headline_ar": "تُظهر بيانات المزودين التاريخية تمركزًا في المدن وتمثيلًا نسائيًا منخفضًا",
+    "copy_en": "The Institute of Banking Studies (IBS) reports that, within its 2016–2019 provider evidence, electronic-money accounts/users were concentrated in cities at an average 93.8% and women represented about 13% on average. These are historical source-universe distributions, not current national prevalence or a local access map.",
+    "copy_ar": "تفيد دراسة معهد الدراسات المصرفية بأن بيانات مزودي النقود الإلكترونية التي تغطيها خلال 2016–2019 كانت متركزة في المدن بمتوسط 93.8%، وأن النساء مثلن نحو 13% في المتوسط. هذه توزيعات تاريخية داخل نطاق المصدر، وليست تقديرات وطنية حالية ولا خريطة للوصول المحلي.",
+    "evidence_badge": "HISTORICAL_SOURCE_UNIVERSE",
+    "evidence_inputs": [
+      "198",
+      "199",
+      "EP-IBS-GEO-GENDER-K04"
+    ],
+    "does_not_prove_en": "It does not establish a national gender gap in 2026, a rural access rate or local service availability.",
+    "does_not_prove_ar": "لا يثبت هذا الدليل فجوة وطنية بين النساء والرجال في 2026، ولا معدل وصول في الريف، ولا توافر الخدمة محليًا.",
+    "change_trigger_en": "This record is updated when an authoritative source is revised or replaced, a newer comparable observation becomes available, the definition, population or method changes, or the conditions for public use change.",
+    "change_trigger_ar": "يُحدَّث هذا السجل عند مراجعة المصدر المعتمد أو استبداله، أو توفر مشاهدة أحدث قابلة للمقارنة، أو تغير التعريف أو المجتمع أو الطريقة، أو تغير شروط الاستخدام العام.",
+    "public_routes": [
+      "/people",
+      "/payments",
+      "/access"
+    ],
+    "public_route_list": [
+      "/people/",
+      "/payments/",
+      "/access/"
+    ]
+  },
+  {
+    "claim_id": "CLM-053",
+    "theme": "Microfinance / credit reach",
+    "claim_type": "BOUNDED_2023_LEVEL",
+    "headline_en": "End-2023 borrower evidence is useful, but still secondary",
+    "headline_ar": "رقم المقترضين في نهاية 2023 مفيد، لكنه ما يزال دليلًا ثانويًا",
+    "copy_en": "A 2024 Yemen policy paper, citing the SFD/SMED Loan Portfolio archive of the Social Fund for Development (SFD), reports 78,686 active microfinance borrowers at end-2023; the set of providers that figure covers has not been verified. The primary 2023 SFD/SMED source document has been identified but is not yet available in the evidence base for direct verification, so the value remains a secondary figure attributed to the policy paper.",
+    "copy_ar": "تورد ورقة سياسات يمنية منشورة في 2024، مستندةً إلى أرشيف محفظة القروض لدى الصندوق الاجتماعي للتنمية (SFD/SMED)، عدد 78,686 مقترضًا نشطًا في التمويل الأصغر بنهاية 2023، ولم يُتحقق من مجموعة مقدمي الخدمات التي يغطيها هذا الرقم. وقد حُدد المصدر الأصلي لعام 2023 لدى SFD/SMED، لكنه لم يصبح متاحًا بعد في قاعدة الأدلة للتحقق المباشر، لذلك يبقى الرقم دليلًا ثانويًا منسوبًا إلى ورقة السياسات.",
+    "evidence_badge": "BOUNDED_SECONDARY__PRIMARY_LOCATOR",
+    "evidence_inputs": [
+      "201",
+      "EP-MFB-BORROWERS-2023-K04"
+    ],
+    "does_not_prove_en": "It is not verified against the primary SFD/SMED source, it is not a 2026 level, it does not count unique households, and it is not a national rate of adult financial inclusion.",
+    "does_not_prove_ar": "لم يُتحقق من هذا الرقم بالرجوع إلى المصدر الأصلي لدى SFD/SMED، وهو ليس مستوى لعام 2026، ولا يحصي أسرًا فريدة، وليس معدلًا وطنيًا للشمول المالي بين البالغين.",
+    "change_trigger_en": "This record is updated when an authoritative source is revised or replaced, a newer comparable observation becomes available, the definition, population or method changes, or the conditions for public use change.",
+    "change_trigger_ar": "يُحدَّث هذا السجل عند مراجعة المصدر المعتمد أو استبداله، أو توفر مشاهدة أحدث قابلة للمقارنة، أو تغير التعريف أو المجتمع أو الطريقة، أو تغير شروط الاستخدام العام.",
+    "public_routes": [
+      "/finance"
+    ],
+    "public_route_list": [
+      "/finance/"
+    ]
+  },
+  {
+    "claim_id": "CLM-054",
+    "theme": "Microfinance / structural reading",
+    "claim_type": "SEPARATE_BOUNDED_ANCHORS",
+    "headline_en": "Borrower, saver and portfolio figures come from different sources and definitions and do not yet form one trend",
+    "headline_ar": "تأتي أرقام المقترضين والمدخرين والمحفظة من مصادر وتعريفات مختلفة، ولا تشكل بعدُ اتجاهًا واحدًا",
+    "copy_en": "Among providers reporting to the Social Fund for Development (SFD), verified primary tables record 93,118 active borrowers at end-2015 and 88,445 at end-2020. A 2024 policy paper citing SFD/SMED data reports 78,686 at end-2023; the set of providers it covers has not been verified. The same paper reports what it calls 3.3 million “active savers” in 2023 and a nominal portfolio of about YER44 billion; the verified 2020 anchors are 1.611 million savers/depositors and YER33.379 billion. “Active savers” and “savers/depositors” have not been shown to be the same measure, and both portfolio figures are nominal rials: between December 2020 and December 2023 the average market rate published by the Central Bank of Yemen – Aden (CBY-Aden) moved from 792.69 to 1,529.4 rials per US dollar, and the evidence base does not record which rial valuation, across Yemen's divided monetary areas, the portfolio figures use, so no real or US-dollar change can be derived from them. Because the 2023 primary source document, the exact set of providers covered, saver definition/deduplication and period bridge are not yet available in the evidence base for direct verification, these are separate bounded anchors—not a trend. It does not establish unique people, real credit growth, broader inclusion, improved borrower outcomes or causality.",
+    "copy_ar": "لدى مقدمي الخدمات الذين يرفعون بياناتهم إلى الصندوق الاجتماعي للتنمية، تسجل الجداول الأصلية الموثقة 93,118 مقترضًا نشطًا في نهاية 2015 و88,445 في نهاية 2020. وتورد ورقة سياسات منشورة في 2024 تستند إلى بيانات SFD/SMED عدد 78,686 مقترضًا لنهاية 2023، ولم يُتحقق بعد من مجموعة مقدمي الخدمات التي يغطيها. وتورد الورقة نفسها ما تسميه 3.3 مليون «مدخر نشط» في 2023 ومحفظة اسمية تقارب 44 مليار ريال، مقابل نقاط مرجعية موثقة لعام 2020 قدرها 1.611 مليون مدخر/مودع و33.379 مليار ريال. ولم يثبت أن «المدخر النشط» و«المدخر/المودع» مقياس واحد، وقيمتا المحفظة اسميتان بالريال: فبين ديسمبر 2020 وديسمبر 2023 انتقل متوسط سعر الصرف في السوق الذي ينشره البنك المركزي اليمني – عدن من 792.69 إلى 1,529.4 ريال للدولار، ولا تسجل قاعدة الأدلة أساس التقييم بالريال الذي تستخدمه أرقام المحفظة في ظل انقسام المناطق النقدية في اليمن، ولذلك لا يمكن استخلاص تغير حقيقي أو تغير بالدولار منهما. ولأن المصدر الأصلي لعام 2023، ونطاق مقدمي الخدمات، وتعريف المدخرين وإزالة الازدواج، والربط بين الفترات لم تُتحقق مباشرة بعد، فهذه نقاط مرجعية منفصلة ومقيدة، لا اتجاه واحد. ولا تثبت عددًا من الأشخاص الفريدين، أو نموًا حقيقيًا للائتمان، أو اتساع الشمول، أو تحسن نتائج المقترضين، أو علاقة سببية.",
+    "evidence_badge": "SEPARATE_BOUNDED_ANCHORS",
+    "evidence_inputs": [
+      "202",
+      "203",
+      "INS-K04-023"
+    ],
+    "does_not_prove_en": "The figures do not show broader inclusion, real credit deepening, a harmonized trend, improved borrower outcomes, a causal effect, growth in unique people or an unchanged set of providers.",
+    "does_not_prove_ar": "لا تُظهر هذه الأرقام اتساعًا للشمول، ولا تعمقًا حقيقيًا للائتمان، ولا اتجاهًا موحدًا، ولا تحسنًا في نتائج المقترضين، ولا علاقة سببية، ولا نموًا في عدد الأشخاص الفريدين، ولا بقاء نطاق مقدمي الخدمات نفسه عبر الفترات.",
+    "change_trigger_en": "This record is updated when an authoritative source is revised or replaced, a newer comparable observation becomes available, the definition, population or method changes, or the conditions for public use change.",
+    "change_trigger_ar": "يُحدَّث هذا السجل عند مراجعة المصدر المعتمد أو استبداله، أو توفر مشاهدة أحدث قابلة للمقارنة، أو تغير التعريف أو المجتمع أو الطريقة، أو تغير شروط الاستخدام العام.",
+    "public_routes": [
+      "/finance",
+      "/evidence/compare"
+    ],
+    "public_route_list": [
+      "/finance/",
+      "/evidence/compare/"
+    ]
+  },
+  {
+    "claim_id": "CLM-055",
+    "theme": "Providers / institutional form",
+    "claim_type": "CURRENT_LIST_STATE",
+    "headline_en": "Listed as a microfinance bank does not establish operation or outreach",
+    "headline_ar": "الإدراج كبنك تمويل أصغر لا يثبت التشغيل أو الوصول الفعلي",
+    "copy_en": "The list of licensed banks of the Central Bank of Yemen – Aden (CBY-Aden), as checked on 7 September 2026, names 26 banks; 12 of them are classified as microfinance banks on the basis of their names in the source. This establishes a dated listing and classification only: being listed or licensed does not mean operating, active or reaching underserved clients.",
+    "copy_ar": "تضم قائمة البنوك المرخصة الصادرة عن البنك المركزي اليمني – عدن، كما اطُّلع عليها في 7 سبتمبر 2026، 26 بنكًا، منها 12 بنكًا مصنفة بنوكَ تمويل أصغر استنادًا إلى تسمياتها في المصدر. ويثبت ذلك الإدراج والتصنيف في تاريخ محدد فقط؛ فالإدراج أو الترخيص لا يعني التشغيل أو النشاط أو الوصول إلى الفئات الأقل حصولًا على الخدمات.",
+    "evidence_badge": "LISTED_NOT_OPERATING",
+    "evidence_inputs": [
+      "15_PROVIDER_MASTER",
+      "16_PROVIDER_UNIVERSE",
+      "202",
+      "EP-CBY-BANK-ROSTER-2026"
+    ],
+    "does_not_prove_en": "It does not establish that all 12 are operating or active, that the list is complete for Yemen as a whole, or that they are supervised to the same degree in practice, and it is not evidence that outreach increased.",
+    "does_not_prove_ar": "لا يثبت هذا الدليل أن البنوك الاثني عشر جميعها عاملة أو نشطة، ولا أن القائمة مكتملة على مستوى اليمن، ولا أنها تخضع عمليًا للرقابة بالدرجة نفسها، وليست القائمة دليلًا على زيادة الانتشار.",
+    "change_trigger_en": "This record is updated when an authoritative source is revised or replaced, a newer comparable observation becomes available, the definition, population or method changes, or the conditions for public use change.",
+    "change_trigger_ar": "يُحدَّث هذا السجل عند مراجعة المصدر المعتمد أو استبداله، أو توفر مشاهدة أحدث قابلة للمقارنة، أو تغير التعريف أو المجتمع أو الطريقة، أو تغير شروط الاستخدام العام.",
+    "public_routes": [
+      "/providers",
+      "/finance"
+    ],
+    "public_route_list": [
+      "/providers/",
+      "/finance/"
+    ]
+  },
+  {
+    "claim_id": "CLM-056",
+    "theme": "Microfinance / concentration",
+    "claim_type": "SOURCE_REPORTED_GROWTH_SHARE__2023_CALCULATION_OPEN__LATER_STOCK_RESTATEMENT_UNSUPPORTED",
+    "headline_en": "The 91% figure is supportable only as a source-attributed share of saver growth—not as a verified 2023 depositor stock share",
+    "headline_ar": "يمكن إسناد نسبة 91% فقط بوصفها حصة من نمو المدخرين وفق المصدر، لا بوصفها حصة محققة من رصيد المودعين في 2023",
+    "copy_en": "The 2024 Sana’a Center paper on microfinance banks attributes 91% to Al-Kuraimi's share of saver growth; the 2023 provider-level numerator, denominator and calculation have not been reproduced. A 2025 Yemen Review restates 91% as a share of active microfinance depositors. A share of growth and a share of the stock are different measures, so the 2025 stock-share wording is not supported by the evidence available here; it remains a secondary restatement pending primary 2023 provider data or an explicit source correction.",
+    "copy_ar": "تنسب ورقة مركز صنعاء لعام 2024 عن بنوك التمويل الأصغر إلى الكريمي 91% من نمو المدخرين، ولم يُعَد إنتاج البسط وقاعدة الاحتساب والحساب على مستوى مقدمي الخدمة لعام 2023. وفي 2025 أعاد Yemen Review عرض 91% بوصفها حصة من المودعين النشطين في التمويل الأصغر. وحصة النمو وحصة الرصيد مقياسان مختلفان، لذلك لا تسند الأدلة المتاحة هنا صياغة 2025 بوصفها حصة من الرصيد، وتظل إعادة عرض ثانوية إلى أن تتاح بيانات أصلية لعام 2023 على مستوى مقدمي الخدمة أو يصدر تصحيح صريح من المصدر.",
+    "evidence_badge": "GROWTH_SHARE_ATTRIBUTION__2023_CALCULATION_OPEN",
+    "evidence_inputs": [
+      "201",
+      "CON-057",
+      "SRC-SANAA-MF-2020"
+    ],
+    "does_not_prove_en": "It does not establish a verified 2023 stock share, a share of unique clients or a general market share for any provider.",
+    "does_not_prove_ar": "لا يثبت هذا الدليل حصة موثقة من رصيد 2023، ولا حصة من العملاء الفريدين، ولا حصة سوقية عامة لأي مقدم خدمة.",
+    "change_trigger_en": "This record is updated when an authoritative source is revised or replaced, a newer comparable observation becomes available, the definition, population or method changes, or the conditions for public use change.",
+    "change_trigger_ar": "يُحدَّث هذا السجل عند مراجعة المصدر المعتمد أو استبداله، أو توفر مشاهدة أحدث قابلة للمقارنة، أو تغير التعريف أو المجتمع أو الطريقة، أو تغير شروط الاستخدام العام.",
+    "public_routes": [
+      "/finance",
+      "/evidence/compare"
+    ],
+    "public_route_list": [
+      "/finance/",
+      "/evidence/compare/"
+    ]
+  },
+  {
+    "claim_id": "CLM-057",
+    "theme": "Microfinance / evidence clock",
+    "claim_type": "PERIOD_SEPARATION",
+    "headline_en": "June and end-2023 borrower points are not one continuous series",
+    "headline_ar": "نقطتا يونيو ونهاية 2023 للمقترضين ليستا سلسلة مستمرة واحدة",
+    "copy_en": "The roughly 80,800 active-borrower point cited for June 2023 and the 78,686 end-2023 point come through different source chains. They are kept as separate observations until the provider sets and methods behind them are reconciled, and no June-to-year-end decline is calculated from them.",
+    "copy_ar": "تأتي نقطة نحو 80,800 مقترض نشط المذكورة ليونيو 2023 ونقطة 78,686 لنهاية 2023 عبر سلسلتي مصادر مختلفتين. وتبقيان مشاهدتين منفصلتين إلى أن تتم مطابقة نطاق مقدمي الخدمات والمنهج بينهما، ولا يُحتسب منهما تراجع من يونيو إلى نهاية السنة.",
+    "evidence_badge": "PERIOD_SEPARATION",
+    "evidence_inputs": [
+      "201",
+      "CON-058"
+    ],
+    "does_not_prove_en": "The two figures do not establish a decline between June and the end of 2023, monthly values between them, or a continuous series, while the provider sets behind them remain unreconciled.",
+    "does_not_prove_ar": "لا يثبت الرقمان تراجعًا بين يونيو ونهاية 2023، ولا قيمًا شهرية بينهما، ولا سلسلة متصلة، في غياب مطابقة بين نطاقي مقدمي الخدمات اللذين يستندان إليهما.",
+    "change_trigger_en": "This record is updated when an authoritative source is revised or replaced, a newer comparable observation becomes available, the definition, population or method changes, or the conditions for public use change.",
+    "change_trigger_ar": "يُحدَّث هذا السجل عند مراجعة المصدر المعتمد أو استبداله، أو توفر مشاهدة أحدث قابلة للمقارنة، أو تغير التعريف أو المجتمع أو الطريقة، أو تغير شروط الاستخدام العام.",
+    "public_routes": [
+      "/finance",
+      "/evidence"
+    ],
+    "public_route_list": [
+      "/finance/",
+      "/evidence/"
+    ]
+  },
+  {
+    "claim_id": "CLM-058",
+    "theme": "Microfinance / historical mechanism",
+    "claim_type": "WB_YMN_STRUCTURAL_CONTEXT",
+    "headline_en": "Through 2021, the World Bank reports a broadly flat borrower base while average loan amounts rose",
+    "headline_ar": "حتى 2021، يفيد البنك الدولي بأن قاعدة المقترضين ظلت مستقرة تقريبًا بينما ارتفع متوسط حجم التمويل",
+    "copy_en": "World Bank Financial Sector Diagnostics reports that Yemen's active microfinance borrower base remained broadly around 80,000–90,000 through 2021 while average loan amounts rose, with subsector growth appearing to be driven more by larger loans than by net borrower growth. The finding is historical context through 2021, not a 2023/2026 conclusion.",
+    "copy_ar": "يفيد تشخيص القطاع المالي للبنك الدولي بأن قاعدة المقترضين النشطين في التمويل الأصغر باليمن بقيت عمومًا في نطاق 80,000–90,000 حتى 2021 بينما ارتفع متوسط حجم التمويل، وأن نمو القطاع الفرعي بدا مدفوعًا بزيادة أحجام التمويلات أكثر من الزيادة الصافية في عدد المقترضين. هذه قراءة تاريخية حتى 2021، وليست استنتاجًا عن 2023 أو 2026.",
+    "evidence_badge": "HISTORICAL_CONTEXT_THROUGH_2021",
+    "evidence_inputs": [
+      "201",
+      "SRC-WB-FSD-2024-001"
+    ],
+    "does_not_prove_en": "It does not describe 2023 or 2026, it is not a regulatory census of providers, and it does not establish a cause beyond the source's own hedged wording.",
+    "does_not_prove_ar": "لا يصف هذا الدليل عامي 2023 أو 2026، وليس تعدادًا تنظيميًا لمقدمي الخدمات، ولا يثبت علاقة سببية تتجاوز صياغة المصدر المتحفظة.",
+    "change_trigger_en": "This record is updated when an authoritative source is revised or replaced, a newer comparable observation becomes available, the definition, population or method changes, or the conditions for public use change.",
+    "change_trigger_ar": "يُحدَّث هذا السجل عند مراجعة المصدر المعتمد أو استبداله، أو توفر مشاهدة أحدث قابلة للمقارنة، أو تغير التعريف أو المجتمع أو الطريقة، أو تغير شروط الاستخدام العام.",
+    "public_routes": [
+      "/finance"
+    ],
+    "public_route_list": [
+      "/finance/"
+    ]
+  },
+  {
+    "claim_id": "CLM-059",
+    "theme": "Firms / SME programme reach",
+    "claim_type": "PRIMARY_PROGRAMME_OUTPUT",
+    "headline_en": "SMEPS programme reach is evidence about the programme — not the national MSME universe",
+    "headline_ar": "وصول برنامج SMEPS دليل على نطاق البرنامج، لا على حجم قطاع المنشآت في اليمن",
+    "copy_en": "The Small and Micro Enterprise Promotion Service (SMEPS) reports that in 2024 it supported 8,217 micro, small and medium enterprises (MSMEs) and disbursed USD 22,865,322. For 2021–2024 it reports support to 31,560 MSMEs and a USD 54.7 million programme total whose financial state (committed or disbursed) is not recorded in the evidence base. The 2021–2024 total may count the same enterprise in more than one year, so it is not a count of unique firms. These are programme results reported by SMEPS itself: they describe programme reach and finance, not national MSME prevalence or financial-sector lending.",
+    "copy_ar": "تفيد وكالة تنمية المنشآت الصغيرة والأصغر (SMEPS) بأنها دعمت في عام 2024 عددًا بلغ 8,217 منشأة من المنشآت الأصغر والصغيرة والمتوسطة، وصرفت 22,865,322 دولارًا. وللفترة 2021–2024 تفيد الوكالة بأن دعمها شمل 31,560 منشأة، وبإجمالي برامجي قدره 54.7 مليون دولار لا تسجّل قاعدة الأدلة ما إذا كان مبلغًا ملتزَمًا به أم مصروفًا. وقد يحتسب إجمالي 2021–2024 المنشأة نفسها في أكثر من سنة، ولذلك لا يمثل عددًا للمنشآت الفريدة. وهذه نتائج برنامجية تبلغ عنها الوكالة نفسها، وتصف نطاق البرنامج وتمويله، لا انتشار المنشآت الأصغر والصغيرة والمتوسطة على المستوى الوطني ولا حجم الإقراض في القطاع المالي.",
+    "evidence_badge": "PRIMARY_PROGRAMME_EVIDENCE",
+    "evidence_inputs": [
+      "219_SMEPS_PROGRAMME_EVIDENCE",
+      "EP-SMEPS-2024-PROGRAMME"
+    ],
+    "does_not_prove_en": "Programme-supported MSMEs are not the national MSME universe, programme disbursement is not financial-sector lending, and programme outputs are not national or causal outcomes. The 2021–2024 total is not a count of unique firms.",
+    "does_not_prove_ar": "ليست المنشآت التي دعمها البرنامج مجموعَ المنشآت الأصغر والصغيرة والمتوسطة على المستوى الوطني، وليس صرف البرنامج إقراضًا من القطاع المالي، وليست المخرجات البرنامجية نتائج وطنية أو سببية. ولا يمثل إجمالي 2021–2024 عددًا للمنشآت الفريدة.",
+    "change_trigger_en": "This record is updated when an authoritative source is revised or replaced, a newer comparable observation becomes available, the definition, population or method changes, or the conditions for public use change.",
+    "change_trigger_ar": "يُحدَّث هذا السجل عند مراجعة المصدر المعتمد أو استبداله، أو توفر مشاهدة أحدث قابلة للمقارنة، أو تغير التعريف أو المجتمع أو الطريقة، أو تغير شروط الاستخدام العام.",
+    "public_routes": [
+      "/firms"
+    ],
+    "public_route_list": [
+      "/firms/"
+    ]
+  },
+  {
+    "claim_id": "CLM-060",
+    "theme": "Firms / access to finance",
+    "claim_type": "SOURCE_REPORTED_PROGRAMME_KPI",
+    "headline_en": "The SMEPS financial-services KPI is a programme result, not a national MSME rate",
+    "headline_ar": "مؤشر SMEPS للوصول إلى الخدمات المالية نتيجة برنامجية، لا معدل وطني للمنشآت",
+    "copy_en": "SMEPS's 2024 Annual Report reports that 19% of supported MSMEs accessed financial services in 2024, while the 2021–2024 total reported as achieved is 15% against a 40% programme target. The table does not fully specify the metric-specific assessment base or operational definition of 'accessed financial services'. The KPI is therefore interpretable only within its programme universe, with that limitation visible; it is not a national MSME access rate.",
+    "copy_ar": "يورد التقرير السنوي لعام 2024 لوكالة SMEPS أن 19% من المنشآت التي دعمها البرنامج «وصلت إلى خدمات مالية» خلال 2024، وأن النتيجة التراكمية المُبلغ عن تحقيقها للفترة 2021–2024 بلغت 15% مقابل مستهدف برنامجي قدره 40%. ولا يوضح جدول المؤشرات بصورة كاملة قاعدة الاحتساب الخاصة بهذا المؤشر أو التعريف التشغيلي لعبارة «الوصول إلى خدمات مالية». لذلك تُفهم هذه النسبة داخل نطاق البرنامج فقط، مع إبقاء هذا القيد ظاهرًا؛ ولا تمثل معدلًا وطنيًا لوصول المنشآت إلى الخدمات المالية.",
+    "evidence_badge": "PROGRAMME_KPI__METHOD_DETAIL_OPEN",
+    "evidence_inputs": [
+      "219_SMEPS_PROGRAMME_EVIDENCE",
+      "EP-SMEPS-FINACCESS-KPI"
+    ],
+    "does_not_prove_en": "The percentage is not a national rate of access to financial services for micro, small and medium enterprises, a representative survey estimate or a national rate of unique firms, and it does not show that SMEPS caused access.",
+    "does_not_prove_ar": "ليست النسبة معدلًا وطنيًا لوصول المنشآت الأصغر والصغيرة والمتوسطة إلى الخدمات المالية، ولا تقديرًا من مسح ممثل، ولا معدلًا وطنيًا للمنشآت الفريدة، ولا تثبت أن وكالة SMEPS هي التي أحدثت هذا الوصول.",
+    "change_trigger_en": "This record is updated when an authoritative source is revised or replaced, a newer comparable observation becomes available, the definition, population or method changes, or the conditions for public use change.",
+    "change_trigger_ar": "يُحدَّث هذا السجل عند مراجعة المصدر المعتمد أو استبداله، أو توفر مشاهدة أحدث قابلة للمقارنة، أو تغير التعريف أو المجتمع أو الطريقة، أو تغير شروط الاستخدام العام.",
+    "public_routes": [
+      "/firms",
+      "/evidence"
+    ],
+    "public_route_list": [
+      "/firms/",
+      "/evidence/"
+    ]
+  },
+  {
+    "claim_id": "CLM-062",
+    "theme": "Firms / access to finance",
+    "claim_type": "BOUNDED_SURVEY_COMPARISON",
+    "headline_en": "Formal firms in the 2022 survey: accounts were common, bank finance for working capital was not",
+    "headline_ar": "المنشآت الرسمية في مسح 2022: الحساب المصرفي شائع، أما تمويل البنوك لرأس المال العامل فنادر",
+    "copy_en": "Among formal firms in the 2022 seven-governorate survey, 58.2% (191 of 328) reported a checking or savings account. Their working capital came mainly from internal sources: on average, 69.12% came from internal funds or retained earnings, 16.66% from money lenders, friends or relatives, 10.15% from advance payments by clients, 1.97% from non-bank financial institutions, 1.31% from supplier credit and 0.56% from banks. In a separate question on the financial intermediaries they use, 73.48% of responding formal firms named an exchange store or money exchanger and 24.39% a commercial bank; firms could name more than one, so these are not market shares. The evidence base does not hold the number of firms behind the working-capital averages or the intermediary question. Among the 217 informal firms surveyed, 80.18% had no bank account; that sample was drawn from activity and location lists rather than a national register. The formal-firm sample includes micro firms with fewer than five employees, and neither sample represents all Yemeni firms.",
+    "copy_ar": "أفادت 58.2% من المنشآت الرسمية في مسح عام 2022 الذي شمل سبع محافظات (191 من أصل 328 منشأة) بأن لديها حسابًا جاريًا أو حساب ادخار. غير أن رأس مالها العامل اعتمد أساسًا على مصادر داخلية: ففي المتوسط جاء 69.12% منه من الأموال الذاتية أو الأرباح المحتجزة، و16.66% من المقرضين غير الرسميين أو الأصدقاء أو الأقارب، و10.15% من دفعات مقدمة من العملاء، و1.97% من مؤسسات مالية غير مصرفية، و1.31% من ائتمان الموردين، و0.56% فقط من البنوك. وفي سؤال مستقل عن الوسطاء الماليين الذين تتعامل معهم، ذكرت 73.48% من المنشآت الرسمية المجيبة محلات الصرافة أو الصرافين، و24.39% البنوك التجارية؛ ولأن المنشأة كان بإمكانها ذكر أكثر من وسيط، فهذه النسب ليست حصصًا سوقية. ولا تتضمن قاعدة الأدلة عدد المنشآت التي تستند إليها متوسطات رأس المال العامل ولا عدد المجيبين عن سؤال الوسطاء. أما المنشآت غير الرسمية التي شملها المسح، وعددها 217 منشأة، فلم يكن لدى 80.18% منها حساب مصرفي، وقد سُحبت عينتها من قوائم للأنشطة والمواقع لا من سجل وطني. وتضم عينة المنشآت الرسمية منشآت أصغر يقل عدد العاملين فيها عن خمسة، ولا تمثل أيٌّ من العينتين جميع المنشآت في اليمن.",
+    "evidence_badge": "PRIMARY_CUSTOM_SURVEY",
+    "evidence_inputs": [
+      "20_FIRM_FINANCE",
+      "FFM-001",
+      "FFM-008",
+      "FFM-009",
+      "FFM-011"
+    ],
+    "does_not_prove_en": "The evidence base does not hold the number of firms behind the working-capital averages or the intermediary question. An average working-capital share is not a share of firms, and multiple-response percentages are not market shares. Holding an account does not show that a firm uses bank credit. The formal and informal samples use different frames, so they cannot be added together or compared with the 2013 survey. Firms are not people, so these shares are not comparable with the Findex account-ownership rate.",
+    "does_not_prove_ar": "لا تتضمن قاعدة الأدلة عدد المنشآت التي تستند إليها متوسطات رأس المال العامل ولا عدد المجيبين عن سؤال الوسطاء. ومتوسط حصة رأس المال العامل ليس نسبة من المنشآت، ونسب الأسئلة متعددة الإجابات ليست حصصًا سوقية. وامتلاك المنشأة حسابًا لا يثبت أنها تستخدم الائتمان المصرفي. ويختلف إطار العينتين الرسمية وغير الرسمية، فلا يمكن جمعهما ولا مقارنتهما بمسح 2013. والمنشآت ليست أفرادًا، فلا تُقارن هذه النسب بنسبة امتلاك الحساب في المؤشر العالمي للشمول المالي (Global Findex).",
+    "change_trigger_en": "This record is updated when an authoritative source is revised or replaced, a newer comparable observation becomes available, the definition, population or method changes, or the conditions for public use change.",
+    "change_trigger_ar": "يُحدَّث هذا السجل عند مراجعة المصدر المعتمد أو استبداله، أو توفر مشاهدة أحدث قابلة للمقارنة، أو تغير التعريف أو المجتمع أو الطريقة، أو تغير شروط الاستخدام العام.",
+    "public_routes": [
+      "/firms",
+      "/evidence"
+    ],
+    "public_route_list": [
+      "/firms/",
+      "/evidence/"
+    ]
+  }
+]

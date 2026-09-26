@@ -1,0 +1,301 @@
+{
+  "_lineage_status": "HISTORICAL_LINEAGE — KEEP. This record describes the S00–S06 post-build state as of 2026-09-23 and is not current. Current state: README.md, authority/YFI_CURRENT_PROJECT_CONTEXT.json and OPENAI_REENTRY_CHECKPOINT.md (classified in audit/P4_CANONICAL_HANDOFF_ALIGNMENT.md).",
+  "programme": "POST_BUILD_MATURATION",
+  "as_of": "2026-09-23",
+  "production_repository_drive_id": "1iAxWukk1xeAXDPibmXXwGlaUXDcr_XvA",
+  "reference_archive_drive_id": "1kQwClKkfkl4FEsgk8YSb_5FPrcatRDby",
+  "reviewed_archive_baseline_folder_id": "1sP6QzxoSPSkqivifmZqNyGeG1vhBQJZx",
+  "production_master_sha256": "f94f1f91084b01964a3bb7b3847fd68a19555cc901ab6078146a187efe17e860",
+  "controlled_page_specs": 141,
+  "expected_generated_locale_pages": 282,
+  "expected_generated_html_total_including_root_and_404": 284,
+  "controlled_entry_questions": 11,
+  "primary_navigation_items": 6,
+  "sessions": [
+    {
+      "id": "S00",
+      "name": "Repository truth & baseline",
+      "state": "COMPLETE"
+    },
+    {
+      "id": "S01",
+      "name": "Navigation, search & first-use UX",
+      "state": "COMPLETE"
+    },
+    {
+      "id": "S02",
+      "name": "Audience journeys & information architecture",
+      "state": "COMPLETE"
+    },
+    {
+      "id": "S03",
+      "name": "Home, Explore & domain-page composition",
+      "state": "COMPLETE"
+    },
+    {
+      "id": "S04",
+      "name": "Evidence verification, citation & source experience",
+      "state": "COMPLETE"
+    },
+    {
+      "id": "S05",
+      "name": "Visual information design, Arabic, RTL, mobile & accessibility",
+      "state": "COMPLETE"
+    },
+    {
+      "id": "S06",
+      "name": "Source-owner challenge",
+      "state": "COMPLETE__RECIPIENT_ACCEPTED"
+    },
+    {
+      "id": "S07",
+      "name": "Technical release quality",
+      "state": "QUEUED__NOT_STARTED"
+    },
+    {
+      "id": "S08",
+      "name": "Blind-reader & adversarial final test",
+      "state": "QUEUED__NOT_STARTED"
+    }
+  ],
+  "archive_monitoring": {
+    "s01_baseline_items_reviewed": 70,
+    "baseline_register": "docs/S01_ARCHIVE_DISPOSITION_REGISTER.json",
+    "candidate_evidence_queue": "docs/S06_ARCHIVE_EVIDENCE_CHALLENGE_QUEUE.md",
+    "delta_rule": "Any reference-archive item not present in the S01 baseline register, or materially modified after baseline, is new work. Reviewed material is not reopened unless a production defect creates a specific reason to challenge its prior disposition.",
+    "authority_rule": "Reference/archive material can challenge implementation or identify candidate evidence, but cannot change production truth directly.",
+    "post_s01_deltas_reviewed": 1,
+    "latest_delta_state": "NEW DELTA REVIEWED AND DISPOSITIONED — DESIGN_REFERENCE_ONLY",
+    "latest_delta_id": "1BckYimgynYGVAABN1aPYIMQpgsyy8wj34THmyF4re9k",
+    "unreviewed_archive_inbox_state": "ONE_REGISTERED_SUPPLEMENT__S06_REVIEW_PENDING__NOT_PRODUCTION_TRUTH",
+    "unreviewed_archive_inbox_folder_id": "1lj5A9hrCDHo7hhQTlLOk-fmIQ7xCfcLs",
+    "pending_delta_id": "1tFewVNnzpNXG9tsNyFpoWHnobaKsoRho",
+    "pending_delta_title": "2026-09-23_SUPPLEMENT__OLD_DRAFTS_AND_SOURCES__UNREVIEWED__NONAUTHORITATIVE",
+    "pending_delta_authority_effect": "NONE__REFERENCE_CHALLENGE_ONLY"
+  },
+  "current_build_focus": [
+    "Preserve the accepted S03-S05 implementation as a regression fixture and the Production Master as the single semantic authority.",
+    "Use handoff/ as the deterministic non-authoritative Claude Design → Claude Code consumption layer; do not reconstruct content from chats or old drafts.",
+    "Keep the first complete public runtime locally self-contained; final code must remove the current remote webfont dependency.",
+    "Do not promote predecessor/reference material except through the S06 evidence-adjudication path and Master-first integration rule."
+  ],
+  "next_gate": "S06_WINDOW_ACCEPTED. Existing handoff is frozen for Claude Design → Claude Code. S07.1 is queued but NOT STARTED.",
+  "session_execution_protocol": "docs/SESSION_EXECUTION_PROTOCOL.md",
+  "session_execution_rule": "One bounded session at a time; every session closes with what became more true, what became simpler, new complexity, what can be removed, and a next-session decision.",
+  "remaining_micro_sessions": 4,
+  "active_micro_session": {
+    "id": "S06_ACCEPTANCE",
+    "name": "S06 recipient-side acceptance",
+    "state": "CLOSED__ACCEPTED",
+    "objective": "Recipient-side verification of all three source-owner challenges, current Master/projection concurrency reconciliation, source-reference closure, rights/publication filtering, bilingual invariance and regression before handoff freeze."
+  },
+  "final_stop_session": "S08.2 — Final repository closure",
+  "micro_sessions": {
+    "S03.1": "CLOSED",
+    "S03.2": "CLOSED",
+    "S03.3": "CLOSED",
+    "S03.4": "CLOSED",
+    "WINDOW_1_ACCEPTANCE": "CLOSED__ACCEPTED",
+    "S04.1": "CLOSED",
+    "S04.2": "CLOSED",
+    "WINDOW_2_ACCEPTANCE": "CLOSED__ACCEPTED",
+    "S05.1": "CLOSED",
+    "S05.2": "CLOSED",
+    "S05.3": "CLOSED",
+    "WINDOW_3_ACCEPTANCE": "CLOSED__ACCEPTED",
+    "S06.1": "CLOSED",
+    "S06.2": "CLOSED",
+    "S06.3": "CLOSED",
+    "S06_ACCEPTANCE": "CLOSED__ACCEPTED",
+    "S07.1": "QUEUED_NOT_STARTED"
+  },
+  "window_1_recipient_acceptance": {
+    "state": "ACCEPTED",
+    "scope": [
+      "/people/",
+      "/access/",
+      "/firms/",
+      "/finance/",
+      "/payments/",
+      "/remittances/"
+    ],
+    "languages": [
+      "ar",
+      "en"
+    ],
+    "result": "FIRST_HAND_IMPLEMENTATION__GENERATED_RESULT__HUMAN_RENDER_INSPECTION__VALIDATOR__DRIVE_STATE_RECONCILED"
+  },
+  "next_micro_session": {
+    "id": "S07.1",
+    "name": "Performance + low-bandwidth + discoverability",
+    "state": "QUEUED_NOT_STARTED",
+    "objective": "Technical release-quality work reserved for a later authorized session; do not start from this handoff-freeze window."
+  },
+  "s03_closure": {
+    "state": "CLOSED__EIGHT_ROUTE_PASS",
+    "routes": [
+      "/people/",
+      "/access/",
+      "/firms/",
+      "/finance/",
+      "/payments/",
+      "/remittances/",
+      "/providers/",
+      "/reforms/"
+    ],
+    "presentation_contract": "site-src/content/presentation_priority.json",
+    "result": "ONE_RENDERER_CONSUMED_PRESENTATION_AUTHORITY__AR_EN_PARITY__NARRATIVE_LOSS_TEST_PASS__VALIDATOR_PASS"
+  },
+  "s04_1_closure": {
+    "state": "CLOSED__PASS",
+    "evidence_record_routes": 108,
+    "entry_paths": [
+      "DOMAIN_TO_EVIDENCE_TO_SOURCE_TO_INTERPRETATION",
+      "GLOBAL_SEARCH_TO_EVIDENCE",
+      "DIRECT_DEEP_LINK_TO_EVIDENCE",
+      "DATA_SOURCE_TO_DEPENDENT_EVIDENCE"
+    ],
+    "languages": [
+      "ar",
+      "en"
+    ],
+    "result": "INTENTIONAL_EVIDENCE_RECORD_FAMILY__FIRST_LOAD_SCOPE_BOUNDARY_SOURCE__PROGRESSIVE_METHOD__BACKTRACK__VALIDATOR_PASS",
+    "master_escalation": "RESOLVED__CLM-060_ARABIC_PUBLIC_TERMINOLOGY"
+  },
+  "s04_2_closure": {
+    "state": "CLOSED__PASS",
+    "comparison_records": 11,
+    "comparison_selection_range": "2_TO_4_RECORDS",
+    "source_reference_closure_sample": "8_CLAIMS_PLUS_1_DERIVED_VISUAL",
+    "publication_firewall": "DISPLAY_READY__LOCATOR_ONLY__NO_PUBLIC_LOCATOR_PASS",
+    "citation_rights_rule": "PUBLIC_CITATION_FACTUAL_USE_AND_REDISTRIBUTION_REMAIN_SEPARATE",
+    "correction_version_rule": "ORIGIN_CONTEXT_PRESERVED__NO_HISTORY_INVENTED",
+    "master_escalation": "NONE"
+  },
+  "window_2_recipient_acceptance": {
+    "state": "ACCEPTED",
+    "scope": [
+      "/providers/",
+      "/reforms/",
+      "EIGHT_DOMAIN_ANSWERS",
+      "EVIDENCE_RECORDS",
+      "/evidence/compare/",
+      "/data/",
+      "/corrections/",
+      "CITATION_RIGHTS_PUBLICATION_FILTERING",
+      "SOURCE_REFERENCE_CLOSURE"
+    ],
+    "languages": [
+      "ar",
+      "en"
+    ],
+    "result": "RECIPIENT_TASK_HARNESS_143_OF_143_PASS__AR_EN_390_1440_RENDER_NO_OVERFLOW__VALIDATOR_PASS__DRIVE_STATE_RECONCILED"
+  },
+  "s04_closure": {
+    "state": "COMPLETE__S04_1_AND_S04_2_PASS",
+    "next": "S05.1"
+  },
+  "window_2_drive_reconciliation": {
+    "state": "PASS",
+    "repository_drive_id": "1iAxWukk1xeAXDPibmXXwGlaUXDcr_XvA",
+    "master_drive_id": "1xAbdDHJd5bYo0Pzo_a6dR6HsZ056LzJU",
+    "master_sha256": "6c0f8f18325b4f117de82e8ac8396c70adf0b3f1871878cf614ed01833ea40fd",
+    "write_mode": "IN_PLACE__PRESERVE_EXISTING_FILE_IDS",
+    "generated_dist_stored": false,
+    "sharing_state": "ANYONE_WITH_LINK_WRITER__OPEN_RELEASE_SECURITY_RISK__NO_CONCURRENT_CHANGE_DETECTED_DURING_RECONCILIATION"
+  },
+  "open_release_risks": [
+    "DRIVE_PRODUCTION_REPOSITORY_ANYONE_WITH_LINK_WRITER__OWNER_S07_SECURITY_RELEASE_CONTROL"
+  ],
+  "s05_1_closure": {
+    "state": "CLOSED__PASS",
+    "sampled_routes": 21,
+    "render_cases": 84,
+    "viewports": [
+      390,
+      1440
+    ],
+    "languages": [
+      "ar",
+      "en"
+    ],
+    "semantic_authority_change": "NONE",
+    "master_escalation": "NONE",
+    "closure_artifact": "docs/S05_1_BILINGUAL_SEMANTIC_TYPOGRAPHIC_CLOSURE.md",
+    "result": "BILINGUAL_SEMANTIC_SAMPLE__RTL_TYPOGRAPHY__STABLE_ID_BIDI__NUMERIC_SIGNATURES__VALIDATOR_PASS"
+  },
+  "s05_2_closure": {
+    "state": "CLOSED__PASS",
+    "runtime_assertions": "84_OF_84_PASS",
+    "tested_widths": [
+      320,
+      390,
+      400,
+      640
+    ],
+    "reflow_200_percent": "PASS__640_CSS_PX_EQUIVALENT_OF_1280_AT_200_PERCENT",
+    "keyboard": "PASS__SKIP_MENU_SEARCH_DETAILS_COMPARE_COPY_DATA_FOCUS_CORRECTION_BACKTRACK",
+    "assistive_structure": "PASS__LANDMARKS_NAMES_TABLE_SCOPES_CONCISE_LIVE_REGIONS__BROWSER_AX_TREE_SAMPLE",
+    "semantic_authority_change": "NONE",
+    "master_escalation": "NONE",
+    "closure_artifact": "docs/S05_2_MOBILE_KEYBOARD_ZOOM_SCREENREADER_CLOSURE.md",
+    "runtime_boundary": "ACTUAL_NAMED_SCREEN_READER_AND_BROWSER_CHROME_ZOOM_REMAIN_S08_FINAL_ACCEPTANCE"
+  },
+  "current_session": "S06_CLOSED__RECIPIENT_ACCEPTED__HANDOFF_FROZEN",
+  "next_session": "S07.1_PERFORMANCE_LOW_BANDWIDTH_DISCOVERABILITY__QUEUED_NOT_STARTED",
+  "checksum_manifest_state": "REFRESHED_AFTER_REPOSITORY_HYGIENE_CLOSE__DIST_EXCLUDED__AUTHORITY_MASTER_INCLUDED",
+  "reference_archive_disposition": "S01_BASELINE_CLOSED__S06_SOURCE_OWNER_CANDIDATES_DISPOSITIONED__DEFERRED_ITEMS_REMAIN_NON_PRODUCTION",
+  "s05_2_drive_reconciliation": {
+    "state": "PASS",
+    "repository_drive_id": "1iAxWukk1xeAXDPibmXXwGlaUXDcr_XvA",
+    "write_mode": "IN_PLACE__PRESERVE_EXISTING_FILE_IDS",
+    "generated_dist_stored": false,
+    "master_and_page_specs_changed": false,
+    "sharing_risk": "OPEN__ANYONE_WITH_LINK_WRITER__OWNER_S07"
+  },
+  "s05_3_closure": {
+    "state": "CLOSED__PASS",
+    "artifact": "docs/S05_3_VISUAL_TABLE_FALLBACK_NON_COLOUR_CLOSURE.md",
+    "window_3_acceptance": "ACCEPTED",
+    "master_sha256": "d3b0421104d63f830cf40d2b1749dc88f302f54e4d79a6c6faf63abc5ad28d9e",
+    "page_specs_sha256": "453bde9026c2a30f2c0c2125c0e950cd6e468a9540577318e1896c98e61959da"
+  },
+  "s05_3_drive_reconciliation": {
+    "repository_drive_id": "1iAxWukk1xeAXDPibmXXwGlaUXDcr_XvA",
+    "authority_folder_drive_id": "1iDx5Jia8rXSAiuaIUa4nL1tpDbwSO_tY",
+    "master_drive_id": "1xAbdDHJd5bYo0Pzo_a6dR6HsZ056LzJU",
+    "state": "RECONCILED_IN_PLACE__MASTER_INSIDE_AUTHORITY__GENERATED_DIST_EXCLUDED",
+    "sharing_risk": "OPEN__ANYONE_WITH_LINK_WRITER__OWNER_S07"
+  },
+  "window_3_recipient_acceptance": "ACCEPTED__S05_1_TO_S05_3_REGRESSION_AND_REPOSITORY_TRUTH_RECONCILED",
+  "repository_hygiene_state": "CLOSED__DETERMINISTIC_VERIFY_PASS__CANONICAL_TREE_CLEAN__R042_RELEASE_PERMISSION_RISK_OPEN",
+  "design_code_handoff": {
+    "state": "FROZEN_AFTER_S06_ACCEPTANCE__CLAUDE_DESIGN_FIRST__CLAUDE_CODE_AFTER_REPOSITORY_BACKED_DESIGN_PACKAGE",
+    "folder": "handoff",
+    "drive_id": "1i9lt_tDSb57tEdoDVtM0zfLi8aPvA61i",
+    "authority_role": "NON_AUTHORITATIVE_IMPLEMENTATION_GUIDANCE",
+    "static_runtime_target": "REACT_STATIC_PRERENDER_EXPORT__LOCAL_CONTROLLED_PAYLOADS__NO_REQUIRED_RUNTIME_DRIVE_DATABASE_CMS_API",
+    "open_implementation_requirement": "REMOVE_REMOTE_WEBFONT_RUNTIME_DEPENDENCY_BY_PACKAGING_APPROVED_FONTS_LOCALLY",
+    "does_not_start_s06": false,
+    "s06_window_status": "ACCEPTED"
+  },
+  "s06_1_closure": {
+    "state": "CLOSED__PASS",
+    "artifact": "docs/S06_1_WORLD_BANK_FINDEX_FIRMS_SOURCE_OWNER_CLOSURE.md",
+    "master_sha256": "ee001adede94642ba001f3ffd9c4dbdb7b8ca30050bb9cc478636fbf71a79ba4",
+    "page_specs_sha256": "28c247c4d55be0bb0b69aa854d3fdb0caa68f16e23657452afb5e5e1b1dac02b",
+    "master_change": "QUARANTINE_LEGACY_UNVERIFIED_FINDEX_PSEUDO_CODEBOOK_BLOCK",
+    "public_claim_change": "NONE"
+  },
+  "s06_2_closure": {
+    "state": "CLOSED__PASS",
+    "artifact": "docs/S06_2_CBY_SOURCE_OWNER_CLOSURE.md",
+    "master_sha256": "cfe4599e26026f9ca377b9ac4b9b1120781678b981e09bb0f439091483a37dfe",
+    "page_specs_sha256": "5b5601c043a4857314a4f483db3bf8d8f39a07a838cbac8500324e7f463ba708",
+    "master_change": "ADDED_CBY_DECISION_17_2026_AL_BURAQ_DATED_STATUS_EVENT_AND_SOURCE",
+    "public_claim_change": "NO_NUMERIC_OR_ROSTER_COUNT_CHANGE__STATUS_CURRENTNESS_ONLY"
+  },
+  "page_specs_sha256": "4e8a0d8f0cf58f78389360c69cf04f3bf0d24f1ba9b3e4ef10ebe93461e69f1a",
+  "s06_window_acceptance": "ACCEPTED__SOURCE_OWNER_AND_RECIPIENT_REGRESSION_PASS",
+  "handoff_freeze_state": "FROZEN_AFTER_S06_ACCEPTANCE__CLAUDE_DESIGN_FIRST__CLAUDE_CODE_AFTER_DESIGN_PACKAGE"
+}

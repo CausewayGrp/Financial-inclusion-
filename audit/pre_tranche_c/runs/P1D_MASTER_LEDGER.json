@@ -1,0 +1,198 @@
+{
+ "transaction": "P1-D",
+ "scope": "P1.7 chronology assurance fixes; ISR source identity; P15-F4 pilot figure carried by CLM-045",
+ "input_master_sha256": "754daef2b11c4539ea4445e3c1b5a13460c7240851be8c4ee70a8e96bd39818c",
+ "output_master_sha256": "e1f623109871f127ec74a67c912acac344393e811616bc65c34858be57b602d9",
+ "cells_written": 21,
+ "changes": [
+  {
+   "finding": "P1-L10",
+   "sheet": "06_EVIDENCE_OBJECTS",
+   "row": 89,
+   "col": 6,
+   "field": "CLM-045.summary_en",
+   "old": "Yemen evidence can support several links from cash delivery through usability, resilience and local financial relationships, but it does not yet establish persistent post-transfer bank-account or e-wallet use. Beneficiaries, registrations, identities and opened accounts cannot be counted as durable use.",
+   "new": "World Bank/G2Px material documents an eight-district digital-payment pilot within Yemen's unconditional cash-transfer programme that reached 45,460 recipients, with payments into fully functional accounts and recipient choice; this establishes delivery and exposure to a formal digital service. Yemen evidence can support several links from cash delivery through usability, resilience and local financial relationships, but it does not yet establish persistent post-transfer bank-account or e-wallet use. Beneficiaries, registrations, identities and opened accounts cannot be counted as durable use."
+  },
+  {
+   "finding": "P1-L10",
+   "sheet": "06_EVIDENCE_OBJECTS",
+   "row": 89,
+   "col": 7,
+   "field": "CLM-045.summary_ar",
+   "old": "تسمح الأدلة المتاحة في اليمن بتتبع عدة حلقات من إيصال المساعدة النقدية إلى قابلية الاستخدام والقدرة على الصمود والروابط المالية المحلية، لكنها لا تثبت حتى الآن استمرار استخدام الحساب المصرفي أو المحفظة الإلكترونية بعد انتهاء التحويل. ولا يجوز عدّ المستفيدين أو التسجيلات أو الهويات أو الحسابات المفتوحة باعتبارها استخدامًا ماليًا مستدامًا.",
+   "new": "توثق مواد البنك الدولي/مبادرة G2Px تجربة للمدفوعات الرقمية ضمن برنامج التحويلات النقدية غير المشروطة في اليمن شملت ثماني مديريات واستفاد منها 45,460 مستفيدًا، مع الإيداع في حسابات كاملة الوظائف وإتاحة الاختيار للمستفيد؛ وهذا يثبت الإيصال والتعرض لخدمة رقمية رسمية. تسمح الأدلة المتاحة في اليمن بتتبع عدة حلقات من إيصال المساعدة النقدية إلى قابلية الاستخدام والقدرة على الصمود والروابط المالية المحلية، لكنها لا تثبت حتى الآن استمرار استخدام الحساب المصرفي أو المحفظة الإلكترونية بعد انتهاء التحويل. ولا يجوز عدّ المستفيدين أو التسجيلات أو الهويات أو الحسابات المفتوحة باعتبارها استخدامًا ماليًا مستدامًا."
+  },
+  {
+   "finding": "P1-L10",
+   "sheet": "07_PUBLIC_CLAIMS",
+   "row": 48,
+   "col": 6,
+   "field": "CLM-045.copy_en",
+   "old": "Yemen evidence can support several links from cash delivery through usability, resilience and local financial relationships, but it does not yet establish persistent post-transfer bank-account or e-wallet use. Beneficiaries, registrations, identities and opened accounts cannot be counted as durable use.",
+   "new": "World Bank/G2Px material documents an eight-district digital-payment pilot within Yemen's unconditional cash-transfer programme that reached 45,460 recipients, with payments into fully functional accounts and recipient choice; this establishes delivery and exposure to a formal digital service. Yemen evidence can support several links from cash delivery through usability, resilience and local financial relationships, but it does not yet establish persistent post-transfer bank-account or e-wallet use. Beneficiaries, registrations, identities and opened accounts cannot be counted as durable use."
+  },
+  {
+   "finding": "P1-L10",
+   "sheet": "07_PUBLIC_CLAIMS",
+   "row": 48,
+   "col": 7,
+   "field": "CLM-045.copy_ar",
+   "old": "تسمح الأدلة المتاحة في اليمن بتتبع عدة حلقات من إيصال المساعدة النقدية إلى قابلية الاستخدام والقدرة على الصمود والروابط المالية المحلية، لكنها لا تثبت حتى الآن استمرار استخدام الحساب المصرفي أو المحفظة الإلكترونية بعد انتهاء التحويل. ولا يجوز عدّ المستفيدين أو التسجيلات أو الهويات أو الحسابات المفتوحة باعتبارها استخدامًا ماليًا مستدامًا.",
+   "new": "توثق مواد البنك الدولي/مبادرة G2Px تجربة للمدفوعات الرقمية ضمن برنامج التحويلات النقدية غير المشروطة في اليمن شملت ثماني مديريات واستفاد منها 45,460 مستفيدًا، مع الإيداع في حسابات كاملة الوظائف وإتاحة الاختيار للمستفيد؛ وهذا يثبت الإيصال والتعرض لخدمة رقمية رسمية. تسمح الأدلة المتاحة في اليمن بتتبع عدة حلقات من إيصال المساعدة النقدية إلى قابلية الاستخدام والقدرة على الصمود والروابط المالية المحلية، لكنها لا تثبت حتى الآن استمرار استخدام الحساب المصرفي أو المحفظة الإلكترونية بعد انتهاء التحويل. ولا يجوز عدّ المستفيدين أو التسجيلات أو الهويات أو الحسابات المفتوحة باعتبارها استخدامًا ماليًا مستدامًا."
+  },
+  {
+   "finding": "P1-L10",
+   "sheet": "03_PAGE_SECTIONS",
+   "row": 172,
+   "col": 5,
+   "field": "/evidence/CLM-045/#s1.body_en",
+   "old": "Yemen evidence can support several links from cash delivery through usability, resilience and local financial relationships, but it does not yet establish persistent post-transfer bank-account or e-wallet use. Beneficiaries, registrations, identities and opened accounts cannot be counted as durable use.",
+   "new": "World Bank/G2Px material documents an eight-district digital-payment pilot within Yemen's unconditional cash-transfer programme that reached 45,460 recipients, with payments into fully functional accounts and recipient choice; this establishes delivery and exposure to a formal digital service. Yemen evidence can support several links from cash delivery through usability, resilience and local financial relationships, but it does not yet establish persistent post-transfer bank-account or e-wallet use. Beneficiaries, registrations, identities and opened accounts cannot be counted as durable use."
+  },
+  {
+   "finding": "P1-L10",
+   "sheet": "03_PAGE_SECTIONS",
+   "row": 172,
+   "col": 7,
+   "field": "/evidence/CLM-045/#s1.body_ar",
+   "old": "تسمح الأدلة المتاحة في اليمن بتتبع عدة حلقات من إيصال المساعدة النقدية إلى قابلية الاستخدام والقدرة على الصمود والروابط المالية المحلية، لكنها لا تثبت حتى الآن استمرار استخدام الحساب المصرفي أو المحفظة الإلكترونية بعد انتهاء التحويل. ولا يجوز عدّ المستفيدين أو التسجيلات أو الهويات أو الحسابات المفتوحة باعتبارها استخدامًا ماليًا مستدامًا.",
+   "new": "توثق مواد البنك الدولي/مبادرة G2Px تجربة للمدفوعات الرقمية ضمن برنامج التحويلات النقدية غير المشروطة في اليمن شملت ثماني مديريات واستفاد منها 45,460 مستفيدًا، مع الإيداع في حسابات كاملة الوظائف وإتاحة الاختيار للمستفيد؛ وهذا يثبت الإيصال والتعرض لخدمة رقمية رسمية. تسمح الأدلة المتاحة في اليمن بتتبع عدة حلقات من إيصال المساعدة النقدية إلى قابلية الاستخدام والقدرة على الصمود والروابط المالية المحلية، لكنها لا تثبت حتى الآن استمرار استخدام الحساب المصرفي أو المحفظة الإلكترونية بعد انتهاء التحويل. ولا يجوز عدّ المستفيدين أو التسجيلات أو الهويات أو الحسابات المفتوحة باعتبارها استخدامًا ماليًا مستدامًا."
+  },
+  {
+   "finding": "P1-C01",
+   "sheet": "14_SYSTEM_CHRONOLOGY",
+   "row": 24,
+   "col": 12,
+   "field": "YSC-019.does_not_establish_en",
+   "old": "Do not equate the SAR1.3 billion agreement with IMF-reported USD commitments or disbursements unless a source-level crosswalk proves they are the same flow.",
+   "new": "Do not equate the SAR1.3 billion agreement with IMF-reported USD commitments or disbursements unless a source-level crosswalk proves they are the same flow. An agreement to deposit is not evidence that a deposit or a disbursement has taken place."
+  },
+  {
+   "finding": "P1-C01",
+   "sheet": "14_SYSTEM_CHRONOLOGY",
+   "row": 24,
+   "col": 13,
+   "field": "YSC-019.does_not_establish_ar",
+   "old": "لا يجوز مساواة اتفاقية 1.3 مليار ريال سعودي بالتزامات أو مدفوعات مقومة بالدولار يوردها صندوق النقد ما لم تثبت مطابقة على مستوى المصدر أنها التدفق نفسه.",
+   "new": "لا يجوز مساواة اتفاقية 1.3 مليار ريال سعودي بالتزامات أو مدفوعات مقومة بالدولار يوردها صندوق النقد ما لم تثبت مطابقة على مستوى المصدر أنها التدفق نفسه. والاتفاق على الإيداع لا يثبت أن إيداعًا أو صرفًا قد تم فعلًا."
+  },
+  {
+   "finding": "P1-C02",
+   "sheet": "14_SYSTEM_CHRONOLOGY",
+   "row": 23,
+   "col": 6,
+   "field": "YSC-018.source_ids",
+   "old": "SRC-WB-FMIIP-P180708 | SRC-UNDP-FMIIP-001 | SRC-WB-FMIIP-ISR-2026-04",
+   "new": "SRC-WB-FMIIP-P180708 | SRC-UNDP-FMIIP-001 | SRC-WB-FMIIP-ISR2-2026-001"
+  },
+  {
+   "finding": "P1-C03",
+   "sheet": "14_SYSTEM_CHRONOLOGY",
+   "row": 23,
+   "col": 5,
+   "field": "YSC-018.fact_ar",
+   "old": "وافق البنك الدولي في 17 يونيو 2025 على منحة من المؤسسة الدولية للتنمية بقيمة 20 مليون دولار لمشروع البنية التحتية للأسواق المالية والشمول في اليمن (P180708). المشروع نشط وينفذه برنامج الأمم المتحدة الإنمائي، وتاريخ الإغلاق 30 يونيو 2030، وأحدث تقرير معلن عن حالة التنفيذ والنتائج حُدد في هذه المراجعة هو التقرير رقم 2 بتاريخ 8 أبريل 2026.",
+   "new": "وافق البنك الدولي في 17 يونيو 2025 على منحة من المؤسسة الدولية للتنمية بقيمة 20 مليون دولار لمشروع البنية التحتية للأسواق والشمول المالي في اليمن (P180708). المشروع نشط وينفذه برنامج الأمم المتحدة الإنمائي، وتاريخ الإغلاق 30 يونيو 2030، وأحدث تقرير معلن عن حالة التنفيذ والنتائج حُدد في هذه المراجعة هو التقرير رقم 2 بتاريخ 8 أبريل 2026."
+  },
+  {
+   "finding": "P1-C02",
+   "sheet": "16_DATASET_CATALOG",
+   "row": 214,
+   "col": 9,
+   "field": "DS-FMIIP-IMPLEMENTATION-2026.sample_source_ids",
+   "old": "SRC-WB-FMIIP-ISR-2026-04",
+   "new": "SRC-WB-FMIIP-ISR2-2026-001"
+  },
+  {
+   "finding": "P1-C02",
+   "sheet": "15_SOURCE_LIBRARY",
+   "row": 93,
+   "col": 4,
+   "field": "SRC-WB-FMIIP-ISR2-2026-001.datasets_or_use",
+   "old": "DS-NFID-EOI-ALIGNMENT,DS-REFORM-EVENTS",
+   "new": "DS-NFID-EOI-ALIGNMENT,DS-REFORM-EVENTS,DS-FMIIP-IMPLEMENTATION-2026"
+  },
+  {
+   "finding": "P1-C02",
+   "sheet": "15_SOURCE_LIBRARY",
+   "row": 149,
+   "col": null,
+   "field": "SRC-WB-FMIIP-ISR-2026-04 (row deleted)",
+   "old": "duplicate LOCATOR_ONLY record of SRC-WB-FMIIP-ISR2-2026-001",
+   "new": null
+  },
+  {
+   "finding": "P1-C03",
+   "sheet": "14_SYSTEM_CHRONOLOGY",
+   "row": 27,
+   "col": 4,
+   "field": "YSC-023.fact_en",
+   "old": "IMF staff and the Yemeni authorities reached a staff-level agreement on policies that could underpin a proposed 18-month Staff-Monitored Program. The agreement is subject to IMF Management approval, and the mission statement says it will not result in an Executive Board discussion; priorities include fiscal and monetary management, reserve rebuilding, and financial-sector and electricity reforms.",
+   "new": "IMF staff and the Yemeni authorities reached a staff-level agreement on policies that could underpin a proposed 18-month Staff-Monitored Program. The agreement is subject to IMF Management approval, and the IMF press release on the mission states that it will not result in an Executive Board discussion; priorities include fiscal and monetary management, reserve rebuilding, and financial-sector and electricity reforms."
+  },
+  {
+   "finding": "P1-C03",
+   "sheet": "14_SYSTEM_CHRONOLOGY",
+   "row": 27,
+   "col": 5,
+   "field": "YSC-023.fact_ar",
+   "old": "توصل فريق صندوق النقد الدولي والسلطات اليمنية في 16 يوليو 2026 إلى اتفاق على مستوى الخبراء بشأن سياسات يمكن أن تقوم عليها ترتيبات مقترحة لبرنامج مراقبة من قبل خبراء الصندوق لمدة 18 شهرًا. ويخضع الاتفاق لموافقة إدارة الصندوق، كما يوضح بيان البعثة أنه لن يترتب عليه نقاش في المجلس التنفيذي؛ وتشمل الأولويات إدارة المالية العامة والسياسة النقدية وإعادة بناء الاحتياطيات وإصلاحات القطاع المالي والكهرباء.",
+   "new": "توصل فريق صندوق النقد الدولي والسلطات اليمنية في 16 يوليو 2026 إلى اتفاق على مستوى الخبراء بشأن سياسات يمكن أن تقوم عليها ترتيبات مقترحة لبرنامج مراقبة من قبل خبراء الصندوق لمدة 18 شهرًا. ويخضع الاتفاق لموافقة إدارة الصندوق، كما يوضح البيان الصحفي للصندوق بشأن البعثة أنه لن يترتب عليه نقاش في المجلس التنفيذي؛ وتشمل الأولويات إدارة المالية العامة والسياسة النقدية وإعادة بناء الاحتياطيات وإصلاحات القطاع المالي والكهرباء."
+  },
+  {
+   "finding": "P1-C04",
+   "sheet": "16_DATASET_CATALOG",
+   "row": 211,
+   "col": 4,
+   "field": "DS-V4R3-SYSTEM-CHRONOLOGY.rows",
+   "old": "20",
+   "new": "24"
+  },
+  {
+   "finding": "P1-C04",
+   "sheet": "16_DATASET_CATALOG",
+   "row": 211,
+   "col": 6,
+   "field": "DS-V4R3-SYSTEM-CHRONOLOGY.period_max",
+   "old": "2026-03",
+   "new": "2026-07-16"
+  },
+  {
+   "finding": "P1-C04",
+   "sheet": "16_DATASET_CATALOG",
+   "row": 211,
+   "col": 7,
+   "field": "DS-V4R3-SYSTEM-CHRONOLOGY.source_id_count",
+   "old": "12",
+   "new": "18"
+  },
+  {
+   "finding": "P1-C04",
+   "sheet": "16_DATASET_CATALOG",
+   "row": 211,
+   "col": 8,
+   "field": "DS-V4R3-SYSTEM-CHRONOLOGY.source_url_count",
+   "old": "12",
+   "new": "18"
+  },
+  {
+   "finding": "EXF-002",
+   "sheet": "02_SITE_MAP",
+   "row": 55,
+   "col": 7,
+   "field": "/evidence/CLM-045/.full_copy_en",
+   "old": "A successful cash payment is not yet durable financial use\n\nYemen evidence can support several links from cash delivery through usability, resilience and local financial relationships, but it does not yet establish persistent post-transfer bank-account or e-wallet use. Beneficiaries, registrations, identities and opened accounts cannot be counted as durable use.\n\nHow to read this evidence\n\nRead this evidence within the definition, population or group covered, calculation base where relevant, period, geography and method shown on the page. Before reusing or comparing it, check the source, limitations, evidence date and correction history. If a value or source link is unavailable, the page says so rather than filling the gap by inference. Download and reuse are offered only where source rights permit.",
+   "new": "A successful cash payment is not yet durable financial use\n\nWorld Bank/G2Px material documents an eight-district digital-payment pilot within Yemen's unconditional cash-transfer programme that reached 45,460 recipients, with payments into fully functional accounts and recipient choice; this establishes delivery and exposure to a formal digital service. Yemen evidence can support several links from cash delivery through usability, resilience and local financial relationships, but it does not yet establish persistent post-transfer bank-account or e-wallet use. Beneficiaries, registrations, identities and opened accounts cannot be counted as durable use.\n\nHow to read this evidence\n\nRead this evidence within the definition, population or group covered, calculation base where relevant, period, geography and method shown on the page. Before reusing or comparing it, check the source, limitations, evidence date and correction history. If a value or source link is unavailable, the page says so rather than filling the gap by inference. Download and reuse are offered only where source rights permit."
+  },
+  {
+   "finding": "EXF-002",
+   "sheet": "02_SITE_MAP",
+   "row": 55,
+   "col": 8,
+   "field": "/evidence/CLM-045/.full_copy_ar",
+   "old": "نجاح الدفع النقدي لا يعني بعدُ استخدامًا ماليًا مستدامًا\n\nتسمح الأدلة المتاحة في اليمن بتتبع عدة حلقات من إيصال المساعدة النقدية إلى قابلية الاستخدام والقدرة على الصمود والروابط المالية المحلية، لكنها لا تثبت حتى الآن استمرار استخدام الحساب المصرفي أو المحفظة الإلكترونية بعد انتهاء التحويل. ولا يجوز عدّ المستفيدين أو التسجيلات أو الهويات أو الحسابات المفتوحة باعتبارها استخدامًا ماليًا مستدامًا.\n\nكيف تقرأ هذا الدليل\n\nيُقرأ هذا الدليل ضمن التعريف، والمجتمع الذي ينطبق عليه الرقم أو قاعدة الاحتساب عند الحاجة، والفترة، والجغرافيا، والطريقة المبينة في الصفحة. وقبل إعادة استخدامه أو مقارنته، راجع المصدر والحدود وحداثة الدليل وسجل التصحيح. وإذا كانت قيمة أو وصلة مصدر غير متاحة، تُذكر الفجوة صراحةً بدل ملئها بالاستنتاج. ولا يتاح التنزيل أو إعادة الاستخدام إلا حيث تسمح حقوق المصدر.",
+   "new": "نجاح الدفع النقدي لا يعني بعدُ استخدامًا ماليًا مستدامًا\n\nتوثق مواد البنك الدولي/مبادرة G2Px تجربة للمدفوعات الرقمية ضمن برنامج التحويلات النقدية غير المشروطة في اليمن شملت ثماني مديريات واستفاد منها 45,460 مستفيدًا، مع الإيداع في حسابات كاملة الوظائف وإتاحة الاختيار للمستفيد؛ وهذا يثبت الإيصال والتعرض لخدمة رقمية رسمية. تسمح الأدلة المتاحة في اليمن بتتبع عدة حلقات من إيصال المساعدة النقدية إلى قابلية الاستخدام والقدرة على الصمود والروابط المالية المحلية، لكنها لا تثبت حتى الآن استمرار استخدام الحساب المصرفي أو المحفظة الإلكترونية بعد انتهاء التحويل. ولا يجوز عدّ المستفيدين أو التسجيلات أو الهويات أو الحسابات المفتوحة باعتبارها استخدامًا ماليًا مستدامًا.\n\nكيف تقرأ هذا الدليل\n\nيُقرأ هذا الدليل ضمن التعريف، والمجتمع الذي ينطبق عليه الرقم أو قاعدة الاحتساب عند الحاجة، والفترة، والجغرافيا، والطريقة المبينة في الصفحة. وقبل إعادة استخدامه أو مقارنته، راجع المصدر والحدود وحداثة الدليل وسجل التصحيح. وإذا كانت قيمة أو وصلة مصدر غير متاحة، تُذكر الفجوة صراحةً بدل ملئها بالاستنتاج. ولا يتاح التنزيل أو إعادة الاستخدام إلا حيث تسمح حقوق المصدر."
+  }
+ ]
+}

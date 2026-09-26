@@ -1,0 +1,67 @@
+{
+ "stage": "STAGE-0",
+ "staged_master_sha256": "b010b60dbcc5bd40684c2093381277fc995625383260fe6a631618b463db2938",
+ "steps": [
+  {
+   "step": "generate",
+   "exit": 0,
+   "tail": [
+    "  \"content/navigation_interaction.json\",",
+    "  \"presentation_priority.json\"",
+    " ],",
+    " \"output_sha256\": 36",
+    "}",
+    "PROJECTIONS GENERATED"
+   ]
+  },
+  {
+   "step": "rebind",
+   "exit": 0,
+   "tail": [
+    "  \"README.md\",",
+    "  \"handoff/MASTER_IMPLEMENTATION_PROMPT.md\",",
+    "  \"handoff/CLAUDE_DESIGN_MASTER_PROMPT.md\",",
+    "  \"handoff/CLAUDE_CODE_MASTER_PROMPT.md\"",
+    " ]",
+    "}"
+   ]
+  },
+  {
+   "step": "build",
+   "exit": 0,
+   "tail": [
+    "Built 284 HTML files from 141 controlled page specs."
+   ]
+  },
+  {
+   "step": "public_literal_audit",
+   "exit": 0,
+   "tail": [
+    "PUBLIC_LITERAL_CLOSURE records=6939 unresolved=0"
+   ]
+  },
+  {
+   "step": "validate",
+   "exit": 0,
+   "tail": [
+    "HTML=284 ERRORS=0 WARN=0",
+    "WEBSITE REPOSITORY VALIDATION PASS"
+   ]
+  },
+  {
+   "step": "generator_idempotence",
+   "exit": 0,
+   "tail": [
+    " \"master_sha256\": \"b010b60dbcc5bd40684c2093381277fc995625383260fe6a631618b463db2938\",",
+    " \"outputs\": 36,",
+    " \"differences\": [],",
+    " \"output_sha256\": 36",
+    "}",
+    "PROJECTION CHECK PASS"
+   ]
+  }
+ ],
+ "result": "COMMITTED",
+ "master_sha256": "b010b60dbcc5bd40684c2093381277fc995625383260fe6a631618b463db2938",
+ "page_specs_sha256": "c361c3208bbfb9605487ec536086259d3b4e9eaa9b66d11f29e8b6848f6baecf"
+}

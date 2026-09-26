@@ -1,0 +1,1232 @@
+[
+  {
+    "ui_id": "UI-VERIFY-BOUND",
+    "label_en": "This record is drawn from the source(s) listed on this page. Open a source record to reach the original document, and check that the definition, period, population and geography match what is stated here.",
+    "label_ar": "يستند هذا السجل إلى المصدر أو المصادر المدرجة في هذه الصفحة. افتح سجل المصدر للوصول إلى الوثيقة الأصلية، وتحقق من تطابق التعريف والفترة والمجتمع والنطاق الجغرافي مع ما يرد هنا.",
+    "use_rule": "PB-0008. 06 verification text when lineage_state = BOUND_EXACT."
+  },
+  {
+    "ui_id": "UI-VERIFY-PARTIAL",
+    "label_en": "Some figures in this record are drawn from the source(s) listed on this page; other inputs have not yet been linked to a specific original source. Check each figure against a listed source before reuse, and treat any figure you cannot match as unverified.",
+    "label_ar": "تستند بعض أرقام هذا السجل إلى المصدر أو المصادر المدرجة في هذه الصفحة، ولم تُربط مدخلات أخرى بعدُ بمصدر أصلي محدد. فطابِق كل رقم مع أحد المصادر المدرجة قبل إعادة استخدامه، وعامِل الرقم الذي لا تجد له مقابلًا على أنه غير متحقق منه.",
+    "use_rule": "Stage 1 Lead addition (BOUND_PARTIAL). 06 verification text and evidence-page source statement when some inputs are bound and others are open."
+  },
+  {
+    "ui_id": "UI-VERIFY-COMPOSITE",
+    "label_en": "This view assembles other evidence records. Check each linked record against its own source.",
+    "label_ar": "يجمع هذا العرض سجلات أدلة أخرى، فتحقق من كل سجل مرتبط مقابل مصدره الخاص.",
+    "use_rule": "PB-0008. 06 verification text and evidence-page statement when lineage_state = COMPOSITE_OF_OBJECTS and member records are listed."
+  },
+  {
+    "ui_id": "UI-VERIFY-COMPOSITE-UNLISTED",
+    "label_en": "This view summarises other evidence records, which are not yet linked individually here. Before reusing a figure, open the evidence record that reports it and check that record against its own source.",
+    "label_ar": "يلخص هذا العرض سجلات أدلة أخرى لم تُربط بعدُ هنا كلٌّ على حدة. وقبل إعادة استخدام أي رقم، افتح سجل الدليل الذي يورده وتحقق منه مقابل مصدره الخاص.",
+    "use_rule": "Stage 1 Lead addition. 06 verification text and evidence-page statement when lineage_state = COMPOSITE_OF_OBJECTS and no member record is listed in the Master."
+  },
+  {
+    "ui_id": "UI-EVID-UNBOUND",
+    "label_en": "This record has not yet been linked to a specific original source. Treat its figures as unverified for reuse until the link is added.",
+    "label_ar": "لم يُربط هذا السجل بعدُ بمصدر أصلي محدد، فلا تُعامل أرقامه على أنها صالحة لإعادة الاستخدام إلى أن يُضاف هذا الربط.",
+    "use_rule": "PB-0006. 06 verification text and evidence-page statement when lineage_state = SOURCE_NOT_YET_BOUND."
+  },
+  {
+    "ui_id": "UI-EVID-FRAMING",
+    "label_en": "This record sets out a rule for measuring or reading the evidence. It does not report a figure from a source, so there is no original source to check.",
+    "label_ar": "يحدد هذا السجل قاعدة لقياس الأدلة أو قراءتها، ولا يورد رقمًا مأخوذًا من مصدر، ولذلك لا يوجد مصدر أصلي يُتحقق منه.",
+    "use_rule": "Stage 1 Lead addition. 06 verification text and evidence-page statement when lineage_state = FRAMING_NO_FACT."
+  },
+  {
+    "ui_id": "UI-EVID-MEMBERS-HEADING",
+    "label_en": "Evidence records assembled in this view",
+    "label_ar": "سجلات الأدلة التي يجمعها هذا العرض",
+    "use_rule": "Stage 1. Heading of the member-record list on a COMPOSITE_OF_OBJECTS evidence page."
+  },
+  {
+    "ui_id": "UI-FOOTER-STRAPLINE",
+    "label_en": "Developed and maintained by CauseWay. A public resource linking each claim to its evidence and original source.",
+    "label_ar": "مورد عام يربط كل خلاصة بدليلها ومصدرها الأصلي، طوّرته CauseWay وتتولى إدارته.",
+    "use_rule": "PB-0412. Footer strapline (replaces the hard-coded build.py string)."
+  },
+  {
+    "ui_id": "UI-READING-PATH-INTRO",
+    "label_en": "Each statement this Reading relies on is carried by an Evidence Record. Follow a record to its original sources before reusing a figure.",
+    "label_ar": "كل مقولة تعتمد عليها هذه القراءة يحملها سجل دليل. تتبّع السجل إلى مصادره الأصلية قبل إعادة استخدام أي رقم.",
+    "use_rule": "Pre-Tranche-C P1.5. Introduction to the Reading verification path (Reading proposition -> Evidence Record -> source)."
+  },
+  {
+    "ui_id": "UI-READING-PATH-COMPLETE",
+    "label_en": "Every figure in this Reading traces through the records below to a named source.",
+    "label_ar": "يمكن تتبّع كل رقم في هذه القراءة، عبر السجلات أدناه، إلى مصدر مسمّى.",
+    "use_rule": "P1.5. Shown when the Reading's closure state is CLOSED_TO_SOURCE_ID."
+  },
+  {
+    "ui_id": "UI-READING-PATH-PARTIAL",
+    "label_en": "Most figures in this Reading trace through the records below to a named source. A record marked as not yet fully traced still has an input that is not linked to a specific original source; treat that figure as unverified for reuse.",
+    "label_ar": "يمكن تتبّع معظم أرقام هذه القراءة، عبر السجلات أدناه، إلى مصدر مسمّى. أما السجل الموسوم بأنه لم يُتتبّع بالكامل بعدُ، فما زال أحد مدخلاته غير مربوط بمصدر أصلي محدد؛ فعامِل ذلك الرقم على أنه غير متحقق منه عند إعادة الاستخدام.",
+    "use_rule": "P1.5. Shown when the Reading's closure state is PARTIALLY_RESOLVED."
+  },
+  {
+    "ui_id": "UI-READING-PATH-RECORD-PARTIAL",
+    "label_en": "Not yet fully traced to a source",
+    "label_ar": "لم يُتتبّع بالكامل إلى مصدر بعدُ",
+    "use_rule": "P1.5. Label on a path step whose record is PARTIALLY_RESOLVED."
+  },
+  {
+    "ui_id": "UI-READING-PATH-RECORD-COMPOSITE",
+    "label_en": "Assembles other evidence records",
+    "label_ar": "يجمع سجلات أدلة أخرى",
+    "use_rule": "P1.5. Label on a path step whose record is a composite of other records."
+  },
+  {
+    "ui_id": "UI-SOURCE-NO-PUBLIC-LOCATOR",
+    "label_en": "Also draws on source material with no public original locator recorded here; it is not listed or linked.",
+    "label_ar": "ويستند أيضًا إلى مواد مصدرية لا يُسجَّل لها هنا رابط أصلي عام، فلا تُدرج ولا تُربط.",
+    "use_rule": "P1.5 / P15-F2. Reading path step whose record also rests on a source without an http(s) locator. The publication firewall (validator S04.1/S04.2) keeps such sources unnamed on public pages."
+  },
+  {
+    "ui_id": "UI-EVID-SOURCES-WITHOUT-LOCATOR",
+    "label_en": "This record also draws on source material for which no public original locator is recorded. That material is held in the evidence base but is not listed or linked here, so the sources shown above are not the record's only basis.",
+    "label_ar": "ويستند هذا السجل أيضًا إلى مواد مصدرية لا يُسجَّل لها رابط أصلي عام، وهي محفوظة في قاعدة الأدلة لكنها لا تُدرج ولا تُربط هنا؛ لذلك فالمصادر المعروضة أعلاه ليست الأساس الوحيد للسجل.",
+    "use_rule": "P15-F2. Evidence Record page: shown whenever a bound source is not rendered because it has no public locator (never named: publication firewall)."
+  },
+  {
+    "ui_id": "UI-VIS-STATE-MEASURED",
+    "label_en": "Measured in a survey",
+    "label_ar": "مقيس في مسح",
+    "use_rule": "Pre-Tranche-C P3 visual grammar. Value from a survey measure of the stated population."
+  },
+  {
+    "ui_id": "UI-VIS-STATE-ADMINISTRATIVE",
+    "label_en": "Reported in administrative records",
+    "label_ar": "وارد في سجلات إدارية",
+    "use_rule": "Pre-Tranche-C P3 visual grammar. Count or value an institution reports from its own records."
+  },
+  {
+    "ui_id": "UI-VIS-STATE-DERIVED",
+    "label_en": "Calculated here from published figures",
+    "label_ar": "محسوب هنا من أرقام منشورة",
+    "use_rule": "Pre-Tranche-C P3 visual grammar. A difference, ratio or share this resource calculates from governed values."
+  },
+  {
+    "ui_id": "UI-VIS-STATE-HISTORICAL",
+    "label_en": "Historical — not a current value",
+    "label_ar": "تاريخي — ليس قيمة حالية",
+    "use_rule": "Pre-Tranche-C P3 visual grammar. Value whose period is not current and must not be carried forward."
+  },
+  {
+    "ui_id": "UI-VIS-STATE-PROGRAMME",
+    "label_en": "Programme figure — not a national rate",
+    "label_ar": "رقم برنامج — ليس معدلًا وطنيًا",
+    "use_rule": "Pre-Tranche-C P3 visual grammar. Result, target or KPI of a programme's own universe."
+  },
+  {
+    "ui_id": "UI-VIS-STATE-ESTIMATED",
+    "label_en": "Estimate — not an observation",
+    "label_ar": "تقدير — ليس قيمة مرصودة",
+    "use_rule": "Pre-Tranche-C P3 visual grammar. Source-labelled estimate."
+  },
+  {
+    "ui_id": "UI-VIS-STATE-PROJECTED",
+    "label_en": "Projection — not an observation",
+    "label_ar": "توقع — ليس قيمة مرصودة",
+    "use_rule": "Pre-Tranche-C P3 visual grammar. Source-labelled projection or forecast."
+  },
+  {
+    "ui_id": "UI-VIS-STATE-PARTIAL",
+    "label_en": "Partial coverage — not the whole population or sector",
+    "label_ar": "تغطية جزئية — لا تشمل المجتمع أو القطاع كله",
+    "use_rule": "Pre-Tranche-C P3 visual grammar. Value whose universe is a bounded subset."
+  },
+  {
+    "ui_id": "UI-VIS-STATE-UNKNOWN",
+    "label_en": "Unknown — not zero",
+    "label_ar": "غير معروف — ليس صفرًا",
+    "use_rule": "Pre-Tranche-C P3 visual grammar. Cell or value the evidence does not establish."
+  },
+  {
+    "ui_id": "UI-VIS-BREAK-VINTAGE",
+    "label_en": "Source document changes here — lines are not joined",
+    "label_ar": "تتغير وثيقة المصدر هنا — لا يُوصل الخطان",
+    "use_rule": "Pre-Tranche-C P3 visual grammar. Vintage or document break in a series."
+  },
+  {
+    "ui_id": "UI-VIS-BREAK-UNIVERSE",
+    "label_en": "What is counted changes here — lines are not joined",
+    "label_ar": "يتغير ما يُعدّ هنا — لا يُوصل الخطان",
+    "use_rule": "Pre-Tranche-C P3 visual grammar. Definition or reporting-universe break in a series."
+  },
+  {
+    "ui_id": "UI-VIS-SAME-YEAR-REVISION",
+    "label_en": "Same year, different publication",
+    "label_ar": "السنة نفسها، إصدار مختلف",
+    "use_rule": "Pre-Tranche-C P3 visual grammar. Two published values for one reference year."
+  },
+  {
+    "ui_id": "UI-VIS-MISSING",
+    "label_en": "No verified value for this period — not zero",
+    "label_ar": "لا قيمة موثَّقة لهذه الفترة — ليست صفرًا",
+    "use_rule": "Pre-Tranche-C P3 visual grammar. Missing observation kept as a gap."
+  },
+  {
+    "ui_id": "UI-VIS-DISAGREEMENT",
+    "label_en": "Source figures disagree — both are shown",
+    "label_ar": "أرقام المصدر غير متسقة — يُعرض الرقمان",
+    "use_rule": "Pre-Tranche-C P3 visual grammar. A published figure and the figure implied by the same source's totals differ."
+  },
+  {
+    "ui_id": "UI-VIS-TARGET",
+    "label_en": "Target — not a result",
+    "label_ar": "مستهدف — ليس نتيجة متحققة",
+    "use_rule": "Pre-Tranche-C P3 visual grammar. Stated target value."
+  },
+  {
+    "ui_id": "UI-VIS-RESULT",
+    "label_en": "Observed value",
+    "label_ar": "قيمة مرصودة",
+    "use_rule": "Pre-Tranche-C P3 visual grammar. Observed or source-reported value set beside a target."
+  },
+  {
+    "ui_id": "UI-VIS-NOT-COMPARABLE",
+    "label_en": "Not directly comparable",
+    "label_ar": "لا تصح المقارنة المباشرة",
+    "use_rule": "Pre-Tranche-C P3 visual grammar. Two values whose definition, unit, period or universe differ."
+  },
+  {
+    "ui_id": "UI-VIS-NOMINAL",
+    "label_en": "Nominal — not adjusted for prices or exchange rates",
+    "label_ar": "اسمية — لم تُعدَّل وفق الأسعار أو سعر الصرف",
+    "use_rule": "Pre-Tranche-C P3 visual grammar. Nominal currency series."
+  },
+  {
+    "ui_id": "UI-VIS-CHAIN-RULE",
+    "label_en": "Rule or programme",
+    "label_ar": "قاعدة تنظيمية أو برنامج",
+    "use_rule": "Pre-Tranche-C P3 visual grammar. Chain step 1."
+  },
+  {
+    "ui_id": "UI-VIS-CHAIN-IMPLEMENTATION",
+    "label_en": "Implementation",
+    "label_ar": "تنفيذ",
+    "use_rule": "Pre-Tranche-C P3 visual grammar. Chain step 2."
+  },
+  {
+    "ui_id": "UI-VIS-CHAIN-OPERATION",
+    "label_en": "Operation — activity recorded",
+    "label_ar": "تشغيل — نشاط مسجَّل",
+    "use_rule": "Pre-Tranche-C P3 visual grammar. Chain step 3: the rail or service runs and records transactions; not use by people."
+  },
+  {
+    "ui_id": "UI-VIS-CHAIN-ACCESS",
+    "label_en": "Access",
+    "label_ar": "الوصول إلى الخدمات المالية",
+    "use_rule": "Pre-Tranche-C P3 visual grammar. Chain step 4."
+  },
+  {
+    "ui_id": "UI-VIS-CHAIN-USE",
+    "label_en": "Use by people or firms",
+    "label_ar": "استخدام الأفراد أو المنشآت",
+    "use_rule": "Pre-Tranche-C P3 visual grammar. Chain step 5: needs a person- or firm-level measure."
+  },
+  {
+    "ui_id": "UI-VIS-CHAIN-QUALITY",
+    "label_en": "Quality",
+    "label_ar": "الجودة",
+    "use_rule": "Pre-Tranche-C P3 visual grammar. Chain step 6."
+  },
+  {
+    "ui_id": "UI-VIS-CHAIN-OUTCOME",
+    "label_en": "Outcome for people or firms",
+    "label_ar": "النتيجة للأفراد أو المنشآت",
+    "use_rule": "Pre-Tranche-C P3 visual grammar. Chain step 7."
+  },
+  {
+    "ui_id": "UI-VIS-CHAIN-EVIDENCED",
+    "label_en": "Evidence reaches this step",
+    "label_ar": "تصل الأدلة إلى هذه الحلقة",
+    "use_rule": "Pre-Tranche-C P3 visual grammar. State of a chain step with governed evidence."
+  },
+  {
+    "ui_id": "UI-VIS-CHAIN-OPEN",
+    "label_en": "Not yet measured — not a failure",
+    "label_ar": "لم تُقس بعد — ليس إخفاقًا",
+    "use_rule": "Pre-Tranche-C P3 visual grammar. State of a chain step without governed evidence."
+  },
+  {
+    "ui_id": "UI-VIS-DOES-NOT-ESTABLISH",
+    "label_en": "Does not establish:",
+    "label_ar": "لا يثبت:",
+    "use_rule": "Pre-Tranche-C P3 visual grammar. Label before the in-frame prohibited inference."
+  },
+  {
+    "ui_id": "UI-VIS-SOURCE",
+    "label_en": "Source:",
+    "label_ar": "المصدر:",
+    "use_rule": "Pre-Tranche-C P3 visual grammar. Label before the in-frame credit line."
+  },
+  {
+    "ui_id": "UI-VIS-ISSUER-SCOPE",
+    "label_en": "Status as recorded by the named authority only; absence from its list is not a status elsewhere.",
+    "label_ar": "وضعٌ كما سجلته الجهة المسماة وحدها؛ وعدم الإدراج في قائمتها لا يحدد وضعًا لدى جهة أخرى.",
+    "use_rule": "Pre-Tranche-C P3 visual grammar. Provider and status visuals."
+  },
+  {
+    "ui_id": "UI-VIS-FULL-RECORD",
+    "label_en": "Full record:",
+    "label_ar": "السجل الكامل:",
+    "use_rule": "Pre-Tranche-C P3 visual grammar. Label before the canonical link in a detached frame."
+  },
+  {
+    "ui_id": "UI-VIS-STATE-REPORTED",
+    "label_en": "Reported by the source",
+    "label_ar": "وارد في المصدر",
+    "use_rule": "Pre-Tranche-C P3 visual grammar. Official statistics reported by a source that are neither a survey measure nor an administrative count."
+  },
+  {
+    "ui_id": "UI-VIS-WITHHELD",
+    "label_en": "Figure held back until its definition is documented",
+    "label_ar": "يُحجب الرقم إلى أن يُوثَّق تعريفه",
+    "use_rule": "Pre-Tranche-C P3 visual grammar. A governed value whose caveat requires a methodology note before public use."
+  },
+  {
+    "ui_id": "UI-EVID-DOES-NOT-ESTABLISH",
+    "label_en": "What this evidence does not establish",
+    "label_ar": "ما الذي لا يثبته هذا الدليل",
+    "use_rule": "Pre-Tranche-C P4.3. Label for part A of 06 limitations (the prohibited inference)."
+  },
+  {
+    "ui_id": "UI-EVID-MEASUREMENT-LIMITS",
+    "label_en": "Limits of the measure",
+    "label_ar": "حدود القياس",
+    "use_rule": "Pre-Tranche-C P4.3. Label for part B of 06 limitations (what the measure cannot capture), shown when recorded."
+  },
+  {
+    "ui_id": "UI-VERIFY-UNLISTED",
+    "label_en": "The material behind this record has no public original locator, so no source is listed or linked here and no figure from that material is shown. Read the record as an explanation of method, not as a verifiable figure.",
+    "label_ar": "لا يتوافر للمادة التي يستند إليها هذا السجل رابط أصلي عام، لذلك لا يُدرج هنا أي مصدر ولا يُربط به، ولا يُعرض أي رقم مأخوذ من تلك المادة. فاقرأ السجل بوصفه شرحًا للمنهج، لا رقمًا قابلًا للتحقق.",
+    "use_rule": "Pre-Tranche-C P4 (V-D1). Verification template of a record whose every bound source lacks a public locator (closure template BOUND_UNLISTED); such a record prints no figure from that material."
+  },
+  {
+    "ui_id": "UI-READING-PATH-COMPLETE-UNLISTED",
+    "label_en": "Every figure in this Reading traces through the records below to a named source. Where a record also rests on material with no public original locator, that material is not listed and no figure from it is shown.",
+    "label_ar": "يمكن تتبّع كل رقم في هذه القراءة، عبر السجلات أدناه، إلى مصدر مسمّى. وحيث يستند سجل أيضًا إلى مادة لا يتوافر لها رابط أصلي عام، فلا تُدرج تلك المادة ولا يُعرض هنا أي رقم مأخوذ منها.",
+    "use_rule": "Pre-Tranche-C P4 (V-D1). Reading path status when the Reading is closed to named sources and a bound record also rests on material without a public locator (publication firewall)."
+  },
+  {
+    "ui_id": "UI-VIS-CAT-FINDEX-TOTAL",
+    "label_en": "All adults (ages 15+)",
+    "label_ar": "جميع البالغين (15 سنة فأكثر)",
+    "use_rule": "Pre-Tranche-C P4 (V-D5). Chart label: findex_group value 'total'."
+  },
+  {
+    "ui_id": "UI-VIS-CAT-FINDEX-FEMALE",
+    "label_en": "Women",
+    "label_ar": "النساء",
+    "use_rule": "Pre-Tranche-C P4 (V-D5). Chart label: findex_group value 'female'."
+  },
+  {
+    "ui_id": "UI-VIS-CAT-FINDEX-MALE",
+    "label_en": "Men",
+    "label_ar": "الرجال",
+    "use_rule": "Pre-Tranche-C P4 (V-D5). Chart label: findex_group value 'male'."
+  },
+  {
+    "ui_id": "UI-VIS-CAT-FINDEX-POOREST40",
+    "label_en": "Adults in the poorest 40% of households",
+    "label_ar": "البالغون في أفقر 40% من الأسر",
+    "use_rule": "Pre-Tranche-C P4 (V-D5). Chart label: findex_group value 'poorest 40%'."
+  },
+  {
+    "ui_id": "UI-VIS-CAT-FINDEX-RICHEST60",
+    "label_en": "Adults in the richest 60% of households",
+    "label_ar": "البالغون في أغنى 60% من الأسر",
+    "use_rule": "Pre-Tranche-C P4 (V-D5). Chart label: findex_group value 'richest 60%'."
+  },
+  {
+    "ui_id": "UI-VIS-CAT-FINDEX-PRIMARY-EDU",
+    "label_en": "Adults with primary education or less",
+    "label_ar": "البالغون الحاصلون على تعليم ابتدائي أو أقل",
+    "use_rule": "Pre-Tranche-C P4 (V-D5). Chart label: findex_group value 'primary education or less'."
+  },
+  {
+    "ui_id": "UI-VIS-CAT-SERIES-CBY-AR2024",
+    "label_en": "CBY-Aden Annual Report 2024",
+    "label_ar": "التقرير السنوي للبنك المركزي اليمني – عدن 2024",
+    "use_rule": "Pre-Tranche-C P4 (V-D5). Chart label: series value 'CBY_ANNUAL_REPORT_2024'."
+  },
+  {
+    "ui_id": "UI-VIS-CAT-SERIES-CBY-AR2025",
+    "label_en": "CBY-Aden Annual Report 2025",
+    "label_ar": "التقرير السنوي للبنك المركزي اليمني – عدن 2025",
+    "use_rule": "Pre-Tranche-C P4 (V-D5). Chart label: series value 'CBY_ANNUAL_REPORT_2025'."
+  },
+  {
+    "ui_id": "UI-VIS-CAT-SERIES-IMF-AIV2025",
+    "label_en": "IMF 2025 Article IV staff report",
+    "label_ar": "تقرير خبراء صندوق النقد الدولي لمشاورات المادة الرابعة 2025",
+    "use_rule": "Pre-Tranche-C P4 (V-D5). Chart label: series value '2025_ARTICLE_IV_STAFF_REPORT'."
+  },
+  {
+    "ui_id": "UI-VIS-CAT-SERIES-IMF-AIV2025-SUPP",
+    "label_en": "IMF 2025 Article IV supplement (revised values)",
+    "label_ar": "ملحق مشاورات المادة الرابعة 2025 لصندوق النقد الدولي (قيم معدّلة)",
+    "use_rule": "Pre-Tranche-C P4 (V-D5). Chart label: series value '2025_ARTICLE_IV_SUPPLEMENTARY_REVISION'."
+  },
+  {
+    "ui_id": "UI-VIS-UNIT-USD-MILLION",
+    "label_en": "USD million",
+    "label_ar": "مليون دولار أمريكي",
+    "use_rule": "Pre-Tranche-C P4 (V-D5). Chart label: unit value 'USD million'."
+  },
+  {
+    "ui_id": "UI-VIS-UNIT-COUNT",
+    "label_en": "Number",
+    "label_ar": "العدد",
+    "use_rule": "Pre-Tranche-C P4 (V-D5). Chart label: unit value 'count'."
+  },
+  {
+    "ui_id": "UI-VIS-UNIT-PCT-ADULTS",
+    "label_en": "% of adults (ages 15+)",
+    "label_ar": "% من البالغين (15 سنة فأكثر)",
+    "use_rule": "Pre-Tranche-C P4 (V-D5). Chart label: unit value 'percent of population ages 15+'."
+  },
+  {
+    "ui_id": "UI-VIS-UNIT-PCT-SEND",
+    "label_en": "% of the amount sent",
+    "label_ar": "% من المبلغ المرسل",
+    "use_rule": "Pre-Tranche-C P4 (V-D5). Chart label: unit value 'percent of send amount'."
+  },
+  {
+    "ui_id": "UI-VIS-UNIT-PCT",
+    "label_en": "Percent",
+    "label_ar": "نسبة مئوية",
+    "use_rule": "Pre-Tranche-C P4 (V-D5). Chart label: unit value 'percent'."
+  },
+  {
+    "ui_id": "UI-VIS-UNIT-PP",
+    "label_en": "Percentage points",
+    "label_ar": "نقاط مئوية",
+    "use_rule": "Pre-Tranche-C P4 (V-D5). Chart label: unit value 'percentage points'."
+  },
+  {
+    "ui_id": "UI-VIS-UNIT-SOURCE-ROWS",
+    "label_en": "Rows listed in the source",
+    "label_ar": "صفوف مدرجة في المصدر",
+    "use_rule": "Pre-Tranche-C P4 (V-D5). Chart label: unit value 'source-listed rows'."
+  },
+  {
+    "ui_id": "UI-VIS-UNIT-EWALLETS",
+    "label_en": "E-wallets",
+    "label_ar": "محافظ إلكترونية",
+    "use_rule": "Pre-Tranche-C P4 (V-D5). Chart label: unit value 'e-wallets'."
+  },
+  {
+    "ui_id": "UI-VIS-UNIT-LICENSED-EWALLETS",
+    "label_en": "Licensed e-wallets",
+    "label_ar": "محافظ إلكترونية مرخصة",
+    "use_rule": "Pre-Tranche-C P4 (V-D5). Chart label: unit value 'licensed e-wallets'."
+  },
+  {
+    "ui_id": "UI-VIS-UNIT-EVENT-PARTICIPANTS",
+    "label_en": "Event participants",
+    "label_ar": "مشاركون في الفعالية",
+    "use_rule": "Pre-Tranche-C P4 (V-D5). Chart label: unit value 'event participants'."
+  },
+  {
+    "ui_id": "UI-VIS-UNIT-PROJECT-ACCESS-POINTS",
+    "label_en": "Access points as defined by the project",
+    "label_ar": "نقاط وصول وفق تعريف المشروع",
+    "use_rule": "Pre-Tranche-C P4 (V-D5). Chart label: unit value 'project-defined access points'."
+  },
+  {
+    "ui_id": "UI-VIS-UNIT-BORROWERS",
+    "label_en": "Number of borrowers",
+    "label_ar": "عدد المقترضين",
+    "use_rule": "Pre-Tranche-C P4 (V-D5). Chart label: unit value 'borrowers'."
+  },
+  {
+    "ui_id": "UI-VIS-UNIT-SAVERS",
+    "label_en": "Number of savers",
+    "label_ar": "عدد المدخرين",
+    "use_rule": "Pre-Tranche-C P4 (V-D5). Chart label: unit value 'savers'."
+  },
+  {
+    "ui_id": "UI-VIS-UNIT-YER-MILLION",
+    "label_en": "YER million (nominal)",
+    "label_ar": "مليون ريال يمني (بالقيمة الاسمية)",
+    "use_rule": "Pre-Tranche-C P4 (V-D5). Chart label: unit value 'YER million'."
+  },
+  {
+    "ui_id": "UI-VIS-CAT-CORRIDOR-SA",
+    "label_en": "Saudi Arabia",
+    "label_ar": "المملكة العربية السعودية",
+    "use_rule": "Pre-Tranche-C P4 (V-D5). Chart label: corridor value 'Saudi Arabia'."
+  },
+  {
+    "ui_id": "UI-VIS-CAT-CORRIDOR-AE",
+    "label_en": "United Arab Emirates",
+    "label_ar": "الإمارات العربية المتحدة",
+    "use_rule": "Pre-Tranche-C P4 (V-D5). Chart label: corridor value 'United Arab Emirates'."
+  },
+  {
+    "ui_id": "UI-VIS-CAT-AMOUNT-200",
+    "label_en": "USD 200 sent",
+    "label_ar": "إرسال 200 دولار أمريكي",
+    "use_rule": "Pre-Tranche-C P4 (V-D5). Chart label: amount_sent value '200'."
+  },
+  {
+    "ui_id": "UI-VIS-CAT-AMOUNT-500",
+    "label_en": "USD 500 sent",
+    "label_ar": "إرسال 500 دولار أمريكي",
+    "use_rule": "Pre-Tranche-C P4 (V-D5). Chart label: amount_sent value '500'."
+  },
+  {
+    "ui_id": "UI-VIS-CAT-PAY-CARDS",
+    "label_en": "Payment cards",
+    "label_ar": "بطاقات الدفع",
+    "use_rule": "Pre-Tranche-C P4 (V-D5). Chart label: payment_object value 'IND-0001'."
+  },
+  {
+    "ui_id": "UI-VIS-CAT-PAY-POS-TERMINALS",
+    "label_en": "POS terminals",
+    "label_ar": "أجهزة نقاط البيع",
+    "use_rule": "Pre-Tranche-C P4 (V-D5). Chart label: payment_object value 'IND-0002'."
+  },
+  {
+    "ui_id": "UI-VIS-CAT-PAY-POS-TRANSACTIONS",
+    "label_en": "POS transactions",
+    "label_ar": "معاملات نقاط البيع",
+    "use_rule": "Pre-Tranche-C P4 (V-D5). Chart label: payment_object value 'IND-0003'."
+  },
+  {
+    "ui_id": "UI-VIS-CAT-PAY-ATMS",
+    "label_en": "ATMs",
+    "label_ar": "أجهزة الصراف الآلي",
+    "use_rule": "Pre-Tranche-C P4 (V-D5). Chart label: payment_object value 'IND-0006'."
+  },
+  {
+    "ui_id": "UI-VIS-CAT-PAY-EWALLETS",
+    "label_en": "E-wallets",
+    "label_ar": "المحافظ الإلكترونية",
+    "use_rule": "Pre-Tranche-C P4 (V-D5). Chart label: payment_object value 'IND-0010'."
+  },
+  {
+    "ui_id": "UI-VIS-CAT-PAY-EWALLET-SUBSCRIBERS",
+    "label_en": "E-wallet subscribers",
+    "label_ar": "مشتركو المحافظ الإلكترونية",
+    "use_rule": "Pre-Tranche-C P4 (V-D5). Chart label: payment_object value 'IND-0011'."
+  },
+  {
+    "ui_id": "UI-VIS-CAT-PAY-ACCOUNTS",
+    "label_en": "Accounts",
+    "label_ar": "الحسابات",
+    "use_rule": "Pre-Tranche-C P4 (V-D5). Chart label: payment_object value 'IND-0017'."
+  },
+  {
+    "ui_id": "UI-VIS-CAT-FIRM-CREDIT-LINE",
+    "label_en": "Formal establishments reporting a line of credit",
+    "label_ar": "المنشآت الرسمية التي أفادت بامتلاك خط ائتمان",
+    "use_rule": "Pre-Tranche-C P4 (V-D5). Chart label: firm_finance value 'Formal establishments reporting a line of credit'."
+  },
+  {
+    "ui_id": "UI-VIS-CAT-FIRM-LOAN-PRIVATE-BANKS",
+    "label_en": "Private commercial banks",
+    "label_ar": "البنوك التجارية الخاصة",
+    "use_rule": "Pre-Tranche-C P4 (V-D5). Chart label: firm_finance value 'Private commercial banks'."
+  },
+  {
+    "ui_id": "UI-VIS-CAT-FIRM-LOAN-STATE",
+    "label_en": "State-owned bank or government agency",
+    "label_ar": "بنك مملوك للدولة أو جهة حكومية",
+    "use_rule": "Pre-Tranche-C P4 (V-D5). Chart label: firm_finance value 'State-owned bank/government agency'."
+  },
+  {
+    "ui_id": "UI-VIS-CAT-FIRM-LOAN-NONBANK",
+    "label_en": "Non-bank financial institution or microfinance provider",
+    "label_ar": "مؤسسة مالية غير مصرفية أو مقدم تمويل أصغر",
+    "use_rule": "Pre-Tranche-C P4 (V-D5). Chart label: firm_finance value 'Non-bank financial institution / microfinance'."
+  },
+  {
+    "ui_id": "UI-VIS-CAT-FIRM-LOAN-OTHER",
+    "label_en": "Other non-financial institution",
+    "label_ar": "مؤسسة أخرى غير مالية",
+    "use_rule": "Pre-Tranche-C P4 (V-D5). Chart label: firm_finance value 'Other non-financial institution'."
+  },
+  {
+    "ui_id": "UI-VIS-CAT-FIRM-CH-ELECTRICITY",
+    "label_en": "Electricity",
+    "label_ar": "الكهرباء",
+    "use_rule": "Pre-Tranche-C P4 (V-D5). Chart label: firm_challenge value 'Business challenge: Electricity'."
+  },
+  {
+    "ui_id": "UI-VIS-CAT-FIRM-CH-FUEL",
+    "label_en": "Fuel shortages",
+    "label_ar": "نقص الوقود",
+    "use_rule": "Pre-Tranche-C P4 (V-D5). Chart label: firm_challenge value 'Business challenge: Fuel shortages'."
+  },
+  {
+    "ui_id": "UI-VIS-CAT-FIRM-CH-TRANSPORT",
+    "label_en": "Transport or road blockades",
+    "label_ar": "صعوبات النقل أو إغلاق الطرق",
+    "use_rule": "Pre-Tranche-C P4 (V-D5). Chart label: firm_challenge value 'Business challenge: Transport/road blockade'."
+  },
+  {
+    "ui_id": "UI-VIS-CAT-FIRM-CH-TAX",
+    "label_en": "Tax administration or tax rates",
+    "label_ar": "الإدارة الضريبية أو معدلات الضرائب",
+    "use_rule": "Pre-Tranche-C P4 (V-D5). Chart label: firm_challenge value 'Business challenge: Tax administration/rates'."
+  },
+  {
+    "ui_id": "UI-VIS-CAT-FIRM-CH-POLITICAL",
+    "label_en": "Political instability",
+    "label_ar": "عدم الاستقرار السياسي",
+    "use_rule": "Pre-Tranche-C P4 (V-D5). Chart label: firm_challenge value 'Business challenge: Political instability'."
+  },
+  {
+    "ui_id": "UI-VIS-CAT-FIRM-CH-FINANCE",
+    "label_en": "Access to finance",
+    "label_ar": "الوصول إلى التمويل",
+    "use_rule": "Pre-Tranche-C P4 (V-D5). Chart label: firm_challenge value 'Business challenge: Access to finance'."
+  },
+  {
+    "ui_id": "UI-VIS-CAT-FIRM-CH-SIEGE",
+    "label_en": "Siege",
+    "label_ar": "الحصار",
+    "use_rule": "Pre-Tranche-C P4 (V-D5). Chart label: firm_challenge value 'Business challenge: Siege'."
+  },
+  {
+    "ui_id": "UI-VIS-CAT-FIRM-CH-INFORMAL",
+    "label_en": "Practices of informal competitors",
+    "label_ar": "ممارسات المنافسين غير الرسميين",
+    "use_rule": "Pre-Tranche-C P4 (V-D5). Chart label: firm_challenge value 'Business challenge: Informal competitor practices'."
+  },
+  {
+    "ui_id": "UI-VIS-CAT-MFI-BORROWERS",
+    "label_en": "Borrowers",
+    "label_ar": "المقترضون",
+    "use_rule": "Pre-Tranche-C P4 (V-D5). Chart label: mfi_lane value 'borrowers'."
+  },
+  {
+    "ui_id": "UI-VIS-CAT-MFI-SAVERS",
+    "label_en": "Savers",
+    "label_ar": "المدخرون",
+    "use_rule": "Pre-Tranche-C P4 (V-D5). Chart label: mfi_lane value 'savers'."
+  },
+  {
+    "ui_id": "UI-VIS-CAT-MFI-PORTFOLIO",
+    "label_en": "Loan portfolio",
+    "label_ar": "محفظة القروض",
+    "use_rule": "Pre-Tranche-C P4 (V-D5). Chart label: mfi_lane value 'portfolio'."
+  },
+  {
+    "ui_id": "UI-VIS-CAT-EVT-UNIFIED-NETWORK",
+    "label_en": "Unified domestic transfer network",
+    "label_ar": "الشبكة الموحدة للحوالات المحلية",
+    "use_rule": "Pre-Tranche-C P4 (V-D5). Chart label: event value 'Unified domestic transfer network'."
+  },
+  {
+    "ui_id": "UI-VIS-CAT-EVT-FMIIP-START",
+    "label_en": "FMIIP starts",
+    "label_ar": "بدء مشروع FMIIP",
+    "use_rule": "Pre-Tranche-C P4 (V-D5). Chart label: event value 'FMIIP starts'."
+  },
+  {
+    "ui_id": "UI-VIS-CAT-EVT-FMIIP-APPROVAL",
+    "label_en": "FMIIP approved",
+    "label_ar": "الموافقة على مشروع FMIIP",
+    "use_rule": "Pre-Tranche-C P4 (V-D5). Chart label: event value 'FMIIP approved'."
+  },
+  {
+    "ui_id": "UI-VIS-CAT-EVT-FPS",
+    "label_en": "FMIIP component: support for developing a Fast Payment System",
+    "label_ar": "مكوّن في مشروع FMIIP: دعم تطوير نظام الدفع السريع",
+    "use_rule": "Pre-Tranche-C P4 (V-D5). Chart label: event value 'Fast Payment System'."
+  },
+  {
+    "ui_id": "UI-VIS-CAT-EVT-RTGS-CORE",
+    "label_en": "FMIIP component: support for establishing a real-time gross settlement (RTGS) system and upgrading CBY-Aden core banking",
+    "label_ar": "مكوّن في مشروع FMIIP: دعم إنشاء نظام التسوية الإجمالية الفورية (RTGS) وتحديث النظام المصرفي الأساسي للبنك المركزي اليمني – عدن",
+    "use_rule": "Pre-Tranche-C P4 (V-D5). Chart label: event value 'RTGS + CBY core banking'."
+  },
+  {
+    "ui_id": "UI-VIS-CAT-EVT-ACCESS-DB",
+    "label_en": "FMIIP component: access-point database",
+    "label_ar": "مكوّن في مشروع FMIIP: قاعدة بيانات لنقاط الوصول",
+    "use_rule": "Pre-Tranche-C P4 (V-D5). Chart label: event value 'Access-point database and usage support'."
+  },
+  {
+    "ui_id": "UI-VIS-CAT-EVT-NETWORK-MAIN",
+    "label_en": "Unified network as the main transfer channel",
+    "label_ar": "الشبكة الموحدة قناةً رئيسية للحوالات",
+    "use_rule": "Pre-Tranche-C P4 (V-D5). Chart label: event value 'Unified network as main transfer channel'."
+  },
+  {
+    "ui_id": "UI-VIS-CAT-EVT-QR-INTEROP",
+    "label_en": "CBY-Aden board decision: mandatory national QR standard, linking of e-wallets, and CBY-Aden as a main shareholder in the Fast Payment System operator company",
+    "label_ar": "قرار مجلس إدارة البنك المركزي اليمني – عدن: معيار وطني إلزامي لرمز الاستجابة السريعة، وربط المحافظ الإلكترونية، ومساهمة البنك المركزي في عدن مساهمًا رئيسيًا في الشركة المشغلة لنظام الدفع السريع",
+    "use_rule": "Pre-Tranche-C P4 (V-D5). Chart label: event value 'National QR + e-wallet interconnection + FPS operator participation'."
+  },
+  {
+    "ui_id": "UI-VIS-CAT-EVT-EXHIBITION",
+    "label_en": "Digital-payment exhibition and a signal of unified-network activity",
+    "label_ar": "معرض المدفوعات الرقمية ومؤشر على نشاط الشبكة الموحدة",
+    "use_rule": "Pre-Tranche-C P4 (V-D5). Chart label: event value 'Digital-payment exhibition and unified-network activity signal'."
+  },
+  {
+    "ui_id": "UI-VIS-CAT-EVT-NETWORK-COMPANY",
+    "label_en": "Unified Money Network company: restructuring, capital increase and new bank shareholders",
+    "label_ar": "شركة الشبكة الموحدة للأموال: إعادة الهيكلة وزيادة رأس المال وانضمام بنوك مساهمة جديدة",
+    "use_rule": "Pre-Tranche-C P4 (V-D5). Chart label: event value 'Restructuring, capital increase and broader bank shareholder base'."
+  },
+  {
+    "ui_id": "UI-VIS-CAT-EVT-YPCC-FOUNDING",
+    "label_en": "Founding assembly of the Yemeni Payments and Clearing Company (YPCC)",
+    "label_ar": "الجمعية التأسيسية للشركة اليمنية للمدفوعات والمقاصة (YPCC)",
+    "use_rule": "Pre-Tranche-C P4 (V-D5). Chart label: event value 'Founding assembly of Yemen Payments and Clearing Company'."
+  },
+  {
+    "ui_id": "UI-VIS-CAT-EVT-YPCC-BOARD",
+    "label_en": "First board meeting of the Yemeni Payments and Clearing Company (YPCC)",
+    "label_ar": "أول اجتماع لمجلس إدارة الشركة اليمنية للمدفوعات والمقاصة (YPCC)",
+    "use_rule": "Pre-Tranche-C P4 (V-D5). Chart label: event value 'First YPCC board meeting'."
+  },
+  {
+    "ui_id": "UI-VIS-CAT-AUTH-CBY-ADEN",
+    "label_en": "Central Bank of Yemen — Aden",
+    "label_ar": "البنك المركزي اليمني — عدن",
+    "use_rule": "Pre-Tranche-C P4 (V-D5). Chart label: authority value 'Central Bank of Yemen — Aden'."
+  },
+  {
+    "ui_id": "UI-VIS-CAT-PRV-CLASS-BANKS",
+    "label_en": "Banks (all types)",
+    "label_ar": "البنوك بجميع أنواعها",
+    "use_rule": "Pre-Tranche-C P4 (V-D5). Chart label: provider_class value 'BANKS_ALL_TYPES'."
+  },
+  {
+    "ui_id": "UI-VIS-CAT-PRV-CLASS-EXCHANGE",
+    "label_en": "Exchange companies, exchange establishments and remittance agents",
+    "label_ar": "شركات الصرافة ومنشآتها ووكلاء الحوالات",
+    "use_rule": "Pre-Tranche-C P4 (V-D5). Chart label: provider_class value 'EXCHANGE_COMPANIES_ESTABLISHMENTS_AND_REMITTANCE_AGENTS'."
+  },
+  {
+    "ui_id": "UI-VIS-CAT-PRV-CLASS-EWALLETS",
+    "label_en": "E-wallets or e-money services, as reported by CBY-Aden",
+    "label_ar": "المحافظ الإلكترونية أو خدمات النقود الإلكترونية كما يوردها البنك المركزي اليمني – عدن",
+    "use_rule": "Pre-Tranche-C P4 (V-D5). Chart label: provider_class value 'E_WALLETS_OR_E_MONEY_SERVICES_AS_CBY_REPORTED'."
+  },
+  {
+    "ui_id": "UI-VIS-CAT-PRV-CLASS-MFI",
+    "label_en": "Non-bank microfinance institutions and programmes",
+    "label_ar": "مؤسسات وبرامج التمويل الأصغر غير المصرفية",
+    "use_rule": "Pre-Tranche-C P4 (V-D5). Chart label: provider_class value 'NON_BANK_MICROFINANCE_INSTITUTIONS_AND_PROGRAMMES'."
+  },
+  {
+    "ui_id": "UI-VIS-CAT-PRV-COUNT-CURRENT-LIST",
+    "label_en": "Count from the official list, as dated in the record",
+    "label_ar": "عدد مأخوذ من القائمة الرسمية بتاريخها المسجل",
+    "use_rule": "Pre-Tranche-C P4 (V-D5). Chart label: provider_count_state value 'PRIMARY_CURRENT_LIST_VERIFIED'."
+  },
+  {
+    "ui_id": "UI-VIS-CAT-PRV-COUNT-LISTED-ROWS",
+    "label_en": "Rows listed in the source, by category (companies, establishments, remittance agents)",
+    "label_ar": "صفوف مدرجة في المصدر حسب الفئة (شركات ومنشآت ووكلاء حوالات)",
+    "use_rule": "Pre-Tranche-C P4 (V-D5). Chart label: provider_count_state value 'SOURCE_LISTED_ROWS__98_COMPANIES__225_ESTABLISHMENTS__106_REMITTANCE_AGENTS'."
+  },
+  {
+    "ui_id": "UI-VIS-CAT-PRV-COUNT-SEVERAL",
+    "label_en": "Several dated official counts, worded differently",
+    "label_ar": "عدة أعداد رسمية مؤرخة بصياغات مختلفة",
+    "use_rule": "Pre-Tranche-C P4 (V-D5). Chart label: provider_count_state value 'MULTIPLE_PRIMARY_DATED_COUNTS_WITH_DIFFERENT_WORDING'."
+  },
+  {
+    "ui_id": "UI-VIS-CAT-PRV-COUNT-MEMBERSHIP",
+    "label_en": "Network membership pages only",
+    "label_ar": "صفحات عضوية الشبكة فقط",
+    "use_rule": "Pre-Tranche-C P4 (V-D5). Chart label: provider_count_state value 'MEMBERSHIP_PAGES_ONLY'."
+  },
+  {
+    "ui_id": "UI-VIS-CAT-PRV-NAMED-COMPLETE",
+    "label_en": "Names complete for the source list",
+    "label_ar": "الأسماء مكتملة لقائمة المصدر",
+    "use_rule": "Pre-Tranche-C P4 (V-D5). Chart label: provider_named_state value 'COMPLETE_FOR_SOURCE_LIST'."
+  },
+  {
+    "ui_id": "UI-VIS-CAT-PRV-NAMED-COUNTS-ONLY",
+    "label_en": "Category counts complete; names not yet normalised row by row",
+    "label_ar": "أعداد الفئات مكتملة، ولم تُوحَّد الأسماء صفًا بصف بعد",
+    "use_rule": "Pre-Tranche-C P4 (V-D5). Chart label: provider_named_state value 'COMPLETE_CATEGORY_COUNTS__ROW_LEVEL_NAMES_NOT_YET_NORMALIZED_IN_PROVIDER_MASTER'."
+  },
+  {
+    "ui_id": "UI-VIS-CAT-PRV-NAMED-NONE",
+    "label_en": "No verified list of licensed names is held",
+    "label_ar": "لا توجد قائمة مضبوطة بأسماء الجهات المرخصة",
+    "use_rule": "Pre-Tranche-C P4 (V-D5). Chart label: provider_named_state value 'POSITIVE_NAMES_NOT_CONTROLLED'."
+  },
+  {
+    "ui_id": "UI-VIS-CAT-PRV-NAMED-PARTIAL",
+    "label_en": "Partial network membership, not the regulated universe",
+    "label_ar": "عضوية جزئية في الشبكة، ولا تمثل كامل الجهات الخاضعة للتنظيم",
+    "use_rule": "Pre-Tranche-C P4 (V-D5). Chart label: provider_named_state value 'PARTIAL_NETWORK_MEMBERSHIP_NOT_REGULATORY_UNIVERSE'."
+  },
+  {
+    "ui_id": "UI-VIS-CAT-PRV-EVENTS-NONE-APPLIED",
+    "label_en": "Bank status events not reviewed here",
+    "label_ar": "لم تُراجَع هنا أحداث وضع البنوك",
+    "use_rule": "Pre-Tranche-C P4 (V-D5). Chart label: provider_event_overlay value 'NO_BANK_STATUS_EVENT_OVERLAY_APPLIED_IN_THIS_UNIT'."
+  },
+  {
+    "ui_id": "UI-VIS-CAT-PRV-EVENTS-SELECTED-2026",
+    "label_en": "Selected 2026 status events shown; they are not subtracted from the list",
+    "label_ar": "تُعرض أحداث وضع مختارة لعام 2026، ولا تُطرح من القائمة",
+    "use_rule": "Pre-Tranche-C P4 (V-D5). Chart label: provider_event_overlay value 'SELECTED_2026_STATUS_OVERLAY__LATER_SUSPENSION_CLOSURE_EVENTS_MUST_NOT_BE_SUBTRACTED_MECHANICALLY'."
+  },
+  {
+    "ui_id": "UI-VIS-CAT-PRV-EVENTS-WALLETS",
+    "label_en": "2024 list of unlicensed names and dated wallet counts; no current register of licensed status",
+    "label_ar": "قائمة 2024 بالأسماء غير المرخصة وأعداد مؤرخة للمحافظ، ولا يوجد سجل حالي بحالة الترخيص",
+    "use_rule": "Pre-Tranche-C P4 (V-D5). Chart label: provider_event_overlay value '2024_NEGATIVE_AUTHORITY + 72_WALLET_COUNT_RECON__NO_POSITIVE_CURRENT_STATUS_LEDGER'."
+  },
+  {
+    "ui_id": "UI-VIS-CAT-PRV-EVENTS-NONE",
+    "label_en": "No status events held in this evidence base",
+    "label_ar": "لا تتضمن قاعدة الأدلة أحداثًا لوضع هذه الفئة",
+    "use_rule": "Pre-Tranche-C P4 (V-D5). Chart label: provider_event_overlay value 'NONE'."
+  },
+  {
+    "ui_id": "UI-VIS-CAT-PRV-LIMIT-BANKS",
+    "label_en": "List presence establishes licensing or listing only; operation is not inferred.",
+    "label_ar": "الظهور في القائمة يثبت الترخيص أو الإدراج فقط، ولا يُستنتج منه التشغيل.",
+    "use_rule": "Pre-Tranche-C P4 (V-D5). Chart label: provider_limit value 'List presence proves licensing/listing only; operation is not inferred.'."
+  },
+  {
+    "ui_id": "UI-VIS-CAT-PRV-LIMIT-EXCHANGE",
+    "label_en": "429 is the arithmetic sum of rows listed in the source across three classes, not a count of unique providers or of operating providers.",
+    "label_ar": "الرقم 429 مجموع حسابي لصفوف مدرجة في المصدر عبر ثلاث فئات، وليس عددًا لمقدمي خدمات فريدين ولا لمقدمي خدمات عاملين.",
+    "use_rule": "Pre-Tranche-C P4 (V-D5). Chart label: provider_limit value '429 is the arithmetic sum of source-listed rows across three classes, not a deduplicated unique-provider or currently operating-provider count.'."
+  },
+  {
+    "ui_id": "UI-VIS-CAT-PRV-LIMIT-EWALLETS",
+    "label_en": "Official sources report 7 e-wallets (2024 Q3), 9 e-wallets (2025 H1), 8 licensed e-wallets (2025-09-10) and more than 9 event participants (2026-01-22). The counts stay separate; no named current list of licensed wallets and payment service providers has yet been established.",
+    "label_ar": "تورد المصادر الرسمية 7 محافظ إلكترونية (الربع الثالث 2024)، و9 محافظ (النصف الأول 2025)، و8 محافظ مرخصة (2025-09-10)، وأكثر من 9 مشاركين في فعالية (2026-01-22). وتبقى هذه الأعداد منفصلة، ولم تُحسم بعد قائمة حالية مسماة بالمحافظ ومقدمي خدمات الدفع المرخصين.",
+    "use_rule": "Pre-Tranche-C P4 (V-D5). Chart label: provider_limit value 'Official objects report 7 e-wallets (2024 Q3), 9 e-wallets (2025 H1), 8 licensed e-wallets (2025-09-10), and >9 event participants (2026-01-22). Preserve separately; named positive current wallet/PSP universe remains open.'."
+  },
+  {
+    "ui_id": "UI-VIS-CAT-PRV-LIMIT-MFI",
+    "label_en": "Membership of the Yemen Microfinance Network (YMN) does not verify a licence or operation and is not a complete national universe.",
+    "label_ar": "العضوية في شبكة اليمن للتمويل الأصغر (YMN) لا تثبت الترخيص أو التشغيل، ولا تمثل حصرًا وطنيًا مكتملًا.",
+    "use_rule": "Pre-Tranche-C P4 (V-D5). Chart label: provider_limit value 'YMN membership presence is not licence or operation verification and is not a complete national universe.'."
+  },
+  {
+    "ui_id": "UI-VIS-CAT-PRV-EVCLASS-EWALLET",
+    "label_en": "E-wallet or electronic payment service",
+    "label_ar": "محفظة إلكترونية أو خدمة دفع إلكتروني",
+    "use_rule": "Pre-Tranche-C P4 (V-D5). Chart label: provider_event_class value 'E_WALLET_OR_ELECTRONIC_PAYMENT_SERVICE'."
+  },
+  {
+    "ui_id": "UI-VIS-CAT-PRV-EVCLASS-COMPANY-OR-EST",
+    "label_en": "Exchange company or establishment",
+    "label_ar": "شركة أو منشأة صرافة",
+    "use_rule": "Pre-Tranche-C P4 (V-D5). Chart label: provider_event_class value 'EXCHANGE_COMPANY_OR_ESTABLISHMENT'."
+  },
+  {
+    "ui_id": "UI-VIS-CAT-PRV-EVCLASS-EST-AGENT",
+    "label_en": "Exchange establishment and remittance agent",
+    "label_ar": "منشأة صرافة ووكيل حوالات",
+    "use_rule": "Pre-Tranche-C P4 (V-D5). Chart label: provider_event_class value 'EXCHANGE_ESTABLISHMENT_AND_REMITTANCE_AGENT'."
+  },
+  {
+    "ui_id": "UI-VIS-CAT-PRV-EVCLASS-COMPANY-EST-AGENTS",
+    "label_en": "Exchange company, establishment and remittance agents",
+    "label_ar": "شركة صرافة ومنشأة صرافة ووكلاء حوالات",
+    "use_rule": "Pre-Tranche-C P4 (V-D5). Chart label: provider_event_class value 'EXCHANGE_COMPANY_ESTABLISHMENT_AND_REMITTANCE_AGENTS'."
+  },
+  {
+    "ui_id": "UI-VIS-CAT-PRV-EVCLASS-BRANCH",
+    "label_en": "Exchange branch",
+    "label_ar": "فرع صرافة",
+    "use_rule": "Pre-Tranche-C P4 (V-D5). Chart label: provider_event_class value 'EXCHANGE_BRANCH'."
+  },
+  {
+    "ui_id": "UI-VIS-CAT-PRV-EVCLASS-ESTABLISHMENT",
+    "label_en": "Exchange establishment",
+    "label_ar": "منشأة صرافة",
+    "use_rule": "Pre-Tranche-C P4 (V-D5). Chart label: provider_event_class value 'EXCHANGE_ESTABLISHMENT'."
+  },
+  {
+    "ui_id": "UI-VIS-CAT-PRV-EVCLASS-AGENT",
+    "label_en": "Remittance agent",
+    "label_ar": "وكيل حوالات",
+    "use_rule": "Pre-Tranche-C P4 (V-D5). Chart label: provider_event_class value 'REMITTANCE_AGENT'."
+  },
+  {
+    "ui_id": "UI-VIS-CAT-PRV-EVCLASS-COMPANY",
+    "label_en": "Exchange company",
+    "label_ar": "شركة صرافة",
+    "use_rule": "Pre-Tranche-C P4 (V-D5). Chart label: provider_event_class value 'EXCHANGE_COMPANY'."
+  },
+  {
+    "ui_id": "UI-VIS-CAT-PRV-EVCLASS-COMPANY-ESTS-AGENT",
+    "label_en": "Exchange company establishments and remittance agent",
+    "label_ar": "منشآت شركة صرافة ووكيل حوالات",
+    "use_rule": "Pre-Tranche-C P4 (V-D5). Chart label: provider_event_class value 'EXCHANGE_COMPANY_ESTABLISHMENTS_AND_REMITTANCE_AGENT'."
+  },
+  {
+    "ui_id": "UI-VIS-CAT-PRV-STATUS-PROHIBITED",
+    "label_en": "Dealing prohibited as of the source date (unlicensed on that date)",
+    "label_ar": "حُظر التعامل في تاريخ المصدر (غير مرخص في ذلك التاريخ)",
+    "use_rule": "Pre-Tranche-C P4 (V-D5). Chart label: provider_status value 'PROHIBITED_DEALING__UNLICENSED_AS_SOURCE_DATED'."
+  },
+  {
+    "ui_id": "UI-VIS-CAT-PRV-STATUS-SUSPENDED",
+    "label_en": "Licence suspended and closure ordered",
+    "label_ar": "إيقاف الترخيص والأمر بالإغلاق",
+    "use_rule": "Pre-Tranche-C P4 (V-D5). Chart label: provider_status value 'LICENCE_SUSPENSION_AND_CLOSURE_EVENT'."
+  },
+  {
+    "ui_id": "UI-VIS-CAT-PRV-STATUS-WITHDRAWN",
+    "label_en": "Licence withdrawn",
+    "label_ar": "سحب الترخيص",
+    "use_rule": "Pre-Tranche-C P4 (V-D5). Chart label: provider_status value 'LICENCE_WITHDRAWAL_EVENT'."
+  },
+  {
+    "ui_id": "UI-VIS-CAT-PRV-STATUS-NAMED-UNLICENSED",
+    "label_en": "Named as unlicensed on the source date",
+    "label_ar": "ورد اسمه بوصفه غير مرخص في تاريخ المصدر",
+    "use_rule": "Pre-Tranche-C P4 (V-D5). Chart label: provider_status value 'UNLICENSED_AS_NAMED_IN_SOURCE_ON_SOURCE_DATE'."
+  },
+  {
+    "ui_id": "UI-VIS-CAT-PRV-STATUS-ADMIN-COUNT",
+    "label_en": "Official administrative count",
+    "label_ar": "عدد إداري رسمي",
+    "use_rule": "Pre-Tranche-C P4 (V-D5). Chart label: provider_status value 'PRIMARY_ADMINISTRATIVE_COUNT'."
+  },
+  {
+    "ui_id": "UI-VIS-CAT-PRV-STATUS-LICENSING-STATEMENT",
+    "label_en": "Official dated statement on licensing",
+    "label_ar": "بيان رسمي مؤرخ بشأن الترخيص",
+    "use_rule": "Pre-Tranche-C P4 (V-D5). Chart label: provider_status value 'PRIMARY_OFFICIAL_DATED_LICENSING_STATEMENT'."
+  },
+  {
+    "ui_id": "UI-VIS-CAT-PRV-STATUS-EVENT-PARTICIPATION",
+    "label_en": "Official record of participation in an event",
+    "label_ar": "سجل رسمي للمشاركة في فعالية",
+    "use_rule": "Pre-Tranche-C P4 (V-D5). Chart label: provider_status value 'PRIMARY_OFFICIAL_EVENT_PARTICIPATION'."
+  },
+  {
+    "ui_id": "UI-VIS-BASELINE",
+    "label_en": "Baseline — the starting value the project reports",
+    "label_ar": "خط الأساس — القيمة الابتدائية التي يوردها المشروع",
+    "use_rule": "Pre-Tranche-C P4 (V-D5). Visual grammar: the starting value of a target/result comparison."
+  },
+  {
+    "ui_id": "UI-VIS-NOT-PAY-CARDS",
+    "label_en": "Not people, and not active cardholders",
+    "label_ar": "ليست أشخاصًا، ولا حاملي بطاقات نشطين",
+    "use_rule": "Pre-Tranche-C P4 (re-verification R5). In-frame chart text."
+  },
+  {
+    "ui_id": "UI-VIS-NOT-PAY-ACCOUNTS",
+    "label_en": "Not people, and not active accounts",
+    "label_ar": "ليست أشخاصًا، ولا حسابات نشطة",
+    "use_rule": "Pre-Tranche-C P4 (re-verification R5). In-frame chart text."
+  },
+  {
+    "ui_id": "UI-VIS-NOT-PAY-EWALLETS",
+    "label_en": "Not users: a count of wallet products",
+    "label_ar": "ليست مستخدمين: عدد منتجات المحافظ",
+    "use_rule": "Pre-Tranche-C P4 (re-verification R5). In-frame chart text."
+  },
+  {
+    "ui_id": "UI-VIS-NOT-PAY-EWALLET-SUBSCRIBERS",
+    "label_en": "Not unique people, and not active users",
+    "label_ar": "ليسوا أشخاصًا فريدين، ولا مستخدمين نشطين",
+    "use_rule": "Pre-Tranche-C P4 (re-verification R5). In-frame chart text."
+  },
+  {
+    "ui_id": "UI-VIS-NOT-PAY-ATMS",
+    "label_en": "Infrastructure, not use",
+    "label_ar": "بنية تحتية، لا استخدام",
+    "use_rule": "Pre-Tranche-C P4 (re-verification R5). In-frame chart text."
+  },
+  {
+    "ui_id": "UI-VIS-NOT-PAY-POS-TERMINALS",
+    "label_en": "Infrastructure, not use",
+    "label_ar": "بنية تحتية، لا استخدام",
+    "use_rule": "Pre-Tranche-C P4 (re-verification R5). In-frame chart text."
+  },
+  {
+    "ui_id": "UI-VIS-NOT-PAY-POS-TRANSACTIONS",
+    "label_en": "Events, not people",
+    "label_ar": "أحداث، لا أشخاص",
+    "use_rule": "Pre-Tranche-C P4 (re-verification R5). In-frame chart text."
+  },
+  {
+    "ui_id": "UI-VIS-RPW-AVERAGE-NOTE",
+    "label_en": "Average of quotes for this amount — not the cost of all remittances",
+    "label_ar": "متوسط عروض الأسعار لهذا المبلغ — وليس تكلفة جميع الحوالات",
+    "use_rule": "Pre-Tranche-C P4 (re-verification R5). In-frame chart text."
+  },
+  {
+    "ui_id": "UI-VIS-UNIT-INDEX-2021",
+    "label_en": "Index, 2021 = 100",
+    "label_ar": "مؤشر، 2021 = 100",
+    "use_rule": "Pre-Tranche-C P5.3. Unit of an indexed path (each series divided by its own 2021 value, × 100)."
+  },
+  {
+    "ui_id": "UI-EVID-READING-GUIDANCE-H",
+    "label_en": "How to read this evidence",
+    "label_ar": "كيف تقرأ هذا الدليل",
+    "use_rule": "Tranche C TC-S1. Heading of the reading guidance on every Evidence Record (was 03 section 2 on 110 routes)."
+  },
+  {
+    "ui_id": "UI-EVID-READING-GUIDANCE",
+    "label_en": "Read this evidence within the definition, population or group covered, calculation base where relevant, period, geography and method shown on the page. Before reusing or comparing it, check the source, limitations, evidence date and correction history. If a value or source link is unavailable, the page says so rather than filling the gap by inference. This resource does not host source files; where an original-source link is given, check the publisher’s terms before republishing.",
+    "label_ar": "يُقرأ هذا الدليل ضمن التعريف، والمجتمع الذي ينطبق عليه الرقم أو قاعدة الاحتساب عند الحاجة، والفترة، والجغرافيا، والطريقة المبينة في الصفحة. وقبل إعادة استخدامه أو مقارنته، راجع المصدر والحدود وحداثة الدليل وسجل التصحيح. وإذا كانت قيمة أو وصلة مصدر غير متاحة، تُذكر الفجوة صراحةً بدل ملئها بالاستنتاج. ولا يستضيف هذا المورد ملفات المصادر؛ وحيثما وُجد رابط للمصدر الأصلي، تحقق من شروط الناشر قبل إعادة النشر.",
+    "use_rule": "Tranche C TC-S1. Reading guidance on every Evidence Record; TRUST-03/EN-23: no download is offered, so the old 'Download and reuse are offered only where source rights permit' sentence is replaced."
+  },
+  {
+    "ui_id": "UI-VIS-CAT-FINDEX-SECONDARY-EDU",
+    "label_en": "Adults with secondary education or more",
+    "label_ar": "البالغون الحاصلون على تعليم ثانوي أو أعلى",
+    "use_rule": "Tranche C TC-A. Chart label: findex_group value 'secondary education or more'."
+  },
+  {
+    "ui_id": "UI-VIS-CAT-FINDEX-AGE-15-24",
+    "label_en": "Young adults (ages 15–24)",
+    "label_ar": "الشباب (15–24 سنة)",
+    "use_rule": "Tranche C TC-A. Chart label: findex_group value 'ages 15-24'."
+  },
+  {
+    "ui_id": "UI-VIS-CAT-FINDEX-AGE-25-PLUS",
+    "label_en": "Adults aged 25 and over",
+    "label_ar": "البالغون بعمر 25 سنة فأكثر",
+    "use_rule": "Tranche C TC-A. Chart label: findex_group value 'ages 25+'."
+  },
+  {
+    "ui_id": "UI-VIS-UNIT-PCT-AGES-15-24",
+    "label_en": "% of young adults (ages 15–24)",
+    "label_ar": "% من الشباب (15–24 سنة)",
+    "use_rule": "Tranche C TC-A. Chart label: unit value 'percent of population ages 15-24'."
+  },
+  {
+    "ui_id": "UI-VIS-UNIT-PCT-AGES-25-PLUS",
+    "label_en": "% of adults aged 25 and over",
+    "label_ar": "% من البالغين بعمر 25 سنة فأكثر",
+    "use_rule": "Tranche C TC-A. Chart label: unit value 'percent of population ages 25+'."
+  },
+  {
+    "ui_id": "UI-SOURCE-UNTITLED",
+    "label_en": "Original source",
+    "label_ar": "المصدر الأصلي",
+    "use_rule": "Tranche C TC-B. Name of a source card whose title is not governed; the reference is shown separately, never as a name."
+  },
+  {
+    "ui_id": "UI-SOURCE-REFERENCE",
+    "label_en": "Reference",
+    "label_ar": "المرجع",
+    "use_rule": "Tranche C TC-B. Label before a source's stable reference."
+  },
+  {
+    "ui_id": "UI-VIS-CAT-LANE-PEOPLE-SURVEY",
+    "label_en": "People (survey)",
+    "label_ar": "الأفراد (بيانات مسحية)",
+    "use_rule": "Tranche C TC-E (VIS-02). Lane title, RV-CWR-004."
+  },
+  {
+    "ui_id": "UI-VIS-CAT-LANE-PAYMENT-INFRA-ADMIN",
+    "label_en": "Payment infrastructure (administrative)",
+    "label_ar": "بنية المدفوعات (بيانات إدارية)",
+    "use_rule": "Tranche C TC-E (VIS-02). Lane title, RV-CWR-004."
+  },
+  {
+    "ui_id": "UI-VIS-CAT-LANE-INSTITUTIONS-REFORMS",
+    "label_en": "Institutions and reforms",
+    "label_ar": "المؤسسات والإصلاحات",
+    "use_rule": "Tranche C TC-E (VIS-02). Lane title, RV-CWR-004."
+  },
+  {
+    "ui_id": "UI-VIS-CAT-METRIC-ACCOUNT-OWNERSHIP",
+    "label_en": "Account ownership",
+    "label_ar": "امتلاك الحساب",
+    "use_rule": "Tranche C TC-E (VIS-02). Metric label: Findex account ownership (findex_metric)."
+  },
+  {
+    "ui_id": "UI-VIS-NOTE-MFI-2023-SECONDARY",
+    "label_en": "Sector figure from a secondary source; provider set not verified",
+    "label_ar": "رقم للقطاع من مصدر ثانوي؛ ولم يُتحقق من مجموعة مقدمي الخدمات التي يغطيها",
+    "use_rule": "Tranche C TC-E (VIS-03). Note on the 2023 microfinance anchor."
+  },
+  {
+    "ui_id": "UI-VIS-NOTE-INDEX-CONCORDANCE",
+    "label_en": "The two indexed paths are almost identical, and the ratio between their levels hardly changes. This closeness does not show that the two series independently confirm the trend.",
+    "label_ar": "المساران المؤشَّران شبه متطابقين، ونسبة مستوى أحدهما إلى الآخر شبه ثابتة. ولا يبيّن هذا التقارب أن السلسلتين تؤكدان الاتجاه كلٌّ على نحو مستقل.",
+    "use_rule": "Tranche C TC-E (VIS-13). In-frame note, RV-CWR-001 panel 2."
+  },
+  {
+    "ui_id": "UI-VIS-NOTE-FINDEX-SAMPLE",
+    "label_en": "Survey estimates from 1,000 respondents; margins of error are not shown.",
+    "label_ar": "تقديرات مسحية من 1,000 مستجيب؛ ولا تُعرض هوامش الخطأ.",
+    "use_rule": "Tranche C TC-E (VIS-15). In-frame sampling note, VIS-FINDEX-GAPS."
+  },
+  {
+    "ui_id": "UI-VIS-NOTE-NOT-COMPARABLE-2024Q3",
+    "label_en": "Not comparable with the 2024 Q3 bulletin",
+    "label_ar": "لا يُقارن بنشرة الربع الثالث 2024",
+    "use_rule": "Tranche C TC-E (VIS-19). Card note for flagged payment objects, VIS-PAYMENT-ANATOMY."
+  },
+  {
+    "ui_id": "UI-PRODUCT-NAME",
+    "label_en": "Yemen Financial Inclusion Evidence",
+    "label_ar": "أدلة الشمول المالي في اليمن",
+    "use_rule": "Tranche C TC-F. Resource name in citations."
+  },
+  {
+    "ui_id": "UI-CONTENT-VERSION",
+    "label_en": "Content version of 26 September 2026",
+    "label_ar": "إصدار المحتوى بتاريخ 26 سبتمبر 2026",
+    "use_rule": "Tranche C TC-F (VER-07/TOOL-14). Content version cited with every record; changes only with a governed release."
+  },
+  {
+    "ui_id": "UI-NOSCRIPT-NOTE",
+    "label_en": "Search, Compare and the copy buttons need JavaScript. Every page of evidence remains readable without it.",
+    "label_ar": "يحتاج البحث والمقارنة وأزرار النسخ إلى JavaScript، وتبقى كل صفحات الأدلة قابلة للقراءة من دونه.",
+    "use_rule": "Tranche C TC-F (TOOL-17)."
+  },
+  {
+    "ui_id": "UI-ANSWER-CRUMB-LABEL",
+    "label_en": "The question this page answers",
+    "label_ar": "السؤال الذي تجيب عنه هذه الصفحة",
+    "use_rule": "Tranche C TC-F (JRN-07). Accessible name of the answer-page crumb."
+  },
+  {
+    "ui_id": "UI-ANSWER-ALL-RECORDS",
+    "label_en": "All evidence records on this question",
+    "label_ar": "كل سجلات الأدلة المتعلقة بهذا السؤال",
+    "use_rule": "Tranche C TC-F (JRN-03)."
+  },
+  {
+    "ui_id": "UI-HOME-FIGURES-EVIDENCE",
+    "label_en": "Evidence records behind these figures",
+    "label_ar": "سجلات الأدلة وراء هذه الأرقام",
+    "use_rule": "Tranche C TC-F (JRN-03). Home."
+  },
+  {
+    "ui_id": "UI-RELATED-QUESTIONS",
+    "label_en": "Related questions",
+    "label_ar": "أسئلة ذات صلة",
+    "use_rule": "Tranche C TC-F (JRN-12)."
+  },
+  {
+    "ui_id": "UI-RELATED-QUESTIONS-NOTE",
+    "label_en": "These pages answer connected questions. A link between two pages is not evidence that a change in one causes a change in the other.",
+    "label_ar": "تجيب هذه الصفحات عن أسئلة مترابطة. ولا يُعد الرابط بين صفحتين دليلًا على أن التغير في إحداهما يسبب تغيرًا في الأخرى.",
+    "use_rule": "Tranche C TC-F (JRN-12)."
+  },
+  {
+    "ui_id": "UI-CHRONOLOGY-H",
+    "label_en": "Dated events in Yemen's financial system",
+    "label_ar": "أحداث مؤرخة في النظام المالي في اليمن",
+    "use_rule": "Tranche C TC-F (JRN-09)."
+  },
+  {
+    "ui_id": "UI-CHRONOLOGY-INTRO",
+    "label_en": "Each event keeps its date, its source and what it does not establish. The order of events does not show that one caused another.",
+    "label_ar": "يحتفظ كل حدث بتاريخه ومصدره وما لا يثبته. ولا يبيّن ترتيب الأحداث أن أحدها تسبب في غيره.",
+    "use_rule": "Tranche C TC-F (JRN-09)."
+  },
+  {
+    "ui_id": "UI-CHRONOLOGY-RELEVANCE",
+    "label_en": "Relevance to financial inclusion:",
+    "label_ar": "الصلة بالشمول المالي:",
+    "use_rule": "Tranche C TC-F (JRN-09)."
+  },
+  {
+    "ui_id": "UI-CHRONOLOGY-SOURCES",
+    "label_en": "Sources:",
+    "label_ar": "المصادر:",
+    "use_rule": "Tranche C TC-F (JRN-09)."
+  },
+  {
+    "ui_id": "UI-MA-OPEN",
+    "label_en": "Open this measurement priority",
+    "label_ar": "افتح أولوية القياس هذه",
+    "use_rule": "Tranche C TC-F (JRN-10)."
+  },
+  {
+    "ui_id": "UI-MA-MORE",
+    "label_en": "More about this priority",
+    "label_ar": "المزيد عن هذه الأولوية",
+    "use_rule": "Tranche C TC-F (JRN-10)."
+  },
+  {
+    "ui_id": "UI-MA-GUARDRAIL",
+    "label_en": "Measurement guardrail",
+    "label_ar": "ضابط القياس",
+    "use_rule": "Tranche C TC-F (JRN-10)."
+  },
+  {
+    "ui_id": "UI-MA-FEASIBILITY",
+    "label_en": "Feasibility",
+    "label_ar": "إمكانية التنفيذ",
+    "use_rule": "Tranche C TC-F (JRN-10)."
+  },
+  {
+    "ui_id": "UI-MA-BASIS",
+    "label_en": "Why this is a priority",
+    "label_ar": "سبب الأولوية",
+    "use_rule": "Tranche C TC-F (JRN-10)."
+  },
+  {
+    "ui_id": "UI-MA-CHANGES",
+    "label_en": "What the measurement would change",
+    "label_ar": "ما الذي سيغيّره القياس",
+    "use_rule": "Tranche C TC-F (JRN-10)."
+  },
+  {
+    "ui_id": "UI-MEASURE-REVEALING-RECORDS",
+    "label_en": "Evidence records that revealed these gaps",
+    "label_ar": "سجلات الأدلة التي كشفت هذه الفجوات",
+    "use_rule": "Tranche C TC-F (JRN-16)."
+  },
+  {
+    "ui_id": "UI-HUB-START-HERE",
+    "label_en": "Start here: selected evidence records",
+    "label_ar": "ابدأ من هنا: سجلات أدلة مختارة",
+    "use_rule": "Tranche C TC-F (JRN-16/17)."
+  },
+  {
+    "ui_id": "UI-RELATED-RECORDS",
+    "label_en": "Related evidence records",
+    "label_ar": "سجلات أدلة ذات صلة",
+    "use_rule": "Tranche C TC-F (JRN-16)."
+  },
+  {
+    "ui_id": "UI-EXPLORE-CANNOT-ANSWER",
+    "label_en": "What the evidence cannot yet answer",
+    "label_ar": "ما لا تستطيع الأدلة الإجابة عنه بعد",
+    "use_rule": "Tranche C TC-F (JRN-16)."
+  },
+  {
+    "ui_id": "UI-RELATED-MEASUREMENT",
+    "label_en": "Related measurement priorities",
+    "label_ar": "أولويات قياس ذات صلة",
+    "use_rule": "Tranche C TC-F (JRN-16)."
+  },
+  {
+    "ui_id": "UI-HUB-ALL-RECORDS",
+    "label_en": "All evidence records, by question",
+    "label_ar": "كل سجلات الأدلة، بحسب السؤال",
+    "use_rule": "Tranche C TC-F (JRN-17)."
+  },
+  {
+    "ui_id": "UI-HUB-OTHER",
+    "label_en": "Method, context and other records",
+    "label_ar": "سجلات المنهج والسياق وغيرها",
+    "use_rule": "Tranche C TC-F (JRN-17)."
+  },
+  {
+    "ui_id": "UI-READING-RETURN",
+    "label_en": "Return to the question",
+    "label_ar": "عد إلى السؤال",
+    "use_rule": "Tranche C TC-F (JRN-02)."
+  }
+]

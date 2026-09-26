@@ -1,0 +1,61 @@
+{
+ "root": "AIR-001",
+ "finding": "AUTH-INT-001",
+ "sheet": "14_SYSTEM_CHRONOLOGY",
+ "entry_master_sha256": "e69804106e04d093098688f2d01cea51e13191f255d774a090f3e5dd8dec9bc7",
+ "certified_projection_sha256": "8d058126762ab67dd0e74a6d91c28bc669193fe3b28379afdf45668b6e9ec2c6",
+ "rows_restored": [
+  {
+   "row": 19,
+   "restored_event_id": "YSC-014"
+  },
+  {
+   "row": 20,
+   "restored_event_id": "YSC-015"
+  },
+  {
+   "row": 21,
+   "restored_event_id": "YSC-016"
+  },
+  {
+   "row": 22,
+   "restored_event_id": "YSC-017"
+  },
+  {
+   "row": 23,
+   "restored_event_id": "YSC-018"
+  },
+  {
+   "row": 24,
+   "restored_event_id": "YSC-019"
+  },
+  {
+   "row": 25,
+   "restored_event_id": "YSC-021"
+  },
+  {
+   "row": 26,
+   "restored_event_id": "YSC-022"
+  },
+  {
+   "row": 27,
+   "restored_event_id": "YSC-023"
+  },
+  {
+   "row": 28,
+   "restored_event_id": "YSC-020"
+  }
+ ],
+ "cells_written": 162,
+ "row17_fields": [
+  "system_implication_en",
+  "system_implication_ar"
+ ],
+ "verification": {
+  "sheet_equals_certified_projection": true,
+  "event_ids_unique": true,
+  "event_count": 24,
+  "other_sheets_unchanged": true
+ },
+ "output_master_sha256": "b010b60dbcc5bd40684c2093381277fc995625383260fe6a631618b463db2938"
+}

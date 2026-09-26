@@ -1,0 +1,297 @@
+{
+ "transaction": "TC-F",
+ "summary": "04 interface copy for generator/runtime fixes; 3 search aliases",
+ "input_master_sha256": "1b370e06e19694ddac29a34e351bb51473d40c0d22a54996d23c7cc3a54a9594",
+ "output_master_sha256": "df36c54c42d372572c5389ccd89dfd17738d2ec13ad058ba529d15886dcc20fd",
+ "cells_written": 32,
+ "changes": [
+  {
+   "finding": "TC-F",
+   "sheet": "04_NAV_UX",
+   "row": null,
+   "col": null,
+   "field": "UI-PRODUCT-NAME",
+   "old": null,
+   "new": "Yemen Financial Inclusion Evidence || أدلة الشمول المالي في اليمن"
+  },
+  {
+   "finding": "TC-F",
+   "sheet": "04_NAV_UX",
+   "row": null,
+   "col": null,
+   "field": "UI-CONTENT-VERSION",
+   "old": null,
+   "new": "Content version of 26 September 2026 || إصدار المحتوى بتاريخ 26 سبتمبر 2026"
+  },
+  {
+   "finding": "TC-F",
+   "sheet": "04_NAV_UX",
+   "row": null,
+   "col": null,
+   "field": "UI-NOSCRIPT-NOTE",
+   "old": null,
+   "new": "Search, Compare and the copy buttons need JavaScript. Every page of evidence remains readable without it. || يحتاج البحث والمقارنة وأزرار النسخ إلى JavaScript، وتبقى كل صفحات الأدلة قابلة للقراءة من دونه."
+  },
+  {
+   "finding": "TC-F",
+   "sheet": "04_NAV_UX",
+   "row": null,
+   "col": null,
+   "field": "UI-ANSWER-CRUMB-LABEL",
+   "old": null,
+   "new": "The question this page answers || السؤال الذي تجيب عنه هذه الصفحة"
+  },
+  {
+   "finding": "TC-F",
+   "sheet": "04_NAV_UX",
+   "row": null,
+   "col": null,
+   "field": "UI-ANSWER-ALL-RECORDS",
+   "old": null,
+   "new": "All evidence records on this question || كل سجلات الأدلة المتعلقة بهذا السؤال"
+  },
+  {
+   "finding": "TC-F",
+   "sheet": "04_NAV_UX",
+   "row": null,
+   "col": null,
+   "field": "UI-HOME-FIGURES-EVIDENCE",
+   "old": null,
+   "new": "Evidence records behind these figures || سجلات الأدلة وراء هذه الأرقام"
+  },
+  {
+   "finding": "TC-F",
+   "sheet": "04_NAV_UX",
+   "row": null,
+   "col": null,
+   "field": "UI-RELATED-QUESTIONS",
+   "old": null,
+   "new": "Related questions || أسئلة ذات صلة"
+  },
+  {
+   "finding": "TC-F",
+   "sheet": "04_NAV_UX",
+   "row": null,
+   "col": null,
+   "field": "UI-RELATED-QUESTIONS-NOTE",
+   "old": null,
+   "new": "These pages answer connected questions. A link between two pages is not evidence that a change in one causes a change in the other. || تجيب هذه الصفحات عن أسئلة مترابطة. ولا يُعد الرابط بين صفحتين دليلًا على أن التغير في إحداهما يسبب تغيرًا في الأخرى."
+  },
+  {
+   "finding": "TC-F",
+   "sheet": "04_NAV_UX",
+   "row": null,
+   "col": null,
+   "field": "UI-CHRONOLOGY-H",
+   "old": null,
+   "new": "Dated events in Yemen's financial system || أحداث مؤرخة في النظام المالي في اليمن"
+  },
+  {
+   "finding": "TC-F",
+   "sheet": "04_NAV_UX",
+   "row": null,
+   "col": null,
+   "field": "UI-CHRONOLOGY-INTRO",
+   "old": null,
+   "new": "Each event keeps its date, its source and what it does not establish. The order of events does not show that one caused another. || يحتفظ كل حدث بتاريخه ومصدره وما لا يثبته. ولا يبيّن ترتيب الأحداث أن أحدها تسبب في غيره."
+  },
+  {
+   "finding": "TC-F",
+   "sheet": "04_NAV_UX",
+   "row": null,
+   "col": null,
+   "field": "UI-CHRONOLOGY-RELEVANCE",
+   "old": null,
+   "new": "Relevance to financial inclusion: || الصلة بالشمول المالي:"
+  },
+  {
+   "finding": "TC-F",
+   "sheet": "04_NAV_UX",
+   "row": null,
+   "col": null,
+   "field": "UI-CHRONOLOGY-SOURCES",
+   "old": null,
+   "new": "Sources: || المصادر:"
+  },
+  {
+   "finding": "TC-F",
+   "sheet": "04_NAV_UX",
+   "row": null,
+   "col": null,
+   "field": "UI-MA-OPEN",
+   "old": null,
+   "new": "Open this measurement priority || افتح أولوية القياس هذه"
+  },
+  {
+   "finding": "TC-F",
+   "sheet": "04_NAV_UX",
+   "row": null,
+   "col": null,
+   "field": "UI-MA-MORE",
+   "old": null,
+   "new": "More about this priority || المزيد عن هذه الأولوية"
+  },
+  {
+   "finding": "TC-F",
+   "sheet": "04_NAV_UX",
+   "row": null,
+   "col": null,
+   "field": "UI-MA-GUARDRAIL",
+   "old": null,
+   "new": "Measurement guardrail || ضابط القياس"
+  },
+  {
+   "finding": "TC-F",
+   "sheet": "04_NAV_UX",
+   "row": null,
+   "col": null,
+   "field": "UI-MA-FEASIBILITY",
+   "old": null,
+   "new": "Feasibility || إمكانية التنفيذ"
+  },
+  {
+   "finding": "TC-F",
+   "sheet": "04_NAV_UX",
+   "row": null,
+   "col": null,
+   "field": "UI-MA-BASIS",
+   "old": null,
+   "new": "Why this is a priority || سبب الأولوية"
+  },
+  {
+   "finding": "TC-F",
+   "sheet": "04_NAV_UX",
+   "row": null,
+   "col": null,
+   "field": "UI-MA-CHANGES",
+   "old": null,
+   "new": "What the measurement would change || ما الذي سيغيّره القياس"
+  },
+  {
+   "finding": "TC-F",
+   "sheet": "04_NAV_UX",
+   "row": null,
+   "col": null,
+   "field": "UI-MEASURE-REVEALING-RECORDS",
+   "old": null,
+   "new": "Evidence records that revealed these gaps || سجلات الأدلة التي كشفت هذه الفجوات"
+  },
+  {
+   "finding": "TC-F",
+   "sheet": "04_NAV_UX",
+   "row": null,
+   "col": null,
+   "field": "UI-HUB-START-HERE",
+   "old": null,
+   "new": "Start here: selected evidence records || ابدأ من هنا: سجلات أدلة مختارة"
+  },
+  {
+   "finding": "TC-F",
+   "sheet": "04_NAV_UX",
+   "row": null,
+   "col": null,
+   "field": "UI-RELATED-RECORDS",
+   "old": null,
+   "new": "Related evidence records || سجلات أدلة ذات صلة"
+  },
+  {
+   "finding": "TC-F",
+   "sheet": "04_NAV_UX",
+   "row": null,
+   "col": null,
+   "field": "UI-EXPLORE-CANNOT-ANSWER",
+   "old": null,
+   "new": "What the evidence cannot yet answer || ما لا تستطيع الأدلة الإجابة عنه بعد"
+  },
+  {
+   "finding": "TC-F",
+   "sheet": "04_NAV_UX",
+   "row": null,
+   "col": null,
+   "field": "UI-RELATED-MEASUREMENT",
+   "old": null,
+   "new": "Related measurement priorities || أولويات قياس ذات صلة"
+  },
+  {
+   "finding": "TC-F",
+   "sheet": "04_NAV_UX",
+   "row": null,
+   "col": null,
+   "field": "UI-HUB-ALL-RECORDS",
+   "old": null,
+   "new": "All evidence records, by question || كل سجلات الأدلة، بحسب السؤال"
+  },
+  {
+   "finding": "TC-F",
+   "sheet": "04_NAV_UX",
+   "row": null,
+   "col": null,
+   "field": "UI-HUB-OTHER",
+   "old": null,
+   "new": "Method, context and other records || سجلات المنهج والسياق وغيرها"
+  },
+  {
+   "finding": "TC-F",
+   "sheet": "04_NAV_UX",
+   "row": null,
+   "col": null,
+   "field": "UI-READING-RETURN",
+   "old": null,
+   "new": "Return to the question || عد إلى السؤال"
+  },
+  {
+   "finding": "TC-F:JRN-06",
+   "sheet": "04_NAV_UX",
+   "row": null,
+   "col": null,
+   "field": "SEARCH-ALIAS-025",
+   "old": null,
+   "new": "women; woman; female; gender; gender gap || المرأة; امرأة; النساء; نساء; الإناث; النوع الاجتماعي; فجوة النوع الاجتماعي; الفجوة بين الجنسين -> route:/people/"
+  },
+  {
+   "finding": "TC-F:JRN-06",
+   "sheet": "04_NAV_UX",
+   "row": null,
+   "col": null,
+   "field": "SEARCH-ALIAS-026",
+   "old": null,
+   "new": "humanitarian; cash transfer; cash transfers; social protection; G2P || إنساني; المساعدات الإنسانية; التحويلات النقدية; الحماية الاجتماعية; مدفوعات الحكومة للأفراد -> route:/readings/after-transfer-persistence/ | route:/payments/"
+  },
+  {
+   "finding": "TC-F:JRN-06",
+   "sheet": "04_NAV_UX",
+   "row": null,
+   "col": null,
+   "field": "SEARCH-ALIAS-027",
+   "old": null,
+   "new": "licence; license; licensing; suspension; closure || ترخيص; تراخيص; إيقاف; تعليق; إغلاق -> route:/providers/ | document_type:decision/enforcement"
+  },
+  {
+   "finding": "TC-F:JRN-06",
+   "sheet": "04_NAV_UX",
+   "row": 304,
+   "col": 2,
+   "field": "SEARCH-ALIAS-011.terms_en",
+   "old": "measurement agenda",
+   "new": "measurement; measurement agenda; measurement priorities"
+  },
+  {
+   "finding": "TC-F:EN-27",
+   "sheet": "10_MEASUREMENT_AGENDA",
+   "row": 7,
+   "col": 24,
+   "field": "MA-003.what_changes_en",
+   "old": "Separates three questions that require different evidence: whether a disparity is measured, what is associated with it, and what design could test a causal mechanism or intervention.",
+   "new": "Keeps apart what needs different evidence: whether a disparity is measured, what is associated with it, and what design could test a causal mechanism or intervention."
+  },
+  {
+   "finding": "TC-F:EN-27",
+   "sheet": "10_MEASUREMENT_AGENDA",
+   "row": 7,
+   "col": 25,
+   "field": "MA-003.what_changes_ar",
+   "old": "يفصل بين ثلاثة أسئلة تحتاج أدلة مختلفة: هل يوجد تفاوت مقاس، وما العوامل المرتبطة به، وما التصميم القادر على اختبار آلية سببية أو تدخل.",
+   "new": "يفصل بين ما يحتاج أدلة مختلفة: هل يوجد تفاوت مقاس، وما العوامل المرتبطة به، وما التصميم القادر على اختبار آلية سببية أو تدخل."
+  }
+ ]
+}

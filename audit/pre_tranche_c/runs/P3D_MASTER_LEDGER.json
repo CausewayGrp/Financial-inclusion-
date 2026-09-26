@@ -1,0 +1,243 @@
+{
+ "transaction": "P3-D",
+ "scope": "Arabic period/universe for the twelve visuals without an Evidence Record",
+ "input_master_sha256": "ed85f47bda919da14437bf088e315e2e38e66190ec72c67d9e6ce428f3f29eaa",
+ "output_master_sha256": "49cbfe3326e3825714bb47ae7752d4b4b4b8c8e5d45be74a466a77691d3c6286",
+ "cells_written": 26,
+ "changes": [
+  {
+   "finding": "P3-F13",
+   "sheet": "11_VISUAL_LIBRARY",
+   "row": 4,
+   "col": 24,
+   "field": "header",
+   "old": null,
+   "new": "period_ar"
+  },
+  {
+   "finding": "P3-F13",
+   "sheet": "11_VISUAL_LIBRARY",
+   "row": 4,
+   "col": 25,
+   "field": "header",
+   "old": null,
+   "new": "universe_ar"
+  },
+  {
+   "finding": "P3-F13",
+   "sheet": "11_VISUAL_LIBRARY",
+   "row": 30,
+   "col": 24,
+   "field": "VIS-MFI-DIVERGENCE.period_ar",
+   "old": null,
+   "new": "نهاية 2015 ونهاية 2020 ونقطة مقيدة لنهاية 2023، إضافة إلى معلومة سياقية لعام 2021"
+  },
+  {
+   "finding": "P3-F13",
+   "sheet": "11_VISUAL_LIBRARY",
+   "row": 30,
+   "col": 25,
+   "field": "VIS-MFI-DIVERGENCE.universe_ar",
+   "old": null,
+   "new": "نطاقات الإبلاغ الخاصة بكل مصدر لمؤسسات وبنوك التمويل الأصغر؛ ولا تزال مجموعة مقدمي الخدمة المشمولين في 2023 وإزالة تكرار المدخرين دون حسم"
+  },
+  {
+   "finding": "P3-F13",
+   "sheet": "11_VISUAL_LIBRARY",
+   "row": 29,
+   "col": 24,
+   "field": "VIS-ACCESS-EVIDENCE-LAYER.period_ar",
+   "old": null,
+   "new": "بحسب كل عنصر"
+  },
+  {
+   "finding": "P3-F13",
+   "sheet": "11_VISUAL_LIBRARY",
+   "row": 29,
+   "col": 25,
+   "field": "VIS-ACCESS-EVIDENCE-LAYER.universe_ar",
+   "old": null,
+   "new": "المواقع المرصودة والمؤرخة في سجل الأدلة فقط"
+  },
+  {
+   "finding": "P3-F13",
+   "sheet": "11_VISUAL_LIBRARY",
+   "row": 31,
+   "col": 24,
+   "field": "RV-CWR-001.period_ar",
+   "old": null,
+   "new": "نسختا نشر لعام 2024؛ ومسار مُطبَّع 2021–2024"
+  },
+  {
+   "finding": "P3-F13",
+   "sheet": "11_VISUAL_LIBRARY",
+   "row": 31,
+   "col": 25,
+   "field": "RV-CWR-001.universe_ar",
+   "old": null,
+   "new": "السنة المرجعية 2024 عبر نسختي نشر مسماتين؛ ومسار مُطبَّع 2021–2024"
+  },
+  {
+   "finding": "P3-F13",
+   "sheet": "11_VISUAL_LIBRARY",
+   "row": 32,
+   "col": 24,
+   "field": "RV-CWR-002.period_ar",
+   "old": null,
+   "new": "مراكز 2022 كما نُشرت قبل تغيير منهج 2023 وبعده"
+  },
+  {
+   "finding": "P3-F13",
+   "sheet": "11_VISUAL_LIBRARY",
+   "row": 32,
+   "col": 25,
+   "field": "RV-CWR-002.universe_ar",
+   "old": null,
+   "new": "المراكز المصرفية لفترة الإسناد نفسها عبر نسخ النشر"
+  },
+  {
+   "finding": "P3-F13",
+   "sheet": "11_VISUAL_LIBRARY",
+   "row": 33,
+   "col": 24,
+   "field": "RV-CWR-003.period_ar",
+   "old": null,
+   "new": "الأدلة الحالية المتاحة هنا؛ وتختلف التواريخ بحسب العنصر"
+  },
+  {
+   "finding": "P3-F13",
+   "sheet": "11_VISUAL_LIBRARY",
+   "row": 33,
+   "col": 25,
+   "field": "RV-CWR-003.universe_ar",
+   "old": null,
+   "new": "يحتفظ كل مسار بمجتمع المسح أو السجل الإداري الخاص به"
+  },
+  {
+   "finding": "P3-F13",
+   "sheet": "11_VISUAL_LIBRARY",
+   "row": 34,
+   "col": 24,
+   "field": "RV-CWR-004.period_ar",
+   "old": null,
+   "new": "العمل الميداني السكاني في 2022–2023 إلى جانب أحداث المنظومة في 2025–2026"
+  },
+  {
+   "finding": "P3-F13",
+   "sheet": "11_VISUAL_LIBRARY",
+   "row": 34,
+   "col": 25,
+   "field": "RV-CWR-004.universe_ar",
+   "old": null,
+   "new": "مجتمعات مسحية وإدارية ومؤسسية وبرامجية منفصلة"
+  },
+  {
+   "finding": "P3-F13",
+   "sheet": "11_VISUAL_LIBRARY",
+   "row": 35,
+   "col": 24,
+   "field": "RV-CWR-005.period_ar",
+   "old": null,
+   "new": "2016–2019، مع مستوى الحسابات في ديسمبر 2019"
+  },
+  {
+   "finding": "P3-F13",
+   "sheet": "11_VISUAL_LIBRARY",
+   "row": 35,
+   "col": 25,
+   "field": "RV-CWR-005.universe_ar",
+   "old": null,
+   "new": "خمسة مقدمي خدمات في الدراسة التاريخية لـIBS؛ وفئات قيمة المعاملات مقيدة بالمصدر"
+  },
+  {
+   "finding": "P3-F13",
+   "sheet": "11_VISUAL_LIBRARY",
+   "row": 36,
+   "col": 24,
+   "field": "RV-CWR-006.period_ar",
+   "old": null,
+   "new": "نقاط مرجعية لعامي 2015 و2020، ونقطة مقيدة لعام 2023"
+  },
+  {
+   "finding": "P3-F13",
+   "sheet": "11_VISUAL_LIBRARY",
+   "row": 36,
+   "col": 25,
+   "field": "RV-CWR-006.universe_ar",
+   "old": null,
+   "new": "مجموعات مؤسسات ومقدمي التمويل الأصغر كما يغطيها كل مصدر؛ وتعريفات المدخرين أو المودعين غير متسقة بالكامل"
+  },
+  {
+   "finding": "P3-F13",
+   "sheet": "11_VISUAL_LIBRARY",
+   "row": 37,
+   "col": 24,
+   "field": "RV-CWR-007.period_ar",
+   "old": null,
+   "new": "موجة 2021؛ العمل الميداني في اليمن 2022–2023"
+  },
+  {
+   "finding": "P3-F13",
+   "sheet": "11_VISUAL_LIBRARY",
+   "row": 37,
+   "col": 25,
+   "field": "RV-CWR-007.universe_ar",
+   "old": null,
+   "new": "البالغون ضمن تغطية مسح Findex؛ مقارنة بين الرجال والنساء داخل الموجة نفسها"
+  },
+  {
+   "finding": "P3-F13",
+   "sheet": "11_VISUAL_LIBRARY",
+   "row": 38,
+   "col": 24,
+   "field": "RV-CWR-008.period_ar",
+   "old": null,
+   "new": "مسح 2022؛ وتقارير البرنامج لعام 2024 وللفترة 2021–2024"
+  },
+  {
+   "finding": "P3-F13",
+   "sheet": "11_VISUAL_LIBRARY",
+   "row": 38,
+   "col": 25,
+   "field": "RV-CWR-008.universe_ar",
+   "old": null,
+   "new": "مسح منشآت في سبع محافظات؛ ومجموعة فرعية بحسب الحاجة إلى التمويل؛ ومجتمع المنشآت الصغيرة والمتوسطة المدعومة من SMEPS"
+  },
+  {
+   "finding": "P3-F13",
+   "sheet": "11_VISUAL_LIBRARY",
+   "row": 39,
+   "col": 24,
+   "field": "RV-CWR-009.period_ar",
+   "old": null,
+   "new": "تختلف التواريخ بحسب الإصلاح أو نظام الدفع؛ وترافق تواريخ الحدث أو المشاهدة كل حلقة"
+  },
+  {
+   "finding": "P3-F13",
+   "sheet": "11_VISUAL_LIBRARY",
+   "row": 39,
+   "col": 25,
+   "field": "RV-CWR-009.universe_ar",
+   "old": null,
+   "new": "تحتفظ كل حالة بمجتمعها الإداري أو مجتمع مقدم الخدمة أو المستخدم أو السكان"
+  },
+  {
+   "finding": "P3-F13",
+   "sheet": "11_VISUAL_LIBRARY",
+   "row": 40,
+   "col": 24,
+   "field": "RV-CWR-010.period_ar",
+   "old": null,
+   "new": "تواريخ خاصة بكل برنامج؛ ولم تُقس فترة الاستمرار بعد"
+  },
+  {
+   "finding": "P3-F13",
+   "sheet": "11_VISUAL_LIBRARY",
+   "row": 40,
+   "col": 25,
+   "field": "RV-CWR-010.universe_ar",
+   "old": null,
+   "new": "المستفيدون من البرامج وحالات نشاط البرامج ومقدمي الخدمة؛ وليسوا تلقائيًا مستخدمين ماليين نشطين فريدين"
+  }
+ ]
+}

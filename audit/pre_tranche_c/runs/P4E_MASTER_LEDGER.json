@@ -1,0 +1,946 @@
+{
+ "transaction": "P4-E",
+ "scope": "Governed chart labels (V-D5); Findex locator form (V-D15)",
+ "labels_added": 101,
+ "input_master_sha256": "31412a05141b1fdca71b46f0db0a67959c101ba5c93d077b22b5109a3578e93f",
+ "output_master_sha256": "3acea61214b3ef8d00410f832f7d9ee2ba8d1126b48ff046e73ecab2b3935244",
+ "cells_written": 104,
+ "changes": [
+  {
+   "finding": "V-D15",
+   "sheet": "25_FINDEX_BASELINE",
+   "row": 8,
+   "col": 9,
+   "field": "WB-FINDEX-OBS-2022-004.source_url",
+   "old": "https://data.worldbank.org/indicator/FX.OWN.TOTL.40.ZS",
+   "new": "https://data.worldbank.org/indicator/FX.OWN.TOTL.40.ZS?locations=YE"
+  },
+  {
+   "finding": "V-D15",
+   "sheet": "25_FINDEX_BASELINE",
+   "row": 9,
+   "col": 9,
+   "field": "WB-FINDEX-OBS-2022-005.source_url",
+   "old": "https://data.worldbank.org/indicator/FX.OWN.TOTL.60.ZS",
+   "new": "https://data.worldbank.org/indicator/FX.OWN.TOTL.60.ZS?locations=YE"
+  },
+  {
+   "finding": "V-D15",
+   "sheet": "25_FINDEX_BASELINE",
+   "row": 10,
+   "col": 9,
+   "field": "WB-FINDEX-OBS-2022-006.source_url",
+   "old": "https://data.worldbank.org/indicator/FX.OWN.TOTL.PL.ZS",
+   "new": "https://data.worldbank.org/indicator/FX.OWN.TOTL.PL.ZS?locations=YE"
+  },
+  {
+   "finding": "V-D5",
+   "sheet": "04_NAV_UX",
+   "row": null,
+   "col": null,
+   "field": "UI-VIS-CAT-FINDEX-TOTAL",
+   "old": null,
+   "new": "All adults (ages 15+) || جميع البالغين (15 سنة فأكثر)"
+  },
+  {
+   "finding": "V-D5",
+   "sheet": "04_NAV_UX",
+   "row": null,
+   "col": null,
+   "field": "UI-VIS-CAT-FINDEX-FEMALE",
+   "old": null,
+   "new": "Women || النساء"
+  },
+  {
+   "finding": "V-D5",
+   "sheet": "04_NAV_UX",
+   "row": null,
+   "col": null,
+   "field": "UI-VIS-CAT-FINDEX-MALE",
+   "old": null,
+   "new": "Men || الرجال"
+  },
+  {
+   "finding": "V-D5",
+   "sheet": "04_NAV_UX",
+   "row": null,
+   "col": null,
+   "field": "UI-VIS-CAT-FINDEX-POOREST40",
+   "old": null,
+   "new": "Adults in the poorest 40% of households || البالغون في أفقر 40% من الأسر"
+  },
+  {
+   "finding": "V-D5",
+   "sheet": "04_NAV_UX",
+   "row": null,
+   "col": null,
+   "field": "UI-VIS-CAT-FINDEX-RICHEST60",
+   "old": null,
+   "new": "Adults in the richest 60% of households || البالغون في أغنى 60% من الأسر"
+  },
+  {
+   "finding": "V-D5",
+   "sheet": "04_NAV_UX",
+   "row": null,
+   "col": null,
+   "field": "UI-VIS-CAT-FINDEX-PRIMARY-EDU",
+   "old": null,
+   "new": "Adults with primary education or less || البالغون الحاصلون على تعليم ابتدائي أو أقل"
+  },
+  {
+   "finding": "V-D5",
+   "sheet": "04_NAV_UX",
+   "row": null,
+   "col": null,
+   "field": "UI-VIS-CAT-SERIES-CBY-AR2024",
+   "old": null,
+   "new": "CBY Annual Report 2024 || التقرير السنوي للبنك المركزي 2024"
+  },
+  {
+   "finding": "V-D5",
+   "sheet": "04_NAV_UX",
+   "row": null,
+   "col": null,
+   "field": "UI-VIS-CAT-SERIES-CBY-AR2025",
+   "old": null,
+   "new": "CBY Annual Report 2025 || التقرير السنوي للبنك المركزي 2025"
+  },
+  {
+   "finding": "V-D5",
+   "sheet": "04_NAV_UX",
+   "row": null,
+   "col": null,
+   "field": "UI-VIS-CAT-SERIES-IMF-AIV2025",
+   "old": null,
+   "new": "IMF 2025 Article IV staff report || تقرير خبراء صندوق النقد الدولي لمشاورات المادة الرابعة 2025"
+  },
+  {
+   "finding": "V-D5",
+   "sheet": "04_NAV_UX",
+   "row": null,
+   "col": null,
+   "field": "UI-VIS-CAT-SERIES-IMF-AIV2025-SUPP",
+   "old": null,
+   "new": "IMF 2025 Article IV supplement (revised values) || ملحق مشاورات المادة الرابعة 2025 لصندوق النقد الدولي (قيم معدّلة)"
+  },
+  {
+   "finding": "V-D5",
+   "sheet": "04_NAV_UX",
+   "row": null,
+   "col": null,
+   "field": "UI-VIS-UNIT-USD-MILLION",
+   "old": null,
+   "new": "USD million || مليون دولار أمريكي"
+  },
+  {
+   "finding": "V-D5",
+   "sheet": "04_NAV_UX",
+   "row": null,
+   "col": null,
+   "field": "UI-VIS-UNIT-COUNT",
+   "old": null,
+   "new": "Number || العدد"
+  },
+  {
+   "finding": "V-D5",
+   "sheet": "04_NAV_UX",
+   "row": null,
+   "col": null,
+   "field": "UI-VIS-UNIT-PCT-ADULTS",
+   "old": null,
+   "new": "% of adults (ages 15+) || % من البالغين (15 سنة فأكثر)"
+  },
+  {
+   "finding": "V-D5",
+   "sheet": "04_NAV_UX",
+   "row": null,
+   "col": null,
+   "field": "UI-VIS-UNIT-PCT-SEND",
+   "old": null,
+   "new": "% of the amount sent || % من المبلغ المرسل"
+  },
+  {
+   "finding": "V-D5",
+   "sheet": "04_NAV_UX",
+   "row": null,
+   "col": null,
+   "field": "UI-VIS-UNIT-PCT",
+   "old": null,
+   "new": "Percent || نسبة مئوية"
+  },
+  {
+   "finding": "V-D5",
+   "sheet": "04_NAV_UX",
+   "row": null,
+   "col": null,
+   "field": "UI-VIS-UNIT-PP",
+   "old": null,
+   "new": "Percentage points || نقاط مئوية"
+  },
+  {
+   "finding": "V-D5",
+   "sheet": "04_NAV_UX",
+   "row": null,
+   "col": null,
+   "field": "UI-VIS-UNIT-SOURCE-ROWS",
+   "old": null,
+   "new": "Rows listed in the source || صفوف مدرجة في المصدر"
+  },
+  {
+   "finding": "V-D5",
+   "sheet": "04_NAV_UX",
+   "row": null,
+   "col": null,
+   "field": "UI-VIS-UNIT-EWALLETS",
+   "old": null,
+   "new": "E-wallets || محافظ إلكترونية"
+  },
+  {
+   "finding": "V-D5",
+   "sheet": "04_NAV_UX",
+   "row": null,
+   "col": null,
+   "field": "UI-VIS-UNIT-LICENSED-EWALLETS",
+   "old": null,
+   "new": "Licensed e-wallets || محافظ إلكترونية مرخصة"
+  },
+  {
+   "finding": "V-D5",
+   "sheet": "04_NAV_UX",
+   "row": null,
+   "col": null,
+   "field": "UI-VIS-UNIT-EVENT-PARTICIPANTS",
+   "old": null,
+   "new": "Event participants || مشاركون في الفعالية"
+  },
+  {
+   "finding": "V-D5",
+   "sheet": "04_NAV_UX",
+   "row": null,
+   "col": null,
+   "field": "UI-VIS-UNIT-PROJECT-ACCESS-POINTS",
+   "old": null,
+   "new": "Access points as defined by the project || نقاط وصول وفق تعريف المشروع"
+  },
+  {
+   "finding": "V-D5",
+   "sheet": "04_NAV_UX",
+   "row": null,
+   "col": null,
+   "field": "UI-VIS-UNIT-BORROWERS",
+   "old": null,
+   "new": "Number of borrowers || عدد المقترضين"
+  },
+  {
+   "finding": "V-D5",
+   "sheet": "04_NAV_UX",
+   "row": null,
+   "col": null,
+   "field": "UI-VIS-UNIT-SAVERS",
+   "old": null,
+   "new": "Number of savers || عدد المدخرين"
+  },
+  {
+   "finding": "V-D5",
+   "sheet": "04_NAV_UX",
+   "row": null,
+   "col": null,
+   "field": "UI-VIS-UNIT-YER-MILLION",
+   "old": null,
+   "new": "YER million (nominal) || مليون ريال يمني (اسمية)"
+  },
+  {
+   "finding": "V-D5",
+   "sheet": "04_NAV_UX",
+   "row": null,
+   "col": null,
+   "field": "UI-VIS-CAT-CORRIDOR-SA",
+   "old": null,
+   "new": "Saudi Arabia || المملكة العربية السعودية"
+  },
+  {
+   "finding": "V-D5",
+   "sheet": "04_NAV_UX",
+   "row": null,
+   "col": null,
+   "field": "UI-VIS-CAT-CORRIDOR-AE",
+   "old": null,
+   "new": "United Arab Emirates || الإمارات العربية المتحدة"
+  },
+  {
+   "finding": "V-D5",
+   "sheet": "04_NAV_UX",
+   "row": null,
+   "col": null,
+   "field": "UI-VIS-CAT-AMOUNT-200",
+   "old": null,
+   "new": "USD 200 sent || إرسال 200 دولار أمريكي"
+  },
+  {
+   "finding": "V-D5",
+   "sheet": "04_NAV_UX",
+   "row": null,
+   "col": null,
+   "field": "UI-VIS-CAT-AMOUNT-500",
+   "old": null,
+   "new": "USD 500 sent || إرسال 500 دولار أمريكي"
+  },
+  {
+   "finding": "V-D5",
+   "sheet": "04_NAV_UX",
+   "row": null,
+   "col": null,
+   "field": "UI-VIS-CAT-PAY-CARDS",
+   "old": null,
+   "new": "Payment cards || بطاقات الدفع"
+  },
+  {
+   "finding": "V-D5",
+   "sheet": "04_NAV_UX",
+   "row": null,
+   "col": null,
+   "field": "UI-VIS-CAT-PAY-POS-TERMINALS",
+   "old": null,
+   "new": "POS terminals || أجهزة نقاط البيع"
+  },
+  {
+   "finding": "V-D5",
+   "sheet": "04_NAV_UX",
+   "row": null,
+   "col": null,
+   "field": "UI-VIS-CAT-PAY-POS-TRANSACTIONS",
+   "old": null,
+   "new": "POS transactions || معاملات نقاط البيع"
+  },
+  {
+   "finding": "V-D5",
+   "sheet": "04_NAV_UX",
+   "row": null,
+   "col": null,
+   "field": "UI-VIS-CAT-PAY-ATMS",
+   "old": null,
+   "new": "ATMs || أجهزة الصراف الآلي"
+  },
+  {
+   "finding": "V-D5",
+   "sheet": "04_NAV_UX",
+   "row": null,
+   "col": null,
+   "field": "UI-VIS-CAT-PAY-EWALLETS",
+   "old": null,
+   "new": "E-wallets || المحافظ الإلكترونية"
+  },
+  {
+   "finding": "V-D5",
+   "sheet": "04_NAV_UX",
+   "row": null,
+   "col": null,
+   "field": "UI-VIS-CAT-PAY-EWALLET-SUBSCRIBERS",
+   "old": null,
+   "new": "E-wallet subscribers || مشتركو المحافظ الإلكترونية"
+  },
+  {
+   "finding": "V-D5",
+   "sheet": "04_NAV_UX",
+   "row": null,
+   "col": null,
+   "field": "UI-VIS-CAT-PAY-ACCOUNTS",
+   "old": null,
+   "new": "Accounts || الحسابات"
+  },
+  {
+   "finding": "V-D5",
+   "sheet": "04_NAV_UX",
+   "row": null,
+   "col": null,
+   "field": "UI-VIS-CAT-FIRM-CREDIT-LINE",
+   "old": null,
+   "new": "Formal establishments reporting a line of credit || المنشآت الرسمية التي أفادت بامتلاك خط ائتمان"
+  },
+  {
+   "finding": "V-D5",
+   "sheet": "04_NAV_UX",
+   "row": null,
+   "col": null,
+   "field": "UI-VIS-CAT-FIRM-LOAN-PRIVATE-BANKS",
+   "old": null,
+   "new": "Private commercial banks || البنوك التجارية الخاصة"
+  },
+  {
+   "finding": "V-D5",
+   "sheet": "04_NAV_UX",
+   "row": null,
+   "col": null,
+   "field": "UI-VIS-CAT-FIRM-LOAN-STATE",
+   "old": null,
+   "new": "State-owned bank or government agency || بنك مملوك للدولة أو جهة حكومية"
+  },
+  {
+   "finding": "V-D5",
+   "sheet": "04_NAV_UX",
+   "row": null,
+   "col": null,
+   "field": "UI-VIS-CAT-FIRM-LOAN-NONBANK",
+   "old": null,
+   "new": "Non-bank financial institution or microfinance provider || مؤسسة مالية غير مصرفية أو مقدم تمويل أصغر"
+  },
+  {
+   "finding": "V-D5",
+   "sheet": "04_NAV_UX",
+   "row": null,
+   "col": null,
+   "field": "UI-VIS-CAT-FIRM-LOAN-OTHER",
+   "old": null,
+   "new": "Other non-financial institution || مؤسسة أخرى غير مالية"
+  },
+  {
+   "finding": "V-D5",
+   "sheet": "04_NAV_UX",
+   "row": null,
+   "col": null,
+   "field": "UI-VIS-CAT-FIRM-CH-ELECTRICITY",
+   "old": null,
+   "new": "Electricity || الكهرباء"
+  },
+  {
+   "finding": "V-D5",
+   "sheet": "04_NAV_UX",
+   "row": null,
+   "col": null,
+   "field": "UI-VIS-CAT-FIRM-CH-FUEL",
+   "old": null,
+   "new": "Fuel shortages || نقص الوقود"
+  },
+  {
+   "finding": "V-D5",
+   "sheet": "04_NAV_UX",
+   "row": null,
+   "col": null,
+   "field": "UI-VIS-CAT-FIRM-CH-TRANSPORT",
+   "old": null,
+   "new": "Transport or road blockades || صعوبات النقل أو إغلاق الطرق"
+  },
+  {
+   "finding": "V-D5",
+   "sheet": "04_NAV_UX",
+   "row": null,
+   "col": null,
+   "field": "UI-VIS-CAT-FIRM-CH-TAX",
+   "old": null,
+   "new": "Tax administration or tax rates || الإدارة الضريبية أو معدلات الضرائب"
+  },
+  {
+   "finding": "V-D5",
+   "sheet": "04_NAV_UX",
+   "row": null,
+   "col": null,
+   "field": "UI-VIS-CAT-FIRM-CH-POLITICAL",
+   "old": null,
+   "new": "Political instability || عدم الاستقرار السياسي"
+  },
+  {
+   "finding": "V-D5",
+   "sheet": "04_NAV_UX",
+   "row": null,
+   "col": null,
+   "field": "UI-VIS-CAT-FIRM-CH-FINANCE",
+   "old": null,
+   "new": "Access to finance || الوصول إلى التمويل"
+  },
+  {
+   "finding": "V-D5",
+   "sheet": "04_NAV_UX",
+   "row": null,
+   "col": null,
+   "field": "UI-VIS-CAT-FIRM-CH-SIEGE",
+   "old": null,
+   "new": "Siege || الحصار"
+  },
+  {
+   "finding": "V-D5",
+   "sheet": "04_NAV_UX",
+   "row": null,
+   "col": null,
+   "field": "UI-VIS-CAT-FIRM-CH-INFORMAL",
+   "old": null,
+   "new": "Practices of informal competitors || ممارسات المنافسين غير الرسميين"
+  },
+  {
+   "finding": "V-D5",
+   "sheet": "04_NAV_UX",
+   "row": null,
+   "col": null,
+   "field": "UI-VIS-CAT-MFI-BORROWERS",
+   "old": null,
+   "new": "Borrowers || المقترضون"
+  },
+  {
+   "finding": "V-D5",
+   "sheet": "04_NAV_UX",
+   "row": null,
+   "col": null,
+   "field": "UI-VIS-CAT-MFI-SAVERS",
+   "old": null,
+   "new": "Savers || المدخرون"
+  },
+  {
+   "finding": "V-D5",
+   "sheet": "04_NAV_UX",
+   "row": null,
+   "col": null,
+   "field": "UI-VIS-CAT-MFI-PORTFOLIO",
+   "old": null,
+   "new": "Loan portfolio || محفظة القروض"
+  },
+  {
+   "finding": "V-D5",
+   "sheet": "04_NAV_UX",
+   "row": null,
+   "col": null,
+   "field": "UI-VIS-CAT-EVT-UNIFIED-NETWORK",
+   "old": null,
+   "new": "Unified domestic transfer network || الشبكة الموحدة للحوالات المحلية"
+  },
+  {
+   "finding": "V-D5",
+   "sheet": "04_NAV_UX",
+   "row": null,
+   "col": null,
+   "field": "UI-VIS-CAT-EVT-FMIIP-START",
+   "old": null,
+   "new": "FMIIP starts || بدء مشروع FMIIP"
+  },
+  {
+   "finding": "V-D5",
+   "sheet": "04_NAV_UX",
+   "row": null,
+   "col": null,
+   "field": "UI-VIS-CAT-EVT-FMIIP-APPROVAL",
+   "old": null,
+   "new": "FMIIP approved || الموافقة على مشروع FMIIP"
+  },
+  {
+   "finding": "V-D5",
+   "sheet": "04_NAV_UX",
+   "row": null,
+   "col": null,
+   "field": "UI-VIS-CAT-EVT-FPS",
+   "old": null,
+   "new": "Fast Payment System || نظام الدفع السريع"
+  },
+  {
+   "finding": "V-D5",
+   "sheet": "04_NAV_UX",
+   "row": null,
+   "col": null,
+   "field": "UI-VIS-CAT-EVT-RTGS-CORE",
+   "old": null,
+   "new": "RTGS and CBY core banking || نظام التسوية الإجمالية الفورية والنظام المصرفي الأساسي للبنك المركزي"
+  },
+  {
+   "finding": "V-D5",
+   "sheet": "04_NAV_UX",
+   "row": null,
+   "col": null,
+   "field": "UI-VIS-CAT-EVT-ACCESS-DB",
+   "old": null,
+   "new": "Access-point database and usage support || قاعدة بيانات نقاط الوصول ودعم الاستخدام"
+  },
+  {
+   "finding": "V-D5",
+   "sheet": "04_NAV_UX",
+   "row": null,
+   "col": null,
+   "field": "UI-VIS-CAT-EVT-NETWORK-MAIN",
+   "old": null,
+   "new": "Unified network as the main transfer channel || الشبكة الموحدة قناةً رئيسية للحوالات"
+  },
+  {
+   "finding": "V-D5",
+   "sheet": "04_NAV_UX",
+   "row": null,
+   "col": null,
+   "field": "UI-VIS-CAT-EVT-QR-INTEROP",
+   "old": null,
+   "new": "National QR code, e-wallet interconnection and operator participation in the Fast Payment System || رمز الاستجابة السريعة الوطني وربط المحافظ الإلكترونية ومشاركة المشغلين في نظام الدفع السريع"
+  },
+  {
+   "finding": "V-D5",
+   "sheet": "04_NAV_UX",
+   "row": null,
+   "col": null,
+   "field": "UI-VIS-CAT-EVT-EXHIBITION",
+   "old": null,
+   "new": "Digital-payment exhibition and a signal of unified-network activity || معرض المدفوعات الرقمية ومؤشر على نشاط الشبكة الموحدة"
+  },
+  {
+   "finding": "V-D5",
+   "sheet": "04_NAV_UX",
+   "row": null,
+   "col": null,
+   "field": "UI-VIS-CAT-EVT-NETWORK-COMPANY",
+   "old": null,
+   "new": "Restructuring, capital increase and a broader base of bank shareholders || إعادة الهيكلة وزيادة رأس المال وتوسيع قاعدة البنوك المساهمة"
+  },
+  {
+   "finding": "V-D5",
+   "sheet": "04_NAV_UX",
+   "row": null,
+   "col": null,
+   "field": "UI-VIS-CAT-EVT-YPCC-FOUNDING",
+   "old": null,
+   "new": "Founding assembly of the Yemen Payments and Clearing Company || الجمعية التأسيسية لشركة اليمن للمدفوعات والمقاصة"
+  },
+  {
+   "finding": "V-D5",
+   "sheet": "04_NAV_UX",
+   "row": null,
+   "col": null,
+   "field": "UI-VIS-CAT-EVT-YPCC-BOARD",
+   "old": null,
+   "new": "First board meeting of the Yemen Payments and Clearing Company || أول اجتماع لمجلس إدارة شركة اليمن للمدفوعات والمقاصة"
+  },
+  {
+   "finding": "V-D5",
+   "sheet": "04_NAV_UX",
+   "row": null,
+   "col": null,
+   "field": "UI-VIS-CAT-AUTH-CBY-ADEN",
+   "old": null,
+   "new": "Central Bank of Yemen — Aden || البنك المركزي اليمني — عدن"
+  },
+  {
+   "finding": "V-D5",
+   "sheet": "04_NAV_UX",
+   "row": null,
+   "col": null,
+   "field": "UI-VIS-CAT-PRV-CLASS-BANKS",
+   "old": null,
+   "new": "Banks (all types) || البنوك بجميع أنواعها"
+  },
+  {
+   "finding": "V-D5",
+   "sheet": "04_NAV_UX",
+   "row": null,
+   "col": null,
+   "field": "UI-VIS-CAT-PRV-CLASS-EXCHANGE",
+   "old": null,
+   "new": "Exchange companies, exchange establishments and remittance agents || شركات الصرافة ومنشآتها ووكلاء الحوالات"
+  },
+  {
+   "finding": "V-D5",
+   "sheet": "04_NAV_UX",
+   "row": null,
+   "col": null,
+   "field": "UI-VIS-CAT-PRV-CLASS-EWALLETS",
+   "old": null,
+   "new": "E-wallets or e-money services, as reported by the CBY || المحافظ الإلكترونية أو خدمات النقود الإلكترونية كما يوردها البنك المركزي"
+  },
+  {
+   "finding": "V-D5",
+   "sheet": "04_NAV_UX",
+   "row": null,
+   "col": null,
+   "field": "UI-VIS-CAT-PRV-CLASS-MFI",
+   "old": null,
+   "new": "Non-bank microfinance institutions and programmes || مؤسسات وبرامج التمويل الأصغر غير المصرفية"
+  },
+  {
+   "finding": "V-D5",
+   "sheet": "04_NAV_UX",
+   "row": null,
+   "col": null,
+   "field": "UI-VIS-CAT-PRV-COUNT-CURRENT-LIST",
+   "old": null,
+   "new": "Count from the current official list || عدد مأخوذ من القائمة الرسمية الحالية"
+  },
+  {
+   "finding": "V-D5",
+   "sheet": "04_NAV_UX",
+   "row": null,
+   "col": null,
+   "field": "UI-VIS-CAT-PRV-COUNT-LISTED-ROWS",
+   "old": null,
+   "new": "Rows listed in the source, by category (companies, establishments, remittance agents) || صفوف مدرجة في المصدر حسب الفئة (شركات ومنشآت ووكلاء حوالات)"
+  },
+  {
+   "finding": "V-D5",
+   "sheet": "04_NAV_UX",
+   "row": null,
+   "col": null,
+   "field": "UI-VIS-CAT-PRV-COUNT-SEVERAL",
+   "old": null,
+   "new": "Several dated official counts, worded differently || عدة أعداد رسمية مؤرخة بصياغات مختلفة"
+  },
+  {
+   "finding": "V-D5",
+   "sheet": "04_NAV_UX",
+   "row": null,
+   "col": null,
+   "field": "UI-VIS-CAT-PRV-COUNT-MEMBERSHIP",
+   "old": null,
+   "new": "Network membership pages only || صفحات عضوية الشبكة فقط"
+  },
+  {
+   "finding": "V-D5",
+   "sheet": "04_NAV_UX",
+   "row": null,
+   "col": null,
+   "field": "UI-VIS-CAT-PRV-NAMED-COMPLETE",
+   "old": null,
+   "new": "Names complete for the source list || الأسماء مكتملة لقائمة المصدر"
+  },
+  {
+   "finding": "V-D5",
+   "sheet": "04_NAV_UX",
+   "row": null,
+   "col": null,
+   "field": "UI-VIS-CAT-PRV-NAMED-COUNTS-ONLY",
+   "old": null,
+   "new": "Category counts complete; names not yet normalised row by row || أعداد الفئات مكتملة، ولم تُوحَّد الأسماء صفًا بصف بعد"
+  },
+  {
+   "finding": "V-D5",
+   "sheet": "04_NAV_UX",
+   "row": null,
+   "col": null,
+   "field": "UI-VIS-CAT-PRV-NAMED-NONE",
+   "old": null,
+   "new": "No controlled list of licensed names || لا توجد قائمة مضبوطة بأسماء الجهات المرخصة"
+  },
+  {
+   "finding": "V-D5",
+   "sheet": "04_NAV_UX",
+   "row": null,
+   "col": null,
+   "field": "UI-VIS-CAT-PRV-NAMED-PARTIAL",
+   "old": null,
+   "new": "Partial network membership, not the regulated universe || عضوية جزئية في الشبكة، وليست المجموعة الخاضعة للتنظيم"
+  },
+  {
+   "finding": "V-D5",
+   "sheet": "04_NAV_UX",
+   "row": null,
+   "col": null,
+   "field": "UI-VIS-CAT-PRV-EVENTS-NONE-APPLIED",
+   "old": null,
+   "new": "No bank status events applied || لم تُطبَّق أحداث تتعلق بوضع البنوك"
+  },
+  {
+   "finding": "V-D5",
+   "sheet": "04_NAV_UX",
+   "row": null,
+   "col": null,
+   "field": "UI-VIS-CAT-PRV-EVENTS-SELECTED-2026",
+   "old": null,
+   "new": "Selected 2026 status events shown; they are not subtracted from the list || تُعرض أحداث وضع مختارة لعام 2026، ولا تُطرح من القائمة"
+  },
+  {
+   "finding": "V-D5",
+   "sheet": "04_NAV_UX",
+   "row": null,
+   "col": null,
+   "field": "UI-VIS-CAT-PRV-EVENTS-WALLETS",
+   "old": null,
+   "new": "2024 list of unlicensed names and dated wallet counts; no current register of licensed status || قائمة 2024 بالأسماء غير المرخصة وأعداد مؤرخة للمحافظ، ولا يوجد سجل حالي للوضع الترخيصي"
+  },
+  {
+   "finding": "V-D5",
+   "sheet": "04_NAV_UX",
+   "row": null,
+   "col": null,
+   "field": "UI-VIS-CAT-PRV-EVENTS-NONE",
+   "old": null,
+   "new": "None || لا يوجد"
+  },
+  {
+   "finding": "V-D5",
+   "sheet": "04_NAV_UX",
+   "row": null,
+   "col": null,
+   "field": "UI-VIS-CAT-PRV-LIMIT-BANKS",
+   "old": null,
+   "new": "List presence establishes licensing or listing only; operation is not inferred. || الظهور في القائمة يثبت الترخيص أو الإدراج فقط، ولا يُستنتج منه التشغيل."
+  },
+  {
+   "finding": "V-D5",
+   "sheet": "04_NAV_UX",
+   "row": null,
+   "col": null,
+   "field": "UI-VIS-CAT-PRV-LIMIT-EXCHANGE",
+   "old": null,
+   "new": "429 is the arithmetic sum of rows listed in the source across three classes, not a count of unique providers or of providers operating now. || الرقم 429 مجموع حسابي لصفوف مدرجة في المصدر عبر ثلاث فئات، وليس عددًا لمقدمي خدمات فريدين ولا لمقدمي خدمات عاملين حاليًا."
+  },
+  {
+   "finding": "V-D5",
+   "sheet": "04_NAV_UX",
+   "row": null,
+   "col": null,
+   "field": "UI-VIS-CAT-PRV-LIMIT-EWALLETS",
+   "old": null,
+   "new": "Official sources report 7 e-wallets (2024 Q3), 9 e-wallets (2025 H1), 8 licensed e-wallets (2025-09-10) and more than 9 event participants (2026-01-22). The counts stay separate; a named current list of licensed wallets and payment service providers remains open. || تورد المصادر الرسمية 7 محافظ إلكترونية (الربع الثالث 2024)، و9 محافظ (النصف الأول 2025)، و8 محافظ مرخصة (2025-09-10)، وأكثر من 9 مشاركين في فعالية (2026-01-22). وتبقى هذه الأعداد منفصلة، ولا تزال القائمة الحالية المسماة للمحافظ ومقدمي خدمات الدفع المرخصين مفتوحة."
+  },
+  {
+   "finding": "V-D5",
+   "sheet": "04_NAV_UX",
+   "row": null,
+   "col": null,
+   "field": "UI-VIS-CAT-PRV-LIMIT-MFI",
+   "old": null,
+   "new": "Membership of the YMN network does not verify a licence or operation and is not a complete national universe. || العضوية في شبكة YMN لا تثبت الترخيص أو التشغيل، وليست مجموعة وطنية مكتملة."
+  },
+  {
+   "finding": "V-D5",
+   "sheet": "04_NAV_UX",
+   "row": null,
+   "col": null,
+   "field": "UI-VIS-CAT-PRV-EVCLASS-EWALLET",
+   "old": null,
+   "new": "E-wallet or electronic payment service || محفظة إلكترونية أو خدمة دفع إلكتروني"
+  },
+  {
+   "finding": "V-D5",
+   "sheet": "04_NAV_UX",
+   "row": null,
+   "col": null,
+   "field": "UI-VIS-CAT-PRV-EVCLASS-COMPANY-OR-EST",
+   "old": null,
+   "new": "Exchange company or establishment || شركة أو منشأة صرافة"
+  },
+  {
+   "finding": "V-D5",
+   "sheet": "04_NAV_UX",
+   "row": null,
+   "col": null,
+   "field": "UI-VIS-CAT-PRV-EVCLASS-EST-AGENT",
+   "old": null,
+   "new": "Exchange establishment and remittance agent || منشأة صرافة ووكيل حوالات"
+  },
+  {
+   "finding": "V-D5",
+   "sheet": "04_NAV_UX",
+   "row": null,
+   "col": null,
+   "field": "UI-VIS-CAT-PRV-EVCLASS-COMPANY-EST-AGENTS",
+   "old": null,
+   "new": "Exchange company, establishment and remittance agents || شركة صرافة ومنشأة صرافة ووكلاء حوالات"
+  },
+  {
+   "finding": "V-D5",
+   "sheet": "04_NAV_UX",
+   "row": null,
+   "col": null,
+   "field": "UI-VIS-CAT-PRV-EVCLASS-BRANCH",
+   "old": null,
+   "new": "Exchange branch || فرع صرافة"
+  },
+  {
+   "finding": "V-D5",
+   "sheet": "04_NAV_UX",
+   "row": null,
+   "col": null,
+   "field": "UI-VIS-CAT-PRV-EVCLASS-ESTABLISHMENT",
+   "old": null,
+   "new": "Exchange establishment || منشأة صرافة"
+  },
+  {
+   "finding": "V-D5",
+   "sheet": "04_NAV_UX",
+   "row": null,
+   "col": null,
+   "field": "UI-VIS-CAT-PRV-EVCLASS-AGENT",
+   "old": null,
+   "new": "Remittance agent || وكيل حوالات"
+  },
+  {
+   "finding": "V-D5",
+   "sheet": "04_NAV_UX",
+   "row": null,
+   "col": null,
+   "field": "UI-VIS-CAT-PRV-EVCLASS-COMPANY",
+   "old": null,
+   "new": "Exchange company || شركة صرافة"
+  },
+  {
+   "finding": "V-D5",
+   "sheet": "04_NAV_UX",
+   "row": null,
+   "col": null,
+   "field": "UI-VIS-CAT-PRV-EVCLASS-COMPANY-ESTS-AGENT",
+   "old": null,
+   "new": "Exchange company establishments and remittance agent || منشآت شركة صرافة ووكيل حوالات"
+  },
+  {
+   "finding": "V-D5",
+   "sheet": "04_NAV_UX",
+   "row": null,
+   "col": null,
+   "field": "UI-VIS-CAT-PRV-STATUS-PROHIBITED",
+   "old": null,
+   "new": "Dealing prohibited — unlicensed on the source date || يُحظر التعامل — غير مرخص في تاريخ المصدر"
+  },
+  {
+   "finding": "V-D5",
+   "sheet": "04_NAV_UX",
+   "row": null,
+   "col": null,
+   "field": "UI-VIS-CAT-PRV-STATUS-SUSPENDED",
+   "old": null,
+   "new": "Licence suspended and closure ordered || إيقاف الترخيص والأمر بالإغلاق"
+  },
+  {
+   "finding": "V-D5",
+   "sheet": "04_NAV_UX",
+   "row": null,
+   "col": null,
+   "field": "UI-VIS-CAT-PRV-STATUS-WITHDRAWN",
+   "old": null,
+   "new": "Licence withdrawn || سحب الترخيص"
+  },
+  {
+   "finding": "V-D5",
+   "sheet": "04_NAV_UX",
+   "row": null,
+   "col": null,
+   "field": "UI-VIS-CAT-PRV-STATUS-NAMED-UNLICENSED",
+   "old": null,
+   "new": "Named as unlicensed on the source date || مسمّى غير مرخص في تاريخ المصدر"
+  },
+  {
+   "finding": "V-D5",
+   "sheet": "04_NAV_UX",
+   "row": null,
+   "col": null,
+   "field": "UI-VIS-CAT-PRV-STATUS-ADMIN-COUNT",
+   "old": null,
+   "new": "Official administrative count || عدد إداري رسمي"
+  },
+  {
+   "finding": "V-D5",
+   "sheet": "04_NAV_UX",
+   "row": null,
+   "col": null,
+   "field": "UI-VIS-CAT-PRV-STATUS-LICENSING-STATEMENT",
+   "old": null,
+   "new": "Official dated statement on licensing || بيان رسمي مؤرخ بشأن الترخيص"
+  },
+  {
+   "finding": "V-D5",
+   "sheet": "04_NAV_UX",
+   "row": null,
+   "col": null,
+   "field": "UI-VIS-CAT-PRV-STATUS-EVENT-PARTICIPATION",
+   "old": null,
+   "new": "Official record of participation in an event || سجل رسمي للمشاركة في فعالية"
+  },
+  {
+   "finding": "V-D5",
+   "sheet": "04_NAV_UX",
+   "row": null,
+   "col": null,
+   "field": "UI-VIS-BASELINE",
+   "old": null,
+   "new": "Baseline — the starting value the project reports || خط الأساس — القيمة الابتدائية التي يوردها المشروع"
+  }
+ ]
+}

@@ -1,0 +1,279 @@
+{
+ "transaction": "P2-A",
+ "scope": "P2.2 governed discovery aliases for high-value weak intents",
+ "input_master_sha256": "e1f623109871f127ec74a67c912acac344393e811616bc65c34858be57b602d9",
+ "output_master_sha256": "6456add9e419bf2ce9a1e8b72715eb7e0d3a2d9d157deea2dbdbcdee46247672",
+ "cells_written": 30,
+ "changes": [
+  {
+   "finding": "P2-S01",
+   "sheet": "04_NAV_UX",
+   "row": 121,
+   "col": 1,
+   "field": "SEARCH-ALIAS-018.c1",
+   "old": null,
+   "new": "SEARCH-ALIAS-018"
+  },
+  {
+   "finding": "P2-S01",
+   "sheet": "04_NAV_UX",
+   "row": 121,
+   "col": 2,
+   "field": "SEARCH-ALIAS-018.c2",
+   "old": null,
+   "new": "deposits; deposit; bank deposits"
+  },
+  {
+   "finding": "P2-S01",
+   "sheet": "04_NAV_UX",
+   "row": 121,
+   "col": 3,
+   "field": "SEARCH-ALIAS-018.c3",
+   "old": null,
+   "new": "الودائع; ودائع; الودائع المصرفية"
+  },
+  {
+   "finding": "P2-S01",
+   "sheet": "04_NAV_UX",
+   "row": 121,
+   "col": 4,
+   "field": "SEARCH-ALIAS-018.c4",
+   "old": null,
+   "new": "route:/finance/"
+  },
+  {
+   "finding": "P2-S01",
+   "sheet": "04_NAV_UX",
+   "row": 122,
+   "col": 1,
+   "field": "SEARCH-ALIAS-019.c1",
+   "old": null,
+   "new": "SEARCH-ALIAS-019"
+  },
+  {
+   "finding": "P2-S01",
+   "sheet": "04_NAV_UX",
+   "row": 122,
+   "col": 2,
+   "field": "SEARCH-ALIAS-019.c2",
+   "old": null,
+   "new": "SME finance; SME; SMEs; MSME; MSMEs; MSME finance; small business finance"
+  },
+  {
+   "finding": "P2-S01",
+   "sheet": "04_NAV_UX",
+   "row": 122,
+   "col": 3,
+   "field": "SEARCH-ALIAS-019.c3",
+   "old": null,
+   "new": "المنشآت الصغيرة والمتوسطة; تمويل المنشآت الصغيرة والمتوسطة; المنشآت الصغرى والصغيرة والمتوسطة"
+  },
+  {
+   "finding": "P2-S01",
+   "sheet": "04_NAV_UX",
+   "row": 122,
+   "col": 4,
+   "field": "SEARCH-ALIAS-019.c4",
+   "old": null,
+   "new": "route:/firms/"
+  },
+  {
+   "finding": "P2-S01",
+   "sheet": "04_NAV_UX",
+   "row": 123,
+   "col": 1,
+   "field": "SEARCH-ALIAS-020.c1",
+   "old": null,
+   "new": "SEARCH-ALIAS-020"
+  },
+  {
+   "finding": "P2-S01",
+   "sheet": "04_NAV_UX",
+   "row": 123,
+   "col": 2,
+   "field": "SEARCH-ALIAS-020.c2",
+   "old": null,
+   "new": "RTGS; real-time gross settlement; real time gross settlement"
+  },
+  {
+   "finding": "P2-S01",
+   "sheet": "04_NAV_UX",
+   "row": 123,
+   "col": 3,
+   "field": "SEARCH-ALIAS-020.c3",
+   "old": null,
+   "new": "التسوية الإجمالية الفورية; نظام التسوية الإجمالية الفورية"
+  },
+  {
+   "finding": "P2-S01",
+   "sheet": "04_NAV_UX",
+   "row": 123,
+   "col": 4,
+   "field": "SEARCH-ALIAS-020.c4",
+   "old": null,
+   "new": "route:/payments/ | route:/reforms/"
+  },
+  {
+   "finding": "P2-S01",
+   "sheet": "04_NAV_UX",
+   "row": 124,
+   "col": 1,
+   "field": "SEARCH-ALIAS-021.c1",
+   "old": null,
+   "new": "SEARCH-ALIAS-021"
+  },
+  {
+   "finding": "P2-S01",
+   "sheet": "04_NAV_UX",
+   "row": 124,
+   "col": 2,
+   "field": "SEARCH-ALIAS-021.c2",
+   "old": null,
+   "new": "FPS; fast payment system; fast payments"
+  },
+  {
+   "finding": "P2-S01",
+   "sheet": "04_NAV_UX",
+   "row": 124,
+   "col": 3,
+   "field": "SEARCH-ALIAS-021.c3",
+   "old": null,
+   "new": "نظام الدفع السريع; الدفع السريع; المدفوعات السريعة"
+  },
+  {
+   "finding": "P2-S01",
+   "sheet": "04_NAV_UX",
+   "row": 124,
+   "col": 4,
+   "field": "SEARCH-ALIAS-021.c4",
+   "old": null,
+   "new": "route:/payments/ | route:/reforms/"
+  },
+  {
+   "finding": "P2-S01",
+   "sheet": "04_NAV_UX",
+   "row": 125,
+   "col": 1,
+   "field": "SEARCH-ALIAS-022.c1",
+   "old": null,
+   "new": "SEARCH-ALIAS-022"
+  },
+  {
+   "finding": "P2-S01",
+   "sheet": "04_NAV_UX",
+   "row": 125,
+   "col": 2,
+   "field": "SEARCH-ALIAS-022.c2",
+   "old": null,
+   "new": "consumer protection; financial consumer protection"
+  },
+  {
+   "finding": "P2-S01",
+   "sheet": "04_NAV_UX",
+   "row": 125,
+   "col": 3,
+   "field": "SEARCH-ALIAS-022.c3",
+   "old": null,
+   "new": "حماية المستهلك; حماية المستهلك المالي"
+  },
+  {
+   "finding": "P2-S01",
+   "sheet": "04_NAV_UX",
+   "row": 125,
+   "col": 4,
+   "field": "SEARCH-ALIAS-022.c4",
+   "old": null,
+   "new": "route:/reforms/"
+  },
+  {
+   "finding": "P2-S01",
+   "sheet": "04_NAV_UX",
+   "row": 126,
+   "col": 1,
+   "field": "SEARCH-ALIAS-023.c1",
+   "old": null,
+   "new": "SEARCH-ALIAS-023"
+  },
+  {
+   "finding": "P2-S01",
+   "sheet": "04_NAV_UX",
+   "row": 126,
+   "col": 2,
+   "field": "SEARCH-ALIAS-023.c2",
+   "old": null,
+   "new": "complaints; complaint; complaint handling; redress"
+  },
+  {
+   "finding": "P2-S01",
+   "sheet": "04_NAV_UX",
+   "row": 126,
+   "col": 3,
+   "field": "SEARCH-ALIAS-023.c3",
+   "old": null,
+   "new": "الشكاوى; شكوى; معالجة الشكاوى; التظلم"
+  },
+  {
+   "finding": "P2-S01",
+   "sheet": "04_NAV_UX",
+   "row": 126,
+   "col": 4,
+   "field": "SEARCH-ALIAS-023.c4",
+   "old": null,
+   "new": "route:/reforms/"
+  },
+  {
+   "finding": "P2-S01",
+   "sheet": "04_NAV_UX",
+   "row": 126,
+   "col": 5,
+   "field": "SEARCH-ALIAS-023.c5",
+   "old": null,
+   "new": "Discovery aid only: the governed complaint rules describe a path and time limits, not how complaints are handled in practice."
+  },
+  {
+   "finding": "P2-S01",
+   "sheet": "04_NAV_UX",
+   "row": 126,
+   "col": 6,
+   "field": "SEARCH-ALIAS-023.c6",
+   "old": null,
+   "new": "وسيلة للعثور على المحتوى فقط: تصف قواعد الشكاوى المعتمدة المسار والمهل، لا طريقة معالجة الشكاوى فعليًا."
+  },
+  {
+   "finding": "P2-S01",
+   "sheet": "04_NAV_UX",
+   "row": 127,
+   "col": 1,
+   "field": "SEARCH-ALIAS-024.c1",
+   "old": null,
+   "new": "SEARCH-ALIAS-024"
+  },
+  {
+   "finding": "P2-S01",
+   "sheet": "04_NAV_UX",
+   "row": 127,
+   "col": 2,
+   "field": "SEARCH-ALIAS-024.c2",
+   "old": null,
+   "new": "FMIIP; Financial Market Infrastructure and Inclusion Project"
+  },
+  {
+   "finding": "P2-S01",
+   "sheet": "04_NAV_UX",
+   "row": 127,
+   "col": 3,
+   "field": "SEARCH-ALIAS-024.c3",
+   "old": null,
+   "new": "FMIIP; مشروع البنية التحتية للأسواق والشمول المالي"
+  },
+  {
+   "finding": "P2-S01",
+   "sheet": "04_NAV_UX",
+   "row": 127,
+   "col": 4,
+   "field": "SEARCH-ALIAS-024.c4",
+   "old": null,
+   "new": "route:/reforms/ | route:/payments/"
+  }
+ ]
+}

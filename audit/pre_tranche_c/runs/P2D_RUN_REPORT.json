@@ -1,0 +1,68 @@
+{
+ "stage": "P2-D",
+ "staged_master_sha256": "6456add9e419bf2ce9a1e8b72715eb7e0d3a2d9d157deea2dbdbcdee46247672",
+ "installed": [],
+ "steps": [
+  {
+   "step": "generate",
+   "exit": 0,
+   "tail": [
+    "  \"content/navigation_interaction.json\",",
+    "  \"presentation_priority.json\"",
+    " ],",
+    " \"output_sha256\": 39",
+    "}",
+    "PROJECTIONS GENERATED"
+   ]
+  },
+  {
+   "step": "rebind",
+   "exit": 0,
+   "tail": [
+    " \"files\": [",
+    "  \"authority/AUTHORITY.json\",",
+    "  \"authority/YFI_CURRENT_PROJECT_CONTEXT.json\",",
+    "  \"handoff/IMPLEMENTATION_MANIFEST.json\"",
+    " ]",
+    "}"
+   ]
+  },
+  {
+   "step": "build",
+   "exit": 0,
+   "tail": [
+    "Built 288 HTML files from 143 controlled page specs."
+   ]
+  },
+  {
+   "step": "public_literal_audit",
+   "exit": 0,
+   "tail": [
+    "PUBLIC_LITERAL_CLOSURE records=8230 unresolved=0"
+   ]
+  },
+  {
+   "step": "validate",
+   "exit": 0,
+   "tail": [
+    "HTML=288 ERRORS=0 WARN=0",
+    "WEBSITE REPOSITORY VALIDATION PASS"
+   ]
+  },
+  {
+   "step": "generator_idempotence",
+   "exit": 0,
+   "tail": [
+    " \"master_sha256\": \"6456add9e419bf2ce9a1e8b72715eb7e0d3a2d9d157deea2dbdbcdee46247672\",",
+    " \"outputs\": 39,",
+    " \"differences\": [],",
+    " \"output_sha256\": 39",
+    "}",
+    "PROJECTION CHECK PASS"
+   ]
+  }
+ ],
+ "result": "COMMITTED",
+ "master_sha256": "6456add9e419bf2ce9a1e8b72715eb7e0d3a2d9d157deea2dbdbcdee46247672",
+ "page_specs_sha256": "966186933c3018d43de1572546793b1c34b0f79fe04cb971a464045dd4d21834"
+}

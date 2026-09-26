@@ -1,0 +1,199 @@
+{
+ "status": "TRANCHE B PATCH EXECUTION COMPLETE — READY FOR INDEPENDENT POST-EXECUTION ACCEPTANCE",
+ "pre": {
+  "master_sha256": "e69804106e04d093098688f2d01cea51e13191f255d774a090f3e5dd8dec9bc7",
+  "page_specs_sha256": "ff2b0f559cde5fede3fe31d7dfb2539a00921e8b00b816c2863790cd9de49007",
+  "html_documents": 284,
+  "literal_closure": "6,939 records, 0 unresolved (entry projections rebuilt by the canonical generator; the entry checkpoint recorded 7,309 records under the pre-generator build)",
+  "validator": "PASS at entry (with pre-generator projections)",
+  "search_records": 427,
+  "sources": 159,
+  "sources_with_primary_url_text": 158,
+  "lineage": "legacy closure: CLOSED_VIA_CONTROLLED_DEPENDENCIES asserted on 108/108 evidence records",
+  "authority_integrity": "FAIL — 14_SYSTEM_CHRONOLOGY rows 18–28 duplicated YSC-013 (AUTH-INT-001)"
+ },
+ "post": {
+  "master_sha256": "4403a3536e218d537710c12cd0df5340a35c058b35f9f06ef0f401a16b9c6dbd",
+  "page_specs_sha256": "776558e46a3aedaf1c58bbf4c3b32c752cc38b9f305a85c63b042f4292c20635",
+  "patch_spec_sha256": "f31ebd49fe6c38cfa4cd81e1bbbd230791df45234778f9c2c9c43c71b1c8e9c7",
+  "generator": {
+   "name": "yfi-projection-generator",
+   "version": "1.2.0"
+  },
+  "projection_manifest_sha256": "e0c6f5d3cde07bbddc00e4ae3bdf9ace6bce3f5fa5172e1a91a2d3e59232057a",
+  "html_documents": 284,
+  "literal_closure": "PUBLIC_LITERAL_CLOSURE records=7521 unresolved=0",
+  "validator": "WEBSITE REPOSITORY VALIDATION PASS",
+  "search_records": 420,
+  "sources": 160,
+  "sources_with_public_locator": 151,
+  "lineage_state_counts": {
+   "BOUND_EXACT": 87,
+   "COMPOSITE_OF_OBJECTS": 13,
+   "SOURCE_NOT_YET_BOUND": 1,
+   "BOUND_PARTIAL": 6,
+   "FRAMING_NO_FACT": 1
+  },
+  "closure_state_counts_by_object_type": {
+   "evidence_object": {
+    "CLOSED_TO_SOURCE_ID": 87,
+    "COMPOSITE_MEMBERS_NOT_LISTED": 12,
+    "SOURCE_NOT_YET_BOUND": 1,
+    "PARTIALLY_RESOLVED": 6,
+    "COMPOSITE_OF_OBJECTS": 1,
+    "FRAMING_NO_FACT": 1
+   },
+   "public_claim": {
+    "CLOSED_TO_SOURCE_ID": 51,
+    "FRAMING_NO_FACT": 1,
+    "COMPOSITE_MEMBERS_NOT_LISTED": 1,
+    "PARTIALLY_RESOLVED": 5,
+    "COMPOSITE_OF_OBJECTS": 1
+   },
+   "reading": {
+    "PARTIALLY_RESOLVED": 10
+   },
+   "visual": {
+    "CLOSED_TO_SOURCE_ID": 16,
+    "COMPOSITE_MEMBERS_NOT_LISTED": 8,
+    "PARTIALLY_RESOLVED": 11,
+    "COMPOSITE_OF_OBJECTS": 1
+   },
+   "measurement": {
+    "NO_DIRECT_SOURCE_BINDING": 10
+   }
+  },
+  "ledger": {
+   "spec_roots": 395,
+   "spec_rows": 1001,
+   "roots_by_disposition": {
+    "APPLIED": 375,
+    "SUPERSEDED": 7,
+    "HELD": 12,
+    "SOURCE_PENDING": 1
+   },
+   "execution_items": [
+    "AIR-001",
+    "EXF-001",
+    "EXF-002",
+    "EXC-0302"
+   ],
+   "missing_roots": [],
+   "invalid_dispositions": []
+  },
+  "search_probe_grades": {
+   "PASS": 44,
+   "WEAK": 12
+  },
+  "stale_hash_scan": {
+   "HISTORICAL_LINEAGE — KEEP": 160
+  }
+ },
+ "checks": [
+  {
+   "check": "route baseline 284 HTML documents",
+   "result": "PASS",
+   "detail": 284
+  },
+  {
+   "check": "generator --check (projections equal the Master)",
+   "result": "PASS",
+   "detail": [
+    "PROJECTION CHECK PASS"
+   ]
+  },
+  {
+   "check": "generator regression tests",
+   "result": "PASS",
+   "detail": [
+    "OK"
+   ]
+  },
+  {
+   "check": "public literal closure: 0 unresolved",
+   "result": "PASS",
+   "detail": [
+    "PUBLIC_LITERAL_CLOSURE records=7521 unresolved=0"
+   ]
+  },
+  {
+   "check": "website validator PASS (includes AR/EN structural parity, Compare, citation, rights notes, search smoke tests)",
+   "result": "PASS",
+   "detail": [
+    "HTML=284 ERRORS=0 WARN=0",
+    "WEBSITE REPOSITORY VALIDATION PASS"
+   ]
+  },
+  {
+   "check": "execution ledger: every spec root has exactly one allowed disposition",
+   "result": "PASS",
+   "detail": {
+    "APPLIED": 375,
+    "SUPERSEDED": 7,
+    "HELD": 12,
+    "SOURCE_PENDING": 1
+   }
+  },
+  {
+   "check": "source-lineage truth assertions",
+   "result": "PASS"
+  },
+  {
+   "check": "no authoring copy, internal field or private-file note on any public page",
+   "result": "PASS",
+   "detail": []
+  },
+  {
+   "check": "no withdrawn or unsupported public wording (ranking, 'observed history', six-figure precision, 'divergence' claim, «المنصة», «مركز» for YPCC)",
+   "result": "PASS",
+   "detail": []
+  },
+  {
+   "check": "OECD/INFE binding: 42/100 and 15/100 published only with sample and fieldwork, no ranking",
+   "result": "PASS",
+   "detail": [
+    "en/evidence/CLM-013/index.html",
+    "en/people/index.html"
+   ]
+  },
+  {
+   "check": "provider scope statement on /providers/ (PB-0216)",
+   "result": "PASS"
+  },
+  {
+   "check": "methodology coverage, admission roles and FCV sections present (PB-0611/0612/0613)",
+   "result": "PASS"
+  },
+  {
+   "check": "remittance vintage break visible (AR2024 6.245 vs AR2025 restated 3.42)",
+   "result": "PASS"
+  },
+  {
+   "check": "rights gating: every source NOT_ASSESSED, no download offer, rights note on the source directory",
+   "result": "PASS",
+   "detail": {
+    "NOT_ASSESSED": 160
+   }
+  },
+  {
+   "check": "Compare page renders its governed comparison contract",
+   "result": "PASS"
+  },
+  {
+   "check": "search probe: no term regresses to FAIL in either language",
+   "result": "PASS",
+   "detail": {
+    "PASS": 44,
+    "WEAK": 12
+   }
+  },
+  {
+   "check": "stale-hash scan: no current-state file carries a stale hash",
+   "result": "PASS",
+   "detail": {
+    "HISTORICAL_LINEAGE — KEEP": 160
+   }
+  }
+ ],
+ "failures": []
+}

@@ -1,0 +1,281 @@
+{
+ "schema": "YFIE_SEARCH_CANONICAL_PROBE/1.0",
+ "rule": "For each intent and language, the first expected destination found in the browser-mirror ranking decides the grade: PASS = rank 1–3; WEAK = rank 4–10; FAIL = absent. The validator fails on any FAIL, and on any WEAK unless the intent records weak_allowed_reason. Expected destinations list the explanatory page first, then Evidence Records that are equally valid answers. Aliases are discovery aids only; no ranking weight is tuned to satisfy this probe.",
+ "intents": [
+  {
+   "query_en": "account ownership",
+   "query_ar": "امتلاك الحساب",
+   "expected": [
+    "/people/",
+    "/evidence/CLM-001/"
+   ],
+   "rationale": "Core people-side measure; the domain page explains it and CLM-001 carries it."
+  },
+  {
+   "query_en": "gender gap",
+   "query_ar": "الفجوة بين الرجال والنساء",
+   "expected": [
+    "/people/",
+    "/readings/gender-gap-measured-causes-open/",
+    "/evidence/CLM-002/"
+   ],
+   "rationale": "Measured gap on /people/; the Reading explains what it does not establish."
+  },
+  {
+   "query_en": "income",
+   "query_ar": "الدخل",
+   "expected": [
+    "/people/"
+   ],
+   "rationale": "Income-group gap is stated on /people/ (alias 013)."
+  },
+  {
+   "query_en": "financial literacy",
+   "query_ar": "الثقافة المالية",
+   "expected": [
+    "/people/",
+    "/reforms/"
+   ],
+   "rationale": "OECD/INFE scores on /people/; programme activity on /reforms/ (alias 012 with boundary note)."
+  },
+  {
+   "query_en": "microfinance",
+   "query_ar": "التمويل الأصغر",
+   "expected": [
+    "/finance/",
+    "/readings/microfinance-structural-divergence/"
+   ],
+   "rationale": "Microfinance evidence sits on /finance/; the Reading explains the divergence."
+  },
+  {
+   "query_en": "credit",
+   "query_ar": "الائتمان",
+   "expected": [
+    "/finance/",
+    "/firms/"
+   ],
+   "rationale": "Credit evidence on /finance/ (providers) and /firms/ (firm credit paths)."
+  },
+  {
+   "query_en": "deposits",
+   "query_ar": "الودائع",
+   "expected": [
+    "/finance/"
+   ],
+   "rationale": "Bank deposits and microfinance depositors are discussed on /finance/ (alias 018)."
+  },
+  {
+   "query_en": "SME finance",
+   "query_ar": "تمويل المنشآت الصغيرة",
+   "expected": [
+    "/firms/",
+    "/evidence/CLM-062/"
+   ],
+   "rationale": "Firm finance is the /firms/ page; CLM-062 carries firm financing behaviour (alias 019)."
+  },
+  {
+   "query_en": "POS terminals",
+   "query_ar": "نقاط البيع",
+   "expected": [
+    "/payments/",
+    "/evidence/CLM-003/"
+   ],
+   "rationale": "POS signals are explained on /payments/."
+  },
+  {
+   "query_en": "e-wallet",
+   "query_ar": "المحافظ الإلكترونية",
+   "expected": [
+    "/payments/",
+    "/providers/",
+    "/evidence/CLM-010/"
+   ],
+   "rationale": "Wallet counts and subscribers: /payments/ and CLM-010."
+  },
+  {
+   "query_en": "e-wallet subscribers",
+   "query_ar": "مشتركو المحافظ الإلكترونية",
+   "expected": [
+    "/payments/",
+    "/evidence/CLM-010/"
+   ],
+   "rationale": "Added in P2: the subscriber series and its break (P1.6)."
+  },
+  {
+   "query_en": "RTGS",
+   "query_ar": "التسوية الإجمالية الفورية",
+   "expected": [
+    "/payments/",
+    "/reforms/"
+   ],
+   "rationale": "What RTGS means is explained on /payments/ and /reforms/ (alias 020)."
+  },
+  {
+   "query_en": "remittances",
+   "query_ar": "الحوالات",
+   "expected": [
+    "/remittances/"
+   ],
+   "rationale": "Domain page."
+  },
+  {
+   "query_en": "remittance cost",
+   "query_ar": "تكلفة التحويل",
+   "expected": [
+    "/remittances/"
+   ],
+   "rationale": "Corridor prices are on /remittances/ (alias 016)."
+  },
+  {
+   "query_en": "exchange companies",
+   "query_ar": "شركات الصرافة",
+   "expected": [
+    "/providers/",
+    "/access/"
+   ],
+   "rationale": "Provider roster on /providers/; access implications on /access/."
+  },
+  {
+   "query_en": "licensed banks",
+   "query_ar": "البنوك المرخصة",
+   "expected": [
+    "/providers/",
+    "/evidence/CLM-008/"
+   ],
+   "rationale": "Bank list on /providers/ (alias 015)."
+  },
+  {
+   "query_en": "Aden",
+   "query_ar": "عدن",
+   "expected": [
+    "/providers/",
+    "/data/"
+   ],
+   "rationale": "CBY-Aden lists and decisions (alias 017 with scope note)."
+  },
+  {
+   "query_en": "Sanaa",
+   "query_ar": "صنعاء",
+   "expected": [
+    "/providers/",
+    "/data/"
+   ],
+   "rationale": "Institutional scope statements on /providers/ and sources on /data/."
+  },
+  {
+   "query_en": "decision",
+   "query_ar": "قرار",
+   "expected": [
+    "/data/",
+    "/providers/",
+    "/reforms/"
+   ],
+   "rationale": "Decisions are source documents (alias 002: document type)."
+  },
+  {
+   "query_en": "law",
+   "query_ar": "قانون",
+   "expected": [
+    "/data/",
+    "/reforms/"
+   ],
+   "rationale": "Laws are source documents (alias 001)."
+  },
+  {
+   "query_en": "regulation",
+   "query_ar": "لائحة",
+   "expected": [
+    "/data/",
+    "/reforms/"
+   ],
+   "rationale": "Regulations are source documents (alias 004)."
+  },
+  {
+   "query_en": "consumer protection",
+   "query_ar": "حماية المستهلك",
+   "expected": [
+    "/reforms/",
+    "/evidence/CLM-011/",
+    "/evidence/DS-FCP-ARCH/"
+   ],
+   "rationale": "The rules and their limits are explained on /reforms/; the FCP records are equally valid (alias 022)."
+  },
+  {
+   "query_en": "complaints",
+   "query_ar": "الشكاوى",
+   "expected": [
+    "/reforms/",
+    "/evidence/CLM-011/",
+    "/evidence/VIS-FCP-REDRESS-PATH/"
+   ],
+   "rationale": "Complaint path on /reforms/ (alias 023 with boundary note)."
+  },
+  {
+   "query_en": "FMIIP",
+   "query_ar": "FMIIP",
+   "expected": [
+    "/reforms/",
+    "/payments/",
+    "/evidence/FMIIP-BASELINE-2025-01/",
+    "/evidence/XW-FMIIP-005/"
+   ],
+   "rationale": "Project explained on /reforms/ and /payments/; its baseline and target records are valid destinations (alias 024)."
+  },
+  {
+   "query_en": "cash transfer",
+   "query_ar": "التحويل النقدي",
+   "expected": [
+    "/readings/after-transfer-persistence/",
+    "/payments/",
+    "/evidence/CLM-045/"
+   ],
+   "rationale": "The Reading and CLM-045 both answer 'does a cash transfer create financial use?'."
+  },
+  {
+   "query_en": "KYC",
+   "query_ar": "اعرف عميلك",
+   "expected": [
+    "/payments/",
+    "/people/",
+    "/measurement/"
+   ],
+   "rationale": "Identity and onboarding appear on /payments/, /people/ and MA-007."
+  },
+  {
+   "query_en": "access points",
+   "query_ar": "نقاط الوصول",
+   "expected": [
+    "/access/",
+    "/evidence/XW-FMIIP-005/",
+    "/evidence/FMIIP-BASELINE-2025-01/"
+   ],
+   "rationale": "Access page; the FMIIP access-point records are equally valid."
+  },
+  {
+   "query_en": "working capital",
+   "query_ar": "رأس المال العامل",
+   "expected": [
+    "/firms/",
+    "/evidence/CLM-062/"
+   ],
+   "rationale": "Added in P2: firm working-capital sources (P1.6)."
+  },
+  {
+   "query_en": "exchange rate",
+   "query_ar": "سعر الصرف",
+   "expected": [
+    "/finance/",
+    "/data/"
+   ],
+   "rationale": "Exchange-rate context on /finance/ (alias 010)."
+  },
+  {
+   "query_en": "measurement",
+   "query_ar": "القياس",
+   "expected": [
+    "/measurement/"
+   ],
+   "rationale": "Measurement Agenda (alias 011)."
+  }
+ ]
+}

@@ -1,0 +1,72 @@
+{
+ "stage": "P1-C",
+ "staged_master_sha256": "754daef2b11c4539ea4445e3c1b5a13460c7240851be8c4ee70a8e96bd39818c",
+ "installed": [
+  "site-src/content/presentation_priority.json",
+  "site-src/content/content/navigation_interaction.json",
+  "scripts/projection/controlled_inputs/page_spec_design_intent.json"
+ ],
+ "steps": [
+  {
+   "step": "generate",
+   "exit": 0,
+   "tail": [
+    "  \"content/navigation_interaction.json\",",
+    "  \"presentation_priority.json\"",
+    " ],",
+    " \"output_sha256\": 39",
+    "}",
+    "PROJECTIONS GENERATED"
+   ]
+  },
+  {
+   "step": "rebind",
+   "exit": 0,
+   "tail": [
+    "  \"README.md\",",
+    "  \"handoff/MASTER_IMPLEMENTATION_PROMPT.md\",",
+    "  \"handoff/CLAUDE_DESIGN_MASTER_PROMPT.md\",",
+    "  \"handoff/CLAUDE_CODE_MASTER_PROMPT.md\"",
+    " ]",
+    "}"
+   ]
+  },
+  {
+   "step": "build",
+   "exit": 0,
+   "tail": [
+    "Built 288 HTML files from 143 controlled page specs."
+   ]
+  },
+  {
+   "step": "public_literal_audit",
+   "exit": 0,
+   "tail": [
+    "PUBLIC_LITERAL_CLOSURE records=8238 unresolved=0"
+   ]
+  },
+  {
+   "step": "validate",
+   "exit": 0,
+   "tail": [
+    "HTML=288 ERRORS=0 WARN=0",
+    "WEBSITE REPOSITORY VALIDATION PASS"
+   ]
+  },
+  {
+   "step": "generator_idempotence",
+   "exit": 0,
+   "tail": [
+    " \"master_sha256\": \"754daef2b11c4539ea4445e3c1b5a13460c7240851be8c4ee70a8e96bd39818c\",",
+    " \"outputs\": 39,",
+    " \"differences\": [],",
+    " \"output_sha256\": 39",
+    "}",
+    "PROJECTION CHECK PASS"
+   ]
+  }
+ ],
+ "result": "COMMITTED",
+ "master_sha256": "754daef2b11c4539ea4445e3c1b5a13460c7240851be8c4ee70a8e96bd39818c",
+ "page_specs_sha256": "14a0752dc1e63f2911656debcf18c1fff5a2c73ae9cd63b2057163d17ab83e9e"
+}

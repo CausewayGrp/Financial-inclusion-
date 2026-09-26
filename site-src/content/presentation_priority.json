@@ -1,0 +1,1107 @@
+{
+  "schema_version": "1.0",
+  "authority_scope": "PRESENTATION_DEPTH_ONLY",
+  "semantic_authority": "Production Master via frozen Page Specs; this contract cannot alter facts, claims, units, universes, periods, sources, rights, evidence class or publication state.",
+  "page_families_supported": [
+    "Orientation",
+    "Domain Answer",
+    "Evidence Record",
+    "Comparison",
+    "Reading",
+    "Measurement",
+    "Reference / Trust"
+  ],
+  "routes": [
+    {
+      "route": "/people/",
+      "page_family": "Domain Answer",
+      "primary_user_task": "Understand what representative people-side evidence establishes and where subgroup gaps are measured.",
+      "primary_user_question": "What does the strongest representative evidence say about people?",
+      "dominant_analytical_object": "representative_people_evidence_and_subgroup_gaps",
+      "primary": [
+        {
+          "kind": "section",
+          "section_order": 2
+        },
+        {
+          "kind": "section",
+          "section_order": 3
+        },
+        {
+          "kind": "section",
+          "section_order": 10
+        },
+        {
+          "kind": "visual",
+          "object_id": "VIS-FINDEX-GAPS",
+          "after_primary": 2
+        }
+      ],
+      "supporting": [
+        {
+          "kind": "section",
+          "section_order": 4
+        },
+        {
+          "kind": "section",
+          "section_order": 8
+        }
+      ],
+      "progressive": [
+        {
+          "kind": "section",
+          "section_order": 5
+        },
+        {
+          "kind": "section",
+          "section_order": 6
+        },
+        {
+          "kind": "section",
+          "section_order": 7
+        },
+        {
+          "kind": "section",
+          "section_order": 9
+        },
+        {
+          "kind": "section",
+          "section_order": 11
+        }
+      ],
+      "linked": [
+        {
+          "kind": "route",
+          "route": "/evidence/"
+        },
+        {
+          "kind": "route",
+          "route": "/data/"
+        },
+        {
+          "kind": "route",
+          "route": "/methodology/"
+        }
+      ],
+      "utility": [
+        {
+          "kind": "verification_records",
+          "object_ids": [
+            "CLM-001",
+            "CLM-002",
+            "CLM-025"
+          ]
+        }
+      ],
+      "first_load_exclusions": [
+        {
+          "kind": "section",
+          "section_order": 5
+        },
+        {
+          "kind": "section",
+          "section_order": 6
+        },
+        {
+          "kind": "section",
+          "section_order": 7
+        },
+        {
+          "kind": "section",
+          "section_order": 9
+        },
+        {
+          "kind": "section",
+          "section_order": 11
+        }
+      ],
+      "mobile_priority": [
+        {
+          "kind": "lead"
+        },
+        {
+          "kind": "supporting",
+          "position": 1
+        },
+        {
+          "kind": "supporting",
+          "position": 2
+        },
+        {
+          "kind": "primary",
+          "position": 1
+        },
+        {
+          "kind": "verify"
+        }
+      ],
+      "always_visible_boundaries": [
+        {
+          "kind": "section",
+          "section_order": 4
+        }
+      ],
+      "primary_verify_destination": "/evidence/CLM-001/",
+      "presentation_family": "dense",
+      "measurement_limit": 2
+    },
+    {
+      "route": "/access/",
+      "page_family": "Domain Answer",
+      "primary_user_task": "Understand what access can be mapped or inferred and where geography or operation remains unobserved.",
+      "primary_user_question": "What can we map or infer about access, and where does the evidence stop?",
+      "dominant_analytical_object": "geographic_access_observability",
+      "primary": [
+        {
+          "kind": "section",
+          "section_order": 2
+        },
+        {
+          "kind": "section",
+          "section_order": 3
+        },
+        {
+          "kind": "section",
+          "section_order": 5
+        },
+        {
+          "kind": "section",
+          "section_order": 8
+        },
+        {
+          "kind": "visual",
+          "object_id": "VIS-ACCESS-EVIDENCE-LAYER",
+          "after_primary": 3
+        }
+      ],
+      "supporting": [
+        {
+          "kind": "section",
+          "section_order": 4
+        },
+        {
+          "kind": "section",
+          "section_order": 7
+        }
+      ],
+      "progressive": [
+        {
+          "kind": "section",
+          "section_order": 6
+        },
+        {
+          "kind": "section",
+          "section_order": 9
+        }
+      ],
+      "linked": [
+        {
+          "kind": "route",
+          "route": "/evidence/"
+        },
+        {
+          "kind": "route",
+          "route": "/data/"
+        },
+        {
+          "kind": "route",
+          "route": "/methodology/"
+        }
+      ],
+      "utility": [
+        {
+          "kind": "verification_records",
+          "object_ids": [
+            "CLM-009"
+          ]
+        }
+      ],
+      "first_load_exclusions": [
+        {
+          "kind": "section",
+          "section_order": 6
+        },
+        {
+          "kind": "section",
+          "section_order": 9
+        }
+      ],
+      "mobile_priority": [
+        {
+          "kind": "lead"
+        },
+        {
+          "kind": "supporting",
+          "position": 1
+        },
+        {
+          "kind": "supporting",
+          "position": 2
+        },
+        {
+          "kind": "primary",
+          "position": 1
+        },
+        {
+          "kind": "verify"
+        }
+      ],
+      "always_visible_boundaries": [
+        {
+          "kind": "section",
+          "section_order": 4
+        }
+      ],
+      "primary_verify_destination": "/evidence/",
+      "presentation_family": "sparse",
+      "measurement_limit": 2
+    },
+    {
+      "route": "/firms/",
+      "page_family": "Domain Answer",
+      "primary_user_task": "Understand what firm evidence says about finance within its exact survey or programme universe.",
+      "primary_user_question": "What do we know about firms and finance, and within which survey/programme universes?",
+      "dominant_analytical_object": "bounded_firm_survey_and_programme_evidence",
+      "primary": [
+        {
+          "kind": "section",
+          "section_order": 2
+        },
+        {
+          "kind": "section",
+          "section_order": 3
+        },
+        {
+          "kind": "section",
+          "section_order": 4
+        },
+        {
+          "kind": "section",
+          "section_order": 5
+        },
+        {
+          "kind": "section",
+          "section_order": 9
+        },
+        {
+          "kind": "visual",
+          "object_id": "VIS-FIRM-CONSTRAINTS",
+          "after_primary": 1
+        }
+      ],
+      "supporting": [
+        {
+          "kind": "section",
+          "section_order": 6
+        }
+      ],
+      "progressive": [
+        {
+          "kind": "section",
+          "section_order": 7
+        },
+        {
+          "kind": "section",
+          "section_order": 8
+        }
+      ],
+      "linked": [
+        {
+          "kind": "route",
+          "route": "/evidence/"
+        },
+        {
+          "kind": "route",
+          "route": "/data/"
+        },
+        {
+          "kind": "route",
+          "route": "/methodology/"
+        }
+      ],
+      "utility": [
+        {
+          "kind": "verification_records",
+          "object_ids": [
+            "CLM-005",
+            "CLM-006",
+            "CLM-059",
+            "CLM-060",
+            "CLM-062"
+          ]
+        }
+      ],
+      "first_load_exclusions": [
+        {
+          "kind": "section",
+          "section_order": 7
+        },
+        {
+          "kind": "section",
+          "section_order": 8
+        }
+      ],
+      "mobile_priority": [
+        {
+          "kind": "lead"
+        },
+        {
+          "kind": "supporting",
+          "position": 1
+        },
+        {
+          "kind": "primary",
+          "position": 1
+        },
+        {
+          "kind": "verify"
+        }
+      ],
+      "always_visible_boundaries": [
+        {
+          "kind": "section",
+          "section_order": 6
+        }
+      ],
+      "primary_verify_destination": "/evidence/CLM-005/",
+      "presentation_family": "bounded-survey-programme",
+      "measurement_limit": 2
+    },
+    {
+      "route": "/finance/",
+      "page_family": "Domain Answer",
+      "primary_user_task": "Understand financial and microfinance signals without treating unlike metrics as one inclusion trend.",
+      "primary_user_question": "What can the evidence support about finance and microfinance?",
+      "dominant_analytical_object": "financial_intermediation_and_microfinance_evidence_states",
+      "primary": [
+        {
+          "kind": "section",
+          "section_order": 2
+        },
+        {
+          "kind": "section",
+          "section_order": 3
+        },
+        {
+          "kind": "section",
+          "section_order": 4
+        },
+        {
+          "kind": "section",
+          "section_order": 5
+        },
+        {
+          "kind": "section",
+          "section_order": 10
+        },
+        {
+          "kind": "visual",
+          "object_id": "VIS-MFI-DIVERGENCE",
+          "after_primary": 2
+        }
+      ],
+      "supporting": [
+        {
+          "kind": "section",
+          "section_order": 9
+        },
+        {
+          "kind": "section",
+          "section_order": 11
+        }
+      ],
+      "progressive": [
+        {
+          "kind": "section",
+          "section_order": 6
+        },
+        {
+          "kind": "section",
+          "section_order": 7
+        },
+        {
+          "kind": "section",
+          "section_order": 8
+        },
+        {
+          "kind": "section",
+          "section_order": 12
+        },
+        {
+          "kind": "section",
+          "section_order": 13
+        }
+      ],
+      "linked": [
+        {
+          "kind": "route",
+          "route": "/evidence/"
+        },
+        {
+          "kind": "route",
+          "route": "/data/"
+        },
+        {
+          "kind": "route",
+          "route": "/methodology/"
+        }
+      ],
+      "utility": [
+        {
+          "kind": "verification_records",
+          "object_ids": [
+            "CLM-022",
+            "CLM-054",
+            "CLM-033",
+            "CLM-046"
+          ]
+        }
+      ],
+      "first_load_exclusions": [
+        {
+          "kind": "section",
+          "section_order": 6
+        },
+        {
+          "kind": "section",
+          "section_order": 7
+        },
+        {
+          "kind": "section",
+          "section_order": 8
+        },
+        {
+          "kind": "section",
+          "section_order": 12
+        },
+        {
+          "kind": "section",
+          "section_order": 13
+        }
+      ],
+      "mobile_priority": [
+        {
+          "kind": "lead"
+        },
+        {
+          "kind": "supporting",
+          "position": 1
+        },
+        {
+          "kind": "supporting",
+          "position": 2
+        },
+        {
+          "kind": "primary",
+          "position": 1
+        },
+        {
+          "kind": "verify"
+        }
+      ],
+      "always_visible_boundaries": [
+        {
+          "kind": "section",
+          "section_order": 9
+        }
+      ],
+      "primary_verify_destination": "/evidence/CLM-022/",
+      "presentation_family": "system-history",
+      "measurement_limit": 2
+    },
+    {
+      "route": "/payments/",
+      "page_family": "Domain Answer",
+      "primary_user_task": "Understand what payment-system change is observed without turning infrastructure or activity into people-level use.",
+      "primary_user_question": "How is the payment system changing, and what does that not tell us about inclusion?",
+      "dominant_analytical_object": "payment_measurement_objects_and_use_boundary",
+      "primary": [
+        {
+          "kind": "section",
+          "section_order": 2
+        },
+        {
+          "kind": "section",
+          "section_order": 4
+        },
+        {
+          "kind": "section",
+          "section_order": 5
+        },
+        {
+          "kind": "section",
+          "section_order": 7
+        },
+        {
+          "kind": "section",
+          "section_order": 6
+        },
+        {
+          "kind": "visual",
+          "object_id": "VIS-PAYMENT-ANATOMY",
+          "after_primary": 2
+        }
+      ],
+      "supporting": [
+        {
+          "kind": "section",
+          "section_order": 8
+        },
+        {
+          "kind": "section",
+          "section_order": 9
+        }
+      ],
+      "progressive": [
+        {
+          "kind": "section",
+          "section_order": 3
+        }
+      ],
+      "linked": [
+        {
+          "kind": "route",
+          "route": "/evidence/"
+        },
+        {
+          "kind": "route",
+          "route": "/data/"
+        },
+        {
+          "kind": "route",
+          "route": "/methodology/"
+        }
+      ],
+      "utility": [
+        {
+          "kind": "verification_records",
+          "object_ids": [
+            "CLM-003",
+            "CLM-004",
+            "CLM-017",
+            "CLM-050",
+            "CLM-010"
+          ]
+        }
+      ],
+      "first_load_exclusions": [
+        {
+          "kind": "section",
+          "section_order": 3
+        }
+      ],
+      "mobile_priority": [
+        {
+          "kind": "lead"
+        },
+        {
+          "kind": "supporting",
+          "position": 1
+        },
+        {
+          "kind": "supporting",
+          "position": 2
+        },
+        {
+          "kind": "primary",
+          "position": 1
+        },
+        {
+          "kind": "verify"
+        }
+      ],
+      "always_visible_boundaries": [
+        {
+          "kind": "section",
+          "section_order": 8
+        }
+      ],
+      "primary_verify_destination": "/evidence/CLM-003/",
+      "presentation_family": "admin-infrastructure-use-boundary",
+      "measurement_limit": 2
+    },
+    {
+      "route": "/remittances/",
+      "page_family": "Domain Answer",
+      "primary_user_task": "Understand which remittance concepts, vintages and evidence states can be compared and which cannot.",
+      "primary_user_question": "What do we know about remittances, and which series can actually be compared?",
+      "dominant_analytical_object": "remittance_concept_vintage_and_observation_state",
+      "primary": [
+        {
+          "kind": "section",
+          "section_order": 2
+        },
+        {
+          "kind": "section",
+          "section_order": 3
+        },
+        {
+          "kind": "section",
+          "section_order": 4
+        },
+        {
+          "kind": "section",
+          "section_order": 5
+        },
+        {
+          "kind": "visual",
+          "object_id": "VIS-REMITTANCE-MACRO",
+          "after_primary": 1
+        }
+      ],
+      "supporting": [
+        {
+          "kind": "section",
+          "section_order": 8
+        },
+        {
+          "kind": "section",
+          "section_order": 9
+        }
+      ],
+      "progressive": [
+        {
+          "kind": "section",
+          "section_order": 6
+        },
+        {
+          "kind": "section",
+          "section_order": 7
+        }
+      ],
+      "linked": [
+        {
+          "kind": "route",
+          "route": "/evidence/"
+        },
+        {
+          "kind": "route",
+          "route": "/data/"
+        },
+        {
+          "kind": "route",
+          "route": "/methodology/"
+        }
+      ],
+      "utility": [
+        {
+          "kind": "verification_records",
+          "object_ids": [
+            "CLM-007",
+            "CLM-032",
+            "CLM-041",
+            "CLM-043"
+          ]
+        }
+      ],
+      "first_load_exclusions": [
+        {
+          "kind": "section",
+          "section_order": 6
+        },
+        {
+          "kind": "section",
+          "section_order": 7
+        }
+      ],
+      "mobile_priority": [
+        {
+          "kind": "lead"
+        },
+        {
+          "kind": "supporting",
+          "position": 1
+        },
+        {
+          "kind": "supporting",
+          "position": 2
+        },
+        {
+          "kind": "primary",
+          "position": 1
+        },
+        {
+          "kind": "verify"
+        }
+      ],
+      "always_visible_boundaries": [
+        {
+          "kind": "section",
+          "section_order": 8
+        }
+      ],
+      "primary_verify_destination": "/evidence/CLM-007/",
+      "presentation_family": "macro-vintage-concept",
+      "measurement_limit": 0
+    },
+    {
+      "route": "/providers/",
+      "page_family": "Domain Answer",
+      "primary_user_task": "Identify which providers are evidenced, under what authority/status/date, and what that status actually establishes.",
+      "primary_user_question": "Which providers are evidenced, and what does a listing actually establish?",
+      "dominant_analytical_object": "provider_authority_status_and_operation_observability",
+      "primary": [
+        {
+          "kind": "section",
+          "section_order": 2
+        },
+        {
+          "kind": "section",
+          "section_order": 3
+        },
+        {
+          "kind": "section",
+          "section_order": 4
+        },
+        {
+          "kind": "section",
+          "section_order": 6
+        },
+        {
+          "kind": "visual",
+          "object_id": "VIS-PROVIDER-OBSERVABILITY",
+          "after_primary": 2
+        }
+      ],
+      "supporting": [
+        {
+          "kind": "section",
+          "section_order": 7
+        },
+        {
+          "kind": "section",
+          "section_order": 9
+        }
+      ],
+      "progressive": [
+        {
+          "kind": "section",
+          "section_order": 5
+        },
+        {
+          "kind": "section",
+          "section_order": 8
+        },
+        {
+          "kind": "section",
+          "section_order": 10
+        }
+      ],
+      "linked": [
+        {
+          "kind": "route",
+          "route": "/evidence/"
+        },
+        {
+          "kind": "route",
+          "route": "/data/"
+        },
+        {
+          "kind": "route",
+          "route": "/methodology/"
+        }
+      ],
+      "utility": [
+        {
+          "kind": "verification_records",
+          "object_ids": [
+            "CLM-009",
+            "CLM-008",
+            "CLM-019",
+            "CLM-055"
+          ]
+        }
+      ],
+      "first_load_exclusions": [
+        {
+          "kind": "section",
+          "section_order": 5
+        },
+        {
+          "kind": "section",
+          "section_order": 8
+        },
+        {
+          "kind": "section",
+          "section_order": 10
+        }
+      ],
+      "mobile_priority": [
+        {
+          "kind": "lead"
+        },
+        {
+          "kind": "supporting",
+          "position": 1
+        },
+        {
+          "kind": "supporting",
+          "position": 2
+        },
+        {
+          "kind": "primary",
+          "position": 1
+        },
+        {
+          "kind": "verify"
+        }
+      ],
+      "always_visible_boundaries": [
+        {
+          "kind": "section",
+          "section_order": 7
+        }
+      ],
+      "primary_verify_destination": "/evidence/CLM-009/",
+      "presentation_family": "authority-status-operation",
+      "measurement_limit": 2
+    },
+    {
+      "route": "/reforms/",
+      "page_family": "Domain Answer",
+      "primary_user_task": "Identify what changed, the furthest evidenced reform state, what it establishes, and which later states remain unmeasured.",
+      "primary_user_question": "What reforms and infrastructure are documented, and how far along the evidence chain are they?",
+      "dominant_analytical_object": "furthest_evidenced_reform_state",
+      "primary": [
+        {
+          "kind": "section",
+          "section_order": 2
+        },
+        {
+          "kind": "section",
+          "section_order": 3
+        },
+        {
+          "kind": "section",
+          "section_order": 4
+        },
+        {
+          "kind": "section",
+          "section_order": 6
+        },
+        {
+          "kind": "section",
+          "section_order": 11
+        }
+      ],
+      "supporting": [
+        {
+          "kind": "section",
+          "section_order": 9
+        },
+        {
+          "kind": "section",
+          "section_order": 10
+        }
+      ],
+      "progressive": [
+        {
+          "kind": "section",
+          "section_order": 5
+        },
+        {
+          "kind": "section",
+          "section_order": 7
+        },
+        {
+          "kind": "section",
+          "section_order": 8
+        }
+      ],
+      "linked": [
+        {
+          "kind": "route",
+          "route": "/evidence/"
+        },
+        {
+          "kind": "route",
+          "route": "/data/"
+        },
+        {
+          "kind": "route",
+          "route": "/methodology/"
+        }
+      ],
+      "utility": [
+        {
+          "kind": "verification_records",
+          "object_ids": [
+            "CLM-011",
+            "CLM-012",
+            "CLM-018",
+            "CLM-046",
+            "CLM-049"
+          ]
+        }
+      ],
+      "first_load_exclusions": [
+        {
+          "kind": "section",
+          "section_order": 5
+        },
+        {
+          "kind": "section",
+          "section_order": 7
+        },
+        {
+          "kind": "section",
+          "section_order": 8
+        }
+      ],
+      "mobile_priority": [
+        {
+          "kind": "lead"
+        },
+        {
+          "kind": "supporting",
+          "position": 1
+        },
+        {
+          "kind": "supporting",
+          "position": 2
+        },
+        {
+          "kind": "primary",
+          "position": 1
+        },
+        {
+          "kind": "verify"
+        }
+      ],
+      "always_visible_boundaries": [
+        {
+          "kind": "section",
+          "section_order": 9
+        }
+      ],
+      "primary_verify_destination": "/evidence/CLM-011/",
+      "presentation_family": "transmission-state",
+      "measurement_limit": 2
+    }
+  ],
+  "populated_families": [
+    "Domain Answer",
+    "Evidence Record",
+    "Comparison"
+  ],
+  "family_contracts": {
+    "Evidence Record": {
+      "page_family": "Evidence Record",
+      "page_class": "evidence_detail",
+      "presentation_family": "verification-record",
+      "primary": [
+        "summary",
+        "source_references"
+      ],
+      "supporting": [
+        "definition",
+        "universe",
+        "period",
+        "currentness",
+        "limitations"
+      ],
+      "progressive": [
+        "method",
+        "change_trigger",
+        "verification",
+        "page_reading_guidance"
+      ],
+      "linked": [
+        "public_routes",
+        "data_source",
+        "methodology",
+        "evidence_hub"
+      ],
+      "utility": [
+        "object_id",
+        "language",
+        "report_issue",
+        "citation",
+        "reuse",
+        "corrections"
+      ],
+      "first_load_exclusions": [
+        "method",
+        "change_trigger",
+        "verification",
+        "page_reading_guidance"
+      ],
+      "mobile_priority": [
+        "summary",
+        "universe",
+        "period",
+        "limitations",
+        "source_references",
+        "public_routes"
+      ],
+      "always_visible_boundaries": [
+        "limitations"
+      ],
+      "primary_verify_destination": "source_references",
+      "rules": {
+        "single_governed_object": "governed_evidence_objects[0]",
+        "no_semantic_copy": "Presentation contract references controlled field names only; public prose remains in the Production Master/Page Specs.",
+        "source_publication_filter": "Use source_reference_map metadata state and public locator presence; never invent source metadata or locator.",
+        "related_interpretation": "Use the governed object public routes; stable IDs support reference but are not required for navigation."
+      }
+    },
+    "Comparison": {
+      "page_family": "Comparison",
+      "page_class": "static",
+      "template_route": "/evidence/compare",
+      "presentation_family": "compatibility-first",
+      "primary": [
+        "selected_records",
+        "compatibility_result"
+      ],
+      "supporting": [
+        "definition",
+        "universe",
+        "period",
+        "method",
+        "source_reference",
+        "currentness"
+      ],
+      "progressive": [
+        "limitations",
+        "verification"
+      ],
+      "linked": [
+        "evidence_record",
+        "data_source",
+        "methodology"
+      ],
+      "utility": [
+        "language",
+        "report_issue"
+      ],
+      "first_load_exclusions": [
+        "limitations",
+        "verification"
+      ],
+      "mobile_priority": [
+        "compatibility_result",
+        "definition",
+        "universe",
+        "period",
+        "method",
+        "evidence_record"
+      ],
+      "always_visible_boundaries": [
+        "compatibility_result"
+      ],
+      "primary_verify_destination": "evidence_record",
+      "rules": {
+        "no_semantic_copy": "Presentation contract references controlled fields only; comparison prose and evidence remain in the Production Master/Page Specs.",
+        "compatibility_before_values": "The renderer assesses compatibility dimensions before any numeric comparison; the current comparison payload does not contain numeric values.",
+        "fail_closed": "Missing required compatibility dimensions prevent a direct-comparison claim.",
+        "no_forced_reconciliation": "No averaging, midpoint, preferred number or conversion scalar is generated by the presentation layer."
+      },
+      "tranche_c_note": "TOOL-01 (Tranche C): geography and unit are not governed per Evidence Record, so they are not comparison dimensions; a blank field is never shown as an evidence state."
+    }
+  },
+  "p1_3_band_rule": "Pre-Tranche-C P1.3: supporting (the always-visible boundary band), primary and progressive section tiers are disjoint and together cover every non-lead section; a band section renders once, in full, under its own governed heading.",
+  "tranche_c_notes": [
+    "JRN-22: /payments/ historical e-money section and /reforms/ rule-versus-implementation section move to the primary tier; they hold the only answer to part of the governed question."
+  ]
+}

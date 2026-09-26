@@ -1,0 +1,576 @@
+{
+ "transaction": "P1-B",
+ "scope": "P1.5 lineage residuals, Reading bindings, verification-path interface copy",
+ "input_master_sha256": "982bd6aeaa67115dc71ba79af689baaa1a9061c78632501b9109453a230b8dff",
+ "output_master_sha256": "1d0a6cb10b48af75b73e9c0bfa4388ae2b9bb4fdb926ed7547e5991989c3cdda",
+ "cells_written": 63,
+ "changes": [
+  {
+   "finding": "P1-L01",
+   "sheet": "06_EVIDENCE_OBJECTS",
+   "row": 22,
+   "col": 24,
+   "field": "CLM-017.source_dependencies",
+   "old": "SRC-CBY-POS-2026-01; UNBOUND:CBY-PAYMENTS-RELEASE-LISTING",
+   "new": "SRC-CBY-POS-2026-01; SRC-CBY-POS-PUBLICATION-PAGE-2026-001"
+  },
+  {
+   "finding": "P1-L01",
+   "sheet": "06_EVIDENCE_OBJECTS",
+   "row": 22,
+   "col": 26,
+   "field": "CLM-017.lineage_state",
+   "old": "BOUND_PARTIAL",
+   "new": "BOUND_EXACT"
+  },
+  {
+   "finding": "P1-L01",
+   "sheet": "06_EVIDENCE_OBJECTS",
+   "row": 22,
+   "col": 22,
+   "field": "CLM-017.verification_en",
+   "old": "Some figures in this record are drawn from the source(s) listed on this page; other inputs have not yet been linked to a specific original source. Check each figure against a listed source before reuse, and treat any figure you cannot match as unverified.",
+   "new": "This record is drawn from the source(s) listed on this page. Open a source record to reach the original document, and check that the definition, period, population and geography match what is stated here."
+  },
+  {
+   "finding": "P1-L01",
+   "sheet": "06_EVIDENCE_OBJECTS",
+   "row": 22,
+   "col": 23,
+   "field": "CLM-017.verification_ar",
+   "old": "تستند بعض أرقام هذا السجل إلى المصدر أو المصادر المدرجة في هذه الصفحة، ولم تُربط مدخلات أخرى بعدُ بمصدر أصلي محدد. فطابِق كل رقم مع أحد المصادر المدرجة قبل إعادة استخدامه، وعامِل الرقم الذي لا تجد له مقابلًا على أنه غير متحقق منه.",
+   "new": "يستند هذا السجل إلى المصدر أو المصادر المدرجة في هذه الصفحة. افتح سجل المصدر للوصول إلى الوثيقة الأصلية، وتحقق من تطابق التعريف والفترة والمجتمع والنطاق الجغرافي مع ما يرد هنا."
+  },
+  {
+   "finding": "P1-L02",
+   "sheet": "06_EVIDENCE_OBJECTS",
+   "row": 89,
+   "col": 24,
+   "field": "CLM-045.source_dependencies",
+   "old": "SRC-WB-G2PX-YEM-UCT-2024-001; EP-YEM-CASH-FIN-TRANSMISSION-K04; DS-K04-CASH-FIN-TRANSMISSION",
+   "new": "SRC-WB-G2PX-YEM-UCT-2024-001; SRC-CCY-SAM-2024; SRC-CCY-ISP-2024; SRC-CCY-PRESSURE-2026; EP-YEM-CASH-FIN-TRANSMISSION-K04"
+  },
+  {
+   "finding": "P1-L02",
+   "sheet": "06_EVIDENCE_OBJECTS",
+   "row": 89,
+   "col": 26,
+   "field": "CLM-045.lineage_state",
+   "old": "BOUND_PARTIAL",
+   "new": "BOUND_EXACT"
+  },
+  {
+   "finding": "P1-L02",
+   "sheet": "06_EVIDENCE_OBJECTS",
+   "row": 89,
+   "col": 22,
+   "field": "CLM-045.verification_en",
+   "old": "Some figures in this record are drawn from the source(s) listed on this page; other inputs have not yet been linked to a specific original source. Check each figure against a listed source before reuse, and treat any figure you cannot match as unverified.",
+   "new": "This record is drawn from the source(s) listed on this page. Open a source record to reach the original document, and check that the definition, period, population and geography match what is stated here."
+  },
+  {
+   "finding": "P1-L02",
+   "sheet": "06_EVIDENCE_OBJECTS",
+   "row": 89,
+   "col": 23,
+   "field": "CLM-045.verification_ar",
+   "old": "تستند بعض أرقام هذا السجل إلى المصدر أو المصادر المدرجة في هذه الصفحة، ولم تُربط مدخلات أخرى بعدُ بمصدر أصلي محدد. فطابِق كل رقم مع أحد المصادر المدرجة قبل إعادة استخدامه، وعامِل الرقم الذي لا تجد له مقابلًا على أنه غير متحقق منه.",
+   "new": "يستند هذا السجل إلى المصدر أو المصادر المدرجة في هذه الصفحة. افتح سجل المصدر للوصول إلى الوثيقة الأصلية، وتحقق من تطابق التعريف والفترة والمجتمع والنطاق الجغرافي مع ما يرد هنا."
+  },
+  {
+   "finding": "P1-L03",
+   "sheet": "06_EVIDENCE_OBJECTS",
+   "row": 98,
+   "col": 24,
+   "field": "CLM-054.source_dependencies",
+   "old": "SRC-SFD-Q4-2015-001; SRC-SFD-Q4-2020-001; SRC-SANAA-MFB-2024; INS-K04-023",
+   "new": "SRC-SFD-Q4-2015-001; SRC-SFD-Q4-2020-001; SRC-SANAA-MFB-2024; SRC-CBY-001; INS-K04-023"
+  },
+  {
+   "finding": "P1-L04",
+   "sheet": "06_EVIDENCE_OBJECTS",
+   "row": 14,
+   "col": 24,
+   "field": "VIS-PROVIDER-TIME.source_dependencies",
+   "old": null,
+   "new": "CLM-009; CLM-019"
+  },
+  {
+   "finding": "P1-L04",
+   "sheet": "06_EVIDENCE_OBJECTS",
+   "row": 14,
+   "col": 26,
+   "field": "VIS-PROVIDER-TIME.lineage_state",
+   "old": "SOURCE_NOT_YET_BOUND",
+   "new": "COMPOSITE_OF_OBJECTS"
+  },
+  {
+   "finding": "P1-L04",
+   "sheet": "06_EVIDENCE_OBJECTS",
+   "row": 14,
+   "col": 22,
+   "field": "VIS-PROVIDER-TIME.verification_en",
+   "old": "This record has not yet been linked to a specific original source. Treat its figures as unverified for reuse until the link is added.",
+   "new": "This view assembles other evidence records. Check each linked record against its own source."
+  },
+  {
+   "finding": "P1-L04",
+   "sheet": "06_EVIDENCE_OBJECTS",
+   "row": 14,
+   "col": 23,
+   "field": "VIS-PROVIDER-TIME.verification_ar",
+   "old": "لم يُربط هذا السجل بعدُ بمصدر أصلي محدد، فلا تُعامل أرقامه على أنها صالحة لإعادة الاستخدام إلى أن يُضاف هذا الربط.",
+   "new": "يجمع هذا العرض سجلات أدلة أخرى، فتحقق من كل سجل مرتبط مقابل مصدره الخاص."
+  },
+  {
+   "finding": "P1-L05",
+   "sheet": "06_EVIDENCE_OBJECTS",
+   "row": 53,
+   "col": 24,
+   "field": "VIS-DEMAND-VINTAGE-LADDER.source_dependencies",
+   "old": null,
+   "new": "CLM-001; CLM-027; CLM-028; CLM-029; CLM-030; VIS-FINDEX-RESILIENCE; VIS-FINDEX-BARRIERS"
+  },
+  {
+   "finding": "P1-L05",
+   "sheet": "06_EVIDENCE_OBJECTS",
+   "row": 53,
+   "col": 22,
+   "field": "VIS-DEMAND-VINTAGE-LADDER.verification_en",
+   "old": "This view summarises other evidence records, which are not yet linked individually here. Before reusing a figure, open the evidence record that reports it and check that record against its own source.",
+   "new": "This view assembles other evidence records. Check each linked record against its own source."
+  },
+  {
+   "finding": "P1-L05",
+   "sheet": "06_EVIDENCE_OBJECTS",
+   "row": 53,
+   "col": 23,
+   "field": "VIS-DEMAND-VINTAGE-LADDER.verification_ar",
+   "old": "يلخص هذا العرض سجلات أدلة أخرى لم تُربط بعدُ هنا كلٌّ على حدة. وقبل إعادة استخدام أي رقم، افتح سجل الدليل الذي يورده وتحقق منه مقابل مصدره الخاص.",
+   "new": "يجمع هذا العرض سجلات أدلة أخرى، فتحقق من كل سجل مرتبط مقابل مصدره الخاص."
+  },
+  {
+   "finding": "P1-L06",
+   "sheet": "06_EVIDENCE_OBJECTS",
+   "row": 57,
+   "col": 24,
+   "field": "DS-FINDEX-HISTORY-CROSSWALK.source_dependencies",
+   "old": null,
+   "new": "DS-FINDEX-PUBLIC-HISTORY; CLM-026"
+  },
+  {
+   "finding": "P1-L06",
+   "sheet": "06_EVIDENCE_OBJECTS",
+   "row": 57,
+   "col": 22,
+   "field": "DS-FINDEX-HISTORY-CROSSWALK.verification_en",
+   "old": "This view summarises other evidence records, which are not yet linked individually here. Before reusing a figure, open the evidence record that reports it and check that record against its own source.",
+   "new": "This view assembles other evidence records. Check each linked record against its own source."
+  },
+  {
+   "finding": "P1-L06",
+   "sheet": "06_EVIDENCE_OBJECTS",
+   "row": 57,
+   "col": 23,
+   "field": "DS-FINDEX-HISTORY-CROSSWALK.verification_ar",
+   "old": "يلخص هذا العرض سجلات أدلة أخرى لم تُربط بعدُ هنا كلٌّ على حدة. وقبل إعادة استخدام أي رقم، افتح سجل الدليل الذي يورده وتحقق منه مقابل مصدره الخاص.",
+   "new": "يجمع هذا العرض سجلات أدلة أخرى، فتحقق من كل سجل مرتبط مقابل مصدره الخاص."
+  },
+  {
+   "finding": "P1-L07",
+   "sheet": "06_EVIDENCE_OBJECTS",
+   "row": 20,
+   "col": 24,
+   "field": "DS-QUAL-EVIDENCE.source_dependencies",
+   "old": null,
+   "new": "SRC-OECD-YEM-RESILIENCE-001; SRC-AJMBFS-CBY-FI-2025-001; SRC-CCY-REMIT-ESTIMATE-2025; SRC-CCY-SAM-2024; SRC-CCY-CASH-DURATION-2026; SRC-CCY-ISP-2024; SRC-CCY-AMAL-2025; SRC-CCY-PRESSURE-2026; SRC-AIDDATA-SAUDI-YEM-2015; SRC-IMF-D4D-YEM-ESS-2025"
+  },
+  {
+   "finding": "P1-L07",
+   "sheet": "06_EVIDENCE_OBJECTS",
+   "row": 20,
+   "col": 26,
+   "field": "DS-QUAL-EVIDENCE.lineage_state",
+   "old": "COMPOSITE_OF_OBJECTS",
+   "new": "BOUND_EXACT"
+  },
+  {
+   "finding": "P1-L07",
+   "sheet": "06_EVIDENCE_OBJECTS",
+   "row": 20,
+   "col": 22,
+   "field": "DS-QUAL-EVIDENCE.verification_en",
+   "old": "This view summarises other evidence records, which are not yet linked individually here. Before reusing a figure, open the evidence record that reports it and check that record against its own source.",
+   "new": "This record is drawn from the source(s) listed on this page. Open a source record to reach the original document, and check that the definition, period, population and geography match what is stated here."
+  },
+  {
+   "finding": "P1-L07",
+   "sheet": "06_EVIDENCE_OBJECTS",
+   "row": 20,
+   "col": 23,
+   "field": "DS-QUAL-EVIDENCE.verification_ar",
+   "old": "يلخص هذا العرض سجلات أدلة أخرى لم تُربط بعدُ هنا كلٌّ على حدة. وقبل إعادة استخدام أي رقم، افتح سجل الدليل الذي يورده وتحقق منه مقابل مصدره الخاص.",
+   "new": "يستند هذا السجل إلى المصدر أو المصادر المدرجة في هذه الصفحة. افتح سجل المصدر للوصول إلى الوثيقة الأصلية، وتحقق من تطابق التعريف والفترة والمجتمع والنطاق الجغرافي مع ما يرد هنا."
+  },
+  {
+   "finding": "P1-L08",
+   "sheet": "08_READINGS",
+   "row": 5,
+   "col": 10,
+   "field": "CWR-001.claim_bindings",
+   "old": "[\"CLM-032\",\"CLM-036\",\"CLM-037\"]",
+   "new": "[\"CLM-032\",\"CLM-036\",\"CLM-037\",\"CLM-041\",\"CLM-042\",\"CLM-043\",\"CLM-044\"]"
+  },
+  {
+   "finding": "P1-L08",
+   "sheet": "08_READINGS",
+   "row": 5,
+   "col": 11,
+   "field": "CWR-001.evidence_bindings",
+   "old": "[\"CLM-032\",\"CLM-036\",\"CLM-037\",\"181\",\"186\",\"191\"]",
+   "new": "[\"CLM-032\",\"CLM-036\",\"CLM-037\",\"CLM-041\",\"CLM-042\",\"CLM-043\",\"CLM-044\"]"
+  },
+  {
+   "finding": "P1-L08",
+   "sheet": "08_READINGS",
+   "row": 5,
+   "col": 12,
+   "field": "CWR-001.source_bindings",
+   "old": "[\"K04-CBY-060\", \"173_CBY_ANNUAL_VINTAGES\", \"AVA-004\", \"EP-CBY-REMITTANCE-VINTAGE-K04\", \"EP-IMF-CBY-REMIT-METHOD-K04\", \"181_REMITTANCE_METHOD_RECON\", \"SRC-CBY-AR2024-BOP\", \"SRC-CBY-AR2025-BOP\"]",
+   "new": "[\"K04-CBY-060\", \"AVA-004\", \"EP-CBY-REMITTANCE-VINTAGE-K04\", \"EP-IMF-CBY-REMIT-METHOD-K04\", \"SRC-CBY-AR2024-BOP\", \"SRC-CBY-AR2025-BOP\"]"
+  },
+  {
+   "finding": "P1-L08",
+   "sheet": "08_READINGS",
+   "row": 5,
+   "col": 17,
+   "field": "CWR-001.verification_bindings",
+   "old": "{\"claim_ids\": [\"CLM-032\", \"CLM-036\", \"CLM-037\"], \"direct_source_ids\": [\"SRC-CBY-AR2024-BOP\", \"SRC-CBY-AR2025-BOP\"], \"dependency_ids\": [\"K04-CBY-060\", \"173_CBY_ANNUAL_VINTAGES\", \"AVA-004\", \"EP-CBY-REMITTANCE-VINTAGE-K04\", \"EP-IMF-CBY-REMIT-METHOD-K04\", \"181_REMITTANCE_METHOD_RECON\"], \"resolution_rule\": \"Direct SRC-* identifiers resolve in the Source Library. Other dependency identifiers remain lineage/verification anchors and must never be converted into invented URLs or sources.\"}",
+   "new": "{\"claim_ids\": [\"CLM-032\", \"CLM-036\", \"CLM-037\", \"CLM-041\", \"CLM-042\", \"CLM-043\", \"CLM-044\"], \"direct_source_ids\": [\"SRC-CBY-AR2024-BOP\", \"SRC-CBY-AR2025-BOP\"], \"dependency_ids\": [\"K04-CBY-060\", \"AVA-004\", \"EP-CBY-REMITTANCE-VINTAGE-K04\", \"EP-IMF-CBY-REMIT-METHOD-K04\"], \"resolution_rule\": \"Direct SRC-* identifiers resolve in the Source Library. Other dependency identifiers remain lineage/verification anchors and must never be converted into invented URLs or sources.\"}"
+  },
+  {
+   "finding": "P1-L08",
+   "sheet": "08_READINGS",
+   "row": 6,
+   "col": 11,
+   "field": "CWR-002.evidence_bindings",
+   "old": "[\"CLM-033\",\"CLM-038\",\"173\",\"174\",\"185\"]",
+   "new": "[\"CLM-033\",\"CLM-038\"]"
+  },
+  {
+   "finding": "P1-L08",
+   "sheet": "08_READINGS",
+   "row": 6,
+   "col": 12,
+   "field": "CWR-002.source_bindings",
+   "old": "[\"K04-CBY-061\", \"173_CBY_ANNUAL_VINTAGES\", \"AVA-005..008\", \"EP-CBY-BANKING-REVAL-K04\", \"185_BANKING_VALUATION_RECON\", \"EP-CBY-BANKING-VALUATION-LINEAGE-K04\", \"SRC-CBY-AR2022-001\", \"SRC-CBY-AR2023-001\", \"SRC-IMF-YEM-EGDDS-VAL-1996\"]",
+   "new": "[\"K04-CBY-061\", \"AVA-005..008\", \"EP-CBY-BANKING-REVAL-K04\", \"EP-CBY-BANKING-VALUATION-LINEAGE-K04\", \"SRC-CBY-AR2022-001\", \"SRC-CBY-AR2023-001\", \"SRC-IMF-YEM-EGDDS-VAL-1996\"]"
+  },
+  {
+   "finding": "P1-L08",
+   "sheet": "08_READINGS",
+   "row": 6,
+   "col": 17,
+   "field": "CWR-002.verification_bindings",
+   "old": "{\"claim_ids\": [\"CLM-033\", \"CLM-038\"], \"direct_source_ids\": [\"SRC-CBY-AR2022-001\", \"SRC-CBY-AR2023-001\", \"SRC-IMF-YEM-EGDDS-VAL-1996\"], \"dependency_ids\": [\"K04-CBY-061\", \"173_CBY_ANNUAL_VINTAGES\", \"AVA-005..008\", \"EP-CBY-BANKING-REVAL-K04\", \"185_BANKING_VALUATION_RECON\", \"EP-CBY-BANKING-VALUATION-LINEAGE-K04\"], \"resolution_rule\": \"Direct SRC-* identifiers resolve in the Source Library. Other dependency identifiers remain lineage/verification anchors and must never be converted into invented URLs or sources.\"}",
+   "new": "{\"claim_ids\": [\"CLM-033\", \"CLM-038\"], \"direct_source_ids\": [\"SRC-CBY-AR2022-001\", \"SRC-CBY-AR2023-001\", \"SRC-IMF-YEM-EGDDS-VAL-1996\"], \"dependency_ids\": [\"K04-CBY-061\", \"AVA-005..008\", \"EP-CBY-BANKING-REVAL-K04\", \"EP-CBY-BANKING-VALUATION-LINEAGE-K04\"], \"resolution_rule\": \"Direct SRC-* identifiers resolve in the Source Library. Other dependency identifiers remain lineage/verification anchors and must never be converted into invented URLs or sources.\"}"
+  },
+  {
+   "finding": "P1-L08",
+   "sheet": "08_READINGS",
+   "row": 7,
+   "col": 11,
+   "field": "CWR-003.evidence_bindings",
+   "old": "[\"CLM-004\",\"CLM-023\",\"CLM-024\",\"CLM-025\",\"CLM-026\",\"49_METRIC_CROSSWALK\",\"XW-FMIIP-005\"]",
+   "new": "[\"CLM-004\",\"CLM-023\",\"CLM-024\",\"CLM-025\",\"CLM-026\",\"XW-FMIIP-005\"]"
+  },
+  {
+   "finding": "P1-L08",
+   "sheet": "08_READINGS",
+   "row": 7,
+   "col": 12,
+   "field": "CWR-003.source_bindings",
+   "old": "[\"11_CBY_PAYMENTS\",\"49_METRIC_CROSSWALK\",\"CTR-006\",\"25_FINDEX_META\",\"26_FINDEX_VARS\",\"SRC-WB-FINDEX-001\",\"87_FINDEX_DENOMINATOR_STRESS\",\"29_FINDEX_RULES\",\"EP-FINDEX-2022-ACCOUNT\",\"85_FINDEX_PANEL_CATALOG\",\"86_FINDEX_SUBGROUP_MATRIX\",\"89_FINDEX_MICRODATA_GATE\"]",
+   "new": "[\"CTR-006\",\"SRC-WB-FINDEX-001\",\"EP-FINDEX-2022-ACCOUNT\"]"
+  },
+  {
+   "finding": "P1-L08",
+   "sheet": "08_READINGS",
+   "row": 7,
+   "col": 17,
+   "field": "CWR-003.verification_bindings",
+   "old": "{\"claim_ids\":[\"CLM-004\",\"CLM-023\",\"CLM-024\",\"CLM-025\",\"CLM-026\"],\"direct_source_ids\":[\"SRC-WB-FINDEX-001\"],\"dependency_ids\":[\"11_CBY_PAYMENTS\",\"49_METRIC_CROSSWALK\",\"CTR-006\",\"25_FINDEX_META\",\"26_FINDEX_VARS\",\"87_FINDEX_DENOMINATOR_STRESS\",\"29_FINDEX_RULES\",\"EP-FINDEX-2022-ACCOUNT\",\"85_FINDEX_PANEL_CATALOG\",\"86_FINDEX_SUBGROUP_MATRIX\",\"89_FINDEX_MICRODATA_GATE\"],\"resolution_rule\":\"Direct SRC-* identifiers resolve in the source register. Other dependency identifiers resolve through the bound claim/evidence record in the workbook; the implementation must not convert them into invented URLs or sources.\"}",
+   "new": "{\"claim_ids\": [\"CLM-004\", \"CLM-023\", \"CLM-024\", \"CLM-025\", \"CLM-026\", \"XW-FMIIP-005\"], \"direct_source_ids\": [\"SRC-WB-FINDEX-001\"], \"dependency_ids\": [\"CTR-006\", \"EP-FINDEX-2022-ACCOUNT\"], \"resolution_rule\": \"Direct SRC-* identifiers resolve in the source register. Other dependency identifiers resolve through the bound claim/evidence record in the workbook; the implementation must not convert them into invented URLs or sources.\"}"
+  },
+  {
+   "finding": "P1-L08",
+   "sheet": "08_READINGS",
+   "row": 8,
+   "col": 10,
+   "field": "CWR-004.claim_bindings",
+   "old": "[\"CLM-001\",\"CLM-003\",\"CLM-049\"]",
+   "new": "[\"CLM-001\",\"CLM-003\",\"CLM-049\",\"CLM-018\",\"CLM-025\"]"
+  },
+  {
+   "finding": "P1-L08",
+   "sheet": "08_READINGS",
+   "row": 8,
+   "col": 11,
+   "field": "CWR-004.evidence_bindings",
+   "old": "[\"CLM-001\",\"CLM-003\",\"CLM-049\",\"48_REFORM_EVENTS\",\"73_PAYMENT_CURRENTNESS\",\"107_FINDEX_PUBLIC_HISTORY\"]",
+   "new": "[\"CLM-001\",\"CLM-003\",\"CLM-049\",\"CLM-018\",\"CLM-025\"]"
+  },
+  {
+   "finding": "P1-L08",
+   "sheet": "08_READINGS",
+   "row": 8,
+   "col": 12,
+   "field": "CWR-004.source_bindings",
+   "old": "[\"EP-FINDEX-2022-ACCOUNT\",\"28_FINDEX_OBS\",\"11_CBY_PAYMENTS\",\"EP-CBY-POS-MONTHLY\",\"194\",\"SRC-IMF-YEM-SMP-2026\"]",
+   "new": "[\"EP-FINDEX-2022-ACCOUNT\",\"EP-CBY-POS-MONTHLY\",\"SRC-IMF-YEM-SMP-2026\"]"
+  },
+  {
+   "finding": "P1-L08",
+   "sheet": "08_READINGS",
+   "row": 8,
+   "col": 17,
+   "field": "CWR-004.verification_bindings",
+   "old": "{\"claim_ids\":[\"CLM-001\",\"CLM-003\",\"CLM-049\"],\"direct_source_ids\":[\"SRC-IMF-YEM-SMP-2026\"],\"dependency_ids\":[\"EP-FINDEX-2022-ACCOUNT\",\"28_FINDEX_OBS\",\"11_CBY_PAYMENTS\",\"EP-CBY-POS-MONTHLY\",\"194\"],\"resolution_rule\":\"Direct SRC-* identifiers resolve in the source register. Other dependency identifiers resolve through the bound claim/evidence record in the workbook; the implementation must not convert them into invented URLs or sources.\"}",
+   "new": "{\"claim_ids\": [\"CLM-001\", \"CLM-003\", \"CLM-049\", \"CLM-018\", \"CLM-025\"], \"direct_source_ids\": [\"SRC-IMF-YEM-SMP-2026\"], \"dependency_ids\": [\"EP-FINDEX-2022-ACCOUNT\", \"EP-CBY-POS-MONTHLY\"], \"resolution_rule\": \"Direct SRC-* identifiers resolve in the source register. Other dependency identifiers resolve through the bound claim/evidence record in the workbook; the implementation must not convert them into invented URLs or sources.\"}"
+  },
+  {
+   "finding": "P1-L08",
+   "sheet": "08_READINGS",
+   "row": 9,
+   "col": 11,
+   "field": "CWR-005.evidence_bindings",
+   "old": "[\"CLM-050\",\"CLM-051\",\"CLM-052\",\"198\",\"199\",\"196\"]",
+   "new": "[\"CLM-050\",\"CLM-051\",\"CLM-052\"]"
+  },
+  {
+   "finding": "P1-L08",
+   "sheet": "08_READINGS",
+   "row": 9,
+   "col": 12,
+   "field": "CWR-005.source_bindings",
+   "old": "[\"198\",\"199\",\"EP-IBS-EMONEY-2019-K04\",\"EP-IBS-EMONEY-VALUE-K04\",\"EP-IBS-GEO-GENDER-K04\"]",
+   "new": "[\"EP-IBS-EMONEY-2019-K04\",\"EP-IBS-EMONEY-VALUE-K04\",\"EP-IBS-GEO-GENDER-K04\"]"
+  },
+  {
+   "finding": "P1-L08",
+   "sheet": "08_READINGS",
+   "row": 9,
+   "col": 17,
+   "field": "CWR-005.verification_bindings",
+   "old": "{\"claim_ids\":[\"CLM-050\",\"CLM-051\",\"CLM-052\"],\"direct_source_ids\":[],\"dependency_ids\":[\"198\",\"199\",\"EP-IBS-EMONEY-2019-K04\",\"EP-IBS-EMONEY-VALUE-K04\",\"EP-IBS-GEO-GENDER-K04\"],\"resolution_rule\":\"Direct SRC-* identifiers resolve in the source register. Other dependency identifiers resolve through the bound claim/evidence record in the workbook; the implementation must not convert them into invented URLs or sources.\"}",
+   "new": "{\"claim_ids\": [\"CLM-050\", \"CLM-051\", \"CLM-052\"], \"direct_source_ids\": [], \"dependency_ids\": [\"EP-IBS-EMONEY-2019-K04\", \"EP-IBS-EMONEY-VALUE-K04\", \"EP-IBS-GEO-GENDER-K04\"], \"resolution_rule\": \"Direct SRC-* identifiers resolve in the source register. Other dependency identifiers resolve through the bound claim/evidence record in the workbook; the implementation must not convert them into invented URLs or sources.\"}"
+  },
+  {
+   "finding": "P1-L08",
+   "sheet": "08_READINGS",
+   "row": 10,
+   "col": 11,
+   "field": "CWR-006.evidence_bindings",
+   "old": "[\"CLM-054\",\"CLM-055\",\"CLM-056\",\"CLM-057\",\"CLM-058\",\"201\",\"202\"]",
+   "new": "[\"CLM-054\",\"CLM-055\",\"CLM-056\",\"CLM-057\",\"CLM-058\"]"
+  },
+  {
+   "finding": "P1-L08",
+   "sheet": "08_READINGS",
+   "row": 10,
+   "col": 12,
+   "field": "CWR-006.source_bindings",
+   "old": "[\"202\",\"203\",\"INS-K04-023\",\"15_PROVIDER_MASTER\",\"16_PROVIDER_UNIVERSE\",\"EP-CBY-BANK-ROSTER-2026\",\"201\",\"CON-057\",\"SRC-SANAA-MF-2020\",\"CON-058\",\"SRC-WB-FSD-2024-001\"]",
+   "new": "[\"INS-K04-023\",\"EP-CBY-BANK-ROSTER-2026\",\"CON-057\",\"SRC-SANAA-MF-2020\",\"CON-058\",\"SRC-WB-FSD-2024-001\"]"
+  },
+  {
+   "finding": "P1-L08",
+   "sheet": "08_READINGS",
+   "row": 10,
+   "col": 17,
+   "field": "CWR-006.verification_bindings",
+   "old": "{\"claim_ids\":[\"CLM-054\",\"CLM-055\",\"CLM-056\",\"CLM-057\",\"CLM-058\"],\"direct_source_ids\":[\"SRC-SANAA-MF-2020\",\"SRC-WB-FSD-2024-001\"],\"dependency_ids\":[\"202\",\"203\",\"INS-K04-023\",\"15_PROVIDER_MASTER\",\"16_PROVIDER_UNIVERSE\",\"EP-CBY-BANK-ROSTER-2026\",\"201\",\"CON-057\",\"CON-058\"],\"resolution_rule\":\"Direct SRC-* identifiers resolve in the source register. Other dependency identifiers resolve through the bound claim/evidence record in the workbook; the implementation must not convert them into invented URLs or sources.\"}",
+   "new": "{\"claim_ids\": [\"CLM-054\", \"CLM-055\", \"CLM-056\", \"CLM-057\", \"CLM-058\"], \"direct_source_ids\": [\"SRC-SANAA-MF-2020\", \"SRC-WB-FSD-2024-001\"], \"dependency_ids\": [\"INS-K04-023\", \"EP-CBY-BANK-ROSTER-2026\", \"CON-057\", \"CON-058\"], \"resolution_rule\": \"Direct SRC-* identifiers resolve in the source register. Other dependency identifiers resolve through the bound claim/evidence record in the workbook; the implementation must not convert them into invented URLs or sources.\"}"
+  },
+  {
+   "finding": "P1-L08",
+   "sheet": "08_READINGS",
+   "row": 11,
+   "col": 10,
+   "field": "CWR-007.claim_bindings",
+   "old": "[\"CLM-002\"]",
+   "new": "[\"CLM-002\",\"CLM-001\",\"CLM-025\"]"
+  },
+  {
+   "finding": "P1-L08",
+   "sheet": "08_READINGS",
+   "row": 11,
+   "col": 11,
+   "field": "CWR-007.evidence_bindings",
+   "old": "[\"CLM-002\",\"28_FINDEX_OBS\",\"41_DERIVED_ANALYTICS\",\"22_RESEARCH_COVERAGE\"]",
+   "new": "[\"CLM-002\",\"VIS-FINDEX-GAPS\",\"CLM-001\",\"CLM-025\"]"
+  },
+  {
+   "finding": "P1-L08",
+   "sheet": "08_READINGS",
+   "row": 11,
+   "col": 12,
+   "field": "CWR-007.source_bindings",
+   "old": "[\"28_FINDEX_OBS\",\"DA-001\",\"EP-FINDEX-2022-ACCOUNT\"]",
+   "new": "[\"DA-001\",\"EP-FINDEX-2022-ACCOUNT\"]"
+  },
+  {
+   "finding": "P1-L08",
+   "sheet": "08_READINGS",
+   "row": 11,
+   "col": 17,
+   "field": "CWR-007.verification_bindings",
+   "old": "{\"claim_ids\":[\"CLM-002\"],\"direct_source_ids\":[],\"dependency_ids\":[\"28_FINDEX_OBS\",\"DA-001\",\"EP-FINDEX-2022-ACCOUNT\"],\"resolution_rule\":\"Direct SRC-* identifiers resolve in the source register. Other dependency identifiers resolve through the bound claim/evidence record in the workbook; the implementation must not convert them into invented URLs or sources.\"}",
+   "new": "{\"claim_ids\": [\"CLM-002\", \"CLM-001\", \"CLM-025\", \"VIS-FINDEX-GAPS\"], \"direct_source_ids\": [], \"dependency_ids\": [\"DA-001\", \"EP-FINDEX-2022-ACCOUNT\"], \"resolution_rule\": \"Direct SRC-* identifiers resolve in the source register. Other dependency identifiers resolve through the bound claim/evidence record in the workbook; the implementation must not convert them into invented URLs or sources.\"}"
+  },
+  {
+   "finding": "P1-L08",
+   "sheet": "08_READINGS",
+   "row": 12,
+   "col": 11,
+   "field": "CWR-008.evidence_bindings",
+   "old": "[\"CLM-005\",\"CLM-006\",\"CLM-060\",\"12_FIRM_FINANCE\",\"219_SMEPS_PROGRAMME_EVIDENCE\",\"50_STRATEGIC_INSIGHTS\"]",
+   "new": "[\"CLM-005\",\"CLM-006\",\"CLM-060\",\"VIS-FIRM-CONSTRAINTS\"]"
+  },
+  {
+   "finding": "P1-L08",
+   "sheet": "08_READINGS",
+   "row": 12,
+   "col": 12,
+   "field": "CWR-008.source_bindings",
+   "old": "[\"12_FIRM_FINANCE\",\"INS-004\",\"EP-FIRM-2022\",\"DA-020\",\"219_SMEPS_PROGRAMME_EVIDENCE\",\"EP-SMEPS-FINACCESS-KPI\"]",
+   "new": "[\"INS-004\",\"EP-FIRM-2022\",\"DA-020\",\"EP-SMEPS-FINACCESS-KPI\"]"
+  },
+  {
+   "finding": "P1-L08",
+   "sheet": "08_READINGS",
+   "row": 12,
+   "col": 17,
+   "field": "CWR-008.verification_bindings",
+   "old": "{\"claim_ids\":[\"CLM-005\",\"CLM-006\",\"CLM-060\"],\"direct_source_ids\":[],\"dependency_ids\":[\"12_FIRM_FINANCE\",\"INS-004\",\"EP-FIRM-2022\",\"DA-020\",\"219_SMEPS_PROGRAMME_EVIDENCE\",\"EP-SMEPS-FINACCESS-KPI\"],\"resolution_rule\":\"Direct SRC-* identifiers resolve in the source register. Other dependency identifiers resolve through the bound claim/evidence record in the workbook; the implementation must not convert them into invented URLs or sources.\"}",
+   "new": "{\"claim_ids\": [\"CLM-005\", \"CLM-006\", \"CLM-060\", \"VIS-FIRM-CONSTRAINTS\"], \"direct_source_ids\": [], \"dependency_ids\": [\"INS-004\", \"EP-FIRM-2022\", \"DA-020\", \"EP-SMEPS-FINACCESS-KPI\"], \"resolution_rule\": \"Direct SRC-* identifiers resolve in the source register. Other dependency identifiers resolve through the bound claim/evidence record in the workbook; the implementation must not convert them into invented URLs or sources.\"}"
+  },
+  {
+   "finding": "P1-L08",
+   "sheet": "08_READINGS",
+   "row": 13,
+   "col": 11,
+   "field": "CWR-009.evidence_bindings",
+   "old": "[\"CLM-003\",\"CLM-004\",\"CLM-018\",\"XW-FMIIP-005\",\"48_REFORM_EVENTS\",\"73_PAYMENT_CURRENTNESS\"]",
+   "new": "[\"CLM-003\",\"CLM-004\",\"CLM-018\",\"XW-FMIIP-005\"]"
+  },
+  {
+   "finding": "P1-L08",
+   "sheet": "08_READINGS",
+   "row": 13,
+   "col": 12,
+   "field": "CWR-009.source_bindings",
+   "old": "[\"11_CBY_PAYMENTS\",\"EP-CBY-POS-MONTHLY\",\"49_METRIC_CROSSWALK\",\"CTR-006\",\"73_PAYMENT_CURRENTNESS\",\"REF-PAY-010..013\",\"EP-CBY-PAY-INSTITUTIONAL-2026\"]",
+   "new": "[\"EP-CBY-POS-MONTHLY\",\"CTR-006\",\"EP-CBY-PAY-INSTITUTIONAL-2026\"]"
+  },
+  {
+   "finding": "P1-L08",
+   "sheet": "08_READINGS",
+   "row": 13,
+   "col": 17,
+   "field": "CWR-009.verification_bindings",
+   "old": "{\"claim_ids\":[\"CLM-003\",\"CLM-004\",\"CLM-018\"],\"direct_source_ids\":[],\"dependency_ids\":[\"11_CBY_PAYMENTS\",\"EP-CBY-POS-MONTHLY\",\"49_METRIC_CROSSWALK\",\"CTR-006\",\"73_PAYMENT_CURRENTNESS\",\"REF-PAY-010..013\",\"EP-CBY-PAY-INSTITUTIONAL-2026\"],\"resolution_rule\":\"Direct SRC-* identifiers resolve in the source register. Other dependency identifiers resolve through the bound claim/evidence record in the workbook; the implementation must not convert them into invented URLs or sources.\"}",
+   "new": "{\"claim_ids\": [\"CLM-003\", \"CLM-004\", \"CLM-018\", \"XW-FMIIP-005\"], \"direct_source_ids\": [], \"dependency_ids\": [\"EP-CBY-POS-MONTHLY\", \"CTR-006\", \"EP-CBY-PAY-INSTITUTIONAL-2026\"], \"resolution_rule\": \"Direct SRC-* identifiers resolve in the source register. Other dependency identifiers resolve through the bound claim/evidence record in the workbook; the implementation must not convert them into invented URLs or sources.\"}"
+  },
+  {
+   "finding": "P1-L08",
+   "sheet": "08_READINGS",
+   "row": 14,
+   "col": 11,
+   "field": "CWR-010.evidence_bindings",
+   "old": "[\"CLM-045\",\"189_CASH_FINANCE_TRANSMISSION\"]",
+   "new": "[\"CLM-045\"]"
+  },
+  {
+   "finding": "P1-L08",
+   "sheet": "08_READINGS",
+   "row": 14,
+   "col": 12,
+   "field": "CWR-010.source_bindings",
+   "old": "[\"189\", \"EP-YEM-CASH-FIN-TRANSMISSION-K04\", \"SRC-WB-G2PX-YEM-UCT-2024-001\"]",
+   "new": "[\"EP-YEM-CASH-FIN-TRANSMISSION-K04\", \"SRC-WB-G2PX-YEM-UCT-2024-001\"]"
+  },
+  {
+   "finding": "P1-L08",
+   "sheet": "08_READINGS",
+   "row": 14,
+   "col": 17,
+   "field": "CWR-010.verification_bindings",
+   "old": "{\"claim_ids\": [\"CLM-045\"], \"direct_source_ids\": [\"SRC-WB-G2PX-YEM-UCT-2024-001\"], \"dependency_ids\": [\"189\", \"EP-YEM-CASH-FIN-TRANSMISSION-K04\"], \"resolution_rule\": \"Direct SRC-* identifiers resolve in the Source Library. Other dependency identifiers remain lineage/verification anchors and must never be converted into invented URLs or sources.\"}",
+   "new": "{\"claim_ids\": [\"CLM-045\"], \"direct_source_ids\": [\"SRC-WB-G2PX-YEM-UCT-2024-001\"], \"dependency_ids\": [\"EP-YEM-CASH-FIN-TRANSMISSION-K04\"], \"resolution_rule\": \"Direct SRC-* identifiers resolve in the Source Library. Other dependency identifiers remain lineage/verification anchors and must never be converted into invented URLs or sources.\"}"
+  },
+  {
+   "finding": "P1-L09",
+   "sheet": "04_NAV_UX",
+   "row": null,
+   "col": null,
+   "field": "UI-READING-PATH-INTRO",
+   "old": null,
+   "new": "Each statement this Reading relies on is carried by an Evidence Record. Follow a record to its original sources before reusing a figure. || كل مقولة تعتمد عليها هذه القراءة يحملها سجل دليل. تتبّع السجل إلى مصادره الأصلية قبل إعادة استخدام أي رقم."
+  },
+  {
+   "finding": "P1-L09",
+   "sheet": "04_NAV_UX",
+   "row": null,
+   "col": null,
+   "field": "UI-READING-PATH-COMPLETE",
+   "old": null,
+   "new": "Every figure in this Reading traces through the records below to a named source. || يمكن تتبّع كل رقم في هذه القراءة، عبر السجلات أدناه، إلى مصدر مسمّى."
+  },
+  {
+   "finding": "P1-L09",
+   "sheet": "04_NAV_UX",
+   "row": null,
+   "col": null,
+   "field": "UI-READING-PATH-PARTIAL",
+   "old": null,
+   "new": "Most figures in this Reading trace through the records below to a named source. A record marked as not yet fully traced still has an input that is not linked to a specific original source; treat that figure as unverified for reuse. || يمكن تتبّع معظم أرقام هذه القراءة، عبر السجلات أدناه، إلى مصدر مسمّى. أما السجل الموسوم بأنه لم يُتتبّع بالكامل بعدُ، فما زال أحد مدخلاته غير مربوط بمصدر أصلي محدد؛ فعامِل ذلك الرقم على أنه غير متحقق منه عند إعادة الاستخدام."
+  },
+  {
+   "finding": "P1-L09",
+   "sheet": "04_NAV_UX",
+   "row": null,
+   "col": null,
+   "field": "UI-READING-PATH-RECORD-PARTIAL",
+   "old": null,
+   "new": "Not yet fully traced to a source || لم يُتتبّع بالكامل إلى مصدر بعدُ"
+  },
+  {
+   "finding": "P1-L09",
+   "sheet": "04_NAV_UX",
+   "row": null,
+   "col": null,
+   "field": "UI-READING-PATH-RECORD-COMPOSITE",
+   "old": null,
+   "new": "Assembles other evidence records || يجمع سجلات أدلة أخرى"
+  },
+  {
+   "finding": "P1-L09",
+   "sheet": "04_NAV_UX",
+   "row": null,
+   "col": null,
+   "field": "UI-SOURCE-NO-PUBLIC-LOCATOR",
+   "old": null,
+   "new": "Also draws on source material with no public original locator recorded here; it is not listed or linked. || ويستند أيضًا إلى مواد مصدرية لا يُسجَّل لها هنا رابط أصلي عام، فلا تُدرج ولا تُربط."
+  },
+  {
+   "finding": "P1-L09",
+   "sheet": "04_NAV_UX",
+   "row": null,
+   "col": null,
+   "field": "UI-EVID-SOURCES-WITHOUT-LOCATOR",
+   "old": null,
+   "new": "This record also draws on source material for which no public original locator is recorded. That material is held in the evidence base but is not listed or linked here, so the sources shown above are not the record's only basis. || ويستند هذا السجل أيضًا إلى مواد مصدرية لا يُسجَّل لها رابط أصلي عام، وهي محفوظة في قاعدة الأدلة لكنها لا تُدرج ولا تُربط هنا؛ لذلك فالمصادر المعروضة أعلاه ليست الأساس الوحيد للسجل."
+  }
+ ]
+}

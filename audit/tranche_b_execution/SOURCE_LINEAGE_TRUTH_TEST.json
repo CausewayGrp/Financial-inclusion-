@@ -1,0 +1,191 @@
+{
+ "rule": "Evidence records show only exact bound sources, listed member records, or an explicit unbound or framing state (Tranche B Stage 1, PB-0001/PB-0002). Dataset-level tokens are never expanded into source lists; an input that is not bound to a source stays explicit as unresolved. Never invent a source, title, publisher, date, licence or missing fact.",
+ "evidence_record_lineage_state_counts": {
+  "BOUND_EXACT": 87,
+  "COMPOSITE_OF_OBJECTS": 13,
+  "SOURCE_NOT_YET_BOUND": 1,
+  "BOUND_PARTIAL": 6,
+  "FRAMING_NO_FACT": 1
+ },
+ "closure_state_counts_by_object_type": {
+  "evidence_object": {
+   "CLOSED_TO_SOURCE_ID": 87,
+   "COMPOSITE_MEMBERS_NOT_LISTED": 12,
+   "SOURCE_NOT_YET_BOUND": 1,
+   "PARTIALLY_RESOLVED": 6,
+   "COMPOSITE_OF_OBJECTS": 1,
+   "FRAMING_NO_FACT": 1
+  },
+  "public_claim": {
+   "CLOSED_TO_SOURCE_ID": 51,
+   "FRAMING_NO_FACT": 1,
+   "COMPOSITE_MEMBERS_NOT_LISTED": 1,
+   "PARTIALLY_RESOLVED": 5,
+   "COMPOSITE_OF_OBJECTS": 1
+  },
+  "reading": {
+   "PARTIALLY_RESOLVED": 10
+  },
+  "visual": {
+   "CLOSED_TO_SOURCE_ID": 16,
+   "COMPOSITE_MEMBERS_NOT_LISTED": 8,
+   "PARTIALLY_RESOLVED": 11,
+   "COMPOSITE_OF_OBJECTS": 1
+  },
+  "measurement": {
+   "NO_DIRECT_SOURCE_BINDING": 10
+  }
+ },
+ "records_not_closed_to_source": {
+  "VIS-INCLUSION-TRANSMISSION": {
+   "state": "COMPOSITE_MEMBERS_NOT_LISTED",
+   "open_inputs": [],
+   "members": []
+  },
+  "VIS-EVIDENCE-FRESHNESS": {
+   "state": "COMPOSITE_MEMBERS_NOT_LISTED",
+   "open_inputs": [],
+   "members": []
+  },
+  "VIS-SOURCE-COMPARISON": {
+   "state": "COMPOSITE_MEMBERS_NOT_LISTED",
+   "open_inputs": [],
+   "members": []
+  },
+  "VIS-PROVIDER-TIME": {
+   "state": "SOURCE_NOT_YET_BOUND",
+   "open_inputs": [],
+   "members": []
+  },
+  "VIS-MECHANISM-METRIC-BRIDGE": {
+   "state": "COMPOSITE_MEMBERS_NOT_LISTED",
+   "open_inputs": [],
+   "members": []
+  },
+  "VIS-PROVIDER-OBSERVABILITY": {
+   "state": "COMPOSITE_MEMBERS_NOT_LISTED",
+   "open_inputs": [],
+   "members": []
+  },
+  "DS-QUAL-EVIDENCE": {
+   "state": "COMPOSITE_MEMBERS_NOT_LISTED",
+   "open_inputs": [],
+   "members": []
+  },
+  "CLM-017": {
+   "state": "PARTIALLY_RESOLVED",
+   "open_inputs": [
+    "UNBOUND:CBY-PAYMENTS-RELEASE-LISTING"
+   ],
+   "members": []
+  },
+  "CLM-031": {
+   "state": "COMPOSITE_OF_OBJECTS",
+   "open_inputs": [],
+   "members": [
+    "CLM-001",
+    "CLM-027",
+    "CLM-028",
+    "CLM-029",
+    "CLM-030"
+   ]
+  },
+  "VIS-DEMAND-VINTAGE-LADDER": {
+   "state": "COMPOSITE_MEMBERS_NOT_LISTED",
+   "open_inputs": [],
+   "members": []
+  },
+  "DS-FINDEX-HISTORY-CROSSWALK": {
+   "state": "COMPOSITE_MEMBERS_NOT_LISTED",
+   "open_inputs": [],
+   "members": []
+  },
+  "DS-DEMAND-VINTAGE-LENS": {
+   "state": "COMPOSITE_MEMBERS_NOT_LISTED",
+   "open_inputs": [],
+   "members": []
+  },
+  "CLM-004": {
+   "state": "FRAMING_NO_FACT",
+   "open_inputs": [],
+   "members": []
+  },
+  "CLM-014": {
+   "state": "COMPOSITE_MEMBERS_NOT_LISTED",
+   "open_inputs": [],
+   "members": []
+  },
+  "VIS-EVIDENCE-GAPS": {
+   "state": "COMPOSITE_MEMBERS_NOT_LISTED",
+   "open_inputs": [],
+   "members": []
+  },
+  "VIS-PAYMENT-RAILS": {
+   "state": "PARTIALLY_RESOLVED",
+   "open_inputs": [
+    "UNBOUND:REF-PAY-001"
+   ],
+   "members": []
+  },
+  "VIS-EVIDENCE-CLASS-LADDER": {
+   "state": "COMPOSITE_MEMBERS_NOT_LISTED",
+   "open_inputs": [],
+   "members": []
+  },
+  "CLM-045": {
+   "state": "PARTIALLY_RESOLVED",
+   "open_inputs": [
+    "DS-K04-CASH-FIN-TRANSMISSION"
+   ],
+   "members": []
+  },
+  "CLM-046": {
+   "state": "PARTIALLY_RESOLVED",
+   "open_inputs": [
+    "DS-K04-SAUDI-SUPPORT-TRANSMISSION"
+   ],
+   "members": []
+  },
+  "CLM-056": {
+   "state": "PARTIALLY_RESOLVED",
+   "open_inputs": [
+    "DS-V041-STRICT-COUNSEL"
+   ],
+   "members": []
+  },
+  "CLM-039": {
+   "state": "PARTIALLY_RESOLVED",
+   "open_inputs": [
+    "DS-K04-REMIT-SOURCE-LENSES"
+   ],
+   "members": []
+  }
+ },
+ "assertions": [
+  {
+   "check": "no BOUND_CANDIDATE state remains",
+   "result": "PASS"
+  },
+  {
+   "check": "every resolved source is declared on the record and exists in 15",
+   "result": "PASS"
+  },
+  {
+   "check": "CLOSED_TO_SOURCE_ID only with no open input",
+   "result": "PASS"
+  },
+  {
+   "check": "dataset tokens appear only as open inputs (never expanded)",
+   "result": "PASS",
+   "detail": {
+    "dataset_tokens_on_records": [
+     "DS-K04-CASH-FIN-TRANSMISSION",
+     "DS-K04-REMIT-SOURCE-LENSES",
+     "DS-K04-SAUDI-SUPPORT-TRANSMISSION",
+     "DS-V041-STRICT-COUNSEL"
+    ]
+   }
+  }
+ ],
+ "entry_state_for_comparison": "Legacy rule: CLOSED_VIA_CONTROLLED_DEPENDENCIES asserted on 108/108 evidence records although 87 carried unresolved tokens; dataset tokens expanded to every source of a dataset (PB-0002 basis)."
+}

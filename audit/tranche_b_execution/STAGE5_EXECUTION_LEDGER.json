@@ -1,0 +1,496 @@
+{
+ "stage": "STAGE-5",
+ "input_master_sha256": "298cd8795edbffb08e0223f5655dfad3187caf889e3cfee889d2aa5051e6b520",
+ "output_master_sha256": "d0efa8eb1be3f5b99c2489514b73d9504e4b060e7bf0abe3f1796fc25ee35f70",
+ "cells_and_ops": 318,
+ "sweep_row_outcomes": {
+  "SUPERSEDED": 102,
+  "APPLIED": 109,
+  "KEEP": 1,
+  "REVISED": 69
+ },
+ "results": {
+  "PB-0530": {
+   "disposition": "APPLIED",
+   "stage": "STAGE-5",
+   "detail": [
+    "PB-0530.01: 03_PAGE_SECTIONS!r468.body_ar ×1",
+    "PB-0530.02: 09_READING_SECTIONS!r26.copy_ar ×1"
+   ]
+  },
+  "PB-0531": {
+   "disposition": "APPLIED",
+   "stage": "STAGE-5",
+   "detail": [
+    "PB-0531.01: 03_PAGE_SECTIONS!r471.body_ar ×1",
+    "PB-0531.02: 09_READING_SECTIONS!r29.copy_ar ×1"
+   ]
+  },
+  "PB-0532": {
+   "disposition": "APPLIED",
+   "stage": "STAGE-5",
+   "detail": [
+    "PB-0532.02: 03_PAGE_SECTIONS!r276.body_ar ×1",
+    "PB-0532.03: 06_EVIDENCE_OBJECTS!r69.summary_ar ×1",
+    "PB-0532.04: 11_VISUAL_LIBRARY!r15.accessible_summary_ar ×1",
+    "full_copy rows superseded by EXF-002 derivation: PB-0532.01"
+   ]
+  },
+  "PB-0533": {
+   "disposition": "APPLIED",
+   "stage": "STAGE-5",
+   "detail": [
+    "PB-0533.02: 03_PAGE_SECTIONS!r373.body_ar ×1",
+    "full_copy rows superseded by EXF-002 derivation: PB-0533.01"
+   ]
+  },
+  "PB-0534": {
+   "disposition": "APPLIED",
+   "stage": "STAGE-5",
+   "detail": [
+    "PB-0534.02: 03_PAGE_SECTIONS!r392.body_ar ×1",
+    "full_copy rows superseded by EXF-002 derivation: PB-0534.01"
+   ]
+  },
+  "PB-0535": {
+   "disposition": "APPLIED",
+   "stage": "STAGE-5",
+   "detail": [
+    "PB-0535.03: 03_PAGE_SECTIONS!r396.body_ar ×1",
+    "PB-0535.04: 03_PAGE_SECTIONS!r423.body_ar ×1",
+    "PB-0535.05: 06_EVIDENCE_OBJECTS!r59.universe_ar ×1",
+    "PB-0535.06: 11_VISUAL_LIBRARY!r33.question_ar ×1",
+    "full_copy rows superseded by EXF-002 derivation: PB-0535.01, PB-0535.02"
+   ]
+  },
+  "PB-0536": {
+   "disposition": "APPLIED",
+   "stage": "STAGE-5",
+   "detail": [
+    "PB-0536.01: 11_VISUAL_LIBRARY!r8.what_it_shows_ar ×1"
+   ]
+  },
+  "PB-0537": {
+   "disposition": "APPLIED",
+   "stage": "STAGE-5",
+   "detail": [
+    "PB-0537.01: 11_VISUAL_LIBRARY!r13.what_it_shows_ar ×1"
+   ]
+  },
+  "PB-0538": {
+   "disposition": "APPLIED",
+   "stage": "STAGE-5",
+   "detail": [
+    "PB-0538.01: 11_VISUAL_LIBRARY!r15.what_it_shows_ar ×1"
+   ]
+  },
+  "PB-0539": {
+   "disposition": "APPLIED",
+   "stage": "STAGE-5",
+   "detail": [
+    "PB-0539.01: 06_EVIDENCE_OBJECTS!r68.limitations_ar ×1",
+    "PB-0539.02: 11_VISUAL_LIBRARY!r18.prohibited_inference_ar ×1"
+   ]
+  },
+  "PB-0540": {
+   "disposition": "APPLIED",
+   "stage": "STAGE-5",
+   "detail": [
+    "PB-0540.01: 06_EVIDENCE_OBJECTS!r59.limitations_ar ×1",
+    "PB-0540.02: 07_PUBLIC_CLAIMS!r8.does_not_prove_ar ×1"
+   ]
+  },
+  "PB-0541": {
+   "disposition": "APPLIED",
+   "stage": "STAGE-5",
+   "detail": [
+    "PB-0541.01: 07_PUBLIC_CLAIMS!r56.change_trigger_ar ×1"
+   ]
+  },
+  "PB-0542": {
+   "disposition": "APPLIED",
+   "stage": "STAGE-5",
+   "detail": [
+    "PB-0542.01: 02_SITE_MAP!r118.title_ar ×1",
+    "PB-0542.03: 06_EVIDENCE_OBJECTS!r32.title_ar ×1",
+    "full_copy rows superseded by EXF-002 derivation: PB-0542.02"
+   ]
+  },
+  "PB-0543": {
+   "disposition": "APPLIED",
+   "stage": "STAGE-5",
+   "detail": [
+    "PB-0543.01: 06_EVIDENCE_OBJECTS!r12.universe_ar ×1"
+   ]
+  },
+  "PB-0544": {
+   "disposition": "APPLIED",
+   "stage": "STAGE-5",
+   "detail": [
+    "PB-0544.01: 06_EVIDENCE_OBJECTS!r17.universe_ar ×1"
+   ]
+  },
+  "PB-0545": {
+   "disposition": "APPLIED",
+   "stage": "STAGE-5",
+   "detail": [
+    "PB-0545.01: 06_EVIDENCE_OBJECTS!r32.universe_ar ×1"
+   ]
+  },
+  "PB-0546": {
+   "disposition": "APPLIED",
+   "stage": "STAGE-5",
+   "detail": [
+    "PB-0546.01: 06_EVIDENCE_OBJECTS!r32.limitations_ar ×1"
+   ]
+  },
+  "PB-0547": {
+   "disposition": "APPLIED",
+   "stage": "STAGE-5",
+   "detail": [
+    "PB-0547.01: 06_EVIDENCE_OBJECTS!r59.definition_ar ×1"
+   ]
+  },
+  "PB-0548": {
+   "disposition": "APPLIED",
+   "stage": "STAGE-5",
+   "detail": [
+    "PB-0548.01: 06_EVIDENCE_OBJECTS!r59.method_ar ×1"
+   ]
+  },
+  "PB-0549": {
+   "disposition": "APPLIED",
+   "stage": "STAGE-5",
+   "detail": [
+    "PB-0549.01: 06_EVIDENCE_OBJECTS!r69.universe_ar ×1"
+   ]
+  },
+  "PB-0550": {
+   "disposition": "APPLIED",
+   "stage": "STAGE-5",
+   "detail": [
+    "PB-0550.01: 06_EVIDENCE_OBJECTS!r79.universe_ar ×1"
+   ]
+  },
+  "PB-0551": {
+   "disposition": "APPLIED",
+   "stage": "STAGE-5",
+   "detail": [
+    "PB-0551.01: 06_EVIDENCE_OBJECTS!r80.universe_ar ×1"
+   ]
+  },
+  "PB-0552": {
+   "disposition": "APPLIED",
+   "stage": "STAGE-5",
+   "detail": [
+    "PB-0552.02: 03_PAGE_SECTIONS!r100.body_ar ×1",
+    "full_copy rows superseded by EXF-002 derivation: PB-0552.01"
+   ]
+  },
+  "PB-0553": {
+   "disposition": "APPLIED",
+   "stage": "STAGE-5",
+   "detail": [
+    "PB-0553.02: 03_PAGE_SECTIONS!r436.body_ar ×1",
+    "full_copy rows superseded by EXF-002 derivation: PB-0553.01"
+   ]
+  },
+  "PB-0554": {
+   "disposition": "APPLIED",
+   "stage": "STAGE-5",
+   "detail": [
+    "PB-0554.01: 07_PUBLIC_CLAIMS!r13.does_not_prove_ar ×1"
+   ]
+  },
+  "PB-0555": {
+   "disposition": "APPLIED",
+   "stage": "STAGE-5",
+   "detail": [
+    "PB-0555.01: 10_MEASUREMENT_AGENDA!r6.blocked_evidence_ar ×1"
+   ]
+  },
+  "PB-0580": {
+   "disposition": "APPLIED",
+   "stage": "STAGE-5",
+   "detail": [
+    "PB-0580.02: 03_PAGE_SECTIONS!r393.heading_en ×1",
+    "full_copy rows superseded by EXF-002 derivation: PB-0580.01"
+   ]
+  },
+  "PB-0581": {
+   "disposition": "APPLIED",
+   "stage": "STAGE-5",
+   "detail": [
+    "PB-0581.02: 03_PAGE_SECTIONS!r393.body_en ×1",
+    "full_copy rows superseded by EXF-002 derivation: PB-0581.01"
+   ]
+  },
+  "PB-0582": {
+   "disposition": "APPLIED",
+   "stage": "STAGE-5",
+   "detail": [
+    "PB-0582.02: 03_PAGE_SECTIONS!r393.body_en ×1",
+    "full_copy rows superseded by EXF-002 derivation: PB-0582.01"
+   ]
+  },
+  "PB-0583": {
+   "disposition": "APPLIED",
+   "stage": "STAGE-5",
+   "detail": [
+    "PB-0583.03: 03_PAGE_SECTIONS!r260.body_en ×1",
+    "PB-0583.04: 03_PAGE_SECTIONS!r338.body_en ×1",
+    "PB-0583.05: 06_EVIDENCE_OBJECTS!r75.summary_en ×1",
+    "PB-0583.06: 11_VISUAL_LIBRARY!r25.accessible_summary_en ×1",
+    "full_copy rows superseded by EXF-002 derivation: PB-0583.01, PB-0583.02"
+   ]
+  },
+  "PB-0584": {
+   "disposition": "APPLIED",
+   "stage": "STAGE-5",
+   "detail": [
+    "PB-0584.04: 03_PAGE_SECTIONS!r94.body_en ×1",
+    "PB-0584.05: 03_PAGE_SECTIONS!r338.body_en ×1",
+    "PB-0584.06: 03_PAGE_SECTIONS!r482.body_en ×1",
+    "PB-0584.07: 06_EVIDENCE_OBJECTS!r61.summary_en ×1",
+    "PB-0584.08: 07_PUBLIC_CLAIMS!r10.copy_en ×1",
+    "PB-0584.09: 09_READING_SECTIONS!r69.copy_en ×1",
+    "full_copy rows superseded by EXF-002 derivation: PB-0584.01, PB-0584.02, PB-0584.03"
+   ]
+  },
+  "PB-0585": {
+   "disposition": "APPLIED",
+   "stage": "STAGE-5",
+   "detail": [
+    "PB-0585.02: 03_PAGE_SECTIONS!r102.body_en ×1",
+    "PB-0585.03: 06_EVIDENCE_OBJECTS!r8.summary_en ×1",
+    "PB-0585.04: 07_PUBLIC_CLAIMS!r14.copy_en ×1",
+    "full_copy rows superseded by EXF-002 derivation: PB-0585.01"
+   ]
+  },
+  "PB-0586": {
+   "disposition": "APPLIED",
+   "stage": "STAGE-5",
+   "detail": [
+    "PB-0586.01: 06_EVIDENCE_OBJECTS!r97.summary_en ×1",
+    "PB-0586.02: 07_PUBLIC_CLAIMS!r56.copy_en ×1"
+   ]
+  },
+  "PB-0587": {
+   "disposition": "APPLIED",
+   "stage": "STAGE-5",
+   "detail": [
+    "PB-0587.01: 06_EVIDENCE_OBJECTS!r98.summary_en ×1",
+    "PB-0587.02: 07_PUBLIC_CLAIMS!r57.copy_en ×1"
+   ]
+  },
+  "PB-0588": {
+   "disposition": "APPLIED",
+   "stage": "STAGE-5",
+   "detail": [
+    "PB-0588.01: 06_EVIDENCE_OBJECTS!r98.currentness_en ×1"
+   ]
+  },
+  "PB-0589": {
+   "disposition": "APPLIED",
+   "stage": "STAGE-5",
+   "detail": [
+    "PB-0589.02: 03_PAGE_SECTIONS!r355.body_en ×1",
+    "full_copy rows superseded by EXF-002 derivation: PB-0589.01"
+   ]
+  },
+  "PB-0600": {
+   "disposition": "APPLIED",
+   "stage": "STAGE-5",
+   "detail": [
+    "PB-0600.02: 03_PAGE_SECTIONS!r288.body_ar ×1",
+    "full_copy rows superseded by EXF-002 derivation: PB-0600.01"
+   ]
+  },
+  "PB-0601": {
+   "disposition": "APPLIED",
+   "stage": "STAGE-5",
+   "detail": [
+    "PB-0601.01: 06_EVIDENCE_OBJECTS!r31.limitations_ar ×1",
+    "PB-0601.02: 07_PUBLIC_CLAIMS!r16.does_not_prove_ar ×1"
+   ]
+  },
+  "PB-0602": {
+   "disposition": "APPLIED",
+   "stage": "STAGE-5",
+   "detail": [
+    "PB-0602.01: 06_EVIDENCE_OBJECTS!r10.limitations_ar ×1",
+    "PB-0602.02: 07_PUBLIC_CLAIMS!r19.does_not_prove_ar ×1"
+   ]
+  },
+  "PB-0603": {
+   "disposition": "APPLIED",
+   "stage": "STAGE-5",
+   "detail": [
+    "PB-0603.01: 06_EVIDENCE_OBJECTS!r101.limitations_ar ×1",
+    "PB-0603.02: 07_PUBLIC_CLAIMS!r60.does_not_prove_ar ×1"
+   ]
+  },
+  "PB-0604": {
+   "disposition": "APPLIED",
+   "stage": "STAGE-5",
+   "detail": [
+    "PB-0604.01: 06_EVIDENCE_OBJECTS!r111.limitations_ar ×1",
+    "PB-0604.02: 07_PUBLIC_CLAIMS!r62.does_not_prove_ar ×1"
+   ]
+  },
+  "PB-0605": {
+   "disposition": "APPLIED",
+   "stage": "STAGE-5",
+   "detail": [
+    "PB-0605.01: 06_EVIDENCE_OBJECTS!r24.universe_ar ×1"
+   ]
+  },
+  "PB-0606": {
+   "disposition": "APPLIED",
+   "stage": "STAGE-5",
+   "detail": [
+    "PB-0606.01: 06_EVIDENCE_OBJECTS!r30.limitations_ar ×1"
+   ]
+  },
+  "PB-0607": {
+   "disposition": "APPLIED",
+   "stage": "STAGE-5",
+   "detail": [
+    "PB-0607.01: 06_EVIDENCE_OBJECTS!r34.limitations_ar ×1"
+   ]
+  },
+  "PB-0583A": {
+   "disposition": "APPLIED",
+   "stage": "STAGE-5",
+   "detail": [
+    "PB-0583A.04: 03_PAGE_SECTIONS!r94.body_ar ×1",
+    "PB-0583A.05: 03_PAGE_SECTIONS!r339.body_ar ×1",
+    "PB-0583A.06: 03_PAGE_SECTIONS!r482.body_ar ×1",
+    "PB-0583A.07: 06_EVIDENCE_OBJECTS!r61.summary_ar ×1",
+    "PB-0583A.08: 07_PUBLIC_CLAIMS!r10.copy_ar ×1",
+    "PB-0583A.09: 09_READING_SECTIONS!r69.copy_ar ×1",
+    "full_copy rows superseded by EXF-002 derivation: PB-0583A.01, PB-0583A.02, PB-0583A.03"
+   ]
+  },
+  "PB-0583B": {
+   "disposition": "APPLIED",
+   "stage": "STAGE-5",
+   "detail": [
+    "PB-0583B.02: 03_PAGE_SECTIONS!r483.body_ar ×1",
+    "PB-0583B.03: 09_READING_SECTIONS!r70.copy_ar ×1",
+    "full_copy rows superseded by EXF-002 derivation: PB-0583B.01"
+   ]
+  },
+  "PB-0583C": {
+   "disposition": "APPLIED",
+   "stage": "STAGE-5",
+   "detail": [
+    "PB-0583C.02: 03_PAGE_SECTIONS!r339.body_ar ×1",
+    "full_copy rows superseded by EXF-002 derivation: PB-0583C.01"
+   ]
+  },
+  "PB-0583D": {
+   "disposition": "APPLIED",
+   "stage": "STAGE-5",
+   "detail": [
+    "PB-0583D.03: 03_PAGE_SECTIONS!r260.body_ar ×1",
+    "PB-0583D.04: 03_PAGE_SECTIONS!r339.body_ar ×1",
+    "PB-0583D.05: 06_EVIDENCE_OBJECTS!r75.summary_ar ×1",
+    "PB-0583D.06: 11_VISUAL_LIBRARY!r25.accessible_summary_ar ×1",
+    "full_copy rows superseded by EXF-002 derivation: PB-0583D.01, PB-0583D.02"
+   ]
+  },
+  "PB-0583E": {
+   "disposition": "APPLIED",
+   "stage": "STAGE-5",
+   "detail": [
+    "PB-0583E.02: 03_PAGE_SECTIONS!r338.body_en ×1",
+    "full_copy rows superseded by EXF-002 derivation: PB-0583E.01"
+   ]
+  },
+  "PB-0413": {
+   "disposition": "APPLIED",
+   "stage": "STAGE-5",
+   "detail": "per-cell execution after Lead re-adjudication: {'SUPERSEDED': 13, 'APPLIED': 26, 'KEEP': 1}; row outcomes in STAGE5_SWEEP_ROW_LEDGER.csv"
+  },
+  "PB-0414": {
+   "disposition": "APPLIED",
+   "stage": "STAGE-5",
+   "detail": "per-cell execution after Lead re-adjudication: {'SUPERSEDED': 44, 'REVISED': 68}; row outcomes in STAGE5_SWEEP_ROW_LEDGER.csv"
+  },
+  "PB-0415": {
+   "disposition": "APPLIED",
+   "stage": "STAGE-5",
+   "detail": "per-cell execution after Lead re-adjudication: {'SUPERSEDED': 45, 'APPLIED': 76, 'REVISED': 1}; row outcomes in STAGE5_SWEEP_ROW_LEDGER.csv"
+  },
+  "EXF-002": {
+   "disposition": "APPLIED",
+   "stage": "STAGE-5",
+   "detail": [
+    "/about/ en",
+    "/access/ en",
+    "/access/ ar",
+    "/data/ en",
+    "/data/ ar",
+    "/evidence/CLM-006/ en",
+    "/evidence/CLM-006/ ar",
+    "/evidence/CLM-009/ ar",
+    "/evidence/CLM-010/ en",
+    "/evidence/CLM-010/ ar",
+    "/evidence/CLM-014/ en",
+    "/evidence/CLM-020/ en",
+    "/evidence/CLM-020/ ar",
+    "/evidence/CLM-022/ en",
+    "/evidence/CLM-022/ ar",
+    "/evidence/CLM-026/ en",
+    "/evidence/CLM-026/ ar",
+    "/evidence/CLM-027/ en",
+    "/evidence/CLM-027/ ar",
+    "/evidence/CLM-056/ ar",
+    "/evidence/VIS-EVIDENCE-FRESHNESS/ en",
+    "/evidence/VIS-FIRM-FINANCE-SEVERITY/ en",
+    "/evidence/VIS-FIRM-FINANCE-SEVERITY/ ar",
+    "/evidence/VIS-PAYMENT-ANATOMY/ ar",
+    "/evidence/VIS-PROVIDER-TIME/ ar",
+    "/evidence/XW-FMIIP-005/ ar",
+    "/evidence/ ar",
+    "/finance/ en",
+    "/finance/ ar",
+    "/firms/ en",
+    "/firms/ ar",
+    "/measurement/ en",
+    "/measurement/ ar",
+    "/methodology/ en",
+    "/methodology/ ar",
+    "/payments/ en",
+    "/payments/ ar",
+    "/people/ en",
+    "/people/ ar",
+    "/privacy/ en",
+    "/privacy/ ar",
+    "/providers/ en",
+    "/providers/ ar",
+    "/readings/after-transfer-persistence/ ar",
+    "/readings/banking-jump-measurement-basis/ ar",
+    "/readings/define-what-you-count/ en",
+    "/readings/define-what-you-count/ ar",
+    "/readings/digital-workaround-not-yet-durable-inclusion/ en",
+    "/readings/digital-workaround-not-yet-durable-inclusion/ ar",
+    "/readings/finance-constraint-different-questions/ en",
+    "/readings/finance-constraint-different-questions/ ar",
+    "/readings/from-rail-to-result-missing-middle/ ar",
+    "/readings/gender-gap-measured-causes-open/ ar",
+    "/readings/microfinance-structural-divergence/ ar",
+    "/readings/reforms-newer-than-people-evidence/ ar",
+    "/readings/same-year-different-number/ en",
+    "/readings/same-year-different-number/ ar",
+    "/reforms/ en",
+    "/reforms/ ar",
+    "/remittances/ en",
+    "/remittances/ ar",
+    "/rights/ en",
+    "/rights/ ar"
+   ]
+  }
+ }
+}

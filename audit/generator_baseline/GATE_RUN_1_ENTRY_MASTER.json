@@ -1,0 +1,3248 @@
+{
+ "master_sha256": "e69804106e04d093098688f2d01cea51e13191f255d774a090f3e5dd8dec9bc7",
+ "summary": {
+  "BYTE_IDENTICAL": 25,
+  "JSON_EQUAL": 0,
+  "DIFFERENT": 10,
+  "BUILD_ERROR": 0,
+  "BUILD_ERROR_CLASSIFIED": 1
+ },
+ "unexplained_differences": 0,
+ "outputs": {
+  "content/site_map.json": {
+   "status": "BYTE_IDENTICAL"
+  },
+  "content/page_contracts.json": {
+   "status": "BYTE_IDENTICAL"
+  },
+  "content/page_sections.json": {
+   "status": "BYTE_IDENTICAL"
+  },
+  "content/questions.json": {
+   "status": "BYTE_IDENTICAL"
+  },
+  "evidence/evidence_objects.json": {
+   "status": "BYTE_IDENTICAL"
+  },
+  "evidence/public_claims.json": {
+   "status": "BYTE_IDENTICAL"
+  },
+  "content/readings.json": {
+   "status": "DIFFERENT",
+   "difference_count": 1,
+   "unexplained": 0,
+   "differences_summary": [
+    {
+     "class": "ENTRY_PROJECTION_STALE",
+     "finding": "PROJ-STALE-003",
+     "count": 1
+    }
+   ],
+   "differences": [
+    {
+     "pointer": "/9/verification_bindings/resolution_rule",
+     "generated": "Direct SRC-* identifiers resolve in the Source Library. Other dependency identifiers remain lineage/verification anchors and must never be converted into invented URLs or sources.",
+     "committed": "Direct SRC-* identifiers resolve in the source register. Other dependency identifiers resolve through the bound claim/evidence record in the workbook; the implementation must not convert them into invented URLs or sources.",
+     "class": "ENTRY_PROJECTION_STALE",
+     "finding": "PROJ-STALE-003"
+    }
+   ]
+  },
+  "content/reading_sections.json": {
+   "status": "BYTE_IDENTICAL"
+  },
+  "content/measurement_agenda.json": {
+   "status": "BYTE_IDENTICAL"
+  },
+  "visuals/visual_library.json": {
+   "status": "BYTE_IDENTICAL"
+  },
+  "visuals/system_relationships.json": {
+   "status": "BYTE_IDENTICAL"
+  },
+  "visuals/system_chronology.json": {
+   "status": "BUILD_ERROR_CLASSIFIED",
+   "error": "IntegrityError: visuals/system_chronology.json: duplicate stable key event_id='YSC-013'",
+   "class": "ENTRY_MASTER_INTEGRITY_DEFECT",
+   "finding": "AUTH-INT-001"
+  },
+  "sources/source_library.json": {
+   "status": "DIFFERENT",
+   "difference_count": 1,
+   "unexplained": 0,
+   "differences_summary": [
+    {
+     "class": "SERIALIZATION_ONLY",
+     "finding": "SER-001",
+     "count": 1
+    }
+   ],
+   "differences": [
+    {
+     "pointer": "/158/additional_urls",
+     "generated": "[\"https://documents1.worldbank.org/curated/en/099647503042425828/pdf/IDU-a9d1a6be-30dc-48e6-9318-cf9d26959fb9.pdf\"]",
+     "committed": "[\"https://documents1.worldbank.org/curated/en/099647503042425828/pdf/IDU-a9d1a6be-30dc-48e6-9318-cf9d26959fb9.pdf\"]",
+     "class": "SERIALIZATION_ONLY",
+     "finding": "SER-001"
+    }
+   ]
+  },
+  "sources/master_dataset_catalog.json": {
+   "status": "BYTE_IDENTICAL"
+  },
+  "sources/indicator_library.json": {
+   "status": "BYTE_IDENTICAL"
+  },
+  "evidence/evidence_passports.json": {
+   "status": "DIFFERENT",
+   "difference_count": 2,
+   "unexplained": 0,
+   "differences_summary": [
+    {
+     "class": "ENTRY_PROJECTION_STALE",
+     "finding": "PROJ-STALE-004",
+     "count": 2
+    }
+   ],
+   "differences": [
+    {
+     "pointer": "/47/route_list/<len>",
+     "generated": 4,
+     "committed": 3,
+     "class": "ENTRY_PROJECTION_STALE",
+     "finding": "PROJ-STALE-004"
+    },
+    {
+     "pointer": "/47/related_routes/<len>",
+     "generated": 3,
+     "committed": 2,
+     "class": "ENTRY_PROJECTION_STALE",
+     "finding": "PROJ-STALE-004"
+    }
+   ]
+  },
+  "data/cby_monetary.json": {
+   "status": "BYTE_IDENTICAL"
+  },
+  "data/payments_data.json": {
+   "status": "BYTE_IDENTICAL"
+  },
+  "data/firm_finance.json": {
+   "status": "BYTE_IDENTICAL"
+  },
+  "data/mfi_data.json": {
+   "status": "BYTE_IDENTICAL"
+  },
+  "data/providers_data.json": {
+   "status": "BYTE_IDENTICAL"
+  },
+  "data/remittances.json": {
+   "status": "BYTE_IDENTICAL"
+  },
+  "data/findex_codebook.json": {
+   "status": "BYTE_IDENTICAL"
+  },
+  "data/findex_baseline.json": {
+   "status": "BYTE_IDENTICAL"
+  },
+  "data/findex_history.json": {
+   "status": "BYTE_IDENTICAL"
+  },
+  "data/findex_subgroups.json": {
+   "status": "BYTE_IDENTICAL"
+  },
+  "data/reforms_regulation.json": {
+   "status": "DIFFERENT",
+   "difference_count": 2,
+   "unexplained": 0,
+   "differences_summary": [
+    {
+     "class": "ENTRY_PROJECTION_STALE",
+     "finding": "PROJ-STALE-001",
+     "count": 2
+    }
+   ],
+   "differences": [
+    {
+     "pointer": "/rows/7/4",
+     "generated": "Project component supports development of a Fast Payment System (FPS) in IRG-controlled areas as a distinct payment-infrastructure component.",
+     "committed": "Project component supports development of a Fast Payment System.",
+     "class": "ENTRY_PROJECTION_STALE",
+     "finding": "PROJ-STALE-001"
+    },
+    {
+     "pointer": "/rows/8/4",
+     "generated": "Project component supports establishment of a Real-Time Gross Settlement system (RTGS) managed by CBY-Aden, alongside upgrading CBY-Aden core banking; the project describes RTGS as foundational payment infrastructure.",
+     "committed": "Project component supports RTGS development and upgrading CBY core banking.",
+     "class": "ENTRY_PROJECTION_STALE",
+     "finding": "PROJ-STALE-001"
+    }
+   ]
+  },
+  "content/master_principles.json": {
+   "status": "DIFFERENT",
+   "difference_count": 12,
+   "unexplained": 0,
+   "differences_summary": [
+    {
+     "class": "ENTRY_PROJECTION_STALE",
+     "finding": "PROJ-STALE-002",
+     "count": 12
+    }
+   ],
+   "differences": [
+    {
+     "pointer": "/rows/14/1",
+     "generated": 572,
+     "committed": 500,
+     "class": "ENTRY_PROJECTION_STALE",
+     "finding": "PROJ-STALE-002"
+    },
+    {
+     "pointer": "/rows/14/2",
+     "generated": 572,
+     "committed": 500,
+     "class": "ENTRY_PROJECTION_STALE",
+     "finding": "PROJ-STALE-002"
+    },
+    {
+     "pointer": "/rows/15/5",
+     "generated": "Evidence-supported answer\nالإجابة التي تسندها الأدلة",
+     "committed": "Strongest answer\nأقوى إجابة",
+     "class": "ENTRY_PROJECTION_STALE",
+     "finding": "PROJ-STALE-002"
+    },
+    {
+     "pointer": "/rows/22/1",
+     "generated": 24,
+     "committed": 20,
+     "class": "ENTRY_PROJECTION_STALE",
+     "finding": "PROJ-STALE-002"
+    },
+    {
+     "pointer": "/rows/22/2",
+     "generated": 24,
+     "committed": 20,
+     "class": "ENTRY_PROJECTION_STALE",
+     "finding": "PROJ-STALE-002"
+    },
+    {
+     "pointer": "/rows/23/1",
+     "generated": 159,
+     "committed": 149,
+     "class": "ENTRY_PROJECTION_STALE",
+     "finding": "PROJ-STALE-002"
+    },
+    {
+     "pointer": "/rows/23/2",
+     "generated": 159,
+     "committed": 149,
+     "class": "ENTRY_PROJECTION_STALE",
+     "finding": "PROJ-STALE-002"
+    },
+    {
+     "pointer": "/rows/30/4",
+     "generated": "SRC-OECD-INFE-2023",
+     "committed": "SRC-OECD-YEM-RESILIENCE-001",
+     "class": "ENTRY_PROJECTION_STALE",
+     "finding": "PROJ-STALE-002"
+    },
+    {
+     "pointer": "/rows/31/4",
+     "generated": "SRC-OECD-INFE-2023",
+     "committed": "SRC-OECD-YEM-RESILIENCE-001",
+     "class": "ENTRY_PROJECTION_STALE",
+     "finding": "PROJ-STALE-002"
+    },
+    {
+     "pointer": "/rows/34/4",
+     "generated": "SRC-CBY-POS-2025-03",
+     "committed": "CBY source series",
+     "class": "ENTRY_PROJECTION_STALE",
+     "finding": "PROJ-STALE-002"
+    },
+    {
+     "pointer": "/rows/35/4",
+     "generated": "SRC-CBY-POS-2026-01",
+     "committed": "CBY source series",
+     "class": "ENTRY_PROJECTION_STALE",
+     "finding": "PROJ-STALE-002"
+    },
+    {
+     "pointer": "/rows/46/4",
+     "generated": "SYSTEM / المنظومة\n\n24-event macro-financial and financial-inclusion-system chronology.\nSupport-flow states and programme exposure remain distinct from outcomes.",
+     "committed": "SYSTEM / المنظومة\n\n20-event macro-financial chronology.\nSupport flow states are not double-counted.",
+     "class": "ENTRY_PROJECTION_STALE",
+     "finding": "PROJ-STALE-002"
+    }
+   ]
+  },
+  "data/local_data_index.json": {
+   "status": "BYTE_IDENTICAL"
+  },
+  "sources/local_dataset_catalog.json": {
+   "status": "BYTE_IDENTICAL"
+  },
+  "sources/public_object_source_closure.json": {
+   "status": "DIFFERENT",
+   "difference_count": 171,
+   "unexplained": 0,
+   "differences_summary": [
+    {
+     "class": "ENTRY_DRIFT__CLOSURE_R8_4A_HOME_ROUTE",
+     "finding": "CLOSURE-DRIFT-001",
+     "count": 1
+    },
+    {
+     "class": "ENTRY_DRIFT__CLOSURE_SOURCE_CARD_STATE",
+     "finding": "CLOSURE-DRIFT-001",
+     "count": 10
+    },
+    {
+     "class": "ENTRY_DRIFT__CLOSURE_ORDER_ONLY",
+     "finding": "CLOSURE-DRIFT-001",
+     "count": 61
+    },
+    {
+     "class": "ENTRY_DRIFT__CLOSURE_CONTENT",
+     "finding": "CLOSURE-DRIFT-001",
+     "count": 6
+    },
+    {
+     "class": "ENTRY_DRIFT__CLOSURE_HAND_EDITED_RECORD",
+     "finding": "CLOSURE-DRIFT-001",
+     "count": 2
+    },
+    {
+     "class": "ENTRY_DRIFT__CLOSURE_PROPAGATED",
+     "finding": "CLOSURE-DRIFT-001",
+     "count": 58
+    },
+    {
+     "class": "ENTRY_DRIFT__CLOSURE_SOURCE_DATASET_MEMBERSHIP",
+     "finding": "CLOSURE-DRIFT-001",
+     "count": 21
+    },
+    {
+     "class": "ENTRY_DRIFT__CLOSURE_MASTER_ROW_EDITED",
+     "finding": "CLOSURE-DRIFT-001",
+     "count": 12
+    }
+   ],
+   "differences": [
+    {
+     "pointer": "/6/public_routes/<len>",
+     "generated": 1,
+     "committed": 0,
+     "class": "ENTRY_DRIFT__CLOSURE_R8_4A_HOME_ROUTE",
+     "finding": "CLOSURE-DRIFT-001"
+    },
+    {
+     "pointer": "/28/source_locators/0/metadata_state",
+     "generated": "DISPLAY_READY",
+     "committed": "LOCATOR_ONLY",
+     "class": "ENTRY_DRIFT__CLOSURE_SOURCE_CARD_STATE",
+     "finding": "CLOSURE-DRIFT-001"
+    },
+    {
+     "pointer": "/79/dependency_ids/0",
+     "generated": "186",
+     "committed": "EP-IMF-CBY-REMIT-METHOD-K04",
+     "class": "ENTRY_DRIFT__CLOSURE_ORDER_ONLY",
+     "finding": "CLOSURE-DRIFT-001"
+    },
+    {
+     "pointer": "/79/dependency_ids/1",
+     "generated": "191",
+     "committed": "186",
+     "class": "ENTRY_DRIFT__CLOSURE_ORDER_ONLY",
+     "finding": "CLOSURE-DRIFT-001"
+    },
+    {
+     "pointer": "/79/dependency_ids/2",
+     "generated": "EP-IMF-CBY-REMIT-METHOD-K04",
+     "committed": "191",
+     "class": "ENTRY_DRIFT__CLOSURE_ORDER_ONLY",
+     "finding": "CLOSURE-DRIFT-001"
+    },
+    {
+     "pointer": "/81/dependency_ids/0",
+     "generated": "181",
+     "committed": "EP-YEM-BOP-COMPONENT-XWALK-K04",
+     "class": "ENTRY_DRIFT__CLOSURE_ORDER_ONLY",
+     "finding": "CLOSURE-DRIFT-001"
+    },
+    {
+     "pointer": "/81/dependency_ids/1",
+     "generated": "191",
+     "committed": "181",
+     "class": "ENTRY_DRIFT__CLOSURE_ORDER_ONLY",
+     "finding": "CLOSURE-DRIFT-001"
+    },
+    {
+     "pointer": "/81/dependency_ids/2",
+     "generated": "EP-YEM-BOP-COMPONENT-XWALK-K04",
+     "committed": "191",
+     "class": "ENTRY_DRIFT__CLOSURE_ORDER_ONLY",
+     "finding": "CLOSURE-DRIFT-001"
+    },
+    {
+     "pointer": "/82/dependency_ids/0",
+     "generated": "187",
+     "committed": "EP-YEM-BOP-RESIDUAL-K04",
+     "class": "ENTRY_DRIFT__CLOSURE_ORDER_ONLY",
+     "finding": "CLOSURE-DRIFT-001"
+    },
+    {
+     "pointer": "/82/dependency_ids/1",
+     "generated": "EP-YEM-BOP-RESIDUAL-K04",
+     "committed": "187",
+     "class": "ENTRY_DRIFT__CLOSURE_ORDER_ONLY",
+     "finding": "CLOSURE-DRIFT-001"
+    },
+    {
+     "pointer": "/83/dependency_ids/0",
+     "generated": "187",
+     "committed": "EP-CCY-REMIT-RESIDUAL-MODEL-K04",
+     "class": "ENTRY_DRIFT__CLOSURE_ORDER_ONLY",
+     "finding": "CLOSURE-DRIFT-001"
+    },
+    {
+     "pointer": "/83/dependency_ids/1",
+     "generated": "188",
+     "committed": "187",
+     "class": "ENTRY_DRIFT__CLOSURE_ORDER_ONLY",
+     "finding": "CLOSURE-DRIFT-001"
+    },
+    {
+     "pointer": "/83/dependency_ids/2",
+     "generated": "EP-CCY-REMIT-RESIDUAL-MODEL-K04",
+     "committed": "188",
+     "class": "ENTRY_DRIFT__CLOSURE_ORDER_ONLY",
+     "finding": "CLOSURE-DRIFT-001"
+    },
+    {
+     "pointer": "/83/source_locators/14/metadata_state",
+     "generated": "DISPLAY_READY",
+     "committed": "LOCATOR_ONLY",
+     "class": "ENTRY_DRIFT__CLOSURE_ORDER_ONLY",
+     "finding": "CLOSURE-DRIFT-001"
+    },
+    {
+     "pointer": "/83/source_locators/16/metadata_state",
+     "generated": "DISPLAY_READY",
+     "committed": "LOCATOR_ONLY",
+     "class": "ENTRY_DRIFT__CLOSURE_ORDER_ONLY",
+     "finding": "CLOSURE-DRIFT-001"
+    },
+    {
+     "pointer": "/84/dependency_ids/0",
+     "generated": "189",
+     "committed": "EP-YEM-CASH-FIN-TRANSMISSION-K04",
+     "class": "ENTRY_DRIFT__CLOSURE_ORDER_ONLY",
+     "finding": "CLOSURE-DRIFT-001"
+    },
+    {
+     "pointer": "/84/dependency_ids/1",
+     "generated": "EP-YEM-CASH-FIN-TRANSMISSION-K04",
+     "committed": "189",
+     "class": "ENTRY_DRIFT__CLOSURE_ORDER_ONLY",
+     "finding": "CLOSURE-DRIFT-001"
+    },
+    {
+     "pointer": "/84/closure_state",
+     "generated": "CLOSED_TO_SOURCE_ID",
+     "committed": "CLOSED_VIA_CONTROLLED_DEPENDENCIES",
+     "class": "ENTRY_DRIFT__CLOSURE_ORDER_ONLY",
+     "finding": "CLOSURE-DRIFT-001"
+    },
+    {
+     "pointer": "/85/dependency_ids/0",
+     "generated": "190",
+     "committed": "EP-SAUDI-SUPPORT-FLOWSTATE-K04",
+     "class": "ENTRY_DRIFT__CLOSURE_ORDER_ONLY",
+     "finding": "CLOSURE-DRIFT-001"
+    },
+    {
+     "pointer": "/85/dependency_ids/1",
+     "generated": "EP-SAUDI-SUPPORT-FLOWSTATE-K04",
+     "committed": "190",
+     "class": "ENTRY_DRIFT__CLOSURE_ORDER_ONLY",
+     "finding": "CLOSURE-DRIFT-001"
+    },
+    {
+     "pointer": "/86/dependency_ids/0",
+     "generated": "193",
+     "committed": "EP-YEM-BOP-IIP-RECON-K04",
+     "class": "ENTRY_DRIFT__CLOSURE_ORDER_ONLY",
+     "finding": "CLOSURE-DRIFT-001"
+    },
+    {
+     "pointer": "/86/dependency_ids/1",
+     "generated": "EP-YEM-BOP-IIP-RECON-K04",
+     "committed": "193",
+     "class": "ENTRY_DRIFT__CLOSURE_ORDER_ONLY",
+     "finding": "CLOSURE-DRIFT-001"
+    },
+    {
+     "pointer": "/88/dependency_ids/0",
+     "generated": "194",
+     "committed": "SRC-IMF-YEM-SMP-2026",
+     "class": "ENTRY_DRIFT__CLOSURE_ORDER_ONLY",
+     "finding": "CLOSURE-DRIFT-001"
+    },
+    {
+     "pointer": "/88/dependency_ids/1",
+     "generated": "SRC-IMF-YEM-SMP-2026",
+     "committed": "194",
+     "class": "ENTRY_DRIFT__CLOSURE_ORDER_ONLY",
+     "finding": "CLOSURE-DRIFT-001"
+    },
+    {
+     "pointer": "/89/dependency_ids/0",
+     "generated": "198",
+     "committed": "EP-IBS-EMONEY-2019-K04",
+     "class": "ENTRY_DRIFT__CLOSURE_ORDER_ONLY",
+     "finding": "CLOSURE-DRIFT-001"
+    },
+    {
+     "pointer": "/89/dependency_ids/1",
+     "generated": "199",
+     "committed": "198",
+     "class": "ENTRY_DRIFT__CLOSURE_ORDER_ONLY",
+     "finding": "CLOSURE-DRIFT-001"
+    },
+    {
+     "pointer": "/89/dependency_ids/2",
+     "generated": "EP-IBS-EMONEY-2019-K04",
+     "committed": "199",
+     "class": "ENTRY_DRIFT__CLOSURE_ORDER_ONLY",
+     "finding": "CLOSURE-DRIFT-001"
+    },
+    {
+     "pointer": "/90/dependency_ids/0",
+     "generated": "198",
+     "committed": "EP-IBS-EMONEY-VALUE-K04",
+     "class": "ENTRY_DRIFT__CLOSURE_ORDER_ONLY",
+     "finding": "CLOSURE-DRIFT-001"
+    },
+    {
+     "pointer": "/90/dependency_ids/1",
+     "generated": "199",
+     "committed": "198",
+     "class": "ENTRY_DRIFT__CLOSURE_ORDER_ONLY",
+     "finding": "CLOSURE-DRIFT-001"
+    },
+    {
+     "pointer": "/90/dependency_ids/2",
+     "generated": "EP-IBS-EMONEY-VALUE-K04",
+     "committed": "199",
+     "class": "ENTRY_DRIFT__CLOSURE_ORDER_ONLY",
+     "finding": "CLOSURE-DRIFT-001"
+    },
+    {
+     "pointer": "/91/dependency_ids/0",
+     "generated": "198",
+     "committed": "EP-IBS-GEO-GENDER-K04",
+     "class": "ENTRY_DRIFT__CLOSURE_ORDER_ONLY",
+     "finding": "CLOSURE-DRIFT-001"
+    },
+    {
+     "pointer": "/91/dependency_ids/1",
+     "generated": "199",
+     "committed": "198",
+     "class": "ENTRY_DRIFT__CLOSURE_ORDER_ONLY",
+     "finding": "CLOSURE-DRIFT-001"
+    },
+    {
+     "pointer": "/91/dependency_ids/2",
+     "generated": "EP-IBS-GEO-GENDER-K04",
+     "committed": "199",
+     "class": "ENTRY_DRIFT__CLOSURE_ORDER_ONLY",
+     "finding": "CLOSURE-DRIFT-001"
+    },
+    {
+     "pointer": "/92/dependency_ids/0",
+     "generated": "201",
+     "committed": "EP-MFB-BORROWERS-2023-K04",
+     "class": "ENTRY_DRIFT__CLOSURE_ORDER_ONLY",
+     "finding": "CLOSURE-DRIFT-001"
+    },
+    {
+     "pointer": "/92/dependency_ids/1",
+     "generated": "EP-MFB-BORROWERS-2023-K04",
+     "committed": "201",
+     "class": "ENTRY_DRIFT__CLOSURE_ORDER_ONLY",
+     "finding": "CLOSURE-DRIFT-001"
+    },
+    {
+     "pointer": "/92/source_locators/1/metadata_state",
+     "generated": "DISPLAY_READY",
+     "committed": "LOCATOR_ONLY",
+     "class": "ENTRY_DRIFT__CLOSURE_ORDER_ONLY",
+     "finding": "CLOSURE-DRIFT-001"
+    },
+    {
+     "pointer": "/93/source_locators/1/metadata_state",
+     "generated": "DISPLAY_READY",
+     "committed": "LOCATOR_ONLY",
+     "class": "ENTRY_DRIFT__CLOSURE_SOURCE_CARD_STATE",
+     "finding": "CLOSURE-DRIFT-001"
+    },
+    {
+     "pointer": "/94/dependency_ids/0",
+     "generated": "15_PROVIDER_MASTER",
+     "committed": "EP-CBY-BANK-ROSTER-2026",
+     "class": "ENTRY_DRIFT__CLOSURE_ORDER_ONLY",
+     "finding": "CLOSURE-DRIFT-001"
+    },
+    {
+     "pointer": "/94/dependency_ids/1",
+     "generated": "16_PROVIDER_UNIVERSE",
+     "committed": "15_PROVIDER_MASTER",
+     "class": "ENTRY_DRIFT__CLOSURE_ORDER_ONLY",
+     "finding": "CLOSURE-DRIFT-001"
+    },
+    {
+     "pointer": "/94/dependency_ids/2",
+     "generated": "202",
+     "committed": "16_PROVIDER_UNIVERSE",
+     "class": "ENTRY_DRIFT__CLOSURE_ORDER_ONLY",
+     "finding": "CLOSURE-DRIFT-001"
+    },
+    {
+     "pointer": "/94/dependency_ids/3",
+     "generated": "EP-CBY-BANK-ROSTER-2026",
+     "committed": "202",
+     "class": "ENTRY_DRIFT__CLOSURE_ORDER_ONLY",
+     "finding": "CLOSURE-DRIFT-001"
+    },
+    {
+     "pointer": "/94/source_locators/16/metadata_state",
+     "generated": "DISPLAY_READY",
+     "committed": "LOCATOR_ONLY",
+     "class": "ENTRY_DRIFT__CLOSURE_ORDER_ONLY",
+     "finding": "CLOSURE-DRIFT-001"
+    },
+    {
+     "pointer": "/95/source_locators/1/metadata_state",
+     "generated": "DISPLAY_READY",
+     "committed": "LOCATOR_ONLY",
+     "class": "ENTRY_DRIFT__CLOSURE_SOURCE_CARD_STATE",
+     "finding": "CLOSURE-DRIFT-001"
+    },
+    {
+     "pointer": "/96/source_locators/1/metadata_state",
+     "generated": "DISPLAY_READY",
+     "committed": "LOCATOR_ONLY",
+     "class": "ENTRY_DRIFT__CLOSURE_SOURCE_CARD_STATE",
+     "finding": "CLOSURE-DRIFT-001"
+    },
+    {
+     "pointer": "/97/dependency_ids/0",
+     "generated": "201",
+     "committed": "SRC-WB-FSD-2024-001",
+     "class": "ENTRY_DRIFT__CLOSURE_ORDER_ONLY",
+     "finding": "CLOSURE-DRIFT-001"
+    },
+    {
+     "pointer": "/97/dependency_ids/1",
+     "generated": "SRC-WB-FSD-2024-001",
+     "committed": "201",
+     "class": "ENTRY_DRIFT__CLOSURE_ORDER_ONLY",
+     "finding": "CLOSURE-DRIFT-001"
+    },
+    {
+     "pointer": "/97/source_locators/1/metadata_state",
+     "generated": "DISPLAY_READY",
+     "committed": "LOCATOR_ONLY",
+     "class": "ENTRY_DRIFT__CLOSURE_ORDER_ONLY",
+     "finding": "CLOSURE-DRIFT-001"
+    },
+    {
+     "pointer": "/98/dependency_ids/0",
+     "generated": "K04-CBY-060",
+     "committed": "EP-CBY-REMITTANCE-VINTAGE-K04",
+     "class": "ENTRY_DRIFT__CLOSURE_ORDER_ONLY",
+     "finding": "CLOSURE-DRIFT-001"
+    },
+    {
+     "pointer": "/98/dependency_ids/2",
+     "generated": "AVA-004",
+     "committed": "K04-CBY-060",
+     "class": "ENTRY_DRIFT__CLOSURE_ORDER_ONLY",
+     "finding": "CLOSURE-DRIFT-001"
+    },
+    {
+     "pointer": "/98/dependency_ids/3",
+     "generated": "EP-CBY-REMITTANCE-VINTAGE-K04",
+     "committed": "AVA-004",
+     "class": "ENTRY_DRIFT__CLOSURE_ORDER_ONLY",
+     "finding": "CLOSURE-DRIFT-001"
+    },
+    {
+     "pointer": "/99/dependency_ids/0",
+     "generated": "K04-CBY-061",
+     "committed": "EP-CBY-BANKING-REVAL-K04",
+     "class": "ENTRY_DRIFT__CLOSURE_ORDER_ONLY",
+     "finding": "CLOSURE-DRIFT-001"
+    },
+    {
+     "pointer": "/99/dependency_ids/2",
+     "generated": "AVA-005..008",
+     "committed": "K04-CBY-061",
+     "class": "ENTRY_DRIFT__CLOSURE_ORDER_ONLY",
+     "finding": "CLOSURE-DRIFT-001"
+    },
+    {
+     "pointer": "/99/dependency_ids/3",
+     "generated": "EP-CBY-BANKING-REVAL-K04",
+     "committed": "AVA-005..008",
+     "class": "ENTRY_DRIFT__CLOSURE_ORDER_ONLY",
+     "finding": "CLOSURE-DRIFT-001"
+    },
+    {
+     "pointer": "/100/dependency_ids/0",
+     "generated": "K04-CBY-060",
+     "committed": "173_CBY_ANNUAL_VINTAGES",
+     "class": "ENTRY_DRIFT__CLOSURE_ORDER_ONLY",
+     "finding": "CLOSURE-DRIFT-001"
+    },
+    {
+     "pointer": "/100/dependency_ids/1",
+     "generated": "173_CBY_ANNUAL_VINTAGES",
+     "committed": "177_VINTAGE_VISUAL_LAB",
+     "class": "ENTRY_DRIFT__CLOSURE_ORDER_ONLY",
+     "finding": "CLOSURE-DRIFT-001"
+    },
+    {
+     "pointer": "/100/dependency_ids/2",
+     "generated": "177_VINTAGE_VISUAL_LAB",
+     "committed": "K04-CBY-060",
+     "class": "ENTRY_DRIFT__CLOSURE_ORDER_ONLY",
+     "finding": "CLOSURE-DRIFT-001"
+    },
+    {
+     "pointer": "/101/dependency_ids/0",
+     "generated": "K04-CBY-062",
+     "committed": "173_CBY_ANNUAL_VINTAGES",
+     "class": "ENTRY_DRIFT__CLOSURE_ORDER_ONLY",
+     "finding": "CLOSURE-DRIFT-001"
+    },
+    {
+     "pointer": "/101/dependency_ids/1",
+     "generated": "173_CBY_ANNUAL_VINTAGES",
+     "committed": "177_VINTAGE_VISUAL_LAB",
+     "class": "ENTRY_DRIFT__CLOSURE_ORDER_ONLY",
+     "finding": "CLOSURE-DRIFT-001"
+    },
+    {
+     "pointer": "/101/dependency_ids/2",
+     "generated": "177_VINTAGE_VISUAL_LAB",
+     "committed": "K04-CBY-062",
+     "class": "ENTRY_DRIFT__CLOSURE_ORDER_ONLY",
+     "finding": "CLOSURE-DRIFT-001"
+    },
+    {
+     "pointer": "/103/dependency_ids/<len>",
+     "generated": 3,
+     "committed": 4,
+     "class": "ENTRY_DRIFT__CLOSURE_CONTENT",
+     "finding": "CLOSURE-DRIFT-001"
+    },
+    {
+     "pointer": "/103/dependency_ids/0",
+     "generated": "181_REMITTANCE_METHOD_RECON",
+     "committed": "EP-CBY-REMITTANCE-VINTAGE-K04",
+     "class": "ENTRY_DRIFT__CLOSURE_CONTENT",
+     "finding": "CLOSURE-DRIFT-001"
+    },
+    {
+     "pointer": "/103/dependency_ids/1",
+     "generated": "EP-CBY-REMITTANCE-VINTAGE-K04",
+     "committed": "EP-IMF-CBY-REMIT-ME",
+     "class": "ENTRY_DRIFT__CLOSURE_CONTENT",
+     "finding": "CLOSURE-DRIFT-001"
+    },
+    {
+     "pointer": "/103/dependency_ids/2",
+     "generated": "EP-IMF-CBY-REMIT-ME...",
+     "committed": "181_REMITTANCE_METHOD_RECON",
+     "class": "ENTRY_DRIFT__CLOSURE_CONTENT",
+     "finding": "CLOSURE-DRIFT-001"
+    },
+    {
+     "pointer": "/103/unresolved_dependency_ids/<len>",
+     "generated": 2,
+     "committed": 3,
+     "class": "ENTRY_DRIFT__CLOSURE_CONTENT",
+     "finding": "CLOSURE-DRIFT-001"
+    },
+    {
+     "pointer": "/103/unresolved_dependency_ids/1",
+     "generated": "EP-IMF-CBY-REMIT-ME...",
+     "committed": "EP-IMF-CBY-REMIT-ME",
+     "class": "ENTRY_DRIFT__CLOSURE_CONTENT",
+     "finding": "CLOSURE-DRIFT-001"
+    },
+    {
+     "pointer": "/104/dependency_ids/0",
+     "generated": "185_BANKING_VALUATION_RECON",
+     "committed": "EP-CBY-BANKING-VALUATION-LINEAGE-K04",
+     "class": "ENTRY_DRIFT__CLOSURE_ORDER_ONLY",
+     "finding": "CLOSURE-DRIFT-001"
+    },
+    {
+     "pointer": "/104/dependency_ids/1",
+     "generated": "EP-CBY-BANKING-VALUATION-LINEAGE-K04",
+     "committed": "185_BANKING_VALUATION_RECON",
+     "class": "ENTRY_DRIFT__CLOSURE_ORDER_ONLY",
+     "finding": "CLOSURE-DRIFT-001"
+    },
+    {
+     "pointer": "/105/dependency_ids/0",
+     "generated": "182_REMITTANCE_SOURCE_LENSES",
+     "committed": "EP-WB-WDI-REMITTANCE-VINTAGE-K04",
+     "class": "ENTRY_DRIFT__CLOSURE_ORDER_ONLY",
+     "finding": "CLOSURE-DRIFT-001"
+    },
+    {
+     "pointer": "/105/dependency_ids/1",
+     "generated": "EP-WB-WDI-REMITTANCE-VINTAGE-K04",
+     "committed": "182_REMITTANCE_SOURCE_LENSES",
+     "class": "ENTRY_DRIFT__CLOSURE_ORDER_ONLY",
+     "finding": "CLOSURE-DRIFT-001"
+    },
+    {
+     "pointer": "/120/dependency_ids/<len>",
+     "generated": 5,
+     "committed": 4,
+     "class": "ENTRY_DRIFT__CLOSURE_HAND_EDITED_RECORD",
+     "finding": "CLOSURE-DRIFT-001"
+    },
+    {
+     "pointer": "/120/resolved_via_object_ids/<len>",
+     "generated": 1,
+     "committed": 0,
+     "class": "ENTRY_DRIFT__CLOSURE_HAND_EDITED_RECORD",
+     "finding": "CLOSURE-DRIFT-001"
+    },
+    {
+     "pointer": "/144/unresolved_dependency_ids/<len>",
+     "generated": 3,
+     "committed": 4,
+     "class": "ENTRY_DRIFT__CLOSURE_PROPAGATED",
+     "finding": "CLOSURE-DRIFT-001"
+    },
+    {
+     "pointer": "/144/unresolved_dependency_ids/1",
+     "generated": "EP-IMF-CBY-REMIT-ME...",
+     "committed": "EP-IMF-CBY-REMIT-ME",
+     "class": "ENTRY_DRIFT__CLOSURE_PROPAGATED",
+     "finding": "CLOSURE-DRIFT-001"
+    },
+    {
+     "pointer": "/144/unresolved_dependency_ids/2",
+     "generated": "EP-IMF-CBY-REMIT-METHOD-K04",
+     "committed": "EP-IMF-CBY-REMIT-ME...",
+     "class": "ENTRY_DRIFT__CLOSURE_PROPAGATED",
+     "finding": "CLOSURE-DRIFT-001"
+    },
+    {
+     "pointer": "/151/resolved_source_ids/5",
+     "generated": "SRC-WB-G2PX-YEM-UCT-2024-001",
+     "committed": "SRC-WB-RPW-KSA-YEM-2025Q3",
+     "class": "ENTRY_DRIFT__CLOSURE_PROPAGATED",
+     "finding": "CLOSURE-DRIFT-001"
+    },
+    {
+     "pointer": "/151/resolved_source_ids/6",
+     "generated": "SRC-WB-RPW-KSA-YEM-2025Q3",
+     "committed": "SRC-WB-G2PX-YEM-UCT-2024-001",
+     "class": "ENTRY_DRIFT__CLOSURE_PROPAGATED",
+     "finding": "CLOSURE-DRIFT-001"
+    },
+    {
+     "pointer": "/151/source_locators/5/source_id",
+     "generated": "SRC-WB-G2PX-YEM-UCT-2024-001",
+     "committed": "SRC-WB-RPW-KSA-YEM-2025Q3",
+     "class": "ENTRY_DRIFT__CLOSURE_PROPAGATED",
+     "finding": "CLOSURE-DRIFT-001"
+    },
+    {
+     "pointer": "/151/source_locators/5/primary_url",
+     "generated": "https://www.worldbank.org/en/events/2024/05/30/digitalizing-g2p-payments-in-yemen",
+     "committed": "https://remittanceprices.worldbank.org/corridor/Saudi%20Arabia/Yemen",
+     "class": "ENTRY_DRIFT__CLOSURE_PROPAGATED",
+     "finding": "CLOSURE-DRIFT-001"
+    },
+    {
+     "pointer": "/151/source_locators/5/metadata_state",
+     "generated": "DISPLAY_READY",
+     "committed": "LOCATOR_ONLY",
+     "class": "ENTRY_DRIFT__CLOSURE_PROPAGATED",
+     "finding": "CLOSURE-DRIFT-001"
+    },
+    {
+     "pointer": "/151/source_locators/6/source_id",
+     "generated": "SRC-WB-RPW-KSA-YEM-2025Q3",
+     "committed": "SRC-WB-G2PX-YEM-UCT-2024-001",
+     "class": "ENTRY_DRIFT__CLOSURE_PROPAGATED",
+     "finding": "CLOSURE-DRIFT-001"
+    },
+    {
+     "pointer": "/151/source_locators/6/primary_url",
+     "generated": "https://remittanceprices.worldbank.org/corridor/Saudi%20Arabia/Yemen",
+     "committed": "https://www.worldbank.org/en/events/2024/05/30/digitalizing-g2p-payments-in-yemen",
+     "class": "ENTRY_DRIFT__CLOSURE_PROPAGATED",
+     "finding": "CLOSURE-DRIFT-001"
+    },
+    {
+     "pointer": "/151/source_locators/6/metadata_state",
+     "generated": "LOCATOR_ONLY",
+     "committed": "DISPLAY_READY",
+     "class": "ENTRY_DRIFT__CLOSURE_PROPAGATED",
+     "finding": "CLOSURE-DRIFT-001"
+    },
+    {
+     "pointer": "/159/source_locators/1/metadata_state",
+     "generated": "DISPLAY_READY",
+     "committed": "LOCATOR_ONLY",
+     "class": "ENTRY_DRIFT__CLOSURE_PROPAGATED",
+     "finding": "CLOSURE-DRIFT-001"
+    },
+    {
+     "pointer": "/160/source_locators/1/metadata_state",
+     "generated": "DISPLAY_READY",
+     "committed": "LOCATOR_ONLY",
+     "class": "ENTRY_DRIFT__CLOSURE_SOURCE_CARD_STATE",
+     "finding": "CLOSURE-DRIFT-001"
+    },
+    {
+     "pointer": "/161/source_locators/16/metadata_state",
+     "generated": "DISPLAY_READY",
+     "committed": "LOCATOR_ONLY",
+     "class": "ENTRY_DRIFT__CLOSURE_PROPAGATED",
+     "finding": "CLOSURE-DRIFT-001"
+    },
+    {
+     "pointer": "/162/resolved_source_ids/1",
+     "generated": "SRC-SANAA-MFB-2024",
+     "committed": "SRC-SANAA-MF-2020",
+     "class": "ENTRY_DRIFT__CLOSURE_SOURCE_DATASET_MEMBERSHIP",
+     "finding": "CLOSURE-DRIFT-001"
+    },
+    {
+     "pointer": "/162/resolved_source_ids/2",
+     "generated": "SRC-SANAA-SOCPROT-2024",
+     "committed": "SRC-SANAA-MFB-2024",
+     "class": "ENTRY_DRIFT__CLOSURE_SOURCE_DATASET_MEMBERSHIP",
+     "finding": "CLOSURE-DRIFT-001"
+    },
+    {
+     "pointer": "/162/resolved_source_ids/3",
+     "generated": "SRC-SANAA-YR-2025-Q2-MFB",
+     "committed": "SRC-SANAA-SOCPROT-2024",
+     "class": "ENTRY_DRIFT__CLOSURE_SOURCE_DATASET_MEMBERSHIP",
+     "finding": "CLOSURE-DRIFT-001"
+    },
+    {
+     "pointer": "/162/resolved_source_ids/4",
+     "generated": "SRC-SFD-SMED-LP-2023-NOV",
+     "committed": "SRC-SANAA-YR-2025-Q2-MFB",
+     "class": "ENTRY_DRIFT__CLOSURE_SOURCE_DATASET_MEMBERSHIP",
+     "finding": "CLOSURE-DRIFT-001"
+    },
+    {
+     "pointer": "/162/resolved_source_ids/5",
+     "generated": "SRC-WB-FSD-2024-001",
+     "committed": "SRC-SFD-SMED-LP-2023-NOV",
+     "class": "ENTRY_DRIFT__CLOSURE_SOURCE_DATASET_MEMBERSHIP",
+     "finding": "CLOSURE-DRIFT-001"
+    },
+    {
+     "pointer": "/162/resolved_source_ids/6",
+     "generated": "SRC-SANAA-MF-2020",
+     "committed": "SRC-WB-FSD-2024-001",
+     "class": "ENTRY_DRIFT__CLOSURE_SOURCE_DATASET_MEMBERSHIP",
+     "finding": "CLOSURE-DRIFT-001"
+    },
+    {
+     "pointer": "/162/source_locators/1/source_id",
+     "generated": "SRC-SANAA-MFB-2024",
+     "committed": "SRC-SANAA-MF-2020",
+     "class": "ENTRY_DRIFT__CLOSURE_SOURCE_DATASET_MEMBERSHIP",
+     "finding": "CLOSURE-DRIFT-001"
+    },
+    {
+     "pointer": "/162/source_locators/1/primary_url",
+     "generated": "https://sanaacenter.org/publications/policy-research/23418",
+     "committed": "https://sanaacenter.org/publications/policy-research/9808",
+     "class": "ENTRY_DRIFT__CLOSURE_SOURCE_DATASET_MEMBERSHIP",
+     "finding": "CLOSURE-DRIFT-001"
+    },
+    {
+     "pointer": "/162/source_locators/1/metadata_state",
+     "generated": "DISPLAY_READY",
+     "committed": "LOCATOR_ONLY",
+     "class": "ENTRY_DRIFT__CLOSURE_SOURCE_DATASET_MEMBERSHIP",
+     "finding": "CLOSURE-DRIFT-001"
+    },
+    {
+     "pointer": "/162/source_locators/2/source_id",
+     "generated": "SRC-SANAA-SOCPROT-2024",
+     "committed": "SRC-SANAA-MFB-2024",
+     "class": "ENTRY_DRIFT__CLOSURE_SOURCE_DATASET_MEMBERSHIP",
+     "finding": "CLOSURE-DRIFT-001"
+    },
+    {
+     "pointer": "/162/source_locators/2/primary_url",
+     "generated": "https://sanaacenter.org/publications/policy-research/22910",
+     "committed": "https://sanaacenter.org/publications/policy-research/23418",
+     "class": "ENTRY_DRIFT__CLOSURE_SOURCE_DATASET_MEMBERSHIP",
+     "finding": "CLOSURE-DRIFT-001"
+    },
+    {
+     "pointer": "/162/source_locators/3/source_id",
+     "generated": "SRC-SANAA-YR-2025-Q2-MFB",
+     "committed": "SRC-SANAA-SOCPROT-2024",
+     "class": "ENTRY_DRIFT__CLOSURE_SOURCE_DATASET_MEMBERSHIP",
+     "finding": "CLOSURE-DRIFT-001"
+    },
+    {
+     "pointer": "/162/source_locators/3/primary_url",
+     "generated": "https://sanaacenter.org/the-yemen-review/april-june-2025/25056",
+     "committed": "https://sanaacenter.org/publications/policy-research/22910",
+     "class": "ENTRY_DRIFT__CLOSURE_SOURCE_DATASET_MEMBERSHIP",
+     "finding": "CLOSURE-DRIFT-001"
+    },
+    {
+     "pointer": "/162/source_locators/4/source_id",
+     "generated": "SRC-SFD-SMED-LP-2023-NOV",
+     "committed": "SRC-SANAA-YR-2025-Q2-MFB",
+     "class": "ENTRY_DRIFT__CLOSURE_SOURCE_DATASET_MEMBERSHIP",
+     "finding": "CLOSURE-DRIFT-001"
+    },
+    {
+     "pointer": "/162/source_locators/4/primary_url",
+     "generated": "https://smed.sfd-yemen.org/index.php/en/blog-4/aaflp1/477-nov-2023",
+     "committed": "https://sanaacenter.org/the-yemen-review/april-june-2025/25056",
+     "class": "ENTRY_DRIFT__CLOSURE_SOURCE_DATASET_MEMBERSHIP",
+     "finding": "CLOSURE-DRIFT-001"
+    },
+    {
+     "pointer": "/162/source_locators/5/source_id",
+     "generated": "SRC-WB-FSD-2024-001",
+     "committed": "SRC-SFD-SMED-LP-2023-NOV",
+     "class": "ENTRY_DRIFT__CLOSURE_SOURCE_DATASET_MEMBERSHIP",
+     "finding": "CLOSURE-DRIFT-001"
+    },
+    {
+     "pointer": "/162/source_locators/5/primary_url",
+     "generated": "https://documents1.worldbank.org/curated/en/099102324070011985/pdf/P177631-d18a7ee4-3fcf-4393-9665-77f98b3e43a7.pdf",
+     "committed": "https://smed.sfd-yemen.org/index.php/en/blog-4/aaflp1/477-nov-2023",
+     "class": "ENTRY_DRIFT__CLOSURE_SOURCE_DATASET_MEMBERSHIP",
+     "finding": "CLOSURE-DRIFT-001"
+    },
+    {
+     "pointer": "/162/source_locators/5/metadata_state",
+     "generated": "DISPLAY_READY",
+     "committed": "LOCATOR_ONLY",
+     "class": "ENTRY_DRIFT__CLOSURE_SOURCE_DATASET_MEMBERSHIP",
+     "finding": "CLOSURE-DRIFT-001"
+    },
+    {
+     "pointer": "/162/source_locators/6/source_id",
+     "generated": "SRC-SANAA-MF-2020",
+     "committed": "SRC-WB-FSD-2024-001",
+     "class": "ENTRY_DRIFT__CLOSURE_SOURCE_DATASET_MEMBERSHIP",
+     "finding": "CLOSURE-DRIFT-001"
+    },
+    {
+     "pointer": "/162/source_locators/6/primary_url",
+     "generated": "https://sanaacenter.org/publications/policy-research/9808",
+     "committed": "https://documents1.worldbank.org/curated/en/099102324070011985/pdf/P177631-d18a7ee4-3fcf-4393-9665-77f98b3e43a7.pdf",
+     "class": "ENTRY_DRIFT__CLOSURE_SOURCE_DATASET_MEMBERSHIP",
+     "finding": "CLOSURE-DRIFT-001"
+    },
+    {
+     "pointer": "/162/source_locators/6/metadata_state",
+     "generated": "LOCATOR_ONLY",
+     "committed": "DISPLAY_READY",
+     "class": "ENTRY_DRIFT__CLOSURE_SOURCE_DATASET_MEMBERSHIP",
+     "finding": "CLOSURE-DRIFT-001"
+    },
+    {
+     "pointer": "/163/source_locators/1/metadata_state",
+     "generated": "DISPLAY_READY",
+     "committed": "LOCATOR_ONLY",
+     "class": "ENTRY_DRIFT__CLOSURE_SOURCE_CARD_STATE",
+     "finding": "CLOSURE-DRIFT-001"
+    },
+    {
+     "pointer": "/164/source_locators/1/metadata_state",
+     "generated": "DISPLAY_READY",
+     "committed": "LOCATOR_ONLY",
+     "class": "ENTRY_DRIFT__CLOSURE_PROPAGATED",
+     "finding": "CLOSURE-DRIFT-001"
+    },
+    {
+     "pointer": "/167/unresolved_dependency_ids/<len>",
+     "generated": 5,
+     "committed": 6,
+     "class": "ENTRY_DRIFT__CLOSURE_PROPAGATED",
+     "finding": "CLOSURE-DRIFT-001"
+    },
+    {
+     "pointer": "/167/unresolved_dependency_ids/2",
+     "generated": "EP-IMF-CBY-REMIT-ME...",
+     "committed": "EP-IMF-CBY-REMIT-ME",
+     "class": "ENTRY_DRIFT__CLOSURE_PROPAGATED",
+     "finding": "CLOSURE-DRIFT-001"
+    },
+    {
+     "pointer": "/167/unresolved_dependency_ids/3",
+     "generated": "EP-IMF-CBY-REMIT-METHOD-K04",
+     "committed": "EP-IMF-CBY-REMIT-ME...",
+     "class": "ENTRY_DRIFT__CLOSURE_PROPAGATED",
+     "finding": "CLOSURE-DRIFT-001"
+    },
+    {
+     "pointer": "/167/unresolved_dependency_ids/4",
+     "generated": "K04-CBY-060",
+     "committed": "EP-IMF-CBY-REMIT-METHOD-K04",
+     "class": "ENTRY_DRIFT__CLOSURE_PROPAGATED",
+     "finding": "CLOSURE-DRIFT-001"
+    },
+    {
+     "pointer": "/171/source_locators/2/metadata_state",
+     "generated": "DISPLAY_READY",
+     "committed": "LOCATOR_ONLY",
+     "class": "ENTRY_DRIFT__CLOSURE_PROPAGATED",
+     "finding": "CLOSURE-DRIFT-001"
+    },
+    {
+     "pointer": "/171/source_locators/3/metadata_state",
+     "generated": "DISPLAY_READY",
+     "committed": "LOCATOR_ONLY",
+     "class": "ENTRY_DRIFT__CLOSURE_PROPAGATED",
+     "finding": "CLOSURE-DRIFT-001"
+    },
+    {
+     "pointer": "/172/resolved_source_ids/17",
+     "generated": "SRC-SANAA-MFB-2024",
+     "committed": "SRC-SANAA-MF-2020",
+     "class": "ENTRY_DRIFT__CLOSURE_PROPAGATED",
+     "finding": "CLOSURE-DRIFT-001"
+    },
+    {
+     "pointer": "/172/resolved_source_ids/18",
+     "generated": "SRC-SANAA-SOCPROT-2024",
+     "committed": "SRC-SANAA-MFB-2024",
+     "class": "ENTRY_DRIFT__CLOSURE_PROPAGATED",
+     "finding": "CLOSURE-DRIFT-001"
+    },
+    {
+     "pointer": "/172/resolved_source_ids/19",
+     "generated": "SRC-SANAA-YR-2025-Q2-MFB",
+     "committed": "SRC-SANAA-SOCPROT-2024",
+     "class": "ENTRY_DRIFT__CLOSURE_PROPAGATED",
+     "finding": "CLOSURE-DRIFT-001"
+    },
+    {
+     "pointer": "/172/resolved_source_ids/20",
+     "generated": "SRC-SFD-SMED-LP-2023-NOV",
+     "committed": "SRC-SANAA-YR-2025-Q2-MFB",
+     "class": "ENTRY_DRIFT__CLOSURE_PROPAGATED",
+     "finding": "CLOSURE-DRIFT-001"
+    },
+    {
+     "pointer": "/172/resolved_source_ids/21",
+     "generated": "SRC-WB-FSD-2024-001",
+     "committed": "SRC-SFD-SMED-LP-2023-NOV",
+     "class": "ENTRY_DRIFT__CLOSURE_PROPAGATED",
+     "finding": "CLOSURE-DRIFT-001"
+    },
+    {
+     "pointer": "/172/resolved_source_ids/22",
+     "generated": "SRC-YMN-MEMBERS-2026-001",
+     "committed": "SRC-WB-FSD-2024-001",
+     "class": "ENTRY_DRIFT__CLOSURE_PROPAGATED",
+     "finding": "CLOSURE-DRIFT-001"
+    },
+    {
+     "pointer": "/172/resolved_source_ids/23",
+     "generated": "SRC-SANAA-MF-2020",
+     "committed": "SRC-YMN-MEMBERS-2026-001",
+     "class": "ENTRY_DRIFT__CLOSURE_PROPAGATED",
+     "finding": "CLOSURE-DRIFT-001"
+    },
+    {
+     "pointer": "/172/source_locators/17/source_id",
+     "generated": "SRC-SANAA-MFB-2024",
+     "committed": "SRC-SANAA-MF-2020",
+     "class": "ENTRY_DRIFT__CLOSURE_PROPAGATED",
+     "finding": "CLOSURE-DRIFT-001"
+    },
+    {
+     "pointer": "/172/source_locators/17/primary_url",
+     "generated": "https://sanaacenter.org/publications/policy-research/23418",
+     "committed": "https://sanaacenter.org/publications/policy-research/9808",
+     "class": "ENTRY_DRIFT__CLOSURE_PROPAGATED",
+     "finding": "CLOSURE-DRIFT-001"
+    },
+    {
+     "pointer": "/172/source_locators/17/metadata_state",
+     "generated": "DISPLAY_READY",
+     "committed": "LOCATOR_ONLY",
+     "class": "ENTRY_DRIFT__CLOSURE_PROPAGATED",
+     "finding": "CLOSURE-DRIFT-001"
+    },
+    {
+     "pointer": "/172/source_locators/18/source_id",
+     "generated": "SRC-SANAA-SOCPROT-2024",
+     "committed": "SRC-SANAA-MFB-2024",
+     "class": "ENTRY_DRIFT__CLOSURE_PROPAGATED",
+     "finding": "CLOSURE-DRIFT-001"
+    },
+    {
+     "pointer": "/172/source_locators/18/primary_url",
+     "generated": "https://sanaacenter.org/publications/policy-research/22910",
+     "committed": "https://sanaacenter.org/publications/policy-research/23418",
+     "class": "ENTRY_DRIFT__CLOSURE_PROPAGATED",
+     "finding": "CLOSURE-DRIFT-001"
+    },
+    {
+     "pointer": "/172/source_locators/19/source_id",
+     "generated": "SRC-SANAA-YR-2025-Q2-MFB",
+     "committed": "SRC-SANAA-SOCPROT-2024",
+     "class": "ENTRY_DRIFT__CLOSURE_PROPAGATED",
+     "finding": "CLOSURE-DRIFT-001"
+    },
+    {
+     "pointer": "/172/source_locators/19/primary_url",
+     "generated": "https://sanaacenter.org/the-yemen-review/april-june-2025/25056",
+     "committed": "https://sanaacenter.org/publications/policy-research/22910",
+     "class": "ENTRY_DRIFT__CLOSURE_PROPAGATED",
+     "finding": "CLOSURE-DRIFT-001"
+    },
+    {
+     "pointer": "/172/source_locators/20/source_id",
+     "generated": "SRC-SFD-SMED-LP-2023-NOV",
+     "committed": "SRC-SANAA-YR-2025-Q2-MFB",
+     "class": "ENTRY_DRIFT__CLOSURE_PROPAGATED",
+     "finding": "CLOSURE-DRIFT-001"
+    },
+    {
+     "pointer": "/172/source_locators/20/primary_url",
+     "generated": "https://smed.sfd-yemen.org/index.php/en/blog-4/aaflp1/477-nov-2023",
+     "committed": "https://sanaacenter.org/the-yemen-review/april-june-2025/25056",
+     "class": "ENTRY_DRIFT__CLOSURE_PROPAGATED",
+     "finding": "CLOSURE-DRIFT-001"
+    },
+    {
+     "pointer": "/172/source_locators/21/source_id",
+     "generated": "SRC-WB-FSD-2024-001",
+     "committed": "SRC-SFD-SMED-LP-2023-NOV",
+     "class": "ENTRY_DRIFT__CLOSURE_PROPAGATED",
+     "finding": "CLOSURE-DRIFT-001"
+    },
+    {
+     "pointer": "/172/source_locators/21/primary_url",
+     "generated": "https://documents1.worldbank.org/curated/en/099102324070011985/pdf/P177631-d18a7ee4-3fcf-4393-9665-77f98b3e43a7.pdf",
+     "committed": "https://smed.sfd-yemen.org/index.php/en/blog-4/aaflp1/477-nov-2023",
+     "class": "ENTRY_DRIFT__CLOSURE_PROPAGATED",
+     "finding": "CLOSURE-DRIFT-001"
+    },
+    {
+     "pointer": "/172/source_locators/21/metadata_state",
+     "generated": "DISPLAY_READY",
+     "committed": "LOCATOR_ONLY",
+     "class": "ENTRY_DRIFT__CLOSURE_PROPAGATED",
+     "finding": "CLOSURE-DRIFT-001"
+    },
+    {
+     "pointer": "/172/source_locators/22/source_id",
+     "generated": "SRC-YMN-MEMBERS-2026-001",
+     "committed": "SRC-WB-FSD-2024-001",
+     "class": "ENTRY_DRIFT__CLOSURE_PROPAGATED",
+     "finding": "CLOSURE-DRIFT-001"
+    },
+    {
+     "pointer": "/172/source_locators/22/primary_url",
+     "generated": "https://yemennetwork.org/",
+     "committed": "https://documents1.worldbank.org/curated/en/099102324070011985/pdf/P177631-d18a7ee4-3fcf-4393-9665-77f98b3e43a7.pdf",
+     "class": "ENTRY_DRIFT__CLOSURE_PROPAGATED",
+     "finding": "CLOSURE-DRIFT-001"
+    },
+    {
+     "pointer": "/172/source_locators/22/metadata_state",
+     "generated": "LOCATOR_ONLY",
+     "committed": "DISPLAY_READY",
+     "class": "ENTRY_DRIFT__CLOSURE_PROPAGATED",
+     "finding": "CLOSURE-DRIFT-001"
+    },
+    {
+     "pointer": "/172/source_locators/23/source_id",
+     "generated": "SRC-SANAA-MF-2020",
+     "committed": "SRC-YMN-MEMBERS-2026-001",
+     "class": "ENTRY_DRIFT__CLOSURE_PROPAGATED",
+     "finding": "CLOSURE-DRIFT-001"
+    },
+    {
+     "pointer": "/172/source_locators/23/primary_url",
+     "generated": "https://sanaacenter.org/publications/policy-research/9808",
+     "committed": "https://yemennetwork.org/",
+     "class": "ENTRY_DRIFT__CLOSURE_PROPAGATED",
+     "finding": "CLOSURE-DRIFT-001"
+    },
+    {
+     "pointer": "/176/dependency_ids/2",
+     "generated": "SRC-WB-G2PX-YEM-UCT-2024-001",
+     "committed": "CLM-045",
+     "class": "ENTRY_DRIFT__CLOSURE_MASTER_ROW_EDITED",
+     "finding": "CLOSURE-DRIFT-001"
+    },
+    {
+     "pointer": "/176/dependency_ids/3",
+     "generated": "CLM-045",
+     "committed": "189_CASH_FINANCE_TRANSMISSION",
+     "class": "ENTRY_DRIFT__CLOSURE_MASTER_ROW_EDITED",
+     "finding": "CLOSURE-DRIFT-001"
+    },
+    {
+     "pointer": "/176/dependency_ids/4",
+     "generated": "189_CASH_FINANCE_TRANSMISSION",
+     "committed": "SRC-WB-G2PX-YEM-UCT-2024-001",
+     "class": "ENTRY_DRIFT__CLOSURE_MASTER_ROW_EDITED",
+     "finding": "CLOSURE-DRIFT-001"
+    },
+    {
+     "pointer": "/176/resolved_source_ids/5",
+     "generated": "SRC-WB-G2PX-YEM-UCT-2024-001",
+     "committed": "SRC-WB-RPW-KSA-YEM-2025Q3",
+     "class": "ENTRY_DRIFT__CLOSURE_MASTER_ROW_EDITED",
+     "finding": "CLOSURE-DRIFT-001"
+    },
+    {
+     "pointer": "/176/resolved_source_ids/6",
+     "generated": "SRC-WB-RPW-KSA-YEM-2025Q3",
+     "committed": "SRC-WB-G2PX-YEM-UCT-2024-001",
+     "class": "ENTRY_DRIFT__CLOSURE_MASTER_ROW_EDITED",
+     "finding": "CLOSURE-DRIFT-001"
+    },
+    {
+     "pointer": "/176/source_locators/5/source_id",
+     "generated": "SRC-WB-G2PX-YEM-UCT-2024-001",
+     "committed": "SRC-WB-RPW-KSA-YEM-2025Q3",
+     "class": "ENTRY_DRIFT__CLOSURE_MASTER_ROW_EDITED",
+     "finding": "CLOSURE-DRIFT-001"
+    },
+    {
+     "pointer": "/176/source_locators/5/primary_url",
+     "generated": "https://www.worldbank.org/en/events/2024/05/30/digitalizing-g2p-payments-in-yemen",
+     "committed": "https://remittanceprices.worldbank.org/corridor/Saudi%20Arabia/Yemen",
+     "class": "ENTRY_DRIFT__CLOSURE_MASTER_ROW_EDITED",
+     "finding": "CLOSURE-DRIFT-001"
+    },
+    {
+     "pointer": "/176/source_locators/5/metadata_state",
+     "generated": "DISPLAY_READY",
+     "committed": "LOCATOR_ONLY",
+     "class": "ENTRY_DRIFT__CLOSURE_MASTER_ROW_EDITED",
+     "finding": "CLOSURE-DRIFT-001"
+    },
+    {
+     "pointer": "/176/source_locators/6/source_id",
+     "generated": "SRC-WB-RPW-KSA-YEM-2025Q3",
+     "committed": "SRC-WB-G2PX-YEM-UCT-2024-001",
+     "class": "ENTRY_DRIFT__CLOSURE_MASTER_ROW_EDITED",
+     "finding": "CLOSURE-DRIFT-001"
+    },
+    {
+     "pointer": "/176/source_locators/6/primary_url",
+     "generated": "https://remittanceprices.worldbank.org/corridor/Saudi%20Arabia/Yemen",
+     "committed": "https://www.worldbank.org/en/events/2024/05/30/digitalizing-g2p-payments-in-yemen",
+     "class": "ENTRY_DRIFT__CLOSURE_MASTER_ROW_EDITED",
+     "finding": "CLOSURE-DRIFT-001"
+    },
+    {
+     "pointer": "/176/source_locators/6/metadata_state",
+     "generated": "LOCATOR_ONLY",
+     "committed": "DISPLAY_READY",
+     "class": "ENTRY_DRIFT__CLOSURE_MASTER_ROW_EDITED",
+     "finding": "CLOSURE-DRIFT-001"
+    },
+    {
+     "pointer": "/176/closure_state",
+     "generated": "CLOSED_TO_SOURCE_ID",
+     "committed": "CLOSED_VIA_CONTROLLED_DEPENDENCIES",
+     "class": "ENTRY_DRIFT__CLOSURE_MASTER_ROW_EDITED",
+     "finding": "CLOSURE-DRIFT-001"
+    },
+    {
+     "pointer": "/178/source_locators/18/metadata_state",
+     "generated": "DISPLAY_READY",
+     "committed": "LOCATOR_ONLY",
+     "class": "ENTRY_DRIFT__CLOSURE_SOURCE_CARD_STATE",
+     "finding": "CLOSURE-DRIFT-001"
+    },
+    {
+     "pointer": "/178/source_locators/19/metadata_state",
+     "generated": "DISPLAY_READY",
+     "committed": "LOCATOR_ONLY",
+     "class": "ENTRY_DRIFT__CLOSURE_SOURCE_CARD_STATE",
+     "finding": "CLOSURE-DRIFT-001"
+    },
+    {
+     "pointer": "/178/source_locators/21/metadata_state",
+     "generated": "DISPLAY_READY",
+     "committed": "LOCATOR_ONLY",
+     "class": "ENTRY_DRIFT__CLOSURE_SOURCE_CARD_STATE",
+     "finding": "CLOSURE-DRIFT-001"
+    },
+    {
+     "pointer": "/186/source_locators/14/metadata_state",
+     "generated": "DISPLAY_READY",
+     "committed": "LOCATOR_ONLY",
+     "class": "ENTRY_DRIFT__CLOSURE_SOURCE_CARD_STATE",
+     "finding": "CLOSURE-DRIFT-001"
+    },
+    {
+     "pointer": "/202/source_locators/2/metadata_state",
+     "generated": "DISPLAY_READY",
+     "committed": "LOCATOR_ONLY",
+     "class": "ENTRY_DRIFT__CLOSURE_PROPAGATED",
+     "finding": "CLOSURE-DRIFT-001"
+    },
+    {
+     "pointer": "/203/unresolved_dependency_ids/<len>",
+     "generated": 5,
+     "committed": 6,
+     "class": "ENTRY_DRIFT__CLOSURE_PROPAGATED",
+     "finding": "CLOSURE-DRIFT-001"
+    },
+    {
+     "pointer": "/203/unresolved_dependency_ids/2",
+     "generated": "EP-IMF-CBY-REMIT-ME...",
+     "committed": "EP-IMF-CBY-REMIT-ME",
+     "class": "ENTRY_DRIFT__CLOSURE_PROPAGATED",
+     "finding": "CLOSURE-DRIFT-001"
+    },
+    {
+     "pointer": "/203/unresolved_dependency_ids/3",
+     "generated": "EP-IMF-CBY-REMIT-METHOD-K04",
+     "committed": "EP-IMF-CBY-REMIT-ME...",
+     "class": "ENTRY_DRIFT__CLOSURE_PROPAGATED",
+     "finding": "CLOSURE-DRIFT-001"
+    },
+    {
+     "pointer": "/203/unresolved_dependency_ids/4",
+     "generated": "K04-CBY-060",
+     "committed": "EP-IMF-CBY-REMIT-METHOD-K04",
+     "class": "ENTRY_DRIFT__CLOSURE_PROPAGATED",
+     "finding": "CLOSURE-DRIFT-001"
+    },
+    {
+     "pointer": "/207/source_locators/2/metadata_state",
+     "generated": "DISPLAY_READY",
+     "committed": "LOCATOR_ONLY",
+     "class": "ENTRY_DRIFT__CLOSURE_PROPAGATED",
+     "finding": "CLOSURE-DRIFT-001"
+    },
+    {
+     "pointer": "/207/source_locators/3/metadata_state",
+     "generated": "DISPLAY_READY",
+     "committed": "LOCATOR_ONLY",
+     "class": "ENTRY_DRIFT__CLOSURE_PROPAGATED",
+     "finding": "CLOSURE-DRIFT-001"
+    },
+    {
+     "pointer": "/208/source_locators/18/metadata_state",
+     "generated": "DISPLAY_READY",
+     "committed": "LOCATOR_ONLY",
+     "class": "ENTRY_DRIFT__CLOSURE_PROPAGATED",
+     "finding": "CLOSURE-DRIFT-001"
+    },
+    {
+     "pointer": "/211/dependency_ids/3",
+     "generated": "XW-FMIIP-005",
+     "committed": "48_REFORM_EVENTS",
+     "class": "ENTRY_DRIFT__CLOSURE_ORDER_ONLY",
+     "finding": "CLOSURE-DRIFT-001"
+    },
+    {
+     "pointer": "/211/dependency_ids/4",
+     "generated": "48_REFORM_EVENTS",
+     "committed": "73_PAYMENT_CURRENTNESS",
+     "class": "ENTRY_DRIFT__CLOSURE_ORDER_ONLY",
+     "finding": "CLOSURE-DRIFT-001"
+    },
+    {
+     "pointer": "/211/dependency_ids/5",
+     "generated": "73_PAYMENT_CURRENTNESS",
+     "committed": "XW-FMIIP-005",
+     "class": "ENTRY_DRIFT__CLOSURE_ORDER_ONLY",
+     "finding": "CLOSURE-DRIFT-001"
+    },
+    {
+     "pointer": "/212/resolved_source_ids/<len>",
+     "generated": 7,
+     "committed": 6,
+     "class": "ENTRY_DRIFT__CLOSURE_PROPAGATED",
+     "finding": "CLOSURE-DRIFT-001"
+    },
+    {
+     "pointer": "/212/resolved_source_ids/5",
+     "generated": "SRC-WB-G2PX-YEM-UCT-2024-001",
+     "committed": "SRC-WB-RPW-KSA-YEM-2025Q3",
+     "class": "ENTRY_DRIFT__CLOSURE_PROPAGATED",
+     "finding": "CLOSURE-DRIFT-001"
+    },
+    {
+     "pointer": "/212/source_locators/<len>",
+     "generated": 7,
+     "committed": 6,
+     "class": "ENTRY_DRIFT__CLOSURE_PROPAGATED",
+     "finding": "CLOSURE-DRIFT-001"
+    },
+    {
+     "pointer": "/212/source_locators/5/source_id",
+     "generated": "SRC-WB-G2PX-YEM-UCT-2024-001",
+     "committed": "SRC-WB-RPW-KSA-YEM-2025Q3",
+     "class": "ENTRY_DRIFT__CLOSURE_PROPAGATED",
+     "finding": "CLOSURE-DRIFT-001"
+    },
+    {
+     "pointer": "/212/source_locators/5/primary_url",
+     "generated": "https://www.worldbank.org/en/events/2024/05/30/digitalizing-g2p-payments-in-yemen",
+     "committed": "https://remittanceprices.worldbank.org/corridor/Saudi%20Arabia/Yemen",
+     "class": "ENTRY_DRIFT__CLOSURE_PROPAGATED",
+     "finding": "CLOSURE-DRIFT-001"
+    },
+    {
+     "pointer": "/212/source_locators/5/metadata_state",
+     "generated": "DISPLAY_READY",
+     "committed": "LOCATOR_ONLY",
+     "class": "ENTRY_DRIFT__CLOSURE_PROPAGATED",
+     "finding": "CLOSURE-DRIFT-001"
+    }
+   ]
+  },
+  "sources/source_reference_map.json": {
+   "status": "DIFFERENT",
+   "difference_count": 24,
+   "unexplained": 0,
+   "differences_summary": [
+    {
+     "class": "ENTRY_DRIFT__PROPAGATED",
+     "finding": "CLOSURE-DRIFT-001 / PROJ-STALE-005",
+     "count": 23
+    },
+    {
+     "class": "SERIALIZATION_ONLY",
+     "finding": "SER-001",
+     "count": 1
+    }
+   ],
+   "differences": [
+    {
+     "pointer": "/14/linked_claim_ids/<len>",
+     "generated": 4,
+     "committed": 5,
+     "class": "ENTRY_DRIFT__PROPAGATED",
+     "finding": "CLOSURE-DRIFT-001 / PROJ-STALE-005"
+    },
+    {
+     "pointer": "/14/linked_claim_ids/1",
+     "generated": "CLM-014",
+     "committed": "CLM-013",
+     "class": "ENTRY_DRIFT__PROPAGATED",
+     "finding": "CLOSURE-DRIFT-001 / PROJ-STALE-005"
+    },
+    {
+     "pointer": "/14/linked_claim_ids/2",
+     "generated": "CLM-019",
+     "committed": "CLM-014",
+     "class": "ENTRY_DRIFT__PROPAGATED",
+     "finding": "CLOSURE-DRIFT-001 / PROJ-STALE-005"
+    },
+    {
+     "pointer": "/14/linked_claim_ids/3",
+     "generated": "CLM-055",
+     "committed": "CLM-019",
+     "class": "ENTRY_DRIFT__PROPAGATED",
+     "finding": "CLOSURE-DRIFT-001 / PROJ-STALE-005"
+    },
+    {
+     "pointer": "/49/linked_claim_ids/<len>",
+     "generated": 1,
+     "committed": 2,
+     "class": "ENTRY_DRIFT__PROPAGATED",
+     "finding": "CLOSURE-DRIFT-001 / PROJ-STALE-005"
+    },
+    {
+     "pointer": "/49/linked_claim_ids/0",
+     "generated": "CLM-014",
+     "committed": "CLM-013",
+     "class": "ENTRY_DRIFT__PROPAGATED",
+     "finding": "CLOSURE-DRIFT-001 / PROJ-STALE-005"
+    },
+    {
+     "pointer": "/51/linked_claim_ids/<len>",
+     "generated": 2,
+     "committed": 3,
+     "class": "ENTRY_DRIFT__PROPAGATED",
+     "finding": "CLOSURE-DRIFT-001 / PROJ-STALE-005"
+    },
+    {
+     "pointer": "/51/linked_claim_ids/1",
+     "generated": "CLM-014",
+     "committed": "CLM-013",
+     "class": "ENTRY_DRIFT__PROPAGATED",
+     "finding": "CLOSURE-DRIFT-001 / PROJ-STALE-005"
+    },
+    {
+     "pointer": "/52/linked_claim_ids/<len>",
+     "generated": 1,
+     "committed": 2,
+     "class": "ENTRY_DRIFT__PROPAGATED",
+     "finding": "CLOSURE-DRIFT-001 / PROJ-STALE-005"
+    },
+    {
+     "pointer": "/52/linked_claim_ids/0",
+     "generated": "CLM-014",
+     "committed": "CLM-013",
+     "class": "ENTRY_DRIFT__PROPAGATED",
+     "finding": "CLOSURE-DRIFT-001 / PROJ-STALE-005"
+    },
+    {
+     "pointer": "/53/linked_claim_ids/<len>",
+     "generated": 1,
+     "committed": 2,
+     "class": "ENTRY_DRIFT__PROPAGATED",
+     "finding": "CLOSURE-DRIFT-001 / PROJ-STALE-005"
+    },
+    {
+     "pointer": "/53/linked_claim_ids/0",
+     "generated": "CLM-014",
+     "committed": "CLM-013",
+     "class": "ENTRY_DRIFT__PROPAGATED",
+     "finding": "CLOSURE-DRIFT-001 / PROJ-STALE-005"
+    },
+    {
+     "pointer": "/54/linked_claim_ids/<len>",
+     "generated": 1,
+     "committed": 2,
+     "class": "ENTRY_DRIFT__PROPAGATED",
+     "finding": "CLOSURE-DRIFT-001 / PROJ-STALE-005"
+    },
+    {
+     "pointer": "/54/linked_claim_ids/0",
+     "generated": "CLM-014",
+     "committed": "CLM-013",
+     "class": "ENTRY_DRIFT__PROPAGATED",
+     "finding": "CLOSURE-DRIFT-001 / PROJ-STALE-005"
+    },
+    {
+     "pointer": "/55/linked_claim_ids/<len>",
+     "generated": 2,
+     "committed": 3,
+     "class": "ENTRY_DRIFT__PROPAGATED",
+     "finding": "CLOSURE-DRIFT-001 / PROJ-STALE-005"
+    },
+    {
+     "pointer": "/55/linked_claim_ids/1",
+     "generated": "CLM-014",
+     "committed": "CLM-013",
+     "class": "ENTRY_DRIFT__PROPAGATED",
+     "finding": "CLOSURE-DRIFT-001 / PROJ-STALE-005"
+    },
+    {
+     "pointer": "/56/linked_claim_ids/<len>",
+     "generated": 2,
+     "committed": 3,
+     "class": "ENTRY_DRIFT__PROPAGATED",
+     "finding": "CLOSURE-DRIFT-001 / PROJ-STALE-005"
+    },
+    {
+     "pointer": "/56/linked_claim_ids/1",
+     "generated": "CLM-014",
+     "committed": "CLM-013",
+     "class": "ENTRY_DRIFT__PROPAGATED",
+     "finding": "CLOSURE-DRIFT-001 / PROJ-STALE-005"
+    },
+    {
+     "pointer": "/57/linked_claim_ids/<len>",
+     "generated": 2,
+     "committed": 3,
+     "class": "ENTRY_DRIFT__PROPAGATED",
+     "finding": "CLOSURE-DRIFT-001 / PROJ-STALE-005"
+    },
+    {
+     "pointer": "/57/linked_claim_ids/1",
+     "generated": "CLM-014",
+     "committed": "CLM-013",
+     "class": "ENTRY_DRIFT__PROPAGATED",
+     "finding": "CLOSURE-DRIFT-001 / PROJ-STALE-005"
+    },
+    {
+     "pointer": "/58/linked_claim_ids/<len>",
+     "generated": 2,
+     "committed": 3,
+     "class": "ENTRY_DRIFT__PROPAGATED",
+     "finding": "CLOSURE-DRIFT-001 / PROJ-STALE-005"
+    },
+    {
+     "pointer": "/58/linked_claim_ids/1",
+     "generated": "CLM-014",
+     "committed": "CLM-013",
+     "class": "ENTRY_DRIFT__PROPAGATED",
+     "finding": "CLOSURE-DRIFT-001 / PROJ-STALE-005"
+    },
+    {
+     "pointer": "/158/additional_urls",
+     "generated": "[\"https://documents1.worldbank.org/curated/en/099647503042425828/pdf/IDU-a9d1a6be-30dc-48e6-9318-cf9d26959fb9.pdf\"]",
+     "committed": "[\"https://documents1.worldbank.org/curated/en/099647503042425828/pdf/IDU-a9d1a6be-30dc-48e6-9318-cf9d26959fb9.pdf\"]",
+     "class": "SERIALIZATION_ONLY",
+     "finding": "SER-001"
+    },
+    {
+     "pointer": "/158/linked_visual_ids/<len>",
+     "generated": 1,
+     "committed": 0,
+     "class": "ENTRY_DRIFT__PROPAGATED",
+     "finding": "CLOSURE-DRIFT-001 / PROJ-STALE-005"
+    }
+   ]
+  },
+  "content/search_index.json": {
+   "status": "DIFFERENT",
+   "difference_count": 8,
+   "unexplained": 0,
+   "differences_summary": [
+    {
+     "class": "ENTRY_DRIFT__HAND_EDITED",
+     "finding": "SEARCH-DRIFT-001",
+     "count": 8
+    }
+   ],
+   "differences": [
+    {
+     "pointer": "/116/summary_en",
+     "generated": "Start with the question, not the dataset. The question determines what evidence is relevant — and what cannot yet be answered. Start with the decision or uncertainty you need to resolve, then follow the answer to the evidence, its limits and its source. Every question should make six things clear What do we know now? How strong is the evidence? Who or what does it apply to? What does it not establish? What do we still not know? What new evidence could change the answer? Evidence is not combined merely because it concerns the same topic. A related number is not automatically an answer Two values can concern the same topic and still answer different questions because their populations, definitions, periods or source universes differ. Evidence is linked only when that relationship can be defended; similarity of topic does not make values comparable or establish causality. If the evidence is not enough When the evidence is insufficient, an unknown stays unknown. The gap becomes a measurement question rather than an undocumented estimate. Missing evidence is not zero and does not justify estimation. Eleven questions to start from Use the 11 questions below to enter the evidence from the",
+     "committed": "Start with the question, not the dataset. Start with the question, not the dataset. The question determines what evidence is relevant — and what cannot yet be answered. Start with the decision or uncertainty you need to resolve, then follow the answer to the evidence, its limits and its source. Every question should make six things clear What do we know now? How strong is the evidence? Who or what does it apply to? What does it not establish? What do we still not know? What new evidence could change the answer? Evidence is not combined merely because it concerns the same topic. A related number is not automatically an answer Two values can concern the same topic and still answer different questions because their populations, definitions, periods or source universes differ. Evidence is linked only when that relationship can be defended; similarity of topic does not make values comparable or establish causality. If the evidence is not enough When the evidence is insufficient, an unknown stays unknown. The gap becomes a measurement question rather than an undocumented estimate. Missing evidence is not zero and does not justify estimation. Eleven questions to start from Use the 11 ques",
+     "class": "ENTRY_DRIFT__HAND_EDITED",
+     "finding": "SEARCH-DRIFT-001"
+    },
+    {
+     "pointer": "/116/summary_ar",
+     "generated": "ابدأ بالسؤال، لا بالبيانات. يحدد السؤال نوع الدليل الذي تحتاج إليه، وما الذي يمكن حسمه وما الذي يبقى غير معروف. ابدأ بالقرار أو المسألة التي تريد فهمها، ثم انتقل من الإجابة إلى الدليل وحدوده ومصدره. كل سؤال ينبغي أن يوضح ستة أمور ماذا نعرف الآن؟ ما قوة الدليل؟ على من أو ماذا ينطبق؟ ما الذي لا يثبته؟ ما الذي ما زلنا لا نعرفه؟ وما الدليل الجديد الذي قد يغير الإجابة؟ ولا تُجمع أدلة مختلفة لمجرد أنها تتناول الموضوع نفسه. الرقم المرتبط بالموضوع ليس بالضرورة إجابة عن السؤال قد يتعلق رقمان بالموضوع نفسه ومع ذلك يجيبان عن سؤالين مختلفين لأن مجتمع القياس أو التعريف أو الفترة أو نطاق المصدر مختلف. ولا تُربط الأدلة إلا عندما يمكن الدفاع عن العلاقة بينها؛ فالتشابه في الموضوع لا يجعل القيم قابلة للمقارنة ولا يثبت علاقة سببية. إذا لم تكف الأدلة عندما لا تكفي الأدلة، يبقى المجهول مجهولًا. وتتحول الفجوة إلى سؤال قياس بدل أن تُملأ بتقدير غير موثق. غياب الدليل لا يعني صفرًا ولا يبرر التقدير. أحد عشر سؤالًا للبدء استخدم الأسئلة الأحد عشر أدناه للدخول إلى الأدلة من المسألة التي تريد حسمها. ويقودك كل مسار إلى الإجابة ذات الصلة وحدودها وطريق التحقق منها.",
+     "committed": "ابدأ بالسؤال، لا بالبيانات. ابدأ بالسؤال، لا بالبيانات. يحدد السؤال نوع الدليل الذي تحتاج إليه، وما الذي يمكن حسمه وما الذي يبقى غير معروف. ابدأ بالقرار أو المسألة التي تريد فهمها، ثم انتقل من الإجابة إلى الدليل وحدوده ومصدره. كل سؤال ينبغي أن يوضح ستة أمور ماذا نعرف الآن؟ ما قوة الدليل؟ على من أو ماذا ينطبق؟ ما الذي لا يثبته؟ ما الذي ما زلنا لا نعرفه؟ وما الدليل الجديد الذي قد يغير الإجابة؟ ولا تُجمع أدلة مختلفة لمجرد أنها تتناول الموضوع نفسه. الرقم المرتبط بالموضوع ليس بالضرورة إجابة عن السؤال قد يتعلق رقمان بالموضوع نفسه ومع ذلك يجيبان عن سؤالين مختلفين لأن مجتمع القياس أو التعريف أو الفترة أو نطاق المصدر مختلف. ولا تُربط الأدلة إلا عندما يمكن الدفاع عن العلاقة بينها؛ فالتشابه في الموضوع لا يجعل القيم قابلة للمقارنة ولا يثبت علاقة سببية. إذا لم تكف الأدلة عندما لا تكفي الأدلة، يبقى المجهول مجهولًا. وتتحول الفجوة إلى سؤال قياس بدل أن تُملأ بتقدير غير موثق. غياب الدليل لا يعني صفرًا ولا يبرر التقدير. أحد عشر سؤالًا للبدء استخدم الأسئلة الأحد عشر أدناه للدخول إلى الأدلة من المسألة التي تريد حسمها. ويقودك كل مسار إلى الإجابة ذات الصلة وحدودها وطريق التحقق منها.",
+     "class": "ENTRY_DRIFT__HAND_EDITED",
+     "finding": "SEARCH-DRIFT-001"
+    },
+    {
+     "pointer": "/116/search_text_en",
+     "generated": "Start with the question, not the dataset. The question determines what evidence is relevant — and what cannot yet be answered. Start with the decision or uncertainty you need to resolve, then follow the answer to the evidence, its limits and its source. Every question should make six things clear What do we know now? How strong is the evidence? Who or what does it apply to? What does it not establish? What do we still not know? What new evidence could change the answer? Evidence is not combined merely because it concerns the same topic. A related number is not automatically an answer Two values can concern the same topic and still answer different questions because their populations, definitions, periods or source universes differ. Evidence is linked only when that relationship can be defended; similarity of topic does not make values comparable or establish causality. If the evidence is not enough When the evidence is insufficient, an unknown stays unknown. The gap becomes a measurement question rather than an undocumented estimate. Missing evidence is not zero and does not justify estimation. Eleven questions to start from Use the 11 questions below to enter the evidence from the problem you need to resolve. Each route takes you to the relevant answer, its limits and the path to verification.",
+     "committed": "Start with the question, not the dataset. Start with the question, not the dataset. The question determines what evidence is relevant — and what cannot yet be answered. Start with the decision or uncertainty you need to resolve, then follow the answer to the evidence, its limits and its source. Every question should make six things clear What do we know now? How strong is the evidence? Who or what does it apply to? What does it not establish? What do we still not know? What new evidence could change the answer? Evidence is not combined merely because it concerns the same topic. A related number is not automatically an answer Two values can concern the same topic and still answer different questions because their populations, definitions, periods or source universes differ. Evidence is linked only when that relationship can be defended; similarity of topic does not make values comparable or establish causality. If the evidence is not enough When the evidence is insufficient, an unknown stays unknown. The gap becomes a measurement question rather than an undocumented estimate. Missing evidence is not zero and does not justify estimation. Eleven questions to start from Use the 11 questions below to enter the evidence from the problem you need to resolve. Each route takes you to the relevant answer, its limits and the path to verification.",
+     "class": "ENTRY_DRIFT__HAND_EDITED",
+     "finding": "SEARCH-DRIFT-001"
+    },
+    {
+     "pointer": "/116/search_text_ar",
+     "generated": "ابدأ بالسؤال، لا بالبيانات. يحدد السؤال نوع الدليل الذي تحتاج إليه، وما الذي يمكن حسمه وما الذي يبقى غير معروف. ابدأ بالقرار أو المسألة التي تريد فهمها، ثم انتقل من الإجابة إلى الدليل وحدوده ومصدره. كل سؤال ينبغي أن يوضح ستة أمور ماذا نعرف الآن؟ ما قوة الدليل؟ على من أو ماذا ينطبق؟ ما الذي لا يثبته؟ ما الذي ما زلنا لا نعرفه؟ وما الدليل الجديد الذي قد يغير الإجابة؟ ولا تُجمع أدلة مختلفة لمجرد أنها تتناول الموضوع نفسه. الرقم المرتبط بالموضوع ليس بالضرورة إجابة عن السؤال قد يتعلق رقمان بالموضوع نفسه ومع ذلك يجيبان عن سؤالين مختلفين لأن مجتمع القياس أو التعريف أو الفترة أو نطاق المصدر مختلف. ولا تُربط الأدلة إلا عندما يمكن الدفاع عن العلاقة بينها؛ فالتشابه في الموضوع لا يجعل القيم قابلة للمقارنة ولا يثبت علاقة سببية. إذا لم تكف الأدلة عندما لا تكفي الأدلة، يبقى المجهول مجهولًا. وتتحول الفجوة إلى سؤال قياس بدل أن تُملأ بتقدير غير موثق. غياب الدليل لا يعني صفرًا ولا يبرر التقدير. أحد عشر سؤالًا للبدء استخدم الأسئلة الأحد عشر أدناه للدخول إلى الأدلة من المسألة التي تريد حسمها. ويقودك كل مسار إلى الإجابة ذات الصلة وحدودها وطريق التحقق منها.",
+     "committed": "ابدأ بالسؤال، لا بالبيانات. ابدأ بالسؤال، لا بالبيانات. يحدد السؤال نوع الدليل الذي تحتاج إليه، وما الذي يمكن حسمه وما الذي يبقى غير معروف. ابدأ بالقرار أو المسألة التي تريد فهمها، ثم انتقل من الإجابة إلى الدليل وحدوده ومصدره. كل سؤال ينبغي أن يوضح ستة أمور ماذا نعرف الآن؟ ما قوة الدليل؟ على من أو ماذا ينطبق؟ ما الذي لا يثبته؟ ما الذي ما زلنا لا نعرفه؟ وما الدليل الجديد الذي قد يغير الإجابة؟ ولا تُجمع أدلة مختلفة لمجرد أنها تتناول الموضوع نفسه. الرقم المرتبط بالموضوع ليس بالضرورة إجابة عن السؤال قد يتعلق رقمان بالموضوع نفسه ومع ذلك يجيبان عن سؤالين مختلفين لأن مجتمع القياس أو التعريف أو الفترة أو نطاق المصدر مختلف. ولا تُربط الأدلة إلا عندما يمكن الدفاع عن العلاقة بينها؛ فالتشابه في الموضوع لا يجعل القيم قابلة للمقارنة ولا يثبت علاقة سببية. إذا لم تكف الأدلة عندما لا تكفي الأدلة، يبقى المجهول مجهولًا. وتتحول الفجوة إلى سؤال قياس بدل أن تُملأ بتقدير غير موثق. غياب الدليل لا يعني صفرًا ولا يبرر التقدير. أحد عشر سؤالًا للبدء استخدم الأسئلة الأحد عشر أدناه للدخول إلى الأدلة من المسألة التي تريد حسمها. ويقودك كل مسار إلى الإجابة ذات الصلة وحدودها وطريق التحقق منها.",
+     "class": "ENTRY_DRIFT__HAND_EDITED",
+     "finding": "SEARCH-DRIFT-001"
+    },
+    {
+     "pointer": "/119/summary_en",
+     "generated": "Financial inclusion in Yemen is not one number. Yemen Financial Inclusion Evidence is a bilingual public evidence resource that helps users understand, compare and verify evidence on financial inclusion in Yemen. It supports decision-making by clarifying what the evidence supports, what it does not establish, when and to whom it applies, and where it comes from. It does not make decisions for users or simulate policy outcomes. The evidence spans people, firms, providers, payments, money flows, rules and infrastructure, measured at different times and under different definitions. Start with the question you need to answer. Start with the question, not the dataset Start with the question or decision you need to resolve. Then move from the summary to the evidence while keeping the answer’s limits and source visible. Three signals. Three different evidence states. The latest representative population measure available reports 11.9% account ownership for Yemen in the Findex 2021 wave, with Yemen fieldwork in 2022–23. In the same wave, the measured male–female gap is 12.91 percentage points. Separately, CBY-reported POS terminals rose from 561 in March 2025 to 1,473 in January 2026. Thes",
+     "committed": "Financial inclusion in Yemen is not one number. Financial inclusion in Yemen is not one number. Yemen Financial Inclusion Evidence is a bilingual public evidence resource that helps users understand, compare and verify evidence on financial inclusion in Yemen. It supports decision-making by clarifying what the evidence supports, what it does not establish, when and to whom it applies, and where it comes from. It does not make decisions for users or simulate policy outcomes. The evidence spans people, firms, providers, payments, money flows, rules and infrastructure, measured at different times and under different definitions. Start with the question you need to answer. Start with the question, not the dataset Start with the question or decision you need to resolve. Then move from the summary to the evidence while keeping the answer’s limits and source visible. Three signals. Three different evidence states. The latest representative population measure available reports 11.9% account ownership for Yemen in the Findex 2021 wave, with Yemen fieldwork in 2022–23. In the same wave, the measured male–female gap is 12.91 percentage points. Separately, CBY-reported POS terminals rose from ",
+     "class": "ENTRY_DRIFT__HAND_EDITED",
+     "finding": "SEARCH-DRIFT-001"
+    },
+    {
+     "pointer": "/119/summary_ar",
+     "generated": "الشمول المالي في اليمن ليس رقمًا واحدًا. «أدلة الشمول المالي في اليمن» مورد عام ثنائي اللغة يساعد المستخدمين على فهم أدلة الشمول المالي في اليمن ومقارنتها والتحقق منها. ويدعم اتخاذ القرار من خلال توضيح ما الذي تسنده الأدلة، وما الذي لا تثبته، والفترة والمجتمع اللذين تغطيهما، ومصادرها. ولا يتخذ القرارات نيابة عن المستخدمين ولا يحاكي نتائج السياسات. وتشمل الأدلة الناس والمنشآت ومقدمي الخدمات والمدفوعات والتدفقات المالية والتنظيمات والبنية التحتية، وقد جُمعت في أوقات ووفق تعريفات مختلفة. ابدأ بالسؤال الذي تريد الإجابة عنه. ابدأ بالسؤال الذي تريد حسمه ابدأ بالسؤال أو القرار الذي تريد حسمه، ثم انتقل من الخلاصة إلى الدليل مع بقاء حدود الإجابة ومصدرها واضحين. إشارات من أوقات مختلفة — وليست رقمًا واحدًا تشير أحدث الأدلة السكانية الممثلة المتاحة إلى أن امتلاك الحساب بلغ 11.9% في اليمن ضمن موجة Global Findex 2021، مع تنفيذ العمل الميداني في 2022–2023. وفي الموجة نفسها بلغت الفجوة المقاسة بين الرجال والنساء 12.91 نقطة مئوية. وبشكل منفصل، ارتفع عدد أجهزة نقاط البيع المبلغ عنها من البنك المركزي من 561 في مارس 2025 إلى 1,473 في يناير 2026. هذه مقاييس مختلفة: أشخاص، وفجوة داخل الموجة نفسها، وبنية تحتية؛ ولا يحل أي منها محل الآخر. ما الذي لا ينبغي استنتاجه؟ وجود بنية تحتية أكبر لا يثبت وحده أن عدد",
+     "committed": "الشمول المالي في اليمن ليس رقمًا واحدًا. الشمول المالي في اليمن ليس رقمًا واحدًا. «أدلة الشمول المالي في اليمن» مورد عام ثنائي اللغة يساعد المستخدمين على فهم أدلة الشمول المالي في اليمن ومقارنتها والتحقق منها. ويدعم اتخاذ القرار من خلال توضيح ما الذي تسنده الأدلة، وما الذي لا تثبته، والفترة والمجتمع اللذين تغطيهما، ومصادرها. ولا يتخذ القرارات نيابة عن المستخدمين ولا يحاكي نتائج السياسات. وتشمل الأدلة الناس والمنشآت ومقدمي الخدمات والمدفوعات والتدفقات المالية والتنظيمات والبنية التحتية، وقد جُمعت في أوقات ووفق تعريفات مختلفة. ابدأ بالسؤال الذي تريد الإجابة عنه. ابدأ بالسؤال الذي تريد حسمه ابدأ بالسؤال أو القرار الذي تريد حسمه، ثم انتقل من الخلاصة إلى الدليل مع بقاء حدود الإجابة ومصدرها واضحين. إشارات من أوقات مختلفة — وليست رقمًا واحدًا تشير أحدث الأدلة السكانية الممثلة المتاحة إلى أن امتلاك الحساب بلغ 11.9% في اليمن ضمن موجة Global Findex 2021، مع تنفيذ العمل الميداني في 2022–2023. وفي الموجة نفسها بلغت الفجوة المقاسة بين الرجال والنساء 12.91 نقطة مئوية. وبشكل منفصل، ارتفع عدد أجهزة نقاط البيع المبلغ عنها من البنك المركزي من 561 في مارس 2025 إلى 1,473 في يناير 2026. هذه مقاييس مختلفة: أشخاص، وفجوة داخل الموجة نفسها، وبنية تحتية؛ ولا يحل أي منها محل الآخر. ما الذي لا ينبغي استنتاجه؟",
+     "class": "ENTRY_DRIFT__HAND_EDITED",
+     "finding": "SEARCH-DRIFT-001"
+    },
+    {
+     "pointer": "/119/search_text_en",
+     "generated": "Financial inclusion in Yemen is not one number. Yemen Financial Inclusion Evidence is a bilingual public evidence resource that helps users understand, compare and verify evidence on financial inclusion in Yemen. It supports decision-making by clarifying what the evidence supports, what it does not establish, when and to whom it applies, and where it comes from. It does not make decisions for users or simulate policy outcomes. The evidence spans people, firms, providers, payments, money flows, rules and infrastructure, measured at different times and under different definitions. Start with the question you need to answer. Start with the question, not the dataset Start with the question or decision you need to resolve. Then move from the summary to the evidence while keeping the answer’s limits and source visible. Three signals. Three different evidence states. The latest representative population measure available reports 11.9% account ownership for Yemen in the Findex 2021 wave, with Yemen fieldwork in 2022–23. In the same wave, the measured male–female gap is 12.91 percentage points. Separately, CBY-reported POS terminals rose from 561 in March 2025 to 1,473 in January 2026. These are different measures: people, a within-wave disparity and infrastructure. None substitutes for another. What should not be inferred? More infrastructure does not by itself prove that more people are using financial services. A licensed institution is not proof that every listed location is operating. Access does not prove use; use does not prove service quality or impact; and the number of accounts is not the number of people. Different evidence describes different moments. Population surveys, administrative payment data, provider-status decisions, programme reports and macroeconomic series are updated on different schedules. Each conclusion therefore carries the period it actually covers. “Latest” means latest for that question or measure, not latest for Yemen as a whole. From rule to result, every link needs evidence. A reform, new payment rail or programme can matter for inclusion through a chain: rule or investment → implementation → operation → reachable access → actual use → service quality and protection → outcome. The evidence stops at the furthest stage it actually supports; it does not cross an unmeasured link. Across the wider picture, people and capability, firms and income, providers, payment rails, remittance and capital flows, regulation and consumer protection, and enabling constraints are related but not interchangeable. Those links show context, dependency or plausible mechanisms where evidence supports them; they are not causal arrows or a composite score. What we still do not know The current evidence cannot yet support a reliable national map of operating financial access points, a continuously current population inclusion rate, or a causal explanation for every measured gap. Those are visible knowledge gaps, not values to be filled in. Challenge the answer Open the evidence record to see the definition, population or universe, calculation base, period, geography, method, source, derivation, rights, limitations and change trigger. Where credible figures disagree, compare those fields before comparing the values. Eleven questions to start from Choose the question closest to the decision or uncertainty you need to resolve. Each route keeps the answer, its limits and the verification path connected.",
+     "committed": "Financial inclusion in Yemen is not one number. Financial inclusion in Yemen is not one number. Yemen Financial Inclusion Evidence is a bilingual public evidence resource that helps users understand, compare and verify evidence on financial inclusion in Yemen. It supports decision-making by clarifying what the evidence supports, what it does not establish, when and to whom it applies, and where it comes from. It does not make decisions for users or simulate policy outcomes. The evidence spans people, firms, providers, payments, money flows, rules and infrastructure, measured at different times and under different definitions. Start with the question you need to answer. Start with the question, not the dataset Start with the question or decision you need to resolve. Then move from the summary to the evidence while keeping the answer’s limits and source visible. Three signals. Three different evidence states. The latest representative population measure available reports 11.9% account ownership for Yemen in the Findex 2021 wave, with Yemen fieldwork in 2022–23. In the same wave, the measured male–female gap is 12.91 percentage points. Separately, CBY-reported POS terminals rose from 561 in March 2025 to 1,473 in January 2026. These are different measures: people, a within-wave disparity and infrastructure. None substitutes for another. What should not be inferred? More infrastructure does not by itself prove that more people are using financial services. A licensed institution is not proof that every listed location is operating. Access does not prove use; use does not prove service quality or impact; and the number of accounts is not the number of people. Different evidence describes different moments. Population surveys, administrative payment data, provider-status decisions, programme reports and macroeconomic series are updated on different schedules. Each conclusion therefore carries the period it actually covers. “Latest” means latest for that question or measure, not latest for Yemen as a whole. From rule to result, every link needs evidence. A reform, new payment rail or programme can matter for inclusion through a chain: rule or investment → implementation → operation → reachable access → actual use → service quality and protection → outcome. The evidence stops at the furthest stage it actually supports; it does not cross an unmeasured link. Across the wider picture, people and capability, firms and income, providers, payment rails, remittance and capital flows, regulation and consumer protection, and enabling constraints are related but not interchangeable. Those links show context, dependency or plausible mechanisms where evidence supports them; they are not causal arrows or a composite score. What we still do not know The current evidence cannot yet support a reliable national map of operating financial access points, a continuously current population inclusion rate, or a causal explanation for every measured gap. Those are visible knowledge gaps, not values to be filled in. Challenge the answer Open the evidence record to see the definition, population or universe, calculation base, period, geography, method, source, derivation, rights, limitations and change trigger. Where credible figures disagree, compare those fields before comparing the values. Eleven questions to start from Choose the question closest to the decision or uncertainty you need to resolve. Each route keeps the answer, its limits and the verification path connected.",
+     "class": "ENTRY_DRIFT__HAND_EDITED",
+     "finding": "SEARCH-DRIFT-001"
+    },
+    {
+     "pointer": "/119/search_text_ar",
+     "generated": "الشمول المالي في اليمن ليس رقمًا واحدًا. «أدلة الشمول المالي في اليمن» مورد عام ثنائي اللغة يساعد المستخدمين على فهم أدلة الشمول المالي في اليمن ومقارنتها والتحقق منها. ويدعم اتخاذ القرار من خلال توضيح ما الذي تسنده الأدلة، وما الذي لا تثبته، والفترة والمجتمع اللذين تغطيهما، ومصادرها. ولا يتخذ القرارات نيابة عن المستخدمين ولا يحاكي نتائج السياسات. وتشمل الأدلة الناس والمنشآت ومقدمي الخدمات والمدفوعات والتدفقات المالية والتنظيمات والبنية التحتية، وقد جُمعت في أوقات ووفق تعريفات مختلفة. ابدأ بالسؤال الذي تريد الإجابة عنه. ابدأ بالسؤال الذي تريد حسمه ابدأ بالسؤال أو القرار الذي تريد حسمه، ثم انتقل من الخلاصة إلى الدليل مع بقاء حدود الإجابة ومصدرها واضحين. إشارات من أوقات مختلفة — وليست رقمًا واحدًا تشير أحدث الأدلة السكانية الممثلة المتاحة إلى أن امتلاك الحساب بلغ 11.9% في اليمن ضمن موجة Global Findex 2021، مع تنفيذ العمل الميداني في 2022–2023. وفي الموجة نفسها بلغت الفجوة المقاسة بين الرجال والنساء 12.91 نقطة مئوية. وبشكل منفصل، ارتفع عدد أجهزة نقاط البيع المبلغ عنها من البنك المركزي من 561 في مارس 2025 إلى 1,473 في يناير 2026. هذه مقاييس مختلفة: أشخاص، وفجوة داخل الموجة نفسها، وبنية تحتية؛ ولا يحل أي منها محل الآخر. ما الذي لا ينبغي استنتاجه؟ وجود بنية تحتية أكبر لا يثبت وحده أن عدد المستخدمين زاد. وجود مؤسسة مرخصة لا يثبت أنها تعمل في كل موقع مدرج باسمها. الوصول إلى خدمة لا يثبت استخدامها. الاستخدام لا يثبت الجودة أو الأثر. عدد الحسابات لا يساوي عدد الأشخاص. الأدلة لا تتحدث عن اللحظة الزمنية نفسها تُحدَّث المسوح السكانية وبيانات المدفوعات الإدارية وقرارات أوضاع مقدمي الخدمات وتقارير البرامج والسلاسل الاقتصادية في أوقات مختلفة. لذلك تعرض كل إجابة الفترة التي يغطيها قياسها فعلًا. و«الأحدث» تعني الأحدث لذلك السؤال أو المقياس، لا الأحدث لليمن كله. من القاعدة إلى النتيجة: كل حلقة تحتاج دليلًا قد يسهم الإصلاح أو نظام الدفع أو البرنامج في الشمول عبر سلسلة تبدأ بالقاعدة أو الاستثمار، ثم التنفيذ، ثم التشغيل، ثم الوصول الفعلي، ثم الاستخدام، ثم جودة الخدمة والحماية، ثم النتيجة. تتوقف الأدلة عند أبعد مرحلة تسندها فعلًا، ولا تتجاوز حلقة لم تُقَس. وفي الصورة الأوسع يرتبط الناس والقدرات، والمنشآت والدخل، ومقدمو الخدمات، وبنية المدفوعات، وتدفقات الحوالات ورأس المال، والتنظيم وحماية المستهلك، والقيود المُمكِّنة أو المعطِّلة، لكنها ليست أشياء قابلة للاستبدال. وتوضح الروابط السياق أو الاعتماد أو آليات محتملة عندما تسندها الأدلة؛ ولا تُعرض كأسهم سببية أو كمؤشر مركب. ما الذي ما زلنا لا نعرفه؟ لا تسمح الأدلة الحالية بعد بخريطة وطنية موثوقة لنقاط الوصول المالية العاملة، ولا بنسبة سكانية محدثة باستمرار للشمول، ولا بتفسير سببي لكل فجوة مقاسة. هذه فجوات معرفة ظاهرة، وليست أرقامًا ينبغي ملؤها بالتقدير. إذا أردت أن تتحدى الإجابة افتح سجل الدليل لترى التعريف، والمجتمع الذي ينطبق عليه الرقم، وقاعدة الاحتساب، والفترة، والجغرافيا، والمنهج، والمصدر، وطريقة الاحتساب، والحقوق، والحدود، وما الذي قد يغير النتيجة. وعندما تختلف أرقام موثوقة، قارن هذه الخصائص قبل أن تقارن القيم. أحد عشر سؤالًا للبدء ابدأ بالسؤال الأقرب إلى القرار أو المسألة التي تريد حسمها. ويحافظ كل مسار على ارتباط الإجابة بحدودها وطريق التحقق منها.",
+     "committed": "الشمول المالي في اليمن ليس رقمًا واحدًا. الشمول المالي في اليمن ليس رقمًا واحدًا. «أدلة الشمول المالي في اليمن» مورد عام ثنائي اللغة يساعد المستخدمين على فهم أدلة الشمول المالي في اليمن ومقارنتها والتحقق منها. ويدعم اتخاذ القرار من خلال توضيح ما الذي تسنده الأدلة، وما الذي لا تثبته، والفترة والمجتمع اللذين تغطيهما، ومصادرها. ولا يتخذ القرارات نيابة عن المستخدمين ولا يحاكي نتائج السياسات. وتشمل الأدلة الناس والمنشآت ومقدمي الخدمات والمدفوعات والتدفقات المالية والتنظيمات والبنية التحتية، وقد جُمعت في أوقات ووفق تعريفات مختلفة. ابدأ بالسؤال الذي تريد الإجابة عنه. ابدأ بالسؤال الذي تريد حسمه ابدأ بالسؤال أو القرار الذي تريد حسمه، ثم انتقل من الخلاصة إلى الدليل مع بقاء حدود الإجابة ومصدرها واضحين. إشارات من أوقات مختلفة — وليست رقمًا واحدًا تشير أحدث الأدلة السكانية الممثلة المتاحة إلى أن امتلاك الحساب بلغ 11.9% في اليمن ضمن موجة Global Findex 2021، مع تنفيذ العمل الميداني في 2022–2023. وفي الموجة نفسها بلغت الفجوة المقاسة بين الرجال والنساء 12.91 نقطة مئوية. وبشكل منفصل، ارتفع عدد أجهزة نقاط البيع المبلغ عنها من البنك المركزي من 561 في مارس 2025 إلى 1,473 في يناير 2026. هذه مقاييس مختلفة: أشخاص، وفجوة داخل الموجة نفسها، وبنية تحتية؛ ولا يحل أي منها محل الآخر. ما الذي لا ينبغي استنتاجه؟ وجود بنية تحتية أكبر لا يثبت وحده أن عدد المستخدمين زاد. وجود مؤسسة مرخصة لا يثبت أنها تعمل في كل موقع مدرج باسمها. الوصول إلى خدمة لا يثبت استخدامها. الاستخدام لا يثبت الجودة أو الأثر. عدد الحسابات لا يساوي عدد الأشخاص. الأدلة لا تتحدث عن اللحظة الزمنية نفسها تُحدَّث المسوح السكانية وبيانات المدفوعات الإدارية وقرارات أوضاع مقدمي الخدمات وتقارير البرامج والسلاسل الاقتصادية في أوقات مختلفة. لذلك تعرض كل إجابة الفترة التي يغطيها قياسها فعلًا. و«الأحدث» تعني الأحدث لذلك السؤال أو المقياس، لا الأحدث لليمن كله. من القاعدة إلى النتيجة: كل حلقة تحتاج دليلًا قد يسهم الإصلاح أو نظام الدفع أو البرنامج في الشمول عبر سلسلة تبدأ بالقاعدة أو الاستثمار، ثم التنفيذ، ثم التشغيل، ثم الوصول الفعلي، ثم الاستخدام، ثم جودة الخدمة والحماية، ثم النتيجة. تتوقف الأدلة عند أبعد مرحلة تسندها فعلًا، ولا تتجاوز حلقة لم تُقَس. وفي الصورة الأوسع يرتبط الناس والقدرات، والمنشآت والدخل، ومقدمو الخدمات، وبنية المدفوعات، وتدفقات الحوالات ورأس المال، والتنظيم وحماية المستهلك، والقيود المُمكِّنة أو المعطِّلة، لكنها ليست أشياء قابلة للاستبدال. وتوضح الروابط السياق أو الاعتماد أو آليات محتملة عندما تسندها الأدلة؛ ولا تُعرض كأسهم سببية أو كمؤشر مركب. ما الذي ما زلنا لا نعرفه؟ لا تسمح الأدلة الحالية بعد بخريطة وطنية موثوقة لنقاط الوصول المالية العاملة، ولا بنسبة سكانية محدثة باستمرار للشمول، ولا بتفسير سببي لكل فجوة مقاسة. هذه فجوات معرفة ظاهرة، وليست أرقامًا ينبغي ملؤها بالتقدير. إذا أردت أن تتحدى الإجابة افتح سجل الدليل لترى التعريف، والمجتمع الذي ينطبق عليه الرقم، وقاعدة الاحتساب، والفترة، والجغرافيا، والمنهج، والمصدر، وطريقة الاحتساب، والحقوق، والحدود، وما الذي قد يغير النتيجة. وعندما تختلف أرقام موثوقة، قارن هذه الخصائص قبل أن تقارن القيم. أحد عشر سؤالًا للبدء ابدأ بالسؤال الأقرب إلى القرار أو المسألة التي تريد حسمها. ويحافظ كل مسار على ارتباط الإجابة بحدودها وطريق التحقق منها.",
+     "class": "ENTRY_DRIFT__HAND_EDITED",
+     "finding": "SEARCH-DRIFT-001"
+    }
+   ]
+  },
+  "page_specs.json": {
+   "status": "DIFFERENT",
+   "difference_count": 18570,
+   "unexplained": 0,
+   "differences_summary": [
+    {
+     "class": "LEGACY_LAYERING__UNRENDERED",
+     "finding": "PS-LAYER-002",
+     "count": 2470
+    },
+    {
+     "class": "LEGACY_LAYERING__UNRENDERED",
+     "finding": "PS-LAYER-001",
+     "count": 15982
+    },
+    {
+     "class": "LEGACY_LAYERING__UNRENDERED",
+     "finding": "PS-LAYER-003",
+     "count": 114
+    },
+    {
+     "class": "ENTRY_PROJECTION_STALE",
+     "finding": "PROJ-STALE-003",
+     "count": 2
+    },
+    {
+     "class": "ENTRY_PROJECTION_STALE",
+     "finding": "PROJ-STALE-006",
+     "count": 2
+    }
+   ],
+   "differences": [
+    {
+     "pointer": "/page_specs/1/source_reference_closure/0/object_type",
+     "generated": "evidence_object",
+     "committed": "visual",
+     "class": "LEGACY_LAYERING__UNRENDERED",
+     "finding": "PS-LAYER-002"
+    },
+    {
+     "pointer": "/page_specs/1/source_reference_closure/0/object_id",
+     "generated": "CLM-003",
+     "committed": "VIS-ACCESS-EVIDENCE-LAYER",
+     "class": "LEGACY_LAYERING__UNRENDERED",
+     "finding": "PS-LAYER-002"
+    },
+    {
+     "pointer": "/page_specs/1/source_reference_closure/0/public_routes",
+     "generated": "[\"/payments/\", \"/access/\", \"/\"]",
+     "committed": "<absent>",
+     "class": "LEGACY_LAYERING__UNRENDERED",
+     "finding": "PS-LAYER-002"
+    },
+    {
+     "pointer": "/page_specs/1/source_reference_closure/0/dependency_ids",
+     "generated": "[\"SRC-CBY-POS-2025-03\", \"SRC-CBY-POS-2026-01\"]",
+     "committed": "<absent>",
+     "class": "LEGACY_LAYERING__UNRENDERED",
+     "finding": "PS-LAYER-002"
+    },
+    {
+     "pointer": "/page_specs/1/source_reference_closure/0/direct_source_ids",
+     "generated": "[\"SRC-CBY-POS-2025-03\", \"SRC-CBY-POS-2026-01\"]",
+     "committed": "<absent>",
+     "class": "LEGACY_LAYERING__UNRENDERED",
+     "finding": "PS-LAYER-002"
+    },
+    {
+     "pointer": "/page_specs/1/source_reference_closure/0/resolved_source_ids/<len>",
+     "generated": 2,
+     "committed": 0,
+     "class": "LEGACY_LAYERING__UNRENDERED",
+     "finding": "PS-LAYER-002"
+    },
+    {
+     "pointer": "/page_specs/1/source_reference_closure/0/resolved_via_object_ids",
+     "generated": "[]",
+     "committed": "<absent>",
+     "class": "LEGACY_LAYERING__UNRENDERED",
+     "finding": "PS-LAYER-002"
+    },
+    {
+     "pointer": "/page_specs/1/source_reference_closure/0/source_locators/<len>",
+     "generated": 2,
+     "committed": 0,
+     "class": "LEGACY_LAYERING__UNRENDERED",
+     "finding": "PS-LAYER-002"
+    },
+    {
+     "pointer": "/page_specs/1/source_reference_closure/0/closure_state",
+     "generated": "CLOSED_TO_SOURCE_ID",
+     "committed": "NO_SOURCE_EXPECTED",
+     "class": "LEGACY_LAYERING__UNRENDERED",
+     "finding": "PS-LAYER-002"
+    },
+    {
+     "pointer": "/page_specs/1/source_reference_closure/1/object_type",
+     "generated": "evidence_object",
+     "committed": "measurement",
+     "class": "LEGACY_LAYERING__UNRENDERED",
+     "finding": "PS-LAYER-002"
+    },
+    {
+     "pointer": "/page_specs/1/source_reference_closure/1/object_id",
+     "generated": "CLM-050",
+     "committed": "MA-005",
+     "class": "LEGACY_LAYERING__UNRENDERED",
+     "finding": "PS-LAYER-002"
+    },
+    {
+     "pointer": "/page_specs/1/source_reference_closure/1/public_routes",
+     "generated": "[\"/payments/\", \"/people/\", \"/access/\"]",
+     "committed": "<absent>",
+     "class": "LEGACY_LAYERING__UNRENDERED",
+     "finding": "PS-LAYER-002"
+    },
+    {
+     "pointer": "/page_specs/1/source_reference_closure/1/dependency_ids",
+     "generated": "[\"198\", \"199\", \"EP-IBS-EMONEY-2019-K04\"]",
+     "committed": "<absent>",
+     "class": "LEGACY_LAYERING__UNRENDERED",
+     "finding": "PS-LAYER-002"
+    },
+    {
+     "pointer": "/page_specs/1/source_reference_closure/1/direct_source_ids",
+     "generated": "[]",
+     "committed": "<absent>",
+     "class": "LEGACY_LAYERING__UNRENDERED",
+     "finding": "PS-LAYER-002"
+    },
+    {
+     "pointer": "/page_specs/1/source_reference_closure/1/resolved_source_ids/<len>",
+     "generated": 1,
+     "committed": 0,
+     "class": "LEGACY_LAYERING__UNRENDERED",
+     "finding": "PS-LAYER-002"
+    },
+    {
+     "pointer": "/page_specs/1/source_reference_closure/1/resolved_via_object_ids",
+     "generated": "[\"198\", \"199\"]",
+     "committed": "<absent>",
+     "class": "LEGACY_LAYERING__UNRENDERED",
+     "finding": "PS-LAYER-002"
+    },
+    {
+     "pointer": "/page_specs/1/source_reference_closure/1/unresolved_dependency_ids/<len>",
+     "generated": 1,
+     "committed": 0,
+     "class": "LEGACY_LAYERING__UNRENDERED",
+     "finding": "PS-LAYER-002"
+    },
+    {
+     "pointer": "/page_specs/1/source_reference_closure/1/source_locators/<len>",
+     "generated": 1,
+     "committed": 0,
+     "class": "LEGACY_LAYERING__UNRENDERED",
+     "finding": "PS-LAYER-002"
+    },
+    {
+     "pointer": "/page_specs/1/source_reference_closure/1/closure_state",
+     "generated": "CLOSED_VIA_CONTROLLED_DEPENDENCIES",
+     "committed": "NO_SOURCE_EXPECTED",
+     "class": "LEGACY_LAYERING__UNRENDERED",
+     "finding": "PS-LAYER-002"
+    },
+    {
+     "pointer": "/page_specs/1/source_reference_closure/2/object_type",
+     "generated": "evidence_object",
+     "committed": "measurement",
+     "class": "LEGACY_LAYERING__UNRENDERED",
+     "finding": "PS-LAYER-002"
+    },
+    {
+     "pointer": "/page_specs/1/source_reference_closure/2/object_id",
+     "generated": "CLM-052",
+     "committed": "MA-010",
+     "class": "LEGACY_LAYERING__UNRENDERED",
+     "finding": "PS-LAYER-002"
+    },
+    {
+     "pointer": "/page_specs/1/source_reference_closure/2/public_routes",
+     "generated": "[\"/people/\", \"/payments/\", \"/access/\"]",
+     "committed": "<absent>",
+     "class": "LEGACY_LAYERING__UNRENDERED",
+     "finding": "PS-LAYER-002"
+    },
+    {
+     "pointer": "/page_specs/1/source_reference_closure/2/dependency_ids",
+     "generated": "[\"198\", \"199\", \"EP-IBS-GEO-GENDER-K04\"]",
+     "committed": "<absent>",
+     "class": "LEGACY_LAYERING__UNRENDERED",
+     "finding": "PS-LAYER-002"
+    },
+    {
+     "pointer": "/page_specs/1/source_reference_closure/2/direct_source_ids",
+     "generated": "[]",
+     "committed": "<absent>",
+     "class": "LEGACY_LAYERING__UNRENDERED",
+     "finding": "PS-LAYER-002"
+    },
+    {
+     "pointer": "/page_specs/1/source_reference_closure/2/resolved_source_ids/<len>",
+     "generated": 1,
+     "committed": 0,
+     "class": "LEGACY_LAYERING__UNRENDERED",
+     "finding": "PS-LAYER-002"
+    },
+    {
+     "pointer": "/page_specs/1/source_reference_closure/2/resolved_via_object_ids",
+     "generated": "[\"198\", \"199\"]",
+     "committed": "<absent>",
+     "class": "LEGACY_LAYERING__UNRENDERED",
+     "finding": "PS-LAYER-002"
+    },
+    {
+     "pointer": "/page_specs/1/source_reference_closure/2/unresolved_dependency_ids/<len>",
+     "generated": 1,
+     "committed": 0,
+     "class": "LEGACY_LAYERING__UNRENDERED",
+     "finding": "PS-LAYER-002"
+    },
+    {
+     "pointer": "/page_specs/1/source_reference_closure/2/source_locators/<len>",
+     "generated": 1,
+     "committed": 0,
+     "class": "LEGACY_LAYERING__UNRENDERED",
+     "finding": "PS-LAYER-002"
+    },
+    {
+     "pointer": "/page_specs/1/source_reference_closure/2/closure_state",
+     "generated": "CLOSED_VIA_CONTROLLED_DEPENDENCIES",
+     "committed": "NO_SOURCE_EXPECTED",
+     "class": "LEGACY_LAYERING__UNRENDERED",
+     "finding": "PS-LAYER-002"
+    },
+    {
+     "pointer": "/page_specs/1/source_reference_closure/6/object_type",
+     "generated": "visual",
+     "committed": "evidence_object",
+     "class": "LEGACY_LAYERING__UNRENDERED",
+     "finding": "PS-LAYER-002"
+    },
+    {
+     "pointer": "/page_specs/1/source_reference_closure/6/object_id",
+     "generated": "VIS-ACCESS-EVIDENCE-LAYER",
+     "committed": "CLM-003",
+     "class": "LEGACY_LAYERING__UNRENDERED",
+     "finding": "PS-LAYER-002"
+    },
+    {
+     "pointer": "/page_specs/1/source_reference_closure/6/public_routes/<len>",
+     "generated": 1,
+     "committed": 3,
+     "class": "LEGACY_LAYERING__UNRENDERED",
+     "finding": "PS-LAYER-002"
+    },
+    {
+     "pointer": "/page_specs/1/source_reference_closure/6/public_routes/0",
+     "generated": "/access/",
+     "committed": "/payments/",
+     "class": "LEGACY_LAYERING__UNRENDERED",
+     "finding": "PS-LAYER-002"
+    },
+    {
+     "pointer": "/page_specs/1/source_reference_closure/6/dependency_ids/<len>",
+     "generated": 0,
+     "committed": 2,
+     "class": "LEGACY_LAYERING__UNRENDERED",
+     "finding": "PS-LAYER-002"
+    },
+    {
+     "pointer": "/page_specs/1/source_reference_closure/6/direct_source_ids/<len>",
+     "generated": 0,
+     "committed": 2,
+     "class": "LEGACY_LAYERING__UNRENDERED",
+     "finding": "PS-LAYER-002"
+    },
+    {
+     "pointer": "/page_specs/1/source_reference_closure/6/resolved_source_ids/<len>",
+     "generated": 0,
+     "committed": 2,
+     "class": "LEGACY_LAYERING__UNRENDERED",
+     "finding": "PS-LAYER-002"
+    },
+    {
+     "pointer": "/page_specs/1/source_reference_closure/6/source_locators/<len>",
+     "generated": 0,
+     "committed": 2,
+     "class": "LEGACY_LAYERING__UNRENDERED",
+     "finding": "PS-LAYER-002"
+    },
+    {
+     "pointer": "/page_specs/1/source_reference_closure/6/closure_state",
+     "generated": "NO_SOURCE_EXPECTED",
+     "committed": "CLOSED_TO_SOURCE_ID",
+     "class": "LEGACY_LAYERING__UNRENDERED",
+     "finding": "PS-LAYER-002"
+    },
+    {
+     "pointer": "/page_specs/1/source_reference_closure/7/object_type",
+     "generated": "measurement",
+     "committed": "evidence_object",
+     "class": "LEGACY_LAYERING__UNRENDERED",
+     "finding": "PS-LAYER-002"
+    },
+    {
+     "pointer": "/page_specs/1/source_reference_closure/7/object_id",
+     "generated": "MA-005",
+     "committed": "CLM-050",
+     "class": "LEGACY_LAYERING__UNRENDERED",
+     "finding": "PS-LAYER-002"
+    },
+    {
+     "pointer": "/page_specs/1/source_reference_closure/7/public_routes/0",
+     "generated": "/access/",
+     "committed": "/payments/",
+     "class": "LEGACY_LAYERING__UNRENDERED",
+     "finding": "PS-LAYER-002"
+    },
+    {
+     "pointer": "/page_specs/1/source_reference_closure/7/public_routes/1",
+     "generated": "/providers/",
+     "committed": "/people/",
+     "class": "LEGACY_LAYERING__UNRENDERED",
+     "finding": "PS-LAYER-002"
+    },
+    {
+     "pointer": "/page_specs/1/source_reference_closure/7/public_routes/2",
+     "generated": "/explore/",
+     "committed": "/access/",
+     "class": "LEGACY_LAYERING__UNRENDERED",
+     "finding": "PS-LAYER-002"
+    },
+    {
+     "pointer": "/page_specs/1/source_reference_closure/7/dependency_ids/<len>",
+     "generated": 0,
+     "committed": 3,
+     "class": "LEGACY_LAYERING__UNRENDERED",
+     "finding": "PS-LAYER-002"
+    },
+    {
+     "pointer": "/page_specs/1/source_reference_closure/7/resolved_source_ids/<len>",
+     "generated": 0,
+     "committed": 1,
+     "class": "LEGACY_LAYERING__UNRENDERED",
+     "finding": "PS-LAYER-002"
+    },
+    {
+     "pointer": "/page_specs/1/source_reference_closure/7/resolved_via_object_ids/<len>",
+     "generated": 0,
+     "committed": 2,
+     "class": "LEGACY_LAYERING__UNRENDERED",
+     "finding": "PS-LAYER-002"
+    },
+    {
+     "pointer": "/page_specs/1/source_reference_closure/7/unresolved_dependency_ids/<len>",
+     "generated": 0,
+     "committed": 1,
+     "class": "LEGACY_LAYERING__UNRENDERED",
+     "finding": "PS-LAYER-002"
+    },
+    {
+     "pointer": "/page_specs/1/source_reference_closure/7/source_locators/<len>",
+     "generated": 0,
+     "committed": 1,
+     "class": "LEGACY_LAYERING__UNRENDERED",
+     "finding": "PS-LAYER-002"
+    },
+    {
+     "pointer": "/page_specs/1/source_reference_closure/7/closure_state",
+     "generated": "NO_SOURCE_EXPECTED",
+     "committed": "CLOSED_VIA_CONTROLLED_DEPENDENCIES",
+     "class": "LEGACY_LAYERING__UNRENDERED",
+     "finding": "PS-LAYER-002"
+    },
+    {
+     "pointer": "/page_specs/1/source_reference_closure/8/object_type",
+     "generated": "measurement",
+     "committed": "evidence_object",
+     "class": "LEGACY_LAYERING__UNRENDERED",
+     "finding": "PS-LAYER-002"
+    },
+    {
+     "pointer": "/page_specs/1/source_reference_closure/8/object_id",
+     "generated": "MA-010",
+     "committed": "CLM-052",
+     "class": "LEGACY_LAYERING__UNRENDERED",
+     "finding": "PS-LAYER-002"
+    },
+    {
+     "pointer": "/page_specs/1/source_reference_closure/8/public_routes/<len>",
+     "generated": 4,
+     "committed": 3,
+     "class": "LEGACY_LAYERING__UNRENDERED",
+     "finding": "PS-LAYER-002"
+    },
+    {
+     "pointer": "/page_specs/1/source_reference_closure/8/public_routes/0",
+     "generated": "/reforms/",
+     "committed": "/people/",
+     "class": "LEGACY_LAYERING__UNRENDERED",
+     "finding": "PS-LAYER-002"
+    },
+    {
+     "pointer": "/page_specs/1/source_reference_closure/8/dependency_ids/<len>",
+     "generated": 0,
+     "committed": 3,
+     "class": "LEGACY_LAYERING__UNRENDERED",
+     "finding": "PS-LAYER-002"
+    },
+    {
+     "pointer": "/page_specs/1/source_reference_closure/8/resolved_source_ids/<len>",
+     "generated": 0,
+     "committed": 1,
+     "class": "LEGACY_LAYERING__UNRENDERED",
+     "finding": "PS-LAYER-002"
+    },
+    {
+     "pointer": "/page_specs/1/source_reference_closure/8/resolved_via_object_ids/<len>",
+     "generated": 0,
+     "committed": 2,
+     "class": "LEGACY_LAYERING__UNRENDERED",
+     "finding": "PS-LAYER-002"
+    },
+    {
+     "pointer": "/page_specs/1/source_reference_closure/8/unresolved_dependency_ids/<len>",
+     "generated": 0,
+     "committed": 1,
+     "class": "LEGACY_LAYERING__UNRENDERED",
+     "finding": "PS-LAYER-002"
+    },
+    {
+     "pointer": "/page_specs/1/source_reference_closure/8/source_locators/<len>",
+     "generated": 0,
+     "committed": 1,
+     "class": "LEGACY_LAYERING__UNRENDERED",
+     "finding": "PS-LAYER-002"
+    },
+    {
+     "pointer": "/page_specs/1/source_reference_closure/8/closure_state",
+     "generated": "NO_SOURCE_EXPECTED",
+     "committed": "CLOSED_VIA_CONTROLLED_DEPENDENCIES",
+     "class": "LEGACY_LAYERING__UNRENDERED",
+     "finding": "PS-LAYER-002"
+    },
+    {
+     "pointer": "/page_specs/1/source_references/0/source_id",
+     "generated": "SRC-CBY-POS-2025-03",
+     "committed": "SRC-CBY-PAYREPORT-H1-2025",
+     "class": "LEGACY_LAYERING__UNRENDERED",
+     "finding": "PS-LAYER-002"
+    },
+    {
+     "pointer": "/page_specs/1/source_references/0/primary_url",
+     "generated": "https://cby-ye.com/files/6812a1758f5a5.pdf",
+     "committed": "https://www.cby-ye.com/files/693a7845e7f26.pdf",
+     "class": "LEGACY_LAYERING__UNRENDERED",
+     "finding": "PS-LAYER-002"
+    },
+    {
+     "pointer": "/page_specs/1/source_references/0/datasets_or_use",
+     "generated": "DS-CBY-PAYMENTS",
+     "committed": "DS-CBY-PAYMENTS,DS-WALLET-COUNT-RECON,DS-PAYMENT-CURRENTNESS",
+     "class": "LEGACY_LAYERING__UNRENDERED",
+     "finding": "PS-LAYER-002"
+    },
+    {
+     "pointer": "/page_specs/1/source_references/0/row_count",
+     "generated": 3,
+     "committed": 20,
+     "class": "LEGACY_LAYERING__UNRENDERED",
+     "finding": "PS-LAYER-002"
+    },
+    {
+     "pointer": "/page_specs/1/source_references/0/linked_evidence_object_ids/<len>",
+     "generated": 1,
+     "committed": 2,
+     "class": "LEGACY_LAYERING__UNRENDERED",
+     "finding": "PS-LAYER-002"
+    },
+    {
+     "pointer": "/page_specs/1/source_references/0/linked_evidence_object_ids/0",
+     "generated": "CLM-003",
+     "committed": "CLM-010",
+     "class": "LEGACY_LAYERING__UNRENDERED",
+     "finding": "PS-LAYER-002"
+    },
+    {
+     "pointer": "/page_specs/1/source_references/0/linked_claim_ids/<len>",
+     "generated": 5,
+     "committed": 6,
+     "class": "LEGACY_LAYERING__UNRENDERED",
+     "finding": "PS-LAYER-002"
+    },
+    {
+     "pointer": "/page_specs/1/source_references/0/linked_visual_ids/<len>",
+     "generated": 6,
+     "committed": 7,
+     "class": "LEGACY_LAYERING__UNRENDERED",
+     "finding": "PS-LAYER-002"
+    },
+    {
+     "pointer": "/page_specs/1/source_references/0/linked_visual_ids/3",
+     "generated": "VIS-POS-TERMINALS",
+     "committed": "VIS-E-MONEY-RULE-STACK",
+     "class": "LEGACY_LAYERING__UNRENDERED",
+     "finding": "PS-LAYER-002"
+    },
+    {
+     "pointer": "/page_specs/1/source_references/0/linked_visual_ids/4",
+     "generated": "VIS-POS-TRANSACTIONS",
+     "committed": "VIS-POS-TERMINALS",
+     "class": "LEGACY_LAYERING__UNRENDERED",
+     "finding": "PS-LAYER-002"
+    },
+    {
+     "pointer": "/page_specs/1/source_references/0/linked_visual_ids/5",
+     "generated": "VIS-POS-VALUE",
+     "committed": "VIS-POS-TRANSACTIONS",
+     "class": "LEGACY_LAYERING__UNRENDERED",
+     "finding": "PS-LAYER-002"
+    },
+    {
+     "pointer": "/page_specs/1/source_references/1/source_id",
+     "generated": "SRC-CBY-POS-2026-01",
+     "committed": "SRC-CBY-PAYREPORT-Q3-2024",
+     "class": "LEGACY_LAYERING__UNRENDERED",
+     "finding": "PS-LAYER-002"
+    },
+    {
+     "pointer": "/page_specs/1/source_references/1/primary_url",
+     "generated": "https://www.cby-ye.com/files/69b058d4bc306.pdf",
+     "committed": "https://www.cby-ye.com/files/677c2e75a4d8c.pdf",
+     "class": "LEGACY_LAYERING__UNRENDERED",
+     "finding": "PS-LAYER-002"
+    },
+    {
+     "pointer": "/page_specs/1/source_references/1/datasets_or_use",
+     "generated": "DS-CBY-PAYMENTS,DS-PAYMENT-CURRENTNESS",
+     "committed": "DS-CBY-PAYMENTS,DS-WALLET-COUNT-RECON",
+     "class": "LEGACY_LAYERING__UNRENDERED",
+     "finding": "PS-LAYER-002"
+    },
+    {
+     "pointer": "/page_specs/1/source_references/1/row_count",
+     "generated": 3,
+     "committed": 30,
+     "class": "LEGACY_LAYERING__UNRENDERED",
+     "finding": "PS-LAYER-002"
+    },
+    {
+     "pointer": "/page_specs/1/source_references/1/linked_evidence_object_ids/<len>",
+     "generated": 2,
+     "committed": 1,
+     "class": "LEGACY_LAYERING__UNRENDERED",
+     "finding": "PS-LAYER-002"
+    },
+    {
+     "pointer": "/page_specs/1/source_references/1/linked_evidence_object_ids/0",
+     "generated": "CLM-003",
+     "committed": "CLM-010",
+     "class": "LEGACY_LAYERING__UNRENDERED",
+     "finding": "PS-LAYER-002"
+    },
+    {
+     "pointer": "/page_specs/1/source_references/1/linked_claim_ids/<len>",
+     "generated": 6,
+     "committed": 5,
+     "class": "LEGACY_LAYERING__UNRENDERED",
+     "finding": "PS-LAYER-002"
+    },
+    {
+     "pointer": "/page_specs/1/source_references/1/linked_visual_ids/<len>",
+     "generated": 6,
+     "committed": 7,
+     "class": "LEGACY_LAYERING__UNRENDERED",
+     "finding": "PS-LAYER-002"
+    },
+    {
+     "pointer": "/page_specs/1/source_references/1/linked_visual_ids/3",
+     "generated": "VIS-POS-TERMINALS",
+     "committed": "VIS-E-MONEY-RULE-STACK",
+     "class": "LEGACY_LAYERING__UNRENDERED",
+     "finding": "PS-LAYER-002"
+    },
+    {
+     "pointer": "/page_specs/1/source_references/1/linked_visual_ids/4",
+     "generated": "VIS-POS-TRANSACTIONS",
+     "committed": "VIS-POS-TERMINALS",
+     "class": "LEGACY_LAYERING__UNRENDERED",
+     "finding": "PS-LAYER-002"
+    },
+    {
+     "pointer": "/page_specs/1/source_references/1/linked_visual_ids/5",
+     "generated": "VIS-POS-VALUE",
+     "committed": "VIS-POS-TRANSACTIONS",
+     "class": "LEGACY_LAYERING__UNRENDERED",
+     "finding": "PS-LAYER-002"
+    },
+    {
+     "pointer": "/page_specs/1/source_references/2/source_id",
+     "generated": "SRC-IBS-EPAY-YEM-2020",
+     "committed": "SRC-CBY-POS-2025-03",
+     "class": "LEGACY_LAYERING__UNRENDERED",
+     "finding": "PS-LAYER-002"
+    },
+    {
+     "pointer": "/page_specs/1/source_references/2/primary_url",
+     "generated": "https://www.findevgateway.org/paper/2020/10/electronic-payment-services-yemen-challenges-and-opportunities-success",
+     "committed": "https://cby-ye.com/files/6812a1758f5a5.pdf",
+     "class": "LEGACY_LAYERING__UNRENDERED",
+     "finding": "PS-LAYER-002"
+    },
+    {
+     "pointer": "/page_specs/1/source_references/2/additional_urls",
+     "generated": "[\"https://www.findevgateway.org/sites/default/files/publications/submissions/78206/%D8%A7%D9%86%D8%AC%D9%84%D9%8A%D8%B2%D9%8A%20%D8%A8%D8%B9%D8%AF%20%D8%A7%D9%84%D8%AA%D8%B9%D8%AF%D9%8A%D9%842.pdf\",\"https://www.findevgateway.org/sites/default/files/publications/submissions/78201/%D8%A7%D9%84%D8%AF%D9%81%D8%B9%20%D8%A7%D9%84%D8%A7%D9%84%D9%83%D8%AA%D8%B1%D9%88%D9%86%D9%8A%D8%A9%20%D9%81%D9%8A%20%D8%A7%D9%84%D9%8A%D9%85%D9%86%20-%20%D8%A7%D9%84%D8%AA%D8%AD%D8%AF%D9%8A%D8%A7%D8%AA%20%D9%88%20%D9%81%D8%B1%D8%B5%20%D8%A7%D9%84%D9%86%D8%AC%D8%A7%D8%AD-1.pdf\"]",
+     "committed": "[\"https://english.cby-ye.com/pages/27\"]",
+     "class": "LEGACY_LAYERING__UNRENDERED",
+     "finding": "PS-LAYER-002"
+    },
+    {
+     "pointer": "/page_specs/1/source_references/2/datasets_or_use",
+     "generated": "DS-K04-SOURCE-DEEP-INTAKE,DS-K04-LITERATURE-SOURCE-AUDIT,DS-K04-IBS2020-UPSTREAM,DS-K04-IBS2020-RECON",
+     "committed": "DS-CBY-PAYMENTS",
+     "class": "LEGACY_LAYERING__UNRENDERED",
+     "finding": "PS-LAYER-002"
+    },
+    {
+     "pointer": "/page_specs/1/source_references/2/row_count",
+     "generated": 4,
+     "committed": 3,
+     "class": "LEGACY_LAYERING__UNRENDERED",
+     "finding": "PS-LAYER-002"
+    },
+    {
+     "pointer": "/page_specs/1/source_references/2/linked_evidence_object_ids/<len>",
+     "generated": 4,
+     "committed": 1,
+     "class": "LEGACY_LAYERING__UNRENDERED",
+     "finding": "PS-LAYER-002"
+    },
+    {
+     "pointer": "/page_specs/1/source_references/2/linked_evidence_object_ids/0",
+     "generated": "CLM-044",
+     "committed": "CLM-003",
+     "class": "LEGACY_LAYERING__UNRENDERED",
+     "finding": "PS-LAYER-002"
+    },
+    {
+     "pointer": "/page_specs/1/source_references/2/linked_claim_ids/<len>",
+     "generated": 3,
+     "committed": 5,
+     "class": "LEGACY_LAYERING__UNRENDERED",
+     "finding": "PS-LAYER-002"
+    },
+    {
+     "pointer": "/page_specs/1/source_references/2/linked_claim_ids/0",
+     "generated": "CLM-050",
+     "committed": "CLM-003",
+     "class": "LEGACY_LAYERING__UNRENDERED",
+     "finding": "PS-LAYER-002"
+    },
+    {
+     "pointer": "/page_specs/1/source_references/2/linked_claim_ids/1",
+     "generated": "CLM-051",
+     "committed": "CLM-004",
+     "class": "LEGACY_LAYERING__UNRENDERED",
+     "finding": "PS-LAYER-002"
+    },
+    {
+     "pointer": "/page_specs/1/source_references/2/linked_claim_ids/2",
+     "generated": "CLM-052",
+     "committed": "CLM-010",
+     "class": "LEGACY_LAYERING__UNRENDERED",
+     "finding": "PS-LAYER-002"
+    },
+    {
+     "pointer": "/page_specs/1/source_references/2/linked_reading_ids/<len>",
+     "generated": 1,
+     "committed": 3,
+     "class": "LEGACY_LAYERING__UNRENDERED",
+     "finding": "PS-LAYER-002"
+    },
+    {
+     "pointer": "/page_specs/1/source_references/2/linked_reading_ids/0",
+     "generated": "CWR-005",
+     "committed": "CWR-003",
+     "class": "LEGACY_LAYERING__UNRENDERED",
+     "finding": "PS-LAYER-002"
+    },
+    {
+     "pointer": "/page_specs/1/source_references/2/linked_visual_ids/<len>",
+     "generated": 2,
+     "committed": 6,
+     "class": "LEGACY_LAYERING__UNRENDERED",
+     "finding": "PS-LAYER-002"
+    },
+    {
+     "pointer": "/page_specs/1/source_references/2/linked_visual_ids/0",
+     "generated": "RV-CWR-005",
+     "committed": "RV-CWR-003",
+     "class": "LEGACY_LAYERING__UNRENDERED",
+     "finding": "PS-LAYER-002"
+    },
+    {
+     "pointer": "/page_specs/1/source_references/2/linked_visual_ids/1",
+     "generated": "VIS-EVIDENCE-CLASS-LADDER",
+     "committed": "RV-CWR-004",
+     "class": "LEGACY_LAYERING__UNRENDERED",
+     "finding": "PS-LAYER-002"
+    },
+    {
+     "pointer": "/page_specs/1/source_references/3/source_id",
+     "generated": "SRC-CBY-PAYREPORT-H1-2025",
+     "committed": "SRC-CBY-POS-2025-04",
+     "class": "LEGACY_LAYERING__UNRENDERED",
+     "finding": "PS-LAYER-002"
+    },
+    {
+     "pointer": "/page_specs/1/source_references/3/primary_url",
+     "generated": "https://www.cby-ye.com/files/693a7845e7f26.pdf",
+     "committed": "https://www.cby-ye.com/files/690b4cbc99847.pdf",
+     "class": "LEGACY_LAYERING__UNRENDERED",
+     "finding": "PS-LAYER-002"
+    },
+    {
+     "pointer": "/page_specs/1/source_references/3/datasets_or_use",
+     "generated": "DS-CBY-PAYMENTS,DS-WALLET-COUNT-RECON,DS-PAYMENT-CURRENTNESS",
+     "committed": "DS-CBY-PAYMENTS",
+     "class": "LEGACY_LAYERING__UNRENDERED",
+     "finding": "PS-LAYER-002"
+    },
+    {
+     "pointer": "/page_specs/1/source_references/3/row_count",
+     "generated": 20,
+     "committed": 3,
+     "class": "LEGACY_LAYERING__UNRENDERED",
+     "finding": "PS-LAYER-002"
+    },
+    {
+     "pointer": "/page_specs/1/source_references/3/linked_evidence_object_ids/<len>",
+     "generated": 2,
+     "committed": 0,
+     "class": "LEGACY_LAYERING__UNRENDERED",
+     "finding": "PS-LAYER-002"
+    },
+    {
+     "pointer": "/page_specs/1/source_references/3/linked_claim_ids/<len>",
+     "generated": 6,
+     "committed": 5,
+     "class": "LEGACY_LAYERING__UNRENDERED",
+     "finding": "PS-LAYER-002"
+    },
+    {
+     "pointer": "/page_specs/1/source_references/3/linked_visual_ids/<len>",
+     "generated": 7,
+     "committed": 6,
+     "class": "LEGACY_LAYERING__UNRENDERED",
+     "finding": "PS-LAYER-002"
+    },
+    {
+     "pointer": "/page_specs/1/source_references/3/linked_visual_ids/3",
+     "generated": "VIS-E-MONEY-RULE-STACK",
+     "committed": "VIS-POS-TERMINALS",
+     "class": "LEGACY_LAYERING__UNRENDERED",
+     "finding": "PS-LAYER-002"
+    },
+    {
+     "pointer": "/page_specs/1/source_references/3/linked_visual_ids/4",
+     "generated": "VIS-POS-TERMINALS",
+     "committed": "VIS-POS-TRANSACTIONS",
+     "class": "LEGACY_LAYERING__UNRENDERED",
+     "finding": "PS-LAYER-002"
+    },
+    {
+     "pointer": "/page_specs/1/source_references/3/linked_visual_ids/5",
+     "generated": "VIS-POS-TRANSACTIONS",
+     "committed": "VIS-POS-VALUE",
+     "class": "LEGACY_LAYERING__UNRENDERED",
+     "finding": "PS-LAYER-002"
+    },
+    {
+     "pointer": "/page_specs/1/source_references/4/source_id",
+     "generated": "SRC-CBY-PAYREPORT-Q3-2024",
+     "committed": "SRC-CBY-POS-2025-05",
+     "class": "LEGACY_LAYERING__UNRENDERED",
+     "finding": "PS-LAYER-002"
+    },
+    {
+     "pointer": "/page_specs/1/source_references/4/primary_url",
+     "generated": "https://www.cby-ye.com/files/677c2e75a4d8c.pdf",
+     "committed": "https://www.cby-ye.com/files/690b4ce84d19b.pdf",
+     "class": "LEGACY_LAYERING__UNRENDERED",
+     "finding": "PS-LAYER-002"
+    },
+    {
+     "pointer": "/page_specs/1/source_references/4/datasets_or_use",
+     "generated": "DS-CBY-PAYMENTS,DS-WALLET-COUNT-RECON",
+     "committed": "DS-CBY-PAYMENTS",
+     "class": "LEGACY_LAYERING__UNRENDERED",
+     "finding": "PS-LAYER-002"
+    },
+    {
+     "pointer": "/page_specs/1/source_references/4/row_count",
+     "generated": 30,
+     "committed": 3,
+     "class": "LEGACY_LAYERING__UNRENDERED",
+     "finding": "PS-LAYER-002"
+    },
+    {
+     "pointer": "/page_specs/1/source_references/4/linked_evidence_object_ids/<len>",
+     "generated": 1,
+     "committed": 0,
+     "class": "LEGACY_LAYERING__UNRENDERED",
+     "finding": "PS-LAYER-002"
+    },
+    {
+     "pointer": "/page_specs/1/source_references/4/linked_visual_ids/<len>",
+     "generated": 7,
+     "committed": 6,
+     "class": "LEGACY_LAYERING__UNRENDERED",
+     "finding": "PS-LAYER-002"
+    },
+    {
+     "pointer": "/page_specs/1/source_references/4/linked_visual_ids/3",
+     "generated": "VIS-E-MONEY-RULE-STACK",
+     "committed": "VIS-POS-TERMINALS",
+     "class": "LEGACY_LAYERING__UNRENDERED",
+     "finding": "PS-LAYER-002"
+    },
+    {
+     "pointer": "/page_specs/1/source_references/4/linked_visual_ids/4",
+     "generated": "VIS-POS-TERMINALS",
+     "committed": "VIS-POS-TRANSACTIONS",
+     "class": "LEGACY_LAYERING__UNRENDERED",
+     "finding": "PS-LAYER-002"
+    },
+    {
+     "pointer": "/page_specs/1/source_references/4/linked_visual_ids/5",
+     "generated": "VIS-POS-TRANSACTIONS",
+     "committed": "VIS-POS-VALUE",
+     "class": "LEGACY_LAYERING__UNRENDERED",
+     "finding": "PS-LAYER-002"
+    },
+    {
+     "pointer": "/page_specs/1/source_references/5/source_id",
+     "generated": "SRC-CBY-POS-2025-04",
+     "committed": "SRC-CBY-POS-2025-06",
+     "class": "LEGACY_LAYERING__UNRENDERED",
+     "finding": "PS-LAYER-002"
+    },
+    {
+     "pointer": "/page_specs/1/source_references/5/primary_url",
+     "generated": "https://www.cby-ye.com/files/690b4cbc99847.pdf",
+     "committed": "https://www.cby-ye.com/files/690b4d09cc314.pdf",
+     "class": "LEGACY_LAYERING__UNRENDERED",
+     "finding": "PS-LAYER-002"
+    },
+    {
+     "pointer": "/page_specs/1/source_references/6/source_id",
+     "generated": "SRC-CBY-POS-2025-05",
+     "committed": "SRC-CBY-POS-2025-07",
+     "class": "LEGACY_LAYERING__UNRENDERED",
+     "finding": "PS-LAYER-002"
+    },
+    {
+     "pointer": "/page_specs/1/source_references/6/primary_url",
+     "generated": "https://www.cby-ye.com/files/690b4ce84d19b.pdf",
+     "committed": "https://www.cby-ye.com/files/693a7785421c0.pdf",
+     "class": "LEGACY_LAYERING__UNRENDERED",
+     "finding": "PS-LAYER-002"
+    },
+    {
+     "pointer": "/page_specs/1/source_references/7/source_id",
+     "generated": "SRC-CBY-POS-2025-06",
+     "committed": "SRC-CBY-POS-2025-08",
+     "class": "LEGACY_LAYERING__UNRENDERED",
+     "finding": "PS-LAYER-002"
+    },
+    {
+     "pointer": "/page_specs/1/source_references/7/primary_url",
+     "generated": "https://www.cby-ye.com/files/690b4d09cc314.pdf",
+     "committed": "https://www.cby-ye.com/files/693a77a6c52c3.pdf",
+     "class": "LEGACY_LAYERING__UNRENDERED",
+     "finding": "PS-LAYER-002"
+    },
+    {
+     "pointer": "/page_specs/1/source_references/8/source_id",
+     "generated": "SRC-CBY-POS-2025-07",
+     "committed": "SRC-CBY-POS-2025-09",
+     "class": "LEGACY_LAYERING__UNRENDERED",
+     "finding": "PS-LAYER-002"
+    },
+    {
+     "pointer": "/page_specs/1/source_references/8/primary_url",
+     "generated": "https://www.cby-ye.com/files/693a7785421c0.pdf",
+     "committed": "https://www.cby-ye.com/files/693a77d1ded3e.pdf",
+     "class": "LEGACY_LAYERING__UNRENDERED",
+     "finding": "PS-LAYER-002"
+    },
+    {
+     "pointer": "/page_specs/1/source_references/8/row_count",
+     "generated": 3,
+     "committed": 2,
+     "class": "LEGACY_LAYERING__UNRENDERED",
+     "finding": "PS-LAYER-002"
+    },
+    {
+     "pointer": "/page_specs/1/source_references/9/source_id",
+     "generated": "SRC-CBY-POS-2025-08",
+     "committed": "SRC-CBY-POS-2025-10",
+     "class": "LEGACY_LAYERING__UNRENDERED",
+     "finding": "PS-LAYER-002"
+    },
+    {
+     "pointer": "/page_specs/1/source_references/9/primary_url",
+     "generated": "https://www.cby-ye.com/files/693a77a6c52c3.pdf",
+     "committed": "https://www.cby-ye.com/files/693a7803952d7.pdf",
+     "class": "LEGACY_LAYERING__UNRENDERED",
+     "finding": "PS-LAYER-002"
+    },
+    {
+     "pointer": "/page_specs/1/source_references/10/source_id",
+     "generated": "SRC-CBY-POS-2025-09",
+     "committed": "SRC-CBY-POS-2025-11",
+     "class": "LEGACY_LAYERING__UNRENDERED",
+     "finding": "PS-LAYER-002"
+    },
+    {
+     "pointer": "/page_specs/1/source_references/10/primary_url",
+     "generated": "https://www.cby-ye.com/files/693a77d1ded3e.pdf",
+     "committed": "https://www.cby-ye.com/files/69b05862c40b6.pdf",
+     "class": "LEGACY_LAYERING__UNRENDERED",
+     "finding": "PS-LAYER-002"
+    },
+    {
+     "pointer": "/page_specs/1/source_references/10/row_count",
+     "generated": 2,
+     "committed": 3,
+     "class": "LEGACY_LAYERING__UNRENDERED",
+     "finding": "PS-LAYER-002"
+    },
+    {
+     "pointer": "/page_specs/1/source_references/11/source_id",
+     "generated": "SRC-CBY-POS-2025-10",
+     "committed": "SRC-CBY-POS-2025-12",
+     "class": "LEGACY_LAYERING__UNRENDERED",
+     "finding": "PS-LAYER-002"
+    },
+    {
+     "pointer": "/page_specs/1/source_references/11/primary_url",
+     "generated": "https://www.cby-ye.com/files/693a7803952d7.pdf",
+     "committed": "https://www.cby-ye.com/files/69b058981b681.pdf",
+     "class": "LEGACY_LAYERING__UNRENDERED",
+     "finding": "PS-LAYER-002"
+    },
+    {
+     "pointer": "/page_specs/1/source_references/12/source_id",
+     "generated": "SRC-CBY-POS-2025-11",
+     "committed": "SRC-CBY-POS-2026-01",
+     "class": "LEGACY_LAYERING__UNRENDERED",
+     "finding": "PS-LAYER-002"
+    },
+    {
+     "pointer": "/page_specs/1/source_references/12/primary_url",
+     "generated": "https://www.cby-ye.com/files/69b05862c40b6.pdf",
+     "committed": "https://www.cby-ye.com/files/69b058d4bc306.pdf",
+     "class": "LEGACY_LAYERING__UNRENDERED",
+     "finding": "PS-LAYER-002"
+    },
+    {
+     "pointer": "/page_specs/1/source_references/12/datasets_or_use",
+     "generated": "DS-CBY-PAYMENTS",
+     "committed": "DS-CBY-PAYMENTS,DS-PAYMENT-CURRENTNESS",
+     "class": "LEGACY_LAYERING__UNRENDERED",
+     "finding": "PS-LAYER-002"
+    },
+    {
+     "pointer": "/page_specs/1/source_references/12/linked_evidence_object_ids/<len>",
+     "generated": 0,
+     "committed": 2,
+     "class": "LEGACY_LAYERING__UNRENDERED",
+     "finding": "PS-LAYER-002"
+    },
+    {
+     "pointer": "/page_specs/1/source_references/12/linked_claim_ids/<len>",
+     "generated": 5,
+     "committed": 6,
+     "class": "LEGACY_LAYERING__UNRENDERED",
+     "finding": "PS-LAYER-002"
+    },
+    {
+     "pointer": "/page_specs/1/source_references/13/source_id",
+     "generated": "SRC-CBY-POS-2025-12",
+     "committed": "SRC-IBS-EPAY-YEM-2020",
+     "class": "LEGACY_LAYERING__UNRENDERED",
+     "finding": "PS-LAYER-002"
+    },
+    {
+     "pointer": "/page_specs/1/source_references/13/primary_url",
+     "generated": "https://www.cby-ye.com/files/69b058981b681.pdf",
+     "committed": "https://www.findevgateway.org/paper/2020/10/electronic-payment-services-yemen-challenges-and-opportunities-success",
+     "class": "LEGACY_LAYERING__UNRENDERED",
+     "finding": "PS-LAYER-002"
+    },
+    {
+     "pointer": "/page_specs/1/source_references/13/additional_urls",
+     "generated": "[\"https://english.cby-ye.com/pages/27\"]",
+     "committed": "[\"https://www.findevgateway.org/sites/default/files/publications/submissions/78206/%D8%A7%D9%86%D8%AC%D9%84%D9%8A%D8%B2%D9%8A%20%D8%A8%D8%B9%D8%AF%20%D8%A7%D9%84%D8%AA%D8%B9%D8%AF%D9%8A%D9%842.pdf\",\"https://www.findevgateway.org/sites/default/files/publications/submissions/78201/%D8%A7%D9%84%D8%AF%D9%81%D8%B9%20%D8%A7%D9%84%D8%A7%D9%84%D9%83%D8%AA%D8%B1%D9%88%D9%86%D9%8A%D8%A9%20%D9%81%D9%8A%20%D8%A7%D9%84%D9%8A%D9%85%D9%86%20-%20%D8%A7%D9%84%D8%AA%D8%AD%D8%AF%D9%8A%D8%A7%D8%AA%20%D9%88%20%D9%81%D8%B1%D8%B5%20%D8%A7%D9%84%D9%86%D8%AC%D8%A7%D8%AD-1.pdf\"]",
+     "class": "LEGACY_LAYERING__UNRENDERED",
+     "finding": "PS-LAYER-002"
+    },
+    {
+     "pointer": "/page_specs/1/source_references/13/datasets_or_use",
+     "generated": "DS-CBY-PAYMENTS",
+     "committed": "DS-K04-SOURCE-DEEP-INTAKE,DS-K04-LITERATURE-SOURCE-AUDIT,DS-K04-IBS2020-UPSTREAM,DS-K04-IBS2020-RECON",
+     "class": "LEGACY_LAYERING__UNRENDERED",
+     "finding": "PS-LAYER-002"
+    },
+    {
+     "pointer": "/page_specs/1/source_references/13/row_count",
+     "generated": 3,
+     "committed": 4,
+     "class": "LEGACY_LAYERING__UNRENDERED",
+     "finding": "PS-LAYER-002"
+    },
+    {
+     "pointer": "/page_specs/1/source_references/13/linked_evidence_object_ids/<len>",
+     "generated": 0,
+     "committed": 4,
+     "class": "LEGACY_LAYERING__UNRENDERED",
+     "finding": "PS-LAYER-002"
+    },
+    {
+     "pointer": "/page_specs/1/source_references/13/linked_claim_ids/<len>",
+     "generated": 5,
+     "committed": 3,
+     "class": "LEGACY_LAYERING__UNRENDERED",
+     "finding": "PS-LAYER-002"
+    },
+    {
+     "pointer": "/page_specs/1/source_references/13/linked_claim_ids/0",
+     "generated": "CLM-003",
+     "committed": "CLM-050",
+     "class": "LEGACY_LAYERING__UNRENDERED",
+     "finding": "PS-LAYER-002"
+    },
+    {
+     "pointer": "/page_specs/1/source_references/13/linked_claim_ids/1",
+     "generated": "CLM-004",
+     "committed": "CLM-051",
+     "class": "LEGACY_LAYERING__UNRENDERED",
+     "finding": "PS-LAYER-002"
+    },
+    {
+     "pointer": "/page_specs/1/source_references/13/linked_claim_ids/2",
+     "generated": "CLM-010",
+     "committed": "CLM-052",
+     "class": "LEGACY_LAYERING__UNRENDERED",
+     "finding": "PS-LAYER-002"
+    },
+    {
+     "pointer": "/page_specs/1/source_references/13/linked_reading_ids/<len>",
+     "generated": 3,
+     "committed": 1,
+     "class": "LEGACY_LAYERING__UNRENDERED",
+     "finding": "PS-LAYER-002"
+    },
+    {
+     "pointer": "/page_specs/1/source_references/13/linked_reading_ids/0",
+     "generated": "CWR-003",
+     "committed": "CWR-005",
+     "class": "LEGACY_LAYERING__UNRENDERED",
+     "finding": "PS-LAYER-002"
+    },
+    {
+     "pointer": "/page_specs/1/source_references/13/linked_visual_ids/<len>",
+     "generated": 6,
+     "committed": 2,
+     "class": "LEGACY_LAYERING__UNRENDERED",
+     "finding": "PS-LAYER-002"
+    },
+    {
+     "pointer": "/page_specs/1/source_references/13/linked_visual_ids/0",
+     "generated": "RV-CWR-003",
+     "committed": "RV-CWR-005",
+     "class": "LEGACY_LAYERING__UNRENDERED",
+     "finding": "PS-LAYER-002"
+    },
+    {
+     "pointer": "/page_specs/1/source_references/13/linked_visual_ids/1",
+     "generated": "RV-CWR-004",
+     "committed": "VIS-EVIDENCE-CLASS-LADDER",
+     "class": "LEGACY_LAYERING__UNRENDERED",
+     "finding": "PS-LAYER-002"
+    },
+    {
+     "pointer": "/page_specs/1/numeric_strings_in_governed_copy/<len>",
+     "generated": 132,
+     "committed": 108,
+     "class": "LEGACY_LAYERING__UNRENDERED",
+     "finding": "PS-LAYER-001"
+    },
+    {
+     "pointer": "/page_specs/1/numeric_strings_in_governed_copy/4/token",
+     "generated": "2025",
+     "committed": "1,357",
+     "class": "LEGACY_LAYERING__UNRENDERED",
+     "finding": "PS-LAYER-001"
+    },
+    {
+     "pointer": "/page_specs/1/numeric_strings_in_governed_copy/5/token",
+     "generated": "1,357",
+     "committed": "8.55%",
+     "class": "LEGACY_LAYERING__UNRENDERED",
+     "finding": "PS-LAYER-001"
+    },
+    {
+     "pointer": "/page_specs/1/numeric_strings_in_governed_copy/6/token",
+     "generated": "2026",
+     "committed": "+11%",
+     "class": "LEGACY_LAYERING__UNRENDERED",
+     "finding": "PS-LAYER-001"
+    },
+    {
+     "pointer": "/page_specs/1/numeric_strings_in_governed_copy/7/field",
+     "generated": "copy_en",
+     "committed": "copy_ar",
+     "class": "LEGACY_LAYERING__UNRENDERED",
+     "finding": "PS-LAYER-001"
+    },
+    {
+     "pointer": "/page_specs/1/numeric_strings_in_governed_copy/7/token",
+     "generated": "1,473",
+     "committed": "561",
+     "class": "LEGACY_LAYERING__UNRENDERED",
+     "finding": "PS-LAYER-001"
+    },
+    {
+     "pointer": "/page_specs/1/numeric_strings_in_governed_copy/7/context",
+     "generated": "CBY-reported POS terminals increased from 561 in March 2025 to 1,473 in January 2026. From December 2025 (1,357) to January 2026 (1,473), the reported totals imply about 8.55% growth, while the January source graphic displays +11%. The product preserves both as a source-internal discrepancy rather than silently choosing one.",
+     "committed": "ارتفع عدد أجهزة نقاط البيع المبلغ عنه من البنك المركزي من 561 في مارس 2025 إلى 1,473 في يناير 2026. وبين ديسمبر 2025 (1,357) ويناير 2026 (1,473) تعطي الأرقام المنشورة نموًا حسابيًا يقارب 8.55%، بينما يعرض الرسم المصدر نسبة +11%. تُبقي المنظومة القيمتين ظاهرتين بوصفهما اختلافًا داخل المصدر نفسه بدل اختيار إحداهما بصمت.",
+     "class": "LEGACY_LAYERING__UNRENDERED",
+     "finding": "PS-LAYER-001"
+    },
+    {
+     "pointer": "/page_specs/1/numeric_strings_in_governed_copy/8/field",
+     "generated": "copy_en",
+     "committed": "copy_ar",
+     "class": "LEGACY_LAYERING__UNRENDERED",
+     "finding": "PS-LAYER-001"
+    },
+    {
+     "pointer": "/page_specs/1/numeric_strings_in_governed_copy/8/token",
+     "generated": "8.55%",
+     "committed": "2025",
+     "class": "LEGACY_LAYERING__UNRENDERED",
+     "finding": "PS-LAYER-001"
+    },
+    {
+     "pointer": "/page_specs/1/numeric_strings_in_governed_copy/8/context",
+     "generated": "CBY-reported POS terminals increased from 561 in March 2025 to 1,473 in January 2026. From December 2025 (1,357) to January 2026 (1,473), the reported totals imply about 8.55% growth, while the January source graphic displays +11%. The product preserves both as a source-internal discrepancy rather than silently choosing one.",
+     "committed": "ارتفع عدد أجهزة نقاط البيع المبلغ عنه من البنك المركزي من 561 في مارس 2025 إلى 1,473 في يناير 2026. وبين ديسمبر 2025 (1,357) ويناير 2026 (1,473) تعطي الأرقام المنشورة نموًا حسابيًا يقارب 8.55%، بينما يعرض الرسم المصدر نسبة +11%. تُبقي المنظومة القيمتين ظاهرتين بوصفهما اختلافًا داخل المصدر نفسه بدل اختيار إحداهما بصمت.",
+     "class": "LEGACY_LAYERING__UNRENDERED",
+     "finding": "PS-LAYER-001"
+    },
+    {
+     "pointer": "/page_specs/1/numeric_strings_in_governed_copy/9/field",
+     "generated": "copy_en",
+     "committed": "copy_ar",
+     "class": "LEGACY_LAYERING__UNRENDERED",
+     "finding": "PS-LAYER-001"
+    },
+    {
+     "pointer": "/page_specs/1/numeric_strings_in_governed_copy/9/token",
+     "generated": "+11%",
+     "committed": "1,473",
+     "class": "LEGACY_LAYERING__UNRENDERED",
+     "finding": "PS-LAYER-001"
+    },
+    {
+     "pointer": "/page_specs/1/numeric_strings_in_governed_copy/9/context",
+     "generated": "CBY-reported POS terminals increased from 561 in March 2025 to 1,473 in January 2026. From December 2025 (1,357) to January 2026 (1,473), the reported totals imply about 8.55% growth, while the January source graphic displays +11%. The product preserves both as a source-internal discrepancy rather than silently choosing one.",
+     "committed": "ارتفع عدد أجهزة نقاط البيع المبلغ عنه من البنك المركزي من 561 في مارس 2025 إلى 1,473 في يناير 2026. وبين ديسمبر 2025 (1,357) ويناير 2026 (1,473) تعطي الأرقام المنشورة نموًا حسابيًا يقارب 8.55%، بينما يعرض الرسم المصدر نسبة +11%. تُبقي المنظومة القيمتين ظاهرتين بوصفهما اختلافًا داخل المصدر نفسه بدل اختيار إحداهما بصمت.",
+     "class": "LEGACY_LAYERING__UNRENDERED",
+     "finding": "PS-LAYER-001"
+    },
+    {
+     "pointer": "/page_specs/1/numeric_strings_in_governed_copy/10/token",
+     "generated": "561",
+     "committed": "2026",
+     "class": "LEGACY_LAYERING__UNRENDERED",
+     "finding": "PS-LAYER-001"
+    },
+    {
+     "pointer": "/page_specs/1/numeric_strings_in_governed_copy/11/token",
+     "generated": "2025",
+     "committed": "1,357",
+     "class": "LEGACY_LAYERING__UNRENDERED",
+     "finding": "PS-LAYER-001"
+    },
+    {
+     "pointer": "/page_specs/1/numeric_strings_in_governed_copy/12/token",
+     "generated": "1,473",
+     "committed": "8.55%",
+     "class": "LEGACY_LAYERING__UNRENDERED",
+     "finding": "PS-LAYER-001"
+    },
+    {
+     "pointer": "/page_specs/1/numeric_strings_in_governed_copy/13/token",
+     "generated": "2026",
+     "committed": "+11%",
+     "class": "LEGACY_LAYERING__UNRENDERED",
+     "finding": "PS-LAYER-001"
+    },
+    {
+     "pointer": "/page_specs/1/numeric_strings_in_governed_copy/14/field",
+     "generated": "copy_ar",
+     "committed": "does_not_prove_en",
+     "class": "LEGACY_LAYERING__UNRENDERED",
+     "finding": "PS-LAYER-001"
+    },
+    {
+     "pointer": "/page_specs/1/numeric_strings_in_governed_copy/14/context",
+     "generated": "ارتفع عدد أجهزة نقاط البيع المبلغ عنه من البنك المركزي من 561 في مارس 2025 إلى 1,473 في يناير 2026. وبين ديسمبر 2025 (1,357) ويناير 2026 (1,473) تعطي الأرقام المنشورة نموًا حسابيًا يقارب 8.55%، بينما يعرض الرسم المصدر نسبة +11%. تُبقي المنظومة القيمتين ظاهرتين بوصفهما اختلافًا داخل المصدر نفسه بدل اختيار إحداهما بصمت.",
+     "committed": "Do not call terminal growth an inclusion rate, merchant adoption or unique-user growth. The terminal series itself contains a smaller June 2025 source-internal percentage mismatch, and January 2026 contains material discrepancies between displayed growth percentages and the raw terminal and transaction totals. The September 2025 gap applies to the YER transaction-value series, not to the terminal count.",
+     "class": "LEGACY_LAYERING__UNRENDERED",
+     "finding": "PS-LAYER-001"
+    },
+    {
+     "pointer": "/page_specs/1/numeric_strings_in_governed_copy/15/field",
+     "generated": "copy_ar",
+     "committed": "does_not_prove_en",
+     "class": "LEGACY_LAYERING__UNRENDERED",
+     "finding": "PS-LAYER-001"
+    },
+    {
+     "pointer": "/page_specs/1/numeric_strings_in_governed_copy/15/token",
+     "generated": "1,357",
+     "committed": "2026",
+     "class": "LEGACY_LAYERING__UNRENDERED",
+     "finding": "PS-LAYER-001"
+    },
+    {
+     "pointer": "/page_specs/1/numeric_strings_in_governed_copy/15/context",
+     "generated": "ارتفع عدد أجهزة نقاط البيع المبلغ عنه من البنك المركزي من 561 في مارس 2025 إلى 1,473 في يناير 2026. وبين ديسمبر 2025 (1,357) ويناير 2026 (1,473) تعطي الأرقام المنشورة نموًا حسابيًا يقارب 8.55%، بينما يعرض الرسم المصدر نسبة +11%. تُبقي المنظومة القيمتين ظاهرتين بوصفهما اختلافًا داخل المصدر نفسه بدل اختيار إحداهما بصمت.",
+     "committed": "Do not call terminal growth an inclusion rate, merchant adoption or unique-user growth. The terminal series itself contains a smaller June 2025 source-internal percentage mismatch, and January 2026 contains material discrepancies between displayed growth percentages and the raw terminal and transaction totals. The September 2025 gap applies to the YER transaction-value series, not to the terminal count.",
+     "class": "LEGACY_LAYERING__UNRENDERED",
+     "finding": "PS-LAYER-001"
+    },
+    {
+     "pointer": "/page_specs/1/numeric_strings_in_governed_copy/16/field",
+     "generated": "copy_ar",
+     "committed": "does_not_prove_ar",
+     "class": "LEGACY_LAYERING__UNRENDERED",
+     "finding": "PS-LAYER-001"
+    },
+    {
+     "pointer": "/page_specs/1/numeric_strings_in_governed_copy/16/token",
+     "generated": "2026",
+     "committed": "2025",
+     "class": "LEGACY_LAYERING__UNRENDERED",
+     "finding": "PS-LAYER-001"
+    },
+    {
+     "pointer": "/page_specs/1/numeric_strings_in_governed_copy/16/context",
+     "generated": "ارتفع عدد أجهزة نقاط البيع المبلغ عنه من البنك المركزي من 561 في مارس 2025 إلى 1,473 في يناير 2026. وبين ديسمبر 2025 (1,357) ويناير 2026 (1,473) تعطي الأرقام المنشورة نموًا حسابيًا يقارب 8.55%، بينما يعرض الرسم المصدر نسبة +11%. تُبقي المنظومة القيمتين ظاهرتين بوصفهما اختلافًا داخل المصدر نفسه بدل اختيار إحداهما بصمت.",
+     "committed": "لا يجوز تفسير نمو عدد أجهزة نقاط البيع بوصفه معدل شمول مالي أو تبنيًا من التجار أو نموًا في عدد المستخدمين الفريدين. وتوجد في سلسلة الأجهزة نفسها حالة اختلاف أصغر في نسبة يونيو 2025، كما توجد في يناير 2026 فروق مادية بين بعض نسب النمو المعروضة والإجماليات الخام للأجهزة والمعاملات. أما فجوة سبتمبر 2025 فتخص سلسلة قيمة المعاملات بالريال اليمني، لا عدد الأجهزة.",
+     "class": "LEGACY_LAYERING__UNRENDERED",
+     "finding": "PS-LAYER-001"
+    },
+    {
+     "pointer": "/page_specs/1/numeric_strings_in_governed_copy/17/field",
+     "generated": "copy_ar",
+     "committed": "does_not_prove_ar",
+     "class": "LEGACY_LAYERING__UNRENDERED",
+     "finding": "PS-LAYER-001"
+    },
+    {
+     "pointer": "/page_specs/1/numeric_strings_in_governed_copy/17/token",
+     "generated": "1,473",
+     "committed": "2026",
+     "class": "LEGACY_LAYERING__UNRENDERED",
+     "finding": "PS-LAYER-001"
+    },
+    {
+     "pointer": "/page_specs/1/numeric_strings_in_governed_copy/17/context",
+     "generated": "ارتفع عدد أجهزة نقاط البيع المبلغ عنه من البنك المركزي من 561 في مارس 2025 إلى 1,473 في يناير 2026. وبين ديسمبر 2025 (1,357) ويناير 2026 (1,473) تعطي الأرقام المنشورة نموًا حسابيًا يقارب 8.55%، بينما يعرض الرسم المصدر نسبة +11%. تُبقي المنظومة القيمتين ظاهرتين بوصفهما اختلافًا داخل المصدر نفسه بدل اختيار إحداهما بصمت.",
+     "committed": "لا يجوز تفسير نمو عدد أجهزة نقاط البيع بوصفه معدل شمول مالي أو تبنيًا من التجار أو نموًا في عدد المستخدمين الفريدين. وتوجد في سلسلة الأجهزة نفسها حالة اختلاف أصغر في نسبة يونيو 2025، كما توجد في يناير 2026 فروق مادية بين بعض نسب النمو المعروضة والإجماليات الخام للأجهزة والمعاملات. أما فجوة سبتمبر 2025 فتخص سلسلة قيمة المعاملات بالريال اليمني، لا عدد الأجهزة.",
+     "class": "LEGACY_LAYERING__UNRENDERED",
+     "finding": "PS-LAYER-001"
+    },
+    {
+     "pointer": "/page_specs/1/numeric_strings_in_governed_copy/18/source_object",
+     "generated": "CLM-003",
+     "committed": "CLM-050",
+     "class": "LEGACY_LAYERING__UNRENDERED",
+     "finding": "PS-LAYER-001"
+    },
+    {
+     "pointer": "/page_specs/1/numeric_strings_in_governed_copy/18/field",
+     "generated": "copy_ar",
+     "committed": "headline_en",
+     "class": "LEGACY_LAYERING__UNRENDERED",
+     "finding": "PS-LAYER-001"
+    },
+    {
+     "pointer": "/page_specs/1/numeric_strings_in_governed_copy/18/token",
+     "generated": "8.55%",
+     "committed": "807,919",
+     "class": "LEGACY_LAYERING__UNRENDERED",
+     "finding": "PS-LAYER-001"
+    },
+    {
+     "pointer": "/page_specs/1/numeric_strings_in_governed_copy/18/context",
+     "generated": "ارتفع عدد أجهزة نقاط البيع المبلغ عنه من البنك المركزي من 561 في مارس 2025 إلى 1,473 في يناير 2026. وبين ديسمبر 2025 (1,357) ويناير 2026 (1,473) تعطي الأرقام المنشورة نموًا حسابيًا يقارب 8.55%، بينما يعرض الرسم المصدر نسبة +11%. تُبقي المنظومة القيمتين ظاهرتين بوصفهما اختلافًا داخل المصدر نفسه بدل اختيار إحداهما بصمت.",
+     "committed": "807,919 accounts did not mean 807,919 active people",
+     "class": "LEGACY_LAYERING__UNRENDERED",
+     "finding": "PS-LAYER-001"
+    },
+    {
+     "pointer": "/page_specs/1/numeric_strings_in_governed_copy/19/source_object",
+     "generated": "CLM-003",
+     "committed": "CLM-050",
+     "class": "LEGACY_LAYERING__UNRENDERED",
+     "finding": "PS-LAYER-001"
+    },
+    {
+     "pointer": "/page_specs/1/numeric_strings_in_governed_copy/19/field",
+     "generated": "copy_ar",
+     "committed": "headline_ar",
+     "class": "LEGACY_LAYERING__UNRENDERED",
+     "finding": "PS-LAYER-001"
+    },
+    {
+     "pointer": "/page_specs/1/numeric_strings_in_governed_copy/19/token",
+     "generated": "+11%",
+     "committed": "807,919",
+     "class": "LEGACY_LAYERING__UNRENDERED",
+     "finding": "PS-LAYER-001"
+    },
+    {
+     "pointer": "/page_specs/1/numeric_strings_in_governed_copy/19/context",
+     "generated": "ارتفع عدد أجهزة نقاط البيع المبلغ عنه من البنك المركزي من 561 في مارس 2025 إلى 1,473 في يناير 2026. وبين ديسمبر 2025 (1,357) ويناير 2026 (1,473) تعطي الأرقام المنشورة نموًا حسابيًا يقارب 8.55%، بينما يعرض الرسم المصدر نسبة +11%. تُبقي المنظومة القيمتين ظاهرتين بوصفهما اختلافًا داخل المصدر نفسه بدل اختيار إحداهما بصمت.",
+     "committed": "807,919 حسابًا لا تعني 807,919 شخصًا نشطًا",
+     "class": "LEGACY_LAYERING__UNRENDERED",
+     "finding": "PS-LAYER-001"
+    },
+    {
+     "pointer": "/page_specs/1/numeric_strings_in_governed_copy/20/source_object",
+     "generated": "CLM-003",
+     "committed": "CLM-050",
+     "class": "LEGACY_LAYERING__UNRENDERED",
+     "finding": "PS-LAYER-001"
+    },
+    {
+     "pointer": "/page_specs/1/numeric_strings_in_governed_copy/20/field",
+     "generated": "does_not_prove_en",
+     "committed": "copy_en",
+     "class": "LEGACY_LAYERING__UNRENDERED",
+     "finding": "PS-LAYER-001"
+    },
+    {
+     "pointer": "/page_specs/1/numeric_strings_in_governed_copy/20/token",
+     "generated": "2025",
+     "committed": "807,919",
+     "class": "LEGACY_LAYERING__UNRENDERED",
+     "finding": "PS-LAYER-001"
+    },
+    {
+     "pointer": "/page_specs/1/numeric_strings_in_governed_copy/20/context",
+     "generated": "Do not call terminal growth an inclusion rate, merchant adoption or unique-user growth. The terminal series itself contains a smaller June 2025 source-internal percentage mismatch, and January 2026 contains material discrepancies between displayed growth percentages and the raw terminal and transaction totals. The September 2025 gap applies to the YER transaction-value series, not to the terminal count.",
+     "committed": "Within the IBS five-provider study universe, electronic-money accounts reached 807,919 in December 2019. The same source reports an average 23% dormant/inactive share and notes that some accounts were used once or because circumstances imposed their use. Registered accounts therefore cannot be read as active or durable inclusion.",
+     "class": "LEGACY_LAYERING__UNRENDERED",
+     "finding": "PS-LAYER-001"
+    },
+    {
+     "pointer": "/page_specs/1/numeric_strings_in_governed_copy/21/source_object",
+     "generated": "CLM-003",
+     "committed": "CLM-050",
+     "class": "LEGACY_LAYERING__UNRENDERED",
+     "finding": "PS-LAYER-001"
+    },
+    {
+     "pointer": "/page_specs/1/numeric_strings_in_governed_copy/21/field",
+     "generated": "does_not_prove_en",
+     "committed": "copy_en",
+     "class": "LEGACY_LAYERING__UNRENDERED",
+     "finding": "PS-LAYER-001"
+    },
+    {
+     "pointer": "/page_specs/1/numeric_strings_in_governed_copy/21/token",
+     "generated": "2026",
+     "committed": "2019",
+     "class": "LEGACY_LAYERING__UNRENDERED",
+     "finding": "PS-LAYER-001"
+    },
+    {
+     "pointer": "/page_specs/1/numeric_strings_in_governed_copy/21/context",
+     "generated": "Do not call terminal growth an inclusion rate, merchant adoption or unique-user growth. The terminal series itself contains a smaller June 2025 source-internal percentage mismatch, and January 2026 contains material discrepancies between displayed growth percentages and the raw terminal and transaction totals. The September 2025 gap applies to the YER transaction-value series, not to the terminal count.",
+     "committed": "Within the IBS five-provider study universe, electronic-money accounts reached 807,919 in December 2019. The same source reports an average 23% dormant/inactive share and notes that some accounts were used once or because circumstances imposed their use. Registered accounts therefore cannot be read as active or durable inclusion.",
+     "class": "LEGACY_LAYERING__UNRENDERED",
+     "finding": "PS-LAYER-001"
+    },
+    {
+     "pointer": "/page_specs/1/numeric_strings_in_governed_copy/22/source_object",
+     "generated": "CLM-003",
+     "committed": "CLM-050",
+     "class": "LEGACY_LAYERING__UNRENDERED",
+     "finding": "PS-LAYER-001"
+    },
+    {
+     "pointer": "/page_specs/1/numeric_strings_in_governed_copy/22/field",
+     "generated": "does_not_prove_en",
+     "committed": "copy_en",
+     "class": "LEGACY_LAYERING__UNRENDERED",
+     "finding": "PS-LAYER-001"
+    },
+    {
+     "pointer": "/page_specs/1/numeric_strings_in_governed_copy/22/token",
+     "generated": "2025",
+     "committed": "23%",
+     "class": "LEGACY_LAYERING__UNRENDERED",
+     "finding": "PS-LAYER-001"
+    },
+    {
+     "pointer": "/page_specs/1/numeric_strings_in_governed_copy/22/context",
+     "generated": "Do not call terminal growth an inclusion rate, merchant adoption or unique-user growth. The terminal series itself contains a smaller June 2025 source-internal percentage mismatch, and January 2026 contains material discrepancies between displayed growth percentages and the raw terminal and transaction totals. The September 2025 gap applies to the YER transaction-value series, not to the terminal count.",
+     "committed": "Within the IBS five-provider study universe, electronic-money accounts reached 807,919 in December 2019. The same source reports an average 23% dormant/inactive share and notes that some accounts were used once or because circumstances imposed their use. Registered accounts therefore cannot be read as active or durable inclusion.",
+     "class": "LEGACY_LAYERING__UNRENDERED",
+     "finding": "PS-LAYER-001"
+    }
+   ]
+  },
+  "content/navigation_interaction.json": {
+   "status": "DIFFERENT",
+   "difference_count": 1,
+   "unexplained": 0,
+   "differences_summary": [
+    {
+     "class": "DERIVED_HASH",
+     "finding": "REBIND",
+     "count": 1
+    }
+   ],
+   "differences": [
+    {
+     "pointer": "/authority_binding/page_specs_sha256",
+     "generated": "a637f809c720348eee78c37404d7a1c80af7971fd9de9095947b3d9c931e6d15",
+     "committed": "ff2b0f559cde5fede3fe31d7dfb2539a00921e8b00b816c2863790cd9de49007",
+     "class": "DERIVED_HASH",
+     "finding": "REBIND"
+    }
+   ]
+  },
+  "presentation_priority.json": {
+   "status": "BYTE_IDENTICAL"
+  }
+ }
+}

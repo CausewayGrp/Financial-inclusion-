@@ -1,0 +1,91 @@
+{
+  "schema_version": "1.0",
+  "contract_id": "PUBLIC-INVENTORY-COUNTS",
+  "introduced_by": "Pre-Tranche-C P1.2",
+  "rule": "A repository inventory count is never typed into public copy. Master copy may carry a token {{n:<key>}}; the generator replaces it with the count derived from the named projection, and raises an error for an unknown key, a key not cleared for public display, or any template token left unresolved. Arabic copy uses label-value form ('label: N') so that no counted-noun agreement depends on the number.",
+  "token_pattern": "\\{\\{n:([a-z_]+)\\}\\}",
+  "unresolved_token_pattern": "\\{\\{[^{}]*\\}\\}|\\{[A-Z][A-Z0-9_]{1,40}\\}",
+  "number_format": "Western digits with a comma thousands separator in both languages (the product's numeral convention).",
+  "counts": {
+    "evidence_records": {
+      "projection": "evidence/evidence_objects.json",
+      "rule": "count_records",
+      "public_token": true,
+      "definition_en": "Public Evidence Records (06_EVIDENCE_OBJECTS), each with its own page."
+    },
+    "public_claims": {
+      "projection": "evidence/public_claims.json",
+      "rule": "count_records",
+      "public_token": true,
+      "definition_en": "Public claims (07_PUBLIC_CLAIMS); every claim is also an Evidence Record."
+    },
+    "chronology_events": {
+      "projection": "visuals/system_chronology.json",
+      "rule": "count_records",
+      "public_token": true,
+      "definition_en": "Dated events in the system chronology (14_SYSTEM_CHRONOLOGY)."
+    },
+    "sources": {
+      "projection": "sources/source_library.json",
+      "rule": "count_records",
+      "public_token": true,
+      "definition_en": "Registered source records (15_SOURCE_LIBRARY)."
+    },
+    "public_locators": {
+      "projection": "sources/source_reference_map.json",
+      "rule": "count_where_http_primary_url",
+      "field": "primary_url",
+      "public_token": true,
+      "definition_en": "Source records whose primary URL is a public http(s) locator (EXF-001)."
+    },
+    "curated_resources": {
+      "projection": "sources/source_reference_map.json",
+      "rule": "count_where_true",
+      "field": "standalone_resource_card_eligible",
+      "public_token": true,
+      "definition_en": "Source records that carry a full public resource card."
+    },
+    "readings": {
+      "projection": "content/readings.json",
+      "rule": "count_records",
+      "public_token": true,
+      "definition_en": "Evidence Readings (08_READINGS)."
+    },
+    "measurement_priorities": {
+      "projection": "content/measurement_agenda.json",
+      "rule": "count_records",
+      "public_token": true,
+      "definition_en": "Measurement Agenda priorities (10_MEASUREMENT_AGENDA)."
+    },
+    "entry_questions": {
+      "projection": "content/questions.json",
+      "rule": "count_records",
+      "public_token": true,
+      "definition_en": "Governed entry questions (05_QUESTIONS)."
+    },
+    "visual_contracts": {
+      "projection": "visuals/visual_library.json",
+      "rule": "count_records",
+      "public_token": false,
+      "definition_en": "Governed visual contracts (11_VISUAL_LIBRARY). Handoff fact; not displayed as a public count."
+    },
+    "evidence_passports": {
+      "projection": "evidence/evidence_passports.json",
+      "rule": "count_records",
+      "public_token": false,
+      "definition_en": "Evidence Passports (34_EVIDENCE_PASSPORTS). Handoff fact."
+    },
+    "search_records": {
+      "projection": "content/search_index.json",
+      "rule": "count_records",
+      "public_token": false,
+      "definition_en": "Public search index records. Handoff fact."
+    },
+    "page_specs": {
+      "projection": "page_specs.json",
+      "rule": "spec_count",
+      "public_token": false,
+      "definition_en": "Page Specs (one per public route); the build writes one HTML page per spec and language."
+    }
+  }
+}

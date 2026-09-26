@@ -1,0 +1,8 @@
+{
+ "schema": "YFI_CONTROLLED_INPUT/1.0",
+ "input_id": "source_reference_templates",
+ "authority_class": "CONTROLLED_TEMPLATE__NOT_MASTER_OWNED",
+ "rights_display_state": "OBJECT_LEVEL_OR_UNSPECIFIED",
+ "citation_behavior": "Use the original locator and object-level controlled citation/source text; do not infer missing bibliographic or rights metadata.",
+ "rule": "DISPLAY_READY fields come only from the Production Master. LOCATOR_ONLY preserves the locator without inventing missing bibliography or rights metadata."
+}
