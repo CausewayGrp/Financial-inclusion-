@@ -2,6 +2,7 @@
   "schema_version": "1.0",
   "authority_scope": "PRESENTATION_DEPTH_ONLY",
   "semantic_authority": "Production Master via frozen Page Specs; this contract cannot alter facts, claims, units, universes, periods, sources, rights, evidence class or publication state.",
+  "maintenance_rule": "Hand-maintained controlled contract (class CONTROLLED_CONTRACT in FINAL_REPOSITORY_MANIFEST.json), not generated from the Master. Only the programme steward changes it, directly in this file, in a commit that states the finding it closes; the generator validates every section and visual it names and scripts/validate.py checks the rendered depth. Claude Design and Claude Code never edit it: they escalate.",
   "page_families_supported": [
     "Orientation",
     "Domain Answer",
@@ -732,7 +733,7 @@
       ],
       "primary_verify_destination": "/evidence/CLM-007/",
       "presentation_family": "macro-vintage-concept",
-      "measurement_limit": 0
+      "measurement_limit": 1
     },
     {
       "route": "/providers/",
@@ -1102,6 +1103,7 @@
   },
   "p1_3_band_rule": "Pre-Tranche-C P1.3: supporting (the always-visible boundary band), primary and progressive section tiers are disjoint and together cover every non-lead section; a band section renders once, in full, under its own governed heading.",
   "tranche_c_notes": [
-    "JRN-22: /payments/ historical e-money section and /reforms/ rule-versus-implementation section move to the primary tier; they hold the only answer to part of the governed question."
+    "JRN-22: /payments/ historical e-money section and /reforms/ rule-versus-implementation section move to the primary tier; they hold the only answer to part of the governed question.",
+    "OWN-07 (27 Sep 2026): /remittances/ shows one Measurement card. Its Page Spec binds MA-001 (the people-side baseline, which since Tranche B names household remittance receipt, channel and frequency as missing evidence); the page's macro remittance series answer a different question, which the card's own text keeps separate."
   ]
 }

@@ -5,7 +5,8 @@ and who owns it. **There are zero `DESIGN_BLOCKER` items**: each item below is e
 affects, part of the scope Design and Code already receive, or needed only for public release.
 
 - **State:** final at the R8.6 clean-room acceptance (directive D7 §F9), 26 September 2026 (full authority hashes in
-  `README.md`). Built in F8; F9 added what the cold-recipient test found. Later changes are appended, never rewritten.
+  `README.md`). Built in F8; F9 added what the cold-recipient test found; the post-F9 correction of 27 September 2026
+  closed OWN-07 and OWN-08 (section 8). Later changes are appended, never rewritten.
 - **Built from:** a sweep of every audit record that left an item open, deferred, held, carried or release-only (Tranche A
   and B queues, P1–P5, Tranche C, F3, F5, F6, F7), checked against the current repository bytes; 36 items were still
   open, 23 had been closed or superseded later (section 8). F9's three cold-recipient runs (fresh agents with only the
@@ -24,7 +25,7 @@ affects, part of the scope Design and Code already receive, or needed only for p
 | RELEASE_ONLY | 4 |
 | EXTERNAL_EVIDENCE_DEPENDENCY | 11 |
 | KNOWN_EVIDENCE_FRONTIER | 8 |
-| OWNER_INPUT | 8 |
+| OWNER_INPUT | 6 |
 | REJECTED / NO ACTION | 7 |
 | **DESIGN_BLOCKER** | **0** |
 
@@ -94,11 +95,9 @@ must never fill them with an estimate, a proxy or a colour.
 | OWN-01 | Who CauseWay is for this resource, who funds or commissioned it, and its relationships with the institutions whose data it presents | `/about/` states CauseWay's role only | Nothing is invented; the About page keeps its current statement (TRUST-09) |
 | OWN-02 | Confirmation that `office@causewaygrp.com` is monitored | `/contact/` names it as the monitored channel | Confirm before release, or change the governed text Master-first |
 | OWN-03 | The public origin (`site-src/deployment.json` `public_origin`) | Build is marked not for indexing; no sitemap is written | When set, URLs become absolute, the sitemap is written and robots allows crawling — nothing else changes (`docs/DEPLOYMENT.md`) |
-| OWN-04 | A reuse licence for CauseWay content (and, separately, for the code) | No licence file; downloads are designed in disabled and enabled states and do not ship | Downloads of CauseWay-generated files ship only after this decision |
+| OWN-04 | A reuse licence for CauseWay content (and, separately, for the code) | No licence file; downloads and exports (a record's fields, a chart's data table or framed image, a citation file, a Reading as a hosted PDF) are designed in disabled and enabled states and ship disabled | They ship only after this decision; the browser's own print and save-as-PDF of a page are not downloads and are always available |
 | OWN-05 | Stewardship decisions: maintenance resourcing, an analytics policy (none exists; no analytics ship), Digital Public Good gaps | `handoff/SUPPORT_AND_PARTNERSHIP_READINESS.md` (non-public) | Nothing public depends on it |
 | OWN-06 | A reversed (light-on-dark) logo, only if the design needs one | Not requested yet | Design places the canonical logo on a light field; no derived variant is made (EAD-04) |
-| OWN-07 | `/remittances/` shows no Measurement card although its Page Spec and the route inventory bind MA-001 (Tranche B bound MA-001 to give the route a measurement node): the reference build's presentation-depth contract sets `measurement_limit` 0 for this route only (the other seven domain routes use 2). The file is `site-src/content/presentation_priority.json`, a hand-maintained presentation contract that the repository manifest lists with the generated projections, which agents do not edit | `/remittances/` in the reference build; `handoff/ROUTE_CONTENT_AND_STATE_INVENTORY.json` lists MA-001 | The maintainer decides whether to raise the limit to 1 (S03.3 set it to 0 when the route had no bound priority, before Tranche B bound MA-001) and how that file is classified; Design follows the contract as it stands and makes the Measurement slot collapse cleanly at 0 (brief §2) |
-| OWN-08 | Descriptive fields in `site-src/content/content/navigation_interaction.json` (hand-maintained) that disagree with governed copy or tested behaviour: `utilities.report_issue` (route `/corrections/`, «الإبلاغ عن مشكلة») vs the tested `/contact/?record=` and the governed «أبلغ عن مشكلة»; `breadcrumbs.Reading` (stable ID) vs the rendered governed title (decision PID-1); `interaction_tools.compare` (lists geography and unit) vs the six governed dimensions; two `hard_state_acceptance` sentences (`verification_sparse` "no source expected" on CLM-015, which has a source; `institutional_sequence` "interoperability" on `/payments/`, which carries no such state); `vintage_conflict` asks `/remittances/` for same-year revisions, which only the linked Reading draws; `interaction_tools.evidence_workbench` lists the non-public Evidence Passports as an input and allows add-to-Compare beyond the 13 comparable records; journey J10's path runs record → Corrections → Contact, while the tested path is record → Contact → Corrections. Like `presentation_priority.json`, the file is maintained in place but listed with the generated projections | The rendered baseline follows governed copy and the tests | The maintainer corrects these fields and decides how the two contracts are classified and edited; until then the Design brief §2 precedence table and §9.2 say exactly what to design to |
 
 ## 6. REJECTED / NO ACTION
 
@@ -156,6 +155,13 @@ explicit rule before the next.
 | `visuals/system_relationships.json` was classed as a render input although its prose is English-only (F9 run 3) | F9: inventory role STRUCTURE — IDs and links only |
 | From an extracted archive, a locally built `design/reference/out/` would have entered the checksum and file manifests (F9 run 2) | F9: `scripts/checksums.py` honours `.gitignore` when there is no `.git`; the manifest and validator use the same file set |
 | Navigation relabel and domain pages without Readings (Tranche A) | Tranche B Stage 4; gate RP-G04 |
+
+### Closed by the post-F9 correction (27 September 2026)
+
+| Item | Closed by |
+|---|---|
+| OWN-07 — `/remittances/` showed no Measurement card although its Page Spec binds MA-001 | `site-src/content/presentation_priority.json`: `measurement_limit` 1 for `/remittances/`; the MA-001 card (people-side baseline; household remittance receipt as missing evidence) now renders in both languages beside, and distinct from, the macro remittance series. The two hand-maintained contracts are now classed `CONTROLLED_CONTRACT` in `FINAL_REPOSITORY_MANIFEST.json`, with their maintenance rule in the file itself, `AGENTS.md` rule 2 and `CONTRIBUTING.md` §2 |
+| OWN-08 — stale descriptive fields in `navigation_interaction.json` | Corrected against governed copy, the Page Specs and the tests: the report-issue route (`/contact/`, `?record=`) and Arabic label («أبلغ عن مشكلة», `UI-HEADER-REPORT-AN-ISSUE`); the Reading breadcrumb (governed title); the six Compare dimensions, four assessments, same-record state and comparable set; the workbench inputs (Evidence Passports removed — they stay reference only) and its add-to-Compare limit; the `verification_sparse` case (now the framing record CLM-004), `institutional_sequence` and `vintage_conflict` sentences; journey J10's path (record → Contact → Corrections) |
 
 ## 9. Keeping this register
 

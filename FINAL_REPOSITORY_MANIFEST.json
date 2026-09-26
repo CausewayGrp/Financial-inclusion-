@@ -8,7 +8,7 @@
   "page_specs_sha256": "d45748046ea56fd0e67fdf112f9888de65b3fe7fab46ce6f51de3a80824b69aa",
   "logo": "site-src/assets/CauseWay_Master_Logo.png",
   "logo_sha256": "5830163d50f9badbef3227ec44e7705548e2fcc8a06b2d6ae33d56ade60c6a90",
-  "rule": "The Production Master is the only semantic authority. Everything under site-src/content, dist, design/architecture and audit/PUBLIC_LITERAL_CLOSURE.json is generated from it and never edited by hand."
+  "rule": "The Production Master is the only semantic authority. Everything under site-src/content, dist, design/architecture and audit/PUBLIC_LITERAL_CLOSURE.json is generated from it and never edited by hand, except the two CONTROLLED_CONTRACT files, which the programme steward maintains in place and the generator validates against the Master's projections."
  },
  "paths": {
   "projection": "authority/…Master.xlsx -> scripts/generate_projections.py (scripts/projection/*, contracts: master_structure.json, projection_manifest.json, controlled_inputs/*) -> site-src/content/**",
@@ -26,11 +26,12 @@
   "AUTHORITY_POINTER": 2,
   "AUTHORITY_RULES": 1,
   "BUILD_AND_GATES": 15,
+  "CONTROLLED_CONTRACT": 2,
   "CURRENT_DOCUMENT": 10,
-  "CURRENT_PROGRAMME_RECORD": 50,
+  "CURRENT_PROGRAMME_RECORD": 51,
   "GENERATED_DIAGRAMS": 9,
   "GENERATED_LITERAL_CLOSURE": 1,
-  "GENERATED_PROJECTION": 39,
+  "GENERATED_PROJECTION": 37,
   "GENERATED_PUBLIC_BUILD": 295,
   "LOGO_AUTHORITY": 1,
   "PROJECTION_CONTRACT": 11,
@@ -396,6 +397,10 @@
   },
   {
    "path": "audit/directives/D7_FINAL_INTEGRATION_TO_DESIGN_HANDOFF_2026-09-26.md",
+   "class": "CURRENT_PROGRAMME_RECORD"
+  },
+  {
+   "path": "audit/directives/D8_POST_F9_CORRECTION_2026-09-27.txt",
    "class": "CURRENT_PROGRAMME_RECORD"
   },
   {
@@ -2796,7 +2801,7 @@
   },
   {
    "path": "site-src/content/content/navigation_interaction.json",
-   "class": "GENERATED_PROJECTION"
+   "class": "CONTROLLED_CONTRACT"
   },
   {
    "path": "site-src/content/content/page_sections.json",
@@ -2896,7 +2901,7 @@
   },
   {
    "path": "site-src/content/presentation_priority.json",
-   "class": "GENERATED_PROJECTION"
+   "class": "CONTROLLED_CONTRACT"
   },
   {
    "path": "site-src/content/sources/indicator_library.json",

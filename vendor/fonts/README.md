@@ -18,6 +18,7 @@ Rules:
 
 - Ship `LICENSE.txt` with the fonts wherever they are served or packaged.
 - Use the files as shipped. Making your own subset modifies a font whose licence reserves the name "Plex"; IBM publishes
-  its own pre-split Latin subsets of IBM Plex Sans in the same npm package (`fonts/split/woff2/`). A self-made subset is
-  an owner decision, not a design or engineering default.
+  its own pre-split Latin subsets of IBM Plex Sans in the same npm package (`fonts/split/woff2/`), not vendored here;
+  the steward adds them on request, unchanged and with provenance, like the files above. A self-made subset is an owner
+  decision, not a design or engineering default.
 - No font CDN; no other typeface (the rule is in `handoff/CLAUDE_DESIGN_MASTER_PROMPT.md` §8).

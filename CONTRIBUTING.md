@@ -24,11 +24,13 @@ unpushed clone does not exist yet. ZIPs are *outputs* of checkpoint tags (§6), 
 | `authority/Yemen_Financial_Inclusion_Evidence_Master.xlsx` | Authority | Only through a transaction and the runner (§4) |
 | `authority/CORE_CONSTITUTION.md` | Durable principles | Rarely, by explicit decision; never mutable state |
 | `authority/AUTHORITY.json`, `authority/YFI_CURRENT_PROJECT_CONTEXT.json` | Current-state pointers | Hashes and counts by `scripts/rebind_authority.py` (the runner calls it); programme state by the steward |
-| `site-src/content/**` | Controlled projections | Never by hand; `scripts/generate_projections.py` writes them from the Master |
+| `site-src/content/**` | Controlled projections | Never by hand; `scripts/generate_projections.py` writes them from the Master — except the two controlled contracts below |
+| `site-src/content/presentation_priority.json`, `site-src/content/content/navigation_interaction.json` | Controlled contracts (presentation depth; navigation and interaction), class `CONTROLLED_CONTRACT` | Maintained in place by the programme steward only, in a commit naming the finding it closes; the generator validates them against the Master's projections (and writes the navigation labels, counts and bindings it owns); never edited by Claude Design or Claude Code, who escalate |
 | `dist/**` | Generated static site | Never by hand; `scripts/build.py`; committed so every public change is reviewable |
 | `audit/PUBLIC_LITERAL_CLOSURE.json` | Generated audit | Never by hand; `scripts/audit_public_literals.py` |
 | `scripts/`, `site-src/app.js`, `site-src/styles.css` | Generator, build, gates, runtime | Directly, with the full gate run |
-| `handoff/` | Design → Code recipient package | DRAFT until R8.6; changed only by the programme |
+| `handoff/` | Design → Code recipient package | Changed only by the programme; DESIGN HANDOFF READY since F9 |
+| `vendor/fonts/` | IBM Plex woff2 files and licence, unchanged | Only by replacing them with a newer unchanged release |
 | `design/architecture/` | Derived diagrams | `scripts/architecture_diagrams.py` |
 | `audit/`, `docs/` | Lineage and records | Append; never rewrite a historical record (add an addendum or erratum) |
 | `FINAL_REPOSITORY_MANIFEST.json` | Classification of every tracked file | `python3 scripts/repository_manifest.py` after adding, moving or deleting a file |

@@ -60,9 +60,11 @@
     },
     {
       "id": "report_issue",
-      "route": "/corrections/",
+      "route": "/contact/",
+      "record_context": "?record=<ID> from an Evidence Record; Contact links on to /corrections/, which accepts the same ?record=",
       "label_en": "Report an issue",
-      "label_ar": "الإبلاغ عن مشكلة"
+      "label_ar": "أبلغ عن مشكلة",
+      "label_ui_id": "UI-HEADER-REPORT-AN-ISSUE"
     },
     {
       "id": "language",
@@ -168,7 +170,7 @@
       "parent_route": "/readings/",
       "parent_label_en": "Evidence Readings",
       "parent_label_ar": "قراءات الأدلة",
-      "current_label_mode": "STABLE_OBJECT_ID"
+      "current_label_mode": "GOVERNED_TITLE"
     }
   },
   "route_next_actions": {
@@ -3376,10 +3378,10 @@
       "entry_mode": "deep_link",
       "path": [
         "/evidence/CLM-001/",
-        "/corrections/",
-        "/contact/"
+        "/contact/",
+        "/corrections/"
       ],
-      "success_condition": "Stable record identity and correction/report pathways remain connected; no silent change is implied."
+      "success_condition": "The report action carries the stable record identity into Contact (?record=), Contact links on to Corrections, and no silent change to the record is implied."
     },
     {
       "journey_id": "J11_REUSE_RIGHTS",
@@ -3749,16 +3751,16 @@
       "state": "filters may be encoded in URL for shareable discovery state",
       "inputs": [
         "Evidence Records (count: content/public_inventory.json evidence_records)",
-        "Evidence Passports",
         "public claims (count: content/public_inventory.json public_claims)",
-        "source closure"
+        "source closure",
+        "the site search index, embedded on /evidence/"
       ],
       "core_behaviour": [
-        "search/facet before browse-all",
-        "show evidence family, period/currentness, universe/scope and material limitation clues in result rows",
+        "the embedded site search, and a record filter if one is designed, before browse-all; facets only on governed fields with governed labels",
+        "show the record's governed title, period/currentness, population and a material limitation clue in result rows; never the raw object class",
         "open canonical Evidence Record as the verification endpoint",
-        "allow add-to-Compare only for public evidence records",
-        "never expose backend-only objects or raw governance enums"
+        "allow add-to-Compare only for the records in the governed comparable set (the /evidence/compare/ Page Spec)",
+        "never expose backend-only objects or raw governance enums; Evidence Passports are reference material and are never rendered"
       ]
     },
     {
@@ -3767,12 +3769,13 @@
       "runtime": "STATIC_LOCAL_REQUIRED",
       "state": "2–4 selected evidence IDs encoded in URL query for shareable/deep-linkable comparison",
       "inputs": [
-        "public evidence record fields only"
+        "public Evidence Record fields of the governed comparable set only: the records bound to the /evidence/compare/ Page Spec (listed in the handoff inventory at /evidence/compare/ → collection.comparable_record_ids)"
       ],
       "core_behaviour": [
         "show compatibility/boundary rows before numeric values",
-        "compare definition, universe, geography, unit, period, method, source/currentness and limitation",
-        "state whether records are directly comparable, comparable only with qualification, or not directly comparable based on field differences; do not convert this into a truth score",
+        "compare the six governed dimensions — definition, population or base, period, method, source reference and currentness — each marked same, different or missing, then the boundary row (what not to conclude)",
+        "give one governed assessment: structurally aligned on the available fields, qualified comparison only, not a direct comparison, or direct comparability cannot be established (a required field is missing); a record selected twice is a separate same-record state; never a truth score",
+        "a record outside the comparable set is announced as not available for comparison here (a link error, not a finding)",
         "provide one-click path back to each Evidence Record"
       ],
       "forbidden": [
@@ -3850,12 +3853,12 @@
     {
       "state_id": "institutional_sequence",
       "route": "/payments/",
-      "must_prove": "FPS, RTGS, interoperability, institution-building, operation, use and outcome are visually distinct states."
+      "must_prove": "FPS, RTGS, institution-building, implementation, operation, use and outcome are visually distinct states; /payments/ carries FPS, RTGS and institution-building, and /reforms/ carries the rule-to-outcome chain (VIS-PAYMENT-RAILS)."
     },
     {
       "state_id": "vintage_conflict",
       "route": "/remittances/",
-      "must_prove": "Same-year revisions and observed/estimated/projected states are visually legible without selecting a winner."
+      "must_prove": "Observed, estimated and projected states and the break between vintages are visually legible without selecting a winner; the same-year revision itself is drawn in the Reading /remittances/ links to (RV-CWR-001)."
     },
     {
       "state_id": "verification_dense",
@@ -3864,8 +3867,8 @@
     },
     {
       "state_id": "verification_sparse",
-      "route": "/evidence/CLM-015/",
-      "must_prove": "A semantic/control object with no source expected is not styled as missing evidence or an error."
+      "route": "/evidence/CLM-004/",
+      "must_prove": "A framing record that sets a measurement rule, with no fact to source and so no source expected, is not styled as missing evidence or an error."
     },
     {
       "state_id": "compare_unlike",

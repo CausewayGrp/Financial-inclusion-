@@ -1,4 +1,4 @@
-> STATUS: **DESIGN HANDOFF READY.** Start here. R8.6 closed on 26 September 2026 after a clean-room acceptance by three cold recipients (`audit/FINAL_CLEAN_ROOM_ACCEPTANCE.md`). Not a public release.
+> STATUS: **DESIGN HANDOFF READY.** Start here. R8.6 closed on 26 September 2026 after a clean-room acceptance by three cold recipients (`audit/FINAL_CLEAN_ROOM_ACCEPTANCE.md`); tightened on 27 September 2026 (post-F9 correction, same record). Not a public release.
 
 # Read this first — Yemen Financial Inclusion Evidence · أدلة الشمول المالي في اليمن
 
@@ -18,8 +18,11 @@ the original source. The public site already exists as a complete, tested refere
 
 ## 2. Your role
 
-**Claude Design** designs the whole product and delivers a **runnable, fully populated reference implementation** plus a
-repository-backed design package, so that **Claude Code** can then build the production runtime without guessing. You
+**Claude Design** designs the whole product and delivers a **runnable, fully populated bilingual reference site** plus a
+repository-backed design package, so that **Claude Code** can then build the production runtime without guessing. The
+runnable site is what acceptance requires (brief §19); a design source without it is an incomplete hand-back. You start
+by testing two or three genuinely different design theses on Home, a dense Evidence Record and the flagship Reading, in
+both languages, before anything is propagated (brief §20, D1). You
 own the visual and interaction solution. You do not own the truth: facts, wording of controlled meaning, evidence states,
 sources and rights come from the Production Master and cannot be changed by design.
 
@@ -75,11 +78,11 @@ editorial pacing. `DESIGN_STARTING_TOKENS.json` is a starting hypothesis, not a 
 ## 7. What is unknown
 
 Nothing that blocks Design. The open items — the release domain, contact-mailbox confirmation, CauseWay's identity and
-funding statement, the content licence that gates downloads, web-size logo derivatives, two maintainer decisions on the
-hand-maintained contracts (whose known disagreements the brief §2 resolves for you), eleven source checks that leave
-today's text unchanged until the source is read, and eight known evidence frontiers — are listed with their class, where
-they show and who owns them in `FINAL_OPEN_ITEMS_REGISTER.md`. Design the honest state each page already has; never fill
-one.
+funding statement, the content licence that gates downloads and exports, web-size logo derivatives, eleven source checks
+that leave today's text unchanged until the source is read, and eight known evidence frontiers — are listed with their
+class, where they show and who owns them in `FINAL_OPEN_ITEMS_REGISTER.md`. Design the honest state each page already
+has; never fill one. No visual board, colour board or homepage mockup binds you unless it is in this repository: say at
+D0 whether one was supplied (brief §0).
 
 ## 8. How to test
 
@@ -124,9 +127,10 @@ steward (the programme owner of this repository) answers escalations Master-firs
 
 ## 11. What Code receives after you
 
-This repository with your `design/` package, the runnable reference implementation, and a Design-to-Code contract that
-maps tokens, components, states, routes, content bindings, visual contracts, responsive rules and accessibility
-behaviour. `CLAUDE_CODE_MASTER_PROMPT.md` waits until then.
+This repository with your `design/` package — the decision log and coverage ledger included — the runnable, fully
+populated bilingual reference site with no placeholder, and a Design-to-Code contract that maps tokens, components,
+states, routes, content bindings, visual contracts, responsive rules, accessibility, print and export behaviour.
+`CLAUDE_CODE_MASTER_PROMPT.md` waits until then.
 
 ## 12. Files in this folder
 

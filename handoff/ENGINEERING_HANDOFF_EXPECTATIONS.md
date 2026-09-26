@@ -64,9 +64,15 @@ the owner sets `public_origin`, every URL becomes absolute and the sitemap is wr
 - No analytics, tracking, cookies or accounts. Adding any needs an owner decision, bilingual Privacy page updates and,
   where required, consent — before it ships.
 - Fonts: IBM Plex Sans and IBM Plex Sans Arabic self-hosted from `vendor/fonts/` (unchanged files of `@ibm/plex-sans@1.1.0`
-  and `@ibm/plex-sans-arabic@1.1.0`, OFL-1.1, licence shipped), `font-display` chosen deliberately; no font CDN. The
-  licence reserves the name "Plex": use the files as shipped or IBM's own pre-split subsets; a self-made subset is an
-  owner decision (`vendor/fonts/README.md`).
+  and `@ibm/plex-sans-arabic@1.1.0`, OFL-1.1, licence shipped); load them efficiently — only the weights the design uses,
+  the critical faces preloaded, `font-display` chosen deliberately, IBM's own pre-split Latin subsets where they help; no
+  font CDN. The licence reserves the name "Plex": a self-made subset is an owner decision, never a default
+  (`vendor/fonts/README.md`).
+- Print and portable evidence: ship the Design package's print stylesheets and Reading print layout; generate chart and
+  table export frames at build time from governed data only, with the full detached frame; keep every CauseWay-content
+  download and export disabled until the owner's licence decision (OWN-04); never offer a third-party document.
+- Reporting stays static: the mail action to the governed address with the record reference; any richer reporting
+  intent is client-side composition only — no backend, form element, new address or service level.
 - Dates: the governed form (day, month name, year; Western digits) with the governed Arabic month names used by
   `source_date_text` in `scripts/build.py` — not a locale library's month names, which vary by region.
 - Logo: produce web-size derivatives of `site-src/assets/CauseWay_Master_Logo.png` at the sizes in

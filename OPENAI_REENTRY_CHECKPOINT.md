@@ -5,16 +5,18 @@
 supplied the independent ten-Reading package with directive D7. Sessions F0–F9 are closed: the Reading portfolio is
 integrated (F2), the Resource Library decisions are made (F3), R8.5 repository subtraction is closed (F4), the whole
 public corpus is accepted (F5), the discovery, accessibility, rights and security contract is in place (F6), the
-sustainability baseline is recorded (F7), the Design handoff is frozen (F8) and accepted clean-room (F9).
+sustainability baseline is recorded (F7), the Design handoff is frozen (F8) and accepted clean-room (F9). A bounded
+post-F9 correction (27 September 2026) closed the two remaining maintainer items and tightened the handoff in place.
 
 **Status: DESIGN HANDOFF READY.**
 
 - R8.4: CLOSED / PASS, Reading prose included (F2). R8.5: CLOSED (F4). R8.6: CLOSED (F8, F9).
 - This is not PUBLIC RELEASE READY.
-- Claude Design starts at `handoff/README_FIRST.md`; the Code prompt waits for the accepted Design package. The owner
-  pushes the signed tag `checkpoint/design-handoff-ready` on this state (`CONTRIBUTING.md` §6).
+- Claude Design starts at `handoff/README_FIRST.md`; the Code prompt waits for the accepted Design package.
+- Checkpoint tags are not on GitHub yet: this session's git access refuses tag pushes (HTTP 403), so the owner creates and
+  pushes them (§7).
 
-**Date:** 2026-09-26.
+**Date:** 2026-09-27.
 
 ## 1. Authority state (verify first)
 
@@ -24,8 +26,8 @@ sustainability baseline is recorded (F7), the Design handoff is frozen (F8) and 
 | Page Specs | `site-src/content/page_specs.json` — SHA-256 `d45748046ea56fd0e67fdf112f9888de65b3fe7fab46ce6f51de3a80824b69aa` |
 | Entry state recorded with the Drive IDs (lineage, not current) | Master `e69804106e04d093098688f2d01cea51e13191f255d774a090f3e5dd8dec9bc7`; Page Specs `ff2b0f559cde5fede3fe31d7dfb2539a00921e8b00b816c2863790cd9de49007` |
 | Master lineage in D7 | `f0150122…` (entry) → `caabff47…` (RP-F2) → `0e8730c2…` / `69899ae2…` (RL-F3, RL-F3b) → `2a7fd52b…` / `440614d7…` (R85-A, R85-B) → `168a0ad8…` / `ed3c5796…` (RF5, RF5b) |
-| Canonical repository | GitHub `CausewayGrp/Financial-inclusion-`, branch `main`. The last reviewed state is the signed tag `checkpoint/tranche-c-complete-reading-hold` |
-| External (Drive) copies | `EXTERNAL_REPOSITORY_SYNC_PENDING` — the Drive files were not replaced; they are lineage, not working copies |
+| Canonical repository | GitHub `CausewayGrp/Financial-inclusion-`, branch `main` — the only working copy. The last state OpenAI reviewed is commit `f726bda` (tree byte-identical to `…TRANCHE_C_COMPLETE_READING_HOLD.zip`, SHA-256 `63612dea…`); its tag and the Design-handoff tag are owner actions (§7) |
+| Other copies | None is current. The pre-GitHub Drive folder and the ZIPs exchanged before 26 September 2026 are lineage: they were deliberately left as they were — neither updated nor deleted — and are never synchronised from here. `EXTERNAL_REPOSITORY_SYNC_PENDING` in `authority/AUTHORITY.json` records exactly that state; it is not a sync that is owed |
 | Generator | `scripts/generate_projections.py`; `PROJECTION CHECK PASS`; 21 of 21 unit tests |
 | Build | 288 HTML documents from 143 Page Specs (286 localized + root + 404) |
 | Public-literal audit | 12,760 records, 0 unresolved; identical bytes under 8 `PYTHONHASHSEED` values |
@@ -76,8 +78,21 @@ build, literal audit, diagrams, repository manifest, validate, generator check; 
   run; none found a blocker, every command passed, and their 34 material points were fixed or given explicit rules
   (RF9 moved the last two interface labels out of code; inventory 1.3; precedence and contract-disagreement table; the
   reference implementation's location and `YFIE_SITE_DIR` test path; the test-hook contract; fonts vendored in
-  `vendor/fonts/`). The archive, extracted into an empty directory without `.git`, passes every gate. Register: 49 items,
-  zero DESIGN_BLOCKER (`audit/FINAL_CLEAN_ROOM_ACCEPTANCE.md`).
+  `vendor/fonts/`). The archive, extracted into an empty directory without `.git`, passes every gate
+  (`audit/FINAL_CLEAN_ROOM_ACCEPTANCE.md`). File counts: the checksum and manifest counts cover every tracked file except
+  `SHA256SUMS.txt` itself. That record's archive test ran on `2922449` and counted 753 (754 tracked); the final F9 commit
+  `03bd654` added the record itself, so its manifests count 754 (755 tracked). Both are correct for their commits; the
+  record is not rewritten (its addendum explains the difference). The post-F9 correction adds the D8 directive: 755.
+- **Post-F9 correction (27 September 2026;** directive `audit/directives/D8_POST_F9_CORRECTION_2026-09-27.txt`**).** OWN-07 closed: `/remittances/` now shows its bound Measurement card
+  (MA-001, people-side; household remittance receipt) in both languages, distinct from the macro series. OWN-08 closed:
+  the stale descriptive fields of `navigation_interaction.json` corrected against governed copy, Page Specs and tests
+  (report path, Reading breadcrumb, Compare dimensions and comparable set, workbench — Evidence Passports stay non-public
+  — three hard-state sentences, journey J10). The two hand-maintained contracts are classed `CONTROLLED_CONTRACT` with
+  their edit rule in the file, `AGENTS.md` and `CONTRIBUTING.md`. The Design handoff was tightened in place: competing
+  theses at D1 on Home, a dense Evidence Record and the flagship Reading before propagation; a decision log and coverage
+  ledger across D0–D7; the runnable, fully populated bilingual reference site as the D7 completion requirement, with no
+  placeholder in the accepted site; print and portable-evidence requirements; font loading without an unapproved subset;
+  a D0 statement on whether any visual board or mockup was supplied. No Master change.
 
 Tranche C itself is recorded in `audit/TRANCHE_C_FINAL_ACCEPTANCE.md` and `audit/TRANCHE_C_FINDINGS_LEDGER.csv`.
 Currentness cut-off: 26 September 2026 (`audit/FINAL_CURRENTNESS_CUTOFF.md`).
@@ -94,11 +109,10 @@ identical.
 ## 4. Open items carried forward (not defects of this state)
 
 Every item, with its class, where it shows, what closes it and its owner, is in `FINAL_OPEN_ITEMS_REGISTER.md`
-(49 items: 11 engineering after Design, 4 release-only, 11 external evidence dependencies, 8 known evidence frontiers,
-8 owner inputs, 7 rejected / no action; **zero DESIGN_BLOCKER**). F8 built it from a sweep of every earlier record that
-left an item open and checked each against the current bytes; 23 earlier items had been closed later and are listed
-there so they are not reopened. Two were re-tracked: the bilingual status-event table for `/providers/` (EXT-04, which
-had no R8.5 disposition) and the `/remittances/` Measurement card (OWN-07).
+(47 items: 11 engineering after Design, 4 release-only, 11 external evidence dependencies, 8 known evidence frontiers,
+6 owner inputs, 7 rejected / no action; **zero DESIGN_BLOCKER**). F8 built it from a sweep of every earlier record that
+left an item open and checked each against the current bytes; the items closed since are listed there so they are not
+reopened (among them OWN-07 and OWN-08, closed on 27 September 2026).
 
 - **Sessions:** none open. D7 is complete; the next work is Claude Design's (gates D0–D7 in the brief).
 
@@ -121,8 +135,34 @@ python3 scripts/handoff_inventory.py --check
 
 ## 6. Boundaries kept
 
-- One authority. Every content change went into the Master first through the runner. No projection was edited by hand.
+- One authority. Every content change went into the Master first through the runner. No generated projection was
+  edited by hand; the two controlled contracts (`presentation_priority.json`, `navigation_interaction.json`) were
+  corrected in place by the steward, as their maintenance rule allows, and validated by the generator.
 - Nothing closed earlier in the programme was reopened without a recorded finding.
 - **Not claimed:** native Arabic certification, legal review, WCAG conformance, rights clearance, security guarantees,
   service levels.
-- No external repository was changed.
+- No repository other than the canonical GitHub repository was written to: the pre-GitHub Drive copies were left
+  untouched as lineage.
+
+## 7. Owner actions
+
+- **Push the checkpoint tags** (this session's git access refuses tag pushes). From a clone with signing set up:
+
+  ```bash
+  git fetch origin
+  git tag -s checkpoint/tranche-c-complete-reading-hold f726bdaf305f21930b5fb7dfb8a649ad102e089c \
+      -m "Tranche C complete — Reading prose held for the independent Reading package" \
+      -m "Tree byte-identical to Yemen_Financial_Inclusion_Evidence_TRANCHE_C_COMPLETE_READING_HOLD.zip (SHA-256 63612dea…; full value in audit/directives/D7_FINAL_INTEGRATION_TO_DESIGN_HANDOFF_2026-09-26.md)"
+  C=$(git log origin/main -1 --format=%H -F --grep='fix(handoff): post-F9 correction')
+  git show -s --format='%H %s' "$C"            # check it before tagging
+  git tag -s checkpoint/design-handoff-ready "$C" \
+      -m "DESIGN HANDOFF READY — R8.6 closed; post-F9 correction applied" \
+      -m "Master 17db032b15da16fc4b5b3c3b49f19aebf2ecb4ec46634613fe8505d0f038690b"
+  git push origin checkpoint/tranche-c-complete-reading-hold checkpoint/design-handoff-ready
+  ```
+
+  The design-handoff tag goes on the post-F9 correction commit (subject `fix(handoff): post-F9 correction …`, recorded in
+  `docs/CHANGELOG.md` and in the addendum to `audit/FINAL_CLEAN_ROOM_ACCEPTANCE.md`), not on whatever `main` has become;
+  never move an existing checkpoint tag. `.github/workflows/checkpoint.yml` then rebuilds and verifies the archive and attaches it to a
+  pre-release.
+- **The owner and release items** in `FINAL_OPEN_ITEMS_REGISTER.md` (OWNER_INPUT and RELEASE_ONLY).

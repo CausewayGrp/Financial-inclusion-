@@ -28,6 +28,8 @@ RULES = [
                               "scripts/projection/README.md", "scripts/projection/tests/*.py"]),
     ("PROJECTION_CONTRACT", ["scripts/projection/master_structure.json", "scripts/projection/projection_manifest.json",
                              "scripts/projection/controlled_inputs/*"]),
+    # Hand-maintained controlled contracts under site-src/content (steward-edited in place; validated by the generator)
+    ("CONTROLLED_CONTRACT", ["site-src/content/presentation_priority.json", "site-src/content/content/navigation_interaction.json"]),
     ("GENERATED_PROJECTION", ["site-src/content/*", "site-src/content/**/*"]),
     ("RUNTIME_SOURCE", ["site-src/app.js", "site-src/styles.css", "site-src/lang-redirect.js", "site-src/deployment.json", "site-src/assets/*"]),
     ("BUILD_AND_GATES", ["scripts/build.py", "scripts/validate.py", "scripts/audit_public_literals.py",
@@ -48,7 +50,7 @@ RULES = [
                                 "requirements.txt", "SHA256SUMS.txt"]),
     ("CURRENT_PROGRAMME_RECORD", ["audit/INDEX.md", "audit/READING_PORTFOLIO_*", "audit/F3_*", "audit/R8_5_*", "audit/F5_*",
                                   "audit/F6_*", "audit/R8_6_*", "audit/SUSTAINABILITY_*", "audit/FINAL_*_ACCEPTANCE*",
-                                  "audit/directives/D7_*", "audit/directives/README.md", "audit/reading_integration/*", "audit/reading_integration/**/*",
+                                  "audit/directives/D7_*", "audit/directives/D8_*", "audit/directives/README.md", "audit/reading_integration/*", "audit/reading_integration/**/*",
                                   "audit/final_integration/*", "audit/final_integration/**/*"]),
     ("STANDING_POLICY", ["audit/ARABIC_TERMINOLOGY_AND_STYLE_LEDGER.md", "audit/BENCHMARK_AND_COMPARATOR_POLICY.md",
                          "audit/ECONOMIC_CONTEXT_USAGE_POLICY.md", "audit/FINAL_CURRENTNESS_CUTOFF.md", "audit/tranche_c/DRAFTING_RULES.md"]),
@@ -89,7 +91,7 @@ def build():
         ("authority", OrderedDict([("production_master", MASTER), ("production_master_sha256", sha(MASTER)),
                                    ("page_specs", SPECS), ("page_specs_sha256", sha(SPECS)),
                                    ("logo", LOGO), ("logo_sha256", sha(LOGO)),
-                                   ("rule", "The Production Master is the only semantic authority. Everything under site-src/content, dist, design/architecture and audit/PUBLIC_LITERAL_CLOSURE.json is generated from it and never edited by hand.")])),
+                                   ("rule", "The Production Master is the only semantic authority. Everything under site-src/content, dist, design/architecture and audit/PUBLIC_LITERAL_CLOSURE.json is generated from it and never edited by hand, except the two CONTROLLED_CONTRACT files, which the programme steward maintains in place and the generator validates against the Master's projections.")])),
         ("paths", OrderedDict([
             ("projection", "authority/…Master.xlsx -> scripts/generate_projections.py (scripts/projection/*, contracts: master_structure.json, projection_manifest.json, controlled_inputs/*) -> site-src/content/**"),
             ("runtime", "site-src/content/** + site-src/app.js + site-src/styles.css + site-src/assets/* -> scripts/build.py -> dist/**"),

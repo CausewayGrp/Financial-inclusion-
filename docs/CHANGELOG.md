@@ -1,5 +1,39 @@
 # Repository Change Log
 
+## 2026-09-27 — Post-F9 correction: OWN-07, OWN-08, Design handoff tightened
+
+One bounded correction on top of `03bd654` (F9), before Claude Design starts. Commit subject
+`fix(handoff): post-F9 correction — OWN-07, OWN-08, handoff tightened in place`; the checkpoint tag
+`checkpoint/design-handoff-ready` belongs on that commit. No Master change: Master `17db032b…` and Page Specs `d4574804…`
+are unchanged. Addendum in `audit/FINAL_CLEAN_ROOM_ACCEPTANCE.md`.
+- **OWN-07 closed.** `/remittances/` binds MA-001 but its presentation contract allowed zero Measurement cards; the limit
+  is now 1, and the card renders in both languages with its household-receipt scope (receipt, channel, frequency), kept
+  apart from the macro remittance evidence on the page.
+- **OWN-08 closed.** `navigation_interaction.json` now matches the governed copy, the Page Specs and the tested
+  behaviour: Report an issue opens Contact (`?record=`) with its `UI-*` label; a Reading's breadcrumb ends on its title;
+  Compare names its six dimensions, four assessments, the same-record state and the outside-set error; the workbench and
+  Compare take only public records and the governed comparable set (Evidence Passports are never rendered); the sparse
+  state is `/evidence/CLM-004/`; the institutional and vintage states are stated as the pages show them; J10 runs record
+  → Contact → Corrections.
+- **Controlled contracts named.** The two hand-maintained contracts form their own manifest class, `CONTROLLED_CONTRACT`,
+  with a maintenance rule in the file, in `AGENTS.md` rule 2 and in `CONTRIBUTING.md` §2: the steward changes them in a
+  commit naming the finding; Design and Code escalate.
+- **Handoff tightened in place** (one start file, one brief). D1 tests two or three materially different design theses
+  on Home, `/evidence/CLM-003/` and the flagship Reading `/readings/same-year-different-number/`, in both languages,
+  before anything is propagated; a decision log and a coverage ledger (`design/COVERAGE.csv`) are kept at every gate; D0
+  records whether a visual board or mockup was actually supplied (nothing absent binds). D7 requires the runnable, fully
+  populated bilingual reference site; a design source alone is an incomplete hand-back; `⟦NCC:…⟧` markers are for
+  development only and every shipped label must be in the Master, or its feature stays unshipped.
+- **Print and portable evidence.** Page and Reading print styles, contextual chart and table exports, provenance that
+  survives detachment and a Reading print/PDF layout, in the brief, the acceptance criteria and the Design-to-Code
+  contract; every CauseWay-content download or export ships disabled until the licence decision (OWN-04); reporting
+  stays the static Contact route (no backend, address, SLA or form).
+- **Fonts.** The loading wording now matches `vendor/fonts/README.md`: self-host the files as shipped, load efficiently,
+  IBM's own pre-split subsets only through the steward, no self-made subset without the owner.
+- **Records.** Register 47 items (OWNER_INPUT 6), zero DESIGN_BLOCKER; the checkpoint states that the external
+  repository is deliberately untouched lineage (no sync owed) and why F9 reported 753 files and the delivered archive 754;
+  README rewritten around the current state and the owner actions.
+
 ## 2026-09-26 — F9: DESIGN HANDOFF READY
 
 Record `audit/FINAL_CLEAN_ROOM_ACCEPTANCE.md`. R8.6 is closed and directive D7 is complete. Three cold recipients found

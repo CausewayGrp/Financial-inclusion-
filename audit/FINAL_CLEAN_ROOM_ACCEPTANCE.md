@@ -111,3 +111,50 @@ OWNER_INPUT items of the register, the post-implementation accessibility audit a
   cannot push tags); `.github/workflows/checkpoint.yml` then rebuilds and verifies the same archive and attaches it to a
   pre-release.
 - Claude Design starts at `handoff/README_FIRST.md`. Claude Code waits for the accepted Design package.
+
+---
+
+## Addendum — post-F9 correction (27 September 2026)
+
+Appended; §1–§7 above are unchanged and remain the F9 record. Directive: `audit/directives/D8_POST_F9_CORRECTION_2026-09-27.txt`
+(verbatim). Entry state: `origin/main` = `03bd654` (the delivered F9 archive), no tag on the remote; nothing newer to
+diagnose. Commit: `fix(handoff): post-F9 correction — OWN-07, OWN-08, handoff tightened in place`, the commit that
+carries this addendum on `main`; `checkpoint/design-handoff-ready` belongs on it (§7 above said "the commit carrying
+this record": read it as this commit). No Master change: Master `17db032b…` and Page Specs `d4574804…` are unchanged.
+
+### A1. What changed
+
+| Item | Change |
+|---|---|
+| OWN-07 | `/remittances/` binds MA-001; its presentation contract allowed 0 Measurement cards. Limit set to 1. The card renders in `/en/` and `/ar/remittances/` with its household scope ("including remittance receipt, channel and frequency" · «يشمل تلقي الحوالات وقنواته وتكراره»), apart from the page's macro remittance evidence |
+| OWN-08 | `navigation_interaction.json` descriptive fields aligned with the governed copy, the Page Specs and the browser tests: Report an issue → `/contact/?record=` with `UI-HEADER-REPORT-AN-ISSUE`; Reading breadcrumb `GOVERNED_TITLE`; Compare's six dimensions, four assessments, same-record state and outside-set error; workbench and Compare limited to public records and the governed comparable set (Evidence Passports never rendered); `verification_sparse` → `/evidence/CLM-004/`; institutional and vintage states as the pages show them; J10 record → Contact → Corrections |
+| Contract rule | Class `CONTROLLED_CONTRACT` for the two hand-maintained contracts; rule in `presentation_priority.json`, `AGENTS.md` rule 2 and `CONTRIBUTING.md` §2 |
+| Handoff | In place, one start file and one brief: D1 competing theses on Home, `/evidence/CLM-003/` and `/readings/same-year-different-number/` in both languages before propagation; decision log and `design/COVERAGE.csv` kept at every gate; D0 statement on supplied boards or mockups; D7 requires the runnable, fully populated bilingual reference site (a design source alone is an incomplete hand-back); `⟦NCC:…⟧` for development only; print and portable evidence in the brief, the criteria and the Design-to-Code contract, with every CauseWay-content export disabled until OWN-04 and reporting kept on the static Contact route; font loading worded to `vendor/fonts/README.md` |
+| Records | Register 47 items (OWNER_INPUT 6), zero DESIGN_BLOCKER; checkpoint, README, Context, changelog, audit index and directives index updated |
+
+### A2. File counts
+
+The checksum and manifest counts cover every tracked file except `SHA256SUMS.txt`. §2 counted 753 on `2922449` (754
+tracked). `03bd654` added this record: 754 (755 tracked). The correction adds the D8 directive: 755 (756 tracked). Each
+count is right for its commit.
+
+### A3. Gates on the correction (local, before commit)
+
+| Gate | Result |
+|---|---|
+| Checksums; repository manifest | 755 files current; 755 files in 20 classes |
+| Projection check; projection unit tests | Pass; OK |
+| Build; public-literal closure | 288 HTML from 143 Page Specs; 12,760 records, 0 unresolved |
+| Validator | 0 errors, 0 warnings (R86-G01…G04 included: start path, status agreement, inventory, eleven handoff files) |
+| Literal-audit determinism; source-lineage truth test; architecture diagrams | Pass (8 seeds, one hash); 8/8; current |
+| Bilingual numeric invariance | 0 of 143 page pairs differ |
+| Public tools (browser) | 25 passed, 1 not applicable to the current data |
+| Viewport acceptance (browser) | 168 of 168 |
+| Affected pages (browser) | `/en/` and `/ar/remittances/`: one MA-001 card each, household scope intact; `/en/` and `/ar/evidence/CLM-001/` → `contact/?record=CLM-001`; Contact links to Corrections; `/evidence/CLM-004/` renders in both languages; the flagship Reading's breadcrumb ends on its title in both languages |
+
+The **Verify** workflow runs the same gates on the pushed commit.
+
+### A4. Still not claimed
+
+As §6: not PUBLIC RELEASE READY; no WCAG conformance, legal review, rights clearance, native-language certification or
+security guarantee.

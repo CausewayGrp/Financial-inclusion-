@@ -1,12 +1,14 @@
 # Programme directives
 
 The instructions that governed each stage of the programme, stored verbatim so any session can read the binding text
-without chat history. Files are byte-identical to the copies handed over on 26 September 2026; they are never edited.
+without chat history. Files are byte-identical to the copies handed over (D0–D7 on 26 September 2026, D8 on 27 September
+2026); they are never edited.
 A directive does not override the Production Master on facts or meaning; it governs how the programme is run.
 
 | File | Governed | State |
 |---|---|---|
-| `D7_FINAL_INTEGRATION_TO_DESIGN_HANDOFF_2026-09-26.md` | Final bounded integration F0–F9: OpenAI acceptance of Tranche C, the ten-Reading package (Appendix A), R8.5, whole-corpus acceptance, R8.6 and the final Design-handoff package | **Current and binding.** Sessions F0–F9 in order; the Appendix A texts are a candidate, adjudicated in `audit/READING_PORTFOLIO_FINAL_ADJUDICATION.md` |
+| `D8_POST_F9_CORRECTION_2026-09-27.txt` | One bounded post-F9 correction before Claude Design: OWN-07, OWN-08, the handoff tightened in place (D1 theses, decision and coverage records, runnable reference site at D7, print and portable evidence, font loading, D0 board statement), the checkpoint's external-repository and 753/754 statements | **Closed** on 27 September 2026; addendum in `audit/FINAL_CLEAN_ROOM_ACCEPTANCE.md`, entry in `docs/CHANGELOG.md` |
+| `D7_FINAL_INTEGRATION_TO_DESIGN_HANDOFF_2026-09-26.md` | Final bounded integration F0–F9: OpenAI acceptance of Tranche C, the ten-Reading package (Appendix A), R8.5, whole-corpus acceptance, R8.6 and the final Design-handoff package | **Closed** (F9, DESIGN HANDOFF READY); still the reference for what the handoff must contain. The Appendix A texts were a candidate, adjudicated in `audit/READING_PORTFOLIO_FINAL_ADJUDICATION.md` |
 | `D6_FINAL_FINITE_PRODUCT_PROGRAM_TRANCHE_C_R8_5_R8_6.txt` | Tranche C → R8.5 → R8.6, the final finite programme before Design | Binding where D7 does not supersede it (status vocabulary; R8.5 §16–25 and R8.6 §26–50 content). Tranche C closed and accepted |
 | `D5_P5_INDEPENDENT_ACCEPTANCE_CORRECTIONS.txt` | P5 corrections after the independent review of P1–P4 | Closed; lineage |
 | `D4_FINAL_PRE_TRANCHE_C_MATURATION_PROGRAM_P1_P4.txt` | Pre-Tranche-C maturation P1–P4 | Closed; lineage |

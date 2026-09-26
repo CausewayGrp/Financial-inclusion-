@@ -40,6 +40,8 @@ and the family rules in `design/04_PAGE_FAMILY_COMPOSITIONS.md` decide depth —
 | Responsive rules | Per family and component, with the Arabic variants |
 | Accessibility | WCAG 2.2 outcome → how each component meets it → how it is tested |
 | Tools | Search, Compare, sources, Cite, report, language, download: states, URL contracts, errors |
+| Print | The print stylesheet per page family; the Reading print/PDF layout in each language; page-break rules; what is hidden and what must stay with each figure |
+| Portable evidence | Chart and table export frames (title, period, population, unit, credit, prohibited inference, markers, canonical link, edition); which exports exist; their disabled state until the licence decision (OWN-04) |
 | Test hooks | The IDs, `data-*` attributes, classes and JSON block IDs the suites use (brief §19), kept or each exception with its replacement |
 | Assets | Logo placements and derivative sizes, fonts and subsets, icons, social-image templates |
 | Exceptions | Every place where the design departs from a default, with the reason |
@@ -54,10 +56,18 @@ and the family rules in `design/04_PAGE_FAMILY_COMPOSITIONS.md` decide depth —
 - **Local-first.** No tool may need a network call; tool state that changes what is viewed is URL-addressable.
 - **Technical ≠ evidence.** A technical failure never looks like missing or zero evidence, and an evidence gap never
   looks like a failure.
+- **No placeholder ships.** A label pending as `NEEDS_CONTROLLED_CONTENT` is governed before acceptance or its feature is
+  unshipped and listed in the exceptions map; Code never fills one.
+- **Portable evidence keeps its provenance.** Anything that can leave a page carries source credit, period, population,
+  boundary, canonical link and edition; no CauseWay-content download is enabled before the licence decision, and no
+  third-party document is ever offered.
+- **Records.** The decision log (`design/00_DESIGN_README.md`) and the coverage ledger (`design/COVERAGE.csv`) are part of
+  the contract: Code reads why a decision was made and what was proved before changing anything.
 - **Strict-CSP output.** No inline executable script or style; data in JSON blocks; escaped rendering.
 
 ## 5. Acceptance
 
-The contract is met when `handoff/DESIGN_ACCEPTANCE_CRITERIA.md` section J is complete with evidence, and a reader of
-`design/09_CODE_HANDOFF.md` can implement any component, page family or tool without opening a chat, a screenshot or an
-external design file.
+The contract is met when every section of `handoff/DESIGN_ACCEPTANCE_CRITERIA.md` is complete with evidence on the
+runnable, fully populated bilingual reference site, and a reader of `design/09_CODE_HANDOFF.md` can implement any
+component, page family, tool, print style or export frame without opening a chat, a screenshot or an external design
+file.

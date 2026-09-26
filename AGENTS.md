@@ -20,7 +20,10 @@ the difference.
 
 1. The Production Master is the only authority. Fix content in the Master, through a transaction and
    `audit/tranche_b_execution/run_stage.py`, never in a projection, a page, a JSON file or code alone.
-2. Never hand-edit `site-src/content/**`, `dist/**` or `audit/PUBLIC_LITERAL_CLOSURE.json`; regenerate them.
+2. Never hand-edit `site-src/content/**`, `dist/**` or `audit/PUBLIC_LITERAL_CLOSURE.json`; regenerate them. The one
+   exception is the two controlled contracts, `site-src/content/presentation_priority.json` and
+   `site-src/content/content/navigation_interaction.json`: the programme steward edits them in place, in a commit naming
+   the finding it closes, and runs every gate. Claude Design and Claude Code never edit them; they escalate.
 3. English and Arabic are co-authoritative: change both together; numbers, units, periods, universes and limits never drift.
 4. Keep the semantic firewall: people ≠ accounts, access ≠ use, infrastructure ≠ outcome, target ≠ result, licence ≠
    operation, observed ≠ estimated ≠ projected, missing ≠ zero, chronology ≠ causality.

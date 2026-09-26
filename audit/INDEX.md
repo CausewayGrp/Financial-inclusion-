@@ -10,6 +10,7 @@ only the first two groups describe the current state. Every file in `audit/` is 
 | Session | Record |
 |---|---|
 | Directive | [`directives/D7_FINAL_INTEGRATION_TO_DESIGN_HANDOFF_2026-09-26.md`](directives/D7_FINAL_INTEGRATION_TO_DESIGN_HANDOFF_2026-09-26.md) (verbatim; index in [`directives/README.md`](directives/README.md)) |
+| Post-F9 correction (27 Sep) | Directive [`directives/D8_POST_F9_CORRECTION_2026-09-27.txt`](directives/D8_POST_F9_CORRECTION_2026-09-27.txt) (verbatim); record: the addendum to [`FINAL_CLEAN_ROOM_ACCEPTANCE.md`](FINAL_CLEAN_ROOM_ACCEPTANCE.md) |
 | F1–F2 Readings | [`READING_PORTFOLIO_FINAL_ADJUDICATION.md`](READING_PORTFOLIO_FINAL_ADJUDICATION.md), [`READING_PORTFOLIO_CHANGE_LEDGER.csv`](READING_PORTFOLIO_CHANGE_LEDGER.csv); transaction and run reports in [`reading_integration/`](reading_integration/) |
 | F3 Resource Library | [`F3_RESOURCE_DECISIONS.md`](F3_RESOURCE_DECISIONS.md) |
 | F4 R8.5 subtraction | [`R8_5_REPOSITORY_SUBTRACTION_CLOSURE.md`](R8_5_REPOSITORY_SUBTRACTION_CLOSURE.md), [`R8_5_SUBTRACTION_LEDGER.csv`](R8_5_SUBTRACTION_LEDGER.csv) |

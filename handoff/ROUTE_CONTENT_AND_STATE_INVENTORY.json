@@ -910,7 +910,9 @@
    "structured_data": [
     "BreadcrumbList"
    ],
-   "hard_state_acceptance": []
+   "hard_state_acceptance": [
+    "verification_sparse"
+   ]
   },
   {
    "route": "/evidence/CLM-005/",
@@ -1251,9 +1253,7 @@
    "structured_data": [
     "BreadcrumbList"
    ],
-   "hard_state_acceptance": [
-    "verification_sparse"
-   ]
+   "hard_state_acceptance": []
   },
   {
    "route": "/evidence/CLM-016/",
@@ -5401,7 +5401,7 @@
    ],
    "next_action_policy": "VERIFY_PRIMARY_EVIDENCE",
    "presentation_contract": {
-    "measurement_limit": 0,
+    "measurement_limit": 1,
     "presentation_family": "macro-vintage-concept"
    },
    "structured_data": [],
@@ -5506,7 +5506,7 @@
    {
     "state_id": "institutional_sequence",
     "route": "/payments/",
-    "must_prove": "FPS, RTGS, interoperability, institution-building, operation, use and outcome are visually distinct states.",
+    "must_prove": "FPS, RTGS, institution-building, implementation, operation, use and outcome are visually distinct states; /payments/ carries FPS, RTGS and institution-building, and /reforms/ carries the rule-to-outcome chain (VIS-PAYMENT-RAILS).",
     "data_at_route": {
      "page_family": "Domain Answer",
      "visual_ids": [
@@ -5533,7 +5533,7 @@
    {
     "state_id": "vintage_conflict",
     "route": "/remittances/",
-    "must_prove": "Same-year revisions and observed/estimated/projected states are visually legible without selecting a winner.",
+    "must_prove": "Observed, estimated and projected states and the break between vintages are visually legible without selecting a winner; the same-year revision itself is drawn in the Reading /remittances/ links to (RV-CWR-001).",
     "data_at_route": {
      "page_family": "Domain Answer",
      "visual_ids": [
@@ -5568,13 +5568,13 @@
    },
    {
     "state_id": "verification_sparse",
-    "route": "/evidence/CLM-015/",
-    "must_prove": "A semantic/control object with no source expected is not styled as missing evidence or an error.",
+    "route": "/evidence/CLM-004/",
+    "must_prove": "A framing record that sets a measurement rule, with no fact to source and so no source expected, is not styled as missing evidence or an error.",
     "data_at_route": {
      "page_family": "Evidence Record",
-     "lineage_state": "BOUND_EXACT",
-     "verification_state": "SOURCES_LISTED",
-     "public_sources_listed": 1,
+     "lineage_state": "FRAMING_NO_FACT",
+     "verification_state": "FRAMING_NO_FACT",
+     "public_sources_listed": 0,
      "visual_ids": [],
      "visual_grammar_present": [],
      "reading_ids": []
@@ -6187,10 +6187,10 @@
    "job": "Report a suspected error while preserving the public record until review.",
    "path": [
     "/evidence/CLM-001/",
-    "/corrections/",
-    "/contact/"
+    "/contact/",
+    "/corrections/"
    ],
-   "success_condition": "Stable record identity and correction/report pathways remain connected; no silent change is implied."
+   "success_condition": "The report action carries the stable record identity into Contact (?record=), Contact links on to Corrections, and no silent change to the record is implied."
   },
   {
    "journey_id": "J11_REUSE_RIGHTS",
