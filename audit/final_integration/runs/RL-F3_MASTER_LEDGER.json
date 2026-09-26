@@ -1,0 +1,207 @@
+{
+ "transaction": "RL-F3",
+ "summary": "F3: one curated resource added (FinDev Gateway, Sept 2026, MFB supervision); four candidates deferred or rejected without Master rows",
+ "input_master_sha256": "caabff47f4ff9b036943b72f775260197a59dbc3e00cdc4b629bed65f5b4bfc6",
+ "output_master_sha256": "0e8730c266e07d4769f8b315cd12ff2e95d69cd3e766ab9ff65b706a4b4ee6e9",
+ "cells_written": 22,
+ "changes": [
+  {
+   "finding": "RL-F3:FINDEV-2026",
+   "sheet": "15_SOURCE_LIBRARY",
+   "row": 165,
+   "col": 1,
+   "field": "source_id",
+   "old": null,
+   "new": "SRC-AMB-MFB-SUPERVISION-2026"
+  },
+  {
+   "finding": "RL-F3:FINDEV-2026",
+   "sheet": "15_SOURCE_LIBRARY",
+   "row": 165,
+   "col": 2,
+   "field": "primary_url",
+   "old": null,
+   "new": "https://www.findevgateway.org/paper/2026/09/beyond-financial-soundness-rebuilding-supervisory-framework-for-microfinance-banks-in"
+  },
+  {
+   "finding": "RL-F3:FINDEV-2026",
+   "sheet": "15_SOURCE_LIBRARY",
+   "row": 165,
+   "col": 4,
+   "field": "datasets_or_use",
+   "old": null,
+   "new": "RESOURCE_LIBRARY_ONLY__YEMEN_MFB_SUPERVISION"
+  },
+  {
+   "finding": "RL-F3:FINDEV-2026",
+   "sheet": "15_SOURCE_LIBRARY",
+   "row": 165,
+   "col": 5,
+   "field": "row_count",
+   "old": null,
+   "new": 0
+  },
+  {
+   "finding": "RL-F3:FINDEV-2026",
+   "sheet": "15_SOURCE_LIBRARY",
+   "row": 165,
+   "col": 6,
+   "field": "display_title",
+   "old": null,
+   "new": "Beyond Financial Soundness: Rebuilding the Supervisory Framework for Microfinance Banks in Yemen (2026)"
+  },
+  {
+   "finding": "RL-F3:FINDEV-2026",
+   "sheet": "15_SOURCE_LIBRARY",
+   "row": 165,
+   "col": 12,
+   "field": "display_title_ar",
+   "old": null,
+   "new": "ما بعد السلامة المالية: إعادة بناء الإطار الإشرافي لبنوك التمويل الأصغر في اليمن (2026)"
+  },
+  {
+   "finding": "RL-F3:FINDEV-2026",
+   "sheet": "15_SOURCE_LIBRARY",
+   "row": 165,
+   "col": 7,
+   "field": "publisher",
+   "old": null,
+   "new": "Al-Amal Microfinance Bank (published on FinDev Gateway)"
+  },
+  {
+   "finding": "RL-F3:FINDEV-2026",
+   "sheet": "15_SOURCE_LIBRARY",
+   "row": 165,
+   "col": 25,
+   "field": "publisher_ar",
+   "old": null,
+   "new": "بنك الأمل للتمويل الأصغر (منشور على منصة FinDev Gateway)"
+  },
+  {
+   "finding": "RL-F3:FINDEV-2026",
+   "sheet": "15_SOURCE_LIBRARY",
+   "row": 165,
+   "col": 8,
+   "field": "resource_category",
+   "old": null,
+   "new": "Yemen analytical literature and sector context"
+  },
+  {
+   "finding": "RL-F3:FINDEV-2026",
+   "sheet": "15_SOURCE_LIBRARY",
+   "row": 165,
+   "col": 13,
+   "field": "resource_category_ar",
+   "old": null,
+   "new": "الأدبيات والتحليلات القطاعية الخاصة باليمن"
+  },
+  {
+   "finding": "RL-F3:FINDEV-2026",
+   "sheet": "15_SOURCE_LIBRARY",
+   "row": 165,
+   "col": 9,
+   "field": "why_it_matters",
+   "old": null,
+   "new": "A paper by authors from Al-Amal Microfinance Bank on how Yemen’s microfinance banks are supervised. It argues that supervision should assess social and developmental performance alongside financial soundness, which makes it a useful starting point for regulators and providers asking how licensing and supervision relate to inclusion outcomes."
+  },
+  {
+   "finding": "RL-F3:FINDEV-2026",
+   "sheet": "15_SOURCE_LIBRARY",
+   "row": 165,
+   "col": 14,
+   "field": "why_it_matters_ar",
+   "old": null,
+   "new": "ورقة أعدها مؤلفون من بنك الأمل للتمويل الأصغر حول الإشراف على بنوك التمويل الأصغر في اليمن، وتدعو إلى أن يقيّم الإشراف الأداء الاجتماعي والتنموي إلى جانب السلامة المالية. وهي نقطة انطلاق مفيدة للجهات الرقابية ومقدمي الخدمة عند النظر في علاقة الترخيص والإشراف بنتائج الشمول."
+  },
+  {
+   "finding": "RL-F3:FINDEV-2026",
+   "sheet": "15_SOURCE_LIBRARY",
+   "row": 165,
+   "col": 10,
+   "field": "does_not_establish",
+   "old": null,
+   "new": "A proposal written by staff of a regulated microfinance bank: it is not a statement by the regulator or an independent assessment, it does not show how microfinance banks are supervised in practice or whether any institution is operating, and it provides no sector figures used by this resource."
+  },
+  {
+   "finding": "RL-F3:FINDEV-2026",
+   "sheet": "15_SOURCE_LIBRARY",
+   "row": 165,
+   "col": 15,
+   "field": "does_not_establish_ar",
+   "old": null,
+   "new": "مقترح كتبه موظفون في بنك تمويل أصغر خاضع للرقابة: فهو ليس بيانًا صادرًا عن الجهة الرقابية ولا تقييمًا مستقلًا، ولا يبين كيف يجري الإشراف على بنوك التمويل الأصغر فعليًا أو ما إذا كانت أي مؤسسة تعمل، ولا يقدم أرقامًا عن القطاع يستخدمها هذا المورد."
+  },
+  {
+   "finding": "RL-F3:FINDEV-2026",
+   "sheet": "15_SOURCE_LIBRARY",
+   "row": 165,
+   "col": 11,
+   "field": "public_card_state",
+   "old": null,
+   "new": "FULL_PUBLIC_CARD"
+  },
+  {
+   "finding": "RL-F3:FINDEV-2026",
+   "sheet": "15_SOURCE_LIBRARY",
+   "row": 165,
+   "col": 17,
+   "field": "issuer",
+   "old": null,
+   "new": "Al-Amal Microfinance Bank"
+  },
+  {
+   "finding": "RL-F3:FINDEV-2026",
+   "sheet": "15_SOURCE_LIBRARY",
+   "row": 165,
+   "col": 18,
+   "field": "hosting_platform",
+   "old": null,
+   "new": "FinDev Gateway"
+  },
+  {
+   "finding": "RL-F3:FINDEV-2026",
+   "sheet": "15_SOURCE_LIBRARY",
+   "row": 165,
+   "col": 19,
+   "field": "rights_state",
+   "old": null,
+   "new": "NOT_ASSESSED"
+  },
+  {
+   "finding": "RL-F3:FINDEV-2026",
+   "sheet": "15_SOURCE_LIBRARY",
+   "row": 165,
+   "col": 22,
+   "field": "retrieval_date",
+   "old": null,
+   "new": "2026-09-26"
+  },
+  {
+   "finding": "RL-F3:FINDEV-2026",
+   "sheet": "15_SOURCE_LIBRARY",
+   "row": 165,
+   "col": 26,
+   "field": "document_label",
+   "old": null,
+   "new": "Research or policy paper"
+  },
+  {
+   "finding": "RL-F3:FINDEV-2026",
+   "sheet": "15_SOURCE_LIBRARY",
+   "row": 165,
+   "col": 27,
+   "field": "document_label_ar",
+   "old": null,
+   "new": "ورقة بحثية أو سياساتية"
+  },
+  {
+   "finding": "RL-F3:FINDEV-2026",
+   "sheet": "15_SOURCE_LIBRARY",
+   "row": 165,
+   "col": 28,
+   "field": "document_date",
+   "old": null,
+   "new": "2026-09"
+  }
+ ]
+}

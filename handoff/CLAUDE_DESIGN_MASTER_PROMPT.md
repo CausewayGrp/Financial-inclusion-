@@ -22,12 +22,12 @@ You are **not** the evidence authority, policy author, source adjudicator or res
 The sole semantic/evidence/source/rights/publication authority is:
 
 `authority/Yemen_Financial_Inclusion_Evidence_Master.xlsx`  
-SHA-256: `caabff47f4ff9b036943b72f775260197a59dbc3e00cdc4b629bed65f5b4bfc6`
+SHA-256: `69899ae26bd6606cc6d8da86d2c6a30317dbbeebc37480ad3cc11e2b36421699`
 
 Controlled implementation projection:
 
 `site-src/content/page_specs.json`  
-SHA-256: `f7edca09185b89378a946c1195c37d6e99d35b2689df7f0ff646c74aeb550e0f`
+SHA-256: `5637be073346eed9c2ffc2e3265b7005e31df9949e86a5402b66b1f0579ee2a2`
 
 Presentation-depth contract:
 
@@ -69,9 +69,9 @@ Current controlled state (from `site-src/content/content/public_inventory.json`,
 - 10 analytical Readings
 - 10 Measurement Agenda priorities
 - 36 governed visual contracts, each with a design tier (§10)
-- 160 source records, of which 151 have a public original locator
-- 27 curated report/reference cards
-- 435 local public-search records
+- 161 source records, of which 152 have a public original locator
+- 28 curated report/reference cards
+- 436 local public-search records
 - 24 dated chronology events
 
 These counts describe the system; they are **not** an instruction to make a crowded interface.
@@ -251,7 +251,7 @@ The Data route has two jobs:
 1. the full original-source locator register; and
 2. a deliberately small curated library of Yemen reports plus international measurement/implementation references.
 
-Use the controlled `resource_category` metadata to group the 27 curated cards. Make the distinction between **evidence source** and **interpretive/implementation reference** obvious.
+Use the controlled `resource_category` metadata to group the 28 curated cards. Make the distinction between **evidence source** and **interpretive/implementation reference** obvious.
 
 The library includes references useful for:
 - Yemen financial-sector diagnostics;
@@ -385,7 +385,7 @@ Search is not a site-menu substitute and not a simple text box. Design it as a l
 - queries such as `RTGS`, `FMIIP`, `11.9`, `CLM-002`, `gender gap`, `نظام الدفع السريع`, and `التحويل النقدي استمرار الاستخدام` must lead to meaningful controlled results;
 - a technical search failure must never look like “no evidence exists”.
 
-The local index is large (435 public search records at the time of writing). Do not make the interface show it all at once.
+The local index is large (436 public search records at the time of writing). Do not make the interface show it all at once.
 
 ### Evidence is a workbench, not a catalogue wall
 
@@ -416,9 +416,9 @@ The interface may state that two records are directly comparable, comparable onl
 `/data/` must clearly distinguish:
 
 1. the complete original-source locator register; and
-2. the **27 curated Resource Library cards**.
+2. the **28 curated Resource Library cards**.
 
-There are **160 source records**, **151 with public original locators**. The curated 27 are not “the sources that matter”; they are deliberately selected reports/references that add interpretation, measurement or implementation value. Preserve that distinction visually.
+There are **161 source records**, **152 with public original locators**. The curated 28 are not “the sources that matter”; they are deliberately selected reports/references that add interpretation, measurement or implementation value. Preserve that distinction visually.
 
 Claude Design should **not download or bundle third-party reports** simply to make the library richer. Use controlled original-publisher links. If visual thumbnails are desired, use rights-cleared local assets or neutral/generated cover abstractions rather than republishing source pages/screenshots without permission.
 

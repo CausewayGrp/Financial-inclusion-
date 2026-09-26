@@ -1,8 +1,8 @@
 {
   "schema": "YFIE_PUBLIC_LITERAL_CLOSURE/2.0",
   "audit_version": "2.0 — token-bounded, token-level classification (Pre-Tranche-C P1-D); v1 substring and paragraph-keyword rules removed",
-  "authority_master_sha256": "caabff47f4ff9b036943b72f775260197a59dbc3e00cdc4b629bed65f5b4bfc6",
-  "page_specs_sha256": "f7edca09185b89378a946c1195c37d6e99d35b2689df7f0ff646c74aeb550e0f",
+  "authority_master_sha256": "69899ae26bd6606cc6d8da86d2c6a30317dbbeebc37480ad3cc11e2b36421699",
+  "page_specs_sha256": "5637be073346eed9c2ffc2e3265b7005e31df9949e86a5402b66b1f0579ee2a2",
   "scope": "Reader-facing Page Spec titles/sections plus governed-copy numeric inventory. Every substantive public numeral must resolve to a governed source-closed object or be explicitly classified as date/period, stable technical identifier, or non-observation system/method metadata.",
   "classification_rule": "UNRESOLVED_SUBSTANTIVE_PUBLIC_NUMBER is a hard validation failure. Route/source presence without an object-level source-closed trace is not sufficient.",
   "record_count": 12741,
@@ -2512,7 +2512,7 @@
       "field": "body_en",
       "token": "110",
       "category": "INVENTORY_COUNT_FROM_CONTRACT",
-      "context": "Public Evidence Records: 110\nDocumented chronology events: 24\nPublic claims (each is also an Evidence Record): 60\nRegistered source records: 160\nSource records with a public original locator: 151\nCurated source and report cards: 27\nEvidence Readings: 10\nMeasurement Agenda priorities: 10"
+      "context": "Public Evidence Records: 110\nDocumented chronology events: 24\nPublic claims (each is also an Evidence Record): 60\nRegistered source records: 161\nSource records with a public original locator: 152\nCurated source and report cards: 28\nEvidence Readings: 10\nMeasurement Agenda priorities: 10"
     },
     {
       "route": "/data/",
@@ -2520,7 +2520,7 @@
       "field": "body_en",
       "token": "24",
       "category": "INVENTORY_COUNT_FROM_CONTRACT",
-      "context": "Public Evidence Records: 110\nDocumented chronology events: 24\nPublic claims (each is also an Evidence Record): 60\nRegistered source records: 160\nSource records with a public original locator: 151\nCurated source and report cards: 27\nEvidence Readings: 10\nMeasurement Agenda priorities: 10"
+      "context": "Public Evidence Records: 110\nDocumented chronology events: 24\nPublic claims (each is also an Evidence Record): 60\nRegistered source records: 161\nSource records with a public original locator: 152\nCurated source and report cards: 28\nEvidence Readings: 10\nMeasurement Agenda priorities: 10"
     },
     {
       "route": "/data/",
@@ -2528,31 +2528,31 @@
       "field": "body_en",
       "token": "60",
       "category": "INVENTORY_COUNT_FROM_CONTRACT",
-      "context": "Public Evidence Records: 110\nDocumented chronology events: 24\nPublic claims (each is also an Evidence Record): 60\nRegistered source records: 160\nSource records with a public original locator: 151\nCurated source and report cards: 27\nEvidence Readings: 10\nMeasurement Agenda priorities: 10"
+      "context": "Public Evidence Records: 110\nDocumented chronology events: 24\nPublic claims (each is also an Evidence Record): 60\nRegistered source records: 161\nSource records with a public original locator: 152\nCurated source and report cards: 28\nEvidence Readings: 10\nMeasurement Agenda priorities: 10"
     },
     {
       "route": "/data/",
       "surface": "section",
       "field": "body_en",
-      "token": "160",
+      "token": "161",
       "category": "INVENTORY_COUNT_FROM_CONTRACT",
-      "context": "Public Evidence Records: 110\nDocumented chronology events: 24\nPublic claims (each is also an Evidence Record): 60\nRegistered source records: 160\nSource records with a public original locator: 151\nCurated source and report cards: 27\nEvidence Readings: 10\nMeasurement Agenda priorities: 10"
+      "context": "Public Evidence Records: 110\nDocumented chronology events: 24\nPublic claims (each is also an Evidence Record): 60\nRegistered source records: 161\nSource records with a public original locator: 152\nCurated source and report cards: 28\nEvidence Readings: 10\nMeasurement Agenda priorities: 10"
     },
     {
       "route": "/data/",
       "surface": "section",
       "field": "body_en",
-      "token": "151",
+      "token": "152",
       "category": "INVENTORY_COUNT_FROM_CONTRACT",
-      "context": "Public Evidence Records: 110\nDocumented chronology events: 24\nPublic claims (each is also an Evidence Record): 60\nRegistered source records: 160\nSource records with a public original locator: 151\nCurated source and report cards: 27\nEvidence Readings: 10\nMeasurement Agenda priorities: 10"
+      "context": "Public Evidence Records: 110\nDocumented chronology events: 24\nPublic claims (each is also an Evidence Record): 60\nRegistered source records: 161\nSource records with a public original locator: 152\nCurated source and report cards: 28\nEvidence Readings: 10\nMeasurement Agenda priorities: 10"
     },
     {
       "route": "/data/",
       "surface": "section",
       "field": "body_en",
-      "token": "27",
+      "token": "28",
       "category": "INVENTORY_COUNT_FROM_CONTRACT",
-      "context": "Public Evidence Records: 110\nDocumented chronology events: 24\nPublic claims (each is also an Evidence Record): 60\nRegistered source records: 160\nSource records with a public original locator: 151\nCurated source and report cards: 27\nEvidence Readings: 10\nMeasurement Agenda priorities: 10"
+      "context": "Public Evidence Records: 110\nDocumented chronology events: 24\nPublic claims (each is also an Evidence Record): 60\nRegistered source records: 161\nSource records with a public original locator: 152\nCurated source and report cards: 28\nEvidence Readings: 10\nMeasurement Agenda priorities: 10"
     },
     {
       "route": "/data/",
@@ -2560,7 +2560,7 @@
       "field": "body_en",
       "token": "10",
       "category": "INVENTORY_COUNT_FROM_CONTRACT",
-      "context": "Public Evidence Records: 110\nDocumented chronology events: 24\nPublic claims (each is also an Evidence Record): 60\nRegistered source records: 160\nSource records with a public original locator: 151\nCurated source and report cards: 27\nEvidence Readings: 10\nMeasurement Agenda priorities: 10"
+      "context": "Public Evidence Records: 110\nDocumented chronology events: 24\nPublic claims (each is also an Evidence Record): 60\nRegistered source records: 161\nSource records with a public original locator: 152\nCurated source and report cards: 28\nEvidence Readings: 10\nMeasurement Agenda priorities: 10"
     },
     {
       "route": "/data/",
@@ -2568,7 +2568,7 @@
       "field": "body_ar",
       "token": "110",
       "category": "INVENTORY_COUNT_FROM_CONTRACT",
-      "context": "سجلات الأدلة العامة: 110\nأحداث السلسلة الزمنية الموثقة: 24\nالخلاصات العامة (وكل منها سجل دليل أيضًا): 60\nسجلات المصادر المسجلة: 160\nسجلات المصادر التي لها رابط أصلي عام: 151\nبطاقات المصادر والتقارير المنتقاة: 27\nقراءات الأدلة: 10\nأولويات القياس: 10"
+      "context": "سجلات الأدلة العامة: 110\nأحداث السلسلة الزمنية الموثقة: 24\nالخلاصات العامة (وكل منها سجل دليل أيضًا): 60\nسجلات المصادر المسجلة: 161\nسجلات المصادر التي لها رابط أصلي عام: 152\nبطاقات المصادر والتقارير المنتقاة: 28\nقراءات الأدلة: 10\nأولويات القياس: 10"
     },
     {
       "route": "/data/",
@@ -2576,7 +2576,7 @@
       "field": "body_ar",
       "token": "24",
       "category": "INVENTORY_COUNT_FROM_CONTRACT",
-      "context": "سجلات الأدلة العامة: 110\nأحداث السلسلة الزمنية الموثقة: 24\nالخلاصات العامة (وكل منها سجل دليل أيضًا): 60\nسجلات المصادر المسجلة: 160\nسجلات المصادر التي لها رابط أصلي عام: 151\nبطاقات المصادر والتقارير المنتقاة: 27\nقراءات الأدلة: 10\nأولويات القياس: 10"
+      "context": "سجلات الأدلة العامة: 110\nأحداث السلسلة الزمنية الموثقة: 24\nالخلاصات العامة (وكل منها سجل دليل أيضًا): 60\nسجلات المصادر المسجلة: 161\nسجلات المصادر التي لها رابط أصلي عام: 152\nبطاقات المصادر والتقارير المنتقاة: 28\nقراءات الأدلة: 10\nأولويات القياس: 10"
     },
     {
       "route": "/data/",
@@ -2584,31 +2584,31 @@
       "field": "body_ar",
       "token": "60",
       "category": "INVENTORY_COUNT_FROM_CONTRACT",
-      "context": "سجلات الأدلة العامة: 110\nأحداث السلسلة الزمنية الموثقة: 24\nالخلاصات العامة (وكل منها سجل دليل أيضًا): 60\nسجلات المصادر المسجلة: 160\nسجلات المصادر التي لها رابط أصلي عام: 151\nبطاقات المصادر والتقارير المنتقاة: 27\nقراءات الأدلة: 10\nأولويات القياس: 10"
+      "context": "سجلات الأدلة العامة: 110\nأحداث السلسلة الزمنية الموثقة: 24\nالخلاصات العامة (وكل منها سجل دليل أيضًا): 60\nسجلات المصادر المسجلة: 161\nسجلات المصادر التي لها رابط أصلي عام: 152\nبطاقات المصادر والتقارير المنتقاة: 28\nقراءات الأدلة: 10\nأولويات القياس: 10"
     },
     {
       "route": "/data/",
       "surface": "section",
       "field": "body_ar",
-      "token": "160",
+      "token": "161",
       "category": "INVENTORY_COUNT_FROM_CONTRACT",
-      "context": "سجلات الأدلة العامة: 110\nأحداث السلسلة الزمنية الموثقة: 24\nالخلاصات العامة (وكل منها سجل دليل أيضًا): 60\nسجلات المصادر المسجلة: 160\nسجلات المصادر التي لها رابط أصلي عام: 151\nبطاقات المصادر والتقارير المنتقاة: 27\nقراءات الأدلة: 10\nأولويات القياس: 10"
+      "context": "سجلات الأدلة العامة: 110\nأحداث السلسلة الزمنية الموثقة: 24\nالخلاصات العامة (وكل منها سجل دليل أيضًا): 60\nسجلات المصادر المسجلة: 161\nسجلات المصادر التي لها رابط أصلي عام: 152\nبطاقات المصادر والتقارير المنتقاة: 28\nقراءات الأدلة: 10\nأولويات القياس: 10"
     },
     {
       "route": "/data/",
       "surface": "section",
       "field": "body_ar",
-      "token": "151",
+      "token": "152",
       "category": "INVENTORY_COUNT_FROM_CONTRACT",
-      "context": "سجلات الأدلة العامة: 110\nأحداث السلسلة الزمنية الموثقة: 24\nالخلاصات العامة (وكل منها سجل دليل أيضًا): 60\nسجلات المصادر المسجلة: 160\nسجلات المصادر التي لها رابط أصلي عام: 151\nبطاقات المصادر والتقارير المنتقاة: 27\nقراءات الأدلة: 10\nأولويات القياس: 10"
+      "context": "سجلات الأدلة العامة: 110\nأحداث السلسلة الزمنية الموثقة: 24\nالخلاصات العامة (وكل منها سجل دليل أيضًا): 60\nسجلات المصادر المسجلة: 161\nسجلات المصادر التي لها رابط أصلي عام: 152\nبطاقات المصادر والتقارير المنتقاة: 28\nقراءات الأدلة: 10\nأولويات القياس: 10"
     },
     {
       "route": "/data/",
       "surface": "section",
       "field": "body_ar",
-      "token": "27",
+      "token": "28",
       "category": "INVENTORY_COUNT_FROM_CONTRACT",
-      "context": "سجلات الأدلة العامة: 110\nأحداث السلسلة الزمنية الموثقة: 24\nالخلاصات العامة (وكل منها سجل دليل أيضًا): 60\nسجلات المصادر المسجلة: 160\nسجلات المصادر التي لها رابط أصلي عام: 151\nبطاقات المصادر والتقارير المنتقاة: 27\nقراءات الأدلة: 10\nأولويات القياس: 10"
+      "context": "سجلات الأدلة العامة: 110\nأحداث السلسلة الزمنية الموثقة: 24\nالخلاصات العامة (وكل منها سجل دليل أيضًا): 60\nسجلات المصادر المسجلة: 161\nسجلات المصادر التي لها رابط أصلي عام: 152\nبطاقات المصادر والتقارير المنتقاة: 28\nقراءات الأدلة: 10\nأولويات القياس: 10"
     },
     {
       "route": "/data/",
@@ -2616,7 +2616,7 @@
       "field": "body_ar",
       "token": "10",
       "category": "INVENTORY_COUNT_FROM_CONTRACT",
-      "context": "سجلات الأدلة العامة: 110\nأحداث السلسلة الزمنية الموثقة: 24\nالخلاصات العامة (وكل منها سجل دليل أيضًا): 60\nسجلات المصادر المسجلة: 160\nسجلات المصادر التي لها رابط أصلي عام: 151\nبطاقات المصادر والتقارير المنتقاة: 27\nقراءات الأدلة: 10\nأولويات القياس: 10"
+      "context": "سجلات الأدلة العامة: 110\nأحداث السلسلة الزمنية الموثقة: 24\nالخلاصات العامة (وكل منها سجل دليل أيضًا): 60\nسجلات المصادر المسجلة: 161\nسجلات المصادر التي لها رابط أصلي عام: 152\nبطاقات المصادر والتقارير المنتقاة: 28\nقراءات الأدلة: 10\nأولويات القياس: 10"
     },
     {
       "route": "/evidence/CLM-001/",

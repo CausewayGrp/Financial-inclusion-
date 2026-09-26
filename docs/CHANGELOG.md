@@ -1,5 +1,17 @@
 # Repository Change Log
 
+## 2026-09-26 — F3: five bounded Resource Library decisions
+
+Transactions RL-F3 and RL-F3b (Master `caabff47…` → `69899ae2…`); record `audit/F3_RESOURCE_DECISIONS.md`.
+- **Included (curated resource):** the September 2026 FinDev Gateway paper on supervising Yemen's microfinance banks
+  (authors from Al-Amal Microfinance Bank; provenance and boundary stated on the card; no figures, no evidence binding).
+- **Deferred:** IFAD *Sending Money Home 2026* (no verified Yemen figure; reopen only for a documented Yemen estimate, as a
+  secondary lineage) and the World Bank Joint Food Security Monitor — Yemen (verified version 3 August 2026; its
+  exchange-rate series need a governed record before any use beside nominal rial values).
+- **Rejected:** the CPMI-IOSCO FMI cyber-resilience toolkit (consultative global guidance; no Reading or priority depends
+  on it) and the Uzbekistan financial-inclusion index method (a composite index conflicts with the product's first principle).
+- Counts: curated cards 28, source records 161 (152 with a public original locator), search records 436.
+
 ## 2026-09-26 — F2: Evidence Readings portfolio integrated (directive D7, sessions F0–F2)
 
 OpenAI accepted the Tranche C checkpoint (recipient verification 31/31) and supplied the independent ten-Reading package.

@@ -19,8 +19,8 @@ controlled-product-state and publication-state authority; everything else here i
 | **Waiting on** | Nothing external. OpenAI accepted Tranche C (recipient verification 31/31) and supplied the ten-Reading package; sessions F3–F9 of directive [D7](audit/directives/D7_FINAL_INTEGRATION_TO_DESIGN_HANDOFF_2026-09-26.md) are in progress |
 | **Reviewed checkpoint** | Tag [`checkpoint/tranche-c-complete-reading-hold`](../../tree/checkpoint/tranche-c-complete-reading-hold): tree byte-identical to the review ZIP `…TRANCHE_C_COMPLETE_READING_HOLD.zip` (SHA-256 `63612dea…`) |
 | **Since that checkpoint** | Repository infrastructure, then F2: the ten Evidence Readings integrated Master-first in one transaction (RP-F2; [adjudication](audit/READING_PORTFOLIO_FINAL_ADJUDICATION.md), [change ledger](audit/READING_PORTFOLIO_CHANGE_LEDGER.csv)); BIL-05 closed — every English/Arabic page pair prints the same numbers |
-| **Production Master** | `authority/Yemen_Financial_Inclusion_Evidence_Master.xlsx` · SHA-256 `caabff47f4ff9b036943b72f775260197a59dbc3e00cdc4b629bed65f5b4bfc6` |
-| **Page Specs** | `site-src/content/page_specs.json` · SHA-256 `f7edca09185b89378a946c1195c37d6e99d35b2689df7f0ff646c74aeb550e0f` |
+| **Production Master** | `authority/Yemen_Financial_Inclusion_Evidence_Master.xlsx` · SHA-256 `69899ae26bd6606cc6d8da86d2c6a30317dbbeebc37480ad3cc11e2b36421699` |
+| **Page Specs** | `site-src/content/page_specs.json` · SHA-256 `5637be073346eed9c2ffc2e3265b7005e31df9949e86a5402b66b1f0579ee2a2` |
 | **Currentness cut-off** | 26 September 2026 ([`audit/FINAL_CURRENTNESS_CUTOFF.md`](audit/FINAL_CURRENTNESS_CUTOFF.md)) |
 | **Re-entry document** | [`OPENAI_REENTRY_CHECKPOINT.md`](OPENAI_REENTRY_CHECKPOINT.md) |
 
@@ -94,9 +94,9 @@ Master; the validator checks every figure below against it. Counts are an invent
 - 110 Evidence Records, of which 60 are controlled public claims; 55 Evidence Passports.
 - 10 Readings; 10 Measurement priorities; 11 governed entry questions.
 - 36 governed visual contracts, each with a design tier in `site-src/content/visuals/visual_design_contracts.json`.
-- 160 source records, of which 151 expose a public original locator; 27 curated resource cards.
+- 161 source records, of which 152 expose a public original locator; 28 curated resource cards.
 - 24 documented chronology events.
-- 435 public search records.
+- 436 public search records.
 
 ## Programme tracker
 

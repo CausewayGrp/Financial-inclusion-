@@ -36,10 +36,10 @@ Counts are derived from the Master (`site-src/content/content/public_inventory.j
 - 10 Evidence Readings.
 - 10 Measurement priorities.
 - 36 governed visual contracts, tiered for design in `site-src/content/visuals/visual_design_contracts.json` (see `handoff/VISUAL_DESIGN_CONTRACT.md`).
-- 160 source records, of which 151 expose a public original locator.
-- 27 curated report/reference cards.
+- 161 source records, of which 152 expose a public original locator.
+- 28 curated report/reference cards.
 - 24 documented macro-financial / financial-inclusion-system chronology events.
-- 435 controlled public-search records.
+- 436 controlled public-search records.
 - 286 localized Arabic/English route documents + root + 404 = 288 baseline static HTML outputs.
 
 These are **complete design inputs**, not a backlog to re-invent.
@@ -54,7 +54,7 @@ The semantic/evidence source of truth is:
 
 Current handoff identity:
 
-`caabff47f4ff9b036943b72f775260197a59dbc3e00cdc4b629bed65f5b4bfc6`
+`69899ae26bd6606cc6d8da86d2c6a30317dbbeebc37480ad3cc11e2b36421699`
 
 The controlled implementation projection is:
 
@@ -62,7 +62,7 @@ The controlled implementation projection is:
 
 Current handoff identity:
 
-`f7edca09185b89378a946c1195c37d6e99d35b2689df7f0ff646c74aeb550e0f`
+`5637be073346eed9c2ffc2e3265b7005e31df9949e86a5402b66b1f0579ee2a2`
 
 Presentation depth/order is supplied by:
 

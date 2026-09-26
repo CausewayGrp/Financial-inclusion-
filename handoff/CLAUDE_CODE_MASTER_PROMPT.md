@@ -21,7 +21,7 @@ Read, in order:
 9. `handoff/STATIC_RUNTIME_AND_API_CONTRACT.md`;
 10. `handoff/HANDOFF_ACCEPTANCE_CHECKLIST.md`.
 
-Verify that the Production Master hash is `caabff47f4ff9b036943b72f775260197a59dbc3e00cdc4b629bed65f5b4bfc6` and Page Specs hash is `f7edca09185b89378a946c1195c37d6e99d35b2689df7f0ff646c74aeb550e0f` before implementation. If either differs, treat it as a concurrency event: re-read the current state and do not restore these hashes blindly.
+Verify that the Production Master hash is `69899ae26bd6606cc6d8da86d2c6a30317dbbeebc37480ad3cc11e2b36421699` and Page Specs hash is `5637be073346eed9c2ffc2e3265b7005e31df9949e86a5402b66b1f0579ee2a2` before implementation. If either differs, treat it as a concurrency event: re-read the current state and do not restore these hashes blindly.
 
 ## Semantic boundary
 

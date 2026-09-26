@@ -1,0 +1,27 @@
+{
+ "transaction": "RL-F3b",
+ "summary": "F3 card: authorship stated as verified (authors from Al-Amal Microfinance Bank)",
+ "input_master_sha256": "0e8730c266e07d4769f8b315cd12ff2e95d69cd3e766ab9ff65b706a4b4ee6e9",
+ "output_master_sha256": "69899ae26bd6606cc6d8da86d2c6a30317dbbeebc37480ad3cc11e2b36421699",
+ "cells_written": 2,
+ "changes": [
+  {
+   "finding": "RL-F3b",
+   "sheet": "15_SOURCE_LIBRARY",
+   "row": 165,
+   "col": 10,
+   "field": "SRC-AMB-MFB-SUPERVISION-2026.does_not_establish",
+   "old": "A proposal written by staff of a regulated microfinance bank: it is not a statement by the regulator or an independent assessment, it does not show how microfinance banks are supervised in practice or whether any institution is operating, and it provides no sector figures used by this resource.",
+   "new": "A proposal by authors from a microfinance bank: it is not a statement by the regulator or an independent assessment, it does not show how microfinance banks are supervised in practice or whether any institution is operating, and it provides no sector figures used by this resource."
+  },
+  {
+   "finding": "RL-F3b",
+   "sheet": "15_SOURCE_LIBRARY",
+   "row": 165,
+   "col": 15,
+   "field": "SRC-AMB-MFB-SUPERVISION-2026.does_not_establish_ar",
+   "old": "مقترح كتبه موظفون في بنك تمويل أصغر خاضع للرقابة: فهو ليس بيانًا صادرًا عن الجهة الرقابية ولا تقييمًا مستقلًا، ولا يبين كيف يجري الإشراف على بنوك التمويل الأصغر فعليًا أو ما إذا كانت أي مؤسسة تعمل، ولا يقدم أرقامًا عن القطاع يستخدمها هذا المورد.",
+   "new": "مقترح أعده مؤلفون من بنك للتمويل الأصغر: فهو ليس بيانًا صادرًا عن الجهة الرقابية ولا تقييمًا مستقلًا، ولا يبين كيف يجري الإشراف على بنوك التمويل الأصغر فعليًا أو ما إذا كانت أي مؤسسة تعمل، ولا يقدم أرقامًا عن القطاع يستخدمها هذا المورد."
+  }
+ ]
+}
