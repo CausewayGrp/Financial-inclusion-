@@ -4,6 +4,14 @@
   "system_name_ar": "أدلة الشمول المالي في اليمن",
   "repository_drive_id": "1iAxWukk1xeAXDPibmXXwGlaUXDcr_XvA",
   "repository_name": "Yemen_Financial_Inclusion_Evidence",
+  "canonical_repository": {
+    "host": "GitHub",
+    "repository": "CausewayGrp/Financial-inclusion-",
+    "url": "https://github.com/CausewayGrp/Financial-inclusion-",
+    "default_branch": "main",
+    "since": "2026-09-26",
+    "rule": "The Git repository is the canonical working store and its history. The main branch is the current state; checkpoint/* tags are the states handed to reviewers or to Design, and their ZIPs are built from those tags. The Drive folder (repository_drive_id) and ZIP copies are lineage, never working copies."
+  },
   "production_master": {
     "file_name": "Yemen_Financial_Inclusion_Evidence_Master.xlsx",
     "path": "authority/Yemen_Financial_Inclusion_Evidence_Master.xlsx",

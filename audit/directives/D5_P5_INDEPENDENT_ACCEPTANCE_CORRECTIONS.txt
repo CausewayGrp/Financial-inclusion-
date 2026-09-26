@@ -1,0 +1,133 @@
+P5 — INDEPENDENT ACCEPTANCE CORRECTIONS
+LAST TECHNICAL/EVIDENCE FIXES BEFORE TRANCHE C
+The Pre-Tranche-C P1–P4 hand-back has now undergone independent OpenAI recipient-side review.
+Overall disposition:
+ACCEPTED WITH THREE NARROW CORRECTIONS.
+Do not reopen P1–P4.
+Do not redo editorial, search, IA, visual tiering or source-lineage work.
+Do not start Tranche C.
+Work only on the three items below.
+P5.1 — MAKE PUBLIC-LITERAL AUDIT FULLY DETERMINISTIC
+Independent re-execution found that:
+scripts/audit_public_literals.py
+is not fully deterministic across Python hash seeds.
+The public text and classification remain valid, but the source_object selected for a Reading literal can change between equally valid bound objects.
+Example independently reproduced:
+the literal 78,686 on:
+/readings/microfinance-structural-divergence/
+can be recorded against different bound claim IDs across runs.
+Root cause:
+reading_objects() constructs:
+ids=set(...)
+and then iterates the unordered set.
+This makes provenance-record identity dependent on Python hash ordering.
+Fix this at the root.
+Define a canonical rule for competing valid bound objects.
+Preferred order:
+1. preserve explicit governed binding order when it exists;
+2. deduplicate without converting to an unordered set;
+3. if a tie still requires ordering, use stable object ID order.
+Do not simply sort after losing the semantic binding order unless that is the actual declared rule.
+Add regression tests that run the literal audit under multiple PYTHONHASHSEED values and require:
+- identical PUBLIC_LITERAL_CLOSURE.json bytes;
+- identical SHA-256;
+- identical record ordering;
+- identical source_object attribution.
+Also scan the literal-audit script for any other set/dict iteration that can influence emitted record identity/order.
+The acceptance requirement is:
+same canonical repository → same literal-closure file regardless of process hash seed.
+P5.2 — CLOSE REF-PAY-001 FROM THE PRIMARY CBY INSTRUMENT
+Independent OpenAI review retrieved and inspected the existing official locator:
+https://cby-ye.com/files/667c596ef3bea.pdf
+It is the official Central Bank of Yemen — Aden instrument:
+قرار محافظ البنك المركزي اليمني رقم (23) لسنة 2024م بشأن مزاولة نشاط التحويلات المالية الداخلية
+dated:
+26 June 2024
+Ref:
+343/CBY/2024
+The instrument requires the relevant domestic cash-transfer activity to operate through the Unified Money Transfer Network subject to the stated transition and exclusions.
+Treat this as a primary-source verification task, not a new research sweep.
+Perform:
+SOURCE → VERIFY → ADJUDICATE → MASTER FIRST.
+Create/promote the correct Source Record with:
+- issuer/publisher;
+- title;
+- date;
+- document/reference number;
+- public original locator;
+- document type;
+- evidence role appropriate to the use;
+- current rights state without inventing reuse permission.
+Bind REF-PAY-001 and all legitimately dependent objects to that Source Record.
+Recalculate source closure.
+If this fully closes:
+RV-CWR-009
+and:
+VIS-PAYMENT-RAILS,
+remove the corresponding release blocker.
+Do not overstate implementation or operational outcome:
+regulatory requirement ≠ demonstrated implementation ≠ observed use/outcome.
+P5.3 — UNBLOCK RV-CWR-001 PANEL 2 FROM CBY ANNUAL REPORT 2025
+Independent OpenAI primary-source review retrieved:
+SRC-CBY-AR2025-BOP
+https://english.cby-ye.com/files/6a54b8fcd8b68.pdf
+The official CBY Annual Report 2025 statistical table reports remittances, USD million:
+- 2021 = 2,900.22
+- 2022 = 3,066.58
+- 2023 = 3,240.46
+- 2024 = 3,422.16
+- 2025 = 3,614.05
+The current RV-CWR-001 contract says panel 2 is blocked because CBY AR2025 values for 2021–2023 are not held.
+That dependency can now be closed from the already governed primary source.
+Verify the values directly from the source again in your environment.
+Then Master-first:
+- ingest the missing 2021–2023 CBY AR2025 remittance rows into the appropriate governed remittance table;
+- preserve publication-vintage identity;
+- preserve unit and definition;
+- do not merge them with the IMF series;
+- build the panel-2 indexed CBY path with 2021 = 100;
+- use the already governed IMF path as the separate comparison lane;
+- show that indexing supports comparison of paths, not equivalence of raw levels;
+- preserve the prohibition against interpreting same-year restatement as economic collapse.
+Recalculate the visual data contract.
+If all inputs close, remove:
+BLOCKED_ON_DATA
+from RV-CWR-001 panel 2.
+The two paths must retain distinct source/vintage identity and must never be joined as one harmonised series.
+P5 VALIDATION
+After these three corrections:
+run:
+- projection generator check;
+- generator tests;
+- literal-audit hash-seed determinism tests;
+- build;
+- public-literal audit;
+- validator;
+- search probe;
+- source-lineage truth test;
+- architecture-diagram check;
+- pre-Tranche-C acceptance matrix;
+- checksum manifest.
+If browser tooling is available, rerun the public-tool browser suite.
+Do not change unrelated copy merely because you encounter stylistic preferences.
+P5 HAND-BACK
+Return one canonical repository ZIP:
+Yemen_Financial_Inclusion_Evidence_PreTrancheC_Accepted.zip
+with one root only.
+Include:
+audit/P5_INDEPENDENT_ACCEPTANCE_CORRECTIONS.md
+updated source-lineage truth test;
+updated visual-design contract;
+updated acceptance matrix;
+updated OPENAI_REENTRY_CHECKPOINT.md.
+State explicitly:
+- literal audit deterministic across tested hash seeds;
+- REF-PAY-001 status;
+- RV-CWR-001 panel-2 status;
+- remaining release blockers, if any.
+Final status if and only if all three items close safely:
+PRE-TRANCHE-C ACCEPTED — READY FOR TRANCHE C
+Do not start Tranche C.
+Do not declare DESIGN HANDOFF READY.
+Do not declare PUBLIC RELEASE READY.
+This is a narrow correction window. Close the known defects; do not reopen the product.

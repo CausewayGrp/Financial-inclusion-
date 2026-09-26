@@ -68,7 +68,13 @@ unpushed clone does not exist yet. ZIPs are *outputs* of checkpoint tags (§6), 
   Findings: OAI-C-01, OAI-C-02
   ```
 
-  `git log --format='%h %s%n  %(trailers:key=Master-After,separator=%x2C )'` lists every Master state in order.
+  The whole Master chain, newest first:
+
+  ```bash
+  git log --grep='^Master-After:' --date=short --format='%h %ad %(trailers:key=Transaction,valueonly,separator=) %(trailers:key=Master-Before,valueonly,separator=) → %(trailers:key=Master-After,valueonly,separator=)'
+  ```
+
+  Transactions before the move to Git (TC-S1 … TC-I and earlier) are recorded in their run reports under `audit/`.
 
 ## 4. Changing the Master
 

@@ -21,7 +21,8 @@ as instructed on 26 September 2026, because an independent final Reading package
 | Page Specs | `site-src/content/page_specs.json` — SHA-256 `bd010a2053898a971944ba63ab3276aeb455428069813097dbc8a07037c88295` |
 | Entry state recorded with the Drive IDs (lineage, not current) | Master `e69804106e04d093098688f2d01cea51e13191f255d774a090f3e5dd8dec9bc7`; Page Specs `ff2b0f559cde5fede3fe31d7dfb2539a00921e8b00b816c2863790cd9de49007` |
 | Tranche C entry (P5 close, lineage) | Master `397b3307…` |
-| External (Drive) copies | `EXTERNAL_REPOSITORY_SYNC_PENDING` — the Drive files were not replaced |
+| Canonical repository | GitHub `CausewayGrp/Financial-inclusion-`, branch `main`. The state reviewed here is the signed tag `checkpoint/tranche-c-complete-reading-hold`, whose tree is byte-identical to the review ZIP; later commits on `main` add repository infrastructure and documentation only |
+| External (Drive) copies | `EXTERNAL_REPOSITORY_SYNC_PENDING` — the Drive files were not replaced; they are lineage, not working copies |
 | Generator | `scripts/generate_projections.py`; `PROJECTION CHECK PASS` |
 | Generator tests | 21 of 21 |
 | Build | 288 HTML documents from 143 Page Specs (286 localized + root + 404) |

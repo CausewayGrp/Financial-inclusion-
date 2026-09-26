@@ -1,0 +1,316 @@
+POST-TRANCHE-B — CONTROLLED CANONICAL REPOSITORY EXECUTION
+INDEPENDENT ACCEPTANCE CORRECTIONS + DETERMINISTIC GENERATION GATE
+You are continuing the same governed Yemen Financial Inclusion Evidence repository.
+Do not create a parallel repository or reinterpret the programme.
+Tranche B has undergone independent recipient-side review and is:
+ACCEPTED FOR EXECUTION WITH NARROW CORRECTIONS.
+Your task is now to convert the accepted Tranche B specification into the next actual canonical repository state, safely and reproducibly.
+Do not redo Tranche B.
+Do not start Tranche C.
+1. ONE REPOSITORY, NOT ANOTHER VERSION
+Work inside one extracted canonical root only:
+Yemen_Financial_Inclusion_Evidence/
+Temporary exports, simulations and snapshots must live outside that root and be deleted before hand-back.
+The final ZIP is a transport/checkpoint of this same repository, not a second semantic authority.
+Do not create internal folders called:
+FINAL
+EXECUTED
+V2
+or another competing repository.
+2. VERIFY ENTRY STATE
+Before modifying anything, independently verify:
+Production Master SHA-256;
+Page Specs SHA-256;
+current build;
+validator;
+public-literal closure;
+manifest.
+Confirm that the entry state matches the Tranche B checkpoint.
+If not, diagnose before proceeding.
+3. PATCH-TOOLING DETERMINISM IS NOW A HARD BLOCKER
+Independent OpenAI execution reproduced the current patch tooling and found:
+the rebuilt spec contains the same 994 rows and same substantive target set;
+simulation still reports no collisions;
+but build_spec.py does not reproduce MASTER_FIRST_PATCH_SPEC.csv byte-identically.
+The failure is target ordering: when a SUBSTR patch hits multiple cells, the .01/.02/.03… suffix is assigned according to the current hits iteration order rather than a canonical stable ordering.
+This means a row identifier such as PB-0101.01 can refer to a different target on a subsequent rebuild even though the target set is unchanged.
+That is unacceptable for an execution ledger.
+Fix this before semantic execution.
+Require a deterministic target order, preferably:
+sheet → Excel row → field → stable_object_id
+before suffix assignment, or use an equivalently stable target-derived identity.
+Then:
+rebuild the patch spec twice independently from the unchanged Master;
+require identical SHA-256 for both generated specs;
+require identical KEEP register and publisher-proposal outputs;
+record the patch-spec SHA-256;
+update all Tranche B documents whose counts/hashes/identity claims are affected.
+Do not apply any Master patch until this determinism gate passes.
+The number 994/394 is not sacred. If independent-acceptance corrections change the legitimate spec, report the new exact counts.
+4. APPLY THESE INDEPENDENT-ACCEPTANCE CORRECTIONS BEFORE EXECUTION
+OECD/INFE Yemen values
+Independent review verified the official OECD/INFE 2023 report:
+Yemen financial literacy = 42/100.
+Yemen financial well-being = 15/100.
+Yemen sample = 1,000.
+Fieldwork = 11 March–1 April 2023.
+The coordinated 2022/23 financial-attitude score uses the two required attitude questions; the optional third is excluded from the international score.
+Close the affected OECD primary-source-pending item.
+Do not withhold the verified 42/100 and 15/100 values.
+Keep them survey-scoped and do not turn them into a ranking feature.
+Preserve quarantine of item-level reconstructed scoring material unless it is exactly source-verified.
+CBY Decision-number gaps
+Do not assume that missing numbers 7, 8, 12 or 16 in a 2026 sequence are missing provider-enforcement events.
+Search official CBY 2026 material individually.
+Record each actual outcome:
+relevant instrument;
+unrelated instrument;
+or not publicly located.
+Numbering gaps are not evidence of missing provider-status events.
+YPCC
+Treat the official public name used by CBY:
+الشركة اليمنية للمدفوعات والمقاصة (YPCC)
+as verified for ordinary public use.
+Keep the exact legal registered-name question pending only if the product needs the formal registration-instrument wording.
+Source role
+Do not force every source to have exactly one evidence role.
+Separate:
+document/source identity
+from:
+the role that source performs in a particular evidence/claim relationship.
+A source may legitimately support different uses.
+Prefer a relationship-level evidence-role field, or a controlled primary role plus explicit use-level roles.
+Document type remains separate.
+No numerical source-quality score.
+Rights and source discovery
+Preserve the distinction:
+public citation/linking ≠ redistribution permission.
+A verified public original locator may be exposed for verification even when:
+rights_state = NOT_ASSESSED.
+In that case do not offer download/republication/reuse permission.
+Rights uncertainty blocks redistribution, not truthful citation to the original source.
+Do not infer publisher from URL host alone.
+Keep separate where needed:
+issuer;
+publisher;
+hosting platform;
+original locator;
+rights state.
+SOURCE_PUBLISHER_PROPOSALS.csv is a resolution aid, not authoritative metadata.
+Evidence Coverage Matrix
+Refine the matrix so it does not collapse time, evidence type and coverage into one classification.
+Maintain separate controlled dimensions:
+currentness_state
+CURRENT / DATED / HISTORICAL / ESTIMATED / PROJECTED / UNKNOWN
+evidence_class
+SURVEY / ADMINISTRATIVE / REGULATORY / PROGRAMME / ANALYTICAL / CONTEXT / OTHER
+coverage_state
+SUFFICIENT_FOR_QUESTION / PARTIAL / MEASUREMENT_GAP / NO_EVIDENCE
+A current administrative series must be capable of being represented as both CURRENT and ADMINISTRATIVE.
+Any public simplified coverage view should be derived from these dimensions, not become a score.
+Arabic lexical sweeps
+Do not execute a blanket public-language replacement simply because it preserves grammatical agreement.
+Specifically re-adjudicate PB-0413 and PB-0414 at the affected-cell level.
+المنظومة when it actually means the financial system remains المنظومة.
+When it refers to the product, choose naturally by context:
+هذا الموقع
+هذا المورد
+هذا السجل
+omission of the subject
+or المنصة only where that is genuinely the best Arabic.
+Do not make المنصة the universal self-reference merely because it is convenient for substitution.
+Likewise, do not force every analytical use of “claim” into خلاصة if the sentence means:
+statement,
+inference,
+finding,
+or evidence-backed proposition.
+Preserve the agreed public terminology where it is natural, but require contextual Arabic.
+Safe factual/parity Arabic patches may execute normally.
+If a bulk lexical root cannot be made context-safe in this window, mark that root HELD_LANGUAGE_REVIEW rather than applying a mechanical sweep.
+Keep navigation label:
+عن الموقع
+unless a native editorial reason—not terminology symmetry—justifies changing it.
+Firms wording
+Do not call money exchangers “the dominant intermediary” from the multiple-response firm item.
+Prefer a formulation equivalent to:
+money exchangers were the most frequently reported intermediary in that multiple-response item among the surveyed firms.
+Preserve the seven-governorate/sample boundary and the fact that this is not market share.
+5. REBUILD A CANONICAL MASTER→PROJECTION GENERATOR
+The generator must become a permanent, repository-owned part of the product under scripts/, not a temporary audit utility.
+It must:
+read the Production Master directly;
+understand titled and multi-block sheets;
+preserve stable object IDs;
+preserve bilingual text exactly;
+fail loudly on an unknown structure;
+produce deterministic ordering and serialization;
+avoid hard-coded factual/public narrative that belongs in the Master;
+regenerate all controlled projection families owned by the Master.
+Add a machine-readable projection manifest under the canonical repository describing for each generated output:
+output path;
+owning Master sheet/block;
+transformation rule;
+stable-key rule;
+whether it is GENERATED, DERIVED or PASSTHROUGH;
+dependencies.
+Explicitly identify local data payloads that are not generated from the Master.
+Do not pretend those are Master-derived if they are not.
+Make the generator invocable through a clear repository command and include it in canonical validation/manifest coverage.
+6. BASELINE-REPRODUCTION GATE
+Before applying any accepted patch:
+UNCHANGED ENTRY MASTER
+→
+NEW CANONICAL GENERATOR
+→
+TEMPORARY REGENERATED PROJECTIONS
+Compare those projections against the current controlled projections.
+Require:
+same object counts;
+same stable IDs;
+same semantic fields and values;
+same Arabic/English content;
+same source/publication/rights state;
+same route bindings;
+same 284-page build;
+same public-literal truth.
+Byte identity is preferred.
+If formatting/order differs, normalized semantic equivalence is acceptable only when every difference is explicitly classified non-semantic.
+Any unexplained semantic difference is:
+GENERATOR_BLOCKER
+Stop.
+7. EXECUTE PATCH ROOTS TRANSACTIONALLY
+Only after the generator and patch-spec determinism gates pass.
+Update the spec for the acceptance corrections above.
+Then execute the accepted roots Master-first.
+Patch roots are transactions.
+Never half-apply a bilingual or cross-sheet root.
+Exact current values and occurrence counts must match.
+No fuzzy matching.
+No silent skip.
+PRIMARY_SOURCE_PENDING roots are default HOLD unless the underlying source is resolved in this window and the patch is re-adjudicated.
+If one row fails:
+halt that root;
+preserve its prior authority state;
+record the exact reason.
+8. EXECUTE IN STAGES
+Stage 1:
+object-level source lineage and verification integrity.
+Regenerate and validate.
+Stage 2:
+false/misleading/evidence-state/public-leak defects.
+Regenerate and validate.
+Stage 3:
+domain, Reading, Measurement, methodology and coverage architecture.
+Regenerate and validate.
+Stage 4:
+IA, trust, source/resource discovery, search and visual contracts.
+Regenerate and validate.
+Stage 5:
+contextual bilingual editorial changes that survived the acceptance corrections.
+Regenerate and validate.
+Do not advance after unexplained drift.
+9. SOURCE-LINEAGE TRUTH TEST
+After Stage 1, recalculate closure honestly.
+Evidence Records may show only:
+exact bound sources;
+composite member-object lineage;
+or an explicit unbound state.
+No route-level source union masquerading as object-level lineage.
+Do not optimise closure percentage.
+A lower truthful closure rate is better than a false 100%.
+10. THE REPOSITORY ITSELF MUST ADVANCE
+After the new Master is created and projections are regenerated, update all current-state control files to the new authority:
+authority/AUTHORITY.json
+authority/YFI_CURRENT_PROJECT_CONTEXT.json
+root README.md
+current non-historical implementation/handoff manifests that explicitly bind to the current Master
+OPENAI_REENTRY_CHECKPOINT.md
+and SHA256SUMS.txt.
+Do not rewrite historical audit files merely because they contain the old hash.
+Run a repository-wide stale-current-hash scan and classify every old hash occurrence as:
+HISTORICAL_LINEAGE — KEEP
+or
+CURRENT_STATE_STALE — FIX.
+No current recipient-facing file may claim the previous Master is current.
+Add the canonical generator, projection manifest and their validation scripts to the manifest.
+11. EXTERNAL REPOSITORY STATE
+The local executed repository may have new authority hashes before any Google Drive copy is updated.
+Do not imply that the recorded Drive file ID already contains the new bytes unless a real controlled replacement has occurred.
+Preserve the external IDs for lineage if useful, but record an explicit state equivalent to:
+EXTERNAL_REPOSITORY_SYNC_PENDING
+until synchronization is actually performed and verified.
+Do not mutate external repositories unless explicitly authorised.
+12. DO NOT PERFORM R8.5 SUBTRACTION YET
+Keep legitimate audit lineage and known structural duplicates needed by the existing runtime until post-execution acceptance.
+Do not opportunistically remove page_contracts.json, old audits or other candidates merely because they are known cleanup items.
+Record them for R8.5.
+This window changes authority and regeneration infrastructure; it does not perform final repository subtraction.
+13. POST-EXECUTION ACCEPTANCE
+Require:
+new Production Master SHA-256;
+new Page Specs SHA-256;
+patch-spec SHA-256;
+canonical generator hash/version;
+projection-manifest hash;
+exact patch-root disposition counts;
+build;
+validator;
+public-literal closure;
+bilingual parity;
+source-lineage closure counts by state;
+search probe;
+Compare compatibility;
+rights/download gating;
+source discovery with NOT_ASSESSED rights behaving correctly;
+no internal authoring copy;
+methodology coverage;
+remittance vintage break;
+provider authority scope;
+OECD 42/100 and 15/100 source binding;
+no unsupported statistical inference;
+no accidental route change.
+Route baseline should remain 284 unless a separately justified accepted patch explicitly changes routes. No such route change is currently expected.
+14. REQUIRED HAND-BACK
+Return one ZIP only:
+Yemen_Financial_Inclusion_Evidence_TrancheB_Executed.zip
+Inside it there is still exactly one canonical root:
+Yemen_Financial_Inclusion_Evidence/
+Include:
+the new Master;
+regenerated projections;
+canonical generator;
+projection manifest;
+current control files rebound to the new authority;
+updated accepted patch spec;
+audit/MASTER_FIRST_PATCH_EXECUTION_LEDGER.csv;
+audit/TRANCHE_B_EXECUTION_CLOSURE.md;
+updated unresolved queue;
+updated OPENAI_REENTRY_CHECKPOINT.md;
+machine-readable pre/post validation summary.
+Every patch root must end as exactly one of:
+APPLIED
+HELD
+SUPERSEDED
+SOURCE_PENDING
+FAILED.
+Give every non-APPLIED root an exact dependency/reason.
+Remove all temporary staging files before packaging.
+15. DEFINITION OF DONE
+This window is complete only when:
+the patch spec itself is deterministic;
+the canonical generator reproduces the pre-patch state without unexplained semantic drift;
+the accepted spec has been updated for independent-review corrections;
+every safe accepted patch has been applied to the Master first;
+all generated projections derive reproducibly from that Master;
+current authority/control files bind the new state;
+the repository is green;
+unresolved/held changes are explicit rather than hidden;
+the external-sync state is truthful;
+and the ZIP represents the next actual canonical repository state, not another parallel version.
+Final status:
+TRANCHE B PATCH EXECUTION COMPLETE — READY FOR INDEPENDENT POST-EXECUTION ACCEPTANCE
+Do not declare DESIGN HANDOFF READY.
+Do not declare PUBLIC RELEASE READY.
+Do not start Tranche C.
+If context or capacity becomes constrained, finish the current stage completely, regenerate and validate the last coherent Master state, update the checkpoint, package that same canonical repository and stop.
+Build the repository forward. Do not build around it.

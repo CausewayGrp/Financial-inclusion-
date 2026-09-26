@@ -1,34 +1,36 @@
 # Production Repository Protocol
 
-This Google Drive folder is the single working website repository for **Yemen Financial Inclusion Evidence / أدلة الشمول المالي في اليمن**.
+**Since 26 September 2026 the single working repository is the Git repository `CausewayGrp/Financial-inclusion-` on
+GitHub, branch `main`.** The step-by-step working protocol (authority, editing, branches, commits, checkpoints, session
+sync, gates) is `CONTRIBUTING.md`. This page records the rules that carried over from the Drive-era protocol and what
+changed.
 
-## Authority
+## Carried over unchanged
 
-- The Production Master at `authority/Yemen_Financial_Inclusion_Evidence_Master.xlsx`, identified in `docs/AUTHORITY.json` by Drive ID and SHA-256, remains the sole semantic, evidence, source, rights, controlled-product-state and publication-state authority.
-- This repository is the sole website implementation workspace for the current review/build programme.
-- The sibling `99_REFERENCE_ARCHIVE_INBOX__NON_PRODUCTION` (Drive ID `1kQwClKkfkl4FEsgk8YSb_5FPrcatRDby`) is challenge/recovery material only. Drafts, predecessor workbooks, mockups, old exports, research notes and prior AI/developer outputs do not become production truth because they are newer, larger, more detailed or labelled “final”.
-- All new reference material must enter through `01_NEW_INPUTS__UNREVIEWED` (Drive ID `1lj5A9hrCDHo7hhQTlLOk-fmIQ7xCfcLs`). Do not create another sibling repository, archive or folder labelled `final`, `master` or `authoritative`. The current registered supplement is Drive folder `1tFewVNnzpNXG9tsNyFpoWHnobaKsoRho` and remains non-authoritative until S06 disposition.
+- **Authority.** The Production Master at `authority/Yemen_Financial_Inclusion_Evidence_Master.xlsx` is the sole semantic,
+  evidence, source, rights, controlled-product-state and publication-state authority. A material correction to evidence,
+  claim meaning, source state, rights, denominator, geography, period, comparability or publication state is made in the
+  Master first and regenerated.
+- **One repository.** No competing website repositories, numbered finals, parallel copies of truth or ZIP-based working
+  copies. A ZIP is an output of a `checkpoint/*` tag, never a place where work happens.
+- **Reference material.** Drafts, predecessor workbooks, mockups, old exports, research notes and earlier AI or developer
+  outputs never become production truth because they are newer, larger, more detailed or labelled "final". New material
+  enters through review (a `review/` branch) and, where it changes content, through a Master transaction.
+- **Change record.** Every material edit is recorded in `docs/CHANGELOG.md` and in the commit that makes it.
+- **Handover.** Other AIs, developers and reviewers consume this repository first, not archive ZIPs, screenshots, old
+  prompts or predecessor workbooks.
+- **Release.** The product is not called live or release-ready until browser/runtime, RTL/mobile, accessibility,
+  publication filtering, security/privacy, correction/version behaviour and named release approval are complete for the
+  claimed release state.
+- **Concurrency.** Before a material write, fetch the live state. An unexpected newer change is reconciled first; an older
+  state is never restored merely to match a stale control hash, and `main` is never force-pushed.
 
-## Editing rule
+## Changed with the move to Git
 
-- Work directly in this repository. Do not create competing website repositories, numbered finals, parallel Drive branches or ZIP-based working copies.
-- Every material repository edit must be recorded in `docs/CHANGELOG.md` and, where relevant, `docs/REVIEW_LEDGER.json`.
-- Implementation, navigation, accessibility, performance and rendering may be improved here.
-- Any material correction to evidence, claim meaning, source state, rights, denominator, geography, period, comparability or publication state must be fixed in the Production Master first and then regenerated into this repository.
-- Completed review work is closed by inventory. Reference/archive items recorded in the S01 baseline are not re-reviewed by default; only new/modified archive items or a specific defect-triggered challenge reopen them.
-
-## First-hand source rule
-
-The canonical Drive repository stores the Production Master under `authority/` plus first-hand implementation inputs: source code, controlled projections, documentation, validation scripts, assets and checksums. `98_TEMPORARY__NONAUTHORITATIVE/` is scratch-only and must never become an authority or handoff dependency. `dist/` is deterministic generated output and is **not canonical Drive state**. Generate a fresh local deployment tree with `npm run verify` before preview or deployment.
-
-## Handover rule
-
-Other AIs, developers and reviewers should consume this folder first. They should not reconstruct the project from archive ZIPs, screenshots, old prompts or predecessor workbooks.
-
-## Release rule
-
-Do not call the product live or release-ready until browser/runtime, RTL/mobile, accessibility, publication filtering, security/privacy, correction/version behaviour and named release approval are complete for the claimed release state.
-
-## Concurrency rule
-
-Before every material write, re-read the live target. Any unexpected newer modification is a concurrency event: reconcile the newer state first and do not restore an older state merely to match a stale control hash.
+- **`dist/` is committed.** It is still generated by `scripts/build.py` and never edited by hand. It is committed so every
+  change to the public surface is visible in review; CI fails if it differs from a fresh build.
+- **`SHA256SUMS.txt` has an owner.** `scripts/checksums.py` writes it from the tracked files; CI checks it on every push.
+- **History is in Git.** Each Master transaction is one commit with `Transaction`, `Master-Before` and `Master-After`
+  trailers; each reviewed or handed-off state is a signed `checkpoint/*` tag.
+- **Drive is lineage.** The Drive folder (ID `1iAxWukk1xeAXDPibmXXwGlaUXDcr_XvA`) and its inbox and archive folders are not
+  updated from here and are not current (`EXTERNAL_REPOSITORY_SYNC_PENDING`).

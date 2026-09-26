@@ -1,0 +1,254 @@
+POST-TRANCHE-B INDEPENDENT ACCEPTANCE
+SAFE MASTER-FIRST EXECUTION GATE
+You are continuing the controlled Yemen Financial Inclusion Evidence programme.
+Tranche B has now undergone independent OpenAI recipient-side review and is ACCEPTED WITH NARROW CORRECTIONS.
+This is not a request to redo Tranche B.
+Do not rerun the specialist waves, red team, IA exercise, bilingual review or benchmark programme.
+Do not start Tranche C.
+Your job in this window is to:
+correct the narrow acceptance findings below → rebuild and prove the missing Master→projection generator → execute the accepted Master-first patch package safely → regenerate → validate → hand back one post-execution repository → STOP.
+1. VERIFY THE ATTACHED STATE
+Read:
+OPENAI_REENTRY_CHECKPOINT.md
+audit/CLAUDE_TRANCHE_B_CLOSURE.md
+audit/MASTER_FIRST_PATCH_SPEC.csv
+audit/MASTER_FIRST_PATCH_NARRATIVE.md
+Then independently verify:
+Production Master hash;
+Page Specs hash;
+build = 284 HTML;
+validator = 0 errors / 0 warnings;
+public-literal closure;
+manifest.
+Do not alter anything until that state is established.
+2. APPLY THESE INDEPENDENT-ACCEPTANCE CORRECTIONS TO THE PATCH PACKAGE FIRST
+These corrections supersede the affected Tranche B dispositions only. They do not reopen the rest of Tranche B.
+A. OECD/INFE YEMEN 2023 SCORES — NOW PRIMARY-SOURCE VERIFIED
+Close U-02.
+Independent OpenAI review has verified the official OECD/INFE 2023 report itself:
+Figure 2.1: Yemen overall financial-literacy score = 42/100.
+Figure 4.1: Yemen financial-well-being score = 15/100.
+Annex A records Yemen sample size = 1,000, fieldwork 11 March–1 April 2023, telephone and face-to-face collection.
+The OECD methodology explicitly states that the 2022/23 financial-attitude score uses two attitude questions; the optional third question is excluded from the coordinated international score.
+Therefore revise PB-0101…PB-0108 and every dependent artifact.
+Do not withhold 15/100 and 42/100.
+Bind them to the official OECD/INFE 2023 source and preserve their correct survey scope.
+The official 2026 OECD Yemen economic-resilience report independently corroborates both values and may be retained as Yemen analytical literature, but the 2023 OECD/INFE report is the measurement authority for these scores.
+Do not turn the scores into a league-table feature. Their values may be published; comparative ranking language should appear only when it has clear analytical value and the comparator policy permits it.
+Update:
+public claim/evidence copy;
+OECD benchmark state;
+Source Narrative Extraction;
+Indicator Coverage Matrix;
+Benchmark/Comparator Policy;
+unresolved queue;
+patch statuses.
+Remove PRIMARY_SOURCE_PENDING from the rows whose only unresolved issue was the 15/42 verification.
+B. OECD/INFE METHOD
+Preserve the Tranche B decision to quarantine/relabel unverified reconstructed item-level material.
+But record as verified methodology that the 2022/23 financial-attitude score is based on the two required attitude questions, not all three.
+Do not invent an alternative scoring battery.
+C. CBY DECISION-NUMBER GAPS
+Reframe U-04.
+Do not infer that CBY Decisions 7, 8, 12 and 16 of 2026 are missing provider-enforcement events merely because the numbering sequence has gaps.
+Search official 2026 CBY material for each number.
+Outcomes may be:
+relevant provider-status instrument;
+instrument on another subject;
+unavailable/not publicly located.
+Record the actual result.
+A missing number in our corpus is not evidence of a missing provider-status event.
+D. YPCC NAME
+Official CBY public material already uses:
+الشركة اليمنية للمدفوعات والمقاصة (YPCC).
+Treat that as the verified official public name.
+If the product specifically needs the exact legal registered name from a registration/founding instrument, retain that narrower legal-name verification as pending.
+Do not keep the ordinary public name pending unnecessarily.
+E. SOURCE EVIDENCE ROLES
+Revise the methodology wording that currently implies every source must receive exactly one evidence role.
+A source may legitimately perform more than one role depending on how it is used.
+Prefer either:
+controlled multiple source roles; or
+a primary source-level role plus a use-level role on the source→evidence/claim relationship.
+Preserve the fundamental distinction between:
+document type
+and
+evidence role.
+Do not create a numerical source-quality score.
+F. PUBLISHER AND RIGHTS PROPOSALS
+Do not bulk-promote publisher values merely because they were inferred from a source-ID family or URL host.
+SOURCE_PUBLISHER_PROPOSALS.csv is a candidate-resolution aid.
+At execution:
+confirm publisher from the source itself or authoritative metadata;
+otherwise leave it unresolved;
+keep rights as NOT_ASSESSED until the applicable terms have actually been assessed.
+Do not surface a LOCATOR_ONLY resource in a way that implies rights have been established when they have not.
+G. ARABIC ABOUT LABEL
+Do not force PB-0425 (عن الموقع → عن المنصة) merely to harmonise self-reference terminology.
+Retain «عن الموقع» for the navigation label unless a final native-Arabic editorial review establishes a material user-comprehension advantage for another label.
+The About-page heading/body may use a more specific formulation such as the product name itself.
+Navigation clarity takes precedence over terminology symmetry.
+H. METHOD & MEASUREMENT — PRESERVE THE IA, DO NOT OVER-DESIGN IT
+Preserve the accepted semantic IA:
+Method & Measurement
+contains two equally important destinations:
+Methodology
+and
+Measurement Agenda.
+Preserve:
+no route churn;
+equal conceptual prominence;
+both destinations easily discoverable;
+keyboard accessibility;
+no hover-only meaning;
+correct mobile and RTL behavior;
+clear active state.
+But do not make one particular visual interaction pattern an immutable semantic requirement.
+The exact high-quality interaction treatment may be resolved later by Claude Design provided those acceptance conditions are met.
+Update PB-0422–0424 and the Design contract accordingly.
+3. GENERATOR RECONSTRUCTION IS A HARD GATE
+The Master→projection pipeline is still absent.
+Rebuild it as a deterministic repository-owned generator.
+The generator must:
+read the Production Master directly;
+understand the workbook's titled/multi-block sheets correctly;
+preserve stable IDs;
+preserve Arabic and English text exactly;
+generate the governed JSON/projection layer deterministically;
+never embed factual/public copy in code when it belongs in the Master;
+distinguish controlled templates from semantic content;
+make failures explicit rather than silently skipping unknown structures;
+be documented and testable.
+CRITICAL BASELINE-REPRODUCTION TEST
+Before applying a single Tranche B semantic patch:
+Run the reconstructed generator against the unchanged entry Master into a temporary output location.
+Compare its outputs with the current governed projections.
+Require:
+same controlled object counts;
+same stable IDs;
+same semantic fields and values;
+same bilingual content;
+same source/rights/publication states;
+same route bindings;
+same 284-page build outcome;
+no unexplained public-literal difference.
+Byte-identical files are preferred where deterministic formatting permits it.
+If serialization/order differs, normalized semantic equality is acceptable only when every difference is explained and proven non-semantic.
+Any unexplained semantic difference is a:
+GENERATOR BLOCKER
+Do not apply the 994 rows until this baseline-equivalence gate passes.
+This test is essential because otherwise generator defects and intended Tranche B changes become indistinguishable.
+4. EXECUTE PATCH ROOTS TRANSACTIONALLY
+Once the generator passes the baseline gate, update the patch package with the independent-acceptance corrections above and execute it Master-first.
+Treat the 394 patch roots as transactions, not the 994 rows as unrelated edits.
+A bilingual or cross-sheet root must not be half-applied.
+For each row:
+current value must match exactly;
+expected occurrence count must match;
+no fuzzy substitution;
+no silent skip.
+If one row in a root cannot be applied safely:
+halt that root;
+leave the previous authority state intact for that root;
+record the mismatch.
+Do not improvise a replacement.
+5. APPLY IN CONTROLLED STAGES
+Execute in this order:
+Stage 1 — verification integrity / object-level source lineage
+Fix the source-binding architecture first.
+Regenerate and validate.
+Stage 2 — false, misleading or evidence-state defects
+OECD corrected per this directive;
+remittance vintages;
+public authoring leakage;
+internal-field meta descriptions;
+authority/scope firewalls;
+other truth-critical P1/P2 corrections.
+Regenerate and validate.
+Stage 3 — domain, Reading, Measurement and methodology changes
+Regenerate and validate.
+Stage 4 — IA, trust, search, visual-contract and resource-library changes
+Regenerate and validate.
+Stage 5 — Arabic/English editorial sweeps
+Sweeps last, using the KEEP register.
+Regenerate and validate.
+Do not proceed to a later stage if the current stage introduces unexplained semantic drift.
+6. SOURCE-LINEAGE ACCEPTANCE TEST
+This is one of the most important outputs.
+After execution, an Evidence Record may show only:
+the source(s) actually bound to that object; or
+an explicit unresolved-source state.
+It must never inherit an unrelated route-level source union and present it as object lineage.
+Recalculate source closure from the corrected schema.
+If closure falls because previous closure was false, that is an improvement in truth, not a failure.
+Never manufacture 100% closure.
+7. POST-EXECUTION VALIDATION
+After all accepted executable patches:
+verify and record:
+Production Master new SHA-256;
+regenerated Page Specs new SHA-256;
+every projection bound to the new Master;
+build = expected route count;
+validator = 0 errors / 0 warnings;
+public-literal closure;
+bilingual semantic invariance;
+object-level source closure;
+search probe;
+Compare compatibility behavior;
+visual/evidence bindings;
+rights/publication filters;
+meta descriptions in both languages;
+no internal authoring language;
+no prohibited terminology outside the KEEP register;
+methodology sections;
+OECD 42/100 and 15/100 correctly sourced;
+remittance vintage break;
+provider-authority scope;
+Findex evidence-clock and coverage language;
+mobile/keyboard/RTL navigation acceptance where the IA implementation changed;
+accessible-table contract where applicable.
+Do not claim external Arabic human certification, legal review or unresolved primary-source verification that did not occur.
+8. DO NOT START TRANCHE C
+This window is an execution gate, not a new analytical programme.
+Do not conduct another broad review.
+Do not add new pages, Readings, Measurement priorities or visuals unless required to resolve an accepted patch.
+Do not start Tranche C.
+The post-execution repository must come back for independent acceptance first.
+9. REQUIRED HAND-BACK
+Return one clean ZIP:
+Yemen_Financial_Inclusion_Evidence_TrancheB_Executed.zip
+with one repository root.
+Include:
+OPENAI_REENTRY_CHECKPOINT.md
+audit/TRANCHE_B_EXECUTION_CLOSURE.md
+audit/MASTER_FIRST_PATCH_EXECUTION_LEDGER.csv
+the updated accepted patch spec;
+the reconstructed generator and its tests/documentation;
+the updated unresolved queue;
+a machine-readable pre-patch vs post-patch validation summary.
+The execution ledger must show for every patch root:
+APPLIED / HELD / SUPERSEDED / SOURCE_PENDING / FAILED
+with exact reason.
+Do not delete Tranche A/B audit lineage.
+Do not create a second authority.
+Temporary staging artifacts must be removed from the final ZIP.
+10. DEFINITION OF DONE
+This execution gate is complete only when:
+the generator reproduces the pre-patch governed state without unexplained semantic drift;
+the accepted patch package has been updated for this independent review;
+every executable accepted patch has been applied Master-first;
+every held patch has an explicit dependency;
+projections have been regenerated from the new Master;
+bilingual/public/source/rights bindings agree with the new authority;
+the repository is green;
+there is one authority state;
+and the hand-back can be independently reproduced without conversation history.
+Final status:
+TRANCHE B PATCH EXECUTION COMPLETE — READY FOR INDEPENDENT POST-EXECUTION ACCEPTANCE
+Not:
+DESIGN HANDOFF READY
+Not:
+PUBLIC RELEASE READY
+Do not start Tranche C.
+If context or capacity becomes constrained, close the current stage cleanly, regenerate/validate the last coherent authority state, update the checkpoint, package one continuation ZIP and stop.
+Execute carefully. Do not reinterpret the project.

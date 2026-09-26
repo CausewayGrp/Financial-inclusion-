@@ -1,5 +1,26 @@
 # Repository Change Log
 
+## 2026-09-26 — Canonical Git repository
+
+The repository moved from a Drive folder and ZIP checkpoints to Git on GitHub (`CausewayGrp/Financial-inclusion-`,
+branch `main`). No governed content changed: the Master, the projections and the public site are identical to the
+Tranche C checkpoint, and no existing audit record was modified.
+- **Baseline.** The first content commit is the exact tree of the ZIP under OpenAI review (SHA-256 `63612dea…`), tagged
+  `checkpoint/tranche-c-complete-reading-hold` (signed); `sha256sum -c SHA256SUMS.txt` passes on the tagged tree.
+- **CI.** `.github/workflows/verify.yml` runs every gate on each push to `main` and each pull request, including two new
+  drift checks: the checksum manifest must list every tracked file, and the committed `dist/` and literal closure must
+  equal a fresh build. `.github/workflows/checkpoint.yml` packages each signed `checkpoint/*` tag as a verified ZIP.
+- **Owners.** `scripts/checksums.py` now writes and checks `SHA256SUMS.txt`; `requirements.txt` pins the Python 3.11
+  toolchain; `.gitattributes` keeps every file byte-exact (CRLF ledgers included).
+- **Protocol.** `CONTRIBUTING.md` (change protocol, branches, commit trailers, checkpoints, session sync, known pitfalls,
+  repository settings), `AGENTS.md` and `CLAUDE.md` (agent rules). `docs/PRODUCTION_REPOSITORY_PROTOCOL.md` now records
+  the move; `authority/AUTHORITY.json` names the canonical repository; the checkpoint names the reviewed tag.
+- **Directives.** The programme directives D0–D6 are stored verbatim in `audit/directives/` (D6 current and binding).
+- **Carried to R8.6:** the Design and Code prompts in `handoff/` must name the Git repository and the branch and pull-request
+  protocol when they are finalised.
+- **Status unchanged:** TRANCHE C COMPLETE — READING PROSE HELD FOR THE INDEPENDENT READING PACKAGE. R8.5 and R8.6 not
+  started. Not DESIGN HANDOFF READY; not PUBLIC RELEASE READY.
+
 ## 2026-09-26 — Tranche C: whole-product adversarial acceptance
 
 Ten Master-first transactions (TC-S1, TC-A…TC-I) through the transactional runner; closure in

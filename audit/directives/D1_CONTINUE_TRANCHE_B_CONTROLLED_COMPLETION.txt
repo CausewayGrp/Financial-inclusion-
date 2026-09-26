@@ -1,0 +1,255 @@
+
+CONTINUE TRANCHE B — CONTROLLED COMPLETION DIRECTIVE
+You are continuing an existing governed build, not starting or re-reviewing the project.
+Attached are:
+1. the latest Yemen_Financial_Inclusion_Evidence repository ZIP; and
+2. CLAUDE_TRANCHE_B_CONTINUATION_HANDOVER_TO_NEXT_WINDOW.md.
+1. FIRST ACTION — INHERIT, VERIFY, CONTINUE
+Read the continuation handover completely before doing substantive work.
+Then execute its §0 resume protocol:
+* establish one clean repository root;
+* verify the actual Production Master and Page Specs hashes;
+* run the existing build/validator/manifest checks;
+* confirm the repository state;
+* read the inherited governing inputs referenced by the handover;
+* identify the first genuinely unfinished item in §8.
+If the actual repository differs materially from the handover, diagnose and record the difference. Do not restore files merely to match an expected hash.
+The handover is the operational continuation state. It is not permission to trust an analytical conclusion blindly: verify load-bearing calculations against the governed evidence when converting them into patches.
+Do not spend time restating the project to me.
+
+2. DO NOT REPEAT COMPLETED WORK
+The previous window already completed:
+* the specialist review waves;
+* the 11-persona red team;
+* Lead verification of the major findings;
+* Tranche A adjudication;
+* the major Tranche B analytical findings.
+Do not rerun those waves.
+Do not commission another general research sweep.
+Do not reopen accepted IA/product decisions merely to reconsider them.
+Your job now is:
+Lead adjudication → exact Master-first patch package → remaining Tranche B/addendum artifacts → validation → checkpoint → one ZIP → STOP.
+Reopen a finding only if you discover a material factual or methodological problem.
+
+3. FOUR NARROW ANALYTICAL SAFETY CORRECTIONS
+Before turning the relevant §7 findings into final patch specifications, re-adjudicate only these four points.
+This is not a reopening of Tranche B.
+A. Finance — nominal, USD-equivalent and real value are different concepts
+Do not describe conversion of a YER portfolio using the YER/USD market exchange rate as a real deflationunless an appropriate price deflator is separately sourced and justified.
+Distinguish:
+* nominal YER change;
+* USD-equivalent change at a specified exchange rate and date;
+* real/purchasing-power change, which requires an appropriate price/inflation basis.
+If only the first two are supported, state only the first two.
+Preserve the key analytical lesson: nominal portfolio growth does not by itself establish real financial deepening.
+B. Formal-credit versus microfinance magnitude
+Do not publish a derived microfinance-book/private-sector-credit percentage unless:
+* dates align sufficiently;
+* stock definitions are compatible;
+* institutional universes are understood;
+* currency/value basis is compatible;
+* overlap/double-counting risk is resolved.
+If compatibility is insufficient, show the two magnitudes separately and explain why they should not be reduced to one ratio.
+C. Findex statistical uncertainty
+Do not publish newly model-calculated:
+* confidence intervals;
+* p-values;
+* standard errors;
+* ratio intervals;
+unless they are produced using the applicable survey weights/design/variance method or supplied by an authoritative source.
+Preserve supported point estimates and measured subgroup differences.
+State survey-design/coverage limitations accurately.
+Do not manufacture statistical precision.
+D. Adult-population denominator
+Do not create or import an adult denominator simply to reconcile:
+account-ownership percentages, saver/depositor counts, active-account counts, or other incompatible measures.
+Use such a denominator only if it is source-defined, period-aligned and methodologically appropriate for the intended calculation.
+Otherwise make the incompatibility itself explicit.
+
+4. PRIORITISE TRUTH-CRITICAL DEFECTS
+Work in this order unless dependency logic requires otherwise:
+Priority 1 — verification integrity
+Resolve/specify the object-level source-lineage problem identified in the handover.
+A verification surface must never imply that a specific Evidence Record is sourced merely because unrelated sources exist elsewhere on the route.
+Preserve:
+object → exact evidence/source lineage → original locator → authority → rights/publication state.
+If the source is not yet bound, say so.
+Do not manufacture closure.
+Priority 2 — false or materially misleading public statements
+including evidence-state errors, unit/universe problems, time/vintage errors, public authoring leakage and materially misleading derivations.
+Priority 3 — Arabic/English semantic parity
+especially authority scope, limitations and prohibited inferences.
+Priority 4 — methodology, indicator coverage and evidence-depth completion
+Apply the inherited Economic/Benchmark Addendum as a test of completeness.
+Priority 5 — editorial, search, trust and design-handoff refinement.
+Do not let lower-value wording work delay truth-critical fixes.
+
+5. USE THE ECONOMIC/METHODOLOGICAL ADDENDUM INTELLIGENTLY
+The inherited addendum is binding scope, but it is not an instruction to expand the website automatically.
+For every proposed addition classify:
+ALREADY ADEQUATE → preserve
+PARTIAL → strengthen
+MATERIAL GAP → resolve or specify
+NO MATERIAL VALUE → reject
+The target is:
+MORE EXPLANATORY WITHOUT BECOMING MORE SPECULATIVE
+Test, rather than automatically add:
+* financial-lives/economic-function framing;
+* system-transmission framing;
+* evidence clocks;
+* evidence-coverage mapping;
+* financial health/resilience;
+* affordability, quality, reliability and safety;
+* identity/KYC/onboarding;
+* humanitarian/G2P persistence;
+* comparator/benchmark use;
+* signature visual concepts.
+Prefer:
+existing architecture + better connection + explicit evidence gap
+over:
+new page + new framework + new indicator + new visual.
+
+6. SOURCE AND BENCHMARK DISCIPLINE
+Use external retrieval only when it closes a named material uncertainty or is explicitly required by the inherited benchmark/currentness work.
+Do not conduct a broad literature sweep.
+Maintain:
+SOURCE OBSERVATION
+≠ SOURCE INTERPRETATION
+≠ CAUSEWAY SYNTHESIS
+≠ NOT ESTABLISHED
+Benchmark material may improve methodology, measurement or interpretation.
+It does not become Yemen evidence.
+Country comparison must never become a league table or unsupported performance judgment.
+
+7. LANGUAGE STANDARD
+Treat language as substantive quality control, not cosmetic editing.
+Arabic
+Arabic must read as genuinely authored by a senior Arab financial/economic professional:
+* natural;
+* restrained;
+* financially literate;
+* technically exact;
+* clear to a non-specialist;
+* free of translated-English cadence;
+* free of unnecessary backend/governance vocabulary;
+* free of AI-style repetition.
+Do not weaken evidentiary boundaries to make Arabic smoother.
+English
+English must be:
+* precise;
+* economical;
+* analytically mature;
+* non-template-like;
+* free of generic consultancy filler;
+* clear about scope and uncertainty.
+Arabic and English are co-authoritative, not source and translation.
+Check semantic invariance for:
+number, unit, universe, denominator, geography, period, currentness, method, authority, evidence state, certainty, limitation, rights and measurement-next meaning.
+
+8. MASTER-FIRST EXECUTION RULE
+The repository currently lacks a verified Master→projection generation pipeline unless you prove otherwise from the attached repository.
+Therefore:
+Do not install semantic truth into downstream JSON/public projections while leaving the Master unchanged.
+For every accepted semantic change produce an execution-grade Master-first patch containing:
+* exact sheet;
+* stable object ID;
+* exact field;
+* current value;
+* proposed value;
+* Arabic/English as applicable;
+* source basis;
+* reason;
+* semantic effect;
+* affected downstream projections;
+* search/IA/visual/rights impacts;
+* validation required after regeneration.
+Every semantic change needs before/after.
+If you cannot express it precisely enough to execute safely, it is not ready.
+Keep the current repository green.
+
+9. COMPLETE THE INHERITED REMAINING WORK
+Produce the remaining artifacts listed in §8 of the handover, including the required Tranche B closure set and the Economic/Benchmark Addendum artifacts.
+Do not create empty ceremonial documents.
+Where two required artifacts would merely duplicate each other, keep the required filenames but make one concise and cross-reference the substantive record rather than duplicating truth.
+The core deliverable is MASTER_FIRST_PATCH_SPEC.csv.
+Everything else should help an independent recipient understand, verify and safely execute those decisions.
+
+10. DEFINITION OF DONE
+Tranche B is complete only if the Team Lead can demonstrate that:
+* the eight domain narratives use the governed evidence at the right depth;
+* material governed evidence has not been silently omitted;
+* irrelevant evidence has not been promoted merely because it exists;
+* all 10 Readings have a reasoned disposition;
+* all 10 Measurement priorities have a reasoned disposition;
+* all 36 existing visual contracts have a reasoned disposition;
+* proposed signature visuals have been accepted/rejected against the existing 36;
+* Methodology explains the real public evidence method;
+* the indicator/evidence architecture has been tested for material conceptual gaps;
+* conflict-affected measurement is handled professionally and without causal overreach;
+* source admission, evidence role, currentness and revision logic are explicit;
+* high-value source interpretation is attributed correctly;
+* comparator use is governed;
+* source-object verification lineage is truthful;
+* Arabic and English have received full native-quality review;
+* search, Evidence/Compare, Data & sources, About and trust surfaces reflect the final conceptual model;
+* no unsupported policy recommendation has been introduced;
+* no missing evidence has been transformed into a result;
+* every semantic change not safely executable now has an exact Master-first patch;
+* the current repository remains green;
+* unresolved issues are few, concrete and genuinely unresolved;
+* a future Design recipient will not need to invent substantive financial/economic meaning.
+Do not confuse:
+more content
+with:
+better product.
+
+11. ECONOMY OF EXECUTION
+Work as if context and credits are scarce.
+* Reuse verified prior findings.
+* Do not re-read everything indiscriminately.
+* Inspect the exact source/object needed for the current decision.
+* Use specialist agents only when they can materially change the decision.
+* One Lead adjudicates.
+* Do not generate long explanations to yourself when a structured decision suffices.
+* Do not ask me routine editorial or product questions.
+Make the defensible decision yourself and record the reason.
+Ask me only if a genuinely consequential ambiguity cannot be resolved from the Master, source, handover or governing rules.
+
+12. STOP / HAND-BACK
+At closure produce exactly one clean:
+Yemen_Financial_Inclusion_Evidence_TrancheB.zip
+with one repository root and no temporary/duplicate working copies.
+Update:
+OPENAI_REENTRY_CHECKPOINT.md
+and return prominently:
+* the ZIP;
+* OPENAI_REENTRY_CHECKPOINT.md;
+* audit/CLAUDE_TRANCHE_B_CLOSURE.md;
+* audit/MASTER_FIRST_PATCH_SPEC.csv.
+The hand-back should state succinctly:
+EXECUTED
+VERIFIED_BY_CLAUDE_TEAM
+SPEC_PENDING_EXECUTION
+PRIMARY_SOURCE_PENDING
+INDEPENDENT_OPENAI_ACCEPTANCE_REQUIRED
+EXTERNAL_HUMAN_CERTIFICATION_NOT_PERFORMED
+where applicable.
+Final Tranche status may be:
+TRANCHE B COMPLETE — READY FOR INDEPENDENT REVIEW
+Do not declare:
+DESIGN HANDOFF READY
+or:
+PUBLIC RELEASE READY.
+Do not start Tranche C.
+If context or capacity becomes constrained before completion, do not rush the remaining scope. Finish the current atomic task, restore a coherent green state, update the continuation checkpoint, package one continuation ZIP and stop.
+
+FINAL OPERATING PRINCIPLE
+The purpose is not to prove that the repository contains a lot of work.
+The purpose is to leave behind a public evidence product in which:
+a citizen can understand the answer; a journalist can quote it safely; a practitioner can recognise the financial reality; a regulator or source owner can see that authority and scope were represented fairly; a researcher can reconstruct the reasoning; and a future designer can communicate the evidence without inventing meaning.
+Continue from the handover.
+Do the remaining work. Do not restart the project.
+
+
+
+
