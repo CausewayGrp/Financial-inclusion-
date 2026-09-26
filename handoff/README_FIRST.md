@@ -1,4 +1,4 @@
-> STATUS: **R8.6 FREEZE CANDIDATE — PENDING FINAL CLEAN-ROOM ACCEPTANCE.** Do not start Design until this line reads **DESIGN HANDOFF READY**.
+> STATUS: **DESIGN HANDOFF READY.** Start here. R8.6 closed on 26 September 2026 after a clean-room acceptance by three cold recipients (`audit/FINAL_CLEAN_ROOM_ACCEPTANCE.md`). Not a public release.
 
 # Read this first — Yemen Financial Inclusion Evidence · أدلة الشمول المالي في اليمن
 

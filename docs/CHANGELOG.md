@@ -1,5 +1,14 @@
 # Repository Change Log
 
+## 2026-09-26 — F9: DESIGN HANDOFF READY
+
+Record `audit/FINAL_CLEAN_ROOM_ACCEPTANCE.md`. R8.6 is closed and directive D7 is complete. Three cold recipients found
+no blocker; the archive, extracted into an empty directory, passes every gate; the register holds 49 items with zero
+DESIGN_BLOCKER. The start file, the Design brief, `README.md`, the checkpoint, the Context and the handoff manifest now
+read DESIGN HANDOFF READY (gate R86-G01); the Code prompt still waits for the accepted Design package. Not PUBLIC
+RELEASE READY. The owner pushes the signed tag `checkpoint/design-handoff-ready`; the package is
+`Yemen_Financial_Inclusion_Evidence_DESIGN_HANDOFF_READY.zip` (`git archive`, one root folder, never committed).
+
 ## 2026-09-26 — F9 (part 3): third cold-recipient run
 
 A third fresh agent, on a clone of `b3c8e87`, asked whether it could carry Design from D0 to D7 without a question or an

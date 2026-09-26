@@ -1,4 +1,4 @@
-> STATUS: **R8.6 FREEZE CANDIDATE — PENDING FINAL CLEAN-ROOM ACCEPTANCE.** Executable once `handoff/README_FIRST.md` reads **DESIGN HANDOFF READY**.
+> STATUS: **DESIGN HANDOFF READY.** Executable. Read `handoff/README_FIRST.md` first; this is step 2 of its reading order.
 
 # Claude Design — master brief
 ## Yemen Financial Inclusion Evidence · أدلة الشمول المالي في اليمن

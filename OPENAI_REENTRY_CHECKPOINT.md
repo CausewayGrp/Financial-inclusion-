@@ -2,17 +2,17 @@
 
 **Programme:** Final integration to the Design handoff — directive D7 (`audit/directives/`), sessions F0–F9.
 **Position (current):** OpenAI accepted the Tranche C checkpoint on 26 September 2026 (recipient verification 31/31) and
-supplied the independent ten-Reading package with directive D7. Sessions F0–F8 are closed: the Reading portfolio is
+supplied the independent ten-Reading package with directive D7. Sessions F0–F9 are closed: the Reading portfolio is
 integrated (F2), the Resource Library decisions are made (F3), R8.5 repository subtraction is closed (F4), the whole
 public corpus is accepted (F5), the discovery, accessibility, rights and security contract is in place (F6), the
-sustainability baseline is recorded (F7) and the Design handoff is frozen (F8). Session F9 (clean-room acceptance) follows.
+sustainability baseline is recorded (F7), the Design handoff is frozen (F8) and accepted clean-room (F9).
 
-**Status: R8.6 FREEZE CANDIDATE — PENDING FINAL CLEAN-ROOM ACCEPTANCE.**
+**Status: DESIGN HANDOFF READY.**
 
-- R8.4: CLOSED / PASS, Reading prose included (F2). R8.5: CLOSED (F4). R8.6: freeze candidate (F6–F8 closed; F9 open).
-- This is not DESIGN HANDOFF READY and not PUBLIC RELEASE READY.
-- The handoff is frozen: one start file (`handoff/README_FIRST.md`), one Design prompt, one Code prompt that waits for the
-  Design package. Their first lines tell the recipient not to start until F9 switches them to DESIGN HANDOFF READY.
+- R8.4: CLOSED / PASS, Reading prose included (F2). R8.5: CLOSED (F4). R8.6: CLOSED (F8, F9).
+- This is not PUBLIC RELEASE READY.
+- Claude Design starts at `handoff/README_FIRST.md`; the Code prompt waits for the accepted Design package. The owner
+  pushes the signed tag `checkpoint/design-handoff-ready` on this state (`CONTRIBUTING.md` §6).
 
 **Date:** 2026-09-26.
 
@@ -72,6 +72,12 @@ build, literal audit, diagrams, repository manifest, validate, generator check; 
   the Design → Code contract; `handoff/ENGINEERING_HANDOFF_EXPECTATIONS.md`; three superseded drafts retired to
   `audit/prior-review-records/handoff-drafts-2026-09-26/`; Open Graph metadata; gates R86-G01…G04; open items classed in
   `FINAL_OPEN_ITEMS_REGISTER.md` with zero DESIGN_BLOCKER (`audit/R8_6_DESIGN_HANDOFF_FREEZE_CLOSURE.md`).
+- **F9 · clean-room acceptance.** Three fresh agents, each with only a clone of `main`, acted as Claude Design in a dry
+  run; none found a blocker, every command passed, and their 34 material points were fixed or given explicit rules
+  (RF9 moved the last two interface labels out of code; inventory 1.3; precedence and contract-disagreement table; the
+  reference implementation's location and `YFIE_SITE_DIR` test path; the test-hook contract; fonts vendored in
+  `vendor/fonts/`). The archive, extracted into an empty directory without `.git`, passes every gate. Register: 49 items,
+  zero DESIGN_BLOCKER (`audit/FINAL_CLEAN_ROOM_ACCEPTANCE.md`).
 
 Tranche C itself is recorded in `audit/TRANCHE_C_FINAL_ACCEPTANCE.md` and `audit/TRANCHE_C_FINDINGS_LEDGER.csv`.
 Currentness cut-off: 26 September 2026 (`audit/FINAL_CURRENTNESS_CUTOFF.md`).
@@ -94,8 +100,7 @@ left an item open and checked each against the current bytes; 23 earlier items h
 there so they are not reopened. Two were re-tracked: the bilingual status-event table for `/providers/` (EXT-04, which
 had no R8.5 disposition) and the `/remittances/` Measurement card (OWN-07).
 
-- **Session still open:** F9 (clean-room recipient test from an empty directory, final open-items register, handoff
-  archive; only then DESIGN HANDOFF READY).
+- **Sessions:** none open. D7 is complete; the next work is Claude Design's (gates D0–D7 in the brief).
 
 ## 5. Re-run
 

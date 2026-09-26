@@ -14,11 +14,11 @@ controlled-product-state and publication-state authority; everything else here i
 
 | | |
 |---|---|
-| **Position** | **R8.6 FREEZE CANDIDATE — PENDING FINAL CLEAN-ROOM ACCEPTANCE** (final integration programme: F0–F8 closed; F9 open) |
-| **Not declared** | Not DESIGN HANDOFF READY · not PUBLIC RELEASE READY |
-| **Waiting on** | Nothing external. The handoff is frozen ([F8 closure](audit/R8_6_DESIGN_HANDOFF_FREEZE_CLOSURE.md)); session F9 of directive [D7](audit/directives/D7_FINAL_INTEGRATION_TO_DESIGN_HANDOFF_2026-09-26.md) — the clean-room acceptance — is next |
+| **Position** | **DESIGN HANDOFF READY** (R8.6 closed; final integration programme F0–F9 closed — [clean-room acceptance](audit/FINAL_CLEAN_ROOM_ACCEPTANCE.md)) |
+| **Not declared** | Not PUBLIC RELEASE READY |
+| **Waiting on** | Claude Design, starting at [`handoff/README_FIRST.md`](handoff/README_FIRST.md). Owner: push the signed tag `checkpoint/design-handoff-ready` on this state; the owner and release items in [`FINAL_OPEN_ITEMS_REGISTER.md`](FINAL_OPEN_ITEMS_REGISTER.md) |
 | **Reviewed checkpoint** | Tag [`checkpoint/tranche-c-complete-reading-hold`](../../tree/checkpoint/tranche-c-complete-reading-hold): tree byte-identical to the review ZIP `…TRANCHE_C_COMPLETE_READING_HOLD.zip` (SHA-256 `63612dea…`) |
-| **Since that checkpoint** | F2 the ten Evidence Readings ([adjudication](audit/READING_PORTFOLIO_FINAL_ADJUDICATION.md)); F3 five Resource Library decisions ([record](audit/F3_RESOURCE_DECISIONS.md)); F4 R8.5 repository subtraction ([closure](audit/R8_5_REPOSITORY_SUBTRACTION_CLOSURE.md)); F5 whole public corpus acceptance ([record](audit/F5_PUBLIC_CORPUS_ACCEPTANCE.md), [findings ledger](audit/F5_CORPUS_FINDINGS_LEDGER.csv)); F6 discovery, accessibility, rights and security ([record](audit/F6_DISCOVERY_ACCESSIBILITY_RIGHTS_SECURITY_ACCEPTANCE.md)); F7 sustainability baseline ([method](docs/SUSTAINABILITY_METHOD.md), [baseline](audit/SUSTAINABILITY_PRE_DESIGN_BASELINE.json)); F8 handoff freeze — one start file, one Design prompt, route/content/state inventory, acceptance criteria ([closure](audit/R8_6_DESIGN_HANDOFF_FREEZE_CLOSURE.md)). Every English/Arabic page pair prints the same numbers |
+| **Since that checkpoint** | F2 the ten Evidence Readings ([adjudication](audit/READING_PORTFOLIO_FINAL_ADJUDICATION.md)); F3 five Resource Library decisions ([record](audit/F3_RESOURCE_DECISIONS.md)); F4 R8.5 repository subtraction ([closure](audit/R8_5_REPOSITORY_SUBTRACTION_CLOSURE.md)); F5 whole public corpus acceptance ([record](audit/F5_PUBLIC_CORPUS_ACCEPTANCE.md), [findings ledger](audit/F5_CORPUS_FINDINGS_LEDGER.csv)); F6 discovery, accessibility, rights and security ([record](audit/F6_DISCOVERY_ACCESSIBILITY_RIGHTS_SECURITY_ACCEPTANCE.md)); F7 sustainability baseline ([method](docs/SUSTAINABILITY_METHOD.md), [baseline](audit/SUSTAINABILITY_PRE_DESIGN_BASELINE.json)); F8 handoff freeze — one start file, one Design prompt, route/content/state inventory, acceptance criteria ([closure](audit/R8_6_DESIGN_HANDOFF_FREEZE_CLOSURE.md)); F9 clean-room acceptance — three cold recipients, archive test from an empty directory, fonts in `vendor/fonts/`, RF9 ([record](audit/FINAL_CLEAN_ROOM_ACCEPTANCE.md)). Every English/Arabic page pair prints the same numbers |
 | **Production Master** | `authority/Yemen_Financial_Inclusion_Evidence_Master.xlsx` · SHA-256 `17db032b15da16fc4b5b3c3b49f19aebf2ecb4ec46634613fe8505d0f038690b` |
 | **Page Specs** | `site-src/content/page_specs.json` · SHA-256 `d45748046ea56fd0e67fdf112f9888de65b3fe7fab46ce6f51de3a80824b69aa` |
 | **Currentness cut-off** | 26 September 2026 ([`audit/FINAL_CURRENTNESS_CUTOFF.md`](audit/FINAL_CURRENTNESS_CUTOFF.md)) |
@@ -114,8 +114,8 @@ Master; the validator checks every figure below against it. Counts are an invent
 | F5 | Whole public corpus acceptance: every public text reviewed in Arabic, English and parity; 667 findings decided | CLOSED | [`audit/F5_PUBLIC_CORPUS_ACCEPTANCE.md`](audit/F5_PUBLIC_CORPUS_ACCEPTANCE.md) |
 | F6 | Discovery (canonical, hreflang, robots, sitemap, structured data), accessibility contract, rights, security and privacy gates | CLOSED | [`audit/F6_…`](audit/F6_DISCOVERY_ACCESSIBILITY_RIGHTS_SECURITY_ACCEPTANCE.md) |
 | F7 | Sustainability baseline of the reference build (bytes, requests, cold and warm) and a non-public stewardship note | CLOSED | [`docs/SUSTAINABILITY_METHOD.md`](docs/SUSTAINABILITY_METHOD.md) |
-| F8 · R8.6 | Handoff freeze: one start file, one Design prompt, one logo authority, route/content/state inventory, acceptance criteria, Design→Code contract, open-items register | CLOSED — FREEZE CANDIDATE | [`audit/R8_6_…`](audit/R8_6_DESIGN_HANDOFF_FREEZE_CLOSURE.md) |
-| F9 · R8.6 | Clean-room acceptance by a cold recipient; final ZIP | Next | [D7](audit/directives/D7_FINAL_INTEGRATION_TO_DESIGN_HANDOFF_2026-09-26.md) |
+| F8 · R8.6 | Handoff freeze: one start file, one Design prompt, one logo authority, route/content/state inventory, acceptance criteria, Design→Code contract, open-items register | CLOSED | [`audit/R8_6_…`](audit/R8_6_DESIGN_HANDOFF_FREEZE_CLOSURE.md) |
+| **F9 · R8.6** | Clean-room acceptance by three cold recipients; archive test from an empty directory; final register; package `…_DESIGN_HANDOFF_READY.zip` | **CLOSED — DESIGN HANDOFF READY** | [`audit/FINAL_CLEAN_ROOM_ACCEPTANCE.md`](audit/FINAL_CLEAN_ROOM_ACCEPTANCE.md) |
 
 **Open items** (every item, classed and owned, in [`FINAL_OPEN_ITEMS_REGISTER.md`](FINAL_OPEN_ITEMS_REGISTER.md); **zero DESIGN_BLOCKER**):
 - **Engineering after Design (11):** the production runtime, the WCAG 2.2 audit of the implemented site, web-size logo
@@ -169,7 +169,7 @@ git diff --stat checkpoint/tranche-c-complete-reading-hold -- authority site-src
 | `dist/` | The generated public site, committed so every public change is reviewable | `scripts/build.py` only |
 | [`design/architecture/`](design/architecture/) | Diagrams derived from the navigation contract and inventory | `scripts/architecture_diagrams.py` |
 | [`vendor/fonts/`](vendor/fonts/README.md) | IBM Plex Sans and IBM Plex Sans Arabic (woff2, OFL), unchanged, for Design and Code; not loaded by the reference build | Replaced only by a newer unchanged release |
-| [`handoff/`](handoff/) | Design → Code recipient package, frozen in F8; start at [`handoff/README_FIRST.md`](handoff/README_FIRST.md) and execute only when its first line reads DESIGN HANDOFF READY | The programme only |
+| [`handoff/`](handoff/) | Design → Code recipient package (DESIGN HANDOFF READY); start at [`handoff/README_FIRST.md`](handoff/README_FIRST.md) | The programme only |
 | [`audit/`](audit/) | Closures, ledgers, transaction scripts and run reports, directives | Append only; history is not rewritten |
 | [`docs/`](docs/) | Changelog, deployment, repository protocol; S00–S06 records are lineage | Directly |
 | [`.github/`](.github/) | CI (`verify.yml`), checkpoint packaging (`checkpoint.yml`), Dependabot, PR template | Directly |

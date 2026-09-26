@@ -99,7 +99,7 @@
     "open": [
       "See FINAL_OPEN_ITEMS_REGISTER.md: every remaining item is ENGINEERING_AFTER_DESIGN, RELEASE_ONLY, EXTERNAL_EVIDENCE_DEPENDENCY, KNOWN_EVIDENCE_FRONTIER, OWNER_INPUT or REJECTED; none is a DESIGN_BLOCKER."
     ],
-    "handoff_readiness": "R8_6_FREEZE_CANDIDATE__PENDING_CLEAN_ROOM_ACCEPTANCE"
+    "handoff_readiness": "DESIGN_HANDOFF_READY"
   },
   "routes": [
     {
@@ -684,7 +684,7 @@
     "Do not create a second content model, CMS or source of truth."
   ],
   "handoff_freeze": {
-    "state": "R8_6_FREEZE_CANDIDATE__PENDING_CLEAN_ROOM_ACCEPTANCE",
+    "state": "DESIGN_HANDOFF_READY",
     "recipient_order": [
       "Claude Design",
       "Claude Code"
@@ -693,7 +693,7 @@
     "semantic_escalation_protocol": "ESCALATE_TO_MASTER",
     "no_external_evidence_research_for_fill_gaps": true,
     "single_launch_prompt": "handoff/README_FIRST.md",
-    "promotion_condition": "DESIGN HANDOFF READY is declared only after the F9 clean-room acceptance (directive D7); the first line of handoff/README_FIRST.md then reads DESIGN HANDOFF READY.",
+    "promotion_condition": "Met 26 September 2026: F9 clean-room acceptance (audit/FINAL_CLEAN_ROOM_ACCEPTANCE.md); the first line of handoff/README_FIRST.md reads DESIGN HANDOFF READY.",
     "start_path": [
       "README.md",
       "handoff/README_FIRST.md",

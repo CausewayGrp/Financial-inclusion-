@@ -1,7 +1,7 @@
 {
   "schema": "YFI_CURRENT_PROJECT_CONTEXT/1.0",
   "role": "COMPACT_PROJECTION_NOT_AUTHORITY",
-  "generated_at": "2026-09-26T23:45:00+03:00",
+  "generated_at": "2026-09-26T23:52:00+03:00",
   "system": {
     "name_en": "Yemen Financial Inclusion Evidence",
     "name_ar": "أدلة الشمول المالي في اليمن",
@@ -9,15 +9,14 @@
   },
   "programme_state": {
     "as_of": "2026-09-26",
-    "r_programme": "R0–R8.3 CLOSED / PASS; R8.4 CLOSED / PASS including the Evidence Readings (F2); R8.5 CLOSED (F4, audit/R8_5_REPOSITORY_SUBTRACTION_CLOSURE.md); R8.6 FREEZE CANDIDATE under directive D7 (F6–F8 closed, audit/R8_6_DESIGN_HANDOFF_FREEZE_CLOSURE.md; F9 clean-room acceptance open)",
-    "tranches": "Tranche A CLOSED; Tranche B specification CLOSED; Tranche B execution CLOSED; Tranche C COMPLETE and accepted by OpenAI (26 Sep 2026, recipient verification 31/31); final integration F0–F8 CLOSED (R8.5 closed; whole public corpus accepted; discovery, accessibility, rights and security contract in place; sustainability baseline recorded; Design handoff frozen)",
+    "r_programme": "R0–R8.3 CLOSED / PASS; R8.4 CLOSED / PASS including the Evidence Readings (F2); R8.5 CLOSED (F4, audit/R8_5_REPOSITORY_SUBTRACTION_CLOSURE.md); R8.6 CLOSED — DESIGN HANDOFF READY (F8 freeze, audit/R8_6_DESIGN_HANDOFF_FREEZE_CLOSURE.md; F9 clean-room acceptance, audit/FINAL_CLEAN_ROOM_ACCEPTANCE.md)",
+    "tranches": "Tranche A CLOSED; Tranche B specification CLOSED; Tranche B execution CLOSED; Tranche C COMPLETE and accepted by OpenAI (26 Sep 2026, recipient verification 31/31); final integration F0–F9 CLOSED (R8.5 closed; whole public corpus accepted; discovery, accessibility, rights and security contract in place; sustainability baseline recorded; Design handoff frozen; clean-room accepted by three cold recipients)",
     "pre_tranche_c": "Sessions P1–P4 CLOSED and independently accepted with three narrow corrections; P5 corrections CLOSED",
-    "handoff_readiness": "R8_6_FREEZE_CANDIDATE__PENDING_CLEAN_ROOM_ACCEPTANCE",
+    "handoff_readiness": "DESIGN_HANDOFF_READY",
     "not_declared": [
-      "DESIGN HANDOFF READY",
       "PUBLIC RELEASE READY"
     ],
-    "design_prompt_status": "R8.6 FREEZE CANDIDATE — pending final clean-room acceptance (F9); start path handoff/README_FIRST.md → handoff/CLAUDE_DESIGN_MASTER_PROMPT.md",
+    "design_prompt_status": "DESIGN HANDOFF READY — executable; start path handoff/README_FIRST.md → handoff/CLAUDE_DESIGN_MASTER_PROMPT.md; Claude Code waits for the accepted Design package",
     "checkpoint": "OPENAI_REENTRY_CHECKPOINT.md",
     "tranche_c": {
       "closure": "audit/TRANCHE_C_FINAL_ACCEPTANCE.md",
@@ -28,7 +27,8 @@
       "discovery_accessibility_security": "audit/F6_DISCOVERY_ACCESSIBILITY_RIGHTS_SECURITY_ACCEPTANCE.md — pre-Design contract and gates F6-G01…G08; public origin null until the owner sets it (site-src/deployment.json)",
       "sustainability": "docs/SUSTAINABILITY_METHOD.md; audit/SUSTAINABILITY_PRE_DESIGN_BASELINE.json (pre-design reference build; remeasure after Design and deployment)",
       "handoff_freeze": "audit/R8_6_DESIGN_HANDOFF_FREEZE_CLOSURE.md — one start file, one Design prompt, route/content/state inventory, acceptance criteria, Design-to-Code contract; gates R86-G01…G04",
-      "open_items": "FINAL_OPEN_ITEMS_REGISTER.md — 47 items in six classes; zero DESIGN_BLOCKER"
+      "open_items": "FINAL_OPEN_ITEMS_REGISTER.md — 49 items in six classes; zero DESIGN_BLOCKER",
+      "clean_room_acceptance": "audit/FINAL_CLEAN_ROOM_ACCEPTANCE.md — three cold-recipient runs, archive test from an empty directory, final gates and scans"
     },
     "directive": "audit/directives/D7_FINAL_INTEGRATION_TO_DESIGN_HANDOFF_2026-09-26.md"
   },
