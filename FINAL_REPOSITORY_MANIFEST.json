@@ -25,19 +25,19 @@
   "AUTHORITY_MASTER": 1,
   "AUTHORITY_POINTER": 2,
   "AUTHORITY_RULES": 1,
-  "BUILD_AND_GATES": 13,
+  "BUILD_AND_GATES": 14,
   "CURRENT_DOCUMENT": 8,
-  "CURRENT_PROGRAMME_RECORD": 39,
+  "CURRENT_PROGRAMME_RECORD": 40,
   "GENERATED_DIAGRAMS": 9,
   "GENERATED_LITERAL_CLOSURE": 1,
   "GENERATED_PROJECTION": 39,
-  "GENERATED_PUBLIC_BUILD": 293,
+  "GENERATED_PUBLIC_BUILD": 295,
   "LOGO_AUTHORITY": 1,
   "PROJECTION_CONTRACT": 11,
   "PROJECTION_GENERATOR": 13,
   "RECIPIENT_HANDOFF": 10,
   "REPOSITORY_ENGINEERING": 9,
-  "RUNTIME_SOURCE": 2,
+  "RUNTIME_SOURCE": 4,
   "STANDING_POLICY": 5
  },
  "files": [
@@ -159,6 +159,10 @@
   },
   {
    "path": "audit/F5_PUBLIC_CORPUS_ACCEPTANCE.md",
+   "class": "CURRENT_PROGRAMME_RECORD"
+  },
+  {
+   "path": "audit/F6_DISCOVERY_ACCESSIBILITY_RIGHTS_SECURITY_ACCEPTANCE.md",
    "class": "CURRENT_PROGRAMME_RECORD"
   },
   {
@@ -1798,6 +1802,10 @@
    "class": "GENERATED_PUBLIC_BUILD"
   },
   {
+   "path": "dist/assets/lang-redirect.js",
+   "class": "GENERATED_PUBLIC_BUILD"
+  },
+  {
    "path": "dist/assets/styles.css",
    "class": "GENERATED_PUBLIC_BUILD"
   },
@@ -2378,6 +2386,10 @@
    "class": "GENERATED_PUBLIC_BUILD"
   },
   {
+   "path": "dist/robots.txt",
+   "class": "GENERATED_PUBLIC_BUILD"
+  },
+  {
    "path": "dist/static-data/search_aliases.json",
    "class": "GENERATED_PUBLIC_BUILD"
   },
@@ -2567,6 +2579,10 @@
   },
   {
    "path": "scripts/checksums.py",
+   "class": "BUILD_AND_GATES"
+  },
+  {
+   "path": "scripts/discovery.py",
    "class": "BUILD_AND_GATES"
   },
   {
@@ -2852,6 +2868,14 @@
   {
    "path": "site-src/content/visuals/visual_library.json",
    "class": "GENERATED_PROJECTION"
+  },
+  {
+   "path": "site-src/deployment.json",
+   "class": "RUNTIME_SOURCE"
+  },
+  {
+   "path": "site-src/lang-redirect.js",
+   "class": "RUNTIME_SOURCE"
   },
   {
    "path": "site-src/styles.css",

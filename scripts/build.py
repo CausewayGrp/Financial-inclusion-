@@ -7,11 +7,16 @@ ROOT=Path(__file__).resolve().parents[1]
 SRC=ROOT/'site-src'; C=SRC/'content'; DIST=ROOT/'dist'
 if DIST.exists(): shutil.rmtree(DIST)
 DIST.mkdir(); (DIST/'assets').mkdir(); (DIST/'static-data').mkdir()
-for name in ['styles.css','app.js']:
+for name in ['styles.css','app.js','lang-redirect.js']:
     shutil.copy2(SRC/name,DIST/'assets'/name)
 shutil.copy2(SRC/'assets/CauseWay_Master_Logo.png',DIST/'assets/CauseWay_Master_Logo.png')
 shutil.copy2(C/'content/search_index.json',DIST/'static-data/search_index.json')
 shutil.copy2(C/'content/search_aliases.json',DIST/'static-data/search_aliases.json')   # PB-0492 governed discovery aliases
+
+import sys
+sys.path.insert(0,str(Path(__file__).resolve().parent))
+import discovery as DISC   # F6: canonical/hreflang, robots, sitemap and structured data have one implementation
+ORIGIN=DISC.origin()
 
 def load(p): return json.load(open(p,encoding='utf-8'))
 def load_specs():
@@ -1307,7 +1312,7 @@ def compare_block(lang):
         f'<label><span>{c_lab}</span><select id="compare-c" data-compare-slot="optional" class="search-shell">{optional_opts}</select></label>'
         f'<label><span>{d_lab}</span><select id="compare-d" data-compare-slot="optional" class="search-shell">{optional_opts}</select></label></div>'
         f'<div class="compare-share"><button type="button" class="button ghost" data-compare-copy>{ui_text("UI-COMPARE-COPY-LINK-TO-THIS-COMPARISON",lang)}</button></div>'
-        f'<div id="compare-status" class="sr-only" role="status" aria-live="polite" aria-atomic="true"></div><div id="compare-output"></div><script>window.__COMPARE__={data};window.__COMPARE_DIMENSIONS__={dim_data};</script>'
+        f'<div id="compare-status" class="sr-only" role="status" aria-live="polite" aria-atomic="true"></div><div id="compare-output"></div><script type="application/json" id="yfie-compare">{data}</script><script type="application/json" id="yfie-compare-dimensions">{dim_data}</script>'
         f'</div></section>'
     )
 
@@ -1406,7 +1411,7 @@ def record_context_origin(lang,mode):
         f'<div class="correction-origin" data-correction-origin hidden><span>{esc(current)}</span><strong data-correction-record dir="ltr"></strong>'
         f'<a class="text-link" data-correction-link href="#">{esc(open_label)}</a></div>'
         f'<div class="correction-link-error" data-correction-error hidden role="alert" data-msg-malformed="{esc(bad)}" data-msg-unknown="{esc(unknown)}"></div>'
-        f'<script>window.__RECORD_IDS__={ids};</script>'
+        f'<script type="application/json" id="yfie-record-ids">{ids}</script>'
     )
 
 def _governed_contact_address():
@@ -1573,6 +1578,25 @@ def page_meta_description(spec,lang,title):
         if body: return _meta_clip(body)
     return title
 
+def structured_data(spec,lang,product):
+    """F6: WebSite on Home; BreadcrumbList where the page shows a breadcrumb; Article on Readings. Governed fields only."""
+    route=spec.get('route','/'); cls=spec.get('page_class'); ar=lang=='ar'; out=[]
+    crumbs=NAVIGATION_INTERACTION.get('breadcrumbs') or {}
+    if route=='/':
+        out.append(DISC.website_ld(lang,product,ORIGIN))
+    elif cls=='evidence_detail':
+        obj=_evidence_object(spec) or {}; cfg=crumbs.get('Evidence Record') or {}
+        oid=obj.get('object_id') or spec.get('instance_id')
+        if cfg.get('parent_route') and oid:
+            out.append(DISC.breadcrumb_ld(cfg['parent_route'],cfg.get('parent_label_ar' if ar else 'parent_label_en'),oid,lang,ORIGIN))
+    elif cls=='reading_detail':
+        r=_reading_of(spec); cfg=crumbs.get('Reading') or {}; t=locv(r,'title',lang)
+        if cfg.get('parent_route') and t:
+            out.append(DISC.breadcrumb_ld(cfg['parent_route'],cfg.get('parent_label_ar' if ar else 'parent_label_en'),t,lang,ORIGIN))
+        if t and locv(r,'thesis',lang):
+            out.append(DISC.article_ld(route,lang,t,locv(r,'thesis',lang),product,ORIGIN))
+    return ''.join(DISC.ld_script(x) for x in out)
+
 def page(spec,lang):
     route=spec.get('route','/'); ar=lang=='ar'; direction='rtl' if ar else 'ltr'; cls=spec.get('page_class')
     if route in PRESENTATION_ROUTES:
@@ -1591,7 +1615,7 @@ def page(spec,lang):
         obj=_evidence_object(spec)
         if obj:
             citation_meta=f'<meta name="yfie-citation" content="{esc(evidence_citation_context(spec,obj,lang))}"><meta name="yfie-record-id" content="{esc(obj.get("object_id") or obj.get("evidence_object_id") or "")}">'
-    return f'<!doctype html><html lang="{lang}" dir="{direction}"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#082d4f"><title>{esc(title)} — {product}</title><meta name="description" content="{esc(desc)}">{citation_meta}<link rel="stylesheet" href="/assets/styles.css"><link rel="alternate" hreflang="{other}" href="{route_href(route,other)}"><link rel="canonical" href="{route_href(route,lang)}"></head><body><noscript><div class="noscript-note">{esc(ui_text("UI-NOSCRIPT-NOTE",lang))}</div></noscript>{header(lang,route)}<main id="main" class="main">{body}</main>{footer(lang)}{ui_json(lang)}<script src="/assets/app.js" defer></script></body></html>'
+    return f'<!doctype html><html lang="{lang}" dir="{direction}"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#082d4f"><title>{esc(title)} — {product}</title><meta name="description" content="{esc(desc)}">{citation_meta}<link rel="stylesheet" href="/assets/styles.css">{DISC.head_links(route,lang,ORIGIN)}{structured_data(spec,lang,product)}</head><body><noscript><div class="noscript-note">{esc(ui_text("UI-NOSCRIPT-NOTE",lang))}</div></noscript>{header(lang,route)}<main id="main" class="main">{body}</main>{footer(lang)}{ui_json(lang)}<script src="/assets/app.js" defer></script></body></html>'
 
 
 files=SPECS
@@ -1599,12 +1623,19 @@ for spec in files:
     route=str(spec.get('route','/')).strip('/')
     for lang in ('ar','en'):
         d=DIST/lang/route; d.mkdir(parents=True,exist_ok=True); (d/'index.html').write_text(page(spec,lang),encoding='utf-8')
-(DIST/'index.html').write_text('<!doctype html><meta charset="utf-8"><title>Yemen Financial Inclusion Evidence</title><script>let l="ar";try{const s=localStorage.getItem("yfie-lang");if(s==="en"||s==="ar")l=s;}catch(e){}location.replace("/"+l+"/");</script><noscript><meta http-equiv="refresh" content="0;url=/ar/"></noscript>',encoding='utf-8')
+# Root entry route (hreflang x-default): the stored language, otherwise Arabic; no inline script (strict CSP possible).
+(DIST/'index.html').write_text(f'<!doctype html><html><head><meta charset="utf-8"><title>{esc(ui_text("UI-PRODUCT-NAME","ar"))} · {esc(ui_text("UI-PRODUCT-NAME","en"))}</title>'
+                               f'{DISC.head_links("/","ar",ORIGIN).split(">",1)[1]}<script src="/assets/lang-redirect.js"></script>'
+                               f'<noscript><meta http-equiv="refresh" content="0;url=/ar/"></noscript></head></html>',encoding='utf-8')
+# F6 discovery: robots policy and sitemap follow site-src/deployment.json (pre-release: no crawling, no sitemap).
+(DIST/'robots.txt').write_text(DISC.robots_txt(ORIGIN),encoding='utf-8')
+if ORIGIN:
+    (DIST/'sitemap.xml').write_text(DISC.sitemap_xml([s.get('route','/') for s in files],ORIGIN),encoding='utf-8')
 def not_found_section(lang):
     L=lambda k:ui_text(k,lang)
     return (f'<section lang="{lang}" dir="{"rtl" if lang=="ar" else "ltr"}"><{"h1" if lang=="ar" else "h2"}>{esc(L("UI-404-HEADING"))}</{"h1" if lang=="ar" else "h2"}><p>{esc(L("UI-404-BODY"))}</p>'
             f'<div class="hero-actions"><a class="button primary" href="/{lang}/">{esc(L("UI-404-HOME"))}</a><a class="button ghost" href="/{lang}/explore/">{esc(L("UI-404-EXPLORE"))}</a>'
             f'<a class="button ghost" href="/{lang}/evidence/">{esc(L("UI-404-EVIDENCE"))}</a><button class="button ghost" data-search-open>{esc(L("UI-404-SEARCH"))}</button></div></section>')
 # R8.5: the bilingual 404 page takes every word from governed interface copy (04); Arabic first, as on the root route.
-(DIST/'404.html').write_text(f'''<!doctype html><html lang="ar" dir="rtl"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#082d4f"><title>{esc(ui_text("UI-404-TITLE","ar"))} — {esc(ui_text("UI-PRODUCT-NAME","en"))}</title><link rel="stylesheet" href="/assets/styles.css"></head><body><main id="main" class="not-found"><div class="not-found-panel"><img src="/assets/CauseWay_Master_Logo.png" alt="CauseWay"><div class="eyebrow">404 · {esc(ui_text("UI-404-TITLE","ar"))} / {esc(ui_text("UI-404-TITLE","en"))}</div><div class="not-found-grid">{not_found_section("ar")}{not_found_section("en")}</div></div></main>{search_dialog('ar')}{ui_json('ar')}<script src="/assets/app.js" defer></script></body></html>''',encoding='utf-8')
+(DIST/'404.html').write_text(f'''<!doctype html><html lang="ar" dir="rtl"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#082d4f"><title>{esc(ui_text("UI-404-TITLE","ar"))} — {esc(ui_text("UI-PRODUCT-NAME","en"))}</title><meta name="robots" content="noindex"><link rel="stylesheet" href="/assets/styles.css"></head><body><main id="main" class="not-found"><div class="not-found-panel"><img src="/assets/CauseWay_Master_Logo.png" alt="CauseWay"><div class="eyebrow">404 · {esc(ui_text("UI-404-TITLE","ar"))} / {esc(ui_text("UI-404-TITLE","en"))}</div><div class="not-found-grid">{not_found_section("ar")}{not_found_section("en")}</div></div></main>{search_dialog('ar')}{ui_json('ar')}<script src="/assets/app.js" defer></script></body></html>''',encoding='utf-8')
 print(f'Built {len(files)*2+2} HTML files from {len(files)} controlled page specs.')

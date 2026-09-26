@@ -131,7 +131,7 @@ def t_recover(page, base):
 @test("compare: IDs containing '+' survive the URL round trip")
 def t_plus(page, base):
     page.goto(base + "/en/evidence/compare/")
-    ids = page.evaluate("window.__COMPARE__.map(x=>x.id)")
+    ids = page.evaluate("JSON.parse(document.getElementById('yfie-compare').textContent).map(x=>x.id)")
     plus = [i for i in ids if "+" in i]
     if not plus:
         return "SKIP (no compare record carries '+')"

@@ -113,11 +113,12 @@ python3 scripts/checksums.py --check                   # manifest lists every tr
 python3 scripts/generate_projections.py --check        # the Master regenerates every projection byte for byte
 python3 -m unittest discover -s scripts/projection/tests -t .
 python3 scripts/build.py && python3 scripts/audit_public_literals.py   # then `git status` must be clean
-python3 scripts/validate.py                            # WEBSITE REPOSITORY VALIDATION PASS
+python3 scripts/validate.py                            # WEBSITE REPOSITORY VALIDATION PASS (incl. R85-G*, RP-G*, F6-G*)
+python3 scripts/repository_manifest.py --check         # every tracked file classified
 python3 scripts/tests/test_literal_audit_determinism.py
 python3 audit/pre_tranche_c/source_lineage_truth_test.py
 python3 scripts/architecture_diagrams.py --check
-python3 audit/tranche_c/checks/bilingual_invariance.py # only the pages held under BIL-05 may differ
+python3 audit/tranche_c/checks/bilingual_invariance.py # 0 differing English/Arabic page pairs (exit 1 otherwise)
 python3 scripts/tests/test_public_tools.py             # browser
 python3 audit/tranche_c/checks/viewport_acceptance.py  # browser
 ```

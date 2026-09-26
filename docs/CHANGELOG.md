@@ -1,5 +1,19 @@
 # Repository Change Log
 
+## 2026-09-26 — F6: discovery, accessibility, rights, security and privacy (pre-Design)
+
+Record `audit/F6_DISCOVERY_ACCESSIBILITY_RIGHTS_SECURITY_ACCEPTANCE.md`; no Master change.
+- **Discovery.** `scripts/discovery.py` (one implementation for build and validator): self-canonical, reciprocal hreflang
+  with `x-default` (the root entry route), `robots.txt` (pre-release: no crawling), sitemap derivation for when the owner
+  sets `public_origin` in `site-src/deployment.json`, JSON-LD (`WebSite`, `BreadcrumbList`, `Article` for Readings) with
+  governed fields only — no author, dates, image or `Dataset`. 404 is `noindex`.
+- **Strict CSP possible.** Page data moved from inline scripts to JSON blocks; the root redirect is `assets/lang-redirect.js`;
+  no inline style, handler, external resource or form. Header expectations for Code in `docs/DEPLOYMENT.md`.
+- **Accessibility contract.** Eleven WCAG 2.2 outcomes with what the reference build does now and what Design and Code
+  must deliver; no conformance claimed.
+- **Gates added:** F6-G01…G08 (titles, descriptions, H1, lang; canonical and hreflang; robots and sitemap; structured
+  data; public-build security; secrets; bundled documents; rights and card state).
+
 ## 2026-09-26 — F5: whole public corpus acceptance
 
 Transactions RF5 and RF5b (Master `440614d7…` → `168a0ad8…` → `ed3c5796…`); record

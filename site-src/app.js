@@ -5,6 +5,8 @@ const isAr=document.documentElement.lang==='ar';
 // R8.5: interface copy is governed in the Master (04, IDs UI-JS-*); the build writes this page's labels as JSON.
 const UI=(()=>{try{return JSON.parse(document.getElementById('yfie-ui')?.textContent||'{}');}catch(e){return {};}})();
 const T=k=>(k in UI?UI[k]:k);
+// F6: page data travels in JSON blocks, never in inline executable scripts (a strict Content-Security-Policy stays possible).
+const DATA=id=>{try{return JSON.parse(document.getElementById(id)?.textContent||'null');}catch(e){return null;}};
 const TF=(k,o)=>T(k).replace(/\{(\w+)\}/g,(m,n)=>(n in o?String(o[n]):m));
 const labelsFrom=table=>Object.fromEntries(Object.entries(table).map(([k,v])=>[k,T(v)]));
 const COMPARE_ERROR_UI={"title": "UI-JS-COMPARE-LINK-TITLE", "count": "UI-JS-COMPARE-LINK-COUNT", "malformed": "UI-JS-COMPARE-LINK-MALFORMED", "unknown": "UI-JS-COMPARE-LINK-UNKNOWN", "note": "UI-JS-COMPARE-LINK-NOTE"};
@@ -208,7 +210,7 @@ const correctionContext=$('[data-correction-context]');
 if(correctionContext){
   // P2.3: the originating record survives into Corrections and Contact; a malformed or unknown reference is a technical link error.
   const record=new URLSearchParams(location.search).get('record');
-  const known=new Set(window.__RECORD_IDS__||[]);
+  const known=new Set(DATA('yfie-record-ids')||[]);
   const origin=$('[data-correction-origin]',correctionContext), rid=$('[data-correction-record]',correctionContext), link=$('[data-correction-link]',correctionContext), err=$('[data-correction-error]',correctionContext);
   if(record!==null){
     if(!/^[A-Za-z0-9._+-]+$/.test(record)){ if(err){err.textContent=err.dataset.msgMalformed;err.dataset.correctionError='malformed';err.hidden=false;} }
@@ -223,8 +225,8 @@ if(correctionContext){
 
 const compareSelects=['#compare-a','#compare-b','#compare-c','#compare-d'].map(s=>$(s)).filter(Boolean), out=$('#compare-output'), compareStatus=$('#compare-status');
 if(compareSelects.length>=2&&out){
-  const data=window.__COMPARE__||[];
-  const contractDimensions=Array.isArray(window.__COMPARE_DIMENSIONS__)?window.__COMPARE_DIMENSIONS__:[];
+  const data=DATA('yfie-compare')||[];
+  const contractDimensions=Array.isArray(DATA('yfie-compare-dimensions'))?DATA('yfie-compare-dimensions'):[];
   const labels=labelsFrom(COMPARE_LABEL_UI);
   const requiredHard=new Set(['definition','universe','method']);   // Tranche C TOOL-01: only governed per-record fields
   const temporal=new Set(['period','currentness']);

@@ -728,7 +728,7 @@ else:
 for token,label in [
     ("COMPARISON_PRESENTATION=FAMILY_PRESENTATION.get('Comparison')",'Comparison contract consumption'),
     ("supporting=list(COMPARISON_PRESENTATION.get('supporting')",'contract-driven comparison dimensions'),
-    ('window.__COMPARE_DIMENSIONS__','generated contract dimensions'),
+    ('id="yfie-compare-dimensions"','generated contract dimensions'),
     ('data-comparison-family="Comparison"','Comparison family binding'),
     ('id="compare-c"','optional third comparison record'),
     ('id="compare-d"','optional fourth comparison record'),
@@ -741,7 +741,7 @@ for token,label in [
 for token,label in [
     ("meta[name=\"yfie-citation\"]",'governed detached citation'),
     ('data-source-cite','source-reference copy behavior'),
-    ('window.__COMPARE_DIMENSIONS__','comparison contract consumption in client'),
+    ("DATA('yfie-compare-dimensions')",'comparison contract consumption in client'),
     # Tranche C TOOL-01: geography and unit are not governed per record, so the hard firewall is definition, universe, method.
     ("requiredHard=new Set(['definition','universe','method'])",'comparison hard-dimension firewall'),
     ('const assessMany=','2–4 record compatibility assessment'),
@@ -772,7 +772,7 @@ else:
         if raw.count('data-compare-slot="required"')!=2 or raw.count('data-compare-slot="optional"')!=2:
             errors.append(f'S04.2 Compare must implement controlled 2–4 record selection {lang}')
         if 'class="answer-card' in raw: errors.append(f'S04.2 Compare must not duplicate governed objects as generic cards {lang}')
-        m=re.search(r'window\.__COMPARE__=(.*?);window\.__COMPARE_DIMENSIONS__=(.*?);</script>',raw,re.S)
+        m=re.search(r'<script type="application/json" id="yfie-compare">(.*?)</script><script type="application/json" id="yfie-compare-dimensions">(.*?)</script>',raw,re.S)   # F6: JSON blocks, not inline globals
         if not m: errors.append(f'S04.2 Compare controlled payload missing {lang}'); continue
         try:
             payload=json.loads(_html.unescape(m.group(1))); dims=json.loads(_html.unescape(m.group(2)))
@@ -1662,14 +1662,14 @@ for rec in search_records:
         errors.append(f'P2-G02 Measurement search record does not deep-link to its anchor {rec.get("id")}')
 _js=(DIST/'assets'/'app.js').read_text(encoding='utf-8')
 for token,label in (("get('records')",'Compare URL state parsing'),('history.replaceState','Compare URL state writing'),('data-compare-url-error','Compare technical input error'),
-                    ('__RECORD_IDS__','record-context validation'),('sourceLinkError','source deep-link technical error')):
+                    ("DATA('yfie-record-ids')",'record-context validation'),('sourceLinkError','source deep-link technical error')):
     if token not in _js: errors.append('P2-G02 missing runtime contract: '+label)
 for lang in ('en','ar'):
     cmp=(DIST/lang/'evidence/compare/index.html').read_text(encoding='utf-8')
     if 'data-compare-copy' not in cmp: errors.append(f'P2-G02 Compare share control missing {lang}')
     for r in ('contact','corrections'):
         h=(DIST/lang/r/'index.html').read_text(encoding='utf-8')
-        if 'data-correction-origin' not in h or '__RECORD_IDS__' not in h: errors.append(f'P2-G02 record context missing on /{r}/ {lang}')
+        if 'data-correction-origin' not in h or 'id="yfie-record-ids"' not in h: errors.append(f'P2-G02 record context missing on /{r}/ {lang}')
     if 'data-correction-mail' not in (DIST/lang/'contact'/'index.html').read_text(encoding='utf-8'): errors.append(f'P2-G02 report action missing on /contact/ {lang}')
     dh=(DIST/lang/'data/index.html').read_text(encoding='utf-8')
     if dh.count('class="source-rights-note"')!=1: errors.append(f'P2-G02 /data/ must state the reuse boundary once, got {dh.count(chr(34)+"source-rights-note"+chr(34))} {lang}')
@@ -1940,7 +1940,7 @@ try:
         _t=_f.read_text(encoding='utf-8'); _rel=_f.relative_to(DIST)
         _vis=_html.unescape(re.sub(r'<[^>]+>',' ',re.sub(r'<script.*?</script>','',_t,flags=re.S))) if _f.suffix=='.html' else _t
         for _rx,_g in ((_auth,'R85-G05 authoring/template token'),(_intl,'R85-G06 internal finding or transaction code'),(_priv,'R85-G07 private locator or machine path')):
-            _m=_rx.search(_vis if _g.startswith('R85-G06') else _t)
+            _m=_rx.search(_vis if _g.startswith('R85-G06') else re.sub(r'<script type="application/ld\+json">.*?</script>','',_t,flags=re.S))
             if _m: errors.append(f'{_g} in public build {_rel}: {_m.group(0)}')
         if _f.suffix=='.html' and str(_rel).startswith('ar/'):
             _mm=re.search(r'<main.*?</main>',re.sub(r'<script.*?</script>','',_t,flags=re.S),re.S)
@@ -2048,6 +2048,104 @@ for _f in (C/'data').glob('*.json'):
     _t=_f.read_text(encoding='utf-8')
     if 'Uploaded 2014–2022 longitudinal inputs' in _t: errors.append(f'TC-G05 unsourced Findex block returned in {_f.name}')
     if 'Iyad' in _t or 'أياد السعدي' in _t: errors.append(f'TC-G05 personal name returned in {_f.name}')
+
+# F6 (directive D7) discovery, accessibility-support, rights, security and privacy gates — pre-Design, repository level.
+#  F6-G01 every localized page: one <title> and one meta description, unique per language; one <h1>; lang/dir match the path
+#  F6-G02 self-canonical; reciprocal hreflang en/ar and x-default (the root entry route); the paired page exists
+#  F6-G03 robots.txt and sitemap follow site-src/deployment.json; a sitemap built for a test origin covers every page once
+#  F6-G04 structured data: parseable JSON-LD; WebSite only on Home, Article only on Readings, BreadcrumbList only where a
+#         breadcrumb is shown and with its visible names; no author, date, image or Dataset metadata
+#  F6-G05 public build: no external script, stylesheet, image, frame or font; no form; no inline executable script, inline
+#         event handler, javascript: URL or inline style (a strict Content-Security-Policy stays possible); every new-tab
+#         link carries rel="noopener"; 404 is noindex
+#  F6-G06 no secret, key or credential pattern in any tracked text file
+#  F6-G07 no bundled source document: the only tracked office/PDF/archive file is the Production Master; dist holds only
+#         web files
+#  F6-G08 every source record states its rights state and public card state
+try:
+    sys.path.insert(0,str(ROOT/'scripts'))
+    import discovery as _DISC, subprocess as _sp6
+    _org=_DISC.origin()
+    _specs6=json.load(open(C/'page_specs.json',encoding='utf-8')).get('page_specs',[])
+    _routes6=[_s.get('route','/') for _s in _specs6]
+    _seen_t,_seen_d={},{}
+    for _r in _routes6:
+        for _L in ('en','ar'):
+            _rel=_DISC.localized(_r,_L).strip('/')
+            _f=DIST/_rel/'index.html'
+            if not _f.exists():
+                errors.append(f'F6-G02 missing localized page {_rel}'); continue
+            _t=_f.read_text(encoding='utf-8'); _hd=_t[:_t.find('</head>')]
+            _ti=re.findall(r'<title>(.*?)</title>',_hd); _de=re.findall(r'<meta name="description" content="([^"]*)">',_hd)
+            if len(_ti)!=1 or len(_de)!=1: errors.append(f'F6-G01 {_rel}: {len(_ti)} titles, {len(_de)} descriptions')
+            else:
+                if (_L,_ti[0]) in _seen_t: errors.append(f'F6-G01 duplicate title {_rel} = {_seen_t[(_L,_ti[0])]}')
+                if (_L,_de[0]) in _seen_d: errors.append(f'F6-G01 duplicate description {_rel} = {_seen_d[(_L,_de[0])]}')
+                _seen_t[(_L,_ti[0])]=_rel; _seen_d[(_L,_de[0])]=_rel
+                if not _de[0].strip() or len(_html.unescape(_de[0]))>200: errors.append(f'F6-G01 description empty or over 200 characters {_rel}')
+            if len(re.findall(r'<h1[\s>]',_t))!=1: errors.append(f'F6-G01 {_rel}: not exactly one h1')
+            if not _t.startswith(f'<!doctype html><html lang="{_L}" dir="{"rtl" if _L=="ar" else "ltr"}">'): errors.append(f'F6-G01 lang/dir {_rel}')
+            if _DISC.head_links(_r,_L,_org) not in _hd: errors.append(f'F6-G02 canonical/hreflang contract broken {_rel}')
+            for _m in re.finditer(r'<script type="application/ld\+json">(.*?)</script>',_hd):
+                try: _o=json.loads(_m.group(1))
+                except Exception: errors.append(f'F6-G04 unparseable JSON-LD {_rel}'); continue
+                _ty=_o.get('@type'); _blob=json.dumps(_o)
+                if any(k in _blob for k in ('"author"','"datePublished"','"dateModified"','"image"','"Dataset"')): errors.append(f'F6-G04 invented metadata field in {_rel}')
+                if _ty=='WebSite' and _r!='/': errors.append(f'F6-G04 WebSite outside Home {_rel}')
+                if _ty=='Article' and not str(_r).startswith('/readings/') : errors.append(f'F6-G04 Article outside Readings {_rel}')
+                if _ty=='Article' and _r=='/readings/': errors.append(f'F6-G04 Article on the Readings index')
+                if _ty=='BreadcrumbList':
+                    _nav=re.search(r'<nav class="breadcrumb"[^>]*>(.*?)</nav>',_t,re.S)
+                    _vis=[_html.unescape(x).strip() for x in re.findall(r'>([^<>]+)</(?:a|span)>',_nav.group(1)) if x.strip()!='/'] if _nav else []
+                    _ld=[i.get('name') for i in _o.get('itemListElement',[])]
+                    if _vis!=_ld: errors.append(f'F6-G04 breadcrumb data differs from the visible breadcrumb {_rel}: {_ld} vs {_vis}')
+                if _ty not in ('WebSite','Article','BreadcrumbList'): errors.append(f'F6-G04 unexpected structured-data type {_ty} {_rel}')
+            if '<nav class="breadcrumb"' in _t and 'BreadcrumbList' not in _hd: errors.append(f'F6-G04 breadcrumb without BreadcrumbList {_rel}')
+            if str(_r).startswith('/readings/') and _r!='/readings/' and '"@type":"Article"' not in _hd: errors.append(f'F6-G04 Reading without Article data {_rel}')
+    _rob=(DIST/'robots.txt').read_text(encoding='utf-8') if (DIST/'robots.txt').exists() else None
+    if _rob!=_DISC.robots_txt(_org): errors.append('F6-G03 robots.txt does not follow site-src/deployment.json')
+    _sm=DIST/'sitemap.xml'
+    if _org:
+        if not _sm.exists() or _sm.read_text(encoding='utf-8')!=_DISC.sitemap_xml(_routes6,_org): errors.append('F6-G03 sitemap.xml missing or stale')
+    elif _sm.exists(): errors.append('F6-G03 sitemap.xml written without a public origin')
+    _test=_DISC.sitemap_xml(_routes6,'https://example.org')
+    _locs=re.findall(r'<loc>([^<]+)</loc>',_test)
+    _pages={('https://example.org/'+str(p.relative_to(DIST).parent).replace('\\','/')+'/') for L in ('en','ar') for p in (DIST/L).rglob('index.html')}
+    if len(_locs)!=len(set(_locs)) or set(_locs)!=_pages: errors.append(f'F6-G03 sitemap coverage: {len(set(_locs))} locations for {len(_pages)} pages')
+    if _test.count('hreflang="x-default"')!=len(_locs) or _test.count('<xhtml:link')!=3*len(_locs): errors.append('F6-G03 sitemap alternates incomplete')
+    _nf=(DIST/'404.html').read_text(encoding='utf-8')
+    if '<meta name="robots" content="noindex">' not in _nf: errors.append('F6-G05 404 page is indexable')
+    _root=(DIST/'index.html').read_text(encoding='utf-8')
+    if 'hreflang="x-default" href="'+_DISC.url('/',_org)+'"' not in _root or re.search(r'<script>(?!\s*$)',_root): errors.append('F6-G05 root entry route: x-default links or inline script')
+    for _f in DIST.rglob('*.html'):
+        _t=_f.read_text(encoding='utf-8'); _rel=_f.relative_to(DIST)
+        for _rx,_why in ((r'<script[^>]+src="(?:https?:)?//',"external script"),(r'<link[^>]+rel="stylesheet"[^>]+href="(?:https?:)?//',"external stylesheet"),
+                         (r'<img[^>]+src="(?:https?:)?//',"external image"),(r'<iframe',"frame"),(r'<form[\s>]',"form"),(r'@import|fonts\.googleapis|fonts\.gstatic',"external font"),
+                         (r'\son[a-z]+="',"inline event handler"),(r'href="javascript:',"javascript: URL"),
+                         (r'\sstyle="',"inline style attribute"),(r'<style[\s>]',"style element")):
+            if re.search(_rx,_t,re.I): errors.append(f'F6-G05 {_why} in {_rel}')
+        for _m in re.finditer(r'<script(?![^>]*\bsrc=)([^>]*)>',_t):
+            if not re.search(r'type="application/(?:ld\+)?json"',_m.group(1)): errors.append(f'F6-G05 inline executable script in {_rel}')
+        for _m in re.finditer(r'<a\b[^>]*target="_blank"[^>]*>',_t):
+            if 'noopener' not in _m.group(0): errors.append(f'F6-G05 new-tab link without rel=noopener in {_rel}')
+    for _css in ('assets/styles.css',):
+        if re.search(r'@import|url\((?:["\'])?(?:https?:)?//',(DIST/_css).read_text(encoding='utf-8')): errors.append('F6-G05 external resource in the stylesheet')
+    _tracked=_sp6.run(['git','ls-files','-z'],cwd=ROOT,capture_output=True).stdout.decode('utf-8').split('\0')
+    _secret=re.compile(r'AKIA[0-9A-Z]{16}|-----BEGIN (?:RSA |EC |OPENSSH |DSA )?PRIVATE KEY-----|\bghp_[A-Za-z0-9]{36}\b|\bgithub_pat_[A-Za-z0-9_]{40,}|\bxox[baprs]-[A-Za-z0-9-]{10,}|\bsk-[A-Za-z0-9]{32,}|\bAIza[0-9A-Za-z_\-]{35}\b|(?i:\b(?:password|passwd|secret|api[_-]?key|access[_-]?token)\s*[:=]\s*["\'][^"\'\s]{8,}["\'])')
+    _docs=re.compile(r'\.(?:pdf|docx?|xlsx?|pptx?|zip|7z|rar|gz|tar)$',re.I)
+    for _p in _tracked:
+        if not _p: continue
+        if _docs.search(_p) and _p!='authority/Yemen_Financial_Inclusion_Evidence_Master.xlsx': errors.append(f'F6-G07 bundled document {_p}')
+        if _p.startswith('dist/') and not re.search(r'\.(?:html|css|js|json|png|txt|xml)$',_p): errors.append(f'F6-G07 non-web file in dist {_p}')
+        if re.search(r'\.(?:png|xlsx|jpg|jpeg|gif|ico|woff2?)$',_p,re.I): continue
+        try: _tx=(ROOT/_p).read_text(encoding='utf-8')
+        except Exception: continue
+        _m=_secret.search(_tx)
+        if _m: errors.append(f'F6-G06 secret-like pattern in {_p}: {_m.group(0)[:12]}…')
+    for _r in json.load(open(C/'sources/source_library.json',encoding='utf-8')):
+        if not (_r.get('rights_state') and _r.get('public_card_state')): errors.append(f'F6-G08 source {_r.get("source_id")} lacks rights or card state')
+except Exception as _x:
+    errors.append('F6-G unreadable '+repr(_x))
 
 print(f'HTML={len(list(DIST.rglob("*.html")))} ERRORS={len(errors)} WARN={len(warns)}')
 if errors:

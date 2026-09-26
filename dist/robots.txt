@@ -1,0 +1,5 @@
+# Pre-release reference build: not for indexing.
+# At release the owner sets public_origin in site-src/deployment.json; the build then allows crawling
+# and writes sitemap.xml.
+User-agent: *
+Disallow: /

@@ -3,13 +3,13 @@
 **Programme:** Final integration to the Design handoff — directive D7 (`audit/directives/`), sessions F0–F9.
 **Position (current):** OpenAI accepted the Tranche C checkpoint on 26 September 2026 (recipient verification 31/31) and
 supplied the independent ten-Reading package with directive D7. Sessions F0–F5 are closed: the Reading portfolio is
-integrated (F2), the Resource Library decisions are made (F3), R8.5 repository subtraction is closed (F4) and the whole
-public corpus is accepted (F5). Sessions F6–F9 (discovery, accessibility, rights and security; sustainability baseline;
-R8.6 handoff freeze; clean-room acceptance) follow.
+integrated (F2), the Resource Library decisions are made (F3), R8.5 repository subtraction is closed (F4), the whole
+public corpus is accepted (F5) and the discovery, accessibility, rights and security contract is in place (F6).
+Sessions F7–F9 (sustainability baseline; R8.6 handoff freeze; clean-room acceptance) follow.
 
 **Status: PUBLIC CORPUS ACCEPTED — R8.6 IN PROGRESS.**
 
-- R8.4: CLOSED / PASS, Reading prose included (F2). R8.5: CLOSED (F4). R8.6: in progress (F6–F9).
+- R8.4: CLOSED / PASS, Reading prose included (F2). R8.5: CLOSED (F4). R8.6: in progress (F6 closed; F7–F9).
 - This is not DESIGN HANDOFF READY and not PUBLIC RELEASE READY.
 - The design and implementation prompts in `handoff/` remain **DRAFT — DO NOT EXECUTE YET** until the R8.6 freeze (F8).
 
@@ -29,7 +29,7 @@ R8.6 handoff freeze; clean-room acceptance) follow.
 | Build | 288 HTML documents from 143 Page Specs (286 localized + root + 404) |
 | Public-literal audit | 12,760 records, 0 unresolved; identical bytes under 8 `PYTHONHASHSEED` values |
 | Source-lineage truth test | 8 of 8 |
-| Validator | `WEBSITE REPOSITORY VALIDATION PASS`, 0 errors, 0 warnings (gates through R85-G09 and RP-G06) |
+| Validator | `WEBSITE REPOSITORY VALIDATION PASS`, 0 errors, 0 warnings (gates through R85-G09, RP-G06 and F6-G08) |
 | Browser behaviour tests | `scripts/tests/test_public_tools.py` — 25 passed, 1 not applicable to the current data |
 | Viewport acceptance | `audit/tranche_c/checks/viewport_acceptance.py` — 168 of 168 |
 | Bilingual numeric invariance | `audit/tranche_c/checks/bilingual_invariance.py` — 0 page pairs differ (CI fails on any difference) |
@@ -56,6 +56,10 @@ build, literal audit, diagrams, repository manifest, validate, generator check; 
   Arabic, firewall errors fixed, three unsupported periods corrected from the records' own sources, control language
   removed, one duplicate source record retired, the chronology put in date order (`audit/F5_PUBLIC_CORPUS_ACCEPTANCE.md`,
   `audit/F5_CORPUS_FINDINGS_LEDGER.csv`).
+- **F6 discovery, accessibility, rights, security.** Self-canonical, reciprocal hreflang with `x-default`, pre-release
+  `robots.txt`, sitemap derivation for when the owner sets the public origin, JSON-LD with governed fields only; a strict
+  Content-Security-Policy is now possible (no inline script or style); eleven WCAG 2.2 outcomes specified for Design and
+  Code; gates F6-G01…G08 (`audit/F6_DISCOVERY_ACCESSIBILITY_RIGHTS_SECURITY_ACCEPTANCE.md`, `docs/DEPLOYMENT.md`).
 
 Tranche C itself is recorded in `audit/TRANCHE_C_FINAL_ACCEPTANCE.md` and `audit/TRANCHE_C_FINDINGS_LEDGER.csv`.
 Currentness cut-off: 26 September 2026 (`audit/FINAL_CURRENTNESS_CUTOFF.md`).
@@ -76,13 +80,15 @@ identical.
   SRC-CBY-ENF-10-2026 — date of Governor's Decision No. 10 of 2026.
 - **Release-only dependencies:** TOOL-02 (web-size derivatives of the 10 MB master logo; the logo is never redrawn),
   TOOL-25 (navigation-group presentation, Design-owned), TRUST-09 (CauseWay identity and funding statement needs owner
-  input), confirmation that the contact mailbox `office@causewaygrp.com` is monitored.
+  input), confirmation that the contact mailbox `office@causewaygrp.com` is monitored, the public origin
+  (`site-src/deployment.json`; until it is set the build asks not to be indexed), security headers at the host
+  (`docs/DEPLOYMENT.md`).
 - **Known evidence frontiers:** CLM-044 value withheld (no public locator or rights assessment); the ~147-firm base
   implied by the 91.84% table; the CBY-Aden ↔ IMF remittance level crosswalk; the causes of the gender gap; reconciled
   current operating-provider status; the magnitude of the 2022 banking restatement.
-- **Sessions still open:** F6 (SEO and discovery, accessibility contract, rights, security and privacy checks), F7
-  (sustainability baseline and support-readiness note), F8 (R8.6 handoff freeze: one Design start path, acceptance
-  criteria, design-to-code contract), F9 (clean-room recipient test, final open-items register, handoff archive).
+- **Sessions still open:** F7 (sustainability baseline and support-readiness note), F8 (R8.6 handoff freeze: one Design
+  start path, acceptance criteria, design-to-code contract), F9 (clean-room recipient test, final open-items register,
+  handoff archive).
 
 ## 5. Re-run
 

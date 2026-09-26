@@ -1,7 +1,9 @@
 # Deployment (reference build)
 
 **Status:** nothing is deployed. The public site is not released (the programme never declares PUBLIC RELEASE READY);
-this page states how the *reference* build would be served so that Design and Code inherit correct assumptions.
+this page states how the *reference* build would be served so that Design and Code inherit correct assumptions. It is
+the header, discovery and privacy contract that the final implementation must keep or improve; it is not a claim of any
+live security test.
 
 The repository is canonical on GitHub (`CausewayGrp/Financial-inclusion-`, branch `main`). `dist/` is committed and CI
 fails if it differs from a fresh build, so the files a host would serve are exactly the reviewed ones.
@@ -13,15 +15,64 @@ python3 -m pip install -r requirements.txt
 python3 scripts/generate_projections.py --check   # Master → projections, byte for byte
 python3 scripts/build.py                          # site-src → dist (288 HTML files)
 python3 scripts/audit_public_literals.py          # every public number traced
-python3 scripts/validate.py                       # all repository gates
+python3 scripts/validate.py                       # all repository gates, including F6-G01…G08 below
 ```
 
 ## Serve
 
 - Serve **only** the contents of `dist/` as static files. Never serve `authority/`, `audit/`, `site-src/`, `scripts/`,
   `handoff/` or the Production Master; the browser never parses the Master.
-- Unknown routes → `dist/404.html` (bilingual, Arabic first). Keep trailing-slash paths (`/en/people/`).
-- `/` redirects to `/ar/` unless the reader chose English before (stored preference `yfie-lang`).
-- No database, secret or live API is required. Search and Compare read local JSON under `/static-data/`.
-- Security headers, caching, image delivery for the master logo and analytics policy are engineering decisions recorded
-  in `handoff/ENGINEERING_HANDOFF_EXPECTATIONS.md`; none is configured here.
+- Unknown routes → `dist/404.html` (bilingual, Arabic first, `noindex`). Keep trailing-slash paths (`/en/people/`).
+- `/` is the neutral entry route and the hreflang `x-default`: `assets/lang-redirect.js` opens the edition the reader
+  chose before (stored preference `yfie-lang`), otherwise Arabic; without JavaScript it falls back to `/ar/`.
+- No database, secret, account, cookie or live API is required. Search and Compare read local JSON under
+  `/static-data/` and JSON blocks in the page.
+
+## Discovery (F6)
+
+One implementation, `scripts/discovery.py`, used by the build and checked by the validator.
+
+| Item | Contract |
+|---|---|
+| Public origin | `site-src/deployment.json` → `public_origin`: **null** until the owner fixes the release domain (release-only decision). Never guessed |
+| Canonical | Self-canonical in the page's own language |
+| hreflang | Every page lists `en`, `ar` and `x-default` (→ `/`); the pair is reciprocal |
+| robots.txt | Origin null (now): `Disallow: /` — a pre-release build is not for indexing. Origin set: `Allow: /` and `Sitemap:` |
+| sitemap.xml | Written only with an origin: every localized page once (286), each with its three alternates; no `lastmod` (the Master holds no page-level modification date) |
+| Titles and descriptions | One native `<title>` and one meta description per page, unique within each language; one `<h1>` |
+| Structured data | `WebSite` on Home; `BreadcrumbList` where a breadcrumb is shown (Evidence Records, Readings), with the visible names; `Article` on the ten Readings (headline, description = standfirst, language, publisher CauseWay, part of the resource). No author, dates, image or `Dataset`: none is governed, and the resource publishes evidence records and a source directory, not datasets |
+| Search | Local index (`static-data/search_index.json`): page, question, evidence, Reading, Measurement, source and source-locator result types |
+
+When the origin is set the same build makes every canonical, hreflang, sitemap and structured-data URL absolute; nothing
+else changes.
+
+## Security and privacy expectations for Code
+
+The reference build is written so that a strict policy works as is: no inline executable script (page data travels in
+`<script type="application/json">` blocks), no inline style, no inline event handler, no external script, stylesheet,
+font, image or frame, no form (gate F6-G05). The host should send:
+
+| Header | Value |
+|---|---|
+| `Content-Security-Policy` | `default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data:; font-src 'self'; connect-src 'self'; object-src 'none'; base-uri 'self'; form-action 'none'; frame-ancestors 'none'; upgrade-insecure-requests` |
+| `Strict-Transport-Security` | `max-age=31536000; includeSubDomains` once HTTPS is confirmed on the release domain |
+| `X-Content-Type-Options` | `nosniff` |
+| `Referrer-Policy` | `strict-origin-when-cross-origin` |
+| `Permissions-Policy` | `camera=(), microphone=(), geolocation=(), payment=(), usb=()` |
+| `Cross-Origin-Opener-Policy` | `same-origin` |
+
+- **Rendering.** `app.js` builds result and comparison markup from governed JSON and escapes every value (`esc`); Code
+  must keep escaping (or Trusted Types) for anything rendered from data, and must not render source text as HTML.
+- **External links.** Links to original sources open in a new tab with `rel="noopener noreferrer"`; the site fetches
+  nothing from them.
+- **Privacy.** One functional preference is stored on the reader's device (`yfie-lang`, the chosen language). There is
+  no analytics, tracking, cookie, account or form, and reports go by e-mail to `office@causewaygrp.com`. Adding any
+  analytics or telemetry needs an owner decision, an updated Privacy page in both languages and, where required,
+  consent — before it ships.
+- **Repository hygiene.** No secret or credential pattern in any tracked file (F6-G06); no bundled source document — the
+  only tracked office file is the Production Master (F6-G07); every source record states its rights and card state
+  (F6-G08). Reuse terms of the original sources have not been assessed (`rights_state: NOT_ASSESSED`); the site links to
+  sources and does not republish them.
+- **Assets.** The master logo is a 10 MB PNG and is never redrawn; web-size derivatives and cache fingerprinting are
+  release-only engineering (TOOL-02). HTML should be served with short caching; assets may be cached long only once
+  their file names are fingerprinted.
