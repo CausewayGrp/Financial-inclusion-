@@ -33,8 +33,8 @@ authority/Yemen_Financial_Inclusion_Evidence_Master.xlsx      the only authority
   → dist/                                                     the public reference build (never edit by hand)
 ```
 
-Production Master SHA-256 `ed3c5796cb0cca0109a0eb56f66d344ab0a5faa550e5235e05d65a6147f33fe1`; Page Specs
-(`site-src/content/page_specs.json`) SHA-256 `2407cb4f9ca67aec60304630690488d04a3b05f9ea1eec03f805de24915cb3ad`. If the
+Production Master SHA-256 `17db032b15da16fc4b5b3c3b49f19aebf2ecb4ec46634613fe8505d0f038690b`; Page Specs
+(`site-src/content/page_specs.json`) SHA-256 `79a1735abe673745f8670f220b1d75a7daf75975ffaad847c87191f77bb0991e`. If the
 repository shows other hashes, the repository is right — re-read it; never restore a hash from a document.
 
 A content defect is never fixed in a page, a JSON file or a component. It is escalated (§10) and fixed in the Master by
@@ -91,7 +91,9 @@ python3 audit/tranche_c/checks/bilingual_invariance.py
 ```
 
 Every command must pass before and after your work (CI runs them on every pull request). `CONTRIBUTING.md` §5 lists all
-gates and what each protects. Your own acceptance tests are in `DESIGN_ACCEPTANCE_CRITERIA.md`.
+gates and what each protects. Your own acceptance tests are in `DESIGN_ACCEPTANCE_CRITERIA.md`; the browser suites and
+the invariance check run on your reference implementation with `YFIE_SITE_DIR=design/reference/out` (brief §19). The
+commands work from a clone and from the handoff archive alike.
 
 ## 9. Working in the repository
 
@@ -101,6 +103,9 @@ gates and what each protects. Your own acceptance tests are in `DESIGN_ACCEPTANC
   force-push; never rewrite `main` or a `checkpoint/*` tag.
 - Put the design package in `design/` (see the brief, §19); never edit `authority/`, `site-src/content/`, `dist/` or
   `audit/PUBLIC_LITERAL_CLOSURE.json` by hand.
+- Without push access, or starting from the handoff archive: `git init -q && git add -A && git commit -qm "import handoff"`,
+  work locally, and deliver each gate as a git bundle or patch series (brief §21); the steward lands it through the same
+  gates.
 - Commit messages follow Conventional Commits (`CONTRIBUTING.md` §3). Before each commit, classify any new file in
   `scripts/repository_manifest.py` and regenerate `FINAL_REPOSITORY_MANIFEST.json` and `SHA256SUMS.txt`
   (`CONTRIBUTING.md` §7 and §8).
@@ -112,7 +117,9 @@ Record it in `design/ESCALATIONS.md` and keep designing:
 - `ESCALATE_TO_MASTER — <route/object> — <defect> — <design impact>` when the controlled truth looks wrong;
 - `NEEDS_CONTROLLED_CONTENT — <route/object> — <field> — <design impact>` when a field you need does not exist.
 
-Never invent copy, numbers, labels, dates, authors or sources to fill a gap, and never search the web to fill one.
+Never invent copy, numbers, labels, dates, authors or sources to fill a gap, and never search the web to fill one. The
+steward (the programme owner of this repository) answers escalations Master-first and appends lasting ones to
+`FINAL_OPEN_ITEMS_REGISTER.md`; the labels you are expected to request are listed in the brief §10.
 
 ## 11. What Code receives after you
 

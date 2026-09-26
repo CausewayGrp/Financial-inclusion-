@@ -1275,7 +1275,9 @@ def visual_design_contracts(ctx, e):
     # grammar: every referenced label must be governed interface copy
     g = c["grammar"]
     states = [x["token"] for x in g["evidence_states"]]
-    markers = [x["token"] for x in g["structure_markers"]] + ["WITHHELD"]
+    markers = [x["token"] for x in g["structure_markers"]]
+    if "WITHHELD" not in markers:          # governed marker since F9 (grammar entry in the controlled input)
+        markers.append("WITHHELD")
     tokens = {"states": states, "markers": markers}
     ui_refs = [x["ui_id"] for x in g["evidence_states"] + g["structure_markers"]] + g["chain"]["steps"] + list(g["chain"]["states"].values())
     ui_refs += ["UI-VIS-WITHHELD", "UI-VIS-DOES-NOT-ESTABLISH", "UI-VIS-SOURCE", "UI-VIS-FULL-RECORD", "UI-VIS-ISSUER-SCOPE", "UI-VIS-BASELINE"]

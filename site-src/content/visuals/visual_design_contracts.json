@@ -1,7 +1,7 @@
 {
   "schema_version": "1.0",
   "contract_id": "VISUAL-DESIGN-CONTRACT",
-  "authority_master_sha256": "ed3c5796cb0cca0109a0eb56f66d344ab0a5faa550e5235e05d65a6147f33fe1",
+  "authority_master_sha256": "17db032b15da16fc4b5b3c3b49f19aebf2ecb4ec46634613fe8505d0f038690b",
   "rule": "Design-layer controlled input. It assigns every governed visual contract (Master 11) a design tier and, for SIGNATURE and CORE_ANALYTICAL visuals, declares which governed rows a chart binds to and how they are drawn. It never carries a fact, number, label or sentence: values come from Master data rows, text from Master contract/evidence fields, and legend labels from the governed interface copy (UI-VIS-*). The generator resolves every binding and fails on any unresolved ID, any value that disagrees with its guard, or any visual left untiered.",
   "tiers": {
     "SIGNATURE": "Distinctive to this product, decision-useful, drawable from governed rows and safe when detached. Designed first; gets a full data contract.",
@@ -136,6 +136,11 @@
         "token": "NOMINAL",
         "ui_id": "UI-VIS-NOMINAL",
         "draw": "label on the value axis title, always visible"
+      },
+      {
+        "token": "WITHHELD",
+        "ui_id": "UI-VIS-WITHHELD",
+        "draw": "no value mark and no number: the slot keeps its position and carries the governed label in place of the value; never a zero, an empty bar, an estimate or a faded mark"
       }
     ],
     "chain": {
@@ -232,6 +237,10 @@
       "en": "Nominal — not adjusted for prices or exchange rates",
       "ar": "اسمية — لم تُعدَّل لمراعاة تغيّر الأسعار أو سعر الصرف"
     },
+    "UI-VIS-WITHHELD": {
+      "en": "Figure held back until its definition is documented",
+      "ar": "يُحجب الرقم إلى أن يُوثَّق تعريفه"
+    },
     "UI-VIS-CHAIN-RULE": {
       "en": "Rule or programme",
       "ar": "قاعدة تنظيمية أو برنامج"
@@ -268,10 +277,6 @@
       "en": "Not yet measured — not a failure",
       "ar": "لم تُقس بعد — ليس إخفاقًا"
     },
-    "UI-VIS-WITHHELD": {
-      "en": "Figure held back until its definition is documented",
-      "ar": "يُحجب الرقم إلى أن يُوثَّق تعريفه"
-    },
     "UI-VIS-DOES-NOT-ESTABLISH": {
       "en": "Does not establish:",
       "ar": "لا يثبت:"
@@ -297,7 +302,7 @@
   "global_rules": {
     "detached_frame": "Inside the image frame of every SIGNATURE and CORE_ANALYTICAL chart: the governed title; period and universe (from the Evidence Record when one exists); the credit line (UI-VIS-SOURCE + governed publisher); the governed prohibited inference (UI-VIS-DOES-NOT-ESTABLISH); any break, missing or disagreement marker present in the data; the canonical link (UI-VIS-FULL-RECORD). A crop that removes any of these is not a supported export.",
     "rtl": "Numeric time axes run left to right in both languages (bilingual crops circulate side by side; a mirrored rising line reads as a fall). Text, legends, captions, panel order and categorical bar labels follow the reading direction. Chains and ladders run top to bottom. Digits are Western; IDs, currency codes, signed percentages and index-base or equation expressions (such as 2021 = 100) are isolated as left-to-right runs. Horizontal numeric value axes run left to right in both languages. No arrow glyph between numbers in Arabic text.",
-    "mobile": "At 360 px every chart has a defined small-screen form (stated per contract). Matrices become one card per row; multi-panel figures stack; no horizontal scrolling of the plot area.",
+    "mobile": "At 320 and 390 CSS px (the tested narrow widths) every chart has a defined small-screen form (stated per contract). Matrices become one card per row; multi-panel figures stack; no horizontal scrolling of the plot area.",
     "text_alternative": "Every chart ships with its analytical text alternative (the governed accessible summary plus the prohibited inference) and a table or ordered-text fallback with caption, scoped headers, unit, universe and period. The alternative must stay true if the chart fails to load.",
     "no_decoration": "No decorative SVG, illustration, icon field or gradient carries or implies data. The static baseline draws no charts.",
     "axes": "Bar and dot value axes start at zero. A line chart may use a non-zero value axis only with the axis origin labelled. Never draw two value axes on one plot. Never encode a value as area, bubble or icon size."

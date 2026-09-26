@@ -1,0 +1,27 @@
+{
+ "transaction": "RF9",
+ "summary": "Language-switch labels moved out of build.py into 04 (wording unchanged)",
+ "input_master_sha256": "ed3c5796cb0cca0109a0eb56f66d344ab0a5faa550e5235e05d65a6147f33fe1",
+ "output_master_sha256": "17db032b15da16fc4b5b3c3b49f19aebf2ecb4ec46634613fe8505d0f038690b",
+ "cells_written": 2,
+ "changes": [
+  {
+   "finding": "RF9:COPY-OUT",
+   "sheet": "04_NAV_UX",
+   "row": 488,
+   "col": null,
+   "field": "UI-LANG-SWITCH-NAME",
+   "old": null,
+   "new": "EN || العربية"
+  },
+  {
+   "finding": "RF9:COPY-OUT",
+   "sheet": "04_NAV_UX",
+   "row": 488,
+   "col": null,
+   "field": "UI-LANG-SWITCH-ACTION",
+   "old": null,
+   "new": "Switch to English || التبديل إلى العربية"
+  }
+ ]
+}

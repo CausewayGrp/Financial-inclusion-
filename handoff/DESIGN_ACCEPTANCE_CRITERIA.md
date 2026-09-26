@@ -10,7 +10,8 @@ and line, or a note. A line without evidence is not met. Nothing here is a WCAG 
       `CONTRIBUTING.md` §5 pass on the final commit.
 - [ ] Every number, label, date, source name and sentence of controlled meaning on every screen comes from
       `site-src/content/**`; no copied or hand-written content model exists in the reference implementation.
-- [ ] Every new interface label needed was requested as `NEEDS_CONTROLLED_CONTENT` in `design/ESCALATIONS.md`, not authored.
+- [ ] Every new interface label needed was requested as `NEEDS_CONTROLLED_CONTENT` in `design/ESCALATIONS.md`, not authored;
+      any label not yet governed shows as a marked placeholder (`⟦NCC:…⟧`), never as invented wording.
 - [ ] The withheld CLM-044 value never appears; the nine sources without a public locator are never named or linked;
       no third-party document is bundled or offered for download.
 - [ ] Evidence Records show the boundary as two labelled parts (does not establish · limits of the measure) and never
@@ -22,13 +23,16 @@ and line, or a note. A line without evidence is not met. Nothing here is a WCAG 
 
 - [ ] Global shell: header, primary navigation with the Method & Measurement family, trust layer, footer, language switch,
       search entry, cite and report utilities, skip link, breadcrumbs.
-- [ ] Home · Explore · all eight domain routes · Evidence index · Evidence Record (dense, sparse, conflicted, composite,
-      framing, withheld) · Compare · Readings index · at least three Reading stress cases · Data/sources/Resource Library
-      with the chronology · Measurement · Methodology · About and every trust route · corrections/report journey · 404.
+- [ ] Home · Explore · all eight domain routes · Evidence index · Evidence Record (dense CLM-003, thin single-source
+      CLM-015, conflicted CLM-037, composite with members CLM-031, composite without listed members CLM-014, partial
+      CLM-039, framing CLM-004, withheld CLM-044) · Compare · Readings index · the Reading stress cases named in the brief
+      §9.1 · Data/sources/Resource Library with the chronology · Measurement · Methodology · About and every trust route ·
+      corrections/report journey · 404.
 - [ ] Every route in `handoff/ROUTE_CONTENT_AND_STATE_INVENTORY.json` renders in the reference implementation in both
       languages (the same 288 documents as `dist/`), bound through its page-family rules.
-- [ ] The twelve hard-state cases (`hard_state_acceptance`) each have evidence that the "must prove" sentence holds, plus
-      the withheld, composite and framing records.
+- [ ] The twelve hard-state cases (`hard_state_acceptance`, read as the brief §9.2 states) each have evidence that the
+      "must prove" sentence holds, plus the withheld, composite, partial and framing records; every verification state in
+      the inventory (`verification_states`) is shown on at least one real record.
 - [ ] The thirteen journeys succeed by keyboard, on mobile and desktop, in both languages.
 - [ ] Every technical state in the inventory (`technical_states`) is reachable and looks technical, never like
       "no evidence"; every evidence gap looks like evidence, never like an error.
@@ -45,13 +49,14 @@ and line, or a note. A line without evidence is not met. Nothing here is a WCAG 
 
 - [ ] Search: as-you-type, Arabic normalisation, ranking (ID > title > summary > body), result types, shortcuts, focus
       management, announced results, no-match and unavailable states, Measurement anchors, lazy index load.
-- [ ] Compare: 2–4 records, URL state, compatibility rows before values, the three verdicts, technical errors, duplicate
-      state, language switch keeps the comparison, mobile form, entry from a record.
+- [ ] Compare: 2–4 records from the comparable set, URL state, the six governed dimensions and the boundary row before
+      values, the four governed assessments and the separate same-record state, technical errors (including a real record
+      outside the set), language switch keeps the comparison, mobile form, entry from each comparable record's page.
 - [ ] Sources: register and curated library distinct; deep links focus the card; unknown reference is an announced link
       error; filtering by governed category only.
 - [ ] Cite, report an issue, language and download (pattern with disabled/enabled states) behave as the brief §10 states.
 - [ ] `scripts/tests/test_public_tools.py` and `audit/tranche_c/checks/viewport_acceptance.py` pass against the reference
-      implementation.
+      implementation (`YFIE_SITE_DIR=design/reference/out …`), with the test hooks kept or each exception recorded.
 
 ## E. Readings
 
@@ -63,7 +68,8 @@ and line, or a note. A line without evidence is not met. Nothing here is a WCAG 
 
 ## F. Visuals
 
-- [ ] Every drawn visual is SIGNATURE, CORE_ANALYTICAL or SUPPORTING and follows its data contract; TABLE_TEXT_FIRST and
+- [ ] SIGNATURE and CORE_ANALYTICAL visuals follow their data contracts; SUPPORTING visuals plot no values (governed text,
+      or a non-quantitative diagram built only from governed words and `UI-VIS-*` labels); TABLE_TEXT_FIRST and
       RETIRE_FROM_DESIGN visuals are not drawn as charts.
 - [ ] Legends and labels come only from `UI-VIS-*` and `<field>_label`; colour is never the only carrier; no
       red/amber/green; nothing fades with age; breaks, gaps and disagreements are drawn.
@@ -74,7 +80,9 @@ and line, or a note. A line without evidence is not met. Nothing here is a WCAG 
 
 - [ ] Arabic is natively composed (own type scale, line height, rhythm, order), not mirrored English.
 - [ ] Mixed-script runs are isolated; digits are Western; dates and units follow the governed forms.
-- [ ] `audit/tranche_c/checks/bilingual_invariance.py` reports 0 differing page pairs on the reference implementation.
+- [ ] `YFIE_SITE_DIR=design/reference/out python3 audit/tranche_c/checks/bilingual_invariance.py` reports 0 differing
+      page pairs on the reference implementation.
+- [ ] Dates follow the governed form (day, month name, year; the governed Arabic month names; Western digits).
 - [ ] No English-only metadata disappears in Arabic; no internal vocabulary appears in either language.
 
 ## H. Accessibility outcomes (WCAG 2.2 target; brief §14)
@@ -96,11 +104,12 @@ and line, or a note. A line without evidence is not met. Nothing here is a WCAG 
 
 - [ ] The logo is the canonical file, unmodified, at specified sizes and clear space — no CSS filter, blend mode or mask
       changes its colours; required derivative sizes are listed for Code (`design/08_ASSET_MAP.md`).
-- [ ] IBM Plex Sans and IBM Plex Sans Arabic, self-hosted; any departure has its written rationale.
+- [ ] IBM Plex Sans and IBM Plex Sans Arabic, self-hosted from `@ibm/plex-sans@1.1.0` and `@ibm/plex-sans-arabic@1.1.0`
+      with the licence shipped; any other IBM Plex family member has its written rationale; no other typeface.
 - [ ] No third-party resource; fonts subset; no decorative imagery; per-family page weight recorded with the method in
       `docs/SUSTAINABILITY_METHOD.md`; no green claim.
 - [ ] Head elements kept: title, description, canonical, hreflang (en, ar, x-default), Open Graph without image,
-      JSON-LD as today; the social-image templates are designed for every family.
+      JSON-LD as today; the social-image templates cover all eleven page families (shared templates allowed).
 - [ ] Strict-CSP compatible: no inline executable script, inline style, inline handler, external resource or form; data
       in JSON blocks; escaped rendering.
 

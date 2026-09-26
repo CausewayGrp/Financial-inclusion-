@@ -42,7 +42,11 @@ Everything tested today must still pass against the new runtime, unmodified in i
 - `scripts/audit_public_literals.py` — every public number traced;
 - the canonical search probe (`scripts/search_canonical_probe.json`).
 
-Where a test hard-codes the baseline's markup, adapt the selector, never the assertion.
+The suites and the invariance check take the site directory from `YFIE_SITE_DIR` (default `dist`). They find elements
+by the hooks listed in the Design brief §19 (IDs, `data-*` attributes, classes, JSON block IDs); keep them. Where a test
+hard-codes the baseline's markup, adapt the selector, never the assertion. Gate P3-G02 ("the static baseline draws no
+chart") protects the pre-design baseline only: when the production runtime draws governed visuals, replace it with a gate
+that checks each drawn visual against its contract (tier, rows, labels, markers, fallback) — never simply delete it.
 
 ## 4. Discovery
 
@@ -59,7 +63,10 @@ the owner sets `public_origin`, every URL becomes absolute and the sitemap is wr
   in `<script type="application/json">` blocks; escaped rendering or Trusted Types.
 - No analytics, tracking, cookies or accounts. Adding any needs an owner decision, bilingual Privacy page updates and,
   where required, consent — before it ships.
-- Fonts: IBM Plex Sans and IBM Plex Sans Arabic self-hosted, subset, `font-display` chosen deliberately; no font CDN.
+- Fonts: IBM Plex Sans and IBM Plex Sans Arabic self-hosted from `@ibm/plex-sans@1.1.0` and `@ibm/plex-sans-arabic@1.1.0`
+  (OFL-1.1, licence shipped), subset, `font-display` chosen deliberately; no font CDN.
+- Dates: the governed form (day, month name, year; Western digits) with the governed Arabic month names used by
+  `source_date_text` in `scripts/build.py` — not a locale library's month names, which vary by region.
 - Logo: produce web-size derivatives of `site-src/assets/CauseWay_Master_Logo.png` at the sizes in
   `design/08_ASSET_MAP.md` only with the owner's approval (open item EAD-03), by exact downscaling of the unmodified
   master — never redrawn, recoloured, cropped or regenerated. Keep the master file unchanged.

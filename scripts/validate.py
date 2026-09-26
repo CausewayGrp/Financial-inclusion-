@@ -2136,7 +2136,8 @@ try:
             if 'noopener' not in _m.group(0): errors.append(f'F6-G05 new-tab link without rel=noopener in {_rel}')
     for _css in ('assets/styles.css',):
         if re.search(r'@import|url\((?:["\'])?(?:https?:)?//',(DIST/_css).read_text(encoding='utf-8')): errors.append('F6-G05 external resource in the stylesheet')
-    _tracked=_sp6.run(['git','ls-files','-z'],cwd=ROOT,capture_output=True).stdout.decode('utf-8').split('\0')
+    import checksums as _CS   # F9: git ls-files, or every file of an extracted archive (the same set SHA256SUMS.txt covers)
+    _tracked=_CS.tracked_files()
     _secret=re.compile(r'AKIA[0-9A-Z]{16}|-----BEGIN (?:RSA |EC |OPENSSH |DSA )?PRIVATE KEY-----|\bghp_[A-Za-z0-9]{36}\b|\bgithub_pat_[A-Za-z0-9_]{40,}|\bxox[baprs]-[A-Za-z0-9-]{10,}|\bsk-[A-Za-z0-9]{32,}|\bAIza[0-9A-Za-z_\-]{35}\b|(?i:\b(?:password|passwd|secret|api[_-]?key|access[_-]?token)\s*[:=]\s*["\'][^"\'\s]{8,}["\'])')
     _docs=re.compile(r'\.(?:pdf|docx?|xlsx?|pptx?|zip|7z|rar|gz|tar)$',re.I)
     for _p in _tracked:
@@ -2159,7 +2160,8 @@ except Exception as _x:
 #  R86-G02 the route, content and state inventory is current (scripts/handoff_inventory.py --check)
 #  R86-G03 the handoff folder holds exactly the declared files; no retired or second launch prompt; the manifest names
 #          handoff/README_FIRST.md as the launch file
-#  R86-G04 every repository path the handoff documents name exists (Design's future outputs under design/ excepted)
+#  R86-G04 every repository path the handoff documents name exists (Design's future outputs under design/, npm package
+#          names and environment assignments excepted)
 _R86_STATES={'R8_6_FREEZE_CANDIDATE__PENDING_CLEAN_ROOM_ACCEPTANCE':'R8.6 FREEZE CANDIDATE — PENDING FINAL CLEAN-ROOM ACCEPTANCE',
              'DESIGN_HANDOFF_READY':'DESIGN HANDOFF READY'}
 _R86_FILES={'README_FIRST.md','CLAUDE_DESIGN_MASTER_PROMPT.md','ROUTE_CONTENT_AND_STATE_INVENTORY.json','DESIGN_ACCEPTANCE_CRITERIA.md',
@@ -2193,7 +2195,7 @@ try:
         errors.append('R86-G03 the handoff manifest must name handoff/README_FIRST.md as the one launch file')
     for _k in ('design','code'):
         if not (ROOT/str((_hm8.get('role_specific_prompts') or {}).get(_k,''))).is_file(): errors.append(f'R86-G03 role prompt for {_k} missing')
-    _skip=lambda t: (not t or t.startswith(('/','http','#','mailto:','CausewayGrp/')) or any(ch in t for ch in '*<>…{} |+') or '://' in t
+    _skip=lambda t: (not t or t.startswith(('/','http','#','mailto:','CausewayGrp/','@')) or any(ch in t for ch in '*<>…{} |+=') or '://' in t
                      or (t.startswith('design/') and not t.startswith('design/architecture')))
     _names={x.name for x in ROOT.rglob('*') if x.is_file() and '.git' not in x.parts}
     for _f in sorted((ROOT/'handoff').glob('*.md')):

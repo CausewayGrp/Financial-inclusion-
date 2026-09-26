@@ -40,14 +40,13 @@
       "direction": "ltr",
       "role": "primary and display"
     },
-    "rule": "Default final system is IBM Plex Sans / IBM Plex Sans Arabic. Do not inherit Arial or Newsreader from the baseline unless Claude Design documents a deliberate exception."
+    "rule": "Required: IBM Plex Sans (English) and IBM Plex Sans Arabic (Arabic), self-hosted from the npm packages @ibm/plex-sans@1.1.0 and @ibm/plex-sans-arabic@1.1.0 (OFL-1.1). Other IBM Plex family members may be added for a defined role with a written rationale; no typeface outside the family; no font CDN. Do not inherit the baseline fallbacks (Arial, Tahoma)."
   },
   "layout": {
     "max_content_width_px": 1240,
     "required_viewports_px": [
       320,
       390,
-      400,
       640,
       1440
     ],

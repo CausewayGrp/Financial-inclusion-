@@ -115,5 +115,5 @@ jobs:
       - name: Public tools (Search, Compare, Cite, menu, skip link, live regions)
         run: python3 scripts/tests/test_public_tools.py
 
-      - name: Viewport acceptance (EN/AR at 320, 400, 640 and 1440 px)
+      - name: Viewport acceptance (EN/AR at 320, 390, 640 and 1440 px)
         run: python3 audit/tranche_c/checks/viewport_acceptance.py

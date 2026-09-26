@@ -2,8 +2,9 @@
 """Behavioural regression tests for the public tools of the static baseline (Pre-Tranche-C P2).
 
   python3 scripts/tests/test_public_tools.py            (after scripts/build.py; needs Python Playwright + Chromium)
+  YFIE_SITE_DIR=design/reference/out python3 scripts/tests/test_public_tools.py   (the same tests on another built site)
 
-Serves dist/ on a local port and drives the pages in headless Chromium. Each test states the contract it protects
+Serves dist/ (or the directory named by YFIE_SITE_DIR, relative to the repository root or absolute) on a local port and drives the pages in headless Chromium. Each test states the contract it protects
 (handoff/ENGINEERING_HANDOFF_EXPECTATIONS.md; site-src/content/content/navigation_interaction.json "interaction_tools").
 Exit code 0 = all tests pass; 1 = a behaviour regressed; 2 = the browser harness is unavailable.
 """
@@ -11,7 +12,7 @@ import functools, http.server, json, os, socket, sys, threading, traceback
 from urllib.parse import quote
 
 ROOT = os.path.abspath(os.path.join(os.path.dirname(__file__), "..", ".."))
-DIST = os.path.join(ROOT, "dist")
+DIST = os.path.join(ROOT, os.environ.get("YFIE_SITE_DIR") or "dist")   # F9: the reference implementation is tested unchanged
 RESULTS = []
 
 

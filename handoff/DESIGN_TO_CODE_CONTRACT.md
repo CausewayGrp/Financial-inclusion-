@@ -21,8 +21,11 @@ truth, which stays in the Production Master. This contract says what Design must
 ## 2. Every page family answers
 
 Module order and composition rules (deterministic, from the Page Spec), the first-screen contract, what may be disclosed
-later (`site-src/content/presentation_priority.json`), next actions (`route_next_actions`), breadcrumbs and head
-metadata. All 11 families; every route bound through them (`handoff/ROUTE_CONTENT_AND_STATE_INVENTORY.json`).
+later, next actions (inventory `next_actions`, from `explicit_next_actions` and `route_next_actions`), breadcrumbs and
+head metadata. All 11 families; every route bound through them (`handoff/ROUTE_CONTENT_AND_STATE_INVENTORY.json`). For
+the Domain Answer, Evidence Record and Comparison families, depth and first-load exclusions come from
+`site-src/content/presentation_priority.json`; for the other eight, the Page Spec's section order is the content order
+and the family rules in `design/04_PAGE_FAMILY_COMPOSITIONS.md` decide depth — never by route.
 
 ## 3. Required mapping in `design/09_CODE_HANDOFF.md`
 
@@ -36,6 +39,7 @@ metadata. All 11 families; every route bound through them (`handoff/ROUTE_CONTEN
 | Responsive rules | Per family and component, with the Arabic variants |
 | Accessibility | WCAG 2.2 outcome → how each component meets it → how it is tested |
 | Tools | Search, Compare, sources, Cite, report, language, download: states, URL contracts, errors |
+| Test hooks | The IDs, `data-*` attributes, classes and JSON block IDs the suites use (brief §19), kept or each exception with its replacement |
 | Assets | Logo placements and derivative sizes, fonts and subsets, icons, social-image templates |
 | Exceptions | Every place where the design departs from a default, with the reason |
 

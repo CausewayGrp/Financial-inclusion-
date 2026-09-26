@@ -140,7 +140,7 @@ def main():
     mapping = {"page_specs": "page_specs", "page_sections": "page_sections", "questions": "entry_questions", "evidence_objects": "evidence_objects",
                "public_claims": "public_claims", "evidence_passports": "evidence_passports", "readings": "readings", "reading_sections": "reading_sections",
                "measurement_priorities": "measurement_priorities", "visual_contracts": "visual_contracts", "sources": "sources",
-               "publicly_addressable_sources": "publicly_addressable_sources", "display_ready_source_cards": "curated_source_report_cards",
+               "publicly_addressable_sources": "publicly_addressable_sources", "curated_source_report_cards": "curated_source_report_cards",
                "indicators": "indicators", "search_records": "search_records", "public_search_records": "search_records",
                "generated_locale_pages": "generated_locale_pages",
                "generated_html_total_including_root_and_404": "generated_html_total_including_root_and_404",

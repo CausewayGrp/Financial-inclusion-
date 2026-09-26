@@ -8,7 +8,7 @@ recipient (R8.5, directive D7 §F4).
 Hashes live in SHA256SUMS.txt (scripts/checksums.py); this manifest classifies. Every tracked file must match exactly
 one class rule below, so a new file cannot enter the repository without being placed.
 """
-import fnmatch, hashlib, json, subprocess, sys
+import fnmatch, hashlib, json, sys
 from collections import Counter, OrderedDict
 from pathlib import Path
 
@@ -61,8 +61,11 @@ def sha(p):
 
 
 def tracked():
-    out = subprocess.run(["git", "ls-files", "-z"], cwd=ROOT, capture_output=True, check=True).stdout.decode("utf-8")
-    return sorted(p for p in out.split("\0") if p and p != OUT.name)
+    """The tracked files (git ls-files); in an extracted archive without .git, every file under the root except caches —
+    the same file set scripts/checksums.py uses, so the manifest can be checked from the handoff ZIP (F9)."""
+    sys.path.insert(0, str(ROOT / "scripts"))
+    import checksums  # noqa: E402
+    return sorted(p for p in checksums.tracked_files() if p and p != OUT.name)
 
 
 def classify(path):

@@ -2470,5 +2470,17 @@
     "label_en": "Search (Arabic and English)",
     "label_ar": "البحث (بالعربية والإنجليزية)",
     "use_rule": "build.py 404 page"
+  },
+  {
+    "ui_id": "UI-LANG-SWITCH-NAME",
+    "label_en": "EN",
+    "label_ar": "العربية",
+    "use_rule": "Language switch, visible name of the other edition. Written in the language it switches to and rendered with that language (build.py header)."
+  },
+  {
+    "ui_id": "UI-LANG-SWITCH-ACTION",
+    "label_en": "Switch to English",
+    "label_ar": "التبديل إلى العربية",
+    "use_rule": "Language switch, accessible name. Written in the language it switches to and rendered with that language (build.py header)."
   }
 ]

@@ -1,9 +1,9 @@
 {
- "schema": "YFIE_ROUTE_CONTENT_AND_STATE_INVENTORY/1.0",
- "purpose": "Design recipient's map of every route, its family, bindings and the hard states Design must cover. Derived; not authority.",
+ "schema": "YFIE_ROUTE_CONTENT_AND_STATE_INVENTORY/1.1",
+ "purpose": "Design recipient's map of every route, its family, bindings, collections, next actions and the states Design must cover. Derived; not authority.",
  "generated_from": {
-  "production_master_sha256": "ed3c5796cb0cca0109a0eb56f66d344ab0a5faa550e5235e05d65a6147f33fe1",
-  "page_specs_sha256": "2407cb4f9ca67aec60304630690488d04a3b05f9ea1eec03f805de24915cb3ad",
+  "production_master_sha256": "17db032b15da16fc4b5b3c3b49f19aebf2ecb4ec46634613fe8505d0f038690b",
+  "page_specs_sha256": "79a1735abe673745f8670f220b1d75a7daf75975ffaad847c87191f77bb0991e",
   "generator": "scripts/handoff_inventory.py"
  },
  "counts": {
@@ -20,6 +20,55 @@
   "evidence_passports": 55,
   "search_records": 435,
   "page_specs": 143
+ },
+ "projection_roles": {
+  "rules": {
+   "RENDER": "A direct input: render from it.",
+   "VIA_SPEC": "Its public content already reaches each page through the Page Spec; render the Page Spec's copy, not this file.",
+   "CONTRACT": "Hand-maintained presentation or navigation contract, validated by the generator; where it disagrees with governed interface copy or with behaviour asserted by the test suites, those govern (Design brief §2).",
+   "REFERENCE": "Not public: read it to understand the system; never render it. Its values reach pages only through Evidence Records and the resolved rows in visuals/visual_design_contracts.json."
+  },
+  "files": {
+   "content/interface_copy.json": "RENDER",
+   "content/master_principles.json": "REFERENCE",
+   "content/measurement_agenda.json": "RENDER",
+   "content/navigation_interaction.json": "CONTRACT",
+   "content/page_sections.json": "VIA_SPEC",
+   "content/public_inventory.json": "RENDER",
+   "content/questions.json": "RENDER",
+   "content/reading_sections.json": "RENDER",
+   "content/readings.json": "RENDER",
+   "content/search_aliases.json": "RENDER",
+   "content/search_index.json": "RENDER",
+   "content/site_map.json": "REFERENCE",
+   "data/cby_monetary.json": "REFERENCE",
+   "data/findex_baseline.json": "REFERENCE",
+   "data/findex_codebook.json": "REFERENCE",
+   "data/findex_history.json": "REFERENCE",
+   "data/findex_subgroups.json": "REFERENCE",
+   "data/firm_finance.json": "REFERENCE",
+   "data/local_data_index.json": "REFERENCE",
+   "data/mfi_data.json": "REFERENCE",
+   "data/payments_data.json": "REFERENCE",
+   "data/providers_data.json": "REFERENCE",
+   "data/reforms_regulation.json": "REFERENCE",
+   "data/remittances.json": "REFERENCE",
+   "evidence/evidence_objects.json": "RENDER",
+   "evidence/evidence_passports.json": "REFERENCE",
+   "evidence/public_claims.json": "VIA_SPEC",
+   "page_specs.json": "RENDER",
+   "presentation_priority.json": "CONTRACT",
+   "sources/indicator_library.json": "REFERENCE",
+   "sources/local_dataset_catalog.json": "REFERENCE",
+   "sources/master_dataset_catalog.json": "REFERENCE",
+   "sources/public_object_source_closure.json": "RENDER",
+   "sources/source_library.json": "REFERENCE",
+   "sources/source_reference_map.json": "RENDER",
+   "visuals/system_chronology.json": "RENDER",
+   "visuals/system_relationships.json": "RENDER",
+   "visuals/visual_design_contracts.json": "RENDER",
+   "visuals/visual_library.json": "VIA_SPEC"
+  }
  },
  "page_families": [
   {
@@ -138,8 +187,13 @@
    "measurement_ids": [
     "MA-001"
    ],
+   "source_ids": [],
    "source_references": 5,
-   "lineage_state": null,
+   "next_actions": [],
+   "next_action_policy": "TASK_OR_QUESTION",
+   "collection": {
+    "featured_reading": "CWR-004"
+   },
    "structured_data": [
     "WebSite"
    ],
@@ -161,8 +215,13 @@
    "visual_ids": [],
    "reading_ids": [],
    "measurement_ids": [],
+   "source_ids": [],
    "source_references": 0,
-   "lineage_state": null,
+   "next_actions": [
+    "/explore/",
+    "/methodology/"
+   ],
+   "next_action_policy": "CONTEXTUAL_NEXT_ACTION",
    "structured_data": [],
    "hard_state_acceptance": [
     "trust_plain_language"
@@ -198,8 +257,14 @@
     "MA-005",
     "MA-010"
    ],
+   "source_ids": [],
    "source_references": 12,
-   "lineage_state": null,
+   "next_actions": [],
+   "next_action_policy": "VERIFY_PRIMARY_EVIDENCE",
+   "presentation_contract": {
+    "measurement_limit": 2,
+    "presentation_family": "sparse"
+   },
    "structured_data": [],
    "hard_state_acceptance": [
     "sparse_unknown"
@@ -221,8 +286,13 @@
    "visual_ids": [],
    "reading_ids": [],
    "measurement_ids": [],
+   "source_ids": [],
    "source_references": 0,
-   "lineage_state": null,
+   "next_actions": [
+    "/contact/",
+    "/explore/"
+   ],
+   "next_action_policy": "CONTEXTUAL_NEXT_ACTION",
    "structured_data": [],
    "hard_state_acceptance": []
   },
@@ -242,8 +312,13 @@
    "visual_ids": [],
    "reading_ids": [],
    "measurement_ids": [],
+   "source_ids": [],
    "source_references": 0,
-   "lineage_state": null,
+   "next_actions": [
+    "/corrections/",
+    "/evidence/"
+   ],
+   "next_action_policy": "CONTEXTUAL_NEXT_ACTION",
    "structured_data": [],
    "hard_state_acceptance": []
   },
@@ -263,8 +338,13 @@
    "visual_ids": [],
    "reading_ids": [],
    "measurement_ids": [],
+   "source_ids": [],
    "source_references": 0,
-   "lineage_state": null,
+   "next_actions": [
+    "/evidence/",
+    "/contact/"
+   ],
+   "next_action_policy": "CONTEXTUAL_NEXT_ACTION",
    "structured_data": [],
    "hard_state_acceptance": []
   },
@@ -284,8 +364,237 @@
    "visual_ids": [],
    "reading_ids": [],
    "measurement_ids": [],
+   "source_ids": [],
    "source_references": 0,
-   "lineage_state": null,
+   "next_actions": [
+    "/evidence/",
+    "/rights/",
+    "/methodology/"
+   ],
+   "next_action_policy": "SOURCE_TO_DEPENDENT_EVIDENCE",
+   "collection": {
+    "displayed_source_ids": [
+     "SRC-CBY-001",
+     "SRC-CBY-BANKLIST-AR-2026-001",
+     "SRC-CBY-ENF-01-2026",
+     "SRC-CBY-ENF-02-2026",
+     "SRC-CBY-ENF-03-2026",
+     "SRC-CBY-ENF-04-2026",
+     "SRC-CBY-ENF-05-2026",
+     "SRC-CBY-ENF-06-2026",
+     "SRC-CBY-ENF-09-2026",
+     "SRC-CBY-ENF-10-2026",
+     "SRC-CBY-ENF-11-2026",
+     "SRC-CBY-ENF-13-2026",
+     "SRC-CBY-ENF-14-2026",
+     "SRC-CBY-ENF-15-2026",
+     "SRC-CBY-EXCH-LIST-2026-001",
+     "SRC-CBY-FMIIP-WORKSHOP-2025",
+     "SRC-CBY-PAYREPORT-H1-2025",
+     "SRC-CBY-PAYREPORT-Q3-2024",
+     "SRC-CBY-POS-2025-03",
+     "SRC-CBY-POS-2025-04",
+     "SRC-CBY-POS-2025-05",
+     "SRC-CBY-POS-2025-06",
+     "SRC-CBY-POS-2025-07",
+     "SRC-CBY-POS-2025-08",
+     "SRC-CBY-POS-2025-09",
+     "SRC-CBY-POS-2025-10",
+     "SRC-CBY-POS-2025-11",
+     "SRC-CBY-POS-2025-12",
+     "SRC-CBY-POS-2026-01",
+     "SRC-IMF-AIV-2025-STAFF-001",
+     "SRC-IMF-AIV-2025-SUPP-001",
+     "SRC-WB-ES-2013-PROFILE-001",
+     "SRC-WB-FSD-2024-001",
+     "SRC-WB-RPW-SA-YEM-2025Q3-001",
+     "SRC-WB-RPW-UAE-YEM-2025Q3-001",
+     "SRC-YMN-AR-2012-001",
+     "SRC-YMN-IMPACT-2021-001",
+     "SRC-YMN-MEMBERS-2026-001",
+     "SRC-YMN-MFMAG-2014-Q1-001",
+     "SRC-YMN-MFMAG-2014-Q2-001",
+     "SRC-WB-FINDEX-001",
+     "SRC-WB-FINDEX-AGG-2022",
+     "SRC-OECD-YEM-RESILIENCE-001",
+     "SRC-OCHA-FTS-YEM-2026-001",
+     "SRC-WB-YEM-MFI-2004-001",
+     "SRC-AJMBFS-CBY-FI-2025-001",
+     "SRC-KFW-RMMV-2023-001",
+     "SRC-CBY-GMW-2023-001",
+     "SRC-CBY-GMW-2024-001",
+     "SRC-CBY-GMW-2024-CLOSE-001",
+     "SRC-CBY-GMW-2025-001",
+     "SRC-CBY-FCP-INSTR-2023-001",
+     "SRC-CBY-FCP-AWARE-2024-001",
+     "SRC-CBY-PSP-RULES-2022-001",
+     "SRC-CBY-PAY-BOARD-2026-001",
+     "SRC-CBY-FCP-BROCHURE-2024-001",
+     "SRC-CBY-EMONEY-2023-001",
+     "SRC-CBY-EMONEY-AMD-2025-001",
+     "SRC-CBY-DIGITAL-EXPO-2026-001",
+     "SRC-CBY-UNLICENSED-EWALLET-2024-001",
+     "SRC-CBY-EXCH-LIST-2025-001",
+     "SRC-CBY-BANK-NETWORK-MTG-2026-001",
+     "SRC-CBY-UNIFIED-NET-2026-001",
+     "SRC-CBY-YPCC-FOUND-2026-001",
+     "SRC-CBY-YPCC-BOARD-2026-001",
+     "SRC-CBY-POS-PUBLICATION-PAGE-2026-001",
+     "SRC-SFD-HIST-2004-Q3-001",
+     "SRC-SFD-MF-HISTORY-TOR-2012-001",
+     "SRC-SFD-NEWSLETTER-2000-Q4-001",
+     "SRC-SFD-Q4-2009-001",
+     "SRC-SFD-Q4-2010-001",
+     "SRC-SFD-Q4-2011-001",
+     "SRC-SFD-Q1-2012-001",
+     "SRC-SFD-Q4-2012-001",
+     "SRC-SFD-Q2-2013-001",
+     "SRC-SFD-Q2-2014-001",
+     "SRC-SFD-Q1-2015-001",
+     "SRC-SFD-Q3-2015-001",
+     "SRC-SFD-Q4-2015-001",
+     "SRC-SFD-Q3-2016-001",
+     "SRC-SFD-Q4-2017-001",
+     "SRC-SFD-Q4-2018-001",
+     "SRC-SFD-Q1-2019-001",
+     "SRC-SFD-Q4-2020-001",
+     "SRC-WB-FINDEX-003",
+     "SRC-WB-FINDEX-2014-001",
+     "SRC-WB-FINDEX-LDB-2015-001",
+     "SRC-WB-NFID-RFX-2026-001",
+     "SRC-WB-FMIIP-ISR2-2026-001",
+     "SRC-CBY-HIST-METHOD-001",
+     "SRC-CBY-AR2015-HIST-001",
+     "SRC-CBY-SANAA-C12-2024",
+     "SRC-CBY-SANAA-C14-2024",
+     "SRC-CBY-SANAA-CURR-2024",
+     "SRC-IMF-YEM-AIV-2025-2026",
+     "SRC-IMF-YEM-EGDDS-VAL-1996",
+     "SRC-WB-WDI-REMIT-YEM-CURRENT",
+     "SRC-IGC-AIDDATA-REMIT-YEM-2026",
+     "SRC-WB-MDB40-2024",
+     "SRC-SC-TRADE-FIN-YEM-2026",
+     "SRC-ACAPS-YEM-REMIT-2021",
+     "SRC-IMF-D4D-YEM-ESS-2025",
+     "SRC-CBY-AR2025-BOP",
+     "SRC-CBY-AR2024-BOP",
+     "SRC-IMF-BPM6",
+     "SRC-IMF-BPM6-COMP-GUIDE",
+     "SRC-IMF-BPM7-IMPLEMENTATION",
+     "SRC-IMF-YEM-SMP-2026",
+     "SRC-AIDDATA-SAUDI-YEM-2015",
+     "SRC-LIT-XIDIAN-YEM-FI-2025",
+     "SRC-LIT-INVEST-ISLAMIC-FI-2024",
+     "SRC-LIT-OEB-FX-PRICES-2025",
+     "SRC-SANAA-MF-2020",
+     "SRC-SANAA-EMONEY-2022",
+     "SRC-SANAA-MFB-2024",
+     "SRC-MDPI-UTAUT-YEM-2022",
+     "SRC-IBS-EPAY-YEM-2020",
+     "SRC-ADEN-CBY-LIQ-2016",
+     "SRC-SFD-SMED-LP-2023-NOV",
+     "SRC-SANAA-SOCPROT-2024",
+     "SRC-SANAA-YR-2025-Q2-MFB",
+     "SRC-SMEPS-AR2024-2025",
+     "SRC-UNDP-FMIIP-001",
+     "SRC-WB-YEM-OUTLOOK-2016-001",
+     "SRC-WB-YEM-MONITOR-FALL2018-001",
+     "SRC-SPA-SAU-CBY-DEPOSIT-2018-001",
+     "SRC-WB-YEM-MEU-2019-12-001",
+     "SRC-WB-YEM-ECON-2020-04-001",
+     "SRC-SPA-SAU-CBY-DEPOSIT-2023-001",
+     "SRC-WB-YEM-FRAGMENTATION-2025-001",
+     "SRC-SPA-SAU-BUDGET-2026-001",
+     "SRC-OECD-INFE-2023",
+     "SRC-WB-FINDEX-2025-EDITION",
+     "SRC-WB-FMIIP-P180708",
+     "SRC-CGAP-ARAB-MEAS-2017-001",
+     "SRC-OECD-YOUTH-DFI-2020-001",
+     "SRC-CBY-AR2022-001",
+     "SRC-CBY-AR2023-001",
+     "SRC-CBY-ENF-17-2026",
+     "SRC-BIS-CPMI-FPS-RTGS-2021-001",
+     "SRC-BIS-CPMI-PAFI-FINTECH-2020-001",
+     "SRC-WB-FASTT-FPS-2021-001",
+     "SRC-WB-G2PX-001",
+     "SRC-WB-YEM-CPF-2026-2030-001",
+     "SRC-WB-YEM-CNL-2026-001",
+     "SRC-WB-YEM-ECON-MONITOR-2026-SPRING-001",
+     "SRC-KFW-YEM-MSME-FIN-III-47229",
+     "SRC-WB-G2PX-YEM-UCT-2024-001",
+     "SRC-CBY-ENF-18-2026",
+     "SRC-CBY-DEC-23-2024-001",
+     "SRC-AMB-MFB-SUPERVISION-2026"
+    ],
+    "displayed_sources_without_document_type": [
+     "SRC-SFD-MF-HISTORY-TOR-2012-001",
+     "SRC-WB-NFID-RFX-2026-001",
+     "SRC-CBY-AR2015-HIST-001",
+     "SRC-CBY-SANAA-C12-2024",
+     "SRC-CBY-SANAA-C14-2024",
+     "SRC-LIT-XIDIAN-YEM-FI-2025",
+     "SRC-LIT-INVEST-ISLAMIC-FI-2024",
+     "SRC-LIT-OEB-FX-PRICES-2025",
+     "SRC-ADEN-CBY-LIQ-2016"
+    ],
+    "curated_resource_ids": [
+     "SRC-WB-FSD-2024-001",
+     "SRC-OECD-YEM-RESILIENCE-001",
+     "SRC-WB-FMIIP-ISR2-2026-001",
+     "SRC-IMF-YEM-AIV-2025-2026",
+     "SRC-CBY-AR2025-BOP",
+     "SRC-CBY-AR2024-BOP",
+     "SRC-IMF-YEM-SMP-2026",
+     "SRC-SANAA-EMONEY-2022",
+     "SRC-SANAA-MFB-2024",
+     "SRC-UNDP-FMIIP-001",
+     "SRC-OECD-INFE-2023",
+     "SRC-WB-FINDEX-2025-EDITION",
+     "SRC-WB-FMIIP-P180708",
+     "SRC-CGAP-ARAB-MEAS-2017-001",
+     "SRC-OECD-YOUTH-DFI-2020-001",
+     "SRC-CBY-AR2022-001",
+     "SRC-CBY-AR2023-001",
+     "SRC-BIS-CPMI-FPS-RTGS-2021-001",
+     "SRC-BIS-CPMI-PAFI-FINTECH-2020-001",
+     "SRC-WB-FASTT-FPS-2021-001",
+     "SRC-WB-G2PX-001",
+     "SRC-WB-YEM-CPF-2026-2030-001",
+     "SRC-WB-YEM-CNL-2026-001",
+     "SRC-WB-YEM-ECON-MONITOR-2026-SPRING-001",
+     "SRC-KFW-YEM-MSME-FIN-III-47229",
+     "SRC-WB-G2PX-YEM-UCT-2024-001",
+     "SRC-CBY-DEC-23-2024-001",
+     "SRC-AMB-MFB-SUPERVISION-2026"
+    ],
+    "chronology_event_ids": [
+     "YSC-001",
+     "YSC-002",
+     "YSC-003",
+     "YSC-004",
+     "YSC-005",
+     "YSC-006",
+     "YSC-007",
+     "YSC-008",
+     "YSC-009",
+     "YSC-010",
+     "YSC-011",
+     "YSC-012",
+     "YSC-024",
+     "YSC-013",
+     "YSC-014",
+     "YSC-018",
+     "YSC-015",
+     "YSC-016",
+     "YSC-017",
+     "YSC-019",
+     "YSC-021",
+     "YSC-022",
+     "YSC-023",
+     "YSC-020"
+    ],
+    "never_displayed": "sources without a public locator are never named or linked (count: public_inventory sources − public_locators)"
+   },
    "structured_data": [],
    "hard_state_acceptance": [
     "source_scale"
@@ -334,8 +643,128 @@
    "measurement_ids": [
     "MA-006"
    ],
+   "source_ids": [],
    "source_references": 36,
-   "lineage_state": null,
+   "next_actions": [
+    "/evidence/compare/",
+    "/data/",
+    "/methodology/"
+   ],
+   "next_action_policy": "OPEN_EVIDENCE_RECORD_OR_COMPARE",
+   "collection": {
+    "evidence_record_ids": [
+     "CLM-001",
+     "CLM-002",
+     "CLM-003",
+     "CLM-004",
+     "CLM-005",
+     "CLM-006",
+     "CLM-007",
+     "CLM-008",
+     "CLM-009",
+     "CLM-010",
+     "CLM-011",
+     "CLM-012",
+     "CLM-013",
+     "CLM-014",
+     "CLM-015",
+     "CLM-016",
+     "CLM-017",
+     "CLM-018",
+     "CLM-019",
+     "CLM-020",
+     "CLM-021",
+     "CLM-022",
+     "CLM-023",
+     "CLM-024",
+     "CLM-025",
+     "CLM-026",
+     "CLM-027",
+     "CLM-028",
+     "CLM-029",
+     "CLM-030",
+     "CLM-031",
+     "CLM-032",
+     "CLM-033",
+     "CLM-034",
+     "CLM-035",
+     "CLM-036",
+     "CLM-037",
+     "CLM-038",
+     "CLM-039",
+     "CLM-040",
+     "CLM-041",
+     "CLM-042",
+     "CLM-043",
+     "CLM-044",
+     "CLM-045",
+     "CLM-046",
+     "CLM-047",
+     "CLM-048",
+     "CLM-049",
+     "CLM-050",
+     "CLM-051",
+     "CLM-052",
+     "CLM-053",
+     "CLM-054",
+     "CLM-055",
+     "CLM-056",
+     "CLM-057",
+     "CLM-058",
+     "CLM-059",
+     "CLM-060",
+     "CLM-062",
+     "DS-DEMAND-VINTAGE-LENS",
+     "DS-FCP-ARCH",
+     "DS-FINDEX-HISTORY-CROSSWALK",
+     "DS-FINDEX-PUBLIC-HISTORY",
+     "DS-QUAL-EVIDENCE",
+     "FMIIP-BASELINE-2025-01",
+     "MF-ORIG-001+002",
+     "MFI-SPINE-2015-Q4",
+     "NEG-EW-011",
+     "PSE-011",
+     "QUAL-001",
+     "VIS-BORROWING-SOURCES-2014",
+     "VIS-CAPITAL-CONTEXT",
+     "VIS-DEMAND-VINTAGE-LADDER",
+     "VIS-DOMESTIC-REMITTANCE-PATH-2014",
+     "VIS-E-MONEY-RULE-STACK",
+     "VIS-EVIDENCE-CLASS-LADDER",
+     "VIS-EVIDENCE-FRESHNESS",
+     "VIS-EVIDENCE-GAPS",
+     "VIS-FCP-REDRESS-PATH",
+     "VIS-FINDEX-ACCESS-USE",
+     "VIS-FINDEX-BARRIERS",
+     "VIS-FINDEX-FLOW-CHANNELS",
+     "VIS-FINDEX-GAPS",
+     "VIS-FINDEX-OBSERVED-WAVES",
+     "VIS-FINDEX-RESILIENCE",
+     "VIS-FINDEX-SAMPLE-SUPPORT",
+     "VIS-FIRM-CONSTRAINTS",
+     "VIS-FIRM-FINANCE-PATH",
+     "VIS-FIRM-FINANCE-SEVERITY",
+     "VIS-FL-EVIDENCE-LADDER",
+     "VIS-INCLUSION-TRANSMISSION",
+     "VIS-MECHANISM-METRIC-BRIDGE",
+     "VIS-MFI-2014-PANEL",
+     "VIS-MFI-RUPTURE-LENS",
+     "VIS-MFI-SPINE",
+     "VIS-OECD-FCP-TIMELINE",
+     "VIS-PAYMENT-ANATOMY",
+     "VIS-PAYMENT-RAILS",
+     "VIS-POS-TERMINALS",
+     "VIS-POS-TRANSACTIONS",
+     "VIS-POS-VALUE",
+     "VIS-PROVIDER-OBSERVABILITY",
+     "VIS-PROVIDER-TIME",
+     "VIS-REMITTANCE-COST",
+     "VIS-REMITTANCE-MACRO",
+     "VIS-SOURCE-COMPARISON",
+     "VIS-TARGET-RESULT-STATE",
+     "XW-FMIIP-005"
+    ]
+   },
    "structured_data": [],
    "hard_state_acceptance": []
   },
@@ -357,8 +786,13 @@
    "visual_ids": [],
    "reading_ids": [],
    "measurement_ids": [],
+   "source_ids": [],
    "source_references": 2,
+   "next_actions": [],
+   "next_action_policy": "SOURCE_RELATED_CORRECTION_OR_REUSE",
    "lineage_state": "BOUND_EXACT",
+   "verification_state": "SOURCES_LISTED",
+   "public_sources_listed": 2,
    "structured_data": [
     "BreadcrumbList"
    ],
@@ -382,8 +816,13 @@
    "visual_ids": [],
    "reading_ids": [],
    "measurement_ids": [],
+   "source_ids": [],
    "source_references": 1,
+   "next_actions": [],
+   "next_action_policy": "SOURCE_RELATED_CORRECTION_OR_REUSE",
    "lineage_state": "BOUND_EXACT",
+   "verification_state": "SOURCES_LISTED",
+   "public_sources_listed": 1,
    "structured_data": [
     "BreadcrumbList"
    ],
@@ -407,8 +846,13 @@
    "visual_ids": [],
    "reading_ids": [],
    "measurement_ids": [],
+   "source_ids": [],
    "source_references": 3,
+   "next_actions": [],
+   "next_action_policy": "SOURCE_RELATED_CORRECTION_OR_REUSE",
    "lineage_state": "BOUND_EXACT",
+   "verification_state": "SOURCES_LISTED",
+   "public_sources_listed": 3,
    "structured_data": [
     "BreadcrumbList"
    ],
@@ -434,8 +878,13 @@
    "visual_ids": [],
    "reading_ids": [],
    "measurement_ids": [],
+   "source_ids": [],
    "source_references": 0,
+   "next_actions": [],
+   "next_action_policy": "SOURCE_RELATED_CORRECTION_OR_REUSE",
    "lineage_state": "FRAMING_NO_FACT",
+   "verification_state": "FRAMING_NO_FACT",
+   "public_sources_listed": 0,
    "structured_data": [
     "BreadcrumbList"
    ],
@@ -459,8 +908,13 @@
    "visual_ids": [],
    "reading_ids": [],
    "measurement_ids": [],
+   "source_ids": [],
    "source_references": 1,
+   "next_actions": [],
+   "next_action_policy": "SOURCE_RELATED_CORRECTION_OR_REUSE",
    "lineage_state": "BOUND_EXACT",
+   "verification_state": "SOURCES_LISTED",
+   "public_sources_listed": 1,
    "structured_data": [
     "BreadcrumbList"
    ],
@@ -484,8 +938,13 @@
    "visual_ids": [],
    "reading_ids": [],
    "measurement_ids": [],
+   "source_ids": [],
    "source_references": 1,
+   "next_actions": [],
+   "next_action_policy": "SOURCE_RELATED_CORRECTION_OR_REUSE",
    "lineage_state": "BOUND_EXACT",
+   "verification_state": "SOURCES_LISTED",
+   "public_sources_listed": 1,
    "structured_data": [
     "BreadcrumbList"
    ],
@@ -509,8 +968,13 @@
    "visual_ids": [],
    "reading_ids": [],
    "measurement_ids": [],
+   "source_ids": [],
    "source_references": 2,
+   "next_actions": [],
+   "next_action_policy": "SOURCE_RELATED_CORRECTION_OR_REUSE",
    "lineage_state": "BOUND_EXACT",
+   "verification_state": "SOURCES_LISTED",
+   "public_sources_listed": 2,
    "structured_data": [
     "BreadcrumbList"
    ],
@@ -534,8 +998,13 @@
    "visual_ids": [],
    "reading_ids": [],
    "measurement_ids": [],
+   "source_ids": [],
    "source_references": 1,
+   "next_actions": [],
+   "next_action_policy": "SOURCE_RELATED_CORRECTION_OR_REUSE",
    "lineage_state": "BOUND_EXACT",
+   "verification_state": "SOURCES_LISTED",
+   "public_sources_listed": 1,
    "structured_data": [
     "BreadcrumbList"
    ],
@@ -559,8 +1028,13 @@
    "visual_ids": [],
    "reading_ids": [],
    "measurement_ids": [],
+   "source_ids": [],
    "source_references": 1,
+   "next_actions": [],
+   "next_action_policy": "SOURCE_RELATED_CORRECTION_OR_REUSE",
    "lineage_state": "BOUND_EXACT",
+   "verification_state": "SOURCES_LISTED",
+   "public_sources_listed": 1,
    "structured_data": [
     "BreadcrumbList"
    ],
@@ -584,8 +1058,13 @@
    "visual_ids": [],
    "reading_ids": [],
    "measurement_ids": [],
+   "source_ids": [],
    "source_references": 4,
+   "next_actions": [],
+   "next_action_policy": "SOURCE_RELATED_CORRECTION_OR_REUSE",
    "lineage_state": "BOUND_EXACT",
+   "verification_state": "SOURCES_LISTED",
+   "public_sources_listed": 4,
    "structured_data": [
     "BreadcrumbList"
    ],
@@ -609,8 +1088,13 @@
    "visual_ids": [],
    "reading_ids": [],
    "measurement_ids": [],
+   "source_ids": [],
    "source_references": 2,
+   "next_actions": [],
+   "next_action_policy": "SOURCE_RELATED_CORRECTION_OR_REUSE",
    "lineage_state": "BOUND_EXACT",
+   "verification_state": "SOURCES_LISTED",
+   "public_sources_listed": 2,
    "structured_data": [
     "BreadcrumbList"
    ],
@@ -634,8 +1118,13 @@
    "visual_ids": [],
    "reading_ids": [],
    "measurement_ids": [],
+   "source_ids": [],
    "source_references": 2,
+   "next_actions": [],
+   "next_action_policy": "SOURCE_RELATED_CORRECTION_OR_REUSE",
    "lineage_state": "BOUND_EXACT",
+   "verification_state": "SOURCES_LISTED",
+   "public_sources_listed": 2,
    "structured_data": [
     "BreadcrumbList"
    ],
@@ -659,8 +1148,13 @@
    "visual_ids": [],
    "reading_ids": [],
    "measurement_ids": [],
+   "source_ids": [],
    "source_references": 4,
+   "next_actions": [],
+   "next_action_policy": "SOURCE_RELATED_CORRECTION_OR_REUSE",
    "lineage_state": "BOUND_EXACT",
+   "verification_state": "SOURCES_LISTED",
+   "public_sources_listed": 4,
    "structured_data": [
     "BreadcrumbList"
    ],
@@ -684,8 +1178,13 @@
    "visual_ids": [],
    "reading_ids": [],
    "measurement_ids": [],
+   "source_ids": [],
    "source_references": 0,
+   "next_actions": [],
+   "next_action_policy": "SOURCE_RELATED_CORRECTION_OR_REUSE",
    "lineage_state": "COMPOSITE_OF_OBJECTS",
+   "verification_state": "COMPOSITE_MEMBERS_NOT_LISTED",
+   "public_sources_listed": 0,
    "structured_data": [
     "BreadcrumbList"
    ],
@@ -709,8 +1208,13 @@
    "visual_ids": [],
    "reading_ids": [],
    "measurement_ids": [],
+   "source_ids": [],
    "source_references": 1,
+   "next_actions": [],
+   "next_action_policy": "SOURCE_RELATED_CORRECTION_OR_REUSE",
    "lineage_state": "BOUND_EXACT",
+   "verification_state": "SOURCES_LISTED",
+   "public_sources_listed": 1,
    "structured_data": [
     "BreadcrumbList"
    ],
@@ -736,8 +1240,13 @@
    "visual_ids": [],
    "reading_ids": [],
    "measurement_ids": [],
+   "source_ids": [],
    "source_references": 1,
+   "next_actions": [],
+   "next_action_policy": "SOURCE_RELATED_CORRECTION_OR_REUSE",
    "lineage_state": "BOUND_EXACT",
+   "verification_state": "SOURCES_LISTED",
+   "public_sources_listed": 1,
    "structured_data": [
     "BreadcrumbList"
    ],
@@ -761,8 +1270,13 @@
    "visual_ids": [],
    "reading_ids": [],
    "measurement_ids": [],
+   "source_ids": [],
    "source_references": 2,
+   "next_actions": [],
+   "next_action_policy": "SOURCE_RELATED_CORRECTION_OR_REUSE",
    "lineage_state": "BOUND_EXACT",
+   "verification_state": "SOURCES_LISTED",
+   "public_sources_listed": 2,
    "structured_data": [
     "BreadcrumbList"
    ],
@@ -786,8 +1300,13 @@
    "visual_ids": [],
    "reading_ids": [],
    "measurement_ids": [],
+   "source_ids": [],
    "source_references": 5,
+   "next_actions": [],
+   "next_action_policy": "SOURCE_RELATED_CORRECTION_OR_REUSE",
    "lineage_state": "BOUND_EXACT",
+   "verification_state": "SOURCES_LISTED",
+   "public_sources_listed": 5,
    "structured_data": [
     "BreadcrumbList"
    ],
@@ -811,8 +1330,13 @@
    "visual_ids": [],
    "reading_ids": [],
    "measurement_ids": [],
+   "source_ids": [],
    "source_references": 15,
+   "next_actions": [],
+   "next_action_policy": "SOURCE_RELATED_CORRECTION_OR_REUSE",
    "lineage_state": "BOUND_EXACT",
+   "verification_state": "SOURCES_LISTED",
+   "public_sources_listed": 15,
    "structured_data": [
     "BreadcrumbList"
    ],
@@ -836,8 +1360,13 @@
    "visual_ids": [],
    "reading_ids": [],
    "measurement_ids": [],
+   "source_ids": [],
    "source_references": 3,
+   "next_actions": [],
+   "next_action_policy": "SOURCE_RELATED_CORRECTION_OR_REUSE",
    "lineage_state": "BOUND_EXACT",
+   "verification_state": "SOURCES_LISTED",
+   "public_sources_listed": 3,
    "structured_data": [
     "BreadcrumbList"
    ],
@@ -861,8 +1390,13 @@
    "visual_ids": [],
    "reading_ids": [],
    "measurement_ids": [],
+   "source_ids": [],
    "source_references": 3,
+   "next_actions": [],
+   "next_action_policy": "SOURCE_RELATED_CORRECTION_OR_REUSE",
    "lineage_state": "BOUND_EXACT",
+   "verification_state": "SOURCES_LISTED",
+   "public_sources_listed": 3,
    "structured_data": [
     "BreadcrumbList"
    ],
@@ -886,8 +1420,13 @@
    "visual_ids": [],
    "reading_ids": [],
    "measurement_ids": [],
+   "source_ids": [],
    "source_references": 16,
+   "next_actions": [],
+   "next_action_policy": "SOURCE_RELATED_CORRECTION_OR_REUSE",
    "lineage_state": "BOUND_EXACT",
+   "verification_state": "SOURCES_LISTED",
+   "public_sources_listed": 16,
    "structured_data": [
     "BreadcrumbList"
    ],
@@ -911,8 +1450,13 @@
    "visual_ids": [],
    "reading_ids": [],
    "measurement_ids": [],
+   "source_ids": [],
    "source_references": 1,
+   "next_actions": [],
+   "next_action_policy": "SOURCE_RELATED_CORRECTION_OR_REUSE",
    "lineage_state": "BOUND_EXACT",
+   "verification_state": "SOURCES_LISTED",
+   "public_sources_listed": 1,
    "structured_data": [
     "BreadcrumbList"
    ],
@@ -936,8 +1480,13 @@
    "visual_ids": [],
    "reading_ids": [],
    "measurement_ids": [],
+   "source_ids": [],
    "source_references": 1,
+   "next_actions": [],
+   "next_action_policy": "SOURCE_RELATED_CORRECTION_OR_REUSE",
    "lineage_state": "BOUND_EXACT",
+   "verification_state": "SOURCES_LISTED",
+   "public_sources_listed": 1,
    "structured_data": [
     "BreadcrumbList"
    ],
@@ -961,8 +1510,13 @@
    "visual_ids": [],
    "reading_ids": [],
    "measurement_ids": [],
+   "source_ids": [],
    "source_references": 1,
+   "next_actions": [],
+   "next_action_policy": "SOURCE_RELATED_CORRECTION_OR_REUSE",
    "lineage_state": "BOUND_EXACT",
+   "verification_state": "SOURCES_LISTED",
+   "public_sources_listed": 1,
    "structured_data": [
     "BreadcrumbList"
    ],
@@ -986,8 +1540,13 @@
    "visual_ids": [],
    "reading_ids": [],
    "measurement_ids": [],
+   "source_ids": [],
    "source_references": 2,
+   "next_actions": [],
+   "next_action_policy": "SOURCE_RELATED_CORRECTION_OR_REUSE",
    "lineage_state": "BOUND_EXACT",
+   "verification_state": "SOURCES_LISTED",
+   "public_sources_listed": 2,
    "structured_data": [
     "BreadcrumbList"
    ],
@@ -1011,8 +1570,13 @@
    "visual_ids": [],
    "reading_ids": [],
    "measurement_ids": [],
+   "source_ids": [],
    "source_references": 2,
+   "next_actions": [],
+   "next_action_policy": "SOURCE_RELATED_CORRECTION_OR_REUSE",
    "lineage_state": "BOUND_EXACT",
+   "verification_state": "SOURCES_LISTED",
+   "public_sources_listed": 2,
    "structured_data": [
     "BreadcrumbList"
    ],
@@ -1036,8 +1600,13 @@
    "visual_ids": [],
    "reading_ids": [],
    "measurement_ids": [],
+   "source_ids": [],
    "source_references": 1,
+   "next_actions": [],
+   "next_action_policy": "SOURCE_RELATED_CORRECTION_OR_REUSE",
    "lineage_state": "BOUND_EXACT",
+   "verification_state": "SOURCES_LISTED",
+   "public_sources_listed": 1,
    "structured_data": [
     "BreadcrumbList"
    ],
@@ -1061,8 +1630,13 @@
    "visual_ids": [],
    "reading_ids": [],
    "measurement_ids": [],
+   "source_ids": [],
    "source_references": 1,
+   "next_actions": [],
+   "next_action_policy": "SOURCE_RELATED_CORRECTION_OR_REUSE",
    "lineage_state": "BOUND_EXACT",
+   "verification_state": "SOURCES_LISTED",
+   "public_sources_listed": 1,
    "structured_data": [
     "BreadcrumbList"
    ],
@@ -1086,8 +1660,13 @@
    "visual_ids": [],
    "reading_ids": [],
    "measurement_ids": [],
+   "source_ids": [],
    "source_references": 1,
+   "next_actions": [],
+   "next_action_policy": "SOURCE_RELATED_CORRECTION_OR_REUSE",
    "lineage_state": "BOUND_EXACT",
+   "verification_state": "SOURCES_LISTED",
+   "public_sources_listed": 1,
    "structured_data": [
     "BreadcrumbList"
    ],
@@ -1111,8 +1690,13 @@
    "visual_ids": [],
    "reading_ids": [],
    "measurement_ids": [],
+   "source_ids": [],
    "source_references": 0,
+   "next_actions": [],
+   "next_action_policy": "SOURCE_RELATED_CORRECTION_OR_REUSE",
    "lineage_state": "COMPOSITE_OF_OBJECTS",
+   "verification_state": "COMPOSITE_OF_OBJECTS",
+   "public_sources_listed": 0,
    "structured_data": [
     "BreadcrumbList"
    ],
@@ -1136,8 +1720,13 @@
    "visual_ids": [],
    "reading_ids": [],
    "measurement_ids": [],
+   "source_ids": [],
    "source_references": 2,
+   "next_actions": [],
+   "next_action_policy": "SOURCE_RELATED_CORRECTION_OR_REUSE",
    "lineage_state": "BOUND_EXACT",
+   "verification_state": "SOURCES_LISTED",
+   "public_sources_listed": 2,
    "structured_data": [
     "BreadcrumbList"
    ],
@@ -1161,8 +1750,13 @@
    "visual_ids": [],
    "reading_ids": [],
    "measurement_ids": [],
+   "source_ids": [],
    "source_references": 2,
+   "next_actions": [],
+   "next_action_policy": "SOURCE_RELATED_CORRECTION_OR_REUSE",
    "lineage_state": "BOUND_EXACT",
+   "verification_state": "SOURCES_LISTED",
+   "public_sources_listed": 2,
    "structured_data": [
     "BreadcrumbList"
    ],
@@ -1186,8 +1780,13 @@
    "visual_ids": [],
    "reading_ids": [],
    "measurement_ids": [],
+   "source_ids": [],
    "source_references": 1,
+   "next_actions": [],
+   "next_action_policy": "SOURCE_RELATED_CORRECTION_OR_REUSE",
    "lineage_state": "BOUND_EXACT",
+   "verification_state": "SOURCES_LISTED",
+   "public_sources_listed": 1,
    "structured_data": [
     "BreadcrumbList"
    ],
@@ -1211,8 +1810,13 @@
    "visual_ids": [],
    "reading_ids": [],
    "measurement_ids": [],
+   "source_ids": [],
    "source_references": 2,
+   "next_actions": [],
+   "next_action_policy": "SOURCE_RELATED_CORRECTION_OR_REUSE",
    "lineage_state": "BOUND_EXACT",
+   "verification_state": "SOURCES_LISTED",
+   "public_sources_listed": 2,
    "structured_data": [
     "BreadcrumbList"
    ],
@@ -1236,8 +1840,13 @@
    "visual_ids": [],
    "reading_ids": [],
    "measurement_ids": [],
+   "source_ids": [],
    "source_references": 2,
+   "next_actions": [],
+   "next_action_policy": "SOURCE_RELATED_CORRECTION_OR_REUSE",
    "lineage_state": "BOUND_EXACT",
+   "verification_state": "SOURCES_LISTED",
+   "public_sources_listed": 2,
    "structured_data": [
     "BreadcrumbList"
    ],
@@ -1261,8 +1870,13 @@
    "visual_ids": [],
    "reading_ids": [],
    "measurement_ids": [],
+   "source_ids": [],
    "source_references": 2,
+   "next_actions": [],
+   "next_action_policy": "SOURCE_RELATED_CORRECTION_OR_REUSE",
    "lineage_state": "BOUND_EXACT",
+   "verification_state": "SOURCES_LISTED",
+   "public_sources_listed": 2,
    "structured_data": [
     "BreadcrumbList"
    ],
@@ -1286,8 +1900,13 @@
    "visual_ids": [],
    "reading_ids": [],
    "measurement_ids": [],
+   "source_ids": [],
    "source_references": 2,
+   "next_actions": [],
+   "next_action_policy": "SOURCE_RELATED_CORRECTION_OR_REUSE",
    "lineage_state": "BOUND_EXACT",
+   "verification_state": "SOURCES_LISTED",
+   "public_sources_listed": 2,
    "structured_data": [
     "BreadcrumbList"
    ],
@@ -1311,8 +1930,13 @@
    "visual_ids": [],
    "reading_ids": [],
    "measurement_ids": [],
+   "source_ids": [],
    "source_references": 1,
+   "next_actions": [],
+   "next_action_policy": "SOURCE_RELATED_CORRECTION_OR_REUSE",
    "lineage_state": "BOUND_PARTIAL",
+   "verification_state": "PARTIALLY_RESOLVED",
+   "public_sources_listed": 1,
    "structured_data": [
     "BreadcrumbList"
    ],
@@ -1336,8 +1960,13 @@
    "visual_ids": [],
    "reading_ids": [],
    "measurement_ids": [],
+   "source_ids": [],
    "source_references": 1,
+   "next_actions": [],
+   "next_action_policy": "SOURCE_RELATED_CORRECTION_OR_REUSE",
    "lineage_state": "BOUND_EXACT",
+   "verification_state": "SOURCES_LISTED",
+   "public_sources_listed": 1,
    "structured_data": [
     "BreadcrumbList"
    ],
@@ -1361,8 +1990,13 @@
    "visual_ids": [],
    "reading_ids": [],
    "measurement_ids": [],
+   "source_ids": [],
    "source_references": 2,
+   "next_actions": [],
+   "next_action_policy": "SOURCE_RELATED_CORRECTION_OR_REUSE",
    "lineage_state": "BOUND_EXACT",
+   "verification_state": "SOURCES_LISTED",
+   "public_sources_listed": 2,
    "structured_data": [
     "BreadcrumbList"
    ],
@@ -1386,8 +2020,13 @@
    "visual_ids": [],
    "reading_ids": [],
    "measurement_ids": [],
+   "source_ids": [],
    "source_references": 2,
+   "next_actions": [],
+   "next_action_policy": "SOURCE_RELATED_CORRECTION_OR_REUSE",
    "lineage_state": "BOUND_EXACT",
+   "verification_state": "SOURCES_LISTED",
+   "public_sources_listed": 2,
    "structured_data": [
     "BreadcrumbList"
    ],
@@ -1411,8 +2050,13 @@
    "visual_ids": [],
    "reading_ids": [],
    "measurement_ids": [],
+   "source_ids": [],
    "source_references": 1,
+   "next_actions": [],
+   "next_action_policy": "SOURCE_RELATED_CORRECTION_OR_REUSE",
    "lineage_state": "BOUND_EXACT",
+   "verification_state": "SOURCES_LISTED",
+   "public_sources_listed": 1,
    "structured_data": [
     "BreadcrumbList"
    ],
@@ -1436,8 +2080,13 @@
    "visual_ids": [],
    "reading_ids": [],
    "measurement_ids": [],
+   "source_ids": [],
    "source_references": 1,
+   "next_actions": [],
+   "next_action_policy": "SOURCE_RELATED_CORRECTION_OR_REUSE",
    "lineage_state": "BOUND_EXACT",
+   "verification_state": "ORIGINAL_NOT_PUBLIC",
+   "public_sources_listed": 0,
    "structured_data": [
     "BreadcrumbList"
    ],
@@ -1461,8 +2110,13 @@
    "visual_ids": [],
    "reading_ids": [],
    "measurement_ids": [],
+   "source_ids": [],
    "source_references": 4,
+   "next_actions": [],
+   "next_action_policy": "SOURCE_RELATED_CORRECTION_OR_REUSE",
    "lineage_state": "BOUND_EXACT",
+   "verification_state": "SOURCES_LISTED_SOME_WITHOUT_PUBLIC_LOCATOR",
+   "public_sources_listed": 1,
    "structured_data": [
     "BreadcrumbList"
    ],
@@ -1486,8 +2140,13 @@
    "visual_ids": [],
    "reading_ids": [],
    "measurement_ids": [],
+   "source_ids": [],
    "source_references": 4,
+   "next_actions": [],
+   "next_action_policy": "SOURCE_RELATED_CORRECTION_OR_REUSE",
    "lineage_state": "BOUND_PARTIAL",
+   "verification_state": "PARTIALLY_RESOLVED",
+   "public_sources_listed": 4,
    "structured_data": [
     "BreadcrumbList"
    ],
@@ -1511,8 +2170,13 @@
    "visual_ids": [],
    "reading_ids": [],
    "measurement_ids": [],
+   "source_ids": [],
    "source_references": 3,
+   "next_actions": [],
+   "next_action_policy": "SOURCE_RELATED_CORRECTION_OR_REUSE",
    "lineage_state": "BOUND_EXACT",
+   "verification_state": "SOURCES_LISTED",
+   "public_sources_listed": 3,
    "structured_data": [
     "BreadcrumbList"
    ],
@@ -1536,8 +2200,13 @@
    "visual_ids": [],
    "reading_ids": [],
    "measurement_ids": [],
+   "source_ids": [],
    "source_references": 2,
+   "next_actions": [],
+   "next_action_policy": "SOURCE_RELATED_CORRECTION_OR_REUSE",
    "lineage_state": "BOUND_EXACT",
+   "verification_state": "SOURCES_LISTED",
+   "public_sources_listed": 2,
    "structured_data": [
     "BreadcrumbList"
    ],
@@ -1561,8 +2230,13 @@
    "visual_ids": [],
    "reading_ids": [],
    "measurement_ids": [],
+   "source_ids": [],
    "source_references": 1,
+   "next_actions": [],
+   "next_action_policy": "SOURCE_RELATED_CORRECTION_OR_REUSE",
    "lineage_state": "BOUND_EXACT",
+   "verification_state": "SOURCES_LISTED",
+   "public_sources_listed": 1,
    "structured_data": [
     "BreadcrumbList"
    ],
@@ -1586,8 +2260,13 @@
    "visual_ids": [],
    "reading_ids": [],
    "measurement_ids": [],
+   "source_ids": [],
    "source_references": 1,
+   "next_actions": [],
+   "next_action_policy": "SOURCE_RELATED_CORRECTION_OR_REUSE",
    "lineage_state": "BOUND_EXACT",
+   "verification_state": "SOURCES_LISTED",
+   "public_sources_listed": 1,
    "structured_data": [
     "BreadcrumbList"
    ],
@@ -1611,8 +2290,13 @@
    "visual_ids": [],
    "reading_ids": [],
    "measurement_ids": [],
+   "source_ids": [],
    "source_references": 1,
+   "next_actions": [],
+   "next_action_policy": "SOURCE_RELATED_CORRECTION_OR_REUSE",
    "lineage_state": "BOUND_EXACT",
+   "verification_state": "SOURCES_LISTED",
+   "public_sources_listed": 1,
    "structured_data": [
     "BreadcrumbList"
    ],
@@ -1636,8 +2320,13 @@
    "visual_ids": [],
    "reading_ids": [],
    "measurement_ids": [],
+   "source_ids": [],
    "source_references": 1,
+   "next_actions": [],
+   "next_action_policy": "SOURCE_RELATED_CORRECTION_OR_REUSE",
    "lineage_state": "BOUND_EXACT",
+   "verification_state": "SOURCES_LISTED",
+   "public_sources_listed": 1,
    "structured_data": [
     "BreadcrumbList"
    ],
@@ -1661,8 +2350,13 @@
    "visual_ids": [],
    "reading_ids": [],
    "measurement_ids": [],
+   "source_ids": [],
    "source_references": 2,
+   "next_actions": [],
+   "next_action_policy": "SOURCE_RELATED_CORRECTION_OR_REUSE",
    "lineage_state": "BOUND_EXACT",
+   "verification_state": "SOURCES_LISTED",
+   "public_sources_listed": 2,
    "structured_data": [
     "BreadcrumbList"
    ],
@@ -1686,8 +2380,13 @@
    "visual_ids": [],
    "reading_ids": [],
    "measurement_ids": [],
+   "source_ids": [],
    "source_references": 4,
+   "next_actions": [],
+   "next_action_policy": "SOURCE_RELATED_CORRECTION_OR_REUSE",
    "lineage_state": "BOUND_EXACT",
+   "verification_state": "SOURCES_LISTED",
+   "public_sources_listed": 4,
    "structured_data": [
     "BreadcrumbList"
    ],
@@ -1711,8 +2410,13 @@
    "visual_ids": [],
    "reading_ids": [],
    "measurement_ids": [],
+   "source_ids": [],
    "source_references": 1,
+   "next_actions": [],
+   "next_action_policy": "SOURCE_RELATED_CORRECTION_OR_REUSE",
    "lineage_state": "BOUND_EXACT",
+   "verification_state": "SOURCES_LISTED",
+   "public_sources_listed": 1,
    "structured_data": [
     "BreadcrumbList"
    ],
@@ -1736,8 +2440,13 @@
    "visual_ids": [],
    "reading_ids": [],
    "measurement_ids": [],
+   "source_ids": [],
    "source_references": 2,
+   "next_actions": [],
+   "next_action_policy": "SOURCE_RELATED_CORRECTION_OR_REUSE",
    "lineage_state": "BOUND_PARTIAL",
+   "verification_state": "PARTIALLY_RESOLVED",
+   "public_sources_listed": 2,
    "structured_data": [
     "BreadcrumbList"
    ],
@@ -1761,8 +2470,13 @@
    "visual_ids": [],
    "reading_ids": [],
    "measurement_ids": [],
+   "source_ids": [],
    "source_references": 2,
+   "next_actions": [],
+   "next_action_policy": "SOURCE_RELATED_CORRECTION_OR_REUSE",
    "lineage_state": "BOUND_EXACT",
+   "verification_state": "SOURCES_LISTED",
+   "public_sources_listed": 2,
    "structured_data": [
     "BreadcrumbList"
    ],
@@ -1786,8 +2500,13 @@
    "visual_ids": [],
    "reading_ids": [],
    "measurement_ids": [],
+   "source_ids": [],
    "source_references": 1,
+   "next_actions": [],
+   "next_action_policy": "SOURCE_RELATED_CORRECTION_OR_REUSE",
    "lineage_state": "BOUND_EXACT",
+   "verification_state": "SOURCES_LISTED",
+   "public_sources_listed": 1,
    "structured_data": [
     "BreadcrumbList"
    ],
@@ -1811,8 +2530,13 @@
    "visual_ids": [],
    "reading_ids": [],
    "measurement_ids": [],
+   "source_ids": [],
    "source_references": 1,
+   "next_actions": [],
+   "next_action_policy": "SOURCE_RELATED_CORRECTION_OR_REUSE",
    "lineage_state": "BOUND_EXACT",
+   "verification_state": "SOURCES_LISTED",
+   "public_sources_listed": 1,
    "structured_data": [
     "BreadcrumbList"
    ],
@@ -1836,8 +2560,13 @@
    "visual_ids": [],
    "reading_ids": [],
    "measurement_ids": [],
+   "source_ids": [],
    "source_references": 1,
+   "next_actions": [],
+   "next_action_policy": "SOURCE_RELATED_CORRECTION_OR_REUSE",
    "lineage_state": "BOUND_EXACT",
+   "verification_state": "SOURCES_LISTED",
+   "public_sources_listed": 1,
    "structured_data": [
     "BreadcrumbList"
    ],
@@ -1861,8 +2590,13 @@
    "visual_ids": [],
    "reading_ids": [],
    "measurement_ids": [],
+   "source_ids": [],
    "source_references": 1,
+   "next_actions": [],
+   "next_action_policy": "SOURCE_RELATED_CORRECTION_OR_REUSE",
    "lineage_state": "BOUND_EXACT",
+   "verification_state": "SOURCES_LISTED",
+   "public_sources_listed": 1,
    "structured_data": [
     "BreadcrumbList"
    ],
@@ -1886,8 +2620,13 @@
    "visual_ids": [],
    "reading_ids": [],
    "measurement_ids": [],
+   "source_ids": [],
    "source_references": 0,
+   "next_actions": [],
+   "next_action_policy": "SOURCE_RELATED_CORRECTION_OR_REUSE",
    "lineage_state": "COMPOSITE_OF_OBJECTS",
+   "verification_state": "COMPOSITE_MEMBERS_NOT_LISTED",
+   "public_sources_listed": 0,
    "structured_data": [
     "BreadcrumbList"
    ],
@@ -1911,8 +2650,13 @@
    "visual_ids": [],
    "reading_ids": [],
    "measurement_ids": [],
+   "source_ids": [],
    "source_references": 3,
+   "next_actions": [],
+   "next_action_policy": "SOURCE_RELATED_CORRECTION_OR_REUSE",
    "lineage_state": "BOUND_EXACT",
+   "verification_state": "SOURCES_LISTED",
+   "public_sources_listed": 3,
    "structured_data": [
     "BreadcrumbList"
    ],
@@ -1936,8 +2680,13 @@
    "visual_ids": [],
    "reading_ids": [],
    "measurement_ids": [],
+   "source_ids": [],
    "source_references": 0,
+   "next_actions": [],
+   "next_action_policy": "SOURCE_RELATED_CORRECTION_OR_REUSE",
    "lineage_state": "COMPOSITE_OF_OBJECTS",
+   "verification_state": "COMPOSITE_OF_OBJECTS",
+   "public_sources_listed": 0,
    "structured_data": [
     "BreadcrumbList"
    ],
@@ -1961,8 +2710,13 @@
    "visual_ids": [],
    "reading_ids": [],
    "measurement_ids": [],
+   "source_ids": [],
    "source_references": 1,
+   "next_actions": [],
+   "next_action_policy": "SOURCE_RELATED_CORRECTION_OR_REUSE",
    "lineage_state": "BOUND_EXACT",
+   "verification_state": "SOURCES_LISTED",
+   "public_sources_listed": 1,
    "structured_data": [
     "BreadcrumbList"
    ],
@@ -1986,8 +2740,13 @@
    "visual_ids": [],
    "reading_ids": [],
    "measurement_ids": [],
+   "source_ids": [],
    "source_references": 10,
+   "next_actions": [],
+   "next_action_policy": "SOURCE_RELATED_CORRECTION_OR_REUSE",
    "lineage_state": "BOUND_EXACT",
+   "verification_state": "SOURCES_LISTED_SOME_WITHOUT_PUBLIC_LOCATOR",
+   "public_sources_listed": 4,
    "structured_data": [
     "BreadcrumbList"
    ],
@@ -2011,8 +2770,13 @@
    "visual_ids": [],
    "reading_ids": [],
    "measurement_ids": [],
+   "source_ids": [],
    "source_references": 1,
+   "next_actions": [],
+   "next_action_policy": "SOURCE_RELATED_CORRECTION_OR_REUSE",
    "lineage_state": "BOUND_EXACT",
+   "verification_state": "SOURCES_LISTED",
+   "public_sources_listed": 1,
    "structured_data": [
     "BreadcrumbList"
    ],
@@ -2036,8 +2800,13 @@
    "visual_ids": [],
    "reading_ids": [],
    "measurement_ids": [],
+   "source_ids": [],
    "source_references": 2,
+   "next_actions": [],
+   "next_action_policy": "SOURCE_RELATED_CORRECTION_OR_REUSE",
    "lineage_state": "BOUND_EXACT",
+   "verification_state": "SOURCES_LISTED",
+   "public_sources_listed": 2,
    "structured_data": [
     "BreadcrumbList"
    ],
@@ -2061,8 +2830,13 @@
    "visual_ids": [],
    "reading_ids": [],
    "measurement_ids": [],
+   "source_ids": [],
    "source_references": 1,
+   "next_actions": [],
+   "next_action_policy": "SOURCE_RELATED_CORRECTION_OR_REUSE",
    "lineage_state": "BOUND_EXACT",
+   "verification_state": "SOURCES_LISTED",
+   "public_sources_listed": 1,
    "structured_data": [
     "BreadcrumbList"
    ],
@@ -2086,8 +2860,13 @@
    "visual_ids": [],
    "reading_ids": [],
    "measurement_ids": [],
+   "source_ids": [],
    "source_references": 1,
+   "next_actions": [],
+   "next_action_policy": "SOURCE_RELATED_CORRECTION_OR_REUSE",
    "lineage_state": "BOUND_EXACT",
+   "verification_state": "SOURCES_LISTED",
+   "public_sources_listed": 1,
    "structured_data": [
     "BreadcrumbList"
    ],
@@ -2111,8 +2890,13 @@
    "visual_ids": [],
    "reading_ids": [],
    "measurement_ids": [],
+   "source_ids": [],
    "source_references": 1,
+   "next_actions": [],
+   "next_action_policy": "SOURCE_RELATED_CORRECTION_OR_REUSE",
    "lineage_state": "BOUND_EXACT",
+   "verification_state": "SOURCES_LISTED",
+   "public_sources_listed": 1,
    "structured_data": [
     "BreadcrumbList"
    ],
@@ -2136,8 +2920,13 @@
    "visual_ids": [],
    "reading_ids": [],
    "measurement_ids": [],
+   "source_ids": [],
    "source_references": 1,
+   "next_actions": [],
+   "next_action_policy": "SOURCE_RELATED_CORRECTION_OR_REUSE",
    "lineage_state": "BOUND_EXACT",
+   "verification_state": "SOURCES_LISTED",
+   "public_sources_listed": 1,
    "structured_data": [
     "BreadcrumbList"
    ],
@@ -2161,8 +2950,13 @@
    "visual_ids": [],
    "reading_ids": [],
    "measurement_ids": [],
+   "source_ids": [],
    "source_references": 1,
+   "next_actions": [],
+   "next_action_policy": "SOURCE_RELATED_CORRECTION_OR_REUSE",
    "lineage_state": "BOUND_EXACT",
+   "verification_state": "SOURCES_LISTED",
+   "public_sources_listed": 1,
    "structured_data": [
     "BreadcrumbList"
    ],
@@ -2188,8 +2982,13 @@
    ],
    "reading_ids": [],
    "measurement_ids": [],
+   "source_ids": [],
    "source_references": 1,
+   "next_actions": [],
+   "next_action_policy": "SOURCE_RELATED_CORRECTION_OR_REUSE",
    "lineage_state": "BOUND_EXACT",
+   "verification_state": "SOURCES_LISTED",
+   "public_sources_listed": 1,
    "structured_data": [
     "BreadcrumbList"
    ],
@@ -2213,8 +3012,13 @@
    "visual_ids": [],
    "reading_ids": [],
    "measurement_ids": [],
+   "source_ids": [],
    "source_references": 0,
+   "next_actions": [],
+   "next_action_policy": "SOURCE_RELATED_CORRECTION_OR_REUSE",
    "lineage_state": "COMPOSITE_OF_OBJECTS",
+   "verification_state": "COMPOSITE_OF_OBJECTS",
+   "public_sources_listed": 0,
    "structured_data": [
     "BreadcrumbList"
    ],
@@ -2238,8 +3042,13 @@
    "visual_ids": [],
    "reading_ids": [],
    "measurement_ids": [],
+   "source_ids": [],
    "source_references": 1,
+   "next_actions": [],
+   "next_action_policy": "SOURCE_RELATED_CORRECTION_OR_REUSE",
    "lineage_state": "BOUND_EXACT",
+   "verification_state": "SOURCES_LISTED",
+   "public_sources_listed": 1,
    "structured_data": [
     "BreadcrumbList"
    ],
@@ -2265,8 +3074,13 @@
    ],
    "reading_ids": [],
    "measurement_ids": [],
+   "source_ids": [],
    "source_references": 3,
+   "next_actions": [],
+   "next_action_policy": "SOURCE_RELATED_CORRECTION_OR_REUSE",
    "lineage_state": "BOUND_EXACT",
+   "verification_state": "SOURCES_LISTED",
+   "public_sources_listed": 3,
    "structured_data": [
     "BreadcrumbList"
    ],
@@ -2292,8 +3106,13 @@
    ],
    "reading_ids": [],
    "measurement_ids": [],
+   "source_ids": [],
    "source_references": 0,
+   "next_actions": [],
+   "next_action_policy": "SOURCE_RELATED_CORRECTION_OR_REUSE",
    "lineage_state": "COMPOSITE_OF_OBJECTS",
+   "verification_state": "COMPOSITE_MEMBERS_NOT_LISTED",
+   "public_sources_listed": 0,
    "structured_data": [
     "BreadcrumbList"
    ],
@@ -2319,8 +3138,13 @@
    ],
    "reading_ids": [],
    "measurement_ids": [],
+   "source_ids": [],
    "source_references": 0,
+   "next_actions": [],
+   "next_action_policy": "SOURCE_RELATED_CORRECTION_OR_REUSE",
    "lineage_state": "COMPOSITE_OF_OBJECTS",
+   "verification_state": "COMPOSITE_MEMBERS_NOT_LISTED",
+   "public_sources_listed": 0,
    "structured_data": [
     "BreadcrumbList"
    ],
@@ -2346,8 +3170,13 @@
    ],
    "reading_ids": [],
    "measurement_ids": [],
+   "source_ids": [],
    "source_references": 0,
+   "next_actions": [],
+   "next_action_policy": "SOURCE_RELATED_CORRECTION_OR_REUSE",
    "lineage_state": "COMPOSITE_OF_OBJECTS",
+   "verification_state": "COMPOSITE_MEMBERS_NOT_LISTED",
+   "public_sources_listed": 0,
    "structured_data": [
     "BreadcrumbList"
    ],
@@ -2373,8 +3202,13 @@
    ],
    "reading_ids": [],
    "measurement_ids": [],
+   "source_ids": [],
    "source_references": 2,
+   "next_actions": [],
+   "next_action_policy": "SOURCE_RELATED_CORRECTION_OR_REUSE",
    "lineage_state": "BOUND_EXACT",
+   "verification_state": "SOURCES_LISTED",
+   "public_sources_listed": 2,
    "structured_data": [
     "BreadcrumbList"
    ],
@@ -2398,8 +3232,13 @@
    "visual_ids": [],
    "reading_ids": [],
    "measurement_ids": [],
+   "source_ids": [],
    "source_references": 1,
+   "next_actions": [],
+   "next_action_policy": "SOURCE_RELATED_CORRECTION_OR_REUSE",
    "lineage_state": "BOUND_EXACT",
+   "verification_state": "SOURCES_LISTED",
+   "public_sources_listed": 1,
    "structured_data": [
     "BreadcrumbList"
    ],
@@ -2423,8 +3262,13 @@
    "visual_ids": [],
    "reading_ids": [],
    "measurement_ids": [],
+   "source_ids": [],
    "source_references": 1,
+   "next_actions": [],
+   "next_action_policy": "SOURCE_RELATED_CORRECTION_OR_REUSE",
    "lineage_state": "BOUND_EXACT",
+   "verification_state": "SOURCES_LISTED",
+   "public_sources_listed": 1,
    "structured_data": [
     "BreadcrumbList"
    ],
@@ -2448,8 +3292,13 @@
    "visual_ids": [],
    "reading_ids": [],
    "measurement_ids": [],
+   "source_ids": [],
    "source_references": 1,
+   "next_actions": [],
+   "next_action_policy": "SOURCE_RELATED_CORRECTION_OR_REUSE",
    "lineage_state": "BOUND_EXACT",
+   "verification_state": "SOURCES_LISTED",
+   "public_sources_listed": 1,
    "structured_data": [
     "BreadcrumbList"
    ],
@@ -2475,8 +3324,13 @@
    ],
    "reading_ids": [],
    "measurement_ids": [],
+   "source_ids": [],
    "source_references": 1,
+   "next_actions": [],
+   "next_action_policy": "SOURCE_RELATED_CORRECTION_OR_REUSE",
    "lineage_state": "BOUND_EXACT",
+   "verification_state": "SOURCES_LISTED",
+   "public_sources_listed": 1,
    "structured_data": [
     "BreadcrumbList"
    ],
@@ -2500,8 +3354,13 @@
    "visual_ids": [],
    "reading_ids": [],
    "measurement_ids": [],
+   "source_ids": [],
    "source_references": 2,
+   "next_actions": [],
+   "next_action_policy": "SOURCE_RELATED_CORRECTION_OR_REUSE",
    "lineage_state": "BOUND_EXACT",
+   "verification_state": "SOURCES_LISTED",
+   "public_sources_listed": 2,
    "structured_data": [
     "BreadcrumbList"
    ],
@@ -2525,8 +3384,13 @@
    "visual_ids": [],
    "reading_ids": [],
    "measurement_ids": [],
+   "source_ids": [],
    "source_references": 1,
+   "next_actions": [],
+   "next_action_policy": "SOURCE_RELATED_CORRECTION_OR_REUSE",
    "lineage_state": "BOUND_EXACT",
+   "verification_state": "SOURCES_LISTED",
+   "public_sources_listed": 1,
    "structured_data": [
     "BreadcrumbList"
    ],
@@ -2550,8 +3414,13 @@
    "visual_ids": [],
    "reading_ids": [],
    "measurement_ids": [],
+   "source_ids": [],
    "source_references": 1,
+   "next_actions": [],
+   "next_action_policy": "SOURCE_RELATED_CORRECTION_OR_REUSE",
    "lineage_state": "BOUND_EXACT",
+   "verification_state": "SOURCES_LISTED",
+   "public_sources_listed": 1,
    "structured_data": [
     "BreadcrumbList"
    ],
@@ -2577,8 +3446,13 @@
    ],
    "reading_ids": [],
    "measurement_ids": [],
+   "source_ids": [],
    "source_references": 1,
+   "next_actions": [],
+   "next_action_policy": "SOURCE_RELATED_CORRECTION_OR_REUSE",
    "lineage_state": "BOUND_EXACT",
+   "verification_state": "SOURCES_LISTED",
+   "public_sources_listed": 1,
    "structured_data": [
     "BreadcrumbList"
    ],
@@ -2604,8 +3478,13 @@
    ],
    "reading_ids": [],
    "measurement_ids": [],
+   "source_ids": [],
    "source_references": 1,
+   "next_actions": [],
+   "next_action_policy": "SOURCE_RELATED_CORRECTION_OR_REUSE",
    "lineage_state": "BOUND_EXACT",
+   "verification_state": "SOURCES_LISTED",
+   "public_sources_listed": 1,
    "structured_data": [
     "BreadcrumbList"
    ],
@@ -2631,8 +3510,13 @@
    ],
    "reading_ids": [],
    "measurement_ids": [],
+   "source_ids": [],
    "source_references": 1,
+   "next_actions": [],
+   "next_action_policy": "SOURCE_RELATED_CORRECTION_OR_REUSE",
    "lineage_state": "BOUND_EXACT",
+   "verification_state": "SOURCES_LISTED",
+   "public_sources_listed": 1,
    "structured_data": [
     "BreadcrumbList"
    ],
@@ -2658,8 +3542,13 @@
    ],
    "reading_ids": [],
    "measurement_ids": [],
+   "source_ids": [],
    "source_references": 5,
+   "next_actions": [],
+   "next_action_policy": "SOURCE_RELATED_CORRECTION_OR_REUSE",
    "lineage_state": "BOUND_EXACT",
+   "verification_state": "SOURCES_LISTED",
+   "public_sources_listed": 5,
    "structured_data": [
     "BreadcrumbList"
    ],
@@ -2685,8 +3574,13 @@
    ],
    "reading_ids": [],
    "measurement_ids": [],
+   "source_ids": [],
    "source_references": 0,
+   "next_actions": [],
+   "next_action_policy": "SOURCE_RELATED_CORRECTION_OR_REUSE",
    "lineage_state": "COMPOSITE_OF_OBJECTS",
+   "verification_state": "COMPOSITE_MEMBERS_NOT_LISTED",
+   "public_sources_listed": 0,
    "structured_data": [
     "BreadcrumbList"
    ],
@@ -2712,8 +3606,13 @@
    ],
    "reading_ids": [],
    "measurement_ids": [],
+   "source_ids": [],
    "source_references": 0,
+   "next_actions": [],
+   "next_action_policy": "SOURCE_RELATED_CORRECTION_OR_REUSE",
    "lineage_state": "COMPOSITE_OF_OBJECTS",
+   "verification_state": "COMPOSITE_MEMBERS_NOT_LISTED",
+   "public_sources_listed": 0,
    "structured_data": [
     "BreadcrumbList"
    ],
@@ -2737,8 +3636,13 @@
    "visual_ids": [],
    "reading_ids": [],
    "measurement_ids": [],
+   "source_ids": [],
    "source_references": 2,
+   "next_actions": [],
+   "next_action_policy": "SOURCE_RELATED_CORRECTION_OR_REUSE",
    "lineage_state": "BOUND_EXACT",
+   "verification_state": "SOURCES_LISTED",
+   "public_sources_listed": 2,
    "structured_data": [
     "BreadcrumbList"
    ],
@@ -2762,8 +3666,13 @@
    "visual_ids": [],
    "reading_ids": [],
    "measurement_ids": [],
+   "source_ids": [],
    "source_references": 3,
+   "next_actions": [],
+   "next_action_policy": "SOURCE_RELATED_CORRECTION_OR_REUSE",
    "lineage_state": "BOUND_EXACT",
+   "verification_state": "SOURCES_LISTED",
+   "public_sources_listed": 3,
    "structured_data": [
     "BreadcrumbList"
    ],
@@ -2787,8 +3696,13 @@
    "visual_ids": [],
    "reading_ids": [],
    "measurement_ids": [],
+   "source_ids": [],
    "source_references": 17,
+   "next_actions": [],
+   "next_action_policy": "SOURCE_RELATED_CORRECTION_OR_REUSE",
    "lineage_state": "BOUND_EXACT",
+   "verification_state": "SOURCES_LISTED",
+   "public_sources_listed": 17,
    "structured_data": [
     "BreadcrumbList"
    ],
@@ -2814,8 +3728,13 @@
    ],
    "reading_ids": [],
    "measurement_ids": [],
+   "source_ids": [],
    "source_references": 4,
+   "next_actions": [],
+   "next_action_policy": "SOURCE_RELATED_CORRECTION_OR_REUSE",
    "lineage_state": "BOUND_EXACT",
+   "verification_state": "SOURCES_LISTED",
+   "public_sources_listed": 4,
    "structured_data": [
     "BreadcrumbList"
    ],
@@ -2841,8 +3760,13 @@
    ],
    "reading_ids": [],
    "measurement_ids": [],
+   "source_ids": [],
    "source_references": 1,
+   "next_actions": [],
+   "next_action_policy": "SOURCE_RELATED_CORRECTION_OR_REUSE",
    "lineage_state": "BOUND_EXACT",
+   "verification_state": "SOURCES_LISTED",
+   "public_sources_listed": 1,
    "structured_data": [
     "BreadcrumbList"
    ],
@@ -2868,8 +3792,13 @@
    ],
    "reading_ids": [],
    "measurement_ids": [],
+   "source_ids": [],
    "source_references": 11,
+   "next_actions": [],
+   "next_action_policy": "SOURCE_RELATED_CORRECTION_OR_REUSE",
    "lineage_state": "BOUND_EXACT",
+   "verification_state": "SOURCES_LISTED",
+   "public_sources_listed": 11,
    "structured_data": [
     "BreadcrumbList"
    ],
@@ -2895,8 +3824,13 @@
    ],
    "reading_ids": [],
    "measurement_ids": [],
+   "source_ids": [],
    "source_references": 11,
+   "next_actions": [],
+   "next_action_policy": "SOURCE_RELATED_CORRECTION_OR_REUSE",
    "lineage_state": "BOUND_EXACT",
+   "verification_state": "SOURCES_LISTED",
+   "public_sources_listed": 11,
    "structured_data": [
     "BreadcrumbList"
    ],
@@ -2922,8 +3856,13 @@
    ],
    "reading_ids": [],
    "measurement_ids": [],
+   "source_ids": [],
    "source_references": 11,
+   "next_actions": [],
+   "next_action_policy": "SOURCE_RELATED_CORRECTION_OR_REUSE",
    "lineage_state": "BOUND_EXACT",
+   "verification_state": "SOURCES_LISTED",
+   "public_sources_listed": 11,
    "structured_data": [
     "BreadcrumbList"
    ],
@@ -2949,8 +3888,13 @@
    ],
    "reading_ids": [],
    "measurement_ids": [],
+   "source_ids": [],
    "source_references": 10,
+   "next_actions": [],
+   "next_action_policy": "SOURCE_RELATED_CORRECTION_OR_REUSE",
    "lineage_state": "BOUND_EXACT",
+   "verification_state": "SOURCES_LISTED",
+   "public_sources_listed": 10,
    "structured_data": [
     "BreadcrumbList"
    ],
@@ -2976,8 +3920,13 @@
    ],
    "reading_ids": [],
    "measurement_ids": [],
+   "source_ids": [],
    "source_references": 0,
+   "next_actions": [],
+   "next_action_policy": "SOURCE_RELATED_CORRECTION_OR_REUSE",
    "lineage_state": "COMPOSITE_OF_OBJECTS",
+   "verification_state": "COMPOSITE_MEMBERS_NOT_LISTED",
+   "public_sources_listed": 0,
    "structured_data": [
     "BreadcrumbList"
    ],
@@ -3001,8 +3950,13 @@
    "visual_ids": [],
    "reading_ids": [],
    "measurement_ids": [],
+   "source_ids": [],
    "source_references": 0,
+   "next_actions": [],
+   "next_action_policy": "SOURCE_RELATED_CORRECTION_OR_REUSE",
    "lineage_state": "COMPOSITE_OF_OBJECTS",
+   "verification_state": "COMPOSITE_OF_OBJECTS",
+   "public_sources_listed": 0,
    "structured_data": [
     "BreadcrumbList"
    ],
@@ -3028,8 +3982,13 @@
    ],
    "reading_ids": [],
    "measurement_ids": [],
+   "source_ids": [],
    "source_references": 2,
+   "next_actions": [],
+   "next_action_policy": "SOURCE_RELATED_CORRECTION_OR_REUSE",
    "lineage_state": "BOUND_EXACT",
+   "verification_state": "SOURCES_LISTED",
+   "public_sources_listed": 2,
    "structured_data": [
     "BreadcrumbList"
    ],
@@ -3055,8 +4014,13 @@
    ],
    "reading_ids": [],
    "measurement_ids": [],
+   "source_ids": [],
    "source_references": 2,
+   "next_actions": [],
+   "next_action_policy": "SOURCE_RELATED_CORRECTION_OR_REUSE",
    "lineage_state": "BOUND_EXACT",
+   "verification_state": "SOURCES_LISTED",
+   "public_sources_listed": 2,
    "structured_data": [
     "BreadcrumbList"
    ],
@@ -3082,8 +4046,13 @@
    ],
    "reading_ids": [],
    "measurement_ids": [],
+   "source_ids": [],
    "source_references": 0,
+   "next_actions": [],
+   "next_action_policy": "SOURCE_RELATED_CORRECTION_OR_REUSE",
    "lineage_state": "COMPOSITE_OF_OBJECTS",
+   "verification_state": "COMPOSITE_MEMBERS_NOT_LISTED",
+   "public_sources_listed": 0,
    "structured_data": [
     "BreadcrumbList"
    ],
@@ -3109,8 +4078,13 @@
    ],
    "reading_ids": [],
    "measurement_ids": [],
+   "source_ids": [],
    "source_references": 1,
+   "next_actions": [],
+   "next_action_policy": "SOURCE_RELATED_CORRECTION_OR_REUSE",
    "lineage_state": "BOUND_EXACT",
+   "verification_state": "SOURCES_LISTED",
+   "public_sources_listed": 1,
    "structured_data": [
     "BreadcrumbList"
    ],
@@ -3134,8 +4108,13 @@
    "visual_ids": [],
    "reading_ids": [],
    "measurement_ids": [],
+   "source_ids": [],
    "source_references": 3,
+   "next_actions": [],
+   "next_action_policy": "SOURCE_RELATED_CORRECTION_OR_REUSE",
    "lineage_state": "BOUND_EXACT",
+   "verification_state": "SOURCES_LISTED",
+   "public_sources_listed": 3,
    "structured_data": [
     "BreadcrumbList"
    ],
@@ -3173,8 +4152,32 @@
    ],
    "reading_ids": [],
    "measurement_ids": [],
+   "source_ids": [],
    "source_references": 19,
-   "lineage_state": null,
+   "next_actions": [
+    "/evidence/",
+    "/data/",
+    "/methodology/"
+   ],
+   "next_action_policy": "OPEN_SELECTED_EVIDENCE_RECORD",
+   "collection": {
+    "comparable_record_ids": [
+     "CLM-001",
+     "CLM-010",
+     "VIS-SOURCE-COMPARISON",
+     "CLM-041",
+     "CLM-044",
+     "CLM-051",
+     "CLM-054",
+     "CLM-056",
+     "CLM-032",
+     "CLM-033",
+     "CLM-035",
+     "CLM-037",
+     "FMIIP-BASELINE-2025-01"
+    ],
+    "rule": "Only these records can be compared (the Page Spec's governed set); entry into Compare from a record exists only on their pages"
+   },
    "structured_data": [],
    "hard_state_acceptance": [
     "compare_unlike"
@@ -3204,8 +4207,25 @@
     "MA-005",
     "MA-006"
    ],
+   "source_ids": [],
    "source_references": 0,
-   "lineage_state": null,
+   "next_actions": [],
+   "next_action_policy": "DOMAIN_ANSWER",
+   "collection": {
+    "question_ids": [
+     "QE-001",
+     "QE-002",
+     "QE-003",
+     "QE-004",
+     "QE-005",
+     "QE-006",
+     "QE-007",
+     "QE-008",
+     "QE-009",
+     "QE-010",
+     "QE-011"
+    ]
+   },
    "structured_data": [],
    "hard_state_acceptance": []
   },
@@ -3253,8 +4273,14 @@
     "MA-004",
     "MA-008"
    ],
+   "source_ids": [],
    "source_references": 38,
-   "lineage_state": null,
+   "next_actions": [],
+   "next_action_policy": "VERIFY_PRIMARY_EVIDENCE",
+   "presentation_contract": {
+    "measurement_limit": 2,
+    "presentation_family": "system-history"
+   },
    "structured_data": [],
    "hard_state_acceptance": []
   },
@@ -3294,8 +4320,14 @@
     "MA-004",
     "MA-008"
    ],
+   "source_ids": [],
    "source_references": 5,
-   "lineage_state": null,
+   "next_actions": [],
+   "next_action_policy": "VERIFY_PRIMARY_EVIDENCE",
+   "presentation_contract": {
+    "measurement_limit": 2,
+    "presentation_family": "bounded-survey-programme"
+   },
    "structured_data": [],
    "hard_state_acceptance": []
   },
@@ -3312,6 +4344,7 @@
    "title_ar": "تكتسب فجوة الدليل أهميتها عندما يمكن أن تغيّر قرارًا.",
    "sections": 19,
    "evidence_ids": [
+    "CLM-009",
     "VIS-EVIDENCE-GAPS"
    ],
    "visual_ids": [
@@ -3319,8 +4352,27 @@
    ],
    "reading_ids": [],
    "measurement_ids": [],
+   "source_ids": [],
    "source_references": 1,
-   "lineage_state": null,
+   "next_actions": [
+    "/explore/",
+    "/evidence/"
+   ],
+   "next_action_policy": "RETURN_TO_DOMAIN_OR_VERIFY_EVIDENCE",
+   "collection": {
+    "measurement_ids": [
+     "MA-001",
+     "MA-002",
+     "MA-003",
+     "MA-004",
+     "MA-005",
+     "MA-006",
+     "MA-007",
+     "MA-008",
+     "MA-009",
+     "MA-010"
+    ]
+   },
    "structured_data": [],
    "hard_state_acceptance": [
     "measurement_nonranking"
@@ -3360,8 +4412,14 @@
    "visual_ids": [],
    "reading_ids": [],
    "measurement_ids": [],
+   "source_ids": [],
    "source_references": 29,
-   "lineage_state": null,
+   "next_actions": [
+    "/evidence/",
+    "/data/",
+    "/corrections/"
+   ],
+   "next_action_policy": "CONTEXTUAL_NEXT_ACTION",
    "structured_data": [],
    "hard_state_acceptance": []
   },
@@ -3414,8 +4472,14 @@
     "MA-009",
     "MA-010"
    ],
+   "source_ids": [],
    "source_references": 31,
-   "lineage_state": null,
+   "next_actions": [],
+   "next_action_policy": "VERIFY_PRIMARY_EVIDENCE",
+   "presentation_contract": {
+    "measurement_limit": 2,
+    "presentation_family": "admin-infrastructure-use-boundary"
+   },
    "structured_data": [],
    "hard_state_acceptance": [
     "institutional_sequence",
@@ -3479,8 +4543,14 @@
     "MA-009",
     "MA-010"
    ],
+   "source_ids": [],
    "source_references": 23,
-   "lineage_state": null,
+   "next_actions": [],
+   "next_action_policy": "VERIFY_PRIMARY_EVIDENCE",
+   "presentation_contract": {
+    "measurement_limit": 2,
+    "presentation_family": "dense"
+   },
    "structured_data": [],
    "hard_state_acceptance": [
     "dense_domain"
@@ -3502,8 +4572,13 @@
    "visual_ids": [],
    "reading_ids": [],
    "measurement_ids": [],
+   "source_ids": [],
    "source_references": 0,
-   "lineage_state": null,
+   "next_actions": [
+    "/contact/",
+    "/terms/"
+   ],
+   "next_action_policy": "CONTEXTUAL_NEXT_ACTION",
    "structured_data": [],
    "hard_state_acceptance": []
   },
@@ -3542,8 +4617,14 @@
     "MA-005",
     "MA-007"
    ],
+   "source_ids": [],
    "source_references": 30,
-   "lineage_state": null,
+   "next_actions": [],
+   "next_action_policy": "VERIFY_PRIMARY_EVIDENCE",
+   "presentation_contract": {
+    "measurement_limit": 2,
+    "presentation_family": "authority-status-operation"
+   },
    "structured_data": [],
    "hard_state_acceptance": []
   },
@@ -3574,8 +4655,27 @@
     "CWR-010"
    ],
    "measurement_ids": [],
+   "source_ids": [],
    "source_references": 37,
-   "lineage_state": null,
+   "next_actions": [
+    "/measurement/",
+    "/evidence/"
+   ],
+   "next_action_policy": "OPEN_READING",
+   "collection": {
+    "reading_ids": [
+     "CWR-001",
+     "CWR-002",
+     "CWR-003",
+     "CWR-004",
+     "CWR-005",
+     "CWR-006",
+     "CWR-007",
+     "CWR-008",
+     "CWR-009",
+     "CWR-010"
+    ]
+   },
    "structured_data": [],
    "hard_state_acceptance": []
   },
@@ -3591,7 +4691,9 @@
    "title_en": "The payment arrived. What happened next?",
    "title_ar": "وصلت الدفعة. ماذا حدث بعدها؟",
    "sections": 6,
-   "evidence_ids": [],
+   "evidence_ids": [
+    "CLM-045"
+   ],
    "visual_ids": [
     "RV-CWR-010"
    ],
@@ -3600,9 +4702,15 @@
     "CWR-009",
     "CWR-010"
    ],
-   "measurement_ids": [],
+   "measurement_ids": [
+    "MA-009"
+   ],
+   "source_ids": [
+    "SRC-WB-G2PX-YEM-UCT-2024-001"
+   ],
    "source_references": 4,
-   "lineage_state": null,
+   "next_actions": [],
+   "next_action_policy": "VERIFY_BOUND_EVIDENCE_RECORDS",
    "structured_data": [
     "BreadcrumbList",
     "Article"
@@ -3621,7 +4729,10 @@
    "title_en": "When the baseline moves",
    "title_ar": "حين يتحرك خط الأساس",
    "sections": 6,
-   "evidence_ids": [],
+   "evidence_ids": [
+    "CLM-033",
+    "CLM-038"
+   ],
    "visual_ids": [
     "RV-CWR-002"
    ],
@@ -3631,8 +4742,14 @@
     "CWR-006"
    ],
    "measurement_ids": [],
+   "source_ids": [
+    "SRC-CBY-AR2022-001",
+    "SRC-CBY-AR2023-001",
+    "SRC-IMF-YEM-EGDDS-VAL-1996"
+   ],
    "source_references": 3,
-   "lineage_state": null,
+   "next_actions": [],
+   "next_action_policy": "VERIFY_BOUND_EVIDENCE_RECORDS",
    "structured_data": [
     "BreadcrumbList",
     "Article"
@@ -3651,7 +4768,16 @@
    "title_en": "When the unit changes, the story changes",
    "title_ar": "حين تتغير وحدة القياس، تتغير القصة",
    "sections": 6,
-   "evidence_ids": [],
+   "evidence_ids": [
+    "CLM-001",
+    "CLM-003",
+    "CLM-004",
+    "CLM-023",
+    "CLM-024",
+    "CLM-025",
+    "CLM-026",
+    "XW-FMIIP-005"
+   ],
    "visual_ids": [
     "RV-CWR-003"
    ],
@@ -3660,9 +4786,15 @@
     "CWR-005",
     "CWR-008"
    ],
-   "measurement_ids": [],
+   "measurement_ids": [
+    "MA-005"
+   ],
+   "source_ids": [
+    "SRC-WB-FINDEX-001"
+   ],
    "source_references": 9,
-   "lineage_state": null,
+   "next_actions": [],
+   "next_action_policy": "VERIFY_BOUND_EVIDENCE_RECORDS",
    "structured_data": [
     "BreadcrumbList",
     "Article"
@@ -3681,7 +4813,11 @@
    "title_en": "When does digital growth become durable use?",
    "title_ar": "متى يتحول النمو الرقمي إلى استخدام مستمر؟",
    "sections": 5,
-   "evidence_ids": [],
+   "evidence_ids": [
+    "CLM-050",
+    "CLM-051",
+    "CLM-052"
+   ],
    "visual_ids": [
     "RV-CWR-005"
    ],
@@ -3690,9 +4826,13 @@
     "CWR-009",
     "CWR-010"
    ],
-   "measurement_ids": [],
+   "measurement_ids": [
+    "MA-002"
+   ],
+   "source_ids": [],
    "source_references": 1,
-   "lineage_state": null,
+   "next_actions": [],
+   "next_action_policy": "VERIFY_BOUND_EVIDENCE_RECORDS",
    "structured_data": [
     "BreadcrumbList",
     "Article"
@@ -3711,7 +4851,14 @@
    "title_en": "How can 22% and 91.84% both be right?",
    "title_ar": "كيف تكون 22% و91.84% صحيحتين معًا؟",
    "sections": 7,
-   "evidence_ids": [],
+   "evidence_ids": [
+    "CLM-005",
+    "CLM-006",
+    "CLM-060",
+    "CLM-062",
+    "VIS-FIRM-CONSTRAINTS",
+    "VIS-FIRM-FINANCE-PATH"
+   ],
    "visual_ids": [
     "RV-CWR-008"
    ],
@@ -3720,9 +4867,13 @@
     "CWR-006",
     "CWR-008"
    ],
-   "measurement_ids": [],
+   "measurement_ids": [
+    "MA-004"
+   ],
+   "source_ids": [],
    "source_references": 2,
-   "lineage_state": null,
+   "next_actions": [],
+   "next_action_policy": "VERIFY_BOUND_EVIDENCE_RECORDS",
    "structured_data": [
     "BreadcrumbList",
     "Article"
@@ -3741,7 +4892,12 @@
    "title_en": "When does a payment reform become financial inclusion?",
    "title_ar": "متى يصبح إصلاح المدفوعات تحسنًا في الشمول المالي؟",
    "sections": 6,
-   "evidence_ids": [],
+   "evidence_ids": [
+    "CLM-003",
+    "CLM-004",
+    "CLM-018",
+    "XW-FMIIP-005"
+   ],
    "visual_ids": [
     "RV-CWR-009"
    ],
@@ -3750,9 +4906,13 @@
     "CWR-009",
     "CWR-010"
    ],
-   "measurement_ids": [],
+   "measurement_ids": [
+    "MA-010"
+   ],
+   "source_ids": [],
    "source_references": 10,
-   "lineage_state": null,
+   "next_actions": [],
+   "next_action_policy": "VERIFY_BOUND_EVIDENCE_RECORDS",
    "structured_data": [
     "BreadcrumbList",
     "Article"
@@ -3771,7 +4931,12 @@
    "title_en": "The gender gap is measured. Its explanation is still open.",
    "title_ar": "الفجوة بين النساء والرجال مقاسة. أما تفسيرها فما يزال مفتوحًا.",
    "sections": 4,
-   "evidence_ids": [],
+   "evidence_ids": [
+    "CLM-001",
+    "CLM-002",
+    "CLM-025",
+    "VIS-FINDEX-GAPS"
+   ],
    "visual_ids": [
     "RV-CWR-007"
    ],
@@ -3780,9 +4945,13 @@
     "CWR-005",
     "CWR-007"
    ],
-   "measurement_ids": [],
+   "measurement_ids": [
+    "MA-003"
+   ],
+   "source_ids": [],
    "source_references": 3,
-   "lineage_state": null,
+   "next_actions": [],
+   "next_action_policy": "VERIFY_BOUND_EVIDENCE_RECORDS",
    "structured_data": [
     "BreadcrumbList",
     "Article"
@@ -3801,7 +4970,13 @@
    "title_en": "What exactly do we mean by microfinance growth?",
    "title_ar": "ماذا نعني تحديدًا بنمو التمويل الأصغر؟",
    "sections": 7,
-   "evidence_ids": [],
+   "evidence_ids": [
+    "CLM-054",
+    "CLM-055",
+    "CLM-056",
+    "CLM-057",
+    "CLM-058"
+   ],
    "visual_ids": [
     "RV-CWR-006"
    ],
@@ -3811,8 +4986,13 @@
     "CWR-006"
    ],
    "measurement_ids": [],
+   "source_ids": [
+    "SRC-SANAA-MF-2020",
+    "SRC-WB-FSD-2024-001"
+   ],
    "source_references": 9,
-   "lineage_state": null,
+   "next_actions": [],
+   "next_action_policy": "VERIFY_BOUND_EVIDENCE_RECORDS",
    "structured_data": [
     "BreadcrumbList",
     "Article"
@@ -3831,7 +5011,12 @@
    "title_en": "The system is changing. What has reached people?",
    "title_ar": "المنظومة المالية تتغير. فما الذي وصل إلى الناس؟",
    "sections": 4,
-   "evidence_ids": [],
+   "evidence_ids": [
+    "CLM-001",
+    "CLM-003",
+    "CLM-018",
+    "CLM-025"
+   ],
    "visual_ids": [
     "RV-CWR-004"
    ],
@@ -3840,9 +5025,15 @@
     "CWR-004",
     "CWR-009"
    ],
-   "measurement_ids": [],
+   "measurement_ids": [
+    "MA-001"
+   ],
+   "source_ids": [
+    "SRC-IMF-YEM-SMP-2026"
+   ],
    "source_references": 12,
-   "lineage_state": null,
+   "next_actions": [],
+   "next_action_policy": "VERIFY_BOUND_EVIDENCE_RECORDS",
    "structured_data": [
     "BreadcrumbList",
     "Article"
@@ -3861,7 +5052,15 @@
    "title_en": "Same year, different number",
    "title_ar": "العام نفسه، رقم مختلف",
    "sections": 7,
-   "evidence_ids": [],
+   "evidence_ids": [
+    "CLM-032",
+    "CLM-036",
+    "CLM-037",
+    "CLM-041",
+    "CLM-042",
+    "CLM-043",
+    "CLM-044"
+   ],
    "visual_ids": [
     "RV-CWR-001"
    ],
@@ -3871,8 +5070,13 @@
     "CWR-004"
    ],
    "measurement_ids": [],
+   "source_ids": [
+    "SRC-CBY-AR2024-BOP",
+    "SRC-CBY-AR2025-BOP"
+   ],
    "source_references": 5,
-   "lineage_state": null,
+   "next_actions": [],
+   "next_action_policy": "VERIFY_BOUND_EVIDENCE_RECORDS",
    "structured_data": [
     "BreadcrumbList",
     "Article"
@@ -3926,8 +5130,14 @@
     "MA-009",
     "MA-010"
    ],
+   "source_ids": [],
    "source_references": 34,
-   "lineage_state": null,
+   "next_actions": [],
+   "next_action_policy": "VERIFY_PRIMARY_EVIDENCE",
+   "presentation_contract": {
+    "measurement_limit": 2,
+    "presentation_family": "transmission-state"
+   },
    "structured_data": [],
    "hard_state_acceptance": []
   },
@@ -3974,8 +5184,14 @@
    "measurement_ids": [
     "MA-001"
    ],
+   "source_ids": [],
    "source_references": 15,
-   "lineage_state": null,
+   "next_actions": [],
+   "next_action_policy": "VERIFY_PRIMARY_EVIDENCE",
+   "presentation_contract": {
+    "measurement_limit": 0,
+    "presentation_family": "macro-vintage-concept"
+   },
    "structured_data": [],
    "hard_state_acceptance": [
     "vintage_conflict"
@@ -3997,8 +5213,14 @@
    "visual_ids": [],
    "reading_ids": [],
    "measurement_ids": [],
+   "source_ids": [],
    "source_references": 0,
-   "lineage_state": null,
+   "next_actions": [
+    "/data/",
+    "/terms/",
+    "/contact/"
+   ],
+   "next_action_policy": "CONTEXTUAL_NEXT_ACTION",
    "structured_data": [],
    "hard_state_acceptance": []
   },
@@ -4018,8 +5240,14 @@
    "visual_ids": [],
    "reading_ids": [],
    "measurement_ids": [],
+   "source_ids": [],
    "source_references": 0,
-   "lineage_state": null,
+   "next_actions": [
+    "/rights/",
+    "/privacy/",
+    "/contact/"
+   ],
+   "next_action_policy": "CONTEXTUAL_NEXT_ACTION",
    "structured_data": [],
    "hard_state_acceptance": []
   }
@@ -4029,98 +5257,294 @@
    {
     "state_id": "dense_domain",
     "route": "/people/",
-    "must_prove": "High evidence density remains scannable; survey wave/fieldwork/universe/limitation are not detached from the headline figure."
+    "must_prove": "High evidence density remains scannable; survey wave/fieldwork/universe/limitation are not detached from the headline figure.",
+    "data_at_route": {
+     "page_family": "Domain Answer"
+    }
    },
    {
     "state_id": "sparse_unknown",
     "route": "/access/",
-    "must_prove": "Unknown geography is visibly unknown, not rendered as zero or an empty-map implication."
+    "must_prove": "Unknown geography is visibly unknown, not rendered as zero or an empty-map implication.",
+    "data_at_route": {
+     "page_family": "Domain Answer"
+    }
    },
    {
     "state_id": "institutional_sequence",
     "route": "/payments/",
-    "must_prove": "FPS, RTGS, interoperability, institution-building, operation, use and outcome are visually distinct states."
+    "must_prove": "FPS, RTGS, interoperability, institution-building, operation, use and outcome are visually distinct states.",
+    "data_at_route": {
+     "page_family": "Domain Answer"
+    }
    },
    {
     "state_id": "vintage_conflict",
     "route": "/remittances/",
-    "must_prove": "Same-year revisions and observed/estimated/projected states are visually legible without selecting a winner."
+    "must_prove": "Same-year revisions and observed/estimated/projected states are visually legible without selecting a winner.",
+    "data_at_route": {
+     "page_family": "Domain Answer"
+    }
    },
    {
     "state_id": "verification_dense",
     "route": "/evidence/CLM-003/",
-    "must_prove": "Raw totals and source-displayed percentages can coexist with the discrepancy visible and the limitation prominent."
+    "must_prove": "Raw totals and source-displayed percentages can coexist with the discrepancy visible and the limitation prominent.",
+    "data_at_route": {
+     "page_family": "Evidence Record",
+     "lineage_state": "BOUND_EXACT",
+     "verification_state": "SOURCES_LISTED",
+     "public_sources_listed": 3
+    }
    },
    {
     "state_id": "verification_sparse",
     "route": "/evidence/CLM-015/",
-    "must_prove": "A semantic/control object with no source expected is not styled as missing evidence or an error."
+    "must_prove": "A semantic/control object with no source expected is not styled as missing evidence or an error.",
+    "data_at_route": {
+     "page_family": "Evidence Record",
+     "lineage_state": "BOUND_EXACT",
+     "verification_state": "SOURCES_LISTED",
+     "public_sources_listed": 1
+    }
    },
    {
     "state_id": "compare_unlike",
     "route": "/evidence/compare/",
-    "must_prove": "The UI prevents visual pressure to compare unlike units/universes and makes the boundary the first conclusion."
+    "must_prove": "The UI prevents visual pressure to compare unlike units/universes and makes the boundary the first conclusion.",
+    "data_at_route": {
+     "page_family": "Comparison"
+    }
    },
    {
     "state_id": "source_scale",
     "route": "/data/",
-    "must_prove": "All source records remain discoverable without a wall-of-links interface; the curated resource cards are visibly curated, not a separate authority."
+    "must_prove": "All source records remain discoverable without a wall-of-links interface; the curated resource cards are visibly curated, not a separate authority.",
+    "data_at_route": {
+     "page_family": "Data & Source"
+    }
    },
    {
     "state_id": "reading_longform",
     "route": "/readings/same-year-different-number/",
-    "must_prove": "Analytical narrative remains bounded, readable and directly traceable to verification records."
+    "must_prove": "Analytical narrative remains bounded, readable and directly traceable to verification records.",
+    "data_at_route": {
+     "page_family": "Reading"
+    }
    },
    {
     "state_id": "measurement_nonranking",
     "route": "/measurement/",
-    "must_prove": "P0/P1 reads as evidence-sequencing within this agenda, never as national policy or spending priority."
+    "must_prove": "P0/P1 reads as evidence-sequencing within this agenda, never as national policy or spending priority.",
+    "data_at_route": {
+     "page_family": "Measurement"
+    }
    },
    {
     "state_id": "trust_plain_language",
     "route": "/about/",
-    "must_prove": "Purpose, CauseWay role, limits, source authority and correction are understandable without backend terminology."
+    "must_prove": "Purpose, CauseWay role, limits, source authority and correction are understandable without backend terminology.",
+    "data_at_route": {
+     "page_family": "Reference / Trust"
+    }
    },
    {
     "state_id": "mobile_rtl",
     "route": "/ar/payments/",
-    "must_prove": "At 320–400px Arabic order, numeric/Latin isolation, tables, controls and verification path remain coherent."
+    "must_prove": "At 320–400px Arabic order, numeric/Latin isolation, tables, controls and verification path remain coherent.",
+    "data_at_route": {
+     "page_family": "Domain Answer"
+    }
    }
   ],
   "evidence_lineage_states": {
-   "BOUND_EXACT": {
-    "records": 93,
-    "verification_copy_ui_id": "UI-VERIFY-BOUND",
-    "example_routes": [
-     "/en/evidence/CLM-001/",
-     "/en/evidence/CLM-002/",
-     "/en/evidence/CLM-003/"
+   "BOUND_EXACT": 93,
+   "BOUND_PARTIAL": 3,
+   "COMPOSITE_OF_OBJECTS": 13,
+   "FRAMING_NO_FACT": 1
+  },
+  "verification_states": {
+   "SOURCES_LISTED": {
+    "meaning": "Original sources listed, each with its source record and original link",
+    "ui_ids": [
+     "UI-EVID-OPEN-SOURCE-RECORD",
+     "UI-EVID-OPEN-ORIGINAL-SOURCE"
+    ],
+    "records": [
+     "CLM-001",
+     "CLM-002",
+     "CLM-003",
+     "CLM-005",
+     "CLM-006",
+     "CLM-007",
+     "CLM-008",
+     "CLM-009",
+     "CLM-010",
+     "CLM-011",
+     "CLM-012",
+     "CLM-013",
+     "CLM-015",
+     "CLM-016",
+     "CLM-017",
+     "CLM-018",
+     "CLM-019",
+     "CLM-020",
+     "CLM-021",
+     "CLM-022",
+     "CLM-023",
+     "CLM-024",
+     "CLM-025",
+     "CLM-026",
+     "CLM-027",
+     "CLM-028",
+     "CLM-029",
+     "CLM-030",
+     "CLM-032",
+     "CLM-033",
+     "CLM-034",
+     "CLM-035",
+     "CLM-036",
+     "CLM-037",
+     "CLM-038",
+     "CLM-040",
+     "CLM-041",
+     "CLM-042",
+     "CLM-043",
+     "CLM-047",
+     "CLM-048",
+     "CLM-049",
+     "CLM-050",
+     "CLM-051",
+     "CLM-052",
+     "CLM-053",
+     "CLM-054",
+     "CLM-055",
+     "CLM-057",
+     "CLM-058",
+     "CLM-059",
+     "CLM-060",
+     "CLM-062",
+     "DS-FCP-ARCH",
+     "DS-FINDEX-PUBLIC-HISTORY",
+     "FMIIP-BASELINE-2025-01",
+     "MF-ORIG-001+002",
+     "MFI-SPINE-2015-Q4",
+     "NEG-EW-011",
+     "PSE-011",
+     "QUAL-001",
+     "VIS-BORROWING-SOURCES-2014",
+     "VIS-CAPITAL-CONTEXT",
+     "VIS-DOMESTIC-REMITTANCE-PATH-2014",
+     "VIS-E-MONEY-RULE-STACK",
+     "VIS-FCP-REDRESS-PATH",
+     "VIS-FINDEX-ACCESS-USE",
+     "VIS-FINDEX-BARRIERS",
+     "VIS-FINDEX-FLOW-CHANNELS",
+     "VIS-FINDEX-GAPS",
+     "VIS-FINDEX-OBSERVED-WAVES",
+     "VIS-FINDEX-RESILIENCE",
+     "VIS-FINDEX-SAMPLE-SUPPORT",
+     "VIS-FIRM-CONSTRAINTS",
+     "VIS-FIRM-FINANCE-PATH",
+     "VIS-FIRM-FINANCE-SEVERITY",
+     "VIS-FL-EVIDENCE-LADDER",
+     "VIS-MFI-2014-PANEL",
+     "VIS-MFI-RUPTURE-LENS",
+     "VIS-MFI-SPINE",
+     "VIS-OECD-FCP-TIMELINE",
+     "VIS-PAYMENT-ANATOMY",
+     "VIS-PAYMENT-RAILS",
+     "VIS-POS-TERMINALS",
+     "VIS-POS-TRANSACTIONS",
+     "VIS-POS-VALUE",
+     "VIS-REMITTANCE-COST",
+     "VIS-REMITTANCE-MACRO",
+     "VIS-TARGET-RESULT-STATE",
+     "XW-FMIIP-005"
     ]
    },
-   "BOUND_PARTIAL": {
-    "records": 3,
-    "verification_copy_ui_id": "UI-VERIFY-PARTIAL",
-    "example_routes": [
-     "/en/evidence/CLM-039/",
-     "/en/evidence/CLM-046/",
-     "/en/evidence/CLM-056/"
+   "SOURCES_LISTED_SOME_WITHOUT_PUBLIC_LOCATOR": {
+    "meaning": "Sources listed; a note says some bound sources have no public locator (never named)",
+    "ui_ids": [
+     "UI-EVID-SOURCES-WITHOUT-LOCATOR"
+    ],
+    "records": [
+     "CLM-045",
+     "DS-QUAL-EVIDENCE"
+    ]
+   },
+   "PARTIALLY_RESOLVED": {
+    "meaning": "Sources listed, with the governed statement that some inputs are not yet linked to a source",
+    "ui_ids": [
+     "UI-VERIFY-PARTIAL"
+    ],
+    "records": [
+     "CLM-039",
+     "CLM-046",
+     "CLM-056"
     ]
    },
    "COMPOSITE_OF_OBJECTS": {
-    "records": 13,
-    "verification_copy_ui_id": "UI-VERIFY-COMPOSITE",
-    "example_routes": [
-     "/en/evidence/CLM-014/",
-     "/en/evidence/CLM-031/",
-     "/en/evidence/DS-DEMAND-VINTAGE-LENS/"
+    "meaning": "Member Evidence Records listed instead of sources, with the composite statement",
+    "ui_ids": [
+     "UI-EVID-MEMBERS-HEADING",
+     "UI-VERIFY-COMPOSITE"
+    ],
+    "records": [
+     "CLM-031",
+     "DS-FINDEX-HISTORY-CROSSWALK",
+     "VIS-DEMAND-VINTAGE-LADDER",
+     "VIS-PROVIDER-TIME"
+    ]
+   },
+   "COMPOSITE_MEMBERS_NOT_LISTED": {
+    "meaning": "A view that summarises other evidence whose members are not listed: statement only",
+    "ui_ids": [
+     "UI-VERIFY-COMPOSITE-UNLISTED"
+    ],
+    "records": [
+     "CLM-014",
+     "DS-DEMAND-VINTAGE-LENS",
+     "VIS-EVIDENCE-CLASS-LADDER",
+     "VIS-EVIDENCE-FRESHNESS",
+     "VIS-EVIDENCE-GAPS",
+     "VIS-INCLUSION-TRANSMISSION",
+     "VIS-MECHANISM-METRIC-BRIDGE",
+     "VIS-PROVIDER-OBSERVABILITY",
+     "VIS-SOURCE-COMPARISON"
     ]
    },
    "FRAMING_NO_FACT": {
-    "records": 1,
-    "verification_copy_ui_id": "UI-EVID-FRAMING",
-    "example_routes": [
-     "/en/evidence/CLM-004/"
+    "meaning": "A framing rule with no fact: no source is expected; must not look like missing evidence",
+    "ui_ids": [
+     "UI-EVID-FRAMING"
+    ],
+    "records": [
+     "CLM-004"
     ]
+   },
+   "SOURCE_NOT_YET_BOUND": {
+    "meaning": "No source bound yet: the governed unbound statement",
+    "ui_ids": [
+     "UI-EVID-UNBOUND"
+    ],
+    "records": []
+   },
+   "ORIGINAL_NOT_PUBLIC": {
+    "meaning": "Bound to a source with no public locator: no link and no name; the value may be withheld",
+    "ui_ids": [
+     "UI-EVID-NO-STANDALONE-PUBLIC-LOCATOR-IS"
+    ],
+    "records": [
+     "CLM-044"
+    ]
+   },
+   "NO_SOURCE_RECORD": {
+    "meaning": "No source record at all",
+    "ui_ids": [
+     "UI-EVID-THIS-RECORD-CURRENTLY-HAS-NO"
+    ],
+    "records": []
    }
   },
   "visual_tiers": {
@@ -4250,6 +5674,10 @@
     {
      "token": "NOMINAL",
      "ui_id": "UI-VIS-NOMINAL"
+    },
+    {
+     "token": "WITHHELD",
+     "ui_id": "UI-VIS-WITHHELD"
     }
    ]
   },
@@ -4263,6 +5691,11 @@
     "state_id": "compare_unknown_id",
     "how_to_reach": "/en/evidence/compare/?records=CLM-001,NOT-A-RECORD",
     "expected": "Technical input error naming the unknown reference"
+   },
+   {
+    "state_id": "compare_not_comparable_record",
+    "how_to_reach": "/en/evidence/compare/?records=CLM-001,CLM-003",
+    "expected": "A real record outside the comparable set: announced as not available for comparison here (a link error, not a finding)"
    },
    {
     "state_id": "compare_malformed",
@@ -4311,7 +5744,7 @@
    },
    {
     "state_id": "not_found",
-    "how_to_reach": "/en/no-such-page/",
+    "how_to_reach": "/404.html (a static host serves it for any unknown path; python3 -m http.server does not, so open it directly)",
     "expected": "Bilingual 404 (Arabic first), noindex, with routes back into the evidence"
    },
    {
@@ -4321,8 +5754,8 @@
    },
    {
     "state_id": "language_switch_state",
-    "how_to_reach": "/en/evidence/compare/?records=CLM-001,CLM-003 → switch language",
-    "expected": "Same route, query and hash in the other edition"
+    "how_to_reach": "/en/evidence/compare/?records=CLM-001,CLM-010 → switch language",
+    "expected": "Same route, query and hash in the other edition; the comparison is kept"
    }
   ]
  },

@@ -6,9 +6,9 @@
 
 Steps: snapshot current state (outside the repository) -> install staged Master -> regenerate every projection
 (scripts/generate_projections.py) -> rebind current-state control files (scripts/rebind_authority.py) -> build ->
-public-literal audit -> architecture diagrams -> repository manifest -> validator -> generator idempotence check
-(--check). Any failure restores the snapshot. New files must be tracked (git add) before the run so that the manifest
-classifies them.
+public-literal audit -> architecture diagrams -> handoff inventory (F9) -> repository manifest -> validator -> generator
+idempotence check (--check). Any failure restores the snapshot. New files must be tracked (git add) before the run so
+that the manifest classifies them.
 """
 import hashlib, json, os, re, shutil, subprocess, sys
 
@@ -84,6 +84,7 @@ def main():
                           ("build", ["python3", "scripts/build.py"]),
                           ("public_literal_audit", ["python3", "scripts/audit_public_literals.py"]),
                           ("architecture_diagrams", ["python3", "scripts/architecture_diagrams.py"]),   # P5: derived diagrams follow the inventory
+                          ("handoff_inventory", ["python3", "scripts/handoff_inventory.py"]),           # F9: the Design recipient's route and state map follows the build
                           ("repository_manifest", ["python3", "scripts/repository_manifest.py"]),       # F5: manifest follows the new authority hashes
                           ("validate", ["python3", "scripts/validate.py"]),
                           ("generator_idempotence", ["python3", "scripts/generate_projections.py", "--check"])]:

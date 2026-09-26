@@ -1,5 +1,26 @@
 # Repository Change Log
 
+## 2026-09-26 — F9 (part 1): clean-room corrections
+
+A cold recipient (a fresh agent with only a clone of `main`) followed `handoff/README_FIRST.md`, passed every command and
+could start D0 without asking; it reported 15 material and 10 editorial points where Design would have had to guess.
+Record: `audit/FINAL_CLEAN_ROOM_ACCEPTANCE.md` (written at the close of F9).
+- **Master (RF9).** The two language-switch labels still held in `scripts/build.py` moved unchanged into the governed
+  interface copy (`UI-LANG-SWITCH-NAME`, `UI-LANG-SWITCH-ACTION`); the rendered site is byte-identical.
+- **Inventory 1.1.** Collections of the index routes (comparable records, displayed and curated sources, chronology,
+  Readings, Measurement, questions), each route's next actions, each Reading's bindings, the verification state each
+  Evidence Record renders, the facts at every hard-state route, the presentation limit per domain route, and the role of
+  every projection file (render, via Page Spec, contract, reference only). The runner now rewrites it after every build.
+- **Visual grammar.** WITHHELD has a governed drawing rule; the narrow widths are 320 and 390 CSS px everywhere.
+- **Brief and criteria.** Precedence Master → projections → the two hand-maintained contracts → baseline, with the five
+  known contract disagreements and what to design to; the reference implementation builds to `design/reference/out/` and
+  is tested with `YFIE_SITE_DIR`; the test hooks listed; Compare's governed dimensions, assessments and comparable set; the
+  report path; the IBM Plex rule and packages; the date form; SUPPORTING visuals plot no values; named stress cases;
+  labels Design is expected to request, with a placeholder convention; delivery without push access.
+- **Tools.** The three suites take `YFIE_SITE_DIR`; the invariance check fails on an empty site directory; the repository
+  manifest and the validator's file scan work from an extracted archive without `.git`.
+- **Register.** 48 items (OWN-08 added for the navigation contract's stale fields); three items closed.
+
 ## 2026-09-26 — F8: R8.6 Design handoff freeze
 
 Record `audit/R8_6_DESIGN_HANDOFF_FREEZE_CLOSURE.md`; no Master change. State: **R8.6 FREEZE CANDIDATE — PENDING FINAL

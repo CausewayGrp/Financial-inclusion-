@@ -4,12 +4,14 @@ and Arabic (as multisets; Arabic-Indic digits and thousands separators normalise
 words are compared by value).
 
   python3 audit/tranche_c/checks/bilingual_invariance.py [out.json]
+  YFIE_SITE_DIR=design/reference/out python3 audit/tranche_c/checks/bilingual_invariance.py   (another built site)
 
 Exit status 1 when any page pair differs (BIL-05 closed by the F2 Reading integration, 26 Sep 2026: the target is zero).
 """
 import glob, html, json, os, re, sys
 from collections import Counter
 ROOT = os.path.abspath(os.path.join(os.path.dirname(__file__), "..", "..", ".."))
+SITE = os.path.join(ROOT, os.environ.get("YFIE_SITE_DIR") or "dist")   # F9: the reference implementation is tested unchanged
 AR = str.maketrans("٠١٢٣٤٥٦٧٨٩٫٬", "0123456789.,")
 # Arabic editorial number words that carry a figure (dual and singular forms, ordinals in titles): normalised, not flagged.
 AR_WORDS = [(r"ملياري دولار", " 2 مليار دولار"), (r"(?<![\d.])\s(ب?)(ال)?مليار دولار", r" \g<1>1 مليار دولار"),
@@ -41,7 +43,11 @@ def nums(path):
 
 def main():
     rows = []
-    for en in sorted(glob.glob(os.path.join(ROOT, "dist/en/**/index.html"), recursive=True)):
+    pages = sorted(glob.glob(os.path.join(SITE, "en", "**", "index.html"), recursive=True))
+    if not pages:                                   # an empty or wrong site directory is a failure, never a pass
+        print(f"BILINGUAL NUMERIC INVARIANCE: no English pages under {SITE}")
+        return 1
+    for en in pages:
         ar = en.replace(os.sep + "en" + os.sep, os.sep + "ar" + os.sep, 1)
         if not os.path.exists(ar):
             rows.append({"page": en, "issue": "no Arabic page"}); continue
@@ -52,7 +58,7 @@ def main():
     out = {"pairs_with_differences": len(rows), "rows": rows}
     if len(sys.argv) > 1:
         json.dump(out, open(sys.argv[1], "w"), ensure_ascii=False, indent=1)
-    print(f"BILINGUAL NUMERIC INVARIANCE: {len(rows)} page pairs with differing numbers")
+    print(f"BILINGUAL NUMERIC INVARIANCE: {len(rows)} page pairs with differing numbers ({len(pages)} pairs checked)")
     for r in rows[:40]:
         print(" ", r)
     return len(rows)

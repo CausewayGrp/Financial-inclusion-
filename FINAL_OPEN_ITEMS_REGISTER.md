@@ -4,11 +4,12 @@ Every item that remains open at the Design handoff, in exactly one class, with w
 and who owns it. **There are zero `DESIGN_BLOCKER` items**: each item below is either stated honestly on the page it
 affects, part of the scope Design and Code already receive, or needed only for public release.
 
-- **State:** R8.6 freeze (directive D7 §F8), 26 September 2026. Production Master `ed3c5796…`; Page Specs `2407cb4f…`
-  (full values in `README.md`). F9 finalises this register; later changes are appended, never rewritten.
+- **State:** final at the R8.6 clean-room acceptance (directive D7 §F9), 26 September 2026 (full authority hashes in
+  `README.md`). Built in F8; F9 added what the cold-recipient test found. Later changes are appended, never rewritten.
 - **Built from:** a sweep of every audit record that left an item open, deferred, held, carried or release-only (Tranche A
   and B queues, P1–P5, Tranche C, F3, F5, F6, F7), checked against the current repository bytes; 36 items were still
-  open, 23 had been closed or superseded later (section 8).
+  open, 23 had been closed or superseded later (section 8). F9's cold-recipient test (a fresh agent with only the
+  repository) added OWN-08 and closed three items (section 8).
 - **How Design uses it:** read it once; nothing here asks Design to invent content. Where an item touches a screen, design
   the honest state the page already has (a withheld value, a partial lineage, an undated title) and do not fill it.
 - **Class rule:** `ENGINEERING_AFTER_DESIGN` (Design specifies, Code implements after the Design package is accepted) ·
@@ -23,7 +24,7 @@ affects, part of the scope Design and Code already receive, or needed only for p
 | RELEASE_ONLY | 4 |
 | EXTERNAL_EVIDENCE_DEPENDENCY | 11 |
 | KNOWN_EVIDENCE_FRONTIER | 8 |
-| OWNER_INPUT | 7 |
+| OWNER_INPUT | 8 |
 | REJECTED / NO ACTION | 7 |
 | **DESIGN_BLOCKER** | **0** |
 
@@ -36,9 +37,9 @@ affects, part of the scope Design and Code already receive, or needed only for p
 | EAD-03 | Web-size derivatives of the 10,018,081-byte master logo (6250 × 6250 px), by exact downscaling of the unmodified file | Every page loads the master PNG (96–99 % of each cold page; `audit/SUSTAINABILITY_PRE_DESIGN_BASELINE.json`) | Sizes listed by Design in `design/08_ASSET_MAP.md`; exported by Code with the owner's approval; master file unchanged | Design (sizes), Code (export), owner (approval) | TOOL-02 |
 | EAD-04 | The reference footer whitens the logo with a CSS filter (`brightness(0) invert(1)`), which is a recolouring | Footer of every page | The production runtime uses no filter, blend or mask on the logo (Design prompt §8; acceptance criteria I); a reversed version only if the owner supplies one (OWN-06) | Design, Code | F8 |
 | EAD-05 | Presentation of the "Method & Measurement" navigation group (the reference header wraps it as a ragged inline row with a non-link label) | Header on all pages; mobile menu | Design decides grouping and prominence within the fixed labels and destinations (Design prompt §4.2) | Design | TOOL-25 |
-| EAD-06 | Tools still to build: entry into Compare from an Evidence Record with that record pre-selected; a mobile form of the four-column comparison; search facets and a `?q=` URL state | No Compare link on record pages; Compare reachable from `/evidence/compare/` only | Designed in `design/` (Design prompt §10), implemented with the 2–4 record URL contract unchanged | Design, Code | P2-F11, Tranche A A3 |
-| EAD-07 | A document-type filter on the source register | `/data/` offers a text filter only | If designed, it filters by the governed `document_label` / `document_label_ar` only (142 of 160 sources) and shows the 18 locator-only sources as "type not recorded" (Design prompt §10) | Design, Code | P2-F10 |
-| EAD-08 | IBM Plex Sans and IBM Plex Sans Arabic self-hosted and subset | The reference CSS names the families but ships no font files; readers without them installed see the fallback | Fonts packaged locally with a deliberate `font-display`; no font CDN (expectations §5) | Code | D7 §F8 |
+| EAD-06 | Tools still to build: entry into Compare from the pages of the 13 comparable records, with that record pre-selected; a mobile form of the four-column comparison; a result-type search facet and a `?q=` URL state (a domain facet needs a governed domain field first) | No Compare link on record pages; Compare reachable from `/evidence/compare/` only | Designed in `design/` (Design prompt §10), implemented with the 2–4 record URL contract unchanged; new labels requested as `NEEDS_CONTROLLED_CONTENT` | Design, Code | P2-F11, Tranche A A3 |
+| EAD-07 | A document-type filter on the source register | `/data/` offers a text filter only | If designed, it filters by the governed `document_label` / `document_label_ar` only (142 of the 151 displayed sources) and puts the other 9 in a governed "type not recorded" group (Design prompt §10) | Design, Code | P2-F10 |
+| EAD-08 | IBM Plex Sans and IBM Plex Sans Arabic self-hosted and subset | The baseline CSS names the families but ships no font files; readers without them installed see the fallback | Design self-hosts them in its reference implementation and Code in production, from `@ibm/plex-sans@1.1.0` and `@ibm/plex-sans-arabic@1.1.0` (OFL-1.1, licence shipped); no font CDN | Design, Code | D7 §F8 |
 | EAD-09 | Social images: `og:image` only when Design's per-family templates are generated at build time from governed text | Open Graph without image (F6, F8) | Templates in the Design package; generated at build; gate F6-G01 extended | Design, Code | F6 |
 | EAD-10 | Remeasure bytes and requests on the implemented site and on the release host; set budgets only then; no carbon figure or green claim before a named model is applied | Pre-design baseline only | `docs/SUSTAINABILITY_METHOD.md` rerun after implementation and after deployment | Code | F7 |
 
@@ -95,7 +96,8 @@ must never fill them with an estimate, a proxy or a colour.
 | OWN-04 | A reuse licence for CauseWay content (and, separately, for the code) | No licence file; downloads are designed in disabled and enabled states and do not ship | Downloads of CauseWay-generated files ship only after this decision |
 | OWN-05 | Stewardship decisions: maintenance resourcing, an analytics policy (none exists; no analytics ship), Digital Public Good gaps | `handoff/SUPPORT_AND_PARTNERSHIP_READINESS.md` (non-public) | Nothing public depends on it |
 | OWN-06 | A reversed (light-on-dark) logo, only if the design needs one | Not requested yet | Design places the canonical logo on a light field; no derived variant is made (EAD-04) |
-| OWN-07 | `/remittances/` shows no Measurement card although its Page Spec and the route inventory bind MA-001 (Tranche B bound MA-001 to give the route a measurement node): the reference build's presentation-depth contract sets `measurement_limit` 0 for this route only (the other seven domain routes use 2). The file is `site-src/content/presentation_priority.json`, a hand-maintained presentation contract that the repository manifest lists with the generated projections, which agents do not edit | `/remittances/` in the reference build; `handoff/ROUTE_CONTENT_AND_STATE_INVENTORY.json` lists MA-001 | The maintainer decides whether to raise the limit to 1 and how that file is classified; Design composes the domain family from the Page Spec and the inventory |
+| OWN-07 | `/remittances/` shows no Measurement card although its Page Spec and the route inventory bind MA-001 (Tranche B bound MA-001 to give the route a measurement node): the reference build's presentation-depth contract sets `measurement_limit` 0 for this route only (the other seven domain routes use 2). The file is `site-src/content/presentation_priority.json`, a hand-maintained presentation contract that the repository manifest lists with the generated projections, which agents do not edit | `/remittances/` in the reference build; `handoff/ROUTE_CONTENT_AND_STATE_INVENTORY.json` lists MA-001 | The maintainer decides whether to raise the limit to 1 (S03.3 set it to 0 when the route had no bound priority, before Tranche B bound MA-001) and how that file is classified; Design follows the contract as it stands and makes the Measurement slot collapse cleanly at 0 (brief §2) |
+| OWN-08 | Descriptive fields in `site-src/content/content/navigation_interaction.json` (hand-maintained) that disagree with governed copy or tested behaviour: `utilities.report_issue` (route `/corrections/`, «الإبلاغ عن مشكلة») vs the tested `/contact/?record=` and the governed «أبلغ عن مشكلة»; `breadcrumbs.Reading` (stable ID) vs the rendered governed title (decision PID-1); `interaction_tools.compare` (lists geography and unit) vs the six governed dimensions; two `hard_state_acceptance` sentences (`verification_sparse` "no source expected" on CLM-015, which has a source; `institutional_sequence` "interoperability" on `/payments/`, which carries no such state). Like `presentation_priority.json`, the file is maintained in place but listed with the generated projections | The rendered baseline follows governed copy and the tests | The maintainer corrects the five fields and decides how the two contracts are classified and edited; until then the Design brief §2 precedence table and §9.2 say exactly what to design to |
 
 ## 6. REJECTED / NO ACTION
 
@@ -116,7 +118,10 @@ sweep found none: every string Design needs is governed (`site-src/content/conte
 state it must draw exists in real data (`handoff/ROUTE_CONTENT_AND_STATE_INVENTORY.json`, twelve hard-state cases and
 fourteen technical states); every open item above either has an honest state on its page, is Design's or Code's own
 scope, or matters only at release. Anything Design finds missing is recorded in `design/ESCALATIONS.md` as
-`NEEDS_CONTROLLED_CONTENT` or `ESCALATE_TO_MASTER` and added here — never worked around.
+`NEEDS_CONTROLLED_CONTENT` or `ESCALATE_TO_MASTER` — never worked around — and the steward answers it Master-first and
+appends lasting items here. The labels Design is expected to request (brief §10) are expected work, not open items.
+F9 tested this with a cold recipient that had only the repository: it could start D0 without asking anything, and each
+contradiction it found was either fixed or given an explicit rule in the brief (`audit/FINAL_CLEAN_ROOM_ACCEPTANCE.md`).
 
 ## 8. Closed since first raised (so they are not reopened)
 
@@ -131,6 +136,9 @@ scope, or matters only at release. Anything Design finds missing is recorded in 
 | Viewport and RTL testing at 320–400 px (U-10 part) | Tranche C, 168/168 |
 | Held Tranche B page blocks PB-0160/0161, 0322, 0345, 0374, 0470, 0520, 0521, 0522, 0614 | P1.6, P4.2, P4.3 and F2 |
 | Literal-audit heuristic (U-14) and duplicate page contracts (U-15) | P1-D; R8.5 |
+| Two language-switch labels held as literals in `scripts/build.py` (F9 cold-recipient finding) | F9, transaction RF9: moved unchanged into the Master's interface copy (`UI-LANG-SWITCH-NAME`, `UI-LANG-SWITCH-ACTION`) |
+| WITHHELD used as a visual marker without a governed drawing rule (F9) | F9: grammar entry in the controlled visual contract input, regenerated |
+| Inventory without collection bindings, next actions or rendered verification states; hard-state cases without the facts at their route (F9) | F9: `scripts/handoff_inventory.py` schema 1.1 |
 | Navigation relabel and domain pages without Readings (Tranche A) | Tranche B Stage 4; gate RP-G04 |
 
 ## 9. Keeping this register

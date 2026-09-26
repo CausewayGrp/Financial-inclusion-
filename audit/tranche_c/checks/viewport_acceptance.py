@@ -2,6 +2,7 @@
 """Tranche C public-tool acceptance at 320, 390, 640 (≈ 200% zoom of 1280) and 1440 CSS px, in both languages.
 
   python3 audit/tranche_c/checks/viewport_acceptance.py [out.json]
+  YFIE_SITE_DIR=design/reference/out python3 audit/tranche_c/checks/viewport_acceptance.py   (another built site)
 
 Per page and width: horizontal page overflow; skip link first in tab order; every focusable element in <main> reachable;
 images without alt; headings present; reduced-motion media honoured (no smooth scroll when requested); image-off
@@ -9,7 +10,7 @@ images without alt; headings present; reduced-motion media honoured (no smooth s
 """
 import functools, http.server, json, os, socket, sys, threading
 ROOT = os.path.abspath(os.path.join(os.path.dirname(__file__), "..", "..", ".."))
-DIST = os.path.join(ROOT, "dist")
+DIST = os.path.join(ROOT, os.environ.get("YFIE_SITE_DIR") or "dist")   # F9: the reference implementation is tested unchanged
 PAGES = ["/", "/explore/", "/people/", "/payments/", "/remittances/", "/providers/", "/access/", "/finance/", "/firms/", "/reforms/",
          "/evidence/", "/evidence/CLM-001/", "/evidence/CLM-019/", "/evidence/VIS-PAYMENT-ANATOMY/", "/evidence/compare/", "/data/",
          "/readings/same-year-different-number/", "/readings/from-rail-to-result-missing-middle/", "/methodology/", "/measurement/", "/about/"]

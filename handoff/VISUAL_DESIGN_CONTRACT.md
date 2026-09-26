@@ -36,11 +36,15 @@ SIGNATURE and CORE_ANALYTICAL visuals also carry a **data contract**:
 |---|---|
 | SIGNATURE | Design these first: RV-CWR-001, RV-CWR-009 and VIS-PROVIDER-OBSERVABILITY. |
 | CORE_ANALYTICAL | Draw them in standard forms, using the grammar below. The three POS visuals form one small multiple. |
-| SUPPORTING | Optional. Until one is drawn, its governed text alternative is its complete content. |
+| SUPPORTING | No data contract. Render the governed text (its alternative is its complete content); optionally add a non-quantitative diagram built only from governed words and `UI-VIS-*` labels — no plotted value, axis or scale. Plotting values needs promotion Master-first. |
 | TABLE_TEXT_FIRST | Do not draw a chart; render the governed ordered text or table. Each entry states its promotion condition. |
 | RETIRE_FROM_DESIGN | Do not draw VIS-CAPITAL-CONTEXT; its data are governed as context only. |
 
 Counts per tier change when the Master changes; read `tier_counts`.
+
+An Evidence Record whose ID starts `VIS-` is a verification record, not a chart slot: where a visual has the same ID, the
+record verifies it; a `VIS-` record without a visual contract is never drawn as a chart. A record can outlive its visual:
+VIS-CAPITAL-CONTEXT is RETIRE_FROM_DESIGN as a visual and stays a public Evidence Record.
 
 ## 3. Rules that are not negotiable
 
@@ -60,7 +64,7 @@ Counts per tier change when the Master changes; read `tier_counts`.
    No red, amber or green is used. Nothing fades with age.
 3. **Breaks, gaps and disagreements are drawn, never repaired:**
    - BREAK_VINTAGE and BREAK_UNIVERSE stop the line.
-   - MISSING leaves a labelled gap, never a zero.
+   - MISSING leaves a labelled gap, never a zero; WITHHELD keeps the slot and shows the governed label instead of the value.
    - DISAGREEMENT puts the same neutral note mark on every flagged period.
    - SAME_YEAR_REVISION puts both values at one position on the axis.
 4. **The detached frame travels with the chart.** It carries:
@@ -79,7 +83,7 @@ Counts per tier change when the Master changes; read `tier_counts`.
    - Chains and ladders run top to bottom.
    - Digits are Western. IDs, currency codes and signed percentages are isolated left-to-right runs.
    - No right-pointing arrow glyph goes between numbers in Arabic.
-6. **Mobile.** Each contract states its 360 px form. Plot areas never scroll horizontally.
+6. **Mobile.** Each contract states its narrow form, proved at 320 and 390 CSS px. Plot areas never scroll horizontally.
 7. **The text alternative ships with every chart and stays true if the chart fails to load.** It consists of the alt
    text plus a table or ordered-text fallback with a caption, scoped headers, unit, universe and period.
 8. **Blockers stop a release, not a design.**
