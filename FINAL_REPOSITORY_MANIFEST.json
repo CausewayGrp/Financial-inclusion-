@@ -27,7 +27,7 @@
   "AUTHORITY_RULES": 1,
   "BUILD_AND_GATES": 15,
   "CURRENT_DOCUMENT": 10,
-  "CURRENT_PROGRAMME_RECORD": 48,
+  "CURRENT_PROGRAMME_RECORD": 49,
   "GENERATED_DIAGRAMS": 9,
   "GENERATED_LITERAL_CLOSURE": 1,
   "GENERATED_PROJECTION": 39,
@@ -38,7 +38,8 @@
   "RECIPIENT_HANDOFF": 11,
   "REPOSITORY_ENGINEERING": 9,
   "RUNTIME_SOURCE": 4,
-  "STANDING_POLICY": 5
+  "STANDING_POLICY": 5,
+  "VENDORED_FONTS": 27
  },
  "files": [
   {
@@ -427,6 +428,10 @@
   },
   {
    "path": "audit/final_integration/inputs/F9_COLD_RECIPIENT_RUN2.md",
+   "class": "CURRENT_PROGRAMME_RECORD"
+  },
+  {
+   "path": "audit/final_integration/inputs/F9_COLD_RECIPIENT_RUN3.md",
    "class": "CURRENT_PROGRAMME_RECORD"
   },
   {
@@ -2940,6 +2945,114 @@
   {
    "path": "site-src/styles.css",
    "class": "RUNTIME_SOURCE"
+  },
+  {
+   "path": "vendor/fonts/README.md",
+   "class": "VENDORED_FONTS"
+  },
+  {
+   "path": "vendor/fonts/ibm-plex-sans-arabic/IBMPlexSansArabic-Bold.woff2",
+   "class": "VENDORED_FONTS"
+  },
+  {
+   "path": "vendor/fonts/ibm-plex-sans-arabic/IBMPlexSansArabic-ExtraLight.woff2",
+   "class": "VENDORED_FONTS"
+  },
+  {
+   "path": "vendor/fonts/ibm-plex-sans-arabic/IBMPlexSansArabic-Light.woff2",
+   "class": "VENDORED_FONTS"
+  },
+  {
+   "path": "vendor/fonts/ibm-plex-sans-arabic/IBMPlexSansArabic-Medium.woff2",
+   "class": "VENDORED_FONTS"
+  },
+  {
+   "path": "vendor/fonts/ibm-plex-sans-arabic/IBMPlexSansArabic-Regular.woff2",
+   "class": "VENDORED_FONTS"
+  },
+  {
+   "path": "vendor/fonts/ibm-plex-sans-arabic/IBMPlexSansArabic-SemiBold.woff2",
+   "class": "VENDORED_FONTS"
+  },
+  {
+   "path": "vendor/fonts/ibm-plex-sans-arabic/IBMPlexSansArabic-Text.woff2",
+   "class": "VENDORED_FONTS"
+  },
+  {
+   "path": "vendor/fonts/ibm-plex-sans-arabic/IBMPlexSansArabic-Thin.woff2",
+   "class": "VENDORED_FONTS"
+  },
+  {
+   "path": "vendor/fonts/ibm-plex-sans-arabic/LICENSE.txt",
+   "class": "VENDORED_FONTS"
+  },
+  {
+   "path": "vendor/fonts/ibm-plex-sans/IBMPlexSans-Bold.woff2",
+   "class": "VENDORED_FONTS"
+  },
+  {
+   "path": "vendor/fonts/ibm-plex-sans/IBMPlexSans-BoldItalic.woff2",
+   "class": "VENDORED_FONTS"
+  },
+  {
+   "path": "vendor/fonts/ibm-plex-sans/IBMPlexSans-ExtraLight.woff2",
+   "class": "VENDORED_FONTS"
+  },
+  {
+   "path": "vendor/fonts/ibm-plex-sans/IBMPlexSans-ExtraLightItalic.woff2",
+   "class": "VENDORED_FONTS"
+  },
+  {
+   "path": "vendor/fonts/ibm-plex-sans/IBMPlexSans-Italic.woff2",
+   "class": "VENDORED_FONTS"
+  },
+  {
+   "path": "vendor/fonts/ibm-plex-sans/IBMPlexSans-Light.woff2",
+   "class": "VENDORED_FONTS"
+  },
+  {
+   "path": "vendor/fonts/ibm-plex-sans/IBMPlexSans-LightItalic.woff2",
+   "class": "VENDORED_FONTS"
+  },
+  {
+   "path": "vendor/fonts/ibm-plex-sans/IBMPlexSans-Medium.woff2",
+   "class": "VENDORED_FONTS"
+  },
+  {
+   "path": "vendor/fonts/ibm-plex-sans/IBMPlexSans-MediumItalic.woff2",
+   "class": "VENDORED_FONTS"
+  },
+  {
+   "path": "vendor/fonts/ibm-plex-sans/IBMPlexSans-Regular.woff2",
+   "class": "VENDORED_FONTS"
+  },
+  {
+   "path": "vendor/fonts/ibm-plex-sans/IBMPlexSans-SemiBold.woff2",
+   "class": "VENDORED_FONTS"
+  },
+  {
+   "path": "vendor/fonts/ibm-plex-sans/IBMPlexSans-SemiBoldItalic.woff2",
+   "class": "VENDORED_FONTS"
+  },
+  {
+   "path": "vendor/fonts/ibm-plex-sans/IBMPlexSans-Text.woff2",
+   "class": "VENDORED_FONTS"
+  },
+  {
+   "path": "vendor/fonts/ibm-plex-sans/IBMPlexSans-TextItalic.woff2",
+   "class": "VENDORED_FONTS"
+  },
+  {
+   "path": "vendor/fonts/ibm-plex-sans/IBMPlexSans-Thin.woff2",
+   "class": "VENDORED_FONTS"
+  },
+  {
+   "path": "vendor/fonts/ibm-plex-sans/IBMPlexSans-ThinItalic.woff2",
+   "class": "VENDORED_FONTS"
+  },
+  {
+   "path": "vendor/fonts/ibm-plex-sans/LICENSE.txt",
+   "class": "VENDORED_FONTS"
   }
  ]
 }

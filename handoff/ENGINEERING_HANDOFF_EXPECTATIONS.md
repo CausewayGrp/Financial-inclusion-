@@ -63,8 +63,10 @@ the owner sets `public_origin`, every URL becomes absolute and the sitemap is wr
   in `<script type="application/json">` blocks; escaped rendering or Trusted Types.
 - No analytics, tracking, cookies or accounts. Adding any needs an owner decision, bilingual Privacy page updates and,
   where required, consent — before it ships.
-- Fonts: IBM Plex Sans and IBM Plex Sans Arabic self-hosted from `@ibm/plex-sans@1.1.0` and `@ibm/plex-sans-arabic@1.1.0`
-  (OFL-1.1, licence shipped), subset, `font-display` chosen deliberately; no font CDN.
+- Fonts: IBM Plex Sans and IBM Plex Sans Arabic self-hosted from `vendor/fonts/` (unchanged files of `@ibm/plex-sans@1.1.0`
+  and `@ibm/plex-sans-arabic@1.1.0`, OFL-1.1, licence shipped), `font-display` chosen deliberately; no font CDN. The
+  licence reserves the name "Plex": use the files as shipped or IBM's own pre-split subsets; a self-made subset is an
+  owner decision (`vendor/fonts/README.md`).
 - Dates: the governed form (day, month name, year; Western digits) with the governed Arabic month names used by
   `source_date_text` in `scripts/build.py` — not a locale library's month names, which vary by region.
 - Logo: produce web-size derivatives of `site-src/assets/CauseWay_Master_Logo.png` at the sizes in

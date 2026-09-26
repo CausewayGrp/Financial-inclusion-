@@ -27,6 +27,7 @@ import discovery  # noqa: E402
 #   RENDER       — a direct input: render from it (the governed words, values and states on the page)
 #   VIA_SPEC     — its public content already reaches each page through the Page Spec; render the Page Spec's copy
 #   CONTRACT     — hand-maintained presentation or navigation contract (not generated from the Master; validated by it)
+#   STRUCTURE    — use its IDs and links only (for example which questions relate); its prose is English-only and not public
 #   REFERENCE    — not public: read it to understand the system, never render it (values reach pages only through Evidence
 #                  Records and the resolved rows in visuals/visual_design_contracts.json)
 PROJECTION_ROLES = OrderedDict([
@@ -56,7 +57,7 @@ PROJECTION_ROLES = OrderedDict([
     ("visuals/visual_design_contracts.json", "RENDER"),
     ("visuals/visual_library.json", "VIA_SPEC"),
     ("visuals/system_chronology.json", "RENDER"),
-    ("visuals/system_relationships.json", "RENDER"),
+    ("visuals/system_relationships.json", "STRUCTURE"),
 ] + [(f"data/{n}", "REFERENCE") for n in (
     "cby_monetary.json", "findex_baseline.json", "findex_codebook.json", "findex_history.json", "findex_subgroups.json",
     "firm_finance.json", "local_data_index.json", "mfi_data.json", "payments_data.json", "providers_data.json",
@@ -65,6 +66,7 @@ ROLE_RULES = OrderedDict([
     ("RENDER", "A direct input: render from it."),
     ("VIA_SPEC", "Its public content already reaches each page through the Page Spec; render the Page Spec's copy, not this file."),
     ("CONTRACT", "Hand-maintained presentation or navigation contract, validated by the generator; where it disagrees with governed interface copy or with behaviour asserted by the test suites, those govern (Design brief §2)."),
+    ("STRUCTURE", "Use its IDs and links only (the baseline uses from/to to relate questions); its prose fields are English-only and never rendered."),
     ("REFERENCE", "Not public: read it to understand the system; never render it. Its values reach pages only through Evidence Records and the resolved rows in visuals/visual_design_contracts.json."),
 ])
 
@@ -152,7 +154,7 @@ def build():
     ui_by_en = {}
     for r in load(C / "content" / "interface_copy.json"):
         ui_by_en.setdefault(r.get("label_en"), r.get("ui_id"))
-    home_qs, explore_groups = baseline_question_sets(ui_by_en)
+    home_qs, explore_groups, question_dest = baseline_question_sets(ui_by_en)
 
     # Every projection file is classified.
     have = sorted(str(p.relative_to(C)) for p in C.rglob("*.json"))
@@ -175,7 +177,9 @@ def build():
         "/": OrderedDict([("featured_reading", ((next(s for s in specs if s["route"] == "/").get("featured_reading")) or {}).get("reading_id")),
                           ("starting_question_ids", home_qs),
                           ("rule", "Starting questions as the reference build shows them (R8.4A); Explore holds all of them")]),
-        "/explore/": OrderedDict([("question_ids", [q.get("question_id") for q in questions]), ("question_groups", explore_groups)]),
+        "/explore/": OrderedDict([("question_ids", [q.get("question_id") for q in questions]), ("question_groups", explore_groups),
+                                  ("question_destinations", question_dest),
+                                  ("rule", "Each question opens its answer route; QE-001 opens Home at #system, the anchor before VIS-INCLUSION-TRANSMISSION")]),
         "/evidence/": OrderedDict([("evidence_record_ids", evidence_routes)]),
         "/evidence/compare/": OrderedDict([("comparable_record_ids", comparable),
                                            ("rule", "Only these records can be compared (the Page Spec's governed set); entry into Compare from a record exists only on their pages")]),
@@ -277,7 +281,7 @@ def build():
             gstates[group] = [OrderedDict([("token", x["token"]), ("ui_id", x.get("ui_id"))]) for x in rows]
 
     doc = OrderedDict([
-        ("schema", "YFIE_ROUTE_CONTENT_AND_STATE_INVENTORY/1.2"),
+        ("schema", "YFIE_ROUTE_CONTENT_AND_STATE_INVENTORY/1.3"),
         ("purpose", "Design recipient's map of every route, its family, bindings, collections, next actions and the states Design must cover. Derived; not authority."),
         ("generated_from", OrderedDict([("production_master_sha256", sha(ROOT / "authority" / "Yemen_Financial_Inclusion_Evidence_Master.xlsx")),
                                         ("page_specs_sha256", sha(C / "page_specs.json")), ("generator", "scripts/handoff_inventory.py")])),
@@ -325,7 +329,7 @@ def visual_tokens(vis):
 def baseline_question_sets(ui_by_en):
     """Home's starting questions and Explore's clusters as the reference build renders them (R8.4A decision; the ID sets
     are held in scripts/build.py until the production runtime takes them from a governed contract — register EAD-11)."""
-    home, groups = [], []
+    home, groups, dest = [], [], OrderedDict()
     p = DIST / "en" / "index.html"
     if p.exists():
         t = p.read_text(encoding="utf-8")
@@ -338,7 +342,9 @@ def baseline_question_sets(ui_by_en):
             h = re.search(r"<h3>(.*?)</h3>", block, re.S)
             head = h.group(1).strip() if h else ""
             groups.append(OrderedDict([("heading_ui_id", ui_by_en.get(head)), ("question_ids", re.findall(r'data-question-id="([^"]+)"', block))]))
-    return home, groups
+        for qid, href in re.findall(r'<a class="question-card" data-question-id="([^"]+)" href="([^"]+)"', t):
+            dest[qid] = re.sub(r"^/en(/|$)", "/", href)
+    return home, groups, dest
 
 
 def discovery_public(src):

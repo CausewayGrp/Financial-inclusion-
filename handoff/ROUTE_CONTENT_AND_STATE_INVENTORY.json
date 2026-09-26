@@ -1,5 +1,5 @@
 {
- "schema": "YFIE_ROUTE_CONTENT_AND_STATE_INVENTORY/1.2",
+ "schema": "YFIE_ROUTE_CONTENT_AND_STATE_INVENTORY/1.3",
  "purpose": "Design recipient's map of every route, its family, bindings, collections, next actions and the states Design must cover. Derived; not authority.",
  "generated_from": {
   "production_master_sha256": "17db032b15da16fc4b5b3c3b49f19aebf2ecb4ec46634613fe8505d0f038690b",
@@ -26,6 +26,7 @@
    "RENDER": "A direct input: render from it.",
    "VIA_SPEC": "Its public content already reaches each page through the Page Spec; render the Page Spec's copy, not this file.",
    "CONTRACT": "Hand-maintained presentation or navigation contract, validated by the generator; where it disagrees with governed interface copy or with behaviour asserted by the test suites, those govern (Design brief §2).",
+   "STRUCTURE": "Use its IDs and links only (the baseline uses from/to to relate questions); its prose fields are English-only and never rendered.",
    "REFERENCE": "Not public: read it to understand the system; never render it. Its values reach pages only through Evidence Records and the resolved rows in visuals/visual_design_contracts.json."
   },
   "files": {
@@ -65,7 +66,7 @@
    "sources/source_library.json": "REFERENCE",
    "sources/source_reference_map.json": "RENDER",
    "visuals/system_chronology.json": "RENDER",
-   "visuals/system_relationships.json": "RENDER",
+   "visuals/system_relationships.json": "STRUCTURE",
    "visuals/visual_design_contracts.json": "RENDER",
    "visuals/visual_library.json": "VIA_SPEC"
   }
@@ -4386,7 +4387,21 @@
        "QE-011"
       ]
      }
-    ]
+    ],
+    "question_destinations": {
+     "QE-001": "/#system",
+     "QE-003": "/reforms/",
+     "QE-002": "/people/",
+     "QE-004": "/payments/",
+     "QE-007": "/remittances/",
+     "QE-009": "/access/",
+     "QE-005": "/firms/",
+     "QE-006": "/finance/",
+     "QE-008": "/providers/",
+     "QE-010": "/measurement/",
+     "QE-011": "/evidence/"
+    },
+    "rule": "Each question opens its answer route; QE-001 opens Home at #system, the anchor before VIS-INCLUSION-TRANSMISSION"
    },
    "structured_data": [],
    "hard_state_acceptance": []

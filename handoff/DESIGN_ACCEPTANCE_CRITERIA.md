@@ -106,8 +106,8 @@ and line, or a note. A line without evidence is not met. Nothing here is a WCAG 
 
 - [ ] The logo is the canonical file, unmodified, at specified sizes and clear space — no CSS filter, blend mode or mask
       changes its colours; required derivative sizes are listed for Code (`design/08_ASSET_MAP.md`).
-- [ ] IBM Plex Sans and IBM Plex Sans Arabic, self-hosted from `@ibm/plex-sans@1.1.0` and `@ibm/plex-sans-arabic@1.1.0`
-      with the licence shipped; any other IBM Plex family member has its written rationale; no other typeface.
+- [ ] IBM Plex Sans and IBM Plex Sans Arabic, self-hosted from `vendor/fonts/` with the licence shipped, files as
+      shipped; any other IBM Plex family member has its written rationale; no other typeface.
 - [ ] No third-party resource; fonts subset; no decorative imagery; per-family page weight recorded with the method in
       `docs/SUSTAINABILITY_METHOD.md`; no green claim.
 - [ ] Head elements kept: title, description, canonical, hreflang (en, ar, x-default), Open Graph without image,

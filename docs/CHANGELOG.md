@@ -1,5 +1,22 @@
 # Repository Change Log
 
+## 2026-09-26 — F9 (part 3): third cold-recipient run
+
+A third fresh agent, on a clone of `b3c8e87`, asked whether it could carry Design from D0 to D7 without a question or an
+invention; every command passed and it found no blocker, and 10 material points
+(`audit/final_integration/inputs/F9_COLD_RECIPIENT_RUN3.md`). No Master change.
+- **Fonts in the repository.** `vendor/fonts/`: the unchanged woff2 files and OFL licence of `@ibm/plex-sans@1.1.0` and
+  `@ibm/plex-sans-arabic@1.1.0`, with provenance and the Reserved-Font-Name rule; class `VENDORED_FONTS`.
+- **Visual contracts.** The POS charts' DISAGREEMENT note now comes from their own bilingual Evidence Records, not from a
+  non-public passport.
+- **Inventory 1.3.** Role STRUCTURE for the English-only relationships file; every question's destination (QE-001 lands
+  on Home at `#system`).
+- **Brief.** The Home evidence snapshot is Home section 3 as authored; governed text the baseline renders elsewhere
+  (question-list introductions, the Reading thesis); the workbench keeps the embedded site search; every bound visual on a
+  domain page has a place; chart-table and matrix headings and the matrix's English-only dated cells are pre-registered
+  requests; full status and alert roles in the hook contract.
+- **Register.** §7 restated precisely; three more items closed.
+
 ## 2026-09-26 — F9 (part 2): second cold-recipient run
 
 A second fresh agent, on a clone of `3adf224`, passed every command, verified `YFIE_SITE_DIR` by planting defects, and

@@ -168,6 +168,7 @@ git diff --stat checkpoint/tranche-c-complete-reading-hold -- authority site-src
 | [`scripts/`](scripts/) | Generator, build, literal audit, validator, rebind, checksums, tests | Directly, with the gates |
 | `dist/` | The generated public site, committed so every public change is reviewable | `scripts/build.py` only |
 | [`design/architecture/`](design/architecture/) | Diagrams derived from the navigation contract and inventory | `scripts/architecture_diagrams.py` |
+| [`vendor/fonts/`](vendor/fonts/README.md) | IBM Plex Sans and IBM Plex Sans Arabic (woff2, OFL), unchanged, for Design and Code; not loaded by the reference build | Replaced only by a newer unchanged release |
 | [`handoff/`](handoff/) | Design → Code recipient package, frozen in F8; start at [`handoff/README_FIRST.md`](handoff/README_FIRST.md) and execute only when its first line reads DESIGN HANDOFF READY | The programme only |
 | [`audit/`](audit/) | Closures, ledgers, transaction scripts and run reports, directives | Append only; history is not rewritten |
 | [`docs/`](docs/) | Changelog, deployment, repository protocol; S00–S06 records are lineage | Directly |

@@ -137,7 +137,7 @@ describe the system; they are not an instruction to show everything at once.
 
 | Family | Routes | Job |
 |---|---|---|
-| Orientation | `/` | Identity, the product's promise, four common starting questions (QE-002, QE-003, QE-005, QE-011 — the R8.4A decision, in the inventory at `/` → `collection.starting_question_ids`), one Featured Reading, a truthful evidence snapshot |
+| Orientation | `/` | Identity, the product's promise, four common starting questions (QE-002, QE-003, QE-005, QE-011 — the R8.4A decision, in the inventory at `/` → `collection.starting_question_ids`), one Featured Reading, the evidence snapshot (Home section 3, §4.4) |
 | Question Entry | `/explore/` | All eleven governed entry questions in the four clusters of the inventory (`/explore/` → `collection.question_groups`, headings `UI-QUESTIONS-*`); one "Go deeper / تعمّق في التحليل" Reading |
 | Domain Answer | `/people/ /firms/ /finance/ /providers/ /payments/ /remittances/ /access/ /reforms/` | The strongest bounded answer for a domain, its scope, boundary, unknowns, next measurement and verification path; at most two Readings |
 | Evidence Directory | `/evidence/` | Discovery into verification records; entry to Compare |
@@ -172,8 +172,23 @@ disclosure may reduce density; it may **never** hide a limitation that changes t
 ### 4.4 No universal dashboard
 
 No composite score, traffic light, "current state" gauge, ranked domain summary or KPI board: the evidence does not share
-one clock, unit, denominator or population. A compact **evidence snapshot** is allowed only when each signal visibly
-carries its own measure, unit, population, period and evidence state, and nothing implies an aggregate, rank or winner.
+one clock, unit, denominator or population. The Home **evidence snapshot** is Home's governed section 3 ("Three figures,
+three different things measured"), as authored: each figure already carries its measure, population and period in the
+governed text, with the three records it cites. Do not extract numbers from it into a figure strip, and do not add an
+evidence-state badge: records carry no governed unit or state label for that.
+
+### 4.5 Governed text the baseline renders elsewhere
+
+A few Page Spec sections introduce a component rather than stand alone; render each once, where it belongs:
+
+- Home sections 2 ("Start with the question, not the dataset") and 9 ("Questions to start from") and Explore section 5
+  ("Questions to start from") introduce the question lists; the baseline shows the lists under the governed headings
+  `UI-QUESTIONS-*` instead. Use one of them as the list's introduction or leave them out; none carries a number or a
+  limitation.
+- Each Reading's section 1 ("What the evidence supports") repeats the Reading's thesis word for word; the baseline shows
+  the thesis once, as the standfirst. Show it once.
+- Home's order in the baseline — identity, starting questions, section 3 with its records, sections 4–6, the system visual
+  at `#system` (where QE-001 lands), sections 7–8 — is a precedent, not a mandate; keep the `#system` anchor.
 
 ---
 
@@ -245,12 +260,11 @@ news-portal density · "data theatre".
   (`brightness(0) invert(1)` in `site-src/styles.css`): that is a recolouring and must not be carried forward. On a dark
   surface, place the logo on a light field with its clear space, or record a request for an owner-supplied reversed
   version (`FINAL_OPEN_ITEMS_REGISTER.md`, OWN-06) — never derive one by filter, blend or tracing.
-- **Typography.** Required: IBM Plex Sans (English) and IBM Plex Sans Arabic (Arabic), self-hosted from the npm packages
-  `@ibm/plex-sans@1.1.0` and `@ibm/plex-sans-arabic@1.1.0` (SIL Open Font License 1.1; `woff2` files in each package's
-  fonts/complete folder and subsets in fonts/split; ship the licence with the fonts). Install them into your reference
-  implementation (its own `package.json` under `design/reference/`); never load a font from a CDN. This is the one thing
-  the repository does not carry: it needs the npm registry once (if it is unreachable, ask the steward for the two
-  package files; the licence permits redistribution). Other members of the
+- **Typography.** Required: IBM Plex Sans (English) and IBM Plex Sans Arabic (Arabic), self-hosted from
+  `vendor/fonts/` (the `woff2` files of `@ibm/plex-sans@1.1.0` and `@ibm/plex-sans-arabic@1.1.0`, unchanged, with their
+  SIL Open Font License; provenance and rules in `vendor/fonts/README.md`). Copy them into your reference
+  implementation's output with the licence; never load a font from a CDN. Use the files as shipped: the licence reserves
+  the name "Plex", so a self-made subset is an owner decision. Other members of the
   IBM Plex family (Serif, Mono, Sans Condensed) may be added for a defined role with a written rationale; no typeface
   outside the family. Use weights deliberately; Arabic needs its own line height, size steps and heading rhythm, not
   English values mirrored. The baseline's fallbacks (Arial, Tahoma) are not the design.
@@ -328,8 +342,10 @@ All tools run on local packaged data; none may need a network call. Their accept
   anchor. The index loads only when Search opens. Still to build: a `?q=` URL state and a facet by result type (the
   type labels exist: `UI-JS-TYPE-*`). A facet by domain needs a governed domain field on search records, which does not
   exist: request it as `NEEDS_CONTROLLED_CONTENT` rather than inferring a domain from routes or text.
-- **Evidence workbench** (`/evidence/`): a filter before browse-all (the baseline has a text filter); rows reveal the
-  record's governed title, period or currentness, population and a limitation clue; never a wall of every record. The
+- **Evidence workbench** (`/evidence/`): the baseline embeds the site search on this page (input `global-search`;
+  results `.search-hit`; its failure state `#search-results .empty`) — keep it, the tests require it. A record filter, if
+  you add one, is a separate control. Rows reveal the record's governed title, period or currentness, population and a
+  limitation clue; never a wall of every record. The
   record's `object_class` is an internal enum and is not shown. Facets are optional: none has governed labels today, so a
   facet (by verification state, by domain) needs its heading and values requested as `NEEDS_CONTROLLED_CONTENT`.
   Add-to-Compare appears only on the 13 comparable records.
@@ -368,7 +384,10 @@ All tools run on local packaged data; none may need a network call. Their accept
 **Labels you will need that do not exist yet.** Request each in `design/ESCALATIONS.md` as `NEEDS_CONTROLLED_CONTENT`
 (both languages, one `UI-*` ID each); they are expected, not defects: the "compare this record" action; the result-type
 facet's heading and "all types"; any workbench facet's heading and values; the "type not recorded" source group; the
-download action and its unavailable, licence and file-format states; a reading-time line, only if you keep one. Until the steward adds a label Master-first,
+download action and its unavailable, licence and file-format states; a reading-time line, only if you keep one; the
+column headings of each chart's fallback table and the dimension headings of the VIS-PROVIDER-OBSERVABILITY matrix (the
+contracts name them in English prose only); and the bilingual form of that matrix's dated cells and its `>9` count,
+which are English free text today (`ESCALATE_TO_MASTER`). Until the steward adds a label Master-first,
 render its request key in a visibly marked placeholder (for example `⟦NCC:compare-this-record⟧`) and never ship invented
 wording; the steward adds labels in batches and appends them to `FINAL_OPEN_ITEMS_REGISTER.md`.
 
@@ -423,6 +442,11 @@ Tier counts are in `tier_counts`; the tier of every visual is in the inventory.
   contract resolves no rows, render the governed text only and request the rows (`ESCALATE_TO_MASTER`); never build the
   table from a reference file.
 - **Markers on one value.** WITHHELD takes precedence: the value is not shown, whatever other marker it carries.
+- **Several visuals on one domain page.** A domain route's Page Spec binds one to five visuals
+  (`allowed_visual_contract_ids`); the presentation contract places at most one in the first screen. Draw every other
+  bound visual in the page's depth, beside the section that discusses it, in its tier's form (TABLE_TEXT_FIRST as text,
+  SUPPORTING without plotted values). `/reforms/` places none first: VIS-PAYMENT-RAILS belongs beside the section on the
+  payment-infrastructure reform. The DISAGREEMENT note of the POS charts is the method text of their Evidence Records.
 - No chart without a contract row. No number, label, legend or sentence authored in Design: legends and states come from
   `UI-VIS-*`; axis, category, series, lane, unit and event text from each value's `<field>_label`.
 - Colour is never the only carrier; no red/amber/green; nothing fades with age. Breaks, gaps and disagreements are drawn,
@@ -562,7 +586,9 @@ every width, with every state reachable.
   `yfie-compare`, `yfie-compare-dimensions`, `yfie-record-ids`, and the meta tag `yfie-citation`; the skip link as the
   first focusable element with class exactly `skip`; a native `<dialog id="search-dialog">` with its input
   `global-search-dialog`; `<select>` elements for the Compare slots; the search index at `/static-data/search_index.json`;
-  one `<h1>`, `alt` on every image and `dir` on every page. The two test files are the authority: read them before D1.
+  one `<h1>`, `alt` on every image and `dir` on every page; the class `empty` for the search failure state; status regions
+  with `role="status"` and `aria-live`, link and input errors with `role="alert"`. The two test files are the authority:
+  read them before D1.
   The suites are not edited by Design: keep every hook. CI does not build your reference implementation, so paste each
   suite's output into `design/10_ACCEPTANCE_CHECKLIST.md`.
 - **What else it keeps.** The discovery head (§17), the JSON data blocks, the strict-CSP constraints (§18).

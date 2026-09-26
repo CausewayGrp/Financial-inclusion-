@@ -40,6 +40,7 @@ RULES = [
     ("GENERATED_DIAGRAMS", ["design/architecture/*"]),
     ("DESIGN_PACKAGE", ["design/*", "design/**/*"]),          # Claude Design's package and reference implementation (R8.6)
     ("RECIPIENT_HANDOFF", ["handoff/*"]),
+    ("VENDORED_FONTS", ["vendor/fonts/*", "vendor/fonts/**/*"]),   # IBM Plex woff2 + OFL licence, unchanged (F9)
     ("CURRENT_DOCUMENT", ["README.md", "CONTRIBUTING.md", "AGENTS.md", "CLAUDE.md", "OPENAI_REENTRY_CHECKPOINT.md",
                           "FINAL_OPEN_ITEMS_REGISTER.md", "docs/CHANGELOG.md", "docs/PRODUCTION_REPOSITORY_PROTOCOL.md",
                           "docs/DEPLOYMENT.md", "docs/SUSTAINABILITY_METHOD.md"]),

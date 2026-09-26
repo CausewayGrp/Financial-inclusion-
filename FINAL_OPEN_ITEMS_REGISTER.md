@@ -8,8 +8,8 @@ affects, part of the scope Design and Code already receive, or needed only for p
   `README.md`). Built in F8; F9 added what the cold-recipient test found. Later changes are appended, never rewritten.
 - **Built from:** a sweep of every audit record that left an item open, deferred, held, carried or release-only (Tranche A
   and B queues, P1–P5, Tranche C, F3, F5, F6, F7), checked against the current repository bytes; 36 items were still
-  open, 23 had been closed or superseded later (section 8). F9's two cold-recipient runs (fresh agents with only the
-  repository) added EAD-11 and OWN-08, widened EXT-10, and closed seven items (section 8).
+  open, 23 had been closed or superseded later (section 8). F9's three cold-recipient runs (fresh agents with only the
+  repository) added EAD-11 and OWN-08, widened EXT-10, and closed ten items (section 8).
 - **How Design uses it:** read it once; nothing here asks Design to invent content. Where an item touches a screen, design
   the honest state the page already has (a withheld value, a partial lineage, an undated title) and do not fill it.
 - **Class rule:** `ENGINEERING_AFTER_DESIGN` (Design specifies, Code implements after the Design package is accepted) ·
@@ -39,7 +39,7 @@ affects, part of the scope Design and Code already receive, or needed only for p
 | EAD-05 | Presentation of the "Method & Measurement" navigation group (the reference header wraps it as a ragged inline row with a non-link label) | Header on all pages; mobile menu | Design decides grouping and prominence within the fixed labels and destinations (Design prompt §4.2) | Design | TOOL-25 |
 | EAD-06 | Tools still to build: entry into Compare from the pages of the 13 comparable records, with that record pre-selected; a mobile form of the four-column comparison; a result-type search facet and a `?q=` URL state (a domain facet needs a governed domain field first) | No Compare link on record pages; Compare reachable from `/evidence/compare/` only | Designed in `design/` (Design prompt §10), implemented with the 2–4 record URL contract unchanged; new labels requested as `NEEDS_CONTROLLED_CONTENT` | Design, Code | P2-F11, Tranche A A3 |
 | EAD-07 | A document-type filter on the source register | `/data/` offers a text filter only | If designed, it filters by the governed `document_label` / `document_label_ar` only (142 of the 151 displayed sources) and puts the other 9 in a governed "type not recorded" group (Design prompt §10) | Design, Code | P2-F10 |
-| EAD-08 | IBM Plex Sans and IBM Plex Sans Arabic self-hosted and subset | The baseline CSS names the families but ships no font files; readers without them installed see the fallback | Design self-hosts them in its reference implementation and Code in production, from `@ibm/plex-sans@1.1.0` and `@ibm/plex-sans-arabic@1.1.0` (OFL-1.1, licence shipped); no font CDN | Design, Code | D7 §F8 |
+| EAD-08 | IBM Plex Sans and IBM Plex Sans Arabic self-hosted in the production runtime | The baseline CSS names the families but loads no font file (readers without them installed see the fallback); the files are in `vendor/fonts/` since F9 | Design self-hosts them in its reference implementation and Code in production, from `vendor/fonts/` with the licence, files as shipped (the licence reserves the name "Plex"); no font CDN | Design, Code | D7 §F8; F9 |
 | EAD-09 | Social images: `og:image` only when Design's per-family templates are generated at build time from governed text | Open Graph without image (F6, F8) | Templates in the Design package; generated at build; gate F6-G01 extended | Design, Code | F6 |
 | EAD-10 | Remeasure bytes and requests on the implemented site and on the release host; set budgets only then; no carbon figure or green claim before a named model is applied | Pre-design baseline only | `docs/SUSTAINABILITY_METHOD.md` rerun after implementation and after deployment | Code | F7 |
 | EAD-11 | Home's four starting questions and Explore's four question clusters (the R8.4A decision) are ID sets held in `scripts/build.py`, not in a governed contract | The inventory exposes them for Design (`/` and `/explore/` → `collection`); the cluster headings are governed `UI-QUESTIONS-*` labels | The production runtime takes the sets from a governed contract (Master or presentation contract), selection unchanged | Code, with the steward | F9 run 2 |
@@ -114,15 +114,23 @@ must never fill them with an estimate, a proxy or a colour.
 
 ## 7. What would have been a DESIGN_BLOCKER, and why none is
 
-A blocker is something without which Design would have to invent a factual premise, a label or a behaviour. The F8
-sweep found none: every string Design needs is governed (`site-src/content/content/interface_copy.json`); every evidence
-state it must draw exists in real data (`handoff/ROUTE_CONTENT_AND_STATE_INVENTORY.json`, twelve hard-state cases and
-fifteen technical states); every open item above either has an honest state on its page, is Design's or Code's own
-scope, or matters only at release. Anything Design finds missing is recorded in `design/ESCALATIONS.md` as
-`NEEDS_CONTROLLED_CONTENT` or `ESCALATE_TO_MASTER` — never worked around — and the steward answers it Master-first and
-appends lasting items here. The labels Design is expected to request (brief §10) are expected work, not open items.
-F9 tested this with a cold recipient that had only the repository: it could start D0 without asking anything, and each
-contradiction it found was either fixed or given an explicit rule in the brief (`audit/FINAL_CLEAN_ROOM_ACCEPTANCE.md`).
+A blocker is something without which Design could not proceed, or would have to invent a factual premise, a label or a
+behaviour. None remains:
+
+- Every string that exists on the product today is governed (`site-src/content/content/interface_copy.json` and the
+  navigation labels the generator writes from the Master). The strings Design will need for components that do not
+  exist yet, and for chart tables, are listed in the brief §10 as expected `NEEDS_CONTROLLED_CONTENT` requests, with a
+  marked-placeholder rule; the one content defect known in a signature visual (the English-only dated cells of the
+  VIS-PROVIDER-OBSERVABILITY matrix) is listed there as a pre-registered `ESCALATE_TO_MASTER`. The steward answers these
+  Master-first and appends lasting ones here.
+- Every evidence state Design must draw exists in real data (`handoff/ROUTE_CONTENT_AND_STATE_INVENTORY.json`: twelve
+  hard-state cases with the facts at their routes, nine verification states, fifteen technical states).
+- Every open item above either has an honest state on its page, is Design's or Code's own scope, or matters only at
+  release; where two sources in the repository disagree, the brief §2 says which governs.
+
+F9 tested this with three cold recipients, each with only a clone of `main` (`audit/FINAL_CLEAN_ROOM_ACCEPTANCE.md`). All
+three could start D0 without asking and every command passed; each run's contradictions and gaps were fixed or given an
+explicit rule before the next.
 
 ## 8. Closed since first raised (so they are not reopened)
 
@@ -143,6 +151,9 @@ contradiction it found was either fixed or given an explicit rule in the brief (
 | The Page Specs' editorial rule allowed "professional compression" without saying by whom (F9 run 2) | F9: controlled input `page_spec_templates.json` — governed wording is rendered as authored; only the programme compresses, Master-first |
 | A comparability flag rendered as an ungoverned UNKNOWN marker on two withheld VIS-PAYMENT-ANATOMY values (F9 run 2) | F9: marker mapping removed in the controlled visual contract input; WITHHELD governs those values |
 | Architecture diagrams named an external design tool, an analytics opt-in and `/readings/[reading_id]/` (F9 run 2) | F9: `scripts/architecture_diagrams.py` |
+| The required fonts were not in the repository (F9 runs 1–3) | F9: `vendor/fonts/` — unchanged woff2 files and licence of `@ibm/plex-sans@1.1.0` and `@ibm/plex-sans-arabic@1.1.0` |
+| The POS charts' DISAGREEMENT note pointed to a non-public, English-only Evidence Passport (F9 run 3) | F9: the controlled contract input points to the bilingual method text of the charts' own Evidence Records |
+| `visuals/system_relationships.json` was classed as a render input although its prose is English-only (F9 run 3) | F9: inventory role STRUCTURE — IDs and links only |
 | From an extracted archive, a locally built `design/reference/out/` would have entered the checksum and file manifests (F9 run 2) | F9: `scripts/checksums.py` honours `.gitignore` when there is no `.git`; the manifest and validator use the same file set |
 | Navigation relabel and domain pages without Readings (Tranche A) | Tranche B Stage 4; gate RP-G04 |
 
