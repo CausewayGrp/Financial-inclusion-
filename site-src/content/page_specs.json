@@ -4,7 +4,7 @@
   "page_specs": [
     {
       "page_spec_version": "1.0",
-      "authority_master_sha256": "69899ae26bd6606cc6d8da86d2c6a30317dbbeebc37480ad3cc11e2b36421699",
+      "authority_master_sha256": "2a7fd52bbe82d73faf562a395ccf40d78c84cd050735f3a5e89d39e767014549",
       "route": "/about/",
       "page_class": "static",
       "template_route": "/about",
@@ -201,7 +201,7 @@
     },
     {
       "page_spec_version": "1.0",
-      "authority_master_sha256": "69899ae26bd6606cc6d8da86d2c6a30317dbbeebc37480ad3cc11e2b36421699",
+      "authority_master_sha256": "2a7fd52bbe82d73faf562a395ccf40d78c84cd050735f3a5e89d39e767014549",
       "route": "/access/",
       "page_class": "static",
       "template_route": "/access",
@@ -1020,6 +1020,7 @@
             "/providers",
             "/explore"
           ],
+          "domain_ar": "مقدمو الخدمات / الجغرافيا",
           "affected_route_list": [
             "/access/",
             "/providers/",
@@ -1072,6 +1073,7 @@
             "/access",
             "/people"
           ],
+          "domain_ar": "الإصلاحات / المدفوعات / الجودة",
           "affected_route_list": [
             "/reforms/",
             "/payments/",
@@ -3952,7 +3954,7 @@
     },
     {
       "page_spec_version": "1.0",
-      "authority_master_sha256": "69899ae26bd6606cc6d8da86d2c6a30317dbbeebc37480ad3cc11e2b36421699",
+      "authority_master_sha256": "2a7fd52bbe82d73faf562a395ccf40d78c84cd050735f3a5e89d39e767014549",
       "route": "/accessibility/",
       "page_class": "operational",
       "template_route": "/accessibility",
@@ -4086,7 +4088,7 @@
     },
     {
       "page_spec_version": "1.0",
-      "authority_master_sha256": "69899ae26bd6606cc6d8da86d2c6a30317dbbeebc37480ad3cc11e2b36421699",
+      "authority_master_sha256": "2a7fd52bbe82d73faf562a395ccf40d78c84cd050735f3a5e89d39e767014549",
       "route": "/contact/",
       "page_class": "operational",
       "template_route": "/contact",
@@ -4211,7 +4213,7 @@
     },
     {
       "page_spec_version": "1.0",
-      "authority_master_sha256": "69899ae26bd6606cc6d8da86d2c6a30317dbbeebc37480ad3cc11e2b36421699",
+      "authority_master_sha256": "2a7fd52bbe82d73faf562a395ccf40d78c84cd050735f3a5e89d39e767014549",
       "route": "/corrections/",
       "page_class": "operational",
       "template_route": "/corrections",
@@ -4336,7 +4338,7 @@
     },
     {
       "page_spec_version": "1.0",
-      "authority_master_sha256": "69899ae26bd6606cc6d8da86d2c6a30317dbbeebc37480ad3cc11e2b36421699",
+      "authority_master_sha256": "2a7fd52bbe82d73faf562a395ccf40d78c84cd050735f3a5e89d39e767014549",
       "route": "/data/",
       "page_class": "static",
       "template_route": "/data",
@@ -4671,7 +4673,7 @@
     },
     {
       "page_spec_version": "1.0",
-      "authority_master_sha256": "69899ae26bd6606cc6d8da86d2c6a30317dbbeebc37480ad3cc11e2b36421699",
+      "authority_master_sha256": "2a7fd52bbe82d73faf562a395ccf40d78c84cd050735f3a5e89d39e767014549",
       "route": "/evidence/CLM-001/",
       "page_class": "evidence_detail",
       "template_route": "/evidence/[id]",
@@ -5415,7 +5417,7 @@
     },
     {
       "page_spec_version": "1.0",
-      "authority_master_sha256": "69899ae26bd6606cc6d8da86d2c6a30317dbbeebc37480ad3cc11e2b36421699",
+      "authority_master_sha256": "2a7fd52bbe82d73faf562a395ccf40d78c84cd050735f3a5e89d39e767014549",
       "route": "/evidence/CLM-002/",
       "page_class": "evidence_detail",
       "template_route": "/evidence/[id]",
@@ -6043,7 +6045,7 @@
     },
     {
       "page_spec_version": "1.0",
-      "authority_master_sha256": "69899ae26bd6606cc6d8da86d2c6a30317dbbeebc37480ad3cc11e2b36421699",
+      "authority_master_sha256": "2a7fd52bbe82d73faf562a395ccf40d78c84cd050735f3a5e89d39e767014549",
       "route": "/evidence/CLM-003/",
       "page_class": "evidence_detail",
       "template_route": "/evidence/[id]",
@@ -6767,7 +6769,7 @@
     },
     {
       "page_spec_version": "1.0",
-      "authority_master_sha256": "69899ae26bd6606cc6d8da86d2c6a30317dbbeebc37480ad3cc11e2b36421699",
+      "authority_master_sha256": "2a7fd52bbe82d73faf562a395ccf40d78c84cd050735f3a5e89d39e767014549",
       "route": "/evidence/CLM-004/",
       "page_class": "evidence_detail",
       "template_route": "/evidence/[id]",
@@ -6941,7 +6943,7 @@
     },
     {
       "page_spec_version": "1.0",
-      "authority_master_sha256": "69899ae26bd6606cc6d8da86d2c6a30317dbbeebc37480ad3cc11e2b36421699",
+      "authority_master_sha256": "2a7fd52bbe82d73faf562a395ccf40d78c84cd050735f3a5e89d39e767014549",
       "route": "/evidence/CLM-005/",
       "page_class": "evidence_detail",
       "template_route": "/evidence/[id]",
@@ -7297,7 +7299,7 @@
     },
     {
       "page_spec_version": "1.0",
-      "authority_master_sha256": "69899ae26bd6606cc6d8da86d2c6a30317dbbeebc37480ad3cc11e2b36421699",
+      "authority_master_sha256": "2a7fd52bbe82d73faf562a395ccf40d78c84cd050735f3a5e89d39e767014549",
       "route": "/evidence/CLM-006/",
       "page_class": "evidence_detail",
       "template_route": "/evidence/[id]",
@@ -7701,7 +7703,7 @@
     },
     {
       "page_spec_version": "1.0",
-      "authority_master_sha256": "69899ae26bd6606cc6d8da86d2c6a30317dbbeebc37480ad3cc11e2b36421699",
+      "authority_master_sha256": "2a7fd52bbe82d73faf562a395ccf40d78c84cd050735f3a5e89d39e767014549",
       "route": "/evidence/CLM-007/",
       "page_class": "evidence_detail",
       "template_route": "/evidence/[id]",
@@ -8305,7 +8307,7 @@
     },
     {
       "page_spec_version": "1.0",
-      "authority_master_sha256": "69899ae26bd6606cc6d8da86d2c6a30317dbbeebc37480ad3cc11e2b36421699",
+      "authority_master_sha256": "2a7fd52bbe82d73faf562a395ccf40d78c84cd050735f3a5e89d39e767014549",
       "route": "/evidence/CLM-008/",
       "page_class": "evidence_detail",
       "template_route": "/evidence/[id]",
@@ -8657,7 +8659,7 @@
     },
     {
       "page_spec_version": "1.0",
-      "authority_master_sha256": "69899ae26bd6606cc6d8da86d2c6a30317dbbeebc37480ad3cc11e2b36421699",
+      "authority_master_sha256": "2a7fd52bbe82d73faf562a395ccf40d78c84cd050735f3a5e89d39e767014549",
       "route": "/evidence/CLM-009/",
       "page_class": "evidence_detail",
       "template_route": "/evidence/[id]",
@@ -9062,7 +9064,7 @@
     },
     {
       "page_spec_version": "1.0",
-      "authority_master_sha256": "69899ae26bd6606cc6d8da86d2c6a30317dbbeebc37480ad3cc11e2b36421699",
+      "authority_master_sha256": "2a7fd52bbe82d73faf562a395ccf40d78c84cd050735f3a5e89d39e767014549",
       "route": "/evidence/CLM-010/",
       "page_class": "evidence_detail",
       "template_route": "/evidence/[id]",
@@ -9858,7 +9860,7 @@
     },
     {
       "page_spec_version": "1.0",
-      "authority_master_sha256": "69899ae26bd6606cc6d8da86d2c6a30317dbbeebc37480ad3cc11e2b36421699",
+      "authority_master_sha256": "2a7fd52bbe82d73faf562a395ccf40d78c84cd050735f3a5e89d39e767014549",
       "route": "/evidence/CLM-011/",
       "page_class": "evidence_detail",
       "template_route": "/evidence/[id]",
@@ -10342,7 +10344,7 @@
     },
     {
       "page_spec_version": "1.0",
-      "authority_master_sha256": "69899ae26bd6606cc6d8da86d2c6a30317dbbeebc37480ad3cc11e2b36421699",
+      "authority_master_sha256": "2a7fd52bbe82d73faf562a395ccf40d78c84cd050735f3a5e89d39e767014549",
       "route": "/evidence/CLM-012/",
       "page_class": "evidence_detail",
       "template_route": "/evidence/[id]",
@@ -10849,7 +10851,7 @@
     },
     {
       "page_spec_version": "1.0",
-      "authority_master_sha256": "69899ae26bd6606cc6d8da86d2c6a30317dbbeebc37480ad3cc11e2b36421699",
+      "authority_master_sha256": "2a7fd52bbe82d73faf562a395ccf40d78c84cd050735f3a5e89d39e767014549",
       "route": "/evidence/CLM-013/",
       "page_class": "evidence_detail",
       "template_route": "/evidence/[id]",
@@ -11618,7 +11620,7 @@
     },
     {
       "page_spec_version": "1.0",
-      "authority_master_sha256": "69899ae26bd6606cc6d8da86d2c6a30317dbbeebc37480ad3cc11e2b36421699",
+      "authority_master_sha256": "2a7fd52bbe82d73faf562a395ccf40d78c84cd050735f3a5e89d39e767014549",
       "route": "/evidence/CLM-014/",
       "page_class": "evidence_detail",
       "template_route": "/evidence/[id]",
@@ -11852,7 +11854,7 @@
     },
     {
       "page_spec_version": "1.0",
-      "authority_master_sha256": "69899ae26bd6606cc6d8da86d2c6a30317dbbeebc37480ad3cc11e2b36421699",
+      "authority_master_sha256": "2a7fd52bbe82d73faf562a395ccf40d78c84cd050735f3a5e89d39e767014549",
       "route": "/evidence/CLM-015/",
       "page_class": "evidence_detail",
       "template_route": "/evidence/[id]",
@@ -12229,7 +12231,7 @@
     },
     {
       "page_spec_version": "1.0",
-      "authority_master_sha256": "69899ae26bd6606cc6d8da86d2c6a30317dbbeebc37480ad3cc11e2b36421699",
+      "authority_master_sha256": "2a7fd52bbe82d73faf562a395ccf40d78c84cd050735f3a5e89d39e767014549",
       "route": "/evidence/CLM-016/",
       "page_class": "evidence_detail",
       "template_route": "/evidence/[id]",
@@ -12668,7 +12670,7 @@
     },
     {
       "page_spec_version": "1.0",
-      "authority_master_sha256": "69899ae26bd6606cc6d8da86d2c6a30317dbbeebc37480ad3cc11e2b36421699",
+      "authority_master_sha256": "2a7fd52bbe82d73faf562a395ccf40d78c84cd050735f3a5e89d39e767014549",
       "route": "/evidence/CLM-017/",
       "page_class": "evidence_detail",
       "template_route": "/evidence/[id]",
@@ -13226,7 +13228,7 @@
     },
     {
       "page_spec_version": "1.0",
-      "authority_master_sha256": "69899ae26bd6606cc6d8da86d2c6a30317dbbeebc37480ad3cc11e2b36421699",
+      "authority_master_sha256": "2a7fd52bbe82d73faf562a395ccf40d78c84cd050735f3a5e89d39e767014549",
       "route": "/evidence/CLM-018/",
       "page_class": "evidence_detail",
       "template_route": "/evidence/[id]",
@@ -13893,7 +13895,7 @@
     },
     {
       "page_spec_version": "1.0",
-      "authority_master_sha256": "69899ae26bd6606cc6d8da86d2c6a30317dbbeebc37480ad3cc11e2b36421699",
+      "authority_master_sha256": "2a7fd52bbe82d73faf562a395ccf40d78c84cd050735f3a5e89d39e767014549",
       "route": "/evidence/CLM-019/",
       "page_class": "evidence_detail",
       "template_route": "/evidence/[id]",
@@ -15018,7 +15020,7 @@
     },
     {
       "page_spec_version": "1.0",
-      "authority_master_sha256": "69899ae26bd6606cc6d8da86d2c6a30317dbbeebc37480ad3cc11e2b36421699",
+      "authority_master_sha256": "2a7fd52bbe82d73faf562a395ccf40d78c84cd050735f3a5e89d39e767014549",
       "route": "/evidence/CLM-020/",
       "page_class": "evidence_detail",
       "template_route": "/evidence/[id]",
@@ -15455,7 +15457,7 @@
     },
     {
       "page_spec_version": "1.0",
-      "authority_master_sha256": "69899ae26bd6606cc6d8da86d2c6a30317dbbeebc37480ad3cc11e2b36421699",
+      "authority_master_sha256": "2a7fd52bbe82d73faf562a395ccf40d78c84cd050735f3a5e89d39e767014549",
       "route": "/evidence/CLM-021/",
       "page_class": "evidence_detail",
       "template_route": "/evidence/[id]",
@@ -16021,7 +16023,7 @@
     },
     {
       "page_spec_version": "1.0",
-      "authority_master_sha256": "69899ae26bd6606cc6d8da86d2c6a30317dbbeebc37480ad3cc11e2b36421699",
+      "authority_master_sha256": "2a7fd52bbe82d73faf562a395ccf40d78c84cd050735f3a5e89d39e767014549",
       "route": "/evidence/CLM-022/",
       "page_class": "evidence_detail",
       "template_route": "/evidence/[id]",
@@ -17046,7 +17048,7 @@
     },
     {
       "page_spec_version": "1.0",
-      "authority_master_sha256": "69899ae26bd6606cc6d8da86d2c6a30317dbbeebc37480ad3cc11e2b36421699",
+      "authority_master_sha256": "2a7fd52bbe82d73faf562a395ccf40d78c84cd050735f3a5e89d39e767014549",
       "route": "/evidence/CLM-023/",
       "page_class": "evidence_detail",
       "template_route": "/evidence/[id]",
@@ -17610,7 +17612,7 @@
     },
     {
       "page_spec_version": "1.0",
-      "authority_master_sha256": "69899ae26bd6606cc6d8da86d2c6a30317dbbeebc37480ad3cc11e2b36421699",
+      "authority_master_sha256": "2a7fd52bbe82d73faf562a395ccf40d78c84cd050735f3a5e89d39e767014549",
       "route": "/evidence/CLM-024/",
       "page_class": "evidence_detail",
       "template_route": "/evidence/[id]",
@@ -17922,7 +17924,7 @@
     },
     {
       "page_spec_version": "1.0",
-      "authority_master_sha256": "69899ae26bd6606cc6d8da86d2c6a30317dbbeebc37480ad3cc11e2b36421699",
+      "authority_master_sha256": "2a7fd52bbe82d73faf562a395ccf40d78c84cd050735f3a5e89d39e767014549",
       "route": "/evidence/CLM-025/",
       "page_class": "evidence_detail",
       "template_route": "/evidence/[id]",
@@ -18372,7 +18374,7 @@
     },
     {
       "page_spec_version": "1.0",
-      "authority_master_sha256": "69899ae26bd6606cc6d8da86d2c6a30317dbbeebc37480ad3cc11e2b36421699",
+      "authority_master_sha256": "2a7fd52bbe82d73faf562a395ccf40d78c84cd050735f3a5e89d39e767014549",
       "route": "/evidence/CLM-026/",
       "page_class": "evidence_detail",
       "template_route": "/evidence/[id]",
@@ -18759,7 +18761,7 @@
     },
     {
       "page_spec_version": "1.0",
-      "authority_master_sha256": "69899ae26bd6606cc6d8da86d2c6a30317dbbeebc37480ad3cc11e2b36421699",
+      "authority_master_sha256": "2a7fd52bbe82d73faf562a395ccf40d78c84cd050735f3a5e89d39e767014549",
       "route": "/evidence/CLM-027/",
       "page_class": "evidence_detail",
       "template_route": "/evidence/[id]",
@@ -19367,7 +19369,7 @@
     },
     {
       "page_spec_version": "1.0",
-      "authority_master_sha256": "69899ae26bd6606cc6d8da86d2c6a30317dbbeebc37480ad3cc11e2b36421699",
+      "authority_master_sha256": "2a7fd52bbe82d73faf562a395ccf40d78c84cd050735f3a5e89d39e767014549",
       "route": "/evidence/CLM-028/",
       "page_class": "evidence_detail",
       "template_route": "/evidence/[id]",
@@ -19744,7 +19746,7 @@
     },
     {
       "page_spec_version": "1.0",
-      "authority_master_sha256": "69899ae26bd6606cc6d8da86d2c6a30317dbbeebc37480ad3cc11e2b36421699",
+      "authority_master_sha256": "2a7fd52bbe82d73faf562a395ccf40d78c84cd050735f3a5e89d39e767014549",
       "route": "/evidence/CLM-029/",
       "page_class": "evidence_detail",
       "template_route": "/evidence/[id]",
@@ -20097,7 +20099,7 @@
     },
     {
       "page_spec_version": "1.0",
-      "authority_master_sha256": "69899ae26bd6606cc6d8da86d2c6a30317dbbeebc37480ad3cc11e2b36421699",
+      "authority_master_sha256": "2a7fd52bbe82d73faf562a395ccf40d78c84cd050735f3a5e89d39e767014549",
       "route": "/evidence/CLM-030/",
       "page_class": "evidence_detail",
       "template_route": "/evidence/[id]",
@@ -20477,7 +20479,7 @@
     },
     {
       "page_spec_version": "1.0",
-      "authority_master_sha256": "69899ae26bd6606cc6d8da86d2c6a30317dbbeebc37480ad3cc11e2b36421699",
+      "authority_master_sha256": "2a7fd52bbe82d73faf562a395ccf40d78c84cd050735f3a5e89d39e767014549",
       "route": "/evidence/CLM-031/",
       "page_class": "evidence_detail",
       "template_route": "/evidence/[id]",
@@ -20837,7 +20839,7 @@
     },
     {
       "page_spec_version": "1.0",
-      "authority_master_sha256": "69899ae26bd6606cc6d8da86d2c6a30317dbbeebc37480ad3cc11e2b36421699",
+      "authority_master_sha256": "2a7fd52bbe82d73faf562a395ccf40d78c84cd050735f3a5e89d39e767014549",
       "route": "/evidence/CLM-032/",
       "page_class": "evidence_detail",
       "template_route": "/evidence/[id]",
@@ -21415,7 +21417,7 @@
     },
     {
       "page_spec_version": "1.0",
-      "authority_master_sha256": "69899ae26bd6606cc6d8da86d2c6a30317dbbeebc37480ad3cc11e2b36421699",
+      "authority_master_sha256": "2a7fd52bbe82d73faf562a395ccf40d78c84cd050735f3a5e89d39e767014549",
       "route": "/evidence/CLM-033/",
       "page_class": "evidence_detail",
       "template_route": "/evidence/[id]",
@@ -21846,7 +21848,7 @@
     },
     {
       "page_spec_version": "1.0",
-      "authority_master_sha256": "69899ae26bd6606cc6d8da86d2c6a30317dbbeebc37480ad3cc11e2b36421699",
+      "authority_master_sha256": "2a7fd52bbe82d73faf562a395ccf40d78c84cd050735f3a5e89d39e767014549",
       "route": "/evidence/CLM-034/",
       "page_class": "evidence_detail",
       "template_route": "/evidence/[id]",
@@ -22199,7 +22201,7 @@
     },
     {
       "page_spec_version": "1.0",
-      "authority_master_sha256": "69899ae26bd6606cc6d8da86d2c6a30317dbbeebc37480ad3cc11e2b36421699",
+      "authority_master_sha256": "2a7fd52bbe82d73faf562a395ccf40d78c84cd050735f3a5e89d39e767014549",
       "route": "/evidence/CLM-035/",
       "page_class": "evidence_detail",
       "template_route": "/evidence/[id]",
@@ -22701,7 +22703,7 @@
     },
     {
       "page_spec_version": "1.0",
-      "authority_master_sha256": "69899ae26bd6606cc6d8da86d2c6a30317dbbeebc37480ad3cc11e2b36421699",
+      "authority_master_sha256": "2a7fd52bbe82d73faf562a395ccf40d78c84cd050735f3a5e89d39e767014549",
       "route": "/evidence/CLM-036/",
       "page_class": "evidence_detail",
       "template_route": "/evidence/[id]",
@@ -23202,7 +23204,7 @@
     },
     {
       "page_spec_version": "1.0",
-      "authority_master_sha256": "69899ae26bd6606cc6d8da86d2c6a30317dbbeebc37480ad3cc11e2b36421699",
+      "authority_master_sha256": "2a7fd52bbe82d73faf562a395ccf40d78c84cd050735f3a5e89d39e767014549",
       "route": "/evidence/CLM-037/",
       "page_class": "evidence_detail",
       "template_route": "/evidence/[id]",
@@ -23994,7 +23996,7 @@
     },
     {
       "page_spec_version": "1.0",
-      "authority_master_sha256": "69899ae26bd6606cc6d8da86d2c6a30317dbbeebc37480ad3cc11e2b36421699",
+      "authority_master_sha256": "2a7fd52bbe82d73faf562a395ccf40d78c84cd050735f3a5e89d39e767014549",
       "route": "/evidence/CLM-038/",
       "page_class": "evidence_detail",
       "template_route": "/evidence/[id]",
@@ -24470,7 +24472,7 @@
     },
     {
       "page_spec_version": "1.0",
-      "authority_master_sha256": "69899ae26bd6606cc6d8da86d2c6a30317dbbeebc37480ad3cc11e2b36421699",
+      "authority_master_sha256": "2a7fd52bbe82d73faf562a395ccf40d78c84cd050735f3a5e89d39e767014549",
       "route": "/evidence/CLM-039/",
       "page_class": "evidence_detail",
       "template_route": "/evidence/[id]",
@@ -24800,7 +24802,7 @@
     },
     {
       "page_spec_version": "1.0",
-      "authority_master_sha256": "69899ae26bd6606cc6d8da86d2c6a30317dbbeebc37480ad3cc11e2b36421699",
+      "authority_master_sha256": "2a7fd52bbe82d73faf562a395ccf40d78c84cd050735f3a5e89d39e767014549",
       "route": "/evidence/CLM-040/",
       "page_class": "evidence_detail",
       "template_route": "/evidence/[id]",
@@ -25214,7 +25216,7 @@
     },
     {
       "page_spec_version": "1.0",
-      "authority_master_sha256": "69899ae26bd6606cc6d8da86d2c6a30317dbbeebc37480ad3cc11e2b36421699",
+      "authority_master_sha256": "2a7fd52bbe82d73faf562a395ccf40d78c84cd050735f3a5e89d39e767014549",
       "route": "/evidence/CLM-041/",
       "page_class": "evidence_detail",
       "template_route": "/evidence/[id]",
@@ -25739,7 +25741,7 @@
     },
     {
       "page_spec_version": "1.0",
-      "authority_master_sha256": "69899ae26bd6606cc6d8da86d2c6a30317dbbeebc37480ad3cc11e2b36421699",
+      "authority_master_sha256": "2a7fd52bbe82d73faf562a395ccf40d78c84cd050735f3a5e89d39e767014549",
       "route": "/evidence/CLM-042/",
       "page_class": "evidence_detail",
       "template_route": "/evidence/[id]",
@@ -26420,7 +26422,7 @@
     },
     {
       "page_spec_version": "1.0",
-      "authority_master_sha256": "69899ae26bd6606cc6d8da86d2c6a30317dbbeebc37480ad3cc11e2b36421699",
+      "authority_master_sha256": "2a7fd52bbe82d73faf562a395ccf40d78c84cd050735f3a5e89d39e767014549",
       "route": "/evidence/CLM-043/",
       "page_class": "evidence_detail",
       "template_route": "/evidence/[id]",
@@ -26874,7 +26876,7 @@
     },
     {
       "page_spec_version": "1.0",
-      "authority_master_sha256": "69899ae26bd6606cc6d8da86d2c6a30317dbbeebc37480ad3cc11e2b36421699",
+      "authority_master_sha256": "2a7fd52bbe82d73faf562a395ccf40d78c84cd050735f3a5e89d39e767014549",
       "route": "/evidence/CLM-044/",
       "page_class": "evidence_detail",
       "template_route": "/evidence/[id]",
@@ -27138,7 +27140,7 @@
     },
     {
       "page_spec_version": "1.0",
-      "authority_master_sha256": "69899ae26bd6606cc6d8da86d2c6a30317dbbeebc37480ad3cc11e2b36421699",
+      "authority_master_sha256": "2a7fd52bbe82d73faf562a395ccf40d78c84cd050735f3a5e89d39e767014549",
       "route": "/evidence/CLM-045/",
       "page_class": "evidence_detail",
       "template_route": "/evidence/[id]",
@@ -27628,7 +27630,7 @@
     },
     {
       "page_spec_version": "1.0",
-      "authority_master_sha256": "69899ae26bd6606cc6d8da86d2c6a30317dbbeebc37480ad3cc11e2b36421699",
+      "authority_master_sha256": "2a7fd52bbe82d73faf562a395ccf40d78c84cd050735f3a5e89d39e767014549",
       "route": "/evidence/CLM-046/",
       "page_class": "evidence_detail",
       "template_route": "/evidence/[id]",
@@ -28037,7 +28039,7 @@
     },
     {
       "page_spec_version": "1.0",
-      "authority_master_sha256": "69899ae26bd6606cc6d8da86d2c6a30317dbbeebc37480ad3cc11e2b36421699",
+      "authority_master_sha256": "2a7fd52bbe82d73faf562a395ccf40d78c84cd050735f3a5e89d39e767014549",
       "route": "/evidence/CLM-047/",
       "page_class": "evidence_detail",
       "template_route": "/evidence/[id]",
@@ -28350,7 +28352,7 @@
     },
     {
       "page_spec_version": "1.0",
-      "authority_master_sha256": "69899ae26bd6606cc6d8da86d2c6a30317dbbeebc37480ad3cc11e2b36421699",
+      "authority_master_sha256": "2a7fd52bbe82d73faf562a395ccf40d78c84cd050735f3a5e89d39e767014549",
       "route": "/evidence/CLM-048/",
       "page_class": "evidence_detail",
       "template_route": "/evidence/[id]",
@@ -28613,7 +28615,7 @@
     },
     {
       "page_spec_version": "1.0",
-      "authority_master_sha256": "69899ae26bd6606cc6d8da86d2c6a30317dbbeebc37480ad3cc11e2b36421699",
+      "authority_master_sha256": "2a7fd52bbe82d73faf562a395ccf40d78c84cd050735f3a5e89d39e767014549",
       "route": "/evidence/CLM-049/",
       "page_class": "evidence_detail",
       "template_route": "/evidence/[id]",
@@ -29005,7 +29007,7 @@
     },
     {
       "page_spec_version": "1.0",
-      "authority_master_sha256": "69899ae26bd6606cc6d8da86d2c6a30317dbbeebc37480ad3cc11e2b36421699",
+      "authority_master_sha256": "2a7fd52bbe82d73faf562a395ccf40d78c84cd050735f3a5e89d39e767014549",
       "route": "/evidence/CLM-050/",
       "page_class": "evidence_detail",
       "template_route": "/evidence/[id]",
@@ -29433,7 +29435,7 @@
     },
     {
       "page_spec_version": "1.0",
-      "authority_master_sha256": "69899ae26bd6606cc6d8da86d2c6a30317dbbeebc37480ad3cc11e2b36421699",
+      "authority_master_sha256": "2a7fd52bbe82d73faf562a395ccf40d78c84cd050735f3a5e89d39e767014549",
       "route": "/evidence/CLM-051/",
       "page_class": "evidence_detail",
       "template_route": "/evidence/[id]",
@@ -29912,7 +29914,7 @@
     },
     {
       "page_spec_version": "1.0",
-      "authority_master_sha256": "69899ae26bd6606cc6d8da86d2c6a30317dbbeebc37480ad3cc11e2b36421699",
+      "authority_master_sha256": "2a7fd52bbe82d73faf562a395ccf40d78c84cd050735f3a5e89d39e767014549",
       "route": "/evidence/CLM-052/",
       "page_class": "evidence_detail",
       "template_route": "/evidence/[id]",
@@ -30304,7 +30306,7 @@
     },
     {
       "page_spec_version": "1.0",
-      "authority_master_sha256": "69899ae26bd6606cc6d8da86d2c6a30317dbbeebc37480ad3cc11e2b36421699",
+      "authority_master_sha256": "2a7fd52bbe82d73faf562a395ccf40d78c84cd050735f3a5e89d39e767014549",
       "route": "/evidence/CLM-053/",
       "page_class": "evidence_detail",
       "template_route": "/evidence/[id]",
@@ -30767,7 +30769,7 @@
     },
     {
       "page_spec_version": "1.0",
-      "authority_master_sha256": "69899ae26bd6606cc6d8da86d2c6a30317dbbeebc37480ad3cc11e2b36421699",
+      "authority_master_sha256": "2a7fd52bbe82d73faf562a395ccf40d78c84cd050735f3a5e89d39e767014549",
       "route": "/evidence/CLM-054/",
       "page_class": "evidence_detail",
       "template_route": "/evidence/[id]",
@@ -31618,7 +31620,7 @@
     },
     {
       "page_spec_version": "1.0",
-      "authority_master_sha256": "69899ae26bd6606cc6d8da86d2c6a30317dbbeebc37480ad3cc11e2b36421699",
+      "authority_master_sha256": "2a7fd52bbe82d73faf562a395ccf40d78c84cd050735f3a5e89d39e767014549",
       "route": "/evidence/CLM-055/",
       "page_class": "evidence_detail",
       "template_route": "/evidence/[id]",
@@ -32011,7 +32013,7 @@
     },
     {
       "page_spec_version": "1.0",
-      "authority_master_sha256": "69899ae26bd6606cc6d8da86d2c6a30317dbbeebc37480ad3cc11e2b36421699",
+      "authority_master_sha256": "2a7fd52bbe82d73faf562a395ccf40d78c84cd050735f3a5e89d39e767014549",
       "route": "/evidence/CLM-056/",
       "page_class": "evidence_detail",
       "template_route": "/evidence/[id]",
@@ -32600,7 +32602,7 @@
     },
     {
       "page_spec_version": "1.0",
-      "authority_master_sha256": "69899ae26bd6606cc6d8da86d2c6a30317dbbeebc37480ad3cc11e2b36421699",
+      "authority_master_sha256": "2a7fd52bbe82d73faf562a395ccf40d78c84cd050735f3a5e89d39e767014549",
       "route": "/evidence/CLM-057/",
       "page_class": "evidence_detail",
       "template_route": "/evidence/[id]",
@@ -33053,7 +33055,7 @@
     },
     {
       "page_spec_version": "1.0",
-      "authority_master_sha256": "69899ae26bd6606cc6d8da86d2c6a30317dbbeebc37480ad3cc11e2b36421699",
+      "authority_master_sha256": "2a7fd52bbe82d73faf562a395ccf40d78c84cd050735f3a5e89d39e767014549",
       "route": "/evidence/CLM-058/",
       "page_class": "evidence_detail",
       "template_route": "/evidence/[id]",
@@ -33511,7 +33513,7 @@
     },
     {
       "page_spec_version": "1.0",
-      "authority_master_sha256": "69899ae26bd6606cc6d8da86d2c6a30317dbbeebc37480ad3cc11e2b36421699",
+      "authority_master_sha256": "2a7fd52bbe82d73faf562a395ccf40d78c84cd050735f3a5e89d39e767014549",
       "route": "/evidence/CLM-059/",
       "page_class": "evidence_detail",
       "template_route": "/evidence/[id]",
@@ -34022,7 +34024,7 @@
     },
     {
       "page_spec_version": "1.0",
-      "authority_master_sha256": "69899ae26bd6606cc6d8da86d2c6a30317dbbeebc37480ad3cc11e2b36421699",
+      "authority_master_sha256": "2a7fd52bbe82d73faf562a395ccf40d78c84cd050735f3a5e89d39e767014549",
       "route": "/evidence/CLM-060/",
       "page_class": "evidence_detail",
       "template_route": "/evidence/[id]",
@@ -34459,7 +34461,7 @@
     },
     {
       "page_spec_version": "1.0",
-      "authority_master_sha256": "69899ae26bd6606cc6d8da86d2c6a30317dbbeebc37480ad3cc11e2b36421699",
+      "authority_master_sha256": "2a7fd52bbe82d73faf562a395ccf40d78c84cd050735f3a5e89d39e767014549",
       "route": "/evidence/DS-DEMAND-VINTAGE-LENS/",
       "page_class": "evidence_detail",
       "template_route": "/evidence/[id]",
@@ -34705,7 +34707,7 @@
     },
     {
       "page_spec_version": "1.0",
-      "authority_master_sha256": "69899ae26bd6606cc6d8da86d2c6a30317dbbeebc37480ad3cc11e2b36421699",
+      "authority_master_sha256": "2a7fd52bbe82d73faf562a395ccf40d78c84cd050735f3a5e89d39e767014549",
       "route": "/evidence/DS-FCP-ARCH/",
       "page_class": "evidence_detail",
       "template_route": "/evidence/[id]",
@@ -35237,7 +35239,7 @@
     },
     {
       "page_spec_version": "1.0",
-      "authority_master_sha256": "69899ae26bd6606cc6d8da86d2c6a30317dbbeebc37480ad3cc11e2b36421699",
+      "authority_master_sha256": "2a7fd52bbe82d73faf562a395ccf40d78c84cd050735f3a5e89d39e767014549",
       "route": "/evidence/DS-FINDEX-HISTORY-CROSSWALK/",
       "page_class": "evidence_detail",
       "template_route": "/evidence/[id]",
@@ -35558,7 +35560,7 @@
     },
     {
       "page_spec_version": "1.0",
-      "authority_master_sha256": "69899ae26bd6606cc6d8da86d2c6a30317dbbeebc37480ad3cc11e2b36421699",
+      "authority_master_sha256": "2a7fd52bbe82d73faf562a395ccf40d78c84cd050735f3a5e89d39e767014549",
       "route": "/evidence/DS-FINDEX-PUBLIC-HISTORY/",
       "page_class": "evidence_detail",
       "template_route": "/evidence/[id]",
@@ -35920,7 +35922,7 @@
     },
     {
       "page_spec_version": "1.0",
-      "authority_master_sha256": "69899ae26bd6606cc6d8da86d2c6a30317dbbeebc37480ad3cc11e2b36421699",
+      "authority_master_sha256": "2a7fd52bbe82d73faf562a395ccf40d78c84cd050735f3a5e89d39e767014549",
       "route": "/evidence/DS-QUAL-EVIDENCE/",
       "page_class": "evidence_detail",
       "template_route": "/evidence/[id]",
@@ -36639,7 +36641,7 @@
     },
     {
       "page_spec_version": "1.0",
-      "authority_master_sha256": "69899ae26bd6606cc6d8da86d2c6a30317dbbeebc37480ad3cc11e2b36421699",
+      "authority_master_sha256": "2a7fd52bbe82d73faf562a395ccf40d78c84cd050735f3a5e89d39e767014549",
       "route": "/evidence/MF-ORIG-001+002/",
       "page_class": "evidence_detail",
       "template_route": "/evidence/[id]",
@@ -37044,7 +37046,7 @@
     },
     {
       "page_spec_version": "1.0",
-      "authority_master_sha256": "69899ae26bd6606cc6d8da86d2c6a30317dbbeebc37480ad3cc11e2b36421699",
+      "authority_master_sha256": "2a7fd52bbe82d73faf562a395ccf40d78c84cd050735f3a5e89d39e767014549",
       "route": "/evidence/MFI-SPINE-2015-Q4/",
       "page_class": "evidence_detail",
       "template_route": "/evidence/[id]",
@@ -37476,7 +37478,7 @@
     },
     {
       "page_spec_version": "1.0",
-      "authority_master_sha256": "69899ae26bd6606cc6d8da86d2c6a30317dbbeebc37480ad3cc11e2b36421699",
+      "authority_master_sha256": "2a7fd52bbe82d73faf562a395ccf40d78c84cd050735f3a5e89d39e767014549",
       "route": "/evidence/NEG-EW-011/",
       "page_class": "evidence_detail",
       "template_route": "/evidence/[id]",
@@ -37895,7 +37897,7 @@
     },
     {
       "page_spec_version": "1.0",
-      "authority_master_sha256": "69899ae26bd6606cc6d8da86d2c6a30317dbbeebc37480ad3cc11e2b36421699",
+      "authority_master_sha256": "2a7fd52bbe82d73faf562a395ccf40d78c84cd050735f3a5e89d39e767014549",
       "route": "/evidence/PSE-011/",
       "page_class": "evidence_detail",
       "template_route": "/evidence/[id]",
@@ -38209,7 +38211,7 @@
     },
     {
       "page_spec_version": "1.0",
-      "authority_master_sha256": "69899ae26bd6606cc6d8da86d2c6a30317dbbeebc37480ad3cc11e2b36421699",
+      "authority_master_sha256": "2a7fd52bbe82d73faf562a395ccf40d78c84cd050735f3a5e89d39e767014549",
       "route": "/evidence/QUAL-001/",
       "page_class": "evidence_detail",
       "template_route": "/evidence/[id]",
@@ -38485,7 +38487,7 @@
     },
     {
       "page_spec_version": "1.0",
-      "authority_master_sha256": "69899ae26bd6606cc6d8da86d2c6a30317dbbeebc37480ad3cc11e2b36421699",
+      "authority_master_sha256": "2a7fd52bbe82d73faf562a395ccf40d78c84cd050735f3a5e89d39e767014549",
       "route": "/evidence/VIS-BORROWING-SOURCES-2014/",
       "page_class": "evidence_detail",
       "template_route": "/evidence/[id]",
@@ -38886,7 +38888,7 @@
     },
     {
       "page_spec_version": "1.0",
-      "authority_master_sha256": "69899ae26bd6606cc6d8da86d2c6a30317dbbeebc37480ad3cc11e2b36421699",
+      "authority_master_sha256": "2a7fd52bbe82d73faf562a395ccf40d78c84cd050735f3a5e89d39e767014549",
       "route": "/evidence/VIS-CAPITAL-CONTEXT/",
       "page_class": "evidence_detail",
       "template_route": "/evidence/[id]",
@@ -39193,7 +39195,7 @@
     },
     {
       "page_spec_version": "1.0",
-      "authority_master_sha256": "69899ae26bd6606cc6d8da86d2c6a30317dbbeebc37480ad3cc11e2b36421699",
+      "authority_master_sha256": "2a7fd52bbe82d73faf562a395ccf40d78c84cd050735f3a5e89d39e767014549",
       "route": "/evidence/VIS-DEMAND-VINTAGE-LADDER/",
       "page_class": "evidence_detail",
       "template_route": "/evidence/[id]",
@@ -39565,7 +39567,7 @@
     },
     {
       "page_spec_version": "1.0",
-      "authority_master_sha256": "69899ae26bd6606cc6d8da86d2c6a30317dbbeebc37480ad3cc11e2b36421699",
+      "authority_master_sha256": "2a7fd52bbe82d73faf562a395ccf40d78c84cd050735f3a5e89d39e767014549",
       "route": "/evidence/VIS-DOMESTIC-REMITTANCE-PATH-2014/",
       "page_class": "evidence_detail",
       "template_route": "/evidence/[id]",
@@ -39957,7 +39959,7 @@
     },
     {
       "page_spec_version": "1.0",
-      "authority_master_sha256": "69899ae26bd6606cc6d8da86d2c6a30317dbbeebc37480ad3cc11e2b36421699",
+      "authority_master_sha256": "2a7fd52bbe82d73faf562a395ccf40d78c84cd050735f3a5e89d39e767014549",
       "route": "/evidence/VIS-E-MONEY-RULE-STACK/",
       "page_class": "evidence_detail",
       "template_route": "/evidence/[id]",
@@ -40866,7 +40868,7 @@
     },
     {
       "page_spec_version": "1.0",
-      "authority_master_sha256": "69899ae26bd6606cc6d8da86d2c6a30317dbbeebc37480ad3cc11e2b36421699",
+      "authority_master_sha256": "2a7fd52bbe82d73faf562a395ccf40d78c84cd050735f3a5e89d39e767014549",
       "route": "/evidence/VIS-EVIDENCE-CLASS-LADDER/",
       "page_class": "evidence_detail",
       "template_route": "/evidence/[id]",
@@ -41157,7 +41159,7 @@
     },
     {
       "page_spec_version": "1.0",
-      "authority_master_sha256": "69899ae26bd6606cc6d8da86d2c6a30317dbbeebc37480ad3cc11e2b36421699",
+      "authority_master_sha256": "2a7fd52bbe82d73faf562a395ccf40d78c84cd050735f3a5e89d39e767014549",
       "route": "/evidence/VIS-EVIDENCE-FRESHNESS/",
       "page_class": "evidence_detail",
       "template_route": "/evidence/[id]",
@@ -41519,7 +41521,7 @@
     },
     {
       "page_spec_version": "1.0",
-      "authority_master_sha256": "69899ae26bd6606cc6d8da86d2c6a30317dbbeebc37480ad3cc11e2b36421699",
+      "authority_master_sha256": "2a7fd52bbe82d73faf562a395ccf40d78c84cd050735f3a5e89d39e767014549",
       "route": "/evidence/VIS-EVIDENCE-GAPS/",
       "page_class": "evidence_detail",
       "template_route": "/evidence/[id]",
@@ -41852,7 +41854,7 @@
     },
     {
       "page_spec_version": "1.0",
-      "authority_master_sha256": "69899ae26bd6606cc6d8da86d2c6a30317dbbeebc37480ad3cc11e2b36421699",
+      "authority_master_sha256": "2a7fd52bbe82d73faf562a395ccf40d78c84cd050735f3a5e89d39e767014549",
       "route": "/evidence/VIS-FCP-REDRESS-PATH/",
       "page_class": "evidence_detail",
       "template_route": "/evidence/[id]",
@@ -42610,7 +42612,7 @@
     },
     {
       "page_spec_version": "1.0",
-      "authority_master_sha256": "69899ae26bd6606cc6d8da86d2c6a30317dbbeebc37480ad3cc11e2b36421699",
+      "authority_master_sha256": "2a7fd52bbe82d73faf562a395ccf40d78c84cd050735f3a5e89d39e767014549",
       "route": "/evidence/VIS-FINDEX-ACCESS-USE/",
       "page_class": "evidence_detail",
       "template_route": "/evidence/[id]",
@@ -43068,7 +43070,7 @@
     },
     {
       "page_spec_version": "1.0",
-      "authority_master_sha256": "69899ae26bd6606cc6d8da86d2c6a30317dbbeebc37480ad3cc11e2b36421699",
+      "authority_master_sha256": "2a7fd52bbe82d73faf562a395ccf40d78c84cd050735f3a5e89d39e767014549",
       "route": "/evidence/VIS-FINDEX-BARRIERS/",
       "page_class": "evidence_detail",
       "template_route": "/evidence/[id]",
@@ -43418,7 +43420,7 @@
     },
     {
       "page_spec_version": "1.0",
-      "authority_master_sha256": "69899ae26bd6606cc6d8da86d2c6a30317dbbeebc37480ad3cc11e2b36421699",
+      "authority_master_sha256": "2a7fd52bbe82d73faf562a395ccf40d78c84cd050735f3a5e89d39e767014549",
       "route": "/evidence/VIS-FINDEX-FLOW-CHANNELS/",
       "page_class": "evidence_detail",
       "template_route": "/evidence/[id]",
@@ -43771,7 +43773,7 @@
     },
     {
       "page_spec_version": "1.0",
-      "authority_master_sha256": "69899ae26bd6606cc6d8da86d2c6a30317dbbeebc37480ad3cc11e2b36421699",
+      "authority_master_sha256": "2a7fd52bbe82d73faf562a395ccf40d78c84cd050735f3a5e89d39e767014549",
       "route": "/evidence/VIS-FINDEX-GAPS/",
       "page_class": "evidence_detail",
       "template_route": "/evidence/[id]",
@@ -45315,7 +45317,7 @@
     },
     {
       "page_spec_version": "1.0",
-      "authority_master_sha256": "69899ae26bd6606cc6d8da86d2c6a30317dbbeebc37480ad3cc11e2b36421699",
+      "authority_master_sha256": "2a7fd52bbe82d73faf562a395ccf40d78c84cd050735f3a5e89d39e767014549",
       "route": "/evidence/VIS-FINDEX-OBSERVED-WAVES/",
       "page_class": "evidence_detail",
       "template_route": "/evidence/[id]",
@@ -45929,7 +45931,7 @@
     },
     {
       "page_spec_version": "1.0",
-      "authority_master_sha256": "69899ae26bd6606cc6d8da86d2c6a30317dbbeebc37480ad3cc11e2b36421699",
+      "authority_master_sha256": "2a7fd52bbe82d73faf562a395ccf40d78c84cd050735f3a5e89d39e767014549",
       "route": "/evidence/VIS-FINDEX-RESILIENCE/",
       "page_class": "evidence_detail",
       "template_route": "/evidence/[id]",
@@ -46345,7 +46347,7 @@
     },
     {
       "page_spec_version": "1.0",
-      "authority_master_sha256": "69899ae26bd6606cc6d8da86d2c6a30317dbbeebc37480ad3cc11e2b36421699",
+      "authority_master_sha256": "2a7fd52bbe82d73faf562a395ccf40d78c84cd050735f3a5e89d39e767014549",
       "route": "/evidence/VIS-FINDEX-SAMPLE-SUPPORT/",
       "page_class": "evidence_detail",
       "template_route": "/evidence/[id]",
@@ -46698,7 +46700,7 @@
     },
     {
       "page_spec_version": "1.0",
-      "authority_master_sha256": "69899ae26bd6606cc6d8da86d2c6a30317dbbeebc37480ad3cc11e2b36421699",
+      "authority_master_sha256": "2a7fd52bbe82d73faf562a395ccf40d78c84cd050735f3a5e89d39e767014549",
       "route": "/evidence/VIS-FIRM-CONSTRAINTS/",
       "page_class": "evidence_detail",
       "template_route": "/evidence/[id]",
@@ -47468,7 +47470,7 @@
     },
     {
       "page_spec_version": "1.0",
-      "authority_master_sha256": "69899ae26bd6606cc6d8da86d2c6a30317dbbeebc37480ad3cc11e2b36421699",
+      "authority_master_sha256": "2a7fd52bbe82d73faf562a395ccf40d78c84cd050735f3a5e89d39e767014549",
       "route": "/evidence/VIS-FIRM-FINANCE-PATH/",
       "page_class": "evidence_detail",
       "template_route": "/evidence/[id]",
@@ -48347,7 +48349,7 @@
     },
     {
       "page_spec_version": "1.0",
-      "authority_master_sha256": "69899ae26bd6606cc6d8da86d2c6a30317dbbeebc37480ad3cc11e2b36421699",
+      "authority_master_sha256": "2a7fd52bbe82d73faf562a395ccf40d78c84cd050735f3a5e89d39e767014549",
       "route": "/evidence/VIS-FIRM-FINANCE-SEVERITY/",
       "page_class": "evidence_detail",
       "template_route": "/evidence/[id]",
@@ -48985,7 +48987,7 @@
     },
     {
       "page_spec_version": "1.0",
-      "authority_master_sha256": "69899ae26bd6606cc6d8da86d2c6a30317dbbeebc37480ad3cc11e2b36421699",
+      "authority_master_sha256": "2a7fd52bbe82d73faf562a395ccf40d78c84cd050735f3a5e89d39e767014549",
       "route": "/evidence/VIS-FL-EVIDENCE-LADDER/",
       "page_class": "evidence_detail",
       "template_route": "/evidence/[id]",
@@ -49931,7 +49933,7 @@
     },
     {
       "page_spec_version": "1.0",
-      "authority_master_sha256": "69899ae26bd6606cc6d8da86d2c6a30317dbbeebc37480ad3cc11e2b36421699",
+      "authority_master_sha256": "2a7fd52bbe82d73faf562a395ccf40d78c84cd050735f3a5e89d39e767014549",
       "route": "/evidence/VIS-INCLUSION-TRANSMISSION/",
       "page_class": "evidence_detail",
       "template_route": "/evidence/[id]",
@@ -50155,7 +50157,7 @@
     },
     {
       "page_spec_version": "1.0",
-      "authority_master_sha256": "69899ae26bd6606cc6d8da86d2c6a30317dbbeebc37480ad3cc11e2b36421699",
+      "authority_master_sha256": "2a7fd52bbe82d73faf562a395ccf40d78c84cd050735f3a5e89d39e767014549",
       "route": "/evidence/VIS-MECHANISM-METRIC-BRIDGE/",
       "page_class": "evidence_detail",
       "template_route": "/evidence/[id]",
@@ -50379,7 +50381,7 @@
     },
     {
       "page_spec_version": "1.0",
-      "authority_master_sha256": "69899ae26bd6606cc6d8da86d2c6a30317dbbeebc37480ad3cc11e2b36421699",
+      "authority_master_sha256": "2a7fd52bbe82d73faf562a395ccf40d78c84cd050735f3a5e89d39e767014549",
       "route": "/evidence/VIS-MFI-2014-PANEL/",
       "page_class": "evidence_detail",
       "template_route": "/evidence/[id]",
@@ -50788,7 +50790,7 @@
     },
     {
       "page_spec_version": "1.0",
-      "authority_master_sha256": "69899ae26bd6606cc6d8da86d2c6a30317dbbeebc37480ad3cc11e2b36421699",
+      "authority_master_sha256": "2a7fd52bbe82d73faf562a395ccf40d78c84cd050735f3a5e89d39e767014549",
       "route": "/evidence/VIS-MFI-RUPTURE-LENS/",
       "page_class": "evidence_detail",
       "template_route": "/evidence/[id]",
@@ -51362,7 +51364,7 @@
     },
     {
       "page_spec_version": "1.0",
-      "authority_master_sha256": "69899ae26bd6606cc6d8da86d2c6a30317dbbeebc37480ad3cc11e2b36421699",
+      "authority_master_sha256": "2a7fd52bbe82d73faf562a395ccf40d78c84cd050735f3a5e89d39e767014549",
       "route": "/evidence/VIS-MFI-SPINE/",
       "page_class": "evidence_detail",
       "template_route": "/evidence/[id]",
@@ -52620,7 +52622,7 @@
     },
     {
       "page_spec_version": "1.0",
-      "authority_master_sha256": "69899ae26bd6606cc6d8da86d2c6a30317dbbeebc37480ad3cc11e2b36421699",
+      "authority_master_sha256": "2a7fd52bbe82d73faf562a395ccf40d78c84cd050735f3a5e89d39e767014549",
       "route": "/evidence/VIS-OECD-FCP-TIMELINE/",
       "page_class": "evidence_detail",
       "template_route": "/evidence/[id]",
@@ -53301,7 +53303,7 @@
     },
     {
       "page_spec_version": "1.0",
-      "authority_master_sha256": "69899ae26bd6606cc6d8da86d2c6a30317dbbeebc37480ad3cc11e2b36421699",
+      "authority_master_sha256": "2a7fd52bbe82d73faf562a395ccf40d78c84cd050735f3a5e89d39e767014549",
       "route": "/evidence/VIS-PAYMENT-ANATOMY/",
       "page_class": "evidence_detail",
       "template_route": "/evidence/[id]",
@@ -53741,7 +53743,7 @@
     },
     {
       "page_spec_version": "1.0",
-      "authority_master_sha256": "69899ae26bd6606cc6d8da86d2c6a30317dbbeebc37480ad3cc11e2b36421699",
+      "authority_master_sha256": "2a7fd52bbe82d73faf562a395ccf40d78c84cd050735f3a5e89d39e767014549",
       "route": "/evidence/VIS-PAYMENT-RAILS/",
       "page_class": "evidence_detail",
       "template_route": "/evidence/[id]",
@@ -55208,7 +55210,7 @@
     },
     {
       "page_spec_version": "1.0",
-      "authority_master_sha256": "69899ae26bd6606cc6d8da86d2c6a30317dbbeebc37480ad3cc11e2b36421699",
+      "authority_master_sha256": "2a7fd52bbe82d73faf562a395ccf40d78c84cd050735f3a5e89d39e767014549",
       "route": "/evidence/VIS-POS-TERMINALS/",
       "page_class": "evidence_detail",
       "template_route": "/evidence/[id]",
@@ -56749,7 +56751,7 @@
     },
     {
       "page_spec_version": "1.0",
-      "authority_master_sha256": "69899ae26bd6606cc6d8da86d2c6a30317dbbeebc37480ad3cc11e2b36421699",
+      "authority_master_sha256": "2a7fd52bbe82d73faf562a395ccf40d78c84cd050735f3a5e89d39e767014549",
       "route": "/evidence/VIS-POS-TRANSACTIONS/",
       "page_class": "evidence_detail",
       "template_route": "/evidence/[id]",
@@ -58279,7 +58281,7 @@
     },
     {
       "page_spec_version": "1.0",
-      "authority_master_sha256": "69899ae26bd6606cc6d8da86d2c6a30317dbbeebc37480ad3cc11e2b36421699",
+      "authority_master_sha256": "2a7fd52bbe82d73faf562a395ccf40d78c84cd050735f3a5e89d39e767014549",
       "route": "/evidence/VIS-POS-VALUE/",
       "page_class": "evidence_detail",
       "template_route": "/evidence/[id]",
@@ -59459,7 +59461,7 @@
     },
     {
       "page_spec_version": "1.0",
-      "authority_master_sha256": "69899ae26bd6606cc6d8da86d2c6a30317dbbeebc37480ad3cc11e2b36421699",
+      "authority_master_sha256": "2a7fd52bbe82d73faf562a395ccf40d78c84cd050735f3a5e89d39e767014549",
       "route": "/evidence/VIS-PROVIDER-OBSERVABILITY/",
       "page_class": "evidence_detail",
       "template_route": "/evidence/[id]",
@@ -59965,7 +59967,7 @@
     },
     {
       "page_spec_version": "1.0",
-      "authority_master_sha256": "69899ae26bd6606cc6d8da86d2c6a30317dbbeebc37480ad3cc11e2b36421699",
+      "authority_master_sha256": "2a7fd52bbe82d73faf562a395ccf40d78c84cd050735f3a5e89d39e767014549",
       "route": "/evidence/VIS-PROVIDER-TIME/",
       "page_class": "evidence_detail",
       "template_route": "/evidence/[id]",
@@ -60313,7 +60315,7 @@
     },
     {
       "page_spec_version": "1.0",
-      "authority_master_sha256": "69899ae26bd6606cc6d8da86d2c6a30317dbbeebc37480ad3cc11e2b36421699",
+      "authority_master_sha256": "2a7fd52bbe82d73faf562a395ccf40d78c84cd050735f3a5e89d39e767014549",
       "route": "/evidence/VIS-REMITTANCE-COST/",
       "page_class": "evidence_detail",
       "template_route": "/evidence/[id]",
@@ -61016,7 +61018,7 @@
     },
     {
       "page_spec_version": "1.0",
-      "authority_master_sha256": "69899ae26bd6606cc6d8da86d2c6a30317dbbeebc37480ad3cc11e2b36421699",
+      "authority_master_sha256": "2a7fd52bbe82d73faf562a395ccf40d78c84cd050735f3a5e89d39e767014549",
       "route": "/evidence/VIS-REMITTANCE-MACRO/",
       "page_class": "evidence_detail",
       "template_route": "/evidence/[id]",
@@ -62024,7 +62026,7 @@
     },
     {
       "page_spec_version": "1.0",
-      "authority_master_sha256": "69899ae26bd6606cc6d8da86d2c6a30317dbbeebc37480ad3cc11e2b36421699",
+      "authority_master_sha256": "2a7fd52bbe82d73faf562a395ccf40d78c84cd050735f3a5e89d39e767014549",
       "route": "/evidence/VIS-SOURCE-COMPARISON/",
       "page_class": "evidence_detail",
       "template_route": "/evidence/[id]",
@@ -62269,7 +62271,7 @@
     },
     {
       "page_spec_version": "1.0",
-      "authority_master_sha256": "69899ae26bd6606cc6d8da86d2c6a30317dbbeebc37480ad3cc11e2b36421699",
+      "authority_master_sha256": "2a7fd52bbe82d73faf562a395ccf40d78c84cd050735f3a5e89d39e767014549",
       "route": "/evidence/VIS-TARGET-RESULT-STATE/",
       "page_class": "evidence_detail",
       "template_route": "/evidence/[id]",
@@ -62920,7 +62922,7 @@
     },
     {
       "page_spec_version": "1.0",
-      "authority_master_sha256": "69899ae26bd6606cc6d8da86d2c6a30317dbbeebc37480ad3cc11e2b36421699",
+      "authority_master_sha256": "2a7fd52bbe82d73faf562a395ccf40d78c84cd050735f3a5e89d39e767014549",
       "route": "/evidence/XW-FMIIP-005/",
       "page_class": "evidence_detail",
       "template_route": "/evidence/[id]",
@@ -63479,7 +63481,7 @@
     },
     {
       "page_spec_version": "1.0",
-      "authority_master_sha256": "69899ae26bd6606cc6d8da86d2c6a30317dbbeebc37480ad3cc11e2b36421699",
+      "authority_master_sha256": "2a7fd52bbe82d73faf562a395ccf40d78c84cd050735f3a5e89d39e767014549",
       "route": "/evidence/compare/",
       "page_class": "static",
       "template_route": "/evidence/compare",
@@ -71076,7 +71078,7 @@
     },
     {
       "page_spec_version": "1.0",
-      "authority_master_sha256": "69899ae26bd6606cc6d8da86d2c6a30317dbbeebc37480ad3cc11e2b36421699",
+      "authority_master_sha256": "2a7fd52bbe82d73faf562a395ccf40d78c84cd050735f3a5e89d39e767014549",
       "route": "/evidence/",
       "page_class": "static",
       "template_route": "/evidence",
@@ -72483,6 +72485,7 @@
             "/evidence",
             "/explore"
           ],
+          "domain_ar": "حماية المستهلك / الجودة",
           "affected_route_list": [
             "/reforms/",
             "/evidence/",
@@ -79020,7 +79023,7 @@
     },
     {
       "page_spec_version": "1.0",
-      "authority_master_sha256": "69899ae26bd6606cc6d8da86d2c6a30317dbbeebc37480ad3cc11e2b36421699",
+      "authority_master_sha256": "2a7fd52bbe82d73faf562a395ccf40d78c84cd050735f3a5e89d39e767014549",
       "route": "/explore/",
       "page_class": "static",
       "template_route": "/explore",
@@ -79179,6 +79182,7 @@
             "/explore",
             "/remittances"
           ],
+          "domain_ar": "الأفراد",
           "affected_route_list": [
             "/people/",
             "/",
@@ -79232,6 +79236,7 @@
             "/people",
             "/explore"
           ],
+          "domain_ar": "الأفراد / الإنصاف",
           "affected_route_list": [
             "/people/",
             "/explore/"
@@ -79283,6 +79288,7 @@
             "/finance",
             "/explore"
           ],
+          "domain_ar": "المنشآت / المنشآت الصغرى والصغيرة والمتوسطة",
           "affected_route_list": [
             "/firms/",
             "/finance/",
@@ -79334,6 +79340,7 @@
             "/providers",
             "/explore"
           ],
+          "domain_ar": "مقدمو الخدمات / الجغرافيا",
           "affected_route_list": [
             "/access/",
             "/providers/",
@@ -79383,6 +79390,7 @@
             "/evidence",
             "/explore"
           ],
+          "domain_ar": "حماية المستهلك / الجودة",
           "affected_route_list": [
             "/reforms/",
             "/evidence/",
@@ -79548,7 +79556,7 @@
     },
     {
       "page_spec_version": "1.0",
-      "authority_master_sha256": "69899ae26bd6606cc6d8da86d2c6a30317dbbeebc37480ad3cc11e2b36421699",
+      "authority_master_sha256": "2a7fd52bbe82d73faf562a395ccf40d78c84cd050735f3a5e89d39e767014549",
       "route": "/finance/",
       "page_class": "static",
       "template_route": "/finance",
@@ -81339,6 +81347,7 @@
             "/finance",
             "/explore"
           ],
+          "domain_ar": "المنشآت / المنشآت الصغرى والصغيرة والمتوسطة",
           "affected_route_list": [
             "/firms/",
             "/finance/",
@@ -81386,6 +81395,7 @@
             "/firms",
             "/reforms"
           ],
+          "domain_ar": "البنية التحتية للائتمان / المنشآت الصغرى والصغيرة والمتوسطة",
           "affected_route_list": [
             "/finance/",
             "/firms/",
@@ -89870,7 +89880,7 @@
     },
     {
       "page_spec_version": "1.0",
-      "authority_master_sha256": "69899ae26bd6606cc6d8da86d2c6a30317dbbeebc37480ad3cc11e2b36421699",
+      "authority_master_sha256": "2a7fd52bbe82d73faf562a395ccf40d78c84cd050735f3a5e89d39e767014549",
       "route": "/firms/",
       "page_class": "static",
       "template_route": "/firms",
@@ -90937,6 +90947,7 @@
             "/finance",
             "/explore"
           ],
+          "domain_ar": "المنشآت / المنشآت الصغرى والصغيرة والمتوسطة",
           "affected_route_list": [
             "/firms/",
             "/finance/",
@@ -90984,6 +90995,7 @@
             "/firms",
             "/reforms"
           ],
+          "domain_ar": "البنية التحتية للائتمان / المنشآت الصغرى والصغيرة والمتوسطة",
           "affected_route_list": [
             "/finance/",
             "/firms/",
@@ -95568,7 +95580,7 @@
     },
     {
       "page_spec_version": "1.0",
-      "authority_master_sha256": "69899ae26bd6606cc6d8da86d2c6a30317dbbeebc37480ad3cc11e2b36421699",
+      "authority_master_sha256": "2a7fd52bbe82d73faf562a395ccf40d78c84cd050735f3a5e89d39e767014549",
       "route": "/",
       "page_class": "static",
       "template_route": "/",
@@ -96092,6 +96104,7 @@
             "/explore",
             "/remittances"
           ],
+          "domain_ar": "الأفراد",
           "affected_route_list": [
             "/people/",
             "/",
@@ -98293,7 +98306,7 @@
     },
     {
       "page_spec_version": "1.0",
-      "authority_master_sha256": "69899ae26bd6606cc6d8da86d2c6a30317dbbeebc37480ad3cc11e2b36421699",
+      "authority_master_sha256": "2a7fd52bbe82d73faf562a395ccf40d78c84cd050735f3a5e89d39e767014549",
       "route": "/measurement/",
       "page_class": "static",
       "template_route": "/measurement",
@@ -99041,7 +99054,7 @@
     },
     {
       "page_spec_version": "1.0",
-      "authority_master_sha256": "69899ae26bd6606cc6d8da86d2c6a30317dbbeebc37480ad3cc11e2b36421699",
+      "authority_master_sha256": "2a7fd52bbe82d73faf562a395ccf40d78c84cd050735f3a5e89d39e767014549",
       "route": "/methodology/",
       "page_class": "static",
       "template_route": "/methodology",
@@ -106200,7 +106213,7 @@
     },
     {
       "page_spec_version": "1.0",
-      "authority_master_sha256": "69899ae26bd6606cc6d8da86d2c6a30317dbbeebc37480ad3cc11e2b36421699",
+      "authority_master_sha256": "2a7fd52bbe82d73faf562a395ccf40d78c84cd050735f3a5e89d39e767014549",
       "route": "/payments/",
       "page_class": "static",
       "template_route": "/payments",
@@ -107976,6 +107989,7 @@
             "/people",
             "/reforms"
           ],
+          "domain_ar": "المدفوعات / الأفراد",
           "affected_route_list": [
             "/payments/",
             "/people/",
@@ -108025,6 +108039,7 @@
             "/payments",
             "/providers"
           ],
+          "domain_ar": "الهوية / الوصول الرقمي",
           "affected_route_list": [
             "/people/",
             "/payments/",
@@ -108073,6 +108088,7 @@
             "/people",
             "/reforms"
           ],
+          "domain_ar": "الحماية الاجتماعية / المدفوعات",
           "affected_route_list": [
             "/payments/",
             "/people/",
@@ -108125,6 +108141,7 @@
             "/access",
             "/people"
           ],
+          "domain_ar": "الإصلاحات / المدفوعات / الجودة",
           "affected_route_list": [
             "/reforms/",
             "/payments/",
@@ -117524,7 +117541,7 @@
     },
     {
       "page_spec_version": "1.0",
-      "authority_master_sha256": "69899ae26bd6606cc6d8da86d2c6a30317dbbeebc37480ad3cc11e2b36421699",
+      "authority_master_sha256": "2a7fd52bbe82d73faf562a395ccf40d78c84cd050735f3a5e89d39e767014549",
       "route": "/people/",
       "page_class": "static",
       "template_route": "/people",
@@ -119655,6 +119672,7 @@
             "/explore",
             "/remittances"
           ],
+          "domain_ar": "الأفراد",
           "affected_route_list": [
             "/people/",
             "/",
@@ -119704,6 +119722,7 @@
             "/people",
             "/reforms"
           ],
+          "domain_ar": "المدفوعات / الأفراد",
           "affected_route_list": [
             "/payments/",
             "/people/",
@@ -119756,6 +119775,7 @@
             "/people",
             "/explore"
           ],
+          "domain_ar": "الأفراد / الإنصاف",
           "affected_route_list": [
             "/people/",
             "/explore/"
@@ -119804,6 +119824,7 @@
             "/payments",
             "/providers"
           ],
+          "domain_ar": "الهوية / الوصول الرقمي",
           "affected_route_list": [
             "/people/",
             "/payments/",
@@ -119852,6 +119873,7 @@
             "/people",
             "/reforms"
           ],
+          "domain_ar": "الحماية الاجتماعية / المدفوعات",
           "affected_route_list": [
             "/payments/",
             "/people/",
@@ -119904,6 +119926,7 @@
             "/access",
             "/people"
           ],
+          "domain_ar": "الإصلاحات / المدفوعات / الجودة",
           "affected_route_list": [
             "/reforms/",
             "/payments/",
@@ -130833,7 +130856,7 @@
     },
     {
       "page_spec_version": "1.0",
-      "authority_master_sha256": "69899ae26bd6606cc6d8da86d2c6a30317dbbeebc37480ad3cc11e2b36421699",
+      "authority_master_sha256": "2a7fd52bbe82d73faf562a395ccf40d78c84cd050735f3a5e89d39e767014549",
       "route": "/privacy/",
       "page_class": "operational",
       "template_route": "/privacy",
@@ -130967,7 +130990,7 @@
     },
     {
       "page_spec_version": "1.0",
-      "authority_master_sha256": "69899ae26bd6606cc6d8da86d2c6a30317dbbeebc37480ad3cc11e2b36421699",
+      "authority_master_sha256": "2a7fd52bbe82d73faf562a395ccf40d78c84cd050735f3a5e89d39e767014549",
       "route": "/providers/",
       "page_class": "static",
       "template_route": "/providers",
@@ -132076,6 +132099,7 @@
             "/providers",
             "/explore"
           ],
+          "domain_ar": "مقدمو الخدمات / الجغرافيا",
           "affected_route_list": [
             "/access/",
             "/providers/",
@@ -132125,6 +132149,7 @@
             "/payments",
             "/providers"
           ],
+          "domain_ar": "الهوية / الوصول الرقمي",
           "affected_route_list": [
             "/people/",
             "/payments/",
@@ -137402,7 +137427,7 @@
     },
     {
       "page_spec_version": "1.0",
-      "authority_master_sha256": "69899ae26bd6606cc6d8da86d2c6a30317dbbeebc37480ad3cc11e2b36421699",
+      "authority_master_sha256": "2a7fd52bbe82d73faf562a395ccf40d78c84cd050735f3a5e89d39e767014549",
       "route": "/readings/after-transfer-persistence/",
       "page_class": "reading_detail",
       "template_route": "/readings/[reading_id]",
@@ -137965,7 +137990,7 @@
     },
     {
       "page_spec_version": "1.0",
-      "authority_master_sha256": "69899ae26bd6606cc6d8da86d2c6a30317dbbeebc37480ad3cc11e2b36421699",
+      "authority_master_sha256": "2a7fd52bbe82d73faf562a395ccf40d78c84cd050735f3a5e89d39e767014549",
       "route": "/readings/banking-jump-measurement-basis/",
       "page_class": "reading_detail",
       "template_route": "/readings/[reading_id]",
@@ -138577,7 +138602,7 @@
     },
     {
       "page_spec_version": "1.0",
-      "authority_master_sha256": "69899ae26bd6606cc6d8da86d2c6a30317dbbeebc37480ad3cc11e2b36421699",
+      "authority_master_sha256": "2a7fd52bbe82d73faf562a395ccf40d78c84cd050735f3a5e89d39e767014549",
       "route": "/readings/define-what-you-count/",
       "page_class": "reading_detail",
       "template_route": "/readings/[reading_id]",
@@ -139595,7 +139620,7 @@
     },
     {
       "page_spec_version": "1.0",
-      "authority_master_sha256": "69899ae26bd6606cc6d8da86d2c6a30317dbbeebc37480ad3cc11e2b36421699",
+      "authority_master_sha256": "2a7fd52bbe82d73faf562a395ccf40d78c84cd050735f3a5e89d39e767014549",
       "route": "/readings/digital-workaround-not-yet-durable-inclusion/",
       "page_class": "reading_detail",
       "template_route": "/readings/[reading_id]",
@@ -140159,7 +140184,7 @@
     },
     {
       "page_spec_version": "1.0",
-      "authority_master_sha256": "69899ae26bd6606cc6d8da86d2c6a30317dbbeebc37480ad3cc11e2b36421699",
+      "authority_master_sha256": "2a7fd52bbe82d73faf562a395ccf40d78c84cd050735f3a5e89d39e767014549",
       "route": "/readings/finance-constraint-different-questions/",
       "page_class": "reading_detail",
       "template_route": "/readings/[reading_id]",
@@ -140823,7 +140848,7 @@
     },
     {
       "page_spec_version": "1.0",
-      "authority_master_sha256": "69899ae26bd6606cc6d8da86d2c6a30317dbbeebc37480ad3cc11e2b36421699",
+      "authority_master_sha256": "2a7fd52bbe82d73faf562a395ccf40d78c84cd050735f3a5e89d39e767014549",
       "route": "/readings/from-rail-to-result-missing-middle/",
       "page_class": "reading_detail",
       "template_route": "/readings/[reading_id]",
@@ -141898,7 +141923,7 @@
     },
     {
       "page_spec_version": "1.0",
-      "authority_master_sha256": "69899ae26bd6606cc6d8da86d2c6a30317dbbeebc37480ad3cc11e2b36421699",
+      "authority_master_sha256": "2a7fd52bbe82d73faf562a395ccf40d78c84cd050735f3a5e89d39e767014549",
       "route": "/readings/gender-gap-measured-causes-open/",
       "page_class": "reading_detail",
       "template_route": "/readings/[reading_id]",
@@ -142622,7 +142647,7 @@
     },
     {
       "page_spec_version": "1.0",
-      "authority_master_sha256": "69899ae26bd6606cc6d8da86d2c6a30317dbbeebc37480ad3cc11e2b36421699",
+      "authority_master_sha256": "2a7fd52bbe82d73faf562a395ccf40d78c84cd050735f3a5e89d39e767014549",
       "route": "/readings/",
       "page_class": "static",
       "template_route": "/readings",
@@ -145971,7 +145996,7 @@
     },
     {
       "page_spec_version": "1.0",
-      "authority_master_sha256": "69899ae26bd6606cc6d8da86d2c6a30317dbbeebc37480ad3cc11e2b36421699",
+      "authority_master_sha256": "2a7fd52bbe82d73faf562a395ccf40d78c84cd050735f3a5e89d39e767014549",
       "route": "/readings/microfinance-structural-divergence/",
       "page_class": "reading_detail",
       "template_route": "/readings/[reading_id]",
@@ -147023,7 +147048,7 @@
     },
     {
       "page_spec_version": "1.0",
-      "authority_master_sha256": "69899ae26bd6606cc6d8da86d2c6a30317dbbeebc37480ad3cc11e2b36421699",
+      "authority_master_sha256": "2a7fd52bbe82d73faf562a395ccf40d78c84cd050735f3a5e89d39e767014549",
       "route": "/readings/reforms-newer-than-people-evidence/",
       "page_class": "reading_detail",
       "template_route": "/readings/[reading_id]",
@@ -148346,7 +148371,7 @@
     },
     {
       "page_spec_version": "1.0",
-      "authority_master_sha256": "69899ae26bd6606cc6d8da86d2c6a30317dbbeebc37480ad3cc11e2b36421699",
+      "authority_master_sha256": "2a7fd52bbe82d73faf562a395ccf40d78c84cd050735f3a5e89d39e767014549",
       "route": "/readings/same-year-different-number/",
       "page_class": "reading_detail",
       "template_route": "/readings/[reading_id]",
@@ -149347,7 +149372,7 @@
     },
     {
       "page_spec_version": "1.0",
-      "authority_master_sha256": "69899ae26bd6606cc6d8da86d2c6a30317dbbeebc37480ad3cc11e2b36421699",
+      "authority_master_sha256": "2a7fd52bbe82d73faf562a395ccf40d78c84cd050735f3a5e89d39e767014549",
       "route": "/reforms/",
       "page_class": "static",
       "template_route": "/reforms",
@@ -150740,6 +150765,7 @@
             "/people",
             "/reforms"
           ],
+          "domain_ar": "المدفوعات / الأفراد",
           "affected_route_list": [
             "/payments/",
             "/people/",
@@ -150789,6 +150815,7 @@
             "/evidence",
             "/explore"
           ],
+          "domain_ar": "حماية المستهلك / الجودة",
           "affected_route_list": [
             "/reforms/",
             "/evidence/",
@@ -150836,6 +150863,7 @@
             "/firms",
             "/reforms"
           ],
+          "domain_ar": "البنية التحتية للائتمان / المنشآت الصغرى والصغيرة والمتوسطة",
           "affected_route_list": [
             "/finance/",
             "/firms/",
@@ -150884,6 +150912,7 @@
             "/people",
             "/reforms"
           ],
+          "domain_ar": "الحماية الاجتماعية / المدفوعات",
           "affected_route_list": [
             "/payments/",
             "/people/",
@@ -150936,6 +150965,7 @@
             "/access",
             "/people"
           ],
+          "domain_ar": "الإصلاحات / المدفوعات / الجودة",
           "affected_route_list": [
             "/reforms/",
             "/payments/",
@@ -157394,7 +157424,7 @@
     },
     {
       "page_spec_version": "1.0",
-      "authority_master_sha256": "69899ae26bd6606cc6d8da86d2c6a30317dbbeebc37480ad3cc11e2b36421699",
+      "authority_master_sha256": "2a7fd52bbe82d73faf562a395ccf40d78c84cd050735f3a5e89d39e767014549",
       "route": "/remittances/",
       "page_class": "static",
       "template_route": "/remittances",
@@ -159046,6 +159076,7 @@
             "/explore",
             "/remittances"
           ],
+          "domain_ar": "الأفراد",
           "affected_route_list": [
             "/people/",
             "/",
@@ -166517,7 +166548,7 @@
     },
     {
       "page_spec_version": "1.0",
-      "authority_master_sha256": "69899ae26bd6606cc6d8da86d2c6a30317dbbeebc37480ad3cc11e2b36421699",
+      "authority_master_sha256": "2a7fd52bbe82d73faf562a395ccf40d78c84cd050735f3a5e89d39e767014549",
       "route": "/rights/",
       "page_class": "operational",
       "template_route": "/rights",
@@ -166642,7 +166673,7 @@
     },
     {
       "page_spec_version": "1.0",
-      "authority_master_sha256": "69899ae26bd6606cc6d8da86d2c6a30317dbbeebc37480ad3cc11e2b36421699",
+      "authority_master_sha256": "2a7fd52bbe82d73faf562a395ccf40d78c84cd050735f3a5e89d39e767014549",
       "route": "/terms/",
       "page_class": "operational",
       "template_route": "/terms",
@@ -166776,7 +166807,7 @@
     },
     {
       "page_spec_version": "1.0",
-      "authority_master_sha256": "69899ae26bd6606cc6d8da86d2c6a30317dbbeebc37480ad3cc11e2b36421699",
+      "authority_master_sha256": "2a7fd52bbe82d73faf562a395ccf40d78c84cd050735f3a5e89d39e767014549",
       "route": "/evidence/CLM-062/",
       "page_class": "evidence_detail",
       "template_route": "/evidence/[id]",
@@ -167447,7 +167478,7 @@
     },
     {
       "page_spec_version": "1.0",
-      "authority_master_sha256": "69899ae26bd6606cc6d8da86d2c6a30317dbbeebc37480ad3cc11e2b36421699",
+      "authority_master_sha256": "2a7fd52bbe82d73faf562a395ccf40d78c84cd050735f3a5e89d39e767014549",
       "route": "/evidence/FMIIP-BASELINE-2025-01/",
       "page_class": "evidence_detail",
       "template_route": "/evidence/[id]",
@@ -167795,7 +167826,7 @@
     }
   ],
   "index": {
-    "authority_master_sha256": "69899ae26bd6606cc6d8da86d2c6a30317dbbeebc37480ad3cc11e2b36421699",
+    "authority_master_sha256": "2a7fd52bbe82d73faf562a395ccf40d78c84cd050735f3a5e89d39e767014549",
     "spec_count": 143,
     "rule": "Page Specs are deterministic design bindings to the current Production Master/projections. They are not a parallel semantic authority. Any factual change must be Master-first.",
     "pages": [

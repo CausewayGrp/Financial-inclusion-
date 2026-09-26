@@ -1898,6 +1898,25 @@ try:
                 errors.append(f'TC-G02 Reading h1 is not the 08 title {_r["reading_id"]} {_L}')
 except Exception as _x:
     errors.append('TC-G02 unreadable '+str(_x))
+# R8.5 (26 Sep 2026) one owner for public copy — permanent gates.
+#  R85-G01 no bilingual public copy in code: build.py holds no "<Arabic>" if ar else "<English>" pair, app.js no isAr ? '…' : '…'
+#  R85-G02 every interface-copy ID the code uses exists in 04, and app.js reads only UI-JS-* IDs the build ships
+#  R85-G03 a governed label carries the same {placeholders} in English and Arabic
+try:
+    _b=(ROOT/'scripts/build.py').read_text(encoding='utf-8'); _j=(ROOT/'site-src/app.js').read_text(encoding='utf-8')
+    _pairs=re.findall(r"""(['"])[^'"\n]*[ء-ي][^'"\n]*\1\s+if\s+(?:ar|lang==['"]ar['"])\s+else\s+(['"])""",_b)   # Arabic letters; an Arabic punctuation separator is a locale rule, not copy
+    if _pairs: errors.append(f'R85-G01 bilingual public copy held in build.py ({len(_pairs)} pairs); move it to 04 interface copy')
+    if re.search(r"isAr\s*\?\s*['\"`]",_j): errors.append('R85-G01 bilingual public copy held in app.js (isAr ? literal); move it to 04 interface copy')
+    _ui={r['ui_id']:r for r in json.load(open(C/'content/interface_copy.json',encoding='utf-8'))}
+    for _id in sorted(set(re.findall(r"""ui_(?:text|fmt)\(\s*['"](UI-[A-Z0-9-]+)['"]""",_b))|set(re.findall(r"""\b(?:T|TF)\(\s*['"](UI-[A-Z0-9-]+)['"]""",_j))|set(re.findall(r'"(UI-JS-[A-Z0-9-]+)"',_j))):
+        if _id not in _ui: errors.append(f'R85-G02 interface copy ID used in code is missing from 04: {_id}')
+    for _id in set(re.findall(r'"(UI-[A-Z0-9-]+)"',_j))|set(re.findall(r"""\b(?:T|TF)\(\s*['"](UI-[A-Z0-9-]+)['"]""",_j)):
+        if not _id.startswith('UI-JS-'): errors.append(f'R85-G02 app.js reads a label the build does not ship (not UI-JS-*): {_id}')
+    for _id,_r in _ui.items():
+        if set(re.findall(r'\{(\w+)\}',_r.get('label_en') or ''))!=set(re.findall(r'\{(\w+)\}',_r.get('label_ar') or '')):
+            errors.append(f'R85-G03 placeholders differ between English and Arabic in {_id}')
+except Exception as _x:
+    errors.append('R85-G unreadable '+repr(_x))
 # F2 (26 Sep 2026) Evidence Readings family — permanent gates.
 #  RP-G01 every Reading ends its essay with "What would change this reading?", then the evidence path, then 1-2 related Readings
 #  RP-G02 one signature visual at most on a Reading page; no numbered section template and no Reading card wall

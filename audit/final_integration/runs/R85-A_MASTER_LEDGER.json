@@ -1,0 +1,1863 @@
+{
+ "transaction": "R85-A",
+ "summary": "Interface copy moved out of build.py/app.js into 04 (wording unchanged); 10 domain_ar",
+ "input_master_sha256": "69899ae26bd6606cc6d8da86d2c6a30317dbbeebc37480ad3cc11e2b36421699",
+ "output_master_sha256": "2a7fd52bbe82d73faf562a395ccf40d78c84cd050735f3a5e89d39e767014549",
+ "cells_written": 206,
+ "changes": [
+  {
+   "finding": "R85-A:COPY-OUT",
+   "sheet": "04_NAV_UX",
+   "row": null,
+   "col": null,
+   "field": "UI-DOM-SCOPE-AND-TIME",
+   "old": null,
+   "new": "Scope and time || النطاق والزمن"
+  },
+  {
+   "finding": "R85-A:COPY-OUT",
+   "sheet": "04_NAV_UX",
+   "row": null,
+   "col": null,
+   "field": "UI-DOM-WHAT-NOT-TO-CONCLUDE",
+   "old": null,
+   "new": "What not to conclude || ما لا يُستنتج"
+  },
+  {
+   "finding": "R85-A:COPY-OUT",
+   "sheet": "04_NAV_UX",
+   "row": null,
+   "col": null,
+   "field": "UI-DOM-WHAT-REMAINS-UNKNOWN",
+   "old": null,
+   "new": "What remains unknown || ما يزال غير معروف"
+  },
+  {
+   "finding": "R85-A:COPY-OUT",
+   "sheet": "04_NAV_UX",
+   "row": null,
+   "col": null,
+   "field": "UI-DOM-COVERAGE-LIMIT",
+   "old": null,
+   "new": "Coverage limit || قيد التغطية"
+  },
+  {
+   "finding": "R85-A:COPY-OUT",
+   "sheet": "04_NAV_UX",
+   "row": null,
+   "col": null,
+   "field": "UI-DOM-A-VIEW-THAT-CHANGES-UNDERSTANDING",
+   "old": null,
+   "new": "A view that changes understanding || عرض يغيّر الفهم"
+  },
+  {
+   "finding": "R85-A:COPY-OUT",
+   "sheet": "04_NAV_UX",
+   "row": null,
+   "col": null,
+   "field": "UI-DOM-MORE-EVIDENCE-AND-CONTEXT",
+   "old": null,
+   "new": "More evidence and context || مزيد من الأدلة والسياق"
+  },
+  {
+   "finding": "R85-A:COPY-OUT",
+   "sheet": "04_NAV_UX",
+   "row": null,
+   "col": null,
+   "field": "UI-DOM-ADDITIONAL-CONTROLLED-DETAIL-FROM-THIS",
+   "old": null,
+   "new": "Additional controlled detail from this route, preserved with its original boundaries. || تفاصيل إضافية من الصفحة نفسها، محفوظة مع حدودها الأصلية."
+  },
+  {
+   "finding": "R85-A:COPY-OUT",
+   "sheet": "04_NAV_UX",
+   "row": null,
+   "col": null,
+   "field": "UI-DOM-WHAT-MEASUREMENT-WOULD-CHANGE-THE",
+   "old": null,
+   "new": "What measurement would change the decision? || ما القياس الذي سيغيّر القرار؟"
+  },
+  {
+   "finding": "R85-A:COPY-OUT",
+   "sheet": "04_NAV_UX",
+   "row": null,
+   "col": null,
+   "field": "UI-DOM-VERIFY-IT-YOURSELF",
+   "old": null,
+   "new": "Verify it yourself || تحقق بنفسك"
+  },
+  {
+   "finding": "R85-A:COPY-OUT",
+   "sheet": "04_NAV_UX",
+   "row": null,
+   "col": null,
+   "field": "UI-DOM-OPEN-THE-EVIDENCE-RECORD-BEHIND",
+   "old": null,
+   "new": "Open the evidence record behind each answer, or go to the sources or the methodology. || افتح سجل الدليل الذي تستند إليه كل إجابة، أو انتقل إلى المصادر أو المنهجية."
+  },
+  {
+   "finding": "R85-A:COPY-OUT",
+   "sheet": "04_NAV_UX",
+   "row": null,
+   "col": null,
+   "field": "UI-DOM-OPEN-EVIDENCE",
+   "old": null,
+   "new": "Open evidence || افتح الأدلة"
+  },
+  {
+   "finding": "R85-A:COPY-OUT",
+   "sheet": "04_NAV_UX",
+   "row": null,
+   "col": null,
+   "field": "UI-DOM-METHODOLOGY",
+   "old": null,
+   "new": "Methodology || المنهجية"
+  },
+  {
+   "finding": "R85-A:COPY-OUT",
+   "sheet": "04_NAV_UX",
+   "row": null,
+   "col": null,
+   "field": "UI-DOM-OPEN-EVIDENCE-RECORD",
+   "old": null,
+   "new": "Open evidence record → || افتح سجل الدليل ←"
+  },
+  {
+   "finding": "R85-A:COPY-OUT",
+   "sheet": "04_NAV_UX",
+   "row": null,
+   "col": null,
+   "field": "UI-DOM-DO-NOT-INFER",
+   "old": null,
+   "new": "Do not infer: || لا يُستنتج:"
+  },
+  {
+   "finding": "R85-A:COPY-OUT",
+   "sheet": "04_NAV_UX",
+   "row": null,
+   "col": null,
+   "field": "UI-DOM-ANALYTICAL-QUESTION",
+   "old": null,
+   "new": "Analytical question || السؤال التحليلي"
+  },
+  {
+   "finding": "R85-A:COPY-OUT",
+   "sheet": "04_NAV_UX",
+   "row": null,
+   "col": null,
+   "field": "UI-DOM-ANALYTICAL-TEXT-ALTERNATIVE",
+   "old": null,
+   "new": "Analytical text alternative || البديل النصي التحليلي"
+  },
+  {
+   "finding": "R85-A:COPY-OUT",
+   "sheet": "04_NAV_UX",
+   "row": null,
+   "col": null,
+   "field": "UI-DOM-UNDERSTAND-EXPLORE-VERIFY",
+   "old": null,
+   "new": "Understand → Explore → Verify || افهم ← استكشف ← تحقّق"
+  },
+  {
+   "finding": "R85-A:COPY-OUT",
+   "sheet": "04_NAV_UX",
+   "row": null,
+   "col": null,
+   "field": "UI-DOM-READING-RULE",
+   "old": null,
+   "new": "Reading rule || قاعدة القراءة"
+  },
+  {
+   "finding": "R85-A:COPY-OUT",
+   "sheet": "04_NAV_UX",
+   "row": null,
+   "col": null,
+   "field": "UI-DOM-EVERY-CONSEQUENTIAL-NUMBER-STAYS-ATTACHED",
+   "old": null,
+   "new": "Every consequential number stays attached to its unit, scope, time and limitation. Evidence measured at different times is never presented as if it described the same moment. || يبقى كل رقم جوهري مرتبطًا بوحدته ونطاقه وفترته وحدوده. ولا تعامل الأدلة ذات تواريخ القياس المختلفة كما لو كانت تصف اللحظة نفسها."
+  },
+  {
+   "finding": "R85-A:COPY-OUT",
+   "sheet": "04_NAV_UX",
+   "row": null,
+   "col": null,
+   "field": "UI-DOM-EXPLORE-QUESTIONS",
+   "old": null,
+   "new": "Explore questions || استكشف الأسئلة"
+  },
+  {
+   "finding": "R85-A:COPY-OUT",
+   "sheet": "04_NAV_UX",
+   "row": null,
+   "col": null,
+   "field": "UI-EVID-EVIDENCE-RECORD",
+   "old": null,
+   "new": "Evidence record || سجل الدليل"
+  },
+  {
+   "finding": "R85-A:COPY-OUT",
+   "sheet": "04_NAV_UX",
+   "row": null,
+   "col": null,
+   "field": "UI-EVID-WHAT-DOES-THIS-EVIDENCE-ESTABLISH",
+   "old": null,
+   "new": "What does this evidence establish? || ما الذي يثبته هذا الدليل؟"
+  },
+  {
+   "finding": "R85-A:COPY-OUT",
+   "sheet": "04_NAV_UX",
+   "row": null,
+   "col": null,
+   "field": "UI-EVID-WHAT-DOES-IT-MEASURE",
+   "old": null,
+   "new": "What does it measure? || ما الذي يقيسه؟"
+  },
+  {
+   "finding": "R85-A:COPY-OUT",
+   "sheet": "04_NAV_UX",
+   "row": null,
+   "col": null,
+   "field": "UI-EVID-WHO-OR-WHAT-DOES-IT",
+   "old": null,
+   "new": "Who or what does it apply to? || على من أو ماذا ينطبق؟"
+  },
+  {
+   "finding": "R85-A:COPY-OUT",
+   "sheet": "04_NAV_UX",
+   "row": null,
+   "col": null,
+   "field": "UI-EVID-WHEN-WAS-IT-MEASURED-OR",
+   "old": null,
+   "new": "When was it measured or observed? || متى قيس أو رُصد؟"
+  },
+  {
+   "finding": "R85-A:COPY-OUT",
+   "sheet": "04_NAV_UX",
+   "row": null,
+   "col": null,
+   "field": "UI-EVID-HOW-CURRENT-IS-IT",
+   "old": null,
+   "new": "How current is it? || حداثة الدليل"
+  },
+  {
+   "finding": "R85-A:COPY-OUT",
+   "sheet": "04_NAV_UX",
+   "row": null,
+   "col": null,
+   "field": "UI-EVID-ORIGINAL-SOURCE-AND-VERIFICATION",
+   "old": null,
+   "new": "Original source and verification || المصدر الأصلي والتحقق"
+  },
+  {
+   "finding": "R85-A:COPY-OUT",
+   "sheet": "04_NAV_UX",
+   "row": null,
+   "col": null,
+   "field": "UI-EVID-OPEN-THE-SOURCE-RECORD-HERE",
+   "old": null,
+   "new": "Open the source record here, or follow the original locator when publication state allows it. || افتح سجل المصدر هنا، أو انتقل إلى الرابط الأصلي حين تسمح حالة النشر بذلك."
+  },
+  {
+   "finding": "R85-A:COPY-OUT",
+   "sheet": "04_NAV_UX",
+   "row": null,
+   "col": null,
+   "field": "UI-EVID-OPEN-ORIGINAL-SOURCE",
+   "old": null,
+   "new": "Open original source ↗ || افتح المصدر الأصلي ↗"
+  },
+  {
+   "finding": "R85-A:COPY-OUT",
+   "sheet": "04_NAV_UX",
+   "row": null,
+   "col": null,
+   "field": "UI-EVID-OPEN-SOURCE-RECORD",
+   "old": null,
+   "new": "Open source record || افتح سجل المصدر"
+  },
+  {
+   "finding": "R85-A:COPY-OUT",
+   "sheet": "04_NAV_UX",
+   "row": null,
+   "col": null,
+   "field": "UI-EVID-NO-STANDALONE-PUBLIC-LOCATOR-IS",
+   "old": null,
+   "new": "No standalone public locator is available for this dependency in the current publication state. || لا يتوافر رابط عام مستقل لهذا الاعتماد ضمن حالة النشر الحالية."
+  },
+  {
+   "finding": "R85-A:COPY-OUT",
+   "sheet": "04_NAV_UX",
+   "row": null,
+   "col": null,
+   "field": "UI-EVID-THIS-RECORD-CURRENTLY-HAS-NO",
+   "old": null,
+   "new": "This record currently has no standalone public path to an original source; use the method and verification detail below. || لا يرتبط هذا السجل حاليًا بمسار عام مستقل إلى مصدر أصلي؛ استخدم المنهج وطريقة التحقق أدناه."
+  },
+  {
+   "finding": "R85-A:COPY-OUT",
+   "sheet": "04_NAV_UX",
+   "row": null,
+   "col": null,
+   "field": "UI-EVID-RETURN-TO-INTERPRETATION",
+   "old": null,
+   "new": "Return to interpretation || عد إلى التفسير"
+  },
+  {
+   "finding": "R85-A:COPY-OUT",
+   "sheet": "04_NAV_UX",
+   "row": null,
+   "col": null,
+   "field": "UI-EVID-RETURN-TO-THE-QUESTION-OR",
+   "old": null,
+   "new": "Return to the question or page that uses this evidence in its analytical context. || ارجع إلى السؤال أو الصفحة التي تستخدم هذا الدليل في سياقه التحليلي."
+  },
+  {
+   "finding": "R85-A:COPY-OUT",
+   "sheet": "04_NAV_UX",
+   "row": null,
+   "col": null,
+   "field": "UI-EVID-DATA-SOURCES",
+   "old": null,
+   "new": "Data & sources || البيانات والمصادر"
+  },
+  {
+   "finding": "R85-A:COPY-OUT",
+   "sheet": "04_NAV_UX",
+   "row": null,
+   "col": null,
+   "field": "UI-EVID-METHOD-AND-VERIFICATION-DETAIL",
+   "old": null,
+   "new": "Method and verification detail || المنهج وطريقة التحقق"
+  },
+  {
+   "finding": "R85-A:COPY-OUT",
+   "sheet": "04_NAV_UX",
+   "row": null,
+   "col": null,
+   "field": "UI-EVID-ADDITIONAL-DETAIL-FOR-REPRODUCING-OR",
+   "old": null,
+   "new": "Additional detail for reproducing or challenging the reading without changing the evidence meaning. || تفاصيل إضافية تساعد على إعادة إنتاج القراءة أو تحديها من دون تغيير معنى الدليل."
+  },
+  {
+   "finding": "R85-A:COPY-OUT",
+   "sheet": "04_NAV_UX",
+   "row": null,
+   "col": null,
+   "field": "UI-EVID-HOW-WAS-IT-PRODUCED",
+   "old": null,
+   "new": "How was it produced? || كيف أُنتج؟"
+  },
+  {
+   "finding": "R85-A:COPY-OUT",
+   "sheet": "04_NAV_UX",
+   "row": null,
+   "col": null,
+   "field": "UI-EVID-WHEN-DOES-THIS-RECORD-CHANGE",
+   "old": null,
+   "new": "When does this record change? || متى يتغير هذا السجل؟"
+  },
+  {
+   "finding": "R85-A:COPY-OUT",
+   "sheet": "04_NAV_UX",
+   "row": null,
+   "col": null,
+   "field": "UI-EVID-HOW-CAN-I-VERIFY-IT",
+   "old": null,
+   "new": "How can I verify it? || كيف أتحقق منه؟"
+  },
+  {
+   "finding": "R85-A:COPY-OUT",
+   "sheet": "04_NAV_UX",
+   "row": null,
+   "col": null,
+   "field": "UI-EVID-HOW-SHOULD-THIS-RECORD-BE",
+   "old": null,
+   "new": "How should this record be read? || كيف يُقرأ هذا السجل؟"
+  },
+  {
+   "finding": "R85-A:COPY-OUT",
+   "sheet": "04_NAV_UX",
+   "row": null,
+   "col": null,
+   "field": "UI-EVID-REFERENCE-ID",
+   "old": null,
+   "new": "Reference ID || المعرّف المرجعي"
+  },
+  {
+   "finding": "R85-A:COPY-OUT",
+   "sheet": "04_NAV_UX",
+   "row": null,
+   "col": null,
+   "field": "UI-EVID-REPORT-AN-ISSUE",
+   "old": null,
+   "new": "Report an issue || أبلغ عن مشكلة"
+  },
+  {
+   "finding": "R85-A:COPY-OUT",
+   "sheet": "04_NAV_UX",
+   "row": null,
+   "col": null,
+   "field": "UI-EVID-EVIDENCE-RECORDS-USING-THIS-SOURCE",
+   "old": null,
+   "new": "Evidence records using this source || سجلات أدلة تستخدم هذا المصدر"
+  },
+  {
+   "finding": "R85-A:COPY-OUT",
+   "sheet": "04_NAV_UX",
+   "row": null,
+   "col": null,
+   "field": "UI-EVID-OPEN-EVIDENCE-RECORD",
+   "old": null,
+   "new": "Open evidence record || افتح سجل الدليل"
+  },
+  {
+   "finding": "R85-A:COPY-OUT",
+   "sheet": "04_NAV_UX",
+   "row": null,
+   "col": null,
+   "field": "UI-EVID-CITE-THIS-RECORD",
+   "old": null,
+   "new": "Cite this record || استشهد بهذا السجل"
+  },
+  {
+   "finding": "R85-A:COPY-OUT",
+   "sheet": "04_NAV_UX",
+   "row": null,
+   "col": null,
+   "field": "UI-EVID-CITATION-AND-REUSE",
+   "old": null,
+   "new": "Citation and reuse || الاستشهاد وإعادة الاستخدام"
+  },
+  {
+   "finding": "R85-A:COPY-OUT",
+   "sheet": "04_NAV_UX",
+   "row": null,
+   "col": null,
+   "field": "UI-EVID-CITING-THE-EVIDENCE-DOES-NOT",
+   "old": null,
+   "new": "Citing the evidence does not automatically grant permission to republish an original source file, table or chart. Check the original source and its terms before redistributing source material. || الاستشهاد بالدليل لا يعني تلقائيًا امتلاك حق إعادة نشر ملف المصدر أو جدوله أو رسمه. افحص المصدر الأصلي وشروطه قبل إعادة توزيع مادته."
+  },
+  {
+   "finding": "R85-A:COPY-OUT",
+   "sheet": "04_NAV_UX",
+   "row": null,
+   "col": null,
+   "field": "UI-EVID-SOURCE-VERIFICATION-PATH",
+   "old": null,
+   "new": "Source verification path || مسار التحقق من المصدر"
+  },
+  {
+   "finding": "R85-A:COPY-OUT",
+   "sheet": "04_NAV_UX",
+   "row": null,
+   "col": null,
+   "field": "UI-EVID-THE-STABLE-RECORD-ID-STAYS",
+   "old": null,
+   "new": "The stable record ID stays linked to original sources that the publication state permits this product to expose. Missing bibliography is not filled by assumption. || يبقى معرّف السجل مرتبطًا بالمصادر الأصلية التي تسمح حالة النشر بعرضها. ولا تُستكمل البيانات الوصفية الناقصة بالافتراض."
+  },
+  {
+   "finding": "R85-A:COPY-OUT",
+   "sheet": "04_NAV_UX",
+   "row": null,
+   "col": null,
+   "field": "UI-EVID-CORRECTIONS-RELEASE-HISTORY",
+   "old": null,
+   "new": "Corrections & release history || التصحيحات وسجل الإصدارات"
+  },
+  {
+   "finding": "R85-A:COPY-OUT",
+   "sheet": "04_NAV_UX",
+   "row": null,
+   "col": null,
+   "field": "UI-EVID-COPY-SOURCE-REFERENCE",
+   "old": null,
+   "new": "Copy source reference || انسخ مرجع المصدر"
+  },
+  {
+   "finding": "R85-A:COPY-OUT",
+   "sheet": "04_NAV_UX",
+   "row": null,
+   "col": null,
+   "field": "UI-EVID-THIS-SOURCE-RECORD-DOES-NOT",
+   "old": null,
+   "new": "This source record does not establish permission to republish the original file, table or chart. Check source-specific terms before redistribution. || لا يثبت سجل المصدر هذا إذنًا بإعادة نشر الملف أو الجدول أو الرسم الأصلي. تحقّق من شروط المصدر قبل إعادة التوزيع."
+  },
+  {
+   "finding": "R85-A:COPY-OUT",
+   "sheet": "04_NAV_UX",
+   "row": null,
+   "col": null,
+   "field": "UI-SEARCH-SEARCH",
+   "old": null,
+   "new": "Search || بحث"
+  },
+  {
+   "finding": "R85-A:COPY-OUT",
+   "sheet": "04_NAV_UX",
+   "row": null,
+   "col": null,
+   "field": "UI-SEARCH-CLOSE",
+   "old": null,
+   "new": "Close || إغلاق"
+  },
+  {
+   "finding": "R85-A:COPY-OUT",
+   "sheet": "04_NAV_UX",
+   "row": null,
+   "col": null,
+   "field": "UI-SEARCH-SEARCH-THE-PUBLIC-EVIDENCE",
+   "old": null,
+   "new": "Search the public evidence || ابحث في الأدلة العامة"
+  },
+  {
+   "finding": "R85-A:COPY-OUT",
+   "sheet": "04_NAV_UX",
+   "row": null,
+   "col": null,
+   "field": "UI-SEARCH-SEARCH-QUESTIONS-EVIDENCE-READINGS-AND",
+   "old": null,
+   "new": "Search questions, evidence, readings and sources... || ابحث في الأسئلة والأدلة والقراءات والمصادر..."
+  },
+  {
+   "finding": "R85-A:COPY-OUT",
+   "sheet": "04_NAV_UX",
+   "row": null,
+   "col": null,
+   "field": "UI-SEARCH-SEARCH-STATUS",
+   "old": null,
+   "new": "Search status || حالة البحث"
+  },
+  {
+   "finding": "R85-A:COPY-OUT",
+   "sheet": "04_NAV_UX",
+   "row": null,
+   "col": null,
+   "field": "UI-HEADER-TRUST-LINKS",
+   "old": null,
+   "new": "Trust links || روابط الثقة"
+  },
+  {
+   "finding": "R85-A:COPY-OUT",
+   "sheet": "04_NAV_UX",
+   "row": null,
+   "col": null,
+   "field": "UI-HEADER-SKIP-TO-CONTENT",
+   "old": null,
+   "new": "Skip to content || انتقل إلى المحتوى"
+  },
+  {
+   "finding": "R85-A:COPY-OUT",
+   "sheet": "04_NAV_UX",
+   "row": null,
+   "col": null,
+   "field": "UI-HEADER-PRIMARY-NAVIGATION",
+   "old": null,
+   "new": "Primary navigation || التنقل الرئيسي"
+  },
+  {
+   "finding": "R85-A:COPY-OUT",
+   "sheet": "04_NAV_UX",
+   "row": null,
+   "col": null,
+   "field": "UI-HEADER-MENU",
+   "old": null,
+   "new": "Menu || القائمة"
+  },
+  {
+   "finding": "R85-A:COPY-OUT",
+   "sheet": "04_NAV_UX",
+   "row": null,
+   "col": null,
+   "field": "UI-HEADER-CITE-THIS-PAGE",
+   "old": null,
+   "new": "Cite this page || استشهد بهذه الصفحة"
+  },
+  {
+   "finding": "R85-A:COPY-OUT",
+   "sheet": "04_NAV_UX",
+   "row": null,
+   "col": null,
+   "field": "UI-HEADER-REPORT-AN-ISSUE",
+   "old": null,
+   "new": "Report an issue || الإبلاغ عن مشكلة"
+  },
+  {
+   "finding": "R85-A:COPY-OUT",
+   "sheet": "04_NAV_UX",
+   "row": null,
+   "col": null,
+   "field": "UI-HEADER-COPIED",
+   "old": null,
+   "new": "Copied || تم النسخ"
+  },
+  {
+   "finding": "R85-A:COPY-OUT",
+   "sheet": "04_NAV_UX",
+   "row": null,
+   "col": null,
+   "field": "UI-FOOTER-PUBLISHED-EVIDENCE-REMAINS-ATTRIBUTED-TO",
+   "old": null,
+   "new": "Published evidence remains attributed to the original source. || الأدلة المنشورة تحتفظ بنسبة المصدر الأصلي."
+  },
+  {
+   "finding": "R85-A:COPY-OUT",
+   "sheet": "04_NAV_UX",
+   "row": null,
+   "col": null,
+   "field": "UI-FOOTER-PRODUCT-AND-TRUST-LINKS",
+   "old": null,
+   "new": "Product and trust links || روابط المنتج والثقة"
+  },
+  {
+   "finding": "R85-A:COPY-OUT",
+   "sheet": "04_NAV_UX",
+   "row": null,
+   "col": null,
+   "field": "UI-HERO-START-WITH-A-QUESTION",
+   "old": null,
+   "new": "Start with a question || ابدأ بالسؤال"
+  },
+  {
+   "finding": "R85-A:COPY-OUT",
+   "sheet": "04_NAV_UX",
+   "row": null,
+   "col": null,
+   "field": "UI-HERO-VERIFY-EVIDENCE",
+   "old": null,
+   "new": "Verify evidence || تحقق من الأدلة"
+  },
+  {
+   "finding": "R85-A:COPY-OUT",
+   "sheet": "04_NAV_UX",
+   "row": null,
+   "col": null,
+   "field": "UI-HERO-THIS-RESOURCE-PRESENTS-THE-STRONGEST",
+   "old": null,
+   "new": "This resource presents the strongest defensible answer while keeping scope, limits and source visible. || يعرض هذا المورد أقوى ما تسمح به الأدلة، مع إبقاء حدود الاستنتاج والمصدر ظاهرين."
+  },
+  {
+   "finding": "R85-A:COPY-OUT",
+   "sheet": "04_NAV_UX",
+   "row": null,
+   "col": null,
+   "field": "UI-CRUMB-BREADCRUMB",
+   "old": null,
+   "new": "Breadcrumb || مسار الصفحة"
+  },
+  {
+   "finding": "R85-A:COPY-OUT",
+   "sheet": "04_NAV_UX",
+   "row": null,
+   "col": null,
+   "field": "UI-NEXT-CONTINUE-FROM-HERE",
+   "old": null,
+   "new": "Continue from here || تابع من هنا"
+  },
+  {
+   "finding": "R85-A:COPY-OUT",
+   "sheet": "04_NAV_UX",
+   "row": null,
+   "col": null,
+   "field": "UI-NEXT-CHOOSE-THE-NEXT-PATH-THAT",
+   "old": null,
+   "new": "Choose the next path that matches what you need to do. || اختر المسار الأقرب لما تريد فعله بعد ذلك."
+  },
+  {
+   "finding": "R85-A:COPY-OUT",
+   "sheet": "04_NAV_UX",
+   "row": null,
+   "col": null,
+   "field": "UI-VIS-WHAT-THE-EVIDENCE-SHOWS",
+   "old": null,
+   "new": "What the evidence shows || ما يوضحه الدليل"
+  },
+  {
+   "finding": "R85-A:COPY-OUT",
+   "sheet": "04_NAV_UX",
+   "row": null,
+   "col": null,
+   "field": "UI-DOM-EVIDENCE-READINGS-ON-THIS-QUESTION",
+   "old": null,
+   "new": "Evidence Readings on this question || قراءات الأدلة المرتبطة بهذه الصفحة"
+  },
+  {
+   "finding": "R85-A:COPY-OUT",
+   "sheet": "04_NAV_UX",
+   "row": null,
+   "col": null,
+   "field": "UI-QUESTIONS-COMMON-STARTING-QUESTIONS",
+   "old": null,
+   "new": "Common starting questions || أسئلة شائعة للبدء"
+  },
+  {
+   "finding": "R85-A:COPY-OUT",
+   "sheet": "04_NAV_UX",
+   "row": null,
+   "col": null,
+   "field": "UI-QUESTIONS-START-FROM-THE-PROBLEM-YOU",
+   "old": null,
+   "new": "Start from the problem you need to resolve || ابدأ من المسألة التي تريد حسمها"
+  },
+  {
+   "finding": "R85-A:COPY-OUT",
+   "sheet": "04_NAV_UX",
+   "row": null,
+   "col": null,
+   "field": "UI-QUESTIONS-UNDERSTAND-THE-WIDER-PICTURE",
+   "old": null,
+   "new": "Understand the wider picture || افهم الصورة العامة"
+  },
+  {
+   "finding": "R85-A:COPY-OUT",
+   "sheet": "04_NAV_UX",
+   "row": null,
+   "col": null,
+   "field": "UI-QUESTIONS-PEOPLE-USE-AND-FLOWS",
+   "old": null,
+   "new": "People, use and flows || الناس والاستخدام والتدفقات"
+  },
+  {
+   "finding": "R85-A:COPY-OUT",
+   "sheet": "04_NAV_UX",
+   "row": null,
+   "col": null,
+   "field": "UI-QUESTIONS-FIRMS-INSTITUTIONS-AND-PROVIDERS",
+   "old": null,
+   "new": "Firms, institutions and providers || المنشآت والمؤسسات ومقدمو الخدمات"
+  },
+  {
+   "finding": "R85-A:COPY-OUT",
+   "sheet": "04_NAV_UX",
+   "row": null,
+   "col": null,
+   "field": "UI-QUESTIONS-VERIFY-AND-DECIDE-WHAT-TO",
+   "old": null,
+   "new": "Verify and decide what to measure || تحقّق وحدد ما ينبغي قياسه"
+  },
+  {
+   "finding": "R85-A:COPY-OUT",
+   "sheet": "04_NAV_UX",
+   "row": null,
+   "col": null,
+   "field": "UI-QUESTIONS-QUESTIONS-INTO-THE-EVIDENCE",
+   "old": null,
+   "new": "Questions into the evidence || أسئلة للدخول إلى الأدلة"
+  },
+  {
+   "finding": "R85-A:COPY-OUT",
+   "sheet": "04_NAV_UX",
+   "row": null,
+   "col": null,
+   "field": "UI-QUESTIONS-FIND-THE-QUESTION-CLOSEST-TO",
+   "old": null,
+   "new": "Find the question closest to your decision || اعثر على السؤال الأقرب إلى قرارك"
+  },
+  {
+   "finding": "R85-A:COPY-OUT",
+   "sheet": "04_NAV_UX",
+   "row": null,
+   "col": null,
+   "field": "UI-QUESTIONS-EVERY-ROUTE-KEEPS-PERIOD-POPULATION",
+   "old": null,
+   "new": "Every route keeps period, population or calculation base, inference limits and source visible. || يحافظ كل مسار على الفترة، والمجتمع أو قاعدة الاحتساب، وحدود الاستنتاج، والمصدر."
+  },
+  {
+   "finding": "R85-A:COPY-OUT",
+   "sheet": "04_NAV_UX",
+   "row": null,
+   "col": null,
+   "field": "UI-HOME-CROSS-SOURCE-ANALYSIS-THAT-STAYS",
+   "old": null,
+   "new": "Cross-source analysis that stays bound to claims and evidence. || تحليل متعدد المصادر يبقى مربوطًا بالخلاصات والأدلة."
+  },
+  {
+   "finding": "R85-A:COPY-OUT",
+   "sheet": "04_NAV_UX",
+   "row": null,
+   "col": null,
+   "field": "UI-HOME-WHAT-REMAINS-UNKNOWN-AND-WHAT",
+   "old": null,
+   "new": "What remains unknown and what measurement would strengthen the decision. || ما الذي لا نعرفه بعد، وما القياس الذي سيجعل القرار أقوى."
+  },
+  {
+   "finding": "R85-A:COPY-OUT",
+   "sheet": "04_NAV_UX",
+   "row": null,
+   "col": null,
+   "field": "UI-HOME-FIND-THE-ORIGINAL-SOURCES-BEHIND",
+   "old": null,
+   "new": "Find the original sources behind the evidence, with their titles, publishers and links. || اعثر على المصادر الأصلية التي تستند إليها الأدلة، بعناوينها وجهاتها الناشرة وروابطها."
+  },
+  {
+   "finding": "R85-A:COPY-OUT",
+   "sheet": "04_NAV_UX",
+   "row": null,
+   "col": null,
+   "field": "UI-MA-CURRENT-EVIDENCE",
+   "old": null,
+   "new": "Current evidence: || ما نعرفه:"
+  },
+  {
+   "finding": "R85-A:COPY-OUT",
+   "sheet": "04_NAV_UX",
+   "row": null,
+   "col": null,
+   "field": "UI-MA-MISSING-EVIDENCE",
+   "old": null,
+   "new": "Missing evidence: || ما ينقص:"
+  },
+  {
+   "finding": "R85-A:COPY-OUT",
+   "sheet": "04_NAV_UX",
+   "row": null,
+   "col": null,
+   "field": "UI-MA-DECISION-UNLOCKED",
+   "old": null,
+   "new": "Decision unlocked: || ما الذي سيصبح القرار فيه أقوى:"
+  },
+  {
+   "finding": "R85-A:COPY-OUT",
+   "sheet": "04_NAV_UX",
+   "row": null,
+   "col": null,
+   "field": "UI-MA-PRIORITY",
+   "old": null,
+   "new": "Priority || الأولوية"
+  },
+  {
+   "finding": "R85-A:COPY-OUT",
+   "sheet": "04_NAV_UX",
+   "row": null,
+   "col": null,
+   "field": "UI-SOURCES-SOURCE-RECORD",
+   "old": null,
+   "new": "Source record || سجل المصدر"
+  },
+  {
+   "finding": "R85-A:COPY-OUT",
+   "sheet": "04_NAV_UX",
+   "row": null,
+   "col": null,
+   "field": "UI-SOURCES-SOURCES",
+   "old": null,
+   "new": "Sources || المصادر"
+  },
+  {
+   "finding": "R85-A:COPY-OUT",
+   "sheet": "04_NAV_UX",
+   "row": null,
+   "col": null,
+   "field": "UI-BLOCK-EVIDENCE-NEEDED",
+   "old": null,
+   "new": "Evidence needed: || الدليل المطلوب:"
+  },
+  {
+   "finding": "R85-A:COPY-OUT",
+   "sheet": "04_NAV_UX",
+   "row": null,
+   "col": null,
+   "field": "UI-SRC-REUSE-TERMS-NOT-ASSESSED",
+   "old": null,
+   "new": "Reuse terms: not assessed || شروط إعادة الاستخدام: غير مقيّمة"
+  },
+  {
+   "finding": "R85-A:COPY-OUT",
+   "sheet": "04_NAV_UX",
+   "row": null,
+   "col": null,
+   "field": "UI-SRC-REUSE-TERMS-NOT-STATED",
+   "old": null,
+   "new": "Reuse terms: not stated || شروط إعادة الاستخدام: غير محددة"
+  },
+  {
+   "finding": "R85-A:COPY-OUT",
+   "sheet": "04_NAV_UX",
+   "row": null,
+   "col": null,
+   "field": "UI-COMPARE-OPTIONAL-RECORD",
+   "old": null,
+   "new": "— Optional record — || — سجل اختياري —"
+  },
+  {
+   "finding": "R85-A:COPY-OUT",
+   "sheet": "04_NAV_UX",
+   "row": null,
+   "col": null,
+   "field": "UI-COMPARE-CAN-THESE-RECORDS-ACTUALLY-BE",
+   "old": null,
+   "new": "Can these records actually be compared? || هل يمكن مقارنة هذين السجلين مباشرة؟"
+  },
+  {
+   "finding": "R85-A:COPY-OUT",
+   "sheet": "04_NAV_UX",
+   "row": null,
+   "col": null,
+   "field": "UI-COMPARE-START-WITH-COMPARISON-LEGITIMACY-NOT",
+   "old": null,
+   "new": "Start with comparison legitimacy, not the numbers. || ابدأ بمشروعية المقارنة، لا بالأرقام."
+  },
+  {
+   "finding": "R85-A:COPY-OUT",
+   "sheet": "04_NAV_UX",
+   "row": null,
+   "col": null,
+   "field": "UI-COMPARE-FIRST-RECORD",
+   "old": null,
+   "new": "First record || السجل الأول"
+  },
+  {
+   "finding": "R85-A:COPY-OUT",
+   "sheet": "04_NAV_UX",
+   "row": null,
+   "col": null,
+   "field": "UI-COMPARE-SECOND-RECORD",
+   "old": null,
+   "new": "Second record || السجل الثاني"
+  },
+  {
+   "finding": "R85-A:COPY-OUT",
+   "sheet": "04_NAV_UX",
+   "row": null,
+   "col": null,
+   "field": "UI-COMPARE-THIRD-RECORD-OPTIONAL",
+   "old": null,
+   "new": "Third record — optional || السجل الثالث — اختياري"
+  },
+  {
+   "finding": "R85-A:COPY-OUT",
+   "sheet": "04_NAV_UX",
+   "row": null,
+   "col": null,
+   "field": "UI-COMPARE-FOURTH-RECORD-OPTIONAL",
+   "old": null,
+   "new": "Fourth record — optional || السجل الرابع — اختياري"
+  },
+  {
+   "finding": "R85-A:COPY-OUT",
+   "sheet": "04_NAV_UX",
+   "row": null,
+   "col": null,
+   "field": "UI-COMPARE-NO-AUTO-AVERAGE-NO-PREFERRED",
+   "old": null,
+   "new": "No auto-average · no preferred number · no invented conversion scalar || لا متوسطات تلقائية · لا رقم مفضل · لا معامل تحويل مخترع"
+  },
+  {
+   "finding": "R85-A:COPY-OUT",
+   "sheet": "04_NAV_UX",
+   "row": null,
+   "col": null,
+   "field": "UI-COMPARE-COPY-LINK-TO-THIS-COMPARISON",
+   "old": null,
+   "new": "Copy link to this comparison || انسخ رابط هذه المقارنة"
+  },
+  {
+   "finding": "R85-A:COPY-OUT",
+   "sheet": "04_NAV_UX",
+   "row": null,
+   "col": null,
+   "field": "UI-DATA-SOURCE-DIRECTORY-AND-VERIFICATION",
+   "old": null,
+   "new": "Source directory and verification || دليل المصادر والتحقق"
+  },
+  {
+   "finding": "R85-A:COPY-OUT",
+   "sheet": "04_NAV_UX",
+   "row": null,
+   "col": null,
+   "field": "UI-DATA-ONLY-SOURCE-INFORMATION-PERMITTED-BY",
+   "old": null,
+   "new": "Only source information permitted by the controlled records is shown here. Sources that currently support public evidence are separated from reference locators available for verification or context, so the existence of a link is never mistaken for analytical use or an observed result. || تُعرض هنا فقط معلومات المصدر التي تسمح بها السجلات المعتمدة. وتُفصل المراجع التي تسند أدلة عامة حالية عن المراجع المتاحة للتحقق أو السياق حتى لا يبدو مجرد وجود رابط وكأنه استخدام تحليلي أو دليل على نتيجة."
+  },
+  {
+   "finding": "R85-A:COPY-OUT",
+   "sheet": "04_NAV_UX",
+   "row": null,
+   "col": null,
+   "field": "UI-DATA-CURATED-REPORTS-AND-REFERENCES",
+   "old": null,
+   "new": "Curated reports and references || تقارير ومراجع منتقاة"
+  },
+  {
+   "finding": "R85-A:COPY-OUT",
+   "sheet": "04_NAV_UX",
+   "row": null,
+   "col": null,
+   "field": "UI-DATA-SOURCES-SUPPORTING-CURRENT-PUBLIC-EVIDENCE",
+   "old": null,
+   "new": "Sources supporting current public evidence || مصادر تسند أدلة عامة حالية"
+  },
+  {
+   "finding": "R85-A:COPY-OUT",
+   "sheet": "04_NAV_UX",
+   "row": null,
+   "col": null,
+   "field": "UI-DATA-ADDITIONAL-ORIGINAL-REFERENCES-FOR-VERIFICATION",
+   "old": null,
+   "new": "Additional original references for verification and context || مراجع أصلية إضافية للتحقق والسياق"
+  },
+  {
+   "finding": "R85-A:COPY-OUT",
+   "sheet": "04_NAV_UX",
+   "row": null,
+   "col": null,
+   "field": "UI-DATA-THESE-SOURCES-ARE-LINKED-DIRECTLY",
+   "old": null,
+   "new": "These sources are linked directly to at least one current public Evidence Record. Open the dependent records to see exactly where and how they are used. || هذه المصادر مرتبطة مباشرة بسجل دليل عام واحد على الأقل. افتح الروابط المرتبطة لمعرفة موضع استخدامها وحدودها."
+  },
+  {
+   "finding": "R85-A:COPY-OUT",
+   "sheet": "04_NAV_UX",
+   "row": null,
+   "col": null,
+   "field": "UI-DATA-THESE-REFERENCES-ARE-AVAILABLE-FOR",
+   "old": null,
+   "new": "These references are available for verification, method or context but do not currently support a public Evidence Record. Their presence in the directory does not promote them into an evidence finding or claim. || هذه المراجع متاحة للتحقق أو المنهج أو السياق، لكنها لا تسند حاليًا سجل دليل عام. وجودها في الدليل لا يرقّيها إلى نتيجة أو خلاصة."
+  },
+  {
+   "finding": "R85-A:COPY-OUT",
+   "sheet": "04_NAV_UX",
+   "row": null,
+   "col": null,
+   "field": "UI-DATA-FIND-A-SOURCE-BY-TITLE",
+   "old": null,
+   "new": "Find a source by title or reference || ابحث عن مصدر بعنوانه أو مرجعه"
+  },
+  {
+   "finding": "R85-A:COPY-OUT",
+   "sheet": "04_NAV_UX",
+   "row": null,
+   "col": null,
+   "field": "UI-DATA-E-G-SRC-CBY",
+   "old": null,
+   "new": "e.g. SRC-CBY… || مثال: SRC-CBY…"
+  },
+  {
+   "finding": "R85-A:COPY-OUT",
+   "sheet": "04_NAV_UX",
+   "row": null,
+   "col": null,
+   "field": "UI-DATA-NO-SOURCES-MATCH-THIS-SEARCH",
+   "old": null,
+   "new": "No sources match this search. This does not mean there is no evidence on the topic; try another reference or title. || لا توجد مصادر مطابقة لهذا البحث. ولا يعني ذلك غياب الأدلة عن الموضوع؛ جرّب معرّفًا أو عنوانًا آخر."
+  },
+  {
+   "finding": "R85-A:COPY-OUT",
+   "sheet": "04_NAV_UX",
+   "row": null,
+   "col": null,
+   "field": "UI-DATA-EVERY-SOURCE-HERE-CAN-BE",
+   "old": null,
+   "new": "Every source here can be cited and opened at its original location. Each card shows its source's reuse-terms state; where terms have not been assessed, this resource offers no source file for download or republication, so check each source's own terms before redistributing its material. || يمكن الاستشهاد بكل مصدر هنا وفتحه في موقعه الأصلي. ويبيّن كل بطاقة حالة شروط إعادة استخدام مصدرها؛ وحيث لم تُقيَّم الشروط، لا يعرض هذا الموقع ملفات المصدر للتنزيل أو إعادة النشر، فتحقّق من شروط كل مصدر قبل إعادة توزيع مادته."
+  },
+  {
+   "finding": "R85-A:COPY-OUT",
+   "sheet": "04_NAV_UX",
+   "row": null,
+   "col": null,
+   "field": "UI-ORIGIN-RECORD-YOU-ARE-REPORTING-ON",
+   "old": null,
+   "new": "Record you are reporting on || السجل الذي تبلّغ عنه"
+  },
+  {
+   "finding": "R85-A:COPY-OUT",
+   "sheet": "04_NAV_UX",
+   "row": null,
+   "col": null,
+   "field": "UI-ORIGIN-RECORD-YOU-CAME-FROM",
+   "old": null,
+   "new": "Record you came from || السجل الذي جئت منه"
+  },
+  {
+   "finding": "R85-A:COPY-OUT",
+   "sheet": "04_NAV_UX",
+   "row": null,
+   "col": null,
+   "field": "UI-ORIGIN-OPEN-THE-CURRENT-PUBLIC-RECORD",
+   "old": null,
+   "new": "Open the current public record || افتح السجل العام الحالي"
+  },
+  {
+   "finding": "R85-A:COPY-OUT",
+   "sheet": "04_NAV_UX",
+   "row": null,
+   "col": null,
+   "field": "UI-ORIGIN-THE-RECORD-REFERENCE-IN-THIS",
+   "old": null,
+   "new": "The record reference in this link is not valid. This is a problem with the link, not information about the evidence. || مرجع السجل في هذا الرابط غير صالح. هذه مشكلة في الرابط، وليست معلومة عن الأدلة."
+  },
+  {
+   "finding": "R85-A:COPY-OUT",
+   "sheet": "04_NAV_UX",
+   "row": null,
+   "col": null,
+   "field": "UI-ORIGIN-THIS-LINK-NAMES-A-REFERENCE",
+   "old": null,
+   "new": "This link names a reference that matches no current public record. Check the reference or search for the record; this is a problem with the link, not information about the evidence. || يشير هذا الرابط إلى مرجع لا يطابق أي سجل عام حالي. تحقّق من المرجع أو ابحث عن السجل؛ هذه مشكلة في الرابط، وليست معلومة عن الأدلة."
+  },
+  {
+   "finding": "R85-A:COPY-OUT",
+   "sheet": "04_NAV_UX",
+   "row": null,
+   "col": null,
+   "field": "UI-CONTACT-WRITE-TO-US-ABOUT-THIS",
+   "old": null,
+   "new": "Write to us about this record || اكتب إلينا بشأن هذا السجل"
+  },
+  {
+   "finding": "R85-A:COPY-OUT",
+   "sheet": "04_NAV_UX",
+   "row": null,
+   "col": null,
+   "field": "UI-CORR-CURRENT-RECORD-AND-CORRECTION-PATH",
+   "old": null,
+   "new": "Current record and correction path || السجل الحالي ومسار التصحيح"
+  },
+  {
+   "finding": "R85-A:COPY-OUT",
+   "sheet": "04_NAV_UX",
+   "row": null,
+   "col": null,
+   "field": "UI-CORR-THIS-RESOURCE-DOES-NOT-MANUFACTURE",
+   "old": null,
+   "new": "This resource does not manufacture a release or correction history. A correction event appears only when it is governed for publication; the stable record ID remains the route back to the current public record. || لا ينشئ هذا الموقع سجل إصدارات أو تصحيحات افتراضيًا. تظهر واقعة التصحيح فقط عندما تكون معتمدة للنشر؛ ويظل المعرّف الثابت هو نقطة الرجوع إلى السجل العام الحالي."
+  },
+  {
+   "finding": "R85-A:COPY-OUT",
+   "sheet": "04_NAV_UX",
+   "row": null,
+   "col": null,
+   "field": "UI-CORR-THIS-PAGE-CURRENTLY-HAS-NO",
+   "old": null,
+   "new": "This page currently has no separately governed material-correction events to publish, so the interface does not invent a synthetic history. || لا توجد في مواصفة هذه الصفحة حاليًا وقائع تصحيح جوهرية مستقلة معتمدة للنشر؛ لذلك لا تُنشئ الواجهة تاريخًا اصطناعيًا."
+  },
+  {
+   "finding": "R85-A:COPY-OUT",
+   "sheet": "04_NAV_UX",
+   "row": null,
+   "col": null,
+   "field": "UI-PAGE-SEARCH-CLAIMS-EVIDENCE-READINGS",
+   "old": null,
+   "new": "Search claims, evidence, readings... || ابحث في الخلاصات والأدلة والقراءات…"
+  },
+  {
+   "finding": "R85-A:COPY-OUT",
+   "sheet": "04_NAV_UX",
+   "row": null,
+   "col": null,
+   "field": "UI-PAGE-COMPARE-EVIDENCE",
+   "old": null,
+   "new": "Compare evidence || مقارنة الأدلة"
+  },
+  {
+   "finding": "R85-A:COPY-OUT",
+   "sheet": "04_NAV_UX",
+   "row": null,
+   "col": null,
+   "field": "UI-READING-TEST-COMPARABILITY-OF-THIS-READING",
+   "old": null,
+   "new": "Test comparability of this Reading's records || اختبر قابلية المقارنة بين سجلات هذه القراءة"
+  },
+  {
+   "finding": "R85-A:COPY-OUT",
+   "sheet": "04_NAV_UX",
+   "row": null,
+   "col": null,
+   "field": "UI-JS-COPIED",
+   "old": null,
+   "new": "Copied || تم النسخ"
+  },
+  {
+   "finding": "R85-A:COPY-OUT",
+   "sheet": "04_NAV_UX",
+   "row": null,
+   "col": null,
+   "field": "UI-JS-CURRENT-RECORD",
+   "old": null,
+   "new": "Current record:  || الرابط الحالي: "
+  },
+  {
+   "finding": "R85-A:COPY-OUT",
+   "sheet": "04_NAV_UX",
+   "row": null,
+   "col": null,
+   "field": "UI-JS-COPY-CITATION",
+   "old": null,
+   "new": "Copy citation || انسخ الاستشهاد"
+  },
+  {
+   "finding": "R85-A:COPY-OUT",
+   "sheet": "04_NAV_UX",
+   "row": null,
+   "col": null,
+   "field": "UI-JS-COPY-SOURCE-REFERENCE",
+   "old": null,
+   "new": "Copy source reference || انسخ مرجع المصدر"
+  },
+  {
+   "finding": "R85-A:COPY-OUT",
+   "sheet": "04_NAV_UX",
+   "row": null,
+   "col": null,
+   "field": "UI-JS-SEARCH-NO-RESULT",
+   "old": null,
+   "new": "No result matches this search. This does not mean there is no evidence on the topic; try other words or start from the questions. || لا توجد نتيجة تطابق هذا البحث. ولا يعني ذلك غياب الأدلة عن الموضوع؛ جرّب كلمات أخرى أو ابدأ من الأسئلة."
+  },
+  {
+   "finding": "R85-A:COPY-OUT",
+   "sheet": "04_NAV_UX",
+   "row": null,
+   "col": null,
+   "field": "UI-JS-SEARCHING",
+   "old": null,
+   "new": "Searching… || جارٍ البحث…"
+  },
+  {
+   "finding": "R85-A:COPY-OUT",
+   "sheet": "04_NAV_UX",
+   "row": null,
+   "col": null,
+   "field": "UI-JS-SEARCH-ZERO",
+   "old": null,
+   "new": "0 results shown || 0 نتيجة معروضة"
+  },
+  {
+   "finding": "R85-A:COPY-OUT",
+   "sheet": "04_NAV_UX",
+   "row": null,
+   "col": null,
+   "field": "UI-JS-SEARCH-RESULTS",
+   "old": null,
+   "new": "{n} results shown || عدد النتائج المعروضة: {n}"
+  },
+  {
+   "finding": "R85-A:COPY-OUT",
+   "sheet": "04_NAV_UX",
+   "row": null,
+   "col": null,
+   "field": "UI-JS-SEARCH-UNAVAILABLE-COPY",
+   "old": null,
+   "new": "Search could not be loaded. You can continue from the main sections. || تعذر تحميل البحث الآن. يمكنك متابعة التصفح من الأقسام الرئيسية."
+  },
+  {
+   "finding": "R85-A:COPY-OUT",
+   "sheet": "04_NAV_UX",
+   "row": null,
+   "col": null,
+   "field": "UI-JS-SEARCH-UNAVAILABLE",
+   "old": null,
+   "new": "Search unavailable || تعذر تحميل البحث"
+  },
+  {
+   "finding": "R85-A:COPY-OUT",
+   "sheet": "04_NAV_UX",
+   "row": null,
+   "col": null,
+   "field": "UI-JS-SOURCES-SHOWN",
+   "old": null,
+   "new": "{n} sources or references shown || عدد المصادر والمراجع المعروضة: {n}"
+  },
+  {
+   "finding": "R85-A:COPY-OUT",
+   "sheet": "04_NAV_UX",
+   "row": null,
+   "col": null,
+   "field": "UI-JS-SOURCE-LINK-UNKNOWN",
+   "old": null,
+   "new": "The source reference in this link was not found in the source directory. This is a problem with the link, not information about the evidence; all sources are shown below. || لم يُعثر في دليل المصادر على مرجع المصدر الوارد في هذا الرابط. هذه مشكلة في الرابط، وليست معلومة عن الأدلة؛ تُعرض المصادر كلها أدناه."
+  },
+  {
+   "finding": "R85-A:COPY-OUT",
+   "sheet": "04_NAV_UX",
+   "row": null,
+   "col": null,
+   "field": "UI-JS-SEARCH-RESULT-ONE",
+   "old": null,
+   "new": "1 result shown || عدد النتائج المعروضة: 1"
+  },
+  {
+   "finding": "R85-A:COPY-OUT",
+   "sheet": "04_NAV_UX",
+   "row": null,
+   "col": null,
+   "field": "UI-JS-SOURCES-SHOWN-ONE",
+   "old": null,
+   "new": "1 source or reference shown || عدد المصادر والمراجع المعروضة: 1"
+  },
+  {
+   "finding": "R85-A:COPY-OUT",
+   "sheet": "04_NAV_UX",
+   "row": null,
+   "col": null,
+   "field": "UI-JS-TYPE-PAGE",
+   "old": null,
+   "new": "Page || صفحة"
+  },
+  {
+   "finding": "R85-A:COPY-OUT",
+   "sheet": "04_NAV_UX",
+   "row": null,
+   "col": null,
+   "field": "UI-JS-TYPE-QUESTION",
+   "old": null,
+   "new": "Question || سؤال"
+  },
+  {
+   "finding": "R85-A:COPY-OUT",
+   "sheet": "04_NAV_UX",
+   "row": null,
+   "col": null,
+   "field": "UI-JS-TYPE-EVIDENCE",
+   "old": null,
+   "new": "Evidence record || سجل دليل"
+  },
+  {
+   "finding": "R85-A:COPY-OUT",
+   "sheet": "04_NAV_UX",
+   "row": null,
+   "col": null,
+   "field": "UI-JS-TYPE-READING",
+   "old": null,
+   "new": "Reading || قراءة"
+  },
+  {
+   "finding": "R85-A:COPY-OUT",
+   "sheet": "04_NAV_UX",
+   "row": null,
+   "col": null,
+   "field": "UI-JS-TYPE-MEASUREMENT",
+   "old": null,
+   "new": "Measurement priority || أولوية قياس"
+  },
+  {
+   "finding": "R85-A:COPY-OUT",
+   "sheet": "04_NAV_UX",
+   "row": null,
+   "col": null,
+   "field": "UI-JS-TYPE-SOURCE",
+   "old": null,
+   "new": "Source || مصدر"
+  },
+  {
+   "finding": "R85-A:COPY-OUT",
+   "sheet": "04_NAV_UX",
+   "row": null,
+   "col": null,
+   "field": "UI-JS-TYPE-SOURCE-LOCATOR",
+   "old": null,
+   "new": "Source reference || مرجع مصدر"
+  },
+  {
+   "finding": "R85-A:COPY-OUT",
+   "sheet": "04_NAV_UX",
+   "row": null,
+   "col": null,
+   "field": "UI-JS-COMPARE-DEFINITION",
+   "old": null,
+   "new": "Definition || التعريف"
+  },
+  {
+   "finding": "R85-A:COPY-OUT",
+   "sheet": "04_NAV_UX",
+   "row": null,
+   "col": null,
+   "field": "UI-JS-COMPARE-UNIVERSE",
+   "old": null,
+   "new": "Population / base || المجتمع / قاعدة الاحتساب"
+  },
+  {
+   "finding": "R85-A:COPY-OUT",
+   "sheet": "04_NAV_UX",
+   "row": null,
+   "col": null,
+   "field": "UI-JS-COMPARE-PERIOD",
+   "old": null,
+   "new": "Period || الفترة"
+  },
+  {
+   "finding": "R85-A:COPY-OUT",
+   "sheet": "04_NAV_UX",
+   "row": null,
+   "col": null,
+   "field": "UI-JS-COMPARE-METHOD",
+   "old": null,
+   "new": "Method || الطريقة"
+  },
+  {
+   "finding": "R85-A:COPY-OUT",
+   "sheet": "04_NAV_UX",
+   "row": null,
+   "col": null,
+   "field": "UI-JS-COMPARE-SOURCE",
+   "old": null,
+   "new": "Source reference || مرجع المصدر"
+  },
+  {
+   "finding": "R85-A:COPY-OUT",
+   "sheet": "04_NAV_UX",
+   "row": null,
+   "col": null,
+   "field": "UI-JS-COMPARE-CURRENTNESS",
+   "old": null,
+   "new": "Evidence currency || حداثة الدليل"
+  },
+  {
+   "finding": "R85-A:COPY-OUT",
+   "sheet": "04_NAV_UX",
+   "row": null,
+   "col": null,
+   "field": "UI-JS-COMPARE-BOUNDARY",
+   "old": null,
+   "new": "What not to conclude || ما لا يُستنتج"
+  },
+  {
+   "finding": "R85-A:COPY-OUT",
+   "sheet": "04_NAV_UX",
+   "row": null,
+   "col": null,
+   "field": "UI-JS-COMPARE-SAME",
+   "old": null,
+   "new": "Same controlled fields || متطابق في الحقول المنظمة"
+  },
+  {
+   "finding": "R85-A:COPY-OUT",
+   "sheet": "04_NAV_UX",
+   "row": null,
+   "col": null,
+   "field": "UI-JS-COMPARE-DIFFERENT",
+   "old": null,
+   "new": "Different || مختلف"
+  },
+  {
+   "finding": "R85-A:COPY-OUT",
+   "sheet": "04_NAV_UX",
+   "row": null,
+   "col": null,
+   "field": "UI-JS-COMPARE-MISSING",
+   "old": null,
+   "new": "Not available to judge || غير متاح للحكم"
+  },
+  {
+   "finding": "R85-A:COPY-OUT",
+   "sheet": "04_NAV_UX",
+   "row": null,
+   "col": null,
+   "field": "UI-JS-COMPARE-INFORMATIONAL",
+   "old": null,
+   "new": "Trace only || للتتبع"
+  },
+  {
+   "finding": "R85-A:COPY-OUT",
+   "sheet": "04_NAV_UX",
+   "row": null,
+   "col": null,
+   "field": "UI-JS-COMPARE-SAME-RECORD",
+   "old": null,
+   "new": "Same record selected more than once || السجل نفسه مكرر"
+  },
+  {
+   "finding": "R85-A:COPY-OUT",
+   "sheet": "04_NAV_UX",
+   "row": null,
+   "col": null,
+   "field": "UI-JS-COMPARE-NOT-DIRECT",
+   "old": null,
+   "new": "Not a direct comparison || ليست مقارنة مباشرة"
+  },
+  {
+   "finding": "R85-A:COPY-OUT",
+   "sheet": "04_NAV_UX",
+   "row": null,
+   "col": null,
+   "field": "UI-JS-COMPARE-UNRESOLVED",
+   "old": null,
+   "new": "Direct comparability cannot be established || لا يمكن إثبات قابلية المقارنة المباشرة"
+  },
+  {
+   "finding": "R85-A:COPY-OUT",
+   "sheet": "04_NAV_UX",
+   "row": null,
+   "col": null,
+   "field": "UI-JS-COMPARE-QUALIFIED",
+   "old": null,
+   "new": "Qualified comparison only || مقارنة مؤهلة فقط"
+  },
+  {
+   "finding": "R85-A:COPY-OUT",
+   "sheet": "04_NAV_UX",
+   "row": null,
+   "col": null,
+   "field": "UI-JS-COMPARE-ALIGNED",
+   "old": null,
+   "new": "Structurally aligned on available fields || متوافقة بنيويًا ضمن الحقول المتاحة"
+  },
+  {
+   "finding": "R85-A:COPY-OUT",
+   "sheet": "04_NAV_UX",
+   "row": null,
+   "col": null,
+   "field": "UI-JS-COMPARE-SAME-RECORD-COPY",
+   "old": null,
+   "new": "The same Evidence Record is selected more than once. Remove duplicates before judging comparability across independent evidence. || اختير سجل الدليل نفسه أكثر من مرة. أزل التكرار قبل الحكم على المقارنة بين أدلة مستقلة."
+  },
+  {
+   "finding": "R85-A:COPY-OUT",
+   "sheet": "04_NAV_UX",
+   "row": null,
+   "col": null,
+   "field": "UI-JS-COMPARE-NOT-DIRECT-COPY",
+   "old": null,
+   "new": "The recorded definition, population or method differs between these records. Treat them as different measures unless their records say otherwise, and do not present their values on a common scale. || يختلف التعريف أو المجتمع أو الطريقة المسجلة بين هذه السجلات. تعامل معها بوصفها مقاييس مختلفة ما لم تذكر سجلاتها خلاف ذلك، ولا تعرض قيمها على مقياس مشترك."
+  },
+  {
+   "finding": "R85-A:COPY-OUT",
+   "sheet": "04_NAV_UX",
+   "row": null,
+   "col": null,
+   "field": "UI-JS-COMPARE-UNRESOLVED-COPY",
+   "old": null,
+   "new": "A field required to judge direct comparability is missing. Missing does not mean compatible, so the comparison remains unresolved. || تنقص حقول لازمة للحكم على المقارنة المباشرة. الغياب لا يعني التوافق؛ لذلك تبقى المقارنة غير محسومة."
+  },
+  {
+   "finding": "R85-A:COPY-OUT",
+   "sheet": "04_NAV_UX",
+   "row": null,
+   "col": null,
+   "field": "UI-JS-COMPARE-QUALIFIED-COPY",
+   "old": null,
+   "new": "The required structural fields align, but period or evidence currency differs. Use the comparison only with that qualification visible. || تتوافق الحقول البنيوية اللازمة، لكن الفترة أو حداثة الدليل تختلف. استخدم المقارنة مع هذا القيد ظاهرًا."
+  },
+  {
+   "finding": "R85-A:COPY-OUT",
+   "sheet": "04_NAV_UX",
+   "row": null,
+   "col": null,
+   "field": "UI-JS-COMPARE-ALIGNED-COPY",
+   "old": null,
+   "new": "The recorded definition, population and method match. This does not establish equivalence beyond the governed fields shown here. || يتطابق التعريف والمجتمع والطريقة المسجلة. ولا يثبت ذلك تكافؤ المعنى خارج الحقول المعتمدة المعروضة هنا."
+  },
+  {
+   "finding": "R85-A:COPY-OUT",
+   "sheet": "04_NAV_UX",
+   "row": null,
+   "col": null,
+   "field": "UI-JS-COMPARE-DIMENSION",
+   "old": null,
+   "new": "Comparison dimension || بُعد المقارنة"
+  },
+  {
+   "finding": "R85-A:COPY-OUT",
+   "sheet": "04_NAV_UX",
+   "row": null,
+   "col": null,
+   "field": "UI-JS-COMPARE-ASSESSMENT",
+   "old": null,
+   "new": "Assessment || الحكم"
+  },
+  {
+   "finding": "R85-A:COPY-OUT",
+   "sheet": "04_NAV_UX",
+   "row": null,
+   "col": null,
+   "field": "UI-JS-COMPARE-OPEN-RECORD",
+   "old": null,
+   "new": "Open Evidence Record || افتح سجل الدليل"
+  },
+  {
+   "finding": "R85-A:COPY-OUT",
+   "sheet": "04_NAV_UX",
+   "row": null,
+   "col": null,
+   "field": "UI-JS-COMPARE-NO-MERGE",
+   "old": null,
+   "new": "Do not merge values, manufacture a midpoint, average disagreement or infer a conversion scalar from this comparison. || لا تُدمج القيم ولا تُنشئ متوسطًا أو رقمًا وسطًا أو معامل تحويل من هذه المقارنة."
+  },
+  {
+   "finding": "R85-A:COPY-OUT",
+   "sheet": "04_NAV_UX",
+   "row": null,
+   "col": null,
+   "field": "UI-JS-COMPARE-TABLE",
+   "old": null,
+   "new": "Evidence comparison details || تفاصيل مقارنة الأدلة"
+  },
+  {
+   "finding": "R85-A:COPY-OUT",
+   "sheet": "04_NAV_UX",
+   "row": null,
+   "col": null,
+   "field": "UI-JS-COMPARE-SELECTED",
+   "old": null,
+   "new": "records selected || سجلات مختارة"
+  },
+  {
+   "finding": "R85-A:COPY-OUT",
+   "sheet": "04_NAV_UX",
+   "row": null,
+   "col": null,
+   "field": "UI-JS-COMPARE-LINK-TITLE",
+   "old": null,
+   "new": "This comparison link could not be read || تعذّرت قراءة رابط المقارنة"
+  },
+  {
+   "finding": "R85-A:COPY-OUT",
+   "sheet": "04_NAV_UX",
+   "row": null,
+   "col": null,
+   "field": "UI-JS-COMPARE-LINK-COUNT",
+   "old": null,
+   "new": "The link must name two to four Evidence Records, separated by commas. || يجب أن يسمّي الرابط من سجلين إلى أربعة سجلات أدلة، مفصولة بفواصل."
+  },
+  {
+   "finding": "R85-A:COPY-OUT",
+   "sheet": "04_NAV_UX",
+   "row": null,
+   "col": null,
+   "field": "UI-JS-COMPARE-LINK-MALFORMED",
+   "old": null,
+   "new": "The link contains a record reference that is not valid. || يحتوي الرابط على مرجع سجل غير صالح."
+  },
+  {
+   "finding": "R85-A:COPY-OUT",
+   "sheet": "04_NAV_UX",
+   "row": null,
+   "col": null,
+   "field": "UI-JS-COMPARE-LINK-UNKNOWN",
+   "old": null,
+   "new": "The link names a record that is not available for comparison here:  || يسمّي الرابط سجلًا غير متاح للمقارنة هنا: "
+  },
+  {
+   "finding": "R85-A:COPY-OUT",
+   "sheet": "04_NAV_UX",
+   "row": null,
+   "col": null,
+   "field": "UI-JS-COMPARE-LINK-NOTE",
+   "old": null,
+   "new": "This is a problem with the link, not a finding about the evidence. Choose records below to start a comparison. || هذه مشكلة في الرابط، وليست نتيجة عن الأدلة. اختر السجلات أدناه لبدء مقارنة."
+  },
+  {
+   "finding": "R85-A:COPY-OUT",
+   "sheet": "04_NAV_UX",
+   "row": null,
+   "col": null,
+   "field": "UI-QUESTIONS-VIEW-ALL",
+   "old": null,
+   "new": "View all {n} questions || اعرض الأسئلة كلها ({n})"
+  },
+  {
+   "finding": "R85-A:COPY-OUT",
+   "sheet": "04_NAV_UX",
+   "row": null,
+   "col": null,
+   "field": "UI-CITE-SOURCE-REFERENCE",
+   "old": null,
+   "new": "source reference {sid} || مرجع المصدر {sid}"
+  },
+  {
+   "finding": "R85-A:COPY-OUT",
+   "sheet": "04_NAV_UX",
+   "row": null,
+   "col": null,
+   "field": "UI-CITE-RECORD-LINE",
+   "old": null,
+   "new": "{product}, Evidence Record {oid}. CauseWay. {version}. || {product}، سجل الدليل {oid}. CauseWay. {version}."
+  },
+  {
+   "finding": "R85-A:COPY-OUT",
+   "sheet": "04_NAV_UX",
+   "row": null,
+   "col": null,
+   "field": "UI-CITE-PERIOD",
+   "old": null,
+   "new": "Period || الفترة"
+  },
+  {
+   "finding": "R85-A:COPY-OUT",
+   "sheet": "04_NAV_UX",
+   "row": null,
+   "col": null,
+   "field": "UI-CITE-POPULATION",
+   "old": null,
+   "new": "Population or base || المجتمع أو قاعدة الاحتساب"
+  },
+  {
+   "finding": "R85-A:COPY-OUT",
+   "sheet": "04_NAV_UX",
+   "row": null,
+   "col": null,
+   "field": "UI-CITE-ORIGINAL-SOURCES",
+   "old": null,
+   "new": "Original sources || المصادر الأصلية"
+  },
+  {
+   "finding": "R85-A:COPY-OUT",
+   "sheet": "04_NAV_UX",
+   "row": null,
+   "col": null,
+   "field": "UI-CITE-PUBLISHERS-AUTHORITATIVE",
+   "old": null,
+   "new": "Original publishers remain authoritative for their material. || وتبقى الجهات الناشرة الأصلية المرجع لمادتها."
+  },
+  {
+   "finding": "R85-A:COPY-OUT",
+   "sheet": "04_NAV_UX",
+   "row": null,
+   "col": null,
+   "field": "UI-404-TITLE",
+   "old": null,
+   "new": "Page not found || الصفحة غير موجودة"
+  },
+  {
+   "finding": "R85-A:COPY-OUT",
+   "sheet": "04_NAV_UX",
+   "row": null,
+   "col": null,
+   "field": "UI-404-HEADING",
+   "old": null,
+   "new": "We could not find this route || تعذر العثور على هذا المسار"
+  },
+  {
+   "finding": "R85-A:COPY-OUT",
+   "sheet": "04_NAV_UX",
+   "row": null,
+   "col": null,
+   "field": "UI-404-BODY",
+   "old": null,
+   "new": "The link may be old or unavailable in the current public route set. Start from Home, explore the questions, or search the published evidence. || قد يكون الرابط قديمًا أو غير متاح ضمن المسارات العامة الحالية. ابدأ من الصفحة الرئيسية، أو استكشف الأسئلة، أو ابحث في الأدلة المنشورة."
+  },
+  {
+   "finding": "R85-A:COPY-OUT",
+   "sheet": "04_NAV_UX",
+   "row": null,
+   "col": null,
+   "field": "UI-404-HOME",
+   "old": null,
+   "new": "Home || الرئيسية"
+  },
+  {
+   "finding": "R85-A:COPY-OUT",
+   "sheet": "04_NAV_UX",
+   "row": null,
+   "col": null,
+   "field": "UI-404-EXPLORE",
+   "old": null,
+   "new": "Explore || استكشف"
+  },
+  {
+   "finding": "R85-A:COPY-OUT",
+   "sheet": "04_NAV_UX",
+   "row": null,
+   "col": null,
+   "field": "UI-404-EVIDENCE",
+   "old": null,
+   "new": "Evidence || الأدلة"
+  },
+  {
+   "finding": "R85-A:COPY-OUT",
+   "sheet": "04_NAV_UX",
+   "row": null,
+   "col": null,
+   "field": "UI-404-SEARCH",
+   "old": null,
+   "new": "Search (Arabic and English) || البحث (بالعربية والإنجليزية)"
+  },
+  {
+   "finding": "R85-A:DOMAIN-AR",
+   "sheet": "10_MEASUREMENT_AGENDA",
+   "row": 4,
+   "col": 29,
+   "field": "10 header",
+   "old": null,
+   "new": "domain_ar"
+  },
+  {
+   "finding": "R85-A:DOMAIN-AR",
+   "sheet": "10_MEASUREMENT_AGENDA",
+   "row": 5,
+   "col": 29,
+   "field": "MA-001.domain_ar",
+   "old": null,
+   "new": "الأفراد"
+  },
+  {
+   "finding": "R85-A:DOMAIN-AR",
+   "sheet": "10_MEASUREMENT_AGENDA",
+   "row": 6,
+   "col": 29,
+   "field": "MA-002.domain_ar",
+   "old": null,
+   "new": "المدفوعات / الأفراد"
+  },
+  {
+   "finding": "R85-A:DOMAIN-AR",
+   "sheet": "10_MEASUREMENT_AGENDA",
+   "row": 7,
+   "col": 29,
+   "field": "MA-003.domain_ar",
+   "old": null,
+   "new": "الأفراد / الإنصاف"
+  },
+  {
+   "finding": "R85-A:DOMAIN-AR",
+   "sheet": "10_MEASUREMENT_AGENDA",
+   "row": 8,
+   "col": 29,
+   "field": "MA-004.domain_ar",
+   "old": null,
+   "new": "المنشآت / المنشآت الصغرى والصغيرة والمتوسطة"
+  },
+  {
+   "finding": "R85-A:DOMAIN-AR",
+   "sheet": "10_MEASUREMENT_AGENDA",
+   "row": 9,
+   "col": 29,
+   "field": "MA-005.domain_ar",
+   "old": null,
+   "new": "مقدمو الخدمات / الجغرافيا"
+  },
+  {
+   "finding": "R85-A:DOMAIN-AR",
+   "sheet": "10_MEASUREMENT_AGENDA",
+   "row": 10,
+   "col": 29,
+   "field": "MA-006.domain_ar",
+   "old": null,
+   "new": "حماية المستهلك / الجودة"
+  },
+  {
+   "finding": "R85-A:DOMAIN-AR",
+   "sheet": "10_MEASUREMENT_AGENDA",
+   "row": 11,
+   "col": 29,
+   "field": "MA-007.domain_ar",
+   "old": null,
+   "new": "الهوية / الوصول الرقمي"
+  },
+  {
+   "finding": "R85-A:DOMAIN-AR",
+   "sheet": "10_MEASUREMENT_AGENDA",
+   "row": 12,
+   "col": 29,
+   "field": "MA-008.domain_ar",
+   "old": null,
+   "new": "البنية التحتية للائتمان / المنشآت الصغرى والصغيرة والمتوسطة"
+  },
+  {
+   "finding": "R85-A:DOMAIN-AR",
+   "sheet": "10_MEASUREMENT_AGENDA",
+   "row": 13,
+   "col": 29,
+   "field": "MA-009.domain_ar",
+   "old": null,
+   "new": "الحماية الاجتماعية / المدفوعات"
+  },
+  {
+   "finding": "R85-A:DOMAIN-AR",
+   "sheet": "10_MEASUREMENT_AGENDA",
+   "row": 14,
+   "col": 29,
+   "field": "MA-010.domain_ar",
+   "old": null,
+   "new": "الإصلاحات / المدفوعات / الجودة"
+  }
+ ]
+}

@@ -1,0 +1,1216 @@
+{
+ "interface_copy_rows": [
+  [
+   "UI-DOM-SCOPE-AND-TIME",
+   "Scope and time",
+   "النطاق والزمن",
+   "build.py _domain_labels['scope']"
+  ],
+  [
+   "UI-DOM-WHAT-NOT-TO-CONCLUDE",
+   "What not to conclude",
+   "ما لا يُستنتج",
+   "build.py _domain_labels['boundary']"
+  ],
+  [
+   "UI-DOM-WHAT-REMAINS-UNKNOWN",
+   "What remains unknown",
+   "ما يزال غير معروف",
+   "build.py _domain_labels['unknown']"
+  ],
+  [
+   "UI-DOM-COVERAGE-LIMIT",
+   "Coverage limit",
+   "قيد التغطية",
+   "build.py _domain_labels['coverage']"
+  ],
+  [
+   "UI-DOM-A-VIEW-THAT-CHANGES-UNDERSTANDING",
+   "A view that changes understanding",
+   "عرض يغيّر الفهم",
+   "build.py _domain_labels['visual']"
+  ],
+  [
+   "UI-DOM-MORE-EVIDENCE-AND-CONTEXT",
+   "More evidence and context",
+   "مزيد من الأدلة والسياق",
+   "build.py _domain_labels['more']"
+  ],
+  [
+   "UI-DOM-ADDITIONAL-CONTROLLED-DETAIL-FROM-THIS",
+   "Additional controlled detail from this route, preserved with its original boundaries.",
+   "تفاصيل إضافية من الصفحة نفسها، محفوظة مع حدودها الأصلية.",
+   "build.py _domain_labels['more_intro']"
+  ],
+  [
+   "UI-DOM-WHAT-MEASUREMENT-WOULD-CHANGE-THE",
+   "What measurement would change the decision?",
+   "ما القياس الذي سيغيّر القرار؟",
+   "build.py _domain_labels['measure']"
+  ],
+  [
+   "UI-DOM-VERIFY-IT-YOURSELF",
+   "Verify it yourself",
+   "تحقق بنفسك",
+   "build.py _domain_labels['verify']"
+  ],
+  [
+   "UI-DOM-OPEN-THE-EVIDENCE-RECORD-BEHIND",
+   "Open the evidence record behind each answer, or go to the sources or the methodology.",
+   "افتح سجل الدليل الذي تستند إليه كل إجابة، أو انتقل إلى المصادر أو المنهجية.",
+   "build.py _domain_labels['verify_intro']"
+  ],
+  [
+   "UI-DOM-OPEN-EVIDENCE",
+   "Open evidence",
+   "افتح الأدلة",
+   "build.py _domain_labels['evidence']"
+  ],
+  [
+   "UI-DOM-METHODOLOGY",
+   "Methodology",
+   "المنهجية",
+   "build.py _domain_labels['method']"
+  ],
+  [
+   "UI-DOM-OPEN-EVIDENCE-RECORD",
+   "Open evidence record →",
+   "افتح سجل الدليل ←",
+   "build.py _domain_labels['open_record']"
+  ],
+  [
+   "UI-DOM-DO-NOT-INFER",
+   "Do not infer:",
+   "لا يُستنتج:",
+   "build.py _domain_labels['do_not']"
+  ],
+  [
+   "UI-DOM-ANALYTICAL-QUESTION",
+   "Analytical question",
+   "السؤال التحليلي",
+   "build.py _domain_labels['visual_question']"
+  ],
+  [
+   "UI-DOM-ANALYTICAL-TEXT-ALTERNATIVE",
+   "Analytical text alternative",
+   "البديل النصي التحليلي",
+   "build.py _domain_labels['text_alternative']"
+  ],
+  [
+   "UI-DOM-UNDERSTAND-EXPLORE-VERIFY",
+   "Understand → Explore → Verify",
+   "افهم ← استكشف ← تحقّق",
+   "build.py _domain_labels['question_flow']"
+  ],
+  [
+   "UI-DOM-READING-RULE",
+   "Reading rule",
+   "قاعدة القراءة",
+   "build.py _domain_labels['reading_rule']"
+  ],
+  [
+   "UI-DOM-EVERY-CONSEQUENTIAL-NUMBER-STAYS-ATTACHED",
+   "Every consequential number stays attached to its unit, scope, time and limitation. Evidence measured at different times is never presented as if it described the same moment.",
+   "يبقى كل رقم جوهري مرتبطًا بوحدته ونطاقه وفترته وحدوده. ولا تعامل الأدلة ذات تواريخ القياس المختلفة كما لو كانت تصف اللحظة نفسها.",
+   "build.py _domain_labels['reading_rule_copy']"
+  ],
+  [
+   "UI-DOM-EXPLORE-QUESTIONS",
+   "Explore questions",
+   "استكشف الأسئلة",
+   "build.py _domain_labels['start']"
+  ],
+  [
+   "UI-EVID-EVIDENCE-RECORD",
+   "Evidence record",
+   "سجل الدليل",
+   "build.py _evidence_labels['family']"
+  ],
+  [
+   "UI-EVID-WHAT-DOES-THIS-EVIDENCE-ESTABLISH",
+   "What does this evidence establish?",
+   "ما الذي يثبته هذا الدليل؟",
+   "build.py _evidence_labels['establishes']"
+  ],
+  [
+   "UI-EVID-WHAT-DOES-IT-MEASURE",
+   "What does it measure?",
+   "ما الذي يقيسه؟",
+   "build.py _evidence_labels['measures']"
+  ],
+  [
+   "UI-EVID-WHO-OR-WHAT-DOES-IT",
+   "Who or what does it apply to?",
+   "على من أو ماذا ينطبق؟",
+   "build.py _evidence_labels['applies']"
+  ],
+  [
+   "UI-EVID-WHEN-WAS-IT-MEASURED-OR",
+   "When was it measured or observed?",
+   "متى قيس أو رُصد؟",
+   "build.py _evidence_labels['period']"
+  ],
+  [
+   "UI-EVID-HOW-CURRENT-IS-IT",
+   "How current is it?",
+   "حداثة الدليل",
+   "build.py _evidence_labels['currentness']"
+  ],
+  [
+   "UI-EVID-ORIGINAL-SOURCE-AND-VERIFICATION",
+   "Original source and verification",
+   "المصدر الأصلي والتحقق",
+   "build.py _evidence_labels['source']"
+  ],
+  [
+   "UI-EVID-OPEN-THE-SOURCE-RECORD-HERE",
+   "Open the source record here, or follow the original locator when publication state allows it.",
+   "افتح سجل المصدر هنا، أو انتقل إلى الرابط الأصلي حين تسمح حالة النشر بذلك.",
+   "build.py _evidence_labels['source_intro']"
+  ],
+  [
+   "UI-EVID-OPEN-ORIGINAL-SOURCE",
+   "Open original source ↗",
+   "افتح المصدر الأصلي ↗",
+   "build.py _evidence_labels['open_original']"
+  ],
+  [
+   "UI-EVID-OPEN-SOURCE-RECORD",
+   "Open source record",
+   "افتح سجل المصدر",
+   "build.py _evidence_labels['open_source_record']"
+  ],
+  [
+   "UI-EVID-NO-STANDALONE-PUBLIC-LOCATOR-IS",
+   "No standalone public locator is available for this dependency in the current publication state.",
+   "لا يتوافر رابط عام مستقل لهذا الاعتماد ضمن حالة النشر الحالية.",
+   "build.py _evidence_labels['no_public_locator']"
+  ],
+  [
+   "UI-EVID-THIS-RECORD-CURRENTLY-HAS-NO",
+   "This record currently has no standalone public path to an original source; use the method and verification detail below.",
+   "لا يرتبط هذا السجل حاليًا بمسار عام مستقل إلى مصدر أصلي؛ استخدم المنهج وطريقة التحقق أدناه.",
+   "build.py _evidence_labels['no_source_record']"
+  ],
+  [
+   "UI-EVID-RETURN-TO-INTERPRETATION",
+   "Return to interpretation",
+   "عد إلى التفسير",
+   "build.py _evidence_labels['related']"
+  ],
+  [
+   "UI-EVID-RETURN-TO-THE-QUESTION-OR",
+   "Return to the question or page that uses this evidence in its analytical context.",
+   "ارجع إلى السؤال أو الصفحة التي تستخدم هذا الدليل في سياقه التحليلي.",
+   "build.py _evidence_labels['related_intro']"
+  ],
+  [
+   "UI-EVID-DATA-SOURCES",
+   "Data & sources",
+   "البيانات والمصادر",
+   "build.py _evidence_labels['data']"
+  ],
+  [
+   "UI-EVID-METHOD-AND-VERIFICATION-DETAIL",
+   "Method and verification detail",
+   "المنهج وطريقة التحقق",
+   "build.py _evidence_labels['more']"
+  ],
+  [
+   "UI-EVID-ADDITIONAL-DETAIL-FOR-REPRODUCING-OR",
+   "Additional detail for reproducing or challenging the reading without changing the evidence meaning.",
+   "تفاصيل إضافية تساعد على إعادة إنتاج القراءة أو تحديها من دون تغيير معنى الدليل.",
+   "build.py _evidence_labels['more_intro']"
+  ],
+  [
+   "UI-EVID-HOW-WAS-IT-PRODUCED",
+   "How was it produced?",
+   "كيف أُنتج؟",
+   "build.py _evidence_labels['method']"
+  ],
+  [
+   "UI-EVID-WHEN-DOES-THIS-RECORD-CHANGE",
+   "When does this record change?",
+   "متى يتغير هذا السجل؟",
+   "build.py _evidence_labels['change_trigger']"
+  ],
+  [
+   "UI-EVID-HOW-CAN-I-VERIFY-IT",
+   "How can I verify it?",
+   "كيف أتحقق منه؟",
+   "build.py _evidence_labels['verification']"
+  ],
+  [
+   "UI-EVID-HOW-SHOULD-THIS-RECORD-BE",
+   "How should this record be read?",
+   "كيف يُقرأ هذا السجل؟",
+   "build.py _evidence_labels['reading_guidance']"
+  ],
+  [
+   "UI-EVID-REFERENCE-ID",
+   "Reference ID",
+   "المعرّف المرجعي",
+   "build.py _evidence_labels['reference']"
+  ],
+  [
+   "UI-EVID-REPORT-AN-ISSUE",
+   "Report an issue",
+   "أبلغ عن مشكلة",
+   "build.py _evidence_labels['report']"
+  ],
+  [
+   "UI-EVID-EVIDENCE-RECORDS-USING-THIS-SOURCE",
+   "Evidence records using this source",
+   "سجلات أدلة تستخدم هذا المصدر",
+   "build.py _evidence_labels['source_dependents']"
+  ],
+  [
+   "UI-EVID-OPEN-EVIDENCE-RECORD",
+   "Open evidence record",
+   "افتح سجل الدليل",
+   "build.py _evidence_labels['open_record']"
+  ],
+  [
+   "UI-EVID-CITE-THIS-RECORD",
+   "Cite this record",
+   "استشهد بهذا السجل",
+   "build.py _evidence_labels['citation']"
+  ],
+  [
+   "UI-EVID-CITATION-AND-REUSE",
+   "Citation and reuse",
+   "الاستشهاد وإعادة الاستخدام",
+   "build.py _evidence_labels['reuse']"
+  ],
+  [
+   "UI-EVID-CITING-THE-EVIDENCE-DOES-NOT",
+   "Citing the evidence does not automatically grant permission to republish an original source file, table or chart. Check the original source and its terms before redistributing source material.",
+   "الاستشهاد بالدليل لا يعني تلقائيًا امتلاك حق إعادة نشر ملف المصدر أو جدوله أو رسمه. افحص المصدر الأصلي وشروطه قبل إعادة توزيع مادته.",
+   "build.py _evidence_labels['reuse_note']"
+  ],
+  [
+   "UI-EVID-SOURCE-VERIFICATION-PATH",
+   "Source verification path",
+   "مسار التحقق من المصدر",
+   "build.py _evidence_labels['trace']"
+  ],
+  [
+   "UI-EVID-THE-STABLE-RECORD-ID-STAYS",
+   "The stable record ID stays linked to original sources that the publication state permits this product to expose. Missing bibliography is not filled by assumption.",
+   "يبقى معرّف السجل مرتبطًا بالمصادر الأصلية التي تسمح حالة النشر بعرضها. ولا تُستكمل البيانات الوصفية الناقصة بالافتراض.",
+   "build.py _evidence_labels['trace_intro']"
+  ],
+  [
+   "UI-EVID-CORRECTIONS-RELEASE-HISTORY",
+   "Corrections & release history",
+   "التصحيحات وسجل الإصدارات",
+   "build.py _evidence_labels['history']"
+  ],
+  [
+   "UI-EVID-COPY-SOURCE-REFERENCE",
+   "Copy source reference",
+   "انسخ مرجع المصدر",
+   "build.py _evidence_labels['source_citation']"
+  ],
+  [
+   "UI-EVID-THIS-SOURCE-RECORD-DOES-NOT",
+   "This source record does not establish permission to republish the original file, table or chart. Check source-specific terms before redistribution.",
+   "لا يثبت سجل المصدر هذا إذنًا بإعادة نشر الملف أو الجدول أو الرسم الأصلي. تحقّق من شروط المصدر قبل إعادة التوزيع.",
+   "build.py _evidence_labels['source_reuse_unknown']"
+  ],
+  [
+   "UI-SEARCH-SEARCH",
+   "Search",
+   "بحث",
+   "build.py search_dialog()"
+  ],
+  [
+   "UI-SEARCH-CLOSE",
+   "Close",
+   "إغلاق",
+   "build.py search_dialog()"
+  ],
+  [
+   "UI-SEARCH-SEARCH-THE-PUBLIC-EVIDENCE",
+   "Search the public evidence",
+   "ابحث في الأدلة العامة",
+   "build.py search_dialog()"
+  ],
+  [
+   "UI-SEARCH-SEARCH-QUESTIONS-EVIDENCE-READINGS-AND",
+   "Search questions, evidence, readings and sources...",
+   "ابحث في الأسئلة والأدلة والقراءات والمصادر...",
+   "build.py search_dialog()"
+  ],
+  [
+   "UI-SEARCH-SEARCH-STATUS",
+   "Search status",
+   "حالة البحث",
+   "build.py search_dialog()"
+  ],
+  [
+   "UI-HEADER-TRUST-LINKS",
+   "Trust links",
+   "روابط الثقة",
+   "build.py header()"
+  ],
+  [
+   "UI-HEADER-SKIP-TO-CONTENT",
+   "Skip to content",
+   "انتقل إلى المحتوى",
+   "build.py header()"
+  ],
+  [
+   "UI-HEADER-PRIMARY-NAVIGATION",
+   "Primary navigation",
+   "التنقل الرئيسي",
+   "build.py header()"
+  ],
+  [
+   "UI-HEADER-MENU",
+   "Menu",
+   "القائمة",
+   "build.py header()"
+  ],
+  [
+   "UI-HEADER-CITE-THIS-PAGE",
+   "Cite this page",
+   "استشهد بهذه الصفحة",
+   "build.py header()"
+  ],
+  [
+   "UI-HEADER-REPORT-AN-ISSUE",
+   "Report an issue",
+   "الإبلاغ عن مشكلة",
+   "build.py header()"
+  ],
+  [
+   "UI-HEADER-COPIED",
+   "Copied",
+   "تم النسخ",
+   "build.py header()"
+  ],
+  [
+   "UI-FOOTER-PUBLISHED-EVIDENCE-REMAINS-ATTRIBUTED-TO",
+   "Published evidence remains attributed to the original source.",
+   "الأدلة المنشورة تحتفظ بنسبة المصدر الأصلي.",
+   "build.py footer()"
+  ],
+  [
+   "UI-FOOTER-PRODUCT-AND-TRUST-LINKS",
+   "Product and trust links",
+   "روابط المنتج والثقة",
+   "build.py footer()"
+  ],
+  [
+   "UI-HERO-START-WITH-A-QUESTION",
+   "Start with a question",
+   "ابدأ بالسؤال",
+   "build.py hero()"
+  ],
+  [
+   "UI-HERO-VERIFY-EVIDENCE",
+   "Verify evidence",
+   "تحقق من الأدلة",
+   "build.py hero()"
+  ],
+  [
+   "UI-HERO-THIS-RESOURCE-PRESENTS-THE-STRONGEST",
+   "This resource presents the strongest defensible answer while keeping scope, limits and source visible.",
+   "يعرض هذا المورد أقوى ما تسمح به الأدلة، مع إبقاء حدود الاستنتاج والمصدر ظاهرين.",
+   "build.py hero()"
+  ],
+  [
+   "UI-CRUMB-BREADCRUMB",
+   "Breadcrumb",
+   "مسار الصفحة",
+   "build.py breadcrumb()"
+  ],
+  [
+   "UI-NEXT-CONTINUE-FROM-HERE",
+   "Continue from here",
+   "تابع من هنا",
+   "build.py journey_next()"
+  ],
+  [
+   "UI-NEXT-CHOOSE-THE-NEXT-PATH-THAT",
+   "Choose the next path that matches what you need to do.",
+   "اختر المسار الأقرب لما تريد فعله بعد ذلك.",
+   "build.py journey_next()"
+  ],
+  [
+   "UI-VIS-WHAT-THE-EVIDENCE-SHOWS",
+   "What the evidence shows",
+   "ما يوضحه الدليل",
+   "build.py _visual_fallback()"
+  ],
+  [
+   "UI-DOM-EVIDENCE-READINGS-ON-THIS-QUESTION",
+   "Evidence Readings on this question",
+   "قراءات الأدلة المرتبطة بهذه الصفحة",
+   "build.py domain_readings()"
+  ],
+  [
+   "UI-QUESTIONS-COMMON-STARTING-QUESTIONS",
+   "Common starting questions",
+   "أسئلة شائعة للبدء",
+   "build.py question_cards()"
+  ],
+  [
+   "UI-QUESTIONS-START-FROM-THE-PROBLEM-YOU",
+   "Start from the problem you need to resolve",
+   "ابدأ من المسألة التي تريد حسمها",
+   "build.py question_cards()"
+  ],
+  [
+   "UI-QUESTIONS-UNDERSTAND-THE-WIDER-PICTURE",
+   "Understand the wider picture",
+   "افهم الصورة العامة",
+   "build.py question_cards()"
+  ],
+  [
+   "UI-QUESTIONS-PEOPLE-USE-AND-FLOWS",
+   "People, use and flows",
+   "الناس والاستخدام والتدفقات",
+   "build.py question_cards()"
+  ],
+  [
+   "UI-QUESTIONS-FIRMS-INSTITUTIONS-AND-PROVIDERS",
+   "Firms, institutions and providers",
+   "المنشآت والمؤسسات ومقدمو الخدمات",
+   "build.py question_cards()"
+  ],
+  [
+   "UI-QUESTIONS-VERIFY-AND-DECIDE-WHAT-TO",
+   "Verify and decide what to measure",
+   "تحقّق وحدد ما ينبغي قياسه",
+   "build.py question_cards()"
+  ],
+  [
+   "UI-QUESTIONS-QUESTIONS-INTO-THE-EVIDENCE",
+   "Questions into the evidence",
+   "أسئلة للدخول إلى الأدلة",
+   "build.py question_cards()"
+  ],
+  [
+   "UI-QUESTIONS-FIND-THE-QUESTION-CLOSEST-TO",
+   "Find the question closest to your decision",
+   "اعثر على السؤال الأقرب إلى قرارك",
+   "build.py question_cards()"
+  ],
+  [
+   "UI-QUESTIONS-EVERY-ROUTE-KEEPS-PERIOD-POPULATION",
+   "Every route keeps period, population or calculation base, inference limits and source visible.",
+   "يحافظ كل مسار على الفترة، والمجتمع أو قاعدة الاحتساب، وحدود الاستنتاج، والمصدر.",
+   "build.py question_cards()"
+  ],
+  [
+   "UI-HOME-CROSS-SOURCE-ANALYSIS-THAT-STAYS",
+   "Cross-source analysis that stays bound to claims and evidence.",
+   "تحليل متعدد المصادر يبقى مربوطًا بالخلاصات والأدلة.",
+   "build.py home_ctas()"
+  ],
+  [
+   "UI-HOME-WHAT-REMAINS-UNKNOWN-AND-WHAT",
+   "What remains unknown and what measurement would strengthen the decision.",
+   "ما الذي لا نعرفه بعد، وما القياس الذي سيجعل القرار أقوى.",
+   "build.py home_ctas()"
+  ],
+  [
+   "UI-HOME-FIND-THE-ORIGINAL-SOURCES-BEHIND",
+   "Find the original sources behind the evidence, with their titles, publishers and links.",
+   "اعثر على المصادر الأصلية التي تستند إليها الأدلة، بعناوينها وجهاتها الناشرة وروابطها.",
+   "build.py home_ctas()"
+  ],
+  [
+   "UI-MA-CURRENT-EVIDENCE",
+   "Current evidence:",
+   "ما نعرفه:",
+   "build.py measurement_cards()"
+  ],
+  [
+   "UI-MA-MISSING-EVIDENCE",
+   "Missing evidence:",
+   "ما ينقص:",
+   "build.py measurement_cards()"
+  ],
+  [
+   "UI-MA-DECISION-UNLOCKED",
+   "Decision unlocked:",
+   "ما الذي سيصبح القرار فيه أقوى:",
+   "build.py measurement_cards()"
+  ],
+  [
+   "UI-MA-PRIORITY",
+   "Priority",
+   "الأولوية",
+   "build.py measurement_cards()"
+  ],
+  [
+   "UI-SOURCES-SOURCE-RECORD",
+   "Source record",
+   "سجل المصدر",
+   "build.py sources_block()"
+  ],
+  [
+   "UI-SOURCES-SOURCES",
+   "Sources",
+   "المصادر",
+   "build.py sources_block()"
+  ],
+  [
+   "UI-BLOCK-EVIDENCE-NEEDED",
+   "Evidence needed:",
+   "الدليل المطلوب:",
+   "build.py governed_blocks()"
+  ],
+  [
+   "UI-SRC-REUSE-TERMS-NOT-ASSESSED",
+   "Reuse terms: not assessed",
+   "شروط إعادة الاستخدام: غير مقيّمة",
+   "build.py source_trust_controls()"
+  ],
+  [
+   "UI-SRC-REUSE-TERMS-NOT-STATED",
+   "Reuse terms: not stated",
+   "شروط إعادة الاستخدام: غير محددة",
+   "build.py source_trust_controls()"
+  ],
+  [
+   "UI-COMPARE-OPTIONAL-RECORD",
+   "— Optional record —",
+   "— سجل اختياري —",
+   "build.py compare_block()"
+  ],
+  [
+   "UI-COMPARE-CAN-THESE-RECORDS-ACTUALLY-BE",
+   "Can these records actually be compared?",
+   "هل يمكن مقارنة هذين السجلين مباشرة؟",
+   "build.py compare_block()"
+  ],
+  [
+   "UI-COMPARE-START-WITH-COMPARISON-LEGITIMACY-NOT",
+   "Start with comparison legitimacy, not the numbers.",
+   "ابدأ بمشروعية المقارنة، لا بالأرقام.",
+   "build.py compare_block()"
+  ],
+  [
+   "UI-COMPARE-FIRST-RECORD",
+   "First record",
+   "السجل الأول",
+   "build.py compare_block()"
+  ],
+  [
+   "UI-COMPARE-SECOND-RECORD",
+   "Second record",
+   "السجل الثاني",
+   "build.py compare_block()"
+  ],
+  [
+   "UI-COMPARE-THIRD-RECORD-OPTIONAL",
+   "Third record — optional",
+   "السجل الثالث — اختياري",
+   "build.py compare_block()"
+  ],
+  [
+   "UI-COMPARE-FOURTH-RECORD-OPTIONAL",
+   "Fourth record — optional",
+   "السجل الرابع — اختياري",
+   "build.py compare_block()"
+  ],
+  [
+   "UI-COMPARE-NO-AUTO-AVERAGE-NO-PREFERRED",
+   "No auto-average · no preferred number · no invented conversion scalar",
+   "لا متوسطات تلقائية · لا رقم مفضل · لا معامل تحويل مخترع",
+   "build.py compare_block()"
+  ],
+  [
+   "UI-COMPARE-COPY-LINK-TO-THIS-COMPARISON",
+   "Copy link to this comparison",
+   "انسخ رابط هذه المقارنة",
+   "build.py compare_block()"
+  ],
+  [
+   "UI-DATA-SOURCE-DIRECTORY-AND-VERIFICATION",
+   "Source directory and verification",
+   "دليل المصادر والتحقق",
+   "build.py source_directory()"
+  ],
+  [
+   "UI-DATA-ONLY-SOURCE-INFORMATION-PERMITTED-BY",
+   "Only source information permitted by the controlled records is shown here. Sources that currently support public evidence are separated from reference locators available for verification or context, so the existence of a link is never mistaken for analytical use or an observed result.",
+   "تُعرض هنا فقط معلومات المصدر التي تسمح بها السجلات المعتمدة. وتُفصل المراجع التي تسند أدلة عامة حالية عن المراجع المتاحة للتحقق أو السياق حتى لا يبدو مجرد وجود رابط وكأنه استخدام تحليلي أو دليل على نتيجة.",
+   "build.py source_directory()"
+  ],
+  [
+   "UI-DATA-CURATED-REPORTS-AND-REFERENCES",
+   "Curated reports and references",
+   "تقارير ومراجع منتقاة",
+   "build.py source_directory()"
+  ],
+  [
+   "UI-DATA-SOURCES-SUPPORTING-CURRENT-PUBLIC-EVIDENCE",
+   "Sources supporting current public evidence",
+   "مصادر تسند أدلة عامة حالية",
+   "build.py source_directory()"
+  ],
+  [
+   "UI-DATA-ADDITIONAL-ORIGINAL-REFERENCES-FOR-VERIFICATION",
+   "Additional original references for verification and context",
+   "مراجع أصلية إضافية للتحقق والسياق",
+   "build.py source_directory()"
+  ],
+  [
+   "UI-DATA-THESE-SOURCES-ARE-LINKED-DIRECTLY",
+   "These sources are linked directly to at least one current public Evidence Record. Open the dependent records to see exactly where and how they are used.",
+   "هذه المصادر مرتبطة مباشرة بسجل دليل عام واحد على الأقل. افتح الروابط المرتبطة لمعرفة موضع استخدامها وحدودها.",
+   "build.py source_directory()"
+  ],
+  [
+   "UI-DATA-THESE-REFERENCES-ARE-AVAILABLE-FOR",
+   "These references are available for verification, method or context but do not currently support a public Evidence Record. Their presence in the directory does not promote them into an evidence finding or claim.",
+   "هذه المراجع متاحة للتحقق أو المنهج أو السياق، لكنها لا تسند حاليًا سجل دليل عام. وجودها في الدليل لا يرقّيها إلى نتيجة أو خلاصة.",
+   "build.py source_directory()"
+  ],
+  [
+   "UI-DATA-FIND-A-SOURCE-BY-TITLE",
+   "Find a source by title or reference",
+   "ابحث عن مصدر بعنوانه أو مرجعه",
+   "build.py source_directory()"
+  ],
+  [
+   "UI-DATA-E-G-SRC-CBY",
+   "e.g. SRC-CBY…",
+   "مثال: SRC-CBY…",
+   "build.py source_directory()"
+  ],
+  [
+   "UI-DATA-NO-SOURCES-MATCH-THIS-SEARCH",
+   "No sources match this search. This does not mean there is no evidence on the topic; try another reference or title.",
+   "لا توجد مصادر مطابقة لهذا البحث. ولا يعني ذلك غياب الأدلة عن الموضوع؛ جرّب معرّفًا أو عنوانًا آخر.",
+   "build.py source_directory()"
+  ],
+  [
+   "UI-DATA-EVERY-SOURCE-HERE-CAN-BE",
+   "Every source here can be cited and opened at its original location. Each card shows its source's reuse-terms state; where terms have not been assessed, this resource offers no source file for download or republication, so check each source's own terms before redistributing its material.",
+   "يمكن الاستشهاد بكل مصدر هنا وفتحه في موقعه الأصلي. ويبيّن كل بطاقة حالة شروط إعادة استخدام مصدرها؛ وحيث لم تُقيَّم الشروط، لا يعرض هذا الموقع ملفات المصدر للتنزيل أو إعادة النشر، فتحقّق من شروط كل مصدر قبل إعادة توزيع مادته.",
+   "build.py source_directory()"
+  ],
+  [
+   "UI-ORIGIN-RECORD-YOU-ARE-REPORTING-ON",
+   "Record you are reporting on",
+   "السجل الذي تبلّغ عنه",
+   "build.py record_context_origin()"
+  ],
+  [
+   "UI-ORIGIN-RECORD-YOU-CAME-FROM",
+   "Record you came from",
+   "السجل الذي جئت منه",
+   "build.py record_context_origin()"
+  ],
+  [
+   "UI-ORIGIN-OPEN-THE-CURRENT-PUBLIC-RECORD",
+   "Open the current public record",
+   "افتح السجل العام الحالي",
+   "build.py record_context_origin()"
+  ],
+  [
+   "UI-ORIGIN-THE-RECORD-REFERENCE-IN-THIS",
+   "The record reference in this link is not valid. This is a problem with the link, not information about the evidence.",
+   "مرجع السجل في هذا الرابط غير صالح. هذه مشكلة في الرابط، وليست معلومة عن الأدلة.",
+   "build.py record_context_origin()"
+  ],
+  [
+   "UI-ORIGIN-THIS-LINK-NAMES-A-REFERENCE",
+   "This link names a reference that matches no current public record. Check the reference or search for the record; this is a problem with the link, not information about the evidence.",
+   "يشير هذا الرابط إلى مرجع لا يطابق أي سجل عام حالي. تحقّق من المرجع أو ابحث عن السجل؛ هذه مشكلة في الرابط، وليست معلومة عن الأدلة.",
+   "build.py record_context_origin()"
+  ],
+  [
+   "UI-CONTACT-WRITE-TO-US-ABOUT-THIS",
+   "Write to us about this record",
+   "اكتب إلينا بشأن هذا السجل",
+   "build.py contact_context_block()"
+  ],
+  [
+   "UI-CORR-CURRENT-RECORD-AND-CORRECTION-PATH",
+   "Current record and correction path",
+   "السجل الحالي ومسار التصحيح",
+   "build.py corrections_context_block()"
+  ],
+  [
+   "UI-CORR-THIS-RESOURCE-DOES-NOT-MANUFACTURE",
+   "This resource does not manufacture a release or correction history. A correction event appears only when it is governed for publication; the stable record ID remains the route back to the current public record.",
+   "لا ينشئ هذا الموقع سجل إصدارات أو تصحيحات افتراضيًا. تظهر واقعة التصحيح فقط عندما تكون معتمدة للنشر؛ ويظل المعرّف الثابت هو نقطة الرجوع إلى السجل العام الحالي.",
+   "build.py corrections_context_block()"
+  ],
+  [
+   "UI-CORR-THIS-PAGE-CURRENTLY-HAS-NO",
+   "This page currently has no separately governed material-correction events to publish, so the interface does not invent a synthetic history.",
+   "لا توجد في مواصفة هذه الصفحة حاليًا وقائع تصحيح جوهرية مستقلة معتمدة للنشر؛ لذلك لا تُنشئ الواجهة تاريخًا اصطناعيًا.",
+   "build.py corrections_context_block()"
+  ],
+  [
+   "UI-PAGE-SEARCH-CLAIMS-EVIDENCE-READINGS",
+   "Search claims, evidence, readings...",
+   "ابحث في الخلاصات والأدلة والقراءات…",
+   "build.py generic()"
+  ],
+  [
+   "UI-PAGE-COMPARE-EVIDENCE",
+   "Compare evidence",
+   "مقارنة الأدلة",
+   "build.py generic()"
+  ],
+  [
+   "UI-READING-TEST-COMPARABILITY-OF-THIS-READING",
+   "Test comparability of this Reading's records",
+   "اختبر قابلية المقارنة بين سجلات هذه القراءة",
+   "build.py reading_verification_links()"
+  ],
+  [
+   "UI-JS-COPIED",
+   "Copied",
+   "تم النسخ",
+   "site-src/app.js"
+  ],
+  [
+   "UI-JS-CURRENT-RECORD",
+   "Current record: ",
+   "الرابط الحالي: ",
+   "site-src/app.js"
+  ],
+  [
+   "UI-JS-COPY-CITATION",
+   "Copy citation",
+   "انسخ الاستشهاد",
+   "site-src/app.js"
+  ],
+  [
+   "UI-JS-COPY-SOURCE-REFERENCE",
+   "Copy source reference",
+   "انسخ مرجع المصدر",
+   "site-src/app.js"
+  ],
+  [
+   "UI-JS-SEARCH-NO-RESULT",
+   "No result matches this search. This does not mean there is no evidence on the topic; try other words or start from the questions.",
+   "لا توجد نتيجة تطابق هذا البحث. ولا يعني ذلك غياب الأدلة عن الموضوع؛ جرّب كلمات أخرى أو ابدأ من الأسئلة.",
+   "site-src/app.js"
+  ],
+  [
+   "UI-JS-SEARCHING",
+   "Searching…",
+   "جارٍ البحث…",
+   "site-src/app.js"
+  ],
+  [
+   "UI-JS-SEARCH-ZERO",
+   "0 results shown",
+   "0 نتيجة معروضة",
+   "site-src/app.js"
+  ],
+  [
+   "UI-JS-SEARCH-RESULTS",
+   "{n} results shown",
+   "عدد النتائج المعروضة: {n}",
+   "site-src/app.js"
+  ],
+  [
+   "UI-JS-SEARCH-UNAVAILABLE-COPY",
+   "Search could not be loaded. You can continue from the main sections.",
+   "تعذر تحميل البحث الآن. يمكنك متابعة التصفح من الأقسام الرئيسية.",
+   "site-src/app.js"
+  ],
+  [
+   "UI-JS-SEARCH-UNAVAILABLE",
+   "Search unavailable",
+   "تعذر تحميل البحث",
+   "site-src/app.js"
+  ],
+  [
+   "UI-JS-SOURCES-SHOWN",
+   "{n} sources or references shown",
+   "عدد المصادر والمراجع المعروضة: {n}",
+   "site-src/app.js"
+  ],
+  [
+   "UI-JS-SOURCE-LINK-UNKNOWN",
+   "The source reference in this link was not found in the source directory. This is a problem with the link, not information about the evidence; all sources are shown below.",
+   "لم يُعثر في دليل المصادر على مرجع المصدر الوارد في هذا الرابط. هذه مشكلة في الرابط، وليست معلومة عن الأدلة؛ تُعرض المصادر كلها أدناه.",
+   "site-src/app.js"
+  ],
+  [
+   "UI-JS-SEARCH-RESULT-ONE",
+   "1 result shown",
+   "عدد النتائج المعروضة: 1",
+   "site-src/app.js (English singular; Arabic uses one form)"
+  ],
+  [
+   "UI-JS-SOURCES-SHOWN-ONE",
+   "1 source or reference shown",
+   "عدد المصادر والمراجع المعروضة: 1",
+   "site-src/app.js (English singular; Arabic uses one form)"
+  ],
+  [
+   "UI-JS-TYPE-PAGE",
+   "Page",
+   "صفحة",
+   "site-src/app.js TYPE_LABEL_UI['page']"
+  ],
+  [
+   "UI-JS-TYPE-QUESTION",
+   "Question",
+   "سؤال",
+   "site-src/app.js TYPE_LABEL_UI['question']"
+  ],
+  [
+   "UI-JS-TYPE-EVIDENCE",
+   "Evidence record",
+   "سجل دليل",
+   "site-src/app.js TYPE_LABEL_UI['evidence']"
+  ],
+  [
+   "UI-JS-TYPE-READING",
+   "Reading",
+   "قراءة",
+   "site-src/app.js TYPE_LABEL_UI['reading']"
+  ],
+  [
+   "UI-JS-TYPE-MEASUREMENT",
+   "Measurement priority",
+   "أولوية قياس",
+   "site-src/app.js TYPE_LABEL_UI['measurement']"
+  ],
+  [
+   "UI-JS-TYPE-SOURCE",
+   "Source",
+   "مصدر",
+   "site-src/app.js TYPE_LABEL_UI['source']"
+  ],
+  [
+   "UI-JS-TYPE-SOURCE-LOCATOR",
+   "Source reference",
+   "مرجع مصدر",
+   "site-src/app.js TYPE_LABEL_UI['source_locator']"
+  ],
+  [
+   "UI-JS-COMPARE-DEFINITION",
+   "Definition",
+   "التعريف",
+   "site-src/app.js COMPARE_LABEL_UI['definition']"
+  ],
+  [
+   "UI-JS-COMPARE-UNIVERSE",
+   "Population / base",
+   "المجتمع / قاعدة الاحتساب",
+   "site-src/app.js COMPARE_LABEL_UI['universe']"
+  ],
+  [
+   "UI-JS-COMPARE-PERIOD",
+   "Period",
+   "الفترة",
+   "site-src/app.js COMPARE_LABEL_UI['period']"
+  ],
+  [
+   "UI-JS-COMPARE-METHOD",
+   "Method",
+   "الطريقة",
+   "site-src/app.js COMPARE_LABEL_UI['method']"
+  ],
+  [
+   "UI-JS-COMPARE-SOURCE",
+   "Source reference",
+   "مرجع المصدر",
+   "site-src/app.js COMPARE_LABEL_UI['source']"
+  ],
+  [
+   "UI-JS-COMPARE-CURRENTNESS",
+   "Evidence currency",
+   "حداثة الدليل",
+   "site-src/app.js COMPARE_LABEL_UI['currentness']"
+  ],
+  [
+   "UI-JS-COMPARE-BOUNDARY",
+   "What not to conclude",
+   "ما لا يُستنتج",
+   "site-src/app.js COMPARE_LABEL_UI['boundary']"
+  ],
+  [
+   "UI-JS-COMPARE-SAME",
+   "Same controlled fields",
+   "متطابق في الحقول المنظمة",
+   "site-src/app.js COMPARE_LABEL_UI['same']"
+  ],
+  [
+   "UI-JS-COMPARE-DIFFERENT",
+   "Different",
+   "مختلف",
+   "site-src/app.js COMPARE_LABEL_UI['different']"
+  ],
+  [
+   "UI-JS-COMPARE-MISSING",
+   "Not available to judge",
+   "غير متاح للحكم",
+   "site-src/app.js COMPARE_LABEL_UI['missing']"
+  ],
+  [
+   "UI-JS-COMPARE-INFORMATIONAL",
+   "Trace only",
+   "للتتبع",
+   "site-src/app.js COMPARE_LABEL_UI['informational']"
+  ],
+  [
+   "UI-JS-COMPARE-SAME-RECORD",
+   "Same record selected more than once",
+   "السجل نفسه مكرر",
+   "site-src/app.js COMPARE_LABEL_UI['sameRecord']"
+  ],
+  [
+   "UI-JS-COMPARE-NOT-DIRECT",
+   "Not a direct comparison",
+   "ليست مقارنة مباشرة",
+   "site-src/app.js COMPARE_LABEL_UI['notDirect']"
+  ],
+  [
+   "UI-JS-COMPARE-UNRESOLVED",
+   "Direct comparability cannot be established",
+   "لا يمكن إثبات قابلية المقارنة المباشرة",
+   "site-src/app.js COMPARE_LABEL_UI['unresolved']"
+  ],
+  [
+   "UI-JS-COMPARE-QUALIFIED",
+   "Qualified comparison only",
+   "مقارنة مؤهلة فقط",
+   "site-src/app.js COMPARE_LABEL_UI['qualified']"
+  ],
+  [
+   "UI-JS-COMPARE-ALIGNED",
+   "Structurally aligned on available fields",
+   "متوافقة بنيويًا ضمن الحقول المتاحة",
+   "site-src/app.js COMPARE_LABEL_UI['aligned']"
+  ],
+  [
+   "UI-JS-COMPARE-SAME-RECORD-COPY",
+   "The same Evidence Record is selected more than once. Remove duplicates before judging comparability across independent evidence.",
+   "اختير سجل الدليل نفسه أكثر من مرة. أزل التكرار قبل الحكم على المقارنة بين أدلة مستقلة.",
+   "site-src/app.js COMPARE_LABEL_UI['sameRecordCopy']"
+  ],
+  [
+   "UI-JS-COMPARE-NOT-DIRECT-COPY",
+   "The recorded definition, population or method differs between these records. Treat them as different measures unless their records say otherwise, and do not present their values on a common scale.",
+   "يختلف التعريف أو المجتمع أو الطريقة المسجلة بين هذه السجلات. تعامل معها بوصفها مقاييس مختلفة ما لم تذكر سجلاتها خلاف ذلك، ولا تعرض قيمها على مقياس مشترك.",
+   "site-src/app.js COMPARE_LABEL_UI['notDirectCopy']"
+  ],
+  [
+   "UI-JS-COMPARE-UNRESOLVED-COPY",
+   "A field required to judge direct comparability is missing. Missing does not mean compatible, so the comparison remains unresolved.",
+   "تنقص حقول لازمة للحكم على المقارنة المباشرة. الغياب لا يعني التوافق؛ لذلك تبقى المقارنة غير محسومة.",
+   "site-src/app.js COMPARE_LABEL_UI['unresolvedCopy']"
+  ],
+  [
+   "UI-JS-COMPARE-QUALIFIED-COPY",
+   "The required structural fields align, but period or evidence currency differs. Use the comparison only with that qualification visible.",
+   "تتوافق الحقول البنيوية اللازمة، لكن الفترة أو حداثة الدليل تختلف. استخدم المقارنة مع هذا القيد ظاهرًا.",
+   "site-src/app.js COMPARE_LABEL_UI['qualifiedCopy']"
+  ],
+  [
+   "UI-JS-COMPARE-ALIGNED-COPY",
+   "The recorded definition, population and method match. This does not establish equivalence beyond the governed fields shown here.",
+   "يتطابق التعريف والمجتمع والطريقة المسجلة. ولا يثبت ذلك تكافؤ المعنى خارج الحقول المعتمدة المعروضة هنا.",
+   "site-src/app.js COMPARE_LABEL_UI['alignedCopy']"
+  ],
+  [
+   "UI-JS-COMPARE-DIMENSION",
+   "Comparison dimension",
+   "بُعد المقارنة",
+   "site-src/app.js COMPARE_LABEL_UI['dimension']"
+  ],
+  [
+   "UI-JS-COMPARE-ASSESSMENT",
+   "Assessment",
+   "الحكم",
+   "site-src/app.js COMPARE_LABEL_UI['assessment']"
+  ],
+  [
+   "UI-JS-COMPARE-OPEN-RECORD",
+   "Open Evidence Record",
+   "افتح سجل الدليل",
+   "site-src/app.js COMPARE_LABEL_UI['openRecord']"
+  ],
+  [
+   "UI-JS-COMPARE-NO-MERGE",
+   "Do not merge values, manufacture a midpoint, average disagreement or infer a conversion scalar from this comparison.",
+   "لا تُدمج القيم ولا تُنشئ متوسطًا أو رقمًا وسطًا أو معامل تحويل من هذه المقارنة.",
+   "site-src/app.js COMPARE_LABEL_UI['noMerge']"
+  ],
+  [
+   "UI-JS-COMPARE-TABLE",
+   "Evidence comparison details",
+   "تفاصيل مقارنة الأدلة",
+   "site-src/app.js COMPARE_LABEL_UI['table']"
+  ],
+  [
+   "UI-JS-COMPARE-SELECTED",
+   "records selected",
+   "سجلات مختارة",
+   "site-src/app.js COMPARE_LABEL_UI['selected']"
+  ],
+  [
+   "UI-JS-COMPARE-LINK-TITLE",
+   "This comparison link could not be read",
+   "تعذّرت قراءة رابط المقارنة",
+   "site-src/app.js COMPARE_ERROR_UI['title']"
+  ],
+  [
+   "UI-JS-COMPARE-LINK-COUNT",
+   "The link must name two to four Evidence Records, separated by commas.",
+   "يجب أن يسمّي الرابط من سجلين إلى أربعة سجلات أدلة، مفصولة بفواصل.",
+   "site-src/app.js COMPARE_ERROR_UI['count']"
+  ],
+  [
+   "UI-JS-COMPARE-LINK-MALFORMED",
+   "The link contains a record reference that is not valid.",
+   "يحتوي الرابط على مرجع سجل غير صالح.",
+   "site-src/app.js COMPARE_ERROR_UI['malformed']"
+  ],
+  [
+   "UI-JS-COMPARE-LINK-UNKNOWN",
+   "The link names a record that is not available for comparison here: ",
+   "يسمّي الرابط سجلًا غير متاح للمقارنة هنا: ",
+   "site-src/app.js COMPARE_ERROR_UI['unknown']"
+  ],
+  [
+   "UI-JS-COMPARE-LINK-NOTE",
+   "This is a problem with the link, not a finding about the evidence. Choose records below to start a comparison.",
+   "هذه مشكلة في الرابط، وليست نتيجة عن الأدلة. اختر السجلات أدناه لبدء مقارنة.",
+   "site-src/app.js COMPARE_ERROR_UI['note']"
+  ],
+  [
+   "UI-QUESTIONS-VIEW-ALL",
+   "View all {n} questions",
+   "اعرض الأسئلة كلها ({n})",
+   "build.py question_cards(); {n} = governed count of entry questions"
+  ],
+  [
+   "UI-CITE-SOURCE-REFERENCE",
+   "source reference {sid}",
+   "مرجع المصدر {sid}",
+   "build.py evidence_citation_context(): a source without a governed title"
+  ],
+  [
+   "UI-CITE-RECORD-LINE",
+   "{product}, Evidence Record {oid}. CauseWay. {version}.",
+   "{product}، سجل الدليل {oid}. CauseWay. {version}.",
+   "build.py evidence_citation_context(): resource, record, author, content version"
+  ],
+  [
+   "UI-CITE-PERIOD",
+   "Period",
+   "الفترة",
+   "build.py evidence_citation_context()"
+  ],
+  [
+   "UI-CITE-POPULATION",
+   "Population or base",
+   "المجتمع أو قاعدة الاحتساب",
+   "build.py evidence_citation_context()"
+  ],
+  [
+   "UI-CITE-ORIGINAL-SOURCES",
+   "Original sources",
+   "المصادر الأصلية",
+   "build.py evidence_citation_context()"
+  ],
+  [
+   "UI-CITE-PUBLISHERS-AUTHORITATIVE",
+   "Original publishers remain authoritative for their material.",
+   "وتبقى الجهات الناشرة الأصلية المرجع لمادتها.",
+   "build.py evidence_citation_context(): closing sentence"
+  ],
+  [
+   "UI-404-TITLE",
+   "Page not found",
+   "الصفحة غير موجودة",
+   "build.py 404 page: title and eyebrow"
+  ],
+  [
+   "UI-404-HEADING",
+   "We could not find this route",
+   "تعذر العثور على هذا المسار",
+   "build.py 404 page"
+  ],
+  [
+   "UI-404-BODY",
+   "The link may be old or unavailable in the current public route set. Start from Home, explore the questions, or search the published evidence.",
+   "قد يكون الرابط قديمًا أو غير متاح ضمن المسارات العامة الحالية. ابدأ من الصفحة الرئيسية، أو استكشف الأسئلة، أو ابحث في الأدلة المنشورة.",
+   "build.py 404 page"
+  ],
+  [
+   "UI-404-HOME",
+   "Home",
+   "الرئيسية",
+   "build.py 404 page"
+  ],
+  [
+   "UI-404-EXPLORE",
+   "Explore",
+   "استكشف",
+   "build.py 404 page"
+  ],
+  [
+   "UI-404-EVIDENCE",
+   "Evidence",
+   "الأدلة",
+   "build.py 404 page"
+  ],
+  [
+   "UI-404-SEARCH",
+   "Search (Arabic and English)",
+   "البحث (بالعربية والإنجليزية)",
+   "build.py 404 page"
+  ]
+ ],
+ "measurement_domain_ar": {
+  "MA-001": [
+   "People",
+   "الأفراد"
+  ],
+  "MA-002": [
+   "Payments / People",
+   "المدفوعات / الأفراد"
+  ],
+  "MA-003": [
+   "People / Equity",
+   "الأفراد / الإنصاف"
+  ],
+  "MA-004": [
+   "Firms / MSME",
+   "المنشآت / المنشآت الصغرى والصغيرة والمتوسطة"
+  ],
+  "MA-005": [
+   "Providers / Geography",
+   "مقدمو الخدمات / الجغرافيا"
+  ],
+  "MA-006": [
+   "Consumer protection / Quality",
+   "حماية المستهلك / الجودة"
+  ],
+  "MA-007": [
+   "Identity / Digital access",
+   "الهوية / الوصول الرقمي"
+  ],
+  "MA-008": [
+   "Credit infrastructure / MSME",
+   "البنية التحتية للائتمان / المنشآت الصغرى والصغيرة والمتوسطة"
+  ],
+  "MA-009": [
+   "Social protection / Payments",
+   "الحماية الاجتماعية / المدفوعات"
+  ],
+  "MA-010": [
+   "Reforms / Payments / Quality",
+   "الإصلاحات / المدفوعات / الجودة"
+  ]
+ }
+}

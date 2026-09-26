@@ -2,6 +2,14 @@
 const $=(s,c=document)=>c.querySelector(s), $$=(s,c=document)=>[...c.querySelectorAll(s)];
 const prefix=location.pathname.startsWith('/en/')?'/en':'/ar';
 const isAr=document.documentElement.lang==='ar';
+// R8.5: interface copy is governed in the Master (04, IDs UI-JS-*); the build writes this page's labels as JSON.
+const UI=(()=>{try{return JSON.parse(document.getElementById('yfie-ui')?.textContent||'{}');}catch(e){return {};}})();
+const T=k=>(k in UI?UI[k]:k);
+const TF=(k,o)=>T(k).replace(/\{(\w+)\}/g,(m,n)=>(n in o?String(o[n]):m));
+const labelsFrom=table=>Object.fromEntries(Object.entries(table).map(([k,v])=>[k,T(v)]));
+const COMPARE_ERROR_UI={"title": "UI-JS-COMPARE-LINK-TITLE", "count": "UI-JS-COMPARE-LINK-COUNT", "malformed": "UI-JS-COMPARE-LINK-MALFORMED", "unknown": "UI-JS-COMPARE-LINK-UNKNOWN", "note": "UI-JS-COMPARE-LINK-NOTE"};
+const COMPARE_LABEL_UI={"definition": "UI-JS-COMPARE-DEFINITION", "universe": "UI-JS-COMPARE-UNIVERSE", "period": "UI-JS-COMPARE-PERIOD", "method": "UI-JS-COMPARE-METHOD", "source": "UI-JS-COMPARE-SOURCE", "currentness": "UI-JS-COMPARE-CURRENTNESS", "boundary": "UI-JS-COMPARE-BOUNDARY", "same": "UI-JS-COMPARE-SAME", "different": "UI-JS-COMPARE-DIFFERENT", "missing": "UI-JS-COMPARE-MISSING", "informational": "UI-JS-COMPARE-INFORMATIONAL", "sameRecord": "UI-JS-COMPARE-SAME-RECORD", "notDirect": "UI-JS-COMPARE-NOT-DIRECT", "unresolved": "UI-JS-COMPARE-UNRESOLVED", "qualified": "UI-JS-COMPARE-QUALIFIED", "aligned": "UI-JS-COMPARE-ALIGNED", "sameRecordCopy": "UI-JS-COMPARE-SAME-RECORD-COPY", "notDirectCopy": "UI-JS-COMPARE-NOT-DIRECT-COPY", "unresolvedCopy": "UI-JS-COMPARE-UNRESOLVED-COPY", "qualifiedCopy": "UI-JS-COMPARE-QUALIFIED-COPY", "alignedCopy": "UI-JS-COMPARE-ALIGNED-COPY", "dimension": "UI-JS-COMPARE-DIMENSION", "assessment": "UI-JS-COMPARE-ASSESSMENT", "openRecord": "UI-JS-COMPARE-OPEN-RECORD", "noMerge": "UI-JS-COMPARE-NO-MERGE", "table": "UI-JS-COMPARE-TABLE", "selected": "UI-JS-COMPARE-SELECTED"};
+const TYPE_LABEL_UI={"page": "UI-JS-TYPE-PAGE", "question": "UI-JS-TYPE-QUESTION", "evidence": "UI-JS-TYPE-EVIDENCE", "reading": "UI-JS-TYPE-READING", "measurement": "UI-JS-TYPE-MEASUREMENT", "source": "UI-JS-TYPE-SOURCE", "source_locator": "UI-JS-TYPE-SOURCE-LOCATOR"};
 
 function closeMenu(returnFocus=false){
   const n=$('#primary-nav'), b=$('[data-menu]');
@@ -40,7 +48,7 @@ async function copyText(text,button,promptLabel){
   try{
     await navigator.clipboard.writeText(text);
     if(button){const old=button.textContent;button.textContent='✓';setTimeout(()=>button.textContent=old,1400);}
-    const copied=$('#utility-status')?.dataset.copiedLabel||(isAr?'تم النسخ':'Copied');
+    const copied=$('#utility-status')?.dataset.copiedLabel||T('UI-JS-COPIED');
     announceUtility(copied);
   }
   catch(e){prompt(promptLabel,text);}
@@ -48,12 +56,12 @@ async function copyText(text,button,promptLabel){
 $$('[data-cite]').forEach(b=>b.addEventListener('click',async()=>{
   const canonical=$('link[rel="canonical"]')?.href||location.href;
   const governed=$('meta[name="yfie-citation"]')?.content?.trim();
-  const text=governed ? governed+' '+(isAr?'الرابط الحالي: ':'Current record: ')+canonical : document.title+' — '+canonical;
-  await copyText(text,b,isAr?'انسخ الاستشهاد':'Copy citation');
+  const text=governed ? governed+' '+T('UI-JS-CURRENT-RECORD')+canonical : document.title+' — '+canonical;
+  await copyText(text,b,T('UI-JS-COPY-CITATION'));
 }));
 $$('[data-source-cite]').forEach(b=>b.addEventListener('click',async()=>{
   const text=(b.dataset.sourceCitation||'').trim(); if(!text)return;
-  await copyText(text,b,isAr?'انسخ مرجع المصدر':'Copy source reference');
+  await copyText(text,b,T('UI-JS-COPY-SOURCE-REFERENCE'));
 }));
 
 let searchIndexPromise=null;
@@ -86,13 +94,13 @@ function scoreRecord(x,tokens,phraseTokens,alias){
 }
 function typeLabel(type){
   const t=String(type||'').toLowerCase();
-  const labels=isAr?{page:'صفحة',question:'سؤال',evidence:'سجل دليل',reading:'قراءة',measurement:'أولوية قياس',source:'مصدر',source_locator:'مرجع مصدر'}:{page:'Page',question:'Question',evidence:'Evidence record',reading:'Reading',measurement:'Measurement priority',source:'Source',source_locator:'Source reference'};
+  const labels=labelsFrom(TYPE_LABEL_UI);
   return labels[t]||'';
 }
 // TOOL-23: summaries are shortened at a word boundary before escaping, with an ellipsis.
 function clip(s,n){s=String(s||'');if(s.length<=n)return s;const cut=s.slice(0,n);const sp=cut.lastIndexOf(' ');return (sp>n*0.6?cut.slice(0,sp):cut).replace(/[\s,;:،؛]+$/,'')+'…';}
 function renderHits(hits){
-  if(!hits.length) return '<div class="empty" data-search-empty>'+(isAr?'لا توجد نتيجة تطابق هذا البحث. ولا يعني ذلك غياب الأدلة عن الموضوع؛ جرّب كلمات أخرى أو ابدأ من الأسئلة.':'No result matches this search. This does not mean there is no evidence on the topic; try other words or start from the questions.')+'</div>';
+  if(!hits.length) return '<div class="empty" data-search-empty>'+T('UI-JS-SEARCH-NO-RESULT')+'</div>';
   return hits.map(x=>{
     const title=(isAr?(x.title_ar||x.question_ar||x.label_ar):(x.title_en||x.question_en||x.label_en))||x.id||'Evidence';
     const summary=(isAr?(x.summary_ar||''):(x.summary_en||''));
@@ -110,12 +118,12 @@ function bindSearch(input,box,status){
     timer=setTimeout(async()=>{
       const term=normalize(input.value.trim());
       if(term.length<2){box.innerHTML=''; if(status)status.textContent=''; return;}
-      if(status)status.textContent=isAr?'جارٍ البحث…':'Searching…';
+      if(status)status.textContent=T('UI-JS-SEARCHING');
       try{
         const idx=await loadSearch();
         const aliases=await loadAliases();
         const tokens=queryTokens(term);
-        if(!tokens.length){box.innerHTML=renderHits([]);if(status)status.textContent=isAr?'0 نتيجة معروضة':'0 results shown';return;}
+        if(!tokens.length){box.innerHTML=renderHits([]);if(status)status.textContent=T('UI-JS-SEARCH-ZERO');return;}
         const alias=aliasFor(term.replace(/[?,.;:!—–"“”«»()؟،؛'’]/g,' ').trim(),aliases);
         const ranked=idx.map(x=>{const [score,title]=scoreRecord(x,tokens,tokens,alias);return [score,x,title];}).filter(([score])=>score>0).sort((a,b)=>b[0]-a[0]);
         const unique=[], seen=new Map();
@@ -131,10 +139,10 @@ function bindSearch(input,box,status){
         const scored=unique.slice(0,10);
         const note=alias&&(isAr?alias.boundary_note_ar:alias.boundary_note_en);
         box.innerHTML=(note?`<p class="search-boundary-note">${esc(note)}</p>`:'')+renderHits(scored);
-        if(status)status.textContent=isAr?`عدد النتائج المعروضة: ${scored.length}`:(scored.length===1?'1 result shown':`${scored.length} results shown`);   // TOOL-19
+        if(status)status.textContent=TF(scored.length===1?'UI-JS-SEARCH-RESULT-ONE':'UI-JS-SEARCH-RESULTS',{n:scored.length});   // TOOL-19
       }catch(e){
-        box.innerHTML='<div class="empty">'+(isAr?'تعذر تحميل البحث الآن. يمكنك متابعة التصفح من الأقسام الرئيسية.':'Search could not be loaded. You can continue from the main sections.')+'</div>';
-        if(status)status.textContent=isAr?'تعذر تحميل البحث':'Search unavailable';
+        box.innerHTML='<div class="empty">'+T('UI-JS-SEARCH-UNAVAILABLE-COPY')+'</div>';
+        if(status)status.textContent=T('UI-JS-SEARCH-UNAVAILABLE');
       }
     },100);
   });
@@ -175,7 +183,7 @@ if(sourceInput){
     records.forEach(r=>{const ok=!term||normalize(r.dataset.sourceSearch||'').includes(term);r.hidden=!ok;if(ok){shown++;if(r.classList.contains('source-locator'))visibleLocators++;}});
     if(term&&visibleLocators&&locatorDetails)locatorDetails.open=true;
     if(noResults)noResults.hidden=shown!==0;
-    if(status)status.textContent=isAr?`عدد المصادر والمراجع المعروضة: ${shown}`:(shown===1?'1 source or reference shown':`${shown} sources or references shown`);   // TOOL-19
+    if(status)status.textContent=TF(shown===1?'UI-JS-SOURCES-SHOWN-ONE':'UI-JS-SOURCES-SHOWN',{n:shown});   // TOOL-19
   };
   sourceInput.addEventListener('input',apply);
   const requested=new URLSearchParams(location.search).get('source');
@@ -190,7 +198,7 @@ if(sourceInput){
     if(requested&&status){   // P2.3: an unknown deep link is a link problem, not an empty result about the evidence
       status.setAttribute('role','alert');
       status.dataset.sourceLinkError='unknown';
-      status.textContent=isAr?'لم يُعثر في دليل المصادر على مرجع المصدر الوارد في هذا الرابط. هذه مشكلة في الرابط، وليست معلومة عن الأدلة؛ تُعرض المصادر كلها أدناه.':'The source reference in this link was not found in the source directory. This is a problem with the link, not information about the evidence; all sources are shown below.';
+      status.textContent=T('UI-JS-SOURCE-LINK-UNKNOWN');
     }
   }
 }
@@ -217,25 +225,7 @@ const compareSelects=['#compare-a','#compare-b','#compare-c','#compare-d'].map(s
 if(compareSelects.length>=2&&out){
   const data=window.__COMPARE__||[];
   const contractDimensions=Array.isArray(window.__COMPARE_DIMENSIONS__)?window.__COMPARE_DIMENSIONS__:[];
-  const labels=isAr?{
-    definition:'التعريف',universe:'المجتمع / قاعدة الاحتساب',period:'الفترة',method:'الطريقة',source:'مرجع المصدر',currentness:'حداثة الدليل',boundary:'ما لا يُستنتج',
-    same:'متطابق في الحقول المنظمة',different:'مختلف',missing:'غير متاح للحكم',informational:'للتتبع',sameRecord:'السجل نفسه مكرر',notDirect:'ليست مقارنة مباشرة',unresolved:'لا يمكن إثبات قابلية المقارنة المباشرة',qualified:'مقارنة مؤهلة فقط',aligned:'متوافقة بنيويًا ضمن الحقول المتاحة',
-    sameRecordCopy:'اختير سجل الدليل نفسه أكثر من مرة. أزل التكرار قبل الحكم على المقارنة بين أدلة مستقلة.',
-    notDirectCopy:'يختلف التعريف أو المجتمع أو الطريقة المسجلة بين هذه السجلات. تعامل معها بوصفها مقاييس مختلفة ما لم تذكر سجلاتها خلاف ذلك، ولا تعرض قيمها على مقياس مشترك.',
-    unresolvedCopy:'تنقص حقول لازمة للحكم على المقارنة المباشرة. الغياب لا يعني التوافق؛ لذلك تبقى المقارنة غير محسومة.',
-    qualifiedCopy:'تتوافق الحقول البنيوية اللازمة، لكن الفترة أو حداثة الدليل تختلف. استخدم المقارنة مع هذا القيد ظاهرًا.',
-    alignedCopy:'يتطابق التعريف والمجتمع والطريقة المسجلة. ولا يثبت ذلك تكافؤ المعنى خارج الحقول المعتمدة المعروضة هنا.',
-    dimension:'بُعد المقارنة',assessment:'الحكم',openRecord:'افتح سجل الدليل',noMerge:'لا تُدمج القيم ولا تُنشئ متوسطًا أو رقمًا وسطًا أو معامل تحويل من هذه المقارنة.',table:'تفاصيل مقارنة الأدلة',selected:'سجلات مختارة'
-  }:{
-    definition:'Definition',universe:'Population / base',period:'Period',method:'Method',source:'Source reference',currentness:'Evidence currency',boundary:'What not to conclude',
-    same:'Same controlled fields',different:'Different',missing:'Not available to judge',informational:'Trace only',sameRecord:'Same record selected more than once',notDirect:'Not a direct comparison',unresolved:'Direct comparability cannot be established',qualified:'Qualified comparison only',aligned:'Structurally aligned on available fields',
-    sameRecordCopy:'The same Evidence Record is selected more than once. Remove duplicates before judging comparability across independent evidence.',
-    notDirectCopy:'The recorded definition, population or method differs between these records. Treat them as different measures unless their records say otherwise, and do not present their values on a common scale.',
-    unresolvedCopy:'A field required to judge direct comparability is missing. Missing does not mean compatible, so the comparison remains unresolved.',
-    qualifiedCopy:'The required structural fields align, but period or evidence currency differs. Use the comparison only with that qualification visible.',
-    alignedCopy:'The recorded definition, population and method match. This does not establish equivalence beyond the governed fields shown here.',
-    dimension:'Comparison dimension',assessment:'Assessment',openRecord:'Open Evidence Record',noMerge:'Do not merge values, manufacture a midpoint, average disagreement or infer a conversion scalar from this comparison.',table:'Evidence comparison details',selected:'records selected'
-  };
+  const labels=labelsFrom(COMPARE_LABEL_UI);
   const requiredHard=new Set(['definition','universe','method']);   // Tranche C TOOL-01: only governed per-record fields
   const temporal=new Set(['period','currentness']);
   const dimensions=contractDimensions.filter(f=>['definition','universe','period','method','source','currentness'].includes(f));
@@ -259,19 +249,7 @@ if(compareSelects.length>=2&&out){
   // P2.1: the comparison is shareable. URL state is ?records=ID,ID[,ID[,ID]] in slot order (each ID percent-encoded,
   // commas literal). The URL always reflects the comparison shown; reload, a copied link or a language switch
   // (which keeps the query) reproduces it. A malformed or unknown link is a technical input error, never an evidence verdict.
-  const errorText=isAr?{
-    title:'تعذّرت قراءة رابط المقارنة',
-    count:'يجب أن يسمّي الرابط من سجلين إلى أربعة سجلات أدلة، مفصولة بفواصل.',
-    malformed:'يحتوي الرابط على مرجع سجل غير صالح.',
-    unknown:'يسمّي الرابط سجلًا غير متاح للمقارنة هنا: ',
-    note:'هذه مشكلة في الرابط، وليست نتيجة عن الأدلة. اختر السجلات أدناه لبدء مقارنة.'
-  }:{
-    title:'This comparison link could not be read',
-    count:'The link must name two to four Evidence Records, separated by commas.',
-    malformed:'The link contains a record reference that is not valid.',
-    unknown:'The link names a record that is not available for comparison here: ',
-    note:'This is a problem with the link, not a finding about the evidence. Choose records below to start a comparison.'
-  };
+  const errorText=labelsFrom(COMPARE_ERROR_UI);
   const validIds=new Set(data.map(x=>x.id));
   const parseRecordsParam=raw=>{
     if(raw===null)return {state:'absent'};

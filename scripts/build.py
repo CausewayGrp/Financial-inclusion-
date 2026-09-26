@@ -26,6 +26,15 @@ def ui_text(ui_id,lang):
     r=UI_COPY.get(ui_id)
     if not r: raise SystemExit(f'governed interface copy missing: {ui_id}')
     return r.get(f'label_{lang}') or ''
+def ui_fmt(ui_id,lang,**values):
+    """Governed interface copy with named placeholders ({n}); both editions must carry the same placeholders."""
+    s=ui_text(ui_id,lang)
+    if set(re.findall(r'\{(\w+)\}',s))!=set(values): raise SystemExit(f'interface copy {ui_id} {lang}: placeholders differ from {sorted(values)}')
+    return s.format(**values)
+def ui_json(lang):
+    """R8.5: the UI-JS-* labels app.js needs, in the page language, as an inline JSON block (no copy lives in app.js)."""
+    data={k:(r.get(f'label_{lang}') or '') for k,r in sorted(UI_COPY.items()) if k.startswith('UI-JS-')}
+    return '<script type="application/json" id="yfie-ui">'+json.dumps(data,ensure_ascii=False).replace('</','<\\/')+'</script>'
 def esc(x): return html.escape(str(x or ''), quote=True)
 def locv(o,key,lang): return o.get(f'{key}_{lang}') or o.get(key) or ''
 
@@ -56,7 +65,7 @@ def section_body(s,lang):
 
 def public_ref(oid,lang):
     """PID-1: a stable record reference is shown only where it aids verification or citation, and always labelled."""
-    lab='المرجع' if lang=='ar' else 'Reference'
+    lab=ui_text('UI-SOURCE-REFERENCE',lang)
     return f'<span class="record-ref" data-public-ref><span class="record-ref-label">{lab}</span> <bdi dir="ltr">{esc(oid)}</bdi></span>'
 
 # Public evidence-detail routes are discovered from the controlled Page Specs.
@@ -77,8 +86,8 @@ def route_href(route,lang):
 
 def search_dialog(lang):
     ar=lang=='ar'
-    search='بحث' if ar else 'Search'; close='إغلاق' if ar else 'Close'; search_title='ابحث في الأدلة العامة' if ar else 'Search the public evidence'; ph='ابحث في الأسئلة والأدلة والقراءات والمصادر...' if ar else 'Search questions, evidence, readings and sources...'
-    status='حالة البحث' if ar else 'Search status'
+    search=ui_text('UI-SEARCH-SEARCH',lang); close=ui_text('UI-SEARCH-CLOSE',lang); search_title=ui_text('UI-SEARCH-SEARCH-THE-PUBLIC-EVIDENCE',lang); ph=ui_text('UI-SEARCH-SEARCH-QUESTIONS-EVIDENCE-READINGS-AND',lang)
+    status=ui_text('UI-SEARCH-SEARCH-STATUS',lang)
     return f'<dialog id="search-dialog" class="search-dialog" aria-labelledby="search-dialog-title"><div class="search-dialog-panel"><div class="search-dialog-head"><strong id="search-dialog-title">{search_title}</strong><button class="icon-btn" data-search-close aria-label="{close}">×</button></div><div class="search-shell"><span aria-hidden="true">⌕</span><input id="global-search-dialog" data-search-input class="search-input" placeholder="{ph}" aria-label="{search}"></div><div class="search-status" data-search-status role="status" aria-live="polite" aria-label="{status}"></div><div data-search-results class="search-results"></div></div></dialog>'
 
 def header(lang,route):
@@ -105,16 +114,16 @@ def header(lang,route):
             nav.append(_link(item)[0])
     nav=''.join(nav)
     trust_items=NAVIGATION_INTERACTION.get('trust_navigation',[])
-    trust_label='روابط الثقة' if ar else 'Trust links'
+    trust_label=ui_text('UI-HEADER-TRUST-LINKS',lang)
     trust_nav=(f'<nav class="trust-nav" aria-label="{trust_label}"><div class="trust-nav-inner">'+''.join(_link(t)[0] for t in trust_items)+'</div></nav>') if trust_items else ''
-    skip='انتقل إلى المحتوى' if ar else 'Skip to content'; primary='التنقل الرئيسي' if ar else 'Primary navigation'; search='بحث' if ar else 'Search'; brand='أدلة الشمول المالي في اليمن' if ar else 'Yemen Financial Inclusion Evidence'; other='en' if ar else 'ar'; other_label='EN' if ar else 'العربية'; menu='القائمة' if ar else 'Menu'; cite='استشهد بهذه الصفحة' if ar else 'Cite this page'; issue='الإبلاغ عن مشكلة' if ar else 'Report an issue'; switch_label='Switch to English' if ar else 'التبديل إلى العربية'; copied='تم النسخ' if ar else 'Copied'
+    skip=ui_text('UI-HEADER-SKIP-TO-CONTENT',lang); primary=ui_text('UI-HEADER-PRIMARY-NAVIGATION',lang); search=ui_text('UI-SEARCH-SEARCH',lang); brand=ui_text('UI-PRODUCT-NAME',lang); other='en' if ar else 'ar'; other_label='EN' if ar else 'العربية'; menu=ui_text('UI-HEADER-MENU',lang); cite=ui_text('UI-HEADER-CITE-THIS-PAGE',lang); issue=ui_text('UI-HEADER-REPORT-AN-ISSUE',lang); switch_label='Switch to English' if ar else 'التبديل إلى العربية'; copied=ui_text('UI-HEADER-COPIED',lang)
     mobile_tools=f'<div class="mobile-nav-utilities"><button type="button" class="mobile-nav-action" data-cite aria-label="{cite}">{cite}</button><a class="mobile-nav-action" href="/{lang}/contact/">{issue}</a></div>'
     return f'<a class="skip" href="#main">{skip}</a>{trust_nav}<header class="header"><div class="header-inner"><a class="brand" href="/{lang}/" aria-label="CauseWay — {brand}"><img src="/assets/CauseWay_Master_Logo.png" alt="CauseWay"></a><nav id="primary-nav" class="nav" aria-label="{primary}">{nav}{mobile_tools}</nav><div class="utilities"><button class="icon-btn search-btn" data-search-open aria-label="{search}"><span aria-hidden="true">⌕</span><span class="utility-label">{search}</span></button><button class="icon-btn cite-btn" data-cite aria-label="{cite}">↗</button><a class="icon-btn issue-btn" href="/{lang}/contact/" aria-label="{issue}">!</a><button class="lang-btn" data-lang="{other}" aria-label="{switch_label}" lang="{other}" dir="{"ltr" if other=="en" else "rtl"}">{other_label}</button><button class="icon-btn menu-btn" data-menu aria-label="{menu}" aria-controls="primary-nav" aria-expanded="false">☰</button></div></div><div id="utility-status" class="sr-only" role="status" aria-live="polite" aria-atomic="true" data-copied-label="{copied}"></div></header>{search_dialog(lang)}'
 
 def footer(lang):
     ar=lang=='ar'
     desc=ui_text('UI-FOOTER-STRAPLINE',lang)   # PB-0412: governed Master row (04 'Governed interface copy')
-    rights='الأدلة المنشورة تحتفظ بنسبة المصدر الأصلي.' if ar else 'Published evidence remains attributed to the original source.'
+    rights=ui_text('UI-FOOTER-PUBLISHED-EVIDENCE-REMAINS-ATTRIBUTED-TO',lang)
     groups=[]
     for group in NAVIGATION_INTERACTION.get('footer_groups',[]):
         glabel=group.get('label_ar') if ar else group.get('label_en')
@@ -124,7 +133,7 @@ def footer(lang):
         )
         groups.append(f'<div class="footer-nav-group"><strong>{esc(glabel)}</strong>{links}</div>')
     nav=''.join(groups)
-    return f'<footer class="footer"><div class="container"><div class="footer-grid"><div><img src="/assets/CauseWay_Master_Logo.png" alt="CauseWay"><p>{desc}</p></div><nav class="footer-nav" aria-label="{"روابط المنتج والثقة" if ar else "Product and trust links"}">{nav}</nav></div><div class="fine">© 2026 CauseWay · {rights}</div></div></footer>'
+    return f'<footer class="footer"><div class="container"><div class="footer-grid"><div><img src="/assets/CauseWay_Master_Logo.png" alt="CauseWay"><p>{desc}</p></div><nav class="footer-nav" aria-label="{ui_text("UI-FOOTER-PRODUCT-AND-TRUST-LINKS",lang)}">{nav}</nav></div><div class="fine">© 2026 CauseWay · {rights}</div></div></footer>'
 
 def hero(spec,lang):
     ar=lang=='ar'; title=locv(spec,'title',lang); lead=''
@@ -134,7 +143,7 @@ def hero(spec,lang):
             if not s.get(f'heading_{lang}'): lead=body.split('\n')[0]   # P4 (V-D12): a headed first section is not repeated as the lead
             break
     lead_html=f'<p class="hero-lead">{esc(lead)}</p>' if lead else ''
-    eye='أدلة الشمول المالي في اليمن' if ar else 'Yemen Financial Inclusion Evidence'; start='ابدأ بالسؤال' if ar else 'Start with a question'; verify='تحقق من الأدلة' if ar else 'Verify evidence'; flow='افهم ← استكشف ← تحقّق' if ar else 'Understand → Explore → Verify'; side='يعرض هذا المورد أقوى ما تسمح به الأدلة، مع إبقاء حدود الاستنتاج والمصدر ظاهرين.' if ar else 'This resource presents the strongest defensible answer while keeping scope, limits and source visible.'
+    eye=ui_text('UI-PRODUCT-NAME',lang); start=ui_text('UI-HERO-START-WITH-A-QUESTION',lang); verify=ui_text('UI-HERO-VERIFY-EVIDENCE',lang); flow=ui_text('UI-DOM-UNDERSTAND-EXPLORE-VERIFY',lang); side=ui_text('UI-HERO-THIS-RESOURCE-PRESENTS-THE-STRONGEST',lang)
     return f'<section class="hero"><div class="hero-inner"><div><div class="eyebrow">{eye}</div><h1>{esc(title)}</h1>{lead_html}<div class="hero-actions"><a class="button primary" href="/{lang}/explore/">{start}</a><a class="button ghost" href="/{lang}/evidence/">{verify}</a></div></div><aside class="hero-side"><strong>{flow}</strong><p>{side}</p></aside></div></section>'
 
 
@@ -186,7 +195,7 @@ def breadcrumb(page_family,current_id,lang,current_title=None):
         return ''
     ar=lang=='ar'
     parent_label=cfg.get('parent_label_ar') if ar else cfg.get('parent_label_en')
-    aria='مسار الصفحة' if ar else 'Breadcrumb'
+    aria=ui_text('UI-CRUMB-BREADCRUMB',lang)
     # PID-1: the current item is the page's governed title; an Evidence Record keeps its reference, which aids citation.
     current=(f'<span aria-current="page">{esc(current_title)}</span>' if current_title else
              f'<span aria-current="page" class="stable-id" dir="ltr">{esc(current_id)}</span>')
@@ -203,8 +212,8 @@ def journey_next(spec,lang):
     if not actions:
         return ''
     ar=lang=='ar'
-    title='تابع من هنا' if ar else 'Continue from here'
-    intro='اختر المسار الأقرب لما تريد فعله بعد ذلك.' if ar else 'Choose the next path that matches what you need to do.'
+    title=ui_text('UI-NEXT-CONTINUE-FROM-HERE',lang)
+    intro=ui_text('UI-NEXT-CHOOSE-THE-NEXT-PATH-THAT',lang)
     links=[]
     for target in actions:
         label=route_action_label(target,lang)
@@ -286,56 +295,12 @@ def _first_line(text):
             return line
     return ''
 
+_DOMAIN_LABELS_UI = {'scope': 'UI-DOM-SCOPE-AND-TIME', 'boundary': 'UI-DOM-WHAT-NOT-TO-CONCLUDE', 'unknown': 'UI-DOM-WHAT-REMAINS-UNKNOWN', 'coverage': 'UI-DOM-COVERAGE-LIMIT', 'visual': 'UI-DOM-A-VIEW-THAT-CHANGES-UNDERSTANDING', 'more': 'UI-DOM-MORE-EVIDENCE-AND-CONTEXT', 'more_intro': 'UI-DOM-ADDITIONAL-CONTROLLED-DETAIL-FROM-THIS', 'measure': 'UI-DOM-WHAT-MEASUREMENT-WOULD-CHANGE-THE', 'verify': 'UI-DOM-VERIFY-IT-YOURSELF', 'verify_intro': 'UI-DOM-OPEN-THE-EVIDENCE-RECORD-BEHIND', 'evidence': 'UI-DOM-OPEN-EVIDENCE', 'method': 'UI-DOM-METHODOLOGY', 'open_record': 'UI-DOM-OPEN-EVIDENCE-RECORD', 'do_not': 'UI-DOM-DO-NOT-INFER', 'visual_question': 'UI-DOM-ANALYTICAL-QUESTION', 'text_alternative': 'UI-DOM-ANALYTICAL-TEXT-ALTERNATIVE', 'question_flow': 'UI-DOM-UNDERSTAND-EXPLORE-VERIFY', 'reading_rule': 'UI-DOM-READING-RULE', 'reading_rule_copy': 'UI-DOM-EVERY-CONSEQUENTIAL-NUMBER-STAYS-ATTACHED', 'start': 'UI-DOM-EXPLORE-QUESTIONS', 'verify_action': 'UI-DOM-OPEN-EVIDENCE'}
 def _domain_labels(lang):
-    if lang=='ar':
-        return {
-            'scope':'النطاق والزمن',
-            'boundary':'ما لا يُستنتج',
-            'unknown':'ما يزال غير معروف',
-            'coverage':'قيد التغطية',
-            'visual':'عرض يغيّر الفهم',
-            'more':'مزيد من الأدلة والسياق',
-            'more_intro':'تفاصيل إضافية من الصفحة نفسها، محفوظة مع حدودها الأصلية.',
-            'measure':'ما القياس الذي سيغيّر القرار؟',
-            'verify':'تحقق بنفسك',
-            'verify_intro':'افتح سجل الدليل الذي تستند إليه كل إجابة، أو انتقل إلى المصادر أو المنهجية.',
-            'evidence':'افتح الأدلة',
-            'data':_nav_label('/data/','ar'),
-            'method':'المنهجية',
-            'open_record':'افتح سجل الدليل ←',
-            'do_not':'لا يُستنتج:',
-            'visual_question':'السؤال التحليلي',
-            'text_alternative':'البديل النصي التحليلي',
-            'question_flow':'افهم ← استكشف ← تحقّق',
-            'reading_rule':'قاعدة القراءة',
-            'reading_rule_copy':'يبقى كل رقم جوهري مرتبطًا بوحدته ونطاقه وفترته وحدوده. ولا تعامل الأدلة ذات تواريخ القياس المختلفة كما لو كانت تصف اللحظة نفسها.',
-            'start':'استكشف الأسئلة',
-            'verify_action':'افتح الأدلة',
-        }
-    return {
-        'scope':'Scope and time',
-        'boundary':'What not to conclude',
-        'unknown':'What remains unknown',
-        'coverage':'Coverage limit',
-        'visual':'A view that changes understanding',
-        'more':'More evidence and context',
-        'more_intro':'Additional controlled detail from this route, preserved with its original boundaries.',
-        'measure':'What measurement would change the decision?',
-        'verify':'Verify it yourself',
-        'verify_intro':'Open the evidence record behind each answer, or go to the sources or the methodology.',
-        'evidence':'Open evidence',
-        'data':_nav_label('/data/','en'),
-        'method':'Methodology',
-        'open_record':'Open evidence record →',
-        'do_not':'Do not infer:',
-        'visual_question':'Analytical question',
-        'text_alternative':'Analytical text alternative',
-        'question_flow':'Understand → Explore → Verify',
-        'reading_rule':'Reading rule',
-        'reading_rule_copy':'Every consequential number stays attached to its unit, scope, time and limitation. Evidence measured at different times is never presented as if it described the same moment.',
-        'start':'Explore questions',
-        'verify_action':'Open evidence',
-    }
+    # R8.5: labels are governed interface copy (04); only computed entries stay in code
+    out = {k: ui_text(v, lang) for k, v in _DOMAIN_LABELS_UI.items()}
+    out['data'] = _nav_label('/data/',lang)
+    return {k: out[k] for k in ['scope', 'boundary', 'unknown', 'coverage', 'visual', 'more', 'more_intro', 'measure', 'verify', 'verify_intro', 'evidence', 'data', 'method', 'open_record', 'do_not', 'visual_question', 'text_alternative', 'question_flow', 'reading_rule', 'reading_rule_copy', 'start', 'verify_action']}
 
 def answer_question_crumb(spec,lang,labels):
     q=QUESTION_BY_ROUTE.get(str(spec.get('route') or ''))
@@ -414,11 +379,11 @@ def _visual_scope(v,lang):
 
 def _visual_fallback(lang,question,summary,prohibit,period='',unit=''):
     ar=lang=='ar'
-    label='البديل النصي التحليلي' if ar else 'Analytical text alternative'
-    qlabel='السؤال التحليلي' if ar else 'Analytical question'
-    slabel='ما يوضحه الدليل' if ar else 'What the evidence shows'
-    scope_label='النطاق والزمن' if ar else 'Scope and time'
-    boundary_label='ما لا يُستنتج' if ar else 'What not to conclude'
+    label=ui_text('UI-DOM-ANALYTICAL-TEXT-ALTERNATIVE',lang)
+    qlabel=ui_text('UI-DOM-ANALYTICAL-QUESTION',lang)
+    slabel=ui_text('UI-VIS-WHAT-THE-EVIDENCE-SHOWS',lang)
+    scope_label=ui_text('UI-DOM-SCOPE-AND-TIME',lang)
+    boundary_label=ui_text('UI-DOM-WHAT-NOT-TO-CONCLUDE',lang)
     items=[]
     if question:
         items.append(f'<li><strong>{qlabel}:</strong> {esc(question)}</li>')
@@ -530,7 +495,7 @@ def domain_readings(spec,lang):
                      f'<h3><a href="{route_href(route,lang)}">{esc(locv(r,"title",lang))}</a></h3><p>{esc(locv(r,"thesis",lang))}</p></article>')
     if not cards:
         return ''
-    head='قراءات الأدلة المرتبطة بهذه الصفحة' if ar else 'Evidence Readings on this question'
+    head=ui_text('UI-DOM-EVIDENCE-READINGS-ON-THIS-QUESTION',lang)
     return f'<section class="section domain-readings"><div class="container"><h2>{head}</h2><div class="domain-reading-grid">{"".join(cards)}</div></div></section>'
 
 def domain_page(spec,lang):
@@ -631,10 +596,10 @@ def question_cards(lang, compact=False):
     if compact:
         chosen={'QE-002','QE-003','QE-005','QE-011'}
         qs=[q for q in qs if q.get('question_id') in chosen]
-        eye='أسئلة شائعة للبدء' if ar else 'Common starting questions'
-        title='ابدأ من المسألة التي تريد حسمها' if ar else 'Start from the problem you need to resolve'
+        eye=ui_text('UI-QUESTIONS-COMMON-STARTING-QUESTIONS',lang)
+        title=ui_text('UI-QUESTIONS-START-FROM-THE-PROBLEM-YOU',lang)
         n=INVENTORY['entry_questions']
-        more=f'اعرض الأسئلة كلها ({n})' if ar else f'View all {n} questions'
+        more=ui_fmt('UI-QUESTIONS-VIEW-ALL',lang,n=n)
         cards=[]
         for q in qs:
             qid=str(q.get('question_id') or '')
@@ -650,10 +615,10 @@ def question_cards(lang, compact=False):
         )
 
     groups=[
-      (('افهم الصورة العامة' if ar else 'Understand the wider picture'), {'QE-001','QE-003'}),
-      (('الناس والاستخدام والتدفقات' if ar else 'People, use and flows'), {'QE-002','QE-004','QE-007','QE-009'}),
-      (('المنشآت والمؤسسات ومقدمو الخدمات' if ar else 'Firms, institutions and providers'), {'QE-005','QE-006','QE-008'}),
-      (('تحقّق وحدد ما ينبغي قياسه' if ar else 'Verify and decide what to measure'), {'QE-010','QE-011'})
+      ((ui_text('UI-QUESTIONS-UNDERSTAND-THE-WIDER-PICTURE',lang)), {'QE-001','QE-003'}),
+      ((ui_text('UI-QUESTIONS-PEOPLE-USE-AND-FLOWS',lang)), {'QE-002','QE-004','QE-007','QE-009'}),
+      ((ui_text('UI-QUESTIONS-FIRMS-INSTITUTIONS-AND-PROVIDERS',lang)), {'QE-005','QE-006','QE-008'}),
+      ((ui_text('UI-QUESTIONS-VERIFY-AND-DECIDE-WHAT-TO',lang)), {'QE-010','QE-011'})
     ]
     sections_out=[]
     for gtitle,ids in groups:
@@ -669,13 +634,11 @@ def question_cards(lang, compact=False):
             f'<section class="question-cluster"><div class="question-cluster-head"><h3>{esc(gtitle)}</h3>'
             f'<span class="pill">{len(rows)}</span></div><div class="question-grid">{"".join(cards)}</div></section>'
         )
-    eye='أسئلة للدخول إلى الأدلة' if ar else 'Questions into the evidence'
+    eye=ui_text('UI-QUESTIONS-QUESTIONS-INTO-THE-EVIDENCE',lang)
     # P1.3: the page hero already says "start with the question, not the dataset"; the list heading names the task instead.
-    title='اعثر على السؤال الأقرب إلى قرارك' if ar else 'Find the question closest to your decision'
+    title=ui_text('UI-QUESTIONS-FIND-THE-QUESTION-CLOSEST-TO',lang)
     intro=(
-        'يحافظ كل مسار على الفترة، والمجتمع أو قاعدة الاحتساب، وحدود الاستنتاج، والمصدر.'
-        if ar else
-        'Every route keeps period, population or calculation base, inference limits and source visible.'
+        ui_text('UI-QUESTIONS-EVERY-ROUTE-KEEPS-PERIOD-POPULATION',lang)
     )
     return (
         f'<section class="section mint explore-questions"><div class="container"><div class="eyebrow">{eye}</div>'
@@ -718,9 +681,9 @@ def home_special(spec,lang):
 def home_ctas(lang):
     ar=lang=='ar'
     items=[
-      ('/readings/',_nav_label('/readings/',lang),'تحليل متعدد المصادر يبقى مربوطًا بالخلاصات والأدلة.' if ar else 'Cross-source analysis that stays bound to claims and evidence.'),
-      ('/measurement/',_nav_label('/measurement/',lang),'ما الذي لا نعرفه بعد، وما القياس الذي سيجعل القرار أقوى.' if ar else 'What remains unknown and what measurement would strengthen the decision.'),
-      ('/data/',_nav_label('/data/',lang),'اعثر على المصادر الأصلية التي تستند إليها الأدلة، بعناوينها وجهاتها الناشرة وروابطها.' if ar else 'Find the original sources behind the evidence, with their titles, publishers and links.')
+      ('/readings/',_nav_label('/readings/',lang),ui_text('UI-HOME-CROSS-SOURCE-ANALYSIS-THAT-STAYS',lang)),
+      ('/measurement/',_nav_label('/measurement/',lang),ui_text('UI-HOME-WHAT-REMAINS-UNKNOWN-AND-WHAT',lang)),
+      ('/data/',_nav_label('/data/',lang),ui_text('UI-HOME-FIND-THE-ORIGINAL-SOURCES-BEHIND',lang))
     ]
     cards=''.join(f'<a class="reading-card" href="{route_href(r,lang)}"><span class="badge teal">{i+1:02d}</span><h3>{esc(t)}</h3><p>{esc(d)}</p></a>' for i,(r,t,d) in enumerate(items))
     return f'<section class="section"><div class="container"><div class="reading-grid home-cta-grid">{cards}</div></div></section>'
@@ -730,12 +693,8 @@ def home_ctas(lang):
 # date, prohibited inference, relations), 03 (the essay body) and 04 (interface labels); relations are derived once in
 # the generator (page spec: related_readings, featured_reading, used_in_readings, measurement_readings).
 # ---------------------------------------------------------------------------------------------------------------------
-MONTHS={'en':['January','February','March','April','May','June','July','August','September','October','November','December'],
-        'ar':['يناير','فبراير','مارس','أبريل','مايو','يونيو','يوليو','أغسطس','سبتمبر','أكتوبر','نوفمبر','ديسمبر']}
-
 def date_label(iso,lang):
-    y,m,d=(int(x) for x in str(iso).split('-'))
-    return f'{d} {MONTHS[lang][m-1]} {y}'
+    return source_date_text(iso,lang)
 
 def reading_paras(text):
     """A Reading body: one paragraph per line; consecutive '- ' lines form a list; a '> ' line is the pulled line."""
@@ -813,27 +772,9 @@ def evidence_used_in_readings(spec,lang):
     return (f'<section class="evidence-used-in" data-used-in-readings><div class="container"><h2>{esc(ui_text("UI-EVIDENCE-USED-IN-READINGS",lang))}</h2>'
             f'<ul>{items}</ul></div></section>')
 
-AR_MEASUREMENT_DOMAIN_TERMS={
-    'People':'الأفراد',
-    'Payments':'المدفوعات',
-    'Equity':'الإنصاف',
-    'Firms':'المنشآت',
-    'MSME':'المنشآت الصغرى والصغيرة والمتوسطة',
-    'Providers':'مقدمو الخدمات',
-    'Geography':'الجغرافيا',
-    'Consumer protection':'حماية المستهلك',
-    'Quality':'الجودة',
-    'Identity':'الهوية',
-    'Digital access':'الوصول الرقمي',
-    'Credit infrastructure':'البنية التحتية للائتمان',
-    'Social protection':'الحماية الاجتماعية',
-    'Reforms':'الإصلاحات',
-}
-def measurement_domain_label(domain,lang):
-    raw=str(domain or '').strip()
-    if lang!='ar' or not raw:
-        return raw
-    return ' / '.join(AR_MEASUREMENT_DOMAIN_TERMS.get(part.strip(),part.strip()) for part in raw.split('/'))
+def measurement_domain_label(m,lang):
+    # R8.5: the Arabic domain label is governed in 10_MEASUREMENT_AGENDA (domain_ar), not translated in code
+    return str((m.get('domain_ar') if lang=='ar' else m.get('domain')) or '').strip()
 
 def measurement_readings_line(refs,lang):
     """F2: 'This gap is examined in' — the Readings bound to this priority (08 measurement_bindings)."""
@@ -851,10 +792,10 @@ def measurement_cards(lang,spec=None):
     arr=load(C/'content/measurement_agenda.json'); ar=lang=='ar'; cards=[]
     examined=(spec or {}).get('measurement_readings') or {}
     for m in arr:
-        k1='ما نعرفه:' if ar else 'Current evidence:'; k2='ما ينقص:' if ar else 'Missing evidence:'; k3='ما الذي سيصبح القرار فيه أقوى:' if ar else 'Decision unlocked:'
-        domain=measurement_domain_label(m.get('domain'),lang)
+        k1=ui_text('UI-MA-CURRENT-EVIDENCE',lang); k2=ui_text('UI-MA-MISSING-EVIDENCE',lang); k3=ui_text('UI-MA-DECISION-UNLOCKED',lang)
+        domain=measurement_domain_label(m,lang)
         mid=str(m.get('measurement_id') or '')
-        cards.append(f'<article class="measurement-card" id="{esc(mid)}" tabindex="-1"><div class="priority">{("الأولوية" if ar else "Priority")}: <bdi dir="ltr">{esc(m.get("priority"))}</bdi> · {esc(domain)}</div><h3>{esc(locv(m,"title",lang))}</h3><p><strong>{k1}</strong> {esc(locv(m,"current_evidence",lang))}</p><p><strong>{k2}</strong> {esc(locv(m,"missing_evidence",lang))}</p><p><strong>{k3}</strong> {esc(locv(m,"unlocked_decision",lang))}</p><div class="meta-row">{public_ref(mid,lang)}</div>{measurement_readings_line(examined.get(mid),lang)}{measurement_more(m,lang)}</article>')
+        cards.append(f'<article class="measurement-card" id="{esc(mid)}" tabindex="-1"><div class="priority">{(ui_text("UI-MA-PRIORITY",lang))}: <bdi dir="ltr">{esc(m.get("priority"))}</bdi> · {esc(domain)}</div><h3>{esc(locv(m,"title",lang))}</h3><p><strong>{k1}</strong> {esc(locv(m,"current_evidence",lang))}</p><p><strong>{k2}</strong> {esc(locv(m,"missing_evidence",lang))}</p><p><strong>{k3}</strong> {esc(locv(m,"unlocked_decision",lang))}</p><div class="meta-row">{public_ref(mid,lang)}</div>{measurement_readings_line(examined.get(mid),lang)}{measurement_more(m,lang)}</article>')
     return f'<section class="section"><div class="container"><div class="measurement-grid">{"".join(cards)}</div></div></section>'
 
 def sources_block(spec,lang):
@@ -866,14 +807,14 @@ def sources_block(spec,lang):
     for sid,source,url in rows:
         # Locator-only sources have no governed title; the reference is already shown above the link, so the link is
         # named for its action instead of repeating the reference.
-        title=(source.get('display_title_ar') if ar else source.get('display_title')) or ('افتح المصدر الأصلي ↗' if ar else 'Open original source ↗')
+        title=(source.get('display_title_ar') if ar else source.get('display_title')) or (ui_text('UI-EVID-OPEN-ORIGINAL-SOURCE',lang))
         pub=source_kind_line(source,lang)
         link=f'<a href="{esc(url)}" rel="noopener noreferrer" target="_blank">{esc(title)}</a>'
         data_href=f'/{lang}/data/?source={quote(sid)}#source-{quote(sid)}'
-        data_label='سجل المصدر' if ar else 'Source record'
+        data_label=ui_text('UI-SOURCES-SOURCE-RECORD',lang)
         trust=source_trust_controls(source,lang)
         out.append(f'<div class="source-card"><div class="source-id" dir="ltr">{esc(sid)}</div><strong dir="auto">{link}</strong><div class="meta" dir="auto">{esc(pub)}</div><a class="text-link" href="{esc(data_href)}">{data_label}</a>{trust}</div>')
-    label='المصادر' if ar else 'Sources'
+    label=ui_text('UI-SOURCES-SOURCES',lang)
     return f'<aside class="answer-card sticky-aside"><div class="eyebrow">{label}</div>{"".join(out)}</aside>'
 
 def render_visual(v,lang,level=3):
@@ -912,12 +853,12 @@ def governed_blocks(spec,lang,show_ref=False):
     # PID-1: cards lead with the governed headline. A labelled record reference is shown only in the Evidence
     # directory (show_ref), where readers look up a record cited elsewhere by its reference.
     ar=lang=='ar'; out=[]; seen=set()
-    open_label='افتح سجل الدليل ←' if ar else 'Open evidence record →'
+    open_label=ui_text('UI-DOM-OPEN-EVIDENCE-RECORD',lang)
     for c in spec.get('governed_claims') or []:
         oid=str(c.get('claim_id') or '')
         if not oid or oid in seen: continue
         seen.add(oid)
-        label='لا يثبت:' if ar else 'Does not establish:'
+        label=ui_text('UI-VIS-DOES-NOT-ESTABLISH',lang)
         title=locv(c,'headline',lang); copy=locv(c,'copy',lang); boundary=locv(c,'does_not_prove',lang)
         if not (title or copy or boundary): continue
         note=f'<div class="note"><strong>{label}</strong> {esc(boundary)}</div>' if boundary else ''
@@ -945,89 +886,17 @@ def governed_blocks(spec,lang,show_ref=False):
         oid=str(m.get('measurement_id') or '')
         if not oid or oid in seen: continue
         seen.add(oid)
-        need='الدليل المطلوب:' if ar else 'Evidence needed:'
+        need=ui_text('UI-BLOCK-EVIDENCE-NEEDED',lang)
         mlink=f'<div class="card-actions"><a class="text-link" href="/{lang}/measurement/#{quote(oid)}">{esc(ui_text("UI-MA-OPEN",lang))}</a></div>'
         out.append(f'<article class="answer-card boundary"><h3>{esc(locv(m,"title",lang))}</h3><p>{esc(locv(m,"current_evidence",lang))}</p><p><strong>{need}</strong> {esc(locv(m,"missing_evidence",lang))}</p>{mlink}</article>')
     return ''.join(out)
 
+_EVIDENCE_LABELS_UI = {'family': 'UI-EVID-EVIDENCE-RECORD', 'establishes': 'UI-EVID-WHAT-DOES-THIS-EVIDENCE-ESTABLISH', 'measures': 'UI-EVID-WHAT-DOES-IT-MEASURE', 'applies': 'UI-EVID-WHO-OR-WHAT-DOES-IT', 'period': 'UI-EVID-WHEN-WAS-IT-MEASURED-OR', 'currentness': 'UI-EVID-HOW-CURRENT-IS-IT', 'boundary': 'UI-DOM-WHAT-NOT-TO-CONCLUDE', 'source': 'UI-EVID-ORIGINAL-SOURCE-AND-VERIFICATION', 'source_intro': 'UI-EVID-OPEN-THE-SOURCE-RECORD-HERE', 'open_original': 'UI-EVID-OPEN-ORIGINAL-SOURCE', 'open_source_record': 'UI-EVID-OPEN-SOURCE-RECORD', 'no_public_locator': 'UI-EVID-NO-STANDALONE-PUBLIC-LOCATOR-IS', 'no_source_record': 'UI-EVID-THIS-RECORD-CURRENTLY-HAS-NO', 'related': 'UI-EVID-RETURN-TO-INTERPRETATION', 'related_intro': 'UI-EVID-RETURN-TO-THE-QUESTION-OR', 'data': 'UI-EVID-DATA-SOURCES', 'methodology': 'UI-DOM-METHODOLOGY', 'more': 'UI-EVID-METHOD-AND-VERIFICATION-DETAIL', 'more_intro': 'UI-EVID-ADDITIONAL-DETAIL-FOR-REPRODUCING-OR', 'method': 'UI-EVID-HOW-WAS-IT-PRODUCED', 'change_trigger': 'UI-EVID-WHEN-DOES-THIS-RECORD-CHANGE', 'verification': 'UI-EVID-HOW-CAN-I-VERIFY-IT', 'reading_guidance': 'UI-EVID-HOW-SHOULD-THIS-RECORD-BE', 'reference': 'UI-EVID-REFERENCE-ID', 'report': 'UI-EVID-REPORT-AN-ISSUE', 'source_dependents': 'UI-EVID-EVIDENCE-RECORDS-USING-THIS-SOURCE', 'open_record': 'UI-EVID-OPEN-EVIDENCE-RECORD', 'citation': 'UI-EVID-CITE-THIS-RECORD', 'reuse': 'UI-EVID-CITATION-AND-REUSE', 'reuse_note': 'UI-EVID-CITING-THE-EVIDENCE-DOES-NOT', 'trace': 'UI-EVID-SOURCE-VERIFICATION-PATH', 'trace_intro': 'UI-EVID-THE-STABLE-RECORD-ID-STAYS', 'history': 'UI-EVID-CORRECTIONS-RELEASE-HISTORY', 'source_citation': 'UI-EVID-COPY-SOURCE-REFERENCE', 'source_reuse_unknown': 'UI-EVID-THIS-SOURCE-RECORD-DOES-NOT'}
 def _evidence_labels(lang):
-    if lang=='ar':
-        return {
-            'family':'سجل الدليل',
-            'establishes':'ما الذي يثبته هذا الدليل؟',
-            'measures':'ما الذي يقيسه؟',
-            'applies':'على من أو ماذا ينطبق؟',
-            'period':'متى قيس أو رُصد؟',
-            'currentness':'حداثة الدليل',
-            'boundary':'ما لا يُستنتج',
-            'source':'المصدر الأصلي والتحقق',
-            'source_intro':'افتح سجل المصدر هنا، أو انتقل إلى الرابط الأصلي حين تسمح حالة النشر بذلك.',
-            'open_original':'افتح المصدر الأصلي ↗',
-            'open_source_record':'افتح سجل المصدر',
-            'no_public_locator':'لا يتوافر رابط عام مستقل لهذا الاعتماد ضمن حالة النشر الحالية.',
-            'no_source_record':'لا يرتبط هذا السجل حاليًا بمسار عام مستقل إلى مصدر أصلي؛ استخدم المنهج وطريقة التحقق أدناه.',
-            'related':'عد إلى التفسير',
-            'related_intro':'ارجع إلى السؤال أو الصفحة التي تستخدم هذا الدليل في سياقه التحليلي.',
-            'evidence_hub':_nav_label('/evidence/','ar'),
-            'data':'البيانات والمصادر',
-            'methodology':'المنهجية',
-            'more':'المنهج وطريقة التحقق',
-            'more_intro':'تفاصيل إضافية تساعد على إعادة إنتاج القراءة أو تحديها من دون تغيير معنى الدليل.',
-            'method':'كيف أُنتج؟',
-            'change_trigger':'متى يتغير هذا السجل؟',
-            'verification':'كيف أتحقق منه؟',
-            'reading_guidance':'كيف يُقرأ هذا السجل؟',
-            'reference':'المعرّف المرجعي',
-            'report':'أبلغ عن مشكلة',
-            'source_dependents':'سجلات أدلة تستخدم هذا المصدر',
-            'open_record':'افتح سجل الدليل',
-            'citation':'استشهد بهذا السجل',
-            'reuse':'الاستشهاد وإعادة الاستخدام',
-            'reuse_note':'الاستشهاد بالدليل لا يعني تلقائيًا امتلاك حق إعادة نشر ملف المصدر أو جدوله أو رسمه. افحص المصدر الأصلي وشروطه قبل إعادة توزيع مادته.',
-            'trace':'مسار التحقق من المصدر',
-            'trace_intro':'يبقى معرّف السجل مرتبطًا بالمصادر الأصلية التي تسمح حالة النشر بعرضها. ولا تُستكمل البيانات الوصفية الناقصة بالافتراض.',
-            'history':'التصحيحات وسجل الإصدارات',
-            'source_citation':'انسخ مرجع المصدر',
-            'source_reuse_unknown':'لا يثبت سجل المصدر هذا إذنًا بإعادة نشر الملف أو الجدول أو الرسم الأصلي. تحقّق من شروط المصدر قبل إعادة التوزيع.',
-        }
-    return {
-        'family':'Evidence record',
-        'establishes':'What does this evidence establish?',
-        'measures':'What does it measure?',
-        'applies':'Who or what does it apply to?',
-        'period':'When was it measured or observed?',
-        'currentness':'How current is it?',
-        'boundary':'What not to conclude',
-        'source':'Original source and verification',
-        'source_intro':'Open the source record here, or follow the original locator when publication state allows it.',
-        'open_original':'Open original source ↗',
-        'open_source_record':'Open source record',
-        'no_public_locator':'No standalone public locator is available for this dependency in the current publication state.',
-        'no_source_record':'This record currently has no standalone public path to an original source; use the method and verification detail below.',
-        'related':'Return to interpretation',
-        'related_intro':'Return to the question or page that uses this evidence in its analytical context.',
-        'evidence_hub':_nav_label('/evidence/','en'),
-        'data':'Data & sources',
-        'methodology':'Methodology',
-        'more':'Method and verification detail',
-        'more_intro':'Additional detail for reproducing or challenging the reading without changing the evidence meaning.',
-        'method':'How was it produced?',
-        'change_trigger':'When does this record change?',
-        'verification':'How can I verify it?',
-        'reading_guidance':'How should this record be read?',
-        'reference':'Reference ID',
-        'report':'Report an issue',
-        'source_dependents':'Evidence records using this source',
-        'open_record':'Open evidence record',
-        'citation':'Cite this record',
-        'reuse':'Citation and reuse',
-        'reuse_note':'Citing the evidence does not automatically grant permission to republish an original source file, table or chart. Check the original source and its terms before redistributing source material.',
-        'trace':'Source verification path',
-        'trace_intro':'The stable record ID stays linked to original sources that the publication state permits this product to expose. Missing bibliography is not filled by assumption.',
-        'history':'Corrections & release history',
-        'source_citation':'Copy source reference',
-        'source_reuse_unknown':'This source record does not establish permission to republish the original file, table or chart. Check source-specific terms before redistribution.',
-    }
+    # R8.5: labels are governed interface copy (04); only computed entries stay in code
+    out = {k: ui_text(v, lang) for k, v in _EVIDENCE_LABELS_UI.items()}
+    out['evidence_hub'] = _nav_label('/evidence/',lang)
+    return {k: out[k] for k in ['family', 'establishes', 'measures', 'applies', 'period', 'currentness', 'boundary', 'source', 'source_intro', 'open_original', 'open_source_record', 'no_public_locator', 'no_source_record', 'related', 'related_intro', 'evidence_hub', 'data', 'methodology', 'more', 'more_intro', 'method', 'change_trigger', 'verification', 'reading_guidance', 'reference', 'report', 'source_dependents', 'open_record', 'citation', 'reuse', 'reuse_note', 'trace', 'trace_intro', 'history', 'source_citation', 'source_reuse_unknown']}
 
 def _evidence_object(spec):
     arr=spec.get('governed_evidence_objects') or []
@@ -1114,20 +983,14 @@ def evidence_citation_context(spec,obj,lang):
         t=(s0.get('display_title_ar') if ar else s0.get('display_title')) if s0.get('metadata_state')=='DISPLAY_READY' else ''
         pub=(s0.get('publisher_ar') if ar else None) or s0.get('publisher') or ''
         ref=f'{pub}؛ {sid}' if ar and pub else (f'{pub}; {sid}' if pub else sid)
-        names.append(f'{t} ({ref})' if t else (f'مرجع المصدر {sid}' if ar else f'source reference {sid}'))
+        names.append(f'{t} ({ref})' if t else ui_fmt('UI-CITE-SOURCE-REFERENCE',lang,sid=sid))
     product=ui_text('UI-PRODUCT-NAME',lang); version=ui_text('UI-CONTENT-VERSION',lang)
-    if ar:
-        parts=[f'{title}.', f'{product}، سجل الدليل {oid}. CauseWay. {version}.',
-               _cite_clause('الفترة',period), _cite_clause('المجتمع أو قاعدة الاحتساب',universe),
-               _cite_clause('ما لا يُستنتج',limitation), _cite_clause(ui_text('UI-EVID-MEASUREMENT-LIMITS','ar'),measure_limit),
-               _cite_clause('المصادر الأصلية','؛ '.join(names)),
-               'وتبقى الجهات الناشرة الأصلية المرجع لمادتها.']
-    else:
-        parts=[f'{title}.', f'{product}, Evidence Record {oid}. CauseWay. {version}.',
-               _cite_clause('Period',period), _cite_clause('Population or base',universe),
-               _cite_clause('What not to conclude',limitation), _cite_clause(ui_text('UI-EVID-MEASUREMENT-LIMITS','en'),measure_limit),
-               _cite_clause('Original sources','; '.join(names)),
-               'Original publishers remain authoritative for their material.']
+    # R8.5: every citation label is governed interface copy (04); only the list separator is a locale rule
+    parts=[f'{title}.', ui_fmt('UI-CITE-RECORD-LINE',lang,product=product,oid=oid,version=version),
+           _cite_clause(ui_text('UI-CITE-PERIOD',lang),period), _cite_clause(ui_text('UI-CITE-POPULATION',lang),universe),
+           _cite_clause(ui_text('UI-DOM-WHAT-NOT-TO-CONCLUDE',lang),limitation), _cite_clause(ui_text('UI-EVID-MEASUREMENT-LIMITS',lang),measure_limit),
+           _cite_clause(ui_text('UI-CITE-ORIGINAL-SOURCES',lang),('؛ ' if ar else '; ').join(names)),
+           ui_text('UI-CITE-PUBLISHERS-AUTHORITATIVE',lang)]
     return ' '.join(p for p in parts if p)
 
 def evidence_trace(spec,obj,lang):
@@ -1183,7 +1046,7 @@ def source_trust_controls(source,lang,compact=False):
     note=''
     if source.get('rights_display_state')=='OBJECT_LEVEL_OR_UNSPECIFIED':
         if compact:
-            state=('شروط إعادة الاستخدام: غير مقيّمة' if ar else 'Reuse terms: not assessed') if source.get('rights_state')=='NOT_ASSESSED' else ('شروط إعادة الاستخدام: غير محددة' if ar else 'Reuse terms: not stated')
+            state=(ui_text('UI-SRC-REUSE-TERMS-NOT-ASSESSED',lang)) if source.get('rights_state')=='NOT_ASSESSED' else (ui_text('UI-SRC-REUSE-TERMS-NOT-STATED',lang))
             note=f'<p class="source-rights-state" data-rights-state="{esc(source.get("rights_state") or "")}">{esc(state)}</p>'
         else:
             note=f'<p class="source-rights-note">{esc(labels["source_reuse_unknown"])}</p>'
@@ -1418,7 +1281,7 @@ def compare_block(lang):
             'route':detail_route,
         })
     opts=''.join(f'<option value="{esc(x["id"])}">{esc(x["title"])}</option>' for x in records)
-    optional_label='— سجل اختياري —' if ar else '— Optional record —'
+    optional_label=ui_text('UI-COMPARE-OPTIONAL-RECORD',lang)
     optional_opts=f'<option value="">{optional_label}</option>'+opts
     supporting=list(COMPARISON_PRESENTATION.get('supporting') or [])
     field_map={'source_reference':'source'}
@@ -1428,14 +1291,14 @@ def compare_block(lang):
     vis=(spec.get('governed_visual_contracts') or [{}])[0]
     summary=locv(vis,'accessible_summary',lang) or locv(vis,'decision_value',lang)
     prohibit=locv(vis,'prohibited_inference',lang)
-    note=f'<div class="note"><strong>{"لا يُستنتج:" if ar else "Do not infer:"}</strong> {esc(prohibit)}</div>' if prohibit else ''
-    title='هل يمكن مقارنة هذين السجلين مباشرة؟' if ar else 'Can these records actually be compared?'
-    intro='ابدأ بمشروعية المقارنة، لا بالأرقام.' if ar else 'Start with comparison legitimacy, not the numbers.'
-    a_lab='السجل الأول' if ar else 'First record'
-    b_lab='السجل الثاني' if ar else 'Second record'
-    c_lab='السجل الثالث — اختياري' if ar else 'Third record — optional'
-    d_lab='السجل الرابع — اختياري' if ar else 'Fourth record — optional'
-    never='لا متوسطات تلقائية · لا رقم مفضل · لا معامل تحويل مخترع' if ar else 'No auto-average · no preferred number · no invented conversion scalar'
+    note=f'<div class="note"><strong>{ui_text("UI-DOM-DO-NOT-INFER",lang)}</strong> {esc(prohibit)}</div>' if prohibit else ''
+    title=ui_text('UI-COMPARE-CAN-THESE-RECORDS-ACTUALLY-BE',lang)
+    intro=ui_text('UI-COMPARE-START-WITH-COMPARISON-LEGITIMACY-NOT',lang)
+    a_lab=ui_text('UI-COMPARE-FIRST-RECORD',lang)
+    b_lab=ui_text('UI-COMPARE-SECOND-RECORD',lang)
+    c_lab=ui_text('UI-COMPARE-THIRD-RECORD-OPTIONAL',lang)
+    d_lab=ui_text('UI-COMPARE-FOURTH-RECORD-OPTIONAL',lang)
+    never=ui_text('UI-COMPARE-NO-AUTO-AVERAGE-NO-PREFERRED',lang)
     return (
         f'<section class="compare-lab" data-comparison-family="Comparison" data-comparison-contract="Comparison"><div class="container">'
         f'<div class="compare-intro"><div><div class="eyebrow">{esc(intro)}</div><h2>{esc(title)}</h2><p>{esc(summary)}</p></div><span class="badge gold">{esc(never)}</span></div>{note}'
@@ -1443,7 +1306,7 @@ def compare_block(lang):
         f'<label><span>{b_lab}</span><select id="compare-b" data-compare-slot="required" class="search-shell">{opts}</select></label>'
         f'<label><span>{c_lab}</span><select id="compare-c" data-compare-slot="optional" class="search-shell">{optional_opts}</select></label>'
         f'<label><span>{d_lab}</span><select id="compare-d" data-compare-slot="optional" class="search-shell">{optional_opts}</select></label></div>'
-        f'<div class="compare-share"><button type="button" class="button ghost" data-compare-copy>{"انسخ رابط هذه المقارنة" if ar else "Copy link to this comparison"}</button></div>'
+        f'<div class="compare-share"><button type="button" class="button ghost" data-compare-copy>{ui_text("UI-COMPARE-COPY-LINK-TO-THIS-COMPARISON",lang)}</button></div>'
         f'<div id="compare-status" class="sr-only" role="status" aria-live="polite" aria-atomic="true"></div><div id="compare-output"></div><script>window.__COMPARE__={data};window.__COMPARE_DIMENSIONS__={dim_data};</script>'
         f'</div></section>'
     )
@@ -1467,17 +1330,17 @@ def source_dependents(sid,lang):
 
 def source_directory(lang):
     ar=lang=='ar'
-    title='دليل المصادر والتحقق' if ar else 'Source directory and verification'
-    intro=('تُعرض هنا فقط معلومات المصدر التي تسمح بها السجلات المعتمدة. وتُفصل المراجع التي تسند أدلة عامة حالية عن المراجع المتاحة للتحقق أو السياق حتى لا يبدو مجرد وجود رابط وكأنه استخدام تحليلي أو دليل على نتيجة.' if ar else 'Only source information permitted by the controlled records is shown here. Sources that currently support public evidence are separated from reference locators available for verification or context, so the existence of a link is never mistaken for analytical use or an observed result.')
-    ready_label='تقارير ومراجع منتقاة' if ar else 'Curated reports and references'
-    supporting_label='مصادر تسند أدلة عامة حالية' if ar else 'Sources supporting current public evidence'
-    reference_label='مراجع أصلية إضافية للتحقق والسياق' if ar else 'Additional original references for verification and context'
-    supporting_intro=('هذه المصادر مرتبطة مباشرة بسجل دليل عام واحد على الأقل. افتح الروابط المرتبطة لمعرفة موضع استخدامها وحدودها.' if ar else 'These sources are linked directly to at least one current public Evidence Record. Open the dependent records to see exactly where and how they are used.')
-    reference_intro=('هذه المراجع متاحة للتحقق أو المنهج أو السياق، لكنها لا تسند حاليًا سجل دليل عام. وجودها في الدليل لا يرقّيها إلى نتيجة أو خلاصة.' if ar else 'These references are available for verification, method or context but do not currently support a public Evidence Record. Their presence in the directory does not promote them into an evidence finding or claim.')
-    search_label='ابحث عن مصدر بعنوانه أو مرجعه' if ar else 'Find a source by title or reference'
-    ph='مثال: SRC-CBY…' if ar else 'e.g. SRC-CBY…'
-    open_label='افتح المصدر الأصلي ↗' if ar else 'Open original source ↗'
-    boundary_label='لا يثبت:' if ar else 'Does not establish:'
+    title=ui_text('UI-DATA-SOURCE-DIRECTORY-AND-VERIFICATION',lang)
+    intro=(ui_text('UI-DATA-ONLY-SOURCE-INFORMATION-PERMITTED-BY',lang))
+    ready_label=ui_text('UI-DATA-CURATED-REPORTS-AND-REFERENCES',lang)
+    supporting_label=ui_text('UI-DATA-SOURCES-SUPPORTING-CURRENT-PUBLIC-EVIDENCE',lang)
+    reference_label=ui_text('UI-DATA-ADDITIONAL-ORIGINAL-REFERENCES-FOR-VERIFICATION',lang)
+    supporting_intro=(ui_text('UI-DATA-THESE-SOURCES-ARE-LINKED-DIRECTLY',lang))
+    reference_intro=(ui_text('UI-DATA-THESE-REFERENCES-ARE-AVAILABLE-FOR',lang))
+    search_label=ui_text('UI-DATA-FIND-A-SOURCE-BY-TITLE',lang)
+    ph=ui_text('UI-DATA-E-G-SRC-CBY',lang)
+    open_label=ui_text('UI-EVID-OPEN-ORIGINAL-SOURCE',lang)
+    boundary_label=ui_text('UI-VIS-DOES-NOT-ESTABLISH',lang)
     ready=[]; supporting_locator=[]; reference_locator=[]
     for r in SOURCE_REFS:
         sid=str(r.get('source_id') or '').strip()
@@ -1518,10 +1381,8 @@ def source_directory(lang):
                 supporting_locator.append(card)
             else:
                 reference_locator.append(card)
-    no_results='لا توجد مصادر مطابقة لهذا البحث. ولا يعني ذلك غياب الأدلة عن الموضوع؛ جرّب معرّفًا أو عنوانًا آخر.' if ar else 'No sources match this search. This does not mean there is no evidence on the topic; try another reference or title.'
-    rights_note=('يمكن الاستشهاد بكل مصدر هنا وفتحه في موقعه الأصلي. ويبيّن كل بطاقة حالة شروط إعادة استخدام مصدرها؛ وحيث لم تُقيَّم الشروط، لا يعرض هذا الموقع ملفات المصدر للتنزيل أو إعادة النشر، فتحقّق من شروط كل مصدر قبل إعادة توزيع مادته.'
-                 if ar else
-                 "Every source here can be cited and opened at its original location. Each card shows its source's reuse-terms state; where terms have not been assessed, this resource offers no source file for download or republication, so check each source's own terms before redistributing its material.")
+    no_results=ui_text('UI-DATA-NO-SOURCES-MATCH-THIS-SEARCH',lang)
+    rights_note=(ui_text('UI-DATA-EVERY-SOURCE-HERE-CAN-BE',lang))
     supporting_block=(
         f'<details class="source-locator-details source-supporting-details" open><summary>{supporting_label} <span class="pill">{len(supporting_locator)}</span></summary>'
         f'<p class="source-group-intro">{esc(supporting_intro)}</p><div class="source-locator-list">{"".join(supporting_locator)}</div></details>'
@@ -1536,10 +1397,10 @@ def record_context_origin(lang,mode):
     # P2.3: a correction or report link keeps its originating record. A malformed or unknown reference is a technical
     # link error, stated as such (never as a finding about the evidence).
     ar=lang=='ar'
-    current=('السجل الذي تبلّغ عنه' if ar else 'Record you are reporting on') if mode=='contact' else ('السجل الذي جئت منه' if ar else 'Record you came from')
-    open_label='افتح السجل العام الحالي' if ar else 'Open the current public record'
-    bad=('مرجع السجل في هذا الرابط غير صالح. هذه مشكلة في الرابط، وليست معلومة عن الأدلة.' if ar else 'The record reference in this link is not valid. This is a problem with the link, not information about the evidence.')
-    unknown=('يشير هذا الرابط إلى مرجع لا يطابق أي سجل عام حالي. تحقّق من المرجع أو ابحث عن السجل؛ هذه مشكلة في الرابط، وليست معلومة عن الأدلة.' if ar else 'This link names a reference that matches no current public record. Check the reference or search for the record; this is a problem with the link, not information about the evidence.')
+    current=(ui_text('UI-ORIGIN-RECORD-YOU-ARE-REPORTING-ON',lang)) if mode=='contact' else (ui_text('UI-ORIGIN-RECORD-YOU-CAME-FROM',lang))
+    open_label=ui_text('UI-ORIGIN-OPEN-THE-CURRENT-PUBLIC-RECORD',lang)
+    bad=(ui_text('UI-ORIGIN-THE-RECORD-REFERENCE-IN-THIS',lang))
+    unknown=(ui_text('UI-ORIGIN-THIS-LINK-NAMES-A-REFERENCE',lang))
     ids=json.dumps(sorted(DETAIL_ROUTES)).replace('</','<\\/')
     return (
         f'<div class="correction-origin" data-correction-origin hidden><span>{esc(current)}</span><strong data-correction-record dir="ltr"></strong>'
@@ -1562,18 +1423,18 @@ def contact_context_block(lang):
     # When a record reference arrives from a Report-issue link, offer one action that carries it into the message
     # subject (the governed copy asks for the product name in the subject). The runtime reveals it only for a known record.
     ar=lang=='ar'
-    label='اكتب إلينا بشأن هذا السجل' if ar else 'Write to us about this record'
-    subject='Yemen Financial Inclusion Evidence — '+('المرجع' if ar else 'Reference')
+    label=ui_text('UI-CONTACT-WRITE-TO-US-ABOUT-THIS',lang)
+    subject='Yemen Financial Inclusion Evidence — '+(ui_text('UI-SOURCE-REFERENCE',lang))
     mail=f'<a class="button primary" data-correction-mail hidden href="mailto:{esc(CONTACT_ADDRESS)}" data-mail-address="{esc(CONTACT_ADDRESS)}" data-mail-subject="{esc(subject)}">{esc(label)}</a>'
     return f'<section class="correction-context" data-correction-context data-context-mode="contact"><div class="container">{record_context_origin(lang,"contact")}{mail}</div></section>'
 
 def corrections_context_block(lang):
     ar=lang=='ar'
-    title='السجل الحالي ومسار التصحيح' if ar else 'Current record and correction path'
-    intro=('لا ينشئ هذا الموقع سجل إصدارات أو تصحيحات افتراضيًا. تظهر واقعة التصحيح فقط عندما تكون معتمدة للنشر؛ ويظل المعرّف الثابت هو نقطة الرجوع إلى السجل العام الحالي.' if ar else 'This resource does not manufacture a release or correction history. A correction event appears only when it is governed for publication; the stable record ID remains the route back to the current public record.')
-    current='السجل الذي جئت منه' if ar else 'Record you came from'
-    open_label='افتح السجل العام الحالي' if ar else 'Open the current public record'
-    empty='لا توجد في مواصفة هذه الصفحة حاليًا وقائع تصحيح جوهرية مستقلة معتمدة للنشر؛ لذلك لا تُنشئ الواجهة تاريخًا اصطناعيًا.' if ar else 'This page currently has no separately governed material-correction events to publish, so the interface does not invent a synthetic history.'
+    title=ui_text('UI-CORR-CURRENT-RECORD-AND-CORRECTION-PATH',lang)
+    intro=(ui_text('UI-CORR-THIS-RESOURCE-DOES-NOT-MANUFACTURE',lang))
+    current=ui_text('UI-ORIGIN-RECORD-YOU-CAME-FROM',lang)
+    open_label=ui_text('UI-ORIGIN-OPEN-THE-CURRENT-PUBLIC-RECORD',lang)
+    empty=ui_text('UI-CORR-THIS-PAGE-CURRENTLY-HAS-NO',lang)
     return (
         f'<section class="correction-context" data-correction-context><div class="container correction-grid">'
         f'<div><h2>{esc(title)}</h2><p>{esc(intro)}</p></div>'
@@ -1587,7 +1448,7 @@ def generic(spec,lang):
     elif rt=='/readings': extras=reading_index(spec,lang)
     elif rt=='/measurement': extras=measurement_cards(lang,spec)
     elif rt=='/evidence':
-        ar=lang=='ar'; ph='ابحث في الخلاصات والأدلة والقراءات…' if ar else 'Search claims, evidence, readings...'; label='بحث' if ar else 'Search'; comp='مقارنة الأدلة' if ar else 'Compare evidence'
+        ar=lang=='ar'; ph=ui_text('UI-PAGE-SEARCH-CLAIMS-EVIDENCE-READINGS',lang); label=ui_text('UI-SEARCH-SEARCH',lang); comp=ui_text('UI-PAGE-COMPARE-EVIDENCE',lang)
         extras=f'<section id="search" class="section mint"><div class="container"><div class="search-shell"><span aria-hidden="true">⌕</span><input id="global-search" data-search-input class="search-input" placeholder="{ph}" aria-label="{label}"></div><div id="search-results" data-search-results class="search-results" aria-live="polite"></div><div class="hero-actions"><a class="button ghost" href="/{lang}/evidence/compare/">{comp}</a></div></div></section>'
     elif rt=='/evidence/compare': extras=compare_block(lang)
     elif rt=='/data': extras=source_directory(lang)
@@ -1667,7 +1528,7 @@ def reading_verification_links(spec,lang):
     # two of them are in the governed Compare set.
     cmp_ids=[x for x in path_ids if x in COMPARE_IDS][:4]
     if len(cmp_ids)>=2:
-        compare_label='اختبر قابلية المقارنة بين سجلات هذه القراءة' if ar else "Test comparability of this Reading's records"
+        compare_label=ui_text('UI-READING-TEST-COMPARABILITY-OF-THIS-READING',lang)
         compare=f'<a class="button ghost" href="/{lang}/evidence/compare/?records={",".join(quote(x) for x in cmp_ids)}">{esc(compare_label)}</a>'
     back=[]
     for rt_ in list(r.get('domain_context_routes') or [])+list(r.get('domain_surface_routes') or []):
@@ -1730,7 +1591,7 @@ def page(spec,lang):
         obj=_evidence_object(spec)
         if obj:
             citation_meta=f'<meta name="yfie-citation" content="{esc(evidence_citation_context(spec,obj,lang))}"><meta name="yfie-record-id" content="{esc(obj.get("object_id") or obj.get("evidence_object_id") or "")}">'
-    return f'<!doctype html><html lang="{lang}" dir="{direction}"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#082d4f"><title>{esc(title)} — {product}</title><meta name="description" content="{esc(desc)}">{citation_meta}<link rel="stylesheet" href="/assets/styles.css"><link rel="alternate" hreflang="{other}" href="{route_href(route,other)}"><link rel="canonical" href="{route_href(route,lang)}"></head><body><noscript><div class="noscript-note">{esc(ui_text("UI-NOSCRIPT-NOTE",lang))}</div></noscript>{header(lang,route)}<main id="main" class="main">{body}</main>{footer(lang)}<script src="/assets/app.js" defer></script></body></html>'
+    return f'<!doctype html><html lang="{lang}" dir="{direction}"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#082d4f"><title>{esc(title)} — {product}</title><meta name="description" content="{esc(desc)}">{citation_meta}<link rel="stylesheet" href="/assets/styles.css"><link rel="alternate" hreflang="{other}" href="{route_href(route,other)}"><link rel="canonical" href="{route_href(route,lang)}"></head><body><noscript><div class="noscript-note">{esc(ui_text("UI-NOSCRIPT-NOTE",lang))}</div></noscript>{header(lang,route)}<main id="main" class="main">{body}</main>{footer(lang)}{ui_json(lang)}<script src="/assets/app.js" defer></script></body></html>'
 
 
 files=SPECS
@@ -1739,5 +1600,11 @@ for spec in files:
     for lang in ('ar','en'):
         d=DIST/lang/route; d.mkdir(parents=True,exist_ok=True); (d/'index.html').write_text(page(spec,lang),encoding='utf-8')
 (DIST/'index.html').write_text('<!doctype html><meta charset="utf-8"><title>Yemen Financial Inclusion Evidence</title><script>let l="ar";try{const s=localStorage.getItem("yfie-lang");if(s==="en"||s==="ar")l=s;}catch(e){}location.replace("/"+l+"/");</script><noscript><meta http-equiv="refresh" content="0;url=/ar/"></noscript>',encoding='utf-8')
-(DIST/'404.html').write_text(f'''<!doctype html><html lang="ar" dir="rtl"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#082d4f"><title>الصفحة غير موجودة — Yemen Financial Inclusion Evidence</title><link rel="stylesheet" href="/assets/styles.css"></head><body><main id="main" class="not-found"><div class="not-found-panel"><img src="/assets/CauseWay_Master_Logo.png" alt="CauseWay"><div class="eyebrow">404 · الصفحة غير موجودة / Page not found</div><div class="not-found-grid"><section lang="ar" dir="rtl"><h1>تعذر العثور على هذا المسار</h1><p>قد يكون الرابط قديمًا أو غير متاح ضمن المسارات العامة الحالية. ابدأ من الصفحة الرئيسية، أو استكشف الأسئلة، أو ابحث في الأدلة المنشورة.</p><div class="hero-actions"><a class="button primary" href="/ar/">الرئيسية</a><a class="button ghost" href="/ar/explore/">استكشف</a><a class="button ghost" href="/ar/evidence/">الأدلة</a><button class="button ghost" data-search-open>البحث (بالعربية والإنجليزية)</button></div></section><section lang="en" dir="ltr"><h2>We could not find this route</h2><p>The link may be old or unavailable in the current public route set. Start from Home, explore the questions, or search the published evidence.</p><div class="hero-actions"><a class="button primary" href="/en/">Home</a><a class="button ghost" href="/en/explore/">Explore</a><a class="button ghost" href="/en/evidence/">Evidence</a><button class="button ghost" data-search-open>Search (Arabic and English)</button></div></section></div></div></main>{search_dialog('ar')}<script src="/assets/app.js" defer></script></body></html>''',encoding='utf-8')
+def not_found_section(lang):
+    L=lambda k:ui_text(k,lang)
+    return (f'<section lang="{lang}" dir="{"rtl" if lang=="ar" else "ltr"}"><{"h1" if lang=="ar" else "h2"}>{esc(L("UI-404-HEADING"))}</{"h1" if lang=="ar" else "h2"}><p>{esc(L("UI-404-BODY"))}</p>'
+            f'<div class="hero-actions"><a class="button primary" href="/{lang}/">{esc(L("UI-404-HOME"))}</a><a class="button ghost" href="/{lang}/explore/">{esc(L("UI-404-EXPLORE"))}</a>'
+            f'<a class="button ghost" href="/{lang}/evidence/">{esc(L("UI-404-EVIDENCE"))}</a><button class="button ghost" data-search-open>{esc(L("UI-404-SEARCH"))}</button></div></section>')
+# R8.5: the bilingual 404 page takes every word from governed interface copy (04); Arabic first, as on the root route.
+(DIST/'404.html').write_text(f'''<!doctype html><html lang="ar" dir="rtl"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#082d4f"><title>{esc(ui_text("UI-404-TITLE","ar"))} — {esc(ui_text("UI-PRODUCT-NAME","en"))}</title><link rel="stylesheet" href="/assets/styles.css"></head><body><main id="main" class="not-found"><div class="not-found-panel"><img src="/assets/CauseWay_Master_Logo.png" alt="CauseWay"><div class="eyebrow">404 · {esc(ui_text("UI-404-TITLE","ar"))} / {esc(ui_text("UI-404-TITLE","en"))}</div><div class="not-found-grid">{not_found_section("ar")}{not_found_section("en")}</div></div></main>{search_dialog('ar')}{ui_json('ar')}<script src="/assets/app.js" defer></script></body></html>''',encoding='utf-8')
 print(f'Built {len(files)*2+2} HTML files from {len(files)} controlled page specs.')

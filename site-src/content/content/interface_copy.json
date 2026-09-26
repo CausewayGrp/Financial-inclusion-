@@ -1300,5 +1300,1175 @@
     "label_en": "This gap is examined in",
     "label_ar": "تناقش هذه الفجوة في",
     "use_rule": "Measurement Agenda: the Readings bound to this priority (08 measurement_bindings)."
+  },
+  {
+    "ui_id": "UI-DOM-SCOPE-AND-TIME",
+    "label_en": "Scope and time",
+    "label_ar": "النطاق والزمن",
+    "use_rule": "build.py _domain_labels['scope']"
+  },
+  {
+    "ui_id": "UI-DOM-WHAT-NOT-TO-CONCLUDE",
+    "label_en": "What not to conclude",
+    "label_ar": "ما لا يُستنتج",
+    "use_rule": "build.py _domain_labels['boundary']"
+  },
+  {
+    "ui_id": "UI-DOM-WHAT-REMAINS-UNKNOWN",
+    "label_en": "What remains unknown",
+    "label_ar": "ما يزال غير معروف",
+    "use_rule": "build.py _domain_labels['unknown']"
+  },
+  {
+    "ui_id": "UI-DOM-COVERAGE-LIMIT",
+    "label_en": "Coverage limit",
+    "label_ar": "قيد التغطية",
+    "use_rule": "build.py _domain_labels['coverage']"
+  },
+  {
+    "ui_id": "UI-DOM-A-VIEW-THAT-CHANGES-UNDERSTANDING",
+    "label_en": "A view that changes understanding",
+    "label_ar": "عرض يغيّر الفهم",
+    "use_rule": "build.py _domain_labels['visual']"
+  },
+  {
+    "ui_id": "UI-DOM-MORE-EVIDENCE-AND-CONTEXT",
+    "label_en": "More evidence and context",
+    "label_ar": "مزيد من الأدلة والسياق",
+    "use_rule": "build.py _domain_labels['more']"
+  },
+  {
+    "ui_id": "UI-DOM-ADDITIONAL-CONTROLLED-DETAIL-FROM-THIS",
+    "label_en": "Additional controlled detail from this route, preserved with its original boundaries.",
+    "label_ar": "تفاصيل إضافية من الصفحة نفسها، محفوظة مع حدودها الأصلية.",
+    "use_rule": "build.py _domain_labels['more_intro']"
+  },
+  {
+    "ui_id": "UI-DOM-WHAT-MEASUREMENT-WOULD-CHANGE-THE",
+    "label_en": "What measurement would change the decision?",
+    "label_ar": "ما القياس الذي سيغيّر القرار؟",
+    "use_rule": "build.py _domain_labels['measure']"
+  },
+  {
+    "ui_id": "UI-DOM-VERIFY-IT-YOURSELF",
+    "label_en": "Verify it yourself",
+    "label_ar": "تحقق بنفسك",
+    "use_rule": "build.py _domain_labels['verify']"
+  },
+  {
+    "ui_id": "UI-DOM-OPEN-THE-EVIDENCE-RECORD-BEHIND",
+    "label_en": "Open the evidence record behind each answer, or go to the sources or the methodology.",
+    "label_ar": "افتح سجل الدليل الذي تستند إليه كل إجابة، أو انتقل إلى المصادر أو المنهجية.",
+    "use_rule": "build.py _domain_labels['verify_intro']"
+  },
+  {
+    "ui_id": "UI-DOM-OPEN-EVIDENCE",
+    "label_en": "Open evidence",
+    "label_ar": "افتح الأدلة",
+    "use_rule": "build.py _domain_labels['evidence']"
+  },
+  {
+    "ui_id": "UI-DOM-METHODOLOGY",
+    "label_en": "Methodology",
+    "label_ar": "المنهجية",
+    "use_rule": "build.py _domain_labels['method']"
+  },
+  {
+    "ui_id": "UI-DOM-OPEN-EVIDENCE-RECORD",
+    "label_en": "Open evidence record →",
+    "label_ar": "افتح سجل الدليل ←",
+    "use_rule": "build.py _domain_labels['open_record']"
+  },
+  {
+    "ui_id": "UI-DOM-DO-NOT-INFER",
+    "label_en": "Do not infer:",
+    "label_ar": "لا يُستنتج:",
+    "use_rule": "build.py _domain_labels['do_not']"
+  },
+  {
+    "ui_id": "UI-DOM-ANALYTICAL-QUESTION",
+    "label_en": "Analytical question",
+    "label_ar": "السؤال التحليلي",
+    "use_rule": "build.py _domain_labels['visual_question']"
+  },
+  {
+    "ui_id": "UI-DOM-ANALYTICAL-TEXT-ALTERNATIVE",
+    "label_en": "Analytical text alternative",
+    "label_ar": "البديل النصي التحليلي",
+    "use_rule": "build.py _domain_labels['text_alternative']"
+  },
+  {
+    "ui_id": "UI-DOM-UNDERSTAND-EXPLORE-VERIFY",
+    "label_en": "Understand → Explore → Verify",
+    "label_ar": "افهم ← استكشف ← تحقّق",
+    "use_rule": "build.py _domain_labels['question_flow']"
+  },
+  {
+    "ui_id": "UI-DOM-READING-RULE",
+    "label_en": "Reading rule",
+    "label_ar": "قاعدة القراءة",
+    "use_rule": "build.py _domain_labels['reading_rule']"
+  },
+  {
+    "ui_id": "UI-DOM-EVERY-CONSEQUENTIAL-NUMBER-STAYS-ATTACHED",
+    "label_en": "Every consequential number stays attached to its unit, scope, time and limitation. Evidence measured at different times is never presented as if it described the same moment.",
+    "label_ar": "يبقى كل رقم جوهري مرتبطًا بوحدته ونطاقه وفترته وحدوده. ولا تعامل الأدلة ذات تواريخ القياس المختلفة كما لو كانت تصف اللحظة نفسها.",
+    "use_rule": "build.py _domain_labels['reading_rule_copy']"
+  },
+  {
+    "ui_id": "UI-DOM-EXPLORE-QUESTIONS",
+    "label_en": "Explore questions",
+    "label_ar": "استكشف الأسئلة",
+    "use_rule": "build.py _domain_labels['start']"
+  },
+  {
+    "ui_id": "UI-EVID-EVIDENCE-RECORD",
+    "label_en": "Evidence record",
+    "label_ar": "سجل الدليل",
+    "use_rule": "build.py _evidence_labels['family']"
+  },
+  {
+    "ui_id": "UI-EVID-WHAT-DOES-THIS-EVIDENCE-ESTABLISH",
+    "label_en": "What does this evidence establish?",
+    "label_ar": "ما الذي يثبته هذا الدليل؟",
+    "use_rule": "build.py _evidence_labels['establishes']"
+  },
+  {
+    "ui_id": "UI-EVID-WHAT-DOES-IT-MEASURE",
+    "label_en": "What does it measure?",
+    "label_ar": "ما الذي يقيسه؟",
+    "use_rule": "build.py _evidence_labels['measures']"
+  },
+  {
+    "ui_id": "UI-EVID-WHO-OR-WHAT-DOES-IT",
+    "label_en": "Who or what does it apply to?",
+    "label_ar": "على من أو ماذا ينطبق؟",
+    "use_rule": "build.py _evidence_labels['applies']"
+  },
+  {
+    "ui_id": "UI-EVID-WHEN-WAS-IT-MEASURED-OR",
+    "label_en": "When was it measured or observed?",
+    "label_ar": "متى قيس أو رُصد؟",
+    "use_rule": "build.py _evidence_labels['period']"
+  },
+  {
+    "ui_id": "UI-EVID-HOW-CURRENT-IS-IT",
+    "label_en": "How current is it?",
+    "label_ar": "حداثة الدليل",
+    "use_rule": "build.py _evidence_labels['currentness']"
+  },
+  {
+    "ui_id": "UI-EVID-ORIGINAL-SOURCE-AND-VERIFICATION",
+    "label_en": "Original source and verification",
+    "label_ar": "المصدر الأصلي والتحقق",
+    "use_rule": "build.py _evidence_labels['source']"
+  },
+  {
+    "ui_id": "UI-EVID-OPEN-THE-SOURCE-RECORD-HERE",
+    "label_en": "Open the source record here, or follow the original locator when publication state allows it.",
+    "label_ar": "افتح سجل المصدر هنا، أو انتقل إلى الرابط الأصلي حين تسمح حالة النشر بذلك.",
+    "use_rule": "build.py _evidence_labels['source_intro']"
+  },
+  {
+    "ui_id": "UI-EVID-OPEN-ORIGINAL-SOURCE",
+    "label_en": "Open original source ↗",
+    "label_ar": "افتح المصدر الأصلي ↗",
+    "use_rule": "build.py _evidence_labels['open_original']"
+  },
+  {
+    "ui_id": "UI-EVID-OPEN-SOURCE-RECORD",
+    "label_en": "Open source record",
+    "label_ar": "افتح سجل المصدر",
+    "use_rule": "build.py _evidence_labels['open_source_record']"
+  },
+  {
+    "ui_id": "UI-EVID-NO-STANDALONE-PUBLIC-LOCATOR-IS",
+    "label_en": "No standalone public locator is available for this dependency in the current publication state.",
+    "label_ar": "لا يتوافر رابط عام مستقل لهذا الاعتماد ضمن حالة النشر الحالية.",
+    "use_rule": "build.py _evidence_labels['no_public_locator']"
+  },
+  {
+    "ui_id": "UI-EVID-THIS-RECORD-CURRENTLY-HAS-NO",
+    "label_en": "This record currently has no standalone public path to an original source; use the method and verification detail below.",
+    "label_ar": "لا يرتبط هذا السجل حاليًا بمسار عام مستقل إلى مصدر أصلي؛ استخدم المنهج وطريقة التحقق أدناه.",
+    "use_rule": "build.py _evidence_labels['no_source_record']"
+  },
+  {
+    "ui_id": "UI-EVID-RETURN-TO-INTERPRETATION",
+    "label_en": "Return to interpretation",
+    "label_ar": "عد إلى التفسير",
+    "use_rule": "build.py _evidence_labels['related']"
+  },
+  {
+    "ui_id": "UI-EVID-RETURN-TO-THE-QUESTION-OR",
+    "label_en": "Return to the question or page that uses this evidence in its analytical context.",
+    "label_ar": "ارجع إلى السؤال أو الصفحة التي تستخدم هذا الدليل في سياقه التحليلي.",
+    "use_rule": "build.py _evidence_labels['related_intro']"
+  },
+  {
+    "ui_id": "UI-EVID-DATA-SOURCES",
+    "label_en": "Data & sources",
+    "label_ar": "البيانات والمصادر",
+    "use_rule": "build.py _evidence_labels['data']"
+  },
+  {
+    "ui_id": "UI-EVID-METHOD-AND-VERIFICATION-DETAIL",
+    "label_en": "Method and verification detail",
+    "label_ar": "المنهج وطريقة التحقق",
+    "use_rule": "build.py _evidence_labels['more']"
+  },
+  {
+    "ui_id": "UI-EVID-ADDITIONAL-DETAIL-FOR-REPRODUCING-OR",
+    "label_en": "Additional detail for reproducing or challenging the reading without changing the evidence meaning.",
+    "label_ar": "تفاصيل إضافية تساعد على إعادة إنتاج القراءة أو تحديها من دون تغيير معنى الدليل.",
+    "use_rule": "build.py _evidence_labels['more_intro']"
+  },
+  {
+    "ui_id": "UI-EVID-HOW-WAS-IT-PRODUCED",
+    "label_en": "How was it produced?",
+    "label_ar": "كيف أُنتج؟",
+    "use_rule": "build.py _evidence_labels['method']"
+  },
+  {
+    "ui_id": "UI-EVID-WHEN-DOES-THIS-RECORD-CHANGE",
+    "label_en": "When does this record change?",
+    "label_ar": "متى يتغير هذا السجل؟",
+    "use_rule": "build.py _evidence_labels['change_trigger']"
+  },
+  {
+    "ui_id": "UI-EVID-HOW-CAN-I-VERIFY-IT",
+    "label_en": "How can I verify it?",
+    "label_ar": "كيف أتحقق منه؟",
+    "use_rule": "build.py _evidence_labels['verification']"
+  },
+  {
+    "ui_id": "UI-EVID-HOW-SHOULD-THIS-RECORD-BE",
+    "label_en": "How should this record be read?",
+    "label_ar": "كيف يُقرأ هذا السجل؟",
+    "use_rule": "build.py _evidence_labels['reading_guidance']"
+  },
+  {
+    "ui_id": "UI-EVID-REFERENCE-ID",
+    "label_en": "Reference ID",
+    "label_ar": "المعرّف المرجعي",
+    "use_rule": "build.py _evidence_labels['reference']"
+  },
+  {
+    "ui_id": "UI-EVID-REPORT-AN-ISSUE",
+    "label_en": "Report an issue",
+    "label_ar": "أبلغ عن مشكلة",
+    "use_rule": "build.py _evidence_labels['report']"
+  },
+  {
+    "ui_id": "UI-EVID-EVIDENCE-RECORDS-USING-THIS-SOURCE",
+    "label_en": "Evidence records using this source",
+    "label_ar": "سجلات أدلة تستخدم هذا المصدر",
+    "use_rule": "build.py _evidence_labels['source_dependents']"
+  },
+  {
+    "ui_id": "UI-EVID-OPEN-EVIDENCE-RECORD",
+    "label_en": "Open evidence record",
+    "label_ar": "افتح سجل الدليل",
+    "use_rule": "build.py _evidence_labels['open_record']"
+  },
+  {
+    "ui_id": "UI-EVID-CITE-THIS-RECORD",
+    "label_en": "Cite this record",
+    "label_ar": "استشهد بهذا السجل",
+    "use_rule": "build.py _evidence_labels['citation']"
+  },
+  {
+    "ui_id": "UI-EVID-CITATION-AND-REUSE",
+    "label_en": "Citation and reuse",
+    "label_ar": "الاستشهاد وإعادة الاستخدام",
+    "use_rule": "build.py _evidence_labels['reuse']"
+  },
+  {
+    "ui_id": "UI-EVID-CITING-THE-EVIDENCE-DOES-NOT",
+    "label_en": "Citing the evidence does not automatically grant permission to republish an original source file, table or chart. Check the original source and its terms before redistributing source material.",
+    "label_ar": "الاستشهاد بالدليل لا يعني تلقائيًا امتلاك حق إعادة نشر ملف المصدر أو جدوله أو رسمه. افحص المصدر الأصلي وشروطه قبل إعادة توزيع مادته.",
+    "use_rule": "build.py _evidence_labels['reuse_note']"
+  },
+  {
+    "ui_id": "UI-EVID-SOURCE-VERIFICATION-PATH",
+    "label_en": "Source verification path",
+    "label_ar": "مسار التحقق من المصدر",
+    "use_rule": "build.py _evidence_labels['trace']"
+  },
+  {
+    "ui_id": "UI-EVID-THE-STABLE-RECORD-ID-STAYS",
+    "label_en": "The stable record ID stays linked to original sources that the publication state permits this product to expose. Missing bibliography is not filled by assumption.",
+    "label_ar": "يبقى معرّف السجل مرتبطًا بالمصادر الأصلية التي تسمح حالة النشر بعرضها. ولا تُستكمل البيانات الوصفية الناقصة بالافتراض.",
+    "use_rule": "build.py _evidence_labels['trace_intro']"
+  },
+  {
+    "ui_id": "UI-EVID-CORRECTIONS-RELEASE-HISTORY",
+    "label_en": "Corrections & release history",
+    "label_ar": "التصحيحات وسجل الإصدارات",
+    "use_rule": "build.py _evidence_labels['history']"
+  },
+  {
+    "ui_id": "UI-EVID-COPY-SOURCE-REFERENCE",
+    "label_en": "Copy source reference",
+    "label_ar": "انسخ مرجع المصدر",
+    "use_rule": "build.py _evidence_labels['source_citation']"
+  },
+  {
+    "ui_id": "UI-EVID-THIS-SOURCE-RECORD-DOES-NOT",
+    "label_en": "This source record does not establish permission to republish the original file, table or chart. Check source-specific terms before redistribution.",
+    "label_ar": "لا يثبت سجل المصدر هذا إذنًا بإعادة نشر الملف أو الجدول أو الرسم الأصلي. تحقّق من شروط المصدر قبل إعادة التوزيع.",
+    "use_rule": "build.py _evidence_labels['source_reuse_unknown']"
+  },
+  {
+    "ui_id": "UI-SEARCH-SEARCH",
+    "label_en": "Search",
+    "label_ar": "بحث",
+    "use_rule": "build.py search_dialog()"
+  },
+  {
+    "ui_id": "UI-SEARCH-CLOSE",
+    "label_en": "Close",
+    "label_ar": "إغلاق",
+    "use_rule": "build.py search_dialog()"
+  },
+  {
+    "ui_id": "UI-SEARCH-SEARCH-THE-PUBLIC-EVIDENCE",
+    "label_en": "Search the public evidence",
+    "label_ar": "ابحث في الأدلة العامة",
+    "use_rule": "build.py search_dialog()"
+  },
+  {
+    "ui_id": "UI-SEARCH-SEARCH-QUESTIONS-EVIDENCE-READINGS-AND",
+    "label_en": "Search questions, evidence, readings and sources...",
+    "label_ar": "ابحث في الأسئلة والأدلة والقراءات والمصادر...",
+    "use_rule": "build.py search_dialog()"
+  },
+  {
+    "ui_id": "UI-SEARCH-SEARCH-STATUS",
+    "label_en": "Search status",
+    "label_ar": "حالة البحث",
+    "use_rule": "build.py search_dialog()"
+  },
+  {
+    "ui_id": "UI-HEADER-TRUST-LINKS",
+    "label_en": "Trust links",
+    "label_ar": "روابط الثقة",
+    "use_rule": "build.py header()"
+  },
+  {
+    "ui_id": "UI-HEADER-SKIP-TO-CONTENT",
+    "label_en": "Skip to content",
+    "label_ar": "انتقل إلى المحتوى",
+    "use_rule": "build.py header()"
+  },
+  {
+    "ui_id": "UI-HEADER-PRIMARY-NAVIGATION",
+    "label_en": "Primary navigation",
+    "label_ar": "التنقل الرئيسي",
+    "use_rule": "build.py header()"
+  },
+  {
+    "ui_id": "UI-HEADER-MENU",
+    "label_en": "Menu",
+    "label_ar": "القائمة",
+    "use_rule": "build.py header()"
+  },
+  {
+    "ui_id": "UI-HEADER-CITE-THIS-PAGE",
+    "label_en": "Cite this page",
+    "label_ar": "استشهد بهذه الصفحة",
+    "use_rule": "build.py header()"
+  },
+  {
+    "ui_id": "UI-HEADER-REPORT-AN-ISSUE",
+    "label_en": "Report an issue",
+    "label_ar": "الإبلاغ عن مشكلة",
+    "use_rule": "build.py header()"
+  },
+  {
+    "ui_id": "UI-HEADER-COPIED",
+    "label_en": "Copied",
+    "label_ar": "تم النسخ",
+    "use_rule": "build.py header()"
+  },
+  {
+    "ui_id": "UI-FOOTER-PUBLISHED-EVIDENCE-REMAINS-ATTRIBUTED-TO",
+    "label_en": "Published evidence remains attributed to the original source.",
+    "label_ar": "الأدلة المنشورة تحتفظ بنسبة المصدر الأصلي.",
+    "use_rule": "build.py footer()"
+  },
+  {
+    "ui_id": "UI-FOOTER-PRODUCT-AND-TRUST-LINKS",
+    "label_en": "Product and trust links",
+    "label_ar": "روابط المنتج والثقة",
+    "use_rule": "build.py footer()"
+  },
+  {
+    "ui_id": "UI-HERO-START-WITH-A-QUESTION",
+    "label_en": "Start with a question",
+    "label_ar": "ابدأ بالسؤال",
+    "use_rule": "build.py hero()"
+  },
+  {
+    "ui_id": "UI-HERO-VERIFY-EVIDENCE",
+    "label_en": "Verify evidence",
+    "label_ar": "تحقق من الأدلة",
+    "use_rule": "build.py hero()"
+  },
+  {
+    "ui_id": "UI-HERO-THIS-RESOURCE-PRESENTS-THE-STRONGEST",
+    "label_en": "This resource presents the strongest defensible answer while keeping scope, limits and source visible.",
+    "label_ar": "يعرض هذا المورد أقوى ما تسمح به الأدلة، مع إبقاء حدود الاستنتاج والمصدر ظاهرين.",
+    "use_rule": "build.py hero()"
+  },
+  {
+    "ui_id": "UI-CRUMB-BREADCRUMB",
+    "label_en": "Breadcrumb",
+    "label_ar": "مسار الصفحة",
+    "use_rule": "build.py breadcrumb()"
+  },
+  {
+    "ui_id": "UI-NEXT-CONTINUE-FROM-HERE",
+    "label_en": "Continue from here",
+    "label_ar": "تابع من هنا",
+    "use_rule": "build.py journey_next()"
+  },
+  {
+    "ui_id": "UI-NEXT-CHOOSE-THE-NEXT-PATH-THAT",
+    "label_en": "Choose the next path that matches what you need to do.",
+    "label_ar": "اختر المسار الأقرب لما تريد فعله بعد ذلك.",
+    "use_rule": "build.py journey_next()"
+  },
+  {
+    "ui_id": "UI-VIS-WHAT-THE-EVIDENCE-SHOWS",
+    "label_en": "What the evidence shows",
+    "label_ar": "ما يوضحه الدليل",
+    "use_rule": "build.py _visual_fallback()"
+  },
+  {
+    "ui_id": "UI-DOM-EVIDENCE-READINGS-ON-THIS-QUESTION",
+    "label_en": "Evidence Readings on this question",
+    "label_ar": "قراءات الأدلة المرتبطة بهذه الصفحة",
+    "use_rule": "build.py domain_readings()"
+  },
+  {
+    "ui_id": "UI-QUESTIONS-COMMON-STARTING-QUESTIONS",
+    "label_en": "Common starting questions",
+    "label_ar": "أسئلة شائعة للبدء",
+    "use_rule": "build.py question_cards()"
+  },
+  {
+    "ui_id": "UI-QUESTIONS-START-FROM-THE-PROBLEM-YOU",
+    "label_en": "Start from the problem you need to resolve",
+    "label_ar": "ابدأ من المسألة التي تريد حسمها",
+    "use_rule": "build.py question_cards()"
+  },
+  {
+    "ui_id": "UI-QUESTIONS-UNDERSTAND-THE-WIDER-PICTURE",
+    "label_en": "Understand the wider picture",
+    "label_ar": "افهم الصورة العامة",
+    "use_rule": "build.py question_cards()"
+  },
+  {
+    "ui_id": "UI-QUESTIONS-PEOPLE-USE-AND-FLOWS",
+    "label_en": "People, use and flows",
+    "label_ar": "الناس والاستخدام والتدفقات",
+    "use_rule": "build.py question_cards()"
+  },
+  {
+    "ui_id": "UI-QUESTIONS-FIRMS-INSTITUTIONS-AND-PROVIDERS",
+    "label_en": "Firms, institutions and providers",
+    "label_ar": "المنشآت والمؤسسات ومقدمو الخدمات",
+    "use_rule": "build.py question_cards()"
+  },
+  {
+    "ui_id": "UI-QUESTIONS-VERIFY-AND-DECIDE-WHAT-TO",
+    "label_en": "Verify and decide what to measure",
+    "label_ar": "تحقّق وحدد ما ينبغي قياسه",
+    "use_rule": "build.py question_cards()"
+  },
+  {
+    "ui_id": "UI-QUESTIONS-QUESTIONS-INTO-THE-EVIDENCE",
+    "label_en": "Questions into the evidence",
+    "label_ar": "أسئلة للدخول إلى الأدلة",
+    "use_rule": "build.py question_cards()"
+  },
+  {
+    "ui_id": "UI-QUESTIONS-FIND-THE-QUESTION-CLOSEST-TO",
+    "label_en": "Find the question closest to your decision",
+    "label_ar": "اعثر على السؤال الأقرب إلى قرارك",
+    "use_rule": "build.py question_cards()"
+  },
+  {
+    "ui_id": "UI-QUESTIONS-EVERY-ROUTE-KEEPS-PERIOD-POPULATION",
+    "label_en": "Every route keeps period, population or calculation base, inference limits and source visible.",
+    "label_ar": "يحافظ كل مسار على الفترة، والمجتمع أو قاعدة الاحتساب، وحدود الاستنتاج، والمصدر.",
+    "use_rule": "build.py question_cards()"
+  },
+  {
+    "ui_id": "UI-HOME-CROSS-SOURCE-ANALYSIS-THAT-STAYS",
+    "label_en": "Cross-source analysis that stays bound to claims and evidence.",
+    "label_ar": "تحليل متعدد المصادر يبقى مربوطًا بالخلاصات والأدلة.",
+    "use_rule": "build.py home_ctas()"
+  },
+  {
+    "ui_id": "UI-HOME-WHAT-REMAINS-UNKNOWN-AND-WHAT",
+    "label_en": "What remains unknown and what measurement would strengthen the decision.",
+    "label_ar": "ما الذي لا نعرفه بعد، وما القياس الذي سيجعل القرار أقوى.",
+    "use_rule": "build.py home_ctas()"
+  },
+  {
+    "ui_id": "UI-HOME-FIND-THE-ORIGINAL-SOURCES-BEHIND",
+    "label_en": "Find the original sources behind the evidence, with their titles, publishers and links.",
+    "label_ar": "اعثر على المصادر الأصلية التي تستند إليها الأدلة، بعناوينها وجهاتها الناشرة وروابطها.",
+    "use_rule": "build.py home_ctas()"
+  },
+  {
+    "ui_id": "UI-MA-CURRENT-EVIDENCE",
+    "label_en": "Current evidence:",
+    "label_ar": "ما نعرفه:",
+    "use_rule": "build.py measurement_cards()"
+  },
+  {
+    "ui_id": "UI-MA-MISSING-EVIDENCE",
+    "label_en": "Missing evidence:",
+    "label_ar": "ما ينقص:",
+    "use_rule": "build.py measurement_cards()"
+  },
+  {
+    "ui_id": "UI-MA-DECISION-UNLOCKED",
+    "label_en": "Decision unlocked:",
+    "label_ar": "ما الذي سيصبح القرار فيه أقوى:",
+    "use_rule": "build.py measurement_cards()"
+  },
+  {
+    "ui_id": "UI-MA-PRIORITY",
+    "label_en": "Priority",
+    "label_ar": "الأولوية",
+    "use_rule": "build.py measurement_cards()"
+  },
+  {
+    "ui_id": "UI-SOURCES-SOURCE-RECORD",
+    "label_en": "Source record",
+    "label_ar": "سجل المصدر",
+    "use_rule": "build.py sources_block()"
+  },
+  {
+    "ui_id": "UI-SOURCES-SOURCES",
+    "label_en": "Sources",
+    "label_ar": "المصادر",
+    "use_rule": "build.py sources_block()"
+  },
+  {
+    "ui_id": "UI-BLOCK-EVIDENCE-NEEDED",
+    "label_en": "Evidence needed:",
+    "label_ar": "الدليل المطلوب:",
+    "use_rule": "build.py governed_blocks()"
+  },
+  {
+    "ui_id": "UI-SRC-REUSE-TERMS-NOT-ASSESSED",
+    "label_en": "Reuse terms: not assessed",
+    "label_ar": "شروط إعادة الاستخدام: غير مقيّمة",
+    "use_rule": "build.py source_trust_controls()"
+  },
+  {
+    "ui_id": "UI-SRC-REUSE-TERMS-NOT-STATED",
+    "label_en": "Reuse terms: not stated",
+    "label_ar": "شروط إعادة الاستخدام: غير محددة",
+    "use_rule": "build.py source_trust_controls()"
+  },
+  {
+    "ui_id": "UI-COMPARE-OPTIONAL-RECORD",
+    "label_en": "— Optional record —",
+    "label_ar": "— سجل اختياري —",
+    "use_rule": "build.py compare_block()"
+  },
+  {
+    "ui_id": "UI-COMPARE-CAN-THESE-RECORDS-ACTUALLY-BE",
+    "label_en": "Can these records actually be compared?",
+    "label_ar": "هل يمكن مقارنة هذين السجلين مباشرة؟",
+    "use_rule": "build.py compare_block()"
+  },
+  {
+    "ui_id": "UI-COMPARE-START-WITH-COMPARISON-LEGITIMACY-NOT",
+    "label_en": "Start with comparison legitimacy, not the numbers.",
+    "label_ar": "ابدأ بمشروعية المقارنة، لا بالأرقام.",
+    "use_rule": "build.py compare_block()"
+  },
+  {
+    "ui_id": "UI-COMPARE-FIRST-RECORD",
+    "label_en": "First record",
+    "label_ar": "السجل الأول",
+    "use_rule": "build.py compare_block()"
+  },
+  {
+    "ui_id": "UI-COMPARE-SECOND-RECORD",
+    "label_en": "Second record",
+    "label_ar": "السجل الثاني",
+    "use_rule": "build.py compare_block()"
+  },
+  {
+    "ui_id": "UI-COMPARE-THIRD-RECORD-OPTIONAL",
+    "label_en": "Third record — optional",
+    "label_ar": "السجل الثالث — اختياري",
+    "use_rule": "build.py compare_block()"
+  },
+  {
+    "ui_id": "UI-COMPARE-FOURTH-RECORD-OPTIONAL",
+    "label_en": "Fourth record — optional",
+    "label_ar": "السجل الرابع — اختياري",
+    "use_rule": "build.py compare_block()"
+  },
+  {
+    "ui_id": "UI-COMPARE-NO-AUTO-AVERAGE-NO-PREFERRED",
+    "label_en": "No auto-average · no preferred number · no invented conversion scalar",
+    "label_ar": "لا متوسطات تلقائية · لا رقم مفضل · لا معامل تحويل مخترع",
+    "use_rule": "build.py compare_block()"
+  },
+  {
+    "ui_id": "UI-COMPARE-COPY-LINK-TO-THIS-COMPARISON",
+    "label_en": "Copy link to this comparison",
+    "label_ar": "انسخ رابط هذه المقارنة",
+    "use_rule": "build.py compare_block()"
+  },
+  {
+    "ui_id": "UI-DATA-SOURCE-DIRECTORY-AND-VERIFICATION",
+    "label_en": "Source directory and verification",
+    "label_ar": "دليل المصادر والتحقق",
+    "use_rule": "build.py source_directory()"
+  },
+  {
+    "ui_id": "UI-DATA-ONLY-SOURCE-INFORMATION-PERMITTED-BY",
+    "label_en": "Only source information permitted by the controlled records is shown here. Sources that currently support public evidence are separated from reference locators available for verification or context, so the existence of a link is never mistaken for analytical use or an observed result.",
+    "label_ar": "تُعرض هنا فقط معلومات المصدر التي تسمح بها السجلات المعتمدة. وتُفصل المراجع التي تسند أدلة عامة حالية عن المراجع المتاحة للتحقق أو السياق حتى لا يبدو مجرد وجود رابط وكأنه استخدام تحليلي أو دليل على نتيجة.",
+    "use_rule": "build.py source_directory()"
+  },
+  {
+    "ui_id": "UI-DATA-CURATED-REPORTS-AND-REFERENCES",
+    "label_en": "Curated reports and references",
+    "label_ar": "تقارير ومراجع منتقاة",
+    "use_rule": "build.py source_directory()"
+  },
+  {
+    "ui_id": "UI-DATA-SOURCES-SUPPORTING-CURRENT-PUBLIC-EVIDENCE",
+    "label_en": "Sources supporting current public evidence",
+    "label_ar": "مصادر تسند أدلة عامة حالية",
+    "use_rule": "build.py source_directory()"
+  },
+  {
+    "ui_id": "UI-DATA-ADDITIONAL-ORIGINAL-REFERENCES-FOR-VERIFICATION",
+    "label_en": "Additional original references for verification and context",
+    "label_ar": "مراجع أصلية إضافية للتحقق والسياق",
+    "use_rule": "build.py source_directory()"
+  },
+  {
+    "ui_id": "UI-DATA-THESE-SOURCES-ARE-LINKED-DIRECTLY",
+    "label_en": "These sources are linked directly to at least one current public Evidence Record. Open the dependent records to see exactly where and how they are used.",
+    "label_ar": "هذه المصادر مرتبطة مباشرة بسجل دليل عام واحد على الأقل. افتح الروابط المرتبطة لمعرفة موضع استخدامها وحدودها.",
+    "use_rule": "build.py source_directory()"
+  },
+  {
+    "ui_id": "UI-DATA-THESE-REFERENCES-ARE-AVAILABLE-FOR",
+    "label_en": "These references are available for verification, method or context but do not currently support a public Evidence Record. Their presence in the directory does not promote them into an evidence finding or claim.",
+    "label_ar": "هذه المراجع متاحة للتحقق أو المنهج أو السياق، لكنها لا تسند حاليًا سجل دليل عام. وجودها في الدليل لا يرقّيها إلى نتيجة أو خلاصة.",
+    "use_rule": "build.py source_directory()"
+  },
+  {
+    "ui_id": "UI-DATA-FIND-A-SOURCE-BY-TITLE",
+    "label_en": "Find a source by title or reference",
+    "label_ar": "ابحث عن مصدر بعنوانه أو مرجعه",
+    "use_rule": "build.py source_directory()"
+  },
+  {
+    "ui_id": "UI-DATA-E-G-SRC-CBY",
+    "label_en": "e.g. SRC-CBY…",
+    "label_ar": "مثال: SRC-CBY…",
+    "use_rule": "build.py source_directory()"
+  },
+  {
+    "ui_id": "UI-DATA-NO-SOURCES-MATCH-THIS-SEARCH",
+    "label_en": "No sources match this search. This does not mean there is no evidence on the topic; try another reference or title.",
+    "label_ar": "لا توجد مصادر مطابقة لهذا البحث. ولا يعني ذلك غياب الأدلة عن الموضوع؛ جرّب معرّفًا أو عنوانًا آخر.",
+    "use_rule": "build.py source_directory()"
+  },
+  {
+    "ui_id": "UI-DATA-EVERY-SOURCE-HERE-CAN-BE",
+    "label_en": "Every source here can be cited and opened at its original location. Each card shows its source's reuse-terms state; where terms have not been assessed, this resource offers no source file for download or republication, so check each source's own terms before redistributing its material.",
+    "label_ar": "يمكن الاستشهاد بكل مصدر هنا وفتحه في موقعه الأصلي. ويبيّن كل بطاقة حالة شروط إعادة استخدام مصدرها؛ وحيث لم تُقيَّم الشروط، لا يعرض هذا الموقع ملفات المصدر للتنزيل أو إعادة النشر، فتحقّق من شروط كل مصدر قبل إعادة توزيع مادته.",
+    "use_rule": "build.py source_directory()"
+  },
+  {
+    "ui_id": "UI-ORIGIN-RECORD-YOU-ARE-REPORTING-ON",
+    "label_en": "Record you are reporting on",
+    "label_ar": "السجل الذي تبلّغ عنه",
+    "use_rule": "build.py record_context_origin()"
+  },
+  {
+    "ui_id": "UI-ORIGIN-RECORD-YOU-CAME-FROM",
+    "label_en": "Record you came from",
+    "label_ar": "السجل الذي جئت منه",
+    "use_rule": "build.py record_context_origin()"
+  },
+  {
+    "ui_id": "UI-ORIGIN-OPEN-THE-CURRENT-PUBLIC-RECORD",
+    "label_en": "Open the current public record",
+    "label_ar": "افتح السجل العام الحالي",
+    "use_rule": "build.py record_context_origin()"
+  },
+  {
+    "ui_id": "UI-ORIGIN-THE-RECORD-REFERENCE-IN-THIS",
+    "label_en": "The record reference in this link is not valid. This is a problem with the link, not information about the evidence.",
+    "label_ar": "مرجع السجل في هذا الرابط غير صالح. هذه مشكلة في الرابط، وليست معلومة عن الأدلة.",
+    "use_rule": "build.py record_context_origin()"
+  },
+  {
+    "ui_id": "UI-ORIGIN-THIS-LINK-NAMES-A-REFERENCE",
+    "label_en": "This link names a reference that matches no current public record. Check the reference or search for the record; this is a problem with the link, not information about the evidence.",
+    "label_ar": "يشير هذا الرابط إلى مرجع لا يطابق أي سجل عام حالي. تحقّق من المرجع أو ابحث عن السجل؛ هذه مشكلة في الرابط، وليست معلومة عن الأدلة.",
+    "use_rule": "build.py record_context_origin()"
+  },
+  {
+    "ui_id": "UI-CONTACT-WRITE-TO-US-ABOUT-THIS",
+    "label_en": "Write to us about this record",
+    "label_ar": "اكتب إلينا بشأن هذا السجل",
+    "use_rule": "build.py contact_context_block()"
+  },
+  {
+    "ui_id": "UI-CORR-CURRENT-RECORD-AND-CORRECTION-PATH",
+    "label_en": "Current record and correction path",
+    "label_ar": "السجل الحالي ومسار التصحيح",
+    "use_rule": "build.py corrections_context_block()"
+  },
+  {
+    "ui_id": "UI-CORR-THIS-RESOURCE-DOES-NOT-MANUFACTURE",
+    "label_en": "This resource does not manufacture a release or correction history. A correction event appears only when it is governed for publication; the stable record ID remains the route back to the current public record.",
+    "label_ar": "لا ينشئ هذا الموقع سجل إصدارات أو تصحيحات افتراضيًا. تظهر واقعة التصحيح فقط عندما تكون معتمدة للنشر؛ ويظل المعرّف الثابت هو نقطة الرجوع إلى السجل العام الحالي.",
+    "use_rule": "build.py corrections_context_block()"
+  },
+  {
+    "ui_id": "UI-CORR-THIS-PAGE-CURRENTLY-HAS-NO",
+    "label_en": "This page currently has no separately governed material-correction events to publish, so the interface does not invent a synthetic history.",
+    "label_ar": "لا توجد في مواصفة هذه الصفحة حاليًا وقائع تصحيح جوهرية مستقلة معتمدة للنشر؛ لذلك لا تُنشئ الواجهة تاريخًا اصطناعيًا.",
+    "use_rule": "build.py corrections_context_block()"
+  },
+  {
+    "ui_id": "UI-PAGE-SEARCH-CLAIMS-EVIDENCE-READINGS",
+    "label_en": "Search claims, evidence, readings...",
+    "label_ar": "ابحث في الخلاصات والأدلة والقراءات…",
+    "use_rule": "build.py generic()"
+  },
+  {
+    "ui_id": "UI-PAGE-COMPARE-EVIDENCE",
+    "label_en": "Compare evidence",
+    "label_ar": "مقارنة الأدلة",
+    "use_rule": "build.py generic()"
+  },
+  {
+    "ui_id": "UI-READING-TEST-COMPARABILITY-OF-THIS-READING",
+    "label_en": "Test comparability of this Reading's records",
+    "label_ar": "اختبر قابلية المقارنة بين سجلات هذه القراءة",
+    "use_rule": "build.py reading_verification_links()"
+  },
+  {
+    "ui_id": "UI-JS-COPIED",
+    "label_en": "Copied",
+    "label_ar": "تم النسخ",
+    "use_rule": "site-src/app.js"
+  },
+  {
+    "ui_id": "UI-JS-CURRENT-RECORD",
+    "label_en": "Current record: ",
+    "label_ar": "الرابط الحالي: ",
+    "use_rule": "site-src/app.js"
+  },
+  {
+    "ui_id": "UI-JS-COPY-CITATION",
+    "label_en": "Copy citation",
+    "label_ar": "انسخ الاستشهاد",
+    "use_rule": "site-src/app.js"
+  },
+  {
+    "ui_id": "UI-JS-COPY-SOURCE-REFERENCE",
+    "label_en": "Copy source reference",
+    "label_ar": "انسخ مرجع المصدر",
+    "use_rule": "site-src/app.js"
+  },
+  {
+    "ui_id": "UI-JS-SEARCH-NO-RESULT",
+    "label_en": "No result matches this search. This does not mean there is no evidence on the topic; try other words or start from the questions.",
+    "label_ar": "لا توجد نتيجة تطابق هذا البحث. ولا يعني ذلك غياب الأدلة عن الموضوع؛ جرّب كلمات أخرى أو ابدأ من الأسئلة.",
+    "use_rule": "site-src/app.js"
+  },
+  {
+    "ui_id": "UI-JS-SEARCHING",
+    "label_en": "Searching…",
+    "label_ar": "جارٍ البحث…",
+    "use_rule": "site-src/app.js"
+  },
+  {
+    "ui_id": "UI-JS-SEARCH-ZERO",
+    "label_en": "0 results shown",
+    "label_ar": "0 نتيجة معروضة",
+    "use_rule": "site-src/app.js"
+  },
+  {
+    "ui_id": "UI-JS-SEARCH-RESULTS",
+    "label_en": "{n} results shown",
+    "label_ar": "عدد النتائج المعروضة: {n}",
+    "use_rule": "site-src/app.js"
+  },
+  {
+    "ui_id": "UI-JS-SEARCH-UNAVAILABLE-COPY",
+    "label_en": "Search could not be loaded. You can continue from the main sections.",
+    "label_ar": "تعذر تحميل البحث الآن. يمكنك متابعة التصفح من الأقسام الرئيسية.",
+    "use_rule": "site-src/app.js"
+  },
+  {
+    "ui_id": "UI-JS-SEARCH-UNAVAILABLE",
+    "label_en": "Search unavailable",
+    "label_ar": "تعذر تحميل البحث",
+    "use_rule": "site-src/app.js"
+  },
+  {
+    "ui_id": "UI-JS-SOURCES-SHOWN",
+    "label_en": "{n} sources or references shown",
+    "label_ar": "عدد المصادر والمراجع المعروضة: {n}",
+    "use_rule": "site-src/app.js"
+  },
+  {
+    "ui_id": "UI-JS-SOURCE-LINK-UNKNOWN",
+    "label_en": "The source reference in this link was not found in the source directory. This is a problem with the link, not information about the evidence; all sources are shown below.",
+    "label_ar": "لم يُعثر في دليل المصادر على مرجع المصدر الوارد في هذا الرابط. هذه مشكلة في الرابط، وليست معلومة عن الأدلة؛ تُعرض المصادر كلها أدناه.",
+    "use_rule": "site-src/app.js"
+  },
+  {
+    "ui_id": "UI-JS-SEARCH-RESULT-ONE",
+    "label_en": "1 result shown",
+    "label_ar": "عدد النتائج المعروضة: 1",
+    "use_rule": "site-src/app.js (English singular; Arabic uses one form)"
+  },
+  {
+    "ui_id": "UI-JS-SOURCES-SHOWN-ONE",
+    "label_en": "1 source or reference shown",
+    "label_ar": "عدد المصادر والمراجع المعروضة: 1",
+    "use_rule": "site-src/app.js (English singular; Arabic uses one form)"
+  },
+  {
+    "ui_id": "UI-JS-TYPE-PAGE",
+    "label_en": "Page",
+    "label_ar": "صفحة",
+    "use_rule": "site-src/app.js TYPE_LABEL_UI['page']"
+  },
+  {
+    "ui_id": "UI-JS-TYPE-QUESTION",
+    "label_en": "Question",
+    "label_ar": "سؤال",
+    "use_rule": "site-src/app.js TYPE_LABEL_UI['question']"
+  },
+  {
+    "ui_id": "UI-JS-TYPE-EVIDENCE",
+    "label_en": "Evidence record",
+    "label_ar": "سجل دليل",
+    "use_rule": "site-src/app.js TYPE_LABEL_UI['evidence']"
+  },
+  {
+    "ui_id": "UI-JS-TYPE-READING",
+    "label_en": "Reading",
+    "label_ar": "قراءة",
+    "use_rule": "site-src/app.js TYPE_LABEL_UI['reading']"
+  },
+  {
+    "ui_id": "UI-JS-TYPE-MEASUREMENT",
+    "label_en": "Measurement priority",
+    "label_ar": "أولوية قياس",
+    "use_rule": "site-src/app.js TYPE_LABEL_UI['measurement']"
+  },
+  {
+    "ui_id": "UI-JS-TYPE-SOURCE",
+    "label_en": "Source",
+    "label_ar": "مصدر",
+    "use_rule": "site-src/app.js TYPE_LABEL_UI['source']"
+  },
+  {
+    "ui_id": "UI-JS-TYPE-SOURCE-LOCATOR",
+    "label_en": "Source reference",
+    "label_ar": "مرجع مصدر",
+    "use_rule": "site-src/app.js TYPE_LABEL_UI['source_locator']"
+  },
+  {
+    "ui_id": "UI-JS-COMPARE-DEFINITION",
+    "label_en": "Definition",
+    "label_ar": "التعريف",
+    "use_rule": "site-src/app.js COMPARE_LABEL_UI['definition']"
+  },
+  {
+    "ui_id": "UI-JS-COMPARE-UNIVERSE",
+    "label_en": "Population / base",
+    "label_ar": "المجتمع / قاعدة الاحتساب",
+    "use_rule": "site-src/app.js COMPARE_LABEL_UI['universe']"
+  },
+  {
+    "ui_id": "UI-JS-COMPARE-PERIOD",
+    "label_en": "Period",
+    "label_ar": "الفترة",
+    "use_rule": "site-src/app.js COMPARE_LABEL_UI['period']"
+  },
+  {
+    "ui_id": "UI-JS-COMPARE-METHOD",
+    "label_en": "Method",
+    "label_ar": "الطريقة",
+    "use_rule": "site-src/app.js COMPARE_LABEL_UI['method']"
+  },
+  {
+    "ui_id": "UI-JS-COMPARE-SOURCE",
+    "label_en": "Source reference",
+    "label_ar": "مرجع المصدر",
+    "use_rule": "site-src/app.js COMPARE_LABEL_UI['source']"
+  },
+  {
+    "ui_id": "UI-JS-COMPARE-CURRENTNESS",
+    "label_en": "Evidence currency",
+    "label_ar": "حداثة الدليل",
+    "use_rule": "site-src/app.js COMPARE_LABEL_UI['currentness']"
+  },
+  {
+    "ui_id": "UI-JS-COMPARE-BOUNDARY",
+    "label_en": "What not to conclude",
+    "label_ar": "ما لا يُستنتج",
+    "use_rule": "site-src/app.js COMPARE_LABEL_UI['boundary']"
+  },
+  {
+    "ui_id": "UI-JS-COMPARE-SAME",
+    "label_en": "Same controlled fields",
+    "label_ar": "متطابق في الحقول المنظمة",
+    "use_rule": "site-src/app.js COMPARE_LABEL_UI['same']"
+  },
+  {
+    "ui_id": "UI-JS-COMPARE-DIFFERENT",
+    "label_en": "Different",
+    "label_ar": "مختلف",
+    "use_rule": "site-src/app.js COMPARE_LABEL_UI['different']"
+  },
+  {
+    "ui_id": "UI-JS-COMPARE-MISSING",
+    "label_en": "Not available to judge",
+    "label_ar": "غير متاح للحكم",
+    "use_rule": "site-src/app.js COMPARE_LABEL_UI['missing']"
+  },
+  {
+    "ui_id": "UI-JS-COMPARE-INFORMATIONAL",
+    "label_en": "Trace only",
+    "label_ar": "للتتبع",
+    "use_rule": "site-src/app.js COMPARE_LABEL_UI['informational']"
+  },
+  {
+    "ui_id": "UI-JS-COMPARE-SAME-RECORD",
+    "label_en": "Same record selected more than once",
+    "label_ar": "السجل نفسه مكرر",
+    "use_rule": "site-src/app.js COMPARE_LABEL_UI['sameRecord']"
+  },
+  {
+    "ui_id": "UI-JS-COMPARE-NOT-DIRECT",
+    "label_en": "Not a direct comparison",
+    "label_ar": "ليست مقارنة مباشرة",
+    "use_rule": "site-src/app.js COMPARE_LABEL_UI['notDirect']"
+  },
+  {
+    "ui_id": "UI-JS-COMPARE-UNRESOLVED",
+    "label_en": "Direct comparability cannot be established",
+    "label_ar": "لا يمكن إثبات قابلية المقارنة المباشرة",
+    "use_rule": "site-src/app.js COMPARE_LABEL_UI['unresolved']"
+  },
+  {
+    "ui_id": "UI-JS-COMPARE-QUALIFIED",
+    "label_en": "Qualified comparison only",
+    "label_ar": "مقارنة مؤهلة فقط",
+    "use_rule": "site-src/app.js COMPARE_LABEL_UI['qualified']"
+  },
+  {
+    "ui_id": "UI-JS-COMPARE-ALIGNED",
+    "label_en": "Structurally aligned on available fields",
+    "label_ar": "متوافقة بنيويًا ضمن الحقول المتاحة",
+    "use_rule": "site-src/app.js COMPARE_LABEL_UI['aligned']"
+  },
+  {
+    "ui_id": "UI-JS-COMPARE-SAME-RECORD-COPY",
+    "label_en": "The same Evidence Record is selected more than once. Remove duplicates before judging comparability across independent evidence.",
+    "label_ar": "اختير سجل الدليل نفسه أكثر من مرة. أزل التكرار قبل الحكم على المقارنة بين أدلة مستقلة.",
+    "use_rule": "site-src/app.js COMPARE_LABEL_UI['sameRecordCopy']"
+  },
+  {
+    "ui_id": "UI-JS-COMPARE-NOT-DIRECT-COPY",
+    "label_en": "The recorded definition, population or method differs between these records. Treat them as different measures unless their records say otherwise, and do not present their values on a common scale.",
+    "label_ar": "يختلف التعريف أو المجتمع أو الطريقة المسجلة بين هذه السجلات. تعامل معها بوصفها مقاييس مختلفة ما لم تذكر سجلاتها خلاف ذلك، ولا تعرض قيمها على مقياس مشترك.",
+    "use_rule": "site-src/app.js COMPARE_LABEL_UI['notDirectCopy']"
+  },
+  {
+    "ui_id": "UI-JS-COMPARE-UNRESOLVED-COPY",
+    "label_en": "A field required to judge direct comparability is missing. Missing does not mean compatible, so the comparison remains unresolved.",
+    "label_ar": "تنقص حقول لازمة للحكم على المقارنة المباشرة. الغياب لا يعني التوافق؛ لذلك تبقى المقارنة غير محسومة.",
+    "use_rule": "site-src/app.js COMPARE_LABEL_UI['unresolvedCopy']"
+  },
+  {
+    "ui_id": "UI-JS-COMPARE-QUALIFIED-COPY",
+    "label_en": "The required structural fields align, but period or evidence currency differs. Use the comparison only with that qualification visible.",
+    "label_ar": "تتوافق الحقول البنيوية اللازمة، لكن الفترة أو حداثة الدليل تختلف. استخدم المقارنة مع هذا القيد ظاهرًا.",
+    "use_rule": "site-src/app.js COMPARE_LABEL_UI['qualifiedCopy']"
+  },
+  {
+    "ui_id": "UI-JS-COMPARE-ALIGNED-COPY",
+    "label_en": "The recorded definition, population and method match. This does not establish equivalence beyond the governed fields shown here.",
+    "label_ar": "يتطابق التعريف والمجتمع والطريقة المسجلة. ولا يثبت ذلك تكافؤ المعنى خارج الحقول المعتمدة المعروضة هنا.",
+    "use_rule": "site-src/app.js COMPARE_LABEL_UI['alignedCopy']"
+  },
+  {
+    "ui_id": "UI-JS-COMPARE-DIMENSION",
+    "label_en": "Comparison dimension",
+    "label_ar": "بُعد المقارنة",
+    "use_rule": "site-src/app.js COMPARE_LABEL_UI['dimension']"
+  },
+  {
+    "ui_id": "UI-JS-COMPARE-ASSESSMENT",
+    "label_en": "Assessment",
+    "label_ar": "الحكم",
+    "use_rule": "site-src/app.js COMPARE_LABEL_UI['assessment']"
+  },
+  {
+    "ui_id": "UI-JS-COMPARE-OPEN-RECORD",
+    "label_en": "Open Evidence Record",
+    "label_ar": "افتح سجل الدليل",
+    "use_rule": "site-src/app.js COMPARE_LABEL_UI['openRecord']"
+  },
+  {
+    "ui_id": "UI-JS-COMPARE-NO-MERGE",
+    "label_en": "Do not merge values, manufacture a midpoint, average disagreement or infer a conversion scalar from this comparison.",
+    "label_ar": "لا تُدمج القيم ولا تُنشئ متوسطًا أو رقمًا وسطًا أو معامل تحويل من هذه المقارنة.",
+    "use_rule": "site-src/app.js COMPARE_LABEL_UI['noMerge']"
+  },
+  {
+    "ui_id": "UI-JS-COMPARE-TABLE",
+    "label_en": "Evidence comparison details",
+    "label_ar": "تفاصيل مقارنة الأدلة",
+    "use_rule": "site-src/app.js COMPARE_LABEL_UI['table']"
+  },
+  {
+    "ui_id": "UI-JS-COMPARE-SELECTED",
+    "label_en": "records selected",
+    "label_ar": "سجلات مختارة",
+    "use_rule": "site-src/app.js COMPARE_LABEL_UI['selected']"
+  },
+  {
+    "ui_id": "UI-JS-COMPARE-LINK-TITLE",
+    "label_en": "This comparison link could not be read",
+    "label_ar": "تعذّرت قراءة رابط المقارنة",
+    "use_rule": "site-src/app.js COMPARE_ERROR_UI['title']"
+  },
+  {
+    "ui_id": "UI-JS-COMPARE-LINK-COUNT",
+    "label_en": "The link must name two to four Evidence Records, separated by commas.",
+    "label_ar": "يجب أن يسمّي الرابط من سجلين إلى أربعة سجلات أدلة، مفصولة بفواصل.",
+    "use_rule": "site-src/app.js COMPARE_ERROR_UI['count']"
+  },
+  {
+    "ui_id": "UI-JS-COMPARE-LINK-MALFORMED",
+    "label_en": "The link contains a record reference that is not valid.",
+    "label_ar": "يحتوي الرابط على مرجع سجل غير صالح.",
+    "use_rule": "site-src/app.js COMPARE_ERROR_UI['malformed']"
+  },
+  {
+    "ui_id": "UI-JS-COMPARE-LINK-UNKNOWN",
+    "label_en": "The link names a record that is not available for comparison here: ",
+    "label_ar": "يسمّي الرابط سجلًا غير متاح للمقارنة هنا: ",
+    "use_rule": "site-src/app.js COMPARE_ERROR_UI['unknown']"
+  },
+  {
+    "ui_id": "UI-JS-COMPARE-LINK-NOTE",
+    "label_en": "This is a problem with the link, not a finding about the evidence. Choose records below to start a comparison.",
+    "label_ar": "هذه مشكلة في الرابط، وليست نتيجة عن الأدلة. اختر السجلات أدناه لبدء مقارنة.",
+    "use_rule": "site-src/app.js COMPARE_ERROR_UI['note']"
+  },
+  {
+    "ui_id": "UI-QUESTIONS-VIEW-ALL",
+    "label_en": "View all {n} questions",
+    "label_ar": "اعرض الأسئلة كلها ({n})",
+    "use_rule": "build.py question_cards(); {n} = governed count of entry questions"
+  },
+  {
+    "ui_id": "UI-CITE-SOURCE-REFERENCE",
+    "label_en": "source reference {sid}",
+    "label_ar": "مرجع المصدر {sid}",
+    "use_rule": "build.py evidence_citation_context(): a source without a governed title"
+  },
+  {
+    "ui_id": "UI-CITE-RECORD-LINE",
+    "label_en": "{product}, Evidence Record {oid}. CauseWay. {version}.",
+    "label_ar": "{product}، سجل الدليل {oid}. CauseWay. {version}.",
+    "use_rule": "build.py evidence_citation_context(): resource, record, author, content version"
+  },
+  {
+    "ui_id": "UI-CITE-PERIOD",
+    "label_en": "Period",
+    "label_ar": "الفترة",
+    "use_rule": "build.py evidence_citation_context()"
+  },
+  {
+    "ui_id": "UI-CITE-POPULATION",
+    "label_en": "Population or base",
+    "label_ar": "المجتمع أو قاعدة الاحتساب",
+    "use_rule": "build.py evidence_citation_context()"
+  },
+  {
+    "ui_id": "UI-CITE-ORIGINAL-SOURCES",
+    "label_en": "Original sources",
+    "label_ar": "المصادر الأصلية",
+    "use_rule": "build.py evidence_citation_context()"
+  },
+  {
+    "ui_id": "UI-CITE-PUBLISHERS-AUTHORITATIVE",
+    "label_en": "Original publishers remain authoritative for their material.",
+    "label_ar": "وتبقى الجهات الناشرة الأصلية المرجع لمادتها.",
+    "use_rule": "build.py evidence_citation_context(): closing sentence"
+  },
+  {
+    "ui_id": "UI-404-TITLE",
+    "label_en": "Page not found",
+    "label_ar": "الصفحة غير موجودة",
+    "use_rule": "build.py 404 page: title and eyebrow"
+  },
+  {
+    "ui_id": "UI-404-HEADING",
+    "label_en": "We could not find this route",
+    "label_ar": "تعذر العثور على هذا المسار",
+    "use_rule": "build.py 404 page"
+  },
+  {
+    "ui_id": "UI-404-BODY",
+    "label_en": "The link may be old or unavailable in the current public route set. Start from Home, explore the questions, or search the published evidence.",
+    "label_ar": "قد يكون الرابط قديمًا أو غير متاح ضمن المسارات العامة الحالية. ابدأ من الصفحة الرئيسية، أو استكشف الأسئلة، أو ابحث في الأدلة المنشورة.",
+    "use_rule": "build.py 404 page"
+  },
+  {
+    "ui_id": "UI-404-HOME",
+    "label_en": "Home",
+    "label_ar": "الرئيسية",
+    "use_rule": "build.py 404 page"
+  },
+  {
+    "ui_id": "UI-404-EXPLORE",
+    "label_en": "Explore",
+    "label_ar": "استكشف",
+    "use_rule": "build.py 404 page"
+  },
+  {
+    "ui_id": "UI-404-EVIDENCE",
+    "label_en": "Evidence",
+    "label_ar": "الأدلة",
+    "use_rule": "build.py 404 page"
+  },
+  {
+    "ui_id": "UI-404-SEARCH",
+    "label_en": "Search (Arabic and English)",
+    "label_ar": "البحث (بالعربية والإنجليزية)",
+    "use_rule": "build.py 404 page"
   }
 ]
