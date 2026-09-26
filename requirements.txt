@@ -1,0 +1,13 @@
+# Pinned Python 3.11 toolchain for generation, build, audits and tests (CI installs exactly this).
+#
+# Core gates (generator, build, literal audit, validator) need only the standard library.
+# openpyxl backs the generator's cell-for-cell parity tests and the Master transaction tooling.
+openpyxl==3.1.5
+et-xmlfile==2.0.0
+
+# Browser suites (public tools, viewport acceptance) and the diagram PNG previews.
+# After installing, also run: python -m playwright install chromium
+playwright==1.56.0
+greenlet==3.4.0
+pyee==13.0.1
+typing-extensions==4.15.0

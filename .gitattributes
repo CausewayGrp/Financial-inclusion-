@@ -1,0 +1,22 @@
+# Byte-exact storage. Every file is covered by SHA256SUMS.txt, and several CSV ledgers and audit notes use CRLF by
+# design, so Git must never rewrite line endings on check-in or check-out, on any platform. Do not add `text=auto`.
+* -text
+
+# Binary artefacts: no textual diff or merge. The Master changes only through the transactional runner.
+*.xlsx  binary
+*.png   binary
+*.jpg   binary
+*.pdf   binary
+*.zip   binary
+*.woff2 binary
+
+# Generated outputs: collapsed in pull-request diffs and left out of language statistics. They stay committed so every
+# change to the public surface is reviewable, and CI proves they equal a fresh build.
+dist/**                             linguist-generated=true
+site-src/content/page_specs.json    linguist-generated=true
+audit/PUBLIC_LITERAL_CLOSURE.json   linguist-generated=true
+SHA256SUMS.txt                      linguist-generated=true
+
+# Lineage and documentation.
+audit/** linguist-documentation=true
+docs/**  linguist-documentation=true

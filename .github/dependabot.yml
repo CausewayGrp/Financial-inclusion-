@@ -1,0 +1,13 @@
+# Keeps the SHA-pinned GitHub Actions current. The Python toolchain is pinned on purpose (byte-identical builds) and is
+# changed deliberately, with the full gate run, rather than by automated update.
+version: 2
+updates:
+  - package-ecosystem: github-actions
+    directory: /
+    schedule:
+      interval: monthly
+    commit-message:
+      prefix: ci
+    groups:
+      actions:
+        patterns: ["*"]

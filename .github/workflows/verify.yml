@@ -1,0 +1,140 @@
+# Every gate the programme relies on, run from a clean checkout on every push to main and every pull request.
+# A red run means the commit must not stand as a governed state. Job names are the required status checks.
+name: Verify
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+  workflow_call:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: verify-${{ github.ref }}
+  cancel-in-progress: ${{ github.event_name == 'pull_request' }}
+
+defaults:
+  run:
+    shell: bash
+
+env:
+  PYTHONDONTWRITEBYTECODE: "1"
+
+jobs:
+  gates:
+    name: Governance gates
+    runs-on: ubuntu-24.04
+    timeout-minutes: 20
+    steps:
+      - name: Check out
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+
+      - name: Set up Python 3.11
+        uses: actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97 # v7.0.0
+        with:
+          python-version: "3.11"
+          cache: pip
+          cache-dependency-path: requirements.txt
+
+      - name: Install the pinned toolchain
+        run: python -m pip install --disable-pip-version-check -r requirements.txt
+
+      - name: Checksum manifest lists every tracked file with its current hash
+        run: python3 scripts/checksums.py --check
+
+      - name: Master regenerates every projection byte for byte
+        run: python3 scripts/generate_projections.py --check
+
+      - name: Generator unit tests
+        run: python3 -m unittest discover -s scripts/projection/tests -t .
+
+      - name: Rebuild the public site and the public-literal closure
+        run: |
+          python3 scripts/build.py
+          python3 scripts/audit_public_literals.py
+
+      - name: Committed outputs equal a fresh build
+        run: |
+          if [ -n "$(git status --porcelain --untracked-files=all)" ]; then
+            git status --short | head -50
+            echo "::error::dist/ or audit/PUBLIC_LITERAL_CLOSURE.json differs from a fresh build. Rebuild, regenerate SHA256SUMS.txt and commit."
+            exit 1
+          fi
+
+      - name: Repository validator
+        run: python3 scripts/validate.py
+
+      - name: Literal audit is identical under eight hash seeds
+        run: python3 scripts/tests/test_literal_audit_determinism.py
+
+      - name: Source-lineage truth test
+        run: python3 audit/pre_tranche_c/source_lineage_truth_test.py
+
+      - name: Architecture diagrams show the current navigation and counts
+        run: python3 scripts/architecture_diagrams.py --check
+
+      - name: Bilingual numeric invariance
+        run: |
+          python3 audit/tranche_c/checks/bilingual_invariance.py "$RUNNER_TEMP/bilingual.json"
+          python3 - "$RUNNER_TEMP/bilingual.json" <<'PY'
+          import json, sys
+          # Ledger BIL-05: Reading-prose parity items held for the independent Reading package. When the package closes
+          # BIL-05, empty this set; the check then requires every English/Arabic page pair to print the same numbers.
+          HELD = {
+              "dist/en/people/index.html",
+              "dist/en/readings/finance-constraint-different-questions/index.html",
+              "dist/en/readings/index.html",
+              "dist/en/readings/reforms-newer-than-people-evidence/index.html",
+              "dist/en/readings/same-year-different-number/index.html",
+              "dist/en/reforms/index.html",
+          }
+          got = {r["page"] for r in json.load(open(sys.argv[1], encoding="utf-8"))["rows"]}
+          new, cleared = sorted(got - HELD), sorted(HELD - got)
+          if new:
+              sys.exit("Bilingual invariance regression (not held under BIL-05): " + ", ".join(new))
+          if cleared:
+              print("::notice::These pages no longer differ; remove them from HELD: " + ", ".join(cleared))
+          print(f"BILINGUAL INVARIANCE: {len(got)} differing page pairs, all held under BIL-05")
+          PY
+
+      - name: Gates leave the working tree clean
+        run: |
+          if [ -n "$(git status --porcelain --untracked-files=all)" ]; then
+            git status --short | head -50
+            echo "::error::A gate wrote into the repository."
+            exit 1
+          fi
+
+  browser:
+    name: Browser acceptance
+    needs: gates
+    runs-on: ubuntu-24.04
+    timeout-minutes: 20
+    steps:
+      - name: Check out
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+
+      - name: Set up Python 3.11
+        uses: actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97 # v7.0.0
+        with:
+          python-version: "3.11"
+          cache: pip
+          cache-dependency-path: requirements.txt
+
+      - name: Install the pinned toolchain and Chromium
+        run: |
+          python -m pip install --disable-pip-version-check -r requirements.txt
+          python -m playwright install --with-deps chromium
+
+      - name: Public tools (Search, Compare, Cite, menu, skip link, live regions)
+        run: python3 scripts/tests/test_public_tools.py
+
+      - name: Viewport acceptance (EN/AR at 320, 400, 640 and 1440 px)
+        run: python3 audit/tranche_c/checks/viewport_acceptance.py

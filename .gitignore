@@ -1,0 +1,23 @@
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+
+# Node (only used for the optional local preview server)
+node_modules/
+
+# Operating system and editor files
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+*.swp
+
+# Staging and scratch. Master transactions stage outside the repository and enter only through the runner.
+/stage/
+/scratch/
+*.tmp
+
+# Packaged checkpoints are built from `checkpoint/*` tags by CI, never committed (no nested ZIPs).
+*.zip

@@ -11,6 +11,8 @@
     "audit:public-literals": "python3 scripts/audit_public_literals.py",
     "generate": "python3 scripts/generate_projections.py",
     "check:projections": "python3 scripts/generate_projections.py --check",
-    "test:generator": "python3 -m unittest discover -s scripts/projection/tests -t ."
+    "test:generator": "python3 -m unittest discover -s scripts/projection/tests -t .",
+    "checksums": "python3 scripts/checksums.py",
+    "check:checksums": "python3 scripts/checksums.py --check"
   }
 }

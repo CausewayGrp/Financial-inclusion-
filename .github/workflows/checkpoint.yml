@@ -1,0 +1,86 @@
+# A checkpoint is a governed state handed to an independent reviewer or to Design. Pushing an annotated tag
+# `checkpoint/<state>` re-runs every gate on the tagged commit, packages the tree as
+# Yemen_Financial_Inclusion_Evidence_<STATE>.zip with one root folder, re-verifies the ZIP from an empty extraction and
+# attaches it, with its SHA-256, to a pre-release. A checkpoint is never a public release.
+#   checkpoint/tranche-c-openai-corrections  ->  Yemen_Financial_Inclusion_Evidence_TRANCHE_C_OPENAI_CORRECTIONS.zip
+#   checkpoint/design-handoff-ready          ->  Yemen_Financial_Inclusion_Evidence_DESIGN_HANDOFF_READY.zip (R8.6 only)
+name: Checkpoint
+
+on:
+  push:
+    tags: ["checkpoint/*"]
+
+permissions:
+  contents: read
+
+defaults:
+  run:
+    shell: bash
+
+jobs:
+  verify:
+    name: Verify
+    uses: ./.github/workflows/verify.yml
+
+  package:
+    name: Package checkpoint
+    needs: verify
+    runs-on: ubuntu-24.04
+    timeout-minutes: 15
+    permissions:
+      contents: write
+    steps:
+      - name: Check out the tagged commit with its annotated tag
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          fetch-depth: 0
+          persist-credentials: false
+
+      - name: Build the ZIP from the tag and verify it from an empty extraction
+        id: zip
+        env:
+          TAG: ${{ github.ref_name }}
+        run: |
+          state="${TAG#checkpoint/}"
+          if [[ ! "$state" =~ ^[a-z0-9]+(-[a-z0-9]+)*$ ]]; then
+            echo "::error::Tag must be checkpoint/<lower-case-kebab-state>, got $TAG"; exit 1
+          fi
+          if [ "$(git cat-file -t "refs/tags/$TAG")" != "tag" ]; then
+            echo "::error::$TAG must be an annotated tag; its message becomes the checkpoint notes"; exit 1
+          fi
+          name="Yemen_Financial_Inclusion_Evidence_$(tr 'a-z-' 'A-Z_' <<<"$state").zip"
+          git archive --format=zip --prefix=Yemen_Financial_Inclusion_Evidence/ -o "$RUNNER_TEMP/$name" "refs/tags/$TAG"
+          cd "$RUNNER_TEMP"
+          rm -rf extract && mkdir extract && unzip -q "$name" -d extract
+          [ "$(ls -A extract)" = "Yemen_Financial_Inclusion_Evidence" ] || { echo "::error::ZIP must have exactly one root folder"; exit 1; }
+          if find extract -name '*.zip' | grep -q .; then echo "::error::nested ZIP inside the checkpoint"; exit 1; fi
+          (cd extract/Yemen_Financial_Inclusion_Evidence && sha256sum --quiet -c SHA256SUMS.txt && python3 scripts/checksums.py --check)
+          sha256sum "$name" > "$name.sha256"
+          echo "name=$name" >> "$GITHUB_OUTPUT"
+
+      - name: Keep the ZIP as a workflow artifact
+        uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a # v7.0.1
+        with:
+          path: ${{ runner.temp }}/${{ steps.zip.outputs.name }}
+          archive: false
+          retention-days: 90
+          if-no-files-found: error
+
+      - name: Publish as a pre-release
+        env:
+          GH_TOKEN: ${{ github.token }}
+          TAG: ${{ github.ref_name }}
+          NAME: ${{ steps.zip.outputs.name }}
+        run: |
+          {
+            echo "**Review checkpoint — not a public release.**"
+            echo
+            git tag -l --format='%(contents:subject)' "$TAG"
+            echo
+            git tag -l --format='%(contents:body)' "$TAG"
+            echo
+            echo "ZIP SHA-256: \`$(cut -d' ' -f1 "$RUNNER_TEMP/$NAME.sha256")\`"
+          } > "$RUNNER_TEMP/notes.md"
+          gh release create "$TAG" "$RUNNER_TEMP/$NAME" "$RUNNER_TEMP/$NAME.sha256" \
+            --verify-tag --prerelease --latest=false \
+            --title "Checkpoint: ${TAG#checkpoint/}" --notes-file "$RUNNER_TEMP/notes.md"
