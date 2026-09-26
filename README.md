@@ -19,8 +19,8 @@ controlled-product-state and publication-state authority; everything else here i
 | **Waiting on** | Nothing external. OpenAI accepted Tranche C (recipient verification 31/31) and supplied the ten-Reading package; sessions F3–F9 of directive [D7](audit/directives/D7_FINAL_INTEGRATION_TO_DESIGN_HANDOFF_2026-09-26.md) are in progress |
 | **Reviewed checkpoint** | Tag [`checkpoint/tranche-c-complete-reading-hold`](../../tree/checkpoint/tranche-c-complete-reading-hold): tree byte-identical to the review ZIP `…TRANCHE_C_COMPLETE_READING_HOLD.zip` (SHA-256 `63612dea…`) |
 | **Since that checkpoint** | Repository infrastructure, then F2: the ten Evidence Readings integrated Master-first in one transaction (RP-F2; [adjudication](audit/READING_PORTFOLIO_FINAL_ADJUDICATION.md), [change ledger](audit/READING_PORTFOLIO_CHANGE_LEDGER.csv)); BIL-05 closed — every English/Arabic page pair prints the same numbers |
-| **Production Master** | `authority/Yemen_Financial_Inclusion_Evidence_Master.xlsx` · SHA-256 `2a7fd52bbe82d73faf562a395ccf40d78c84cd050735f3a5e89d39e767014549` |
-| **Page Specs** | `site-src/content/page_specs.json` · SHA-256 `9b5300687bc9227088447ee6710d46e6e815d4681e5dbdffce2ed6ec9a67330a` |
+| **Production Master** | `authority/Yemen_Financial_Inclusion_Evidence_Master.xlsx` · SHA-256 `440614d789f662e2e47d95e932968be3c71d2719187bb91c6f546aed30e72f71` |
+| **Page Specs** | `site-src/content/page_specs.json` · SHA-256 `0425dc85c1662120a2b00a5bb3485b93d4f64f6058d7e2a0ebeb477dedc3e871` |
 | **Currentness cut-off** | 26 September 2026 ([`audit/FINAL_CURRENTNESS_CUTOFF.md`](audit/FINAL_CURRENTNESS_CUTOFF.md)) |
 | **Re-entry document** | [`OPENAI_REENTRY_CHECKPOINT.md`](OPENAI_REENTRY_CHECKPOINT.md) |
 

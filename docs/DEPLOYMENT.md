@@ -1,19 +1,27 @@
-# Deployment
+# Deployment (reference build)
 
-The canonical Google Drive repository stores the Production Master, governed source/control inputs and implementation sources. Generated `dist/` state is disposable and is **not** stored as canonical Drive state.
+**Status:** nothing is deployed. The public site is not released (the programme never declares PUBLIC RELEASE READY);
+this page states how the *reference* build would be served so that Design and Code inherit correct assumptions.
 
-Before preview or deployment, run:
+The repository is canonical on GitHub (`CausewayGrp/Financial-inclusion-`, branch `main`). `dist/` is committed and CI
+fails if it differs from a fresh build, so the files a host would serve are exactly the reviewed ones.
+
+## Build and verify
 
 ```bash
-npm run verify
+python3 -m pip install -r requirements.txt
+python3 scripts/generate_projections.py --check   # Master → projections, byte for byte
+python3 scripts/build.py                          # site-src → dist (288 HTML files)
+python3 scripts/audit_public_literals.py          # every public number traced
+python3 scripts/validate.py                       # all repository gates
 ```
 
-This regenerates `dist/` and validates the public build. Deploy **only the resulting `dist/` contents** as the static site. The authority workbook at `authority/Yemen_Financial_Inclusion_Evidence_Master.xlsx`, internal controls, and non-public source material must never be copied into the public bundle.
+## Serve
 
-Configure the host to serve `404.html` for unknown routes and preserve trailing-slash paths. Root redirects Arabic-first to `/ar/`; English is available at `/en/`.
-
-No database, secret or live API is required for the initial static build. Future APIs/adapters may replace or refresh local payload sources only after their endpoint, schema, rights, cadence and semantic mapping are controlled; the UI must not depend on those future services for the first complete handoff.
-
-The public bundle must not be modified to add unfiltered source files, internal evidence objects, the Production Master, or restricted material. Future content/data refreshes must originate in the Production Master where semantic changes are material, then regenerate the controlled projections and pass the repository validator.
-
-Deployment itself does not constitute release approval. Browser/runtime, RTL/mobile, accessibility, security/privacy, correction/version behavior, publication filtering and named release approval remain separate gates.
+- Serve **only** the contents of `dist/` as static files. Never serve `authority/`, `audit/`, `site-src/`, `scripts/`,
+  `handoff/` or the Production Master; the browser never parses the Master.
+- Unknown routes → `dist/404.html` (bilingual, Arabic first). Keep trailing-slash paths (`/en/people/`).
+- `/` redirects to `/ar/` unless the reader chose English before (stored preference `yfie-lang`).
+- No database, secret or live API is required. Search and Compare read local JSON under `/static-data/`.
+- Security headers, caching, image delivery for the master logo and analytics policy are engineering decisions recorded
+  in `handoff/ENGINEERING_HANDOFF_EXPECTATIONS.md`; none is configured here.

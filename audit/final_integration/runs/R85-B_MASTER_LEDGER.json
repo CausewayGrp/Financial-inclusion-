@@ -1,0 +1,1287 @@
+{
+ "transaction": "R85-B",
+ "summary": "R8.5 public-copy corrections; duplicate events merged; six resource categories; P3-D02 labels; NFC (32 cells)",
+ "input_master_sha256": "2a7fd52bbe82d73faf562a395ccf40d78c84cd050735f3a5e89d39e767014549",
+ "output_master_sha256": "440614d789f662e2e47d95e932968be3c71d2719187bb91c6f546aed30e72f71",
+ "cells_written": 142,
+ "changes": [
+  {
+   "finding": "R85-B:C1",
+   "sheet": "04_NAV_UX",
+   "row": 299,
+   "col": 2,
+   "field": "UI-DOM-ADDITIONAL-CONTROLLED-DETAIL-FROM-THIS.label_en",
+   "old": "Additional controlled detail from this route, preserved with its original boundaries.",
+   "new": "More detail on this question, each item with its own period and limits."
+  },
+  {
+   "finding": "R85-B:C1",
+   "sheet": "04_NAV_UX",
+   "row": 299,
+   "col": 3,
+   "field": "UI-DOM-ADDITIONAL-CONTROLLED-DETAIL-FROM-THIS.label_ar",
+   "old": "تفاصيل إضافية من الصفحة نفسها، محفوظة مع حدودها الأصلية.",
+   "new": "مزيد من التفاصيل حول هذا السؤال، ولكل منها فترته وحدوده."
+  },
+  {
+   "finding": "R85-B:C1",
+   "sheet": "04_NAV_UX",
+   "row": 320,
+   "col": 2,
+   "field": "UI-EVID-OPEN-THE-SOURCE-RECORD-HERE.label_en",
+   "old": "Open the source record here, or follow the original locator when publication state allows it.",
+   "new": "Open the source record here, or go to the original document where a public link exists."
+  },
+  {
+   "finding": "R85-B:C1",
+   "sheet": "04_NAV_UX",
+   "row": 320,
+   "col": 3,
+   "field": "UI-EVID-OPEN-THE-SOURCE-RECORD-HERE.label_ar",
+   "old": "افتح سجل المصدر هنا، أو انتقل إلى الرابط الأصلي حين تسمح حالة النشر بذلك.",
+   "new": "افتح سجل المصدر هنا، أو انتقل إلى الوثيقة الأصلية حيث يتوافر رابط عام."
+  },
+  {
+   "finding": "R85-B:C1",
+   "sheet": "04_NAV_UX",
+   "row": 323,
+   "col": 2,
+   "field": "UI-EVID-NO-STANDALONE-PUBLIC-LOCATOR-IS.label_en",
+   "old": "No standalone public locator is available for this dependency in the current publication state.",
+   "new": "No public link to the original document is available for this source."
+  },
+  {
+   "finding": "R85-B:C1",
+   "sheet": "04_NAV_UX",
+   "row": 323,
+   "col": 3,
+   "field": "UI-EVID-NO-STANDALONE-PUBLIC-LOCATOR-IS.label_ar",
+   "old": "لا يتوافر رابط عام مستقل لهذا الاعتماد ضمن حالة النشر الحالية.",
+   "new": "لا يتوافر رابط عام إلى الوثيقة الأصلية لهذا المصدر."
+  },
+  {
+   "finding": "R85-B:C1",
+   "sheet": "04_NAV_UX",
+   "row": 324,
+   "col": 2,
+   "field": "UI-EVID-THIS-RECORD-CURRENTLY-HAS-NO.label_en",
+   "old": "This record currently has no standalone public path to an original source; use the method and verification detail below.",
+   "new": "No original source for this record can be opened from here; use the method and verification detail below."
+  },
+  {
+   "finding": "R85-B:C1",
+   "sheet": "04_NAV_UX",
+   "row": 324,
+   "col": 3,
+   "field": "UI-EVID-THIS-RECORD-CURRENTLY-HAS-NO.label_ar",
+   "old": "لا يرتبط هذا السجل حاليًا بمسار عام مستقل إلى مصدر أصلي؛ استخدم المنهج وطريقة التحقق أدناه.",
+   "new": "لا يمكن فتح مصدر أصلي لهذا السجل من هنا؛ استخدم المنهج وطريقة التحقق أدناه."
+  },
+  {
+   "finding": "R85-B:C1",
+   "sheet": "04_NAV_UX",
+   "row": 329,
+   "col": 2,
+   "field": "UI-EVID-ADDITIONAL-DETAIL-FOR-REPRODUCING-OR.label_en",
+   "old": "Additional detail for reproducing or challenging the reading without changing the evidence meaning.",
+   "new": "Detail for reproducing or challenging this record without changing what it means."
+  },
+  {
+   "finding": "R85-B:C1",
+   "sheet": "04_NAV_UX",
+   "row": 329,
+   "col": 3,
+   "field": "UI-EVID-ADDITIONAL-DETAIL-FOR-REPRODUCING-OR.label_ar",
+   "old": "تفاصيل إضافية تساعد على إعادة إنتاج القراءة أو تحديها من دون تغيير معنى الدليل.",
+   "new": "تفاصيل تساعد على إعادة إنتاج هذا السجل أو مراجعته نقديًا من دون تغيير معناه."
+  },
+  {
+   "finding": "R85-B:C1",
+   "sheet": "04_NAV_UX",
+   "row": 342,
+   "col": 2,
+   "field": "UI-EVID-THE-STABLE-RECORD-ID-STAYS.label_en",
+   "old": "The stable record ID stays linked to original sources that the publication state permits this product to expose. Missing bibliography is not filled by assumption.",
+   "new": "This record’s reference stays linked to the original sources that can be shown publicly. Missing bibliographic details are left blank rather than guessed."
+  },
+  {
+   "finding": "R85-B:C1",
+   "sheet": "04_NAV_UX",
+   "row": 342,
+   "col": 3,
+   "field": "UI-EVID-THE-STABLE-RECORD-ID-STAYS.label_ar",
+   "old": "يبقى معرّف السجل مرتبطًا بالمصادر الأصلية التي تسمح حالة النشر بعرضها. ولا تُستكمل البيانات الوصفية الناقصة بالافتراض.",
+   "new": "يبقى مرجع هذا السجل مرتبطًا بالمصادر الأصلية التي يمكن عرضها علنًا، وتُترك البيانات الببليوغرافية الناقصة فارغة بدل تخمينها."
+  },
+  {
+   "finding": "R85-B:C1",
+   "sheet": "04_NAV_UX",
+   "row": 376,
+   "col": 2,
+   "field": "UI-QUESTIONS-EVERY-ROUTE-KEEPS-PERIOD-POPULATION.label_en",
+   "old": "Every route keeps period, population or calculation base, inference limits and source visible.",
+   "new": "Every answer keeps its period, population or calculation base, limits and source in view."
+  },
+  {
+   "finding": "R85-B:C1",
+   "sheet": "04_NAV_UX",
+   "row": 376,
+   "col": 3,
+   "field": "UI-QUESTIONS-EVERY-ROUTE-KEEPS-PERIOD-POPULATION.label_ar",
+   "old": "يحافظ كل مسار على الفترة، والمجتمع أو قاعدة الاحتساب، وحدود الاستنتاج، والمصدر.",
+   "new": "تبقي كل إجابة فترتها ومجتمعها أو قاعدة احتسابها وحدودها ومصدرها ظاهرة."
+  },
+  {
+   "finding": "R85-B:C1",
+   "sheet": "04_NAV_UX",
+   "row": 377,
+   "col": 2,
+   "field": "UI-HOME-CROSS-SOURCE-ANALYSIS-THAT-STAYS.label_en",
+   "old": "Cross-source analysis that stays bound to claims and evidence.",
+   "new": "Evidence-led essays, each traceable to the records behind it."
+  },
+  {
+   "finding": "R85-B:C1",
+   "sheet": "04_NAV_UX",
+   "row": 377,
+   "col": 3,
+   "field": "UI-HOME-CROSS-SOURCE-ANALYSIS-THAT-STAYS.label_ar",
+   "old": "تحليل متعدد المصادر يبقى مربوطًا بالخلاصات والأدلة.",
+   "new": "قراءات تحليلية تنطلق من الأدلة، ويمكن تتبّع كل منها إلى السجلات التي قامت عليها."
+  },
+  {
+   "finding": "R85-B:C1",
+   "sheet": "04_NAV_UX",
+   "row": 399,
+   "col": 2,
+   "field": "UI-DATA-ONLY-SOURCE-INFORMATION-PERMITTED-BY.label_en",
+   "old": "Only source information permitted by the controlled records is shown here. Sources that currently support public evidence are separated from reference locators available for verification or context, so the existence of a link is never mistaken for analytical use or an observed result.",
+   "new": "Sources that support current public evidence are listed separately from references kept for verification or context, so that a link is never mistaken for analytical use or an observed result."
+  },
+  {
+   "finding": "R85-B:C1",
+   "sheet": "04_NAV_UX",
+   "row": 399,
+   "col": 3,
+   "field": "UI-DATA-ONLY-SOURCE-INFORMATION-PERMITTED-BY.label_ar",
+   "old": "تُعرض هنا فقط معلومات المصدر التي تسمح بها السجلات المعتمدة. وتُفصل المراجع التي تسند أدلة عامة حالية عن المراجع المتاحة للتحقق أو السياق حتى لا يبدو مجرد وجود رابط وكأنه استخدام تحليلي أو دليل على نتيجة.",
+   "new": "تُعرض المصادر التي تسند الأدلة العامة الحالية منفصلة عن المراجع المتاحة للتحقق أو السياق، حتى لا يُفهم مجرد وجود رابط على أنه استخدام تحليلي أو دليل على نتيجة."
+  },
+  {
+   "finding": "R85-B:C1",
+   "sheet": "04_NAV_UX",
+   "row": 403,
+   "col": 2,
+   "field": "UI-DATA-THESE-SOURCES-ARE-LINKED-DIRECTLY.label_en",
+   "old": "These sources are linked directly to at least one current public Evidence Record. Open the dependent records to see exactly where and how they are used.",
+   "new": "These sources are linked directly to at least one current public Evidence Record. Open the records that use them to see exactly where and how."
+  },
+  {
+   "finding": "R85-B:C1",
+   "sheet": "04_NAV_UX",
+   "row": 403,
+   "col": 3,
+   "field": "UI-DATA-THESE-SOURCES-ARE-LINKED-DIRECTLY.label_ar",
+   "old": "هذه المصادر مرتبطة مباشرة بسجل دليل عام واحد على الأقل. افتح الروابط المرتبطة لمعرفة موضع استخدامها وحدودها.",
+   "new": "هذه المصادر مرتبطة مباشرة بسجل دليل عام واحد على الأقل. افتح السجلات التي تستخدمها لمعرفة موضع استخدامها وكيفيته بدقة."
+  },
+  {
+   "finding": "R85-B:C1",
+   "sheet": "04_NAV_UX",
+   "row": 404,
+   "col": 2,
+   "field": "UI-DATA-THESE-REFERENCES-ARE-AVAILABLE-FOR.label_en",
+   "old": "These references are available for verification, method or context but do not currently support a public Evidence Record. Their presence in the directory does not promote them into an evidence finding or claim.",
+   "new": "These references are available for verification, method or context but do not currently support a public Evidence Record. Being listed here does not make them evidence for any finding or claim."
+  },
+  {
+   "finding": "R85-B:C1",
+   "sheet": "04_NAV_UX",
+   "row": 404,
+   "col": 3,
+   "field": "UI-DATA-THESE-REFERENCES-ARE-AVAILABLE-FOR.label_ar",
+   "old": "هذه المراجع متاحة للتحقق أو المنهج أو السياق، لكنها لا تسند حاليًا سجل دليل عام. وجودها في الدليل لا يرقّيها إلى نتيجة أو خلاصة.",
+   "new": "هذه المراجع متاحة للتحقق أو المنهج أو السياق، لكنها لا تسند حاليًا سجل دليل عام. وإدراجها هنا لا يجعلها دليلًا على أي نتيجة أو خلاصة."
+  },
+  {
+   "finding": "R85-B:C1",
+   "sheet": "04_NAV_UX",
+   "row": 408,
+   "col": 2,
+   "field": "UI-DATA-EVERY-SOURCE-HERE-CAN-BE.label_en",
+   "old": "Every source here can be cited and opened at its original location. Each card shows its source's reuse-terms state; where terms have not been assessed, this resource offers no source file for download or republication, so check each source's own terms before redistributing its material.",
+   "new": "Every source here can be cited and opened where it was originally published. Each card says whether the source’s reuse terms have been assessed; where they have not, this resource offers no copy of the source for download or republication, so check the source’s own terms before redistributing its material."
+  },
+  {
+   "finding": "R85-B:C1",
+   "sheet": "04_NAV_UX",
+   "row": 408,
+   "col": 3,
+   "field": "UI-DATA-EVERY-SOURCE-HERE-CAN-BE.label_ar",
+   "old": "يمكن الاستشهاد بكل مصدر هنا وفتحه في موقعه الأصلي. ويبيّن كل بطاقة حالة شروط إعادة استخدام مصدرها؛ وحيث لم تُقيَّم الشروط، لا يعرض هذا الموقع ملفات المصدر للتنزيل أو إعادة النشر، فتحقّق من شروط كل مصدر قبل إعادة توزيع مادته.",
+   "new": "يمكن الاستشهاد بكل مصدر هنا وفتحه حيث نُشر أصلًا. وتبيّن كل بطاقة ما إذا كانت شروط إعادة استخدام المصدر قد قُيّمت؛ وحيث لم تُقيَّم، لا يقدم هذا المورد نسخة من المصدر للتنزيل أو إعادة النشر، فتحقّق من شروط المصدر نفسه قبل إعادة توزيع مادته."
+  },
+  {
+   "finding": "R85-B:C1",
+   "sheet": "04_NAV_UX",
+   "row": 416,
+   "col": 2,
+   "field": "UI-CORR-THIS-RESOURCE-DOES-NOT-MANUFACTURE.label_en",
+   "old": "This resource does not manufacture a release or correction history. A correction event appears only when it is governed for publication; the stable record ID remains the route back to the current public record.",
+   "new": "A correction appears here only when a material correction has been made to a public record. A record’s reference always leads to its current version."
+  },
+  {
+   "finding": "R85-B:C1",
+   "sheet": "04_NAV_UX",
+   "row": 416,
+   "col": 3,
+   "field": "UI-CORR-THIS-RESOURCE-DOES-NOT-MANUFACTURE.label_ar",
+   "old": "لا ينشئ هذا الموقع سجل إصدارات أو تصحيحات افتراضيًا. تظهر واقعة التصحيح فقط عندما تكون معتمدة للنشر؛ ويظل المعرّف الثابت هو نقطة الرجوع إلى السجل العام الحالي.",
+   "new": "لا يظهر التصحيح هنا إلا عند إجراء تصحيح جوهري على سجل عام. ويقود مرجع السجل دائمًا إلى نسخته الحالية."
+  },
+  {
+   "finding": "R85-B:C1",
+   "sheet": "04_NAV_UX",
+   "row": 417,
+   "col": 2,
+   "field": "UI-CORR-THIS-PAGE-CURRENTLY-HAS-NO.label_en",
+   "old": "This page currently has no separately governed material-correction events to publish, so the interface does not invent a synthetic history.",
+   "new": "No material corrections have been recorded yet."
+  },
+  {
+   "finding": "R85-B:C1",
+   "sheet": "04_NAV_UX",
+   "row": 417,
+   "col": 3,
+   "field": "UI-CORR-THIS-PAGE-CURRENTLY-HAS-NO.label_ar",
+   "old": "لا توجد في مواصفة هذه الصفحة حاليًا وقائع تصحيح جوهرية مستقلة معتمدة للنشر؛ لذلك لا تُنشئ الواجهة تاريخًا اصطناعيًا.",
+   "new": "لم تُسجَّل أي تصحيحات جوهرية حتى الآن."
+  },
+  {
+   "finding": "R85-B:C1",
+   "sheet": "04_NAV_UX",
+   "row": 358,
+   "col": 3,
+   "field": "UI-FOOTER-PUBLISHED-EVIDENCE-REMAINS-ATTRIBUTED-TO.label_ar",
+   "old": "الأدلة المنشورة تحتفظ بنسبة المصدر الأصلي.",
+   "new": "تبقى الأدلة المنشورة منسوبة إلى مصادرها الأصلية."
+  },
+  {
+   "finding": "R85-B:C1",
+   "sheet": "04_NAV_UX",
+   "row": 391,
+   "col": 2,
+   "field": "UI-COMPARE-START-WITH-COMPARISON-LEGITIMACY-NOT.label_en",
+   "old": "Start with comparison legitimacy, not the numbers.",
+   "new": "First ask whether the records can be compared at all; then look at the numbers."
+  },
+  {
+   "finding": "R85-B:C1",
+   "sheet": "04_NAV_UX",
+   "row": 391,
+   "col": 3,
+   "field": "UI-COMPARE-START-WITH-COMPARISON-LEGITIMACY-NOT.label_ar",
+   "old": "ابدأ بمشروعية المقارنة، لا بالأرقام.",
+   "new": "اسأل أولًا هل يمكن مقارنة السجلات أصلًا، ثم انظر إلى الأرقام."
+  },
+  {
+   "finding": "R85-B:C1",
+   "sheet": "04_NAV_UX",
+   "row": 396,
+   "col": 2,
+   "field": "UI-COMPARE-NO-AUTO-AVERAGE-NO-PREFERRED.label_en",
+   "old": "No auto-average · no preferred number · no invented conversion scalar",
+   "new": "No automatic averages · no preferred number · no invented conversion factor"
+  },
+  {
+   "finding": "R85-B:C1",
+   "sheet": "04_NAV_UX",
+   "row": 396,
+   "col": 3,
+   "field": "UI-COMPARE-NO-AUTO-AVERAGE-NO-PREFERRED.label_ar",
+   "old": "لا متوسطات تلقائية · لا رقم مفضل · لا معامل تحويل مخترع",
+   "new": "لا متوسطات تلقائية · لا رقم مفضل · لا معامل تحويل مفترض"
+  },
+  {
+   "finding": "R85-B:C1",
+   "sheet": "04_NAV_UX",
+   "row": 449,
+   "col": 2,
+   "field": "UI-JS-COMPARE-SAME.label_en",
+   "old": "Same controlled fields",
+   "new": "Same in the recorded fields"
+  },
+  {
+   "finding": "R85-B:C1",
+   "sheet": "04_NAV_UX",
+   "row": 449,
+   "col": 3,
+   "field": "UI-JS-COMPARE-SAME.label_ar",
+   "old": "متطابق في الحقول المنظمة",
+   "new": "متطابق في الحقول المسجلة"
+  },
+  {
+   "finding": "R85-B:C1",
+   "sheet": "04_NAV_UX",
+   "row": 462,
+   "col": 2,
+   "field": "UI-JS-COMPARE-ALIGNED-COPY.label_en",
+   "old": "The recorded definition, population and method match. This does not establish equivalence beyond the governed fields shown here.",
+   "new": "The recorded definition, population and method match. This does not establish equivalence beyond the fields shown here."
+  },
+  {
+   "finding": "R85-B:C1",
+   "sheet": "04_NAV_UX",
+   "row": 462,
+   "col": 3,
+   "field": "UI-JS-COMPARE-ALIGNED-COPY.label_ar",
+   "old": "يتطابق التعريف والمجتمع والطريقة المسجلة. ولا يثبت ذلك تكافؤ المعنى خارج الحقول المعتمدة المعروضة هنا.",
+   "new": "يتطابق التعريف والمجتمع والطريقة المسجلة. ولا يثبت ذلك تكافؤ المعنى خارج الحقول المعروضة هنا."
+  },
+  {
+   "finding": "R85-B:C1",
+   "sheet": "04_NAV_UX",
+   "row": 466,
+   "col": 2,
+   "field": "UI-JS-COMPARE-NO-MERGE.label_en",
+   "old": "Do not merge values, manufacture a midpoint, average disagreement or infer a conversion scalar from this comparison.",
+   "new": "Do not merge values, invent a midpoint, average the disagreement or derive a conversion factor from this comparison."
+  },
+  {
+   "finding": "R85-B:C1",
+   "sheet": "04_NAV_UX",
+   "row": 482,
+   "col": 2,
+   "field": "UI-404-HEADING.label_en",
+   "old": "We could not find this route",
+   "new": "We could not find this page"
+  },
+  {
+   "finding": "R85-B:C1",
+   "sheet": "04_NAV_UX",
+   "row": 482,
+   "col": 3,
+   "field": "UI-404-HEADING.label_ar",
+   "old": "تعذر العثور على هذا المسار",
+   "new": "تعذر العثور على هذه الصفحة"
+  },
+  {
+   "finding": "R85-B:C1",
+   "sheet": "04_NAV_UX",
+   "row": 483,
+   "col": 2,
+   "field": "UI-404-BODY.label_en",
+   "old": "The link may be old or unavailable in the current public route set. Start from Home, explore the questions, or search the published evidence.",
+   "new": "The page may have moved, or the link may be out of date. Start from Home, explore the questions, or search the published evidence."
+  },
+  {
+   "finding": "R85-B:C1",
+   "sheet": "04_NAV_UX",
+   "row": 483,
+   "col": 3,
+   "field": "UI-404-BODY.label_ar",
+   "old": "قد يكون الرابط قديمًا أو غير متاح ضمن المسارات العامة الحالية. ابدأ من الصفحة الرئيسية، أو استكشف الأسئلة، أو ابحث في الأدلة المنشورة.",
+   "new": "ربما نُقلت الصفحة أو أصبح الرابط قديمًا. ابدأ من الصفحة الرئيسية، أو استكشف الأسئلة، أو ابحث في الأدلة المنشورة."
+  },
+  {
+   "finding": "R85-B:C1",
+   "sheet": "04_NAV_UX",
+   "row": 89,
+   "col": 2,
+   "field": "UI-SOURCE-NO-PUBLIC-LOCATOR.label_en",
+   "old": "Also draws on source material with no public original locator recorded here; it is not listed or linked.",
+   "new": "Also draws on material that has no public link to its original document; that material is not listed or linked."
+  },
+  {
+   "finding": "R85-B:C1",
+   "sheet": "04_NAV_UX",
+   "row": 90,
+   "col": 2,
+   "field": "UI-EVID-SOURCES-WITHOUT-LOCATOR.label_en",
+   "old": "This record also draws on source material for which no public original locator is recorded. That material is held in the evidence base but is not listed or linked here, so the sources shown above are not the record's only basis.",
+   "new": "This record also draws on material that has no public link to its original document. That material is held in the evidence base but is not listed or linked here, so the sources shown above are not the record’s only basis."
+  },
+  {
+   "finding": "R85-B:C1",
+   "sheet": "04_NAV_UX",
+   "row": 126,
+   "col": 2,
+   "field": "UI-VERIFY-UNLISTED.label_en",
+   "old": "The material behind this record has no public original locator, so no source is listed or linked here and no figure from that material is shown. Read the record as an explanation of method, not as a verifiable figure.",
+   "new": "The material behind this record has no public link to its original document, so no source is listed or linked here and no figure from that material is shown. Read the record as an explanation of method, not as a verifiable figure."
+  },
+  {
+   "finding": "R85-B:C1",
+   "sheet": "04_NAV_UX",
+   "row": 127,
+   "col": 2,
+   "field": "UI-READING-PATH-COMPLETE-UNLISTED.label_en",
+   "old": "Every figure in this Reading traces through the records below to a named source. Where a record also rests on material with no public original locator, that material is not listed and no figure from it is shown.",
+   "new": "Every figure in this Reading traces through the records below to a named source. Where a record also rests on material with no public link to its original document, that material is not listed and no figure from it is shown."
+  },
+  {
+   "finding": "R85-B:C1",
+   "sheet": "06_EVIDENCE_OBJECTS",
+   "row": 88,
+   "col": 22,
+   "field": "CLM-044.verification_en",
+   "old": "The material behind this record has no public original locator, so no source is listed or linked here and no figure from that material is shown. Read the record as an explanation of method, not as a verifiable figure.",
+   "new": "The material behind this record has no public link to its original document, so no source is listed or linked here and no figure from that material is shown. Read the record as an explanation of method, not as a verifiable figure."
+  },
+  {
+   "finding": "R85-B:C2",
+   "sheet": "06_EVIDENCE_OBJECTS",
+   "row": 32,
+   "col": 4,
+   "field": "XW-FMIIP-005.title_en",
+   "old": "FMIIP access-point target compared with ATM, POS and agent counts",
+   "new": "The FMIIP access-point target is not comparable with ATM, POS or agent counts"
+  },
+  {
+   "finding": "R85-B:C2",
+   "sheet": "06_EVIDENCE_OBJECTS",
+   "row": 32,
+   "col": 5,
+   "field": "XW-FMIIP-005.title_ar",
+   "old": "مستهدف نقاط الوصول في مشروع FMIIP مقارنةً بأعداد أجهزة الصراف الآلي ونقاط البيع والوكلاء",
+   "new": "مستهدف نقاط الوصول في مشروع FMIIP غير قابل للمقارنة بأعداد أجهزة الصراف الآلي ونقاط البيع والوكلاء"
+  },
+  {
+   "finding": "R85-B:D1",
+   "sheet": "07_PUBLIC_CLAIMS",
+   "row": 22,
+   "col": 5,
+   "field": "CLM-018.evidence_inputs",
+   "old": "[\"73_PAYMENT_CURRENTNESS\",\"REF-PAY-010..013\",\"EP-CBY-PAY-INSTITUTIONAL-2026\"]",
+   "new": "[\"73_PAYMENT_CURRENTNESS\",\"REF-PAY-006\",\"REF-PAY-011\",\"REF-PAY-012\",\"REF-PAY-013\",\"EP-CBY-PAY-INSTITUTIONAL-2026\"]"
+  },
+  {
+   "finding": "R85-B:D2",
+   "sheet": "15_SOURCE_LIBRARY",
+   "row": 151,
+   "col": 8,
+   "field": "SRC-CBY-AR2022-001.resource_category",
+   "old": "Primary administrative and statistical material",
+   "new": "Official Yemen documents and statistics"
+  },
+  {
+   "finding": "R85-B:D2",
+   "sheet": "15_SOURCE_LIBRARY",
+   "row": 151,
+   "col": 13,
+   "field": "SRC-CBY-AR2022-001.resource_category_ar",
+   "old": "مواد إدارية وإحصائية أولية",
+   "new": "الوثائق والإحصاءات الرسمية في اليمن"
+  },
+  {
+   "finding": "R85-B:D2",
+   "sheet": "15_SOURCE_LIBRARY",
+   "row": 152,
+   "col": 8,
+   "field": "SRC-CBY-AR2023-001.resource_category",
+   "old": "Primary administrative and statistical material",
+   "new": "Official Yemen documents and statistics"
+  },
+  {
+   "finding": "R85-B:D2",
+   "sheet": "15_SOURCE_LIBRARY",
+   "row": 152,
+   "col": 13,
+   "field": "SRC-CBY-AR2023-001.resource_category_ar",
+   "old": "مواد إدارية وإحصائية أولية",
+   "new": "الوثائق والإحصاءات الرسمية في اليمن"
+  },
+  {
+   "finding": "R85-B:D2",
+   "sheet": "15_SOURCE_LIBRARY",
+   "row": 108,
+   "col": 8,
+   "field": "SRC-CBY-AR2024-BOP.resource_category",
+   "old": "Primary administrative and statistical material",
+   "new": "Official Yemen documents and statistics"
+  },
+  {
+   "finding": "R85-B:D2",
+   "sheet": "15_SOURCE_LIBRARY",
+   "row": 108,
+   "col": 13,
+   "field": "SRC-CBY-AR2024-BOP.resource_category_ar",
+   "old": "مواد إدارية وإحصائية أولية",
+   "new": "الوثائق والإحصاءات الرسمية في اليمن"
+  },
+  {
+   "finding": "R85-B:D2",
+   "sheet": "15_SOURCE_LIBRARY",
+   "row": 107,
+   "col": 8,
+   "field": "SRC-CBY-AR2025-BOP.resource_category",
+   "old": "Primary administrative and statistical material",
+   "new": "Official Yemen documents and statistics"
+  },
+  {
+   "finding": "R85-B:D2",
+   "sheet": "15_SOURCE_LIBRARY",
+   "row": 107,
+   "col": 13,
+   "field": "SRC-CBY-AR2025-BOP.resource_category_ar",
+   "old": "مواد إدارية وإحصائية أولية",
+   "new": "الوثائق والإحصاءات الرسمية في اليمن"
+  },
+  {
+   "finding": "R85-B:D2",
+   "sheet": "15_SOURCE_LIBRARY",
+   "row": 164,
+   "col": 8,
+   "field": "SRC-CBY-DEC-23-2024-001.resource_category",
+   "old": "Primary administrative and statistical material",
+   "new": "Official Yemen documents and statistics"
+  },
+  {
+   "finding": "R85-B:D2",
+   "sheet": "15_SOURCE_LIBRARY",
+   "row": 164,
+   "col": 13,
+   "field": "SRC-CBY-DEC-23-2024-001.resource_category_ar",
+   "old": "مواد إدارية وإحصائية أولية",
+   "new": "الوثائق والإحصاءات الرسمية في اليمن"
+  },
+  {
+   "finding": "R85-B:D2",
+   "sheet": "15_SOURCE_LIBRARY",
+   "row": 37,
+   "col": 8,
+   "field": "SRC-WB-FSD-2024-001.resource_category",
+   "old": "Yemen financial-sector diagnostics and evidence",
+   "new": "Research and analysis on Yemen’s financial sector"
+  },
+  {
+   "finding": "R85-B:D2",
+   "sheet": "15_SOURCE_LIBRARY",
+   "row": 37,
+   "col": 13,
+   "field": "SRC-WB-FSD-2024-001.resource_category_ar",
+   "old": "تشخيصات وأدلة القطاع المالي في اليمن",
+   "new": "البحوث والتحليلات حول القطاع المالي في اليمن"
+  },
+  {
+   "finding": "R85-B:D2",
+   "sheet": "15_SOURCE_LIBRARY",
+   "row": 47,
+   "col": 8,
+   "field": "SRC-OECD-YEM-RESILIENCE-001.resource_category",
+   "old": "Yemen analytical literature and diagnostics",
+   "new": "Research and analysis on Yemen’s financial sector"
+  },
+  {
+   "finding": "R85-B:D2",
+   "sheet": "15_SOURCE_LIBRARY",
+   "row": 47,
+   "col": 13,
+   "field": "SRC-OECD-YEM-RESILIENCE-001.resource_category_ar",
+   "old": "الأدبيات والتحليلات الخاصة باليمن",
+   "new": "البحوث والتحليلات حول القطاع المالي في اليمن"
+  },
+  {
+   "finding": "R85-B:D2",
+   "sheet": "15_SOURCE_LIBRARY",
+   "row": 127,
+   "col": 8,
+   "field": "SRC-SANAA-EMONEY-2022.resource_category",
+   "old": "Yemen analytical literature and sector context",
+   "new": "Research and analysis on Yemen’s financial sector"
+  },
+  {
+   "finding": "R85-B:D2",
+   "sheet": "15_SOURCE_LIBRARY",
+   "row": 127,
+   "col": 13,
+   "field": "SRC-SANAA-EMONEY-2022.resource_category_ar",
+   "old": "الأدبيات والتحليلات القطاعية الخاصة باليمن",
+   "new": "البحوث والتحليلات حول القطاع المالي في اليمن"
+  },
+  {
+   "finding": "R85-B:D2",
+   "sheet": "15_SOURCE_LIBRARY",
+   "row": 128,
+   "col": 8,
+   "field": "SRC-SANAA-MFB-2024.resource_category",
+   "old": "Yemen analytical literature and sector context",
+   "new": "Research and analysis on Yemen’s financial sector"
+  },
+  {
+   "finding": "R85-B:D2",
+   "sheet": "15_SOURCE_LIBRARY",
+   "row": 128,
+   "col": 13,
+   "field": "SRC-SANAA-MFB-2024.resource_category_ar",
+   "old": "الأدبيات والتحليلات القطاعية الخاصة باليمن",
+   "new": "البحوث والتحليلات حول القطاع المالي في اليمن"
+  },
+  {
+   "finding": "R85-B:D2",
+   "sheet": "15_SOURCE_LIBRARY",
+   "row": 165,
+   "col": 8,
+   "field": "SRC-AMB-MFB-SUPERVISION-2026.resource_category",
+   "old": "Yemen analytical literature and sector context",
+   "new": "Research and analysis on Yemen’s financial sector"
+  },
+  {
+   "finding": "R85-B:D2",
+   "sheet": "15_SOURCE_LIBRARY",
+   "row": 165,
+   "col": 13,
+   "field": "SRC-AMB-MFB-SUPERVISION-2026.resource_category_ar",
+   "old": "الأدبيات والتحليلات القطاعية الخاصة باليمن",
+   "new": "البحوث والتحليلات حول القطاع المالي في اليمن"
+  },
+  {
+   "finding": "R85-B:D2",
+   "sheet": "15_SOURCE_LIBRARY",
+   "row": 99,
+   "col": 8,
+   "field": "SRC-IMF-YEM-AIV-2025-2026.resource_category",
+   "old": "Yemen macro-financial and external-sector context",
+   "new": "Yemen’s economy and policy context"
+  },
+  {
+   "finding": "R85-B:D2",
+   "sheet": "15_SOURCE_LIBRARY",
+   "row": 99,
+   "col": 13,
+   "field": "SRC-IMF-YEM-AIV-2025-2026.resource_category_ar",
+   "old": "السياق الاقتصادي والمالي والقطاع الخارجي في اليمن",
+   "new": "السياق الاقتصادي والسياساتي في اليمن"
+  },
+  {
+   "finding": "R85-B:D2",
+   "sheet": "15_SOURCE_LIBRARY",
+   "row": 112,
+   "col": 8,
+   "field": "SRC-IMF-YEM-SMP-2026.resource_category",
+   "old": "Current Yemen macro-financial and reform context",
+   "new": "Yemen’s economy and policy context"
+  },
+  {
+   "finding": "R85-B:D2",
+   "sheet": "15_SOURCE_LIBRARY",
+   "row": 112,
+   "col": 13,
+   "field": "SRC-IMF-YEM-SMP-2026.resource_category_ar",
+   "old": "السياق الراهن للإصلاح والاقتصاد المالي في اليمن",
+   "new": "السياق الاقتصادي والسياساتي في اليمن"
+  },
+  {
+   "finding": "R85-B:D2",
+   "sheet": "15_SOURCE_LIBRARY",
+   "row": 160,
+   "col": 8,
+   "field": "SRC-WB-YEM-ECON-MONITOR-2026-SPRING-001.resource_category",
+   "old": "Current Yemen macroeconomic and private-sector context",
+   "new": "Yemen’s economy and policy context"
+  },
+  {
+   "finding": "R85-B:D2",
+   "sheet": "15_SOURCE_LIBRARY",
+   "row": 160,
+   "col": 13,
+   "field": "SRC-WB-YEM-ECON-MONITOR-2026-SPRING-001.resource_category_ar",
+   "old": "السياق الاقتصادي الكلي والقطاع الخاص الراهن في اليمن",
+   "new": "السياق الاقتصادي والسياساتي في اليمن"
+  },
+  {
+   "finding": "R85-B:D2",
+   "sheet": "15_SOURCE_LIBRARY",
+   "row": 158,
+   "col": 8,
+   "field": "SRC-WB-YEM-CPF-2026-2030-001.resource_category",
+   "old": "Current Yemen development and private-sector context",
+   "new": "Yemen’s economy and policy context"
+  },
+  {
+   "finding": "R85-B:D2",
+   "sheet": "15_SOURCE_LIBRARY",
+   "row": 158,
+   "col": 13,
+   "field": "SRC-WB-YEM-CPF-2026-2030-001.resource_category_ar",
+   "old": "السياق الراهن للتنمية والقطاع الخاص في اليمن",
+   "new": "السياق الاقتصادي والسياساتي في اليمن"
+  },
+  {
+   "finding": "R85-B:D2",
+   "sheet": "15_SOURCE_LIBRARY",
+   "row": 93,
+   "col": 8,
+   "field": "SRC-WB-FMIIP-ISR2-2026-001.resource_category",
+   "old": "Current Yemen payment-infrastructure programmes",
+   "new": "Programmes and projects in Yemen"
+  },
+  {
+   "finding": "R85-B:D2",
+   "sheet": "15_SOURCE_LIBRARY",
+   "row": 93,
+   "col": 13,
+   "field": "SRC-WB-FMIIP-ISR2-2026-001.resource_category_ar",
+   "old": "برامج البنية التحتية للمدفوعات الجارية في اليمن",
+   "new": "البرامج والمشروعات في اليمن"
+  },
+  {
+   "finding": "R85-B:D2",
+   "sheet": "15_SOURCE_LIBRARY",
+   "row": 137,
+   "col": 8,
+   "field": "SRC-UNDP-FMIIP-001.resource_category",
+   "old": "Current Yemen payment-infrastructure programmes",
+   "new": "Programmes and projects in Yemen"
+  },
+  {
+   "finding": "R85-B:D2",
+   "sheet": "15_SOURCE_LIBRARY",
+   "row": 137,
+   "col": 13,
+   "field": "SRC-UNDP-FMIIP-001.resource_category_ar",
+   "old": "برامج البنية التحتية للمدفوعات الجارية في اليمن",
+   "new": "البرامج والمشروعات في اليمن"
+  },
+  {
+   "finding": "R85-B:D2",
+   "sheet": "15_SOURCE_LIBRARY",
+   "row": 148,
+   "col": 8,
+   "field": "SRC-WB-FMIIP-P180708.resource_category",
+   "old": "Current Yemen payment-infrastructure programmes",
+   "new": "Programmes and projects in Yemen"
+  },
+  {
+   "finding": "R85-B:D2",
+   "sheet": "15_SOURCE_LIBRARY",
+   "row": 148,
+   "col": 13,
+   "field": "SRC-WB-FMIIP-P180708.resource_category_ar",
+   "old": "برامج البنية التحتية للمدفوعات الجارية في اليمن",
+   "new": "البرامج والمشروعات في اليمن"
+  },
+  {
+   "finding": "R85-B:D2",
+   "sheet": "15_SOURCE_LIBRARY",
+   "row": 161,
+   "col": 8,
+   "field": "SRC-KFW-YEM-MSME-FIN-III-47229.resource_category",
+   "old": "Current Yemen MSME and microfinance programmes",
+   "new": "Programmes and projects in Yemen"
+  },
+  {
+   "finding": "R85-B:D2",
+   "sheet": "15_SOURCE_LIBRARY",
+   "row": 161,
+   "col": 13,
+   "field": "SRC-KFW-YEM-MSME-FIN-III-47229.resource_category_ar",
+   "old": "برامج المنشآت الصغيرة والتمويل الأصغر الجارية في اليمن",
+   "new": "البرامج والمشروعات في اليمن"
+  },
+  {
+   "finding": "R85-B:D2",
+   "sheet": "15_SOURCE_LIBRARY",
+   "row": 159,
+   "col": 8,
+   "field": "SRC-WB-YEM-CNL-2026-001.resource_category",
+   "old": "Current Yemen cash-transfer and livelihood programmes",
+   "new": "Programmes and projects in Yemen"
+  },
+  {
+   "finding": "R85-B:D2",
+   "sheet": "15_SOURCE_LIBRARY",
+   "row": 159,
+   "col": 13,
+   "field": "SRC-WB-YEM-CNL-2026-001.resource_category_ar",
+   "old": "برامج التحويلات النقدية وسبل العيش الجارية في اليمن",
+   "new": "البرامج والمشروعات في اليمن"
+  },
+  {
+   "finding": "R85-B:D2",
+   "sheet": "15_SOURCE_LIBRARY",
+   "row": 162,
+   "col": 8,
+   "field": "SRC-WB-G2PX-YEM-UCT-2024-001.resource_category",
+   "old": "Yemen cash-transfer digitisation and recipient financial-service exposure",
+   "new": "Programmes and projects in Yemen"
+  },
+  {
+   "finding": "R85-B:D2",
+   "sheet": "15_SOURCE_LIBRARY",
+   "row": 162,
+   "col": 13,
+   "field": "SRC-WB-G2PX-YEM-UCT-2024-001.resource_category_ar",
+   "old": "رقمنة التحويلات النقدية في اليمن والتعرض لخدمة مالية رسمية",
+   "new": "البرامج والمشروعات في اليمن"
+  },
+  {
+   "finding": "R85-B:D2",
+   "sheet": "15_SOURCE_LIBRARY",
+   "row": 146,
+   "col": 8,
+   "field": "SRC-OECD-INFE-2023.resource_category",
+   "old": "Global/regional measurement standards and methods",
+   "new": "Measurement standards and methods"
+  },
+  {
+   "finding": "R85-B:D2",
+   "sheet": "15_SOURCE_LIBRARY",
+   "row": 146,
+   "col": 13,
+   "field": "SRC-OECD-INFE-2023.resource_category_ar",
+   "old": "معايير ومناهج القياس العالمية والإقليمية",
+   "new": "معايير القياس ومناهجه"
+  },
+  {
+   "finding": "R85-B:D2",
+   "sheet": "15_SOURCE_LIBRARY",
+   "row": 147,
+   "col": 8,
+   "field": "SRC-WB-FINDEX-2025-EDITION.resource_category",
+   "old": "Global/regional measurement standards and methods",
+   "new": "Measurement standards and methods"
+  },
+  {
+   "finding": "R85-B:D2",
+   "sheet": "15_SOURCE_LIBRARY",
+   "row": 147,
+   "col": 13,
+   "field": "SRC-WB-FINDEX-2025-EDITION.resource_category_ar",
+   "old": "معايير ومناهج القياس العالمية والإقليمية",
+   "new": "معايير القياس ومناهجه"
+  },
+  {
+   "finding": "R85-B:D2",
+   "sheet": "15_SOURCE_LIBRARY",
+   "row": 149,
+   "col": 8,
+   "field": "SRC-CGAP-ARAB-MEAS-2017-001.resource_category",
+   "old": "Global/regional measurement standards and methods",
+   "new": "Measurement standards and methods"
+  },
+  {
+   "finding": "R85-B:D2",
+   "sheet": "15_SOURCE_LIBRARY",
+   "row": 149,
+   "col": 13,
+   "field": "SRC-CGAP-ARAB-MEAS-2017-001.resource_category_ar",
+   "old": "معايير ومناهج القياس العالمية والإقليمية",
+   "new": "معايير القياس ومناهجه"
+  },
+  {
+   "finding": "R85-B:D2",
+   "sheet": "15_SOURCE_LIBRARY",
+   "row": 150,
+   "col": 8,
+   "field": "SRC-OECD-YOUTH-DFI-2020-001.resource_category",
+   "old": "Global/regional measurement standards and methods",
+   "new": "Measurement standards and methods"
+  },
+  {
+   "finding": "R85-B:D2",
+   "sheet": "15_SOURCE_LIBRARY",
+   "row": 150,
+   "col": 13,
+   "field": "SRC-OECD-YOUTH-DFI-2020-001.resource_category_ar",
+   "old": "معايير ومناهج القياس العالمية والإقليمية",
+   "new": "معايير القياس ومناهجه"
+  },
+  {
+   "finding": "R85-B:D2",
+   "sheet": "15_SOURCE_LIBRARY",
+   "row": 154,
+   "col": 8,
+   "field": "SRC-BIS-CPMI-FPS-RTGS-2021-001.resource_category",
+   "old": "Global payment-system implementation and design references",
+   "new": "Payment-system design and digital payments"
+  },
+  {
+   "finding": "R85-B:D2",
+   "sheet": "15_SOURCE_LIBRARY",
+   "row": 154,
+   "col": 13,
+   "field": "SRC-BIS-CPMI-FPS-RTGS-2021-001.resource_category_ar",
+   "old": "مراجع عالمية لتصميم وتنفيذ أنظمة المدفوعات",
+   "new": "تصميم أنظمة الدفع والمدفوعات الرقمية"
+  },
+  {
+   "finding": "R85-B:D2",
+   "sheet": "15_SOURCE_LIBRARY",
+   "row": 156,
+   "col": 8,
+   "field": "SRC-WB-FASTT-FPS-2021-001.resource_category",
+   "old": "Global payment-system implementation and design references",
+   "new": "Payment-system design and digital payments"
+  },
+  {
+   "finding": "R85-B:D2",
+   "sheet": "15_SOURCE_LIBRARY",
+   "row": 156,
+   "col": 13,
+   "field": "SRC-WB-FASTT-FPS-2021-001.resource_category_ar",
+   "old": "مراجع عالمية لتصميم وتنفيذ أنظمة المدفوعات",
+   "new": "تصميم أنظمة الدفع والمدفوعات الرقمية"
+  },
+  {
+   "finding": "R85-B:D2",
+   "sheet": "15_SOURCE_LIBRARY",
+   "row": 157,
+   "col": 8,
+   "field": "SRC-WB-G2PX-001.resource_category",
+   "old": "Digital public payments and inclusion practice",
+   "new": "Payment-system design and digital payments"
+  },
+  {
+   "finding": "R85-B:D2",
+   "sheet": "15_SOURCE_LIBRARY",
+   "row": 157,
+   "col": 13,
+   "field": "SRC-WB-G2PX-001.resource_category_ar",
+   "old": "ممارسات المدفوعات العامة الرقمية والشمول المالي",
+   "new": "تصميم أنظمة الدفع والمدفوعات الرقمية"
+  },
+  {
+   "finding": "R85-B:D2",
+   "sheet": "15_SOURCE_LIBRARY",
+   "row": 155,
+   "col": 8,
+   "field": "SRC-BIS-CPMI-PAFI-FINTECH-2020-001.resource_category",
+   "old": "Global financial-inclusion measurement and implementation references",
+   "new": "Payment-system design and digital payments"
+  },
+  {
+   "finding": "R85-B:D2",
+   "sheet": "15_SOURCE_LIBRARY",
+   "row": 155,
+   "col": 13,
+   "field": "SRC-BIS-CPMI-PAFI-FINTECH-2020-001.resource_category_ar",
+   "old": "مراجع عالمية لقياس وتنفيذ الشمول المالي",
+   "new": "تصميم أنظمة الدفع والمدفوعات الرقمية"
+  },
+  {
+   "finding": "R85-B:D3",
+   "sheet": "33_ANALYTICS_MASTER",
+   "row": 28,
+   "col": 3,
+   "field": "DA-023.label",
+   "old": "Women's account ownership observed-wave change",
+   "new": "Women's account ownership: difference between observed waves"
+  },
+  {
+   "finding": "R85-B:D3",
+   "sheet": "33_ANALYTICS_MASTER",
+   "row": 29,
+   "col": 3,
+   "field": "DA-024.label",
+   "old": "Poorest-40 account ownership observed-wave change",
+   "new": "Poorest-40 account ownership: difference between observed waves"
+  },
+  {
+   "finding": "R85-B:D4",
+   "sheet": "03_PAGE_SECTIONS",
+   "row": 13,
+   "col": 7,
+   "field": "03_PAGE_SECTIONS!r13c7 NFC",
+   "old": "تُحدَّث المسوح السكانية وبيانات المدفوعات الإدارية وقرارات أوضاع مقدمي الخدمات وتقارير البرامج والسلاسل الاقتصادية في أوقات مختلفة. لذلك تعرض كل إجابة الفترة التي يغطيها قياسها فعلًا. و«الأحدث» تعني الأحدث لذلك السؤال أو المقياس، لا الأحدث لليمن كله.",
+   "new": "تُحدَّث المسوح السكانية وبيانات المدفوعات الإدارية وقرارات أوضاع مقدمي الخدمات وتقارير البرامج والسلاسل الاقتصادية في أوقات مختلفة. لذلك تعرض كل إجابة الفترة التي يغطيها قياسها فعلًا. و«الأحدث» تعني الأحدث لذلك السؤال أو المقياس، لا الأحدث لليمن كله."
+  },
+  {
+   "finding": "R85-B:D4",
+   "sheet": "03_PAGE_SECTIONS",
+   "row": 15,
+   "col": 7,
+   "field": "03_PAGE_SECTIONS!r15c7 NFC",
+   "old": "قد يسهم الإصلاح أو نظام الدفع أو البرنامج في الشمول عبر سلسلة تبدأ بالقاعدة التنظيمية أو الاستثمار، ثم التنفيذ، ثم التشغيل، ثم إتاحة الوصول (أن تكون الخدمة في متناول الناس)، ثم الاستخدام الفعلي، ثم جودة الخدمة والحماية، ثم النتيجة. تتوقف الأدلة عند أبعد مرحلة تسندها فعلًا، ولا تتجاوز حلقة لم تُقَس. وفي الصورة الأوسع يرتبط الناس والقدرات، والمنشآت والدخل، ومقدمو الخدمات، وبنية المدفوعات، وتدفقات التحويلات ورأس المال، والتنظيم وحماية المستهلك، والقيود المُمكِّنة أو المعطِّلة، لكنها ليست أشياء قابلة للاستبدال. وتوضح الروابط السياق أو الاعتماد أو آليات محتملة عندما تسندها الأدلة؛ ولا تُعرض كأسهم سببية أو كمؤشر مركب.",
+   "new": "قد يسهم الإصلاح أو نظام الدفع أو البرنامج في الشمول عبر سلسلة تبدأ بالقاعدة التنظيمية أو الاستثمار، ثم التنفيذ، ثم التشغيل، ثم إتاحة الوصول (أن تكون الخدمة في متناول الناس)، ثم الاستخدام الفعلي، ثم جودة الخدمة والحماية، ثم النتيجة. تتوقف الأدلة عند أبعد مرحلة تسندها فعلًا، ولا تتجاوز حلقة لم تُقَس. وفي الصورة الأوسع يرتبط الناس والقدرات، والمنشآت والدخل، ومقدمو الخدمات، وبنية المدفوعات، وتدفقات التحويلات ورأس المال، والتنظيم وحماية المستهلك، والقيود المُمكِّنة أو المعطِّلة، لكنها ليست أشياء قابلة للاستبدال. وتوضح الروابط السياق أو الاعتماد أو آليات محتملة عندما تسندها الأدلة؛ ولا تُعرض كأسهم سببية أو كمؤشر مركب."
+  },
+  {
+   "finding": "R85-B:D4",
+   "sheet": "03_PAGE_SECTIONS",
+   "row": 45,
+   "col": 7,
+   "field": "03_PAGE_SECTIONS!r45c7 NFC",
+   "old": "غياب سجلٍّ لموقع جغرافي ما لا يثبت أن الخدمة غير موجودة فيه. وحيث يتعذر التحقق من التشغيل، تُعرض نقطة الخدمة على أنها غير مرصودة أو لا تتوافر عنها أدلة حالية، لا باعتبارها صفرًا. كما لا يُحوَّل الترخيص أو اسم الفرع أو دراسة تاريخية لمقدم خدمة إلى دليل على وجود تشغيلي حالي.",
+   "new": "غياب سجلٍّ لموقع جغرافي ما لا يثبت أن الخدمة غير موجودة فيه. وحيث يتعذر التحقق من التشغيل، تُعرض نقطة الخدمة على أنها غير مرصودة أو لا تتوافر عنها أدلة حالية، لا باعتبارها صفرًا. كما لا يُحوَّل الترخيص أو اسم الفرع أو دراسة تاريخية لمقدم خدمة إلى دليل على وجود تشغيلي حالي."
+  },
+  {
+   "finding": "R85-B:D4",
+   "sheet": "03_PAGE_SECTIONS",
+   "row": 150,
+   "col": 7,
+   "field": "03_PAGE_SECTIONS!r150c7 NFC",
+   "old": "عند تنفيذ قياس جديد، يُقيَّم الدليل الناتج مقابل القرار الذي كان القياس يهدف إلى تحسينه. فإذا أصبح السؤال قابلًا للإجابة تُغلق الفجوة أو تضيق، وإذا ظهر تعارض أو مجهول جديد يُراجع البند مع الحفاظ على المرجع نفسه حتى يبقى تاريخه قابلًا للتتبع.",
+   "new": "عند تنفيذ قياس جديد، يُقيَّم الدليل الناتج مقابل القرار الذي كان القياس يهدف إلى تحسينه. فإذا أصبح السؤال قابلًا للإجابة تُغلق الفجوة أو تضيق، وإذا ظهر تعارض أو مجهول جديد يُراجع البند مع الحفاظ على المرجع نفسه حتى يبقى تاريخه قابلًا للتتبع."
+  },
+  {
+   "finding": "R85-B:D4",
+   "sheet": "06_EVIDENCE_OBJECTS",
+   "row": 11,
+   "col": 13,
+   "field": "06_EVIDENCE_OBJECTS!r11c13 NFC",
+   "old": "الأشخاص والمنشآت ومقدمو الخدمات وبنية المدفوعات والتدفقات والقواعد التنظيمية والقيود المُمكِّنة أو المعطلة التي تغطيها الأدلة المرتبطة بهذا الملخص.",
+   "new": "الأشخاص والمنشآت ومقدمو الخدمات وبنية المدفوعات والتدفقات والقواعد التنظيمية والقيود المُمكِّنة أو المعطلة التي تغطيها الأدلة المرتبطة بهذا الملخص."
+  },
+  {
+   "finding": "R85-B:D4",
+   "sheet": "06_EVIDENCE_OBJECTS",
+   "row": 11,
+   "col": 21,
+   "field": "06_EVIDENCE_OBJECTS!r11c21 NFC",
+   "old": "يُحدَّث هذا السجل عند مراجعة المصدر المعتمد أو استبداله، أو توفر مشاهدة أحدث قابلة للمقارنة، أو تغير التعريف أو المجتمع أو الطريقة، أو تغير شروط الاستخدام العام.",
+   "new": "يُحدَّث هذا السجل عند مراجعة المصدر المعتمد أو استبداله، أو توفر مشاهدة أحدث قابلة للمقارنة، أو تغير التعريف أو المجتمع أو الطريقة، أو تغير شروط الاستخدام العام."
+  },
+  {
+   "finding": "R85-B:D4",
+   "sheet": "06_EVIDENCE_OBJECTS",
+   "row": 12,
+   "col": 21,
+   "field": "06_EVIDENCE_OBJECTS!r12c21 NFC",
+   "old": "يُحدَّث هذا السجل عند مراجعة المصدر المعتمد أو استبداله، أو توفر مشاهدة أحدث قابلة للمقارنة، أو تغير التعريف أو المجتمع أو الطريقة، أو تغير شروط الاستخدام العام.",
+   "new": "يُحدَّث هذا السجل عند مراجعة المصدر المعتمد أو استبداله، أو توفر مشاهدة أحدث قابلة للمقارنة، أو تغير التعريف أو المجتمع أو الطريقة، أو تغير شروط الاستخدام العام."
+  },
+  {
+   "finding": "R85-B:D4",
+   "sheet": "06_EVIDENCE_OBJECTS",
+   "row": 13,
+   "col": 21,
+   "field": "06_EVIDENCE_OBJECTS!r13c21 NFC",
+   "old": "يُحدَّث هذا السجل عند مراجعة المصدر المعتمد أو استبداله، أو توفر مشاهدة أحدث قابلة للمقارنة، أو تغير التعريف أو المجتمع أو الطريقة، أو تغير شروط الاستخدام العام.",
+   "new": "يُحدَّث هذا السجل عند مراجعة المصدر المعتمد أو استبداله، أو توفر مشاهدة أحدث قابلة للمقارنة، أو تغير التعريف أو المجتمع أو الطريقة، أو تغير شروط الاستخدام العام."
+  },
+  {
+   "finding": "R85-B:D4",
+   "sheet": "06_EVIDENCE_OBJECTS",
+   "row": 17,
+   "col": 21,
+   "field": "06_EVIDENCE_OBJECTS!r17c21 NFC",
+   "old": "يُحدَّث هذا السجل عند مراجعة المصدر المعتمد أو استبداله، أو توفر مشاهدة أحدث قابلة للمقارنة، أو تغير التعريف أو المجتمع أو الطريقة، أو تغير شروط الاستخدام العام.",
+   "new": "يُحدَّث هذا السجل عند مراجعة المصدر المعتمد أو استبداله، أو توفر مشاهدة أحدث قابلة للمقارنة، أو تغير التعريف أو المجتمع أو الطريقة، أو تغير شروط الاستخدام العام."
+  },
+  {
+   "finding": "R85-B:D4",
+   "sheet": "06_EVIDENCE_OBJECTS",
+   "row": 20,
+   "col": 21,
+   "field": "06_EVIDENCE_OBJECTS!r20c21 NFC",
+   "old": "يُحدَّث هذا السجل عند مراجعة المصدر المعتمد أو استبداله، أو توفر مشاهدة أحدث قابلة للمقارنة، أو تغير التعريف أو المجتمع أو الطريقة، أو تغير شروط الاستخدام العام.",
+   "new": "يُحدَّث هذا السجل عند مراجعة المصدر المعتمد أو استبداله، أو توفر مشاهدة أحدث قابلة للمقارنة، أو تغير التعريف أو المجتمع أو الطريقة، أو تغير شروط الاستخدام العام."
+  },
+  {
+   "finding": "R85-B:D4",
+   "sheet": "06_EVIDENCE_OBJECTS",
+   "row": 25,
+   "col": 21,
+   "field": "06_EVIDENCE_OBJECTS!r25c21 NFC",
+   "old": "يُحدَّث هذا السجل عند مراجعة المصدر المعتمد أو استبداله، أو توفر مشاهدة أحدث قابلة للمقارنة، أو تغير التعريف أو المجتمع أو الطريقة، أو تغير شروط الاستخدام العام.",
+   "new": "يُحدَّث هذا السجل عند مراجعة المصدر المعتمد أو استبداله، أو توفر مشاهدة أحدث قابلة للمقارنة، أو تغير التعريف أو المجتمع أو الطريقة، أو تغير شروط الاستخدام العام."
+  },
+  {
+   "finding": "R85-B:D4",
+   "sheet": "06_EVIDENCE_OBJECTS",
+   "row": 26,
+   "col": 21,
+   "field": "06_EVIDENCE_OBJECTS!r26c21 NFC",
+   "old": "يُحدَّث هذا السجل عند مراجعة المصدر المعتمد أو استبداله، أو توفر مشاهدة أحدث قابلة للمقارنة، أو تغير التعريف أو المجتمع أو الطريقة، أو تغير شروط الاستخدام العام.",
+   "new": "يُحدَّث هذا السجل عند مراجعة المصدر المعتمد أو استبداله، أو توفر مشاهدة أحدث قابلة للمقارنة، أو تغير التعريف أو المجتمع أو الطريقة، أو تغير شروط الاستخدام العام."
+  },
+  {
+   "finding": "R85-B:D4",
+   "sheet": "06_EVIDENCE_OBJECTS",
+   "row": 27,
+   "col": 21,
+   "field": "06_EVIDENCE_OBJECTS!r27c21 NFC",
+   "old": "يُحدَّث هذا السجل عند مراجعة المصدر المعتمد أو استبداله، أو توفر مشاهدة أحدث قابلة للمقارنة، أو تغير التعريف أو المجتمع أو الطريقة، أو تغير شروط الاستخدام العام.",
+   "new": "يُحدَّث هذا السجل عند مراجعة المصدر المعتمد أو استبداله، أو توفر مشاهدة أحدث قابلة للمقارنة، أو تغير التعريف أو المجتمع أو الطريقة، أو تغير شروط الاستخدام العام."
+  },
+  {
+   "finding": "R85-B:D4",
+   "sheet": "06_EVIDENCE_OBJECTS",
+   "row": 33,
+   "col": 21,
+   "field": "06_EVIDENCE_OBJECTS!r33c21 NFC",
+   "old": "يُحدَّث هذا السجل عند مراجعة المصدر المعتمد أو استبداله، أو توفر مشاهدة أحدث قابلة للمقارنة، أو تغير التعريف أو المجتمع أو الطريقة، أو تغير شروط الاستخدام العام.",
+   "new": "يُحدَّث هذا السجل عند مراجعة المصدر المعتمد أو استبداله، أو توفر مشاهدة أحدث قابلة للمقارنة، أو تغير التعريف أو المجتمع أو الطريقة، أو تغير شروط الاستخدام العام."
+  },
+  {
+   "finding": "R85-B:D4",
+   "sheet": "06_EVIDENCE_OBJECTS",
+   "row": 35,
+   "col": 21,
+   "field": "06_EVIDENCE_OBJECTS!r35c21 NFC",
+   "old": "يُحدَّث هذا السجل عند مراجعة المصدر المعتمد أو استبداله، أو توفر مشاهدة أحدث قابلة للمقارنة، أو تغير التعريف أو المجتمع أو الطريقة، أو تغير شروط الاستخدام العام.",
+   "new": "يُحدَّث هذا السجل عند مراجعة المصدر المعتمد أو استبداله، أو توفر مشاهدة أحدث قابلة للمقارنة، أو تغير التعريف أو المجتمع أو الطريقة، أو تغير شروط الاستخدام العام."
+  },
+  {
+   "finding": "R85-B:D4",
+   "sheet": "06_EVIDENCE_OBJECTS",
+   "row": 36,
+   "col": 21,
+   "field": "06_EVIDENCE_OBJECTS!r36c21 NFC",
+   "old": "يُحدَّث هذا السجل عند مراجعة المصدر المعتمد أو استبداله، أو توفر مشاهدة أحدث قابلة للمقارنة، أو تغير التعريف أو المجتمع أو الطريقة، أو تغير شروط الاستخدام العام.",
+   "new": "يُحدَّث هذا السجل عند مراجعة المصدر المعتمد أو استبداله، أو توفر مشاهدة أحدث قابلة للمقارنة، أو تغير التعريف أو المجتمع أو الطريقة، أو تغير شروط الاستخدام العام."
+  },
+  {
+   "finding": "R85-B:D4",
+   "sheet": "06_EVIDENCE_OBJECTS",
+   "row": 37,
+   "col": 21,
+   "field": "06_EVIDENCE_OBJECTS!r37c21 NFC",
+   "old": "يُحدَّث هذا السجل عند توفر قياس سكاني أحدث قابل للمقارنة للقدرات، أو تقييم للبرنامج، أو تصحيح في أدلة المصدر.",
+   "new": "يُحدَّث هذا السجل عند توفر قياس سكاني أحدث قابل للمقارنة للقدرات، أو تقييم للبرنامج، أو تصحيح في أدلة المصدر."
+  },
+  {
+   "finding": "R85-B:D4",
+   "sheet": "06_EVIDENCE_OBJECTS",
+   "row": 41,
+   "col": 13,
+   "field": "06_EVIDENCE_OBJECTS!r41c13 NFC",
+   "old": "مجموعة محددة مسبقًا من 32 مقياسًا تُقدَّر من بيانات المستجيبين المصرح باستخدامها وبأوزان المسح؛ التعريفات جاهزة، بينما ما تزال التقديرات المخصصة تحتاج إلى الاحتساب والتحقق.",
+   "new": "مجموعة محددة مسبقًا من 32 مقياسًا تُقدَّر من بيانات المستجيبين المصرح باستخدامها وبأوزان المسح؛ التعريفات جاهزة، بينما ما تزال التقديرات المخصصة تحتاج إلى الاحتساب والتحقق."
+  },
+  {
+   "finding": "R85-B:D4",
+   "sheet": "06_EVIDENCE_OBJECTS",
+   "row": 63,
+   "col": 21,
+   "field": "06_EVIDENCE_OBJECTS!r63c21 NFC",
+   "old": "يُحدَّث هذا السجل عند مراجعة المصدر المعتمد أو استبداله، أو توفر مشاهدة أحدث قابلة للمقارنة، أو تغير التعريف أو المجتمع أو الطريقة، أو تغير شروط الاستخدام العام.",
+   "new": "يُحدَّث هذا السجل عند مراجعة المصدر المعتمد أو استبداله، أو توفر مشاهدة أحدث قابلة للمقارنة، أو تغير التعريف أو المجتمع أو الطريقة، أو تغير شروط الاستخدام العام."
+  },
+  {
+   "finding": "R85-B:D4",
+   "sheet": "06_EVIDENCE_OBJECTS",
+   "row": 64,
+   "col": 21,
+   "field": "06_EVIDENCE_OBJECTS!r64c21 NFC",
+   "old": "يُحدَّث هذا السجل عند مراجعة المصدر المعتمد أو استبداله، أو توفر مشاهدة أحدث قابلة للمقارنة، أو تغير التعريف أو المجتمع أو الطريقة، أو تغير شروط الاستخدام العام.",
+   "new": "يُحدَّث هذا السجل عند مراجعة المصدر المعتمد أو استبداله، أو توفر مشاهدة أحدث قابلة للمقارنة، أو تغير التعريف أو المجتمع أو الطريقة، أو تغير شروط الاستخدام العام."
+  },
+  {
+   "finding": "R85-B:D4",
+   "sheet": "06_EVIDENCE_OBJECTS",
+   "row": 70,
+   "col": 21,
+   "field": "06_EVIDENCE_OBJECTS!r70c21 NFC",
+   "old": "يُحدَّث هذا السجل عند مراجعة المصدر المعتمد أو استبداله، أو توفر مشاهدة أحدث قابلة للمقارنة، أو تغير التعريف أو المجتمع أو الطريقة، أو تغير شروط الاستخدام العام.",
+   "new": "يُحدَّث هذا السجل عند مراجعة المصدر المعتمد أو استبداله، أو توفر مشاهدة أحدث قابلة للمقارنة، أو تغير التعريف أو المجتمع أو الطريقة، أو تغير شروط الاستخدام العام."
+  },
+  {
+   "finding": "R85-B:D4",
+   "sheet": "06_EVIDENCE_OBJECTS",
+   "row": 77,
+   "col": 21,
+   "field": "06_EVIDENCE_OBJECTS!r77c21 NFC",
+   "old": "يُحدَّث هذا السجل عند مراجعة المصدر المعتمد أو استبداله، أو توفر مشاهدة أحدث قابلة للمقارنة، أو تغير التعريف أو المجتمع أو الطريقة، أو تغير شروط الاستخدام العام.",
+   "new": "يُحدَّث هذا السجل عند مراجعة المصدر المعتمد أو استبداله، أو توفر مشاهدة أحدث قابلة للمقارنة، أو تغير التعريف أو المجتمع أو الطريقة، أو تغير شروط الاستخدام العام."
+  },
+  {
+   "finding": "R85-B:D4",
+   "sheet": "06_EVIDENCE_OBJECTS",
+   "row": 78,
+   "col": 21,
+   "field": "06_EVIDENCE_OBJECTS!r78c21 NFC",
+   "old": "يُحدَّث هذا السجل عند مراجعة المصدر المعتمد أو استبداله، أو توفر مشاهدة أحدث قابلة للمقارنة، أو تغير التعريف أو المجتمع أو الطريقة، أو تغير شروط الاستخدام العام.",
+   "new": "يُحدَّث هذا السجل عند مراجعة المصدر المعتمد أو استبداله، أو توفر مشاهدة أحدث قابلة للمقارنة، أو تغير التعريف أو المجتمع أو الطريقة، أو تغير شروط الاستخدام العام."
+  },
+  {
+   "finding": "R85-B:D4",
+   "sheet": "06_EVIDENCE_OBJECTS",
+   "row": 80,
+   "col": 21,
+   "field": "06_EVIDENCE_OBJECTS!r80c21 NFC",
+   "old": "يُحدَّث هذا السجل عند مراجعة المصدر المعتمد أو استبداله، أو توفر مشاهدة أحدث قابلة للمقارنة، أو تغير التعريف أو المجتمع أو الطريقة، أو تغير شروط الاستخدام العام.",
+   "new": "يُحدَّث هذا السجل عند مراجعة المصدر المعتمد أو استبداله، أو توفر مشاهدة أحدث قابلة للمقارنة، أو تغير التعريف أو المجتمع أو الطريقة، أو تغير شروط الاستخدام العام."
+  },
+  {
+   "finding": "R85-B:D4",
+   "sheet": "06_EVIDENCE_OBJECTS",
+   "row": 82,
+   "col": 21,
+   "field": "06_EVIDENCE_OBJECTS!r82c21 NFC",
+   "old": "يُحدَّث هذا السجل عند مراجعة المصدر المعتمد أو استبداله، أو توفر مشاهدة أحدث قابلة للمقارنة، أو تغير التعريف أو المجتمع أو الطريقة، أو تغير شروط الاستخدام العام.",
+   "new": "يُحدَّث هذا السجل عند مراجعة المصدر المعتمد أو استبداله، أو توفر مشاهدة أحدث قابلة للمقارنة، أو تغير التعريف أو المجتمع أو الطريقة، أو تغير شروط الاستخدام العام."
+  },
+  {
+   "finding": "R85-B:D4",
+   "sheet": "06_EVIDENCE_OBJECTS",
+   "row": 97,
+   "col": 21,
+   "field": "06_EVIDENCE_OBJECTS!r97c21 NFC",
+   "old": "يُحدَّث هذا السجل عند مراجعة المصدر المعتمد أو استبداله، أو توفر مشاهدة أحدث قابلة للمقارنة، أو تغير التعريف أو المجتمع أو الطريقة، أو تغير شروط الاستخدام العام.",
+   "new": "يُحدَّث هذا السجل عند مراجعة المصدر المعتمد أو استبداله، أو توفر مشاهدة أحدث قابلة للمقارنة، أو تغير التعريف أو المجتمع أو الطريقة، أو تغير شروط الاستخدام العام."
+  },
+  {
+   "finding": "R85-B:D4",
+   "sheet": "06_EVIDENCE_OBJECTS",
+   "row": 98,
+   "col": 21,
+   "field": "06_EVIDENCE_OBJECTS!r98c21 NFC",
+   "old": "يُحدَّث هذا السجل عند مراجعة المصدر المعتمد أو استبداله، أو توفر مشاهدة أحدث قابلة للمقارنة، أو تغير التعريف أو المجتمع أو الطريقة، أو تغير شروط الاستخدام العام.",
+   "new": "يُحدَّث هذا السجل عند مراجعة المصدر المعتمد أو استبداله، أو توفر مشاهدة أحدث قابلة للمقارنة، أو تغير التعريف أو المجتمع أو الطريقة، أو تغير شروط الاستخدام العام."
+  },
+  {
+   "finding": "R85-B:D4",
+   "sheet": "06_EVIDENCE_OBJECTS",
+   "row": 100,
+   "col": 21,
+   "field": "06_EVIDENCE_OBJECTS!r100c21 NFC",
+   "old": "يُحدَّث هذا السجل عند مراجعة المصدر المعتمد أو استبداله، أو توفر مشاهدة أحدث قابلة للمقارنة، أو تغير التعريف أو المجتمع أو الطريقة، أو تغير شروط الاستخدام العام.",
+   "new": "يُحدَّث هذا السجل عند مراجعة المصدر المعتمد أو استبداله، أو توفر مشاهدة أحدث قابلة للمقارنة، أو تغير التعريف أو المجتمع أو الطريقة، أو تغير شروط الاستخدام العام."
+  },
+  {
+   "finding": "R85-B:D4",
+   "sheet": "06_EVIDENCE_OBJECTS",
+   "row": 101,
+   "col": 21,
+   "field": "06_EVIDENCE_OBJECTS!r101c21 NFC",
+   "old": "يُحدَّث هذا السجل عند مراجعة المصدر المعتمد أو استبداله، أو توفر مشاهدة أحدث قابلة للمقارنة، أو تغير التعريف أو المجتمع أو الطريقة، أو تغير شروط الاستخدام العام.",
+   "new": "يُحدَّث هذا السجل عند مراجعة المصدر المعتمد أو استبداله، أو توفر مشاهدة أحدث قابلة للمقارنة، أو تغير التعريف أو المجتمع أو الطريقة، أو تغير شروط الاستخدام العام."
+  },
+  {
+   "finding": "R85-B:D4",
+   "sheet": "06_EVIDENCE_OBJECTS",
+   "row": 102,
+   "col": 21,
+   "field": "06_EVIDENCE_OBJECTS!r102c21 NFC",
+   "old": "يُحدَّث هذا السجل عند مراجعة المصدر المعتمد أو استبداله، أو توفر مشاهدة أحدث قابلة للمقارنة، أو تغير التعريف أو المجتمع أو الطريقة، أو تغير شروط الاستخدام العام.",
+   "new": "يُحدَّث هذا السجل عند مراجعة المصدر المعتمد أو استبداله، أو توفر مشاهدة أحدث قابلة للمقارنة، أو تغير التعريف أو المجتمع أو الطريقة، أو تغير شروط الاستخدام العام."
+  },
+  {
+   "finding": "R85-B:D4",
+   "sheet": "08_READINGS",
+   "row": 7,
+   "col": 16,
+   "field": "08_READINGS!r7c16 NFC",
+   "old": "لا تُحوَّل الحسابات أو الحسابات النشطة أو المشتركون أو المحافظ الإلكترونية أو الأجهزة أو المعاملات إلى أشخاص فريدين، ولا يُقارن مستهدف بنتيجة إذا اختلفت الوحدة أو المجتمع الذي ينطبق عليه الرقم أو تعريف النشاط.",
+   "new": "لا تُحوَّل الحسابات أو الحسابات النشطة أو المشتركون أو المحافظ الإلكترونية أو الأجهزة أو المعاملات إلى أشخاص فريدين، ولا يُقارن مستهدف بنتيجة إذا اختلفت الوحدة أو المجتمع الذي ينطبق عليه الرقم أو تعريف النشاط."
+  },
+  {
+   "finding": "R85-B:D4",
+   "sheet": "32_QUAL_LITERATURE",
+   "row": 55,
+   "col": 3,
+   "field": "32_QUAL_LITERATURE!r55c3 NFC",
+   "old": "البيئة المُمكِّنة للتمويل الرقمي",
+   "new": "البيئة المُمكِّنة للتمويل الرقمي"
+  },
+  {
+   "finding": "R85-B:D1",
+   "sheet": "31_REFORMS_REGULATION",
+   "row": 18,
+   "col": null,
+   "field": "row deleted (duplicate event)",
+   "old": null,
+   "new": null
+  },
+  {
+   "finding": "R85-B:D1",
+   "sheet": "31_REFORMS_REGULATION",
+   "row": 12,
+   "col": null,
+   "field": "row deleted (duplicate event)",
+   "old": null,
+   "new": null
+  }
+ ]
+}

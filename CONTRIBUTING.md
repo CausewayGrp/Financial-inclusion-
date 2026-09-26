@@ -31,7 +31,8 @@ unpushed clone does not exist yet. ZIPs are *outputs* of checkpoint tags (§6), 
 | `handoff/` | Design → Code recipient package | DRAFT until R8.6; changed only by the programme |
 | `design/architecture/` | Derived diagrams | `scripts/architecture_diagrams.py` |
 | `audit/`, `docs/` | Lineage and records | Append; never rewrite a historical record (add an addendum or erratum) |
-| `SHA256SUMS.txt` | Checksum manifest | `python3 scripts/checksums.py` after every change |
+| `FINAL_REPOSITORY_MANIFEST.json` | Classification of every tracked file | `python3 scripts/repository_manifest.py` after adding, moving or deleting a file |
+| `SHA256SUMS.txt` | Checksum manifest | `python3 scripts/checksums.py` after every change (after the repository manifest) |
 
 ## 3. Branches, commits and history
 
@@ -92,7 +93,7 @@ unpushed clone does not exist yet. ZIPs are *outputs* of checkpoint tags (§6), 
        "$(date -u +%Y-%m-%dT%H:%M:%SZ)" audit/<stage>/runs/TC-X_RUN_REPORT.json [--install "$STAGE/file=repo/relative/path" ...]
    cp "$STAGE/ledger.json" audit/<stage>/runs/TC-X_MASTER_LEDGER.json
    ```
-3. Run the remaining gates (§5), then `python3 scripts/checksums.py`, add a `docs/CHANGELOG.md` entry and commit with the
+3. Run the remaining gates (§5), then `git add -A && python3 scripts/repository_manifest.py && python3 scripts/checksums.py`, add a `docs/CHANGELOG.md` entry and commit with the
    trailers above.
 
 During a transaction, files inside the runner's snapshot (authority, `site-src/content`, `handoff`, README, checkpoint,

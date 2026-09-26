@@ -5165,7 +5165,10 @@
     "lineage_state": "BOUND_EXACT",
     "dependency_ids": [
       "73_PAYMENT_CURRENTNESS",
-      "REF-PAY-010..013",
+      "REF-PAY-006",
+      "REF-PAY-011",
+      "REF-PAY-012",
+      "REF-PAY-013",
       "EP-CBY-PAY-INSTITUTIONAL-2026",
       "CLM-018"
     ],

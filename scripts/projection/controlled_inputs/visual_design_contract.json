@@ -604,7 +604,7 @@
      "UI-VIS-CHAIN-OUTCOME": "OPEN"
     },
     "ordering": "Steps in chain order; events within a step by date.",
-    "transformation": "Deduplicate events that share date and source item: REF-PAY-010 duplicates REF-PAY-006 (2026-06-17, news/946) and REF-PAY-007 duplicates REF-PAY-013 (2026-08-04, news/962); only the listed IDs are drawn.",
+    "transformation": "Only the listed event IDs are drawn (the same-date, same-source duplicates REF-PAY-010 and REF-PAY-007 were merged into REF-PAY-006 and REF-PAY-013 in the Master, transaction R85-B).",
     "missing": "OPEN steps are drawn as open with UI-VIS-CHAIN-OPEN; never as failure, never as a percentage.",
     "breaks": "None.",
     "annotation": "Each EVIDENCED step shows its dated event(s); the POS values print their governed object label (POS terminals, POS transactions) and unit for the latest month.",

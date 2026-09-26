@@ -1,7 +1,7 @@
 {
   "schema_version": "1.0",
   "contract_id": "VISUAL-DESIGN-CONTRACT",
-  "authority_master_sha256": "2a7fd52bbe82d73faf562a395ccf40d78c84cd050735f3a5e89d39e767014549",
+  "authority_master_sha256": "440614d789f662e2e47d95e932968be3c71d2719187bb91c6f546aed30e72f71",
   "rule": "Design-layer controlled input. It assigns every governed visual contract (Master 11) a design tier and, for SIGNATURE and CORE_ANALYTICAL visuals, declares which governed rows a chart binds to and how they are drawn. It never carries a fact, number, label or sentence: values come from Master data rows, text from Master contract/evidence fields, and legend labels from the governed interface copy (UI-VIS-*). The generator resolves every binding and fails on any unresolved ID, any value that disagrees with its guard, or any visual left untiered.",
   "tiers": {
     "SIGNATURE": "Distinctive to this product, decision-useful, drawable from governed rows and safe when detached. Designed first; gets a full data contract.",
@@ -919,7 +919,7 @@
           "UI-VIS-CHAIN-OUTCOME": "OPEN"
         },
         "ordering": "Steps in chain order; events within a step by date.",
-        "transformation": "Deduplicate events that share date and source item: REF-PAY-010 duplicates REF-PAY-006 (2026-06-17, news/946) and REF-PAY-007 duplicates REF-PAY-013 (2026-08-04, news/962); only the listed IDs are drawn.",
+        "transformation": "Only the listed event IDs are drawn (the same-date, same-source duplicates REF-PAY-010 and REF-PAY-007 were merged into REF-PAY-006 and REF-PAY-013 in the Master, transaction R85-B).",
         "missing": "OPEN steps are drawn as open with UI-VIS-CHAIN-OPEN; never as failure, never as a percentage.",
         "breaks": "None.",
         "annotation": "Each EVIDENCED step shows its dated event(s); the POS values print their governed object label (POS terminals, POS transactions) and unit for the latest month.",
@@ -4855,7 +4855,7 @@
         "prohibited_inference_ar": "ليست العلاقات ادعاءات سببية ما لم يدعمها دليل مستقل؛ ولا تشكل الأجزاء مؤشرًا مركبًا، ولا يُظهر هذا الدليل أن جزءًا يحرّك آخر بصورة آلية.",
         "alt_text_ar": "يصف هذا المورد الشمول المالي في اليمن بوصفه أجزاء مترابطة: الناس والقدرات، والمنشآت والدخل، ومقدمو الخدمات، وبنية المدفوعات، وتدفقات الحوالات ورأس المال، والتنظيم والحماية، والقيود المُمكِّنة أو المعطِّلة. وتصف العلاقات الموثقة السياق أو الاعتماد أو آليات محتملة حين تسندها الأدلة؛ ولا تحمل أي علاقة تقديرًا لقوة الدليل، ولا تشكل الأجزاء درجة مركبة، ولا تُظهر أن جزءًا منها سبب لآخر. لا يثبت: ليست العلاقات ادعاءات سببية ما لم يدعمها دليل مستقل؛ ولا تشكل الأجزاء مؤشرًا مركبًا، ولا يُظهر هذا الدليل أن جزءًا يحرّك آخر بصورة آلية.",
         "period_ar": "فترات متعددة عبر أكثر من مجال",
-        "universe_ar": "الأشخاص والمنشآت ومقدمو الخدمات وبنية المدفوعات والتدفقات والقواعد التنظيمية والقيود المُمكِّنة أو المعطلة التي تغطيها الأدلة المرتبطة بهذا الملخص.",
+        "universe_ar": "الأشخاص والمنشآت ومقدمو الخدمات وبنية المدفوعات والتدفقات والقواعد التنظيمية والقيود المُمكِّنة أو المعطلة التي تغطيها الأدلة المرتبطة بهذا الملخص.",
         "canonical_route": "/evidence/VIS-INCLUSION-TRANSMISSION/",
         "public_routes": [
           "/"

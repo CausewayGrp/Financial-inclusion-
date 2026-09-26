@@ -36,6 +36,7 @@ git fetch origin && git status                      # start from origin/main or 
 python3 scripts/checksums.py --check && python3 scripts/validate.py
 # … one atomic change (CONTRIBUTING.md §4 for the Master) …
 # run the gates (CONTRIBUTING.md §5), then:
+git add -A && python3 scripts/repository_manifest.py   # classify every tracked file
 python3 scripts/checksums.py                        # regenerate SHA256SUMS.txt
 git add -A && git commit                            # Conventional Commit; Master trailers when the Master changed
 git push

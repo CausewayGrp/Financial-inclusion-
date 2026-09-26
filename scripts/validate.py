@@ -1917,6 +1917,48 @@ try:
             errors.append(f'R85-G03 placeholders differ between English and Arabic in {_id}')
 except Exception as _x:
     errors.append('R85-G unreadable '+repr(_x))
+# R85-G04 every governed string is Unicode NFC (search and bilingual parity compare exact strings)
+try:
+    import unicodedata as _ud
+    _bad=[]
+    for _p in C.rglob('*.json'):
+        _s=_p.read_text(encoding='utf-8')
+        if _ud.normalize('NFC',_s)!=_s: _bad.append(str(_p.relative_to(ROOT)))
+    if _bad: errors.append(f'R85-G04 governed content is not Unicode NFC: {_bad[:5]}')
+except Exception as _x:
+    errors.append('R85-G04 unreadable '+repr(_x))
+# R85-G05 no authoring or template token in the public build; R85-G06 no internal finding/transaction code in public
+# text; R85-G07 no private locator or machine path in the public build or governed content; R85-G08 Arabic pages print
+# no Latin month name in <main>; R85-G09 every tracked file is classified (FINAL_REPOSITORY_MANIFEST.json current) and
+# every top-level audit record is listed in audit/INDEX.md.
+try:
+    _auth=re.compile(r'\{\{|\}\}|\bTODO\b|\bTBD\b|\bFIXME\b|\bPLACEHOLDER\b|\bXXX\b|[Ll]orem ipsum')
+    _intl=re.compile(r'\b(?:PB-\d{3,4}|TC-[A-Z]\d?|P[1-5]-[A-Z]\d{2}|R85-[A-Z]|RP-F\d|RL-F\d|BIL-0\d|JRN-\d\d|TRUST-\d\d|EVM-\d\d|VER-\d\d|TOOL-\d\d|AR-\d\d|EN-\d\d)\b')
+    _priv=re.compile(r'sharepoint\.com|drive\.google\.com|docs\.google\.com|file://|/home/|/Users/|[A-Z]:\\\\|onedrive\.|dropbox\.|localhost|127\.0\.0\.1|1xAbdDHJd5bYo0Pzo|1iAxWukk1xeAXDPibmXXwGlaUXDcr_XvA',re.I)
+    _mon=re.compile(r'\b(?:January|February|March|April|May|June|July|August|September|October|November|December)\b')
+    for _f in list(DIST.rglob('*.html'))+list(DIST.rglob('*.json')):
+        _t=_f.read_text(encoding='utf-8'); _rel=_f.relative_to(DIST)
+        _vis=_html.unescape(re.sub(r'<[^>]+>',' ',re.sub(r'<script.*?</script>','',_t,flags=re.S))) if _f.suffix=='.html' else _t
+        for _rx,_g in ((_auth,'R85-G05 authoring/template token'),(_intl,'R85-G06 internal finding or transaction code'),(_priv,'R85-G07 private locator or machine path')):
+            _m=_rx.search(_vis if _g.startswith('R85-G06') else _t)
+            if _m: errors.append(f'{_g} in public build {_rel}: {_m.group(0)}')
+        if _f.suffix=='.html' and str(_rel).startswith('ar/'):
+            _mm=re.search(r'<main.*?</main>',re.sub(r'<script.*?</script>','',_t,flags=re.S),re.S)
+            _mt=_mon.search(_html.unescape(re.sub(r'<[^>]+>',' ',_mm.group(0) if _mm else '')))
+            if _mt: errors.append(f'R85-G08 Latin month name on an Arabic page {_rel}: {_mt.group(0)}')
+    for _f in C.rglob('*.json'):
+        _m=_priv.search(_f.read_text(encoding='utf-8'))
+        if _m: errors.append(f'R85-G07 private locator or machine path in governed content {_f.relative_to(ROOT)}: {_m.group(0)}')
+    import subprocess as _sp2
+    _r=_sp2.run([sys.executable,str(ROOT/'scripts/repository_manifest.py'),'--check'],capture_output=True,text=True)
+    if _r.returncode!=0: errors.append('R85-G09 '+(_r.stdout.strip().splitlines() or ['repository manifest check failed'])[0])
+    _idx=(ROOT/'audit/INDEX.md').read_text(encoding='utf-8')
+    for _f in sorted((ROOT/'audit').iterdir()):
+        _name=_f.name+('/' if _f.is_dir() else '')
+        if _f.name.startswith('.') or _f.name=='__pycache__' or _f.name=='INDEX.md': continue
+        if _f.name not in _idx: errors.append(f'R85-G09 audit record not listed in audit/INDEX.md: {_name}')
+except Exception as _x:
+    errors.append('R85-G05..09 unreadable '+repr(_x))
 # F2 (26 Sep 2026) Evidence Readings family — permanent gates.
 #  RP-G01 every Reading ends its essay with "What would change this reading?", then the evidence path, then 1-2 related Readings
 #  RP-G02 one signature visual at most on a Reading page; no numbered section template and no Reading card wall

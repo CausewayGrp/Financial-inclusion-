@@ -1,5 +1,21 @@
 # Repository Change Log
 
+## 2026-09-26 — F4: R8.5 canonical repository subtraction
+
+Transactions R85-A and R85-B (Master `69899ae2…` → `2a7fd52b…` → `440614d7…`); closure
+`audit/R8_5_REPOSITORY_SUBTRACTION_CLOSURE.md`, 21-item ledger `audit/R8_5_SUBTRACTION_LEDGER.csv`.
+- **Copy out of code.** 195 bilingual labels moved from `build.py`/`app.js` into the Master's governed interface copy
+  (wording unchanged; 288 HTML identical apart from a JSON label block for `app.js`); Arabic Measurement domain labels
+  moved to 10 `domain_ar`.
+- **Copy corrections.** 404, corrections, answer-page disclosure, source-trace, data-directory and Compare wording
+  rewritten without control language; the FMIIP crosswalk title no longer says "compared with".
+- **Debt.** Duplicate reform events REF-PAY-010/007 merged into 006/013; `(1)` audit files resolved; P3-D02 labels
+  fixed; Resource Library categories 16 → 6; Unicode NFC throughout the Master (32 cells).
+- **Repository.** `FINAL_REPOSITORY_MANIFEST.json` classifies every tracked file (`scripts/repository_manifest.py`);
+  `audit/INDEX.md` separates current records, standing policies and history; `docs/DEPLOYMENT.md` rewritten.
+- **Gates added:** R85-G01…G09 (copy ownership, placeholder parity, NFC, authoring tokens, internal codes, private
+  locators, Latin months on Arabic pages, manifest and index).
+
 ## 2026-09-26 — F3: five bounded Resource Library decisions
 
 Transactions RL-F3 and RL-F3b (Master `caabff47…` → `69899ae2…`); record `audit/F3_RESOURCE_DECISIONS.md`.

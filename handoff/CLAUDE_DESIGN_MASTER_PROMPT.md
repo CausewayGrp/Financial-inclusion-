@@ -22,12 +22,12 @@ You are **not** the evidence authority, policy author, source adjudicator or res
 The sole semantic/evidence/source/rights/publication authority is:
 
 `authority/Yemen_Financial_Inclusion_Evidence_Master.xlsx`  
-SHA-256: `2a7fd52bbe82d73faf562a395ccf40d78c84cd050735f3a5e89d39e767014549`
+SHA-256: `440614d789f662e2e47d95e932968be3c71d2719187bb91c6f546aed30e72f71`
 
 Controlled implementation projection:
 
 `site-src/content/page_specs.json`  
-SHA-256: `9b5300687bc9227088447ee6710d46e6e815d4681e5dbdffce2ed6ec9a67330a`
+SHA-256: `0425dc85c1662120a2b00a5bb3485b93d4f64f6058d7e2a0ebeb477dedc3e871`
 
 Presentation-depth contract:
 

@@ -83,7 +83,7 @@
     "dataset_id": "LOCAL-REFORMS",
     "file": "data/reforms_regulation.json",
     "domain": "Reforms, regulation and programme evidence",
-    "record_rows": 102,
+    "record_rows": 100,
     "runtime_role": "LOCAL_STATIC_INPUT",
     "future_adapter_rule": "Future APIs/connectors must emit the same semantic fields and stable IDs; UI meaning and evidence state may not change silently."
   }

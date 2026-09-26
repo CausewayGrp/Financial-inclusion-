@@ -1,0 +1,2817 @@
+{
+ "schema": "YFIE_FINAL_REPOSITORY_MANIFEST/1.0",
+ "purpose": "What every tracked file is. One authority -> one projection path -> one runtime content path -> one current recipient start path. Hashes: SHA256SUMS.txt.",
+ "authority": {
+  "production_master": "authority/Yemen_Financial_Inclusion_Evidence_Master.xlsx",
+  "production_master_sha256": "440614d789f662e2e47d95e932968be3c71d2719187bb91c6f546aed30e72f71",
+  "page_specs": "site-src/content/page_specs.json",
+  "page_specs_sha256": "0425dc85c1662120a2b00a5bb3485b93d4f64f6058d7e2a0ebeb477dedc3e871",
+  "logo": "site-src/assets/CauseWay_Master_Logo.png",
+  "logo_sha256": "5830163d50f9badbef3227ec44e7705548e2fcc8a06b2d6ae33d56ade60c6a90",
+  "rule": "The Production Master is the only semantic authority. Everything under site-src/content, dist, design/architecture and audit/PUBLIC_LITERAL_CLOSURE.json is generated from it and never edited by hand."
+ },
+ "paths": {
+  "projection": "authority/…Master.xlsx -> scripts/generate_projections.py (scripts/projection/*, contracts: master_structure.json, projection_manifest.json, controlled_inputs/*) -> site-src/content/**",
+  "runtime": "site-src/content/** + site-src/app.js + site-src/styles.css + site-src/assets/* -> scripts/build.py -> dist/**",
+  "change": "Master transaction -> audit/tranche_b_execution/run_stage.py (generate, rebind, build, literal audit, diagrams, validate, --check) -> commit",
+  "recipient_start": [
+   "README.md",
+   "handoff/README_FIRST.md",
+   "handoff/CLAUDE_DESIGN_MASTER_PROMPT.md"
+  ]
+ },
+ "class_counts": {
+  "AUDIT_HISTORY": 247,
+  "AUTHORITY_MASTER": 1,
+  "AUTHORITY_POINTER": 2,
+  "AUTHORITY_RULES": 1,
+  "BUILD_AND_GATES": 13,
+  "CURRENT_DOCUMENT": 8,
+  "CURRENT_PROGRAMME_RECORD": 28,
+  "GENERATED_DIAGRAMS": 9,
+  "GENERATED_LITERAL_CLOSURE": 1,
+  "GENERATED_PROJECTION": 39,
+  "GENERATED_PUBLIC_BUILD": 293,
+  "LOGO_AUTHORITY": 1,
+  "PROJECTION_CONTRACT": 11,
+  "PROJECTION_GENERATOR": 13,
+  "RECIPIENT_HANDOFF": 10,
+  "REPOSITORY_ENGINEERING": 9,
+  "RUNTIME_SOURCE": 2,
+  "STANDING_POLICY": 5
+ },
+ "files": [
+  {
+   "path": ".gitattributes",
+   "class": "REPOSITORY_ENGINEERING"
+  },
+  {
+   "path": ".github/dependabot.yml",
+   "class": "REPOSITORY_ENGINEERING"
+  },
+  {
+   "path": ".github/pull_request_template.md",
+   "class": "REPOSITORY_ENGINEERING"
+  },
+  {
+   "path": ".github/workflows/checkpoint.yml",
+   "class": "REPOSITORY_ENGINEERING"
+  },
+  {
+   "path": ".github/workflows/verify.yml",
+   "class": "REPOSITORY_ENGINEERING"
+  },
+  {
+   "path": ".gitignore",
+   "class": "REPOSITORY_ENGINEERING"
+  },
+  {
+   "path": "AGENTS.md",
+   "class": "CURRENT_DOCUMENT"
+  },
+  {
+   "path": "CLAUDE.md",
+   "class": "CURRENT_DOCUMENT"
+  },
+  {
+   "path": "CONTRIBUTING.md",
+   "class": "CURRENT_DOCUMENT"
+  },
+  {
+   "path": "OPENAI_REENTRY_CHECKPOINT.md",
+   "class": "CURRENT_DOCUMENT"
+  },
+  {
+   "path": "README.md",
+   "class": "CURRENT_DOCUMENT"
+  },
+  {
+   "path": "SHA256SUMS.txt",
+   "class": "REPOSITORY_ENGINEERING"
+  },
+  {
+   "path": "audit/ARABIC_TERMINOLOGY_AND_STYLE_LEDGER.md",
+   "class": "STANDING_POLICY"
+  },
+  {
+   "path": "audit/BENCHMARK_AND_COMPARATOR_POLICY.md",
+   "class": "STANDING_POLICY"
+  },
+  {
+   "path": "audit/BILINGUAL_EDITORIAL_CLOSURE.md",
+   "class": "AUDIT_HISTORY"
+  },
+  {
+   "path": "audit/CLAUDE_FIELD_LEVEL_CHANGE_LEDGER.csv",
+   "class": "AUDIT_HISTORY"
+  },
+  {
+   "path": "audit/CLAUDE_S00_AUTHORITY_AND_ACTIVE_SURFACE.md",
+   "class": "AUDIT_HISTORY"
+  },
+  {
+   "path": "audit/CLAUDE_S01_IA_DECISION.md",
+   "class": "AUDIT_HISTORY"
+  },
+  {
+   "path": "audit/CLAUDE_TRANCHE_A_HANDBACK.md",
+   "class": "AUDIT_HISTORY"
+  },
+  {
+   "path": "audit/CLAUDE_TRANCHE_B_CLOSURE.md",
+   "class": "AUDIT_HISTORY"
+  },
+  {
+   "path": "audit/CLAUDE_TRANCHE_B_CONTINUATION_HANDOVER_TO_NEXT_WINDOW.md",
+   "class": "AUDIT_HISTORY"
+  },
+  {
+   "path": "audit/CURRENTNESS_AND_SOURCE_ADJUDICATION.md",
+   "class": "AUDIT_HISTORY"
+  },
+  {
+   "path": "audit/DOMAIN_CORPUS_EDITORIAL_CLOSURE.md",
+   "class": "AUDIT_HISTORY"
+  },
+  {
+   "path": "audit/ECONOMIC_CONTEXT_USAGE_POLICY.md",
+   "class": "STANDING_POLICY"
+  },
+  {
+   "path": "audit/ECONOMIC_SYSTEM_AND_EVIDENCE_REVIEW.md",
+   "class": "AUDIT_HISTORY"
+  },
+  {
+   "path": "audit/ENGLISH_EDITORIAL_CLOSURE.md",
+   "class": "AUDIT_HISTORY"
+  },
+  {
+   "path": "audit/EVIDENCE_COMPARE_TRUST_CLOSURE.md",
+   "class": "AUDIT_HISTORY"
+  },
+  {
+   "path": "audit/F3_RESOURCE_DECISIONS.md",
+   "class": "CURRENT_PROGRAMME_RECORD"
+  },
+  {
+   "path": "audit/FINALIZATION_PROGRAM.md",
+   "class": "AUDIT_HISTORY"
+  },
+  {
+   "path": "audit/FINAL_CURRENTNESS_CUTOFF.md",
+   "class": "STANDING_POLICY"
+  },
+  {
+   "path": "audit/INDEX.md",
+   "class": "CURRENT_PROGRAMME_RECORD"
+  },
+  {
+   "path": "audit/INDICATOR_COVERAGE_MATRIX.csv",
+   "class": "AUDIT_HISTORY"
+  },
+  {
+   "path": "audit/MASTER_FIRST_PATCH_EXECUTION_LEDGER.csv",
+   "class": "AUDIT_HISTORY"
+  },
+  {
+   "path": "audit/MASTER_FIRST_PATCH_NARRATIVE.md",
+   "class": "AUDIT_HISTORY"
+  },
+  {
+   "path": "audit/MASTER_FIRST_PATCH_SPEC.csv",
+   "class": "AUDIT_HISTORY"
+  },
+  {
+   "path": "audit/METHODOLOGY_COMPLETENESS_CLOSURE.md",
+   "class": "AUDIT_HISTORY"
+  },
+  {
+   "path": "audit/P1_PUBLIC_TRUTH_EDITORIAL_CLOSURE.md",
+   "class": "AUDIT_HISTORY"
+  },
+  {
+   "path": "audit/P2_TOOL_DISCOVERY_CLOSURE.md",
+   "class": "AUDIT_HISTORY"
+  },
+  {
+   "path": "audit/P3_VISUAL_DESIGN_READINESS.md",
+   "class": "AUDIT_HISTORY"
+  },
+  {
+   "path": "audit/P4_CANONICAL_HANDOFF_ALIGNMENT.md",
+   "class": "AUDIT_HISTORY"
+  },
+  {
+   "path": "audit/P5_INDEPENDENT_ACCEPTANCE_CORRECTIONS.md",
+   "class": "AUDIT_HISTORY"
+  },
+  {
+   "path": "audit/PRE_TRANCHE_C_ACCEPTANCE_MATRIX.csv",
+   "class": "AUDIT_HISTORY"
+  },
+  {
+   "path": "audit/PUBLIC_LITERAL_CLOSURE.json",
+   "class": "GENERATED_LITERAL_CLOSURE"
+  },
+  {
+   "path": "audit/R0_CANONICAL_RECONCILIATION_CLOSURE.md",
+   "class": "AUDIT_HISTORY"
+  },
+  {
+   "path": "audit/R1_PUBLIC_VOICE_2B_CLOSURE.md",
+   "class": "AUDIT_HISTORY"
+  },
+  {
+   "path": "audit/R2_READINGS_MEASUREMENT_CLOSURE.md",
+   "class": "AUDIT_HISTORY"
+  },
+  {
+   "path": "audit/R3_METHOD_TRUST_LEGAL_OPERATIONAL_CLOSURE.md",
+   "class": "AUDIT_HISTORY"
+  },
+  {
+   "path": "audit/R4_SITEMAP_END_TO_END_JOURNEYS_CLOSURE.md",
+   "class": "AUDIT_HISTORY"
+  },
+  {
+   "path": "audit/R5_EVIDENCE_UTILIZATION_AND_RESOURCE_LIBRARY_CLOSURE.md",
+   "class": "AUDIT_HISTORY"
+  },
+  {
+   "path": "audit/R6_INFORMATION_DESIGN_AND_TECHNICAL_ARCHITECTURE_CLOSURE.md",
+   "class": "AUDIT_HISTORY"
+  },
+  {
+   "path": "audit/R7_NATIVE_BILINGUAL_EDITORIAL_INVARIANCE_CLOSURE.md",
+   "class": "AUDIT_HISTORY"
+  },
+  {
+   "path": "audit/R8_1_PUBLIC_TRUTH_SOURCE_REFERENCE_CLOSURE.md",
+   "class": "AUDIT_HISTORY"
+  },
+  {
+   "path": "audit/R8_2_LITERATURE_LEGACY_NARRATIVE_RECOVERY_CLOSURE.md",
+   "class": "AUDIT_HISTORY"
+  },
+  {
+   "path": "audit/R8_3_INTELLECTUAL_PRODUCT_CLOSURE.md",
+   "class": "AUDIT_HISTORY"
+  },
+  {
+   "path": "audit/R8_4A_HOME_EXPLORE_ENTRY_JOURNEY_CLOSURE.md",
+   "class": "AUDIT_HISTORY"
+  },
+  {
+   "path": "audit/R8_5_REPOSITORY_SUBTRACTION_CLOSURE.md",
+   "class": "CURRENT_PROGRAMME_RECORD"
+  },
+  {
+   "path": "audit/R8_5_SUBTRACTION_LEDGER.csv",
+   "class": "CURRENT_PROGRAMME_RECORD"
+  },
+  {
+   "path": "audit/R8_CONTINUATION_MASTER_HANDOVER_TO_NEXT_WINDOW.md",
+   "class": "AUDIT_HISTORY"
+  },
+  {
+   "path": "audit/READINGS_MEASUREMENT_CLOSURE.md",
+   "class": "AUDIT_HISTORY"
+  },
+  {
+   "path": "audit/READING_PORTFOLIO_CHANGE_LEDGER.csv",
+   "class": "CURRENT_PROGRAMME_RECORD"
+  },
+  {
+   "path": "audit/READING_PORTFOLIO_FINAL_ADJUDICATION.md",
+   "class": "CURRENT_PROGRAMME_RECORD"
+  },
+  {
+   "path": "audit/RESOURCE_LIBRARY_CLOSURE.md",
+   "class": "AUDIT_HISTORY"
+  },
+  {
+   "path": "audit/SEARCH_DISCOVERY_CLOSURE.md",
+   "class": "AUDIT_HISTORY"
+  },
+  {
+   "path": "audit/SESSION_01_PRODUCT_IDENTITY_CAUSEWAY_ROLE_PUBLIC_VALUE_CLOSURE.md",
+   "class": "AUDIT_HISTORY"
+  },
+  {
+   "path": "audit/SIGNATURE_VISUAL_CANDIDATES.md",
+   "class": "AUDIT_HISTORY"
+  },
+  {
+   "path": "audit/SOURCE_NARRATIVE_EXTRACTION.md",
+   "class": "AUDIT_HISTORY"
+  },
+  {
+   "path": "audit/SOURCE_PUBLISHER_PROPOSALS.csv",
+   "class": "AUDIT_HISTORY"
+  },
+  {
+   "path": "audit/TERMINOLOGY_SWEEP_KEEP_REGISTER.csv",
+   "class": "AUDIT_HISTORY"
+  },
+  {
+   "path": "audit/TRANCHE_B_EXECUTION_CLOSURE.md",
+   "class": "AUDIT_HISTORY"
+  },
+  {
+   "path": "audit/TRANCHE_B_RED_TEAM.md",
+   "class": "AUDIT_HISTORY"
+  },
+  {
+   "path": "audit/TRANCHE_B_UNRESOLVED_QUEUE.md",
+   "class": "AUDIT_HISTORY"
+  },
+  {
+   "path": "audit/TRANCHE_C_FINAL_ACCEPTANCE.md",
+   "class": "AUDIT_HISTORY"
+  },
+  {
+   "path": "audit/TRANCHE_C_FINDINGS_LEDGER.csv",
+   "class": "AUDIT_HISTORY"
+  },
+  {
+   "path": "audit/VISUAL_CONTRACT_CLOSURE.md",
+   "class": "AUDIT_HISTORY"
+  },
+  {
+   "path": "audit/directives/D0_TRANCHE_B_CONTINUATION_HANDOVER_2026-09-25.md",
+   "class": "AUDIT_HISTORY"
+  },
+  {
+   "path": "audit/directives/D1_CONTINUE_TRANCHE_B_CONTROLLED_COMPLETION.txt",
+   "class": "AUDIT_HISTORY"
+  },
+  {
+   "path": "audit/directives/D2_POST_TRANCHE_B_SAFE_MASTER_FIRST_EXECUTION_GATE.txt",
+   "class": "AUDIT_HISTORY"
+  },
+  {
+   "path": "audit/directives/D3_POST_TRANCHE_B_CANONICAL_REPOSITORY_EXECUTION.txt",
+   "class": "AUDIT_HISTORY"
+  },
+  {
+   "path": "audit/directives/D4_FINAL_PRE_TRANCHE_C_MATURATION_PROGRAM_P1_P4.txt",
+   "class": "AUDIT_HISTORY"
+  },
+  {
+   "path": "audit/directives/D5_P5_INDEPENDENT_ACCEPTANCE_CORRECTIONS.txt",
+   "class": "AUDIT_HISTORY"
+  },
+  {
+   "path": "audit/directives/D6_FINAL_FINITE_PRODUCT_PROGRAM_TRANCHE_C_R8_5_R8_6.txt",
+   "class": "AUDIT_HISTORY"
+  },
+  {
+   "path": "audit/directives/D7_FINAL_INTEGRATION_TO_DESIGN_HANDOFF_2026-09-26.md",
+   "class": "CURRENT_PROGRAMME_RECORD"
+  },
+  {
+   "path": "audit/directives/README.md",
+   "class": "CURRENT_PROGRAMME_RECORD"
+  },
+  {
+   "path": "audit/final_integration/fi_lib.py",
+   "class": "CURRENT_PROGRAMME_RECORD"
+  },
+  {
+   "path": "audit/final_integration/inputs/R85A_COPY_OUT_OF_CODE.json",
+   "class": "CURRENT_PROGRAMME_RECORD"
+  },
+  {
+   "path": "audit/final_integration/r85_copy_out_of_app.py",
+   "class": "CURRENT_PROGRAMME_RECORD"
+  },
+  {
+   "path": "audit/final_integration/r85_copy_out_of_code.py",
+   "class": "CURRENT_PROGRAMME_RECORD"
+  },
+  {
+   "path": "audit/final_integration/r85a_copy_out.py",
+   "class": "CURRENT_PROGRAMME_RECORD"
+  },
+  {
+   "path": "audit/final_integration/r85b_subtraction.py",
+   "class": "CURRENT_PROGRAMME_RECORD"
+  },
+  {
+   "path": "audit/final_integration/rl_f3_resources.py",
+   "class": "CURRENT_PROGRAMME_RECORD"
+  },
+  {
+   "path": "audit/final_integration/rl_f3b_wording.py",
+   "class": "CURRENT_PROGRAMME_RECORD"
+  },
+  {
+   "path": "audit/final_integration/runs/R85-A_MASTER_LEDGER.json",
+   "class": "CURRENT_PROGRAMME_RECORD"
+  },
+  {
+   "path": "audit/final_integration/runs/R85-A_RUN_REPORT.json",
+   "class": "CURRENT_PROGRAMME_RECORD"
+  },
+  {
+   "path": "audit/final_integration/runs/R85-B_MASTER_LEDGER.json",
+   "class": "CURRENT_PROGRAMME_RECORD"
+  },
+  {
+   "path": "audit/final_integration/runs/R85-B_RUN_REPORT.json",
+   "class": "CURRENT_PROGRAMME_RECORD"
+  },
+  {
+   "path": "audit/final_integration/runs/RL-F3_MASTER_LEDGER.json",
+   "class": "CURRENT_PROGRAMME_RECORD"
+  },
+  {
+   "path": "audit/final_integration/runs/RL-F3_RUN_REPORT.json",
+   "class": "CURRENT_PROGRAMME_RECORD"
+  },
+  {
+   "path": "audit/final_integration/runs/RL-F3b_MASTER_LEDGER.json",
+   "class": "CURRENT_PROGRAMME_RECORD"
+  },
+  {
+   "path": "audit/final_integration/runs/RL-F3b_RUN_REPORT.json",
+   "class": "CURRENT_PROGRAMME_RECORD"
+  },
+  {
+   "path": "audit/generator_baseline/ENTRY_BASELINE_CLASSIFICATION.json",
+   "class": "AUDIT_HISTORY"
+  },
+  {
+   "path": "audit/generator_baseline/GATE_RUN_1_ENTRY_MASTER.json",
+   "class": "AUDIT_HISTORY"
+  },
+  {
+   "path": "audit/generator_baseline/GATE_RUN_2_ENTRY_MASTER_PLUS_AIR001.json",
+   "class": "AUDIT_HISTORY"
+  },
+  {
+   "path": "audit/pre_tranche_c/FINDINGS_LEDGER.csv",
+   "class": "AUDIT_HISTORY"
+  },
+  {
+   "path": "audit/pre_tranche_c/SOURCE_LINEAGE_TRUTH_TEST.json",
+   "class": "AUDIT_HISTORY"
+  },
+  {
+   "path": "audit/pre_tranche_c/p1a_execute.py",
+   "class": "AUDIT_HISTORY"
+  },
+  {
+   "path": "audit/pre_tranche_c/p1b_execute.py",
+   "class": "AUDIT_HISTORY"
+  },
+  {
+   "path": "audit/pre_tranche_c/p1c_execute.py",
+   "class": "AUDIT_HISTORY"
+  },
+  {
+   "path": "audit/pre_tranche_c/p1d_execute.py",
+   "class": "AUDIT_HISTORY"
+  },
+  {
+   "path": "audit/pre_tranche_c/p2a_execute.py",
+   "class": "AUDIT_HISTORY"
+  },
+  {
+   "path": "audit/pre_tranche_c/p3a_execute.py",
+   "class": "AUDIT_HISTORY"
+  },
+  {
+   "path": "audit/pre_tranche_c/p3b_execute.py",
+   "class": "AUDIT_HISTORY"
+  },
+  {
+   "path": "audit/pre_tranche_c/p3c_execute.py",
+   "class": "AUDIT_HISTORY"
+  },
+  {
+   "path": "audit/pre_tranche_c/p3d_execute.py",
+   "class": "AUDIT_HISTORY"
+  },
+  {
+   "path": "audit/pre_tranche_c/p4a_execute.py",
+   "class": "AUDIT_HISTORY"
+  },
+  {
+   "path": "audit/pre_tranche_c/p4b_execute.py",
+   "class": "AUDIT_HISTORY"
+  },
+  {
+   "path": "audit/pre_tranche_c/p4d_execute.py",
+   "class": "AUDIT_HISTORY"
+  },
+  {
+   "path": "audit/pre_tranche_c/p4e_execute.py",
+   "class": "AUDIT_HISTORY"
+  },
+  {
+   "path": "audit/pre_tranche_c/p4e_labels.py",
+   "class": "AUDIT_HISTORY"
+  },
+  {
+   "path": "audit/pre_tranche_c/p4g_execute.py",
+   "class": "AUDIT_HISTORY"
+  },
+  {
+   "path": "audit/pre_tranche_c/p5a_execute.py",
+   "class": "AUDIT_HISTORY"
+  },
+  {
+   "path": "audit/pre_tranche_c/pre_tranche_c_acceptance.py",
+   "class": "AUDIT_HISTORY"
+  },
+  {
+   "path": "audit/pre_tranche_c/ptc_lib.py",
+   "class": "AUDIT_HISTORY"
+  },
+  {
+   "path": "audit/pre_tranche_c/runs/P1A_MASTER_LEDGER.json",
+   "class": "AUDIT_HISTORY"
+  },
+  {
+   "path": "audit/pre_tranche_c/runs/P1A_RUN_REPORT.json",
+   "class": "AUDIT_HISTORY"
+  },
+  {
+   "path": "audit/pre_tranche_c/runs/P1B_MASTER_LEDGER.json",
+   "class": "AUDIT_HISTORY"
+  },
+  {
+   "path": "audit/pre_tranche_c/runs/P1B_RUN_REPORT.json",
+   "class": "AUDIT_HISTORY"
+  },
+  {
+   "path": "audit/pre_tranche_c/runs/P1C_MASTER_LEDGER.json",
+   "class": "AUDIT_HISTORY"
+  },
+  {
+   "path": "audit/pre_tranche_c/runs/P1C_RUN_REPORT.json",
+   "class": "AUDIT_HISTORY"
+  },
+  {
+   "path": "audit/pre_tranche_c/runs/P1D_MASTER_LEDGER.json",
+   "class": "AUDIT_HISTORY"
+  },
+  {
+   "path": "audit/pre_tranche_c/runs/P1D_RUN_REPORT.json",
+   "class": "AUDIT_HISTORY"
+  },
+  {
+   "path": "audit/pre_tranche_c/runs/P1_DUPLICATION_BEFORE_AFTER.json",
+   "class": "AUDIT_HISTORY"
+  },
+  {
+   "path": "audit/pre_tranche_c/runs/P2A_MASTER_LEDGER.json",
+   "class": "AUDIT_HISTORY"
+  },
+  {
+   "path": "audit/pre_tranche_c/runs/P2A_RUN_REPORT.json",
+   "class": "AUDIT_HISTORY"
+  },
+  {
+   "path": "audit/pre_tranche_c/runs/P2B_RUN_REPORT.json",
+   "class": "AUDIT_HISTORY"
+  },
+  {
+   "path": "audit/pre_tranche_c/runs/P2C_RUN_REPORT.json",
+   "class": "AUDIT_HISTORY"
+  },
+  {
+   "path": "audit/pre_tranche_c/runs/P2D_RUN_REPORT.json",
+   "class": "AUDIT_HISTORY"
+  },
+  {
+   "path": "audit/pre_tranche_c/runs/P3A_MASTER_LEDGER.json",
+   "class": "AUDIT_HISTORY"
+  },
+  {
+   "path": "audit/pre_tranche_c/runs/P3A_RUN_REPORT.json",
+   "class": "AUDIT_HISTORY"
+  },
+  {
+   "path": "audit/pre_tranche_c/runs/P3B_MASTER_LEDGER.json",
+   "class": "AUDIT_HISTORY"
+  },
+  {
+   "path": "audit/pre_tranche_c/runs/P3B_RUN_REPORT.json",
+   "class": "AUDIT_HISTORY"
+  },
+  {
+   "path": "audit/pre_tranche_c/runs/P3C_MASTER_LEDGER.json",
+   "class": "AUDIT_HISTORY"
+  },
+  {
+   "path": "audit/pre_tranche_c/runs/P3C_RUN_REPORT.json",
+   "class": "AUDIT_HISTORY"
+  },
+  {
+   "path": "audit/pre_tranche_c/runs/P3D_MASTER_LEDGER.json",
+   "class": "AUDIT_HISTORY"
+  },
+  {
+   "path": "audit/pre_tranche_c/runs/P3D_RUN_REPORT.json",
+   "class": "AUDIT_HISTORY"
+  },
+  {
+   "path": "audit/pre_tranche_c/runs/P3E_RUN_REPORT.json",
+   "class": "AUDIT_HISTORY"
+  },
+  {
+   "path": "audit/pre_tranche_c/runs/P4A_MASTER_LEDGER.json",
+   "class": "AUDIT_HISTORY"
+  },
+  {
+   "path": "audit/pre_tranche_c/runs/P4A_RUN_REPORT.json",
+   "class": "AUDIT_HISTORY"
+  },
+  {
+   "path": "audit/pre_tranche_c/runs/P4B_MASTER_LEDGER.json",
+   "class": "AUDIT_HISTORY"
+  },
+  {
+   "path": "audit/pre_tranche_c/runs/P4B_RUN_REPORT.json",
+   "class": "AUDIT_HISTORY"
+  },
+  {
+   "path": "audit/pre_tranche_c/runs/P4C_RUN_REPORT.json",
+   "class": "AUDIT_HISTORY"
+  },
+  {
+   "path": "audit/pre_tranche_c/runs/P4D_MASTER_LEDGER.json",
+   "class": "AUDIT_HISTORY"
+  },
+  {
+   "path": "audit/pre_tranche_c/runs/P4D_RUN_REPORT.json",
+   "class": "AUDIT_HISTORY"
+  },
+  {
+   "path": "audit/pre_tranche_c/runs/P4E_MASTER_LEDGER.json",
+   "class": "AUDIT_HISTORY"
+  },
+  {
+   "path": "audit/pre_tranche_c/runs/P4E_RUN_REPORT.json",
+   "class": "AUDIT_HISTORY"
+  },
+  {
+   "path": "audit/pre_tranche_c/runs/P4F_RUN_REPORT.json",
+   "class": "AUDIT_HISTORY"
+  },
+  {
+   "path": "audit/pre_tranche_c/runs/P4G_MASTER_LEDGER.json",
+   "class": "AUDIT_HISTORY"
+  },
+  {
+   "path": "audit/pre_tranche_c/runs/P4G_RUN_REPORT.json",
+   "class": "AUDIT_HISTORY"
+  },
+  {
+   "path": "audit/pre_tranche_c/runs/P5A_MASTER_LEDGER.json",
+   "class": "AUDIT_HISTORY"
+  },
+  {
+   "path": "audit/pre_tranche_c/runs/P5A_RUN_REPORT.json",
+   "class": "AUDIT_HISTORY"
+  },
+  {
+   "path": "audit/pre_tranche_c/runs/P5B_RUN_REPORT.json",
+   "class": "AUDIT_HISTORY"
+  },
+  {
+   "path": "audit/pre_tranche_c/runs/SEARCH_CANONICAL_PROBE_BEFORE_AFTER.json",
+   "class": "AUDIT_HISTORY"
+  },
+  {
+   "path": "audit/pre_tranche_c/runs/SEARCH_CANONICAL_PROBE_RESULTS.json",
+   "class": "AUDIT_HISTORY"
+  },
+  {
+   "path": "audit/pre_tranche_c/search_probe_run.py",
+   "class": "AUDIT_HISTORY"
+  },
+  {
+   "path": "audit/pre_tranche_c/source_lineage_truth_test.py",
+   "class": "BUILD_AND_GATES"
+  },
+  {
+   "path": "audit/pre_tranche_c/specialist_inputs/P15_lineage_analysis.json",
+   "class": "AUDIT_HISTORY"
+  },
+  {
+   "path": "audit/pre_tranche_c/specialist_inputs/P15_lineage_analysis.md",
+   "class": "AUDIT_HISTORY"
+  },
+  {
+   "path": "audit/pre_tranche_c/specialist_inputs/P16_held_analysis.md",
+   "class": "AUDIT_HISTORY"
+  },
+  {
+   "path": "audit/pre_tranche_c/specialist_inputs/P17_chronology_assurance.md",
+   "class": "AUDIT_HISTORY"
+  },
+  {
+   "path": "audit/pre_tranche_c/specialist_inputs/P3_SIGNATURE_RED_TEAM.md",
+   "class": "AUDIT_HISTORY"
+  },
+  {
+   "path": "audit/pre_tranche_c/specialist_inputs/P3_VISUAL_BINDING_AUDIT.json",
+   "class": "AUDIT_HISTORY"
+  },
+  {
+   "path": "audit/pre_tranche_c/specialist_inputs/P3_VISUAL_BINDING_AUDIT.md",
+   "class": "AUDIT_HISTORY"
+  },
+  {
+   "path": "audit/pre_tranche_c/specialist_inputs/P4_INDEPENDENT_VERIFICATION.md",
+   "class": "AUDIT_HISTORY"
+  },
+  {
+   "path": "audit/pre_tranche_c/specialist_inputs/P4_REVERIFICATION.md",
+   "class": "AUDIT_HISTORY"
+  },
+  {
+   "path": "audit/pre_tranche_c/specialist_inputs/README.md",
+   "class": "AUDIT_HISTORY"
+  },
+  {
+   "path": "audit/prior-review-records/R4_SITEMAP_END_TO_END_JOURNEYS_CLOSURE__ALTERNATE_DRAFT.md",
+   "class": "AUDIT_HISTORY"
+  },
+  {
+   "path": "audit/prior-review-records/R8_3_INTELLECTUAL_PRODUCT_CLOSURE__ALTERNATE_DRAFT_AR.md",
+   "class": "AUDIT_HISTORY"
+  },
+  {
+   "path": "audit/prior-review-records/README.md",
+   "class": "AUDIT_HISTORY"
+  },
+  {
+   "path": "audit/prior-review-records/navigation_interaction_PRE_R4_2026-09-22.json",
+   "class": "AUDIT_HISTORY"
+  },
+  {
+   "path": "audit/reading_integration/rp_final_texts.py",
+   "class": "CURRENT_PROGRAMME_RECORD"
+  },
+  {
+   "path": "audit/reading_integration/rp_integration.py",
+   "class": "CURRENT_PROGRAMME_RECORD"
+  },
+  {
+   "path": "audit/reading_integration/runs/RP-F2_MASTER_LEDGER.json",
+   "class": "CURRENT_PROGRAMME_RECORD"
+  },
+  {
+   "path": "audit/reading_integration/runs/RP-F2_RUN_REPORT.json",
+   "class": "CURRENT_PROGRAMME_RECORD"
+  },
+  {
+   "path": "audit/tranche_b_execution/AIR-001_LEDGER.json",
+   "class": "AUDIT_HISTORY"
+  },
+  {
+   "path": "audit/tranche_b_execution/PATCH_ID_CROSSWALK.csv",
+   "class": "AUDIT_HISTORY"
+  },
+  {
+   "path": "audit/tranche_b_execution/PRE_POST_VALIDATION_SUMMARY.json",
+   "class": "AUDIT_HISTORY"
+  },
+  {
+   "path": "audit/tranche_b_execution/ROOT_DISPOSITIONS.json",
+   "class": "AUDIT_HISTORY"
+  },
+  {
+   "path": "audit/tranche_b_execution/SEARCH_PROBE_POST_EXECUTION.json",
+   "class": "AUDIT_HISTORY"
+  },
+  {
+   "path": "audit/tranche_b_execution/SOURCE_LINEAGE_TRUTH_TEST.json",
+   "class": "AUDIT_HISTORY"
+  },
+  {
+   "path": "audit/tranche_b_execution/STAGE0_RUN_REPORT.json",
+   "class": "AUDIT_HISTORY"
+  },
+  {
+   "path": "audit/tranche_b_execution/STAGE1_LINEAGE_ADJUDICATION.json",
+   "class": "AUDIT_HISTORY"
+  },
+  {
+   "path": "audit/tranche_b_execution/STAGE1_LINEAGE_LEDGER.json",
+   "class": "AUDIT_HISTORY"
+  },
+  {
+   "path": "audit/tranche_b_execution/STAGE1_RUN_REPORT.json",
+   "class": "AUDIT_HISTORY"
+  },
+  {
+   "path": "audit/tranche_b_execution/STAGE2_EXECUTION_LEDGER.json",
+   "class": "AUDIT_HISTORY"
+  },
+  {
+   "path": "audit/tranche_b_execution/STAGE2_RUN_REPORT.json",
+   "class": "AUDIT_HISTORY"
+  },
+  {
+   "path": "audit/tranche_b_execution/STAGE3_EXECUTION_LEDGER.json",
+   "class": "AUDIT_HISTORY"
+  },
+  {
+   "path": "audit/tranche_b_execution/STAGE3_RUN_REPORT.json",
+   "class": "AUDIT_HISTORY"
+  },
+  {
+   "path": "audit/tranche_b_execution/STAGE4B_ALIAS_LEDGER.json",
+   "class": "AUDIT_HISTORY"
+  },
+  {
+   "path": "audit/tranche_b_execution/STAGE4B_RUN_REPORT.json",
+   "class": "AUDIT_HISTORY"
+  },
+  {
+   "path": "audit/tranche_b_execution/STAGE4_EXECUTION_LEDGER.json",
+   "class": "AUDIT_HISTORY"
+  },
+  {
+   "path": "audit/tranche_b_execution/STAGE4_RUN_REPORT.json",
+   "class": "AUDIT_HISTORY"
+  },
+  {
+   "path": "audit/tranche_b_execution/STAGE5_EXECUTION_LEDGER.json",
+   "class": "AUDIT_HISTORY"
+  },
+  {
+   "path": "audit/tranche_b_execution/STAGE5_RUN_REPORT.json",
+   "class": "AUDIT_HISTORY"
+  },
+  {
+   "path": "audit/tranche_b_execution/STAGE5_SWEEP_ROW_LEDGER.csv",
+   "class": "AUDIT_HISTORY"
+  },
+  {
+   "path": "audit/tranche_b_execution/STALE_HASH_SCAN.json",
+   "class": "AUDIT_HISTORY"
+  },
+  {
+   "path": "audit/tranche_b_execution/archive/AIR-001_CERTIFIED_system_chronology_8d058126.json",
+   "class": "AUDIT_HISTORY"
+  },
+  {
+   "path": "audit/tranche_b_execution/archive/PB-0220_25_FINDEX_BASELINE_rows_14-35.json",
+   "class": "AUDIT_HISTORY"
+  },
+  {
+   "path": "audit/tranche_b_execution/archive/PB-0221_30_FCS_CONTEXT_whole_sheet.json",
+   "class": "AUDIT_HISTORY"
+  },
+  {
+   "path": "audit/tranche_b_execution/engine.py",
+   "class": "AUDIT_HISTORY"
+  },
+  {
+   "path": "audit/tranche_b_execution/post_execution_acceptance.py",
+   "class": "AUDIT_HISTORY"
+  },
+  {
+   "path": "audit/tranche_b_execution/run_stage.py",
+   "class": "AUDIT_HISTORY"
+  },
+  {
+   "path": "audit/tranche_b_execution/stage0_authority_integrity.py",
+   "class": "AUDIT_HISTORY"
+  },
+  {
+   "path": "audit/tranche_b_execution/stage1_lineage.py",
+   "class": "AUDIT_HISTORY"
+  },
+  {
+   "path": "audit/tranche_b_execution/stage2_execute.py",
+   "class": "AUDIT_HISTORY"
+  },
+  {
+   "path": "audit/tranche_b_execution/stage3_execute.py",
+   "class": "AUDIT_HISTORY"
+  },
+  {
+   "path": "audit/tranche_b_execution/stage4_execute.py",
+   "class": "AUDIT_HISTORY"
+  },
+  {
+   "path": "audit/tranche_b_execution/stage4b_search_aliases.py",
+   "class": "AUDIT_HISTORY"
+  },
+  {
+   "path": "audit/tranche_b_execution/stage5_execute.py",
+   "class": "AUDIT_HISTORY"
+  },
+  {
+   "path": "audit/tranche_b_patch_tooling/README.md",
+   "class": "AUDIT_HISTORY"
+  },
+  {
+   "path": "audit/tranche_b_patch_tooling/build_spec.py",
+   "class": "AUDIT_HISTORY"
+  },
+  {
+   "path": "audit/tranche_b_patch_tooling/export_master.py",
+   "class": "AUDIT_HISTORY"
+  },
+  {
+   "path": "audit/tranche_b_patch_tooling/parity.py",
+   "class": "AUDIT_HISTORY"
+  },
+  {
+   "path": "audit/tranche_b_patch_tooling/pdefs_p1.py",
+   "class": "AUDIT_HISTORY"
+  },
+  {
+   "path": "audit/tranche_b_patch_tooling/pdefs_p2.py",
+   "class": "AUDIT_HISTORY"
+  },
+  {
+   "path": "audit/tranche_b_patch_tooling/pdefs_p3.py",
+   "class": "AUDIT_HISTORY"
+  },
+  {
+   "path": "audit/tranche_b_patch_tooling/pdefs_p4.py",
+   "class": "AUDIT_HISTORY"
+  },
+  {
+   "path": "audit/tranche_b_patch_tooling/postpatch.py",
+   "class": "AUDIT_HISTORY"
+  },
+  {
+   "path": "audit/tranche_b_patch_tooling/search_probe.py",
+   "class": "AUDIT_HISTORY"
+  },
+  {
+   "path": "audit/tranche_b_patch_tooling/simulate.py",
+   "class": "AUDIT_HISTORY"
+  },
+  {
+   "path": "audit/tranche_b_patch_tooling/sweeps.py",
+   "class": "AUDIT_HISTORY"
+  },
+  {
+   "path": "audit/tranche_b_patch_tooling/test_spec_determinism.py",
+   "class": "AUDIT_HISTORY"
+  },
+  {
+   "path": "audit/tranche_b_patch_tooling/unbound_60.json",
+   "class": "AUDIT_HISTORY"
+  },
+  {
+   "path": "audit/tranche_c/DRAFTING_RULES.md",
+   "class": "STANDING_POLICY"
+  },
+  {
+   "path": "audit/tranche_c/checks/bilingual_invariance.py",
+   "class": "BUILD_AND_GATES"
+  },
+  {
+   "path": "audit/tranche_c/checks/viewport_acceptance.py",
+   "class": "BUILD_AND_GATES"
+  },
+  {
+   "path": "audit/tranche_c/inputs/TC-A_records.json",
+   "class": "AUDIT_HISTORY"
+  },
+  {
+   "path": "audit/tranche_c/inputs/TC-B_sources.json",
+   "class": "AUDIT_HISTORY"
+  },
+  {
+   "path": "audit/tranche_c/inputs/TC-C_editorial.json",
+   "class": "AUDIT_HISTORY"
+  },
+  {
+   "path": "audit/tranche_c/inputs/TC-H_parity.json",
+   "class": "AUDIT_HISTORY"
+  },
+  {
+   "path": "audit/tranche_c/runs/TC-A_MASTER_LEDGER.json",
+   "class": "AUDIT_HISTORY"
+  },
+  {
+   "path": "audit/tranche_c/runs/TC-A_RUN_REPORT.json",
+   "class": "AUDIT_HISTORY"
+  },
+  {
+   "path": "audit/tranche_c/runs/TC-B_MASTER_LEDGER.json",
+   "class": "AUDIT_HISTORY"
+  },
+  {
+   "path": "audit/tranche_c/runs/TC-B_RUN_REPORT.json",
+   "class": "AUDIT_HISTORY"
+  },
+  {
+   "path": "audit/tranche_c/runs/TC-C_MASTER_LEDGER.json",
+   "class": "AUDIT_HISTORY"
+  },
+  {
+   "path": "audit/tranche_c/runs/TC-C_RUN_REPORT.json",
+   "class": "AUDIT_HISTORY"
+  },
+  {
+   "path": "audit/tranche_c/runs/TC-D_MASTER_LEDGER.json",
+   "class": "AUDIT_HISTORY"
+  },
+  {
+   "path": "audit/tranche_c/runs/TC-D_RUN_REPORT.json",
+   "class": "AUDIT_HISTORY"
+  },
+  {
+   "path": "audit/tranche_c/runs/TC-E_MASTER_LEDGER.json",
+   "class": "AUDIT_HISTORY"
+  },
+  {
+   "path": "audit/tranche_c/runs/TC-E_RUN_REPORT.json",
+   "class": "AUDIT_HISTORY"
+  },
+  {
+   "path": "audit/tranche_c/runs/TC-F_MASTER_LEDGER.json",
+   "class": "AUDIT_HISTORY"
+  },
+  {
+   "path": "audit/tranche_c/runs/TC-F_RUN_REPORT.json",
+   "class": "AUDIT_HISTORY"
+  },
+  {
+   "path": "audit/tranche_c/runs/TC-G_MASTER_LEDGER.json",
+   "class": "AUDIT_HISTORY"
+  },
+  {
+   "path": "audit/tranche_c/runs/TC-G_RUN_REPORT.json",
+   "class": "AUDIT_HISTORY"
+  },
+  {
+   "path": "audit/tranche_c/runs/TC-H_MASTER_LEDGER.json",
+   "class": "AUDIT_HISTORY"
+  },
+  {
+   "path": "audit/tranche_c/runs/TC-H_RUN_REPORT.json",
+   "class": "AUDIT_HISTORY"
+  },
+  {
+   "path": "audit/tranche_c/runs/TC-I_MASTER_LEDGER.json",
+   "class": "AUDIT_HISTORY"
+  },
+  {
+   "path": "audit/tranche_c/runs/TC-I_RUN_REPORT.json",
+   "class": "AUDIT_HISTORY"
+  },
+  {
+   "path": "audit/tranche_c/runs/TC-S1_MASTER_LEDGER.json",
+   "class": "AUDIT_HISTORY"
+  },
+  {
+   "path": "audit/tranche_c/runs/TC-S1_RUN_REPORT.json",
+   "class": "AUDIT_HISTORY"
+  },
+  {
+   "path": "audit/tranche_c/tc_a_records.py",
+   "class": "AUDIT_HISTORY"
+  },
+  {
+   "path": "audit/tranche_c/tc_b_sources.py",
+   "class": "AUDIT_HISTORY"
+  },
+  {
+   "path": "audit/tranche_c/tc_c_editorial.py",
+   "class": "AUDIT_HISTORY"
+  },
+  {
+   "path": "audit/tranche_c/tc_d_data.py",
+   "class": "AUDIT_HISTORY"
+  },
+  {
+   "path": "audit/tranche_c/tc_e_visuals.py",
+   "class": "AUDIT_HISTORY"
+  },
+  {
+   "path": "audit/tranche_c/tc_f_runtime.py",
+   "class": "AUDIT_HISTORY"
+  },
+  {
+   "path": "audit/tranche_c/tc_g_residual.py",
+   "class": "AUDIT_HISTORY"
+  },
+  {
+   "path": "audit/tranche_c/tc_h_parity.py",
+   "class": "AUDIT_HISTORY"
+  },
+  {
+   "path": "audit/tranche_c/tc_i_bilingual_residual.py",
+   "class": "AUDIT_HISTORY"
+  },
+  {
+   "path": "audit/tranche_c/tc_lib.py",
+   "class": "AUDIT_HISTORY"
+  },
+  {
+   "path": "audit/tranche_c/tc_s1_one_owner.py",
+   "class": "AUDIT_HISTORY"
+  },
+  {
+   "path": "authority/AUTHORITY.json",
+   "class": "AUTHORITY_POINTER"
+  },
+  {
+   "path": "authority/CORE_CONSTITUTION.md",
+   "class": "AUTHORITY_RULES"
+  },
+  {
+   "path": "authority/YFI_CURRENT_PROJECT_CONTEXT.json",
+   "class": "AUTHORITY_POINTER"
+  },
+  {
+   "path": "authority/Yemen_Financial_Inclusion_Evidence_Master.xlsx",
+   "class": "AUTHORITY_MASTER"
+  },
+  {
+   "path": "design/architecture/README.md",
+   "class": "GENERATED_DIAGRAMS"
+  },
+  {
+   "path": "design/architecture/YFIE_DESIGN_TO_CODE_FLOW.png",
+   "class": "GENERATED_DIAGRAMS"
+  },
+  {
+   "path": "design/architecture/YFIE_DESIGN_TO_CODE_FLOW.svg",
+   "class": "GENERATED_DIAGRAMS"
+  },
+  {
+   "path": "design/architecture/YFIE_FULL_STACK_SYSTEM_ARCHITECTURE.png",
+   "class": "GENERATED_DIAGRAMS"
+  },
+  {
+   "path": "design/architecture/YFIE_FULL_STACK_SYSTEM_ARCHITECTURE.svg",
+   "class": "GENERATED_DIAGRAMS"
+  },
+  {
+   "path": "design/architecture/YFIE_PAGE_FAMILY_STATE_MAP.png",
+   "class": "GENERATED_DIAGRAMS"
+  },
+  {
+   "path": "design/architecture/YFIE_PAGE_FAMILY_STATE_MAP.svg",
+   "class": "GENERATED_DIAGRAMS"
+  },
+  {
+   "path": "design/architecture/YFIE_PUBLIC_SITE_MAP.png",
+   "class": "GENERATED_DIAGRAMS"
+  },
+  {
+   "path": "design/architecture/YFIE_PUBLIC_SITE_MAP.svg",
+   "class": "GENERATED_DIAGRAMS"
+  },
+  {
+   "path": "dist/404.html",
+   "class": "GENERATED_PUBLIC_BUILD"
+  },
+  {
+   "path": "dist/ar/about/index.html",
+   "class": "GENERATED_PUBLIC_BUILD"
+  },
+  {
+   "path": "dist/ar/access/index.html",
+   "class": "GENERATED_PUBLIC_BUILD"
+  },
+  {
+   "path": "dist/ar/accessibility/index.html",
+   "class": "GENERATED_PUBLIC_BUILD"
+  },
+  {
+   "path": "dist/ar/contact/index.html",
+   "class": "GENERATED_PUBLIC_BUILD"
+  },
+  {
+   "path": "dist/ar/corrections/index.html",
+   "class": "GENERATED_PUBLIC_BUILD"
+  },
+  {
+   "path": "dist/ar/data/index.html",
+   "class": "GENERATED_PUBLIC_BUILD"
+  },
+  {
+   "path": "dist/ar/evidence/CLM-001/index.html",
+   "class": "GENERATED_PUBLIC_BUILD"
+  },
+  {
+   "path": "dist/ar/evidence/CLM-002/index.html",
+   "class": "GENERATED_PUBLIC_BUILD"
+  },
+  {
+   "path": "dist/ar/evidence/CLM-003/index.html",
+   "class": "GENERATED_PUBLIC_BUILD"
+  },
+  {
+   "path": "dist/ar/evidence/CLM-004/index.html",
+   "class": "GENERATED_PUBLIC_BUILD"
+  },
+  {
+   "path": "dist/ar/evidence/CLM-005/index.html",
+   "class": "GENERATED_PUBLIC_BUILD"
+  },
+  {
+   "path": "dist/ar/evidence/CLM-006/index.html",
+   "class": "GENERATED_PUBLIC_BUILD"
+  },
+  {
+   "path": "dist/ar/evidence/CLM-007/index.html",
+   "class": "GENERATED_PUBLIC_BUILD"
+  },
+  {
+   "path": "dist/ar/evidence/CLM-008/index.html",
+   "class": "GENERATED_PUBLIC_BUILD"
+  },
+  {
+   "path": "dist/ar/evidence/CLM-009/index.html",
+   "class": "GENERATED_PUBLIC_BUILD"
+  },
+  {
+   "path": "dist/ar/evidence/CLM-010/index.html",
+   "class": "GENERATED_PUBLIC_BUILD"
+  },
+  {
+   "path": "dist/ar/evidence/CLM-011/index.html",
+   "class": "GENERATED_PUBLIC_BUILD"
+  },
+  {
+   "path": "dist/ar/evidence/CLM-012/index.html",
+   "class": "GENERATED_PUBLIC_BUILD"
+  },
+  {
+   "path": "dist/ar/evidence/CLM-013/index.html",
+   "class": "GENERATED_PUBLIC_BUILD"
+  },
+  {
+   "path": "dist/ar/evidence/CLM-014/index.html",
+   "class": "GENERATED_PUBLIC_BUILD"
+  },
+  {
+   "path": "dist/ar/evidence/CLM-015/index.html",
+   "class": "GENERATED_PUBLIC_BUILD"
+  },
+  {
+   "path": "dist/ar/evidence/CLM-016/index.html",
+   "class": "GENERATED_PUBLIC_BUILD"
+  },
+  {
+   "path": "dist/ar/evidence/CLM-017/index.html",
+   "class": "GENERATED_PUBLIC_BUILD"
+  },
+  {
+   "path": "dist/ar/evidence/CLM-018/index.html",
+   "class": "GENERATED_PUBLIC_BUILD"
+  },
+  {
+   "path": "dist/ar/evidence/CLM-019/index.html",
+   "class": "GENERATED_PUBLIC_BUILD"
+  },
+  {
+   "path": "dist/ar/evidence/CLM-020/index.html",
+   "class": "GENERATED_PUBLIC_BUILD"
+  },
+  {
+   "path": "dist/ar/evidence/CLM-021/index.html",
+   "class": "GENERATED_PUBLIC_BUILD"
+  },
+  {
+   "path": "dist/ar/evidence/CLM-022/index.html",
+   "class": "GENERATED_PUBLIC_BUILD"
+  },
+  {
+   "path": "dist/ar/evidence/CLM-023/index.html",
+   "class": "GENERATED_PUBLIC_BUILD"
+  },
+  {
+   "path": "dist/ar/evidence/CLM-024/index.html",
+   "class": "GENERATED_PUBLIC_BUILD"
+  },
+  {
+   "path": "dist/ar/evidence/CLM-025/index.html",
+   "class": "GENERATED_PUBLIC_BUILD"
+  },
+  {
+   "path": "dist/ar/evidence/CLM-026/index.html",
+   "class": "GENERATED_PUBLIC_BUILD"
+  },
+  {
+   "path": "dist/ar/evidence/CLM-027/index.html",
+   "class": "GENERATED_PUBLIC_BUILD"
+  },
+  {
+   "path": "dist/ar/evidence/CLM-028/index.html",
+   "class": "GENERATED_PUBLIC_BUILD"
+  },
+  {
+   "path": "dist/ar/evidence/CLM-029/index.html",
+   "class": "GENERATED_PUBLIC_BUILD"
+  },
+  {
+   "path": "dist/ar/evidence/CLM-030/index.html",
+   "class": "GENERATED_PUBLIC_BUILD"
+  },
+  {
+   "path": "dist/ar/evidence/CLM-031/index.html",
+   "class": "GENERATED_PUBLIC_BUILD"
+  },
+  {
+   "path": "dist/ar/evidence/CLM-032/index.html",
+   "class": "GENERATED_PUBLIC_BUILD"
+  },
+  {
+   "path": "dist/ar/evidence/CLM-033/index.html",
+   "class": "GENERATED_PUBLIC_BUILD"
+  },
+  {
+   "path": "dist/ar/evidence/CLM-034/index.html",
+   "class": "GENERATED_PUBLIC_BUILD"
+  },
+  {
+   "path": "dist/ar/evidence/CLM-035/index.html",
+   "class": "GENERATED_PUBLIC_BUILD"
+  },
+  {
+   "path": "dist/ar/evidence/CLM-036/index.html",
+   "class": "GENERATED_PUBLIC_BUILD"
+  },
+  {
+   "path": "dist/ar/evidence/CLM-037/index.html",
+   "class": "GENERATED_PUBLIC_BUILD"
+  },
+  {
+   "path": "dist/ar/evidence/CLM-038/index.html",
+   "class": "GENERATED_PUBLIC_BUILD"
+  },
+  {
+   "path": "dist/ar/evidence/CLM-039/index.html",
+   "class": "GENERATED_PUBLIC_BUILD"
+  },
+  {
+   "path": "dist/ar/evidence/CLM-040/index.html",
+   "class": "GENERATED_PUBLIC_BUILD"
+  },
+  {
+   "path": "dist/ar/evidence/CLM-041/index.html",
+   "class": "GENERATED_PUBLIC_BUILD"
+  },
+  {
+   "path": "dist/ar/evidence/CLM-042/index.html",
+   "class": "GENERATED_PUBLIC_BUILD"
+  },
+  {
+   "path": "dist/ar/evidence/CLM-043/index.html",
+   "class": "GENERATED_PUBLIC_BUILD"
+  },
+  {
+   "path": "dist/ar/evidence/CLM-044/index.html",
+   "class": "GENERATED_PUBLIC_BUILD"
+  },
+  {
+   "path": "dist/ar/evidence/CLM-045/index.html",
+   "class": "GENERATED_PUBLIC_BUILD"
+  },
+  {
+   "path": "dist/ar/evidence/CLM-046/index.html",
+   "class": "GENERATED_PUBLIC_BUILD"
+  },
+  {
+   "path": "dist/ar/evidence/CLM-047/index.html",
+   "class": "GENERATED_PUBLIC_BUILD"
+  },
+  {
+   "path": "dist/ar/evidence/CLM-048/index.html",
+   "class": "GENERATED_PUBLIC_BUILD"
+  },
+  {
+   "path": "dist/ar/evidence/CLM-049/index.html",
+   "class": "GENERATED_PUBLIC_BUILD"
+  },
+  {
+   "path": "dist/ar/evidence/CLM-050/index.html",
+   "class": "GENERATED_PUBLIC_BUILD"
+  },
+  {
+   "path": "dist/ar/evidence/CLM-051/index.html",
+   "class": "GENERATED_PUBLIC_BUILD"
+  },
+  {
+   "path": "dist/ar/evidence/CLM-052/index.html",
+   "class": "GENERATED_PUBLIC_BUILD"
+  },
+  {
+   "path": "dist/ar/evidence/CLM-053/index.html",
+   "class": "GENERATED_PUBLIC_BUILD"
+  },
+  {
+   "path": "dist/ar/evidence/CLM-054/index.html",
+   "class": "GENERATED_PUBLIC_BUILD"
+  },
+  {
+   "path": "dist/ar/evidence/CLM-055/index.html",
+   "class": "GENERATED_PUBLIC_BUILD"
+  },
+  {
+   "path": "dist/ar/evidence/CLM-056/index.html",
+   "class": "GENERATED_PUBLIC_BUILD"
+  },
+  {
+   "path": "dist/ar/evidence/CLM-057/index.html",
+   "class": "GENERATED_PUBLIC_BUILD"
+  },
+  {
+   "path": "dist/ar/evidence/CLM-058/index.html",
+   "class": "GENERATED_PUBLIC_BUILD"
+  },
+  {
+   "path": "dist/ar/evidence/CLM-059/index.html",
+   "class": "GENERATED_PUBLIC_BUILD"
+  },
+  {
+   "path": "dist/ar/evidence/CLM-060/index.html",
+   "class": "GENERATED_PUBLIC_BUILD"
+  },
+  {
+   "path": "dist/ar/evidence/CLM-062/index.html",
+   "class": "GENERATED_PUBLIC_BUILD"
+  },
+  {
+   "path": "dist/ar/evidence/DS-DEMAND-VINTAGE-LENS/index.html",
+   "class": "GENERATED_PUBLIC_BUILD"
+  },
+  {
+   "path": "dist/ar/evidence/DS-FCP-ARCH/index.html",
+   "class": "GENERATED_PUBLIC_BUILD"
+  },
+  {
+   "path": "dist/ar/evidence/DS-FINDEX-HISTORY-CROSSWALK/index.html",
+   "class": "GENERATED_PUBLIC_BUILD"
+  },
+  {
+   "path": "dist/ar/evidence/DS-FINDEX-PUBLIC-HISTORY/index.html",
+   "class": "GENERATED_PUBLIC_BUILD"
+  },
+  {
+   "path": "dist/ar/evidence/DS-QUAL-EVIDENCE/index.html",
+   "class": "GENERATED_PUBLIC_BUILD"
+  },
+  {
+   "path": "dist/ar/evidence/FMIIP-BASELINE-2025-01/index.html",
+   "class": "GENERATED_PUBLIC_BUILD"
+  },
+  {
+   "path": "dist/ar/evidence/MF-ORIG-001+002/index.html",
+   "class": "GENERATED_PUBLIC_BUILD"
+  },
+  {
+   "path": "dist/ar/evidence/MFI-SPINE-2015-Q4/index.html",
+   "class": "GENERATED_PUBLIC_BUILD"
+  },
+  {
+   "path": "dist/ar/evidence/NEG-EW-011/index.html",
+   "class": "GENERATED_PUBLIC_BUILD"
+  },
+  {
+   "path": "dist/ar/evidence/PSE-011/index.html",
+   "class": "GENERATED_PUBLIC_BUILD"
+  },
+  {
+   "path": "dist/ar/evidence/QUAL-001/index.html",
+   "class": "GENERATED_PUBLIC_BUILD"
+  },
+  {
+   "path": "dist/ar/evidence/VIS-BORROWING-SOURCES-2014/index.html",
+   "class": "GENERATED_PUBLIC_BUILD"
+  },
+  {
+   "path": "dist/ar/evidence/VIS-CAPITAL-CONTEXT/index.html",
+   "class": "GENERATED_PUBLIC_BUILD"
+  },
+  {
+   "path": "dist/ar/evidence/VIS-DEMAND-VINTAGE-LADDER/index.html",
+   "class": "GENERATED_PUBLIC_BUILD"
+  },
+  {
+   "path": "dist/ar/evidence/VIS-DOMESTIC-REMITTANCE-PATH-2014/index.html",
+   "class": "GENERATED_PUBLIC_BUILD"
+  },
+  {
+   "path": "dist/ar/evidence/VIS-E-MONEY-RULE-STACK/index.html",
+   "class": "GENERATED_PUBLIC_BUILD"
+  },
+  {
+   "path": "dist/ar/evidence/VIS-EVIDENCE-CLASS-LADDER/index.html",
+   "class": "GENERATED_PUBLIC_BUILD"
+  },
+  {
+   "path": "dist/ar/evidence/VIS-EVIDENCE-FRESHNESS/index.html",
+   "class": "GENERATED_PUBLIC_BUILD"
+  },
+  {
+   "path": "dist/ar/evidence/VIS-EVIDENCE-GAPS/index.html",
+   "class": "GENERATED_PUBLIC_BUILD"
+  },
+  {
+   "path": "dist/ar/evidence/VIS-FCP-REDRESS-PATH/index.html",
+   "class": "GENERATED_PUBLIC_BUILD"
+  },
+  {
+   "path": "dist/ar/evidence/VIS-FINDEX-ACCESS-USE/index.html",
+   "class": "GENERATED_PUBLIC_BUILD"
+  },
+  {
+   "path": "dist/ar/evidence/VIS-FINDEX-BARRIERS/index.html",
+   "class": "GENERATED_PUBLIC_BUILD"
+  },
+  {
+   "path": "dist/ar/evidence/VIS-FINDEX-FLOW-CHANNELS/index.html",
+   "class": "GENERATED_PUBLIC_BUILD"
+  },
+  {
+   "path": "dist/ar/evidence/VIS-FINDEX-GAPS/index.html",
+   "class": "GENERATED_PUBLIC_BUILD"
+  },
+  {
+   "path": "dist/ar/evidence/VIS-FINDEX-OBSERVED-WAVES/index.html",
+   "class": "GENERATED_PUBLIC_BUILD"
+  },
+  {
+   "path": "dist/ar/evidence/VIS-FINDEX-RESILIENCE/index.html",
+   "class": "GENERATED_PUBLIC_BUILD"
+  },
+  {
+   "path": "dist/ar/evidence/VIS-FINDEX-SAMPLE-SUPPORT/index.html",
+   "class": "GENERATED_PUBLIC_BUILD"
+  },
+  {
+   "path": "dist/ar/evidence/VIS-FIRM-CONSTRAINTS/index.html",
+   "class": "GENERATED_PUBLIC_BUILD"
+  },
+  {
+   "path": "dist/ar/evidence/VIS-FIRM-FINANCE-PATH/index.html",
+   "class": "GENERATED_PUBLIC_BUILD"
+  },
+  {
+   "path": "dist/ar/evidence/VIS-FIRM-FINANCE-SEVERITY/index.html",
+   "class": "GENERATED_PUBLIC_BUILD"
+  },
+  {
+   "path": "dist/ar/evidence/VIS-FL-EVIDENCE-LADDER/index.html",
+   "class": "GENERATED_PUBLIC_BUILD"
+  },
+  {
+   "path": "dist/ar/evidence/VIS-INCLUSION-TRANSMISSION/index.html",
+   "class": "GENERATED_PUBLIC_BUILD"
+  },
+  {
+   "path": "dist/ar/evidence/VIS-MECHANISM-METRIC-BRIDGE/index.html",
+   "class": "GENERATED_PUBLIC_BUILD"
+  },
+  {
+   "path": "dist/ar/evidence/VIS-MFI-2014-PANEL/index.html",
+   "class": "GENERATED_PUBLIC_BUILD"
+  },
+  {
+   "path": "dist/ar/evidence/VIS-MFI-RUPTURE-LENS/index.html",
+   "class": "GENERATED_PUBLIC_BUILD"
+  },
+  {
+   "path": "dist/ar/evidence/VIS-MFI-SPINE/index.html",
+   "class": "GENERATED_PUBLIC_BUILD"
+  },
+  {
+   "path": "dist/ar/evidence/VIS-OECD-FCP-TIMELINE/index.html",
+   "class": "GENERATED_PUBLIC_BUILD"
+  },
+  {
+   "path": "dist/ar/evidence/VIS-PAYMENT-ANATOMY/index.html",
+   "class": "GENERATED_PUBLIC_BUILD"
+  },
+  {
+   "path": "dist/ar/evidence/VIS-PAYMENT-RAILS/index.html",
+   "class": "GENERATED_PUBLIC_BUILD"
+  },
+  {
+   "path": "dist/ar/evidence/VIS-POS-TERMINALS/index.html",
+   "class": "GENERATED_PUBLIC_BUILD"
+  },
+  {
+   "path": "dist/ar/evidence/VIS-POS-TRANSACTIONS/index.html",
+   "class": "GENERATED_PUBLIC_BUILD"
+  },
+  {
+   "path": "dist/ar/evidence/VIS-POS-VALUE/index.html",
+   "class": "GENERATED_PUBLIC_BUILD"
+  },
+  {
+   "path": "dist/ar/evidence/VIS-PROVIDER-OBSERVABILITY/index.html",
+   "class": "GENERATED_PUBLIC_BUILD"
+  },
+  {
+   "path": "dist/ar/evidence/VIS-PROVIDER-TIME/index.html",
+   "class": "GENERATED_PUBLIC_BUILD"
+  },
+  {
+   "path": "dist/ar/evidence/VIS-REMITTANCE-COST/index.html",
+   "class": "GENERATED_PUBLIC_BUILD"
+  },
+  {
+   "path": "dist/ar/evidence/VIS-REMITTANCE-MACRO/index.html",
+   "class": "GENERATED_PUBLIC_BUILD"
+  },
+  {
+   "path": "dist/ar/evidence/VIS-SOURCE-COMPARISON/index.html",
+   "class": "GENERATED_PUBLIC_BUILD"
+  },
+  {
+   "path": "dist/ar/evidence/VIS-TARGET-RESULT-STATE/index.html",
+   "class": "GENERATED_PUBLIC_BUILD"
+  },
+  {
+   "path": "dist/ar/evidence/XW-FMIIP-005/index.html",
+   "class": "GENERATED_PUBLIC_BUILD"
+  },
+  {
+   "path": "dist/ar/evidence/compare/index.html",
+   "class": "GENERATED_PUBLIC_BUILD"
+  },
+  {
+   "path": "dist/ar/evidence/index.html",
+   "class": "GENERATED_PUBLIC_BUILD"
+  },
+  {
+   "path": "dist/ar/explore/index.html",
+   "class": "GENERATED_PUBLIC_BUILD"
+  },
+  {
+   "path": "dist/ar/finance/index.html",
+   "class": "GENERATED_PUBLIC_BUILD"
+  },
+  {
+   "path": "dist/ar/firms/index.html",
+   "class": "GENERATED_PUBLIC_BUILD"
+  },
+  {
+   "path": "dist/ar/index.html",
+   "class": "GENERATED_PUBLIC_BUILD"
+  },
+  {
+   "path": "dist/ar/measurement/index.html",
+   "class": "GENERATED_PUBLIC_BUILD"
+  },
+  {
+   "path": "dist/ar/methodology/index.html",
+   "class": "GENERATED_PUBLIC_BUILD"
+  },
+  {
+   "path": "dist/ar/payments/index.html",
+   "class": "GENERATED_PUBLIC_BUILD"
+  },
+  {
+   "path": "dist/ar/people/index.html",
+   "class": "GENERATED_PUBLIC_BUILD"
+  },
+  {
+   "path": "dist/ar/privacy/index.html",
+   "class": "GENERATED_PUBLIC_BUILD"
+  },
+  {
+   "path": "dist/ar/providers/index.html",
+   "class": "GENERATED_PUBLIC_BUILD"
+  },
+  {
+   "path": "dist/ar/readings/after-transfer-persistence/index.html",
+   "class": "GENERATED_PUBLIC_BUILD"
+  },
+  {
+   "path": "dist/ar/readings/banking-jump-measurement-basis/index.html",
+   "class": "GENERATED_PUBLIC_BUILD"
+  },
+  {
+   "path": "dist/ar/readings/define-what-you-count/index.html",
+   "class": "GENERATED_PUBLIC_BUILD"
+  },
+  {
+   "path": "dist/ar/readings/digital-workaround-not-yet-durable-inclusion/index.html",
+   "class": "GENERATED_PUBLIC_BUILD"
+  },
+  {
+   "path": "dist/ar/readings/finance-constraint-different-questions/index.html",
+   "class": "GENERATED_PUBLIC_BUILD"
+  },
+  {
+   "path": "dist/ar/readings/from-rail-to-result-missing-middle/index.html",
+   "class": "GENERATED_PUBLIC_BUILD"
+  },
+  {
+   "path": "dist/ar/readings/gender-gap-measured-causes-open/index.html",
+   "class": "GENERATED_PUBLIC_BUILD"
+  },
+  {
+   "path": "dist/ar/readings/index.html",
+   "class": "GENERATED_PUBLIC_BUILD"
+  },
+  {
+   "path": "dist/ar/readings/microfinance-structural-divergence/index.html",
+   "class": "GENERATED_PUBLIC_BUILD"
+  },
+  {
+   "path": "dist/ar/readings/reforms-newer-than-people-evidence/index.html",
+   "class": "GENERATED_PUBLIC_BUILD"
+  },
+  {
+   "path": "dist/ar/readings/same-year-different-number/index.html",
+   "class": "GENERATED_PUBLIC_BUILD"
+  },
+  {
+   "path": "dist/ar/reforms/index.html",
+   "class": "GENERATED_PUBLIC_BUILD"
+  },
+  {
+   "path": "dist/ar/remittances/index.html",
+   "class": "GENERATED_PUBLIC_BUILD"
+  },
+  {
+   "path": "dist/ar/rights/index.html",
+   "class": "GENERATED_PUBLIC_BUILD"
+  },
+  {
+   "path": "dist/ar/terms/index.html",
+   "class": "GENERATED_PUBLIC_BUILD"
+  },
+  {
+   "path": "dist/assets/CauseWay_Master_Logo.png",
+   "class": "GENERATED_PUBLIC_BUILD"
+  },
+  {
+   "path": "dist/assets/app.js",
+   "class": "GENERATED_PUBLIC_BUILD"
+  },
+  {
+   "path": "dist/assets/styles.css",
+   "class": "GENERATED_PUBLIC_BUILD"
+  },
+  {
+   "path": "dist/en/about/index.html",
+   "class": "GENERATED_PUBLIC_BUILD"
+  },
+  {
+   "path": "dist/en/access/index.html",
+   "class": "GENERATED_PUBLIC_BUILD"
+  },
+  {
+   "path": "dist/en/accessibility/index.html",
+   "class": "GENERATED_PUBLIC_BUILD"
+  },
+  {
+   "path": "dist/en/contact/index.html",
+   "class": "GENERATED_PUBLIC_BUILD"
+  },
+  {
+   "path": "dist/en/corrections/index.html",
+   "class": "GENERATED_PUBLIC_BUILD"
+  },
+  {
+   "path": "dist/en/data/index.html",
+   "class": "GENERATED_PUBLIC_BUILD"
+  },
+  {
+   "path": "dist/en/evidence/CLM-001/index.html",
+   "class": "GENERATED_PUBLIC_BUILD"
+  },
+  {
+   "path": "dist/en/evidence/CLM-002/index.html",
+   "class": "GENERATED_PUBLIC_BUILD"
+  },
+  {
+   "path": "dist/en/evidence/CLM-003/index.html",
+   "class": "GENERATED_PUBLIC_BUILD"
+  },
+  {
+   "path": "dist/en/evidence/CLM-004/index.html",
+   "class": "GENERATED_PUBLIC_BUILD"
+  },
+  {
+   "path": "dist/en/evidence/CLM-005/index.html",
+   "class": "GENERATED_PUBLIC_BUILD"
+  },
+  {
+   "path": "dist/en/evidence/CLM-006/index.html",
+   "class": "GENERATED_PUBLIC_BUILD"
+  },
+  {
+   "path": "dist/en/evidence/CLM-007/index.html",
+   "class": "GENERATED_PUBLIC_BUILD"
+  },
+  {
+   "path": "dist/en/evidence/CLM-008/index.html",
+   "class": "GENERATED_PUBLIC_BUILD"
+  },
+  {
+   "path": "dist/en/evidence/CLM-009/index.html",
+   "class": "GENERATED_PUBLIC_BUILD"
+  },
+  {
+   "path": "dist/en/evidence/CLM-010/index.html",
+   "class": "GENERATED_PUBLIC_BUILD"
+  },
+  {
+   "path": "dist/en/evidence/CLM-011/index.html",
+   "class": "GENERATED_PUBLIC_BUILD"
+  },
+  {
+   "path": "dist/en/evidence/CLM-012/index.html",
+   "class": "GENERATED_PUBLIC_BUILD"
+  },
+  {
+   "path": "dist/en/evidence/CLM-013/index.html",
+   "class": "GENERATED_PUBLIC_BUILD"
+  },
+  {
+   "path": "dist/en/evidence/CLM-014/index.html",
+   "class": "GENERATED_PUBLIC_BUILD"
+  },
+  {
+   "path": "dist/en/evidence/CLM-015/index.html",
+   "class": "GENERATED_PUBLIC_BUILD"
+  },
+  {
+   "path": "dist/en/evidence/CLM-016/index.html",
+   "class": "GENERATED_PUBLIC_BUILD"
+  },
+  {
+   "path": "dist/en/evidence/CLM-017/index.html",
+   "class": "GENERATED_PUBLIC_BUILD"
+  },
+  {
+   "path": "dist/en/evidence/CLM-018/index.html",
+   "class": "GENERATED_PUBLIC_BUILD"
+  },
+  {
+   "path": "dist/en/evidence/CLM-019/index.html",
+   "class": "GENERATED_PUBLIC_BUILD"
+  },
+  {
+   "path": "dist/en/evidence/CLM-020/index.html",
+   "class": "GENERATED_PUBLIC_BUILD"
+  },
+  {
+   "path": "dist/en/evidence/CLM-021/index.html",
+   "class": "GENERATED_PUBLIC_BUILD"
+  },
+  {
+   "path": "dist/en/evidence/CLM-022/index.html",
+   "class": "GENERATED_PUBLIC_BUILD"
+  },
+  {
+   "path": "dist/en/evidence/CLM-023/index.html",
+   "class": "GENERATED_PUBLIC_BUILD"
+  },
+  {
+   "path": "dist/en/evidence/CLM-024/index.html",
+   "class": "GENERATED_PUBLIC_BUILD"
+  },
+  {
+   "path": "dist/en/evidence/CLM-025/index.html",
+   "class": "GENERATED_PUBLIC_BUILD"
+  },
+  {
+   "path": "dist/en/evidence/CLM-026/index.html",
+   "class": "GENERATED_PUBLIC_BUILD"
+  },
+  {
+   "path": "dist/en/evidence/CLM-027/index.html",
+   "class": "GENERATED_PUBLIC_BUILD"
+  },
+  {
+   "path": "dist/en/evidence/CLM-028/index.html",
+   "class": "GENERATED_PUBLIC_BUILD"
+  },
+  {
+   "path": "dist/en/evidence/CLM-029/index.html",
+   "class": "GENERATED_PUBLIC_BUILD"
+  },
+  {
+   "path": "dist/en/evidence/CLM-030/index.html",
+   "class": "GENERATED_PUBLIC_BUILD"
+  },
+  {
+   "path": "dist/en/evidence/CLM-031/index.html",
+   "class": "GENERATED_PUBLIC_BUILD"
+  },
+  {
+   "path": "dist/en/evidence/CLM-032/index.html",
+   "class": "GENERATED_PUBLIC_BUILD"
+  },
+  {
+   "path": "dist/en/evidence/CLM-033/index.html",
+   "class": "GENERATED_PUBLIC_BUILD"
+  },
+  {
+   "path": "dist/en/evidence/CLM-034/index.html",
+   "class": "GENERATED_PUBLIC_BUILD"
+  },
+  {
+   "path": "dist/en/evidence/CLM-035/index.html",
+   "class": "GENERATED_PUBLIC_BUILD"
+  },
+  {
+   "path": "dist/en/evidence/CLM-036/index.html",
+   "class": "GENERATED_PUBLIC_BUILD"
+  },
+  {
+   "path": "dist/en/evidence/CLM-037/index.html",
+   "class": "GENERATED_PUBLIC_BUILD"
+  },
+  {
+   "path": "dist/en/evidence/CLM-038/index.html",
+   "class": "GENERATED_PUBLIC_BUILD"
+  },
+  {
+   "path": "dist/en/evidence/CLM-039/index.html",
+   "class": "GENERATED_PUBLIC_BUILD"
+  },
+  {
+   "path": "dist/en/evidence/CLM-040/index.html",
+   "class": "GENERATED_PUBLIC_BUILD"
+  },
+  {
+   "path": "dist/en/evidence/CLM-041/index.html",
+   "class": "GENERATED_PUBLIC_BUILD"
+  },
+  {
+   "path": "dist/en/evidence/CLM-042/index.html",
+   "class": "GENERATED_PUBLIC_BUILD"
+  },
+  {
+   "path": "dist/en/evidence/CLM-043/index.html",
+   "class": "GENERATED_PUBLIC_BUILD"
+  },
+  {
+   "path": "dist/en/evidence/CLM-044/index.html",
+   "class": "GENERATED_PUBLIC_BUILD"
+  },
+  {
+   "path": "dist/en/evidence/CLM-045/index.html",
+   "class": "GENERATED_PUBLIC_BUILD"
+  },
+  {
+   "path": "dist/en/evidence/CLM-046/index.html",
+   "class": "GENERATED_PUBLIC_BUILD"
+  },
+  {
+   "path": "dist/en/evidence/CLM-047/index.html",
+   "class": "GENERATED_PUBLIC_BUILD"
+  },
+  {
+   "path": "dist/en/evidence/CLM-048/index.html",
+   "class": "GENERATED_PUBLIC_BUILD"
+  },
+  {
+   "path": "dist/en/evidence/CLM-049/index.html",
+   "class": "GENERATED_PUBLIC_BUILD"
+  },
+  {
+   "path": "dist/en/evidence/CLM-050/index.html",
+   "class": "GENERATED_PUBLIC_BUILD"
+  },
+  {
+   "path": "dist/en/evidence/CLM-051/index.html",
+   "class": "GENERATED_PUBLIC_BUILD"
+  },
+  {
+   "path": "dist/en/evidence/CLM-052/index.html",
+   "class": "GENERATED_PUBLIC_BUILD"
+  },
+  {
+   "path": "dist/en/evidence/CLM-053/index.html",
+   "class": "GENERATED_PUBLIC_BUILD"
+  },
+  {
+   "path": "dist/en/evidence/CLM-054/index.html",
+   "class": "GENERATED_PUBLIC_BUILD"
+  },
+  {
+   "path": "dist/en/evidence/CLM-055/index.html",
+   "class": "GENERATED_PUBLIC_BUILD"
+  },
+  {
+   "path": "dist/en/evidence/CLM-056/index.html",
+   "class": "GENERATED_PUBLIC_BUILD"
+  },
+  {
+   "path": "dist/en/evidence/CLM-057/index.html",
+   "class": "GENERATED_PUBLIC_BUILD"
+  },
+  {
+   "path": "dist/en/evidence/CLM-058/index.html",
+   "class": "GENERATED_PUBLIC_BUILD"
+  },
+  {
+   "path": "dist/en/evidence/CLM-059/index.html",
+   "class": "GENERATED_PUBLIC_BUILD"
+  },
+  {
+   "path": "dist/en/evidence/CLM-060/index.html",
+   "class": "GENERATED_PUBLIC_BUILD"
+  },
+  {
+   "path": "dist/en/evidence/CLM-062/index.html",
+   "class": "GENERATED_PUBLIC_BUILD"
+  },
+  {
+   "path": "dist/en/evidence/DS-DEMAND-VINTAGE-LENS/index.html",
+   "class": "GENERATED_PUBLIC_BUILD"
+  },
+  {
+   "path": "dist/en/evidence/DS-FCP-ARCH/index.html",
+   "class": "GENERATED_PUBLIC_BUILD"
+  },
+  {
+   "path": "dist/en/evidence/DS-FINDEX-HISTORY-CROSSWALK/index.html",
+   "class": "GENERATED_PUBLIC_BUILD"
+  },
+  {
+   "path": "dist/en/evidence/DS-FINDEX-PUBLIC-HISTORY/index.html",
+   "class": "GENERATED_PUBLIC_BUILD"
+  },
+  {
+   "path": "dist/en/evidence/DS-QUAL-EVIDENCE/index.html",
+   "class": "GENERATED_PUBLIC_BUILD"
+  },
+  {
+   "path": "dist/en/evidence/FMIIP-BASELINE-2025-01/index.html",
+   "class": "GENERATED_PUBLIC_BUILD"
+  },
+  {
+   "path": "dist/en/evidence/MF-ORIG-001+002/index.html",
+   "class": "GENERATED_PUBLIC_BUILD"
+  },
+  {
+   "path": "dist/en/evidence/MFI-SPINE-2015-Q4/index.html",
+   "class": "GENERATED_PUBLIC_BUILD"
+  },
+  {
+   "path": "dist/en/evidence/NEG-EW-011/index.html",
+   "class": "GENERATED_PUBLIC_BUILD"
+  },
+  {
+   "path": "dist/en/evidence/PSE-011/index.html",
+   "class": "GENERATED_PUBLIC_BUILD"
+  },
+  {
+   "path": "dist/en/evidence/QUAL-001/index.html",
+   "class": "GENERATED_PUBLIC_BUILD"
+  },
+  {
+   "path": "dist/en/evidence/VIS-BORROWING-SOURCES-2014/index.html",
+   "class": "GENERATED_PUBLIC_BUILD"
+  },
+  {
+   "path": "dist/en/evidence/VIS-CAPITAL-CONTEXT/index.html",
+   "class": "GENERATED_PUBLIC_BUILD"
+  },
+  {
+   "path": "dist/en/evidence/VIS-DEMAND-VINTAGE-LADDER/index.html",
+   "class": "GENERATED_PUBLIC_BUILD"
+  },
+  {
+   "path": "dist/en/evidence/VIS-DOMESTIC-REMITTANCE-PATH-2014/index.html",
+   "class": "GENERATED_PUBLIC_BUILD"
+  },
+  {
+   "path": "dist/en/evidence/VIS-E-MONEY-RULE-STACK/index.html",
+   "class": "GENERATED_PUBLIC_BUILD"
+  },
+  {
+   "path": "dist/en/evidence/VIS-EVIDENCE-CLASS-LADDER/index.html",
+   "class": "GENERATED_PUBLIC_BUILD"
+  },
+  {
+   "path": "dist/en/evidence/VIS-EVIDENCE-FRESHNESS/index.html",
+   "class": "GENERATED_PUBLIC_BUILD"
+  },
+  {
+   "path": "dist/en/evidence/VIS-EVIDENCE-GAPS/index.html",
+   "class": "GENERATED_PUBLIC_BUILD"
+  },
+  {
+   "path": "dist/en/evidence/VIS-FCP-REDRESS-PATH/index.html",
+   "class": "GENERATED_PUBLIC_BUILD"
+  },
+  {
+   "path": "dist/en/evidence/VIS-FINDEX-ACCESS-USE/index.html",
+   "class": "GENERATED_PUBLIC_BUILD"
+  },
+  {
+   "path": "dist/en/evidence/VIS-FINDEX-BARRIERS/index.html",
+   "class": "GENERATED_PUBLIC_BUILD"
+  },
+  {
+   "path": "dist/en/evidence/VIS-FINDEX-FLOW-CHANNELS/index.html",
+   "class": "GENERATED_PUBLIC_BUILD"
+  },
+  {
+   "path": "dist/en/evidence/VIS-FINDEX-GAPS/index.html",
+   "class": "GENERATED_PUBLIC_BUILD"
+  },
+  {
+   "path": "dist/en/evidence/VIS-FINDEX-OBSERVED-WAVES/index.html",
+   "class": "GENERATED_PUBLIC_BUILD"
+  },
+  {
+   "path": "dist/en/evidence/VIS-FINDEX-RESILIENCE/index.html",
+   "class": "GENERATED_PUBLIC_BUILD"
+  },
+  {
+   "path": "dist/en/evidence/VIS-FINDEX-SAMPLE-SUPPORT/index.html",
+   "class": "GENERATED_PUBLIC_BUILD"
+  },
+  {
+   "path": "dist/en/evidence/VIS-FIRM-CONSTRAINTS/index.html",
+   "class": "GENERATED_PUBLIC_BUILD"
+  },
+  {
+   "path": "dist/en/evidence/VIS-FIRM-FINANCE-PATH/index.html",
+   "class": "GENERATED_PUBLIC_BUILD"
+  },
+  {
+   "path": "dist/en/evidence/VIS-FIRM-FINANCE-SEVERITY/index.html",
+   "class": "GENERATED_PUBLIC_BUILD"
+  },
+  {
+   "path": "dist/en/evidence/VIS-FL-EVIDENCE-LADDER/index.html",
+   "class": "GENERATED_PUBLIC_BUILD"
+  },
+  {
+   "path": "dist/en/evidence/VIS-INCLUSION-TRANSMISSION/index.html",
+   "class": "GENERATED_PUBLIC_BUILD"
+  },
+  {
+   "path": "dist/en/evidence/VIS-MECHANISM-METRIC-BRIDGE/index.html",
+   "class": "GENERATED_PUBLIC_BUILD"
+  },
+  {
+   "path": "dist/en/evidence/VIS-MFI-2014-PANEL/index.html",
+   "class": "GENERATED_PUBLIC_BUILD"
+  },
+  {
+   "path": "dist/en/evidence/VIS-MFI-RUPTURE-LENS/index.html",
+   "class": "GENERATED_PUBLIC_BUILD"
+  },
+  {
+   "path": "dist/en/evidence/VIS-MFI-SPINE/index.html",
+   "class": "GENERATED_PUBLIC_BUILD"
+  },
+  {
+   "path": "dist/en/evidence/VIS-OECD-FCP-TIMELINE/index.html",
+   "class": "GENERATED_PUBLIC_BUILD"
+  },
+  {
+   "path": "dist/en/evidence/VIS-PAYMENT-ANATOMY/index.html",
+   "class": "GENERATED_PUBLIC_BUILD"
+  },
+  {
+   "path": "dist/en/evidence/VIS-PAYMENT-RAILS/index.html",
+   "class": "GENERATED_PUBLIC_BUILD"
+  },
+  {
+   "path": "dist/en/evidence/VIS-POS-TERMINALS/index.html",
+   "class": "GENERATED_PUBLIC_BUILD"
+  },
+  {
+   "path": "dist/en/evidence/VIS-POS-TRANSACTIONS/index.html",
+   "class": "GENERATED_PUBLIC_BUILD"
+  },
+  {
+   "path": "dist/en/evidence/VIS-POS-VALUE/index.html",
+   "class": "GENERATED_PUBLIC_BUILD"
+  },
+  {
+   "path": "dist/en/evidence/VIS-PROVIDER-OBSERVABILITY/index.html",
+   "class": "GENERATED_PUBLIC_BUILD"
+  },
+  {
+   "path": "dist/en/evidence/VIS-PROVIDER-TIME/index.html",
+   "class": "GENERATED_PUBLIC_BUILD"
+  },
+  {
+   "path": "dist/en/evidence/VIS-REMITTANCE-COST/index.html",
+   "class": "GENERATED_PUBLIC_BUILD"
+  },
+  {
+   "path": "dist/en/evidence/VIS-REMITTANCE-MACRO/index.html",
+   "class": "GENERATED_PUBLIC_BUILD"
+  },
+  {
+   "path": "dist/en/evidence/VIS-SOURCE-COMPARISON/index.html",
+   "class": "GENERATED_PUBLIC_BUILD"
+  },
+  {
+   "path": "dist/en/evidence/VIS-TARGET-RESULT-STATE/index.html",
+   "class": "GENERATED_PUBLIC_BUILD"
+  },
+  {
+   "path": "dist/en/evidence/XW-FMIIP-005/index.html",
+   "class": "GENERATED_PUBLIC_BUILD"
+  },
+  {
+   "path": "dist/en/evidence/compare/index.html",
+   "class": "GENERATED_PUBLIC_BUILD"
+  },
+  {
+   "path": "dist/en/evidence/index.html",
+   "class": "GENERATED_PUBLIC_BUILD"
+  },
+  {
+   "path": "dist/en/explore/index.html",
+   "class": "GENERATED_PUBLIC_BUILD"
+  },
+  {
+   "path": "dist/en/finance/index.html",
+   "class": "GENERATED_PUBLIC_BUILD"
+  },
+  {
+   "path": "dist/en/firms/index.html",
+   "class": "GENERATED_PUBLIC_BUILD"
+  },
+  {
+   "path": "dist/en/index.html",
+   "class": "GENERATED_PUBLIC_BUILD"
+  },
+  {
+   "path": "dist/en/measurement/index.html",
+   "class": "GENERATED_PUBLIC_BUILD"
+  },
+  {
+   "path": "dist/en/methodology/index.html",
+   "class": "GENERATED_PUBLIC_BUILD"
+  },
+  {
+   "path": "dist/en/payments/index.html",
+   "class": "GENERATED_PUBLIC_BUILD"
+  },
+  {
+   "path": "dist/en/people/index.html",
+   "class": "GENERATED_PUBLIC_BUILD"
+  },
+  {
+   "path": "dist/en/privacy/index.html",
+   "class": "GENERATED_PUBLIC_BUILD"
+  },
+  {
+   "path": "dist/en/providers/index.html",
+   "class": "GENERATED_PUBLIC_BUILD"
+  },
+  {
+   "path": "dist/en/readings/after-transfer-persistence/index.html",
+   "class": "GENERATED_PUBLIC_BUILD"
+  },
+  {
+   "path": "dist/en/readings/banking-jump-measurement-basis/index.html",
+   "class": "GENERATED_PUBLIC_BUILD"
+  },
+  {
+   "path": "dist/en/readings/define-what-you-count/index.html",
+   "class": "GENERATED_PUBLIC_BUILD"
+  },
+  {
+   "path": "dist/en/readings/digital-workaround-not-yet-durable-inclusion/index.html",
+   "class": "GENERATED_PUBLIC_BUILD"
+  },
+  {
+   "path": "dist/en/readings/finance-constraint-different-questions/index.html",
+   "class": "GENERATED_PUBLIC_BUILD"
+  },
+  {
+   "path": "dist/en/readings/from-rail-to-result-missing-middle/index.html",
+   "class": "GENERATED_PUBLIC_BUILD"
+  },
+  {
+   "path": "dist/en/readings/gender-gap-measured-causes-open/index.html",
+   "class": "GENERATED_PUBLIC_BUILD"
+  },
+  {
+   "path": "dist/en/readings/index.html",
+   "class": "GENERATED_PUBLIC_BUILD"
+  },
+  {
+   "path": "dist/en/readings/microfinance-structural-divergence/index.html",
+   "class": "GENERATED_PUBLIC_BUILD"
+  },
+  {
+   "path": "dist/en/readings/reforms-newer-than-people-evidence/index.html",
+   "class": "GENERATED_PUBLIC_BUILD"
+  },
+  {
+   "path": "dist/en/readings/same-year-different-number/index.html",
+   "class": "GENERATED_PUBLIC_BUILD"
+  },
+  {
+   "path": "dist/en/reforms/index.html",
+   "class": "GENERATED_PUBLIC_BUILD"
+  },
+  {
+   "path": "dist/en/remittances/index.html",
+   "class": "GENERATED_PUBLIC_BUILD"
+  },
+  {
+   "path": "dist/en/rights/index.html",
+   "class": "GENERATED_PUBLIC_BUILD"
+  },
+  {
+   "path": "dist/en/terms/index.html",
+   "class": "GENERATED_PUBLIC_BUILD"
+  },
+  {
+   "path": "dist/index.html",
+   "class": "GENERATED_PUBLIC_BUILD"
+  },
+  {
+   "path": "dist/static-data/search_aliases.json",
+   "class": "GENERATED_PUBLIC_BUILD"
+  },
+  {
+   "path": "dist/static-data/search_index.json",
+   "class": "GENERATED_PUBLIC_BUILD"
+  },
+  {
+   "path": "docs/CHANGELOG.md",
+   "class": "CURRENT_DOCUMENT"
+  },
+  {
+   "path": "docs/DEPLOYMENT.md",
+   "class": "CURRENT_DOCUMENT"
+  },
+  {
+   "path": "docs/FINAL_RELEASE_VERIFICATION.md",
+   "class": "AUDIT_HISTORY"
+  },
+  {
+   "path": "docs/HANDOFF_STATE.json",
+   "class": "AUDIT_HISTORY"
+  },
+  {
+   "path": "docs/POST_BUILD_REVIEW_PROGRAM.md",
+   "class": "AUDIT_HISTORY"
+  },
+  {
+   "path": "docs/PRODUCTION_REPOSITORY_PROTOCOL.md",
+   "class": "CURRENT_DOCUMENT"
+  },
+  {
+   "path": "docs/PROGRESS_INVENTORY.json",
+   "class": "AUDIT_HISTORY"
+  },
+  {
+   "path": "docs/REPOSITORY_BUILD_SUMMARY.json",
+   "class": "AUDIT_HISTORY"
+  },
+  {
+   "path": "docs/REVIEW_LEDGER.json",
+   "class": "AUDIT_HISTORY"
+  },
+  {
+   "path": "docs/S00_S01_REVIEW_REPORT.md",
+   "class": "AUDIT_HISTORY"
+  },
+  {
+   "path": "docs/S01_ARCHIVE_DISPOSITION_REGISTER.json",
+   "class": "AUDIT_HISTORY"
+  },
+  {
+   "path": "docs/S01_REFERENCE_CHALLENGE.md",
+   "class": "AUDIT_HISTORY"
+  },
+  {
+   "path": "docs/S01_TASK_STRESS_TEST.md",
+   "class": "AUDIT_HISTORY"
+  },
+  {
+   "path": "docs/S02_AUDIENCE_JOURNEYS_AND_IA.md",
+   "class": "AUDIT_HISTORY"
+  },
+  {
+   "path": "docs/S03_1_PEOPLE_ACCESS_COMPOSITION_REVIEW.md",
+   "class": "AUDIT_HISTORY"
+  },
+  {
+   "path": "docs/S03_2_FIRMS_FINANCE_COMPOSITION_REVIEW.md",
+   "class": "AUDIT_HISTORY"
+  },
+  {
+   "path": "docs/S03_3_PAYMENTS_REMITTANCES_COMPOSITION_REVIEW.md",
+   "class": "AUDIT_HISTORY"
+  },
+  {
+   "path": "docs/S03_4_PROVIDERS_REFORMS_DOMAIN_CLOSURE.md",
+   "class": "AUDIT_HISTORY"
+  },
+  {
+   "path": "docs/S04_1_EVIDENCE_DISCOVERY_VERIFICATION_CLOSURE.md",
+   "class": "AUDIT_HISTORY"
+  },
+  {
+   "path": "docs/S04_2_COMPARE_PUBLICATION_CLOSURE.md",
+   "class": "AUDIT_HISTORY"
+  },
+  {
+   "path": "docs/S05_1_BILINGUAL_SEMANTIC_TYPOGRAPHIC_CLOSURE.md",
+   "class": "AUDIT_HISTORY"
+  },
+  {
+   "path": "docs/S05_2_MOBILE_KEYBOARD_ZOOM_SCREENREADER_CLOSURE.md",
+   "class": "AUDIT_HISTORY"
+  },
+  {
+   "path": "docs/S05_3_VISUAL_TABLE_FALLBACK_NON_COLOUR_CLOSURE.md",
+   "class": "AUDIT_HISTORY"
+  },
+  {
+   "path": "docs/S06_1_WORLD_BANK_FINDEX_FIRMS_SOURCE_OWNER_CLOSURE.md",
+   "class": "AUDIT_HISTORY"
+  },
+  {
+   "path": "docs/S06_2_CBY_SOURCE_OWNER_CLOSURE.md",
+   "class": "AUDIT_HISTORY"
+  },
+  {
+   "path": "docs/S06_3_IMF_REMITTANCES_MICROFINANCE_PROGRAMME_HUMANITARIAN_SOURCE_OWNER_CLOSURE.md",
+   "class": "AUDIT_HISTORY"
+  },
+  {
+   "path": "docs/S06_ARCHIVE_EVIDENCE_CHALLENGE_QUEUE.md",
+   "class": "AUDIT_HISTORY"
+  },
+  {
+   "path": "docs/S06_RECIPIENT_SIDE_ACCEPTANCE.md",
+   "class": "AUDIT_HISTORY"
+  },
+  {
+   "path": "docs/SESSION_CLOSURE_QUALITY_STANDARD.md",
+   "class": "AUDIT_HISTORY"
+  },
+  {
+   "path": "docs/SESSION_EXECUTION_PROTOCOL.md",
+   "class": "AUDIT_HISTORY"
+  },
+  {
+   "path": "handoff/CLAUDE_CODE_MASTER_PROMPT.md",
+   "class": "RECIPIENT_HANDOFF"
+  },
+  {
+   "path": "handoff/CLAUDE_DESIGN_MASTER_PROMPT.md",
+   "class": "RECIPIENT_HANDOFF"
+  },
+  {
+   "path": "handoff/DESIGN_STARTING_TOKENS.json",
+   "class": "RECIPIENT_HANDOFF"
+  },
+  {
+   "path": "handoff/DESIGN_TO_CODE_CONTRACT.md",
+   "class": "RECIPIENT_HANDOFF"
+  },
+  {
+   "path": "handoff/HANDOFF_ACCEPTANCE_CHECKLIST.md",
+   "class": "RECIPIENT_HANDOFF"
+  },
+  {
+   "path": "handoff/IMPLEMENTATION_MANIFEST.json",
+   "class": "RECIPIENT_HANDOFF"
+  },
+  {
+   "path": "handoff/MASTER_IMPLEMENTATION_PROMPT.md",
+   "class": "RECIPIENT_HANDOFF"
+  },
+  {
+   "path": "handoff/README_FIRST.md",
+   "class": "RECIPIENT_HANDOFF"
+  },
+  {
+   "path": "handoff/STATIC_RUNTIME_AND_API_CONTRACT.md",
+   "class": "RECIPIENT_HANDOFF"
+  },
+  {
+   "path": "handoff/VISUAL_DESIGN_CONTRACT.md",
+   "class": "RECIPIENT_HANDOFF"
+  },
+  {
+   "path": "package.json",
+   "class": "REPOSITORY_ENGINEERING"
+  },
+  {
+   "path": "requirements.txt",
+   "class": "REPOSITORY_ENGINEERING"
+  },
+  {
+   "path": "scripts/architecture_diagrams.py",
+   "class": "BUILD_AND_GATES"
+  },
+  {
+   "path": "scripts/audit_public_literals.py",
+   "class": "BUILD_AND_GATES"
+  },
+  {
+   "path": "scripts/build.py",
+   "class": "BUILD_AND_GATES"
+  },
+  {
+   "path": "scripts/checksums.py",
+   "class": "BUILD_AND_GATES"
+  },
+  {
+   "path": "scripts/generate_projections.py",
+   "class": "PROJECTION_GENERATOR"
+  },
+  {
+   "path": "scripts/literal_audit_allowances.json",
+   "class": "BUILD_AND_GATES"
+  },
+  {
+   "path": "scripts/projection/README.md",
+   "class": "PROJECTION_GENERATOR"
+  },
+  {
+   "path": "scripts/projection/__init__.py",
+   "class": "PROJECTION_GENERATOR"
+  },
+  {
+   "path": "scripts/projection/baseline_gate.py",
+   "class": "PROJECTION_GENERATOR"
+  },
+  {
+   "path": "scripts/projection/controlled_inputs/closure_templates.json",
+   "class": "PROJECTION_CONTRACT"
+  },
+  {
+   "path": "scripts/projection/controlled_inputs/local_dataset_catalog_template.json",
+   "class": "PROJECTION_CONTRACT"
+  },
+  {
+   "path": "scripts/projection/controlled_inputs/page_spec_binding_overrides.json",
+   "class": "PROJECTION_CONTRACT"
+  },
+  {
+   "path": "scripts/projection/controlled_inputs/page_spec_design_intent.json",
+   "class": "PROJECTION_CONTRACT"
+  },
+  {
+   "path": "scripts/projection/controlled_inputs/page_spec_templates.json",
+   "class": "PROJECTION_CONTRACT"
+  },
+  {
+   "path": "scripts/projection/controlled_inputs/public_inventory_contract.json",
+   "class": "PROJECTION_CONTRACT"
+  },
+  {
+   "path": "scripts/projection/controlled_inputs/search_templates.json",
+   "class": "PROJECTION_CONTRACT"
+  },
+  {
+   "path": "scripts/projection/controlled_inputs/source_reference_templates.json",
+   "class": "PROJECTION_CONTRACT"
+  },
+  {
+   "path": "scripts/projection/controlled_inputs/visual_design_contract.json",
+   "class": "PROJECTION_CONTRACT"
+  },
+  {
+   "path": "scripts/projection/derived.py",
+   "class": "PROJECTION_GENERATOR"
+  },
+  {
+   "path": "scripts/projection/families.py",
+   "class": "PROJECTION_GENERATOR"
+  },
+  {
+   "path": "scripts/projection/generator.py",
+   "class": "PROJECTION_GENERATOR"
+  },
+  {
+   "path": "scripts/projection/master_reader.py",
+   "class": "PROJECTION_GENERATOR"
+  },
+  {
+   "path": "scripts/projection/master_structure.json",
+   "class": "PROJECTION_CONTRACT"
+  },
+  {
+   "path": "scripts/projection/master_writer.py",
+   "class": "PROJECTION_GENERATOR"
+  },
+  {
+   "path": "scripts/projection/projection_manifest.json",
+   "class": "PROJECTION_CONTRACT"
+  },
+  {
+   "path": "scripts/projection/structure.py",
+   "class": "PROJECTION_GENERATOR"
+  },
+  {
+   "path": "scripts/projection/tests/__init__.py",
+   "class": "PROJECTION_GENERATOR"
+  },
+  {
+   "path": "scripts/projection/tests/test_generator.py",
+   "class": "PROJECTION_GENERATOR"
+  },
+  {
+   "path": "scripts/rebind_authority.py",
+   "class": "PROJECTION_GENERATOR"
+  },
+  {
+   "path": "scripts/repository_manifest.py",
+   "class": "BUILD_AND_GATES"
+  },
+  {
+   "path": "scripts/search_canonical_probe.json",
+   "class": "BUILD_AND_GATES"
+  },
+  {
+   "path": "scripts/tests/test_literal_audit_determinism.py",
+   "class": "BUILD_AND_GATES"
+  },
+  {
+   "path": "scripts/tests/test_public_tools.py",
+   "class": "BUILD_AND_GATES"
+  },
+  {
+   "path": "scripts/validate.py",
+   "class": "BUILD_AND_GATES"
+  },
+  {
+   "path": "site-src/app.js",
+   "class": "RUNTIME_SOURCE"
+  },
+  {
+   "path": "site-src/assets/CauseWay_Master_Logo.png",
+   "class": "LOGO_AUTHORITY"
+  },
+  {
+   "path": "site-src/content/content/interface_copy.json",
+   "class": "GENERATED_PROJECTION"
+  },
+  {
+   "path": "site-src/content/content/master_principles.json",
+   "class": "GENERATED_PROJECTION"
+  },
+  {
+   "path": "site-src/content/content/measurement_agenda.json",
+   "class": "GENERATED_PROJECTION"
+  },
+  {
+   "path": "site-src/content/content/navigation_interaction.json",
+   "class": "GENERATED_PROJECTION"
+  },
+  {
+   "path": "site-src/content/content/page_sections.json",
+   "class": "GENERATED_PROJECTION"
+  },
+  {
+   "path": "site-src/content/content/public_inventory.json",
+   "class": "GENERATED_PROJECTION"
+  },
+  {
+   "path": "site-src/content/content/questions.json",
+   "class": "GENERATED_PROJECTION"
+  },
+  {
+   "path": "site-src/content/content/reading_sections.json",
+   "class": "GENERATED_PROJECTION"
+  },
+  {
+   "path": "site-src/content/content/readings.json",
+   "class": "GENERATED_PROJECTION"
+  },
+  {
+   "path": "site-src/content/content/search_aliases.json",
+   "class": "GENERATED_PROJECTION"
+  },
+  {
+   "path": "site-src/content/content/search_index.json",
+   "class": "GENERATED_PROJECTION"
+  },
+  {
+   "path": "site-src/content/content/site_map.json",
+   "class": "GENERATED_PROJECTION"
+  },
+  {
+   "path": "site-src/content/data/cby_monetary.json",
+   "class": "GENERATED_PROJECTION"
+  },
+  {
+   "path": "site-src/content/data/findex_baseline.json",
+   "class": "GENERATED_PROJECTION"
+  },
+  {
+   "path": "site-src/content/data/findex_codebook.json",
+   "class": "GENERATED_PROJECTION"
+  },
+  {
+   "path": "site-src/content/data/findex_history.json",
+   "class": "GENERATED_PROJECTION"
+  },
+  {
+   "path": "site-src/content/data/findex_subgroups.json",
+   "class": "GENERATED_PROJECTION"
+  },
+  {
+   "path": "site-src/content/data/firm_finance.json",
+   "class": "GENERATED_PROJECTION"
+  },
+  {
+   "path": "site-src/content/data/local_data_index.json",
+   "class": "GENERATED_PROJECTION"
+  },
+  {
+   "path": "site-src/content/data/mfi_data.json",
+   "class": "GENERATED_PROJECTION"
+  },
+  {
+   "path": "site-src/content/data/payments_data.json",
+   "class": "GENERATED_PROJECTION"
+  },
+  {
+   "path": "site-src/content/data/providers_data.json",
+   "class": "GENERATED_PROJECTION"
+  },
+  {
+   "path": "site-src/content/data/reforms_regulation.json",
+   "class": "GENERATED_PROJECTION"
+  },
+  {
+   "path": "site-src/content/data/remittances.json",
+   "class": "GENERATED_PROJECTION"
+  },
+  {
+   "path": "site-src/content/evidence/evidence_objects.json",
+   "class": "GENERATED_PROJECTION"
+  },
+  {
+   "path": "site-src/content/evidence/evidence_passports.json",
+   "class": "GENERATED_PROJECTION"
+  },
+  {
+   "path": "site-src/content/evidence/public_claims.json",
+   "class": "GENERATED_PROJECTION"
+  },
+  {
+   "path": "site-src/content/page_specs.json",
+   "class": "GENERATED_PROJECTION"
+  },
+  {
+   "path": "site-src/content/presentation_priority.json",
+   "class": "GENERATED_PROJECTION"
+  },
+  {
+   "path": "site-src/content/sources/indicator_library.json",
+   "class": "GENERATED_PROJECTION"
+  },
+  {
+   "path": "site-src/content/sources/local_dataset_catalog.json",
+   "class": "GENERATED_PROJECTION"
+  },
+  {
+   "path": "site-src/content/sources/master_dataset_catalog.json",
+   "class": "GENERATED_PROJECTION"
+  },
+  {
+   "path": "site-src/content/sources/public_object_source_closure.json",
+   "class": "GENERATED_PROJECTION"
+  },
+  {
+   "path": "site-src/content/sources/source_library.json",
+   "class": "GENERATED_PROJECTION"
+  },
+  {
+   "path": "site-src/content/sources/source_reference_map.json",
+   "class": "GENERATED_PROJECTION"
+  },
+  {
+   "path": "site-src/content/visuals/system_chronology.json",
+   "class": "GENERATED_PROJECTION"
+  },
+  {
+   "path": "site-src/content/visuals/system_relationships.json",
+   "class": "GENERATED_PROJECTION"
+  },
+  {
+   "path": "site-src/content/visuals/visual_design_contracts.json",
+   "class": "GENERATED_PROJECTION"
+  },
+  {
+   "path": "site-src/content/visuals/visual_library.json",
+   "class": "GENERATED_PROJECTION"
+  },
+  {
+   "path": "site-src/styles.css",
+   "class": "RUNTIME_SOURCE"
+  }
+ ]
+}

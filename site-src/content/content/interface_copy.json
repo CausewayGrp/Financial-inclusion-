@@ -79,13 +79,13 @@
   },
   {
     "ui_id": "UI-SOURCE-NO-PUBLIC-LOCATOR",
-    "label_en": "Also draws on source material with no public original locator recorded here; it is not listed or linked.",
+    "label_en": "Also draws on material that has no public link to its original document; that material is not listed or linked.",
     "label_ar": "ويستند أيضًا إلى مواد مصدرية لا يُسجَّل لها هنا رابط أصلي عام، فلا تُدرج ولا تُربط.",
     "use_rule": "P1.5 / P15-F2. Reading path step whose record also rests on a source without an http(s) locator. The publication firewall (validator S04.1/S04.2) keeps such sources unnamed on public pages."
   },
   {
     "ui_id": "UI-EVID-SOURCES-WITHOUT-LOCATOR",
-    "label_en": "This record also draws on source material for which no public original locator is recorded. That material is held in the evidence base but is not listed or linked here, so the sources shown above are not the record's only basis.",
+    "label_en": "This record also draws on material that has no public link to its original document. That material is held in the evidence base but is not listed or linked here, so the sources shown above are not the record’s only basis.",
     "label_ar": "ويستند هذا السجل أيضًا إلى مواد مصدرية لا يُسجَّل لها رابط أصلي عام، وهي محفوظة في قاعدة الأدلة لكنها لا تُدرج ولا تُربط هنا؛ لذلك فالمصادر المعروضة أعلاه ليست الأساس الوحيد للسجل.",
     "use_rule": "P15-F2. Evidence Record page: shown whenever a bound source is not rendered because it has no public locator (never named: publication firewall)."
   },
@@ -301,13 +301,13 @@
   },
   {
     "ui_id": "UI-VERIFY-UNLISTED",
-    "label_en": "The material behind this record has no public original locator, so no source is listed or linked here and no figure from that material is shown. Read the record as an explanation of method, not as a verifiable figure.",
+    "label_en": "The material behind this record has no public link to its original document, so no source is listed or linked here and no figure from that material is shown. Read the record as an explanation of method, not as a verifiable figure.",
     "label_ar": "لا يتوافر للمادة التي يستند إليها هذا السجل رابط أصلي عام، لذلك لا يُدرج هنا أي مصدر ولا يُربط به، ولا يُعرض أي رقم مأخوذ من تلك المادة. فاقرأ السجل بوصفه شرحًا للمنهج، لا رقمًا قابلًا للتحقق.",
     "use_rule": "Pre-Tranche-C P4 (V-D1). Verification template of a record whose every bound source lacks a public locator (closure template BOUND_UNLISTED); such a record prints no figure from that material."
   },
   {
     "ui_id": "UI-READING-PATH-COMPLETE-UNLISTED",
-    "label_en": "Every figure in this Reading traces through the records below to a named source. Where a record also rests on material with no public original locator, that material is not listed and no figure from it is shown.",
+    "label_en": "Every figure in this Reading traces through the records below to a named source. Where a record also rests on material with no public link to its original document, that material is not listed and no figure from it is shown.",
     "label_ar": "يمكن تتبّع كل رقم في هذه القراءة، عبر السجلات أدناه، إلى مصدر مسمّى. وحيث يستند سجل أيضًا إلى مادة لا يتوافر لها رابط أصلي عام، فلا تُدرج تلك المادة ولا يُعرض هنا أي رقم مأخوذ منها.",
     "use_rule": "Pre-Tranche-C P4 (V-D1). Reading path status when the Reading is closed to named sources and a bound record also rests on material without a public locator (publication firewall)."
   },
@@ -1339,8 +1339,8 @@
   },
   {
     "ui_id": "UI-DOM-ADDITIONAL-CONTROLLED-DETAIL-FROM-THIS",
-    "label_en": "Additional controlled detail from this route, preserved with its original boundaries.",
-    "label_ar": "تفاصيل إضافية من الصفحة نفسها، محفوظة مع حدودها الأصلية.",
+    "label_en": "More detail on this question, each item with its own period and limits.",
+    "label_ar": "مزيد من التفاصيل حول هذا السؤال، ولكل منها فترته وحدوده.",
     "use_rule": "build.py _domain_labels['more_intro']"
   },
   {
@@ -1465,8 +1465,8 @@
   },
   {
     "ui_id": "UI-EVID-OPEN-THE-SOURCE-RECORD-HERE",
-    "label_en": "Open the source record here, or follow the original locator when publication state allows it.",
-    "label_ar": "افتح سجل المصدر هنا، أو انتقل إلى الرابط الأصلي حين تسمح حالة النشر بذلك.",
+    "label_en": "Open the source record here, or go to the original document where a public link exists.",
+    "label_ar": "افتح سجل المصدر هنا، أو انتقل إلى الوثيقة الأصلية حيث يتوافر رابط عام.",
     "use_rule": "build.py _evidence_labels['source_intro']"
   },
   {
@@ -1483,14 +1483,14 @@
   },
   {
     "ui_id": "UI-EVID-NO-STANDALONE-PUBLIC-LOCATOR-IS",
-    "label_en": "No standalone public locator is available for this dependency in the current publication state.",
-    "label_ar": "لا يتوافر رابط عام مستقل لهذا الاعتماد ضمن حالة النشر الحالية.",
+    "label_en": "No public link to the original document is available for this source.",
+    "label_ar": "لا يتوافر رابط عام إلى الوثيقة الأصلية لهذا المصدر.",
     "use_rule": "build.py _evidence_labels['no_public_locator']"
   },
   {
     "ui_id": "UI-EVID-THIS-RECORD-CURRENTLY-HAS-NO",
-    "label_en": "This record currently has no standalone public path to an original source; use the method and verification detail below.",
-    "label_ar": "لا يرتبط هذا السجل حاليًا بمسار عام مستقل إلى مصدر أصلي؛ استخدم المنهج وطريقة التحقق أدناه.",
+    "label_en": "No original source for this record can be opened from here; use the method and verification detail below.",
+    "label_ar": "لا يمكن فتح مصدر أصلي لهذا السجل من هنا؛ استخدم المنهج وطريقة التحقق أدناه.",
     "use_rule": "build.py _evidence_labels['no_source_record']"
   },
   {
@@ -1519,8 +1519,8 @@
   },
   {
     "ui_id": "UI-EVID-ADDITIONAL-DETAIL-FOR-REPRODUCING-OR",
-    "label_en": "Additional detail for reproducing or challenging the reading without changing the evidence meaning.",
-    "label_ar": "تفاصيل إضافية تساعد على إعادة إنتاج القراءة أو تحديها من دون تغيير معنى الدليل.",
+    "label_en": "Detail for reproducing or challenging this record without changing what it means.",
+    "label_ar": "تفاصيل تساعد على إعادة إنتاج هذا السجل أو مراجعته نقديًا من دون تغيير معناه.",
     "use_rule": "build.py _evidence_labels['more_intro']"
   },
   {
@@ -1597,8 +1597,8 @@
   },
   {
     "ui_id": "UI-EVID-THE-STABLE-RECORD-ID-STAYS",
-    "label_en": "The stable record ID stays linked to original sources that the publication state permits this product to expose. Missing bibliography is not filled by assumption.",
-    "label_ar": "يبقى معرّف السجل مرتبطًا بالمصادر الأصلية التي تسمح حالة النشر بعرضها. ولا تُستكمل البيانات الوصفية الناقصة بالافتراض.",
+    "label_en": "This record’s reference stays linked to the original sources that can be shown publicly. Missing bibliographic details are left blank rather than guessed.",
+    "label_ar": "يبقى مرجع هذا السجل مرتبطًا بالمصادر الأصلية التي يمكن عرضها علنًا، وتُترك البيانات الببليوغرافية الناقصة فارغة بدل تخمينها.",
     "use_rule": "build.py _evidence_labels['trace_intro']"
   },
   {
@@ -1694,7 +1694,7 @@
   {
     "ui_id": "UI-FOOTER-PUBLISHED-EVIDENCE-REMAINS-ATTRIBUTED-TO",
     "label_en": "Published evidence remains attributed to the original source.",
-    "label_ar": "الأدلة المنشورة تحتفظ بنسبة المصدر الأصلي.",
+    "label_ar": "تبقى الأدلة المنشورة منسوبة إلى مصادرها الأصلية.",
     "use_rule": "build.py footer()"
   },
   {
@@ -1801,14 +1801,14 @@
   },
   {
     "ui_id": "UI-QUESTIONS-EVERY-ROUTE-KEEPS-PERIOD-POPULATION",
-    "label_en": "Every route keeps period, population or calculation base, inference limits and source visible.",
-    "label_ar": "يحافظ كل مسار على الفترة، والمجتمع أو قاعدة الاحتساب، وحدود الاستنتاج، والمصدر.",
+    "label_en": "Every answer keeps its period, population or calculation base, limits and source in view.",
+    "label_ar": "تبقي كل إجابة فترتها ومجتمعها أو قاعدة احتسابها وحدودها ومصدرها ظاهرة.",
     "use_rule": "build.py question_cards()"
   },
   {
     "ui_id": "UI-HOME-CROSS-SOURCE-ANALYSIS-THAT-STAYS",
-    "label_en": "Cross-source analysis that stays bound to claims and evidence.",
-    "label_ar": "تحليل متعدد المصادر يبقى مربوطًا بالخلاصات والأدلة.",
+    "label_en": "Evidence-led essays, each traceable to the records behind it.",
+    "label_ar": "قراءات تحليلية تنطلق من الأدلة، ويمكن تتبّع كل منها إلى السجلات التي قامت عليها.",
     "use_rule": "build.py home_ctas()"
   },
   {
@@ -1891,8 +1891,8 @@
   },
   {
     "ui_id": "UI-COMPARE-START-WITH-COMPARISON-LEGITIMACY-NOT",
-    "label_en": "Start with comparison legitimacy, not the numbers.",
-    "label_ar": "ابدأ بمشروعية المقارنة، لا بالأرقام.",
+    "label_en": "First ask whether the records can be compared at all; then look at the numbers.",
+    "label_ar": "اسأل أولًا هل يمكن مقارنة السجلات أصلًا، ثم انظر إلى الأرقام.",
     "use_rule": "build.py compare_block()"
   },
   {
@@ -1921,8 +1921,8 @@
   },
   {
     "ui_id": "UI-COMPARE-NO-AUTO-AVERAGE-NO-PREFERRED",
-    "label_en": "No auto-average · no preferred number · no invented conversion scalar",
-    "label_ar": "لا متوسطات تلقائية · لا رقم مفضل · لا معامل تحويل مخترع",
+    "label_en": "No automatic averages · no preferred number · no invented conversion factor",
+    "label_ar": "لا متوسطات تلقائية · لا رقم مفضل · لا معامل تحويل مفترض",
     "use_rule": "build.py compare_block()"
   },
   {
@@ -1939,8 +1939,8 @@
   },
   {
     "ui_id": "UI-DATA-ONLY-SOURCE-INFORMATION-PERMITTED-BY",
-    "label_en": "Only source information permitted by the controlled records is shown here. Sources that currently support public evidence are separated from reference locators available for verification or context, so the existence of a link is never mistaken for analytical use or an observed result.",
-    "label_ar": "تُعرض هنا فقط معلومات المصدر التي تسمح بها السجلات المعتمدة. وتُفصل المراجع التي تسند أدلة عامة حالية عن المراجع المتاحة للتحقق أو السياق حتى لا يبدو مجرد وجود رابط وكأنه استخدام تحليلي أو دليل على نتيجة.",
+    "label_en": "Sources that support current public evidence are listed separately from references kept for verification or context, so that a link is never mistaken for analytical use or an observed result.",
+    "label_ar": "تُعرض المصادر التي تسند الأدلة العامة الحالية منفصلة عن المراجع المتاحة للتحقق أو السياق، حتى لا يُفهم مجرد وجود رابط على أنه استخدام تحليلي أو دليل على نتيجة.",
     "use_rule": "build.py source_directory()"
   },
   {
@@ -1963,14 +1963,14 @@
   },
   {
     "ui_id": "UI-DATA-THESE-SOURCES-ARE-LINKED-DIRECTLY",
-    "label_en": "These sources are linked directly to at least one current public Evidence Record. Open the dependent records to see exactly where and how they are used.",
-    "label_ar": "هذه المصادر مرتبطة مباشرة بسجل دليل عام واحد على الأقل. افتح الروابط المرتبطة لمعرفة موضع استخدامها وحدودها.",
+    "label_en": "These sources are linked directly to at least one current public Evidence Record. Open the records that use them to see exactly where and how.",
+    "label_ar": "هذه المصادر مرتبطة مباشرة بسجل دليل عام واحد على الأقل. افتح السجلات التي تستخدمها لمعرفة موضع استخدامها وكيفيته بدقة.",
     "use_rule": "build.py source_directory()"
   },
   {
     "ui_id": "UI-DATA-THESE-REFERENCES-ARE-AVAILABLE-FOR",
-    "label_en": "These references are available for verification, method or context but do not currently support a public Evidence Record. Their presence in the directory does not promote them into an evidence finding or claim.",
-    "label_ar": "هذه المراجع متاحة للتحقق أو المنهج أو السياق، لكنها لا تسند حاليًا سجل دليل عام. وجودها في الدليل لا يرقّيها إلى نتيجة أو خلاصة.",
+    "label_en": "These references are available for verification, method or context but do not currently support a public Evidence Record. Being listed here does not make them evidence for any finding or claim.",
+    "label_ar": "هذه المراجع متاحة للتحقق أو المنهج أو السياق، لكنها لا تسند حاليًا سجل دليل عام. وإدراجها هنا لا يجعلها دليلًا على أي نتيجة أو خلاصة.",
     "use_rule": "build.py source_directory()"
   },
   {
@@ -1993,8 +1993,8 @@
   },
   {
     "ui_id": "UI-DATA-EVERY-SOURCE-HERE-CAN-BE",
-    "label_en": "Every source here can be cited and opened at its original location. Each card shows its source's reuse-terms state; where terms have not been assessed, this resource offers no source file for download or republication, so check each source's own terms before redistributing its material.",
-    "label_ar": "يمكن الاستشهاد بكل مصدر هنا وفتحه في موقعه الأصلي. ويبيّن كل بطاقة حالة شروط إعادة استخدام مصدرها؛ وحيث لم تُقيَّم الشروط، لا يعرض هذا الموقع ملفات المصدر للتنزيل أو إعادة النشر، فتحقّق من شروط كل مصدر قبل إعادة توزيع مادته.",
+    "label_en": "Every source here can be cited and opened where it was originally published. Each card says whether the source’s reuse terms have been assessed; where they have not, this resource offers no copy of the source for download or republication, so check the source’s own terms before redistributing its material.",
+    "label_ar": "يمكن الاستشهاد بكل مصدر هنا وفتحه حيث نُشر أصلًا. وتبيّن كل بطاقة ما إذا كانت شروط إعادة استخدام المصدر قد قُيّمت؛ وحيث لم تُقيَّم، لا يقدم هذا المورد نسخة من المصدر للتنزيل أو إعادة النشر، فتحقّق من شروط المصدر نفسه قبل إعادة توزيع مادته.",
     "use_rule": "build.py source_directory()"
   },
   {
@@ -2041,14 +2041,14 @@
   },
   {
     "ui_id": "UI-CORR-THIS-RESOURCE-DOES-NOT-MANUFACTURE",
-    "label_en": "This resource does not manufacture a release or correction history. A correction event appears only when it is governed for publication; the stable record ID remains the route back to the current public record.",
-    "label_ar": "لا ينشئ هذا الموقع سجل إصدارات أو تصحيحات افتراضيًا. تظهر واقعة التصحيح فقط عندما تكون معتمدة للنشر؛ ويظل المعرّف الثابت هو نقطة الرجوع إلى السجل العام الحالي.",
+    "label_en": "A correction appears here only when a material correction has been made to a public record. A record’s reference always leads to its current version.",
+    "label_ar": "لا يظهر التصحيح هنا إلا عند إجراء تصحيح جوهري على سجل عام. ويقود مرجع السجل دائمًا إلى نسخته الحالية.",
     "use_rule": "build.py corrections_context_block()"
   },
   {
     "ui_id": "UI-CORR-THIS-PAGE-CURRENTLY-HAS-NO",
-    "label_en": "This page currently has no separately governed material-correction events to publish, so the interface does not invent a synthetic history.",
-    "label_ar": "لا توجد في مواصفة هذه الصفحة حاليًا وقائع تصحيح جوهرية مستقلة معتمدة للنشر؛ لذلك لا تُنشئ الواجهة تاريخًا اصطناعيًا.",
+    "label_en": "No material corrections have been recorded yet.",
+    "label_ar": "لم تُسجَّل أي تصحيحات جوهرية حتى الآن.",
     "use_rule": "build.py corrections_context_block()"
   },
   {
@@ -2239,8 +2239,8 @@
   },
   {
     "ui_id": "UI-JS-COMPARE-SAME",
-    "label_en": "Same controlled fields",
-    "label_ar": "متطابق في الحقول المنظمة",
+    "label_en": "Same in the recorded fields",
+    "label_ar": "متطابق في الحقول المسجلة",
     "use_rule": "site-src/app.js COMPARE_LABEL_UI['same']"
   },
   {
@@ -2317,8 +2317,8 @@
   },
   {
     "ui_id": "UI-JS-COMPARE-ALIGNED-COPY",
-    "label_en": "The recorded definition, population and method match. This does not establish equivalence beyond the governed fields shown here.",
-    "label_ar": "يتطابق التعريف والمجتمع والطريقة المسجلة. ولا يثبت ذلك تكافؤ المعنى خارج الحقول المعتمدة المعروضة هنا.",
+    "label_en": "The recorded definition, population and method match. This does not establish equivalence beyond the fields shown here.",
+    "label_ar": "يتطابق التعريف والمجتمع والطريقة المسجلة. ولا يثبت ذلك تكافؤ المعنى خارج الحقول المعروضة هنا.",
     "use_rule": "site-src/app.js COMPARE_LABEL_UI['alignedCopy']"
   },
   {
@@ -2341,7 +2341,7 @@
   },
   {
     "ui_id": "UI-JS-COMPARE-NO-MERGE",
-    "label_en": "Do not merge values, manufacture a midpoint, average disagreement or infer a conversion scalar from this comparison.",
+    "label_en": "Do not merge values, invent a midpoint, average the disagreement or derive a conversion factor from this comparison.",
     "label_ar": "لا تُدمج القيم ولا تُنشئ متوسطًا أو رقمًا وسطًا أو معامل تحويل من هذه المقارنة.",
     "use_rule": "site-src/app.js COMPARE_LABEL_UI['noMerge']"
   },
@@ -2437,14 +2437,14 @@
   },
   {
     "ui_id": "UI-404-HEADING",
-    "label_en": "We could not find this route",
-    "label_ar": "تعذر العثور على هذا المسار",
+    "label_en": "We could not find this page",
+    "label_ar": "تعذر العثور على هذه الصفحة",
     "use_rule": "build.py 404 page"
   },
   {
     "ui_id": "UI-404-BODY",
-    "label_en": "The link may be old or unavailable in the current public route set. Start from Home, explore the questions, or search the published evidence.",
-    "label_ar": "قد يكون الرابط قديمًا أو غير متاح ضمن المسارات العامة الحالية. ابدأ من الصفحة الرئيسية، أو استكشف الأسئلة، أو ابحث في الأدلة المنشورة.",
+    "label_en": "The page may have moved, or the link may be out of date. Start from Home, explore the questions, or search the published evidence.",
+    "label_ar": "ربما نُقلت الصفحة أو أصبح الرابط قديمًا. ابدأ من الصفحة الرئيسية، أو استكشف الأسئلة، أو ابحث في الأدلة المنشورة.",
     "use_rule": "build.py 404 page"
   },
   {

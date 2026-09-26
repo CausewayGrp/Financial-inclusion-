@@ -1,7 +1,7 @@
 {
   "schema": "YFI_CURRENT_PROJECT_CONTEXT/1.0",
   "role": "COMPACT_PROJECTION_NOT_AUTHORITY",
-  "generated_at": "2026-09-26T21:30:00Z",
+  "generated_at": "2026-09-26T22:00:00Z",
   "system": {
     "name_en": "Yemen Financial Inclusion Evidence",
     "name_ar": "أدلة الشمول المالي في اليمن",
@@ -9,8 +9,8 @@
   },
   "programme_state": {
     "as_of": "2026-09-26",
-    "r_programme": "R0–R8.3 CLOSED / PASS; R8.4 CLOSED / PASS including the Evidence Readings (F2, 26 Sep 2026); R8.5 and R8.6 in progress under directive D7 (sessions F3–F9)",
-    "tranches": "Tranche A CLOSED; Tranche B specification CLOSED; Tranche B execution CLOSED; Tranche C COMPLETE and accepted by OpenAI (26 Sep 2026, recipient verification 31/31); final integration F0–F3 CLOSED",
+    "r_programme": "R0–R8.3 CLOSED / PASS; R8.4 CLOSED / PASS including the Evidence Readings (F2); R8.5 CLOSED (F4, audit/R8_5_REPOSITORY_SUBTRACTION_CLOSURE.md); R8.6 in progress under directive D7 (sessions F5–F9)",
+    "tranches": "Tranche A CLOSED; Tranche B specification CLOSED; Tranche B execution CLOSED; Tranche C COMPLETE and accepted by OpenAI (26 Sep 2026, recipient verification 31/31); final integration F0–F4 CLOSED (R8.5 closed)",
     "pre_tranche_c": "Sessions P1–P4 CLOSED and independently accepted with three narrow corrections; P5 corrections CLOSED",
     "handoff_readiness": "READING_PORTFOLIO_INTEGRATED__TRANCHE_C_ACCEPTANCE_PRESERVED",
     "not_declared": [
@@ -30,7 +30,7 @@
   "production_master": {
     "path": "authority/Yemen_Financial_Inclusion_Evidence_Master.xlsx",
     "drive_id": "1xAbdDHJd5bYo0Pzo_a6dR6HsZ056LzJU",
-    "sha256": "2a7fd52bbe82d73faf562a395ccf40d78c84cd050735f3a5e89d39e767014549",
+    "sha256": "440614d789f662e2e47d95e932968be3c71d2719187bb91c6f546aed30e72f71",
     "is_sole_authority": true,
     "authority_dimensions": [
       "semantic",
@@ -44,7 +44,7 @@
   },
   "controlled_projection": {
     "page_specs_path": "site-src/content/page_specs.json",
-    "page_specs_sha256": "9b5300687bc9227088447ee6710d46e6e815d4681e5dbdffce2ed6ec9a67330a",
+    "page_specs_sha256": "0425dc85c1662120a2b00a5bb3485b93d4f64f6058d7e2a0ebeb477dedc3e871",
     "page_specs": 143,
     "all_page_specs_master_hash_match": true,
     "page_specs_index_master_hash_match": true
@@ -183,7 +183,7 @@
     ]
   },
   "validation": {
-    "master_sha256_recorded": "2a7fd52bbe82d73faf562a395ccf40d78c84cd050735f3a5e89d39e767014549",
+    "master_sha256_recorded": "440614d789f662e2e47d95e932968be3c71d2719187bb91c6f546aed30e72f71",
     "projection_hash_binding": "PASS",
     "schema_required_keys": [
       "schema",

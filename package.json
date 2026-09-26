@@ -12,6 +12,8 @@
     "generate": "python3 scripts/generate_projections.py",
     "check:projections": "python3 scripts/generate_projections.py --check",
     "test:generator": "python3 -m unittest discover -s scripts/projection/tests -t .",
+    "manifest": "python3 scripts/repository_manifest.py",
+    "check:manifest": "python3 scripts/repository_manifest.py --check",
     "checksums": "python3 scripts/checksums.py",
     "check:checksums": "python3 scripts/checksums.py --check"
   }

@@ -343,7 +343,7 @@
     "does_not_prove_en": "The OECD/INFE scores of 15 out of 100 (financial well-being) and 42 out of 100 (financial literacy) are not results of Global Money Week activity. Programme effectiveness is not established: that would require an evaluation with a baseline and appropriate follow-up measurement, which the activity records do not provide.",
     "does_not_prove_ar": "لا تمثل نتيجتا مسح OECD/INFE، أي 15 من 100 في الرفاه المالي و42 من 100 في الثقافة المالية، نتاجًا لأنشطة الأسبوع العالمي للمال. ولا تثبت هذه الأدلة فعالية البرنامج، إذ يتطلب ذلك تقييمًا يتضمن خط أساس وقياس متابعة مناسبًا، وهو ما لا توفره سجلات الأنشطة.",
     "change_trigger_en": "This record is updated when a newer comparable population measure of financial capability, a programme evaluation or a correction to the source evidence is published.",
-    "change_trigger_ar": "يُحدَّث هذا السجل عند توفر قياس سكاني أحدث قابل للمقارنة للقدرات، أو تقييم للبرنامج، أو تصحيح في أدلة المصدر.",
+    "change_trigger_ar": "يُحدَّث هذا السجل عند توفر قياس سكاني أحدث قابل للمقارنة للقدرات، أو تقييم للبرنامج، أو تصحيح في أدلة المصدر.",
     "public_routes": [
       "/people",
       "/reforms"
@@ -371,7 +371,7 @@
     "does_not_prove_en": "Older evidence is not invalid because of its age, and recent administrative evidence does not measure current financial inclusion across the population.",
     "does_not_prove_ar": "ليس الدليل الأقدم باطلًا لمجرد قدمه، ولا تقيس البيانات الإدارية الحديثة الشمول المالي الراهن على مستوى السكان.",
     "change_trigger_en": "This record is updated when an authoritative source is revised or replaced, a newer comparable observation becomes available, the definition, population or method changes, or the conditions for public use change.",
-    "change_trigger_ar": "يُحدَّث هذا السجل عند مراجعة المصدر المعتمد أو استبداله، أو توفر مشاهدة أحدث قابلة للمقارنة، أو تغير التعريف أو المجتمع أو الطريقة، أو تغير شروط الاستخدام العام.",
+    "change_trigger_ar": "يُحدَّث هذا السجل عند مراجعة المصدر المعتمد أو استبداله، أو توفر مشاهدة أحدث قابلة للمقارنة، أو تغير التعريف أو المجتمع أو الطريقة، أو تغير شروط الاستخدام العام.",
     "public_routes": [
       "/evidence",
       "/methodology"
@@ -469,7 +469,10 @@
     "evidence_badge": "PRIMARY_OFFICIAL_EVENT_SEQUENCE",
     "evidence_inputs": [
       "73_PAYMENT_CURRENTNESS",
-      "REF-PAY-010..013",
+      "REF-PAY-006",
+      "REF-PAY-011",
+      "REF-PAY-012",
+      "REF-PAY-013",
       "EP-CBY-PAY-INSTITUTIONAL-2026"
     ],
     "does_not_prove_en": "It does not show that the Yemeni Payments and Clearing Company (YPCC), the Fast Payment System (FPS) or the Real-Time Gross Settlement system (RTGS) is operating: YPCC is an institution that has been established, not a system in operation, and the results framework of the Financial Market Infrastructure and Inclusion Project (FMIIP) records FPS and RTGS as not yet developed or operational in January 2025, with no participating institutions; no later operational state is recorded here. It does not establish adoption, transaction coverage, reliability or any effect on financial inclusion.",
@@ -532,7 +535,7 @@
     "does_not_prove_en": "It does not establish a single, definitive start date for microfinance in Yemen, and neither source disproves the other.",
     "does_not_prove_ar": "لا يثبت هذا الدليل تاريخًا وحيدًا ونهائيًا لنشأة التمويل الأصغر في اليمن، ولا ينقض أحد المصدرين الآخر.",
     "change_trigger_en": "This record is updated when an authoritative source is revised or replaced, a newer comparable observation becomes available, the definition, population or method changes, or the conditions for public use change.",
-    "change_trigger_ar": "يُحدَّث هذا السجل عند مراجعة المصدر المعتمد أو استبداله، أو توفر مشاهدة أحدث قابلة للمقارنة، أو تغير التعريف أو المجتمع أو الطريقة، أو تغير شروط الاستخدام العام.",
+    "change_trigger_ar": "يُحدَّث هذا السجل عند مراجعة المصدر المعتمد أو استبداله، أو توفر مشاهدة أحدث قابلة للمقارنة، أو تغير التعريف أو المجتمع أو الطريقة، أو تغير شروط الاستخدام العام.",
     "public_routes": [
       "/finance"
     ],
@@ -559,7 +562,7 @@
     "does_not_prove_en": "It does not estimate the effect of the conflict on microfinance, and it gives no values for dates between the three snapshots.",
     "does_not_prove_ar": "لا يقدّر هذا الدليل أثر النزاع في التمويل الأصغر، ولا يقدم قيمًا للتواريخ الواقعة بين اللقطات الثلاث.",
     "change_trigger_en": "This record is updated when an authoritative source is revised or replaced, a newer comparable observation becomes available, the definition, population or method changes, or the conditions for public use change.",
-    "change_trigger_ar": "يُحدَّث هذا السجل عند مراجعة المصدر المعتمد أو استبداله، أو توفر مشاهدة أحدث قابلة للمقارنة، أو تغير التعريف أو المجتمع أو الطريقة، أو تغير شروط الاستخدام العام.",
+    "change_trigger_ar": "يُحدَّث هذا السجل عند مراجعة المصدر المعتمد أو استبداله، أو توفر مشاهدة أحدث قابلة للمقارنة، أو تغير التعريف أو المجتمع أو الطريقة، أو تغير شروط الاستخدام العام.",
     "public_routes": [
       "/finance"
     ],
@@ -584,7 +587,7 @@
     "does_not_prove_en": "A year with no observation does not indicate zero microfinance activity, and the observations do not establish a trend across the missing years.",
     "does_not_prove_ar": "لا تدل السنة الخالية من المشاهدات على انعدام نشاط التمويل الأصغر، ولا تثبت المشاهدات اتجاهًا زمنيًا عبر السنوات المفقودة.",
     "change_trigger_en": "This record is updated when an authoritative source is revised or replaced, a newer comparable observation becomes available, the definition, population or method changes, or the conditions for public use change.",
-    "change_trigger_ar": "يُحدَّث هذا السجل عند مراجعة المصدر المعتمد أو استبداله، أو توفر مشاهدة أحدث قابلة للمقارنة، أو تغير التعريف أو المجتمع أو الطريقة، أو تغير شروط الاستخدام العام.",
+    "change_trigger_ar": "يُحدَّث هذا السجل عند مراجعة المصدر المعتمد أو استبداله، أو توفر مشاهدة أحدث قابلة للمقارنة، أو تغير التعريف أو المجتمع أو الطريقة، أو تغير شروط الاستخدام العام.",
     "public_routes": [
       "/finance",
       "/methodology"
@@ -1392,7 +1395,7 @@
     "does_not_prove_en": "It is not verified against the primary SFD/SMED source, it is not a 2026 level, it does not count unique households, and it is not a national rate of adult financial inclusion.",
     "does_not_prove_ar": "لم يُتحقق من هذا الرقم بالرجوع إلى المصدر الأصلي لدى SFD/SMED، وهو ليس مستوى لعام 2026، ولا يحصي أسرًا فريدة، وليس معدلًا وطنيًا للشمول المالي بين البالغين.",
     "change_trigger_en": "This record is updated when an authoritative source is revised or replaced, a newer comparable observation becomes available, the definition, population or method changes, or the conditions for public use change.",
-    "change_trigger_ar": "يُحدَّث هذا السجل عند مراجعة المصدر المعتمد أو استبداله، أو توفر مشاهدة أحدث قابلة للمقارنة، أو تغير التعريف أو المجتمع أو الطريقة، أو تغير شروط الاستخدام العام.",
+    "change_trigger_ar": "يُحدَّث هذا السجل عند مراجعة المصدر المعتمد أو استبداله، أو توفر مشاهدة أحدث قابلة للمقارنة، أو تغير التعريف أو المجتمع أو الطريقة، أو تغير شروط الاستخدام العام.",
     "public_routes": [
       "/finance"
     ],
@@ -1417,7 +1420,7 @@
     "does_not_prove_en": "The figures do not show broader inclusion, real credit deepening, a harmonized trend, improved borrower outcomes, a causal effect, growth in unique people or an unchanged set of providers.",
     "does_not_prove_ar": "لا تُظهر هذه الأرقام اتساعًا للشمول، ولا تعمقًا حقيقيًا للائتمان، ولا اتجاهًا موحدًا، ولا تحسنًا في نتائج المقترضين، ولا علاقة سببية، ولا نموًا في عدد الأشخاص الفريدين، ولا بقاء نطاق مقدمي الخدمات نفسه عبر الفترات.",
     "change_trigger_en": "This record is updated when an authoritative source is revised or replaced, a newer comparable observation becomes available, the definition, population or method changes, or the conditions for public use change.",
-    "change_trigger_ar": "يُحدَّث هذا السجل عند مراجعة المصدر المعتمد أو استبداله، أو توفر مشاهدة أحدث قابلة للمقارنة، أو تغير التعريف أو المجتمع أو الطريقة، أو تغير شروط الاستخدام العام.",
+    "change_trigger_ar": "يُحدَّث هذا السجل عند مراجعة المصدر المعتمد أو استبداله، أو توفر مشاهدة أحدث قابلة للمقارنة، أو تغير التعريف أو المجتمع أو الطريقة، أو تغير شروط الاستخدام العام.",
     "public_routes": [
       "/finance",
       "/evidence/compare"
@@ -1472,7 +1475,7 @@
     "does_not_prove_en": "It does not establish a verified 2023 stock share, a share of unique clients or a general market share for any provider.",
     "does_not_prove_ar": "لا يثبت هذا الدليل حصة موثقة من رصيد 2023، ولا حصة من العملاء الفريدين، ولا حصة سوقية عامة لأي مقدم خدمة.",
     "change_trigger_en": "This record is updated when an authoritative source is revised or replaced, a newer comparable observation becomes available, the definition, population or method changes, or the conditions for public use change.",
-    "change_trigger_ar": "يُحدَّث هذا السجل عند مراجعة المصدر المعتمد أو استبداله، أو توفر مشاهدة أحدث قابلة للمقارنة، أو تغير التعريف أو المجتمع أو الطريقة، أو تغير شروط الاستخدام العام.",
+    "change_trigger_ar": "يُحدَّث هذا السجل عند مراجعة المصدر المعتمد أو استبداله، أو توفر مشاهدة أحدث قابلة للمقارنة، أو تغير التعريف أو المجتمع أو الطريقة، أو تغير شروط الاستخدام العام.",
     "public_routes": [
       "/finance",
       "/evidence/compare"
@@ -1498,7 +1501,7 @@
     "does_not_prove_en": "The two figures do not establish a decline between June and the end of 2023, monthly values between them, or a continuous series, while the provider sets behind them remain unreconciled.",
     "does_not_prove_ar": "لا يثبت الرقمان تراجعًا بين يونيو ونهاية 2023، ولا قيمًا شهرية بينهما، ولا سلسلة متصلة، في غياب مطابقة بين نطاقي مقدمي الخدمات اللذين يستندان إليهما.",
     "change_trigger_en": "This record is updated when an authoritative source is revised or replaced, a newer comparable observation becomes available, the definition, population or method changes, or the conditions for public use change.",
-    "change_trigger_ar": "يُحدَّث هذا السجل عند مراجعة المصدر المعتمد أو استبداله، أو توفر مشاهدة أحدث قابلة للمقارنة، أو تغير التعريف أو المجتمع أو الطريقة، أو تغير شروط الاستخدام العام.",
+    "change_trigger_ar": "يُحدَّث هذا السجل عند مراجعة المصدر المعتمد أو استبداله، أو توفر مشاهدة أحدث قابلة للمقارنة، أو تغير التعريف أو المجتمع أو الطريقة، أو تغير شروط الاستخدام العام.",
     "public_routes": [
       "/finance",
       "/evidence"
@@ -1524,7 +1527,7 @@
     "does_not_prove_en": "It does not describe 2023 or 2026, it is not a regulatory census of providers, and it does not establish a cause beyond the source's own hedged wording.",
     "does_not_prove_ar": "لا يصف هذا الدليل عامي 2023 أو 2026، وليس تعدادًا تنظيميًا لمقدمي الخدمات، ولا يثبت علاقة سببية تتجاوز صياغة المصدر المتحفظة.",
     "change_trigger_en": "This record is updated when an authoritative source is revised or replaced, a newer comparable observation becomes available, the definition, population or method changes, or the conditions for public use change.",
-    "change_trigger_ar": "يُحدَّث هذا السجل عند مراجعة المصدر المعتمد أو استبداله، أو توفر مشاهدة أحدث قابلة للمقارنة، أو تغير التعريف أو المجتمع أو الطريقة، أو تغير شروط الاستخدام العام.",
+    "change_trigger_ar": "يُحدَّث هذا السجل عند مراجعة المصدر المعتمد أو استبداله، أو توفر مشاهدة أحدث قابلة للمقارنة، أو تغير التعريف أو المجتمع أو الطريقة، أو تغير شروط الاستخدام العام.",
     "public_routes": [
       "/finance"
     ],
