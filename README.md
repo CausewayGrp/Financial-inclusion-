@@ -14,13 +14,13 @@ controlled-product-state and publication-state authority; everything else here i
 
 | | |
 |---|---|
-| **Position** | Tranche C **COMPLETE — READING PROSE HELD FOR THE INDEPENDENT READING PACKAGE** |
+| **Position** | **READING PORTFOLIO INTEGRATED — TRANCHE C ACCEPTANCE PRESERVED** (final integration programme, session F2 of F0–F9) |
 | **Not declared** | Not DESIGN HANDOFF READY · not PUBLIC RELEASE READY |
-| **Waiting on** | 1. OpenAI's independent review of the Tranche C checkpoint · 2. the independent final Reading package (closes BIL-05) |
+| **Waiting on** | Nothing external. OpenAI accepted Tranche C (recipient verification 31/31) and supplied the ten-Reading package; sessions F3–F9 of directive [D7](audit/directives/D7_FINAL_INTEGRATION_TO_DESIGN_HANDOFF_2026-09-26.md) are in progress |
 | **Reviewed checkpoint** | Tag [`checkpoint/tranche-c-complete-reading-hold`](../../tree/checkpoint/tranche-c-complete-reading-hold): tree byte-identical to the review ZIP `…TRANCHE_C_COMPLETE_READING_HOLD.zip` (SHA-256 `63612dea…`) |
-| **Since that checkpoint** | Repository infrastructure and documentation only. The Master, projections and public site are unchanged: `git diff checkpoint/tranche-c-complete-reading-hold -- authority/Yemen_Financial_Inclusion_Evidence_Master.xlsx site-src dist` is empty |
-| **Production Master** | `authority/Yemen_Financial_Inclusion_Evidence_Master.xlsx` · SHA-256 `f0150122895d88169e9c9ec947633deda04a02c710a28d7b0de2972214547224` |
-| **Page Specs** | `site-src/content/page_specs.json` · SHA-256 `bd010a2053898a971944ba63ab3276aeb455428069813097dbc8a07037c88295` |
+| **Since that checkpoint** | Repository infrastructure, then F2: the ten Evidence Readings integrated Master-first in one transaction (RP-F2; [adjudication](audit/READING_PORTFOLIO_FINAL_ADJUDICATION.md), [change ledger](audit/READING_PORTFOLIO_CHANGE_LEDGER.csv)); BIL-05 closed — every English/Arabic page pair prints the same numbers |
+| **Production Master** | `authority/Yemen_Financial_Inclusion_Evidence_Master.xlsx` · SHA-256 `caabff47f4ff9b036943b72f775260197a59dbc3e00cdc4b629bed65f5b4bfc6` |
+| **Page Specs** | `site-src/content/page_specs.json` · SHA-256 `f7edca09185b89378a946c1195c37d6e99d35b2689df7f0ff646c74aeb550e0f` |
 | **Currentness cut-off** | 26 September 2026 ([`audit/FINAL_CURRENTNESS_CUTOFF.md`](audit/FINAL_CURRENTNESS_CUTOFF.md)) |
 | **Re-entry document** | [`OPENAI_REENTRY_CHECKPOINT.md`](OPENAI_REENTRY_CHECKPOINT.md) |
 

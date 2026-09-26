@@ -78,29 +78,8 @@ jobs:
       - name: Architecture diagrams show the current navigation and counts
         run: python3 scripts/architecture_diagrams.py --check
 
-      - name: Bilingual numeric invariance
-        run: |
-          python3 audit/tranche_c/checks/bilingual_invariance.py "$RUNNER_TEMP/bilingual.json"
-          python3 - "$RUNNER_TEMP/bilingual.json" <<'PY'
-          import json, sys
-          # Ledger BIL-05: Reading-prose parity items held for the independent Reading package. When the package closes
-          # BIL-05, empty this set; the check then requires every English/Arabic page pair to print the same numbers.
-          HELD = {
-              "dist/en/people/index.html",
-              "dist/en/readings/finance-constraint-different-questions/index.html",
-              "dist/en/readings/index.html",
-              "dist/en/readings/reforms-newer-than-people-evidence/index.html",
-              "dist/en/readings/same-year-different-number/index.html",
-              "dist/en/reforms/index.html",
-          }
-          got = {r["page"] for r in json.load(open(sys.argv[1], encoding="utf-8"))["rows"]}
-          new, cleared = sorted(got - HELD), sorted(HELD - got)
-          if new:
-              sys.exit("Bilingual invariance regression (not held under BIL-05): " + ", ".join(new))
-          if cleared:
-              print("::notice::These pages no longer differ; remove them from HELD: " + ", ".join(cleared))
-          print(f"BILINGUAL INVARIANCE: {len(got)} differing page pairs, all held under BIL-05")
-          PY
+      - name: Bilingual numeric invariance (every English/Arabic page pair prints the same numbers)
+        run: python3 audit/tranche_c/checks/bilingual_invariance.py
 
       - name: Gates leave the working tree clean
         run: |

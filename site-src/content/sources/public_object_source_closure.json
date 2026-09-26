@@ -7257,6 +7257,8 @@
       "CLM-024",
       "CLM-025",
       "CLM-026",
+      "CLM-001",
+      "CLM-003",
       "XW-FMIIP-005"
     ],
     "direct_source_ids": [
@@ -7265,6 +7267,10 @@
     "resolved_source_ids": [
       "SRC-WB-FINDEX-001",
       "SRC-WB-FINDEX-AGG-2022",
+      "SRC-WB-FINDEX-2025-EDITION",
+      "SRC-CBY-POS-2025-03",
+      "SRC-CBY-POS-2025-12",
+      "SRC-CBY-POS-2026-01",
       "SRC-UNDP-FMIIP-001",
       "SRC-CBY-PAYREPORT-H1-2025",
       "SRC-WB-FMIIP-P180708"
@@ -7275,6 +7281,8 @@
       "CLM-024",
       "CLM-025",
       "CLM-026",
+      "CLM-001",
+      "CLM-003",
       "XW-FMIIP-005"
     ],
     "context_reference_ids": [
@@ -7291,6 +7299,26 @@
       {
         "source_id": "SRC-WB-FINDEX-AGG-2022",
         "primary_url": "https://data.worldbank.org/indicator/FX.OWN.TOTL.ZS?locations=YE",
+        "metadata_state": "DISPLAY_READY"
+      },
+      {
+        "source_id": "SRC-WB-FINDEX-2025-EDITION",
+        "primary_url": "https://www.worldbank.org/en/publication/globalfindex/download-data",
+        "metadata_state": "DISPLAY_READY"
+      },
+      {
+        "source_id": "SRC-CBY-POS-2025-03",
+        "primary_url": "https://cby-ye.com/files/6812a1758f5a5.pdf",
+        "metadata_state": "DISPLAY_READY"
+      },
+      {
+        "source_id": "SRC-CBY-POS-2025-12",
+        "primary_url": "https://www.cby-ye.com/files/69b058981b681.pdf",
+        "metadata_state": "DISPLAY_READY"
+      },
+      {
+        "source_id": "SRC-CBY-POS-2026-01",
+        "primary_url": "https://www.cby-ye.com/files/69b058d4bc306.pdf",
         "metadata_state": "DISPLAY_READY"
       },
       {
@@ -7325,7 +7353,6 @@
       "SRC-IMF-YEM-SMP-2026",
       "CLM-001",
       "CLM-003",
-      "CLM-049",
       "CLM-018",
       "CLM-025"
     ],
@@ -7349,7 +7376,6 @@
     "resolved_via_object_ids": [
       "CLM-001",
       "CLM-003",
-      "CLM-049",
       "CLM-018",
       "CLM-025"
     ],
@@ -7575,9 +7601,9 @@
       "DA-001",
       "EP-FINDEX-2022-ACCOUNT",
       "CLM-002",
-      "VIS-FINDEX-GAPS",
       "CLM-001",
-      "CLM-025"
+      "CLM-025",
+      "VIS-FINDEX-GAPS"
     ],
     "direct_source_ids": [],
     "resolved_source_ids": [
@@ -7587,9 +7613,9 @@
     ],
     "resolved_via_object_ids": [
       "CLM-002",
-      "VIS-FINDEX-GAPS",
       "CLM-001",
-      "CLM-025"
+      "CLM-025",
+      "VIS-FINDEX-GAPS"
     ],
     "context_reference_ids": [
       "DA-001",
@@ -7631,7 +7657,9 @@
       "CLM-005",
       "CLM-006",
       "CLM-060",
-      "VIS-FIRM-CONSTRAINTS"
+      "CLM-062",
+      "VIS-FIRM-CONSTRAINTS",
+      "VIS-FIRM-FINANCE-PATH"
     ],
     "direct_source_ids": [],
     "resolved_source_ids": [
@@ -7642,7 +7670,9 @@
       "CLM-005",
       "CLM-006",
       "CLM-060",
-      "VIS-FIRM-CONSTRAINTS"
+      "CLM-062",
+      "VIS-FIRM-CONSTRAINTS",
+      "VIS-FIRM-FINANCE-PATH"
     ],
     "context_reference_ids": [
       "INS-004",
@@ -9033,6 +9063,10 @@
     "resolved_source_ids": [
       "SRC-WB-FINDEX-001",
       "SRC-WB-FINDEX-AGG-2022",
+      "SRC-WB-FINDEX-2025-EDITION",
+      "SRC-CBY-POS-2025-03",
+      "SRC-CBY-POS-2025-12",
+      "SRC-CBY-POS-2026-01",
       "SRC-UNDP-FMIIP-001",
       "SRC-CBY-PAYREPORT-H1-2025",
       "SRC-WB-FMIIP-P180708"
@@ -9043,6 +9077,8 @@
       "CLM-024",
       "CLM-025",
       "CLM-026",
+      "CLM-001",
+      "CLM-003",
       "XW-FMIIP-005"
     ],
     "context_reference_ids": [
@@ -9059,6 +9095,26 @@
       {
         "source_id": "SRC-WB-FINDEX-AGG-2022",
         "primary_url": "https://data.worldbank.org/indicator/FX.OWN.TOTL.ZS?locations=YE",
+        "metadata_state": "DISPLAY_READY"
+      },
+      {
+        "source_id": "SRC-WB-FINDEX-2025-EDITION",
+        "primary_url": "https://www.worldbank.org/en/publication/globalfindex/download-data",
+        "metadata_state": "DISPLAY_READY"
+      },
+      {
+        "source_id": "SRC-CBY-POS-2025-03",
+        "primary_url": "https://cby-ye.com/files/6812a1758f5a5.pdf",
+        "metadata_state": "DISPLAY_READY"
+      },
+      {
+        "source_id": "SRC-CBY-POS-2025-12",
+        "primary_url": "https://www.cby-ye.com/files/69b058981b681.pdf",
+        "metadata_state": "DISPLAY_READY"
+      },
+      {
+        "source_id": "SRC-CBY-POS-2026-01",
+        "primary_url": "https://www.cby-ye.com/files/69b058d4bc306.pdf",
         "metadata_state": "DISPLAY_READY"
       },
       {
@@ -9116,7 +9172,6 @@
     "resolved_via_object_ids": [
       "CLM-001",
       "CLM-003",
-      "CLM-049",
       "CLM-018",
       "CLM-025"
     ],
@@ -9351,9 +9406,9 @@
     ],
     "resolved_via_object_ids": [
       "CLM-002",
-      "VIS-FINDEX-GAPS",
       "CLM-001",
-      "CLM-025"
+      "CLM-025",
+      "VIS-FINDEX-GAPS"
     ],
     "context_reference_ids": [
       "DA-001",
@@ -9405,7 +9460,9 @@
       "CLM-005",
       "CLM-006",
       "CLM-060",
-      "VIS-FIRM-CONSTRAINTS"
+      "CLM-062",
+      "VIS-FIRM-CONSTRAINTS",
+      "VIS-FIRM-FINANCE-PATH"
     ],
     "context_reference_ids": [
       "INS-004",

@@ -1,5 +1,32 @@
 # Repository Change Log
 
+## 2026-09-26 — F2: Evidence Readings portfolio integrated (directive D7, sessions F0–F2)
+
+OpenAI accepted the Tranche C checkpoint (recipient verification 31/31) and supplied the independent ten-Reading package.
+F0 confirmed the verified entry state without re-running the handover programme. F1 adjudicated the package against the
+Master and sources (`audit/READING_PORTFOLIO_FINAL_ADJUDICATION.md`, 60-row `audit/READING_PORTFOLIO_CHANGE_LEDGER.csv`).
+F2 applied it in one Master-first transaction, RP-F2 (Master `f0150122…` → `caabff47…`; 494 cell writes and row deletions;
+run report `audit/reading_integration/runs/RP-F2_RUN_REPORT.json`).
+- **Readings.** Ten essays with new titles, standfirsts and bodies (4–7 sections each, the opening may run on without a
+  heading), each ending "What would change this reading? / ما الذي قد يغيّر هذه القراءة؟", then the evidence path
+  ("Trace the evidence / تتبّع الأدلة") and one or two related Readings. One signature visual per Reading. CWR-006's title
+  changed to "What exactly do we mean by microfinance growth?" (the asserted growth failed the detached-quotation test).
+- **Master structure.** 08 retires `domain_context_routes` (now `related_readings`) and adds `measurement_bindings`,
+  `evidence_period_en/ar`, `last_reviewed` and `featured`; the generator checks every relation once
+  (`derived.reading_relations`). A Reading's primary question now comes from 08, not from a shadow copy in the design-intent input.
+- **Propagation.** Readings index (programme-owner definition, one featured Reading, editorial list — no card wall); Home
+  featured Reading; Explore "Go deeper"; at most two Readings per answer page; Evidence Records "Used in these Evidence
+  Readings"; Measurement Agenda "This gap is examined in"; search, meta and page specs regenerated; twelve new governed labels (04).
+- **BIL-05 closed.** Every English/Arabic page pair prints the same numbers (6 held pairs → 0). The CI step no longer
+  carries a held list; `audit/tranche_c/checks/bilingual_invariance.py` exits 1 on any difference.
+- **Permanent gates RP-G01…G06** (validator): Reading ending and page order, one visual and no numbered template, one
+  featured Reading everywhere, at most two Readings per answer page and "Used in" on bound records, retired Reading copy
+  never reappears, bilingual invariance.
+- **Gates.** Generator check and 21/21 tests; build 288 HTML from 143 Page Specs; literal audit 12,741 / 0 unresolved and
+  deterministic under eight seeds; lineage 8/8; diagrams current; validator PASS 0/0; public tools 25/26 (1 n/a);
+  viewport 168/168.
+- **Status:** READING PORTFOLIO INTEGRATED — TRANCHE C ACCEPTANCE PRESERVED. Not DESIGN HANDOFF READY; not PUBLIC RELEASE READY.
+
 ## 2026-09-26 — Canonical Git repository
 
 The repository moved from a Drive folder and ZIP checkpoints to Git on GitHub (`CausewayGrp/Financial-inclusion-`,

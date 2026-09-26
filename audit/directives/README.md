@@ -6,7 +6,8 @@ A directive does not override the Production Master on facts or meaning; it gove
 
 | File | Governed | State |
 |---|---|---|
-| `D6_FINAL_FINITE_PRODUCT_PROGRAM_TRANCHE_C_R8_5_R8_6.txt` | Tranche C → R8.5 → R8.6, the final finite programme before Design | **Current and binding.** Tranche C is complete with Reading prose held; R8.5 (§16–25) and R8.6 (§26–50) remain |
+| `D7_FINAL_INTEGRATION_TO_DESIGN_HANDOFF_2026-09-26.md` | Final bounded integration F0–F9: OpenAI acceptance of Tranche C, the ten-Reading package (Appendix A), R8.5, whole-corpus acceptance, R8.6 and the final Design-handoff package | **Current and binding.** Sessions F0–F9 in order; the Appendix A texts are a candidate, adjudicated in `audit/READING_PORTFOLIO_FINAL_ADJUDICATION.md` |
+| `D6_FINAL_FINITE_PRODUCT_PROGRAM_TRANCHE_C_R8_5_R8_6.txt` | Tranche C → R8.5 → R8.6, the final finite programme before Design | Binding where D7 does not supersede it (status vocabulary; R8.5 §16–25 and R8.6 §26–50 content). Tranche C closed and accepted |
 | `D5_P5_INDEPENDENT_ACCEPTANCE_CORRECTIONS.txt` | P5 corrections after the independent review of P1–P4 | Closed; lineage |
 | `D4_FINAL_PRE_TRANCHE_C_MATURATION_PROGRAM_P1_P4.txt` | Pre-Tranche-C maturation P1–P4 | Closed; lineage |
 | `D3_POST_TRANCHE_B_CANONICAL_REPOSITORY_EXECUTION.txt` | Canonical execution of the Tranche B patch | Closed; lineage |

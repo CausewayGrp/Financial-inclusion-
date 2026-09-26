@@ -166,7 +166,8 @@
         "audiences": "json",
         "verification_bindings": "json",
         "domain_surface_routes": "semicolon_list",
-        "domain_context_routes": "semicolon_list"
+        "related_readings": "json",
+        "measurement_bindings": "json"
       },
       "transformation": "One record per non-blank main-block row, keys in header order, values verbatim unless a field transform is declared.",
       "trailing_newline": false

@@ -1,12 +1,14 @@
 # OpenAI re-entry checkpoint — Yemen Financial Inclusion Evidence
 
 **Programme:** Final finite product programme — Tranche C → R8.5 → R8.6.
-**Position:** Tranche C (whole-product adversarial acceptance) complete. Stopped at the first safe boundary before R8.6,
-as instructed on 26 September 2026, because an independent final Reading package is being closed elsewhere.
+**Position (current):** OpenAI accepted the Tranche C checkpoint on 26 September 2026 (recipient verification 31/31) and
+supplied the independent ten-Reading package with directive D7 (`audit/directives/`). Session F2 integrated the Reading
+portfolio Master-first (transaction RP-F2; `audit/READING_PORTFOLIO_FINAL_ADJUDICATION.md`). Sessions F3–F9 follow.
 
-**Status: TRANCHE C COMPLETE — READING PROSE HELD FOR THE INDEPENDENT READING PACKAGE.**
+**Status: READING PORTFOLIO INTEGRATED — TRANCHE C ACCEPTANCE PRESERVED.** The sections below record the Tranche C
+checkpoint as reviewed; the authority hashes in §1 are current.
 
-- R8.4: CLOSED / PASS for every non-Reading surface. Reading prose is not final-frozen until the Reading package arrives.
+- R8.4: CLOSED / PASS, Reading prose included (F2; BIL-05 closed: bilingual invariance 0).
 - R8.5 (subtraction and recipient cleanup) and R8.6 (clean-room Design handoff) have **not** been started.
 - This is not DESIGN HANDOFF READY and not PUBLIC RELEASE READY.
 - The design and implementation prompts in `handoff/` remain **DRAFT — DO NOT EXECUTE YET** until R8.6.
@@ -17,8 +19,8 @@ as instructed on 26 September 2026, because an independent final Reading package
 
 | Item | Value |
 |---|---|
-| Production Master | `authority/Yemen_Financial_Inclusion_Evidence_Master.xlsx` — SHA-256 `f0150122895d88169e9c9ec947633deda04a02c710a28d7b0de2972214547224` |
-| Page Specs | `site-src/content/page_specs.json` — SHA-256 `bd010a2053898a971944ba63ab3276aeb455428069813097dbc8a07037c88295` |
+| Production Master | `authority/Yemen_Financial_Inclusion_Evidence_Master.xlsx` — SHA-256 `caabff47f4ff9b036943b72f775260197a59dbc3e00cdc4b629bed65f5b4bfc6` |
+| Page Specs | `site-src/content/page_specs.json` — SHA-256 `f7edca09185b89378a946c1195c37d6e99d35b2689df7f0ff646c74aeb550e0f` |
 | Entry state recorded with the Drive IDs (lineage, not current) | Master `e69804106e04d093098688f2d01cea51e13191f255d774a090f3e5dd8dec9bc7`; Page Specs `ff2b0f559cde5fede3fe31d7dfb2539a00921e8b00b816c2863790cd9de49007` |
 | Tranche C entry (P5 close, lineage) | Master `397b3307…` |
 | Canonical repository | GitHub `CausewayGrp/Financial-inclusion-`, branch `main`. The state reviewed here is the signed tag `checkpoint/tranche-c-complete-reading-hold`, whose tree is byte-identical to the review ZIP; later commits on `main` add repository infrastructure and documentation only |

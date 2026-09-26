@@ -1898,6 +1898,76 @@ try:
                 errors.append(f'TC-G02 Reading h1 is not the 08 title {_r["reading_id"]} {_L}')
 except Exception as _x:
     errors.append('TC-G02 unreadable '+str(_x))
+# F2 (26 Sep 2026) Evidence Readings family — permanent gates.
+#  RP-G01 every Reading ends its essay with "What would change this reading?", then the evidence path, then 1-2 related Readings
+#  RP-G02 one signature visual at most on a Reading page; no numbered section template and no Reading card wall
+#  RP-G03 exactly one featured Reading, the same on Home, Explore and the Readings index
+#  RP-G04 an answer page carries at most two Readings; Evidence Records list the Readings that bind them
+#  RP-G05 retired Reading titles and the retired generic section never reappear in content or public HTML
+#  RP-G06 every English/Arabic page pair prints the same numbers (bilingual invariance; BIL-05 closed)
+try:
+    _RP_END={'en':'What would change this reading?','ar':'ما الذي قد يغيّر هذه القراءة؟'}
+    _rds=json.load(open(C/'content/readings.json',encoding='utf-8'))
+    _feat=[r['reading_id'] for r in _rds if r.get('featured')=='FEATURED']
+    if len(_feat)!=1: errors.append(f'RP-G03 exactly one featured Reading required: {_feat}')
+    for _r in _rds:
+        for _L in ('en','ar'):
+            _raw=(DIST/_L/str(_r['route']).strip('/')/'index.html').read_text(encoding='utf-8')
+            _secs=re.findall(r'<section class="reading-section"[^>]*>(.*?)</section>',_raw,re.S)
+            _h=[_html.unescape(re.sub(r'<[^>]+>','',x)).strip() for x in re.findall(r'<h2>(.*?)</h2>',_secs[-1] if _secs else '')]
+            if not _h or _h[0]!=_RP_END[_L]:
+                errors.append(f'RP-G01 Reading essay does not end with "{_RP_END[_L]}" {_r["reading_id"]} {_L}')
+            _i=[_raw.find(m) for m in ('class="reading-essay"','data-reading-verify','data-reading-related')]
+            if min(_i)<0 or _i!=sorted(_i):
+                errors.append(f'RP-G01 Reading order must be essay -> evidence path -> related Readings {_r["reading_id"]} {_L}')
+            if len(re.findall(r'data-related-reading|class="reading-related-link"',_raw)) not in (1,2):
+                errors.append(f'RP-G01 a Reading links one or two related Readings {_r["reading_id"]} {_L}')
+            if _raw.count('data-visual-id=')>1:
+                errors.append(f'RP-G02 more than one visual on a Reading page {_r["reading_id"]} {_L}')
+            if 'class="section-number"' in _raw:
+                errors.append(f'RP-G02 numbered section template on a Reading page {_r["reading_id"]} {_L}')
+            if _L=='ar' and '→' in re.sub(r'<script.*?</script>','',_raw,flags=re.S).split('class="reading-essay"')[1].split('data-reading-verify')[0]:
+                errors.append(f'RP-G02 left-to-right arrow in an Arabic Reading essay {_r["reading_id"]}')
+    for _L in ('en','ar'):
+        _ids=set()
+        for _rel in ('index.html','explore/index.html','readings/index.html'):
+            _raw=(DIST/_L/_rel).read_text(encoding='utf-8')
+            _f=re.findall(r'data-featured-reading="([^"]+)"',_raw)
+            if len(_f)!=1: errors.append(f'RP-G03 one featured Reading expected on /{_L}/{_rel}: {_f}')
+            _ids.update(_f)
+        if _ids!=set(_feat): errors.append(f'RP-G03 featured Reading differs across Home/Explore/Readings {_L}: {sorted(_ids)} vs {_feat}')
+        _idx=(DIST/_L/'readings/index.html').read_text(encoding='utf-8')
+        if 'class="reading-card' in _idx: errors.append(f'RP-G02 Readings index renders a card wall {_L}')
+        for _f in (DIST/_L).glob('*/index.html'):
+            if _f.read_text(encoding='utf-8').count('data-domain-reading=')>2:
+                errors.append(f'RP-G04 more than two Readings on {_f.relative_to(DIST)}')
+    _bound={}
+    for _r in _rds:
+        for _x in (_r.get('claim_bindings') or [])+(_r.get('evidence_bindings') or [])+((_r.get('verification_bindings') or {}).get('claim_ids') or []):
+            _bound.setdefault(_x,set()).add(_r['reading_id'])
+    for _oid,_set in _bound.items():
+        for _L in ('en','ar'):
+            _f=DIST/_L/'evidence'/_oid/'index.html'
+            if _f.exists():
+                _raw=_f.read_text(encoding='utf-8')
+                if 'data-used-in-readings' not in _raw:
+                    errors.append(f'RP-G04 Evidence Record does not list the Readings that use it {_oid} {_L}')
+    _RETIRED=['When a balance sheet jumps without the economy necessarily moving','Targets depend on what is being counted',
+              'The reform clock is moving faster than the people-side evidence','When digital activity does not yet establish durable inclusion',
+              'Borrower counts, savers and nominal portfolio can move differently','A gender gap is measured. Its causes are not.',
+              'Finance can be a serious constraint without being the most frequently named business challenge',
+              'From rail to result: the missing middle matters','After the transfer, the missing metric is persistence',
+              'Evidence turned into decision-relevant analysis','Trace the reading back to evidence','Microfinance is growing. What exactly is growing?']
+    _hay=[p for p in list((DIST).rglob('*.html'))+list(C.rglob('*.json')) if p.is_file()]
+    for _p in _hay:
+        _t=_p.read_text(encoding='utf-8')
+        for _s in _RETIRED:
+            if _s in _t: errors.append(f'RP-G05 retired Reading copy "{_s[:50]}" in {_p.relative_to(ROOT) if str(_p).startswith(str(ROOT)) else _p}')
+    import subprocess as _sp
+    _inv=_sp.run([sys.executable,str(ROOT/'audit/tranche_c/checks/bilingual_invariance.py')],capture_output=True,text=True)
+    if _inv.returncode!=0: errors.append('RP-G06 bilingual numeric invariance: '+(_inv.stdout.strip().splitlines() or ['?'])[0])
+except Exception as _x:
+    errors.append('RP-G unreadable '+repr(_x))
 # TC-G03 no bare source reference as a name: a source card or record source item with a governed title never shows its ID
 # as the title; a locator-only source is named by the governed "Original source" label.
 for _L in ('en','ar'):

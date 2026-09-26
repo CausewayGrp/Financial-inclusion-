@@ -757,8 +757,75 @@ def _meta_description(title, secs, lang, limit=155):
     return text
 
 
+_ISO_DATE = re.compile(r"\d{4}-\d{2}-\d{2}")
+READING_FEATURED_ROUTES = ("/", "/explore/", "/readings/")
+
+
+def _reading_ref(r, with_thesis=False):
+    ref = OrderedDict([("reading_id", r["reading_id"]), ("route", F.slash(r["route"])), ("title_en", r["title_en"]), ("title_ar", r["title_ar"])])
+    if with_thesis:
+        for k in ("thesis_en", "thesis_ar", "evidence_period_en", "evidence_period_ar"):
+            ref[k] = r.get(k)
+    return ref
+
+
+def reading_relations(ctx):
+    """F2 (26 Sep 2026): every Reading relation shown on another page derives from 08 and is checked here, once.
+    - featured: exactly one Reading carries 08 featured = FEATURED (Home, Explore and the Readings index show it);
+    - related: 08 related_readings holds one or two other Readings (shown at the end of a Reading);
+    - domains: 08 domain_surface_routes places a Reading on at most two answer pages, and no page carries more than two;
+    - measurement: 08 measurement_bindings names existing Measurement Agenda priorities ("This gap is examined in");
+    - used in: an Evidence Record lists the Readings whose evidence path binds it (08 claim/evidence/verification ids);
+    - every Reading has a governed evidence period in both languages and an ISO review date."""
+    rds = ctx.out["content/readings.json"]
+    by_id = OrderedDict((r["reading_id"], r) for r in rds)
+    ma_ids = {m["measurement_id"] for m in ctx.out["content/measurement_agenda.json"]}
+    problems = []
+    featured = [r for r in rds if r.get("featured") not in (None, "")]
+    if len(featured) != 1 or featured[0].get("featured") != "FEATURED":
+        problems.append(f"08 featured: exactly one Reading must be FEATURED, found {[(r['reading_id'], r.get('featured')) for r in featured]}")
+    per_route = defaultdict(list)
+    measurement = defaultdict(list)
+    used_in = defaultdict(list)
+    for r in rds:
+        rid = r["reading_id"]
+        rel = r.get("related_readings")
+        if not isinstance(rel, list) or not 1 <= len(rel) <= 2 or len(set(rel)) != len(rel) or rid in rel or any(x not in by_id for x in rel):
+            problems.append(f"{rid} related_readings must name one or two other existing Readings: {rel!r}")
+        mb = r.get("measurement_bindings")
+        if not isinstance(mb, list) or any(x not in ma_ids for x in mb):
+            problems.append(f"{rid} measurement_bindings must be a list of existing priorities: {mb!r}")
+        else:
+            for x in mb:
+                measurement[x].append(_reading_ref(r))
+        surf = [F.slash(x) for x in (r.get("domain_surface_routes") or [])]
+        if not 1 <= len(surf) <= 2:
+            problems.append(f"{rid} domain_surface_routes must place the Reading on one or two answer pages: {surf}")
+        for x in surf:
+            per_route[x].append(rid)
+        if not (r.get("evidence_period_en") and r.get("evidence_period_ar")):
+            problems.append(f"{rid} evidence period missing in one language")
+        if not (isinstance(r.get("last_reviewed"), str) and _ISO_DATE.fullmatch(r["last_reviewed"])):
+            problems.append(f"{rid} last_reviewed must be an ISO date: {r.get('last_reviewed')!r}")
+        ids = []
+        for x in list(r.get("claim_bindings") or []) + list(r.get("evidence_bindings") or []) + list((r.get("verification_bindings") or {}).get("claim_ids") or []):
+            if x not in ids:
+                ids.append(x)
+        for x in ids:
+            used_in[x].append(_reading_ref(r))
+    for route, lst in per_route.items():
+        if len(lst) > 2:
+            problems.append(f"answer page {route} would carry {len(lst)} Readings (at most two): {lst}")
+    if problems:
+        raise IntegrityError("Reading relations (08):\n  " + "\n  ".join(problems))
+    return {"by_id": by_id, "featured": _reading_ref(featured[0], with_thesis=True),
+            "related": {rid: [_reading_ref(by_id[x], with_thesis=True) for x in r["related_readings"]] for rid, r in by_id.items()},
+            "measurement": measurement, "used_in": used_in}
+
+
 def page_specs(ctx, e):
     tm = ctx.inputs["page_spec_templates"]
+    rel = reading_relations(ctx)
     intent = ctx.inputs["page_spec_design_intent"]["routes"]
     overrides = ctx.inputs["page_spec_binding_overrides"]["overrides"]
     from .structure import keyed_records
@@ -821,8 +888,19 @@ def page_specs(ctx, e):
                     if rec.get(f) and (f[-2:], rec[f]) not in seen_text:       # PB-0523: union, de-duplicated per language
                         seen_text.add((f[-2:], rec[f]))
                         prohibited.append(OrderedDict([("object_id", rec[fkey]), ("field", f), ("text", rec[f])]))
-        related = [OrderedDict([("reading_id", x["reading_id"]), ("route", x["route"]), ("title_en", x["title_en"]), ("title_ar", x["title_ar"])])
-                   for x in ctx.out["content/readings.json"] if route in [F.slash(y) for y in (x.get("domain_context_routes") or [])]]
+        # F2: Reading relations derive from 08 (reading_relations); each page carries only the ones it shows.
+        related = list(rel["related"].get(gov["reading_ids"][0]["reading_id"], [])) if r["page_class"] == "reading_detail" and gov["reading_ids"] else []
+        featured = rel["featured"] if route in READING_FEATURED_ROUTES else None
+        # F2: a Reading's primary question is its 08 question; the design-intent input holds no shadow copy of it
+        if r["page_class"] == "reading_detail":
+            if "primary_user_question_internal" in intent[route]:
+                raise IntegrityError(f"page {route}: the Reading question is owned by 08; remove it from page_spec_design_intent")
+            primary_q = gov["reading_ids"][0]["question_en"]
+        else:
+            primary_q = intent[route]["primary_user_question_internal"]
+        used_in = list(rel["used_in"].get(r.get("instance_id"), [])) if r["page_class"] == "evidence_detail" else []
+        measurement_readings = OrderedDict((m["measurement_id"], rel["measurement"].get(m["measurement_id"], []))
+                                           for m in ctx.out["content/measurement_agenda.json"]) if route == "/measurement/" else OrderedDict()
         for L in ("en", "ar"):                                                 # EXF-002: full_copy is title + rendered sections
             want = "\n\n".join([r["title_" + L]] + [v for sct in secs for v in (sct.get("heading_" + L), sct.get("body_" + L)) if v])
             if r["full_copy_" + L] != want:
@@ -849,7 +927,7 @@ def page_specs(ctx, e):
         spec = OrderedDict([
             ("page_spec_version", tm["page_spec_version"]), ("authority_master_sha256", ctx.master_sha256),
             ("route", route), ("page_class", r["page_class"]), ("template_route", r["template_route"]), ("instance_id", r.get("instance_id")),
-            ("user_job_internal", intent[route]["user_job_internal"]), ("primary_user_question_internal", intent[route]["primary_user_question_internal"]),
+            ("user_job_internal", intent[route]["user_job_internal"]), ("primary_user_question_internal", primary_q),
             ("title_en", r["title_en"]), ("title_ar", r["title_ar"]),
             ("meta_description_en", r.get("meta_description_en") or _meta_description(r["title_en"], secs, "en")),
             ("meta_description_ar", r.get("meta_description_ar") or _meta_description(r["title_ar"], secs, "ar")),
@@ -858,6 +936,7 @@ def page_specs(ctx, e):
             ("governed_claims", gov["claim_ids"]), ("governed_evidence_objects", gov["evidence_object_ids"]),
             ("governed_visual_contracts", gov["visual_ids"]), ("governed_readings", gov["reading_ids"]),
             ("governed_measurement_priorities", gov["measurement_ids"]), ("related_readings", related),
+            ("featured_reading", featured), ("used_in_readings", used_in), ("measurement_readings", measurement_readings),
             ("source_reference_closure", refs), ("source_references", [smap[s] for s in src_ids if s in smap]),
             ("numeric_strings_in_governed_copy", numeric), ("prohibited_inferences", prohibited),
             ("allowed_visual_contract_ids", list(b["visual_ids"])),
@@ -1428,11 +1507,14 @@ def reading_sections(ctx, e):
                 continue
             covered.add((route, order))
             owner = {"copy_en": sec.get("body_en"), "copy_ar": sec.get("body_ar"), "title_en": sec.get("heading_en"), "title_ar": sec.get("heading_ar")}
+        # F2: the opening section (order 2) may be heading-less in both languages — the essay runs on from the
+        # standfirst; a heading present in one language only is still an error.
+        open_ok = order == 2 and owner.get("title_en") in (None, "") and owner.get("title_ar") in (None, "")
         for k, v in owner.items():
             if r.get(k) not in (None, ""):
                 problems.append(f"{rid} s{order}.{k}: 09 is the section index and holds no copy; edit the owner "
                                 f"({'08 thesis' if order == 1 else '03 ' + route})")
-            if v in (None, ""):
+            if v in (None, "") and not (open_ok and k.startswith("title_")):
                 problems.append(f"{rid} s{order}.{k}: the owner ({'08 thesis' if order == 1 else '03 ' + route}) is empty")
             rec[k] = v
         if order == 1 and (not r.get("title_en") or not r.get("title_ar")):

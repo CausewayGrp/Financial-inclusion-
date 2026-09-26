@@ -520,20 +520,18 @@ def domain_verify(spec,lang,presentation):
     )
 
 def domain_readings(spec,lang):
-    # PB-0426: governed Evidence Readings surfaced on a domain page (08 domain_surface_routes, at most two) and
-    # related Readings linked from it (08 domain_context_routes). Titles and theses come from 08_READINGS.
+    # PB-0426, F2: the one or two governed Evidence Readings placed on this answer page (08 domain_surface_routes; the
+    # generator refuses a page with more than two). Titles and standfirsts come from 08_READINGS.
     ar=lang=='ar'
     cards=[]
     for r in spec.get('governed_readings') or []:
         route=r.get('route') or ''
-        cards.append(f'<article class="domain-reading-card" data-domain-reading="{esc(r.get("reading_id"))}"><div class="eyebrow">{"قراءة أدلة" if ar else "Evidence Reading"}</div>'
+        cards.append(f'<article class="domain-reading-card" data-domain-reading="{esc(r.get("reading_id"))}"><div class="eyebrow">{esc(ui_text("UI-READING-EYEBROW",lang))}</div>'
                      f'<h3><a href="{route_href(route,lang)}">{esc(locv(r,"title",lang))}</a></h3><p>{esc(locv(r,"thesis",lang))}</p></article>')
-    links=''.join(f'<li><a href="{route_href(x.get("route"),lang)}">{esc(locv(x,"title",lang))}</a></li>' for x in spec.get('related_readings') or [])
-    if not cards and not links:
+    if not cards:
         return ''
     head='قراءات الأدلة المرتبطة بهذه الصفحة' if ar else 'Evidence Readings on this question'
-    rel=f'<div class="related-readings"><strong>{"قراءات ذات صلة" if ar else "Related readings"}</strong><ul>{links}</ul></div>' if links else ''
-    return f'<section class="section domain-readings"><div class="container"><h2>{head}</h2><div class="domain-reading-grid">{"".join(cards)}</div>{rel}</div></section>'
+    return f'<section class="section domain-readings"><div class="container"><h2>{head}</h2><div class="domain-reading-grid">{"".join(cards)}</div></div></section>'
 
 def domain_page(spec,lang):
     presentation=PRESENTATION_ROUTES[spec.get('route')]
@@ -727,12 +725,93 @@ def home_ctas(lang):
     cards=''.join(f'<a class="reading-card" href="{route_href(r,lang)}"><span class="badge teal">{i+1:02d}</span><h3>{esc(t)}</h3><p>{esc(d)}</p></a>' for i,(r,t,d) in enumerate(items))
     return f'<section class="section"><div class="container"><div class="reading-grid home-cta-grid">{cards}</div></div></section>'
 
-def reading_cards(lang):
-    arr=load(C/'content/readings.json'); ar=lang=='ar'; cards=[]
-    for r in arr:
-        label='قراءة مرتبطة بالأدلة ←' if ar else 'Evidence-bound reading →'
-        cards.append(f'<a class="reading-card" href="{route_href(r["route"],lang)}"><h3>{esc(locv(r,"title",lang))}</h3><p>{esc(locv(r,"question",lang))}</p><div class="meta">{label}</div></a>')
-    return f'<section class="section"><div class="container"><div class="reading-grid">{"".join(cards)}</div></div></section>'
+# ---------------------------------------------------------------------------------------------------------------------
+# Evidence Readings family (F2, 26 Sep 2026). Copy comes from 08 (title, standfirst, question, evidence period, review
+# date, prohibited inference, relations), 03 (the essay body) and 04 (interface labels); relations are derived once in
+# the generator (page spec: related_readings, featured_reading, used_in_readings, measurement_readings).
+# ---------------------------------------------------------------------------------------------------------------------
+MONTHS={'en':['January','February','March','April','May','June','July','August','September','October','November','December'],
+        'ar':['يناير','فبراير','مارس','أبريل','مايو','يونيو','يوليو','أغسطس','سبتمبر','أكتوبر','نوفمبر','ديسمبر']}
+
+def date_label(iso,lang):
+    y,m,d=(int(x) for x in str(iso).split('-'))
+    return f'{d} {MONTHS[lang][m-1]} {y}'
+
+def reading_paras(text):
+    """A Reading body: one paragraph per line; consecutive '- ' lines form a list; a '> ' line is the pulled line."""
+    out=[]; items=[]
+    def flush():
+        if items: out.append('<ul class="reading-list">'+''.join(f'<li>{esc(i)}</li>' for i in items)+'</ul>'); items.clear()
+    for line in str(text or '').split('\n'):
+        s=line.strip()
+        if not s: continue
+        if s.startswith('- '): items.append(s[2:].strip()); continue
+        flush()
+        if s.startswith('> '): out.append(f'<blockquote class="reading-pull"><p>{esc(s[2:].strip())}</p></blockquote>')
+        else: out.append(f'<p>{_linkify(esc(s))}</p>')
+    flush()
+    return ''.join(out)
+
+def _reading_of(spec):
+    return (spec.get('governed_readings') or [{}])[0]
+
+def reading_hero(spec,lang):
+    r=_reading_of(spec); rid=str(r.get('reading_id') or '')
+    crumbs=breadcrumb('Reading',rid,lang,current_title=locv(r,'title',lang) or rid)
+    meta=(f'<dl class="reading-meta"><div><dt>{esc(ui_text("UI-READING-EVIDENCE-PERIOD",lang))}</dt><dd>{esc(locv(r,"evidence_period",lang))}</dd></div>'
+          f'<div><dt>{esc(ui_text("UI-READING-LAST-REVIEWED",lang))}</dt><dd><time datetime="{esc(r.get("last_reviewed"))}">{esc(date_label(r.get("last_reviewed"),lang))}</time></dd></div></dl>')
+    pi=locv(r,'prohibited_inference',lang)
+    boundary=f'<p class="reading-boundary" data-reading-boundary><strong>{esc(ui_text("UI-READING-DO-NOT-INFER",lang))}:</strong> {esc(pi)}</p>' if pi else ''
+    return (f'<section class="hero reading-hero" data-reading-id="{esc(rid)}"><div class="container reading-hero-inner">{crumbs}'
+            f'<div class="eyebrow">{esc(ui_text("UI-READING-EYEBROW",lang))}</div><h1>{esc(locv(r,"title",lang))}</h1>'
+            f'<p class="reading-standfirst">{esc(locv(r,"thesis",lang))}</p>{meta}{boundary}</div></section>')
+
+def reading_body(spec,lang):
+    """The essay: sections in order (the opening may be heading-less); the Reading's one signature visual follows the
+    opening; the last section is always 'What would change this reading?'."""
+    r=_reading_of(spec); rid=str(r.get('reading_id') or '')
+    ids={int(float(x.get('section_order') or 0)):x.get('section_id') for x in READING_SECTIONS if x.get('reading_id')==rid}
+    visual=''.join(render_visual(v,lang,level=2) for v in (spec.get('governed_visual_contracts') or []))   # the opening may be heading-less: the visual title is an h2
+    out=[]
+    for i,s in enumerate(sorted(spec.get('sections') or [],key=lambda x:x.get('section_order') or 0)):
+        h=s.get(f'heading_{lang}') or ''; b=s.get(f'body_{lang}') or ''
+        if not (h or b): continue
+        head=f'<h2>{esc(h)}</h2>' if h else ''
+        out.append(f'<section class="reading-section" data-reading-section="{esc(ids.get(s.get("section_order")) or "")}"><div class="container reading-column">{head}{reading_paras(b)}</div></section>')
+        if i==0 and visual:
+            out.append(f'<section class="reading-visual" data-reading-visual><div class="container reading-column">{visual}</div></section>')
+    return f'<article class="reading-essay" lang="{lang}">{"".join(out)}</article>'
+
+def reading_related(spec,lang):
+    items=''.join(f'<li><a class="reading-related-link" href="{route_href(x.get("route"),lang)}"><strong>{esc(locv(x,"title",lang))}</strong><span>{esc(locv(x,"thesis",lang))}</span></a></li>'
+                  for x in spec.get('related_readings') or [])
+    if not items: return ''
+    return (f'<section class="section reading-related" data-reading-related><div class="container reading-column"><h2>{esc(ui_text("UI-READING-RELATED-H",lang))}</h2>'
+            f'<ul class="reading-related-list">{items}</ul><p><a class="text-link" href="/{lang}/readings/">{esc(ui_text("UI-READING-ALL-H",lang))}</a></p></div></section>')
+
+def featured_reading(spec,lang,heading_id='UI-READING-FEATURED',tone=''):
+    f=spec.get('featured_reading')
+    if not f: return ''
+    return (f'<section class="section featured-reading {tone}" data-featured-reading="{esc(f.get("reading_id"))}"><div class="container">'
+            f'<div class="eyebrow">{esc(ui_text(heading_id,lang))}</div><h2><a href="{route_href(f.get("route"),lang)}">{esc(locv(f,"title",lang))}</a></h2>'
+            f'<p class="reading-standfirst">{esc(locv(f,"thesis",lang))}</p>'
+            f'<p class="meta">{esc(ui_text("UI-READING-EVIDENCE-PERIOD",lang))}: {esc(locv(f,"evidence_period",lang))}</p>'
+            f'<div class="hero-actions"><a class="button primary" href="{route_href(f.get("route"),lang)}">{esc(ui_text("UI-READING-OPEN",lang))}</a>'
+            f'<a class="button ghost" href="/{lang}/readings/">{esc(ui_text("UI-READING-ALL-H",lang))}</a></div></div></section>')
+
+def reading_index(spec,lang):
+    """The Readings index: one featured Reading, then an editorial list (title and question) — not a card wall."""
+    fid=(spec.get('featured_reading') or {}).get('reading_id')
+    items=''.join(f'<li class="reading-list-item" data-reading-id="{esc(r.get("reading_id"))}"><a href="{route_href(r.get("route"),lang)}"><strong>{esc(locv(r,"title",lang))}</strong></a><p>{esc(locv(r,"question",lang))}</p></li>'
+                  for r in READINGS_ALL if r.get('reading_id')!=fid)
+    return (featured_reading(spec,lang,tone='sand')+
+            f'<section class="section reading-index"><div class="container"><h2>{esc(ui_text("UI-READING-ALL-H",lang))}</h2><ol class="reading-editorial-list">{items}</ol></div></section>')
+
+def evidence_used_in_readings(spec,lang):
+    items=''.join(f'<li><a class="text-link" href="{route_href(x.get("route"),lang)}">{esc(locv(x,"title",lang))}</a></li>' for x in spec.get('used_in_readings') or [])
+    if not items: return ''
+    return (f'<section class="evidence-used-in" data-used-in-readings><div class="container"><h2>{esc(ui_text("UI-EVIDENCE-USED-IN-READINGS",lang))}</h2>'
+            f'<ul>{items}</ul></div></section>')
 
 AR_MEASUREMENT_DOMAIN_TERMS={
     'People':'الأفراد',
@@ -756,6 +835,11 @@ def measurement_domain_label(domain,lang):
         return raw
     return ' / '.join(AR_MEASUREMENT_DOMAIN_TERMS.get(part.strip(),part.strip()) for part in raw.split('/'))
 
+def measurement_readings_line(refs,lang):
+    """F2: 'This gap is examined in' — the Readings bound to this priority (08 measurement_bindings)."""
+    links=' · '.join(f'<a class="text-link" href="{route_href(x.get("route"),lang)}">{esc(locv(x,"title",lang))}</a>' for x in refs or [])
+    return f'<p class="measurement-readings" data-measurement-readings><strong>{esc(ui_text("UI-MEASUREMENT-EXAMINED-IN",lang))}:</strong> {links}</p>' if links else ''
+
 def measurement_more(m,lang):
     rows=[]
     for f,uid in (('guardrail','UI-MA-GUARDRAIL'),('feasibility','UI-MA-FEASIBILITY'),('priority_basis','UI-MA-BASIS'),('what_changes','UI-MA-CHANGES')):
@@ -763,13 +847,14 @@ def measurement_more(m,lang):
         if v: rows.append(f'<dt>{esc(ui_text(uid,lang))}</dt><dd>{esc(v)}</dd>')
     return f'<details class="measurement-more"><summary>{esc(ui_text("UI-MA-MORE",lang))}</summary><dl>{"".join(rows)}</dl></details>' if rows else ''
 
-def measurement_cards(lang):
+def measurement_cards(lang,spec=None):
     arr=load(C/'content/measurement_agenda.json'); ar=lang=='ar'; cards=[]
+    examined=(spec or {}).get('measurement_readings') or {}
     for m in arr:
         k1='ما نعرفه:' if ar else 'Current evidence:'; k2='ما ينقص:' if ar else 'Missing evidence:'; k3='ما الذي سيصبح القرار فيه أقوى:' if ar else 'Decision unlocked:'
         domain=measurement_domain_label(m.get('domain'),lang)
         mid=str(m.get('measurement_id') or '')
-        cards.append(f'<article class="measurement-card" id="{esc(mid)}" tabindex="-1"><div class="priority">{("الأولوية" if ar else "Priority")}: <bdi dir="ltr">{esc(m.get("priority"))}</bdi> · {esc(domain)}</div><h3>{esc(locv(m,"title",lang))}</h3><p><strong>{k1}</strong> {esc(locv(m,"current_evidence",lang))}</p><p><strong>{k2}</strong> {esc(locv(m,"missing_evidence",lang))}</p><p><strong>{k3}</strong> {esc(locv(m,"unlocked_decision",lang))}</p><div class="meta-row">{public_ref(mid,lang)}</div>{measurement_more(m,lang)}</article>')
+        cards.append(f'<article class="measurement-card" id="{esc(mid)}" tabindex="-1"><div class="priority">{("الأولوية" if ar else "Priority")}: <bdi dir="ltr">{esc(m.get("priority"))}</bdi> · {esc(domain)}</div><h3>{esc(locv(m,"title",lang))}</h3><p><strong>{k1}</strong> {esc(locv(m,"current_evidence",lang))}</p><p><strong>{k2}</strong> {esc(locv(m,"missing_evidence",lang))}</p><p><strong>{k3}</strong> {esc(locv(m,"unlocked_decision",lang))}</p><div class="meta-row">{public_ref(mid,lang)}</div>{measurement_readings_line(examined.get(mid),lang)}{measurement_more(m,lang)}</article>')
     return f'<section class="section"><div class="container"><div class="measurement-grid">{"".join(cards)}</div></div></section>'
 
 def sources_block(spec,lang):
@@ -791,7 +876,7 @@ def sources_block(spec,lang):
     label='المصادر' if ar else 'Sources'
     return f'<aside class="answer-card sticky-aside"><div class="eyebrow">{label}</div>{"".join(out)}</aside>'
 
-def render_visual(v,lang):
+def render_visual(v,lang,level=3):
     ar=lang=='ar'; title=locv(v,'title',lang); question=locv(v,'question',lang); summary=locv(v,'accessible_summary',lang) or locv(v,'what_it_shows',lang); prohibit=locv(v,'prohibited_inference',lang)
     # Never expose English-only implementation metadata on an Arabic public visual.
     # Where a visual has a native localized scope/unit it may be shown; otherwise the governed
@@ -800,7 +885,7 @@ def render_visual(v,lang):
     meta=''.join(f'<span class="pill">{esc(x)}</span>' for x in (period,unit) if x)
     meta_html=f'<div class="meta-row">{meta}</div>' if meta else ''
     fallback=_visual_fallback(lang,question,summary,prohibit,period,unit)
-    return f'<article class="visual" data-visual-id="{esc(v.get("visual_id"))}" data-image-independent="true" data-noncolour-semantic="text-structure-label-position"><div class="visual-head"><div><h3>{esc(title)}</h3></div></div>{fallback}{meta_html}</article>'
+    return f'<article class="visual" data-visual-id="{esc(v.get("visual_id"))}" data-image-independent="true" data-noncolour-semantic="text-structure-label-position"><div class="visual-head"><div><h{level}>{esc(title)}</h{level}></div></div>{fallback}{meta_html}</article>'
 
 def governed_block_groups(spec,lang,rt):
     records=governed_blocks({'governed_claims':spec.get('governed_claims'),'governed_evidence_objects':spec.get('governed_evidence_objects')},lang,show_ref=(rt=='/evidence'))
@@ -1219,10 +1304,6 @@ def evidence_related(obj,lang):
         title=route_question_label(route,lang)
         if title:
             links.append(f'<a class="evidence-context-link" href="{route_href(route,lang)}"><span>{esc(title)}</span></a>')
-    for r in READINGS_ALL:                      # Readings that rely on this record (JRN-02)
-        binds=set(str(x) for x in (r.get('claim_bindings') or [])+(r.get('evidence_bindings') or []))
-        if oid in binds and r.get('route'):
-            links.append(f'<a class="evidence-context-link" href="{route_href(r["route"],lang)}"><span>{esc(locv(r,"title",lang))}</span></a>')
     links.append(f'<a class="evidence-context-link utility" href="/{lang}/evidence/">{labels["evidence_hub"]}</a>')
     links.append(f'<a class="evidence-context-link utility" href="/{lang}/data/">{labels["data"]}</a>')
     links.append(f'<a class="evidence-context-link utility" href="/{lang}/methodology/">{labels["methodology"]}</a>')
@@ -1290,6 +1371,7 @@ def evidence_record_page(spec,lang):
     body+=evidence_boundary(obj,lang)
     body+=evidence_sources(spec,lang)
     body+=evidence_trace(spec,obj,lang)
+    body+=evidence_used_in_readings(spec,lang)
     body+=evidence_related(obj,lang)
     body+=evidence_progressive(spec,obj,lang)
     body+=evidence_utility(spec,obj,lang)
@@ -1501,9 +1583,9 @@ def corrections_context_block(lang):
 
 def generic(spec,lang):
     rt=spec.get('template_route'); extras=''
-    if rt=='/explore': extras=question_cards(lang)
-    elif rt=='/readings': extras=reading_cards(lang)
-    elif rt=='/measurement': extras=measurement_cards(lang)
+    if rt=='/explore': extras=question_cards(lang)+featured_reading(spec,lang,heading_id='UI-EXPLORE-GO-DEEPER')
+    elif rt=='/readings': extras=reading_index(spec,lang)
+    elif rt=='/measurement': extras=measurement_cards(lang,spec)
     elif rt=='/evidence':
         ar=lang=='ar'; ph='ابحث في الخلاصات والأدلة والقراءات…' if ar else 'Search claims, evidence, readings...'; label='بحث' if ar else 'Search'; comp='مقارنة الأدلة' if ar else 'Compare evidence'
         extras=f'<section id="search" class="section mint"><div class="container"><div class="search-shell"><span aria-hidden="true">⌕</span><input id="global-search" data-search-input class="search-input" placeholder="{ph}" aria-label="{label}"></div><div id="search-results" data-search-results class="search-results" aria-live="polite"></div><div class="hero-actions"><a class="button ghost" href="/{lang}/evidence/compare/">{comp}</a></div></div></section>'
@@ -1574,7 +1656,7 @@ def reading_verification_links(spec,lang):
         )
     if not steps:
         return ''
-    title='تحقّق من هذه القراءة' if ar else 'Verify this reading'
+    title=ui_text('UI-READING-TRACE-H',lang)
     rstate=_closure('reading',str(r.get('reading_id') or '')).get('closure_state')
     if rstate=='CLOSED_TO_SOURCE_ID':
         status_id='UI-READING-PATH-COMPLETE-UNLISTED' if unlisted else 'UI-READING-PATH-COMPLETE'   # P4 (V-D1)
@@ -1600,20 +1682,12 @@ def reading_verification_links(spec,lang):
     )
 
 def reading_detail(spec,lang):
-    ar=lang=='ar'; r=(spec.get('governed_readings') or [{}])[0]; thesis=locv(r,'thesis',lang); question=locv(r,'question',lang); prohibit=locv(r,'prohibited_inference',lang); qlab='السؤال' if ar else 'Question'; tlab='الخلاصة المقيدة بالأدلة' if ar else 'Bounded thesis'; plab='لا يُستنتج:' if ar else 'Do not infer:'; note=f'<div class="note" style="margin-top:1rem"><strong>{plab}</strong> {esc(prohibit)}</div>' if prohibit else ''
-    rid=str(r.get('reading_id') or '')
-    # P4 (R10): the thesis card is labelled by the governed section-1 title of the Reading index (09), not a hard-coded label
-    s1=next((x for x in READING_SECTIONS if x.get('reading_id')==rid and int(float(x.get('section_order') or 0))==1),None)
-    if s1 and s1.get(f'title_{lang}'): tlab=s1[f'title_{lang}']
-    # P4 (V-D12): when the Reading's own "does not establish" section already carries the prohibited inference (decided on the
-    # English owner text so both editions behave alike), the lead card does not repeat it
-    pi_en=str(r.get('prohibited_inference_en') or '')
-    if pi_en and any(pi_en in str(x.get('body_en') or '') for x in spec.get('sections',[])):
-        note=''
-    crumbs=breadcrumb('Reading',rid,lang,current_title=locv(r,'title',lang) or rid)
-    lead=f'<section class="section sand"><div class="container">{crumbs}<div class="eyebrow">{qlab}</div><h2>{esc(question)}</h2><div class="answer-card"><h3>{tlab}</h3><p>{esc(thesis)}</p></div>{note}</div></section>'
-    verify=reading_verification_links(spec,lang)
-    return lead+sections(spec,lang)+verify+f'<section class="section"><div class="container evidence-detail"><div class="card-grid" style="grid-template-columns:1fr">{governed_blocks(spec,lang)}</div>{sources_block(spec,lang)}</div></section>'
+    """Reading page (F2): standfirst hero -> essay (signature visual after the opening) -> 'What would change this
+    reading?' (the essay's last section) -> 'Trace the evidence' (evidence path and sources) -> one or two related Readings."""
+    trace=reading_verification_links(spec,lang)
+    srcs=sources_block(spec,lang)
+    trace_sources=f'<section class="section reading-sources"><div class="container evidence-detail">{srcs}</div></section>' if srcs else ''
+    return reading_hero(spec,lang)+reading_body(spec,lang)+trace+trace_sources+reading_related(spec,lang)
 
 def _meta_clip(text,n=160):
     t=re.sub(r'\s+',' ',str(text or '')).strip()
@@ -1644,10 +1718,11 @@ def page(spec,lang):
         body=domain_page(spec,lang)
     elif cls=='evidence_detail':
         body=evidence_record_page(spec,lang)
+    elif cls=='reading_detail':
+        body=reading_detail(spec,lang)
     else:
         body=hero(spec,lang)
-        if route=='/': body+=home_special(spec,lang)+home_ctas(lang)
-        elif cls=='reading_detail': body+=reading_detail(spec,lang)
+        if route=='/': body+=home_special(spec,lang)+featured_reading(spec,lang,tone='sand')+home_ctas(lang)
         else: body+=generic(spec,lang)
     other='en' if ar else 'ar'; product=ui_text('UI-PRODUCT-NAME',lang); title=locv(spec,'title',lang); desc=page_meta_description(spec,lang,title)   # PB-0410: never a *_internal field
     citation_meta=''

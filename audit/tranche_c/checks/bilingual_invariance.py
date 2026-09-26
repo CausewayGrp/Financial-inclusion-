@@ -4,6 +4,8 @@ and Arabic (as multisets; Arabic-Indic digits and thousands separators normalise
 words are compared by value).
 
   python3 audit/tranche_c/checks/bilingual_invariance.py [out.json]
+
+Exit status 1 when any page pair differs (BIL-05 closed by the F2 Reading integration, 26 Sep 2026: the target is zero).
 """
 import glob, html, json, os, re, sys
 from collections import Counter
@@ -53,7 +55,8 @@ def main():
     print(f"BILINGUAL NUMERIC INVARIANCE: {len(rows)} page pairs with differing numbers")
     for r in rows[:40]:
         print(" ", r)
+    return len(rows)
 
 
 if __name__ == "__main__":
-    main()
+    sys.exit(1 if main() else 0)

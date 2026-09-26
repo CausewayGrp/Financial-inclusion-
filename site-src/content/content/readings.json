@@ -5,10 +5,10 @@
     "route": "/readings/same-year-different-number/",
     "title_en": "Same year, different number",
     "title_ar": "العام نفسه، رقم مختلف",
-    "question_en": "How can the evidence be interpreted when the same remittance reference year changes between published vintages?",
-    "question_ar": "كيف يمكن تفسير الدليل عندما تتغير قيمة التحويلات الواردة في ميزان المدفوعات للسنة المرجعية نفسها بين نسخ النشر؟",
-    "thesis_en": "The 2024 remittance value differs materially between annual reports of the Central Bank of Yemen – Aden (CBY-Aden). That establishes a same-year restatement; it does not, by itself, establish year-on-year economic movement.",
-    "thesis_ar": "تختلف قيمة التحويلات لعام 2024 بصورة جوهرية بين نسختين من التقرير السنوي للبنك المركزي اليمني – عدن. وهذا يثبت إعادة عرض للسنة نفسها، ولا يثبت في حد ذاته حركة اقتصادية بين عامين.",
+    "question_en": "When two official reports give different remittance values for the same year, what changed: the economy or the measurement?",
+    "question_ar": "عندما يعطي تقريران رسميان قيمتين مختلفتين للتحويلات في السنة نفسها، ما الذي تغيّر: الاقتصاد أم القياس؟",
+    "thesis_en": "Successive annual reports of the Central Bank of Yemen – Aden give very different remittance values for 2024. A revision of this size is a measurement event to be explained before it can be read as an economic story.",
+    "thesis_ar": "تعطي التقارير السنوية المتتالية للبنك المركزي اليمني – عدن قيمتين مختلفتين كثيرًا للتحويلات في عام 2024. ومراجعة بهذا الحجم حدثٌ في القياس ينبغي تفسيره قبل أن يُقرأ قصةً اقتصادية.",
     "claim_bindings": [
       "CLM-032",
       "CLM-036",
@@ -36,9 +36,7 @@
       "SRC-CBY-AR2025-BOP"
     ],
     "visual_bindings": [
-      "RV-CWR-001",
-      "VIS-REMITTANCE-MACRO",
-      "VIS-SOURCE-COMPARISON"
+      "RV-CWR-001"
     ],
     "audiences": [
       "CBY",
@@ -73,18 +71,26 @@
     "domain_surface_routes": [
       "/remittances/"
     ],
-    "domain_context_routes": []
+    "related_readings": [
+      "CWR-002",
+      "CWR-004"
+    ],
+    "measurement_bindings": [],
+    "evidence_period_en": "Reference years 2021–2024 · CBY-Aden annual reports 2024 and 2025 · IMF Article IV consultation 2025",
+    "evidence_period_ar": "السنوات المرجعية 2021–2024 · التقريران السنويان للبنك المركزي اليمني – عدن 2024 و2025 · مشاورات المادة الرابعة لصندوق النقد الدولي 2025",
+    "last_reviewed": "2026-09-26",
+    "featured": null
   },
   {
     "reading_id": "CWR-002",
     "slug": "banking-jump-measurement-basis",
     "route": "/readings/banking-jump-measurement-basis/",
-    "title_en": "When a balance sheet jumps without the economy necessarily moving",
-    "title_ar": "حين تقفز الميزانيات المصرفية من دون أن يكون الاقتصاد قد تحرك بالضرورة",
-    "question_en": "How should a published banking jump be read when the valuation or reporting basis also changes?",
-    "question_ar": "كيف تُقرأ قفزة في الأرصدة المصرفية المنشورة عندما يتغير أيضًا أساس التقييم أو الإبلاغ؟",
-    "thesis_en": "Published banking stocks for the same reference period shift materially across vintages alongside a documented valuation change. A change in measurement basis can account for part of the published shift and needs to be separated from economic movement before intermediation or scale is interpreted.",
-    "thesis_ar": "تغيرت أرصدة مصرفية منشورة للفترة المرجعية نفسها بصورة جوهرية بين نسخ النشر، بالتزامن مع تغيير موثق في أساس التقييم. ويمكن أن يفسر تغير أساس القياس جزءًا من التحول المنشور، لذلك يلزم فصله عن الحركة الاقتصادية قبل تفسير الوساطة أو الحجم.",
+    "title_en": "When the baseline moves",
+    "title_ar": "حين يتحرك خط الأساس",
+    "question_en": "When the same year’s banking positions are published at higher levels in a later report, how much of the jump is the economy and how much is the measurement?",
+    "question_ar": "عندما تُنشر المراكز المصرفية للسنة نفسها بمستويات أعلى في تقرير لاحق، كم من هذه القفزة يعود إلى الاقتصاد، وكم يعود إلى القياس؟",
+    "thesis_en": "Yemen’s banking series shows why a large published jump must be separated from a change in measurement before it becomes an economic story.",
+    "thesis_ar": "تبيّن السلسلة المصرفية في اليمن لماذا ينبغي فصل القفزة المنشورة عن أي تغير في طريقة القياس قبل أن تتحول إلى قصة عن الاقتصاد.",
     "claim_bindings": [
       "CLM-033",
       "CLM-038"
@@ -103,8 +109,7 @@
       "SRC-IMF-YEM-EGDDS-VAL-1996"
     ],
     "visual_bindings": [
-      "RV-CWR-002",
-      "VIS-SOURCE-COMPARISON"
+      "RV-CWR-002"
     ],
     "audiences": [
       "CBY",
@@ -112,8 +117,8 @@
       "IMF/WB",
       "researchers"
     ],
-    "prohibited_inference_en": "A same-year restatement does not show a credit or deposit boom or a change in solvency.",
-    "prohibited_inference_ar": "لا تُظهر إعادة عرض السنة نفسها طفرة في الائتمان أو الودائع ولا تغيرًا في الملاءة.",
+    "prohibited_inference_en": "A same-year restatement does not show a credit, deposit or asset boom or a change in solvency, and the evidence does not yet divide the jump between valuation and economic movement.",
+    "prohibited_inference_ar": "لا تُظهر إعادة عرض أرقام السنة نفسها طفرة في الائتمان أو الودائع أو الأصول ولا تغيرًا في الملاءة، ولا تقسم الأدلة حتى الآن القفزة بين أثر التقييم والحركة الاقتصادية.",
     "verification_bindings": {
       "claim_ids": [
         "CLM-033",
@@ -135,24 +140,35 @@
     "domain_surface_routes": [
       "/finance/"
     ],
-    "domain_context_routes": []
+    "related_readings": [
+      "CWR-001",
+      "CWR-006"
+    ],
+    "measurement_bindings": [],
+    "evidence_period_en": "Positions at end-2022 as published in the 2022 annual report and restated from 2023 · valuation change of January 2023",
+    "evidence_period_ar": "المراكز في نهاية 2022 كما نُشرت في التقرير السنوي لعام 2022 وكما أُعيد عرضها ابتداءً من 2023 · تغيير التقييم في يناير 2023",
+    "last_reviewed": "2026-09-26",
+    "featured": null
   },
   {
     "reading_id": "CWR-003",
     "slug": "define-what-you-count",
     "route": "/readings/define-what-you-count/",
-    "title_en": "Targets depend on what is being counted",
-    "title_ar": "تعتمد المستهدفات على ما يجري عدّه",
+    "title_en": "When the unit changes, the story changes",
+    "title_ar": "حين تتغير وحدة القياس، تتغير القصة",
     "question_en": "Are we counting people, accounts, active accounts, subscribers, wallets, terminals or transactions?",
     "question_ar": "هل نعد الأشخاص أم الحسابات أم الحسابات النشطة أم المشتركين أم المحافظ الإلكترونية أم الأجهزة أم المعاملات؟",
-    "thesis_en": "Yemen's inclusion evidence mixes fundamentally different units. Targets become misleading when the unit silently changes between baseline, monitoring and outcome.",
-    "thesis_ar": "تمزج أدلة الشمول المالي في اليمن وحدات مختلفة جوهريًا. يصبح المستهدف مضللًا حين تتغير الوحدة من دون تنبيه بين خط الأساس والمتابعة والنتيجة.",
+    "thesis_en": "People, accounts, subscribers, terminals and transactions all describe parts of Yemen’s financial system. They are not interchangeable measures of financial inclusion, and a target or a trend is only as sound as the unit it keeps.",
+    "thesis_ar": "يصف الأشخاص والحسابات والمشتركون والأجهزة والمعاملات جميعًا أجزاءً من المنظومة المالية في اليمن، لكنها ليست مقاييس متبادلة للشمول المالي؛ ولا يكون المستهدف أو الاتجاه سليمًا إلا بقدر ثبات الوحدة التي يقيسها.",
     "claim_bindings": [
       "CLM-004",
       "CLM-023",
       "CLM-024",
       "CLM-025",
-      "CLM-026"
+      "CLM-026",
+      "CLM-001",
+      "CLM-003",
+      "XW-FMIIP-005"
     ],
     "evidence_bindings": [
       "CLM-004",
@@ -160,6 +176,8 @@
       "CLM-024",
       "CLM-025",
       "CLM-026",
+      "CLM-001",
+      "CLM-003",
       "XW-FMIIP-005"
     ],
     "source_bindings": [
@@ -168,9 +186,7 @@
       "EP-FINDEX-2022-ACCOUNT"
     ],
     "visual_bindings": [
-      "RV-CWR-003",
-      "VIS-PAYMENT-ANATOMY",
-      "VIS-TARGET-RESULT-STATE"
+      "RV-CWR-003"
     ],
     "audiences": [
       "CBY",
@@ -188,7 +204,9 @@
         "CLM-024",
         "CLM-025",
         "CLM-026",
-        "XW-FMIIP-005"
+        "XW-FMIIP-005",
+        "CLM-001",
+        "CLM-003"
       ],
       "direct_source_ids": [
         "SRC-WB-FINDEX-001"
@@ -199,34 +217,40 @@
       ],
       "resolution_rule": "Direct SRC-* identifiers resolve in the source register. Other dependency identifiers resolve through the bound claim/evidence record in the workbook; the implementation must not convert them into invented URLs or sources."
     },
-    "domain_surface_routes": [],
-    "domain_context_routes": [
-      "/people/",
-      "/payments/",
-      "/reforms/"
-    ]
+    "domain_surface_routes": [
+      "/access/"
+    ],
+    "related_readings": [
+      "CWR-005",
+      "CWR-008"
+    ],
+    "measurement_bindings": [
+      "MA-005"
+    ],
+    "evidence_period_en": "Global Findex fieldwork 2022–2023 · POS counts March 2025 – January 2026 · project baseline January 2025, target 2030",
+    "evidence_period_ar": "العمل الميداني لمسح Findex العالمي 2022–2023 · أعداد نقاط البيع مارس 2025 – يناير 2026 · خط أساس المشروع يناير 2025 ومستهدفه 2030",
+    "last_reviewed": "2026-09-26",
+    "featured": null
   },
   {
     "reading_id": "CWR-004",
     "slug": "reforms-newer-than-people-evidence",
     "route": "/readings/reforms-newer-than-people-evidence/",
-    "title_en": "The reform clock is moving faster than the people-side evidence",
-    "title_ar": "الإصلاحات أحدث من الأدلة السكانية",
-    "question_en": "What can we say when regulations, projects and payment infrastructure change after the latest population measurement?",
-    "question_ar": "ماذا نستطيع أن نقول حين تتغير التنظيمات والمشروعات وبنية المدفوعات بعد أحدث قياس سكاني؟",
-    "thesis_en": "Several reform and infrastructure events have been recorded since the latest representative population-level inclusion survey, whose Yemen fieldwork ran from November 2022 to January 2023. The evidence therefore has to be read across several clocks: recent administrative change does not establish a population outcome, and the older population measure does not erase newer institutional change.",
-    "thesis_ar": "شهد اليمن إصلاحات وتغيرات حديثة في البنية التحتية، بينما يظل أحدث القياس السكاني الممثل المتاح أقدم زمنيًا. لذلك تُقرأ الأدلة عبر توقيتات قياس مختلفة: فالتغير الإداري الحديث لا يثبت نتيجة سكانية، كما أن قدم القياس السكاني لا يلغي التغير المؤسسي الأحدث.",
+    "title_en": "The system is changing. What has reached people?",
+    "title_ar": "المنظومة المالية تتغير. فما الذي وصل إلى الناس؟",
+    "question_en": "What can we say about people when rules, institutions and payment infrastructure change after the latest representative survey?",
+    "question_ar": "ماذا يمكن أن نقول عن الناس حين تتغير القواعد والمؤسسات والبنية التحتية للمدفوعات بعد أحدث مسح ممثل؟",
+    "thesis_en": "Yemen’s rules, institutions and payment infrastructure have moved faster than its representative evidence about people. The gap between the two is not an answer to guess; it is the next thing to measure.",
+    "thesis_ar": "تحركت القواعد والمؤسسات والبنية التحتية المالية في اليمن بوتيرة أسرع من تجدد الأدلة الممثلة عن الناس. والفجوة بين الأمرين ليست نتيجة يجوز افتراضها؛ إنها السؤال التالي الذي ينبغي قياسه.",
     "claim_bindings": [
       "CLM-001",
       "CLM-003",
-      "CLM-049",
       "CLM-018",
       "CLM-025"
     ],
     "evidence_bindings": [
       "CLM-001",
       "CLM-003",
-      "CLM-049",
       "CLM-018",
       "CLM-025"
     ],
@@ -236,10 +260,7 @@
       "SRC-IMF-YEM-SMP-2026"
     ],
     "visual_bindings": [
-      "RV-CWR-004",
-      "VIS-EVIDENCE-FRESHNESS",
-      "VIS-POS-TERMINALS",
-      "VIS-PAYMENT-RAILS"
+      "RV-CWR-004"
     ],
     "audiences": [
       "CBY",
@@ -254,7 +275,6 @@
       "claim_ids": [
         "CLM-001",
         "CLM-003",
-        "CLM-049",
         "CLM-018",
         "CLM-025"
       ],
@@ -268,23 +288,30 @@
       "resolution_rule": "Direct SRC-* identifiers resolve in the source register. Other dependency identifiers resolve through the bound claim/evidence record in the workbook; the implementation must not convert them into invented URLs or sources."
     },
     "domain_surface_routes": [
-      "/people/",
-      "/reforms/"
+      "/people/"
     ],
-    "domain_context_routes": [
-      "/access/"
-    ]
+    "related_readings": [
+      "CWR-009",
+      "CWR-003"
+    ],
+    "measurement_bindings": [
+      "MA-001"
+    ],
+    "evidence_period_en": "Global Findex fieldwork November 2022 – January 2023 · POS counts March 2025 – January 2026 · institutional records June–August 2026",
+    "evidence_period_ar": "العمل الميداني لمسح Findex العالمي نوفمبر 2022 – يناير 2023 · أعداد نقاط البيع مارس 2025 – يناير 2026 · سجلات مؤسسية يونيو–أغسطس 2026",
+    "last_reviewed": "2026-09-26",
+    "featured": "FEATURED"
   },
   {
     "reading_id": "CWR-005",
     "slug": "digital-workaround-not-yet-durable-inclusion",
     "route": "/readings/digital-workaround-not-yet-durable-inclusion/",
-    "title_en": "When digital activity does not yet establish durable inclusion",
-    "title_ar": "حين لا يثبت النشاط الرقمي بعدُ شمولًا ماليًا مستدامًا",
+    "title_en": "When does digital growth become durable use?",
+    "title_ar": "متى يتحول النمو الرقمي إلى استخدام مستمر؟",
     "question_en": "Does growth in electronic-money accounts and transactions represent durable voluntary financial use?",
     "question_ar": "هل يعبر نمو حسابات النقود الإلكترونية ومعاملاتها عن استخدام مالي طوعي ومستدام؟",
-    "thesis_en": "Historical Yemen evidence shows account growth alongside dormancy, imposed/one-time use and a transaction mix still heavily connected to cash and account transfers. Digital activity can be economically important without proving durable inclusion.",
-    "thesis_ar": "تُظهر الأدلة التاريخية نمو الحسابات بالتزامن مع الخمول والاستخدام المفروض أو لمرة واحدة، ومع مزيج من المعاملات ظل شديد الارتباط بالنقد والتحويل بين الحسابات. قد يكون النشاط الرقمي مهمًا اقتصاديًا من دون أن يثبت شمولًا مستدامًا.",
+    "thesis_en": "Historical evidence from Yemen records a large base of e-money accounts by 2019 alongside dormancy, one-off use and a transaction mix still closely tied to cash. The open question is whether people choose to return to digital finance and find enough value to keep using it.",
+    "thesis_ar": "تسجل الأدلة التاريخية في اليمن قاعدة كبيرة من حسابات النقود الإلكترونية بحلول 2019، إلى جانب الخمول والاستخدام العابر وتركيبة معاملات ما تزال مرتبطة ارتباطًا وثيقًا بالنقد. والسؤال المفتوح هو: هل يعود الناس إلى الخدمات المالية الرقمية باختيارهم، ويجدون فيها منفعة تكفي للاستمرار في استخدامها؟",
     "claim_bindings": [
       "CLM-050",
       "CLM-051",
@@ -301,8 +328,7 @@
       "EP-IBS-GEO-GENDER-K04"
     ],
     "visual_bindings": [
-      "RV-CWR-005",
-      "VIS-PAYMENT-ANATOMY"
+      "RV-CWR-005"
     ],
     "audiences": [
       "CBY",
@@ -312,7 +338,7 @@
       "researchers"
     ],
     "prohibited_inference_en": "Registrations, accounts, one-time use, transaction growth and infrastructure expansion do not prove unique, repeat, voluntary or durable financial use.",
-    "prohibited_inference_ar": "لا تثبت التسجيلات أو الحسابات أو الاستخدام لمرة واحدة أو نمو المعاملات أو توسع البنية استخدامًا فريدًا أو متكررًا أو طوعيًا أو مستدامًا.",
+    "prohibited_inference_ar": "لا تثبت التسجيلات أو الحسابات أو الاستخدام لمرة واحدة أو نمو المعاملات أو توسع البنية استخدامًا فريدًا أو متكررًا أو طوعيًا أو مستمرًا.",
     "verification_bindings": {
       "claim_ids": [
         "CLM-050",
@@ -330,18 +356,28 @@
     "domain_surface_routes": [
       "/payments/"
     ],
-    "domain_context_routes": []
+    "related_readings": [
+      "CWR-010",
+      "CWR-009"
+    ],
+    "measurement_bindings": [
+      "MA-002"
+    ],
+    "evidence_period_en": "Provider data 2016–2019, from a 2020 study of five e-money providers",
+    "evidence_period_ar": "بيانات مقدمي الخدمة 2016–2019، من دراسة صدرت في 2020 عن خمسة من مقدمي خدمات النقود الإلكترونية",
+    "last_reviewed": "2026-09-26",
+    "featured": null
   },
   {
     "reading_id": "CWR-006",
     "slug": "microfinance-structural-divergence",
     "route": "/readings/microfinance-structural-divergence/",
-    "title_en": "Borrower counts, savers and nominal portfolio can move differently",
-    "title_ar": "قد تتحرك أعداد المقترضين والمدخرين والمحفظة الاسمية بصورة مختلفة",
+    "title_en": "What exactly do we mean by microfinance growth?",
+    "title_ar": "ماذا نعني تحديدًا بنمو التمويل الأصغر؟",
     "question_en": "What does the microfinance record show when borrower counts, saver/depositor measures and nominal portfolio do not move together?",
     "question_ar": "ماذا يظهر سجل التمويل الأصغر عندما لا تتحرك أعداد المقترضين ومقاييس المدخرين أو المودعين والمحفظة الاسمية في الاتجاه نفسه؟",
-    "thesis_en": "Borrower, saver and portfolio figures cannot yet be read as one story. Among providers reporting to the Social Fund for Development (SFD), verified primary tables record 93,118 active borrowers at end-2015 and 88,445 at end-2020, and a 2024 secondary source citing SFD/SMED data reports 78,686 for end-2023 for a set of providers not yet verified; with provider coverage and the period bridge unresolved, even these are separate data points rather than a trend. The saver and portfolio figures use different definitions and are nominal rials whose valuation across Yemen’s divided monetary areas is not recorded, so they cannot show whether saving or credit deepened. The evidence supports separate data points, not a story of ‘growth’, ‘deepening’ or ‘divergence’.",
-    "thesis_ar": "لا يمكن بعدُ قراءة أرقام المقترضين والمدخرين والمحفظة بوصفها قصة واحدة. فلدى مقدمي الخدمات الذين يرفعون بياناتهم إلى الصندوق الاجتماعي للتنمية، تسجل الجداول الأصلية الموثقة 93,118 مقترضًا نشطًا في نهاية 2015 و88,445 في نهاية 2020، ويورد مصدر ثانوي منشور في 2024 يستند إلى بيانات SFD/SMED عدد 78,686 لنهاية 2023، لمجموعة من مقدمي الخدمات لم يُتحقق منها بعد؛ ومع بقاء نطاق مقدمي الخدمة والجسر الزمني دون حسم، تبقى هذه الأعداد نفسها نقاطًا مرجعية لا اتجاهًا. أما أرقام المدخرين والمحفظة فتستخدم تعريفات مختلفة، وهي قيم اسمية بالريال لا تسجل قاعدة الأدلة أساس تقييمها في ظل انقسام المناطق النقدية، فلا تكشف ما إذا كان الادخار أو الائتمان قد تعمق. وما تسنده الأدلة هو نقاط مرجعية منفصلة ومقيدة، لا قصة «نمو» أو «تعمق» أو «تباعد».",
+    "thesis_en": "Yemen’s microfinance record does not move on one axis. Borrower counts, saver or depositor measures, nominal portfolios and institutional form are not the same measure, and they do not yet form one harmonised growth series.",
+    "thesis_ar": "لا يتحرك سجل التمويل الأصغر في اليمن على محور واحد. فأعداد المقترضين، ومقاييس المدخرين أو المودعين، والمحافظ الاسمية، والشكل المؤسسي ليست مقياسًا واحدًا، ولا تشكل حتى الآن سلسلة نمو موحدة.",
     "claim_bindings": [
       "CLM-054",
       "CLM-055",
@@ -365,8 +401,7 @@
       "SRC-WB-FSD-2024-001"
     ],
     "visual_bindings": [
-      "RV-CWR-006",
-      "VIS-MFI-DIVERGENCE"
+      "RV-CWR-006"
     ],
     "audiences": [
       "CBY",
@@ -375,8 +410,8 @@
       "DFIs",
       "researchers"
     ],
-    "prohibited_inference_en": "Saver/depositor growth, nominal portfolio growth and changes in provider structure do not, on their own, establish broader inclusion, real credit deepening, market dominance, unique-person growth or improved borrower outcomes.",
-    "prohibited_inference_ar": "لا يثبت نمو المدخرين أو المودعين، أو نمو المحفظة الاسمية، أو تغير هيكل مقدمي الخدمة، في حد ذاته اتساع الشمول أو تعمق الائتمان الحقيقي أو الهيمنة السوقية أو نمو عدد الأشخاص الفريدين أو تحسن نتائج المقترضين.",
+    "prohibited_inference_en": "Changes in saver or depositor counts, nominal portfolio or provider structure do not, on their own, establish broader inclusion, real credit deepening, market dominance, growth in unique people or improved borrower outcomes, and the borrower, saver and portfolio observations do not form one harmonised trend.",
+    "prohibited_inference_ar": "لا يثبت التغير في أعداد المدخرين أو المودعين، أو في المحفظة الاسمية، أو في هيكل مقدمي الخدمة، في حد ذاته اتساع الشمول أو تعمق الائتمان الحقيقي أو الهيمنة السوقية أو نمو عدد الأشخاص الفريدين أو تحسن نتائج المقترضين، ولا تشكل مشاهدات المقترضين والمدخرين والمحفظة اتجاهًا واحدًا موحدًا.",
     "verification_bindings": {
       "claim_ids": [
         "CLM-054",
@@ -398,41 +433,47 @@
       "resolution_rule": "Direct SRC-* identifiers resolve in the source register. Other dependency identifiers resolve through the bound claim/evidence record in the workbook; the implementation must not convert them into invented URLs or sources."
     },
     "domain_surface_routes": [
-      "/finance/"
-    ],
-    "domain_context_routes": [
+      "/finance/",
       "/providers/"
-    ]
+    ],
+    "related_readings": [
+      "CWR-002",
+      "CWR-003"
+    ],
+    "measurement_bindings": [],
+    "evidence_period_en": "Borrower, saver and portfolio observations for end-2015, end-2020 and 2023 · licensed-bank list checked on 7 September 2026",
+    "evidence_period_ar": "مشاهدات المقترضين والمدخرين والمحافظ لنهاية 2015 ونهاية 2020 وعام 2023 · قائمة البنوك المرخصة كما رُوجعت في 7 سبتمبر 2026",
+    "last_reviewed": "2026-09-26",
+    "featured": null
   },
   {
     "reading_id": "CWR-007",
     "slug": "gender-gap-measured-causes-open",
     "route": "/readings/gender-gap-measured-causes-open/",
-    "title_en": "A gender gap is measured. Its causes are not.",
-    "title_ar": "الفجوة بين النساء والرجال مقيسة، أما أسبابها فلم تُقَس",
+    "title_en": "The gender gap is measured. Its explanation is still open.",
+    "title_ar": "الفجوة بين النساء والرجال مقاسة. أما تفسيرها فما يزال مفتوحًا.",
     "question_en": "What do we know about the gender gap in account ownership, and what would it take to explain it?",
     "question_ar": "ماذا نعرف عن فجوة امتلاك الحساب بين النساء والرجال، وما الذي يلزم لتفسيرها؟",
-    "thesis_en": "Within the same Findex observation (the 2021 wave, with Yemen fieldwork in 2022–23), 5.44% of women and 18.35% of men had an account — a difference of 12.91 percentage points. That is a measured disparity. Documentation, phone access, income, work, distance, trust, household dynamics and product design are plausible mechanisms for investigation; the measured gap does not establish any of them as causes.",
-    "thesis_ar": "ضمن مشاهدة Findex نفسها (موجة 2021، التي نُفذ عملها الميداني في اليمن خلال 2022–2023)، كان لدى 5.44% من النساء و18.35% من الرجال حساب، بفارق 12.91 نقطة مئوية. هذه فجوة مقاسة. أما الوثائق والهاتف والدخل والعمل والمسافة والثقة وديناميات الأسرة وتصميم المنتج فهي آليات محتملة للبحث؛ ولا تثبت الفجوة المقاسة أيًا منها بوصفه سببًا.",
+    "thesis_en": "The latest Findex observation shows a large gap between women’s and men’s account ownership inside a system where few adults of either sex have an account. The evidence tells us where the disparity is. It does not yet tell us which barriers produce it.",
+    "thesis_ar": "يُظهر أحدث قياس من مسح Findex فجوة كبيرة بين النساء والرجال في امتلاك الحساب، داخل منظومة لا يملك فيها حسابًا إلا قليل من البالغين من الجنسين. تخبرنا الأدلة أين يقع التفاوت، لكنها لا تخبرنا بعدُ أي العوائق تنتجه.",
     "claim_bindings": [
       "CLM-002",
       "CLM-001",
-      "CLM-025"
+      "CLM-025",
+      "VIS-FINDEX-GAPS"
     ],
     "evidence_bindings": [
       "CLM-002",
-      "VIS-FINDEX-GAPS",
       "CLM-001",
-      "CLM-025"
+      "CLM-025",
+      "VIS-FINDEX-GAPS"
     ],
     "source_bindings": [
       "DA-001",
       "EP-FINDEX-2022-ACCOUNT"
     ],
     "visual_bindings": [
-      "RV-CWR-007",
-      "VIS-FINDEX-GAPS",
-      "VIS-MECHANISM-METRIC-BRIDGE"
+      "RV-CWR-007"
     ],
     "audiences": [
       "Government",
@@ -460,28 +501,43 @@
     "domain_surface_routes": [
       "/people/"
     ],
-    "domain_context_routes": []
+    "related_readings": [
+      "CWR-005",
+      "CWR-004"
+    ],
+    "measurement_bindings": [
+      "MA-003"
+    ],
+    "evidence_period_en": "Global Findex, Yemen fieldwork 7 November 2022 – 9 January 2023",
+    "evidence_period_ar": "مسح Findex العالمي، العمل الميداني في اليمن 7 نوفمبر 2022 – 9 يناير 2023",
+    "last_reviewed": "2026-09-26",
+    "featured": null
   },
   {
     "reading_id": "CWR-008",
     "slug": "finance-constraint-different-questions",
     "route": "/readings/finance-constraint-different-questions/",
-    "title_en": "Finance can be a serious constraint without being the most frequently named business challenge",
-    "title_ar": "قد يكون التمويل قيدًا شديدًا من دون أن يكون التحدي الأكثر ذكرًا لدى المنشآت",
-    "question_en": "How can access to finance be reported by 22% as a business challenge while finance severity is very high in a different question?",
-    "question_ar": "كيف تذكر 22% من المنشآت في مسح المحافظات السبع (2022) التمويلَ بين تحديات الأعمال، بينما تظهر شدة عالية لقيد التمويل في سؤال آخر؟",
-    "thesis_en": "The 22% general-challenge share and the finance-severity result answer different questions with different denominators. The Small and Micro Enterprise Promotion Service (SMEPS) adds a third lens: a source-reported programme KPI for supported MSMEs, not a representative national rate. The apparent contradictions disappear only when question, universe and denominator travel with each number.",
-    "thesis_ar": "تجيب نسبة 22% ونتيجة شدة التمويل عن سؤالين مختلفين وبقاعدتي احتساب مختلفتين. وتضيف وكالة تنمية المنشآت الصغيرة والأصغر (SMEPS) عدسة ثالثة: مؤشر أداء برامجي كما أوردته الوكالة عن المنشآت الأصغر والصغيرة والمتوسطة التي دعمتها، لا معدلًا وطنيًا ممثلًا. ولا يزول التناقض الظاهري إلا عندما ترافق كل قيمة صياغةُ السؤال والمجتمعُ الذي ينطبق عليه الرقم وقاعدةُ الاحتساب.",
+    "title_en": "How can 22% and 91.84% both be right?",
+    "title_ar": "كيف تكون 22% و91.84% صحيحتين معًا؟",
+    "question_en": "In a 2022 survey of formal firms in seven governorates, how can 22% name access to finance as a business challenge while 91.84% of a filtered group rate it a major or moderate obstacle?",
+    "question_ar": "في مسح أُجري عام 2022 للمنشآت الرسمية في سبع محافظات، كيف تذكر 22% منها الوصول إلى التمويل ضمن تحديات أعمالها، بينما تصفه 91.84% من مجموعة مصفّاة بأنه عائق كبير أو متوسط؟",
+    "thesis_en": "A 2022 survey of formal firms in seven selected governorates can tell us that finance was named less often than electricity or fuel, and also that finance was a severe obstacle for a narrower group of firms. The numbers do not contradict each other. They answer different questions.",
+    "thesis_ar": "يمكن لمسح أُجري عام 2022 للمنشآت الرسمية في سبع محافظات مختارة أن يخبرنا بأن التمويل ذُكر أقل من الكهرباء والوقود ضمن تحديات الأعمال، وأنه كان في الوقت نفسه عائقًا شديدًا لدى مجموعة أضيق من المنشآت. لا يتناقض الرقمان؛ فكل منهما يجيب عن سؤال مختلف.",
     "claim_bindings": [
       "CLM-005",
       "CLM-006",
-      "CLM-060"
+      "CLM-060",
+      "CLM-062",
+      "VIS-FIRM-CONSTRAINTS",
+      "VIS-FIRM-FINANCE-PATH"
     ],
     "evidence_bindings": [
       "CLM-005",
       "CLM-006",
       "CLM-060",
-      "VIS-FIRM-CONSTRAINTS"
+      "CLM-062",
+      "VIS-FIRM-CONSTRAINTS",
+      "VIS-FIRM-FINANCE-PATH"
     ],
     "source_bindings": [
       "INS-004",
@@ -490,10 +546,7 @@
       "EP-SMEPS-FINACCESS-KPI"
     ],
     "visual_bindings": [
-      "RV-CWR-008",
-      "VIS-FIRM-CONSTRAINTS",
-      "VIS-FIRM-FINANCE-SEVERITY",
-      "VIS-TARGET-RESULT-STATE"
+      "RV-CWR-008"
     ],
     "audiences": [
       "Government",
@@ -509,7 +562,9 @@
         "CLM-005",
         "CLM-006",
         "CLM-060",
-        "VIS-FIRM-CONSTRAINTS"
+        "VIS-FIRM-CONSTRAINTS",
+        "CLM-062",
+        "VIS-FIRM-FINANCE-PATH"
       ],
       "direct_source_ids": [],
       "dependency_ids": [
@@ -523,20 +578,28 @@
     "domain_surface_routes": [
       "/firms/"
     ],
-    "domain_context_routes": [
-      "/finance/"
-    ]
+    "related_readings": [
+      "CWR-003",
+      "CWR-006"
+    ],
+    "measurement_bindings": [
+      "MA-004"
+    ],
+    "evidence_period_en": "World Bank custom enterprise survey, September 2022, seven governorates · SMEPS programme report for 2024",
+    "evidence_period_ar": "مسح مخصص للمنشآت أجراه البنك الدولي في سبتمبر 2022 في سبع محافظات · تقرير وكالة تنمية المنشآت الصغيرة والأصغر لعام 2024",
+    "last_reviewed": "2026-09-26",
+    "featured": null
   },
   {
     "reading_id": "CWR-009",
     "slug": "from-rail-to-result-missing-middle",
     "route": "/readings/from-rail-to-result-missing-middle/",
-    "title_en": "From rail to result: the missing middle matters",
-    "title_ar": "من البنية إلى النتيجة: الحلقات الوسطى مهمة",
+    "title_en": "When does a payment reform become financial inclusion?",
+    "title_ar": "متى يصبح إصلاح المدفوعات تحسنًا في الشمول المالي؟",
     "question_en": "When a new rail, regulation or programme exists, what evidence would show that it changed financial inclusion?",
     "question_ar": "عندما توجد بنية دفع أو قاعدة تنظيمية أو برنامج جديد، ما الدليل الذي من شأنه أن يُظهر أنه غيّر الشمول المالي؟",
-    "thesis_en": "Infrastructure and reform evidence can establish rules, systems, implementation and activity. Inclusion requires additional evidence on access, use, quality and outcomes. Where the middle links are unmeasured, the evidence chain remains incomplete rather than established.",
-    "thesis_ar": "يمكن لأدلة البنية والإصلاح أن تثبت وجود القاعدة التنظيمية أو النظام أو التنفيذ أو النشاط. أما الشمول فيحتاج إلى دليل إضافي على الوصول والاستخدام والجودة والنتائج. وعندما لا تُقاس الحلقات الوسطى تبقى سلسلة الدليل غير مكتملة بدل اعتبارها مثبتة.",
+    "thesis_en": "A rule can be issued, infrastructure can expand, institutions can be created and transactions can appear while evidence on reach, repeated use, service quality, protection and outcomes remains incomplete. The question is how far a reform’s effects can actually be traced.",
+    "thesis_ar": "قد تصدر قاعدة جديدة، وتتوسع البنية التحتية، وتنشأ مؤسسات، وتظهر معاملات، بينما يظل ما نعرفه عن الوصول الفعلي والاستخدام المتكرر وجودة الخدمة والحماية والنتائج ناقصًا. والسؤال هو: إلى أي مدى نستطيع أن نتتبع آثار الإصلاح فعلًا؟",
     "claim_bindings": [
       "CLM-003",
       "CLM-004",
@@ -554,10 +617,7 @@
       "EP-CBY-PAY-INSTITUTIONAL-2026"
     ],
     "visual_bindings": [
-      "RV-CWR-009",
-      "VIS-PAYMENT-RAILS",
-      "VIS-TARGET-RESULT-STATE",
-      "VIS-INCLUSION-TRANSMISSION"
+      "RV-CWR-009"
     ],
     "audiences": [
       "CBY",
@@ -585,21 +645,30 @@
     },
     "domain_surface_routes": [
       "/payments/",
-      "/access/",
       "/reforms/"
     ],
-    "domain_context_routes": []
+    "related_readings": [
+      "CWR-004",
+      "CWR-010"
+    ],
+    "measurement_bindings": [
+      "MA-010"
+    ],
+    "evidence_period_en": "POS counts March 2025 – January 2026 · institutional records June–August 2026 · project results framework January 2025",
+    "evidence_period_ar": "أعداد نقاط البيع مارس 2025 – يناير 2026 · سجلات مؤسسية يونيو–أغسطس 2026 · إطار نتائج المشروع يناير 2025",
+    "last_reviewed": "2026-09-26",
+    "featured": null
   },
   {
     "reading_id": "CWR-010",
     "slug": "after-transfer-persistence",
     "route": "/readings/after-transfer-persistence/",
-    "title_en": "After the transfer, the missing metric is persistence",
-    "title_ar": "بعد صرف التحويلات النقدية: المقياس المفقود هو الاستمرارية",
-    "question_en": "When does a successful cash or social payment become sustained financial use?",
-    "question_ar": "متى تتحول دفعة نقدية أو اجتماعية ناجحة إلى استخدام مالي مستمر؟",
-    "thesis_en": "Delivery, beneficiary reach, account/wallet exposure and successful payment can be measured without showing whether the recipient continues to use the financial service afterwards. The key missing evidence is whether use persists after the programme-driven transaction.",
-    "thesis_ar": "يمكن قياس التسليم والوصول إلى المستفيدين واتصال المستفيد بحساب أو محفظة إلكترونية ونجاح الدفع من دون أن يثبت ذلك استمرار استخدام المستفيد للخدمة المالية بعد ذلك. أما الدليل الأساسي المفقود فهو ما إذا كان الاستخدام يستمر بعد المعاملة المرتبطة بالبرنامج.",
+    "title_en": "The payment arrived. What happened next?",
+    "title_ar": "وصلت الدفعة. ماذا حدث بعدها؟",
+    "question_en": "When a cash transfer is paid into an account, what would show that the account became part of the recipient’s financial life?",
+    "question_ar": "حين تُدفع تحويلة نقدية إلى حساب، ما الذي يثبت أن الحساب أصبح جزءًا من الحياة المالية للمستفيد؟",
+    "thesis_en": "Material on Yemen’s digital-payment pilot describes transfers paid into fully functional accounts, with recipient choice, for 45,460 recipients. That is an important step in delivery. It is not yet evidence that the accounts stayed part of recipients’ financial lives after the payments.",
+    "thesis_ar": "تصف مواد تجربة الدفع الرقمي في اليمن دفع التحويلات إلى حسابات كاملة الوظائف، مع إتاحة الاختيار للمستفيدين، لصالح 45,460 مستفيدًا. وهذه خطوة مهمة في إيصال الدفعات، لكنها ليست بعدُ دليلًا على أن الحسابات بقيت جزءًا من الحياة المالية للمستفيدين بعد وصول الدفعات.",
     "claim_bindings": [
       "CLM-045"
     ],
@@ -611,8 +680,7 @@
       "SRC-WB-G2PX-YEM-UCT-2024-001"
     ],
     "visual_bindings": [
-      "RV-CWR-010",
-      "VIS-INCLUSION-TRANSMISSION"
+      "RV-CWR-010"
     ],
     "audiences": [
       "Government",
@@ -621,8 +689,8 @@
       "CBY",
       "banks/PSPs"
     ],
-    "prohibited_inference_en": "Beneficiaries, members of village savings and loan associations (VSLAs) and opened wallets or accounts are not durable active use unless follow-up shows continued use.",
-    "prohibited_inference_ar": "لا يُعد المستفيدون أو أعضاء مجموعات الادخار والإقراض أو المحافظ الإلكترونية والحسابات المفتوحة استخدامًا نشطًا مستدامًا من دون متابعة لاحقة.",
+    "prohibited_inference_en": "A delivered payment, a recipient count or an opened account is not durable active use unless follow-up shows continued use, and immediate cash-out is not by itself evidence of failure.",
+    "prohibited_inference_ar": "لا تُعد الدفعة التي وصلت، ولا عدد المستفيدين، ولا الحساب المفتوح استخدامًا نشطًا مستمرًا ما لم تُظهر المتابعة استمرار الاستخدام، ولا يُعد السحب النقدي الفوري في حد ذاته دليلًا على الفشل.",
     "verification_bindings": {
       "claim_ids": [
         "CLM-045"
@@ -635,10 +703,19 @@
       ],
       "resolution_rule": "Direct SRC-* identifiers resolve in the Source Library. Other dependency identifiers remain lineage/verification anchors and must never be converted into invented URLs or sources."
     },
-    "domain_surface_routes": [],
-    "domain_context_routes": [
-      "/people/",
-      "/payments/"
-    ]
+    "domain_surface_routes": [
+      "/reforms/"
+    ],
+    "related_readings": [
+      "CWR-005",
+      "CWR-009"
+    ],
+    "measurement_bindings": [
+      "MA-009"
+    ],
+    "evidence_period_en": "World Bank and G2Px material, May 2024 · reference period of the recipient figure not recorded",
+    "evidence_period_ar": "مواد البنك الدولي ومبادرة G2Px، مايو 2024 · الفترة المرجعية لعدد المستفيدين غير مسجلة",
+    "last_reviewed": "2026-09-26",
+    "featured": null
   }
 ]

@@ -1228,5 +1228,77 @@
     "label_en": "Return to the question",
     "label_ar": "عد إلى السؤال",
     "use_rule": "Tranche C TC-F (JRN-02)."
+  },
+  {
+    "ui_id": "UI-READING-EYEBROW",
+    "label_en": "Evidence Reading",
+    "label_ar": "قراءة أدلة",
+    "use_rule": "Eyebrow above a Reading title (Reading page, featured Reading)."
+  },
+  {
+    "ui_id": "UI-READING-EVIDENCE-PERIOD",
+    "label_en": "Evidence period",
+    "label_ar": "فترة الأدلة",
+    "use_rule": "Label of the Reading's governed evidence period (08 evidence_period)."
+  },
+  {
+    "ui_id": "UI-READING-LAST-REVIEWED",
+    "label_en": "Last reviewed",
+    "label_ar": "آخر مراجعة",
+    "use_rule": "Label of the Reading's governed review date (08 last_reviewed)."
+  },
+  {
+    "ui_id": "UI-READING-DO-NOT-INFER",
+    "label_en": "Do not infer",
+    "label_ar": "لا يُستنتج",
+    "use_rule": "Label of the Reading's governed prohibited inference (08)."
+  },
+  {
+    "ui_id": "UI-READING-TRACE-H",
+    "label_en": "Trace the evidence",
+    "label_ar": "تتبّع الأدلة",
+    "use_rule": "Heading of the Reading's evidence path, after 'What would change this reading?'."
+  },
+  {
+    "ui_id": "UI-READING-RELATED-H",
+    "label_en": "Related readings",
+    "label_ar": "قراءات ذات صلة",
+    "use_rule": "Heading of the one or two governed related Readings (08 related_readings)."
+  },
+  {
+    "ui_id": "UI-READING-FEATURED",
+    "label_en": "Featured Reading",
+    "label_ar": "قراءة مختارة",
+    "use_rule": "Label of the one governed featured Reading (08 featured) on Home, Explore and the Readings index."
+  },
+  {
+    "ui_id": "UI-READING-OPEN",
+    "label_en": "Read this Reading",
+    "label_ar": "اقرأ هذه القراءة",
+    "use_rule": "Link from the featured Reading to its page."
+  },
+  {
+    "ui_id": "UI-READING-ALL-H",
+    "label_en": "All Evidence Readings",
+    "label_ar": "كل قراءات الأدلة",
+    "use_rule": "Heading of the editorial list on the Readings index; link label to the index elsewhere."
+  },
+  {
+    "ui_id": "UI-EXPLORE-GO-DEEPER",
+    "label_en": "Go deeper",
+    "label_ar": "تعمّق في التحليل",
+    "use_rule": "Heading of the single Explore pointer to the featured Reading."
+  },
+  {
+    "ui_id": "UI-EVIDENCE-USED-IN-READINGS",
+    "label_en": "Used in these Evidence Readings",
+    "label_ar": "يُستخدم هذا الدليل في قراءات الأدلة الآتية",
+    "use_rule": "Evidence Record: the Readings whose evidence path includes this record (derived from 08)."
+  },
+  {
+    "ui_id": "UI-MEASUREMENT-EXAMINED-IN",
+    "label_en": "This gap is examined in",
+    "label_ar": "تناقش هذه الفجوة في",
+    "use_rule": "Measurement Agenda: the Readings bound to this priority (08 measurement_bindings)."
   }
 ]

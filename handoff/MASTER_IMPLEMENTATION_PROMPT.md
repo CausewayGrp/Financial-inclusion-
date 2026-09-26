@@ -54,7 +54,7 @@ The semantic/evidence source of truth is:
 
 Current handoff identity:
 
-`f0150122895d88169e9c9ec947633deda04a02c710a28d7b0de2972214547224`
+`caabff47f4ff9b036943b72f775260197a59dbc3e00cdc4b629bed65f5b4bfc6`
 
 The controlled implementation projection is:
 
@@ -62,7 +62,7 @@ The controlled implementation projection is:
 
 Current handoff identity:
 
-`bd010a2053898a971944ba63ab3276aeb455428069813097dbc8a07037c88295`
+`f7edca09185b89378a946c1195c37d6e99d35b2689df7f0ff646c74aeb550e0f`
 
 Presentation depth/order is supplied by:
 
