@@ -1,6 +1,6 @@
 # Visual design contract — how Design uses the governed visuals
 
-**Status:** DRAFT input to the Design handoff. It is not DESIGN HANDOFF READY and awaits independent acceptance.
+**Status:** part of the R8.6 Design handoff (start at `handoff/README_FIRST.md`). Tier counts are in `tier_counts` of the JSON; the tier of every visual is also listed in `handoff/ROUTE_CONTENT_AND_STATE_INVENTORY.json`.
 
 **Single source.** `site-src/content/visuals/visual_design_contracts.json` is DERIVED by the projection generator. It is
 built from the Production Master and the controlled input `scripts/projection/controlled_inputs/visual_design_contract.json`.
@@ -34,11 +34,13 @@ SIGNATURE and CORE_ANALYTICAL visuals also carry a **data contract**:
 
 | Tier | What Design does |
 |---|---|
-| SIGNATURE (3) | Design these first: RV-CWR-001, RV-CWR-009 and VIS-PROVIDER-OBSERVABILITY. |
-| CORE_ANALYTICAL (12) | Draw them in standard forms, using the grammar below. The three POS visuals form one small multiple. |
-| SUPPORTING (12) | Optional. Until one is drawn, its governed text alternative is its complete content. |
-| TABLE_TEXT_FIRST (8) | Do not draw a chart; render the governed ordered text or table. Each entry states its promotion condition. |
-| RETIRE_FROM_DESIGN (1) | Do not draw VIS-CAPITAL-CONTEXT; its data are governed as context only. |
+| SIGNATURE | Design these first: RV-CWR-001, RV-CWR-009 and VIS-PROVIDER-OBSERVABILITY. |
+| CORE_ANALYTICAL | Draw them in standard forms, using the grammar below. The three POS visuals form one small multiple. |
+| SUPPORTING | Optional. Until one is drawn, its governed text alternative is its complete content. |
+| TABLE_TEXT_FIRST | Do not draw a chart; render the governed ordered text or table. Each entry states its promotion condition. |
+| RETIRE_FROM_DESIGN | Do not draw VIS-CAPITAL-CONTEXT; its data are governed as context only. |
+
+Counts per tier change when the Master changes; read `tier_counts`.
 
 ## 3. Rules that are not negotiable
 

@@ -1,99 +1,58 @@
-# Design → Code Contract
+# Design → Code contract
 
-## Purpose
+Claude Design owns visual and interaction decisions. Claude Code owns implementation decisions. Neither owns semantic
+truth, which stays in the Production Master. This contract says what Design must record — continuously, in
+`design/09_CODE_HANDOFF.md` and the files it references — so that Code never has to infer a decision.
 
-Claude Design owns **visual and interaction decisions**. Claude Code owns **implementation decisions**. Neither owns semantic truth.
+## 1. Every component answers
 
-## The handoff is complete only when each component/page family answers
+- Which governed inputs does it consume (Page Spec field, projection file and key, `UI-*` label IDs)? Which are
+  required, conditional or not applicable, and what renders when a conditional field is absent?
+- What are its states: default, hover, focus, active, visited, loading, empty, error (technical), evidence-gap (not an
+  error), disabled, expanded/collapsed, selected?
+- What happens at 320, 390, 640 and 1440 CSS px and at 400 % zoom?
+- What changes between Arabic RTL and English LTR (order, alignment, isolation, icons, chart direction)?
+- What is its keyboard order, focus entry and return, accessible name and description, role and announcements?
+- What survives when colour is removed, when images do not load, and in forced-colours mode?
+- For quantitative meaning: what is the table or ordered-text fallback?
+- Which source, citation or verification affordance must it expose?
+- Which limitation must stay visible and may never move into a disclosure?
 
-- What controlled data/copy inputs does it consume?
-- Which fields are required, conditional or not applicable?
-- What are the default, hover, focus, active, loading, empty, error, disabled and expanded states where relevant?
-- What happens at 320, 390/400, 640 and 1440 widths?
-- What changes between Arabic RTL and English LTR?
-- What is keyboard order and focus-return behavior?
-- What is the accessible name/description and structural role?
-- What survives when colour disappears?
-- What survives when an image cannot be seen?
-- What is the table/text fallback for quantitative meaning?
-- What source/citation/verification affordance is required?
-- Which evidence limitation must remain visible and cannot be collapsed into disclosure?
+## 2. Every page family answers
 
-## No screenshot inference
+Module order and composition rules (deterministic, from the Page Spec), the first-screen contract, what may be disclosed
+later (`site-src/content/presentation_priority.json`), next actions (`route_next_actions`), breadcrumbs and head
+metadata. All 11 families; every route bound through them (`handoff/ROUTE_CONTENT_AND_STATE_INVENTORY.json`).
 
-A screenshot may illustrate a decision; it cannot be the decision. Claude Code must not have to estimate spacing, infer hidden states, guess mobile order or invent Arabic behavior from a desktop image.
+## 3. Required mapping in `design/09_CODE_HANDOFF.md`
 
-## Required implementation mapping
+| Map | Content |
+|---|---|
+| Tokens | Every token in `design/02_TOKENS.json` → its use; language-specific type scales; breakpoints |
+| Components | Component → governed inputs → states → tokens → accessibility behaviour → tests that cover it |
+| Routes | Route pattern → page family → component sequence → data bindings |
+| Content bindings | Field path in the projection → where it renders → formatting rule (dates, numbers, bidi isolation) |
+| Visual contracts | Visual ID → tier → form → data-contract rows → grammar states → labels → fallback → detached frame |
+| Responsive rules | Per family and component, with the Arabic variants |
+| Accessibility | WCAG 2.2 outcome → how each component meets it → how it is tested |
+| Tools | Search, Compare, sources, Cite, report, language, download: states, URL contracts, errors |
+| Assets | Logo placements and derivative sizes, fonts and subsets, icons, social-image templates |
+| Exceptions | Every place where the design departs from a default, with the reason |
 
-`design/09_CODE_HANDOFF.md` must map each design component to:
+## 4. Rules
 
-- controlled content fields in `page_specs.json` or named local payloads;
-- route/page-family use;
-- design token names;
-- accessibility requirements;
-- interaction behavior;
-- acceptance tests.
+- **No screenshot inference.** An image may illustrate a decision; it cannot be the decision. Code never estimates
+  spacing, guesses hidden states, infers mobile order or invents Arabic behaviour.
+- **Content immutability.** Design may propose presentation; it may not change public wording or values. A needed label or
+  field is `NEEDS_CONTROLLED_CONTENT`; a wrong one is `ESCALATE_TO_MASTER` (both in `design/ESCALATIONS.md`).
+- **One runtime.** Parity work may use a branch; the repository ends with one production renderer.
+- **Local-first.** No tool may need a network call; tool state that changes what is viewed is URL-addressable.
+- **Technical ≠ evidence.** A technical failure never looks like missing or zero evidence, and an evidence gap never
+  looks like a failure.
+- **Strict-CSP output.** No inline executable script or style; data in JSON blocks; escaped rendering.
 
-## Content immutability
+## 5. Acceptance
 
-Design may propose presentation edits. It may not change public evidence wording or values. Any proposed copy/content change is an escalation to the Production Master workflow.
-
-## Single-runtime rule
-
-Claude Code may use a temporary branch/worktree for parity work, but the final repository must contain one active public runtime. Do not leave the accepted legacy renderer and a new React renderer as two competing production implementations.
-
-## R6 page-family and tool architecture
-
-The production design is one system with **11 page families**, not one bespoke composition per route. Claude Design must prove the system first on hard states, then bind all routes through reusable family rules.
-
-### Page-level first-screen contract
-
-Before secondary content, every reader-facing page must establish:
-
-1. **what job this page solves;**
-2. **the strongest supported answer or orientation;**
-3. **the evidence clock/scope where a number or state could be misread;**
-4. **a material limitation when it changes interpretation;**
-5. **the primary next action** — explore deeper, verify, compare, inspect source, or report/correct.
-
-Progressive disclosure may hide density. It may **not** hide a limitation that changes the meaning of the headline claim.
-
-### Tool-state contract
-
-The design/code handoff must specify and implement these as first-class local tools:
-
-| Tool | Required first complete build | State rule |
-| --- | --- | --- |
-| Global search | Yes | local index; failure is technical-unavailable, never evidence-absence |
-| Evidence discovery/workbench | Yes | facets/search may be shareable in URL |
-| Compare | Yes | 2–4 evidence IDs encoded in URL; compatibility before values |
-| Source / Resource Library | Yes | source/category filtering; original-publisher outbound links |
-| Cite | Yes | governed citation + canonical route |
-| Language switch | Yes | preserve route/object/query/hash |
-| Correction path | Yes | preserve originating route/evidence/source ID |
-| Analytics | No | disabled/no-op by default |
-| Remote data/API | No | absent by default; later adapter only |
-
-### Hard-state acceptance
-
-Do not sign off a component because its default state looks good. At minimum prove:
-
-- dense demand-side evidence (`/people/`);
-- sparse/unknown geography (`/access/`);
-- institutional-state sequencing (`/payments/`);
-- revised/forecast-vintage evidence (`/remittances/`);
-- a dense/conflicted Evidence Record;
-- a sparse/no-source-expected Evidence Record;
-- unlike-record Compare;
-- the full Data/Source scale with the curated resource cards;
-- long-form Reading;
-- Measurement Agenda without policy-ranking semantics;
-- About/Trust plain-language use;
-- Arabic mobile at 320–400px.
-
-The machine-readable details live in `site-src/content/content/navigation_interaction.json`.
-
-### URL and deep-link invariants
-
-Search, source filtering and Compare may use query parameters. Any such state must survive a language switch where the equivalent object exists. Evidence and Reading routes remain stable canonical verification/synthesis URLs. Do not create a client-only state that cannot be reloaded or shared when it materially changes what the user is viewing.
-
+The contract is met when `handoff/DESIGN_ACCEPTANCE_CRITERIA.md` section J is complete with evidence, and a reader of
+`design/09_CODE_HANDOFF.md` can implement any component, page family or tool without opening a chat, a screenshot or an
+external design file.

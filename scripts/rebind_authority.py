@@ -23,8 +23,9 @@ from collections import OrderedDict
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 C = os.path.join(ROOT, "site-src", "content")
-RECIPIENT = ["README.md", "OPENAI_REENTRY_CHECKPOINT.md", "handoff/README_FIRST.md", "handoff/MASTER_IMPLEMENTATION_PROMPT.md", "handoff/CLAUDE_DESIGN_MASTER_PROMPT.md",
-             "handoff/CLAUDE_CODE_MASTER_PROMPT.md", "handoff/HANDOFF_ACCEPTANCE_CHECKLIST.md"]
+RECIPIENT = ["README.md", "OPENAI_REENTRY_CHECKPOINT.md", "handoff/README_FIRST.md", "handoff/CLAUDE_DESIGN_MASTER_PROMPT.md",
+             "handoff/CLAUDE_CODE_MASTER_PROMPT.md", "handoff/DESIGN_ACCEPTANCE_CRITERIA.md", "handoff/ENGINEERING_HANDOFF_EXPECTATIONS.md",
+             "handoff/DESIGN_TO_CODE_CONTRACT.md"]
 SYNC_STATE = "EXTERNAL_REPOSITORY_SYNC_PENDING"
 
 

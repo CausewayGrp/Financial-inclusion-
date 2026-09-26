@@ -1,6 +1,6 @@
 {
   "schema_version": "1.0",
-  "role": "design-starting-baseline-not-semantic-authority",
+  "role": "design-starting-hypothesis-not-a-constraint",
   "brand_asset": "site-src/assets/CauseWay_Master_Logo.png",
   "color_tokens": {
     "ink": "#082D4F",
@@ -63,7 +63,7 @@
     "focus_visible_required": true,
     "reduced_motion_required": true
   },
-  "design_instruction": "Use these as the controlled starting language. Claude Design owns visual refinement, but must preserve CauseWay identity, accessibility, semantic boundaries and bilingual parity. Any token change must be documented in the design package and must not change product meaning.",
+  "design_instruction": "Starting hypotheses only. Claude Design owns the final token system (design/02_TOKENS.json) and may replace any value here with a documented system that keeps the CauseWay identity, meets the contrast and accessibility outcomes, and works equally in Arabic and English. The logo file and the IBM Plex family requirement are not tokens and are not negotiable here (handoff/README_FIRST.md §5).",
   "spacing_scale_px": [
     4,
     8,

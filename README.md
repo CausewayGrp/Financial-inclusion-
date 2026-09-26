@@ -14,11 +14,11 @@ controlled-product-state and publication-state authority; everything else here i
 
 | | |
 |---|---|
-| **Position** | **PUBLIC CORPUS ACCEPTED — R8.6 IN PROGRESS** (final integration programme: F0–F7 closed; F8–F9 open) |
+| **Position** | **R8.6 FREEZE CANDIDATE — PENDING FINAL CLEAN-ROOM ACCEPTANCE** (final integration programme: F0–F8 closed; F9 open) |
 | **Not declared** | Not DESIGN HANDOFF READY · not PUBLIC RELEASE READY |
-| **Waiting on** | Nothing external. OpenAI accepted Tranche C (recipient verification 31/31) and supplied the ten-Reading package; sessions F8–F9 of directive [D7](audit/directives/D7_FINAL_INTEGRATION_TO_DESIGN_HANDOFF_2026-09-26.md) are in progress |
+| **Waiting on** | Nothing external. The handoff is frozen ([F8 closure](audit/R8_6_DESIGN_HANDOFF_FREEZE_CLOSURE.md)); session F9 of directive [D7](audit/directives/D7_FINAL_INTEGRATION_TO_DESIGN_HANDOFF_2026-09-26.md) — the clean-room acceptance — is next |
 | **Reviewed checkpoint** | Tag [`checkpoint/tranche-c-complete-reading-hold`](../../tree/checkpoint/tranche-c-complete-reading-hold): tree byte-identical to the review ZIP `…TRANCHE_C_COMPLETE_READING_HOLD.zip` (SHA-256 `63612dea…`) |
-| **Since that checkpoint** | F2 the ten Evidence Readings ([adjudication](audit/READING_PORTFOLIO_FINAL_ADJUDICATION.md)); F3 five Resource Library decisions ([record](audit/F3_RESOURCE_DECISIONS.md)); F4 R8.5 repository subtraction ([closure](audit/R8_5_REPOSITORY_SUBTRACTION_CLOSURE.md)); F5 whole public corpus acceptance ([record](audit/F5_PUBLIC_CORPUS_ACCEPTANCE.md), [findings ledger](audit/F5_CORPUS_FINDINGS_LEDGER.csv)); F6 discovery, accessibility, rights and security ([record](audit/F6_DISCOVERY_ACCESSIBILITY_RIGHTS_SECURITY_ACCEPTANCE.md)); F7 sustainability baseline ([method](docs/SUSTAINABILITY_METHOD.md), [baseline](audit/SUSTAINABILITY_PRE_DESIGN_BASELINE.json)). Every English/Arabic page pair prints the same numbers |
+| **Since that checkpoint** | F2 the ten Evidence Readings ([adjudication](audit/READING_PORTFOLIO_FINAL_ADJUDICATION.md)); F3 five Resource Library decisions ([record](audit/F3_RESOURCE_DECISIONS.md)); F4 R8.5 repository subtraction ([closure](audit/R8_5_REPOSITORY_SUBTRACTION_CLOSURE.md)); F5 whole public corpus acceptance ([record](audit/F5_PUBLIC_CORPUS_ACCEPTANCE.md), [findings ledger](audit/F5_CORPUS_FINDINGS_LEDGER.csv)); F6 discovery, accessibility, rights and security ([record](audit/F6_DISCOVERY_ACCESSIBILITY_RIGHTS_SECURITY_ACCEPTANCE.md)); F7 sustainability baseline ([method](docs/SUSTAINABILITY_METHOD.md), [baseline](audit/SUSTAINABILITY_PRE_DESIGN_BASELINE.json)); F8 handoff freeze — one start file, one Design prompt, route/content/state inventory, acceptance criteria ([closure](audit/R8_6_DESIGN_HANDOFF_FREEZE_CLOSURE.md)). Every English/Arabic page pair prints the same numbers |
 | **Production Master** | `authority/Yemen_Financial_Inclusion_Evidence_Master.xlsx` · SHA-256 `ed3c5796cb0cca0109a0eb56f66d344ab0a5faa550e5235e05d65a6147f33fe1` |
 | **Page Specs** | `site-src/content/page_specs.json` · SHA-256 `2407cb4f9ca67aec60304630690488d04a3b05f9ea1eec03f805de24915cb3ad` |
 | **Currentness cut-off** | 26 September 2026 ([`audit/FINAL_CURRENTNESS_CUTOFF.md`](audit/FINAL_CURRENTNESS_CUTOFF.md)) |
@@ -114,23 +114,34 @@ Master; the validator checks every figure below against it. Counts are an invent
 | F5 | Whole public corpus acceptance: every public text reviewed in Arabic, English and parity; 667 findings decided | CLOSED | [`audit/F5_PUBLIC_CORPUS_ACCEPTANCE.md`](audit/F5_PUBLIC_CORPUS_ACCEPTANCE.md) |
 | F6 | Discovery (canonical, hreflang, robots, sitemap, structured data), accessibility contract, rights, security and privacy gates | CLOSED | [`audit/F6_…`](audit/F6_DISCOVERY_ACCESSIBILITY_RIGHTS_SECURITY_ACCEPTANCE.md) |
 | F7 | Sustainability baseline of the reference build (bytes, requests, cold and warm) and a non-public stewardship note | CLOSED | [`docs/SUSTAINABILITY_METHOD.md`](docs/SUSTAINABILITY_METHOD.md) |
-| F8–F9 · R8.6 | Handoff freeze; clean-room acceptance | In progress | [D7](audit/directives/D7_FINAL_INTEGRATION_TO_DESIGN_HANDOFF_2026-09-26.md) |
+| F8 · R8.6 | Handoff freeze: one start file, one Design prompt, one logo authority, route/content/state inventory, acceptance criteria, Design→Code contract, open-items register | CLOSED — FREEZE CANDIDATE | [`audit/R8_6_…`](audit/R8_6_DESIGN_HANDOFF_FREEZE_CLOSURE.md) |
+| F9 · R8.6 | Clean-room acceptance by a cold recipient; final ZIP | Next | [D7](audit/directives/D7_FINAL_INTEGRATION_TO_DESIGN_HANDOFF_2026-09-26.md) |
 
-**Open items** (full list in [the checkpoint §4](OPENAI_REENTRY_CHECKPOINT.md#4-open-items-carried-forward-not-defects-of-this-state)):
-- **Evidence checks deferred in F5 (source to be read, text unchanged):** the date oil exports stopped (YSC-008), the unit
-  of two IMF prudential ratios (YSC-014), the date of Governor's Decision No. 10 of 2026.
-- **Release-only:** web-size logo derivatives (TOOL-02), navigation-group presentation (TOOL-25, Design-owned), CauseWay
-  identity and funding statement (TRUST-09, owner input), confirmation that the contact mailbox is monitored, the public
-  origin (`site-src/deployment.json`; until set the build is not for indexing), security headers at the host.
-- **Evidence frontiers kept explicit, never filled:** the withheld residual-model value (CLM-044), the ~147-firm base
+**Open items** (every item, classed and owned, in [`FINAL_OPEN_ITEMS_REGISTER.md`](FINAL_OPEN_ITEMS_REGISTER.md); **zero DESIGN_BLOCKER**):
+- **Engineering after Design (10):** the production runtime, the WCAG 2.2 audit of the implemented site, web-size logo
+  derivatives (owner-approved; the master file is never changed), no CSS recolouring of the logo, the Method & Measurement
+  navigation group, Compare entry from a record and mobile Compare, a source-type filter on the governed field,
+  self-hosted IBM Plex, social images, re-measured page weight.
+- **Release only (4):** security headers at the host, source reuse rights, optional native Arabic certification, named
+  release acceptance.
+- **External evidence dependencies (11):** sources not yet read in the original — among them IMF Country Report 26/80
+  (four chronology facts), the date of Decision No. 10 of 2026, the entity names in Decision No. 18 of 2026, the OECD
+  2026 figures and the SFD/SMED primary. The public text stays unchanged until each is read.
+- **Known evidence frontiers (8), stated on the pages and never filled:** the withheld CLM-044 value, the ~147-firm base
   behind the 91.84% table, the CBY-Aden ↔ IMF remittance crosswalk, the causes of the gender gap, reconciled current
-  operating-provider status, the size of the 2022 banking restatement.
+  operating-provider status, the size of the 2022 banking restatement, composite records without listed members, one
+  deferred sub-national series.
+- **Owner input (7):** CauseWay identity and funding statement, contact-mailbox confirmation, the public origin, a content
+  licence (gates downloads), stewardship decisions, a reversed logo if Design needs one, the `/remittances/` Measurement
+  card (OWN-07).
 
 ## Where to find everything
 
 | Question | Where |
 |---|---|
 | What is current? | This file, [`OPENAI_REENTRY_CHECKPOINT.md`](OPENAI_REENTRY_CHECKPOINT.md), [`authority/YFI_CURRENT_PROJECT_CONTEXT.json`](authority/YFI_CURRENT_PROJECT_CONTEXT.json) |
+| What is still open, and who owns it? | [`FINAL_OPEN_ITEMS_REGISTER.md`](FINAL_OPEN_ITEMS_REGISTER.md) |
+| Where does Claude Design start? | [`handoff/README_FIRST.md`](handoff/README_FIRST.md) — one file, one reading order |
 | What changed, when and why? | `git log`; [`docs/CHANGELOG.md`](docs/CHANGELOG.md) |
 | Which cells of the Master changed? | Per transaction: `audit/<stage>/runs/<TX>_MASTER_LEDGER.json` (cell level) and `<TX>_RUN_REPORT.json` (gates); also the commit trailers |
 | Every finding and its disposition | [`audit/F5_CORPUS_FINDINGS_LEDGER.csv`](audit/F5_CORPUS_FINDINGS_LEDGER.csv) (public corpus); [`audit/TRANCHE_C_FINDINGS_LEDGER.csv`](audit/TRANCHE_C_FINDINGS_LEDGER.csv); earlier [`audit/pre_tranche_c/FINDINGS_LEDGER.csv`](audit/pre_tranche_c/FINDINGS_LEDGER.csv) |
@@ -156,7 +167,7 @@ git diff --stat checkpoint/tranche-c-complete-reading-hold -- authority site-src
 | [`scripts/`](scripts/) | Generator, build, literal audit, validator, rebind, checksums, tests | Directly, with the gates |
 | `dist/` | The generated public site, committed so every public change is reviewable | `scripts/build.py` only |
 | [`design/architecture/`](design/architecture/) | Diagrams derived from the navigation contract and inventory | `scripts/architecture_diagrams.py` |
-| [`handoff/`](handoff/) | Design → Code recipient package, DRAFT until R8.6 — do not execute | The programme only |
+| [`handoff/`](handoff/) | Design → Code recipient package, frozen in F8; start at [`handoff/README_FIRST.md`](handoff/README_FIRST.md) and execute only when its first line reads DESIGN HANDOFF READY | The programme only |
 | [`audit/`](audit/) | Closures, ledgers, transaction scripts and run reports, directives | Append only; history is not rewritten |
 | [`docs/`](docs/) | Changelog, deployment, repository protocol; S00–S06 records are lineage | Directly |
 | [`.github/`](.github/) | CI (`verify.yml`), checkpoint packaging (`checkpoint.yml`), Dependabot, PR template | Directly |

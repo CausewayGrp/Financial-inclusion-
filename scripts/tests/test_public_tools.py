@@ -4,7 +4,7 @@
   python3 scripts/tests/test_public_tools.py            (after scripts/build.py; needs Python Playwright + Chromium)
 
 Serves dist/ on a local port and drives the pages in headless Chromium. Each test states the contract it protects
-(handoff/STATIC_RUNTIME_AND_API_CONTRACT.md; site-src/content/content/navigation_interaction.json 'tools').
+(handoff/ENGINEERING_HANDOFF_EXPECTATIONS.md; site-src/content/content/navigation_interaction.json "interaction_tools").
 Exit code 0 = all tests pass; 1 = a behaviour regressed; 2 = the browser harness is unavailable.
 """
 import functools, http.server, json, os, socket, sys, threading, traceback

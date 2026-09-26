@@ -56,7 +56,7 @@ required_current=[
     ROOT/'authority/Yemen_Financial_Inclusion_Evidence_Master.xlsx',
     ROOT/'README.md',
     ROOT/'handoff/IMPLEMENTATION_MANIFEST.json',
-    ROOT/'handoff/MASTER_IMPLEMENTATION_PROMPT.md',
+    ROOT/'handoff/README_FIRST.md',
     ROOT/'handoff/CLAUDE_DESIGN_MASTER_PROMPT.md',
     ROOT/'handoff/CLAUDE_CODE_MASTER_PROMPT.md',
     ROOT/'design/architecture/README.md',
@@ -96,7 +96,7 @@ try:
 except Exception as e: errors.append('project Context unreadable '+str(e))
 
 # Claude Design -> Claude Code handoff remains non-authoritative and is draft until clean-room acceptance.
-handoff_required=['README_FIRST.md','CLAUDE_DESIGN_MASTER_PROMPT.md','DESIGN_STARTING_TOKENS.json','DESIGN_TO_CODE_CONTRACT.md','CLAUDE_CODE_MASTER_PROMPT.md','STATIC_RUNTIME_AND_API_CONTRACT.md','IMPLEMENTATION_MANIFEST.json','HANDOFF_ACCEPTANCE_CHECKLIST.md','MASTER_IMPLEMENTATION_PROMPT.md']
+handoff_required=['README_FIRST.md','CLAUDE_DESIGN_MASTER_PROMPT.md','ROUTE_CONTENT_AND_STATE_INVENTORY.json','DESIGN_ACCEPTANCE_CRITERIA.md','DESIGN_TO_CODE_CONTRACT.md','VISUAL_DESIGN_CONTRACT.md','ENGINEERING_HANDOFF_EXPECTATIONS.md','DESIGN_STARTING_TOKENS.json','IMPLEMENTATION_MANIFEST.json','CLAUDE_CODE_MASTER_PROMPT.md','SUPPORT_AND_PARTNERSHIP_READINESS.md']
 for name in handoff_required:
     if not (ROOT/'handoff'/name).exists(): errors.append('missing design/code handoff file '+name)
 try:
@@ -145,7 +145,7 @@ except Exception as e:
 # Recipient-facing authority hashes must not lag the current controlled state.
 try:
     allowed_hashes={str(master_sha),str(actual_page_specs_sha)}
-    recipient_hash_files=[ROOT/'README.md',ROOT/'handoff/README_FIRST.md',ROOT/'handoff/MASTER_IMPLEMENTATION_PROMPT.md',ROOT/'handoff/CLAUDE_DESIGN_MASTER_PROMPT.md',ROOT/'handoff/CLAUDE_CODE_MASTER_PROMPT.md',ROOT/'handoff/HANDOFF_ACCEPTANCE_CHECKLIST.md']
+    recipient_hash_files=[ROOT/'README.md',ROOT/'handoff/README_FIRST.md',ROOT/'handoff/CLAUDE_DESIGN_MASTER_PROMPT.md',ROOT/'handoff/CLAUDE_CODE_MASTER_PROMPT.md',ROOT/'handoff/DESIGN_ACCEPTANCE_CRITERIA.md',ROOT/'handoff/ENGINEERING_HANDOFF_EXPECTATIONS.md',ROOT/'handoff/DESIGN_TO_CODE_CONTRACT.md']
     for hp in recipient_hash_files:
         if not hp.exists(): continue
         htxt=hp.read_text(encoding='utf-8')
@@ -2050,7 +2050,8 @@ for _f in (C/'data').glob('*.json'):
     if 'Iyad' in _t or 'أياد السعدي' in _t: errors.append(f'TC-G05 personal name returned in {_f.name}')
 
 # F6 (directive D7) discovery, accessibility-support, rights, security and privacy gates — pre-Design, repository level.
-#  F6-G01 every localized page: one <title> and one meta description, unique per language; one <h1>; lang/dir match the path
+#  F6-G01 every localized page: one <title> and one meta description, unique per language; one <h1>; lang/dir match the path;
+#         Open Graph title, description, type and locale follow the page (no og:image until Design delivers it)
 #  F6-G02 self-canonical; reciprocal hreflang en/ar and x-default (the root entry route); the paired page exists
 #  F6-G03 robots.txt and sitemap follow site-src/deployment.json; a sitemap built for a test origin covers every page once
 #  F6-G04 structured data: parseable JSON-LD; WebSite only on Home, Article only on Readings, BreadcrumbList only where a
@@ -2086,6 +2087,11 @@ try:
             if len(re.findall(r'<h1[\s>]',_t))!=1: errors.append(f'F6-G01 {_rel}: not exactly one h1')
             if not _t.startswith(f'<!doctype html><html lang="{_L}" dir="{"rtl" if _L=="ar" else "ltr"}">'): errors.append(f'F6-G01 lang/dir {_rel}')
             if _DISC.head_links(_r,_L,_org) not in _hd: errors.append(f'F6-G02 canonical/hreflang contract broken {_rel}')
+            _og=dict(re.findall(r'<meta property="(og:[a-z:_]+)" content="([^"]*)">',_hd))
+            if len(_ti)==1 and len(_de)==1 and (not _ti[0].startswith(_og.get('og:title','\0')+' — ') or _og.get('og:description')!=_de[0]
+                                                or _og.get('og:locale')!=_DISC.OG_LOCALE[_L] or 'og:image' in _og or ('og:url' in _og)!=bool(_org)
+                                                or _og.get('og:type')!=('article' if str(_r).startswith('/readings/') and _r!='/readings/' else 'website')):
+                errors.append(f'F6-G01 social metadata does not follow the page title and description {_rel}')
             for _m in re.finditer(r'<script type="application/ld\+json">(.*?)</script>',_hd):
                 try: _o=json.loads(_m.group(1))
                 except Exception: errors.append(f'F6-G04 unparseable JSON-LD {_rel}'); continue
@@ -2146,6 +2152,61 @@ try:
         if not (_r.get('rights_state') and _r.get('public_card_state')): errors.append(f'F6-G08 source {_r.get("source_id")} lacks rights or card state')
 except Exception as _x:
     errors.append('F6-G unreadable '+repr(_x))
+
+# R8.6 (directive D7 §F8) handoff freeze gates.
+#  R86-G01 one recipient-start status: handoff/README_FIRST.md, the Design prompt, README.md, the checkpoint, the Context and
+#          the handoff manifest agree; until DESIGN HANDOFF READY the start file says to wait; the Code prompt waits
+#  R86-G02 the route, content and state inventory is current (scripts/handoff_inventory.py --check)
+#  R86-G03 the handoff folder holds exactly the declared files; no retired or second launch prompt; the manifest names
+#          handoff/README_FIRST.md as the launch file
+#  R86-G04 every repository path the handoff documents name exists (Design's future outputs under design/ excepted)
+_R86_STATES={'R8_6_FREEZE_CANDIDATE__PENDING_CLEAN_ROOM_ACCEPTANCE':'R8.6 FREEZE CANDIDATE — PENDING FINAL CLEAN-ROOM ACCEPTANCE',
+             'DESIGN_HANDOFF_READY':'DESIGN HANDOFF READY'}
+_R86_FILES={'README_FIRST.md','CLAUDE_DESIGN_MASTER_PROMPT.md','ROUTE_CONTENT_AND_STATE_INVENTORY.json','DESIGN_ACCEPTANCE_CRITERIA.md',
+            'DESIGN_TO_CODE_CONTRACT.md','VISUAL_DESIGN_CONTRACT.md','ENGINEERING_HANDOFF_EXPECTATIONS.md','DESIGN_STARTING_TOKENS.json',
+            'IMPLEMENTATION_MANIFEST.json','CLAUDE_CODE_MASTER_PROMPT.md','SUPPORT_AND_PARTNERSHIP_READINESS.md'}
+try:
+    import subprocess as _sp8
+    _hr=(context.get('programme_state') or {}).get('handoff_readiness')
+    _tok=_R86_STATES.get(_hr)
+    _first=lambda p:((ROOT/p).read_text(encoding='utf-8').splitlines() or [''])[0]
+    if not _tok:
+        errors.append(f'R86-G01 Context handoff_readiness {_hr!r} is not an R8.6 state')
+    else:
+        for _p in ('handoff/README_FIRST.md','handoff/CLAUDE_DESIGN_MASTER_PROMPT.md'):
+            if f'STATUS: **{_tok}' not in _first(_p): errors.append(f'R86-G01 {_p} status line does not read {_tok}')
+        if _tok!='DESIGN HANDOFF READY' and 'Do not start Design until this line reads **DESIGN HANDOFF READY**' not in _first('handoff/README_FIRST.md'):
+            errors.append('R86-G01 handoff/README_FIRST.md must tell the recipient to wait for DESIGN HANDOFF READY')
+        if not re.search(r'\| \*\*Position\*\* \| \*\*'+re.escape(_tok),(ROOT/'README.md').read_text(encoding='utf-8')): errors.append(f'R86-G01 README position does not read {_tok}')
+        if f'**Status: {_tok}' not in (ROOT/'OPENAI_REENTRY_CHECKPOINT.md').read_text(encoding='utf-8'): errors.append(f'R86-G01 checkpoint status does not read {_tok}')
+        if ((json.load(open(ROOT/'handoff/IMPLEMENTATION_MANIFEST.json',encoding='utf-8')).get('release_boundaries') or {}).get('handoff_readiness'))!=_hr:
+            errors.append('R86-G01 handoff manifest readiness differs from the Context')
+    if 'WAITING FOR THE DESIGN PACKAGE' not in _first('handoff/CLAUDE_CODE_MASTER_PROMPT.md'): errors.append('R86-G01 the Code prompt must wait for the Design package')
+    for _p in ['README.md','OPENAI_REENTRY_CHECKPOINT.md']+[f'handoff/{x.name}' for x in (ROOT/'handoff').glob('*.md')]:
+        if re.search(r'(?:STATUS|Status|Position)[^\n]{0,20}\*\*PUBLIC RELEASE READY',(ROOT/_p).read_text(encoding='utf-8')): errors.append(f'R86-G01 {_p} declares PUBLIC RELEASE READY')
+    _ic=_sp8.run([sys.executable,str(ROOT/'scripts/handoff_inventory.py'),'--check'],capture_output=True,text=True)
+    if _ic.returncode!=0: errors.append('R86-G02 '+(_ic.stdout.strip() or _ic.stderr.strip() or 'handoff inventory check failed').splitlines()[0])
+    _have={x.name for x in (ROOT/'handoff').iterdir() if x.is_file()}
+    if _have!=_R86_FILES: errors.append(f'R86-G03 handoff folder differs from the declared set: extra {sorted(_have-_R86_FILES)}, missing {sorted(_R86_FILES-_have)}')
+    _hm8=json.load(open(ROOT/'handoff/IMPLEMENTATION_MANIFEST.json',encoding='utf-8'))
+    if _hm8.get('launch_prompt')!='handoff/README_FIRST.md' or (_hm8.get('handoff_freeze') or {}).get('single_launch_prompt')!='handoff/README_FIRST.md':
+        errors.append('R86-G03 the handoff manifest must name handoff/README_FIRST.md as the one launch file')
+    for _k in ('design','code'):
+        if not (ROOT/str((_hm8.get('role_specific_prompts') or {}).get(_k,''))).is_file(): errors.append(f'R86-G03 role prompt for {_k} missing')
+    _skip=lambda t: (not t or t.startswith(('/','http','#','mailto:','CausewayGrp/')) or any(ch in t for ch in '*<>…{} |+') or '://' in t
+                     or (t.startswith('design/') and not t.startswith('design/architecture')))
+    _names={x.name for x in ROOT.rglob('*') if x.is_file() and '.git' not in x.parts}
+    for _f in sorted((ROOT/'handoff').glob('*.md')):
+        _tx=_f.read_text(encoding='utf-8')
+        _cands={m for m in re.findall(r'`([^`\n]+)`',_tx)}|{m for m in re.findall(r'\]\(([^)\s]+)\)',_tx)}
+        for _c in sorted(_cands):
+            _c=_c.split('#')[0].strip()
+            if _skip(_c) or not re.search(r'/|\.(?:md|json|py|js|css|png|svg|xlsx|txt|yml|csv)$',_c): continue
+            if '/' not in _c and _c in _names: continue          # a bare file name that exists in the repository
+            if not ((ROOT/_c).exists() or (_f.parent/_c).exists() or (ROOT/'dist'/_c).exists()):
+                errors.append(f'R86-G04 {_f.relative_to(ROOT)} names a path that does not exist: {_c}')
+except Exception as _x:
+    errors.append('R86-G unreadable '+repr(_x))
 
 print(f'HTML={len(list(DIST.rglob("*.html")))} ERRORS={len(errors)} WARN={len(warns)}')
 if errors:

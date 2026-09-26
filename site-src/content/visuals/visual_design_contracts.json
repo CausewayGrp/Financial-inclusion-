@@ -4657,7 +4657,7 @@
     {
       "visual_id": "VIS-PAYMENT-RAILS",
       "tier": "SUPPORTING",
-      "rationale": "State timeline of payment reforms; overlaps the RV-CWR-009 signature chain, whose deduplicated event set it should reuse. VIS-PAYMENT-RAILS lineage is BOUND_PARTIAL (REF-PAY-001).",
+      "rationale": "State timeline of payment reforms; overlaps the RV-CWR-009 signature chain, whose deduplicated event set it should reuse. Its lineage is BOUND_EXACT: REF-PAY-001 was closed to SRC-CBY-DEC-23-2024-001 in P5.",
       "governed": {
         "title_en": "How the payment architecture is changing",
         "question_en": "Where is each payment-system reform between policy, build, operation and observed use?",

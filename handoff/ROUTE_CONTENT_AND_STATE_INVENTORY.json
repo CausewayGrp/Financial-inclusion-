@@ -1,0 +1,4475 @@
+{
+ "schema": "YFIE_ROUTE_CONTENT_AND_STATE_INVENTORY/1.0",
+ "purpose": "Design recipient's map of every route, its family, bindings and the hard states Design must cover. Derived; not authority.",
+ "generated_from": {
+  "production_master_sha256": "ed3c5796cb0cca0109a0eb56f66d344ab0a5faa550e5235e05d65a6147f33fe1",
+  "page_specs_sha256": "2407cb4f9ca67aec60304630690488d04a3b05f9ea1eec03f805de24915cb3ad",
+  "generator": "scripts/handoff_inventory.py"
+ },
+ "counts": {
+  "evidence_records": 110,
+  "public_claims": 60,
+  "chronology_events": 24,
+  "sources": 160,
+  "public_locators": 151,
+  "curated_resources": 28,
+  "readings": 10,
+  "measurement_priorities": 10,
+  "entry_questions": 11,
+  "visual_contracts": 36,
+  "evidence_passports": 55,
+  "search_records": 435,
+  "page_specs": 143
+ },
+ "page_families": [
+  {
+   "page_family": "Orientation",
+   "route_count": 1,
+   "unique_user_value_role": "ORIENT_TO_SYSTEM",
+   "primary_next_action_policy": "TASK_OR_QUESTION",
+   "depth_role": "ORIENTATION",
+   "navigation_prominence": "IDENTITY_ENTRY"
+  },
+  {
+   "page_family": "Question Entry",
+   "route_count": 1,
+   "unique_user_value_role": "QUESTION_LED_ENTRY",
+   "primary_next_action_policy": "DOMAIN_ANSWER",
+   "depth_role": "DISCOVERY",
+   "navigation_prominence": "GLOBAL_PRIMARY"
+  },
+  {
+   "page_family": "Domain Answer",
+   "route_count": 8,
+   "unique_user_value_role": "BOUNDED_DOMAIN_ANSWER",
+   "primary_next_action_policy": "VERIFY_PRIMARY_EVIDENCE",
+   "depth_role": "ANSWER",
+   "navigation_prominence": "CONTEXTUAL"
+  },
+  {
+   "page_family": "Evidence Directory",
+   "route_count": 1,
+   "unique_user_value_role": "DISCOVER_VERIFICATION_RECORDS",
+   "primary_next_action_policy": "OPEN_EVIDENCE_RECORD_OR_COMPARE",
+   "depth_role": "DISCOVERY",
+   "navigation_prominence": "GLOBAL_PRIMARY"
+  },
+  {
+   "page_family": "Evidence Record",
+   "route_count": 110,
+   "unique_user_value_role": "CANONICAL_PUBLIC_VERIFICATION_ENDPOINT",
+   "primary_next_action_policy": "SOURCE_RELATED_CORRECTION_OR_REUSE",
+   "depth_role": "VERIFICATION",
+   "navigation_prominence": "ADDRESSABLE_VERIFICATION"
+  },
+  {
+   "page_family": "Comparison",
+   "route_count": 1,
+   "unique_user_value_role": "COMPARABILITY_TEST",
+   "primary_next_action_policy": "OPEN_SELECTED_EVIDENCE_RECORD",
+   "depth_role": "VERIFICATION",
+   "navigation_prominence": "CONTEXTUAL"
+  },
+  {
+   "page_family": "Reading Index",
+   "route_count": 1,
+   "unique_user_value_role": "DISCOVER_ANALYTICAL_READINGS",
+   "primary_next_action_policy": "OPEN_READING",
+   "depth_role": "DISCOVERY",
+   "navigation_prominence": "GLOBAL_PRIMARY"
+  },
+  {
+   "page_family": "Reading",
+   "route_count": 10,
+   "unique_user_value_role": "BOUNDED_CROSS_SOURCE_SYNTHESIS",
+   "primary_next_action_policy": "VERIFY_BOUND_EVIDENCE_RECORDS",
+   "depth_role": "SYNTHESIS",
+   "navigation_prominence": "CONTEXTUAL"
+  },
+  {
+   "page_family": "Data & Source",
+   "route_count": 1,
+   "unique_user_value_role": "SOURCE_AND_DATA_DIRECTORY",
+   "primary_next_action_policy": "SOURCE_TO_DEPENDENT_EVIDENCE",
+   "depth_role": "VERIFICATION_REFERENCE",
+   "navigation_prominence": "GLOBAL_PRIMARY"
+  },
+  {
+   "page_family": "Measurement",
+   "route_count": 1,
+   "unique_user_value_role": "DECISION_LINKED_EVIDENCE_GAPS",
+   "primary_next_action_policy": "RETURN_TO_DOMAIN_OR_VERIFY_EVIDENCE",
+   "depth_role": "DECISION_GAP",
+   "navigation_prominence": "PRIMARY_CHILD"
+  },
+  {
+   "page_family": "Reference / Trust",
+   "route_count": 8,
+   "unique_user_value_role": "REFERENCE_OR_PUBLIC_TRUST",
+   "primary_next_action_policy": "CONTEXTUAL_NEXT_ACTION",
+   "depth_role": "REFERENCE_TRUST",
+   "navigation_prominence": "MIXED_GLOBAL_AND_FOOTER"
+  }
+ ],
+ "routes": [
+  {
+   "route": "/",
+   "page_family": "Orientation",
+   "page_class": "static",
+   "stable_object_id": null,
+   "html": {
+    "en": "dist/en/index.html",
+    "ar": "dist/ar/index.html"
+   },
+   "title_en": "Financial inclusion in Yemen is not one number.",
+   "title_ar": "الشمول المالي في اليمن ليس رقمًا واحدًا.",
+   "sections": 17,
+   "evidence_ids": [
+    "CLM-001",
+    "CLM-002",
+    "CLM-003"
+   ],
+   "visual_ids": [
+    "VIS-INCLUSION-TRANSMISSION"
+   ],
+   "reading_ids": [
+    "CWR-004"
+   ],
+   "measurement_ids": [
+    "MA-001"
+   ],
+   "source_references": 5,
+   "lineage_state": null,
+   "structured_data": [
+    "WebSite"
+   ],
+   "hard_state_acceptance": []
+  },
+  {
+   "route": "/about/",
+   "page_family": "Reference / Trust",
+   "page_class": "static",
+   "stable_object_id": null,
+   "html": {
+    "en": "dist/en/about/index.html",
+    "ar": "dist/ar/about/index.html"
+   },
+   "title_en": "A bilingual public evidence resource for understanding financial inclusion in Yemen.",
+   "title_ar": "مورد عام ثنائي اللغة لفهم أدلة الشمول المالي في اليمن.",
+   "sections": 13,
+   "evidence_ids": [],
+   "visual_ids": [],
+   "reading_ids": [],
+   "measurement_ids": [],
+   "source_references": 0,
+   "lineage_state": null,
+   "structured_data": [],
+   "hard_state_acceptance": [
+    "trust_plain_language"
+   ]
+  },
+  {
+   "route": "/access/",
+   "page_family": "Domain Answer",
+   "page_class": "static",
+   "stable_object_id": null,
+   "html": {
+    "en": "dist/en/access/index.html",
+    "ar": "dist/ar/access/index.html"
+   },
+   "title_en": "Access: where services can be reached is only partly mapped",
+   "title_ar": "نعرف أجزاءً من شبكة الوصول إلى الخدمات المالية، لكننا لا نملك بعد خريطة وطنية موثوقة لما يعمل فعليًا على الأرض.",
+   "sections": 17,
+   "evidence_ids": [
+    "CLM-003",
+    "CLM-008",
+    "CLM-009",
+    "CLM-050",
+    "CLM-052",
+    "XW-FMIIP-005"
+   ],
+   "visual_ids": [
+    "VIS-ACCESS-EVIDENCE-LAYER"
+   ],
+   "reading_ids": [
+    "CWR-003"
+   ],
+   "measurement_ids": [
+    "MA-005",
+    "MA-010"
+   ],
+   "source_references": 12,
+   "lineage_state": null,
+   "structured_data": [],
+   "hard_state_acceptance": [
+    "sparse_unknown"
+   ]
+  },
+  {
+   "route": "/accessibility/",
+   "page_family": "Reference / Trust",
+   "page_class": "operational",
+   "stable_object_id": null,
+   "html": {
+    "en": "dist/en/accessibility/index.html",
+    "ar": "dist/ar/accessibility/index.html"
+   },
+   "title_en": "Accessibility statement",
+   "title_ar": "بيان إتاحة الوصول",
+   "sections": 6,
+   "evidence_ids": [],
+   "visual_ids": [],
+   "reading_ids": [],
+   "measurement_ids": [],
+   "source_references": 0,
+   "lineage_state": null,
+   "structured_data": [],
+   "hard_state_acceptance": []
+  },
+  {
+   "route": "/contact/",
+   "page_family": "Reference / Trust",
+   "page_class": "operational",
+   "stable_object_id": null,
+   "html": {
+    "en": "dist/en/contact/index.html",
+    "ar": "dist/ar/contact/index.html"
+   },
+   "title_en": "Contact and report an error",
+   "title_ar": "التواصل والإبلاغ عن خطأ",
+   "sections": 5,
+   "evidence_ids": [],
+   "visual_ids": [],
+   "reading_ids": [],
+   "measurement_ids": [],
+   "source_references": 0,
+   "lineage_state": null,
+   "structured_data": [],
+   "hard_state_acceptance": []
+  },
+  {
+   "route": "/corrections/",
+   "page_family": "Reference / Trust",
+   "page_class": "operational",
+   "stable_object_id": null,
+   "html": {
+    "en": "dist/en/corrections/index.html",
+    "ar": "dist/ar/corrections/index.html"
+   },
+   "title_en": "Corrections and release history",
+   "title_ar": "التصحيحات وسجل الإصدارات",
+   "sections": 5,
+   "evidence_ids": [],
+   "visual_ids": [],
+   "reading_ids": [],
+   "measurement_ids": [],
+   "source_references": 0,
+   "lineage_state": null,
+   "structured_data": [],
+   "hard_state_acceptance": []
+  },
+  {
+   "route": "/data/",
+   "page_family": "Data & Source",
+   "page_class": "static",
+   "stable_object_id": null,
+   "html": {
+    "en": "dist/en/data/index.html",
+    "ar": "dist/ar/data/index.html"
+   },
+   "title_en": "Find the original source behind each piece of evidence",
+   "title_ar": "اعثر على المصدر الأصلي الذي يستند إليه كل دليل",
+   "sections": 19,
+   "evidence_ids": [],
+   "visual_ids": [],
+   "reading_ids": [],
+   "measurement_ids": [],
+   "source_references": 0,
+   "lineage_state": null,
+   "structured_data": [],
+   "hard_state_acceptance": [
+    "source_scale"
+   ]
+  },
+  {
+   "route": "/evidence/",
+   "page_family": "Evidence Directory",
+   "page_class": "static",
+   "stable_object_id": null,
+   "html": {
+    "en": "dist/en/evidence/index.html",
+    "ar": "dist/ar/evidence/index.html"
+   },
+   "title_en": "Inspect the evidence behind the answer",
+   "title_ar": "افحص الدليل الذي تستند إليه الإجابة",
+   "sections": 1,
+   "evidence_ids": [
+    "CLM-009",
+    "CLM-014",
+    "CLM-019",
+    "CLM-024",
+    "CLM-031",
+    "CLM-039",
+    "CLM-049",
+    "CLM-057",
+    "CLM-060",
+    "CLM-062",
+    "DS-DEMAND-VINTAGE-LENS",
+    "DS-FCP-ARCH",
+    "DS-FINDEX-PUBLIC-HISTORY",
+    "DS-QUAL-EVIDENCE",
+    "QUAL-001",
+    "VIS-DEMAND-VINTAGE-LADDER",
+    "VIS-EVIDENCE-CLASS-LADDER",
+    "VIS-EVIDENCE-FRESHNESS",
+    "VIS-FINDEX-SAMPLE-SUPPORT",
+    "VIS-MECHANISM-METRIC-BRIDGE"
+   ],
+   "visual_ids": [
+    "VIS-EVIDENCE-CLASS-LADDER",
+    "VIS-EVIDENCE-FRESHNESS",
+    "VIS-MECHANISM-METRIC-BRIDGE"
+   ],
+   "reading_ids": [],
+   "measurement_ids": [
+    "MA-006"
+   ],
+   "source_references": 36,
+   "lineage_state": null,
+   "structured_data": [],
+   "hard_state_acceptance": []
+  },
+  {
+   "route": "/evidence/CLM-001/",
+   "page_family": "Evidence Record",
+   "page_class": "evidence_detail",
+   "stable_object_id": "CLM-001",
+   "html": {
+    "en": "dist/en/evidence/CLM-001/index.html",
+    "ar": "dist/ar/evidence/CLM-001/index.html"
+   },
+   "title_en": "Latest representative account-ownership measure available",
+   "title_ar": "أحدث قياس سكاني ممثل متاح لامتلاك الحساب",
+   "sections": 2,
+   "evidence_ids": [
+    "CLM-001"
+   ],
+   "visual_ids": [],
+   "reading_ids": [],
+   "measurement_ids": [],
+   "source_references": 2,
+   "lineage_state": "BOUND_EXACT",
+   "structured_data": [
+    "BreadcrumbList"
+   ],
+   "hard_state_acceptance": []
+  },
+  {
+   "route": "/evidence/CLM-002/",
+   "page_family": "Evidence Record",
+   "page_class": "evidence_detail",
+   "stable_object_id": "CLM-002",
+   "html": {
+    "en": "dist/en/evidence/CLM-002/index.html",
+    "ar": "dist/ar/evidence/CLM-002/index.html"
+   },
+   "title_en": "A measured gender gap in account ownership",
+   "title_ar": "فجوة مقاسة بين النساء والرجال في امتلاك الحساب",
+   "sections": 2,
+   "evidence_ids": [
+    "CLM-002"
+   ],
+   "visual_ids": [],
+   "reading_ids": [],
+   "measurement_ids": [],
+   "source_references": 1,
+   "lineage_state": "BOUND_EXACT",
+   "structured_data": [
+    "BreadcrumbList"
+   ],
+   "hard_state_acceptance": []
+  },
+  {
+   "route": "/evidence/CLM-003/",
+   "page_family": "Evidence Record",
+   "page_class": "evidence_detail",
+   "stable_object_id": "CLM-003",
+   "html": {
+    "en": "dist/en/evidence/CLM-003/index.html",
+    "ar": "dist/ar/evidence/CLM-003/index.html"
+   },
+   "title_en": "POS infrastructure expanded",
+   "title_ar": "توسع البنية التحتية لنقاط البيع",
+   "sections": 2,
+   "evidence_ids": [
+    "CLM-003"
+   ],
+   "visual_ids": [],
+   "reading_ids": [],
+   "measurement_ids": [],
+   "source_references": 3,
+   "lineage_state": "BOUND_EXACT",
+   "structured_data": [
+    "BreadcrumbList"
+   ],
+   "hard_state_acceptance": [
+    "verification_dense"
+   ]
+  },
+  {
+   "route": "/evidence/CLM-004/",
+   "page_family": "Evidence Record",
+   "page_class": "evidence_detail",
+   "stable_object_id": "CLM-004",
+   "html": {
+    "en": "dist/en/evidence/CLM-004/index.html",
+    "ar": "dist/ar/evidence/CLM-004/index.html"
+   },
+   "title_en": "Accounts and transactions are not unique people",
+   "title_ar": "الحسابات والمعاملات ليست أشخاصًا فريدين",
+   "sections": 2,
+   "evidence_ids": [
+    "CLM-004"
+   ],
+   "visual_ids": [],
+   "reading_ids": [],
+   "measurement_ids": [],
+   "source_references": 0,
+   "lineage_state": "FRAMING_NO_FACT",
+   "structured_data": [
+    "BreadcrumbList"
+   ],
+   "hard_state_acceptance": []
+  },
+  {
+   "route": "/evidence/CLM-005/",
+   "page_family": "Evidence Record",
+   "page_class": "evidence_detail",
+   "stable_object_id": "CLM-005",
+   "html": {
+    "en": "dist/en/evidence/CLM-005/index.html",
+    "ar": "dist/ar/evidence/CLM-005/index.html"
+   },
+   "title_en": "Finance was not the most frequently cited constraint in this survey",
+   "title_ar": "التمويل ليس التحدي الأكثر ذكرًا في هذا المسح",
+   "sections": 2,
+   "evidence_ids": [
+    "CLM-005"
+   ],
+   "visual_ids": [],
+   "reading_ids": [],
+   "measurement_ids": [],
+   "source_references": 1,
+   "lineage_state": "BOUND_EXACT",
+   "structured_data": [
+    "BreadcrumbList"
+   ],
+   "hard_state_acceptance": []
+  },
+  {
+   "route": "/evidence/CLM-006/",
+   "page_family": "Evidence Record",
+   "page_class": "evidence_detail",
+   "stable_object_id": "CLM-006",
+   "html": {
+    "en": "dist/en/evidence/CLM-006/index.html",
+    "ar": "dist/ar/evidence/CLM-006/index.html"
+   },
+   "title_en": "Finance severity within a specific denominator",
+   "title_ar": "شدة عائق التمويل ضمن قاعدة احتساب محددة",
+   "sections": 2,
+   "evidence_ids": [
+    "CLM-006"
+   ],
+   "visual_ids": [],
+   "reading_ids": [],
+   "measurement_ids": [],
+   "source_references": 1,
+   "lineage_state": "BOUND_EXACT",
+   "structured_data": [
+    "BreadcrumbList"
+   ],
+   "hard_state_acceptance": []
+  },
+  {
+   "route": "/evidence/CLM-007/",
+   "page_family": "Evidence Record",
+   "page_class": "evidence_detail",
+   "stable_object_id": "CLM-007",
+   "html": {
+    "en": "dist/en/evidence/CLM-007/index.html",
+    "ar": "dist/ar/evidence/CLM-007/index.html"
+   },
+   "title_en": "IMF remittance series: reported history, estimates and projections kept separate",
+   "title_ar": "سلسلة التحويلات لدى صندوق النقد الدولي: القيم التاريخية المنشورة والتقديرات والتوقعات منفصلة",
+   "sections": 2,
+   "evidence_ids": [
+    "CLM-007"
+   ],
+   "visual_ids": [],
+   "reading_ids": [],
+   "measurement_ids": [],
+   "source_references": 2,
+   "lineage_state": "BOUND_EXACT",
+   "structured_data": [
+    "BreadcrumbList"
+   ],
+   "hard_state_acceptance": []
+  },
+  {
+   "route": "/evidence/CLM-008/",
+   "page_family": "Evidence Record",
+   "page_class": "evidence_detail",
+   "stable_object_id": "CLM-008",
+   "html": {
+    "en": "dist/en/evidence/CLM-008/index.html",
+    "ar": "dist/ar/evidence/CLM-008/index.html"
+   },
+   "title_en": "Listing or licensing does not establish operation",
+   "title_ar": "الإدراج أو الترخيص لا يثبت التشغيل",
+   "sections": 2,
+   "evidence_ids": [
+    "CLM-008"
+   ],
+   "visual_ids": [],
+   "reading_ids": [],
+   "measurement_ids": [],
+   "source_references": 1,
+   "lineage_state": "BOUND_EXACT",
+   "structured_data": [
+    "BreadcrumbList"
+   ],
+   "hard_state_acceptance": []
+  },
+  {
+   "route": "/evidence/CLM-009/",
+   "page_family": "Evidence Record",
+   "page_class": "evidence_detail",
+   "stable_object_id": "CLM-009",
+   "html": {
+    "en": "dist/en/evidence/CLM-009/index.html",
+    "ar": "dist/ar/evidence/CLM-009/index.html"
+   },
+   "title_en": "The official 2026 exchange and remittance roster can be counted; whether providers operate now is a separate question",
+   "title_ar": "يمكن عدّ قيود القائمة الرسمية للصرافة والحوالات لعام 2026؛ أما تشغيل مقدمي الخدمات حاليًا فسؤال مختلف",
+   "sections": 2,
+   "evidence_ids": [
+    "CLM-009"
+   ],
+   "visual_ids": [],
+   "reading_ids": [],
+   "measurement_ids": [],
+   "source_references": 1,
+   "lineage_state": "BOUND_EXACT",
+   "structured_data": [
+    "BreadcrumbList"
+   ],
+   "hard_state_acceptance": []
+  },
+  {
+   "route": "/evidence/CLM-010/",
+   "page_family": "Evidence Record",
+   "page_class": "evidence_detail",
+   "stable_object_id": "CLM-010",
+   "html": {
+    "en": "dist/en/evidence/CLM-010/index.html",
+    "ar": "dist/ar/evidence/CLM-010/index.html"
+   },
+   "title_en": "Wallet and subscriber counts from different publications are not yet reconciled",
+   "title_ar": "أعداد المحافظ ومشتركيها في الإصدارات المختلفة لم تُطابَق بعد",
+   "sections": 2,
+   "evidence_ids": [
+    "CLM-010"
+   ],
+   "visual_ids": [],
+   "reading_ids": [],
+   "measurement_ids": [],
+   "source_references": 4,
+   "lineage_state": "BOUND_EXACT",
+   "structured_data": [
+    "BreadcrumbList"
+   ],
+   "hard_state_acceptance": []
+  },
+  {
+   "route": "/evidence/CLM-011/",
+   "page_family": "Evidence Record",
+   "page_class": "evidence_detail",
+   "stable_object_id": "CLM-011",
+   "html": {
+    "en": "dist/en/evidence/CLM-011/index.html",
+    "ar": "dist/ar/evidence/CLM-011/index.html"
+   },
+   "title_en": "The complaint path is documented; there is no evidence yet on how it performs",
+   "title_ar": "مسار الشكوى موثَّق، أما أداؤه الفعلي فلا تتوفر أدلة عليه",
+   "sections": 2,
+   "evidence_ids": [
+    "CLM-011"
+   ],
+   "visual_ids": [],
+   "reading_ids": [],
+   "measurement_ids": [],
+   "source_references": 2,
+   "lineage_state": "BOUND_EXACT",
+   "structured_data": [
+    "BreadcrumbList"
+   ],
+   "hard_state_acceptance": []
+  },
+  {
+   "route": "/evidence/CLM-012/",
+   "page_family": "Evidence Record",
+   "page_class": "evidence_detail",
+   "stable_object_id": "CLM-012",
+   "html": {
+    "en": "dist/en/evidence/CLM-012/index.html",
+    "ar": "dist/ar/evidence/CLM-012/index.html"
+   },
+   "title_en": "E-money rules set limits; they do not measure use",
+   "title_ar": "قواعد النقود الإلكترونية حدود نظامية وليست قياسًا للاستخدام",
+   "sections": 2,
+   "evidence_ids": [
+    "CLM-012"
+   ],
+   "visual_ids": [],
+   "reading_ids": [],
+   "measurement_ids": [],
+   "source_references": 2,
+   "lineage_state": "BOUND_EXACT",
+   "structured_data": [
+    "BreadcrumbList"
+   ],
+   "hard_state_acceptance": []
+  },
+  {
+   "route": "/evidence/CLM-013/",
+   "page_family": "Evidence Record",
+   "page_class": "evidence_detail",
+   "stable_object_id": "CLM-013",
+   "html": {
+    "en": "dist/en/evidence/CLM-013/index.html",
+    "ar": "dist/ar/evidence/CLM-013/index.html"
+   },
+   "title_en": "Financial-literacy activity does not establish capability outcomes",
+   "title_ar": "أنشطة الثقافة المالية لا تثبت نتائج في القدرات المالية",
+   "sections": 2,
+   "evidence_ids": [
+    "CLM-013"
+   ],
+   "visual_ids": [],
+   "reading_ids": [],
+   "measurement_ids": [],
+   "source_references": 4,
+   "lineage_state": "BOUND_EXACT",
+   "structured_data": [
+    "BreadcrumbList"
+   ],
+   "hard_state_acceptance": []
+  },
+  {
+   "route": "/evidence/CLM-014/",
+   "page_family": "Evidence Record",
+   "page_class": "evidence_detail",
+   "stable_object_id": "CLM-014",
+   "html": {
+    "en": "dist/en/evidence/CLM-014/index.html",
+    "ar": "dist/ar/evidence/CLM-014/index.html"
+   },
+   "title_en": "Evidence freshness differs by domain",
+   "title_ar": "حداثة الأدلة غير متساوية بين المجالات",
+   "sections": 2,
+   "evidence_ids": [
+    "CLM-014"
+   ],
+   "visual_ids": [],
+   "reading_ids": [],
+   "measurement_ids": [],
+   "source_references": 0,
+   "lineage_state": "COMPOSITE_OF_OBJECTS",
+   "structured_data": [
+    "BreadcrumbList"
+   ],
+   "hard_state_acceptance": []
+  },
+  {
+   "route": "/evidence/CLM-015/",
+   "page_family": "Evidence Record",
+   "page_class": "evidence_detail",
+   "stable_object_id": "CLM-015",
+   "html": {
+    "en": "dist/en/evidence/CLM-015/index.html",
+    "ar": "dist/ar/evidence/CLM-015/index.html"
+   },
+   "title_en": "A dated list of unlicensed services, not a permanent status",
+   "title_ar": "قائمة بتاريخ محدد لخدمات غير مرخصة، لا وضعٌ دائم",
+   "sections": 2,
+   "evidence_ids": [
+    "CLM-015"
+   ],
+   "visual_ids": [],
+   "reading_ids": [],
+   "measurement_ids": [],
+   "source_references": 1,
+   "lineage_state": "BOUND_EXACT",
+   "structured_data": [
+    "BreadcrumbList"
+   ],
+   "hard_state_acceptance": [
+    "verification_sparse"
+   ]
+  },
+  {
+   "route": "/evidence/CLM-016/",
+   "page_family": "Evidence Record",
+   "page_class": "evidence_detail",
+   "stable_object_id": "CLM-016",
+   "html": {
+    "en": "dist/en/evidence/CLM-016/index.html",
+    "ar": "dist/ar/evidence/CLM-016/index.html"
+   },
+   "title_en": "Historical exchange and remittance roster baseline",
+   "title_ar": "خط أساس تاريخي لفئات الصرافة والحوالات",
+   "sections": 2,
+   "evidence_ids": [
+    "CLM-016"
+   ],
+   "visual_ids": [],
+   "reading_ids": [],
+   "measurement_ids": [],
+   "source_references": 1,
+   "lineage_state": "BOUND_EXACT",
+   "structured_data": [
+    "BreadcrumbList"
+   ],
+   "hard_state_acceptance": []
+  },
+  {
+   "route": "/evidence/CLM-017/",
+   "page_family": "Evidence Record",
+   "page_class": "evidence_detail",
+   "stable_object_id": "CLM-017",
+   "html": {
+    "en": "dist/en/evidence/CLM-017/index.html",
+    "ar": "dist/ar/evidence/CLM-017/index.html"
+   },
+   "title_en": "Latest monthly POS release listed by CBY-Aden: January 2026 (page checked 26 September 2026)",
+   "title_ar": "أحدث إصدار شهري لنقاط البيع لدى البنك المركزي اليمني – عدن: يناير 2026 (اطُّلع على الصفحة في 26 سبتمبر 2026)",
+   "sections": 2,
+   "evidence_ids": [
+    "CLM-017"
+   ],
+   "visual_ids": [],
+   "reading_ids": [],
+   "measurement_ids": [],
+   "source_references": 2,
+   "lineage_state": "BOUND_EXACT",
+   "structured_data": [
+    "BreadcrumbList"
+   ],
+   "hard_state_acceptance": []
+  },
+  {
+   "route": "/evidence/CLM-018/",
+   "page_family": "Evidence Record",
+   "page_class": "evidence_detail",
+   "stable_object_id": "CLM-018",
+   "html": {
+    "en": "dist/en/evidence/CLM-018/index.html",
+    "ar": "dist/ar/evidence/CLM-018/index.html"
+   },
+   "title_en": "Institution-building steps are not evidence of operation or outcomes",
+   "title_ar": "خطوات البناء المؤسسي ليست دليلًا على التشغيل أو النتائج",
+   "sections": 2,
+   "evidence_ids": [
+    "CLM-018"
+   ],
+   "visual_ids": [],
+   "reading_ids": [],
+   "measurement_ids": [],
+   "source_references": 5,
+   "lineage_state": "BOUND_EXACT",
+   "structured_data": [
+    "BreadcrumbList"
+   ],
+   "hard_state_acceptance": []
+  },
+  {
+   "route": "/evidence/CLM-019/",
+   "page_family": "Evidence Record",
+   "page_class": "evidence_detail",
+   "stable_object_id": "CLM-019",
+   "html": {
+    "en": "dist/en/evidence/CLM-019/index.html",
+    "ar": "dist/ar/evidence/CLM-019/index.html"
+   },
+   "title_en": "Enforcement decisions are events, not a market census",
+   "title_ar": "قرارات الإنفاذ وقائع مؤرخة وليست تعدادًا للسوق",
+   "sections": 2,
+   "evidence_ids": [
+    "CLM-019"
+   ],
+   "visual_ids": [],
+   "reading_ids": [],
+   "measurement_ids": [],
+   "source_references": 15,
+   "lineage_state": "BOUND_EXACT",
+   "structured_data": [
+    "BreadcrumbList"
+   ],
+   "hard_state_acceptance": []
+  },
+  {
+   "route": "/evidence/CLM-020/",
+   "page_family": "Evidence Record",
+   "page_class": "evidence_detail",
+   "stable_object_id": "CLM-020",
+   "html": {
+    "en": "dist/en/evidence/CLM-020/index.html",
+    "ar": "dist/ar/evidence/CLM-020/index.html"
+   },
+   "title_en": "SFD microfinance history: 1997 and 1998 are distinct milestones",
+   "title_ar": "تاريخ التمويل الأصغر في الصندوق الاجتماعي للتنمية: 1997 و1998 محطتان مختلفتان",
+   "sections": 2,
+   "evidence_ids": [
+    "CLM-020"
+   ],
+   "visual_ids": [],
+   "reading_ids": [],
+   "measurement_ids": [],
+   "source_references": 3,
+   "lineage_state": "BOUND_EXACT",
+   "structured_data": [
+    "BreadcrumbList"
+   ],
+   "hard_state_acceptance": []
+  },
+  {
+   "route": "/evidence/CLM-021/",
+   "page_family": "Evidence Record",
+   "page_class": "evidence_detail",
+   "stable_object_id": "CLM-021",
+   "html": {
+    "en": "dist/en/evidence/CLM-021/index.html",
+    "ar": "dist/ar/evidence/CLM-021/index.html"
+   },
+   "title_en": "Observed fall in borrowers and portfolio of SFD-supported microfinance programmes during 2015",
+   "title_ar": "تراجع مرصود في المقترضين والمحفظة لدى برامج التمويل الأصغر المدعومة من الصندوق الاجتماعي للتنمية خلال 2015",
+   "sections": 2,
+   "evidence_ids": [
+    "CLM-021"
+   ],
+   "visual_ids": [],
+   "reading_ids": [],
+   "measurement_ids": [],
+   "source_references": 3,
+   "lineage_state": "BOUND_EXACT",
+   "structured_data": [
+    "BreadcrumbList"
+   ],
+   "hard_state_acceptance": []
+  },
+  {
+   "route": "/evidence/CLM-022/",
+   "page_family": "Evidence Record",
+   "page_class": "evidence_detail",
+   "stable_object_id": "CLM-022",
+   "html": {
+    "en": "dist/en/evidence/CLM-022/index.html",
+    "ar": "dist/ar/evidence/CLM-022/index.html"
+   },
+   "title_en": "Informative history without a continuous annual series",
+   "title_ar": "سجل مفيد لكنه غير سنوي متصل",
+   "sections": 2,
+   "evidence_ids": [
+    "CLM-022"
+   ],
+   "visual_ids": [],
+   "reading_ids": [],
+   "measurement_ids": [],
+   "source_references": 16,
+   "lineage_state": "BOUND_EXACT",
+   "structured_data": [
+    "BreadcrumbList"
+   ],
+   "hard_state_acceptance": []
+  },
+  {
+   "route": "/evidence/CLM-023/",
+   "page_family": "Evidence Record",
+   "page_class": "evidence_detail",
+   "stable_object_id": "CLM-023",
+   "html": {
+    "en": "dist/en/evidence/CLM-023/index.html",
+    "ar": "dist/ar/evidence/CLM-023/index.html"
+   },
+   "title_en": "What the Yemen Findex 2021 study contains",
+   "title_ar": "ما تتضمنه دراسة Findex 2021 الخاصة باليمن",
+   "sections": 2,
+   "evidence_ids": [
+    "CLM-023"
+   ],
+   "visual_ids": [],
+   "reading_ids": [],
+   "measurement_ids": [],
+   "source_references": 1,
+   "lineage_state": "BOUND_EXACT",
+   "structured_data": [
+    "BreadcrumbList"
+   ],
+   "hard_state_acceptance": []
+  },
+  {
+   "route": "/evidence/CLM-024/",
+   "page_family": "Evidence Record",
+   "page_class": "evidence_detail",
+   "stable_object_id": "CLM-024",
+   "html": {
+    "en": "dist/en/evidence/CLM-024/index.html",
+    "ar": "dist/ar/evidence/CLM-024/index.html"
+   },
+   "title_en": "Raw case shares are not population estimates",
+   "title_ar": "نسب الحالات الخام ليست تقديرات للسكان",
+   "sections": 2,
+   "evidence_ids": [
+    "CLM-024"
+   ],
+   "visual_ids": [],
+   "reading_ids": [],
+   "measurement_ids": [],
+   "source_references": 1,
+   "lineage_state": "BOUND_EXACT",
+   "structured_data": [
+    "BreadcrumbList"
+   ],
+   "hard_state_acceptance": []
+  },
+  {
+   "route": "/evidence/CLM-025/",
+   "page_family": "Evidence Record",
+   "page_class": "evidence_detail",
+   "stable_object_id": "CLM-025",
+   "html": {
+    "en": "dist/en/evidence/CLM-025/index.html",
+    "ar": "dist/ar/evidence/CLM-025/index.html"
+   },
+   "title_en": "Geographic coverage limits of the latest Findex wave",
+   "title_ar": "حدود التغطية الجغرافية لأحدث موجة من Findex",
+   "sections": 2,
+   "evidence_ids": [
+    "CLM-025"
+   ],
+   "visual_ids": [],
+   "reading_ids": [],
+   "measurement_ids": [],
+   "source_references": 1,
+   "lineage_state": "BOUND_EXACT",
+   "structured_data": [
+    "BreadcrumbList"
+   ],
+   "hard_state_acceptance": []
+  },
+  {
+   "route": "/evidence/CLM-026/",
+   "page_family": "Evidence Record",
+   "page_class": "evidence_detail",
+   "stable_object_id": "CLM-026",
+   "html": {
+    "en": "dist/en/evidence/CLM-026/index.html",
+    "ar": "dist/ar/evidence/CLM-026/index.html"
+   },
+   "title_en": "Demand-side measures defined; custom estimates not yet published",
+   "title_ar": "مقاييس جانب الطلب محددة، والتقديرات المخصصة لم تُنشر بعد",
+   "sections": 2,
+   "evidence_ids": [
+    "CLM-026"
+   ],
+   "visual_ids": [],
+   "reading_ids": [],
+   "measurement_ids": [],
+   "source_references": 2,
+   "lineage_state": "BOUND_EXACT",
+   "structured_data": [
+    "BreadcrumbList"
+   ],
+   "hard_state_acceptance": []
+  },
+  {
+   "route": "/evidence/CLM-027/",
+   "page_family": "Evidence Record",
+   "page_class": "evidence_detail",
+   "stable_object_id": "CLM-027",
+   "html": {
+    "en": "dist/en/evidence/CLM-027/index.html",
+    "ar": "dist/ar/evidence/CLM-027/index.html"
+   },
+   "title_en": "Three observed survey waves, not an annual series",
+   "title_ar": "ثلاث موجات مسحية مرصودة، لا سلسلة سنوية",
+   "sections": 2,
+   "evidence_ids": [
+    "CLM-027"
+   ],
+   "visual_ids": [],
+   "reading_ids": [],
+   "measurement_ids": [],
+   "source_references": 2,
+   "lineage_state": "BOUND_EXACT",
+   "structured_data": [
+    "BreadcrumbList"
+   ],
+   "hard_state_acceptance": []
+  },
+  {
+   "route": "/evidence/CLM-028/",
+   "page_family": "Evidence Record",
+   "page_class": "evidence_detail",
+   "stable_object_id": "CLM-028",
+   "html": {
+    "en": "dist/en/evidence/CLM-028/index.html",
+    "ar": "dist/ar/evidence/CLM-028/index.html"
+   },
+   "title_en": "Historical borrowing patterns in 2014",
+   "title_ar": "أنماط اقتراض تاريخية في 2014",
+   "sections": 2,
+   "evidence_ids": [
+    "CLM-028"
+   ],
+   "visual_ids": [],
+   "reading_ids": [],
+   "measurement_ids": [],
+   "source_references": 1,
+   "lineage_state": "BOUND_EXACT",
+   "structured_data": [
+    "BreadcrumbList"
+   ],
+   "hard_state_acceptance": []
+  },
+  {
+   "route": "/evidence/CLM-029/",
+   "page_family": "Evidence Record",
+   "page_class": "evidence_detail",
+   "stable_object_id": "CLM-029",
+   "html": {
+    "en": "dist/en/evidence/CLM-029/index.html",
+    "ar": "dist/ar/evidence/CLM-029/index.html"
+   },
+   "title_en": "Historical saving patterns in 2014",
+   "title_ar": "أنماط ادخار تاريخية في 2014",
+   "sections": 2,
+   "evidence_ids": [
+    "CLM-029"
+   ],
+   "visual_ids": [],
+   "reading_ids": [],
+   "measurement_ids": [],
+   "source_references": 1,
+   "lineage_state": "BOUND_EXACT",
+   "structured_data": [
+    "BreadcrumbList"
+   ],
+   "hard_state_acceptance": []
+  },
+  {
+   "route": "/evidence/CLM-030/",
+   "page_family": "Evidence Record",
+   "page_class": "evidence_detail",
+   "stable_object_id": "CLM-030",
+   "html": {
+    "en": "dist/en/evidence/CLM-030/index.html",
+    "ar": "dist/ar/evidence/CLM-030/index.html"
+   },
+   "title_en": "Domestic-remittance pathways in 2014",
+   "title_ar": "مسارات الحوالات المحلية في 2014",
+   "sections": 2,
+   "evidence_ids": [
+    "CLM-030"
+   ],
+   "visual_ids": [],
+   "reading_ids": [],
+   "measurement_ids": [],
+   "source_references": 1,
+   "lineage_state": "BOUND_EXACT",
+   "structured_data": [
+    "BreadcrumbList"
+   ],
+   "hard_state_acceptance": []
+  },
+  {
+   "route": "/evidence/CLM-031/",
+   "page_family": "Evidence Record",
+   "page_class": "evidence_detail",
+   "stable_object_id": "CLM-031",
+   "html": {
+    "en": "dist/en/evidence/CLM-031/index.html",
+    "ar": "dist/ar/evidence/CLM-031/index.html"
+   },
+   "title_en": "There is no single latest year for all people-side evidence",
+   "title_ar": "لا توجد سنة واحدة هي الأحدث لكل أدلة الأفراد",
+   "sections": 2,
+   "evidence_ids": [
+    "CLM-031"
+   ],
+   "visual_ids": [],
+   "reading_ids": [],
+   "measurement_ids": [],
+   "source_references": 0,
+   "lineage_state": "COMPOSITE_OF_OBJECTS",
+   "structured_data": [
+    "BreadcrumbList"
+   ],
+   "hard_state_acceptance": []
+  },
+  {
+   "route": "/evidence/CLM-032/",
+   "page_family": "Evidence Record",
+   "page_class": "evidence_detail",
+   "stable_object_id": "CLM-032",
+   "html": {
+    "en": "dist/en/evidence/CLM-032/index.html",
+    "ar": "dist/ar/evidence/CLM-032/index.html"
+   },
+   "title_en": "Same reference year, different published value",
+   "title_ar": "السنة المرجعية نفسها، وقيمة منشورة مختلفة",
+   "sections": 2,
+   "evidence_ids": [
+    "CLM-032"
+   ],
+   "visual_ids": [],
+   "reading_ids": [],
+   "measurement_ids": [],
+   "source_references": 2,
+   "lineage_state": "BOUND_EXACT",
+   "structured_data": [
+    "BreadcrumbList"
+   ],
+   "hard_state_acceptance": []
+  },
+  {
+   "route": "/evidence/CLM-033/",
+   "page_family": "Evidence Record",
+   "page_class": "evidence_detail",
+   "stable_object_id": "CLM-033",
+   "html": {
+    "en": "dist/en/evidence/CLM-033/index.html",
+    "ar": "dist/ar/evidence/CLM-033/index.html"
+   },
+   "title_en": "A measured banking jump can partly be a valuation change",
+   "title_ar": "قد يعود جزء من القفزة في الأرقام المصرفية إلى تغيّر في أسلوب التقييم",
+   "sections": 2,
+   "evidence_ids": [
+    "CLM-033"
+   ],
+   "visual_ids": [],
+   "reading_ids": [],
+   "measurement_ids": [],
+   "source_references": 2,
+   "lineage_state": "BOUND_EXACT",
+   "structured_data": [
+    "BreadcrumbList"
+   ],
+   "hard_state_acceptance": []
+  },
+  {
+   "route": "/evidence/CLM-034/",
+   "page_family": "Evidence Record",
+   "page_class": "evidence_detail",
+   "stable_object_id": "CLM-034",
+   "html": {
+    "en": "dist/en/evidence/CLM-034/index.html",
+    "ar": "dist/ar/evidence/CLM-034/index.html"
+   },
+   "title_en": "A smoother published path is a methods question, not a conclusion",
+   "title_ar": "المسار المنشور الأكثر سلاسة سؤال منهجي، لا استنتاج",
+   "sections": 2,
+   "evidence_ids": [
+    "CLM-034"
+   ],
+   "visual_ids": [],
+   "reading_ids": [],
+   "measurement_ids": [],
+   "source_references": 1,
+   "lineage_state": "BOUND_EXACT",
+   "structured_data": [
+    "BreadcrumbList"
+   ],
+   "hard_state_acceptance": []
+  },
+  {
+   "route": "/evidence/CLM-035/",
+   "page_family": "Evidence Record",
+   "page_class": "evidence_detail",
+   "stable_object_id": "CLM-035",
+   "html": {
+    "en": "dist/en/evidence/CLM-035/index.html",
+    "ar": "dist/ar/evidence/CLM-035/index.html"
+   },
+   "title_en": "The apparent balance between remittances and donor financing changes between editions of the annual report",
+   "title_ar": "تتغير الصورة النسبية للتحويلات وتمويل المانحين باختلاف إصدار التقرير السنوي",
+   "sections": 2,
+   "evidence_ids": [
+    "CLM-035"
+   ],
+   "visual_ids": [],
+   "reading_ids": [],
+   "measurement_ids": [],
+   "source_references": 2,
+   "lineage_state": "BOUND_EXACT",
+   "structured_data": [
+    "BreadcrumbList"
+   ],
+   "hard_state_acceptance": []
+  },
+  {
+   "route": "/evidence/CLM-036/",
+   "page_family": "Evidence Record",
+   "page_class": "evidence_detail",
+   "stable_object_id": "CLM-036",
+   "html": {
+    "en": "dist/en/evidence/CLM-036/index.html",
+    "ar": "dist/ar/evidence/CLM-036/index.html"
+   },
+   "title_en": "A reconstruction programme is documented; the exact CBY formula is not",
+   "title_ar": "إعادة البناء الإحصائي موثقة، أما صيغة البنك المركزي الدقيقة فليست كذلك",
+   "sections": 2,
+   "evidence_ids": [
+    "CLM-036"
+   ],
+   "visual_ids": [],
+   "reading_ids": [],
+   "measurement_ids": [],
+   "source_references": 2,
+   "lineage_state": "BOUND_EXACT",
+   "structured_data": [
+    "BreadcrumbList"
+   ],
+   "hard_state_acceptance": []
+  },
+  {
+   "route": "/evidence/CLM-037/",
+   "page_family": "Evidence Record",
+   "page_class": "evidence_detail",
+   "stable_object_id": "CLM-037",
+   "html": {
+    "en": "dist/en/evidence/CLM-037/index.html",
+    "ar": "dist/ar/evidence/CLM-037/index.html"
+   },
+   "title_en": "The paths align after normalization; their levels are not equivalent",
+   "title_ar": "يتطابق المساران تقريبًا عند تحويلهما إلى رقم قياسي، لكن مستوياتهما ليست متكافئة",
+   "sections": 2,
+   "evidence_ids": [
+    "CLM-037"
+   ],
+   "visual_ids": [],
+   "reading_ids": [],
+   "measurement_ids": [],
+   "source_references": 2,
+   "lineage_state": "BOUND_EXACT",
+   "structured_data": [
+    "BreadcrumbList"
+   ],
+   "hard_state_acceptance": []
+  },
+  {
+   "route": "/evidence/CLM-038/",
+   "page_family": "Evidence Record",
+   "page_class": "evidence_detail",
+   "stable_object_id": "CLM-038",
+   "html": {
+    "en": "dist/en/evidence/CLM-038/index.html",
+    "ar": "dist/ar/evidence/CLM-038/index.html"
+   },
+   "title_en": "The 2023 valuation change has a precedent and cannot be called the “first ever”",
+   "title_ar": "لتغيير التقييم في 2023 سابقة تاريخية، وليس حدًا يصلح وصفه بأنه «الأول»",
+   "sections": 2,
+   "evidence_ids": [
+    "CLM-038"
+   ],
+   "visual_ids": [],
+   "reading_ids": [],
+   "measurement_ids": [],
+   "source_references": 2,
+   "lineage_state": "BOUND_EXACT",
+   "structured_data": [
+    "BreadcrumbList"
+   ],
+   "hard_state_acceptance": []
+  },
+  {
+   "route": "/evidence/CLM-039/",
+   "page_family": "Evidence Record",
+   "page_class": "evidence_detail",
+   "stable_object_id": "CLM-039",
+   "html": {
+    "en": "dist/en/evidence/CLM-039/index.html",
+    "ar": "dist/ar/evidence/CLM-039/index.html"
+   },
+   "title_en": "A public interface is not the same thing as the underlying dataset",
+   "title_ar": "واجهة البيانات العامة ليست هي مجموعة البيانات نفسها",
+   "sections": 2,
+   "evidence_ids": [
+    "CLM-039"
+   ],
+   "visual_ids": [],
+   "reading_ids": [],
+   "measurement_ids": [],
+   "source_references": 1,
+   "lineage_state": "BOUND_PARTIAL",
+   "structured_data": [
+    "BreadcrumbList"
+   ],
+   "hard_state_acceptance": []
+  },
+  {
+   "route": "/evidence/CLM-040/",
+   "page_family": "Evidence Record",
+   "page_class": "evidence_detail",
+   "stable_object_id": "CLM-040",
+   "html": {
+    "en": "dist/en/evidence/CLM-040/index.html",
+    "ar": "dist/ar/evidence/CLM-040/index.html"
+   },
+   "title_en": "The 2025 external-sector statistics mission produced a 2014–2024 historical series",
+   "title_ar": "بعثة إحصاءات القطاع الخارجي في 2025 أنتجت سلسلة تاريخية للفترة 2014–2024",
+   "sections": 2,
+   "evidence_ids": [
+    "CLM-040"
+   ],
+   "visual_ids": [],
+   "reading_ids": [],
+   "measurement_ids": [],
+   "source_references": 1,
+   "lineage_state": "BOUND_EXACT",
+   "structured_data": [
+    "BreadcrumbList"
+   ],
+   "hard_state_acceptance": []
+  },
+  {
+   "route": "/evidence/CLM-041/",
+   "page_family": "Evidence Record",
+   "page_class": "evidence_detail",
+   "stable_object_id": "CLM-041",
+   "html": {
+    "en": "dist/en/evidence/CLM-041/index.html",
+    "ar": "dist/ar/evidence/CLM-041/index.html"
+   },
+   "title_en": "The published CBY and IMF balance-of-payments components tested do not support a single conversion factor",
+   "title_ar": "لا تدعم مكونات ميزان المدفوعات المنشورة التي اختُبرت معامل تحويل واحدًا بين بيانات البنك المركزي وصندوق النقد",
+   "sections": 2,
+   "evidence_ids": [
+    "CLM-041"
+   ],
+   "visual_ids": [],
+   "reading_ids": [],
+   "measurement_ids": [],
+   "source_references": 2,
+   "lineage_state": "BOUND_EXACT",
+   "structured_data": [
+    "BreadcrumbList"
+   ],
+   "hard_state_acceptance": []
+  },
+  {
+   "route": "/evidence/CLM-042/",
+   "page_family": "Evidence Record",
+   "page_class": "evidence_detail",
+   "stable_object_id": "CLM-042",
+   "html": {
+    "en": "dist/en/evidence/CLM-042/index.html",
+    "ar": "dist/ar/evidence/CLM-042/index.html"
+   },
+   "title_en": "A stable remittance ratio exists; its meaning remains unknown",
+   "title_ar": "توجد نسبة مستقرة بين سلسلتي التحويلات، لكن معناها ما يزال غير محسوم",
+   "sections": 2,
+   "evidence_ids": [
+    "CLM-042"
+   ],
+   "visual_ids": [],
+   "reading_ids": [],
+   "measurement_ids": [],
+   "source_references": 2,
+   "lineage_state": "BOUND_EXACT",
+   "structured_data": [
+    "BreadcrumbList"
+   ],
+   "hard_state_acceptance": []
+  },
+  {
+   "route": "/evidence/CLM-043/",
+   "page_family": "Evidence Record",
+   "page_class": "evidence_detail",
+   "stable_object_id": "CLM-043",
+   "html": {
+    "en": "dist/en/evidence/CLM-043/index.html",
+    "ar": "dist/ar/evidence/CLM-043/index.html"
+   },
+   "title_en": "Before ranking flows, look at the balancing residual",
+   "title_ar": "قبل ترتيب التدفقات الخارجية، افحص البند الموازِن (صافي السهو والخطأ)",
+   "sections": 2,
+   "evidence_ids": [
+    "CLM-043"
+   ],
+   "visual_ids": [],
+   "reading_ids": [],
+   "measurement_ids": [],
+   "source_references": 1,
+   "lineage_state": "BOUND_EXACT",
+   "structured_data": [
+    "BreadcrumbList"
+   ],
+   "hard_state_acceptance": []
+  },
+  {
+   "route": "/evidence/CLM-044/",
+   "page_family": "Evidence Record",
+   "page_class": "evidence_detail",
+   "stable_object_id": "CLM-044",
+   "html": {
+    "en": "dist/en/evidence/CLM-044/index.html",
+    "ar": "dist/ar/evidence/CLM-044/index.html"
+   },
+   "title_en": "An alternative residual model is not the canonical remittance baseline",
+   "title_ar": "نموذج المتبقي البديل ليس خط الأساس المعتمد للتحويلات",
+   "sections": 2,
+   "evidence_ids": [
+    "CLM-044"
+   ],
+   "visual_ids": [],
+   "reading_ids": [],
+   "measurement_ids": [],
+   "source_references": 1,
+   "lineage_state": "BOUND_EXACT",
+   "structured_data": [
+    "BreadcrumbList"
+   ],
+   "hard_state_acceptance": []
+  },
+  {
+   "route": "/evidence/CLM-045/",
+   "page_family": "Evidence Record",
+   "page_class": "evidence_detail",
+   "stable_object_id": "CLM-045",
+   "html": {
+    "en": "dist/en/evidence/CLM-045/index.html",
+    "ar": "dist/ar/evidence/CLM-045/index.html"
+   },
+   "title_en": "A successful cash payment is not yet durable financial use",
+   "title_ar": "نجاح الدفع النقدي لا يعني بعدُ استخدامًا ماليًا مستمرًا",
+   "sections": 2,
+   "evidence_ids": [
+    "CLM-045"
+   ],
+   "visual_ids": [],
+   "reading_ids": [],
+   "measurement_ids": [],
+   "source_references": 4,
+   "lineage_state": "BOUND_EXACT",
+   "structured_data": [
+    "BreadcrumbList"
+   ],
+   "hard_state_acceptance": []
+  },
+  {
+   "route": "/evidence/CLM-046/",
+   "page_family": "Evidence Record",
+   "page_class": "evidence_detail",
+   "stable_object_id": "CLM-046",
+   "html": {
+    "en": "dist/en/evidence/CLM-046/index.html",
+    "ar": "dist/ar/evidence/CLM-046/index.html"
+   },
+   "title_en": "Pledge, agreement, deposit and disbursement are different stages of support",
+   "title_ar": "التعهد والاتفاق والإيداع والصرف مراحل مختلفة للدعم",
+   "sections": 2,
+   "evidence_ids": [
+    "CLM-046"
+   ],
+   "visual_ids": [],
+   "reading_ids": [],
+   "measurement_ids": [],
+   "source_references": 4,
+   "lineage_state": "BOUND_PARTIAL",
+   "structured_data": [
+    "BreadcrumbList"
+   ],
+   "hard_state_acceptance": []
+  },
+  {
+   "route": "/evidence/CLM-047/",
+   "page_family": "Evidence Record",
+   "page_class": "evidence_detail",
+   "stable_object_id": "CLM-047",
+   "html": {
+    "en": "dist/en/evidence/CLM-047/index.html",
+    "ar": "dist/ar/evidence/CLM-047/index.html"
+   },
+   "title_en": "A change in an external position is not automatically a transaction",
+   "title_ar": "تغير المركز الخارجي لا يساوي تلقائيًا تدفقًا أو معاملة",
+   "sections": 2,
+   "evidence_ids": [
+    "CLM-047"
+   ],
+   "visual_ids": [],
+   "reading_ids": [],
+   "measurement_ids": [],
+   "source_references": 3,
+   "lineage_state": "BOUND_EXACT",
+   "structured_data": [
+    "BreadcrumbList"
+   ],
+   "hard_state_acceptance": []
+  },
+  {
+   "route": "/evidence/CLM-048/",
+   "page_family": "Evidence Record",
+   "page_class": "evidence_detail",
+   "stable_object_id": "CLM-048",
+   "html": {
+    "en": "dist/en/evidence/CLM-048/index.html",
+    "ar": "dist/ar/evidence/CLM-048/index.html"
+   },
+   "title_en": "BPM7 updates the standard; it does not rewrite Yemen’s statistical history overnight",
+   "title_ar": "الإصدار BPM7 يحدّث المعيار، لكنه لا يعيد كتابة السلاسل الإحصائية التاريخية لليمن فورًا",
+   "sections": 2,
+   "evidence_ids": [
+    "CLM-048"
+   ],
+   "visual_ids": [],
+   "reading_ids": [],
+   "measurement_ids": [],
+   "source_references": 2,
+   "lineage_state": "BOUND_EXACT",
+   "structured_data": [
+    "BreadcrumbList"
+   ],
+   "hard_state_acceptance": []
+  },
+  {
+   "route": "/evidence/CLM-049/",
+   "page_family": "Evidence Record",
+   "page_class": "evidence_detail",
+   "stable_object_id": "CLM-049",
+   "html": {
+    "en": "dist/en/evidence/CLM-049/index.html",
+    "ar": "dist/ar/evidence/CLM-049/index.html"
+   },
+   "title_en": "IMF Staff-Monitored Program (SMP) for Yemen: staff-level agreement of July 2026, subject to Management approval",
+   "title_ar": "برنامج يراقبه خبراء صندوق النقد الدولي (SMP) لليمن: اتفاق على مستوى الخبراء في يوليو 2026، مشروط بموافقة الإدارة",
+   "sections": 2,
+   "evidence_ids": [
+    "CLM-049"
+   ],
+   "visual_ids": [],
+   "reading_ids": [],
+   "measurement_ids": [],
+   "source_references": 1,
+   "lineage_state": "BOUND_EXACT",
+   "structured_data": [
+    "BreadcrumbList"
+   ],
+   "hard_state_acceptance": []
+  },
+  {
+   "route": "/evidence/CLM-050/",
+   "page_family": "Evidence Record",
+   "page_class": "evidence_detail",
+   "stable_object_id": "CLM-050",
+   "html": {
+    "en": "dist/en/evidence/CLM-050/index.html",
+    "ar": "dist/ar/evidence/CLM-050/index.html"
+   },
+   "title_en": "807,919 accounts did not mean 807,919 active people",
+   "title_ar": "807,919 حسابًا لا تعني 807,919 شخصًا نشطًا",
+   "sections": 2,
+   "evidence_ids": [
+    "CLM-050"
+   ],
+   "visual_ids": [],
+   "reading_ids": [],
+   "measurement_ids": [],
+   "source_references": 1,
+   "lineage_state": "BOUND_EXACT",
+   "structured_data": [
+    "BreadcrumbList"
+   ],
+   "hard_state_acceptance": []
+  },
+  {
+   "route": "/evidence/CLM-051/",
+   "page_family": "Evidence Record",
+   "page_class": "evidence_detail",
+   "stable_object_id": "CLM-051",
+   "html": {
+    "en": "dist/en/evidence/CLM-051/index.html",
+    "ar": "dist/ar/evidence/CLM-051/index.html"
+   },
+   "title_en": "Most recorded 2019 e-money value still revolved around cash and account transfers",
+   "title_ar": "معظم قيمة معاملات النقود الإلكترونية المسجلة في 2019 ظلت تدور حول النقد والتحويل بين الحسابات",
+   "sections": 2,
+   "evidence_ids": [
+    "CLM-051"
+   ],
+   "visual_ids": [],
+   "reading_ids": [],
+   "measurement_ids": [],
+   "source_references": 1,
+   "lineage_state": "BOUND_EXACT",
+   "structured_data": [
+    "BreadcrumbList"
+   ],
+   "hard_state_acceptance": []
+  },
+  {
+   "route": "/evidence/CLM-052/",
+   "page_family": "Evidence Record",
+   "page_class": "evidence_detail",
+   "stable_object_id": "CLM-052",
+   "html": {
+    "en": "dist/en/evidence/CLM-052/index.html",
+    "ar": "dist/ar/evidence/CLM-052/index.html"
+   },
+   "title_en": "Historical provider data show concentration in cities and low female representation",
+   "title_ar": "تُظهر بيانات المزودين التاريخية تمركزًا في المدن وتمثيلًا نسائيًا منخفضًا",
+   "sections": 2,
+   "evidence_ids": [
+    "CLM-052"
+   ],
+   "visual_ids": [],
+   "reading_ids": [],
+   "measurement_ids": [],
+   "source_references": 1,
+   "lineage_state": "BOUND_EXACT",
+   "structured_data": [
+    "BreadcrumbList"
+   ],
+   "hard_state_acceptance": []
+  },
+  {
+   "route": "/evidence/CLM-053/",
+   "page_family": "Evidence Record",
+   "page_class": "evidence_detail",
+   "stable_object_id": "CLM-053",
+   "html": {
+    "en": "dist/en/evidence/CLM-053/index.html",
+    "ar": "dist/ar/evidence/CLM-053/index.html"
+   },
+   "title_en": "End-2023 borrower evidence is useful, but still secondary",
+   "title_ar": "رقم المقترضين في نهاية 2023 مفيد، لكنه ما يزال دليلًا ثانويًا",
+   "sections": 2,
+   "evidence_ids": [
+    "CLM-053"
+   ],
+   "visual_ids": [],
+   "reading_ids": [],
+   "measurement_ids": [],
+   "source_references": 2,
+   "lineage_state": "BOUND_EXACT",
+   "structured_data": [
+    "BreadcrumbList"
+   ],
+   "hard_state_acceptance": []
+  },
+  {
+   "route": "/evidence/CLM-054/",
+   "page_family": "Evidence Record",
+   "page_class": "evidence_detail",
+   "stable_object_id": "CLM-054",
+   "html": {
+    "en": "dist/en/evidence/CLM-054/index.html",
+    "ar": "dist/ar/evidence/CLM-054/index.html"
+   },
+   "title_en": "Borrower, saver and portfolio figures come from different sources and definitions and do not yet form one trend",
+   "title_ar": "تأتي أرقام المقترضين والمدخرين والمحفظة من مصادر وتعريفات مختلفة، ولا تشكل بعدُ اتجاهًا واحدًا",
+   "sections": 2,
+   "evidence_ids": [
+    "CLM-054"
+   ],
+   "visual_ids": [],
+   "reading_ids": [],
+   "measurement_ids": [],
+   "source_references": 4,
+   "lineage_state": "BOUND_EXACT",
+   "structured_data": [
+    "BreadcrumbList"
+   ],
+   "hard_state_acceptance": []
+  },
+  {
+   "route": "/evidence/CLM-055/",
+   "page_family": "Evidence Record",
+   "page_class": "evidence_detail",
+   "stable_object_id": "CLM-055",
+   "html": {
+    "en": "dist/en/evidence/CLM-055/index.html",
+    "ar": "dist/ar/evidence/CLM-055/index.html"
+   },
+   "title_en": "Being listed as a microfinance bank does not establish operation or outreach",
+   "title_ar": "الإدراج كبنك تمويل أصغر لا يثبت التشغيل أو الوصول الفعلي",
+   "sections": 2,
+   "evidence_ids": [
+    "CLM-055"
+   ],
+   "visual_ids": [],
+   "reading_ids": [],
+   "measurement_ids": [],
+   "source_references": 1,
+   "lineage_state": "BOUND_EXACT",
+   "structured_data": [
+    "BreadcrumbList"
+   ],
+   "hard_state_acceptance": []
+  },
+  {
+   "route": "/evidence/CLM-056/",
+   "page_family": "Evidence Record",
+   "page_class": "evidence_detail",
+   "stable_object_id": "CLM-056",
+   "html": {
+    "en": "dist/en/evidence/CLM-056/index.html",
+    "ar": "dist/ar/evidence/CLM-056/index.html"
+   },
+   "title_en": "The 91% figure is supportable only as a source-attributed share of saver growth—not as a verified 2023 depositor stock share",
+   "title_ar": "يمكن إسناد نسبة 91% فقط بوصفها حصة من نمو المدخرين وفق المصدر، لا بوصفها حصة محققة من رصيد المودعين في 2023",
+   "sections": 2,
+   "evidence_ids": [
+    "CLM-056"
+   ],
+   "visual_ids": [],
+   "reading_ids": [],
+   "measurement_ids": [],
+   "source_references": 2,
+   "lineage_state": "BOUND_PARTIAL",
+   "structured_data": [
+    "BreadcrumbList"
+   ],
+   "hard_state_acceptance": []
+  },
+  {
+   "route": "/evidence/CLM-057/",
+   "page_family": "Evidence Record",
+   "page_class": "evidence_detail",
+   "stable_object_id": "CLM-057",
+   "html": {
+    "en": "dist/en/evidence/CLM-057/index.html",
+    "ar": "dist/ar/evidence/CLM-057/index.html"
+   },
+   "title_en": "June and end-2023 borrower points are not one continuous series",
+   "title_ar": "نقطتا يونيو ونهاية 2023 للمقترضين ليستا سلسلة مستمرة واحدة",
+   "sections": 2,
+   "evidence_ids": [
+    "CLM-057"
+   ],
+   "visual_ids": [],
+   "reading_ids": [],
+   "measurement_ids": [],
+   "source_references": 2,
+   "lineage_state": "BOUND_EXACT",
+   "structured_data": [
+    "BreadcrumbList"
+   ],
+   "hard_state_acceptance": []
+  },
+  {
+   "route": "/evidence/CLM-058/",
+   "page_family": "Evidence Record",
+   "page_class": "evidence_detail",
+   "stable_object_id": "CLM-058",
+   "html": {
+    "en": "dist/en/evidence/CLM-058/index.html",
+    "ar": "dist/ar/evidence/CLM-058/index.html"
+   },
+   "title_en": "Through 2021, the World Bank reports a broadly flat borrower base while average loan amounts rose",
+   "title_ar": "حتى 2021، يفيد البنك الدولي بأن قاعدة المقترضين ظلت مستقرة تقريبًا بينما ارتفع متوسط حجم التمويل",
+   "sections": 2,
+   "evidence_ids": [
+    "CLM-058"
+   ],
+   "visual_ids": [],
+   "reading_ids": [],
+   "measurement_ids": [],
+   "source_references": 1,
+   "lineage_state": "BOUND_EXACT",
+   "structured_data": [
+    "BreadcrumbList"
+   ],
+   "hard_state_acceptance": []
+  },
+  {
+   "route": "/evidence/CLM-059/",
+   "page_family": "Evidence Record",
+   "page_class": "evidence_detail",
+   "stable_object_id": "CLM-059",
+   "html": {
+    "en": "dist/en/evidence/CLM-059/index.html",
+    "ar": "dist/ar/evidence/CLM-059/index.html"
+   },
+   "title_en": "SMEPS programme reach describes the programme, not all MSMEs in Yemen",
+   "title_ar": "وصول برنامج SMEPS دليل على نطاق البرنامج، لا على حجم قطاع المنشآت في اليمن",
+   "sections": 2,
+   "evidence_ids": [
+    "CLM-059"
+   ],
+   "visual_ids": [],
+   "reading_ids": [],
+   "measurement_ids": [],
+   "source_references": 1,
+   "lineage_state": "BOUND_EXACT",
+   "structured_data": [
+    "BreadcrumbList"
+   ],
+   "hard_state_acceptance": []
+  },
+  {
+   "route": "/evidence/CLM-060/",
+   "page_family": "Evidence Record",
+   "page_class": "evidence_detail",
+   "stable_object_id": "CLM-060",
+   "html": {
+    "en": "dist/en/evidence/CLM-060/index.html",
+    "ar": "dist/ar/evidence/CLM-060/index.html"
+   },
+   "title_en": "The SMEPS financial-services KPI is a programme result, not a national MSME rate",
+   "title_ar": "مؤشر SMEPS للوصول إلى الخدمات المالية نتيجة برنامجية، لا معدل وطني للمنشآت",
+   "sections": 2,
+   "evidence_ids": [
+    "CLM-060"
+   ],
+   "visual_ids": [],
+   "reading_ids": [],
+   "measurement_ids": [],
+   "source_references": 1,
+   "lineage_state": "BOUND_EXACT",
+   "structured_data": [
+    "BreadcrumbList"
+   ],
+   "hard_state_acceptance": []
+  },
+  {
+   "route": "/evidence/CLM-062/",
+   "page_family": "Evidence Record",
+   "page_class": "evidence_detail",
+   "stable_object_id": "CLM-062",
+   "html": {
+    "en": "dist/en/evidence/CLM-062/index.html",
+    "ar": "dist/ar/evidence/CLM-062/index.html"
+   },
+   "title_en": "Formal firms in the 2022 survey: accounts were common, bank finance for working capital was not",
+   "title_ar": "المنشآت الرسمية في مسح 2022: الحساب المصرفي شائع، أما تمويل البنوك لرأس المال العامل فنادر",
+   "sections": 2,
+   "evidence_ids": [
+    "CLM-062"
+   ],
+   "visual_ids": [],
+   "reading_ids": [],
+   "measurement_ids": [],
+   "source_references": 1,
+   "lineage_state": "BOUND_EXACT",
+   "structured_data": [
+    "BreadcrumbList"
+   ],
+   "hard_state_acceptance": []
+  },
+  {
+   "route": "/evidence/DS-DEMAND-VINTAGE-LENS/",
+   "page_family": "Evidence Record",
+   "page_class": "evidence_detail",
+   "stable_object_id": "DS-DEMAND-VINTAGE-LENS",
+   "html": {
+    "en": "dist/en/evidence/DS-DEMAND-VINTAGE-LENS/index.html",
+    "ar": "dist/ar/evidence/DS-DEMAND-VINTAGE-LENS/index.html"
+   },
+   "title_en": "How recent the people-side evidence is, by financial function",
+   "title_ar": "حداثة أدلة الأفراد بحسب الوظيفة المالية",
+   "sections": 2,
+   "evidence_ids": [
+    "DS-DEMAND-VINTAGE-LENS"
+   ],
+   "visual_ids": [],
+   "reading_ids": [],
+   "measurement_ids": [],
+   "source_references": 0,
+   "lineage_state": "COMPOSITE_OF_OBJECTS",
+   "structured_data": [
+    "BreadcrumbList"
+   ],
+   "hard_state_acceptance": []
+  },
+  {
+   "route": "/evidence/DS-FCP-ARCH/",
+   "page_family": "Evidence Record",
+   "page_class": "evidence_detail",
+   "stable_object_id": "DS-FCP-ARCH",
+   "html": {
+    "en": "dist/en/evidence/DS-FCP-ARCH/index.html",
+    "ar": "dist/ar/evidence/DS-FCP-ARCH/index.html"
+   },
+   "title_en": "Consumer protection and complaint path: official rules and guidance",
+   "title_ar": "حماية المستهلك المالي ومسار الشكاوى: التعليمات والإرشادات الرسمية",
+   "sections": 2,
+   "evidence_ids": [
+    "DS-FCP-ARCH"
+   ],
+   "visual_ids": [],
+   "reading_ids": [],
+   "measurement_ids": [],
+   "source_references": 3,
+   "lineage_state": "BOUND_EXACT",
+   "structured_data": [
+    "BreadcrumbList"
+   ],
+   "hard_state_acceptance": []
+  },
+  {
+   "route": "/evidence/DS-FINDEX-HISTORY-CROSSWALK/",
+   "page_family": "Evidence Record",
+   "page_class": "evidence_detail",
+   "stable_object_id": "DS-FINDEX-HISTORY-CROSSWALK",
+   "html": {
+    "en": "dist/en/evidence/DS-FINDEX-HISTORY-CROSSWALK/index.html",
+    "ar": "dist/ar/evidence/DS-FINDEX-HISTORY-CROSSWALK/index.html"
+   },
+   "title_en": "Which historical Findex measures can be compared with the latest wave",
+   "title_ar": "مقاييس Findex التاريخية التي يمكن مقارنتها بأحدث موجة",
+   "sections": 2,
+   "evidence_ids": [
+    "DS-FINDEX-HISTORY-CROSSWALK"
+   ],
+   "visual_ids": [],
+   "reading_ids": [],
+   "measurement_ids": [],
+   "source_references": 0,
+   "lineage_state": "COMPOSITE_OF_OBJECTS",
+   "structured_data": [
+    "BreadcrumbList"
+   ],
+   "hard_state_acceptance": []
+  },
+  {
+   "route": "/evidence/DS-FINDEX-PUBLIC-HISTORY/",
+   "page_family": "Evidence Record",
+   "page_class": "evidence_detail",
+   "stable_object_id": "DS-FINDEX-PUBLIC-HISTORY",
+   "html": {
+    "en": "dist/en/evidence/DS-FINDEX-PUBLIC-HISTORY/index.html",
+    "ar": "dist/ar/evidence/DS-FINDEX-PUBLIC-HISTORY/index.html"
+   },
+   "title_en": "Published historical Findex results for Yemen",
+   "title_ar": "نتائج Findex التاريخية المنشورة لليمن",
+   "sections": 2,
+   "evidence_ids": [
+    "DS-FINDEX-PUBLIC-HISTORY"
+   ],
+   "visual_ids": [],
+   "reading_ids": [],
+   "measurement_ids": [],
+   "source_references": 1,
+   "lineage_state": "BOUND_EXACT",
+   "structured_data": [
+    "BreadcrumbList"
+   ],
+   "hard_state_acceptance": []
+  },
+  {
+   "route": "/evidence/DS-QUAL-EVIDENCE/",
+   "page_family": "Evidence Record",
+   "page_class": "evidence_detail",
+   "stable_object_id": "DS-QUAL-EVIDENCE",
+   "html": {
+    "en": "dist/en/evidence/DS-QUAL-EVIDENCE/index.html",
+    "ar": "dist/ar/evidence/DS-QUAL-EVIDENCE/index.html"
+   },
+   "title_en": "Qualitative evidence register",
+   "title_ar": "سجل الأدلة النوعية",
+   "sections": 2,
+   "evidence_ids": [
+    "DS-QUAL-EVIDENCE"
+   ],
+   "visual_ids": [],
+   "reading_ids": [],
+   "measurement_ids": [],
+   "source_references": 10,
+   "lineage_state": "BOUND_EXACT",
+   "structured_data": [
+    "BreadcrumbList"
+   ],
+   "hard_state_acceptance": []
+  },
+  {
+   "route": "/evidence/FMIIP-BASELINE-2025-01/",
+   "page_family": "Evidence Record",
+   "page_class": "evidence_detail",
+   "stable_object_id": "FMIIP-BASELINE-2025-01",
+   "html": {
+    "en": "dist/en/evidence/FMIIP-BASELINE-2025-01/index.html",
+    "ar": "dist/ar/evidence/FMIIP-BASELINE-2025-01/index.html"
+   },
+   "title_en": "FMIIP project baselines for January 2025 count accounts, access points, merchants and agents — not people",
+   "title_ar": "خطوط الأساس لمشروع FMIIP في يناير 2025 تعدّ الحسابات ونقاط الوصول والتجار والوكلاء، لا الأشخاص",
+   "sections": 2,
+   "evidence_ids": [
+    "FMIIP-BASELINE-2025-01"
+   ],
+   "visual_ids": [],
+   "reading_ids": [],
+   "measurement_ids": [],
+   "source_references": 1,
+   "lineage_state": "BOUND_EXACT",
+   "structured_data": [
+    "BreadcrumbList"
+   ],
+   "hard_state_acceptance": []
+  },
+  {
+   "route": "/evidence/MF-ORIG-001+002/",
+   "page_family": "Evidence Record",
+   "page_class": "evidence_detail",
+   "stable_object_id": "MF-ORIG-001+002",
+   "html": {
+    "en": "dist/en/evidence/MF-ORIG-001+002/index.html",
+    "ar": "dist/ar/evidence/MF-ORIG-001+002/index.html"
+   },
+   "title_en": "1997 institutional origin and 1998 operational programme start",
+   "title_ar": "الأصل المؤسسي في 1997 وبداية البرنامج التشغيلي في 1998",
+   "sections": 2,
+   "evidence_ids": [
+    "MF-ORIG-001+002"
+   ],
+   "visual_ids": [],
+   "reading_ids": [],
+   "measurement_ids": [],
+   "source_references": 2,
+   "lineage_state": "BOUND_EXACT",
+   "structured_data": [
+    "BreadcrumbList"
+   ],
+   "hard_state_acceptance": []
+  },
+  {
+   "route": "/evidence/MFI-SPINE-2015-Q4/",
+   "page_family": "Evidence Record",
+   "page_class": "evidence_detail",
+   "stable_object_id": "MFI-SPINE-2015-Q4",
+   "html": {
+    "en": "dist/en/evidence/MFI-SPINE-2015-Q4/index.html",
+    "ar": "dist/ar/evidence/MFI-SPINE-2015-Q4/index.html"
+   },
+   "title_en": "2015 Q4 microfinance observation with a portfolio contradiction",
+   "title_ar": "مشاهدة التمويل الأصغر للربع الرابع 2015 مع تعارض في قيمة المحفظة",
+   "sections": 2,
+   "evidence_ids": [
+    "MFI-SPINE-2015-Q4"
+   ],
+   "visual_ids": [],
+   "reading_ids": [],
+   "measurement_ids": [],
+   "source_references": 1,
+   "lineage_state": "BOUND_EXACT",
+   "structured_data": [
+    "BreadcrumbList"
+   ],
+   "hard_state_acceptance": []
+  },
+  {
+   "route": "/evidence/NEG-EW-011/",
+   "page_family": "Evidence Record",
+   "page_class": "evidence_detail",
+   "stable_object_id": "NEG-EW-011",
+   "html": {
+    "en": "dist/en/evidence/NEG-EW-011/index.html",
+    "ar": "dist/ar/evidence/NEG-EW-011/index.html"
+   },
+   "title_en": "Wallet service named in a June 2024 CBY-Aden list of unlicensed services",
+   "title_ar": "خدمة محفظة وردت في قائمة البنك المركزي اليمني – عدن للخدمات غير المرخصة (يونيو 2024)",
+   "sections": 2,
+   "evidence_ids": [
+    "NEG-EW-011"
+   ],
+   "visual_ids": [],
+   "reading_ids": [],
+   "measurement_ids": [],
+   "source_references": 1,
+   "lineage_state": "BOUND_EXACT",
+   "structured_data": [
+    "BreadcrumbList"
+   ],
+   "hard_state_acceptance": []
+  },
+  {
+   "route": "/evidence/PSE-011/",
+   "page_family": "Evidence Record",
+   "page_class": "evidence_detail",
+   "stable_object_id": "PSE-011",
+   "html": {
+    "en": "dist/en/evidence/PSE-011/index.html",
+    "ar": "dist/ar/evidence/PSE-011/index.html"
+   },
+   "title_en": "Dated remittance-agent licence suspension and closure event",
+   "title_ar": "حدث مؤرخ لتعليق ترخيص وكيل حوالات وإغلاق المقر",
+   "sections": 2,
+   "evidence_ids": [
+    "PSE-011"
+   ],
+   "visual_ids": [],
+   "reading_ids": [],
+   "measurement_ids": [],
+   "source_references": 1,
+   "lineage_state": "BOUND_EXACT",
+   "structured_data": [
+    "BreadcrumbList"
+   ],
+   "hard_state_acceptance": []
+  },
+  {
+   "route": "/evidence/QUAL-001/",
+   "page_family": "Evidence Record",
+   "page_class": "evidence_detail",
+   "stable_object_id": "QUAL-001",
+   "html": {
+    "en": "dist/en/evidence/QUAL-001/index.html",
+    "ar": "dist/ar/evidence/QUAL-001/index.html"
+   },
+   "title_en": "OECD: institutional fragility and weak formal access (qualitative interpretation)",
+   "title_ar": "OECD: الهشاشة المؤسسية وضعف الوصول الرسمي (تفسير نوعي)",
+   "sections": 2,
+   "evidence_ids": [
+    "QUAL-001"
+   ],
+   "visual_ids": [],
+   "reading_ids": [],
+   "measurement_ids": [],
+   "source_references": 1,
+   "lineage_state": "BOUND_EXACT",
+   "structured_data": [
+    "BreadcrumbList"
+   ],
+   "hard_state_acceptance": []
+  },
+  {
+   "route": "/evidence/VIS-BORROWING-SOURCES-2014/",
+   "page_family": "Evidence Record",
+   "page_class": "evidence_detail",
+   "stable_object_id": "VIS-BORROWING-SOURCES-2014",
+   "html": {
+    "en": "dist/en/evidence/VIS-BORROWING-SOURCES-2014/index.html",
+    "ar": "dist/ar/evidence/VIS-BORROWING-SOURCES-2014/index.html"
+   },
+   "title_en": "Borrowing and its sources in 2014",
+   "title_ar": "الاقتراض ومصادره في 2014",
+   "sections": 2,
+   "evidence_ids": [
+    "VIS-BORROWING-SOURCES-2014"
+   ],
+   "visual_ids": [],
+   "reading_ids": [],
+   "measurement_ids": [],
+   "source_references": 1,
+   "lineage_state": "BOUND_EXACT",
+   "structured_data": [
+    "BreadcrumbList"
+   ],
+   "hard_state_acceptance": []
+  },
+  {
+   "route": "/evidence/VIS-CAPITAL-CONTEXT/",
+   "page_family": "Evidence Record",
+   "page_class": "evidence_detail",
+   "stable_object_id": "VIS-CAPITAL-CONTEXT",
+   "html": {
+    "en": "dist/en/evidence/VIS-CAPITAL-CONTEXT/index.html",
+    "ar": "dist/ar/evidence/VIS-CAPITAL-CONTEXT/index.html"
+   },
+   "title_en": "Humanitarian, development and project finance: separate pathways",
+   "title_ar": "التمويل الإنساني والتنموي وتمويل المشروعات: مسارات منفصلة",
+   "sections": 2,
+   "evidence_ids": [
+    "VIS-CAPITAL-CONTEXT"
+   ],
+   "visual_ids": [
+    "VIS-CAPITAL-CONTEXT"
+   ],
+   "reading_ids": [],
+   "measurement_ids": [],
+   "source_references": 1,
+   "lineage_state": "BOUND_EXACT",
+   "structured_data": [
+    "BreadcrumbList"
+   ],
+   "hard_state_acceptance": []
+  },
+  {
+   "route": "/evidence/VIS-DEMAND-VINTAGE-LADDER/",
+   "page_family": "Evidence Record",
+   "page_class": "evidence_detail",
+   "stable_object_id": "VIS-DEMAND-VINTAGE-LADDER",
+   "html": {
+    "en": "dist/en/evidence/VIS-DEMAND-VINTAGE-LADDER/index.html",
+    "ar": "dist/ar/evidence/VIS-DEMAND-VINTAGE-LADDER/index.html"
+   },
+   "title_en": "Latest observation for each people-side financial function",
+   "title_ar": "أحدث مشاهدة لكل وظيفة مالية على جانب الأفراد",
+   "sections": 2,
+   "evidence_ids": [
+    "VIS-DEMAND-VINTAGE-LADDER"
+   ],
+   "visual_ids": [],
+   "reading_ids": [],
+   "measurement_ids": [],
+   "source_references": 0,
+   "lineage_state": "COMPOSITE_OF_OBJECTS",
+   "structured_data": [
+    "BreadcrumbList"
+   ],
+   "hard_state_acceptance": []
+  },
+  {
+   "route": "/evidence/VIS-DOMESTIC-REMITTANCE-PATH-2014/",
+   "page_family": "Evidence Record",
+   "page_class": "evidence_detail",
+   "stable_object_id": "VIS-DOMESTIC-REMITTANCE-PATH-2014",
+   "html": {
+    "en": "dist/en/evidence/VIS-DOMESTIC-REMITTANCE-PATH-2014/index.html",
+    "ar": "dist/ar/evidence/VIS-DOMESTIC-REMITTANCE-PATH-2014/index.html"
+   },
+   "title_en": "Domestic remittances in 2014 — population reach vs recipient channels",
+   "title_ar": "الحوالات المحلية في 2014: نطاق الإرسال والاستلام وقنوات المستلمين",
+   "sections": 2,
+   "evidence_ids": [
+    "VIS-DOMESTIC-REMITTANCE-PATH-2014"
+   ],
+   "visual_ids": [],
+   "reading_ids": [],
+   "measurement_ids": [],
+   "source_references": 1,
+   "lineage_state": "BOUND_EXACT",
+   "structured_data": [
+    "BreadcrumbList"
+   ],
+   "hard_state_acceptance": []
+  },
+  {
+   "route": "/evidence/VIS-E-MONEY-RULE-STACK/",
+   "page_family": "Evidence Record",
+   "page_class": "evidence_detail",
+   "stable_object_id": "VIS-E-MONEY-RULE-STACK",
+   "html": {
+    "en": "dist/en/evidence/VIS-E-MONEY-RULE-STACK/index.html",
+    "ar": "dist/ar/evidence/VIS-E-MONEY-RULE-STACK/index.html"
+   },
+   "title_en": "Layers of mobile e-money rules",
+   "title_ar": "طبقات قواعد النقود الإلكترونية",
+   "sections": 2,
+   "evidence_ids": [
+    "VIS-E-MONEY-RULE-STACK"
+   ],
+   "visual_ids": [
+    "VIS-E-MONEY-RULE-STACK"
+   ],
+   "reading_ids": [],
+   "measurement_ids": [],
+   "source_references": 3,
+   "lineage_state": "BOUND_EXACT",
+   "structured_data": [
+    "BreadcrumbList"
+   ],
+   "hard_state_acceptance": []
+  },
+  {
+   "route": "/evidence/VIS-EVIDENCE-CLASS-LADDER/",
+   "page_family": "Evidence Record",
+   "page_class": "evidence_detail",
+   "stable_object_id": "VIS-EVIDENCE-CLASS-LADDER",
+   "html": {
+    "en": "dist/en/evidence/VIS-EVIDENCE-CLASS-LADDER/index.html",
+    "ar": "dist/ar/evidence/VIS-EVIDENCE-CLASS-LADDER/index.html"
+   },
+   "title_en": "What kind of evidence is this?",
+   "title_ar": "ما نوع هذا الدليل؟",
+   "sections": 2,
+   "evidence_ids": [
+    "VIS-EVIDENCE-CLASS-LADDER"
+   ],
+   "visual_ids": [
+    "VIS-EVIDENCE-CLASS-LADDER"
+   ],
+   "reading_ids": [],
+   "measurement_ids": [],
+   "source_references": 0,
+   "lineage_state": "COMPOSITE_OF_OBJECTS",
+   "structured_data": [
+    "BreadcrumbList"
+   ],
+   "hard_state_acceptance": []
+  },
+  {
+   "route": "/evidence/VIS-EVIDENCE-FRESHNESS/",
+   "page_family": "Evidence Record",
+   "page_class": "evidence_detail",
+   "stable_object_id": "VIS-EVIDENCE-FRESHNESS",
+   "html": {
+    "en": "dist/en/evidence/VIS-EVIDENCE-FRESHNESS/index.html",
+    "ar": "dist/ar/evidence/VIS-EVIDENCE-FRESHNESS/index.html"
+   },
+   "title_en": "Where is the evidence current — and where is it old?",
+   "title_ar": "حداثة الدليل بحسب المجال",
+   "sections": 2,
+   "evidence_ids": [
+    "VIS-EVIDENCE-FRESHNESS"
+   ],
+   "visual_ids": [
+    "VIS-EVIDENCE-FRESHNESS"
+   ],
+   "reading_ids": [],
+   "measurement_ids": [],
+   "source_references": 0,
+   "lineage_state": "COMPOSITE_OF_OBJECTS",
+   "structured_data": [
+    "BreadcrumbList"
+   ],
+   "hard_state_acceptance": []
+  },
+  {
+   "route": "/evidence/VIS-EVIDENCE-GAPS/",
+   "page_family": "Evidence Record",
+   "page_class": "evidence_detail",
+   "stable_object_id": "VIS-EVIDENCE-GAPS",
+   "html": {
+    "en": "dist/en/evidence/VIS-EVIDENCE-GAPS/index.html",
+    "ar": "dist/ar/evidence/VIS-EVIDENCE-GAPS/index.html"
+   },
+   "title_en": "What we still do not know",
+   "title_ar": "ما الذي ما زلنا لا نعرفه؟",
+   "sections": 2,
+   "evidence_ids": [
+    "VIS-EVIDENCE-GAPS"
+   ],
+   "visual_ids": [
+    "VIS-EVIDENCE-GAPS"
+   ],
+   "reading_ids": [],
+   "measurement_ids": [],
+   "source_references": 0,
+   "lineage_state": "COMPOSITE_OF_OBJECTS",
+   "structured_data": [
+    "BreadcrumbList"
+   ],
+   "hard_state_acceptance": []
+  },
+  {
+   "route": "/evidence/VIS-FCP-REDRESS-PATH/",
+   "page_family": "Evidence Record",
+   "page_class": "evidence_detail",
+   "stable_object_id": "VIS-FCP-REDRESS-PATH",
+   "html": {
+    "en": "dist/en/evidence/VIS-FCP-REDRESS-PATH/index.html",
+    "ar": "dist/ar/evidence/VIS-FCP-REDRESS-PATH/index.html"
+   },
+   "title_en": "If a complaint is not resolved, what happens?",
+   "title_ar": "إذا لم تُحل الشكوى، ماذا يحدث؟",
+   "sections": 2,
+   "evidence_ids": [
+    "VIS-FCP-REDRESS-PATH"
+   ],
+   "visual_ids": [
+    "VIS-FCP-REDRESS-PATH"
+   ],
+   "reading_ids": [],
+   "measurement_ids": [],
+   "source_references": 2,
+   "lineage_state": "BOUND_EXACT",
+   "structured_data": [
+    "BreadcrumbList"
+   ],
+   "hard_state_acceptance": []
+  },
+  {
+   "route": "/evidence/VIS-FINDEX-ACCESS-USE/",
+   "page_family": "Evidence Record",
+   "page_class": "evidence_detail",
+   "stable_object_id": "VIS-FINDEX-ACCESS-USE",
+   "html": {
+    "en": "dist/en/evidence/VIS-FINDEX-ACCESS-USE/index.html",
+    "ar": "dist/ar/evidence/VIS-FINDEX-ACCESS-USE/index.html"
+   },
+   "title_en": "Account ownership, account use and digital use: three separate measures",
+   "title_ar": "امتلاك الحساب واستخدامه والاستخدام الرقمي: ثلاثة مقاييس منفصلة",
+   "sections": 2,
+   "evidence_ids": [
+    "VIS-FINDEX-ACCESS-USE"
+   ],
+   "visual_ids": [],
+   "reading_ids": [],
+   "measurement_ids": [],
+   "source_references": 1,
+   "lineage_state": "BOUND_EXACT",
+   "structured_data": [
+    "BreadcrumbList"
+   ],
+   "hard_state_acceptance": []
+  },
+  {
+   "route": "/evidence/VIS-FINDEX-BARRIERS/",
+   "page_family": "Evidence Record",
+   "page_class": "evidence_detail",
+   "stable_object_id": "VIS-FINDEX-BARRIERS",
+   "html": {
+    "en": "dist/en/evidence/VIS-FINDEX-BARRIERS/index.html",
+    "ar": "dist/ar/evidence/VIS-FINDEX-BARRIERS/index.html"
+   },
+   "title_en": "Reasons adults give for not having an account",
+   "title_ar": "الأسباب التي يذكرها البالغون لعدم امتلاك حساب",
+   "sections": 2,
+   "evidence_ids": [
+    "VIS-FINDEX-BARRIERS"
+   ],
+   "visual_ids": [],
+   "reading_ids": [],
+   "measurement_ids": [],
+   "source_references": 1,
+   "lineage_state": "BOUND_EXACT",
+   "structured_data": [
+    "BreadcrumbList"
+   ],
+   "hard_state_acceptance": []
+  },
+  {
+   "route": "/evidence/VIS-FINDEX-FLOW-CHANNELS/",
+   "page_family": "Evidence Record",
+   "page_class": "evidence_detail",
+   "stable_object_id": "VIS-FINDEX-FLOW-CHANNELS",
+   "html": {
+    "en": "dist/en/evidence/VIS-FINDEX-FLOW-CHANNELS/index.html",
+    "ar": "dist/ar/evidence/VIS-FINDEX-FLOW-CHANNELS/index.html"
+   },
+   "title_en": "How money reaches people — wages, government transfers, agricultural payments and domestic remittances",
+   "title_ar": "كيف تصل الأموال إلى الأفراد: الأجور والتحويلات الحكومية والمدفوعات الزراعية والحوالات المحلية",
+   "sections": 2,
+   "evidence_ids": [
+    "VIS-FINDEX-FLOW-CHANNELS"
+   ],
+   "visual_ids": [],
+   "reading_ids": [],
+   "measurement_ids": [],
+   "source_references": 1,
+   "lineage_state": "BOUND_EXACT",
+   "structured_data": [
+    "BreadcrumbList"
+   ],
+   "hard_state_acceptance": []
+  },
+  {
+   "route": "/evidence/VIS-FINDEX-GAPS/",
+   "page_family": "Evidence Record",
+   "page_class": "evidence_detail",
+   "stable_object_id": "VIS-FINDEX-GAPS",
+   "html": {
+    "en": "dist/en/evidence/VIS-FINDEX-GAPS/index.html",
+    "ar": "dist/ar/evidence/VIS-FINDEX-GAPS/index.html"
+   },
+   "title_en": "Account ownership and measured gaps: Global Findex 2021 wave (Yemen fieldwork 2022–23)",
+   "title_ar": "امتلاك الحساب والفجوات المقاسة: موجة Global Findex 2021 (العمل الميداني في اليمن 2022–2023)",
+   "sections": 2,
+   "evidence_ids": [
+    "VIS-FINDEX-GAPS"
+   ],
+   "visual_ids": [
+    "VIS-FINDEX-GAPS"
+   ],
+   "reading_ids": [],
+   "measurement_ids": [],
+   "source_references": 1,
+   "lineage_state": "BOUND_EXACT",
+   "structured_data": [
+    "BreadcrumbList"
+   ],
+   "hard_state_acceptance": []
+  },
+  {
+   "route": "/evidence/VIS-FINDEX-OBSERVED-WAVES/",
+   "page_family": "Evidence Record",
+   "page_class": "evidence_detail",
+   "stable_object_id": "VIS-FINDEX-OBSERVED-WAVES",
+   "html": {
+    "en": "dist/en/evidence/VIS-FINDEX-OBSERVED-WAVES/index.html",
+    "ar": "dist/ar/evidence/VIS-FINDEX-OBSERVED-WAVES/index.html"
+   },
+   "title_en": "Account ownership — observed waves, not an annual line",
+   "title_ar": "امتلاك الحساب في موجات Findex المرصودة لليمن، لا سلسلة سنوية",
+   "sections": 2,
+   "evidence_ids": [
+    "VIS-FINDEX-OBSERVED-WAVES"
+   ],
+   "visual_ids": [],
+   "reading_ids": [],
+   "measurement_ids": [],
+   "source_references": 2,
+   "lineage_state": "BOUND_EXACT",
+   "structured_data": [
+    "BreadcrumbList"
+   ],
+   "hard_state_acceptance": []
+  },
+  {
+   "route": "/evidence/VIS-FINDEX-RESILIENCE/",
+   "page_family": "Evidence Record",
+   "page_class": "evidence_detail",
+   "stable_object_id": "VIS-FINDEX-RESILIENCE",
+   "html": {
+    "en": "dist/en/evidence/VIS-FINDEX-RESILIENCE/index.html",
+    "ar": "dist/ar/evidence/VIS-FINDEX-RESILIENCE/index.html"
+   },
+   "title_en": "Can an adult raise emergency funds — in 7 days versus 30?",
+   "title_ar": "هل يستطيع البالغ تدبير أموال للطوارئ خلال 7 أيام مقارنة بـ30 يومًا؟",
+   "sections": 2,
+   "evidence_ids": [
+    "VIS-FINDEX-RESILIENCE"
+   ],
+   "visual_ids": [],
+   "reading_ids": [],
+   "measurement_ids": [],
+   "source_references": 1,
+   "lineage_state": "BOUND_EXACT",
+   "structured_data": [
+    "BreadcrumbList"
+   ],
+   "hard_state_acceptance": []
+  },
+  {
+   "route": "/evidence/VIS-FINDEX-SAMPLE-SUPPORT/",
+   "page_family": "Evidence Record",
+   "page_class": "evidence_detail",
+   "stable_object_id": "VIS-FINDEX-SAMPLE-SUPPORT",
+   "html": {
+    "en": "dist/en/evidence/VIS-FINDEX-SAMPLE-SUPPORT/index.html",
+    "ar": "dist/ar/evidence/VIS-FINDEX-SAMPLE-SUPPORT/index.html"
+   },
+   "title_en": "How many respondents answered each Findex question",
+   "title_ar": "عدد المستجيبين عن كل سؤال في مسح Findex",
+   "sections": 2,
+   "evidence_ids": [
+    "VIS-FINDEX-SAMPLE-SUPPORT"
+   ],
+   "visual_ids": [],
+   "reading_ids": [],
+   "measurement_ids": [],
+   "source_references": 1,
+   "lineage_state": "BOUND_EXACT",
+   "structured_data": [
+    "BreadcrumbList"
+   ],
+   "hard_state_acceptance": []
+  },
+  {
+   "route": "/evidence/VIS-FIRM-CONSTRAINTS/",
+   "page_family": "Evidence Record",
+   "page_class": "evidence_detail",
+   "stable_object_id": "VIS-FIRM-CONSTRAINTS",
+   "html": {
+    "en": "dist/en/evidence/VIS-FIRM-CONSTRAINTS/index.html",
+    "ar": "dist/ar/evidence/VIS-FIRM-CONSTRAINTS/index.html"
+   },
+   "title_en": "Finance is not the only constraint surveyed formal firms report, 2022",
+   "title_ar": "التمويل ليس القيد الوحيد الذي تذكره المنشآت الرسمية المشمولة بالمسح، 2022",
+   "sections": 2,
+   "evidence_ids": [
+    "VIS-FIRM-CONSTRAINTS"
+   ],
+   "visual_ids": [
+    "VIS-FIRM-CONSTRAINTS"
+   ],
+   "reading_ids": [],
+   "measurement_ids": [],
+   "source_references": 1,
+   "lineage_state": "BOUND_EXACT",
+   "structured_data": [
+    "BreadcrumbList"
+   ],
+   "hard_state_acceptance": []
+  },
+  {
+   "route": "/evidence/VIS-FIRM-FINANCE-PATH/",
+   "page_family": "Evidence Record",
+   "page_class": "evidence_detail",
+   "stable_object_id": "VIS-FIRM-FINANCE-PATH",
+   "html": {
+    "en": "dist/en/evidence/VIS-FIRM-FINANCE-PATH/index.html",
+    "ar": "dist/ar/evidence/VIS-FIRM-FINANCE-PATH/index.html"
+   },
+   "title_en": "Loan sources in 18 valid responses from surveyed formal firms, 2022",
+   "title_ar": "مصادر القروض في 18 استجابة صالحة من المنشآت الرسمية المشمولة بالمسح، 2022",
+   "sections": 2,
+   "evidence_ids": [
+    "VIS-FIRM-FINANCE-PATH"
+   ],
+   "visual_ids": [
+    "VIS-FIRM-FINANCE-PATH"
+   ],
+   "reading_ids": [],
+   "measurement_ids": [],
+   "source_references": 1,
+   "lineage_state": "BOUND_EXACT",
+   "structured_data": [
+    "BreadcrumbList"
+   ],
+   "hard_state_acceptance": []
+  },
+  {
+   "route": "/evidence/VIS-FIRM-FINANCE-SEVERITY/",
+   "page_family": "Evidence Record",
+   "page_class": "evidence_detail",
+   "stable_object_id": "VIS-FIRM-FINANCE-SEVERITY",
+   "html": {
+    "en": "dist/en/evidence/VIS-FIRM-FINANCE-SEVERITY/index.html",
+    "ar": "dist/ar/evidence/VIS-FIRM-FINANCE-SEVERITY/index.html"
+   },
+   "title_en": "Finance obstacle severity among surveyed formal firms, excluding those that said they needed no loan, 2022",
+   "title_ar": "شدة عائق التمويل لدى المنشآت الرسمية المشمولة بالمسح، باستثناء التي قالت إنها لا تحتاج إلى قرض، 2022",
+   "sections": 2,
+   "evidence_ids": [
+    "VIS-FIRM-FINANCE-SEVERITY"
+   ],
+   "visual_ids": [
+    "VIS-FIRM-FINANCE-SEVERITY"
+   ],
+   "reading_ids": [],
+   "measurement_ids": [],
+   "source_references": 1,
+   "lineage_state": "BOUND_EXACT",
+   "structured_data": [
+    "BreadcrumbList"
+   ],
+   "hard_state_acceptance": []
+  },
+  {
+   "route": "/evidence/VIS-FL-EVIDENCE-LADDER/",
+   "page_family": "Evidence Record",
+   "page_class": "evidence_detail",
+   "stable_object_id": "VIS-FL-EVIDENCE-LADDER",
+   "html": {
+    "en": "dist/en/evidence/VIS-FL-EVIDENCE-LADDER/index.html",
+    "ar": "dist/ar/evidence/VIS-FL-EVIDENCE-LADDER/index.html"
+   },
+   "title_en": "Financial literacy — activity is not outcome",
+   "title_ar": "الثقافة المالية: النشاط لا يساوي نتيجة",
+   "sections": 2,
+   "evidence_ids": [
+    "VIS-FL-EVIDENCE-LADDER"
+   ],
+   "visual_ids": [
+    "VIS-FL-EVIDENCE-LADDER"
+   ],
+   "reading_ids": [],
+   "measurement_ids": [],
+   "source_references": 5,
+   "lineage_state": "BOUND_EXACT",
+   "structured_data": [
+    "BreadcrumbList"
+   ],
+   "hard_state_acceptance": []
+  },
+  {
+   "route": "/evidence/VIS-INCLUSION-TRANSMISSION/",
+   "page_family": "Evidence Record",
+   "page_class": "evidence_detail",
+   "stable_object_id": "VIS-INCLUSION-TRANSMISSION",
+   "html": {
+    "en": "dist/en/evidence/VIS-INCLUSION-TRANSMISSION/index.html",
+    "ar": "dist/ar/evidence/VIS-INCLUSION-TRANSMISSION/index.html"
+   },
+   "title_en": "Financial inclusion is a connected system, not a single score",
+   "title_ar": "الشمول المالي منظومة مترابطة، لا درجة واحدة",
+   "sections": 2,
+   "evidence_ids": [
+    "VIS-INCLUSION-TRANSMISSION"
+   ],
+   "visual_ids": [
+    "VIS-INCLUSION-TRANSMISSION"
+   ],
+   "reading_ids": [],
+   "measurement_ids": [],
+   "source_references": 0,
+   "lineage_state": "COMPOSITE_OF_OBJECTS",
+   "structured_data": [
+    "BreadcrumbList"
+   ],
+   "hard_state_acceptance": []
+  },
+  {
+   "route": "/evidence/VIS-MECHANISM-METRIC-BRIDGE/",
+   "page_family": "Evidence Record",
+   "page_class": "evidence_detail",
+   "stable_object_id": "VIS-MECHANISM-METRIC-BRIDGE",
+   "html": {
+    "en": "dist/en/evidence/VIS-MECHANISM-METRIC-BRIDGE/index.html",
+    "ar": "dist/ar/evidence/VIS-MECHANISM-METRIC-BRIDGE/index.html"
+   },
+   "title_en": "What may explain the number — without pretending to prove it?",
+   "title_ar": "ما الذي قد يفسر الرقم — من دون ادعاء إثباته؟",
+   "sections": 2,
+   "evidence_ids": [
+    "VIS-MECHANISM-METRIC-BRIDGE"
+   ],
+   "visual_ids": [
+    "VIS-MECHANISM-METRIC-BRIDGE"
+   ],
+   "reading_ids": [],
+   "measurement_ids": [],
+   "source_references": 0,
+   "lineage_state": "COMPOSITE_OF_OBJECTS",
+   "structured_data": [
+    "BreadcrumbList"
+   ],
+   "hard_state_acceptance": []
+  },
+  {
+   "route": "/evidence/VIS-MFI-2014-PANEL/",
+   "page_family": "Evidence Record",
+   "page_class": "evidence_detail",
+   "stable_object_id": "VIS-MFI-2014-PANEL",
+   "html": {
+    "en": "dist/en/evidence/VIS-MFI-2014-PANEL/index.html",
+    "ar": "dist/ar/evidence/VIS-MFI-2014-PANEL/index.html"
+   },
+   "title_en": "Microfinance in 2014 — two comparable quarters, not a long trend",
+   "title_ar": "التمويل الأصغر في 2014: ربعان قابلان للمقارنة، لا اتجاه طويل الأمد",
+   "sections": 2,
+   "evidence_ids": [
+    "VIS-MFI-2014-PANEL"
+   ],
+   "visual_ids": [],
+   "reading_ids": [],
+   "measurement_ids": [],
+   "source_references": 2,
+   "lineage_state": "BOUND_EXACT",
+   "structured_data": [
+    "BreadcrumbList"
+   ],
+   "hard_state_acceptance": []
+  },
+  {
+   "route": "/evidence/VIS-MFI-RUPTURE-LENS/",
+   "page_family": "Evidence Record",
+   "page_class": "evidence_detail",
+   "stable_object_id": "VIS-MFI-RUPTURE-LENS",
+   "html": {
+    "en": "dist/en/evidence/VIS-MFI-RUPTURE-LENS/index.html",
+    "ar": "dist/ar/evidence/VIS-MFI-RUPTURE-LENS/index.html"
+   },
+   "title_en": "2015: a sharp fall in active borrowers within the year",
+   "title_ar": "2015: تراجع حاد في أعداد المقترضين النشطين خلال العام",
+   "sections": 2,
+   "evidence_ids": [
+    "VIS-MFI-RUPTURE-LENS"
+   ],
+   "visual_ids": [],
+   "reading_ids": [],
+   "measurement_ids": [],
+   "source_references": 3,
+   "lineage_state": "BOUND_EXACT",
+   "structured_data": [
+    "BreadcrumbList"
+   ],
+   "hard_state_acceptance": []
+  },
+  {
+   "route": "/evidence/VIS-MFI-SPINE/",
+   "page_family": "Evidence Record",
+   "page_class": "evidence_detail",
+   "stable_object_id": "VIS-MFI-SPINE",
+   "html": {
+    "en": "dist/en/evidence/VIS-MFI-SPINE/index.html",
+    "ar": "dist/ar/evidence/VIS-MFI-SPINE/index.html"
+   },
+   "title_en": "Microfinance observations by date, with gaps and breaks shown",
+   "title_ar": "مشاهدات التمويل الأصغر بحسب التاريخ، مع إظهار الفجوات والانقطاعات",
+   "sections": 2,
+   "evidence_ids": [
+    "VIS-MFI-SPINE"
+   ],
+   "visual_ids": [],
+   "reading_ids": [],
+   "measurement_ids": [],
+   "source_references": 17,
+   "lineage_state": "BOUND_EXACT",
+   "structured_data": [
+    "BreadcrumbList"
+   ],
+   "hard_state_acceptance": []
+  },
+  {
+   "route": "/evidence/VIS-OECD-FCP-TIMELINE/",
+   "page_family": "Evidence Record",
+   "page_class": "evidence_detail",
+   "stable_object_id": "VIS-OECD-FCP-TIMELINE",
+   "html": {
+    "en": "dist/en/evidence/VIS-OECD-FCP-TIMELINE/index.html",
+    "ar": "dist/ar/evidence/VIS-OECD-FCP-TIMELINE/index.html"
+   },
+   "title_en": "Financial consumer protection: which steps from framework to outcome are evidenced?",
+   "title_ar": "حماية المستهلك المالي: أي المراحل من الإطار إلى النتيجة تسندها الأدلة؟",
+   "sections": 2,
+   "evidence_ids": [
+    "VIS-OECD-FCP-TIMELINE"
+   ],
+   "visual_ids": [
+    "VIS-OECD-FCP-TIMELINE"
+   ],
+   "reading_ids": [],
+   "measurement_ids": [],
+   "source_references": 4,
+   "lineage_state": "BOUND_EXACT",
+   "structured_data": [
+    "BreadcrumbList"
+   ],
+   "hard_state_acceptance": []
+  },
+  {
+   "route": "/evidence/VIS-PAYMENT-ANATOMY/",
+   "page_family": "Evidence Record",
+   "page_class": "evidence_detail",
+   "stable_object_id": "VIS-PAYMENT-ANATOMY",
+   "html": {
+    "en": "dist/en/evidence/VIS-PAYMENT-ANATOMY/index.html",
+    "ar": "dist/ar/evidence/VIS-PAYMENT-ANATOMY/index.html"
+   },
+   "title_en": "What does the payment system actually count?",
+   "title_ar": "ما الذي يقيسه نظام المدفوعات فعلًا؟",
+   "sections": 2,
+   "evidence_ids": [
+    "VIS-PAYMENT-ANATOMY"
+   ],
+   "visual_ids": [
+    "VIS-PAYMENT-ANATOMY"
+   ],
+   "reading_ids": [],
+   "measurement_ids": [],
+   "source_references": 1,
+   "lineage_state": "BOUND_EXACT",
+   "structured_data": [
+    "BreadcrumbList"
+   ],
+   "hard_state_acceptance": []
+  },
+  {
+   "route": "/evidence/VIS-PAYMENT-RAILS/",
+   "page_family": "Evidence Record",
+   "page_class": "evidence_detail",
+   "stable_object_id": "VIS-PAYMENT-RAILS",
+   "html": {
+    "en": "dist/en/evidence/VIS-PAYMENT-RAILS/index.html",
+    "ar": "dist/ar/evidence/VIS-PAYMENT-RAILS/index.html"
+   },
+   "title_en": "How the payment architecture is changing",
+   "title_ar": "كيف تتغير بنية المدفوعات؟",
+   "sections": 2,
+   "evidence_ids": [
+    "VIS-PAYMENT-RAILS"
+   ],
+   "visual_ids": [
+    "VIS-PAYMENT-RAILS"
+   ],
+   "reading_ids": [],
+   "measurement_ids": [],
+   "source_references": 11,
+   "lineage_state": "BOUND_EXACT",
+   "structured_data": [
+    "BreadcrumbList"
+   ],
+   "hard_state_acceptance": []
+  },
+  {
+   "route": "/evidence/VIS-POS-TERMINALS/",
+   "page_family": "Evidence Record",
+   "page_class": "evidence_detail",
+   "stable_object_id": "VIS-POS-TERMINALS",
+   "html": {
+    "en": "dist/en/evidence/VIS-POS-TERMINALS/index.html",
+    "ar": "dist/ar/evidence/VIS-POS-TERMINALS/index.html"
+   },
+   "title_en": "Reported POS terminals, monthly",
+   "title_ar": "أجهزة نقاط البيع المبلغ عنها شهريًا",
+   "sections": 2,
+   "evidence_ids": [
+    "VIS-POS-TERMINALS"
+   ],
+   "visual_ids": [
+    "VIS-POS-TERMINALS"
+   ],
+   "reading_ids": [],
+   "measurement_ids": [],
+   "source_references": 11,
+   "lineage_state": "BOUND_EXACT",
+   "structured_data": [
+    "BreadcrumbList"
+   ],
+   "hard_state_acceptance": []
+  },
+  {
+   "route": "/evidence/VIS-POS-TRANSACTIONS/",
+   "page_family": "Evidence Record",
+   "page_class": "evidence_detail",
+   "stable_object_id": "VIS-POS-TRANSACTIONS",
+   "html": {
+    "en": "dist/en/evidence/VIS-POS-TRANSACTIONS/index.html",
+    "ar": "dist/ar/evidence/VIS-POS-TRANSACTIONS/index.html"
+   },
+   "title_en": "Reported POS transactions, monthly",
+   "title_ar": "معاملات نقاط البيع المبلغ عنها شهريًا",
+   "sections": 2,
+   "evidence_ids": [
+    "VIS-POS-TRANSACTIONS"
+   ],
+   "visual_ids": [
+    "VIS-POS-TRANSACTIONS"
+   ],
+   "reading_ids": [],
+   "measurement_ids": [],
+   "source_references": 11,
+   "lineage_state": "BOUND_EXACT",
+   "structured_data": [
+    "BreadcrumbList"
+   ],
+   "hard_state_acceptance": []
+  },
+  {
+   "route": "/evidence/VIS-POS-VALUE/",
+   "page_family": "Evidence Record",
+   "page_class": "evidence_detail",
+   "stable_object_id": "VIS-POS-VALUE",
+   "html": {
+    "en": "dist/en/evidence/VIS-POS-VALUE/index.html",
+    "ar": "dist/ar/evidence/VIS-POS-VALUE/index.html"
+   },
+   "title_en": "Nominal value of reported POS transactions, monthly",
+   "title_ar": "القيمة الاسمية لمعاملات نقاط البيع المبلغ عنها شهريًا",
+   "sections": 2,
+   "evidence_ids": [
+    "VIS-POS-VALUE"
+   ],
+   "visual_ids": [
+    "VIS-POS-VALUE"
+   ],
+   "reading_ids": [],
+   "measurement_ids": [],
+   "source_references": 10,
+   "lineage_state": "BOUND_EXACT",
+   "structured_data": [
+    "BreadcrumbList"
+   ],
+   "hard_state_acceptance": []
+  },
+  {
+   "route": "/evidence/VIS-PROVIDER-OBSERVABILITY/",
+   "page_family": "Evidence Record",
+   "page_class": "evidence_detail",
+   "stable_object_id": "VIS-PROVIDER-OBSERVABILITY",
+   "html": {
+    "en": "dist/en/evidence/VIS-PROVIDER-OBSERVABILITY/index.html",
+    "ar": "dist/ar/evidence/VIS-PROVIDER-OBSERVABILITY/index.html"
+   },
+   "title_en": "What do we actually know about each provider class?",
+   "title_ar": "ما الذي نعرفه فعلًا عن كل فئة من مقدمي الخدمة؟",
+   "sections": 2,
+   "evidence_ids": [
+    "VIS-PROVIDER-OBSERVABILITY"
+   ],
+   "visual_ids": [
+    "VIS-PROVIDER-OBSERVABILITY"
+   ],
+   "reading_ids": [],
+   "measurement_ids": [],
+   "source_references": 0,
+   "lineage_state": "COMPOSITE_OF_OBJECTS",
+   "structured_data": [
+    "BreadcrumbList"
+   ],
+   "hard_state_acceptance": []
+  },
+  {
+   "route": "/evidence/VIS-PROVIDER-TIME/",
+   "page_family": "Evidence Record",
+   "page_class": "evidence_detail",
+   "stable_object_id": "VIS-PROVIDER-TIME",
+   "html": {
+    "en": "dist/en/evidence/VIS-PROVIDER-TIME/index.html",
+    "ar": "dist/ar/evidence/VIS-PROVIDER-TIME/index.html"
+   },
+   "title_en": "Provider status over time: the 2026 roster and dated decisions",
+   "title_ar": "أوضاع مقدمي الخدمات عبر الزمن: قائمة 2026 والقرارات المؤرخة",
+   "sections": 2,
+   "evidence_ids": [
+    "VIS-PROVIDER-TIME"
+   ],
+   "visual_ids": [],
+   "reading_ids": [],
+   "measurement_ids": [],
+   "source_references": 0,
+   "lineage_state": "COMPOSITE_OF_OBJECTS",
+   "structured_data": [
+    "BreadcrumbList"
+   ],
+   "hard_state_acceptance": []
+  },
+  {
+   "route": "/evidence/VIS-REMITTANCE-COST/",
+   "page_family": "Evidence Record",
+   "page_class": "evidence_detail",
+   "stable_object_id": "VIS-REMITTANCE-COST",
+   "html": {
+    "en": "dist/en/evidence/VIS-REMITTANCE-COST/index.html",
+    "ar": "dist/ar/evidence/VIS-REMITTANCE-COST/index.html"
+   },
+   "title_en": "Quoted cost of sending US$200 and US$500 to Yemen from Saudi Arabia and the UAE, 2025 Q3",
+   "title_ar": "التكلفة المعلنة لإرسال 200 و500 دولار أمريكي إلى اليمن من السعودية والإمارات، الربع الثالث من 2025",
+   "sections": 2,
+   "evidence_ids": [
+    "VIS-REMITTANCE-COST"
+   ],
+   "visual_ids": [
+    "VIS-REMITTANCE-COST"
+   ],
+   "reading_ids": [],
+   "measurement_ids": [],
+   "source_references": 2,
+   "lineage_state": "BOUND_EXACT",
+   "structured_data": [
+    "BreadcrumbList"
+   ],
+   "hard_state_acceptance": []
+  },
+  {
+   "route": "/evidence/VIS-REMITTANCE-MACRO/",
+   "page_family": "Evidence Record",
+   "page_class": "evidence_detail",
+   "stable_object_id": "VIS-REMITTANCE-MACRO",
+   "html": {
+    "en": "dist/en/evidence/VIS-REMITTANCE-MACRO/index.html",
+    "ar": "dist/ar/evidence/VIS-REMITTANCE-MACRO/index.html"
+   },
+   "title_en": "Remittances — IMF-reported history, estimate and projections",
+   "title_ar": "التحويلات: القيم التاريخية الواردة في تقارير صندوق النقد الدولي والتقدير والتوقعات",
+   "sections": 2,
+   "evidence_ids": [
+    "VIS-REMITTANCE-MACRO"
+   ],
+   "visual_ids": [
+    "VIS-REMITTANCE-MACRO"
+   ],
+   "reading_ids": [],
+   "measurement_ids": [],
+   "source_references": 2,
+   "lineage_state": "BOUND_EXACT",
+   "structured_data": [
+    "BreadcrumbList"
+   ],
+   "hard_state_acceptance": []
+  },
+  {
+   "route": "/evidence/VIS-SOURCE-COMPARISON/",
+   "page_family": "Evidence Record",
+   "page_class": "evidence_detail",
+   "stable_object_id": "VIS-SOURCE-COMPARISON",
+   "html": {
+    "en": "dist/en/evidence/VIS-SOURCE-COMPARISON/index.html",
+    "ar": "dist/ar/evidence/VIS-SOURCE-COMPARISON/index.html"
+   },
+   "title_en": "Same word, different measure: comparing source definitions",
+   "title_ar": "الكلمة نفسها والمقياس مختلف: مقارنة تعريفات المصادر",
+   "sections": 2,
+   "evidence_ids": [
+    "VIS-SOURCE-COMPARISON"
+   ],
+   "visual_ids": [
+    "VIS-SOURCE-COMPARISON"
+   ],
+   "reading_ids": [],
+   "measurement_ids": [],
+   "source_references": 0,
+   "lineage_state": "COMPOSITE_OF_OBJECTS",
+   "structured_data": [
+    "BreadcrumbList"
+   ],
+   "hard_state_acceptance": []
+  },
+  {
+   "route": "/evidence/VIS-TARGET-RESULT-STATE/",
+   "page_family": "Evidence Record",
+   "page_class": "evidence_detail",
+   "stable_object_id": "VIS-TARGET-RESULT-STATE",
+   "html": {
+    "en": "dist/en/evidence/VIS-TARGET-RESULT-STATE/index.html",
+    "ar": "dist/ar/evidence/VIS-TARGET-RESULT-STATE/index.html"
+   },
+   "title_en": "FMIIP financial access points: January 2025 baseline and June 2030 target",
+   "title_ar": "نقاط الوصول المالي في مشروع FMIIP: خط أساس يناير 2025 ومستهدف يونيو 2030",
+   "sections": 2,
+   "evidence_ids": [
+    "VIS-TARGET-RESULT-STATE"
+   ],
+   "visual_ids": [
+    "VIS-TARGET-RESULT-STATE"
+   ],
+   "reading_ids": [],
+   "measurement_ids": [],
+   "source_references": 1,
+   "lineage_state": "BOUND_EXACT",
+   "structured_data": [
+    "BreadcrumbList"
+   ],
+   "hard_state_acceptance": []
+  },
+  {
+   "route": "/evidence/XW-FMIIP-005/",
+   "page_family": "Evidence Record",
+   "page_class": "evidence_detail",
+   "stable_object_id": "XW-FMIIP-005",
+   "html": {
+    "en": "dist/en/evidence/XW-FMIIP-005/index.html",
+    "ar": "dist/ar/evidence/XW-FMIIP-005/index.html"
+   },
+   "title_en": "The FMIIP access-point target is not comparable with ATM, POS or agent counts",
+   "title_ar": "مستهدف نقاط الوصول في مشروع FMIIP غير قابل للمقارنة بأعداد أجهزة الصراف الآلي ونقاط البيع والوكلاء",
+   "sections": 2,
+   "evidence_ids": [
+    "XW-FMIIP-005"
+   ],
+   "visual_ids": [],
+   "reading_ids": [],
+   "measurement_ids": [],
+   "source_references": 3,
+   "lineage_state": "BOUND_EXACT",
+   "structured_data": [
+    "BreadcrumbList"
+   ],
+   "hard_state_acceptance": []
+  },
+  {
+   "route": "/evidence/compare/",
+   "page_family": "Comparison",
+   "page_class": "static",
+   "stable_object_id": null,
+   "html": {
+    "en": "dist/en/evidence/compare/index.html",
+    "ar": "dist/ar/evidence/compare/index.html"
+   },
+   "title_en": "Compare evidence without forcing unlike measures onto one scale",
+   "title_ar": "قارن الأدلة من دون وضع ما لا يتماثل على مقياس واحد",
+   "sections": 3,
+   "evidence_ids": [
+    "CLM-001",
+    "CLM-010",
+    "CLM-032",
+    "CLM-033",
+    "CLM-035",
+    "CLM-037",
+    "CLM-041",
+    "CLM-044",
+    "CLM-051",
+    "CLM-054",
+    "CLM-056",
+    "FMIIP-BASELINE-2025-01",
+    "VIS-SOURCE-COMPARISON"
+   ],
+   "visual_ids": [
+    "VIS-SOURCE-COMPARISON"
+   ],
+   "reading_ids": [],
+   "measurement_ids": [],
+   "source_references": 19,
+   "lineage_state": null,
+   "structured_data": [],
+   "hard_state_acceptance": [
+    "compare_unlike"
+   ]
+  },
+  {
+   "route": "/explore/",
+   "page_family": "Question Entry",
+   "page_class": "static",
+   "stable_object_id": null,
+   "html": {
+    "en": "dist/en/explore/index.html",
+    "ar": "dist/ar/explore/index.html"
+   },
+   "title_en": "Start with the question, not the dataset.",
+   "title_ar": "ابدأ بالسؤال، لا بالبيانات.",
+   "sections": 9,
+   "evidence_ids": [],
+   "visual_ids": [],
+   "reading_ids": [
+    "CWR-004"
+   ],
+   "measurement_ids": [
+    "MA-001",
+    "MA-003",
+    "MA-004",
+    "MA-005",
+    "MA-006"
+   ],
+   "source_references": 0,
+   "lineage_state": null,
+   "structured_data": [],
+   "hard_state_acceptance": []
+  },
+  {
+   "route": "/finance/",
+   "page_family": "Domain Answer",
+   "page_class": "static",
+   "stable_object_id": null,
+   "html": {
+    "en": "dist/en/finance/index.html",
+    "ar": "dist/ar/finance/index.html"
+   },
+   "title_en": "Finance: borrower, saver and balance figures measure different things",
+   "title_ar": "التمويل: أرقام المقترضين والمدخرين والأرصدة تقيس أشياء مختلفة",
+   "sections": 25,
+   "evidence_ids": [
+    "CLM-020",
+    "CLM-021",
+    "CLM-022",
+    "CLM-033",
+    "CLM-035",
+    "CLM-038",
+    "CLM-046",
+    "CLM-053",
+    "CLM-054",
+    "CLM-055",
+    "CLM-056",
+    "CLM-057",
+    "CLM-058",
+    "MF-ORIG-001+002",
+    "MFI-SPINE-2015-Q4",
+    "QUAL-001",
+    "VIS-MFI-2014-PANEL",
+    "VIS-MFI-RUPTURE-LENS",
+    "VIS-MFI-SPINE"
+   ],
+   "visual_ids": [
+    "VIS-MFI-DIVERGENCE"
+   ],
+   "reading_ids": [
+    "CWR-002",
+    "CWR-006"
+   ],
+   "measurement_ids": [
+    "MA-004",
+    "MA-008"
+   ],
+   "source_references": 38,
+   "lineage_state": null,
+   "structured_data": [],
+   "hard_state_acceptance": []
+  },
+  {
+   "route": "/firms/",
+   "page_family": "Domain Answer",
+   "page_class": "static",
+   "stable_object_id": null,
+   "html": {
+    "en": "dist/en/firms/index.html",
+    "ar": "dist/ar/firms/index.html"
+   },
+   "title_en": "Firms: how much finance matters depends on the question and the firms asked",
+   "title_ar": "المنشآت: مدى أهمية التمويل يتوقف على السؤال وعلى المنشآت التي سُئلت",
+   "sections": 17,
+   "evidence_ids": [
+    "CLM-005",
+    "CLM-006",
+    "CLM-033",
+    "CLM-038",
+    "CLM-059",
+    "CLM-060",
+    "CLM-062",
+    "VIS-FIRM-CONSTRAINTS",
+    "VIS-FIRM-FINANCE-PATH",
+    "VIS-FIRM-FINANCE-SEVERITY"
+   ],
+   "visual_ids": [
+    "VIS-FIRM-CONSTRAINTS",
+    "VIS-FIRM-FINANCE-PATH",
+    "VIS-FIRM-FINANCE-SEVERITY"
+   ],
+   "reading_ids": [
+    "CWR-008"
+   ],
+   "measurement_ids": [
+    "MA-004",
+    "MA-008"
+   ],
+   "source_references": 5,
+   "lineage_state": null,
+   "structured_data": [],
+   "hard_state_acceptance": []
+  },
+  {
+   "route": "/measurement/",
+   "page_family": "Measurement",
+   "page_class": "static",
+   "stable_object_id": null,
+   "html": {
+    "en": "dist/en/measurement/index.html",
+    "ar": "dist/ar/measurement/index.html"
+   },
+   "title_en": "Missing evidence matters when it could change a decision.",
+   "title_ar": "تكتسب فجوة الدليل أهميتها عندما يمكن أن تغيّر قرارًا.",
+   "sections": 19,
+   "evidence_ids": [
+    "VIS-EVIDENCE-GAPS"
+   ],
+   "visual_ids": [
+    "VIS-EVIDENCE-GAPS"
+   ],
+   "reading_ids": [],
+   "measurement_ids": [],
+   "source_references": 1,
+   "lineage_state": null,
+   "structured_data": [],
+   "hard_state_acceptance": [
+    "measurement_nonranking"
+   ]
+  },
+  {
+   "route": "/methodology/",
+   "page_family": "Reference / Trust",
+   "page_class": "static",
+   "stable_object_id": null,
+   "html": {
+    "en": "dist/en/methodology/index.html",
+    "ar": "dist/ar/methodology/index.html"
+   },
+   "title_en": "Preserve the meaning of the evidence before comparing the numbers.",
+   "title_ar": "حافظ على معنى الدليل قبل أن تقارن الأرقام.",
+   "sections": 27,
+   "evidence_ids": [
+    "CLM-004",
+    "CLM-014",
+    "CLM-017",
+    "CLM-022",
+    "CLM-023",
+    "CLM-024",
+    "CLM-025",
+    "CLM-026",
+    "CLM-034",
+    "CLM-036",
+    "CLM-038",
+    "CLM-039",
+    "CLM-042",
+    "CLM-047",
+    "CLM-048",
+    "DS-FINDEX-HISTORY-CROSSWALK",
+    "VIS-FINDEX-SAMPLE-SUPPORT"
+   ],
+   "visual_ids": [],
+   "reading_ids": [],
+   "measurement_ids": [],
+   "source_references": 29,
+   "lineage_state": null,
+   "structured_data": [],
+   "hard_state_acceptance": []
+  },
+  {
+   "route": "/payments/",
+   "page_family": "Domain Answer",
+   "page_class": "static",
+   "stable_object_id": null,
+   "html": {
+    "en": "dist/en/payments/index.html",
+    "ar": "dist/ar/payments/index.html"
+   },
+   "title_en": "Payments: POS terminals reported by the Central Bank of Yemen – Aden rose from 561 to 1,473 between March 2025 and January 2026; how many people use them is not measured",
+   "title_ar": "المدفوعات: ارتفع عدد أجهزة نقاط البيع التي يُبلغ عنها البنك المركزي اليمني – عدن من 561 إلى 1,473 بين مارس 2025 ويناير 2026؛ أما عدد من يستخدمونها فغير مقيس",
+   "sections": 17,
+   "evidence_ids": [
+    "CLM-003",
+    "CLM-004",
+    "CLM-010",
+    "CLM-012",
+    "CLM-015",
+    "CLM-017",
+    "CLM-018",
+    "CLM-045",
+    "CLM-050",
+    "CLM-051",
+    "CLM-052",
+    "NEG-EW-011",
+    "VIS-E-MONEY-RULE-STACK",
+    "VIS-PAYMENT-ANATOMY",
+    "VIS-POS-TERMINALS",
+    "VIS-POS-TRANSACTIONS",
+    "VIS-POS-VALUE",
+    "XW-FMIIP-005"
+   ],
+   "visual_ids": [
+    "VIS-E-MONEY-RULE-STACK",
+    "VIS-PAYMENT-ANATOMY",
+    "VIS-POS-TERMINALS",
+    "VIS-POS-TRANSACTIONS",
+    "VIS-POS-VALUE"
+   ],
+   "reading_ids": [
+    "CWR-005",
+    "CWR-009"
+   ],
+   "measurement_ids": [
+    "MA-002",
+    "MA-007",
+    "MA-009",
+    "MA-010"
+   ],
+   "source_references": 31,
+   "lineage_state": null,
+   "structured_data": [],
+   "hard_state_acceptance": [
+    "institutional_sequence",
+    "mobile_rtl"
+   ]
+  },
+  {
+   "route": "/people/",
+   "page_family": "Domain Answer",
+   "page_class": "static",
+   "stable_object_id": null,
+   "html": {
+    "en": "dist/en/people/index.html",
+    "ar": "dist/ar/people/index.html"
+   },
+   "title_en": "People: one population, evidence from different dates",
+   "title_ar": "الأفراد: مجتمع سكاني واحد، وأدلة من تواريخ مختلفة",
+   "sections": 21,
+   "evidence_ids": [
+    "CLM-001",
+    "CLM-002",
+    "CLM-013",
+    "CLM-023",
+    "CLM-025",
+    "CLM-026",
+    "CLM-027",
+    "CLM-028",
+    "CLM-029",
+    "CLM-030",
+    "CLM-031",
+    "CLM-045",
+    "CLM-050",
+    "CLM-052",
+    "DS-DEMAND-VINTAGE-LENS",
+    "DS-FINDEX-HISTORY-CROSSWALK",
+    "DS-FINDEX-PUBLIC-HISTORY",
+    "VIS-BORROWING-SOURCES-2014",
+    "VIS-DEMAND-VINTAGE-LADDER",
+    "VIS-DOMESTIC-REMITTANCE-PATH-2014",
+    "VIS-FINDEX-ACCESS-USE",
+    "VIS-FINDEX-BARRIERS",
+    "VIS-FINDEX-FLOW-CHANNELS",
+    "VIS-FINDEX-GAPS",
+    "VIS-FINDEX-OBSERVED-WAVES",
+    "VIS-FINDEX-RESILIENCE",
+    "VIS-FL-EVIDENCE-LADDER"
+   ],
+   "visual_ids": [
+    "VIS-FINDEX-GAPS",
+    "VIS-FL-EVIDENCE-LADDER"
+   ],
+   "reading_ids": [
+    "CWR-004",
+    "CWR-007"
+   ],
+   "measurement_ids": [
+    "MA-001",
+    "MA-002",
+    "MA-003",
+    "MA-007",
+    "MA-009",
+    "MA-010"
+   ],
+   "source_references": 23,
+   "lineage_state": null,
+   "structured_data": [],
+   "hard_state_acceptance": [
+    "dense_domain"
+   ]
+  },
+  {
+   "route": "/privacy/",
+   "page_family": "Reference / Trust",
+   "page_class": "operational",
+   "stable_object_id": null,
+   "html": {
+    "en": "dist/en/privacy/index.html",
+    "ar": "dist/ar/privacy/index.html"
+   },
+   "title_en": "Privacy",
+   "title_ar": "الخصوصية",
+   "sections": 6,
+   "evidence_ids": [],
+   "visual_ids": [],
+   "reading_ids": [],
+   "measurement_ids": [],
+   "source_references": 0,
+   "lineage_state": null,
+   "structured_data": [],
+   "hard_state_acceptance": []
+  },
+  {
+   "route": "/providers/",
+   "page_family": "Domain Answer",
+   "page_class": "static",
+   "stable_object_id": null,
+   "html": {
+    "en": "dist/en/providers/index.html",
+    "ar": "dist/ar/providers/index.html"
+   },
+   "title_en": "Providers: official lists show formal status on a date; operation needs other evidence",
+   "title_ar": "قائمة مقدمي الخدمات تثبت وضعًا رسميًا في تاريخ محدد، لكنها لا تثبت التشغيل بذاتها.",
+   "sections": 19,
+   "evidence_ids": [
+    "CLM-008",
+    "CLM-009",
+    "CLM-010",
+    "CLM-015",
+    "CLM-016",
+    "CLM-019",
+    "CLM-055",
+    "NEG-EW-011",
+    "PSE-011",
+    "VIS-PROVIDER-OBSERVABILITY",
+    "VIS-PROVIDER-TIME"
+   ],
+   "visual_ids": [
+    "VIS-PROVIDER-OBSERVABILITY"
+   ],
+   "reading_ids": [
+    "CWR-006"
+   ],
+   "measurement_ids": [
+    "MA-005",
+    "MA-007"
+   ],
+   "source_references": 30,
+   "lineage_state": null,
+   "structured_data": [],
+   "hard_state_acceptance": []
+  },
+  {
+   "route": "/readings/",
+   "page_family": "Reading Index",
+   "page_class": "static",
+   "stable_object_id": null,
+   "html": {
+    "en": "dist/en/readings/index.html",
+    "ar": "dist/ar/readings/index.html"
+   },
+   "title_en": "Evidence Readings",
+   "title_ar": "قراءات الأدلة",
+   "sections": 1,
+   "evidence_ids": [],
+   "visual_ids": [],
+   "reading_ids": [
+    "CWR-001",
+    "CWR-002",
+    "CWR-003",
+    "CWR-004",
+    "CWR-005",
+    "CWR-006",
+    "CWR-007",
+    "CWR-008",
+    "CWR-009",
+    "CWR-010"
+   ],
+   "measurement_ids": [],
+   "source_references": 37,
+   "lineage_state": null,
+   "structured_data": [],
+   "hard_state_acceptance": []
+  },
+  {
+   "route": "/readings/after-transfer-persistence/",
+   "page_family": "Reading",
+   "page_class": "reading_detail",
+   "stable_object_id": "after-transfer-persistence",
+   "html": {
+    "en": "dist/en/readings/after-transfer-persistence/index.html",
+    "ar": "dist/ar/readings/after-transfer-persistence/index.html"
+   },
+   "title_en": "The payment arrived. What happened next?",
+   "title_ar": "وصلت الدفعة. ماذا حدث بعدها؟",
+   "sections": 6,
+   "evidence_ids": [],
+   "visual_ids": [
+    "RV-CWR-010"
+   ],
+   "reading_ids": [
+    "CWR-005",
+    "CWR-009",
+    "CWR-010"
+   ],
+   "measurement_ids": [],
+   "source_references": 4,
+   "lineage_state": null,
+   "structured_data": [
+    "BreadcrumbList",
+    "Article"
+   ],
+   "hard_state_acceptance": []
+  },
+  {
+   "route": "/readings/banking-jump-measurement-basis/",
+   "page_family": "Reading",
+   "page_class": "reading_detail",
+   "stable_object_id": "banking-jump-measurement-basis",
+   "html": {
+    "en": "dist/en/readings/banking-jump-measurement-basis/index.html",
+    "ar": "dist/ar/readings/banking-jump-measurement-basis/index.html"
+   },
+   "title_en": "When the baseline moves",
+   "title_ar": "حين يتحرك خط الأساس",
+   "sections": 6,
+   "evidence_ids": [],
+   "visual_ids": [
+    "RV-CWR-002"
+   ],
+   "reading_ids": [
+    "CWR-001",
+    "CWR-002",
+    "CWR-006"
+   ],
+   "measurement_ids": [],
+   "source_references": 3,
+   "lineage_state": null,
+   "structured_data": [
+    "BreadcrumbList",
+    "Article"
+   ],
+   "hard_state_acceptance": []
+  },
+  {
+   "route": "/readings/define-what-you-count/",
+   "page_family": "Reading",
+   "page_class": "reading_detail",
+   "stable_object_id": "define-what-you-count",
+   "html": {
+    "en": "dist/en/readings/define-what-you-count/index.html",
+    "ar": "dist/ar/readings/define-what-you-count/index.html"
+   },
+   "title_en": "When the unit changes, the story changes",
+   "title_ar": "حين تتغير وحدة القياس، تتغير القصة",
+   "sections": 6,
+   "evidence_ids": [],
+   "visual_ids": [
+    "RV-CWR-003"
+   ],
+   "reading_ids": [
+    "CWR-003",
+    "CWR-005",
+    "CWR-008"
+   ],
+   "measurement_ids": [],
+   "source_references": 9,
+   "lineage_state": null,
+   "structured_data": [
+    "BreadcrumbList",
+    "Article"
+   ],
+   "hard_state_acceptance": []
+  },
+  {
+   "route": "/readings/digital-workaround-not-yet-durable-inclusion/",
+   "page_family": "Reading",
+   "page_class": "reading_detail",
+   "stable_object_id": "digital-workaround-not-yet-durable-inclusion",
+   "html": {
+    "en": "dist/en/readings/digital-workaround-not-yet-durable-inclusion/index.html",
+    "ar": "dist/ar/readings/digital-workaround-not-yet-durable-inclusion/index.html"
+   },
+   "title_en": "When does digital growth become durable use?",
+   "title_ar": "متى يتحول النمو الرقمي إلى استخدام مستمر؟",
+   "sections": 5,
+   "evidence_ids": [],
+   "visual_ids": [
+    "RV-CWR-005"
+   ],
+   "reading_ids": [
+    "CWR-005",
+    "CWR-009",
+    "CWR-010"
+   ],
+   "measurement_ids": [],
+   "source_references": 1,
+   "lineage_state": null,
+   "structured_data": [
+    "BreadcrumbList",
+    "Article"
+   ],
+   "hard_state_acceptance": []
+  },
+  {
+   "route": "/readings/finance-constraint-different-questions/",
+   "page_family": "Reading",
+   "page_class": "reading_detail",
+   "stable_object_id": "finance-constraint-different-questions",
+   "html": {
+    "en": "dist/en/readings/finance-constraint-different-questions/index.html",
+    "ar": "dist/ar/readings/finance-constraint-different-questions/index.html"
+   },
+   "title_en": "How can 22% and 91.84% both be right?",
+   "title_ar": "كيف تكون 22% و91.84% صحيحتين معًا؟",
+   "sections": 7,
+   "evidence_ids": [],
+   "visual_ids": [
+    "RV-CWR-008"
+   ],
+   "reading_ids": [
+    "CWR-003",
+    "CWR-006",
+    "CWR-008"
+   ],
+   "measurement_ids": [],
+   "source_references": 2,
+   "lineage_state": null,
+   "structured_data": [
+    "BreadcrumbList",
+    "Article"
+   ],
+   "hard_state_acceptance": []
+  },
+  {
+   "route": "/readings/from-rail-to-result-missing-middle/",
+   "page_family": "Reading",
+   "page_class": "reading_detail",
+   "stable_object_id": "from-rail-to-result-missing-middle",
+   "html": {
+    "en": "dist/en/readings/from-rail-to-result-missing-middle/index.html",
+    "ar": "dist/ar/readings/from-rail-to-result-missing-middle/index.html"
+   },
+   "title_en": "When does a payment reform become financial inclusion?",
+   "title_ar": "متى يصبح إصلاح المدفوعات تحسنًا في الشمول المالي؟",
+   "sections": 6,
+   "evidence_ids": [],
+   "visual_ids": [
+    "RV-CWR-009"
+   ],
+   "reading_ids": [
+    "CWR-004",
+    "CWR-009",
+    "CWR-010"
+   ],
+   "measurement_ids": [],
+   "source_references": 10,
+   "lineage_state": null,
+   "structured_data": [
+    "BreadcrumbList",
+    "Article"
+   ],
+   "hard_state_acceptance": []
+  },
+  {
+   "route": "/readings/gender-gap-measured-causes-open/",
+   "page_family": "Reading",
+   "page_class": "reading_detail",
+   "stable_object_id": "gender-gap-measured-causes-open",
+   "html": {
+    "en": "dist/en/readings/gender-gap-measured-causes-open/index.html",
+    "ar": "dist/ar/readings/gender-gap-measured-causes-open/index.html"
+   },
+   "title_en": "The gender gap is measured. Its explanation is still open.",
+   "title_ar": "الفجوة بين النساء والرجال مقاسة. أما تفسيرها فما يزال مفتوحًا.",
+   "sections": 4,
+   "evidence_ids": [],
+   "visual_ids": [
+    "RV-CWR-007"
+   ],
+   "reading_ids": [
+    "CWR-004",
+    "CWR-005",
+    "CWR-007"
+   ],
+   "measurement_ids": [],
+   "source_references": 3,
+   "lineage_state": null,
+   "structured_data": [
+    "BreadcrumbList",
+    "Article"
+   ],
+   "hard_state_acceptance": []
+  },
+  {
+   "route": "/readings/microfinance-structural-divergence/",
+   "page_family": "Reading",
+   "page_class": "reading_detail",
+   "stable_object_id": "microfinance-structural-divergence",
+   "html": {
+    "en": "dist/en/readings/microfinance-structural-divergence/index.html",
+    "ar": "dist/ar/readings/microfinance-structural-divergence/index.html"
+   },
+   "title_en": "What exactly do we mean by microfinance growth?",
+   "title_ar": "ماذا نعني تحديدًا بنمو التمويل الأصغر؟",
+   "sections": 7,
+   "evidence_ids": [],
+   "visual_ids": [
+    "RV-CWR-006"
+   ],
+   "reading_ids": [
+    "CWR-002",
+    "CWR-003",
+    "CWR-006"
+   ],
+   "measurement_ids": [],
+   "source_references": 9,
+   "lineage_state": null,
+   "structured_data": [
+    "BreadcrumbList",
+    "Article"
+   ],
+   "hard_state_acceptance": []
+  },
+  {
+   "route": "/readings/reforms-newer-than-people-evidence/",
+   "page_family": "Reading",
+   "page_class": "reading_detail",
+   "stable_object_id": "reforms-newer-than-people-evidence",
+   "html": {
+    "en": "dist/en/readings/reforms-newer-than-people-evidence/index.html",
+    "ar": "dist/ar/readings/reforms-newer-than-people-evidence/index.html"
+   },
+   "title_en": "The system is changing. What has reached people?",
+   "title_ar": "المنظومة المالية تتغير. فما الذي وصل إلى الناس؟",
+   "sections": 4,
+   "evidence_ids": [],
+   "visual_ids": [
+    "RV-CWR-004"
+   ],
+   "reading_ids": [
+    "CWR-003",
+    "CWR-004",
+    "CWR-009"
+   ],
+   "measurement_ids": [],
+   "source_references": 12,
+   "lineage_state": null,
+   "structured_data": [
+    "BreadcrumbList",
+    "Article"
+   ],
+   "hard_state_acceptance": []
+  },
+  {
+   "route": "/readings/same-year-different-number/",
+   "page_family": "Reading",
+   "page_class": "reading_detail",
+   "stable_object_id": "same-year-different-number",
+   "html": {
+    "en": "dist/en/readings/same-year-different-number/index.html",
+    "ar": "dist/ar/readings/same-year-different-number/index.html"
+   },
+   "title_en": "Same year, different number",
+   "title_ar": "العام نفسه، رقم مختلف",
+   "sections": 7,
+   "evidence_ids": [],
+   "visual_ids": [
+    "RV-CWR-001"
+   ],
+   "reading_ids": [
+    "CWR-001",
+    "CWR-002",
+    "CWR-004"
+   ],
+   "measurement_ids": [],
+   "source_references": 5,
+   "lineage_state": null,
+   "structured_data": [
+    "BreadcrumbList",
+    "Article"
+   ],
+   "hard_state_acceptance": [
+    "reading_longform"
+   ]
+  },
+  {
+   "route": "/reforms/",
+   "page_family": "Domain Answer",
+   "page_class": "static",
+   "stable_object_id": null,
+   "html": {
+    "en": "dist/en/reforms/index.html",
+    "ar": "dist/ar/reforms/index.html"
+   },
+   "title_en": "A reform can be real before its outcome is known.",
+   "title_ar": "قد يقع الإصلاح فعلًا وتبقى نتيجته مجهولة.",
+   "sections": 21,
+   "evidence_ids": [
+    "CLM-011",
+    "CLM-012",
+    "CLM-013",
+    "CLM-018",
+    "CLM-046",
+    "CLM-049",
+    "FMIIP-BASELINE-2025-01",
+    "VIS-CAPITAL-CONTEXT",
+    "VIS-FCP-REDRESS-PATH",
+    "VIS-OECD-FCP-TIMELINE",
+    "VIS-PAYMENT-RAILS",
+    "VIS-TARGET-RESULT-STATE",
+    "XW-FMIIP-005"
+   ],
+   "visual_ids": [
+    "VIS-CAPITAL-CONTEXT",
+    "VIS-FCP-REDRESS-PATH",
+    "VIS-OECD-FCP-TIMELINE",
+    "VIS-PAYMENT-RAILS",
+    "VIS-TARGET-RESULT-STATE"
+   ],
+   "reading_ids": [
+    "CWR-009",
+    "CWR-010"
+   ],
+   "measurement_ids": [
+    "MA-002",
+    "MA-006",
+    "MA-008",
+    "MA-009",
+    "MA-010"
+   ],
+   "source_references": 34,
+   "lineage_state": null,
+   "structured_data": [],
+   "hard_state_acceptance": []
+  },
+  {
+   "route": "/remittances/",
+   "page_family": "Domain Answer",
+   "page_class": "static",
+   "stable_object_id": null,
+   "html": {
+    "en": "dist/en/remittances/index.html",
+    "ar": "dist/ar/remittances/index.html"
+   },
+   "title_en": "Remittances: each figure depends on its source, concept and edition",
+   "title_ar": "التحويلات: كل رقم يتوقف على مصدره ومفهومه والإصدار الذي نُشر فيه",
+   "sections": 17,
+   "evidence_ids": [
+    "CLM-007",
+    "CLM-030",
+    "CLM-032",
+    "CLM-034",
+    "CLM-035",
+    "CLM-036",
+    "CLM-037",
+    "CLM-039",
+    "CLM-040",
+    "CLM-041",
+    "CLM-042",
+    "CLM-043",
+    "CLM-044",
+    "CLM-047",
+    "CLM-048",
+    "VIS-DOMESTIC-REMITTANCE-PATH-2014",
+    "VIS-FINDEX-FLOW-CHANNELS",
+    "VIS-REMITTANCE-COST",
+    "VIS-REMITTANCE-MACRO"
+   ],
+   "visual_ids": [
+    "VIS-REMITTANCE-COST",
+    "VIS-REMITTANCE-MACRO"
+   ],
+   "reading_ids": [
+    "CWR-001"
+   ],
+   "measurement_ids": [
+    "MA-001"
+   ],
+   "source_references": 15,
+   "lineage_state": null,
+   "structured_data": [],
+   "hard_state_acceptance": [
+    "vintage_conflict"
+   ]
+  },
+  {
+   "route": "/rights/",
+   "page_family": "Reference / Trust",
+   "page_class": "operational",
+   "stable_object_id": null,
+   "html": {
+    "en": "dist/en/rights/index.html",
+    "ar": "dist/ar/rights/index.html"
+   },
+   "title_en": "Source and data rights",
+   "title_ar": "حقوق المصادر والبيانات",
+   "sections": 5,
+   "evidence_ids": [],
+   "visual_ids": [],
+   "reading_ids": [],
+   "measurement_ids": [],
+   "source_references": 0,
+   "lineage_state": null,
+   "structured_data": [],
+   "hard_state_acceptance": []
+  },
+  {
+   "route": "/terms/",
+   "page_family": "Reference / Trust",
+   "page_class": "operational",
+   "stable_object_id": null,
+   "html": {
+    "en": "dist/en/terms/index.html",
+    "ar": "dist/ar/terms/index.html"
+   },
+   "title_en": "Terms and responsible reuse",
+   "title_ar": "الشروط وإعادة الاستخدام المسؤول",
+   "sections": 6,
+   "evidence_ids": [],
+   "visual_ids": [],
+   "reading_ids": [],
+   "measurement_ids": [],
+   "source_references": 0,
+   "lineage_state": null,
+   "structured_data": [],
+   "hard_state_acceptance": []
+  }
+ ],
+ "hard_states": {
+  "acceptance_cases": [
+   {
+    "state_id": "dense_domain",
+    "route": "/people/",
+    "must_prove": "High evidence density remains scannable; survey wave/fieldwork/universe/limitation are not detached from the headline figure."
+   },
+   {
+    "state_id": "sparse_unknown",
+    "route": "/access/",
+    "must_prove": "Unknown geography is visibly unknown, not rendered as zero or an empty-map implication."
+   },
+   {
+    "state_id": "institutional_sequence",
+    "route": "/payments/",
+    "must_prove": "FPS, RTGS, interoperability, institution-building, operation, use and outcome are visually distinct states."
+   },
+   {
+    "state_id": "vintage_conflict",
+    "route": "/remittances/",
+    "must_prove": "Same-year revisions and observed/estimated/projected states are visually legible without selecting a winner."
+   },
+   {
+    "state_id": "verification_dense",
+    "route": "/evidence/CLM-003/",
+    "must_prove": "Raw totals and source-displayed percentages can coexist with the discrepancy visible and the limitation prominent."
+   },
+   {
+    "state_id": "verification_sparse",
+    "route": "/evidence/CLM-015/",
+    "must_prove": "A semantic/control object with no source expected is not styled as missing evidence or an error."
+   },
+   {
+    "state_id": "compare_unlike",
+    "route": "/evidence/compare/",
+    "must_prove": "The UI prevents visual pressure to compare unlike units/universes and makes the boundary the first conclusion."
+   },
+   {
+    "state_id": "source_scale",
+    "route": "/data/",
+    "must_prove": "All source records remain discoverable without a wall-of-links interface; the curated resource cards are visibly curated, not a separate authority."
+   },
+   {
+    "state_id": "reading_longform",
+    "route": "/readings/same-year-different-number/",
+    "must_prove": "Analytical narrative remains bounded, readable and directly traceable to verification records."
+   },
+   {
+    "state_id": "measurement_nonranking",
+    "route": "/measurement/",
+    "must_prove": "P0/P1 reads as evidence-sequencing within this agenda, never as national policy or spending priority."
+   },
+   {
+    "state_id": "trust_plain_language",
+    "route": "/about/",
+    "must_prove": "Purpose, CauseWay role, limits, source authority and correction are understandable without backend terminology."
+   },
+   {
+    "state_id": "mobile_rtl",
+    "route": "/ar/payments/",
+    "must_prove": "At 320–400px Arabic order, numeric/Latin isolation, tables, controls and verification path remain coherent."
+   }
+  ],
+  "evidence_lineage_states": {
+   "BOUND_EXACT": {
+    "records": 93,
+    "verification_copy_ui_id": "UI-VERIFY-BOUND",
+    "example_routes": [
+     "/en/evidence/CLM-001/",
+     "/en/evidence/CLM-002/",
+     "/en/evidence/CLM-003/"
+    ]
+   },
+   "BOUND_PARTIAL": {
+    "records": 3,
+    "verification_copy_ui_id": "UI-VERIFY-PARTIAL",
+    "example_routes": [
+     "/en/evidence/CLM-039/",
+     "/en/evidence/CLM-046/",
+     "/en/evidence/CLM-056/"
+    ]
+   },
+   "COMPOSITE_OF_OBJECTS": {
+    "records": 13,
+    "verification_copy_ui_id": "UI-VERIFY-COMPOSITE",
+    "example_routes": [
+     "/en/evidence/CLM-014/",
+     "/en/evidence/CLM-031/",
+     "/en/evidence/DS-DEMAND-VINTAGE-LENS/"
+    ]
+   },
+   "FRAMING_NO_FACT": {
+    "records": 1,
+    "verification_copy_ui_id": "UI-EVID-FRAMING",
+    "example_routes": [
+     "/en/evidence/CLM-004/"
+    ]
+   }
+  },
+  "visual_tiers": {
+   "CORE_ANALYTICAL": [
+    "RV-CWR-004",
+    "VIS-FINDEX-GAPS",
+    "VIS-FIRM-CONSTRAINTS",
+    "VIS-PAYMENT-ANATOMY",
+    "VIS-POS-TERMINALS",
+    "VIS-POS-TRANSACTIONS",
+    "VIS-POS-VALUE",
+    "VIS-REMITTANCE-COST",
+    "VIS-REMITTANCE-MACRO"
+   ],
+   "RETIRE_FROM_DESIGN": [
+    "VIS-CAPITAL-CONTEXT"
+   ],
+   "SIGNATURE": [
+    "RV-CWR-001",
+    "RV-CWR-009",
+    "VIS-PROVIDER-OBSERVABILITY"
+   ],
+   "SUPPORTING": [
+    "RV-CWR-002",
+    "RV-CWR-003",
+    "RV-CWR-005",
+    "RV-CWR-006",
+    "RV-CWR-007",
+    "RV-CWR-008",
+    "RV-CWR-010",
+    "VIS-E-MONEY-RULE-STACK",
+    "VIS-EVIDENCE-CLASS-LADDER",
+    "VIS-FCP-REDRESS-PATH",
+    "VIS-FL-EVIDENCE-LADDER",
+    "VIS-PAYMENT-RAILS"
+   ],
+   "TABLE_TEXT_FIRST": [
+    "VIS-ACCESS-EVIDENCE-LAYER",
+    "VIS-EVIDENCE-FRESHNESS",
+    "VIS-EVIDENCE-GAPS",
+    "VIS-FIRM-FINANCE-PATH",
+    "VIS-FIRM-FINANCE-SEVERITY",
+    "VIS-INCLUSION-TRANSMISSION",
+    "VIS-MECHANISM-METRIC-BRIDGE",
+    "VIS-MFI-DIVERGENCE",
+    "VIS-OECD-FCP-TIMELINE",
+    "VIS-SOURCE-COMPARISON",
+    "VIS-TARGET-RESULT-STATE"
+   ]
+  },
+  "visual_grammar_states": {
+   "evidence_states": [
+    {
+     "token": "MEASURED",
+     "ui_id": "UI-VIS-STATE-MEASURED"
+    },
+    {
+     "token": "REPORTED",
+     "ui_id": "UI-VIS-STATE-REPORTED"
+    },
+    {
+     "token": "ADMINISTRATIVE",
+     "ui_id": "UI-VIS-STATE-ADMINISTRATIVE"
+    },
+    {
+     "token": "DERIVED",
+     "ui_id": "UI-VIS-STATE-DERIVED"
+    },
+    {
+     "token": "HISTORICAL",
+     "ui_id": "UI-VIS-STATE-HISTORICAL"
+    },
+    {
+     "token": "PROGRAMME",
+     "ui_id": "UI-VIS-STATE-PROGRAMME"
+    },
+    {
+     "token": "ESTIMATED",
+     "ui_id": "UI-VIS-STATE-ESTIMATED"
+    },
+    {
+     "token": "PROJECTED",
+     "ui_id": "UI-VIS-STATE-PROJECTED"
+    },
+    {
+     "token": "PARTIAL",
+     "ui_id": "UI-VIS-STATE-PARTIAL"
+    },
+    {
+     "token": "UNKNOWN",
+     "ui_id": "UI-VIS-STATE-UNKNOWN"
+    }
+   ],
+   "structure_markers": [
+    {
+     "token": "BREAK_VINTAGE",
+     "ui_id": "UI-VIS-BREAK-VINTAGE"
+    },
+    {
+     "token": "BREAK_UNIVERSE",
+     "ui_id": "UI-VIS-BREAK-UNIVERSE"
+    },
+    {
+     "token": "SAME_YEAR_REVISION",
+     "ui_id": "UI-VIS-SAME-YEAR-REVISION"
+    },
+    {
+     "token": "MISSING",
+     "ui_id": "UI-VIS-MISSING"
+    },
+    {
+     "token": "DISAGREEMENT",
+     "ui_id": "UI-VIS-DISAGREEMENT"
+    },
+    {
+     "token": "TARGET",
+     "ui_id": "UI-VIS-TARGET"
+    },
+    {
+     "token": "RESULT",
+     "ui_id": "UI-VIS-RESULT"
+    },
+    {
+     "token": "NOT_COMPARABLE",
+     "ui_id": "UI-VIS-NOT-COMPARABLE"
+    },
+    {
+     "token": "NOMINAL",
+     "ui_id": "UI-VIS-NOMINAL"
+    }
+   ]
+  },
+  "technical_states": [
+   {
+    "state_id": "compare_wrong_count",
+    "how_to_reach": "/en/evidence/compare/?records=CLM-001",
+    "expected": "Announced technical input error; no verdict is drawn"
+   },
+   {
+    "state_id": "compare_unknown_id",
+    "how_to_reach": "/en/evidence/compare/?records=CLM-001,NOT-A-RECORD",
+    "expected": "Technical input error naming the unknown reference"
+   },
+   {
+    "state_id": "compare_malformed",
+    "how_to_reach": "/en/evidence/compare/?records=,,",
+    "expected": "Technical input error"
+   },
+   {
+    "state_id": "compare_duplicate",
+    "how_to_reach": "/en/evidence/compare/?records=CLM-001,CLM-001",
+    "expected": "A visible 'same record' state, never a comparison"
+   },
+   {
+    "state_id": "search_no_match",
+    "how_to_reach": "/en/ then Search for a string with no match",
+    "expected": "Says that no match is not absence of evidence"
+   },
+   {
+    "state_id": "search_index_unavailable",
+    "how_to_reach": "/en/ with /static-data/search_index.json unreachable",
+    "expected": "Technical-unavailable state, announced; navigation still works"
+   },
+   {
+    "state_id": "source_link_unknown",
+    "how_to_reach": "/en/data/?source=SRC-NOT-A-SOURCE#source-SRC-NOT-A-SOURCE",
+    "expected": "Announced link error; every source stays visible"
+   },
+   {
+    "state_id": "source_filter_no_match",
+    "how_to_reach": "/en/data/ then filter with a string with no match",
+    "expected": "Says that no match is not absence of evidence"
+   },
+   {
+    "state_id": "record_context_unknown",
+    "how_to_reach": "/en/contact/?record=CLM-999",
+    "expected": "Technical link error; the report path still works"
+   },
+   {
+    "state_id": "record_context_malformed",
+    "how_to_reach": "/en/corrections/?record=%3Cx%3E",
+    "expected": "Technical link error"
+   },
+   {
+    "state_id": "record_context_valid",
+    "how_to_reach": "/en/contact/?record=CLM-001",
+    "expected": "The originating record is carried into the report action"
+   },
+   {
+    "state_id": "not_found",
+    "how_to_reach": "/en/no-such-page/",
+    "expected": "Bilingual 404 (Arabic first), noindex, with routes back into the evidence"
+   },
+   {
+    "state_id": "no_javascript",
+    "how_to_reach": "any page with JavaScript disabled",
+    "expected": "Governed noscript note; every page's evidence stays readable"
+   },
+   {
+    "state_id": "language_switch_state",
+    "how_to_reach": "/en/evidence/compare/?records=CLM-001,CLM-003 → switch language",
+    "expected": "Same route, query and hash in the other edition"
+   }
+  ]
+ },
+ "journeys": [
+  {
+   "journey_id": "J01_FIRST_TIME_PUBLIC",
+   "persona": "First-time public reader / citizen / student",
+   "job": "Understand the strongest people-side evidence without learning the site taxonomy first.",
+   "path": [
+    "/",
+    "/explore/",
+    "/people/",
+    "/evidence/CLM-001/"
+   ],
+   "success_condition": "Plain answer precedes method depth; the verification record exposes scope, period, limitation and source."
+  },
+  {
+   "journey_id": "J02_JOURNALIST_NUMBER_VERIFY",
+   "persona": "Journalist",
+   "job": "Verify a quoted 11.9% figure safely.",
+   "path": [
+    "/evidence/CLM-001/",
+    "/data/"
+   ],
+   "success_condition": "The record makes the observation clock, population/base, limitation and original-source path visible before reuse."
+  },
+  {
+   "journey_id": "J03_JOURNALIST_READING_TO_EVIDENCE",
+   "persona": "Journalist / editor",
+   "job": "Challenge an analytical Reading and reach the evidence it relies on.",
+   "path": [
+    "/readings/gender-gap-measured-causes-open/",
+    "/evidence/CLM-002/",
+    "/data/"
+   ],
+   "success_condition": "Reading detail provides direct links to bound Evidence Records rather than asking the user to rediscover them."
+  },
+  {
+   "journey_id": "J04_RESEARCHER_COMPARABILITY",
+   "persona": "Researcher / PhD student",
+   "job": "Decide whether two evidence objects are legitimately comparable.",
+   "path": [
+    "/evidence/",
+    "/evidence/compare/"
+   ],
+   "success_condition": "Compatibility is tested before values are compared, and selected records can be opened directly."
+  },
+  {
+   "journey_id": "J05_REGULATOR_REFORM_CHAIN",
+   "persona": "Regulator / senior decision-maker",
+   "job": "Understand how far reform evidence reaches without treating a rule as an outcome.",
+   "path": [
+    "/",
+    "/explore/",
+    "/reforms/",
+    "/evidence/CLM-011/"
+   ],
+   "success_condition": "Rule, implementation and outcome states remain separated and the primary verification route is explicit."
+  },
+  {
+   "journey_id": "J06_TECHNICAL_PAYMENTS",
+   "persona": "Central-bank / payments technical analyst",
+   "job": "Inspect POS infrastructure change and verify the underlying administrative evidence.",
+   "path": [
+    "/payments/",
+    "/evidence/CLM-003/",
+    "/data/"
+   ],
+   "success_condition": "Terminals, transactions, value, people and use are not collapsed; source records are reachable."
+  },
+  {
+   "journey_id": "J07_PROVIDER_MARKET_SIGNAL",
+   "persona": "Bank / MFB / MFI / PSP / exchange provider",
+   "job": "Understand evidenced provider status without inferring operation or national reach.",
+   "path": [
+    "/explore/",
+    "/providers/",
+    "/evidence/CLM-009/"
+   ],
+   "success_condition": "Listing/licensing and dated status are visible while operation remains a separate evidence question."
+  },
+  {
+   "journey_id": "J08_DEVELOPMENT_PARTNER",
+   "persona": "World Bank / IMF / DFI / donor analyst",
+   "job": "Move from a domain answer to method and source verification.",
+   "path": [
+    "/people/",
+    "/evidence/CLM-001/",
+    "/methodology/"
+   ],
+   "success_condition": "The same evidence object can be checked at answer, record and method depth without a second source of truth."
+  },
+  {
+   "journey_id": "J09_HUMANITARIAN_FLOWS",
+   "persona": "Humanitarian / cash-transfer / social-protection practitioner",
+   "job": "Distinguish cash-transfer delivery, remittance/macro flows and durable financial use rather than treating successful payment delivery as inclusion.",
+   "path": [
+    "/readings/after-transfer-persistence/",
+    "/evidence/CLM-045/",
+    "/payments/",
+    "/data/"
+   ],
+   "success_condition": "The journey separates payment delivery from post-transfer persistence, keeps programme evidence bounded and reconnects the question to the wider payment system and source path."
+  },
+  {
+   "journey_id": "J10_CHALLENGE_CORRECTION",
+   "persona": "Any user challenging a public record",
+   "job": "Report a suspected error while preserving the public record until review.",
+   "path": [
+    "/evidence/CLM-001/",
+    "/corrections/",
+    "/contact/"
+   ],
+   "success_condition": "Stable record identity and correction/report pathways remain connected; no silent change is implied."
+  },
+  {
+   "journey_id": "J11_REUSE_RIGHTS",
+   "persona": "Researcher / journalist / reuser",
+   "job": "Determine what may be cited, factually used or redistributed.",
+   "path": [
+    "/data/",
+    "/rights/",
+    "/terms/"
+   ],
+   "success_condition": "Rights and reuse are discoverable from data/source work and remain separate from factual use and citation."
+  },
+  {
+   "journey_id": "J12_ACCESSIBILITY_REPORT",
+   "persona": "Keyboard / screen-reader / accessibility user",
+   "job": "Find the accessibility position and report a problem.",
+   "path": [
+    "/accessibility/",
+    "/contact/"
+   ],
+   "success_condition": "Accessibility status and the monitored report path are both discoverable without a hidden route."
+  },
+  {
+   "journey_id": "J13_PAYMENT_RAIL_EXPLAINER",
+   "persona": "Public / merchant / financial-provider / programme user",
+   "job": "Understand what FPS, RTGS, QR/e-wallet interconnection and YPCC mean in the current reform sequence without mistaking milestones for live adoption.",
+   "path": [
+    "/payments/",
+    "/reforms/",
+    "/evidence/CLM-018/",
+    "/data/"
+   ],
+   "success_condition": "The product explains the rail/institution roles in plain language, separates project/design/integration/institutional states from observed use, and provides a verification path."
+  }
+ ]
+}

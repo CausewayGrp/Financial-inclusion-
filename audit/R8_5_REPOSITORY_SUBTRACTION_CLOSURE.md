@@ -54,3 +54,8 @@ invariance stays at 0 differing page pairs.
 - permanent gates pass — **met** (validator PASS 0/0; generator 21/21; literal audit 12,741/0; lineage 8/8;
   determinism; diagrams; invariance 0; browser suites);
 - public semantics unchanged except accepted F1/F2/F4 copy corrections — **met**.
+
+## Addendum — F8 (26 September 2026)
+
+The deferred gate is in place: stale recipient-start status is caught by R86-G01 (with R86-G02…G04 for the route
+inventory, the handoff file set and handoff paths). Record: `audit/R8_6_DESIGN_HANDOFF_FREEZE_CLOSURE.md`.

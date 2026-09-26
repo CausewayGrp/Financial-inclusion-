@@ -1615,7 +1615,8 @@ def page(spec,lang):
         obj=_evidence_object(spec)
         if obj:
             citation_meta=f'<meta name="yfie-citation" content="{esc(evidence_citation_context(spec,obj,lang))}"><meta name="yfie-record-id" content="{esc(obj.get("object_id") or obj.get("evidence_object_id") or "")}">'
-    return f'<!doctype html><html lang="{lang}" dir="{direction}"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#082d4f"><title>{esc(title)} — {product}</title><meta name="description" content="{esc(desc)}">{citation_meta}<link rel="stylesheet" href="/assets/styles.css">{DISC.head_links(route,lang,ORIGIN)}{structured_data(spec,lang,product)}</head><body><noscript><div class="noscript-note">{esc(ui_text("UI-NOSCRIPT-NOTE",lang))}</div></noscript>{header(lang,route)}<main id="main" class="main">{body}</main>{footer(lang)}{ui_json(lang)}<script src="/assets/app.js" defer></script></body></html>'
+    og_kind='article' if cls=='reading_detail' else 'website'
+    return f'<!doctype html><html lang="{lang}" dir="{direction}"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#082d4f"><title>{esc(title)} — {product}</title><meta name="description" content="{esc(desc)}">{citation_meta}<link rel="stylesheet" href="/assets/styles.css">{DISC.head_links(route,lang,ORIGIN)}{DISC.social_meta(title,desc,lang,route,product,og_kind,ORIGIN)}{structured_data(spec,lang,product)}</head><body><noscript><div class="noscript-note">{esc(ui_text("UI-NOSCRIPT-NOTE",lang))}</div></noscript>{header(lang,route)}<main id="main" class="main">{body}</main>{footer(lang)}{ui_json(lang)}<script src="/assets/app.js" defer></script></body></html>'
 
 
 files=SPECS

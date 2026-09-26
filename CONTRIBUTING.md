@@ -47,7 +47,7 @@ unpushed clone does not exist yet. ZIPs are *outputs* of checkpoint tags (§6), 
   | `tx/<id>-<slug>` | A Master transaction or a set of them, e.g. `tx/tc-j-openai-corrections` |
   | `review/<reviewer>-<slug>` | Intake of an external review or package, e.g. `review/reading-package` |
   | `r8.5/<slug>`, `r8.6/<slug>` | Programme stages |
-  | `design/<gate>-<slug>` | Claude Design gates D1–D7 |
+  | `design/<gate>-<slug>` | Claude Design gates D0–D7 |
   | `code/<slug>` | Claude Code implementation after the Design package is accepted |
 
   The Master is a binary file and cannot be merged. When two branches both change it, the later one is **replayed**: its
@@ -113,7 +113,7 @@ python3 scripts/checksums.py --check                   # manifest lists every tr
 python3 scripts/generate_projections.py --check        # the Master regenerates every projection byte for byte
 python3 -m unittest discover -s scripts/projection/tests -t .
 python3 scripts/build.py && python3 scripts/audit_public_literals.py   # then `git status` must be clean
-python3 scripts/validate.py                            # WEBSITE REPOSITORY VALIDATION PASS (incl. R85-G*, RP-G*, F6-G*)
+python3 scripts/validate.py                            # WEBSITE REPOSITORY VALIDATION PASS (incl. R85-G*, RP-G*, F6-G*, R86-G*)
 python3 scripts/repository_manifest.py --check         # every tracked file classified
 python3 scripts/tests/test_literal_audit_determinism.py
 python3 audit/pre_tranche_c/source_lineage_truth_test.py
@@ -161,10 +161,14 @@ updated from here and never treated as current.
 
 ## 8. Claude Design and Claude Code
 
-Until R8.6 closes, the prompts in `handoff/` are DRAFT and must not be executed. From R8.6 the single start path is
-`handoff/README_FIRST.md` → `handoff/CLAUDE_DESIGN_MASTER_PROMPT.md`.
+The single start path is `handoff/README_FIRST.md` → `handoff/CLAUDE_DESIGN_MASTER_PROMPT.md`. Do not execute the
+prompts in `handoff/` until the first line of `handoff/README_FIRST.md` reads **DESIGN HANDOFF READY** (gate R86-G01
+keeps that line, the Design prompt, `README.md`, the checkpoint and the Context in agreement).
 
-- **Claude Design** works on `design/<gate>-<slug>` branches, one pull request per gate (D1–D7), each leaving a runnable
+- **The `design/` package** is classified `DESIGN_PACKAGE` by `scripts/repository_manifest.py` (the diagrams under
+  `design/architecture/` stay `GENERATED_DIAGRAMS`); regenerate the manifest and checksums with every design commit.
+
+- **Claude Design** works on `design/<gate>-<slug>` branches, one pull request per gate (D0–D7), each leaving a runnable
   checkpoint. It owns visual and interaction decisions and writes its package under `design/`. It does not edit
   `authority/`, `site-src/content/`, `dist/` or `audit/`. Controlled truth that looks wrong is raised as
   `ESCALATE_TO_MASTER`; a missing semantic input as `NEEDS_CONTROLLED_CONTENT`. Both are fixed Master-first by the steward.

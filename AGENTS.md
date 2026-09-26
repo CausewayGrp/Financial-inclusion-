@@ -24,7 +24,7 @@ the difference.
    operation, observed ≠ estimated ≠ projected, missing ≠ zero, chronology ≠ causality.
 5. No public number without a bound, source-traced record; no source named publicly without a public locator.
 6. Never declare DESIGN HANDOFF READY before the R8.6 Definition of Done is met, and never declare PUBLIC RELEASE READY.
-7. Do not execute the prompts in `handoff/` while `handoff/README_FIRST.md` says HOLD.
+7. Do not execute the prompts in `handoff/` until the first line of `handoff/README_FIRST.md` reads DESIGN HANDOFF READY.
 8. Never run `audit/tranche_b_execution/post_execution_acceptance.py`; never rewrite historical audit records (append).
 9. Never force-push, never rewrite `main` or a `checkpoint/*` tag, never commit ZIPs, caches or scratch files.
 10. Do not claim WCAG conformance, legal review, rights clearance, native-language certification or security guarantees.

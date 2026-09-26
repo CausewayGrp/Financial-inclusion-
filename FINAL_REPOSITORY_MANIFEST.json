@@ -21,13 +21,13 @@
   ]
  },
  "class_counts": {
-  "AUDIT_HISTORY": 247,
+  "AUDIT_HISTORY": 250,
   "AUTHORITY_MASTER": 1,
   "AUTHORITY_POINTER": 2,
   "AUTHORITY_RULES": 1,
-  "BUILD_AND_GATES": 14,
-  "CURRENT_DOCUMENT": 9,
-  "CURRENT_PROGRAMME_RECORD": 42,
+  "BUILD_AND_GATES": 15,
+  "CURRENT_DOCUMENT": 10,
+  "CURRENT_PROGRAMME_RECORD": 43,
   "GENERATED_DIAGRAMS": 9,
   "GENERATED_LITERAL_CLOSURE": 1,
   "GENERATED_PROJECTION": 39,
@@ -75,6 +75,10 @@
   },
   {
    "path": "CONTRIBUTING.md",
+   "class": "CURRENT_DOCUMENT"
+  },
+  {
+   "path": "FINAL_OPEN_ITEMS_REGISTER.md",
    "class": "CURRENT_DOCUMENT"
   },
   {
@@ -279,6 +283,10 @@
   },
   {
    "path": "audit/R8_5_SUBTRACTION_LEDGER.csv",
+   "class": "CURRENT_PROGRAMME_RECORD"
+  },
+  {
+   "path": "audit/R8_6_DESIGN_HANDOFF_FREEZE_CLOSURE.md",
    "class": "CURRENT_PROGRAMME_RECORD"
   },
   {
@@ -803,6 +811,18 @@
   },
   {
    "path": "audit/prior-review-records/README.md",
+   "class": "AUDIT_HISTORY"
+  },
+  {
+   "path": "audit/prior-review-records/handoff-drafts-2026-09-26/HANDOFF_ACCEPTANCE_CHECKLIST.md",
+   "class": "AUDIT_HISTORY"
+  },
+  {
+   "path": "audit/prior-review-records/handoff-drafts-2026-09-26/MASTER_IMPLEMENTATION_PROMPT.md",
+   "class": "AUDIT_HISTORY"
+  },
+  {
+   "path": "audit/prior-review-records/handoff-drafts-2026-09-26/STATIC_RUNTIME_AND_API_CONTRACT.md",
    "class": "AUDIT_HISTORY"
   },
   {
@@ -2538,6 +2558,10 @@
    "class": "RECIPIENT_HANDOFF"
   },
   {
+   "path": "handoff/DESIGN_ACCEPTANCE_CRITERIA.md",
+   "class": "RECIPIENT_HANDOFF"
+  },
+  {
    "path": "handoff/DESIGN_STARTING_TOKENS.json",
    "class": "RECIPIENT_HANDOFF"
   },
@@ -2546,7 +2570,7 @@
    "class": "RECIPIENT_HANDOFF"
   },
   {
-   "path": "handoff/HANDOFF_ACCEPTANCE_CHECKLIST.md",
+   "path": "handoff/ENGINEERING_HANDOFF_EXPECTATIONS.md",
    "class": "RECIPIENT_HANDOFF"
   },
   {
@@ -2554,15 +2578,11 @@
    "class": "RECIPIENT_HANDOFF"
   },
   {
-   "path": "handoff/MASTER_IMPLEMENTATION_PROMPT.md",
-   "class": "RECIPIENT_HANDOFF"
-  },
-  {
    "path": "handoff/README_FIRST.md",
    "class": "RECIPIENT_HANDOFF"
   },
   {
-   "path": "handoff/STATIC_RUNTIME_AND_API_CONTRACT.md",
+   "path": "handoff/ROUTE_CONTENT_AND_STATE_INVENTORY.json",
    "class": "RECIPIENT_HANDOFF"
   },
   {
@@ -2604,6 +2624,10 @@
   {
    "path": "scripts/generate_projections.py",
    "class": "PROJECTION_GENERATOR"
+  },
+  {
+   "path": "scripts/handoff_inventory.py",
+   "class": "BUILD_AND_GATES"
   },
   {
    "path": "scripts/literal_audit_allowances.json",

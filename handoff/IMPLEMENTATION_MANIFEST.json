@@ -10,7 +10,9 @@
     "handoff_folder_drive_id": "1i9lt_tDSb57tEdoDVtM0zfLi8aPvA61i",
     "name": "Yemen_Financial_Inclusion_Evidence",
     "context_path": "authority/YFI_CURRENT_PROJECT_CONTEXT.json",
-    "architecture_path": "design/architecture/"
+    "architecture_path": "design/architecture/",
+    "canonical_repository": "GitHub CausewayGrp/Financial-inclusion-, branch main",
+    "drive_ids_role": "lineage references only; the GitHub repository is canonical"
   },
   "authority": {
     "master_path": "authority/Yemen_Financial_Inclusion_Evidence_Master.xlsx",
@@ -95,11 +97,9 @@
   "release_boundaries": {
     "public_release_approved": false,
     "open": [
-      "R-042 Drive any-link writer permission must be restricted before release certification",
-      "S07 technical/security/privacy/release engineering",
-      "S08 named assistive-technology and final adversarial acceptance"
+      "See FINAL_OPEN_ITEMS_REGISTER.md: every remaining item is ENGINEERING_AFTER_DESIGN, RELEASE_ONLY, EXTERNAL_EVIDENCE_DEPENDENCY, KNOWN_EVIDENCE_FRONTIER, OWNER_INPUT or REJECTED; none is a DESIGN_BLOCKER."
     ],
-    "handoff_readiness": "PUBLIC_CORPUS_ACCEPTED__R8_6_IN_PROGRESS"
+    "handoff_readiness": "R8_6_FREEZE_CANDIDATE__PENDING_CLEAN_ROOM_ACCEPTANCE"
   },
   "routes": [
     {
@@ -684,7 +684,7 @@
     "Do not create a second content model, CMS or source of truth."
   ],
   "handoff_freeze": {
-    "state": "DRAFT_HANDOFF__FINAL_ACCEPTANCE_IN_PROGRESS",
+    "state": "R8_6_FREEZE_CANDIDATE__PENDING_CLEAN_ROOM_ACCEPTANCE",
     "recipient_order": [
       "Claude Design",
       "Claude Code"
@@ -692,13 +692,32 @@
     "missing_controlled_content_protocol": "NEEDS_CONTROLLED_CONTENT",
     "semantic_escalation_protocol": "ESCALATE_TO_MASTER",
     "no_external_evidence_research_for_fill_gaps": true,
-    "single_launch_prompt": "handoff/MASTER_IMPLEMENTATION_PROMPT.md",
-    "promotion_condition": "Promote only after final content, IA, evidence-utilization, bilingual and clean-room acceptance closes."
+    "single_launch_prompt": "handoff/README_FIRST.md",
+    "promotion_condition": "DESIGN HANDOFF READY is declared only after the F9 clean-room acceptance (directive D7); the first line of handoff/README_FIRST.md then reads DESIGN HANDOFF READY.",
+    "start_path": [
+      "README.md",
+      "handoff/README_FIRST.md",
+      "handoff/CLAUDE_DESIGN_MASTER_PROMPT.md"
+    ],
+    "handoff_files": [
+      "handoff/README_FIRST.md",
+      "handoff/CLAUDE_DESIGN_MASTER_PROMPT.md",
+      "handoff/ROUTE_CONTENT_AND_STATE_INVENTORY.json",
+      "handoff/DESIGN_ACCEPTANCE_CRITERIA.md",
+      "handoff/DESIGN_TO_CODE_CONTRACT.md",
+      "handoff/VISUAL_DESIGN_CONTRACT.md",
+      "handoff/ENGINEERING_HANDOFF_EXPECTATIONS.md",
+      "handoff/DESIGN_STARTING_TOKENS.json",
+      "handoff/IMPLEMENTATION_MANIFEST.json",
+      "handoff/CLAUDE_CODE_MASTER_PROMPT.md",
+      "handoff/SUPPORT_AND_PARTNERSHIP_READINESS.md"
+    ]
   },
-  "launch_prompt": "handoff/MASTER_IMPLEMENTATION_PROMPT.md",
+  "launch_prompt": "handoff/README_FIRST.md",
   "role_specific_prompts": {
     "design": "handoff/CLAUDE_DESIGN_MASTER_PROMPT.md",
-    "code": "handoff/CLAUDE_CODE_MASTER_PROMPT.md"
+    "code": "handoff/CLAUDE_CODE_MASTER_PROMPT.md",
+    "code_state": "WAITING_FOR_THE_DESIGN_PACKAGE"
   },
   "navigation_contract": {
     "path": "site-src/content/content/navigation_interaction.json",

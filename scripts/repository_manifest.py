@@ -32,11 +32,13 @@ RULES = [
     ("RUNTIME_SOURCE", ["site-src/app.js", "site-src/styles.css", "site-src/lang-redirect.js", "site-src/deployment.json", "site-src/assets/*"]),
     ("BUILD_AND_GATES", ["scripts/build.py", "scripts/validate.py", "scripts/audit_public_literals.py",
                          "scripts/architecture_diagrams.py", "scripts/checksums.py", "scripts/repository_manifest.py", "scripts/discovery.py",
+                         "scripts/handoff_inventory.py",
                          "scripts/literal_audit_allowances.json", "scripts/search_canonical_probe.json", "scripts/tests/*",
                          "audit/tranche_c/checks/*.py", "audit/pre_tranche_c/source_lineage_truth_test.py"]),
     ("GENERATED_PUBLIC_BUILD", ["dist/*", "dist/**/*"]),
     ("GENERATED_LITERAL_CLOSURE", ["audit/PUBLIC_LITERAL_CLOSURE.json"]),
     ("GENERATED_DIAGRAMS", ["design/architecture/*"]),
+    ("DESIGN_PACKAGE", ["design/*", "design/**/*"]),          # Claude Design's package and reference implementation (R8.6)
     ("RECIPIENT_HANDOFF", ["handoff/*"]),
     ("CURRENT_DOCUMENT", ["README.md", "CONTRIBUTING.md", "AGENTS.md", "CLAUDE.md", "OPENAI_REENTRY_CHECKPOINT.md",
                           "FINAL_OPEN_ITEMS_REGISTER.md", "docs/CHANGELOG.md", "docs/PRODUCTION_REPOSITORY_PROTOCOL.md",
