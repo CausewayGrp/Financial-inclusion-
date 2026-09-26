@@ -8,7 +8,7 @@
     "question_en": "When two official reports give different remittance values for the same year, what changed: the economy or the measurement?",
     "question_ar": "عندما يعطي تقريران رسميان قيمتين مختلفتين للتحويلات في السنة نفسها، ما الذي تغيّر: الاقتصاد أم القياس؟",
     "thesis_en": "Successive annual reports of the Central Bank of Yemen – Aden give very different remittance values for 2024. A revision of this size is a measurement event to be explained before it can be read as an economic story.",
-    "thesis_ar": "تعطي التقارير السنوية المتتالية للبنك المركزي اليمني – عدن قيمتين مختلفتين كثيرًا للتحويلات في عام 2024. ومراجعة بهذا الحجم حدثٌ في القياس ينبغي تفسيره قبل أن يُقرأ قصةً اقتصادية.",
+    "thesis_ar": "تعطي التقارير السنوية المتتالية للبنك المركزي اليمني – عدن قيمتين متباينتين تباينًا كبيرًا للتحويلات في عام 2024. ومراجعة بهذا الحجم حدثٌ في القياس ينبغي تفسيره قبل أن يُقرأ قصةً اقتصادية.",
     "claim_bindings": [
       "CLM-032",
       "CLM-036",
@@ -45,7 +45,7 @@
       "researchers"
     ],
     "prohibited_inference_en": "No single series is the correct level; no single scale factor — such as the roughly constant ratio of 1.838 between the CBY-Aden and IMF remittance series, or the 33% population share the IMF used for areas administered from Aden — is a universal conversion; net errors and omissions are not hidden remittances; and a residual-model estimate is not a baseline.",
-    "prohibited_inference_ar": "لا توجد سلسلة تمثل وحدها المستوى الصحيح؛ ولا يصلح معامل واحد — مثل النسبة الثابتة تقريبًا البالغة نحو 1.838 بين سلسلتي التحويلات لدى البنك المركزي اليمني – عدن وصندوق النقد الدولي، أو حصة السكان البالغة 33% التي استخدمها الصندوق للمناطق التي تديرها عدن — معاملَ تحويل موحّدًا ينطبق على كل السلاسل؛ ولا يمثل صافي الأخطاء والسهو تحويلات مخفية؛ ولا يُعتمد تقدير ناتج عن نموذج المتبقي خطَّ أساس.",
+    "prohibited_inference_ar": "لا توجد سلسلة تمثل وحدها المستوى الصحيح؛ ولا يصلح معامل واحد — مثل النسبة شبه الثابتة البالغة 1.838 بين سلسلتي التحويلات لدى البنك المركزي اليمني – عدن وصندوق النقد الدولي، أو حصة السكان البالغة 33% التي استخدمها الصندوق للمناطق التي تُدار من عدن — معاملَ تحويل موحّدًا ينطبق على كل السلاسل؛ ولا يمثل صافي السهو والخطأ تحويلات مخفية؛ ولا يُعتمد تقدير ناتج عن نموذج القيمة المتبقية خطَّ أساس.",
     "verification_bindings": {
       "claim_ids": [
         "CLM-032",
@@ -157,9 +157,9 @@
     "title_en": "When the unit changes, the story changes",
     "title_ar": "حين تتغير وحدة القياس، تتغير القصة",
     "question_en": "Are we counting people, accounts, active accounts, subscribers, wallets, terminals or transactions?",
-    "question_ar": "هل نعد الأشخاص أم الحسابات أم الحسابات النشطة أم المشتركين أم المحافظ الإلكترونية أم الأجهزة أم المعاملات؟",
+    "question_ar": "هل نعد الأشخاص أم الحسابات أم الحسابات النشطة أم المشتركين أم المحافظ الإلكترونية أم الأجهزة الطرفية أم المعاملات؟",
     "thesis_en": "People, accounts, subscribers, terminals and transactions all describe parts of Yemen’s financial system. They are not interchangeable measures of financial inclusion, and a target or a trend is only as sound as the unit it keeps.",
-    "thesis_ar": "يصف الأشخاص والحسابات والمشتركون والأجهزة والمعاملات جميعًا أجزاءً من المنظومة المالية في اليمن، لكنها ليست مقاييس متبادلة للشمول المالي؛ ولا يكون المستهدف أو الاتجاه سليمًا إلا بقدر ثبات الوحدة التي يقيسها.",
+    "thesis_ar": "يصف الأشخاص والحسابات والمشتركون والأجهزة الطرفية والمعاملات جميعًا أجزاءً من المنظومة المالية في اليمن، لكنها ليست مقاييس للشمول المالي يحل بعضها محل بعض؛ ولا يكون المستهدف أو الاتجاه سليمًا إلا بقدر ثبات الوحدة التي يقيسها.",
     "claim_bindings": [
       "CLM-004",
       "CLM-023",
@@ -196,7 +196,7 @@
       "programme M&E"
     ],
     "prohibited_inference_en": "Accounts, active accounts, subscribers, wallets, terminals and transactions cannot be converted into unique people, and a target cannot be compared with a result whose unit, population or activity definition differs.",
-    "prohibited_inference_ar": "لا تُحوَّل الحسابات أو الحسابات النشطة أو المشتركون أو المحافظ الإلكترونية أو الأجهزة أو المعاملات إلى أشخاص فريدين، ولا يُقارن مستهدف بنتيجة إذا اختلفت الوحدة أو المجتمع الذي ينطبق عليه الرقم أو تعريف النشاط.",
+    "prohibited_inference_ar": "لا تُحوَّل الحسابات أو الحسابات النشطة أو المشتركون أو المحافظ الإلكترونية أو الأجهزة الطرفية أو المعاملات إلى أشخاص فريدين، ولا يُقارن مستهدف بنتيجة إذا اختلفت الوحدة أو المجتمع الذي ينطبق عليه الرقم أو تعريف النشاط.",
     "verification_bindings": {
       "claim_ids": [
         "CLM-004",
@@ -241,7 +241,7 @@
     "question_en": "What can we say about people when rules, institutions and payment infrastructure change after the latest representative survey?",
     "question_ar": "ماذا يمكن أن نقول عن الناس حين تتغير القواعد والمؤسسات والبنية التحتية للمدفوعات بعد أحدث مسح ممثل؟",
     "thesis_en": "Yemen’s rules, institutions and payment infrastructure have moved faster than its representative evidence about people. The gap between the two is not an answer to guess; it is the next thing to measure.",
-    "thesis_ar": "تحركت القواعد والمؤسسات والبنية التحتية المالية في اليمن بوتيرة أسرع من تجدد الأدلة الممثلة عن الناس. والفجوة بين الأمرين ليست نتيجة يجوز افتراضها؛ إنها السؤال التالي الذي ينبغي قياسه.",
+    "thesis_ar": "تحركت القواعد والمؤسسات والبنية التحتية للمدفوعات في اليمن بوتيرة أسرع من تجدد الأدلة الممثلة عن الناس. والفجوة بين الأمرين ليست نتيجة يجوز افتراضها؛ إنها ما ينبغي قياسه تاليًا.",
     "claim_bindings": [
       "CLM-001",
       "CLM-003",
@@ -270,7 +270,7 @@
       "media"
     ],
     "prohibited_inference_en": "Recent infrastructure, regulatory and programme events are not measures of people’s access, use, service quality or outcomes, and the older Findex observation is not a 2026 population rate.",
-    "prohibited_inference_ar": "لا تُستنتج مستويات راهنة للوصول أو الاستخدام أو الجودة أو النتائج على مستوى الناس من أحداث حديثة في البنية أو التنظيم أو البرامج، ولا يُعاد وصف مشاهدة مسح Findex الأقدم باعتبارها معدلًا سكانيًا لعام 2026.",
+    "prohibited_inference_ar": "لا تُستنتج مستويات راهنة للوصول أو الاستخدام أو الجودة أو النتائج على مستوى الناس من أحداث حديثة في البنية التحتية أو التنظيم أو البرامج، ولا يُعاد وصف مشاهدة مسح Findex الأقدم باعتبارها معدلًا سكانيًا لعام 2026.",
     "verification_bindings": {
       "claim_ids": [
         "CLM-001",
@@ -309,7 +309,7 @@
     "title_en": "When does digital growth become durable use?",
     "title_ar": "متى يتحول النمو الرقمي إلى استخدام مستمر؟",
     "question_en": "Does growth in electronic-money accounts and transactions represent durable voluntary financial use?",
-    "question_ar": "هل يعبر نمو حسابات النقود الإلكترونية ومعاملاتها عن استخدام مالي طوعي ومستدام؟",
+    "question_ar": "هل يعبر نمو حسابات النقود الإلكترونية ومعاملاتها عن استخدام مالي طوعي ومستمر؟",
     "thesis_en": "Historical evidence from Yemen records a large base of e-money accounts by 2019 alongside dormancy, one-off use and a transaction mix still closely tied to cash. The open question is whether people choose to return to digital finance and find enough value to keep using it.",
     "thesis_ar": "تسجل الأدلة التاريخية في اليمن قاعدة كبيرة من حسابات النقود الإلكترونية بحلول 2019، إلى جانب الخمول والاستخدام العابر وتركيبة معاملات ما تزال مرتبطة ارتباطًا وثيقًا بالنقد. والسؤال المفتوح هو: هل يعود الناس إلى الخدمات المالية الرقمية باختيارهم، ويجدون فيها منفعة تكفي للاستمرار في استخدامها؟",
     "claim_bindings": [
@@ -338,7 +338,7 @@
       "researchers"
     ],
     "prohibited_inference_en": "Registrations, accounts, one-time use, transaction growth and infrastructure expansion do not prove unique, repeat, voluntary or durable financial use.",
-    "prohibited_inference_ar": "لا تثبت التسجيلات أو الحسابات أو الاستخدام لمرة واحدة أو نمو المعاملات أو توسع البنية استخدامًا فريدًا أو متكررًا أو طوعيًا أو مستمرًا.",
+    "prohibited_inference_ar": "لا تثبت التسجيلات أو الحسابات أو الاستخدام لمرة واحدة أو نمو المعاملات أو توسع البنية التحتية استخدامًا فريدًا أو متكررًا أو طوعيًا أو مستمرًا.",
     "verification_bindings": {
       "claim_ids": [
         "CLM-050",
@@ -520,9 +520,9 @@
     "title_en": "How can 22% and 91.84% both be right?",
     "title_ar": "كيف تكون 22% و91.84% صحيحتين معًا؟",
     "question_en": "In a 2022 survey of formal firms in seven governorates, how can 22% name access to finance as a business challenge while 91.84% of a filtered group rate it a major or moderate obstacle?",
-    "question_ar": "في مسح أُجري عام 2022 للمنشآت الرسمية في سبع محافظات، كيف تذكر 22% منها الوصول إلى التمويل ضمن تحديات أعمالها، بينما تصفه 91.84% من مجموعة مصفّاة بأنه عائق كبير أو متوسط؟",
-    "thesis_en": "A 2022 survey of formal firms in seven selected governorates can tell us that finance was named less often than electricity or fuel, and also that finance was a severe obstacle for a narrower group of firms. The numbers do not contradict each other. They answer different questions.",
-    "thesis_ar": "يمكن لمسح أُجري عام 2022 للمنشآت الرسمية في سبع محافظات مختارة أن يخبرنا بأن التمويل ذُكر أقل من الكهرباء والوقود ضمن تحديات الأعمال، وأنه كان في الوقت نفسه عائقًا شديدًا لدى مجموعة أضيق من المنشآت. لا يتناقض الرقمان؛ فكل منهما يجيب عن سؤال مختلف.",
+    "question_ar": "في مسح أُجري عام 2022 للمنشآت الرسمية في سبع محافظات، كيف تذكر 22% منها الوصول إلى التمويل ضمن تحديات أعمالها، بينما تصفه 91.84% من مجموعة أضيق بعد استبعاد بعض المنشآت بأنه عائق كبير أو متوسط؟",
+    "thesis_en": "A 2022 survey of formal firms in seven selected governorates can tell us that finance was named less often than electricity or fuel, and also that most firms in a narrower group rated finance a major or moderate obstacle. The numbers do not contradict each other. They answer different questions.",
+    "thesis_ar": "يمكن لمسح أُجري عام 2022 للمنشآت الرسمية في سبع محافظات مختارة أن يخبرنا بأن التمويل ذُكر أقل من الكهرباء والوقود ضمن تحديات الأعمال، وأن معظم المنشآت في مجموعة أضيق وصفته في الوقت نفسه بأنه عائق كبير أو متوسط. لا يتناقض الرقمان؛ فكل منهما يجيب عن سؤال مختلف.",
     "claim_bindings": [
       "CLM-005",
       "CLM-006",

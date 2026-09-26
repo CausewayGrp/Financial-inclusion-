@@ -22,12 +22,12 @@ You are **not** the evidence authority, policy author, source adjudicator or res
 The sole semantic/evidence/source/rights/publication authority is:
 
 `authority/Yemen_Financial_Inclusion_Evidence_Master.xlsx`  
-SHA-256: `440614d789f662e2e47d95e932968be3c71d2719187bb91c6f546aed30e72f71`
+SHA-256: `ed3c5796cb0cca0109a0eb56f66d344ab0a5faa550e5235e05d65a6147f33fe1`
 
 Controlled implementation projection:
 
 `site-src/content/page_specs.json`  
-SHA-256: `0425dc85c1662120a2b00a5bb3485b93d4f64f6058d7e2a0ebeb477dedc3e871`
+SHA-256: `2407cb4f9ca67aec60304630690488d04a3b05f9ea1eec03f805de24915cb3ad`
 
 Presentation-depth contract:
 
@@ -69,9 +69,9 @@ Current controlled state (from `site-src/content/content/public_inventory.json`,
 - 10 analytical Readings
 - 10 Measurement Agenda priorities
 - 36 governed visual contracts, each with a design tier (§10)
-- 161 source records, of which 152 have a public original locator
+- 160 source records, of which 151 have a public original locator
 - 28 curated report/reference cards
-- 436 local public-search records
+- 435 local public-search records
 - 24 dated chronology events
 
 These counts describe the system; they are **not** an instruction to make a crowded interface.
@@ -385,7 +385,7 @@ Search is not a site-menu substitute and not a simple text box. Design it as a l
 - queries such as `RTGS`, `FMIIP`, `11.9`, `CLM-002`, `gender gap`, `نظام الدفع السريع`, and `التحويل النقدي استمرار الاستخدام` must lead to meaningful controlled results;
 - a technical search failure must never look like “no evidence exists”.
 
-The local index is large (436 public search records at the time of writing). Do not make the interface show it all at once.
+The local index is large (435 public search records at the time of writing). Do not make the interface show it all at once.
 
 ### Evidence is a workbench, not a catalogue wall
 
@@ -418,7 +418,7 @@ The interface may state that two records are directly comparable, comparable onl
 1. the complete original-source locator register; and
 2. the **28 curated Resource Library cards**.
 
-There are **161 source records**, **152 with public original locators**. The curated 28 are not “the sources that matter”; they are deliberately selected reports/references that add interpretation, measurement or implementation value. Preserve that distinction visually.
+There are **160 source records**, **151 with public original locators**. The curated 28 are not “the sources that matter”; they are deliberately selected reports/references that add interpretation, measurement or implementation value. Preserve that distinction visually.
 
 Claude Design should **not download or bundle third-party reports** simply to make the library richer. Use controlled original-publisher links. If visual thumbnails are desired, use rights-cleared local assets or neutral/generated cover abstractions rather than republishing source pages/screenshots without permission.
 

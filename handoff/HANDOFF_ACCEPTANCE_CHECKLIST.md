@@ -22,10 +22,10 @@ Use this checklist as a gate, not as narrative documentation.
 - [ ] All public copy is consumed from controlled local projections; no hand-authored shadow copy in components.
 - [ ] Every Evidence Record remains addressable (110 at the time of writing).
 - [ ] 10 Readings and 10 Measurement priorities remain represented.
-- [ ] 161 source records remain controlled; 152 expose a public original locator, and the 9 without one are never named or linked on public pages (validator S04.1/S04.2).
+- [ ] 160 source records remain controlled; 151 expose a public original locator, and the 9 without one are never named or linked on public pages (validator S04.1/S04.2).
 - [ ] 28 curated report/reference cards remain distinct from the full source-locator register; third-party reports are not republished without controlled redistribution permission.
 - [ ] 24 chronology events remain presented as dated system context/state, never as an automatic causal chain.
-- [ ] Search index remains local (436 controlled public-search records at the time of writing), all public results resolve, and the canonical probe (`scripts/search_canonical_probe.json`) still passes.
+- [ ] Search index remains local (435 controlled public-search records at the time of writing), all public results resolve, and the canonical probe (`scripts/search_canonical_probe.json`) still passes.
 
 ## Design handoff
 

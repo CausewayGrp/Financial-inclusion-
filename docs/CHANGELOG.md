@@ -1,5 +1,21 @@
 # Repository Change Log
 
+## 2026-09-26 — F5: whole public corpus acceptance
+
+Transactions RF5 and RF5b (Master `440614d7…` → `168a0ad8…` → `ed3c5796…`); record
+`audit/F5_PUBLIC_CORPUS_ACCEPTANCE.md`; every finding and decision in `audit/F5_CORPUS_FINDINGS_LEDGER.csv`.
+- **Review.** Eleven reviewers read every governed public text (pages, Evidence Records, visuals, questions, Measurement,
+  chronology, sources, interface labels, Readings) as Arabic, as English and for parity: 667 findings, all 57 material
+  applied; 34 applied with Lead wording, 26 rejected under two house rulings, 3 deferred as open evidence checks.
+- **Corrections.** Arabic scope qualifiers restored (CBY-Aden reporting scope, FPS areas, OECD/INFE representativeness,
+  SFD provider universe); firewall errors fixed (full go-live, not located ≠ non-existent, ownership ≠ access, responses
+  ≠ firms, exposure ≠ use); three unsupported periods corrected from the records' own sources; control language
+  ("held", "locator", "universe", "vintage", "content version") removed; house terms applied.
+- **Structure.** Chronology in date order (YSC-018); duplicate source record `SRC-WB-RPW-KSA-YEM-2025Q3` retired (source
+  records 160, public locators 151, search records 435); citation line reads "Edition of 26 September 2026".
+- **Tooling.** `run_stage.py` rewrites the repository manifest before validating; the public stylesheet no longer names
+  the design tool.
+
 ## 2026-09-26 — F4: R8.5 canonical repository subtraction
 
 Transactions R85-A and R85-B (Master `69899ae2…` → `2a7fd52b…` → `440614d7…`); closure

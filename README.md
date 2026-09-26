@@ -14,13 +14,13 @@ controlled-product-state and publication-state authority; everything else here i
 
 | | |
 |---|---|
-| **Position** | **READING PORTFOLIO INTEGRATED — TRANCHE C ACCEPTANCE PRESERVED** (final integration programme, session F2 of F0–F9) |
+| **Position** | **PUBLIC CORPUS ACCEPTED — R8.6 IN PROGRESS** (final integration programme: F0–F5 closed; F6–F9 open) |
 | **Not declared** | Not DESIGN HANDOFF READY · not PUBLIC RELEASE READY |
-| **Waiting on** | Nothing external. OpenAI accepted Tranche C (recipient verification 31/31) and supplied the ten-Reading package; sessions F3–F9 of directive [D7](audit/directives/D7_FINAL_INTEGRATION_TO_DESIGN_HANDOFF_2026-09-26.md) are in progress |
+| **Waiting on** | Nothing external. OpenAI accepted Tranche C (recipient verification 31/31) and supplied the ten-Reading package; sessions F6–F9 of directive [D7](audit/directives/D7_FINAL_INTEGRATION_TO_DESIGN_HANDOFF_2026-09-26.md) are in progress |
 | **Reviewed checkpoint** | Tag [`checkpoint/tranche-c-complete-reading-hold`](../../tree/checkpoint/tranche-c-complete-reading-hold): tree byte-identical to the review ZIP `…TRANCHE_C_COMPLETE_READING_HOLD.zip` (SHA-256 `63612dea…`) |
-| **Since that checkpoint** | Repository infrastructure, then F2: the ten Evidence Readings integrated Master-first in one transaction (RP-F2; [adjudication](audit/READING_PORTFOLIO_FINAL_ADJUDICATION.md), [change ledger](audit/READING_PORTFOLIO_CHANGE_LEDGER.csv)); BIL-05 closed — every English/Arabic page pair prints the same numbers |
-| **Production Master** | `authority/Yemen_Financial_Inclusion_Evidence_Master.xlsx` · SHA-256 `440614d789f662e2e47d95e932968be3c71d2719187bb91c6f546aed30e72f71` |
-| **Page Specs** | `site-src/content/page_specs.json` · SHA-256 `0425dc85c1662120a2b00a5bb3485b93d4f64f6058d7e2a0ebeb477dedc3e871` |
+| **Since that checkpoint** | F2 the ten Evidence Readings ([adjudication](audit/READING_PORTFOLIO_FINAL_ADJUDICATION.md)); F3 five Resource Library decisions ([record](audit/F3_RESOURCE_DECISIONS.md)); F4 R8.5 repository subtraction ([closure](audit/R8_5_REPOSITORY_SUBTRACTION_CLOSURE.md)); F5 whole public corpus acceptance ([record](audit/F5_PUBLIC_CORPUS_ACCEPTANCE.md), [findings ledger](audit/F5_CORPUS_FINDINGS_LEDGER.csv)). Every English/Arabic page pair prints the same numbers |
+| **Production Master** | `authority/Yemen_Financial_Inclusion_Evidence_Master.xlsx` · SHA-256 `ed3c5796cb0cca0109a0eb56f66d344ab0a5faa550e5235e05d65a6147f33fe1` |
+| **Page Specs** | `site-src/content/page_specs.json` · SHA-256 `2407cb4f9ca67aec60304630690488d04a3b05f9ea1eec03f805de24915cb3ad` |
 | **Currentness cut-off** | 26 September 2026 ([`audit/FINAL_CURRENTNESS_CUTOFF.md`](audit/FINAL_CURRENTNESS_CUTOFF.md)) |
 | **Re-entry document** | [`OPENAI_REENTRY_CHECKPOINT.md`](OPENAI_REENTRY_CHECKPOINT.md) |
 
@@ -94,9 +94,9 @@ Master; the validator checks every figure below against it. Counts are an invent
 - 110 Evidence Records, of which 60 are controlled public claims; 55 Evidence Passports.
 - 10 Readings; 10 Measurement priorities; 11 governed entry questions.
 - 36 governed visual contracts, each with a design tier in `site-src/content/visuals/visual_design_contracts.json`.
-- 161 source records, of which 152 expose a public original locator; 28 curated resource cards.
+- 160 source records, of which 151 expose a public original locator; 28 curated resource cards.
 - 24 documented chronology events.
-- 436 public search records.
+- 435 public search records.
 
 ## Programme tracker
 
@@ -107,17 +107,18 @@ Master; the validator checks every figure below against it. Counts are an invent
 | Tranche A | Authority and active surface; IA decision (Option B, no route changes); currentness; resource model; domain architectures | CLOSED | [`audit/CLAUDE_TRANCHE_A_HANDBACK.md`](audit/CLAUDE_TRANCHE_A_HANDBACK.md) |
 | Tranche B | Master-first patch specification, then execution in five transactional stages | CLOSED | [`audit/TRANCHE_B_EXECUTION_CLOSURE.md`](audit/TRANCHE_B_EXECUTION_CLOSURE.md) |
 | P1–P5 | Pre-Tranche-C maturation (truth, tools, visual readiness, handoff alignment) and corrections | CLOSED; independently accepted | [`audit/P5_…`](audit/P5_INDEPENDENT_ACCEPTANCE_CORRECTIONS.md) |
-| **R8.4 · Tranche C** | Whole-product adversarial acceptance: nine-lens panel, 229 findings dispositioned, 9 BLOCKERs closed, transactions TC-S1, TC-A … TC-I | **COMPLETE**; Reading prose held (BIL-05) | [`audit/TRANCHE_C_FINAL_ACCEPTANCE.md`](audit/TRANCHE_C_FINAL_ACCEPTANCE.md) |
-| R8.5 | Repository subtraction and recipient cleanup | Not started | [D6 §16–25](audit/directives/D6_FINAL_FINITE_PRODUCT_PROGRAM_TRANCHE_C_R8_5_R8_6.txt) |
-| R8.6 | Clean-room Claude Design handoff freeze; its final state is allowed only after the Definition of Done | Not started | [D6 §26–50](audit/directives/D6_FINAL_FINITE_PRODUCT_PROGRAM_TRANCHE_C_R8_5_R8_6.txt) |
+| **R8.4 · Tranche C** | Whole-product adversarial acceptance: nine-lens panel, 229 findings dispositioned, 9 BLOCKERs closed, transactions TC-S1, TC-A … TC-I | **COMPLETE**; accepted by OpenAI (26 Sep 2026); Reading prose completed in F2 | [`audit/TRANCHE_C_FINAL_ACCEPTANCE.md`](audit/TRANCHE_C_FINAL_ACCEPTANCE.md) |
+| F1–F2 | Evidence Readings portfolio adjudicated and integrated Master-first (RP-F2); bilingual invariance 0 | CLOSED | [`audit/READING_PORTFOLIO_FINAL_ADJUDICATION.md`](audit/READING_PORTFOLIO_FINAL_ADJUDICATION.md) |
+| F3 | Five bounded Resource Library decisions | CLOSED | [`audit/F3_RESOURCE_DECISIONS.md`](audit/F3_RESOURCE_DECISIONS.md) |
+| F4 · R8.5 | Repository subtraction: copy out of code, one path from authority to recipient, file manifest, audit index, permanent gates | CLOSED | [`audit/R8_5_REPOSITORY_SUBTRACTION_CLOSURE.md`](audit/R8_5_REPOSITORY_SUBTRACTION_CLOSURE.md) |
+| F5 | Whole public corpus acceptance: every public text reviewed in Arabic, English and parity; 667 findings decided | CLOSED | [`audit/F5_PUBLIC_CORPUS_ACCEPTANCE.md`](audit/F5_PUBLIC_CORPUS_ACCEPTANCE.md) |
+| F6–F9 · R8.6 | Discovery, accessibility, rights and security; sustainability baseline; handoff freeze; clean-room acceptance | In progress | [D7](audit/directives/D7_FINAL_INTEGRATION_TO_DESIGN_HANDOFF_2026-09-26.md) |
 
-**Open items** (full list in [the checkpoint §4](OPENAI_REENTRY_CHECKPOINT.md#4-open-items-carried-forward-not-defects-of-this-checkpoint)):
-- **Held for the Reading package (BIL-05):** three Reading-prose parity items; they are the only reason the bilingual
-  numeric check reports differing page pairs.
-- **R8.5:** duplicate runtime references, duplicate `(1)` audit files, public copy still in `build.py`/`app.js`
-  (AR-29, EN-09, TRUST-25), the file-role manifest, the audit index and the remaining permanent gates.
+**Open items** (full list in [the checkpoint §4](OPENAI_REENTRY_CHECKPOINT.md#4-open-items-carried-forward-not-defects-of-this-state)):
+- **Evidence checks deferred in F5 (source to be read, text unchanged):** the date oil exports stopped (YSC-008), the unit
+  of two IMF prudential ratios (YSC-014), the date of Governor's Decision No. 10 of 2026.
 - **Release-only:** web-size logo derivatives (TOOL-02), navigation-group presentation (TOOL-25, Design-owned), CauseWay
-  identity and funding statement (TRUST-09, owner input).
+  identity and funding statement (TRUST-09, owner input), confirmation that the contact mailbox is monitored.
 - **Evidence frontiers kept explicit, never filled:** the withheld residual-model value (CLM-044), the ~147-firm base
   behind the 91.84% table, the CBY-Aden ↔ IMF remittance crosswalk, the causes of the gender gap, reconciled current
   operating-provider status, the size of the 2022 banking restatement.
@@ -128,10 +129,10 @@ Master; the validator checks every figure below against it. Counts are an invent
 |---|---|
 | What is current? | This file, [`OPENAI_REENTRY_CHECKPOINT.md`](OPENAI_REENTRY_CHECKPOINT.md), [`authority/YFI_CURRENT_PROJECT_CONTEXT.json`](authority/YFI_CURRENT_PROJECT_CONTEXT.json) |
 | What changed, when and why? | `git log`; [`docs/CHANGELOG.md`](docs/CHANGELOG.md) |
-| Which cells of the Master changed? | Per transaction: `audit/<stage>/runs/<TX>_MASTER_LEDGER.json` (cell level) and `<TX>_RUN_REPORT.json` (gates); from now on also the commit trailers |
-| Every finding and its disposition | [`audit/TRANCHE_C_FINDINGS_LEDGER.csv`](audit/TRANCHE_C_FINDINGS_LEDGER.csv); earlier [`audit/pre_tranche_c/FINDINGS_LEDGER.csv`](audit/pre_tranche_c/FINDINGS_LEDGER.csv) |
+| Which cells of the Master changed? | Per transaction: `audit/<stage>/runs/<TX>_MASTER_LEDGER.json` (cell level) and `<TX>_RUN_REPORT.json` (gates); also the commit trailers |
+| Every finding and its disposition | [`audit/F5_CORPUS_FINDINGS_LEDGER.csv`](audit/F5_CORPUS_FINDINGS_LEDGER.csv) (public corpus); [`audit/TRANCHE_C_FINDINGS_LEDGER.csv`](audit/TRANCHE_C_FINDINGS_LEDGER.csv); earlier [`audit/pre_tranche_c/FINDINGS_LEDGER.csv`](audit/pre_tranche_c/FINDINGS_LEDGER.csv) |
 | Every state handed to a reviewer or to Design | Tags `checkpoint/*` and their pre-releases with the verified ZIP |
-| The binding programme | [`audit/directives/`](audit/directives/README.md) — D6 is current |
+| The binding programme | [`audit/directives/`](audit/directives/README.md) — D7 is current |
 | Is a commit sound? | Actions → **Verify** (`Governance gates`, `Browser acceptance`) |
 
 ```bash

@@ -1,0 +1,484 @@
+{
+ "transaction": "RF5",
+ "decided_by": "Team Lead, final integration session F5 (directive D7)",
+ "rule": "Every finding not listed below is ACCEPTED as proposed by the reviewer. Numbers, dates, units, periods, populations, sources and evidence states change only where the Master itself carries the evidence (the record's own bound-source metadata or its own summary and currentness text).",
+ "global_rulings": {
+  "unique": "House term kept: «فريد / الفريدين» is the corpus-wide Arabic term for unique (de-duplicated) people, users, firms and providers, used consistently in every domain; switching a handful of fields to «دون تكرار» would give one concept two names.",
+  "remittances": "House term refined, not swept: «التحويلات» names remittances as a macro or balance-of-payments flow; «الحوالة / الحوالات» stays for individual money transfers and their prices (Remittance Prices Worldwide), for person-to-person domestic remittances in Findex, and for the licensed exchange-and-remittance sector, where it is the regulator's and the market's own word.",
+  "held": "Control word 'held' replaced with an explicit subject (the evidence base) so that missing-here is not read as non-existent; one wording is used across the corpus.",
+  "exposure": "«التعرض لـ» (exposure) is a calque; the rung means a recipient's first contact with a formal financial service and is written «أول تعامل مع …» everywhere.",
+  "twins": "An edit to an Evidence Record (06) also applies to the identical text of its visual twin (11) and the reverse, field by field; a change to a verification template (04) is mirrored into every 06 verification cell that carries it (closure rule v2)."
+ },
+ "reject": {
+  "ev_c-026": "House term kept: «فريد / الفريدين» is the corpus-wide Arabic term for unique (de-duplicated) people, users, firms and providers, used consistently in every domain; switching a handful of fields to «دون تكرار» would give one concept two names.",
+  "ev_c-027": "House term kept: «فريد / الفريدين» is the corpus-wide Arabic term for unique (de-duplicated) people, users, firms and providers, used consistently in every domain; switching a handful of fields to «دون تكرار» would give one concept two names.",
+  "ev_c-028": "House term kept: «فريد / الفريدين» is the corpus-wide Arabic term for unique (de-duplicated) people, users, firms and providers, used consistently in every domain; switching a handful of fields to «دون تكرار» would give one concept two names.",
+  "ev_c-029": "House term kept: «فريد / الفريدين» is the corpus-wide Arabic term for unique (de-duplicated) people, users, firms and providers, used consistently in every domain; switching a handful of fields to «دون تكرار» would give one concept two names.",
+  "ev_c-030": "House term kept: «فريد / الفريدين» is the corpus-wide Arabic term for unique (de-duplicated) people, users, firms and providers, used consistently in every domain; switching a handful of fields to «دون تكرار» would give one concept two names.",
+  "ev_c-031": "House term kept: «فريد / الفريدين» is the corpus-wide Arabic term for unique (de-duplicated) people, users, firms and providers, used consistently in every domain; switching a handful of fields to «دون تكرار» would give one concept two names.",
+  "ev_c-032": "House term kept: «فريد / الفريدين» is the corpus-wide Arabic term for unique (de-duplicated) people, users, firms and providers, used consistently in every domain; switching a handful of fields to «دون تكرار» would give one concept two names.",
+  "ev_c-033": "House term kept: «فريد / الفريدين» is the corpus-wide Arabic term for unique (de-duplicated) people, users, firms and providers, used consistently in every domain; switching a handful of fields to «دون تكرار» would give one concept two names.",
+  "ev_c-034": "House term kept: «فريد / الفريدين» is the corpus-wide Arabic term for unique (de-duplicated) people, users, firms and providers, used consistently in every domain; switching a handful of fields to «دون تكرار» would give one concept two names.",
+  "ev_c-035": "House term kept: «فريد / الفريدين» is the corpus-wide Arabic term for unique (de-duplicated) people, users, firms and providers, used consistently in every domain; switching a handful of fields to «دون تكرار» would give one concept two names.",
+  "ev_c-036": "House term kept: «فريد / الفريدين» is the corpus-wide Arabic term for unique (de-duplicated) people, users, firms and providers, used consistently in every domain; switching a handful of fields to «دون تكرار» would give one concept two names.",
+  "ev_c-037": "House term kept: «فريد / الفريدين» is the corpus-wide Arabic term for unique (de-duplicated) people, users, firms and providers, used consistently in every domain; switching a handful of fields to «دون تكرار» would give one concept two names.",
+  "pages_a-017": "House term kept: «فريد / الفريدين» is the corpus-wide Arabic term for unique (de-duplicated) people, users, firms and providers, used consistently in every domain; switching a handful of fields to «دون تكرار» would give one concept two names.",
+  "pages_a-045": "House term kept: «فريد / الفريدين» is the corpus-wide Arabic term for unique (de-duplicated) people, users, firms and providers, used consistently in every domain; switching a handful of fields to «دون تكرار» would give one concept two names.",
+  "pages_a-054": "House term kept: «فريد / الفريدين» is the corpus-wide Arabic term for unique (de-duplicated) people, users, firms and providers, used consistently in every domain; switching a handful of fields to «دون تكرار» would give one concept two names.",
+  "src-026": "House term kept: «فريد / الفريدين» is the corpus-wide Arabic term for unique (de-duplicated) people, users, firms and providers, used consistently in every domain; switching a handful of fields to «دون تكرار» would give one concept two names.",
+  "ui-021": "House term kept: «فريد / الفريدين» is the corpus-wide Arabic term for unique (de-duplicated) people, users, firms and providers, used consistently in every domain; switching a handful of fields to «دون تكرار» would give one concept two names.",
+  "cv-042": "House term refined, not swept: «التحويلات» names remittances as a macro or balance-of-payments flow; «الحوالة / الحوالات» stays for individual money transfers and their prices (Remittance Prices Worldwide), for person-to-person domestic remittances in Findex, and for the licensed exchange-and-remittance sector, where it is the regulator's and the market's own word.",
+  "cv-043": "House term refined, not swept: «التحويلات» names remittances as a macro or balance-of-payments flow; «الحوالة / الحوالات» stays for individual money transfers and their prices (Remittance Prices Worldwide), for person-to-person domestic remittances in Findex, and for the licensed exchange-and-remittance sector, where it is the regulator's and the market's own word.",
+  "cv-044": "House term refined, not swept: «التحويلات» names remittances as a macro or balance-of-payments flow; «الحوالة / الحوالات» stays for individual money transfers and their prices (Remittance Prices Worldwide), for person-to-person domestic remittances in Findex, and for the licensed exchange-and-remittance sector, where it is the regulator's and the market's own word.",
+  "pages_b-057": "House term refined, not swept: «التحويلات» names remittances as a macro or balance-of-payments flow; «الحوالة / الحوالات» stays for individual money transfers and their prices (Remittance Prices Worldwide), for person-to-person domestic remittances in Findex, and for the licensed exchange-and-remittance sector, where it is the regulator's and the market's own word.",
+  "pages_b-058": "House term refined, not swept: «التحويلات» names remittances as a macro or balance-of-payments flow; «الحوالة / الحوالات» stays for individual money transfers and their prices (Remittance Prices Worldwide), for person-to-person domestic remittances in Findex, and for the licensed exchange-and-remittance sector, where it is the regulator's and the market's own word.",
+  "pages_b-059": "House term refined, not swept: «التحويلات» names remittances as a macro or balance-of-payments flow; «الحوالة / الحوالات» stays for individual money transfers and their prices (Remittance Prices Worldwide), for person-to-person domestic remittances in Findex, and for the licensed exchange-and-remittance sector, where it is the regulator's and the market's own word.",
+  "pages_b-060": "House term refined, not swept: «التحويلات» names remittances as a macro or balance-of-payments flow; «الحوالة / الحوالات» stays for individual money transfers and their prices (Remittance Prices Worldwide), for person-to-person domestic remittances in Findex, and for the licensed exchange-and-remittance sector, where it is the regulator's and the market's own word.",
+  "ev_c-004": "The clause is true in this record (the CBY-Aden series compared is itself restated between annual-report editions, CLM-032); removing a boundary is not warranted.",
+  "src-045": "Not duplicates: three IMF items under Country Report No. 26/80 (the full report, the staff report and its supplement), each with its own locator, a title that says which it is, and different bound evidence (Tranche C VER-21 decision stands)."
+ },
+ "superseded": {
+  "ev_b-039": "cv-002 (same title, fuller boundary: surveyed formal firms, 2022)",
+  "ev_a-044": "cv-017 (same sentence in the 06 twin)",
+  "ev_a-050": "cv-016 (same sentence in the 06 twin)",
+  "ev_b-068": "cv-018 (same sentence in the 06 twin)",
+  "ev_c-059": "cv-014 (same sentence in the 06 twin)",
+  "cv-031": "ev_c-006 (same sentence; states that the figure is the central bank's own statement)",
+  "cv-020": "ev_c-019 (same sentence; applied to both twins)"
+ },
+ "deferred": {
+  "qmc-017": {
+   "class": "EXTERNAL_EVIDENCE_DEPENDENCY",
+   "reason": "The date 'from January 2023' for the suspension of oil exports must be checked against IMF Country Report No. 26/80 (the bound source), which could not be retrieved in this session; the text is unchanged and the check is an open item."
+  },
+  "qmc-018": {
+   "class": "EXTERNAL_EVIDENCE_DEPENDENCY",
+   "reason": "The unit of the two IMF prudential ratios (presumably per cent) must be read from the IMF table before it is printed; the text is unchanged and the check is an open item."
+  },
+  "src-046": {
+   "class": "EXTERNAL_EVIDENCE_DEPENDENCY",
+   "reason": "The date of Governor's Decision No. 10 of 2026 could not be read from its page in this session; the title stays undated, which is true as stated, and the date is an open item."
+  }
+ },
+ "modify": {
+  "ev_b-009": {
+   "replacement": "مسارات الحوالات المحلية في 2014",
+   "reason": "House term refined, not swept: «التحويلات» names remittances as a macro or balance-of-payments flow; «الحوالة / الحوالات» stays for individual money transfers and their prices (Remittance Prices Worldwide), for person-to-person domestic remittances in Findex, and for the licensed exchange-and-remittance sector, where it is the regulator's and the market's own word. Plural kept from the finding."
+  },
+  "pages_a-048": {
+   "replacement": "والمقترضون لا يساوون بالضرورة أسرًا فريدة، وكِبَر حجم القروض لا يعني بالضرورة اتساع نطاق الانتشار.",
+   "reason": "House term kept: «فريد / الفريدين» is the corpus-wide Arabic term for unique (de-duplicated) people, users, firms and providers, used consistently in every domain; switching a handful of fields to «دون تكرار» would give one concept two names. The other two corrections ('necessarily', larger loans, outreach) are accepted."
+  },
+  "cv-051": {
+   "replacement": "ثم أول تعامل مع الخدمات المالية",
+   "reason": "«التعرض لـ» (exposure) is a calque; the rung means a recipient's first contact with a formal financial service and is written «أول تعامل مع …» everywhere."
+  },
+  "cv-052": {
+   "replacement": "وأول تعامل مع خدمة رقمية رسمية",
+   "reason": "«التعرض لـ» (exposure) is a calque; the rung means a recipient's first contact with a formal financial service and is written «أول تعامل مع …» everywhere."
+  },
+  "ev_c-044": {
+   "replacement": "إلى إيصال التحويل وأول تعامل مع خدمة رقمية رسمية",
+   "reason": "«التعرض لـ» (exposure) is a calque; the rung means a recipient's first contact with a formal financial service and is written «أول تعامل مع …» everywhere."
+  },
+  "src-041": {
+   "replacement": "وأول تعامل مع خدمات مالية رقمية رسمية",
+   "reason": "«التعرض لـ» (exposure) is a calque; the rung means a recipient's first contact with a formal financial service and is written «أول تعامل مع …» everywhere."
+  },
+  "ev_a-021": {
+   "replacement": "تحليل مؤسسي ضمن مشروع مشترك بين منظمة التعاون الاقتصادي والتنمية والاتحاد الأوروبي، يستند إلى مشاورات وورش عمل وتحليل قطاعي.",
+   "reason": "The OECD's Arabic name as used on every other card («منظمة التعاون الاقتصادي والتنمية»)."
+  },
+  "ev_a-034": {
+   "olc": {
+    "field": "title_en",
+    "current": "The complaint path is documented; performance remains open",
+    "replacement": "The complaint path is documented; there is no evidence yet on how it performs"
+   },
+   "reason": "English aligned without 'not available' (which can read as non-existent)."
+  },
+  "ev_c-006": {
+   "olc": {
+    "field": "summary_ar",
+    "current": "وهو تصريح من الجهة المصدرة نفسها.",
+    "replacement": "وهو تصريح من البنك المركزي في عدن نفسه، وليس قياسًا مستقلًا."
+   },
+   "reason": "Arabic names the central bank by its house short form."
+  },
+  "cv-018": {
+   "replacement": "the evidence base holds no evidence on implementation, complaint handling, enforcement or consumer outcomes;",
+   "olc": {
+    "sheet": "06",
+    "key": "VIS-OECD-FCP-TIMELINE",
+    "field": "summary_en",
+    "current": "no evidence on implementation, complaint handling, enforcement or consumer outcomes is held;",
+    "replacement": "the evidence base holds no evidence on implementation, complaint handling, enforcement or consumer outcomes;"
+   },
+   "reason": "Control word 'held' replaced with an explicit subject (the evidence base) so that missing-here is not read as non-existent; one wording is used across the corpus."
+  },
+  "ev_a-045": {
+   "replacement": "The evidence base holds no data on complaint outcomes for any date.",
+   "reason": "Control word 'held' replaced with an explicit subject (the evidence base) so that missing-here is not read as non-existent; one wording is used across the corpus."
+  },
+  "ev_a-046": {
+   "replacement": "The evidence base holds no consolidated register of later amendments, so",
+   "reason": "Control word 'held' replaced with an explicit subject (the evidence base) so that missing-here is not read as non-existent; one wording is used across the corpus."
+  },
+  "ev_a-047": {
+   "replacement": "The evidence base holds no consolidated register of later amendments, so",
+   "reason": "Control word 'held' replaced with an explicit subject (the evidence base) so that missing-here is not read as non-existent; one wording is used across the corpus."
+  },
+  "ev_a-051": {
+   "replacement": "are separate questions on which the evidence base holds no evidence.",
+   "reason": "Control word 'held' replaced with an explicit subject (the evidence base) so that missing-here is not read as non-existent; one wording is used across the corpus."
+  },
+  "ev_a-067": {
+   "current": "no result against the target is held, so no progress percentage exists.",
+   "replacement": "the evidence base holds no result against the target, so no progress percentage can be calculated.",
+   "reason": "Control word 'held' replaced with an explicit subject (the evidence base) so that missing-here is not read as non-existent; one wording is used across the corpus. 'Exists' becomes 'can be calculated' (missing is not zero)."
+  },
+  "ev_a-068": {
+   "replacement": "The evidence base holds no observed result against the target.",
+   "reason": "Control word 'held' replaced with an explicit subject (the evidence base) so that missing-here is not read as non-existent; one wording is used across the corpus."
+  },
+  "ev_b-069": {
+   "replacement": "and the evidence recorded for each",
+   "reason": "Control word 'held' replaced with an explicit subject (the evidence base) so that missing-here is not read as non-existent; one wording is used across the corpus."
+  },
+  "ev_b-070": {
+   "current": "No evidence on implementation, enforcement or consumer outcomes is held for any date.",
+   "replacement": "The evidence base holds no evidence on implementation, enforcement or consumer outcomes for any date.",
+   "reason": "Control word 'held' replaced with an explicit subject (the evidence base) so that missing-here is not read as non-existent; one wording is used across the corpus."
+  },
+  "ev_c-055": {
+   "replacement": "No observed result is recorded in the evidence base",
+   "reason": "Control word 'held' replaced with an explicit subject (the evidence base) so that missing-here is not read as non-existent; one wording is used across the corpus."
+  },
+  "ev_c-056": {
+   "replacement": "no result against the target is recorded in the evidence base.",
+   "reason": "Control word 'held' replaced with an explicit subject (the evidence base) so that missing-here is not read as non-existent; one wording is used across the corpus."
+  },
+  "ev_c-057": {
+   "replacement": "no result recorded",
+   "reason": "Control word 'held' replaced with an explicit subject (the evidence base) so that missing-here is not read as non-existent; one wording is used across the corpus."
+  },
+  "ev_c-058": {
+   "replacement": "The evidence base holds no observed result, so",
+   "reason": "Control word 'held' replaced with an explicit subject (the evidence base) so that missing-here is not read as non-existent; one wording is used across the corpus."
+  },
+  "ev_c-060": {
+   "replacement": "no observed result is recorded for any later date.",
+   "reason": "Control word 'held' replaced with an explicit subject (the evidence base) so that missing-here is not read as non-existent; one wording is used across the corpus."
+  },
+  "ev_c-061": {
+   "replacement": "for which the evidence base holds no evidence.",
+   "reason": "Control word 'held' replaced with an explicit subject (the evidence base) so that missing-here is not read as non-existent; one wording is used across the corpus."
+  },
+  "ev_c-062": {
+   "replacement": "the evidence base holds no later provider-level figure.",
+   "reason": "Control word 'held' replaced with an explicit subject (the evidence base) so that missing-here is not read as non-existent; one wording is used across the corpus."
+  },
+  "ev_c-079": {
+   "olc": {
+    "field": "title_ar",
+    "current": "باختلاف النسخة المنشورة",
+    "replacement": "باختلاف إصدار التقرير السنوي"
+   },
+   "reason": "Arabic aligned with the English (the two editions are annual reports, per the record's period)."
+  },
+  "pages_a-006": {
+   "replacement": "التحويلات: كل رقم يتوقف على مصدره ومفهومه والإصدار الذي نُشر فيه",
+   "olc": {
+    "field": "title_en",
+    "current": "concept and publication vintage",
+    "replacement": "concept and edition"
+   },
+   "reason": "Arabic follows the 'Domain:' title pattern; English drops the jargon 'publication vintage' in the same way."
+  },
+  "ev_b-036": {
+   "replacement": "كيف تصل الأموال إلى الأفراد: الأجور والتحويلات الحكومية والمدفوعات الزراعية والحوالات المحلية",
+   "reason": "Arabic follows the English title's four payment types, with the corpus terms."
+  },
+  "ui-045": {
+   "olc": {
+    "field": "label_ar",
+    "current": "أحداث، لا أشخاص",
+    "replacement": "معاملات، لا أشخاص"
+   },
+   "reason": "Transactions are «معاملات» throughout the corpus."
+  },
+  "ev_b-006": {
+   "replacement": "2023 to 2024 (official sources), with OECD context from 2026; later stages have no evidence",
+   "olc": {
+    "field": "period_ar",
+    "current": "من 2021 إلى 2024؛ ولا تتوفر أدلة على المراحل اللاحقة",
+    "replacement": "من 2023 إلى 2024 (المصادر الرسمية)، مع سياق من منظمة التعاون الاقتصادي والتنمية في 2026؛ ولا تتوفر أدلة على المراحل اللاحقة"
+   },
+   "reason": "QUERY resolved from the record's bound sources: the official sources are dated 28 August 2023 and 23 March 2024 (15 document_date) and the OECD review 2026; no public item is dated 2021."
+  },
+  "ev_b-007": {
+   "current": "2011 to 2022",
+   "replacement": "2014 to 2022",
+   "olc": {
+    "field": "period_ar",
+    "current": "من 2011 إلى 2022",
+    "replacement": "من 2014 إلى 2022"
+   },
+   "reason": "QUERY resolved from the record's own summary and currentness: the latest observations are 2014 (saving, borrowing, domestic remittances) and 2022 (ownership); no function's latest value is from 2011."
+  },
+  "ev_c-002": {
+   "replacement": "Statistics for 2014–2024 produced in July 2025; publication cycle 2025–2026",
+   "olc": {
+    "field": "period_ar",
+    "current": "إعادة بناء 2014–2025 / دورة النشر 2025–2026",
+    "replacement": "إحصاءات للفترة 2014–2024 أُنتجت في يوليو 2025؛ دورة النشر 2025–2026"
+   },
+   "reason": "QUERY resolved from the record's own summary and currentness: the July 2025 mission produced statistics for 2014–2024."
+  },
+  "ev_a-070": {
+   "replacement": "No single period: each record compared keeps its own",
+   "olc": {
+    "field": "period_ar",
+    "current": "بحسب فترات المصادر / مقارنة إدارية مرجعية لعام 2025",
+    "replacement": "لا فترة واحدة: يحتفظ كل سجل تجري مقارنته بفترته الخاصة"
+   },
+   "reason": "QUERY resolved: the record is a comparison rule with no observation date (its own currentness); the unexplained 2025 baseline/admin reference is removed."
+  }
+ },
+ "lead_edits": [
+  {
+   "id": "F5-L01",
+   "sheet": "11",
+   "key": "VIS-SOURCE-COMPARISON",
+   "field": "decision_value_ar",
+   "current": "يمنع المقارنة الزائفة بين أرقام تحمل الاسم نفسه لكنها تقيس أشياء مختلفة، ويبين متى تكون المقارنة مشروطة أو غير صالحة.",
+   "replacement": "يقارن التعريفات والفترات والنطاقات الجغرافية والمجتمعات أو قواعد الاحتساب والوحدات ونطاقات المصادر والطرائق قبل السماح بعرض القيم على مقياس واحد.",
+   "reason": "Parity: the Arabic decision value said something different from the English (found while adjudicating cv-011, which swaps the Arabic what-it-shows)."
+  },
+  {
+   "id": "F5-L02",
+   "sheet": "03",
+   "key": "/data/ s1",
+   "field": "body_en",
+   "current": "The figures themselves are held in the evidence records",
+   "replacement": "The figures themselves are recorded in the evidence records",
+   "reason": "Same 'held' rule as the reviewers' findings, applied where the scan found it left."
+  },
+  {
+   "id": "F5-L03",
+   "sheet": "03",
+   "key": "/readings/finance-constraint-different-questions/ s3",
+   "field": "body_en",
+   "current": "is not held in the evidence base",
+   "replacement": "is not recorded in the evidence base",
+   "reason": "Same 'held' rule as the reviewers' findings, applied where the scan found it left."
+  },
+  {
+   "id": "F5-L04",
+   "sheet": "03",
+   "key": "/finance/ s5",
+   "field": "body_en",
+   "current": "from the 2023 annual-report vintage onward",
+   "replacement": "from the 2023 annual report onward",
+   "reason": "'Vintage' is statistical jargon outside the Readings that explain it; 'edition' is the corpus word."
+  },
+  {
+   "id": "F5-L05",
+   "sheet": "03",
+   "key": "/remittances/ s3",
+   "field": "heading_en",
+   "current": "The same reference year can change when the source vintage changes",
+   "replacement": "The same reference year can change when the source publishes a new edition",
+   "reason": "'Vintage' is statistical jargon outside the Readings that explain it; 'edition' is the corpus word."
+  },
+  {
+   "id": "F5-L06",
+   "sheet": "06",
+   "key": "CLM-032",
+   "field": "definition_en",
+   "current": "across different publication vintages",
+   "replacement": "across different editions of the publication",
+   "reason": "'Vintage' is statistical jargon outside the Readings that explain it; 'edition' is the corpus word."
+  },
+  {
+   "id": "F5-L07",
+   "sheet": "06",
+   "key": "CLM-034",
+   "field": "universe_en",
+   "current": "within the CBY Annual Report 2025 vintage",
+   "replacement": "within the CBY-Aden Annual Report 2025",
+   "reason": "'Vintage' is statistical jargon outside the Readings that explain it; 'edition' is the corpus word."
+  },
+  {
+   "id": "F5-L08",
+   "sheet": "06",
+   "key": "CLM-035",
+   "field": "period_en",
+   "current": "compared within the CBY Annual Report 2024 and Annual Report 2025 vintages.",
+   "replacement": "compared in the CBY-Aden Annual Reports 2024 and 2025.",
+   "reason": "'Vintage' is statistical jargon outside the Readings that explain it; 'edition' is the corpus word."
+  },
+  {
+   "id": "F5-L08b",
+   "sheet": "06",
+   "key": "CLM-035",
+   "field": "period_ar",
+   "current": "كما تظهر داخل نسختي التقرير السنوي 2024 والتقرير السنوي 2025 للبنك المركزي.",
+   "replacement": "كما تظهر في التقريرين السنويين 2024 و2025 للبنك المركزي اليمني – عدن.",
+   "reason": "'Vintage' is statistical jargon outside the Readings that explain it; 'edition' is the corpus word. Arabic aligned, with the house name."
+  },
+  {
+   "id": "F5-L09",
+   "sheet": "11",
+   "key": "VIS-EVIDENCE-FRESHNESS",
+   "field": "what_it_shows_en",
+   "current": "Evidence vintage by domain and evidence class,",
+   "replacement": "Evidence by date of measurement or publication, domain and type,",
+   "reason": "'Vintage' is statistical jargon outside the Readings that explain it; 'edition' is the corpus word. Aligned with the Arabic."
+  },
+  {
+   "id": "F5-L10",
+   "sheet": "14",
+   "key": "YSC-014",
+   "field": "system_implication_en",
+   "current": "provider/customer behavior",
+   "replacement": "provider and customer behaviour",
+   "reason": "British spelling and no slash, as in the rest of the corpus."
+  },
+  {
+   "id": "F5-L11",
+   "sheet": "03",
+   "key": "/readings/from-rail-to-result-missing-middle/ s6",
+   "field": "body_en",
+   "current": "The evidence clocks are not synchronised.",
+   "replacement": "The evidence is not updated at the same pace.",
+   "reason": "'Evidence clocks' is an internal metaphor (pages_a-007/066); the Arabic already says «لا تتجدد الأدلة بالإيقاع نفسه»."
+  },
+  {
+   "id": "F5-L11b",
+   "sheet": "03",
+   "key": "/readings/from-rail-to-result-missing-middle/ s6",
+   "field": "body_en",
+   "current": "different reporting universes",
+   "replacement": "differences in reporting coverage",
+   "reason": "'Universe' is internal vocabulary (reviewers' rule)."
+  },
+  {
+   "id": "F5-L12",
+   "sheet": "10",
+   "key": "MA-005",
+   "field": "what_changes_en",
+   "current": "Unlocks a defensible access atlas and travel/coverage analysis without",
+   "replacement": "Would allow a defensible access atlas and an analysis of coverage and travel distance, without",
+   "reason": "Consultancy verb and slash; aligned with the Arabic «يتيح»."
+  },
+  {
+   "id": "F5-L13",
+   "sheet": "11",
+   "key": "VIS-ACCESS-EVIDENCE-LAYER",
+   "field": "period",
+   "current": "object-specific",
+   "replacement": "Specific to each item",
+   "reason": "'Object' is repository vocabulary; the Arabic says «بحسب كل عنصر»."
+  },
+  {
+   "id": "F5-L14",
+   "sheet": "11",
+   "key": "RV-CWR-003",
+   "field": "period",
+   "current": "dates vary by object",
+   "replacement": "dates vary by item",
+   "reason": "'Object' is repository vocabulary; the Arabic says «بحسب العنصر»."
+  },
+  {
+   "id": "F5-L15",
+   "sheet": "08",
+   "key": "CWR-005",
+   "field": "question_ar",
+   "current": "طوعي ومستدام؟",
+   "replacement": "طوعي ومستمر؟",
+   "reason": "House term «مستمر» for durable use (cv-048 applied it to the same Reading's visual)."
+  },
+  {
+   "id": "F5-L16",
+   "sheet": "14",
+   "key": "YSC-006",
+   "field": "does_not_establish_ar",
+   "current": "تبنيًا رقميًا مستدامًا",
+   "replacement": "تبنيًا رقميًا مستمرًا",
+   "reason": "House term «مستمر» for durable adoption."
+  },
+  {
+   "id": "F5-L17",
+   "sheet": "11",
+   "key": "VIS-ACCESS-EVIDENCE-LAYER",
+   "field": "question_ar",
+   "current": "التي تم التحقق منها",
+   "replacement": "التي جرى التحقق منها",
+   "reason": "Translated passive «تم»; the corpus form is «جرى»."
+  },
+  {
+   "id": "F5-L18",
+   "sheet": "14",
+   "key": "YSC-019",
+   "field": "does_not_establish_ar",
+   "current": "قد تم فعلًا",
+   "replacement": "قد جرى فعلًا",
+   "reason": "Translated passive «تم»."
+  }
+ ],
+ "structural": [
+  {
+   "id": "qmc-019",
+   "op": "move_row",
+   "sheet": "14_SYSTEM_CHRONOLOGY",
+   "key": "YSC-018",
+   "before": "YSC-015",
+   "reason": "The chronology renders in row order; YSC-018 (17 June 2025) sat after September 2025. It now sits after YSC-014 (to April 2025) and before YSC-015 (July 2025 onward)."
+  },
+  {
+   "id": "src-044",
+   "op": "retire_source",
+   "key": "SRC-WB-RPW-KSA-YEM-2025Q3",
+   "keep": "SRC-WB-RPW-SA-YEM-2025Q3-001",
+   "reason": "Same document, same locator and same title as SRC-WB-RPW-SA-YEM-2025Q3-001; no evidence, dataset or page is bound to it (Tranche C VER-21 recommended alias/merge). The duplicate row is removed and its dataset uses are recorded on the kept record, so the Sources page lists the document once."
+  }
+ ],
+ "sweeps": [
+  {
+   "id": "F5-S01",
+   "lang": "en",
+   "old": "the content version dated",
+   "new": "the edition of this resource dated",
+   "reason": "'Content version' is repository vocabulary; the public name is an edition of this resource."
+  },
+  {
+   "id": "F5-S02",
+   "lang": "en",
+   "old": "Content version dated",
+   "new": "Edition of this resource dated",
+   "reason": "As F5-S01."
+  },
+  {
+   "id": "F5-S03",
+   "lang": "ar",
+   "old": "نسخة المحتوى المؤرخة",
+   "new": "إصدار هذا المورد المؤرخ",
+   "reason": "As F5-S01, in Arabic."
+  },
+  {
+   "id": "F5-S04",
+   "lang": "ar",
+   "old": "منظمة التعاون والتنمية في الميدان الاقتصادي",
+   "new": "منظمة التعاون الاقتصادي والتنمية",
+   "reason": "One Arabic name for the OECD: the form used by its publisher cards and the other pages (src-009)."
+  },
+  {
+   "id": "F5-S05",
+   "lang": "ar",
+   "old": "قاعدة القياس",
+   "new": "قاعدة الاحتساب",
+   "reason": "House term for the denominator or calculation base (reviewers applied it to five other fields)."
+  }
+ ]
+}

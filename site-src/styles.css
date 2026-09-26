@@ -241,7 +241,7 @@ html[dir="rtl"] .priority{line-height:1.65}
 @media(max-width:960px){.footer-nav{grid-template-columns:1fr 1fr}.journey-next-grid,.reading-verify-grid{grid-template-columns:1fr;gap:1.5rem}}
 @media(max-width:640px){.footer-nav{grid-template-columns:1fr}.journey-next,.reading-verify{padding:2.5rem 0}.journey-next-links,.reading-verify-links{grid-template-columns:1fr}.breadcrumb{margin-bottom:1rem}}
 
-/* Tranche B Stage 1–4 structural hooks (minimal; final treatment belongs to Claude Design) */
+/* Tranche B Stage 1–4 structural hooks (minimal; the final visual treatment belongs to the design phase) */
 .trust-nav{font-size:.8rem;border-bottom:1px solid rgba(0,0,0,.08)}
 .trust-nav-inner{display:flex;flex-wrap:wrap;gap:.25rem 1rem;justify-content:flex-end;max-width:1200px;margin:0 auto;padding:.25rem 1rem}
 .nav-group{display:inline-flex;align-items:center;gap:.5rem;flex-wrap:wrap}
@@ -250,7 +250,7 @@ html[dir="rtl"] .priority{line-height:1.65}
 .domain-reading-grid{display:grid;gap:1rem;grid-template-columns:repeat(auto-fit,minmax(260px,1fr))}
 .search-boundary-note{font-size:.85rem;margin:.25rem 0 .5rem}
 
-/* Pre-Tranche-C P1 structural hooks (baseline only; final visual design is Claude Design's) */
+/* Pre-Tranche-C P1 structural hooks (baseline only; the final visual design belongs to the design phase) */
 .inventory-list{display:grid;grid-template-columns:repeat(auto-fit,minmax(14rem,1fr));gap:.75rem;margin:1rem 0 0}
 .inventory-list>div{border:1px solid var(--line,#d9d9d9);border-radius:.5rem;padding:.75rem 1rem}
 .inventory-list dt{font-size:.9rem;margin:0}

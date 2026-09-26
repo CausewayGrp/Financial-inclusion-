@@ -6,7 +6,9 @@
 
 Steps: snapshot current state (outside the repository) -> install staged Master -> regenerate every projection
 (scripts/generate_projections.py) -> rebind current-state control files (scripts/rebind_authority.py) -> build ->
-public-literal audit -> validator -> generator idempotence check (--check). Any failure restores the snapshot.
+public-literal audit -> architecture diagrams -> repository manifest -> validator -> generator idempotence check
+(--check). Any failure restores the snapshot. New files must be tracked (git add) before the run so that the manifest
+classifies them.
 """
 import hashlib, json, os, re, shutil, subprocess, sys
 
@@ -15,7 +17,9 @@ ROOT = os.path.abspath(os.path.join(HERE, "..", ".."))
 STATE = ["authority", "site-src/content", "handoff", "README.md", "audit/PUBLIC_LITERAL_CLOSURE.json", "dist",
          "scripts/projection/master_structure.json", "scripts/projection/projection_manifest.json", "scripts/projection/controlled_inputs",
          # P5: files the rebind and the diagram step also write, so that a rollback restores them too
-         "OPENAI_REENTRY_CHECKPOINT.md", "design/architecture"]
+         "OPENAI_REENTRY_CHECKPOINT.md", "design/architecture",
+         # F5: the repository manifest records the Master and page-spec hashes, so a Master change rewrites it
+         "FINAL_REPOSITORY_MANIFEST.json"]
 
 
 def sha(p):
@@ -80,6 +84,7 @@ def main():
                           ("build", ["python3", "scripts/build.py"]),
                           ("public_literal_audit", ["python3", "scripts/audit_public_literals.py"]),
                           ("architecture_diagrams", ["python3", "scripts/architecture_diagrams.py"]),   # P5: derived diagrams follow the inventory
+                          ("repository_manifest", ["python3", "scripts/repository_manifest.py"]),       # F5: manifest follows the new authority hashes
                           ("validate", ["python3", "scripts/validate.py"]),
                           ("generator_idempotence", ["python3", "scripts/generate_projections.py", "--check"])]:
             code, out = run(cmd)

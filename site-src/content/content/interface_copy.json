@@ -14,19 +14,19 @@
   {
     "ui_id": "UI-VERIFY-COMPOSITE",
     "label_en": "This view assembles other evidence records. Check each linked record against its own source.",
-    "label_ar": "يجمع هذا العرض سجلات أدلة أخرى، فتحقق من كل سجل مرتبط مقابل مصدره الخاص.",
+    "label_ar": "يجمع هذا العرض سجلات أدلة أخرى، فطابِق كل سجل مرتبط مع مصدره.",
     "use_rule": "PB-0008. 06 verification text and evidence-page statement when lineage_state = COMPOSITE_OF_OBJECTS and member records are listed."
   },
   {
     "ui_id": "UI-VERIFY-COMPOSITE-UNLISTED",
     "label_en": "This view summarises other evidence records, which are not yet linked individually here. Before reusing a figure, open the evidence record that reports it and check that record against its own source.",
-    "label_ar": "يلخص هذا العرض سجلات أدلة أخرى لم تُربط بعدُ هنا كلٌّ على حدة. وقبل إعادة استخدام أي رقم، افتح سجل الدليل الذي يورده وتحقق منه مقابل مصدره الخاص.",
+    "label_ar": "يلخص هذا العرض سجلات أدلة أخرى لم تُربط بعدُ هنا كلٌّ على حدة. وقبل إعادة استخدام أي رقم، افتح سجل الدليل الذي يورده وطابِقه مع مصدره.",
     "use_rule": "Stage 1 Lead addition. 06 verification text and evidence-page statement when lineage_state = COMPOSITE_OF_OBJECTS and no member record is listed in the Master."
   },
   {
     "ui_id": "UI-EVID-UNBOUND",
     "label_en": "This record has not yet been linked to a specific original source. Treat its figures as unverified for reuse until the link is added.",
-    "label_ar": "لم يُربط هذا السجل بعدُ بمصدر أصلي محدد، فلا تُعامل أرقامه على أنها صالحة لإعادة الاستخدام إلى أن يُضاف هذا الربط.",
+    "label_ar": "لم يُربط هذا السجل بعدُ بمصدر أصلي محدد، فعامِل أرقامه على أنها غير متحقق منها عند إعادة الاستخدام إلى أن يُضاف هذا الربط.",
     "use_rule": "PB-0006. 06 verification text and evidence-page statement when lineage_state = SOURCE_NOT_YET_BOUND."
   },
   {
@@ -49,8 +49,8 @@
   },
   {
     "ui_id": "UI-READING-PATH-INTRO",
-    "label_en": "Each statement this Reading relies on is carried by an Evidence Record. Follow a record to its original sources before reusing a figure.",
-    "label_ar": "كل مقولة تعتمد عليها هذه القراءة يحملها سجل دليل. تتبّع السجل إلى مصادره الأصلية قبل إعادة استخدام أي رقم.",
+    "label_en": "Each statement this Reading relies on is backed by an Evidence Record. Follow a record to its original sources before reusing a figure.",
+    "label_ar": "لكل مقولة تعتمد عليها هذه القراءة سجلُّ دليل يسندها. تتبّع السجل إلى مصادره الأصلية قبل إعادة استخدام أي رقم.",
     "use_rule": "Pre-Tranche-C P1.5. Introduction to the Reading verification path (Reading proposition -> Evidence Record -> source)."
   },
   {
@@ -85,7 +85,7 @@
   },
   {
     "ui_id": "UI-EVID-SOURCES-WITHOUT-LOCATOR",
-    "label_en": "This record also draws on material that has no public link to its original document. That material is held in the evidence base but is not listed or linked here, so the sources shown above are not the record’s only basis.",
+    "label_en": "This record also draws on material that has no public link to its original document. That material is recorded in the evidence base but is not listed or linked here, so the sources shown above are not the record’s only basis.",
     "label_ar": "ويستند هذا السجل أيضًا إلى مواد مصدرية لا يُسجَّل لها رابط أصلي عام، وهي محفوظة في قاعدة الأدلة لكنها لا تُدرج ولا تُربط هنا؛ لذلك فالمصادر المعروضة أعلاه ليست الأساس الوحيد للسجل.",
     "use_rule": "P15-F2. Evidence Record page: shown whenever a bound source is not rendered because it has no public locator (never named: publication firewall)."
   },
@@ -194,7 +194,7 @@
   {
     "ui_id": "UI-VIS-NOMINAL",
     "label_en": "Nominal — not adjusted for prices or exchange rates",
-    "label_ar": "اسمية — لم تُعدَّل وفق الأسعار أو سعر الصرف",
+    "label_ar": "اسمية — لم تُعدَّل لمراعاة تغيّر الأسعار أو سعر الصرف",
     "use_rule": "Pre-Tranche-C P3 visual grammar. Nominal currency series."
   },
   {
@@ -265,8 +265,8 @@
   },
   {
     "ui_id": "UI-VIS-ISSUER-SCOPE",
-    "label_en": "Status as recorded by the named authority only; absence from its list is not a status elsewhere.",
-    "label_ar": "وضعٌ كما سجلته الجهة المسماة وحدها؛ وعدم الإدراج في قائمتها لا يحدد وضعًا لدى جهة أخرى.",
+    "label_en": "Status as recorded by the named authority only; absence from its list says nothing about status with any other authority.",
+    "label_ar": "الوضع كما سجلته الجهة المسماة وحدها؛ وعدم الإدراج في قائمتها لا يدل على أي وضع لدى جهة أخرى.",
     "use_rule": "Pre-Tranche-C P3 visual grammar. Provider and status visuals."
   },
   {
@@ -662,7 +662,7 @@
   {
     "ui_id": "UI-VIS-CAT-EVT-QR-INTEROP",
     "label_en": "CBY-Aden board decision: mandatory national QR standard, linking of e-wallets, and CBY-Aden as a main shareholder in the Fast Payment System operator company",
-    "label_ar": "قرار مجلس إدارة البنك المركزي اليمني – عدن: معيار وطني إلزامي لرمز الاستجابة السريعة، وربط المحافظ الإلكترونية، ومساهمة البنك المركزي في عدن مساهمًا رئيسيًا في الشركة المشغلة لنظام الدفع السريع",
+    "label_ar": "قرار مجلس إدارة البنك المركزي اليمني – عدن: معيار وطني إلزامي لرمز الاستجابة السريعة، وربط المحافظ الإلكترونية، ومشاركة البنك المركزي اليمني – عدن مساهمًا رئيسيًا في الشركة المشغلة لنظام الدفع السريع",
     "use_rule": "Pre-Tranche-C P4 (V-D5). Chart label: event value 'National QR + e-wallet interconnection + FPS operator participation'."
   },
   {
@@ -692,7 +692,7 @@
   {
     "ui_id": "UI-VIS-CAT-AUTH-CBY-ADEN",
     "label_en": "Central Bank of Yemen — Aden",
-    "label_ar": "البنك المركزي اليمني — عدن",
+    "label_ar": "البنك المركزي اليمني – عدن",
     "use_rule": "Pre-Tranche-C P4 (V-D5). Chart label: authority value 'Central Bank of Yemen — Aden'."
   },
   {
@@ -704,7 +704,7 @@
   {
     "ui_id": "UI-VIS-CAT-PRV-CLASS-EXCHANGE",
     "label_en": "Exchange companies, exchange establishments and remittance agents",
-    "label_ar": "شركات الصرافة ومنشآتها ووكلاء الحوالات",
+    "label_ar": "شركات الصرافة ومنشآت الصرافة ووكلاء الحوالات",
     "use_rule": "Pre-Tranche-C P4 (V-D5). Chart label: provider_class value 'EXCHANGE_COMPANIES_ESTABLISHMENTS_AND_REMITTANCE_AGENTS'."
   },
   {
@@ -757,26 +757,26 @@
   },
   {
     "ui_id": "UI-VIS-CAT-PRV-NAMED-NONE",
-    "label_en": "No verified list of licensed names is held",
-    "label_ar": "لا توجد قائمة مضبوطة بأسماء الجهات المرخصة",
+    "label_en": "No verified list of licensed names in this evidence base",
+    "label_ar": "لا تتضمن قاعدة الأدلة قائمة متحقَّقًا منها بأسماء الجهات المرخصة",
     "use_rule": "Pre-Tranche-C P4 (V-D5). Chart label: provider_named_state value 'POSITIVE_NAMES_NOT_CONTROLLED'."
   },
   {
     "ui_id": "UI-VIS-CAT-PRV-NAMED-PARTIAL",
-    "label_en": "Partial network membership, not the regulated universe",
+    "label_en": "Partial network membership, not all regulated providers",
     "label_ar": "عضوية جزئية في الشبكة، ولا تمثل كامل الجهات الخاضعة للتنظيم",
     "use_rule": "Pre-Tranche-C P4 (V-D5). Chart label: provider_named_state value 'PARTIAL_NETWORK_MEMBERSHIP_NOT_REGULATORY_UNIVERSE'."
   },
   {
     "ui_id": "UI-VIS-CAT-PRV-EVENTS-NONE-APPLIED",
     "label_en": "Bank status events not reviewed here",
-    "label_ar": "لم تُراجَع هنا أحداث وضع البنوك",
+    "label_ar": "لم تُراجَع هنا الوقائع المؤرخة المتعلقة بوضع البنوك",
     "use_rule": "Pre-Tranche-C P4 (V-D5). Chart label: provider_event_overlay value 'NO_BANK_STATUS_EVENT_OVERLAY_APPLIED_IN_THIS_UNIT'."
   },
   {
     "ui_id": "UI-VIS-CAT-PRV-EVENTS-SELECTED-2026",
     "label_en": "Selected 2026 status events shown; they are not subtracted from the list",
-    "label_ar": "تُعرض أحداث وضع مختارة لعام 2026، ولا تُطرح من القائمة",
+    "label_ar": "تُعرض وقائع مختارة تتعلق بالوضع خلال عام 2026، ولا تُطرح من القائمة",
     "use_rule": "Pre-Tranche-C P4 (V-D5). Chart label: provider_event_overlay value 'SELECTED_2026_STATUS_OVERLAY__LATER_SUSPENSION_CLOSURE_EVENTS_MUST_NOT_BE_SUBTRACTED_MECHANICALLY'."
   },
   {
@@ -787,8 +787,8 @@
   },
   {
     "ui_id": "UI-VIS-CAT-PRV-EVENTS-NONE",
-    "label_en": "No status events held in this evidence base",
-    "label_ar": "لا تتضمن قاعدة الأدلة أحداثًا لوضع هذه الفئة",
+    "label_en": "No status events for this category are recorded in this evidence base",
+    "label_ar": "لا تتضمن قاعدة الأدلة وقائع مؤرخة تتعلق بوضع هذه الفئة",
     "use_rule": "Pre-Tranche-C P4 (V-D5). Chart label: provider_event_overlay value 'NONE'."
   },
   {
@@ -806,7 +806,7 @@
   {
     "ui_id": "UI-VIS-CAT-PRV-LIMIT-EWALLETS",
     "label_en": "Official sources report 7 e-wallets (2024 Q3), 9 e-wallets (2025 H1), 8 licensed e-wallets (2025-09-10) and more than 9 event participants (2026-01-22). The counts stay separate; no named current list of licensed wallets and payment service providers has yet been established.",
-    "label_ar": "تورد المصادر الرسمية 7 محافظ إلكترونية (الربع الثالث 2024)، و9 محافظ (النصف الأول 2025)، و8 محافظ مرخصة (2025-09-10)، وأكثر من 9 مشاركين في فعالية (2026-01-22). وتبقى هذه الأعداد منفصلة، ولم تُحسم بعد قائمة حالية مسماة بالمحافظ ومقدمي خدمات الدفع المرخصين.",
+    "label_ar": "تورد المصادر الرسمية 7 محافظ إلكترونية (الربع الثالث 2024)، و9 محافظ (النصف الأول 2025)، و8 محافظ مرخصة (2025-09-10)، وأكثر من 9 مشاركين في فعالية (2026-01-22). وتبقى هذه الأعداد منفصلة، ولم تُحسم بعد قائمة حالية بأسماء المحافظ ومقدمي خدمات الدفع المرخصين.",
     "use_rule": "Pre-Tranche-C P4 (V-D5). Chart label: provider_limit value 'Official objects report 7 e-wallets (2024 Q3), 9 e-wallets (2025 H1), 8 licensed e-wallets (2025-09-10), and >9 event participants (2026-01-22). Preserve separately; named positive current wallet/PSP universe remains open.'."
   },
   {
@@ -872,7 +872,7 @@
   {
     "ui_id": "UI-VIS-CAT-PRV-STATUS-PROHIBITED",
     "label_en": "Dealing prohibited as of the source date (unlicensed on that date)",
-    "label_ar": "حُظر التعامل في تاريخ المصدر (غير مرخص في ذلك التاريخ)",
+    "label_ar": "التعامل معه محظور في تاريخ المصدر (غير مرخص في ذلك التاريخ)",
     "use_rule": "Pre-Tranche-C P4 (V-D5). Chart label: provider_status value 'PROHIBITED_DEALING__UNLICENSED_AS_SOURCE_DATED'."
   },
   {
@@ -955,8 +955,8 @@
   },
   {
     "ui_id": "UI-VIS-NOT-PAY-POS-TRANSACTIONS",
-    "label_en": "Events, not people",
-    "label_ar": "أحداث، لا أشخاص",
+    "label_en": "Transactions, not people",
+    "label_ar": "معاملات، لا أشخاص",
     "use_rule": "Pre-Tranche-C P4 (re-verification R5). In-frame chart text."
   },
   {
@@ -980,7 +980,7 @@
   {
     "ui_id": "UI-EVID-READING-GUIDANCE",
     "label_en": "Read this evidence within the definition, population or group covered, calculation base where relevant, period, geography and method shown on the page. Before reusing or comparing it, check the source, limitations, evidence date and correction history. If a value or source link is unavailable, the page says so rather than filling the gap by inference. This resource does not host source files; where an original-source link is given, check the publisher’s terms before republishing.",
-    "label_ar": "يُقرأ هذا الدليل ضمن التعريف، والمجتمع الذي ينطبق عليه الرقم أو قاعدة الاحتساب عند الحاجة، والفترة، والجغرافيا، والطريقة المبينة في الصفحة. وقبل إعادة استخدامه أو مقارنته، راجع المصدر والحدود وحداثة الدليل وسجل التصحيح. وإذا كانت قيمة أو وصلة مصدر غير متاحة، تُذكر الفجوة صراحةً بدل ملئها بالاستنتاج. ولا يستضيف هذا المورد ملفات المصادر؛ وحيثما وُجد رابط للمصدر الأصلي، تحقق من شروط الناشر قبل إعادة النشر.",
+    "label_ar": "يُقرأ هذا الدليل ضمن التعريف، والمجتمع الذي ينطبق عليه الرقم، وقاعدة الاحتساب عند الاقتضاء، والفترة، والنطاق الجغرافي، والطريقة المبينة في الصفحة. وقبل إعادة استخدامه أو مقارنته، راجع المصدر والحدود وحداثة الدليل وسجل التصحيح. وإذا كانت قيمة أو وصلة مصدر غير متاحة، تُذكر الفجوة صراحةً بدل ملئها بالاستنتاج. ولا يستضيف هذا المورد ملفات المصادر؛ وحيثما وُجد رابط للمصدر الأصلي، تحقق من شروط الناشر قبل إعادة النشر.",
     "use_rule": "Tranche C TC-S1. Reading guidance on every Evidence Record; TRUST-03/EN-23: no download is offered, so the old 'Download and reuse are offered only where source rights permit' sentence is replaced."
   },
   {
@@ -1051,14 +1051,14 @@
   },
   {
     "ui_id": "UI-VIS-NOTE-MFI-2023-SECONDARY",
-    "label_en": "Sector figure from a secondary source; provider set not verified",
+    "label_en": "Sector figure from a secondary source; the providers it covers have not been verified",
     "label_ar": "رقم للقطاع من مصدر ثانوي؛ ولم يُتحقق من مجموعة مقدمي الخدمات التي يغطيها",
     "use_rule": "Tranche C TC-E (VIS-03). Note on the 2023 microfinance anchor."
   },
   {
     "ui_id": "UI-VIS-NOTE-INDEX-CONCORDANCE",
     "label_en": "The two indexed paths are almost identical, and the ratio between their levels hardly changes. This closeness does not show that the two series independently confirm the trend.",
-    "label_ar": "المساران المؤشَّران شبه متطابقين، ونسبة مستوى أحدهما إلى الآخر شبه ثابتة. ولا يبيّن هذا التقارب أن السلسلتين تؤكدان الاتجاه كلٌّ على نحو مستقل.",
+    "label_ar": "مسارا السلسلتين بعد تحويلهما إلى مؤشر شبه متطابقين، ونسبة مستوى أحدهما إلى الآخر شبه ثابتة. ولا يبيّن هذا التقارب أن السلسلتين تؤكدان الاتجاه كلٌّ على نحو مستقل.",
     "use_rule": "Tranche C TC-E (VIS-13). In-frame note, RV-CWR-001 panel 2."
   },
   {
@@ -1070,7 +1070,7 @@
   {
     "ui_id": "UI-VIS-NOTE-NOT-COMPARABLE-2024Q3",
     "label_en": "Not comparable with the 2024 Q3 bulletin",
-    "label_ar": "لا يُقارن بنشرة الربع الثالث 2024",
+    "label_ar": "غير قابل للمقارنة مع نشرة الربع الثالث 2024",
     "use_rule": "Tranche C TC-E (VIS-19). Card note for flagged payment objects, VIS-PAYMENT-ANATOMY."
   },
   {
@@ -1081,8 +1081,8 @@
   },
   {
     "ui_id": "UI-CONTENT-VERSION",
-    "label_en": "Content version of 26 September 2026",
-    "label_ar": "إصدار المحتوى بتاريخ 26 سبتمبر 2026",
+    "label_en": "Edition of 26 September 2026",
+    "label_ar": "إصدار 26 سبتمبر 2026",
     "use_rule": "Tranche C TC-F (VER-07/TOOL-14). Content version cited with every record; changes only with a governed release."
   },
   {
@@ -1106,7 +1106,7 @@
   {
     "ui_id": "UI-HOME-FIGURES-EVIDENCE",
     "label_en": "Evidence records behind these figures",
-    "label_ar": "سجلات الأدلة وراء هذه الأرقام",
+    "label_ar": "سجلات الأدلة التي تستند إليها هذه الأرقام",
     "use_rule": "Tranche C TC-F (JRN-03). Home."
   },
   {
@@ -1249,8 +1249,8 @@
   },
   {
     "ui_id": "UI-READING-DO-NOT-INFER",
-    "label_en": "Do not infer",
-    "label_ar": "لا يُستنتج",
+    "label_en": "What not to conclude",
+    "label_ar": "ما لا يُستنتج",
     "use_rule": "Label of the Reading's governed prohibited inference (08)."
   },
   {
@@ -1273,8 +1273,8 @@
   },
   {
     "ui_id": "UI-READING-OPEN",
-    "label_en": "Read this Reading",
-    "label_ar": "اقرأ هذه القراءة",
+    "label_en": "Open this Reading",
+    "label_ar": "افتح هذه القراءة",
     "use_rule": "Link from the featured Reading to its page."
   },
   {
@@ -1316,7 +1316,7 @@
   {
     "ui_id": "UI-DOM-WHAT-REMAINS-UNKNOWN",
     "label_en": "What remains unknown",
-    "label_ar": "ما يزال غير معروف",
+    "label_ar": "ما لا يزال غير معروف",
     "use_rule": "build.py _domain_labels['unknown']"
   },
   {
@@ -1327,8 +1327,8 @@
   },
   {
     "ui_id": "UI-DOM-A-VIEW-THAT-CHANGES-UNDERSTANDING",
-    "label_en": "A view that changes understanding",
-    "label_ar": "عرض يغيّر الفهم",
+    "label_en": "Another view of the evidence",
+    "label_ar": "زاوية أخرى للنظر في الأدلة",
     "use_rule": "build.py _domain_labels['visual']"
   },
   {
@@ -1393,8 +1393,8 @@
   },
   {
     "ui_id": "UI-DOM-ANALYTICAL-TEXT-ALTERNATIVE",
-    "label_en": "Analytical text alternative",
-    "label_ar": "البديل النصي التحليلي",
+    "label_en": "Text description of this view",
+    "label_ar": "وصف نصي لهذا العرض",
     "use_rule": "build.py _domain_labels['text_alternative']"
   },
   {
@@ -1405,8 +1405,8 @@
   },
   {
     "ui_id": "UI-DOM-READING-RULE",
-    "label_en": "Reading rule",
-    "label_ar": "قاعدة القراءة",
+    "label_en": "How numbers are presented",
+    "label_ar": "كيف تُعرض الأرقام",
     "use_rule": "build.py _domain_labels['reading_rule']"
   },
   {
@@ -1442,7 +1442,7 @@
   {
     "ui_id": "UI-EVID-WHO-OR-WHAT-DOES-IT",
     "label_en": "Who or what does it apply to?",
-    "label_ar": "على من أو ماذا ينطبق؟",
+    "label_ar": "على مَن أو على ماذا ينطبق؟",
     "use_rule": "build.py _evidence_labels['applies']"
   },
   {
@@ -1454,7 +1454,7 @@
   {
     "ui_id": "UI-EVID-HOW-CURRENT-IS-IT",
     "label_en": "How current is it?",
-    "label_ar": "حداثة الدليل",
+    "label_ar": "ما مدى حداثته؟",
     "use_rule": "build.py _evidence_labels['currentness']"
   },
   {
@@ -1490,7 +1490,7 @@
   {
     "ui_id": "UI-EVID-THIS-RECORD-CURRENTLY-HAS-NO",
     "label_en": "No original source for this record can be opened from here; use the method and verification detail below.",
-    "label_ar": "لا يمكن فتح مصدر أصلي لهذا السجل من هنا؛ استخدم المنهج وطريقة التحقق أدناه.",
+    "label_ar": "لا يمكن فتح مصدر أصلي لهذا السجل من هنا؛ راجع تفاصيل المنهج وطريقة التحقق أدناه.",
     "use_rule": "build.py _evidence_labels['no_source_record']"
   },
   {
@@ -1633,8 +1633,8 @@
   },
   {
     "ui_id": "UI-SEARCH-SEARCH-THE-PUBLIC-EVIDENCE",
-    "label_en": "Search the public evidence",
-    "label_ar": "ابحث في الأدلة العامة",
+    "label_en": "Search the published evidence",
+    "label_ar": "ابحث في الأدلة المنشورة",
     "use_rule": "build.py search_dialog()"
   },
   {
@@ -1682,7 +1682,7 @@
   {
     "ui_id": "UI-HEADER-REPORT-AN-ISSUE",
     "label_en": "Report an issue",
-    "label_ar": "الإبلاغ عن مشكلة",
+    "label_ar": "أبلغ عن مشكلة",
     "use_rule": "build.py header()"
   },
   {
@@ -1706,7 +1706,7 @@
   {
     "ui_id": "UI-HERO-START-WITH-A-QUESTION",
     "label_en": "Start with a question",
-    "label_ar": "ابدأ بالسؤال",
+    "label_ar": "ابدأ بسؤال",
     "use_rule": "build.py hero()"
   },
   {
@@ -1718,7 +1718,7 @@
   {
     "ui_id": "UI-HERO-THIS-RESOURCE-PRESENTS-THE-STRONGEST",
     "label_en": "This resource presents the strongest defensible answer while keeping scope, limits and source visible.",
-    "label_ar": "يعرض هذا المورد أقوى ما تسمح به الأدلة، مع إبقاء حدود الاستنتاج والمصدر ظاهرين.",
+    "label_ar": "يعرض هذا المورد أقوى إجابة تسندها الأدلة، مع إبقاء النطاق والحدود والمصدر ظاهرة.",
     "use_rule": "build.py hero()"
   },
   {
@@ -1748,7 +1748,7 @@
   {
     "ui_id": "UI-DOM-EVIDENCE-READINGS-ON-THIS-QUESTION",
     "label_en": "Evidence Readings on this question",
-    "label_ar": "قراءات الأدلة المرتبطة بهذه الصفحة",
+    "label_ar": "قراءات الأدلة المتعلقة بهذا السؤال",
     "use_rule": "build.py domain_readings()"
   },
   {
@@ -1789,7 +1789,7 @@
   },
   {
     "ui_id": "UI-QUESTIONS-QUESTIONS-INTO-THE-EVIDENCE",
-    "label_en": "Questions into the evidence",
+    "label_en": "Questions that lead into the evidence",
     "label_ar": "أسئلة للدخول إلى الأدلة",
     "use_rule": "build.py question_cards()"
   },
@@ -1826,19 +1826,19 @@
   {
     "ui_id": "UI-MA-CURRENT-EVIDENCE",
     "label_en": "Current evidence:",
-    "label_ar": "ما نعرفه:",
+    "label_ar": "الأدلة المتاحة حاليًا:",
     "use_rule": "build.py measurement_cards()"
   },
   {
     "ui_id": "UI-MA-MISSING-EVIDENCE",
     "label_en": "Missing evidence:",
-    "label_ar": "ما ينقص:",
+    "label_ar": "الأدلة الناقصة:",
     "use_rule": "build.py measurement_cards()"
   },
   {
     "ui_id": "UI-MA-DECISION-UNLOCKED",
-    "label_en": "Decision unlocked:",
-    "label_ar": "ما الذي سيصبح القرار فيه أقوى:",
+    "label_en": "Decision it would strengthen:",
+    "label_ar": "القرار الذي سيعززه القياس:",
     "use_rule": "build.py measurement_cards()"
   },
   {
@@ -1886,7 +1886,7 @@
   {
     "ui_id": "UI-COMPARE-CAN-THESE-RECORDS-ACTUALLY-BE",
     "label_en": "Can these records actually be compared?",
-    "label_ar": "هل يمكن مقارنة هذين السجلين مباشرة؟",
+    "label_ar": "هل يمكن مقارنة هذه السجلات مباشرة؟",
     "use_rule": "build.py compare_block()"
   },
   {
@@ -1934,13 +1934,13 @@
   {
     "ui_id": "UI-DATA-SOURCE-DIRECTORY-AND-VERIFICATION",
     "label_en": "Source directory and verification",
-    "label_ar": "دليل المصادر والتحقق",
+    "label_ar": "فهرس المصادر والتحقق",
     "use_rule": "build.py source_directory()"
   },
   {
     "ui_id": "UI-DATA-ONLY-SOURCE-INFORMATION-PERMITTED-BY",
-    "label_en": "Sources that support current public evidence are listed separately from references kept for verification or context, so that a link is never mistaken for analytical use or an observed result.",
-    "label_ar": "تُعرض المصادر التي تسند الأدلة العامة الحالية منفصلة عن المراجع المتاحة للتحقق أو السياق، حتى لا يُفهم مجرد وجود رابط على أنه استخدام تحليلي أو دليل على نتيجة.",
+    "label_en": "Sources that support the evidence now published are listed separately from references kept for verification or context, so that a link is never mistaken for analytical use or an observed result.",
+    "label_ar": "تُعرض المصادر التي تسند الأدلة المنشورة حاليًا منفصلة عن المراجع المتاحة للتحقق أو السياق، حتى لا يُفهم مجرد وجود رابط على أنه استخدام تحليلي أو دليل على نتيجة.",
     "use_rule": "build.py source_directory()"
   },
   {
@@ -1951,8 +1951,8 @@
   },
   {
     "ui_id": "UI-DATA-SOURCES-SUPPORTING-CURRENT-PUBLIC-EVIDENCE",
-    "label_en": "Sources supporting current public evidence",
-    "label_ar": "مصادر تسند أدلة عامة حالية",
+    "label_en": "Sources supporting the evidence now published",
+    "label_ar": "مصادر تسند الأدلة المنشورة حاليًا",
     "use_rule": "build.py source_directory()"
   },
   {
@@ -1964,7 +1964,7 @@
   {
     "ui_id": "UI-DATA-THESE-SOURCES-ARE-LINKED-DIRECTLY",
     "label_en": "These sources are linked directly to at least one current public Evidence Record. Open the records that use them to see exactly where and how.",
-    "label_ar": "هذه المصادر مرتبطة مباشرة بسجل دليل عام واحد على الأقل. افتح السجلات التي تستخدمها لمعرفة موضع استخدامها وكيفيته بدقة.",
+    "label_ar": "هذه المصادر مرتبطة مباشرة بسجل دليل عام حالي واحد على الأقل. افتح السجلات التي تستخدمها لمعرفة موضع استخدامها وكيفيته بدقة.",
     "use_rule": "build.py source_directory()"
   },
   {
@@ -1988,7 +1988,7 @@
   {
     "ui_id": "UI-DATA-NO-SOURCES-MATCH-THIS-SEARCH",
     "label_en": "No sources match this search. This does not mean there is no evidence on the topic; try another reference or title.",
-    "label_ar": "لا توجد مصادر مطابقة لهذا البحث. ولا يعني ذلك غياب الأدلة عن الموضوع؛ جرّب معرّفًا أو عنوانًا آخر.",
+    "label_ar": "لا توجد مصادر مطابقة لهذا البحث. ولا يعني ذلك غياب الأدلة عن الموضوع؛ جرّب مرجعًا أو عنوانًا آخر.",
     "use_rule": "build.py source_directory()"
   },
   {
@@ -2053,8 +2053,8 @@
   },
   {
     "ui_id": "UI-PAGE-SEARCH-CLAIMS-EVIDENCE-READINGS",
-    "label_en": "Search claims, evidence, readings...",
-    "label_ar": "ابحث في الخلاصات والأدلة والقراءات…",
+    "label_en": "Search questions, evidence, readings and sources…",
+    "label_ar": "ابحث في الأسئلة والأدلة والقراءات والمصادر…",
     "use_rule": "build.py generic()"
   },
   {
@@ -2078,7 +2078,7 @@
   {
     "ui_id": "UI-JS-CURRENT-RECORD",
     "label_en": "Current record: ",
-    "label_ar": "الرابط الحالي: ",
+    "label_ar": "السجل الحالي: ",
     "use_rule": "site-src/app.js"
   },
   {
@@ -2108,7 +2108,7 @@
   {
     "ui_id": "UI-JS-SEARCH-ZERO",
     "label_en": "0 results shown",
-    "label_ar": "0 نتيجة معروضة",
+    "label_ar": "عدد النتائج المعروضة: 0",
     "use_rule": "site-src/app.js"
   },
   {
@@ -2138,7 +2138,7 @@
   {
     "ui_id": "UI-JS-SOURCE-LINK-UNKNOWN",
     "label_en": "The source reference in this link was not found in the source directory. This is a problem with the link, not information about the evidence; all sources are shown below.",
-    "label_ar": "لم يُعثر في دليل المصادر على مرجع المصدر الوارد في هذا الرابط. هذه مشكلة في الرابط، وليست معلومة عن الأدلة؛ تُعرض المصادر كلها أدناه.",
+    "label_ar": "لم يُعثر في فهرس المصادر على مرجع المصدر الوارد في هذا الرابط. هذه مشكلة في الرابط، وليست معلومة عن الأدلة؛ تُعرض المصادر كلها أدناه.",
     "use_rule": "site-src/app.js"
   },
   {
@@ -2203,8 +2203,8 @@
   },
   {
     "ui_id": "UI-JS-COMPARE-UNIVERSE",
-    "label_en": "Population / base",
-    "label_ar": "المجتمع / قاعدة الاحتساب",
+    "label_en": "Population or base",
+    "label_ar": "المجتمع أو قاعدة الاحتساب",
     "use_rule": "site-src/app.js COMPARE_LABEL_UI['universe']"
   },
   {
@@ -2227,7 +2227,7 @@
   },
   {
     "ui_id": "UI-JS-COMPARE-CURRENTNESS",
-    "label_en": "Evidence currency",
+    "label_en": "How current the evidence is",
     "label_ar": "حداثة الدليل",
     "use_rule": "site-src/app.js COMPARE_LABEL_UI['currentness']"
   },
@@ -2251,14 +2251,14 @@
   },
   {
     "ui_id": "UI-JS-COMPARE-MISSING",
-    "label_en": "Not available to judge",
-    "label_ar": "غير متاح للحكم",
+    "label_en": "Not enough information to judge",
+    "label_ar": "لا تتوافر معلومات كافية للحكم",
     "use_rule": "site-src/app.js COMPARE_LABEL_UI['missing']"
   },
   {
     "ui_id": "UI-JS-COMPARE-INFORMATIONAL",
-    "label_en": "Trace only",
-    "label_ar": "للتتبع",
+    "label_en": "Shown for tracing only",
+    "label_ar": "معروض للتتبّع فقط",
     "use_rule": "site-src/app.js COMPARE_LABEL_UI['informational']"
   },
   {
@@ -2282,7 +2282,7 @@
   {
     "ui_id": "UI-JS-COMPARE-QUALIFIED",
     "label_en": "Qualified comparison only",
-    "label_ar": "مقارنة مؤهلة فقط",
+    "label_ar": "مقارنة مشروطة فقط",
     "use_rule": "site-src/app.js COMPARE_LABEL_UI['qualified']"
   },
   {
@@ -2306,13 +2306,13 @@
   {
     "ui_id": "UI-JS-COMPARE-UNRESOLVED-COPY",
     "label_en": "A field required to judge direct comparability is missing. Missing does not mean compatible, so the comparison remains unresolved.",
-    "label_ar": "تنقص حقول لازمة للحكم على المقارنة المباشرة. الغياب لا يعني التوافق؛ لذلك تبقى المقارنة غير محسومة.",
+    "label_ar": "ينقص حقلٌ لازم للحكم على قابلية المقارنة المباشرة. الغياب لا يعني التوافق؛ لذلك تبقى المقارنة غير محسومة.",
     "use_rule": "site-src/app.js COMPARE_LABEL_UI['unresolvedCopy']"
   },
   {
     "ui_id": "UI-JS-COMPARE-QUALIFIED-COPY",
-    "label_en": "The required structural fields align, but period or evidence currency differs. Use the comparison only with that qualification visible.",
-    "label_ar": "تتوافق الحقول البنيوية اللازمة، لكن الفترة أو حداثة الدليل تختلف. استخدم المقارنة مع هذا القيد ظاهرًا.",
+    "label_en": "The recorded definition, population and method align, but the period differs or the evidence is not equally current. Use the comparison only with that qualification visible.",
+    "label_ar": "يتوافق التعريف والمجتمع والطريقة المسجلة، لكن الفترة أو حداثة الدليل تختلف. استخدم المقارنة مع هذا القيد ظاهرًا.",
     "use_rule": "site-src/app.js COMPARE_LABEL_UI['qualifiedCopy']"
   },
   {
@@ -2335,7 +2335,7 @@
   },
   {
     "ui_id": "UI-JS-COMPARE-OPEN-RECORD",
-    "label_en": "Open Evidence Record",
+    "label_en": "Open evidence record",
     "label_ar": "افتح سجل الدليل",
     "use_rule": "site-src/app.js COMPARE_LABEL_UI['openRecord']"
   },

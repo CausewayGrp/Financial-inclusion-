@@ -1,17 +1,17 @@
 # OpenAI re-entry checkpoint — Yemen Financial Inclusion Evidence
 
-**Programme:** Final finite product programme — Tranche C → R8.5 → R8.6.
+**Programme:** Final integration to the Design handoff — directive D7 (`audit/directives/`), sessions F0–F9.
 **Position (current):** OpenAI accepted the Tranche C checkpoint on 26 September 2026 (recipient verification 31/31) and
-supplied the independent ten-Reading package with directive D7 (`audit/directives/`). Session F2 integrated the Reading
-portfolio Master-first (transaction RP-F2; `audit/READING_PORTFOLIO_FINAL_ADJUDICATION.md`). Sessions F3–F9 follow.
+supplied the independent ten-Reading package with directive D7. Sessions F0–F5 are closed: the Reading portfolio is
+integrated (F2), the Resource Library decisions are made (F3), R8.5 repository subtraction is closed (F4) and the whole
+public corpus is accepted (F5). Sessions F6–F9 (discovery, accessibility, rights and security; sustainability baseline;
+R8.6 handoff freeze; clean-room acceptance) follow.
 
-**Status: READING PORTFOLIO INTEGRATED — TRANCHE C ACCEPTANCE PRESERVED.** The sections below record the Tranche C
-checkpoint as reviewed; the authority hashes in §1 are current.
+**Status: PUBLIC CORPUS ACCEPTED — R8.6 IN PROGRESS.**
 
-- R8.4: CLOSED / PASS, Reading prose included (F2; BIL-05 closed: bilingual invariance 0).
-- R8.5 (subtraction and recipient cleanup) and R8.6 (clean-room Design handoff) have **not** been started.
+- R8.4: CLOSED / PASS, Reading prose included (F2). R8.5: CLOSED (F4). R8.6: in progress (F6–F9).
 - This is not DESIGN HANDOFF READY and not PUBLIC RELEASE READY.
-- The design and implementation prompts in `handoff/` remain **DRAFT — DO NOT EXECUTE YET** until R8.6.
+- The design and implementation prompts in `handoff/` remain **DRAFT — DO NOT EXECUTE YET** until the R8.6 freeze (F8).
 
 **Date:** 2026-09-26.
 
@@ -19,68 +19,75 @@ checkpoint as reviewed; the authority hashes in §1 are current.
 
 | Item | Value |
 |---|---|
-| Production Master | `authority/Yemen_Financial_Inclusion_Evidence_Master.xlsx` — SHA-256 `440614d789f662e2e47d95e932968be3c71d2719187bb91c6f546aed30e72f71` |
-| Page Specs | `site-src/content/page_specs.json` — SHA-256 `0425dc85c1662120a2b00a5bb3485b93d4f64f6058d7e2a0ebeb477dedc3e871` |
+| Production Master | `authority/Yemen_Financial_Inclusion_Evidence_Master.xlsx` — SHA-256 `ed3c5796cb0cca0109a0eb56f66d344ab0a5faa550e5235e05d65a6147f33fe1` |
+| Page Specs | `site-src/content/page_specs.json` — SHA-256 `2407cb4f9ca67aec60304630690488d04a3b05f9ea1eec03f805de24915cb3ad` |
 | Entry state recorded with the Drive IDs (lineage, not current) | Master `e69804106e04d093098688f2d01cea51e13191f255d774a090f3e5dd8dec9bc7`; Page Specs `ff2b0f559cde5fede3fe31d7dfb2539a00921e8b00b816c2863790cd9de49007` |
-| Tranche C entry (P5 close, lineage) | Master `397b3307…` |
-| Canonical repository | GitHub `CausewayGrp/Financial-inclusion-`, branch `main`. The state reviewed here is the signed tag `checkpoint/tranche-c-complete-reading-hold`, whose tree is byte-identical to the review ZIP; later commits on `main` add repository infrastructure and documentation only |
+| Master lineage in D7 | `f0150122…` (entry) → `caabff47…` (RP-F2) → `0e8730c2…` / `69899ae2…` (RL-F3, RL-F3b) → `2a7fd52b…` / `440614d7…` (R85-A, R85-B) → `168a0ad8…` / `ed3c5796…` (RF5, RF5b) |
+| Canonical repository | GitHub `CausewayGrp/Financial-inclusion-`, branch `main`. The last reviewed state is the signed tag `checkpoint/tranche-c-complete-reading-hold` |
 | External (Drive) copies | `EXTERNAL_REPOSITORY_SYNC_PENDING` — the Drive files were not replaced; they are lineage, not working copies |
-| Generator | `scripts/generate_projections.py`; `PROJECTION CHECK PASS` |
-| Generator tests | 21 of 21 |
+| Generator | `scripts/generate_projections.py`; `PROJECTION CHECK PASS`; 21 of 21 unit tests |
 | Build | 288 HTML documents from 143 Page Specs (286 localized + root + 404) |
-| Public-literal audit | 12,720 records, 0 unresolved; identical bytes under 8 `PYTHONHASHSEED` values |
+| Public-literal audit | 12,760 records, 0 unresolved; identical bytes under 8 `PYTHONHASHSEED` values |
 | Source-lineage truth test | 8 of 8 |
-| Validator | `WEBSITE REPOSITORY VALIDATION PASS`, 0 errors, 0 warnings (gates through TC-G05) |
-| Architecture diagrams | current |
+| Validator | `WEBSITE REPOSITORY VALIDATION PASS`, 0 errors, 0 warnings (gates through R85-G09 and RP-G06) |
 | Browser behaviour tests | `scripts/tests/test_public_tools.py` — 25 passed, 1 not applicable to the current data |
 | Viewport acceptance | `audit/tranche_c/checks/viewport_acceptance.py` — 168 of 168 |
-| Bilingual numeric invariance | `audit/tranche_c/checks/bilingual_invariance.py` — 6 page pairs differ, all from the three held Reading-prose items (BIL-05) |
+| Bilingual numeric invariance | `audit/tranche_c/checks/bilingual_invariance.py` — 0 page pairs differ (CI fails on any difference) |
 | Current counts | `site-src/content/content/public_inventory.json` (derived from the Master; the only source for counts) |
 
 The Master and Page Specs hashes in this file, `README.md`, `authority/AUTHORITY.json`, the Context and the handoff
 manifest are rebound by `scripts/rebind_authority.py`; validator gate P4-G04 fails if any of them diverges.
 
-## 2. What Tranche C did
+## 2. What happened since Tranche C
 
-Ten Master transactions, each committed through `audit/tranche_b_execution/run_stage.py` (regenerate, rebind, build,
-literal audit, diagrams, validate, generator check; rollback on any failure):
+Every Master change was a transaction committed through `audit/tranche_b_execution/run_stage.py` (regenerate, rebind,
+build, literal audit, diagrams, repository manifest, validate, generator check; rollback on any failure).
 
-- **TC-S1** one owner per text; **TC-A** evidence-record truth and visual re-tiers; **TC-B** source library display;
-  **TC-C** English and Arabic editorial acceptance; **TC-D** data tables; **TC-E** visual contracts; **TC-F** governed
-  copy for generator and runtime fixes; **TC-G** residual bindings; **TC-H** 28 page-section pairs brought to bilingual
-  parity; **TC-I** chronology dates in both languages, the /payments/ Arabic title and residual record/visual parity.
-- 224 panel findings plus 5 bilingual-invariance findings, each with one disposition. All 9 BLOCKERs are closed.
-- Currentness cut-off 26 September 2026.
+- **Evidence Readings (F1, F2).** The independent ten-Reading package was adjudicated against the Master and its sources
+  (`audit/READING_PORTFOLIO_FINAL_ADJUDICATION.md`, 60-row change ledger) and integrated Master-first (RP-F2). BIL-05
+  closed: every English/Arabic page pair prints the same numbers.
+- **F3 Resource Library.** Five bounded decisions: one curated card added, two deferred, two rejected
+  (`audit/F3_RESOURCE_DECISIONS.md`).
+- **F4 · R8.5.** Public copy moved out of `build.py` and `app.js` into the Master's governed interface copy; one path from
+  authority to recipient; `FINAL_REPOSITORY_MANIFEST.json` classifies every tracked file; `audit/INDEX.md`; permanent
+  gates R85-G01…G09 (`audit/R8_5_REPOSITORY_SUBTRACTION_CLOSURE.md`).
+- **F5 public corpus.** Eleven reviewers read every governed public text in Arabic, English and for parity: 667 findings,
+  all 57 material applied, 26 rejected under two house rulings, 3 deferred as source checks; scope qualifiers restored in
+  Arabic, firewall errors fixed, three unsupported periods corrected from the records' own sources, control language
+  removed, one duplicate source record retired, the chronology put in date order (`audit/F5_PUBLIC_CORPUS_ACCEPTANCE.md`,
+  `audit/F5_CORPUS_FINDINGS_LEDGER.csv`).
 
-Details: `audit/TRANCHE_C_FINAL_ACCEPTANCE.md`. Ledger: `audit/TRANCHE_C_FINDINGS_LEDGER.csv`. Currentness:
-`audit/FINAL_CURRENTNESS_CUTOFF.md`. Per-transaction ledgers and run reports: `audit/tranche_c/runs/`.
+Tranche C itself is recorded in `audit/TRANCHE_C_FINAL_ACCEPTANCE.md` and `audit/TRANCHE_C_FINDINGS_LEDGER.csv`.
+Currentness cut-off: 26 September 2026 (`audit/FINAL_CURRENTNESS_CUTOFF.md`).
 
-## 3. Reading package hold
+## 3. House rulings carried forward
 
-The Reading sections aligned in TC-H stay as committed; the incoming Reading package supersedes them where it rewrites
-them. Three parity items are passed to it (ledger BIL-05): the Arabic thesis of *Reforms newer than people evidence*
-(fieldwork months missing), the English question of *Finance constraint, different questions* (2022 seven-governorate
-frame missing), and the Arabic of RV-CWR-001/002. The package must enter Master-first through the runner and leave the
-invariance check at zero differing pairs.
+Recorded in `audit/F5_PUBLIC_CORPUS_ACCEPTANCE.md` §3 and binding on later editing: «فريد / الفريدين» for unique counts;
+«التحويلات» for remittances as a macro flow and «الحوالة / الحوالات» for individual transfers, their prices, domestic
+person-to-person remittances and the exchange-and-remittance sector; "the evidence base holds no …" (missing here is not
+non-existent); «أول تعامل مع …» for first contact; «مستمر» for durable use; «قاعدة الاحتساب»; one Arabic name for the
+OECD; CBY-Aden's full name at first mention; "edition", not "content version"; Evidence Record and visual twins stay
+identical.
 
-## 4. Open items carried forward (not defects of this checkpoint)
+## 4. Open items carried forward (not defects of this state)
 
-- **R8.5 (not started):**
-  - runtime duplicates REF-PAY-006/010 and REF-PAY-007/013;
-  - duplicate `(1)` audit files in `audit/`;
-  - public copy still held in `scripts/build.py` and `site-src/app.js` (AR-29, EN-09, TRUST-25);
-  - template currentness sentences and analytics-sheet labels (P3-D02);
-  - `FINAL_REPOSITORY_MANIFEST.json`, `audit/INDEX.md`, and the permanent gates, including a bilingual-parity gate
-    built on `audit/tranche_c/checks/bilingual_invariance.py`.
-- **Release-only dependencies:** TOOL-02 (logo asset pipeline for the 10 MB master PNG; never redrawn here), TOOL-25
-  (nav-group presentation, Design-owned), TRUST-09 (CauseWay identity and funding statement needs owner input).
+- **Evidence checks deferred in F5 (text unchanged until the source is read):** YSC-008 — date oil exports stopped
+  ("from January 2023" to be checked against IMF Country Report No. 26/80); YSC-014 — unit of two IMF prudential ratios;
+  SRC-CBY-ENF-10-2026 — date of Governor's Decision No. 10 of 2026.
+- **Release-only dependencies:** TOOL-02 (web-size derivatives of the 10 MB master logo; the logo is never redrawn),
+  TOOL-25 (navigation-group presentation, Design-owned), TRUST-09 (CauseWay identity and funding statement needs owner
+  input), confirmation that the contact mailbox `office@causewaygrp.com` is monitored.
 - **Known evidence frontiers:** CLM-044 value withheld (no public locator or rights assessment); the ~147-firm base
-  implied by the 91.84% table; the CBY-Aden↔IMF remittance level crosswalk; the causes of the gender gap; reconciled
-  current operating-provider status; the magnitude of the 2022 banking restatement (EVM-18, VER-23).
+  implied by the 91.84% table; the CBY-Aden ↔ IMF remittance level crosswalk; the causes of the gender gap; reconciled
+  current operating-provider status; the magnitude of the 2022 banking restatement.
+- **Sessions still open:** F6 (SEO and discovery, accessibility contract, rights, security and privacy checks), F7
+  (sustainability baseline and support-readiness note), F8 (R8.6 handoff freeze: one Design start path, acceptance
+  criteria, design-to-code contract), F9 (clean-room recipient test, final open-items register, handoff archive).
 
 ## 5. Re-run
 
 ```
+python3 scripts/checksums.py --check
 python3 scripts/generate_projections.py --check
 python3 -m unittest discover -s scripts/projection/tests -t .
 python3 scripts/build.py && python3 scripts/audit_public_literals.py && python3 scripts/validate.py
@@ -90,13 +97,13 @@ python3 scripts/tests/test_public_tools.py                 # needs Python Playwr
 python3 audit/tranche_c/checks/viewport_acceptance.py       # needs Python Playwright + Chromium
 python3 audit/tranche_c/checks/bilingual_invariance.py
 python3 scripts/architecture_diagrams.py --check
-sha256sum -c SHA256SUMS.txt
+python3 scripts/repository_manifest.py --check
 ```
 
 ## 6. Boundaries kept
 
 - One authority. Every content change went into the Master first through the runner. No projection was edited by hand.
-- Nothing completed earlier in the programme was reopened; Reading prose was not final-frozen.
+- Nothing closed earlier in the programme was reopened without a recorded finding.
 - **Not claimed:** native Arabic certification, legal review, WCAG conformance, rights clearance, security guarantees,
   service levels.
 - No external repository was changed.

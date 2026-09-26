@@ -1,0 +1,35 @@
+{
+ "transaction": "RF5b",
+ "decided_by": "Team Lead, final integration session F5 (directive D7)",
+ "rule": "Second F5 pass over the ten Evidence Readings (08 fields and 03 essay sections), same brief and house rulings as RF5 (inputs/F5_LEAD_RULINGS.json global_rulings). Every finding not listed below is ACCEPTED as proposed.",
+ "reject": {},
+ "superseded": {},
+ "deferred": {},
+ "modify": {
+  "readings_2-007": {
+   "replacement": "لوصول المنشآت الأصغر والصغيرة والمتوسطة إلى التمويل",
+   "reason": "The corpus MSME term is «المنشآت الأصغر والصغيرة والمتوسطة» (RF5 qmc-036/037)."
+  }
+ },
+ "lead_edits": [
+  {
+   "id": "F5-L19",
+   "sheet": "04",
+   "key": "UI-CONTENT-VERSION",
+   "field": "label_en",
+   "current": "Content version of 26 September 2026",
+   "replacement": "Edition of 26 September 2026",
+   "reason": "The citation line names the edition; 'content version' is repository vocabulary (RF5 sweep F5-S01 renamed it in the evidence records)."
+  },
+  {
+   "id": "F5-L20",
+   "sheet": "04",
+   "key": "UI-CONTENT-VERSION",
+   "field": "label_ar",
+   "current": "إصدار المحتوى بتاريخ 26 سبتمبر 2026",
+   "replacement": "إصدار 26 سبتمبر 2026",
+   "reason": "As F5-L19, in Arabic."
+  }
+ ],
+ "structural": []
+}

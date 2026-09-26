@@ -29,19 +29,19 @@
   {
     "question_id": "QE-004",
     "question_en": "Is digital finance becoming durable financial use — or do the available data still mainly measure infrastructure and transactions?",
-    "question_ar": "هل يتحول التمويل الرقمي إلى استخدام مالي مستدام، أم أن الأدلة المتاحة ما تزال تقيس أساسًا البنية والمعاملات؟",
+    "question_ar": "هل يتحول التمويل الرقمي إلى استخدام مالي مستمر، أم أن الأدلة المتاحة ما تزال تقيس أساسًا البنية والمعاملات؟",
     "primary_route": "/payments",
     "answer_mode": "DIGITAL_USE_DIAGNOSIS",
     "user_gets_en": "Infrastructure, registration, activity and durable-use evidence kept separate.",
-    "user_gets_ar": "فصل البنية والتسجيل والنشاط عن دليل الاستخدام المستدام."
+    "user_gets_ar": "فصل البنية والتسجيل والنشاط عن دليل الاستخدام المستمر."
   },
   {
     "question_id": "QE-005",
-    "question_en": "For firms, how serious is finance — and how does it compare with other constraints?",
+    "question_en": "For firms, how serious a constraint is finance — and how does it compare with other constraints?",
     "question_ar": "ما مدى حدة قيد التمويل على المنشآت، وما موقعه بين القيود الأخرى؟",
     "primary_route": "/firms",
     "answer_mode": "FIRM_DECISION_DIAGNOSIS",
-    "user_gets_en": "How often finance is named among other constraints, finance severity for a filtered group, the credit path and programme evidence.",
+    "user_gets_en": "How often finance is named among other constraints, how severe the finance obstacle is for a defined group of firms, the credit path and programme evidence.",
     "user_gets_ar": "مدى ذكر التمويل بين القيود الأخرى، وشدة عائق التمويل لدى فئة محددة، ومسار الائتمان، وأدلة البرامج."
   },
   {
@@ -56,10 +56,10 @@
   {
     "question_id": "QE-007",
     "question_en": "What do remittances and other money flows tell us about households’ connection to the financial system?",
-    "question_ar": "ماذا تخبرنا الحوالات والتدفقات المالية الأخرى عن صلة الأسر بالنظام المالي؟",
+    "question_ar": "ماذا تخبرنا التحويلات والتدفقات المالية الأخرى عن صلة الأسر بالنظام المالي؟",
     "primary_route": "/remittances",
     "answer_mode": "MONEY_FLOW_TO_USE",
-    "user_gets_en": "Macro-flow vintages, channels, costs and evidence on household use.",
+    "user_gets_en": "Successive releases of national flow data, channels, costs and evidence on household use.",
     "user_gets_ar": "إصدارات بيانات التدفقات الكلية، والقنوات، والتكاليف، وأدلة استخدام الأسر."
   },
   {
@@ -92,10 +92,10 @@
   {
     "question_id": "QE-011",
     "question_en": "How can I check the evidence behind a claim, see why sources disagree and reproduce a result?",
-    "question_ar": "أرني الدليل الذي تقوم عليه الخلاصة، واشرح أوجه الاختلاف بين الأرقام، ومكّنني من إعادة احتساب النتيجة.",
+    "question_ar": "كيف أتحقق من الدليل الذي تقوم عليه الخلاصة، وأفهم سبب اختلاف المصادر، وأعيد احتساب النتيجة؟",
     "primary_route": "/evidence",
     "answer_mode": "VERIFY_AND_REPRODUCE",
     "user_gets_en": "Evidence records, field-by-field comparison, how derived figures are calculated, and how to cite them.",
-    "user_gets_ar": "سجلات الأدلة، والمقارنة، وطريقة الاحتساب، وتاريخ الإصدارات، والاستشهاد، وإعادة الاستخدام الآمن."
+    "user_gets_ar": "سجلات الأدلة، والمقارنة بين المصادر حقلًا بحقل، وطريقة احتساب الأرقام المشتقة، وطريقة الاستشهاد بها."
   }
 ]
