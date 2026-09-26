@@ -44,7 +44,7 @@
    "QA/build labels",
    "backend governance terminology"
   ],
-  "editorial_rule": "Professional compression is allowed only when number, unit, universe/denominator, geography, period, source, evidence strength, uncertainty, limitation and prohibited inference remain unchanged."
+  "editorial_rule": "Render governed wording exactly as authored. Design and Code never shorten, paraphrase or rewrite it; only the programme may compress it, Master-first, and only when number, unit, universe/denominator, geography, period, source, evidence strength, uncertainty, limitation and prohibited inference remain unchanged."
  },
  "numeric_inventory": {
   "tokenizer": "(?<!\\w)(?:USD |YER ?|~|\\+)?\\d[\\d,]*(?:\\.\\d+)?(?: ?%| percentage points| Q\\d| million| billion| M| m)?",

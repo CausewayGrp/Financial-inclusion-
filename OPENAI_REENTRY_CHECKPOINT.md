@@ -21,7 +21,7 @@ sustainability baseline is recorded (F7) and the Design handoff is frozen (F8). 
 | Item | Value |
 |---|---|
 | Production Master | `authority/Yemen_Financial_Inclusion_Evidence_Master.xlsx` — SHA-256 `17db032b15da16fc4b5b3c3b49f19aebf2ecb4ec46634613fe8505d0f038690b` |
-| Page Specs | `site-src/content/page_specs.json` — SHA-256 `79a1735abe673745f8670f220b1d75a7daf75975ffaad847c87191f77bb0991e` |
+| Page Specs | `site-src/content/page_specs.json` — SHA-256 `d45748046ea56fd0e67fdf112f9888de65b3fe7fab46ce6f51de3a80824b69aa` |
 | Entry state recorded with the Drive IDs (lineage, not current) | Master `e69804106e04d093098688f2d01cea51e13191f255d774a090f3e5dd8dec9bc7`; Page Specs `ff2b0f559cde5fede3fe31d7dfb2539a00921e8b00b816c2863790cd9de49007` |
 | Master lineage in D7 | `f0150122…` (entry) → `caabff47…` (RP-F2) → `0e8730c2…` / `69899ae2…` (RL-F3, RL-F3b) → `2a7fd52b…` / `440614d7…` (R85-A, R85-B) → `168a0ad8…` / `ed3c5796…` (RF5, RF5b) |
 | Canonical repository | GitHub `CausewayGrp/Financial-inclusion-`, branch `main`. The last reviewed state is the signed tag `checkpoint/tranche-c-complete-reading-hold` |
@@ -88,7 +88,7 @@ identical.
 ## 4. Open items carried forward (not defects of this state)
 
 Every item, with its class, where it shows, what closes it and its owner, is in `FINAL_OPEN_ITEMS_REGISTER.md`
-(48 items: 10 engineering after Design, 4 release-only, 11 external evidence dependencies, 8 known evidence frontiers,
+(49 items: 11 engineering after Design, 4 release-only, 11 external evidence dependencies, 8 known evidence frontiers,
 8 owner inputs, 7 rejected / no action; **zero DESIGN_BLOCKER**). F8 built it from a sweep of every earlier record that
 left an item open and checked each against the current bytes; 23 earlier items had been closed later and are listed
 there so they are not reopened. Two were re-tracked: the bilingual status-event table for `/providers/` (EXT-04, which

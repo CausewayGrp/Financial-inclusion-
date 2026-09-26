@@ -98,7 +98,7 @@ def site_map(nav, inv, n):
         ("Evidence hub", ["/evidence/", "Find and inspect public evidence"], None),
         ("Compare", ["/evidence/compare/", "Comparability verdict before values"], None),
         (f"Evidence Records ×{inv['evidence_records']}", ["/evidence/[id]/", "Scope · period · method · limitation · source"], None),
-        (f"Evidence Readings ×{inv['readings']}", ["/readings/[reading_id]/", "Bounded cross-source analysis"], None),
+        (f"Evidence Readings ×{inv['readings']}", ["/readings/[slug]/", "Bounded cross-source analysis"], None),
         ("Measurement Agenda", ["/measurement/", f"{inv['measurement_priorities']} priorities: unknown → evidence needed"], None),
         ("Data & sources", ["/data/", f"{inv['public_locators']} public locators · {inv['curated_resources']} curated cards"], None),
     ], 646, 96, WHITE))
@@ -189,7 +189,11 @@ def family_map(nav, inv, n):
 def full_stack(inv, n, current):
     rules = [(r"Page Specs ×\d+", f"Page Specs ×{n}"), (r"Visual contracts ×\d+", f"Visual contracts ×{inv['visual_contracts']}"),
              (r"\d+ localized pages", f"{2 * n} localized pages"), (r"(?<!Evidence )Readings / Measurement<", "Evidence Readings / Measurement<"),
-             (r">Data / Sources<", ">Data &amp; sources<")]
+             (r">Data / Sources<", ">Data &amp; sources<"),
+             # F9: the Design package lives in the repository (design/), not in an external design file; no analytics ship
+             (r">Design system / Figma<", ">Claude Design package (design/)<"),
+             (r">Figma is visual artifact, repository spec remains implementation contract<", ">images illustrate; the repository package is the contract<"),
+             (r">HOST / BASE_URL / analytics opt-in / reporting endpoint<", ">public origin · no analytics · static correction path<")]
     out = current
     for pat, rep in rules:
         if not re.search(pat, out) and not re.search(re.escape(rep), out):

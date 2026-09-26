@@ -5,7 +5,7 @@
   "production_master": "authority/Yemen_Financial_Inclusion_Evidence_Master.xlsx",
   "production_master_sha256": "17db032b15da16fc4b5b3c3b49f19aebf2ecb4ec46634613fe8505d0f038690b",
   "page_specs": "site-src/content/page_specs.json",
-  "page_specs_sha256": "79a1735abe673745f8670f220b1d75a7daf75975ffaad847c87191f77bb0991e",
+  "page_specs_sha256": "d45748046ea56fd0e67fdf112f9888de65b3fe7fab46ce6f51de3a80824b69aa",
   "logo": "site-src/assets/CauseWay_Master_Logo.png",
   "logo_sha256": "5830163d50f9badbef3227ec44e7705548e2fcc8a06b2d6ae33d56ade60c6a90",
   "rule": "The Production Master is the only semantic authority. Everything under site-src/content, dist, design/architecture and audit/PUBLIC_LITERAL_CLOSURE.json is generated from it and never edited by hand."
@@ -27,7 +27,7 @@
   "AUTHORITY_RULES": 1,
   "BUILD_AND_GATES": 15,
   "CURRENT_DOCUMENT": 10,
-  "CURRENT_PROGRAMME_RECORD": 47,
+  "CURRENT_PROGRAMME_RECORD": 48,
   "GENERATED_DIAGRAMS": 9,
   "GENERATED_LITERAL_CLOSURE": 1,
   "GENERATED_PROJECTION": 39,
@@ -423,6 +423,10 @@
   },
   {
    "path": "audit/final_integration/inputs/F9_COLD_RECIPIENT_RUN1.md",
+   "class": "CURRENT_PROGRAMME_RECORD"
+  },
+  {
+   "path": "audit/final_integration/inputs/F9_COLD_RECIPIENT_RUN2.md",
    "class": "CURRENT_PROGRAMME_RECORD"
   },
   {

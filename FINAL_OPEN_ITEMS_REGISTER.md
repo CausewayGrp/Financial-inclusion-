@@ -8,8 +8,8 @@ affects, part of the scope Design and Code already receive, or needed only for p
   `README.md`). Built in F8; F9 added what the cold-recipient test found. Later changes are appended, never rewritten.
 - **Built from:** a sweep of every audit record that left an item open, deferred, held, carried or release-only (Tranche A
   and B queues, P1–P5, Tranche C, F3, F5, F6, F7), checked against the current repository bytes; 36 items were still
-  open, 23 had been closed or superseded later (section 8). F9's cold-recipient test (a fresh agent with only the
-  repository) added OWN-08 and closed three items (section 8).
+  open, 23 had been closed or superseded later (section 8). F9's two cold-recipient runs (fresh agents with only the
+  repository) added EAD-11 and OWN-08, widened EXT-10, and closed seven items (section 8).
 - **How Design uses it:** read it once; nothing here asks Design to invent content. Where an item touches a screen, design
   the honest state the page already has (a withheld value, a partial lineage, an undated title) and do not fill it.
 - **Class rule:** `ENGINEERING_AFTER_DESIGN` (Design specifies, Code implements after the Design package is accepted) ·
@@ -20,7 +20,7 @@ affects, part of the scope Design and Code already receive, or needed only for p
 
 | Class | Items |
 |---|---|
-| ENGINEERING_AFTER_DESIGN | 10 |
+| ENGINEERING_AFTER_DESIGN | 11 |
 | RELEASE_ONLY | 4 |
 | EXTERNAL_EVIDENCE_DEPENDENCY | 11 |
 | KNOWN_EVIDENCE_FRONTIER | 8 |
@@ -42,6 +42,7 @@ affects, part of the scope Design and Code already receive, or needed only for p
 | EAD-08 | IBM Plex Sans and IBM Plex Sans Arabic self-hosted and subset | The baseline CSS names the families but ships no font files; readers without them installed see the fallback | Design self-hosts them in its reference implementation and Code in production, from `@ibm/plex-sans@1.1.0` and `@ibm/plex-sans-arabic@1.1.0` (OFL-1.1, licence shipped); no font CDN | Design, Code | D7 §F8 |
 | EAD-09 | Social images: `og:image` only when Design's per-family templates are generated at build time from governed text | Open Graph without image (F6, F8) | Templates in the Design package; generated at build; gate F6-G01 extended | Design, Code | F6 |
 | EAD-10 | Remeasure bytes and requests on the implemented site and on the release host; set budgets only then; no carbon figure or green claim before a named model is applied | Pre-design baseline only | `docs/SUSTAINABILITY_METHOD.md` rerun after implementation and after deployment | Code | F7 |
+| EAD-11 | Home's four starting questions and Explore's four question clusters (the R8.4A decision) are ID sets held in `scripts/build.py`, not in a governed contract | The inventory exposes them for Design (`/` and `/explore/` → `collection`); the cluster headings are governed `UI-QUESTIONS-*` labels | The production runtime takes the sets from a governed contract (Master or presentation contract), selection unchanged | Code, with the steward | F9 run 2 |
 
 ## 2. RELEASE_ONLY
 
@@ -67,7 +68,7 @@ The public text stays exactly as it is until the source is read; closing any of 
 | EXT-07 | Findex subgroup unweighted base *n* and design-based uncertainty intervals | CLM-002 and `/people/` state that no intervals are published or calculated | Authorised microdata; reproduce the World Bank values first, then compute | Tranche B U-08 |
 | EXT-08 | Three Evidence Records with partial lineage: CLM-039, CLM-046, CLM-056 (some dataset-level inputs not linked to a source); CWR-006 inherits the partial state through CLM-056 | Each record page states that some inputs are not yet linked to a source | Bind the remaining inputs to source records Master-first | P1-L11, Tranche B U-11 |
 | EXT-09 | Nine source records carry a public locator but no governed title, publisher or document type (the other nine locator-only records have no public locator and are never named) | Shown as "reference · locator" | A primary read of each; promote the metadata Master-first | P2-F10, Tranche B U-07 |
-| EXT-10 | Reading visuals RV-CWR-005 (five-provider e-money mix) and RV-CWR-008 (SMEPS indicators) hold their values as governed text, not data rows | SUPPORTING tier; drawn text-first | Verify against the source tables and promote the values to rows Master-first | P3 |
+| EXT-10 | Reading visuals RV-CWR-005 (five-provider e-money mix) and RV-CWR-008 (SMEPS indicators) hold their values as governed text, not data rows; the table VIS-MFI-DIVERGENCE's rationale describes (borrowers, savers, portfolio at three anchors) has no resolved rows | SUPPORTING and TABLE_TEXT_FIRST tiers; rendered from governed text | Verify against the source tables and promote the values to rows Master-first | P3; F9 run 2 |
 | EXT-11 | IFAD *Sending Money Home 2026*, deferred as a curated resource | Not in the source register | The full report shown to publish a Yemen estimate with a documented method (F3 reopening trigger) | F3 #2 |
 
 ## 4. KNOWN_EVIDENCE_FRONTIER
@@ -83,7 +84,7 @@ must never fill them with an estimate, a proxy or a colour.
 | FRN-04 | The causes of the gender gap are not established | Reading CWR-007; MA-003 | Tranche C |
 | FRN-05 | No reconciled view of current operating status across provider classes | `/providers/`; CLM-009, CLM-019 | Tranche C |
 | FRN-06 | The magnitude of the 2022 banking restatement is not quantified until the two vintages are reconciled line by line | Reading "banking jump"; CLM-033; RV-CWR-002 | EVM-18, VER-23 |
-| FRN-07 | Composite records whose member records are not listed (9 Evidence Records, 8 visuals, 1 claim) | Each page says the view summarises other evidence | P1-L11, Tranche B U-11 |
+| FRN-07 | Composite records whose member records are not listed (by object type in the source-closure file: 9 Evidence Records — CLM-014, DS-DEMAND-VINTAGE-LENS and seven `VIS-` records — 8 visuals and 1 claim) | Each page says the view summarises other evidence | P1-L11, Tranche B U-11 |
 | FRN-08 | The World Bank Joint Food Security Monitor's sub-national exchange-rate series (definition, area, lineage), deferred as a curated resource | Not in the source register | F3 #5 |
 
 ## 5. OWNER_INPUT
@@ -97,7 +98,7 @@ must never fill them with an estimate, a proxy or a colour.
 | OWN-05 | Stewardship decisions: maintenance resourcing, an analytics policy (none exists; no analytics ship), Digital Public Good gaps | `handoff/SUPPORT_AND_PARTNERSHIP_READINESS.md` (non-public) | Nothing public depends on it |
 | OWN-06 | A reversed (light-on-dark) logo, only if the design needs one | Not requested yet | Design places the canonical logo on a light field; no derived variant is made (EAD-04) |
 | OWN-07 | `/remittances/` shows no Measurement card although its Page Spec and the route inventory bind MA-001 (Tranche B bound MA-001 to give the route a measurement node): the reference build's presentation-depth contract sets `measurement_limit` 0 for this route only (the other seven domain routes use 2). The file is `site-src/content/presentation_priority.json`, a hand-maintained presentation contract that the repository manifest lists with the generated projections, which agents do not edit | `/remittances/` in the reference build; `handoff/ROUTE_CONTENT_AND_STATE_INVENTORY.json` lists MA-001 | The maintainer decides whether to raise the limit to 1 (S03.3 set it to 0 when the route had no bound priority, before Tranche B bound MA-001) and how that file is classified; Design follows the contract as it stands and makes the Measurement slot collapse cleanly at 0 (brief §2) |
-| OWN-08 | Descriptive fields in `site-src/content/content/navigation_interaction.json` (hand-maintained) that disagree with governed copy or tested behaviour: `utilities.report_issue` (route `/corrections/`, «الإبلاغ عن مشكلة») vs the tested `/contact/?record=` and the governed «أبلغ عن مشكلة»; `breadcrumbs.Reading` (stable ID) vs the rendered governed title (decision PID-1); `interaction_tools.compare` (lists geography and unit) vs the six governed dimensions; two `hard_state_acceptance` sentences (`verification_sparse` "no source expected" on CLM-015, which has a source; `institutional_sequence` "interoperability" on `/payments/`, which carries no such state). Like `presentation_priority.json`, the file is maintained in place but listed with the generated projections | The rendered baseline follows governed copy and the tests | The maintainer corrects the five fields and decides how the two contracts are classified and edited; until then the Design brief §2 precedence table and §9.2 say exactly what to design to |
+| OWN-08 | Descriptive fields in `site-src/content/content/navigation_interaction.json` (hand-maintained) that disagree with governed copy or tested behaviour: `utilities.report_issue` (route `/corrections/`, «الإبلاغ عن مشكلة») vs the tested `/contact/?record=` and the governed «أبلغ عن مشكلة»; `breadcrumbs.Reading` (stable ID) vs the rendered governed title (decision PID-1); `interaction_tools.compare` (lists geography and unit) vs the six governed dimensions; two `hard_state_acceptance` sentences (`verification_sparse` "no source expected" on CLM-015, which has a source; `institutional_sequence` "interoperability" on `/payments/`, which carries no such state); `vintage_conflict` asks `/remittances/` for same-year revisions, which only the linked Reading draws; `interaction_tools.evidence_workbench` lists the non-public Evidence Passports as an input and allows add-to-Compare beyond the 13 comparable records; journey J10's path runs record → Corrections → Contact, while the tested path is record → Contact → Corrections. Like `presentation_priority.json`, the file is maintained in place but listed with the generated projections | The rendered baseline follows governed copy and the tests | The maintainer corrects these fields and decides how the two contracts are classified and edited; until then the Design brief §2 precedence table and §9.2 say exactly what to design to |
 
 ## 6. REJECTED / NO ACTION
 
@@ -116,7 +117,7 @@ must never fill them with an estimate, a proxy or a colour.
 A blocker is something without which Design would have to invent a factual premise, a label or a behaviour. The F8
 sweep found none: every string Design needs is governed (`site-src/content/content/interface_copy.json`); every evidence
 state it must draw exists in real data (`handoff/ROUTE_CONTENT_AND_STATE_INVENTORY.json`, twelve hard-state cases and
-fourteen technical states); every open item above either has an honest state on its page, is Design's or Code's own
+fifteen technical states); every open item above either has an honest state on its page, is Design's or Code's own
 scope, or matters only at release. Anything Design finds missing is recorded in `design/ESCALATIONS.md` as
 `NEEDS_CONTROLLED_CONTENT` or `ESCALATE_TO_MASTER` — never worked around — and the steward answers it Master-first and
 appends lasting items here. The labels Design is expected to request (brief §10) are expected work, not open items.
@@ -138,7 +139,11 @@ contradiction it found was either fixed or given an explicit rule in the brief (
 | Literal-audit heuristic (U-14) and duplicate page contracts (U-15) | P1-D; R8.5 |
 | Two language-switch labels held as literals in `scripts/build.py` (F9 cold-recipient finding) | F9, transaction RF9: moved unchanged into the Master's interface copy (`UI-LANG-SWITCH-NAME`, `UI-LANG-SWITCH-ACTION`) |
 | WITHHELD used as a visual marker without a governed drawing rule (F9) | F9: grammar entry in the controlled visual contract input, regenerated |
-| Inventory without collection bindings, next actions or rendered verification states; hard-state cases without the facts at their route (F9) | F9: `scripts/handoff_inventory.py` schema 1.1 |
+| Inventory without collection bindings, next actions or rendered verification states; hard-state cases without the facts at their route (F9) | F9: `scripts/handoff_inventory.py` schema 1.2 |
+| The Page Specs' editorial rule allowed "professional compression" without saying by whom (F9 run 2) | F9: controlled input `page_spec_templates.json` — governed wording is rendered as authored; only the programme compresses, Master-first |
+| A comparability flag rendered as an ungoverned UNKNOWN marker on two withheld VIS-PAYMENT-ANATOMY values (F9 run 2) | F9: marker mapping removed in the controlled visual contract input; WITHHELD governs those values |
+| Architecture diagrams named an external design tool, an analytics opt-in and `/readings/[reading_id]/` (F9 run 2) | F9: `scripts/architecture_diagrams.py` |
+| From an extracted archive, a locally built `design/reference/out/` would have entered the checksum and file manifests (F9 run 2) | F9: `scripts/checksums.py` honours `.gitignore` when there is no `.git`; the manifest and validator use the same file set |
 | Navigation relabel and domain pages without Readings (Tranche A) | Tranche B Stage 4; gate RP-G04 |
 
 ## 9. Keeping this register

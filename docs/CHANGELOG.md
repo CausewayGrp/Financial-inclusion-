@@ -1,5 +1,24 @@
 # Repository Change Log
 
+## 2026-09-26 — F9 (part 2): second cold-recipient run
+
+A second fresh agent, on a clone of `3adf224`, passed every command, verified `YFIE_SITE_DIR` by planting defects, and
+could start D0; it asked six questions and reported 9 material and 14 editorial points
+(`audit/final_integration/inputs/F9_COLD_RECIPIENT_RUN2.md`). No Master change.
+- **Page Specs.** The editorial rule now says governed wording is rendered exactly as authored; only the programme
+  compresses it, Master-first (controlled input `page_spec_templates.json`).
+- **Visual contracts.** A comparability flag no longer renders as an ungoverned UNKNOWN marker on two withheld values.
+- **Inventory 1.2.** Home's starting questions and Explore's clusters, section counts per `section_order` with a flag for
+  per-language rows, each domain route's verify destination in its next actions, and the visuals, grammar tokens and
+  Readings at every hard-state route.
+- **Brief, criteria, guides.** Where a visual lives (a `VIS-` record page is its canonical route); TABLE_TEXT_FIRST without
+  rows; WITHHELD precedence; the full test-hook contract (suites are never edited by Design); the workbench without
+  ungoverned facets; the vintage-conflict case; Reading labels quoted exactly; the domain Measurement rule; the Reading
+  compare rule; Page Spec section structure; navigation labels' source; three more contract disagreements.
+- **Tools.** In an archive without `.git`, the file walk honours `.gitignore`; the tools suite names the site directory
+  it could not find; the architecture diagrams no longer name an external design tool or an analytics opt-in.
+- **Register.** 49 items (EAD-11 added; EXT-10 and OWN-08 widened); seven items closed in F9.
+
 ## 2026-09-26 — F9 (part 1): clean-room corrections
 
 A cold recipient (a fresh agent with only a clone of `main`) followed `handoff/README_FIRST.md`, passed every command and

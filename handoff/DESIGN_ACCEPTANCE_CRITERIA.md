@@ -14,8 +14,8 @@ and line, or a note. A line without evidence is not met. Nothing here is a WCAG 
       any label not yet governed shows as a marked placeholder (`⟦NCC:…⟧`), never as invented wording.
 - [ ] The withheld CLM-044 value never appears; the nine sources without a public locator are never named or linked;
       no third-party document is bundled or offered for download.
-- [ ] Evidence Records show the boundary as two labelled parts (does not establish · limits of the measure) and never
-      print the internal delimiter.
+- [ ] Evidence Records show the boundary as two labelled parts (does not establish · limits of the measure) where the
+      record has both, part A alone where it has no measurement limitation, and never print the internal delimiter.
 - [ ] No internal ID, enum, field name or repository term is shown as prose (stable IDs used as citation references are
       allowed and bidi-isolated).
 
@@ -32,7 +32,9 @@ and line, or a note. A line without evidence is not met. Nothing here is a WCAG 
       languages (the same 288 documents as `dist/`), bound through its page-family rules.
 - [ ] The twelve hard-state cases (`hard_state_acceptance`, read as the brief §9.2 states) each have evidence that the
       "must prove" sentence holds, plus the withheld, composite, partial and framing records; every verification state in
-      the inventory (`verification_states`) is shown on at least one real record.
+      the inventory (`verification_states`) that has records is shown on one of them, and the two with none today
+      (`SOURCE_NOT_YET_BOUND`, `NO_SOURCE_RECORD`) are designed as states in the component catalogue with their governed
+      copy — never on an invented record.
 - [ ] The thirteen journeys succeed by keyboard, on mobile and desktop, in both languages.
 - [ ] Every technical state in the inventory (`technical_states`) is reachable and looks technical, never like
       "no evidence"; every evidence gap looks like evidence, never like an error.

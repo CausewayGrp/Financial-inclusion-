@@ -98,8 +98,13 @@ VIS-CAPITAL-CONTEXT is RETIRE_FROM_DESIGN as a visual and stays a public Evidenc
      - **RV-CWR-009** (credit line of the REF-PAY-001 event): the locator now resolves to the source record of the CBY
        Governor's Decision No. 23 of 2024. The event is a regulatory requirement, not implementation, use or outcome.
    - A panel marked READY is checked by the generator: every series and derived path it binds must resolve.
-9. **Lanes are separate series.** A value in a lane (for example VIS-MFI-DIVERGENCE borrowers, savers, portfolio) has
-   its own id (`<row>#<lane>`), unit and markers; lanes never share a value axis and anchors are never joined.
+9. **Lanes are separate series.** When a contract declares lanes, each lane value has its own id (`<row>#<lane>`), unit
+   and markers (no current contract declares them; RV-CWR-001 panel 2 draws its two indexed paths as separate series in
+   the same spirit). Lanes never share a value axis and anchors are never joined.
+10. **TABLE_TEXT_FIRST without rows.** Where a rationale describes a table but the contract resolves no rows (for example
+    VIS-MFI-DIVERGENCE), render the governed text only and request the rows Master-first; never build the table from a
+    reference file under `site-src/content/data/`.
+11. **Several markers on one value.** WITHHELD takes precedence: the value is not shown, whatever else it carries.
 
 ## 4. Where it is enforced
 

@@ -21,7 +21,8 @@ truth, which stays in the Production Master. This contract says what Design must
 ## 2. Every page family answers
 
 Module order and composition rules (deterministic, from the Page Spec), the first-screen contract, what may be disclosed
-later, next actions (inventory `next_actions`, from `explicit_next_actions` and `route_next_actions`), breadcrumbs and
+later, next actions (inventory `next_action_policy` and `next_actions` — the listed destinations plus each domain
+route's `primary_verify_destination`; where a route lists none, its policy and the family rules decide), breadcrumbs and
 head metadata. All 11 families; every route bound through them (`handoff/ROUTE_CONTENT_AND_STATE_INVENTORY.json`). For
 the Domain Answer, Evidence Record and Comparison families, depth and first-load exclusions come from
 `site-src/content/presentation_priority.json`; for the other eight, the Page Spec's section order is the content order

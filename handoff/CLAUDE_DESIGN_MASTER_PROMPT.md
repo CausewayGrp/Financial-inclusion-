@@ -56,8 +56,8 @@ regulation, programmes, constraints — and the numbers exist to reveal that sys
 | Layer | Path | Role |
 |---|---|---|
 | Production Master | `authority/Yemen_Financial_Inclusion_Evidence_Master.xlsx` (SHA-256 `17db032b15da16fc4b5b3c3b49f19aebf2ecb4ec46634613fe8505d0f038690b`) | The only semantic, evidence, source, rights and publication authority |
-| Page Specs | `site-src/content/page_specs.json` (SHA-256 `79a1735abe673745f8670f220b1d75a7daf75975ffaad847c87191f77bb0991e`) | Every route: titles, descriptions, sections, bound objects, prohibited inferences, render rules |
-| Interface copy | `site-src/content/content/interface_copy.json` | Every interface label in both languages (`UI-*` IDs) — the only source of UI wording |
+| Page Specs | `site-src/content/page_specs.json` (SHA-256 `d45748046ea56fd0e67fdf112f9888de65b3fe7fab46ce6f51de3a80824b69aa`) | Every route: titles, descriptions, sections, bound objects, prohibited inferences, render rules |
+| Interface copy | `site-src/content/content/interface_copy.json` | Every interface label in both languages (`UI-*` IDs). With the navigation labels below (primary, trust and footer, which the generator writes from the Master's navigation rows into `navigation_interaction.json`), the only source of interface wording |
 | Presentation depth (contract) | `site-src/content/presentation_priority.json` | For the Domain Answer, Evidence Record and Comparison families: what shows first, what may be disclosed later, how many Measurement cards a domain page shows |
 | Navigation and interaction (contract) | `site-src/content/content/navigation_interaction.json` | Navigation, trust layer, footer, breadcrumbs, next actions, page families, journeys, tools, hard-state cases |
 | Everything else | `site-src/content/**` | Evidence records, Readings, Measurement, questions, sources, visual contracts, chronology, search |
@@ -72,7 +72,12 @@ generated from the Master, and the two contracts are maintained by the programme
 hash in this brief differs from the repository, the repository is right.
 
 **Precedence.** Master → Page Specs and the other generated projections → the two contracts → the reference build in
-`dist/`. Where a contract's descriptive field disagrees with governed interface copy or with behaviour the test suites
+`dist/` → this handoff's guidance (which never adds meaning, only says how to read the layers above).
+
+**Page Spec structure worth knowing.** On 15 routes `sections` holds one row per language for the same `section_order`
+(inventory `section_rows_split_by_language`): for each language render the rows that carry that language's heading and
+body, in numeric `section_order`. Each Page Spec's `frontend_render_policy` lists what is never rendered directly (internal
+fields, raw enums, file paths) and states that governed wording is rendered exactly as authored. Where a contract's descriptive field disagrees with governed interface copy or with behaviour the test suites
 assert, the governed copy and the tested behaviour win. The disagreements known at the handoff, each recorded for the
 maintainer (`FINAL_OPEN_ITEMS_REGISTER.md`, OWN-07 and OWN-08) — design to the right-hand column:
 
@@ -81,7 +86,9 @@ maintainer (`FINAL_OPEN_ITEMS_REGISTER.md`, OWN-07 and OWN-08) — design to the
 | `navigation_interaction.json` → `utilities.report_issue` | Route `/corrections/`, Arabic «الإبلاغ عن مشكلة» | The tested behaviour: `/{lang}/contact/?record=<ID>` from a record (Contact links to Corrections); label `UI-HEADER-REPORT-AN-ISSUE` / `UI-EVID-REPORT-AN-ISSUE` |
 | `navigation_interaction.json` → `breadcrumbs.Reading` | Current item = stable ID | The governed Reading title (Evidence Records keep their stable ID as the current item) |
 | `navigation_interaction.json` → `interaction_tools.compare` | Rows include geography and unit | The six governed dimensions in `yfie-compare-dimensions` plus the boundary row (§10) |
-| `navigation_interaction.json` → `hard_state_acceptance` | `verification_sparse` on CLM-015 "with no source expected"; `institutional_sequence` names interoperability on `/payments/` | §9.2 says how each is proved |
+| `navigation_interaction.json` → `hard_state_acceptance` | `verification_sparse` on CLM-015 "with no source expected"; `institutional_sequence` names interoperability on `/payments/`; `vintage_conflict` asks `/remittances/` for same-year revisions | §9.2 says how each is proved |
+| `navigation_interaction.json` → `interaction_tools.evidence_workbench` | Evidence Passports as an input; add-to-Compare for any public record | Passports are reference only (not public); add-to-Compare only for the 13 comparable records (§10) |
+| `navigation_interaction.json` → journey J10 | Record → Corrections → Contact | The tested path: record → Contact (`?record=`) → Corrections |
 | `presentation_priority.json` → `/remittances/` | `measurement_limit` 0 | Follow it as it stands: the Measurement slot of the domain family collapses cleanly at 0. The Page Spec binds MA-001 to the route; whether the card shows is the maintainer's decision (OWN-07) |
 
 **Design the evidence system. Do not redesign the truth.** Never invent or silently change a number, a word of
@@ -130,8 +137,8 @@ describe the system; they are not an instruction to show everything at once.
 
 | Family | Routes | Job |
 |---|---|---|
-| Orientation | `/` | Identity, the product's promise, a few common questions, one Featured Reading, a truthful evidence snapshot |
-| Question Entry | `/explore/` | All governed entry questions; one "Go deeper / تعمّق في التحليل" Reading |
+| Orientation | `/` | Identity, the product's promise, four common starting questions (QE-002, QE-003, QE-005, QE-011 — the R8.4A decision, in the inventory at `/` → `collection.starting_question_ids`), one Featured Reading, a truthful evidence snapshot |
+| Question Entry | `/explore/` | All eleven governed entry questions in the four clusters of the inventory (`/explore/` → `collection.question_groups`, headings `UI-QUESTIONS-*`); one "Go deeper / تعمّق في التحليل" Reading |
 | Domain Answer | `/people/ /firms/ /finance/ /providers/ /payments/ /remittances/ /access/ /reforms/` | The strongest bounded answer for a domain, its scope, boundary, unknowns, next measurement and verification path; at most two Readings |
 | Evidence Directory | `/evidence/` | Discovery into verification records; entry to Compare |
 | Evidence Record | `/evidence/<ID>/` (one per Evidence Record) | The canonical verification endpoint: summary, definition, population, period, currentness, boundary, method, source, Readings that use it |
@@ -241,7 +248,9 @@ news-portal density · "data theatre".
 - **Typography.** Required: IBM Plex Sans (English) and IBM Plex Sans Arabic (Arabic), self-hosted from the npm packages
   `@ibm/plex-sans@1.1.0` and `@ibm/plex-sans-arabic@1.1.0` (SIL Open Font License 1.1; `woff2` files in each package's
   fonts/complete folder and subsets in fonts/split; ship the licence with the fonts). Install them into your reference
-  implementation (its own `package.json` under `design/reference/`); never load a font from a CDN. Other members of the
+  implementation (its own `package.json` under `design/reference/`); never load a font from a CDN. This is the one thing
+  the repository does not carry: it needs the npm registry once (if it is unreachable, ask the steward for the two
+  package files; the licence permits redistribution). Other members of the
   IBM Plex family (Serif, Mono, Sans Condensed) may be added for a defined role with a written rationale; no typeface
   outside the family. Use weights deliberately; Arabic needs its own line height, size steps and heading rhythm, not
   English values mirrored. The baseline's fallbacks (Arial, Tahoma) are not the design.
@@ -282,7 +291,7 @@ From `navigation_interaction.json` → `hard_state_acceptance` (routes in both l
 | dense_domain | `/people/` | High density stays scannable; wave, fieldwork, population and limitation stay attached to the headline figure |
 | sparse_unknown | `/access/` | Unknown geography is visibly unknown — not zero, not an empty map |
 | institutional_sequence | `/payments/`, then `/reforms/` | FPS, RTGS, institution-building, implementation, operation, use and outcome are distinct states. `/payments/` carries FPS, RTGS and institution-building; `/reforms/` carries the rule-to-outcome chain (VIS-PAYMENT-RAILS). The contract's word "interoperability" has no governed state on `/payments/`: do not introduce one |
-| vintage_conflict | `/remittances/` | Same-year revisions and observed/estimated/projected states are legible without choosing a winner |
+| vintage_conflict | `/remittances/`, then `/readings/same-year-different-number/` | Observed, estimated and projected states and the vintage break are legible without choosing a winner — on `/remittances/` through VIS-REMITTANCE-MACRO (its rows carry REPORTED, ESTIMATED, PROJECTED and BREAK_VINTAGE). The same-year revision itself is drawn by RV-CWR-001 in the Reading that `/remittances/` links to; do not draw a revision on the domain page without a contract row |
 | verification_dense | `/evidence/CLM-003/` | Raw totals and the source's own percentage coexist; the discrepancy is visible; the limitation prominent |
 | verification_sparse | `/evidence/CLM-004/` and `/evidence/CLM-015/` | The contract's sentence ("no source expected") describes the framing record CLM-004: it must not look like missing evidence or an error. CLM-015, the contract's route, is a thin record with one source: it must not look weaker or less trustworthy than a dense record |
 | compare_unlike | `/evidence/compare/` | No visual pressure to compare unlike units or populations; the boundary is the first conclusion |
@@ -319,8 +328,11 @@ All tools run on local packaged data; none may need a network call. Their accept
   anchor. The index loads only when Search opens. Still to build: a `?q=` URL state and a facet by result type (the
   type labels exist: `UI-JS-TYPE-*`). A facet by domain needs a governed domain field on search records, which does not
   exist: request it as `NEEDS_CONTROLLED_CONTENT` rather than inferring a domain from routes or text.
-- **Evidence workbench** (`/evidence/`): search and facets before browse-all; rows reveal family, period/currentness,
-  population and a limitation clue; never a wall of every record.
+- **Evidence workbench** (`/evidence/`): a filter before browse-all (the baseline has a text filter); rows reveal the
+  record's governed title, period or currentness, population and a limitation clue; never a wall of every record. The
+  record's `object_class` is an internal enum and is not shown. Facets are optional: none has governed labels today, so a
+  facet (by verification state, by domain) needs its heading and values requested as `NEEDS_CONTROLLED_CONTENT`.
+  Add-to-Compare appears only on the 13 comparable records.
 - **Compare** (`/evidence/compare/?records=ID,ID[,ID[,ID]]`, slot order): 2–4 records from the comparable set — the
   13 records bound to the Compare Page Spec (inventory → `/evidence/compare/` → `collection.comparable_record_ids`); any
   other ID, even a real record, is announced as "not available for comparison here", a link error and not a finding.
@@ -355,8 +367,8 @@ All tools run on local packaged data; none may need a network call. Their accept
 
 **Labels you will need that do not exist yet.** Request each in `design/ESCALATIONS.md` as `NEEDS_CONTROLLED_CONTENT`
 (both languages, one `UI-*` ID each); they are expected, not defects: the "compare this record" action; the result-type
-facet's heading and "all types"; the "type not recorded" source group; the download action and its unavailable,
-licence and file-format states; a reading-time line, only if you keep one. Until the steward adds a label Master-first,
+facet's heading and "all types"; any workbench facet's heading and values; the "type not recorded" source group; the
+download action and its unavailable, licence and file-format states; a reading-time line, only if you keep one. Until the steward adds a label Master-first,
 render its request key in a visibly marked placeholder (for example `⟦NCC:compare-this-record⟧`) and never ship invented
 wording; the steward adds labels in batches and appends them to `FINAL_OPEN_ITEMS_REGISTER.md`.
 
@@ -375,10 +387,16 @@ A Reading is a **serious public-evidence essay**, not a blog post, a report page
 - The essay: sections in order; the opening may run without a heading; the last section is always "What would change
   this reading? / ما الذي قد يغيّر هذه القراءة؟"; pull lines (`> `) and lists are governed markup.
 - At most **one signature analytical visual**, placed after the opening, and only when its contract earns it.
-- The prohibited inference ("Do not infer / ما لا يُستنتج") is visible, not buried.
-- Then "Trace the evidence / تتبّع الأدلة" (the bound records and sources) and one or two related Readings.
+- The prohibited inference, under "What not to conclude / ما لا يُستنتج" (`UI-READING-DO-NOT-INFER`), is visible, not
+  buried.
+- Then "Trace the evidence / تتبّع الأدلة" (`UI-READING-TRACE-H`: the bound records and sources) and "Related readings /
+  قراءات ذات صلة". The trace offers "Test comparability of this Reading's records"
+  (`UI-READING-TEST-COMPARABILITY-OF-THIS-READING`) only when at least two of the Reading's records are in the comparable
+  set, and opens Compare with up to four of them.
 - Home shows **one** Featured Reading, Explore **one** "Go deeper", a domain page **at most two**; an Evidence Record lists
   the Readings that use it; a Measurement priority says where its gap is examined. No carousels, no ten-card walls.
+- A domain page shows the first N of its Page Spec's `governed_measurement_priorities`, in order, where N is its
+  `measurement_limit` (inventory `presentation_contract`), each linking to `/measurement/#MA-00x`.
 
 Readings data: `site-src/content/content/readings.json`, `reading_sections.json`; each Reading's Page Spec carries its
 bindings.
@@ -396,10 +414,15 @@ Tier counts are in `tier_counts`; the tier of every visual is in the inventory.
   from those governed words and the `UI-VIS-*` grammar labels — no plotted value, axis or scale. To plot values, ask for
   the visual to be promoted (`ESCALATE_TO_MASTER`). **TABLE_TEXT_FIRST** — never drawn as a chart; render the governed
   ordered text or table. **RETIRE_FROM_DESIGN** — never drawn.
-- **IDs.** An Evidence Record whose ID starts `VIS-` is a verification record (sources, period, population, boundary),
-  not a chart slot. Where a governed visual has the same ID, the record verifies it and the visual contract says how it
-  may be drawn; a `VIS-` record without a visual contract is drawn as a record only. A record can outlive its visual:
-  VIS-CAPITAL-CONTEXT is RETIRE_FROM_DESIGN as a visual and remains a public Evidence Record (context only).
+- **IDs and where a visual lives.** An Evidence Record whose ID starts `VIS-` is a verification record (sources,
+  period, population, boundary). Where a governed visual has the same ID, that record page is the visual's canonical
+  route (`governed.canonical_route`, the link in its detached frame): draw the visual there in full, following its tier,
+  and on the routes in `governed.public_routes` as the Page Specs bind it. A `VIS-` record without a visual contract has
+  no chart. VIS-CAPITAL-CONTEXT is RETIRE_FROM_DESIGN: never drawn; its record stays a public Evidence Record.
+- **TABLE_TEXT_FIRST without rows.** Where a rationale describes a table (for example VIS-MFI-DIVERGENCE) but the
+  contract resolves no rows, render the governed text only and request the rows (`ESCALATE_TO_MASTER`); never build the
+  table from a reference file.
+- **Markers on one value.** WITHHELD takes precedence: the value is not shown, whatever other marker it carries.
 - No chart without a contract row. No number, label, legend or sentence authored in Design: legends and states come from
   `UI-VIS-*`; axis, category, series, lane, unit and event text from each value's `<field>_label`.
 - Colour is never the only carrier; no red/amber/green; nothing fades with age. Breaks, gaps and disagreements are drawn,
@@ -536,8 +559,12 @@ every width, with every state reachable.
   `data-source-link-error`, `data-compare-url-error`, `data-compare-verdict`, `data-correction-record`,
   `data-correction-origin`, `data-correction-link`, `data-correction-mail`, `data-correction-error`; the classes
   `search-hit`, `compare-table`, `compare-state`, `evidence-cite-button`, `source-locator`; the JSON blocks `yfie-ui`,
-  `yfie-compare`, `yfie-compare-dimensions`, `yfie-record-ids`. The test files are the authority for this list. Where a
-  design cannot keep a hook, record the exception in `design/09_CODE_HANDOFF.md`; never weaken an assertion.
+  `yfie-compare`, `yfie-compare-dimensions`, `yfie-record-ids`, and the meta tag `yfie-citation`; the skip link as the
+  first focusable element with class exactly `skip`; a native `<dialog id="search-dialog">` with its input
+  `global-search-dialog`; `<select>` elements for the Compare slots; the search index at `/static-data/search_index.json`;
+  one `<h1>`, `alt` on every image and `dir` on every page. The two test files are the authority: read them before D1.
+  The suites are not edited by Design: keep every hook. CI does not build your reference implementation, so paste each
+  suite's output into `design/10_ACCEPTANCE_CHECKLIST.md`.
 - **What else it keeps.** The discovery head (§17), the JSON data blocks, the strict-CSP constraints (§18).
 - If you cannot produce a runnable implementation, produce an implementation-grade design source that Code can execute
   without guessing — and say which you delivered.

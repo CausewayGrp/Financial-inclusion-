@@ -148,6 +148,11 @@ def build():
     srcmap = load(C / "sources" / "source_reference_map.json")
     chron = load(C / "visuals" / "system_chronology.json")
     next_global = nav.get("route_next_actions") or {}
+    tokens_by_visual = visual_tokens(vis)
+    ui_by_en = {}
+    for r in load(C / "content" / "interface_copy.json"):
+        ui_by_en.setdefault(r.get("label_en"), r.get("ui_id"))
+    home_qs, explore_groups = baseline_question_sets(ui_by_en)
 
     # Every projection file is classified.
     have = sorted(str(p.relative_to(C)) for p in C.rglob("*.json"))
@@ -167,8 +172,10 @@ def build():
             comparable.append(oid)
     evidence_routes = sorted(s["instance_id"] for s in specs if s.get("page_class") == "evidence_detail" and s.get("instance_id"))
     collections = {
-        "/": OrderedDict([("featured_reading", ((next(s for s in specs if s["route"] == "/").get("featured_reading")) or {}).get("reading_id"))]),
-        "/explore/": OrderedDict([("question_ids", [q.get("question_id") for q in questions])]),
+        "/": OrderedDict([("featured_reading", ((next(s for s in specs if s["route"] == "/").get("featured_reading")) or {}).get("reading_id")),
+                          ("starting_question_ids", home_qs),
+                          ("rule", "Starting questions as the reference build shows them (R8.4A); Explore holds all of them")]),
+        "/explore/": OrderedDict([("question_ids", [q.get("question_id") for q in questions]), ("question_groups", explore_groups)]),
         "/evidence/": OrderedDict([("evidence_record_ids", evidence_routes)]),
         "/evidence/compare/": OrderedDict([("comparable_record_ids", comparable),
                                            ("rule", "Only these records can be compared (the Page Spec's governed set); entry into Compare from a record exists only on their pages")]),
@@ -207,10 +214,15 @@ def build():
             sd.append("Article")
         nr = fam.get(r) or {}
         nxt = list(nr.get("explicit_next_actions") or []) + [x for x in (next_global.get(r) or []) if x not in (nr.get("explicit_next_actions") or [])]
+        pv = (pres_routes.get(r) or {}).get("primary_verify_destination")
+        if pv and pv not in nxt:
+            nxt.append(pv)
         row = OrderedDict([
             ("route", r), ("page_family", nr.get("page_family")), ("page_class", s.get("page_class")),
             ("stable_object_id", oid), ("html", OrderedDict((L, "dist" + discovery.localized(r, L) + "index.html") for L in ("en", "ar"))),
-            ("title_en", s.get("title_en")), ("title_ar", s.get("title_ar")), ("sections", len(s.get("sections") or [])),
+            ("title_en", s.get("title_en")), ("title_ar", s.get("title_ar")),
+            ("sections", len({x.get("section_order") for x in s.get("sections") or []})),
+            ("section_rows_split_by_language", len({x.get("section_order") for x in s.get("sections") or []}) != len(s.get("sections") or [])),
             ("evidence_ids", sorted(evidence_ids)), ("visual_ids", sorted(visual_ids)), ("reading_ids", sorted(rd_ids)),
             ("measurement_ids", sorted(measurement_ids)), ("source_ids", sorted(source_ids)),
             ("source_references", len(s.get("source_references") or [])),
@@ -242,6 +254,9 @@ def build():
         for k in ("lineage_state", "verification_state", "public_sources_listed"):
             if k in rr:
                 facts[k] = rr[k]
+        facts["visual_ids"] = rr.get("visual_ids") or []
+        facts["visual_grammar_present"] = sorted({tok for v in facts["visual_ids"] for tok in tokens_by_visual.get(v, [])})
+        facts["reading_ids"] = rr.get("reading_ids") or []
         cases.append(OrderedDict([("state_id", h["state_id"]), ("route", h["route"]), ("must_prove", h["must_prove"]),
                                   ("data_at_route", facts)]))
 
@@ -262,7 +277,7 @@ def build():
             gstates[group] = [OrderedDict([("token", x["token"]), ("ui_id", x.get("ui_id"))]) for x in rows]
 
     doc = OrderedDict([
-        ("schema", "YFIE_ROUTE_CONTENT_AND_STATE_INVENTORY/1.1"),
+        ("schema", "YFIE_ROUTE_CONTENT_AND_STATE_INVENTORY/1.2"),
         ("purpose", "Design recipient's map of every route, its family, bindings, collections, next actions and the states Design must cover. Derived; not authority."),
         ("generated_from", OrderedDict([("production_master_sha256", sha(ROOT / "authority" / "Yemen_Financial_Inclusion_Evidence_Master.xlsx")),
                                         ("page_specs_sha256", sha(C / "page_specs.json")), ("generator", "scripts/handoff_inventory.py")])),
@@ -283,6 +298,47 @@ def build():
                                    ("path", j.get("path")), ("success_condition", j.get("success_condition"))]) for j in nav.get("journeys") or []]),
     ])
     return json.dumps(doc, ensure_ascii=False, indent=1) + "\n"
+
+
+def visual_tokens(vis):
+    """Grammar states and structure markers that occur in each visual's resolved rows."""
+    out = {}
+    def walk(o, acc):
+        if isinstance(o, dict):
+            for k, v in o.items():
+                if k == "grammar_state" and isinstance(v, str):
+                    acc.add(v)
+                elif k in ("markers", "marker") and isinstance(v, (list, str)):
+                    acc.update([v] if isinstance(v, str) else [x for x in v if isinstance(x, str)])
+                else:
+                    walk(v, acc)
+        elif isinstance(o, list):
+            for x in o:
+                walk(x, acc)
+    for v in vis.get("visuals") or []:
+        acc = set()
+        walk(v.get("contract") or {}, acc)
+        out[v["visual_id"]] = sorted(acc)
+    return out
+
+
+def baseline_question_sets(ui_by_en):
+    """Home's starting questions and Explore's clusters as the reference build renders them (R8.4A decision; the ID sets
+    are held in scripts/build.py until the production runtime takes them from a governed contract — register EAD-11)."""
+    home, groups = [], []
+    p = DIST / "en" / "index.html"
+    if p.exists():
+        t = p.read_text(encoding="utf-8")
+        m = re.search(r'<div class="question-grid compact-grid">(.*?)</div></div></section>', t, re.S)
+        home = re.findall(r'data-question-id="([^"]+)"', m.group(1)) if m else []
+    p = DIST / "en" / "explore" / "index.html"
+    if p.exists():
+        t = p.read_text(encoding="utf-8")
+        for block in re.findall(r'<section class="question-cluster">(.*?)</section>', t, re.S):
+            h = re.search(r"<h3>(.*?)</h3>", block, re.S)
+            head = h.group(1).strip() if h else ""
+            groups.append(OrderedDict([("heading_ui_id", ui_by_en.get(head)), ("question_ids", re.findall(r'data-question-id="([^"]+)"', block))]))
+    return home, groups
 
 
 def discovery_public(src):

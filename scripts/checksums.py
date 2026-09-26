@@ -8,6 +8,7 @@ The manifest lists every tracked file except itself, one `<sha256>  <path>` line
 the format `sha256sum -c SHA256SUMS.txt` reads. Inside a Git work tree the file set is `git ls-files`; in an extracted
 checkpoint ZIP it is every file under the root except caches. Run it after any change and commit the result with it.
 """
+import fnmatch
 import hashlib
 import os
 import subprocess
@@ -30,16 +31,46 @@ def git_files():
         return None
 
 
+def _ignore_rules():
+    """The repository's .gitignore as (anchored, directory_only, pattern) rules — the subset of Git's syntax it uses."""
+    rules = []
+    try:
+        lines = open(os.path.join(ROOT, ".gitignore"), encoding="utf-8").read().splitlines()
+    except OSError:
+        return rules
+    for line in lines:
+        line = line.strip()
+        if not line or line.startswith("#") or line.startswith("!"):
+            continue
+        rules.append((line.startswith("/"), line.endswith("/"), line.strip("/")))
+    return rules
+
+
+def _ignored(rel, is_dir, rules):
+    name = rel.rsplit("/", 1)[-1]
+    for anchored, dir_only, pat in rules:
+        if dir_only and not is_dir:
+            continue
+        if fnmatch.fnmatchcase(rel if anchored or "/" in pat else name, pat):
+            return True
+    return False
+
+
 def tracked_files():
+    """git ls-files inside a Git work tree; in an extracted archive, every file under the root that .gitignore does not
+    exclude (so a locally built design/reference/out/ or a cache never enters the manifest)."""
     files = git_files()
     if files is not None:
         return files
-    files = []
+    rules, files = _ignore_rules(), []
     for base, dirs, names in os.walk(ROOT):
-        dirs[:] = [d for d in dirs if d not in SKIP_DIRS]
+        relbase = os.path.relpath(base, ROOT).replace(os.sep, "/")
+        relbase = "" if relbase == "." else relbase + "/"
+        dirs[:] = [d for d in dirs if d not in SKIP_DIRS and not _ignored(relbase + d, True, rules)]
         for n in names:
-            if not n.endswith(".pyc"):
-                files.append(os.path.relpath(os.path.join(base, n), ROOT).replace(os.sep, "/"))
+            rel = relbase + n
+            if not n.endswith(".pyc") and not _ignored(rel, False, rules):
+                files.append(rel)
     return files
 
 

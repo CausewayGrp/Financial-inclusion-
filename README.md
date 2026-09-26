@@ -20,7 +20,7 @@ controlled-product-state and publication-state authority; everything else here i
 | **Reviewed checkpoint** | Tag [`checkpoint/tranche-c-complete-reading-hold`](../../tree/checkpoint/tranche-c-complete-reading-hold): tree byte-identical to the review ZIP `…TRANCHE_C_COMPLETE_READING_HOLD.zip` (SHA-256 `63612dea…`) |
 | **Since that checkpoint** | F2 the ten Evidence Readings ([adjudication](audit/READING_PORTFOLIO_FINAL_ADJUDICATION.md)); F3 five Resource Library decisions ([record](audit/F3_RESOURCE_DECISIONS.md)); F4 R8.5 repository subtraction ([closure](audit/R8_5_REPOSITORY_SUBTRACTION_CLOSURE.md)); F5 whole public corpus acceptance ([record](audit/F5_PUBLIC_CORPUS_ACCEPTANCE.md), [findings ledger](audit/F5_CORPUS_FINDINGS_LEDGER.csv)); F6 discovery, accessibility, rights and security ([record](audit/F6_DISCOVERY_ACCESSIBILITY_RIGHTS_SECURITY_ACCEPTANCE.md)); F7 sustainability baseline ([method](docs/SUSTAINABILITY_METHOD.md), [baseline](audit/SUSTAINABILITY_PRE_DESIGN_BASELINE.json)); F8 handoff freeze — one start file, one Design prompt, route/content/state inventory, acceptance criteria ([closure](audit/R8_6_DESIGN_HANDOFF_FREEZE_CLOSURE.md)). Every English/Arabic page pair prints the same numbers |
 | **Production Master** | `authority/Yemen_Financial_Inclusion_Evidence_Master.xlsx` · SHA-256 `17db032b15da16fc4b5b3c3b49f19aebf2ecb4ec46634613fe8505d0f038690b` |
-| **Page Specs** | `site-src/content/page_specs.json` · SHA-256 `79a1735abe673745f8670f220b1d75a7daf75975ffaad847c87191f77bb0991e` |
+| **Page Specs** | `site-src/content/page_specs.json` · SHA-256 `d45748046ea56fd0e67fdf112f9888de65b3fe7fab46ce6f51de3a80824b69aa` |
 | **Currentness cut-off** | 26 September 2026 ([`audit/FINAL_CURRENTNESS_CUTOFF.md`](audit/FINAL_CURRENTNESS_CUTOFF.md)) |
 | **Re-entry document** | [`OPENAI_REENTRY_CHECKPOINT.md`](OPENAI_REENTRY_CHECKPOINT.md) |
 
@@ -118,10 +118,10 @@ Master; the validator checks every figure below against it. Counts are an invent
 | F9 · R8.6 | Clean-room acceptance by a cold recipient; final ZIP | Next | [D7](audit/directives/D7_FINAL_INTEGRATION_TO_DESIGN_HANDOFF_2026-09-26.md) |
 
 **Open items** (every item, classed and owned, in [`FINAL_OPEN_ITEMS_REGISTER.md`](FINAL_OPEN_ITEMS_REGISTER.md); **zero DESIGN_BLOCKER**):
-- **Engineering after Design (10):** the production runtime, the WCAG 2.2 audit of the implemented site, web-size logo
+- **Engineering after Design (11):** the production runtime, the WCAG 2.2 audit of the implemented site, web-size logo
   derivatives (owner-approved; the master file is never changed), no CSS recolouring of the logo, the Method & Measurement
   navigation group, Compare entry from a record and mobile Compare, a source-type filter on the governed field,
-  self-hosted IBM Plex, social images, re-measured page weight.
+  self-hosted IBM Plex, social images, re-measured page weight, Home and Explore question sets out of code.
 - **Release only (4):** security headers at the host, source reuse rights, optional native Arabic certification, named
   release acceptance.
 - **External evidence dependencies (11):** sources not yet read in the original — among them IMF Country Report 26/80

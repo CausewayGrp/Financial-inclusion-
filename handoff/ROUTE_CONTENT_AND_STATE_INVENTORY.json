@@ -1,9 +1,9 @@
 {
- "schema": "YFIE_ROUTE_CONTENT_AND_STATE_INVENTORY/1.1",
+ "schema": "YFIE_ROUTE_CONTENT_AND_STATE_INVENTORY/1.2",
  "purpose": "Design recipient's map of every route, its family, bindings, collections, next actions and the states Design must cover. Derived; not authority.",
  "generated_from": {
   "production_master_sha256": "17db032b15da16fc4b5b3c3b49f19aebf2ecb4ec46634613fe8505d0f038690b",
-  "page_specs_sha256": "79a1735abe673745f8670f220b1d75a7daf75975ffaad847c87191f77bb0991e",
+  "page_specs_sha256": "d45748046ea56fd0e67fdf112f9888de65b3fe7fab46ce6f51de3a80824b69aa",
   "generator": "scripts/handoff_inventory.py"
  },
  "counts": {
@@ -172,7 +172,8 @@
    },
    "title_en": "Financial inclusion in Yemen is not one number.",
    "title_ar": "الشمول المالي في اليمن ليس رقمًا واحدًا.",
-   "sections": 17,
+   "sections": 9,
+   "section_rows_split_by_language": true,
    "evidence_ids": [
     "CLM-001",
     "CLM-002",
@@ -192,7 +193,14 @@
    "next_actions": [],
    "next_action_policy": "TASK_OR_QUESTION",
    "collection": {
-    "featured_reading": "CWR-004"
+    "featured_reading": "CWR-004",
+    "starting_question_ids": [
+     "QE-002",
+     "QE-003",
+     "QE-005",
+     "QE-011"
+    ],
+    "rule": "Starting questions as the reference build shows them (R8.4A); Explore holds all of them"
    },
    "structured_data": [
     "WebSite"
@@ -210,7 +218,8 @@
    },
    "title_en": "A bilingual public evidence resource for understanding financial inclusion in Yemen.",
    "title_ar": "مورد عام ثنائي اللغة لفهم أدلة الشمول المالي في اليمن.",
-   "sections": 13,
+   "sections": 7,
+   "section_rows_split_by_language": true,
    "evidence_ids": [],
    "visual_ids": [],
    "reading_ids": [],
@@ -238,7 +247,8 @@
    },
    "title_en": "Access: where services can be reached is only partly mapped",
    "title_ar": "نعرف أجزاءً من شبكة الوصول إلى الخدمات المالية، لكننا لا نملك بعد خريطة وطنية موثوقة لما يعمل فعليًا على الأرض.",
-   "sections": 17,
+   "sections": 9,
+   "section_rows_split_by_language": true,
    "evidence_ids": [
     "CLM-003",
     "CLM-008",
@@ -259,7 +269,9 @@
    ],
    "source_ids": [],
    "source_references": 12,
-   "next_actions": [],
+   "next_actions": [
+    "/evidence/"
+   ],
    "next_action_policy": "VERIFY_PRIMARY_EVIDENCE",
    "presentation_contract": {
     "measurement_limit": 2,
@@ -282,6 +294,7 @@
    "title_en": "Accessibility statement",
    "title_ar": "بيان إتاحة الوصول",
    "sections": 6,
+   "section_rows_split_by_language": false,
    "evidence_ids": [],
    "visual_ids": [],
    "reading_ids": [],
@@ -308,6 +321,7 @@
    "title_en": "Contact and report an error",
    "title_ar": "التواصل والإبلاغ عن خطأ",
    "sections": 5,
+   "section_rows_split_by_language": false,
    "evidence_ids": [],
    "visual_ids": [],
    "reading_ids": [],
@@ -334,6 +348,7 @@
    "title_en": "Corrections and release history",
    "title_ar": "التصحيحات وسجل الإصدارات",
    "sections": 5,
+   "section_rows_split_by_language": false,
    "evidence_ids": [],
    "visual_ids": [],
    "reading_ids": [],
@@ -359,7 +374,8 @@
    },
    "title_en": "Find the original source behind each piece of evidence",
    "title_ar": "اعثر على المصدر الأصلي الذي يستند إليه كل دليل",
-   "sections": 19,
+   "sections": 10,
+   "section_rows_split_by_language": true,
    "evidence_ids": [],
    "visual_ids": [],
    "reading_ids": [],
@@ -612,6 +628,7 @@
    "title_en": "Inspect the evidence behind the answer",
    "title_ar": "افحص الدليل الذي تستند إليه الإجابة",
    "sections": 1,
+   "section_rows_split_by_language": false,
    "evidence_ids": [
     "CLM-009",
     "CLM-014",
@@ -780,6 +797,7 @@
    "title_en": "Latest representative account-ownership measure available",
    "title_ar": "أحدث قياس سكاني ممثل متاح لامتلاك الحساب",
    "sections": 2,
+   "section_rows_split_by_language": false,
    "evidence_ids": [
     "CLM-001"
    ],
@@ -810,6 +828,7 @@
    "title_en": "A measured gender gap in account ownership",
    "title_ar": "فجوة مقاسة بين النساء والرجال في امتلاك الحساب",
    "sections": 2,
+   "section_rows_split_by_language": false,
    "evidence_ids": [
     "CLM-002"
    ],
@@ -840,6 +859,7 @@
    "title_en": "POS infrastructure expanded",
    "title_ar": "توسع البنية التحتية لنقاط البيع",
    "sections": 2,
+   "section_rows_split_by_language": false,
    "evidence_ids": [
     "CLM-003"
    ],
@@ -872,6 +892,7 @@
    "title_en": "Accounts and transactions are not unique people",
    "title_ar": "الحسابات والمعاملات ليست أشخاصًا فريدين",
    "sections": 2,
+   "section_rows_split_by_language": false,
    "evidence_ids": [
     "CLM-004"
    ],
@@ -902,6 +923,7 @@
    "title_en": "Finance was not the most frequently cited constraint in this survey",
    "title_ar": "التمويل ليس التحدي الأكثر ذكرًا في هذا المسح",
    "sections": 2,
+   "section_rows_split_by_language": false,
    "evidence_ids": [
     "CLM-005"
    ],
@@ -932,6 +954,7 @@
    "title_en": "Finance severity within a specific denominator",
    "title_ar": "شدة عائق التمويل ضمن قاعدة احتساب محددة",
    "sections": 2,
+   "section_rows_split_by_language": false,
    "evidence_ids": [
     "CLM-006"
    ],
@@ -962,6 +985,7 @@
    "title_en": "IMF remittance series: reported history, estimates and projections kept separate",
    "title_ar": "سلسلة التحويلات لدى صندوق النقد الدولي: القيم التاريخية المنشورة والتقديرات والتوقعات منفصلة",
    "sections": 2,
+   "section_rows_split_by_language": false,
    "evidence_ids": [
     "CLM-007"
    ],
@@ -992,6 +1016,7 @@
    "title_en": "Listing or licensing does not establish operation",
    "title_ar": "الإدراج أو الترخيص لا يثبت التشغيل",
    "sections": 2,
+   "section_rows_split_by_language": false,
    "evidence_ids": [
     "CLM-008"
    ],
@@ -1022,6 +1047,7 @@
    "title_en": "The official 2026 exchange and remittance roster can be counted; whether providers operate now is a separate question",
    "title_ar": "يمكن عدّ قيود القائمة الرسمية للصرافة والحوالات لعام 2026؛ أما تشغيل مقدمي الخدمات حاليًا فسؤال مختلف",
    "sections": 2,
+   "section_rows_split_by_language": false,
    "evidence_ids": [
     "CLM-009"
    ],
@@ -1052,6 +1078,7 @@
    "title_en": "Wallet and subscriber counts from different publications are not yet reconciled",
    "title_ar": "أعداد المحافظ ومشتركيها في الإصدارات المختلفة لم تُطابَق بعد",
    "sections": 2,
+   "section_rows_split_by_language": false,
    "evidence_ids": [
     "CLM-010"
    ],
@@ -1082,6 +1109,7 @@
    "title_en": "The complaint path is documented; there is no evidence yet on how it performs",
    "title_ar": "مسار الشكوى موثَّق، أما أداؤه الفعلي فلا تتوفر أدلة عليه",
    "sections": 2,
+   "section_rows_split_by_language": false,
    "evidence_ids": [
     "CLM-011"
    ],
@@ -1112,6 +1140,7 @@
    "title_en": "E-money rules set limits; they do not measure use",
    "title_ar": "قواعد النقود الإلكترونية حدود نظامية وليست قياسًا للاستخدام",
    "sections": 2,
+   "section_rows_split_by_language": false,
    "evidence_ids": [
     "CLM-012"
    ],
@@ -1142,6 +1171,7 @@
    "title_en": "Financial-literacy activity does not establish capability outcomes",
    "title_ar": "أنشطة الثقافة المالية لا تثبت نتائج في القدرات المالية",
    "sections": 2,
+   "section_rows_split_by_language": false,
    "evidence_ids": [
     "CLM-013"
    ],
@@ -1172,6 +1202,7 @@
    "title_en": "Evidence freshness differs by domain",
    "title_ar": "حداثة الأدلة غير متساوية بين المجالات",
    "sections": 2,
+   "section_rows_split_by_language": false,
    "evidence_ids": [
     "CLM-014"
    ],
@@ -1202,6 +1233,7 @@
    "title_en": "A dated list of unlicensed services, not a permanent status",
    "title_ar": "قائمة بتاريخ محدد لخدمات غير مرخصة، لا وضعٌ دائم",
    "sections": 2,
+   "section_rows_split_by_language": false,
    "evidence_ids": [
     "CLM-015"
    ],
@@ -1234,6 +1266,7 @@
    "title_en": "Historical exchange and remittance roster baseline",
    "title_ar": "خط أساس تاريخي لفئات الصرافة والحوالات",
    "sections": 2,
+   "section_rows_split_by_language": false,
    "evidence_ids": [
     "CLM-016"
    ],
@@ -1264,6 +1297,7 @@
    "title_en": "Latest monthly POS release listed by CBY-Aden: January 2026 (page checked 26 September 2026)",
    "title_ar": "أحدث إصدار شهري لنقاط البيع لدى البنك المركزي اليمني – عدن: يناير 2026 (اطُّلع على الصفحة في 26 سبتمبر 2026)",
    "sections": 2,
+   "section_rows_split_by_language": false,
    "evidence_ids": [
     "CLM-017"
    ],
@@ -1294,6 +1328,7 @@
    "title_en": "Institution-building steps are not evidence of operation or outcomes",
    "title_ar": "خطوات البناء المؤسسي ليست دليلًا على التشغيل أو النتائج",
    "sections": 2,
+   "section_rows_split_by_language": false,
    "evidence_ids": [
     "CLM-018"
    ],
@@ -1324,6 +1359,7 @@
    "title_en": "Enforcement decisions are events, not a market census",
    "title_ar": "قرارات الإنفاذ وقائع مؤرخة وليست تعدادًا للسوق",
    "sections": 2,
+   "section_rows_split_by_language": false,
    "evidence_ids": [
     "CLM-019"
    ],
@@ -1354,6 +1390,7 @@
    "title_en": "SFD microfinance history: 1997 and 1998 are distinct milestones",
    "title_ar": "تاريخ التمويل الأصغر في الصندوق الاجتماعي للتنمية: 1997 و1998 محطتان مختلفتان",
    "sections": 2,
+   "section_rows_split_by_language": false,
    "evidence_ids": [
     "CLM-020"
    ],
@@ -1384,6 +1421,7 @@
    "title_en": "Observed fall in borrowers and portfolio of SFD-supported microfinance programmes during 2015",
    "title_ar": "تراجع مرصود في المقترضين والمحفظة لدى برامج التمويل الأصغر المدعومة من الصندوق الاجتماعي للتنمية خلال 2015",
    "sections": 2,
+   "section_rows_split_by_language": false,
    "evidence_ids": [
     "CLM-021"
    ],
@@ -1414,6 +1452,7 @@
    "title_en": "Informative history without a continuous annual series",
    "title_ar": "سجل مفيد لكنه غير سنوي متصل",
    "sections": 2,
+   "section_rows_split_by_language": false,
    "evidence_ids": [
     "CLM-022"
    ],
@@ -1444,6 +1483,7 @@
    "title_en": "What the Yemen Findex 2021 study contains",
    "title_ar": "ما تتضمنه دراسة Findex 2021 الخاصة باليمن",
    "sections": 2,
+   "section_rows_split_by_language": false,
    "evidence_ids": [
     "CLM-023"
    ],
@@ -1474,6 +1514,7 @@
    "title_en": "Raw case shares are not population estimates",
    "title_ar": "نسب الحالات الخام ليست تقديرات للسكان",
    "sections": 2,
+   "section_rows_split_by_language": false,
    "evidence_ids": [
     "CLM-024"
    ],
@@ -1504,6 +1545,7 @@
    "title_en": "Geographic coverage limits of the latest Findex wave",
    "title_ar": "حدود التغطية الجغرافية لأحدث موجة من Findex",
    "sections": 2,
+   "section_rows_split_by_language": false,
    "evidence_ids": [
     "CLM-025"
    ],
@@ -1534,6 +1576,7 @@
    "title_en": "Demand-side measures defined; custom estimates not yet published",
    "title_ar": "مقاييس جانب الطلب محددة، والتقديرات المخصصة لم تُنشر بعد",
    "sections": 2,
+   "section_rows_split_by_language": false,
    "evidence_ids": [
     "CLM-026"
    ],
@@ -1564,6 +1607,7 @@
    "title_en": "Three observed survey waves, not an annual series",
    "title_ar": "ثلاث موجات مسحية مرصودة، لا سلسلة سنوية",
    "sections": 2,
+   "section_rows_split_by_language": false,
    "evidence_ids": [
     "CLM-027"
    ],
@@ -1594,6 +1638,7 @@
    "title_en": "Historical borrowing patterns in 2014",
    "title_ar": "أنماط اقتراض تاريخية في 2014",
    "sections": 2,
+   "section_rows_split_by_language": false,
    "evidence_ids": [
     "CLM-028"
    ],
@@ -1624,6 +1669,7 @@
    "title_en": "Historical saving patterns in 2014",
    "title_ar": "أنماط ادخار تاريخية في 2014",
    "sections": 2,
+   "section_rows_split_by_language": false,
    "evidence_ids": [
     "CLM-029"
    ],
@@ -1654,6 +1700,7 @@
    "title_en": "Domestic-remittance pathways in 2014",
    "title_ar": "مسارات الحوالات المحلية في 2014",
    "sections": 2,
+   "section_rows_split_by_language": false,
    "evidence_ids": [
     "CLM-030"
    ],
@@ -1684,6 +1731,7 @@
    "title_en": "There is no single latest year for all people-side evidence",
    "title_ar": "لا توجد سنة واحدة هي الأحدث لكل أدلة الأفراد",
    "sections": 2,
+   "section_rows_split_by_language": false,
    "evidence_ids": [
     "CLM-031"
    ],
@@ -1714,6 +1762,7 @@
    "title_en": "Same reference year, different published value",
    "title_ar": "السنة المرجعية نفسها، وقيمة منشورة مختلفة",
    "sections": 2,
+   "section_rows_split_by_language": false,
    "evidence_ids": [
     "CLM-032"
    ],
@@ -1744,6 +1793,7 @@
    "title_en": "A measured banking jump can partly be a valuation change",
    "title_ar": "قد يعود جزء من القفزة في الأرقام المصرفية إلى تغيّر في أسلوب التقييم",
    "sections": 2,
+   "section_rows_split_by_language": false,
    "evidence_ids": [
     "CLM-033"
    ],
@@ -1774,6 +1824,7 @@
    "title_en": "A smoother published path is a methods question, not a conclusion",
    "title_ar": "المسار المنشور الأكثر سلاسة سؤال منهجي، لا استنتاج",
    "sections": 2,
+   "section_rows_split_by_language": false,
    "evidence_ids": [
     "CLM-034"
    ],
@@ -1804,6 +1855,7 @@
    "title_en": "The apparent balance between remittances and donor financing changes between editions of the annual report",
    "title_ar": "تتغير الصورة النسبية للتحويلات وتمويل المانحين باختلاف إصدار التقرير السنوي",
    "sections": 2,
+   "section_rows_split_by_language": false,
    "evidence_ids": [
     "CLM-035"
    ],
@@ -1834,6 +1886,7 @@
    "title_en": "A reconstruction programme is documented; the exact CBY formula is not",
    "title_ar": "إعادة البناء الإحصائي موثقة، أما صيغة البنك المركزي الدقيقة فليست كذلك",
    "sections": 2,
+   "section_rows_split_by_language": false,
    "evidence_ids": [
     "CLM-036"
    ],
@@ -1864,6 +1917,7 @@
    "title_en": "The paths align after normalization; their levels are not equivalent",
    "title_ar": "يتطابق المساران تقريبًا عند تحويلهما إلى رقم قياسي، لكن مستوياتهما ليست متكافئة",
    "sections": 2,
+   "section_rows_split_by_language": false,
    "evidence_ids": [
     "CLM-037"
    ],
@@ -1894,6 +1948,7 @@
    "title_en": "The 2023 valuation change has a precedent and cannot be called the “first ever”",
    "title_ar": "لتغيير التقييم في 2023 سابقة تاريخية، وليس حدًا يصلح وصفه بأنه «الأول»",
    "sections": 2,
+   "section_rows_split_by_language": false,
    "evidence_ids": [
     "CLM-038"
    ],
@@ -1924,6 +1979,7 @@
    "title_en": "A public interface is not the same thing as the underlying dataset",
    "title_ar": "واجهة البيانات العامة ليست هي مجموعة البيانات نفسها",
    "sections": 2,
+   "section_rows_split_by_language": false,
    "evidence_ids": [
     "CLM-039"
    ],
@@ -1954,6 +2010,7 @@
    "title_en": "The 2025 external-sector statistics mission produced a 2014–2024 historical series",
    "title_ar": "بعثة إحصاءات القطاع الخارجي في 2025 أنتجت سلسلة تاريخية للفترة 2014–2024",
    "sections": 2,
+   "section_rows_split_by_language": false,
    "evidence_ids": [
     "CLM-040"
    ],
@@ -1984,6 +2041,7 @@
    "title_en": "The published CBY and IMF balance-of-payments components tested do not support a single conversion factor",
    "title_ar": "لا تدعم مكونات ميزان المدفوعات المنشورة التي اختُبرت معامل تحويل واحدًا بين بيانات البنك المركزي وصندوق النقد",
    "sections": 2,
+   "section_rows_split_by_language": false,
    "evidence_ids": [
     "CLM-041"
    ],
@@ -2014,6 +2072,7 @@
    "title_en": "A stable remittance ratio exists; its meaning remains unknown",
    "title_ar": "توجد نسبة مستقرة بين سلسلتي التحويلات، لكن معناها ما يزال غير محسوم",
    "sections": 2,
+   "section_rows_split_by_language": false,
    "evidence_ids": [
     "CLM-042"
    ],
@@ -2044,6 +2103,7 @@
    "title_en": "Before ranking flows, look at the balancing residual",
    "title_ar": "قبل ترتيب التدفقات الخارجية، افحص البند الموازِن (صافي السهو والخطأ)",
    "sections": 2,
+   "section_rows_split_by_language": false,
    "evidence_ids": [
     "CLM-043"
    ],
@@ -2074,6 +2134,7 @@
    "title_en": "An alternative residual model is not the canonical remittance baseline",
    "title_ar": "نموذج المتبقي البديل ليس خط الأساس المعتمد للتحويلات",
    "sections": 2,
+   "section_rows_split_by_language": false,
    "evidence_ids": [
     "CLM-044"
    ],
@@ -2104,6 +2165,7 @@
    "title_en": "A successful cash payment is not yet durable financial use",
    "title_ar": "نجاح الدفع النقدي لا يعني بعدُ استخدامًا ماليًا مستمرًا",
    "sections": 2,
+   "section_rows_split_by_language": false,
    "evidence_ids": [
     "CLM-045"
    ],
@@ -2134,6 +2196,7 @@
    "title_en": "Pledge, agreement, deposit and disbursement are different stages of support",
    "title_ar": "التعهد والاتفاق والإيداع والصرف مراحل مختلفة للدعم",
    "sections": 2,
+   "section_rows_split_by_language": false,
    "evidence_ids": [
     "CLM-046"
    ],
@@ -2164,6 +2227,7 @@
    "title_en": "A change in an external position is not automatically a transaction",
    "title_ar": "تغير المركز الخارجي لا يساوي تلقائيًا تدفقًا أو معاملة",
    "sections": 2,
+   "section_rows_split_by_language": false,
    "evidence_ids": [
     "CLM-047"
    ],
@@ -2194,6 +2258,7 @@
    "title_en": "BPM7 updates the standard; it does not rewrite Yemen’s statistical history overnight",
    "title_ar": "الإصدار BPM7 يحدّث المعيار، لكنه لا يعيد كتابة السلاسل الإحصائية التاريخية لليمن فورًا",
    "sections": 2,
+   "section_rows_split_by_language": false,
    "evidence_ids": [
     "CLM-048"
    ],
@@ -2224,6 +2289,7 @@
    "title_en": "IMF Staff-Monitored Program (SMP) for Yemen: staff-level agreement of July 2026, subject to Management approval",
    "title_ar": "برنامج يراقبه خبراء صندوق النقد الدولي (SMP) لليمن: اتفاق على مستوى الخبراء في يوليو 2026، مشروط بموافقة الإدارة",
    "sections": 2,
+   "section_rows_split_by_language": false,
    "evidence_ids": [
     "CLM-049"
    ],
@@ -2254,6 +2320,7 @@
    "title_en": "807,919 accounts did not mean 807,919 active people",
    "title_ar": "807,919 حسابًا لا تعني 807,919 شخصًا نشطًا",
    "sections": 2,
+   "section_rows_split_by_language": false,
    "evidence_ids": [
     "CLM-050"
    ],
@@ -2284,6 +2351,7 @@
    "title_en": "Most recorded 2019 e-money value still revolved around cash and account transfers",
    "title_ar": "معظم قيمة معاملات النقود الإلكترونية المسجلة في 2019 ظلت تدور حول النقد والتحويل بين الحسابات",
    "sections": 2,
+   "section_rows_split_by_language": false,
    "evidence_ids": [
     "CLM-051"
    ],
@@ -2314,6 +2382,7 @@
    "title_en": "Historical provider data show concentration in cities and low female representation",
    "title_ar": "تُظهر بيانات المزودين التاريخية تمركزًا في المدن وتمثيلًا نسائيًا منخفضًا",
    "sections": 2,
+   "section_rows_split_by_language": false,
    "evidence_ids": [
     "CLM-052"
    ],
@@ -2344,6 +2413,7 @@
    "title_en": "End-2023 borrower evidence is useful, but still secondary",
    "title_ar": "رقم المقترضين في نهاية 2023 مفيد، لكنه ما يزال دليلًا ثانويًا",
    "sections": 2,
+   "section_rows_split_by_language": false,
    "evidence_ids": [
     "CLM-053"
    ],
@@ -2374,6 +2444,7 @@
    "title_en": "Borrower, saver and portfolio figures come from different sources and definitions and do not yet form one trend",
    "title_ar": "تأتي أرقام المقترضين والمدخرين والمحفظة من مصادر وتعريفات مختلفة، ولا تشكل بعدُ اتجاهًا واحدًا",
    "sections": 2,
+   "section_rows_split_by_language": false,
    "evidence_ids": [
     "CLM-054"
    ],
@@ -2404,6 +2475,7 @@
    "title_en": "Being listed as a microfinance bank does not establish operation or outreach",
    "title_ar": "الإدراج كبنك تمويل أصغر لا يثبت التشغيل أو الوصول الفعلي",
    "sections": 2,
+   "section_rows_split_by_language": false,
    "evidence_ids": [
     "CLM-055"
    ],
@@ -2434,6 +2506,7 @@
    "title_en": "The 91% figure is supportable only as a source-attributed share of saver growth—not as a verified 2023 depositor stock share",
    "title_ar": "يمكن إسناد نسبة 91% فقط بوصفها حصة من نمو المدخرين وفق المصدر، لا بوصفها حصة محققة من رصيد المودعين في 2023",
    "sections": 2,
+   "section_rows_split_by_language": false,
    "evidence_ids": [
     "CLM-056"
    ],
@@ -2464,6 +2537,7 @@
    "title_en": "June and end-2023 borrower points are not one continuous series",
    "title_ar": "نقطتا يونيو ونهاية 2023 للمقترضين ليستا سلسلة مستمرة واحدة",
    "sections": 2,
+   "section_rows_split_by_language": false,
    "evidence_ids": [
     "CLM-057"
    ],
@@ -2494,6 +2568,7 @@
    "title_en": "Through 2021, the World Bank reports a broadly flat borrower base while average loan amounts rose",
    "title_ar": "حتى 2021، يفيد البنك الدولي بأن قاعدة المقترضين ظلت مستقرة تقريبًا بينما ارتفع متوسط حجم التمويل",
    "sections": 2,
+   "section_rows_split_by_language": false,
    "evidence_ids": [
     "CLM-058"
    ],
@@ -2524,6 +2599,7 @@
    "title_en": "SMEPS programme reach describes the programme, not all MSMEs in Yemen",
    "title_ar": "وصول برنامج SMEPS دليل على نطاق البرنامج، لا على حجم قطاع المنشآت في اليمن",
    "sections": 2,
+   "section_rows_split_by_language": false,
    "evidence_ids": [
     "CLM-059"
    ],
@@ -2554,6 +2630,7 @@
    "title_en": "The SMEPS financial-services KPI is a programme result, not a national MSME rate",
    "title_ar": "مؤشر SMEPS للوصول إلى الخدمات المالية نتيجة برنامجية، لا معدل وطني للمنشآت",
    "sections": 2,
+   "section_rows_split_by_language": false,
    "evidence_ids": [
     "CLM-060"
    ],
@@ -2584,6 +2661,7 @@
    "title_en": "Formal firms in the 2022 survey: accounts were common, bank finance for working capital was not",
    "title_ar": "المنشآت الرسمية في مسح 2022: الحساب المصرفي شائع، أما تمويل البنوك لرأس المال العامل فنادر",
    "sections": 2,
+   "section_rows_split_by_language": false,
    "evidence_ids": [
     "CLM-062"
    ],
@@ -2614,6 +2692,7 @@
    "title_en": "How recent the people-side evidence is, by financial function",
    "title_ar": "حداثة أدلة الأفراد بحسب الوظيفة المالية",
    "sections": 2,
+   "section_rows_split_by_language": false,
    "evidence_ids": [
     "DS-DEMAND-VINTAGE-LENS"
    ],
@@ -2644,6 +2723,7 @@
    "title_en": "Consumer protection and complaint path: official rules and guidance",
    "title_ar": "حماية المستهلك المالي ومسار الشكاوى: التعليمات والإرشادات الرسمية",
    "sections": 2,
+   "section_rows_split_by_language": false,
    "evidence_ids": [
     "DS-FCP-ARCH"
    ],
@@ -2674,6 +2754,7 @@
    "title_en": "Which historical Findex measures can be compared with the latest wave",
    "title_ar": "مقاييس Findex التاريخية التي يمكن مقارنتها بأحدث موجة",
    "sections": 2,
+   "section_rows_split_by_language": false,
    "evidence_ids": [
     "DS-FINDEX-HISTORY-CROSSWALK"
    ],
@@ -2704,6 +2785,7 @@
    "title_en": "Published historical Findex results for Yemen",
    "title_ar": "نتائج Findex التاريخية المنشورة لليمن",
    "sections": 2,
+   "section_rows_split_by_language": false,
    "evidence_ids": [
     "DS-FINDEX-PUBLIC-HISTORY"
    ],
@@ -2734,6 +2816,7 @@
    "title_en": "Qualitative evidence register",
    "title_ar": "سجل الأدلة النوعية",
    "sections": 2,
+   "section_rows_split_by_language": false,
    "evidence_ids": [
     "DS-QUAL-EVIDENCE"
    ],
@@ -2764,6 +2847,7 @@
    "title_en": "FMIIP project baselines for January 2025 count accounts, access points, merchants and agents — not people",
    "title_ar": "خطوط الأساس لمشروع FMIIP في يناير 2025 تعدّ الحسابات ونقاط الوصول والتجار والوكلاء، لا الأشخاص",
    "sections": 2,
+   "section_rows_split_by_language": false,
    "evidence_ids": [
     "FMIIP-BASELINE-2025-01"
    ],
@@ -2794,6 +2878,7 @@
    "title_en": "1997 institutional origin and 1998 operational programme start",
    "title_ar": "الأصل المؤسسي في 1997 وبداية البرنامج التشغيلي في 1998",
    "sections": 2,
+   "section_rows_split_by_language": false,
    "evidence_ids": [
     "MF-ORIG-001+002"
    ],
@@ -2824,6 +2909,7 @@
    "title_en": "2015 Q4 microfinance observation with a portfolio contradiction",
    "title_ar": "مشاهدة التمويل الأصغر للربع الرابع 2015 مع تعارض في قيمة المحفظة",
    "sections": 2,
+   "section_rows_split_by_language": false,
    "evidence_ids": [
     "MFI-SPINE-2015-Q4"
    ],
@@ -2854,6 +2940,7 @@
    "title_en": "Wallet service named in a June 2024 CBY-Aden list of unlicensed services",
    "title_ar": "خدمة محفظة وردت في قائمة البنك المركزي اليمني – عدن للخدمات غير المرخصة (يونيو 2024)",
    "sections": 2,
+   "section_rows_split_by_language": false,
    "evidence_ids": [
     "NEG-EW-011"
    ],
@@ -2884,6 +2971,7 @@
    "title_en": "Dated remittance-agent licence suspension and closure event",
    "title_ar": "حدث مؤرخ لتعليق ترخيص وكيل حوالات وإغلاق المقر",
    "sections": 2,
+   "section_rows_split_by_language": false,
    "evidence_ids": [
     "PSE-011"
    ],
@@ -2914,6 +3002,7 @@
    "title_en": "OECD: institutional fragility and weak formal access (qualitative interpretation)",
    "title_ar": "OECD: الهشاشة المؤسسية وضعف الوصول الرسمي (تفسير نوعي)",
    "sections": 2,
+   "section_rows_split_by_language": false,
    "evidence_ids": [
     "QUAL-001"
    ],
@@ -2944,6 +3033,7 @@
    "title_en": "Borrowing and its sources in 2014",
    "title_ar": "الاقتراض ومصادره في 2014",
    "sections": 2,
+   "section_rows_split_by_language": false,
    "evidence_ids": [
     "VIS-BORROWING-SOURCES-2014"
    ],
@@ -2974,6 +3064,7 @@
    "title_en": "Humanitarian, development and project finance: separate pathways",
    "title_ar": "التمويل الإنساني والتنموي وتمويل المشروعات: مسارات منفصلة",
    "sections": 2,
+   "section_rows_split_by_language": false,
    "evidence_ids": [
     "VIS-CAPITAL-CONTEXT"
    ],
@@ -3006,6 +3097,7 @@
    "title_en": "Latest observation for each people-side financial function",
    "title_ar": "أحدث مشاهدة لكل وظيفة مالية على جانب الأفراد",
    "sections": 2,
+   "section_rows_split_by_language": false,
    "evidence_ids": [
     "VIS-DEMAND-VINTAGE-LADDER"
    ],
@@ -3036,6 +3128,7 @@
    "title_en": "Domestic remittances in 2014 — population reach vs recipient channels",
    "title_ar": "الحوالات المحلية في 2014: نطاق الإرسال والاستلام وقنوات المستلمين",
    "sections": 2,
+   "section_rows_split_by_language": false,
    "evidence_ids": [
     "VIS-DOMESTIC-REMITTANCE-PATH-2014"
    ],
@@ -3066,6 +3159,7 @@
    "title_en": "Layers of mobile e-money rules",
    "title_ar": "طبقات قواعد النقود الإلكترونية",
    "sections": 2,
+   "section_rows_split_by_language": false,
    "evidence_ids": [
     "VIS-E-MONEY-RULE-STACK"
    ],
@@ -3098,6 +3192,7 @@
    "title_en": "What kind of evidence is this?",
    "title_ar": "ما نوع هذا الدليل؟",
    "sections": 2,
+   "section_rows_split_by_language": false,
    "evidence_ids": [
     "VIS-EVIDENCE-CLASS-LADDER"
    ],
@@ -3130,6 +3225,7 @@
    "title_en": "Where is the evidence current — and where is it old?",
    "title_ar": "حداثة الدليل بحسب المجال",
    "sections": 2,
+   "section_rows_split_by_language": false,
    "evidence_ids": [
     "VIS-EVIDENCE-FRESHNESS"
    ],
@@ -3162,6 +3258,7 @@
    "title_en": "What we still do not know",
    "title_ar": "ما الذي ما زلنا لا نعرفه؟",
    "sections": 2,
+   "section_rows_split_by_language": false,
    "evidence_ids": [
     "VIS-EVIDENCE-GAPS"
    ],
@@ -3194,6 +3291,7 @@
    "title_en": "If a complaint is not resolved, what happens?",
    "title_ar": "إذا لم تُحل الشكوى، ماذا يحدث؟",
    "sections": 2,
+   "section_rows_split_by_language": false,
    "evidence_ids": [
     "VIS-FCP-REDRESS-PATH"
    ],
@@ -3226,6 +3324,7 @@
    "title_en": "Account ownership, account use and digital use: three separate measures",
    "title_ar": "امتلاك الحساب واستخدامه والاستخدام الرقمي: ثلاثة مقاييس منفصلة",
    "sections": 2,
+   "section_rows_split_by_language": false,
    "evidence_ids": [
     "VIS-FINDEX-ACCESS-USE"
    ],
@@ -3256,6 +3355,7 @@
    "title_en": "Reasons adults give for not having an account",
    "title_ar": "الأسباب التي يذكرها البالغون لعدم امتلاك حساب",
    "sections": 2,
+   "section_rows_split_by_language": false,
    "evidence_ids": [
     "VIS-FINDEX-BARRIERS"
    ],
@@ -3286,6 +3386,7 @@
    "title_en": "How money reaches people — wages, government transfers, agricultural payments and domestic remittances",
    "title_ar": "كيف تصل الأموال إلى الأفراد: الأجور والتحويلات الحكومية والمدفوعات الزراعية والحوالات المحلية",
    "sections": 2,
+   "section_rows_split_by_language": false,
    "evidence_ids": [
     "VIS-FINDEX-FLOW-CHANNELS"
    ],
@@ -3316,6 +3417,7 @@
    "title_en": "Account ownership and measured gaps: Global Findex 2021 wave (Yemen fieldwork 2022–23)",
    "title_ar": "امتلاك الحساب والفجوات المقاسة: موجة Global Findex 2021 (العمل الميداني في اليمن 2022–2023)",
    "sections": 2,
+   "section_rows_split_by_language": false,
    "evidence_ids": [
     "VIS-FINDEX-GAPS"
    ],
@@ -3348,6 +3450,7 @@
    "title_en": "Account ownership — observed waves, not an annual line",
    "title_ar": "امتلاك الحساب في موجات Findex المرصودة لليمن، لا سلسلة سنوية",
    "sections": 2,
+   "section_rows_split_by_language": false,
    "evidence_ids": [
     "VIS-FINDEX-OBSERVED-WAVES"
    ],
@@ -3378,6 +3481,7 @@
    "title_en": "Can an adult raise emergency funds — in 7 days versus 30?",
    "title_ar": "هل يستطيع البالغ تدبير أموال للطوارئ خلال 7 أيام مقارنة بـ30 يومًا؟",
    "sections": 2,
+   "section_rows_split_by_language": false,
    "evidence_ids": [
     "VIS-FINDEX-RESILIENCE"
    ],
@@ -3408,6 +3512,7 @@
    "title_en": "How many respondents answered each Findex question",
    "title_ar": "عدد المستجيبين عن كل سؤال في مسح Findex",
    "sections": 2,
+   "section_rows_split_by_language": false,
    "evidence_ids": [
     "VIS-FINDEX-SAMPLE-SUPPORT"
    ],
@@ -3438,6 +3543,7 @@
    "title_en": "Finance is not the only constraint surveyed formal firms report, 2022",
    "title_ar": "التمويل ليس القيد الوحيد الذي تذكره المنشآت الرسمية المشمولة بالمسح، 2022",
    "sections": 2,
+   "section_rows_split_by_language": false,
    "evidence_ids": [
     "VIS-FIRM-CONSTRAINTS"
    ],
@@ -3470,6 +3576,7 @@
    "title_en": "Loan sources in 18 valid responses from surveyed formal firms, 2022",
    "title_ar": "مصادر القروض في 18 استجابة صالحة من المنشآت الرسمية المشمولة بالمسح، 2022",
    "sections": 2,
+   "section_rows_split_by_language": false,
    "evidence_ids": [
     "VIS-FIRM-FINANCE-PATH"
    ],
@@ -3502,6 +3609,7 @@
    "title_en": "Finance obstacle severity among surveyed formal firms, excluding those that said they needed no loan, 2022",
    "title_ar": "شدة عائق التمويل لدى المنشآت الرسمية المشمولة بالمسح، باستثناء التي قالت إنها لا تحتاج إلى قرض، 2022",
    "sections": 2,
+   "section_rows_split_by_language": false,
    "evidence_ids": [
     "VIS-FIRM-FINANCE-SEVERITY"
    ],
@@ -3534,6 +3642,7 @@
    "title_en": "Financial literacy — activity is not outcome",
    "title_ar": "الثقافة المالية: النشاط لا يساوي نتيجة",
    "sections": 2,
+   "section_rows_split_by_language": false,
    "evidence_ids": [
     "VIS-FL-EVIDENCE-LADDER"
    ],
@@ -3566,6 +3675,7 @@
    "title_en": "Financial inclusion is a connected system, not a single score",
    "title_ar": "الشمول المالي منظومة مترابطة، لا درجة واحدة",
    "sections": 2,
+   "section_rows_split_by_language": false,
    "evidence_ids": [
     "VIS-INCLUSION-TRANSMISSION"
    ],
@@ -3598,6 +3708,7 @@
    "title_en": "What may explain the number — without pretending to prove it?",
    "title_ar": "ما الذي قد يفسر الرقم — من دون ادعاء إثباته؟",
    "sections": 2,
+   "section_rows_split_by_language": false,
    "evidence_ids": [
     "VIS-MECHANISM-METRIC-BRIDGE"
    ],
@@ -3630,6 +3741,7 @@
    "title_en": "Microfinance in 2014 — two comparable quarters, not a long trend",
    "title_ar": "التمويل الأصغر في 2014: ربعان قابلان للمقارنة، لا اتجاه طويل الأمد",
    "sections": 2,
+   "section_rows_split_by_language": false,
    "evidence_ids": [
     "VIS-MFI-2014-PANEL"
    ],
@@ -3660,6 +3772,7 @@
    "title_en": "2015: a sharp fall in active borrowers within the year",
    "title_ar": "2015: تراجع حاد في أعداد المقترضين النشطين خلال العام",
    "sections": 2,
+   "section_rows_split_by_language": false,
    "evidence_ids": [
     "VIS-MFI-RUPTURE-LENS"
    ],
@@ -3690,6 +3803,7 @@
    "title_en": "Microfinance observations by date, with gaps and breaks shown",
    "title_ar": "مشاهدات التمويل الأصغر بحسب التاريخ، مع إظهار الفجوات والانقطاعات",
    "sections": 2,
+   "section_rows_split_by_language": false,
    "evidence_ids": [
     "VIS-MFI-SPINE"
    ],
@@ -3720,6 +3834,7 @@
    "title_en": "Financial consumer protection: which steps from framework to outcome are evidenced?",
    "title_ar": "حماية المستهلك المالي: أي المراحل من الإطار إلى النتيجة تسندها الأدلة؟",
    "sections": 2,
+   "section_rows_split_by_language": false,
    "evidence_ids": [
     "VIS-OECD-FCP-TIMELINE"
    ],
@@ -3752,6 +3867,7 @@
    "title_en": "What does the payment system actually count?",
    "title_ar": "ما الذي يقيسه نظام المدفوعات فعلًا؟",
    "sections": 2,
+   "section_rows_split_by_language": false,
    "evidence_ids": [
     "VIS-PAYMENT-ANATOMY"
    ],
@@ -3784,6 +3900,7 @@
    "title_en": "How the payment architecture is changing",
    "title_ar": "كيف تتغير بنية المدفوعات؟",
    "sections": 2,
+   "section_rows_split_by_language": false,
    "evidence_ids": [
     "VIS-PAYMENT-RAILS"
    ],
@@ -3816,6 +3933,7 @@
    "title_en": "Reported POS terminals, monthly",
    "title_ar": "أجهزة نقاط البيع المبلغ عنها شهريًا",
    "sections": 2,
+   "section_rows_split_by_language": false,
    "evidence_ids": [
     "VIS-POS-TERMINALS"
    ],
@@ -3848,6 +3966,7 @@
    "title_en": "Reported POS transactions, monthly",
    "title_ar": "معاملات نقاط البيع المبلغ عنها شهريًا",
    "sections": 2,
+   "section_rows_split_by_language": false,
    "evidence_ids": [
     "VIS-POS-TRANSACTIONS"
    ],
@@ -3880,6 +3999,7 @@
    "title_en": "Nominal value of reported POS transactions, monthly",
    "title_ar": "القيمة الاسمية لمعاملات نقاط البيع المبلغ عنها شهريًا",
    "sections": 2,
+   "section_rows_split_by_language": false,
    "evidence_ids": [
     "VIS-POS-VALUE"
    ],
@@ -3912,6 +4032,7 @@
    "title_en": "What do we actually know about each provider class?",
    "title_ar": "ما الذي نعرفه فعلًا عن كل فئة من مقدمي الخدمة؟",
    "sections": 2,
+   "section_rows_split_by_language": false,
    "evidence_ids": [
     "VIS-PROVIDER-OBSERVABILITY"
    ],
@@ -3944,6 +4065,7 @@
    "title_en": "Provider status over time: the 2026 roster and dated decisions",
    "title_ar": "أوضاع مقدمي الخدمات عبر الزمن: قائمة 2026 والقرارات المؤرخة",
    "sections": 2,
+   "section_rows_split_by_language": false,
    "evidence_ids": [
     "VIS-PROVIDER-TIME"
    ],
@@ -3974,6 +4096,7 @@
    "title_en": "Quoted cost of sending US$200 and US$500 to Yemen from Saudi Arabia and the UAE, 2025 Q3",
    "title_ar": "التكلفة المعلنة لإرسال 200 و500 دولار أمريكي إلى اليمن من السعودية والإمارات، الربع الثالث من 2025",
    "sections": 2,
+   "section_rows_split_by_language": false,
    "evidence_ids": [
     "VIS-REMITTANCE-COST"
    ],
@@ -4006,6 +4129,7 @@
    "title_en": "Remittances — IMF-reported history, estimate and projections",
    "title_ar": "التحويلات: القيم التاريخية الواردة في تقارير صندوق النقد الدولي والتقدير والتوقعات",
    "sections": 2,
+   "section_rows_split_by_language": false,
    "evidence_ids": [
     "VIS-REMITTANCE-MACRO"
    ],
@@ -4038,6 +4162,7 @@
    "title_en": "Same word, different measure: comparing source definitions",
    "title_ar": "الكلمة نفسها والمقياس مختلف: مقارنة تعريفات المصادر",
    "sections": 2,
+   "section_rows_split_by_language": false,
    "evidence_ids": [
     "VIS-SOURCE-COMPARISON"
    ],
@@ -4070,6 +4195,7 @@
    "title_en": "FMIIP financial access points: January 2025 baseline and June 2030 target",
    "title_ar": "نقاط الوصول المالي في مشروع FMIIP: خط أساس يناير 2025 ومستهدف يونيو 2030",
    "sections": 2,
+   "section_rows_split_by_language": false,
    "evidence_ids": [
     "VIS-TARGET-RESULT-STATE"
    ],
@@ -4102,6 +4228,7 @@
    "title_en": "The FMIIP access-point target is not comparable with ATM, POS or agent counts",
    "title_ar": "مستهدف نقاط الوصول في مشروع FMIIP غير قابل للمقارنة بأعداد أجهزة الصراف الآلي ونقاط البيع والوكلاء",
    "sections": 2,
+   "section_rows_split_by_language": false,
    "evidence_ids": [
     "XW-FMIIP-005"
    ],
@@ -4131,7 +4258,8 @@
    },
    "title_en": "Compare evidence without forcing unlike measures onto one scale",
    "title_ar": "قارن الأدلة من دون وضع ما لا يتماثل على مقياس واحد",
-   "sections": 3,
+   "sections": 2,
+   "section_rows_split_by_language": true,
    "evidence_ids": [
     "CLM-001",
     "CLM-010",
@@ -4194,7 +4322,8 @@
    },
    "title_en": "Start with the question, not the dataset.",
    "title_ar": "ابدأ بالسؤال، لا بالبيانات.",
-   "sections": 9,
+   "sections": 5,
+   "section_rows_split_by_language": true,
    "evidence_ids": [],
    "visual_ids": [],
    "reading_ids": [
@@ -4224,6 +4353,39 @@
      "QE-009",
      "QE-010",
      "QE-011"
+    ],
+    "question_groups": [
+     {
+      "heading_ui_id": "UI-QUESTIONS-UNDERSTAND-THE-WIDER-PICTURE",
+      "question_ids": [
+       "QE-001",
+       "QE-003"
+      ]
+     },
+     {
+      "heading_ui_id": "UI-QUESTIONS-PEOPLE-USE-AND-FLOWS",
+      "question_ids": [
+       "QE-002",
+       "QE-004",
+       "QE-007",
+       "QE-009"
+      ]
+     },
+     {
+      "heading_ui_id": "UI-QUESTIONS-FIRMS-INSTITUTIONS-AND-PROVIDERS",
+      "question_ids": [
+       "QE-005",
+       "QE-006",
+       "QE-008"
+      ]
+     },
+     {
+      "heading_ui_id": "UI-QUESTIONS-VERIFY-AND-DECIDE-WHAT-TO",
+      "question_ids": [
+       "QE-010",
+       "QE-011"
+      ]
+     }
     ]
    },
    "structured_data": [],
@@ -4240,7 +4402,8 @@
    },
    "title_en": "Finance: borrower, saver and balance figures measure different things",
    "title_ar": "التمويل: أرقام المقترضين والمدخرين والأرصدة تقيس أشياء مختلفة",
-   "sections": 25,
+   "sections": 13,
+   "section_rows_split_by_language": true,
    "evidence_ids": [
     "CLM-020",
     "CLM-021",
@@ -4275,7 +4438,9 @@
    ],
    "source_ids": [],
    "source_references": 38,
-   "next_actions": [],
+   "next_actions": [
+    "/evidence/CLM-022/"
+   ],
    "next_action_policy": "VERIFY_PRIMARY_EVIDENCE",
    "presentation_contract": {
     "measurement_limit": 2,
@@ -4295,7 +4460,8 @@
    },
    "title_en": "Firms: how much finance matters depends on the question and the firms asked",
    "title_ar": "المنشآت: مدى أهمية التمويل يتوقف على السؤال وعلى المنشآت التي سُئلت",
-   "sections": 17,
+   "sections": 9,
+   "section_rows_split_by_language": true,
    "evidence_ids": [
     "CLM-005",
     "CLM-006",
@@ -4322,7 +4488,9 @@
    ],
    "source_ids": [],
    "source_references": 5,
-   "next_actions": [],
+   "next_actions": [
+    "/evidence/CLM-005/"
+   ],
    "next_action_policy": "VERIFY_PRIMARY_EVIDENCE",
    "presentation_contract": {
     "measurement_limit": 2,
@@ -4342,7 +4510,8 @@
    },
    "title_en": "Missing evidence matters when it could change a decision.",
    "title_ar": "تكتسب فجوة الدليل أهميتها عندما يمكن أن تغيّر قرارًا.",
-   "sections": 19,
+   "sections": 10,
+   "section_rows_split_by_language": true,
    "evidence_ids": [
     "CLM-009",
     "VIS-EVIDENCE-GAPS"
@@ -4389,7 +4558,8 @@
    },
    "title_en": "Preserve the meaning of the evidence before comparing the numbers.",
    "title_ar": "حافظ على معنى الدليل قبل أن تقارن الأرقام.",
-   "sections": 27,
+   "sections": 14,
+   "section_rows_split_by_language": true,
    "evidence_ids": [
     "CLM-004",
     "CLM-014",
@@ -4434,7 +4604,8 @@
    },
    "title_en": "Payments: POS terminals reported by the Central Bank of Yemen – Aden rose from 561 to 1,473 between March 2025 and January 2026; how many people use them is not measured",
    "title_ar": "المدفوعات: ارتفع عدد أجهزة نقاط البيع التي يُبلغ عنها البنك المركزي اليمني – عدن من 561 إلى 1,473 بين مارس 2025 ويناير 2026؛ أما عدد من يستخدمونها فغير مقيس",
-   "sections": 17,
+   "sections": 9,
+   "section_rows_split_by_language": true,
    "evidence_ids": [
     "CLM-003",
     "CLM-004",
@@ -4474,7 +4645,9 @@
    ],
    "source_ids": [],
    "source_references": 31,
-   "next_actions": [],
+   "next_actions": [
+    "/evidence/CLM-003/"
+   ],
    "next_action_policy": "VERIFY_PRIMARY_EVIDENCE",
    "presentation_contract": {
     "measurement_limit": 2,
@@ -4497,7 +4670,8 @@
    },
    "title_en": "People: one population, evidence from different dates",
    "title_ar": "الأفراد: مجتمع سكاني واحد، وأدلة من تواريخ مختلفة",
-   "sections": 21,
+   "sections": 11,
+   "section_rows_split_by_language": true,
    "evidence_ids": [
     "CLM-001",
     "CLM-002",
@@ -4545,7 +4719,9 @@
    ],
    "source_ids": [],
    "source_references": 23,
-   "next_actions": [],
+   "next_actions": [
+    "/evidence/CLM-001/"
+   ],
    "next_action_policy": "VERIFY_PRIMARY_EVIDENCE",
    "presentation_contract": {
     "measurement_limit": 2,
@@ -4568,6 +4744,7 @@
    "title_en": "Privacy",
    "title_ar": "الخصوصية",
    "sections": 6,
+   "section_rows_split_by_language": false,
    "evidence_ids": [],
    "visual_ids": [],
    "reading_ids": [],
@@ -4593,7 +4770,8 @@
    },
    "title_en": "Providers: official lists show formal status on a date; operation needs other evidence",
    "title_ar": "قائمة مقدمي الخدمات تثبت وضعًا رسميًا في تاريخ محدد، لكنها لا تثبت التشغيل بذاتها.",
-   "sections": 19,
+   "sections": 10,
+   "section_rows_split_by_language": true,
    "evidence_ids": [
     "CLM-008",
     "CLM-009",
@@ -4619,7 +4797,9 @@
    ],
    "source_ids": [],
    "source_references": 30,
-   "next_actions": [],
+   "next_actions": [
+    "/evidence/CLM-009/"
+   ],
    "next_action_policy": "VERIFY_PRIMARY_EVIDENCE",
    "presentation_contract": {
     "measurement_limit": 2,
@@ -4640,6 +4820,7 @@
    "title_en": "Evidence Readings",
    "title_ar": "قراءات الأدلة",
    "sections": 1,
+   "section_rows_split_by_language": false,
    "evidence_ids": [],
    "visual_ids": [],
    "reading_ids": [
@@ -4691,6 +4872,7 @@
    "title_en": "The payment arrived. What happened next?",
    "title_ar": "وصلت الدفعة. ماذا حدث بعدها؟",
    "sections": 6,
+   "section_rows_split_by_language": false,
    "evidence_ids": [
     "CLM-045"
    ],
@@ -4729,6 +4911,7 @@
    "title_en": "When the baseline moves",
    "title_ar": "حين يتحرك خط الأساس",
    "sections": 6,
+   "section_rows_split_by_language": false,
    "evidence_ids": [
     "CLM-033",
     "CLM-038"
@@ -4768,6 +4951,7 @@
    "title_en": "When the unit changes, the story changes",
    "title_ar": "حين تتغير وحدة القياس، تتغير القصة",
    "sections": 6,
+   "section_rows_split_by_language": false,
    "evidence_ids": [
     "CLM-001",
     "CLM-003",
@@ -4813,6 +4997,7 @@
    "title_en": "When does digital growth become durable use?",
    "title_ar": "متى يتحول النمو الرقمي إلى استخدام مستمر؟",
    "sections": 5,
+   "section_rows_split_by_language": false,
    "evidence_ids": [
     "CLM-050",
     "CLM-051",
@@ -4851,6 +5036,7 @@
    "title_en": "How can 22% and 91.84% both be right?",
    "title_ar": "كيف تكون 22% و91.84% صحيحتين معًا؟",
    "sections": 7,
+   "section_rows_split_by_language": false,
    "evidence_ids": [
     "CLM-005",
     "CLM-006",
@@ -4892,6 +5078,7 @@
    "title_en": "When does a payment reform become financial inclusion?",
    "title_ar": "متى يصبح إصلاح المدفوعات تحسنًا في الشمول المالي؟",
    "sections": 6,
+   "section_rows_split_by_language": false,
    "evidence_ids": [
     "CLM-003",
     "CLM-004",
@@ -4931,6 +5118,7 @@
    "title_en": "The gender gap is measured. Its explanation is still open.",
    "title_ar": "الفجوة بين النساء والرجال مقاسة. أما تفسيرها فما يزال مفتوحًا.",
    "sections": 4,
+   "section_rows_split_by_language": false,
    "evidence_ids": [
     "CLM-001",
     "CLM-002",
@@ -4970,6 +5158,7 @@
    "title_en": "What exactly do we mean by microfinance growth?",
    "title_ar": "ماذا نعني تحديدًا بنمو التمويل الأصغر؟",
    "sections": 7,
+   "section_rows_split_by_language": false,
    "evidence_ids": [
     "CLM-054",
     "CLM-055",
@@ -5011,6 +5200,7 @@
    "title_en": "The system is changing. What has reached people?",
    "title_ar": "المنظومة المالية تتغير. فما الذي وصل إلى الناس؟",
    "sections": 4,
+   "section_rows_split_by_language": false,
    "evidence_ids": [
     "CLM-001",
     "CLM-003",
@@ -5052,6 +5242,7 @@
    "title_en": "Same year, different number",
    "title_ar": "العام نفسه، رقم مختلف",
    "sections": 7,
+   "section_rows_split_by_language": false,
    "evidence_ids": [
     "CLM-032",
     "CLM-036",
@@ -5096,7 +5287,8 @@
    },
    "title_en": "A reform can be real before its outcome is known.",
    "title_ar": "قد يقع الإصلاح فعلًا وتبقى نتيجته مجهولة.",
-   "sections": 21,
+   "sections": 11,
+   "section_rows_split_by_language": true,
    "evidence_ids": [
     "CLM-011",
     "CLM-012",
@@ -5132,7 +5324,9 @@
    ],
    "source_ids": [],
    "source_references": 34,
-   "next_actions": [],
+   "next_actions": [
+    "/evidence/CLM-011/"
+   ],
    "next_action_policy": "VERIFY_PRIMARY_EVIDENCE",
    "presentation_contract": {
     "measurement_limit": 2,
@@ -5152,7 +5346,8 @@
    },
    "title_en": "Remittances: each figure depends on its source, concept and edition",
    "title_ar": "التحويلات: كل رقم يتوقف على مصدره ومفهومه والإصدار الذي نُشر فيه",
-   "sections": 17,
+   "sections": 9,
+   "section_rows_split_by_language": true,
    "evidence_ids": [
     "CLM-007",
     "CLM-030",
@@ -5186,7 +5381,9 @@
    ],
    "source_ids": [],
    "source_references": 15,
-   "next_actions": [],
+   "next_actions": [
+    "/evidence/CLM-007/"
+   ],
    "next_action_policy": "VERIFY_PRIMARY_EVIDENCE",
    "presentation_contract": {
     "measurement_limit": 0,
@@ -5209,6 +5406,7 @@
    "title_en": "Source and data rights",
    "title_ar": "حقوق المصادر والبيانات",
    "sections": 5,
+   "section_rows_split_by_language": false,
    "evidence_ids": [],
    "visual_ids": [],
    "reading_ids": [],
@@ -5236,6 +5434,7 @@
    "title_en": "Terms and responsible reuse",
    "title_ar": "الشروط وإعادة الاستخدام المسؤول",
    "sections": 6,
+   "section_rows_split_by_language": false,
    "evidence_ids": [],
    "visual_ids": [],
    "reading_ids": [],
@@ -5259,7 +5458,19 @@
     "route": "/people/",
     "must_prove": "High evidence density remains scannable; survey wave/fieldwork/universe/limitation are not detached from the headline figure.",
     "data_at_route": {
-     "page_family": "Domain Answer"
+     "page_family": "Domain Answer",
+     "visual_ids": [
+      "VIS-FINDEX-GAPS",
+      "VIS-FL-EVIDENCE-LADDER"
+     ],
+     "visual_grammar_present": [
+      "DERIVED",
+      "MEASURED"
+     ],
+     "reading_ids": [
+      "CWR-004",
+      "CWR-007"
+     ]
     }
    },
    {
@@ -5267,7 +5478,14 @@
     "route": "/access/",
     "must_prove": "Unknown geography is visibly unknown, not rendered as zero or an empty-map implication.",
     "data_at_route": {
-     "page_family": "Domain Answer"
+     "page_family": "Domain Answer",
+     "visual_ids": [
+      "VIS-ACCESS-EVIDENCE-LAYER"
+     ],
+     "visual_grammar_present": [],
+     "reading_ids": [
+      "CWR-003"
+     ]
     }
    },
    {
@@ -5275,7 +5493,26 @@
     "route": "/payments/",
     "must_prove": "FPS, RTGS, interoperability, institution-building, operation, use and outcome are visually distinct states.",
     "data_at_route": {
-     "page_family": "Domain Answer"
+     "page_family": "Domain Answer",
+     "visual_ids": [
+      "VIS-E-MONEY-RULE-STACK",
+      "VIS-PAYMENT-ANATOMY",
+      "VIS-POS-TERMINALS",
+      "VIS-POS-TRANSACTIONS",
+      "VIS-POS-VALUE"
+     ],
+     "visual_grammar_present": [
+      "ADMINISTRATIVE",
+      "DISAGREEMENT",
+      "MISSING",
+      "NOMINAL",
+      "NOT_COMPARABLE",
+      "WITHHELD"
+     ],
+     "reading_ids": [
+      "CWR-005",
+      "CWR-009"
+     ]
     }
    },
    {
@@ -5283,7 +5520,21 @@
     "route": "/remittances/",
     "must_prove": "Same-year revisions and observed/estimated/projected states are visually legible without selecting a winner.",
     "data_at_route": {
-     "page_family": "Domain Answer"
+     "page_family": "Domain Answer",
+     "visual_ids": [
+      "VIS-REMITTANCE-COST",
+      "VIS-REMITTANCE-MACRO"
+     ],
+     "visual_grammar_present": [
+      "BREAK_VINTAGE",
+      "ESTIMATED",
+      "MEASURED",
+      "PROJECTED",
+      "REPORTED"
+     ],
+     "reading_ids": [
+      "CWR-001"
+     ]
     }
    },
    {
@@ -5294,7 +5545,10 @@
      "page_family": "Evidence Record",
      "lineage_state": "BOUND_EXACT",
      "verification_state": "SOURCES_LISTED",
-     "public_sources_listed": 3
+     "public_sources_listed": 3,
+     "visual_ids": [],
+     "visual_grammar_present": [],
+     "reading_ids": []
     }
    },
    {
@@ -5305,7 +5559,10 @@
      "page_family": "Evidence Record",
      "lineage_state": "BOUND_EXACT",
      "verification_state": "SOURCES_LISTED",
-     "public_sources_listed": 1
+     "public_sources_listed": 1,
+     "visual_ids": [],
+     "visual_grammar_present": [],
+     "reading_ids": []
     }
    },
    {
@@ -5313,7 +5570,12 @@
     "route": "/evidence/compare/",
     "must_prove": "The UI prevents visual pressure to compare unlike units/universes and makes the boundary the first conclusion.",
     "data_at_route": {
-     "page_family": "Comparison"
+     "page_family": "Comparison",
+     "visual_ids": [
+      "VIS-SOURCE-COMPARISON"
+     ],
+     "visual_grammar_present": [],
+     "reading_ids": []
     }
    },
    {
@@ -5321,7 +5583,10 @@
     "route": "/data/",
     "must_prove": "All source records remain discoverable without a wall-of-links interface; the curated resource cards are visibly curated, not a separate authority.",
     "data_at_route": {
-     "page_family": "Data & Source"
+     "page_family": "Data & Source",
+     "visual_ids": [],
+     "visual_grammar_present": [],
+     "reading_ids": []
     }
    },
    {
@@ -5329,7 +5594,21 @@
     "route": "/readings/same-year-different-number/",
     "must_prove": "Analytical narrative remains bounded, readable and directly traceable to verification records.",
     "data_at_route": {
-     "page_family": "Reading"
+     "page_family": "Reading",
+     "visual_ids": [
+      "RV-CWR-001"
+     ],
+     "visual_grammar_present": [
+      "DERIVED",
+      "NOT_COMPARABLE",
+      "REPORTED",
+      "SAME_YEAR_REVISION"
+     ],
+     "reading_ids": [
+      "CWR-001",
+      "CWR-002",
+      "CWR-004"
+     ]
     }
    },
    {
@@ -5337,7 +5616,12 @@
     "route": "/measurement/",
     "must_prove": "P0/P1 reads as evidence-sequencing within this agenda, never as national policy or spending priority.",
     "data_at_route": {
-     "page_family": "Measurement"
+     "page_family": "Measurement",
+     "visual_ids": [
+      "VIS-EVIDENCE-GAPS"
+     ],
+     "visual_grammar_present": [],
+     "reading_ids": []
     }
    },
    {
@@ -5345,7 +5629,10 @@
     "route": "/about/",
     "must_prove": "Purpose, CauseWay role, limits, source authority and correction are understandable without backend terminology.",
     "data_at_route": {
-     "page_family": "Reference / Trust"
+     "page_family": "Reference / Trust",
+     "visual_ids": [],
+     "visual_grammar_present": [],
+     "reading_ids": []
     }
    },
    {
@@ -5353,7 +5640,26 @@
     "route": "/ar/payments/",
     "must_prove": "At 320–400px Arabic order, numeric/Latin isolation, tables, controls and verification path remain coherent.",
     "data_at_route": {
-     "page_family": "Domain Answer"
+     "page_family": "Domain Answer",
+     "visual_ids": [
+      "VIS-E-MONEY-RULE-STACK",
+      "VIS-PAYMENT-ANATOMY",
+      "VIS-POS-TERMINALS",
+      "VIS-POS-TRANSACTIONS",
+      "VIS-POS-VALUE"
+     ],
+     "visual_grammar_present": [
+      "ADMINISTRATIVE",
+      "DISAGREEMENT",
+      "MISSING",
+      "NOMINAL",
+      "NOT_COMPARABLE",
+      "WITHHELD"
+     ],
+     "reading_ids": [
+      "CWR-005",
+      "CWR-009"
+     ]
     }
    }
   ],

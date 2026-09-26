@@ -10,7 +10,9 @@ change protocol is `CONTRIBUTING.md`; this file is the short list you must not g
 3. `authority/CORE_CONSTITUTION.md` — durable rules.
 4. `CONTRIBUTING.md` — how changes are made, committed and synced.
 
-The programme state lives in `README.md`, the checkpoint and `authority/YFI_CURRENT_PROJECT_CONTEXT.json`, which agree.
+Claude Design and Claude Code do not use this list: their start file is `handoff/README_FIRST.md`, with its own reading
+order. The programme state lives in `README.md`, the checkpoint and `authority/YFI_CURRENT_PROJECT_CONTEXT.json`, which
+agree.
 Trust the repository bytes over any chat history, prompt, ZIP or earlier summary; if they disagree, diagnose and record
 the difference.
 

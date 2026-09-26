@@ -34,7 +34,7 @@ authority/Yemen_Financial_Inclusion_Evidence_Master.xlsx      the only authority
 ```
 
 Production Master SHA-256 `17db032b15da16fc4b5b3c3b49f19aebf2ecb4ec46634613fe8505d0f038690b`; Page Specs
-(`site-src/content/page_specs.json`) SHA-256 `79a1735abe673745f8670f220b1d75a7daf75975ffaad847c87191f77bb0991e`. If the
+(`site-src/content/page_specs.json`) SHA-256 `d45748046ea56fd0e67fdf112f9888de65b3fe7fab46ce6f51de3a80824b69aa`. If the
 repository shows other hashes, the repository is right — re-read it; never restore a hash from a document.
 
 A content defect is never fixed in a page, a JSON file or a component. It is escalated (§10) and fixed in the Master by
@@ -75,7 +75,8 @@ editorial pacing. `DESIGN_STARTING_TOKENS.json` is a starting hypothesis, not a 
 ## 7. What is unknown
 
 Nothing that blocks Design. The open items — the release domain, contact-mailbox confirmation, CauseWay's identity and
-funding statement, the content licence that gates downloads, web-size logo derivatives, eleven source checks that leave
+funding statement, the content licence that gates downloads, web-size logo derivatives, two maintainer decisions on the
+hand-maintained contracts (whose known disagreements the brief §2 resolves for you), eleven source checks that leave
 today's text unchanged until the source is read, and eight known evidence frontiers — are listed with their class, where
 they show and who owns them in `FINAL_OPEN_ITEMS_REGISTER.md`. Design the honest state each page already has; never fill
 one.
@@ -102,7 +103,7 @@ commands work from a clone and from the handoff archive alike.
   gate, each leaving a runnable state; merge only when **Verify** (Governance gates + Browser acceptance) is green. Never
   force-push; never rewrite `main` or a `checkpoint/*` tag.
 - Put the design package in `design/` (see the brief, §19); never edit `authority/`, `site-src/content/`, `dist/` or
-  `audit/PUBLIC_LITERAL_CLOSURE.json` by hand.
+  anything under `audit/` (outputs the scripts regenerate are not edits), and never edit the test suites.
 - Without push access, or starting from the handoff archive: `git init -q && git add -A && git commit -qm "import handoff"`,
   work locally, and deliver each gate as a git bundle or patch series (brief §21); the steward lands it through the same
   gates.

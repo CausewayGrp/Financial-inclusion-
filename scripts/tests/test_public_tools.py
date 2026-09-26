@@ -330,7 +330,7 @@ def main():
     except Exception:
         print("HARNESS UNAVAILABLE: python playwright not installed"); sys.exit(2)
     if not os.path.exists(os.path.join(DIST, "en", "index.html")):
-        print("dist/ not built"); sys.exit(2)
+        print(f"site not built: {DIST} has no index.html (run scripts/build.py, or set YFIE_SITE_DIR to your built site)"); sys.exit(2)
     httpd, base = serve()
     tests = [v for v in globals().values() if callable(v) and hasattr(v, "__test_name__")]
     failed = 0
