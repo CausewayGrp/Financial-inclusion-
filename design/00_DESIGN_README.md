@@ -1,7 +1,7 @@
 # Design package — Yemen Financial Inclusion Evidence · أدلة الشمول المالي في اليمن
 
-Status: **D3 in progress — the synthesis pages composed and proved; the Home cold-reader test run and acted on; D2 met at
-`9c263ac` and pending the owner's merge.** D1 was accepted by the
+Status: **D4 in progress — every document bound and asserted; D2 met at `9c263ac`, D3 at `beecdbb`, pending the owner's
+merge.** D1 was accepted by the
 owner's merge (`main` at `851f496078776356b38892c946d40d154c819067`, pull request #3). D2 is developed on
 `claude/epic-cori-60fpeb` (created from that exact `main`) and lands through one draft pull request
 (https://github.com/CausewayGrp/Financial-inclusion-/pull/4). At this commit every
@@ -13,7 +13,11 @@ browser suites, bilingual invariance and content parity pass on the reference si
 Measurement, Methodology, the eight trust pages and the bilingual 404 are composed, reviewed in both languages and asserted
 (`check_site.py --gate d3`: 168 renders, 84 smoke tests, 252 hard-state assertions, 18 degraded renders), and four fresh
 cold readers (EN/AR × 390/1440 px) read Home; their verbatim reports are in `evidence/d3/cold_read/`, the design corrections
-in DL-D3-001 and DL-D3-002, the content observations in `ESCALATIONS.md`. D2
+in DL-D3-001 and DL-D3-002, the content observations in `ESCALATIONS.md`. At D4 (same branch) every one of the 288
+documents is asserted on its own row: all 110 evidence records against their governed bundles and the three remaining
+domain answers against their contracts (`check_site.py --gate d4`: 904 renders, 452 smoke tests, 3,822 hard-state
+assertions), the neutral root entry, and the binding itself (`check_binding.py`: every RENDER and CONTRACT projection read,
+no REFERENCE or VIA_SPEC projection read, no copied content model). D2
 records: `04_PAGE_FAMILY_COMPOSITIONS.md`, `03_COMPONENT_CATALOG.md` (seeded), the decision log below (DL-D2-*),
 `design/evidence/d2/`. Not PUBLIC RELEASE READY.
 
@@ -158,7 +162,7 @@ to isolate in RTL and URLs); 15 routes whose Page Spec sections are split by lan
 | D1 | `claude/practical-cray-sr26c5` (planned `design/d1-theses`; process note in `ESCALATIONS.md`) | three theses on the trio (Home, `/evidence/CLM-003/`, `/readings/same-year-different-number/`), EN+AR, 390 & 1440; choose; then tokens, state grammar, shell, type proved at 320/390/640/1440 + keyboard | `01_FOUNDATIONS.md`, `02_TOKENS.json`, decision-log entries; trio rows `VERIFIED` |
 | D2 | `claude/epic-cori-60fpeb` (planned `design/d2-hard-families`; the branch this environment may push, as at D1) | Explore, 5 hard domains, Evidence index, §9.1 record set, Compare, `/data/` | each §9.2 case proved (`check_site.py`); ledger rows `VERIFIED` or gap explained — **met at this commit, pending the owner's merge** |
 | D3 | `claude/epic-cori-60fpeb` (continued on the D2 branch and pull request; process note in `ESCALATIONS.md`) | Readings index + all Readings, Measurement, Methodology, trust, report journey, 404; Home cold-reader test | same; cold-reader record — **met at this commit, pending the owner's merge** (`check_site.py --gate d3`; `evidence/d3/cold_read/`) |
-| D4 | `design/d4-binding` | all 288 documents via family rules | three suites pass on `design/reference/out/`; all rows ≥ `BUILT` |
+| D4 | `claude/epic-cori-60fpeb` (continued; process note in `ESCALATIONS.md`) | all 288 documents via family rules | three suites pass on `design/reference/out/`; all rows ≥ `BUILT` — **met at this commit, pending the owner's merge**: every route row `VERIFIED` (`check_site.py --gate d4`, `check_binding.py`) |
 | D5 | `design/d5-interaction-a11y` | every tool state and journey, keyboard, zoom, reduced motion, forced colours | `07_INTERACTION_ACCESSIBILITY.md` |
 | D6 | `design/d6-visuals-social-print` | visuals per contract, frames, social templates, print | contract-by-contract evidence |
 | D7 | `design/d7-acceptance` | last-10-percent audit, final handoff | checklist complete; Code recipient test |
@@ -609,3 +613,45 @@ not public release (REL-01…04 remain).
   `DESIGN_DEBT.md`: DEBT-014…016 opened, DEBT-002 and DEBT-007 advanced; `ESCALATIONS.md`: the cold-reader content
   observations raised, a process note on the branch; `09_CODE_HANDOFF.md`: state at D3; `04_PAGE_FAMILY_COMPOSITIONS.md`
   and `03_COMPONENT_CATALOG.md` updated; the four cold-reader reports kept verbatim under `evidence/d3/cold_read/`.
+
+### DL-D4-001 · D4 · 2026-09-27 · Every evidence record asserted from its own bundle
+- Problem: 102 records outside the §9.1 set were built by the family rule and never looked at; a route-by-route review of
+  880 renders would be theatre, and a hand-kept list of expectations would drift from the Master.
+- Chosen: the check reads each record's governed bundle as the build wrote it (`out/_bundle/<route>__<lang>.json`, the
+  same file `check_content.py` reads) and asserts what the page must show for that record: the seven questions; the
+  boundary on first load; the clock before the claim; as many source cards as the bundle has sources, with a public
+  locator on every one; the lineage statement with its state exactly when the bundle carries one; the members list with
+  the bundle's members exactly when it is a composite of objects; the no-locator and some-without-locator states exactly
+  when stated; a trace chip per source id; the Compare entry exactly when the record is comparable; the record's own
+  visual under the first answer exactly when it has one; the boundary printed once per frame; and that nothing looks
+  empty. 3,822 assertions pass over 880 record renders (`check_site.py --gate d4`), on top of the smoke test at 390 and
+  1440 px and the render conditions at four widths. One record per verification state outside the §9.1 set is kept as
+  evidence (`evidence/d4/`).
+- Rejected: a fixed list of expected values per route (drifts from the Master); sampling (the gate's exit is every row).
+
+### DL-D4-002 · D4 · 2026-09-27 · The three remaining domain answers
+- Problem: `/firms/`, `/finance/` and `/providers/` were built by the Domain Answer rule at D2 and not reviewed.
+- Chosen: reviewed in both languages at 390 and 1440 px and asserted from their bundles — the governed question before the
+  answer, the contract's band before the answers, the primary visual framed as its text frame (VIS-FIRM-CONSTRAINTS,
+  VIS-MFI-DIVERGENCE, VIS-PROVIDER-OBSERVABILITY: TABLE_TEXT_FIRST or SUPPORTING contracts without rows; D6), every
+  verification, measurement and Reading object bound, the depth in one disclosure, the governed related questions, and
+  the 24-event chronology on `/finance/` (JRN-09). The family rule stood; no route-specific composition was needed.
+- Rejected: drawing the three visuals at D4 (a visuals-gate decision; VIS-MFI-DIVERGENCE's rows are escalated).
+
+### DL-D4-003 · D4 · 2026-09-27 · The neutral root entry and the binding proved
+- Problem: the root entry and the "complete binding" claim had no check.
+- Chosen: `root_checks` in `check_site.py` (no inline script or style; both `hreflang` alternates and `x-default`; Arabic by
+  default; the stored edition kept) and `design/reference/check_binding.py`, which reads the inventory's projection roles
+  and proves that every RENDER and CONTRACT projection is read by the one content path (or shipped unchanged for the
+  runtime: the search index and aliases), that no REFERENCE or VIA_SPEC projection is read by any reference module, that
+  a STRUCTURE projection is read only for its ids and links, and that the built site holds 286 edition pages, the root,
+  the 404, one bundle per page and no copied content model. The one deviation it found — `public_claims.json` (VIA_SPEC)
+  loaded by the content path and never used — is removed.
+- Rejected: a bodied root page with authored edition links (no governed copy exists for it; the baseline's no-script
+  refresh to Arabic stands).
+
+### DL-D4-004 · D4 · 2026-09-27 · Records at D4
+- Chosen: `COVERAGE.csv` — 841 D4 rows `VERIFIED` (816 record rows, 24 domain rows, the root entry); every route row of
+  the ledger is now `VERIFIED`; the D5 (tool states, journeys) and D6 (visuals) rows remain. `DESIGN_DEBT.md`: DEBT-002
+  and DEBT-007 advanced. `09_CODE_HANDOFF.md`: state at D4. `04_PAGE_FAMILY_COMPOSITIONS.md`: the three answers and the
+  record assertion recorded. `evidence/d4/` (42 PNG).

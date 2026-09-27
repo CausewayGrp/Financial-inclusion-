@@ -44,7 +44,6 @@ class Content:
         self.readings = _load("content/readings.json")
         self.reading_sections = _load("content/reading_sections.json")
         self.evidence_objects = {o["object_id"]: o for o in _load("evidence/evidence_objects.json")}
-        self.claims = {c["claim_id"]: c for c in _load("evidence/public_claims.json")}
         self.sources = {s["source_id"]: s for s in _load("sources/source_reference_map.json")}
         self.closure = {(c["object_type"], c["object_id"]): c for c in _load("sources/public_object_source_closure.json")}
         self.visual_contracts = {v["visual_id"]: v for v in _load("visuals/visual_design_contracts.json")["visuals"]}

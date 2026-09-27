@@ -40,10 +40,28 @@ GATES["d3"] = ["/", "/readings/", "/readings/same-year-different-number/", "/rea
                "/readings/from-rail-to-result-missing-middle/", "/readings/gender-gap-measured-causes-open/", "/readings/microfinance-structural-divergence/",
                "/readings/reforms-newer-than-people-evidence/", "/measurement/", "/methodology/", "/about/", "/corrections/", "/rights/", "/accessibility/",
                "/privacy/", "/terms/", "/contact/"]
+GATES["d4"] = ["/firms/", "/finance/", "/providers/"]   # + every evidence record, read from the built site (record_routes)
 EVIDENCE_BY_GATE = {
     "d2": ["/explore/", "/people/", "/access/", "/payments/", "/remittances/", "/reforms/", "/evidence/", "/evidence/compare/", "/data/", "/evidence/CLM-004/", "/evidence/CLM-044/"],
     "d3": ["/", "/readings/", "/readings/after-transfer-persistence/", "/readings/banking-jump-measurement-basis/", "/measurement/", "/methodology/", "/about/", "/contact/", "/corrections/"],
+    # D4: the three remaining domain answers and one record per verification state outside the §9.1 set
+    "d4": ["/firms/", "/finance/", "/providers/", "/evidence/CLM-005/", "/evidence/CLM-046/", "/evidence/DS-FINDEX-HISTORY-CROSSWALK/", "/evidence/DS-DEMAND-VINTAGE-LENS/",
+           "/evidence/DS-QUAL-EVIDENCE/", "/evidence/VIS-PROVIDER-OBSERVABILITY/", "/evidence/VIS-FIRM-CONSTRAINTS/"],
 }
+SITE = ROOT / "design" / "reference" / "out"
+
+
+def record_routes(site: Path) -> list[str]:
+    """Every evidence record the site built, from its bundles (never a hand-kept list)."""
+    return sorted(f"/evidence/{f.name[len('evidence_'):-len('__en.json')]}/" for f in (site / "_bundle").glob("evidence_*__en.json")
+                  if f.name not in ("evidence__en.json", "evidence_compare__en.json"))
+
+
+def bundle(route: str, lang: str) -> dict | None:
+    """The page's governed bundle as the build wrote it (`check_content.py` reads the same files)."""
+    name = (route.strip("/").replace("/", "_") or "home") + f"__{lang}.json"
+    f = SITE / "_bundle" / name
+    return json.loads(f.read_text(encoding="utf-8"))["page"] if f.exists() else None
 EVIDENCE_ROUTES = EVIDENCE_BY_GATE["d2"]
 HOOKS_ALL = ["#main", "a.skip", "#primary-nav", "[data-search-open]", "[data-cite]", "[data-lang]", "[data-menu][aria-controls=primary-nav]",
              "#utility-status[role=status]", "dialog#search-dialog", "#global-search-dialog[data-search-input]", "[data-search-status]", "[data-search-results]",
@@ -156,6 +174,41 @@ def hard_state(pg, route: str, lang: str) -> dict:
         out["reading_linked_not_redrawn"] = q("figure[data-visual-id='RV-CWR-001']") == 0 and q("#readings a[href*='same-year-different-number']") >= 1
         out["ma001_apart"] = q("#measure .compact") == 1 and q("figure #measure") == 0
         out["cost_figure_rows"] = q("figure[data-visual-id='VIS-REMITTANCE-COST'] .lane") == 2 and q("figure[data-visual-id='VIS-REMITTANCE-COST'] svg.trk") == 4
+    if route.startswith("/evidence/") and route not in ("/evidence/", "/evidence/compare/"):   # every record (D4): the bundle says what the page must show
+        b = bundle(route, lang)
+        if b:
+            cs = b["closure_state"]; v = b.get("visual")
+            out["seven_questions"] = all(q(f"#q{i}") == 1 for i in range(1, 8))
+            out["boundary_first_load"] = q("#q5[data-evidence-boundary-first-load]") == 1
+            out["clock_before_claim"] = ev(JS_ORDER, [".head .clock", "h1#page-title"])
+            out["strip_named"] = q("nav.strip[aria-labelledby=page-title]") == 1
+            out["util_record"] = q(f"section.util[data-record-id='{b['id']}'] .evidence-cite-button[data-cite]") == 1
+            out["nothing_looks_empty"] = q("#main .empty") == 0 and q("#main [role=alert]:not([hidden])") == 0
+            out["source_cards_as_bundle"] = q("[data-evidence-source]") == len(b["sources"])
+            out["locators_public"] = ev("[...document.querySelectorAll('a.source-locator')].every(a=>/^https?:/.test(a.getAttribute('href')||''))")
+            out["lineage_state"] = (q(f".body [data-lineage-state='{cs}']") == 1) if b["lineage_statement"] else (q("[data-lineage-state]") == 0)
+            out["members_listed"] = (q("#q6 ul.rlist li a") == len(b["members"])) if b["members"] else (q("#q6 ul.rlist") == 0)
+            out["no_locator_state"] = (q(".body [data-evidence-source-unavailable]") == 1) == bool(b["no_source_message"])
+            out["some_without_locator"] = (q("[data-evidence-sources-without-locator]") == 1) == bool(b["sources_without_locator_note"])
+            out["trace_chips"] = (q(".chips .chip") == len(b["trace_ids"]) + 1) if b["trace_ids"] else (q(".chips") == 0)
+            out["compare_entry"] = (q("[data-compare-entry]") == 1) == bool(b.get("compare_href"))
+            out["own_visual"] = (q(f"#q1 figure.fig[data-visual-id='{v['id']}'][data-visual-fallback]") == 1) if (v and v.get("tier") != "RETIRE_FROM_DESIGN") else (q("#q1 figure.fig") == 0)
+            out["used_in_readings"] = (q("article.page-obj[data-used-in-readings]") == 1) == bool(b["used_in_readings"])
+            out["boundary_once_per_frame"] = ev("[...document.querySelectorAll('figure.fig')].every(f=>{const t=f.querySelector('.foot .b');if(!t)return false;const s=t.innerText.replace(/^[^:]*:\\s*/,'').slice(0,40);const c=f.cloneNode(true);c.querySelectorAll('.alt,figcaption').forEach(e=>e.remove());return c.textContent.split(s).length===2})")
+    if route in ("/firms/", "/finance/", "/providers/"):   # the remaining domain answers (D4): the contract's order and every bound object
+        b = bundle(route, lang)
+        if b:
+            out["question_then_answer"] = ev(JS_ORDER, [".head .q", "h1#page-title"])
+            out["band_before_primary"] = (ev(JS_ORDER, ["section.bnd", "section.qa"]) if b["band"] else True)
+            out["primary_visual_framed"] = (q(f"figure.fig[data-visual-id='{b['primary_visual']}'][data-visual-fallback]") == 1) if b["primary_visual"] else (q("figure.fig") == 0)
+            out["verify_objects"] = q("#verify .compact") == len(b["verify"])
+            out["all_records_disclosed"] = q("#verify details ul.rlist li") == len(b["all_records"])
+            out["readings_at_most_two"] = q("#readings .compact") == min(len(b["readings"]), 2)
+            out["measurement_objects"] = q("#measure .compact") == len(b["measurement"])
+            out["one_disclosure_for_depth"] = (q("#more details.more") == 1) if b["progressive"] else (q("#more") == 0)
+            out["related_governed"] = (q("#related li") == len(b["related"]["links"]) and q("#related p.small") == 1) if b["related"] else (q("#related") == 0)
+            if route == "/finance/":
+                out["chronology_bound"] = q("#chronology ol.chron li.compact") == len(b["chronology"]["items"])
     if route == "/evidence/CLM-004/":   # verification_sparse: a framing rule is not an error
         out["no_source_cards"] = q("[data-evidence-source]") == 0
         out["framing_statement_as_answer"] = q(".body [data-lineage-state='FRAMING_NO_FACT']") == 1
@@ -252,6 +305,22 @@ def not_found_checks(pg, base: str) -> dict:
     return out
 
 
+def root_checks(pg, base: str) -> dict:
+    """The neutral root entry (hreflang x-default): no inline script; with script it opens the edition chosen before, else
+    Arabic; without script the same fallback through the no-script refresh."""
+    out = {}
+    raw = pg.request.get(f"{base}/index.html").text()
+    out["no_inline_script"] = ("<script src=" in raw) and ("<script>" not in raw) and ("style=" not in raw)
+    out["hreflang_both"] = ('hreflang="en"' in raw) and ('hreflang="ar"' in raw) and ('hreflang="x-default"' in raw)
+    pg.goto(f"{base}/index.html", wait_until="load"); pg.wait_for_timeout(200)
+    out["arabic_by_default"] = pg.url.rstrip("/").endswith("/ar")
+    pg.evaluate("localStorage.setItem('yfie-lang','en')")
+    pg.goto(f"{base}/index.html", wait_until="load"); pg.wait_for_timeout(200)
+    out["chosen_edition_kept"] = pg.url.rstrip("/").endswith("/en")
+    pg.evaluate("localStorage.removeItem('yfie-lang')")
+    return out
+
+
 def serve(directory: Path):
     s = socket.socket(); s.bind(("127.0.0.1", 0)); port = s.getsockname()[1]; s.close()
 
@@ -270,9 +339,15 @@ def main() -> int:
     ap.add_argument("--shots", action="store_true")
     ap.add_argument("--degraded", action="store_true")
     ap.add_argument("--evidence", default="")
+    ap.add_argument("--only", default="", help="comma-separated substrings; keep only the gate's routes that contain one (a quick partial run, never a record)")
     args = ap.parse_args()
     site = Path(args.site)
-    routes = GATES[args.gate]
+    global SITE
+    SITE = site
+    routes = GATES[args.gate] + (record_routes(site) if args.gate == "d4" else [])
+    if args.only:
+        keys = [k for k in args.only.split(",") if k]
+        routes = [r for r in routes if any(k in r for k in keys)]
     if not (site / "en" / "index.html").exists():
         print(f"site not built: {site}"); return 2
     shots = site / "_review"
@@ -356,7 +431,8 @@ def main() -> int:
             deg = site / "_review" / "degraded"; deg.mkdir(parents=True, exist_ok=True)
             for lang in ("en", "ar"):
                 for r in {"d2": ["/payments/", "/remittances/", "/people/", "/reforms/", "/access/", "/evidence/compare/", "/data/", "/explore/", "/evidence/", "/evidence/CLM-004/"],
-                          "d3": ["/", "/readings/after-transfer-persistence/", "/readings/banking-jump-measurement-basis/", "/readings/", "/measurement/", "/methodology/", "/about/", "/contact/", "/corrections/"]}[args.gate]:
+                          "d3": ["/", "/readings/after-transfer-persistence/", "/readings/banking-jump-measurement-basis/", "/readings/", "/measurement/", "/methodology/", "/about/", "/contact/", "/corrections/"],
+                          "d4": ["/firms/", "/finance/", "/providers/", "/evidence/CLM-046/", "/evidence/VIS-PROVIDER-OBSERVABILITY/"]}[args.gate]:
                     tag = f"{(r.strip('/').replace('/', '_') or 'home')}-{lang}"
                     url = f"{base}/{lang}{r}"
                     ctx = b.new_context(viewport={"width": 794, "height": 1123}); pg = ctx.new_page()
@@ -382,9 +458,14 @@ def main() -> int:
                     rows.append({"width": "degraded", "lang": lang, "route": r, "ok": all(checks.values()), "degraded": checks})
                     if not all(checks.values()):
                         failures.append({"lang": lang, "route": r, "degraded_failed": [k for k, v in checks.items() if not v]})
-        if args.gate == "d3":
+        if args.gate in ("d3", "d4"):
             ctx = b.new_context(viewport={"width": 320, "height": 844}); pg = ctx.new_page()
             nf = not_found_checks(pg, base)
+            if args.gate == "d4":
+                rc = root_checks(pg, base)
+                rows.append({"width": "404", "lang": "neutral", "route": "/index.html", "ok": all(rc.values()), "hard_state": rc, "height": 0, "over": 0, "imgs": 0, "h1": 1, "dir": "-", "wide": [], "inline": 0, "unnamed": 0, "first_tab": "", "missing_hooks": [], "small_targets": []})
+                if not all(rc.values()):
+                    failures.append({"route": "/index.html", "root_failed": [k for k, v in rc.items() if not v]})
             rows.append({"width": "404", "lang": "ar+en", "route": "/404.html", "ok": all(nf.values()), "hard_state": nf, "height": 0, "over": 0, "imgs": 0, "h1": 1, "dir": "rtl", "wide": [], "inline": 0, "unnamed": 0, "first_tab": "", "missing_hooks": [], "small_targets": []})
             if not all(nf.values()):
                 failures.append({"route": "/404.html", "not_found_failed": [k for k, v in nf.items() if not v]})

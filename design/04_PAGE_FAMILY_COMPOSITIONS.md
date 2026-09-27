@@ -1,7 +1,6 @@
 # Page family compositions
 
-> STATUS: **D3 — every family composed and reviewed on its own rows (D1–D3); the remaining routes of the Domain Answer and
-> Evidence Record families are bound by their family's rules until D4.** Deterministic
+> STATUS: **D4 — every family composed and reviewed on its own rows; every document bound and asserted (D1–D4).** Deterministic
 > module order and composition rules for all eleven families, from the Page Spec and the two controlled contracts;
 > the first-screen contract per family; what may be disclosed later; next actions; head metadata. Written from the
 > reference implementation (`design/reference/yfie/families.py`, `render.py`), never from a picture. Families marked
@@ -46,7 +45,7 @@ voice) → "What the evidence cannot yet answer" (the bound priorities as compac
 needed, the decision it would strengthen) → "Go deeper" (the featured Reading, then the link to all Readings).
 First screen: the product's job and the first cluster. Lower intensity than Home; no cards, no pills, no imagery.
 
-### Domain Answer (8 routes; D2 proves `/people/`, `/access/`, `/payments/`, `/remittances/`, `/reforms/`)
+### Domain Answer (8 routes; D2 proves `/people/`, `/access/`, `/payments/`, `/remittances/`, `/reforms/`; D4 reviews `/firms/`, `/finance/`, `/providers/`)
 Order from `presentation_priority.json`: head (rubric "The question this page answers", the governed question as the
 framing line, `h1` = the answer, lead = section 1) → the governed reading rule as the head's fine print with the two
 governed actions (Explore questions; Open evidence → `primary_verify_destination`) → **the band**: the contract's
@@ -60,7 +59,11 @@ with the governed note that a link is not a causal claim) → "What measurement 
 three governed links, the disclosure of every bound record — JRN-03). Intensity varies with `presentation_family`: the
 sparse page (`/access/`) opens on two limits and one text frame; the dense page (`/people/`) opens on the bars; the
 admin page (`/payments/`) carries seven measurement objects first and the small multiple in depth; the transmission
-page (`/reforms/`) carries the chain beside the section on the payment-infrastructure reform.
+page (`/reforms/`) carries the chain beside the section on the payment-infrastructure reform. At D4 the three remaining
+answers were reviewed in both languages and asserted from their own bundles (the contract's band before the answers, the
+primary visual framed after its section, every verification, measurement and Reading object bound, the depth in one
+disclosure, the governed related questions, and on `/finance/` the 24-event chronology): the family rule stood without
+a route-specific composition (DL-D4-002).
 
 ### Evidence Directory `/evidence/` (D2)
 Head → **search** as the first answer (`#global-search`, its status and results regions, the Compare link) → section 1
@@ -70,14 +73,18 @@ evidence records, by question** (JRN-17): one disclosure per answer question wit
 title and its clock → next actions. 110 rows never become noise: they are grouped by the question they answer and each
 carries only its title and period.
 
-### Evidence Record (110; D2 proves the §9.1 set)
+### Evidence Record (110; D2 proves the §9.1 set; D4 asserts every record from its bundle)
 As at D1: head (crumb, rubric, clock, `h1`, lead) → the seven governed questions as `h2` answers in governed order,
 the strip after the first answer on narrow screens → the boundary as question 5 (parts A and B) → question 6: the
 source cards, or — for a framing rule, a composite or a partial record — the governed lineage statement **as the
 answer in the body voice**, never an empty or error state; the governed intro is printed unless the record is a
 framing rule with no source to open; a record without a public locator states so in the body voice → question 7 as a
 disclosure → the util block: reference, cite, **Compare** (the 13 comparable records), reuse, history, report. A `VIS-`
-record draws its own visual under the first answer: the record page is the visual's canonical route.
+record draws its own visual under the first answer: the record page is the visual's canonical route. At D4 every record
+is asserted against its own governed bundle (`check_site.py --gate d4`): the seven questions, the boundary on first load,
+the clock before the claim, the source cards equal to the bundle's sources with public locators only, the lineage state
+and members exactly where the bundle carries them, the no-locator and some-without-locator states where stated, the trace
+chips, the Compare entry, the own visual, and the boundary printed once per frame (DL-D4-001).
 
 ### Comparison `/evidence/compare/` (D2)
 Head (flow rubric, `h1`, lead) → **the tool** as the first answer: the governed intro as rubric, "Can these records
@@ -126,7 +133,8 @@ asserted on `/about/`; Methodology indexed and bound): the family rule stood.
 ### 404 and root
 The bilingual 404 in the shell's page object (Arabic first, every word governed, the search dialog and runtime only;
 asserted at 320 and 1440 px at D3); the neutral root entry redirects to the chosen edition (else Arabic) without inline
-script (D4 row).
+script — asserted at D4 (`root_checks`: no inline script or style, both `hreflang` alternates and `x-default`, Arabic by
+default, the stored choice kept).
 
 ## 3. Where a bound visual sits (DL-D2-003)
 
@@ -137,7 +145,9 @@ script (D4 row).
 | `/payments/` | VIS-PAYMENT-ANATOMY after primary 2 | VIS-E-MONEY-RULE-STACK beside section 6 | the POS small multiple (terminals, transactions, value) |
 | `/remittances/` | VIS-REMITTANCE-MACRO after primary 1 | VIS-REMITTANCE-COST beside section 5 | — |
 | `/reforms/` | none (contract) | VIS-FCP-REDRESS-PATH beside 3; VIS-PAYMENT-RAILS and VIS-TARGET-RESULT-STATE beside 6; VIS-OECD-FCP-TIMELINE beside 11 | — (VIS-CAPITAL-CONTEXT is never drawn) |
-| `/firms/`, `/finance/`, `/providers/` | the contract's visual | — | the remaining bound visuals (D4) |
+| `/firms/` | VIS-FIRM-CONSTRAINTS after its primary section (text frame) | — | — |
+| `/finance/` | VIS-MFI-DIVERGENCE after its primary section (text frame; rows requested at D2) | — | — |
+| `/providers/` | VIS-PROVIDER-OBSERVABILITY after its primary section (text frame) | — | — |
 
 A visual beside a progressive section goes to the depth group, never inside the disclosure.
 

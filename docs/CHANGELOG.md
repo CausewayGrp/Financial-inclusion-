@@ -1,6 +1,22 @@
 # Repository Change Log
 
-## 2026-09-27 — Design D3 (in progress): the synthesis pages composed and proved; the Home cold-reader test run and acted on
+## 2026-09-27 — Design D4 (in progress): every document bound and asserted; the binding proved
+
+Same branch and draft pull request (`claude/epic-cori-60fpeb`, https://github.com/CausewayGrp/Financial-inclusion-/pull/4;
+D3 met at `beecdbb`). Every evidence record is asserted against its own governed bundle — the seven questions, the
+boundary on first load, the clock before the claim, source cards equal to the bundle's sources with public locators
+only, the lineage state and members exactly where carried, the no-locator states, the trace chips, the Compare entry,
+the own visual, the boundary once per frame — and the three remaining domain answers (`/firms/`, `/finance/`,
+`/providers/`) against their contracts (`design/reference/check_site.py --gate d4`: 904 renders, 452 smoke tests, 3,822
+hard-state assertions, 10 degraded renders, all pass; the neutral root entry asserted). `design/reference/check_binding.py`
+proves the binding from the inventory's projection roles (every RENDER and CONTRACT projection read by the one content
+path; no REFERENCE or VIA_SPEC projection read; 286 edition pages + root + 404; no copied content model) and the one
+deviation it found — `public_claims.json` loaded and unused — is removed. Records: `design/COVERAGE.csv` (841 D4 rows
+`VERIFIED`; every route row of the ledger is now `VERIFIED`), decision log DL-D4-001…004, `design/09_CODE_HANDOFF.md`
+(state at D4), `design/04_PAGE_FAMILY_COMPOSITIONS.md`, `design/DESIGN_DEBT.md`, `design/evidence/d4/` (42 PNG). Not
+declared: DESIGN HANDOFF READY, PUBLIC RELEASE READY.
+
+## 2026-09-27 — Design D3 (met at `beecdbb`): the synthesis pages composed and proved; the Home cold-reader test run and acted on
 
 Same branch and draft pull request as D2 (`claude/epic-cori-60fpeb`, https://github.com/CausewayGrp/Financial-inclusion-/pull/4;
 D2 met at `9c263ac`, not yet merged — process note in `design/ESCALATIONS.md`). The Reading index, the ten Readings,

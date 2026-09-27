@@ -114,7 +114,7 @@ Recorded so no one fills these gaps silently. Source: brief §10, §12, §15.
 - D2 branch name (2026-09-27): D2 is developed and pushed on `claude/epic-cori-60fpeb`, created at the exact accepted
   `main` (`851f496`), instead of the `design/d2-hard-families` name planned at D0; the same convention as D1.
 
-- D3 on the D2 branch (2026-09-27): D2 was met at `9c263ac` but not yet merged when D3 began; the execution environment
-  may push only `claude/epic-cori-60fpeb`, so D3 continues on that branch and pull request #4 rather than on a branch cut
-  from an accepted `main`. Each gate's records name its own commit; the steward may split the history at landing if one
+- D3 and D4 on the D2 branch (2026-09-27): D2 was met at `9c263ac` but not yet merged when D3 began; the execution
+  environment may push only `claude/epic-cori-60fpeb`, so D3 (met at `beecdbb`) and D4 continue on that branch and pull
+  request #4 rather than on branches cut from an accepted `main`. Each gate's records name its own commit; the steward may split the history at landing if one
   gate per pull request matters. No design meaning attaches to the branch.

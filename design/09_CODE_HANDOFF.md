@@ -17,7 +17,16 @@ Contract: `handoff/DESIGN_TO_CODE_CONTRACT.md`. Updated at every gate end; never
 | Print / export | NOT STARTED | Downloads ship disabled until OWN-04 |
 | Reference implementation | DOES NOT EXIST | DEBT-002 |
 
-## State at D3 (in progress — updated at milestones, not back-filled; rows not listed are as at D2)
+## State at D4 (in progress — updated at milestones, not back-filled; rows not listed are as at D3)
+
+| Area | Status | Notes |
+|---|---|---|
+| Routes | ALL 288 VERIFIED on their rows | every evidence record asserted from its own governed bundle and the three remaining domain answers from their contracts (`check_site.py --gate d4`: 904 renders, 452 smoke tests, 3,822 hard-state assertions, 10 degraded renders); the neutral root entry asserted (`root_checks`); the D5 tool states and journeys and the D6 visuals remain |
+| Content bindings | PROVED | `design/reference/check_binding.py`: every RENDER and CONTRACT projection read by `yfie/content.py` (the search index and aliases shipped unchanged for the runtime); no REFERENCE or VIA_SPEC projection read anywhere in the reference; STRUCTURE read for ids and links only; 286 edition pages + root + 404, 286 bundles, no copied content model. `public_claims.json` (VIA_SPEC) is no longer loaded |
+| Checks | GATE d4 | `check_site.py --gate d4` (the three domain routes + every record from the built bundles; `--only` for a partial run, never a record); `check_binding.py` |
+| Evidence | COMMITTED | `design/evidence/d4/` (42 PNG: the three domain answers at 390 and 1440 px in both languages; one record per verification state outside the §9.1 set; the 404) |
+
+## State at D3 (met at `beecdbb` — the D4 table above supersedes the rows it repeats)
 
 | Area | Status | Notes |
 |---|---|---|
