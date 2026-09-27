@@ -1,5 +1,16 @@
 # Repository Change Log
 
+## 2026-09-27 — Design D0: orientation records landed
+
+Claude Design's D0 hand-back, landed by the steward on `design/d0-orientation` (base `6d954c1`) because the Design
+environment cannot write to the repository (its statement: `design/00_DESIGN_README.md` §7). Files, as delivered:
+`design/00_DESIGN_README.md` (authority, no supplied visual board, dependency map, D0 comprehension, plan D1–D7 with three
+named theses — Register, Argument, Layers — and the decision log DL-D0-001…003), `design/COVERAGE.csv` (1,389 rows, all
+`NOT_STARTED`, each with its planned gate), `design/DESIGN_DEBT.md`, `design/ESCALATIONS.md` (none raised),
+`design/09_CODE_HANDOFF.md`. Steward additions only: DEBT-001 closed with the gate evidence (direct Master and Page Specs
+hashes match; every `CONTRIBUTING.md` §5 gate green) and a confirmation of the start commit in the escalations' process
+notes. No file outside `design/` changed except the manifest and checksums.
+
 ## 2026-09-27 — Design-enablement control pass (directive D9)
 
 The last repository-control pass before Claude Design, on top of `937bf80` (post-F9 correction). Commit subject

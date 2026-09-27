@@ -29,6 +29,7 @@
   "CONTROLLED_CONTRACT": 2,
   "CURRENT_DOCUMENT": 10,
   "CURRENT_PROGRAMME_RECORD": 52,
+  "DESIGN_PACKAGE": 5,
   "GENERATED_DIAGRAMS": 9,
   "GENERATED_LITERAL_CLOSURE": 1,
   "GENERATED_PROJECTION": 37,
@@ -1246,6 +1247,26 @@
   {
    "path": "authority/Yemen_Financial_Inclusion_Evidence_Master.xlsx",
    "class": "AUTHORITY_MASTER"
+  },
+  {
+   "path": "design/00_DESIGN_README.md",
+   "class": "DESIGN_PACKAGE"
+  },
+  {
+   "path": "design/09_CODE_HANDOFF.md",
+   "class": "DESIGN_PACKAGE"
+  },
+  {
+   "path": "design/COVERAGE.csv",
+   "class": "DESIGN_PACKAGE"
+  },
+  {
+   "path": "design/DESIGN_DEBT.md",
+   "class": "DESIGN_PACKAGE"
+  },
+  {
+   "path": "design/ESCALATIONS.md",
+   "class": "DESIGN_PACKAGE"
   },
   {
    "path": "design/architecture/README.md",
