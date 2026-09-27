@@ -29,7 +29,7 @@
   "CONTROLLED_CONTRACT": 2,
   "CURRENT_DOCUMENT": 10,
   "CURRENT_PROGRAMME_RECORD": 52,
-  "DESIGN_PACKAGE": 210,
+  "DESIGN_PACKAGE": 242,
   "GENERATED_DIAGRAMS": 9,
   "GENERATED_LITERAL_CLOSURE": 1,
   "GENERATED_PROJECTION": 37,
@@ -1269,6 +1269,10 @@
    "class": "DESIGN_PACKAGE"
   },
   {
+   "path": "design/07_INTERACTION_ACCESSIBILITY.md",
+   "class": "DESIGN_PACKAGE"
+  },
+  {
    "path": "design/09_CODE_HANDOFF.md",
    "class": "DESIGN_PACKAGE"
   },
@@ -1969,6 +1973,126 @@
    "class": "DESIGN_PACKAGE"
   },
   {
+   "path": "design/evidence/d5/J01_FIRST_TIME_PUBLIC-ar-end.png",
+   "class": "DESIGN_PACKAGE"
+  },
+  {
+   "path": "design/evidence/d5/J01_FIRST_TIME_PUBLIC-en-end.png",
+   "class": "DESIGN_PACKAGE"
+  },
+  {
+   "path": "design/evidence/d5/J02_JOURNALIST_NUMBER_VERIFY-ar-end.png",
+   "class": "DESIGN_PACKAGE"
+  },
+  {
+   "path": "design/evidence/d5/J02_JOURNALIST_NUMBER_VERIFY-en-end.png",
+   "class": "DESIGN_PACKAGE"
+  },
+  {
+   "path": "design/evidence/d5/J03_JOURNALIST_READING_TO_EVIDENCE-ar-end.png",
+   "class": "DESIGN_PACKAGE"
+  },
+  {
+   "path": "design/evidence/d5/J03_JOURNALIST_READING_TO_EVIDENCE-en-end.png",
+   "class": "DESIGN_PACKAGE"
+  },
+  {
+   "path": "design/evidence/d5/J04_RESEARCHER_COMPARABILITY-ar-end.png",
+   "class": "DESIGN_PACKAGE"
+  },
+  {
+   "path": "design/evidence/d5/J04_RESEARCHER_COMPARABILITY-en-end.png",
+   "class": "DESIGN_PACKAGE"
+  },
+  {
+   "path": "design/evidence/d5/J05_REGULATOR_REFORM_CHAIN-ar-end.png",
+   "class": "DESIGN_PACKAGE"
+  },
+  {
+   "path": "design/evidence/d5/J05_REGULATOR_REFORM_CHAIN-en-end.png",
+   "class": "DESIGN_PACKAGE"
+  },
+  {
+   "path": "design/evidence/d5/J06_TECHNICAL_PAYMENTS-ar-end.png",
+   "class": "DESIGN_PACKAGE"
+  },
+  {
+   "path": "design/evidence/d5/J06_TECHNICAL_PAYMENTS-en-end.png",
+   "class": "DESIGN_PACKAGE"
+  },
+  {
+   "path": "design/evidence/d5/J07_PROVIDER_MARKET_SIGNAL-ar-end.png",
+   "class": "DESIGN_PACKAGE"
+  },
+  {
+   "path": "design/evidence/d5/J07_PROVIDER_MARKET_SIGNAL-en-end.png",
+   "class": "DESIGN_PACKAGE"
+  },
+  {
+   "path": "design/evidence/d5/J08_DEVELOPMENT_PARTNER-ar-end.png",
+   "class": "DESIGN_PACKAGE"
+  },
+  {
+   "path": "design/evidence/d5/J08_DEVELOPMENT_PARTNER-en-end.png",
+   "class": "DESIGN_PACKAGE"
+  },
+  {
+   "path": "design/evidence/d5/J09_HUMANITARIAN_FLOWS-ar-end.png",
+   "class": "DESIGN_PACKAGE"
+  },
+  {
+   "path": "design/evidence/d5/J09_HUMANITARIAN_FLOWS-en-end.png",
+   "class": "DESIGN_PACKAGE"
+  },
+  {
+   "path": "design/evidence/d5/J10_CHALLENGE_CORRECTION-ar-end.png",
+   "class": "DESIGN_PACKAGE"
+  },
+  {
+   "path": "design/evidence/d5/J10_CHALLENGE_CORRECTION-en-end.png",
+   "class": "DESIGN_PACKAGE"
+  },
+  {
+   "path": "design/evidence/d5/J11_REUSE_RIGHTS-ar-end.png",
+   "class": "DESIGN_PACKAGE"
+  },
+  {
+   "path": "design/evidence/d5/J11_REUSE_RIGHTS-en-end.png",
+   "class": "DESIGN_PACKAGE"
+  },
+  {
+   "path": "design/evidence/d5/J12_ACCESSIBILITY_REPORT-ar-end.png",
+   "class": "DESIGN_PACKAGE"
+  },
+  {
+   "path": "design/evidence/d5/J12_ACCESSIBILITY_REPORT-en-end.png",
+   "class": "DESIGN_PACKAGE"
+  },
+  {
+   "path": "design/evidence/d5/J13_PAYMENT_RAIL_EXPLAINER-ar-end.png",
+   "class": "DESIGN_PACKAGE"
+  },
+  {
+   "path": "design/evidence/d5/J13_PAYMENT_RAIL_EXPLAINER-en-end.png",
+   "class": "DESIGN_PACKAGE"
+  },
+  {
+   "path": "design/evidence/d5/state-compare_unknown_id-ar.png",
+   "class": "DESIGN_PACKAGE"
+  },
+  {
+   "path": "design/evidence/d5/state-compare_unknown_id-en.png",
+   "class": "DESIGN_PACKAGE"
+  },
+  {
+   "path": "design/evidence/d5/state-record_context_unknown-ar.png",
+   "class": "DESIGN_PACKAGE"
+  },
+  {
+   "path": "design/evidence/d5/state-record_context_unknown-en.png",
+   "class": "DESIGN_PACKAGE"
+  },
+  {
    "path": "design/exploration/d1_canvas/LENS_BRIEF.md",
    "class": "DESIGN_PACKAGE"
   },
@@ -2082,6 +2206,10 @@
   },
   {
    "path": "design/reference/check_content.py",
+   "class": "DESIGN_PACKAGE"
+  },
+  {
+   "path": "design/reference/check_journeys.py",
    "class": "DESIGN_PACKAGE"
   },
   {

@@ -22,6 +22,7 @@
 | Spine `aside.spine` (index + edges) and strip `nav.strip` | the page's own headings; governed edge headings | side (≥ 900 px, sticky, capped) · foot (< 900 px) · strip on the Record | exactly one visible | hairline on the reading-end side | `nav.index[aria-labelledby=page-title]`; each `nav.edges[aria-labelledby]` its `h3`; rows ≥ 40 px | rules only | — | — |
 | Product bar, search dialog, institutional band | navigation contract labels; `UI-HEADER-*`, `UI-SEARCH-*`, `UI-FOOTER-*` | menu open/closed (< 900 px), dialog open/closed | as D1 | mirrored | hooks of brief §19 unchanged; dialog labelled by its title | — | — | trust links lead the band |
 | Next actions `nav.actions` | `route_next_actions`, `UI-NEXT-*` | — | wrap | — | labelled by its `h2` | — | — | — |
+| Technical state (D5): `.compare-url-error`, `[data-compare-verdict=same-record]`, `.search-status` with content, `[data-search-empty]`, `[data-source-no-results]`, `[data-correction-error]`, `.noscript` | the runtime's governed `UI-JS-*` messages; `UI-HEADER-NOSCRIPT` | announced (`role=alert` or `status`) | full width of its tool | mirrored | announced through the live region the runtime already owns | **a dashed hairline**, body ink — never the boundary's double rule, the counter colour or the plaster surface (`07_INTERACTION_ACCESSIBILITY.md` §1) | — | the governed message; navigation and the evidence around it |
 
 ## 2. The figure object `figure.fig` (every visual, every tier)
 

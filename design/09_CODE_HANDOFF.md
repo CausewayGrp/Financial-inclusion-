@@ -17,7 +17,18 @@ Contract: `handoff/DESIGN_TO_CODE_CONTRACT.md`. Updated at every gate end; never
 | Print / export | NOT STARTED | Downloads ship disabled until OWN-04 |
 | Reference implementation | DOES NOT EXIST | DEBT-002 |
 
-## State at D4 (in progress — updated at milestones, not back-filled; rows not listed are as at D3)
+## State at D5 (in progress — updated at milestones, not back-filled; rows not listed are as at D4)
+
+| Area | Status | Notes |
+|---|---|---|
+| Interaction and accessibility | RECORDED AND ASSERTED | `07_INTERACTION_ACCESSIBILITY.md`: the three voices (body, boundary, technical), keyboard paths, motion, zoom, forced colours, no script, print, every technical state, the thirteen journeys, the two unbound verification states |
+| Technical voice | IMPLEMENTED | `theme.CSS_D2` (D5 block): `.compare-url-error`, `[data-compare-verdict=same-record]`, `.search-results .empty`, `[data-search-empty]`, `[data-source-no-results]`, `.search-status:not(:empty)`, `[data-correction-error]:not([hidden])`, `.noscript` — a dashed hairline, `--ink-2`; the same-record state loses the double rule and the counter colour. Runtime untouched |
+| Journeys | 52/52 BY KEYBOARD | `design/reference/check_journeys.py` (13 journeys × EN/AR × 390/1440 px): focus-and-Enter on a link the page offers, landing assertions per route family; per-step record in `out/_review_journeys.json` |
+| Technical states | 28/28 DRIVEN | the same tool: Compare (wrong count, unknown id, malformed, duplicate, a real record outside the set), search (no match, index unavailable), sources (unknown deep link, filter no match), record context (unknown, malformed, valid), language switch with state, no script; the 404 by `check_site.py` |
+| Evidence | COMMITTED | `design/evidence/d5/` (journey end screens at 1440 px in both languages; technical-state screens) |
+| Temporary vs intended | RECORDED | Temporary: the foot spine's index on phones (DEBT-014, narrowed: its edges are the phone's verification path, proved by the journeys); the external-link cue (escalated). Intended: everything else on this table |
+
+## State at D4 (met at `aee1e1b` — the D5 table above supersedes the rows it repeats)
 
 | Area | Status | Notes |
 |---|---|---|

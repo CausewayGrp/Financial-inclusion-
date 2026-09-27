@@ -74,6 +74,13 @@ none blocks the gate. Where the reader's words are quoted they are the reader's,
 - `ESCALATE_TO_MASTER (observation) — Home label UI "side" ("This resource presents the strongest defensible answer …") —
   two readers read it as a self-assessment they cannot test; it renders in the spine's flow group, as governed.`
 
+Raised at D5 (27 September 2026), needed by the interaction design:
+
+- `NEEDS_CONTROLLED_CONTENT — every external source link (\`a.source-locator\`, \`target="_blank"\` on the record, the
+  Reading and the register) — an accessible cue that the link opens the original in a new window — anticipated at D0
+  (brief §10); the D5 keyboard walks reach these links without any cue, and Design authors none. Design impact: a governed
+  phrase rendered visually hidden inside the link (or visibly after it) on every external locator.`
+
 ## Closed at D2 (27 September 2026) — resolved by an authority the repository already holds
 
 - Arabic credit line (`NEEDS_CONTROLLED_CONTENT — RV-CWR-001 and every visual contract with a credit`): the contract
@@ -91,7 +98,6 @@ none blocks the gate. Where the reader's words are quoted they are the reader's,
 
 Recorded so no one fills these gaps silently. Source: brief §10, §12, §15.
 
-- External-link accessible cue for original sources (brief §10).
 - Result-type facet labels exist (`UI-JS-TYPE-*`); a domain facet needs a governed domain field on search records.
 - "Type not recorded" group label for the 9 displayed sources without `document_label` (`/data/`, EAD-07).
 - Evidence-workbench facet headings/values (verification state, domain), if a facet is designed.

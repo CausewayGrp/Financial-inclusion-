@@ -1,6 +1,23 @@
 # Repository Change Log
 
-## 2026-09-27 — Design D4 (in progress): every document bound and asserted; the binding proved
+## 2026-09-27 — Design D5 (in progress): every tool state, technical state and journey proved by keyboard; the technical voice
+
+Same branch and draft pull request (`claude/epic-cori-60fpeb`, https://github.com/CausewayGrp/Financial-inclusion-/pull/4;
+D4 met at `aee1e1b`). `design/reference/check_journeys.py` walks the inventory's thirteen journeys by keyboard at 390 and
+1440 px in English and Arabic (52 of 52 walks: a link the page offers takes focus, shows the outline, activates with
+Enter; each landing asserted against the journey's success condition) and drives every technical state in both
+languages (28 of 28: Compare's link errors and the same-record state, search no-match and index-unavailable, the
+register's unknown deep link and no-match, record-context unknown/malformed/valid, the language switch with state, no
+script). A third voice is designed for technical states — a dashed hairline, body ink, never the boundary's double rule,
+the counter colour or an evidence-gap object (DL-D5-001) — and the same-record state no longer reads as an assessment.
+`design/07_INTERACTION_ACCESSIBILITY.md` records the three voices, the keyboard paths, motion, zoom, forced colours, no
+script and print, every technical state and journey, and the two verification states no record carries today (designed
+with their governed copy, never on an invented record). Records: `design/COVERAGE.csv` (82 D5 rows `VERIFIED`, 4
+`DESIGNED`), DL-D5-001…004, `design/03_COMPONENT_CATALOG.md`, `design/09_CODE_HANDOFF.md` (state at D5),
+`design/DESIGN_DEBT.md` (DEBT-014 narrowed), `design/ESCALATIONS.md` (the external-link cue raised),
+`design/evidence/d5/`. Runtime untouched. Not declared: DESIGN HANDOFF READY, PUBLIC RELEASE READY.
+
+## 2026-09-27 — Design D4 (met at `aee1e1b`): every document bound and asserted; the binding proved
 
 Same branch and draft pull request (`claude/epic-cori-60fpeb`, https://github.com/CausewayGrp/Financial-inclusion-/pull/4;
 D3 met at `beecdbb`). Every evidence record is asserted against its own governed bundle — the seven questions, the

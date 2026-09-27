@@ -1,7 +1,7 @@
 # Design package — Yemen Financial Inclusion Evidence · أدلة الشمول المالي في اليمن
 
-Status: **D4 in progress — every document bound and asserted; D2 met at `9c263ac`, D3 at `beecdbb`, pending the owner's
-merge.** D1 was accepted by the
+Status: **D5 in progress — every tool state, technical state and journey proved by keyboard in both languages; D2 met at
+`9c263ac`, D3 at `beecdbb`, D4 at `aee1e1b`, pending the owner's merge.** D1 was accepted by the
 owner's merge (`main` at `851f496078776356b38892c946d40d154c819067`, pull request #3). D2 is developed on
 `claude/epic-cori-60fpeb` (created from that exact `main`) and lands through one draft pull request
 (https://github.com/CausewayGrp/Financial-inclusion-/pull/4). At this commit every
@@ -17,7 +17,9 @@ in DL-D3-001 and DL-D3-002, the content observations in `ESCALATIONS.md`. At D4 
 documents is asserted on its own row: all 110 evidence records against their governed bundles and the three remaining
 domain answers against their contracts (`check_site.py --gate d4`: 904 renders, 452 smoke tests, 3,822 hard-state
 assertions), the neutral root entry, and the binding itself (`check_binding.py`: every RENDER and CONTRACT projection read,
-no REFERENCE or VIA_SPEC projection read, no copied content model). D2
+no REFERENCE or VIA_SPEC projection read, no copied content model). At D5 (same branch) the thirteen journeys are walked
+by keyboard at 390 and 1440 px in both languages and every technical state is driven and rendered in a third, technical
+voice (`check_journeys.py`: 52 walks, 28 state drives; `07_INTERACTION_ACCESSIBILITY.md`). D2
 records: `04_PAGE_FAMILY_COMPOSITIONS.md`, `03_COMPONENT_CATALOG.md` (seeded), the decision log below (DL-D2-*),
 `design/evidence/d2/`. Not PUBLIC RELEASE READY.
 
@@ -163,7 +165,7 @@ to isolate in RTL and URLs); 15 routes whose Page Spec sections are split by lan
 | D2 | `claude/epic-cori-60fpeb` (planned `design/d2-hard-families`; the branch this environment may push, as at D1) | Explore, 5 hard domains, Evidence index, §9.1 record set, Compare, `/data/` | each §9.2 case proved (`check_site.py`); ledger rows `VERIFIED` or gap explained — **met at this commit, pending the owner's merge** |
 | D3 | `claude/epic-cori-60fpeb` (continued on the D2 branch and pull request; process note in `ESCALATIONS.md`) | Readings index + all Readings, Measurement, Methodology, trust, report journey, 404; Home cold-reader test | same; cold-reader record — **met at this commit, pending the owner's merge** (`check_site.py --gate d3`; `evidence/d3/cold_read/`) |
 | D4 | `claude/epic-cori-60fpeb` (continued; process note in `ESCALATIONS.md`) | all 288 documents via family rules | three suites pass on `design/reference/out/`; all rows ≥ `BUILT` — **met at this commit, pending the owner's merge**: every route row `VERIFIED` (`check_site.py --gate d4`, `check_binding.py`) |
-| D5 | `design/d5-interaction-a11y` | every tool state and journey, keyboard, zoom, reduced motion, forced colours | `07_INTERACTION_ACCESSIBILITY.md` |
+| D5 | `claude/epic-cori-60fpeb` (continued; process note in `ESCALATIONS.md`) | every tool state and journey, keyboard, zoom, reduced motion, forced colours | `07_INTERACTION_ACCESSIBILITY.md` — **met at this commit, pending the owner's merge** (`check_journeys.py`; D5 rows `VERIFIED`, the two unbound verification states `DESIGNED`) |
 | D6 | `design/d6-visuals-social-print` | visuals per contract, frames, social templates, print | contract-by-contract evidence |
 | D7 | `design/d7-acceptance` | last-10-percent audit, final handoff | checklist complete; Code recipient test |
 
@@ -655,3 +657,47 @@ not public release (REL-01…04 remain).
   the ledger is now `VERIFIED`; the D5 (tool states, journeys) and D6 (visuals) rows remain. `DESIGN_DEBT.md`: DEBT-002
   and DEBT-007 advanced. `09_CODE_HANDOFF.md`: state at D4. `04_PAGE_FAMILY_COMPOSITIONS.md`: the three answers and the
   record assertion recorded. `evidence/d4/` (42 PNG).
+
+### DL-D5-001 · D5 · 2026-09-27 · The technical voice
+- Problem: the runtime's technical states (Compare link errors, the same-record state, search and register statuses and
+  no-match states, record-context link errors, the no-script note) rendered in the body voice or, for the same-record
+  state, in the boundary voice — a technical failure could read as a statement about the evidence, and the same-record
+  state as an assessment.
+- Chosen: a third voice with one non-colour signal — a dashed hairline above the message, body ink (`--ink-2`), the
+  governed title where the runtime writes one — never the double rule, the counter colour or the plaster surface, and
+  never inside a boundary section or an evidence-gap object. Applied to every hook the runtime writes into
+  (`03_COMPONENT_CATALOG.md` §1, technical state). `check_journeys.py` drives all fourteen runtime states in both
+  languages and asserts the announcement (alert or status), the dashed rule, the absence of a verdict where none is due,
+  and that navigation keeps working; the same-record state is asserted to be the only `[data-compare-verdict]` value.
+- Rejected: an icon or a colour for "technical" (colour never carries meaning alone; no icon vocabulary exists); hiding
+  the states (the runtime's behaviour is the baseline's and is proved by `test_public_tools.py`).
+
+### DL-D5-002 · D5 · 2026-09-27 · The thirteen journeys walked by keyboard
+- Problem: the acceptance criterion — the thirteen journeys succeed by keyboard, on mobile and desktop, in both
+  languages — had no proof on the rendered product.
+- Chosen: `check_journeys.py` walks each journey of the inventory at 390 and 1440 px in English and Arabic: from every
+  page of the path a link the page itself offers (in the page object, the spine, the product bar or the footer — the
+  first one visible at that width) takes keyboard focus, shows the focus outline, sits in the viewport and activates with
+  Enter; on a phone a primary-nav link is reached by opening the menu with the keyboard first; every landing is asserted
+  against the journey's success condition (`07_INTERACTION_ACCESSIBILITY.md` §5). 52 of 52 walks pass. Two walks failed
+  on the first run because the checker followed a hidden side-spine link on a phone; the product offered the same link
+  in the foot spine, which is the phone's verification path — the checker was corrected, the product was not.
+- Rejected: a tab-through of every page (hundreds of links on `/data/`; a focus-and-Enter on the offered link proves the
+  same reachability); scripting the journeys through the URL bar (that proves nothing about the product).
+
+### DL-D5-003 · D5 · 2026-09-27 · Motion, zoom, forced colours, no script, and the two unbound verification states
+- Chosen: recorded in `07_INTERACTION_ACCESSIBILITY.md` §3 as proved by the existing checks (the 320 px renders stand for
+  400 % zoom of a 1280 px window; the forced-colours and no-stylesheet renders of every gate; reduced motion removes
+  every transition, and no state depends on motion); the no-script note in the technical voice on every page, with the
+  evidence readable (asserted). `SOURCE_NOT_YET_BOUND` and `NO_SOURCE_RECORD`, which no record carries today, are designed
+  as states of the record's question 6 with their governed copy (`UI-EVID-UNBOUND`, `UI-EVID-THIS-RECORD-CURRENTLY-HAS-NO`)
+  in the body voice; the content path carries both branches; nothing is rendered on an invented record (ledger rows
+  `DESIGNED`).
+- Rejected: an authored "(opens in a new window)" cue on external source links — governed copy, raised in
+  `ESCALATIONS.md` (anticipated at D0, needed now).
+
+### DL-D5-004 · D5 · 2026-09-27 · Records at D5
+- Chosen: `COVERAGE.csv` — 82 D5 rows `VERIFIED` (52 journeys, 30 technical states), 4 `DESIGNED` (the two unbound
+  verification states); `07_INTERACTION_ACCESSIBILITY.md` written; `03_COMPONENT_CATALOG.md` technical state;
+  `09_CODE_HANDOFF.md` state at D5; `DESIGN_DEBT.md` DEBT-014 narrowed; `ESCALATIONS.md` the external-link cue raised;
+  `evidence/d5/` (journey end screens, technical-state screens).

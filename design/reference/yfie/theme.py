@@ -463,4 +463,11 @@ svg.ts .lbl.alt{display:block}
 .head .actions{margin-top:14px}
 .fig-text .alt-body{margin-top:8px;border-top:0;padding-top:0}.fig-text .alt-body .body{font-size:var(--fs-body);line-height:var(--lh-body)}
 @media (max-width:599px){.head .rubric.product{display:none}}
+
+/* D5 — the technical voice: a dashed hairline, body ink, never the boundary's double rule or counter colour, never the
+   plaster surface; used by every announced status, technical error and the no-script note (technical ≠ evidence) */
+.compare-url-error,.search-results .empty,[data-search-empty],[data-source-no-results],.search-status:not(:empty),[data-correction-error]:not([hidden]),.noscript{border-top:1px dashed var(--rule-2);padding-top:8px;color:var(--ink-2)}
+.compare-url-error{border-top-style:dashed}.noscript{background:var(--paper);border-top-style:dashed}
+[data-compare-verdict=same-record]{border-top:1px dashed var(--rule-2);color:var(--ink-2)}[data-compare-verdict=same-record] h3,[data-compare-verdict=same-record] .eyebrow{color:var(--ink)}
+.search-status:not(:empty){margin-top:6px}
 """
