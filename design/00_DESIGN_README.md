@@ -4,7 +4,8 @@ Status: **D1 in progress — four design propositions (T1 Register, T2 Argument,
 Instrument) exist on the Claude Design canvas with the governed trio content in English and Arabic; no thesis chosen, no
 Design Intent Lock, no design system published, no reference renderer.** D0 accepted on `main` at
 `8bf19efad7505792ca22e0a3bda1db31fb85d33c`. D1 is developed on `claude/practical-cray-sr26c5` (process note in
-`ESCALATIONS.md`) and lands through one pull request into `main`. D1 records: `01_FOUNDATIONS.md` (hypotheses,
+`ESCALATIONS.md`) and lands through one draft pull request into `main`
+(https://github.com/CausewayGrp/Financial-inclusion-/pull/3). D1 records: `01_FOUNDATIONS.md` (hypotheses,
 exploration protocol, benchmark result, process notes, critique; comparison, Lock and grammar when reached), the decision
 log below (DL-D1-*), `design/reference/` (the neutral harness and the one content path every renderer uses) and
 `design/exploration/d1_canvas/` (the composers that regenerate the canvas propositions). Not PUBLIC RELEASE READY.
