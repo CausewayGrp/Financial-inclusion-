@@ -1,5 +1,86 @@
 # Repository Change Log
 
+## 2026-09-27 — Design D1 hand-back: second independent pass; residuals closed; verdict recorded
+
+Same branch and pull request; the D1 hand-back is posted on the pull request. A second, fresh repository-only reviewer
+confirmed every MUST-FIX of the final review closed and returned "D1 DESIGN COMPLETE — OWNER MERGE REQUIRED"
+(`design/exploration/d1_canvas/review/second_pass.md`; `design/01_FOUNDATIONS.md` §6; DL-D1-008). Its residuals are
+closed here: the eight verified grammar rows' note field repaired in `design/COVERAGE.csv`; no empty "Source:" line on
+a figure without a credit; a round tick step derived once from the data (0 / 2,000 / 4,000 / 6,000); the 320 px table
+measurement corrected to 23–80 px (DEBT-010, `01_FOUNDATIONS.md` §2.5, §3.4, §4.4); the lens reports' path corrected;
+three overstated sentences corrected (what the checks cover; a selector that matched nothing; the attribution of the
+text and degraded checks in README); 24 px hit areas on every non-inline link and button in `main`, asserted by
+`check_trio.py` together with a forced-colours emulation; the foot spine's edges kept in print; PNG evidence
+regenerated. README current-state row updated. No governed content changed; D1 exit is the owner's merge decision.
+
+## 2026-09-27 — Design D1: independent final review adjudicated; corrections; evidence committed
+
+Same branch and pull request. A repository-only final review (`design/exploration/d1_canvas/review/final_review.md`)
+returned NOT ACCEPTED with eight MUST-FIX items; all are closed and re-verified (`design/01_FOUNDATIONS.md` §6, §4.4;
+decision DL-D1-008): the Home system visual renders through its contract frame (boundary, scope, credit, link); one
+verification spine at any width with the index at the foot on phones; readable fallback tables at 320 px; forced
+colours keep chart text; the record's disclosure content prints; the F6 attributes the validator requires are
+carried; every governed kicker, label and gloss the baseline prints is rendered and `check_content.py --text` proves
+text-block parity; `02_TOKENS.json` is generated and checked by `design/reference/tokens.py`; `check_trio.py` gains a
+keyboard-only path, degraded-state checks and the committed PNG evidence (`design/evidence/d1/`, 18 files); records
+corrected (`01_FOUNDATIONS.md` status and stub, `09_CODE_HANDOFF.md` rows, DEBT-003 closed, DEBT-010 re-measured,
+grammar-state ledger rows reconciled); the nine lens reports and the review committed. Two items recorded rather
+than changed (Home section order for steward confirmation; navigation without JavaScript below 900 px). No governed
+content changed.
+
+## 2026-09-27 — Design D1 (in progress): reference implementation of the stress trio; Design Intent Lock; tokens
+
+Same branch and pull request. `design/reference/yfie/render.py` (composition of the converged direction with every
+brief §19 hook), `theme.py` (the one stylesheet, extracted once from the converged composer; print, focus, reduced
+motion and forced colours included) and `visuals.py` (RV-CWR-001 drawn with percentage coordinates, no inline style)
+render Home, `/evidence/CLM-003/` and `/readings/same-year-different-number/` in both languages; `check_trio.py`
+applies the viewport suite's conditions, the hooks and an interaction smoke test with the baseline runtime (24 renders,
+12 smoke tests, all pass); content parity and bilingual invariance pass; `check_content.py` now excludes axis tick
+labels. The rendered pages were placed on the canvas as row R beside T4 for the drift review — no drift
+(`design/01_FOUNDATIONS.md` §4.4). Written from what renders: the Design Intent Lock (§4: MUST PRESERVE / MAY IMPLEMENT
+DIFFERENTLY / MUST ESCALATE), the foundational grammar (§5) and `design/02_TOKENS.json`. Records: decision DL-D1-007,
+`COVERAGE.csv` (28 stress-trio rows `VERIFIED`, `code_handoff` YES), `DESIGN_DEBT.md` (DEBT-002 updated; DEBT-009,
+DEBT-010 opened), `09_CODE_HANDOFF.md` (implementation, print, runtime, temporary vs intended). No governed content
+changed. Not yet: the independent final D1 review; D1 is not exited.
+
+## 2026-09-27 — Design D1 (in progress): convergence on T4 · Instrument after the nine-lens critique
+
+Same branch and pull request. Nine independent critique lenses (evidence researcher, Arabic/RTL director,
+accessibility, data visualisation, frontend architect, product-design critic, journalist, source institution,
+informed Yemeni reader) reviewed the same renders of T1–T4 under one brief (`design/exploration/d1_canvas/LENS_BRIEF.md`);
+their findings, the adjudication, the corrections applied to T4 (composer and canvas version 5), the adversarial
+tests and the convergence decision are in `design/01_FOUNDATIONS.md` §3 and decision DL-D1-006
+(`design/00_DESIGN_README.md`). T4 converges as the D1 direction on two rendered behaviours (a same-year restatement
+that cannot read as a fall; a number never met without its clock and bound). Records: `DESIGN_DEBT.md` (DEBT-005
+closed; DEBT-006…008 opened), `ESCALATIONS.md` (four D1 items raised: Arabic credit line, Home pacing marker, IMF lane
+state question, in-page navigation label), `COVERAGE.csv` (28 stress-trio rows `DESIGNED`; nothing `BUILT`),
+`09_CODE_HANDOFF.md` (D1 implications). No governed content changed; one shared renderer formatting fault
+("6245" without a separator in fallback tables) fixed in the composers. Still to come in D1: the Design Intent Lock,
+`02_TOKENS.json`, the reference implementation of the trio, the Design and independent reviews.
+
+## 2026-09-27 — Design D1 (in progress): thesis exploration recorded — neutral harness, four canvas propositions
+
+First D1 milestone on `claude/practical-cray-sr26c5` (base `8bf19ef`, D0 accepted; the branch name is a process note
+in `design/ESCALATIONS.md`). Nothing outside `design/` changed except this changelog, one row in the README status
+table, one ignored output folder in `.gitignore`, the manifest and checksums; Master `17db032b…`, Page Specs
+`d4574804…`, projections, contracts and `dist/` unchanged. Added: `design/01_FOUNDATIONS.md` (the baseline critique,
+thesis hypotheses T1 Register / T2 Argument / T3 Strata and the second-generation T4 Instrument, the exploration
+protocol, the benchmark result — every product site NOT INSPECTED — the sequencing process note, the designer's own
+critique; comparison, Lock and grammar not yet written); `design/reference/` (the one content path from
+`site-src/content/**`, an unstyled harness with every brief §19 hook, a content-parity check against `dist/`);
+`design/exploration/d1_canvas/` (the composers that regenerate the four propositions on the Claude Design canvas from
+the harness bundle; outputs git-ignored). Updated: decision log DL-D1-001…005, `DESIGN_DEBT.md` (DEBT-003…005),
+`COVERAGE.csv` (the 28 stress-trio rows `REVIEWED` with evidence; nothing beyond `REVIEWED`), `09_CODE_HANDOFF.md`
+(state at D1). No thesis chosen, no Design Intent Lock, no design system; not PUBLIC RELEASE READY. Gates run for this
+commit: `checksums.py --check`, `generate_projections.py --check`, `validate.py`, `repository_manifest.py --check`,
+`design/reference/check_content.py`; the browser suites run in CI against `dist/`, which did not change.
+
+Same day, later push: T4 revised after a native-size inspection at 320–1440 px in both languages (four design defects
+fixed — the illegible signature panel, the 900–1200 px grid, the mobile question strip, dropped SVG value labels —
+recorded in `design/01_FOUNDATIONS.md` §2.5); inspection, tiling and crop tooling added under
+`design/exploration/d1_canvas/`; a paper scaling test of the candidate grammar against the fixed sitemap (§2.6). No
+thesis chosen; the lens critique is the next step.
+
 ## 2026-09-27 — Design D0: steward verification recorded in the Design README
 
 `design/00_DESIGN_README.md` still read "awaiting steward landing" and left direct authority verification to the

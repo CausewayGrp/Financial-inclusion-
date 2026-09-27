@@ -29,7 +29,7 @@
   "CONTROLLED_CONTRACT": 2,
   "CURRENT_DOCUMENT": 10,
   "CURRENT_PROGRAMME_RECORD": 52,
-  "DESIGN_PACKAGE": 5,
+  "DESIGN_PACKAGE": 61,
   "GENERATED_DIAGRAMS": 9,
   "GENERATED_LITERAL_CLOSURE": 1,
   "GENERATED_PROJECTION": 37,
@@ -1253,6 +1253,14 @@
    "class": "DESIGN_PACKAGE"
   },
   {
+   "path": "design/01_FOUNDATIONS.md",
+   "class": "DESIGN_PACKAGE"
+  },
+  {
+   "path": "design/02_TOKENS.json",
+   "class": "DESIGN_PACKAGE"
+  },
+  {
    "path": "design/09_CODE_HANDOFF.md",
    "class": "DESIGN_PACKAGE"
   },
@@ -1303,6 +1311,222 @@
   {
    "path": "design/architecture/YFIE_PUBLIC_SITE_MAP.svg",
    "class": "GENERATED_DIAGRAMS"
+  },
+  {
+   "path": "design/evidence/d1/evidence_CLM-003-ar-1440.png",
+   "class": "DESIGN_PACKAGE"
+  },
+  {
+   "path": "design/evidence/d1/evidence_CLM-003-ar-390.png",
+   "class": "DESIGN_PACKAGE"
+  },
+  {
+   "path": "design/evidence/d1/evidence_CLM-003-ar-print.png",
+   "class": "DESIGN_PACKAGE"
+  },
+  {
+   "path": "design/evidence/d1/evidence_CLM-003-en-1440.png",
+   "class": "DESIGN_PACKAGE"
+  },
+  {
+   "path": "design/evidence/d1/evidence_CLM-003-en-390.png",
+   "class": "DESIGN_PACKAGE"
+  },
+  {
+   "path": "design/evidence/d1/evidence_CLM-003-en-print.png",
+   "class": "DESIGN_PACKAGE"
+  },
+  {
+   "path": "design/evidence/d1/home-ar-1440.png",
+   "class": "DESIGN_PACKAGE"
+  },
+  {
+   "path": "design/evidence/d1/home-ar-390.png",
+   "class": "DESIGN_PACKAGE"
+  },
+  {
+   "path": "design/evidence/d1/home-ar-print.png",
+   "class": "DESIGN_PACKAGE"
+  },
+  {
+   "path": "design/evidence/d1/home-en-1440.png",
+   "class": "DESIGN_PACKAGE"
+  },
+  {
+   "path": "design/evidence/d1/home-en-390.png",
+   "class": "DESIGN_PACKAGE"
+  },
+  {
+   "path": "design/evidence/d1/home-en-print.png",
+   "class": "DESIGN_PACKAGE"
+  },
+  {
+   "path": "design/evidence/d1/readings_same-year-different-number-ar-1440.png",
+   "class": "DESIGN_PACKAGE"
+  },
+  {
+   "path": "design/evidence/d1/readings_same-year-different-number-ar-390.png",
+   "class": "DESIGN_PACKAGE"
+  },
+  {
+   "path": "design/evidence/d1/readings_same-year-different-number-ar-print.png",
+   "class": "DESIGN_PACKAGE"
+  },
+  {
+   "path": "design/evidence/d1/readings_same-year-different-number-en-1440.png",
+   "class": "DESIGN_PACKAGE"
+  },
+  {
+   "path": "design/evidence/d1/readings_same-year-different-number-en-390.png",
+   "class": "DESIGN_PACKAGE"
+  },
+  {
+   "path": "design/evidence/d1/readings_same-year-different-number-en-print.png",
+   "class": "DESIGN_PACKAGE"
+  },
+  {
+   "path": "design/exploration/d1_canvas/LENS_BRIEF.md",
+   "class": "DESIGN_PACKAGE"
+  },
+  {
+   "path": "design/exploration/d1_canvas/README.md",
+   "class": "DESIGN_PACKAGE"
+  },
+  {
+   "path": "design/exploration/d1_canvas/boards/common.py",
+   "class": "DESIGN_PACKAGE"
+  },
+  {
+   "path": "design/exploration/d1_canvas/boards/t1.py",
+   "class": "DESIGN_PACKAGE"
+  },
+  {
+   "path": "design/exploration/d1_canvas/boards/t2.py",
+   "class": "DESIGN_PACKAGE"
+  },
+  {
+   "path": "design/exploration/d1_canvas/boards/t3.py",
+   "class": "DESIGN_PACKAGE"
+  },
+  {
+   "path": "design/exploration/d1_canvas/boards/t4.py",
+   "class": "DESIGN_PACKAGE"
+  },
+  {
+   "path": "design/exploration/d1_canvas/build_boards.py",
+   "class": "DESIGN_PACKAGE"
+  },
+  {
+   "path": "design/exploration/d1_canvas/crops.py",
+   "class": "DESIGN_PACKAGE"
+  },
+  {
+   "path": "design/exploration/d1_canvas/fold.py",
+   "class": "DESIGN_PACKAGE"
+  },
+  {
+   "path": "design/exploration/d1_canvas/inspect_widths.py",
+   "class": "DESIGN_PACKAGE"
+  },
+  {
+   "path": "design/exploration/d1_canvas/proto_common.py",
+   "class": "DESIGN_PACKAGE"
+  },
+  {
+   "path": "design/exploration/d1_canvas/proto_shell.py",
+   "class": "DESIGN_PACKAGE"
+  },
+  {
+   "path": "design/exploration/d1_canvas/reference_boards.py",
+   "class": "DESIGN_PACKAGE"
+  },
+  {
+   "path": "design/exploration/d1_canvas/review/final_review.md",
+   "class": "DESIGN_PACKAGE"
+  },
+  {
+   "path": "design/exploration/d1_canvas/review/lens_A.md",
+   "class": "DESIGN_PACKAGE"
+  },
+  {
+   "path": "design/exploration/d1_canvas/review/lens_B.md",
+   "class": "DESIGN_PACKAGE"
+  },
+  {
+   "path": "design/exploration/d1_canvas/review/lens_C.md",
+   "class": "DESIGN_PACKAGE"
+  },
+  {
+   "path": "design/exploration/d1_canvas/review/lens_D.md",
+   "class": "DESIGN_PACKAGE"
+  },
+  {
+   "path": "design/exploration/d1_canvas/review/lens_E.md",
+   "class": "DESIGN_PACKAGE"
+  },
+  {
+   "path": "design/exploration/d1_canvas/review/lens_F.md",
+   "class": "DESIGN_PACKAGE"
+  },
+  {
+   "path": "design/exploration/d1_canvas/review/lens_G.md",
+   "class": "DESIGN_PACKAGE"
+  },
+  {
+   "path": "design/exploration/d1_canvas/review/lens_H.md",
+   "class": "DESIGN_PACKAGE"
+  },
+  {
+   "path": "design/exploration/d1_canvas/review/lens_I.md",
+   "class": "DESIGN_PACKAGE"
+  },
+  {
+   "path": "design/exploration/d1_canvas/review/second_pass.md",
+   "class": "DESIGN_PACKAGE"
+  },
+  {
+   "path": "design/exploration/d1_canvas/tiles.py",
+   "class": "DESIGN_PACKAGE"
+  },
+  {
+   "path": "design/reference/build.py",
+   "class": "DESIGN_PACKAGE"
+  },
+  {
+   "path": "design/reference/check_content.py",
+   "class": "DESIGN_PACKAGE"
+  },
+  {
+   "path": "design/reference/check_trio.py",
+   "class": "DESIGN_PACKAGE"
+  },
+  {
+   "path": "design/reference/tokens.py",
+   "class": "DESIGN_PACKAGE"
+  },
+  {
+   "path": "design/reference/yfie/__init__.py",
+   "class": "DESIGN_PACKAGE"
+  },
+  {
+   "path": "design/reference/yfie/content.py",
+   "class": "DESIGN_PACKAGE"
+  },
+  {
+   "path": "design/reference/yfie/neutral.py",
+   "class": "DESIGN_PACKAGE"
+  },
+  {
+   "path": "design/reference/yfie/render.py",
+   "class": "DESIGN_PACKAGE"
+  },
+  {
+   "path": "design/reference/yfie/theme.py",
+   "class": "DESIGN_PACKAGE"
+  },
+  {
+   "path": "design/reference/yfie/visuals.py",
+   "class": "DESIGN_PACKAGE"
   },
   {
    "path": "dist/404.html",

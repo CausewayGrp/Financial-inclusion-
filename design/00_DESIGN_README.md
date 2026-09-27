@@ -1,7 +1,16 @@
 # Design package — Yemen Financial Inclusion Evidence · أدلة الشمول المالي في اليمن
 
-Status: **D0 Orientation — records opened, landed by the steward (`7c9b8a1`) and directly verified.** No design thesis chosen, no screen
-designed, no design system published. Not PUBLIC RELEASE READY.
+Status: **D1 in progress — converged on T4 · Instrument (DL-D1-006); the Design Intent Lock (`01_FOUNDATIONS.md` §4)
+and the foundational grammar (§5, `02_TOKENS.json`) are written from the reference implementation, which renders the
+stress trio in both languages with every hook and passes the rendered checks (DL-D1-007); the independent final
+review's MUST-FIX list is closed and re-verified (DL-D1-008); four escalations open; hand-back verdict on the pull
+request.** D0 accepted on `main` at
+`8bf19efad7505792ca22e0a3bda1db31fb85d33c`. D1 is developed on `claude/practical-cray-sr26c5` (process note in
+`ESCALATIONS.md`) and lands through one draft pull request into `main`
+(https://github.com/CausewayGrp/Financial-inclusion-/pull/3). D1 records: `01_FOUNDATIONS.md` (hypotheses,
+exploration protocol, benchmark result, process notes, critique; comparison, Lock and grammar when reached), the decision
+log below (DL-D1-*), `design/reference/` (the neutral harness and the one content path every renderer uses) and
+`design/exploration/d1_canvas/` (the composers that regenerate the canvas propositions). Not PUBLIC RELEASE READY.
 
 ## 1. What this package is
 
@@ -9,12 +18,23 @@ The Design package of brief §19: decision log (this file), coverage ledger (`CO
 (`DESIGN_DEBT.md`), escalations (`ESCALATIONS.md`) and the progressive Design→Code mapping (`09_CODE_HANDOFF.md`).
 Files `01`–`08`, `10` and `design/reference/` are created at the gate that first needs them (plan, §6).
 
-**Reference implementation: does not exist yet.** At D0 the design package has no runnable site. Until
-`design/reference/out/` renders all 288 documents, this package is an incomplete hand-back by definition (brief §19).
+**Reference implementation: the stress trio only (D1).** `design/reference/` holds one content path
+(`yfie/content.py` reads `site-src/content/**`; never a copied content model, never retyped text), the neutral harness
+(`yfie/neutral.py`, unstyled, every brief §19 hook), the accepted renderer of the converged direction
+(`yfie/render.py` with `theme.py`, the one stylesheet, and `visuals.py`, the contract drawings) and the checks
+(`check_content.py`: parity with `dist/`; `check_trio.py`: the rendered conditions of the viewport suite on the trio
+plus the hooks and an interaction smoke test with the baseline runtime). Until `design/reference/out/` renders all
+288 documents (D4), this package is an incomplete hand-back by definition (brief §19).
 
-Build and preview (to be filled at D1 when the reference stack is chosen): one command writing `design/reference/out/`,
-previewed with `python3 -m http.server 4173 --directory design/reference/out`. Baseline meanwhile:
-`python3 -m http.server 4173 --directory dist`.
+Build and preview: `python3 design/reference/build.py` (renderer `accepted`; `--renderer neutral` for the harness)
+writes `design/reference/out/` — the trio in both languages, `assets/yfie.css`, the unchanged fonts and logo, the
+baseline runtime, and `out/_bundle/<route>__<lang>.json`, the exact content structures a renderer receives. Check with
+`python3 design/reference/check_content.py --text`, `python3 design/reference/check_trio.py --shots --degraded` and
+`python3 design/reference/tokens.py --check`; preview with
+`python3 -m http.server 4173 --directory design/reference/out` (`/en/`, `/ar/`). Baseline: `python3 -m http.server
+4173 --directory dist`. Canvas propositions and the reference row: `python3 design/exploration/d1_canvas/build_boards.py`
+and `reference_boards.py` regenerate the artboards into the git-ignored `design/exploration/d1_canvas/out/`
+(`design/exploration/d1_canvas/README.md`).
 
 ## 2. Authority used
 
@@ -128,7 +148,7 @@ to isolate in RTL and URLs); 15 routes whose Page Spec sections are split by lan
 | Gate | Branch | Scope | Exit evidence |
 |---|---|---|---|
 | D0 | `design/d0-orientation` | these records | records committed; plan names theses; escalations listed |
-| D1 | `design/d1-theses` | three theses on the trio (Home, `/evidence/CLM-003/`, `/readings/same-year-different-number/`), EN+AR, 390 & 1440; choose; then tokens, state grammar, shell, type proved at 320/390/640/1440 + keyboard | `01_FOUNDATIONS.md`, `02_TOKENS.json`, decision-log entries; trio rows `VERIFIED` |
+| D1 | `claude/practical-cray-sr26c5` (planned `design/d1-theses`; process note in `ESCALATIONS.md`) | three theses on the trio (Home, `/evidence/CLM-003/`, `/readings/same-year-different-number/`), EN+AR, 390 & 1440; choose; then tokens, state grammar, shell, type proved at 320/390/640/1440 + keyboard | `01_FOUNDATIONS.md`, `02_TOKENS.json`, decision-log entries; trio rows `VERIFIED` |
 | D2 | `design/d2-hard-families` | Explore, 5 hard domains, Evidence index, §9.1 record set, Compare, `/data/` | each §9.2 case proved |
 | D3 | `design/d3-synthesis` | Readings index + all Readings, Measurement, Methodology, trust, report journey, 404; Home cold-reader test | same; cold-reader record |
 | D4 | `design/d4-binding` | all 288 documents via family rules | three suites pass on `design/reference/out/`; all rows ≥ `BUILT` |
@@ -151,6 +171,14 @@ Arabic composition differently, not as colour variants):
 
 Selection criteria: `DESIGN_ACCEPTANCE_CRITERIA.md`, the four review tests (§7), hard states carried by the trio, the
 audience lenses, Code build cost. Nothing propagates before D1 exits.
+
+**D1 additions (not a change to the D0 plan).** The three theses are sharpened in `01_FOUNDATIONS.md` §1 (T3 is called
+*Strata* there — the same thesis as *Layers*). A fourth, second-generation proposition, **T4 · Instrument**, was authored
+after the designer's own critique of T1–T3 (`01_FOUNDATIONS.md` §2.3) under the owner's design-ceiling review
+(DL-D1-005): one mental model — an instrument that answers the reader's questions about the evidence and states what it
+cannot answer — with clock-first evidence objects, the seven governed record questions as structure and index, the
+boundary as a second voice, a verification spine on every page and a structural firewall; composed mobile-first and
+Arabic-first. It is a proposition under the same tests, not a chosen direction and not a hybrid.
 
 ## 7. Environment and persistence (D0 statement)
 
@@ -187,6 +215,8 @@ need the same route unless a write-capable environment (e.g. Claude Code acting 
 - **ESCALATIONS.md:** `ESCALATE_TO_MASTER` / `NEEDS_CONTROLLED_CONTENT` only; the unshipped feature is designed and
   listed, never filled with authored copy.
 - **09_CODE_HANDOFF.md:** updated at each gate end, never back-filled at D7.
+- **01_FOUNDATIONS.md:** D1's working record — hypotheses, exploration protocol and results, critique, comparison,
+  Design Intent Lock and grammar; its status line states what is proven and what is not.
 
 **D7 Definition of Done (interpretation).** A runnable, fully populated bilingual reference site in
 `design/reference/out/` — all 288 documents, every tool and state, both languages, four widths, no placeholder, every
@@ -218,3 +248,149 @@ not public release (REL-01…04 remain).
 - Problem: D1 must test materially different theses; ledger needs planned gates.
 - Chosen: T1 Register, T2 Argument, T3 Layers (§6); gate per route as in §6 / `COVERAGE.csv`.
 - Code: none until D1 selection.
+
+### DL-D1-001 · D1 · 2026-09-27 · D1 authority, branch and persistence
+- Problem: establish the D1 start state and how D1 work reaches the repository.
+- Evidence: `main` = `8bf19efad7505792ca22e0a3bda1db31fb85d33c` (D0 merged); Master `17db032b…038690b`, Page Specs
+  `d4574804…824b69aa` and the logo `5830163d…` unchanged and re-verified at gate start (`01_FOUNDATIONS.md` head).
+- Alternatives: the planned branch `design/d1-theses`; the branch this execution environment is permitted to push.
+- Chosen: develop and push on `claude/practical-cray-sr26c5`; one gate, one pull request into `main`; the steward may
+  re-home the branch (`ESCALATIONS.md`, process notes). Milestone commits carry the records; work not pushed does not
+  exist for the next session.
+- Arabic / responsive / a11y: none.
+- Code: none.
+- Compromise: none.
+
+### DL-D1-002 · D1 · 2026-09-27 · A neutral harness, not a scaffold with taste
+- Problem: theses must be tested on the real governed content, in both languages, at every width, without a scaffold
+  that pre-decides type, grid, density or state grammar.
+- Evidence: the owner's sequencing refinement (the harness must be deliberately neutral); brief §19 hooks; `dist/` as
+  the behavioural baseline.
+- Alternatives: extend `site-src/styles.css`; write the first thesis straight into `design/reference/`; a
+  presentation-free content path with an unstyled renderer.
+- Chosen: `design/reference/yfie/content.py` (one content path from `site-src/content/**`, text never retyped),
+  `yfie/neutral.py` (unstyled, every hook) and `check_content.py` (every baseline number appears; a number the reference
+  adds must be a governed visual-contract value or identifier) — parity PASS on the trio. Every proposition and every
+  future renderer binds through this path.
+- Arabic / responsive / a11y: the harness carries `lang`/`dir`, one `h1`, the skip link first, the hooks; it decides
+  nothing visual. Harness stress run at 320/390/640/1440 × EN/AR on the trio: no horizontal overflow except the
+  unstyled fallback table at 320 px, a presentation matter the propositions handle (`.table-wrap`).
+- Code: the content module and the hook set are what Code inherits (`09_CODE_HANDOFF.md`).
+- Compromise: none.
+
+### DL-D1-003 · D1 · 2026-09-27 · Claude Design explores before any thesis code
+- Problem: a T1 renderer had been written before the canvas held any proposition — a sequencing fault.
+- Evidence: the owner's sequencing correction; `01_FOUNDATIONS.md` §2.2.
+- Alternatives: keep the T1 renderer as the T1 proposition; discard it; hold it unused.
+- Chosen: the T1 renderer is PRE-DESIGN / NON-AUTHORITATIVE, held unused outside the repository and excluded as a source
+  (DEBT-003). Claude Design (Design Artifact type; canvas "YFIE D1 Thesis Exploration") authors T1, T2 and T3 as
+  artboards first — 36 boards (3 surfaces × EN/AR × 1440/390 px) with the governed text inserted mechanically from the
+  harness bundle, the eleven IBM Plex faces and the unmodified logo as canvas assets. Local Chromium twins of the same
+  boards give the images for critique and the crops for the screenshot-misuse test. CLAUDE DESIGN INVOKED: YES;
+  T1/T2/T3 DESIGN PROPOSITION EXISTS: YES.
+- Arabic / responsive / a11y: Arabic composed at the same time as English on every board; 390 px composed for every
+  surface.
+- Code: none yet; thesis renderers follow critique, they do not precede it.
+- Compromise: renders are proof, not authority; the canvas lives outside the repository, so the composers that
+  regenerate it are committed (`design/exploration/d1_canvas/`, DEBT-004).
+
+### DL-D1-004 · D1 · 2026-09-27 · Benchmarks NOT INSPECTED; no research detour
+- Problem: the benchmark review (§2.1 of `01_FOUNDATIONS.md`) could reach no product site from this environment.
+- Evidence: `01_FOUNDATIONS.md` §2.1 — every product site blocked; two source repositories' documentation directly
+  observed.
+- Alternatives: infer from memory; keep trying other paths; record NOT INSPECTED and proceed on primary evidence.
+- Chosen: every interface benchmark is NOT INSPECTED; nothing is attributed to an institution not inspected; principles
+  used are marked EXISTING PROFESSIONAL DESIGN PRINCIPLE or YFIE-SPECIFIC DESIGN JUDGMENT; D1's evidence is the governed
+  content, the canvas exploration, the rendered stress tests, Arabic, mobile and evidence integrity.
+- Code: none.
+
+### DL-D1-005 · D1 · 2026-09-27 · A second-generation proposition (T4 · Instrument) before convergence
+- Problem: the owner's design-ceiling review asks whether T1–T3 reach the ceiling — an evidence instrument with a YFIE
+  signature, a Home that demonstrates "not one number", portable evidence objects, task-architecture navigation, Arabic
+  as a design source, authored type roles, Yemen felt by abstraction — before anything converges.
+- Evidence: the designer's own critique of T1–T3 (`01_FOUNDATIONS.md` §2.3): T1's apparatus lifts figures out of their
+  governed sentence; T2 reads as a magazine and is weak as a professional object; T3 risks the documentation-portal
+  pattern with a faint grounding; a vertical value axis lets the two 2024 markers read as a fall.
+- Alternatives: converge on the strongest of T1–T3; a hybrid; a second-generation proposition under the same tests.
+- Chosen: author T4 · Instrument as a fourth proposition (`01_FOUNDATIONS.md` §1, T4), mobile-first and Arabic-first,
+  and hold convergence until T4 is inspected at native sizes, critiqued through the lenses against the strongest
+  first-generation proposition and put through the adversarial tests. No automatic hybrid; T4 is challenged, not
+  defended.
+- Arabic / responsive / a11y: composed from the Arabic 390 px record outward; desktop is the same system with a spine
+  column; numeric axes stay left-to-right in Arabic.
+- Code: none; T4 stays a proposition until the Lock.
+- Compromise: at this commit T4 is rendered (12 boards, no horizontal overflow at 390 and 1440 px) and on the canvas,
+  but not yet inspected at 320/360/430/768/1024/1280 px or at high DPI, not critiqued, not compared
+  (`01_FOUNDATIONS.md` §2.5).
+
+### DL-D1-006 · D1 · 2026-09-27 · Convergence: T4 · Instrument is the D1 design direction
+- Problem: choose one direction from four propositions without scoring, on rendered evidence, against the convergence
+  bar ("what does YFIE now allow a user to understand or do that a conventional evidence website does not make nearly
+  as easy?").
+- Evidence: nine independent lens reports on the same renders (`01_FOUNDATIONS.md` §3.1–3.2), the native-size
+  inspection (§2.5), the adversarial tests (§3.4). Every lens ranked T4 first; the decision rests on two behaviours,
+  not the ranking: a same-year restatement that cannot be read or screenshotted as a fall (publication-keyed rows with
+  printed values on a zero-based axis), and a number that is never met without its clock and bound (clock-before-claim
+  objects; 8.55 % / +11 % kept inside their sentence).
+- Alternatives: T1 (rejected: the lifted 8.55 % / +11 % apparatus, the composition a source institution would contest;
+  side columns that break at 900–1100 px; Arabic table clipping); T2 (rejected: magazine grammar, bold-number scan path
+  with whispering bounds, light Arabic on cream, hidden values, corrupted Arabic link); T3 (rejected: donor-portal
+  card idiom, chips before content on every mobile surface, a trail that does not match its strata, CSP-illegal inline
+  spans); a hybrid (rejected: the borrowed elements — inline tables, verification chips — are already T4's own contract
+  alternative and verification voice, not a second grammar).
+- Chosen: T4, with the corrections of §3.3 applied in composer/canvas version 5 (Home paced as figure groups each
+  bound to its record; one mark per publication; the not-comparable divider between the lanes; baseline at the index
+  origin; raw 2021 levels beside the lanes; alt text and tables visible; index as a numbered hairline list; weight
+  discipline; headings for the seven questions; contrast and hit-area fixes; no inline styles). Kept against a
+  finding: the value axis stays left-to-right in Arabic (governed contract rule).
+- Arabic / responsive / a11y: the Arabic rules (own metrics, no letter-spacing, isolated numeric and ISO-date runs,
+  balanced titles, Western digits as in governed copy) and the number rule become MUST PRESERVE in the Lock; verified
+  0 page overflow at 320–1440 px; the seven questions and the boundary are `h2`; skip link, focus and labelled in-page
+  navigation belong to the reference implementation.
+- Code: the reference implementation renders T4 on the trio from the same content path; the Design Intent Lock (§4)
+  and `02_TOKENS.json` are extracted only from what that implementation proves.
+- Compromise: three escalations open (Arabic credit line; Home pacing marker; IMF lane state question); Yemen material
+  grounding unresolved (DEBT-007); interaction, print and citation unproven until the implementation.
+
+### DL-D1-007 · D1 · 2026-09-27 · The reference implementation of the trio; Lock and grammar confirmed from it
+- Problem: prove the converged direction in real rendered code, with every hook, in both languages, before any Lock
+  is treated as more than intent; extract tokens only from what renders.
+- Evidence: `design/reference/yfie/render.py`, `theme.py`, `visuals.py`; `check_trio.py` — 24 renders pass, 12
+  interaction smoke tests pass; parity PASS; bilingual invariance 0 differing pairs; degraded states and print
+  reviewed; canvas row R (version 6) beside T4 for the drift review; `01_FOUNDATIONS.md` §4.4.
+- Alternatives: implement from the canvas boards' HTML (rejected: a canvas is not a content path); write a second
+  content model for the renderer (rejected: one path, never a copied model).
+- Chosen: the accepted renderer binds the same content module as the harness; the stylesheet was extracted once from
+  composer version 5 and is maintained in the reference; every drawing uses percentage coordinates without inline
+  style; a page-level actions block keeps cite and report reachable at every width; `02_TOKENS.json` is generated from
+  the stylesheet's custom properties with roles; §4 of the Lock is confirmed with no drift (§4.4).
+- Arabic / responsive / a11y: verified at 320/390/640/1440 px in both languages; skip link first, visible focus in the
+  boundary vocabulary, `h2` questions, reduced motion and forced colours honoured; in-page navigation still unnamed
+  (DEBT-006).
+- Code: inherits `design/reference/` as it stands (`09_CODE_HANDOFF.md`, state at D1).
+- Compromise: the repository browser suites cannot run on a trio-only build (DEBT-009); the 320 px fallback table
+  scrolls in its wrapper (DEBT-010); the independent final D1 review is still to come.
+
+### DL-D1-008 · D1 · 2026-09-27 · The independent final review adjudicated; every MUST-FIX closed
+- Problem: the repository-only review returned NOT ACCEPTED with eight MUST-FIX items — records that overstated the
+  state, a corrupt tokens file, evidence cited at unreproducible paths, and three Lock items the build broke (the Home
+  visual's frame, one spine, readable tables at 320 px).
+- Evidence: `design/exploration/d1_canvas/review/final_review.md`; `01_FOUNDATIONS.md` §6 and §4.4 (corrections);
+  `design/reference/check_trio.py --shots --degraded --evidence design/evidence/d1` (24 renders, 12 pointer and
+  keyboard smoke tests, 6 degraded renders — all pass); `check_content.py --text` (numeric and text-block parity PASS);
+  `tokens.py --check` current.
+- Alternatives: contest the findings; fix only the code; fix code and records and re-verify.
+- Chosen: every MUST-FIX and SHOULD-FIX closed in code and records (§6 lists them); two items recorded rather than
+  changed (Home section order for steward confirmation; navigation without JavaScript below 900 px reachable through
+  the institutional band); the lens reports and the review committed under `design/exploration/d1_canvas/review/`;
+  the PNG evidence committed under `design/evidence/d1/`; a second independent pass requested to confirm closure
+  before the hand-back verdict.
+- Arabic / responsive / a11y: forced colours keep chart text; the record's disclosure content prints; 24 px hit areas
+  on in-flow actions; keyboard path verified.
+- Code: `09_CODE_HANDOFF.md` rows corrected to the implemented state.
+- Compromise: `::details-content` printing is verified in Chromium only; DEBT-006, DEBT-008, DEBT-009, DEBT-010 stay
+  open as recorded.
+- Second pass (same day): a fresh reviewer confirmed every MUST-FIX closed and returned "D1 DESIGN COMPLETE — OWNER
+  MERGE REQUIRED" (`01_FOUNDATIONS.md` §6); its small residuals — a corrupt ledger note, an empty credit line on the
+  Home figure, non-round ticks, a wrong table measurement, a stale path, three overstated sentences, hit areas — are
+  closed in the hand-back commit, with forced colours and target size now asserted by `check_trio.py`.
