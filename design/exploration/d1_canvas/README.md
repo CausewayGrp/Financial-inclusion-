@@ -22,6 +22,12 @@ python3 design/exploration/d1_canvas/fold.py                 # first and second 
 python3 design/exploration/d1_canvas/crops.py                # screenshot-misuse crops → out/crops/
 ```
 
+After the reference implementation is built and checked (`python3 design/reference/build.py && python3
+design/reference/check_trio.py --shots`), `python3 design/exploration/d1_canvas/reference_boards.py` adds row R to the
+canvas: every built page of the trio as an artboard beside the propositions, for the drift review. `inspect_widths.py
+t4` renders a proposition at 320–1440 px in both languages; `tiles.py` cuts full-page renders into readable tiles;
+`LENS_BRIEF.md` is the brief the nine critique lenses received.
+
 `build_boards.py` writes, for every proposition × surface × language × size (1440 and 390 px): a plain HTML twin
 (`out/local/`, rendered in Chromium to measure height and to screenshot into `out/shots/`), the canvas artboard
 (`out/project/project/<name>.dc.html`) and the canvas index (`out/project/project/canvas.json`). The canvas is published
