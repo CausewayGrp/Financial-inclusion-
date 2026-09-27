@@ -1,7 +1,13 @@
 # Design package — Yemen Financial Inclusion Evidence · أدلة الشمول المالي في اليمن
 
-Status: **D0 Orientation — records opened, landed by the steward (`7c9b8a1`) and directly verified.** No design thesis chosen, no screen
-designed, no design system published. Not PUBLIC RELEASE READY.
+Status: **D1 in progress — four design propositions (T1 Register, T2 Argument, T3 Strata; second generation T4
+Instrument) exist on the Claude Design canvas with the governed trio content in English and Arabic; no thesis chosen, no
+Design Intent Lock, no design system published, no reference renderer.** D0 accepted on `main` at
+`8bf19efad7505792ca22e0a3bda1db31fb85d33c`. D1 is developed on `claude/practical-cray-sr26c5` (process note in
+`ESCALATIONS.md`) and lands through one pull request into `main`. D1 records: `01_FOUNDATIONS.md` (hypotheses,
+exploration protocol, benchmark result, process notes, critique; comparison, Lock and grammar when reached), the decision
+log below (DL-D1-*), `design/reference/` (the neutral harness and the one content path every renderer uses) and
+`design/exploration/d1_canvas/` (the composers that regenerate the canvas propositions). Not PUBLIC RELEASE READY.
 
 ## 1. What this package is
 
@@ -9,12 +15,20 @@ The Design package of brief §19: decision log (this file), coverage ledger (`CO
 (`DESIGN_DEBT.md`), escalations (`ESCALATIONS.md`) and the progressive Design→Code mapping (`09_CODE_HANDOFF.md`).
 Files `01`–`08`, `10` and `design/reference/` are created at the gate that first needs them (plan, §6).
 
-**Reference implementation: does not exist yet.** At D0 the design package has no runnable site. Until
-`design/reference/out/` renders all 288 documents, this package is an incomplete hand-back by definition (brief §19).
+**Reference implementation: does not exist yet.** At D0 the design package had no runnable site. D1 has built the
+content path and a neutral harness under `design/reference/`: `yfie/content.py` reads `site-src/content/**` (one path,
+never a copied content model, never retyped text); `yfie/neutral.py` renders the stress trio unstyled with every brief
+§19 hook; `check_content.py` proves content parity with `dist/` (every baseline number appears; a number the reference
+adds must be a governed visual-contract value or identifier). No accepted renderer exists — `--renderer accepted` fails
+until a thesis is chosen. Until `design/reference/out/` renders all 288 documents, this package is an incomplete
+hand-back by definition (brief §19).
 
-Build and preview (to be filled at D1 when the reference stack is chosen): one command writing `design/reference/out/`,
-previewed with `python3 -m http.server 4173 --directory design/reference/out`. Baseline meanwhile:
-`python3 -m http.server 4173 --directory dist`.
+Build and preview: `python3 design/reference/build.py --renderer neutral` writes `design/reference/out/` (the trio in
+both languages, plus `out/_bundle/<route>__<lang>.json`, the exact content structures a renderer receives); `python3
+design/reference/check_content.py` checks parity; preview with `python3 -m http.server 4173 --directory
+design/reference/out`. Baseline: `python3 -m http.server 4173 --directory dist`. Canvas propositions: `python3
+design/exploration/d1_canvas/build_boards.py` (after the harness build) regenerates every artboard and its local twin
+into the git-ignored `design/exploration/d1_canvas/out/` (`design/exploration/d1_canvas/README.md`).
 
 ## 2. Authority used
 
@@ -128,7 +142,7 @@ to isolate in RTL and URLs); 15 routes whose Page Spec sections are split by lan
 | Gate | Branch | Scope | Exit evidence |
 |---|---|---|---|
 | D0 | `design/d0-orientation` | these records | records committed; plan names theses; escalations listed |
-| D1 | `design/d1-theses` | three theses on the trio (Home, `/evidence/CLM-003/`, `/readings/same-year-different-number/`), EN+AR, 390 & 1440; choose; then tokens, state grammar, shell, type proved at 320/390/640/1440 + keyboard | `01_FOUNDATIONS.md`, `02_TOKENS.json`, decision-log entries; trio rows `VERIFIED` |
+| D1 | `claude/practical-cray-sr26c5` (planned `design/d1-theses`; process note in `ESCALATIONS.md`) | three theses on the trio (Home, `/evidence/CLM-003/`, `/readings/same-year-different-number/`), EN+AR, 390 & 1440; choose; then tokens, state grammar, shell, type proved at 320/390/640/1440 + keyboard | `01_FOUNDATIONS.md`, `02_TOKENS.json`, decision-log entries; trio rows `VERIFIED` |
 | D2 | `design/d2-hard-families` | Explore, 5 hard domains, Evidence index, §9.1 record set, Compare, `/data/` | each §9.2 case proved |
 | D3 | `design/d3-synthesis` | Readings index + all Readings, Measurement, Methodology, trust, report journey, 404; Home cold-reader test | same; cold-reader record |
 | D4 | `design/d4-binding` | all 288 documents via family rules | three suites pass on `design/reference/out/`; all rows ≥ `BUILT` |
@@ -151,6 +165,14 @@ Arabic composition differently, not as colour variants):
 
 Selection criteria: `DESIGN_ACCEPTANCE_CRITERIA.md`, the four review tests (§7), hard states carried by the trio, the
 audience lenses, Code build cost. Nothing propagates before D1 exits.
+
+**D1 additions (not a change to the D0 plan).** The three theses are sharpened in `01_FOUNDATIONS.md` §1 (T3 is called
+*Strata* there — the same thesis as *Layers*). A fourth, second-generation proposition, **T4 · Instrument**, was authored
+after the designer's own critique of T1–T3 (`01_FOUNDATIONS.md` §2.3) under the owner's design-ceiling review
+(DL-D1-005): one mental model — an instrument that answers the reader's questions about the evidence and states what it
+cannot answer — with clock-first evidence objects, the seven governed record questions as structure and index, the
+boundary as a second voice, a verification spine on every page and a structural firewall; composed mobile-first and
+Arabic-first. It is a proposition under the same tests, not a chosen direction and not a hybrid.
 
 ## 7. Environment and persistence (D0 statement)
 
@@ -187,6 +209,8 @@ need the same route unless a write-capable environment (e.g. Claude Code acting 
 - **ESCALATIONS.md:** `ESCALATE_TO_MASTER` / `NEEDS_CONTROLLED_CONTENT` only; the unshipped feature is designed and
   listed, never filled with authored copy.
 - **09_CODE_HANDOFF.md:** updated at each gate end, never back-filled at D7.
+- **01_FOUNDATIONS.md:** D1's working record — hypotheses, exploration protocol and results, critique, comparison,
+  Design Intent Lock and grammar; its status line states what is proven and what is not.
 
 **D7 Definition of Done (interpretation).** A runnable, fully populated bilingual reference site in
 `design/reference/out/` — all 288 documents, every tool and state, both languages, four widths, no placeholder, every
@@ -218,3 +242,77 @@ not public release (REL-01…04 remain).
 - Problem: D1 must test materially different theses; ledger needs planned gates.
 - Chosen: T1 Register, T2 Argument, T3 Layers (§6); gate per route as in §6 / `COVERAGE.csv`.
 - Code: none until D1 selection.
+
+### DL-D1-001 · D1 · 2026-09-27 · D1 authority, branch and persistence
+- Problem: establish the D1 start state and how D1 work reaches the repository.
+- Evidence: `main` = `8bf19efad7505792ca22e0a3bda1db31fb85d33c` (D0 merged); Master `17db032b…038690b`, Page Specs
+  `d4574804…824b69aa` and the logo `5830163d…` unchanged and re-verified at gate start (`01_FOUNDATIONS.md` head).
+- Alternatives: the planned branch `design/d1-theses`; the branch this execution environment is permitted to push.
+- Chosen: develop and push on `claude/practical-cray-sr26c5`; one gate, one pull request into `main`; the steward may
+  re-home the branch (`ESCALATIONS.md`, process notes). Milestone commits carry the records; work not pushed does not
+  exist for the next session.
+- Arabic / responsive / a11y: none.
+- Code: none.
+- Compromise: none.
+
+### DL-D1-002 · D1 · 2026-09-27 · A neutral harness, not a scaffold with taste
+- Problem: theses must be tested on the real governed content, in both languages, at every width, without a scaffold
+  that pre-decides type, grid, density or state grammar.
+- Evidence: the owner's sequencing refinement (the harness must be deliberately neutral); brief §19 hooks; `dist/` as
+  the behavioural baseline.
+- Alternatives: extend `site-src/styles.css`; write the first thesis straight into `design/reference/`; a
+  presentation-free content path with an unstyled renderer.
+- Chosen: `design/reference/yfie/content.py` (one content path from `site-src/content/**`, text never retyped),
+  `yfie/neutral.py` (unstyled, every hook) and `check_content.py` (every baseline number appears; a number the reference
+  adds must be a governed visual-contract value or identifier) — parity PASS on the trio. Every proposition and every
+  future renderer binds through this path.
+- Arabic / responsive / a11y: the harness carries `lang`/`dir`, one `h1`, the skip link first, the hooks; it decides
+  nothing visual. Harness stress run at 320/390/640/1440 × EN/AR on the trio: no horizontal overflow except the
+  unstyled fallback table at 320 px, a presentation matter the propositions handle (`.table-wrap`).
+- Code: the content module and the hook set are what Code inherits (`09_CODE_HANDOFF.md`).
+- Compromise: none.
+
+### DL-D1-003 · D1 · 2026-09-27 · Claude Design explores before any thesis code
+- Problem: a T1 renderer had been written before the canvas held any proposition — a sequencing fault.
+- Evidence: the owner's sequencing correction; `01_FOUNDATIONS.md` §2.2.
+- Alternatives: keep the T1 renderer as the T1 proposition; discard it; hold it unused.
+- Chosen: the T1 renderer is PRE-DESIGN / NON-AUTHORITATIVE, held unused outside the repository and excluded as a source
+  (DEBT-003). Claude Design (Design Artifact type; canvas "YFIE D1 Thesis Exploration") authors T1, T2 and T3 as
+  artboards first — 36 boards (3 surfaces × EN/AR × 1440/390 px) with the governed text inserted mechanically from the
+  harness bundle, the eleven IBM Plex faces and the unmodified logo as canvas assets. Local Chromium twins of the same
+  boards give the images for critique and the crops for the screenshot-misuse test. CLAUDE DESIGN INVOKED: YES;
+  T1/T2/T3 DESIGN PROPOSITION EXISTS: YES.
+- Arabic / responsive / a11y: Arabic composed at the same time as English on every board; 390 px composed for every
+  surface.
+- Code: none yet; thesis renderers follow critique, they do not precede it.
+- Compromise: renders are proof, not authority; the canvas lives outside the repository, so the composers that
+  regenerate it are committed (`design/exploration/d1_canvas/`, DEBT-004).
+
+### DL-D1-004 · D1 · 2026-09-27 · Benchmarks NOT INSPECTED; no research detour
+- Problem: the benchmark review (§2.1 of `01_FOUNDATIONS.md`) could reach no product site from this environment.
+- Evidence: `01_FOUNDATIONS.md` §2.1 — every product site blocked; two source repositories' documentation directly
+  observed.
+- Alternatives: infer from memory; keep trying other paths; record NOT INSPECTED and proceed on primary evidence.
+- Chosen: every interface benchmark is NOT INSPECTED; nothing is attributed to an institution not inspected; principles
+  used are marked EXISTING PROFESSIONAL DESIGN PRINCIPLE or YFIE-SPECIFIC DESIGN JUDGMENT; D1's evidence is the governed
+  content, the canvas exploration, the rendered stress tests, Arabic, mobile and evidence integrity.
+- Code: none.
+
+### DL-D1-005 · D1 · 2026-09-27 · A second-generation proposition (T4 · Instrument) before convergence
+- Problem: the owner's design-ceiling review asks whether T1–T3 reach the ceiling — an evidence instrument with a YFIE
+  signature, a Home that demonstrates "not one number", portable evidence objects, task-architecture navigation, Arabic
+  as a design source, authored type roles, Yemen felt by abstraction — before anything converges.
+- Evidence: the designer's own critique of T1–T3 (`01_FOUNDATIONS.md` §2.3): T1's apparatus lifts figures out of their
+  governed sentence; T2 reads as a magazine and is weak as a professional object; T3 risks the documentation-portal
+  pattern with a faint grounding; a vertical value axis lets the two 2024 markers read as a fall.
+- Alternatives: converge on the strongest of T1–T3; a hybrid; a second-generation proposition under the same tests.
+- Chosen: author T4 · Instrument as a fourth proposition (`01_FOUNDATIONS.md` §1, T4), mobile-first and Arabic-first,
+  and hold convergence until T4 is inspected at native sizes, critiqued through the lenses against the strongest
+  first-generation proposition and put through the adversarial tests. No automatic hybrid; T4 is challenged, not
+  defended.
+- Arabic / responsive / a11y: composed from the Arabic 390 px record outward; desktop is the same system with a spine
+  column; numeric axes stay left-to-right in Arabic.
+- Code: none; T4 stays a proposition until the Lock.
+- Compromise: at this commit T4 is rendered (12 boards, no horizontal overflow at 390 and 1440 px) and on the canvas,
+  but not yet inspected at 320/360/430/768/1024/1280 px or at high DPI, not critiqued, not compared
+  (`01_FOUNDATIONS.md` §2.5).

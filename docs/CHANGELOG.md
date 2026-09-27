@@ -1,5 +1,22 @@
 # Repository Change Log
 
+## 2026-09-27 — Design D1 (in progress): thesis exploration recorded — neutral harness, four canvas propositions
+
+First D1 milestone on `claude/practical-cray-sr26c5` (base `8bf19ef`, D0 accepted; the branch name is a process note
+in `design/ESCALATIONS.md`). Nothing outside `design/` changed except this changelog, one row in the README status
+table, one ignored output folder in `.gitignore`, the manifest and checksums; Master `17db032b…`, Page Specs
+`d4574804…`, projections, contracts and `dist/` unchanged. Added: `design/01_FOUNDATIONS.md` (the baseline critique,
+thesis hypotheses T1 Register / T2 Argument / T3 Strata and the second-generation T4 Instrument, the exploration
+protocol, the benchmark result — every product site NOT INSPECTED — the sequencing process note, the designer's own
+critique; comparison, Lock and grammar not yet written); `design/reference/` (the one content path from
+`site-src/content/**`, an unstyled harness with every brief §19 hook, a content-parity check against `dist/`);
+`design/exploration/d1_canvas/` (the composers that regenerate the four propositions on the Claude Design canvas from
+the harness bundle; outputs git-ignored). Updated: decision log DL-D1-001…005, `DESIGN_DEBT.md` (DEBT-003…005),
+`COVERAGE.csv` (the 28 stress-trio rows `REVIEWED` with evidence; nothing beyond `REVIEWED`), `09_CODE_HANDOFF.md`
+(state at D1). No thesis chosen, no Design Intent Lock, no design system; not PUBLIC RELEASE READY. Gates run for this
+commit: `checksums.py --check`, `generate_projections.py --check`, `validate.py`, `repository_manifest.py --check`,
+`design/reference/check_content.py`; the browser suites run in CI against `dist/`, which did not change.
+
 ## 2026-09-27 — Design D0: steward verification recorded in the Design README
 
 `design/00_DESIGN_README.md` still read "awaiting steward landing" and left direct authority verification to the

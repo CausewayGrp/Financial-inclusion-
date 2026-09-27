@@ -29,7 +29,7 @@
   "CONTROLLED_CONTRACT": 2,
   "CURRENT_DOCUMENT": 10,
   "CURRENT_PROGRAMME_RECORD": 52,
-  "DESIGN_PACKAGE": 5,
+  "DESIGN_PACKAGE": 22,
   "GENERATED_DIAGRAMS": 9,
   "GENERATED_LITERAL_CLOSURE": 1,
   "GENERATED_PROJECTION": 37,
@@ -1253,6 +1253,10 @@
    "class": "DESIGN_PACKAGE"
   },
   {
+   "path": "design/01_FOUNDATIONS.md",
+   "class": "DESIGN_PACKAGE"
+  },
+  {
    "path": "design/09_CODE_HANDOFF.md",
    "class": "DESIGN_PACKAGE"
   },
@@ -1303,6 +1307,70 @@
   {
    "path": "design/architecture/YFIE_PUBLIC_SITE_MAP.svg",
    "class": "GENERATED_DIAGRAMS"
+  },
+  {
+   "path": "design/exploration/d1_canvas/README.md",
+   "class": "DESIGN_PACKAGE"
+  },
+  {
+   "path": "design/exploration/d1_canvas/boards/common.py",
+   "class": "DESIGN_PACKAGE"
+  },
+  {
+   "path": "design/exploration/d1_canvas/boards/t1.py",
+   "class": "DESIGN_PACKAGE"
+  },
+  {
+   "path": "design/exploration/d1_canvas/boards/t2.py",
+   "class": "DESIGN_PACKAGE"
+  },
+  {
+   "path": "design/exploration/d1_canvas/boards/t3.py",
+   "class": "DESIGN_PACKAGE"
+  },
+  {
+   "path": "design/exploration/d1_canvas/boards/t4.py",
+   "class": "DESIGN_PACKAGE"
+  },
+  {
+   "path": "design/exploration/d1_canvas/build_boards.py",
+   "class": "DESIGN_PACKAGE"
+  },
+  {
+   "path": "design/exploration/d1_canvas/crops.py",
+   "class": "DESIGN_PACKAGE"
+  },
+  {
+   "path": "design/exploration/d1_canvas/fold.py",
+   "class": "DESIGN_PACKAGE"
+  },
+  {
+   "path": "design/exploration/d1_canvas/proto_common.py",
+   "class": "DESIGN_PACKAGE"
+  },
+  {
+   "path": "design/exploration/d1_canvas/proto_shell.py",
+   "class": "DESIGN_PACKAGE"
+  },
+  {
+   "path": "design/reference/build.py",
+   "class": "DESIGN_PACKAGE"
+  },
+  {
+   "path": "design/reference/check_content.py",
+   "class": "DESIGN_PACKAGE"
+  },
+  {
+   "path": "design/reference/yfie/__init__.py",
+   "class": "DESIGN_PACKAGE"
+  },
+  {
+   "path": "design/reference/yfie/content.py",
+   "class": "DESIGN_PACKAGE"
+  },
+  {
+   "path": "design/reference/yfie/neutral.py",
+   "class": "DESIGN_PACKAGE"
   },
   {
    "path": "dist/404.html",

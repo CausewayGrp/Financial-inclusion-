@@ -25,5 +25,10 @@ Recorded so no one fills these gaps silently. Source: brief §10, §12, §15.
 
 ## Process notes (not escalations)
 
+- D1 branch name (2026-09-27): D1 is developed and pushed on `claude/practical-cray-sr26c5`, the branch the execution
+  environment is permitted to push, instead of the `design/d1-theses` name planned at D0. One gate, one branch, one pull
+  request into `main` still holds; the steward may re-home the branch under `design/` at landing if the convention
+  matters for history. No design meaning attaches to the name.
+
 - Tag `checkpoint/design-handoff-ready` was not found at D0 (2026-09-27); commit `6d954c1` used. Steward to confirm.
   Steward, 2026-09-27: confirmed. `6d954c177b5d35cdad063f3a2cef5a92d33e16d4` is the recorded Design-handoff target (`OPENAI_REENTRY_CHECKPOINT.md` §7); the tag is an owner action (tag pushes are refused to the steward's environment). Working from the commit is correct; nothing changes when the tag appears.
