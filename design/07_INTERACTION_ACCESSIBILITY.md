@@ -1,6 +1,6 @@
 # Interaction and accessibility
 
-> STATUS: **D5 — met at this commit, pending the owner's merge.** Every tool state, every technical state and the thirteen
+> STATUS: **D5 — accepted at `2effd8b` (the merge of pull request #4).** Every tool state, every technical state and the thirteen
 > journeys, by keyboard, on mobile and desktop, in both languages, on the rendered reference site: 52 journey walks and 28
 > technical-state drives pass (`check_journeys.py`). What is asserted is asserted by
 > `design/reference/check_journeys.py` (journeys and technical states) and `design/reference/check_site.py` (hooks,

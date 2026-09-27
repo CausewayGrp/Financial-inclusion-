@@ -17,7 +17,7 @@ Contract: `handoff/DESIGN_TO_CODE_CONTRACT.md`. Updated at every gate end; never
 | Print / export | NOT STARTED | Downloads ship disabled until OWN-04 |
 | Reference implementation | DOES NOT EXIST | DEBT-002 |
 
-## State at D5 (in progress — updated at milestones, not back-filled; rows not listed are as at D4)
+## State at D5 (accepted at `2effd8b`, the merge of pull request #4 — rows not listed are as at D4)
 
 | Area | Status | Notes |
 |---|---|---|

@@ -1,10 +1,13 @@
 # Design package — Yemen Financial Inclusion Evidence · أدلة الشمول المالي في اليمن
 
-Status: **D5 in progress — every tool state, technical state and journey proved by keyboard in both languages; D2 met at
-`9c263ac`, D3 at `beecdbb`, D4 at `aee1e1b`, pending the owner's merge.** D1 was accepted by the
-owner's merge (`main` at `851f496078776356b38892c946d40d154c819067`, pull request #3). D2 is developed on
-`claude/epic-cori-60fpeb` (created from that exact `main`) and lands through one draft pull request
-(https://github.com/CausewayGrp/Financial-inclusion-/pull/4). At this commit every
+Status: **D5 accepted — every tool state, technical state and journey proved by keyboard in both languages. D2 was met
+at `9c263ac`, D3 at `beecdbb`, D4 at `aee1e1b` and D5 at `8be8e22`; the four gates were accepted together by the owner's
+merge of pull request #4 (`main` at `2effd8be9a481fed2881da61e8111bf16cceb814`, Verify green on the merge). D6 — the
+remaining visual contracts, detached and export frames, social-image templates, print and portable evidence — is the
+working gate, developed on `claude/bold-maxwell-r3o015` (process note in `ESCALATIONS.md`).** D1 was accepted by the
+owner's merge (`main` at `851f496078776356b38892c946d40d154c819067`, pull request #3). D2–D5 were developed on
+`claude/epic-cori-60fpeb` (created from that exact `main`) and landed through one draft pull request
+(https://github.com/CausewayGrp/Financial-inclusion-/pull/4). At that merge every
 one of the 288 documents renders from the one content path (`design/reference/build.py`); Explore, the five hard domain
 answers, the Evidence directory, the §9.1 record set, Compare and Data & sources are composed in the T4 grammar and each
 §9.2 hard state on those routes is asserted on the rendered DOM (`design/reference/check_site.py`); the two repository
@@ -162,11 +165,11 @@ to isolate in RTL and URLs); 15 routes whose Page Spec sections are split by lan
 |---|---|---|---|
 | D0 | `design/d0-orientation` | these records | records committed; plan names theses; escalations listed |
 | D1 | `claude/practical-cray-sr26c5` (planned `design/d1-theses`; process note in `ESCALATIONS.md`) | three theses on the trio (Home, `/evidence/CLM-003/`, `/readings/same-year-different-number/`), EN+AR, 390 & 1440; choose; then tokens, state grammar, shell, type proved at 320/390/640/1440 + keyboard | `01_FOUNDATIONS.md`, `02_TOKENS.json`, decision-log entries; trio rows `VERIFIED` |
-| D2 | `claude/epic-cori-60fpeb` (planned `design/d2-hard-families`; the branch this environment may push, as at D1) | Explore, 5 hard domains, Evidence index, §9.1 record set, Compare, `/data/` | each §9.2 case proved (`check_site.py`); ledger rows `VERIFIED` or gap explained — **met at this commit, pending the owner's merge** |
-| D3 | `claude/epic-cori-60fpeb` (continued on the D2 branch and pull request; process note in `ESCALATIONS.md`) | Readings index + all Readings, Measurement, Methodology, trust, report journey, 404; Home cold-reader test | same; cold-reader record — **met at this commit, pending the owner's merge** (`check_site.py --gate d3`; `evidence/d3/cold_read/`) |
-| D4 | `claude/epic-cori-60fpeb` (continued; process note in `ESCALATIONS.md`) | all 288 documents via family rules | three suites pass on `design/reference/out/`; all rows ≥ `BUILT` — **met at this commit, pending the owner's merge**: every route row `VERIFIED` (`check_site.py --gate d4`, `check_binding.py`) |
-| D5 | `claude/epic-cori-60fpeb` (continued; process note in `ESCALATIONS.md`) | every tool state and journey, keyboard, zoom, reduced motion, forced colours | `07_INTERACTION_ACCESSIBILITY.md` — **met at this commit, pending the owner's merge** (`check_journeys.py`; D5 rows `VERIFIED`, the two unbound verification states `DESIGNED`) |
-| D6 | `design/d6-visuals-social-print` | visuals per contract, frames, social templates, print | contract-by-contract evidence |
+| D2 | `claude/epic-cori-60fpeb` (planned `design/d2-hard-families`; the branch this environment may push, as at D1) | Explore, 5 hard domains, Evidence index, §9.1 record set, Compare, `/data/` | each §9.2 case proved (`check_site.py`); ledger rows `VERIFIED` or gap explained — **accepted at `2effd8b`, the merge of pull request #4** |
+| D3 | `claude/epic-cori-60fpeb` (continued on the D2 branch and pull request; process note in `ESCALATIONS.md`) | Readings index + all Readings, Measurement, Methodology, trust, report journey, 404; Home cold-reader test | same; cold-reader record — **accepted at `2effd8b`, the merge of pull request #4** (`check_site.py --gate d3`; `evidence/d3/cold_read/`) |
+| D4 | `claude/epic-cori-60fpeb` (continued; process note in `ESCALATIONS.md`) | all 288 documents via family rules | three suites pass on `design/reference/out/`; all rows ≥ `BUILT` — **accepted at `2effd8b`, the merge of pull request #4**: every route row `VERIFIED` (`check_site.py --gate d4`, `check_binding.py`) |
+| D5 | `claude/epic-cori-60fpeb` (continued; process note in `ESCALATIONS.md`) | every tool state and journey, keyboard, zoom, reduced motion, forced colours | `07_INTERACTION_ACCESSIBILITY.md` — **accepted at `2effd8b`, the merge of pull request #4** (`check_journeys.py`; D5 rows `VERIFIED`, the two unbound verification states `DESIGNED`) |
+| D6 | `claude/bold-maxwell-r3o015` (planned `design/d6-visuals-social-print`; created at the accepted `main` `2effd8b`; process note in `ESCALATIONS.md`) | visuals per contract, frames, social templates, print | contract-by-contract evidence |
 | D7 | `design/d7-acceptance` | last-10-percent audit, final handoff | checklist complete; Code recipient test |
 
 **D1 theses to be tested** (named only — not designed; each must answer type, grid, density, evidence-state grammar and

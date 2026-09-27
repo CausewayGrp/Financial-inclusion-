@@ -1,5 +1,16 @@
 # Repository Change Log
 
+## 2026-09-27 — Design D5 accepted by the merge of pull request #4; present-state records reconciled; D6 opened
+
+Pull request #4 (`claude/epic-cori-60fpeb`, D2 met at `9c263ac`, D3 at `beecdbb`, D4 at `aee1e1b`, D5 at `8be8e22`) was
+merged by the owner into `main` at `2effd8b`; Verify (Governance gates, Browser acceptance) is green on the merge commit.
+The present-state records that still described D1 as the last accepted gate and D5 as pending the merge are corrected
+in place — the README current-state row, the Design README status and plan table, `design/09_CODE_HANDOFF.md`,
+`design/07_INTERACTION_ACCESSIBILITY.md` — and a process note records the D6 branch (`claude/bold-maxwell-r3o015`,
+created at `2effd8b`). No historical entry is rewritten; no governed content, projection, contract, `dist/` file or
+audit record changed. D6 (the remaining visual contracts, detached and export frames, social-image templates, print and
+portable evidence) is the working gate. Not declared: DESIGN HANDOFF READY, PUBLIC RELEASE READY.
+
 ## 2026-09-27 — Design D5 (in progress): every tool state, technical state and journey proved by keyboard; the technical voice
 
 Same branch and draft pull request (`claude/epic-cori-60fpeb`, https://github.com/CausewayGrp/Financial-inclusion-/pull/4;
