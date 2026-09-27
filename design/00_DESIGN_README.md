@@ -1,16 +1,15 @@
 # Design package — Yemen Financial Inclusion Evidence · أدلة الشمول المالي في اليمن
 
-Status: **D1 in progress — converged on T4 · Instrument (DL-D1-006); the Design Intent Lock (`01_FOUNDATIONS.md` §4)
-and the foundational grammar (§5, `02_TOKENS.json`) are written from the reference implementation, which renders the
-stress trio in both languages with every hook and passes the rendered checks (DL-D1-007); the independent final
-review's MUST-FIX list is closed and re-verified (DL-D1-008); four escalations open; hand-back verdict on the pull
-request.** D0 accepted on `main` at
-`8bf19efad7505792ca22e0a3bda1db31fb85d33c`. D1 is developed on `claude/practical-cray-sr26c5` (process note in
-`ESCALATIONS.md`) and lands through one draft pull request into `main`
-(https://github.com/CausewayGrp/Financial-inclusion-/pull/3). D1 records: `01_FOUNDATIONS.md` (hypotheses,
-exploration protocol, benchmark result, process notes, critique; comparison, Lock and grammar when reached), the decision
-log below (DL-D1-*), `design/reference/` (the neutral harness and the one content path every renderer uses) and
-`design/exploration/d1_canvas/` (the composers that regenerate the canvas propositions). Not PUBLIC RELEASE READY.
+Status: **D2 in progress — the hard families built and proved on the accepted D1 direction.** D1 was accepted by the
+owner's merge (`main` at `851f496078776356b38892c946d40d154c819067`, pull request #3). D2 is developed on
+`claude/epic-cori-60fpeb` (created from that exact `main`) and lands through one draft pull request. At this commit every
+one of the 288 documents renders from the one content path (`design/reference/build.py`); Explore, the five hard domain
+answers, the Evidence directory, the §9.1 record set, Compare and Data & sources are composed in the T4 grammar and each
+§9.2 hard state on those routes is asserted on the rendered DOM (`design/reference/check_site.py`); the two repository
+browser suites, bilingual invariance and content parity pass on the reference site; the five D1 residuals are reconciled
+(DL-D2-002). The Reading index, Measurement and the trust pages build by the family rule and are composed at D3. D2
+records: `04_PAGE_FAMILY_COMPOSITIONS.md`, `03_COMPONENT_CATALOG.md` (seeded), the decision log below (DL-D2-*),
+`design/evidence/d2/`. Not PUBLIC RELEASE READY.
 
 ## 1. What this package is
 
@@ -18,23 +17,25 @@ The Design package of brief §19: decision log (this file), coverage ledger (`CO
 (`DESIGN_DEBT.md`), escalations (`ESCALATIONS.md`) and the progressive Design→Code mapping (`09_CODE_HANDOFF.md`).
 Files `01`–`08`, `10` and `design/reference/` are created at the gate that first needs them (plan, §6).
 
-**Reference implementation: the stress trio only (D1).** `design/reference/` holds one content path
-(`yfie/content.py` reads `site-src/content/**`; never a copied content model, never retyped text), the neutral harness
-(`yfie/neutral.py`, unstyled, every brief §19 hook), the accepted renderer of the converged direction
-(`yfie/render.py` with `theme.py`, the one stylesheet, and `visuals.py`, the contract drawings) and the checks
-(`check_content.py`: parity with `dist/`; `check_trio.py`: the rendered conditions of the viewport suite on the trio
-plus the hooks and an interaction smoke test with the baseline runtime). Until `design/reference/out/` renders all
-288 documents (D4), this package is an incomplete hand-back by definition (brief §19).
+**Reference implementation (D2: every document builds; the hard families composed).** `design/reference/` holds one
+content path (`yfie/content.py` reads `site-src/content/**` for all eleven families; never a copied content model, never
+retyped text), the neutral harness (`yfie/neutral.py`), the accepted renderer of the converged direction
+(`yfie/render.py` — shell, objects, the trio; `yfie/families.py` — the other families; `theme.py`, the one stylesheet;
+`visuals.py`, the contract drawings) and the checks (`check_content.py`: numeric and text-block parity with `dist/` on
+every document; `check_trio.py`: the D1 trio; `check_site.py`: the D2 routes with the family hooks, the §9.2 hard-state
+assertions, degraded renders and the evidence writer). The package is still an incomplete hand-back until every family is
+composed and reviewed on its own ledger row (D3–D4) and the acceptance checklist is complete (D7).
 
-Build and preview: `python3 design/reference/build.py` (renderer `accepted`; `--renderer neutral` for the harness)
-writes `design/reference/out/` — the trio in both languages, `assets/yfie.css`, the unchanged fonts and logo, the
-baseline runtime, and `out/_bundle/<route>__<lang>.json`, the exact content structures a renderer receives. Check with
-`python3 design/reference/check_content.py --text`, `python3 design/reference/check_trio.py --shots --degraded` and
-`python3 design/reference/tokens.py --check`; preview with
-`python3 -m http.server 4173 --directory design/reference/out` (`/en/`, `/ar/`). Baseline: `python3 -m http.server
-4173 --directory dist`. Canvas propositions and the reference row: `python3 design/exploration/d1_canvas/build_boards.py`
-and `reference_boards.py` regenerate the artboards into the git-ignored `design/exploration/d1_canvas/out/`
-(`design/exploration/d1_canvas/README.md`).
+Build and preview: `python3 design/reference/build.py` (renderer `accepted`; `--routes trio` for the D1 build; `--renderer
+neutral` for the harness) writes `design/reference/out/` — the 286 localized documents, the root entry, the 404,
+`robots.txt`, `assets/yfie.css`, the unchanged fonts and logo, the baseline runtime, and `out/_bundle/<route>__<lang>.json`,
+the exact content structures a renderer receives. Check with `python3 design/reference/check_content.py --text`,
+`python3 design/reference/check_site.py --gate d2 --degraded`, `python3 design/reference/check_trio.py`,
+`python3 design/reference/tokens.py --check`, and the repository suites on the site:
+`YFIE_SITE_DIR=design/reference/out python3 scripts/tests/test_public_tools.py`, `… audit/tranche_c/checks/viewport_acceptance.py`,
+`… audit/tranche_c/checks/bilingual_invariance.py`; preview with `python3 -m http.server 4173 --directory design/reference/out`
+(`/en/`, `/ar/`). Baseline: `python3 -m http.server 4173 --directory dist`. The D1 canvas composers
+(`design/exploration/d1_canvas/`) are lineage; the reference renderer supersedes them.
 
 ## 2. Authority used
 
@@ -149,7 +150,7 @@ to isolate in RTL and URLs); 15 routes whose Page Spec sections are split by lan
 |---|---|---|---|
 | D0 | `design/d0-orientation` | these records | records committed; plan names theses; escalations listed |
 | D1 | `claude/practical-cray-sr26c5` (planned `design/d1-theses`; process note in `ESCALATIONS.md`) | three theses on the trio (Home, `/evidence/CLM-003/`, `/readings/same-year-different-number/`), EN+AR, 390 & 1440; choose; then tokens, state grammar, shell, type proved at 320/390/640/1440 + keyboard | `01_FOUNDATIONS.md`, `02_TOKENS.json`, decision-log entries; trio rows `VERIFIED` |
-| D2 | `design/d2-hard-families` | Explore, 5 hard domains, Evidence index, §9.1 record set, Compare, `/data/` | each §9.2 case proved |
+| D2 | `claude/epic-cori-60fpeb` (planned `design/d2-hard-families`; the branch this environment may push, as at D1) | Explore, 5 hard domains, Evidence index, §9.1 record set, Compare, `/data/` | each §9.2 case proved (`check_site.py`); ledger rows `VERIFIED` or gap explained — **met at this commit, pending the owner's merge** |
 | D3 | `design/d3-synthesis` | Readings index + all Readings, Measurement, Methodology, trust, report journey, 404; Home cold-reader test | same; cold-reader record |
 | D4 | `design/d4-binding` | all 288 documents via family rules | three suites pass on `design/reference/out/`; all rows ≥ `BUILT` |
 | D5 | `design/d5-interaction-a11y` | every tool state and journey, keyboard, zoom, reduced motion, forced colours | `07_INTERACTION_ACCESSIBILITY.md` |
@@ -216,7 +217,12 @@ need the same route unless a write-capable environment (e.g. Claude Code acting 
   listed, never filled with authored copy.
 - **09_CODE_HANDOFF.md:** updated at each gate end, never back-filled at D7.
 - **01_FOUNDATIONS.md:** D1's working record — hypotheses, exploration protocol and results, critique, comparison,
-  Design Intent Lock and grammar; its status line states what is proven and what is not.
+  Design Intent Lock and grammar; its status line states what is proven and what is not (D2 addendum in §2.6).
+- **04_PAGE_FAMILY_COMPOSITIONS.md** (from D2): the deterministic module order and composition rules of every family, the
+  first-screen contract, depth, next actions, and where each bound visual sits.
+- **03_COMPONENT_CATALOG.md** (seeded at D2): every object with its governed inputs, states, widths, Arabic, names and
+  keyboard, colour-free survival, fallback and the limitation it keeps visible; the figure anatomy; the evidence-state
+  grammar with what is drawn and what is designed only.
 
 **D7 Definition of Done (interpretation).** A runnable, fully populated bilingual reference site in
 `design/reference/out/` — all 288 documents, every tool and state, both languages, four widths, no placeholder, every
@@ -394,3 +400,136 @@ not public release (REL-01…04 remain).
   MERGE REQUIRED" (`01_FOUNDATIONS.md` §6); its small residuals — a corrupt ledger note, an empty credit line on the
   Home figure, non-round ticks, a wrong table measurement, a stale path, three overstated sentences, hit areas — are
   closed in the hand-back commit, with forced colours and target size now asserted by `check_trio.py`.
+
+### DL-D2-001 · D2 · 2026-09-27 · D2 authority, branch and persistence
+- Problem: establish the D2 start state after the owner's merge of D1, and how D2 reaches the repository.
+- Evidence: `origin/main` = `851f496078776356b38892c946d40d154c819067` (the merge of pull request #3; D1 head `604201d`
+  contained); tree clean; `checksums.py --check` and `validate.py` pass; Production Master `17db032b…038690b`, Page
+  Specs `d4574804…824b69aa`, logo `5830163d…60c6a90` hashed directly and unchanged.
+- Alternatives: continue on the merged D1 branch; the planned `design/d2-hard-families`; the branch this environment
+  may push.
+- Chosen: `claude/epic-cori-60fpeb`, created at exactly `851f496`; one gate, one draft pull request into `main`; the
+  steward may re-home the name. Milestone commits carry the records; work not pushed does not exist.
+- Arabic / responsive / a11y: none. Code: none. Compromise: none.
+
+### DL-D2-002 · D2 · 2026-09-27 · The five D1 residuals reconciled by their true authority
+- Problem: the hand-back left four escalations and one composition question for the steward; D2 must not wait on
+  items the repository already decides, nor invent what it does not.
+- Evidence: `visual_design_contracts.json` — every `credit` carries `language_note`: "Publisher names are governed in
+  English only (15, 34); Arabic frames print them as isolated left-to-right runs"; Home section 3 carries no newline or
+  marker in either language; `interface_copy.json` holds no "on this page" label; brief §4.5: Home's baseline order "is a
+  precedent, not a mandate; keep the `#system` anchor".
+- Alternatives: ask the steward for all five; resolve none; classify each by its authority and resolve what the
+  repository already determines.
+- Chosen: (1) Arabic credit line — PAGE SPEC / CONTROLLED CONTENT, already answered by the contract: every frame prints
+  the governed credit as `<bdi dir="ltr">`; escalation closed. (2) Home pacing marker — Master-first; stays open,
+  non-blocking (the Lock's connective rule with the whole-paragraph fallback holds; DEBT-008). (3) IMF lane evidence
+  state — MASTER / EVIDENCE AUTHORITY; a question only the steward answers; REPORTED rendered as governed; stays open.
+  (4) In-page navigation name — ENGINEERING / ACCESSIBILITY: the index is named by the `h1` of the object it indexes
+  (`aria-labelledby="page-title"`), the strip likewise, each edge group by its own governed heading; no label authored;
+  DEBT-006 and the escalation closed. (5) Home section order — DESIGN, decided by brief §4.5; closed.
+- Arabic / responsive / a11y: the credit run keeps its Latin order inside Arabic text; every `nav` on every page now
+  has an accessible name (`check_site.py` fails on an unnamed `nav`).
+- Code: inherits the `aria-labelledby` pattern and the credit isolation. Compromise: a dedicated governed label would
+  read better than the page title for the index; it is not an authority question, so it is not escalated.
+
+### DL-D2-003 · D2 · 2026-09-27 · The paper scaling test made real: one grammar, eleven families, varied intensity
+- Problem: prove that the D1 evidence intelligence scales across the real product without a second grammar and
+  without repetition, timidity, dashboards or English-first composition (brief §9.4; hand-back §R).
+- Evidence: all 288 documents render from `content.py` → `render.py`/`families.py`; `04_PAGE_FAMILY_COMPOSITIONS.md`;
+  `design/evidence/d2/` (first screens at 390 and 1440 px, EN and AR, of the hard routes; figure crops); the two
+  repository suites and invariance pass on the site.
+- Alternatives: a template per family; one identical template; one grammar with composition rules per family.
+- Chosen: one page object (head → answers → boundary voice → figures → compact objects → depth → next → foot → spine)
+  with composition rules per family and intensity that follows the evidence structure: Explore is a numbered question
+  index; the domain answers open on their contract's always-visible limits and vary by `presentation_family`; the
+  directory is search plus a question-grouped register of 110 rows; Compare leads with the boundary and recomposes its
+  table at 320 px as numbered slot blocks; Data & sources is a register of curated categories and dependency groups.
+  Where a bound visual sits is a recorded table, not a per-route guess.
+- Arabic / responsive / a11y: Arabic composed on its own tokens throughout; identifiers, dates and codes isolated; axes
+  left-to-right; one column below 600 px, the spine from 900 px, the rubric column from 1200 px; every landmark named.
+- Code: `families.py` is implementation-grade composition; the placement table is data Code reuses.
+- Compromise: the D3 families (Reading index, Measurement, trust) build by the family rule and are `BUILT`, not
+  reviewed; Yemen material grounding beyond abstraction is still not attempted (DEBT-007).
+
+### DL-D2-004 · D2 · 2026-09-27 · The domain answer and the record's evidence states
+- Problem: compose eight domain answers from the presentation contract without a chart wall, with the limits first
+  and the depth honest; keep framing, composite, partial, thin and withheld records from looking weaker or broken.
+- Evidence: `presentation_priority.json` (`mobile_priority`: lead → supporting → primary → verify; `after_primary`);
+  brief §12 on several visuals per page; `check_site.py` assertions for CLM-004, -014, -015, -031, -039, -044, -045.
+- Alternatives: the baseline order (hero, band, primary); limits after the answers as on the Record; the contract's
+  mobile priority everywhere.
+- Chosen: the contract's order — the band (boundary voice) before the answers; the first-screen visual after
+  `after_primary`; the small multiple and unplaced visuals in a depth group under the governed "Another view" rubric;
+  progressive sections in one disclosure; then Readings, related questions, Measurement, Verify. On the Record the
+  lineage statement (framing, composite, partial) is question 6's answer in the body voice; a record without a public
+  locator says so in the body voice; the governed source intro is printed unless the record is a framing rule; the 13
+  comparable records carry a Compare entry; a `VIS-` record draws its visual under its first answer (its canonical route).
+- Arabic / responsive / a11y: the band's double rule and label carry the limit without colour; every disclosure has a
+  governed summary.
+- Code: the composition rules in `04_PAGE_FAMILY_COMPOSITIONS.md` §2–§3.
+- Compromise: the source intro's absence on the framing record is a recorded exception of the text-parity check.
+
+### DL-D2-005 · D2 · 2026-09-27 · The D2 figures: forms per contract, one anatomy, the state grammar drawn
+- Problem: draw VIS-FINDEX-GAPS, VIS-REMITTANCE-MACRO, the POS small multiple, VIS-PAYMENT-ANATOMY, VIS-REMITTANCE-COST
+  and the payment chain truthfully, in both languages, at every width, under strict CSP, so that the hard states can be
+  asserted rather than argued.
+- Evidence: each contract's `form`, `annotation`, `missing`, `breaks`, `mobile` and `rtl` fields; the grammar table;
+  RV-CWR-009's `step_mapping` and event objects (VIS-PAYMENT-RAILS's rationale asks for that reuse); `check_site.py`
+  assertions (bars 9, gaps 4 as brackets; 3 states keyed, break not joined, 5 dashed segments; 3 panels with own axes,
+  3 rings, 1 labelled gap; 7 objects, 2 withheld without digits; chain 7 steps, 3 evidenced, the first open step marked).
+- Alternatives: one generic chart per form; contract-specific drawings sharing one frame.
+- Chosen: the D1 anatomy for every figure (rubric, title, question, scope, panels, notes, boundary, credit, canonical
+  link, cite, visible text alternative with the table) with six forms (`03_COMPONENT_CATALOG.md` §2): bars with
+  bracket gaps; state-keyed time series with the break, missing, disagreement and nominal grammar and a key of states
+  with their source document; dot rows; an object list with WITHHELD in place of a value; the chain ladder with the
+  first open step in the boundary voice; text frames for every contract without rows. One number rule with precision
+  as governed (a rounding fault found by the parity check was fixed). Value labels on every point, on two rows for
+  dense series, and below 600 px only the first, last, marked and state-change points.
+- Arabic / responsive / a11y: value and time axes left-to-right; labels, panel order and rows follow the reading
+  direction; the credit isolated; forced colours keep marks, bars, rules and chart text; print keeps each figure whole.
+- Code: `visuals.py` drawers and the percentage-coordinate technique; the grammar table is the contract for D6.
+- Compromise: seven grammar states have no contract row anywhere and are designed only; the fallback tables head only
+  the value column (escalated); dense labels rely on the table below 600 px (DEBT-012).
+
+### DL-D2-006 · D2 · 2026-09-27 · Compare and the source register: tools composed, runtime untouched
+- Problem: give Compare and Data & sources the T4 grammar while keeping `site-src/app.js` and every test hook unchanged,
+  and prove compare_unlike and source_scale.
+- Evidence: `test_public_tools.py` 25/26 on the reference site; `check_site.py` (boundary before controls, verdict
+  before table and in the boundary voice, no numeric columns, text-labelled states; 151 sources, 28 curated in 6
+  categories, supporting open, reference closed, every source named or referenced, no locator-less source named).
+- Alternatives: a new runtime; CSS-only composition of the runtime's output.
+- Chosen: the runtime's output is styled, not rewritten: the verdict as the boundary voice; the table in its named
+  region; at 320–639 px each dimension row becomes a block with its cells numbered in slot order by CSS counters (the
+  slot labels are governed) — a recomposition, not a shrink (EAD-06). The register: curated cards by
+  `resource_category`, citation cards by governed title, locator-only sources by reference and locator, dependency
+  disclosures, the filter and statuses as hooks.
+- Arabic / responsive / a11y: `<select>` controls ≥ 44 px; the copy-link and copy-reference actions are buttons; the
+  filter has a visible governed label; every hidden row uses `[hidden]`.
+- Code: the CSS recomposition rule and the register composition; nothing in the runtime.
+- Compromise: the supporting group is open by default and long (94 rows) — paging or a category filter is a D5/D6
+  question (DEBT-011).
+
+### DL-D2-007 · D2 · 2026-09-27 · Every document builds; the repository suites run on the reference site; the checks are widened honestly
+- Problem: a green test must correspond to the implementation being accepted; the D1 build could not run the
+  repository suites (DEBT-009), and the D2 routes need their own proof.
+- Evidence: `build.py` builds all 288 documents plus the root, the 404 and `robots.txt`; `test_public_tools.py` 25/26
+  (1 not applicable, as on `dist/`), `viewport_acceptance.py` 168/168, `bilingual_invariance.py` 0 of 143 — all with
+  `YFIE_SITE_DIR=design/reference/out`; `check_site.py` 168 renders, 84 smoke tests, 157 hard-state assertions, 20
+  degraded renders; `check_content.py --text` PASS on 288 documents; `check_trio.py` 24/12 unchanged.
+- Alternatives: keep the trio-only build until D4; build everything with the family rule now.
+- Chosen: build everything now (the D3 families by the family rule, recorded as `BUILT`), run the suites unchanged, add
+  `check_site.py` with hard-state assertions per route as the D2 evidence, and widen `check_content.py` in two bounded
+  ways: a number the reference prints beyond the baseline may also be a number in the governed content the loader gave
+  that page (the bundle), and inline elements no longer count as word breaks (a tag-stripping artefact). Both were
+  found by real faults (a rounding error; a linkified address).
+- Arabic / responsive / a11y: the suites cover both editions at four widths. Code: the suites are the contract.
+- Compromise: `check_content.py` fails on an unbuilt site (a guard added after it once passed on nothing).
+
+### DL-D2-008 · D2 · 2026-09-27 · Records, debt and escalations at D2
+- Problem: keep the durable records the only memory.
+- Chosen: `COVERAGE.csv` — 190 D2 rows `VERIFIED` (176) or `DESIGNED` with the gap explained (14: grammar states no
+  contract row carries); 1,001 D3/D4 rows `BUILT`; the seven D2 figures' D6 rows `VERIFIED`, the text frames `BUILT`.
+  `DESIGN_DEBT.md`: DEBT-004, -006, -009 closed; DEBT-002 advanced; DEBT-011…013 opened. `ESCALATIONS.md`: three
+  closed, two open, two raised (fallback-table column labels; rows for VIS-TARGET-RESULT-STATE and VIS-MFI-DIVERGENCE).
+  `09_CODE_HANDOFF.md`: state at D2. `04_PAGE_FAMILY_COMPOSITIONS.md` and `03_COMPONENT_CATALOG.md` created.

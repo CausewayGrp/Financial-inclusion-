@@ -17,7 +17,25 @@ Contract: `handoff/DESIGN_TO_CODE_CONTRACT.md`. Updated at every gate end; never
 | Print / export | NOT STARTED | Downloads ship disabled until OWN-04 |
 | Reference implementation | DOES NOT EXIST | DEBT-002 |
 
-## State at D1 (in progress — updated at milestones, not back-filled)
+## State at D2 (in progress — updated at milestones, not back-filled; rows not listed are as at D1)
+
+| Area | Status | Notes |
+|---|---|---|
+| Content path | IMPLEMENTED for every family | `design/reference/yfie/content.py` loads all eleven families (`Content.page(route, lang)` dispatches by the navigation contract's `page_family`): Question Entry (clusters from the handoff inventory's `question_groups`), Domain Answer (order from `presentation_priority.json`), Evidence Directory (the question-grouped register), Evidence Record (now with its own visual and a Compare entry), Comparison (the runtime payload from the governed fields, dimensions from the family contract), Data & Source (curated by `resource_category`, dependency groups from the evidence specs' source references, inventory list, chronology), Reading Index, Measurement, Reference / Trust (report path context), 404, root. `visual()` resolves every `<field>_label` to the page language, carries `frame_labels`, `objects`, `missing_x`, the record's method text and the grammar labels; VIS-PAYMENT-RAILS carries RV-CWR-009's event set |
+| Routes | ALL 288 BUILD | `python3 design/reference/build.py` writes every document, the root entry, the 404 and `robots.txt` (`sitemap.xml` once the origin is set). Family → renderer: `render.py` (Orientation, Evidence Record, Reading), `families.py` (the rest). Composition rules: `04_PAGE_FAMILY_COMPOSITIONS.md` |
+| Components | CATALOGUE SEEDED | `03_COMPONENT_CATALOG.md`: objects, the figure anatomy, six drawing forms, the evidence-state grammar (what is drawn, what is designed only), the tools' hooks |
+| Visual contracts | 8 DRAWN (D1 + D2); the rest as text frames | RV-CWR-001 (D1); VIS-FINDEX-GAPS (bars + bracket gaps); VIS-REMITTANCE-MACRO and the POS small multiple (state-keyed time series: filled/hollow/square marks, dashed projections, break never joined, labelled missing gap, ringed disagreement with the record's method text, NOMINAL on the axis title, a key of states with their source document); VIS-REMITTANCE-COST (dot rows); VIS-PAYMENT-ANATOMY (object list, WITHHELD in place of a value, NOT_COMPARABLE labels); VIS-PAYMENT-RAILS (the chain ladder from RV-CWR-009's governed events, no values). Technique unchanged: percentage-coordinate SVG, no viewBox, `direction="ltr"`, no inline style; every value through `plain_num` (precision as governed); the credit as `<bdi dir="ltr">` |
+| Number rule | CORRECTED | `plain_num` never rounds: the shortest exact representation with thousands separators (317.639 stays 317.639); years unseparated; `bdi` isolation in HTML text, never inside SVG `<text>` |
+| Headings and landmarks | DECIDED, NAMED | one `h1#page-title` per page; every `nav` named: the index and strip by the `h1` (`aria-labelledby="page-title"`), edge groups by their `h3`, the crumb, primary, trust, footer and next-action navs by governed labels; `check_site.py` fails on any unnamed `nav` |
+| Responsive / RTL | VERIFIED on 21 D2 routes | 320/390/640/1440 px in both languages; Compare's table recomposed below 640 px by CSS counters keyed to the governed slot order (runtime untouched); the register and the hub as lists; `[hidden]` honoured |
+| Tools | RENDERED, RUNTIME UNCHANGED | `site-src/app.js` copied as is; Search (dialog + the directory's inline input, status and results regions), Compare (four `<select>` slots, copy link, status, output, `yfie-compare`, `yfie-compare-dimensions`; entry from each comparable record and from a Reading's trace), source register (filter, status, no-match, `#source-<ID>` focusable rows, `.source-locator-details`), report path (`[data-correction-context]`, `yfie-record-ids`, the mail action for a known record); `test_public_tools.py` 25/26 on the site |
+| Strict CSP | MET | zero `[style]` on all 288 documents; JSON blocks only |
+| Print | BASICS on every family | the D1 rules plus: figures kept whole with their boundary; controls, filters and record actions removed; dense value labels restored; hub and register disclosures printed |
+| Evidence and checks | COMMITTED | `design/evidence/d2/` (60 PNG: first screens at 390 and 1440 px of eleven routes in both languages, figure crops of the eight D2 figures in both languages); `check_site.py` (168 renders, 84 smoke tests, 157 hard-state assertions, 20 degraded renders); `check_content.py --text` (bundle-scoped numbers, inline-tag-safe text) on 288 documents; `check_trio.py` unchanged; both repository suites and `bilingual_invariance.py` on the site |
+| Temporary vs intended | RECORDED | Temporary: the source register's supporting group open and long (DEBT-011); dense value labels hidden below 600 px (DEBT-012); fallback tables with unheaded columns (DEBT-013); the D3 families composed by the family rule only (DEBT-002). Intended: a governed-field filter on the register; a narrow form that prints every value; governed column labels; composition per family at D3 |
+| Exceptions | RECORDED | The governed source intro is not printed on a framing record (`check_content.py` `FRAMING_EXCEPTION`); Explore prints section 5's body as the list's introduction and drops its heading (brief §4.5); Home's order as at D1 (brief §4.5); the Reading index, Measurement and trust heads carry the governed flow rubric instead of a family rubric until D3 |
+
+## State at D1 (history — the D2 table above supersedes the rows it repeats)
 
 | Area | Status | Notes |
 |---|---|---|
@@ -46,7 +64,7 @@ Contract: `handoff/DESIGN_TO_CODE_CONTRACT.md`. Updated at every gate end; never
 
 ## Temporary vs intended
 
-At D0 nothing was implemented. At D1 the "Temporary vs intended" row of the D1 table above is the live statement;
+At D0 nothing was implemented. At D2 the "Temporary vs intended" row of the D2 table above is the live statement (the D1 row stands where it is not superseded);
 nothing in `dist/` or `site-src/styles.css` is a Design decision. Without JavaScript below 900 px the primary
 navigation stays collapsed (the menu button needs the runtime); every route remains reachable through the
 institutional band's link groups.

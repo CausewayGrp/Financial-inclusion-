@@ -56,7 +56,7 @@ def json_block(id_: str, data) -> str:
 # ------------------------------------------------------------------------------------------------ build hook
 def assets(out: Path, variant: str = "") -> None:
     """Write the stylesheet. Fonts and the logo are copied unchanged by the build."""
-    (out / "assets" / "yfie.css").write_text(theme.FONT_FACES + "\n" + theme.CSS, encoding="utf-8")
+    (out / "assets" / "yfie.css").write_text(theme.FONT_FACES + "\n" + theme.CSS + "\n" + theme.CSS_D2, encoding="utf-8")
 
 
 # ------------------------------------------------------------------------------------------------ shell
@@ -93,11 +93,15 @@ def header(shell: dict) -> str:
             f'<button type="button" class="tbtn lang" data-lang="{other}" aria-label="{esc(L["lang_switch_action"])}" lang="{other}" dir="{"ltr" if other == "en" else "rtl"}">{esc(L["lang_switch_name"])}</button>'
             f'<button type="button" class="tbtn menu" data-menu aria-label="{esc(L["menu"])}" aria-controls="primary-nav" aria-expanded="false">{esc(L["menu"])}</button></div>'
             f'<div id="utility-status" class="sr-only" role="status" aria-live="polite" aria-atomic="true" data-copied-label="{esc(L["copied"])}"></div></div></header>'
-            f'<dialog id="search-dialog" class="search" aria-labelledby="search-dialog-title"><div class="search-panel"><div class="search-head"><strong id="search-dialog-title">{esc(L["search_title"])}</strong>'
+            f'{search_dialog(shell)}<main id="main"><div class="page">')
+
+
+def search_dialog(shell: dict) -> str:
+    L = shell["labels"]
+    return (f'<dialog id="search-dialog" class="search" aria-labelledby="search-dialog-title"><div class="search-panel"><div class="search-head"><strong id="search-dialog-title">{esc(L["search_title"])}</strong>'
             f'<button type="button" class="tbtn" data-search-close aria-label="{esc(L["search_close"])}">{esc(L["search_close"])}</button></div>'
             f'<input id="global-search-dialog" data-search-input class="search-input" placeholder="{esc(L["search_placeholder"])}" aria-label="{esc(L["search"])}">'
-            f'<div class="search-status" data-search-status role="status" aria-live="polite" aria-label="{esc(L["search_status"])}"></div><div data-search-results class="search-results"></div></div></dialog>'
-            f'<main id="main"><div class="page">')
+            f'<div class="search-status" data-search-status role="status" aria-live="polite" aria-label="{esc(L["search_status"])}"></div><div data-search-results class="search-results"></div></div></dialog>')
 
 
 def footer(shell: dict) -> str:
@@ -150,16 +154,20 @@ def compact(rec: dict, L: dict, open_label: str, cls: str = "compact") -> str:
 
 def spine(index: list, edges: list, foot: bool = False, foot_index: bool = True) -> str:
     """The verification spine. Exactly one is visible at any width: beside the object from 900 px (index + edges), at
-    the object's foot below (index unless the page carries a strip, + edges). Accessible name: escalated (DEBT-006)."""
+    the object's foot below (index unless the page carries a strip, + edges). Accessible names come from governed text
+    already on the page: the index is named by the `h1` of the object it indexes (`aria-labelledby="page-title"`), each
+    edge group by its own governed heading — no label is authored (D2, closes DEBT-006)."""
+    sfx = "f" if foot else "s"
     idx = "".join(f'<li><a href="#{a}"><span class="n">{i+1:02d}</span><span>{esc(t)}</span></a></li>' for i, (a, t) in enumerate(index))
-    ed = "".join(f'<div class="edges"><h3>{esc(e[0])}</h3>' + (f'<p class="small">{esc(e[2])}</p>' if len(e) > 2 and e[2] else "") + "<ul>" + "".join(f"<li>{x}</li>" for x in e[1]) + "</ul></div>" for e in edges if e[1])
+    ed = "".join(f'<nav class="edges" aria-labelledby="edge-{sfx}{n}"><h3 id="edge-{sfx}{n}">{esc(e[0])}</h3>' + (f'<p class="small">{esc(e[2])}</p>' if len(e) > 2 and e[2] else "") + "<ul>" + "".join(f"<li>{x}</li>" for x in e[1]) + "</ul></nav>"
+                 for n, e in enumerate(edges) if e[1])
     cls = "spine foot-spine" if foot else "spine"
-    index_html = f'<nav class="index"><ul>{idx}</ul></nav>' if (not foot or foot_index) else ""
+    index_html = f'<nav class="index" aria-labelledby="page-title"><ul>{idx}</ul></nav>' if (not foot or foot_index) else ""
     return f'<aside class="{cls}">{index_html}{ed}</aside>'
 
 
 def strip(index: list) -> str:
-    return '<nav class="strip">' + "".join(f'<a href="#{a}"><span class="n">{i+1:02d}</span><span>{esc(t)}</span></a>' for i, (a, t) in enumerate(index)) + "</nav>"
+    return '<nav class="strip" aria-labelledby="page-title">' + "".join(f'<a href="#{a}"><span class="n">{i+1:02d}</span><span>{esc(t)}</span></a>' for i, (a, t) in enumerate(index)) + "</nav>"
 
 
 def paced_groups(text: str) -> list[tuple[bool, str]]:
@@ -184,9 +192,10 @@ def evidence_record(page: dict, shell: dict) -> str:
     L = page["labels"]
     meta = f'<meta name="yfie-citation" content="{esc(page["citation"])}"><meta name="yfie-record-id" content="{esc(page["id"])}">'
     index = [("q1", L["establishes"]), ("q2", L["measures"]), ("q3", L["applies"]), ("q4", L["currentness"]), ("q5", L["does_not_establish"]), ("q6", L["source"]), ("q7", L["more"])]
-    head_ = (f'<div class="head">{crumb(page["breadcrumb"], shell)}{rubric(L["family"])}{clock(L["period"], esc(page["period"]))}<h1>{esc(page["title"])}</h1>'
+    head_ = (f'<div class="head">{crumb(page["breadcrumb"], shell)}{rubric(L["family"])}{clock(L["period"], esc(page["period"]))}<h1 id="page-title">{esc(page["title"])}</h1>'
              + (f'<p class="st">{esc(page["lead"])}</p>' if page["lead"] else "") + "</div>")
-    qa = [f'<div class="qa first" id="q1">{rubric(L["establishes"], 1, "h2")}<div class="st"><p>{esc(page["summary"])}</p></div></div>' + strip(index),
+    own_fig = (f'<span class="rubric mt18">{esc(L["visual_eyebrow"])}</span>' + figure(page["visual"], shell["labels"]["cite"], DISC.origin(), heading="h3")) if page.get("visual") and page["visual"].get("tier") != "RETIRE_FROM_DESIGN" else ""
+    qa = [f'<div class="qa first" id="q1">{rubric(L["establishes"], 1, "h2")}<div class="st"><p>{esc(page["summary"])}</p></div>{own_fig}</div>' + strip(index),
           f'<div class="qa" id="q2">{rubric(L["measures"], 2, "h2")}<div class="body"><p>{esc(page["definition"])}</p></div></div>',
           f'<div class="qa" id="q3">{rubric(L["applies"], 3, "h2")}<div class="body"><p>{esc(page["universe"])}</p></div></div>',
           f'<div class="qa" id="q4">{rubric(L["currentness"], 4, "h2")}<div class="body"><p>{esc(page["currentness"])}</p></div></div>']
@@ -198,18 +207,22 @@ def evidence_record(page: dict, shell: dict) -> str:
         src_extra += f'<p class="small" data-evidence-sources-without-locator>{esc(page["sources_without_locator_note"])}</p>'
     if page["members"]:
         src_extra += f'<h3>{esc(page["members_heading"])}</h3><ul class="rlist">' + "".join(f'<li><a href="{m["href"]}">{esc(m["title"])}</a> {bdi(m["id"])}</li>' for m in page["members"]) + "</ul>"
-    if page["lineage_statement"]:
-        src_extra += f'<p class="small" data-lineage-state="{esc(page["closure_state"])}">{esc(page["lineage_statement"])}</p>'
-    if page["no_source_message"]:
-        src_extra += f'<p class="small empty" data-evidence-source-unavailable>{esc(page["no_source_message"])}</p>'
+    if page["lineage_statement"]:   # an evidence state (framing rule, composite, partial): the answer itself, never an error
+        src_extra += f'<div class="body"><p data-lineage-state="{esc(page["closure_state"])}">{esc(page["lineage_statement"])}</p></div>'
+    if page["no_source_message"]:   # no public locator: an honest state of the record, stated in the body voice
+        src_extra += f'<div class="body"><p data-evidence-source-unavailable>{esc(page["no_source_message"])}</p></div>'
     trace = (f'<div class="mt16"><span class="small"><b>{esc(L["trace"])}</b> · {esc(L["trace_intro"])}</span><div class="chips"><span class="chip">{bdi(page["id"])}</span>{chips}</div></div>' if page["trace_ids"] else "")
-    qa.append(f'<section class="qa" id="q6"><div>{rubric(L["source"], 6, "h2")}<span id="source"></span></div><div><p class="small">{esc(L["source_intro"])}</p><div class="mt10">{"".join(source_card(s) for s in page["sources"])}</div>{src_extra}{trace}</div></section>')
+    # the governed intro ("open the source record here …") is printed unless the record is a framing rule with no source to open
+    intro = f'<p class="small">{esc(L["source_intro"])}</p>' if page["closure_state"] != "FRAMING_NO_FACT" else ""
+    qa.append(f'<section class="qa" id="q6"><div>{rubric(L["source"], 6, "h2")}<span id="source"></span></div><div>{intro}<div class="mt10">{"".join(source_card(s) for s in page["sources"])}</div>{src_extra}{trace}</div></section>')
     more = "".join(f'<div class="qa"><h3 class="rubric">{esc(L[k])}</h3><div class="body"><p>{esc(page[k])}</p></div></div>' for k in ("method", "change_trigger", "verification") if page[k])
     if page["reading_guidance"]:
         more += f'<div class="qa"><h3 class="rubric">{esc(L["reading_guidance"])}</h3><div class="body">{paras(page["reading_guidance"]["paragraphs"])}</div></div>'
     qa.append(f'<div class="qa" id="q7">{rubric(L["more"], 7, "h2")}<details class="more"><summary>{esc(L["more_intro"])}</summary>{more}</details></div>')
     util = (f'<section class="util" data-record-id="{esc(page["id"])}"><div class="ref"><b>{esc(L["reference"])}</b> {bdi(page["id"])}</div>'
-            f'<div class="actions"><button type="button" class="tbtn evidence-cite-button" data-cite>{esc(L["cite"])}</button><a href="{page["hrefs"]["rights"]}">{esc(L["reuse"])}</a>'
+            f'<div class="actions"><button type="button" class="tbtn evidence-cite-button" data-cite>{esc(L["cite"])}</button>'
+            + (f'<a href="{page["compare_href"]}" data-compare-entry>{esc(L["compare"])}</a>' if page.get("compare_href") else "")
+            + f'<a href="{page["hrefs"]["rights"]}">{esc(L["reuse"])}</a>'
             f'<a href="{page["hrefs"]["corrections"]}">{esc(L["history"])}</a><a href="{page["hrefs"]["report"]}">{esc(L["report"])}</a></div><p class="small">{esc(L["reuse_note"])}</p></section>')
     used = [f'<a href="{x["href"]}">{esc(x["title"])}</a>' for x in page["used_in_readings"]]
     edges = [(L["used_in"], used),
@@ -222,7 +235,7 @@ def evidence_record(page: dict, shell: dict) -> str:
 def home(page: dict, shell: dict) -> str:
     L = page["labels"]; S = {s["order"]: s for s in page["sections"]}
     index = [("s3", S[3]["heading"]), ("s4", S[4]["heading"]), ("s9", S[9]["heading"]), ("s5", S[5]["heading"]), ("s6", S[6]["heading"]), ("s7", S[7]["heading"]), ("s8", S[8]["heading"]), ("sf", L["featured"])]
-    parts = [f'<div class="head">{rubric(L["product"])}<h1>{esc(page["title"])}</h1></div>']
+    parts = [f'<div class="head">{rubric(L["product"])}<h1 id="page-title">{esc(page["title"])}</h1></div>']
     recs = list(page["records"])
     demo = []
     for res, html_ in paced_groups(S[3]["body"]):
@@ -257,7 +270,7 @@ def reading(page: dict, shell: dict) -> str:
     L = page["labels"]; SL = shell["labels"]
     origin = DISC.origin()
     index = [(f's-{s["section_id"]}', s["heading"]) for s in page["sections"] if s["heading"]] + [("trace", L["trace"]), ("sources", L["sources"]), ("related", L["related"])]
-    head_ = (f'<div class="head">{crumb(page["breadcrumb"], shell)}{rubric(L["eyebrow"])}<p class="q">{esc(page["question"])}</p><h1>{esc(page["title"])}</h1><div class="st"><p>{esc(page["thesis"])}</p></div>'
+    head_ = (f'<div class="head">{crumb(page["breadcrumb"], shell)}{rubric(L["eyebrow"])}<p class="q">{esc(page["question"])}</p><h1 id="page-title">{esc(page["title"])}</h1><div class="st"><p>{esc(page["thesis"])}</p></div>'
              f'<div class="clocks">{clock(L["evidence_period"], esc(page["evidence_period"]))}<div class="clock"><span class="k">{esc(L["last_reviewed"])}</span><span class="v"><time datetime="{esc(page["last_reviewed_iso"])}">{esc(page["last_reviewed"])}</time></span></div></div></div>')
     bnd = f'<section class="bnd" data-reading-boundary>{rubric(L["do_not_infer"], tag="h2")}<p>{esc(page["prohibited_inference"])}</p></section>'
     essay = []
@@ -305,4 +318,19 @@ RENDERERS = {"Orientation": home, "Evidence Record": evidence_record, "Reading":
 
 
 def render(page: dict, shell: dict, variant: str = "") -> str:
-    return RENDERERS[page["family"]](page, shell)
+    if page["family"] in RENDERERS:
+        return RENDERERS[page["family"]](page, shell)
+    from . import families   # the D2 families share this module's objects and shell
+    return families.RENDERERS[page["family"]](page, shell)
+
+
+def render_site_files(out: Path, content) -> int:
+    """The neutral root entry, the bilingual 404 and the discovery files (F6: one implementation in scripts/discovery.py)."""
+    from . import families
+    origin = DISC.origin()
+    (out / "index.html").write_text(families.root_page(content.shell("ar", "/"), content.shell("en", "/")), encoding="utf-8")
+    (out / "404.html").write_text(families.not_found(content.not_found(), content.shell("ar", "/")), encoding="utf-8")
+    (out / "robots.txt").write_text(DISC.robots_txt(origin), encoding="utf-8")
+    if origin:
+        (out / "sitemap.xml").write_text(DISC.sitemap_xml(content.routes(), origin), encoding="utf-8")
+    return 2

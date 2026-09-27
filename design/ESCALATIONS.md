@@ -8,46 +8,48 @@ Answered by the steward, Master-first. Items are closed, never deleted.
 
 ## Open
 
-None raised at D0. No controlled-truth defect was found during read-in.
+Raised at D1 (27 September 2026), from the independent lens critique of the propositions (`01_FOUNDATIONS.md` §3), and
+reconciled at D2 by their true authority (DL-D2-002). Each was needed by a design actually rendered; none is filled with
+authored copy.
 
-Raised at D1 (27 September 2026), from the independent lens critique of the propositions (`01_FOUNDATIONS.md` §3).
-Each was needed by a design actually rendered; none is filled with authored copy.
-
-- `NEEDS_CONTROLLED_CONTENT — RV-CWR-001 (and every visual contract with a credit) — Arabic credit line — the
-  projection carries one credit string (`credit.text`, English: "IMF / Yemeni authorities; Central Bank of Yemen —
-  Aden; International Monetary Fund"), so the Arabic edition's figure frame prints an English credit while the same
-  institutions appear in Arabic in the Sources section. Design renders the governed string as given; the steward
-  decides between an Arabic credit string and a rule that credits keep the source's language.`
 - `NEEDS_CONTROLLED_CONTENT — Home (`/`) section 3 — pacing boundaries — the candidate direction paces the governed
   "three figures" paragraph as figure groups, each followed by its bounded record; the split points are found by the
   governed connectives ("In the same survey", "Separately", "These are different measures" and their Arabic
   equivalents), which couples the build to wording. If the direction is accepted, a controlled marker (sentence or
   group boundaries on the section body) lets the build pace without parsing prose. Until then the reference
   implementation may pace only by these connectives and must fall back to the unpaced paragraph when they are absent.`
+  D2: Master-first (the section body carries no marker in either language); open, non-blocking; DEBT-008.
 - `ESCALATE_TO_MASTER (question, not a defect claimed) — RV-CWR-001 imf_staff_path — evidence state — the series
   carries state REPORTED while the Reading's prose describes the IMF path as a staff reconstruction with a modelled
   personal-transfers component; the source-institution lens asked whether the lane should carry an estimate state.
   Design impact: if the state changes, the IMF lane and the fallback table carry the state label; the drawing does
-  not change otherwise.`
+  not change otherwise.` D2: an evidence-authority question; REPORTED rendered as governed; open, non-blocking.
 
-- `NEEDS_CONTROLLED_CONTENT — every page with an in-page index (Record question index, Home and Reading section
-  index, the verification spine) — accessible name for the in-page navigation ("on this page" / "contents" in both
-  languages) — without it the index and spine are unnamed navigation regions (DEBT-006); Design ships them unnamed
-  rather than inventing the label.`
+Raised at D2 (27 September 2026), each needed by a design actually rendered:
 
-For steward confirmation (a composition decision that touches governed structure, raised by the final review):
-Home renders its governed sections in the order 3, 4, 1, 9, 5, 6, 7, 8 (the three figures and their records first,
-then the boundary, then the product statement and the questions), not in the Page Spec's `section_order`; the section
-texts are intact. Design treats section order on Home as composition (`01_FOUNDATIONS.md` §4.1 item 6); if the steward
-reads `section_order` as governed, the Lock item is revised and the order restored.
+- `NEEDS_CONTROLLED_CONTENT — every drawn figure's fallback table (VIS-FINDEX-GAPS, VIS-REMITTANCE-MACRO, the POS
+  panels, VIS-PAYMENT-ANATOMY, VIS-REMITTANCE-COST, RV-CWR-001, the chain) — column labels for the group / object,
+  the evidence state and the note columns (the value column is headed by the governed unit label) — without them the
+  tables ship with empty column headers (DEBT-013); Design ships them empty rather than inventing "Group", "State" or
+  "Note".`
+- `ESCALATE_TO_MASTER (rows requested) — VIS-TARGET-RESULT-STATE (/reforms/ and its record) and VIS-MFI-DIVERGENCE
+  (/finance/) — TABLE_TEXT_FIRST contracts whose rationale describes a table (baseline, target and the absent result;
+  the divergence table) but whose contract resolves no rows — the governed TARGET and RESULT markers cannot be drawn
+  from the alt text; both render as text frames until rows exist. Design impact: with rows, a three-row table with the
+  governed markers; without, the text frame stays.`
 
-Noted, not escalated (governed formats Design does not reword): the record period label ("Mar-2025–Jan-2026" in
-English, "مارس 2025 – يناير 2026" in Arabic) against the prose "March 2025 to January 2026"; ISO dates inside period
-strings ("2022-11-07") against the prose "November 2022" — Design isolates them as unbroken left-to-right runs; the
-external-link glyph "↗" inside the governed Arabic label "افتح المصدر الأصلي ↗" is not mirrored — a label matter for
-the steward if a mirrored glyph is wanted. Two number-format drifts the lenses raised ("6245" beside "3,422.16" in the
-fallback table; "118.0" on a chart against "118" in its table) were renderer formatting faults, fixed in the composers
-(one formatting rule: thousands separators on every value, years unseparated, precision as governed).
+## Closed at D2 (27 September 2026) — resolved by an authority the repository already holds
+
+- Arabic credit line (`NEEDS_CONTROLLED_CONTENT — RV-CWR-001 and every visual contract with a credit`): the contract
+  answers it — every `credit` carries `language_note` "Publisher names are governed in English only (15, 34); Arabic
+  frames print them as isolated left-to-right runs". Every frame now prints the governed credit as an isolated
+  left-to-right run. No Master change needed.
+- Accessible name for in-page navigation (`NEEDS_CONTROLLED_CONTENT — every page with an in-page index`): resolved by
+  accessibility practice without new copy — the index and the strip are named by the `h1` of the object they index
+  (`aria-labelledby="page-title"`), each edge group by its own governed heading. DEBT-006 closed. A dedicated governed
+  label ("on this page") would read better; it is a preference, not an authority question.
+- Home section order (for steward confirmation): decided by the brief — §4.5 states the baseline order "is a
+  precedent, not a mandate; keep the `#system` anchor". The Lock item stands; nothing to confirm.
 
 ## Anticipated (not yet raised — each will be raised only when a D1+ design actually needs it)
 
@@ -60,7 +62,8 @@ Recorded so no one fills these gaps silently. Source: brief §10, §12, §15.
 - Report-issue intent labels, if a richer reporting intent is designed.
 - Reuse line and download labels following the licence decision (OWN-04).
 - IBM pre-split Latin font subsets (vendoring with provenance).
-- Rows for TABLE_TEXT_FIRST contracts whose rationale describes a table but resolves no rows (e.g. VIS-MFI-DIVERGENCE).
+- Rows for the other TABLE_TEXT_FIRST contracts whose rationale describes a table but resolves no rows (raised at D2 for
+  VIS-TARGET-RESULT-STATE and VIS-MFI-DIVERGENCE; the rest as their gate reaches them).
 
 ## Process notes (not escalations)
 
@@ -71,3 +74,6 @@ Recorded so no one fills these gaps silently. Source: brief §10, §12, §15.
 
 - Tag `checkpoint/design-handoff-ready` was not found at D0 (2026-09-27); commit `6d954c1` used. Steward to confirm.
   Steward, 2026-09-27: confirmed. `6d954c177b5d35cdad063f3a2cef5a92d33e16d4` is the recorded Design-handoff target (`OPENAI_REENTRY_CHECKPOINT.md` §7); the tag is an owner action (tag pushes are refused to the steward's environment). Working from the commit is correct; nothing changes when the tag appears.
+
+- D2 branch name (2026-09-27): D2 is developed and pushed on `claude/epic-cori-60fpeb`, created at the exact accepted
+  `main` (`851f496`), instead of the `design/d2-hard-families` name planned at D0; the same convention as D1.

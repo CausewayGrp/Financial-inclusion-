@@ -1,5 +1,26 @@
 # Repository Change Log
 
+## 2026-09-27 — Design D2 (in progress): the hard families built and proved; every document renders; the D1 residuals reconciled
+
+Branch `claude/epic-cori-60fpeb` from the accepted `main` (`851f496`, the merge of pull request #3). The one content
+path now loads every family (`design/reference/yfie/content.py`), `families.py` composes Explore, the domain answers,
+the Evidence directory, Compare and Data & sources in the T4 grammar (and the Reading index, Measurement and trust pages
+by the family rule until D3), `visuals.py` draws VIS-FINDEX-GAPS, VIS-REMITTANCE-MACRO, the POS small multiple,
+VIS-PAYMENT-ANATOMY, VIS-REMITTANCE-COST and the payment chain per contract with the evidence-state grammar, and
+`build.py` writes all 288 documents plus the root entry, the 404 and `robots.txt`. `check_site.py` asserts each §9.2
+hard state on the rendered DOM (168 renders, 84 smoke tests, 157 assertions, 20 degraded renders, all pass); the two
+repository browser suites (25/26, 168/168), bilingual invariance (0 of 143) and `check_content.py --text` (288
+documents; its number rule is bundle-scoped and its text rule inline-tag-safe) pass on the reference site; a rounding
+fault in the number formatter was found and fixed. The five D1 residuals are reconciled by their true authority
+(DL-D2-002): the Arabic credit line (the contract's own language note; isolated left-to-right), the in-page navigation
+name (`aria-labelledby` from governed text; DEBT-006 closed) and Home's order (brief §4.5) are closed; the pacing
+marker and the IMF lane state stay open for the steward. Records: `04_PAGE_FAMILY_COMPOSITIONS.md` and
+`03_COMPONENT_CATALOG.md` created; `COVERAGE.csv` — 190 D2 rows `VERIFIED` (176) or `DESIGNED` with the gap explained
+(14), 1,001 D3/D4 rows `BUILT`; `DESIGN_DEBT.md` (DEBT-004, -006, -009 closed; DEBT-011…013 opened); `ESCALATIONS.md`
+(two raised: fallback-table column labels; rows for VIS-TARGET-RESULT-STATE and VIS-MFI-DIVERGENCE);
+`09_CODE_HANDOFF.md` state at D2; `02_TOKENS.json` regenerated; `design/evidence/d2/` (60 PNG). README current-state
+row updated. No governed content changed; no projection, contract, `dist/` file or audit record edited.
+
 ## 2026-09-27 — Design D1 hand-back: second independent pass; residuals closed; verdict recorded
 
 Same branch and pull request; the D1 hand-back is posted on the pull request. A second, fresh repository-only reviewer
