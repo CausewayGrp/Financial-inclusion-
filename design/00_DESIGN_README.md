@@ -2,7 +2,8 @@
 
 Status: **D2 in progress — the hard families built and proved on the accepted D1 direction.** D1 was accepted by the
 owner's merge (`main` at `851f496078776356b38892c946d40d154c819067`, pull request #3). D2 is developed on
-`claude/epic-cori-60fpeb` (created from that exact `main`) and lands through one draft pull request. At this commit every
+`claude/epic-cori-60fpeb` (created from that exact `main`) and lands through one draft pull request
+(https://github.com/CausewayGrp/Financial-inclusion-/pull/4). At this commit every
 one of the 288 documents renders from the one content path (`design/reference/build.py`); Explore, the five hard domain
 answers, the Evidence directory, the §9.1 record set, Compare and Data & sources are composed in the T4 grammar and each
 §9.2 hard state on those routes is asserted on the rendered DOM (`design/reference/check_site.py`); the two repository

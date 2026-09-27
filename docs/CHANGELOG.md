@@ -2,7 +2,8 @@
 
 ## 2026-09-27 — Design D2 (in progress): the hard families built and proved; every document renders; the D1 residuals reconciled
 
-Branch `claude/epic-cori-60fpeb` from the accepted `main` (`851f496`, the merge of pull request #3). The one content
+Branch `claude/epic-cori-60fpeb` from the accepted `main` (`851f496`, the merge of pull request #3), landing through
+draft pull request #4 (https://github.com/CausewayGrp/Financial-inclusion-/pull/4). The one content
 path now loads every family (`design/reference/yfie/content.py`), `families.py` composes Explore, the domain answers,
 the Evidence directory, Compare and Data & sources in the T4 grammar (and the Reading index, Measurement and trust pages
 by the family rule until D3), `visuals.py` draws VIS-FINDEX-GAPS, VIS-REMITTANCE-MACRO, the POS small multiple,
