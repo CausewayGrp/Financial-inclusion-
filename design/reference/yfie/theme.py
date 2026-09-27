@@ -89,7 +89,7 @@ p{margin:0 0 .85em}p:last-child{margin-bottom:0}
 [dir=rtl] .paced .compact.bound{padding:4px 14px 4px 0}
 .paced .compact.bound .q{font-size:var(--fs-body)}
 .actions{display:flex;flex-wrap:wrap;gap:6px 26px;margin-top:14px;font-weight:600}
-.actions a,.actions .tbtn,.open a,.src .acts a,.src .acts .tbtn{display:inline-block;padding:4px 0;min-height:24px}
+.actions a,.actions .tbtn,.open a,.src .acts a,.src .acts .tbtn,.fig .foot a,.fig .foot .tbtn,.small a,.gets a,.edges a,.chip{display:inline-block;padding:3px 0;min-height:24px}
 .actions a{text-decoration-color:var(--ochre-line);text-decoration-thickness:2px}
 .qlist{list-style:none;margin:0;padding:0;counter-reset:q}
 .qlist li{display:grid;grid-template-columns:34px minmax(0,1fr);gap:10px;padding:14px 0;border-top:1px solid var(--rule)}
@@ -212,10 +212,10 @@ dialog.search::backdrop{background:rgba(23,33,43,.55)}
 @media (forced-colors:active){.bnd,.between,.obj,.fig,.inst,.spine,.strip a,.compact,.qa{border-color:CanvasText!important}.mark.a{fill:CanvasText}.mark.b{stroke:CanvasText;fill:Canvas}.path,.axis,.tick,.stem,.grid{stroke:CanvasText}.lbl,.val,.unit{fill:CanvasText}.rubric,.clock .k,.clock .v,.lane .base,.between,.bnd,.bnd p,.bnd h2{color:CanvasText}}
 @media print{
 html{font-size:11pt;line-height:1.45}
-.bar .nav,.controls,dialog,.noscript,.skip,.strip,.spine .index,.foot-spine .index,.inst .groups,.util .actions,.fig .foot button{display:none!important}
+.bar .nav,.controls,dialog,.noscript,.skip,.strip,.spine .index,.inst .groups,.util .actions,.fig .foot button{display:none!important}
 .page{display:block;padding:0}
 .spine{position:static;max-height:none;overflow:visible;border:0;padding:0;margin-top:18pt}
-.foot-spine{display:none!important}
+.foot-spine{display:flex!important}
 .obj,.qa,.compact,.fig,.src,.bnd{break-inside:avoid}
 h1,h2,h3{break-after:avoid}
 details.more::details-content{content-visibility:visible;display:block}

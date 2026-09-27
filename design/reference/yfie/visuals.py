@@ -79,11 +79,23 @@ def _pct(v, lo=1.0, hi=88.0, vmax=7000.0):
     return lo + (hi - lo) * (v / vmax)
 
 
-def axis_max(values, step: float = 1000.0) -> float:
-    """A zero-based axis end just above the largest value (the next `step` above 1.08 × max), never clipping."""
+def nice_step(span: float) -> float:
+    """A round tick step (1, 2 or 5 × a power of ten) giving three to four ticks across `span`."""
     import math
-    m = max(values)
-    return step * math.ceil(m * 1.08 / step)
+    raw = span / 3.5
+    mag = 10 ** math.floor(math.log10(raw))
+    for k in (1, 2, 5, 10):
+        if k * mag >= raw:
+            return k * mag
+    return 10 * mag
+
+
+def axis_scale(values) -> tuple[float, float]:
+    """(axis end, tick step): a round step from the data's span, the axis end the next step above 1.08 × max."""
+    import math
+    m = max(values) * 1.08
+    step = nice_step(m)
+    return step * math.ceil(m / step), step
 
 
 FIG_ATTRS = 'data-visual-fallback="ordered-text" data-image-independent="true" data-noncolour-semantic="text-structure-label-position"'
@@ -102,8 +114,7 @@ def svg_mark(kind: str, x: str, cy: float, r: float) -> str:
 def p1_rows(d: dict) -> str:
     """Panel 1 as rows: one row per publication keyed by its governed label (HTML, so it wraps and mirrors), the value
     on a horizontal axis from zero, the value printed above the mark. The axis end and its ticks come from the data."""
-    vmax = axis_max([v["y"] for v in d["panel1"]])
-    step = vmax / 4
+    vmax, step = axis_scale([v["y"] for v in d["panel1"]])
     rows = []
     for val, kind in ((d["panel1"][0], "circle"), (d["panel1"][1], "square")):
         x = _pct(val["y"], vmax=vmax)
@@ -111,7 +122,8 @@ def p1_rows(d: dict) -> str:
                  f'<line class="stem" x1="1%" y1="26" x2="{x:.2f}%" y2="26"/>{svg_mark(kind, f"{x:.2f}%", 26, 7)}'
                  f'<text class="val" x="{x:.2f}%" y="11" text-anchor="middle">{plain_num(val["y"])}</text></svg>')
         rows.append(f'<div class="row"><div class="rl">{esc(val["series_label"])}</div>{track}</div>')
-    ticks = "".join(f'<line class="tick" x1="{_pct(t, vmax=vmax):.2f}%" y1="0" x2="{_pct(t, vmax=vmax):.2f}%" y2="5"/><text class="lbl" x="{_pct(t, vmax=vmax):.2f}%" y="18" text-anchor="middle">{plain_num(int(t))}</text>' for t in (0, step, 2 * step, 3 * step))
+    tick_values = [t * step for t in range(0, int(vmax // step) + 1) if t * step <= vmax * 0.999 or t == 0]
+    ticks = "".join(f'<line class="tick" x1="{_pct(t, vmax=vmax):.2f}%" y1="0" x2="{_pct(t, vmax=vmax):.2f}%" y2="5"/><text class="lbl" x="{_pct(t, vmax=vmax):.2f}%" y="18" text-anchor="middle">{plain_num(int(t))}</text>' for t in tick_values)
     axis = (f'<div class="row ax-row"><div></div><svg class="ax" width="100%" height="22" aria-hidden="true" focusable="false" direction="ltr">'
             f'<line class="axis" x1="1%" y1="0.5" x2="88%" y2="0.5"/>{ticks}</svg></div>')
     return f'<div class="p1">{"".join(rows)}{axis}</div>'
@@ -179,5 +191,5 @@ def figure(v: dict, cite_label: str, origin: str | None, heading: str = "h2", ey
             f'<p class="cap">{esc(v["question"])}</p>'
             f'<div class="alt" data-visual-fallback="ordered-text"><h3 class="alt-h">{esc(v["labels"]["text_alternative"])}</h3><p class="body"><b>{esc(v["labels"]["what_it_shows"])}</b> {esc(v["alt_text"])}</p>'
             + (f'<p class="small"><b>{esc(v["labels"]["scope"])}:</b> {esc(scope)}</p>' if scope else "") + "</div>"
-            f'<div class="foot"><p class="b"><b>{esc(bl)}:</b> {esc(v["prohibited_inference"])}</p><p>{esc(v["labels"]["source"])} {esc(v.get("credit") or "")}</p>'
-            f'<p>{esc(v["labels"]["full_record"])} {link} · <button type="button" class="tbtn" data-cite>{esc(cite_label)}</button></p></div><figcaption class="sr-only">{esc(v["alt_text"])}</figcaption></figure>')
+            f'<div class="foot"><p class="b"><b>{esc(bl)}:</b> {esc(v["prohibited_inference"])}</p>' + (f'<p>{esc(v["labels"]["source"])} {esc(v["credit"])}</p>' if v.get("credit") else "")
+            + f'<p>{esc(v["labels"]["full_record"])} {link} · <button type="button" class="tbtn" data-cite>{esc(cite_label)}</button></p></div><figcaption class="sr-only">{esc(v["alt_text"])}</figcaption></figure>')

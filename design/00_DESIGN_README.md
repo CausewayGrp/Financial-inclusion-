@@ -29,7 +29,8 @@ plus the hooks and an interaction smoke test with the baseline runtime). Until `
 Build and preview: `python3 design/reference/build.py` (renderer `accepted`; `--renderer neutral` for the harness)
 writes `design/reference/out/` — the trio in both languages, `assets/yfie.css`, the unchanged fonts and logo, the
 baseline runtime, and `out/_bundle/<route>__<lang>.json`, the exact content structures a renderer receives. Check with
-`python3 design/reference/check_content.py` and `python3 design/reference/check_trio.py --shots`; preview with
+`python3 design/reference/check_content.py --text`, `python3 design/reference/check_trio.py --shots --degraded` and
+`python3 design/reference/tokens.py --check`; preview with
 `python3 -m http.server 4173 --directory design/reference/out` (`/en/`, `/ar/`). Baseline: `python3 -m http.server
 4173 --directory dist`. Canvas propositions and the reference row: `python3 design/exploration/d1_canvas/build_boards.py`
 and `reference_boards.py` regenerate the artboards into the git-ignored `design/exploration/d1_canvas/out/`
@@ -389,3 +390,7 @@ not public release (REL-01…04 remain).
 - Code: `09_CODE_HANDOFF.md` rows corrected to the implemented state.
 - Compromise: `::details-content` printing is verified in Chromium only; DEBT-006, DEBT-008, DEBT-009, DEBT-010 stay
   open as recorded.
+- Second pass (same day): a fresh reviewer confirmed every MUST-FIX closed and returned "D1 DESIGN COMPLETE — OWNER
+  MERGE REQUIRED" (`01_FOUNDATIONS.md` §6); its small residuals — a corrupt ledger note, an empty credit line on the
+  Home figure, non-round ticks, a wrong table measurement, a stale path, three overstated sentences, hit areas — are
+  closed in the hand-back commit, with forced colours and target size now asserted by `check_trio.py`.

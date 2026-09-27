@@ -11,8 +11,10 @@ carry, and an interaction smoke test with the baseline runtime: the search dialo
 Escape, the menu button toggles aria-expanded at 390 px and the first navigation link takes focus, the cite button
 announces in #utility-status, and the boundary section is present before any interaction — by pointer and again by
 keyboard only (Tab, Enter, Escape). With --shots, first-screen and full-page screenshots go to <site>/_review/; with
---degraded, print (PNG and PDF), no-stylesheet/no-script/image-off renders and their text go to <site>/_review/degraded/
-and are checked (the record's disclosure content prints; the h1 sits inside #main without styles); with --evidence DIR,
+--degraded, print (PNG and PDF), no-stylesheet/no-script/image-off and forced-colours renders and their text go to
+<site>/_review/degraded/ and are checked (the record's disclosure content prints; the h1 sits inside #main without
+styles; chart text and marks take the system colour in forced colours); every non-inline link and button in main is at
+least 24 px tall at every width (WCAG 2.2 target size, inline text links exempt); with --evidence DIR,
 the committed PNG evidence (first screens at 390 and 1440 px, printed pages) is written to DIR. Exit 1 on any failure.
 Proof for the record, not authority.
 """
@@ -96,7 +98,10 @@ def main() -> int:
                     missing = [sel for sel in HOOKS["all"] + HOOKS.get(r, []) if pg.evaluate("(s)=>!!document.querySelector(s)", sel) is False]
                     ok = (res["over"] <= 1 and res["imgs"] == 0 and res["h1"] == 1 and first == "skip" and res["dir"] == ("rtl" if lang == "ar" else "ltr")
                           and not res["wide"] and res["inline"] == 0 and not missing)
-                    row = {"width": w, "lang": lang, "route": r, **res, "first_tab": first, "missing_hooks": missing, "ok": ok}
+                    # WCAG 2.2 target size (minimum): every non-inline link or button ≥ 24 px; links inline in a sentence are exempt
+                    small = pg.evaluate("""() => [...document.querySelectorAll('main a[href], main button')].filter(e=>{const r=e.getBoundingClientRect(); return getComputedStyle(e).display!=='inline' && r.width>0 && r.height>0 && r.height<24}).slice(0,5).map(e=>e.tagName+'.'+(e.className||'')+':'+Math.round(e.getBoundingClientRect().height))""")
+                    ok = ok and not small
+                    row = {"width": w, "lang": lang, "route": r, **res, "first_tab": first, "missing_hooks": missing, "small_targets": small, "ok": ok}
                     rows.append(row)
                     if not ok:
                         failures.append(row)
@@ -177,10 +182,20 @@ def main() -> int:
                     (deg / f"{tag}-nocss.txt").write_text(text, encoding="utf-8")
                     order_ok = pg.evaluate("(() => { const h1=document.querySelector('h1'); const main=document.querySelector('#main'); return !!h1 && !!main && main.contains(h1); })()")
                     ctx.close()
+                    # forced colours: chart text and marks must take the system text colour, not the theme's ink
+                    fc_ok = True
+                    if r.startswith("/readings/"):
+                        ctx = b.new_context(viewport={"width": 1440, "height": 900}, forced_colors="active", color_scheme="dark"); pg = ctx.new_page()
+                        pg.goto(url, wait_until="load"); pg.wait_for_timeout(150)
+                        fc_ok = pg.evaluate("""() => { const t=document.querySelector('figure svg text.val'); const l=document.querySelector('figure svg text.lbl'); const m=document.querySelector('figure svg .mark.a');
+                            const f=e=>getComputedStyle(e).fill; return !!t && !!l && !!m && f(t)===f(m) && f(l)===f(m) && f(t)!=='rgb(23, 33, 43)'; }""")
+                        pg.screenshot(path=str(deg / f"{tag}-forced-colours.png"))
+                        ctx.close()
+                    checks = {"details_printed": details_printed, "no_css_order_ok": order_ok, "forced_colours_ok": fc_ok}
                     rows.append({"width": "degraded", "lang": lang, "route": r, "height": 0, "over": 0, "imgs": 0, "h1": 1, "dir": "", "wide": [], "inline": 0, "first_tab": "skip", "missing_hooks": [],
-                                 "ok": details_printed and order_ok, "degraded": {"details_printed": details_printed, "no_css_order_ok": order_ok}})
-                    if not (details_printed and order_ok):
-                        failures.append({"lang": lang, "route": r, "degraded_failed": [k for k, v in {"details_printed": details_printed, "no_css_order_ok": order_ok}.items() if not v]})
+                                 "ok": all(checks.values()), "degraded": checks})
+                    if not all(checks.values()):
+                        failures.append({"lang": lang, "route": r, "degraded_failed": [k for k, v in checks.items() if not v]})
             if evd:
                 for w in (390, 1440):
                     ctx = b.new_context(viewport={"width": w, "height": 844 if w < 700 else 900}); pg = ctx.new_page()
@@ -196,7 +211,7 @@ def main() -> int:
         if row["width"] == "degraded":
             print(f"degrad {row['lang']} {row['route']:40s} {row['degraded']}")
             continue
-        flag = "" if row["ok"] else f"  <-- over={row['over']} imgs={row['imgs']} h1={row['h1']} first={row['first_tab']} wide={row['wide']} inline={row['inline']} missing={row['missing_hooks']}"
+        flag = "" if row["ok"] else f"  <-- over={row['over']} imgs={row['imgs']} h1={row['h1']} first={row['first_tab']} wide={row['wide']} inline={row['inline']} missing={row['missing_hooks']} small={row.get('small_targets')}"
         print(f"{row['width']:5d} {row['lang']} {row['route']:40s} height={row['height']:6d}{flag}")
     smokes = [r for r in rows if "smoke" in r]
     main_rows = [r for r in rows if r["width"] != "degraded"]

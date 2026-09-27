@@ -1,5 +1,18 @@
 # Repository Change Log
 
+## 2026-09-27 — Design D1 hand-back: second independent pass; residuals closed; verdict recorded
+
+Same branch and pull request; the D1 hand-back is posted on the pull request. A second, fresh repository-only reviewer
+confirmed every MUST-FIX of the final review closed and returned "D1 DESIGN COMPLETE — OWNER MERGE REQUIRED"
+(`design/exploration/d1_canvas/review/second_pass.md`; `design/01_FOUNDATIONS.md` §6; DL-D1-008). Its residuals are
+closed here: the eight verified grammar rows' note field repaired in `design/COVERAGE.csv`; no empty "Source:" line on
+a figure without a credit; a round tick step derived once from the data (0 / 2,000 / 4,000 / 6,000); the 320 px table
+measurement corrected to 23–80 px (DEBT-010, `01_FOUNDATIONS.md` §2.5, §3.4, §4.4); the lens reports' path corrected;
+three overstated sentences corrected (what the checks cover; a selector that matched nothing; the attribution of the
+text and degraded checks in README); 24 px hit areas on every non-inline link and button in `main`, asserted by
+`check_trio.py` together with a forced-colours emulation; the foot spine's edges kept in print; PNG evidence
+regenerated. README current-state row updated. No governed content changed; D1 exit is the owner's merge decision.
+
 ## 2026-09-27 — Design D1: independent final review adjudicated; corrections; evidence committed
 
 Same branch and pull request. A repository-only final review (`design/exploration/d1_canvas/review/final_review.md`)

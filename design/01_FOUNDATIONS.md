@@ -372,9 +372,10 @@ outward, with the same governed text path as T1–T3 and RV-CWR-001 panel 1 in t
   4. SVG value labels were emitted as HTML `<bdi>` inside `<text>` and never rendered (a formatter fault); the canonical
      link inside the Arabic figure broke across lines in mixed direction (now `dir="ltr"`, isolated); the product-bar
      actions wrapped into three lines at 1024–1440 px (now one line each).
-  Residual (re-measured on the reference implementation, 27 September 2026): at 320 px the figure's two tables — now
-  always visible — are 50–80 px wider than their focusable wrapper and scroll inside it; row headers wrap normally;
-  page overflow is 0 (DEBT-010). Canvas version 4 held the revised T4; version 5 the corrections of §3.3.
+  Residual (re-measured on the reference implementation, 27 September 2026, confirmed by the second independent
+  pass): at 320 px the figure's two tables — now always visible — are 23–80 px wider than their focusable wrapper
+  (English 80 and 48 px, Arabic 23 and 73 px) and scroll inside it; row headers wrap at word boundaries; page overflow
+  is 0 (DEBT-010). Canvas version 4 held the revised T4; version 5 the corrections of §3.3.
 - **Next, in this order:** the lens critique (§2.4) on the first-generation renders and T4 together; the adversarial
   tests (screenshot misuse, source owner, semantic firewall, Arabic-native, 320 px, low bandwidth, no image, genericity)
   on T4 against the strongest first-generation proposition; the convergence question ("what does YFIE now allow a user
@@ -419,8 +420,8 @@ scores, "T4 is a candidate, not the answer") and the same rendered evidence: fir
 pages as tiles, the Record's primary crop and the figure crop for every proposition, and T4 at 320–1440 px. Lenses:
 A senior evidence researcher · B Arabic editorial and RTL director · C accessibility and cognitive UX · D data
 visualisation · E frontend architect · F high-end product-design critic · G journalist · H source-institution
-statistician (CBY-Aden, IMF, World Bank) · I informed bilingual Yemeni professional. Reports are kept at
-`design/exploration/d1_canvas/out/review/lens_*.md` (working material); what matters is recorded here.
+statistician (CBY-Aden, IMF, World Bank) · I informed bilingual Yemeni professional. The reports as received are committed under `design/exploration/d1_canvas/review/lens_*.md`; what matters is
+recorded here.
 
 Two process facts. (1) The T4 figure crops under `inspect/crops/` that five lenses cited for "values vanish at 320/390"
 predated the value-label fix (§2.5, item 4); the current build prints every value at every width (verified: ten
@@ -508,7 +509,7 @@ absolute canonical URLs in exported frames.
 | Source owner | No source number typeset outside its sentence; both CBY-Aden values carry publication and value; credit in frame. Open: the Arabic credit is English (escalated); the IMF lane's state question (escalated) | H |
 | Semantic firewall | Restatement ≠ fall (rows); coinciding paths ≠ confirmation (note under the lanes, raw levels beside them); infrastructure ≠ use (POS record's universe and boundary); people ≠ accounts (Findex group bound to its record); missing ≠ zero (no chart invented for the system visual) | A, D, H |
 | Arabic-native | Composed with its own metrics; the only proposition whose Arabic survives every width without corrupting a link, clipping a table or splitting a date. Honest limit: "a disciplined mirror", not Arabic-first design — the Lock carries the Arabic rules as MUST PRESERVE | B, I |
-| 320 px | No page overflow at any width; the visible fallback tables are 50–80 px wider than their focusable wrapper at 320 px and scroll inside it (DEBT-010) | `inspect_widths.py`, `check_trio.py`, §2.5 |
+| 320 px | No page overflow at any width; the visible fallback tables are 23–80 px wider than their focusable wrapper at 320 px and scroll inside it (DEBT-010) | `inspect_widths.py`, `check_trio.py`, §2.5 |
 | Low bandwidth / no image | Meaning and order survive with no stylesheet; identity survives with no image (name, rules) | §2.5 degraded tests |
 | Genericity | Stripped of content, logo and name, the residue read as "statistics-office methodology page" with a documentation sidebar and pills (F); the sidebar fill and pills are removed in v5; the signature elements (question-first head, clock-first objects, boundary voice, row-form panel) "are copied from nowhere" (F). Yemen through materiality: none of the four propositions achieves it (F, I) — provisional, below | F, I |
 
@@ -659,24 +660,30 @@ survive without stylesheet, script and images; print removes controls, indexes a
 clock, title, answers and the boundary (`_review/degraded/`).
 
 **Residual, recorded:** the two repository browser suites drive routes beyond the trio and cannot run on a D1 build
-(DEBT-009; `check_trio.py` applies their conditions to the trio); at 320 px the figure's visible tables are 50–80 px
+(DEBT-009; `check_trio.py` applies their conditions to the trio); at 320 px the figure's visible tables are 23–80 px
 wider than their focusable wrapper and scroll inside it (DEBT-010); the in-page navigation has no accessible name until
 a governed label exists (DEBT-006).
 
-**Corrections after the independent final review (§6), all verified by the same checks:** the Home system visual is
+**Corrections after the independent final review (§6), each verified by a committed check or, where noted, by the
+second independent pass's probes:** the Home system visual is
 rendered through the contract frame (boundary, scope, credit, canonical link in frame — it had been hand-built without
 them); exactly one spine is visible at any width (beside the object from 900 px, at the foot below, with the index on
 Home and the Reading; the Record keeps its strip) — the earlier build showed the edges twice on phones; every governed
 kicker, label and gloss the baseline prints is rendered (section roles as rubrics, the hero line, the questions eyebrow
 and title, the visual's "what the evidence shows", "scope and time" and "text description" labels, "source record" on
-trace steps, the record's return-to-interpretation intro) and `check_content.py --text` now proves text-block parity
-beside numeric parity; the fallback tables no longer break row headers at 320 px; forced colours keep chart text
-visible; the record's disclosure content prints; the F6 attributes the validator requires on public pages
-(`data-visual-fallback`, `data-image-independent`, `data-noncolour-semantic`, `data-boundary-part`) are carried; axis
-ends, ticks and years derive from the data; in-flow actions have 24 px hit areas; `check_trio.py` also drives the
-keyboard-only path and the degraded states, and writes the committed PNG evidence (`design/evidence/d1/`, 18 files:
-first screens at 390 and 1440 px and printed pages, both languages); `02_TOKENS.json` is generated and checked by
-`design/reference/tokens.py`.
+trace steps, the record's return-to-interpretation intro) and `check_content.py --text` checks text-block parity
+beside numeric parity (a bundle-scoped, one-directional rule: every governed string of twelve characters or more that
+the baseline prints must appear in the reference; the second pass's run-level diff of every `<main>` found no governed
+sentence lost, so the property holds and the tool is its proxy); the fallback tables no longer break row headers at
+320 px; forced colours keep chart text and marks in the system colour (`check_trio.py --degraded` emulates forced
+colours and asserts it); the record's disclosure content prints (Chromium); the F6 attributes the validator requires on
+public pages (`data-visual-fallback`, `data-image-independent`, `data-noncolour-semantic`, `data-boundary-part`) are
+carried; axis ends and round ticks (0 / 2,000 / 4,000 / 6,000) and the years derive from the data; every non-inline
+link and button in `main` is at least 24 px tall at every width (asserted by `check_trio.py`; inline text links are
+exempt under WCAG 2.2 target size); `check_trio.py` also drives the keyboard-only path and the degraded states, and
+writes the committed PNG evidence (`design/evidence/d1/`, 18 files: first screens at 390 and 1440 px and printed
+pages, both languages); `02_TOKENS.json` is generated and checked by `design/reference/tokens.py`. In print the foot
+spine's edges (used-in and return-to links) are kept; the indexes are not.
 
 ## 5. Foundational grammar
 
@@ -724,7 +731,8 @@ notes (`design/exploration/d1_canvas/review/final_review.md`). The adjudication,
    --degraded` and `--evidence` produce the print, no-stylesheet and image-off renders and the committed PNG set
    (`design/evidence/d1/`); the nine lens reports and the final review are committed under
    `design/exploration/d1_canvas/review/`.
-8. Forced-colours mode lost chart text → `.lbl`, `.val`, `.unit` and the captions take `CanvasText`.
+8. Forced-colours mode lost chart text → the SVG text (`.lbl`, `.val`) and marks take `CanvasText`; HTML captions keep
+   the user agent's forced-colours text as they did.
 
 **SHOULD-FIX — accepted and closed:** the record's disclosure content prints (`::details-content` in print; verified in
 Chromium by `check_trio.py --degraded`); keyboard-only path (Tab, Enter, Escape) and a text-block parity check added;
@@ -743,6 +751,21 @@ design (the sources are the page's verification path; the figcaption is the acce
 root-relative until the deployment origin is set (OWN-03).
 
 The reviewer's own words on the direction: "sound and well argued, the content path is clean, and the trio builds and
-passes its own checks"; the verdict rested on the truth of the records and the Lock items the build broke. With the
-list closed and re-verified, the hand-back verdict is decided on the pull request from the second independent pass
-recorded below.
+passes its own checks"; the verdict rested on the truth of the records and the Lock items the build broke.
+
+**Second independent pass** (a fresh reviewer, repository only, at `455d4f7`;
+`design/exploration/d1_canvas/review/second_pass.md`): every MUST-FIX confirmed closed in code and records and
+reproducible from the committed tools; the six pages carry every governed sentence the baseline prints (a run-level
+diff of every `<main>` against `dist/`); numeric and bilingual invariance hold; the Lock items the first review found
+broken hold at every width; the committed PNG evidence was byte-identical to a fresh regeneration. Verdict:
+**"D1 DESIGN COMPLETE — OWNER MERGE REQUIRED"** — "READY FOR D2" would be the wrong form because gate exit is the
+owner's merge and four escalations await the steward. The pass listed small residuals, all closed in the hand-back
+commit: a corrupt note field on the eight verified grammar rows of `COVERAGE.csv`; an empty "Source:" line on the Home
+figure (the contract has no credit; the line is now omitted when there is none); tick values that had become
+non-round (0 / 1,750 / 3,500 / 5,250 — now a round step derived once from the data); a second wrong table measurement
+("50–80 px" — now 23–80 px, as measured, in DEBT-010, §2.5, §3.4 and §4.4); a stale path for the lens reports in §3.1;
+three overstated sentences (what "the same checks" cover, a `.unit` selector that matched nothing, the attribution of
+the text and degraded checks to DL-D1-007 in README) — corrected; hit areas extended to every non-inline link and
+button in `main` and asserted by `check_trio.py`; the foot spine's edges kept in print. Two observations recorded, not
+changed: the Reading's foot index sits after the content on phones (by design — the Reading is read whole; the Record
+carries its strip after the first answer); the text parity rule is a proxy (stated above).
