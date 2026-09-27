@@ -1,6 +1,6 @@
 # Page family compositions
 
-> STATUS: **D4 — every family composed and reviewed on its own rows; every document bound and asserted (D1–D4).** Deterministic
+> STATUS: **D6 — every family composed and reviewed on its own rows (D1–D4), every tool state and journey proved (D5), every bound visual in its tier's form and every family's print and social form built (D6).** Deterministic
 > module order and composition rules for all eleven families, from the Page Spec and the two controlled contracts;
 > the first-screen contract per family; what may be disclosed later; next actions; head metadata. Written from the
 > reference implementation (`design/reference/yfie/families.py`, `render.py`), never from a picture. Families marked
@@ -145,11 +145,21 @@ default, the stored choice kept).
 | `/payments/` | VIS-PAYMENT-ANATOMY after primary 2 | VIS-E-MONEY-RULE-STACK beside section 6 | the POS small multiple (terminals, transactions, value) |
 | `/remittances/` | VIS-REMITTANCE-MACRO after primary 1 | VIS-REMITTANCE-COST beside section 5 | — |
 | `/reforms/` | none (contract) | VIS-FCP-REDRESS-PATH beside 3; VIS-PAYMENT-RAILS and VIS-TARGET-RESULT-STATE beside 6; VIS-OECD-FCP-TIMELINE beside 11 | — (VIS-CAPITAL-CONTEXT is never drawn) |
-| `/firms/` | VIS-FIRM-CONSTRAINTS after its primary section (text frame) | — | — |
+| `/firms/` | VIS-FIRM-CONSTRAINTS after its primary section (bars from zero without ranks, D6) | — | VIS-FIRM-FINANCE-PATH, VIS-FIRM-FINANCE-SEVERITY (text frames; rows requested) |
 | `/finance/` | VIS-MFI-DIVERGENCE after its primary section (text frame; rows requested at D2) | — | — |
-| `/providers/` | VIS-PROVIDER-OBSERVABILITY after its primary section (text frame) | — | — |
+| `/providers/` | VIS-PROVIDER-OBSERVABILITY after its primary section (the provider matrix, D6) | — | — |
 
-A visual beside a progressive section goes to the depth group, never inside the disclosure.
+A visual beside a progressive section goes to the depth group, never inside the disclosure. The Readings carry their
+own signature or core figure after the opening section: RV-CWR-001 (D1), RV-CWR-009 (the full chain, D6) and RV-CWR-004
+(the dated lanes, D6); the other Readings carry their SUPPORTING contract as a text frame (`06_VISUAL_TABLE_SYSTEM.md` §1).
+
+## 5. Print and portable forms (D6)
+
+Every family prints through the one print system (`06_VISUAL_TABLE_SYSTEM.md` §7): chrome gone, the page object and
+its answers breaking freely, objects that fit a page kept whole, a boundary with the claim before it, figures whole
+with their foot, the provenance block last. The Reading prints as a document (title block, boundary, essay with its
+figure, trace, sources, citation). Every page has a social-image template of its family (`08_ASSET_MAP.md` §4) and
+every drawn figure an export frame (§8 of the visual system); neither ships as a file from the reference site.
 
 ## 4. What a family rule does not do
 

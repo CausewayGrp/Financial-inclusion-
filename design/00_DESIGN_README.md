@@ -44,9 +44,15 @@ composed and reviewed on its own ledger row (D3–D4) and the acceptance checkli
 Build and preview: `python3 design/reference/build.py` (renderer `accepted`; `--routes trio` for the D1 build; `--renderer
 neutral` for the harness) writes `design/reference/out/` — the 286 localized documents, the root entry, the 404,
 `robots.txt`, `assets/yfie.css`, the unchanged fonts and logo, the baseline runtime, and `out/_bundle/<route>__<lang>.json`,
-the exact content structures a renderer receives. Check with `python3 design/reference/check_content.py --text`,
-`python3 design/reference/check_site.py --gate d2 --degraded`, `python3 design/reference/check_trio.py`,
-`python3 design/reference/tokens.py --check`, and the repository suites on the site:
+the exact content structures a renderer receives, and — with the accepted renderer — the portable frames of D6:
+`out/_export/<visual>__<lang>.html` (one per drawn contract) and `out/_social/<route>__<lang>.html` (one per page).
+Check with `python3 design/reference/check_content.py --text`, `python3 design/reference/check_binding.py`,
+`python3 design/reference/check_site.py --gate d2 --degraded`, `… --gate d3 --degraded`, `… --gate d4`,
+`python3 design/reference/check_journeys.py`, `python3 design/reference/check_trio.py --degraded`,
+`python3 design/reference/check_visuals.py` (D6: every contract on every binding route in both languages, forced
+colours and print on the drawn ones, every export and social frame, one route per family printed to PDF;
+`--phases` for a subset, `--evidence DIR` for the record), `python3 design/reference/tokens.py --check`, and the
+repository suites on the site:
 `YFIE_SITE_DIR=design/reference/out python3 scripts/tests/test_public_tools.py`, `… audit/tranche_c/checks/viewport_acceptance.py`,
 `… audit/tranche_c/checks/bilingual_invariance.py`; preview with `python3 -m http.server 4173 --directory design/reference/out`
 (`/en/`, `/ar/`). Baseline: `python3 -m http.server 4173 --directory dist`. The D1 canvas composers
@@ -169,7 +175,7 @@ to isolate in RTL and URLs); 15 routes whose Page Spec sections are split by lan
 | D3 | `claude/epic-cori-60fpeb` (continued on the D2 branch and pull request; process note in `ESCALATIONS.md`) | Readings index + all Readings, Measurement, Methodology, trust, report journey, 404; Home cold-reader test | same; cold-reader record — **accepted at `2effd8b`, the merge of pull request #4** (`check_site.py --gate d3`; `evidence/d3/cold_read/`) |
 | D4 | `claude/epic-cori-60fpeb` (continued; process note in `ESCALATIONS.md`) | all 288 documents via family rules | three suites pass on `design/reference/out/`; all rows ≥ `BUILT` — **accepted at `2effd8b`, the merge of pull request #4**: every route row `VERIFIED` (`check_site.py --gate d4`, `check_binding.py`) |
 | D5 | `claude/epic-cori-60fpeb` (continued; process note in `ESCALATIONS.md`) | every tool state and journey, keyboard, zoom, reduced motion, forced colours | `07_INTERACTION_ACCESSIBILITY.md` — **accepted at `2effd8b`, the merge of pull request #4** (`check_journeys.py`; D5 rows `VERIFIED`, the two unbound verification states `DESIGNED`) |
-| D6 | `claude/bold-maxwell-r3o015` (planned `design/d6-visuals-social-print`; created at the accepted `main` `2effd8b`; process note in `ESCALATIONS.md`) | visuals per contract, frames, social templates, print | contract-by-contract evidence |
+| D6 | `claude/bold-maxwell-r3o015` (planned `design/d6-visuals-social-print`; created at the accepted `main` `2effd8b`; process note in `ESCALATIONS.md`) | visuals per contract, frames, social templates, print | contract-by-contract evidence — **met on this branch** (`check_visuals.py`: every contract, every export and social frame, every family route printed; `06_VISUAL_TABLE_SYSTEM.md`, `08_ASSET_MAP.md`, `evidence/d6/`; D6 rows `VERIFIED`); awaiting the owner's merge decision on the D6 pull request |
 | D7 | `design/d7-acceptance` | last-10-percent audit, final handoff | checklist complete; Code recipient test |
 
 **D1 theses to be tested** (named only — not designed; each must answer type, grid, density, evidence-state grammar and
@@ -238,6 +244,13 @@ need the same route unless a write-capable environment (e.g. Claude Code acting 
 - **03_COMPONENT_CATALOG.md** (seeded at D2): every object with its governed inputs, states, widths, Arabic, names and
   keyboard, colour-free survival, fallback and the limitation it keeps visible; the figure anatomy; the evidence-state
   grammar with what is drawn and what is designed only.
+- **06_VISUAL_TABLE_SYSTEM.md** (D6): every contract's form against its tier and rows, the detached frame, the table
+  pattern, the text frames, the print system, the export frames and the export control, the social templates, the
+  verification and the red-team record.
+- **08_ASSET_MAP.md** (D6): the mark's placements and sizes, the three type faces and their roles, the glyphs, the
+  social-image templates, the export identity line, what `out/assets/` holds.
+- **07_INTERACTION_ACCESSIBILITY.md** (D5; D6 additions): the three voices, keyboard, motion, zoom, forced colours, no
+  script, print, every technical state and journey.
 
 **D7 Definition of Done (interpretation).** A runnable, fully populated bilingual reference site in
 `design/reference/out/` — all 288 documents, every tool and state, both languages, four widths, no placeholder, every
@@ -704,3 +717,104 @@ not public release (REL-01…04 remain).
   verification states); `07_INTERACTION_ACCESSIBILITY.md` written; `03_COMPONENT_CATALOG.md` technical state;
   `09_CODE_HANDOFF.md` state at D5; `DESIGN_DEBT.md` DEBT-014 narrowed; `ESCALATIONS.md` the external-link cue raised;
   `evidence/d5/` (journey end screens, technical-state screens).
+
+### DL-D6-001 · D6 · 2026-09-27 · The thirty-six contracts: what is drawn, what stays text, and why
+- Problem: after D2, thirteen contracts had a drawn form and twenty-three rendered as text frames; D6 had to decide the
+  form of every remaining contract from its tier and its rows, not from the presence of numbers.
+- Evidence: the contracts file (three SIGNATURE, nine CORE_ANALYTICAL, twelve SUPPORTING, eleven TABLE_TEXT_FIRST, one
+  RETIRE); the rows each resolves (`06_VISUAL_TABLE_SYSTEM.md` §1); brief §12 (a SUPPORTING diagram only from governed
+  words and grammar labels; TABLE_TEXT_FIRST never a chart; rows never built from a reference file).
+- Chosen: draw the four with rows and a governed vocabulary — RV-CWR-009 as the full chain with its POS activity
+  values, VIS-PROVIDER-OBSERVABILITY as a provider matrix, RV-CWR-004 as three dated lanes, VIS-FIRM-CONSTRAINTS as
+  bars from zero without ranks — and keep every SUPPORTING and TABLE_TEXT_FIRST contract without rows as the governed
+  text frame: their rungs, layers and relationships exist only as English prose in STRUCTURE- or REFERENCE-role files,
+  so a diagram would author its labels. VIS-SOURCE-COMPARISON stays the Compare tool itself (D4); VIS-CAPITAL-CONTEXT
+  is never drawn and `/reforms/` keeps the baseline's governed text frame for parity.
+- Rejected: a ladder for VIS-FL-EVIDENCE-LADDER and VIS-EVIDENCE-CLASS-LADDER and a stack for VIS-E-MONEY-RULE-STACK
+  from their alt text (authored rung labels); a three-row table for VIS-TARGET-RESULT-STATE from the record's prose
+  (no rows; escalated at D2); VIS-FIRM-CONSTRAINTS with the eight rows of `firm_finance.json` (a REFERENCE file the
+  reference may not read; the rows are requested).
+- Arabic, responsive, accessibility: each form's narrow form and RTL rule in `06_VISUAL_TABLE_SYSTEM.md` §3; asserted
+  by `check_visuals.py` on every binding route in both languages.
+- Code: `visuals.DRAWERS`; the content path's additions (`09_CODE_HANDOFF.md`, state at D6).
+
+### DL-D6-002 · D6 · 2026-09-27 · The three D6 forms
+- Problem: the matrix, the dated lanes and the multi-response bars had no precedent in the grammar and each carried a
+  firewall risk — a licence read as operation, a sequence read as cause, an ordered list read as a ranking.
+- Chosen: **the matrix** keeps five dimensions apart per class in self-labelled cells of governed words and dates
+  (never a dot, a bar or a score), prints UNKNOWN wherever no governed row exists, lists wallet counts by date and
+  wording rather than as one number, counts the roster by category and never as a total of providers, ends each class
+  with its governed limit in the boundary voice, and links every dated status to its source record; its headings are
+  placeholders until governed. **The lanes** share one left-to-right time axis but no value axis: the people lane is
+  the governed fieldwork span with the survey value and state, the infrastructure lane a dated presence with its first
+  and latest governed values, the institutions lane dated events keyed to a list, the outcome an open node in the chain
+  vocabulary, the governed not-comparable label between lanes. **The bars** keep the contract's descending order but
+  print no ordinal and print the record's measurement limitation in the frame, so the order reads as the source's, not
+  as a rank.
+- Rejected: dots or bars in the matrix (a share or a size would be read); a single "providers" total (429 rows are not
+  429 providers); the survey point placed on the time axis as one date (its governed boundary is a fieldwork span and a
+  reporting year); rank numbers on the bars; a stacked bar (the responses are not exclusive; the base is not held).
+- Arabic: the lanes and bars keep left-to-right axes with mirrored labels and lists; the matrix cells mirror; every ISO
+  date and every English governed time boundary is isolated left-to-right (DL-D6-004).
+- Code: `visuals.provider_matrix`, `dated_lanes`, `firm_constraints`; `theme.CSS_D6` (container-query grid for the
+  matrix cells at ≥ 480 / ≥ 760 px container width).
+
+### DL-D6-003 · D6 · 2026-09-27 · One table pattern: named columns, qualifiers in the caption or the cell
+- Problem: the D2 fallback tables had four columns, three of them with empty headers (DEBT-013), and at 320 px they
+  scrolled inside their wrapper (DEBT-010); a screen-reader user heard unlabelled columns and the same state repeated on
+  every row.
+- Chosen: `visuals.table()` refuses an unnamed data column; every table is the row header plus a value column headed by
+  the governed unit (plus `UI-VIS-SOURCE` or `UI-VIS-WHAT-THE-EVIDENCE-SHOWS` where a second data column is needed); a
+  qualifier that holds for every row — state, source document, a marker every object carries — is stated once in the
+  caption, and one that varies travels in the value's own cell after a middle dot; the corner cell above the row
+  headers is empty by table convention. Two or three columns fit 256 px in both languages on all thirteen drawn
+  contracts; only the matrix's six-column table is declared wide. The table sits in a region named by the text
+  alternative's heading and the figure's title. `check_visuals.py` fails an unnamed column, an unnamed region, and a
+  table that scrolls without the declaration.
+- Rejected: stacked column groups at 320 px (a second table structure, duplicated governed text); hyphenation or a
+  smaller type to squeeze four columns (legibility); repeating a uniform state on every row (noise for every reader).
+- Code: `table()`, `qual()`, `uniform()`, `table_region()`; the D2 checker's assertions unchanged.
+
+### DL-D6-004 · D6 · 2026-09-27 · Bidi: every ISO date and every English governed time boundary isolated
+- Problem: after Arabic letters, a plain ISO date renders with its parts reversed (the bidi algorithm makes the digits
+  Arabic numbers and the hyphens neutrals: "2024-06-26" shows as "26-06-2024"); the recomposed tables put governed
+  Arabic text before dates, and a probe confirmed the reversal on the page and its absence inside a `bdi`. The matrix's
+  time boundaries are English free text ("observed 2026-09-07", "2026-01-22 event").
+- Chosen: every composed text in a figure, a table, a caption, a scope line, a portable frame and the print citation
+  passes through `iso_run` / `iso` (the date isolated as an unbroken left-to-right run; nothing else changed); a governed
+  time boundary prints exactly as the Master holds it, isolated and marked `lang="en"` — its qualifier is part of the
+  boundary and is never dropped (an earlier D6 pass printed only the date part; reversed). `check_visuals.py` asserts
+  that no ISO date on any figure or frame sits outside a left-to-right isolate.
+- Rejected: printing only the date of a governed time boundary (lossy); translating the qualifiers (authored copy —
+  the bilingual form is escalated).
+- Code: `visuals.iso_run`, `date_token`, `frames.iso`, `render.iso`.
+
+### DL-D6-005 · D6 · 2026-09-27 · The narrow time series prints its landmarks; the table carries every value
+- Problem: DEBT-012 — below 600 px a series of more than eight points cannot print thirteen value labels legibly with
+  percentage coordinates, and the decision was deferred to D6.
+- Chosen: decided, not deferred — the narrow panel prints the first, last, marked and state-change values; the
+  two-column table under the figure, which now fits 256 px, is the narrow carrier of every value; the export frame at
+  800 px prints every value. Closed as a decision.
+- Rejected: a horizontal-rows form (thirteen rows per POS panel, three panels); a two-row label lattice (does not fit
+  300 px legibly); rotated labels (not available with percentage coordinates).
+
+### DL-D6-006 · D6 · 2026-09-27 · Portable evidence and the print system
+- Problem: nothing that left the page — a printed page, a shared image, an exported figure — carried its provenance and
+  limits; the D1 print rule that kept the whole page object together began every printout on its second page (found by
+  the print check on `/people/`); a boundary band of several sections was one unbreakable chain.
+- Chosen: **export frames** (`frames.export_document`, one per drawn contract and language, the figure with its complete
+  frame and an identity line; the export control designed and unshipped until its labels are governed and OWN-04 is
+  decided); **social templates** (`frames.social_document`, five templates from governed text only — a record's card
+  with its clocks, reference and boundary, a Reading's with its question, evidence period and prohibited inference, a
+  domain answer's with its question and first-screen boundary, the product's and the hubs' with the title and the
+  description after it without repeating it; type steps down with length, never a crop; Code rasterises and adds
+  `og:image`); **the print system** (`theme.CSS_D6`: chrome hidden, the page object and answers breaking freely,
+  objects that fit a page whole, a boundary with the claim before it, figures whole with their foot, list panels
+  breakable between items, table headers repeated, black inks; the print-only provenance block on every page; the
+  Reading as a document). Asserted: `check_visuals.py --phases frames,print` — every export and social frame; one route
+  per family × EN/AR printed to PDF, the title on page one (an order-aware word matcher with a self-test and a
+  cross-route negative control), the provenance block, every figure whole with its boundary.
+- Rejected: `og:image` on the reference site (Code generates the images; F6 keeps Open Graph without image); a hosted
+  PDF (a download, gated); dropping the meta description from the card (the title would still read once, but the
+  description's remainder is governed context — kept, deduplicated without loss).
+- Code: `frames.py`, `render.print_foot`, `build.py` (`_export/`, `_social/`), the print block of `theme.CSS_D6`.

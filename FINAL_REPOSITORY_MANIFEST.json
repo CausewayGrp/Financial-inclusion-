@@ -29,7 +29,7 @@
   "CONTROLLED_CONTRACT": 2,
   "CURRENT_DOCUMENT": 10,
   "CURRENT_PROGRAMME_RECORD": 52,
-  "DESIGN_PACKAGE": 242,
+  "DESIGN_PACKAGE": 246,
   "GENERATED_DIAGRAMS": 9,
   "GENERATED_LITERAL_CLOSURE": 1,
   "GENERATED_PROJECTION": 37,
@@ -1269,7 +1269,15 @@
    "class": "DESIGN_PACKAGE"
   },
   {
+   "path": "design/06_VISUAL_TABLE_SYSTEM.md",
+   "class": "DESIGN_PACKAGE"
+  },
+  {
    "path": "design/07_INTERACTION_ACCESSIBILITY.md",
+   "class": "DESIGN_PACKAGE"
+  },
+  {
+   "path": "design/08_ASSET_MAP.md",
    "class": "DESIGN_PACKAGE"
   },
   {
@@ -2221,6 +2229,10 @@
    "class": "DESIGN_PACKAGE"
   },
   {
+   "path": "design/reference/check_visuals.py",
+   "class": "DESIGN_PACKAGE"
+  },
+  {
    "path": "design/reference/tokens.py",
    "class": "DESIGN_PACKAGE"
   },
@@ -2234,6 +2246,10 @@
   },
   {
    "path": "design/reference/yfie/families.py",
+   "class": "DESIGN_PACKAGE"
+  },
+  {
+   "path": "design/reference/yfie/frames.py",
    "class": "DESIGN_PACKAGE"
   },
   {

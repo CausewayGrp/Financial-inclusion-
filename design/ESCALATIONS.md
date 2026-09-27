@@ -31,7 +31,10 @@ Raised at D2 (27 September 2026), each needed by a design actually rendered:
   panels, VIS-PAYMENT-ANATOMY, VIS-REMITTANCE-COST, RV-CWR-001, the chain) — column labels for the group / object,
   the evidence state and the note columns (the value column is headed by the governed unit label) — without them the
   tables ship with empty column headers (DEBT-013); Design ships them empty rather than inventing "Group", "State" or
-  "Note".`
+  "Note".` D6: narrowed by composition (DL-D6-003) — the state, document and marker qualifiers now travel in the
+  caption or in the value's cell, so no data column of the thirteen drawn contracts is unheaded; what remains is the
+  provider matrix's five dimension headings (raised below). A governed label for a period / group / object column would
+  still read better than the empty corner cell; a preference, not an authority gap.
 - `ESCALATE_TO_MASTER (rows requested) — VIS-TARGET-RESULT-STATE (/reforms/ and its record) and VIS-MFI-DIVERGENCE
   (/finance/) — TABLE_TEXT_FIRST contracts whose rationale describes a table (baseline, target and the absent result;
   the divergence table) but whose contract resolves no rows — the governed TARGET and RESULT markers cannot be drawn
@@ -81,6 +84,50 @@ Raised at D5 (27 September 2026), needed by the interaction design:
   (brief §10); the D5 keyboard walks reach these links without any cue, and Design authors none. Design impact: a governed
   phrase rendered visually hidden inside the link (or visibly after it) on every external locator.`
 
+Raised at D6 (27 September 2026), each needed by a design actually rendered; none is filled with authored copy:
+
+- `NEEDS_CONTROLLED_CONTENT — VIS-PROVIDER-OBSERVABILITY (its record and /providers/) — the five dimension headings
+  of the matrix (issuing authority or source; dated universe or count; dated status decisions; negative authority;
+  evidence of operation), one UI-* ID each in both languages: UI-VIS-MATRIX-AUTHORITY, UI-VIS-MATRIX-UNIVERSE,
+  UI-VIS-MATRIX-STATUS, UI-VIS-MATRIX-NEGATIVE, UI-VIS-MATRIX-OPERATION — the contract names them in English prose
+  only (brief §10 anticipated this). Design impact: the matrix panel and its table print the development placeholder
+  ⟦NCC:key⟧ in place of each heading (the only placeholders on the site, asserted by check_visuals.py); every cell keeps
+  its own governed label, so the matrix is readable meanwhile; the accepted site cannot carry the placeholders.`
+- `NEEDS_CONTROLLED_CONTENT — VIS-PROVIDER-OBSERVABILITY — the class label of the fifth row (payment-system operators;
+  UI-VIS-CAT-PRV-CLASS-PSO) — the contract's known gap: no governed universe row exists for the class; the row is
+  designed as UNKNOWN in every dimension with the three institution events of RV-CWR-009 (REF-PAY-011…013) listed as
+  context, never as a named universe. Design impact: the row renders the day the label exists; until then the matrix
+  shows four classes.`
+- `ESCALATE_TO_MASTER — VIS-PROVIDER-OBSERVABILITY — the bilingual form of the matrix's dated cells and its ">9" count —
+  the governed time boundaries "observed 2026-09-07", "2026-01-22 event", "Official 2026 annual roster; later 2026
+  status events separate", "2024 Q3 / 2025 H1 / 2025-09-10 / 2026 event states" and the participant count ">9" are
+  English free text in both editions (the brief §10 names them). Design impact: they print as the Master holds them,
+  isolated left-to-right and marked lang="en", in the Arabic frame too; nothing is translated or shortened in design.`
+- `NEEDS_CONTROLLED_CONTENT — every drawn figure's foot — the export control: the action labels (image; the governed
+  data table) and their states (unavailable until the licence decision; licence; file format) — the control and its
+  frame are designed (03_COMPONENT_CATALOG.md §1, 06_VISUAL_TABLE_SYSTEM.md §8) and ship unshipped: no label exists
+  and every CauseWay-content download waits for OWN-04. Design impact: none until both exist.`
+- `ESCALATE_TO_MASTER (rows requested) — VIS-FIRM-CONSTRAINTS (its record and /firms/) — the contract names sixteen
+  challenges and resolves eight rows (FFO-2022-CH-01…08); the other eight (FFO-2022-CH-09…16) exist only in the
+  REFERENCE-role file firm_finance.json, which the reference may not read. Design impact: the bars draw the eight
+  governed rows and the table lists them; with the rows, the figure and table extend without a change of form.`
+- `ESCALATE_TO_MASTER (rows requested) — VIS-FIRM-FINANCE-PATH and VIS-FIRM-FINANCE-SEVERITY (their records and
+  /firms/) and VIS-INCLUSION-TRANSMISSION (its record and Home) — TABLE_TEXT_FIRST contracts whose rationale describes
+  a table (loan sources among 18 valid responses; obstacle severity; the system's relationships) but which resolve no
+  rows, and whose vocabulary (the relationships, the severity scale) exists only as English prose in STRUCTURE- or
+  REFERENCE-role files. Design impact: text frames until rows exist; with rows, a table in the pattern of
+  06_VISUAL_TABLE_SYSTEM.md §4.`
+- `ESCALATE_TO_MASTER (question, not a defect claimed) — RV-CWR-004 people lane — the people series carries x = 2022
+  (the World Bank reporting year) while the lane is drawn as the fieldwork span 2022-11-07 to 2023-01-09 that CLM-001's
+  governed period names in prose; the frame prints that whole governed period under the lane. Design impact: if the
+  Master gave the contract row its own fieldwork start and end fields, the lane would bind them directly instead of
+  reading the ISO dates inside the period text.`
+- `ESCALATE_TO_MASTER (observation) — every page's meta description — 284 of the 286 descriptions open with the page's
+  own title ("Financial inclusion in Yemen is not one number. — Yemen Financial Inclusion Evidence is …"); on a shared
+  image the title would read twice. Design impact: the social template prints the title once and then the
+  description's remainder after the separator (nothing dropped); a description that did not repeat the title would
+  print whole.`
+
 ## Closed at D2 (27 September 2026) — resolved by an authority the repository already holds
 
 - Arabic credit line (`NEEDS_CONTROLLED_CONTENT — RV-CWR-001 and every visual contract with a credit`): the contract
@@ -102,7 +149,7 @@ Recorded so no one fills these gaps silently. Source: brief §10, §12, §15.
 - "Type not recorded" group label for the 9 displayed sources without `document_label` (`/data/`, EAD-07).
 - Evidence-workbench facet headings/values (verification state, domain), if a facet is designed.
 - Report-issue intent labels, if a richer reporting intent is designed.
-- Reuse line and download labels following the licence decision (OWN-04).
+- Reuse line and download labels following the licence decision (OWN-04) — the export control's labels raised at D6.
 - IBM pre-split Latin font subsets (vendoring with provenance).
 - Rows for the other TABLE_TEXT_FIRST contracts whose rationale describes a table but resolves no rows (raised at D2 for
   VIS-TARGET-RESULT-STATE and VIS-MFI-DIVERGENCE; the rest as their gate reaches them).

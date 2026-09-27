@@ -15,7 +15,7 @@ import re
 from pathlib import Path
 
 from . import render as R
-from .render import CUR, bdi, clock, compact, crumb, esc, footer, head, header, iso, json_block, page_util, paras, rubric, source_card, spine, strip
+from .render import CUR, bdi, clock, compact, crumb, esc, footer, head, header, iso, json_block, page_util, paras, print_foot, rubric, source_card, spine, strip
 from .visuals import figure, num
 
 ROOT = Path(__file__).resolve().parents[3]
@@ -116,7 +116,7 @@ def head_block(page: dict, shell: dict, rubric_text: str = "", question: str = "
 
 def page_html(page: dict, shell: dict, body: str, index: list, edges: list, kind: str = "website", extra: str = "", foot_index: bool = True) -> str:
     return (head(page, shell, page["route"], kind=kind, extra=extra) + header(shell)
-            + f'<article class="obj page-obj">{body}{page_util(shell)}</article>{spine(index, edges)}{spine(index, edges, foot=True, foot_index=foot_index)}'
+            + f'<article class="obj page-obj">{body}{page_util(shell)}{print_foot(shell, page["route"], page["title"])}</article>{spine(index, edges)}{spine(index, edges, foot=True, foot_index=foot_index)}'
             + footer(shell))
 
 

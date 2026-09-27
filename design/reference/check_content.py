@@ -70,12 +70,15 @@ SKIP_KEYS = {"href", "url", "route", "id", "cite_payload", "citation", "meta_des
              "trace_state", "state", "series", "derived", "kind", "section_id", "order", "active", "other_lang", "edition"}
 
 
+NUMBER_KEYS = {"id", "citation"}   # the page's own governed identifier and citation: their numbers may be printed as often as the composition needs (D6: the print-only provenance block)
+
+
 def governed_strings(obj, out: set, key: str = "", min_len: int = 12) -> set:
     """Every governed string the renderer receives (the harness bundle), long enough to be a text block (or, with
     min_len 1, every governed string and value — the page's governed number set)."""
     if isinstance(obj, dict):
         for k, v in obj.items():
-            if k not in SKIP_KEYS:
+            if k not in SKIP_KEYS or (min_len <= 1 and k in NUMBER_KEYS):
                 governed_strings(v, out, k, min_len)
     elif isinstance(obj, list):
         for v in obj:

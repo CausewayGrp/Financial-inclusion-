@@ -33,7 +33,7 @@ def main() -> int:
     counts = inv.get("counts", {})
     content_src = (REF / "yfie" / "content.py").read_text(encoding="utf-8")
     build_src = (REF / "build.py").read_text(encoding="utf-8")
-    other_src = "".join((REF / "yfie" / n).read_text(encoding="utf-8") for n in ("render.py", "families.py", "visuals.py", "theme.py", "neutral.py") if (REF / "yfie" / n).exists())
+    other_src = "".join(f.read_text(encoding="utf-8") for f in sorted((REF / "yfie").glob("*.py")) if f.name != "content.py")   # every module but the content path
     bad: list[str] = []
     named = lambda f, src: (f in src) or (Path(f).name in src)  # noqa: E731
     for f, role in sorted(roles.items()):
@@ -47,7 +47,7 @@ def main() -> int:
         if in_other:
             bad.append(f"a renderer reads a projection directly (only the content path may): {f}")
     # the built site: every document, one bundle per edition page, no copied content model
-    docs = sorted(p for p in site.rglob("index.html") if p.parent != site and "_review" not in p.parts and "_bundle" not in p.parts)
+    docs = sorted(p for p in site.rglob("index.html") if p.parent != site and not any(part.startswith("_") for part in p.relative_to(site).parts))
     edition_pages = [p for p in docs if p.relative_to(site).parts[0] in ("en", "ar")]
     n_spec = int(counts.get("page_specs", 143))
     if len(edition_pages) != 2 * n_spec:
@@ -58,7 +58,7 @@ def main() -> int:
     bundles = list((site / "_bundle").glob("*.json"))
     if len(bundles) != 2 * n_spec:
         bad.append(f"bundles {len(bundles)}, expected {2 * n_spec}")
-    shipped = sorted(str(p.relative_to(site)) for p in site.rglob("*.json") if "_bundle" not in p.parts and "_review" not in p.parts and not p.name.startswith("_review"))
+    shipped = sorted(str(p.relative_to(site)) for p in site.rglob("*.json") if not any(part.startswith("_") for part in p.relative_to(site).parts))   # underscore paths (_bundle, _review, _export, _social) are not the site
     allowed = {"static-data/search_index.json", "static-data/search_aliases.json"}
     extra = [s for s in shipped if s not in allowed]
     if extra:

@@ -9,7 +9,10 @@
 
 Every renderer receives the same governed content from `yfie.content` (read from site-src/content/**) and the shell; it
 never reads a copied content model. The build also writes `out/_bundle/<route>__<lang>.json` — the exact content
-structures a renderer receives — so Design prototypes and reviewers can bind the real governed text.
+structures a renderer receives — so Design prototypes and reviewers can bind the real governed text. With the accepted
+renderer it also writes the portable frames of D6 (`yfie/frames.py`): `out/_export/<visual>__<lang>.html`, one
+standalone export frame per drawn contract, and `out/_social/<route>__<lang>.html`, the social-image template of every
+page — underscore paths, outside the hostable site, rasterised by `check_visuals.py` for the evidence.
 """
 from __future__ import annotations
 
@@ -68,6 +71,11 @@ def main() -> int:
         renderer.assets(out, args.variant)
     routes = TRIO if args.routes == "trio" else (content.routes() if args.routes == "all" else [r.strip() for r in args.routes.split(",")])
     written = 0
+    portable = args.renderer == "accepted" and args.routes == "all"
+    if portable:
+        from yfie import frames, visuals
+        (out / "_export").mkdir(); (out / "_social").mkdir()
+    exports = 0
     for lang in ("ar", "en"):
         for route in routes:
             page = content.page(route, lang) if args.routes != "trio" else content.trio(lang)[route]
@@ -79,9 +87,18 @@ def main() -> int:
             d.mkdir(parents=True, exist_ok=True)
             (d / "index.html").write_text(html, encoding="utf-8")
             written += 1
+            if portable:
+                (out / "_social" / bundle_name.replace(".json", ".html")).write_text(frames.social_document(page, shell, route), encoding="utf-8")
+        if portable:   # one export frame per drawn contract (the D1 figure and every drawer), in this language
+            for vid in list(visuals.FIGURES) + list(visuals.DRAWERS):
+                v = content.visual(vid, lang)
+                shell = content.shell(lang, v.get("canonical_href", "/"))
+                fig = visuals.figure(v, shell["labels"]["cite"], renderer.DISC.origin())
+                (out / "_export" / f"{vid}__{lang}.html").write_text(frames.export_document(fig, v, shell), encoding="utf-8")
+                exports += 1
     if args.routes == "all" and hasattr(renderer, "render_site_files"):
         written += renderer.render_site_files(out, content)
-    print(f"Built {written} documents with renderer '{args.renderer}' into {out}")
+    print(f"Built {written} documents with renderer '{args.renderer}' into {out}" + (f"; {exports} export frames and {written - 2} social frames in _export/ and _social/" if portable else ""))
     return 0
 
 

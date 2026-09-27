@@ -1,8 +1,10 @@
 # Component catalogue
 
-> STATUS: **seeded at D2 — the objects the hard families use, the figure anatomy and the evidence-state grammar.**
+> STATUS: **D6 — the objects of every family, the figure anatomy with its nine drawing forms, the table pattern, the
+> evidence-state grammar, the tools' states (D5) and the portable and print forms (D6).**
 > Each entry answers the contract's questions (`handoff/DESIGN_TO_CODE_CONTRACT.md` §1) as far as the reference
-> implementation proves them; tool states and keyboard paths are completed at D5, print and export forms at D6.
+> implementation proves them. The visual and table system in full: `06_VISUAL_TABLE_SYSTEM.md`; assets and the
+> social-image templates: `08_ASSET_MAP.md`.
 > Source of truth: `design/reference/yfie/render.py`, `families.py`, `visuals.py`, `theme.py` (tokens in
 > `02_TOKENS.json`). Nothing here authors public text: every label named is a governed `UI-*` ID.
 
@@ -23,6 +25,10 @@
 | Product bar, search dialog, institutional band | navigation contract labels; `UI-HEADER-*`, `UI-SEARCH-*`, `UI-FOOTER-*` | menu open/closed (< 900 px), dialog open/closed | as D1 | mirrored | hooks of brief §19 unchanged; dialog labelled by its title | — | — | trust links lead the band |
 | Next actions `nav.actions` | `route_next_actions`, `UI-NEXT-*` | — | wrap | — | labelled by its `h2` | — | — | — |
 | Technical state (D5): `.compare-url-error`, `[data-compare-verdict=same-record]`, `.search-status` with content, `[data-search-empty]`, `[data-source-no-results]`, `[data-correction-error]`, `.noscript` | the runtime's governed `UI-JS-*` messages; `UI-HEADER-NOSCRIPT` | announced (`role=alert` or `status`) | full width of its tool | mirrored | announced through the live region the runtime already owns | **a dashed hairline**, body ink — never the boundary's double rule, the counter colour or the plaster surface (`07_INTERACTION_ACCESSIBILITY.md` §1) | — | the governed message; navigation and the evidence around it |
+| Print provenance block `.print-foot` (D6) | `UI-PRODUCT-NAME`, `UI-CONTENT-VERSION`, the canonical URL, the record's governed citation or title — product — URL | print only (hidden on screen) | the printed page's foot | the URL isolated LTR; Arabic order | not in the accessibility tree on screen | black on white; no colour | — | the canonical URL and the edition |
+| Export frame `body.export-doc` (D6) | one drawn contract's frame (§2) and the identity line: the mark 32 px, `UI-PRODUCT-NAME`, `UI-CONTENT-VERSION` | a document, no states | 800 px; below that the figure's own narrow form | mirrored; the credit and the URL isolated LTR | no script; the logo `img` named | the figure's forced-colours and print rules | the canonical link leads to the text alternative | the prohibited inference, the credit, the canonical link, the edition |
+| Export control (D6, designed, **unshipped**) | the export actions and their unavailable, licence and file-format states — labels not governed (`ESCALATIONS.md`); every CauseWay-content download disabled until OWN-04 | unavailable (until OWN-04) · available: image, governed table | in the figure's foot beside cite | mirrored | a button per format, named by its governed label | — | the export document above, never a crop | the frame travels with every export |
+| Social frame `body.social-doc` (D6) | governed title, question, clocks, boundary, `UI-PRODUCT-NAME`, family rubric, the canonical URL, `UI-CONTENT-VERSION` (`08_ASSET_MAP.md` §4) | a 1200 × 630 document, five templates | fixed frame; type steps down with text length, never a crop | Arabic face, RTL order, longer leading | no script; the logo `img` named | no colour semantics; the boundary's double rule | — | the boundary, the canonical link, the edition |
 
 ## 2. The figure object `figure.fig` (every visual, every tier)
 
@@ -45,12 +51,18 @@ x-coordinates, no `viewBox`, `direction="ltr"`, `aria-hidden` (the text alternat
 | State-keyed time series | VIS-REMITTANCE-MACRO; VIS-POS-TERMINALS / -TRANSACTIONS / -VALUE (a three-panel small multiple, separate value axes) | one line per series; marks by evidence state; break never joined (double rule, note); missing x a labelled dotted gap; disagreement ringed with the record's method text as the note; NOMINAL on the axis title; a key of states with their x-range and source document | every point; on a series of more than eight points on two rows, and below 600 px only the first, last, marked and state-change points (the table carries all) | full width; alternate x labels hidden below 600 px |
 | Dot rows | VIS-REMITTANCE-COST | corridor lanes; one row per governed send amount; marks keyed by amount | above the mark | rows stack |
 | Object list | VIS-PAYMENT-ANATOMY | one object per governed measurement object: label, value or the WITHHELD label, its governed "is not" line, marker labels; no totals | — | stacked |
-| Chain ladder | RV-CWR-009 (full); VIS-PAYMENT-RAILS (SUPPORTING: the same governed event set, no values) | the seven governed steps top to bottom; EVIDENCED steps list their dated events with a locator; OPEN steps carry `UI-VIS-CHAIN-OPEN`; the first open step after the evidenced ones is set in the boundary voice (where evidence stops) | — | native vertical list |
+| Chain ladder | RV-CWR-009 (full, D6); VIS-PAYMENT-RAILS (SUPPORTING: the same governed event set, no values) | the seven governed steps top to bottom; EVIDENCED steps list their dated events with a locator; OPEN steps carry `UI-VIS-CHAIN-OPEN`; the first open step after the evidenced ones is set in the boundary voice (where evidence stops); RV-CWR-009 adds the governed POS activity rows | RV-CWR-009: the governed values in the activity rows | native vertical list |
+| Provider matrix (D6) | VIS-PROVIDER-OBSERVABILITY | one row per provider class, five self-labelled cells in the contract's order (authority or source · dated universe or count · dated status decisions by state, dates as source-record links · negative authority · evidence of operation); governed words and dates only; `UI-VIS-STATE-UNKNOWN` wherever no row exists; the class's governed limit line in the boundary voice; the issuer-scope note; the five headings as placeholders until governed | counts only as governed (roster by category, wallet counts by date) | one, two or three cells per row by container width |
+| Dated lanes (D6) | RV-CWR-004 | three lanes on one left-to-right time axis (people: the governed fieldwork span and the survey value; infrastructure: dated monthly presence, first and latest values; institutions: dated events keyed to the list beneath), the not-comparable label between lanes, the outcome as an open chain node; no value axis | the governed first and last values; the survey value | lanes stack; the key list wraps |
+| Bars without ranks (D6) | VIS-FIRM-CONSTRAINTS | horizontal bars from zero in the contract's descending order, no ordinal, the survey state on the panel, the record's measurement limitation as the frame note | at the bar end | label above its track |
 | Text frame | every SUPPORTING and TABLE_TEXT_FIRST contract without a drawing | the governed description as the frame's body; one boundary in the foot | — | — |
 
-Tables: caption = title — period — universe (— unit); scoped headers; the value column headed by the governed unit
-label; other columns unheaded where no governed column label exists (escalated); every value formatted by the one
-number rule (precision as governed, thousands separators, years unseparated, isolated left-to-right).
+Tables (D6, `06_VISUAL_TABLE_SYSTEM.md` §4): caption = title — period — universe — unit and every qualifier that holds
+for every row; the row header and the value column headed by the governed unit label; a qualifier that varies travels
+in the value's cell; every data column named (`table()` refuses an unnamed one; the corner cell may be empty); the
+table in a focusable region named by the heading and the title; two or three columns that fit 256 px in both
+languages — only the matrix table is declared wide and scrolls inside its region; every value by the one number rule
+(precision as governed, thousands separators, years unseparated, isolated left-to-right).
 
 ## 3. The evidence-state grammar (`visual_design_contracts.json` → `grammar`; labels `UI-VIS-*`)
 
@@ -72,10 +84,10 @@ number rule (precision as governed, thousands separators, years unseparated, iso
 | HISTORICAL | UI-VIS-STATE-HISTORICAL | as its state, period printed, no fading | — | — | no contract row carries it | DESIGNED |
 | PROGRAMME | UI-VIS-STATE-PROGRAMME | outlined mark in a labelled programme frame | none | universe printed | none | DESIGNED |
 | PARTIAL | UI-VIS-STATE-PARTIAL | as its state | — | direct label | none | DESIGNED |
-| UNKNOWN | UI-VIS-STATE-UNKNOWN | no mark (never zero) | none | direct label | none (the `/access/` frame carries the governed prose) | DESIGNED |
+| UNKNOWN | UI-VIS-STATE-UNKNOWN | no mark (never zero) | none | direct label | VIS-PROVIDER-OBSERVABILITY (every dimension without a governed row; D6) | VERIFIED (D6) |
 | BREAK_UNIVERSE | UI-VIS-BREAK-UNIVERSE | as BREAK_VINTAGE | not joined | note line | none | DESIGNED |
 | TARGET / RESULT | UI-VIS-TARGET / UI-VIS-RESULT | labelled cells of a three-row table | — | labels | none (VIS-TARGET-RESULT-STATE has no rows — escalated) | DESIGNED |
-| CHAIN-* | UI-VIS-CHAIN-RULE … OUTCOME, EVIDENCED, OPEN | ■ evidenced / □ open step | rail | step label + state | VIS-PAYMENT-RAILS (RV-CWR-009 at D6) | VERIFIED |
+| CHAIN-* | UI-VIS-CHAIN-RULE … OUTCOME, EVIDENCED, OPEN | ■ evidenced / □ open step | rail | step label + state | VIS-PAYMENT-RAILS; RV-CWR-009 with its values; the outcome node of RV-CWR-004 (D6) | VERIFIED (D2, D6) |
 
 Colour is never the only carrier; nothing fades with age; no red, amber or green anywhere.
 
@@ -92,5 +104,6 @@ Colour is never the only carrier; nothing fades with age; no red, amber or green
 ## 5. Exceptions (recorded, `09_CODE_HANDOFF.md`)
 
 - The governed source intro (`UI-EVID-OPEN-THE-SOURCE-RECORD-HERE`) is not printed on a framing record (no source to open).
-- Chart fallback tables head only the value column (the governed unit label); the other headers wait for governed labels.
-- Dense series hide most value labels below 600 px; the table carries every value.
+- Chart fallback tables name every data column with a governed string (the unit; `UI-VIS-SOURCE`; `UI-VIS-WHAT-THE-EVIDENCE-SHOWS`); the corner cell above the row headers is empty; the provider matrix's five headings show the development placeholder until governed (D6).
+- Dense series print their first, last, marked and state-change values below 600 px; the table carries every value (decided at D6, DL-D6-005).
+- The export control is designed and unshipped (labels not governed; OWN-04); the social-image templates are written as HTML frames, not rasterised (Code adds `og:image`).

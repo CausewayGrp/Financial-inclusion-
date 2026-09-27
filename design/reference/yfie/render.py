@@ -56,7 +56,7 @@ def json_block(id_: str, data) -> str:
 # ------------------------------------------------------------------------------------------------ build hook
 def assets(out: Path, variant: str = "") -> None:
     """Write the stylesheet. Fonts and the logo are copied unchanged by the build."""
-    (out / "assets" / "yfie.css").write_text(theme.FONT_FACES + "\n" + theme.CSS + "\n" + theme.CSS_D2, encoding="utf-8")
+    (out / "assets" / "yfie.css").write_text(theme.FONT_FACES + "\n" + theme.CSS + "\n" + theme.CSS_D2 + "\n" + theme.CSS_D6, encoding="utf-8")
 
 
 # ------------------------------------------------------------------------------------------------ shell
@@ -235,7 +235,7 @@ def evidence_record(page: dict, shell: dict) -> str:
     edges = [(L["used_in"], used),
              (L["related"], [f'<a href="{x["href"]}">{esc(x["label"])}</a>' for x in page["routes_back"]] + [f'<a href="{page["hrefs"]["evidence"]}">{esc(L["evidence_hub"])}</a>', f'<a href="{page["hrefs"]["data"]}">{esc(L["data"])}</a>', f'<a href="{page["hrefs"]["methodology"]}">{esc(L["methodology"])}</a>'], L["related_intro"])]
     used_attr = " data-used-in-readings" if used else ""
-    body = f'<article class="obj page-obj"{used_attr}>{head_}{"".join(qa)}{util}</article>{spine(index, edges)}{spine(index, edges, foot=True, foot_index=False)}'
+    body = f'<article class="obj page-obj"{used_attr}>{head_}{"".join(qa)}{util}{print_foot(shell, page["route"], page["title"], page["citation"])}</article>{spine(index, edges)}{spine(index, edges, foot=True, foot_index=False)}'
     return head(page, shell, page["route"], extra=meta) + header(shell) + body + footer(shell)
 
 
@@ -274,7 +274,7 @@ def home(page: dict, shell: dict) -> str:
         parts.append(f'<section class="qa" id="sf">{rubric(L["featured"], tag="h2")}<div><article class="compact first-obj">{clock(L["evidence_period"], esc(f["evidence_period"]))}<div class="q"><a href="{f["href"]}">{esc(f["title"])}</a></div><div class="st"><p>{esc(f["thesis"])}</p></div><div class="open"><a href="{f["href"]}">{esc(L["open_reading"])}</a> · <a href="{page["hrefs"]["readings"]}">{esc(L["all_readings"])}</a></div></article></div></section>')
     edges = [(f'{L["records_heading"]} ({len(page["records"])})', [f'<a href="{r["href"]}">{esc(r["title"])}</a>' for r in page["records"]]),
              (L["flow"], [f'<a href="{h}">{esc(t)}</a><br><span class="small">{esc(d)}</span>' for h, t, d in ((page["hrefs"]["readings"], L["readings_nav"], L["cta_readings"]), (page["hrefs"]["measurement"], L["measurement_nav"], L["cta_measurement"]), (page["hrefs"]["data"], L["data_nav"], L["cta_data"]))], L["side"])]
-    body = f'<article class="obj page-obj">{"".join(parts)}{page_util(shell)}</article>{spine(index, edges)}{spine(index, edges, foot=True)}'
+    body = f'<article class="obj page-obj">{"".join(parts)}{page_util(shell)}{print_foot(shell, "/", page["title"])}</article>{spine(index, edges)}{spine(index, edges, foot=True)}'
     return head(page, shell, "/") + header(shell) + body + footer(shell)
 
 
@@ -314,7 +314,7 @@ def reading(page: dict, shell: dict) -> str:
     related = f'<section class="qa" id="related" data-reading-related><h2>{esc(L["related"])}</h2><div><div class="objs">{rel}</div><p class="small mt12"><a href="{L["readings_index_href"]}">{esc(L["all"])}</a></p></div></section>' if page["related"] else ""
     edges = [(L["trace"], [f'<a href="{x["href"]}">{esc(x["proposition"])}</a>' for x in page["trace"]]),
              (L["return"], [f'<a href="{b["href"]}">{esc(b["label"])}</a>' for b in page["return_to"]])]
-    body = f'<article class="obj page-obj">{head_}{bnd}<div class="essay">{"".join(essay)}</div>{trace}{sources}{related}{page_util(shell)}</article>{spine(index, edges)}{spine(index, edges, foot=True)}'
+    body = f'<article class="obj page-obj">{head_}{bnd}<div class="essay">{"".join(essay)}</div>{trace}{sources}{related}{page_util(shell)}{print_foot(shell, page["route"], page["title"])}</article>{spine(index, edges)}{spine(index, edges, foot=True)}'
     return head(page, shell, page["route"], kind="article") + header(shell) + body + footer(shell)
 
 
@@ -324,6 +324,18 @@ def page_util(shell: dict) -> str:
     L = shell["labels"]
     return (f'<section class="util"><div class="actions"><button type="button" class="tbtn" data-cite>{esc(L["cite"])}</button>'
             f'<a href="{shell["contact_href"]}">{esc(L["report"])}</a></div></section>')
+
+
+def print_foot(shell: dict, route: str, title: str, citation: str = "") -> str:
+    """Provenance that survives a printed page (D6, brief §10): the product name, the edition, the canonical URL
+    (absolute once the deployment origin is set) and the citation — the record's governed citation where one exists,
+    otherwise the page title, the product and the canonical URL, exactly what the runtime's cite action copies. Shown
+    by the print system only (hidden on screen); no word is authored."""
+    origin = DISC.origin()
+    canon = DISC.url(DISC.localized(route, shell["lang"]), origin)
+    cite = iso(esc(citation)) if citation else f'{iso(esc(title))} — {esc(shell["product"])} — <bdi dir="ltr">{esc(canon)}</bdi>'
+    return (f'<div class="print-foot"><p><b>{esc(shell["product"])}</b> · {esc(shell["edition"])} · <bdi dir="ltr" class="canon">{esc(canon)}</bdi></p>'
+            f'<p class="cite">{cite}</p></div>')
 
 
 RENDERERS = {"Orientation": home, "Evidence Record": evidence_record, "Reading": reading}

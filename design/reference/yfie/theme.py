@@ -3,17 +3,12 @@
 converged D1 composer (design/exploration/d1_canvas/boards/t4.py, version 5) and maintained here from now on.
 Tokens are the :root custom properties at the top; the Lock (design/01_FOUNDATIONS.md §4) governs what they carry."""
 
-FONT_FACES = """@font-face{font-family:'IBM Plex Sans';font-style:normal;font-weight:300;font-display:swap;src:url('/assets/fonts/ibm-plex-sans/IBMPlexSans-Light.woff2') format('woff2')}
-@font-face{font-family:'IBM Plex Sans';font-style:normal;font-weight:400;font-display:swap;src:url('/assets/fonts/ibm-plex-sans/IBMPlexSans-Regular.woff2') format('woff2')}
-@font-face{font-family:'IBM Plex Sans';font-style:italic;font-weight:400;font-display:swap;src:url('/assets/fonts/ibm-plex-sans/IBMPlexSans-Italic.woff2') format('woff2')}
+FONT_FACES = """@font-face{font-family:'IBM Plex Sans';font-style:normal;font-weight:400;font-display:swap;src:url('/assets/fonts/ibm-plex-sans/IBMPlexSans-Regular.woff2') format('woff2')}
 @font-face{font-family:'IBM Plex Sans';font-style:normal;font-weight:500;font-display:swap;src:url('/assets/fonts/ibm-plex-sans/IBMPlexSans-Medium.woff2') format('woff2')}
 @font-face{font-family:'IBM Plex Sans';font-style:normal;font-weight:600;font-display:swap;src:url('/assets/fonts/ibm-plex-sans/IBMPlexSans-SemiBold.woff2') format('woff2')}
-@font-face{font-family:'IBM Plex Sans';font-style:normal;font-weight:700;font-display:swap;src:url('/assets/fonts/ibm-plex-sans/IBMPlexSans-Bold.woff2') format('woff2')}
-@font-face{font-family:'IBM Plex Sans Arabic';font-style:normal;font-weight:300;font-display:swap;src:url('/assets/fonts/ibm-plex-sans-arabic/IBMPlexSansArabic-Light.woff2') format('woff2')}
 @font-face{font-family:'IBM Plex Sans Arabic';font-style:normal;font-weight:400;font-display:swap;src:url('/assets/fonts/ibm-plex-sans-arabic/IBMPlexSansArabic-Regular.woff2') format('woff2')}
 @font-face{font-family:'IBM Plex Sans Arabic';font-style:normal;font-weight:500;font-display:swap;src:url('/assets/fonts/ibm-plex-sans-arabic/IBMPlexSansArabic-Medium.woff2') format('woff2')}
-@font-face{font-family:'IBM Plex Sans Arabic';font-style:normal;font-weight:600;font-display:swap;src:url('/assets/fonts/ibm-plex-sans-arabic/IBMPlexSansArabic-SemiBold.woff2') format('woff2')}
-@font-face{font-family:'IBM Plex Sans Arabic';font-style:normal;font-weight:700;font-display:swap;src:url('/assets/fonts/ibm-plex-sans-arabic/IBMPlexSansArabic-Bold.woff2') format('woff2')}"""
+@font-face{font-family:'IBM Plex Sans Arabic';font-style:normal;font-weight:600;font-display:swap;src:url('/assets/fonts/ibm-plex-sans-arabic/IBMPlexSansArabic-SemiBold.woff2') format('woff2')}"""
 
 CSS = r"""/* Yemen Financial Inclusion Evidence — reference stylesheet (D1, direction T4 · Instrument). Generated once from the converged composer, then maintained here. No inline style anywhere in the site. */
 :root{--paper:#FFFFFF;--plaster:#F5F1E9;--ink:#17212B;--ink-2:#3D4954;--mute:#66717B;--rule:#D8DDE2;--rule-2:#AEB7BF;--ochre:#7A5A1D;--ochre-line:#D6B86A;--counter:#1E5650;
@@ -23,6 +18,7 @@ html{background:var(--paper);color:var(--ink);font-family:var(--font);font-size:
 body{margin:0}
 a{color:inherit;text-decoration:underline;text-decoration-thickness:1px;text-underline-offset:.16em;text-decoration-color:var(--rule-2)}
 h1,h2,h3,h4{margin:0;font-weight:600}
+b,strong,th{font-weight:600}   /* emphasis is the semibold role; the browser's bold decides nothing (D6) */
 h1{font-size:var(--fs-display);line-height:var(--lh-display);text-wrap:balance}[dir=ltr] h1{letter-spacing:-.012em}
 .nw{white-space:nowrap}
 h2{font-size:var(--fs-q);line-height:var(--lh-q)}
@@ -209,7 +205,7 @@ dialog.search::backdrop{background:rgba(23,33,43,.55)}
 .search-results .empty{color:var(--ink-2)}
 .source-target{outline:3px double var(--counter);outline-offset:6px}
 @media (prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important;scroll-behavior:auto!important}}
-@media (forced-colors:active){.bnd,.between,.obj,.fig,.inst,.spine,.strip a,.compact,.qa{border-color:CanvasText!important}.mark.a{fill:CanvasText}.mark.b{stroke:CanvasText;fill:Canvas}.path,.axis,.tick,.stem,.grid{stroke:CanvasText}.lbl,.val,.unit{fill:CanvasText}.rubric,.clock .k,.clock .v,.lane .base,.between,.bnd,.bnd p,.bnd h2{color:CanvasText}}
+@media (forced-colors:active){.bnd,.between,.obj,.fig,.inst,.spine,.strip a,.compact,.qa{border-color:CanvasText!important}.mark.a{fill:CanvasText}.mark.b{stroke:CanvasText;fill:Canvas}.path,.axis,.tick,.stem,.grid{stroke:CanvasText}.lbl,.lbl.origin,.val,.unit{fill:CanvasText}.rubric,.clock .k,.clock .v,.lane .base,.between,.bnd,.bnd p,.bnd h2{color:CanvasText}}
 @media print{
 html{font-size:11pt;line-height:1.45}
 .bar .nav,.controls,dialog,.noscript,.skip,.strip,.spine .index,.inst .groups,.util .actions,.fig .foot button{display:none!important}
@@ -470,4 +466,183 @@ svg.ts .lbl.alt{display:block}
 .compare-url-error{border-top-style:dashed}.noscript{background:var(--paper);border-top-style:dashed}
 [data-compare-verdict=same-record]{border-top:1px dashed var(--rule-2);color:var(--ink-2)}[data-compare-verdict=same-record] h3,[data-compare-verdict=same-record] .eyebrow{color:var(--ink)}
 .search-status:not(:empty){margin-top:6px}
+"""
+
+
+# D6 additions — the visual system: the frame foot, the matrix, the dated lanes, the bars' note, narrow tables,
+# development placeholders; the print system for every family and the Reading document; export and social frames.
+CSS_D6 = r"""/* ---- D6: visuals, frames, print (same tokens; maintained with CSS and CSS_D2 above) ---- */
+.fig .foot .ed{white-space:nowrap}
+.fig .foot .b b{font-weight:600}
+.rvtab td{white-space:normal}.rvtab td.num{white-space:nowrap}
+@container (max-width:420px){.rvtab th,.rvtab td{padding:6px 5px}}
+.rvtab caption span[dir=auto]{unicode-bidi:isolate}
+.marker.between-tables{margin:8px 0 0;font-size:var(--fs-clock);font-weight:600;color:var(--counter);border-top:3px double var(--counter);padding-top:6px}
+.ncc{font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:11px;font-weight:600;color:var(--ink);background:var(--paper);border:1px dashed var(--counter);padding:1px 4px;white-space:nowrap;letter-spacing:0;text-transform:none}
+/* the provider matrix */
+.matrix{list-style:none;margin:8px 0 0;padding:0;display:flex;flex-direction:column;gap:0}
+.prow{border-top:3px solid var(--ink);padding:12px 0 14px}
+.prow+.prow{border-top-width:1px;border-top-color:var(--rule-2)}
+.prow .cls{font-size:var(--fs-q);line-height:var(--lh-q);font-weight:600;margin:0 0 8px}
+.prow .cells{display:grid;grid-template-columns:minmax(0,1fr);gap:10px 18px}
+.prow .cell{border-top:1px solid var(--rule);padding-top:6px;min-width:0;font-size:var(--fs-clock);line-height:var(--lh-clock);color:var(--ink-2)}
+.prow .dim{display:block;font-size:var(--fs-rubric);font-weight:600;color:var(--ochre);margin-bottom:4px}
+[dir=ltr] .prow .dim{text-transform:uppercase;letter-spacing:.1em}
+.prow .cl{font-weight:600;color:var(--ink);margin:0 0 4px}
+.prow .cl2{margin:4px 0 0;color:var(--ink-2)}
+.prow .cnt{margin:0}.prow .n{font-size:var(--fs-st);font-weight:600;color:var(--ink);font-variant-numeric:tabular-nums}
+.prow ul{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:4px}
+.prow .evl li{padding-inline-start:10px;border-inline-start:2px solid var(--rule-2)}
+.prow .evl.ctx li{border-inline-start-style:dotted}
+.prow .evl b{color:var(--ink);font-weight:600}
+.prow .srcl{display:inline-block;padding:3px 0;min-height:24px;text-decoration-color:var(--rule-2)}
+.prow .unk{margin:0;color:var(--ink);font-weight:600;border-inline-start:2px dotted var(--rule-2);padding-inline-start:10px}
+.prow .lim{margin:10px 0 0;font-size:var(--fs-src);line-height:var(--lh-src);color:var(--counter);font-weight:500;border-top:3px double var(--counter);padding-top:8px}
+.prow .lim b{font-weight:600}
+.cap.note.issuer{border-top:1px solid var(--rule-2);padding-top:8px;margin-top:14px}
+/* the dated lanes */
+.lanes-dated{display:flex;flex-direction:column;gap:10px}
+.lanes-dated .lane h3{margin:0 0 2px}
+.lanes-dated .between{margin:0;padding-top:6px}
+.lane-svg{display:block;overflow:visible;font-family:var(--font)}
+.lane-svg .span{stroke:var(--ink);stroke-width:6;stroke-linecap:butt}
+.lane-svg .stem.open{stroke-dasharray:2 4}
+.lanes-dated .ln{margin:2px 0 0;font-size:var(--fs-clock);line-height:var(--lh-clock);color:var(--ink-2)}
+.lanes-dated .ln b{color:var(--ink);font-weight:600}
+.lanes-dated .lane.outcome h3{color:var(--counter)}
+.lanes-dated .lane.outcome .st-state{font-size:var(--fs-clock);font-weight:600;color:var(--counter);margin-inline-start:.6em}
+.lanes-dated .lanes-ax{margin-top:2px}
+.evs.keyed{list-style:none;margin:6px 0 0;padding:0;display:flex;flex-direction:column;gap:5px;font-size:var(--fs-src);line-height:var(--lh-src)}
+.evs.keyed li{display:flex;flex-wrap:wrap;gap:2px 10px;align-items:baseline}
+.evs.keyed .k{display:inline-block;min-width:1.4em;font-weight:600;color:var(--mute);font-variant-numeric:tabular-nums}
+.evs.keyed .clock{flex-direction:row}.evs.keyed .clock .v{font-weight:600;min-width:6.5em}
+.evs.keyed .source-locator{text-decoration:none;font-weight:600}
+/* the bars' in-frame note */
+.p1.noranks .rl{font-weight:500}
+@media (forced-colors:active){.lane-svg .span,.lane-svg .stem{stroke:CanvasText}.prow,.prow .cell,.prow .lim,.prow .unk,.prow .evl li,.ncc{border-color:CanvasText!important}.prow .n,.prow .cl,.prow .lim,.prow .unk,.lanes-dated .lane.outcome h3{color:CanvasText}}
+.fig{container-type:inline-size}
+.rvtab.wide{min-width:1080px}
+.fig .foot .canon-l{display:inline-block;padding:3px 0;min-height:24px}
+.prow .evl .dates{display:block;margin-top:2px;color:var(--ink-2)}
+.prow .evl a.dl{text-decoration-color:var(--rule-2);display:inline-block;padding:3px 0;min-height:24px}
+@container (min-width:480px){
+.prow .cells{grid-template-columns:repeat(2,minmax(0,1fr))}
+}
+@container (min-width:760px){
+.prow .cells{grid-template-columns:repeat(3,minmax(0,1fr));gap:10px 16px}
+}
+/* ---- the print-only identity and citation block (shown by the print system only) ---- */
+.print-foot{display:none}
+/* ---- export and social frames (standalone documents written by the build to out/_export and out/_social) ---- */
+body.export-doc{background:var(--paper);margin:0}
+body.export-doc main{width:800px;max-width:100%;padding:24px 28px 20px;margin:0;box-sizing:border-box}
+body.export-doc .fig{margin:0}
+body.export-doc .fig .foot button{display:none}
+body.export-doc .fig .alt{display:none}
+body.export-doc .exp-id{display:flex;align-items:center;gap:10px;font-size:var(--fs-clock);line-height:var(--lh-clock);color:var(--ink-2);margin:0 0 12px}
+body.export-doc .exp-id img{width:32px;height:32px}
+body.export-doc .exp-id b{color:var(--ink);font-weight:600}
+body.social-doc{background:var(--paper);margin:0;width:1200px;height:630px;overflow:hidden}
+body.social-doc main{box-sizing:border-box;width:1200px;height:630px;padding:44px 56px 40px;display:flex;flex-direction:column;border-top:10px solid var(--ink)}
+.soc-head{display:flex;align-items:center;gap:18px;font-size:22px;line-height:1.25;font-weight:600;color:var(--ink)}
+.soc-head img{width:72px;height:72px;flex:0 0 auto}
+.soc-head .soc-fam{display:block;font-size:15px;font-weight:600;color:var(--ochre);letter-spacing:.1em;text-transform:uppercase;margin-top:2px}
+[dir=rtl] .soc-head .soc-fam{letter-spacing:0;text-transform:none}
+.soc-body{flex:1 1 auto;display:flex;flex-direction:column;justify-content:center;gap:14px;min-height:0;padding:16px 0}
+.soc-q{font-size:24px;line-height:1.35;color:var(--ink-2);margin:0;font-weight:400}
+.soc-title{font-size:46px;line-height:1.15;font-weight:600;margin:0;max-width:none;text-wrap:balance;letter-spacing:-.012em}
+[dir=rtl] .soc-title{letter-spacing:0;line-height:1.4}
+.soc-title.long{font-size:38px}.soc-title.xlong{font-size:31px}
+.soc-clock{font-size:20px;line-height:1.4;color:var(--ink);margin:0;font-weight:500}
+.soc-desc{font-size:22px;line-height:1.45;color:var(--ink-2);margin:0;font-weight:400}
+.soc-desc.long{font-size:19px}
+.soc-clock .k{color:var(--mute);font-weight:600;margin-inline-end:.6em}
+.soc-bnd{border-top:3px double var(--counter);padding-top:10px;color:var(--counter);font-size:20px;line-height:1.4;font-weight:500;margin:0}
+.soc-bnd.long{font-size:17px}
+.soc-bnd b{font-weight:600}
+.soc-foot{display:flex;justify-content:space-between;gap:24px;align-items:baseline;font-size:17px;line-height:1.4;color:var(--ink-2);border-top:1px solid var(--rule-2);padding-top:14px}
+.soc-foot .canon{font-variant-numeric:tabular-nums}
+.soc-foot .ed{white-space:nowrap;font-weight:600;color:var(--ink)}
+body.social-doc.dense .soc-title{font-size:34px}body.social-doc.dense .soc-title.long{font-size:30px}body.social-doc.dense .soc-title.xlong{font-size:26px}
+body.social-doc.dense .soc-q{font-size:20px}body.social-doc.dense .soc-clock{font-size:17px}body.social-doc.dense .soc-desc,body.social-doc.dense .soc-bnd{font-size:17px}
+body.social-doc.dense .soc-body{gap:10px;padding:10px 0}
+body.social-doc.xdense .soc-title{font-size:28px}body.social-doc.xdense .soc-title.long{font-size:25px}body.social-doc.xdense .soc-title.xlong{font-size:22px}
+body.social-doc.xdense .soc-q{font-size:17px}body.social-doc.xdense .soc-clock{font-size:15px}body.social-doc.xdense .soc-desc,body.social-doc.xdense .soc-bnd{font-size:15px;line-height:1.4}
+body.social-doc.xdense .soc-body{gap:8px;padding:8px 0}
+body.export-doc .cite-sep{display:none}
+/* ---- the print system (D6): every family; the Reading as a document ---- */
+@media print{
+@page{margin:16mm 14mm}
+html{font-size:10.5pt;line-height:1.45}
+body{color:#000}
+.bar{border-bottom:1pt solid #000}
+.bar-in{padding:0 0 8pt;gap:12pt}
+.brand img{width:32pt;height:32pt}
+.bar .nav,.controls,dialog,.noscript,.skip,.strip,.spine .index,.inst .groups,.util .actions,.actions,.fig .foot .cite-sep,.chips,.search-inline,.controls-grid,.never,.compare-record-actions,[data-source-filter-status],[data-source-no-results],.open a,.src .acts button,.open,.compare-url-error{display:none!important}
+.brand-name{max-width:none;font-size:11pt}
+.page{display:block;padding:0;max-width:none}
+.page>.obj{max-width:none}
+.qa,.compact{display:block}
+.qa>div:first-child{margin-bottom:4pt}
+.obj{border-top:2pt solid #000;padding-top:10pt}
+.spine{position:static;max-height:none;overflow:visible;border:0;padding:0;margin-top:16pt}
+.foot-spine{display:block!important}
+.spine .edges{border-top:1pt solid #000;padding-top:6pt}
+.spine .edges ul{display:block}.spine .edges li{display:inline;border:0;padding:0;font-size:9pt}
+.spine .edges li::after{content:' · '}
+.spine .edges li:last-child::after{content:''}
+.spine .edges a{display:inline;padding:0}
+/* the page object and its answers are longer than a page: only the objects that fit a page avoid a break inside; a
+   figure keeps its head, panels and frame foot together and lets its text alternative break (D6, corrects the D1 rule
+   that kept the whole page object together and so began every printout on its second page) */
+.obj,.obj.page-obj,.qa{break-inside:auto}
+.compact,.src,.obj-card,.prow,.lane,.step,.pair,.head,.fig .fig-t,.fig .cap,.compare-verdict{break-inside:avoid}
+.bnd{break-inside:auto}.bnd p,.bnd li{break-inside:avoid}.bnd>h2,.bnd>.rubric,.bnd>h3{break-after:avoid}
+.fig{break-inside:auto;background:none;border-top:1pt solid #000;padding:8pt 0 0;margin:12pt 0 4pt}
+.fig .rubric,.fig .fig-t,.fig .cap{break-after:avoid}
+.fig .panels{break-inside:avoid;break-before:avoid;border-top:1pt solid #000}
+.fig .panels:has(.matrix),.fig .panels:has(.chain),.fig .panels:has(.anatomy),.fig .panels:has(.lanes-dated){break-inside:auto}
+.fig .foot{break-inside:avoid;break-before:avoid}
+.fig .key,.fig .marks,.fig .cap.note{break-before:avoid;break-inside:avoid}
+.fig .alt{break-before:auto}
+.fig .alt .table-wrap{break-inside:auto;overflow:visible}
+.qa+section.bnd,.head+section.bnd,.fig .foot .b{break-before:avoid}
+section.bnd+section.bnd{break-before:auto}
+.head+*{break-before:avoid}
+h1,h2,h3{break-after:avoid}
+details::details-content{content-visibility:visible;display:block}
+details summary{display:none}
+details.more .qa{margin-top:6pt}
+.src .acts a[href^='http']::after,.chain .source-locator::after,.evs.keyed .source-locator::after{content:' ' attr(href);font-size:.85em;color:#000;font-weight:400;word-break:break-all}
+.chain .source-locator,.evs.keyed .source-locator{text-decoration:none}
+.fig .foot a.canon::after{content:''}
+.inst{background:none;border-top:1pt solid #000;margin-top:16pt}
+.inst-in{display:block;padding:8pt 0 0}
+.inst .trust,.inst .id{display:none}
+.inst .fine{border:0;padding:0;font-size:8.5pt}
+a{text-decoration:none;color:inherit}
+.rvtab{font-size:8.5pt}
+.rvtab thead{display:table-header-group}
+.rvtab tr{break-inside:avoid}
+.rvtab td{white-space:normal}
+svg.ts .val.dense,svg.ts .lbl.alt{display:block}
+.mark.a,.bar{fill:#000}.mark.b{stroke:#000;fill:#fff}.path,.axis,.tick,.stem,.lane-svg .span{stroke:#000}.lbl,.val{fill:#000}
+.bnd,.between,.fig .foot .b,.prow .lim,.compare-verdict,.lanes-dated .lane.outcome h3{color:#000}
+.bnd,.between,.compare-verdict,.prow .lim,.marker.between-tables{border-top:2pt double #000}
+.rubric,.spine h3,.prow .dim,.qa .rubric{color:#000}
+.print-foot{display:block;margin-top:18pt;border-top:1pt solid #000;padding-top:8pt;font-size:9pt;line-height:1.4;color:#000}
+.print-foot p{margin:0 0 3pt}
+.print-foot .canon{word-break:break-all}
+.print-foot .cite{font-size:8.5pt;color:#000}
+.print-foot .cite b{font-weight:600}
+/* the Reading as a document: title block, essay at the reading measure, figure with its frame, trace, sources, citation */
+.essay section{padding:4pt 0 12pt}
+.essay .read{max-width:none}
+.essay .st{max-width:none}
+.pull{margin:10pt 0;padding-inline-start:12pt;border-inline-start:1.5pt solid #000}
+.head .clocks{display:flex;gap:10pt 28pt}
+[data-reading-boundary]{break-after:avoid}
+#trace,#sources{break-before:auto}
+#trace .objs .compact{padding:6pt 0}
+}
 """
