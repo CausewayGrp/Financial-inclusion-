@@ -2,7 +2,8 @@
 # -*- coding: utf-8 -*-
 """Build the Design reference implementation into design/reference/out/ (git-ignored).
 
-  python3 design/reference/build.py                       # accepted renderer (D1: the stress trio only)
+  python3 design/reference/build.py                       # accepted renderer: every route (288 documents), the root entry, the 404
+  python3 design/reference/build.py --routes trio         # the D1 stress trio only
   python3 design/reference/build.py --renderer neutral    # the neutral test harness (no stylesheet, no design decisions)
   python3 design/reference/build.py --renderer /abs/path/to/module.py --out /abs/path   # mount a Design prototype renderer
 
@@ -44,7 +45,7 @@ def main() -> int:
     ap = argparse.ArgumentParser()
     ap.add_argument("--renderer", default="accepted")
     ap.add_argument("--out", default=str(HERE / "out"))
-    ap.add_argument("--routes", default="trio")
+    ap.add_argument("--routes", default="all")
     ap.add_argument("--variant", default="")
     args = ap.parse_args()
     out = Path(args.out)
@@ -56,7 +57,8 @@ def main() -> int:
     shutil.copy2(ROOT / "site-src/assets/CauseWay_Master_Logo.png", out / "assets/CauseWay_Master_Logo.png")
     shutil.copy2(ROOT / "site-src/content/content/search_index.json", out / "static-data/search_index.json")
     shutil.copy2(ROOT / "site-src/content/content/search_aliases.json", out / "static-data/search_aliases.json")
-    shutil.copy2(ROOT / "site-src/app.js", out / "assets/app.js")   # baseline runtime for the tools (search, cite, language, menu)
+    shutil.copy2(ROOT / "site-src/app.js", out / "assets/app.js")   # baseline runtime for the tools (search, cite, language, menu, compare, sources, corrections)
+    shutil.copy2(ROOT / "site-src/lang-redirect.js", out / "assets/lang-redirect.js")   # the neutral root entry (F6)
     fonts = out / "assets/fonts"
     for folder in ("ibm-plex-sans", "ibm-plex-sans-arabic"):
         shutil.copytree(ROOT / "vendor/fonts" / folder, fonts / folder)   # unchanged files, with LICENSE.txt
@@ -64,13 +66,11 @@ def main() -> int:
     renderer = load_renderer(args.renderer)
     if hasattr(renderer, "assets"):
         renderer.assets(out, args.variant)
-    routes = TRIO if args.routes == "trio" else [r.strip() for r in args.routes.split(",")]
+    routes = TRIO if args.routes == "trio" else (content.routes() if args.routes == "all" else [r.strip() for r in args.routes.split(",")])
     written = 0
     for lang in ("ar", "en"):
-        shell = content.shell(lang, "/")
-        pages = content.trio(lang)
         for route in routes:
-            page = pages[route]
+            page = content.page(route, lang) if args.routes != "trio" else content.trio(lang)[route]
             shell = content.shell(lang, route)
             bundle_name = (route.strip("/").replace("/", "_") or "home") + f"__{lang}.json"
             (out / "_bundle" / bundle_name).write_text(json.dumps({"shell": shell, "page": page}, ensure_ascii=False, indent=1), encoding="utf-8")
@@ -79,6 +79,8 @@ def main() -> int:
             d.mkdir(parents=True, exist_ok=True)
             (d / "index.html").write_text(html, encoding="utf-8")
             written += 1
+    if args.routes == "all" and hasattr(renderer, "render_site_files"):
+        written += renderer.render_site_files(out, content)
     print(f"Built {written} documents with renderer '{args.renderer}' into {out}")
     return 0
 

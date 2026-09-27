@@ -1,5 +1,82 @@
 # Repository Change Log
 
+## 2026-09-27 — Design D5 (in progress): every tool state, technical state and journey proved by keyboard; the technical voice
+
+Same branch and draft pull request (`claude/epic-cori-60fpeb`, https://github.com/CausewayGrp/Financial-inclusion-/pull/4;
+D4 met at `aee1e1b`). `design/reference/check_journeys.py` walks the inventory's thirteen journeys by keyboard at 390 and
+1440 px in English and Arabic (52 of 52 walks: a link the page offers takes focus, shows the outline, activates with
+Enter; each landing asserted against the journey's success condition) and drives every technical state in both
+languages (28 of 28: Compare's link errors and the same-record state, search no-match and index-unavailable, the
+register's unknown deep link and no-match, record-context unknown/malformed/valid, the language switch with state, no
+script). A third voice is designed for technical states — a dashed hairline, body ink, never the boundary's double rule,
+the counter colour or an evidence-gap object (DL-D5-001) — and the same-record state no longer reads as an assessment.
+`design/07_INTERACTION_ACCESSIBILITY.md` records the three voices, the keyboard paths, motion, zoom, forced colours, no
+script and print, every technical state and journey, and the two verification states no record carries today (designed
+with their governed copy, never on an invented record). Records: `design/COVERAGE.csv` (82 D5 rows `VERIFIED`, 4
+`DESIGNED`), DL-D5-001…004, `design/03_COMPONENT_CATALOG.md`, `design/09_CODE_HANDOFF.md` (state at D5),
+`design/DESIGN_DEBT.md` (DEBT-014 narrowed), `design/ESCALATIONS.md` (the external-link cue raised),
+`design/evidence/d5/`. Runtime untouched. Not declared: DESIGN HANDOFF READY, PUBLIC RELEASE READY.
+
+## 2026-09-27 — Design D4 (met at `aee1e1b`): every document bound and asserted; the binding proved
+
+Same branch and draft pull request (`claude/epic-cori-60fpeb`, https://github.com/CausewayGrp/Financial-inclusion-/pull/4;
+D3 met at `beecdbb`). Every evidence record is asserted against its own governed bundle — the seven questions, the
+boundary on first load, the clock before the claim, source cards equal to the bundle's sources with public locators
+only, the lineage state and members exactly where carried, the no-locator states, the trace chips, the Compare entry,
+the own visual, the boundary once per frame — and the three remaining domain answers (`/firms/`, `/finance/`,
+`/providers/`) against their contracts (`design/reference/check_site.py --gate d4`: 904 renders, 452 smoke tests, 3,822
+hard-state assertions, 10 degraded renders, all pass; the neutral root entry asserted). `design/reference/check_binding.py`
+proves the binding from the inventory's projection roles (every RENDER and CONTRACT projection read by the one content
+path; no REFERENCE or VIA_SPEC projection read; 286 edition pages + root + 404; no copied content model) and the one
+deviation it found — `public_claims.json` loaded and unused — is removed. Records: `design/COVERAGE.csv` (841 D4 rows
+`VERIFIED`; every route row of the ledger is now `VERIFIED`), decision log DL-D4-001…004, `design/09_CODE_HANDOFF.md`
+(state at D4), `design/04_PAGE_FAMILY_COMPOSITIONS.md`, `design/DESIGN_DEBT.md`, `design/evidence/d4/` (42 PNG). Not
+declared: DESIGN HANDOFF READY, PUBLIC RELEASE READY.
+
+## 2026-09-27 — Design D3 (met at `beecdbb`): the synthesis pages composed and proved; the Home cold-reader test run and acted on
+
+Same branch and draft pull request as D2 (`claude/epic-cori-60fpeb`, https://github.com/CausewayGrp/Financial-inclusion-/pull/4;
+D2 met at `9c263ac`, not yet merged — process note in `design/ESCALATIONS.md`). The Reading index, the ten Readings,
+Measurement, Methodology, the eight trust pages and the bilingual 404 are reviewed in both languages at 390 and 1440 px
+and asserted on the rendered DOM (`design/reference/check_site.py --gate d3`: 168 renders, 84 smoke tests, 252 hard-state
+assertions — the Reading's boundary-before-essay, clocks, trace and measure; Measurement's ten equal, unnumbered,
+deep-linkable priorities; About in plain language; Contact and Corrections with the report path — and 18 degraded renders,
+all pass; the measure assertion corrected from a guessed width to the measure property, DL-D3-004). Four fresh cold
+readers (English and Arabic, 390 and 1440 px) read only the rendered Home page; their reports are kept verbatim in
+`design/evidence/d3/cold_read/` (DL-D3-001). The design findings are corrected within the Lock (DL-D3-002): the governed
+product statement and its two actions open the page before the first figure (the baseline's order); one link per compact
+evidence object, named by the action and the title; the figure's boundary printed once, in the foot, under the governed
+"What not to conclude" label; a text frame shows its description as its body; the framing record sits in the section it
+frames; the boundary's double rule spans the column; the primary-nav group set off by a hairline; the Arabic rubric 14 px
+(`design/02_TOKENS.json` regenerated). The content findings (date forms, precision, jargon, the alt text that restates
+its boundary, the text-first label, the publisher's legibility, Arabic calques) are escalated, none filled with authored
+copy. `check_site.py` gains the Home assertions and the Orientation hooks. Records: `design/COVERAGE.csv` (164 D3 rows
+`VERIFIED`), `design/DESIGN_DEBT.md` (DEBT-014…016), `design/ESCALATIONS.md`, `design/09_CODE_HANDOFF.md` (state at D3),
+`design/04_PAGE_FAMILY_COMPOSITIONS.md`, `design/03_COMPONENT_CATALOG.md`, `design/evidence/d3/` (38 PNG). Not declared:
+DESIGN HANDOFF READY, PUBLIC RELEASE READY.
+
+## 2026-09-27 — Design D2 (met at `9c263ac`): the hard families built and proved; every document renders; the D1 residuals reconciled
+
+Branch `claude/epic-cori-60fpeb` from the accepted `main` (`851f496`, the merge of pull request #3), landing through
+draft pull request #4 (https://github.com/CausewayGrp/Financial-inclusion-/pull/4). The one content
+path now loads every family (`design/reference/yfie/content.py`), `families.py` composes Explore, the domain answers,
+the Evidence directory, Compare and Data & sources in the T4 grammar (and the Reading index, Measurement and trust pages
+by the family rule until D3), `visuals.py` draws VIS-FINDEX-GAPS, VIS-REMITTANCE-MACRO, the POS small multiple,
+VIS-PAYMENT-ANATOMY, VIS-REMITTANCE-COST and the payment chain per contract with the evidence-state grammar, and
+`build.py` writes all 288 documents plus the root entry, the 404 and `robots.txt`. `check_site.py` asserts each §9.2
+hard state on the rendered DOM (168 renders, 84 smoke tests, 157 assertions, 20 degraded renders, all pass); the two
+repository browser suites (25/26, 168/168), bilingual invariance (0 of 143) and `check_content.py --text` (288
+documents; its number rule is bundle-scoped and its text rule inline-tag-safe) pass on the reference site; a rounding
+fault in the number formatter was found and fixed. The five D1 residuals are reconciled by their true authority
+(DL-D2-002): the Arabic credit line (the contract's own language note; isolated left-to-right), the in-page navigation
+name (`aria-labelledby` from governed text; DEBT-006 closed) and Home's order (brief §4.5) are closed; the pacing
+marker and the IMF lane state stay open for the steward. Records: `04_PAGE_FAMILY_COMPOSITIONS.md` and
+`03_COMPONENT_CATALOG.md` created; `COVERAGE.csv` — 190 D2 rows `VERIFIED` (176) or `DESIGNED` with the gap explained
+(14), 1,001 D3/D4 rows `BUILT`; `DESIGN_DEBT.md` (DEBT-004, -006, -009 closed; DEBT-011…013 opened); `ESCALATIONS.md`
+(two raised: fallback-table column labels; rows for VIS-TARGET-RESULT-STATE and VIS-MFI-DIVERGENCE);
+`09_CODE_HANDOFF.md` state at D2; `02_TOKENS.json` regenerated; `design/evidence/d2/` (60 PNG). README current-state
+row updated. No governed content changed; no projection, contract, `dist/` file or audit record edited.
+
 ## 2026-09-27 — Design D1 hand-back: second independent pass; residuals closed; verdict recorded
 
 Same branch and pull request; the D1 hand-back is posted on the pull request. A second, fresh repository-only reviewer

@@ -1,0 +1,57 @@
+# Home cold-reader report — en-1440
+
+Recorded at D3 (27 September 2026). Reader: a fresh agent with no access to the repository, shown only the rendered Home page (`design/reference/out/`, commit before the D3 corrections) as five PNG captures at this language and width, in order; asked what the site is after 30 s, after 90 s and after 180 s, what confused it, what a screenshot could make someone misread, and whether the page reads as serious, trustworthy and clear (Arabic readers: whether the Arabic reads naturally). Verbatim; nothing edited. Findings are classified and acted on in `design/00_DESIGN_README.md` DL-D3-001 and `design/ESCALATIONS.md`.
+
+Reader: a fresh agent shown only the rendered Home page (English, 1440 px), screens read in order. Method: viewed screen 1 alone and wrote down first impressions before opening anything else; then screen 2 and revised; then screens 3, 4 and the full-page capture (5631 px tall, viewed scaled, so the smallest footer text was read at low resolution). No other file, code or document was opened; no command was run. Quotes are transcribed from the screenshots.
+
+1. After screen 1 only (about 30 s)
+
+What it is: a reference site called "Yemen Financial Inclusion Evidence" (masthead), with a tiny logo I could not read (it looks like "Cause Way" in 6-px type). The headline is "Financial inclusion in Yemen is not one number." and the first block is labelled "EVIDENCE SIGNALS / Three figures, three different things measured". Nothing on screen 1 actually says what the site is or who runs it; I inferred "an evidence catalogue about Yemen's financial system" from the name and the nav ("Explore, Evidence, Evidence Readings, Data & sources / METHOD & MEASUREMENT: Methodology, Measurement Agenda").
+
+Why it seems different: it leads with caveats rather than a headline number. The first figure, "11.9% of adults aged 15 and over in the areas surveyed had an account", is immediately followed by "Areas holding about 23% of the population were not surveyed." Each figure sits in a boxed card asking "When was it measured or observed?" with fieldwork dates ("Yemen fieldwork 2022-11-07 to 2023-01-09"), a coverage line ("Adults 15+ in survey coverage") and an "Open evidence record" link. The right-hand outline has items like "02 What should not be inferred?" and "06 The gaps the evidence cannot yet close". A typical country-economy site would show a dashboard or a hero chart; this shows a dated, bounded sentence. There is no chart, image or KPI tile at all.
+
+Where I would start: "Open evidence record" under the 11.9% figure, because it is the first concrete thing that promises a source. Second choice: the sidebar item "03 Questions to start from". I would not start from the nav, because "Explore", "Evidence" and "Evidence Readings" look like three names for the same thing.
+
+2. After screens 1-2 (about 90 s)
+
+Scope and boundaries: yes, and the page says so repeatedly and concretely. Each figure carries its own period ("Mar-2025–Jan-2026"), population ("Adults 15+ in survey coverage") and institutional scope ("POS terminals within the payment-system reporting scope of the Central Bank of Yemen – Aden (CBY-Aden); how far that scope covers each area of Yemen is not established"). The closing line of the block is explicit: "These are different measures: people, a disparity within one survey, and infrastructure. None substitutes for another." Then a section head "WHAT THIS DOES NOT ESTABLISH / What should not be inferred?".
+
+Explorable and verifiable: the page claims so. Every card has "Open evidence record"; the sidebar lists "EVIDENCE RECORDS BEHIND THESE FIGURES (4)"; the sidebar also promises "UNDERSTAND → EXPLORE → VERIFY" and describes Evidence Readings as "Evidence-led essays, each traceable to the records behind it." What I could not yet tell: whether "Open evidence record" leads to an original document (a World Bank table, a CBY bulletin) or only to this site's own summary page. No external source locator (URL, report title, table number) is visible on the home page itself, so verification is promised, not demonstrated, at this point.
+
+Things that weakened the impression on screen 2: the inline section headed "EVIDENCE RECORDS BEHIND THESE FIGURES" shows only one card ("Financial inclusion is a connected system, not a single score", period "Several periods, varying by domain") while the sidebar says there are four; and that fourth item is a thesis statement, not a measurement, yet it is presented as an "evidence record" with the same "When was it measured or observed?" frame. The double rule above "WHAT THIS DOES NOT ESTABLISH" stops at about 740 px while every other rule spans 940 px, which looks like a layout mistake.
+
+3. After everything (about 180 s)
+
+The link I would click: "Open evidence record" under the first figure (11.9%). The page tells me what to expect in section 07, "Challenge the answer": "Open the evidence record to see the definition, population covered, calculation base, period, geography, method, source, derivation, limitations and what would change it." So I expect a structured record page with those fields, a named World Bank source, and ideally a link to the Findex dataset. Runner-up: question "04 How can I check the evidence behind a claim, see why sources disagree and reproduce a result?" ("Evidence records, field-by-field comparison, how derived figures are calculated, and how to cite them"), which sounds like the verification tutorial.
+
+Inside within three minutes: yes, if "Open evidence record" is what it says. It is on screen 1, one click from landing. The risks: (a) each card has two links, a larger underlined title ("Latest representative account-ownership measure available") and a smaller "Open evidence record", and I cannot tell whether they go to the same page; (b) the four record titles in the sidebar are not styled as links (no underline, plain grey), so a reader may not try them; (c) the site's own description ("Yemen Financial Inclusion Evidence is a bilingual public evidence resource that helps users understand, compare and verify evidence...") only appears on screen 3, roughly 1,900 px down, so a reader who wants to know what they are dealing with before clicking has to scroll a long way first.
+
+4. What confused me
+
+- Dates on the first figure: "Global Findex 2021 survey of Yemen (fieldwork November 2022 to January 2023; World Bank data year 2022)". Three different years for one number in one sentence. I understand it after a second read, but it reads like an error on the first.
+- "Explore" vs "Evidence" vs "Evidence Readings" vs "Data & sources": four nav labels whose difference is never stated on the home page. "Explore" is also the second word of the sidebar's "UNDERSTAND → EXPLORE → VERIFY", so I am not sure whether "Explore" in the nav is a section or a step.
+- "Measurement Agenda": no idea what this is. A to-do list of things to measure? A policy document?
+- "EVIDENCE SIGNALS": the label over the three figures. "Signals" of what?
+- "POS" is never expanded (point of sale). "CBY-Aden" implies there is another Central Bank of Yemen somewhere else; the page never says so.
+- "2021 Findex wave": "wave" is survey jargon.
+- Tag words "rails", "flows", "enabling constraints" under the fourth record, and "payment rail" in the analysis text.
+- "ANOTHER VIEW OF THE EVIDENCE" introduces a box headed "ANALYTICAL QUESTION" with a line "Text description of this view", but there is no view, only text. It looks like a diagram is missing.
+- In that same box the sentence "The relationships are not causal claims unless separate evidence supports them; the parts do not form a composite index, and no part is shown to drive another mechanically." appears three times: once after "Does not establish:" and twice more under two consecutive "What not to conclude:" labels. This reads as a templating bug.
+- Sidebar "(4)" records vs one inline card, as noted above.
+- "UNDERSTAND → EXPLORE → VERIFY" appears as a sidebar heading, a section label and a footer heading; repetition without added meaning.
+- 18.35% / 5.44% / 12.91 points: two-decimal precision from a survey that skipped 23% of the population reads as false precision, especially next to "11.9%" with one decimal.
+- In the full-page capture the sticky outline is rendered twice (top and mid-page) and then disappears for the lower half; a screenshot of the page therefore looks inconsistent.
+
+What a screenshot of the first screen could make someone misread:
+- "Financial inclusion in Yemen is not one number." directly above "11.9% of adults... had an account" would be lifted as "Only 11.9% of Yemenis have a bank account" as a national figure; the "23% not surveyed" caveat is in the following sentence and would be cropped.
+- "Global Findex 2021" could be cited as a 2021 measurement when fieldwork was Nov 2022-Jan 2023.
+- The first organisation named on the screen is the World Bank; the publisher's logo is illegible. A cropped screenshot could pass as a World Bank page.
+- The masthead controls "Cite this page" and "Report an issue" plus the numbered 01-08 outline make it look like an academic report or a wiki article, not a home page.
+
+5. Serious, trustworthy, clear?
+
+Serious: yes. Restrained typography, no stock imagery, no rounded-up slogans, every number tied to a period and a population, an explicit list of things the evidence "cannot yet support" ("a reliable national map of operating financial access points, a current population inclusion rate, or a causal explanation for any measured gap"), a "Corrections" link and an edition date in the footer ("Edition of 26 September 2026"). The recurring pattern "what it establishes / what it does not" is applied consistently.
+
+Trustworthy: mostly, with specific deductions. Positives: dated fieldwork, named sources (World Bank Global Findex, CBY-Aden), the sentence "how far that scope covers each area of Yemen is not established", and "Published evidence remains attributed to the original source" in the footer. Negatives: the publisher ("Developed and maintained by CauseWay") is only identified in the footer, in small type, with an unreadable logo at the top, and I learn nothing about who CauseWay is; no author, no methodology summary, no external locator is visible on the home page; the triplicated "What not to conclude" paragraph and the "view" that has no view suggest the page has not been proofread, which is exactly the kind of flaw that makes me doubt the care behind the numbers; and "Financial inclusion is a connected system, not a single score" is presented as an evidence record with a measurement date, which blurs the line between a measurement and a framing.
+
+Clear: partly. The three-figure opening and the bold summary line are clear. The rest is very long (about 5,600 px, all text) with the site's purpose buried a third of the way down, a nav whose four evidence-ish labels are not distinguished, two links per card with no stated difference, sidebar record titles that do not look clickable, and undefined abbreviations and jargon (POS, CBY-Aden, wave, rails). A reader who wants a number will find one in ten seconds; a reader who wants to know what this site is and how to use it will have to scroll and guess.

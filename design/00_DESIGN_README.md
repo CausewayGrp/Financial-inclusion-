@@ -1,16 +1,27 @@
 # Design package — Yemen Financial Inclusion Evidence · أدلة الشمول المالي في اليمن
 
-Status: **D1 in progress — converged on T4 · Instrument (DL-D1-006); the Design Intent Lock (`01_FOUNDATIONS.md` §4)
-and the foundational grammar (§5, `02_TOKENS.json`) are written from the reference implementation, which renders the
-stress trio in both languages with every hook and passes the rendered checks (DL-D1-007); the independent final
-review's MUST-FIX list is closed and re-verified (DL-D1-008); four escalations open; hand-back verdict on the pull
-request.** D0 accepted on `main` at
-`8bf19efad7505792ca22e0a3bda1db31fb85d33c`. D1 is developed on `claude/practical-cray-sr26c5` (process note in
-`ESCALATIONS.md`) and lands through one draft pull request into `main`
-(https://github.com/CausewayGrp/Financial-inclusion-/pull/3). D1 records: `01_FOUNDATIONS.md` (hypotheses,
-exploration protocol, benchmark result, process notes, critique; comparison, Lock and grammar when reached), the decision
-log below (DL-D1-*), `design/reference/` (the neutral harness and the one content path every renderer uses) and
-`design/exploration/d1_canvas/` (the composers that regenerate the canvas propositions). Not PUBLIC RELEASE READY.
+Status: **D5 in progress — every tool state, technical state and journey proved by keyboard in both languages; D2 met at
+`9c263ac`, D3 at `beecdbb`, D4 at `aee1e1b`, pending the owner's merge.** D1 was accepted by the
+owner's merge (`main` at `851f496078776356b38892c946d40d154c819067`, pull request #3). D2 is developed on
+`claude/epic-cori-60fpeb` (created from that exact `main`) and lands through one draft pull request
+(https://github.com/CausewayGrp/Financial-inclusion-/pull/4). At this commit every
+one of the 288 documents renders from the one content path (`design/reference/build.py`); Explore, the five hard domain
+answers, the Evidence directory, the §9.1 record set, Compare and Data & sources are composed in the T4 grammar and each
+§9.2 hard state on those routes is asserted on the rendered DOM (`design/reference/check_site.py`); the two repository
+browser suites, bilingual invariance and content parity pass on the reference site; the five D1 residuals are reconciled
+(DL-D2-002). At D3 (same branch and pull request, process note in `ESCALATIONS.md`) the Reading index, the ten Readings,
+Measurement, Methodology, the eight trust pages and the bilingual 404 are composed, reviewed in both languages and asserted
+(`check_site.py --gate d3`: 168 renders, 84 smoke tests, 252 hard-state assertions, 18 degraded renders), and four fresh
+cold readers (EN/AR × 390/1440 px) read Home; their verbatim reports are in `evidence/d3/cold_read/`, the design corrections
+in DL-D3-001 and DL-D3-002, the content observations in `ESCALATIONS.md`. At D4 (same branch) every one of the 288
+documents is asserted on its own row: all 110 evidence records against their governed bundles and the three remaining
+domain answers against their contracts (`check_site.py --gate d4`: 904 renders, 452 smoke tests, 3,822 hard-state
+assertions), the neutral root entry, and the binding itself (`check_binding.py`: every RENDER and CONTRACT projection read,
+no REFERENCE or VIA_SPEC projection read, no copied content model). At D5 (same branch) the thirteen journeys are walked
+by keyboard at 390 and 1440 px in both languages and every technical state is driven and rendered in a third, technical
+voice (`check_journeys.py`: 52 walks, 28 state drives; `07_INTERACTION_ACCESSIBILITY.md`). D2
+records: `04_PAGE_FAMILY_COMPOSITIONS.md`, `03_COMPONENT_CATALOG.md` (seeded), the decision log below (DL-D2-*),
+`design/evidence/d2/`. Not PUBLIC RELEASE READY.
 
 ## 1. What this package is
 
@@ -18,23 +29,25 @@ The Design package of brief §19: decision log (this file), coverage ledger (`CO
 (`DESIGN_DEBT.md`), escalations (`ESCALATIONS.md`) and the progressive Design→Code mapping (`09_CODE_HANDOFF.md`).
 Files `01`–`08`, `10` and `design/reference/` are created at the gate that first needs them (plan, §6).
 
-**Reference implementation: the stress trio only (D1).** `design/reference/` holds one content path
-(`yfie/content.py` reads `site-src/content/**`; never a copied content model, never retyped text), the neutral harness
-(`yfie/neutral.py`, unstyled, every brief §19 hook), the accepted renderer of the converged direction
-(`yfie/render.py` with `theme.py`, the one stylesheet, and `visuals.py`, the contract drawings) and the checks
-(`check_content.py`: parity with `dist/`; `check_trio.py`: the rendered conditions of the viewport suite on the trio
-plus the hooks and an interaction smoke test with the baseline runtime). Until `design/reference/out/` renders all
-288 documents (D4), this package is an incomplete hand-back by definition (brief §19).
+**Reference implementation (D2: every document builds; the hard families composed).** `design/reference/` holds one
+content path (`yfie/content.py` reads `site-src/content/**` for all eleven families; never a copied content model, never
+retyped text), the neutral harness (`yfie/neutral.py`), the accepted renderer of the converged direction
+(`yfie/render.py` — shell, objects, the trio; `yfie/families.py` — the other families; `theme.py`, the one stylesheet;
+`visuals.py`, the contract drawings) and the checks (`check_content.py`: numeric and text-block parity with `dist/` on
+every document; `check_trio.py`: the D1 trio; `check_site.py`: the D2 routes with the family hooks, the §9.2 hard-state
+assertions, degraded renders and the evidence writer). The package is still an incomplete hand-back until every family is
+composed and reviewed on its own ledger row (D3–D4) and the acceptance checklist is complete (D7).
 
-Build and preview: `python3 design/reference/build.py` (renderer `accepted`; `--renderer neutral` for the harness)
-writes `design/reference/out/` — the trio in both languages, `assets/yfie.css`, the unchanged fonts and logo, the
-baseline runtime, and `out/_bundle/<route>__<lang>.json`, the exact content structures a renderer receives. Check with
-`python3 design/reference/check_content.py --text`, `python3 design/reference/check_trio.py --shots --degraded` and
-`python3 design/reference/tokens.py --check`; preview with
-`python3 -m http.server 4173 --directory design/reference/out` (`/en/`, `/ar/`). Baseline: `python3 -m http.server
-4173 --directory dist`. Canvas propositions and the reference row: `python3 design/exploration/d1_canvas/build_boards.py`
-and `reference_boards.py` regenerate the artboards into the git-ignored `design/exploration/d1_canvas/out/`
-(`design/exploration/d1_canvas/README.md`).
+Build and preview: `python3 design/reference/build.py` (renderer `accepted`; `--routes trio` for the D1 build; `--renderer
+neutral` for the harness) writes `design/reference/out/` — the 286 localized documents, the root entry, the 404,
+`robots.txt`, `assets/yfie.css`, the unchanged fonts and logo, the baseline runtime, and `out/_bundle/<route>__<lang>.json`,
+the exact content structures a renderer receives. Check with `python3 design/reference/check_content.py --text`,
+`python3 design/reference/check_site.py --gate d2 --degraded`, `python3 design/reference/check_trio.py`,
+`python3 design/reference/tokens.py --check`, and the repository suites on the site:
+`YFIE_SITE_DIR=design/reference/out python3 scripts/tests/test_public_tools.py`, `… audit/tranche_c/checks/viewport_acceptance.py`,
+`… audit/tranche_c/checks/bilingual_invariance.py`; preview with `python3 -m http.server 4173 --directory design/reference/out`
+(`/en/`, `/ar/`). Baseline: `python3 -m http.server 4173 --directory dist`. The D1 canvas composers
+(`design/exploration/d1_canvas/`) are lineage; the reference renderer supersedes them.
 
 ## 2. Authority used
 
@@ -149,10 +162,10 @@ to isolate in RTL and URLs); 15 routes whose Page Spec sections are split by lan
 |---|---|---|---|
 | D0 | `design/d0-orientation` | these records | records committed; plan names theses; escalations listed |
 | D1 | `claude/practical-cray-sr26c5` (planned `design/d1-theses`; process note in `ESCALATIONS.md`) | three theses on the trio (Home, `/evidence/CLM-003/`, `/readings/same-year-different-number/`), EN+AR, 390 & 1440; choose; then tokens, state grammar, shell, type proved at 320/390/640/1440 + keyboard | `01_FOUNDATIONS.md`, `02_TOKENS.json`, decision-log entries; trio rows `VERIFIED` |
-| D2 | `design/d2-hard-families` | Explore, 5 hard domains, Evidence index, §9.1 record set, Compare, `/data/` | each §9.2 case proved |
-| D3 | `design/d3-synthesis` | Readings index + all Readings, Measurement, Methodology, trust, report journey, 404; Home cold-reader test | same; cold-reader record |
-| D4 | `design/d4-binding` | all 288 documents via family rules | three suites pass on `design/reference/out/`; all rows ≥ `BUILT` |
-| D5 | `design/d5-interaction-a11y` | every tool state and journey, keyboard, zoom, reduced motion, forced colours | `07_INTERACTION_ACCESSIBILITY.md` |
+| D2 | `claude/epic-cori-60fpeb` (planned `design/d2-hard-families`; the branch this environment may push, as at D1) | Explore, 5 hard domains, Evidence index, §9.1 record set, Compare, `/data/` | each §9.2 case proved (`check_site.py`); ledger rows `VERIFIED` or gap explained — **met at this commit, pending the owner's merge** |
+| D3 | `claude/epic-cori-60fpeb` (continued on the D2 branch and pull request; process note in `ESCALATIONS.md`) | Readings index + all Readings, Measurement, Methodology, trust, report journey, 404; Home cold-reader test | same; cold-reader record — **met at this commit, pending the owner's merge** (`check_site.py --gate d3`; `evidence/d3/cold_read/`) |
+| D4 | `claude/epic-cori-60fpeb` (continued; process note in `ESCALATIONS.md`) | all 288 documents via family rules | three suites pass on `design/reference/out/`; all rows ≥ `BUILT` — **met at this commit, pending the owner's merge**: every route row `VERIFIED` (`check_site.py --gate d4`, `check_binding.py`) |
+| D5 | `claude/epic-cori-60fpeb` (continued; process note in `ESCALATIONS.md`) | every tool state and journey, keyboard, zoom, reduced motion, forced colours | `07_INTERACTION_ACCESSIBILITY.md` — **met at this commit, pending the owner's merge** (`check_journeys.py`; D5 rows `VERIFIED`, the two unbound verification states `DESIGNED`) |
 | D6 | `design/d6-visuals-social-print` | visuals per contract, frames, social templates, print | contract-by-contract evidence |
 | D7 | `design/d7-acceptance` | last-10-percent audit, final handoff | checklist complete; Code recipient test |
 
@@ -216,7 +229,12 @@ need the same route unless a write-capable environment (e.g. Claude Code acting 
   listed, never filled with authored copy.
 - **09_CODE_HANDOFF.md:** updated at each gate end, never back-filled at D7.
 - **01_FOUNDATIONS.md:** D1's working record — hypotheses, exploration protocol and results, critique, comparison,
-  Design Intent Lock and grammar; its status line states what is proven and what is not.
+  Design Intent Lock and grammar; its status line states what is proven and what is not (D2 addendum in §2.6).
+- **04_PAGE_FAMILY_COMPOSITIONS.md** (from D2): the deterministic module order and composition rules of every family, the
+  first-screen contract, depth, next actions, and where each bound visual sits.
+- **03_COMPONENT_CATALOG.md** (seeded at D2): every object with its governed inputs, states, widths, Arabic, names and
+  keyboard, colour-free survival, fallback and the limitation it keeps visible; the figure anatomy; the evidence-state
+  grammar with what is drawn and what is designed only.
 
 **D7 Definition of Done (interpretation).** A runnable, fully populated bilingual reference site in
 `design/reference/out/` — all 288 documents, every tool and state, both languages, four widths, no placeholder, every
@@ -394,3 +412,292 @@ not public release (REL-01…04 remain).
   MERGE REQUIRED" (`01_FOUNDATIONS.md` §6); its small residuals — a corrupt ledger note, an empty credit line on the
   Home figure, non-round ticks, a wrong table measurement, a stale path, three overstated sentences, hit areas — are
   closed in the hand-back commit, with forced colours and target size now asserted by `check_trio.py`.
+
+### DL-D2-001 · D2 · 2026-09-27 · D2 authority, branch and persistence
+- Problem: establish the D2 start state after the owner's merge of D1, and how D2 reaches the repository.
+- Evidence: `origin/main` = `851f496078776356b38892c946d40d154c819067` (the merge of pull request #3; D1 head `604201d`
+  contained); tree clean; `checksums.py --check` and `validate.py` pass; Production Master `17db032b…038690b`, Page
+  Specs `d4574804…824b69aa`, logo `5830163d…60c6a90` hashed directly and unchanged.
+- Alternatives: continue on the merged D1 branch; the planned `design/d2-hard-families`; the branch this environment
+  may push.
+- Chosen: `claude/epic-cori-60fpeb`, created at exactly `851f496`; one gate, one draft pull request into `main`; the
+  steward may re-home the name. Milestone commits carry the records; work not pushed does not exist.
+- Arabic / responsive / a11y: none. Code: none. Compromise: none.
+
+### DL-D2-002 · D2 · 2026-09-27 · The five D1 residuals reconciled by their true authority
+- Problem: the hand-back left four escalations and one composition question for the steward; D2 must not wait on
+  items the repository already decides, nor invent what it does not.
+- Evidence: `visual_design_contracts.json` — every `credit` carries `language_note`: "Publisher names are governed in
+  English only (15, 34); Arabic frames print them as isolated left-to-right runs"; Home section 3 carries no newline or
+  marker in either language; `interface_copy.json` holds no "on this page" label; brief §4.5: Home's baseline order "is a
+  precedent, not a mandate; keep the `#system` anchor".
+- Alternatives: ask the steward for all five; resolve none; classify each by its authority and resolve what the
+  repository already determines.
+- Chosen: (1) Arabic credit line — PAGE SPEC / CONTROLLED CONTENT, already answered by the contract: every frame prints
+  the governed credit as `<bdi dir="ltr">`; escalation closed. (2) Home pacing marker — Master-first; stays open,
+  non-blocking (the Lock's connective rule with the whole-paragraph fallback holds; DEBT-008). (3) IMF lane evidence
+  state — MASTER / EVIDENCE AUTHORITY; a question only the steward answers; REPORTED rendered as governed; stays open.
+  (4) In-page navigation name — ENGINEERING / ACCESSIBILITY: the index is named by the `h1` of the object it indexes
+  (`aria-labelledby="page-title"`), the strip likewise, each edge group by its own governed heading; no label authored;
+  DEBT-006 and the escalation closed. (5) Home section order — DESIGN, decided by brief §4.5; closed.
+- Arabic / responsive / a11y: the credit run keeps its Latin order inside Arabic text; every `nav` on every page now
+  has an accessible name (`check_site.py` fails on an unnamed `nav`).
+- Code: inherits the `aria-labelledby` pattern and the credit isolation. Compromise: a dedicated governed label would
+  read better than the page title for the index; it is not an authority question, so it is not escalated.
+
+### DL-D2-003 · D2 · 2026-09-27 · The paper scaling test made real: one grammar, eleven families, varied intensity
+- Problem: prove that the D1 evidence intelligence scales across the real product without a second grammar and
+  without repetition, timidity, dashboards or English-first composition (brief §9.4; hand-back §R).
+- Evidence: all 288 documents render from `content.py` → `render.py`/`families.py`; `04_PAGE_FAMILY_COMPOSITIONS.md`;
+  `design/evidence/d2/` (first screens at 390 and 1440 px, EN and AR, of the hard routes; figure crops); the two
+  repository suites and invariance pass on the site.
+- Alternatives: a template per family; one identical template; one grammar with composition rules per family.
+- Chosen: one page object (head → answers → boundary voice → figures → compact objects → depth → next → foot → spine)
+  with composition rules per family and intensity that follows the evidence structure: Explore is a numbered question
+  index; the domain answers open on their contract's always-visible limits and vary by `presentation_family`; the
+  directory is search plus a question-grouped register of 110 rows; Compare leads with the boundary and recomposes its
+  table at 320 px as numbered slot blocks; Data & sources is a register of curated categories and dependency groups.
+  Where a bound visual sits is a recorded table, not a per-route guess.
+- Arabic / responsive / a11y: Arabic composed on its own tokens throughout; identifiers, dates and codes isolated; axes
+  left-to-right; one column below 600 px, the spine from 900 px, the rubric column from 1200 px; every landmark named.
+- Code: `families.py` is implementation-grade composition; the placement table is data Code reuses.
+- Compromise: the D3 families (Reading index, Measurement, trust) build by the family rule and are `BUILT`, not
+  reviewed; Yemen material grounding beyond abstraction is still not attempted (DEBT-007).
+
+### DL-D2-004 · D2 · 2026-09-27 · The domain answer and the record's evidence states
+- Problem: compose eight domain answers from the presentation contract without a chart wall, with the limits first
+  and the depth honest; keep framing, composite, partial, thin and withheld records from looking weaker or broken.
+- Evidence: `presentation_priority.json` (`mobile_priority`: lead → supporting → primary → verify; `after_primary`);
+  brief §12 on several visuals per page; `check_site.py` assertions for CLM-004, -014, -015, -031, -039, -044, -045.
+- Alternatives: the baseline order (hero, band, primary); limits after the answers as on the Record; the contract's
+  mobile priority everywhere.
+- Chosen: the contract's order — the band (boundary voice) before the answers; the first-screen visual after
+  `after_primary`; the small multiple and unplaced visuals in a depth group under the governed "Another view" rubric;
+  progressive sections in one disclosure; then Readings, related questions, Measurement, Verify. On the Record the
+  lineage statement (framing, composite, partial) is question 6's answer in the body voice; a record without a public
+  locator says so in the body voice; the governed source intro is printed unless the record is a framing rule; the 13
+  comparable records carry a Compare entry; a `VIS-` record draws its visual under its first answer (its canonical route).
+- Arabic / responsive / a11y: the band's double rule and label carry the limit without colour; every disclosure has a
+  governed summary.
+- Code: the composition rules in `04_PAGE_FAMILY_COMPOSITIONS.md` §2–§3.
+- Compromise: the source intro's absence on the framing record is a recorded exception of the text-parity check.
+
+### DL-D2-005 · D2 · 2026-09-27 · The D2 figures: forms per contract, one anatomy, the state grammar drawn
+- Problem: draw VIS-FINDEX-GAPS, VIS-REMITTANCE-MACRO, the POS small multiple, VIS-PAYMENT-ANATOMY, VIS-REMITTANCE-COST
+  and the payment chain truthfully, in both languages, at every width, under strict CSP, so that the hard states can be
+  asserted rather than argued.
+- Evidence: each contract's `form`, `annotation`, `missing`, `breaks`, `mobile` and `rtl` fields; the grammar table;
+  RV-CWR-009's `step_mapping` and event objects (VIS-PAYMENT-RAILS's rationale asks for that reuse); `check_site.py`
+  assertions (bars 9, gaps 4 as brackets; 3 states keyed, break not joined, 5 dashed segments; 3 panels with own axes,
+  3 rings, 1 labelled gap; 7 objects, 2 withheld without digits; chain 7 steps, 3 evidenced, the first open step marked).
+- Alternatives: one generic chart per form; contract-specific drawings sharing one frame.
+- Chosen: the D1 anatomy for every figure (rubric, title, question, scope, panels, notes, boundary, credit, canonical
+  link, cite, visible text alternative with the table) with six forms (`03_COMPONENT_CATALOG.md` §2): bars with
+  bracket gaps; state-keyed time series with the break, missing, disagreement and nominal grammar and a key of states
+  with their source document; dot rows; an object list with WITHHELD in place of a value; the chain ladder with the
+  first open step in the boundary voice; text frames for every contract without rows. One number rule with precision
+  as governed (a rounding fault found by the parity check was fixed). Value labels on every point, on two rows for
+  dense series, and below 600 px only the first, last, marked and state-change points.
+- Arabic / responsive / a11y: value and time axes left-to-right; labels, panel order and rows follow the reading
+  direction; the credit isolated; forced colours keep marks, bars, rules and chart text; print keeps each figure whole.
+- Code: `visuals.py` drawers and the percentage-coordinate technique; the grammar table is the contract for D6.
+- Compromise: seven grammar states have no contract row anywhere and are designed only; the fallback tables head only
+  the value column (escalated); dense labels rely on the table below 600 px (DEBT-012).
+
+### DL-D2-006 · D2 · 2026-09-27 · Compare and the source register: tools composed, runtime untouched
+- Problem: give Compare and Data & sources the T4 grammar while keeping `site-src/app.js` and every test hook unchanged,
+  and prove compare_unlike and source_scale.
+- Evidence: `test_public_tools.py` 25/26 on the reference site; `check_site.py` (boundary before controls, verdict
+  before table and in the boundary voice, no numeric columns, text-labelled states; 151 sources, 28 curated in 6
+  categories, supporting open, reference closed, every source named or referenced, no locator-less source named).
+- Alternatives: a new runtime; CSS-only composition of the runtime's output.
+- Chosen: the runtime's output is styled, not rewritten: the verdict as the boundary voice; the table in its named
+  region; at 320–639 px each dimension row becomes a block with its cells numbered in slot order by CSS counters (the
+  slot labels are governed) — a recomposition, not a shrink (EAD-06). The register: curated cards by
+  `resource_category`, citation cards by governed title, locator-only sources by reference and locator, dependency
+  disclosures, the filter and statuses as hooks.
+- Arabic / responsive / a11y: `<select>` controls ≥ 44 px; the copy-link and copy-reference actions are buttons; the
+  filter has a visible governed label; every hidden row uses `[hidden]`.
+- Code: the CSS recomposition rule and the register composition; nothing in the runtime.
+- Compromise: the supporting group is open by default and long (94 rows) — paging or a category filter is a D5/D6
+  question (DEBT-011).
+
+### DL-D2-007 · D2 · 2026-09-27 · Every document builds; the repository suites run on the reference site; the checks are widened honestly
+- Problem: a green test must correspond to the implementation being accepted; the D1 build could not run the
+  repository suites (DEBT-009), and the D2 routes need their own proof.
+- Evidence: `build.py` builds all 288 documents plus the root, the 404 and `robots.txt`; `test_public_tools.py` 25/26
+  (1 not applicable, as on `dist/`), `viewport_acceptance.py` 168/168, `bilingual_invariance.py` 0 of 143 — all with
+  `YFIE_SITE_DIR=design/reference/out`; `check_site.py` 168 renders, 84 smoke tests, 157 hard-state assertions, 20
+  degraded renders; `check_content.py --text` PASS on 288 documents; `check_trio.py` 24/12 unchanged.
+- Alternatives: keep the trio-only build until D4; build everything with the family rule now.
+- Chosen: build everything now (the D3 families by the family rule, recorded as `BUILT`), run the suites unchanged, add
+  `check_site.py` with hard-state assertions per route as the D2 evidence, and widen `check_content.py` in two bounded
+  ways: a number the reference prints beyond the baseline may also be a number in the governed content the loader gave
+  that page (the bundle), and inline elements no longer count as word breaks (a tag-stripping artefact). Both were
+  found by real faults (a rounding error; a linkified address).
+- Arabic / responsive / a11y: the suites cover both editions at four widths. Code: the suites are the contract.
+- Compromise: `check_content.py` fails on an unbuilt site (a guard added after it once passed on nothing).
+
+### DL-D2-008 · D2 · 2026-09-27 · Records, debt and escalations at D2
+- Problem: keep the durable records the only memory.
+- Chosen: `COVERAGE.csv` — 190 D2 rows `VERIFIED` (176) or `DESIGNED` with the gap explained (14: grammar states no
+  contract row carries); 1,001 D3/D4 rows `BUILT`; the seven D2 figures' D6 rows `VERIFIED`, the text frames `BUILT`.
+  `DESIGN_DEBT.md`: DEBT-004, -006, -009 closed; DEBT-002 advanced; DEBT-011…013 opened. `ESCALATIONS.md`: three
+  closed, two open, two raised (fallback-table column labels; rows for VIS-TARGET-RESULT-STATE and VIS-MFI-DIVERGENCE).
+  `09_CODE_HANDOFF.md`: state at D2. `04_PAGE_FAMILY_COMPOSITIONS.md` and `03_COMPONENT_CATALOG.md` created.
+
+### DL-D3-001 · D3 · 2026-09-27 · The Home cold-reader test: who read, how, what they said
+- Problem: the brief's test — a person who has never seen the product reads Home and says what it is, what it can do and
+  whether it can be trusted — had not been run on the rendered product.
+- Method: four fresh agents with no access to the repository, one per language and width (English and Arabic at 390 and
+  1440 px), each shown only five captures of the rendered Home page (four screens in order, then the full page) and asked,
+  in stages (30 s, 90 s, 180 s), what the site is, where they would start, whether scope and limits are stated, which link
+  they would click and what they expect behind it, what confused them, what a screenshot of the first screen could make
+  someone misread, and whether the page reads as serious, trustworthy and clear (the Arabic readers also: whether the
+  Arabic reads naturally). Their reports are recorded verbatim in `evidence/d3/cold_read/home-<lang>-<width>.md`.
+- What they said, in common: serious and restrained, every number bounded, the "not one number" thesis retained; but the
+  product's own statement of what it is arrives only on the third screen; two links per record card with no stated
+  difference; the boundary's double rule shorter than the other rules; the system frame's "What not to conclude" printed
+  three times and its "Text description of this view" heading a view that does not exist; the sidebar count "(4)" against
+  one inline card labelled "behind these figures"; the publisher legible only in the footer; the nav group label read as a
+  stray tooltip in Arabic; the small gold labels hard to read in Arabic; and, in the content, three date formats, two-decimal
+  precision, three years attached to one number, jargon (POS, CBY-Aden, wave, rails, "Evidence signals") and Arabic
+  calques.
+- Classified: design and engineering findings corrected at D3 (DL-D3-002); content and authority findings recorded in
+  `ESCALATIONS.md` ("Raised at D3"), none filled with authored copy; the phone-length findings recorded as debt (DEBT-014,
+  DEBT-015); the publisher-mark finding as debt and escalation (DEBT-016).
+- Rejected: shortening or splitting the governed product statement; authoring a one-line strapline; a "start here" label;
+  renaming the nav; any change to governed numbers, dates or terms.
+
+### DL-D3-002 · D3 · 2026-09-27 · Home and the shared objects corrected from the test (within the Lock)
+- Problem: the findings above that are design or engineering.
+- Chosen: (1) the head carries the governed product statement (section 1) and its two governed actions under the
+  headline, before the first figure — the baseline's own order, which D1 had moved below the figures (Lock §4 keeps
+  clock-before-claim: the figures still open with their clocks); the product rubric stays on wide screens and is not shown
+  under 600 px, where the masthead already names the product; (2) one link per compact evidence object: the governed action
+  ("Open evidence record") is the link and its accessible name is the action followed by the record's title
+  (`aria-labelledby` over the two governed strings) — the title is no longer a second link to the same record; (3) the
+  figure prints its boundary once, in the foot, under the governed `UI-DOM-WHAT-NOT-TO-CONCLUDE` label (the label the
+  baseline uses for a visual); the text alternative carries what the view shows, its scope and the table; (4) a text frame
+  (no drawing) presents the governed description as its body — its "Text description of this view" heading stays in the
+  accessibility tree only and it carries no hidden second copy; (5) the framing record bound to Home ("a connected system,
+  not a single score") sits in the system-context section it frames, so nothing on the page is labelled "behind these
+  figures" but the spine's edge, which lists all four; (6) the boundary's double rule spans the column, the text inside
+  keeps the measure; (7) the primary-nav group is set off by a hairline and its label aligned to the links' baseline; the
+  masthead's cite and report actions in the body ink, not the muted grey that read as disabled; (8) the Arabic rubric size
+  13 → 14 px (`02_TOKENS.json` regenerated); (9) the governed instruction and body of "Questions to start from" read as one
+  paragraph. `check_site.py` asserts (1)–(3), (5) and (6) on Home (`statement_in_head`, `statement_before_first_figure`,
+  `one_link_per_bound_object`, `boundary_once_per_frame`, `records_edge_lists_all`, `double_rule_spans_column`).
+- Rejected: shortening the statement on phones (governed; DEBT-015); a collapsed index on phones (Lock: one visible spine;
+  DEBT-014); enlarging the logo (the mark's own clear space keeps its wordmark under 8 px at any masthead size; DEBT-016).
+
+### DL-D3-003 · D3 · 2026-09-27 · The synthesis families composed and reviewed
+- Problem: the Reading index, the ten Readings, Measurement, Methodology, the eight trust pages and the 404 were built by
+  the family rule at D2 and not yet composed or reviewed on their own rows.
+- Chosen: each route reviewed in both languages at 390 and 1440 px (first screens in `evidence/d3/`) and asserted per
+  family (`check_site.py --gate d3`): the Reading opens on the question, the title, the thesis and its two clocks, its
+  boundary before the essay, at most one figure after the opening, the trace to records with the source record or the
+  governed path state, one or two related Readings and no lifted number in the standfirst; the essay measure is the
+  language's own (64ch Latin, 34em Arabic), never the column; Measurement carries ten equal-weight, deep-linkable priorities
+  with no ordinal numbering (`measurement_nonranking`); About reads without backend terminology
+  (`trust_plain_language`); Contact and Corrections keep the runtime's report path; the 404 is bilingual, Arabic first. The
+  family rules stood: no composition changed beyond the shared objects of DL-D3-002.
+- Rejected: a separate composition per trust page (they share one page object by design); numbering the priorities.
+
+### DL-D3-004 · D3 · 2026-09-27 · The Reading measure assertion corrected
+- Problem: the first D3 run failed `measure_bounded` on every Reading at 1440 px because the assertion assumed a 760 px
+  paragraph; the essay measure is `--measure` (64ch at the reading size ≈ 704 px Latin, 680 px Arabic).
+- Chosen: assert the property, not a guess — a reading paragraph is narrower than the page object and never wider than
+  720 px; re-run green. Recorded so a green test corresponds to the implementation accepted.
+
+### DL-D3-005 · D3 · 2026-09-27 · Records at D3
+- Chosen: `COVERAGE.csv` — 164 D3 rows `VERIFIED` (160 route rows, 4 hard-state rows), the Home rows annotated;
+  `DESIGN_DEBT.md`: DEBT-014…016 opened, DEBT-002 and DEBT-007 advanced; `ESCALATIONS.md`: the cold-reader content
+  observations raised, a process note on the branch; `09_CODE_HANDOFF.md`: state at D3; `04_PAGE_FAMILY_COMPOSITIONS.md`
+  and `03_COMPONENT_CATALOG.md` updated; the four cold-reader reports kept verbatim under `evidence/d3/cold_read/`.
+
+### DL-D4-001 · D4 · 2026-09-27 · Every evidence record asserted from its own bundle
+- Problem: 102 records outside the §9.1 set were built by the family rule and never looked at; a route-by-route review of
+  880 renders would be theatre, and a hand-kept list of expectations would drift from the Master.
+- Chosen: the check reads each record's governed bundle as the build wrote it (`out/_bundle/<route>__<lang>.json`, the
+  same file `check_content.py` reads) and asserts what the page must show for that record: the seven questions; the
+  boundary on first load; the clock before the claim; as many source cards as the bundle has sources, with a public
+  locator on every one; the lineage statement with its state exactly when the bundle carries one; the members list with
+  the bundle's members exactly when it is a composite of objects; the no-locator and some-without-locator states exactly
+  when stated; a trace chip per source id; the Compare entry exactly when the record is comparable; the record's own
+  visual under the first answer exactly when it has one; the boundary printed once per frame; and that nothing looks
+  empty. 3,822 assertions pass over 880 record renders (`check_site.py --gate d4`), on top of the smoke test at 390 and
+  1440 px and the render conditions at four widths. One record per verification state outside the §9.1 set is kept as
+  evidence (`evidence/d4/`).
+- Rejected: a fixed list of expected values per route (drifts from the Master); sampling (the gate's exit is every row).
+
+### DL-D4-002 · D4 · 2026-09-27 · The three remaining domain answers
+- Problem: `/firms/`, `/finance/` and `/providers/` were built by the Domain Answer rule at D2 and not reviewed.
+- Chosen: reviewed in both languages at 390 and 1440 px and asserted from their bundles — the governed question before the
+  answer, the contract's band before the answers, the primary visual framed as its text frame (VIS-FIRM-CONSTRAINTS,
+  VIS-MFI-DIVERGENCE, VIS-PROVIDER-OBSERVABILITY: TABLE_TEXT_FIRST or SUPPORTING contracts without rows; D6), every
+  verification, measurement and Reading object bound, the depth in one disclosure, the governed related questions, and
+  the 24-event chronology on `/finance/` (JRN-09). The family rule stood; no route-specific composition was needed.
+- Rejected: drawing the three visuals at D4 (a visuals-gate decision; VIS-MFI-DIVERGENCE's rows are escalated).
+
+### DL-D4-003 · D4 · 2026-09-27 · The neutral root entry and the binding proved
+- Problem: the root entry and the "complete binding" claim had no check.
+- Chosen: `root_checks` in `check_site.py` (no inline script or style; both `hreflang` alternates and `x-default`; Arabic by
+  default; the stored edition kept) and `design/reference/check_binding.py`, which reads the inventory's projection roles
+  and proves that every RENDER and CONTRACT projection is read by the one content path (or shipped unchanged for the
+  runtime: the search index and aliases), that no REFERENCE or VIA_SPEC projection is read by any reference module, that
+  a STRUCTURE projection is read only for its ids and links, and that the built site holds 286 edition pages, the root,
+  the 404, one bundle per page and no copied content model. The one deviation it found — `public_claims.json` (VIA_SPEC)
+  loaded by the content path and never used — is removed.
+- Rejected: a bodied root page with authored edition links (no governed copy exists for it; the baseline's no-script
+  refresh to Arabic stands).
+
+### DL-D4-004 · D4 · 2026-09-27 · Records at D4
+- Chosen: `COVERAGE.csv` — 841 D4 rows `VERIFIED` (816 record rows, 24 domain rows, the root entry); every route row of
+  the ledger is now `VERIFIED`; the D5 (tool states, journeys) and D6 (visuals) rows remain. `DESIGN_DEBT.md`: DEBT-002
+  and DEBT-007 advanced. `09_CODE_HANDOFF.md`: state at D4. `04_PAGE_FAMILY_COMPOSITIONS.md`: the three answers and the
+  record assertion recorded. `evidence/d4/` (42 PNG).
+
+### DL-D5-001 · D5 · 2026-09-27 · The technical voice
+- Problem: the runtime's technical states (Compare link errors, the same-record state, search and register statuses and
+  no-match states, record-context link errors, the no-script note) rendered in the body voice or, for the same-record
+  state, in the boundary voice — a technical failure could read as a statement about the evidence, and the same-record
+  state as an assessment.
+- Chosen: a third voice with one non-colour signal — a dashed hairline above the message, body ink (`--ink-2`), the
+  governed title where the runtime writes one — never the double rule, the counter colour or the plaster surface, and
+  never inside a boundary section or an evidence-gap object. Applied to every hook the runtime writes into
+  (`03_COMPONENT_CATALOG.md` §1, technical state). `check_journeys.py` drives all fourteen runtime states in both
+  languages and asserts the announcement (alert or status), the dashed rule, the absence of a verdict where none is due,
+  and that navigation keeps working; the same-record state is asserted to be the only `[data-compare-verdict]` value.
+- Rejected: an icon or a colour for "technical" (colour never carries meaning alone; no icon vocabulary exists); hiding
+  the states (the runtime's behaviour is the baseline's and is proved by `test_public_tools.py`).
+
+### DL-D5-002 · D5 · 2026-09-27 · The thirteen journeys walked by keyboard
+- Problem: the acceptance criterion — the thirteen journeys succeed by keyboard, on mobile and desktop, in both
+  languages — had no proof on the rendered product.
+- Chosen: `check_journeys.py` walks each journey of the inventory at 390 and 1440 px in English and Arabic: from every
+  page of the path a link the page itself offers (in the page object, the spine, the product bar or the footer — the
+  first one visible at that width) takes keyboard focus, shows the focus outline, sits in the viewport and activates with
+  Enter; on a phone a primary-nav link is reached by opening the menu with the keyboard first; every landing is asserted
+  against the journey's success condition (`07_INTERACTION_ACCESSIBILITY.md` §5). 52 of 52 walks pass. Two walks failed
+  on the first run because the checker followed a hidden side-spine link on a phone; the product offered the same link
+  in the foot spine, which is the phone's verification path — the checker was corrected, the product was not.
+- Rejected: a tab-through of every page (hundreds of links on `/data/`; a focus-and-Enter on the offered link proves the
+  same reachability); scripting the journeys through the URL bar (that proves nothing about the product).
+
+### DL-D5-003 · D5 · 2026-09-27 · Motion, zoom, forced colours, no script, and the two unbound verification states
+- Chosen: recorded in `07_INTERACTION_ACCESSIBILITY.md` §3 as proved by the existing checks (the 320 px renders stand for
+  400 % zoom of a 1280 px window; the forced-colours and no-stylesheet renders of every gate; reduced motion removes
+  every transition, and no state depends on motion); the no-script note in the technical voice on every page, with the
+  evidence readable (asserted). `SOURCE_NOT_YET_BOUND` and `NO_SOURCE_RECORD`, which no record carries today, are designed
+  as states of the record's question 6 with their governed copy (`UI-EVID-UNBOUND`, `UI-EVID-THIS-RECORD-CURRENTLY-HAS-NO`)
+  in the body voice; the content path carries both branches; nothing is rendered on an invented record (ledger rows
+  `DESIGNED`).
+- Rejected: an authored "(opens in a new window)" cue on external source links — governed copy, raised in
+  `ESCALATIONS.md` (anticipated at D0, needed now).
+
+### DL-D5-004 · D5 · 2026-09-27 · Records at D5
+- Chosen: `COVERAGE.csv` — 82 D5 rows `VERIFIED` (52 journeys, 30 technical states), 4 `DESIGNED` (the two unbound
+  verification states); `07_INTERACTION_ACCESSIBILITY.md` written; `03_COMPONENT_CATALOG.md` technical state;
+  `09_CODE_HANDOFF.md` state at D5; `DESIGN_DEBT.md` DEBT-014 narrowed; `ESCALATIONS.md` the external-link cue raised;
+  `evidence/d5/` (journey end screens, technical-state screens).

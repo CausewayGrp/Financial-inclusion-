@@ -410,6 +410,12 @@ Conclusion of the paper test: no family requires a second grammar; two require a
 320 px; the Data & sources register). This does not decide convergence; the lens critique and the adversarial tests
 do.
 
+**D2 result (27 September 2026, addendum).** The paper test held in rendered code: one grammar carries all eleven
+families (`design/04_PAGE_FAMILY_COMPOSITIONS.md`), every document builds from the one content path, and the two
+recompositions were made — Compare's table becomes numbered slot blocks below 640 px without touching the runtime, and
+the source register is composed as curated categories with dependency groups. Each §9.2 hard state on the D2 routes is
+asserted by `design/reference/check_site.py` (DL-D2-003 … DL-D2-007).
+
 ## 3. Comparison and convergence (27 September 2026)
 
 ### 3.1 How the critique was run
