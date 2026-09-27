@@ -93,6 +93,13 @@ def main() -> int:
     for key in list(THESES):
         row = [bd for bd in boards if bd["key"] == key]
         if not row:
+            # a proposition not rebuilt this run keeps its boards: re-read their frames from the existing index
+            for fname, entry in idx["boards"].items():
+                if fname.startswith(key.upper() + "-"):
+                    n = fname[:-len(".dc.html")]
+                    _, surface, lang, size = n.split("-")
+                    row.append({"name": n, "key": key, "surface": surface, "lang": lang, "size": size, "width": entry["w"], "height": entry["h"] if entry.get("expand") != "fill" else 8001, "title": entry.get("title", n), "existing": True})
+        if not row:
             continue
         idx["notes"][f"row-{key}"] = {"x": 0, "y": y - 300, "text": THESES[key].NAME + " — " + {"t1": "the evidence record as the organising object; the apparatus visible (manuscript page)",
                                                                                               "t2": "reading-first; the proposition leads; evidence discloses in place (image-free control)",
@@ -108,7 +115,8 @@ def main() -> int:
                 entry["expand"] = "fill"
             idx["boards"][fname] = entry
             order.append(fname)
-            (PROJECT / fname).write_text(board_html(bd["css"], bd["body"], bd["lang"], bd["size"], bd["width"], bd["height"], bd["title"]), encoding="utf-8")
+            if not bd.get("existing"):
+                (PROJECT / fname).write_text(board_html(bd["css"], bd["body"], bd["lang"], bd["size"], bd["width"], bd["height"], bd["title"]), encoding="utf-8")
             x += bd["width"] + gap_x
             row_h = max(row_h, h)
         y += row_h + gap_y + 300

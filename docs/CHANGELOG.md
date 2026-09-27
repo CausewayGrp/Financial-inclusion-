@@ -17,6 +17,12 @@ the harness bundle; outputs git-ignored). Updated: decision log DL-D1-001…005,
 commit: `checksums.py --check`, `generate_projections.py --check`, `validate.py`, `repository_manifest.py --check`,
 `design/reference/check_content.py`; the browser suites run in CI against `dist/`, which did not change.
 
+Same day, later push: T4 revised after a native-size inspection at 320–1440 px in both languages (four design defects
+fixed — the illegible signature panel, the 900–1200 px grid, the mobile question strip, dropped SVG value labels —
+recorded in `design/01_FOUNDATIONS.md` §2.5); inspection, tiling and crop tooling added under
+`design/exploration/d1_canvas/`; a paper scaling test of the candidate grammar against the fixed sitemap (§2.6). No
+thesis chosen; the lens critique is the next step.
+
 ## 2026-09-27 — Design D0: steward verification recorded in the Design README
 
 `design/00_DESIGN_README.md` still read "awaiting steward landing" and left direct authority verification to the

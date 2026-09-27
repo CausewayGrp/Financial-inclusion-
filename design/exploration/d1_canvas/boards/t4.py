@@ -17,7 +17,7 @@ from __future__ import annotations
 
 import re
 
-from common import esc, bdi, paragraphs, reading_blocks, nav_flat, logo, responsive_rules, rv001_data, rv001_panel1_rows_svg, rv001_index_panel_svg, rv001_tables, rv001_frame_lines
+from common import esc, bdi, num, paragraphs, reading_blocks, nav_flat, logo, responsive_rules, rv001_data, rv001_tables, rv001_frame_lines
 
 CUR = ' aria-current="page"'
 NAME = "T4 · Instrument"
@@ -63,7 +63,7 @@ p{margin:0 0 .85em}p:last-child{margin-bottom:0}
 .brand img{width:40px;height:40px}
 .brand-name{font-weight:600;font-size:13px;line-height:1.2;max-width:14ch}
 .nav{display:none}
-.controls{display:flex;align-items:center;gap:12px;font-size:14px;font-weight:500}
+.controls{display:flex;align-items:center;gap:12px;font-size:14px;font-weight:500;white-space:nowrap}
 .controls .tbtn,.controls a{text-decoration:none}
 .controls .lang{border:1px solid var(--rule-2);padding:6px 9px}
 .controls .cite,.controls .report{display:none}
@@ -74,10 +74,11 @@ p{margin:0 0 .85em}p:last-child{margin-bottom:0}
 .obj .head{display:flex;flex-direction:column;gap:8px}
 .qa{display:flex;flex-direction:column;gap:6px;padding-top:14px;border-top:1px solid var(--rule)}
 .qa .rubric{color:var(--ochre)}
+.rubric .n{color:var(--mute);margin-inline-end:.6em}
 .qa.first{border-top:0;padding-top:0}
 .crumb{font-size:var(--fs-clock);color:var(--mute);margin-bottom:2px}
 .crumb a{text-decoration:none}
-.strip{display:flex;flex-wrap:wrap;gap:6px;padding:4px 0}
+.strip{display:flex;flex-wrap:wrap;gap:6px;padding:14px 0 4px}
 .strip a{display:inline-flex;gap:6px;align-items:baseline;border:1px solid var(--rule-2);padding:6px 10px;font-size:var(--fs-clock);font-weight:500;text-decoration:none;background:var(--paper)}
 .strip a .n{color:var(--mute);font-weight:600}
 .compact{display:flex;flex-direction:column;gap:6px;padding:14px 0;border-top:1px solid var(--rule)}
@@ -132,19 +133,23 @@ details.more .qa{margin-top:10px}
 .fig{background:var(--plaster);padding:18px 16px 16px;margin:20px 0 4px;border-top:3px solid var(--ink)}
 .fig h4{font-size:var(--fs-q);line-height:var(--lh-q);margin-bottom:6px}
 .fig .cap{font-size:var(--fs-clock);line-height:var(--lh-clock);color:var(--ink-2);margin:0 0 4px;max-width:70ch}
-.panels{display:flex;flex-direction:column;gap:18px;padding-top:12px;border-top:1px solid var(--rule-2);margin-top:12px}
+.panels{display:flex;flex-direction:column;gap:20px;padding-top:12px;border-top:1px solid var(--rule-2);margin-top:12px}
 .panel h5{margin:0 0 6px;font-size:var(--fs-clock);font-weight:600;color:var(--ink-2)}
-.rows{display:grid;grid-template-columns:minmax(120px,.45fr) minmax(0,1fr);gap:0 12px;align-items:center}
-.rows .rl{font-size:var(--fs-clock);line-height:var(--lh-clock);font-weight:600;padding:10px 0}
+.p1{display:flex;flex-direction:column;gap:2px;margin-top:6px}
+.p1 .row{display:grid;grid-template-columns:minmax(0,1fr);gap:0}
+.p1 .rl{font-size:var(--fs-clock);line-height:var(--lh-clock);font-weight:600;padding-top:8px}
+.p1 svg{display:block;overflow:visible;font-family:var(--font)}
+.p1 .ax-row{margin-top:2px}
+.cap.same{margin-top:10px}.cap.note{margin-top:10px}
 .between{border-top:3px double var(--counter);padding-top:8px;font-size:var(--fs-clock);font-weight:600;color:var(--counter)}
 .lanes{display:flex;flex-direction:column;gap:14px}
 .lane h5{color:var(--ink)}
-.legend{display:flex;flex-wrap:wrap;gap:8px 18px;font-size:var(--fs-clock);color:var(--ink-2);margin-top:6px}
-.legend .k{display:inline-flex;align-items:center;gap:7px}
-.legend .sw{display:inline-block;width:11px;height:11px;background:var(--ink)}.legend .sw.c{border-radius:50%}.legend .sw.s{background:var(--plaster);border:2px solid var(--ink)}
 .fig .foot{display:flex;flex-direction:column;gap:6px;font-size:var(--fs-clock);line-height:var(--lh-clock);color:var(--ink-2);margin-top:12px}
 .fig .foot .b{color:var(--counter);font-weight:500;font-size:var(--fs-src)}
-svg.rv1,svg.rv2{max-width:100%;height:auto;font-family:var(--font)}
+svg.rv2{display:block;overflow:visible;font-family:var(--font)}
+.lane{min-width:0}
+.canon{unicode-bidi:isolate;overflow-wrap:anywhere}
+.alt-p{padding-top:8px}
 .axis{stroke:var(--ink);stroke-width:1}.grid{stroke:var(--rule-2);stroke-width:1;stroke-dasharray:2 3}.tick{stroke:var(--ink);stroke-width:1}.stem{stroke:var(--rule-2);stroke-width:1}
 .lbl{font-size:11px;fill:var(--mute);font-weight:500}.lbl.origin{fill:var(--ink)}.unit{font-size:11px;fill:var(--ink-2);font-weight:600}
 .val{font-size:12.5px;fill:var(--ink);font-weight:600}.val.small{font-size:11px}
@@ -152,7 +157,7 @@ svg.rv1,svg.rv2{max-width:100%;height:auto;font-family:var(--font)}
 .path{stroke:var(--ink);stroke-width:1.5}
 .rvtab{border-collapse:collapse;width:100%;font-size:var(--fs-clock);line-height:var(--lh-clock);margin-top:10px;background:var(--paper)}
 .rvtab caption{text-align:start;font-weight:600;color:var(--ink-2);padding:8px 0}
-.rvtab th,.rvtab td{text-align:start;padding:7px 10px;border-top:1px solid var(--rule);vertical-align:top}
+.rvtab th,.rvtab td{text-align:start;padding:7px 8px;border-top:1px solid var(--rule);vertical-align:top;overflow-wrap:anywhere}.rvtab td{font-variant-numeric:tabular-nums;white-space:nowrap}
 .rvtab thead th{border-top:1px solid var(--ink);font-weight:600}
 .rvtab .state{color:var(--mute)}.rvtab .marker{font-weight:600;color:var(--counter)}
 details.alt summary{cursor:pointer;font-size:var(--fs-src);font-weight:600;list-style:none;margin-top:12px}
@@ -177,6 +182,14 @@ details.alt[open] summary::before{content:"− "}
 .inst .fine{border-top:1px solid var(--rule-2);padding-top:12px;font-size:var(--fs-clock);color:var(--mute)}
 """
 
+MID = """
+.p1 .row{grid-template-columns:minmax(150px,.38fr) minmax(0,1fr);gap:0 16px;align-items:center}
+.p1 .rl{padding-top:0}
+.lanes{flex-direction:row;gap:24px}
+.lanes>.lane{flex:1 1 0;min-width:0}
+.strip{gap:8px}
+"""
+
 DESKTOP = """
 :root,.root{--fs-display:46px;--fs-q:23px;--fs-st:21px;--fs-body:17px;--fs-read:19px;--fs-bnd:19px}
 [dir=rtl],[dir=rtl].root{--fs-display:42px;--fs-q:24px;--fs-st:22px;--fs-body:18px;--fs-read:20px;--fs-bnd:20px}
@@ -191,30 +204,16 @@ DESKTOP = """
 .controls{gap:16px}
 .controls .cite,.controls .report{display:inline;color:var(--mute)}
 .controls .menu{display:none}
-.page{padding:28px 32px 56px;display:grid;grid-template-columns:minmax(0,1fr) 300px;column-gap:48px;row-gap:0;align-items:start}
+.page{padding:28px 32px 56px;display:grid;grid-template-columns:minmax(0,1fr) 280px;column-gap:40px;row-gap:0;align-items:start}
 .page>.obj{grid-column:1;max-width:840px}
 .spine{grid-column:2;grid-row:1 / span 20;position:sticky;top:20px;margin-top:0;padding:18px 20px}
 .spine .index{display:block}
 .strip{display:none}
 .foot-spine{display:none}
 .obj.page-obj{gap:22px;padding-top:22px}
-.qa{display:grid;grid-template-columns:220px minmax(0,1fr);gap:4px 36px;padding-top:16px}
-.qa .rubric{padding-top:4px}
-.compact{display:grid;grid-template-columns:220px minmax(0,1fr);gap:4px 36px;padding:16px 0}
-.compact .clock{grid-row:1 / span 3}
-.compact .open{grid-column:2}
-.compact .small{grid-column:2}
-.compact .q{grid-column:2}
 .paced .sent{font-size:22px;line-height:1.45}
 [dir=rtl] .paced .sent{font-size:23px;line-height:1.7}
 .bnd{margin-top:26px;padding-top:14px}
-.panels{flex-direction:row;align-items:flex-start;gap:28px}
-.panels>.panel{flex:1 1 0;min-width:0}
-.panels>.panel.p2{flex:1.5 1 0}
-.between{border-top:0;border-inline-start:3px double var(--counter);padding:0 0 0 14px;align-self:center;max-width:10em}
-[dir=rtl] .between{padding:0 14px 0 0}
-.lanes{flex-direction:row}
-.lanes>.lane{flex:1 1 0;min-width:0}
 .inst-in{padding:36px 32px 24px;display:grid;grid-template-columns:minmax(0,1.3fr) minmax(0,2fr);gap:28px 48px}
 .inst .trust{grid-column:1 / -1}
 .inst .groups{flex-direction:row;gap:36px}
@@ -223,11 +222,23 @@ DESKTOP = """
 h1{max-width:22ch}
 """
 
-CSS = BASE + responsive_rules(DESKTOP, "min-width:900px", "vp-d")
+WIDE = """
+.page{grid-template-columns:minmax(0,1fr) 300px;column-gap:48px}
+.qa{display:grid;grid-template-columns:220px minmax(0,1fr);gap:4px 36px;padding-top:16px}
+.qa .rubric{padding-top:4px}
+.compact{display:grid;grid-template-columns:220px minmax(0,1fr);gap:4px 36px;padding:16px 0}
+.compact .clock{grid-row:1 / span 3}
+.compact .open{grid-column:2}
+.compact .small{grid-column:2}
+.compact .q{grid-column:2}
+"""
+
+CSS = BASE + responsive_rules(MID, "min-width:600px", "vp-d") + responsive_rules(DESKTOP, "min-width:900px", "vp-d") + responsive_rules(WIDE, "min-width:1200px", "vp-d")
 
 
-def rubric(t, cls="rubric"):
-    return f'<span class="{cls}">{esc(t)}</span>'
+def rubric(t, cls="rubric", n=None):
+    num_ = f'<span class="n">{n:02d}</span>' if n else ""
+    return f'<span class="{cls}">{num_}{esc(t)}</span>'
 
 
 def clock(label, value):
@@ -309,16 +320,64 @@ def paced(text, resolution_prefix=("These are different measures", "هذه مق�
     return f'<p>{"".join(out)}</p>'
 
 
+def svgnum(v):
+    """A governed value as plain SVG text (no HTML isolation inside <text>): thousands separators, precision as given."""
+    return f"{int(v):,}" if float(v).is_integer() and not isinstance(v, float) else f"{v:,}"
+
+
+def _pct(v, lo=1.0, hi=88.0, vmax=7000.0):
+    return lo + (hi - lo) * (v / vmax)
+
+
+def p1_rows(d, lang):
+    """Panel 1 of RV-CWR-001 as rows: one row per publication, each keyed by its governed label (HTML, so it wraps and
+    mirrors), its value on a horizontal axis from zero. Coordinates are percentages of the SVG's own width, so the
+    drawing follows the column without scaling its text and needs no inline style (CSP-safe for the reference)."""
+    a, b = d["panel1"][0], d["panel1"][1]
+    rows = []
+    for val, kind in ((a, "circle"), (b, "square")):
+        x = _pct(val["y"])
+        mark = (f'<circle class="mark a" cx="{x:.2f}%" cy="26" r="7"/>' if kind == "circle"
+                else f'<rect class="mark b" x="{x:.2f}%" y="19" width="14" height="14" transform="translate(-7,0)"/>')
+        track = (f'<svg class="trk" width="100%" height="38" aria-hidden="true" focusable="false" direction="ltr">'
+                 f'<line class="stem" x1="1%" y1="26" x2="{x:.2f}%" y2="26"/>{mark}'
+                 f'<text class="val" x="{x:.2f}%" y="11" text-anchor="middle">{svgnum(val["y"])}</text></svg>')
+        rows.append(f'<div class="row"><div class="rl">{esc(val["series_label"])}</div>{track}</div>')
+    ticks = "".join(f'<line class="tick" x1="{_pct(t):.2f}%" y1="0" x2="{_pct(t):.2f}%" y2="5"/><text class="lbl" x="{_pct(t):.2f}%" y="18" text-anchor="middle">{t:,}</text>' for t in (0, 2000, 4000, 6000))
+    axis = (f'<div class="row ax-row"><div></div><svg class="ax" width="100%" height="22" aria-hidden="true" focusable="false" direction="ltr">'
+            f'<line class="axis" x1="1%" y1="0.5" x2="88%" y2="0.5"/>{ticks}</svg></div>')
+    return f'<div class="p1">{"".join(rows)}{axis}</div>'
+
+
+def lane(points, mark):
+    """Panel 2, one lane: the indexed path 2021–2024 on its own labelled axis (origin 95 labelled), percentage x."""
+    xs = [2021, 2022, 2023, 2024]
+    def x(yr): return 12 + 82 * (xs.index(yr) / 3)
+    def y(v): return 24 + (200 - 24 - 36) * (1 - (v - 95) / (122 - 95))
+    g = ['<line class="axis" x1="12%" y1="24" x2="12%" y2="164"/>', '<line class="axis" x1="12%" y1="164" x2="94%" y2="164"/>']
+    for t in (100, 110, 120):
+        g.append(f'<line class="grid" x1="12%" y1="{y(t):.1f}" x2="94%" y2="{y(t):.1f}"/><text class="lbl" x="10%" y="{y(t)+4:.1f}" text-anchor="end">{t}</text>')
+    g.append('<text class="lbl origin" x="10%" y="168" text-anchor="end">95</text>')
+    for yr in xs:
+        g.append(f'<text class="lbl" x="{x(yr):.2f}%" y="182" text-anchor="middle">{yr}</text>')
+    pts = [(x(yr), y(points[yr]["value"])) for yr in xs]
+    for (x1, y1), (x2, y2) in zip(pts, pts[1:]):
+        g.append(f'<line class="path" x1="{x1:.2f}%" y1="{y1:.1f}" x2="{x2:.2f}%" y2="{y2:.1f}"/>')
+    for (px, py), yr in zip(pts, xs):
+        g.append(f'<circle class="mark a" cx="{px:.2f}%" cy="{py:.1f}" r="5"/>' if mark == "circle"
+                 else f'<rect class="mark b" x="{px:.2f}%" y="{py-5:.1f}" width="10" height="10" transform="translate(-5,0)"/>')
+        g.append(f'<text class="val small" x="{px:.2f}%" y="{py-10:.1f}" text-anchor="middle">{svgnum(points[yr]["value"])}</text>')
+    return f'<svg class="rv2" width="100%" height="200" aria-hidden="true" focusable="false" direction="ltr">{"".join(g)}</svg>'
+
+
 def figure(v, lang):
     d = rv001_data(v); f = rv001_frame_lines(v)
-    row_labels = f'<div class="rows"><div class="rl">{esc(d["label_ar2024"])}</div><div></div><div class="rl">{esc(d["label_ar2025"])}</div><div></div></div>'
     return (f'<figure class="fig"><span class="rubric">{esc(v["labels"]["analytical_question"])}</span><h4>{esc(f["title"])}</h4><p class="cap">{esc(v["question"])}</p><p class="cap">{esc(f["scope"])}</p>'
-            f'<div class="panels"><div class="panel p1"><h5>2024 · {esc(d["unit_usd"])}</h5><div class="rows"><div class="rl">{esc(d["label_ar2024"])}<br>{esc(d["label_ar2025"])}</div><div>{rv001_panel1_rows_svg(d, lang)}</div></div>'
-            f'<div class="legend"><span class="k"><span class="sw c"></span>{esc(d["label_ar2024"])}</span><span class="k"><span class="sw s"></span>{esc(d["label_ar2025"])}</span></div><p class="cap" style="margin-top:8px"><b>{esc(f["same_year"])}</b></p></div>'
+            f'<div class="panels"><div class="panel p1p"><h5>2024 · {esc(d["unit_usd"])}</h5>{p1_rows(d, lang)}<p class="cap same"><b>{esc(f["same_year"])}</b></p></div>'
             f'<div class="between">{esc(f["not_comparable"])}</div>'
-            f'<div class="panel p2"><h5>{esc(d["unit_index"])} · {esc(v["labels"]["derived"])}</h5><div class="lanes"><div class="lane"><h5>{esc(d["label_cby"])}</h5>{rv001_index_panel_svg(d["cby_index"], lang, w=280, h=200, mark="circle")}</div><div class="lane"><h5>{esc(d["label_imf"])}</h5>{rv001_index_panel_svg(d["imf_index"], lang, w=280, h=200, mark="square")}</div></div><p class="cap" style="margin-top:8px">{esc(f["note"])}</p></div></div>'
-            f'<div class="foot"><p class="b"><b>{esc(f["boundary_label"])}</b> {esc(f["boundary"])}</p><p>{esc(f["credit"])}</p><p>{esc(f["full_record_label"])} <a href="{f["full_record"]}">{esc(f["full_record"])}</a></p></div>'
-            f'<details class="alt"><summary>{esc(v["labels"]["text_alternative"])}</summary><p class="small" style="padding-top:8px">{esc(v["alt_text"])}</p><div class="table-wrap">{rv001_tables(d, v, lang)}</div></details>'
+            f'<div class="panel p2"><h5>{esc(d["unit_index"])} · {esc(v["labels"]["derived"])}</h5><div class="lanes"><div class="lane"><h5>{esc(d["label_cby"])}</h5>{lane(d["cby_index"], "circle")}</div><div class="lane"><h5>{esc(d["label_imf"])}</h5>{lane(d["imf_index"], "square")}</div></div><p class="cap note">{esc(f["note"])}</p></div></div>'
+            f'<div class="foot"><p class="b"><b>{esc(f["boundary_label"])}</b> {esc(f["boundary"])}</p><p>{esc(f["credit"])}</p><p>{esc(f["full_record_label"])} <a class="canon" dir="ltr" href="{f["full_record"]}">{esc(f["full_record"])}</a></p></div>'
+            f'<details class="alt"><summary>{esc(v["labels"]["text_alternative"])}</summary><p class="small alt-p">{esc(v["alt_text"])}</p><div class="table-wrap">{rv001_tables(d, v, lang)}</div></details>'
             f'<figcaption class="sr-only">{esc(v["alt_text"])}</figcaption></figure>')
 
 
@@ -328,18 +387,18 @@ def record(page, shell):
     index = [("q1", L["establishes"]), ("q2", L["measures"]), ("q3", L["applies"]), ("q4", L["currentness"]), ("q5", L["does_not_establish"]), ("q6", L["source"]), ("q7", L["more"])]
     summary = esc(page["summary"])
     head = (f'<div class="head">{crumb(page["breadcrumb"], shell)}{rubric(L["family"])}{clock(L["period"], esc(page["period"]))}'
-            f'<div class="ref"><b>{esc(L["reference"])}</b> {bdi(page["id"])}</div><h1>{esc(page["title"])}</h1></div>' + strip(index))
-    qa = [f'<div class="qa first" id="q1">{rubric(L["establishes"])}<div class="st"><p>{summary}</p></div></div>',
-          f'<div class="qa" id="q2">{rubric(L["measures"])}<div class="body"><p>{esc(page["definition"])}</p></div></div>',
-          f'<div class="qa" id="q3">{rubric(L["applies"])}<div class="body"><p>{esc(page["universe"])}</p></div></div>',
-          f'<div class="qa" id="q4">{rubric(L["currentness"])}<div class="body"><p>{esc(page["currentness"])}</p></div></div>',
-          f'<div class="bnd" id="q5">{rubric(L["does_not_establish"])}<p>{esc(page["does_not_establish"])}</p></div>']
+            f'<div class="ref"><b>{esc(L["reference"])}</b> {bdi(page["id"])}</div><h1>{esc(page["title"])}</h1></div>')
+    qa = [f'<div class="qa first" id="q1">{rubric(L["establishes"], n=1)}<div class="st"><p>{summary}</p></div></div>' + strip(index),
+          f'<div class="qa" id="q2">{rubric(L["measures"], n=2)}<div class="body"><p>{esc(page["definition"])}</p></div></div>',
+          f'<div class="qa" id="q3">{rubric(L["applies"], n=3)}<div class="body"><p>{esc(page["universe"])}</p></div></div>',
+          f'<div class="qa" id="q4">{rubric(L["currentness"], n=4)}<div class="body"><p>{esc(page["currentness"])}</p></div></div>',
+          f'<div class="bnd" id="q5">{rubric(L["does_not_establish"], n=5)}<p>{esc(page["does_not_establish"])}</p></div>']
     chips = "".join(f'<a class="chip" href="/{shell["lang"]}/data/?source={esc(sid)}#source-{esc(sid)}">{bdi(sid)}</a>' for sid in page["trace_ids"])
-    qa.append(f'<div class="qa" id="q6">{rubric(L["source"])}<div><p class="small">{esc(L["source_intro"])}</p><div style="margin-top:10px">{"".join(source_card(s) for s in page["sources"])}</div>'
+    qa.append(f'<div class="qa" id="q6">{rubric(L["source"], n=6)}<div><p class="small">{esc(L["source_intro"])}</p><div style="margin-top:10px">{"".join(source_card(s) for s in page["sources"])}</div>'
               f'<div style="margin-top:16px"><span class="small"><b>{esc(L["trace"])}</b> · {esc(L["trace_intro"])}</span><div class="chips"><span class="chip">{bdi(page["id"])}</span>{chips}</div></div></div></div>')
     more = "".join(f'<div class="qa">{rubric(L[k])}<div class="body"><p>{esc(page[k])}</p></div></div>' for k in ("method", "change_trigger", "verification") if page[k])
     more += f'<div class="qa">{rubric(L["reading_guidance"])}<div class="body">{paragraphs(page["reading_guidance"]["paragraphs"])}</div></div>'
-    qa.append(f'<div class="qa" id="q7">{rubric(L["more"])}<details class="more"><summary>{esc(L["more_intro"])}</summary>{more}</details></div>')
+    qa.append(f'<div class="qa" id="q7">{rubric(L["more"], n=7)}<details class="more"><summary>{esc(L["more_intro"])}</summary>{more}</details></div>')
     util = (f'<div class="util"><div class="ref"><b>{esc(L["reference"])}</b> {bdi(page["id"])}</div><div class="actions"><button type="button" class="tbtn">{esc(L["cite"])}</button><a href="{page["hrefs"]["rights"]}">{esc(L["reuse"])}</a><a href="{page["hrefs"]["corrections"]}">{esc(L["history"])}</a><a href="{page["hrefs"]["report"]}">{esc(L["report"])}</a></div><p class="small">{esc(L["reuse_note"])}</p></div>')
     edges = [(L["used_in"], [f'<a href="{x["href"]}">{esc(x["title"])}</a>' for x in page["used_in_readings"]]),
              (L["related"], [f'<a href="{x["href"]}">{esc(x["label"])}</a>' for x in page["routes_back"]] + [f'<a href="{page["hrefs"]["evidence"]}">{esc(L["evidence_hub"])}</a>', f'<a href="{page["hrefs"]["data"]}">{esc(L["data"])}</a>', f'<a href="{page["hrefs"]["methodology"]}">{esc(L["methodology"])}</a>'])]
@@ -349,7 +408,7 @@ def record(page, shell):
 def home(page, shell):
     L = page["labels"]; S = {s["order"]: s for s in page["sections"]}
     index = [("s3", S[3]["heading"]), ("s4", S[4]["heading"]), ("s1", L["product"]), ("s9", S[9]["heading"]), ("s5", S[5]["heading"]), ("s6", S[6]["heading"]), ("s7", S[7]["heading"]), ("s8", S[8]["heading"]), ("sf", L["featured"])]
-    parts = [f'<div class="head">{rubric(L["product"])}<h1>{esc(page["title"])}</h1></div>' + strip(index)]
+    parts = [f'<div class="head">{rubric(L["product"])}<h1>{esc(page["title"])}</h1></div>']
     parts.append(f'<div class="qa first" id="s3"><h2>{esc(S[3]["heading"])}</h2><div class="paced">{paced(S[3]["body"])}</div></div>')
     objs = "".join(compact(r, L, L["open_evidence_record"]) for r in page["records"])
     parts.append(f'<div class="qa">{rubric(L["records_heading"])}<div class="objs">{objs}</div></div>')
@@ -374,8 +433,8 @@ def reading(page, shell):
     L = page["labels"]; lang = shell["lang"]
     index = [(f's-{s["section_id"]}', s["heading"]) for s in page["sections"] if s["heading"]] + [("trace", L["trace"]), ("sources", L["sources"]), ("related", L["related"])]
     head = (f'<div class="head">{crumb(page["breadcrumb"], shell)}{rubric(L["eyebrow"])}<div class="q">{esc(page["question"])}</div><h1>{esc(page["title"])}</h1><div class="st"><p>{esc(page["thesis"])}</p></div>'
-            f'<div style="display:flex;flex-wrap:wrap;gap:10px 32px;margin-top:6px">{clock(L["evidence_period"], esc(page["evidence_period"]))}{clock(L["last_reviewed"], esc(page["last_reviewed"]))}</div></div>' + strip(index))
-    bnd = f'<div class="bnd">{rubric(L["do_not_infer"])}<p>{esc(page["prohibited_inference"])}</p></div>'
+            f'<div style="display:flex;flex-wrap:wrap;gap:10px 32px;margin-top:6px">{clock(L["evidence_period"], esc(page["evidence_period"]))}{clock(L["last_reviewed"], esc(page["last_reviewed"]))}</div></div>')
+    bnd = f'<div class="bnd">{rubric(L["do_not_infer"])}<p>{esc(page["prohibited_inference"])}</p></div>' + strip(index)
     essay = []
     for i, s in enumerate(page["sections"]):
         h = f'<h2 id="s-{esc(s["section_id"])}">{esc(s["heading"])}</h2>' if s["heading"] else ""

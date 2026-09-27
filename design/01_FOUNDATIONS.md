@@ -354,17 +354,59 @@ outward, with the same governed text path as T1–T3 and RV-CWR-001 panel 1 in t
   no horizontal overflow on any board at either width.
 - On the canvas: version 3 of "YFIE D1 Thesis Exploration" holds all 48 boards — rows T1, T2, T3, T4 — regenerated from
   the committed composers (`design/exploration/d1_canvas/`).
-- **Not yet done, in this order:** native-size inspection of T4 in both languages at 320, 360, 390, 430, 768, 1024, 1280
-  and 1440 px and at high DPI, with defects fixed in the composer; the lens critique (§2.4) on the first-generation
-  renders and T4 together; the adversarial tests (screenshot misuse, source owner, semantic firewall, Arabic-native,
-  320 px, low bandwidth, no image, genericity) on T4 against the strongest first-generation proposition; the convergence
-  question ("what does YFIE now allow a user to understand or do that a conventional evidence website does not make
-  nearly as easy?") answered from rendered evidence. Only then §3; only after §3 the Lock (§4).
+- **Native-size inspection done** (`design/exploration/d1_canvas/inspect_widths.py t4`: 320, 360, 390, 430, 768,
+  1024, 1280, 1440 px, EN and AR, plus 320 and 1440 at 2× DPI — 60 renders). Defects found and fixed in the composer
+  before critique, each a design defect, none a content change:
+  1. RV-CWR-001 panel 1 (the signature) was illegible: its SVG scaled down beside a 45 % label column, values unreadable
+     at every width. Now: one HTML row per publication (label wraps and mirrors), the value on a horizontal zero-based
+     axis drawn with percentage coordinates on an unscaled SVG (text stays at type size at 320 and 1440 px; no inline
+     style, so CSP-safe for the reference); values printed above the marks; ticks 0 / 2,000 / 4,000 / 6,000. Panel 2
+     lanes redrawn the same way; the panels stack (rows above, lanes side by side from 600 px).
+  2. Between 900 and 1200 px the desktop grid (spine column plus a 220 px rubric column) starved the object column —
+     Home at 1024 px was 60 % taller than at 768 px. Now: the spine column from 900 px, the rubric column only from
+     1200 px; heights fall monotonically with width.
+  3. The seven-question strip walled off the first screen on mobile (seven full-width chips before any content; nine
+     on Home). Now: the strip follows the first answer on the Record and the boundary on the Reading; Home has no
+     strip (its foot spine keeps the index); rubrics carry the same numbers as the index ("01 What does this evidence
+     establish?").
+  4. SVG value labels were emitted as HTML `<bdi>` inside `<text>` and never rendered (a formatter fault); the canonical
+     link inside the Arabic figure broke across lines in mixed direction (now `dir="ltr"`, isolated); the product-bar
+     actions wrapped into three lines at 1024–1440 px (now one line each).
+  Residual: at 320 px the fallback table inside the closed text alternative is 8–14 px wider than the viewport and
+  scrolls within its wrapper (page overflow 0). Canvas version 4 holds the revised T4.
+- **Next, in this order:** the lens critique (§2.4) on the first-generation renders and T4 together; the adversarial
+  tests (screenshot misuse, source owner, semantic firewall, Arabic-native, 320 px, low bandwidth, no image, genericity)
+  on T4 against the strongest first-generation proposition; the convergence question ("what does YFIE now allow a user
+  to understand or do that a conventional evidence website does not make nearly as easy?") answered from rendered
+  evidence. Only then §3; only after §3 the Lock (§4).
 - What T4 must prove, or be improved or replaced: that clock-first objects make currentness and population legible
   without conceptual overhead; that a crop of any object carries its clock and boundary; that the seven-question
   structure is learned once and does not feel bureaucratic; that Arabic reads as authored, not mirrored; that the
   spine does not slide into the documentation-portal pattern; that Home demonstrates "not one number" without becoming
   a dashboard.
+
+### 2.6 Scaling test on paper — does the candidate's grammar reach the fixed sitemap? (27 September 2026)
+
+The sitemap is fixed; the experience is not. Before convergence, each page family was checked against the T4 object
+grammar (clock-first object · seven-question structure · boundary voice · verification spine · compact objects). This
+is a paper test of reach, not a design of those pages (they belong to D2–D3); it exists so that a chosen direction is
+not one that only works on the trio.
+
+| Family | Carried by | Risk to resolve at its gate |
+|---|---|---|
+| Question Entry (`/explore/`) | the numbered question list of Home's section 9, whole page | none new; intensity lower than Home |
+| Domain Answer (8) | one page-object per answer: clock → statement → scope → boundary → verify; bound visuals as figure objects; Measurement cards as compact objects | five visuals on `/payments/` — figures must stack as objects, never a chart wall; the WITHHELD figure is a bounded object with no value (missing ≠ zero) |
+| Evidence Directory | compact objects as rows (clock first) with the governed search hooks | 110 rows: the clock line must not become noise — group by state or domain per the governed fields |
+| Evidence Record (110) | the seven questions verbatim; records with fewer fields simply have fewer answers | composite / framing / thin records must not look weaker: the object is the same, the answers shorter |
+| Comparison | compare slots as compact objects; the compatibility table as a figure object whose boundary row is the boundary voice | four columns at 320 px (EAD-06) — a recomposition, not a shrink |
+| Reading index, Readings (10) | Reading page-object as on the trio; figures per contract tier (TABLE_TEXT_FIRST never a chart) | longest Reading — the spine index must stay usable at 40+ headings |
+| Data & sources | source cards as compact objects with locator actions; the nine without locator never named | 151 cards: paging or grouping by `resource_category`, not a link wall |
+| Measurement Agenda | priority objects (decision constrained / known / unknown / measurement that would change it) | must not read as a ranking; equal weight, no numbering that implies order |
+| Trust and service (8), 404, search states | the page-object with the boundary voice unused; calm intensity | technical states must not look like evidence gaps and vice versa |
+
+Conclusion of the paper test: no family requires a second grammar; two require a deliberate recomposition (Compare at
+320 px; the Data & sources register). This does not decide convergence; the lens critique and the adversarial tests
+do.
 
 ## 3. Comparison and convergence
 

@@ -29,7 +29,7 @@
   "CONTROLLED_CONTRACT": 2,
   "CURRENT_DOCUMENT": 10,
   "CURRENT_PROGRAMME_RECORD": 52,
-  "DESIGN_PACKAGE": 22,
+  "DESIGN_PACKAGE": 24,
   "GENERATED_DIAGRAMS": 9,
   "GENERATED_LITERAL_CLOSURE": 1,
   "GENERATED_PROJECTION": 37,
@@ -1345,11 +1345,19 @@
    "class": "DESIGN_PACKAGE"
   },
   {
+   "path": "design/exploration/d1_canvas/inspect_widths.py",
+   "class": "DESIGN_PACKAGE"
+  },
+  {
    "path": "design/exploration/d1_canvas/proto_common.py",
    "class": "DESIGN_PACKAGE"
   },
   {
    "path": "design/exploration/d1_canvas/proto_shell.py",
+   "class": "DESIGN_PACKAGE"
+  },
+  {
+   "path": "design/exploration/d1_canvas/tiles.py",
    "class": "DESIGN_PACKAGE"
   },
   {
