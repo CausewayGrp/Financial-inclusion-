@@ -158,3 +158,79 @@ The **Verify** workflow runs the same gates on the pushed commit.
 
 As §6: not PUBLIC RELEASE READY; no WCAG conformance, legal review, rights clearance, native-language certification or
 security guarantee.
+
+---
+
+## Second addendum — design-enablement control pass (27 September 2026)
+
+Appended; §1–§7 and the first addendum are unchanged. Directive: `audit/directives/D9_DESIGN_ENABLEMENT_CONTROL_PASS_2026-09-27.txt`
+(verbatim). Entry state: `origin/main` = `937bf80` (the post-F9 correction), working tree clean, no divergence, no tag on
+the remote. Commit: `docs(handoff): design-enablement control pass — kernel, loop, memory, debt, review tests`, the
+commit that carries this addendum. **Tag target.** `checkpoint/design-handoff-ready` belongs on that commit — the state
+Claude Design starts from — and no longer on `937bf80` as the first addendum said: this pass changes the handoff Design
+reads, so the tag must mark the strengthened handoff. `937bf80`, its parent, remains the post-F9 correction commit. No
+tag existed, so nothing is moved. No Master, projection, contract or public-page change: Master `17db032b…`, Page Specs
+`d4574804…`, `dist/` byte-identical.
+
+### B1. Method
+
+The handoff was read in its own order (README_FIRST → brief → criteria → contract → engineering expectations → visual
+contract → inventory → register) and mapped against the directive's §5–§17. Default: no change. A requirement already
+met was kept; a partial or absent one was strengthened in place, in the existing files — one start file, one brief, one
+criteria list, one contract. The only new record the handoff asks Design to create is `design/DESIGN_DEBT.md`, listed in
+the brief's existing §19 package table.
+
+### B2. What was strengthened (all in `handoff/`)
+
+| Area | Where |
+|---|---|
+| Kernel; nine-step working loop; gate-start re-read and gate-end commit rule; Code recipient test | Brief §0 |
+| Public evidence service, not a generic website | Brief §1 |
+| Connected evidence system from bound relationships only | Brief §4.6 |
+| Firewall: infrastructure ≠ outcome; one lineage repeated ≠ corroboration; layout protects distinctions; states that must not collapse | Brief §5 |
+| Full list of freedoms; who owns what (Design, Code, owner, release, Master) | Brief §6 |
+| Tone pairs; wider avoid-list; motion; imagery and its provenance checklist; dark-mode logic; four review tests | Brief §7 |
+| Identity constraints named; manifest palette labelled a hypothesis | Brief §8; `IMPLEMENTATION_MANIFEST.json` |
+| Small surfaces; template ≠ review; twelve audience lenses; per-family outcomes with a Home cold-reader test | Brief §9.1, §9.3, §9.4 |
+| Search as a product; external links; reporting intents; a rule for every input; per-object export formats; Arabic exports; four kinds of material; data packages; micro-interactions | Brief §10 |
+| Interaction in visuals never hover-only; every contract an analytical decision | Brief §12 |
+| Arabic tested, not only viewed | Brief §13 |
+| Low bandwidth; an optional honest footprint note | Brief §15 |
+| Decision-log fields; coverage status ladder with `checks` and `code_handoff`; design-debt register; evidence files as PNG (gate F6-G07); four layers; hostable static site | Brief §19 |
+| Gates with entry, work, exit evidence and stop conditions; last-10-percent audit | Brief §20 |
+| Section K and matching lines in B–J | `DESIGN_ACCEPTANCE_CRITERIA.md` |
+| Design debt mapped; four layers | `DESIGN_TO_CODE_CONTRACT.md` |
+| Code reads the debt register, ledger and escalations | `CLAUDE_CODE_MASTER_PROMPT.md` |
+| Kernel and memory pointer; NOT RUN rule; full freedoms pointer | `README_FIRST.md` |
+
+Outside `handoff/`: the hand-maintained `design/architecture/YFIE_DESIGN_TO_CODE_FLOW.svg` (and its PNG preview) now
+shows D0–D7 and no longer says "developer placeholders only"; its clipped side label is fixed.
+
+### B3. Independent check
+
+A fresh agent that had not seen the work audited the handoff read-only against the directive's §5–§17. Verdict: a cold
+Design agent can start D0 and run to D7 from the repository alone; every area present. It found one provenance gap (this
+addendum was not yet written), a PDF-evidence trap against gate F6-G07, no fallback for an environment without Chromium,
+an undefined cold reader, the stale flow diagram, and five editorial points; all were fixed in this commit.
+
+### B4. Gates (local, on the final tree)
+
+| Gate | Result |
+|---|---|
+| Checksums; repository manifest | 756 files current; 756 files in 20 classes |
+| Projection check; projection unit tests | Pass; OK |
+| Build; public-literal closure | 288 HTML from 143 Page Specs; 12,760 records, 0 unresolved; tree clean after build |
+| Validator | 0 errors, 0 warnings |
+| Literal-audit determinism; source-lineage truth test; architecture diagrams; handoff inventory | Pass (8 seeds, one hash); 8/8; current; current |
+| Bilingual numeric invariance | 0 of 143 page pairs differ |
+| Public tools (browser) | 25 passed; 1 skipped as not applicable (no Compare record ID contains "+") |
+| Viewport acceptance (browser) | 168 of 168 |
+
+Counts (public inventory): 143 Page Specs, 110 Evidence Records, 60 public claims, 55 Evidence Passports, 10 Readings,
+10 Measurement priorities, 11 entry questions, 36 visual contracts, 160 sources, 151 public locators, 28 curated
+resources, 24 chronology events, 435 search records. Register: 47 items, zero DESIGN_BLOCKER.
+
+### B5. Still not claimed
+
+As §6: not PUBLIC RELEASE READY; no WCAG conformance, legal review, rights clearance, native-language certification or
+security guarantee.

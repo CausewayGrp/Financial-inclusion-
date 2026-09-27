@@ -1,7 +1,7 @@
 {
   "schema": "YFI_CURRENT_PROJECT_CONTEXT/1.0",
   "role": "COMPACT_PROJECTION_NOT_AUTHORITY",
-  "generated_at": "2026-09-27T01:45:00+03:00",
+  "generated_at": "2026-09-27T08:08:00+03:00",
   "system": {
     "name_en": "Yemen Financial Inclusion Evidence",
     "name_ar": "أدلة الشمول المالي في اليمن",
@@ -16,7 +16,7 @@
     "not_declared": [
       "PUBLIC RELEASE READY"
     ],
-    "design_prompt_status": "DESIGN HANDOFF READY — executable; start path handoff/README_FIRST.md → handoff/CLAUDE_DESIGN_MASTER_PROMPT.md (tightened 27 Sep 2026); Claude Code waits for the accepted Design package",
+    "design_prompt_status": "DESIGN HANDOFF READY — executable; start path handoff/README_FIRST.md → handoff/CLAUDE_DESIGN_MASTER_PROMPT.md (tightened 27 Sep 2026 by the post-F9 correction and the design-enablement control pass); Claude Code waits for the accepted Design package",
     "checkpoint": "OPENAI_REENTRY_CHECKPOINT.md",
     "tranche_c": {
       "closure": "audit/TRANCHE_C_FINAL_ACCEPTANCE.md",
@@ -29,7 +29,8 @@
       "handoff_freeze": "audit/R8_6_DESIGN_HANDOFF_FREEZE_CLOSURE.md — one start file, one Design prompt, route/content/state inventory, acceptance criteria, Design-to-Code contract; gates R86-G01…G04",
       "open_items": "FINAL_OPEN_ITEMS_REGISTER.md — 47 items in six classes; zero DESIGN_BLOCKER (OWN-07 and OWN-08 closed by the post-F9 correction, 27 Sep 2026)",
       "clean_room_acceptance": "audit/FINAL_CLEAN_ROOM_ACCEPTANCE.md — three cold-recipient runs, archive test from an empty directory, final gates and scans",
-      "post_f9_correction": "27 Sep 2026 — OWN-07 and OWN-08 closed in the two controlled contracts (class CONTROLLED_CONTRACT); Design handoff tightened in place (D1 competing theses on Home, CLM-003 and the flagship Reading; decision log and coverage ledger; runnable bilingual reference site required for D7; print and portable evidence; font loading; D0 board statement); no Master change; addendum in audit/FINAL_CLEAN_ROOM_ACCEPTANCE.md"
+      "post_f9_correction": "27 Sep 2026 — OWN-07 and OWN-08 closed in the two controlled contracts (class CONTROLLED_CONTRACT); Design handoff tightened in place (D1 competing theses on Home, CLM-003 and the flagship Reading; decision log and coverage ledger; runnable bilingual reference site required for D7; print and portable evidence; font loading; D0 board statement); no Master change; addendum in audit/FINAL_CLEAN_ROOM_ACCEPTANCE.md",
+      "design_enablement_control_pass": "27 Sep 2026 (directive D9) — the handoff checked against a quality doctrine for a cold Design recipient and strengthened in place (one start file, one brief): kernel, working loop, gate-start memory rule and Code recipient test; audience lenses and per-family outcomes; four review tests; imagery, motion, dark mode, exports, rights, inputs; decision-log fields, coverage status ladder, design-debt register; gate entry/exit/stop conditions and the last-10-percent audit; no Master, projection, contract or public-page change; second addendum in audit/FINAL_CLEAN_ROOM_ACCEPTANCE.md"
     },
     "directive": "audit/directives/D7_FINAL_INTEGRATION_TO_DESIGN_HANDOFF_2026-09-26.md"
   },

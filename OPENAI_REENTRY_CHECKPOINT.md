@@ -6,7 +6,9 @@ supplied the independent ten-Reading package with directive D7. Sessions F0–F9
 integrated (F2), the Resource Library decisions are made (F3), R8.5 repository subtraction is closed (F4), the whole
 public corpus is accepted (F5), the discovery, accessibility, rights and security contract is in place (F6), the
 sustainability baseline is recorded (F7), the Design handoff is frozen (F8) and accepted clean-room (F9). A bounded
-post-F9 correction (27 September 2026) closed the two remaining maintainer items and tightened the handoff in place.
+post-F9 correction (27 September 2026) closed the two remaining maintainer items and tightened the handoff in place; a
+design-enablement control pass the same day (directive D9) strengthened the Design brief, criteria and contract in place
+so that a cold Design recipient can run D0–D7 from the repository alone.
 
 **Status: DESIGN HANDOFF READY.**
 
@@ -82,7 +84,7 @@ build, literal audit, diagrams, repository manifest, validate, generator check; 
   (`audit/FINAL_CLEAN_ROOM_ACCEPTANCE.md`). File counts: the checksum and manifest counts cover every tracked file except
   `SHA256SUMS.txt` itself. That record's archive test ran on `2922449` and counted 753 (754 tracked); the final F9 commit
   `03bd654` added the record itself, so its manifests count 754 (755 tracked). Both are correct for their commits; the
-  record is not rewritten (its addendum explains the difference). The post-F9 correction adds the D8 directive: 755.
+  record is not rewritten (its addendum explains the difference). The post-F9 correction adds the D8 directive (755); the control pass adds the D9 directive (756).
 - **Post-F9 correction (27 September 2026;** directive `audit/directives/D8_POST_F9_CORRECTION_2026-09-27.txt`**).** OWN-07 closed: `/remittances/` now shows its bound Measurement card
   (MA-001, people-side; household remittance receipt) in both languages, distinct from the macro series. OWN-08 closed:
   the stale descriptive fields of `navigation_interaction.json` corrected against governed copy, Page Specs and tests
@@ -93,6 +95,19 @@ build, literal audit, diagrams, repository manifest, validate, generator check; 
   ledger across D0–D7; the runnable, fully populated bilingual reference site as the D7 completion requirement, with no
   placeholder in the accepted site; print and portable-evidence requirements; font loading without an unapproved subset;
   a D0 statement on whether any visual board or mockup was supplied. No Master change.
+- **Design-enablement control pass (27 September 2026;** directive
+  `audit/directives/D9_DESIGN_ENABLEMENT_CONTROL_PASS_2026-09-27.txt`**).** The handoff was checked against a quality
+  doctrine for a cold Design recipient and strengthened in place — one start file, one brief, no second programme: a
+  re-readable kernel, a nine-step working loop, a gate-start re-read and gate-end commit rule and the Code recipient test
+  (brief §0); the connected evidence system (§4.6); the firewall's lineage and layout rules (§5); explicit freedoms and
+  ownership (§6); tone, motion, imagery, dark-mode logic and four review tests (§7); audience lenses and per-family
+  outcomes including a Home cold-reader test (§9.3–§9.4); search, inputs, reporting intents, per-object export formats,
+  third-party rights, data packages and micro-interactions (§10); interactive visuals (§12); Arabic testing (§13); low
+  bandwidth and footprint (§15); decision-log fields, a coverage ledger with a status ladder and checks, a design-debt
+  register, the four layers and the hostable static site (§19); gates with entry, exit and stop conditions and a
+  last-10-percent audit (§20). The acceptance criteria (new section K), the Design-to-Code contract and the Code reading
+  order match. No Master, projection, contract or public-page change. Second addendum in
+  `audit/FINAL_CLEAN_ROOM_ACCEPTANCE.md`.
 
 Tranche C itself is recorded in `audit/TRANCHE_C_FINAL_ACCEPTANCE.md` and `audit/TRANCHE_C_FINDINGS_LEDGER.csv`.
 Currentness cut-off: 26 September 2026 (`audit/FINAL_CURRENTNESS_CUTOFF.md`).
@@ -153,16 +168,17 @@ python3 scripts/handoff_inventory.py --check
   git tag -s checkpoint/tranche-c-complete-reading-hold f726bdaf305f21930b5fb7dfb8a649ad102e089c \
       -m "Tranche C complete — Reading prose held for the independent Reading package" \
       -m "Tree byte-identical to Yemen_Financial_Inclusion_Evidence_TRANCHE_C_COMPLETE_READING_HOLD.zip (SHA-256 63612dea…; full value in audit/directives/D7_FINAL_INTEGRATION_TO_DESIGN_HANDOFF_2026-09-26.md)"
-  C=$(git log origin/main -1 --format=%H -F --grep='fix(handoff): post-F9 correction')
+  C=$(git log origin/main -1 --format=%H -F --grep='docs(handoff): design-enablement control pass')
   git show -s --format='%H %s' "$C"            # check it before tagging
   git tag -s checkpoint/design-handoff-ready "$C" \
-      -m "DESIGN HANDOFF READY — R8.6 closed; post-F9 correction applied" \
+      -m "DESIGN HANDOFF READY — R8.6 closed; post-F9 correction and design-enablement control pass applied" \
       -m "Master 17db032b15da16fc4b5b3c3b49f19aebf2ecb4ec46634613fe8505d0f038690b"
   git push origin checkpoint/tranche-c-complete-reading-hold checkpoint/design-handoff-ready
   ```
 
-  The design-handoff tag goes on the post-F9 correction commit (subject `fix(handoff): post-F9 correction …`, recorded in
-  `docs/CHANGELOG.md` and in the addendum to `audit/FINAL_CLEAN_ROOM_ACCEPTANCE.md`), not on whatever `main` has become;
-  never move an existing checkpoint tag. `.github/workflows/checkpoint.yml` then rebuilds and verifies the archive and attaches it to a
+  The design-handoff tag goes on the commit Claude Design starts from: the design-enablement control-pass commit
+  (subject `docs(handoff): design-enablement control pass …`, recorded in `docs/CHANGELOG.md` and in the second addendum
+  to `audit/FINAL_CLEAN_ROOM_ACCEPTANCE.md`), whose parent `937bf80` is the post-F9 correction commit — not on whatever
+  `main` has become since; never move an existing checkpoint tag. `.github/workflows/checkpoint.yml` then rebuilds and verifies the archive and attaches it to a
   pre-release.
 - **The owner and release items** in `FINAL_OPEN_ITEMS_REGISTER.md` (OWNER_INPUT and RELEASE_ONLY).

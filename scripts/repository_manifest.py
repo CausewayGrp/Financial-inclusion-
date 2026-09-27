@@ -50,7 +50,7 @@ RULES = [
                                 "requirements.txt", "SHA256SUMS.txt"]),
     ("CURRENT_PROGRAMME_RECORD", ["audit/INDEX.md", "audit/READING_PORTFOLIO_*", "audit/F3_*", "audit/R8_5_*", "audit/F5_*",
                                   "audit/F6_*", "audit/R8_6_*", "audit/SUSTAINABILITY_*", "audit/FINAL_*_ACCEPTANCE*",
-                                  "audit/directives/D7_*", "audit/directives/D8_*", "audit/directives/README.md", "audit/reading_integration/*", "audit/reading_integration/**/*",
+                                  "audit/directives/D7_*", "audit/directives/D8_*", "audit/directives/D9_*", "audit/directives/README.md", "audit/reading_integration/*", "audit/reading_integration/**/*",
                                   "audit/final_integration/*", "audit/final_integration/**/*"]),
     ("STANDING_POLICY", ["audit/ARABIC_TERMINOLOGY_AND_STYLE_LEDGER.md", "audit/BENCHMARK_AND_COMPARATOR_POLICY.md",
                          "audit/ECONOMIC_CONTEXT_USAGE_POLICY.md", "audit/FINAL_CURRENTNESS_CUTOFF.md", "audit/tranche_c/DRAFTING_RULES.md"]),

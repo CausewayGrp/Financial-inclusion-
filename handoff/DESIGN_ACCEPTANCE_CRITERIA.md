@@ -33,7 +33,13 @@ Nothing here is a WCAG conformance claim.
       §9.1 · Data/sources/Resource Library with the chronology · Measurement · Methodology · About and every trust route ·
       corrections/report journey · 404.
 - [ ] Every route in `handoff/ROUTE_CONTENT_AND_STATE_INVENTORY.json` renders in the reference implementation in both
-      languages (the same 288 documents as `dist/`), bound through its page-family rules.
+      languages (the same 288 documents as `dist/`), bound through its page-family rules, and was reviewed on its own
+      coverage-ledger row — a family template applied is not a reviewed page.
+- [ ] The small surfaces (brief §9.1): footer, search no-match and failed index, the language switch on every family,
+      citation, original-source links and the no-public-locator state, unavailable downloads, print, empty, unknown and
+      error states, every tool's success and failure messages.
+- [ ] The family outcomes of brief §9.4 hold; the Home cold-reader test (about 30, 90 and 180 seconds) was run in both
+      languages at 390 and 1440 px and its record is in the checklist.
 - [ ] The twelve hard-state cases (`hard_state_acceptance`, read as the brief §9.2 states) each have evidence that the
       "must prove" sentence holds, plus the withheld, composite, partial and framing records; every verification state in
       the inventory (`verification_states`) that has records is shown on one of them, and the two with none today
@@ -50,6 +56,8 @@ Nothing here is a WCAG conformance claim.
 - [ ] No composite score, traffic light, ranked summary or synchronised "current state" panel exists anywhere.
 - [ ] Measurement priorities read as sequencing within the agenda, never as national policy or spending priority.
 - [ ] The chronology reads as context, never as a causal chain.
+- [ ] Proximity, shared axes, shared colour, sequence and motion never make two unlike things read as one; a figure
+      repeated from one lineage is never presented as independent corroboration.
 
 ## D. Tools
 
@@ -64,7 +72,12 @@ Nothing here is a WCAG conformance claim.
       any richer reporting intent is client-side composition into the existing mail action — no backend, form element,
       new address or promised response time.
 - [ ] No CauseWay-content download or export is enabled before the owner's licence decision (OWN-04); no third-party
-      document is offered.
+      document is offered; the four kinds of material (CauseWay's own, redistributable third-party, restricted or unclear
+      third-party, CauseWay-derived values) stay distinct, and CauseWay's identity never implies ownership of source data.
+- [ ] Every input has a reason to exist, a visible label, a text error, preserved input, keyboard and touch operation,
+      RTL behaviour and a success or failure state; Search offers a way on from a no-match; original-source links are
+      visibly external without an interstitial; micro-interactions (brief §10) are designed, and Escape closes what it
+      opened and returns focus.
 - [ ] `scripts/tests/test_public_tools.py` and `audit/tranche_c/checks/viewport_acceptance.py` pass against the reference
       implementation (`YFIE_SITE_DIR=design/reference/out …`), unedited, with every test hook kept (brief §19).
 
@@ -88,13 +101,15 @@ Nothing here is a WCAG conformance claim.
       red/amber/green; nothing fades with age; breaks, gaps and disagreements are drawn.
 - [ ] Each visual has its analytical alt text and a table or ordered-text fallback; the detached frame travels with any
       export; RTL and narrow forms follow the contract.
+- [ ] Anything a visual reveals on interaction comes from governed fields and is also reachable by focus, keyboard and
+      touch and readable in the static fallback; hover is never the only way in.
 
 ## F2. Print and portable evidence
 
 - [ ] Every page family has a print style: chrome hidden; title, edition, canonical URL and language kept; each figure
       printed with period, population, unit and boundary; "What not to conclude" on the same page as its claim; charts
-      never split from caption and fallback; Arabic prints right to left; no meaning by colour (evidence: print
-      previews of Home, an Evidence Record and a Reading in both languages).
+      never split from caption and fallback; Arabic prints right to left; no meaning by colour (evidence: PNG images of
+      the print previews of Home, an Evidence Record and a Reading in both languages — no PDF is committed, brief §19).
 - [ ] Contextual chart and table exports carry the full detached frame (title, period, population, unit, credit,
       prohibited inference, markers, canonical link, edition); they are designed and ship disabled until OWN-04.
 - [ ] Any fragment that can leave the page — print, export, citation, social image — keeps provenance and limits.
@@ -107,6 +122,9 @@ Nothing here is a WCAG conformance claim.
       page pairs on the reference implementation.
 - [ ] Dates follow the governed form (day, month name, year; the governed Arabic month names; Western digits).
 - [ ] No English-only metadata disappears in Arabic; no internal vocabulary appears in either language.
+- [ ] Arabic was tested, not only viewed (brief §13): hierarchy, RTL flow, mixed script, numerals, source names, tables,
+      charts and legends, inputs, search, citation, exports and print, mobile, line length, punctuation, the language
+      switch, and the longest Arabic strings.
 
 ## H. Accessibility outcomes (WCAG 2.2 target; brief §14)
 
@@ -137,19 +155,42 @@ Nothing here is a WCAG conformance claim.
       JSON-LD as today; the social-image templates cover all eleven page families (shared templates allowed).
 - [ ] Strict-CSP compatible: no inline executable script, inline style, inline handler, external resource or form; data
       in JSON blocks; escaped rendering.
+- [ ] No image without recorded purpose, provenance and an owner rights decision (brief §7); no count-up numbers,
+      decorative parallax or motion that explains nothing; the dark-mode decision (explored or not) is recorded, and the
+      logo is never inverted or recoloured.
+- [ ] Core evidence is readable before any script runs; `design/reference/out/` is a self-contained, hostable static
+      site opened with `python3 -m http.server` — no design tool or account needed (brief §19).
 
 ## J. Package and handoff
 
-- [ ] `design/00`–`10`, `design/ESCALATIONS.md`, `design/COVERAGE.csv` and the runnable `design/reference/` exist, and
-      `design/00_DESIGN_README.md` says how to build and run the site.
+- [ ] `design/00`–`10`, `design/ESCALATIONS.md`, `design/COVERAGE.csv`, `design/DESIGN_DEBT.md` and the runnable
+      `design/reference/` exist, and `design/00_DESIGN_README.md` says how to build and preview the site.
 - [ ] D0 recorded whether an approved visual board or homepage mockup was supplied; nothing absent from the repository
       was treated as binding.
 - [ ] D1 tested two or three materially different theses on Home, `/evidence/CLM-003/` and
       `/readings/same-year-different-number/` in both languages before propagation, and `design/01_FOUNDATIONS.md` records
       them and why one was chosen.
-- [ ] The decision log has entries for every gate D0–D7; the coverage ledger shows every route × language × width and
-      every hard, verification and technical state `VERIFIED`, or explains each gap.
+- [ ] The decision log has entries for every gate D0–D7, each material decision with the fields of brief §19 (problem,
+      evidence, alternatives, choice and reasons, Arabic, responsive and accessibility implications, Code expectation,
+      compromise, debt or open-item ID); the coverage ledger shows every route × language × width and every hard,
+      verification and technical state `ACCEPTED` with its checks and `code_handoff` `YES`, or explains each gap.
+- [ ] `design/DESIGN_DEBT.md` lists every deliberate temporary compromise; none still open blocks D7, and each open one
+      has its Code action in `design/09_CODE_HANDOFF.md`.
 - [ ] `design/09_CODE_HANDOFF.md` maps tokens, components, states, routes, content bindings, visual contracts,
       responsive rules, accessibility behaviour and every exception (`handoff/DESIGN_TO_CODE_CONTRACT.md`).
 - [ ] No consequential decision exists only in an image or an external design file.
 - [ ] Every open escalation is listed with its design impact; none is silently worked around.
+
+## K. Review tests and the last 10 percent
+
+- [ ] The four review tests (brief §7) — anti-template, source owner, screenshot misuse, portable evidence — were applied
+      to Home, a dense Evidence Record, a Reading, a domain answer with a visual, Compare and an export frame, in both
+      languages, with the result and any revision recorded.
+- [ ] The last-10-percent audit (brief §20, D7) was done after the flagship pages were accepted: search and zero results,
+      Contact, Corrections and evidence challenge, source and external links, citation, the language switch, mobile
+      tables, long Arabic strings, focus, inputs, privacy, rights, unavailable downloads, print, reduced motion, 404,
+      the footer, every trust surface and every hard state — each with evidence.
+- [ ] The Code recipient test (brief §0) passes on the final commit: `design/00_DESIGN_README.md`,
+      `design/09_CODE_HANDOFF.md`, `design/COVERAGE.csv`, `design/DESIGN_DEBT.md` and `design/ESCALATIONS.md` say what is
+      intentional, temporary, implemented and remaining, what must not be reinterpreted, which tests must pass and which
+      owner or release items remain.

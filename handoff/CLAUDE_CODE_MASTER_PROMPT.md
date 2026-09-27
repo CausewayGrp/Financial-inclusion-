@@ -9,7 +9,8 @@ and `design/10_ACCEPTANCE_CHECKLIST.md` is complete with evidence. Read, in orde
 
 1. `handoff/README_FIRST.md` — authority, rules, repository protocol.
 2. `handoff/ENGINEERING_HANDOFF_EXPECTATIONS.md` — what you must deliver and the rules you may not break.
-3. `design/00_DESIGN_README.md` and `design/09_CODE_HANDOFF.md` — the design you implement.
+3. `design/00_DESIGN_README.md` and `design/09_CODE_HANDOFF.md` — the design you implement; then `design/DESIGN_DEBT.md`,
+   `design/COVERAGE.csv` and `design/ESCALATIONS.md` — what is temporary, what was proved and what is still open.
 4. `handoff/DESIGN_TO_CODE_CONTRACT.md` — what the design guarantees you.
 5. `docs/DEPLOYMENT.md` — discovery, headers and privacy contract.
 6. `FINAL_OPEN_ITEMS_REGISTER.md` — owner and release items (do not fill them).

@@ -1,5 +1,45 @@
 # Repository Change Log
 
+## 2026-09-27 — Design-enablement control pass (directive D9)
+
+The last repository-control pass before Claude Design, on top of `937bf80` (post-F9 correction). Commit subject
+`docs(handoff): design-enablement control pass — kernel, loop, memory, debt, review tests`; the checkpoint tag
+`checkpoint/design-handoff-ready` belongs on that commit — the state Claude Design starts from. No Master, projection,
+contract or public-page change: Master `17db032b…` and Page Specs `d4574804…` unchanged; `dist/` unchanged. Second
+addendum in `audit/FINAL_CLEAN_ROOM_ACCEPTANCE.md`.
+
+The handoff was checked against a quality doctrine for a cold Design recipient. Where it already held, it was kept;
+where it was partial or absent, it was strengthened in place — one start file, one brief, no second programme:
+- **Brief §0:** a re-readable kernel; a nine-step loop (orient, question, explore, challenge, decide, prototype, test,
+  persist, continue); the repository as memory (what to re-read at every gate start, what to update, test, commit and
+  push at every gate end); the Code recipient test that closes every gate.
+- **Brief §1, §4.6, §5, §6:** a public evidence service, not a generic website; the connected evidence system from bound
+  relationships only; two firewall additions (infrastructure ≠ outcome; one lineage repeated ≠ independent
+  corroboration) and a rule that layout must protect the distinctions; states that must not collapse; the full list of
+  design freedoms and who owns what (Design, Code, owner, release, the Master).
+- **Brief §7:** tone; a wider avoid-list; motion, imagery (with a provenance and rights checklist) and dark-mode decision
+  logic; four review tests (anti-template, source owner, screenshot misuse, portable evidence).
+- **Brief §9:** the small surfaces; "a template applied is not a reviewed page"; twelve audience lenses; §9.4 outcomes
+  per family, including a Home cold-reader test at about 30, 90 and 180 seconds.
+- **Brief §10, §12, §13, §15:** search as a product; external links; reporting intents and a rule for every input
+  (the site collects and submits nothing); per-object download formats, Arabic exports, the four kinds of material and
+  data packages (all still disabled until OWN-04, REL-02); micro-interactions; interaction in visuals never
+  hover-only; Arabic tested, not only viewed; low bandwidth and an optional, honest footprint note.
+- **Brief §19–§20:** decision-log fields; the coverage ledger's status ladder (`REVIEWED` … `ACCEPTED`) with `checks`
+  and `code_handoff`; the design-debt register `design/DESIGN_DEBT.md`; four layers kept apart; what a hostable static
+  site contains; gates with entry, work, exit evidence and stop conditions; the last-10-percent audit at D7.
+- **Criteria, contract, start file:** acceptance section K (review tests, last 10 percent, Code recipient test) and
+  matching lines in B–J; the Design-to-Code contract maps design debt and names the four layers; the Code prompt reads
+  the debt register, ledger and escalations; README_FIRST points to the kernel and memory rule.
+- **Independent cold-reader audit** (a fresh agent, read-only): verdict that a cold Design agent can run D0–D7 from the
+  repository alone, every doctrine area present; its defects fixed here — evidence is committed as PNG, never PDF (gate
+  F6-G07); a NOT RUN rule when an environment cannot install Chromium; who counts as a cold reader; the hand-maintained
+  Design-to-Code flow diagram brought to D0–D7 (and its clipped label fixed); the manifest palette labelled a
+  hypothesis; the identity constraints named; `docs/DEPLOYMENT.md` headings cited exactly; README_FIRST points to the
+  brief's full freedoms list and says `design/**` is already classified.
+- **Records:** directive D9 stored verbatim; README, checkpoint (tag target), Context, audit index and directives index
+  updated.
+
 ## 2026-09-27 — Post-F9 correction: OWN-07, OWN-08, Design handoff tightened
 
 One bounded correction on top of `03bd654` (F9), before Claude Design starts. Commit subject

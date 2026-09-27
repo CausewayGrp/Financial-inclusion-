@@ -11,6 +11,14 @@ If this brief and a governed projection ever disagree, the projection is right a
 
 ## 0. How to work at full capability
 
+> **The kernel — re-read it at the start of every gate.** Protect the truth: design the evidence system, never the
+> facts. Aim for the most complete information with the least load at any one moment: keep complexity where it is true,
+> and never make the reader carry the whole evidence system at once. Make evidence understandable, explorable and
+> unusually easy to verify; make scope, uncertainty and boundaries visible. Give Arabic the same design intelligence as
+> English. Use sophistication only where it improves comprehension. Do not flatten unlike evidence for visual
+> consistency. Persist every accepted material decision in this repository so Claude Code can continue without your
+> conversation.
+
 You are the principal product designer, information designer, bilingual/RTL design lead and reference-implementation
 engineer for a mature public evidence product. Use everything you can do:
 
@@ -38,13 +46,40 @@ engineer for a mature public evidence product. Use everything you can do:
 - **Decide.** Resolve ordinary design questions professionally and record the reasoning; do not stop to ask about
   details a senior designer would settle. Escalate only truth and missing governed content (§2).
 
+**The loop for every consequential decision** (a family composition, a component, a visual form, a tool pattern, a
+state grammar — not a cosmetic tweak):
+
+1. **Orient** — read the route's governed content, its Page Spec, its visual contracts and the baseline in `dist/`.
+2. **Question** — what is governed, what is free (§6), and what problem is actually being solved for which reader.
+3. **Explore** — where the decision matters, sketch materially different solutions, not variants of one.
+4. **Challenge** — test them through the audience lenses (§9.3), the evidence and firewall (§5), Arabic (§13),
+   accessibility (§14), mobile, the four review tests (§7) and what Code will have to build (§19).
+5. **Decide** — choose, and write the decision-log entry (§19).
+6. **Prototype** — in the reference implementation, with the real governed English and Arabic content.
+7. **Test** — on the hard states (§9.2), not only on ideal content; at every width, in both languages, by keyboard.
+8. **Persist** — update the decision log, the coverage ledger, the design-debt register, the escalations and
+   `design/09_CODE_HANDOFF.md`.
+9. **Continue** — to the next decision only when this one's tests pass; to the next gate only when its exit holds (§20).
+
+**The repository is your memory.** A long conversation forgets; the repository does not. At the **start of every
+gate**, re-read: the kernel above; the decision log (`design/00_DESIGN_README.md`); the coverage ledger
+(`design/COVERAGE.csv`); `design/ESCALATIONS.md`; the design-debt register (`design/DESIGN_DEBT.md`);
+`design/09_CODE_HANDOFF.md`; and the governed content and visual contracts of the routes the gate touches. At the **end
+of every gate**: update those records, run the gate's tests (§20), commit, push (or deliver the bundle, §21) and leave
+the working tree clean. Never keep a second copy of any of these records.
+
+**The Code recipient test** closes every gate: could Claude Code take this commit, without your conversation, and tell
+what is intentional, what is temporary, what is implemented, what remains, what must not be reinterpreted, which tests
+must pass and which owner or release items remain? If not, the gate is not complete.
+
 ---
 
 ## 1. The product and its north star
 
 A bilingual public evidence resource, built and maintained by CauseWay, that helps people **understand, compare and
-verify** the evidence on financial inclusion in Yemen. It supports human decisions by clarifying evidence; it makes no
-regulatory, political, business or funding decision for anyone.
+verify** the evidence on financial inclusion in Yemen. It is a public evidence service, not a generic website: it
+supports human decisions by clarifying evidence; it makes no regulatory, political, business or funding decision for
+anyone.
 
 **QUESTION → STRONGEST DEFENSIBLE ANSWER → WHAT IT MEANS → WHAT IT DOES NOT ESTABLISH → SYSTEM CONTEXT → WHAT REMAINS
 UNKNOWN → WHAT SHOULD BE MEASURED NEXT → EVIDENCE → METHOD → SOURCE**
@@ -196,6 +231,15 @@ A few Page Spec sections introduce a component rather than stand alone; render e
 - Home's order in the baseline — identity, starting questions, section 3 with its records, sections 4–6, the system visual
   at `#system` (where QE-001 lands), sections 7–8 — is a precedent, not a mandate; keep the `#system` anchor.
 
+### 4.6 A connected evidence system, not isolated pages
+
+A reader should move intelligently along question → answer → Evidence Record → source → method → Reading → measurement
+gap, and back: from a record to the answers and Readings that use it, from a source to the records it supports, from a
+Measurement priority to where its gap is examined. Use only relationships the projections bind (the inventory's
+`next_actions`, each record's Readings, each Page Spec's bound objects, each priority's links) — never inferred ones —
+and show the most relevant few at the moment they help, with the rest one step away. A link cloud is not a connected
+system.
+
 ---
 
 ## 5. The semantic firewall and public-state distinctions
@@ -205,10 +249,14 @@ screenshotted or read without colour:
 
 people ≠ households ≠ firms ≠ accounts ≠ active accounts ≠ customers ≠ transactions ≠ terminals ≠ agents ≠ providers ≠
 beneficiaries · access ≠ ownership ≠ registration ≠ adoption ≠ active use ≠ frequency ≠ persistence ≠ quality ≠ outcome
-· infrastructure ≠ use · target ≠ result · programme KPI ≠ national prevalence · regulation ≠ implementation ≠ operation
-≠ experienced outcome · licence/listing ≠ operation · observation ≠ fieldwork ≠ publication ≠ retrieval · historical ≠
-current · observed ≠ estimated ≠ projected · missing ≠ zero · chronology ≠ causality · source-owner analysis ≠
-independently established impact · financial-education activity ≠ literacy ≠ capability ≠ behaviour ≠ outcome.
+· infrastructure ≠ use · infrastructure ≠ outcome · target ≠ result · programme KPI ≠ national prevalence · regulation ≠
+implementation ≠ operation ≠ experienced outcome · licence/listing ≠ operation · observation ≠ fieldwork ≠ publication ≠
+retrieval or review · historical ≠ current · observed ≠ estimated ≠ projected · missing ≠ zero · chronology ≠ causality ·
+source-owner analysis ≠ independently established impact · the same figure repeated from one lineage ≠ independent
+corroboration · financial-education activity ≠ literacy ≠ capability ≠ behaviour ≠ outcome.
+
+Layout is an argument: proximity, alignment, shared axes, shared colour, hierarchy, sequence and animation all imply
+relationships. Use them so that they protect these distinctions, never so that two unlike things read as one.
 
 States you must give a distinct, non-colour-only visual grammar (the inventory lists them all, with their governed
 labels):
@@ -227,6 +275,9 @@ labels):
 - **Technical states** — a failed index, a malformed link, an unknown reference, a duplicate in Compare, no search
   match, 404, no JavaScript. A technical state must never look like "no evidence", and an evidence gap must never look
   like a software error.
+- **Other states that must not collapse:** a rights-restricted or not-yet-licensed download is not a technical error; a
+  source with no public locator is not a missing source; historical is not current; unknown is not "not applicable".
+  Every such state is designed deliberately, in plain governed words — never cute, apologetic or alarming.
 
 ---
 
@@ -237,9 +288,19 @@ actions; Arabic/English equality; accessibility outcomes (§14); visual semantic
 canonical CauseWay logo; the IBM Plex family requirement; citation and source behaviour; rights constraints; the rule
 that no internal or repository language reaches the public.
 
-**Free:** composition; grid; hierarchy; rhythm; spacing; palette within contrast and identity constraints; component
-form; chart form where several forms satisfy the visual contract; interaction choreography; micro-motion; responsive
-expression; editorial pacing.
+**Free:** composition; grid; hierarchy; rhythm; spacing and whitespace; density; typography within the IBM Plex family;
+palette within contrast and identity constraints; component form; the visual grammar of states (within §5); chart form
+where several forms satisfy the visual contract; how navigation, menus and the trust layer behave (labels and
+destinations are governed, §4.2); progressive disclosure (never hiding a limitation, §4.3); interaction choreography;
+motion; mobile behaviour; Arabic spatial composition; the presentation of search, sources and citation; the experience
+of Evidence Records, Readings, Methodology and the Measurement Agenda; the download and export interaction; editorial
+pacing. Challenge the inherited presentation in all of these.
+
+**Who owns what.** Design owns the visual and interaction solution and the runnable reference site. Code owns the
+production runtime after acceptance (`FINAL_OPEN_ITEMS_REGISTER.md`, class ENGINEERING_AFTER_DESIGN;
+`handoff/ENGINEERING_HANDOFF_EXPECTATIONS.md`). The owner decides identity, funding, contact, licence, public origin and
+logo variants (OWNER_INPUT). Release needs its own acceptance (RELEASE_ONLY). The Master, through the steward, owns every
+fact and every governed word. Design never decides for the others: it designs the honest state that exists today.
 
 ---
 
@@ -249,9 +310,39 @@ expression; editorial pacing.
 than SaaS or dashboard · high-end without luxury decoration · excellent Arabic and RTL · dense where expert verification
 needs density · spacious where comprehension needs space · **evidence as protagonist** · **CauseWay as steward**.
 
-**Avoid:** generic AI-site aesthetics · card-wall dependence · decorative dashboards · gratuitous gradients · donor-report
-visuals · badge clutter · over-animation · stock photography used as decoration · generic NGO or consultancy styling ·
-news-portal density · "data theatre".
+It should feel calm but powerful · formal but not bureaucratic · precise but not cold · distinctive but not theatrical ·
+editorial but not magazine-like · deep but not crowded · accessible but not visually generic.
+
+**Avoid:** generic AI-site aesthetics · card-wall dependence · identical rounded cards and pills everywhere · decorative
+dashboards · meaningless mini-charts · giant decontextualised numbers · arbitrary three-column repetition · gratuitous
+gradients · donor-report visuals · badge clutter · over-animation · stock photography used as decoration · generic NGO or
+consultancy styling · news-portal density · "data theatre".
+
+- **Motion** explains a change of state or a relationship, or it goes. Ask of every movement: what does the reader
+  understand better because this moved? No count-up numbers, decorative parallax or fintech spectacle; nothing depends
+  on motion, and reduced motion is honoured (§14).
+- **Imagery.** The product is evidence-led, not photography-led; the baseline uses none. An image must earn its place
+  with an editorial purpose. Never: generic Arab fintech stock, handshakes, coins and cash clichés, Gulf imagery used as
+  Yemen, poverty or conflict as atmosphere, children as decoration, watermarked or provenance-unknown images, or
+  AI-generated documentary-looking photography. Before any external image is proposed, record its purpose, source,
+  creator, rights holder, licence, attribution, place and date, crop and derivative rights, consent and dignity, and
+  conflict-sensitivity; request the image and its credit line as `NEEDS_CONTROLLED_CONTENT` — its use is an owner rights
+  decision. If provenance or rights cannot be established, do not use the image.
+- **Dark mode** is optional. Explore it only if it improves the product without weakening evidence-state semantics,
+  contrast, charts, the CauseWay identity or performance, and record the decision either way. It is a preference, not an
+  accessibility claim; the logo is never inverted or recoloured for it (§8).
+
+**Four review tests** — apply them to your own work at every gate and record the results
+(`design/10_ACCEPTANCE_CHECKLIST.md`):
+
+1. **Anti-template.** If the Yemen content and the CauseWay identity disappeared, could this be sold tomorrow as a
+   generic NGO, consultancy, SaaS or AI website? If yes, challenge the design again.
+2. **Source owner.** If the source institution saw this screenshot without its page, could it reasonably say the product
+   made its evidence claim more than it does? If yes, revise.
+3. **Screenshot misuse.** If this figure, chart or statement is cropped and forwarded alone, is it likely to be
+   misunderstood? If yes, carry enough scope and boundary inside the object.
+4. **Portable evidence.** If this object leaves the site (print, export, citation, social image), does it stay
+   intelligible, attributable and bounded? If not, it is incomplete.
 
 ---
 
@@ -274,8 +365,11 @@ news-portal density · "data theatre".
   IBM Plex family (Serif, Mono, Sans Condensed) may be added for a defined role with a written rationale; no typeface
   outside the family. Use weights deliberately; Arabic needs its own line height, size steps and heading rhythm, not
   English values mirrored. The baseline's fallbacks (Arial, Tahoma) are not the design.
-- **Tokens.** `handoff/DESIGN_STARTING_TOKENS.json` is a hypothesis. Replace it with your own documented system
-  (`design/02_TOKENS.json`), meeting contrast (§14) and the CauseWay identity.
+- **Tokens.** `handoff/DESIGN_STARTING_TOKENS.json` (and the palette echoed in `handoff/IMPLEMENTATION_MANIFEST.json`)
+  is a hypothesis. Replace it with your own documented system (`design/02_TOKENS.json`), meeting contrast (§14). The
+  identity constraints are only these: the canonical logo, unaltered, with its clear space, and the IBM Plex family.
+  There is no approved brand palette in this repository: choose one that sits well beside the logo's own colours and
+  record why.
 
 ---
 
@@ -301,6 +395,12 @@ Design and build every one of these, in both languages, desktop, tablet and mobi
   **trust** route; **corrections/report-issue** journey; **404**.
 - **Hard evidence states** (§5), **all visual families** (§12), the **social/OG system** (§16), **mobile**, **RTL** and
   **accessibility states** (focus, error, status, reduced motion, forced colours, zoom).
+- **The small surfaces:** footer, search with no match and with a failed index, the language switch on every family,
+  citation, original-source links and the no-public-locator state, the unavailable-download state, print, empty,
+  unknown and error states, and every success or failure message a tool can show.
+
+A family template applied to a route is not a reviewed page: each route is looked at, in both languages, and marked in
+the coverage ledger (§19) on its own row.
 
 ### 9.2 Hard-state acceptance — prove these before generalising
 
@@ -333,6 +433,46 @@ journalist challenging a Reading; researcher testing comparability; regulator; p
 partner; humanitarian practitioner; anyone challenging a record; reuser; accessibility user; a payment-rail explainer.
 Each must succeed on mobile and desktop, in both languages, by keyboard.
 
+**Audience lenses.** Challenge every consequential decision (§0, step 4) through these readers: a citizen or
+non-specialist; a journalist; a researcher or academic; a bank or other provider; the Central Bank or another regulator;
+government; a development partner, donor or UN agency; a source institution; an Arabic-first reader; a mobile reader; a
+keyboard or assistive-technology user; a reader on a slow or expensive connection. Design one governed evidence system
+that serves their different intents — never a separate product, mode or entrance per audience.
+
+### 9.4 What each family must achieve — tests, not layouts
+
+These are outcomes to test; the composition is yours.
+
+- **Home** orients; it does not reproduce the database. Test it with a cold reader — a person the owner supplies, or a
+  fresh agent that has not seen this repository or your work and is shown only the rendered page — in each language,
+  at 390 and 1440 px:
+  within about 30 seconds they can say what the product is, why it differs and where to start; within about 90 seconds,
+  that evidence here has scope and boundaries and can be explored and verified; within about 180 seconds they are inside a
+  substantive evidence journey. Record who read, how, and what they said.
+- **Explore** makes the governed questions a natural way into the evidence; no reader needs the internal taxonomy.
+- **Domain answers** share one system without being identical: let each domain's evidence structure shape its
+  composition (dense survey evidence, a sparse map, an institutional sequence, a vintage conflict are not one layout).
+- **Evidence Records** are unusually strong professional objects: claim, unit, population, calculation base, period,
+  evidence state, what it establishes, what it does not, source, citation, the Readings and answers that use it, the
+  relevant method and the route to challenge or correct it — each readable at a glance, and the central figure harder
+  to misuse in a screenshot than on any dashboard.
+- **Readings** are one editorial family, not clones: pacing can follow the argument; long-form typography, inline
+  evidence, source verification, print, Arabic and mobile are designed; "What would change this reading?" is the
+  family's intellectual signature (§11).
+- **Data & sources** makes provenance inspection easy for professionals and usable for non-specialists; the source
+  owner stays visibly distinct from CauseWay's synthesis and presentation.
+- **Methodology** is a learning experience, not a long document: a first-time reader first grasps how the product
+  decides what it is safe to say, then goes deeper — authority flow, populations and units, calculation bases, evidence
+  clocks, survey versus administrative evidence, observed/estimated/projected, programme versus population,
+  uncertainty, corrections and editions — using the governed examples its Page Spec already carries.
+- **The Measurement Agenda** shows, for each priority, the decision or question it constrains, what is known, what is
+  not, and what measurement would change it. Unknowns look intentional and analytically useful, never like missing web
+  content.
+- **About and trust** answer why the product exists, what CauseWay adds and does not do, who owns the source evidence,
+  stewardship and independence, maintenance and currentness, and how to challenge or correct — with the governed text
+  that exists; the owner's identity and funding statement is an open item (OWN-01), never filled. Trust pages get the
+  same design discipline as the flagship pages.
+
 ---
 
 ## 10. Tools — first-class, local, tested
@@ -347,7 +487,10 @@ All tools run on local packaged data; none may need a network call. Their accept
   from search is not absence of evidence; a failed load is a technical state. Measurement results open their `#MA-00x`
   anchor. The index loads only when Search opens. Still to build: a `?q=` URL state and a facet by result type (the
   type labels exist: `UI-JS-TYPE-*`). A facet by domain needs a governed domain field on search records, which does not
-  exist: request it as `NEEDS_CONTROLLED_CONTENT` rather than inferring a domain from routes or text.
+  exist: request it as `NEEDS_CONTROLLED_CONTENT` rather than inferring a domain from routes or text. Treat Search as a
+  product: result types visibly distinct in both languages (a question, a record, a Reading, a source, a priority); a
+  no-match that offers a way on (Explore's questions, the Evidence index) in governed words; typo-tolerant matching only
+  as a pattern Code can implement on the local index — design it, do not promise it.
 - **Evidence workbench** (`/evidence/`): the baseline embeds the site search on this page (input `global-search`;
   results `.search-hit`; its failure state `#search-results .empty`) — keep it, the tests require it. A record filter, if
   you add one, is a separate control. Rows reveal the record's governed title, period or currentness, population and a
@@ -369,7 +512,9 @@ All tools run on local packaged data; none may need a network call. Their accept
   and a mobile form of the four-column comparison. CLM-044 is in the comparable set; its withheld value never appears.
 - **Source directory and Resource Library** (`/data/`): the full original-source register and the small curated library
   are two jobs; `?source=` deep links open and focus the card; an unknown reference is an announced link error while every
-  source stays visible; the nine sources without a public locator are never named or linked. Group the curated cards by
+  source stays visible; the nine sources without a public locator are never named or linked. Links to original sources
+  are visibly external (an accessible cue whose words you request as governed copy) and open without an interstitial or
+  modal. Group the curated cards by
   their governed `resource_category`. The reader-facing document type is `document_label` / `document_label_ar`
   (`site-src/content/sources/source_reference_map.json`, both languages): of the 151 displayed sources, 142 have one and 9
   do not (inventory → `/data/` → `collection.displayed_sources_without_document_type`). A type filter, if you design one,
@@ -383,18 +528,41 @@ All tools run on local packaged data; none may need a network call. Their accept
   never changes the record. You may design a richer reporting intent — for example choosing what kind of problem it is
   and composing the message on the page before it opens in the reader's mail — only as client-side composition into that
   same mail action: no backend, no form element, no new address, no promised response time, and every new word
-  requested as governed copy.
+  requested as governed copy. Do not default to a generic name/email/message form: think in the reader's intents — a
+  factual error, an interpretation challenge, an overlooked source, a methodology question, a technical problem, press,
+  reuse or citation, general contact — carry the page, object and edition automatically, and ask for nothing the
+  message does not need.
+- **Controls and inputs** (search, filters, Compare slots, any reporting-intent choice or message composition): the site
+  collects nothing and submits nothing (§18), so for every input ask why it exists; if there is no good answer, remove
+  it. Each one has a visible label, a text error, preserved input after an error or a language switch, keyboard and
+  touch operation, RTL behaviour and a success or failure state; where the reader might wonder what happens to what they
+  type, a short privacy note in governed words.
 - **Language**: preserves route, object, query and hash; never translates a user's query.
 - **Download**: design the pattern for CauseWay-generated downloads (a record's governed fields; a chart's governed data
   table; a citation file; a Reading as PDF). None is enabled until the owner decides the reuse licence for CauseWay
   content (open item OWN-04): design the disabled and enabled states, and ship the disabled state. Third-party documents
-  are never offered for download: a public URL is not redistribution permission.
+  are never offered for download: a public URL is not redistribution permission. Downloads are not conversion buttons:
+  design per object only the formats that serve it — a Reading as print and PDF; an Evidence Record as print, a citation
+  file (for example RIS or BibTeX) and its governed fields as CSV; a chart as a framed image (PNG or SVG) with its
+  governed data table as CSV; a table as CSV or XLSX; Methodology and the Measurement Agenda as print; a source as its
+  citation and its original-source link, never its document. Arabic exports are first-class: Arabic headings and
+  labels, right-to-left layout, correct encoding. Every portable object carries its title, period, population, source,
+  key boundary, edition, canonical link, suggested citation and a reuse line (governed copy that follows the licence
+  decision, OWN-04 — request it; never write it).
+- **Rights in the interface.** Keep four kinds of material visibly apart: CauseWay's own material; third-party material
+  that may be redistributed; third-party material whose redistribution is restricted or unclear; and values CauseWay
+  derived from third-party evidence. CauseWay's identity never implies ownership of the underlying data; where
+  redistribution is not permitted, send the reader to the original source instead of packaging it. A data package
+  (data files, bilingual readme, data dictionary, source register, method, licence, checksums) is a later Code
+  deliverable, only for substantial reusable data and only after the licence and source-rights decisions (OWN-04,
+  REL-02); design its entry only if one is actually offered — no files for appearance.
 
 ### Print and portable evidence
 
 Evidence gets printed, screenshotted, pasted into briefs and forwarded. Design for that, in proportion:
 
-- **Print styles** for every page family and, with most care, for Readings and Evidence Records: navigation chrome
+- **Print styles** for every page family and, with most care, for Readings, Evidence Records and Methodology (tables
+  included, with repeated headers and sensible page breaks): navigation chrome
   hidden; title, edition line ("Edition of …"), canonical URL and language kept; every figure printed with its period,
   population, unit and boundary; "What not to conclude" kept on the same page as the claim it bounds; charts never split
   from their caption and fallback; source list and citation at the end; link targets printed where a reader needs them;
@@ -424,6 +592,11 @@ placeholder (for example `⟦NCC:compare-this-record⟧`) and never invented wor
 reference site shows is in the Master and regenerated into `interface_copy.json` — the steward adds requested labels in
 batches, so ask early — or the optional feature that needs it stays unshipped (hidden in the reference site and listed
 as an exception in `design/09_CODE_HANDOFF.md`). The accepted site contains no placeholder and no invented copy.
+
+**Micro-interactions** are designed, not left to defaults: menu opening and closing, focus, hover, tap, copy and cite
+confirmations, opening a source, the language switch, filter states, drawers, tooltips (never the only way to reach
+information), confirmations, errors, table overflow, and Escape closing what it opened and returning focus. The whole
+should feel calm and exact.
 
 Page data travels in JSON blocks (`<script type="application/json" id="yfie-ui">`, `yfie-compare`,
 `yfie-compare-dimensions`, `yfie-record-ids`), never in inline executable scripts; keep that pattern (§18).
@@ -494,7 +667,12 @@ Tier counts are in `tier_counts`; the tier of every visual is in the inventory.
 - **Text alternative**: the governed analytical alt text plus a table or ordered-text fallback (caption, scoped headers,
   unit, population, period) ships with every chart and stays true if the chart fails.
 - Choose the truthful form — chart, table, state diagram, evidence strip, annotated comparison, ordered text, or no
-  visual. Do not invent a chart because numbers are present. The chronology is context, never a causal chain.
+  visual. Do not invent a chart because numbers are present. The chronology is context, never a causal chain. The 36
+  contracts are analytical problems, not chart requests: decide the strongest form for each and record why.
+- **Interaction in a visual** may reveal a value's unit, population, calculation base, period, definition, evidence
+  state, source, boundary or what remains unproven — only from governed fields. Hover is never the only way in: the
+  same information is reachable by focus, keyboard and touch, and readable in the static fallback. Diagrams reflow; a
+  complex visual always has its accessible equivalent.
 
 ---
 
@@ -513,6 +691,9 @@ Tier counts are in `tier_counts`; the tier of every visual is in the inventory.
   remittances as a flow and «الحوالة / الحوالات» for individual transfers (F5 §3), «البنك المركزي اليمني – عدن» at first
   mention. They matter when you request a label; you never author public copy.
 - No English-only visual metadata may disappear in Arabic, and no internal-control vocabulary may appear in either.
+- **Test in Arabic, not only view it:** native hierarchy, RTL flow, mixed Arabic and Latin, numerals, source names,
+  tables, charts and legends, inputs, search, citation, exports and print, mobile, line length, punctuation and the
+  language switch — each at the widths of §0, with the longest Arabic strings the corpus holds.
 - **Dates** follow the governed form: day, month name, year, Western digits — "26 September 2026", «26 سبتمبر 2026».
   Arabic month names are يناير فبراير مارس أبريل مايو يونيو يوليو أغسطس سبتمبر أكتوبر نوفمبر ديسمبر (as in
   `source_date_text` in `scripts/build.py`); do not use a locale library's month names, which vary by region.
@@ -547,6 +728,12 @@ client framework weight a static page does not need. Specify the logo's rendered
 No "green" claim, badge or comparison anywhere. Accessibility, Arabic quality, security and evidence integrity outrank
 marginal byte savings.
 
+Performance is part of usability for a reader on a slow or expensive connection: static-first, progressive
+enhancement, the core evidence (answer, scope, boundary, record, source) readable before any script runs, and no
+animation library carried for effect. A public note on the site's own footprint is optional; if you propose one, it
+follows `docs/SUSTAINABILITY_METHOD.md`, separates measured, modelled, assumed and unknown, carries no carbon figure
+before the post-deployment measurement, and its words are requested as governed copy.
+
 ---
 
 ## 16. Social / Open Graph system
@@ -567,7 +754,7 @@ One native `<title>` and meta description per page (governed, unique per languag
 reciprocal `hreflang` for `en`, `ar` and `x-default` (the root); pre-release `robots.txt`; JSON-LD `WebSite`,
 `BreadcrumbList` and `Article` (Readings) with governed fields only — no author, dates, image or `Dataset`. Your
 templates must keep these head elements and keep the breadcrumb visible where it is today. Contract:
-`docs/DEPLOYMENT.md` §Discovery; checks: validator F6-G01…G05.
+`docs/DEPLOYMENT.md`, "Discovery (F6)"; checks: validator F6-G01…G05.
 
 ---
 
@@ -576,18 +763,21 @@ templates must keep these head elements and keep the breadcrumb visible where it
 The design must work under a strict Content-Security-Policy: no inline executable script (data goes in JSON blocks), no
 inline style attributes, no inline event handlers, no external script, stylesheet, font, image or frame, no form. No
 analytics, tracking, cookies or accounts; one functional preference (`yfie-lang`). Links to original sources open with
-`rel="noopener noreferrer"`. Render data only through escaping. Contract: `docs/DEPLOYMENT.md` §Security; checks: F6-G05.
+`rel="noopener noreferrer"`. Render data only through escaping. Contract: `docs/DEPLOYMENT.md`, "Security and privacy
+expectations for Code"; checks: F6-G05.
 
 ---
 
 ## 19. Deliverables — repository-backed, no screenshot-only handoff
 
-Work inside this repository. Create `design/` (the diagrams in `design/architecture/` are generated; leave them):
+Work inside this repository. Create `design/` (leave `design/architecture/`: programme diagrams — three generated by
+`scripts/architecture_diagrams.py`, and the Design-to-Code flow, hand-maintained to match §20):
 
 | File | Content |
 |---|---|
-| `design/00_DESIGN_README.md` | What the package is; how to build and run the reference site; whether an approved visual board or mockup was supplied (D0); the dependency map; the **decision log** — dated, per gate: decision, alternatives considered, reasons, evidence |
-| `design/COVERAGE.csv` | The **coverage ledger**, seeded at D0 from the inventory and updated at every gate: one row per route × language × width (320, 390, 640, 1440) and per hard, verification and technical state — columns `route, page_family, language, width, state, gate, status, evidence, note`, status one of `NOT_STARTED`, `DESIGNED`, `BUILT`, `VERIFIED` |
+| `design/00_DESIGN_README.md` | What the package is; how to build and preview the reference site; whether an approved visual board or mockup was supplied (D0); the dependency map; the **decision log** — one dated entry per material decision (not for cosmetic tweaks), with: ID and gate; the problem; the evidence and context (routes, contracts, states); the alternatives considered; the direction chosen and why; its Arabic, responsive and accessibility implications; what Code must implement; any known compromise and its design-debt or open-item ID |
+| `design/COVERAGE.csv` | The **coverage ledger**, seeded at D0 from the inventory and updated at every gate: one row per route × language × width (320, 390, 640, 1440) and per hard, verification and technical state — columns `route, page_family, language, width, state, gate, status, checks, code_handoff, evidence, note`. `status` climbs `NOT_STARTED` → `REVIEWED` (this route's content, contracts and states read — a family template applied is not a review) → `DESIGNED` (the system applied to this route) → `BUILT` (rendered in the reference site) → `VERIFIED` (every applicable check passed, with evidence) → `ACCEPTED` (at D7). `checks` lists the checks passed, from `rtl`, `responsive`, `interaction`, `hard_state`, `a11y`, `print`, `content` (governed content complete, no placeholder); `code_handoff` is `YES` when `design/09_CODE_HANDOFF.md` covers the row's family, components and states |
+| `design/DESIGN_DEBT.md` | The **design-debt register**: every deliberate temporary compromise, so none disappears silently — ID; the temporary decision; why; the surfaces affected; the user impact; the intended behaviour; the Code action; priority; and whether it blocks D7 acceptance, blocks public release, or neither. Entries are closed, never deleted |
 | `design/01_FOUNDATIONS.md` | The D1 design theses (what each proposed, screenshots of the stress trio in both languages, how each did against the acceptance criteria, why one was chosen); then principles, evidence-state grammar, type, grid, space, colour, iconography, motion — with rationale |
 | `design/02_TOKENS.json` | Machine-readable tokens (colour, type scale per language, space, radius, elevation, motion, breakpoints, z-index) |
 | `design/03_COMPONENT_CATALOG.md` | Every component: anatomy, inputs (governed fields), states, RTL/LTR, responsive, accessibility |
@@ -600,6 +790,13 @@ Work inside this repository. Create `design/` (the diagrams in `design/architect
 | `design/10_ACCEPTANCE_CHECKLIST.md` | `handoff/DESIGN_ACCEPTANCE_CRITERIA.md` filled in with evidence (screenshots, test output, notes) |
 | `design/ESCALATIONS.md` | Every `ESCALATE_TO_MASTER` and `NEEDS_CONTROLLED_CONTENT` item |
 | `design/reference/` | **The runnable reference implementation** (below) |
+
+**Four layers — keep them apart.** (A) The governed content: the Master and its projections in `site-src/content/**`,
+never altered by design. (B) The current reference build: `dist/`, made by `scripts/build.py`, previewed with
+`python3 -m http.server 4173 --directory dist` — a behavioural baseline you may challenge visually, never semantically.
+(C) Your accepted design implementation: `design/reference/`, built to `design/reference/out/` — the design exists when it
+is there, not when it exists in a canvas or a screenshot. (D) Claude Code's production runtime, which hardens (C) after
+acceptance and replaces (B).
 
 **The reference implementation** renders **every route in both languages** (the same 288 documents as `dist/`) from
 `site-src/content/**` — never from a copied or hand-written content model — with every tool working on local data, at
@@ -629,12 +826,22 @@ every width, with every state reachable.
   read them before D1.
   The suites are not edited by Design: keep every hook. CI does not build your reference implementation, so paste each
   suite's output into `design/10_ACCEPTANCE_CHECKLIST.md`.
+- **Evidence files.** Commit evidence as PNG screenshots and text. Never commit a PDF, XLSX, DOCX or ZIP (gate F6-G07
+  fails on any but the Master): keep print-to-PDF checks in the ignored `design/reference/out/` or outside the
+  repository, and commit a PNG of each printed page instead.
 - **What else it keeps.** The discovery head (§17), the JSON data blocks, the strict-CSP constraints (§18), and a print
   stylesheet (§10).
+- **A hostable static site.** `design/reference/out/` is reproducible from one command and self-contained: the English
+  and Arabic HTML of every route, the root entry and the bilingual 404; CSS; JavaScript only where a tool needs it;
+  the approved assets (the canonical logo) and the fonts with their licence; the search index and the page data blocks;
+  the discovery head; working language switching and internal navigation; the no-JavaScript fallbacks. Anyone can open
+  it with `python3 -m http.server 4173 --directory design/reference/out` — no design tool, account or proprietary
+  workspace is needed to see the product. Hostable is not released: public release stays a separate acceptance.
 - **Completion.** D7 acceptance requires this runnable, fully populated bilingual reference site: all 288 documents,
-  every tool, every state, both languages, every width, no placeholder. A design source without it — however
-  implementation-grade — is an incomplete hand-back: say so plainly in `design/00_DESIGN_README.md`; it is not accepted
-  as complete.
+  every tool, every state, both languages, every width, no placeholder. A homepage, representative screens,
+  screenshots, a moodboard, a design-tool prototype, a component catalogue or a partial system is not completion. A
+  design source without the site — however implementation-grade — is an incomplete hand-back: say so plainly in
+  `design/00_DESIGN_README.md`; it is not accepted as complete.
 
 Maintain `design/09_CODE_HANDOFF.md` **as you work**, not at the end: tokens, components, states, routes, content
 bindings, visual contracts, responsive rules, accessibility behaviour and every exception.
@@ -643,20 +850,32 @@ bindings, visual contracts, responsive rules, accessibility behaviour and every 
 
 ## 20. Work plan — gates, one pull request each
 
-| Gate | Output |
-|---|---|
-| D0 Orientation | Dependency map from the inventory; the statement on supplied boards or mockups; the coverage ledger seeded; plan; escalations so far |
-| D1 Theses and grammar | Two or three materially different design theses, each rendered on the stress trio — Home, `/evidence/CLM-003/`, `/readings/same-year-different-number/` — in English and Arabic at 390 and 1440 px with real content, judged against the acceptance criteria; one chosen with recorded reasons; then foundations, tokens, evidence-state grammar, shell and type in both languages, proved on the trio. Nothing is propagated to other routes before this gate closes |
-| D2 Hardest families | Explore, `/people/`, `/access/`, `/payments/`, `/remittances/`, `/reforms/`, the Evidence index and the record set of §9.1, Compare, `/data/` |
-| D3 Synthesis and reference | Readings index and every Reading, Measurement, Methodology, About and trust, corrections and report journey, 404 |
-| D4 Complete binding | Every route in both languages through family rules; no bespoke drift |
-| D5 Interaction and accessibility | Search, workbench, Compare, sources, Cite, language, report, download and export patterns; keyboard, focus, zoom, reduced motion, forced colours, image-off, mobile |
-| D6 Visuals, social and print | Signature and core visuals, table-first renderings, detached frames, social-image templates, print styles, Reading print/PDF layout, contextual export frames |
-| D7 Acceptance and Code handoff | The runnable, fully populated bilingual reference site (§19); every label governed or its feature unshipped; `design/10_ACCEPTANCE_CHECKLIST.md` complete; `design/09_CODE_HANDOFF.md` final; the coverage ledger `VERIFIED` for every row or each gap explained; all gates green |
+Do not jump into visual production. Each gate enters only when the one before it has exited, and each leaves a runnable,
+committed state.
 
-At every gate, before its pull request: add the gate's entries to the decision log (what was decided, the alternatives,
-the reasons, the evidence); update the coverage ledger for every route and state touched; and record what became more
-understandable or truthful, what complexity was added, what could be removed, and the open escalations.
+| Gate | Enters when | Work and durable output | Exits when (evidence in the pull request) |
+|---|---|---|---|
+| D0 Orientation | The first line of `handoff/README_FIRST.md` reads DESIGN HANDOFF READY and the §8 commands of that file pass on your clone | Read-in (§3); dependency map from the inventory; the statement on supplied boards or mockups; `design/COVERAGE.csv` seeded with every row `NOT_STARTED`; the decision log, `design/DESIGN_DEBT.md`, `design/ESCALATIONS.md` and `design/09_CODE_HANDOFF.md` opened; a plan for D1–D7. No polished screens yet | The records exist and are committed; the plan names the D1 theses to be tested; escalations so far are listed |
+| D1 Theses and grammar | D0 exited | Two or three materially different design theses, each rendered on the stress trio — Home, `/evidence/CLM-003/`, `/readings/same-year-different-number/` — in English and Arabic at 390 and 1440 px with real content, judged against the acceptance criteria and the four review tests (§7); one chosen with recorded reasons (`design/01_FOUNDATIONS.md`); then foundations, tokens, evidence-state grammar, shell and type in both languages, proved on the trio | The chosen system holds on the trio at all four widths in both languages, by keyboard, with the hard states the trio carries; decision-log entries for the choice. Nothing is propagated to other routes before this gate exits |
+| D2 Hardest families | D1 exited | Explore, `/people/`, `/access/`, `/payments/`, `/remittances/`, `/reforms/`, the Evidence index and the record set of §9.1, Compare, `/data/` | Each hard-state case of §9.2 on these routes proved with evidence; ledger rows `VERIFIED` or their gaps explained |
+| D3 Synthesis and reference | D2 exited | Readings index and every Reading, Measurement, Methodology, About and trust, corrections and report journey, 404 (§9.4) | The same, for these families; the Home cold-reader test (§9.4) run and recorded |
+| D4 Complete binding | D3 exited | Every route in both languages through family rules; no bespoke drift | All 288 documents render from `design/reference/out/`; `test_public_tools.py`, `viewport_acceptance.py` and `bilingual_invariance.py` pass against it (§19); every ledger row at least `BUILT` |
+| D5 Interaction and accessibility | D4 exited | Search, workbench, Compare, sources, Cite, language, report, download and export patterns; micro-interactions (§10); keyboard, focus, zoom, reduced motion, forced colours, image-off, mobile | Every tool state and journey (§9.3) proved in both languages by keyboard; `design/07_INTERACTION_ACCESSIBILITY.md` complete |
+| D6 Visuals, social and print | D5 exited | Signature and core visuals, table-first renderings, detached frames, social-image templates, print styles, Reading print/PDF layout, contextual export frames | Every visual against its contract with fallback and frame; print previews of every family in both languages; the screenshot-misuse and portable-evidence tests recorded |
+| D7 Acceptance and Code handoff | D6 exited | The runnable, fully populated bilingual reference site (§19); every label governed or its feature unshipped; the **last-10-percent audit** — search and zero results, Contact, Corrections and evidence challenge, source and external links, citation, the language switch, mobile tables, long Arabic strings, focus, inputs, privacy, rights, unavailable downloads, print, reduced motion, 404, the footer, every trust surface and every hard state; `design/10_ACCEPTANCE_CHECKLIST.md` complete; `design/09_CODE_HANDOFF.md` final | Every acceptance line has evidence; the coverage ledger `ACCEPTED` for every row or each gap explained; no open design debt blocks D7; all gates green; the Code recipient test (§0) passes |
+
+**Every gate, start and end.** Start by re-reading the records listed in §0 ("The repository is your memory"). Before the
+pull request: add the gate's decision-log entries; update the coverage ledger for every route and state touched, the
+design-debt register, the escalations and `design/09_CODE_HANDOFF.md`; record what became more understandable or
+truthful, what complexity was added and what could be removed; run the repository gates (`CONTRIBUTING.md` §5, on
+every pull request) and the gate's own tests (the reference-site suites from D4 on; before D4, screenshots and targeted
+checks of the routes built); apply the Code recipient test; commit, push and leave the tree clean.
+
+**Stop conditions.** Do not move on — record the reason in the decision log and fix it, or escalate it — when: a gate's
+exit evidence is missing; a repository gate fails; a hard state on the gate's routes does not hold; the stress trio
+stops holding after a change; a shipped feature needs a label that is not yet governed (design it, keep it unshipped,
+list it); a truth defect blocks a surface (`ESCALATE_TO_MASTER`, then design the honest current state); or the Code
+recipient test fails.
 
 ---
 
@@ -704,8 +923,10 @@ You must:
 22. finish with a Code handoff that maps tokens, components, states, routes, content bindings, visual contracts,
     responsive rules, accessibility behaviour and exceptions (§19).
 
-Also required, beyond the twenty-two: competing theses tested at D1 before propagation (§20); the decision log and the
-coverage ledger kept at every gate (§19); print and portable evidence (§10).
+Also required, beyond the twenty-two: competing theses tested at D1 before propagation (§20); the kernel, the loop and
+the gate-start re-read (§0); the decision log, the coverage ledger and the design-debt register kept at every gate
+(§19); print and portable evidence (§10); the audience lenses and the family outcomes (§9.3, §9.4); the four review tests
+(§7); the last-10-percent audit at D7 (§20).
 
 ---
 
@@ -720,6 +941,9 @@ coverage ledger kept at every gate (§19); print and portable evidence (§10).
 - Ship a placeholder or an invented label in the accepted site, or enable a download of CauseWay content before the
   owner's licence decision.
 - Treat a board, mockup or palette that is not in the repository as binding.
+- Use an image whose provenance and rights are not established, or recolour or invert the logo for any theme.
+- Animate for effect: count-up numbers, decorative parallax, motion that explains nothing.
+- Let a decision live only in a canvas, a screenshot or a conversation.
 - Claim WCAG conformance, legal review, rights clearance, native-language certification, security guarantees or public
   release readiness.
 

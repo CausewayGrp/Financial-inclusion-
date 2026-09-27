@@ -1,4 +1,4 @@
-> STATUS: **DESIGN HANDOFF READY.** Start here. R8.6 closed on 26 September 2026 after a clean-room acceptance by three cold recipients (`audit/FINAL_CLEAN_ROOM_ACCEPTANCE.md`); tightened on 27 September 2026 (post-F9 correction, same record). Not a public release.
+> STATUS: **DESIGN HANDOFF READY.** Start here. R8.6 closed on 26 September 2026 after a clean-room acceptance by three cold recipients (`audit/FINAL_CLEAN_ROOM_ACCEPTANCE.md`); tightened on 27 September 2026 (post-F9 correction and design-enablement control pass, same record). Not a public release.
 
 # Read this first — Yemen Financial Inclusion Evidence · أدلة الشمول المالي في اليمن
 
@@ -22,9 +22,11 @@ the original source. The public site already exists as a complete, tested refere
 repository-backed design package, so that **Claude Code** can then build the production runtime without guessing. The
 runnable site is what acceptance requires (brief §19); a design source without it is an incomplete hand-back. You start
 by testing two or three genuinely different design theses on Home, a dense Evidence Record and the flagship Reading, in
-both languages, before anything is propagated (brief §20, D1). You
-own the visual and interaction solution. You do not own the truth: facts, wording of controlled meaning, evidence states,
-sources and rights come from the Production Master and cannot be changed by design.
+both languages, before anything is propagated (brief §20, D1). The brief opens with a short kernel, a working loop and
+a memory rule (§0): re-read the kernel and your own records at the start of every gate, because the repository — not a
+conversation — is your memory, and every gate ends committed, pushed and clean. You own the visual and interaction
+solution. You do not own the truth: facts, wording of controlled meaning, evidence states, sources and rights come from
+the Production Master and cannot be changed by design.
 
 ## 3. Where truth lives
 
@@ -73,7 +75,8 @@ behaviour; rights constraints; and the rule that no internal or repository langu
 
 Composition, grid, hierarchy, rhythm, spacing; palette within contrast and identity constraints; component form; chart
 form where several forms satisfy a visual contract; interaction choreography; micro-motion; responsive expression;
-editorial pacing. `DESIGN_STARTING_TOKENS.json` is a starting hypothesis, not a constraint.
+editorial pacing — the full list, including navigation behaviour, search and citation presentation and the Methodology
+and Measurement experience, is in the brief §6. `DESIGN_STARTING_TOKENS.json` is a starting hypothesis, not a constraint.
 
 ## 7. What is unknown
 
@@ -94,10 +97,12 @@ python3 scripts/tests/test_public_tools.py && python3 audit/tranche_c/checks/vie
 python3 audit/tranche_c/checks/bilingual_invariance.py
 ```
 
-Every command must pass before and after your work (CI runs them on every pull request). `CONTRIBUTING.md` §5 lists all
-gates and what each protects. Your own acceptance tests are in `DESIGN_ACCEPTANCE_CRITERIA.md`; the browser suites and
-the invariance check run on your reference implementation with `YFIE_SITE_DIR=design/reference/out` (brief §19). The
-commands work from a clone and from the handoff archive alike.
+Every command must pass before and after your work (CI runs them on every pull request). If your environment cannot
+install the packages or Chromium, say so in `design/00_DESIGN_README.md`, run what you can, and list each command you
+could not run as NOT RUN with the reason; acceptance at D7 still needs every one run — the steward runs them on your
+branch or bundle. `CONTRIBUTING.md` §5 lists all gates and what each protects. Your own acceptance tests are in
+`DESIGN_ACCEPTANCE_CRITERIA.md`; the browser suites and the invariance check run on your reference implementation with
+`YFIE_SITE_DIR=design/reference/out` (brief §19). The commands work from a clone and from the handoff archive alike.
 
 ## 9. Working in the repository
 
@@ -110,9 +115,9 @@ commands work from a clone and from the handoff archive alike.
 - Without push access, or starting from the handoff archive: `git init -q && git add -A && git commit -qm "import handoff"`,
   work locally, and deliver each gate as a git bundle or patch series (brief §21); the steward lands it through the same
   gates.
-- Commit messages follow Conventional Commits (`CONTRIBUTING.md` §3). Before each commit, classify any new file in
-  `scripts/repository_manifest.py` and regenerate `FINAL_REPOSITORY_MANIFEST.json` and `SHA256SUMS.txt`
-  (`CONTRIBUTING.md` §7 and §8).
+- Commit messages follow Conventional Commits (`CONTRIBUTING.md` §3). Before each commit, regenerate
+  `FINAL_REPOSITORY_MANIFEST.json` and `SHA256SUMS.txt` (`CONTRIBUTING.md` §7 and §8); `design/**` is already classified,
+  so only a new file outside `design/` needs a class in `scripts/repository_manifest.py`.
 
 ## 10. If something looks wrong
 
@@ -127,8 +132,8 @@ steward (the programme owner of this repository) answers escalations Master-firs
 
 ## 11. What Code receives after you
 
-This repository with your `design/` package — the decision log and coverage ledger included — the runnable, fully
-populated bilingual reference site with no placeholder, and a Design-to-Code contract that maps tokens, components,
+This repository with your `design/` package — the decision log, the coverage ledger, the design-debt register and the
+escalations included — the runnable, fully populated bilingual reference site with no placeholder, and a Design-to-Code contract that maps tokens, components,
 states, routes, content bindings, visual contracts, responsive rules, accessibility, print and export behaviour.
 `CLAUDE_CODE_MASTER_PROMPT.md` waits until then.
 

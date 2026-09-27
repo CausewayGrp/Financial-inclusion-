@@ -44,7 +44,8 @@ and the family rules in `design/04_PAGE_FAMILY_COMPOSITIONS.md` decide depth —
 | Portable evidence | Chart and table export frames (title, period, population, unit, credit, prohibited inference, markers, canonical link, edition); which exports exist; their disabled state until the licence decision (OWN-04) |
 | Test hooks | The IDs, `data-*` attributes, classes and JSON block IDs the suites use (brief §19), kept or each exception with its replacement |
 | Assets | Logo placements and derivative sizes, fonts and subsets, icons, social-image templates |
-| Exceptions | Every place where the design departs from a default, with the reason |
+| Exceptions | Every place where the design departs from a default, with the reason; every optional feature left unshipped because a label is not yet governed |
+| Design debt | Each open entry of `design/DESIGN_DEBT.md` → the Code action it needs, its priority and whether it blocks release |
 
 ## 4. Rules
 
@@ -61,8 +62,13 @@ and the family rules in `design/04_PAGE_FAMILY_COMPOSITIONS.md` decide depth —
 - **Portable evidence keeps its provenance.** Anything that can leave a page carries source credit, period, population,
   boundary, canonical link and edition; no CauseWay-content download is enabled before the licence decision, and no
   third-party document is ever offered.
-- **Records.** The decision log (`design/00_DESIGN_README.md`) and the coverage ledger (`design/COVERAGE.csv`) are part of
-  the contract: Code reads why a decision was made and what was proved before changing anything.
+- **Records.** The decision log (`design/00_DESIGN_README.md`), the coverage ledger (`design/COVERAGE.csv`), the
+  design-debt register (`design/DESIGN_DEBT.md`) and the escalations (`design/ESCALATIONS.md`) are part of the contract:
+  Code reads why a decision was made, what was proved, what is temporary and what is still open before changing
+  anything. They are kept current at every gate, not written at the end.
+- **Four layers.** Governed content (`site-src/content/**`) → the baseline build (`dist/`) → the accepted design
+  implementation (`design/reference/`, built to `design/reference/out/`) → Code's production runtime. A decision that is
+  not in `design/` and the reference implementation has not been made.
 - **Strict-CSP output.** No inline executable script or style; data in JSON blocks; escaped rendering.
 
 ## 5. Acceptance

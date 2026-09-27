@@ -14,9 +14,9 @@ authority; everything else here is derived from it, implements it, or records ho
 
 | | |
 |---|---|
-| **Position** | **DESIGN HANDOFF READY** (R8.6 closed; final integration programme F0–F9 closed — [clean-room acceptance](audit/FINAL_CLEAN_ROOM_ACCEPTANCE.md); post-F9 correction of 27 September 2026 applied) |
+| **Position** | **DESIGN HANDOFF READY** (R8.6 closed; final integration programme F0–F9 closed — [clean-room acceptance](audit/FINAL_CLEAN_ROOM_ACCEPTANCE.md); post-F9 correction and design-enablement control pass of 27 September 2026 applied) |
 | **Not declared** | Not PUBLIC RELEASE READY |
-| **Next** | Claude Design, starting at [`handoff/README_FIRST.md`](handoff/README_FIRST.md) — gates D0–D7, ending in a runnable, fully populated bilingual reference site |
+| **Next** | Claude Design, starting at [`handoff/README_FIRST.md`](handoff/README_FIRST.md) — gates D0–D7, ending in a runnable, fully populated bilingual reference site; the repository is its memory |
 | **Owner actions** | Push the two checkpoint tags ([below](#checkpoints-and-tags)); the OWNER_INPUT and RELEASE_ONLY items in [`FINAL_OPEN_ITEMS_REGISTER.md`](FINAL_OPEN_ITEMS_REGISTER.md) |
 | **Production Master** | `authority/Yemen_Financial_Inclusion_Evidence_Master.xlsx` · SHA-256 `17db032b15da16fc4b5b3c3b49f19aebf2ecb4ec46634613fe8505d0f038690b` |
 | **Page Specs** | `site-src/content/page_specs.json` · SHA-256 `d45748046ea56fd0e67fdf112f9888de65b3fe7fab46ce6f51de3a80824b69aa` |
@@ -128,6 +128,7 @@ Master; the validator checks every figure below against it. Counts are an invent
 | Static, local-first, strict-CSP compatible; no analytics, cookies or accounts | Works without a backend; nothing to leak or track | [`docs/DEPLOYMENT.md`](docs/DEPLOYMENT.md) |
 | Two controlled contracts maintained by the steward, validated by the generator | Presentation depth and navigation are product decisions, not facts | [`CONTRIBUTING.md` §2](CONTRIBUTING.md#2-who-owns-what-and-how-it-changes) |
 | Design completes only with a runnable, fully populated bilingual reference site, after competing theses are tested | Code must never guess; a picture is not a specification | Design brief §19–§20 |
+| Design works in a loop and remembers through the repository: kernel, decision log, coverage ledger, design-debt register, escalations, Code handoff — re-read at every gate start, committed at every gate end | A cold agent, or Code later, continues without any conversation | Design brief §0, §19 |
 | IBM Plex Sans and Sans Arabic, vendored unchanged; the canonical logo never altered | Identity and licence integrity | [`vendor/fonts/README.md`](vendor/fonts/README.md), Design brief §8 |
 
 ## The Design handoff in brief
@@ -137,15 +138,20 @@ request each:
 
 - **D0** — dependency map from [`handoff/ROUTE_CONTENT_AND_STATE_INVENTORY.json`](handoff/ROUTE_CONTENT_AND_STATE_INVENTORY.json);
   a statement on whether any approved visual board or mockup was supplied (only what is in the repository binds); the
-  coverage ledger `design/COVERAGE.csv` seeded.
+  records opened — decision log, coverage ledger `design/COVERAGE.csv`, design-debt register, escalations, Code handoff.
+  No polished screens yet.
 - **D1** — two or three materially different design theses tested on Home, the dense Evidence Record
   `/evidence/CLM-003/` and the flagship Reading `/readings/same-year-different-number/`, in English and Arabic, with real
   content; one chosen with recorded reasons; then the grammar. Nothing propagates before this gate closes.
 - **D2–D6** — hardest families, synthesis pages, complete binding, interaction and accessibility, visuals, social images,
   print and portable evidence.
 - **D7** — acceptance against [`handoff/DESIGN_ACCEPTANCE_CRITERIA.md`](handoff/DESIGN_ACCEPTANCE_CRITERIA.md) on the
-  runnable, fully populated bilingual reference site: every label governed (no placeholder ships), the decision log and
-  coverage ledger complete, `design/09_CODE_HANDOFF.md` final ([`handoff/DESIGN_TO_CODE_CONTRACT.md`](handoff/DESIGN_TO_CODE_CONTRACT.md)).
+  runnable, fully populated bilingual reference site: every label governed (no placeholder ships), the four review tests
+  and the last-10-percent audit done, the records complete, `design/09_CODE_HANDOFF.md` final
+  ([`handoff/DESIGN_TO_CODE_CONTRACT.md`](handoff/DESIGN_TO_CODE_CONTRACT.md)).
+
+Every gate has an entry condition, durable outputs, exit evidence and stop conditions (brief §20), and closes with the
+Code recipient test: could Claude Code continue from this commit without the Design conversation?
 
 Design never edits the Master, the projections, the contracts or the public build: it escalates
 (`ESCALATE_TO_MASTER`, `NEEDS_CONTROLLED_CONTENT`) and the steward answers Master-first.
@@ -169,6 +175,7 @@ Design never edits the Master, the projections, the contracts or the public buil
 | F8 · R8.6 | Handoff freeze: one start file, one Design prompt, one logo authority, route/content/state inventory, acceptance criteria, Design→Code contract, open-items register | CLOSED | [`audit/R8_6_…`](audit/R8_6_DESIGN_HANDOFF_FREEZE_CLOSURE.md) |
 | **F9 · R8.6** | Clean-room acceptance by three cold recipients; archive test from an empty directory; final register; fonts vendored; RF9 | **CLOSED — DESIGN HANDOFF READY** | [`audit/FINAL_CLEAN_ROOM_ACCEPTANCE.md`](audit/FINAL_CLEAN_ROOM_ACCEPTANCE.md) |
 | Post-F9 correction | OWN-07 and OWN-08 closed (the `/remittances/` Measurement card; stale navigation-contract fields); controlled contracts classified; handoff tightened in place (D1 theses, decision log and coverage ledger, runnable site as the D7 requirement, no placeholders, print and portable evidence, fonts, supplied-board rule) | CLOSED (27 Sep 2026) | [`audit/FINAL_CLEAN_ROOM_ACCEPTANCE.md`](audit/FINAL_CLEAN_ROOM_ACCEPTANCE.md) addendum; directive [`audit/directives/D8_POST_F9_CORRECTION_2026-09-27.txt`](audit/directives/D8_POST_F9_CORRECTION_2026-09-27.txt); [`docs/CHANGELOG.md`](docs/CHANGELOG.md) |
+| Design-enablement control pass | Handoff checked against the quality doctrine for a cold Design recipient and strengthened in place: kernel, working loop, gate-start memory rule, Code recipient test; audience lenses and family outcomes; review tests; imagery, motion, dark mode, exports, rights, inputs; decision fields, coverage status ladder, design-debt register; gate entry/exit/stop; last-10-percent audit | CLOSED (27 Sep 2026) | Second addendum in [`audit/FINAL_CLEAN_ROOM_ACCEPTANCE.md`](audit/FINAL_CLEAN_ROOM_ACCEPTANCE.md); directive [`audit/directives/D9_DESIGN_ENABLEMENT_CONTROL_PASS_2026-09-27.txt`](audit/directives/D9_DESIGN_ENABLEMENT_CONTROL_PASS_2026-09-27.txt) |
 
 ## Open items
 
@@ -210,7 +217,7 @@ and attaches it to a pre-release ([`CONTRIBUTING.md` §6](CONTRIBUTING.md#6-chec
 | Tag | Commit | State on GitHub |
 |---|---|---|
 | `checkpoint/tranche-c-complete-reading-hold` | `f726bda` — the tree OpenAI reviewed | Not yet pushed (owner action) |
-| `checkpoint/design-handoff-ready` | The post-F9 correction commit on `main` (named in [`docs/CHANGELOG.md`](docs/CHANGELOG.md)) | Not yet pushed (owner action) |
+| `checkpoint/design-handoff-ready` | The design-enablement control-pass commit on `main` — the state Claude Design starts from (named in [`docs/CHANGELOG.md`](docs/CHANGELOG.md)) | Not yet pushed (owner action) |
 
 A checkpoint tag is never moved or rewritten. Until the tags exist, commits and the changelog identify each state.
 
@@ -226,7 +233,7 @@ A checkpoint tag is never moved or rewritten. Until the tags exist, commits and 
 | Which cells of the Master changed? | Per transaction: `audit/<stage>/runs/<TX>_MASTER_LEDGER.json` (cell level) and `<TX>_RUN_REPORT.json` (gates); also the commit trailers |
 | Every finding and its disposition | [`audit/F5_CORPUS_FINDINGS_LEDGER.csv`](audit/F5_CORPUS_FINDINGS_LEDGER.csv) (public corpus); [`audit/TRANCHE_C_FINDINGS_LEDGER.csv`](audit/TRANCHE_C_FINDINGS_LEDGER.csv); earlier [`audit/pre_tranche_c/FINDINGS_LEDGER.csv`](audit/pre_tranche_c/FINDINGS_LEDGER.csv); the three F9 cold-recipient reports in `audit/final_integration/inputs/` |
 | Which audit record answers what? | [`audit/INDEX.md`](audit/INDEX.md) |
-| The binding programme | [`audit/directives/`](audit/directives/README.md) — D7 (F0–F9) and D8 (post-F9 correction) are complete |
+| The binding programme | [`audit/directives/`](audit/directives/README.md) — D7 (F0–F9), D8 (post-F9 correction) and D9 (design-enablement control pass) are complete |
 | Is a commit sound? | Actions → **Verify** (`Governance gates`, `Browser acceptance`) |
 
 ```bash
