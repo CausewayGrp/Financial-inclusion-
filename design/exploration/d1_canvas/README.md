@@ -26,7 +26,8 @@ After the reference implementation is built and checked (`python3 design/referen
 design/reference/check_trio.py --shots`), `python3 design/exploration/d1_canvas/reference_boards.py` adds row R to the
 canvas: every built page of the trio as an artboard beside the propositions, for the drift review. `inspect_widths.py
 t4` renders a proposition at 320–1440 px in both languages; `tiles.py` cuts full-page renders into readable tiles;
-`LENS_BRIEF.md` is the brief the nine critique lenses received.
+`LENS_BRIEF.md` is the brief the nine critique lenses received; `review/` holds their reports and the independent
+final review as received (working material kept for the record; the adjudication is in `design/01_FOUNDATIONS.md`).
 
 `build_boards.py` writes, for every proposition × surface × language × size (1440 and 390 px): a plain HTML twin
 (`out/local/`, rendered in Chromium to measure height and to screenshot into `out/shots/`), the canvas artboard

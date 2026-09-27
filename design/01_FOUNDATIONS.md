@@ -1,9 +1,10 @@
 # D1 — Theses and foundations
 
-> STATUS: **D1 IN PROGRESS — CONVERGED ON T4 · INSTRUMENT (§3.6, DL-D1-006). §1 holds the thesis hypotheses; §2 the
-> exploration and inspection; §3 the critique, adjudication, adversarial tests and the decision; §4 (Design Intent
-> Lock) and §5 (foundational grammar) are not yet written.** The decision is accepted within D1 only; it becomes a
-> Lock when §4 is written from the rendered reference implementation, and nothing propagates before D1 exits.
+> STATUS: **D1 IN PROGRESS — CONVERGED ON T4 · INSTRUMENT (§3.6, DL-D1-006); LOCK AND GRAMMAR WRITTEN FROM THE
+> REFERENCE IMPLEMENTATION (§4, §5, DL-D1-007); INDEPENDENT FINAL REVIEW RECEIVED AND ADJUDICATED (§6).** §1 holds the
+> thesis hypotheses; §2 the exploration and inspection; §3 the critique, adjudication, adversarial tests and the
+> decision; §4 the Design Intent Lock with its fidelity check; §5 the foundational grammar (`02_TOKENS.json`); §6 the
+> final review. Nothing propagates before D1 exits; D1 exit is decided on the pull request.
 
 Gate: D1 · Branch: `claude/practical-cray-sr26c5` (see the process note in `ESCALATIONS.md`) · Accepted start
 `8bf19efad7505792ca22e0a3bda1db31fb85d33c` (`main`, D0 accepted). Authority fingerprints re-verified at gate start:
@@ -371,8 +372,9 @@ outward, with the same governed text path as T1–T3 and RV-CWR-001 panel 1 in t
   4. SVG value labels were emitted as HTML `<bdi>` inside `<text>` and never rendered (a formatter fault); the canonical
      link inside the Arabic figure broke across lines in mixed direction (now `dir="ltr"`, isolated); the product-bar
      actions wrapped into three lines at 1024–1440 px (now one line each).
-  Residual: at 320 px the fallback table inside the closed text alternative is 8–14 px wider than the viewport and
-  scrolls within its wrapper (page overflow 0). Canvas version 4 holds the revised T4.
+  Residual (re-measured on the reference implementation, 27 September 2026): at 320 px the figure's two tables — now
+  always visible — are 50–80 px wider than their focusable wrapper and scroll inside it; row headers wrap normally;
+  page overflow is 0 (DEBT-010). Canvas version 4 held the revised T4; version 5 the corrections of §3.3.
 - **Next, in this order:** the lens critique (§2.4) on the first-generation renders and T4 together; the adversarial
   tests (screenshot misuse, source owner, semantic firewall, Arabic-native, 320 px, low bandwidth, no image, genericity)
   on T4 against the strongest first-generation proposition; the convergence question ("what does YFIE now allow a user
@@ -506,7 +508,7 @@ absolute canonical URLs in exported frames.
 | Source owner | No source number typeset outside its sentence; both CBY-Aden values carry publication and value; credit in frame. Open: the Arabic credit is English (escalated); the IMF lane's state question (escalated) | H |
 | Semantic firewall | Restatement ≠ fall (rows); coinciding paths ≠ confirmation (note under the lanes, raw levels beside them); infrastructure ≠ use (POS record's universe and boundary); people ≠ accounts (Findex group bound to its record); missing ≠ zero (no chart invented for the system visual) | A, D, H |
 | Arabic-native | Composed with its own metrics; the only proposition whose Arabic survives every width without corrupting a link, clipping a table or splitting a date. Honest limit: "a disciplined mirror", not Arabic-first design — the Lock carries the Arabic rules as MUST PRESERVE | B, I |
-| 320 px | No page overflow at any width; the fallback table scrolls inside its wrapper by 8–14 px at 320 px | `inspect_widths.py`, §2.5 |
+| 320 px | No page overflow at any width; the visible fallback tables are 50–80 px wider than their focusable wrapper at 320 px and scroll inside it (DEBT-010) | `inspect_widths.py`, `check_trio.py`, §2.5 |
 | Low bandwidth / no image | Meaning and order survive with no stylesheet; identity survives with no image (name, rules) | §2.5 degraded tests |
 | Genericity | Stripped of content, logo and name, the residue read as "statistics-office methodology page" with a documentation sidebar and pills (F); the sidebar fill and pills are removed in v5; the signature elements (question-first head, clock-first objects, boundary voice, row-form panel) "are copied from nowhere" (F). Yemen through materiality: none of the four propositions achieves it (F, I) — provisional, below | F, I |
 
@@ -657,9 +659,24 @@ survive without stylesheet, script and images; print removes controls, indexes a
 clock, title, answers and the boundary (`_review/degraded/`).
 
 **Residual, recorded:** the two repository browser suites drive routes beyond the trio and cannot run on a D1 build
-(DEBT-009; `check_trio.py` applies their conditions to the trio); at 320 px the figure's fallback table scrolls
-inside its wrapper by 8–14 px (DEBT-010); the in-page navigation has no accessible name until a governed label exists
-(DEBT-006).
+(DEBT-009; `check_trio.py` applies their conditions to the trio); at 320 px the figure's visible tables are 50–80 px
+wider than their focusable wrapper and scroll inside it (DEBT-010); the in-page navigation has no accessible name until
+a governed label exists (DEBT-006).
+
+**Corrections after the independent final review (§6), all verified by the same checks:** the Home system visual is
+rendered through the contract frame (boundary, scope, credit, canonical link in frame — it had been hand-built without
+them); exactly one spine is visible at any width (beside the object from 900 px, at the foot below, with the index on
+Home and the Reading; the Record keeps its strip) — the earlier build showed the edges twice on phones; every governed
+kicker, label and gloss the baseline prints is rendered (section roles as rubrics, the hero line, the questions eyebrow
+and title, the visual's "what the evidence shows", "scope and time" and "text description" labels, "source record" on
+trace steps, the record's return-to-interpretation intro) and `check_content.py --text` now proves text-block parity
+beside numeric parity; the fallback tables no longer break row headers at 320 px; forced colours keep chart text
+visible; the record's disclosure content prints; the F6 attributes the validator requires on public pages
+(`data-visual-fallback`, `data-image-independent`, `data-noncolour-semantic`, `data-boundary-part`) are carried; axis
+ends, ticks and years derive from the data; in-flow actions have 24 px hit areas; `check_trio.py` also drives the
+keyboard-only path and the degraded states, and writes the committed PNG evidence (`design/evidence/d1/`, 18 files:
+first screens at 390 and 1440 px and printed pages, both languages); `02_TOKENS.json` is generated and checked by
+`design/reference/tokens.py`.
 
 ## 5. Foundational grammar
 
@@ -689,6 +706,43 @@ custom properties, with the role of every token) and may move at D2+ within the 
   or script; print rules in the same stylesheet.
 - **Deliberately absent.** Cards, pills, shadows, gradients, icon tiles, dashboard metrics, motion, imagery, motifs.
 
-## 5. Foundational grammar
+## 6. Independent final review — findings and adjudication (27 September 2026)
 
-_Not yet written — extracted only from what D1 proves._
+A fresh reviewer (design director and full-stack lead) received the repository alone at `1c0846d`, ran the build and
+the checks, and returned **"D1 NOT ACCEPTED — DO NOT START D2"** with eight MUST-FIX items, nine SHOULD-FIX items and
+notes (`design/exploration/d1_canvas/review/final_review.md`). The adjudication, item by item:
+
+**MUST-FIX — all accepted and closed** (proof in §4.4, "Corrections after the independent final review"):
+1. Home visual without its boundary, scope and credit → rendered through the contract frame.
+2. Two spines visible below 900 px, no index on Home and the Reading → one spine; the foot spine carries the index.
+3. Table row headers broken one character per line at 320 px → wrapping rule removed; tables scroll in their wrapper;
+   DEBT-010 and §2.5/§3.4 re-measured (50–80 px, not 8–14 px).
+4. §1 STATUS said the Lock and the grammar were unwritten; a stub "§5 not yet written" remained → corrected, removed.
+5. `09_CODE_HANDOFF.md` rows described the pre-implementation state → rows updated; the D0 table marked as history.
+6. `02_TOKENS.json` held a corrupt key and no generator → `design/reference/tokens.py` generates and checks it.
+7. Evidence cited at paths no committed tool produces; lens reports outside the repository → `check_trio.py
+   --degraded` and `--evidence` produce the print, no-stylesheet and image-off renders and the committed PNG set
+   (`design/evidence/d1/`); the nine lens reports and the final review are committed under
+   `design/exploration/d1_canvas/review/`.
+8. Forced-colours mode lost chart text → `.lbl`, `.val`, `.unit` and the captions take `CanvasText`.
+
+**SHOULD-FIX — accepted and closed:** the record's disclosure content prints (`::details-content` in print; verified in
+Chromium by `check_trio.py --degraded`); keyboard-only path (Tab, Enter, Escape) and a text-block parity check added;
+the F6 attributes carried; axis ends, ticks and years derived from the data; the four unrendered governed strings —
+and every other governed kicker and label the baseline prints — rendered; the grammar-state ledger rows reconciled
+(the four states the trio proves `VERIFIED`, sixteen re-gated to D2 with a note); DEBT-003 closed; first-screen and
+print PNGs committed; in-flow actions given 24 px hit areas. **Accepted as recorded, not changed:** the Home section
+order is a composition decision flagged for steward confirmation (`ESCALATIONS.md`); without JavaScript below 900 px
+the primary navigation stays collapsed and every route remains reachable through the institutional band (recorded in
+`09_CODE_HANDOFF.md`).
+
+**Notes acknowledged:** the axis-label exclusion in `check_content.py` is a bounded loophole (only `text.lbl` inside
+SVG, and the text-block check now covers governed strings); the figure's "Full record" link is the Reading itself on
+its own page and correct in exports; the Reading's Sources section and the sr-only figcaption repeat governed text by
+design (the sources are the page's verification path; the figcaption is the accessible name); frame canonicals stay
+root-relative until the deployment origin is set (OWN-03).
+
+The reviewer's own words on the direction: "sound and well argued, the content path is clean, and the trio builds and
+passes its own checks"; the verdict rested on the truth of the records and the Lock items the build broke. With the
+list closed and re-verified, the hand-back verdict is decided on the pull request from the second independent pass
+recorded below.

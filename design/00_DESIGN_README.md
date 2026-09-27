@@ -2,8 +2,9 @@
 
 Status: **D1 in progress — converged on T4 · Instrument (DL-D1-006); the Design Intent Lock (`01_FOUNDATIONS.md` §4)
 and the foundational grammar (§5, `02_TOKENS.json`) are written from the reference implementation, which renders the
-stress trio in both languages with every hook and passes the rendered checks (DL-D1-007); four escalations open;
-independent final review pending.** D0 accepted on `main` at
+stress trio in both languages with every hook and passes the rendered checks (DL-D1-007); the independent final
+review's MUST-FIX list is closed and re-verified (DL-D1-008); four escalations open; hand-back verdict on the pull
+request.** D0 accepted on `main` at
 `8bf19efad7505792ca22e0a3bda1db31fb85d33c`. D1 is developed on `claude/practical-cray-sr26c5` (process note in
 `ESCALATIONS.md`) and lands through one draft pull request into `main`
 (https://github.com/CausewayGrp/Financial-inclusion-/pull/3). D1 records: `01_FOUNDATIONS.md` (hypotheses,
@@ -368,3 +369,23 @@ not public release (REL-01…04 remain).
 - Code: inherits `design/reference/` as it stands (`09_CODE_HANDOFF.md`, state at D1).
 - Compromise: the repository browser suites cannot run on a trio-only build (DEBT-009); the 320 px fallback table
   scrolls in its wrapper (DEBT-010); the independent final D1 review is still to come.
+
+### DL-D1-008 · D1 · 2026-09-27 · The independent final review adjudicated; every MUST-FIX closed
+- Problem: the repository-only review returned NOT ACCEPTED with eight MUST-FIX items — records that overstated the
+  state, a corrupt tokens file, evidence cited at unreproducible paths, and three Lock items the build broke (the Home
+  visual's frame, one spine, readable tables at 320 px).
+- Evidence: `design/exploration/d1_canvas/review/final_review.md`; `01_FOUNDATIONS.md` §6 and §4.4 (corrections);
+  `design/reference/check_trio.py --shots --degraded --evidence design/evidence/d1` (24 renders, 12 pointer and
+  keyboard smoke tests, 6 degraded renders — all pass); `check_content.py --text` (numeric and text-block parity PASS);
+  `tokens.py --check` current.
+- Alternatives: contest the findings; fix only the code; fix code and records and re-verify.
+- Chosen: every MUST-FIX and SHOULD-FIX closed in code and records (§6 lists them); two items recorded rather than
+  changed (Home section order for steward confirmation; navigation without JavaScript below 900 px reachable through
+  the institutional band); the lens reports and the review committed under `design/exploration/d1_canvas/review/`;
+  the PNG evidence committed under `design/evidence/d1/`; a second independent pass requested to confirm closure
+  before the hand-back verdict.
+- Arabic / responsive / a11y: forced colours keep chart text; the record's disclosure content prints; 24 px hit areas
+  on in-flow actions; keyboard path verified.
+- Code: `09_CODE_HANDOFF.md` rows corrected to the implemented state.
+- Compromise: `::details-content` printing is verified in Chromium only; DEBT-006, DEBT-008, DEBT-009, DEBT-010 stay
+  open as recorded.

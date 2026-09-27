@@ -148,11 +148,13 @@ def compact(rec: dict, L: dict, open_label: str, cls: str = "compact") -> str:
             + f'<div class="open"><a href="{rec["href"]}">{esc(open_label)}</a></div></article>')
 
 
-def spine(index: list, edges: list, foot: bool = False) -> str:
+def spine(index: list, edges: list, foot: bool = False, foot_index: bool = True) -> str:
+    """The verification spine. Exactly one is visible at any width: beside the object from 900 px (index + edges), at
+    the object's foot below (index unless the page carries a strip, + edges). Accessible name: escalated (DEBT-006)."""
     idx = "".join(f'<li><a href="#{a}"><span class="n">{i+1:02d}</span><span>{esc(t)}</span></a></li>' for i, (a, t) in enumerate(index))
-    ed = "".join(f'<div class="edges"><h3>{esc(h)}</h3><ul>' + "".join(f"<li>{x}</li>" for x in items) + "</ul></div>" for h, items in edges if items)
+    ed = "".join(f'<div class="edges"><h3>{esc(e[0])}</h3>' + (f'<p class="small">{esc(e[2])}</p>' if len(e) > 2 and e[2] else "") + "<ul>" + "".join(f"<li>{x}</li>" for x in e[1]) + "</ul></div>" for e in edges if e[1])
     cls = "spine foot-spine" if foot else "spine"
-    index_html = "" if foot else f'<nav class="index"><ul>{idx}</ul></nav>'   # accessible name: escalated (DEBT-006)
+    index_html = f'<nav class="index"><ul>{idx}</ul></nav>' if (not foot or foot_index) else ""
     return f'<aside class="{cls}">{index_html}{ed}</aside>'
 
 
@@ -189,7 +191,7 @@ def evidence_record(page: dict, shell: dict) -> str:
           f'<div class="qa" id="q3">{rubric(L["applies"], 3, "h2")}<div class="body"><p>{esc(page["universe"])}</p></div></div>',
           f'<div class="qa" id="q4">{rubric(L["currentness"], 4, "h2")}<div class="body"><p>{esc(page["currentness"])}</p></div></div>']
     limits = f'<h3>{esc(L["measurement_limits"])}</h3><p>{esc(page["measurement_limits"])}</p>' if page["measurement_limits"] else ""
-    qa.append(f'<section class="bnd" id="q5" data-evidence-boundary-first-load>{rubric(L["does_not_establish"], 5, "h2")}<p>{esc(page["does_not_establish"])}</p>{limits}</section>')
+    qa.append(f'<section class="bnd" id="q5" data-evidence-boundary-first-load data-boundary-part="does-not-establish">{rubric(L["does_not_establish"], 5, "h2")}<p>{esc(page["does_not_establish"])}</p>{limits}</section>')
     chips = "".join(f'<a class="chip" href="/{shell["lang"]}/data/?source={esc(sid)}#source-{esc(sid)}">{bdi(sid)}</a>' for sid in page["trace_ids"])
     src_extra = ""
     if page["sources_without_locator_note"]:
@@ -211,9 +213,9 @@ def evidence_record(page: dict, shell: dict) -> str:
             f'<a href="{page["hrefs"]["corrections"]}">{esc(L["history"])}</a><a href="{page["hrefs"]["report"]}">{esc(L["report"])}</a></div><p class="small">{esc(L["reuse_note"])}</p></section>')
     used = [f'<a href="{x["href"]}">{esc(x["title"])}</a>' for x in page["used_in_readings"]]
     edges = [(L["used_in"], used),
-             (L["related"], [f'<a href="{x["href"]}">{esc(x["label"])}</a>' for x in page["routes_back"]] + [f'<a href="{page["hrefs"]["evidence"]}">{esc(L["evidence_hub"])}</a>', f'<a href="{page["hrefs"]["data"]}">{esc(L["data"])}</a>', f'<a href="{page["hrefs"]["methodology"]}">{esc(L["methodology"])}</a>'])]
+             (L["related"], [f'<a href="{x["href"]}">{esc(x["label"])}</a>' for x in page["routes_back"]] + [f'<a href="{page["hrefs"]["evidence"]}">{esc(L["evidence_hub"])}</a>', f'<a href="{page["hrefs"]["data"]}">{esc(L["data"])}</a>', f'<a href="{page["hrefs"]["methodology"]}">{esc(L["methodology"])}</a>'], L["related_intro"])]
     used_attr = " data-used-in-readings" if used else ""
-    body = f'<article class="obj page-obj"{used_attr}>{head_}{"".join(qa)}{util}</article>{spine(index, edges)}{spine(index, edges, foot=True)}'
+    body = f'<article class="obj page-obj"{used_attr}>{head_}{"".join(qa)}{util}</article>{spine(index, edges)}{spine(index, edges, foot=True, foot_index=False)}'
     return head(page, shell, page["route"], extra=meta) + header(shell) + body + footer(shell)
 
 
@@ -227,19 +229,21 @@ def home(page: dict, shell: dict) -> str:
         demo.append(html_)
         if recs and not res:
             demo.append(compact(recs.pop(0), L, L["open_evidence_record"], cls="compact bound"))
-    parts.append(f'<section class="qa first" id="s3"><h2>{esc(S[3]["heading"])}</h2><div class="paced">{"".join(demo)}</div></section>')
+    def h2(sec):   # governed kicker (role) above the governed heading
+        return (f'<span class="rubric">{esc(sec["role"])}</span>' if sec.get("role") else "") + f'<h2>{esc(sec["heading"])}</h2>'
+    parts.append(f'<section class="qa first" id="s3"><div>{h2(S[3])}</div><div class="paced">{"".join(demo)}</div></section>')
     if recs:
         parts.append(f'<div class="qa">{rubric(L["records_heading"])}<div class="objs">{"".join(compact(r, L, L["open_evidence_record"]) for r in recs)}</div></div>')
-    parts.append(f'<section class="bnd" id="s4"><h2>{esc(S[4]["heading"])}</h2><div class="mt8">{paras(S[4]["paragraphs"])}</div></section>')
-    parts.append(f'<section class="qa" id="s1">{rubric(L["flow"])}<div><div class="st">{paras(S[1]["paragraphs"])}</div><div class="actions"><a href="{page["hrefs"]["explore"]}">{esc(L["start"])}</a><a href="{page["hrefs"]["evidence"]}">{esc(L["verify"])}</a></div></div></section>')
+    parts.append(f'<section class="bnd" id="s4">{rubric(S[4]["role"])}<h2>{esc(S[4]["heading"])}</h2><div class="mt8">{paras(S[4]["paragraphs"])}</div></section>')
+    parts.append(f'<section class="qa" id="s1">{rubric(L["flow"])}<div><div class="st">{paras(S[1]["paragraphs"])}</div><p class="small">{esc(L["side"])}</p><div class="actions"><a href="{page["hrefs"]["explore"]}">{esc(L["start"])}</a><a href="{page["hrefs"]["evidence"]}">{esc(L["verify"])}</a></div></div></section>')
     qs = "".join(f'<li><div><div class="q"><a href="{q["href"]}">{esc(q["question"])}</a></div><div class="gets small">{esc(q["gets"])}</div></div></li>' for q in page["starting_questions"])
-    parts.append(f'<section class="qa" id="s9"><h2>{esc(S[9]["heading"])}</h2><div><p class="small">{esc(S[9]["body"])}</p><ol class="qlist">{qs}</ol><p class="small mt12"><a href="{page["hrefs"]["explore"]}">{esc(L["view_all"])}</a></p></div></section>')
-    parts.append(f'<section class="qa" id="s5"><h2>{esc(S[5]["heading"])}</h2><div class="body">{paras(S[5]["paragraphs"])}</div></section>')
+    parts.append(f'<section class="qa" id="s9"><div><span class="rubric">{esc(L["questions_eyebrow"])}</span><h2>{esc(S[9]["heading"])}</h2></div><div><p class="st">{esc(L["questions_title"])}</p><p class="small">{esc(S[9]["body"])}</p><ol class="qlist">{qs}</ol><p class="small mt12"><a href="{page["hrefs"]["explore"]}">{esc(L["view_all"])}</a></p></div></section>')
+    parts.append(f'<section class="qa" id="s5"><div>{h2(S[5])}</div><div class="body">{paras(S[5]["paragraphs"])}</div></section>')
     v = page["system_visual"]
-    parts.append(f'<section class="qa" id="s6"><h2 id="system" tabindex="-1">{esc(S[6]["heading"])}</h2><div><div class="body">{paras(S[6]["paragraphs"])}</div>'
-                 f'<div class="fig mt18" data-visual-id="{esc(v["id"])}"><span class="rubric">{esc(L["visual_eyebrow"])}</span><h3 class="fig-t">{esc(v["title"])}</h3><p class="cap">{esc(v["question"])}</p><div class="body"><p>{esc(v["alt_text"])}</p></div><p class="small mt8"><a href="{v["canonical_href"]}">{esc(L["open_record"])}</a></p></div></div></section>')
+    parts.append(f'<section class="qa" id="s6"><div>{rubric(S[6]["role"])}<h2 id="system" tabindex="-1">{esc(S[6]["heading"])}</h2></div><div><div class="body">{paras(S[6]["paragraphs"])}</div>'
+                 f'<span class="rubric mt18">{esc(L["visual_eyebrow"])}</span>{figure(v, shell["labels"]["cite"], DISC.origin(), heading="h3", boundary_label=L["boundary"], open_label=L["open_record"])}</div></section>')
     for o, i in ((7, "s7"), (8, "s8")):
-        parts.append(f'<section class="qa" id="{i}"><h2>{esc(S[o]["heading"])}</h2><div class="body">{paras(S[o]["paragraphs"])}</div></section>')
+        parts.append(f'<section class="qa" id="{i}"><div>{h2(S[o])}</div><div class="body">{paras(S[o]["paragraphs"])}</div></section>')
     f = page["featured"]
     if f:
         parts.append(f'<section class="qa" id="sf">{rubric(L["featured"], tag="h2")}<div><article class="compact first-obj">{clock(L["evidence_period"], esc(f["evidence_period"]))}<div class="q"><a href="{f["href"]}">{esc(f["title"])}</a></div><div class="st"><p>{esc(f["thesis"])}</p></div><div class="open"><a href="{f["href"]}">{esc(L["open_reading"])}</a> · <a href="{page["hrefs"]["readings"]}">{esc(L["all_readings"])}</a></div></article></div></section>')
@@ -272,6 +276,8 @@ def reading(page: dict, shell: dict) -> str:
     steps = []
     for x in page["trace"]:
         srcs = " · ".join(f'<a href="{s["data_href"]}">{esc(s["title"] or s["id"])}</a>' for s in x["sources"])
+        if srcs:
+            srcs = f'{esc(L["source_record"])}: ' + srcs
         if x["no_locator_note"]:
             srcs += (" · " if srcs else "") + esc(x["no_locator_note"])
         flag = f' · <span data-path-state>{esc(x["state_flag"])}</span>' if x["state_flag"] else ""

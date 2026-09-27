@@ -35,6 +35,12 @@ Each was needed by a design actually rendered; none is filled with authored copy
   languages) — without it the index and spine are unnamed navigation regions (DEBT-006); Design ships them unnamed
   rather than inventing the label.`
 
+For steward confirmation (a composition decision that touches governed structure, raised by the final review):
+Home renders its governed sections in the order 3, 4, 1, 9, 5, 6, 7, 8 (the three figures and their records first,
+then the boundary, then the product statement and the questions), not in the Page Spec's `section_order`; the section
+texts are intact. Design treats section order on Home as composition (`01_FOUNDATIONS.md` §4.1 item 6); if the steward
+reads `section_order` as governed, the Lock item is revised and the order restored.
+
 Noted, not escalated (governed formats Design does not reword): the record period label ("Mar-2025–Jan-2026" in
 English, "مارس 2025 – يناير 2026" in Arabic) against the prose "March 2025 to January 2026"; ISO dates inside period
 strings ("2022-11-07") against the prose "November 2022" — Design isolates them as unbroken left-to-right runs; the

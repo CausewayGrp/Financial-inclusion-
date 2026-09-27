@@ -1,5 +1,20 @@
 # Repository Change Log
 
+## 2026-09-27 — Design D1: independent final review adjudicated; corrections; evidence committed
+
+Same branch and pull request. A repository-only final review (`design/exploration/d1_canvas/review/final_review.md`)
+returned NOT ACCEPTED with eight MUST-FIX items; all are closed and re-verified (`design/01_FOUNDATIONS.md` §6, §4.4;
+decision DL-D1-008): the Home system visual renders through its contract frame (boundary, scope, credit, link); one
+verification spine at any width with the index at the foot on phones; readable fallback tables at 320 px; forced
+colours keep chart text; the record's disclosure content prints; the F6 attributes the validator requires are
+carried; every governed kicker, label and gloss the baseline prints is rendered and `check_content.py --text` proves
+text-block parity; `02_TOKENS.json` is generated and checked by `design/reference/tokens.py`; `check_trio.py` gains a
+keyboard-only path, degraded-state checks and the committed PNG evidence (`design/evidence/d1/`, 18 files); records
+corrected (`01_FOUNDATIONS.md` status and stub, `09_CODE_HANDOFF.md` rows, DEBT-003 closed, DEBT-010 re-measured,
+grammar-state ledger rows reconciled); the nine lens reports and the review committed. Two items recorded rather
+than changed (Home section order for steward confirmation; navigation without JavaScript below 900 px). No governed
+content changed.
+
 ## 2026-09-27 — Design D1 (in progress): reference implementation of the stress trio; Design Intent Lock; tokens
 
 Same branch and pull request. `design/reference/yfie/render.py` (composition of the converged direction with every

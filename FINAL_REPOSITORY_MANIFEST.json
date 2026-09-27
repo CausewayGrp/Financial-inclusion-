@@ -29,7 +29,7 @@
   "CONTROLLED_CONTRACT": 2,
   "CURRENT_DOCUMENT": 10,
   "CURRENT_PROGRAMME_RECORD": 52,
-  "DESIGN_PACKAGE": 31,
+  "DESIGN_PACKAGE": 60,
   "GENERATED_DIAGRAMS": 9,
   "GENERATED_LITERAL_CLOSURE": 1,
   "GENERATED_PROJECTION": 37,
@@ -1313,6 +1313,78 @@
    "class": "GENERATED_DIAGRAMS"
   },
   {
+   "path": "design/evidence/d1/evidence_CLM-003-ar-1440.png",
+   "class": "DESIGN_PACKAGE"
+  },
+  {
+   "path": "design/evidence/d1/evidence_CLM-003-ar-390.png",
+   "class": "DESIGN_PACKAGE"
+  },
+  {
+   "path": "design/evidence/d1/evidence_CLM-003-ar-print.png",
+   "class": "DESIGN_PACKAGE"
+  },
+  {
+   "path": "design/evidence/d1/evidence_CLM-003-en-1440.png",
+   "class": "DESIGN_PACKAGE"
+  },
+  {
+   "path": "design/evidence/d1/evidence_CLM-003-en-390.png",
+   "class": "DESIGN_PACKAGE"
+  },
+  {
+   "path": "design/evidence/d1/evidence_CLM-003-en-print.png",
+   "class": "DESIGN_PACKAGE"
+  },
+  {
+   "path": "design/evidence/d1/home-ar-1440.png",
+   "class": "DESIGN_PACKAGE"
+  },
+  {
+   "path": "design/evidence/d1/home-ar-390.png",
+   "class": "DESIGN_PACKAGE"
+  },
+  {
+   "path": "design/evidence/d1/home-ar-print.png",
+   "class": "DESIGN_PACKAGE"
+  },
+  {
+   "path": "design/evidence/d1/home-en-1440.png",
+   "class": "DESIGN_PACKAGE"
+  },
+  {
+   "path": "design/evidence/d1/home-en-390.png",
+   "class": "DESIGN_PACKAGE"
+  },
+  {
+   "path": "design/evidence/d1/home-en-print.png",
+   "class": "DESIGN_PACKAGE"
+  },
+  {
+   "path": "design/evidence/d1/readings_same-year-different-number-ar-1440.png",
+   "class": "DESIGN_PACKAGE"
+  },
+  {
+   "path": "design/evidence/d1/readings_same-year-different-number-ar-390.png",
+   "class": "DESIGN_PACKAGE"
+  },
+  {
+   "path": "design/evidence/d1/readings_same-year-different-number-ar-print.png",
+   "class": "DESIGN_PACKAGE"
+  },
+  {
+   "path": "design/evidence/d1/readings_same-year-different-number-en-1440.png",
+   "class": "DESIGN_PACKAGE"
+  },
+  {
+   "path": "design/evidence/d1/readings_same-year-different-number-en-390.png",
+   "class": "DESIGN_PACKAGE"
+  },
+  {
+   "path": "design/evidence/d1/readings_same-year-different-number-en-print.png",
+   "class": "DESIGN_PACKAGE"
+  },
+  {
    "path": "design/exploration/d1_canvas/LENS_BRIEF.md",
    "class": "DESIGN_PACKAGE"
   },
@@ -1369,6 +1441,46 @@
    "class": "DESIGN_PACKAGE"
   },
   {
+   "path": "design/exploration/d1_canvas/review/final_review.md",
+   "class": "DESIGN_PACKAGE"
+  },
+  {
+   "path": "design/exploration/d1_canvas/review/lens_A.md",
+   "class": "DESIGN_PACKAGE"
+  },
+  {
+   "path": "design/exploration/d1_canvas/review/lens_B.md",
+   "class": "DESIGN_PACKAGE"
+  },
+  {
+   "path": "design/exploration/d1_canvas/review/lens_C.md",
+   "class": "DESIGN_PACKAGE"
+  },
+  {
+   "path": "design/exploration/d1_canvas/review/lens_D.md",
+   "class": "DESIGN_PACKAGE"
+  },
+  {
+   "path": "design/exploration/d1_canvas/review/lens_E.md",
+   "class": "DESIGN_PACKAGE"
+  },
+  {
+   "path": "design/exploration/d1_canvas/review/lens_F.md",
+   "class": "DESIGN_PACKAGE"
+  },
+  {
+   "path": "design/exploration/d1_canvas/review/lens_G.md",
+   "class": "DESIGN_PACKAGE"
+  },
+  {
+   "path": "design/exploration/d1_canvas/review/lens_H.md",
+   "class": "DESIGN_PACKAGE"
+  },
+  {
+   "path": "design/exploration/d1_canvas/review/lens_I.md",
+   "class": "DESIGN_PACKAGE"
+  },
+  {
    "path": "design/exploration/d1_canvas/tiles.py",
    "class": "DESIGN_PACKAGE"
   },
@@ -1382,6 +1494,10 @@
   },
   {
    "path": "design/reference/check_trio.py",
+   "class": "DESIGN_PACKAGE"
+  },
+  {
+   "path": "design/reference/tokens.py",
    "class": "DESIGN_PACKAGE"
   },
   {

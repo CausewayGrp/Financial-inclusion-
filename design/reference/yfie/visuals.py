@@ -79,6 +79,16 @@ def _pct(v, lo=1.0, hi=88.0, vmax=7000.0):
     return lo + (hi - lo) * (v / vmax)
 
 
+def axis_max(values, step: float = 1000.0) -> float:
+    """A zero-based axis end just above the largest value (the next `step` above 1.08 × max), never clipping."""
+    import math
+    m = max(values)
+    return step * math.ceil(m * 1.08 / step)
+
+
+FIG_ATTRS = 'data-visual-fallback="ordered-text" data-image-independent="true" data-noncolour-semantic="text-structure-label-position"'
+
+
 def svg_mark(kind: str, x: str, cy: float, r: float) -> str:
     """One mark per publication, the same in every panel: ● Annual Report 2024, □ Annual Report 2025, ◎ IMF.
     Drawn from percentage x (no rotation: a transform would need the absolute x)."""
@@ -91,27 +101,32 @@ def svg_mark(kind: str, x: str, cy: float, r: float) -> str:
 
 def p1_rows(d: dict) -> str:
     """Panel 1 as rows: one row per publication keyed by its governed label (HTML, so it wraps and mirrors), the value
-    on a horizontal axis from zero, the value printed above the mark."""
+    on a horizontal axis from zero, the value printed above the mark. The axis end and its ticks come from the data."""
+    vmax = axis_max([v["y"] for v in d["panel1"]])
+    step = vmax / 4
     rows = []
     for val, kind in ((d["panel1"][0], "circle"), (d["panel1"][1], "square")):
-        x = _pct(val["y"])
+        x = _pct(val["y"], vmax=vmax)
         track = (f'<svg class="trk" width="100%" height="38" aria-hidden="true" focusable="false" direction="ltr">'
                  f'<line class="stem" x1="1%" y1="26" x2="{x:.2f}%" y2="26"/>{svg_mark(kind, f"{x:.2f}%", 26, 7)}'
                  f'<text class="val" x="{x:.2f}%" y="11" text-anchor="middle">{plain_num(val["y"])}</text></svg>')
         rows.append(f'<div class="row"><div class="rl">{esc(val["series_label"])}</div>{track}</div>')
-    ticks = "".join(f'<line class="tick" x1="{_pct(t):.2f}%" y1="0" x2="{_pct(t):.2f}%" y2="5"/><text class="lbl" x="{_pct(t):.2f}%" y="18" text-anchor="middle">{t:,}</text>' for t in (0, 2000, 4000, 6000))
+    ticks = "".join(f'<line class="tick" x1="{_pct(t, vmax=vmax):.2f}%" y1="0" x2="{_pct(t, vmax=vmax):.2f}%" y2="5"/><text class="lbl" x="{_pct(t, vmax=vmax):.2f}%" y="18" text-anchor="middle">{plain_num(int(t))}</text>' for t in (0, step, 2 * step, 3 * step))
     axis = (f'<div class="row ax-row"><div></div><svg class="ax" width="100%" height="22" aria-hidden="true" focusable="false" direction="ltr">'
             f'<line class="axis" x1="1%" y1="0.5" x2="88%" y2="0.5"/>{ticks}</svg></div>')
     return f'<div class="p1">{"".join(rows)}{axis}</div>'
 
 
 def lane(points: dict, mark: str) -> str:
-    """Panel 2, one lane: the indexed path 2021–2024 on its own axis whose baseline is the index origin (2021 = 100)."""
-    xs = [2021, 2022, 2023, 2024]
-    def x(yr): return 12 + 82 * (xs.index(yr) / 3)
-    def y(v): return 24 + (200 - 24 - 36) * (1 - (v - 100) / (122 - 100))
+    """Panel 2, one lane: the indexed path on its own axis whose baseline is the index origin (first year = 100);
+    years and the axis top come from the data."""
+    import math
+    xs = sorted(points)
+    top = max(110.0, 10 * math.ceil(max(p["value"] for p in points.values()) * 1.02 / 10))
+    def x(yr): return 12 + 82 * (xs.index(yr) / (len(xs) - 1))
+    def y(v): return 24 + (200 - 24 - 36) * (1 - (v - 100) / (top - 100))
     g = ['<line class="axis" x1="12%" y1="24" x2="12%" y2="164"/>', '<line class="axis" x1="12%" y1="164" x2="94%" y2="164"/>']
-    for t in (110, 120):
+    for t in range(110, int(top) + 1, 10):
         g.append(f'<line class="grid" x1="12%" y1="{y(t):.1f}" x2="94%" y2="{y(t):.1f}"/><text class="lbl" x="10%" y="{y(t)+4:.1f}" text-anchor="end">{t}</text>')
     g.append('<text class="lbl origin" x="10%" y="168" text-anchor="end">100</text>')
     for yr in xs:
@@ -126,7 +141,7 @@ def lane(points: dict, mark: str) -> str:
     return f'<svg class="rv2" width="100%" height="200" aria-hidden="true" focusable="false" direction="ltr">{"".join(g)}</svg>'
 
 
-def rv001_figure(v: dict, cite_label: str, origin: str | None) -> str:
+def rv001_figure(v: dict, cite_label: str, origin: str | None, heading: str = "h2") -> str:
     """The whole figure object: frame (rubric, title, question, scope), panel 1 rows, panel 2 lanes with the
     not-comparable divider between them, the in-frame note, boundary, credit, canonical link (absolute when the
     deployment origin is set) and cite action, then the visible text alternative."""
@@ -135,24 +150,34 @@ def rv001_figure(v: dict, cite_label: str, origin: str | None) -> str:
         r = next(r for r in series if r["x"] == 2021)
         return f'<span class="base">2021 · {num(r["y"])} {esc(r["unit"])}</span>'
     canon = (origin or "") + f["full_record"]
-    return (f'<figure class="fig" data-visual-id="{esc(v["id"])}" data-image-independent="true"><span class="rubric">{esc(v["labels"]["analytical_question"])}</span><h2 class="fig-t">{esc(f["title"])}</h2><p class="cap">{esc(v["question"])}</p><p class="cap">{esc(f["scope"])}</p>'
+    return (f'<figure class="fig" data-visual-id="{esc(v["id"])}" {FIG_ATTRS}><span class="rubric">{esc(v["labels"]["analytical_question"])}</span><{heading} class="fig-t">{esc(f["title"])}</{heading}><p class="cap">{esc(v["question"])}</p><p class="cap">{esc(f["scope"])}</p>'
             f'<div class="panels"><div class="panel p1p"><p class="ph">2024 · {esc(d["unit_usd"])}</p><p class="cap same"><b>{esc(f["same_year"])}</b></p>{p1_rows(d)}</div>'
             f'<div class="panel p2"><p class="ph">{esc(d["unit_index"])} · {esc(v["labels"]["derived"])}</p>'
             f'<div class="lanes"><div class="lane"><h3>{esc(d["label_cby"])}</h3>{base(d["cby"])}{lane(d["cby_index"], "square")}</div><div class="between">{esc(f["not_comparable"])}</div><div class="lane"><h3>{esc(d["label_imf"])}</h3>{base(d["imf"])}{lane(d["imf_index"], "ring")}</div></div><p class="cap note">{esc(f["note"])}</p></div></div>'
             f'<div class="foot"><p class="b"><b>{esc(f["boundary_label"])}</b> {esc(f["boundary"])}</p><p>{esc(f["credit"])}</p><p>{esc(f["full_record_label"])} <a class="canon" dir="ltr" href="{esc(f["full_record"])}">{esc(canon)}</a> · <button type="button" class="tbtn" data-cite>{esc(cite_label)}</button></p></div>'
-            f'<div class="alt"><h3 class="alt-h">{esc(v["labels"]["text_alternative"])}</h3><p class="small">{esc(v["alt_text"])}</p><div class="table-wrap" tabindex="0">{rv001_tables(d, v)}</div></div>'
+            f'<div class="alt" data-visual-fallback="ordered-text"><h3 class="alt-h">{esc(v["labels"]["text_alternative"])}</h3>'
+            f'<p class="small"><b>{esc(v["labels"]["what_it_shows"])}</b> {esc(v["alt_text"])}</p><p class="small"><b>{esc(v["labels"]["scope"])}:</b> {esc(f["scope"])}</p>'
+            f'<div class="table-wrap" tabindex="0">{rv001_tables(d, v)}</div></div>'
             f'<figcaption class="sr-only">{esc(v["alt_text"])}</figcaption></figure>')
 
 
 FIGURES = {"RV-CWR-001": rv001_figure}
 
 
-def figure(v: dict, cite_label: str, origin: str | None) -> str:
+def figure(v: dict, cite_label: str, origin: str | None, heading: str = "h2", eyebrow: str | None = None, open_label: str | None = None, boundary_label: str | None = None) -> str:
     """Draw a bound visual per its contract. D1 draws RV-CWR-001; any other contract renders its governed text
-    alternative as a frame (no chart is invented — SUPPORTING and TABLE_TEXT_FIRST tiers never plot values)."""
+    alternative as a frame with the same anatomy — rubric, title, question, scope, the alternative, boundary, credit,
+    canonical link (no chart is invented: SUPPORTING and TABLE_TEXT_FIRST tiers never plot values)."""
     if v["id"] in FIGURES:
-        return FIGURES[v["id"]](v, cite_label, origin)
-    return (f'<figure class="fig" data-visual-id="{esc(v["id"])}" data-image-independent="true"><span class="rubric">{esc(v["labels"]["analytical_question"])}</span><h2 class="fig-t">{esc(v["title"])}</h2>'
-            f'<p class="cap">{esc(v["question"])}</p><div class="body"><p>{esc(v["alt_text"])}</p></div>'
-            f'<div class="foot"><p class="b"><b>{esc(v["labels"]["does_not_establish"])}</b> {esc(v["prohibited_inference"])}</p><p>{esc(v["labels"]["source"])} {esc(v.get("credit") or "")}</p>'
-            f'<p>{esc(v["labels"]["full_record"])} <a class="canon" dir="ltr" href="{esc(v["canonical_href"])}">{esc((origin or "") + v["canonical_href"])}</a></p></div><figcaption class="sr-only">{esc(v["alt_text"])}</figcaption></figure>')
+        return FIGURES[v["id"]](v, cite_label, origin, heading)
+    rub = eyebrow if eyebrow is not None else v["labels"]["analytical_question"]
+    scope = f'{v["period"]} · {v["universe"]}' if v.get("period") or v.get("universe") else ""
+    canon = (origin or "") + v["canonical_href"]
+    link = f'<a class="canon" dir="ltr" href="{esc(v["canonical_href"])}">{esc(canon)}</a>' if not open_label else f'<a href="{esc(v["canonical_href"])}">{esc(open_label)}</a>'
+    bl = boundary_label or v["labels"]["does_not_establish"].rstrip(":")
+    return (f'<figure class="fig" data-visual-id="{esc(v["id"])}" {FIG_ATTRS}><span class="rubric">{esc(rub)}</span><{heading} class="fig-t">{esc(v["title"])}</{heading}>'
+            f'<p class="cap">{esc(v["question"])}</p>'
+            f'<div class="alt" data-visual-fallback="ordered-text"><h3 class="alt-h">{esc(v["labels"]["text_alternative"])}</h3><p class="body"><b>{esc(v["labels"]["what_it_shows"])}</b> {esc(v["alt_text"])}</p>'
+            + (f'<p class="small"><b>{esc(v["labels"]["scope"])}:</b> {esc(scope)}</p>' if scope else "") + "</div>"
+            f'<div class="foot"><p class="b"><b>{esc(bl)}:</b> {esc(v["prohibited_inference"])}</p><p>{esc(v["labels"]["source"])} {esc(v.get("credit") or "")}</p>'
+            f'<p>{esc(v["labels"]["full_record"])} {link} · <button type="button" class="tbtn" data-cite>{esc(cite_label)}</button></p></div><figcaption class="sr-only">{esc(v["alt_text"])}</figcaption></figure>')

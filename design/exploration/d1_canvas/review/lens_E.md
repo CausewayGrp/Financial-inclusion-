@@ -1,0 +1,33 @@
+# LENS E — Frontend architecture: build and propagation cost (T1–T4)
+
+Constraints applied: `scripts/build.py` static HTML, one stylesheet, vanilla runtime, CSP `style-src 'self'` (validate.py F6-G05 rejects inline styles), preserved hooks. Non-discriminating (equal in all four, fixed by the production shell): no composer emits `id="main"`, the skip link, `#search-dialog`, `#utility-status`, `data-*` runtime hooks or `@media print`; all use `.table-wrap` without `tabindex`. Inline `style=` attributes to convert to classes: T1 19, T2 16, T3 20, T4 8. Production-equivalent CSS: T1 11.8 KB, T2 11.6 KB, T3 12.0 KB, T4 14.1 KB (site today 47.8 KB, 288 pages). No page-level horizontal overflow at 320 px in any proposition (own renders, scratchpad).
+
+## 1. Per proposition
+
+**T1 · Register.** Establishes: one object (`entry` = margin · statement · apparatus, t1.py:181) for every block, no sticky elements, one breakpoint. MUST-FIX: (a) figure values never render — `num()` places an HTML `<bdi>` inside SVG `<text>` (proto_common.py:112,138); the element lands in the SVG namespace with a 0×0 box (measured), so panel 1 shows marks without 6,245/3,422.16 and lanes without values (crops/T1-reading-en-figure.png, tiles/T1-reading-en-m-3.png); (b) viewBox scaling: at 320 px panel 1 renders at 0.60 scale, 11 px labels → 6.6 px (own render). SHOULD-FIX: fixed 200/220 px side columns starve the statement to 428 px at 1000 px and wrap the primary nav to three rows (own render @1000); the apparatus column is empty on most entries (fold/T1-record-en-d.png). Misreading: "8.55%" and "+11%" typeset as two large standalone figures beside the title (fold/T1-record-en-d.png) — a screenshot reads two KPIs.
+
+**T2 · Argument.** Establishes: cheapest layout — one column, one grid only on Readings (t2.py:102), one breakpoint, shortest CSS, print-trivial. MUST-FIX: (a) the same `<bdi>` value loss (tiles/T2-reading-ar-m-3.png: lanes without values); (b) panel 1 at 0.75 scale at 320 px → 8.3 px labels (own render). SHOULD-FIX: emphasis by literal string replacement of five numbers (t2.py:246) — per-record, cannot propagate, silently fails on restatement; weight 300 adds a font face per language; `.col` has two widths (760/1120); no wide grammar for Compare or Data & sources. Misreading: desktop first screen carries title and thesis only (fold/T2-reading-en-d.png) — nothing evidential above the fold.
+
+**T3 · Strata.** Establishes: `stratum()` + `trail()` (t3.py:221–229) generate index and edges from one structure. MUST-FIX: (a) computed inline `style="grid-row:1 / span N"` (t3.py:229) — CSP violation and data-dependent; needs a wrapper element; (b) mobile reorders with flex `order` (t3.py:158–159): the trail's links sit visually between the head and stratum 01 (fold/T3-record-ar-m.png) but last in DOM — focus order ≠ visual order; (c) `<bdi>` value loss (crops/T3-reading-ar-figure.png) and the deepest padding nest: panel 1 at 0.54 scale at 320 px → 5.9 px labels (own render). SHOULD-FIX: sticky trail taller than the viewport (fold/T3-record-en-d.png) — lower links unreachable until page end; hard-coded number bolding (t3.py:271); surfaces and bands need print overrides. Misreading: first mobile screen is a title box plus index chips (fold/T3-record-ar-m.png) — no evidence in a first-screen screenshot.
+
+**T4 · Instrument.** Establishes: mobile-first; percentage-coordinate SVG with no viewBox keeps text native at every width (12.5/11 px measured at 320 and 1440); `svgnum()` avoids the `<bdi>` bug (crops/T4-reading-en-figure.png shows all values); 8 static inline styles; one grammar (`qa`/`bnd`/`compact`/`spine`/`strip`) generated from one `index`/`edges` structure in DOM order (the strip is in flow, no `order`); no overflow 320–1440 (inspect/, own renders). Costs: three breakpoints (600/900/1200) → six layouts per page to test; index and edges emitted twice and hidden per breakpoint. MUST-FIX: (a) `paced()` splits governed text by regex and marks the resolution sentence by a hard-coded English/Arabic prefix (t4.py:310–320) — content-coupled, silently drops on any wording change; (b) WIDE grids place children by order — `.qa` must have exactly two children, `.compact .clock` spans three rows (t4.py:227–233) — an undocumented contract that breaks silently; (c) sticky spine taller than the viewport (fold/T4-home-ar-d.png; t4.py:209). SHOULD-FIX: figure table in a closed `<details>` (t4.py:380) — not printed, not the default no-SVG fallback; `footer()` finds the trust group by `href.endswith("/about/")` (t4.py:267); percentage geometry cannot use `<polyline>`/`<path>` and cannot prevent label collisions on dense series — fine for RV-CWR-001, not a general chart grammar; `inspect/` (09:07) predates the 09:10 edit of t4.py and lacks the value labels that `crops/` (09:12) shows — regenerate before citing. Misreading: at 320 px the panel-1 rows read as two bars, which is the intended reading.
+
+## 2. Ranking
+
+T4 > T2 > T1 > T3. T4 is cheapest to propagate cleanly: the only one that survives 320 px, CSP and the value-label bug without rework, with a grammar already generated from data. T2 is cheaper in raw CSS but its figure fails at small widths and it has no grammar for Compare or Data. T1's fixed side columns break between 900 and 1100 px and waste a third of the width. T3 needs structural fixes (wrapper, DOM order) before it is CSP-legal.
+
+## 3. Convergence
+
+For the builder: one figure implementation serves 320–1440 without scaling text — T2 cannot do that without rewriting the shared helpers. For the user: nothing else material; the seven-question index is functionally T3's trail.
+
+## 4. Three improvements to T4
+
+1. Delete `paced()`; if the resolution sentence must be marked, the Master declares it — the build never splits governed text.
+2. Make grids order-independent (`.qa>:first-child{grid-column:1}.qa>:not(:first-child){grid-column:2}`, same for `.compact`); wrap objects so `span 20` goes; give the spine `max-height:calc(100vh - 40px);overflow:auto`.
+3. Take the figure table out of `<details>` (open, print-safe), convert the 8 inline styles to classes, add `tabindex="0"` to `.table-wrap`, add `@media print` removing spine and strip.
+
+## 5. ESCALATION CANDIDATES
+
+- Shared table (`rv001_tables`) prints "6245" without a separator beside "3,422.16" (tiles/T1-reading-en-m-3.png) — all four propositions.
+- T4 figure labels read "100.0"/"118.0" while the table reads "100"/"118" (crops/T4-reading-en-figure.png vs tiles/T1-reading-en-m-3.png) — one governed value, two formats.
+- T1–T3 figures show marks without their values (rendering, not content) — the figure alone does not carry 6,245/3,422.16.
