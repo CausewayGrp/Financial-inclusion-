@@ -1,6 +1,6 @@
 # Design package — Yemen Financial Inclusion Evidence · أدلة الشمول المالي في اليمن
 
-Status: **D0 Orientation — records opened, awaiting steward landing and review.** No design thesis chosen, no screen
+Status: **D0 Orientation — records opened, landed by the steward (`7c9b8a1`) and directly verified.** No design thesis chosen, no screen
 designed, no design system published. Not PUBLIC RELEASE READY.
 
 ## 1. What this package is
@@ -30,6 +30,13 @@ previewed with `python3 -m http.server 4173 --directory design/reference/out`. B
 
 No fingerprint mismatch was found. Direct verification of the two authority hashes and the §8 command suite is left to
 the steward (see §7, "Environment").
+
+**Steward verification (2026-09-27, `design/d0-orientation` at `7c9b8a1`, re-run on `main` at the same commit).** The
+steward hashed the files directly: Production Master
+`17db032b15da16fc4b5b3c3b49f19aebf2ecb4ec46634613fe8505d0f038690b`, Page Specs
+`d45748046ea56fd0e67fdf112f9888de65b3fe7fab46ce6f51de3a80824b69aa` — both match the brief. Every `CONTRIBUTING.md` §5
+gate was run and passed, the two browser suites included; the evidence is in DEBT-001 (`DESIGN_DEBT.md`, CLOSED). The
+Design-environment statements in this table and in §7 are kept as the record of what D0 itself could verify.
 
 ## 3. Supplied visual board, colour board or homepage mockup
 
@@ -199,6 +206,7 @@ not public release (REL-01…04 remain).
 - Arabic / responsive / a11y: none.
 - Code: none.
 - Compromise: authority hashes verified indirectly; §8 suite NOT RUN → DEBT-001.
+- Steward, 2026-09-27: DEBT-001 closed — hashes verified directly and the §8 suite run green (§2).
 
 ### DL-D0-002 · D0 · 2026-09-27 · No binding visual reference
 - Problem: what visual direction binds D1.

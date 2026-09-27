@@ -1,5 +1,13 @@
 # Repository Change Log
 
+## 2026-09-27 — Design D0: steward verification recorded in the Design README
+
+`design/00_DESIGN_README.md` still read "awaiting steward landing" and left direct authority verification to the
+steward after D0 landed (`7c9b8a1`). Its status line, a steward verification note under §2 (direct Master and Page
+Specs SHA-256, both matching; every `CONTRIBUTING.md` §5 gate green) and a steward line under DL-D0-001 now record
+this, in line with DEBT-001 (CLOSED). Claude Design's own statements and reasoning are unchanged. No file outside
+`design/` changed except this changelog, the manifest and checksums.
+
 ## 2026-09-27 — Design D0: orientation records landed
 
 Claude Design's D0 hand-back, landed by the steward on `design/d0-orientation` (base `6d954c1`) because the Design
