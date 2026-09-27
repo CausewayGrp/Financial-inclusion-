@@ -1,10 +1,9 @@
 # D1 — Theses and foundations
 
-> STATUS: **D1 IN PROGRESS — §1 holds thesis HYPOTHESES (T1–T3 first generation, T4 second generation); §2 records
-> the exploration so far; §3–§5 are not written.** Nothing in this file is an accepted Design decision until §3
-> (comparison and convergence) and §4 (Design Intent Lock) are written after the independent critique, the native-size
-> inspection and the rendered stress tests. No thesis is chosen. A hypothesis is a question put to the canvas, not an
-> answer.
+> STATUS: **D1 IN PROGRESS — CONVERGED ON T4 · INSTRUMENT (§3.6, DL-D1-006). §1 holds the thesis hypotheses; §2 the
+> exploration and inspection; §3 the critique, adjudication, adversarial tests and the decision; §4 (Design Intent
+> Lock) and §5 (foundational grammar) are not yet written.** The decision is accepted within D1 only; it becomes a
+> Lock when §4 is written from the rendered reference implementation, and nothing propagates before D1 exits.
 
 Gate: D1 · Branch: `claude/practical-cray-sr26c5` (see the process note in `ESCALATIONS.md`) · Accepted start
 `8bf19efad7505792ca22e0a3bda1db31fb85d33c` (`main`, D0 accepted). Authority fingerprints re-verified at gate start:
@@ -408,9 +407,155 @@ Conclusion of the paper test: no family requires a second grammar; two require a
 320 px; the Data & sources register). This does not decide convergence; the lens critique and the adversarial tests
 do.
 
-## 3. Comparison and convergence
+## 3. Comparison and convergence (27 September 2026)
 
-_Not yet written — after the canvas exploration, the critique and the rendered stress tests._
+### 3.1 How the critique was run
+
+Nine independent reviewers, each given the same brief (`design/exploration/d1_canvas/LENS_BRIEF.md`: the product, the
+firewall, the RV-CWR-001 contract, what each proposition claims, where the renders are, a fixed report format, no
+scores, "T4 is a candidate, not the answer") and the same rendered evidence: first screens at 1440 and 390 px, whole
+pages as tiles, the Record's primary crop and the figure crop for every proposition, and T4 at 320–1440 px. Lenses:
+A senior evidence researcher · B Arabic editorial and RTL director · C accessibility and cognitive UX · D data
+visualisation · E frontend architect · F high-end product-design critic · G journalist · H source-institution
+statistician (CBY-Aden, IMF, World Bank) · I informed bilingual Yemeni professional. Reports are kept at
+`design/exploration/d1_canvas/out/review/lens_*.md` (working material); what matters is recorded here.
+
+Two process facts. (1) The T4 figure crops under `inspect/crops/` that five lenses cited for "values vanish at 320/390"
+predated the value-label fix (§2.5, item 4); the current build prints every value at every width (verified: ten
+`text.val` labels in the figure at 320, 390 and 1440 px, both languages). Those findings are recorded as stale, not
+as defects. (2) Two lenses (A, C) checked T1's tile captions against `interface_copy.json`: governed
+(UI-VIS-STATE-DERIVED, UI-VIS-DISAGREEMENT), so the T1 finding is about the lifted-figure component, not invented text.
+
+### 3.2 What each proposition established, and what was materially rejected
+
+- **T1 · Register** established the strongest apparatus: clock and ID as start-side marginalia that survive a crop in
+  both scripts, a three-column when/what/for-whom register on Home, and the figure's tables inline so a screenshot
+  carries the raw levels (A, D, H, I). **Rejected:** the apparatus that lifts "8.55 %" and "+11 %" out of the governed
+  sentence as two display figures with grammar captions — every lens named it: the record's largest numerals become
+  growth rates without period or object, the derived figure leads with a neutral tag and the source's figure follows
+  with a fault tag (H: "the composition CBY-Aden would formally ask to be corrected"), and the phone's first screen
+  ends on the tiles (G, C). Also: fixed 200/220 px side columns starve the statement between 900 and 1100 px (E);
+  the Arabic margin splits ISO dates mid-token and the Arabic mobile table clips the IMF index column (B, H).
+- **T2 · Argument** established the calmest reading and the best one-move quotation on the Record (period, universe,
+  ID inside the primary crop) (A, G). **Rejected:** the grammar restyles a magazine masthead and a foundation long-read;
+  six bold numerals in light text build a number-first scan path with the bound whispering (A, B, F, I); Plex Light
+  on cream fails Arabic on cheap phones and in sunlight (I); values and records hidden behind disclosures; the
+  figure's two unlabelled stacked dots read as a fall; the Arabic canonical link corrupts at every width (B, D, H).
+- **T3 · Strata** established the clearest verification skeleton and the most scannable record on desktop (labelled
+  strata, chips, tables in frame) (A, I). **Rejected:** the idiom — taupe ground, white cards, teal numbered caps, a
+  right rail — is the knowledge-hub template a Yemeni reader recognises as "about Yemen, for donors" (I, F); the
+  index chips precede the content on every mobile surface (C); the trail does not match the strata on the Reading
+  (F); inline `grid-row` spans break strict CSP and flex `order` breaks focus order (E); the mobile tables clip the
+  IMF column and, in Arabic, lose digits ("2025" → "25") (B, D, H).
+- **T4 · Instrument** established: clock before claim in both scripts and sizes, surviving the crop; no lifted
+  numeral — 8.55 % and +11 % stay a sentence, visible, not amplified; panel 1 as labelled rows on a zero-based
+  horizontal axis with printed values, the only figure a screenshot cannot turn into a fall; the boundary as one
+  second voice on every surface; the Arabic edition the only one that holds at 320 px with link and identifiers
+  intact; a grammar that survives 320 px, CSP and the value-label bug without rework and is generated from data (E);
+  Home's first screen is the evidence with its clocks, not an about-paragraph (F). Ranked first by all nine lenses,
+  for different reasons; none called it finished.
+
+**Rankings by lens (no scores):** A T4 > T1 > T2 > T3 · B T4 > T3 > T2 > T1 · C T4 > T2 > T3 > T1 · D T4 > T1 > T2 >
+T3 · E T4 > T2 > T1 > T3 · F T4 > T1 > T2 > T3 · G T4 > T2 > T1 > T3 · H T4 > T2 > T3 > T1 · I T4 > T1 > T2 > T3.
+
+### 3.3 T4 findings and the corrections applied (composer version 5, canvas version 5)
+
+Material design moves, stated before they were made:
+
+1. **Home demonstrates, per figure.** PROBLEM: paced sentence-blocks let "Areas holding about 23 %…" stand alone as a
+   fourth figure and detached the coverage caveat from the 11.9 % it bounds (A, G); Home's first screen risked reading
+   as six numbers deep (I). CONSTRAINT: the section-3 text is governed and must not be reworded or reordered; the
+   records behind the figures are governed objects. HYPOTHESIS: pace the paragraph as *figure groups* (a new group only
+   at the governed connectives that introduce another measure) and set each group's bounded record — clock, title,
+   population, open — directly under it, so NUMBER + SCOPE + BOUNDARY + VERIFY is one object per figure; the
+   resolution sentence stays set apart. PROOF: the 390 px Home first screen now reads figure → its clock and
+   population → open record (`fold/T4-home-en-m.png`, `-2.png`); "23 %" sits inside the Findex group. AFFECTED:
+   Home only. Escalated: a controlled pacing marker (`ESCALATIONS.md`), because the split points are found by wording.
+2. **The figure carries its verification.** PROBLEM: marks were keyed inconsistently across panels (□ = AR 2025 in
+   panel 1, ● = AR 2025 lane in panel 2: D, H); the "not comparable" divider sat between the panels, readable as "the
+   two annual reports are not comparable" (A, D, H); the lanes' baseline at 95 named the origin only in the header
+   (D); raw levels were hidden in a closed disclosure so a crop lacked them (A, D, H, I); the index printed "100.0/118.0"
+   against the table's "100/118" (all). CONSTRAINT: contract rules — two lanes never on one axis, NOT_COMPARABLE on
+   the lanes' levels, numeric value axes left-to-right in Arabic, text alternative shipped with every chart.
+   HYPOTHESIS: one mark per publication in both panels (● AR 2024, □ AR 2025, ◎ IMF); the divider *between* the two
+   lanes (vertical double rule on wide screens, a rule between the stacked lanes on phones); baseline at the origin
+   100, labelled; each lane's raw 2021 level under its title so the 1.84× level gap sits beside the identical paths;
+   the alt text and both tables visible under the frame; one number rule everywhere. PROOF:
+   `crops/T4-reading-en-figure.png`, `-ar-`, and `inspect/crops/T4-reading-*-figure@320/390/1440.png`. AFFECTED:
+   Reading figure (and the shared table helper — the "6245" fault fixed for all propositions).
+
+Smaller corrections, each from a named finding: index without pills or fill — a numbered hairline list, two columns
+from 600 px, a hairline column on desktop (F, C); weight discipline — semibold only for the first answer, the
+boundary voice and the resolution (F); the record head cut to breadcrumb, rubric, clock, title (F); the seven questions
+and the boundary as `h2` headings (C); axis and caption text in ink-2 at 12 px, not mute on plaster (C); hit areas
+≥ 40 px on spine and index links (C); the Reading has no mobile strip — its index is the foot spine (C); the Home index
+no longer lists the product name as a section (F, I); order-independent grid rules, the sticky spine capped at the
+viewport, no inline styles left in the composer (E); ISO dates isolated as unbroken left-to-right runs (B, I);
+balanced titles and row labels (B); "Cite this page" on the figure itself (G). **Kept against a finding, with the
+reason:** the value axis stays left-to-right in Arabic (B asked for bars growing from the right) because the governed
+contract says so ("numeric time and value axes stay left to right"); pacing by connectives stays for the proposition
+and is escalated for the build (E). **Not in the composer, for the reference implementation:** skip link,
+`:focus-visible`, labelled in-page navigation (a governed label is needed — `ESCALATIONS.md`), print rules,
+absolute canonical URLs in exported frames.
+
+### 3.4 Adversarial tests on T4 (after the corrections)
+
+| Test | Result | Evidence |
+|---|---|---|
+| Screenshot misuse | Passes on the Record (clock, ID, whole statement in the phone's first screen; no lone number) and on the figure (publication-keyed rows with values; boundary, credit, link in frame). Residual: row labels "…Report 2024 / …Report 2025" can still be narrated as before/after — held off by "Same year, different publication" set above the rows | G, A, D, H; `crops/T4-record-*-primary.png`, `crops/T4-reading-*-figure.png` |
+| Source owner | No source number typeset outside its sentence; both CBY-Aden values carry publication and value; credit in frame. Open: the Arabic credit is English (escalated); the IMF lane's state question (escalated) | H |
+| Semantic firewall | Restatement ≠ fall (rows); coinciding paths ≠ confirmation (note under the lanes, raw levels beside them); infrastructure ≠ use (POS record's universe and boundary); people ≠ accounts (Findex group bound to its record); missing ≠ zero (no chart invented for the system visual) | A, D, H |
+| Arabic-native | Composed with its own metrics; the only proposition whose Arabic survives every width without corrupting a link, clipping a table or splitting a date. Honest limit: "a disciplined mirror", not Arabic-first design — the Lock carries the Arabic rules as MUST PRESERVE | B, I |
+| 320 px | No page overflow at any width; the fallback table scrolls inside its wrapper by 8–14 px at 320 px | `inspect_widths.py`, §2.5 |
+| Low bandwidth / no image | Meaning and order survive with no stylesheet; identity survives with no image (name, rules) | §2.5 degraded tests |
+| Genericity | Stripped of content, logo and name, the residue read as "statistics-office methodology page" with a documentation sidebar and pills (F); the sidebar fill and pills are removed in v5; the signature elements (question-first head, clock-first objects, boundary voice, row-form panel) "are copied from nowhere" (F). Yemen through materiality: none of the four propositions achieves it (F, I) — provisional, below | F, I |
+
+### 3.5 The convergence question
+
+*What does YFIE now allow a user to understand or do that a conventional evidence website does not make nearly as
+easy?* Two behaviours, each named as material by several lenses from rendered evidence:
+
+1. **Two published values for one reference year can be read, quoted and screenshotted as a restatement, not a
+   fall** — publication-keyed rows on a zero-based axis with printed values, the boundary and credit in frame; the
+   first-generation panels (stacked markers keyed by a legend) needed text to argue against the fall reading
+   (A, D, F, G, H, I, C).
+2. **A number is never met without its clock and its bound**: clock-before-claim objects make a phone screenshot
+   self-citing (period, ID, whole statement), and the 8.55 % / +11 % disagreement stays a recorded inconsistency
+   inside its sentence rather than a headline (A, C, G, H, I).
+
+Narrower gains: the Arabic edition holds at 320 px with links and identifiers intact (B, I); one figure implementation
+serves 320–1440 px without scaling text and without rework under strict CSP (E); Home's first screen is evidence with
+its clocks (F). **Not material** (parity with the first generation): finding the source (three entries, one scroll,
+in all four); the verification spine as a component (F: "the same footer link strip as T1"); "the seven questions
+everywhere" — true of the Record only; Home and the Reading index their own sections (F, G).
+
+### 3.6 Decision
+
+**T4 · Instrument converges as the D1 design direction.** Not because the lenses rank it first, but because the two
+behaviours above answer the convergence question with rendered evidence and no first-generation proposition can be
+edited into them without becoming T4: T1's lifted apparatus and T2's bold-number scan are the opposite of "no number
+outside its bound"; T3's chip-first mobile and card idiom are the opposite of "the answer first". T1's inline tables and
+T3's labelled verification chips are not borrowed as a hybrid: the tables are the contract's text alternative made
+visible, and the chips already existed in T4's verification voice.
+
+Conditions carried into the Lock (§4) and the reference implementation: the v5 corrections must be verified in real
+rendered code and by the Design review, not assumed from the canvas; the three escalations stay open and the
+implementation renders governed strings as given; the Arabic rules and the number rule are MUST PRESERVE; the genericity
+residue (sidebar, pills) is removed in v5 and re-tested in the implementation.
+
+### 3.7 What remains provisional after convergence
+
+- **Yemen felt, not themed.** No proposition achieved a material grounding (F, I). T4's grounding is by abstraction
+  only — paper and plaster, the logo's three colours as roles, a discipline of rules. Whether proportion, rhythm and
+  surface can carry Yemen without a theme is an open design question for the implementation and for D2+, recorded as
+  DEBT-007; it is not a reason to withhold convergence (the convergence bar is evidence behaviour, not "more Yemen").
+- **Arabic-first**, narrowed to "Arabic composed with its own metrics and verified first at 320 px" (B). Eastern
+  versus Western digits: Western, because the governed Arabic copy uses Western digits (a rule to state, not a default).
+- **Interaction** (search, cite, language, menu, disclosure) is untested on the propositions; it is proven only in
+  the reference implementation with the baseline runtime.
+- **Print and citation** are not designed in the propositions (§2.5 degraded tests); print basics are part of the
+  implementation.
+- **Scaling** beyond the trio is a paper test (§2.6) until D2.
 
 ## 4. Design Intent Lock
 

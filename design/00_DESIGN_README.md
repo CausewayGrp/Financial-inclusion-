@@ -1,8 +1,8 @@
 # Design package — Yemen Financial Inclusion Evidence · أدلة الشمول المالي في اليمن
 
-Status: **D1 in progress — four design propositions (T1 Register, T2 Argument, T3 Strata; second generation T4
-Instrument) exist on the Claude Design canvas with the governed trio content in English and Arabic; no thesis chosen, no
-Design Intent Lock, no design system published, no reference renderer.** D0 accepted on `main` at
+Status: **D1 in progress — converged on T4 · Instrument (DL-D1-006) after four canvas propositions, a nine-lens
+independent critique and the adversarial tests; no Design Intent Lock yet, no design system published, no reference
+renderer yet; three escalations open.** D0 accepted on `main` at
 `8bf19efad7505792ca22e0a3bda1db31fb85d33c`. D1 is developed on `claude/practical-cray-sr26c5` (process note in
 `ESCALATIONS.md`) and lands through one draft pull request into `main`
 (https://github.com/CausewayGrp/Financial-inclusion-/pull/3). D1 records: `01_FOUNDATIONS.md` (hypotheses,
@@ -317,3 +317,32 @@ not public release (REL-01…04 remain).
 - Compromise: at this commit T4 is rendered (12 boards, no horizontal overflow at 390 and 1440 px) and on the canvas,
   but not yet inspected at 320/360/430/768/1024/1280 px or at high DPI, not critiqued, not compared
   (`01_FOUNDATIONS.md` §2.5).
+
+### DL-D1-006 · D1 · 2026-09-27 · Convergence: T4 · Instrument is the D1 design direction
+- Problem: choose one direction from four propositions without scoring, on rendered evidence, against the convergence
+  bar ("what does YFIE now allow a user to understand or do that a conventional evidence website does not make nearly
+  as easy?").
+- Evidence: nine independent lens reports on the same renders (`01_FOUNDATIONS.md` §3.1–3.2), the native-size
+  inspection (§2.5), the adversarial tests (§3.4). Every lens ranked T4 first; the decision rests on two behaviours,
+  not the ranking: a same-year restatement that cannot be read or screenshotted as a fall (publication-keyed rows with
+  printed values on a zero-based axis), and a number that is never met without its clock and bound (clock-before-claim
+  objects; 8.55 % / +11 % kept inside their sentence).
+- Alternatives: T1 (rejected: the lifted 8.55 % / +11 % apparatus, the composition a source institution would contest;
+  side columns that break at 900–1100 px; Arabic table clipping); T2 (rejected: magazine grammar, bold-number scan path
+  with whispering bounds, light Arabic on cream, hidden values, corrupted Arabic link); T3 (rejected: donor-portal
+  card idiom, chips before content on every mobile surface, a trail that does not match its strata, CSP-illegal inline
+  spans); a hybrid (rejected: the borrowed elements — inline tables, verification chips — are already T4's own contract
+  alternative and verification voice, not a second grammar).
+- Chosen: T4, with the corrections of §3.3 applied in composer/canvas version 5 (Home paced as figure groups each
+  bound to its record; one mark per publication; the not-comparable divider between the lanes; baseline at the index
+  origin; raw 2021 levels beside the lanes; alt text and tables visible; index as a numbered hairline list; weight
+  discipline; headings for the seven questions; contrast and hit-area fixes; no inline styles). Kept against a
+  finding: the value axis stays left-to-right in Arabic (governed contract rule).
+- Arabic / responsive / a11y: the Arabic rules (own metrics, no letter-spacing, isolated numeric and ISO-date runs,
+  balanced titles, Western digits as in governed copy) and the number rule become MUST PRESERVE in the Lock; verified
+  0 page overflow at 320–1440 px; the seven questions and the boundary are `h2`; skip link, focus and labelled in-page
+  navigation belong to the reference implementation.
+- Code: the reference implementation renders T4 on the trio from the same content path; the Design Intent Lock (§4)
+  and `02_TOKENS.json` are extracted only from what that implementation proves.
+- Compromise: three escalations open (Arabic credit line; Home pacing marker; IMF lane state question); Yemen material
+  grounding unresolved (DEBT-007); interaction, print and citation unproven until the implementation.

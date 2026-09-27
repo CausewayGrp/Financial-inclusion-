@@ -42,15 +42,20 @@ def bdi(x) -> str:
     return f'<bdi dir="ltr">{esc(x)}</bdi>'
 
 
-def num(x) -> str:
-    """A number as text: Western digits, thousands separators as in governed copy, isolated as an LTR run."""
+def plain_num(x, year: bool = False) -> str:
+    """A number as plain text: Western digits, thousands separators as in governed copy (years never separated)."""
+    if year:
+        return str(x)
     if isinstance(x, float):
-        s = f"{x:,.2f}".rstrip("0").rstrip(".") if abs(x - round(x)) > 1e-9 else f"{int(round(x)):,}"
-    elif isinstance(x, int):
-        s = f"{x:,}" if abs(x) >= 10000 else str(x)   # years stay unseparated
-    else:
-        s = str(x)
-    return f'<bdi dir="ltr">{s}</bdi>'
+        return f"{x:,.2f}".rstrip("0").rstrip(".") if abs(x - round(x)) > 1e-9 else f"{int(round(x)):,}"
+    if isinstance(x, int):
+        return f"{x:,}"
+    return str(x)
+
+
+def num(x, year: bool = False) -> str:
+    """plain_num, isolated as an LTR run for HTML text."""
+    return f'<bdi dir="ltr">{plain_num(x, year)}</bdi>'
 
 
 def json_block(id_: str, data) -> str:
@@ -146,7 +151,7 @@ def rv001_tables(d: dict, v: dict, lang: str, cls="rvtab") -> str:
     cap = f'{esc(v["title"])} — {esc(v["period"])} — {esc(v["universe"])}'
     p1 = d["panel1"]
     t1 = (f'<table class="{cls}"><caption>{cap}</caption><thead><tr><th scope="col">{esc(L["source"])}</th><th scope="col">2024</th><th scope="col">{esc(d["unit_usd"])}</th></tr></thead><tbody>'
-          + "".join(f'<tr><th scope="row">{esc(r["series_label"])}</th><td>{num(r["x"])}</td><td>{num(r["y"])} <span class="state">{esc(L["reported"])}</span></td></tr>' for r in p1)
+          + "".join(f'<tr><th scope="row">{esc(r["series_label"])}</th><td>{num(r["x"], year=True)}</td><td>{num(r["y"])} <span class="state">{esc(L["reported"])}</span></td></tr>' for r in p1)
           + f'<tr><td colspan="3" class="marker">{esc(L["same_year_revision"])}</td></tr></tbody></table>')
     rows = []
     for yr in (2021, 2022, 2023, 2024):

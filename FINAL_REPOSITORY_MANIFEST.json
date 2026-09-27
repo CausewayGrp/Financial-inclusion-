@@ -29,7 +29,7 @@
   "CONTROLLED_CONTRACT": 2,
   "CURRENT_DOCUMENT": 10,
   "CURRENT_PROGRAMME_RECORD": 52,
-  "DESIGN_PACKAGE": 24,
+  "DESIGN_PACKAGE": 25,
   "GENERATED_DIAGRAMS": 9,
   "GENERATED_LITERAL_CLOSURE": 1,
   "GENERATED_PROJECTION": 37,
@@ -1307,6 +1307,10 @@
   {
    "path": "design/architecture/YFIE_PUBLIC_SITE_MAP.svg",
    "class": "GENERATED_DIAGRAMS"
+  },
+  {
+   "path": "design/exploration/d1_canvas/LENS_BRIEF.md",
+   "class": "DESIGN_PACKAGE"
   },
   {
    "path": "design/exploration/d1_canvas/README.md",

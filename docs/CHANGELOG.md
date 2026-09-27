@@ -1,5 +1,20 @@
 # Repository Change Log
 
+## 2026-09-27 — Design D1 (in progress): convergence on T4 · Instrument after the nine-lens critique
+
+Same branch and pull request. Nine independent critique lenses (evidence researcher, Arabic/RTL director,
+accessibility, data visualisation, frontend architect, product-design critic, journalist, source institution,
+informed Yemeni reader) reviewed the same renders of T1–T4 under one brief (`design/exploration/d1_canvas/LENS_BRIEF.md`);
+their findings, the adjudication, the corrections applied to T4 (composer and canvas version 5), the adversarial
+tests and the convergence decision are in `design/01_FOUNDATIONS.md` §3 and decision DL-D1-006
+(`design/00_DESIGN_README.md`). T4 converges as the D1 direction on two rendered behaviours (a same-year restatement
+that cannot read as a fall; a number never met without its clock and bound). Records: `DESIGN_DEBT.md` (DEBT-005
+closed; DEBT-006…008 opened), `ESCALATIONS.md` (four D1 items raised: Arabic credit line, Home pacing marker, IMF lane
+state question, in-page navigation label), `COVERAGE.csv` (28 stress-trio rows `DESIGNED`; nothing `BUILT`),
+`09_CODE_HANDOFF.md` (D1 implications). No governed content changed; one shared renderer formatting fault
+("6245" without a separator in fallback tables) fixed in the composers. Still to come in D1: the Design Intent Lock,
+`02_TOKENS.json`, the reference implementation of the trio, the Design and independent reviews.
+
 ## 2026-09-27 — Design D1 (in progress): thesis exploration recorded — neutral harness, four canvas propositions
 
 First D1 milestone on `claude/practical-cray-sr26c5` (base `8bf19ef`, D0 accepted; the branch name is a process note

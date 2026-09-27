@@ -9,7 +9,7 @@ from pathlib import Path
 
 HERE = Path(__file__).resolve().parent
 sys.path.insert(0, str(HERE.parent))
-from proto_common import esc, num, bdi, paragraphs, reading_blocks, font_css, rv001_data, rv001_panel1_svg, rv001_panel1_rows_svg, rv001_index_panel_svg, rv001_tables, rv001_frame_lines, LOGO_BLOB  # noqa: E402,F401
+from proto_common import esc, num, plain_num, bdi, paragraphs, reading_blocks, font_css, rv001_data, rv001_panel1_svg, rv001_panel1_rows_svg, rv001_index_panel_svg, rv001_tables, rv001_frame_lines, LOGO_BLOB  # noqa: E402,F401
 from proto_shell import mobile_rules, responsive_rules  # noqa: E402,F401
 
 ROOT = HERE.parents[3]  # repository root
