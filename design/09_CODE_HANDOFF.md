@@ -17,7 +17,21 @@ Contract: `handoff/DESIGN_TO_CODE_CONTRACT.md`. Updated at every gate end; never
 | Print / export | NOT STARTED | Downloads ship disabled until OWN-04 |
 | Reference implementation | DOES NOT EXIST | DEBT-002 |
 
-## State at D2 (in progress — updated at milestones, not back-filled; rows not listed are as at D1)
+## State at D3 (in progress — updated at milestones, not back-filled; rows not listed are as at D2)
+
+| Area | Status | Notes |
+|---|---|---|
+| Routes | ALL 288 BUILD; D1–D3 families VERIFIED | The Reading index, the ten Readings, Measurement, Methodology, the eight trust pages and the bilingual 404 are composed and asserted (`check_site.py --gate d3`: 168 renders, 84 smoke tests, 252 hard-state assertions, 18 degraded renders); Home re-verified after the cold-reader test (in gate d3). Remaining: the three domain answers and the records outside §9.1 (D4), the tool states (D5), the visuals still rendered as text frames (D6) |
+| Compact evidence object | ONE LINK | `render.compact`: the governed action is the only link; its accessible name is the action then the record's title via `aria-labelledby` over the two ids (`co-a<n>`, `co-t<n>`); the title is text. Directory rows, verify objects and Reading objects keep their own markup (one link each) |
+| Figure object | BOUNDARY ONCE | the foot prints `UI-DOM-WHAT-NOT-TO-CONCLUDE` + the prohibited inference once; the text alternative carries what the view shows, scope and the table; a text frame (`figure.fig.fig-text`) shows the description as its body, keeps `h3.alt-h` visually hidden and no `figcaption` (the visible body is the description) |
+| Home | HEAD = STATEMENT + ACTIONS | section 1 and the two governed actions in `.head` before the first figure (`.head .rubric.product` hidden under 600 px); the framing record in `#s6`; the spine's first edge lists all four records with the governed count |
+| Product bar | GROUP SET OFF | `.nav .group` carries a hairline and its label aligns to the links' baseline; `.controls .cite/.report` in `--ink-2` |
+| Arabic tokens | RUBRIC 14 px | `html[dir=rtl] --fs-rubric: 14px` (was 13); `02_TOKENS.json` regenerated |
+| Checks | GATE d3 | `check_site.py --gate d3` (routes: Home, `/readings/`, ten Readings, `/measurement/`, `/methodology/`, eight trust routes; `not_found_checks` on the 404); Home assertions `statement_in_head`, `statement_before_first_figure`, `one_link_per_bound_object`, `boundary_once_per_frame`, `records_edge_lists_all`, `double_rule_spans_column`; Reading `measure_bounded` asserts the measure property (narrower than the column, ≤ 720 px) |
+| Evidence | COMMITTED | `design/evidence/d3/` (38 PNG: first screens at 390 and 1440 px of nine routes in both languages, the 404 at 320 and 1440 px) and `design/evidence/d3/cold_read/` (four verbatim reader reports) |
+| Temporary vs intended | RECORDED | Temporary: the foot spine on phones (DEBT-014); the statement's length on a phone (DEBT-015); the 10 MB mark and the publisher's legibility (DEBT-016, escalated); D2's DEBT-011…013 unchanged. Intended: everything else on this table |
+
+## State at D2 (met at `9c263ac` — the D3 table above supersedes the rows it repeats)
 
 | Area | Status | Notes |
 |---|---|---|

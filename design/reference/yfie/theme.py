@@ -18,7 +18,7 @@ FONT_FACES = """@font-face{font-family:'IBM Plex Sans';font-style:normal;font-we
 CSS = r"""/* Yemen Financial Inclusion Evidence — reference stylesheet (D1, direction T4 · Instrument). Generated once from the converged composer, then maintained here. No inline style anywhere in the site. */
 :root{--paper:#FFFFFF;--plaster:#F5F1E9;--ink:#17212B;--ink-2:#3D4954;--mute:#66717B;--rule:#D8DDE2;--rule-2:#AEB7BF;--ochre:#7A5A1D;--ochre-line:#D6B86A;--counter:#1E5650;
 --fs-body:17px;--lh-body:1.6;--fs-display:32px;--lh-display:1.1;--fs-q:20px;--lh-q:1.4;--fs-st:19px;--lh-st:1.5;--fs-bnd:18px;--lh-bnd:1.55;--fs-clock:13.5px;--lh-clock:1.4;--fs-rubric:12px;--fs-src:14.5px;--lh-src:1.5;--fs-nav:15px;--fs-read:18px;--lh-read:1.65;--measure:64ch;--font:'IBM Plex Sans',sans-serif}
-html[dir=rtl]{--fs-body:18px;--lh-body:1.9;--fs-display:30px;--lh-display:1.35;--fs-q:21px;--lh-q:1.7;--fs-st:20px;--lh-st:1.7;--fs-bnd:19px;--lh-bnd:1.8;--fs-clock:14.5px;--lh-clock:1.7;--fs-rubric:13px;--fs-src:15.5px;--lh-src:1.75;--fs-nav:16px;--fs-read:19.5px;--lh-read:1.95;--measure:34em;--font:'IBM Plex Sans Arabic',sans-serif}
+html[dir=rtl]{--fs-body:18px;--lh-body:1.9;--fs-display:30px;--lh-display:1.35;--fs-q:21px;--lh-q:1.7;--fs-st:20px;--lh-st:1.7;--fs-bnd:19px;--lh-bnd:1.8;--fs-clock:14.5px;--lh-clock:1.7;--fs-rubric:14px;--fs-src:15.5px;--lh-src:1.75;--fs-nav:16px;--fs-read:19.5px;--lh-read:1.95;--measure:34em;--font:'IBM Plex Sans Arabic',sans-serif}
 html{background:var(--paper);color:var(--ink);font-family:var(--font);font-size:var(--fs-body);line-height:var(--lh-body);font-variant-numeric:tabular-nums}
 body{margin:0}
 a{color:inherit;text-decoration:underline;text-decoration-thickness:1px;text-underline-offset:.16em;text-decoration-color:var(--rule-2)}
@@ -47,7 +47,7 @@ p{margin:0 0 .85em}p:last-child{margin-bottom:0}
 .body{max-width:var(--measure)}.body p{color:var(--ink-2)}
 .read{font-size:var(--fs-read);line-height:var(--lh-read);max-width:var(--measure)}
 .small{font-size:var(--fs-src);line-height:var(--lh-src);color:var(--ink-2)}
-.bnd{border-top:3px double var(--counter);padding-top:12px;margin-top:22px;color:var(--counter);max-width:var(--measure)}
+.bnd{border-top:3px double var(--counter);padding-top:12px;margin-top:22px;color:var(--counter)}.bnd>p,.bnd>div,.bnd h2,.bnd h3{max-width:var(--measure)}
 .bnd .rubric{color:var(--counter);margin-bottom:8px}
 .bnd p{font-size:var(--fs-bnd);line-height:var(--lh-bnd);font-weight:500}
 .bnd h2{color:var(--counter)}
@@ -243,10 +243,10 @@ html[dir=rtl]{--fs-display:42px;--fs-q:24px;--fs-st:22px;--fs-body:18px;--fs-rea
 .nav a{text-decoration:none;padding:6px 0;border-bottom:2px solid transparent}
 .nav a[aria-current=page]{border-bottom-color:var(--ink)}
 .nav .group{display:inline-flex;gap:14px;align-items:baseline}
-.nav .glabel{color:var(--mute);font-size:12px;font-weight:600}
+.nav .group{border-inline-start:1px solid var(--rule-2);padding-inline-start:18px}.nav .glabel{color:var(--ink-2);font-size:12px;font-weight:600;padding:6px 0;line-height:calc(var(--fs-nav) * 1.4)}
 [dir=ltr] .nav .glabel{text-transform:uppercase;letter-spacing:.08em}
 .controls{gap:16px}
-.controls .cite,.controls .report{display:inline;color:var(--mute)}
+.controls .cite,.controls .report{display:inline;color:var(--ink-2)}
 .controls .menu{display:none}
 .page{padding:28px 32px 56px;display:grid;grid-template-columns:minmax(0,1fr) 280px;column-gap:40px;row-gap:0;align-items:start}
 .page>.obj{grid-column:1;max-width:840px}
@@ -366,7 +366,7 @@ details.hub[open] summary::before{content:"− "}
 .slot{display:flex;flex-direction:column;gap:4px;font-size:var(--fs-clock);font-weight:600;color:var(--ink-2)}
 .slot select{font:inherit;font-size:var(--fs-src);color:var(--ink);background:var(--paper);border:1px solid var(--rule-2);padding:10px 12px;min-height:44px;max-width:100%}
 .never{margin-top:10px}
-.compare-verdict{border-top:3px double var(--counter);padding-top:12px;margin-top:22px;color:var(--counter);max-width:var(--measure)}
+.compare-verdict{border-top:3px double var(--counter);padding-top:12px;margin-top:22px;color:var(--counter)}.compare-verdict>*{max-width:var(--measure)}
 .compare-verdict .eyebrow{display:block;font-size:var(--fs-rubric);font-weight:600;color:var(--counter);margin-bottom:6px}
 [dir=ltr] .compare-verdict .eyebrow{text-transform:uppercase;letter-spacing:.1em}
 .compare-verdict h3{font-size:var(--fs-q);line-height:var(--lh-q);color:var(--counter)}
@@ -458,4 +458,9 @@ svg.ts .lbl.alt{display:block}
 .obj.prio>.head .clock{grid-column:1}.obj.prio>.head h3{grid-column:2}
 .obj.prio>:not(.head){grid-column:2}
 }
+
+/* D3 — Home head, text frames, phone masthead */
+.head .actions{margin-top:14px}
+.fig-text .alt-body{margin-top:8px;border-top:0;padding-top:0}.fig-text .alt-body .body{font-size:var(--fs-body);line-height:var(--lh-body)}
+@media (max-width:599px){.head .rubric.product{display:none}}
 """

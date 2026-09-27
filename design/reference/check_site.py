@@ -1,8 +1,10 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
-"""Rendered checks for the reference implementation beyond the D1 trio — the D2 hard families — in both languages.
+"""Rendered checks for the reference implementation beyond the D1 trio — the D2 hard families and the D3 synthesis pages
+(Home after the cold-reader test, the Reading index, the Readings, Measurement, Methodology, the trust pages, the 404) —
+in both languages.
 
-  python3 design/reference/check_site.py [--site design/reference/out] [--gate d2] [--shots] [--degraded] [--evidence DIR]
+  python3 design/reference/check_site.py [--site design/reference/out] [--gate d2|d3] [--shots] [--degraded] [--evidence DIR]
 
 Per route × language × width (320, 390, 640, 1440): the viewport-suite conditions (no horizontal overflow, alt on every
 image, exactly one h1, the document dir matches the language, the first Tab lands on the skip link, no element wider
@@ -33,7 +35,16 @@ GATES = {
            "/evidence/CLM-014/", "/evidence/CLM-015/", "/evidence/CLM-031/", "/evidence/CLM-037/", "/evidence/CLM-039/", "/evidence/CLM-044/",
            "/evidence/CLM-045/", "/evidence/compare/", "/data/", "/evidence/VIS-FINDEX-GAPS/", "/evidence/VIS-REMITTANCE-MACRO/", "/evidence/VIS-PAYMENT-ANATOMY/"],
 }
-EVIDENCE_ROUTES = ["/explore/", "/people/", "/access/", "/payments/", "/remittances/", "/reforms/", "/evidence/", "/evidence/compare/", "/data/", "/evidence/CLM-004/", "/evidence/CLM-044/"]
+GATES["d3"] = ["/", "/readings/", "/readings/same-year-different-number/", "/readings/after-transfer-persistence/", "/readings/banking-jump-measurement-basis/",
+               "/readings/define-what-you-count/", "/readings/digital-workaround-not-yet-durable-inclusion/", "/readings/finance-constraint-different-questions/",
+               "/readings/from-rail-to-result-missing-middle/", "/readings/gender-gap-measured-causes-open/", "/readings/microfinance-structural-divergence/",
+               "/readings/reforms-newer-than-people-evidence/", "/measurement/", "/methodology/", "/about/", "/corrections/", "/rights/", "/accessibility/",
+               "/privacy/", "/terms/", "/contact/"]
+EVIDENCE_BY_GATE = {
+    "d2": ["/explore/", "/people/", "/access/", "/payments/", "/remittances/", "/reforms/", "/evidence/", "/evidence/compare/", "/data/", "/evidence/CLM-004/", "/evidence/CLM-044/"],
+    "d3": ["/", "/readings/", "/readings/after-transfer-persistence/", "/readings/banking-jump-measurement-basis/", "/measurement/", "/methodology/", "/about/", "/contact/", "/corrections/"],
+}
+EVIDENCE_ROUTES = EVIDENCE_BY_GATE["d2"]
 HOOKS_ALL = ["#main", "a.skip", "#primary-nav", "[data-search-open]", "[data-cite]", "[data-lang]", "[data-menu][aria-controls=primary-nav]",
              "#utility-status[role=status]", "dialog#search-dialog", "#global-search-dialog[data-search-input]", "[data-search-status]", "[data-search-results]",
              "script#yfie-ui[type='application/json']", "script[src='/assets/app.js']", "link[rel=stylesheet][href='/assets/yfie.css']", "footer nav", "img[alt]",
@@ -42,13 +53,30 @@ HOOKS_FAMILY = {
     "Evidence Record": ["meta[name=yfie-citation]", "meta[name=yfie-record-id]", "[data-evidence-boundary-first-load]", "#source", "[data-record-id] .evidence-cite-button[data-cite]", "#q1", "#q5", "#q7 details", "nav.strip[aria-labelledby=page-title]"],
     "Domain Answer": ["section.bnd", "#verify", "figure[data-visual-id][data-image-independent]", "figure .alt[data-visual-fallback]", "details.more"],
     "Question Entry": ["#questions", ".cluster ol.qlist", "#deeper"],
+    "Orientation": ["section.bnd", "figure[data-visual-id][data-image-independent]", "figure .alt[data-visual-fallback]", ".head .st", ".head .actions", "#system", ".paced .compact.bound", "#sf .compact"],
     "Evidence Directory": ["#global-search[data-search-input]", "#search-results[data-search-results][aria-live]", "details.hub ol.hublist"],
     "Comparison": ["select#compare-a", "select#compare-b", "select#compare-c", "select#compare-d", "#compare-output", "#compare-status[role=status]", "script#yfie-compare", "script#yfie-compare-dimensions", "[data-compare-copy]", "[data-compare-boundary]"],
     "Data & Source": ["[data-source-filter]", "[data-source-filter-status][role=status]", "[data-source-no-results]", "[data-source-record][tabindex='-1']", "details.source-locator-details", ".source-locator [data-source-cite]"],
+    "Reading": ["[data-reading-boundary]", "[data-reading-section]", "[data-reading-verify][data-reading-path-state]", "[data-path-record]", "[data-reading-related]", ".head .st", ".head .clocks time[datetime]"],
+    "Reading Index": ["#featured", "#all ol.objs li.compact"],
+    "Measurement": ["article.prio[id^=MA-][tabindex='-1']", "[data-measurement-readings]", "#agenda"],
+    "Reference / Trust": ["section.qa h2"],
+}
+HOOKS_ROUTE = {
+    "/contact/": ["[data-correction-context][data-context-mode=contact]", "[data-correction-mail][hidden]", "script#yfie-record-ids", "a[href^='mailto:']"],
+    "/corrections/": ["[data-correction-context]", "[data-correction-empty]", "[data-correction-origin][hidden]", "[data-correction-error][hidden][role=alert]"],
 }
 
 
 def family_of(route: str) -> str:
+    if route == "/readings/":
+        return "Reading Index"
+    if route.startswith("/readings/"):
+        return "Reading"
+    if route == "/measurement/":
+        return "Measurement"
+    if route in ("/methodology/", "/about/", "/corrections/", "/rights/", "/accessibility/", "/privacy/", "/terms/", "/contact/"):
+        return "Reference / Trust"
     if route == "/explore/":
         return "Question Entry"
     if route == "/evidence/":
@@ -59,6 +87,8 @@ def family_of(route: str) -> str:
         return "Data & Source"
     if route.startswith("/evidence/"):
         return "Evidence Record"
+    if route == "/":
+        return "Orientation"
     return "Domain Answer"
 
 
@@ -71,6 +101,14 @@ def hard_state(pg, route: str, lang: str) -> dict:
     ev = pg.evaluate
     q = lambda s: ev("(s)=>document.querySelectorAll(s).length", s)  # noqa: E731
     out = {}
+    if route == "/":   # orientation (D3 cold-reader test): the product's statement before the first figure; one link per object; one boundary per frame
+        out["statement_in_head"] = q(".head .st p") >= 1 and q(".head .actions a") == 2
+        out["statement_before_first_figure"] = ev(JS_ORDER, [".head .st", "#s3 .compact"])
+        out["one_link_per_bound_object"] = ev("[...document.querySelectorAll('.compact.bound')].every(a=>a.querySelectorAll('a').length===1)")
+        # the frame prints its boundary once; the governed text alternative may restate it (that is content — escalated)
+        out["boundary_once_per_frame"] = ev("[...document.querySelectorAll('figure.fig')].every(f=>{const t=f.querySelector('.foot .b');if(!t)return false;const s=t.innerText.replace(/^[^:]*:\\s*/,'').slice(0,40);const c=f.cloneNode(true);c.querySelectorAll('.alt,figcaption').forEach(e=>e.remove());return c.textContent.split(s).length===2})")
+        out["records_edge_lists_all"] = ev("document.querySelector('aside.spine:not(.foot-spine) nav.edges').querySelectorAll('li').length===4")
+        out["double_rule_spans_column"] = ev("(()=>{const b=document.querySelector('section.bnd'),o=document.querySelector('article.page-obj');return !!b&&Math.abs(b.getBoundingClientRect().width-o.getBoundingClientRect().width)<2})()")
     if route == "/people/":   # dense_domain: wave, fieldwork, population and limitation attached to the headline figure
         fig = "figure[data-visual-id='VIS-FINDEX-GAPS']"
         out["figure_drawn"] = q(f"{fig} rect.bar") == 9
@@ -162,6 +200,55 @@ def hard_state(pg, route: str, lang: str) -> dict:
     if route == "/evidence/":
         out["hub_groups_all_records"] = q("details.hub") == 10 and q(".hublist li") == 110
         out["search_with_status"] = q("#global-search") == 1 and q("[data-search-status]") >= 2
+    if route.startswith("/readings/") and route != "/readings/":   # reading_longform: bounded, readable, traceable
+        out["boundary_before_essay"] = ev(JS_ORDER, ["[data-reading-boundary]", ".essay [data-reading-section]"])
+        out["standfirst_and_clocks"] = q(".head .st p") == 1 and q(".head .clock") == 2
+        out["essay_sections"] = q(".essay [data-reading-section]") >= 3
+        out["closing_section_headed"] = ev("(()=>{const s=[...document.querySelectorAll('.essay [data-reading-section]')];const l=s[s.length-1];return !!l&&!!l.querySelector('h2')})()")
+        out["at_most_one_figure_after_opening"] = q("figure.fig") <= 1 and (q("figure.fig") == 0 or q(".essay [data-reading-section]:first-child figure.fig") == 1)
+        out["trace_to_records"] = q("[data-path-record]") >= 1 and q("[data-reading-verify] .compact .q a") >= 1
+        out["sources_or_status"] = q("#sources article.src") >= 1 or q("[data-reading-path-state]") == 1
+        out["related_one_or_two"] = 1 <= q("[data-reading-related] .compact") <= 2
+        out["no_lifted_number"] = q(".head .st b, .head .st strong") == 0
+        # the essay measure is the language's --measure (64ch Latin / 34em Arabic), never the column: a paragraph is
+        # narrower than the page object at 1440 and never wider than 720 px
+        out["measure_bounded"] = ev("(()=>{const p=document.querySelector('.essay .read p');const o=document.querySelector('article.page-obj');if(!p||!o)return false;const w=p.getBoundingClientRect().width,c=o.getBoundingClientRect().width;return w<=720&&(c<900||w<c*0.9)})()")
+    if route == "/readings/":
+        out["featured_then_all"] = q("#featured .compact") == 1 and q("#all li.compact") == 9 and q("#all li.compact .clock") == 9
+    if route == "/measurement/":   # measurement_nonranking: sequencing within the agenda, never a ranking
+        out["ten_priorities_deep_linkable"] = q("article.prio[id^=MA-][tabindex='-1']") == 10
+        out["no_ordinal_numbering"] = q(".prios ol, .prios .n, .prios li") == 0
+        out["priority_label_governed"] = ev("[...document.querySelectorAll('.prios .clock .k')].every(k=>k.innerText.trim().length>0) && [...document.querySelectorAll('.prios .clock .v')].every(v=>/P[01]/.test(v.innerText))")
+        out["equal_weight"] = ev("(()=>{const h=[...document.querySelectorAll('.prios h3')];const s=new Set(h.map(x=>getComputedStyle(x).fontSize));return h.length===10&&s.size===1})()")
+        out["current_missing_decision"] = q(".prios .body p") == 30
+        out["gaps_examined_links"] = q("[data-measurement-readings] a") >= 1
+    if route == "/methodology/":
+        out["sections_indexed"] = q("article.page-obj section.qa h2") >= 13 and q("aside.spine nav.index li") >= 13
+        out["records_bound"] = q("#blk-records .compact") >= 1
+    if route == "/about/":   # trust_plain_language: no backend terminology
+        out["plain_language"] = ev("!/\\b(CLM|VIS|SRC|DS|UI|MA)-\\d|Page Spec|projection|closure_state|backend|enum/i.test(document.querySelector('article.page-obj').innerText)")
+        out["purpose_role_limits_correction"] = q("article.page-obj section.qa") >= 6
+        out["contact_actionable"] = q("a[href^='mailto:']") >= 1
+    if route == "/contact/":
+        out["mail_hidden_without_record"] = ev("document.querySelector('[data-correction-mail]').hidden===true")
+        out["address_actionable"] = q("article.page-obj a[href^='mailto:']") >= 2
+    if route == "/corrections/":
+        out["no_manufactured_history"] = ev("document.querySelector('[data-correction-empty]').hidden!==true && document.querySelector('[data-correction-origin]').hidden===true")
+    if route in ("/rights/", "/accessibility/", "/privacy/", "/terms/"):
+        out["governed_sections"] = q("article.page-obj section.qa h2") >= 3 and q("#main .empty") == 0
+    return out
+
+
+def not_found_checks(pg, base: str) -> dict:
+    """The bilingual 404 (not a per-language route): Arabic first, both sections, one h1, the search action, no inline style."""
+    out = {}
+    for w in (320, 1440):
+        pg.set_viewport_size({"width": w, "height": 844 if w < 700 else 900})
+        pg.goto(f"{base}/404.html", wait_until="load"); pg.wait_for_timeout(120)
+        r = pg.evaluate("""() => { const d=document.documentElement; return {over:d.scrollWidth-d.clientWidth, h1:document.querySelectorAll('h1').length, ar:d.lang==='ar'&&d.dir==='rtl',
+            sections:document.querySelectorAll('section.nf').length, en:!!document.querySelector("section.nf[lang=en][dir=ltr]"), search:!!document.querySelector('[data-search-open]'), dialog:!!document.querySelector('dialog#search-dialog'),
+            inline:document.querySelectorAll('[style]').length, imgs:[...document.images].filter(i=>!i.hasAttribute('alt')).length, robots:!!document.querySelector('meta[name=robots][content=noindex]')} }""")
+        out[f"{w}px"] = r["over"] <= 1 and r["h1"] == 1 and r["ar"] and r["sections"] == 2 and r["en"] and r["search"] and r["dialog"] and r["inline"] == 0 and r["imgs"] == 0 and r["robots"]
     return out
 
 
@@ -218,7 +305,7 @@ def main() -> int:
                     first = pg.evaluate("document.activeElement && document.activeElement.className")
                     pg.evaluate("document.activeElement && document.activeElement.blur()")
                     fam = family_of(r)
-                    missing = [sel for sel in HOOKS_ALL + HOOKS_FAMILY.get(fam, []) if pg.evaluate("(s)=>!!document.querySelector(s)", sel) is False]
+                    missing = [sel for sel in HOOKS_ALL + HOOKS_FAMILY.get(fam, []) + HOOKS_ROUTE.get(r, []) if pg.evaluate("(s)=>!!document.querySelector(s)", sel) is False]
                     small = pg.evaluate("""() => [...document.querySelectorAll('main a[href], main button, main select')].filter(e=>{const r=e.getBoundingClientRect(); return getComputedStyle(e).display!=='inline' && r.width>0 && r.height>0 && r.height<24}).slice(0,5).map(e=>e.tagName+'.'+(e.className||'')+':'+Math.round(e.getBoundingClientRect().height))""")
                     ok = (res["over"] <= 1 and res["imgs"] == 0 and res["h1"] == 1 and first == "skip" and res["dir"] == ("rtl" if lang == "ar" else "ltr")
                           and not res["wide"] and res["inline"] == 0 and res["unnamed"] == 0 and not missing and not small)
@@ -268,7 +355,8 @@ def main() -> int:
         if args.degraded:
             deg = site / "_review" / "degraded"; deg.mkdir(parents=True, exist_ok=True)
             for lang in ("en", "ar"):
-                for r in ["/payments/", "/remittances/", "/people/", "/reforms/", "/access/", "/evidence/compare/", "/data/", "/explore/", "/evidence/", "/evidence/CLM-004/"]:
+                for r in {"d2": ["/payments/", "/remittances/", "/people/", "/reforms/", "/access/", "/evidence/compare/", "/data/", "/explore/", "/evidence/", "/evidence/CLM-004/"],
+                          "d3": ["/", "/readings/after-transfer-persistence/", "/readings/banking-jump-measurement-basis/", "/readings/", "/measurement/", "/methodology/", "/about/", "/contact/", "/corrections/"]}[args.gate]:
                     tag = f"{(r.strip('/').replace('/', '_') or 'home')}-{lang}"
                     url = f"{base}/{lang}{r}"
                     ctx = b.new_context(viewport={"width": 794, "height": 1123}); pg = ctx.new_page()
@@ -294,12 +382,24 @@ def main() -> int:
                     rows.append({"width": "degraded", "lang": lang, "route": r, "ok": all(checks.values()), "degraded": checks})
                     if not all(checks.values()):
                         failures.append({"lang": lang, "route": r, "degraded_failed": [k for k, v in checks.items() if not v]})
+        if args.gate == "d3":
+            ctx = b.new_context(viewport={"width": 320, "height": 844}); pg = ctx.new_page()
+            nf = not_found_checks(pg, base)
+            rows.append({"width": "404", "lang": "ar+en", "route": "/404.html", "ok": all(nf.values()), "hard_state": nf, "height": 0, "over": 0, "imgs": 0, "h1": 1, "dir": "rtl", "wide": [], "inline": 0, "unnamed": 0, "first_tab": "", "missing_hooks": [], "small_targets": []})
+            if not all(nf.values()):
+                failures.append({"route": "/404.html", "not_found_failed": [k for k, v in nf.items() if not v]})
+            if args.evidence:
+                evd = Path(args.evidence); evd.mkdir(parents=True, exist_ok=True)
+                for w in (390, 1440):
+                    pg.set_viewport_size({"width": w, "height": 844 if w < 700 else 900}); pg.goto(f"{base}/404.html", wait_until="load"); pg.wait_for_timeout(120)
+                    pg.screenshot(path=str(evd / f"404-{w}.png"))
+            ctx.close()
         if args.evidence:
             evd = Path(args.evidence); evd.mkdir(parents=True, exist_ok=True)
             for w in (390, 1440):
                 ctx = b.new_context(viewport={"width": w, "height": 844 if w < 700 else 900}); pg = ctx.new_page()
                 for lang in ("en", "ar"):
-                    for r in EVIDENCE_ROUTES:
+                    for r in EVIDENCE_BY_GATE.get(args.gate, EVIDENCE_ROUTES):
                         tag = f"{(r.strip('/').replace('/', '_') or 'home')}-{lang}-{w}"
                         pg.goto(f"{base}/{lang}{r}", wait_until="load"); pg.wait_for_timeout(150)
                         pg.screenshot(path=str(evd / f"{tag}.png"))
@@ -315,13 +415,16 @@ def main() -> int:
         if row["width"] == "degraded":
             print(f"degrad {row['lang']} {row['route']:36s} {row['degraded']}")
             continue
+        if row["width"] == "404":
+            print(f"  404 {row['lang']} {row['route']:36s} {row['hard_state']}")
+            continue
         flag = "" if row["ok"] else f"  <-- over={row['over']} imgs={row['imgs']} h1={row['h1']} first={row['first_tab']} wide={row['wide']} inline={row['inline']} unnamed={row['unnamed']} missing={row['missing_hooks']} small={row.get('small_targets')}"
         hs = row.get("hard_state")
         hflag = "" if not hs or all(hs.values()) else f"  HARD-STATE FAILED: {[k for k, v in hs.items() if not v]}"
         print(f"{row['width']:5d} {row['lang']} {row['route']:36s} height={row['height']:6d}{flag}{hflag}")
-    main_rows = [r for r in rows if r["width"] != "degraded"]
+    main_rows = [r for r in rows if r["width"] not in ("degraded", "404")]
     smokes = [r for r in main_rows if "smoke" in r]
-    hard = [r for r in main_rows if r.get("hard_state")]
+    hard = [r for r in rows if r.get("hard_state") and r["width"] != "degraded"]
     print(f"{len(main_rows)} renders checked; {sum(1 for r in main_rows if not r['ok'])} failed; {len(smokes)} smoke tests, {sum(1 for r in smokes if all(r['smoke'].values()))} passed; "
           f"{sum(len(r['hard_state']) for r in hard)} hard-state assertions on {len(hard)} route renders, {sum(sum(1 for v in r['hard_state'].values() if v) for r in hard)} passed"
           + (f"; {sum(1 for r in rows if r['width']=='degraded')} degraded renders, {sum(1 for r in rows if r['width']=='degraded' and r['ok'])} ok" if args.degraded else ""))

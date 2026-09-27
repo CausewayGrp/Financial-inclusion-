@@ -1,6 +1,28 @@
 # Repository Change Log
 
-## 2026-09-27 — Design D2 (in progress): the hard families built and proved; every document renders; the D1 residuals reconciled
+## 2026-09-27 — Design D3 (in progress): the synthesis pages composed and proved; the Home cold-reader test run and acted on
+
+Same branch and draft pull request as D2 (`claude/epic-cori-60fpeb`, https://github.com/CausewayGrp/Financial-inclusion-/pull/4;
+D2 met at `9c263ac`, not yet merged — process note in `design/ESCALATIONS.md`). The Reading index, the ten Readings,
+Measurement, Methodology, the eight trust pages and the bilingual 404 are reviewed in both languages at 390 and 1440 px
+and asserted on the rendered DOM (`design/reference/check_site.py --gate d3`: 168 renders, 84 smoke tests, 252 hard-state
+assertions — the Reading's boundary-before-essay, clocks, trace and measure; Measurement's ten equal, unnumbered,
+deep-linkable priorities; About in plain language; Contact and Corrections with the report path — and 18 degraded renders,
+all pass; the measure assertion corrected from a guessed width to the measure property, DL-D3-004). Four fresh cold
+readers (English and Arabic, 390 and 1440 px) read only the rendered Home page; their reports are kept verbatim in
+`design/evidence/d3/cold_read/` (DL-D3-001). The design findings are corrected within the Lock (DL-D3-002): the governed
+product statement and its two actions open the page before the first figure (the baseline's order); one link per compact
+evidence object, named by the action and the title; the figure's boundary printed once, in the foot, under the governed
+"What not to conclude" label; a text frame shows its description as its body; the framing record sits in the section it
+frames; the boundary's double rule spans the column; the primary-nav group set off by a hairline; the Arabic rubric 14 px
+(`design/02_TOKENS.json` regenerated). The content findings (date forms, precision, jargon, the alt text that restates
+its boundary, the text-first label, the publisher's legibility, Arabic calques) are escalated, none filled with authored
+copy. `check_site.py` gains the Home assertions and the Orientation hooks. Records: `design/COVERAGE.csv` (164 D3 rows
+`VERIFIED`), `design/DESIGN_DEBT.md` (DEBT-014…016), `design/ESCALATIONS.md`, `design/09_CODE_HANDOFF.md` (state at D3),
+`design/04_PAGE_FAMILY_COMPOSITIONS.md`, `design/03_COMPONENT_CATALOG.md`, `design/evidence/d3/` (38 PNG). Not declared:
+DESIGN HANDOFF READY, PUBLIC RELEASE READY.
+
+## 2026-09-27 — Design D2 (met at `9c263ac`): the hard families built and proved; every document renders; the D1 residuals reconciled
 
 Branch `claude/epic-cori-60fpeb` from the accepted `main` (`851f496`, the merge of pull request #3), landing through
 draft pull request #4 (https://github.com/CausewayGrp/Financial-inclusion-/pull/4). The one content

@@ -205,14 +205,16 @@ def text_frame(v: dict, cite_label: str, origin: str | None, heading: str = "h2"
     scope = f'{v["period"]} · {v["universe"]}' if v.get("period") or v.get("universe") else ""
     canon = (origin or "") + v["canonical_href"]
     link = f'<a class="canon" dir="ltr" href="{esc(v["canonical_href"])}">{esc(canon)}</a>' if not open_label else f'<a href="{esc(v["canonical_href"])}">{esc(open_label)}</a>'
-    bl = boundary_label or v["labels"]["does_not_establish"].rstrip(":")
-    return (f'<figure class="fig" data-visual-id="{esc(v["id"])}" {FIG_ATTRS}><span class="rubric">{esc(rub)}</span><{heading} class="fig-t">{esc(v["title"])}</{heading}>'
+    # A text frame has no view: the governed description is the frame's body, so its heading ("Text description of this
+    # view") stays in the accessibility tree only, and the boundary is printed once, in the foot (D3, cold-reader test;
+    # the label itself is escalated — ESCALATIONS.md, text-first tiers).
+    return (f'<figure class="fig fig-text" data-visual-id="{esc(v["id"])}" {FIG_ATTRS}><span class="rubric">{esc(rub)}</span><{heading} class="fig-t">{esc(v["title"])}</{heading}>'
             f'<p class="cap">{esc(v["question"])}</p>'
-            f'<div class="alt" data-visual-fallback="ordered-text"><h3 class="alt-h">{esc(v["labels"]["text_alternative"])}</h3><p class="body"><b>{esc(v["labels"]["what_it_shows"])}</b> {esc(v["alt_text"])}</p>'
+            f'<div class="alt alt-body" data-visual-fallback="ordered-text"><h3 class="alt-h sr-only">{esc(v["labels"]["text_alternative"])}</h3><p class="body"><b>{esc(v["labels"]["what_it_shows"])}</b> {esc(v["alt_text"])}</p>'
             + (f'<p class="small"><b>{esc(v["labels"]["scope"])}:</b> {esc(scope)}</p>' if scope else "")
-            + f'<p class="small"><b>{esc(v["labels"]["what_not_to_conclude"])}:</b> {esc(v["prohibited_inference"])}</p></div>'
-            f'<div class="foot"><p class="b"><b>{esc(bl)}:</b> {esc(v["prohibited_inference"])}</p>' + (f'<p>{credit_line(v)}</p>' if v.get("credit") else "")
-            + f'<p>{esc(v["labels"]["full_record"])} {link} · <button type="button" class="tbtn" data-cite>{esc(cite_label)}</button></p></div><figcaption class="sr-only">{esc(v["alt_text"])}</figcaption></figure>')
+            + '</div>'
+            f'<div class="foot"><p class="b"><b>{esc(v["labels"]["what_not_to_conclude"])}:</b> {esc(v["prohibited_inference"])}</p>' + (f'<p>{credit_line(v)}</p>' if v.get("credit") else "")
+            + f'<p>{esc(v["labels"]["full_record"])} {link} · <button type="button" class="tbtn" data-cite>{esc(cite_label)}</button></p></div></figure>')
 
 
 # ================================================================================================ D2 drawings
@@ -246,12 +248,15 @@ def frame_close(v: dict, cite_label: str, origin: str | None, tables: str, notes
     frame_notes = "".join(f'<p class="cap note">{esc(t)}</p>' for t in (v.get("frame_labels") or {}).values() if t)
     credit = f'<p>{credit_line(v)}</p>' if v.get("credit") else ""
     table_html = f'<div class="table-wrap" tabindex="0">{tables}</div>' if tables else ""
+    # The boundary is printed once per frame, in the boundary voice, under the governed "What not to conclude" label
+    # (the label the baseline uses for a visual); the text alternative below carries what the view shows, its scope
+    # and the contract's table — never a second copy of the boundary (D3, cold-reader test).
     return (f'{key}{notes}{frame_notes}'
-            f'<div class="foot"><p class="b"><b>{esc(L["does_not_establish"])}</b> {esc(v["prohibited_inference"])}</p>{credit}'
+            f'<div class="foot"><p class="b"><b>{esc(L["what_not_to_conclude"])}:</b> {esc(v["prohibited_inference"])}</p>{credit}'
             f'<p>{esc(L["full_record"])} <a class="canon" dir="ltr" href="{esc(v["canonical_href"])}">{esc(canon)}</a> · <button type="button" class="tbtn" data-cite>{esc(cite_label)}</button></p></div>'
             f'<div class="alt" data-visual-fallback="ordered-text"><h3 class="alt-h">{esc(L["text_alternative"])}</h3>'
             f'<p class="small"><b>{esc(L["what_it_shows"])}</b> {esc(v["alt_text"])}</p><p class="small"><b>{esc(L["scope"])}:</b> {esc(scope)}</p>'
-            f'<p class="small"><b>{esc(L["what_not_to_conclude"])}:</b> {esc(v["prohibited_inference"])}</p>{table_html}</div>'
+            f'{table_html}</div>'
             f'<figcaption class="sr-only">{esc(v["alt_text"])}</figcaption></figure>')
 
 

@@ -38,6 +38,42 @@ Raised at D2 (27 September 2026), each needed by a design actually rendered:
   from the alt text; both render as text frames until rows exist. Design impact: with rows, a three-row table with the
   governed markers; without, the text frame stays.`
 
+Raised at D3 (27 September 2026), from the Home cold-reader test (four fresh readers, EN/AR × 390/1440 px; verbatim
+reports in `evidence/d3/cold_read/`, DL-D3-001). Each is content or authority, so Design records it and changes nothing;
+none blocks the gate. Where the reader's words are quoted they are the reader's, not a finding of fact.
+
+- `NEEDS_CONTROLLED_CONTENT — every text-first visual (TABLE_TEXT_FIRST and SUPPORTING contracts without a drawing) —
+  a governed label for the description of a frame that has no view — the only governed heading is
+  UI-VIS-TEXT-ALTERNATIVE ("Text description of this view"); on Home a reader took it for a missing diagram. Design keeps
+  the heading in the accessibility tree only (DL-D3-002); with a governed label for text-first frames it is shown.`
+- `ESCALATE_TO_MASTER (question, not a defect claimed) — VIS-INCLUSION-TRANSMISSION — alt_text — the governed alt text
+  ends by restating the contract's prohibited_inference ("Does not establish: The relationships are not causal claims …"),
+  so the frame reads the boundary twice however it is composed; readers took the repetition for a templating fault.
+  Design impact: none if the alt text is shortened; the frame already prints its own boundary once.`
+- `ESCALATE_TO_MASTER (observations, not defects claimed) — Home section 3 and the bound records — three date forms in
+  three cards (prose "November 2022 to January 2023"; the clock "2022-11-07 to 2023-01-09"; "Mar-2025–Jan-2026"); three
+  years attached to one number (Findex 2021, fieldwork 2022–23, data year 2022) read as an error on first pass; the
+  same-wave figures at two decimals (18.35 %, 5.44 %, 12.91 points) beside 11.9 % read as false precision to all four
+  readers; "POS", "CBY-Aden", "wave", "rails", "enabling constraints" and the label "Evidence signals" were not understood
+  cold. Design impact: none — every value, unit and term renders as governed (Lock: one number rule, precision as
+  governed); a governed expansion or gloss would render in place.`
+- `ESCALATE_TO_MASTER (question) — CLM record "Financial inclusion is a connected system, not a single score" — its
+  currentness "Several periods, varying by domain" under the record clock — readers noted a framing statement clocked like
+  a measurement; the record grammar cannot tell them apart. Design impact: a governed record kind (framing vs measured)
+  would let the compact object omit or relabel the clock.`
+- `NEEDS_CONTROLLED_CONTENT — masthead — the publisher's name as governed text (English and Arabic) — the canonical mark
+  is a square lockup whose wordmark and Arabic name stay under 8 px at any masthead size (EAD-04 forbids cropping or a
+  derivative), so the publisher is legible only in the footer strapline; three readers took the first screen for a World
+  Bank page. Design impact: a governed publisher line beside the product name in the product bar. The mark's web weight
+  (the 10 MB master PNG served on every page, as in the baseline) is an owner decision on a derivative (DEBT-016).`
+- `ESCALATE_TO_MASTER (Arabic, observations) — Home — "قياس سكاني ممثل" (calque; readers expected "مسح تمثيلي للسكان"),
+  "لا درجة واحدة" for "not a single score", "إشارات من الأدلة", "ضمن نطاق الإبلاغ لديه", the ISO date range inside Arabic
+  prose, and the title's "أدلة" read cold as "guides/directories" before "evidence" — reported by both Arabic readers as
+  terminology, not grammar or direction (direction, mirroring, punctuation and diacritics were judged correct). Design
+  impact: none; a native-language review is an owner item and no certification is claimed.`
+- `ESCALATE_TO_MASTER (observation) — Home label UI "side" ("This resource presents the strongest defensible answer …") —
+  two readers read it as a self-assessment they cannot test; it renders in the spine's flow group, as governed.`
+
 ## Closed at D2 (27 September 2026) — resolved by an authority the repository already holds
 
 - Arabic credit line (`NEEDS_CONTROLLED_CONTENT — RV-CWR-001 and every visual contract with a credit`): the contract
@@ -77,3 +113,8 @@ Recorded so no one fills these gaps silently. Source: brief §10, §12, §15.
 
 - D2 branch name (2026-09-27): D2 is developed and pushed on `claude/epic-cori-60fpeb`, created at the exact accepted
   `main` (`851f496`), instead of the `design/d2-hard-families` name planned at D0; the same convention as D1.
+
+- D3 on the D2 branch (2026-09-27): D2 was met at `9c263ac` but not yet merged when D3 began; the execution environment
+  may push only `claude/epic-cori-60fpeb`, so D3 continues on that branch and pull request #4 rather than on a branch cut
+  from an accepted `main`. Each gate's records name its own commit; the steward may split the history at landing if one
+  gate per pull request matters. No design meaning attaches to the branch.

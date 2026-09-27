@@ -29,7 +29,7 @@
   "CONTROLLED_CONTRACT": 2,
   "CURRENT_DOCUMENT": 10,
   "CURRENT_PROGRAMME_RECORD": 52,
-  "DESIGN_PACKAGE": 125,
+  "DESIGN_PACKAGE": 167,
   "GENERATED_DIAGRAMS": 9,
   "GENERATED_LITERAL_CLOSURE": 1,
   "GENERATED_PROJECTION": 37,
@@ -1630,6 +1630,174 @@
   },
   {
    "path": "design/evidence/d2/remittances-en-390.png",
+   "class": "DESIGN_PACKAGE"
+  },
+  {
+   "path": "design/evidence/d3/404-1440.png",
+   "class": "DESIGN_PACKAGE"
+  },
+  {
+   "path": "design/evidence/d3/404-390.png",
+   "class": "DESIGN_PACKAGE"
+  },
+  {
+   "path": "design/evidence/d3/about-ar-1440.png",
+   "class": "DESIGN_PACKAGE"
+  },
+  {
+   "path": "design/evidence/d3/about-ar-390.png",
+   "class": "DESIGN_PACKAGE"
+  },
+  {
+   "path": "design/evidence/d3/about-en-1440.png",
+   "class": "DESIGN_PACKAGE"
+  },
+  {
+   "path": "design/evidence/d3/about-en-390.png",
+   "class": "DESIGN_PACKAGE"
+  },
+  {
+   "path": "design/evidence/d3/cold_read/home-ar-1440.md",
+   "class": "DESIGN_PACKAGE"
+  },
+  {
+   "path": "design/evidence/d3/cold_read/home-ar-390.md",
+   "class": "DESIGN_PACKAGE"
+  },
+  {
+   "path": "design/evidence/d3/cold_read/home-en-1440.md",
+   "class": "DESIGN_PACKAGE"
+  },
+  {
+   "path": "design/evidence/d3/cold_read/home-en-390.md",
+   "class": "DESIGN_PACKAGE"
+  },
+  {
+   "path": "design/evidence/d3/contact-ar-1440.png",
+   "class": "DESIGN_PACKAGE"
+  },
+  {
+   "path": "design/evidence/d3/contact-ar-390.png",
+   "class": "DESIGN_PACKAGE"
+  },
+  {
+   "path": "design/evidence/d3/contact-en-1440.png",
+   "class": "DESIGN_PACKAGE"
+  },
+  {
+   "path": "design/evidence/d3/contact-en-390.png",
+   "class": "DESIGN_PACKAGE"
+  },
+  {
+   "path": "design/evidence/d3/corrections-ar-1440.png",
+   "class": "DESIGN_PACKAGE"
+  },
+  {
+   "path": "design/evidence/d3/corrections-ar-390.png",
+   "class": "DESIGN_PACKAGE"
+  },
+  {
+   "path": "design/evidence/d3/corrections-en-1440.png",
+   "class": "DESIGN_PACKAGE"
+  },
+  {
+   "path": "design/evidence/d3/corrections-en-390.png",
+   "class": "DESIGN_PACKAGE"
+  },
+  {
+   "path": "design/evidence/d3/home-ar-1440.png",
+   "class": "DESIGN_PACKAGE"
+  },
+  {
+   "path": "design/evidence/d3/home-ar-390.png",
+   "class": "DESIGN_PACKAGE"
+  },
+  {
+   "path": "design/evidence/d3/home-en-1440.png",
+   "class": "DESIGN_PACKAGE"
+  },
+  {
+   "path": "design/evidence/d3/home-en-390.png",
+   "class": "DESIGN_PACKAGE"
+  },
+  {
+   "path": "design/evidence/d3/measurement-ar-1440.png",
+   "class": "DESIGN_PACKAGE"
+  },
+  {
+   "path": "design/evidence/d3/measurement-ar-390.png",
+   "class": "DESIGN_PACKAGE"
+  },
+  {
+   "path": "design/evidence/d3/measurement-en-1440.png",
+   "class": "DESIGN_PACKAGE"
+  },
+  {
+   "path": "design/evidence/d3/measurement-en-390.png",
+   "class": "DESIGN_PACKAGE"
+  },
+  {
+   "path": "design/evidence/d3/methodology-ar-1440.png",
+   "class": "DESIGN_PACKAGE"
+  },
+  {
+   "path": "design/evidence/d3/methodology-ar-390.png",
+   "class": "DESIGN_PACKAGE"
+  },
+  {
+   "path": "design/evidence/d3/methodology-en-1440.png",
+   "class": "DESIGN_PACKAGE"
+  },
+  {
+   "path": "design/evidence/d3/methodology-en-390.png",
+   "class": "DESIGN_PACKAGE"
+  },
+  {
+   "path": "design/evidence/d3/readings-ar-1440.png",
+   "class": "DESIGN_PACKAGE"
+  },
+  {
+   "path": "design/evidence/d3/readings-ar-390.png",
+   "class": "DESIGN_PACKAGE"
+  },
+  {
+   "path": "design/evidence/d3/readings-en-1440.png",
+   "class": "DESIGN_PACKAGE"
+  },
+  {
+   "path": "design/evidence/d3/readings-en-390.png",
+   "class": "DESIGN_PACKAGE"
+  },
+  {
+   "path": "design/evidence/d3/readings_after-transfer-persistence-ar-1440.png",
+   "class": "DESIGN_PACKAGE"
+  },
+  {
+   "path": "design/evidence/d3/readings_after-transfer-persistence-ar-390.png",
+   "class": "DESIGN_PACKAGE"
+  },
+  {
+   "path": "design/evidence/d3/readings_after-transfer-persistence-en-1440.png",
+   "class": "DESIGN_PACKAGE"
+  },
+  {
+   "path": "design/evidence/d3/readings_after-transfer-persistence-en-390.png",
+   "class": "DESIGN_PACKAGE"
+  },
+  {
+   "path": "design/evidence/d3/readings_banking-jump-measurement-basis-ar-1440.png",
+   "class": "DESIGN_PACKAGE"
+  },
+  {
+   "path": "design/evidence/d3/readings_banking-jump-measurement-basis-ar-390.png",
+   "class": "DESIGN_PACKAGE"
+  },
+  {
+   "path": "design/evidence/d3/readings_banking-jump-measurement-basis-en-1440.png",
+   "class": "DESIGN_PACKAGE"
+  },
+  {
+   "path": "design/evidence/d3/readings_banking-jump-measurement-basis-en-390.png",
    "class": "DESIGN_PACKAGE"
   },
   {

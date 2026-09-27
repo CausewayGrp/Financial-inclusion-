@@ -1,6 +1,7 @@
 # Page family compositions
 
-> STATUS: **D2 — the hard families composed and proved; the other families bound by the family rule.** Deterministic
+> STATUS: **D3 — every family composed and reviewed on its own rows (D1–D3); the remaining routes of the Domain Answer and
+> Evidence Record families are bound by their family's rules until D4.** Deterministic
 > module order and composition rules for all eleven families, from the Page Spec and the two controlled contracts;
 > the first-screen contract per family; what may be disclosed later; next actions; head metadata. Written from the
 > reference implementation (`design/reference/yfie/families.py`, `render.py`), never from a picture. Families marked
@@ -18,8 +19,8 @@ and the rules below decide depth — never by route (`handoff/DESIGN_TO_CODE_CON
 | Head | crumb (where governed), rubric, the governed question (`p.q`, where the page answers one), `h1#page-title`, the statement (the heading-less first section) | Clock before claim on every bound object; the `h1` names the in-page navigation |
 | Answers | each governed section as `section.qa`: rubric = section role with its ordinal, `h2` = heading, body paragraphs (one per authored line) | Numbered only where the reader can use the order; limits never numbered |
 | Boundary | every section whose role is a limit ("does not establish", "still do not know", coverage) as `section.bnd` in the boundary voice | Double rule, governed label, weight, counter colour; never behind a disclosure |
-| Figures | every bound visual as a framed object (`03_COMPONENT_CATALOG.md` §2) | At most one in the first screen (the contract's `after_primary`); the rest in depth |
-| Objects | bound records, Readings and priorities as clock-first compact objects (`.objs`) | Never a card wall; a list with hairlines |
+| Figures | every bound visual as a framed object (`03_COMPONENT_CATALOG.md` §2) | At most one in the first screen (the contract's `after_primary`); the rest in depth; the boundary printed once per frame (D3) |
+| Objects | bound records, Readings and priorities as clock-first compact objects (`.objs`) | Never a card wall; a list with hairlines; one link per object — the governed action, named by the action and the title (D3) |
 | Depth | progressive sections in one `details.more` whose summary is the governed "more evidence" gloss | Nothing that changes a headline goes there |
 | Next | the governed next actions (`route_next_actions`) as a labelled `nav.actions` | Only governed destinations |
 | Foot | the page's own actions (cite, report) at the object's foot | Reachable at every width |
@@ -27,11 +28,14 @@ and the rules below decide depth — never by route (`handoff/DESIGN_TO_CODE_CON
 
 ## 2. Families
 
-### Orientation `/` (D1, unchanged at D2)
-Head (product rubric, `h1`) → the governed "three figures" paced as figure groups each followed by its bounded record →
-the remaining bound records → boundary (section 4) → product statement and actions (section 1) → questions (section 9,
-four starting questions as a numbered list) → sections 5–8 with the system visual at `#system` → featured Reading.
-Order is composition, not the Page Spec's `section_order` (brief §4.5); the `#system` anchor is kept.
+### Orientation `/` (D1; corrected at D3 from the cold-reader test, DL-D3-002)
+Head (product rubric on wide screens, `h1`, **the product statement — section 1 — and its two governed actions**) → the
+governed "three figures" paced as figure groups each followed by its bounded record → boundary (section 4) → questions
+(section 9, the governed instruction and body as one paragraph, four starting questions as a numbered list) → section 5 →
+section 6 with **the framing record** and the system visual at `#system` → sections 7–8 → featured Reading. Order is
+composition, not the Page Spec's `section_order` (brief §4.5); the `#system` anchor is kept. Four cold readers reached the
+third screen before learning what the product is; the statement now opens the page, as in the baseline, and the figures
+still open with their clocks.
 
 ### Question Entry `/explore/` (D2)
 Head (flow rubric, `h1`, lead) → **the questions** as the first answer: rubric "Questions that lead into the evidence",
@@ -84,12 +88,17 @@ inside a named region, the boundaries, the record links → section 2 → next a
 without changing the runtime: each dimension row becomes a block — the dimension name, then the cells numbered 1–4 in
 slot order (the slot labels are governed: first, second, third, fourth record), then the assessment label.
 
-### Reading Index `/readings/` — family rule (D3)
+### Reading Index `/readings/` (D3)
 Head (flow rubric) → the featured Reading (compact object) → all Readings as clock-first compact objects (title,
-question) → next actions.
+question) → next actions. Reviewed at D3: the family rule stood.
 
-### Reading (10) — D1 renderer; family rule until D3 review
-As at D1.
+### Reading (10) (D1 renderer; reviewed at D3)
+Head (crumb, rubric, the governed question, `h1`, the thesis as standfirst, two clocks: evidence period and last
+reviewed) → **the boundary before the essay** → the essay: the governed sections in order, the opening section at the
+standfirst size with at most one figure after it, the rest at the reading size within the language's measure (64ch Latin,
+34em Arabic — never the column), a headed closing section → trace the evidence (each record as a compact object with its
+source record or the governed path state; Compare where the Reading is comparable) → sources → related (one or two) →
+next actions. Asserted at D3 (`reading_longform`).
 
 ### Data & Source `/data/` (D2)
 Head (flow rubric, `h1`, lead) → **the register** as the first answer: the governed intro and rights note, the filter
@@ -101,21 +110,23 @@ by governed title, locator-only sources by reference and locator, never a title)
 section 9 with the chronology (24 dated events as compact objects: period, fact, relevance, what it does not
 establish, public sources) → section 10 → next actions. The nine sources without a public locator are never named.
 
-### Measurement `/measurement/` — family rule (D3)
+### Measurement `/measurement/` (D3)
 Head → sections 2–9 → section 10 introduces the agenda → the ten priorities as page objects (`id` = the governed
 reference, focusable for deep links): priority and domain as the clock, title, current evidence, missing evidence,
 the decision it would strengthen, where the gap is examined, reference, a disclosure with the governed guardrail,
 feasibility, basis and what would change; **no ordinal numbering** (measurement_nonranking, proved at D3) → the
-revealing records and the gaps visual → next actions.
+revealing records and the gaps visual → next actions. Reviewed at D3 in both languages: the family rule stood.
 
-### Reference / Trust (8) — family rule (D3)
+### Reference / Trust (8) (D3)
 Head (flow rubric, `h1`, lead) → sections as numbered answers → bound records (Methodology) → next actions. `/contact/`
 carries the report path (the originating record, the mail action revealed only for a known record) and `/corrections/`
-the current-record context; both keep the runtime's hooks.
+the current-record context; both keep the runtime's hooks. Reviewed at D3 in both languages (`trust_plain_language`
+asserted on `/about/`; Methodology indexed and bound): the family rule stood.
 
 ### 404 and root
-The bilingual 404 in the shell's page object (Arabic first, every word governed, the search dialog and runtime only);
-the neutral root entry redirects to the chosen edition (else Arabic) without inline script.
+The bilingual 404 in the shell's page object (Arabic first, every word governed, the search dialog and runtime only;
+asserted at 320 and 1440 px at D3); the neutral root entry redirects to the chosen edition (else Arabic) without inline
+script (D4 row).
 
 ## 3. Where a bound visual sits (DL-D2-003)
 

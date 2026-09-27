@@ -14,7 +14,7 @@
 | Head | title, lead (heading-less section 1), the governed question (`UI-ANSWER-CRUMB-LABEL` rubric), record clock (`UI-EVID-WHEN-…`), crumb (`breadcrumbs`) | — | `h1` balanced; measure in `ch`/`em` | Arabic `h1` 30/42 px, no letter-spacing | crumb `nav` labelled `UI-CRUMB-BREADCRUMB`; the record ID isolated `bdi` | — | — | clock before claim |
 | Answer `section.qa` | section role, heading, body | — | rubric above on narrow; rubric column from 1200 px | rubric weight + colour, no capitals | `h2` per answer with its ordinal in the rubric | hairline rules | — | — |
 | Boundary `section.bnd` | a limit section, `does_not_establish`, `measurement_limitation`, a Reading's `prohibited_inference` | parts A and B (record) | full width; never collapsed | same rule and label | `h2` (record question 5; Reading "What not to conclude") | double rule + label + weight (colour is never alone; CanvasText in forced colours) | — | always first-load (`data-evidence-boundary-first-load`) |
-| Compact evidence object `article.compact` | record `period`, `title`, `universe`, `summary` (where the page shows it), `does_not_establish`, route; `UI-EVID-OPEN-EVIDENCE-RECORD` | bound (Home), row (directory), verify (domain) | stacked; clock column from 1200 px | clock label/value on own metrics | link on the title and the open action (≥ 24 px) | hairlines | — | the clock |
+| Compact evidence object `article.compact` | record `period`, `title`, `universe`, `summary` (where the page shows it), `does_not_establish`, route; `UI-EVID-OPEN-EVIDENCE-RECORD` | bound (Home), row (directory), verify (domain) — one link per object (D3) | stacked; clock column from 1200 px | clock label/value on own metrics | link on the title and the open action (≥ 24 px) | hairlines | — | the clock |
 | Measurement object (compact and full) | `measurement_agenda` fields, `UI-MA-*`, `UI-BLOCK-EVIDENCE-NEEDED`, `UI-MEASUREMENT-EXAMINED-IN` | compact (domain, Explore, hub); full (`/measurement/`, `id` = reference, `tabindex=-1`) | stacked | priority code isolated `bdi` | `h3` title; deep link `#MA-00x` | no ordinal numbering (non-ranking) | — | the missing evidence |
 | Reading object | `readings.json` title, thesis, question, evidence period | featured, list, domain | stacked | — | link on title and open action | — | — | the evidence period |
 | Source card `article.src` (record, Reading, register) | `source_reference_map` display fields, locator, `UI-SOURCE-*`, `UI-EVID-OPEN-*`, `UI-SRC-REUSE-*` | display-ready · untitled (locator-only: reference + locator, never a title) · curated (category, why it matters, boundary) · with dependents | actions wrap | title `dir=auto`, reference `bdi` | external link `rel=noopener target=_blank` with the governed "↗" label; copy reference `button` | — | — | the reference |
@@ -26,11 +26,14 @@
 ## 2. The figure object `figure.fig` (every visual, every tier)
 
 Anatomy, in order: rubric `UI-DOM-ANALYTICAL-QUESTION` · governed title (`h2`, `h3` inside an answer) · question · scope
-(period · universe) · **panels** · in-frame notes (`frame_labels`) · foot: `UI-VIS-DOES-NOT-ESTABLISH` + the prohibited
-inference, `UI-VIS-SOURCE` + the credit as an isolated left-to-right run (the contract's `credit.language_note`; omitted
-when the contract has none), `UI-VIS-FULL-RECORD` + the canonical link (absolute once the origin is set), cite · **text
-alternative** (`.alt[data-visual-fallback=ordered-text]`): `UI-VIS-WHAT-THE-EVIDENCE-SHOWS` + alt text, `UI-DOM-SCOPE-AND-TIME`,
-`UI-DOM-WHAT-NOT-TO-CONCLUDE` + the prohibited inference, the contract's table in a focusable `.table-wrap` · `figcaption.sr-only`.
+(period · universe) · **panels** · in-frame notes (`frame_labels`) · foot: `UI-DOM-WHAT-NOT-TO-CONCLUDE` + the prohibited
+inference **once** (the label the baseline uses for a visual; D3), `UI-VIS-SOURCE` + the credit as an isolated left-to-right
+run (the contract's `credit.language_note`; omitted when the contract has none), `UI-VIS-FULL-RECORD` + the canonical link
+(absolute once the origin is set), cite · **text alternative** (`.alt[data-visual-fallback=ordered-text]`):
+`UI-VIS-TEXT-ALTERNATIVE` heading, `UI-VIS-WHAT-THE-EVIDENCE-SHOWS` + alt text, `UI-DOM-SCOPE-AND-TIME`, the contract's table
+in a focusable `.table-wrap` · `figcaption.sr-only`. A **text frame** (`figure.fig.fig-text`, no drawing) shows the description
+as its body: the heading stays in the accessibility tree only, no `figcaption` (D3; a governed label for text-first frames
+is escalated).
 Attributes: `data-visual-id`, `data-visual-fallback`, `data-image-independent`, `data-noncolour-semantic`. SVGs: percentage
 x-coordinates, no `viewBox`, `direction="ltr"`, `aria-hidden` (the text alternative is the accessible content), no inline style.
 
@@ -42,7 +45,7 @@ x-coordinates, no `viewBox`, `direction="ltr"`, `aria-hidden` (the text alternat
 | Dot rows | VIS-REMITTANCE-COST | corridor lanes; one row per governed send amount; marks keyed by amount | above the mark | rows stack |
 | Object list | VIS-PAYMENT-ANATOMY | one object per governed measurement object: label, value or the WITHHELD label, its governed "is not" line, marker labels; no totals | — | stacked |
 | Chain ladder | RV-CWR-009 (full); VIS-PAYMENT-RAILS (SUPPORTING: the same governed event set, no values) | the seven governed steps top to bottom; EVIDENCED steps list their dated events with a locator; OPEN steps carry `UI-VIS-CHAIN-OPEN`; the first open step after the evidenced ones is set in the boundary voice (where evidence stops) | — | native vertical list |
-| Text frame | every SUPPORTING and TABLE_TEXT_FIRST contract without a drawing | the governed text alternative only | — | — |
+| Text frame | every SUPPORTING and TABLE_TEXT_FIRST contract without a drawing | the governed description as the frame's body; one boundary in the foot | — | — |
 
 Tables: caption = title — period — universe (— unit); scoped headers; the value column headed by the governed unit
 label; other columns unheaded where no governed column label exists (escalated); every value formatted by the one

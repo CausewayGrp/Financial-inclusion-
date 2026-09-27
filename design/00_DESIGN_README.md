@@ -1,6 +1,7 @@
 # Design package — Yemen Financial Inclusion Evidence · أدلة الشمول المالي في اليمن
 
-Status: **D2 in progress — the hard families built and proved on the accepted D1 direction.** D1 was accepted by the
+Status: **D3 in progress — the synthesis pages composed and proved; the Home cold-reader test run and acted on; D2 met at
+`9c263ac` and pending the owner's merge.** D1 was accepted by the
 owner's merge (`main` at `851f496078776356b38892c946d40d154c819067`, pull request #3). D2 is developed on
 `claude/epic-cori-60fpeb` (created from that exact `main`) and lands through one draft pull request
 (https://github.com/CausewayGrp/Financial-inclusion-/pull/4). At this commit every
@@ -8,7 +9,11 @@ one of the 288 documents renders from the one content path (`design/reference/bu
 answers, the Evidence directory, the §9.1 record set, Compare and Data & sources are composed in the T4 grammar and each
 §9.2 hard state on those routes is asserted on the rendered DOM (`design/reference/check_site.py`); the two repository
 browser suites, bilingual invariance and content parity pass on the reference site; the five D1 residuals are reconciled
-(DL-D2-002). The Reading index, Measurement and the trust pages build by the family rule and are composed at D3. D2
+(DL-D2-002). At D3 (same branch and pull request, process note in `ESCALATIONS.md`) the Reading index, the ten Readings,
+Measurement, Methodology, the eight trust pages and the bilingual 404 are composed, reviewed in both languages and asserted
+(`check_site.py --gate d3`: 168 renders, 84 smoke tests, 252 hard-state assertions, 18 degraded renders), and four fresh
+cold readers (EN/AR × 390/1440 px) read Home; their verbatim reports are in `evidence/d3/cold_read/`, the design corrections
+in DL-D3-001 and DL-D3-002, the content observations in `ESCALATIONS.md`. D2
 records: `04_PAGE_FAMILY_COMPOSITIONS.md`, `03_COMPONENT_CATALOG.md` (seeded), the decision log below (DL-D2-*),
 `design/evidence/d2/`. Not PUBLIC RELEASE READY.
 
@@ -152,7 +157,7 @@ to isolate in RTL and URLs); 15 routes whose Page Spec sections are split by lan
 | D0 | `design/d0-orientation` | these records | records committed; plan names theses; escalations listed |
 | D1 | `claude/practical-cray-sr26c5` (planned `design/d1-theses`; process note in `ESCALATIONS.md`) | three theses on the trio (Home, `/evidence/CLM-003/`, `/readings/same-year-different-number/`), EN+AR, 390 & 1440; choose; then tokens, state grammar, shell, type proved at 320/390/640/1440 + keyboard | `01_FOUNDATIONS.md`, `02_TOKENS.json`, decision-log entries; trio rows `VERIFIED` |
 | D2 | `claude/epic-cori-60fpeb` (planned `design/d2-hard-families`; the branch this environment may push, as at D1) | Explore, 5 hard domains, Evidence index, §9.1 record set, Compare, `/data/` | each §9.2 case proved (`check_site.py`); ledger rows `VERIFIED` or gap explained — **met at this commit, pending the owner's merge** |
-| D3 | `design/d3-synthesis` | Readings index + all Readings, Measurement, Methodology, trust, report journey, 404; Home cold-reader test | same; cold-reader record |
+| D3 | `claude/epic-cori-60fpeb` (continued on the D2 branch and pull request; process note in `ESCALATIONS.md`) | Readings index + all Readings, Measurement, Methodology, trust, report journey, 404; Home cold-reader test | same; cold-reader record — **met at this commit, pending the owner's merge** (`check_site.py --gate d3`; `evidence/d3/cold_read/`) |
 | D4 | `design/d4-binding` | all 288 documents via family rules | three suites pass on `design/reference/out/`; all rows ≥ `BUILT` |
 | D5 | `design/d5-interaction-a11y` | every tool state and journey, keyboard, zoom, reduced motion, forced colours | `07_INTERACTION_ACCESSIBILITY.md` |
 | D6 | `design/d6-visuals-social-print` | visuals per contract, frames, social templates, print | contract-by-contract evidence |
@@ -534,3 +539,73 @@ not public release (REL-01…04 remain).
   `DESIGN_DEBT.md`: DEBT-004, -006, -009 closed; DEBT-002 advanced; DEBT-011…013 opened. `ESCALATIONS.md`: three
   closed, two open, two raised (fallback-table column labels; rows for VIS-TARGET-RESULT-STATE and VIS-MFI-DIVERGENCE).
   `09_CODE_HANDOFF.md`: state at D2. `04_PAGE_FAMILY_COMPOSITIONS.md` and `03_COMPONENT_CATALOG.md` created.
+
+### DL-D3-001 · D3 · 2026-09-27 · The Home cold-reader test: who read, how, what they said
+- Problem: the brief's test — a person who has never seen the product reads Home and says what it is, what it can do and
+  whether it can be trusted — had not been run on the rendered product.
+- Method: four fresh agents with no access to the repository, one per language and width (English and Arabic at 390 and
+  1440 px), each shown only five captures of the rendered Home page (four screens in order, then the full page) and asked,
+  in stages (30 s, 90 s, 180 s), what the site is, where they would start, whether scope and limits are stated, which link
+  they would click and what they expect behind it, what confused them, what a screenshot of the first screen could make
+  someone misread, and whether the page reads as serious, trustworthy and clear (the Arabic readers also: whether the
+  Arabic reads naturally). Their reports are recorded verbatim in `evidence/d3/cold_read/home-<lang>-<width>.md`.
+- What they said, in common: serious and restrained, every number bounded, the "not one number" thesis retained; but the
+  product's own statement of what it is arrives only on the third screen; two links per record card with no stated
+  difference; the boundary's double rule shorter than the other rules; the system frame's "What not to conclude" printed
+  three times and its "Text description of this view" heading a view that does not exist; the sidebar count "(4)" against
+  one inline card labelled "behind these figures"; the publisher legible only in the footer; the nav group label read as a
+  stray tooltip in Arabic; the small gold labels hard to read in Arabic; and, in the content, three date formats, two-decimal
+  precision, three years attached to one number, jargon (POS, CBY-Aden, wave, rails, "Evidence signals") and Arabic
+  calques.
+- Classified: design and engineering findings corrected at D3 (DL-D3-002); content and authority findings recorded in
+  `ESCALATIONS.md` ("Raised at D3"), none filled with authored copy; the phone-length findings recorded as debt (DEBT-014,
+  DEBT-015); the publisher-mark finding as debt and escalation (DEBT-016).
+- Rejected: shortening or splitting the governed product statement; authoring a one-line strapline; a "start here" label;
+  renaming the nav; any change to governed numbers, dates or terms.
+
+### DL-D3-002 · D3 · 2026-09-27 · Home and the shared objects corrected from the test (within the Lock)
+- Problem: the findings above that are design or engineering.
+- Chosen: (1) the head carries the governed product statement (section 1) and its two governed actions under the
+  headline, before the first figure — the baseline's own order, which D1 had moved below the figures (Lock §4 keeps
+  clock-before-claim: the figures still open with their clocks); the product rubric stays on wide screens and is not shown
+  under 600 px, where the masthead already names the product; (2) one link per compact evidence object: the governed action
+  ("Open evidence record") is the link and its accessible name is the action followed by the record's title
+  (`aria-labelledby` over the two governed strings) — the title is no longer a second link to the same record; (3) the
+  figure prints its boundary once, in the foot, under the governed `UI-DOM-WHAT-NOT-TO-CONCLUDE` label (the label the
+  baseline uses for a visual); the text alternative carries what the view shows, its scope and the table; (4) a text frame
+  (no drawing) presents the governed description as its body — its "Text description of this view" heading stays in the
+  accessibility tree only and it carries no hidden second copy; (5) the framing record bound to Home ("a connected system,
+  not a single score") sits in the system-context section it frames, so nothing on the page is labelled "behind these
+  figures" but the spine's edge, which lists all four; (6) the boundary's double rule spans the column, the text inside
+  keeps the measure; (7) the primary-nav group is set off by a hairline and its label aligned to the links' baseline; the
+  masthead's cite and report actions in the body ink, not the muted grey that read as disabled; (8) the Arabic rubric size
+  13 → 14 px (`02_TOKENS.json` regenerated); (9) the governed instruction and body of "Questions to start from" read as one
+  paragraph. `check_site.py` asserts (1)–(3), (5) and (6) on Home (`statement_in_head`, `statement_before_first_figure`,
+  `one_link_per_bound_object`, `boundary_once_per_frame`, `records_edge_lists_all`, `double_rule_spans_column`).
+- Rejected: shortening the statement on phones (governed; DEBT-015); a collapsed index on phones (Lock: one visible spine;
+  DEBT-014); enlarging the logo (the mark's own clear space keeps its wordmark under 8 px at any masthead size; DEBT-016).
+
+### DL-D3-003 · D3 · 2026-09-27 · The synthesis families composed and reviewed
+- Problem: the Reading index, the ten Readings, Measurement, Methodology, the eight trust pages and the 404 were built by
+  the family rule at D2 and not yet composed or reviewed on their own rows.
+- Chosen: each route reviewed in both languages at 390 and 1440 px (first screens in `evidence/d3/`) and asserted per
+  family (`check_site.py --gate d3`): the Reading opens on the question, the title, the thesis and its two clocks, its
+  boundary before the essay, at most one figure after the opening, the trace to records with the source record or the
+  governed path state, one or two related Readings and no lifted number in the standfirst; the essay measure is the
+  language's own (64ch Latin, 34em Arabic), never the column; Measurement carries ten equal-weight, deep-linkable priorities
+  with no ordinal numbering (`measurement_nonranking`); About reads without backend terminology
+  (`trust_plain_language`); Contact and Corrections keep the runtime's report path; the 404 is bilingual, Arabic first. The
+  family rules stood: no composition changed beyond the shared objects of DL-D3-002.
+- Rejected: a separate composition per trust page (they share one page object by design); numbering the priorities.
+
+### DL-D3-004 · D3 · 2026-09-27 · The Reading measure assertion corrected
+- Problem: the first D3 run failed `measure_bounded` on every Reading at 1440 px because the assertion assumed a 760 px
+  paragraph; the essay measure is `--measure` (64ch at the reading size ≈ 704 px Latin, 680 px Arabic).
+- Chosen: assert the property, not a guess — a reading paragraph is narrower than the page object and never wider than
+  720 px; re-run green. Recorded so a green test corresponds to the implementation accepted.
+
+### DL-D3-005 · D3 · 2026-09-27 · Records at D3
+- Chosen: `COVERAGE.csv` — 164 D3 rows `VERIFIED` (160 route rows, 4 hard-state rows), the Home rows annotated;
+  `DESIGN_DEBT.md`: DEBT-014…016 opened, DEBT-002 and DEBT-007 advanced; `ESCALATIONS.md`: the cold-reader content
+  observations raised, a process note on the branch; `09_CODE_HANDOFF.md`: state at D3; `04_PAGE_FAMILY_COMPOSITIONS.md`
+  and `03_COMPONENT_CATALOG.md` updated; the four cold-reader reports kept verbatim under `evidence/d3/cold_read/`.

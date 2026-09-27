@@ -144,12 +144,19 @@ def source_card(s: dict) -> str:
             f'<button type="button" class="tbtn" data-source-cite data-source-citation="{esc(s["cite_payload"])}">{esc(L["copy_reference"])}</button></div>{rights}</article>')
 
 
+_COMPACT_N = [0]
+
+
 def compact(rec: dict, L: dict, open_label: str, cls: str = "compact") -> str:
-    """Clock-first compact evidence object: when → title → for whom → open."""
+    """Clock-first compact evidence object: when → title → for whom → open. One link per object (D3, cold-reader test:
+    two links to one record read as two destinations): the governed action is the link, and its accessible name is the
+    action followed by the record's title (`aria-labelledby` over the two governed strings; nothing is authored)."""
+    _COMPACT_N[0] += 1
+    n = _COMPACT_N[0]
     ck = clock(L["period"], esc(rec.get("period") or ""))
-    return (f'<article class="{cls}">{ck}<div class="q"><a href="{rec["href"]}">{esc(rec["title"])}</a></div>'
+    return (f'<article class="{cls}">{ck}<div class="q" id="co-t{n}">{esc(rec["title"])}</div>'
             + (f'<div class="small">{esc(rec["universe"])}</div>' if rec.get("universe") else "")
-            + f'<div class="open"><a href="{rec["href"]}">{esc(open_label)}</a></div></article>')
+            + f'<div class="open"><a href="{rec["href"]}" id="co-a{n}" aria-labelledby="co-a{n} co-t{n}">{esc(open_label)}</a></div></article>')
 
 
 def spine(index: list, edges: list, foot: bool = False, foot_index: bool = True) -> str:
@@ -235,7 +242,11 @@ def evidence_record(page: dict, shell: dict) -> str:
 def home(page: dict, shell: dict) -> str:
     L = page["labels"]; S = {s["order"]: s for s in page["sections"]}
     index = [("s3", S[3]["heading"]), ("s4", S[4]["heading"]), ("s9", S[9]["heading"]), ("s5", S[5]["heading"]), ("s6", S[6]["heading"]), ("s7", S[7]["heading"]), ("s8", S[8]["heading"]), ("sf", L["featured"])]
-    parts = [f'<div class="head">{rubric(L["product"])}<h1 id="page-title">{esc(page["title"])}</h1></div>']
+    # The product's statement (section 1) and its two governed actions sit in the head, under the headline and before
+    # the first figure: four cold readers (EN/AR × 390/1440, D3) reached the third screen before learning what the
+    # product is. The product rubric is kept for the wide head; the masthead already names the product on a phone.
+    parts = [f'<div class="head">{rubric(L["product"], cls="rubric product")}<h1 id="page-title">{esc(page["title"])}</h1><div class="st" id="s1">{paras(S[1]["paragraphs"])}</div>'
+             f'<div class="actions"><a href="{page["hrefs"]["explore"]}">{esc(L["start"])}</a><a href="{page["hrefs"]["evidence"]}">{esc(L["verify"])}</a></div></div>']
     recs = list(page["records"])
     demo = []
     for res, html_ in paced_groups(S[3]["body"]):
@@ -245,15 +256,16 @@ def home(page: dict, shell: dict) -> str:
     def h2(sec):   # governed kicker (role) above the governed heading
         return (f'<span class="rubric">{esc(sec["role"])}</span>' if sec.get("role") else "") + f'<h2>{esc(sec["heading"])}</h2>'
     parts.append(f'<section class="qa first" id="s3"><div>{h2(S[3])}</div><div class="paced">{"".join(demo)}</div></section>')
-    if recs:
-        parts.append(f'<div class="qa">{rubric(L["records_heading"])}<div class="objs">{"".join(compact(r, L, L["open_evidence_record"]) for r in recs)}</div></div>')
     parts.append(f'<section class="bnd" id="s4">{rubric(S[4]["role"])}<h2>{esc(S[4]["heading"])}</h2><div class="mt8">{paras(S[4]["paragraphs"])}</div></section>')
-    parts.append(f'<section class="qa" id="s1">{rubric(L["flow"])}<div><div class="st">{paras(S[1]["paragraphs"])}</div><p class="small">{esc(L["side"])}</p><div class="actions"><a href="{page["hrefs"]["explore"]}">{esc(L["start"])}</a><a href="{page["hrefs"]["evidence"]}">{esc(L["verify"])}</a></div></div></section>')
+    # the governed instruction and the section's body read as one paragraph (three restatements in a row, D3 test)
     qs = "".join(f'<li><div><div class="q"><a href="{q["href"]}">{esc(q["question"])}</a></div><div class="gets small">{esc(q["gets"])}</div></div></li>' for q in page["starting_questions"])
-    parts.append(f'<section class="qa" id="s9"><div><span class="rubric">{esc(L["questions_eyebrow"])}</span><h2>{esc(S[9]["heading"])}</h2></div><div><p class="st">{esc(L["questions_title"])}</p><p class="small">{esc(S[9]["body"])}</p><ol class="qlist">{qs}</ol><p class="small mt12"><a href="{page["hrefs"]["explore"]}">{esc(L["view_all"])}</a></p></div></section>')
+    parts.append(f'<section class="qa" id="s9"><div><span class="rubric">{esc(L["questions_eyebrow"])}</span><h2>{esc(S[9]["heading"])}</h2></div><div><p class="body"><b>{esc(L["questions_title"])}.</b> {esc(S[9]["body"])}</p><ol class="qlist">{qs}</ol><p class="small mt12"><a href="{page["hrefs"]["explore"]}">{esc(L["view_all"])}</a></p></div></section>')
     parts.append(f'<section class="qa" id="s5"><div>{h2(S[5])}</div><div class="body">{paras(S[5]["paragraphs"])}</div></section>')
     v = page["system_visual"]
-    parts.append(f'<section class="qa" id="s6"><div>{rubric(S[6]["role"])}<h2 id="system" tabindex="-1">{esc(S[6]["heading"])}</h2></div><div><div class="body">{paras(S[6]["paragraphs"])}</div>'
+    # the records not behind a figure (the framing record) belong to the system-context section they frame, not to a
+    # group labelled "behind these figures" (D3 test: the label promised four and showed one)
+    rest = f'<div class="objs mt18">{"".join(compact(r, L, L["open_evidence_record"]) for r in recs)}</div>' if recs else ""
+    parts.append(f'<section class="qa" id="s6"><div>{rubric(S[6]["role"])}<h2 id="system" tabindex="-1">{esc(S[6]["heading"])}</h2></div><div><div class="body">{paras(S[6]["paragraphs"])}</div>{rest}'
                  f'<span class="rubric mt18">{esc(L["visual_eyebrow"])}</span>{figure(v, shell["labels"]["cite"], DISC.origin(), heading="h3", boundary_label=L["boundary"], open_label=L["open_record"])}</div></section>')
     for o, i in ((7, "s7"), (8, "s8")):
         parts.append(f'<section class="qa" id="{i}"><div>{h2(S[o])}</div><div class="body">{paras(S[o]["paragraphs"])}</div></section>')
@@ -261,7 +273,7 @@ def home(page: dict, shell: dict) -> str:
     if f:
         parts.append(f'<section class="qa" id="sf">{rubric(L["featured"], tag="h2")}<div><article class="compact first-obj">{clock(L["evidence_period"], esc(f["evidence_period"]))}<div class="q"><a href="{f["href"]}">{esc(f["title"])}</a></div><div class="st"><p>{esc(f["thesis"])}</p></div><div class="open"><a href="{f["href"]}">{esc(L["open_reading"])}</a> · <a href="{page["hrefs"]["readings"]}">{esc(L["all_readings"])}</a></div></article></div></section>')
     edges = [(f'{L["records_heading"]} ({len(page["records"])})', [f'<a href="{r["href"]}">{esc(r["title"])}</a>' for r in page["records"]]),
-             (L["flow"], [f'<a href="{h}">{esc(t)}</a><br><span class="small">{esc(d)}</span>' for h, t, d in ((page["hrefs"]["readings"], L["readings_nav"], L["cta_readings"]), (page["hrefs"]["measurement"], L["measurement_nav"], L["cta_measurement"]), (page["hrefs"]["data"], L["data_nav"], L["cta_data"]))])]
+             (L["flow"], [f'<a href="{h}">{esc(t)}</a><br><span class="small">{esc(d)}</span>' for h, t, d in ((page["hrefs"]["readings"], L["readings_nav"], L["cta_readings"]), (page["hrefs"]["measurement"], L["measurement_nav"], L["cta_measurement"]), (page["hrefs"]["data"], L["data_nav"], L["cta_data"]))], L["side"])]
     body = f'<article class="obj page-obj">{"".join(parts)}{page_util(shell)}</article>{spine(index, edges)}{spine(index, edges, foot=True)}'
     return head(page, shell, "/") + header(shell) + body + footer(shell)
 
