@@ -30,7 +30,10 @@ Contract: `handoff/DESIGN_TO_CODE_CONTRACT.md`. Updated at every gate end; never
 | Headings and landmarks | DECIDED | One `h1`; the Record's seven questions and its boundary are `h2`; the figure title `h2` inside the essay, lane titles `h3`; in-page navigation needs a governed accessible name (escalated) |
 | Responsive / RTL | UNDER TEST | Propositions composed at 1440 and 390 px in both languages; T4 mobile-first and Arabic-first. Numeric axes stay LTR in Arabic; IDs, units and index bases isolated with `bdi` |
 | Strict CSP | CONSTRAINT NOTED | Canvas artboards use an inline `style` on their frame and, in places, inline styles for composition; the reference renderer must emit none (stylesheet only) |
-| Reference implementation | HARNESS ONLY | `python3 design/reference/build.py --renderer neutral`; `--renderer accepted` fails until a thesis is chosen (DEBT-002) |
+| Reference implementation | STRESS TRIO BUILT (D1) | `python3 design/reference/build.py` renders Home, `/evidence/CLM-003/` and `/readings/same-year-different-number/` in both languages from `yfie/render.py` (composition), `yfie/theme.py` (the one stylesheet, written to `assets/yfie.css`) and `yfie/visuals.py` (contract drawings); `check_trio.py` proves 24 renders and 12 interaction smoke tests; parity and bilingual invariance pass. 282 documents remain (DEBT-002) |
+| Print | BASICS IMPLEMENTED | In the same stylesheet: controls, dialog, indexes and footer link groups removed; objects, figures and sources kept whole; source locators and the canonical link printed after their text; page breaks avoided inside objects (proof: `design/reference/out/_review/degraded/*-print.png`, `*.pdf`) |
+| Runtime | BASELINE, UNCHANGED | `site-src/app.js` is copied as is; the renderer emits the hooks it binds (search dialog, cite, language, menu, source cite). The menu panel (`#primary-nav.open`) and the dialog are styled in the theme; no other script |
+| Temporary vs intended | RECORDED | Temporary: pacing on Home by governed connectives with a whole-paragraph fallback (DEBT-008); in-page navigation unnamed (DEBT-006); the fallback table scrolls at 320 px (DEBT-010). Intended: a controlled pacing marker; a governed accessible name; a narrower table composition at D6 |
 
 ## Must not be reinterpreted (already fixed by the brief)
 

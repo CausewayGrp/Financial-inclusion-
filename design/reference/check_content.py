@@ -9,7 +9,8 @@ For every document the reference site renders, in both languages:
   except the baseline's decorative two-digit section ordinals (01, 02 …), which are presentation, not content;
 - every number the reference prints that the baseline does not must be a governed value: a row value, derived value
   or identifier of a visual contract in `site-src/content/visuals/visual_design_contracts.json` (the baseline draws no
-  chart and prints no contract row by rule P3-G02; the reference draws them at their canonical routes).
+  chart and prints no contract row by rule P3-G02; the reference draws them at their canonical routes); axis tick
+  labels of a drawn chart (SVG `<text class="lbl">`) are scale presentation, not content, and are excluded.
 Number normalisation is that of audit/tranche_c/checks/bilingual_invariance.py, so the same rules apply. Exit 1 on any
 failure. This protects the loader against silent drift from the projections; it is not a design check.
 """
@@ -24,6 +25,7 @@ sys.path.insert(0, str(ROOT / "audit/tranche_c/checks"))
 import bilingual_invariance as BI  # noqa: E402
 
 DECORATIVE = re.compile(r"^0\d$")
+AXIS_LABEL = re.compile(r'<text class="lbl[^"]*"[^>]*>[^<]*</text>')
 
 
 def governed_visual_numbers() -> set[str]:
@@ -57,7 +59,10 @@ def main() -> int:
                 print("no baseline for", rel)
                 bad += 1
                 continue
-            a, b = BI.nums(str(base)), BI.nums(str(page))
+            stripped = page.parent / ".stripped.html"
+            stripped.write_text(AXIS_LABEL.sub("", page.read_text(encoding="utf-8")), encoding="utf-8")
+            a, b = BI.nums(str(base)), BI.nums(str(stripped))
+            stripped.unlink()
             missing = Counter({k: v for k, v in (a - b).items() if not DECORATIVE.match(k)})
             extra = Counter({k: v for k, v in (b - a).items() if k not in governed})
             if missing or extra:

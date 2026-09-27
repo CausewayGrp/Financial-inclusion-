@@ -29,7 +29,7 @@
   "CONTROLLED_CONTRACT": 2,
   "CURRENT_DOCUMENT": 10,
   "CURRENT_PROGRAMME_RECORD": 52,
-  "DESIGN_PACKAGE": 25,
+  "DESIGN_PACKAGE": 31,
   "GENERATED_DIAGRAMS": 9,
   "GENERATED_LITERAL_CLOSURE": 1,
   "GENERATED_PROJECTION": 37,
@@ -1257,6 +1257,10 @@
    "class": "DESIGN_PACKAGE"
   },
   {
+   "path": "design/02_TOKENS.json",
+   "class": "DESIGN_PACKAGE"
+  },
+  {
    "path": "design/09_CODE_HANDOFF.md",
    "class": "DESIGN_PACKAGE"
   },
@@ -1361,6 +1365,10 @@
    "class": "DESIGN_PACKAGE"
   },
   {
+   "path": "design/exploration/d1_canvas/reference_boards.py",
+   "class": "DESIGN_PACKAGE"
+  },
+  {
    "path": "design/exploration/d1_canvas/tiles.py",
    "class": "DESIGN_PACKAGE"
   },
@@ -1373,6 +1381,10 @@
    "class": "DESIGN_PACKAGE"
   },
   {
+   "path": "design/reference/check_trio.py",
+   "class": "DESIGN_PACKAGE"
+  },
+  {
    "path": "design/reference/yfie/__init__.py",
    "class": "DESIGN_PACKAGE"
   },
@@ -1382,6 +1394,18 @@
   },
   {
    "path": "design/reference/yfie/neutral.py",
+   "class": "DESIGN_PACKAGE"
+  },
+  {
+   "path": "design/reference/yfie/render.py",
+   "class": "DESIGN_PACKAGE"
+  },
+  {
+   "path": "design/reference/yfie/theme.py",
+   "class": "DESIGN_PACKAGE"
+  },
+  {
+   "path": "design/reference/yfie/visuals.py",
    "class": "DESIGN_PACKAGE"
   },
   {

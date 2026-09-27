@@ -1,8 +1,9 @@
 # Design package — Yemen Financial Inclusion Evidence · أدلة الشمول المالي في اليمن
 
-Status: **D1 in progress — converged on T4 · Instrument (DL-D1-006) after four canvas propositions, a nine-lens
-independent critique and the adversarial tests; no Design Intent Lock yet, no design system published, no reference
-renderer yet; three escalations open.** D0 accepted on `main` at
+Status: **D1 in progress — converged on T4 · Instrument (DL-D1-006); the Design Intent Lock (`01_FOUNDATIONS.md` §4)
+and the foundational grammar (§5, `02_TOKENS.json`) are written from the reference implementation, which renders the
+stress trio in both languages with every hook and passes the rendered checks (DL-D1-007); four escalations open;
+independent final review pending.** D0 accepted on `main` at
 `8bf19efad7505792ca22e0a3bda1db31fb85d33c`. D1 is developed on `claude/practical-cray-sr26c5` (process note in
 `ESCALATIONS.md`) and lands through one draft pull request into `main`
 (https://github.com/CausewayGrp/Financial-inclusion-/pull/3). D1 records: `01_FOUNDATIONS.md` (hypotheses,
@@ -16,20 +17,22 @@ The Design package of brief §19: decision log (this file), coverage ledger (`CO
 (`DESIGN_DEBT.md`), escalations (`ESCALATIONS.md`) and the progressive Design→Code mapping (`09_CODE_HANDOFF.md`).
 Files `01`–`08`, `10` and `design/reference/` are created at the gate that first needs them (plan, §6).
 
-**Reference implementation: does not exist yet.** At D0 the design package had no runnable site. D1 has built the
-content path and a neutral harness under `design/reference/`: `yfie/content.py` reads `site-src/content/**` (one path,
-never a copied content model, never retyped text); `yfie/neutral.py` renders the stress trio unstyled with every brief
-§19 hook; `check_content.py` proves content parity with `dist/` (every baseline number appears; a number the reference
-adds must be a governed visual-contract value or identifier). No accepted renderer exists — `--renderer accepted` fails
-until a thesis is chosen. Until `design/reference/out/` renders all 288 documents, this package is an incomplete
-hand-back by definition (brief §19).
+**Reference implementation: the stress trio only (D1).** `design/reference/` holds one content path
+(`yfie/content.py` reads `site-src/content/**`; never a copied content model, never retyped text), the neutral harness
+(`yfie/neutral.py`, unstyled, every brief §19 hook), the accepted renderer of the converged direction
+(`yfie/render.py` with `theme.py`, the one stylesheet, and `visuals.py`, the contract drawings) and the checks
+(`check_content.py`: parity with `dist/`; `check_trio.py`: the rendered conditions of the viewport suite on the trio
+plus the hooks and an interaction smoke test with the baseline runtime). Until `design/reference/out/` renders all
+288 documents (D4), this package is an incomplete hand-back by definition (brief §19).
 
-Build and preview: `python3 design/reference/build.py --renderer neutral` writes `design/reference/out/` (the trio in
-both languages, plus `out/_bundle/<route>__<lang>.json`, the exact content structures a renderer receives); `python3
-design/reference/check_content.py` checks parity; preview with `python3 -m http.server 4173 --directory
-design/reference/out`. Baseline: `python3 -m http.server 4173 --directory dist`. Canvas propositions: `python3
-design/exploration/d1_canvas/build_boards.py` (after the harness build) regenerates every artboard and its local twin
-into the git-ignored `design/exploration/d1_canvas/out/` (`design/exploration/d1_canvas/README.md`).
+Build and preview: `python3 design/reference/build.py` (renderer `accepted`; `--renderer neutral` for the harness)
+writes `design/reference/out/` — the trio in both languages, `assets/yfie.css`, the unchanged fonts and logo, the
+baseline runtime, and `out/_bundle/<route>__<lang>.json`, the exact content structures a renderer receives. Check with
+`python3 design/reference/check_content.py` and `python3 design/reference/check_trio.py --shots`; preview with
+`python3 -m http.server 4173 --directory design/reference/out` (`/en/`, `/ar/`). Baseline: `python3 -m http.server
+4173 --directory dist`. Canvas propositions and the reference row: `python3 design/exploration/d1_canvas/build_boards.py`
+and `reference_boards.py` regenerate the artboards into the git-ignored `design/exploration/d1_canvas/out/`
+(`design/exploration/d1_canvas/README.md`).
 
 ## 2. Authority used
 
@@ -346,3 +349,22 @@ not public release (REL-01…04 remain).
   and `02_TOKENS.json` are extracted only from what that implementation proves.
 - Compromise: three escalations open (Arabic credit line; Home pacing marker; IMF lane state question); Yemen material
   grounding unresolved (DEBT-007); interaction, print and citation unproven until the implementation.
+
+### DL-D1-007 · D1 · 2026-09-27 · The reference implementation of the trio; Lock and grammar confirmed from it
+- Problem: prove the converged direction in real rendered code, with every hook, in both languages, before any Lock
+  is treated as more than intent; extract tokens only from what renders.
+- Evidence: `design/reference/yfie/render.py`, `theme.py`, `visuals.py`; `check_trio.py` — 24 renders pass, 12
+  interaction smoke tests pass; parity PASS; bilingual invariance 0 differing pairs; degraded states and print
+  reviewed; canvas row R (version 6) beside T4 for the drift review; `01_FOUNDATIONS.md` §4.4.
+- Alternatives: implement from the canvas boards' HTML (rejected: a canvas is not a content path); write a second
+  content model for the renderer (rejected: one path, never a copied model).
+- Chosen: the accepted renderer binds the same content module as the harness; the stylesheet was extracted once from
+  composer version 5 and is maintained in the reference; every drawing uses percentage coordinates without inline
+  style; a page-level actions block keeps cite and report reachable at every width; `02_TOKENS.json` is generated from
+  the stylesheet's custom properties with roles; §4 of the Lock is confirmed with no drift (§4.4).
+- Arabic / responsive / a11y: verified at 320/390/640/1440 px in both languages; skip link first, visible focus in the
+  boundary vocabulary, `h2` questions, reduced motion and forced colours honoured; in-page navigation still unnamed
+  (DEBT-006).
+- Code: inherits `design/reference/` as it stands (`09_CODE_HANDOFF.md`, state at D1).
+- Compromise: the repository browser suites cannot run on a trio-only build (DEBT-009); the 320 px fallback table
+  scrolls in its wrapper (DEBT-010); the independent final D1 review is still to come.

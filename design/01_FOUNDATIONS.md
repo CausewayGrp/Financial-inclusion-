@@ -557,9 +557,137 @@ residue (sidebar, pills) is removed in v5 and re-tested in the implementation.
   implementation.
 - **Scaling** beyond the trio is a paper test (§2.6) until D2.
 
-## 4. Design Intent Lock
+## 4. Design Intent Lock (written 27 September 2026 from canvas version 5; confirmed against the reference implementation in §4.4)
 
-_Not yet written — after §3._
+The Lock states the intent the implementation must carry, what it may express differently, and what it must never
+solve on its own. It is checked board by board against the rendered reference (§4.4); a difference is either accepted
+here as MAY or fixed as drift.
+
+### 4.1 MUST PRESERVE
+
+1. **Clock before claim.** Every bound evidence object — the page object, the compact object, the figure — opens with
+   WHEN (period) and, where governed, FOR WHOM (universe) before its statement. A number is never typeset outside its
+   governed sentence or its bounded object: no lifted figures, no stat tiles, no dashboard metrics.
+2. **The seven questions are the Record.** The governed questions of an Evidence Record are its structure and its
+   index, in governed order, each an `h2` with its ordinal; the boundary ("what this evidence does not establish") is
+   one of them and is set in the boundary voice; the index is a numbered hairline list (a column on wide screens, a
+   list after the first answer on narrow ones).
+3. **One boundary voice.** The same register wherever a limit is stated: a double rule, its governed label, weight and
+   the counter colour together; colour is never the only carrier.
+4. **A verification spine on every page.** What the page rests on (sources with reference and locator actions; the
+   verification-path chips) and where it returns to (the governed edges); the trust links lead the institutional band.
+   A hairline column beside the object on wide screens, the object's foot on narrow ones.
+5. **The firewall is structural.** Unlike things never share an axis, a row, a lane or a colour. RV-CWR-001 is drawn as
+   in §3.3: one row per publication on a horizontal zero-based axis with printed values; two lanes with the
+   not-comparable divider between them, the baseline at the index origin, each lane's raw 2021 level beside it; one mark
+   per publication across the panels; the note, the boundary, the credit and the canonical link inside the frame; the
+   alt text and the tables visible; numeric value and time axes left-to-right in both languages.
+6. **Home demonstrates.** The governed "three figures" text is paced as figure groups, each followed by its bounded
+   record (clock, title, population, open); the governed resolution is set apart; then Home gets out of the way —
+   boundary, product statement and actions, questions, sections, featured Reading.
+7. **Mobile-first recomposition.** One column of objects; the spine column only from about 900 px and the rubric
+   column only from about 1200 px; no horizontal page scroll at 320 px; nothing hidden that changes a headline.
+8. **Arabic composed with its own metrics.** Plex Sans Arabic at a larger nominal size and longer leading than the
+   Latin; the measure in `em`; no letter-spacing, no capitals mimicry (the Arabic rubric is weight and colour); IDs,
+   currency codes, signed percentages and ISO dates isolated as unbroken left-to-right runs; balanced titles; Western
+   digits as in governed copy; the arrow rule of the contract.
+9. **Authored type roles**, one scale per language: display (the `h1`), question, statement (semibold only for the
+   first answer, the boundary and the resolution), body, Reading body, clock (label and value), rubric, source and
+   citation, navigation, chart annotation. Browser defaults decide nothing.
+10. **Surfaces and colour roles.** Paper for objects, plaster for figure insets and the institutional band; navy ink for
+    text; ochre (from the logo) for rubrics; teal-green (from the logo) for the boundary voice; rules hairline, heavy
+    ink at the start of an object, double at a boundary. No red/amber/green, no gradient, no shadow, no card, no pill.
+11. **One number rule.** Thousands separators on every value, years never separated, precision as governed, no trailing
+    ".0"; every figure prints its values; the fallback table is visible.
+12. **Static truth, progressive enhancement.** Everything above in semantic HTML with one stylesheet; JavaScript only
+    for search, cite, language and menu; no inline style or script; the brief §19 hooks unchanged; the logo unaltered;
+    fonts self-hosted.
+
+### 4.2 MAY IMPLEMENT DIFFERENTLY
+
+Exact sizes and spacings (the tokens are extracted from the implementation, not from the composer); the breakpoint
+values (600, 900 and 1200 px are proven; they may move to serve the content); the spine's sticky behaviour and height
+cap; the threshold at which the narrow index takes two columns; the figure's percentage geometry and mark radii; the
+institutional band's grid; hit-area padding; the techniques for balanced titles and unbroken tokens; where the remaining
+records sit after Home's demonstration; the Reading's trace and related objects' details; how the product bar wraps
+between 900 and 1200 px; print composition; where "Cite this page" sits on the figure (any placement that keeps it on
+the object); the mechanism that paces Home (the governed connectives now, a controlled marker when one exists —
+DEBT-008); a material Yemen grounding through proportion, rhythm and surface (DEBT-007) — never a motif, border, map
+or image.
+
+### 4.3 MUST ESCALATE (never solved in design)
+
+The Arabic credit line for figures; an accessible name for in-page navigation; the Home pacing marker; the IMF lane's
+evidence state; any new public label ("on this page", "jump to", "contents" and the like); a visible figure identifier
+if one is wanted (the contract does not require it); anything that would reword, reorder, shorten or duplicate governed
+text; the deployment origin used for absolute canonical URLs in exported frames (a build setting, not content).
+
+### 4.4 Fidelity check against the reference implementation (27 September 2026)
+
+**Method.** The reference implementation (`design/reference/yfie/render.py`, `theme.py`, `visuals.py`; the stylesheet
+extracted once from composer version 5 and maintained in the reference from then on) renders the trio in both
+languages from the same content path as the harness (`python3 design/reference/build.py --renderer accepted`). Its six
+pages were placed on the canvas as row R (12 boards, canvas version 6) beside T4 version 5, so the Design review
+compares real rendered code with the converged proposition on one canvas. The object order was compared
+programmatically (the top-level children of every page object; the element sequence of the figure) for all six pages,
+and the first screens were compared visually at 1440 and 390 px in both languages
+(`design/reference/out/_review/`).
+
+**Result: no drift** in object order, voices, figure form, index grammar, type, colour, rules or layout — the
+implementation carries the same stylesheet. Differences, each accepted:
+
+1. Landmarks: the sections that are `div` on the canvas are `section` and `article` in the implementation (MAY:
+   semantics, not composition).
+2. A page-level actions block (cite, report) at the foot of every page object, so the actions the product bar shows
+   only on wide screens stay reachable on every width (MAY: interaction placement; the Record's block also carries its
+   reference and rights links as before).
+3. The brief §19 hooks — ids, `data-*` attributes, the `yfie-ui` JSON block, the baseline runtime — exist only in the
+   implementation (engineering).
+4. The figure's canonical link is absolute when the deployment origin is set (§4.3: a build setting).
+5. The Home spine's records edge carries the count of records, as the baseline does (engineering: parity).
+
+**Rendered proof** (`design/reference/check_trio.py --shots`): 24 renders (3 routes × EN/AR × 320/390/640/1440 px) —
+no horizontal overflow, every image with alt, one `h1`, document direction per language, the skip link first on Tab,
+no element wider than the viewport outside a table wrapper, no inline style, every hook present; 12 interaction
+smoke tests with the baseline runtime — the search dialog opens from its button with focus in the input and closes on
+Escape, the menu toggles `aria-expanded` at 390 px and shows the navigation with focus on its first link, the cite
+action announces in the status region, the boundary is visible before any interaction. Content parity with `dist/`:
+PASS. Bilingual numeric invariance on the reference build: 0 differing pairs. Degraded states: meaning and order
+survive without stylesheet, script and images; print removes controls, indexes and link groups and keeps identity,
+clock, title, answers and the boundary (`_review/degraded/`).
+
+**Residual, recorded:** the two repository browser suites drive routes beyond the trio and cannot run on a D1 build
+(DEBT-009; `check_trio.py` applies their conditions to the trio); at 320 px the figure's fallback table scrolls
+inside its wrapper by 8–14 px (DEBT-010); the in-page navigation has no accessible name until a governed label exists
+(DEBT-006).
+
+## 5. Foundational grammar
+
+Extracted only from what §4.4 proves; the values live in `design/02_TOKENS.json` (from the reference stylesheet's
+custom properties, with the role of every token) and may move at D2+ within the Lock; the roles do not.
+
+- **Objects.** The page object (`article.obj.page-obj`: heavy ink rule, head with breadcrumb, rubric, clock and `h1`,
+  then its answers), the answer (`.qa`: a numbered rubric `h2` and its content; a rubric column from 1200 px), the
+  boundary (`.bnd`: double rule, label, weight, counter colour), the compact evidence object (`.compact`: clock, title,
+  population, open), the figure (`figure.fig` on plaster: rubric, title `h2`, question, scope, panels, in-frame note,
+  boundary, credit, canonical link, cite, text alternative with tables), the spine (`aside.spine`: index and edges;
+  hairline column from 900 px, the object's foot below), the narrow index (`nav.strip`: a numbered list after the first
+  answer), the product bar (`header.bar`: brand, navigation, search, cite, report, language, menu) and the
+  institutional band (`footer.inst`: trust links first, identity, link groups, fine print).
+- **Voices.** Ink for statements; ochre rubrics; the counter colour and double rule for every boundary; mute never on
+  plaster; colour never alone.
+- **Type roles** per language (display, question, statement, body, Reading body, boundary, clock, rubric, source,
+  navigation, chart annotation), one scale for narrow and one from 900 px; Arabic larger and more leaded; Latin rubric
+  spaced capitals, Arabic rubric weight and colour; balanced titles; tabular numerals.
+- **Numbers and runs.** One formatter (separators on every value, years unseparated, precision as governed); numeric
+  runs, identifiers and ISO dates isolated left-to-right and unbroken; Western digits.
+- **Figures.** Percentage-coordinate SVG without a viewBox; marks keyed by publication (● □ ◎), never by colour; value
+  and time axes left-to-right in both languages; the text alternative visible; no chart where a contract has no data.
+- **Recomposition.** One column below 600 px; index in two columns and lanes side by side from 600 px; spine column from
+  900 px; rubric column from 1200 px; never a horizontal page scroll.
+- **Enhancement.** Static HTML carries every truth; the runtime adds search, cite, language and menu; no inline style
+  or script; print rules in the same stylesheet.
+- **Deliberately absent.** Cards, pills, shadows, gradients, icon tiles, dashboard metrics, motion, imagery, motifs.
 
 ## 5. Foundational grammar
 

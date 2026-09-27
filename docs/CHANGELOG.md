@@ -1,5 +1,20 @@
 # Repository Change Log
 
+## 2026-09-27 — Design D1 (in progress): reference implementation of the stress trio; Design Intent Lock; tokens
+
+Same branch and pull request. `design/reference/yfie/render.py` (composition of the converged direction with every
+brief §19 hook), `theme.py` (the one stylesheet, extracted once from the converged composer; print, focus, reduced
+motion and forced colours included) and `visuals.py` (RV-CWR-001 drawn with percentage coordinates, no inline style)
+render Home, `/evidence/CLM-003/` and `/readings/same-year-different-number/` in both languages; `check_trio.py`
+applies the viewport suite's conditions, the hooks and an interaction smoke test with the baseline runtime (24 renders,
+12 smoke tests, all pass); content parity and bilingual invariance pass; `check_content.py` now excludes axis tick
+labels. The rendered pages were placed on the canvas as row R beside T4 for the drift review — no drift
+(`design/01_FOUNDATIONS.md` §4.4). Written from what renders: the Design Intent Lock (§4: MUST PRESERVE / MAY IMPLEMENT
+DIFFERENTLY / MUST ESCALATE), the foundational grammar (§5) and `design/02_TOKENS.json`. Records: decision DL-D1-007,
+`COVERAGE.csv` (28 stress-trio rows `VERIFIED`, `code_handoff` YES), `DESIGN_DEBT.md` (DEBT-002 updated; DEBT-009,
+DEBT-010 opened), `09_CODE_HANDOFF.md` (implementation, print, runtime, temporary vs intended). No governed content
+changed. Not yet: the independent final D1 review; D1 is not exited.
+
 ## 2026-09-27 — Design D1 (in progress): convergence on T4 · Instrument after the nine-lens critique
 
 Same branch and pull request. Nine independent critique lenses (evidence researcher, Arabic/RTL director,
