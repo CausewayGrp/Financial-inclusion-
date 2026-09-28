@@ -29,7 +29,7 @@ GROUP_STARTS = ("In the same survey", "Separately,", "These are different measur
 RESOLUTION = ("These are different measures", "هذه مقاييس مختلفة")
 
 
-from .text import bdi, esc, isolate_iso as iso  # noqa: E402  (one text layer for every renderer, D6; `iso` takes escaped text)
+from .text import bdi, esc, isolate_document, isolate_iso as iso  # noqa: E402  (one text layer for every renderer, D6; `iso` takes escaped text)
 
 
 def paras(items, cls: str = "") -> str:
@@ -333,17 +333,17 @@ RENDERERS = {"Orientation": home, "Evidence Record": evidence_record, "Reading":
 def render(page: dict, shell: dict, variant: str = "") -> str:
     _COMPACT_N[0] = 0   # ids restart per page (deterministic output whatever the route order)
     if page["family"] in RENDERERS:
-        return RENDERERS[page["family"]](page, shell)
+        return isolate_document(RENDERERS[page["family"]](page, shell))
     from . import families   # the D2 families share this module's objects and shell
-    return families.RENDERERS[page["family"]](page, shell)
+    return isolate_document(families.RENDERERS[page["family"]](page, shell))   # the one isolation pass (text.py): no date or range leaves plain
 
 
 def render_site_files(out: Path, content) -> int:
     """The neutral root entry, the bilingual 404 and the discovery files (F6: one implementation in scripts/discovery.py)."""
     from . import families
     origin = DISC.origin()
-    (out / "index.html").write_text(families.root_page(content.shell("ar", "/"), content.shell("en", "/")), encoding="utf-8")
-    (out / "404.html").write_text(families.not_found(content.not_found(), content.shell("ar", "/")), encoding="utf-8")
+    (out / "index.html").write_text(isolate_document(families.root_page(content.shell("ar", "/"), content.shell("en", "/"))), encoding="utf-8")
+    (out / "404.html").write_text(isolate_document(families.not_found(content.not_found(), content.shell("ar", "/"))), encoding="utf-8")
     (out / "robots.txt").write_text(DISC.robots_txt(origin), encoding="utf-8")
     if origin:
         (out / "sitemap.xml").write_text(DISC.sitemap_xml(content.routes(), origin), encoding="utf-8")

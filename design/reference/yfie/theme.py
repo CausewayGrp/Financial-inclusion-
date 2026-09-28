@@ -305,6 +305,7 @@ details.more .qa h3{font-size:var(--fs-body);font-weight:600;margin-bottom:4px}
 .ring{fill:none;stroke:var(--counter);stroke-width:1.5}
 svg.ts .val.dense{display:none}
 svg.ts .lbl.alt{display:none}
+svg.ts .lbl.alt2{display:block}
 .anatomy{list-style:none;margin:8px 0 0;padding:0;display:flex;flex-direction:column;border-top:1px solid var(--rule-2)}
 .obj-card{padding:12px 0;border-top:1px solid var(--rule);display:flex;flex-direction:column;gap:3px}
 .obj-card:first-child{border-top:0}
@@ -523,7 +524,7 @@ CSS_D6 = r"""/* ---- D6: visuals, frames, print (same tokens; maintained with CS
 .lanes .lane{display:flex;flex-direction:column}.lanes .lane>svg.rv2{margin-top:auto}
 .lanes .lane .ph{margin:2px 0 4px}
 svg.ts .lbl.st{font-size:11px;font-weight:600;fill:var(--ink-2)}
-@container (max-width:480px){svg.ts .lbl.st{display:none}svg.ts .lbl,svg.ts .val{font-size:10.5px}}
+@container (max-width:480px){svg.ts .lbl.st{display:none}svg.ts .lbl.alt2{display:none}svg.ts .lbl,svg.ts .val{font-size:10.5px}}
 @container (min-width:700px){svg.ts .lbl.alt{display:block}}
 .obj-card .rubric{text-transform:none;letter-spacing:0}
 .obj-card .cl2{margin:0;font-size:var(--fs-clock);line-height:var(--lh-clock);color:var(--ink-2)}
@@ -534,6 +535,7 @@ svg.ts .lbl.st{font-size:11px;font-weight:600;fill:var(--ink-2)}
 @container (max-width:599px){.lanes-dated .lane-svg,.lanes-dated .lanes-ax{display:none}}
 .lanes-dated .lane .st-state{display:block;font-size:var(--fs-clock);font-weight:600;color:var(--counter);margin:0 0 4px}
 .rvtab th.rg{text-align:start;font-weight:600;color:var(--ink);background:var(--plaster);border-top:2px solid var(--ink)}
+.rvtab tbody th[scope=row]{min-width:7em}
 .rvtab .ncc{white-space:normal;overflow-wrap:anywhere}
 .lanes-dated .ln a{display:inline-block;min-height:24px;line-height:24px}
 .rvtab tbody+tbody th.rg{border-top:2px solid var(--ink)}
@@ -626,7 +628,7 @@ h1,h2,h3{break-after:avoid}
 details::details-content{content-visibility:visible;display:block}
 details summary{display:none}
 details.more .qa{margin-top:6pt}
-.src .acts a[href^='http']::after,.chain .source-locator::after,.evs.keyed .source-locator::after{content:' ' attr(href);font-size:.85em;color:#000;font-weight:400;word-break:break-all}
+.src .acts a[href^='http']::after,.chain .source-locator::after,.evs.keyed .source-locator::after{content:attr(href);display:block;direction:ltr;unicode-bidi:isolate;text-align:start;font-size:.85em;color:#000;font-weight:400;word-break:break-all}
 .chain .source-locator,.evs.keyed .source-locator{text-decoration:none}
 .inst{background:none;border-top:1pt solid #000;margin-top:16pt}
 .inst-in{display:block;padding:8pt 0 0}

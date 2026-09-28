@@ -1,29 +1,38 @@
 # Design package — Yemen Financial Inclusion Evidence · أدلة الشمول المالي في اليمن
 
-Status: **D5 accepted — every tool state, technical state and journey proved by keyboard in both languages. D2 was met
-at `9c263ac`, D3 at `beecdbb`, D4 at `aee1e1b` and D5 at `8be8e22`; the four gates were accepted together by the owner's
-merge of pull request #4 (`main` at `2effd8be9a481fed2881da61e8111bf16cceb814`, Verify green on the merge). D6 — the
-remaining visual contracts, detached and export frames, social-image templates, print and portable evidence — is the
-working gate, developed on `claude/bold-maxwell-r3o015` (process note in `ESCALATIONS.md`).** D1 was accepted by the
-owner's merge (`main` at `851f496078776356b38892c946d40d154c819067`, pull request #3). D2–D5 were developed on
-`claude/epic-cori-60fpeb` (created from that exact `main`) and landed through one draft pull request
-(https://github.com/CausewayGrp/Financial-inclusion-/pull/4). At that merge every
-one of the 288 documents renders from the one content path (`design/reference/build.py`); Explore, the five hard domain
-answers, the Evidence directory, the §9.1 record set, Compare and Data & sources are composed in the T4 grammar and each
-§9.2 hard state on those routes is asserted on the rendered DOM (`design/reference/check_site.py`); the two repository
-browser suites, bilingual invariance and content parity pass on the reference site; the five D1 residuals are reconciled
+Status: **D6 met on `claude/bold-maxwell-r3o015` (draft pull request #5, pending the owner's merge) — the visual system,
+the portable frames and the print system proved on the final tree in both languages: every one of the 36 visual
+contracts stands in its tier's form on every route that binds it (`design/reference/check_visuals.py`: 36 contracts ×
+EN/AR, 2,856 contract assertions; 52 forced-colours and print checks on the thirteen drawn contracts; 26 export frames;
+286 social frames; 133 print checks on the eleven family routes × EN/AR; 598 documents and frames scanned for a date or
+range outside an isolate; 0 failures), and every D1–D5 check passes on the same tree (the D4 gate caught one D6
+regression, fixed). The last accepted gate is D5: D2 was met at `9c263ac`, D3 at `beecdbb`, D4 at `aee1e1b` and D5 at
+`8be8e22`; the four gates were accepted together by the owner's merge of pull request #4 (`main` at
+`2effd8be9a481fed2881da61e8111bf16cceb814`, Verify green on the merge). D7 has not begun (process note in
+`ESCALATIONS.md`).** D1 was accepted by the owner's merge (`main` at `851f496078776356b38892c946d40d154c819067`, pull
+request #3). D2–D5 were developed on `claude/epic-cori-60fpeb` (created from that exact `main`) and landed through one
+draft pull request (https://github.com/CausewayGrp/Financial-inclusion-/pull/4). At that merge every one of the 288
+documents renders from the one content path (`design/reference/build.py`); Explore, the five hard domain answers, the
+Evidence directory, the §9.1 record set, Compare and Data & sources are composed in the T4 grammar and each §9.2 hard
+state on those routes is asserted on the rendered DOM (`design/reference/check_site.py`); the two repository browser
+suites, bilingual invariance and content parity pass on the reference site; the five D1 residuals are reconciled
 (DL-D2-002). At D3 (same branch and pull request, process note in `ESCALATIONS.md`) the Reading index, the ten Readings,
-Measurement, Methodology, the eight trust pages and the bilingual 404 are composed, reviewed in both languages and asserted
-(`check_site.py --gate d3`: 168 renders, 84 smoke tests, 252 hard-state assertions, 18 degraded renders), and four fresh
-cold readers (EN/AR × 390/1440 px) read Home; their verbatim reports are in `evidence/d3/cold_read/`, the design corrections
-in DL-D3-001 and DL-D3-002, the content observations in `ESCALATIONS.md`. At D4 (same branch) every one of the 288
-documents is asserted on its own row: all 110 evidence records against their governed bundles and the three remaining
-domain answers against their contracts (`check_site.py --gate d4`: 904 renders, 452 smoke tests, 3,822 hard-state
-assertions), the neutral root entry, and the binding itself (`check_binding.py`: every RENDER and CONTRACT projection read,
-no REFERENCE or VIA_SPEC projection read, no copied content model). At D5 (same branch) the thirteen journeys are walked
-by keyboard at 390 and 1440 px in both languages and every technical state is driven and rendered in a third, technical
-voice (`check_journeys.py`: 52 walks, 28 state drives; `07_INTERACTION_ACCESSIBILITY.md`). D2
-records: `04_PAGE_FAMILY_COMPOSITIONS.md`, `03_COMPONENT_CATALOG.md` (seeded), the decision log below (DL-D2-*),
+Measurement, Methodology, the eight trust pages and the bilingual 404 are composed, reviewed in both languages and
+asserted (`check_site.py --gate d3`: 168 renders, 84 smoke tests, 252 hard-state assertions, 18 degraded renders), and
+four fresh cold readers (EN/AR × 390/1440 px) read Home; their verbatim reports are in `evidence/d3/cold_read/`, the
+design corrections in DL-D3-001 and DL-D3-002, the content observations in `ESCALATIONS.md`. At D4 (same branch) every
+one of the 288 documents is asserted on its own row: all 110 evidence records against their governed bundles and the
+three remaining domain answers against their contracts (`check_site.py --gate d4`: 904 renders, 452 smoke tests, 3,822
+hard-state assertions), the neutral root entry, and the binding itself (`check_binding.py`: every RENDER and CONTRACT
+projection read, no REFERENCE or VIA_SPEC projection read, no copied content model). At D5 (same branch) the thirteen
+journeys are walked by keyboard at 390 and 1440 px in both languages and every technical state is driven and rendered in
+a third, technical voice (`check_journeys.py`: 52 walks, 28 state drives; `07_INTERACTION_ACCESSIBILITY.md`). At D6
+(branch `claude/bold-maxwell-r3o015`, pull request #5) the remaining visual contracts are drawn or framed per tier,
+every figure carries its detached frame and its named-column table, every date and range is isolated by one pass over
+every document, the export frames, the five social-image templates and the print system exist and are asserted
+(`check_visuals.py`, five phases), five red-team lenses reviewed the built output (DL-D6-007), and
+`06_VISUAL_TABLE_SYSTEM.md` and `08_ASSET_MAP.md` record the system; evidence in `evidence/d6/`. D2 records:
+`04_PAGE_FAMILY_COMPOSITIONS.md`, `03_COMPONENT_CATALOG.md` (seeded), the decision log below (DL-D2-*),
 `design/evidence/d2/`. Not PUBLIC RELEASE READY.
 
 ## 1. What this package is
@@ -775,19 +784,27 @@ not public release (REL-01…04 remain).
   smaller type to squeeze four columns (legibility); repeating a uniform state on every row (noise for every reader).
 - Code: `table()`, `qual()`, `uniform()`, `table_region()`; the D2 checker's assertions unchanged.
 
-### DL-D6-004 · D6 · 2026-09-27 · Bidi: every ISO date and every English governed time boundary isolated
+### DL-D6-004 · D6 · 2026-09-27 · Bidi: every ISO date, numeric range and English governed time boundary isolated
 - Problem: after Arabic letters, a plain ISO date renders with its parts reversed (the bidi algorithm makes the digits
   Arabic numbers and the hyphens neutrals: "2024-06-26" shows as "26-06-2024"); the recomposed tables put governed
   Arabic text before dates, and a probe confirmed the reversal on the page and its absence inside a `bdi`. The matrix's
   time boundaries are English free text ("observed 2026-09-07", "2026-01-22 event").
-- Chosen: every composed text in a figure, a table, a caption, a scope line, a portable frame and the print citation
-  passes through `iso_run` / `iso` (the date isolated as an unbroken left-to-right run; nothing else changed); a governed
-  time boundary prints exactly as the Master holds it, isolated and marked `lang="en"` — its qualifier is part of the
-  boundary and is never dropped (an earlier D6 pass printed only the date part; reversed). `check_visuals.py` asserts
-  that no ISO date on any figure or frame sits outside a left-to-right isolate.
+- Chosen: one isolation pass over every finished document (`text.isolate_document`, called by `render.render`, the
+  neutral files and both portable frames): every ISO date and every numeric range ("2021–2024", "2025-03–2026-01",
+  "15–24") in any text becomes an unbroken left-to-right run, wherever a renderer left it plain — script, style, SVG,
+  the title and form controls untouched, an isolate never nested in an isolate. The Arabic lens found the ranges: in
+  Arabic prose a plain range renders with its ends swapped ("2030–2018" beside an isolated legend "2018–2024") and
+  breaks at the dash at 390 px. An identifier (`text.bdi`) is isolated but breaks only at its own hyphens — the D4 gate
+  on the corrected tree caught the first D6 text layer making identifiers unbreakable, so a 37-character source id
+  overflowed seven record pages at 320 px. A governed time boundary prints exactly as the Master holds it, isolated
+  and marked `lang="en"` — its qualifier is part of the boundary and is never dropped (an earlier D6 pass printed only
+  the date part; reversed). Asserted three ways: statically on all 598 documents and frames (`check_visuals.py`
+  `--phases text`, the renderer's own `LTR_RUN`), in the browser on every figure and every frame, and by the fit test
+  on both edges of the figure and the whole document at 320, 390 and 600 px.
 - Rejected: printing only the date of a governed time boundary (lossy); translating the qualifiers (authored copy —
-  the bilingual form is escalated).
-- Code: `visuals.iso_run`, `date_token`, `frames.iso`, `render.iso`.
+  the bilingual form is escalated); leaving ranges to the reader's direction (two conventions in one figure);
+  isolating every Latin run in Arabic text (a long run would overflow 320 px; DEBT-017).
+- Code: `text.py` (`LTR_RUN`, `bdi`, `isolate_iso`, `isolate_document`), `date_token`, `check_visuals.check_text`.
 
 ### DL-D6-005 · D6 · 2026-09-27 · The narrow time series prints its landmarks; the table carries every value
 - Problem: DEBT-012 — below 600 px a series of more than eight points cannot print thirteen value labels legibly with
@@ -797,6 +814,14 @@ not public release (REL-01…04 remain).
   800 px prints every value. Closed as a decision.
 - Rejected: a horizontal-rows form (thirteen rows per POS panel, three panels); a two-row label lattice (does not fit
   300 px legibly); rotated labels (not available with percentage coordinates).
+- Labels never meet (after the red teams): a value label takes the first of three rows above its mark (12, 26 and
+  40 px) at which its ink — digits have no descender: 9 px at 12.5 px — keeps 4 px from every earlier label it could
+  touch horizontally, judged in the wide regime (every label visible, the 536 px panel, measured) and, for a landmark
+  label, the narrow one too (landmarks only, the 256 px panel); the on-panel state labels are placed first as
+  obstacles, on rows 15 px apart; under 480 px of figure width only the first, middle and last time-axis labels show.
+  `check_visuals.py` asserts `labels_clear` on every drawn figure at 320, 390, 600 and 1440 px and in every export
+  frame, by the same ink-box measure (a projection pair that touched at 584 px and overlapped at 390 px is what the
+  visual and Arabic lenses saw).
 
 ### DL-D6-006 · D6 · 2026-09-27 · Portable evidence and the print system
 - Problem: nothing that left the page — a printed page, a shared image, an exported figure — carried its provenance and
@@ -818,6 +843,14 @@ not public release (REL-01…04 remain).
   PDF (a download, gated); dropping the meta description from the card (the title would still read once, but the
   description's remainder is governed context — kept, deduplicated without loss).
 - Code: `frames.py`, `render.print_foot`, `build.py` (`_export/`, `_social/`), the print block of `theme.CSS_D6`.
+- Result on the final tree (`check_visuals.py`, five phases, record `out/_review_visuals.json`, evidence
+  `evidence/d6/`): 36 contracts × EN/AR on every binding route, 2,856 contract assertions; 52 forced-colours and print
+  checks on the thirteen drawn contracts; 26 export frames; 286 social frames; 133 print checks on the eleven family
+  routes × EN/AR; 598 documents and frames scanned for a date or range outside an isolate; 0 failures; the six
+  placeholders exactly the escalated set. On the same tree: `check_site.py` D2 (168 renders, 553 hard-state assertions, 20
+  degraded), D3 and D4 (904 renders, 3,822 assertions), `check_journeys.py` (52 walks, 28 drives), `check_trio.py`, the
+  two repository browser suites, bilingual invariance, content parity (288 documents), the binding check and `tokens.py
+  --check`.
 
 ### DL-D6-007 · D6 · 2026-09-27 · The red teams and what they changed
 - Problem: the gate's own checks prove what they assert, not what a hostile reader sees. Five independent lenses
@@ -871,3 +904,22 @@ not public release (REL-01…04 remain).
   on thirteen figures, the one boundary voice inside the drawings, the plaster inset, hairline discipline, tabular
   numerals and the mark vocabulary carry it; the marks themselves and the type face do not. The remaining levers are
   precision and rhythm, which this entry's fixes serve; no motif, border, map or image (Lock §4.2).
+- The Arabic lens (received last, on the corrected tree; the figures, the D6 forms, the exports, the social cards and
+  the print pages). Found and fixed: plain numeric ranges in governed Arabic prose swapped their ends and broke at the
+  dash (isolation extended from dates to ranges by one pass over every document, DL-D6-004); the matrix's per-class
+  table and the chain tables squeezed their row-header column to its narrowest word (a placeholder heading may break
+  anywhere, so the column has a 7 em floor); Latin joiners inside Arabic cells (the Arabic semicolon and comma in the
+  Arabic edition — punctuation, never a word); "11.9 % من البالغين" with the sign on the wrong side of its digits (a
+  value and its "%" are one isolate, closed, as the governed prose writes it); the "↗" locator alone on a line (bound
+  to its word by a no-break space); a printed URL continuing at the far right of an Arabic paragraph (its own
+  left-to-right line under the link); the projection labels touching (the ink-box placement, DL-D6-005); the Arabic
+  state labels touching in the band (rows 15 px apart). Stale when read: the matrix clipped at 390 px (fixed before
+  the lens read; the fit test now reads both edges). Recorded, not changed (`ESCALATIONS.md`): the Compare table's
+  reversed dates — the runtime renders that table, untouched by Design, and the fix is the isolation the reference
+  applies (a Code item with its patch); count nouns after values, the invariant plural, the comparator island, two
+  terms for index, a header label carrying a colon, English-only credit lines. Rejected: mirroring "↗" for Arabic (part
+  of the open cue escalation); a heavier Arabic rubric (it is SemiBold 600 like the English; Bold is not declared);
+  keeping Latin phrases in Arabic titles on one line (DEBT-017, for D7's audit).
+- The D4 gate on the corrected tree (904 renders) found one regression D6 had introduced — the unbreakable identifier
+  isolate (DL-D6-004) — and passes after the fix; the D2 and D3 gates, the journeys, the trio and the repository suites
+  pass unchanged (DL-D6-006, the verification numbers).

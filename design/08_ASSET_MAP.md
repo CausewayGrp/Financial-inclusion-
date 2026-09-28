@@ -37,7 +37,8 @@ WOFF2 only, `font-display: swap`. No other typeface, no system fallback other th
 | IBM Plex Sans | Regular 400, Medium 500, SemiBold 600 | body 400; rubrics, clocks, keys and navigation 500–600; headings, values and every emphasis (`b`, `strong`, `th`) 600 |
 | IBM Plex Sans Arabic | Regular 400, Medium 500, SemiBold 600 | the same roles on the Arabic scale (`html[dir=rtl]` tokens) |
 
-Three weights, authored. D1 declared six faces; Light 300 and Italic 400 were never used by any rule, and Bold 700
+Three weights, authored. The Arabic rubric is SemiBold 600 like the English one (the Arabic lens read it as lighter
+beside tracked capitals; a heavier face is not declared and would be an owner decision). D1 declared six faces; Light 300 and Italic 400 were never used by any rule, and Bold 700
 reached the page only through the browser's defaults for `b`, `strong` and `th` — a type role the Lock says defaults
 may not decide (`01_FOUNDATIONS.md` §4.1.9). D6 authors emphasis at the semibold role (`b,strong,th{font-weight:600}`)
 and declares only the three faces used; the other files stay in `vendor/fonts/` as shipped. No `<link rel="preload">` is emitted: the two faces a first paint needs
@@ -57,7 +58,7 @@ label beside it:
 | ‖ | a break between two source documents (never joined) | VIS-REMITTANCE-MACRO note line | `UI-VIS-BREAK-VINTAGE` |
 | ┆ | a missing period (never zero) | VIS-POS-VALUE note line | `UI-VIS-MISSING` |
 | ◎ | source figures disagree — both shown | the POS panels' note line | `UI-VIS-DISAGREEMENT` + the record's method text |
-| ↗ | opens the original source in a new window | every external `a.source-locator` | the link's accessible name (`UI-VIS-SOURCE` + the event label); the visible cue is escalated (D5) |
+| ↗ | opens the original source in a new window | every external `a.source-locator` | the link's accessible name (`UI-VIS-SOURCE` + the event label); bound to the word before it by a no-break space; the visible cue, and its mirrored form for Arabic, are escalated (D5, D6) |
 | → | the governed flow | the rubric `UI-DOM-UNDERSTAND-EXPLORE-VERIFY` | (it is the label) |
 | ─ ═ ┄ | hairline, double rule, dashed hairline | body, boundary, technical voice | — |
 

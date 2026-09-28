@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 """Contract-by-contract checks of the visual system on the rendered reference site (D6), in both languages.
 
-  python3 design/reference/check_visuals.py [--site design/reference/out] [--only VIS-ID,...] [--phases contracts,degraded,frames,print] [--evidence DIR]
+  python3 design/reference/check_visuals.py [--site design/reference/out] [--only VIS-ID,...] [--phases contracts,degraded,frames,print,text] [--evidence DIR]
 
 For each of the 36 governed visual contracts (`site-src/content/visuals/visual_design_contracts.json`, never a hand-kept
 list), on its canonical route and on every public route that binds it, in English and Arabic:
@@ -14,11 +14,13 @@ list), on its canonical route and on every public route that binds it, in Englis
 - the detached frame is complete in every figure: title, question, scope (period · universe), the prohibited inference
   once in the boundary voice, the credit where the contract has one (isolated left-to-right), the canonical link, the
   edition; the text alternative with the governed alt text and, for drawn contracts, a table with a caption and scoped
-  headers; every SVG left-to-right; every ISO date isolated left-to-right (after Arabic letters a plain one renders
-  reversed); no inline style; no red, amber or green;
-- every fallback table names each data column with a governed string and sits in a focusable region with an
-  accessible name; at 320 and 390 px the figure never overflows its column and its plot area never scrolls; a table
-  scrolls only inside that region, and only when it is declared wide (the provider matrix; DEBT-010 closed elsewhere);
+  headers; every SVG left-to-right; every ISO date and numeric range isolated left-to-right (after Arabic letters a
+  plain date renders reversed and a plain range swaps its ends); no two text labels of a drawing meeting (ink boxes);
+  no inline style; no red, amber or green;
+- every fallback table names each data column with a governed string and sits in a region with an accessible name,
+  focusable only when it can scroll; at 320 and 390 px (and 600 px for a drawn contract) the figure never leaves its
+  column on either edge, the page never scrolls sideways and the plot area never scrolls; a table scrolls only inside
+  that region, and only when it is declared wide (none is; DEBT-010 closed);
 - every link and button in a figure is a 24 px target; in forced colours every mark and label takes the system
   colour; in print the frame foot stays visible and nothing is wider than the page;
 - the development placeholders on the site are exactly the escalated set (the five matrix headings), nowhere else.
@@ -26,6 +28,8 @@ Then the portable frames the build writes: every export frame (`_export/`) rende
 same frame lines, the identity line and no cite control; every social frame (`_social/`, 286) fits 1200 × 630 with its
 title, canonical link, edition and the unaltered logo. Then print: one route per family in both languages is printed to
 PDF (A4) and its first page must carry the page title; with PyMuPDF installed the pages are rasterised for the evidence.
+Then text: every built document's <main> and every export and social frame is scanned statically for an ISO date or a
+numeric range outside a dir="ltr" isolate, with the renderer's own expression (yfie.text.LTR_RUN).
 With --evidence DIR: figure crops of every drawn contract (1440 px, both languages), export and social PNGs, print pages.
 Exit 1 on any failure. Proof for the record, not authority; design/COVERAGE.csv cites this tool's output.
 """
@@ -46,6 +50,7 @@ ROOT = Path(__file__).resolve().parents[2]
 REF = ROOT / "design" / "reference"
 sys.path.insert(0, str(REF))
 from yfie.visuals import DRAWERS, FIGURES, plain_num  # noqa: E402
+from yfie.text import LTR_RUN  # noqa: E402
 
 CONTRACTS = json.loads((ROOT / "site-src/content/visuals/visual_design_contracts.json").read_text(encoding="utf-8"))
 GRAMMAR = CONTRACTS["grammar_labels"]
@@ -115,7 +120,8 @@ def serve(directory: Path):
     return h, f"http://127.0.0.1:{port}"
 
 
-FIG_STATE = """(vid) => { const f=document.querySelector(`figure.fig[data-visual-id='${vid}']`); if(!f) return null;
+LOOSE_JS = "/" + LTR_RUN.pattern + "/"   # yfie.text.LTR_RUN, the renderer's own rule: an ISO date or a numeric range (the same syntax in V8)
+FIG_STATE = """(vid) => { const LOOSE=""" + LOOSE_JS + """; const f=document.querySelector(`figure.fig[data-visual-id='${vid}']`); if(!f) return null;
   const q=s=>f.querySelectorAll(s).length; const txt=f.textContent.replace(/\\s+/g,' ');
   const foot=f.querySelector('.foot'); const b=f.querySelector('.foot .b');
   const clone=f.cloneNode(true); clone.querySelectorAll('.alt,figcaption').forEach(e=>e.remove()); const frameTxt=clone.textContent.replace(/\\s+/g,' ');
@@ -130,7 +136,9 @@ FIG_STATE = """(vid) => { const f=document.querySelector(`figure.fig[data-visual
     panelsOver:[...f.querySelectorAll('.panels')].some(p=>p.scrollWidth>p.clientWidth+1),
     tables:[...f.querySelectorAll('.alt .table-wrap')].map(w=>({wide:!!w.querySelector('table.wide'), scrolls:w.scrollWidth>w.clientWidth+1})),
     fallbackAttr:f.getAttribute('data-visual-fallback'), indep:f.getAttribute('data-image-independent'),
-    isoLoose:(()=>{const w=document.createTreeWalker(f,NodeFilter.SHOW_TEXT);let n=0;while(w.nextNode()){const t=w.currentNode;if(/\d{4}-\d{2}(-\d{2})?/.test(t.nodeValue)&&!t.parentElement.closest('[dir=ltr],svg'))n++;}return n;})(),
+    isoLoose:(()=>{const w=document.createTreeWalker(f,NodeFilter.SHOW_TEXT);let n=0;while(w.nextNode()){const t=w.currentNode;if(LOOSE.test(t.nodeValue)&&!t.parentElement.closest('[dir=ltr],svg'))n++;}return n;})(),
+    fl:f.getBoundingClientRect().left, docOver:document.documentElement.scrollWidth-document.documentElement.clientWidth,
+    overlaps:(()=>{const ts=[...f.querySelectorAll('svg text')].map(e=>{const r=e.getBoundingClientRect();const fs=parseFloat(getComputedStyle(e).fontSize);const base=e.ownerSVGElement.getBoundingClientRect().top+parseFloat(e.getAttribute('y')||'0');const num=/^[\\d.,%+\\-−]+$/.test(e.textContent.trim());return {l:r.left,r:r.right,t:base-(num?0.72:0.85)*fs,b:base+(num?0:0.25)*fs,w:r.width}}).filter(x=>x.w>0);let n=0;for(let i=0;i<ts.length;i++)for(let j=i+1;j<ts.length;j++){const a=ts[i],b=ts[j];if(Math.min(a.r,b.r)-Math.max(a.l,b.l)>1&&Math.min(a.b,b.b)-Math.max(a.t,b.t)>1)n++;}return n;})(),   // ink boxes: a digit label has no descender, so its ink is the top 72 % of its size above the baseline; a word label 85 % above and 25 % below
     smallTargets:[...f.querySelectorAll('a,button')].filter(e=>{const r=e.getBoundingClientRect();return r.width>0&&(r.width<24||r.height<24)}).map(e=>e.className||e.tagName)}; }"""
 
 
@@ -175,7 +183,9 @@ def check_contract(pg, base: str, c: dict, lang: str, failures: list, evidence: 
                 checks["edition_in_frame"] = st["ed"].strip() != "" and st["ed"] in st["frame"]
                 checks["alt_text"] = (g.get(f"alt_text_{lang}") or "")[:60] in st["altText"] and st["fallbackAttr"] == "ordered-text" and st["indep"] == "true"
                 checks["no_inline_style"] = st["inline"] == 0
-                checks["iso_dates_isolated"] = st["isoLoose"] == 0   # after Arabic letters a plain ISO date renders reversed (Lock §4.1.8)
+                checks["iso_dates_isolated"] = st["isoLoose"] == 0   # after Arabic letters a plain ISO date renders reversed and a plain range swaps its ends (Lock §4.1.8)
+                if vid in DRAWN:
+                    checks["labels_clear"] = st["overlaps"] == 0   # no two text labels of a drawing meet (value labels, state labels, axis labels)
                 checks["targets_24px"] = not st["smallTargets"]   # every link and button in the figure meets the 24 px target (07 §2)
                 checks["svg_ltr"] = st["ltr"]
                 checks["palette_only"] = all(f in PALETTE for f in st["fills"])
@@ -197,11 +207,13 @@ def check_contract(pg, base: str, c: dict, lang: str, failures: list, evidence: 
                     crops.add((vid, lang))
                     pg.locator(f"figure.fig[data-visual-id='{vid}']").first.screenshot(path=str(evidence / f"figure-{vid}-{lang}.png"))
         # narrow widths: the figure fits its column; the plot never scrolls; a table scrolls inside its wrapper only when declared wide
-        for w in (320, 390):
+        for w in ((320, 390, 600) if vid in DRAWN else (320, 390)):
             pg.set_viewport_size({"width": w, "height": 844}); pg.goto(url, wait_until="load"); pg.wait_for_timeout(100)
             s2 = pg.evaluate(FIG_STATE, vid)
             if s2:
-                checks[f"fits_{w}"] = s2["fr"] <= w + 1 and not s2["panelsOver"]
+                checks[f"fits_{w}"] = s2["fr"] <= w + 1 and s2["fl"] >= -1 and s2["docOver"] <= 1 and not s2["panelsOver"]   # both edges (an RTL overflow leaves by the left) and no page-wide scroll
+                if vid in DRAWN:
+                    checks[f"labels_clear_{w}"] = s2["overlaps"] == 0
                 checks[f"tables_{w}"] = all(t["wide"] or not t["scrolls"] for t in s2["tables"])
                 if evidence and vid in ("VIS-PROVIDER-OBSERVABILITY", "RV-CWR-004", "VIS-FIRM-CONSTRAINTS", "RV-CWR-001") and w == 390 and route == g["canonical_route"]:
                     pg.locator(f"figure.fig[data-visual-id='{vid}']").first.screenshot(path=str(evidence / f"figure-{vid}-{lang}-390.png"))
@@ -248,12 +260,12 @@ def check_frames(b, base: str, site: Path, failures: list, evidence: Path | None
     n_x = 0
     for f in sorted((site / "_export").glob("*.html")):
         pg.goto(f"{base}/_export/{f.name}", wait_until="load"); pg.wait_for_timeout(100)
-        st = pg.evaluate("""() => { const f=document.querySelector('figure.fig'); const d=document.documentElement;
+        st = pg.evaluate("""() => { const LOOSE=""" + LOOSE_JS + """; const f=document.querySelector('figure.fig'); const d=document.documentElement;
             return {over:d.scrollWidth-d.clientWidth, fig:!!f, foot:!!f&&!!f.querySelector('.foot .b')&&!!f.querySelector('.foot .ed')&&!!f.querySelector('.foot a.canon'),
               cite:!!f&&!!f.querySelector('.foot .cite-sep')&&getComputedStyle(f.querySelector('.foot .cite-sep')).display!=='none',
               alt:!!f&&!!f.querySelector('.alt')&&getComputedStyle(f.querySelector('.alt')).display!=='none', ident:!!document.querySelector('.exp-id img[alt]'),
               inline:document.querySelectorAll('[style]').length, script:document.querySelectorAll('script').length,
-              isoLoose:(()=>{const w=document.createTreeWalker(document.body,NodeFilter.SHOW_TEXT);let n=0;while(w.nextNode()){const t=w.currentNode;if(/\d{4}-\d{2}(-\d{2})?/.test(t.nodeValue)&&!t.parentElement.closest('[dir=ltr],svg'))n++;}return n;})()}; }""")
+              isoLoose:(()=>{const w=document.createTreeWalker(document.body,NodeFilter.SHOW_TEXT);let n=0;while(w.nextNode()){const t=w.currentNode;if(LOOSE.test(t.nodeValue)&&!t.parentElement.closest('[dir=ltr],svg'))n++;}return n;})()}; }""")
         ok = st["over"] <= 1 and st["fig"] and st["foot"] and not st["cite"] and not st["alt"] and st["ident"] and st["inline"] == 0 and st["script"] == 0 and st["isoLoose"] == 0
         n_x += 1
         if not ok:
@@ -266,11 +278,11 @@ def check_frames(b, base: str, site: Path, failures: list, evidence: Path | None
     social_evidence = {f"{(r.strip('/').replace('/', '_') or 'home')}__{l}.html" for r in PRINT_ROUTES for l in ("en", "ar")}
     for f in sorted((site / "_social").glob("*.html")):
         pg.goto(f"{base}/_social/{f.name}", wait_until="load"); pg.wait_for_timeout(60)
-        st = pg.evaluate("""() => { const m=document.querySelector('main'); const body=document.querySelector('.soc-body'); const d=document.documentElement;
+        st = pg.evaluate("""() => { const LOOSE=""" + LOOSE_JS + """; const m=document.querySelector('main'); const body=document.querySelector('.soc-body'); const d=document.documentElement;
             return {h:m.scrollHeight, bh:body.scrollHeight, bc:body.clientHeight, w:d.scrollWidth, title:!!document.querySelector('.soc-title')&&document.querySelector('.soc-title').textContent.trim().length>0,
               canon:!!document.querySelector('.soc-foot .canon')&&document.querySelector('.soc-foot .canon').textContent.trim().length>0, ed:!!document.querySelector('.soc-foot .ed'),
               logo:!!document.querySelector('.soc-head img[alt][src$="CauseWay_Master_Logo.png"]'), inline:document.querySelectorAll('[style]').length, script:document.querySelectorAll('script').length,
-              isoLoose:(()=>{const w=document.createTreeWalker(document.body,NodeFilter.SHOW_TEXT);let n=0;while(w.nextNode()){const t=w.currentNode;if(/\d{4}-\d{2}(-\d{2})?/.test(t.nodeValue)&&!t.parentElement.closest('[dir=ltr]'))n++;}return n;})()}; }""")
+              isoLoose:(()=>{const w=document.createTreeWalker(document.body,NodeFilter.SHOW_TEXT);let n=0;while(w.nextNode()){const t=w.currentNode;if(LOOSE.test(t.nodeValue)&&!t.parentElement.closest('[dir=ltr]'))n++;}return n;})()}; }""")
         ok = st["h"] <= 630 and st["bh"] <= st["bc"] and st["w"] <= 1200 and st["title"] and st["canon"] and st["ed"] and st["logo"] and st["inline"] == 0 and st["script"] == 0 and st["isoLoose"] == 0
         n_s += 1
         if not ok:
@@ -391,11 +403,50 @@ def check_print(b, base: str, failures: list, evidence: Path | None, tmp: Path) 
     return n
 
 
+LOOSE_PY = LTR_RUN
+_DROP = [re.compile(r"<svg\b.*?</svg>", re.S), re.compile(r"<script\b.*?</script>", re.S), re.compile(r"<style\b.*?</style>", re.S)]
+_ISOLATE = re.compile(r"<(\w+)\b[^>]*\bdir=\"ltr\"[^>]*>(?:(?!<\1\b).)*?</\1>", re.S)
+_TAG = re.compile(r"<[^>]+>")
+
+
+def loose_runs(html_text: str) -> list:
+    """The ISO dates and numeric ranges in a document's text that no `dir="ltr"` element isolates (SVG, script and
+    style content aside): each with 30 characters of context. Mirrors the in-browser `isoLoose` count statically, for
+    every document at once."""
+    t = html_text
+    for rx in _DROP:
+        t = rx.sub(" ", t)
+    for _ in range(4):   # nested isolates (an identifier's own isolate around a date's) unwrap pass by pass
+        t2 = _ISOLATE.sub(" ", t)
+        if t2 == t:
+            break
+        t = t2
+    text = re.sub(r"\s+", " ", _TAG.sub(" ", t))
+    return [text[max(0, m.start() - 30):m.end() + 30] for m in LOOSE_PY.finditer(text)]
+
+
+def check_text(site: Path, failures: list) -> int:
+    """Every built document's `<main>` and every export and social frame's body scanned for loose runs."""
+    n = 0
+    docs = [(f, "main") for lang in ("en", "ar") for f in sorted((site / lang).rglob("index.html"))]
+    docs += [(f, "body") for sub in ("_export", "_social") for f in sorted((site / sub).glob("*.html"))]
+    for f, tag in docs:
+        html_text = f.read_text(encoding="utf-8")
+        m = re.search(rf"<{tag}\b.*?</{tag}>", html_text, re.S)
+        if not m:
+            failures.append({"text": str(f.relative_to(site)), "missing": tag}); continue
+        loose = loose_runs(m.group(0))
+        n += 1
+        if loose:
+            failures.append({"text": str(f.relative_to(site)), "loose_runs": loose[:6], "count": len(loose)})
+    return n
+
+
 def main() -> int:
     ap = argparse.ArgumentParser()
     ap.add_argument("--site", default=str(REF / "out"))
     ap.add_argument("--only", default="")
-    ap.add_argument("--phases", default="contracts,degraded,frames,print", help="comma-separated subset of the four phases (for iteration; the record needs all four)")
+    ap.add_argument("--phases", default="contracts,degraded,frames,print,text", help="comma-separated subset of the five phases (for iteration; the record needs all five)")
     ap.add_argument("--evidence", default="")
     args = ap.parse_args()
     site = Path(args.site)
@@ -410,7 +461,7 @@ def main() -> int:
     from playwright.sync_api import sync_playwright
     httpd, base = serve(site)
     failures: list = []
-    n_checks = n_deg = n_x = n_s = n_p = 0
+    n_checks = n_deg = n_x = n_s = n_p = n_t = 0
     crops: set = set()
     with sync_playwright() as p:
         b = p.chromium.launch()
@@ -438,11 +489,13 @@ def main() -> int:
                 n_p = check_print(b, base, failures, evidence, tmp)
         b.close()
     httpd.shutdown()
+    if "text" in phases and not keys:
+        n_t = check_text(site, failures)
     for f in failures:
         print("FAIL", json.dumps(f, ensure_ascii=False))
-    (site / "_review_visuals.json").write_text(json.dumps({"contracts": len(contracts), "checks": n_checks, "degraded": n_deg, "export_frames": n_x, "social_frames": n_s, "print_checks": n_p, "placeholders": sorted(seen), "failures": failures}, ensure_ascii=False, indent=1), encoding="utf-8")
+    (site / "_review_visuals.json").write_text(json.dumps({"contracts": len(contracts), "checks": n_checks, "degraded": n_deg, "export_frames": n_x, "social_frames": n_s, "print_checks": n_p, "text_documents": n_t, "placeholders": sorted(seen), "failures": failures}, ensure_ascii=False, indent=1), encoding="utf-8")
     print(f"VISUALS: {'FAIL' if failures else 'PASS'} — {len(contracts)} contracts × EN/AR on their routes: {n_checks} contract assertions; {n_deg} forced-colours and print checks on the {len(DRAWN)} drawn contracts; "
-          f"{n_x} export frames; {n_s} social frames; {n_p} print checks on {len(PRINT_ROUTES)} family routes × EN/AR; placeholders on the site: {sorted(seen)}; {len(failures)} failures")
+          f"{n_x} export frames; {n_s} social frames; {n_p} print checks on {len(PRINT_ROUTES)} family routes × EN/AR; {n_t} documents and frames scanned for loose runs; placeholders on the site: {sorted(seen)}; {len(failures)} failures")
     return 1 if failures else 0
 
 

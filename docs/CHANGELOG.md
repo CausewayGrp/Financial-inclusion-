@@ -1,5 +1,39 @@
 # Repository Change Log
 
+## 2026-09-28 — Design D6 met on `claude/bold-maxwell-r3o015` (pending the owner's merge of pull request #5): the visual system, portable frames and print system, proved on the final tree
+
+Branch `claude/bold-maxwell-r3o015` (from `2effd8b`), draft pull request https://github.com/CausewayGrp/Financial-inclusion-/pull/5.
+Every one of the 36 visual contracts now stands in its tier's form on every route that binds it: thirteen drawn (the
+three D6 forms — the provider matrix, three dated lanes, bars from zero without ranks — beside the ten drawn at D1–D2),
+twenty-two governed text frames (TABLE_TEXT_FIRST contracts without rows, the SUPPORTING contracts, the Compare tool's
+own contract), and the one RETIRE contract asserted absent. Every figure carries the detached frame (title, question,
+scope, the boundary once, the credit isolated left-to-right, the canonical link, the edition), a text alternative with
+a named-column table in a named region, only the palette's colours, no two labels meeting, and fits 320 and 390 px;
+one pass over every finished document (`yfie/text.py`) isolates every ISO date and numeric range left-to-right (in
+Arabic a plain date renders reversed and a plain range swaps its ends), and governed English time boundaries print as
+the Master holds them, isolated and marked. Portable evidence: export frames for the
+thirteen drawn contracts (`out/_export/`, 26 documents; the export control designed, unshipped until OWN-04),
+five social-image templates over the eleven families (`out/_social/`, 286 frames from governed text only; Code
+rasterises), and the print system (chrome hidden, objects whole, figures with their boundary, a print-only provenance
+block with the canonical URL and citation last on every page, the Reading as a document). Typography is authored at
+three weights (Regular, Medium, SemiBold; emphasis at 600, never a browser default). Verified on the exact final tree:
+`design/reference/check_visuals.py`, five phases (36 contracts × EN/AR on every binding route, 2,856 contract
+assertions; 52 forced-colours and print checks on the drawn contracts; 26 export and 286 social frames;
+133 print checks on the eleven family routes × EN/AR; 598 documents and frames scanned for a date or range outside
+an isolate; 0 failures), the D1–D5 gates re-run (`check_content.py --text`, `check_binding.py`, `check_site.py --gate
+d2|d3|d4`, `check_journeys.py`, `check_trio.py`, `tokens.py --check`) and the repository suites on the reference site;
+the D4 gate caught one regression the first D6 text layer had introduced (an unbreakable identifier isolate overflowing
+seven record pages at 320 px), fixed before the final run. Five red-team lenses (measurement and statistics,
+information visualisation and editing, native Arabic editing, journalism with a hostile source owner, accessibility and
+frontend engineering) reviewed the built output; every MUST-FIX is closed in the layer that owns it, every content or
+authority observation is escalated, never fixed in design, and the one runtime defect found (the Compare table's
+reversed Arabic dates, `site-src/app.js`) is recorded for Code with its patch (DL-D6-007, `design/ESCALATIONS.md`). Records:
+`design/06_VISUAL_TABLE_SYSTEM.md` and `design/08_ASSET_MAP.md` (new), DL-D6-001…007, `design/COVERAGE.csv` (72 D6
+rows `VERIFIED`, print and social rows added), `03`, `04`, `07`, `09`, `DESIGN_DEBT.md` (DEBT-010 and DEBT-012 closed,
+DEBT-013 narrowed to the six placeholders, DEBT-017 opened), `design/evidence/d6/`. Six placeholders remain on the site until the
+steward governs their labels (five matrix headings and the payment-system-operator class). Runtime, projections,
+contracts and `dist/` untouched. Not declared: DESIGN HANDOFF READY, PUBLIC RELEASE READY.
+
 ## 2026-09-27 — Design D5 accepted by the merge of pull request #4; present-state records reconciled; D6 opened
 
 Pull request #4 (`claude/epic-cori-60fpeb`, D2 met at `9c263ac`, D3 at `beecdbb`, D4 at `aee1e1b`, D5 at `8be8e22`) was

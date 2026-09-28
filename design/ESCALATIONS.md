@@ -161,6 +161,22 @@ Design records it and changes nothing; where a lens's words are quoted they are 
   (VIS-FINDEX-GAPS: two age rows in their own governed units under "% of adults (ages 15+)") — a governed neutral
   header for a column of values; today each such row prints its own unit in its cell. Design impact: the header would
   replace the panel unit where units vary.`
+- `RUNTIME_DEFECT (Code, D7 — not a Master item) — the Compare tool's table — the runtime (`site-src/app.js`, which
+  Design never edits) writes each record's governed period into a cell as plain text, and in the Arabic edition the two
+  ISO dates render with their parts reversed ("07-11-2022 إلى 09-01-2023" for 2022-11-07 → 2023-01-09; found by the
+  Arabic lens on the printed Compare page). The reference pages isolate every ISO date and numeric range
+  (`design/reference/yfie/text.py`, `LTR_RUN`); the runtime does not. Fix for Code: when the table renderer writes a
+  cell, wrap every match of that same expression in `<bdi dir="ltr">` (or set the cell text through a helper that does).
+  Design impact: none on the reference; every Arabic Compare table on the product until fixed.`
+- `ESCALATE_TO_MASTER (observations, Arabic edition — the native-editor lens; each prints as governed) — a count
+  followed by its unit noun ("561 العدد", "1,473 العدد") where a reader expects "العدد: 561" or a counted noun; the
+  invariant plural "نقاط مئوية" after 12.91, 12.55 and 11.1 where the prose writes "نقطة مئوية"; the exchange-class
+  labels read as counted phrases with the wrong number form ("98 شركات الصرافة", "225 منشآت الصرافة الفردية"); the
+  comparator island ">9 مشاركون في الفعالية" where the governed conclusion writes "وأكثر من 9 مشاركين"; two terms for
+  the index in RV-CWR-001 ("بالرقم القياسي" in the subtitle and prose, "مؤشر، 2021 = 100" in the unit label);
+  `UI-VIS-SOURCE` carries a colon in both languages ("Source:" / "المصدر:") and heads a table column; every credit
+  line is English only in the Arabic edition. Design impact: a "·" between a count and its label is available as
+  composition if the steward prefers it to a governed rewording; otherwise none.`
 
 ## Closed at D2 (27 September 2026) — resolved by an authority the repository already holds
 

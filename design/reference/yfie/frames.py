@@ -26,7 +26,7 @@ from __future__ import annotations
 import sys
 from pathlib import Path
 
-from .text import esc, iso  # the one text layer (escaping; ISO dates isolated, Lock §4.1.8)
+from .text import esc, iso, isolate_document  # the one text layer (escaping; ISO dates and ranges isolated, Lock §4.1.8)
 
 ROOT = Path(__file__).resolve().parents[3]
 sys.path.insert(0, str(ROOT / "scripts"))
@@ -35,7 +35,7 @@ import discovery as DISC  # noqa: E402
 
 def _doc(lang: str, title: str, body_class: str, body: str) -> str:
     d = "rtl" if lang == "ar" else "ltr"
-    return (f'<!doctype html><html lang="{lang}" dir="{d}"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">'
+    return isolate_document(f'<!doctype html><html lang="{lang}" dir="{d}"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">'
             f'<meta name="robots" content="noindex"><title>{esc(title)}</title><link rel="stylesheet" href="/assets/yfie.css"></head>'
             f'<body class="{body_class}"><main id="main">{body}</main></body></html>')
 

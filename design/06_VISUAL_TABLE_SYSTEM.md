@@ -3,8 +3,8 @@
 > STATUS: **D6 — every one of the 36 governed visual contracts rendered in its tier's form on its canonical route and
 > on every public route that binds it, in both languages, with its detached frame, its text alternative and its
 > fallback table; the portable forms (export frames, social-image templates) and the print system built and asserted.**
-> What is asserted is asserted by `design/reference/check_visuals.py` (contract by contract, four phases: contracts,
-> degraded, frames, print); what is a design decision is recorded here and in the decision log (`00_DESIGN_README.md`,
+> What is asserted is asserted by `design/reference/check_visuals.py` (contract by contract, five phases: contracts,
+> degraded, frames, print, text); what is a design decision is recorded here and in the decision log (`00_DESIGN_README.md`,
 > DL-D6-*). Source of truth: `design/reference/yfie/visuals.py` (the drawers, the frame, the tables),
 > `design/reference/yfie/frames.py` (the portable frames), `design/reference/yfie/theme.py` (`CSS_D6`: the D6 forms,
 > the portable frames, the print system), `design/reference/yfie/content.py` (`visual()`: everything a drawer may bind).
@@ -72,7 +72,7 @@ colour alone (no red, amber or green anywhere; forced colours asserted). Every S
 |---|---|---|---|---|
 | Rows on a zero-based axis; two indexed lanes | RV-CWR-001 | one row per publication with the printed value, the REPORTED state in the panel head and the governed same-year marker between the two rows (the contract puts the break between the two values, so a crop of the rows never reads as a fall); the two indexed paths as separate lanes, each with its own index unit and DERIVED state, the governed not-comparable label between them, each lane's raw 2021 level beside it; one filled mark per publication across panels (● ■ ◆ — hollow is reserved for the state grammar) | rows stack; lanes stack | one axis for the two raw series; a hollow mark |
 | Bars from zero with bracket gaps | VIS-FINDEX-GAPS | one bar per governed group; each governed derived gap as a bracket beside its pair (never a bar) | label above its track | a gap drawn as a bar |
-| State-keyed time series | VIS-REMITTANCE-MACRO; the POS small multiple | marks by evidence state (filled reported/administrative, hollow estimated/projected, square administrative), a dashed projected segment, the vintage break as a double rule never joined (its note names the period before and the period after, never an arrow), a missing period as a labelled dotted gap, a disagreement ringed with the record's method text, NOMINAL on the axis title, a key of states with their x-range and source document; where the state changes, each state's governed label on the panel above its segment; the plot inset from the axis, the first and last labels starting and ending at their marks, a label beside a break on its own side, a dense series choosing each label's row by the distance to its neighbour | alternate x labels hidden under 700 px of figure width and the on-panel state labels under 480 px (the key directly under the plot carries them); a series of more than eight points prints its first, last, marked and state-change values — the table carries every value (DL-D6-005) | joining across a break; a shared value axis across panels; an arrow between two numbers |
+| State-keyed time series | VIS-REMITTANCE-MACRO; the POS small multiple | marks by evidence state (filled reported/administrative, hollow estimated/projected, square administrative), a dashed projected segment, the vintage break as a double rule never joined (its note names the period before and the period after, never an arrow), a missing period as a labelled dotted gap, a disagreement ringed with the record's method text, NOMINAL on the axis title, a key of states with their x-range and source document; where the state changes, each state's governed label on the panel above its segment; the plot inset from the axis, the first and last labels starting and ending at their marks, a label beside a break on its own side, every value label on the first of three rows above its mark (12, 26, 40 px) at which its ink keeps clear of every earlier label it could touch — judged on the narrowest panel of each regime, the state labels placed first as obstacles (`place_label`; asserted `labels_clear` at 320, 390, 600 and 1440 px and in every export) | the odd x labels hidden under 700 px of figure width, all but the first, middle and last under 480 px, and the on-panel state labels under 480 px (the key directly under the plot carries them); a series of more than eight points prints its first, last, marked and state-change values — the table carries every value (DL-D6-005) | joining across a break; a shared value axis across panels; an arrow between two numbers |
 | Dot rows | VIS-REMITTANCE-COST | corridor lanes; one row per governed send amount; filled marks keyed by amount | rows stack | a line between corridors |
 | Object list | VIS-PAYMENT-ANATOMY | one object per governed measurement object: its label as governed (never case-transformed), value or the WITHHELD label, the governed period and state on every card, its governed "is not" line, marker labels | stacked | a total, a share, a combined score |
 | The chain | RV-CWR-009 (full), VIS-PAYMENT-RAILS (no values) | seven governed steps top to bottom; evidenced steps list their dated events with a locator; the first open step set in the boundary voice; RV-CWR-009 adds the governed POS activity rows | native vertical list | an arrow of flow; a completion reading |
@@ -94,14 +94,19 @@ The table pattern (D6, `visuals.table`, closes DEBT-010 and narrows DEBT-013):
 - **Caption** = title — period — universe — the unit, and every qualifier that holds for every row (evidence state,
   source document, a marker every object carries).
 - **Columns**: the row header (period, group, object, lane, step, or `UI-VIS-SOURCE` where the rows are publications)
-  and the value column headed by the governed unit label; a qualifier that varies between rows (state, marker,
+  — its column never narrower than 7 em, so a placeholder heading that may break anywhere cannot squeeze it to one
+  word — and the value column headed by the governed unit label; a qualifier that varies between rows (state, marker,
   document, a boundary line) travels in the value's own cell after the middle dot. Every data column is named by a
   governed string — `table()` refuses an unnamed data column; the corner cell above a row-header column may be empty.
   The chain and the lanes head their second column with `UI-VIS-WHAT-THE-EVIDENCE-SHOWS`; the matrix table heads its
   five columns with the same five headings as its panel (placeholders until governed).
-- **Cells**: numbers through the one number rule (`plain_num`, isolated left-to-right, unbroken); a purely numeric cell
-  is `td.num`; a missing period prints its governed marker; a withheld object prints the WITHHELD label; a marker row
-  (`SAME_YEAR_REVISION`) spans the table.
+- **Cells**: numbers through the one number rule (`plain_num`, isolated left-to-right, unbroken); a value whose unit
+  opens with "%" carries the sign inside its isolate ("11.9%", as the prose writes it — separated, the sign lands on
+  the wrong side after Arabic letters); an identifier isolated, breaking only at its own hyphens; every ISO date and
+  numeric range in any text isolated unbroken by the document pass (`text.isolate_document`); a list inside a cell
+  joined by the edition's punctuation (";" and "," / "؛" and "،"); a purely numeric cell is `td.num`; a missing period
+  prints its governed marker; a withheld object prints the WITHHELD label; a marker row (`SAME_YEAR_REVISION`) spans
+  the table.
 - **Row groups** (`grouped_table`): rows that share a unit or a state of their own sit in a `tbody` opened by a
   row-group header — the FINDEX gaps under "Percentage points · Calculated here from published figures" with the pair
   as the row header; the lanes of RV-CWR-004 under their lane labels with the date as the row header.
@@ -135,7 +140,8 @@ One stylesheet, `@media print` (`theme.CSS` D1 rules, `CSS_D2`, and the D6 print
 
 - **Chrome gone**: navigation, controls, dialogs, the skip link, the strip, the side index, the footer link groups, the
   cite buttons. The product bar keeps the mark (32 pt) and the product name, unwrapped. Every external locator prints
-  its target after its text (source cards, the chain, the keyed events); the canonical link prints as text.
+  its target on its own left-to-right line under its text (source cards, the chain, the keyed events — inline, a URL
+  in an Arabic paragraph continued at the far right of the next line); the canonical link prints as text.
 - **Provenance survives** (`render.print_foot`): every page ends with product · edition · canonical URL and the
   citation the cite action copies (the record's governed citation; otherwise title — product — canonical URL). It is
   the last element of the document (inside the footer, after the fine print) and is shown in print only.
@@ -180,7 +186,7 @@ Code adds `og:image` when it rasterises the templates at build time.
 
 ## 10. Verification (`design/reference/check_visuals.py`)
 
-Four phases, exit 1 on any failure, record in `out/_review_visuals.json`; run on the final tree of this gate:
+Five phases, exit 1 on any failure, record in `out/_review_visuals.json`; run on the final tree of this gate:
 
 - **contracts** — for each of the 36 contracts × EN/AR × every route that binds it: the tier rule on the DOM (drawn
   with every governed value printed and every marker labelled, a WITHHELD value never printed; a SUPPORTING contract
@@ -188,15 +194,22 @@ Four phases, exit 1 on any failure, record in `out/_review_visuals.json`; run on
   (title, question, scope, the boundary once, the credit isolated, the canonical link, the edition); the text
   alternative with the governed alt text; for a drawn contract the table with a caption, scoped headers, every data
   column named, in a named region; no inline style; every SVG left-to-right; only the palette's colours; the
-  placeholders exactly the escalated set; at 320 and 390 px the figure inside its column, no scrolling plot, no table
-  scrolling unless declared wide. The Compare page is asserted as the tool.
+  placeholders exactly the escalated set; no two text labels of a drawing meeting (`labels_clear`, by ink boxes); at
+  320 and 390 px (and 600 px for a drawn contract) the figure inside its column on both edges, no page-wide scroll,
+  no scrolling plot, no table scrolling unless declared wide. The Compare page is asserted as the tool.
 - **degraded** — forced colours (every mark and label takes the system colour) and print (the frame foot stays, the
   cite control goes, the provenance block appears) on the thirteen drawn contracts × EN/AR.
 - **frames** — every export frame (26) and every social frame (286).
 - **print** — one route per family × EN/AR printed to PDF: chrome hidden, the provenance block with canonical URL,
   citation and edition, every figure whole with its boundary, the title on the first page.
+- **text** — every built document's `<main>` and every export and social frame scanned statically: no ISO date or
+  numeric range outside a `dir="ltr"` isolate (the renderer's own expression, `yfie.text.LTR_RUN`, shared with the
+  in-browser checks; SVG, script and style content aside).
 
-Results on the D6 tree: see `00_DESIGN_README.md` DL-D6-006 and `COVERAGE.csv` (the `evidence` column of the D6 rows).
+Results on the final D6 tree: 36 contracts × EN/AR on every binding route, 2,856 contract assertions; 52 forced-colours
+and print checks on the thirteen drawn contracts; 26 export frames; 286 social frames; 133 print checks on the eleven
+family routes × EN/AR; 598 documents and frames scanned for loose runs; 0 failures (`00_DESIGN_README.md` DL-D6-006;
+`COVERAGE.csv`, the `evidence` column of the D6 rows).
 Evidence: `design/evidence/d6/` — figure crops of the thirteen drawn contracts at 1440 px in both languages, the D6
 forms at 390 px, export frames of the signature figure and the three D6 forms, the social cards of the eleven family
 routes, and the first print pages of every family route in both languages.
@@ -207,8 +220,9 @@ Five independent lenses reviewed the built figures, frames and print pages befor
 measurement expert with a statistician (semantic firewall), an information-visualisation expert with an editor (form,
 legibility, genericity), a native Arabic editor (composition and terminology), a journalist with a hostile source
 owner (screenshot misuse, portable evidence), and an accessibility specialist with a frontend engineer (DOM, CSS, print,
-code). Their findings and every disposition are in DL-D6-007; content and terminology observations are in
-`ESCALATIONS.md` (D6), never fixed in design.
+code). The Arabic lens read the corrected tree last. Their findings and every disposition are in DL-D6-007; content
+and terminology observations are in `ESCALATIONS.md` (D6), never fixed in design; the one runtime defect found (the
+Compare table's reversed dates) is recorded there for Code.
 
 ## 12. What this gate does not claim
 

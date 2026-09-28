@@ -42,7 +42,13 @@ state and that none sits inside a boundary section or an evidence-gap object.
   and button inside a figure — the source-record links of the matrix (named by the date they show, then the record),
   the "↗" locators of the chain and the lanes, the canonical link, the cite control — is a 24 px target, asserted per
   figure by `check_visuals.py` (`targets_24px`). A figure's accessible name is its governed title (`figcaption`); the
-  visible text alternative is its description; its inner headings sit one level under its title.
+  visible text alternative is its description; its inner headings sit one level under its title. The "↗" locator is
+  bound to the word before it by a no-break space, never alone on a line.
+- **Bidi (D6):** every ISO date and numeric range in any text of any document is an unbroken left-to-right run, set by
+  one pass over the finished document (`text.isolate_document`; after Arabic letters a plain date renders reversed and
+  a plain range swaps its ends); an identifier is isolated and breaks only at its own hyphens, so a 37-character source
+  id fits 320 px; a governed English time boundary is isolated and `lang="en"`. Asserted statically on all 598
+  documents and frames and in the browser on every figure and frame (`check_visuals.py`).
 - **Deep links:** `?source=` on `/data/`, `#MA-00n` on `/measurement/` and `?record=` on Contact and Corrections move
   focus to the target object (`tabindex="-1"`), without scrolling it out of view.
 - **Every in-page navigation is named** (the index and strip by the page's `h1`, each edge group by its governed

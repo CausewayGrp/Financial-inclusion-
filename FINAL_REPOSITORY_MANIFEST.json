@@ -29,7 +29,7 @@
   "CONTROLLED_CONTRACT": 2,
   "CURRENT_DOCUMENT": 10,
   "CURRENT_PROGRAMME_RECORD": 52,
-  "DESIGN_PACKAGE": 247,
+  "DESIGN_PACKAGE": 363,
   "GENERATED_DIAGRAMS": 9,
   "GENERATED_LITERAL_CLOSURE": 1,
   "GENERATED_PROJECTION": 37,
@@ -2098,6 +2098,470 @@
   },
   {
    "path": "design/evidence/d5/state-record_context_unknown-en.png",
+   "class": "DESIGN_PACKAGE"
+  },
+  {
+   "path": "design/evidence/d6/export-RV-CWR-001__ar.png",
+   "class": "DESIGN_PACKAGE"
+  },
+  {
+   "path": "design/evidence/d6/export-RV-CWR-001__en.png",
+   "class": "DESIGN_PACKAGE"
+  },
+  {
+   "path": "design/evidence/d6/export-RV-CWR-004__ar.png",
+   "class": "DESIGN_PACKAGE"
+  },
+  {
+   "path": "design/evidence/d6/export-RV-CWR-004__en.png",
+   "class": "DESIGN_PACKAGE"
+  },
+  {
+   "path": "design/evidence/d6/export-VIS-FIRM-CONSTRAINTS__ar.png",
+   "class": "DESIGN_PACKAGE"
+  },
+  {
+   "path": "design/evidence/d6/export-VIS-FIRM-CONSTRAINTS__en.png",
+   "class": "DESIGN_PACKAGE"
+  },
+  {
+   "path": "design/evidence/d6/export-VIS-PROVIDER-OBSERVABILITY__ar.png",
+   "class": "DESIGN_PACKAGE"
+  },
+  {
+   "path": "design/evidence/d6/export-VIS-PROVIDER-OBSERVABILITY__en.png",
+   "class": "DESIGN_PACKAGE"
+  },
+  {
+   "path": "design/evidence/d6/figure-RV-CWR-001-ar-390.png",
+   "class": "DESIGN_PACKAGE"
+  },
+  {
+   "path": "design/evidence/d6/figure-RV-CWR-001-ar.png",
+   "class": "DESIGN_PACKAGE"
+  },
+  {
+   "path": "design/evidence/d6/figure-RV-CWR-001-en-390.png",
+   "class": "DESIGN_PACKAGE"
+  },
+  {
+   "path": "design/evidence/d6/figure-RV-CWR-001-en.png",
+   "class": "DESIGN_PACKAGE"
+  },
+  {
+   "path": "design/evidence/d6/figure-RV-CWR-004-ar-390.png",
+   "class": "DESIGN_PACKAGE"
+  },
+  {
+   "path": "design/evidence/d6/figure-RV-CWR-004-ar.png",
+   "class": "DESIGN_PACKAGE"
+  },
+  {
+   "path": "design/evidence/d6/figure-RV-CWR-004-en-390.png",
+   "class": "DESIGN_PACKAGE"
+  },
+  {
+   "path": "design/evidence/d6/figure-RV-CWR-004-en.png",
+   "class": "DESIGN_PACKAGE"
+  },
+  {
+   "path": "design/evidence/d6/figure-RV-CWR-009-ar.png",
+   "class": "DESIGN_PACKAGE"
+  },
+  {
+   "path": "design/evidence/d6/figure-RV-CWR-009-en.png",
+   "class": "DESIGN_PACKAGE"
+  },
+  {
+   "path": "design/evidence/d6/figure-VIS-FINDEX-GAPS-ar.png",
+   "class": "DESIGN_PACKAGE"
+  },
+  {
+   "path": "design/evidence/d6/figure-VIS-FINDEX-GAPS-en.png",
+   "class": "DESIGN_PACKAGE"
+  },
+  {
+   "path": "design/evidence/d6/figure-VIS-FIRM-CONSTRAINTS-ar-390.png",
+   "class": "DESIGN_PACKAGE"
+  },
+  {
+   "path": "design/evidence/d6/figure-VIS-FIRM-CONSTRAINTS-ar.png",
+   "class": "DESIGN_PACKAGE"
+  },
+  {
+   "path": "design/evidence/d6/figure-VIS-FIRM-CONSTRAINTS-en-390.png",
+   "class": "DESIGN_PACKAGE"
+  },
+  {
+   "path": "design/evidence/d6/figure-VIS-FIRM-CONSTRAINTS-en.png",
+   "class": "DESIGN_PACKAGE"
+  },
+  {
+   "path": "design/evidence/d6/figure-VIS-PAYMENT-ANATOMY-ar.png",
+   "class": "DESIGN_PACKAGE"
+  },
+  {
+   "path": "design/evidence/d6/figure-VIS-PAYMENT-ANATOMY-en.png",
+   "class": "DESIGN_PACKAGE"
+  },
+  {
+   "path": "design/evidence/d6/figure-VIS-PAYMENT-RAILS-ar.png",
+   "class": "DESIGN_PACKAGE"
+  },
+  {
+   "path": "design/evidence/d6/figure-VIS-PAYMENT-RAILS-en.png",
+   "class": "DESIGN_PACKAGE"
+  },
+  {
+   "path": "design/evidence/d6/figure-VIS-POS-TERMINALS-ar.png",
+   "class": "DESIGN_PACKAGE"
+  },
+  {
+   "path": "design/evidence/d6/figure-VIS-POS-TERMINALS-en.png",
+   "class": "DESIGN_PACKAGE"
+  },
+  {
+   "path": "design/evidence/d6/figure-VIS-POS-TRANSACTIONS-ar.png",
+   "class": "DESIGN_PACKAGE"
+  },
+  {
+   "path": "design/evidence/d6/figure-VIS-POS-TRANSACTIONS-en.png",
+   "class": "DESIGN_PACKAGE"
+  },
+  {
+   "path": "design/evidence/d6/figure-VIS-POS-VALUE-ar.png",
+   "class": "DESIGN_PACKAGE"
+  },
+  {
+   "path": "design/evidence/d6/figure-VIS-POS-VALUE-en.png",
+   "class": "DESIGN_PACKAGE"
+  },
+  {
+   "path": "design/evidence/d6/figure-VIS-PROVIDER-OBSERVABILITY-ar-390.png",
+   "class": "DESIGN_PACKAGE"
+  },
+  {
+   "path": "design/evidence/d6/figure-VIS-PROVIDER-OBSERVABILITY-ar.png",
+   "class": "DESIGN_PACKAGE"
+  },
+  {
+   "path": "design/evidence/d6/figure-VIS-PROVIDER-OBSERVABILITY-en-390.png",
+   "class": "DESIGN_PACKAGE"
+  },
+  {
+   "path": "design/evidence/d6/figure-VIS-PROVIDER-OBSERVABILITY-en.png",
+   "class": "DESIGN_PACKAGE"
+  },
+  {
+   "path": "design/evidence/d6/figure-VIS-REMITTANCE-COST-ar.png",
+   "class": "DESIGN_PACKAGE"
+  },
+  {
+   "path": "design/evidence/d6/figure-VIS-REMITTANCE-COST-en.png",
+   "class": "DESIGN_PACKAGE"
+  },
+  {
+   "path": "design/evidence/d6/figure-VIS-REMITTANCE-MACRO-ar.png",
+   "class": "DESIGN_PACKAGE"
+  },
+  {
+   "path": "design/evidence/d6/figure-VIS-REMITTANCE-MACRO-en.png",
+   "class": "DESIGN_PACKAGE"
+  },
+  {
+   "path": "design/evidence/d6/print-about-ar-p1.png",
+   "class": "DESIGN_PACKAGE"
+  },
+  {
+   "path": "design/evidence/d6/print-about-ar-p2.png",
+   "class": "DESIGN_PACKAGE"
+  },
+  {
+   "path": "design/evidence/d6/print-about-en-p1.png",
+   "class": "DESIGN_PACKAGE"
+  },
+  {
+   "path": "design/evidence/d6/print-about-en-p2.png",
+   "class": "DESIGN_PACKAGE"
+  },
+  {
+   "path": "design/evidence/d6/print-data-ar-p1.png",
+   "class": "DESIGN_PACKAGE"
+  },
+  {
+   "path": "design/evidence/d6/print-data-ar-p2.png",
+   "class": "DESIGN_PACKAGE"
+  },
+  {
+   "path": "design/evidence/d6/print-data-en-p1.png",
+   "class": "DESIGN_PACKAGE"
+  },
+  {
+   "path": "design/evidence/d6/print-data-en-p2.png",
+   "class": "DESIGN_PACKAGE"
+  },
+  {
+   "path": "design/evidence/d6/print-evidence-ar-p1.png",
+   "class": "DESIGN_PACKAGE"
+  },
+  {
+   "path": "design/evidence/d6/print-evidence-ar-p2.png",
+   "class": "DESIGN_PACKAGE"
+  },
+  {
+   "path": "design/evidence/d6/print-evidence-en-p1.png",
+   "class": "DESIGN_PACKAGE"
+  },
+  {
+   "path": "design/evidence/d6/print-evidence-en-p2.png",
+   "class": "DESIGN_PACKAGE"
+  },
+  {
+   "path": "design/evidence/d6/print-evidence_CLM-003-ar-p1.png",
+   "class": "DESIGN_PACKAGE"
+  },
+  {
+   "path": "design/evidence/d6/print-evidence_CLM-003-ar-p2.png",
+   "class": "DESIGN_PACKAGE"
+  },
+  {
+   "path": "design/evidence/d6/print-evidence_CLM-003-en-p1.png",
+   "class": "DESIGN_PACKAGE"
+  },
+  {
+   "path": "design/evidence/d6/print-evidence_CLM-003-en-p2.png",
+   "class": "DESIGN_PACKAGE"
+  },
+  {
+   "path": "design/evidence/d6/print-evidence_compare-ar-p1.png",
+   "class": "DESIGN_PACKAGE"
+  },
+  {
+   "path": "design/evidence/d6/print-evidence_compare-ar-p2.png",
+   "class": "DESIGN_PACKAGE"
+  },
+  {
+   "path": "design/evidence/d6/print-evidence_compare-en-p1.png",
+   "class": "DESIGN_PACKAGE"
+  },
+  {
+   "path": "design/evidence/d6/print-evidence_compare-en-p2.png",
+   "class": "DESIGN_PACKAGE"
+  },
+  {
+   "path": "design/evidence/d6/print-explore-ar-p1.png",
+   "class": "DESIGN_PACKAGE"
+  },
+  {
+   "path": "design/evidence/d6/print-explore-ar-p2.png",
+   "class": "DESIGN_PACKAGE"
+  },
+  {
+   "path": "design/evidence/d6/print-explore-en-p1.png",
+   "class": "DESIGN_PACKAGE"
+  },
+  {
+   "path": "design/evidence/d6/print-explore-en-p2.png",
+   "class": "DESIGN_PACKAGE"
+  },
+  {
+   "path": "design/evidence/d6/print-home-ar-p1.png",
+   "class": "DESIGN_PACKAGE"
+  },
+  {
+   "path": "design/evidence/d6/print-home-ar-p2.png",
+   "class": "DESIGN_PACKAGE"
+  },
+  {
+   "path": "design/evidence/d6/print-home-en-p1.png",
+   "class": "DESIGN_PACKAGE"
+  },
+  {
+   "path": "design/evidence/d6/print-home-en-p2.png",
+   "class": "DESIGN_PACKAGE"
+  },
+  {
+   "path": "design/evidence/d6/print-measurement-ar-p1.png",
+   "class": "DESIGN_PACKAGE"
+  },
+  {
+   "path": "design/evidence/d6/print-measurement-ar-p2.png",
+   "class": "DESIGN_PACKAGE"
+  },
+  {
+   "path": "design/evidence/d6/print-measurement-en-p1.png",
+   "class": "DESIGN_PACKAGE"
+  },
+  {
+   "path": "design/evidence/d6/print-measurement-en-p2.png",
+   "class": "DESIGN_PACKAGE"
+  },
+  {
+   "path": "design/evidence/d6/print-people-ar-p1.png",
+   "class": "DESIGN_PACKAGE"
+  },
+  {
+   "path": "design/evidence/d6/print-people-ar-p2.png",
+   "class": "DESIGN_PACKAGE"
+  },
+  {
+   "path": "design/evidence/d6/print-people-en-p1.png",
+   "class": "DESIGN_PACKAGE"
+  },
+  {
+   "path": "design/evidence/d6/print-people-en-p2.png",
+   "class": "DESIGN_PACKAGE"
+  },
+  {
+   "path": "design/evidence/d6/print-readings-ar-p1.png",
+   "class": "DESIGN_PACKAGE"
+  },
+  {
+   "path": "design/evidence/d6/print-readings-ar-p2.png",
+   "class": "DESIGN_PACKAGE"
+  },
+  {
+   "path": "design/evidence/d6/print-readings-en-p1.png",
+   "class": "DESIGN_PACKAGE"
+  },
+  {
+   "path": "design/evidence/d6/print-readings-en-p2.png",
+   "class": "DESIGN_PACKAGE"
+  },
+  {
+   "path": "design/evidence/d6/print-readings_same-year-different-number-ar-p1.png",
+   "class": "DESIGN_PACKAGE"
+  },
+  {
+   "path": "design/evidence/d6/print-readings_same-year-different-number-ar-p2.png",
+   "class": "DESIGN_PACKAGE"
+  },
+  {
+   "path": "design/evidence/d6/print-readings_same-year-different-number-ar-p3.png",
+   "class": "DESIGN_PACKAGE"
+  },
+  {
+   "path": "design/evidence/d6/print-readings_same-year-different-number-ar-p4.png",
+   "class": "DESIGN_PACKAGE"
+  },
+  {
+   "path": "design/evidence/d6/print-readings_same-year-different-number-ar-p5.png",
+   "class": "DESIGN_PACKAGE"
+  },
+  {
+   "path": "design/evidence/d6/print-readings_same-year-different-number-ar-p6.png",
+   "class": "DESIGN_PACKAGE"
+  },
+  {
+   "path": "design/evidence/d6/print-readings_same-year-different-number-en-p1.png",
+   "class": "DESIGN_PACKAGE"
+  },
+  {
+   "path": "design/evidence/d6/print-readings_same-year-different-number-en-p2.png",
+   "class": "DESIGN_PACKAGE"
+  },
+  {
+   "path": "design/evidence/d6/print-readings_same-year-different-number-en-p3.png",
+   "class": "DESIGN_PACKAGE"
+  },
+  {
+   "path": "design/evidence/d6/print-readings_same-year-different-number-en-p4.png",
+   "class": "DESIGN_PACKAGE"
+  },
+  {
+   "path": "design/evidence/d6/print-readings_same-year-different-number-en-p5.png",
+   "class": "DESIGN_PACKAGE"
+  },
+  {
+   "path": "design/evidence/d6/print-readings_same-year-different-number-en-p6.png",
+   "class": "DESIGN_PACKAGE"
+  },
+  {
+   "path": "design/evidence/d6/social-about__ar.png",
+   "class": "DESIGN_PACKAGE"
+  },
+  {
+   "path": "design/evidence/d6/social-about__en.png",
+   "class": "DESIGN_PACKAGE"
+  },
+  {
+   "path": "design/evidence/d6/social-data__ar.png",
+   "class": "DESIGN_PACKAGE"
+  },
+  {
+   "path": "design/evidence/d6/social-data__en.png",
+   "class": "DESIGN_PACKAGE"
+  },
+  {
+   "path": "design/evidence/d6/social-evidence_CLM-003__ar.png",
+   "class": "DESIGN_PACKAGE"
+  },
+  {
+   "path": "design/evidence/d6/social-evidence_CLM-003__en.png",
+   "class": "DESIGN_PACKAGE"
+  },
+  {
+   "path": "design/evidence/d6/social-evidence__ar.png",
+   "class": "DESIGN_PACKAGE"
+  },
+  {
+   "path": "design/evidence/d6/social-evidence__en.png",
+   "class": "DESIGN_PACKAGE"
+  },
+  {
+   "path": "design/evidence/d6/social-evidence_compare__ar.png",
+   "class": "DESIGN_PACKAGE"
+  },
+  {
+   "path": "design/evidence/d6/social-evidence_compare__en.png",
+   "class": "DESIGN_PACKAGE"
+  },
+  {
+   "path": "design/evidence/d6/social-explore__ar.png",
+   "class": "DESIGN_PACKAGE"
+  },
+  {
+   "path": "design/evidence/d6/social-explore__en.png",
+   "class": "DESIGN_PACKAGE"
+  },
+  {
+   "path": "design/evidence/d6/social-home__ar.png",
+   "class": "DESIGN_PACKAGE"
+  },
+  {
+   "path": "design/evidence/d6/social-home__en.png",
+   "class": "DESIGN_PACKAGE"
+  },
+  {
+   "path": "design/evidence/d6/social-measurement__ar.png",
+   "class": "DESIGN_PACKAGE"
+  },
+  {
+   "path": "design/evidence/d6/social-measurement__en.png",
+   "class": "DESIGN_PACKAGE"
+  },
+  {
+   "path": "design/evidence/d6/social-people__ar.png",
+   "class": "DESIGN_PACKAGE"
+  },
+  {
+   "path": "design/evidence/d6/social-people__en.png",
+   "class": "DESIGN_PACKAGE"
+  },
+  {
+   "path": "design/evidence/d6/social-readings__ar.png",
+   "class": "DESIGN_PACKAGE"
+  },
+  {
+   "path": "design/evidence/d6/social-readings__en.png",
+   "class": "DESIGN_PACKAGE"
+  },
+  {
+   "path": "design/evidence/d6/social-readings_same-year-different-number__ar.png",
+   "class": "DESIGN_PACKAGE"
+  },
+  {
+   "path": "design/evidence/d6/social-readings_same-year-different-number__en.png",
    "class": "DESIGN_PACKAGE"
   },
   {
