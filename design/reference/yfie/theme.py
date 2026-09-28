@@ -278,6 +278,9 @@ CSS_D2 = r"""/* ---- D2: families, figures, tools (same tokens; maintained with 
 .rref{font-size:var(--fs-clock);color:var(--ink-2);font-weight:500;margin-inline-start:.8em}
 .count{color:var(--mute);font-weight:500}
 /* question entry */
+.clusters-lead{margin-top:26px}
+.clusters-lead .q{margin:4px 0 0;max-width:var(--measure)}
+.clusters-lead .small{margin-top:6px}
 .clusters{display:flex;flex-direction:column;gap:6px;margin-top:10px}
 .cluster h3{font-size:var(--fs-rubric);color:var(--ochre);font-weight:600;padding-top:14px;border-top:3px solid var(--ink);margin-top:14px}
 [dir=ltr] .cluster h3{text-transform:uppercase;letter-spacing:.1em}

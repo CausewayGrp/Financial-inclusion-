@@ -129,12 +129,20 @@ def question_entry(page: dict, shell: dict) -> str:
         items = "".join(f'<li><div><div class="q"><a href="{q["href"]}">{esc(q["question"])}</a></div><div class="gets small">{esc(q["gets"])}</div></div></li>' for q in g["items"])
         groups.append(f'<div class="cluster"><h3>{esc(g["heading"])} <span class="count">({bdi(len(g["items"]))})</span></h3><ol class="qlist">{items}</ol></div>')
     parts = [head_block(page, shell, L["flow"], lead=page["lead"])]
-    parts.append(f'<section class="qa first" id="questions"><div>{rubric(L["eyebrow"])}<h2>{esc(L["list_title"])}</h2></div>'
-                 f'<div>{body_paras(ls.get("paragraphs") or [], "st")}<p class="small">{esc(L["list_intro"])}</p><div class="clusters">{"".join(groups)}</div></div></section>')
-    index = [("questions", L["list_title"])]
-    for i, s in enumerate(page["sections"], 1):
+    # The governed questions section (section 5) renders once, here, as the answer that holds the clusters it
+    # introduces: its role and heading head the section, its body is the clusters' introduction, and the interface
+    # lead (eyebrow, list title, intro) sits between the body and the clusters (DEBT-019; it is excluded from the
+    # loop below, so no second, question-less rendering exists).
+    parts.append(f'<section class="qa first" id="questions"><div><span class="rubric"><span class="n">01</span>{esc(ls.get("role") or "")}</span><h2>{esc(ls.get("heading") or L["list_title"])}</h2></div>'
+                 f'<div>{body_paras(ls.get("paragraphs") or [], "st")}'
+                 f'<div class="clusters-lead">{rubric(L["eyebrow"])}<p class="q">{esc(L["list_title"])}</p><p class="small">{esc(L["list_intro"])}</p></div>'
+                 f'<div class="clusters">{"".join(groups)}</div></div></section>')
+    index = [("questions", ls.get("heading") or L["list_title"])]
+    for s in page["sections"]:
+        if ls and s["order"] == ls.get("order"):
+            continue
         kind = "bnd" if s.get("role") and ("does not establish" in s["role"].lower() or "لا يثبته" in s["role"] or "know" in s["role"].lower() or "نعرف" in s["role"]) else ""
-        parts.append(answer(s, None if kind else i, f"s{s['order']}", kind))
+        parts.append(answer(s, None if kind else len(index) + 1, f"s{s['order']}", kind))
         index.append((f"s{s['order']}", s["heading"]))
     b, bi = blocks(page, L)
     parts.append(b); index += bi
@@ -173,7 +181,8 @@ def domain(page: dict, shell: dict) -> str:
     placement = VISUAL_PLACEMENT.get(route, {})
     primary_orders = [s["order"] for s in page["primary"]]
     for i, s in enumerate(page["primary"], 1):
-        parts.append(answer(s, i, f"s{s['order']}"))
+        # the rubric ordinal is the section's position in the page index, so the spine and the rubrics agree (DEBT-019)
+        parts.append(answer(s, len(index) + 1, f"s{s['order']}"))
         index.append((f"s{s['order']}", s["heading"]))
         figs = ""
         if i == page["visual_after"] and page["primary_visual"]:
@@ -247,8 +256,8 @@ def evidence_directory(page: dict, shell: dict) -> str:
               f'<div class="actions"><a href="{page["compare_href"]}">{esc(L["compare"])}</a></div></div></section>')
     parts.append(search)
     index = [("search", L["search"])]
-    for i, s in enumerate(page["sections"], 1):
-        parts.append(answer(s, i, f"s{s['order']}"))
+    for s in page["sections"]:
+        parts.append(answer(s, len(index) + 1, f"s{s['order']}"))
         index.append((f"s{s['order']}", s["heading"]))
     L2 = {**L, "visual_eyebrow": SL.get("visual_eyebrow", "")}
     b, bi = blocks(page, L2)
@@ -285,8 +294,8 @@ def comparison(page: dict, shell: dict) -> str:
             f'<script type="application/json" id="yfie-compare">{data}</script><script type="application/json" id="yfie-compare-dimensions">{dims}</script></div></section>')
     parts = [head_block(page, shell, SL["understand_explore_verify"], lead=page["lead"]), tool]
     index = [("compare", L["title"])]
-    for i, s in enumerate(page["sections"], 1):
-        parts.append(answer(s, i, f"s{s['order']}"))
+    for s in page["sections"]:
+        parts.append(answer(s, len(index) + 1, f"s{s['order']}"))
         index.append((f"s{s['order']}", s["heading"]))
     n, ni = next_actions(page.get("next"))
     parts.append(n); index += ni
@@ -332,7 +341,6 @@ def data_sources(page: dict, shell: dict) -> str:
             f'<div class="empty small" data-source-no-results hidden>{esc(L["no_results"])}</div></div></section>')
     parts.append(tool)
     index = [("directory", L["directory"])]
-    n = 0
     for s in page["sections"]:
         if s.get("inventory"):
             items = "".join(f'<div><dt>{esc(x["label"])}</dt><dd dir="ltr">{esc(x["value"])}</dd></div>' for x in s["inventory"])
@@ -351,9 +359,8 @@ def data_sources(page: dict, shell: dict) -> str:
             index.append(("chronology", s["heading"]))
             continue
         else:
-            n += 1
             kind = "bnd" if s.get("role") and ("does not establish" in s["role"].lower() or "لا يثبته" in s["role"] or "know" in s["role"].lower() or "نعرف" in s["role"]) else ""
-            parts.append(answer(s, None if kind else n, f"s{s['order']}", kind))
+            parts.append(answer(s, None if kind else len(index) + 1, f"s{s['order']}", kind))
         index.append((f"s{s['order']}", s["heading"]))
     b, bi = blocks(page, L)
     parts.append(b); index += bi
@@ -395,11 +402,9 @@ def measurement(page: dict, shell: dict) -> str:
                      f'<div class="ref"><b>{esc(ML["reference"])}</b> {bdi(m["id"])}</div>' + (f'<details class="more"><summary>{esc(ML["more"])}</summary><dl class="kv">{more}</dl></details>' if more else "") + "</article>")
     ag = next((s for s in page["sections"] if s["order"] == 10), None)
     first_secs = [s for s in page["sections"] if s["order"] != 10]
-    n = 0
     for s in first_secs:
-        n += 1
         kind = "bnd" if s.get("role") and ("does not establish" in s["role"].lower() or "لا يثبته" in s["role"] or "know" in s["role"].lower() or "نعرف" in s["role"]) else ""
-        parts.append(answer(s, None if kind else n, f"s{s['order']}", kind))
+        parts.append(answer(s, None if kind else len(index) + 1, f"s{s['order']}", kind))
         index.append((f"s{s['order']}", s["heading"]))
     head_ag = (f'<div>{rubric(ag.get("role") or "")}<h2>{esc(ag["heading"])}</h2></div><div class="body">{body_paras(ag["paragraphs"])}</div>' if ag else "")
     parts.append(f'<section class="qa" id="agenda">{head_ag}</section><div class="prios">{"".join(prios)}</div>')
@@ -431,8 +436,8 @@ def reference(page: dict, shell: dict) -> str:
         else:
             parts.append(f'<section class="qa first ctx" id="record" data-correction-context><div><h2>{esc(ctx["title"])}</h2></div><div><p class="small">{esc(ctx["intro"])}</p><div class="small" data-correction-empty>{esc(ctx["empty"])}</div>{origin_html}</div></section>')
             index.append(("record", ctx["title"]))
-    for i, s in enumerate(page["sections"], 1):
-        parts.append(answer(s, i, f"s{s['order']}"))
+    for s in page["sections"]:
+        parts.append(answer(s, len(index) + 1, f"s{s['order']}"))
         index.append((f"s{s['order']}", s["heading"]))
     b, bi = blocks(page, L)
     parts.append(b); index += bi

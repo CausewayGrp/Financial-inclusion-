@@ -1094,3 +1094,36 @@ not public release (REL-01…04 remain).
   runs; `check_visuals.py` 596 documents and frames, 0 failures; `check_content.py --text` 0 differing documents;
   `check_binding.py` and `tokens.py --check` pass.
 - Compromise: none. DEBT-018 closed.
+
+### DL-D7-007 · D7 · 2026-09-28 · DEBT-019 closed: Explore's section 5 renders once, and rubric ordinals are the index positions
+- Problem: on `/explore/` the governed section 5 ("Questions to start from") rendered twice — its body as the
+  introduction of the question clusters at the top (under the interface list title), and again in its spec position
+  after the boundaries, as an answer with no questions under it. Both D7 cold readers read the second rendering as
+  unfinished. The answers' rubric ordinals also disagreed with the spine index (the first answer's rubric read 01
+  under the index entry 02, because the questions section is indexed first). A first fix at the checkpoint dropped
+  the section from the loop and failed `check_content.py --text`: the section's governed role ("Start with a
+  question") is rendered by the baseline in `<main>` and the top block carried only the interface labels.
+- Evidence: the two cold-reader reports (`evidence/d7/cold_read/`); the reverted checkpoint attempt (DL-D7-003); the
+  baseline `<main>` renders the interface list title, its intro, the section's role and the questions — not the
+  section's own heading or body — so the once-rendering must carry role, heading and body together with the
+  interface lead to keep text parity.
+- Alternatives: (1) drop the second rendering only (the checkpoint attempt — parity fails on the role); (2) keep both
+  renderings and renumber (the unfinished second section stays); (3) render the governed section once, at the top, as
+  the answer that holds the clusters it introduces — its role as the rubric, its heading as the `h2`, its body as the
+  clusters' introduction — with the interface lead (eyebrow, list title, intro) between the body and the clusters,
+  and exclude it from the section loop.
+- Chosen: (3), in `families.question_entry`. The ordinals: a section rubric's ordinal is now the section's position
+  in the page's spine index, in every family renderer (`len(index) + 1` at composition), so the index and the
+  rubrics can never disagree again; a boundary section keeps its unnumbered rubric (the boundary voice) and its
+  index position simply shows no counterpart ordinal on the page — absence, not contradiction. The same rule fixed
+  the identical latent mismatch on every family with an unnumbered first section (the directory's search, Compare's
+  tool, the register, the domain band): `/people/`'s first answer now reads 03 under index 03, not 01 under 03.
+- Arabic / responsive / a11y: verified in both languages; the clusters keep their four `h3` groups and eleven
+  questions (`check_site.py` `four_clusters_eleven_questions`); no heading level changed; the clusters' lead keeps
+  the interface strings the baseline renders.
+- Code: compose Explore's questions section once, as the reference does; number section rubrics from the page index,
+  never from a per-loop counter.
+- Verified: 288 documents rebuilt; `check_content.py --text` 0 differing documents; `check_binding.py` pass;
+  `check_site.py --gate d2 --degraded` (553 hard-state assertions, 0 failed), `--gate d3 --degraded` and `--gate d4`
+  pass on the fixed tree; a DOM scan of every family route shows 0 rubric ordinals that differ from the index.
+- Compromise: none. DEBT-019 closed.
