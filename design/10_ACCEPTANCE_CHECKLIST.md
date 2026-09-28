@@ -228,7 +228,7 @@ readers (English; Arabic) read the checkpoint tree (§K.4).
   two scales; the thirteen `[dir=rtl]` rules over logical properties; charts unmirrored); `02_TOKENS.json` → `type.arabic`;
   `design/evidence/d7/review-home-ar-{1440,390}.png`, `review-record-ar-*.png`, `review-reading-ar-*.png`; the D6
   Arabic lens and the D7 Arabic cold reader (§K.4).
-- [ ] Mixed-script runs isolated; digits Western; dates and units in the governed forms. — **Open (DEBT-018):** a
+- [x] Mixed-script runs isolated; digits Western; dates and units in the governed forms. — **Closed 2026-09-28 (DEBT-018, DL-D7-006):** a
   governed signed value in Arabic prose ("+11%") is outside the isolate and renders "%11+" (verified on `/payments/` and
   CLM-003 at the checkpoint; found by the Arabic cold reader); fixed at the resumption. Otherwise `check_visuals.py --phases
   text`: 596 documents and frames scanned, no ISO date or numeric range outside an isolate; `iso_dates_isolated` per
@@ -363,7 +363,7 @@ readers (English; Arabic) read the checkpoint tree (§K.4).
 - [ ] `DESIGN_DEBT.md` lists every deliberate temporary compromise; none open blocks D7; each open one has its Code
   action in `09_CODE_HANDOFF.md`. — Nineteen entries; closed at D7: DEBT-002, DEBT-013, DEBT-017; open and not
   blocking D7: DEBT-007, 008, 011, 014, 015, 016 — each with its Code action in the D7 table of `09_CODE_HANDOFF.md`
-  ("Design debt" row); **open and blocking the acceptance until the resumption: DEBT-018, DEBT-019** (found by the D7
+  ("Design debt" row); **DEBT-018 closed 2026-09-28 (DL-D7-006); open and blocking the acceptance: DEBT-019** (found by the D7
   cold readers, verified, each with its fix specified).
 - [x] `09_CODE_HANDOFF.md` maps tokens, components, states, routes, content bindings, visual contracts, responsive
   rules, accessibility behaviour and every exception. — The D1–D7 tables (each gate's rows, the newest superseding),
@@ -468,7 +468,7 @@ for an official audience — the open items above.
 
 **Status of this checklist (28 September 2026).** The ticks record the technical evidence on the checkpoint tree. The
 owner has withheld the final visual acceptance: D7 is not declared met and the Design package is not declared
-accepted until the owner's visual review, DEBT-018 and DEBT-019 are settled at the resumption.
+accepted until the owner's visual review and DEBT-019 is settled; DEBT-018 was closed on 2026-09-28 (DL-D7-006).
 
 ## L. Outputs on the checkpoint tree (pasted, unedited last lines)
 

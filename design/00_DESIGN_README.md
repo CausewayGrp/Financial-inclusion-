@@ -1074,3 +1074,23 @@ not public release (REL-01…04 remain).
   (DEBT-016, EAD-03).
 - Code: the same two preloads per page; IBM's pre-split Latin subsets only with provenance (`ESCALATIONS.md`,
   anticipated).
+
+### DL-D7-006 · D7 · 2026-09-28 · DEBT-018 closed: signed values isolated in the text layer
+- Problem: a governed signed value in Arabic prose ("+11%") sat outside the text layer's isolate. The sign and the
+  percent sign are bidi-neutral, so after Arabic letters the run rendered "%11+" — the figure read as its own mirror.
+- Evidence: reproduced in Chromium at 2x against `/ar/evidence/CLM-003/` and a minimal bare-vs-isolated page; a scan of
+  the projections found 30 governed occurrences on 6 routes (`/`, `/access/`, `/payments/`, `/evidence/CLM-003/`,
+  `/evidence/VIS-POS-TERMINALS/` and the passports) — wider than the two routes the debt recorded.
+- Alternatives: isolate at each call site (misses any new occurrence); isolate every number (over-isolates, and would
+  wrap identifiers); extend the one text layer's rule (chosen).
+- Chosen: `text.SIGNED` in `design/reference/yfie/text.py`, joined into `LTR_RUN`, so `bdi()`, `isolate_iso()` and the
+  one document pass all carry it. A sign (+, -, U+2212, U+2013) with digits, optional thousands and decimals and an
+  optional percent sign, guarded by a lookbehind so no identifier is matched: `CLM-003`, `VIS-POS-TERMINALS` and
+  `MF-ORIG-001+002` are untouched, and ISO dates and numeric ranges keep their existing behaviour.
+- Arabic: the defect was Arabic-only and is the point of the fix. Responsive and accessibility: none — the isolate adds
+  no visible mark and `class="nw"` keeps the run unbroken, as for dates.
+- Code: inherit `text.py` as it stands; the rule belongs in the production text layer, not at the call sites.
+- Verified: 288 documents rebuilt; every Arabic document, export frame and social frame re-scanned with 0 bare signed
+  runs; `check_visuals.py` 596 documents and frames, 0 failures; `check_content.py --text` 0 differing documents;
+  `check_binding.py` and `tokens.py --check` pass.
+- Compromise: none. DEBT-018 closed.

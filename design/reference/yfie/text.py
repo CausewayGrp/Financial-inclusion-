@@ -1,7 +1,8 @@
 # -*- coding: utf-8 -*-
 """One text layer for every renderer (D6): escaping and left-to-right isolation under the Design Intent Lock (§4.1.8).
-After Arabic letters a plain ISO date renders with its parts reversed and a plain numeric range with its ends
-swapped; an isolated run never does. Nothing here authors a word."""
+After Arabic letters a plain ISO date renders with its parts reversed, a plain numeric range with its ends
+swapped, and a plain signed value with its sign and percent sign thrown to the wrong end ("+11%" as "%11+",
+DEBT-018); an isolated run never does. Nothing here authors a word."""
 from __future__ import annotations
 
 import html
@@ -9,7 +10,8 @@ import re
 
 ISO_DATE = re.compile(r"(?<![\d-])\d{4}-\d{2}(?:-\d{2})?(?![\d-])")   # YYYY-MM or YYYY-MM-DD, never the tail of an identifier
 NUM_RANGE = re.compile(r"(?<![\d.,])(?:\d{4}(?:-\d{2}(?:-\d{2})?)?[–-]\d{4}(?:-\d{2}(?:-\d{2})?)?|\d{1,3}–\d{1,3})(?![\d.,])")   # 2021–2024, 2025-03–2026-01, 15–24
-LTR_RUN = re.compile(f"(?:{NUM_RANGE.pattern})|(?:{ISO_DATE.pattern})")
+SIGNED = re.compile(r"(?<![\w\u0600-\u06FF-])[+\u2212\u2013-]\d[\d,]*(?:\.\d+)?%?(?![\w])")   # +11%, +4.9%, −0.5 — the sign and the percent sign are bidi-neutral, so after Arabic letters an un-isolated run renders "%11+"
+LTR_RUN = re.compile(f"(?:{NUM_RANGE.pattern})|(?:{ISO_DATE.pattern})|(?:{SIGNED.pattern})")
 
 
 def esc(x) -> str:
