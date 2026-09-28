@@ -1,5 +1,7 @@
 # Yemen Financial Inclusion Evidence · أدلة الشمول المالي في اليمن
 
+<img src="site-src/assets/CauseWay_Master_Logo.png" alt="CauseWay" width="72">
+
 [![Verify](https://github.com/CausewayGrp/Financial-inclusion-/actions/workflows/verify.yml/badge.svg?branch=main)](https://github.com/CausewayGrp/Financial-inclusion-/actions/workflows/verify.yml)
 
 A public evidence resource, built and maintained by CauseWay, that takes a reader from a question to the strongest
@@ -21,9 +23,9 @@ authority; everything else here is derived from it, implements it, or records ho
 |---|---|
 | **Position** | **DESIGN HANDOFF READY** — R8.6 closed and the F0–F9 integration programme accepted clean-room ([record](audit/FINAL_CLEAN_ROOM_ACCEPTANCE.md)); the post-F9 correction and the design-enablement control pass of 27 September 2026 applied |
 | **Not declared** | Not PUBLIC RELEASE READY |
-| **Now** | The Design programme is running. Gates D0–D6 are accepted and merged; **D7 is open in pull request #7** with final visual acceptance withheld — see [Design programme](#design-programme--current-state) |
-| **Next** | Claude Design closes D7 on `claude/dreamy-archimedes-e8qx5v`; then Claude Code verifies it independently and implements the production runtime |
-| **Owner actions** | Push the two checkpoint tags ([below](#checkpoints-and-tags)); decide the OWNER_INPUT and RELEASE_ONLY items in [`FINAL_OPEN_ITEMS_REGISTER.md`](FINAL_OPEN_ITEMS_REGISTER.md) |
+| **Now** | **The Design programme is complete.** Gates D0–D7 are accepted and merged (pull request #7, 28 September 2026); the accepted package and the runnable reference implementation are in [`design/`](design/) — see [Design programme](#design-programme--current-state) |
+| **Next** | The production runtime: the eleven ENGINEERING_AFTER_DESIGN items (EAD-01…EAD-11) in [`FINAL_OPEN_ITEMS_REGISTER.md`](FINAL_OPEN_ITEMS_REGISTER.md) §1, starting from [`handoff/CLAUDE_CODE_MASTER_PROMPT.md`](handoff/CLAUDE_CODE_MASTER_PROMPT.md) and [`design/09_CODE_HANDOFF.md`](design/09_CODE_HANDOFF.md) |
+| **Owner actions** | Push the two checkpoint tags and delete five merged branches ([below](#checkpoints-and-tags)); decide the OWNER_INPUT and RELEASE_ONLY items in [`FINAL_OPEN_ITEMS_REGISTER.md`](FINAL_OPEN_ITEMS_REGISTER.md) |
 | **Production Master** | `authority/Yemen_Financial_Inclusion_Evidence_Master.xlsx` · SHA-256 `17db032b15da16fc4b5b3c3b49f19aebf2ecb4ec46634613fe8505d0f038690b` |
 | **Page Specs** | `site-src/content/page_specs.json` · SHA-256 `d45748046ea56fd0e67fdf112f9888de65b3fe7fab46ce6f51de3a80824b69aa` |
 | **Logo authority** | `site-src/assets/CauseWay_Master_Logo.png` · SHA-256 `5830163d…` (full value: `logo_sha256` in [`FINAL_REPOSITORY_MANIFEST.json`](FINAL_REPOSITORY_MANIFEST.json)); never redrawn, recoloured, cropped or regenerated |
@@ -72,10 +74,10 @@ own present-state record and is rewritten at every gate.
 | Field | Value |
 |---|---|
 | **Date** | 28 September 2026 |
-| **Last accepted gate** | **D6** — `main` at `0ccdf01` (pull requests #5 and #6 from `claude/bold-maxwell-r3o015`; the gate was carried by `125aa44`). D2–D5 were accepted at `2effd8b` (pull request #4): D2 at `9c263ac`, D3 at `beecdbb`, D4 at `aee1e1b`, D5 at `8be8e22`. D1 was accepted at `851f496` (pull request #3), D0 at `8bf19ef` (pull requests #1 and #2) |
-| **Working gate** | **D7 — open, closure complete, awaiting independent acceptance.** Branch `claude/dreamy-archimedes-e8qx5v`, pull request #7. Verify is green on the head and the branch is mergeable. The technical checkpoint of 28 September was followed by the closure pass the owner asked for: every recorded design debt that blocked the gate is closed, the four visual debts are settled, three independent lenses read the rendered product and their reports are committed, and the three reader walks are recorded. **The owner's own visual acceptance is not given here and D7 is not declared accepted** |
-| **What stands (D1–D6)** | One chosen direction (T4 · Instrument) with its tokens, evidence grammar and shell. All 36 governed visual contracts stand in their tier's form on every route that binds them — thirteen drawn, twenty-two governed text frames, the RETIRE contract asserted absent — each with its detached frame, named-column table and isolated dates. Every one of the 288 documents is bound and asserted on its own ledger row; the thirteen journeys are walked by keyboard at 390 and 1440 px in Arabic and English; every tool state and technical state is driven and rendered; the print system, the export frames (unshipped until OWN-04) and five social-image templates exist |
-| **What remains at D7** | 73 of 73 acceptance lines met; 1,415 of 1,433 coverage rows `VERIFIED` and the remaining 18 settled with the reason each cannot be proved without inventing a record. **No design debt blocks the gate.** Closed at the closure: **DEBT-018** (signed values in Arabic prose, DL-D7-006), **DEBT-019** (`/explore/` rendered one governed section twice, and rubric ordinals now come from the page index in every family, DL-D7-007), **DEBT-016**'s identification defect (the lockup names the publisher in type on every first screen, DL-D7-008 — the debt stays open on the 10 MB master file alone, which blocks release, not the gate), **DEBT-014/015** (the phone composition, DL-D7-009) and **DEBT-007** (grounding, decided as restraint with the reasoning recorded). Four further interface defects the closure lenses found are fixed (DL-D7-011/012). **DEBT-011 stays open and is the closure's recorded no:** closing the `/data/` dependency groups cut the page 44 % but put the governed "cite a locator-only source" path behind a disclosure and failed the repository's public-tool suite, so it was reverted rather than have a test weakened for it (DL-D7-013). What remains is the owner's visual acceptance; **DEBT-008**, **DEBT-011** and **DEBT-016**'s file weight; and the content and runtime findings escalated to the steward and to Code |
+| **Last accepted gate** | **D7 — the whole programme accepted.** `main` at `fca7bf1`, the merge of pull request #7 (28 September 2026), Verify green. Earlier: D6 at `0ccdf01` (#5, #6), D2–D5 at `2effd8b` (#4), D1 at `851f496` (#3), D0 at `8bf19ef` (#1, #2) |
+| **Working gate** | **None — the Design programme is closed.** What follows is engineering, not design: the eleven EAD items of [`FINAL_OPEN_ITEMS_REGISTER.md`](FINAL_OPEN_ITEMS_REGISTER.md) §1, led by EAD-01 — one production runtime replacing `scripts/build.py`, parity proven on every gate, the old renderer then removed |
+| **What stands (D1–D7)** | One chosen direction (T4 · Instrument) with its tokens, evidence grammar and shell. All 36 governed visual contracts stand in their tier's form on every route that binds them — thirteen drawn, twenty-two governed text frames, the RETIRE contract asserted absent — each with its detached frame, named-column table and isolated dates. Every one of the 288 documents is bound and asserted on its own ledger row; the thirteen journeys are walked by keyboard at 390 and 1440 px in Arabic and English; every tool state and technical state is driven and rendered; the print system, the export frames (unshipped until OWN-04) and five social-image templates exist |
+| **What remains** | The gate closed at 73 of 73 acceptance lines, with 1,415 of 1,433 coverage rows `VERIFIED` and the remaining 18 settled with the reason each cannot be proved without inventing a record. **No design debt blocks the gate.** Three debts stay open by decision, none of them design work: **DEBT-008** and **DEBT-016** (the logo's file weight) block release and wait on the owner; **DEBT-011** (`/data/` page length) blocks nothing — a shortening was attempted, measured a 44 % cut, and was reverted when the gate suite caught that it put a governed citation path behind a disclosure |
 | **Build and check** | `python3 design/reference/build.py`, then `check_content.py --text`, `check_binding.py`, `check_site.py --gate d2/d3/d4`, `check_journeys.py`, `check_trio.py`, `check_visuals.py`, `tokens.py --check` — all in `design/reference/`; then the two browser suites and the invariance check with `YFIE_SITE_DIR=design/reference/out` |
 | **Records** | [`design/00_DESIGN_README.md`](design/00_DESIGN_README.md) (status and the decision log), [`design/10_ACCEPTANCE_CHECKLIST.md`](design/10_ACCEPTANCE_CHECKLIST.md), [`design/COVERAGE.csv`](design/COVERAGE.csv), [`design/DESIGN_DEBT.md`](design/DESIGN_DEBT.md), [`design/ESCALATIONS.md`](design/ESCALATIONS.md), [`design/09_CODE_HANDOFF.md`](design/09_CODE_HANDOFF.md), and `design/01`–`08` for the system itself |
 
@@ -211,7 +213,7 @@ Design never edits the Master, the projections, the contracts or the public buil
 | Post-F9 correction | OWN-07 and OWN-08 closed; the two controlled contracts classified; the handoff tightened in place | CLOSED (27 Sep 2026) | Addendum in [`audit/FINAL_CLEAN_ROOM_ACCEPTANCE.md`](audit/FINAL_CLEAN_ROOM_ACCEPTANCE.md); directive [`D8`](audit/directives/D8_POST_F9_CORRECTION_2026-09-27.txt) |
 | Design-enablement control pass | The handoff checked against the quality doctrine for a cold recipient and strengthened in place: kernel, working loop, memory rule, review tests, debt register, gate entry/exit/stop | CLOSED (27 Sep 2026) | Second addendum, same record; directive [`D9`](audit/directives/D9_DESIGN_ENABLEMENT_CONTROL_PASS_2026-09-27.txt) |
 | **Design D0–D6** | Orientation, competing theses, the chosen direction, every family, every document, every tool and state, the visual and print systems | **ACCEPTED AND MERGED** (27–28 Sep 2026) | [`design/00_DESIGN_README.md`](design/00_DESIGN_README.md); pull requests #1–#6 |
-| **Design D7** | Final acceptance of the reference site | **OPEN** — closure complete, ready for independent acceptance | Pull request #7; [`design/10_ACCEPTANCE_CHECKLIST.md`](design/10_ACCEPTANCE_CHECKLIST.md) §K.5 |
+| **Design D7** | Closure: every recorded blocker settled, judged on the rendered product by three independent lenses | **ACCEPTED AND MERGED** (28 Sep 2026, `fca7bf1`) | Pull request #7; [`design/10_ACCEPTANCE_CHECKLIST.md`](design/10_ACCEPTANCE_CHECKLIST.md); lens reports in `design/evidence/d7/cold_read/` |
 
 ## Open items
 
@@ -230,8 +232,9 @@ Every item, classed and owned, is in [`FINAL_OPEN_ITEMS_REGISTER.md`](FINAL_OPEN
 
 ## Owner actions
 
-1. **Push the two checkpoint tags** — the sessions that prepared these states cannot push tags (git access returns
-   HTTP 403 for tag pushes). The exact commands are in [`OPENAI_REENTRY_CHECKPOINT.md` §7](OPENAI_REENTRY_CHECKPOINT.md#7-owner-actions).
+1. **Push the two checkpoint tags, and delete the five merged branches** — both are refused to the working sessions
+   (HTTP 403). The exact tag commands are in [`OPENAI_REENTRY_CHECKPOINT.md` §7](OPENAI_REENTRY_CHECKPOINT.md#7-owner-actions);
+   the branches are listed under [Checkpoints and tags](#checkpoints-and-tags).
 2. **Decide the owner inputs** in the register: the CauseWay identity and funding statement, the contact mailbox, the
    public origin, the content licence, stewardship, and a reversed logo only if Design asks for one.
 3. **Before any public release:** the RELEASE_ONLY items, a post-implementation accessibility audit and a named release
@@ -246,9 +249,14 @@ and attaches it to a pre-release ([`CONTRIBUTING.md` §6](CONTRIBUTING.md#6-chec
 | Tag | Commit | State on GitHub |
 |---|---|---|
 | `checkpoint/tranche-c-complete-reading-hold` | `f726bda` — the tree OpenAI reviewed | Not yet pushed (owner action) |
-| `checkpoint/design-handoff-ready` | `6d954c1` — the design-enablement control pass, the state Claude Design started from | Not yet pushed (owner action) |
+| `checkpoint/design-handoff-ready` | `6d954c1` — the design-enablement control pass, the state the Design programme started from | Not yet pushed (owner action) |
 
 A checkpoint tag is never moved or rewritten. Until the tags exist, commits and the changelog identify each state.
+
+Five branches are fully merged into `main` and can be deleted: `claude/dreamy-archimedes-e8qx5v`,
+`claude/bold-maxwell-r3o015`, `claude/epic-cori-60fpeb`, `claude/practical-cray-sr26c5` and
+`design/d0-orientation`. Deleting a branch and pushing a tag are both refused to the working sessions
+(HTTP 403), so both are owner actions.
 
 ## Where to find everything
 
