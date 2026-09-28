@@ -36,10 +36,13 @@ state and that none sits inside a boundary section or an evidence-gap object.
 - **Compare:** four native `<select>` slots in reading order, each labelled by its governed slot label; the verdict is
   written before the table; the table sits in a named, focusable region (`role="region"`, `aria-label`, `tabindex="0"`).
 - **Figure tables (D6):** every drawn figure's fallback table sits in the same kind of region, named by the text
-  alternative's heading and the figure's title; every data column is headed by a governed string; the table fits the
-  column at 320 px in both languages, so the region scrolls only for the provider matrix (declared wide); the
-  source-record links in the matrix and the event locators in the chain and the lanes are ≥ 24 px targets with
-  accessible names (`check_visuals.py`).
+  alternative's heading and the figure's title, focusable only when it can scroll (none does: every table fits the
+  column at 320 px in both languages — the provider matrix's fallback is one two-column table per class); every data
+  column is headed by a governed string; row groups (the FINDEX gaps, the lanes) carry their own header row. Every link
+  and button inside a figure — the source-record links of the matrix (named by the date they show, then the record),
+  the "↗" locators of the chain and the lanes, the canonical link, the cite control — is a 24 px target, asserted per
+  figure by `check_visuals.py` (`targets_24px`). A figure's accessible name is its governed title (`figcaption`); the
+  visible text alternative is its description; its inner headings sit one level under its title.
 - **Deep links:** `?source=` on `/data/`, `#MA-00n` on `/measurement/` and `?record=` on Contact and Corrections move
   focus to the target object (`tabindex="-1"`), without scrolling it out of view.
 - **Every in-page navigation is named** (the index and strip by the page's `h1`, each edge group by its governed

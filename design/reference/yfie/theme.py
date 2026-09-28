@@ -207,19 +207,9 @@ dialog.search::backdrop{background:rgba(23,33,43,.55)}
 @media (prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important;scroll-behavior:auto!important}}
 @media (forced-colors:active){.bnd,.between,.obj,.fig,.inst,.spine,.strip a,.compact,.qa{border-color:CanvasText!important}.mark.a{fill:CanvasText}.mark.b{stroke:CanvasText;fill:Canvas}.path,.axis,.tick,.stem,.grid{stroke:CanvasText}.lbl,.lbl.origin,.val,.unit{fill:CanvasText}.rubric,.clock .k,.clock .v,.lane .base,.between,.bnd,.bnd p,.bnd h2{color:CanvasText}}
 @media print{
-html{font-size:11pt;line-height:1.45}
+/* D1: what the print system of D6 (CSS_D6, the last block of the stylesheet) does not restate */
 .bar .nav,.controls,dialog,.noscript,.skip,.strip,.spine .index,.inst .groups,.util .actions,.fig .foot button{display:none!important}
 .page{display:block;padding:0}
-.spine{position:static;max-height:none;overflow:visible;border:0;padding:0;margin-top:18pt}
-.foot-spine{display:flex!important}
-.obj,.qa,.compact,.fig,.src,.bnd{break-inside:avoid}
-h1,h2,h3{break-after:avoid}
-details.more::details-content{content-visibility:visible;display:block}
-details.more summary{display:none}
-.src .acts a[href^='http']::after,.fig .foot a.canon::after{content:' (' attr(href) ')';font-size:.85em;color:var(--ink-2)}
-.fig{background:none;border-top:1pt solid var(--ink)}
-.inst{background:none;border-top:1pt solid var(--ink)}
-a{text-decoration:none;color:inherit}
 }
 @media (min-width:600px){
 .p1 .row{grid-template-columns:minmax(150px,.38fr) minmax(0,1fr);gap:0 16px;align-items:center}
@@ -445,7 +435,6 @@ ol.objs.chron{list-style:none;margin:10px 0 0;padding:0}
 .chain .step{padding-inline-start:20px}
 [dir=rtl] .chain .step{padding-inline-start:0;padding-inline-end:20px}
 svg.ts .val.dense{display:block}
-svg.ts .lbl.alt{display:block}
 }
 @media (min-width:1200px){
 .qa.figs{grid-template-columns:220px minmax(0,1fr)}
@@ -510,7 +499,7 @@ CSS_D6 = r"""/* ---- D6: visuals, frames, print (same tokens; maintained with CS
 .lanes-dated .ln{margin:2px 0 0;font-size:var(--fs-clock);line-height:var(--lh-clock);color:var(--ink-2)}
 .lanes-dated .ln b{color:var(--ink);font-weight:600}
 .lanes-dated .lane.outcome h3{color:var(--counter)}
-.lanes-dated .lane.outcome .st-state{font-size:var(--fs-clock);font-weight:600;color:var(--counter);margin-inline-start:.6em}
+.lanes-dated .lane.outcome .st-state{color:var(--counter)}
 .lanes-dated .lanes-ax{margin-top:2px}
 .evs.keyed{list-style:none;margin:6px 0 0;padding:0;display:flex;flex-direction:column;gap:5px;font-size:var(--fs-src);line-height:var(--lh-src)}
 .evs.keyed li{display:flex;flex-wrap:wrap;gap:2px 10px;align-items:baseline}
@@ -528,9 +517,28 @@ CSS_D6 = r"""/* ---- D6: visuals, frames, print (same tokens; maintained with CS
 @container (min-width:480px){
 .prow .cells{grid-template-columns:repeat(2,minmax(0,1fr))}
 }
-@container (min-width:760px){
-.prow .cells{grid-template-columns:repeat(3,minmax(0,1fr));gap:10px 16px}
-}
+/* ---- D6 forms after the red teams: filled marks, the same-year marker, aligned lanes, state labels on the panel, grouped tables ---- */
+.mark.dia{transform-box:fill-box;transform-origin:center;transform:rotate(45deg)}
+.p1 .between.same{margin:2px 0 8px;padding-top:6px}
+.lanes .lane{display:flex;flex-direction:column}.lanes .lane>svg.rv2{margin-top:auto}
+.lanes .lane .ph{margin:2px 0 4px}
+svg.ts .lbl.st{font-size:11px;font-weight:600;fill:var(--ink-2)}
+@container (max-width:480px){svg.ts .lbl.st{display:none}svg.ts .lbl,svg.ts .val{font-size:10.5px}}
+@container (min-width:700px){svg.ts .lbl.alt{display:block}}
+.obj-card .rubric{text-transform:none;letter-spacing:0}
+.obj-card .cl2{margin:0;font-size:var(--fs-clock);line-height:var(--lh-clock);color:var(--ink-2)}
+.chain .evs li{display:grid;grid-template-columns:auto minmax(0,1fr);gap:2px 12px;align-items:baseline}
+.evs.keyed li{display:grid;grid-template-columns:1.4em auto minmax(0,1fr);gap:2px 10px;align-items:baseline}
+.chain .source-locator,.evs.keyed .source-locator,.prow .source-locator{display:inline-block;min-width:24px;min-height:24px;line-height:24px;text-align:center;padding:0}
+.prow .counts .srcl{display:block}
+@container (max-width:599px){.lanes-dated .lane-svg,.lanes-dated .lanes-ax{display:none}}
+.lanes-dated .lane .st-state{display:block;font-size:var(--fs-clock);font-weight:600;color:var(--counter);margin:0 0 4px}
+.rvtab th.rg{text-align:start;font-weight:600;color:var(--ink);background:var(--plaster);border-top:2px solid var(--ink)}
+.rvtab .ncc{white-space:normal;overflow-wrap:anywhere}
+.lanes-dated .ln a{display:inline-block;min-height:24px;line-height:24px}
+.rvtab tbody+tbody th.rg{border-top:2px solid var(--ink)}
+body.export-doc .exp{border-top:3px solid var(--ink);padding-top:12px}
+body.export-doc .fig .foot{border-bottom:1px solid var(--ink);padding-bottom:12px}
 /* ---- the print-only identity and citation block (shown by the print system only) ---- */
 .print-foot{display:none}
 /* ---- export and social frames (standalone documents written by the build to out/_export and out/_social) ---- */
@@ -553,21 +561,21 @@ body.social-doc main{box-sizing:border-box;width:1200px;height:630px;padding:44p
 .soc-title{font-size:46px;line-height:1.15;font-weight:600;margin:0;max-width:none;text-wrap:balance;letter-spacing:-.012em}
 [dir=rtl] .soc-title{letter-spacing:0;line-height:1.4}
 .soc-title.long{font-size:38px}.soc-title.xlong{font-size:31px}
-.soc-clock{font-size:20px;line-height:1.4;color:var(--ink);margin:0;font-weight:500}
+.soc-clock{font-size:22px;line-height:1.4;color:var(--ink);margin:0;font-weight:500}
 .soc-desc{font-size:22px;line-height:1.45;color:var(--ink-2);margin:0;font-weight:400}
 .soc-desc.long{font-size:19px}
 .soc-clock .k{color:var(--mute);font-weight:600;margin-inline-end:.6em}
-.soc-bnd{border-top:3px double var(--counter);padding-top:10px;color:var(--counter);font-size:20px;line-height:1.4;font-weight:500;margin:0}
-.soc-bnd.long{font-size:17px}
+.soc-bnd{border-top:3px double var(--counter);padding-top:10px;color:var(--counter);font-size:22px;line-height:1.4;font-weight:500;margin:0}
+.soc-bnd.long{font-size:20px}
 .soc-bnd b{font-weight:600}
 .soc-foot{display:flex;justify-content:space-between;gap:24px;align-items:baseline;font-size:17px;line-height:1.4;color:var(--ink-2);border-top:1px solid var(--rule-2);padding-top:14px}
 .soc-foot .canon{font-variant-numeric:tabular-nums}
 .soc-foot .ed{white-space:nowrap;font-weight:600;color:var(--ink)}
-body.social-doc.dense .soc-title{font-size:34px}body.social-doc.dense .soc-title.long{font-size:30px}body.social-doc.dense .soc-title.xlong{font-size:26px}
-body.social-doc.dense .soc-q{font-size:20px}body.social-doc.dense .soc-clock{font-size:17px}body.social-doc.dense .soc-desc,body.social-doc.dense .soc-bnd{font-size:17px}
+body.social-doc.dense .soc-title{font-size:32px}body.social-doc.dense .soc-title.long{font-size:28px}body.social-doc.dense .soc-title.xlong{font-size:25px}
+body.social-doc.dense .soc-q{font-size:18px}body.social-doc.dense .soc-clock{font-size:20px}body.social-doc.dense .soc-desc,body.social-doc.dense .soc-bnd{font-size:20px}
 body.social-doc.dense .soc-body{gap:10px;padding:10px 0}
-body.social-doc.xdense .soc-title{font-size:28px}body.social-doc.xdense .soc-title.long{font-size:25px}body.social-doc.xdense .soc-title.xlong{font-size:22px}
-body.social-doc.xdense .soc-q{font-size:17px}body.social-doc.xdense .soc-clock{font-size:15px}body.social-doc.xdense .soc-desc,body.social-doc.xdense .soc-bnd{font-size:15px;line-height:1.4}
+body.social-doc.xdense .soc-title{font-size:26px}body.social-doc.xdense .soc-title.long{font-size:24px}body.social-doc.xdense .soc-title.xlong{font-size:22px}
+body.social-doc.xdense .soc-q{font-size:17px}body.social-doc.xdense .soc-clock{font-size:20px;line-height:1.3}body.social-doc.xdense .soc-desc,body.social-doc.xdense .soc-bnd{font-size:20px;line-height:1.3}
 body.social-doc.xdense .soc-body{gap:8px;padding:8px 0}
 body.export-doc .cite-sep{display:none}
 /* ---- the print system (D6): every family; the Reading as a document ---- */
@@ -606,7 +614,12 @@ body{color:#000}
 .fig .key,.fig .marks,.fig .cap.note{break-before:avoid;break-inside:avoid}
 .fig .alt{break-before:auto}
 .fig .alt .table-wrap{break-inside:auto;overflow:visible}
-.qa+section.bnd,.head+section.bnd,.fig .foot .b{break-before:avoid}
+.head+section.bnd,.fig .foot .b{break-before:avoid}
+.obj p{orphans:3;widows:3}
+.qa.figs>div:first-child,.qa .rubric{break-after:avoid}
+.qa.figs .fig,.rubric+*{break-before:avoid}
+section#search,.search-inline{display:none!important}
+.rvtab.wide{min-width:0}
 section.bnd+section.bnd{break-before:auto}
 .head+*{break-before:avoid}
 h1,h2,h3{break-after:avoid}
@@ -615,7 +628,6 @@ details summary{display:none}
 details.more .qa{margin-top:6pt}
 .src .acts a[href^='http']::after,.chain .source-locator::after,.evs.keyed .source-locator::after{content:' ' attr(href);font-size:.85em;color:#000;font-weight:400;word-break:break-all}
 .chain .source-locator,.evs.keyed .source-locator{text-decoration:none}
-.fig .foot a.canon::after{content:''}
 .inst{background:none;border-top:1pt solid #000;margin-top:16pt}
 .inst-in{display:block;padding:8pt 0 0}
 .inst .trust,.inst .id{display:none}
@@ -626,7 +638,9 @@ a{text-decoration:none;color:inherit}
 .rvtab tr{break-inside:avoid}
 .rvtab td{white-space:normal}
 svg.ts .val.dense,svg.ts .lbl.alt{display:block}
-.mark.a,.bar{fill:#000}.mark.b{stroke:#000;fill:#fff}.path,.axis,.tick,.stem,.lane-svg .span{stroke:#000}.lbl,.val{fill:#000}
+.mark.a,.bar{fill:#000}.mark.b{stroke:#000;fill:#fff}.path,.axis,.tick,.stem,.grid,.brk,.miss,.ring,.lane-svg .span{stroke:#000}.lbl,.val{fill:#000}
+.bnd h2,.bnd .rubric,.bnd-line,.compare-verdict h3,.isnot,.withheld,.st-state,.prow .unk,.gap,.marker,.between{color:#000}
+.obj,.qa,.compact,.src,.bnd,.fig,.obj-card,.prow,.prow .cell,.prow .evl li,.prow .unk,.pair,.between,.marker.between-tables,.rvtab th,.rvtab td,.p1 .between,.step,.chain .step{border-color:#000}
 .bnd,.between,.fig .foot .b,.prow .lim,.compare-verdict,.lanes-dated .lane.outcome h3{color:#000}
 .bnd,.between,.compare-verdict,.prow .lim,.marker.between-tables{border-top:2pt double #000}
 .rubric,.spine h3,.prow .dim,.qa .rubric{color:#000}

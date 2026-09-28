@@ -19,7 +19,8 @@ list), on its canonical route and on every public route that binds it, in Englis
 - every fallback table names each data column with a governed string and sits in a focusable region with an
   accessible name; at 320 and 390 px the figure never overflows its column and its plot area never scrolls; a table
   scrolls only inside that region, and only when it is declared wide (the provider matrix; DEBT-010 closed elsewhere);
-- in forced colours every mark and label takes the system colour; in print the frame foot stays visible;
+- every link and button in a figure is a 24 px target; in forced colours every mark and label takes the system
+  colour; in print the frame foot stays visible and nothing is wider than the page;
 - the development placeholders on the site are exactly the escalated set (the five matrix headings), nowhere else.
 Then the portable frames the build writes: every export frame (`_export/`) renders at 900 px without overflow with the
 same frame lines, the identity line and no cite control; every social frame (`_social/`, 286) fits 1200 × 630 with its
@@ -49,7 +50,7 @@ from yfie.visuals import DRAWERS, FIGURES, plain_num  # noqa: E402
 CONTRACTS = json.loads((ROOT / "site-src/content/visuals/visual_design_contracts.json").read_text(encoding="utf-8"))
 GRAMMAR = CONTRACTS["grammar_labels"]
 DRAWN = set(FIGURES) | set(DRAWERS)
-PLACEHOLDERS = {"UI-VIS-MATRIX-AUTHORITY", "UI-VIS-MATRIX-UNIVERSE", "UI-VIS-MATRIX-STATUS", "UI-VIS-MATRIX-NEGATIVE", "UI-VIS-MATRIX-OPERATION"}   # ESCALATIONS.md (D6)
+PLACEHOLDERS = {"UI-VIS-MATRIX-AUTHORITY", "UI-VIS-MATRIX-UNIVERSE", "UI-VIS-MATRIX-STATUS", "UI-VIS-MATRIX-NEGATIVE", "UI-VIS-MATRIX-OPERATION", "UI-VIS-CAT-PRV-CLASS-PSO"}   # ESCALATIONS.md (D6): the five matrix headings and the fifth row's class label
 PALETTE = {"rgb(23, 33, 43)", "rgb(61, 73, 84)", "rgb(102, 113, 123)", "rgb(216, 221, 226)", "rgb(174, 183, 191)", "rgb(122, 90, 29)", "rgb(214, 184, 106)", "rgb(30, 86, 80)", "rgb(245, 241, 233)", "rgb(255, 255, 255)", "rgba(0, 0, 0, 0)", "none"}
 EXPORT_EVIDENCE = {"RV-CWR-001", "VIS-PROVIDER-OBSERVABILITY", "RV-CWR-004", "VIS-FIRM-CONSTRAINTS"}   # export PNGs kept as evidence (every frame is checked)
 PRINT_ROUTES = ["/", "/explore/", "/people/", "/evidence/", "/evidence/CLM-003/", "/evidence/compare/", "/readings/", "/readings/same-year-different-number/", "/data/", "/measurement/", "/about/"]   # one per family
@@ -118,7 +119,7 @@ FIG_STATE = """(vid) => { const f=document.querySelector(`figure.fig[data-visual
   const q=s=>f.querySelectorAll(s).length; const txt=f.textContent.replace(/\\s+/g,' ');
   const foot=f.querySelector('.foot'); const b=f.querySelector('.foot .b');
   const clone=f.cloneNode(true); clone.querySelectorAll('.alt,figcaption').forEach(e=>e.remove()); const frameTxt=clone.textContent.replace(/\\s+/g,' ');
-  const els=[...f.querySelectorAll('svg *')]; const fills=els.filter(e=>e.tagName!=='line').map(e=>getComputedStyle(e).fill).concat(els.map(e=>getComputedStyle(e).stroke));
+  const els=[...f.querySelectorAll('svg *')]; const fills=els.filter(e=>!['line','g'].includes(e.tagName)).map(e=>getComputedStyle(e).fill).concat(els.map(e=>getComputedStyle(e).stroke));
   return {text:txt, frame:frameTxt, textOnly:f.classList.contains('fig-text'), svg:q('svg'), vals:q('svg text.val'), canvas:q('canvas')+q('img'), inline:q('[style]'),
     ltr:[...f.querySelectorAll('svg')].every(s=>s.getAttribute('direction')==='ltr'), title:(f.querySelector('.fig-t')||{}).textContent||'',
     caps:[...f.querySelectorAll('p.cap')].map(p=>p.textContent), bnd:b?b.textContent:'', bndOnce:(()=>{if(!b)return false;const s=b.innerText.replace(/^[^:]*:\\s*/,'').slice(0,40);return frameTxt.split(s).length===2})(),
@@ -129,7 +130,8 @@ FIG_STATE = """(vid) => { const f=document.querySelector(`figure.fig[data-visual
     panelsOver:[...f.querySelectorAll('.panels')].some(p=>p.scrollWidth>p.clientWidth+1),
     tables:[...f.querySelectorAll('.alt .table-wrap')].map(w=>({wide:!!w.querySelector('table.wide'), scrolls:w.scrollWidth>w.clientWidth+1})),
     fallbackAttr:f.getAttribute('data-visual-fallback'), indep:f.getAttribute('data-image-independent'),
-    isoLoose:(()=>{const w=document.createTreeWalker(f,NodeFilter.SHOW_TEXT);let n=0;while(w.nextNode()){const t=w.currentNode;if(/\d{4}-\d{2}(-\d{2})?/.test(t.nodeValue)&&!t.parentElement.closest('[dir=ltr],svg'))n++;}return n;})()}; }"""
+    isoLoose:(()=>{const w=document.createTreeWalker(f,NodeFilter.SHOW_TEXT);let n=0;while(w.nextNode()){const t=w.currentNode;if(/\d{4}-\d{2}(-\d{2})?/.test(t.nodeValue)&&!t.parentElement.closest('[dir=ltr],svg'))n++;}return n;})(),
+    smallTargets:[...f.querySelectorAll('a,button')].filter(e=>{const r=e.getBoundingClientRect();return r.width>0&&(r.width<24||r.height<24)}).map(e=>e.className||e.tagName)}; }"""
 
 
 def check_contract(pg, base: str, c: dict, lang: str, failures: list, evidence: Path | None, crops: set) -> int:
@@ -174,6 +176,7 @@ def check_contract(pg, base: str, c: dict, lang: str, failures: list, evidence: 
                 checks["alt_text"] = (g.get(f"alt_text_{lang}") or "")[:60] in st["altText"] and st["fallbackAttr"] == "ordered-text" and st["indep"] == "true"
                 checks["no_inline_style"] = st["inline"] == 0
                 checks["iso_dates_isolated"] = st["isoLoose"] == 0   # after Arabic letters a plain ISO date renders reversed (Lock §4.1.8)
+                checks["targets_24px"] = not st["smallTargets"]   # every link and button in the figure meets the 24 px target (07 §2)
                 checks["svg_ltr"] = st["ltr"]
                 checks["palette_only"] = all(f in PALETTE for f in st["fills"])
                 checks["placeholders_escalated_only"] = all(any(k in t for k in PLACEHOLDERS) for t in st["ncc"]) and (not st["ncc"] or vid == "VIS-PROVIDER-OBSERVABILITY")
@@ -228,8 +231,8 @@ def check_degraded(b, base: str, failures: list) -> int:
             pg.goto(url, wait_until="load"); pg.emulate_media(media="print"); pg.wait_for_timeout(120)
             pr = pg.evaluate("""(vid) => { const f=document.querySelector(`figure.fig[data-visual-id='${vid}']`); if(!f) return false;
                 const b=f.querySelector('.foot .b'), ed=f.querySelector('.foot .ed'), cite=f.querySelector('.foot .cite-sep');
-                const vis=e=>!!e&&getComputedStyle(e).display!=='none'&&e.getBoundingClientRect().height>0;
-                return vis(b)&&vis(ed)&&!vis(cite)&&getComputedStyle(document.querySelector('.print-foot')).display!=='none'; }""", vid)
+                const vis=e=>!!e&&getComputedStyle(e).display!=='none'&&e.getBoundingClientRect().height>0; const d=document.documentElement;
+                return vis(b)&&vis(ed)&&!vis(cite)&&getComputedStyle(document.querySelector('.print-foot')).display!=='none'&&d.scrollWidth<=d.clientWidth+1; }""", vid)   # and nothing wider than the printed page
             ctx.close()
             n += 2
             if not fc:

@@ -56,8 +56,10 @@ the governed question · the scope line, period · universe · the panels · the
 state key, the marker lines, the record's measurement limitation where the contract carries one) · the foot:
 `UI-DOM-WHAT-NOT-TO-CONCLUDE` + the prohibited inference, exactly once per frame; `UI-VIS-SOURCE` + the credit as an
 isolated left-to-right run (the contract's `language_note`; omitted where the contract has none); `UI-VIS-FULL-RECORD`
-+ the canonical link; the edition (`UI-CONTENT-VERSION`); the cite control (screen only). Then the text alternative
-(§4). A text frame prints the same foot under its governed description.
++ the canonical link; the edition (`UI-CONTENT-VERSION`); the cite control (screen only) — each separator bound to the token after it, so no dot
+ends a line. Then the text alternative (§4) and the `figcaption`, the governed title (the figure's accessible name; the
+alternative is its description). A text frame prints the same foot under its governed description. The figure's inner
+headings sit one level under its title.
 
 What the frame never does: print a number outside its governed sentence or row; print a value the contract withholds;
 join a break; draw a missing period as zero; share an axis, a row or a lane between unlike series; carry meaning by
@@ -68,14 +70,14 @@ colour alone (no red, amber or green anywhere; forced colours asserted). Every S
 
 | Form | Contract(s) | What is drawn | Narrow form (320–599 px) | Never |
 |---|---|---|---|---|
-| Rows on a zero-based axis; two indexed lanes | RV-CWR-001 | one row per publication with the printed value; the two indexed paths as separate lanes with the governed not-comparable label between them, each lane's raw 2021 level beside it, one mark per publication across panels | rows stack; lanes stack | one axis for the two raw series |
+| Rows on a zero-based axis; two indexed lanes | RV-CWR-001 | one row per publication with the printed value, the REPORTED state in the panel head and the governed same-year marker between the two rows (the contract puts the break between the two values, so a crop of the rows never reads as a fall); the two indexed paths as separate lanes, each with its own index unit and DERIVED state, the governed not-comparable label between them, each lane's raw 2021 level beside it; one filled mark per publication across panels (● ■ ◆ — hollow is reserved for the state grammar) | rows stack; lanes stack | one axis for the two raw series; a hollow mark |
 | Bars from zero with bracket gaps | VIS-FINDEX-GAPS | one bar per governed group; each governed derived gap as a bracket beside its pair (never a bar) | label above its track | a gap drawn as a bar |
-| State-keyed time series | VIS-REMITTANCE-MACRO; the POS small multiple | marks by evidence state (filled reported/administrative, hollow estimated/projected, square administrative), a dashed projected segment, the vintage break as a double rule never joined, a missing period as a labelled dotted gap, a disagreement ringed with the record's method text, NOMINAL on the axis title, a key of states with their x-range and source document | alternate x labels hidden; a series of more than eight points prints its first, last, marked and state-change values — the table carries every value (DL-D6-005) | joining across a break; a shared value axis across panels |
-| Dot rows | VIS-REMITTANCE-COST | corridor lanes; one row per governed send amount; marks keyed by amount | rows stack | a line between corridors |
-| Object list | VIS-PAYMENT-ANATOMY | one object per governed measurement object: value or the WITHHELD label, its governed "is not" line, marker labels | stacked | a total, a share, a combined score |
+| State-keyed time series | VIS-REMITTANCE-MACRO; the POS small multiple | marks by evidence state (filled reported/administrative, hollow estimated/projected, square administrative), a dashed projected segment, the vintage break as a double rule never joined (its note names the period before and the period after, never an arrow), a missing period as a labelled dotted gap, a disagreement ringed with the record's method text, NOMINAL on the axis title, a key of states with their x-range and source document; where the state changes, each state's governed label on the panel above its segment; the plot inset from the axis, the first and last labels starting and ending at their marks, a label beside a break on its own side, a dense series choosing each label's row by the distance to its neighbour | alternate x labels hidden under 700 px of figure width and the on-panel state labels under 480 px (the key directly under the plot carries them); a series of more than eight points prints its first, last, marked and state-change values — the table carries every value (DL-D6-005) | joining across a break; a shared value axis across panels; an arrow between two numbers |
+| Dot rows | VIS-REMITTANCE-COST | corridor lanes; one row per governed send amount; filled marks keyed by amount | rows stack | a line between corridors |
+| Object list | VIS-PAYMENT-ANATOMY | one object per governed measurement object: its label as governed (never case-transformed), value or the WITHHELD label, the governed period and state on every card, its governed "is not" line, marker labels | stacked | a total, a share, a combined score |
 | The chain | RV-CWR-009 (full), VIS-PAYMENT-RAILS (no values) | seven governed steps top to bottom; evidenced steps list their dated events with a locator; the first open step set in the boundary voice; RV-CWR-009 adds the governed POS activity rows | native vertical list | an arrow of flow; a completion reading |
-| **The provider matrix** (D6) | VIS-PROVIDER-OBSERVABILITY | one row per provider class (banks; exchange and remittance providers; e-wallets; non-bank microfinance; payment-system operators when its class label is governed), five self-labelled cells in the contract's order — issuing authority or source, dated universe or count, dated status decisions grouped by state with their dates as source-record links, negative authority, evidence of operation — each cell governed words and dates, never a dot or a bar; a dimension without a governed row prints `UI-VIS-STATE-UNKNOWN` ("Unknown — not zero"); the roster count by category (never a total of providers), the wallet counts listed by date and wording (never one number), the `>9` participant count as governed; each class ends with its governed limit line in the boundary voice; the issuer-scope note (`UI-VIS-ISSUER-SCOPE`) closes the panel | one, two or three cells per row by container width (≥ 480 / ≥ 760 px) | a share, a market size, a confidence score; a list read as operation |
-| **The dated lanes** (D6) | RV-CWR-004 | three lanes on one left-to-right time axis (2023–2026): the people lane as the governed fieldwork span (the ISO dates inside CLM-001's governed period) with the account-ownership value and its survey state; the infrastructure lane as monthly dated presence with the first and latest governed values labelled; the institutions lane as dated event marks keyed 1–6 (clustered keys where marks touch) to the list beneath, each event with its locator; the outcome as an open node in the chain vocabulary; the governed not-comparable label between lanes; no lane has a value axis | lanes stack; the key list wraps | reading the sequence as cause; a value axis; joining the survey point to the infrastructure line |
+| **The provider matrix** (D6) | VIS-PROVIDER-OBSERVABILITY | one row per provider class — banks; exchange and remittance providers; e-wallets; non-bank microfinance; and payment-system operators, the contract's known gap, always drawn as UNKNOWN in every dimension with the three institution events as context (its class label a placeholder until governed) — five self-labelled cells in the contract's order — issuing authority or source, dated universe or count, dated status decisions grouped by state with their dates as source-record links (each named by the date it shows, then the record), negative authority, evidence of operation — each cell governed words and dates, never a dot or a bar; the governed time boundaries as the Master holds them ("observed 2026-09-07"), isolated and marked English; a dimension without a governed row prints `UI-VIS-STATE-UNKNOWN` ("Unknown — not zero"); the roster count by category (never a total of providers), the wallet counts listed by date and wording (never one number), the `>9` participant count as governed; each class ends with its governed limit line in the boundary voice; the issuer-scope note (`UI-VIS-ISSUER-SCOPE`) closes the panel | one or two cells per row by container width (≥ 480 px) | a share, a market size, a confidence score; a list read as operation; a class hidden because its label is pending |
+| **The dated lanes** (D6) | RV-CWR-004 | three lanes on one left-to-right time axis, padded at both ends so no mark sits on an edge: the people lane as the governed fieldwork span (the ISO dates inside CLM-001's governed period, the whole period printed beneath) with the account-ownership value and its survey state; the infrastructure lane as monthly dated presence with the first and latest governed values labelled (outside the span when it is short); the institutions lane as dated event marks keyed to the list beneath (events closer than 4 % of the axis share one bracketed key), each event with its locator; the outcome as an open node in the chain vocabulary, its state beside the heading; the governed not-comparable label between lanes; no lane has a value axis | under 600 px the strips are hidden and the lanes are their dated lists — the contract's "dated vertical list" | reading the sequence as cause; a value axis; joining the survey point to the infrastructure line |
 | **Bars without ranks** (D6) | VIS-FIRM-CONSTRAINTS | horizontal bars from zero in the contract's descending order, the value at the bar's end, no ordinal, the survey state on the panel; the record's governed measurement limitation (multiple responses; the base not held) as the frame's note | label above its track | a rank number; a sum of the bars |
 | Text frame | every SUPPORTING and TABLE_TEXT_FIRST contract without a drawing | the governed description as the body; the scope line; one boundary in the foot | — | a diagram with authored labels |
 
@@ -100,10 +102,15 @@ The table pattern (D6, `visuals.table`, closes DEBT-010 and narrows DEBT-013):
 - **Cells**: numbers through the one number rule (`plain_num`, isolated left-to-right, unbroken); a purely numeric cell
   is `td.num`; a missing period prints its governed marker; a withheld object prints the WITHHELD label; a marker row
   (`SAME_YEAR_REVISION`) spans the table.
+- **Row groups** (`grouped_table`): rows that share a unit or a state of their own sit in a `tbody` opened by a
+  row-group header — the FINDEX gaps under "Percentage points · Calculated here from published figures" with the pair
+  as the row header; the lanes of RV-CWR-004 under their lane labels with the date as the row header.
+- **The matrix**: one two-column table per class (the five dimension headings as row headers, the class in the
+  caption, the fifth class under its placeholder), the same words as the cells; no table is declared wide.
 - **Width**: two or three columns fit 256 px (the column at 320 px) in both languages — every fallback table of the
-  thirteen drawn contracts fits without scrolling; only the matrix table is declared wide (`rvtab wide`, 1 080 px) and
-  scrolls inside its named region. `check_visuals.py` fails a table that scrolls without the declaration.
-- **Print**: `thead` repeats on every page, rows never break inside, the region's overflow is released.
+  thirteen drawn contracts fits without scrolling, so no region is a tab stop (`tabindex` only when a table is declared
+  wide, and none is). `check_visuals.py` fails a table that scrolls without the declaration.
+- **Print**: `thead` repeats on every page, rows never break inside.
 
 ## 5. Text frames
 
@@ -130,18 +137,21 @@ One stylesheet, `@media print` (`theme.CSS` D1 rules, `CSS_D2`, and the D6 print
   cite buttons. The product bar keeps the mark (32 pt) and the product name, unwrapped. Every external locator prints
   its target after its text (source cards, the chain, the keyed events); the canonical link prints as text.
 - **Provenance survives** (`render.print_foot`): every page ends with product · edition · canonical URL and the
-  citation the cite action copies (the record's governed citation; otherwise title — product — canonical URL). Shown
-  in print only.
+  citation the cite action copies (the record's governed citation; otherwise title — product — canonical URL). It is
+  the last element of the document (inside the footer, after the fine print) and is shown in print only.
 - **Page breaks**: the page object and its answers break freely (the D1 rule that kept the whole object together began
   every printout on its second page — corrected at D6, asserted by `check_print`: the title is on page one of every
   family route in both languages); an object that fits a page (compact object, source card, object card, matrix row,
-  lane, chain step, pair, head, figure title, caption) avoids a break inside; a boundary section stays with the claim
-  before it (`.qa + .bnd`, `.head + .bnd`) but a run of boundary sections — the domain answer's band — is not one
-  unbreakable chain, and a long boundary breaks between its paragraphs, never inside one; a figure keeps its head,
-  panels and foot together and lets its text alternative break; a list panel taller than a page (matrix, chain,
-  anatomy, dated lanes) breaks between its items; headings never end a page; table headers repeat.
-- **Ink**: every mark, bar, line, rule and boundary in black; the paper and plaster surfaces dropped; the double rule
-  kept for every boundary; dense value labels restored on the time series.
+  lane, chain step, pair, head, figure title, caption) avoids a break inside; the head's boundary stays with the head,
+  but a boundary after an answer no longer pulls the break into that answer, and a run of boundary sections — the
+  domain answer's band — is not one unbreakable chain; a long boundary breaks between its paragraphs, never inside one;
+  paragraphs keep three lines together at a break; a figure keeps its head, panels and foot together and lets its text
+  alternative break; a depth figure stays with its rubric; a list panel taller than a page (matrix, chain, anatomy,
+  dated lanes) breaks between its items; headings and rubrics never end a page; table headers repeat; the search
+  block of the directory does not print (its control cannot).
+- **Ink**: every mark, bar, line, grid, break rule, gap, ring, rule, border and boundary in black; the paper and plaster
+  surfaces dropped; the double rule kept for every boundary; dense value labels restored on the time series. The D1
+  print rules that D6 restates are gone: one print system, the last block of the stylesheet.
 - **The Reading as a document**: title block (rubric, question, title, thesis, the two clocks), the boundary before
   the essay, the essay at full measure with its figure and frame, the trace, the sources, the citation block.
 - **Families**: one route per family is printed to PDF (A4) in both languages by `check_visuals.py --phases print`
@@ -150,8 +160,9 @@ One stylesheet, `@media print` (`theme.CSS` D1 rules, `CSS_D2`, and the D6 print
 ## 8. Export frames and the export control
 
 `frames.export_document` writes `out/_export/<visual>__<lang>.html` for the thirteen drawn contracts in both languages:
-the identity line (mark 32 px · product · edition) and the figure with its complete detached frame at 800 px on the
-paper surface; no cite control, no text alternative (the canonical link leads to it), no script, no inline style.
+one box under a heavy rule — the identity line (mark 32 px · product · edition) inside it, the figure with its complete
+detached frame at 800 px on the paper surface, a closing rule under the foot (a trim above the boundary shows a cut);
+no cite control, no text alternative (the canonical link leads to it), no script, no inline style.
 Asserted: the frame lines present, no overflow, the identity line, the logo unaltered.
 
 The export **control** (an action in the figure's foot beside cite: image or the governed data table) is designed and

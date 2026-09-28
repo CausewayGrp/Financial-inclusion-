@@ -23,26 +23,14 @@ Neither module authors a word: every string is a governed label, a governed fiel
 """
 from __future__ import annotations
 
-import html
-import re
 import sys
 from pathlib import Path
+
+from .text import esc, iso  # the one text layer (escaping; ISO dates isolated, Lock §4.1.8)
 
 ROOT = Path(__file__).resolve().parents[3]
 sys.path.insert(0, str(ROOT / "scripts"))
 import discovery as DISC  # noqa: E402
-
-
-ISO_DATE = re.compile(r"\d{4}-\d{2}(?:-\d{2})?")
-
-
-def esc(x) -> str:
-    return html.escape(str(x or ""), quote=True)
-
-
-def iso(x) -> str:
-    """Governed text escaped, its ISO dates isolated as left-to-right runs (Lock §4.1.8; see visuals.iso_run)."""
-    return ISO_DATE.sub(lambda m: f'<bdi dir="ltr" class="nw">{m.group(0)}</bdi>', esc(x))
 
 
 def _doc(lang: str, title: str, body_class: str, body: str) -> str:
@@ -56,7 +44,7 @@ def _doc(lang: str, title: str, body_class: str, body: str) -> str:
 def export_document(figure_html: str, v: dict, shell: dict) -> str:
     """One drawn figure as a portable document: identity line, then the figure with its detached frame."""
     ident = (f'<p class="exp-id"><img src="/assets/CauseWay_Master_Logo.png" alt="CauseWay" width="32" height="32"><span><b>{esc(shell["product"])}</b> · {esc(shell["edition"])}</span></p>')
-    return _doc(shell["lang"], f'{v["title"]} — {shell["product"]}', "export-doc", ident + figure_html)
+    return _doc(shell["lang"], f'{v["title"]} — {shell["product"]}', "export-doc", f'<div class="exp">{ident}{figure_html}</div>')   # one box: identity inside its rules, a closing rule under the foot
 
 
 # ------------------------------------------------------------------------------------------------ social frame

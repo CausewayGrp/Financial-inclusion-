@@ -128,6 +128,40 @@ Raised at D6 (27 September 2026), each needed by a design actually rendered; non
   description's remainder after the separator (nothing dropped); a description that did not repeat the title would
   print whole.`
 
+Raised at D6 from the independent red-team lenses (27 September 2026; DL-D6-007). Each is content or authority, so
+Design records it and changes nothing; where a lens's words are quoted they are the lens's, not a finding of fact:
+
+- `ESCALATE_TO_MASTER (observations) — credit lines — RV-CWR-001's governed credit names the IMF twice ("IMF / Yemeni
+  authorities" and "International Monetary Fund") and "Yemeni authorities" is ambiguous in a Reading about Aden versus
+  the IMF; VIS-REMITTANCE-MACRO's credit "IMF / Yemeni authorities" covers projection years the IMF attributes to
+  staff; RV-CWR-004 lists "World Bank" twice; VIS-PROVIDER-OBSERVABILITY credits YMN and CBY-Aden while a universe cell
+  rests on the FMIIP workshop with the World Bank and UNDP. Design impact: none — every credit prints as governed.`
+- `ESCALATE_TO_MASTER (question) — VIS-REMITTANCE-COST — the MEASURED state ("Measured in a survey") heads averages of
+  price quotes from the Remittance Prices Worldwide database; a source owner may object to "survey". Design impact:
+  the state label prints as governed; a different governed state would print in its place.`
+- `ESCALATE_TO_MASTER (observation) — VIS-PAYMENT-RAILS — the governed alt text names the mobile e-money amendment of
+  9 July 2025 as a rule while the reused event set of RV-CWR-009 holds no such row, so the drawing and its text
+  alternative differ in content; the contract carries no credit for this SUPPORTING visual. Design impact: a governed
+  event row would join the chain; a governed credit would print in the foot.`
+- `ESCALATE_TO_MASTER (question) — RV-CWR-009 and VIS-PAYMENT-RAILS — the governed step mapping lets
+  NETWORK_ACTIVITY_SIGNAL (an attributed CBY-Aden statement at an exhibition) evidence the OPERATION step; in
+  VIS-PAYMENT-RAILS it carries that step alone, beneath the components the prohibited inference says are not shown
+  operating. Design impact: the chain follows the mapping as governed; the foot's boundary guards the reading.`
+- `ESCALATE_TO_MASTER (observation) — VIS-FIRM-CONSTRAINTS — the contract's fallback names sixteen challenges and eight
+  rows resolve (raised above); nothing in the frame says the list is partial. Design impact: a governed sentence on
+  partial coverage would print as a frame note; otherwise the eight rows stand as the contract resolves them.`
+- `ESCALATE_TO_MASTER (question) — RV-CWR-004 infrastructure lane and RV-CWR-009 activity rows — the POS values travel
+  with their governed object label ("POS terminals · 561 Number") but not with the CBY-Aden reporting-scope qualifier
+  that the VIS-POS-* contracts' universe carries; a lane or step crop presents a CBY-Aden count as national. Design
+  impact: if the Readings' universes (or the rows) carried the scope, it would print with the lane and the step.`
+- `ESCALATE_TO_MASTER (observations) — meta descriptions — several governed descriptions end mid-sentence with "…"
+  (Home, About, Data & sources) and Compare's description is a tool instruction ("Select 2–4 records."); on a shared
+  card they print as governed. Design impact: none.`
+- `NEEDS_CONTROLLED_CONTENT — every fallback table whose rows carry different units under one value column
+  (VIS-FINDEX-GAPS: two age rows in their own governed units under "% of adults (ages 15+)") — a governed neutral
+  header for a column of values; today each such row prints its own unit in its cell. Design impact: the header would
+  replace the panel unit where units vary.`
+
 ## Closed at D2 (27 September 2026) — resolved by an authority the repository already holds
 
 - Arabic credit line (`NEEDS_CONTROLLED_CONTENT — RV-CWR-001 and every visual contract with a credit`): the contract

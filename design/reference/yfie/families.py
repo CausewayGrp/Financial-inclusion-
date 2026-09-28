@@ -116,8 +116,8 @@ def head_block(page: dict, shell: dict, rubric_text: str = "", question: str = "
 
 def page_html(page: dict, shell: dict, body: str, index: list, edges: list, kind: str = "website", extra: str = "", foot_index: bool = True) -> str:
     return (head(page, shell, page["route"], kind=kind, extra=extra) + header(shell)
-            + f'<article class="obj page-obj">{body}{page_util(shell)}{print_foot(shell, page["route"], page["title"])}</article>{spine(index, edges)}{spine(index, edges, foot=True, foot_index=foot_index)}'
-            + footer(shell))
+            + f'<article class="obj page-obj">{body}{page_util(shell)}</article>{spine(index, edges)}{spine(index, edges, foot=True, foot_index=foot_index)}'
+            + footer(shell, print_foot(shell, page["route"], page["title"])))
 
 
 # ------------------------------------------------------------------------------------------------ Question Entry

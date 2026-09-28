@@ -29,7 +29,7 @@
   "CONTROLLED_CONTRACT": 2,
   "CURRENT_DOCUMENT": 10,
   "CURRENT_PROGRAMME_RECORD": 52,
-  "DESIGN_PACKAGE": 246,
+  "DESIGN_PACKAGE": 247,
   "GENERATED_DIAGRAMS": 9,
   "GENERATED_LITERAL_CLOSURE": 1,
   "GENERATED_PROJECTION": 37,
@@ -2258,6 +2258,10 @@
   },
   {
    "path": "design/reference/yfie/render.py",
+   "class": "DESIGN_PACKAGE"
+  },
+  {
+   "path": "design/reference/yfie/text.py",
    "class": "DESIGN_PACKAGE"
   },
   {

@@ -11,7 +11,6 @@ Governed text is rendered exactly as the content module gives it; pacing on Home
 """
 from __future__ import annotations
 
-import html
 import json
 import re
 import sys
@@ -25,23 +24,12 @@ from . import theme  # noqa: E402
 from .visuals import figure, num  # noqa: E402
 
 CUR = ' aria-current="page"'
-ISO = re.compile(r"\d{4}-\d{2}-\d{2}")
 SENT = re.compile(r"(?<=[.؟?!])\s+(?=[A-Z«؀-ۿ])")
 GROUP_STARTS = ("In the same survey", "Separately,", "These are different measures", "وفي المسح نفسه", "وبصورة منفصلة", "هذه مقاييس مختلفة")
 RESOLUTION = ("These are different measures", "هذه مقاييس مختلفة")
 
 
-def esc(x) -> str:
-    return html.escape(str(x or ""), quote=True)
-
-
-def bdi(x) -> str:
-    return f'<bdi dir="ltr">{esc(x)}</bdi>'
-
-
-def iso(escaped: str) -> str:
-    """ISO dates inside governed text as unbroken left-to-right runs (presentation only)."""
-    return ISO.sub(lambda m: f'<bdi dir="ltr" class="nw">{m.group(0)}</bdi>', escaped)
+from .text import bdi, esc, isolate_iso as iso  # noqa: E402  (one text layer for every renderer, D6; `iso` takes escaped text)
 
 
 def paras(items, cls: str = "") -> str:
@@ -104,7 +92,8 @@ def search_dialog(shell: dict) -> str:
             f'<div class="search-status" data-search-status role="status" aria-live="polite" aria-label="{esc(L["search_status"])}"></div><div data-search-results class="search-results"></div></div></dialog>')
 
 
-def footer(shell: dict) -> str:
+def footer(shell: dict, tail: str = "") -> str:
+    """The institutional band; `tail` is the print-only provenance block, the last element of a printed page."""
     L = shell["labels"]
     trust = "".join(f'<a href="{t["href"]}"{CUR if t.get("active") else ""}>{esc(t["label"])}</a>' for t in shell["trust"])
     trust_label = next((g["label"] for g in shell["footer"] if any(l["href"].endswith("/about/") for l in g["links"])), L["trust_nav"])
@@ -112,7 +101,7 @@ def footer(shell: dict) -> str:
                      for g in shell["footer"] if not any(l["href"].endswith("/about/") for l in g["links"]))
     return (f'</div></main><footer class="inst"><div class="inst-in"><div class="trust"><h3>{esc(trust_label)}</h3><nav aria-label="{esc(L["trust_nav"])}">{trust}</nav></div>'
             f'<div class="id">{logo(40)}<p>{esc(L["footer_strapline"])}</p></div><nav class="groups" aria-label="{esc(L["footer_nav"])}">{groups}</nav>'
-            f'<div class="fine">© 2026 CauseWay · {esc(L["footer_rights"])} · {esc(shell["edition"])}</div></div></footer>'
+            f'<div class="fine">© 2026 CauseWay · {esc(L["footer_rights"])} · {esc(shell["edition"])}</div></div>{tail}</footer>'
             f'{json_block("yfie-ui", shell["ui_json"])}<script src="/assets/app.js" defer></script></body></html>')
 
 
@@ -235,8 +224,8 @@ def evidence_record(page: dict, shell: dict) -> str:
     edges = [(L["used_in"], used),
              (L["related"], [f'<a href="{x["href"]}">{esc(x["label"])}</a>' for x in page["routes_back"]] + [f'<a href="{page["hrefs"]["evidence"]}">{esc(L["evidence_hub"])}</a>', f'<a href="{page["hrefs"]["data"]}">{esc(L["data"])}</a>', f'<a href="{page["hrefs"]["methodology"]}">{esc(L["methodology"])}</a>'], L["related_intro"])]
     used_attr = " data-used-in-readings" if used else ""
-    body = f'<article class="obj page-obj"{used_attr}>{head_}{"".join(qa)}{util}{print_foot(shell, page["route"], page["title"], page["citation"])}</article>{spine(index, edges)}{spine(index, edges, foot=True, foot_index=False)}'
-    return head(page, shell, page["route"], extra=meta) + header(shell) + body + footer(shell)
+    body = f'<article class="obj page-obj"{used_attr}>{head_}{"".join(qa)}{util}</article>{spine(index, edges)}{spine(index, edges, foot=True, foot_index=False)}'
+    return head(page, shell, page["route"], extra=meta) + header(shell) + body + footer(shell, print_foot(shell, page["route"], page["title"], page["citation"]))
 
 
 def home(page: dict, shell: dict) -> str:
@@ -274,8 +263,8 @@ def home(page: dict, shell: dict) -> str:
         parts.append(f'<section class="qa" id="sf">{rubric(L["featured"], tag="h2")}<div><article class="compact first-obj">{clock(L["evidence_period"], esc(f["evidence_period"]))}<div class="q"><a href="{f["href"]}">{esc(f["title"])}</a></div><div class="st"><p>{esc(f["thesis"])}</p></div><div class="open"><a href="{f["href"]}">{esc(L["open_reading"])}</a> · <a href="{page["hrefs"]["readings"]}">{esc(L["all_readings"])}</a></div></article></div></section>')
     edges = [(f'{L["records_heading"]} ({len(page["records"])})', [f'<a href="{r["href"]}">{esc(r["title"])}</a>' for r in page["records"]]),
              (L["flow"], [f'<a href="{h}">{esc(t)}</a><br><span class="small">{esc(d)}</span>' for h, t, d in ((page["hrefs"]["readings"], L["readings_nav"], L["cta_readings"]), (page["hrefs"]["measurement"], L["measurement_nav"], L["cta_measurement"]), (page["hrefs"]["data"], L["data_nav"], L["cta_data"]))], L["side"])]
-    body = f'<article class="obj page-obj">{"".join(parts)}{page_util(shell)}{print_foot(shell, "/", page["title"])}</article>{spine(index, edges)}{spine(index, edges, foot=True)}'
-    return head(page, shell, "/") + header(shell) + body + footer(shell)
+    body = f'<article class="obj page-obj">{"".join(parts)}{page_util(shell)}</article>{spine(index, edges)}{spine(index, edges, foot=True)}'
+    return head(page, shell, "/") + header(shell) + body + footer(shell, print_foot(shell, "/", page["title"]))
 
 
 def reading(page: dict, shell: dict) -> str:
@@ -314,8 +303,8 @@ def reading(page: dict, shell: dict) -> str:
     related = f'<section class="qa" id="related" data-reading-related><h2>{esc(L["related"])}</h2><div><div class="objs">{rel}</div><p class="small mt12"><a href="{L["readings_index_href"]}">{esc(L["all"])}</a></p></div></section>' if page["related"] else ""
     edges = [(L["trace"], [f'<a href="{x["href"]}">{esc(x["proposition"])}</a>' for x in page["trace"]]),
              (L["return"], [f'<a href="{b["href"]}">{esc(b["label"])}</a>' for b in page["return_to"]])]
-    body = f'<article class="obj page-obj">{head_}{bnd}<div class="essay">{"".join(essay)}</div>{trace}{sources}{related}{page_util(shell)}{print_foot(shell, page["route"], page["title"])}</article>{spine(index, edges)}{spine(index, edges, foot=True)}'
-    return head(page, shell, page["route"], kind="article") + header(shell) + body + footer(shell)
+    body = f'<article class="obj page-obj">{head_}{bnd}<div class="essay">{"".join(essay)}</div>{trace}{sources}{related}{page_util(shell)}</article>{spine(index, edges)}{spine(index, edges, foot=True)}'
+    return head(page, shell, page["route"], kind="article") + header(shell) + body + footer(shell, print_foot(shell, page["route"], page["title"]))
 
 
 def page_util(shell: dict) -> str:
@@ -342,6 +331,7 @@ RENDERERS = {"Orientation": home, "Evidence Record": evidence_record, "Reading":
 
 
 def render(page: dict, shell: dict, variant: str = "") -> str:
+    _COMPACT_N[0] = 0   # ids restart per page (deterministic output whatever the route order)
     if page["family"] in RENDERERS:
         return RENDERERS[page["family"]](page, shell)
     from . import families   # the D2 families share this module's objects and shell

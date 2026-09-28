@@ -818,3 +818,56 @@ not public release (REL-01…04 remain).
   PDF (a download, gated); dropping the meta description from the card (the title would still read once, but the
   description's remainder is governed context — kept, deduplicated without loss).
 - Code: `frames.py`, `render.print_foot`, `build.py` (`_export/`, `_social/`), the print block of `theme.CSS_D6`.
+
+### DL-D6-007 · D6 · 2026-09-27 · The red teams and what they changed
+- Problem: the gate's own checks prove what they assert, not what a hostile reader sees. Five independent lenses
+  reviewed the built figures, portable frames and print pages of the first D6 pass: a financial-inclusion measurement
+  expert with a statistician (semantic firewall), an information-visualisation expert with an editor (form,
+  legibility, genericity), a native Arabic editor (composition, terminology), a journalist with a hostile source owner
+  (screenshot misuse, portable evidence), and an accessibility specialist with a frontend engineer (DOM, CSS, print,
+  code). Four reported in full; the Arabic lens was cut off twice by session limits and re-run on the corrected tree
+  (its findings, in the same record, close the entry).
+- Found and fixed (every MUST-FIX, and the SHOULD items that improve truth or legibility within the Lock):
+  the fifth provider class (payment-system operators, the contract's known gap) was absent because its label is not
+  governed — the one class with no evidence had no UNKNOWN cell; it is now always drawn, UNKNOWN in every dimension,
+  under a placeholder heading, in the panel and the table · the wallets' authority cell was empty in the table while
+  the panel listed four documents · a hollow square and a ring keyed publications and send amounts while hollow means
+  "not an observation" in the state grammar — publications and groups now take filled shapes (circle, square, diamond);
+  RV-CWR-001 prints its REPORTED state in the panel and the same-year marker between its two rows, so a crop of the
+  rows never reads as a fall · the break legend put an arrow between two numbers (forbidden in Arabic) — the two periods
+  now stand without an arrow · value labels of the time series collided with the axis ticks, with each other and with
+  the break rule — the panel is inset, the first and last labels start and end at their marks, a label beside a break
+  keeps to its side, a dense series chooses its label row by the distance to its neighbour, and the states stand on the
+  panel above their segments · the dated lanes' keys and labels collided at 390 px — keys cluster at 4 % of the axis,
+  a short infrastructure span labels outside itself, the axis is padded, and below 600 px the lanes become the dated
+  lists the contract prescribes · "ATMs" printed as "ATMS" (a governed value label in the rubric role took the
+  uppercase transform) · a source-record link's accessible name dropped its visible date (Label in Name) · the "↗"
+  locators were under 24 px, and the interaction record claimed a target-size assertion that did not exist — both the
+  targets and the assertion now exist · the matrix's wide table was cut off in print — the fallback is now one
+  two-column table per class, dimension by dimension, and nothing is declared wide · the English credit line and the
+  English governed time boundaries carry `lang="en"` in Arabic frames · a figure's inner headings sit one level under
+  its title (they were `h3` everywhere) · the figure's accessible name is its governed title, not the 300-word alt
+  text · a table's region is focusable only when it can scroll · a marker every valued row carries stands once in the
+  caption; the FINDEX gaps and the lanes' rows sit in their own row groups with their own header · every object card
+  carries its governed period and state · the social card's clocks and boundary never fall under 20 px at 1200 px
+  (the title gives way instead) · print: a boundary no longer pulls a page break into the answer before it, a depth
+  figure stays with its rubric, orphans and widows are limited, the search block does not print, every line and rule
+  is black, the provenance block is the last thing on the page (it moved into the footer), and the D1 print rules that
+  D6 restated are gone · compact-object ids restart on every page (deterministic output whatever the route order) ·
+  one text layer (`yfie/text.py`) for escaping and isolation in every renderer.
+- Recorded, not changed (content or authority — `ESCALATIONS.md`, D6): the credit lines that name a publisher twice or
+  ambiguously; "Measured in a survey" over price quotes; VIS-PAYMENT-RAILS' alt text naming an amendment its event set
+  lacks, and its lack of a credit; the step mapping that lets a network-activity statement evidence OPERATION; the
+  eight VIS-FIRM-CONSTRAINTS rows the contract names but does not resolve; the CBY-Aden reporting scope that the POS
+  contracts' universe carries but the Readings' universes do not; the meta descriptions that restate the title and one
+  that is a tool instruction; a governed neutral column header for values of mixed units.
+- Rejected: hiding the fifth class until its label exists (the missing≠zero failure the matrix exists to prevent);
+  the en-dash range form for the break ("2024–2025" reads as a span); the contract's mobile form of the time series
+  taken literally at 390 px (three governed state labels do not fit a 290 px panel without overlap; the key directly
+  under the plot carries them there, and the labels return from 480 px of container width); a definition list as the
+  matrix fallback under 900 px (the per-class tables serve every width without a second structure); a second table
+  structure for narrow widths anywhere.
+- Genericity (DEBT-007): the visual lens's verdict — not a template, an editorial identity: the frame anatomy repeated
+  on thirteen figures, the one boundary voice inside the drawings, the plaster inset, hairline discipline, tabular
+  numerals and the mark vocabulary carry it; the marks themselves and the type face do not. The remaining levers are
+  precision and rhythm, which this entry's fixes serve; no motif, border, map or image (Lock §4.2).

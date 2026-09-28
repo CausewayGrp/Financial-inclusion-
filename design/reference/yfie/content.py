@@ -503,7 +503,7 @@ class Content:
             "period": g.get(f"period_{lang}"), "universe": g.get(f"universe_{lang}"),
             "canonical_href": self.href(g.get("canonical_route"), lang),
             "detached_caption": v.get(f"detached_caption_{lang}"),
-            "lang": lang, "edition": self.t("UI-CONTENT-VERSION", lang), "product": self.t("UI-PRODUCT-NAME", lang),
+            "lang": lang, "edition": self.t("UI-CONTENT-VERSION", lang),   # the product name comes from the shell (every frame reads shell["product"])
             "labels": {"does_not_establish": lab("UI-VIS-DOES-NOT-ESTABLISH"), "source": lab("UI-VIS-SOURCE"), "full_record": lab("UI-VIS-FULL-RECORD"),
                        "same_year_revision": lab("UI-VIS-SAME-YEAR-REVISION"), "not_comparable": lab("UI-VIS-NOT-COMPARABLE"),
                        "reported": lab("UI-VIS-STATE-REPORTED"), "derived": lab("UI-VIS-STATE-DERIVED"), "unknown": lab("UI-VIS-STATE-UNKNOWN"),

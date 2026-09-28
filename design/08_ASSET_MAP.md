@@ -51,7 +51,8 @@ label beside it:
 
 | Sign | Meaning | Where | Text beside it |
 |---|---|---|---|
-| ● ▢ ◎ (SVG circle, square, ring) | one mark per publication or evidence state | RV-CWR-001, the time series, the dot rows | the state key (`UI-VIS-STATE-*`) |
+| ● ■ ◆ (SVG circle, square, rotated square) | one filled mark per publication or group, the same in every panel | RV-CWR-001, the dot rows, the lanes | the row or lane label |
+| ● ■ ○ ○╌ | evidence state: filled reported/measured, filled square administrative, hollow estimate, hollow dashed projection — hollow means "not an observation" and nothing else | the time series | the state key (`UI-VIS-STATE-*`) and, where the state changes, the label on the panel |
 | ■ □ | a chain step the evidence reaches / an open step | RV-CWR-009, VIS-PAYMENT-RAILS, the outcome node of RV-CWR-004 | `UI-VIS-CHAIN-EVIDENCED`, `UI-VIS-CHAIN-OPEN` |
 | ‖ | a break between two source documents (never joined) | VIS-REMITTANCE-MACRO note line | `UI-VIS-BREAK-VINTAGE` |
 | ┆ | a missing period (never zero) | VIS-POS-VALUE note line | `UI-VIS-MISSING` |
