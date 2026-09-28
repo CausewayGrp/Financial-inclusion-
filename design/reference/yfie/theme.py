@@ -454,7 +454,14 @@ svg.ts .val.dense{display:block}
 /* D3 — Home head, text frames, phone masthead */
 .head .actions{margin-top:14px}
 .fig-text .alt-body{margin-top:8px;border-top:0;padding-top:0}.fig-text .alt-body .body{font-size:var(--fs-body);line-height:var(--lh-body)}
-@media (max-width:599px){.head .rubric.product{display:none}}
+@media (max-width:599px){
+.head .rubric.product{display:none}
+/* the phone head: the governed statement, whole, one step down the scale, and a tighter head rhythm, so the first
+   figure group's heading enters the first screen (DEBT-015; the statement is never shortened or split) */
+.head .st{font-size:calc(var(--fs-st) - 2px)}
+.obj .head{gap:6px}
+.head .actions{margin-top:10px}
+}
 
 /* D5 — the technical voice: a dashed hairline, body ink, never the boundary's double rule or counter colour, never the
    plaster surface; used by every announced status, technical error and the no-script note (technical ≠ evidence) */

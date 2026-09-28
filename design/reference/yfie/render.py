@@ -289,9 +289,10 @@ def home(page: dict, shell: dict) -> str:
     f = page["featured"]
     if f:
         parts.append(f'<section class="qa" id="sf">{rubric(L["featured"], tag="h2")}<div><article class="compact first-obj">{clock(L["evidence_period"], esc(f["evidence_period"]))}<div class="q"><a href="{f["href"]}">{esc(f["title"])}</a></div><div class="st"><p>{esc(f["thesis"])}</p></div><div class="open"><a href="{f["href"]}">{esc(L["open_reading"])}</a> · <a href="{page["hrefs"]["readings"]}">{esc(L["all_readings"])}</a></div></article></div></section>')
+    parts.insert(2, strip(index))   # the phone's in-page navigation after the first figure group; the foot spine keeps only the edges (DEBT-014)
     edges = [(f'{L["records_heading"]} ({len(page["records"])})', [f'<a href="{r["href"]}">{esc(r["title"])}</a>' for r in page["records"]]),
              (L["flow"], [f'<a href="{h}">{esc(t)}</a><br><span class="small">{esc(d)}</span>' for h, t, d in ((page["hrefs"]["readings"], L["readings_nav"], L["cta_readings"]), (page["hrefs"]["measurement"], L["measurement_nav"], L["cta_measurement"]), (page["hrefs"]["data"], L["data_nav"], L["cta_data"]))], L["side"])]
-    body = f'<article class="obj page-obj">{"".join(parts)}{page_util(shell)}</article>{spine(index, edges)}{spine(index, edges, foot=True)}'
+    body = f'<article class="obj page-obj">{"".join(parts)}{page_util(shell)}</article>{spine(index, edges)}{spine(index, edges, foot=True, foot_index=False)}'
     return head(page, shell, "/") + header(shell) + body + footer(shell, print_foot(shell, "/", page["title"]))
 
 
@@ -331,7 +332,7 @@ def reading(page: dict, shell: dict) -> str:
     related = f'<section class="qa" id="related" data-reading-related><h2>{esc(L["related"])}</h2><div><div class="objs">{rel}</div><p class="small mt12"><a href="{L["readings_index_href"]}">{esc(L["all"])}</a></p></div></section>' if page["related"] else ""
     edges = [(L["trace"], [f'<a href="{x["href"]}">{esc(x["proposition"])}</a>' for x in page["trace"]]),
              (L["return"], [f'<a href="{b["href"]}">{esc(b["label"])}</a>' for b in page["return_to"]])]
-    body = f'<article class="obj page-obj">{head_}{bnd}<div class="essay">{"".join(essay)}</div>{trace}{sources}{related}{page_util(shell)}</article>{spine(index, edges)}{spine(index, edges, foot=True)}'
+    body = f'<article class="obj page-obj">{head_}{bnd}{strip(index)}<div class="essay">{"".join(essay)}</div>{trace}{sources}{related}{page_util(shell)}</article>{spine(index, edges)}{spine(index, edges, foot=True, foot_index=False)}'   # the strip after the boundary is the phone's map of the essay (DEBT-014)
     return head(page, shell, page["route"], kind="article") + header(shell) + body + footer(shell, print_foot(shell, page["route"], page["title"]))
 
 

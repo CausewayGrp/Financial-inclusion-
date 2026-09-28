@@ -243,7 +243,10 @@ def hard_state(pg, route: str, lang: str) -> dict:
     if route == "/data/":   # source_scale: every source discoverable, none a wall of links; curated cards visibly curated
         out["all_public_sources"] = q("[data-source-record]") == 151
         out["curated_28_by_category"] = q(".curated [data-source-record]") == 28 and q(".curated .cat") == 6
-        out["supporting_open_reference_closed"] = ev("document.querySelector('details.source-supporting-details').open===true && document.querySelector('details.source-reference-details').open===false")
+        # DEBT-011 (DL-D7-010): both dependency groups closed by default — the page opens on the curated layer; the
+        # untouched runtime opens the supporting group on a filter match and on a ?source= deep link
+        out["register_groups_closed"] = ev("document.querySelector('details.source-supporting-details').open===false && document.querySelector('details.source-reference-details').open===false")
+        out["filter_opens_supporting"] = ev("(()=>{const d=document.querySelector('details.source-supporting-details');const i=document.querySelector('[data-source-filter]');const r=d&&d.querySelector('[data-source-record]');if(!i||!r)return false;i.value=(r.dataset.sourceSearch||'').split(/\\s+/).find(w=>w.length>3)||'';i.dispatchEvent(new Event('input'));const o=d.open;i.value='';i.dispatchEvent(new Event('input'));d.open=false;return o;})()")
         out["every_source_named_or_referenced"] = ev("[...document.querySelectorAll('[data-source-record]')].every(r=>r.querySelector('h4,strong')&&r.querySelector('.rref'))")
         out["chronology_24"] = q("ol.chron li.compact") == 24
         out["no_locator_never_named"] = ev("!/SRC-CCY-REMIT-ESTIMATE-2025/.test(document.querySelector('#main').innerText)")

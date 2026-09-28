@@ -1155,3 +1155,61 @@ not public release (REL-01…04 remain).
   without changing the lockup.
 - Compromise: the 10 MB master file remains the page weight until the owner's derivative exists — DEBT-016 stays
   open on that single cost and keeps its "blocks release" flag; the identification defect it recorded is closed.
+
+### DL-D7-009 · D7 · 2026-09-28 · The phone composition: the strip everywhere, the foot index retired, the head paced (DEBT-014, DEBT-015)
+- Problem: below 900 px the spine rendered at the page foot — the section index and the edge groups after the
+  content — and two phone readers read it as a desktop sidebar dumped at the bottom, the section titles listed a
+  second time (DEBT-014). On a phone the governed six-sentence statement and its two actions consumed the first
+  screen before any figure (DEBT-015); the statement is governed and is not shortened or split.
+- Evidence: the D3 phone readers' reports; measured on the checkpoint tree at 390 × 844 px: the first figure
+  group's heading sat at 745 px and its content at 827 px (EN), below the fold with any browser chrome.
+- Alternatives for DEBT-014: a collapsed "on this page" disclosure (needs a governed label — none exists; not
+  authored); the index kept at the foot (the recorded complaint); the Evidence Record's accepted idiom — the strip,
+  a numbered hairline list near the head, with the foot spine carrying only the edge groups — extended to every
+  family. Alternatives for DEBT-015: a governed short statement (content, escalated, not the Master's yet); the
+  statement moved below the first figure (rejected — all four D3 readers asked "what is this" first, and the
+  statement is the governed answer); the composition tightened around the intact statement.
+- Chosen: every composed page renders the strip at the point its phone reader first needs the map, and the foot
+  spine keeps only the edges (`foot_index=False` everywhere): Home after the first figure group; Explore after the
+  clusters; a domain answer after its always-visible boundaries (the band stays first); the directory and Compare
+  after their tool; `/data/` and Measurement directly after the head, before the long register and the agenda; the
+  Reading after its boundary, as the essay's map; the trust pages after the report context. The Record is unchanged
+  (its strip after question 1 was the source of the idiom). For the head: at under 600 px the statement steps down
+  one notch (`calc(var(--fs-st) - 2px)`, both scales, weight and sentences intact), the head's gap tightens from
+  8 to 6 px and the actions' margin from 14 to 10 px.
+- Result, measured at 390 × 844: Home's statement ends at 574 px (was 675), the actions at 623 (was 730), and the
+  first figure group's heading and its opening sentence sit on the first screen in both languages (EN #s3 at
+  641 px, AR at 570 px). No page shows its section titles twice; the edges — the phone's verification path proved
+  by journeys J08/J09 — stay at the foot.
+- Arabic / responsive / a11y: both languages verified at 390 px; the strip and the spine keep their accessible
+  names (`aria-labelledby="page-title"`, edge `h3`s); `check_journeys.py` 52 walks and 28 drives pass unchanged;
+  desktop (≥ 900 px) is untouched — the strip stays hidden there and the side spine unchanged.
+- Code: render the strip per family at the positions above; never render the foot index; keep the phone statement
+  step in the stylesheet, not a second statement.
+- Compromise: none authored. DEBT-014 closed; DEBT-015 closed by composition — a governed one-line strapline, if
+  the Master ever provides one, remains a content improvement (the escalation stands), not a design blocker.
+
+### DL-D7-010 · D7 · 2026-09-28 · The register opens on its curated layer: both dependency groups closed (DEBT-011)
+- Problem: `/data/` ran to about 50,000 px at 1440 px because the "Sources supporting the evidence now published"
+  group (94 rows) opened by default; the chronology and the sections below the register were a long scroll away.
+  Every source must stay discoverable and no row may become a bare link; a new label would be an escalation.
+- Evidence: the measured page height; DEBT-011 (D2), which recorded the open group as temporary.
+- Alternatives: (1) leave the group open (the recorded cost); (2) paginate — needs labels and runtime none of which
+  exist; (3) a category filter UI — a filter already exists on the governed search fields, and new controls would
+  need labels; (4) close the supporting group by default, as the reference group already is (the accepted D2
+  precedent for the same object).
+- Chosen: (4). The page now opens on the head, the strip (DL-D7-009), the filter and the curated layer — 28 curated
+  cards in their six governed categories — with both dependency groups closed under their governed summaries and
+  counts. Nothing is hidden: a `<details>` group is one interaction from open with or without JavaScript, the
+  untouched runtime already opens the supporting group when a filter term matches a row inside it and when a
+  `?source=` deep link targets one (`site-src/app.js`, `locatorDetails.open`), and print opens every disclosure.
+  `check_site.py` replaces `supporting_open_reference_closed` with `register_groups_closed` and a new
+  `filter_opens_supporting` browser assertion that types a term from a supporting row and asserts the group opens.
+- Arabic / responsive / a11y: the summaries keep their governed labels and counts in both languages; keyboard
+  toggling of a `summary` is native; the source journeys and technical-state drives pass unchanged.
+- Code: ship both groups closed; keep the runtime's open-on-match and open-on-deep-link behaviour.
+- Verified: at 1440 px the page falls from 50,291 to 28,004 px in English and from 54,555 to 29,012 px in Arabic —
+  what remains is the curated layer, the limits, the inventory and the chronology, each of which is the page's own
+  content; `check_site.py --gate d2` (the new assertions included) and `check_journeys.py` (the source drives:
+  unknown deep link, filter with no match) pass on the rebuilt tree.
+- Compromise: none. DEBT-011 closed.

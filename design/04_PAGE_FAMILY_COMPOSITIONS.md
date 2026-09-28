@@ -23,7 +23,7 @@ and the rules below decide depth — never by route (`handoff/DESIGN_TO_CODE_CON
 | Depth | progressive sections in one `details.more` whose summary is the governed "more evidence" gloss | Nothing that changes a headline goes there |
 | Next | the governed next actions (`route_next_actions`) as a labelled `nav.actions` | Only governed destinations |
 | Foot | the page's own actions (cite, report) at the object's foot | Reachable at every width |
-| Spine | index of the page's own sections (named by the `h1`) and the edges (each named by its governed heading) | One visible spine at any width |
+| Spine | index of the page's own sections (named by the `h1`) and the edges (each named by its governed heading) | One visible spine at any width. From 900 px it sits beside the object with the index; below 900 px the index renders as the strip — a numbered hairline list placed where that family's phone reader first needs the map (D7, DL-D7-009: Home after the first figure group; Explore after the clusters; a domain answer after its band; the tools after themselves; `/data/` and Measurement after the head; the Reading after its boundary; the Record after question 1, the source of the idiom) — and the foot spine carries only the edges, so no page lists its section titles twice |
 
 ## 2. Families
 
@@ -36,14 +36,18 @@ composition, not the Page Spec's `section_order` (brief §4.5); the `#system` an
 third screen before learning what the product is; the statement now opens the page, as in the baseline, and the figures
 still open with their clocks.
 
-### Question Entry `/explore/` (D2)
-Head (flow rubric, `h1`, lead) → **the questions** as the first answer: rubric "Questions that lead into the evidence",
-`h2` "Find the question closest to your decision", section 5's body as the introduction, the governed sentence on what
-every answer keeps, then the four governed clusters (inventory `question_groups`, headings `UI-QUESTIONS-*`, each with
-its count) as numbered hairline lists — question link and its "what you get" line → sections 2 (answer), 3 and 4 (boundary
-voice) → "What the evidence cannot yet answer" (the bound priorities as compact objects: current evidence, evidence
-needed, the decision it would strengthen) → "Go deeper" (the featured Reading, then the link to all Readings).
-First screen: the product's job and the first cluster. Lower intensity than Home; no cards, no pills, no imagery.
+### Question Entry `/explore/` (D2; recomposed at D7, DL-D7-007 — DEBT-019)
+Head (flow rubric, `h1`, lead) → **the governed questions section (section 5), rendered once, as the answer that holds
+the clusters it introduces**: its role "Start with a question" as the rubric (ordinal 01), its governed heading
+"Questions to start from" as the `h2`, its body as the clusters' introduction; then the interface lead — the eyebrow
+"Questions that lead into the evidence", the list title "Find the question closest to your decision" as the lead line,
+the governed sentence on what every answer keeps — and the four governed clusters (inventory `question_groups`,
+headings `UI-QUESTIONS-*`, each with its count) as numbered hairline lists — question link and its "what you get"
+line → the strip → sections 2 (answer, ordinal 02), 3 and 4 (boundary voice) → "What the evidence cannot yet answer"
+(the bound priorities as compact objects) → "Go deeper" (the featured Reading, then the link to all Readings).
+Section 5 is excluded from the section loop — it never renders a second time without its questions. A section rubric's
+ordinal is its position in the spine index (every family; DL-D7-007). First screen: the product's job and the first
+cluster. Lower intensity than Home; no cards, no pills, no imagery.
 
 ### Domain Answer (8 routes; D2 proves `/people/`, `/access/`, `/payments/`, `/remittances/`, `/reforms/`; D4 reviews `/firms/`, `/finance/`, `/providers/`)
 Order from `presentation_priority.json`: head (rubric "The question this page answers", the governed question as the
@@ -107,15 +111,17 @@ standfirst size with at most one figure after it, the rest at the reading size w
 source record or the governed path state; Compare where the Reading is comparable) → sources → related (one or two) →
 next actions. Asserted at D3 (`reading_longform`).
 
-### Data & Source `/data/` (D2)
-Head (flow rubric, `h1`, lead) → **the register** as the first answer: the governed intro and rights note, the filter
-(`data-source-filter`, its status), then three groups — *Curated reports and references* (28 cards grouped by
-`resource_category`, each with its kind line, reference, why it matters, boundary, open original, copy reference,
-reuse state, dependent records), *Sources supporting the evidence now published* (open by default; citation cards
-by governed title, locator-only sources by reference and locator, never a title), *Additional original references*
-(closed) — and the no-match state → sections 2–7 (limits in the boundary voice) → section 8 as the inventory list →
-section 9 with the chronology (24 dated events as compact objects: period, fact, relevance, what it does not
-establish, public sources) → section 10 → next actions. The nine sources without a public locator are never named.
+### Data & Source `/data/` (D2; recomposed at D7, DL-D7-010 — DEBT-011)
+Head (flow rubric, `h1`, lead) → the strip → **the register** as the first answer: the governed intro and rights note,
+the filter (`data-source-filter`, its status), then three groups — *Curated reports and references* (28 cards grouped
+by `resource_category`, each with its kind line, reference, why it matters, boundary, open original, copy reference,
+reuse state, dependent records), *Sources supporting the evidence now published* (closed by default under its governed
+summary and count; citation cards by governed title, locator-only sources by reference and locator, never a title;
+the untouched runtime opens the group on a filter match and on a `?source=` deep link, and print opens every
+disclosure), *Additional original references* (closed) — and the no-match state → sections 2–7 (limits in the
+boundary voice) → section 8 as the inventory list → section 9 with the chronology (24 dated events as compact
+objects: period, fact, relevance, what it does not establish, public sources) → section 10 → next actions. The nine
+sources without a public locator are never named.
 
 ### Measurement `/measurement/` (D3)
 Head → sections 2–9 → section 10 introduces the agenda → the ten priorities as page objects (`id` = the governed

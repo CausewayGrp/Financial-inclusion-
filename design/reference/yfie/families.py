@@ -152,8 +152,9 @@ def question_entry(page: dict, shell: dict) -> str:
         index.append(("deeper", L["go_deeper"]))
     n, ni = next_actions(page.get("next"))
     parts.append(n); index += ni
+    parts.insert(2, strip(index))   # the phone's in-page navigation after the clusters; the foot spine keeps only the edges (DEBT-014)
     edges = [(L["go_deeper"], [f'<a href="{page["featured"]["href"]}">{esc(page["featured"]["title"])}</a>'] if page["featured"] else [])]
-    return page_html(page, shell, "".join(parts), index, edges)
+    return page_html(page, shell, "".join(parts), index, edges, foot_index=False)
 
 
 # ------------------------------------------------------------------------------------------------ Domain Answer
@@ -227,10 +228,11 @@ def domain(page: dict, shell: dict) -> str:
                  f'<div class="actions"><a href="{page["hrefs"]["evidence"]}">{esc(L["evidence"])}</a><a href="{page["hrefs"]["data"]}">{esc(L["data"])}</a><a href="{page["hrefs"]["methodology"]}">{esc(L["method"])}</a></div>'
                  + (f'<details class="more mt12"><summary>{esc(L["all_records"])} ({bdi(len(page["all_records"]))})</summary><ul class="rlist">{all_recs}</ul></details>' if all_recs else "") + "</div></section>")
     index.append(("verify", L["verify"]))
+    parts.insert(2 + len(page["band"]), strip(index))   # after the always-visible boundaries, before the first answer (DEBT-014; band stays first)
     edges = [(L["verify"], [f'<a href="{r["href"]}">{esc(r["title"])}</a>' for r in page["verify"]], L["verify_intro"]),
              (L["readings"], [f'<a href="{r["href"]}">{esc(r["title"])}</a>' for r in page["readings"]]),
              (page["related"]["heading"] if page["related"] else "", [f'<a href="{l["href"]}">{esc(l["label"])}</a>' for l in (page["related"] or {}).get("links", [])])]
-    return page_html(page, shell, "".join(parts), index, edges)
+    return page_html(page, shell, "".join(parts), index, edges, foot_index=False)
 
 
 def chronology_block(ch: dict, L: dict, id_: str) -> str:
@@ -270,8 +272,9 @@ def evidence_directory(page: dict, shell: dict) -> str:
     index.append(("all", L["hub"]))
     n, ni = next_actions(page.get("next"))
     parts.append(n); index += ni
+    parts.insert(2, strip(index))   # after the search, before the register (DEBT-014)
     edges = [(page["next"]["title"] if page.get("next") else "", [f'<a href="{l["href"]}">{esc(l["label"])}</a>' for l in (page.get("next") or {}).get("links", [])])]
-    return page_html(page, shell, "".join(parts), index, edges)
+    return page_html(page, shell, "".join(parts), index, edges, foot_index=False)
 
 
 # ------------------------------------------------------------------------------------------------ Comparison
@@ -299,8 +302,9 @@ def comparison(page: dict, shell: dict) -> str:
         index.append((f"s{s['order']}", s["heading"]))
     n, ni = next_actions(page.get("next"))
     parts.append(n); index += ni
+    parts.insert(2, strip(index))   # after the tool (DEBT-014)
     edges = [(page["next"]["title"] if page.get("next") else "", [f'<a href="{l["href"]}">{esc(l["label"])}</a>' for l in (page.get("next") or {}).get("links", [])])]
-    return page_html(page, shell, "".join(parts), index, edges)
+    return page_html(page, shell, "".join(parts), index, edges, foot_index=False)
 
 
 # ------------------------------------------------------------------------------------------------ Data & Source
@@ -336,7 +340,7 @@ def data_sources(page: dict, shell: dict) -> str:
             f'<div class="search-inline"><input data-source-filter class="search-input" type="search" placeholder="{esc(L["filter_placeholder"])}" aria-label="{esc(L["filter"])}">'
             f'<div class="search-status" data-source-filter-status role="status" aria-live="polite"></div></div>'
             f'<h3 class="grp" id="curated">{esc(L["curated"])} <span class="count">({bdi(page["curated_count"])})</span></h3><div class="curated">{curated}</div>'
-            f'<details class="source-locator-details source-supporting-details grp" open><summary>{esc(L["supporting"])} <span class="count">({bdi(len(page["supporting"]))})</span></summary><p class="small">{esc(L["supporting_intro"])}</p><div class="objs">{supporting}</div></details>'
+            f'<details class="source-locator-details source-supporting-details grp"><summary>{esc(L["supporting"])} <span class="count">({bdi(len(page["supporting"]))})</span></summary><p class="small">{esc(L["supporting_intro"])}</p><div class="objs">{supporting}</div></details>'
             f'<details class="source-locator-details source-reference-details grp"><summary>{esc(L["reference_group"])} <span class="count">({bdi(len(page["reference"]))})</span></summary><p class="small">{esc(L["reference_intro"])}</p><div class="objs">{reference}</div></details>'
             f'<div class="empty small" data-source-no-results hidden>{esc(L["no_results"])}</div></div></section>')
     parts.append(tool)
@@ -366,8 +370,9 @@ def data_sources(page: dict, shell: dict) -> str:
     parts.append(b); index += bi
     nx, ni = next_actions(page.get("next"))
     parts.append(nx); index += ni
+    parts.insert(1, strip(index))   # before the register: the phone reader gets the page map before the long groups (DEBT-014)
     edges = [(page["next"]["title"] if page.get("next") else "", [f'<a href="{l["href"]}">{esc(l["label"])}</a>' for l in (page.get("next") or {}).get("links", [])])]
-    return page_html(page, shell, "".join(parts), index, edges)
+    return page_html(page, shell, "".join(parts), index, edges, foot_index=False)
 
 
 # ------------------------------------------------------------------------------------------------ Reading Index (family rule; composed at D3)
@@ -383,8 +388,9 @@ def reading_index(page: dict, shell: dict) -> str:
     index.append(("all", L["all_readings"]))
     nx, ni = next_actions(page.get("next"))
     parts.append(nx); index += ni
+    parts.insert(2 if page["featured"] else 1, strip(index))   # after the featured Reading (DEBT-014)
     edges = [(L["all_readings"], [f'<a href="{r["href"]}">{esc(r["title"])}</a>' for r in page["readings"]])]
-    return page_html(page, shell, "".join(parts), index, edges, kind="website")
+    return page_html(page, shell, "".join(parts), index, edges, kind="website", foot_index=False)
 
 
 # ------------------------------------------------------------------------------------------------ Measurement (family rule; composed at D3)
@@ -414,8 +420,9 @@ def measurement(page: dict, shell: dict) -> str:
     parts.append(b); index += bi
     nx, ni = next_actions(page.get("next"))
     parts.append(nx); index += ni
+    parts.insert(1, strip(index))   # after the head: the map before the answers and the agenda (DEBT-014)
     edges = [(ag["heading"] if ag else "", [f'<a href="#{esc(m["id"])}">{esc(m["title"])}</a>' for m in page["priorities"]])]
-    return page_html(page, shell, "".join(parts), index, edges)
+    return page_html(page, shell, "".join(parts), index, edges, foot_index=False)
 
 
 # ------------------------------------------------------------------------------------------------ Reference / Trust (family rule; composed at D3)
@@ -443,8 +450,9 @@ def reference(page: dict, shell: dict) -> str:
     parts.append(b); index += bi
     nx, ni = next_actions(page.get("next"))
     parts.append(nx); index += ni
+    parts.insert(2 if ctx else 1, strip(index))   # after the report context where one exists (DEBT-014)
     edges = [(page["next"]["title"] if page.get("next") else "", [f'<a href="{l["href"]}">{esc(l["label"])}</a>' for l in (page.get("next") or {}).get("links", [])])]
-    return page_html(page, shell, "".join(parts), index, edges)
+    return page_html(page, shell, "".join(parts), index, edges, foot_index=False)
 
 
 # ------------------------------------------------------------------------------------------------ root and 404
