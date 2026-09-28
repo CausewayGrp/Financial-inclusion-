@@ -222,7 +222,9 @@ Recorded so no one fills these gaps silently. Source: brief §10, §12, §15.
   request #4 rather than on branches cut from an accepted `main`. Each gate's records name its own commit; the steward may split the history at landing if one
   gate per pull request matters. No design meaning attaches to the branch.
 
-- D6 branch name (2026-09-27): D2–D5 were accepted together by the owner's merge of pull request #4 (`main` at `2effd8b`).
+- D6 branch name (2026-09-27; closed 2026-09-28): D2–D5 were accepted together by the owner's merge of pull request #4 (`main` at `2effd8b`).
   D6 is developed and pushed on `claude/bold-maxwell-r3o015`, created at that exact `main`, instead of the
   `design/d6-visuals-social-print` name planned at D0; the same convention as D1–D5. One gate, one branch, one pull
   request into `main`. No design meaning attaches to the name.
+  Closed: the owner declared D6 met on `125aa44` and instructed the session to merge; pull request #5 was merged by the
+  repository's normal method (a merge commit, `f4739a5`), the branch left in place like every merged gate branch.
