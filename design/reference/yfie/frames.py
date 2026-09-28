@@ -43,7 +43,7 @@ def _doc(lang: str, title: str, body_class: str, body: str) -> str:
 # ------------------------------------------------------------------------------------------------ export frame
 def export_document(figure_html: str, v: dict, shell: dict) -> str:
     """One drawn figure as a portable document: identity line, then the figure with its detached frame."""
-    ident = (f'<p class="exp-id"><img src="/assets/CauseWay_Master_Logo.png" alt="CauseWay" width="32" height="32"><span><b>{esc(shell["product"])}</b> · {esc(shell["edition"])}</span></p>')
+    ident = (f'<p class="exp-id"><img src="/assets/CauseWay_Master_Logo.png" alt="CauseWay" width="32" height="32"><span><bdi dir="ltr">CauseWay</bdi> · <b>{esc(shell["product"])}</b> · {esc(shell["edition"])}</span></p>')
     return _doc(shell["lang"], f'{v["title"]} — {shell["product"]}', "export-doc", f'<div class="exp">{ident}{figure_html}</div>')   # one box: identity inside its rules, a closing rule under the foot
 
 
@@ -108,7 +108,7 @@ def social_document(page: dict, shell: dict, route: str) -> str:
     # the whole frame steps down when the governed text is long in total (a shared image never crops a boundary)
     total = len(title) + len(question) + sum(len(k) + len(val) for k, val in clocks) + len(boundary) + (len(desc) if not boundary else 0)
     dense = "xdense" if total > 470 else ("dense" if total > 330 else "")
-    head = (f'<div class="soc-head"><img src="/assets/CauseWay_Master_Logo.png" alt="CauseWay" width="72" height="72"><span>{esc(shell["product"])}'
+    head = (f'<div class="soc-head"><img src="/assets/CauseWay_Master_Logo.png" alt="CauseWay" width="72" height="72"><span><span class="soc-pub" dir="ltr">CauseWay</span>{esc(shell["product"])}'
             + (f'<span class="soc-fam">{esc(rubric)}</span>' if rubric and rubric != shell["product"] else "") + "</span></div>")
     body = []
     if question:

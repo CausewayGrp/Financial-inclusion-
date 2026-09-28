@@ -6,7 +6,7 @@
 > (the portable frames). The logo and the fonts are the owner's canonical files, served unchanged (brief §8, EAD-04;
 > `vendor/fonts/` with their licence). No icon set, no illustration, no decorative image exists or is planned (brief §7).
 
-## 1. The mark
+## 1. The mark and the publisher lockup
 
 One file, `site-src/assets/CauseWay_Master_Logo.png` (6 250 × 6 250 px, 10 MB), copied unchanged to `out/assets/` and
 drawn by `render.logo(px)` as `<img … alt="CauseWay" width="px" height="px">`. It is never filtered, recoloured,
@@ -14,17 +14,30 @@ cropped, masked, inverted or blended (EAD-04; `check_site.py` and `check_visuals
 surface that carries it). The web-weight derivative and any reversed or single-colour version are owner decisions
 (EAD-03, OWN-06; DEBT-016) — until they exist every surface loads the master file.
 
-| Surface | Size (CSS px) | Clear space | Neighbour | Where |
-|---|---|---|---|---|
-| Product bar (every page) | 40 × 40 | 10 px to the product name; the bar's 16 px gutter | the product name (`.brand-name`); the brand link is named `CauseWay — <product name>` | `render.header` |
-| Institutional band (every page) | 40 × 40 | 12 px to the strapline | the governed footer strapline | `render.footer` |
-| 404 head | 48 × 48 | the head's 8 px gap | the bilingual rubric | `families.not_found` |
-| Print (product bar) | 32 pt | as the bar | the product name, unwrapped | `theme` print block |
-| Export frame identity line | 32 × 32 | 10 px | product name · edition | `frames.export_document` |
-| Social-image template | 72 × 72 | 18 px | product name and the family rubric | `frames.social_document` |
+**The lockup (D7, DL-D7-008).** The file's own wordmark and Arabic name sit under 8 px at every interface size and can
+never carry the publisher's identity there, so the lockup carries it in type: the mark, then the publisher's name
+**CauseWay** set in text (SemiBold, the ochre role — the type echo of the gold wordmark, at AA contrast) above or
+beside the governed product name. The name is the publisher's proper name as the repository already prints it
+(the governed strapline, the citation lines, the © line); it is not authored interface copy. In Arabic it is an
+isolated left-to-right run (`dir="ltr"`), the rule the visual contracts set for publisher names. The in-image wordmark
+remains the mark's own detail at interface sizes; the text is the carrier. A reader arriving on any page, either
+language, sees the publisher named legibly in the product bar, and on every artifact that leaves the page (export
+frame, social frame, print head).
 
-Derivative sizes Code will want when the owner supplies a web-weight rendering (same mark, no crop, no filter): 40, 48,
-72 px at 1× and 2× (80, 96, 144 px), and 32 px (64 px) for the export identity line. Nothing else scales the mark.
+| Surface | Size (CSS px) | Clear space | Lockup | Where |
+|---|---|---|---|---|
+| Product bar (every page) | 40 × 40 (48 from 900 px) | 12 px to the text block; the bar's 16 px gutter | mark · **CauseWay** (11.5–12.5 px, ochre) over the product name (13–14 px, ink); the brand link is named `CauseWay — <product name>` | `render.header`, `.brand-pub` |
+| Institutional band (every page) | 40 × 40 | 12 px to the strapline | mark · the governed footer strapline (which names CauseWay) | `render.footer` |
+| 404 head | 48 × 48 | the head's 8 px gap | mark · the bilingual rubric | `families.not_found` |
+| Print (product bar) | 32 pt | as the bar | mark · CauseWay (8.5 pt) over the product name, unwrapped | `theme` print block |
+| Export frame identity line | 32 × 32 | 10 px | mark · CauseWay (isolated LTR) · **product name** · edition | `frames.export_document` |
+| Social-image template | 72 × 72 | 18 px | mark · CauseWay (14 px, ochre) over the product name and the family rubric | `frames.social_document` |
+
+**Derivative sizes Code must export (EAD-03)** when the owner supplies a web-weight rendering (the same complete mark —
+no crop, no filter, no recolour): 40, 48 and 72 px at 1× and 2× (80, 96, 144 px), and 32 px (64 px) for the export
+identity line — six raster sizes from one master, or one vector/compressed derivative ≤ 50 KB covering all of them.
+Nothing else scales the mark, and the lockup above does not change when the derivative arrives; only the file weight
+does (DEBT-016's remaining cost — first paint on a phone — closes then).
 
 ## 2. Type
 

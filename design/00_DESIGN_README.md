@@ -1127,3 +1127,31 @@ not public release (REL-01…04 remain).
   `check_site.py --gate d2 --degraded` (553 hard-state assertions, 0 failed), `--gate d3 --degraded` and `--gate d4`
   pass on the fixed tree; a DOM scan of every family route shows 0 rubric ordinals that differ from the index.
 - Compromise: none. DEBT-019 closed.
+
+### DL-D7-008 · D7 · 2026-09-28 · The publisher lockup: the name in type, the mark as emblem
+- Problem: three cold readers could not name the publisher from the first screen (DEBT-016). The canonical mark is a
+  6,250 px PNG drawn at 40 px; its wordmark and Arabic name sit under 8 px there and can never be legible at any
+  interface size. The mark is immutable (EAD-04) and no reversed or redrawn variant may be made (OWN-06), so the
+  file cannot be cropped to its emblem or replaced.
+- Evidence: the D3 and D7 cold readers ("the publisher identified only in the footer"); the mark inspected at 40 px
+  (2×): the emblem reads, the wordmark does not.
+- Alternatives: (1) draw the mark larger in the bar — at any height a bar can carry (≤ 64 px) the wordmark stays
+  under 13 px and illegible, and the file's internal margins waste most of the box; (2) wait for the owner's
+  web-weight derivative — it is the same complete mark, so its wordmark is exactly as illegible at 40 px; a file
+  cannot solve a lockup problem; (3) carry the publisher's name in type beside the mark.
+- Chosen: (3). The lockup is mark + the publisher's name **CauseWay** set in text — SemiBold, the ochre role (the
+  type echo of the mark's gold wordmark, at AA contrast) — above the governed product name, in the product bar of
+  every page (`.brand-pub`), in the export frame's identity line and in the social template's head; the print head
+  carries it in black. The name is the proper name the repository already prints publicly (the governed strapline
+  "Developed and maintained by CauseWay…", the governed citation lines, the © line, the brand link's accessible
+  name) — no interface copy is authored. In Arabic the name is an isolated left-to-right run (`dir="ltr"`), the
+  visual contracts' own rule for publisher names ("governed in English only; Arabic frames print them as isolated
+  left-to-right runs"). The derivative sizes Code must export are specified in `08_ASSET_MAP.md` §1 (EAD-03): 40,
+  48, 72 and 32 px at 1× and 2×, from the unaltered master.
+- Arabic / responsive / a11y: verified at 320/390/960/1440 px in both languages, no overflow; the brand link's
+  accessible name is unchanged ("CauseWay — product"), so nothing is announced twice; forced colours override the
+  ochre to CanvasText.
+- Code: render `.brand-pub` as the reference does; serve the owner's web-weight derivative when it exists (EAD-03)
+  without changing the lockup.
+- Compromise: the 10 MB master file remains the page weight until the owner's derivative exists — DEBT-016 stays
+  open on that single cost and keeps its "blocks release" flag; the identification defect it recorded is closed.
