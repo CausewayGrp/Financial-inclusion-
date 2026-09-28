@@ -223,7 +223,13 @@ of fact:
   governed value in two magnitudes: the prose writes "1.262 مليار ريال" and "6.245 مليار دولار" while the contract rows
   print "1,262" and "6,245" (million) beside decimal values such as "317.639", so a reader meets a decimal point and a
   thousands comma in one table; the Arabic reader read 317.639 as thousands. Design impact: none — every value prints
-  as governed with the one number rule; a governed unit or precision per series would print in place.`
+  as governed with the one number rule; a governed unit or precision per series would print in place.
+  **Strengthened at the D7 closure (28 September 2026):** a second, independent Arabic reader made the same mistake on
+  the same pattern and reported it as a defect — reading the POS-value series "580.021, 795.006, 783.583, 910.688,
+  1,262" (all YER million) as mixing magnitudes "three orders of magnitude apart", when the values differ by about
+  1.4×. Two trained readers in two sessions have now misread a governed value by a factor of a thousand from this
+  notation alone. It is the strongest reader evidence in the D7 record, and it is a content decision: Design will not
+  round, restate or re-unit a governed value.`
 - `ESCALATE_TO_MASTER (observation, restated from D3) — the Findex fieldwork window — one number carries three date
   forms across Home, /people/ and the Compare table ("November 2022 to January 2023", "2022-11-07 to 2023-01-09",
   "7 November 2022 to 9 January 2023"); a writer cannot tell which form to cite. Design impact: none — each form is the
@@ -247,6 +253,27 @@ of fact:
   not assessed" (REL-02, a release item), which reads as unfinished to an official reader; "P0 · People" on Explore is
   expanded only on /measurement/. Design impact: none — a page-level governed statement of the reuse position and a
   governed gloss for the priority code at first use would print in place.`
+
+Raised at the D7 closure (28 September 2026), from the three independent closure lenses on the rendered product
+(`design/evidence/d7/cold_read/lens-*-closure.md`). Each was verified on the built pages before being raised.
+
+- `ESCALATE_TO_MASTER (governed overlap) — /evidence/compare/ (VIS-SOURCE-COMPARISON) — the contract's governed
+  alt_text ENDS with its governed prohibited_inference verbatim ("The same word does not mean the same measure. The
+  comparison does not reconcile differing figures or prefer one number unless evidence on their definitions supports
+  it."), so the tool prints those two sentences twice about 70 px apart: once as the tail of the intro, once in the
+  boundary voice. Verified in both editions on the built pages. Design impact: none available without editing governed
+  text — the boundary must always print in the boundary voice, and the alt text is governed as a whole; Design will
+  not truncate a governed string. Either the alt_text should end before the prohibited inference, or the contract
+  should record that the two fields overlap by intent.`
+- `NEEDS_CONTROLLED_CONTENT — /evidence/ CLM-039 — the record's central comparison is entirely qualitative in the
+  governed text (one public interface "showed an older span of years" while others "contained later observations"),
+  with no years, no interface names and no size of the gap anywhere on the page, and the "earlier documented access"
+  it refers to is never dated. A cold reader cannot grasp or check the claim from the record. Design impact: none —
+  Design prints what the record governs; a governed sentence carrying the two spans (or their dates) would print in
+  question 1 as any other governed value does.`
+- `ESCALATE_TO_MASTER (observation) — the record's question 7 summary ("Detail for reproducing or challenging this
+  record without changing what it means") reads as internal meta-language to a cold reader. Design impact: none — it
+  is governed copy; a plainer governed gloss would print in place.`
 
 ## Closed at D2 (27 September 2026) — resolved by an authority the repository already holds
 

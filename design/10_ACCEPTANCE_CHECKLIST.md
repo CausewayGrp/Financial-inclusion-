@@ -360,11 +360,16 @@ readers (English; Arabic) read the checkpoint tree (§K.4).
   states no record carries, `SOURCE_NOT_YET_BOUND` and `NO_SOURCE_RECORD`, and the seven grammar states no governed
   contract row carries — HISTORICAL, PROGRAMME, PARTIAL, UNKNOWN, BREAK_UNIVERSE, TARGET, RESULT — each designed in the
   catalogue with its governed label and never drawn on an invented record or row).
-- [ ] `DESIGN_DEBT.md` lists every deliberate temporary compromise; none open blocks D7; each open one has its Code
-  action in `09_CODE_HANDOFF.md`. — Nineteen entries; closed at D7: DEBT-002, DEBT-013, DEBT-017; open and not
-  blocking D7: DEBT-007, 008, 011, 014, 015, 016 — each with its Code action in the D7 table of `09_CODE_HANDOFF.md`
-  ("Design debt" row); **DEBT-018 closed 2026-09-28 (DL-D7-006); open and blocking the acceptance: DEBT-019** (found by the D7
-  cold readers, verified, each with its fix specified).
+- [x] `DESIGN_DEBT.md` lists every deliberate temporary compromise; none open blocks D7; each open one has its Code
+  action in `09_CODE_HANDOFF.md`. — Nineteen entries, closed not deleted. Closed at the D7 checkpoint: DEBT-002,
+  DEBT-013, DEBT-017 (DL-D7-001/004) and DEBT-018 (DL-D7-006). Closed at the D7 closure: DEBT-019 (DL-D7-007),
+  DEBT-014 and DEBT-015 (DL-D7-009), DEBT-011 (DL-D7-010), and DEBT-007 decided as restraint with its reasoning
+  recorded. **Exactly two remain open, and neither blocks D7 — both are flagged "blocks release":** DEBT-008 (a
+  governed pacing marker for the Home paragraph; Code keeps the `paced_groups` whole-paragraph fallback) and
+  DEBT-016, narrowed at the closure to the file weight alone — the publisher is now named in type on every first
+  screen in both languages (DL-D7-008), and what remains is the owner's web-weight rendering of the unaltered mark
+  (EAD-03), at the derivative sizes specified in `08_ASSET_MAP.md` §1. Each has its Code action in the "Design debt"
+  row of the D7 table in `09_CODE_HANDOFF.md`.
 - [x] `09_CODE_HANDOFF.md` maps tokens, components, states, routes, content bindings, visual contracts, responsive
   rules, accessibility behaviour and every exception. — The D1–D7 tables (each gate's rows, the newest superseding),
   "Must not be reinterpreted", "Temporary vs intended", "Owner / release items"; with `02_TOKENS.json` (tokens),
@@ -428,8 +433,6 @@ readers (English; Arabic) read the checkpoint tree (§K.4).
 
 ### K.4 Independent cold readers on the checkpoint tree
 
-### K.4 Independent cold readers on the checkpoint tree
-
 Two fresh agents with no repository or conversation context read the built site as a researcher, a regulator and a
 journalist — one the English edition (13 routes and the search), one the Arabic edition (12 routes and the search) —
 and reported only material findings; their reports are verbatim in `design/evidence/d7/cold_read/en.md` and `ar.md`.
@@ -439,18 +442,18 @@ Every finding was verified on the built pages and adjudicated (a reader's words 
 |---|---|---|
 | EN 1 · `/people/` §02 states no education gap exists while VIS-FINDEX-GAPS plots 19.53 % and a 12.55-point gap | Yes — the governed section text (both editions) against the governed contract rows | Content: `ESCALATE_TO_MASTER` (defect claimed), `ESCALATIONS.md` D7; Design changes nothing governed |
 | EN 2 · search shows ten hits without a total ("10 results shown" for 79 matches) | Yes — the baseline runtime caps at ten; the governed status has no "of N" | Runtime + label: `NEEDS_CONTROLLED_CONTENT`; Code item (`09`, D7 table) |
-| EN 3 · Explore "04 · Questions to start from" with no questions under it | Yes — section 5 rendered twice (its body is the questions' introduction, D2 rule) | **Open — DEBT-019**: rendering it once dropped its governed heading (`check_content.py` parity failed), so the attempt was reverted; the composition decision is the resumption's (DL-D7-003) |
+| EN 3 · Explore "04 · Questions to start from" with no questions under it | Yes — section 5 rendered twice (its body is the questions' introduction, D2 rule) | **Closed at the resumption — DEBT-019** (DL-D7-007): section 5 renders once, at the top, as the answer that holds the clusters (its role as the rubric, its governed heading as the `h2`, its body as the clusters' introduction, the interface lead kept for text parity); no second, question-less rendering exists |
 | EN 4 · text-only "Another view of the evidence" boxes repeat the section and the boundary | Yes — governed alt text restating the prohibited inference (raised at D3) | Content: restated in `ESCALATIONS.md` D7; the bound contract must appear as a framed object |
 | EN 5 · the visible text description and table under a chart print nine values three times | Yes — by design | Not changed: the Lock keeps the text alternative visible (print, no-script and assistive-technology parity); recorded (DL-D7-003) |
 | EN 6 · Compare's governed "01 Three measures that cannot be combined" reads as the analysis of the selected pair | Yes — the D2 order (the tool as the first answer) | Content/order: `ESCALATE_TO_MASTER` (observation); the order stands |
 | EN 7 · only 13 records comparable, refusal without a reason | Yes — the comparable set is governed; the error copy is the runtime's | `NEEDS_CONTROLLED_CONTENT` (a governed sentence on the comparable set) |
 | EN 8 · the canonical URL as the frame's link text; "Cite this page" thinner than "Cite this record", no preview | Yes | Not changed: the canonical URL is the portable-evidence design (D6); the citation templates are the runtime's — Code item |
-| EN 9 · `/data/` 50,000 px; "Reuse terms: not assessed" × 151 | Yes | DEBT-011 (open, EAD-07); the reuse line is governed (REL-02) — `ESCALATIONS.md` D7 |
+| EN 9 · `/data/` 50,000 px; "Reuse terms: not assessed" × 151 | Yes | **DEBT-011 closed at the resumption** (DL-D7-010): both dependency groups closed by default; the page falls to 28,004 px (EN) / 29,012 px (AR) at 1440 px. The reuse line is governed (REL-02) — `ESCALATIONS.md` D7 |
 | AR 1 · one value in two magnitudes and notations (1.262 مليار vs 1,262; 317.639) | Yes — governed prose and governed rows | Content: `ESCALATE_TO_MASTER` (observation) |
 | AR 2 · the Findex fieldwork window in three date forms | Yes — governed fields (raised at D3) | Content: restated, `ESCALATIONS.md` D7 |
 | AR 3 · the text alternative visible; the caveat up to three times per figure; 17,379 px page | Yes — by design (as EN 5; the table caption carries the markers every row shares) | Not changed (the Lock); recorded |
 | AR 4 · the withheld H1 2025 transactions figure beside the monthly series, no "why" | Yes | `NEEDS_CONTROLLED_CONTENT` (a governed sentence naming the withheld release) |
-| AR 5 · Explore's dangling section; rubric ordinals 01/04 against the index 02/05 | Yes | Both in **DEBT-019**: open, blocks the acceptance (see EN 3) |
+| AR 5 · Explore's dangling section; rubric ordinals 01/04 against the index 02/05 | Yes | Both **closed at the resumption — DEBT-019** (DL-D7-007): one rendering of section 5, and a section rubric's ordinal is now its position in the spine index in every family renderer, so the two numberings cannot drift (the same latent mismatch on `/people/`, `/evidence/`, Compare and `/data/` closed by the same rule) |
 | AR 6 · Compare Arabic copy: "2 سجلات مختارة", the prompt shown with two loaded, the boundary twice | Yes — the runtime's copy and state | Runtime + governed dual/plural forms: `ESCALATIONS.md` D7; Code item |
 | AR 7 · bidi: ISO dates split across lines, ranges mirrored, "+11%" as "%11+" | Partly — the date and range cases are the runtime's Compare cells (the D6 RUNTIME_DEFECT; no loose date or range in the reference's own pages, `check_visuals.py --phases text`); the signed values are the reference's | **DEBT-018**, verified (eight occurrences on `/payments/` and CLM-003), open, blocks the acceptance |
 | AR 8 · English credit lines; the raw path as the link text; the self-link on a Reading | Yes | Credit: governed, English only (escalated at D6); the link: by design (D6) |
@@ -466,9 +469,118 @@ the Arabic is authored, not machine-translated. Verdicts (both): usable for a re
 journalist with a fact-check on the escalated years and units; presentable to a regulator internally, not yet polished
 for an official audience — the open items above.
 
-**Status of this checklist (28 September 2026).** The ticks record the technical evidence on the checkpoint tree. The
-owner has withheld the final visual acceptance: D7 is not declared met and the Design package is not declared
-accepted until the owner's visual review and DEBT-019 is settled; DEBT-018 was closed on 2026-09-28 (DL-D7-006).
+### K.5 The closure pass (28 September 2026) — the bar of the closure brief §5, judged on the rendered product
+
+Every line below was measured or read on the built site, not asserted from the records. Where a bar is not fully met
+the shortfall is stated with its measurement; a recorded no is worth more than a claim the product does not support.
+
+**The first thirty seconds from a deep link** — three entry pages × two languages × two viewports (12 screens),
+measured on what is visible without scrolling (`closure-entry-*.png`):
+
+| | Publisher named | What this is | What it says | What it does not say | Where next |
+|---|---|---|---|---|---|
+| Evidence Record (CLM-003) 1440 | 12/12 | 12/12 | yes | **indexed, not stated** (the index entry "05 What this evidence does not establish" is on the first screen) | 12 links |
+| Evidence Record 390 EN | yes | yes | yes | indexed | 5 links |
+| Evidence Record 390 AR | yes | yes | yes | **no — the index entry falls 3 px below the fold at exactly 390 × 844**; in view on any taller phone | 4 links |
+| Reading 1440 EN/AR | yes | yes | yes | **stated** (the boundary precedes the essay) | 14 links |
+| Reading 390 EN/AR | yes | yes | yes | **stated** | **only the crumb** — the strip follows 136 px (EN) / 188 px (AR) below the fold |
+| Domain answer (`/people/`) all four | yes | yes | yes | **stated** | 2–16 links |
+
+The publisher is named on every one of the twelve screens — this is what DEBT-016 was about, and it is met (DL-D7-008).
+The two shortfalls are recorded, not fixed: on the Arabic record at exactly 390 × 844 the limit's index entry sits 3 px
+below the fold, and on the Reading's phone screen the only forward link is the breadcrumb because the governed boundary
+displaces the strip — which is the right priority, since the limit matters more than the navigation.
+
+**Moving through the product.** Every composed page answers "where am I, what is near me, where next" without a
+sitemap: the crumb and rubric above the `h1`; the index (beside the object from 900 px, as the strip below it,
+DL-D7-009/011, measured at 2–36 % of the scroll on every family); the governed next actions; the edge groups at the
+foot. State survives the language switch (`check_journeys.py` `language_switch_state`, the comparison kept). The menu
+holds the six governed destinations and holds at 320 px with the Arabic labels (`check_acceptance.py`, longest titles).
+
+**Reading.** Two authored scales, neither borrowed: English body 17 px/1.60, Arabic 18 px/1.90; display 32/30 px on a
+phone and 46/42 px from 900 px; the Arabic rubric at its own size and with no letter-spacing; the measure bounded
+(`check_site.py` `measure_bounded`, ≤ 720 px). The Arabic lens confirmed the composition is native, not mirrored, and
+the prose idiomatic rather than translated; its one reading finding — that the Arabic heading-to-body size step is
+weak on a phone where the rail collapses — is recorded below.
+
+**Figures.** On `/payments/` at 320 px in both languages: 5 figures, every drawn one carrying its scope, its boundary
+once in its foot, its canonical link and its named fallback table, 0 overflowing, 0 table wrappers scrolling. A figure
+cropped out of the page keeps its scope, boundary, canonical link and unit in both languages
+(`closure-crop-*.png`); the flagship same-year figure was re-tested against a hostile crop cutting its panel header
+and now carries the unit at its axis (DL-D7-011), with the governed same-year marker standing between the two
+publication-keyed rows so the crop cannot read as a fall.
+
+**Tables.** Designed, not defaulted: every data column headed by a governed string, the caption carrying title,
+period, universe and unit, row labels as `th scope="row"` (the empty corner cell is the conventional one, the recorded
+D2 preference), every table in a named `role="region"`, none scrolling at 256 px, and the 4-column comparison
+recomposing into stacked numbered blocks at 320 px rather than side-scrolling (confirmed by the phone lens).
+
+**What leaves the page.** The citation copies title · product · record · publisher · edition · period · population
+(clipboard read back, walk 2). The export frame stands alone with the publisher, product, edition, the complete
+detached frame and the canonical link. Every printed page ends with the provenance block (product · edition ·
+canonical URL · citation) and the chrome is gone. The social frames carry the publisher in type (DL-D7-008).
+
+**The details.** Skip link first and visibly focused (3 px double outline); 0 interactive targets under the recorded
+24 px minimum on Home; errors in the governed technical voice with empty and unknown states deliberate
+(`check_journeys.py`, 28 drives); nothing moves without reason and both motion preferences are honoured.
+
+**The three walks, recorded** (walked on the rendered site; what was clumsy is stated):
+
+1. *A citizen who wants one plain answer and no method* — Arabic, phone. `/ar/` → the governed action "ابدأ بسؤال" →
+   `/ar/explore/` → the cluster question "من هم الأقل وصولًا، وأين تظهر الفجوات المقاسة؟" → `/ar/people/`. Three taps.
+   The answer is the `h1` and the governed lead states the measure with its clock, its population and its bound inside
+   the sentence; no method is required of the reader. Clumsy: nothing in the path; the lead is six sentences and asks
+   real attention on a phone (DEBT-015, closed by composition — the figure group now enters the first screen).
+2. *A journalist deciding within two minutes whether a figure is safe to quote* — English, desktop, arriving on
+   CLM-003. The first screen gives the publisher, the genre, the period, the population and the full governed claim
+   including the source's own inconsistency (8.55 % computed against the source graphic's +11 %, both shown). "Cite
+   this page" copies a complete attributable citation; the original source opens externally with its cue. The limit is
+   named in the index on the first screen and read in one scroll. Clumsy: the cite button's confirmation is the word
+   "Copied" in the status region with no preview of what was copied (recorded for Code at the checkpoint, unchanged).
+3. *A researcher who needs definition, population, calculation base, method, source and limits, and wants to test
+   whether two records may be compared* — English, desktop. `/evidence/` → search "account ownership" → five relevant
+   records → CLM-001 → the seven governed questions answer definition, measure, population, currency, limits, source
+   and method in order → "Compare evidence" → the comparison returns, for two records of the governed comparable set,
+   the verdict **"Not a direct comparison — the recorded definition, population or method differs between these
+   records"** with the prohibition against merging them. The product's thesis is delivered as an answer, not a
+   failure. Clumsy: the search status region announces nothing on the first query (the runtime caps at ten hits
+   without a total — the checkpoint's recorded Code item), and a record outside the comparable set simply cannot be
+   selected, which the page does not explain (escalated at the checkpoint).
+
+**The independent lenses.** Three lenses read the built pages — not a description of them — and each wrote its report
+into the repository as it went (DEBT-005's rule). Verbatim in `design/evidence/d7/cold_read/`:
+`lens-arabic-closure.md`, `lens-cold-record-closure.md`, `lens-phone-closure.md`. Adjudication of everything they
+raised that Design owns:
+
+| Lens · finding | Verified | Adjudication |
+|---|---|---|
+| Cold record · the governed source intro promises "Open the source record here" on records with no source card, denied in the next sentence | Yes — 10 records, 20 documents | **Fixed** (DL-D7-011): the intro prints only where a source card exists; 0 documents remain |
+| Cold record · a hostile crop of RV-CWR-001 loses "USD million", leaving two values that could read as a 45 % fall | Partly — the unit is lost; the governed same-year marker between the rows survives every crop that shows both values, so it cannot honestly read as a fall | **Fixed** (DL-D7-011): the unit now prints in the axis row, so a crop carrying the axis carries the unit |
+| Phone · the Compare strip sits at 71 % of the scroll, indexing only what the reader has passed | Yes — measured | **Fixed** (DL-D7-011): the strip precedes the tool (8 % EN, 6 % AR) |
+| Phone · no sticky in-page navigation at 390 px; the strip is inline | Yes — by design | Not changed: exactly one visible spine at any width is a Lock rule; a collapsed "on this page" control needs a governed label (the standing escalation) |
+| Phone · `/data/` is 31,599 px on a phone and its curated categories are not in the index | Yes — measured after DL-D7-010 (from ~54,000 px) | Recorded, not changed: the remaining length is the register's own content with both bulk groups closed; paged groups or category jump links each need governed labels — an escalation, not authored copy |
+| Phone · in-flow action links 30–33 px against the header's 44 px | Yes — measured | Recorded, not changed: the project's recorded standard is the 24 px minimum, met everywhere and asserted; a 44 px rule for links inside prose is an owner-level choice |
+| Phone, cold record, Arabic · the visible text alternative and table read as unhidden accessibility markup | Yes — by design | Not changed: the Lock keeps the text alternative visible for print, no-script and assistive-technology parity (considered and recorded at the checkpoint) |
+| Arabic · **BLOCKING** — every section heading on the record is 14 px against 20 px body: a heading 30 % smaller than the prose it introduces, on `/ar/evidence/CLM-003/`, `/ar/explore/` and the Reading's labels | Yes — measured at 390 and 1440 px; the cause is that English marks the same object with uppercase and tracking, which Arabic correctly withholds and nothing replaced | **Fixed** (DL-D7-012): an Arabic rubric that is a section heading is now sized against the prose it heads (20 px against 18 px body), keeping its colour and weight; English unchanged |
+| Arabic · heading-to-body contrast weak on a phone; the ochre eyebrow carries more hierarchy than the heading | Yes | Addressed by the same fix; the residual (heading and lead statement now both 20 px, separated by colour and weight) is recorded for the owner's visual review |
+| Arabic · **BLOCKING** — the POS-value column mixes "910.688" and "1,262", read as three orders of magnitude apart | **The reading is wrong** — both are YER million and differ by about 1.4×; the notation, not the data, misled the reader | Content, and now the strongest reader evidence in the record: **two independent trained readers in two sessions have misread a governed value by a factor of a thousand from this notation alone** — `ESCALATE_TO_MASTER`, strengthened in `ESCALATIONS.md`. Design will not round, restate or re-unit a governed value |
+| Arabic · charts keep a left-to-right value axis and ISO tick labels inside an RTL column | Yes | Not changed: the left-to-right numeric axis is a governed contract rule kept against a D1 finding (DL-D1-006); the ISO ticks are the governed period keys, isolated by the text layer. The mismatch with the Arabic month names in the same figure's prose is recorded for the owner |
+| Arabic · the percent sign appears on opposite sides within one comparison ("%8.55" beside "+11%") | Yes — the unsigned value takes the Unicode default in RTL, the signed one is inside the left-to-right isolate DEBT-018 required | Recorded, not changed: each rendering is individually correct, and isolating every percentage in the corpus at the closure would be a corpus-wide typographic change no reader has asked for. For the owner's visual review |
+| Arabic · source attributions left in English ("المصدر: Central Bank of Yemen — Aden") while the prose names the same body in Arabic | Yes | Not changed: publisher names are governed in English only and Arabic frames print them as isolated left-to-right runs (the contract's own `language_note`, closed at D2) |
+| Arabic · link underlines cut through Arabic descenders and sub-baseline dots | Yes — `text-underline-offset: .16em` | Recorded for the owner's visual review: a larger Arabic-only underline offset is a legitimate refinement; it was not taken at the closure because it moves every link on every Arabic page and no reader reported a legibility failure, only the collision |
+| Arabic · the publisher is named only in Latin script; the Arabic name exists only inside the mark at ~8 px | Yes | Recorded: the publisher's Arabic name is not a governed interface string, and Design authors none; raised with EAD-03/OWN-01 |
+| Arabic · a `figure` on Home promises a view and delivers only its text description | Yes — VIS-INCLUSION-TRANSMISSION is a TABLE_TEXT_FIRST contract with no rows | Not changed: a contract without rows is never drawn (the tier rule); the frame prints the governed description as its body. The lens's reading — that it looks unfinished — is recorded for the owner |
+| Cold record · CLM-039's central comparison carries no values, dates or interface names | Yes — governed text | Content: `NEEDS_CONTROLLED_CONTENT` (`ESCALATIONS.md`, D7 closure) |
+| Cold record · question 7's summary reads as internal meta-language | Yes — governed copy | Content: `ESCALATE_TO_MASTER` (observation) |
+| Phone · Compare prints two governed sentences twice, 70 px apart | Yes — the governed `alt_text` ends with the governed `prohibited_inference` verbatim | Content: `ESCALATE_TO_MASTER` — Design will not truncate a governed string and the boundary must print in the boundary voice |
+| Cold record · CLM-044 reads as deliberate, not broken, and leaks no withheld value in text, attributes, SVG, hidden nodes, forced-open disclosures or JSON-LD | Yes | Confirmed — the withheld state holds |
+
+**Status of this checklist (28 September 2026, closure).** The ticks record the technical evidence; §K.5 records the
+closure pass on the rendered product. DEBT-018 (DL-D7-006), DEBT-019 (DL-D7-007), DEBT-016's identification defect
+(DL-D7-008), DEBT-014 and DEBT-015 (DL-D7-009), DEBT-011 (DL-D7-010) and DEBT-007 (decided) are closed, and the three
+interface defects the closure lenses found are fixed (DL-D7-011). No design debt is flagged "blocks D7". What remains
+is the owner's own visual acceptance, which this session does not give itself, and the content and runtime items
+escalated to the steward and to Code. **D7 is not declared accepted here, and this is not PUBLIC RELEASE READY.**
 
 ## L. Outputs on the checkpoint tree (pasted, unedited last lines)
 

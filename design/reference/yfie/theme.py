@@ -30,6 +30,11 @@ p{margin:0 0 .85em}p:last-child{margin-bottom:0}
 .tbtn{background:none;border:0;padding:0;font:inherit;color:inherit;text-decoration:underline;text-decoration-thickness:1px;text-underline-offset:.16em;text-decoration-color:var(--rule-2);cursor:pointer}
 .rubric{display:block;font-size:var(--fs-rubric);line-height:1.4;font-weight:600;color:var(--ochre);margin:0}
 [dir=ltr] .rubric{text-transform:uppercase;letter-spacing:.1em}
+/* A rubric that IS a section heading must read as one in Arabic. English marks it with uppercase and tracking — two
+   devices a script without case cannot use, and which are correctly withheld here — so in Arabic the heading was left
+   30 % smaller than the prose it introduces (the D7 Arabic lens, on the record's seven questions at 390 px). In a
+   script where size and weight carry the whole hierarchy, a heading is never smaller than its body (DL-D7-012). */
+[dir=rtl] h2.rubric,[dir=rtl] h3.rubric{font-size:calc(var(--fs-body) + 2px);line-height:1.5}
 .clock{display:flex;flex-direction:column;gap:2px;font-size:var(--fs-clock);line-height:var(--lh-clock)}
 .clock .k{font-weight:600;color:var(--mute)}
 .clock .v{font-weight:600;color:var(--ink)}
@@ -140,6 +145,7 @@ details.more .qa{margin-top:10px}
 .p1 .rl{font-size:var(--fs-clock);line-height:var(--lh-clock);font-weight:600;padding-top:8px;text-wrap:balance}
 .p1 svg{display:block;overflow:visible;font-family:var(--font)}
 .p1 .ax-row{margin-top:2px}
+.p1 .ax-unit{font-size:var(--fs-clock);color:var(--ink-2);font-weight:500;align-self:start}
 .cap.same{margin:2px 0 4px}.cap.note{margin-top:10px}
 .between{border-top:3px double var(--counter);padding-top:8px;margin:10px 0 6px;font-size:var(--fs-clock);font-weight:600;color:var(--counter)}
 .lanes{display:flex;flex-direction:column;gap:14px;margin-top:8px}

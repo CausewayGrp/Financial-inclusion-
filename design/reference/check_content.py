@@ -53,7 +53,8 @@ def governed_visual_numbers() -> set[str]:
 SENT = re.compile(r"(?<=[.؟?!:;])\s+")
 INLINE_TAG = re.compile(r"</?(?:bdi|a|b|i|em|strong|span|time|button)\b[^>]*>")   # inline elements add no word break in rendered text
 TAG = re.compile(r"<[^>]+>")
-FRAMING_EXCEPTION = "UI-EVID-OPEN-THE-SOURCE-RECORD-HERE"   # not printed on a framing record (no source to open): a recorded exception
+SOURCE_INTRO_EXCEPTION = "UI-EVID-OPEN-THE-SOURCE-RECORD-HERE"   # printed only where a source card exists to open: a recorded exception (D2 for the framing rule; D7, DL-D7-011, for every record with no source card)
+FRAMING_EXCEPTION = SOURCE_INTRO_EXCEPTION   # the D2 name, kept for the records that cite it
 
 
 def main_text(path: Path) -> str:
@@ -137,10 +138,18 @@ def main() -> int:
                         pos = [ref_text.index(y) for y in parts]
                         return pos == sorted(pos)
                     return False
-                framing = page_data.get("closure_state") == "FRAMING_NO_FACT"
+                # The governed source intro is printed only where the record offers a source card to open (DL-D7-011).
+                # Where it is suppressed, a governed string whose ONLY occurrence in the baseline is inside that
+                # sentence is exempt too — in Arabic the card's action label ("افتح سجل المصدر") is the intro's opening
+                # words, so the baseline "renders" it only as a substring, never as a link. Every other string stays strict.
+                no_source_card = isinstance(page_data.get("sources"), list) and not page_data["sources"]
                 framing_text = json.loads((ROOT / "site-src/content/content/interface_copy.json").read_text(encoding="utf-8"))
-                framing_text = next((r.get(f"label_{lang}") for r in framing_text if r.get("ui_id") == FRAMING_EXCEPTION), "")
-                lost = sorted(x for x in gov if x in base_text and not present(x) and not (framing and x == framing_text))
+                framing_text = next((r.get(f"label_{lang}") for r in framing_text if r.get("ui_id") == SOURCE_INTRO_EXCEPTION), "")
+                def intro_exempt(x: str) -> bool:
+                    if not (no_source_card and framing_text):
+                        return False
+                    return x == framing_text or (x in framing_text and x not in base_text.replace(framing_text, ""))
+                lost = sorted(x for x in gov if x in base_text and not present(x) and not intro_exempt(x))
                 if lost:
                     bad += 1
                     print(f"TEXT {rel}: {len(lost)} baseline sentence(s) not in the reference:")

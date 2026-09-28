@@ -136,11 +136,12 @@ def svg_mark(kind: str, x: str, cy: float, r: float) -> str:
     return f'<g transform="translate(-{side/2:.1f},0)"><rect class="mark a dia" x="{x}" y="{cy-side/2:.1f}" width="{side}" height="{side}"/></g>'
 
 
-def p1_rows(d: dict, same_year: str) -> str:
+def p1_rows(d: dict, same_year: str, unit: str = "") -> str:
     """Panel 1 as rows: one row per publication keyed by its governed label (HTML, so it wraps and mirrors), the value
     on a horizontal axis from zero, the value printed above the mark; the governed same-year marker stands between the
     two rows (the contract places the break between the two values), so a crop of the rows never reads as a fall.
-    The axis end and its ticks come from the data."""
+    The axis end and its ticks come from the data. The governed unit is repeated in the axis row's label cell (empty
+    until D7) so a crop tight enough to cut the panel header still carries the unit with the values (DL-D7-011)."""
     vmax, step = axis_scale([v["y"] for v in d["panel1"]])
     rows = []
     for val, kind in ((d["panel1"][0], "circle"), (d["panel1"][1], "square")):
@@ -152,7 +153,7 @@ def p1_rows(d: dict, same_year: str) -> str:
     rows.insert(1, f'<div class="between same"><b>{esc(same_year)}</b></div>')
     tick_values = [t * step for t in range(0, int(vmax // step) + 1) if t * step <= vmax * 0.999 or t == 0]
     ticks = "".join(f'<line class="tick" x1="{_pct(t, vmax=vmax):.2f}%" y1="0" x2="{_pct(t, vmax=vmax):.2f}%" y2="5"/><text class="lbl" x="{_pct(t, vmax=vmax):.2f}%" y="18" text-anchor="middle">{plain_num(int(t))}</text>' for t in tick_values)
-    axis = (f'<div class="row ax-row"><div></div><svg class="ax" width="100%" height="22" aria-hidden="true" focusable="false" direction="ltr">'
+    axis = (f'<div class="row ax-row"><div class="ax-unit">{esc(unit)}</div><svg class="ax" width="100%" height="22" aria-hidden="true" focusable="false" direction="ltr">'
             f'<line class="axis" x1="1%" y1="0.5" x2="88%" y2="0.5"/>{ticks}</svg></div>')
     return f'<div class="p1">{"".join(rows)}{axis}</div>'
 
@@ -207,7 +208,7 @@ def rv001_figure(v: dict, cite_label: str, origin: str | None, heading: str = "h
         r = next(r for r in series if r["x"] == 2021)
         return f'<span class="base">2021 · {val_unit(r["y"], r["unit"])}</span>'
     return (f'<figure class="fig" data-visual-id="{esc(v["id"])}" {FIG_ATTRS}><span class="rubric">{esc(v["labels"]["analytical_question"])}</span><{heading} class="fig-t">{esc(f["title"])}</{heading}><p class="cap">{esc(v["question"])}</p><p class="cap">{iso_run(f["scope"])}</p>'
-            f'<div class="panels"><div class="panel p1p"><p class="ph">2024 · {esc(d["unit_usd"])} · {esc(v["labels"]["reported"])}</p>{p1_rows(d, f["same_year"])}</div>'
+            f'<div class="panels"><div class="panel p1p"><p class="ph">2024 · {esc(d["unit_usd"])} · {esc(v["labels"]["reported"])}</p>{p1_rows(d, f["same_year"], d["unit_usd"])}</div>'
             f'<div class="panel p2">'
             f'<div class="lanes"><div class="lane"><{sub}>{esc(d["label_cby"])}</{sub}><p class="ph">{esc(d["unit_index"])} · {esc(v["labels"]["derived"])}</p>{base(d["cby"])}{lane(d["cby_index"], "square")}</div><div class="between">{esc(f["not_comparable"])}</div>'
             f'<div class="lane"><{sub}>{esc(d["label_imf"])}</{sub}><p class="ph">{esc(d["unit_index"])} · {esc(v["labels"]["derived"])}</p>{base(d["imf"])}{lane(d["imf_index"], "diamond")}</div></div><p class="cap note">{esc(f["note"])}</p></div></div>'

@@ -1,7 +1,17 @@
 # Design package — Yemen Financial Inclusion Evidence · أدلة الشمول المالي في اليمن
 
-Status: **D7 TECHNICAL CHECKPOINT COMPLETE — FINAL VISUAL ACCEPTANCE WITHHELD** (28 September 2026; branch
-`claude/dreamy-archimedes-e8qx5v`, from the accepted `main` `0ccdf01`). The runnable, fully populated bilingual reference
+Status: **D7 CLOSURE COMPLETE — READY FOR INDEPENDENT ACCEPTANCE** (28 September 2026; branch
+`claude/dreamy-archimedes-e8qx5v`, from the accepted `main` `0ccdf01`). The technical checkpoint below was followed by
+the closure the owner asked for, recorded in `10_ACCEPTANCE_CHECKLIST.md` §K.5 and DL-D7-007…012: the one blocker
+(DEBT-019) is closed, the four visual debts are settled — the publisher is now named in type on every first screen in
+both languages (DEBT-016's identification defect, DL-D7-008), the phone composition is recomposed (DEBT-014/015),
+`/data/` falls from 50,291 to 28,004 px (DEBT-011) and the Yemen grounding is decided as restraint with its reasoning
+recorded (DEBT-007) — the 18 catalogue-only coverage rows are settled, three independent lenses read the rendered
+product (an Arabic-first reader, a cold reader arriving on one Evidence Record, a phone reader; reports committed
+verbatim under `evidence/d7/cold_read/`), the three reader walks are recorded, and the three interface defects the
+lenses found are fixed (DL-D7-011/012). **No design debt is flagged "blocks D7".** This session does not declare D7
+accepted and does not merge: the owner's visual acceptance, and the content and runtime items escalated to the steward
+and to Code, remain. Not PUBLIC RELEASE READY. The runnable, fully populated bilingual reference
 site (`design/reference/`: 288 documents, every tool and state, both languages, four widths, no placeholder) passes
 every D1–D6 check, the three repository suites and the new D7 check on this tree — `design/reference/check_acceptance.py`:
 14,248 static assertions on 288 documents and 310 frames (strict CSP, the discovery head byte-equal with the baseline,
@@ -1213,3 +1223,65 @@ not public release (REL-01…04 remain).
   content; `check_site.py --gate d2` (the new assertions included) and `check_journeys.py` (the source drives:
   unknown deep link, filter with no match) pass on the rebuilt tree.
 - Compromise: none. DEBT-011 closed.
+
+### DL-D7-011 · D7 · 2026-09-28 · What the closure lenses changed: a promise withdrawn, a unit kept in the crop, a map moved
+- Problem: three independent lenses read the rendered product at the closure (an Arabic-first reader, a cold reader
+  arriving on one Evidence Record, a phone reader) and returned findings the gate's own checks had not caught. Three
+  were interface defects Design owns; the rest are content or already-recorded decisions (`10_ACCEPTANCE_CHECKLIST.md`
+  §K.5, `ESCALATIONS.md` D7 closure).
+- Found and fixed (each verified on the built pages before and after):
+  1. **A promise the page could not keep.** The governed source intro ("Open the source record here, or go to the
+     original document where a public link exists") printed on every record, including the ten that render no source
+     card at all — the nine composites whose members are not listed and CLM-044 — where it was followed immediately by
+     its own denial ("No public link to the original document is available for this source"). The cold reader called
+     it "the one moment the page looks broken". The intro now prints only where a source card exists to open, which
+     extends the exception already recorded at D2 for the framing rule (`render.py`; the parity check's
+     `SOURCE_INTRO_EXCEPTION`). 20 documents were affected; 0 remain. The record still answers question 6 — with its
+     lineage statement or its no-locator statement, in the body voice.
+  2. **A unit a hostile crop could cut.** On RV-CWR-001 the governed unit sat only in the panel header, so a crop tight
+     enough to cut it left "6,245" and "3,422.16" unitless. The defence against the misreading the figure exists to
+     prevent held (the governed same-year marker stands between the two publication-keyed rows, so the crop cannot
+     read as a fall — verified by reproducing the reader's crop), but the unit is now repeated in the axis row's label
+     cell, empty until now, so any crop carrying the axis carries "USD million" with the values.
+  3. **A map behind the thing it maps.** The phone strip added at DL-D7-009 landed after the Compare tool — the page's
+     whole bulk — at 71 % of the scroll, indexing only what the reader had already passed. On Compare it now precedes
+     the tool (8 % in English, 6 % in Arabic). The other placements measured well and are unchanged (`/data/` 2 %,
+     the Evidence directory 2 %, Home 25 % after the first figure group, Explore 36 % after the clusters).
+- Judged and not changed, with the reason recorded: the visible text alternative and its table under every figure (the
+  Lock's "text alternative visible"; two lenses read it as unhidden accessibility markup — the D7 checkpoint already
+  considered and kept it for print, no-script and assistive-technology parity); in-flow action links at 30–33 px
+  against the header's 44 px (the recorded standard is the 24 px minimum, asserted by `check_visuals.py targets_24px`
+  and met everywhere — raising every in-flow link to 44 px would change the reading rhythm of the prose they sit in,
+  an owner-level choice, recorded not taken); `/data/` at 31,599 px on a phone after DL-D7-010 (the register's own
+  content with both bulk groups closed — paged groups or category jump links would each need governed labels, so they
+  are an escalation, not something Design authors).
+- Arabic / responsive / a11y: all three fixes verified in both languages; the signed-value isolation of DL-D7-006 was
+  re-verified geometrically at the closure (10 signed runs on `/ar/evidence/VIS-POS-TERMINALS/`, every one rendering
+  with its sign leftmost, the print-only provenance block included under print media).
+- Code: print the governed source intro only where a source card exists; keep the unit in the axis row; place a page's
+  strip before a tool that is the page's bulk.
+- Compromise: none. The lens reports are committed verbatim under `design/evidence/d7/cold_read/`.
+
+### DL-D7-012 · D7 · 2026-09-28 · A heading that is a heading in Arabic too
+- Problem: the Arabic lens found, on the record's seven governed questions at 390 px, that every section heading
+  rendered at 14 px against 20 px body text — a heading 30 % smaller than the prose it introduces. Verified: the same
+  inversion on `/ar/explore/` and on the Reading's source labels, and on every family that heads a section with a
+  rubric.
+- Cause (the honest diagnosis): the heading and the eyebrow share one object. In English it is marked as a label by
+  uppercase and letter-spacing, so 12 px reads as a deliberate eyebrow, and on desktop it also sits in its own rail.
+  Arabic has no case, and the stylesheet correctly withholds both devices — but nothing replaced them, so the Arabic
+  heading kept only the small size. The English convention was carried into a script that cannot use it: exactly the
+  "borrowed from the other" the brief's reading bar forbids, and the reason the defect survived six gates is that in
+  English the object looks right.
+- Alternatives: raise `--fs-rubric` for Arabic (moves every eyebrow on every page, not only the headings); add weight
+  or a rule (both already present — the object is semibold and ochre); size the heading against the prose it heads.
+- Chosen: the last, scoped to the case that is a heading — `[dir=rtl] h2.rubric, [dir=rtl] h3.rubric` at
+  `calc(var(--fs-body) + 2px)` with its own line height. The Arabic section heading is now 20 px against 18 px body
+  at every width, keeps its ochre and its weight, and the eyebrows that are not headings are untouched. English is
+  unchanged: its convention is established, accepted through D1–D6 and not defective.
+- Arabic / responsive / a11y: verified at 390 and 1440 px, no overflow, no heading level changed, the index and strip
+  unaffected.
+- Code: size a rubric that is a section heading against the body in Arabic; never rely on case or tracking there.
+- Compromise: none. Recorded for the owner's visual review: the Arabic heading and the lead statement are now the same
+  size (20 px), distinguished by colour and weight — a further step in the Arabic display scale is an owner-level
+  choice this closure does not take on its own.

@@ -302,7 +302,9 @@ def comparison(page: dict, shell: dict) -> str:
         index.append((f"s{s['order']}", s["heading"]))
     n, ni = next_actions(page.get("next"))
     parts.append(n); index += ni
-    parts.insert(2, strip(index))   # after the tool (DEBT-014)
+    # before the tool: the comparison table is the page's whole bulk, so a strip after it indexes only what the reader
+    # has already passed (the D7 phone lens measured it at 71 % of the scroll) — here the map comes first (DL-D7-011)
+    parts.insert(1, strip(index))
     edges = [(page["next"]["title"] if page.get("next") else "", [f'<a href="{l["href"]}">{esc(l["label"])}</a>' for l in (page.get("next") or {}).get("links", [])])]
     return page_html(page, shell, "".join(parts), index, edges, foot_index=False)
 

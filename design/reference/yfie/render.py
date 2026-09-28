@@ -236,8 +236,12 @@ def evidence_record(page: dict, shell: dict) -> str:
     if page["no_source_message"]:   # no public locator: an honest state of the record, stated in the body voice
         src_extra += f'<div class="body"><p data-evidence-source-unavailable>{esc(page["no_source_message"])}</p></div>'
     trace = (f'<div class="mt16"><span class="small"><b>{esc(L["trace"])}</b> · {esc(L["trace_intro"])}</span><div class="chips"><span class="chip">{bdi(page["id"])}</span>{chips}</div></div>' if page["trace_ids"] else "")
-    # the governed intro ("open the source record here …") is printed unless the record is a framing rule with no source to open
-    intro = f'<p class="small">{esc(L["source_intro"])}</p>' if page["closure_state"] != "FRAMING_NO_FACT" else ""
+    # The governed intro ("open the source record here, or go to the original document …") names two actions, so it is
+    # printed only where the record actually offers one: a source card to open. On a framing rule (no source expected),
+    # on a composite whose members are not listed and on a record whose source has no public locator, there is nothing
+    # to open, and the D7 cold reader read the promise followed by its own denial as the page breaking (DL-D7-011).
+    # The record still answers question 6 — with its lineage statement or its no-locator statement, in the body voice.
+    intro = f'<p class="small">{esc(L["source_intro"])}</p>' if page["sources"] else ""
     qa.append(f'<section class="qa" id="q6"><div>{rubric(L["source"], 6, "h2")}<span id="source"></span></div><div>{intro}<div class="mt10">{"".join(source_card(s) for s in page["sources"])}</div>{src_extra}{trace}</div></section>')
     more = "".join(f'<div class="qa"><h3 class="rubric">{esc(L[k])}</h3><div class="body"><p>{esc(page[k])}</p></div></div>' for k in ("method", "change_trigger", "verification") if page[k])
     if page["reading_guidance"]:
