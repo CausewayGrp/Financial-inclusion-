@@ -92,6 +92,8 @@ def main() -> int:
         if portable:   # one export frame per drawn contract (the D1 figure and every drawer), in this language
             for vid in list(visuals.FIGURES) + list(visuals.DRAWERS):
                 v = content.visual(vid, lang)
+                if not visuals.draws(v):   # a drawer whose labels wait renders as a text frame and has no export frame (D7)
+                    continue
                 shell = content.shell(lang, v.get("canonical_href", "/"))
                 fig = visuals.figure(v, shell["labels"]["cite"], renderer.DISC.origin())
                 (out / "_export" / f"{vid}__{lang}.html").write_text(frames.export_document(fig, v, shell), encoding="utf-8")

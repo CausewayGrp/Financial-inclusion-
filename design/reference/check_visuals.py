@@ -49,13 +49,14 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[2]
 REF = ROOT / "design" / "reference"
 sys.path.insert(0, str(REF))
-from yfie.visuals import DRAWERS, FIGURES, plain_num  # noqa: E402
+from yfie.visuals import DRAWERS, FIGURES, matrix_labels_governed, plain_num  # noqa: E402
 from yfie.text import LTR_RUN  # noqa: E402
 
 CONTRACTS = json.loads((ROOT / "site-src/content/visuals/visual_design_contracts.json").read_text(encoding="utf-8"))
 GRAMMAR = CONTRACTS["grammar_labels"]
-DRAWN = set(FIGURES) | set(DRAWERS)
-PLACEHOLDERS = {"UI-VIS-MATRIX-AUTHORITY", "UI-VIS-MATRIX-UNIVERSE", "UI-VIS-MATRIX-STATUS", "UI-VIS-MATRIX-NEGATIVE", "UI-VIS-MATRIX-OPERATION", "UI-VIS-CAT-PRV-CLASS-PSO"}   # ESCALATIONS.md (D6): the five matrix headings and the fifth row's class label
+UI_IDS = {r["ui_id"] for r in json.loads((ROOT / "site-src/content/content/interface_copy.json").read_text(encoding="utf-8"))}
+WAITING = set() if matrix_labels_governed(UI_IDS) else {"VIS-PROVIDER-OBSERVABILITY"}   # D7: a drawer whose labels are not governed renders as a text frame (ESCALATIONS.md, D6; DL-D7-001)
+DRAWN = (set(FIGURES) | set(DRAWERS)) - WAITING
 PALETTE = {"rgb(23, 33, 43)", "rgb(61, 73, 84)", "rgb(102, 113, 123)", "rgb(216, 221, 226)", "rgb(174, 183, 191)", "rgb(122, 90, 29)", "rgb(214, 184, 106)", "rgb(30, 86, 80)", "rgb(245, 241, 233)", "rgb(255, 255, 255)", "rgba(0, 0, 0, 0)", "none"}
 EXPORT_EVIDENCE = {"RV-CWR-001", "VIS-PROVIDER-OBSERVABILITY", "RV-CWR-004", "VIS-FIRM-CONSTRAINTS"}   # export PNGs kept as evidence (every frame is checked)
 PRINT_ROUTES = ["/", "/explore/", "/people/", "/evidence/", "/evidence/CLM-003/", "/evidence/compare/", "/readings/", "/readings/same-year-different-number/", "/data/", "/measurement/", "/about/"]   # one per family
@@ -189,8 +190,10 @@ def check_contract(pg, base: str, c: dict, lang: str, failures: list, evidence: 
                 checks["targets_24px"] = not st["smallTargets"]   # every link and button in the figure meets the 24 px target (07 §2)
                 checks["svg_ltr"] = st["ltr"]
                 checks["palette_only"] = all(f in PALETTE for f in st["fills"])
-                checks["placeholders_escalated_only"] = all(any(k in t for k in PLACEHOLDERS) for t in st["ncc"]) and (not st["ncc"] or vid == "VIS-PROVIDER-OBSERVABILITY")
-                if tier in ("SIGNATURE", "CORE_ANALYTICAL"):
+                checks["no_placeholder"] = not st["ncc"] and "⟦NCC:" not in st["text"]   # no development placeholder ships (D7)
+                if vid in WAITING:   # the drawing is unshipped until its labels are governed: the governed text frame, no chart, no value plotted
+                    checks["waits_as_text_frame"] = st["textOnly"] and st["svg"] == 0 and st["canvas"] == 0 and st["vals"] == 0
+                elif tier in ("SIGNATURE", "CORE_ANALYTICAL"):
                     checks["drawn"] = not st["textOnly"] and vid in DRAWN
                     checks["values_printed"] = all(v in st["text"] for v in must)
                     checks["withheld_never_printed"] = all(v not in st["text"] for v in never)
@@ -469,15 +472,13 @@ def main() -> int:
         for lang in ("en", "ar"):
             for c in (contracts if "contracts" in phases else []):
                 n_checks += check_contract(pg, base, c, lang, failures, evidence, crops)
-        # the placeholders on the whole site: exactly the escalated set, only inside the matrix
+        # no development placeholder anywhere on the site (D7): a label the Master does not govern is never shown
         seen = set()
-        for f in sorted(site.rglob("index.html")):
-            if any(part.startswith("_") for part in f.relative_to(site).parts):
-                continue
+        for f in sorted(site.rglob("*.html")):
             for m in re.finditer(r"⟦NCC:([^⟧]+)⟧", f.read_text(encoding="utf-8")):
                 seen.add(m.group(1))
-        if seen - PLACEHOLDERS:
-            failures.append({"placeholders_not_escalated": sorted(seen - PLACEHOLDERS)})
+        if seen:
+            failures.append({"placeholders_on_site": sorted(seen)})
         ctx.close()
         if not keys:
             if "degraded" in phases:
@@ -494,7 +495,8 @@ def main() -> int:
     for f in failures:
         print("FAIL", json.dumps(f, ensure_ascii=False))
     (site / "_review_visuals.json").write_text(json.dumps({"contracts": len(contracts), "checks": n_checks, "degraded": n_deg, "export_frames": n_x, "social_frames": n_s, "print_checks": n_p, "text_documents": n_t, "placeholders": sorted(seen), "failures": failures}, ensure_ascii=False, indent=1), encoding="utf-8")
-    print(f"VISUALS: {'FAIL' if failures else 'PASS'} — {len(contracts)} contracts × EN/AR on their routes: {n_checks} contract assertions; {n_deg} forced-colours and print checks on the {len(DRAWN)} drawn contracts; "
+    print(f"VISUALS: {'FAIL' if failures else 'PASS'} — {len(contracts)} contracts × EN/AR on their routes: {n_checks} contract assertions; {n_deg} forced-colours and print checks on the {len(DRAWN)} drawn contracts"
+          f"{' (' + ', '.join(sorted(WAITING)) + ' waits as a text frame until its labels are governed)' if WAITING else ''}; "
           f"{n_x} export frames; {n_s} social frames; {n_p} print checks on {len(PRINT_ROUTES)} family routes × EN/AR; {n_t} documents and frames scanned for loose runs; placeholders on the site: {sorted(seen)}; {len(failures)} failures")
     return 1 if failures else 0
 

@@ -53,9 +53,37 @@ def head(page: dict, shell: dict, route: str, kind: str = "website", extra: str 
     origin = DISC.origin()
     return (f'<!doctype html><html lang="{lang}" dir="{shell["dir"]}"><head><meta charset="utf-8">'
             f'<meta name="viewport" content="width=device-width,initial-scale=1"><title>{esc(page["title"])} — {esc(shell["product"])}</title>'
-            f'<meta name="description" content="{esc(page.get("meta_description"))}">{extra}<link rel="stylesheet" href="/assets/yfie.css">'
+            f'<meta name="description" content="{esc(page.get("meta_description"))}">{extra}<link rel="stylesheet" href="/assets/yfie.css">{font_preloads(lang)}'
             f'{DISC.head_links(route, lang, origin)}{DISC.social_meta(page["title"], page.get("meta_description") or "", lang, route, shell["product"], kind, origin)}'
-            f"</head><body>")
+            f"{structured_data(page, shell, route)}</head><body>")
+
+
+def font_preloads(lang: str) -> str:
+    """The two faces a first paint needs in the page's language — Regular (body) and SemiBold (headings, values,
+    emphasis) — preloaded from the shipped files (D7, DL-D7-005; `08_ASSET_MAP.md` §2). Medium and the other
+    language's faces load on demand with `font-display: swap`. Same origin; `crossorigin` because fonts are fetched in
+    CORS mode and a preload without it is fetched twice."""
+    folder, stem = ("ibm-plex-sans-arabic", "IBMPlexSansArabic") if lang == "ar" else ("ibm-plex-sans", "IBMPlexSans")
+    return "".join(f'<link rel="preload" as="font" type="font/woff2" crossorigin href="/assets/fonts/{folder}/{stem}-{w}.woff2">' for w in ("Regular", "SemiBold"))
+
+
+def structured_data(page: dict, shell: dict, route: str) -> str:
+    """The structured data the baseline writes (F6, one implementation in scripts/discovery.py): WebSite on Home, a
+    BreadcrumbList where the page shows its governed breadcrumb, an Article on a Reading — governed fields only, from
+    the same content path as the visible breadcrumb (D7: kept byte for byte with dist/, asserted by check_acceptance.py)."""
+    lang = shell["lang"]; origin = DISC.origin(); out = []
+    crumb = page.get("breadcrumb") or {}
+    parent_route = re.sub(r"^/(?:en|ar)(?=/)", "", crumb.get("parent_href") or "")
+    if route == "/":
+        out.append(DISC.website_ld(lang, shell["product"], origin))
+    elif page["family"] == "Evidence Record" and parent_route and page.get("id"):
+        out.append(DISC.breadcrumb_ld(parent_route, crumb.get("parent_label") or "", page["id"], lang, origin))
+    elif page["family"] == "Reading" and page.get("title"):
+        if parent_route:
+            out.append(DISC.breadcrumb_ld(parent_route, crumb.get("parent_label") or "", page["title"], lang, origin))
+        if page.get("thesis"):
+            out.append(DISC.article_ld(route, lang, page["title"], page["thesis"], shell["product"], origin))
+    return "".join(DISC.ld_script(x) for x in out)
 
 
 def logo(px: int) -> str:

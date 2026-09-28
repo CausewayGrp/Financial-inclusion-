@@ -147,7 +147,7 @@ default, the stored choice kept).
 | `/reforms/` | none (contract) | VIS-FCP-REDRESS-PATH beside 3; VIS-PAYMENT-RAILS and VIS-TARGET-RESULT-STATE beside 6; VIS-OECD-FCP-TIMELINE beside 11 | — (VIS-CAPITAL-CONTEXT is never drawn) |
 | `/firms/` | VIS-FIRM-CONSTRAINTS after its primary section (bars from zero without ranks, D6) | — | VIS-FIRM-FINANCE-PATH, VIS-FIRM-FINANCE-SEVERITY (text frames; rows requested) |
 | `/finance/` | VIS-MFI-DIVERGENCE after its primary section (text frame; rows requested at D2) | — | — |
-| `/providers/` | VIS-PROVIDER-OBSERVABILITY after its primary section (the provider matrix, D6) | — | — |
+| `/providers/` | VIS-PROVIDER-OBSERVABILITY after its primary section (the provider matrix, D6; at D7 the contract's text frame until its six labels are governed, DL-D7-001) | — | — |
 
 A visual beside a progressive section goes to the depth group, never inside the disclosure. The Readings carry their
 own signature or core figure after the opening section: RV-CWR-001 (D1), RV-CWR-009 (the full chain, D6) and RV-CWR-004

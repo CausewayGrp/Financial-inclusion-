@@ -17,6 +17,24 @@ Contract: `handoff/DESIGN_TO_CODE_CONTRACT.md`. Updated at every gate end; never
 | Print / export | NOT STARTED | Downloads ship disabled until OWN-04 |
 | Reference implementation | DOES NOT EXIST | DEBT-002 |
 
+## State at D7 (technical checkpoint on `claude/dreamy-archimedes-e8qx5v`, 28 September 2026 — final visual acceptance withheld by the owner; rows not listed are as at D6)
+
+| Area | Status | Notes |
+|---|---|---|
+| Reference site | TECHNICALLY COMPLETE — VISUAL ACCEPTANCE WITHHELD | `design/reference/` builds all 288 documents from the one content path (`python3 design/reference/build.py`), every tool on local data, every state reachable, both languages, four widths, no placeholder; every check green on the checkpoint tree and the technical criteria evidenced in `10_ACCEPTANCE_CHECKLIST.md`; the owner's visual review, DEBT-018 and DEBT-019 stand between this tree and D7 acceptance (`00_DESIGN_README.md`, status) |
+| Visual contracts | 12 DRAWN · 1 WAITING · 22 TEXT FRAMES · 1 RETIRED | the provider matrix (VIS-PROVIDER-OBSERVABILITY) is built but unshipped until its six labels are governed (`visuals.matrix_governed`, `visuals.draws`; DL-D7-001): the contract renders as its text frame, has no export frame, and draws unchanged the day the labels exist. Code gates the same six `UI-*` ids the same way and never fills one |
+| Placeholders | NONE | the `⟦NCC:…⟧` device and its style are removed; `check_visuals.py` and `check_acceptance.py` fail on any placeholder anywhere on the site |
+| Discovery head | BYTE-EQUAL WITH THE BASELINE | `render.structured_data` writes the WebSite, BreadcrumbList and Article JSON-LD the baseline writes, from the same content path through `scripts/discovery.py` (DL-D7-002); `check_acceptance.py` asserts title, description, canonical, hreflang, Open Graph, twitter card, citation meta and JSON-LD equal to `dist/` for every edition page |
+| D7 check | `check_acceptance.py` | static phase on every document and frame (CSP, head parity, one `h1`, skip link, language switch, trust layer, no download or document, the no-locator sources never named, CLM-044 never valued, external locators with their cue, the shipped fonts and licences); browser phase on the last-ten-percent surfaces in EN and AR (skip-link focus, search no-match and Escape, the language switch, Compare at 320 px, Contact and Corrections with a record, every trust route, the longest titles at 320 px, motion under both preferences, the review-test surfaces at 1440 and 390 px, the neutral 404); `--evidence` writes the PNGs of `design/evidence/d7/` |
+| Responsive / RTL | RECORDED | `05_RESPONSIVE_RTL_LTR.md` (new at D7): breakpoints and what each adds, reflow rules, the two type scales, the thirteen `[dir=rtl]` rules over logical properties, the text layer's isolation rules, what Code implements |
+| Language switch | RUNTIME BUTTON — Code: a link first | the baseline runtime (`site-src/app.js`, untouched) navigates to the twin route with the query and hash and stores `yfie-lang`; without script the button is inert and the reader reaches the other edition through the root entry. Code renders the switch as a link to the twin route and intercepts it (prevent the default, keep query and hash, store the preference), so the switch works on every family without script |
+| Compare table dates | CODE FIX PENDING | the D6 RUNTIME_DEFECT stands: the runtime writes governed periods into cells as plain text and Arabic reverses their ISO dates; the fix is the reference's isolation applied to runtime-written cells (`ESCALATIONS.md`, D6, with the patch) |
+| Design debt | TWO BLOCK THE ACCEPTANCE (found by the D7 cold readers, fixed at the resumption) | DEBT-018 — a governed signed value in Arabic prose ("+11%") is outside the text layer's isolate and renders "%11+": extend `text.LTR_RUN` (or a second pass) to a signed number with its unit as one unbroken isolate, in the reference and in the production text layer; DEBT-019 — Explore's governed section 5 rendered twice (its second rendering without the questions it introduces) and its rubric ordinals against the index numbering: a composition decision on where the governed heading lives, then one numbering. Closed at D7: DEBT-002 (the site), DEBT-013 (no unheaded column ships), DEBT-017 (by measurement, DL-D7-004). Open, none blocking D7: DEBT-007 (genericity — the frame anatomy and the one boundary voice carry the identity; no motif), DEBT-008 (blocks release — Code keeps the `paced_groups` fallback: the whole paragraph when no governed connective is found), DEBT-011 (`/data/` length — a filter on the governed `document_label` / `publisher` fields, EAD-07), DEBT-014 (the foot spine below 900 px — a governed "on this page" label would allow a collapsed index), DEBT-015 (a governed short statement for the Home head, if the Master provides one), DEBT-016 (blocks release — the owner's web-weight rendering of the unaltered mark, EAD-03) |
+| Exceptions (designed, unshipped) | THREE | the provider matrix (six labels); the export control (labels and OWN-04); the social images as HTML frames (Code rasterises at build and adds `og:image`, `08_ASSET_MAP.md` §4) |
+| Cold-reader items for Code (D7) | RECORDED | from the two independent readers of the checkpoint tree (`ESCALATIONS.md`, D7): the search status shows the total and a way on when the runtime caps the hits ("10 of 79", the query carried to the Evidence directory — EAD-06); one citation template for pages and records from the governed citation fields, with a visible preview before the copy; the language switch as a link (above); the Compare intro carries the governed sentence on the comparable set when it exists. Content findings (the `/people/` education sentence against the FINDEX contract; the Compare worked example's rubric; the text-first frames' repetition) are the steward's, Master-first |
+| Evidence | COMMITTED | `design/evidence/d7/`: the acceptance surfaces (focus, search, Compare at 320, Contact, Corrections, the trust routes, the longest titles, the review-test surfaces at 1440 and 390 px, the RV-CWR-001 export frame, the 404) in both languages; the providers text frame; the two cold-reader reports |
+| Records | CHECKPOINT — NOT FINAL | `00_DESIGN_README.md` (status, plan, DL-D7-001…005), `05` (new), `10` (new; §K.4 the readers' findings adjudicated), `03` §5, `04` §3, `06` §1/§3/§8/§10, `08` §2/§5, `DESIGN_DEBT.md` (DEBT-018, DEBT-019 open), `ESCALATIONS.md` (D7); `COVERAGE.csv` unchanged at `VERIFIED` — its rows become `ACCEPTED` with the D7 evidence only when the gate is accepted; the README is not reconciled (owner's hold) |
+
 ## State at D6 (accepted at `f4739a5`, the merge of pull request #5 — rows not listed are as at D5)
 
 | Area | Status | Notes |
@@ -119,10 +137,13 @@ Contract: `handoff/DESIGN_TO_CODE_CONTRACT.md`. Updated at every gate end; never
 
 ## Temporary vs intended
 
-At D0 nothing was implemented. At D2 the "Temporary vs intended" row of the D2 table above is the live statement (the D1 row stands where it is not superseded);
-nothing in `dist/` or `site-src/styles.css` is a Design decision. Without JavaScript below 900 px the primary
-navigation stays collapsed (the menu button needs the runtime); every route remains reachable through the
-institutional band's link groups.
+At D7 the temporary items are exactly the three exceptions of the D7 table (the provider matrix, the export control,
+the social images as frames) and the runtime defect of the Compare table; everything else on the D7 and D6 tables is
+intended, and the D6 "Temporary vs intended" row lists what became intended at D6. At D0 nothing was implemented; at D2
+the "Temporary vs intended" row of the D2 table was the live statement (the D1 row standing where not superseded).
+Nothing in `dist/`, `site-src/styles.css` or `site-src/app.js` is a Design decision. Without JavaScript below 900 px
+the primary navigation stays collapsed (the menu button needs the runtime) and the language switch is inert (a link
+first, for Code); every route remains reachable through the institutional band's link groups and the root entry.
 
 ## Owner / release items that remain
 

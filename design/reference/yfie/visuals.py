@@ -713,14 +713,9 @@ def payment_rails(v: dict, cite_label: str, origin: str | None, heading: str = "
 
 # ================================================================================================ D6 drawings
 # The signature matrix, the dated lanes and the multi-response bars, in the same anatomy and technique as D1–D2
-# (design/06_VISUAL_TABLE_SYSTEM.md). Every word is a governed label or a governed data value; a heading the Master
-# does not govern yet is rendered as a visibly marked development placeholder (⟦NCC:<request key>⟧, brief §10) and
-# listed in ESCALATIONS.md — the accepted site contains none.
-
-
-def ncc(key: str, text: str = "") -> str:
-    """A governed label where it exists; otherwise the brief §10 development placeholder for the requested key."""
-    return esc(text) if text else f'<span class="ncc" lang="en" dir="ltr">⟦NCC:{esc(key)}⟧</span>'
+# (design/06_VISUAL_TABLE_SYSTEM.md). Every word is a governed label or a governed data value. A drawing whose labels
+# the Master does not govern yet is not shipped (D7, DL-D7-001): it renders as the contract's text frame until every
+# label it needs exists, and no placeholder ever reaches a document — `check_visuals.py` asserts that none does.
 
 
 LATIN = __import__("re").compile(r"[A-Za-z]")
@@ -748,6 +743,19 @@ def source_link(r: dict, L: dict) -> str:
 MATRIX_HEADINGS = ("UI-VIS-MATRIX-AUTHORITY", "UI-VIS-MATRIX-UNIVERSE", "UI-VIS-MATRIX-STATUS", "UI-VIS-MATRIX-NEGATIVE", "UI-VIS-MATRIX-OPERATION")
 CLASS_ORDER = ("PUC-BANK-2026-01", "PUC-EXCH-2026-01", "PUC-WALLET-2025-01", "PUC-MFI-2026-01")   # the contract's row order
 STATUS_CLASS = {"PUC-EXCH-2026-01": ("EXCHANGE", "REMITTANCE"), "PUC-WALLET-2025-01": ("E_WALLET",)}   # which status rows belong to which class (event class prefix)
+MATRIX_LABEL_KEYS = MATRIX_HEADINGS + ("UI-VIS-CAT-PRV-CLASS-PSO",)   # the six labels the matrix needs (ESCALATIONS.md, D6): five dimension headings and the fifth row's class label
+
+
+def matrix_labels_governed(ui_ids) -> bool:
+    """Whether the interface copy governs all six labels the matrix needs (`ui_ids`: the set of governed `ui_id` values)."""
+    return all(k in ui_ids for k in MATRIX_LABEL_KEYS)
+
+
+def matrix_governed(v: dict) -> bool:
+    """The matrix draws only when its six labels are governed (D7): the content path binds them from the interface copy
+    (`matrix_headings`, `labels.class_pso`) and leaves each empty until the Master holds it."""
+    heads = v.get("matrix_headings") or {}
+    return all(heads.get(k) for k in MATRIX_HEADINGS) and bool((v.get("labels") or {}).get("class_pso"))
 
 
 def provider_matrix(v: dict, cite_label: str, origin: str | None, heading: str = "h2") -> str:
@@ -759,7 +767,12 @@ def provider_matrix(v: dict, cite_label: str, origin: str | None, heading: str =
     headings and the fifth row's class label are not governed yet (escalated): they render as placeholders, each cell
     keeps its own governed label as well, and the payment-system-operators row — the contract's known gap — is always
     drawn, UNKNOWN in every dimension with the three institution events as context. Narrow form: one card per class,
-    the dimensions stacked. Fallback: one two-column table per class, dimension by dimension (the same words)."""
+    the dimensions stacked. Fallback: one two-column table per class, dimension by dimension (the same words).
+    Until the five column headings and the fifth row's class label are governed (ESCALATIONS.md, D6), the matrix is
+    unshipped: the contract renders as its text frame — the governed alt text, scope and detached frame — with no
+    placeholder (D7, DL-D7-001); the day the six labels are governed, this form draws unchanged."""
+    if not matrix_governed(v):
+        return text_frame(v, cite_label, origin, heading)
     L = v["labels"]; O = v["objects"]; sub = sub_heading(heading)
     universe = {r["id"]: r for r in O.get("universe") or []}
     roster = O.get("roster_counts") or []
@@ -768,11 +781,11 @@ def provider_matrix(v: dict, cite_label: str, origin: str | None, heading: str =
     wallets = O.get("wallet_counts") or []
     heads = v.get("matrix_headings") or {}
     unknown = f'<p class="unk">{esc(L["unknown"])}</p>'
-    pso_label = L.get("class_pso") or ""
+    pso_label = esc(L["class_pso"])
     ctx = v.get("_context_events") or []
 
     def dim(n: int) -> str:
-        return ncc(MATRIX_HEADINGS[n], heads.get(MATRIX_HEADINGS[n], ""))
+        return esc(heads[MATRIX_HEADINGS[n]])
 
     def cell(n: int, inner: str, label: str = "") -> str:
         lab = f'<p class="cl">{esc(label)}</p>' if label else ""
@@ -840,14 +853,14 @@ def provider_matrix(v: dict, cite_label: str, origin: str | None, heading: str =
         rows.append(f'<li class="prow" data-provider-class="{esc(pid)}"><{sub} class="cls">{esc(u["class_text"])}</{sub}><div class="cells">{c1}{c2}{c3}{c4}{c5}</div>'
                     f'<p class="lim"><b>{esc(L["does_not_establish"])}</b> {iso_run(u["limit_text"])}</p></li>')
     # the fifth row: payment-system operators — the contract's known gap, drawn as UNKNOWN in every dimension with the
-    # institution events as context (never as a named universe); its class label is a placeholder until governed
+    # institution events as context (never as a named universe), under its governed class label
     ctx_html = ""
     for e in ctx:
         ctx_label = f'<span dir="auto">{esc(e["label_text"])}</span>'
         ctx_link = f'\u00a0<a class="source-locator" href="{esc(e["source"])}" rel="noopener noreferrer" target="_blank" aria-label="{esc(L["source"])} {esc(e["label_text"])}">↗</a>' if str(e.get("source", "")).startswith("http") else ""
         ctx_html += f'<li>{bdi(e.get("date"))}{joined(["", ctx_label])}{ctx_link}</li>'
     ctx_cell = f'<ul class="evl ctx">{ctx_html}</ul>' if ctx else unknown
-    rows.append(f'<li class="prow pso" data-provider-class="PSO"><{sub} class="cls">{ncc("UI-VIS-CAT-PRV-CLASS-PSO", pso_label)}</{sub}><div class="cells">{cell(0, unknown)}{cell(1, unknown)}'
+    rows.append(f'<li class="prow pso" data-provider-class="PSO"><{sub} class="cls">{pso_label}</{sub}><div class="cells">{cell(0, unknown)}{cell(1, unknown)}'
                 f'{cell(2, ctx_cell)}{cell(3, unknown)}{cell(4, unknown)}</div></li>')
     authorities = list(dict.fromkeys(e["authority_text"] for e in status + negative if e.get("authority_text")))
     scope_note = "".join(f'<p class="cap note issuer"><span dir="auto">{esc(a)}</span>: {esc(L["issuer_scope"])}</p>' for a in authorities)
@@ -873,7 +886,7 @@ def provider_matrix(v: dict, cite_label: str, origin: str | None, heading: str =
                  [dim(2), esc(u["events_text"]) + (f': {ev_txt}' if ev_txt else "")], [dim(3), neg_txt], [dim(4), unk]]
         tables.append(table(caption_of(v, esc(u["class_text"])), ["", esc(L["what_it_shows"])], trows))
     ctx_txt = sep(v).join(f'{bdi(e.get("date"))} <span dir="auto">{esc(e["label_text"])}</span>' for e in ctx) or unk
-    tables.append(table(caption_of(v, ncc("UI-VIS-CAT-PRV-CLASS-PSO", pso_label)), ["", esc(L["what_it_shows"])],
+    tables.append(table(caption_of(v, pso_label), ["", esc(L["what_it_shows"])],
                         [[dim(0), unk], [dim(1), unk], [dim(2), ctx_txt], [dim(3), unk], [dim(4), unk]]))
     return frame_open(v, heading) + panel + frame_close(v, cite_label, origin, "".join(tables), heading=heading)
 
@@ -997,3 +1010,11 @@ DRAWERS = {"VIS-FINDEX-GAPS": findex_gaps, "VIS-REMITTANCE-MACRO": remittance_ma
            "VIS-POS-VALUE": pos_panel, "VIS-REMITTANCE-COST": remittance_cost, "VIS-PAYMENT-ANATOMY": payment_anatomy, "RV-CWR-009": rv009_figure,
            "VIS-PAYMENT-RAILS": payment_rails,
            "VIS-PROVIDER-OBSERVABILITY": provider_matrix, "RV-CWR-004": dated_lanes, "VIS-FIRM-CONSTRAINTS": firm_constraints}   # D6
+
+
+def draws(v: dict) -> bool:
+    """Whether this bound contract renders as a drawing on this build: the D1 figure and every drawer, except a drawer
+    whose labels are not governed yet and so renders as a text frame (today only the provider matrix, D7)."""
+    if v["id"] == "VIS-PROVIDER-OBSERVABILITY":
+        return matrix_governed(v)
+    return v["id"] in FIGURES or v["id"] in DRAWERS

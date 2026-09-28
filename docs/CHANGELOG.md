@@ -1,5 +1,35 @@
 # Repository Change Log
 
+## 2026-09-28 — Design D7 technical checkpoint on `claude/dreamy-archimedes-e8qx5v`: every check green, the technical criteria evidenced; final visual acceptance withheld by the owner
+
+Branch `claude/dreamy-archimedes-e8qx5v` (from the accepted `main` `0ccdf01`, the merge of pull request #6). D7 is the
+acceptance of the runnable, fully populated bilingual reference site (`design/reference/`: 288 documents, every tool and
+state, both languages, four widths) against `handoff/DESIGN_ACCEPTANCE_CRITERIA.md`. At this checkpoint every D1–D6
+check, the three repository suites and the new D7 check pass on the tree, and the technical criteria are evidenced line
+by line in `design/10_ACCEPTANCE_CHECKLIST.md` (new); the owner has withheld the final visual acceptance, so D7 is not
+declared met, the Design package is not declared accepted, `design/COVERAGE.csv` keeps its rows at `VERIFIED`, and the
+README is not reconciled. The D7 check `design/reference/check_acceptance.py` (new) asserts what no earlier check did —
+strict CSP on every document and frame, the discovery head byte-equal with `dist/` on every edition page, one `h1`, the
+skip link, the language switch, the trust layer, no download or bundled document, the nine no-locator sources never
+named, the CLM-044 value never printed, every external locator with its cue, the shipped fonts and licences (14,248
+static assertions) — and drives the last-ten-percent surfaces of the brief in EN and AR with evidence (59 assertions;
+`design/evidence/d7/`). Fixed at the checkpoint: the provider matrix (VIS-PROVIDER-OBSERVABILITY) is unshipped until its
+six labels are governed and renders as its contract's text frame, so no `⟦NCC:…⟧` placeholder ships and the device is
+removed (DL-D7-001); the structured data the baseline writes (WebSite, BreadcrumbList, Article) is restored in the
+reference head through the one discovery implementation (DL-D7-002); the two critical faces of each page's language
+are preloaded (DL-D7-005). An attempt to render Explore's governed section 5 once dropped its governed heading and was
+reverted (DL-D7-003; DEBT-019).
+DEBT-017 closed by measurement (DL-D7-004); DEBT-002 and DEBT-013 closed. Two independent cold readers (EN, AR) read
+the checkpoint tree: their reports are in `design/evidence/d7/cold_read/`, every finding is adjudicated in the checklist
+§K.4; two verified design findings stay open and block the acceptance until the resumption (DEBT-018, a governed signed
+value in Arabic prose outside the text layer's isolate; DEBT-019, Explore's repeated section 5 and its rubric ordinals
+against its index), and the
+content findings are escalated to the steward (`design/ESCALATIONS.md`, D7 — among them the `/people/` education
+sentence against the FINDEX contract). Records: `design/05_RESPONSIVE_RTL_LTR.md` (new), `design/09_CODE_HANDOFF.md`
+(the D7 table), `design/DESIGN_DEBT.md`, `design/ESCALATIONS.md`, `design/03`/`04`/`06`/`08` for the waiting matrix,
+`design/00_DESIGN_README.md` (status, plan, DL-D7-001…005). No governed content, projection, contract, `dist/` file,
+test suite or audit record changed. Not declared: D7 met, DESIGN accepted, PUBLIC RELEASE READY.
+
 ## 2026-09-28 — Design D6 accepted by the merge of pull request #5; present-state records reconciled; D7 next
 
 Pull request #5 (`claude/bold-maxwell-r3o015`, head `125aa44`, D6 proved on that exact tree) was merged into `main` at

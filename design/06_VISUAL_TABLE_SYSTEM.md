@@ -26,7 +26,7 @@ same figure appears on the public routes the Page Specs bind.
 |---|---|---|---|
 | RV-CWR-001 | SIGNATURE | rows on a zero-based axis + two indexed lanes with the not-comparable divider (D1) | the Reading *Same year, different number* |
 | RV-CWR-009 | SIGNATURE | the chain (seven steps, dated events with locators, the POS activity, the first open step in the boundary voice) | the Reading *From rail to result* |
-| VIS-PROVIDER-OBSERVABILITY | SIGNATURE | **the provider matrix** (D6) | its record · `/providers/` |
+| VIS-PROVIDER-OBSERVABILITY | SIGNATURE | **the provider matrix** (D6; waits at D7 — built, unshipped until its six labels are governed, DL-D7-001: the contract renders as its text frame, §5) | its record · `/providers/` |
 | VIS-FINDEX-GAPS | CORE | bars from zero with bracket gaps (D2) | its record · `/people/` |
 | VIS-REMITTANCE-MACRO | CORE | state-keyed time series with the vintage break (D2) | its record · `/remittances/` |
 | VIS-POS-TERMINALS / -TRANSACTIONS / -VALUE | CORE | the small multiple: three panels, three value axes (D2) | their records · `/payments/` (depth) |
@@ -76,7 +76,7 @@ colour alone (no red, amber or green anywhere; forced colours asserted). Every S
 | Dot rows | VIS-REMITTANCE-COST | corridor lanes; one row per governed send amount; filled marks keyed by amount | rows stack | a line between corridors |
 | Object list | VIS-PAYMENT-ANATOMY | one object per governed measurement object: its label as governed (never case-transformed), value or the WITHHELD label, the governed period and state on every card, its governed "is not" line, marker labels | stacked | a total, a share, a combined score |
 | The chain | RV-CWR-009 (full), VIS-PAYMENT-RAILS (no values) | seven governed steps top to bottom; evidenced steps list their dated events with a locator; the first open step set in the boundary voice; RV-CWR-009 adds the governed POS activity rows | native vertical list | an arrow of flow; a completion reading |
-| **The provider matrix** (D6) | VIS-PROVIDER-OBSERVABILITY | one row per provider class — banks; exchange and remittance providers; e-wallets; non-bank microfinance; and payment-system operators, the contract's known gap, always drawn as UNKNOWN in every dimension with the three institution events as context (its class label a placeholder until governed) — five self-labelled cells in the contract's order — issuing authority or source, dated universe or count, dated status decisions grouped by state with their dates as source-record links (each named by the date it shows, then the record), negative authority, evidence of operation — each cell governed words and dates, never a dot or a bar; the governed time boundaries as the Master holds them ("observed 2026-09-07"), isolated and marked English; a dimension without a governed row prints `UI-VIS-STATE-UNKNOWN` ("Unknown — not zero"); the roster count by category (never a total of providers), the wallet counts listed by date and wording (never one number), the `>9` participant count as governed; each class ends with its governed limit line in the boundary voice; the issuer-scope note (`UI-VIS-ISSUER-SCOPE`) closes the panel | one or two cells per row by container width (≥ 480 px) | a share, a market size, a confidence score; a list read as operation; a class hidden because its label is pending |
+| **The provider matrix** (D6; waits at D7 — built, unshipped until its six labels are governed, DL-D7-001) | VIS-PROVIDER-OBSERVABILITY | one row per provider class — banks; exchange and remittance providers; e-wallets; non-bank microfinance; and payment-system operators, the contract's known gap, always drawn as UNKNOWN in every dimension with the three institution events as context (its class label a placeholder until governed) — five self-labelled cells in the contract's order — issuing authority or source, dated universe or count, dated status decisions grouped by state with their dates as source-record links (each named by the date it shows, then the record), negative authority, evidence of operation — each cell governed words and dates, never a dot or a bar; the governed time boundaries as the Master holds them ("observed 2026-09-07"), isolated and marked English; a dimension without a governed row prints `UI-VIS-STATE-UNKNOWN` ("Unknown — not zero"); the roster count by category (never a total of providers), the wallet counts listed by date and wording (never one number), the `>9` participant count as governed; each class ends with its governed limit line in the boundary voice; the issuer-scope note (`UI-VIS-ISSUER-SCOPE`) closes the panel | one or two cells per row by container width (≥ 480 px) | a share, a market size, a confidence score; a list read as operation; a class hidden because its label is pending |
 | **The dated lanes** (D6) | RV-CWR-004 | three lanes on one left-to-right time axis, padded at both ends so no mark sits on an edge: the people lane as the governed fieldwork span (the ISO dates inside CLM-001's governed period, the whole period printed beneath) with the account-ownership value and its survey state; the infrastructure lane as monthly dated presence with the first and latest governed values labelled (outside the span when it is short); the institutions lane as dated event marks keyed to the list beneath (events closer than 4 % of the axis share one bracketed key), each event with its locator; the outcome as an open node in the chain vocabulary, its state beside the heading; the governed not-comparable label between lanes; no lane has a value axis | under 600 px the strips are hidden and the lanes are their dated lists — the contract's "dated vertical list" | reading the sequence as cause; a value axis; joining the survey point to the infrastructure line |
 | **Bars without ranks** (D6) | VIS-FIRM-CONSTRAINTS | horizontal bars from zero in the contract's descending order, the value at the bar's end, no ordinal, the survey state on the panel; the record's governed measurement limitation (multiple responses; the base not held) as the frame's note | label above its track | a rank number; a sum of the bars |
 | Text frame | every SUPPORTING and TABLE_TEXT_FIRST contract without a drawing | the governed description as the body; the scope line; one boundary in the foot | — | a diagram with authored labels |
@@ -113,7 +113,7 @@ The table pattern (D6, `visuals.table`, closes DEBT-010 and narrows DEBT-013):
 - **The matrix**: one two-column table per class (the five dimension headings as row headers, the class in the
   caption, the fifth class under its placeholder), the same words as the cells; no table is declared wide.
 - **Width**: two or three columns fit 256 px (the column at 320 px) in both languages — every fallback table of the
-  thirteen drawn contracts fits without scrolling, so no region is a tab stop (`tabindex` only when a table is declared
+  drawn contracts (thirteen at D6; twelve draw at D7 while the matrix waits) fits without scrolling, so no region is a tab stop (`tabindex` only when a table is declared
   wide, and none is). `check_visuals.py` fails a table that scrolls without the declaration.
 - **Print**: `thead` repeats on every page, rows never break inside.
 
@@ -165,7 +165,8 @@ One stylesheet, `@media print` (`theme.CSS` D1 rules, `CSS_D2`, and the D6 print
 
 ## 8. Export frames and the export control
 
-`frames.export_document` writes `out/_export/<visual>__<lang>.html` for the thirteen drawn contracts in both languages:
+`frames.export_document` writes `out/_export/<visual>__<lang>.html` for every contract that draws, in both languages
+(thirteen at D6; twelve at D7 — a drawer whose labels wait has no export frame until it draws, `visuals.draws`):
 one box under a heavy rule — the identity line (mark 32 px · product · edition) inside it, the figure with its complete
 detached frame at 800 px on the paper surface, a closing rule under the foot (a trim above the boundary shows a cut);
 no cite control, no text alternative (the canonical link leads to it), no script, no inline style.
@@ -194,11 +195,11 @@ Five phases, exit 1 on any failure, record in `out/_review_visuals.json`; run on
   (title, question, scope, the boundary once, the credit isolated, the canonical link, the edition); the text
   alternative with the governed alt text; for a drawn contract the table with a caption, scoped headers, every data
   column named, in a named region; no inline style; every SVG left-to-right; only the palette's colours; the
-  placeholders exactly the escalated set; no two text labels of a drawing meeting (`labels_clear`, by ink boxes); at
+  no development placeholder anywhere on the site (D7; at D6 exactly the escalated set, inside the matrix only); no two text labels of a drawing meeting (`labels_clear`, by ink boxes); at
   320 and 390 px (and 600 px for a drawn contract) the figure inside its column on both edges, no page-wide scroll,
   no scrolling plot, no table scrolling unless declared wide. The Compare page is asserted as the tool.
 - **degraded** — forced colours (every mark and label takes the system colour) and print (the frame foot stays, the
-  cite control goes, the provenance block appears) on the thirteen drawn contracts × EN/AR.
+  cite control goes, the provenance block appears) on the drawn contracts × EN/AR (thirteen at D6, twelve at D7).
 - **frames** — every export frame (26) and every social frame (286).
 - **print** — one route per family × EN/AR printed to PDF: chrome hidden, the provenance block with canonical URL,
   citation and edition, every figure whole with its boundary, the title on the first page.
@@ -213,6 +214,12 @@ family routes × EN/AR; 598 documents and frames scanned for loose runs; 0 failu
 Evidence: `design/evidence/d6/` — figure crops of the thirteen drawn contracts at 1440 px in both languages, the D6
 forms at 390 px, export frames of the signature figure and the three D6 forms, the social cards of the eleven family
 routes, and the first print pages of every family route in both languages.
+
+Results on the D7 checkpoint tree (the same five phases; the matrix waiting as a text frame, DL-D7-001): 36 contracts ×
+EN/AR on every binding route, 2,812 contract assertions (a waiting contract is asserted as a text frame with no chart
+and no value, and no placeholder anywhere on the site); 48 forced-colours and print checks on the twelve drawn
+contracts; 24 export frames; 286 social frames; 133 print checks on the eleven family routes × EN/AR; 596 documents
+and frames scanned for loose runs; 0 failures (`10_ACCEPTANCE_CHECKLIST.md` F, F2; `COVERAGE.csv`, the D7 evidence).
 
 ## 11. Red-team record (D6)
 

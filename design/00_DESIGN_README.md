@@ -1,15 +1,35 @@
 # Design package — Yemen Financial Inclusion Evidence · أدلة الشمول المالي في اليمن
 
-Status: **D6 accepted — the visual system, the portable frames and the print system proved on the final tree in both
-languages and landed on `main` at `f4739a5e98a7fe8fddc3675af4eb09a2119c6433` (the merge of pull request #5 from
+Status: **D7 TECHNICAL CHECKPOINT COMPLETE — FINAL VISUAL ACCEPTANCE WITHHELD** (28 September 2026; branch
+`claude/dreamy-archimedes-e8qx5v`, from the accepted `main` `0ccdf01`). The runnable, fully populated bilingual reference
+site (`design/reference/`: 288 documents, every tool and state, both languages, four widths, no placeholder) passes
+every D1–D6 check, the three repository suites and the new D7 check on this tree — `design/reference/check_acceptance.py`:
+14,248 static assertions on 288 documents and 310 frames (strict CSP, the discovery head byte-equal with the baseline,
+one `h1`, the skip link, the language switch, the trust layer, no download or bundled document, the nine no-locator
+sources never named, CLM-044 never valued, every external locator with its cue, the shipped fonts) and 59 browser
+assertions on the last-ten-percent surfaces in EN and AR — and the technical criteria of
+`handoff/DESIGN_ACCEPTANCE_CRITERIA.md` are evidenced line by line in `10_ACCEPTANCE_CHECKLIST.md` (`evidence/d7/`).
+**The owner has withheld the final visual acceptance:** D7 is not declared met, the Design package is not declared
+accepted, the coverage ledger keeps its rows at `VERIFIED` (`ACCEPTED` is written only at acceptance), and the README
+is not reconciled. Open at the checkpoint, to be settled at the resumption: the owner's visual review of the built
+product; two verified design findings from the D7 cold readers — DEBT-018 (a governed signed value in Arabic prose,
+"+11%", renders with its sign and percent mis-ordered because the text layer isolates dates and ranges only) and
+DEBT-019 (Explore renders its governed section 5 twice, the second time without the questions it introduces, and its
+rubric ordinals disagree with the index numbering; a first fix at the checkpoint dropped the section's governed
+heading and was reverted) — and the content findings escalated to the steward (`ESCALATIONS.md`, D7; among them the
+`/people/` education sentence against the FINDEX contract). Fixed at this checkpoint: the provider matrix unshipped
+until its six labels are governed, so no placeholder ships (DL-D7-001); the structured data the baseline writes
+restored and asserted byte-equal (DL-D7-002); the two critical faces preloaded (DL-D7-005). DEBT-002, DEBT-013 and DEBT-017
+closed; `09_CODE_HANDOFF.md` carries the D7 table; `05_RESPONSIVE_RTL_LTR.md` written. Not PUBLIC RELEASE READY.**
+D6 was accepted — the visual system, the portable frames and the print system
+proved on the final tree in both languages — and landed on `main` at `f4739a5e98a7fe8fddc3675af4eb09a2119c6433` (the merge of pull request #5 from
 `claude/bold-maxwell-r3o015`, whose head `125aa44` carried the gate; Verify green on the merge, run 38). On that tree
 every one of the 36 visual contracts stands in its tier's form on every route that binds it
 (`design/reference/check_visuals.py`: 36 contracts × EN/AR, 2,856 contract assertions; 52 forced-colours and print
 checks on the thirteen drawn contracts; 26 export frames; 286 social frames; 133 print checks on the eleven family
 routes × EN/AR; 598 documents and frames scanned for a date or range outside an isolate; 0 failures), and every D1–D5
 check passes on the same tree. D2 was met at `9c263ac`, D3 at `beecdbb`, D4 at `aee1e1b` and D5 at `8be8e22`, accepted
-together at `2effd8be9a481fed2881da61e8111bf16cceb814` (the merge of pull request #4). D7 — acceptance against
-`handoff/DESIGN_ACCEPTANCE_CRITERIA.md` — is the next gate and has not begun (process note in `ESCALATIONS.md`).** D1
+together at `2effd8be9a481fed2881da61e8111bf16cceb814` (the merge of pull request #4). D7 followed on `claude/dreamy-archimedes-e8qx5v`, from that `main` (process note in `ESCALATIONS.md`). D1
 was accepted by the owner's merge (`main` at `851f496078776356b38892c946d40d154c819067`, pull request #3). D2–D5 were
 developed on `claude/epic-cori-60fpeb` (created from that exact `main`) and landed through one draft pull request
 (https://github.com/CausewayGrp/Financial-inclusion-/pull/4). At that merge every one of the 288 documents renders from
@@ -186,7 +206,7 @@ to isolate in RTL and URLs); 15 routes whose Page Spec sections are split by lan
 | D4 | `claude/epic-cori-60fpeb` (continued; process note in `ESCALATIONS.md`) | all 288 documents via family rules | three suites pass on `design/reference/out/`; all rows ≥ `BUILT` — **accepted at `2effd8b`, the merge of pull request #4**: every route row `VERIFIED` (`check_site.py --gate d4`, `check_binding.py`) |
 | D5 | `claude/epic-cori-60fpeb` (continued; process note in `ESCALATIONS.md`) | every tool state and journey, keyboard, zoom, reduced motion, forced colours | `07_INTERACTION_ACCESSIBILITY.md` — **accepted at `2effd8b`, the merge of pull request #4** (`check_journeys.py`; D5 rows `VERIFIED`, the two unbound verification states `DESIGNED`) |
 | D6 | `claude/bold-maxwell-r3o015` (planned `design/d6-visuals-social-print`; created at the accepted `main` `2effd8b`; process note in `ESCALATIONS.md`) | visuals per contract, frames, social templates, print | contract-by-contract evidence — **accepted** at `f4739a5`, the merge of pull request #5 (`check_visuals.py`: every contract, every export and social frame, every family route printed; `06_VISUAL_TABLE_SYSTEM.md`, `08_ASSET_MAP.md`, `evidence/d6/`; D6 rows `VERIFIED`) |
-| D7 | `design/d7-acceptance` | last-10-percent audit, final handoff | checklist complete; Code recipient test |
+| D7 | `claude/dreamy-archimedes-e8qx5v` (planned `design/d7-acceptance`; created at the accepted `main` `0ccdf01`; process note in `ESCALATIONS.md`) | last-10-percent audit, final handoff | checklist complete; Code recipient test — **technical checkpoint complete, final visual acceptance withheld by the owner (28 Sep 2026)**: every check green on the checkpoint tree (`10_ACCEPTANCE_CHECKLIST.md` §L; `check_acceptance.py`; `evidence/d7/`; DL-D7-001…005); open for the resumption: the owner's visual review, DEBT-018, DEBT-019, the D7 escalations; the ledger stays `VERIFIED` |
 
 **D1 theses to be tested** (named only — not designed; each must answer type, grid, density, evidence-state grammar and
 Arabic composition differently, not as colour variants):
@@ -924,3 +944,133 @@ not public release (REL-01…04 remain).
 - The D4 gate on the corrected tree (904 renders) found one regression D6 had introduced — the unbreakable identifier
   isolate (DL-D6-004) — and passes after the fix; the D2 and D3 gates, the journeys, the trio and the repository suites
   pass unchanged (DL-D6-006, the verification numbers).
+
+### DL-D7-001 · D7 · 2026-09-28 · The provider matrix waits: no placeholder ships
+- Problem: the accepted site may carry no `⟦NCC:…⟧` placeholder and no invented wording (acceptance A; the
+  Design→Code contract §4, "no placeholder ships"). The matrix needs six labels the Master does not govern — the five
+  dimension headings and the fifth row's class label (`ESCALATIONS.md`, D6) — and at D7 the interface copy holds none
+  of the six ids.
+- Evidence: the six placeholders on `/providers/` and `/evidence/VIS-PROVIDER-OBSERVABILITY/` in both editions
+  (`evidence/d6/figure-VIS-PROVIDER-OBSERVABILITY-*.png`); `check_visuals.py` on the D6 tree listed exactly that set.
+- Alternatives: (1) draw the matrix without dimension headings — three of its five cells (authority or source,
+  negative authority, evidence of operation) would then carry an unlabelled "Unknown — not zero", so a reader could
+  not tell *what* is unknown; (2) borrow the chain's governed OPERATION step label and author the other four — authored
+  copy; (3) draw four classes and hide the fifth until its label exists — the missing≠zero failure the matrix exists to
+  prevent (rejected at D6); (4) unship the drawn form until the six labels exist and render the contract as its text
+  frame, like the twenty-two text-first contracts.
+- Choice: (4). `provider_matrix` returns the text frame unless `matrix_governed(v)` (all five headings and the class
+  label bound from the interface copy); `build.py` writes no export frame for a contract that does not draw
+  (`visuals.draws`); `check_visuals.py` asserts the waiting form (a text frame, no chart, no value) and that no
+  placeholder exists anywhere on the site; `check_acceptance.py` repeats the placeholder rule on every document and
+  frame; the `ncc` device and its style are removed. The day the six ids are governed and the projections regenerated,
+  the matrix draws unchanged — with its export frame — without a code change, and the same check asserts the drawn form.
+- Arabic, responsive, accessibility: the text frame is the same object as every other text frame
+  (`06_VISUAL_TABLE_SYSTEM.md` §5): the governed alt text as the body, the scope line, one boundary in the foot, the
+  credit isolated left-to-right, the canonical link, the edition; it fits 320, 390 and 600 px on both edges in both
+  languages; there is no table, so nothing is unheaded (DEBT-013 closes).
+- Code: implement the matrix as `06_VISUAL_TABLE_SYSTEM.md` §3 and `03_COMPONENT_CATALOG.md` §2 specify and gate it on
+  the six labels exactly as the reference does; never fill one.
+- Compromise: `/providers/` carries its SIGNATURE contract as governed text until the steward governs six labels
+  (`ESCALATIONS.md`, D6, annotated at D7). No new debt.
+
+### DL-D7-002 · D7 · 2026-09-28 · The discovery head byte-equal with the baseline: structured data restored
+- Problem: acceptance I keeps the head elements "as today" — title, description, canonical, hreflang, Open Graph
+  without image, JSON-LD. The reference head carried everything but the JSON-LD the baseline writes (WebSite on Home,
+  BreadcrumbList on records and Readings, Article on Readings).
+- Evidence: 0 `application/ld+json` blocks in the reference against 1–2 in `dist/` for the same routes, found by the
+  head-parity assertion while writing `check_acceptance.py`.
+- Choice: `render.structured_data` builds the same objects from the same content path (the page's governed breadcrumb
+  and title, the Reading's thesis) through the one implementation (`scripts/discovery.py`, F6). `check_acceptance.py`
+  asserts, for every one of the 286 edition pages, that title, description, canonical, hreflang, Open Graph, twitter
+  card, citation meta and JSON-LD are byte-equal with the baseline page for the same route (nine parts × 286 pages),
+  and that no `og:image` exists.
+- Code: keep the head through the discovery module; the parity assertion is the regression test until the production
+  runtime replaces the baseline (EAD-01), when it becomes the head's own test.
+
+### DL-D7-003 · D7 · 2026-09-28 · The last-ten-percent audit, the D7 check and the review tests
+- Problem: D7 requires the last-ten-percent list of the brief (§20) walked with evidence, the four review tests (§7)
+  recorded, and every criterion evidenced — not a repetition of the gate checks and not a claim without a test.
+- Method: what an earlier gate's check already asserts is cited on the checkpoint tree, not re-driven by hand (the D2–D4
+  hard states, the D5 journeys and technical states, the D6 contracts, frames and print). What no check asserted is
+  asserted by `design/reference/check_acceptance.py` — static, on every document and frame: strict CSP, head parity,
+  one `h1`, `lang` and `dir`, the skip link first, the language switch, the trust layer in every footer, no download or
+  bundled document, the nine no-locator sources never named, CLM-044 never valued, every external locator external
+  with its cue, the shipped fonts and licences; in the browser, EN and AR: the skip link on the first Tab, search with
+  no match and Escape, the language switch, Compare at 320 px, Contact and Corrections with a record, every trust
+  route, the longest titles at 320 px, motion under both preferences, the review-test surfaces, the neutral 404 —
+  with a PNG of each (`evidence/d7/`). Two independent cold readers (a researcher–regulator–journalist lens in English
+  and in Arabic) then read the checkpoint tree; their reports are in `evidence/d7/cold_read/` and their findings are
+  adjudicated in `10_ACCEPTANCE_CHECKLIST.md` K.
+- Found and fixed: the missing structured data (DL-D7-002); the critical faces not preloaded (DL-D7-005); two of the
+  check's own first assertions (the search dialog's results container, the word "download" in governed prose).
+- Found, attempted and reverted: on `/explore/` the governed section 5 ("Questions to start from"), whose body is the
+  introduction of the question clusters at the top of the page (`04_PAGE_FAMILY_COMPOSITIONS.md`, Question Entry, D2),
+  is rendered a second time after the boundaries as an answer with no questions under it — both cold readers read it
+  as unfinished. Rendering it once, as the D2 rule reads, dropped its governed heading from the page and
+  `check_content.py` parity failed (1 differing document), so the change is reverted at the checkpoint: where the
+  governed heading lives is a composition decision for the resumption (DEBT-019, with the rubric–index numbering).
+- Judged and left: the language switch is a runtime button (the baseline runtime keeps the query and the preference;
+  without script it is inert and the root entry serves) — a link-first switch is recorded for Code
+  (`09_CODE_HANDOFF.md`, D7 table); the Compare table's Arabic dates (the D6 runtime defect, Code's with its patch);
+  DEBT-017 (DL-D7-004).
+- The four review tests, on Home, `/evidence/CLM-003/`, `/readings/same-year-different-number/`, `/people/`, Compare
+  with a comparison and the RV-CWR-001 export frame, EN and AR, at 1440 and 390 px (`evidence/d7/review-*`):
+  anti-template — the page object, the seven governed questions, the boundary voice and the detached frame are the
+  identity; without the Yemen content nothing sells as a generic site (no cards, no hero, no metric tiles, no
+  imagery); source owner — every figure and record object carries unit, population, period, evidence state and the
+  boundary in its own frame; screenshot misuse — a crop of any figure keeps its scope line, boundary and canonical
+  link (the same-year marker sits between the two rows it qualifies); portable evidence — the export frame carries
+  the identity line, the frame and the canonical link, and the print page ends with the provenance block. No revision
+  followed from the tests at D7; the results are recorded per surface in `10_ACCEPTANCE_CHECKLIST.md` K.
+- The cold readers (after the audit, on the checkpoint tree): the English reader returned nine findings, the Arabic
+  reader twelve; each is adjudicated in `10_ACCEPTANCE_CHECKLIST.md` §K.4. Verified and left open for the resumption,
+  blocking the acceptance: the Explore composition (above; DEBT-019); DEBT-018 — a
+  governed signed value in Arabic prose ("+11%" on `/payments/` and CLM-003, eight occurrences) renders "%11+" because
+  the text layer isolates ISO dates and numeric ranges only (the reader's range and date splits are the runtime's
+  Compare cells, the D6 defect); and, within DEBT-019, the Explore rubric ordinals (01 for section 2) against the
+  index (02), because the questions' answer is indexed first. Escalated as content or runtime
+  (`ESCALATIONS.md`, D7): the `/people/` education sentence against the FINDEX contract; the search status without a
+  total; the Compare comparable-set sentence and the worked example's placement; the notation of one value in two
+  magnitudes (prose in billions, table in millions with a decimal point); the three forms of the Findex fieldwork
+  window; the withheld POS-transactions release beside the monthly series; the Arabic Compare copy's number
+  agreement; Arabic terminology drift; the POS legend's "both figures shown" against one plotted value; the
+  per-source "reuse terms: not assessed" line and the unexplained P0 on Explore. Considered and not changed, with the
+  reason recorded: the visible text alternative and table under every figure (the Lock's "text alternative visible";
+  print, no-script and assistive-technology parity — a disclosure would hide the fallback); the text-first frames'
+  repetition (the D3 escalation); the canonical URL as the frame's link text (portable evidence by design, D6); the
+  method disclosure's summary styling and the strip's position between the first two answers on a phone (visual
+  review items, DEBT-014); the runtime's page citation and Compare copy (Code items, `09_CODE_HANDOFF.md`).
+- Dark mode: not explored, recorded (acceptance I). The evidence-state grammar and the two surfaces (paper, plaster)
+  are an ink-on-paper system; a dark theme would need the owner's reversed mark (OWN-06, never an inversion) and a
+  second contrast-verified palette for every state; no reader preference signal exists in the product. A Code option
+  after release, never a D7 deliverable.
+
+### DL-D7-004 · D7 · 2026-09-28 · DEBT-017 closed by measurement: a Latin name inside Arabic text wraps like any phrase
+- Problem: the D6 Arabic lens noted that a Latin phrase inside an Arabic title ("Global Findex 2021") may wrap
+  between its words; DEBT-017 deferred the decision to D7's audit.
+- Evidence (the checkpoint tree at 320 px, measured in the browser, not estimated): four distinct multi-word Latin runs
+  occur inside Arabic headings and labels — "Global Findex 2021" (11 places), "Remittance Prices Worldwide" (4),
+  "Global Findex", "Findex 2021". The longest in a display heading, "Global Findex 2021" in the Arabic `h1` at 30 px,
+  measures 271 px in a 288 px column and wraps today; the same run in a figure title at 21 px is 192 px in 256 px;
+  "Remittance Prices Worldwide" at 18 px is 248 px in 288 px.
+- Alternatives: (1) isolate short Latin runs (under 24 characters) unbreakable — 271 of 288 px leaves 17 px, and a
+  twenty-character name at 30 px would overflow the column, the fault the D4 gate caught for unbreakable identifiers
+  (DL-D6-004); a width-aware rule cannot be written in static CSS; (2) isolate without `nowrap` — no change to
+  wrapping, and Latin letters already resolve as one left-to-right run (isolation adds nothing to order); (3) leave
+  the phrase to wrap between its words.
+- Choice: (3). The wrap is correct bidi line-breaking — the reader's eye leaves the line at its end and returns at the
+  next line's start, in logical order — and nothing is misleading. DEBT-017 CLOSED; the measurements are in
+  `05_RESPONSIVE_RTL_LTR.md` §2.
+- Code: no rule. A governed short form of a source name would be content, not design.
+
+### DL-D7-005 · D7 · 2026-09-28 · The two critical faces preloaded
+- Problem: acceptance I asks for fonts "loaded efficiently … only the weights used, the critical faces preloaded, a
+  deliberate `font-display`"; D6 declared three faces per family with `swap` and left the preload to "D7's performance
+  pass" (`08_ASSET_MAP.md` §2).
+- Choice: every page preloads Regular and SemiBold of its own language from the shipped files (`render.font_preloads`,
+  `crossorigin` because fonts are fetched in CORS mode and a preload without it is fetched twice); Medium and the other
+  language's faces load on demand with `swap`. Per-family page weight of the reference build is recorded in
+  `10_ACCEPTANCE_CHECKLIST.md` I with its method; the master logo file (9.6 MB, unaltered by rule) remains the weight
+  (DEBT-016, EAD-03).
+- Code: the same two preloads per page; IBM's pre-split Latin subsets only with provenance (`ESCALATIONS.md`,
+  anticipated).

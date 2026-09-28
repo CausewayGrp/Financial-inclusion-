@@ -41,9 +41,11 @@ Three weights, authored. The Arabic rubric is SemiBold 600 like the English one 
 beside tracked capitals; a heavier face is not declared and would be an owner decision). D1 declared six faces; Light 300 and Italic 400 were never used by any rule, and Bold 700
 reached the page only through the browser's defaults for `b`, `strong` and `th` — a type role the Lock says defaults
 may not decide (`01_FOUNDATIONS.md` §4.1.9). D6 authors emphasis at the semibold role (`b,strong,th{font-weight:600}`)
-and declares only the three faces used; the other files stay in `vendor/fonts/` as shipped. No `<link rel="preload">` is emitted: the two faces a first paint needs
-(Regular and SemiBold of the page language) are a Code decision at D7's performance pass, with the pre-split Latin
-subsets IBM publishes (anticipated escalation, `ESCALATIONS.md`). Type roles and the two scales: `02_TOKENS.json`.
+and declares only the three faces used; the other files stay in `vendor/fonts/` as shipped. D7 (DL-D7-005): every page
+preloads the two faces its first paint needs — Regular and SemiBold of the page's language, from the shipped files,
+`crossorigin` because fonts are fetched in CORS mode (`render.font_preloads`); Medium and the other language's faces
+load on demand with `font-display: swap`. IBM's pre-split Latin subsets stay a Code option (anticipated escalation,
+`ESCALATIONS.md`; vendoring needs provenance). Type roles and the two scales: `02_TOKENS.json`.
 
 ## 3. Icons and glyphs
 
@@ -87,7 +89,8 @@ its boundary; a Reading's card its evidence period and its prohibited inference.
 
 ## 5. Export frames (`frames.export_document`; brief §10)
 
-`out/_export/<visual>__<lang>.html` — one standalone document per drawn contract and language (26): the identity
+`out/_export/<visual>__<lang>.html` — one standalone document per drawn contract and language (26 at D6; 24 at D7,
+while the provider matrix waits for its six labels and renders as a text frame, DL-D7-001 — `visuals.draws`): the identity
 line (mark 32 px · product · edition), then the figure with its complete detached frame (title, question, period ·
 universe, panels, notes and markers, the prohibited inference, the credit isolated left-to-right, the canonical link,
 the edition); the text alternative and the cite control are not part of the export (the frame is the image; the

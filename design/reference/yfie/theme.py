@@ -468,7 +468,6 @@ CSS_D6 = r"""/* ---- D6: visuals, frames, print (same tokens; maintained with CS
 @container (max-width:420px){.rvtab th,.rvtab td{padding:6px 5px}}
 .rvtab caption span[dir=auto]{unicode-bidi:isolate}
 .marker.between-tables{margin:8px 0 0;font-size:var(--fs-clock);font-weight:600;color:var(--counter);border-top:3px double var(--counter);padding-top:6px}
-.ncc{font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:11px;font-weight:600;color:var(--ink);background:var(--paper);border:1px dashed var(--counter);padding:1px 4px;white-space:nowrap;letter-spacing:0;text-transform:none}
 /* the provider matrix */
 .matrix{list-style:none;margin:8px 0 0;padding:0;display:flex;flex-direction:column;gap:0}
 .prow{border-top:3px solid var(--ink);padding:12px 0 14px}
@@ -509,7 +508,7 @@ CSS_D6 = r"""/* ---- D6: visuals, frames, print (same tokens; maintained with CS
 .evs.keyed .source-locator{text-decoration:none;font-weight:600}
 /* the bars' in-frame note */
 .p1.noranks .rl{font-weight:500}
-@media (forced-colors:active){.lane-svg .span,.lane-svg .stem{stroke:CanvasText}.prow,.prow .cell,.prow .lim,.prow .unk,.prow .evl li,.ncc{border-color:CanvasText!important}.prow .n,.prow .cl,.prow .lim,.prow .unk,.lanes-dated .lane.outcome h3{color:CanvasText}}
+@media (forced-colors:active){.lane-svg .span,.lane-svg .stem{stroke:CanvasText}.prow,.prow .cell,.prow .lim,.prow .unk,.prow .evl li{border-color:CanvasText!important}.prow .n,.prow .cl,.prow .lim,.prow .unk,.lanes-dated .lane.outcome h3{color:CanvasText}}
 .fig{container-type:inline-size}
 .rvtab.wide{min-width:1080px}
 .fig .foot .canon-l{display:inline-block;padding:3px 0;min-height:24px}
@@ -536,7 +535,6 @@ svg.ts .lbl.st{font-size:11px;font-weight:600;fill:var(--ink-2)}
 .lanes-dated .lane .st-state{display:block;font-size:var(--fs-clock);font-weight:600;color:var(--counter);margin:0 0 4px}
 .rvtab th.rg{text-align:start;font-weight:600;color:var(--ink);background:var(--plaster);border-top:2px solid var(--ink)}
 .rvtab tbody th[scope=row]{min-width:7em}
-.rvtab .ncc{white-space:normal;overflow-wrap:anywhere}
 .lanes-dated .ln a{display:inline-block;min-height:24px;line-height:24px}
 .rvtab tbody+tbody th.rg{border-top:2px solid var(--ink)}
 body.export-doc .exp{border-top:3px solid var(--ink);padding-top:12px}

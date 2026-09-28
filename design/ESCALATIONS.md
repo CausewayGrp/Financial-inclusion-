@@ -93,11 +93,15 @@ Raised at D6 (27 September 2026), each needed by a design actually rendered; non
   only (brief §10 anticipated this). Design impact: the matrix panel and its table print the development placeholder
   ⟦NCC:key⟧ in place of each heading (the only placeholders on the site, asserted by check_visuals.py); every cell keeps
   its own governed label, so the matrix is readable meanwhile; the accepted site cannot carry the placeholders.`
+  D7: the matrix is unshipped — the contract renders as its text frame with no placeholder until the six labels are
+  governed (DL-D7-001); the built form and its export frame return the day they are, without a code change.
 - `NEEDS_CONTROLLED_CONTENT — VIS-PROVIDER-OBSERVABILITY — the class label of the fifth row (payment-system operators;
   UI-VIS-CAT-PRV-CLASS-PSO) — the contract's known gap: no governed universe row exists for the class; the row is
   designed as UNKNOWN in every dimension with the three institution events of RV-CWR-009 (REF-PAY-011…013) listed as
   context, never as a named universe. Design impact: the row renders the day the label exists; until then the matrix
   shows four classes.`
+  D7: with the matrix unshipped (DL-D7-001) no class is hidden and no placeholder ships; the label is still needed for
+  the matrix to draw at all.
 - `ESCALATE_TO_MASTER — VIS-PROVIDER-OBSERVABILITY — the bilingual form of the matrix's dated cells and its ">9" count —
   the governed time boundaries "observed 2026-09-07", "2026-01-22 event", "Official 2026 annual roster; later 2026
   status events separate", "2024 Q3 / 2025 H1 / 2025-09-10 / 2026 event states" and the participant count ">9" are
@@ -178,6 +182,72 @@ Design records it and changes nothing; where a lens's words are quoted they are 
   line is English only in the Arabic edition. Design impact: a "·" between a count and its label is available as
   composition if the steward prefers it to a governed rewording; otherwise none.`
 
+Raised at D7 (28 September 2026) from the two independent cold readers on the final tree (an English and an Arabic
+researcher–regulator–journalist lens; reports in `evidence/d7/cold_read/`). Each is content, authority or runtime, so
+Design records it and changes nothing governed; where a reader's words are quoted they are the reader's, not a finding
+of fact:
+
+- `ESCALATE_TO_MASTER (defect claimed) — /people/ section 02 and VIS-FINDEX-GAPS — the governed section text states,
+  in both editions, that "the matching figure for adults with more education is not in the evidence base, so no
+  education gap is stated" ("لا تتضمن قاعدة الأدلة الرقم المقابل لمن تلقوا تعليمًا أعلى، ولذلك لا تُذكر فجوة بحسب
+  التعليم"), while the governed contract of VIS-FINDEX-GAPS on the same page binds WB-FINDEX-OBS-2022-007 (adults with
+  secondary education or more, 19.53 %) and derives the education gap of 12.55 percentage points from it (with
+  WB-FINDEX-OBS-2022-006), and the page's boundary names only the sex and income gaps. The page contradicts itself: the
+  English cold reader called it blocking for trust. Design impact: none until the Master decides — the figure prints
+  its governed rows and the section its governed prose; if the sentence is corrected the figure stands, if the row is
+  withdrawn the bars and the table shrink by one group and one gap without a change of form.`
+- `NEEDS_CONTROLLED_CONTENT — the search results status (dialog and inline) — a governed "N of M results" form and a
+  way on when the runtime caps the hits — the baseline runtime shows at most ten hits and the governed status reads
+  "10 results shown", so a query with 79 matching records ("remittances") reads as a corpus of ten; the no-match copy
+  offers a way on, the has-results state does not. Design impact: none in the reference (the runtime and its copy are
+  the baseline's); Code shows the total and links the query to the Evidence directory (EAD-06, the `?q=` state).`
+- `NEEDS_CONTROLLED_CONTENT — /evidence/compare/ — a governed sentence stating why thirteen of the 110 records form
+  the comparable set (the evidence-state rule the Methodology's section 09 states), for the tool's intro and for the
+  "not available for comparison here" error — a Home headline record (CLM-003) is refused without a reason. Design
+  impact: the sentence renders in the tool's intro and the error stays the runtime's; nothing changes otherwise.`
+- `ESCALATE_TO_MASTER (observation) — /evidence/compare/ section 01 ("Three measures that cannot be combined") — the
+  governed worked example follows the runtime's output, so after a live comparison its three measures (11.9 %, the
+  3.3 million savers, the FMIIP baselines) can read as the analysis of the selected pair; a governed rubric naming it a
+  worked example (or the section placed before the tool by the Master's section order) would settle it. Design impact:
+  the D2 order (the tool as the first answer, the governed sections after) stands; the section keeps its governed
+  ordinal and heading.`
+- `ESCALATE_TO_MASTER (observation, restated) — Home, /providers/, /measurement/ — the text-first frames
+  ("Another view of the evidence") repeat governed prose the page already carries and print the boundary twice (the
+  alt text restates the prohibited inference) — raised at D3 (the alt text; a governed label for text-first frames);
+  the D7 English reader read the frames as text-only boxes that add nothing. Design impact: as at D3.`
+- `RUNTIME (Code, not a Master item) — the page citation — "Cite this page" copies title, product and URL while the
+  record citation carries publisher, edition, period and population; both copy without a preview. Design impact:
+  none in the reference (the runtime's templates); Code uses one citation template from the governed citation fields
+  with a visible preview (09_CODE_HANDOFF.md, D7 table).`
+- `ESCALATE_TO_MASTER (observation) — /payments/, /readings/same-year-different-number/ and their records — one
+  governed value in two magnitudes: the prose writes "1.262 مليار ريال" and "6.245 مليار دولار" while the contract rows
+  print "1,262" and "6,245" (million) beside decimal values such as "317.639", so a reader meets a decimal point and a
+  thousands comma in one table; the Arabic reader read 317.639 as thousands. Design impact: none — every value prints
+  as governed with the one number rule; a governed unit or precision per series would print in place.`
+- `ESCALATE_TO_MASTER (observation, restated from D3) — the Findex fieldwork window — one number carries three date
+  forms across Home, /people/ and the Compare table ("November 2022 to January 2023", "2022-11-07 to 2023-01-09",
+  "7 November 2022 to 9 January 2023"); a writer cannot tell which form to cite. Design impact: none — each form is the
+  governed field that carries it; a canonical governed form would print everywhere.`
+- `NEEDS_CONTROLLED_CONTENT — /payments/ (VIS-POS-TRANSACTIONS beside the withheld H1 2025 transactions figure) — a
+  governed sentence naming the withheld release and why the monthly series beside it is admissible; the withheld
+  state itself is clear ("يُحجب الرقم إلى أن يُوثَّق تعريفه"). Design impact: the sentence prints as a frame note.`
+- `RUNTIME (Code) and NEEDS_CONTROLLED_CONTENT — the Compare tool's Arabic copy — the status "2 سجلات مختارة" (a
+  numeral with a template plural), the prompt "اختر سجلين على الأقل" shown while two records are loaded, and the
+  boundary sentence printed twice ("لا يثبت:" and "لا يُستنتج:"). Design impact: none in the reference (the runtime's
+  copy and state); governed dual and plural forms for the count and one boundary per tool state.`
+- `ESCALATE_TO_MASTER (Arabic terminology, observations) — one concept, several governed terms across the corpus: bare
+  "التحويلات" beside "التحويلات النقدية" and "الحوالات المحلية"; "خدمة أموال عبر الهاتف المحمول" beside "النقود
+  الإلكترونية"; "المحفظة الاسمية"; "نموذج المتبقي البديل" beside "نموذج القيمة المتبقية". Design impact: none; a
+  native-language review is an owner item and no certification is claimed.`
+- `ESCALATE_TO_MASTER (question) — CLM-003 and VIS-POS-TRANSACTIONS — the governed legend and claim say both figures
+  are shown ("يُعرض الرقمان": the 8.55 % computed change and the source graphic's +11 %) while the drawing plots one
+  value per month; the +11 % is prose, not a row. Design impact: none — the drawing follows its rows; a governed row for
+  the source's figure would be drawn as a marker.`
+- `ESCALATE_TO_MASTER (observations) — /data/ and /explore/ — every one of the 151 source cards carries "Reuse terms:
+  not assessed" (REL-02, a release item), which reads as unfinished to an official reader; "P0 · People" on Explore is
+  expanded only on /measurement/. Design impact: none — a page-level governed statement of the reuse position and a
+  governed gloss for the priority code at first use would print in place.`
+
 ## Closed at D2 (27 September 2026) — resolved by an authority the repository already holds
 
 - Arabic credit line (`NEEDS_CONTROLLED_CONTENT — RV-CWR-001 and every visual contract with a credit`): the contract
@@ -228,3 +298,6 @@ Recorded so no one fills these gaps silently. Source: brief §10, §12, §15.
   request into `main`. No design meaning attaches to the name.
   Closed: the owner declared D6 met on `125aa44` and instructed the session to merge; pull request #5 was merged by the
   repository's normal method (a merge commit, `f4739a5`), the branch left in place like every merged gate branch.
+- D7 branch name (2026-09-28): D7 is developed and pushed on `claude/dreamy-archimedes-e8qx5v` (planned
+  `design/d7-acceptance`), created at the accepted `main` `0ccdf0128308412b9aca5d59a48b3723d4690214` (the merge of pull
+  request #6, D6 accepted and reconciled); one pull request for the gate, as at D6.
