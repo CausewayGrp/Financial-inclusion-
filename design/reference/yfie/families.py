@@ -342,7 +342,11 @@ def data_sources(page: dict, shell: dict) -> str:
             f'<div class="search-inline"><input data-source-filter class="search-input" type="search" placeholder="{esc(L["filter_placeholder"])}" aria-label="{esc(L["filter"])}">'
             f'<div class="search-status" data-source-filter-status role="status" aria-live="polite"></div></div>'
             f'<h3 class="grp" id="curated">{esc(L["curated"])} <span class="count">({bdi(page["curated_count"])})</span></h3><div class="curated">{curated}</div>'
-            f'<details class="source-locator-details source-supporting-details grp"><summary>{esc(L["supporting"])} <span class="count">({bdi(len(page["supporting"]))})</span></summary><p class="small">{esc(L["supporting_intro"])}</p><div class="objs">{supporting}</div></details>'
+            # The supporting group stays open: it is the only place a locator-only source appears, and
+            # `scripts/tests/test_public_tools.py` drives that source's cite control on this page. Closing it by
+            # default shortened the page by 44 % but put that governed path behind a disclosure, and Design does not
+            # weaken a repository test to let its own change pass — DEBT-011 stays open (DL-D7-013).
+            f'<details class="source-locator-details source-supporting-details grp" open><summary>{esc(L["supporting"])} <span class="count">({bdi(len(page["supporting"]))})</span></summary><p class="small">{esc(L["supporting_intro"])}</p><div class="objs">{supporting}</div></details>'
             f'<details class="source-locator-details source-reference-details grp"><summary>{esc(L["reference_group"])} <span class="count">({bdi(len(page["reference"]))})</span></summary><p class="small">{esc(L["reference_intro"])}</p><div class="objs">{reference}</div></details>'
             f'<div class="empty small" data-source-no-results hidden>{esc(L["no_results"])}</div></div></section>')
     parts.append(tool)

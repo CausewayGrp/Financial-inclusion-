@@ -363,8 +363,12 @@ readers (English; Arabic) read the checkpoint tree (§K.4).
 - [x] `DESIGN_DEBT.md` lists every deliberate temporary compromise; none open blocks D7; each open one has its Code
   action in `09_CODE_HANDOFF.md`. — Nineteen entries, closed not deleted. Closed at the D7 checkpoint: DEBT-002,
   DEBT-013, DEBT-017 (DL-D7-001/004) and DEBT-018 (DL-D7-006). Closed at the D7 closure: DEBT-019 (DL-D7-007),
-  DEBT-014 and DEBT-015 (DL-D7-009), DEBT-011 (DL-D7-010), and DEBT-007 decided as restraint with its reasoning
-  recorded. **Exactly two remain open, and neither blocks D7 — both are flagged "blocks release":** DEBT-008 (a
+  DEBT-014 and DEBT-015 (DL-D7-009), and DEBT-007 decided as restraint with its reasoning recorded. **Three remain
+  open and none blocks D7.** DEBT-011 (`/data/` length) was attempted and reverted at the closure — closing the
+  dependency groups cut the page 44 % but put the governed "cite a locator-only source" path behind a disclosure and
+  failed the repository's public-tool suite, so the change was reverted rather than a test weakened for it, and the
+  measured prize and the constraint are recorded for whoever takes it next (DL-D7-013). The other two are flagged
+  "blocks release": DEBT-008 (a
   governed pacing marker for the Home paragraph; Code keeps the `paced_groups` whole-paragraph fallback) and
   DEBT-016, narrowed at the closure to the file weight alone — the publisher is now named in type on every first
   screen in both languages (DL-D7-008), and what remains is the owner's web-weight rendering of the unaltered mark
@@ -448,7 +452,7 @@ Every finding was verified on the built pages and adjudicated (a reader's words 
 | EN 6 · Compare's governed "01 Three measures that cannot be combined" reads as the analysis of the selected pair | Yes — the D2 order (the tool as the first answer) | Content/order: `ESCALATE_TO_MASTER` (observation); the order stands |
 | EN 7 · only 13 records comparable, refusal without a reason | Yes — the comparable set is governed; the error copy is the runtime's | `NEEDS_CONTROLLED_CONTENT` (a governed sentence on the comparable set) |
 | EN 8 · the canonical URL as the frame's link text; "Cite this page" thinner than "Cite this record", no preview | Yes | Not changed: the canonical URL is the portable-evidence design (D6); the citation templates are the runtime's — Code item |
-| EN 9 · `/data/` 50,000 px; "Reuse terms: not assessed" × 151 | Yes | **DEBT-011 closed at the resumption** (DL-D7-010): both dependency groups closed by default; the page falls to 28,004 px (EN) / 29,012 px (AR) at 1440 px. The reuse line is governed (REL-02) — `ESCALATIONS.md` D7 |
+| EN 9 · `/data/` 50,000 px; "Reuse terms: not assessed" × 151 | Yes | **DEBT-011 stays open**: closing both dependency groups cut the page 44 % (DL-D7-010) but put the governed "cite a locator-only source" path behind a disclosure and failed the repository's public-tool suite, so it was reverted and recorded (DL-D7-013). The reuse line is governed (REL-02) — `ESCALATIONS.md` D7 |
 | AR 1 · one value in two magnitudes and notations (1.262 مليار vs 1,262; 317.639) | Yes — governed prose and governed rows | Content: `ESCALATE_TO_MASTER` (observation) |
 | AR 2 · the Findex fieldwork window in three date forms | Yes — governed fields (raised at D3) | Content: restated, `ESCALATIONS.md` D7 |
 | AR 3 · the text alternative visible; the caveat up to three times per figure; 17,379 px page | Yes — by design (as EN 5; the table caption carries the markers every row shares) | Not changed (the Lock); recorded |
@@ -558,7 +562,7 @@ raised that Design owns:
 | Cold record · a hostile crop of RV-CWR-001 loses "USD million", leaving two values that could read as a 45 % fall | Partly — the unit is lost; the governed same-year marker between the rows survives every crop that shows both values, so it cannot honestly read as a fall | **Fixed** (DL-D7-011): the unit now prints in the axis row, so a crop carrying the axis carries the unit |
 | Phone · the Compare strip sits at 71 % of the scroll, indexing only what the reader has passed | Yes — measured | **Fixed** (DL-D7-011): the strip precedes the tool (8 % EN, 6 % AR) |
 | Phone · no sticky in-page navigation at 390 px; the strip is inline | Yes — by design | Not changed: exactly one visible spine at any width is a Lock rule; a collapsed "on this page" control needs a governed label (the standing escalation) |
-| Phone · `/data/` is 31,599 px on a phone and its curated categories are not in the index | Yes — measured after DL-D7-010 (from ~54,000 px) | Recorded, not changed: the remaining length is the register's own content with both bulk groups closed; paged groups or category jump links each need governed labels — an escalation, not authored copy |
+| Phone · `/data/` is very long on a phone and its curated categories are not in the index | Yes — measured | Recorded, not changed: **DEBT-011 stays open** (DL-D7-013 — closing the groups would have cut 44 % but put a governed citation path behind a disclosure and failed the repository's public-tool suite); paged groups or category jump links each need governed labels — an escalation, not authored copy |
 | Phone · in-flow action links 30–33 px against the header's 44 px | Yes — measured | Recorded, not changed: the project's recorded standard is the 24 px minimum, met everywhere and asserted; a 44 px rule for links inside prose is an owner-level choice |
 | Phone, cold record, Arabic · the visible text alternative and table read as unhidden accessibility markup | Yes — by design | Not changed: the Lock keeps the text alternative visible for print, no-script and assistive-technology parity (considered and recorded at the checkpoint) |
 | Arabic · **BLOCKING** — every section heading on the record is 14 px against 20 px body: a heading 30 % smaller than the prose it introduces, on `/ar/evidence/CLM-003/`, `/ar/explore/` and the Reading's labels | Yes — measured at 390 and 1440 px; the cause is that English marks the same object with uppercase and tracking, which Arabic correctly withholds and nothing replaced | **Fixed** (DL-D7-012): an Arabic rubric that is a section heading is now sized against the prose it heads (20 px against 18 px body), keeping its colour and weight; English unchanged |
@@ -581,6 +585,66 @@ closure pass on the rendered product. DEBT-018 (DL-D7-006), DEBT-019 (DL-D7-007)
 interface defects the closure lenses found are fixed (DL-D7-011). No design debt is flagged "blocks D7". What remains
 is the owner's own visual acceptance, which this session does not give itself, and the content and runtime items
 escalated to the steward and to Code. **D7 is not declared accepted here, and this is not PUBLIC RELEASE READY.**
+
+## L2. Outputs on the closure tree (pasted, unedited last lines)
+
+```text
+python3 scripts/checksums.py --check
+CHECKSUM MANIFEST CURRENT: 1211 files
+python3 scripts/generate_projections.py --check
+PROJECTION CHECK PASS
+python3 -m unittest discover -s scripts/projection/tests -t .
+OK
+python3 scripts/build.py
+Built 288 HTML files from 143 controlled page specs.
+python3 scripts/audit_public_literals.py
+PUBLIC_LITERAL_CLOSURE records=12760 unresolved=0
+python3 scripts/validate.py
+WEBSITE REPOSITORY VALIDATION PASS
+python3 scripts/repository_manifest.py --check
+REPOSITORY MANIFEST CURRENT: 1198 files in 21 classes
+python3 scripts/tests/test_literal_audit_determinism.py
+LITERAL AUDIT DETERMINISM PASS: 8 hash seeds, one SHA-256 9f23830a8d220598b5014992c59d1b0fbe963bc50ee2d7eda948a3d111ec5f85
+python3 audit/pre_tranche_c/source_lineage_truth_test.py
+SOURCE LINEAGE TRUTH TEST PASS: 8/8
+python3 scripts/architecture_diagrams.py --check
+ARCHITECTURE DIAGRAMS CURRENT
+
+python3 design/reference/build.py
+Built 288 documents with renderer 'accepted' into design/reference/out; 24 export frames and 286 social frames in _export/ and _social/
+python3 design/reference/check_content.py --text
+CONTENT PARITY: PASS (0 differing documents)
+python3 design/reference/check_binding.py
+BINDING: PASS — 39 projections by role, 286 edition pages + root + 404, 286 bundles, shipped data ['static-data/search_aliases.json', 'static-data/search_index.json']
+python3 design/reference/tokens.py --check
+TOKENS CURRENT
+python3 design/reference/check_trio.py --degraded
+24 renders checked; 0 failed; 12 interaction smoke tests (pointer and keyboard), 12 passed; 6 degraded renders, 6 ok
+python3 design/reference/check_site.py --gate d2 --degraded
+168 renders checked; 0 failed; 84 smoke tests, 84 passed; 557 hard-state assertions on 44 route renders, 557 passed; 20 degraded renders, 20 ok
+python3 design/reference/check_site.py --gate d3 --degraded
+168 renders checked; 0 failed; 84 smoke tests, 84 passed; 252 hard-state assertions on 43 route renders, 252 passed; 18 degraded renders, 18 ok
+python3 design/reference/check_site.py --gate d4
+904 renders checked; 0 failed; 452 smoke tests, 452 passed; 3822 hard-state assertions on 228 route renders, 3822 passed
+python3 design/reference/check_journeys.py
+52 journey walks (13 journeys × EN/AR × mobile/desktop), 52 passed; 28 technical-state drives, 28 passed
+python3 design/reference/check_visuals.py
+VISUALS: PASS — 36 contracts × EN/AR on their routes: 2812 contract assertions; 48 forced-colours and print checks on the 12 drawn contracts (VIS-PROVIDER-OBSERVABILITY waits as a text frame until its labels are governed); 24 export frames; 286 social frames; 111 print checks on 11 family routes × EN/AR; 596 documents and frames scanned for loose runs; placeholders on the site: []; 0 failures
+python3 design/reference/check_acceptance.py
+ACCEPTANCE: PASS — 288 documents and 310 frames checked statically (14248 assertions); 59 browser assertions on the last-ten-percent surfaces in EN and AR; 0 failures
+
+YFIE_SITE_DIR=design/reference/out python3 scripts/tests/test_public_tools.py
+PUBLIC TOOL TESTS PASS: 25/26 passed, 1 not applicable to the current data
+YFIE_SITE_DIR=design/reference/out python3 audit/tranche_c/checks/viewport_acceptance.py
+VIEWPORT ACCEPTANCE: 168/168 page-width checks pass
+YFIE_SITE_DIR=design/reference/out python3 audit/tranche_c/checks/bilingual_invariance.py
+BILINGUAL NUMERIC INVARIANCE: 0 page pairs with differing numbers (143 pairs checked)
+```
+
+The d2 count rises from 553 to 557: two assertions for the `/data/` register (`supporting_open_reference_closed` and
+the new `locator_only_source_reachable`, DL-D7-013) and two for `filter_opens_supporting` in both editions.
+`test_public_tools.py` at 25/26 is the checkpoint's own figure — it fell to 24/26 under the reverted `/data/` change
+and was restored by the revert, not by touching the test (DL-D7-013).
 
 ## L. Outputs on the checkpoint tree (pasted, unedited last lines)
 

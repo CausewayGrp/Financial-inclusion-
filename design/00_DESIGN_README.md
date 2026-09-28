@@ -2,16 +2,19 @@
 
 Status: **D7 CLOSURE COMPLETE — READY FOR INDEPENDENT ACCEPTANCE** (28 September 2026; branch
 `claude/dreamy-archimedes-e8qx5v`, from the accepted `main` `0ccdf01`). The technical checkpoint below was followed by
-the closure the owner asked for, recorded in `10_ACCEPTANCE_CHECKLIST.md` §K.5 and DL-D7-007…012: the one blocker
-(DEBT-019) is closed, the four visual debts are settled — the publisher is now named in type on every first screen in
-both languages (DEBT-016's identification defect, DL-D7-008), the phone composition is recomposed (DEBT-014/015),
-`/data/` falls from 50,291 to 28,004 px (DEBT-011) and the Yemen grounding is decided as restraint with its reasoning
-recorded (DEBT-007) — the 18 catalogue-only coverage rows are settled, three independent lenses read the rendered
-product (an Arabic-first reader, a cold reader arriving on one Evidence Record, a phone reader; reports committed
-verbatim under `evidence/d7/cold_read/`), the three reader walks are recorded, and the three interface defects the
-lenses found are fixed (DL-D7-011/012). **No design debt is flagged "blocks D7".** This session does not declare D7
-accepted and does not merge: the owner's visual acceptance, and the content and runtime items escalated to the steward
-and to Code, remain. Not PUBLIC RELEASE READY. The runnable, fully populated bilingual reference
+the closure the owner asked for, recorded in `10_ACCEPTANCE_CHECKLIST.md` §K.5 and DL-D7-007…013: the one blocker
+(DEBT-019) is closed; of the four visual debts, three are settled — the publisher is now named in type on every first
+screen in both languages (DEBT-016's identification defect, DL-D7-008), the phone composition is recomposed
+(DEBT-014/015, DL-D7-009), and the Yemen grounding is decided as restraint with its reasoning recorded (DEBT-007).
+The fourth, **DEBT-011, is the closure's recorded no**: closing the `/data/` dependency groups cut the page 44 % and
+passed every design check, but the full gate suite caught that it put the governed "cite a locator-only source" path
+behind a disclosure, so it was reverted rather than have a repository test weakened for it, and the measured prize and
+the constraint are recorded for whoever takes it next (DL-D7-010, reverted by DL-D7-013). The 18 catalogue-only
+coverage rows are settled; three independent lenses read the rendered product (an Arabic-first reader, a cold reader
+arriving on one Evidence Record, a phone reader; reports committed verbatim under `evidence/d7/cold_read/`); the three
+reader walks are recorded; and four interface defects the lenses found are fixed (DL-D7-011/012). **No design debt is
+flagged "blocks D7".** This session does not declare D7 accepted and does not merge: the owner's visual acceptance, and
+the content and runtime items escalated to the steward and to Code, remain. Not PUBLIC RELEASE READY. The runnable, fully populated bilingual reference
 site (`design/reference/`: 288 documents, every tool and state, both languages, four widths, no placeholder) passes
 every D1–D6 check, the three repository suites and the new D7 check on this tree — `design/reference/check_acceptance.py`:
 14,248 static assertions on 288 documents and 310 frames (strict CSP, the discovery head byte-equal with the baseline,
@@ -1218,11 +1221,11 @@ not public release (REL-01…04 remain).
 - Arabic / responsive / a11y: the summaries keep their governed labels and counts in both languages; keyboard
   toggling of a `summary` is native; the source journeys and technical-state drives pass unchanged.
 - Code: ship both groups closed; keep the runtime's open-on-match and open-on-deep-link behaviour.
-- Verified: at 1440 px the page falls from 50,291 to 28,004 px in English and from 54,555 to 29,012 px in Arabic —
-  what remains is the curated layer, the limits, the inventory and the chronology, each of which is the page's own
-  content; `check_site.py --gate d2` (the new assertions included) and `check_journeys.py` (the source drives:
-  unknown deep link, filter with no match) pass on the rebuilt tree.
-- Compromise: none. DEBT-011 closed.
+- Measured: at 1440 px the page fell from 50,291 to 28,004 px in English and from 54,555 to 29,012 px in Arabic — a
+  44 % reduction; `check_site.py --gate d2` and `check_journeys.py` passed on that tree.
+- **Reverted at the closure — see DL-D7-013.** The full gate suite then caught what the design checks did not: the
+  supporting group is the only place a locator-only source appears, and the repository's own public-tool test drives
+  that source's cite control on this page. DEBT-011 stays OPEN.
 
 ### DL-D7-011 · D7 · 2026-09-28 · What the closure lenses changed: a promise withdrawn, a unit kept in the crop, a map moved
 - Problem: three independent lenses read the rendered product at the closure (an Arabic-first reader, a cold reader
@@ -1252,7 +1255,7 @@ not public release (REL-01…04 remain).
   considered and kept it for print, no-script and assistive-technology parity); in-flow action links at 30–33 px
   against the header's 44 px (the recorded standard is the 24 px minimum, asserted by `check_visuals.py targets_24px`
   and met everywhere — raising every in-flow link to 44 px would change the reading rhythm of the prose they sit in,
-  an owner-level choice, recorded not taken); `/data/` at 31,599 px on a phone after DL-D7-010 (the register's own
+  an owner-level choice, recorded not taken); `/data/` long on a phone, with DEBT-011 open after DL-D7-013 (the register's own
   content with both bulk groups closed — paged groups or category jump links would each need governed labels, so they
   are an escalation, not something Design authors).
 - Arabic / responsive / a11y: all three fixes verified in both languages; the signed-value isolation of DL-D7-006 was
@@ -1285,3 +1288,29 @@ not public release (REL-01…04 remain).
 - Compromise: none. Recorded for the owner's visual review: the Arabic heading and the lead statement are now the same
   size (20 px), distinguished by colour and weight — a further step in the Arabic display scale is an owner-level
   choice this closure does not take on its own.
+
+### DL-D7-013 · D7 · 2026-09-28 · DEBT-011 reverted and left open: a governed path is worth more than a shorter page
+- Problem: DL-D7-010 closed both `/data/` dependency groups by default and cut the page by 44 % (50,291 → 28,004 px in
+  English, 54,555 → 29,012 px in Arabic at 1440 px). Every design check passed. The full gate suite then failed:
+  `scripts/tests/test_public_tools.py` dropped from 25/26 to 24/26 on "cite: a locator-only source is cited by
+  reference and locator, never with the reference repeated as a title" — a click timing out.
+- Diagnosis: the supporting group is the **only** place a locator-only source appears (a curated card always has a
+  governed title, so it is never one). With the group closed, that source's cite control is inside a `display:none`
+  subtree, and the governed path the test asserts — cite a source that has no title, by its reference and its locator
+  — could not be reached on `/data/` without first opening a disclosure.
+- Alternatives: (1) adjust the test to open the group first — that is a repository test asserting a governed public
+  behaviour, it is not Design's to edit, and changing a test so one's own change passes is the thing a gate exists to
+  prevent; (2) give a curated card the `source-locator` class so a visible one matches — dishonest, a curated card is
+  not a locator-only source; (3) compact the 94 supporting rows so the group can stay open and the page still
+  shortens — a real option, but it redesigns an object at the closure gate on no recorded defect of its own; (4)
+  revert and record.
+- Chosen: (4). The supporting group is open again, as at D2; the reference group, which carries no locator-only
+  source, stays closed. `check_site.py` keeps `supporting_open_reference_closed` and gains
+  `locator_only_source_reachable`, which fails if a locator-only source's cite control is ever put behind a closed
+  disclosure again — so the next attempt meets this wall inside the design checks rather than at the repository gate.
+- Result: **DEBT-011 is not closed.** `/data/` is long by design until a shorter row or a governed paging label
+  exists; the measurement of what closing the groups would buy (44 %) is recorded in the debt row for whoever takes
+  it next, with the constraint any solution must satisfy.
+- Code: keep the supporting group open until a locator-only source is reachable another way; the filter on the
+  governed fields (EAD-07) remains the recorded intended behaviour.
+- Compromise: the page keeps its length. That is the honest cost of not weakening a test.

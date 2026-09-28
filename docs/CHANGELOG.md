@@ -1,5 +1,65 @@
 # Repository Change Log
 
+## 2026-09-28 — Design D7 closure on `claude/dreamy-archimedes-e8qx5v`: every recorded blocker settled, the product judged by independent lenses; ready for independent acceptance
+
+The closure the owner asked for after withholding acceptance at the technical checkpoint below. It changes the built
+product, not the governed content: no governed value, wording, unit, universe, period, evidence state, source
+relationship, limitation or Arabic term is touched, and no interface copy is authored.
+
+The one blocker is closed. **DEBT-019** — `/explore/` rendered its governed section 5 twice, the second time as an
+answer with no questions under it, and the rubric ordinals disagreed with the page index. The section now renders once,
+at the top, as the answer that holds the clusters it introduces (its governed role as the rubric, its governed heading
+as the `h2`, its body as the clusters' introduction, the interface lead kept so text parity holds), and a section
+rubric's ordinal is now its position in the spine index in every family renderer, which also closed the same latent
+mismatch on `/people/`, `/evidence/`, Compare and `/data/` (DL-D7-007).
+
+The four visual debts are settled. **DEBT-016**: the lockup carries the publisher's name in type — the mark plus
+**CauseWay** (semibold, the ochre role) above the governed product name, in the product bar of every page, the export
+identity line, the social head and the print head, as an isolated left-to-right run in Arabic; the name is the proper
+name the governed strapline, citation lines and © line already print, so nothing is authored, and the publisher is now
+named on twelve of twelve measured entry screens. The debt stays open on the 10 MB master file alone, which blocks
+release, not the gate (DL-D7-008). **DEBT-014/015**: every composed page renders the strip where its phone reader first
+needs the map and the foot spine keeps only the edge groups; the governed statement is neither split nor shortened, and
+the phone head's rhythm brings the first figure group onto Home's first screen in both languages (DL-D7-009).
+**DEBT-007**: decided as restraint, with the reasoning recorded; no motif, border, map, image or new palette.
+**DEBT-011 is the closure's recorded no.** Closing both `/data/` dependency groups by default cut the page 44 %
+(50,291 → 28,004 px EN, 54,555 → 29,012 px AR at 1440 px) and every design check passed (DL-D7-010), but the full gate
+suite then caught that the supporting group is the only place a locator-only source appears: closing it put the
+governed "cite a source by its reference and locator" path behind a disclosure and `scripts/tests/test_public_tools.py`
+fell from 25/26 to 24/26. Design does not edit a repository test so its own change can pass, so the change was
+reverted and the debt left open, with the measured prize and the constraint recorded for whoever takes it next and a
+new `check_site.py` assertion (`locator_only_source_reachable`) so the next attempt meets that wall inside the design
+checks rather than at the repository gate (DL-D7-013).
+
+The product was judged by three independent lenses on the built pages — an Arabic-first reader, a cold reader arriving
+on one Evidence Record, and a phone reader — each writing its report into the repository as it went
+(`design/evidence/d7/cold_read/lens-*-closure.md`). Four interface defects they found are fixed (DL-D7-011, DL-D7-012):
+the governed source intro promised "Open the source record here" on the ten records that render no source card and was
+denied by the next sentence, and now prints only where a source card exists (20 documents affected, 0 remain); the
+flagship same-year figure now repeats its governed unit in the axis row, so a hostile crop carries it (the marker that
+prevents the figure reading as a fall already survived every such crop); the phone strip on Compare moved from 71 % of
+the scroll to 8 %; and every Arabic section heading, which rendered 30 % smaller than the prose it introduced because
+the English uppercase-and-tracking device cannot transfer to a script without case, is now sized against its body.
+
+Recorded rather than claimed, each with its measurement: two first-screen shortfalls (the Arabic record's limit index
+entry 3 px below the fold at exactly 390 × 844; the Reading's phone screen whose only forward link is the breadcrumb,
+because the governed boundary rightly displaces the strip), `/data/` still long on a phone, in-flow targets at
+30–33 px against the recorded 24 px minimum, and the percent sign's two individually-correct sides in Arabic. Escalated
+as content (`design/ESCALATIONS.md`): the Compare contract's governed `alt_text` ends with its governed
+`prohibited_inference` verbatim, so two sentences print twice; CLM-039 carries no values or dates for its central
+comparison; and the magnitude notation, strengthened with the closure's evidence — two independent trained readers in
+two sessions have now misread a governed value by a factor of a thousand from it alone.
+
+The three reader walks are recorded with what was clumsy, the 18 catalogue-only coverage rows are settled with the
+reason each cannot be proved without inventing an evidence record, and the bar of the closure brief is answered surface
+by surface in `design/10_ACCEPTANCE_CHECKLIST.md` §K.5. All 73 acceptance lines are met and no design debt is flagged
+"blocks D7"; DEBT-008 and DEBT-016 remain open as release items. Records: `design/00_DESIGN_README.md` (status and
+DL-D7-007…012), `design/10_ACCEPTANCE_CHECKLIST.md` (§K.4 adjudications updated, §K.5 new),
+`design/04_PAGE_FAMILY_COMPOSITIONS.md`, `design/08_ASSET_MAP.md`, `design/09_CODE_HANDOFF.md`,
+`design/DESIGN_DEBT.md`, `design/COVERAGE.csv`, `design/ESCALATIONS.md`, `design/evidence/d7/`, and the README's
+design-programme section and programme tracker. **D7 is not declared accepted and nothing is declared PUBLIC RELEASE
+READY:** the owner's visual acceptance, and the content and runtime items escalated to the steward and to Code, remain.
+
 ## 2026-09-28 — Design D7 technical checkpoint on `claude/dreamy-archimedes-e8qx5v`: every check green, the technical criteria evidenced; final visual acceptance withheld by the owner
 
 Branch `claude/dreamy-archimedes-e8qx5v` (from the accepted `main` `0ccdf01`, the merge of pull request #6). D7 is the
