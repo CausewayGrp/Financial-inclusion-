@@ -1,5 +1,19 @@
 # Repository Change Log
 
+## 2026-09-28 — Design D6 accepted by the merge of pull request #5; present-state records reconciled; D7 next
+
+Pull request #5 (`claude/bold-maxwell-r3o015`, head `125aa44`, D6 proved on that exact tree) was merged into `main` at
+`f4739a5` by the repository's normal method (a merge commit) on the owner's instruction after the owner declared D6 met
+on `125aa44`; Verify (Governance gates, Browser acceptance) is green on the merge commit. Post-merge checks on `main`:
+`125aa44` is an ancestor of `f4739a5` and the merge tree is identical to it; `scripts/checksums.py --check`,
+`scripts/repository_manifest.py --check` and `scripts/validate.py` pass; the Production Master (`17db032b…`) and the
+Page Specs (`d4574804…`) match the fingerprints the checkpoint, the Context and the README record. The present-state
+records that described D6 as pending the owner's merge are corrected in place — the README current-state row, the
+Design README status, plan row and D6 sentence, `design/09_CODE_HANDOFF.md`, the process note in
+`design/ESCALATIONS.md`. No historical entry is rewritten; no governed content, projection, contract, `dist/` file or
+audit record changed. D7 (acceptance against `handoff/DESIGN_ACCEPTANCE_CRITERIA.md`) is the next gate and has not
+begun. Not declared: DESIGN HANDOFF READY, PUBLIC RELEASE READY.
+
 ## 2026-09-28 — Design D6 met on `claude/bold-maxwell-r3o015` (pending the owner's merge of pull request #5): the visual system, portable frames and print system, proved on the final tree
 
 Branch `claude/bold-maxwell-r3o015` (from `2effd8b`), draft pull request https://github.com/CausewayGrp/Financial-inclusion-/pull/5.

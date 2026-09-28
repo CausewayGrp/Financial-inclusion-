@@ -17,7 +17,7 @@ Contract: `handoff/DESIGN_TO_CODE_CONTRACT.md`. Updated at every gate end; never
 | Print / export | NOT STARTED | Downloads ship disabled until OWN-04 |
 | Reference implementation | DOES NOT EXIST | DEBT-002 |
 
-## State at D6 (met on `claude/bold-maxwell-r3o015`, the D6 pull request — rows not listed are as at D5)
+## State at D6 (accepted at `f4739a5`, the merge of pull request #5 — rows not listed are as at D5)
 
 | Area | Status | Notes |
 |---|---|---|

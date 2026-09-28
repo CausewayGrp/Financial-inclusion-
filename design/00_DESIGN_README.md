@@ -1,35 +1,36 @@
 # Design package — Yemen Financial Inclusion Evidence · أدلة الشمول المالي في اليمن
 
-Status: **D6 met on `claude/bold-maxwell-r3o015` (draft pull request #5, pending the owner's merge) — the visual system,
-the portable frames and the print system proved on the final tree in both languages: every one of the 36 visual
-contracts stands in its tier's form on every route that binds it (`design/reference/check_visuals.py`: 36 contracts ×
-EN/AR, 2,856 contract assertions; 52 forced-colours and print checks on the thirteen drawn contracts; 26 export frames;
-286 social frames; 133 print checks on the eleven family routes × EN/AR; 598 documents and frames scanned for a date or
-range outside an isolate; 0 failures), and every D1–D5 check passes on the same tree (the D4 gate caught one D6
-regression, fixed). The last accepted gate is D5: D2 was met at `9c263ac`, D3 at `beecdbb`, D4 at `aee1e1b` and D5 at
-`8be8e22`; the four gates were accepted together by the owner's merge of pull request #4 (`main` at
-`2effd8be9a481fed2881da61e8111bf16cceb814`, Verify green on the merge). D7 has not begun (process note in
-`ESCALATIONS.md`).** D1 was accepted by the owner's merge (`main` at `851f496078776356b38892c946d40d154c819067`, pull
-request #3). D2–D5 were developed on `claude/epic-cori-60fpeb` (created from that exact `main`) and landed through one
-draft pull request (https://github.com/CausewayGrp/Financial-inclusion-/pull/4). At that merge every one of the 288
-documents renders from the one content path (`design/reference/build.py`); Explore, the five hard domain answers, the
-Evidence directory, the §9.1 record set, Compare and Data & sources are composed in the T4 grammar and each §9.2 hard
-state on those routes is asserted on the rendered DOM (`design/reference/check_site.py`); the two repository browser
-suites, bilingual invariance and content parity pass on the reference site; the five D1 residuals are reconciled
-(DL-D2-002). At D3 (same branch and pull request, process note in `ESCALATIONS.md`) the Reading index, the ten Readings,
-Measurement, Methodology, the eight trust pages and the bilingual 404 are composed, reviewed in both languages and
-asserted (`check_site.py --gate d3`: 168 renders, 84 smoke tests, 252 hard-state assertions, 18 degraded renders), and
-four fresh cold readers (EN/AR × 390/1440 px) read Home; their verbatim reports are in `evidence/d3/cold_read/`, the
-design corrections in DL-D3-001 and DL-D3-002, the content observations in `ESCALATIONS.md`. At D4 (same branch) every
-one of the 288 documents is asserted on its own row: all 110 evidence records against their governed bundles and the
-three remaining domain answers against their contracts (`check_site.py --gate d4`: 904 renders, 452 smoke tests, 3,822
-hard-state assertions), the neutral root entry, and the binding itself (`check_binding.py`: every RENDER and CONTRACT
-projection read, no REFERENCE or VIA_SPEC projection read, no copied content model). At D5 (same branch) the thirteen
-journeys are walked by keyboard at 390 and 1440 px in both languages and every technical state is driven and rendered in
-a third, technical voice (`check_journeys.py`: 52 walks, 28 state drives; `07_INTERACTION_ACCESSIBILITY.md`). At D6
-(branch `claude/bold-maxwell-r3o015`, pull request #5) the remaining visual contracts are drawn or framed per tier,
-every figure carries its detached frame and its named-column table, every date and range is isolated by one pass over
-every document, the export frames, the five social-image templates and the print system exist and are asserted
+Status: **D6 accepted — the visual system, the portable frames and the print system proved on the final tree in both
+languages and landed on `main` at `f4739a5e98a7fe8fddc3675af4eb09a2119c6433` (the merge of pull request #5 from
+`claude/bold-maxwell-r3o015`, whose head `125aa44` carried the gate; Verify green on the merge, run 38). On that tree
+every one of the 36 visual contracts stands in its tier's form on every route that binds it
+(`design/reference/check_visuals.py`: 36 contracts × EN/AR, 2,856 contract assertions; 52 forced-colours and print
+checks on the thirteen drawn contracts; 26 export frames; 286 social frames; 133 print checks on the eleven family
+routes × EN/AR; 598 documents and frames scanned for a date or range outside an isolate; 0 failures), and every D1–D5
+check passes on the same tree. D2 was met at `9c263ac`, D3 at `beecdbb`, D4 at `aee1e1b` and D5 at `8be8e22`, accepted
+together at `2effd8be9a481fed2881da61e8111bf16cceb814` (the merge of pull request #4). D7 — acceptance against
+`handoff/DESIGN_ACCEPTANCE_CRITERIA.md` — is the next gate and has not begun (process note in `ESCALATIONS.md`).** D1
+was accepted by the owner's merge (`main` at `851f496078776356b38892c946d40d154c819067`, pull request #3). D2–D5 were
+developed on `claude/epic-cori-60fpeb` (created from that exact `main`) and landed through one draft pull request
+(https://github.com/CausewayGrp/Financial-inclusion-/pull/4). At that merge every one of the 288 documents renders from
+the one content path (`design/reference/build.py`); Explore, the five hard domain answers, the Evidence directory, the
+§9.1 record set, Compare and Data & sources are composed in the T4 grammar and each §9.2 hard state on those routes is
+asserted on the rendered DOM (`design/reference/check_site.py`); the two repository browser suites, bilingual invariance
+and content parity pass on the reference site; the five D1 residuals are reconciled (DL-D2-002). At D3 (same branch and
+pull request, process note in `ESCALATIONS.md`) the Reading index, the ten Readings, Measurement, Methodology, the eight
+trust pages and the bilingual 404 are composed, reviewed in both languages and asserted (`check_site.py --gate d3`: 168
+renders, 84 smoke tests, 252 hard-state assertions, 18 degraded renders), and four fresh cold readers (EN/AR × 390/1440
+px) read Home; their verbatim reports are in `evidence/d3/cold_read/`, the design corrections in DL-D3-001 and
+DL-D3-002, the content observations in `ESCALATIONS.md`. At D4 (same branch) every one of the 288 documents is asserted
+on its own row: all 110 evidence records against their governed bundles and the three remaining domain answers against
+their contracts (`check_site.py --gate d4`: 904 renders, 452 smoke tests, 3,822 hard-state assertions), the neutral root
+entry, and the binding itself (`check_binding.py`: every RENDER and CONTRACT projection read, no REFERENCE or VIA_SPEC
+projection read, no copied content model). At D5 (same branch) the thirteen journeys are walked by keyboard at 390 and
+1440 px in both languages and every technical state is driven and rendered in a third, technical voice
+(`check_journeys.py`: 52 walks, 28 state drives; `07_INTERACTION_ACCESSIBILITY.md`). At D6 (branch
+`claude/bold-maxwell-r3o015`, pull request #5, merged at `f4739a5`) the remaining visual contracts are drawn or framed
+per tier, every figure carries its detached frame and its named-column table, every date and range is isolated by one
+pass over every document, the export frames, the five social-image templates and the print system exist and are asserted
 (`check_visuals.py`, five phases), five red-team lenses reviewed the built output (DL-D6-007), and
 `06_VISUAL_TABLE_SYSTEM.md` and `08_ASSET_MAP.md` record the system; evidence in `evidence/d6/`. D2 records:
 `04_PAGE_FAMILY_COMPOSITIONS.md`, `03_COMPONENT_CATALOG.md` (seeded), the decision log below (DL-D2-*),
@@ -184,7 +185,7 @@ to isolate in RTL and URLs); 15 routes whose Page Spec sections are split by lan
 | D3 | `claude/epic-cori-60fpeb` (continued on the D2 branch and pull request; process note in `ESCALATIONS.md`) | Readings index + all Readings, Measurement, Methodology, trust, report journey, 404; Home cold-reader test | same; cold-reader record — **accepted at `2effd8b`, the merge of pull request #4** (`check_site.py --gate d3`; `evidence/d3/cold_read/`) |
 | D4 | `claude/epic-cori-60fpeb` (continued; process note in `ESCALATIONS.md`) | all 288 documents via family rules | three suites pass on `design/reference/out/`; all rows ≥ `BUILT` — **accepted at `2effd8b`, the merge of pull request #4**: every route row `VERIFIED` (`check_site.py --gate d4`, `check_binding.py`) |
 | D5 | `claude/epic-cori-60fpeb` (continued; process note in `ESCALATIONS.md`) | every tool state and journey, keyboard, zoom, reduced motion, forced colours | `07_INTERACTION_ACCESSIBILITY.md` — **accepted at `2effd8b`, the merge of pull request #4** (`check_journeys.py`; D5 rows `VERIFIED`, the two unbound verification states `DESIGNED`) |
-| D6 | `claude/bold-maxwell-r3o015` (planned `design/d6-visuals-social-print`; created at the accepted `main` `2effd8b`; process note in `ESCALATIONS.md`) | visuals per contract, frames, social templates, print | contract-by-contract evidence — **met on this branch** (`check_visuals.py`: every contract, every export and social frame, every family route printed; `06_VISUAL_TABLE_SYSTEM.md`, `08_ASSET_MAP.md`, `evidence/d6/`; D6 rows `VERIFIED`); awaiting the owner's merge decision on the D6 pull request |
+| D6 | `claude/bold-maxwell-r3o015` (planned `design/d6-visuals-social-print`; created at the accepted `main` `2effd8b`; process note in `ESCALATIONS.md`) | visuals per contract, frames, social templates, print | contract-by-contract evidence — **accepted** at `f4739a5`, the merge of pull request #5 (`check_visuals.py`: every contract, every export and social frame, every family route printed; `06_VISUAL_TABLE_SYSTEM.md`, `08_ASSET_MAP.md`, `evidence/d6/`; D6 rows `VERIFIED`) |
 | D7 | `design/d7-acceptance` | last-10-percent audit, final handoff | checklist complete; Code recipient test |
 
 **D1 theses to be tested** (named only — not designed; each must answer type, grid, density, evidence-state grammar and
