@@ -503,17 +503,24 @@ class Content:
             "period": g.get(f"period_{lang}"), "universe": g.get(f"universe_{lang}"),
             "canonical_href": self.href(g.get("canonical_route"), lang),
             "detached_caption": v.get(f"detached_caption_{lang}"),
+            "lang": lang, "edition": self.t("UI-CONTENT-VERSION", lang),   # the product name comes from the shell (every frame reads shell["product"])
             "labels": {"does_not_establish": lab("UI-VIS-DOES-NOT-ESTABLISH"), "source": lab("UI-VIS-SOURCE"), "full_record": lab("UI-VIS-FULL-RECORD"),
                        "same_year_revision": lab("UI-VIS-SAME-YEAR-REVISION"), "not_comparable": lab("UI-VIS-NOT-COMPARABLE"),
-                       "reported": lab("UI-VIS-STATE-REPORTED"), "derived": lab("UI-VIS-STATE-DERIVED"),
+                       "reported": lab("UI-VIS-STATE-REPORTED"), "derived": lab("UI-VIS-STATE-DERIVED"), "unknown": lab("UI-VIS-STATE-UNKNOWN"),
+                       "issuer_scope": lab("UI-VIS-ISSUER-SCOPE"),
                        "analytical_question": self.t("UI-DOM-ANALYTICAL-QUESTION", lang), "what_it_shows": self.t("UI-VIS-WHAT-THE-EVIDENCE-SHOWS", lang),
                        "text_alternative": self.t("UI-DOM-ANALYTICAL-TEXT-ALTERNATIVE", lang), "scope": self.t("UI-DOM-SCOPE-AND-TIME", lang),
-                       "what_not_to_conclude": self.t("UI-DOM-WHAT-NOT-TO-CONCLUDE", lang)},
+                       "what_not_to_conclude": self.t("UI-DOM-WHAT-NOT-TO-CONCLUDE", lang),
+                       "open_source_record": self.t("UI-EVID-OPEN-SOURCE-RECORD", lang), "source_record": self.t("UI-SOURCES-SOURCE-RECORD", lang),
+                       "reference": self.t("UI-SOURCE-REFERENCE", lang), "period": self.t("UI-EVID-WHEN-WAS-IT-MEASURED-OR", lang)},
         }
         if c:
             def localise(row: dict) -> dict:
                 """A governed row with every `<field>_label` resolved to the page language (the generator's display-label
-                rule) and its `metric_label_<lang>` kept; encoding-only fields (caveat, flag) are never printed."""
+                rule) and its `metric_label_<lang>` kept; encoding-only fields (caveat, flag) are never printed. A row
+                whose `source` is a source-record id with a public locator also carries the record's data-page link and
+                governed title (D6: the matrix and the lanes link every dated cell to its source record); a source
+                without a public locator is never named or linked."""
                 o = {}
                 for k, val in row.items():
                     if k.endswith("_label") and isinstance(val, dict):
@@ -521,6 +528,9 @@ class Content:
                     elif k in ("metric_label_en", "metric_label_ar"):
                         if k.endswith(lang):
                             o["metric_text"] = val
+                    elif k in ("label_en", "label_ar"):
+                        if k.endswith(lang):
+                            o["label_text"] = val
                     elif not isinstance(val, dict):
                         o[k] = val
                 # the names the D1 renderer used
@@ -528,6 +538,11 @@ class Content:
                 o["series_label"] = o.get("series_label_text", "")
                 o["state"] = row.get("grammar_state")
                 o["markers"] = row.get("markers") or []
+                src = str(row.get("source") or "")
+                if src.startswith("SRC-"):
+                    card = self.source_card(src, lang)
+                    o["source_href"] = card["data_href"] if card else ""
+                    o["source_title"] = (card["title"] or card["untitled_label"]) if card else ""
                 return o
             out["form"] = c.get("form")
             out["credit"] = (c.get("credit") or {}).get("text")
@@ -542,12 +557,29 @@ class Content:
             out["rules"] = {k: c.get(k) for k in ("ordering", "transformation", "breaks", "annotation", "mobile", "rtl", "fallback", "missing")}
         ev = self.evidence_objects.get(vid) or {}
         out["record_method"] = "" if ev.get("visual_contract_state") else self.loc(ev, "method", lang)
+        out["record_limit"] = ev.get(f"measurement_limitation_{lang}") or ""   # the record's own measurement limitation (in frame where a contract asks for it)
         out["record_href"] = self.href(self.detail_routes[vid], lang) if vid in self.detail_routes else ""
         out["state_labels"] = {k[len("UI-VIS-STATE-"):]: v[lang] for k, v in self.grammar_labels.items() if k.startswith("UI-VIS-STATE-")}
         out["marker_labels"] = {k[len("UI-VIS-"):]: v[lang] for k, v in self.grammar_labels.items() if k.startswith(("UI-VIS-BREAK-", "UI-VIS-MISSING", "UI-VIS-DISAGREEMENT", "UI-VIS-NOMINAL", "UI-VIS-WITHHELD", "UI-VIS-NOT-COMPARABLE", "UI-VIS-SAME-YEAR", "UI-VIS-TARGET", "UI-VIS-RESULT", "UI-VIS-BASELINE"))}
         out["chain_labels"] = {k[len("UI-VIS-CHAIN-"):]: v[lang] for k, v in self.grammar_labels.items() if k.startswith("UI-VIS-CHAIN-")}
         if vid == "VIS-PAYMENT-RAILS" and "RV-CWR-009" in self.visual_contracts:
             out["_chain_source"] = self.visual("RV-CWR-009", lang)   # its rationale: reuse the signature chain's deduplicated event set
+        if vid == "RV-CWR-004":
+            # The people lane is drawn as the fieldwork span stated in the governed period of evidence record CLM-001
+            # (the contract's ordering and annotation rules), never as a point at the data year.
+            clm = self.evidence_objects.get("CLM-001") or {}
+            period = self.loc(clm, "period", lang)
+            dates = re.findall(r"\d{4}-\d{2}-\d{2}", period)
+            out["people_span"] = {"from": dates[0], "to": dates[-1], "text": period, "href": self.href(self.detail_routes["CLM-001"], lang)} if len(dates) >= 2 else None
+        if vid == "VIS-PROVIDER-OBSERVABILITY" and "RV-CWR-009" in self.visual_contracts:
+            # The contract's known gap: no governed row exists for payment-system operators; the row is drawn as UNKNOWN
+            # with the institution events REF-PAY-011..013 (governed rows of RV-CWR-009) listed as context, never as a
+            # named universe. The row's class label is not governed yet (escalated): the row renders when it exists.
+            chain = self.visual("RV-CWR-009", lang)
+            out["_context_events"] = [e for e in chain["objects"].get("reform_events") or [] if e["id"] in ("REF-PAY-011", "REF-PAY-012", "REF-PAY-013")]
+            out["labels"]["class_pso"] = self.t("UI-VIS-CAT-PRV-CLASS-PSO", lang) if "UI-VIS-CAT-PRV-CLASS-PSO" in self.ui else ""
+            out["matrix_headings"] = {k: (self.t(k, lang) if k in self.ui else "") for k in
+                                      ("UI-VIS-MATRIX-AUTHORITY", "UI-VIS-MATRIX-UNIVERSE", "UI-VIS-MATRIX-STATUS", "UI-VIS-MATRIX-NEGATIVE", "UI-VIS-MATRIX-OPERATION")}
         return out
 
     # ------------------------------------------------------------------------------------------------ home

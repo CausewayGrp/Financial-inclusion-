@@ -1,6 +1,6 @@
 # Interaction and accessibility
 
-> STATUS: **D5 — met at this commit, pending the owner's merge.** Every tool state, every technical state and the thirteen
+> STATUS: **D5 — accepted at `2effd8b` (the merge of pull request #4); D6 additions in §2 (figure tables in named regions), §3 (the print system) and §7.** Every tool state, every technical state and the thirteen
 > journeys, by keyboard, on mobile and desktop, in both languages, on the rendered reference site: 52 journey walks and 28
 > technical-state drives pass (`check_journeys.py`). What is asserted is asserted by
 > `design/reference/check_journeys.py` (journeys and technical states) and `design/reference/check_site.py` (hooks,
@@ -35,6 +35,20 @@ state and that none sits inside a boundary section or an evidence-gap object.
   `/evidence/` the same tool is inline (`#global-search`) with its own status and results regions.
 - **Compare:** four native `<select>` slots in reading order, each labelled by its governed slot label; the verdict is
   written before the table; the table sits in a named, focusable region (`role="region"`, `aria-label`, `tabindex="0"`).
+- **Figure tables (D6):** every drawn figure's fallback table sits in the same kind of region, named by the text
+  alternative's heading and the figure's title, focusable only when it can scroll (none does: every table fits the
+  column at 320 px in both languages — the provider matrix's fallback is one two-column table per class); every data
+  column is headed by a governed string; row groups (the FINDEX gaps, the lanes) carry their own header row. Every link
+  and button inside a figure — the source-record links of the matrix (named by the date they show, then the record),
+  the "↗" locators of the chain and the lanes, the canonical link, the cite control — is a 24 px target, asserted per
+  figure by `check_visuals.py` (`targets_24px`). A figure's accessible name is its governed title (`figcaption`); the
+  visible text alternative is its description; its inner headings sit one level under its title. The "↗" locator is
+  bound to the word before it by a no-break space, never alone on a line.
+- **Bidi (D6):** every ISO date and numeric range in any text of any document is an unbroken left-to-right run, set by
+  one pass over the finished document (`text.isolate_document`; after Arabic letters a plain date renders reversed and
+  a plain range swaps its ends); an identifier is isolated and breaks only at its own hyphens, so a 37-character source
+  id fits 320 px; a governed English time boundary is isolated and `lang="en"`. Asserted statically on all 598
+  documents and frames and in the browser on every figure and frame (`check_visuals.py`).
 - **Deep links:** `?source=` on `/data/`, `#MA-00n` on `/measurement/` and `?record=` on Contact and Corrections move
   focus to the target object (`tabindex="-1"`), without scrolling it out of view.
 - **Every in-page navigation is named** (the index and strip by the page's `h1`, each edge group by its governed
@@ -59,8 +73,12 @@ state and that none sits inside a boundary section or an evidence-gap object.
   the runtime; the register filter degrades to the full register).
 - **No stylesheet / images off:** the document order is the reading order (`h1` inside `main`, the boundary before the
   depth, the text alternative under every figure); no image carries evidence.
-- **Print:** figures kept whole with their boundary, controls and record actions removed, the foot spine's edges kept,
-  external locators printed after their link text.
+- **Print (D6 system, `06_VISUAL_TABLE_SYSTEM.md` §7):** chrome, controls and record actions removed; the page object
+  and its answers break freely while objects that fit a page stay whole; a boundary stays with the claim before it;
+  every figure keeps its head, panels and foot together and lets its text alternative break; table headers repeat;
+  external locators and the canonical link print as text; every page ends with the print-only provenance block
+  (product · edition · canonical URL · citation); the first page of every family route carries the title in both
+  languages (asserted on the PDF, `check_visuals.py --phases print`); Arabic prints right to left on its own scale.
 
 ## 4. Technical states (the ledger's `technical:*` rows)
 
@@ -115,4 +133,5 @@ states (`03_COMPONENT_CATALOG.md` §1, Evidence Record), never on an invented re
 
 No WCAG conformance, no assistive-technology testing beyond the accessibility tree that the checks read, no
 native-language certification. Screen-reader and switch-access sessions with people are an owner item (escalated as
-anticipated at D0).
+anticipated at D0). D6 adds forced-colours and print assertions on every drawn figure and a print check on every
+family route; it claims no more than the checks assert.
