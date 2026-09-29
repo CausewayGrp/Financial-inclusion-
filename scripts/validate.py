@@ -4,13 +4,33 @@ from html.parser import HTMLParser
 import json,sys,re,html as _html,hashlib
 from urllib.parse import urlparse, parse_qs, quote
 ROOT=Path(__file__).resolve().parents[1]; DIST=ROOT/'dist'; C=ROOT/'site-src/content'
+sys.path.insert(0,str(ROOT/'audit/tranche_c/checks'))
+import bilingual_invariance as _BI   # one number-normalisation rule for every content and visual check
 errors=[]; warns=[]
 class P(HTMLParser):
-    def __init__(self): super().__init__(); self.links=[]; self.lang=None; self.dir=None
+    def __init__(self): super().__init__(); self.links=[]; self.lang=None; self.dir=None; self.current=set()
     def handle_starttag(self,tag,attrs):
         a=dict(attrs)
         if tag=='html': self.lang=a.get('lang'); self.dir=a.get('dir')
-        if tag=='a' and a.get('href'): self.links.append(a['href'])
+        if tag=='a' and a.get('href'):
+            self.links.append(a['href'])
+            # The active destination, read as an attribute pair rather than as one literal string: attribute order is
+            # the renderer's business, `aria-current` on the right href is the assertion (EAD-01).
+            if a.get('aria-current')=='page': self.current.add(a['href'])
+# EAD-01: the one renderer is scripts/build.py (the driver) and the scripts/yfie package (the composition: content path,
+# families, visuals, stylesheet, text layer). Gates that assert the renderer consumes a governed contract, holds no
+# second layout config, or implements a named family read all of it, not one file.
+RENDERER_SRC=''.join(p.read_text(encoding='utf-8') for p in [ROOT/'scripts/build.py',*sorted((ROOT/'scripts/yfie').glob('*.py'))])
+# A governed value as a reader sees it. The text layer isolates every ISO date, numeric range and identifier in its own
+# element (`<bdi dir="ltr">`, scripts/yfie/text.py), so a governed string is split across tags in the source and a raw
+# substring test would report it missing. Inline elements add no word break; block elements do (EAD-01).
+_INLINE_TAG=re.compile(r'</?(?:bdi|a|b|i|em|strong|span|time|button|sup|sub|code|abbr)\b[^>]*>')
+def _vistext(fragment):
+    t=re.sub(r'<(script|style)\b.*?</\1>','',fragment,flags=re.S)
+    t=re.sub(r'<[^>]+>',' ',_INLINE_TAG.sub('',t))
+    return re.sub(r'\s+',' ',_html.unescape(t))
+def _norm(value):
+    return re.sub(r'\s+',' ',str(value or '')).strip()
 bundle=json.load(open(C/'page_specs.json',encoding='utf-8')); specs=bundle.get('page_specs',[])
 source_refs=json.load(open(C/'sources/source_reference_map.json',encoding='utf-8'))
 source_ids={str(r.get('source_id')) for r in source_refs if r.get('source_id')}
@@ -30,7 +50,7 @@ for lang,dirv in [('ar','rtl'),('en','ltr')]:
         title=o.get('title_'+lang) or ''
         if title and title not in _html.unescape(t): errors.append(f'title missing {o.get("route")} {lang}')
         top=str(o.get('route','/')).strip('/').split('/',1)[0]
-        if top in {'explore','evidence','readings','data','methodology','about'} and f'aria-current="page" href="/{lang}/{top}/"' not in t:
+        if top in {'explore','evidence','readings','data','methodology','about'} and f'/{lang}/{top}/' not in p.current:
             errors.append(f'active navigation missing aria-current {o.get("route")} {lang}')
         for x in ['NOT_STARTED__','governed_claims','governed_evidence_objects','INTERNAL_ONLY','WITHHOLD']:
             if x in t: errors.append(f'backend/control leak {x} in {f}')
@@ -180,10 +200,14 @@ temp_files=[p for p in temp_dir.rglob('*') if p.is_file()] if temp_dir.exists() 
 if temp_files:
     errors.append('temporary non-authoritative workspace must be empty in the canonical repository')
 
-# Interaction baseline that the original structural validator did not cover.
-css=(ROOT/'site-src/styles.css').read_text(encoding='utf-8')
+# Interaction baseline that the original structural validator did not cover. Read from the stylesheet the site actually
+# ships (EAD-01: written by scripts/yfie/theme.py), not from a source file, so the assertion covers what a reader gets.
+# The tokens follow the accepted design's mobile-first rules; the four behaviours asserted are the baseline's own.
+css=(DIST/'assets/yfie.css').read_text(encoding='utf-8')
 js=(ROOT/'site-src/app.js').read_text(encoding='utf-8')
-for token,label in [('.nav.open','mobile nav open state'),('.utilities .search-btn,.utilities .menu-btn{display:inline-flex}','small-screen search/menu visibility'),(':focus-visible','visible focus'),('.search-dialog','global search dialog')]:
+for token,label in [('.nav.open','mobile nav open state'),('.controls .menu{display:none}','menu control hidden once the navigation is laid out'),
+                    ('.nav{display:none}','navigation behind the menu control on a small screen'),
+                    (':focus-visible','visible focus'),('dialog.search','global search dialog')]:
     if token not in css: errors.append('missing '+label)
 for token,label in [('aria-expanded','menu aria state'),('data-search-input','search binding'),('showModal','search dialog behavior'),('URLSearchParams','source query parsing'),('data-source-filter','source directory filtering'),('seen=new Map','search duplicate suppression'),("e.key==='Escape'",'escape closes mobile navigation'),("replace(/[إأآٱ]/g,'ا')",'Arabic search normalization'),("e.key.toLowerCase()==='k'",'global keyboard search shortcut')]:
     if token not in js: errors.append('missing '+label)
@@ -238,7 +262,8 @@ for f in DIST.rglob('*.html'):
     if f == DIST/'index.html':
         continue
     t=f.read_text(encoding='utf-8')
-    ids=re.findall(r'\bid="([^"]+)"',t)
+    # A real id attribute, not the tail of a data-* name: `\bid="` also matches data-record-id="…" (EAD-01).
+    ids=re.findall(r'(?<![-\w])id="([^"]+)"',t)
     dup_ids={x for x in ids if ids.count(x)>1}
     if dup_ids: errors.append('duplicate DOM id '+','.join(sorted(dup_ids))+' in '+str(f))
     if f != DIST/'404.html' and len(re.findall(r'<h1\b',t))!=1:
@@ -281,19 +306,26 @@ for f in DIST.rglob('*.html'):
 
 
 # S02 Home / Explore information architecture must be differentiated without losing controlled questions.
+# The accepted design lists a question as an item of a cluster's ordered list and never prints its QE- reference, which
+# is the public-ID policy (PID-1: a reference is shown only where it aids verification or citation). So a question is
+# found by its governed text, which is a stronger assertion than its identifier (EAD-01).
+_QUESTIONS=json.load(open(C/'content/questions.json',encoding='utf-8'))
+def _question_items(t):
+    return sum(len(re.findall(r'<li>',m)) for m in re.findall(r'<ol class="qlist">(.*?)</ol>',t,flags=re.S))
 for lang in ('ar','en'):
     hf=DIST/lang/'index.html'; ef=DIST/lang/'explore/index.html'
     if hf.exists():
         ht=hf.read_text(encoding='utf-8')
         if 'class="task-card"' in ht: errors.append(f'S02 Home parallel task taxonomy must not reappear {lang}')
-        if ht.count('class="question-card compact"') != 4: errors.append(f'S02 Home compact question count mismatch {lang}')
-        if 'class="question-cluster"' in ht: errors.append(f'S02 Home must not duplicate full Explore clusters {lang}')
+        if _question_items(ht) != 4: errors.append(f'S02 Home compact question count mismatch {lang}: {_question_items(ht)}')
+        if 'class="cluster"' in ht: errors.append(f'S02 Home must not duplicate full Explore clusters {lang}')
     if ef.exists():
-        et=ef.read_text(encoding='utf-8')
-        if et.count('class="question-card"') != 11: errors.append(f'S02 Explore must retain all 11 controlled questions {lang}')
-        if et.count('class="question-cluster"') != 4: errors.append(f'S02 Explore question grouping mismatch {lang}')
-        for qid in [f'QE-{i:03d}' for i in range(1,12)]:
-            if qid not in et: errors.append(f'S02 Explore missing controlled question {qid} {lang}')
+        et=ef.read_text(encoding='utf-8'); ex=_vistext(et)
+        if _question_items(et) != len(_QUESTIONS): errors.append(f'S02 Explore must retain all {len(_QUESTIONS)} controlled questions {lang}: {_question_items(et)}')
+        if et.count('<div class="cluster">') != 4: errors.append(f'S02 Explore question grouping mismatch {lang}')
+        for q in _QUESTIONS:
+            qid=str(q.get('question_id') or ''); qt=_norm(q.get(f'question_{lang}') or '')
+            if qt and qt not in ex: errors.append(f'S02 Explore missing controlled question {qid} {lang}')
 
 
 # S03 Domain Answer presentation contract and cumulative eight-route regression.
@@ -322,12 +354,12 @@ for e in entries:
 if set(route_entries)!=expected_domain_routes:
     errors.append('presentation priority eight-route coverage mismatch: '+str(sorted(set(route_entries)^expected_domain_routes)))
 
-build_src=(ROOT/'scripts/build.py').read_text(encoding='utf-8')
-if "PRESENTATION_PRIORITY=load(C/'presentation_priority.json')" not in build_src:
+build_src=RENDERER_SRC
+if '_load("presentation_priority.json")' not in build_src:
     errors.append('renderer is not consuming presentation priority contract')
 if 'DOMAIN_CONFIG' in build_src:
     errors.append('obsolete DOMAIN_CONFIG compatibility layer remains in renderer')
-if "'/people/': {" in build_src or "'/providers/': {" in build_src:
+if "'/people/': {" in build_src or "'/providers/': {" in build_src or '"/people/": {' in build_src or '"/providers/": {' in build_src:
     errors.append('hard-coded route presentation decisions remain in renderer')
 
 spec_by_route={str(o.get('route','')).strip('/'):o for o in specs}
@@ -430,23 +462,27 @@ for route,e in route_entries.items():
         if not f.exists():
             errors.append(f'S03 domain HTML missing {route} {lang}')
             continue
-        raw=f.read_text(encoding='utf-8'); text=_html.unescape(raw)
+        raw=f.read_text(encoding='utf-8'); text=_vistext(raw)
+        # The tiers of the presentation contract, as the accepted design renders them (EAD-01): a supporting section is a
+        # band boundary (`section.bnd`), a primary section is an answer (`section.qa`), progressive sections sit inside the
+        # page's one disclosure, and the contract's primary visual is drawn once by its own id. Counts, not class names.
+        _more=re.search(r'<details class="more">(.*?)</details>',raw,re.S)
         shape={
-            'hero':raw.count('class="hero domain-hero"'),
-            'scope':raw.count('class="scope-item '),
-            'boundary':raw.count('class="scope-item boundary"'),
-            'primary':raw.count('<section class="domain-section'),
-            'progressive_wrapper':raw.count('<details class="domain-more">'),
-            'progressive':raw.count('class="domain-more-item"'),
-            'visual':raw.count('class="domain-visual"'),
-            'measure':raw.count('class="measure-next-card"'),
-            'verify':raw.count('<section id="verify" class="domain-verify">'),
+            'hero':raw.count('<div class="head">'),
+            'scope':len(re.findall(r'<section class="bnd" id="s\d+"',raw)),
+            'boundary':sum(1 for o in boundary_sections if f'<section class="bnd" id="s{o}"' in raw),
+            'primary':len(re.findall(r'<section class="qa" id="s\d+"',raw)),
+            'progressive_wrapper':1 if _more else 0,
+            'progressive':len(re.findall(r'<div class="qa">',_more.group(1) if _more else '')),
+            'visual':raw.count(f'data-visual-id="{visual_id}"') if visual_id else 0,
+            'measure':len(re.findall(r'<article class="compact"',(re.search(r'id="measure".*?</section>',raw,re.S) or re.match('','')).group(0) if 'id="measure"' in raw else '')),
+            'verify':raw.count('<section class="qa" id="verify">'),
             'answer_card':raw.count('class="answer-card'),
         }
         expected={
             'hero':1,
             'scope':len(supporting_sections),
-            'boundary':1 if boundary_sections else 0,
+            'boundary':len(boundary_sections),
             'primary':len(primary_sections),
             'progressive_wrapper':1 if progressive_sections else 0,
             'progressive':len(progressive_sections),
@@ -458,15 +494,18 @@ for route,e in route_entries.items():
         for k,val in expected.items():
             if shape[k]!=val:
                 errors.append(f'S03 {k} count mismatch {route} {lang}: expected {val} got {shape[k]}')
-        anchors=[raw.find('class="hero domain-hero"'),raw.find('class="domain-scope"'),raw.find('class="domain-core"')]
-        if progressive_sections: anchors.append(raw.find('<details class="domain-more">'))
-        anchors.append(raw.find('<section id="verify" class="domain-verify">'))
+        # Depth order: the head, then the always-visible band, then the answers, then the one disclosure, then verification.
+        anchors=[raw.find('<div class="head">')]
+        if supporting_sections: anchors.append(min(raw.find(f'<section class="bnd" id="s{o}"') for o in supporting_sections))
+        if primary_sections: anchors.append(min(raw.find(f'<section class="qa" id="s{o}"') for o in primary_sections))
+        if progressive_sections: anchors.append(raw.find('<details class="more">'))
+        anchors.append(raw.find('<section class="qa" id="verify">'))
         if any(x<0 for x in anchors) or anchors != sorted(anchors):
             errors.append(f'S03 hierarchy order regression {route} {lang}')
         # Narrative-loss test: every governed reader-facing Page Spec section remains on the route.
         for sec in spec.get('sections',[]):
             body=sec.get(f'body_{lang}')
-            for para in [p.strip() for p in str(body or '').split('\n') if p.strip()]:   # one rendered paragraph per authored line
+            for para in [_norm(p) for p in str(body or '').split('\n') if p.strip()]:   # one rendered paragraph per authored line
                 if para not in text:
                     errors.append(f'S03 controlled section lost {route} {lang} order={sec.get("section_order")}')
                     break
@@ -525,17 +564,18 @@ else:
 
 # Renderer must consume the same canonical presentation contract instead of defining a second evidence layout config.
 for token,label in [
-    ("EVIDENCE_PRESENTATION=FAMILY_PRESENTATION.get('Evidence Record')",'Evidence Record contract consumption'),
-    ('def evidence_record_page(','Evidence Record renderer'),
-    ("_evidence_contract_fields('supporting')",'Evidence Record supporting-field consumption'),
-    ("_evidence_contract_fields('progressive')",'Evidence Record progressive-field consumption'),
-    ("_evidence_contract_fields('always_visible_boundaries')",'Evidence Record boundary consumption'),
+    ('.get("family_contracts") or {}).get("Evidence Record")','Evidence Record contract consumption'),
+    ('def evidence_record(','Evidence Record renderer'),
+    ('"supporting"','Evidence Record supporting-field consumption'),
+    ('"progressive"','Evidence Record progressive-field consumption'),
+    ('"always_visible_boundaries"','Evidence Record boundary consumption'),
 ]:
     if token not in build_src: errors.append('missing '+label)
-if 'def evidence_detail(' in build_src:
-    errors.append('obsolete generic Evidence Record renderer remains')
-if "elif cls=='evidence_detail':\n        body=evidence_record_page(spec,lang)" not in build_src:
+# The family renderer is reached by the page's declared family, from one table, never by a route or an if-chain.
+if '"Evidence Record": evidence_record' not in build_src:
     errors.append('Evidence Record page dispatch not bound to family renderer')
+if 'RENDERERS[page["family"]]' not in build_src:
+    errors.append('page dispatch is not by declared page family')
 
 # Evidence Records are controlled Page Spec routes. Every public route must exist in both languages and bind one public object.
 evidence_specs=[o for o in specs if o.get('page_class')=='evidence_detail']
@@ -570,42 +610,45 @@ for spec in evidence_specs:
         if not f.exists():
             errors.append(f'S04.1 missing Evidence Record route {route} {lang}')
             continue
-        raw=f.read_text(encoding='utf-8'); text=_html.unescape(raw)
-        pre=raw.split('<details class="evidence-more">',1)[0]
-        pre_text=_html.unescape(pre)
+        raw=f.read_text(encoding='utf-8'); text=_vistext(raw)
+        # Progressive detail sits inside the record's seventh question, behind one disclosure; everything before it is
+        # first-load. The disclosure's own element is the split point (EAD-01: `details.more` in `#q7`).
+        pre=raw.split('<details class="more">',1)[0]
+        pre_text=_vistext(pre)
+        # The structural regions of the family, each exactly once, except the verification spine, which the accepted
+        # design renders twice by decision: the numbered strip where a phone reader first needs the map and the foot
+        # spine carrying the edge groups (DEBT-014, DL-D7-009).
         shape=(
-            raw.count('data-evidence-family="Evidence Record"'),
-            raw.count('class="evidence-record-summary"'),
-            raw.count('class="evidence-fact '),
-            raw.count('data-evidence-boundary-first-load'),
-            raw.count('class="evidence-source-section"'),
-            raw.count('class="evidence-related-section"'),
-            raw.count('<details class="evidence-more">'),
-            raw.count('class="evidence-utility"'),
+            raw.count('name="yfie-record-id"'),                 # the record family marker
+            raw.count('id="q1"'),                               # what the evidence establishes (the summary)
+            raw.count('class="qa"'),                            # the governed question blocks (informational)
+            raw.count('data-evidence-boundary-first-load'),     # the boundary, first-load and never disclosed
+            raw.count('id="q6"'),                               # the source section
+            raw.count('<aside class="spine'),                   # the related/exit region
+            raw.count('<details class="more">'),                # the one progressive disclosure
+            raw.count('class="util" data-record-id'),           # the record's own utility region
         )
-        if shape[0]!=1 or shape[1]!=1 or shape[3]!=1 or shape[4]!=1 or shape[5]!=1 or shape[6]!=1 or shape[7]!=1:
+        if shape[0]!=1 or shape[1]!=1 or shape[3]!=1 or shape[4]!=1 or shape[5]!=2 or shape[6]!=1 or shape[7]!=1:
             errors.append(f'S04.1 Evidence Record structural family mismatch {route} {lang} {shape}')
         for field in ['title','summary','definition','universe','period','currentness']:
-            value=obj.get(f'{field}_{lang}') or obj.get(field) or ''
-            value=str(value) if value is not None else ''
+            value=_norm(obj.get(f'{field}_{lang}') or obj.get(field) or '')
             if value and value not in pre_text:
                 errors.append(f'S04.1 first-load evidence field missing {route} {lang} {field}')
         # P4.3: the boundary is rendered as its two governed parts (does not establish | limits of the measure); both
         # must be first-load, and the authored delimiter itself is never printed.
         for part in ('does_not_establish','measurement_limitation'):
-            value=str(obj.get(f'{part}_{lang}') or '')
+            value=_norm(obj.get(f'{part}_{lang}') or '')
             if value and value not in pre_text:
                 errors.append(f'S04.1 material boundary hidden behind progressive disclosure {route} {lang} {part}')
-        _lim=str(obj.get(f'limitations_{lang}') or '')
+        _lim=_norm(obj.get(f'limitations_{lang}') or '')
         if ' | ' in _lim and _lim in text:
             errors.append(f'P4-G02 boundary printed with its internal delimiter {route} {lang}')
         for field in ['method','change_trigger','verification']:
             if field=='method' and obj.get('visual_contract_state'):
-                if (obj.get(f'method_{lang}') or '') and str(obj.get(f'method_{lang}')) in text:
+                if _norm(obj.get(f'method_{lang}') or '') and _norm(obj.get(f'method_{lang}')) in text:
                     errors.append(f'PB-0401 draft encoding note rendered while no governed contract exists {route} {lang}')
                 continue
-            value=obj.get(f'{field}_{lang}') or obj.get(field) or ''
-            value=str(value) if value is not None else ''
+            value=_norm(obj.get(f'{field}_{lang}') or obj.get(field) or '')
             if value and value not in text:
                 errors.append(f'S04.1 progressive evidence field missing {route} {lang} {field}')
         # Related interpretation/backtrack links must resolve in-language; Evidence-only objects still return to Evidence Hub.
@@ -726,18 +769,24 @@ else:
         errors.append('S04.2 Comparison primary verify destination must be evidence_record')
 
 for token,label in [
-    ("COMPARISON_PRESENTATION=FAMILY_PRESENTATION.get('Comparison')",'Comparison contract consumption'),
-    ("supporting=list(COMPARISON_PRESENTATION.get('supporting')",'contract-driven comparison dimensions'),
+    ('.get("family_contracts") or {}).get("Comparison")','Comparison contract consumption'),
+    ('dimensions = [field_map.get(x, x) for x in contract.get("supporting")','contract-driven comparison dimensions'),
+    ('def citation(','detached-use citation context'),
+    ('"trace_ids"','source-reference trace renderer'),
+    ('def source_card(','source citation/reuse controls'),
+    ('"record_ids"','correction/version context renderer'),
+]:
+    if token not in build_src: errors.append('S04.2 missing '+label)
+# The comparison controls are asserted on the rendered tool, not in the renderer's source: the accepted design builds
+# each slot from one function, so a source-literal test would say the fourth slot is missing while the reader has it.
+_cmp_html=(DIST/'en/evidence/compare/index.html').read_text(encoding='utf-8')
+for token,label in [
     ('id="yfie-compare-dimensions"','generated contract dimensions'),
     ('data-comparison-family="Comparison"','Comparison family binding'),
     ('id="compare-c"','optional third comparison record'),
     ('id="compare-d"','optional fourth comparison record'),
-    ('evidence_citation_context(','detached-use citation context'),
-    ('evidence_trace(','source-reference trace renderer'),
-    ('source_trust_controls(','source citation/reuse controls'),
-    ('corrections_context_block(','correction/version context renderer'),
 ]:
-    if token not in build_src: errors.append('S04.2 missing '+label)
+    if token not in _cmp_html: errors.append('S04.2 missing '+label)
 for token,label in [
     ("meta[name=\"yfie-citation\"]",'governed detached citation'),
     ('data-source-cite','source-reference copy behavior'),
@@ -815,13 +864,15 @@ for oid,spec in object_to_spec.items():
             if sid in cite: errors.append(f'S04.2 detached citation leaked no-public-locator source {oid} {lang} {sid}')
         if f'/corrections/?record={quote(oid)}' not in raw: errors.append(f'S04.2 Evidence Record correction route missing {oid} {lang}')
         if 'data-cite' not in raw: errors.append(f'S04.2 Evidence Record cite utility missing {oid} {lang}')
-        if 'source-rights-note' not in raw and public_sids: errors.append(f'S04.2 source reuse boundary missing {oid} {lang}')
+        # The reuse boundary is stated on the source card itself and again in the record's reuse note (EAD-01:
+        # `p.rights` on the card, the governed reuse note in the record's utility region).
+        if 'class="rights"' not in raw and public_sids: errors.append(f'S04.2 source reuse boundary missing {oid} {lang}')
 
 # Source directory separates citation from redistribution and never exposes rights-state codes or no-public locators.
 for lang in ('ar','en'):
     dt=(DIST/lang/'data/index.html').read_text(encoding='utf-8')
     if 'data-source-cite' not in dt: errors.append(f'S04.2 Data/source citation control missing {lang}')
-    if 'source-rights-note' not in dt: errors.append(f'S04.2 Data/source reuse boundary missing {lang}')
+    if 'class="rights"' not in dt: errors.append(f'S04.2 Data/source reuse boundary missing {lang}')
     for leak in ['OBJECT_LEVEL_OR_UNSPECIFIED','rights_display_state','LOCATOR_ONLY','NO_PUBLIC_LOCATOR']:
         if leak in dt: errors.append(f'S04.2 Data/source internal rights/publication code leaked {lang} {leak}')
     for sid in no_public_locator_ids:
@@ -1041,20 +1092,25 @@ try:
     en_measurement=(DIST/'en/measurement/index.html').read_text(encoding='utf-8')
     for m in _measurement:
         raw_domain=str(m.get('domain') or '').strip()
-        if raw_domain and (' · '+raw_domain+'</div>') in ar_measurement:
+        # The classification sits in the priority's clock, after its governed priority token; the element that closes it
+        # is the renderer's business, the localisation is the assertion (EAD-01).
+        if raw_domain and (' · '+raw_domain+'<') in ar_measurement:
             errors.append(f'S05.1 untranslated Measurement domain on Arabic page {m.get("measurement_id")} {raw_domain}')
-        if raw_domain and (' · '+raw_domain+'</div>') not in en_measurement:
+        if raw_domain and (' · '+raw_domain+'<') not in en_measurement:
             errors.append(f'S05.1 English Measurement domain missing {m.get("measurement_id")} {raw_domain}')
 except Exception as e:
     errors.append('S05.1 measurement bilingual QA unreadable '+str(e))
 
 # Mixed-script stable identifiers and language-switch route context are implementation invariants.
-if '.stable-id,.source-id{direction:ltr;unicode-bidi:isolate' not in css:
+# The accepted design isolates an identifier in markup, not by a stylesheet class (`<bdi dir="ltr">`, scripts/yfie/text.py),
+# so the isolation survives with CSS unavailable. Asserted on the rendered Arabic record, where the failure would show.
+_ar_record=(DIST/'ar/evidence/CLM-003/index.html').read_text(encoding='utf-8')
+if '<bdi dir="ltr"' not in _ar_record or 'unicode-bidi:isolate' not in css:
     errors.append('S05.1 stable Latin identifier bidi isolation missing')
 for token,label in [
     ("location.pathname.replace(/^\\/(ar|en)/",'language switch equivalent route preservation'),
     ('location.search+location.hash','language switch query/hash preservation'),
-    ('measurement_domain_label(','Arabic Measurement domain localization'),
+    ('"domain_ar"','Arabic Measurement domain localization'),
 ]:
     target=js if token.startswith('location.') else build_src
     if token not in target: errors.append('S05.1 missing '+label)
@@ -1090,19 +1146,29 @@ for spec in specs:
             ('aria-controls="primary-nav"','menu control relationship'),
             ('aria-expanded="false"','menu initial state'),
             ('id="utility-status"','utility status live region'),
-            ('class="mobile-nav-utilities"','mobile fallback utilities'),
+            # The utilities a small screen must still reach. The baseline hid them at small widths and duplicated them
+            # inside the opened menu; the accepted design keeps them in the controls row at every width, so the
+            # assertion is the outcome — search, cite, report and the language switch are on the page — not the
+            # baseline's duplicate (EAD-01).
+            ('data-search-open','search utility reachable'),
+            ('data-cite','cite utility reachable'),
+            ('class="report"','report utility reachable'),
+            ('data-lang="','language switch reachable'),
         ]:
             if token not in raw: errors.append(f'S05.2 missing {label} {spec.get("route")} {lang}')
 
 # Header utilities hidden at small widths must remain reachable inside the opened mobile nav.
 for token,label in [
-    ('.nav.open .mobile-nav-utilities{display:grid','mobile citation/report utility visibility'),
-    ('.mobile-nav-action{display:flex','mobile utility actionable target'),
-    ('.table-wrap{overflow:auto;max-width:100%','contained comparison table scrolling'),
-    ('.table-wrap[role="region"]:focus-visible','focus indication for scrollable comparison region'),
+    ('.controls{display:flex','header utilities laid out at every width'),
+    ('.table-wrap{overflow-x:auto;max-width:100%','contained comparison table scrolling'),
+    ('.table-wrap:focus-visible','focus indication for scrollable comparison region'),
     ('.sr-only{','visually-hidden accessible text utility'),
 ]:
     if token not in css: errors.append('S05.2 missing '+label)
+# The header utilities are never hidden: the one control the layout may drop is the menu button, once the navigation
+# itself is laid out. Anything that hid the controls would put cite and report out of a phone reader's reach.
+if re.search(r'\.controls\s*\{[^}]*display\s*:\s*none',css) or re.search(r'\.controls\s*\{[^}]*visibility\s*:\s*hidden',css):
+    errors.append('S05.2 header utilities hidden by the stylesheet at some width')
 
 for token,label in [
     ("if(open){\n    const first=n.querySelector('a[href],button:not([disabled])');",'menu focus-forward on open'),
@@ -1209,14 +1275,15 @@ for spec in specs:
                 errors.append(f'S05.3 image-independence marker missing {spec.get("route")} {lang} {vid}')
             if 'data-noncolour-semantic="text-structure-label-position"' not in raw:
                 errors.append(f'S05.3 non-colour semantic marker missing {spec.get("route")} {lang} {vid}')
-            summary=str(v.get(f'accessible_summary_{lang}') or '')
-            if summary and summary not in _html.unescape(raw):
+            shown=_vistext(raw)   # the text layer isolates dates and ranges inside the governed sentence (EAD-01)
+            summary=_norm(v.get(f'accessible_summary_{lang}') or '')
+            if summary and summary not in shown:
                 errors.append(f'S05.3 governed accessible summary missing from rendered fallback {spec.get("route")} {lang} {vid}')
-            question=str(v.get(f'question_{lang}') or '')
-            if question and question not in _html.unescape(raw):
+            question=_norm(v.get(f'question_{lang}') or '')
+            if question and question not in shown:
                 errors.append(f'S05.3 governed visual question missing from rendered fallback {spec.get("route")} {lang} {vid}')
-            boundary=str(v.get(f'prohibited_inference_{lang}') or '')
-            if boundary and boundary not in _html.unescape(raw):
+            boundary=_norm(v.get(f'prohibited_inference_{lang}') or '')
+            if boundary and boundary not in shown:
                 errors.append(f'S05.3 visual prohibited inference missing {spec.get("route")} {lang} {vid}')
 
 if rendered_visual_instances < 20: # 17 material governed visuals x 2 languages = 34 in the accepted current composition.
@@ -1242,9 +1309,9 @@ for token,label in [
     if token not in js: errors.append('S05.3 missing '+label)
 
 for token,label in [
-    ('@media(forced-colors:active)','forced-colours structural fallback'),
-    ('.visual-fallback{','visible visual text fallback'),
-    ('.visual-context{','structured visual context'),
+    ('forced-colors:active)','forced-colours structural fallback'),
+    ('.alt{','visible visual text fallback'),          # the figure's visible text alternative (data-visual-fallback)
+    ('.cap{','structured visual context'),             # the figure's question and scope line
     ('.compare-state{','text/border comparison state'),
 ]:
     if token not in css: errors.append('S05.3 missing '+label)
@@ -1320,15 +1387,21 @@ if nav_contract:
         errors.append('R4 journey matrix incomplete after payment-rail/humanitarian challenge')
 
 # Header/footer navigation is contract-driven; legal/trust routes must not be hidden search-only pages.
-if "NAVIGATION_INTERACTION=load(C/'content/navigation_interaction.json')" not in build_src:
+if '_load("content/navigation_interaction.json")' not in build_src:
     errors.append('R4 renderer is not consuming navigation interaction contract')
+_footer_groups=[[str(l.get('route')) for l in (g.get('links') or [])] for g in (nav_contract.get('footer_groups') or [])]
 for lang in ('ar','en'):
     home=(DIST/lang/'index.html').read_text(encoding='utf-8')
     for route in ('privacy','rights','terms','accessibility','corrections','contact'):
         if f'href="/{lang}/{route}/"' not in home:
             errors.append(f'R4 footer discovery missing /{route}/ {lang}')
-    if home.count('footer-nav-group')!=3:
-        errors.append(f'R4 footer grouping mismatch {lang}')
+    # Every contract footer group reaches the reader as a group with a heading and all its links. Counting one baseline
+    # class would not survive a renderer that names the trust group as its own region; the contract is the assertion.
+    if len(_footer_groups)!=3:
+        errors.append(f'R4 footer contract must hold three groups, holds {len(_footer_groups)}')
+    for gi,links in enumerate(_footer_groups):
+        missing=[r for r in links if f'href="/{lang}{r}"' not in home]
+        if missing: errors.append(f'R4 footer grouping mismatch {lang} group {gi} missing {missing}')
 
 # Deep-link detail routes require first-screen backtracking and Reading-to-Evidence verification.
 detail_route_by_id={}
@@ -1343,7 +1416,7 @@ for o in specs:
         f=DIST/lang/route/'index.html'
         if not f.exists(): continue
         raw=f.read_text(encoding='utf-8')
-        if o.get('page_class') in {'evidence_detail','reading_detail'} and 'class="breadcrumb"' not in raw:
+        if o.get('page_class') in {'evidence_detail','reading_detail'} and 'class="crumb"' not in raw:
             errors.append(f'R4 deep-detail breadcrumb missing {o.get("route")} {lang}')
         if o.get('page_class')=='reading_detail':
             if 'data-reading-verify' not in raw:
@@ -1494,13 +1567,15 @@ for o in specs:
         raw=f.read_text(encoding='utf-8')
         cls=o.get('page_class')
         r='/' + route + '/' if route else '/'
-        if cls=='evidence_detail' and ('evidence-related-section' not in raw or 'evidence-utility' not in raw):
+        # A record must offer verification and a way out. Asserted as the substance rather than as two baseline class
+        # names: the record's own utility region (reference, cite, reuse, history, report) and the exit destinations.
+        if cls=='evidence_detail' and ('data-record-id="' not in raw or not all(f'href="/{lang}/{x}/"' in raw for x in ('evidence','data','methodology'))):
             errors.append(f'R4 Evidence Record lacks verify/exit actions {o.get("route")} {lang}')
         elif cls=='reading_detail' and 'data-reading-verify' not in raw:
             errors.append(f'R4 Reading lacks verification next action {o.get("route")} {lang}')
-        elif r in {'/people/','/access/','/firms/','/finance/','/payments/','/remittances/','/providers/','/reforms/'} and 'class="domain-verify"' not in raw:
+        elif r in {'/people/','/access/','/firms/','/finance/','/payments/','/remittances/','/providers/','/reforms/'} and 'id="verify"' not in raw:
             errors.append(f'R4 domain lacks verification next action {r} {lang}')
-        elif r in (nav_contract.get('route_next_actions') or {}) and 'class="journey-next"' not in raw:
+        elif r in (nav_contract.get('route_next_actions') or {}) and 'id="next"' not in raw:
             errors.append(f'R4 configured route next actions not rendered {r} {lang}')
 
 # ---------------------------------------------------------------------------------------------------------------------
@@ -1508,14 +1583,43 @@ for o in specs:
 # avoidable repetition on flagship pages (P1-G06).
 # ---------------------------------------------------------------------------------------------------------------------
 UNRESOLVED_TOKEN=re.compile(r'\{\{[^{}]*\}\}|\{[A-Z][A-Z0-9_]{1,40}\}')
+def _drop_element(t,start_rx,tag):
+    """Remove every element matching `start_rx` with its subtree, counting nested `tag`s so a nested div cannot end the
+    match early. Needed because the accepted design nests its object and figure layers (EAD-01)."""
+    out=[]; i=0; rx=re.compile(start_rx); open_rx=re.compile(rf'<{tag}\b'); close_rx=re.compile(rf'</{tag}>')
+    while True:
+        m=rx.search(t,i)
+        if not m: out.append(t[i:]); break
+        out.append(t[i:m.start()]); j=m.end(); depth=1
+        while depth and j<len(t):
+            o=open_rx.search(t,j); c=close_rx.search(t,j)
+            if c is None: j=len(t); break
+            if o and o.start()<c.start(): depth+=1; j=o.end()
+            else: depth-=1; j=c.end()
+        i=j
+    return ''.join(out)
+# The layers a page repeats by design, which the repetition test has never counted as the page's own prose. The baseline
+# excluded its own three (`details.all-records`, `section.related-questions`, `p.chronology-sources`) and a chart's text
+# alternative; the accepted design's equivalents are these (EAD-01):
+_P1_NAV_LAYERS=((r'<aside class="spine[^"]*">','aside'),          # the side and foot verification spines (two by DEBT-014)
+                (r'<nav class="strip"[^>]*>','nav'),               # the numbered in-page strip
+                (r'<details class="more mt12">','details'),        # "all evidence records on this question" (the baseline's all-records list)
+                (r'<section class="qa" id="related">','section'),  # the related-questions list
+                (r'<article class="compact[^"]*"[^>]*>','article'), # a bound object: its clock, title, universe, summary and boundary belong to the record it opens
+                (r'<li class="compact[^"]*"[^>]*>','li'))          # a chronology event and its sources line (the baseline's chronology-sources)
+# A figure is its own layer: its panel clocks, state labels, governed alt text, table and frame foot are the non-visual
+# equivalent of a drawing, asserted against the visual contract by P3-G02 and design/reference/check_visuals.py — a
+# different job, as the baseline's own exclusion said. Governed text that a contract's alt_text restates verbatim is a
+# content finding recorded for the steward in design/ESCALATIONS.md (D7), not a repetition Code may remove.
+_P1_FIGURE_LAYER=((r'<figure class="[^"]*"[^>]*>','figure'),)
 def _p1_main_text(raw,drop_text_alternatives=False,drop_link_lists=False):
     m=re.search(r'<main.*?</main>',raw,flags=re.S)
     t=m.group(0) if m else raw
     t=re.sub(r'<script.*?</script>|<style.*?</style>','',t,flags=re.S)
-    if drop_link_lists:   # Tranche C: navigation lists repeat record titles and source names by design (records, related questions, chronology sources)
-        t=re.sub(r'<details class="all-records">.*?</details>|<section class="related-questions">.*?</section>|<p class="chronology-sources">.*?</p>','',t,flags=re.S)
-    if drop_text_alternatives:   # a chart's analytical text alternative is its non-visual equivalent (a different job); P3 governs its presentation
-        t=re.sub(r'<div class="visual-fallback".*?</ol></div>','',t,flags=re.S)
+    if drop_link_lists:
+        for _rx,_tag in _P1_NAV_LAYERS: t=_drop_element(t,_rx,_tag)
+    if drop_text_alternatives:
+        for _rx,_tag in _P1_FIGURE_LAYER: t=_drop_element(t,_rx,_tag)
     t=re.sub(r'</(p|h[1-6]|li|div|section|summary|dt|dd|tr|article|figcaption)>','\n',t)
     return _html.unescape(re.sub(r'<[^>]+>',' ',t))
 # P1-G01: no unresolved template token reaches public HTML (text or attributes), public static data or a Page Spec.
@@ -1568,7 +1672,7 @@ for lang in ('en','ar'):
     want=[t['value'] for s in _data_spec.get('sections') or [] for t in s.get('resolved_inventory_tokens') or [] if t.get('field')==f'body_{lang}']
     f=DIST/lang/'data'/'index.html'
     raw=f.read_text(encoding='utf-8') if f.exists() else ''
-    dl=re.search(r'<dl class="inventory-list"[^>]*>(.*?)</dl>',raw,flags=re.S)
+    dl=re.search(r'<dl class="inventory"[^>]*data-public-inventory[^>]*>(.*?)</dl>',raw,flags=re.S)
     got=[int(x.replace(',','')) for x in re.findall(r'<dd[^>]*>([\d,]+)</dd>',dl.group(1))] if dl else []
     if not want or got!=want:
         errors.append(f'P1-G03 /data/ inventory list {lang} shows {got}, contract tokens give {want}')
@@ -1594,7 +1698,9 @@ for o in specs:
     for lang in ('en','ar'):
         f=DIST/lang/route/'index.html'
         if not f.exists(): continue
-        text=_p1_main_text(f.read_text(encoding='utf-8'))
+        # The numbered in-page index and the strip put an ordinal immediately before a section heading ("10  Questions"),
+        # which is navigation, not an inventory count phrase. The same layers the repetition test excludes (EAD-01).
+        text=_p1_main_text(f.read_text(encoding='utf-8'),drop_link_lists=True)
         if lang=='en':
             for m in _EN_INV.finditer(text):
                 num=m.group(1); key=_EN_KEY.get(m.group(2).lower())
@@ -1672,8 +1778,12 @@ for lang in ('en','ar'):
         if 'data-correction-origin' not in h or 'id="yfie-record-ids"' not in h: errors.append(f'P2-G02 record context missing on /{r}/ {lang}')
     if 'data-correction-mail' not in (DIST/lang/'contact'/'index.html').read_text(encoding='utf-8'): errors.append(f'P2-G02 report action missing on /contact/ {lang}')
     dh=(DIST/lang/'data/index.html').read_text(encoding='utf-8')
-    if dh.count('class="source-rights-note"')!=1: errors.append(f'P2-G02 /data/ must state the reuse boundary once, got {dh.count(chr(34)+"source-rights-note"+chr(34))} {lang}')
-    if dh.count('class="source-rights-state"')<len([s for s in _srm if str(s.get("primary_url") or "").startswith("http")])-1:
+    # The page states the reuse boundary once, in its own governed sentence, and every card carries its own
+    # reuse-terms state. Asserted on the governed text and the state marker, not on two baseline class names (EAD-01).
+    _rights_once=_norm(next((r.get(f'label_{lang}') for r in json.load(open(C/'content/interface_copy.json',encoding='utf-8')) if r.get('ui_id')=='UI-DATA-EVERY-SOURCE-HERE-CAN-BE'),''))
+    if not _rights_once or _vistext(dh).count(_rights_once)!=1:
+        errors.append(f'P2-G02 /data/ must state the reuse boundary once, got {_vistext(dh).count(_rights_once) if _rights_once else 0} {lang}')
+    if dh.count('data-rights-state')<len([s for s in _srm if str(s.get("primary_url") or "").startswith("http")])-1:
         errors.append(f'P2-G02 /data/ source cards lack their reuse-terms state {lang}')
 for f in DIST.rglob('*.html'):
     raw=f.read_text(encoding='utf-8'); rel=str(f.relative_to(DIST))
@@ -1686,7 +1796,8 @@ for f in DIST.rglob('*.html'):
         if len(parts)!=len(set(parts)): errors.append(f'P2-G02 citation repeats a part as if it were a title {rel}: {cp[:80]}')
     for t in re.findall(r'<table\b.*?</table>',raw,flags=re.S):
         if '<caption' not in t: errors.append(f'P2-G03 table without caption {rel}')
-        if re.search(r'<th(?![^>]*\bscope=)',t): errors.append(f'P2-G03 table header cell without scope {rel}')
+        # A `th` element, not the start of `thead`: `<th(?!…scope=)` also matches `<thead>` (EAD-01).
+        if re.search(r'<th(?![a-z])(?![^>]*\bscope=)',t): errors.append(f'P2-G03 table header cell without scope {rel}')
     for d in re.findall(r'<dialog\b[^>]*>',raw):
         if 'aria-labelledby' not in d and 'aria-label' not in d: errors.append(f'P2-G03 dialog without accessible name {rel}')
     if re.search(r'tabindex="[1-9]',raw): errors.append(f'P2-G03 positive tabindex {rel}')
@@ -1734,8 +1845,118 @@ for _x in _vdc['visuals']:
             if not _x.get(f'detached_caption_{_lang}'): errors.append(f'P3-G01 {_x["visual_id"]} lacks detached_caption_{_lang}')
     elif 'contract' in _x:
         errors.append(f'P3-G01 {_x["visual_id"]} ({_x["tier"]}) carries a data contract it should not')
-_charts=[str(f.relative_to(DIST)) for f in DIST.rglob('*.html') if re.search(r'<(svg|canvas)\b',f.read_text(encoding='utf-8'))]
-if _charts: errors.append(f'P3-G02 static baseline draws a graphic without a design implementation: {_charts[:5]}')
+# P3-G02 (EAD-01): the pre-design baseline drew nothing, so this gate asserted that no graphic existed anywhere. The
+# production runtime draws the governed visual contracts, so the same gate now checks each drawn visual AGAINST its
+# contract — tier, rows, labels, markers, fallback — and still refuses a graphic that is not a governed visual at all.
+# What may draw is the renderer's own registry (scripts/yfie/visuals.py FIGURES and DRAWERS), the same answer
+# design/reference/check_visuals.py uses, so the two checks cannot disagree about what a drawing is.
+sys.path.insert(0,str(ROOT/'scripts'))
+from yfie.visuals import DRAWERS as _VIS_DRAWERS, FIGURES as _VIS_FIGURES   # noqa: E402
+_P3_MAY_DRAW=set(_VIS_FIGURES)|set(_VIS_DRAWERS)
+_P3_TEXT_FRAME_EXCEPTIONS={'VIS-PROVIDER-OBSERVABILITY'}   # its five matrix headings and fifth class label are not governed (DEBT-013, brief §10)
+_VIS_DRAWING_TIERS={'SIGNATURE','CORE_ANALYTICAL'}
+_VIS_BY_ID={x['visual_id']:x for x in _vdc['visuals']}
+def _p3_figures(raw):
+    """Every `figure` element with its subtree, counting nested figures."""
+    out=[]
+    for _m in re.finditer(r'<figure\b[^>]*>',raw):
+        j=_m.end(); depth=1
+        while depth:
+            o=raw.find('<figure',j); c=raw.find('</figure>',j)
+            if c<0: j=len(raw); break
+            if 0<=o<c: depth+=1; j=o+7
+            else: depth-=1; j=c+9
+        out.append(raw[_m.start():j])
+    return out
+def _p3_rows(vid):
+    _c=(_VIS_BY_ID.get(vid) or {}).get('contract') or {}
+    _out=[]
+    for _s in (_c.get('series') or []):
+        for _v in (_s.get('values') or []):
+            _out.append((_v.get('y'),_v.get('grammar_state') or _s.get('state'),tuple(_v.get('markers') or _s.get('markers') or [])))
+    for _o in (_c.get('objects') or []):
+        _out.append((_o.get('value'),_o.get('state'),tuple(_o.get('markers') or [])))
+    return _out
+def _p3_numtext(x):
+    return ('%f'%x).rstrip('0').rstrip('.') if isinstance(x,float) else str(x)
+def _p3_nums(fragment):
+    _tmp=DIST/'.p3-figure.html'
+    _tmp.write_text('<main>'+fragment+'</main>',encoding='utf-8')
+    try: return set(_BI.nums(str(_tmp)))
+    finally: _tmp.unlink()
+_p3_drawn={}
+for _f in sorted(DIST.rglob('*.html')):
+    _raw=_f.read_text(encoding='utf-8'); _rel=str(_f.relative_to(DIST))
+    _lang='ar' if _rel.startswith('ar/') else 'en'
+    _figs=_p3_figures(_raw)
+    # Nothing may draw outside a figure bound to a governed visual: that was this gate's original job and it keeps it.
+    _outside=_raw
+    for _fig in _figs: _outside=_outside.replace(_fig,'')
+    if re.search(r'<(svg|canvas)\b',_outside):
+        errors.append(f'P3-G02 graphic outside a governed visual figure in {_rel}')
+    for _fig in _figs:
+        _m=re.search(r'data-visual-id="([^"]+)"',_fig)
+        if not _m:
+            errors.append(f'P3-G02 figure without a governed visual id in {_rel}')
+            continue
+        _vid=_m.group(1); _x=_VIS_BY_ID.get(_vid)
+        if not _x:
+            errors.append(f'P3-G02 figure binds an ungoverned visual {_vid} in {_rel}')
+            continue
+        if '<canvas' in _fig:
+            errors.append(f'P3-G02 {_vid} drawn on a canvas, which carries no text equivalent, in {_rel}')
+        _is_text_frame='fig-text' in (re.search(r'<figure class="([^"]*)"',_fig) or re.match('',''))\
+            .group(1 if re.search(r'<figure class="([^"]*)"',_fig) else 0)
+        if _vid in _P3_MAY_DRAW and _is_text_frame and _vid not in _P3_TEXT_FRAME_EXCEPTIONS:
+            errors.append(f'P3-G02 {_vid} may draw but renders as a text frame in {_rel}')
+        if _vid not in _P3_MAY_DRAW and not _is_text_frame:
+            errors.append(f'P3-G02 {_vid} ({_x["tier"]}) is drawn although no drawing is governed for it, in {_rel}')
+        if _is_text_frame:
+            continue
+        _p3_drawn.setdefault(_vid,set()).add(_lang)
+        _rows=_p3_rows(_vid)
+        # fallback: a drawing is never the only carrier of its meaning
+        for _attr in ('data-visual-fallback="ordered-text"','data-image-independent="true"','data-noncolour-semantic='):
+            if _attr not in _fig: errors.append(f'P3-G02 {_vid} drawn without {_attr.rstrip("=")} in {_rel}')
+        if _rows:
+            # a contract that binds rows plots them, so it must be a tier that may plot, must carry the value table, and
+            # must print every governed row value — a drawing may not round, truncate or drop one
+            if _x['tier'] not in _VIS_DRAWING_TIERS:
+                errors.append(f'P3-G02 {_vid} binds rows and is drawn, but its tier is {_x["tier"]} ({_rel})')
+            if '<table' not in _fig or '<caption' not in _fig:
+                errors.append(f'P3-G02 {_vid} drawn without a captioned value table in {_rel}')
+            if not re.search(r'<th[^>]*scope="col"',_fig):
+                errors.append(f'P3-G02 {_vid} value table has no column header in {_rel}')
+            _got=_p3_nums(_fig)
+            for _y,_st,_mk in _rows:
+                if isinstance(_y,(int,float)) and _p3_numtext(_y) not in _got:
+                    errors.append(f'P3-G02 {_vid} does not print its governed row value {_y} in {_rel}')
+        else:
+            # a contract that binds no rows may draw governed structure — steps, dates, state labels — and nothing else:
+            # no plot, no value axis. This is the pre-design gate's rule, kept: no chart without a data contract.
+            if '<svg' in _fig or 'class="lbl' in _fig:
+                errors.append(f'P3-G02 {_vid} ({_x["tier"]}) plots a value scale although its contract binds no rows ({_rel})')
+        # labels and markers: the governed title, and the grammar label of every state and marker a row carries
+        _shown=_vistext(_fig)
+        _title=_norm((_x.get('governed') or {}).get(f'title_{_lang}') or '')
+        if _title and _title not in _shown:
+            errors.append(f'P3-G02 {_vid} drawn without its governed title in {_rel}')
+        _want=set()
+        for _y,_st,_mk in _p3_rows(_vid):
+            if _st: _want.add('UI-VIS-STATE-'+str(_st).replace('_','-'))
+            for _k in _mk: _want.add('UI-VIS-'+str(_k).replace('_','-'))
+        for _u in sorted(_want):
+            _g=_vdc['grammar_labels'].get(_u)
+            if not _g:
+                errors.append(f'P3-G02 {_vid} carries state/marker {_u} with no governed grammar label')
+            elif _norm(_g.get(_lang) or '') not in _shown:
+                errors.append(f'P3-G02 {_vid} drawn without the governed label for {_u} in {_rel}')
+# A contract the renderer can draw and never does is a silently unshipped drawing, not a pass; and a drawing must reach
+# both editions, or one language is reading a chart the other cannot.
+for _vid in sorted(_P3_MAY_DRAW-_P3_TEXT_FRAME_EXCEPTIONS):
+    _langs=_p3_drawn.get(_vid) or set()
+    if _langs!={'en','ar'}:
+        errors.append(f'P3-G02 {_vid} is drawable but renders drawn in {sorted(_langs) or "no"} edition(s)')
 def _scope_map(raw):
     out={}
     for m in re.finditer(r'data-visual-id="([^"]+)"(.*?)</ol>',raw,flags=re.S):
@@ -1974,26 +2195,36 @@ try:
     for _r in _rds:
         for _L in ('en','ar'):
             _raw=(DIST/_L/str(_r['route']).strip('/')/'index.html').read_text(encoding='utf-8')
-            _secs=re.findall(r'<section class="reading-section"[^>]*>(.*?)</section>',_raw,re.S)
-            _h=[_html.unescape(re.sub(r'<[^>]+>','',x)).strip() for x in re.findall(r'<h2>(.*?)</h2>',_secs[-1] if _secs else '')]
+            _secs=re.findall(r'<section data-reading-section="[^"]*"[^>]*>(.*?)</section>',_raw,re.S)
+            _h=[_html.unescape(re.sub(r'<[^>]+>','',x)).strip() for x in re.findall(r'<h2[^>]*>(.*?)</h2>',_secs[-1] if _secs else '')]
             if not _h or _h[0]!=_RP_END[_L]:
                 errors.append(f'RP-G01 Reading essay does not end with "{_RP_END[_L]}" {_r["reading_id"]} {_L}')
-            _i=[_raw.find(m) for m in ('class="reading-essay"','data-reading-verify','data-reading-related')]
+            _i=[_raw.find(m) for m in ('class="essay"','data-reading-verify','data-reading-related')]
             if min(_i)<0 or _i!=sorted(_i):
                 errors.append(f'RP-G01 Reading order must be essay -> evidence path -> related Readings {_r["reading_id"]} {_L}')
-            if len(re.findall(r'data-related-reading|class="reading-related-link"',_raw)) not in (1,2):
+            _relsec=re.search(r'data-reading-related>.*?</section>',_raw,re.S)
+            if len(re.findall(r'<article class="compact"',_relsec.group(0) if _relsec else '')) not in (1,2):
                 errors.append(f'RP-G01 a Reading links one or two related Readings {_r["reading_id"]} {_L}')
             if _raw.count('data-visual-id=')>1:
                 errors.append(f'RP-G02 more than one visual on a Reading page {_r["reading_id"]} {_L}')
             if 'class="section-number"' in _raw:
                 errors.append(f'RP-G02 numbered section template on a Reading page {_r["reading_id"]} {_L}')
-            if _L=='ar' and '→' in re.sub(r'<script.*?</script>','',_raw,flags=re.S).split('class="reading-essay"')[1].split('data-reading-verify')[0]:
+            if _L=='ar' and '→' in re.sub(r'<script.*?</script>','',_raw,flags=re.S).split('class="essay"')[-1].split('data-reading-verify')[0]:
                 errors.append(f'RP-G02 left-to-right arrow in an Arabic Reading essay {_r["reading_id"]}')
+    # The featured Reading is the one first-position object of the page's featured section; its route names it. The
+    # accepted design prints no reading reference on these pages (PID-1), so the route is the selector (EAD-01).
+    _route_to_reading={('/readings/'+str(_r.get('slug') or '').strip('/')+'/'):_r['reading_id'] for _r in _rds if _r.get('slug')}
+    for _r in _rds:
+        _rt=str(_r.get('public_route') or _r.get('route') or '').strip()
+        if _rt: _route_to_reading['/'+_rt.strip('/')+'/']=_r['reading_id']
     for _L in ('en','ar'):
         _ids=set()
         for _rel in ('index.html','explore/index.html','readings/index.html'):
             _raw=(DIST/_L/_rel).read_text(encoding='utf-8')
-            _f=re.findall(r'data-featured-reading="([^"]+)"',_raw)
+            _f=[]
+            for _seg in re.findall(r'<article class="compact first-obj">(.*?)</article>',_raw,flags=re.S):
+                _m=re.search(r'<div class="q"><a href="/(?:en|ar)(/readings/[^"]+)"',_seg)
+                if _m and _m.group(1) in _route_to_reading: _f.append(_route_to_reading[_m.group(1)])
             if len(_f)!=1: errors.append(f'RP-G03 one featured Reading expected on /{_L}/{_rel}: {_f}')
             _ids.update(_f)
         if _ids!=set(_feat): errors.append(f'RP-G03 featured Reading differs across Home/Explore/Readings {_L}: {sorted(_ids)} vs {_feat}')
@@ -2101,8 +2332,14 @@ try:
                 if _ty=='Article' and not str(_r).startswith('/readings/') : errors.append(f'F6-G04 Article outside Readings {_rel}')
                 if _ty=='Article' and _r=='/readings/': errors.append(f'F6-G04 Article on the Readings index')
                 if _ty=='BreadcrumbList':
-                    _nav=re.search(r'<nav class="breadcrumb"[^>]*>(.*?)</nav>',_t,re.S)
-                    _vis=[_html.unescape(x).strip() for x in re.findall(r'>([^<>]+)</(?:a|span)>',_nav.group(1)) if x.strip()!='/'] if _nav else []
+                    # The visible trail, read structurally: its parent link and its current step. The text layer wraps an
+                    # identifier in its own isolate, so the step's text is not a bare text node (EAD-01).
+                    _nav=re.search(r'<nav class="crumb"[^>]*>(.*?)</nav>',_t,re.S)
+                    _vis=[]
+                    if _nav:
+                        for _a,_b in re.findall(r'<a\b[^>]*>(.*?)</a>|<span[^>]*aria-current="page"[^>]*>(.*?)</span>',_nav.group(1),re.S):
+                            _txt=_vistext(_a or _b).strip()
+                            if _txt: _vis.append(_txt)
                     _ld=[i.get('name') for i in _o.get('itemListElement',[])]
                     if _vis!=_ld: errors.append(f'F6-G04 breadcrumb data differs from the visible breadcrumb {_rel}: {_ld} vs {_vis}')
                 if _ty not in ('WebSite','Article','BreadcrumbList'): errors.append(f'F6-G04 unexpected structured-data type {_ty} {_rel}')
@@ -2134,7 +2371,7 @@ try:
             if not re.search(r'type="application/(?:ld\+)?json"',_m.group(1)): errors.append(f'F6-G05 inline executable script in {_rel}')
         for _m in re.finditer(r'<a\b[^>]*target="_blank"[^>]*>',_t):
             if 'noopener' not in _m.group(0): errors.append(f'F6-G05 new-tab link without rel=noopener in {_rel}')
-    for _css in ('assets/styles.css',):
+    for _css in ('assets/yfie.css',):
         if re.search(r'@import|url\((?:["\'])?(?:https?:)?//',(DIST/_css).read_text(encoding='utf-8')): errors.append('F6-G05 external resource in the stylesheet')
     import checksums as _CS   # F9: git ls-files, or every file of an extracted archive (the same set SHA256SUMS.txt covers)
     _tracked=_CS.tracked_files()
@@ -2143,7 +2380,8 @@ try:
     for _p in _tracked:
         if not _p: continue
         if _docs.search(_p) and _p!='authority/Yemen_Financial_Inclusion_Evidence_Master.xlsx': errors.append(f'F6-G07 bundled document {_p}')
-        if _p.startswith('dist/') and not re.search(r'\.(?:html|css|js|json|png|txt|xml)$',_p): errors.append(f'F6-G07 non-web file in dist {_p}')
+        # woff2: the self-hosted IBM Plex faces the stylesheet declares (EAD-08). Still no office, PDF or archive file.
+        if _p.startswith('dist/') and not re.search(r'\.(?:html|css|js|json|png|txt|xml|woff2)$',_p): errors.append(f'F6-G07 non-web file in dist {_p}')
         if re.search(r'\.(?:png|xlsx|jpg|jpeg|gif|ico|woff2?)$',_p,re.I): continue
         try: _tx=(ROOT/_p).read_text(encoding='utf-8')
         except Exception: continue
@@ -2211,6 +2449,8 @@ except Exception as _x:
     errors.append('R86-G unreadable '+repr(_x))
 
 print(f'HTML={len(list(DIST.rglob("*.html")))} ERRORS={len(errors)} WARN={len(warns)}')
+if warns:
+    for w in warns[:20]: print('WARN',w)
 if errors:
     for e in errors[:100]: print('FAIL',e)
     sys.exit(1)

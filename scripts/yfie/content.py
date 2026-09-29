@@ -17,6 +17,8 @@ import re
 from pathlib import Path
 from urllib.parse import quote
 
+from . import question_sets   # the R8.4A selection and grouping, until a governed contract holds them (EAD-11)
+
 ROOT = Path(__file__).resolve().parents[2]
 CONTENT = ROOT / "site-src" / "content"
 
@@ -90,10 +92,10 @@ class Content:
                 sid = str(ref.get("source_id") or "").strip()
                 if oid and sid and sid in self.public_source_ids:
                     self.source_dependents.setdefault(sid, []).append({"route": s["route"], "id": oid, "title_en": self.loc(obj, "title", "en") or oid, "title_ar": self.loc(obj, "title", "ar") or oid})
-        # Explore's four clusters are recorded in the handoff inventory (brief §4.1: `/explore/` → collection.question_groups).
-        inv = json.loads((ROOT / "handoff" / "ROUTE_CONTENT_AND_STATE_INVENTORY.json").read_text(encoding="utf-8"))
-        explore = next((r for r in inv.get("routes", []) if r.get("route") == "/explore/"), {})
-        self.question_groups = (explore.get("collection") or {}).get("question_groups") or []
+        # Explore's four clusters: the R8.4A grouping, from the one place that holds it (EAD-11). Before EAD-01 this
+        # was read back out of the handoff inventory, which recovered it by scraping the baseline renderer's HTML —
+        # a build that was its own input. It is a named set now, and the inventory reads it from there.
+        self.question_groups = [dict(g) for g in question_sets.EXPLORE_QUESTION_GROUPS]
 
     # ------------------------------------------------------------------------------------------------ primitives
     @staticmethod
@@ -586,7 +588,7 @@ class Content:
     def home(self, lang: str) -> dict:
         spec = self.spec_by_route["/"]
         secs = self.sections(spec, lang)
-        chosen = ["QE-002", "QE-003", "QE-005", "QE-011"]
+        chosen = question_sets.HOME_STARTING_QUESTION_IDS   # the R8.4A selection (EAD-11)
         qs = {q["question_id"]: q for q in self.questions}
         starting = []
         for qid in chosen:

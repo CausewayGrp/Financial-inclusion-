@@ -12,7 +12,7 @@
  },
  "paths": {
   "projection": "authority/…Master.xlsx -> scripts/generate_projections.py (scripts/projection/*, contracts: master_structure.json, projection_manifest.json, controlled_inputs/*) -> site-src/content/**",
-  "runtime": "site-src/content/** + site-src/app.js + site-src/styles.css + site-src/assets/* -> scripts/build.py -> dist/**",
+  "runtime": "site-src/content/** + site-src/app.js + site-src/lang-redirect.js + site-src/assets/* + vendor/fonts/** -> scripts/yfie (the one renderer) <- scripts/build.py -> dist/**",
   "change": "Master transaction -> audit/tranche_b_execution/run_stage.py (generate, rebind, build, literal audit, diagrams, validate, --check) -> commit",
   "recipient_start": [
    "README.md",
@@ -33,14 +33,14 @@
   "GENERATED_DIAGRAMS": 9,
   "GENERATED_LITERAL_CLOSURE": 1,
   "GENERATED_PROJECTION": 37,
-  "GENERATED_PUBLIC_BUILD": 295,
+  "GENERATED_PUBLIC_BUILD": 303,
   "LOGO_AUTHORITY": 1,
-  "PRODUCTION_RENDERER": 9,
+  "PRODUCTION_RENDERER": 10,
   "PROJECTION_CONTRACT": 11,
   "PROJECTION_GENERATOR": 13,
   "RECIPIENT_HANDOFF": 11,
   "REPOSITORY_ENGINEERING": 9,
-  "RUNTIME_SOURCE": 4,
+  "RUNTIME_SOURCE": 3,
   "STANDING_POLICY": 5,
   "VENDORED_FONTS": 27
  },
@@ -3654,11 +3654,43 @@
    "class": "GENERATED_PUBLIC_BUILD"
   },
   {
+   "path": "dist/assets/fonts/ibm-plex-sans-arabic/IBMPlexSansArabic-Medium.woff2",
+   "class": "GENERATED_PUBLIC_BUILD"
+  },
+  {
+   "path": "dist/assets/fonts/ibm-plex-sans-arabic/IBMPlexSansArabic-Regular.woff2",
+   "class": "GENERATED_PUBLIC_BUILD"
+  },
+  {
+   "path": "dist/assets/fonts/ibm-plex-sans-arabic/IBMPlexSansArabic-SemiBold.woff2",
+   "class": "GENERATED_PUBLIC_BUILD"
+  },
+  {
+   "path": "dist/assets/fonts/ibm-plex-sans-arabic/LICENSE.txt",
+   "class": "GENERATED_PUBLIC_BUILD"
+  },
+  {
+   "path": "dist/assets/fonts/ibm-plex-sans/IBMPlexSans-Medium.woff2",
+   "class": "GENERATED_PUBLIC_BUILD"
+  },
+  {
+   "path": "dist/assets/fonts/ibm-plex-sans/IBMPlexSans-Regular.woff2",
+   "class": "GENERATED_PUBLIC_BUILD"
+  },
+  {
+   "path": "dist/assets/fonts/ibm-plex-sans/IBMPlexSans-SemiBold.woff2",
+   "class": "GENERATED_PUBLIC_BUILD"
+  },
+  {
+   "path": "dist/assets/fonts/ibm-plex-sans/LICENSE.txt",
+   "class": "GENERATED_PUBLIC_BUILD"
+  },
+  {
    "path": "dist/assets/lang-redirect.js",
    "class": "GENERATED_PUBLIC_BUILD"
   },
   {
-   "path": "dist/assets/styles.css",
+   "path": "dist/assets/yfie.css",
    "class": "GENERATED_PUBLIC_BUILD"
   },
   {
@@ -4602,6 +4634,10 @@
    "class": "PRODUCTION_RENDERER"
   },
   {
+   "path": "scripts/yfie/question_sets.py",
+   "class": "PRODUCTION_RENDERER"
+  },
+  {
    "path": "scripts/yfie/render.py",
    "class": "PRODUCTION_RENDERER"
   },
@@ -4787,10 +4823,6 @@
   },
   {
    "path": "site-src/lang-redirect.js",
-   "class": "RUNTIME_SOURCE"
-  },
-  {
-   "path": "site-src/styles.css",
    "class": "RUNTIME_SOURCE"
   },
   {

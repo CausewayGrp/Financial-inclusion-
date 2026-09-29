@@ -41,7 +41,8 @@ engineer for a mature public evidence product. Use everything you can do:
 - **Look at your own work.** Render every family at 320, 390, 640 and 1440 CSS px in Arabic and English, look at the
   screenshots, critique them against `handoff/DESIGN_ACCEPTANCE_CRITERIA.md`, fix, and repeat. Test keyboard paths, zoom,
   reduced motion, forced colours and image-off yourself.
-- **Challenge weak inheritance.** The current layout and styles in `site-src/styles.css` are a behavioural baseline, not
+- **Challenge weak inheritance.** The layout and styles of the pre-design baseline renderer (its stylesheet, removed with
+  that renderer at EAD-01) are a behavioural baseline, not
   a design. Replace anything that is merely inherited. Keep only what earns its place.
 - **Decide.** Resolve ordinary design questions professionally and record the reasoning; do not stop to ask about
   details a senior designer would settle. Escalate only truth and missing governed content (§2).
@@ -354,7 +355,8 @@ consultancy styling · news-portal density · "data theatre".
   (header, footer, 404, social images) and its clear space. It is 96–99 % of every page's transfer today; web-size
   derivatives are an owner-approved engineering step after Design (open item EAD-03) — specify the sizes Code must
   export, do not produce them yourself. The reference build whitens the footer logo with a CSS filter
-  (`brightness(0) invert(1)` in `site-src/styles.css`): that is a recolouring and must not be carried forward. On a dark
+  (`brightness(0) invert(1)` in the pre-design baseline stylesheet, removed at EAD-01): that is a recolouring and must not
+  be carried forward. On a dark
   surface, place the logo on a light field with its clear space, or record a request for an owner-supplied reversed
   version (`FINAL_OPEN_ITEMS_REGISTER.md`, OWN-06) — never derive one by filter, blend or tracing.
 - **Typography.** Required: IBM Plex Sans (English) and IBM Plex Sans Arabic (Arabic), self-hosted from
@@ -804,7 +806,7 @@ every width, with every state reachable.
 
 - **Where.** Its source lives in `design/reference/` with one documented build command that writes the site to
   `design/reference/out/` (git-ignored). It does not write to `dist/` and does not change `scripts/build.py`,
-  `site-src/app.js` or `site-src/styles.css`: those stay the baseline, and every repository gate keeps running on `dist/`
+  `site-src/app.js` or the pre-design baseline stylesheet: those stay the baseline, and every repository gate keeps running on `dist/`
   unchanged (gate P3-G02 — "the baseline draws no chart" — applies to `dist/` only; your charts live in your output).
   Replacing the baseline renderer is Code's job after acceptance. Any stack is fine (a static generator, a React static
   pre-render); choose what gives Code the best implementation-grade source.
