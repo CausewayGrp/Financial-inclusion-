@@ -29,7 +29,7 @@ same frame lines, the identity line and no cite control; every social frame (`_s
 title, canonical link, edition and the unaltered logo. Then print: one route per family in both languages is printed to
 PDF (A4) and its first page must carry the page title; with PyMuPDF installed the pages are rasterised for the evidence.
 Then text: every built document's <main> and every export and social frame is scanned statically for an ISO date or a
-numeric range outside a dir="ltr" isolate, with the renderer's own expression (yfie.text.LTR_RUN).
+numeric range outside a dir="ltr" isolate, with the renderer's own expression (scripts/yfie/text.py LTR_RUN).
 With --evidence DIR: figure crops of every drawn contract (1440 px, both languages), export and social PNGs, print pages.
 Exit 1 on any failure. Proof for the record, not authority; design/COVERAGE.csv cites this tool's output.
 """
@@ -48,7 +48,7 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[2]
 REF = ROOT / "design" / "reference"
-sys.path.insert(0, str(REF))
+sys.path.insert(0, str(ROOT / "scripts"))   # the production renderer package (EAD-01)
 from yfie.visuals import DRAWERS, FIGURES, matrix_labels_governed, plain_num  # noqa: E402
 from yfie.text import LTR_RUN  # noqa: E402
 

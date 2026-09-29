@@ -35,7 +35,7 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[2]
 REF = ROOT / "design" / "reference"
-sys.path.insert(0, str(REF))
+sys.path.insert(0, str(ROOT / "scripts"))   # the production renderer package (EAD-01)
 from yfie import content as C  # noqa: E402
 import check_visuals as CV  # noqa: E402  (serve)
 

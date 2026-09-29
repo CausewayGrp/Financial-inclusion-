@@ -54,13 +54,10 @@ NUMBER_KEYS = {"id", "citation"}   # the page's own identifier and citation: pri
 
 
 def load_content_module():
-    """The one governed-content loader. Until EAD-01 promotes it, it lives in the Design package."""
-    for rel, pkg in (("scripts/render", "content"), ("design/reference", "yfie.content")):
-        if (ROOT / rel).exists():
-            sys.path.insert(0, str(ROOT / rel))
-            mod = __import__(pkg, fromlist=["*"])
-            return mod
-    raise SystemExit("no governed-content loader found")
+    """The one governed-content loader of the production renderer (EAD-01)."""
+    sys.path.insert(0, str(ROOT / "scripts"))
+    from yfie import content   # noqa: PLC0415  (imported here so the module stays importable without the renderer)
+    return content
 
 
 def governed_strings(obj, out: set, key: str = "", min_len: int = 12) -> set:

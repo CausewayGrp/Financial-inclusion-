@@ -29,12 +29,13 @@
   "CONTROLLED_CONTRACT": 2,
   "CURRENT_DOCUMENT": 10,
   "CURRENT_PROGRAMME_RECORD": 52,
-  "DESIGN_PACKAGE": 455,
+  "DESIGN_PACKAGE": 446,
   "GENERATED_DIAGRAMS": 9,
   "GENERATED_LITERAL_CLOSURE": 1,
   "GENERATED_PROJECTION": 37,
   "GENERATED_PUBLIC_BUILD": 295,
   "LOGO_AUTHORITY": 1,
+  "PRODUCTION_RENDERER": 9,
   "PROJECTION_CONTRACT": 11,
   "PROJECTION_GENERATOR": 13,
   "RECIPIENT_HANDOFF": 11,
@@ -3069,42 +3070,6 @@
    "class": "DESIGN_PACKAGE"
   },
   {
-   "path": "design/reference/yfie/__init__.py",
-   "class": "DESIGN_PACKAGE"
-  },
-  {
-   "path": "design/reference/yfie/content.py",
-   "class": "DESIGN_PACKAGE"
-  },
-  {
-   "path": "design/reference/yfie/families.py",
-   "class": "DESIGN_PACKAGE"
-  },
-  {
-   "path": "design/reference/yfie/frames.py",
-   "class": "DESIGN_PACKAGE"
-  },
-  {
-   "path": "design/reference/yfie/neutral.py",
-   "class": "DESIGN_PACKAGE"
-  },
-  {
-   "path": "design/reference/yfie/render.py",
-   "class": "DESIGN_PACKAGE"
-  },
-  {
-   "path": "design/reference/yfie/text.py",
-   "class": "DESIGN_PACKAGE"
-  },
-  {
-   "path": "design/reference/yfie/theme.py",
-   "class": "DESIGN_PACKAGE"
-  },
-  {
-   "path": "design/reference/yfie/visuals.py",
-   "class": "DESIGN_PACKAGE"
-  },
-  {
    "path": "dist/404.html",
    "class": "GENERATED_PUBLIC_BUILD"
   },
@@ -4615,6 +4580,42 @@
   {
    "path": "scripts/validate.py",
    "class": "BUILD_AND_GATES"
+  },
+  {
+   "path": "scripts/yfie/__init__.py",
+   "class": "PRODUCTION_RENDERER"
+  },
+  {
+   "path": "scripts/yfie/content.py",
+   "class": "PRODUCTION_RENDERER"
+  },
+  {
+   "path": "scripts/yfie/families.py",
+   "class": "PRODUCTION_RENDERER"
+  },
+  {
+   "path": "scripts/yfie/frames.py",
+   "class": "PRODUCTION_RENDERER"
+  },
+  {
+   "path": "scripts/yfie/neutral.py",
+   "class": "PRODUCTION_RENDERER"
+  },
+  {
+   "path": "scripts/yfie/render.py",
+   "class": "PRODUCTION_RENDERER"
+  },
+  {
+   "path": "scripts/yfie/text.py",
+   "class": "PRODUCTION_RENDERER"
+  },
+  {
+   "path": "scripts/yfie/theme.py",
+   "class": "PRODUCTION_RENDERER"
+  },
+  {
+   "path": "scripts/yfie/visuals.py",
+   "class": "PRODUCTION_RENDERER"
   },
   {
    "path": "site-src/app.js",

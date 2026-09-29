@@ -25,7 +25,7 @@ from pathlib import Path
 
 HERE = Path(__file__).resolve().parent
 ROOT = HERE.parents[1]
-sys.path.insert(0, str(HERE))
+sys.path.insert(0, str(ROOT / "scripts"))   # the production renderer package (EAD-01): design/reference builds *through* it, and holds no renderer of its own
 from yfie import content as C  # noqa: E402
 
 TRIO = ["/", "/evidence/CLM-003/", "/readings/same-year-different-number/"]

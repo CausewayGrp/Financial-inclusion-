@@ -16,7 +16,7 @@ import re
 import sys
 from pathlib import Path
 
-ROOT = Path(__file__).resolve().parents[3]
+ROOT = Path(__file__).resolve().parents[2]
 sys.path.insert(0, str(ROOT / "scripts"))
 import discovery as DISC  # noqa: E402  (F6: one implementation of canonical, hreflang, Open Graph and structured data)
 

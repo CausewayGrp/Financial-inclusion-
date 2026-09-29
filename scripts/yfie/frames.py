@@ -28,7 +28,7 @@ from pathlib import Path
 
 from .text import esc, iso, isolate_document  # the one text layer (escaping; ISO dates and ranges isolated, Lock §4.1.8)
 
-ROOT = Path(__file__).resolve().parents[3]
+ROOT = Path(__file__).resolve().parents[2]
 sys.path.insert(0, str(ROOT / "scripts"))
 import discovery as DISC  # noqa: E402
 

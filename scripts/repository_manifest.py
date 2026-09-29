@@ -32,6 +32,9 @@ RULES = [
     ("CONTROLLED_CONTRACT", ["site-src/content/presentation_priority.json", "site-src/content/content/navigation_interaction.json"]),
     ("GENERATED_PROJECTION", ["site-src/content/*", "site-src/content/**/*"]),
     ("RUNTIME_SOURCE", ["site-src/app.js", "site-src/styles.css", "site-src/lang-redirect.js", "site-src/deployment.json", "site-src/assets/*"]),
+    # The one production renderer (EAD-01): the accepted Design implementation, promoted out of design/reference.
+    # scripts/build.py drives it into dist/; design/reference/ builds *through* it and holds no renderer of its own.
+    ("PRODUCTION_RENDERER", ["scripts/yfie/*.py"]),
     ("BUILD_AND_GATES", ["scripts/build.py", "scripts/validate.py", "scripts/audit_public_literals.py",
                          "scripts/architecture_diagrams.py", "scripts/checksums.py", "scripts/repository_manifest.py", "scripts/discovery.py",
                          "scripts/handoff_inventory.py",

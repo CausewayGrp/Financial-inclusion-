@@ -18,7 +18,7 @@ from . import render as R
 from .render import CUR, bdi, clock, compact, crumb, esc, footer, head, header, iso, json_block, page_util, paras, print_foot, rubric, source_card, spine, strip
 from .visuals import figure, num
 
-ROOT = Path(__file__).resolve().parents[3]
+ROOT = Path(__file__).resolve().parents[2]
 EMAIL = re.compile(r"\b[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}\b")
 
 # Design decision (DL-D2-003): the section beside which each bound visual that the presentation contract does not place
