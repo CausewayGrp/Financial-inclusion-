@@ -25,7 +25,7 @@
   "AUTHORITY_MASTER": 1,
   "AUTHORITY_POINTER": 2,
   "AUTHORITY_RULES": 1,
-  "BUILD_AND_GATES": 15,
+  "BUILD_AND_GATES": 18,
   "CONTROLLED_CONTRACT": 2,
   "CURRENT_DOCUMENT": 10,
   "CURRENT_PROGRAMME_RECORD": 52,
@@ -4590,6 +4590,18 @@
   },
   {
    "path": "scripts/search_canonical_probe.json",
+   "class": "BUILD_AND_GATES"
+  },
+  {
+   "path": "scripts/tests/baseline_content_oracle.json",
+   "class": "BUILD_AND_GATES"
+  },
+  {
+   "path": "scripts/tests/content_oracle.py",
+   "class": "BUILD_AND_GATES"
+  },
+  {
+   "path": "scripts/tests/test_cutover_parity.py",
    "class": "BUILD_AND_GATES"
   },
   {
