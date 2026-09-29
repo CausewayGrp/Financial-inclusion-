@@ -25,9 +25,9 @@
   "AUTHORITY_MASTER": 1,
   "AUTHORITY_POINTER": 2,
   "AUTHORITY_RULES": 1,
-  "BUILD_AND_GATES": 20,
+  "BUILD_AND_GATES": 21,
   "CONTROLLED_CONTRACT": 2,
-  "CURRENT_DOCUMENT": 11,
+  "CURRENT_DOCUMENT": 13,
   "CURRENT_PROGRAMME_RECORD": 52,
   "DESIGN_PACKAGE": 446,
   "GENERATED_DIAGRAMS": 9,
@@ -5427,6 +5427,14 @@
    "class": "GENERATED_PUBLIC_BUILD"
   },
   {
+   "path": "docs/ACCESSIBILITY_AUDIT.json",
+   "class": "CURRENT_DOCUMENT"
+  },
+  {
+   "path": "docs/ACCESSIBILITY_AUDIT.md",
+   "class": "CURRENT_DOCUMENT"
+  },
+  {
    "path": "docs/CHANGELOG.md",
    "class": "CURRENT_DOCUMENT"
   },
@@ -5605,6 +5613,10 @@
   {
    "path": "requirements.txt",
    "class": "REPOSITORY_ENGINEERING"
+  },
+  {
+   "path": "scripts/accessibility_audit.py",
+   "class": "BUILD_AND_GATES"
   },
   {
    "path": "scripts/architecture_diagrams.py",

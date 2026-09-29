@@ -40,7 +40,7 @@ RULES = [
     ("PRODUCTION_RENDERER", ["scripts/yfie/*.py"]),
     ("BUILD_AND_GATES", ["scripts/build.py", "scripts/validate.py", "scripts/audit_public_literals.py",
                          "scripts/architecture_diagrams.py", "scripts/checksums.py", "scripts/repository_manifest.py", "scripts/discovery.py",
-                         "scripts/handoff_inventory.py", "scripts/social_images.py",
+                         "scripts/handoff_inventory.py", "scripts/social_images.py", "scripts/accessibility_audit.py",
                          "scripts/literal_audit_allowances.json", "scripts/search_canonical_probe.json", "scripts/tests/*",
                          "audit/tranche_c/checks/*.py", "audit/pre_tranche_c/source_lineage_truth_test.py"]),
     ("GENERATED_PUBLIC_BUILD", ["dist/*", "dist/**/*"]),
@@ -51,7 +51,8 @@ RULES = [
     ("VENDORED_FONTS", ["vendor/fonts/*", "vendor/fonts/**/*"]),   # IBM Plex woff2 + OFL licence, unchanged (F9)
     ("CURRENT_DOCUMENT", ["README.md", "CONTRIBUTING.md", "AGENTS.md", "CLAUDE.md", "OPENAI_REENTRY_CHECKPOINT.md",
                           "FINAL_OPEN_ITEMS_REGISTER.md", "docs/CHANGELOG.md", "docs/PRODUCTION_REPOSITORY_PROTOCOL.md",
-                          "docs/DEPLOYMENT.md", "docs/SUSTAINABILITY_METHOD.md", "docs/SUSTAINABILITY_IMPLEMENTED_RUNTIME.json"]),
+                          "docs/DEPLOYMENT.md", "docs/SUSTAINABILITY_METHOD.md", "docs/SUSTAINABILITY_IMPLEMENTED_RUNTIME.json",
+                          "docs/ACCESSIBILITY_AUDIT.md", "docs/ACCESSIBILITY_AUDIT.json"]),
     ("REPOSITORY_ENGINEERING", [".github/*", ".github/**/*", ".gitattributes", ".gitignore", "package.json",
                                 "requirements.txt", "SHA256SUMS.txt"]),
     ("CURRENT_PROGRAMME_RECORD", ["audit/INDEX.md", "audit/READING_PORTFOLIO_*", "audit/F3_*", "audit/R8_5_*", "audit/F5_*",

@@ -333,6 +333,22 @@ Raised at EAD-01 by Claude Code (29 September 2026), found by the cutover itself
   label, so the facet is unshipped until these exist; the `?q=` half of EAD-06 needed no copy and is shipped.
   Design impact: none — nothing in the reference shows a facet.`
 
+- `DESIGN_QUESTION (Code, EAD-02 — not a Master item) — every page with next actions — two navigation landmarks share
+  one name — the accessibility audit of the implemented site found that `nav.actions` (the page's "Continue from here"
+  section, named by its own `h2`) and the spine's first edge group `nav.edges` (named by its `h3`) carry the **same**
+  governed title on the families where the edge group mirrors the next actions. A screen-reader user listing landmarks
+  sees "Continue from here" / "تابع من هنا" twice and cannot tell them apart: 20 occurrences across the audited pages.
+  This is a best-practice rule rather than a WCAG success criterion, and it appeared when DEBT-014 put the strip and
+  the foot spine on the same page. Code did not choose between the options, because which of the two changes, and to
+  what, is a composition and naming decision:
+    (a) the spine's edge group stops being a landmark (a `div` with its `h3`), keeping the heading and the links —
+        but `09_CODE_HANDOFF.md` records "every `nav` named … edge groups by their `h3`" and `check_site.py` asserts
+        `aside.spine nav.edges[aria-labelledby]`;
+    (b) the edge group is dropped on the families where it duplicates the section entirely (Evidence Directory, Data
+        & sources), since it repeats the same heading and the same links;
+    (c) a governed label distinguishes one of them — which is controlled content, and would be a fourth escalation.
+  Design impact: none on what the page says; a reader who does not use a landmark list sees no difference.`
+
 ## Anticipated (not yet raised — each will be raised only when a D1+ design actually needs it)
 
 Recorded so no one fills these gaps silently. Source: brief §10, §12, §15.

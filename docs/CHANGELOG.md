@@ -1,5 +1,38 @@
 # Repository Change Log
 
+## 2026-09-29 — EAD-02: the implemented site audited; two real failures found and fixed
+
+`scripts/accessibility_audit.py` audits what a machine can decide about the runtime: 24 pages — one per route class,
+both languages — at 1440 and 390 px, a 320 px reflow pass (400 % of a 1280 px window), reduced motion, images off and
+a keyboard walk, with a pinned general ruleset (axe-core, WCAG 2.0/2.1/2.2 A and AA plus best practice) and the eleven
+outcomes of the accessibility contract measured rather than asserted. The record is `docs/ACCESSIBILITY_AUDIT.md` and
+`.json`, and it includes the text-alternative table for every drawn visual that the register asks for.
+
+**Two failures against outcomes the contract itself states were found, and fixed.**
+
+- **1.4.3 contrast.** The institutional band's fine print measured **4.42:1** where 4.5:1 is required — on all 288
+  pages, in both languages, since D1. `--mute` moved two points darker, `#66717B` → `#646F79`: 4.56:1 on the band,
+  5.13:1 on paper. The role is unchanged, the change is imperceptible, and it is the smallest value that meets the
+  rule the design published. `design/02_TOKENS.json` regenerated.
+- **2.5.8 target size.** Of 129 targets under 24 × 24 px, 117 met one of the criterion's own exceptions — inline, or
+  24 px spacing — which is why a bare count would have meant nothing. Twelve met neither: the band's group links, the
+  disclosure summaries and the record list inside one, all 22–23 px tall with neighbours closer than 24 px. The design
+  already had a rule for exactly this case; it was extended to the three families it had missed.
+
+After the fixes: **0 WCAG violations from the ruleset, 0 contrast failures, 0 targets failing 2.5.8, 0 unnamed
+controls or landmarks, 0 unlabelled controls, 0 reflow overflow at 320 px, 0 heading-level jumps, 0 images without
+`alt`, and no keyboard trap.**
+
+**Two findings were not fixed, because neither is Code's to decide.** Two navigation landmarks carry the same governed
+name — the page's next-actions section and the spine's first edge group — so a screen-reader landmark list shows it
+twice; which one changes, and to what, is a composition and naming decision, escalated with three options. And a
+figure table's empty corner cell is DEBT-013's recorded preference, which needs a governed label.
+
+**Nothing here claims conformance, at any level.** Screen readers in Arabic and English, whether each heading
+describes its section, whether each visual's text alternative carries the same analytical point as the picture, voice
+control and switch access, and forced colours judged by eye are all listed as outstanding for the auditor. The
+Accessibility page continues to say the resource is designed against WCAG 2.2 and is still to be tested.
+
 ## 2026-09-29 — EAD-10: the implemented runtime measured, and what EAD-03 now costs
 
 The pre-design baseline was measured before there was a design. The runtime is measured now, with the same script and
