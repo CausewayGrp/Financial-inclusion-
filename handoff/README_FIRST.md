@@ -34,8 +34,9 @@ the Production Master and cannot be changed by design.
 authority/Yemen_Financial_Inclusion_Evidence_Master.xlsx      the only authority (never parsed by the browser)
   → scripts/generate_projections.py                           deterministic, byte-for-byte
   → site-src/content/**                                       the projections you design from (never edit by hand)
-  → scripts/build.py                                          the reference renderer
-  → dist/                                                     the public reference build (never edit by hand)
+  → scripts/yfie/                                             the one production renderer (the accepted design)
+  → scripts/build.py                                          its build driver
+  → dist/                                                     the public build (never edit by hand)
 ```
 
 Production Master SHA-256 `17db032b15da16fc4b5b3c3b49f19aebf2ecb4ec46634613fe8505d0f038690b`; Page Specs

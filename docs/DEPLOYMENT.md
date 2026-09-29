@@ -1,9 +1,9 @@
-# Deployment (reference build)
+# Deployment
 
 **Status:** nothing is deployed. The public site is not released (the programme never declares PUBLIC RELEASE READY);
-this page states how the *reference* build would be served so that Design and Code inherit correct assumptions. It is
-the header, discovery and privacy contract that the final implementation must keep or improve; it is not a claim of any
-live security test.
+this page states how the build in `dist/` would be served. It is the header, discovery and privacy contract that the
+implementation keeps; it is not a claim of any live security test. Since EAD-01 `dist/` is the production runtime's
+output — the accepted design rendered by `scripts/yfie` through `scripts/build.py` — not a pre-design baseline.
 
 The repository is canonical on GitHub (`CausewayGrp/Financial-inclusion-`, branch `main`). `dist/` is committed and CI
 fails if it differs from a fresh build, so the files a host would serve are exactly the reviewed ones.
@@ -13,7 +13,7 @@ fails if it differs from a fresh build, so the files a host would serve are exac
 ```bash
 python3 -m pip install -r requirements.txt
 python3 scripts/generate_projections.py --check   # Master → projections, byte for byte
-python3 scripts/build.py                          # site-src → dist (288 HTML files)
+python3 scripts/build.py                          # site-src/content → dist, through scripts/yfie (288 HTML files)
 python3 scripts/audit_public_literals.py          # every public number traced
 python3 scripts/validate.py                       # all repository gates, including F6-G01…G08 below
 ```
@@ -26,7 +26,8 @@ python3 scripts/validate.py                       # all repository gates, includ
 - `/` is the neutral entry route and the hreflang `x-default`: `assets/lang-redirect.js` opens the edition the reader
   chose before (stored preference `yfie-lang`), otherwise Arabic; without JavaScript it falls back to `/ar/`.
 - No database, secret, account, cookie or live API is required. Search and Compare read local JSON under
-  `/static-data/` and JSON blocks in the page.
+  `/static-data/` and JSON blocks in the page. Fonts are served from `/assets/fonts/` on the same origin: the six IBM
+  Plex faces the stylesheet declares, with their OFL licence. No font CDN, and no external request of any kind.
 
 ## Discovery (F6)
 
@@ -73,6 +74,7 @@ font, image or frame, no form (gate F6-G05). The host should send:
   only tracked office file is the Production Master (F6-G07); every source record states its rights and card state
   (F6-G08). Reuse terms of the original sources have not been assessed (`rights_state: NOT_ASSESSED`); the site links to
   sources and does not republish them.
-- **Assets.** The master logo is a 10 MB PNG and is never redrawn; web-size derivatives and cache fingerprinting are
-  release-only engineering (TOOL-02). HTML should be served with short caching; assets may be cached long only once
-  their file names are fingerprinted.
+- **Assets.** The master logo is a 10 MB PNG and is never redrawn, recoloured, filtered, cropped or masked; the
+  pre-design baseline's CSS filter on it went with that renderer at EAD-01. Web-size derivatives (EAD-03) need the
+  owner's approval, and cache fingerprinting is release-only engineering (TOOL-02). HTML should be served with short
+  caching; assets may be cached long only once their file names are fingerprinted.

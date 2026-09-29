@@ -79,7 +79,8 @@ Files `01`–`08`, `10` and `design/reference/` are created at the gate that fir
 content path (`yfie/content.py` reads `site-src/content/**` for all eleven families; never a copied content model, never
 retyped text), the neutral harness (`yfie/neutral.py`), the accepted renderer of the converged direction
 (`yfie/render.py` — shell, objects, the trio; `yfie/families.py` — the other families; `theme.py`, the one stylesheet;
-`visuals.py`, the contract drawings) and the checks (`check_content.py`: numeric and text-block parity with `dist/` on
+`visuals.py`, the contract drawings — moved to `scripts/yfie/` at EAD-01 and built through from here) and the checks
+(`check_content.py`: numeric and text-block parity against the frozen pre-design oracle on
 every document; `check_trio.py`: the D1 trio; `check_site.py`: the D2 routes with the family hooks, the §9.2 hard-state
 assertions, degraded renders and the evidence writer). The package is still an incomplete hand-back until every family is
 composed and reviewed on its own ledger row (D3–D4) and the acceptance checklist is complete (D7).

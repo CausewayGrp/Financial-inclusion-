@@ -25,7 +25,7 @@
   "AUTHORITY_MASTER": 1,
   "AUTHORITY_POINTER": 2,
   "AUTHORITY_RULES": 1,
-  "BUILD_AND_GATES": 18,
+  "BUILD_AND_GATES": 19,
   "CONTROLLED_CONTRACT": 2,
   "CURRENT_DOCUMENT": 10,
   "CURRENT_PROGRAMME_RECORD": 52,
@@ -4599,6 +4599,10 @@
   },
   {
    "path": "scripts/tests/test_cutover_parity.py",
+   "class": "BUILD_AND_GATES"
+  },
+  {
+   "path": "scripts/tests/test_gate_negative_controls.py",
    "class": "BUILD_AND_GATES"
   },
   {

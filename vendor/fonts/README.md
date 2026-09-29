@@ -1,8 +1,10 @@
 # Vendored fonts — IBM Plex Sans and IBM Plex Sans Arabic
 
 The product's required typefaces, carried in the repository so that Design and Code need no network access for them.
-Nothing in the reference build (`dist/`) loads these files; the Design reference implementation and the production
-runtime self-host them from here.
+Since EAD-01 the production build self-hosts them from here: `scripts/build.py` copies the six faces the stylesheet
+declares — Regular, Medium and SemiBold of each family — with that family's `LICENSE.txt`, into
+`dist/assets/fonts/`, and each page preloads Regular and SemiBold of its own language. The other eighteen files stay
+vendored and unshipped rather than served and never requested.
 
 | Folder | Source package | Files | Licence |
 |---|---|---|---|

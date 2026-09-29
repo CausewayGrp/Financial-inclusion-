@@ -14,7 +14,12 @@ so that a cold Design recipient can run D0–D7 from the repository alone.
 
 - R8.4: CLOSED / PASS, Reading prose included (F2). R8.5: CLOSED (F4). R8.6: CLOSED (F8, F9).
 - This is not PUBLIC RELEASE READY.
-- Claude Design starts at `handoff/README_FIRST.md`; the Code prompt waits for the accepted Design package.
+- Claude Design starts at `handoff/README_FIRST.md`. **The Design programme is closed** (D7 accepted at `fca7bf1`,
+  the merge of pull request #7, 28 September 2026) and Code has started on the eleven EAD items: EAD-01 landed the
+  one production runtime on 29 September 2026 — `dist/` is the accepted design rendered by `scripts/yfie`, the
+  replaced renderer is removed, parity with the pre-design build is proved against a frozen oracle, and EAD-04
+  closed with it. This changes no governed content and no programme status: still DESIGN HANDOFF READY, still not
+  PUBLIC RELEASE READY.
 - Checkpoint tags are not on GitHub yet: this session's git access refuses tag pushes (HTTP 403), so the owner creates and
   pushes them (§7).
 

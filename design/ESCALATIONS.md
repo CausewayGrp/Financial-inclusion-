@@ -288,6 +288,38 @@ Raised at the D7 closure (28 September 2026), from the three independent closure
 - Home section order (for steward confirmation): decided by the brief — §4.5 states the baseline order "is a
   precedent, not a mandate; keep the `#system` anchor". The Lock item stands; nothing to confirm.
 
+Raised at EAD-01 by Claude Code (29 September 2026), found by the cutover itself:
+
+- `NEEDS_CONTROLLED_CONTENT — Home (`/`) and `/explore/` — the R8.4A question selection and grouping — the four
+  questions Home starts from, and which of the four clusters each of the eleven questions sits in, are not governed
+  anywhere. Until EAD-01 they were recovered by `scripts/handoff_inventory.py` **scraping the baseline renderer's own
+  HTML out of `dist/`**, and the renderer read them back from that inventory: a build that was an input to itself.
+  Removing the baseline renderer emptied the scrape and `/explore/` rendered with no questions at all. Code has put
+  them in one named place, `scripts/yfie/question_sets.py`, so nothing is parsed from markup and the regenerated
+  inventory is byte-identical to the accepted one at `2f9a93c` — but a selection decision held in renderer code is
+  exactly what EAD-11 says it should not be.`
+
+  **The change, exactly.** Nothing here is new content: every question, every cluster heading (`UI-QUESTIONS-*`) and
+  every destination is already governed. What is needed is the selection and the grouping, in the presentation
+  contract beside the other presentation decisions — `site-src/content/presentation_priority.json`, which the steward
+  edits in place — as two entries whose values are these, unchanged:
+
+  ```json
+  { "route": "/", "page_family": "Orientation",
+    "starting_question_ids": ["QE-002", "QE-003", "QE-005", "QE-011"] }
+  { "route": "/explore/", "page_family": "Question Entry",
+    "question_groups": [
+      {"heading_ui_id": "UI-QUESTIONS-UNDERSTAND-THE-WIDER-PICTURE",      "question_ids": ["QE-001", "QE-003"]},
+      {"heading_ui_id": "UI-QUESTIONS-PEOPLE-USE-AND-FLOWS",              "question_ids": ["QE-002", "QE-004", "QE-007", "QE-009"]},
+      {"heading_ui_id": "UI-QUESTIONS-FIRMS-INSTITUTIONS-AND-PROVIDERS",  "question_ids": ["QE-005", "QE-006", "QE-008"]},
+      {"heading_ui_id": "UI-QUESTIONS-VERIFY-AND-DECIDE-WHAT-TO",         "question_ids": ["QE-010", "QE-011"]}
+    ] }
+  ```
+
+  When that lands, `scripts/yfie/question_sets.py` reads the contract instead of holding the values, and is deleted
+  once it holds nothing. Code cannot make this change: the two controlled contracts are the steward's, in a commit
+  naming the finding it closes, with every gate run. Open; EAD-11; blocks no gate today.
+
 ## Anticipated (not yet raised — each will be raised only when a D1+ design actually needs it)
 
 Recorded so no one fills these gaps silently. Source: brief §10, §12, §15.

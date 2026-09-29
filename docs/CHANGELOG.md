@@ -1,5 +1,64 @@
 # Repository Change Log
 
+## 2026-09-29 — EAD-01 on `claude/hopeful-mccarthy-jgip83`: one production runtime; the replaced renderer removed
+
+The accepted Design implementation becomes the repository's renderer. `design/reference/yfie/` moves to
+`scripts/yfie/` (by `git mv`, so its history follows it) and `scripts/build.py` becomes a thin driver over it, writing
+the complete static site a host serves: 288 documents in both languages, the neutral root entry, the bilingual 404,
+`robots.txt`, and `sitemap.xml` once the owner sets an origin. The 1,643 lines of baseline page composition are
+deleted, and `site-src/styles.css` with them. `design/reference/` keeps its harness and its six checks and now builds
+**through** the production package, so those checks protect the code that ships; it holds no renderer of its own.
+There is one production renderer, reached by one production entry point.
+
+No governed value, wording, unit, universe, period, evidence state, source relationship, limitation or Arabic term
+changes, and nothing under `authority/`, `audit/`, the projections or the two controlled contracts is touched.
+
+**EAD-04 closes with it, by construction.** The recolouring of the logo (`brightness(0) invert(1)`) lived only in the
+baseline stylesheet, which no longer exists or ships; the accepted stylesheet contains no filter, blend or mask.
+**EAD-08 narrows**: the build ships the six IBM Plex faces the stylesheet declares, with their licence, instead of all
+twenty-four, and the two first-paint faces stay preloaded per language.
+
+**Parity is proved, not asserted.** The pre-design renderer's own answer was frozen before it was removed:
+`scripts/tests/baseline_content_oracle.json` holds, for all 286 documents, the normalised number multiset of `<main>`
+and its rendered text as that renderer gave them at `2f9a93c`, with the SHA-256 of every projection it was derived
+from. `scripts/tests/test_cutover_parity.py` holds the new output to it at `design/reference/check_content.py`'s
+strength — no governed number lost, none gained ungoverned, no governed sentence lost — and reports 286 documents, 0
+differing. It was proved in both directions before it was trusted: it fails when a governed paragraph is dropped from
+one record and when one governed number is altered.
+
+**The cutover found a real defect, and it is fixed here.** Explore's four question clusters were not governed:
+`scripts/handoff_inventory.py` recovered them by scraping the baseline renderer's own HTML out of `dist/`, and the
+accepted renderer read them back from that inventory — a build that was an input to itself. Removing the baseline
+renderer emptied the scrape, the inventory recorded four empty clusters, and `/explore/` rendered with no questions at
+all. The R8.4A sets (Home's four starting questions and Explore's four clusters) now live in one named place,
+`scripts/yfie/question_sets.py`; the inventory reads them from there and parses no markup; and the regenerated
+inventory is byte-identical to the accepted one at `2f9a93c`, so the selection is provably unchanged. EAD-11 stays
+open — the sets belong in a governed contract, which is the steward's to land — but nothing is recovered from rendered
+markup any more. This corrects the planning appendix of 29 September, which recorded that Explore's clusters "already
+come governed, through the handoff inventory's `question_groups`": they came from the baseline's markup.
+
+**Every gate keeps its assertion and changes only how it finds things.** Built into `dist/`, the accepted design
+raised 2,332 validator failures, all of them selectors written against the baseline's class names and attribute order;
+all are re-pointed and the validator is green. Two were outright regex faults the new markup exposed rather than
+selector drift: `\bid="` also matched `data-record-id="`, so every record page reported a duplicate DOM id, and
+`<th(?!…scope=)` also matched `<thead>`, so every table reported a header cell without scope. Where the accepted
+design repeats governed text by design — a clock-first object carries its own period, universe and summary — P1-G06
+keeps the scope it always had, the page's authored prose, and a duplicated authored paragraph still fails it.
+
+**P3-G02 is replaced, not deleted.** It asked that the pre-design baseline draw nothing. It now checks each drawn
+visual against its contract: only a contract the renderer's own registry may draw is drawn, a contract that binds rows
+must print every one of its governed row values, its tier must be one that plots, its governed title and the grammar
+label of every state and marker it carries must be printed, it must carry the ordered-text fallback and a captioned
+value table with a column header, a contract that binds no rows may draw governed structure but no value scale, a
+graphic outside a governed figure fails, and every drawable contract must reach both editions.
+
+**Every re-pointed gate is proved to still catch its own fault.** `scripts/tests/test_gate_negative_controls.py`
+breaks one thing in the built site at a time — an `aria-current` removed, a breadcrumb dropped, a governed row value
+rounded, a question dropped from Explore, a decorative graphic added — and requires the gate to say so. A re-pointed
+selector that silently matches nothing would pass the suite and fail these.
+
+Nothing here declares PUBLIC RELEASE READY, and no WCAG conformance is claimed: the EAD-02 audit is still to be done.
+
 ## 2026-09-28 — Design D7 closure on `claude/dreamy-archimedes-e8qx5v`: every recorded blocker settled, the product judged by independent lenses; ready for independent acceptance
 
 The closure the owner asked for after withholding acceptance at the technical checkpoint below. It changes the built

@@ -81,6 +81,9 @@ jobs:
       - name: Bilingual numeric invariance (every English/Arabic page pair prints the same numbers)
         run: python3 audit/tranche_c/checks/bilingual_invariance.py
 
+      - name: Cutover parity (the runtime prints everything the pre-design renderer printed)
+        run: python3 scripts/tests/test_cutover_parity.py
+
       - name: Gates leave the working tree clean
         run: |
           if [ -n "$(git status --porcelain --untracked-files=all)" ]; then
@@ -117,3 +120,8 @@ jobs:
 
       - name: Viewport acceptance (EN/AR at 320, 390, 640 and 1440 px)
         run: python3 audit/tranche_c/checks/viewport_acceptance.py
+
+      - name: Gate negative controls (every gate still fails on the fault it was written to catch)
+        run: |
+          python3 scripts/build.py
+          python3 scripts/tests/test_gate_negative_controls.py
