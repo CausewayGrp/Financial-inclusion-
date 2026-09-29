@@ -325,6 +325,14 @@ Raised at EAD-01 by Claude Code (29 September 2026), found by the cutover itself
   once it holds nothing. Code cannot make this change: the two controlled contracts are the steward's, in a commit
   naming the finding it closes, with every gate run. Open; EAD-11; blocks no gate today.
 
+- `NEEDS_CONTROLLED_CONTENT — the search results, every route with a search — a result-type facet needs a name and an
+  "all types" option — EAD-06 asks for a result-type facet, and the option labels are governed
+  (`UI-JS-TYPE-PAGE` … `UI-JS-TYPE-SOURCE-LOCATOR`). What is missing is the control itself: an accessible name for
+  the facet, and the label of the state where no type is chosen. `UI-DATA-FIND-A-SOURCE-BY-TITLE` is the source
+  directory's own control and says "Find a source by title", so it cannot stand for either. Code does not author a
+  label, so the facet is unshipped until these exist; the `?q=` half of EAD-06 needed no copy and is shipped.
+  Design impact: none — nothing in the reference shows a facet.`
+
 ## Anticipated (not yet raised — each will be raised only when a D1+ design actually needs it)
 
 Recorded so no one fills these gaps silently. Source: brief §10, §12, §15.

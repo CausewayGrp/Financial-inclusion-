@@ -1306,6 +1306,18 @@ if f'const LTR_RUN=/{_LTR_RUN.pattern}/g;' not in js:
     errors.append('S05.3 the runtime\'s left-to-right isolation is not the renderer\'s expression (scripts/yfie/text.py LTR_RUN)')
 if 'function iso(s){return esc(s).replace(LTR_RUN' not in js:
     errors.append('S05.3 the runtime has no isolation helper for the governed text it writes')
+# EAD-06 (handoff §2): the search query is tool state that matters, so it is in the URL, reloadable, and carried across
+# the language switch — and only the page's own search writes it, never the dialog floating over another page.
+for _tok,_lbl in [("function writeSearchUrl(term)",'search query written to the URL'),
+                  ("new URLSearchParams(location.search).get('q')",'search query read back from the URL'),
+                  ("input.hasAttribute('data-search-url-state')",'only the page\'s own search owns the page address')]:
+    if _tok not in js: errors.append(f'P2-G02 missing runtime contract: {_lbl}')
+for _lang in ('ar','en'):
+    _dir=(DIST/_lang/'evidence/index.html').read_text(encoding='utf-8')
+    if 'data-search-input data-search-url-state' not in _dir:
+        errors.append(f'P2-G02 the Evidence directory\'s search does not own the page address {_lang}')
+    if 'data-search-url-state' in (DIST/_lang/'people/index.html').read_text(encoding='utf-8'):
+        errors.append(f'P2-G02 the search dialog must not rewrite the address of the page it floats over {_lang}')
 for token,label in [
     ('data-noncolour-semantic="text-label-structure"','explicit non-colour comparison verdict'),
     ('data-noncolour-semantic="caption-headers-text-labels"','explicit non-colour comparison table'),

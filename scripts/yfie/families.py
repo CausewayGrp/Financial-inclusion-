@@ -252,7 +252,7 @@ def evidence_directory(page: dict, shell: dict) -> str:
     L = page["labels"]; SL = shell["labels"]
     parts = [head_block(page, shell, SL["understand_explore_verify"])]
     search = (f'<section class="qa first" id="search"><div>{rubric(L["search"], tag="h2")}</div><div><div class="search-inline">'
-              f'<input id="global-search" data-search-input class="search-input" type="search" placeholder="{esc(L["search_placeholder"])}" aria-label="{esc(L["search"])}">'
+              f'<input id="global-search" data-search-input data-search-url-state class="search-input" type="search" placeholder="{esc(L["search_placeholder"])}" aria-label="{esc(L["search"])}">'
               f'<div class="search-status" data-search-status role="status" aria-live="polite" aria-label="{esc(L["search_status"])}"></div>'
               f'<div id="search-results" data-search-results class="search-results" aria-live="polite"></div></div>'
               f'<div class="actions"><a href="{page["compare_href"]}">{esc(L["compare"])}</a></div></div></section>')

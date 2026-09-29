@@ -119,13 +119,21 @@ function renderHits(hits){
     return `<a class="search-hit" href="${prefix}${route}"><div><h4>${iso(title)}</h4>${summary?`<p>${iso(clip(summary,220))}</p>`:''}</div>${type?`<span class="meta">${esc(type)}${meta?' · '+iso(meta):''}</span>`:''}</a>`;
   }).join('');
 }
-function bindSearch(input,box,status){
+// EAD-06 (handoff §2: "tool state that matters — Compare records, filters, search query — is URL-addressable,
+// reloadable and survives a language switch"). Only the page's OWN search writes the URL. The dialog is an overlay
+// over whatever page the reader is on, and rewriting that page's address as they type would change what they share.
+function writeSearchUrl(term){
+  const next=location.pathname+(term?`?q=${encodeURIComponent(term)}`:'')+location.hash;
+  if(next!==location.pathname+location.search+location.hash)history.replaceState(null,'',next);
+}
+function bindSearch(input,box,status,urlState){
   if(!input||!box)return;
   let timer;
   input.addEventListener('input',()=>{
     clearTimeout(timer);
     timer=setTimeout(async()=>{
       const term=normalize(input.value.trim());
+      if(urlState)writeSearchUrl(input.value.trim());
       if(term.length<2){box.innerHTML=''; if(status)status.textContent=''; return;}
       if(status)status.textContent=T('UI-JS-SEARCHING');
       try{
@@ -161,7 +169,12 @@ $$('[data-search-input]').forEach(input=>{
   const scope=input.closest('.search-dialog-panel')||input.parentElement?.parentElement||document;
   const box=$('[data-search-results]',scope)||$('#search-results');
   const status=$('[data-search-status]',scope);
-  bindSearch(input,box,status);
+  const urlState=input.hasAttribute('data-search-url-state');
+  bindSearch(input,box,status,urlState);
+  if(urlState){
+    const q=new URLSearchParams(location.search).get('q');
+    if(q!==null&&q!==''){input.value=q;input.dispatchEvent(new Event('input'));}
+  }
 });
 const dialog=$('#search-dialog');
 let searchOpener=null;

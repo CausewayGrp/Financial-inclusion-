@@ -1,5 +1,29 @@
 # Repository Change Log
 
+## 2026-09-29 — EAD-06: the search query is URL-addressable; what the facet still waits on
+
+`handoff/ENGINEERING_HANDOFF_EXPECTATIONS.md` §2 requires that tool state which matters — Compare records, filters,
+the search query — be URL-addressable, reloadable and able to survive a language switch. Compare already met it; the
+search did not. The Evidence directory's own search now writes its query to `?q=`, reads it back on load, restores
+both the field and the results, carries across the switch to the other edition, and clears the address when the field
+is cleared. A query that arrives from the URL is rendered as text and never as markup.
+
+Only the page's own search owns the page address. The dialog floats over whatever page the reader is on, so rewriting
+that page's address as they type would change what they would share; a gate and a negative control hold that line in
+both directions.
+
+**Two of EAD-06's four parts turned out to be already shipped**, by the accepted design, at the cutover: entry into
+Compare from exactly the thirteen comparable records with that record pre-selected, and the mobile form of the
+four-column comparison, which stacks below 640 px with every row a block and each cell numbered in the inline-start
+gutter. They are recorded rather than rebuilt.
+
+**The result-type facet is blocked, and that is worth stating plainly rather than leaving it to look undone.** Its
+option labels are governed (`UI-JS-TYPE-PAGE` … `UI-JS-TYPE-SOURCE-LOCATOR`), but the facet's own accessible name and
+the label for the state where no type is chosen are not, and Code does not author a label. The source directory's
+control cannot stand in: it says "Find a source by title". Escalated as `NEEDS_CONTROLLED_CONTENT`. The search status
+total ("10 of 79" rather than "10 results shown") remains blocked on the governed `{n} of {m}` form escalated at D7 —
+a query matching 79 records still reads as a corpus of ten, and no amount of engineering fixes that without the form.
+
 ## 2026-09-29 — The D6 runtime defect fixed: governed dates no longer reverse in the Arabic tools
 
 Design found this at D6 on the printed Arabic Compare page and escalated it to Code, because it never edits the
