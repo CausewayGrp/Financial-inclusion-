@@ -1,5 +1,28 @@
 # Repository Change Log
 
+## 2026-09-29 — EAD-10: the implemented runtime measured, and what EAD-03 now costs
+
+The pre-design baseline was measured before there was a design. The runtime is measured now, with the same script and
+the same twelve route classes in both languages, so the two records compare like with like:
+`docs/SUSTAINABILITY_IMPLEMENTED_RUNTIME.json`, with the table in `docs/SUSTAINABILITY_METHOD.md`.
+
+A cold page transfers 9.83–10.19 MB. **94–97 % of that is the canonical logo.** Everything else on the page together —
+the document, the stylesheet, the script and the type — is 285–656 KB. A warm page transfers nothing. Opening Search
+loads the local index once, about 321 KB with gzip, and only then. The page makes no external request of any kind.
+
+The only increase over the baseline is about 200 KB of self-hosted type, and it buys correctness rather than costing
+it: the baseline named IBM Plex and shipped no font file, so a reader without it installed read the product in a
+fallback face — Arial, or Tahoma for Arabic. The runtime ships the six faces the stylesheet declares and preloads the
+two a first paint needs in the reader's language. HTML is comparable and slightly smaller at the top end; the social
+images cost a page nothing, because a platform fetches one when a link is shared and the page never does.
+
+**This sharpens EAD-03 rather than closing it.** The logo's share is no longer an estimate from a pre-design build; it
+is measured on the site that would ship. The derivative sizes are listed and the export is one command, but a
+derivative of the mark is the owner's to approve, so Code does not run it and the master stays untouched.
+
+**No budget is set and no carbon figure is computed**, and none may be: the release host is not chosen (OWN-03), so
+its compression and caching are unmeasured. That half of EAD-10 is release work, and the method says so.
+
 ## 2026-09-29 — EAD-06: the search query is URL-addressable; what the facet still waits on
 
 `handoff/ENGINEERING_HANDOFF_EXPECTATIONS.md` §2 requires that tool state which matters — Compare records, filters,
