@@ -8,8 +8,9 @@ robots.txt disallows crawling and no sitemap is written. With an origin every li
 crawling and points to sitemap.xml, and the sitemap lists every localized page with its language alternates.
 
 Nothing here invents metadata: no author (the Readings' authorship is not governed), no publication or modification
-date, no image (the social-image system is a Design deliverable), and no Dataset type (the resource publishes evidence
-records and a source directory, not datasets).
+date, and no Dataset type (the resource publishes evidence records and a source directory, not datasets). The one
+image is the page's own governed social image (EAD-09), rasterised from the design's template by
+`scripts/social_images.py` and copied into the build; it carries no text the page does not already print.
 """
 import html
 import json
@@ -84,16 +85,29 @@ def sitemap_xml(routes, org):
 OG_LOCALE = {"en": "en_GB", "ar": "ar_YE"}
 
 
-def social_meta(title, description, lang, route, product, kind="website", org=None):
-    """Open Graph and card metadata from the page's own governed title and description. No og:image until Design
-    delivers the governed social-image system; og:url only with a public origin."""
+SOCIAL_IMAGE = {"width": 1200, "height": 630}
+
+
+def social_image_path(route, lang):
+    """Where the build puts this page's social image (EAD-09; one per route and language, from the governed template)."""
+    return "/assets/social/" + (str(route or "/").strip("/").replace("/", "_") or "home") + f"__{lang}.png"
+
+
+def social_meta(title, description, lang, route, product, kind="website", org=None, image=True):
+    """Open Graph and card metadata from the page's own governed title and description. `og:image` is the page's own
+    governed social image, rasterised at build time from the design's template (EAD-09) — absolute with a public
+    origin, root-relative before one, exactly as every other URL here behaves. `og:url` only with a public origin."""
     other = "ar" if lang == "en" else "en"
     tags = [("og:type", "article" if kind == "article" else "website"), ("og:site_name", product), ("og:title", title),
             ("og:description", description), ("og:locale", OG_LOCALE[lang]), ("og:locale:alternate", OG_LOCALE[other])]
     if org:
         tags.append(("og:url", url(localized(route, lang), org)))
+    if image:
+        tags += [("og:image", url(social_image_path(route, lang), org)),
+                 ("og:image:width", SOCIAL_IMAGE["width"]), ("og:image:height", SOCIAL_IMAGE["height"]),
+                 ("og:image:alt", title)]
     out = "".join(f'<meta property="{k}" content="{html.escape(str(v), quote=True)}">' for k, v in tags)
-    return out + '<meta name="twitter:card" content="summary">'
+    return out + f'<meta name="twitter:card" content="{"summary_large_image" if image else "summary"}">'
 
 
 def ld_script(obj):

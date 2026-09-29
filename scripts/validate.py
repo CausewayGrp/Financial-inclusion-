@@ -1298,6 +1298,14 @@ for lang in ('ar','en'):
         errors.append(f'S05.3 Home governed visual lacks ordered image-independent fallback {lang}')
 
 # Compare is the only public tabular component: its semantics must survive colour loss and narrow layout.
+# The runtime's left-to-right isolation is the renderer's own rule, character for character: one expression, so a value
+# a tool writes into an Arabic page reads the same way as one the page was rendered with (the D6 RUNTIME_DEFECT).
+sys.path.insert(0,str(ROOT/'scripts'))
+from yfie.text import LTR_RUN as _LTR_RUN   # noqa: E402
+if f'const LTR_RUN=/{_LTR_RUN.pattern}/g;' not in js:
+    errors.append('S05.3 the runtime\'s left-to-right isolation is not the renderer\'s expression (scripts/yfie/text.py LTR_RUN)')
+if 'function iso(s){return esc(s).replace(LTR_RUN' not in js:
+    errors.append('S05.3 the runtime has no isolation helper for the governed text it writes')
 for token,label in [
     ('data-noncolour-semantic="text-label-structure"','explicit non-colour comparison verdict'),
     ('data-noncolour-semantic="caption-headers-text-labels"','explicit non-colour comparison table'),
@@ -1915,9 +1923,11 @@ for _f in sorted(DIST.rglob('*.html')):
             continue
         _p3_drawn.setdefault(_vid,set()).add(_lang)
         _rows=_p3_rows(_vid)
-        # fallback: a drawing is never the only carrier of its meaning
+        # fallback: a drawing is never the only carrier of its meaning. Read from the figure's OWN attributes — the
+        # block that carries the text alternative declares the same name, so searching the subtree would pass on it.
+        _open=re.match(r'<figure\b[^>]*>',_fig).group(0)
         for _attr in ('data-visual-fallback="ordered-text"','data-image-independent="true"','data-noncolour-semantic='):
-            if _attr not in _fig: errors.append(f'P3-G02 {_vid} drawn without {_attr.rstrip("=")} in {_rel}')
+            if _attr not in _open: errors.append(f'P3-G02 {_vid} drawn without {_attr.rstrip("=")} in {_rel}')
         if _rows:
             # a contract that binds rows plots them, so it must be a tier that may plot, must carry the value table, and
             # must print every governed row value — a drawing may not round, truncate or drop one
@@ -1931,6 +1941,19 @@ for _f in sorted(DIST.rglob('*.html')):
             for _y,_st,_mk in _rows:
                 if isinstance(_y,(int,float)) and _p3_numtext(_y) not in _got:
                     errors.append(f'P3-G02 {_vid} does not print its governed row value {_y} in {_rel}')
+            # …and nothing else: every number the drawing labels is a governed value of this contract, a row or a
+            # derived one. Printing the value in the table while the chart shows a rounded one is the fault this
+            # catches — a reader who reads the picture would read a number the Master does not hold.
+            _governed_vals=set()
+            for _y,_st,_mk in _rows: _governed_vals.add(_p3_numtext(_y))
+            for _d in ((_VIS_BY_ID.get(_vid) or {}).get('contract') or {}).get('derived') or []:
+                if isinstance(_d.get('value'),(int,float)): _governed_vals.add(_p3_numtext(_d['value']))
+            _allowed=set()
+            for _v in _governed_vals:
+                _allowed|=_p3_nums(str(_v))
+            for _label in re.findall(r'<text class="val[^"]*"[^>]*>([^<]*)</text>',_fig):
+                for _n in _p3_nums(_label)-_allowed:
+                    errors.append(f'P3-G02 {_vid} draws a value label that is not a governed value: {_label.strip()!r} in {_rel}')
         else:
             # a contract that binds no rows may draw governed structure — steps, dates, state labels — and nothing else:
             # no plot, no value axis. This is the pre-design gate's rule, kept: no chart without a data contract.
@@ -2320,9 +2343,22 @@ try:
             if _DISC.head_links(_r,_L,_org) not in _hd: errors.append(f'F6-G02 canonical/hreflang contract broken {_rel}')
             _og=dict(re.findall(r'<meta property="(og:[a-z:_]+)" content="([^"]*)">',_hd))
             if len(_ti)==1 and len(_de)==1 and (not _ti[0].startswith(_og.get('og:title','\0')+' — ') or _og.get('og:description')!=_de[0]
-                                                or _og.get('og:locale')!=_DISC.OG_LOCALE[_L] or 'og:image' in _og or ('og:url' in _og)!=bool(_org)
+                                                or _og.get('og:locale')!=_DISC.OG_LOCALE[_L] or ('og:url' in _og)!=bool(_org)
                                                 or _og.get('og:type')!=('article' if str(_r).startswith('/readings/') and _r!='/readings/' else 'website')):
                 errors.append(f'F6-G01 social metadata does not follow the page title and description {_rel}')
+            # EAD-09: the page's own governed social image, at the declared size, present in the build, and described
+            # by the page's own title. This replaces "no og:image", which protected the state before the images existed.
+            _want_img=_DISC.url(_DISC.social_image_path(_r,_L),_org)
+            if _og.get('og:image')!=_want_img:
+                errors.append(f'F6-G01 og:image is not this page\'s governed social image {_rel}: {_og.get("og:image")!r}')
+            elif not (DIST/_DISC.social_image_path(_r,_L).lstrip('/')).exists():
+                errors.append(f'F6-G01 og:image names an image the build does not ship {_rel}: {_want_img}')
+            if _og.get('og:image:width')!=str(_DISC.SOCIAL_IMAGE['width']) or _og.get('og:image:height')!=str(_DISC.SOCIAL_IMAGE['height']):
+                errors.append(f'F6-G01 og:image does not declare its governed size {_rel}')
+            if len(_ti)==1 and _og.get('og:image:alt') and not _ti[0].startswith(_og['og:image:alt']+' — '):
+                errors.append(f'F6-G01 og:image:alt is not the page title {_rel}')
+            if '<meta name="twitter:card" content="summary_large_image">' not in _hd:
+                errors.append(f'F6-G01 card type does not match the governed image size {_rel}')
             for _m in re.finditer(r'<script type="application/ld\+json">(.*?)</script>',_hd):
                 try: _o=json.loads(_m.group(1))
                 except Exception: errors.append(f'F6-G04 unparseable JSON-LD {_rel}'); continue

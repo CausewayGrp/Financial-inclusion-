@@ -172,6 +172,11 @@ Design records it and changes nothing; where a lens's words are quoted they are 
   (`design/reference/yfie/text.py`, `LTR_RUN`); the runtime does not. Fix for Code: when the table renderer writes a
   cell, wrap every match of that same expression in `<bdi dir="ltr">` (or set the cell text through a helper that does).
   Design impact: none on the reference; every Arabic Compare table on the product until fixed.`
+  **CLOSED 2026-09-29 by Code (EAD-01 follow-on).** `site-src/app.js` isolates through the renderer's own
+  expression (`scripts/yfie/text.py` `LTR_RUN`), character for character, in one helper applied wherever
+  governed record text reaches a page: the Compare cells and column heads, the boundaries beneath them, the
+  record links, and the search results' titles, summaries and period line. `scripts/validate.py` fails if the
+  runtime's expression is not the renderer's or the helper is gone, and two negative controls prove both.
 - `ESCALATE_TO_MASTER (observations, Arabic edition — the native-editor lens; each prints as governed) — a count
   followed by its unit noun ("561 العدد", "1,473 العدد") where a reader expects "العدد: 561" or a counted noun; the
   invariant plural "نقاط مئوية" after 12.91, 12.55 and 11.1 where the prose writes "نقطة مئوية"; the exchange-class

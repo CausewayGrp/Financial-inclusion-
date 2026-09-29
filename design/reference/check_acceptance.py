@@ -37,6 +37,7 @@ ROOT = Path(__file__).resolve().parents[2]
 REF = ROOT / "design" / "reference"
 sys.path.insert(0, str(ROOT / "scripts"))   # the production renderer package (EAD-01)
 from yfie import content as C  # noqa: E402
+import discovery as R_DISC  # noqa: E402  (the one discovery implementation, as the renderer uses it)
 import check_visuals as CV  # noqa: E402  (serve)
 
 NAV = json.loads((ROOT / "site-src/content/content/navigation_interaction.json").read_text(encoding="utf-8"))
@@ -104,7 +105,14 @@ def static_phase(site: Path, failures: list) -> dict:
             mine, theirs = head_of(doc), head_of(twin.read_text(encoding="utf-8"))
             for k in HEAD_PARTS:
                 check(where, f"head_equals_baseline:{k[:24]}", mine[k] == theirs[k])
-        check(where, "no_og_image", "og:image" not in doc)
+        # EAD-09 delivered the governed social-image system, so this is no longer "no og:image" — it is the page's own
+        # governed image, at its declared size, present in the build. The criterion the D7 record states protected the
+        # state before the images existed; the assertion moves with it rather than being dropped.
+        _img = R_DISC.url(R_DISC.social_image_path(route, lang), R_DISC.origin())
+        check(where, "og_image_is_this_page's", f'<meta property="og:image" content="{_img}">' in doc)
+        check(where, "og_image_size_declared",
+              f'content="{R_DISC.SOCIAL_IMAGE["width"]}"' in doc and f'content="{R_DISC.SOCIAL_IMAGE["height"]}"' in doc)
+        check(where, "og_image_shipped", (ROOT / "dist" / _img.lstrip("/")).exists())
         check(where, "html_lang_dir", bool(re.search(rf'<html lang="{lang}" dir="{"rtl" if lang == "ar" else "ltr"}">', doc)))
         body = doc[doc.find("<body"):]
         check(where, "one_h1", len(re.findall(r"<h1\b", body)) == 1)

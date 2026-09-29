@@ -78,6 +78,9 @@ jobs:
       - name: Architecture diagrams show the current navigation and counts
         run: python3 scripts/architecture_diagrams.py --check
 
+      - name: Social images cover every route and match the governed text they were made from
+        run: python3 scripts/social_images.py --check
+
       - name: Bilingual numeric invariance (every English/Arabic page pair prints the same numbers)
         run: python3 audit/tranche_c/checks/bilingual_invariance.py
 
@@ -121,7 +124,31 @@ jobs:
       - name: Viewport acceptance (EN/AR at 320, 390, 640 and 1440 px)
         run: python3 audit/tranche_c/checks/viewport_acceptance.py
 
-      - name: Gate negative controls (every gate still fails on the fault it was written to catch)
+  controls:
+    # Every gate that finds its evidence in the built site is proved to still fail on the fault it was written to catch
+    # (EAD-01: the cutover re-pointed those selectors, and a selector that silently matches nothing would pass the
+    # suites). One full validator run per fault, so this is the slow job; it runs beside the browser one, not before it.
+    name: Gate negative controls
+    needs: gates
+    runs-on: ubuntu-24.04
+    timeout-minutes: 45
+    steps:
+      - name: Check out
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+
+      - name: Set up Python 3.11
+        uses: actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97 # v7.0.0
+        with:
+          python-version: "3.11"
+          cache: pip
+          cache-dependency-path: requirements.txt
+
+      - name: Install the pinned toolchain
+        run: python -m pip install --disable-pip-version-check -r requirements.txt
+
+      - name: Every gate still fails on the fault it was written to catch
         run: |
           python3 scripts/build.py
           python3 scripts/tests/test_gate_negative_controls.py

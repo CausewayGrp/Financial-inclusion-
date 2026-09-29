@@ -19,8 +19,9 @@ printed is frozen in `scripts/tests/baseline_content_oracle.json`, and `scripts/
 holds this build to it: no governed number lost, no ungoverned number gained, no governed sentence lost.
 
 Assets are copied unchanged, never transformed: the master logo (never redrawn, recoloured, filtered, cropped
-or masked — EAD-04), the tools runtime `app.js`, the root-entry `lang-redirect.js`, and the IBM Plex faces the
-stylesheet declares, from `vendor/fonts/` with their OFL licence (EAD-08). The review artefacts of the Design
+or masked — EAD-04), the tools runtime `app.js`, the root-entry `lang-redirect.js`, the IBM Plex faces the
+stylesheet declares, from `vendor/fonts/` with their OFL licence (EAD-08), and the governed social images
+(EAD-09), which `scripts/social_images.py` rasterises from the design's template because that needs a browser. The review artefacts of the Design
 package — content bundles, export frames, social frames — are not part of a hosted site and are written by
 `design/reference/build.py`, which renders through this same package.
 """
@@ -52,6 +53,13 @@ def copy_assets(out: Path) -> None:
     shutil.copy2(SRC / "lang-redirect.js", out / "assets/lang-redirect.js")  # the neutral root entry (F6)
     shutil.copy2(SRC / "content/content/search_index.json", out / "static-data/search_index.json")
     shutil.copy2(SRC / "content/content/search_aliases.json", out / "static-data/search_aliases.json")
+    # The governed social images (EAD-09): one 1200x630 PNG per route and language, rasterised from the design's own
+    # template by `scripts/social_images.py`, which needs a browser and so runs separately. They are copied, never made
+    # here, so this build stays standard-library only and deterministic. `--check` there catches a stale set.
+    social = SRC / "assets" / "social"
+    (out / "assets/social").mkdir()
+    for png in sorted(social.glob("*.png")):
+        shutil.copy2(png, out / "assets/social" / png.name)
     for folder, names in FONT_FILES.items():
         (out / "assets/fonts" / folder).mkdir(parents=True)
         for name in names:

@@ -58,7 +58,11 @@ def insert_after(anchor: str, fragment: str):
     return lambda t: t.replace(anchor, anchor + fragment, 1)
 
 
-# name, the page to break, how to break it, the gate text that must appear
+# name, the file to break, how to break it, the gate text that must appear.
+# The text must be a substring of the real message: several gates interpolate a route or a visual id into the middle of
+# theirs, so a control that names the gate and then the wording would never match (found by running these).
+# A path under `site-src/` or `scripts/` is a source file; anything else is a page of the built site.
+SOURCE_PREFIXES = ("site-src/", "scripts/")
 CONTROLS = [
     ("active navigation loses its aria-current", "en/evidence/CLM-001/index.html",
      replace('<a href="/en/evidence/" aria-current="page">', '<a href="/en/evidence/">'),
@@ -99,8 +103,11 @@ CONTROLS = [
     ("a table header loses its scope", "en/remittances/index.html",
      replace('<th scope="col">', "<th>"),
      "P2-G03 table header cell without scope"),
-    ("a figure loses its governed accessible summary", "en/evidence/VIS-FINDEX-GAPS/index.html",
-     sub_once(r'<p class="body"><b>[^<]*</b>.*?</p>', ""),
+    # On a VIS- record the governed accessible summary is also the record's own summary, so it renders twice and
+    # removing one copy proves nothing; `/remittances/` carries this contract's summary exactly once, in the figure's
+    # text alternative. `p` cannot nest, so the first paragraph after the fallback marker is that summary.
+    ("a figure loses its governed accessible summary", "en/remittances/index.html",
+     sub_once(r'(data-visual-fallback="ordered-text">.*?)<p class="small">.*?</p>', r"\1"),
      "S05.3 governed accessible summary missing"),
     ("a controlled question is dropped from Explore", "en/explore/index.html",
      sub_once(r'<li><div><div class="q">.*?</div></li>', ""),
@@ -114,24 +121,49 @@ CONTROLS = [
     ("the featured Reading differs between pages", "en/explore/index.html",
      replace("/en/readings/reforms-newer-than-people-evidence/", "/en/readings/define-what-you-count/"),
      "RP-G03"),
+    # The value is printed twice — once as the drawn label, once in the value table — so a control that changes one
+    # copy proves nothing. Rounding both is the fault: a governed row value the figure no longer prints anywhere.
     ("a drawn figure rounds a governed row value", "en/remittances/index.html",
-     replace("1,329.2", "1,329"),
-     "P3-G02 does not print its governed row value"),
+     replace("1,329.2", "1,329", 0),
+     "does not print its governed row value"),
+    ("a drawn label shows a number the contract does not govern", "en/remittances/index.html",
+     replace('<text class="val" x="15.20%" y="150.5" text-anchor="start">1,329.2</text>',
+             '<text class="val" x="15.20%" y="150.5" text-anchor="start">1,329</text>'),
+     "draws a value label that is not a governed value"),
+    # The figure declares the fallback on its own element and again on the block that carries it; the gate must read
+    # the figure's own attribute, so the control breaks exactly that one.
     ("a drawn figure loses its ordered-text fallback", "en/remittances/index.html",
-     replace('data-visual-fallback="ordered-text"', 'data-visual-fallback="none"'),
-     "P3-G02 drawn without data-visual-fallback"),
+     replace('<figure class="fig" data-visual-id="VIS-REMITTANCE-MACRO" data-visual-fallback="ordered-text"',
+             '<figure class="fig" data-visual-id="VIS-REMITTANCE-MACRO" data-visual-fallback="none"'),
+     "drawn without data-visual-fallback"),
     ("a decorative graphic appears outside a governed figure", "en/about/index.html",
      insert_after('<main id="main">', '<svg width="10" height="10"></svg>'),
      "P3-G02 graphic outside a governed visual figure"),
     ("a DOM id is used twice", "en/about/index.html",
      insert_after('<main id="main">', '<div id="page-title"></div>'),
      "duplicate DOM id"),
+    # The closing question also names itself in the in-page index and the strip, so only replacing every copy of it
+    # actually takes it off the end of the essay.
     ("a Reading no longer ends with its governed question", "en/readings/define-what-you-count/index.html",
-     replace("What would change this reading?", "What changes this?"),
+     replace("What would change this reading?", "What changes this?", 0),
      "RP-G01 Reading essay does not end"),
     ("a Reading loses its related Readings", "en/readings/define-what-you-count/index.html",
      sub_once(r'(?<=data-reading-related>)(.*?)</section>', "</section>"),
      "RP-G01 a Reading links one or two related Readings"),
+    ("og:image names an image the build does not ship", "en/people/index.html",
+     replace('content="/assets/social/people__en.png"', 'content="/assets/social/people__xx.png"'),
+     "F6-G01 og:image is not this page"),
+    ("og:image loses its declared size", "en/people/index.html",
+     replace('<meta property="og:image:width" content="1200">', ""),
+     "F6-G01 og:image does not declare its governed size"),
+    # The runtime's isolation of governed dates and ranges is the renderer's own expression; if the two drift, a value a
+    # tool writes into an Arabic page reads differently from one the page was rendered with (the D6 RUNTIME_DEFECT).
+    ("the runtime's isolation drifts from the renderer's", "site-src/app.js",
+     replace(r"(?<![\d-])\d{4}-\d{2}", r"(?<![\d-])\d{4}-\d{3}"),
+     "the runtime's left-to-right isolation is not the renderer's expression"),
+    ("the runtime loses its isolation helper", "site-src/app.js",
+     replace("function iso(s){return esc(s).replace(LTR_RUN", "function iso(s){return esc(s).replace(/$^/"),
+     "the runtime has no isolation helper"),
     ("an inventory count phrase disagrees with the contract", "en/measurement/index.html",
      insert_after('<div class="body">', "<p>This resource publishes 42 Evidence records, each traced.</p>"),
      "P1-G04 inventory count phrase not from the contract"),
@@ -156,17 +188,20 @@ def main() -> int:
         shutil.copytree(DIST, backup)
         try:
             for name, rel, mutate, gate in controls:
-                page = DIST / rel
+                page = (ROOT / rel) if rel.startswith(SOURCE_PREFIXES) else (DIST / rel)
                 original = page.read_text(encoding="utf-8")
+                note = ""
                 try:
                     broken = mutate(original)
                     if broken == original:
-                        raise AssertionError("the control changed nothing")
+                        raise AssertionError("the control changed nothing — its selector no longer matches the page")
                     page.write_text(broken, encoding="utf-8")
                     fired = gate in run_validator()
+                except Exception as exc:                 # a control that cannot break the page proves nothing either
+                    fired, note = False, f" — {exc}"
                 finally:
                     page.write_text(original, encoding="utf-8")
-                print(("  CAUGHT      " if fired else "  NOT CAUGHT ") + f"{name}  [{gate}]")
+                print(("  CAUGHT      " if fired else "  NOT CAUGHT ") + f"{name}  [{gate}]{note}")
                 caught += fired
                 missed += not fired
         finally:

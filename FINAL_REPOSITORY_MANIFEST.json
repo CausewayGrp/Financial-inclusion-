@@ -25,7 +25,7 @@
   "AUTHORITY_MASTER": 1,
   "AUTHORITY_POINTER": 2,
   "AUTHORITY_RULES": 1,
-  "BUILD_AND_GATES": 19,
+  "BUILD_AND_GATES": 20,
   "CONTROLLED_CONTRACT": 2,
   "CURRENT_DOCUMENT": 10,
   "CURRENT_PROGRAMME_RECORD": 52,
@@ -33,7 +33,8 @@
   "GENERATED_DIAGRAMS": 9,
   "GENERATED_LITERAL_CLOSURE": 1,
   "GENERATED_PROJECTION": 37,
-  "GENERATED_PUBLIC_BUILD": 303,
+  "GENERATED_PUBLIC_BUILD": 589,
+  "GENERATED_SOCIAL_IMAGES": 287,
   "LOGO_AUTHORITY": 1,
   "PRODUCTION_RENDERER": 10,
   "PROJECTION_CONTRACT": 11,
@@ -3690,6 +3691,1150 @@
    "class": "GENERATED_PUBLIC_BUILD"
   },
   {
+   "path": "dist/assets/social/about__ar.png",
+   "class": "GENERATED_PUBLIC_BUILD"
+  },
+  {
+   "path": "dist/assets/social/about__en.png",
+   "class": "GENERATED_PUBLIC_BUILD"
+  },
+  {
+   "path": "dist/assets/social/access__ar.png",
+   "class": "GENERATED_PUBLIC_BUILD"
+  },
+  {
+   "path": "dist/assets/social/access__en.png",
+   "class": "GENERATED_PUBLIC_BUILD"
+  },
+  {
+   "path": "dist/assets/social/accessibility__ar.png",
+   "class": "GENERATED_PUBLIC_BUILD"
+  },
+  {
+   "path": "dist/assets/social/accessibility__en.png",
+   "class": "GENERATED_PUBLIC_BUILD"
+  },
+  {
+   "path": "dist/assets/social/contact__ar.png",
+   "class": "GENERATED_PUBLIC_BUILD"
+  },
+  {
+   "path": "dist/assets/social/contact__en.png",
+   "class": "GENERATED_PUBLIC_BUILD"
+  },
+  {
+   "path": "dist/assets/social/corrections__ar.png",
+   "class": "GENERATED_PUBLIC_BUILD"
+  },
+  {
+   "path": "dist/assets/social/corrections__en.png",
+   "class": "GENERATED_PUBLIC_BUILD"
+  },
+  {
+   "path": "dist/assets/social/data__ar.png",
+   "class": "GENERATED_PUBLIC_BUILD"
+  },
+  {
+   "path": "dist/assets/social/data__en.png",
+   "class": "GENERATED_PUBLIC_BUILD"
+  },
+  {
+   "path": "dist/assets/social/evidence_CLM-001__ar.png",
+   "class": "GENERATED_PUBLIC_BUILD"
+  },
+  {
+   "path": "dist/assets/social/evidence_CLM-001__en.png",
+   "class": "GENERATED_PUBLIC_BUILD"
+  },
+  {
+   "path": "dist/assets/social/evidence_CLM-002__ar.png",
+   "class": "GENERATED_PUBLIC_BUILD"
+  },
+  {
+   "path": "dist/assets/social/evidence_CLM-002__en.png",
+   "class": "GENERATED_PUBLIC_BUILD"
+  },
+  {
+   "path": "dist/assets/social/evidence_CLM-003__ar.png",
+   "class": "GENERATED_PUBLIC_BUILD"
+  },
+  {
+   "path": "dist/assets/social/evidence_CLM-003__en.png",
+   "class": "GENERATED_PUBLIC_BUILD"
+  },
+  {
+   "path": "dist/assets/social/evidence_CLM-004__ar.png",
+   "class": "GENERATED_PUBLIC_BUILD"
+  },
+  {
+   "path": "dist/assets/social/evidence_CLM-004__en.png",
+   "class": "GENERATED_PUBLIC_BUILD"
+  },
+  {
+   "path": "dist/assets/social/evidence_CLM-005__ar.png",
+   "class": "GENERATED_PUBLIC_BUILD"
+  },
+  {
+   "path": "dist/assets/social/evidence_CLM-005__en.png",
+   "class": "GENERATED_PUBLIC_BUILD"
+  },
+  {
+   "path": "dist/assets/social/evidence_CLM-006__ar.png",
+   "class": "GENERATED_PUBLIC_BUILD"
+  },
+  {
+   "path": "dist/assets/social/evidence_CLM-006__en.png",
+   "class": "GENERATED_PUBLIC_BUILD"
+  },
+  {
+   "path": "dist/assets/social/evidence_CLM-007__ar.png",
+   "class": "GENERATED_PUBLIC_BUILD"
+  },
+  {
+   "path": "dist/assets/social/evidence_CLM-007__en.png",
+   "class": "GENERATED_PUBLIC_BUILD"
+  },
+  {
+   "path": "dist/assets/social/evidence_CLM-008__ar.png",
+   "class": "GENERATED_PUBLIC_BUILD"
+  },
+  {
+   "path": "dist/assets/social/evidence_CLM-008__en.png",
+   "class": "GENERATED_PUBLIC_BUILD"
+  },
+  {
+   "path": "dist/assets/social/evidence_CLM-009__ar.png",
+   "class": "GENERATED_PUBLIC_BUILD"
+  },
+  {
+   "path": "dist/assets/social/evidence_CLM-009__en.png",
+   "class": "GENERATED_PUBLIC_BUILD"
+  },
+  {
+   "path": "dist/assets/social/evidence_CLM-010__ar.png",
+   "class": "GENERATED_PUBLIC_BUILD"
+  },
+  {
+   "path": "dist/assets/social/evidence_CLM-010__en.png",
+   "class": "GENERATED_PUBLIC_BUILD"
+  },
+  {
+   "path": "dist/assets/social/evidence_CLM-011__ar.png",
+   "class": "GENERATED_PUBLIC_BUILD"
+  },
+  {
+   "path": "dist/assets/social/evidence_CLM-011__en.png",
+   "class": "GENERATED_PUBLIC_BUILD"
+  },
+  {
+   "path": "dist/assets/social/evidence_CLM-012__ar.png",
+   "class": "GENERATED_PUBLIC_BUILD"
+  },
+  {
+   "path": "dist/assets/social/evidence_CLM-012__en.png",
+   "class": "GENERATED_PUBLIC_BUILD"
+  },
+  {
+   "path": "dist/assets/social/evidence_CLM-013__ar.png",
+   "class": "GENERATED_PUBLIC_BUILD"
+  },
+  {
+   "path": "dist/assets/social/evidence_CLM-013__en.png",
+   "class": "GENERATED_PUBLIC_BUILD"
+  },
+  {
+   "path": "dist/assets/social/evidence_CLM-014__ar.png",
+   "class": "GENERATED_PUBLIC_BUILD"
+  },
+  {
+   "path": "dist/assets/social/evidence_CLM-014__en.png",
+   "class": "GENERATED_PUBLIC_BUILD"
+  },
+  {
+   "path": "dist/assets/social/evidence_CLM-015__ar.png",
+   "class": "GENERATED_PUBLIC_BUILD"
+  },
+  {
+   "path": "dist/assets/social/evidence_CLM-015__en.png",
+   "class": "GENERATED_PUBLIC_BUILD"
+  },
+  {
+   "path": "dist/assets/social/evidence_CLM-016__ar.png",
+   "class": "GENERATED_PUBLIC_BUILD"
+  },
+  {
+   "path": "dist/assets/social/evidence_CLM-016__en.png",
+   "class": "GENERATED_PUBLIC_BUILD"
+  },
+  {
+   "path": "dist/assets/social/evidence_CLM-017__ar.png",
+   "class": "GENERATED_PUBLIC_BUILD"
+  },
+  {
+   "path": "dist/assets/social/evidence_CLM-017__en.png",
+   "class": "GENERATED_PUBLIC_BUILD"
+  },
+  {
+   "path": "dist/assets/social/evidence_CLM-018__ar.png",
+   "class": "GENERATED_PUBLIC_BUILD"
+  },
+  {
+   "path": "dist/assets/social/evidence_CLM-018__en.png",
+   "class": "GENERATED_PUBLIC_BUILD"
+  },
+  {
+   "path": "dist/assets/social/evidence_CLM-019__ar.png",
+   "class": "GENERATED_PUBLIC_BUILD"
+  },
+  {
+   "path": "dist/assets/social/evidence_CLM-019__en.png",
+   "class": "GENERATED_PUBLIC_BUILD"
+  },
+  {
+   "path": "dist/assets/social/evidence_CLM-020__ar.png",
+   "class": "GENERATED_PUBLIC_BUILD"
+  },
+  {
+   "path": "dist/assets/social/evidence_CLM-020__en.png",
+   "class": "GENERATED_PUBLIC_BUILD"
+  },
+  {
+   "path": "dist/assets/social/evidence_CLM-021__ar.png",
+   "class": "GENERATED_PUBLIC_BUILD"
+  },
+  {
+   "path": "dist/assets/social/evidence_CLM-021__en.png",
+   "class": "GENERATED_PUBLIC_BUILD"
+  },
+  {
+   "path": "dist/assets/social/evidence_CLM-022__ar.png",
+   "class": "GENERATED_PUBLIC_BUILD"
+  },
+  {
+   "path": "dist/assets/social/evidence_CLM-022__en.png",
+   "class": "GENERATED_PUBLIC_BUILD"
+  },
+  {
+   "path": "dist/assets/social/evidence_CLM-023__ar.png",
+   "class": "GENERATED_PUBLIC_BUILD"
+  },
+  {
+   "path": "dist/assets/social/evidence_CLM-023__en.png",
+   "class": "GENERATED_PUBLIC_BUILD"
+  },
+  {
+   "path": "dist/assets/social/evidence_CLM-024__ar.png",
+   "class": "GENERATED_PUBLIC_BUILD"
+  },
+  {
+   "path": "dist/assets/social/evidence_CLM-024__en.png",
+   "class": "GENERATED_PUBLIC_BUILD"
+  },
+  {
+   "path": "dist/assets/social/evidence_CLM-025__ar.png",
+   "class": "GENERATED_PUBLIC_BUILD"
+  },
+  {
+   "path": "dist/assets/social/evidence_CLM-025__en.png",
+   "class": "GENERATED_PUBLIC_BUILD"
+  },
+  {
+   "path": "dist/assets/social/evidence_CLM-026__ar.png",
+   "class": "GENERATED_PUBLIC_BUILD"
+  },
+  {
+   "path": "dist/assets/social/evidence_CLM-026__en.png",
+   "class": "GENERATED_PUBLIC_BUILD"
+  },
+  {
+   "path": "dist/assets/social/evidence_CLM-027__ar.png",
+   "class": "GENERATED_PUBLIC_BUILD"
+  },
+  {
+   "path": "dist/assets/social/evidence_CLM-027__en.png",
+   "class": "GENERATED_PUBLIC_BUILD"
+  },
+  {
+   "path": "dist/assets/social/evidence_CLM-028__ar.png",
+   "class": "GENERATED_PUBLIC_BUILD"
+  },
+  {
+   "path": "dist/assets/social/evidence_CLM-028__en.png",
+   "class": "GENERATED_PUBLIC_BUILD"
+  },
+  {
+   "path": "dist/assets/social/evidence_CLM-029__ar.png",
+   "class": "GENERATED_PUBLIC_BUILD"
+  },
+  {
+   "path": "dist/assets/social/evidence_CLM-029__en.png",
+   "class": "GENERATED_PUBLIC_BUILD"
+  },
+  {
+   "path": "dist/assets/social/evidence_CLM-030__ar.png",
+   "class": "GENERATED_PUBLIC_BUILD"
+  },
+  {
+   "path": "dist/assets/social/evidence_CLM-030__en.png",
+   "class": "GENERATED_PUBLIC_BUILD"
+  },
+  {
+   "path": "dist/assets/social/evidence_CLM-031__ar.png",
+   "class": "GENERATED_PUBLIC_BUILD"
+  },
+  {
+   "path": "dist/assets/social/evidence_CLM-031__en.png",
+   "class": "GENERATED_PUBLIC_BUILD"
+  },
+  {
+   "path": "dist/assets/social/evidence_CLM-032__ar.png",
+   "class": "GENERATED_PUBLIC_BUILD"
+  },
+  {
+   "path": "dist/assets/social/evidence_CLM-032__en.png",
+   "class": "GENERATED_PUBLIC_BUILD"
+  },
+  {
+   "path": "dist/assets/social/evidence_CLM-033__ar.png",
+   "class": "GENERATED_PUBLIC_BUILD"
+  },
+  {
+   "path": "dist/assets/social/evidence_CLM-033__en.png",
+   "class": "GENERATED_PUBLIC_BUILD"
+  },
+  {
+   "path": "dist/assets/social/evidence_CLM-034__ar.png",
+   "class": "GENERATED_PUBLIC_BUILD"
+  },
+  {
+   "path": "dist/assets/social/evidence_CLM-034__en.png",
+   "class": "GENERATED_PUBLIC_BUILD"
+  },
+  {
+   "path": "dist/assets/social/evidence_CLM-035__ar.png",
+   "class": "GENERATED_PUBLIC_BUILD"
+  },
+  {
+   "path": "dist/assets/social/evidence_CLM-035__en.png",
+   "class": "GENERATED_PUBLIC_BUILD"
+  },
+  {
+   "path": "dist/assets/social/evidence_CLM-036__ar.png",
+   "class": "GENERATED_PUBLIC_BUILD"
+  },
+  {
+   "path": "dist/assets/social/evidence_CLM-036__en.png",
+   "class": "GENERATED_PUBLIC_BUILD"
+  },
+  {
+   "path": "dist/assets/social/evidence_CLM-037__ar.png",
+   "class": "GENERATED_PUBLIC_BUILD"
+  },
+  {
+   "path": "dist/assets/social/evidence_CLM-037__en.png",
+   "class": "GENERATED_PUBLIC_BUILD"
+  },
+  {
+   "path": "dist/assets/social/evidence_CLM-038__ar.png",
+   "class": "GENERATED_PUBLIC_BUILD"
+  },
+  {
+   "path": "dist/assets/social/evidence_CLM-038__en.png",
+   "class": "GENERATED_PUBLIC_BUILD"
+  },
+  {
+   "path": "dist/assets/social/evidence_CLM-039__ar.png",
+   "class": "GENERATED_PUBLIC_BUILD"
+  },
+  {
+   "path": "dist/assets/social/evidence_CLM-039__en.png",
+   "class": "GENERATED_PUBLIC_BUILD"
+  },
+  {
+   "path": "dist/assets/social/evidence_CLM-040__ar.png",
+   "class": "GENERATED_PUBLIC_BUILD"
+  },
+  {
+   "path": "dist/assets/social/evidence_CLM-040__en.png",
+   "class": "GENERATED_PUBLIC_BUILD"
+  },
+  {
+   "path": "dist/assets/social/evidence_CLM-041__ar.png",
+   "class": "GENERATED_PUBLIC_BUILD"
+  },
+  {
+   "path": "dist/assets/social/evidence_CLM-041__en.png",
+   "class": "GENERATED_PUBLIC_BUILD"
+  },
+  {
+   "path": "dist/assets/social/evidence_CLM-042__ar.png",
+   "class": "GENERATED_PUBLIC_BUILD"
+  },
+  {
+   "path": "dist/assets/social/evidence_CLM-042__en.png",
+   "class": "GENERATED_PUBLIC_BUILD"
+  },
+  {
+   "path": "dist/assets/social/evidence_CLM-043__ar.png",
+   "class": "GENERATED_PUBLIC_BUILD"
+  },
+  {
+   "path": "dist/assets/social/evidence_CLM-043__en.png",
+   "class": "GENERATED_PUBLIC_BUILD"
+  },
+  {
+   "path": "dist/assets/social/evidence_CLM-044__ar.png",
+   "class": "GENERATED_PUBLIC_BUILD"
+  },
+  {
+   "path": "dist/assets/social/evidence_CLM-044__en.png",
+   "class": "GENERATED_PUBLIC_BUILD"
+  },
+  {
+   "path": "dist/assets/social/evidence_CLM-045__ar.png",
+   "class": "GENERATED_PUBLIC_BUILD"
+  },
+  {
+   "path": "dist/assets/social/evidence_CLM-045__en.png",
+   "class": "GENERATED_PUBLIC_BUILD"
+  },
+  {
+   "path": "dist/assets/social/evidence_CLM-046__ar.png",
+   "class": "GENERATED_PUBLIC_BUILD"
+  },
+  {
+   "path": "dist/assets/social/evidence_CLM-046__en.png",
+   "class": "GENERATED_PUBLIC_BUILD"
+  },
+  {
+   "path": "dist/assets/social/evidence_CLM-047__ar.png",
+   "class": "GENERATED_PUBLIC_BUILD"
+  },
+  {
+   "path": "dist/assets/social/evidence_CLM-047__en.png",
+   "class": "GENERATED_PUBLIC_BUILD"
+  },
+  {
+   "path": "dist/assets/social/evidence_CLM-048__ar.png",
+   "class": "GENERATED_PUBLIC_BUILD"
+  },
+  {
+   "path": "dist/assets/social/evidence_CLM-048__en.png",
+   "class": "GENERATED_PUBLIC_BUILD"
+  },
+  {
+   "path": "dist/assets/social/evidence_CLM-049__ar.png",
+   "class": "GENERATED_PUBLIC_BUILD"
+  },
+  {
+   "path": "dist/assets/social/evidence_CLM-049__en.png",
+   "class": "GENERATED_PUBLIC_BUILD"
+  },
+  {
+   "path": "dist/assets/social/evidence_CLM-050__ar.png",
+   "class": "GENERATED_PUBLIC_BUILD"
+  },
+  {
+   "path": "dist/assets/social/evidence_CLM-050__en.png",
+   "class": "GENERATED_PUBLIC_BUILD"
+  },
+  {
+   "path": "dist/assets/social/evidence_CLM-051__ar.png",
+   "class": "GENERATED_PUBLIC_BUILD"
+  },
+  {
+   "path": "dist/assets/social/evidence_CLM-051__en.png",
+   "class": "GENERATED_PUBLIC_BUILD"
+  },
+  {
+   "path": "dist/assets/social/evidence_CLM-052__ar.png",
+   "class": "GENERATED_PUBLIC_BUILD"
+  },
+  {
+   "path": "dist/assets/social/evidence_CLM-052__en.png",
+   "class": "GENERATED_PUBLIC_BUILD"
+  },
+  {
+   "path": "dist/assets/social/evidence_CLM-053__ar.png",
+   "class": "GENERATED_PUBLIC_BUILD"
+  },
+  {
+   "path": "dist/assets/social/evidence_CLM-053__en.png",
+   "class": "GENERATED_PUBLIC_BUILD"
+  },
+  {
+   "path": "dist/assets/social/evidence_CLM-054__ar.png",
+   "class": "GENERATED_PUBLIC_BUILD"
+  },
+  {
+   "path": "dist/assets/social/evidence_CLM-054__en.png",
+   "class": "GENERATED_PUBLIC_BUILD"
+  },
+  {
+   "path": "dist/assets/social/evidence_CLM-055__ar.png",
+   "class": "GENERATED_PUBLIC_BUILD"
+  },
+  {
+   "path": "dist/assets/social/evidence_CLM-055__en.png",
+   "class": "GENERATED_PUBLIC_BUILD"
+  },
+  {
+   "path": "dist/assets/social/evidence_CLM-056__ar.png",
+   "class": "GENERATED_PUBLIC_BUILD"
+  },
+  {
+   "path": "dist/assets/social/evidence_CLM-056__en.png",
+   "class": "GENERATED_PUBLIC_BUILD"
+  },
+  {
+   "path": "dist/assets/social/evidence_CLM-057__ar.png",
+   "class": "GENERATED_PUBLIC_BUILD"
+  },
+  {
+   "path": "dist/assets/social/evidence_CLM-057__en.png",
+   "class": "GENERATED_PUBLIC_BUILD"
+  },
+  {
+   "path": "dist/assets/social/evidence_CLM-058__ar.png",
+   "class": "GENERATED_PUBLIC_BUILD"
+  },
+  {
+   "path": "dist/assets/social/evidence_CLM-058__en.png",
+   "class": "GENERATED_PUBLIC_BUILD"
+  },
+  {
+   "path": "dist/assets/social/evidence_CLM-059__ar.png",
+   "class": "GENERATED_PUBLIC_BUILD"
+  },
+  {
+   "path": "dist/assets/social/evidence_CLM-059__en.png",
+   "class": "GENERATED_PUBLIC_BUILD"
+  },
+  {
+   "path": "dist/assets/social/evidence_CLM-060__ar.png",
+   "class": "GENERATED_PUBLIC_BUILD"
+  },
+  {
+   "path": "dist/assets/social/evidence_CLM-060__en.png",
+   "class": "GENERATED_PUBLIC_BUILD"
+  },
+  {
+   "path": "dist/assets/social/evidence_CLM-062__ar.png",
+   "class": "GENERATED_PUBLIC_BUILD"
+  },
+  {
+   "path": "dist/assets/social/evidence_CLM-062__en.png",
+   "class": "GENERATED_PUBLIC_BUILD"
+  },
+  {
+   "path": "dist/assets/social/evidence_DS-DEMAND-VINTAGE-LENS__ar.png",
+   "class": "GENERATED_PUBLIC_BUILD"
+  },
+  {
+   "path": "dist/assets/social/evidence_DS-DEMAND-VINTAGE-LENS__en.png",
+   "class": "GENERATED_PUBLIC_BUILD"
+  },
+  {
+   "path": "dist/assets/social/evidence_DS-FCP-ARCH__ar.png",
+   "class": "GENERATED_PUBLIC_BUILD"
+  },
+  {
+   "path": "dist/assets/social/evidence_DS-FCP-ARCH__en.png",
+   "class": "GENERATED_PUBLIC_BUILD"
+  },
+  {
+   "path": "dist/assets/social/evidence_DS-FINDEX-HISTORY-CROSSWALK__ar.png",
+   "class": "GENERATED_PUBLIC_BUILD"
+  },
+  {
+   "path": "dist/assets/social/evidence_DS-FINDEX-HISTORY-CROSSWALK__en.png",
+   "class": "GENERATED_PUBLIC_BUILD"
+  },
+  {
+   "path": "dist/assets/social/evidence_DS-FINDEX-PUBLIC-HISTORY__ar.png",
+   "class": "GENERATED_PUBLIC_BUILD"
+  },
+  {
+   "path": "dist/assets/social/evidence_DS-FINDEX-PUBLIC-HISTORY__en.png",
+   "class": "GENERATED_PUBLIC_BUILD"
+  },
+  {
+   "path": "dist/assets/social/evidence_DS-QUAL-EVIDENCE__ar.png",
+   "class": "GENERATED_PUBLIC_BUILD"
+  },
+  {
+   "path": "dist/assets/social/evidence_DS-QUAL-EVIDENCE__en.png",
+   "class": "GENERATED_PUBLIC_BUILD"
+  },
+  {
+   "path": "dist/assets/social/evidence_FMIIP-BASELINE-2025-01__ar.png",
+   "class": "GENERATED_PUBLIC_BUILD"
+  },
+  {
+   "path": "dist/assets/social/evidence_FMIIP-BASELINE-2025-01__en.png",
+   "class": "GENERATED_PUBLIC_BUILD"
+  },
+  {
+   "path": "dist/assets/social/evidence_MF-ORIG-001+002__ar.png",
+   "class": "GENERATED_PUBLIC_BUILD"
+  },
+  {
+   "path": "dist/assets/social/evidence_MF-ORIG-001+002__en.png",
+   "class": "GENERATED_PUBLIC_BUILD"
+  },
+  {
+   "path": "dist/assets/social/evidence_MFI-SPINE-2015-Q4__ar.png",
+   "class": "GENERATED_PUBLIC_BUILD"
+  },
+  {
+   "path": "dist/assets/social/evidence_MFI-SPINE-2015-Q4__en.png",
+   "class": "GENERATED_PUBLIC_BUILD"
+  },
+  {
+   "path": "dist/assets/social/evidence_NEG-EW-011__ar.png",
+   "class": "GENERATED_PUBLIC_BUILD"
+  },
+  {
+   "path": "dist/assets/social/evidence_NEG-EW-011__en.png",
+   "class": "GENERATED_PUBLIC_BUILD"
+  },
+  {
+   "path": "dist/assets/social/evidence_PSE-011__ar.png",
+   "class": "GENERATED_PUBLIC_BUILD"
+  },
+  {
+   "path": "dist/assets/social/evidence_PSE-011__en.png",
+   "class": "GENERATED_PUBLIC_BUILD"
+  },
+  {
+   "path": "dist/assets/social/evidence_QUAL-001__ar.png",
+   "class": "GENERATED_PUBLIC_BUILD"
+  },
+  {
+   "path": "dist/assets/social/evidence_QUAL-001__en.png",
+   "class": "GENERATED_PUBLIC_BUILD"
+  },
+  {
+   "path": "dist/assets/social/evidence_VIS-BORROWING-SOURCES-2014__ar.png",
+   "class": "GENERATED_PUBLIC_BUILD"
+  },
+  {
+   "path": "dist/assets/social/evidence_VIS-BORROWING-SOURCES-2014__en.png",
+   "class": "GENERATED_PUBLIC_BUILD"
+  },
+  {
+   "path": "dist/assets/social/evidence_VIS-CAPITAL-CONTEXT__ar.png",
+   "class": "GENERATED_PUBLIC_BUILD"
+  },
+  {
+   "path": "dist/assets/social/evidence_VIS-CAPITAL-CONTEXT__en.png",
+   "class": "GENERATED_PUBLIC_BUILD"
+  },
+  {
+   "path": "dist/assets/social/evidence_VIS-DEMAND-VINTAGE-LADDER__ar.png",
+   "class": "GENERATED_PUBLIC_BUILD"
+  },
+  {
+   "path": "dist/assets/social/evidence_VIS-DEMAND-VINTAGE-LADDER__en.png",
+   "class": "GENERATED_PUBLIC_BUILD"
+  },
+  {
+   "path": "dist/assets/social/evidence_VIS-DOMESTIC-REMITTANCE-PATH-2014__ar.png",
+   "class": "GENERATED_PUBLIC_BUILD"
+  },
+  {
+   "path": "dist/assets/social/evidence_VIS-DOMESTIC-REMITTANCE-PATH-2014__en.png",
+   "class": "GENERATED_PUBLIC_BUILD"
+  },
+  {
+   "path": "dist/assets/social/evidence_VIS-E-MONEY-RULE-STACK__ar.png",
+   "class": "GENERATED_PUBLIC_BUILD"
+  },
+  {
+   "path": "dist/assets/social/evidence_VIS-E-MONEY-RULE-STACK__en.png",
+   "class": "GENERATED_PUBLIC_BUILD"
+  },
+  {
+   "path": "dist/assets/social/evidence_VIS-EVIDENCE-CLASS-LADDER__ar.png",
+   "class": "GENERATED_PUBLIC_BUILD"
+  },
+  {
+   "path": "dist/assets/social/evidence_VIS-EVIDENCE-CLASS-LADDER__en.png",
+   "class": "GENERATED_PUBLIC_BUILD"
+  },
+  {
+   "path": "dist/assets/social/evidence_VIS-EVIDENCE-FRESHNESS__ar.png",
+   "class": "GENERATED_PUBLIC_BUILD"
+  },
+  {
+   "path": "dist/assets/social/evidence_VIS-EVIDENCE-FRESHNESS__en.png",
+   "class": "GENERATED_PUBLIC_BUILD"
+  },
+  {
+   "path": "dist/assets/social/evidence_VIS-EVIDENCE-GAPS__ar.png",
+   "class": "GENERATED_PUBLIC_BUILD"
+  },
+  {
+   "path": "dist/assets/social/evidence_VIS-EVIDENCE-GAPS__en.png",
+   "class": "GENERATED_PUBLIC_BUILD"
+  },
+  {
+   "path": "dist/assets/social/evidence_VIS-FCP-REDRESS-PATH__ar.png",
+   "class": "GENERATED_PUBLIC_BUILD"
+  },
+  {
+   "path": "dist/assets/social/evidence_VIS-FCP-REDRESS-PATH__en.png",
+   "class": "GENERATED_PUBLIC_BUILD"
+  },
+  {
+   "path": "dist/assets/social/evidence_VIS-FINDEX-ACCESS-USE__ar.png",
+   "class": "GENERATED_PUBLIC_BUILD"
+  },
+  {
+   "path": "dist/assets/social/evidence_VIS-FINDEX-ACCESS-USE__en.png",
+   "class": "GENERATED_PUBLIC_BUILD"
+  },
+  {
+   "path": "dist/assets/social/evidence_VIS-FINDEX-BARRIERS__ar.png",
+   "class": "GENERATED_PUBLIC_BUILD"
+  },
+  {
+   "path": "dist/assets/social/evidence_VIS-FINDEX-BARRIERS__en.png",
+   "class": "GENERATED_PUBLIC_BUILD"
+  },
+  {
+   "path": "dist/assets/social/evidence_VIS-FINDEX-FLOW-CHANNELS__ar.png",
+   "class": "GENERATED_PUBLIC_BUILD"
+  },
+  {
+   "path": "dist/assets/social/evidence_VIS-FINDEX-FLOW-CHANNELS__en.png",
+   "class": "GENERATED_PUBLIC_BUILD"
+  },
+  {
+   "path": "dist/assets/social/evidence_VIS-FINDEX-GAPS__ar.png",
+   "class": "GENERATED_PUBLIC_BUILD"
+  },
+  {
+   "path": "dist/assets/social/evidence_VIS-FINDEX-GAPS__en.png",
+   "class": "GENERATED_PUBLIC_BUILD"
+  },
+  {
+   "path": "dist/assets/social/evidence_VIS-FINDEX-OBSERVED-WAVES__ar.png",
+   "class": "GENERATED_PUBLIC_BUILD"
+  },
+  {
+   "path": "dist/assets/social/evidence_VIS-FINDEX-OBSERVED-WAVES__en.png",
+   "class": "GENERATED_PUBLIC_BUILD"
+  },
+  {
+   "path": "dist/assets/social/evidence_VIS-FINDEX-RESILIENCE__ar.png",
+   "class": "GENERATED_PUBLIC_BUILD"
+  },
+  {
+   "path": "dist/assets/social/evidence_VIS-FINDEX-RESILIENCE__en.png",
+   "class": "GENERATED_PUBLIC_BUILD"
+  },
+  {
+   "path": "dist/assets/social/evidence_VIS-FINDEX-SAMPLE-SUPPORT__ar.png",
+   "class": "GENERATED_PUBLIC_BUILD"
+  },
+  {
+   "path": "dist/assets/social/evidence_VIS-FINDEX-SAMPLE-SUPPORT__en.png",
+   "class": "GENERATED_PUBLIC_BUILD"
+  },
+  {
+   "path": "dist/assets/social/evidence_VIS-FIRM-CONSTRAINTS__ar.png",
+   "class": "GENERATED_PUBLIC_BUILD"
+  },
+  {
+   "path": "dist/assets/social/evidence_VIS-FIRM-CONSTRAINTS__en.png",
+   "class": "GENERATED_PUBLIC_BUILD"
+  },
+  {
+   "path": "dist/assets/social/evidence_VIS-FIRM-FINANCE-PATH__ar.png",
+   "class": "GENERATED_PUBLIC_BUILD"
+  },
+  {
+   "path": "dist/assets/social/evidence_VIS-FIRM-FINANCE-PATH__en.png",
+   "class": "GENERATED_PUBLIC_BUILD"
+  },
+  {
+   "path": "dist/assets/social/evidence_VIS-FIRM-FINANCE-SEVERITY__ar.png",
+   "class": "GENERATED_PUBLIC_BUILD"
+  },
+  {
+   "path": "dist/assets/social/evidence_VIS-FIRM-FINANCE-SEVERITY__en.png",
+   "class": "GENERATED_PUBLIC_BUILD"
+  },
+  {
+   "path": "dist/assets/social/evidence_VIS-FL-EVIDENCE-LADDER__ar.png",
+   "class": "GENERATED_PUBLIC_BUILD"
+  },
+  {
+   "path": "dist/assets/social/evidence_VIS-FL-EVIDENCE-LADDER__en.png",
+   "class": "GENERATED_PUBLIC_BUILD"
+  },
+  {
+   "path": "dist/assets/social/evidence_VIS-INCLUSION-TRANSMISSION__ar.png",
+   "class": "GENERATED_PUBLIC_BUILD"
+  },
+  {
+   "path": "dist/assets/social/evidence_VIS-INCLUSION-TRANSMISSION__en.png",
+   "class": "GENERATED_PUBLIC_BUILD"
+  },
+  {
+   "path": "dist/assets/social/evidence_VIS-MECHANISM-METRIC-BRIDGE__ar.png",
+   "class": "GENERATED_PUBLIC_BUILD"
+  },
+  {
+   "path": "dist/assets/social/evidence_VIS-MECHANISM-METRIC-BRIDGE__en.png",
+   "class": "GENERATED_PUBLIC_BUILD"
+  },
+  {
+   "path": "dist/assets/social/evidence_VIS-MFI-2014-PANEL__ar.png",
+   "class": "GENERATED_PUBLIC_BUILD"
+  },
+  {
+   "path": "dist/assets/social/evidence_VIS-MFI-2014-PANEL__en.png",
+   "class": "GENERATED_PUBLIC_BUILD"
+  },
+  {
+   "path": "dist/assets/social/evidence_VIS-MFI-RUPTURE-LENS__ar.png",
+   "class": "GENERATED_PUBLIC_BUILD"
+  },
+  {
+   "path": "dist/assets/social/evidence_VIS-MFI-RUPTURE-LENS__en.png",
+   "class": "GENERATED_PUBLIC_BUILD"
+  },
+  {
+   "path": "dist/assets/social/evidence_VIS-MFI-SPINE__ar.png",
+   "class": "GENERATED_PUBLIC_BUILD"
+  },
+  {
+   "path": "dist/assets/social/evidence_VIS-MFI-SPINE__en.png",
+   "class": "GENERATED_PUBLIC_BUILD"
+  },
+  {
+   "path": "dist/assets/social/evidence_VIS-OECD-FCP-TIMELINE__ar.png",
+   "class": "GENERATED_PUBLIC_BUILD"
+  },
+  {
+   "path": "dist/assets/social/evidence_VIS-OECD-FCP-TIMELINE__en.png",
+   "class": "GENERATED_PUBLIC_BUILD"
+  },
+  {
+   "path": "dist/assets/social/evidence_VIS-PAYMENT-ANATOMY__ar.png",
+   "class": "GENERATED_PUBLIC_BUILD"
+  },
+  {
+   "path": "dist/assets/social/evidence_VIS-PAYMENT-ANATOMY__en.png",
+   "class": "GENERATED_PUBLIC_BUILD"
+  },
+  {
+   "path": "dist/assets/social/evidence_VIS-PAYMENT-RAILS__ar.png",
+   "class": "GENERATED_PUBLIC_BUILD"
+  },
+  {
+   "path": "dist/assets/social/evidence_VIS-PAYMENT-RAILS__en.png",
+   "class": "GENERATED_PUBLIC_BUILD"
+  },
+  {
+   "path": "dist/assets/social/evidence_VIS-POS-TERMINALS__ar.png",
+   "class": "GENERATED_PUBLIC_BUILD"
+  },
+  {
+   "path": "dist/assets/social/evidence_VIS-POS-TERMINALS__en.png",
+   "class": "GENERATED_PUBLIC_BUILD"
+  },
+  {
+   "path": "dist/assets/social/evidence_VIS-POS-TRANSACTIONS__ar.png",
+   "class": "GENERATED_PUBLIC_BUILD"
+  },
+  {
+   "path": "dist/assets/social/evidence_VIS-POS-TRANSACTIONS__en.png",
+   "class": "GENERATED_PUBLIC_BUILD"
+  },
+  {
+   "path": "dist/assets/social/evidence_VIS-POS-VALUE__ar.png",
+   "class": "GENERATED_PUBLIC_BUILD"
+  },
+  {
+   "path": "dist/assets/social/evidence_VIS-POS-VALUE__en.png",
+   "class": "GENERATED_PUBLIC_BUILD"
+  },
+  {
+   "path": "dist/assets/social/evidence_VIS-PROVIDER-OBSERVABILITY__ar.png",
+   "class": "GENERATED_PUBLIC_BUILD"
+  },
+  {
+   "path": "dist/assets/social/evidence_VIS-PROVIDER-OBSERVABILITY__en.png",
+   "class": "GENERATED_PUBLIC_BUILD"
+  },
+  {
+   "path": "dist/assets/social/evidence_VIS-PROVIDER-TIME__ar.png",
+   "class": "GENERATED_PUBLIC_BUILD"
+  },
+  {
+   "path": "dist/assets/social/evidence_VIS-PROVIDER-TIME__en.png",
+   "class": "GENERATED_PUBLIC_BUILD"
+  },
+  {
+   "path": "dist/assets/social/evidence_VIS-REMITTANCE-COST__ar.png",
+   "class": "GENERATED_PUBLIC_BUILD"
+  },
+  {
+   "path": "dist/assets/social/evidence_VIS-REMITTANCE-COST__en.png",
+   "class": "GENERATED_PUBLIC_BUILD"
+  },
+  {
+   "path": "dist/assets/social/evidence_VIS-REMITTANCE-MACRO__ar.png",
+   "class": "GENERATED_PUBLIC_BUILD"
+  },
+  {
+   "path": "dist/assets/social/evidence_VIS-REMITTANCE-MACRO__en.png",
+   "class": "GENERATED_PUBLIC_BUILD"
+  },
+  {
+   "path": "dist/assets/social/evidence_VIS-SOURCE-COMPARISON__ar.png",
+   "class": "GENERATED_PUBLIC_BUILD"
+  },
+  {
+   "path": "dist/assets/social/evidence_VIS-SOURCE-COMPARISON__en.png",
+   "class": "GENERATED_PUBLIC_BUILD"
+  },
+  {
+   "path": "dist/assets/social/evidence_VIS-TARGET-RESULT-STATE__ar.png",
+   "class": "GENERATED_PUBLIC_BUILD"
+  },
+  {
+   "path": "dist/assets/social/evidence_VIS-TARGET-RESULT-STATE__en.png",
+   "class": "GENERATED_PUBLIC_BUILD"
+  },
+  {
+   "path": "dist/assets/social/evidence_XW-FMIIP-005__ar.png",
+   "class": "GENERATED_PUBLIC_BUILD"
+  },
+  {
+   "path": "dist/assets/social/evidence_XW-FMIIP-005__en.png",
+   "class": "GENERATED_PUBLIC_BUILD"
+  },
+  {
+   "path": "dist/assets/social/evidence__ar.png",
+   "class": "GENERATED_PUBLIC_BUILD"
+  },
+  {
+   "path": "dist/assets/social/evidence__en.png",
+   "class": "GENERATED_PUBLIC_BUILD"
+  },
+  {
+   "path": "dist/assets/social/evidence_compare__ar.png",
+   "class": "GENERATED_PUBLIC_BUILD"
+  },
+  {
+   "path": "dist/assets/social/evidence_compare__en.png",
+   "class": "GENERATED_PUBLIC_BUILD"
+  },
+  {
+   "path": "dist/assets/social/explore__ar.png",
+   "class": "GENERATED_PUBLIC_BUILD"
+  },
+  {
+   "path": "dist/assets/social/explore__en.png",
+   "class": "GENERATED_PUBLIC_BUILD"
+  },
+  {
+   "path": "dist/assets/social/finance__ar.png",
+   "class": "GENERATED_PUBLIC_BUILD"
+  },
+  {
+   "path": "dist/assets/social/finance__en.png",
+   "class": "GENERATED_PUBLIC_BUILD"
+  },
+  {
+   "path": "dist/assets/social/firms__ar.png",
+   "class": "GENERATED_PUBLIC_BUILD"
+  },
+  {
+   "path": "dist/assets/social/firms__en.png",
+   "class": "GENERATED_PUBLIC_BUILD"
+  },
+  {
+   "path": "dist/assets/social/home__ar.png",
+   "class": "GENERATED_PUBLIC_BUILD"
+  },
+  {
+   "path": "dist/assets/social/home__en.png",
+   "class": "GENERATED_PUBLIC_BUILD"
+  },
+  {
+   "path": "dist/assets/social/measurement__ar.png",
+   "class": "GENERATED_PUBLIC_BUILD"
+  },
+  {
+   "path": "dist/assets/social/measurement__en.png",
+   "class": "GENERATED_PUBLIC_BUILD"
+  },
+  {
+   "path": "dist/assets/social/methodology__ar.png",
+   "class": "GENERATED_PUBLIC_BUILD"
+  },
+  {
+   "path": "dist/assets/social/methodology__en.png",
+   "class": "GENERATED_PUBLIC_BUILD"
+  },
+  {
+   "path": "dist/assets/social/payments__ar.png",
+   "class": "GENERATED_PUBLIC_BUILD"
+  },
+  {
+   "path": "dist/assets/social/payments__en.png",
+   "class": "GENERATED_PUBLIC_BUILD"
+  },
+  {
+   "path": "dist/assets/social/people__ar.png",
+   "class": "GENERATED_PUBLIC_BUILD"
+  },
+  {
+   "path": "dist/assets/social/people__en.png",
+   "class": "GENERATED_PUBLIC_BUILD"
+  },
+  {
+   "path": "dist/assets/social/privacy__ar.png",
+   "class": "GENERATED_PUBLIC_BUILD"
+  },
+  {
+   "path": "dist/assets/social/privacy__en.png",
+   "class": "GENERATED_PUBLIC_BUILD"
+  },
+  {
+   "path": "dist/assets/social/providers__ar.png",
+   "class": "GENERATED_PUBLIC_BUILD"
+  },
+  {
+   "path": "dist/assets/social/providers__en.png",
+   "class": "GENERATED_PUBLIC_BUILD"
+  },
+  {
+   "path": "dist/assets/social/readings__ar.png",
+   "class": "GENERATED_PUBLIC_BUILD"
+  },
+  {
+   "path": "dist/assets/social/readings__en.png",
+   "class": "GENERATED_PUBLIC_BUILD"
+  },
+  {
+   "path": "dist/assets/social/readings_after-transfer-persistence__ar.png",
+   "class": "GENERATED_PUBLIC_BUILD"
+  },
+  {
+   "path": "dist/assets/social/readings_after-transfer-persistence__en.png",
+   "class": "GENERATED_PUBLIC_BUILD"
+  },
+  {
+   "path": "dist/assets/social/readings_banking-jump-measurement-basis__ar.png",
+   "class": "GENERATED_PUBLIC_BUILD"
+  },
+  {
+   "path": "dist/assets/social/readings_banking-jump-measurement-basis__en.png",
+   "class": "GENERATED_PUBLIC_BUILD"
+  },
+  {
+   "path": "dist/assets/social/readings_define-what-you-count__ar.png",
+   "class": "GENERATED_PUBLIC_BUILD"
+  },
+  {
+   "path": "dist/assets/social/readings_define-what-you-count__en.png",
+   "class": "GENERATED_PUBLIC_BUILD"
+  },
+  {
+   "path": "dist/assets/social/readings_digital-workaround-not-yet-durable-inclusion__ar.png",
+   "class": "GENERATED_PUBLIC_BUILD"
+  },
+  {
+   "path": "dist/assets/social/readings_digital-workaround-not-yet-durable-inclusion__en.png",
+   "class": "GENERATED_PUBLIC_BUILD"
+  },
+  {
+   "path": "dist/assets/social/readings_finance-constraint-different-questions__ar.png",
+   "class": "GENERATED_PUBLIC_BUILD"
+  },
+  {
+   "path": "dist/assets/social/readings_finance-constraint-different-questions__en.png",
+   "class": "GENERATED_PUBLIC_BUILD"
+  },
+  {
+   "path": "dist/assets/social/readings_from-rail-to-result-missing-middle__ar.png",
+   "class": "GENERATED_PUBLIC_BUILD"
+  },
+  {
+   "path": "dist/assets/social/readings_from-rail-to-result-missing-middle__en.png",
+   "class": "GENERATED_PUBLIC_BUILD"
+  },
+  {
+   "path": "dist/assets/social/readings_gender-gap-measured-causes-open__ar.png",
+   "class": "GENERATED_PUBLIC_BUILD"
+  },
+  {
+   "path": "dist/assets/social/readings_gender-gap-measured-causes-open__en.png",
+   "class": "GENERATED_PUBLIC_BUILD"
+  },
+  {
+   "path": "dist/assets/social/readings_microfinance-structural-divergence__ar.png",
+   "class": "GENERATED_PUBLIC_BUILD"
+  },
+  {
+   "path": "dist/assets/social/readings_microfinance-structural-divergence__en.png",
+   "class": "GENERATED_PUBLIC_BUILD"
+  },
+  {
+   "path": "dist/assets/social/readings_reforms-newer-than-people-evidence__ar.png",
+   "class": "GENERATED_PUBLIC_BUILD"
+  },
+  {
+   "path": "dist/assets/social/readings_reforms-newer-than-people-evidence__en.png",
+   "class": "GENERATED_PUBLIC_BUILD"
+  },
+  {
+   "path": "dist/assets/social/readings_same-year-different-number__ar.png",
+   "class": "GENERATED_PUBLIC_BUILD"
+  },
+  {
+   "path": "dist/assets/social/readings_same-year-different-number__en.png",
+   "class": "GENERATED_PUBLIC_BUILD"
+  },
+  {
+   "path": "dist/assets/social/reforms__ar.png",
+   "class": "GENERATED_PUBLIC_BUILD"
+  },
+  {
+   "path": "dist/assets/social/reforms__en.png",
+   "class": "GENERATED_PUBLIC_BUILD"
+  },
+  {
+   "path": "dist/assets/social/remittances__ar.png",
+   "class": "GENERATED_PUBLIC_BUILD"
+  },
+  {
+   "path": "dist/assets/social/remittances__en.png",
+   "class": "GENERATED_PUBLIC_BUILD"
+  },
+  {
+   "path": "dist/assets/social/rights__ar.png",
+   "class": "GENERATED_PUBLIC_BUILD"
+  },
+  {
+   "path": "dist/assets/social/rights__en.png",
+   "class": "GENERATED_PUBLIC_BUILD"
+  },
+  {
+   "path": "dist/assets/social/terms__ar.png",
+   "class": "GENERATED_PUBLIC_BUILD"
+  },
+  {
+   "path": "dist/assets/social/terms__en.png",
+   "class": "GENERATED_PUBLIC_BUILD"
+  },
+  {
    "path": "dist/assets/yfie.css",
    "class": "GENERATED_PUBLIC_BUILD"
   },
@@ -4590,6 +5735,10 @@
    "class": "BUILD_AND_GATES"
   },
   {
+   "path": "scripts/social_images.py",
+   "class": "BUILD_AND_GATES"
+  },
+  {
    "path": "scripts/tests/baseline_content_oracle.json",
    "class": "BUILD_AND_GATES"
   },
@@ -4664,6 +5813,1154 @@
   {
    "path": "site-src/assets/CauseWay_Master_Logo.png",
    "class": "LOGO_AUTHORITY"
+  },
+  {
+   "path": "site-src/assets/social/INDEX.json",
+   "class": "GENERATED_SOCIAL_IMAGES"
+  },
+  {
+   "path": "site-src/assets/social/about__ar.png",
+   "class": "GENERATED_SOCIAL_IMAGES"
+  },
+  {
+   "path": "site-src/assets/social/about__en.png",
+   "class": "GENERATED_SOCIAL_IMAGES"
+  },
+  {
+   "path": "site-src/assets/social/access__ar.png",
+   "class": "GENERATED_SOCIAL_IMAGES"
+  },
+  {
+   "path": "site-src/assets/social/access__en.png",
+   "class": "GENERATED_SOCIAL_IMAGES"
+  },
+  {
+   "path": "site-src/assets/social/accessibility__ar.png",
+   "class": "GENERATED_SOCIAL_IMAGES"
+  },
+  {
+   "path": "site-src/assets/social/accessibility__en.png",
+   "class": "GENERATED_SOCIAL_IMAGES"
+  },
+  {
+   "path": "site-src/assets/social/contact__ar.png",
+   "class": "GENERATED_SOCIAL_IMAGES"
+  },
+  {
+   "path": "site-src/assets/social/contact__en.png",
+   "class": "GENERATED_SOCIAL_IMAGES"
+  },
+  {
+   "path": "site-src/assets/social/corrections__ar.png",
+   "class": "GENERATED_SOCIAL_IMAGES"
+  },
+  {
+   "path": "site-src/assets/social/corrections__en.png",
+   "class": "GENERATED_SOCIAL_IMAGES"
+  },
+  {
+   "path": "site-src/assets/social/data__ar.png",
+   "class": "GENERATED_SOCIAL_IMAGES"
+  },
+  {
+   "path": "site-src/assets/social/data__en.png",
+   "class": "GENERATED_SOCIAL_IMAGES"
+  },
+  {
+   "path": "site-src/assets/social/evidence_CLM-001__ar.png",
+   "class": "GENERATED_SOCIAL_IMAGES"
+  },
+  {
+   "path": "site-src/assets/social/evidence_CLM-001__en.png",
+   "class": "GENERATED_SOCIAL_IMAGES"
+  },
+  {
+   "path": "site-src/assets/social/evidence_CLM-002__ar.png",
+   "class": "GENERATED_SOCIAL_IMAGES"
+  },
+  {
+   "path": "site-src/assets/social/evidence_CLM-002__en.png",
+   "class": "GENERATED_SOCIAL_IMAGES"
+  },
+  {
+   "path": "site-src/assets/social/evidence_CLM-003__ar.png",
+   "class": "GENERATED_SOCIAL_IMAGES"
+  },
+  {
+   "path": "site-src/assets/social/evidence_CLM-003__en.png",
+   "class": "GENERATED_SOCIAL_IMAGES"
+  },
+  {
+   "path": "site-src/assets/social/evidence_CLM-004__ar.png",
+   "class": "GENERATED_SOCIAL_IMAGES"
+  },
+  {
+   "path": "site-src/assets/social/evidence_CLM-004__en.png",
+   "class": "GENERATED_SOCIAL_IMAGES"
+  },
+  {
+   "path": "site-src/assets/social/evidence_CLM-005__ar.png",
+   "class": "GENERATED_SOCIAL_IMAGES"
+  },
+  {
+   "path": "site-src/assets/social/evidence_CLM-005__en.png",
+   "class": "GENERATED_SOCIAL_IMAGES"
+  },
+  {
+   "path": "site-src/assets/social/evidence_CLM-006__ar.png",
+   "class": "GENERATED_SOCIAL_IMAGES"
+  },
+  {
+   "path": "site-src/assets/social/evidence_CLM-006__en.png",
+   "class": "GENERATED_SOCIAL_IMAGES"
+  },
+  {
+   "path": "site-src/assets/social/evidence_CLM-007__ar.png",
+   "class": "GENERATED_SOCIAL_IMAGES"
+  },
+  {
+   "path": "site-src/assets/social/evidence_CLM-007__en.png",
+   "class": "GENERATED_SOCIAL_IMAGES"
+  },
+  {
+   "path": "site-src/assets/social/evidence_CLM-008__ar.png",
+   "class": "GENERATED_SOCIAL_IMAGES"
+  },
+  {
+   "path": "site-src/assets/social/evidence_CLM-008__en.png",
+   "class": "GENERATED_SOCIAL_IMAGES"
+  },
+  {
+   "path": "site-src/assets/social/evidence_CLM-009__ar.png",
+   "class": "GENERATED_SOCIAL_IMAGES"
+  },
+  {
+   "path": "site-src/assets/social/evidence_CLM-009__en.png",
+   "class": "GENERATED_SOCIAL_IMAGES"
+  },
+  {
+   "path": "site-src/assets/social/evidence_CLM-010__ar.png",
+   "class": "GENERATED_SOCIAL_IMAGES"
+  },
+  {
+   "path": "site-src/assets/social/evidence_CLM-010__en.png",
+   "class": "GENERATED_SOCIAL_IMAGES"
+  },
+  {
+   "path": "site-src/assets/social/evidence_CLM-011__ar.png",
+   "class": "GENERATED_SOCIAL_IMAGES"
+  },
+  {
+   "path": "site-src/assets/social/evidence_CLM-011__en.png",
+   "class": "GENERATED_SOCIAL_IMAGES"
+  },
+  {
+   "path": "site-src/assets/social/evidence_CLM-012__ar.png",
+   "class": "GENERATED_SOCIAL_IMAGES"
+  },
+  {
+   "path": "site-src/assets/social/evidence_CLM-012__en.png",
+   "class": "GENERATED_SOCIAL_IMAGES"
+  },
+  {
+   "path": "site-src/assets/social/evidence_CLM-013__ar.png",
+   "class": "GENERATED_SOCIAL_IMAGES"
+  },
+  {
+   "path": "site-src/assets/social/evidence_CLM-013__en.png",
+   "class": "GENERATED_SOCIAL_IMAGES"
+  },
+  {
+   "path": "site-src/assets/social/evidence_CLM-014__ar.png",
+   "class": "GENERATED_SOCIAL_IMAGES"
+  },
+  {
+   "path": "site-src/assets/social/evidence_CLM-014__en.png",
+   "class": "GENERATED_SOCIAL_IMAGES"
+  },
+  {
+   "path": "site-src/assets/social/evidence_CLM-015__ar.png",
+   "class": "GENERATED_SOCIAL_IMAGES"
+  },
+  {
+   "path": "site-src/assets/social/evidence_CLM-015__en.png",
+   "class": "GENERATED_SOCIAL_IMAGES"
+  },
+  {
+   "path": "site-src/assets/social/evidence_CLM-016__ar.png",
+   "class": "GENERATED_SOCIAL_IMAGES"
+  },
+  {
+   "path": "site-src/assets/social/evidence_CLM-016__en.png",
+   "class": "GENERATED_SOCIAL_IMAGES"
+  },
+  {
+   "path": "site-src/assets/social/evidence_CLM-017__ar.png",
+   "class": "GENERATED_SOCIAL_IMAGES"
+  },
+  {
+   "path": "site-src/assets/social/evidence_CLM-017__en.png",
+   "class": "GENERATED_SOCIAL_IMAGES"
+  },
+  {
+   "path": "site-src/assets/social/evidence_CLM-018__ar.png",
+   "class": "GENERATED_SOCIAL_IMAGES"
+  },
+  {
+   "path": "site-src/assets/social/evidence_CLM-018__en.png",
+   "class": "GENERATED_SOCIAL_IMAGES"
+  },
+  {
+   "path": "site-src/assets/social/evidence_CLM-019__ar.png",
+   "class": "GENERATED_SOCIAL_IMAGES"
+  },
+  {
+   "path": "site-src/assets/social/evidence_CLM-019__en.png",
+   "class": "GENERATED_SOCIAL_IMAGES"
+  },
+  {
+   "path": "site-src/assets/social/evidence_CLM-020__ar.png",
+   "class": "GENERATED_SOCIAL_IMAGES"
+  },
+  {
+   "path": "site-src/assets/social/evidence_CLM-020__en.png",
+   "class": "GENERATED_SOCIAL_IMAGES"
+  },
+  {
+   "path": "site-src/assets/social/evidence_CLM-021__ar.png",
+   "class": "GENERATED_SOCIAL_IMAGES"
+  },
+  {
+   "path": "site-src/assets/social/evidence_CLM-021__en.png",
+   "class": "GENERATED_SOCIAL_IMAGES"
+  },
+  {
+   "path": "site-src/assets/social/evidence_CLM-022__ar.png",
+   "class": "GENERATED_SOCIAL_IMAGES"
+  },
+  {
+   "path": "site-src/assets/social/evidence_CLM-022__en.png",
+   "class": "GENERATED_SOCIAL_IMAGES"
+  },
+  {
+   "path": "site-src/assets/social/evidence_CLM-023__ar.png",
+   "class": "GENERATED_SOCIAL_IMAGES"
+  },
+  {
+   "path": "site-src/assets/social/evidence_CLM-023__en.png",
+   "class": "GENERATED_SOCIAL_IMAGES"
+  },
+  {
+   "path": "site-src/assets/social/evidence_CLM-024__ar.png",
+   "class": "GENERATED_SOCIAL_IMAGES"
+  },
+  {
+   "path": "site-src/assets/social/evidence_CLM-024__en.png",
+   "class": "GENERATED_SOCIAL_IMAGES"
+  },
+  {
+   "path": "site-src/assets/social/evidence_CLM-025__ar.png",
+   "class": "GENERATED_SOCIAL_IMAGES"
+  },
+  {
+   "path": "site-src/assets/social/evidence_CLM-025__en.png",
+   "class": "GENERATED_SOCIAL_IMAGES"
+  },
+  {
+   "path": "site-src/assets/social/evidence_CLM-026__ar.png",
+   "class": "GENERATED_SOCIAL_IMAGES"
+  },
+  {
+   "path": "site-src/assets/social/evidence_CLM-026__en.png",
+   "class": "GENERATED_SOCIAL_IMAGES"
+  },
+  {
+   "path": "site-src/assets/social/evidence_CLM-027__ar.png",
+   "class": "GENERATED_SOCIAL_IMAGES"
+  },
+  {
+   "path": "site-src/assets/social/evidence_CLM-027__en.png",
+   "class": "GENERATED_SOCIAL_IMAGES"
+  },
+  {
+   "path": "site-src/assets/social/evidence_CLM-028__ar.png",
+   "class": "GENERATED_SOCIAL_IMAGES"
+  },
+  {
+   "path": "site-src/assets/social/evidence_CLM-028__en.png",
+   "class": "GENERATED_SOCIAL_IMAGES"
+  },
+  {
+   "path": "site-src/assets/social/evidence_CLM-029__ar.png",
+   "class": "GENERATED_SOCIAL_IMAGES"
+  },
+  {
+   "path": "site-src/assets/social/evidence_CLM-029__en.png",
+   "class": "GENERATED_SOCIAL_IMAGES"
+  },
+  {
+   "path": "site-src/assets/social/evidence_CLM-030__ar.png",
+   "class": "GENERATED_SOCIAL_IMAGES"
+  },
+  {
+   "path": "site-src/assets/social/evidence_CLM-030__en.png",
+   "class": "GENERATED_SOCIAL_IMAGES"
+  },
+  {
+   "path": "site-src/assets/social/evidence_CLM-031__ar.png",
+   "class": "GENERATED_SOCIAL_IMAGES"
+  },
+  {
+   "path": "site-src/assets/social/evidence_CLM-031__en.png",
+   "class": "GENERATED_SOCIAL_IMAGES"
+  },
+  {
+   "path": "site-src/assets/social/evidence_CLM-032__ar.png",
+   "class": "GENERATED_SOCIAL_IMAGES"
+  },
+  {
+   "path": "site-src/assets/social/evidence_CLM-032__en.png",
+   "class": "GENERATED_SOCIAL_IMAGES"
+  },
+  {
+   "path": "site-src/assets/social/evidence_CLM-033__ar.png",
+   "class": "GENERATED_SOCIAL_IMAGES"
+  },
+  {
+   "path": "site-src/assets/social/evidence_CLM-033__en.png",
+   "class": "GENERATED_SOCIAL_IMAGES"
+  },
+  {
+   "path": "site-src/assets/social/evidence_CLM-034__ar.png",
+   "class": "GENERATED_SOCIAL_IMAGES"
+  },
+  {
+   "path": "site-src/assets/social/evidence_CLM-034__en.png",
+   "class": "GENERATED_SOCIAL_IMAGES"
+  },
+  {
+   "path": "site-src/assets/social/evidence_CLM-035__ar.png",
+   "class": "GENERATED_SOCIAL_IMAGES"
+  },
+  {
+   "path": "site-src/assets/social/evidence_CLM-035__en.png",
+   "class": "GENERATED_SOCIAL_IMAGES"
+  },
+  {
+   "path": "site-src/assets/social/evidence_CLM-036__ar.png",
+   "class": "GENERATED_SOCIAL_IMAGES"
+  },
+  {
+   "path": "site-src/assets/social/evidence_CLM-036__en.png",
+   "class": "GENERATED_SOCIAL_IMAGES"
+  },
+  {
+   "path": "site-src/assets/social/evidence_CLM-037__ar.png",
+   "class": "GENERATED_SOCIAL_IMAGES"
+  },
+  {
+   "path": "site-src/assets/social/evidence_CLM-037__en.png",
+   "class": "GENERATED_SOCIAL_IMAGES"
+  },
+  {
+   "path": "site-src/assets/social/evidence_CLM-038__ar.png",
+   "class": "GENERATED_SOCIAL_IMAGES"
+  },
+  {
+   "path": "site-src/assets/social/evidence_CLM-038__en.png",
+   "class": "GENERATED_SOCIAL_IMAGES"
+  },
+  {
+   "path": "site-src/assets/social/evidence_CLM-039__ar.png",
+   "class": "GENERATED_SOCIAL_IMAGES"
+  },
+  {
+   "path": "site-src/assets/social/evidence_CLM-039__en.png",
+   "class": "GENERATED_SOCIAL_IMAGES"
+  },
+  {
+   "path": "site-src/assets/social/evidence_CLM-040__ar.png",
+   "class": "GENERATED_SOCIAL_IMAGES"
+  },
+  {
+   "path": "site-src/assets/social/evidence_CLM-040__en.png",
+   "class": "GENERATED_SOCIAL_IMAGES"
+  },
+  {
+   "path": "site-src/assets/social/evidence_CLM-041__ar.png",
+   "class": "GENERATED_SOCIAL_IMAGES"
+  },
+  {
+   "path": "site-src/assets/social/evidence_CLM-041__en.png",
+   "class": "GENERATED_SOCIAL_IMAGES"
+  },
+  {
+   "path": "site-src/assets/social/evidence_CLM-042__ar.png",
+   "class": "GENERATED_SOCIAL_IMAGES"
+  },
+  {
+   "path": "site-src/assets/social/evidence_CLM-042__en.png",
+   "class": "GENERATED_SOCIAL_IMAGES"
+  },
+  {
+   "path": "site-src/assets/social/evidence_CLM-043__ar.png",
+   "class": "GENERATED_SOCIAL_IMAGES"
+  },
+  {
+   "path": "site-src/assets/social/evidence_CLM-043__en.png",
+   "class": "GENERATED_SOCIAL_IMAGES"
+  },
+  {
+   "path": "site-src/assets/social/evidence_CLM-044__ar.png",
+   "class": "GENERATED_SOCIAL_IMAGES"
+  },
+  {
+   "path": "site-src/assets/social/evidence_CLM-044__en.png",
+   "class": "GENERATED_SOCIAL_IMAGES"
+  },
+  {
+   "path": "site-src/assets/social/evidence_CLM-045__ar.png",
+   "class": "GENERATED_SOCIAL_IMAGES"
+  },
+  {
+   "path": "site-src/assets/social/evidence_CLM-045__en.png",
+   "class": "GENERATED_SOCIAL_IMAGES"
+  },
+  {
+   "path": "site-src/assets/social/evidence_CLM-046__ar.png",
+   "class": "GENERATED_SOCIAL_IMAGES"
+  },
+  {
+   "path": "site-src/assets/social/evidence_CLM-046__en.png",
+   "class": "GENERATED_SOCIAL_IMAGES"
+  },
+  {
+   "path": "site-src/assets/social/evidence_CLM-047__ar.png",
+   "class": "GENERATED_SOCIAL_IMAGES"
+  },
+  {
+   "path": "site-src/assets/social/evidence_CLM-047__en.png",
+   "class": "GENERATED_SOCIAL_IMAGES"
+  },
+  {
+   "path": "site-src/assets/social/evidence_CLM-048__ar.png",
+   "class": "GENERATED_SOCIAL_IMAGES"
+  },
+  {
+   "path": "site-src/assets/social/evidence_CLM-048__en.png",
+   "class": "GENERATED_SOCIAL_IMAGES"
+  },
+  {
+   "path": "site-src/assets/social/evidence_CLM-049__ar.png",
+   "class": "GENERATED_SOCIAL_IMAGES"
+  },
+  {
+   "path": "site-src/assets/social/evidence_CLM-049__en.png",
+   "class": "GENERATED_SOCIAL_IMAGES"
+  },
+  {
+   "path": "site-src/assets/social/evidence_CLM-050__ar.png",
+   "class": "GENERATED_SOCIAL_IMAGES"
+  },
+  {
+   "path": "site-src/assets/social/evidence_CLM-050__en.png",
+   "class": "GENERATED_SOCIAL_IMAGES"
+  },
+  {
+   "path": "site-src/assets/social/evidence_CLM-051__ar.png",
+   "class": "GENERATED_SOCIAL_IMAGES"
+  },
+  {
+   "path": "site-src/assets/social/evidence_CLM-051__en.png",
+   "class": "GENERATED_SOCIAL_IMAGES"
+  },
+  {
+   "path": "site-src/assets/social/evidence_CLM-052__ar.png",
+   "class": "GENERATED_SOCIAL_IMAGES"
+  },
+  {
+   "path": "site-src/assets/social/evidence_CLM-052__en.png",
+   "class": "GENERATED_SOCIAL_IMAGES"
+  },
+  {
+   "path": "site-src/assets/social/evidence_CLM-053__ar.png",
+   "class": "GENERATED_SOCIAL_IMAGES"
+  },
+  {
+   "path": "site-src/assets/social/evidence_CLM-053__en.png",
+   "class": "GENERATED_SOCIAL_IMAGES"
+  },
+  {
+   "path": "site-src/assets/social/evidence_CLM-054__ar.png",
+   "class": "GENERATED_SOCIAL_IMAGES"
+  },
+  {
+   "path": "site-src/assets/social/evidence_CLM-054__en.png",
+   "class": "GENERATED_SOCIAL_IMAGES"
+  },
+  {
+   "path": "site-src/assets/social/evidence_CLM-055__ar.png",
+   "class": "GENERATED_SOCIAL_IMAGES"
+  },
+  {
+   "path": "site-src/assets/social/evidence_CLM-055__en.png",
+   "class": "GENERATED_SOCIAL_IMAGES"
+  },
+  {
+   "path": "site-src/assets/social/evidence_CLM-056__ar.png",
+   "class": "GENERATED_SOCIAL_IMAGES"
+  },
+  {
+   "path": "site-src/assets/social/evidence_CLM-056__en.png",
+   "class": "GENERATED_SOCIAL_IMAGES"
+  },
+  {
+   "path": "site-src/assets/social/evidence_CLM-057__ar.png",
+   "class": "GENERATED_SOCIAL_IMAGES"
+  },
+  {
+   "path": "site-src/assets/social/evidence_CLM-057__en.png",
+   "class": "GENERATED_SOCIAL_IMAGES"
+  },
+  {
+   "path": "site-src/assets/social/evidence_CLM-058__ar.png",
+   "class": "GENERATED_SOCIAL_IMAGES"
+  },
+  {
+   "path": "site-src/assets/social/evidence_CLM-058__en.png",
+   "class": "GENERATED_SOCIAL_IMAGES"
+  },
+  {
+   "path": "site-src/assets/social/evidence_CLM-059__ar.png",
+   "class": "GENERATED_SOCIAL_IMAGES"
+  },
+  {
+   "path": "site-src/assets/social/evidence_CLM-059__en.png",
+   "class": "GENERATED_SOCIAL_IMAGES"
+  },
+  {
+   "path": "site-src/assets/social/evidence_CLM-060__ar.png",
+   "class": "GENERATED_SOCIAL_IMAGES"
+  },
+  {
+   "path": "site-src/assets/social/evidence_CLM-060__en.png",
+   "class": "GENERATED_SOCIAL_IMAGES"
+  },
+  {
+   "path": "site-src/assets/social/evidence_CLM-062__ar.png",
+   "class": "GENERATED_SOCIAL_IMAGES"
+  },
+  {
+   "path": "site-src/assets/social/evidence_CLM-062__en.png",
+   "class": "GENERATED_SOCIAL_IMAGES"
+  },
+  {
+   "path": "site-src/assets/social/evidence_DS-DEMAND-VINTAGE-LENS__ar.png",
+   "class": "GENERATED_SOCIAL_IMAGES"
+  },
+  {
+   "path": "site-src/assets/social/evidence_DS-DEMAND-VINTAGE-LENS__en.png",
+   "class": "GENERATED_SOCIAL_IMAGES"
+  },
+  {
+   "path": "site-src/assets/social/evidence_DS-FCP-ARCH__ar.png",
+   "class": "GENERATED_SOCIAL_IMAGES"
+  },
+  {
+   "path": "site-src/assets/social/evidence_DS-FCP-ARCH__en.png",
+   "class": "GENERATED_SOCIAL_IMAGES"
+  },
+  {
+   "path": "site-src/assets/social/evidence_DS-FINDEX-HISTORY-CROSSWALK__ar.png",
+   "class": "GENERATED_SOCIAL_IMAGES"
+  },
+  {
+   "path": "site-src/assets/social/evidence_DS-FINDEX-HISTORY-CROSSWALK__en.png",
+   "class": "GENERATED_SOCIAL_IMAGES"
+  },
+  {
+   "path": "site-src/assets/social/evidence_DS-FINDEX-PUBLIC-HISTORY__ar.png",
+   "class": "GENERATED_SOCIAL_IMAGES"
+  },
+  {
+   "path": "site-src/assets/social/evidence_DS-FINDEX-PUBLIC-HISTORY__en.png",
+   "class": "GENERATED_SOCIAL_IMAGES"
+  },
+  {
+   "path": "site-src/assets/social/evidence_DS-QUAL-EVIDENCE__ar.png",
+   "class": "GENERATED_SOCIAL_IMAGES"
+  },
+  {
+   "path": "site-src/assets/social/evidence_DS-QUAL-EVIDENCE__en.png",
+   "class": "GENERATED_SOCIAL_IMAGES"
+  },
+  {
+   "path": "site-src/assets/social/evidence_FMIIP-BASELINE-2025-01__ar.png",
+   "class": "GENERATED_SOCIAL_IMAGES"
+  },
+  {
+   "path": "site-src/assets/social/evidence_FMIIP-BASELINE-2025-01__en.png",
+   "class": "GENERATED_SOCIAL_IMAGES"
+  },
+  {
+   "path": "site-src/assets/social/evidence_MF-ORIG-001+002__ar.png",
+   "class": "GENERATED_SOCIAL_IMAGES"
+  },
+  {
+   "path": "site-src/assets/social/evidence_MF-ORIG-001+002__en.png",
+   "class": "GENERATED_SOCIAL_IMAGES"
+  },
+  {
+   "path": "site-src/assets/social/evidence_MFI-SPINE-2015-Q4__ar.png",
+   "class": "GENERATED_SOCIAL_IMAGES"
+  },
+  {
+   "path": "site-src/assets/social/evidence_MFI-SPINE-2015-Q4__en.png",
+   "class": "GENERATED_SOCIAL_IMAGES"
+  },
+  {
+   "path": "site-src/assets/social/evidence_NEG-EW-011__ar.png",
+   "class": "GENERATED_SOCIAL_IMAGES"
+  },
+  {
+   "path": "site-src/assets/social/evidence_NEG-EW-011__en.png",
+   "class": "GENERATED_SOCIAL_IMAGES"
+  },
+  {
+   "path": "site-src/assets/social/evidence_PSE-011__ar.png",
+   "class": "GENERATED_SOCIAL_IMAGES"
+  },
+  {
+   "path": "site-src/assets/social/evidence_PSE-011__en.png",
+   "class": "GENERATED_SOCIAL_IMAGES"
+  },
+  {
+   "path": "site-src/assets/social/evidence_QUAL-001__ar.png",
+   "class": "GENERATED_SOCIAL_IMAGES"
+  },
+  {
+   "path": "site-src/assets/social/evidence_QUAL-001__en.png",
+   "class": "GENERATED_SOCIAL_IMAGES"
+  },
+  {
+   "path": "site-src/assets/social/evidence_VIS-BORROWING-SOURCES-2014__ar.png",
+   "class": "GENERATED_SOCIAL_IMAGES"
+  },
+  {
+   "path": "site-src/assets/social/evidence_VIS-BORROWING-SOURCES-2014__en.png",
+   "class": "GENERATED_SOCIAL_IMAGES"
+  },
+  {
+   "path": "site-src/assets/social/evidence_VIS-CAPITAL-CONTEXT__ar.png",
+   "class": "GENERATED_SOCIAL_IMAGES"
+  },
+  {
+   "path": "site-src/assets/social/evidence_VIS-CAPITAL-CONTEXT__en.png",
+   "class": "GENERATED_SOCIAL_IMAGES"
+  },
+  {
+   "path": "site-src/assets/social/evidence_VIS-DEMAND-VINTAGE-LADDER__ar.png",
+   "class": "GENERATED_SOCIAL_IMAGES"
+  },
+  {
+   "path": "site-src/assets/social/evidence_VIS-DEMAND-VINTAGE-LADDER__en.png",
+   "class": "GENERATED_SOCIAL_IMAGES"
+  },
+  {
+   "path": "site-src/assets/social/evidence_VIS-DOMESTIC-REMITTANCE-PATH-2014__ar.png",
+   "class": "GENERATED_SOCIAL_IMAGES"
+  },
+  {
+   "path": "site-src/assets/social/evidence_VIS-DOMESTIC-REMITTANCE-PATH-2014__en.png",
+   "class": "GENERATED_SOCIAL_IMAGES"
+  },
+  {
+   "path": "site-src/assets/social/evidence_VIS-E-MONEY-RULE-STACK__ar.png",
+   "class": "GENERATED_SOCIAL_IMAGES"
+  },
+  {
+   "path": "site-src/assets/social/evidence_VIS-E-MONEY-RULE-STACK__en.png",
+   "class": "GENERATED_SOCIAL_IMAGES"
+  },
+  {
+   "path": "site-src/assets/social/evidence_VIS-EVIDENCE-CLASS-LADDER__ar.png",
+   "class": "GENERATED_SOCIAL_IMAGES"
+  },
+  {
+   "path": "site-src/assets/social/evidence_VIS-EVIDENCE-CLASS-LADDER__en.png",
+   "class": "GENERATED_SOCIAL_IMAGES"
+  },
+  {
+   "path": "site-src/assets/social/evidence_VIS-EVIDENCE-FRESHNESS__ar.png",
+   "class": "GENERATED_SOCIAL_IMAGES"
+  },
+  {
+   "path": "site-src/assets/social/evidence_VIS-EVIDENCE-FRESHNESS__en.png",
+   "class": "GENERATED_SOCIAL_IMAGES"
+  },
+  {
+   "path": "site-src/assets/social/evidence_VIS-EVIDENCE-GAPS__ar.png",
+   "class": "GENERATED_SOCIAL_IMAGES"
+  },
+  {
+   "path": "site-src/assets/social/evidence_VIS-EVIDENCE-GAPS__en.png",
+   "class": "GENERATED_SOCIAL_IMAGES"
+  },
+  {
+   "path": "site-src/assets/social/evidence_VIS-FCP-REDRESS-PATH__ar.png",
+   "class": "GENERATED_SOCIAL_IMAGES"
+  },
+  {
+   "path": "site-src/assets/social/evidence_VIS-FCP-REDRESS-PATH__en.png",
+   "class": "GENERATED_SOCIAL_IMAGES"
+  },
+  {
+   "path": "site-src/assets/social/evidence_VIS-FINDEX-ACCESS-USE__ar.png",
+   "class": "GENERATED_SOCIAL_IMAGES"
+  },
+  {
+   "path": "site-src/assets/social/evidence_VIS-FINDEX-ACCESS-USE__en.png",
+   "class": "GENERATED_SOCIAL_IMAGES"
+  },
+  {
+   "path": "site-src/assets/social/evidence_VIS-FINDEX-BARRIERS__ar.png",
+   "class": "GENERATED_SOCIAL_IMAGES"
+  },
+  {
+   "path": "site-src/assets/social/evidence_VIS-FINDEX-BARRIERS__en.png",
+   "class": "GENERATED_SOCIAL_IMAGES"
+  },
+  {
+   "path": "site-src/assets/social/evidence_VIS-FINDEX-FLOW-CHANNELS__ar.png",
+   "class": "GENERATED_SOCIAL_IMAGES"
+  },
+  {
+   "path": "site-src/assets/social/evidence_VIS-FINDEX-FLOW-CHANNELS__en.png",
+   "class": "GENERATED_SOCIAL_IMAGES"
+  },
+  {
+   "path": "site-src/assets/social/evidence_VIS-FINDEX-GAPS__ar.png",
+   "class": "GENERATED_SOCIAL_IMAGES"
+  },
+  {
+   "path": "site-src/assets/social/evidence_VIS-FINDEX-GAPS__en.png",
+   "class": "GENERATED_SOCIAL_IMAGES"
+  },
+  {
+   "path": "site-src/assets/social/evidence_VIS-FINDEX-OBSERVED-WAVES__ar.png",
+   "class": "GENERATED_SOCIAL_IMAGES"
+  },
+  {
+   "path": "site-src/assets/social/evidence_VIS-FINDEX-OBSERVED-WAVES__en.png",
+   "class": "GENERATED_SOCIAL_IMAGES"
+  },
+  {
+   "path": "site-src/assets/social/evidence_VIS-FINDEX-RESILIENCE__ar.png",
+   "class": "GENERATED_SOCIAL_IMAGES"
+  },
+  {
+   "path": "site-src/assets/social/evidence_VIS-FINDEX-RESILIENCE__en.png",
+   "class": "GENERATED_SOCIAL_IMAGES"
+  },
+  {
+   "path": "site-src/assets/social/evidence_VIS-FINDEX-SAMPLE-SUPPORT__ar.png",
+   "class": "GENERATED_SOCIAL_IMAGES"
+  },
+  {
+   "path": "site-src/assets/social/evidence_VIS-FINDEX-SAMPLE-SUPPORT__en.png",
+   "class": "GENERATED_SOCIAL_IMAGES"
+  },
+  {
+   "path": "site-src/assets/social/evidence_VIS-FIRM-CONSTRAINTS__ar.png",
+   "class": "GENERATED_SOCIAL_IMAGES"
+  },
+  {
+   "path": "site-src/assets/social/evidence_VIS-FIRM-CONSTRAINTS__en.png",
+   "class": "GENERATED_SOCIAL_IMAGES"
+  },
+  {
+   "path": "site-src/assets/social/evidence_VIS-FIRM-FINANCE-PATH__ar.png",
+   "class": "GENERATED_SOCIAL_IMAGES"
+  },
+  {
+   "path": "site-src/assets/social/evidence_VIS-FIRM-FINANCE-PATH__en.png",
+   "class": "GENERATED_SOCIAL_IMAGES"
+  },
+  {
+   "path": "site-src/assets/social/evidence_VIS-FIRM-FINANCE-SEVERITY__ar.png",
+   "class": "GENERATED_SOCIAL_IMAGES"
+  },
+  {
+   "path": "site-src/assets/social/evidence_VIS-FIRM-FINANCE-SEVERITY__en.png",
+   "class": "GENERATED_SOCIAL_IMAGES"
+  },
+  {
+   "path": "site-src/assets/social/evidence_VIS-FL-EVIDENCE-LADDER__ar.png",
+   "class": "GENERATED_SOCIAL_IMAGES"
+  },
+  {
+   "path": "site-src/assets/social/evidence_VIS-FL-EVIDENCE-LADDER__en.png",
+   "class": "GENERATED_SOCIAL_IMAGES"
+  },
+  {
+   "path": "site-src/assets/social/evidence_VIS-INCLUSION-TRANSMISSION__ar.png",
+   "class": "GENERATED_SOCIAL_IMAGES"
+  },
+  {
+   "path": "site-src/assets/social/evidence_VIS-INCLUSION-TRANSMISSION__en.png",
+   "class": "GENERATED_SOCIAL_IMAGES"
+  },
+  {
+   "path": "site-src/assets/social/evidence_VIS-MECHANISM-METRIC-BRIDGE__ar.png",
+   "class": "GENERATED_SOCIAL_IMAGES"
+  },
+  {
+   "path": "site-src/assets/social/evidence_VIS-MECHANISM-METRIC-BRIDGE__en.png",
+   "class": "GENERATED_SOCIAL_IMAGES"
+  },
+  {
+   "path": "site-src/assets/social/evidence_VIS-MFI-2014-PANEL__ar.png",
+   "class": "GENERATED_SOCIAL_IMAGES"
+  },
+  {
+   "path": "site-src/assets/social/evidence_VIS-MFI-2014-PANEL__en.png",
+   "class": "GENERATED_SOCIAL_IMAGES"
+  },
+  {
+   "path": "site-src/assets/social/evidence_VIS-MFI-RUPTURE-LENS__ar.png",
+   "class": "GENERATED_SOCIAL_IMAGES"
+  },
+  {
+   "path": "site-src/assets/social/evidence_VIS-MFI-RUPTURE-LENS__en.png",
+   "class": "GENERATED_SOCIAL_IMAGES"
+  },
+  {
+   "path": "site-src/assets/social/evidence_VIS-MFI-SPINE__ar.png",
+   "class": "GENERATED_SOCIAL_IMAGES"
+  },
+  {
+   "path": "site-src/assets/social/evidence_VIS-MFI-SPINE__en.png",
+   "class": "GENERATED_SOCIAL_IMAGES"
+  },
+  {
+   "path": "site-src/assets/social/evidence_VIS-OECD-FCP-TIMELINE__ar.png",
+   "class": "GENERATED_SOCIAL_IMAGES"
+  },
+  {
+   "path": "site-src/assets/social/evidence_VIS-OECD-FCP-TIMELINE__en.png",
+   "class": "GENERATED_SOCIAL_IMAGES"
+  },
+  {
+   "path": "site-src/assets/social/evidence_VIS-PAYMENT-ANATOMY__ar.png",
+   "class": "GENERATED_SOCIAL_IMAGES"
+  },
+  {
+   "path": "site-src/assets/social/evidence_VIS-PAYMENT-ANATOMY__en.png",
+   "class": "GENERATED_SOCIAL_IMAGES"
+  },
+  {
+   "path": "site-src/assets/social/evidence_VIS-PAYMENT-RAILS__ar.png",
+   "class": "GENERATED_SOCIAL_IMAGES"
+  },
+  {
+   "path": "site-src/assets/social/evidence_VIS-PAYMENT-RAILS__en.png",
+   "class": "GENERATED_SOCIAL_IMAGES"
+  },
+  {
+   "path": "site-src/assets/social/evidence_VIS-POS-TERMINALS__ar.png",
+   "class": "GENERATED_SOCIAL_IMAGES"
+  },
+  {
+   "path": "site-src/assets/social/evidence_VIS-POS-TERMINALS__en.png",
+   "class": "GENERATED_SOCIAL_IMAGES"
+  },
+  {
+   "path": "site-src/assets/social/evidence_VIS-POS-TRANSACTIONS__ar.png",
+   "class": "GENERATED_SOCIAL_IMAGES"
+  },
+  {
+   "path": "site-src/assets/social/evidence_VIS-POS-TRANSACTIONS__en.png",
+   "class": "GENERATED_SOCIAL_IMAGES"
+  },
+  {
+   "path": "site-src/assets/social/evidence_VIS-POS-VALUE__ar.png",
+   "class": "GENERATED_SOCIAL_IMAGES"
+  },
+  {
+   "path": "site-src/assets/social/evidence_VIS-POS-VALUE__en.png",
+   "class": "GENERATED_SOCIAL_IMAGES"
+  },
+  {
+   "path": "site-src/assets/social/evidence_VIS-PROVIDER-OBSERVABILITY__ar.png",
+   "class": "GENERATED_SOCIAL_IMAGES"
+  },
+  {
+   "path": "site-src/assets/social/evidence_VIS-PROVIDER-OBSERVABILITY__en.png",
+   "class": "GENERATED_SOCIAL_IMAGES"
+  },
+  {
+   "path": "site-src/assets/social/evidence_VIS-PROVIDER-TIME__ar.png",
+   "class": "GENERATED_SOCIAL_IMAGES"
+  },
+  {
+   "path": "site-src/assets/social/evidence_VIS-PROVIDER-TIME__en.png",
+   "class": "GENERATED_SOCIAL_IMAGES"
+  },
+  {
+   "path": "site-src/assets/social/evidence_VIS-REMITTANCE-COST__ar.png",
+   "class": "GENERATED_SOCIAL_IMAGES"
+  },
+  {
+   "path": "site-src/assets/social/evidence_VIS-REMITTANCE-COST__en.png",
+   "class": "GENERATED_SOCIAL_IMAGES"
+  },
+  {
+   "path": "site-src/assets/social/evidence_VIS-REMITTANCE-MACRO__ar.png",
+   "class": "GENERATED_SOCIAL_IMAGES"
+  },
+  {
+   "path": "site-src/assets/social/evidence_VIS-REMITTANCE-MACRO__en.png",
+   "class": "GENERATED_SOCIAL_IMAGES"
+  },
+  {
+   "path": "site-src/assets/social/evidence_VIS-SOURCE-COMPARISON__ar.png",
+   "class": "GENERATED_SOCIAL_IMAGES"
+  },
+  {
+   "path": "site-src/assets/social/evidence_VIS-SOURCE-COMPARISON__en.png",
+   "class": "GENERATED_SOCIAL_IMAGES"
+  },
+  {
+   "path": "site-src/assets/social/evidence_VIS-TARGET-RESULT-STATE__ar.png",
+   "class": "GENERATED_SOCIAL_IMAGES"
+  },
+  {
+   "path": "site-src/assets/social/evidence_VIS-TARGET-RESULT-STATE__en.png",
+   "class": "GENERATED_SOCIAL_IMAGES"
+  },
+  {
+   "path": "site-src/assets/social/evidence_XW-FMIIP-005__ar.png",
+   "class": "GENERATED_SOCIAL_IMAGES"
+  },
+  {
+   "path": "site-src/assets/social/evidence_XW-FMIIP-005__en.png",
+   "class": "GENERATED_SOCIAL_IMAGES"
+  },
+  {
+   "path": "site-src/assets/social/evidence__ar.png",
+   "class": "GENERATED_SOCIAL_IMAGES"
+  },
+  {
+   "path": "site-src/assets/social/evidence__en.png",
+   "class": "GENERATED_SOCIAL_IMAGES"
+  },
+  {
+   "path": "site-src/assets/social/evidence_compare__ar.png",
+   "class": "GENERATED_SOCIAL_IMAGES"
+  },
+  {
+   "path": "site-src/assets/social/evidence_compare__en.png",
+   "class": "GENERATED_SOCIAL_IMAGES"
+  },
+  {
+   "path": "site-src/assets/social/explore__ar.png",
+   "class": "GENERATED_SOCIAL_IMAGES"
+  },
+  {
+   "path": "site-src/assets/social/explore__en.png",
+   "class": "GENERATED_SOCIAL_IMAGES"
+  },
+  {
+   "path": "site-src/assets/social/finance__ar.png",
+   "class": "GENERATED_SOCIAL_IMAGES"
+  },
+  {
+   "path": "site-src/assets/social/finance__en.png",
+   "class": "GENERATED_SOCIAL_IMAGES"
+  },
+  {
+   "path": "site-src/assets/social/firms__ar.png",
+   "class": "GENERATED_SOCIAL_IMAGES"
+  },
+  {
+   "path": "site-src/assets/social/firms__en.png",
+   "class": "GENERATED_SOCIAL_IMAGES"
+  },
+  {
+   "path": "site-src/assets/social/home__ar.png",
+   "class": "GENERATED_SOCIAL_IMAGES"
+  },
+  {
+   "path": "site-src/assets/social/home__en.png",
+   "class": "GENERATED_SOCIAL_IMAGES"
+  },
+  {
+   "path": "site-src/assets/social/measurement__ar.png",
+   "class": "GENERATED_SOCIAL_IMAGES"
+  },
+  {
+   "path": "site-src/assets/social/measurement__en.png",
+   "class": "GENERATED_SOCIAL_IMAGES"
+  },
+  {
+   "path": "site-src/assets/social/methodology__ar.png",
+   "class": "GENERATED_SOCIAL_IMAGES"
+  },
+  {
+   "path": "site-src/assets/social/methodology__en.png",
+   "class": "GENERATED_SOCIAL_IMAGES"
+  },
+  {
+   "path": "site-src/assets/social/payments__ar.png",
+   "class": "GENERATED_SOCIAL_IMAGES"
+  },
+  {
+   "path": "site-src/assets/social/payments__en.png",
+   "class": "GENERATED_SOCIAL_IMAGES"
+  },
+  {
+   "path": "site-src/assets/social/people__ar.png",
+   "class": "GENERATED_SOCIAL_IMAGES"
+  },
+  {
+   "path": "site-src/assets/social/people__en.png",
+   "class": "GENERATED_SOCIAL_IMAGES"
+  },
+  {
+   "path": "site-src/assets/social/privacy__ar.png",
+   "class": "GENERATED_SOCIAL_IMAGES"
+  },
+  {
+   "path": "site-src/assets/social/privacy__en.png",
+   "class": "GENERATED_SOCIAL_IMAGES"
+  },
+  {
+   "path": "site-src/assets/social/providers__ar.png",
+   "class": "GENERATED_SOCIAL_IMAGES"
+  },
+  {
+   "path": "site-src/assets/social/providers__en.png",
+   "class": "GENERATED_SOCIAL_IMAGES"
+  },
+  {
+   "path": "site-src/assets/social/readings__ar.png",
+   "class": "GENERATED_SOCIAL_IMAGES"
+  },
+  {
+   "path": "site-src/assets/social/readings__en.png",
+   "class": "GENERATED_SOCIAL_IMAGES"
+  },
+  {
+   "path": "site-src/assets/social/readings_after-transfer-persistence__ar.png",
+   "class": "GENERATED_SOCIAL_IMAGES"
+  },
+  {
+   "path": "site-src/assets/social/readings_after-transfer-persistence__en.png",
+   "class": "GENERATED_SOCIAL_IMAGES"
+  },
+  {
+   "path": "site-src/assets/social/readings_banking-jump-measurement-basis__ar.png",
+   "class": "GENERATED_SOCIAL_IMAGES"
+  },
+  {
+   "path": "site-src/assets/social/readings_banking-jump-measurement-basis__en.png",
+   "class": "GENERATED_SOCIAL_IMAGES"
+  },
+  {
+   "path": "site-src/assets/social/readings_define-what-you-count__ar.png",
+   "class": "GENERATED_SOCIAL_IMAGES"
+  },
+  {
+   "path": "site-src/assets/social/readings_define-what-you-count__en.png",
+   "class": "GENERATED_SOCIAL_IMAGES"
+  },
+  {
+   "path": "site-src/assets/social/readings_digital-workaround-not-yet-durable-inclusion__ar.png",
+   "class": "GENERATED_SOCIAL_IMAGES"
+  },
+  {
+   "path": "site-src/assets/social/readings_digital-workaround-not-yet-durable-inclusion__en.png",
+   "class": "GENERATED_SOCIAL_IMAGES"
+  },
+  {
+   "path": "site-src/assets/social/readings_finance-constraint-different-questions__ar.png",
+   "class": "GENERATED_SOCIAL_IMAGES"
+  },
+  {
+   "path": "site-src/assets/social/readings_finance-constraint-different-questions__en.png",
+   "class": "GENERATED_SOCIAL_IMAGES"
+  },
+  {
+   "path": "site-src/assets/social/readings_from-rail-to-result-missing-middle__ar.png",
+   "class": "GENERATED_SOCIAL_IMAGES"
+  },
+  {
+   "path": "site-src/assets/social/readings_from-rail-to-result-missing-middle__en.png",
+   "class": "GENERATED_SOCIAL_IMAGES"
+  },
+  {
+   "path": "site-src/assets/social/readings_gender-gap-measured-causes-open__ar.png",
+   "class": "GENERATED_SOCIAL_IMAGES"
+  },
+  {
+   "path": "site-src/assets/social/readings_gender-gap-measured-causes-open__en.png",
+   "class": "GENERATED_SOCIAL_IMAGES"
+  },
+  {
+   "path": "site-src/assets/social/readings_microfinance-structural-divergence__ar.png",
+   "class": "GENERATED_SOCIAL_IMAGES"
+  },
+  {
+   "path": "site-src/assets/social/readings_microfinance-structural-divergence__en.png",
+   "class": "GENERATED_SOCIAL_IMAGES"
+  },
+  {
+   "path": "site-src/assets/social/readings_reforms-newer-than-people-evidence__ar.png",
+   "class": "GENERATED_SOCIAL_IMAGES"
+  },
+  {
+   "path": "site-src/assets/social/readings_reforms-newer-than-people-evidence__en.png",
+   "class": "GENERATED_SOCIAL_IMAGES"
+  },
+  {
+   "path": "site-src/assets/social/readings_same-year-different-number__ar.png",
+   "class": "GENERATED_SOCIAL_IMAGES"
+  },
+  {
+   "path": "site-src/assets/social/readings_same-year-different-number__en.png",
+   "class": "GENERATED_SOCIAL_IMAGES"
+  },
+  {
+   "path": "site-src/assets/social/reforms__ar.png",
+   "class": "GENERATED_SOCIAL_IMAGES"
+  },
+  {
+   "path": "site-src/assets/social/reforms__en.png",
+   "class": "GENERATED_SOCIAL_IMAGES"
+  },
+  {
+   "path": "site-src/assets/social/remittances__ar.png",
+   "class": "GENERATED_SOCIAL_IMAGES"
+  },
+  {
+   "path": "site-src/assets/social/remittances__en.png",
+   "class": "GENERATED_SOCIAL_IMAGES"
+  },
+  {
+   "path": "site-src/assets/social/rights__ar.png",
+   "class": "GENERATED_SOCIAL_IMAGES"
+  },
+  {
+   "path": "site-src/assets/social/rights__en.png",
+   "class": "GENERATED_SOCIAL_IMAGES"
+  },
+  {
+   "path": "site-src/assets/social/terms__ar.png",
+   "class": "GENERATED_SOCIAL_IMAGES"
+  },
+  {
+   "path": "site-src/assets/social/terms__en.png",
+   "class": "GENERATED_SOCIAL_IMAGES"
   },
   {
    "path": "site-src/content/content/interface_copy.json",
