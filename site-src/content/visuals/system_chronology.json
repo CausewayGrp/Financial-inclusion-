@@ -16,7 +16,9 @@
     "relationship_type": "CONTEXT",
     "linked_routes": "/finance | /reforms | /people",
     "interpretation_note": null,
-    "period_ar": "2014–2015"
+    "period_ar": "2014–2015",
+    "verification_note_en": null,
+    "verification_note_ar": null
   },
   {
     "event_id": "YSC-002",
@@ -35,7 +37,9 @@
     "relationship_type": "MECHANISM_HYPOTHESIS",
     "linked_routes": "/finance | /firms | /reforms",
     "interpretation_note": null,
-    "period_ar": "فبراير 2016"
+    "period_ar": "فبراير 2016",
+    "verification_note_en": null,
+    "verification_note_ar": null
   },
   {
     "event_id": "YSC-003",
@@ -54,14 +58,16 @@
     "relationship_type": "CONTEXT",
     "linked_routes": "/providers | /access | /payments | /reforms | /finance",
     "interpretation_note": null,
-    "period_ar": "سبتمبر 2016"
+    "period_ar": "سبتمبر 2016",
+    "verification_note_en": null,
+    "verification_note_ar": null
   },
   {
     "event_id": "YSC-004",
     "period_en": "2017–2018",
     "event_class": "LIQUIDITY_MONETARY",
-    "fact_en": "World Bank monitoring estimated that currency outside banks rose from YER810.9 billion in 2014 to YER1,673 billion by end-2017, alongside large issuance of new banknotes, and expected rapid money-supply growth in 2018.",
-    "fact_ar": "قدرت متابعة البنك الدولي ارتفاع النقد المتداول خارج البنوك من 810.9 مليار ريال في 2014 إلى 1,673 مليار ريال بنهاية 2017، بالتزامن مع إصدار كبير لأوراق نقدية جديدة وتسارع متوقع في نمو عرض النقود خلال 2018.",
+    "fact_en": "World Bank monitoring estimated that currency outside banks rose from about YER 811 billion in 2014 to YER 1,673 billion by end-2017, alongside large issuance of new banknotes, and expected rapid money-supply growth in 2018.",
+    "fact_ar": "قدرت متابعة البنك الدولي ارتفاع النقد المتداول خارج البنوك من نحو 811 مليار ريال في 2014 إلى 1,673 مليار ريال بنهاية 2017، بالتزامن مع إصدار كبير لأوراق نقدية جديدة وتسارع متوقع في نمو عرض النقود خلال 2018.",
     "source_ids": "SRC-WB-YEM-MONITOR-FALL2018-001",
     "source_scope": "Historical macro/monetary estimate.",
     "system_implication_en": "A larger cash stock outside banks is a liquidity and intermediation signal that must be separated from account ownership or unique users.",
@@ -72,8 +78,10 @@
     "does_not_establish_ar": "النقد خارج البنوك لا يساوي حيازات الأسر النقدية ولا عدد المستبعدين أو غير المتعاملين مع البنوك.",
     "relationship_type": "CONTEXT",
     "linked_routes": "/finance | /people | /payments",
-    "interpretation_note": null,
-    "period_ar": "2017–2018"
+    "interpretation_note": "RC-1 item 17: the source value YER 810.9 billion (2014) is displayed as YER 811 billion so that the two values of this series share one display precision (whole YER billion); the 2017 value 1,673 is as published.",
+    "period_ar": "2017–2018",
+    "verification_note_en": null,
+    "verification_note_ar": null
   },
   {
     "event_id": "YSC-005",
@@ -92,7 +100,9 @@
     "relationship_type": "DEPENDENCY",
     "linked_routes": "/finance | /firms | /reforms",
     "interpretation_note": "Do not add downstream use of the same funds as a separate donor inflow.",
-    "period_ar": "يناير–مارس 2018"
+    "period_ar": "يناير–مارس 2018",
+    "verification_note_en": null,
+    "verification_note_ar": null
   },
   {
     "event_id": "YSC-006",
@@ -111,7 +121,9 @@
     "relationship_type": "CONTEXT",
     "linked_routes": "/payments | /remittances | /access",
     "interpretation_note": null,
-    "period_ar": "ديسمبر 2019"
+    "period_ar": "ديسمبر 2019",
+    "verification_note_en": null,
+    "verification_note_ar": null
   },
   {
     "event_id": "YSC-007",
@@ -130,7 +142,9 @@
     "relationship_type": "MECHANISM_HYPOTHESIS",
     "linked_routes": "/remittances | /payments | /finance",
     "interpretation_note": null,
-    "period_ar": "أوائل 2020"
+    "period_ar": "أوائل 2020",
+    "verification_note_en": null,
+    "verification_note_ar": null
   },
   {
     "event_id": "YSC-008",
@@ -149,7 +163,9 @@
     "relationship_type": "CONTEXT",
     "linked_routes": "/finance | /firms | /payments | /reforms",
     "interpretation_note": null,
-    "period_ar": "أكتوبر 2022–يناير 2023"
+    "period_ar": "أكتوبر 2022–يناير 2023",
+    "verification_note_en": "This event has not yet been checked against the original source document.",
+    "verification_note_ar": "لم يُراجَع هذا الحدث بعدُ مقابل وثيقة المصدر الأصلية."
   },
   {
     "event_id": "YSC-009",
@@ -168,7 +184,9 @@
     "relationship_type": "DEPENDENCY",
     "linked_routes": "/finance | /reforms",
     "interpretation_note": "US$0.775bn made available is a subset/state transition of this US$1bn deposit, not new support.",
-    "period_ar": "21 فبراير 2023"
+    "period_ar": "21 فبراير 2023",
+    "verification_note_en": null,
+    "verification_note_ar": null
   },
   {
     "event_id": "YSC-010",
@@ -187,7 +205,9 @@
     "relationship_type": "DEPENDENCY",
     "linked_routes": "/finance | /firms | /reforms",
     "interpretation_note": "Track each amount by flow state; do not sum custody, amount made available and auction use as independent inflows.",
-    "period_ar": "2023–2024"
+    "period_ar": "2023–2024",
+    "verification_note_en": null,
+    "verification_note_ar": null
   },
   {
     "event_id": "YSC-011",
@@ -206,7 +226,9 @@
     "relationship_type": "CONTEXT",
     "linked_routes": "/remittances | /finance | /firms",
     "interpretation_note": null,
-    "period_ar": "2022–2024"
+    "period_ar": "2022–2024",
+    "verification_note_en": null,
+    "verification_note_ar": null
   },
   {
     "event_id": "YSC-012",
@@ -225,7 +247,9 @@
     "relationship_type": "CONTEXT",
     "linked_routes": "/providers | /payments | /remittances | /access | /reforms",
     "interpretation_note": null,
-    "period_ar": "مارس–يونيو 2024"
+    "period_ar": "مارس–يونيو 2024",
+    "verification_note_en": null,
+    "verification_note_ar": null
   },
   {
     "event_id": "YSC-024",
@@ -244,7 +268,9 @@
     "relationship_type": "CONTEXT",
     "linked_routes": "/payments | /people | /access | /reforms",
     "interpretation_note": "Place this event between cash-delivery evidence and the post-transfer persistence question; do not collapse pilot exposure into durable inclusion.",
-    "period_ar": "حتى 30 مايو 2024"
+    "period_ar": "حتى 30 مايو 2024",
+    "verification_note_en": null,
+    "verification_note_ar": null
   },
   {
     "event_id": "YSC-013",
@@ -263,7 +289,9 @@
     "relationship_type": "COMPARISON",
     "linked_routes": "/remittances | /evidence | /methodology",
     "interpretation_note": "Do not connect revised vintages as if they were consecutive economic observations.",
-    "period_ar": "قيمة 2024 كما رُوجعت بين إصدارات التقرير السنوي للبنك المركزي اليمني – عدن"
+    "period_ar": "قيمة 2024 كما رُوجعت بين إصدارات التقرير السنوي للبنك المركزي اليمني – عدن",
+    "verification_note_en": null,
+    "verification_note_ar": null
   },
   {
     "event_id": "YSC-014",
@@ -282,7 +310,9 @@
     "relationship_type": "CONTEXT",
     "linked_routes": "/finance | /providers | /access",
     "interpretation_note": null,
-    "period_ar": "2022–أبريل 2025"
+    "period_ar": "2022–أبريل 2025",
+    "verification_note_en": "This event has not yet been checked against the original source document.",
+    "verification_note_ar": "لم يُراجَع هذا الحدث بعدُ مقابل وثيقة المصدر الأصلية."
   },
   {
     "event_id": "YSC-018",
@@ -301,7 +331,9 @@
     "relationship_type": "DEPENDENCY",
     "linked_routes": "/payments | /reforms | /people",
     "interpretation_note": "Project cost/commitment must not be counted as an observed financial flow to users.",
-    "period_ar": "فترة المشروع من 17 يونيو 2025 حتى 2030"
+    "period_ar": "فترة المشروع من 17 يونيو 2025 حتى 2030",
+    "verification_note_en": null,
+    "verification_note_ar": null
   },
   {
     "event_id": "YSC-015",
@@ -320,7 +352,9 @@
     "relationship_type": "MECHANISM_HYPOTHESIS",
     "linked_routes": "/finance | /firms | /providers | /reforms",
     "interpretation_note": null,
-    "period_ar": "من يوليو 2025 فصاعدًا"
+    "period_ar": "من يوليو 2025 فصاعدًا",
+    "verification_note_en": "This event has not yet been checked against the original source document.",
+    "verification_note_ar": "لم يُراجَع هذا الحدث بعدُ مقابل وثيقة المصدر الأصلية."
   },
   {
     "event_id": "YSC-016",
@@ -339,7 +373,9 @@
     "relationship_type": "CONTEXT",
     "linked_routes": "/remittances | /finance | /firms",
     "interpretation_note": null,
-    "period_ar": "منتصف يوليو–أوائل أغسطس 2025"
+    "period_ar": "منتصف يوليو–أوائل أغسطس 2025",
+    "verification_note_en": null,
+    "verification_note_ar": null
   },
   {
     "event_id": "YSC-017",
@@ -358,7 +394,9 @@
     "relationship_type": "CONTEXT",
     "linked_routes": "/finance | /firms",
     "interpretation_note": null,
-    "period_ar": "سبتمبر 2025"
+    "period_ar": "سبتمبر 2025",
+    "verification_note_en": "This event has not yet been checked against the original source document.",
+    "verification_note_ar": "لم يُراجَع هذا الحدث بعدُ مقابل وثيقة المصدر الأصلية."
   },
   {
     "event_id": "YSC-019",
@@ -377,7 +415,9 @@
     "relationship_type": "DEPENDENCY",
     "linked_routes": "/finance | /reforms",
     "interpretation_note": "Keep SAR-denominated agreement and IMF USD-denominated support states separate until identity is proven.",
-    "period_ar": "1 مارس 2026"
+    "period_ar": "1 مارس 2026",
+    "verification_note_en": null,
+    "verification_note_ar": null
   },
   {
     "event_id": "YSC-021",
@@ -396,7 +436,9 @@
     "relationship_type": "CONTEXT",
     "linked_routes": "/firms | /finance | /people | /payments | /reforms",
     "interpretation_note": "Keep country-strategy priorities separate from measured results and from the evidence needed to evaluate financial inclusion.",
-    "period_ar": "4 يونيو 2026"
+    "period_ar": "4 يونيو 2026",
+    "verification_note_en": null,
+    "verification_note_ar": null
   },
   {
     "event_id": "YSC-022",
@@ -415,7 +457,9 @@
     "relationship_type": "MEASUREMENT_CONTEXT",
     "linked_routes": "/people | /payments | /access | /finance | /measurement",
     "interpretation_note": "Treat delivery, documentation, onboarding, use and persistence as distinct links in the evidence chain.",
-    "period_ar": "30 يونيو 2026"
+    "period_ar": "30 يونيو 2026",
+    "verification_note_en": null,
+    "verification_note_ar": null
   },
   {
     "event_id": "YSC-023",
@@ -434,7 +478,9 @@
     "relationship_type": "CONTEXT",
     "linked_routes": "/finance | /providers | /reforms | /payments",
     "interpretation_note": "Preserve the distinction between staff-level agreement, Management approval, policy implementation and observed outcome.",
-    "period_ar": "16 يوليو 2026"
+    "period_ar": "16 يوليو 2026",
+    "verification_note_en": null,
+    "verification_note_ar": null
   },
   {
     "event_id": "YSC-020",
@@ -453,6 +499,8 @@
     "relationship_type": "MEASUREMENT_GAP",
     "linked_routes": "/ | /finance | /payments | /remittances | /providers | /access | /reforms | /evidence",
     "interpretation_note": null,
-    "period_ar": "قاعدة التحليل المعمول بها"
+    "period_ar": "قاعدة التحليل المعمول بها",
+    "verification_note_en": null,
+    "verification_note_ar": null
   }
 ]

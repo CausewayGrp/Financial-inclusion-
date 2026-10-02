@@ -96,6 +96,16 @@ The public text stays exactly as it is until the source is read; closing any of 
 | EXT-10 | Reading visuals RV-CWR-005 (five-provider e-money mix) and RV-CWR-008 (SMEPS indicators) hold their values as governed text, not data rows; the table VIS-MFI-DIVERGENCE's rationale describes (borrowers, savers, portfolio at three anchors) has no resolved rows | SUPPORTING and TABLE_TEXT_FIRST tiers; rendered from governed text | Verify against the source tables and promote the values to rows Master-first | P3; F9 run 2 |
 | EXT-11 | IFAD *Sending Money Home 2026*, deferred as a curated resource | Not in the source register | The full report shown to publish a Yemen estimate with a documented method (F3 reopening trigger) | F3 #2 |
 
+- 2026-10-02 — **EXT-01**: Path B of the release-candidate brief applied in transaction RC-1 (the session's network policy refuses
+  imf.org and elibrary.imf.org, so the report could not be read): the Methodology lead sentence now says an exception is marked
+  where it appears, and YSC-008, YSC-014, YSC-015 and YSC-017 each print "This event has not yet been checked against the
+  original source document." (new 14 columns `verification_note_en/_ar`). The row stays open; closing it is still a primary
+  read, which also removes the four notes Master-first (`audit/release_candidate/runs/RC-1_MASTER_LEDGER.json`, item 3).
+- 2026-10-02 — **VIS-FIRM-CONSTRAINTS, challenges 9–16** (release-candidate brief, item 6): Path B applied in RC-1 for the same
+  reason (documents.worldbank.org refused). FFO-2022-CH-09…16 stay unbound; the figure prints the governed frame note
+  "Partial list: 8 of the 16 challenges recorded in the source are shown." Closing it is a read of `SRC-WB-FSD-2024-001`,
+  Annex III, Table 8 / Figure 108, p.146, then binding the eight rows Master-first (ledger item 6).
+
 ## 4. KNOWN_EVIDENCE_FRONTIER
 
 These are limits of the evidence, stated on the pages. Design must show them as evidence states, never as errors, and

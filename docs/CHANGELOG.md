@@ -1,5 +1,29 @@
 # Repository Change Log
 
+## 2026-10-02 — Release candidate RC-1: Master truth fixes (items 1–8, 16, 17)
+
+Transaction `audit/release_candidate/rc_1_truth_fixes.py` through `run_stage.py` (Master `17db032b15da` → `ebf03d6fe4cf`;
+ledger and run report in `audit/release_candidate/runs/`), with `rc_1_stage_inputs.py` staging the visual design contract and
+`master_structure.json` (`--install`). English and Arabic together; an independent bilingual review (1 blocking, 6 should-fix,
+8 optional) was applied before commit, its deferrals recorded in the ledger.
+
+- **/people/** §3–4 extend to the education and age gaps that VIS-FINDEX-GAPS draws (item 1); the VIS-SOURCE-COMPARISON
+  summaries take the brief's wording (item 2).
+- **Methodology and EXT-01, Path B** (item 3): no source host is reachable from this session; the lead sentence is replaced and
+  YSC-008/014/015/017 print a verification note (new 14 columns `verification_note_en/_ar`). EXT-01 stays open.
+- **Units** (items 4, 17): VIS-POS-VALUE displays whole YER million; remittance prose in USD million; YSC-004, the CBY-Aden rate
+  and the SFD savers count in one notation. Sweep and dispositions: `audit/release_candidate/FOUR_DIGIT_UNIT_CHECK.md`.
+- **CBY-Aden scope** on the RV-CWR-004 lane and RV-CWR-009 rows (item 5); **VIS-FIRM-CONSTRAINTS** partial-list note, Path B
+  (item 6); the disagreement legend, CLM-003 and the POS summaries describe only what is drawn (item 7).
+- **Firewall adjudications** (item 8): RV-CWR-009 OPERATION KEEP; VIS-REMITTANCE-COST rpw MEASURED → REPORTED; RV-CWR-001
+  IMF staff path KEEP.
+- **use_rule pointers** to `scripts/yfie/content.py` (item 16; PR #8 acceptance A7 item 8 / C9).
+- **Code**: the renderer prints the chronology verification note and the POS scope; `firm_constraints` prints frame labels.
+- **Gates**: `scripts/tests/test_content_parity.py` is the standing content gate (CI step, two negative controls); the cutover
+  parity test exits 2 ("pinned") once the Master moves past its oracle. Validator S05.1 signature updated for the Reading's new
+  unit. Methodology social images regenerated.
+- **Register**: dated EXT-01 and VIS-FIRM-CONSTRAINTS lines in `FINAL_OPEN_ITEMS_REGISTER.md` §3.
+
 ## 2026-10-02 — Release candidate G1: the owner's decisions recorded under the register rows they affect
 
 `FINAL_OPEN_ITEMS_REGISTER.md` (append only, per its §9 rule): one dated "owner decision, see `audit/OWNER_DECISIONS_2026-10-02.md`"

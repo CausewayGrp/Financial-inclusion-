@@ -621,7 +621,10 @@
     },
     "mobile": "Native vertical list; one card per step.",
     "rtl": "Top to bottom in both languages; no horizontal arrows.",
-    "fallback": "Ordered list of steps with state, dated events and links."
+    "fallback": "Ordered list of steps with state, dated events and links.",
+    "frame_labels": [
+     "UI-VIS-NOTE-POS-SCOPE"
+    ]
    }
   },
   {
@@ -1229,7 +1232,7 @@
        "metric_label_en": "metric_label_en",
        "metric_label_ar": "metric_label_ar"
       },
-      "state": "MEASURED",
+      "state": "REPORTED",
       "must_equal": {
        "RMO-RPW-SA-2025Q3-200": 2.7,
        "RMO-RPW-UAE-2025Q3-200": 7.53
@@ -1320,7 +1323,10 @@
     },
     "mobile": "Full-width bars.",
     "rtl": "Bars from the reading start.",
-    "fallback": "Table of all 16 governed items."
+    "fallback": "Table of all 16 governed items.",
+    "frame_labels": [
+     "UI-VIS-NOTE-FIRM-CONSTRAINTS-PARTIAL"
+    ]
    }
   },
   {
@@ -1442,7 +1448,8 @@
     "frame_labels": [
      "UI-VIS-CAT-LANE-PEOPLE-SURVEY",
      "UI-VIS-CAT-LANE-PAYMENT-INFRA-ADMIN",
-     "UI-VIS-CAT-LANE-INSTITUTIONS-REFORMS"
+     "UI-VIS-CAT-LANE-INSTITUTIONS-REFORMS",
+     "UI-VIS-NOTE-POS-SCOPE"
     ]
    }
   },

@@ -1058,9 +1058,12 @@ s05_numeric_signatures={
     '/evidence/CLM-001/':['11.9%','2022-11-07','2023-01-09','23%'],
     '/evidence/CLM-060/':['19%','15%','40%','2024','2021'],
     '/evidence/CLM-032/':['2020','2025'],
-    # Tranche B PB-0362/PB-0363 (CWR-001): the restated 2024 value is published at source-appropriate precision (USD 3.42 billion), not six figures.
+    # Tranche B PB-0362/PB-0363 (CWR-001) printed the restated 2024 value as "USD 3.42 billion" beside a table in USD million.
+    # Release candidate RC-1 item 4 (audit/release_candidate/INSTRUCTIONS.md): prose and table use one unit, so the Reading
+    # prints the governed values in USD million (6,245 and 3,422.16, the rows RMO-CBY-2024-AR2024 / -AR2025). Same check, same
+    # strength: the two values must still survive in both editions, now in the table's own unit and digits.
     # Pre-Tranche-C P4 (V-D1): the residual-model estimate rests only on material without a public locator; its value is withheld (S04.3).
-    '/readings/same-year-different-number/':['6.245','3.42','0.0032','33%','1.838'],
+    '/readings/same-year-different-number/':['6,245','3,422.16','0.0032','33%','1.838'],
 }
 for _lang in ('ar','en'):
     for _route in ('readings/same-year-different-number','evidence/CLM-044'):

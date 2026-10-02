@@ -33,7 +33,10 @@ def main() -> int:
     argv = [a for a in sys.argv[1:] if not a.startswith("--")]
     site = Path(argv[0]).resolve() if argv else ROOT / "design/reference/out"
     env = {**os.environ, "YFIE_SITE_DIR": str(site), "PYTHONDONTWRITEBYTECODE": "1"}
-    return subprocess.run([sys.executable, str(ROOT / "scripts/tests/test_cutover_parity.py")], cwd=ROOT, env=env).returncode
+    rc = subprocess.run([sys.executable, str(ROOT / "scripts/tests/test_cutover_parity.py")], cwd=ROOT, env=env).returncode
+    if rc == 2:   # the frozen oracle is pinned to earlier projections: the standing content gate takes over (release candidate RC-1)
+        rc = subprocess.run([sys.executable, str(ROOT / "scripts/tests/test_content_parity.py")], cwd=ROOT, env=env).returncode
+    return rc
 
 
 if __name__ == "__main__":

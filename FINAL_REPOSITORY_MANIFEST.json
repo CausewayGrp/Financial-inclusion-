@@ -3,9 +3,9 @@
  "purpose": "What every tracked file is. One authority -> one projection path -> one runtime content path -> one current recipient start path. Hashes: SHA256SUMS.txt.",
  "authority": {
   "production_master": "authority/Yemen_Financial_Inclusion_Evidence_Master.xlsx",
-  "production_master_sha256": "17db032b15da16fc4b5b3c3b49f19aebf2ecb4ec46634613fe8505d0f038690b",
+  "production_master_sha256": "ebf03d6fe4cf7fbba1e3be82ca1f0075c3f0e3f44af62069e51d294ad9e05e5e",
   "page_specs": "site-src/content/page_specs.json",
-  "page_specs_sha256": "d45748046ea56fd0e67fdf112f9888de65b3fe7fab46ce6f51de3a80824b69aa",
+  "page_specs_sha256": "5522234dbd987ab3d03cbfb1e664f0dfcf41a70198bf1a3357462090b4f4424d",
   "logo": "site-src/assets/CauseWay_Master_Logo.png",
   "logo_sha256": "5830163d50f9badbef3227ec44e7705548e2fcc8a06b2d6ae33d56ade60c6a90",
   "rule": "The Production Master is the only semantic authority. Everything under site-src/content, dist, design/architecture and audit/PUBLIC_LITERAL_CLOSURE.json is generated from it and never edited by hand, except the two CONTROLLED_CONTRACT files, which the programme steward maintains in place and the generator validates against the Master's projections."
@@ -25,10 +25,10 @@
   "AUTHORITY_MASTER": 1,
   "AUTHORITY_POINTER": 2,
   "AUTHORITY_RULES": 1,
-  "BUILD_AND_GATES": 21,
+  "BUILD_AND_GATES": 22,
   "CONTROLLED_CONTRACT": 2,
   "CURRENT_DOCUMENT": 13,
-  "CURRENT_PROGRAMME_RECORD": 53,
+  "CURRENT_PROGRAMME_RECORD": 60,
   "DESIGN_PACKAGE": 446,
   "GENERATED_DIAGRAMS": 9,
   "GENERATED_LITERAL_CLOSURE": 1,
@@ -895,7 +895,35 @@
    "class": "CURRENT_PROGRAMME_RECORD"
   },
   {
+   "path": "audit/release_candidate/FOUR_DIGIT_UNIT_CHECK.md",
+   "class": "CURRENT_PROGRAMME_RECORD"
+  },
+  {
    "path": "audit/release_candidate/INSTRUCTIONS.md",
+   "class": "CURRENT_PROGRAMME_RECORD"
+  },
+  {
+   "path": "audit/release_candidate/four_digit_unit_check.py",
+   "class": "CURRENT_PROGRAMME_RECORD"
+  },
+  {
+   "path": "audit/release_candidate/rc_1_stage_inputs.py",
+   "class": "CURRENT_PROGRAMME_RECORD"
+  },
+  {
+   "path": "audit/release_candidate/rc_1_truth_fixes.py",
+   "class": "CURRENT_PROGRAMME_RECORD"
+  },
+  {
+   "path": "audit/release_candidate/rc_lib.py",
+   "class": "CURRENT_PROGRAMME_RECORD"
+  },
+  {
+   "path": "audit/release_candidate/runs/RC-1_MASTER_LEDGER.json",
+   "class": "CURRENT_PROGRAMME_RECORD"
+  },
+  {
+   "path": "audit/release_candidate/runs/RC-1_RUN_REPORT.json",
    "class": "CURRENT_PROGRAMME_RECORD"
   },
   {
@@ -5772,6 +5800,10 @@
   },
   {
    "path": "scripts/tests/content_oracle.py",
+   "class": "BUILD_AND_GATES"
+  },
+  {
+   "path": "scripts/tests/test_content_parity.py",
    "class": "BUILD_AND_GATES"
   },
   {

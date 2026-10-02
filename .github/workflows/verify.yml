@@ -84,8 +84,18 @@ jobs:
       - name: Bilingual numeric invariance (every English/Arabic page pair prints the same numbers)
         run: python3 audit/tranche_c/checks/bilingual_invariance.py
 
-      - name: Cutover parity (the runtime prints everything the pre-design renderer printed)
-        run: python3 scripts/tests/test_cutover_parity.py
+      - name: Content parity (every page prints its governed copy and no ungoverned number)
+        run: python3 scripts/tests/test_content_parity.py
+
+      - name: Cutover parity (the runtime prints everything the pre-design renderer printed, while the frozen oracle is current)
+        # Exit 2 means the oracle is pinned to projections a later Master transaction moved: the cutover comparison can no
+        # longer be made and the content-parity step above is the standing gate (scripts/tests/test_cutover_parity.py docstring).
+        run: |
+          set +e
+          python3 scripts/tests/test_cutover_parity.py
+          rc=$?
+          if [ "$rc" -eq 2 ]; then echo "::notice::Cutover oracle pinned to earlier projections; content parity is the standing gate."; exit 0; fi
+          exit "$rc"
 
       - name: Gates leave the working tree clean
         run: |

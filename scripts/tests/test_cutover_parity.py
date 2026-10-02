@@ -44,6 +44,7 @@ ORACLE = ROOT / "scripts/tests/baseline_content_oracle.json"
 DECORATIVE = re.compile(r"^0\d$")
 SENT = re.compile(r"(?<=[.؟?!:;])\s+")
 SOURCE_INTRO = "UI-EVID-OPEN-THE-SOURCE-RECORD-HERE"
+PINNED = 2   # exit status when the oracle's projections have moved: not a pass, not a content failure (release candidate RC-1)
 
 # The governed-string walk of design/reference/check_content.py, unchanged: which keys of the content bundle carry
 # public text (and so must be rendered) and which carry routing, state or machine values (and so must not be counted).
@@ -122,7 +123,8 @@ def main() -> int:
         for p in moved[:10]:
             print("   -", p)
         print("   The cutover comparison is no longer the one this oracle can make. Re-read the record before trusting it.")
-        return 1
+        print("   The standing content gate is scripts/tests/test_content_parity.py (CI runs it on every push).")
+        return PINNED
     if not (site / "en" / "index.html").exists():
         print(f"CUTOVER PARITY: FAIL (site not built: {site})")
         return 1

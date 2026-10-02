@@ -243,7 +243,8 @@ def chronology_block(ch: dict, L: dict, id_: str) -> str:
         items.append(f'<li class="compact" id="{esc(e["id"])}">{clock(L["period"], esc(e["period"]))}<div class="q">{esc(e["fact"])}</div>'
                      + (f'<div class="small"><b>{esc(CL["relevance"])}</b> {esc(e["relevance"])}</div>' if e["relevance"] else "")
                      + (f'<div class="small bnd-line"><b>{esc(CL["does_not_establish"])}</b> {esc(e["does_not_establish"])}</div>' if e["does_not_establish"] else "")
-                     + (f'<div class="small"><b>{esc(CL["sources"])}</b> {src}</div>' if src else "") + "</li>")
+                     + (f'<div class="small"><b>{esc(CL["sources"])}</b> {src}</div>' if src else "")
+                     + (f'<div class="small vnote">{esc(e["verification_note"])}</div>' if e.get("verification_note") else "") + "</li>")
     return f'<section class="qa" id="{id_}"><div><h2>{esc(ch["heading"])}</h2></div><div><p class="small">{esc(ch["intro"])}</p><ol class="objs chron">{"".join(items)}</ol></div></section>'
 
 
@@ -363,7 +364,8 @@ def data_sources(page: dict, shell: dict) -> str:
                 ev.append(f'<li class="compact" id="{esc(e["id"])}">{clock(L["period"], esc(e["period"]))}<div class="q">{esc(e["fact"])}</div>'
                           + (f'<div class="small"><b>{esc(CL["relevance"])}</b> {esc(e["relevance"])}</div>' if e["relevance"] else "")
                           + (f'<div class="small bnd-line"><b>{esc(CL["does_not_establish"])}</b> {esc(e["does_not_establish"])}</div>' if e["does_not_establish"] else "")
-                          + (f'<div class="small"><b>{esc(CL["sources"])}</b> {src}</div>' if src else "") + "</li>")
+                          + (f'<div class="small"><b>{esc(CL["sources"])}</b> {src}</div>' if src else "")
+                          + (f'<div class="small vnote">{esc(e["verification_note"])}</div>' if e.get("verification_note") else "") + "</li>")
             parts.append(f'<section class="qa" id="chronology"><div>{rubric(s.get("role") or "")}<h2>{esc(s["heading"])}</h2></div><div><div class="body">{body_paras(s["paragraphs"])}</div>'
                          f'<p class="small mt12"><b>{esc(ch["heading"])}</b> · {esc(ch["intro"])}</p><ol class="objs chron">{"".join(ev)}</ol></div></section>')
             index.append(("chronology", s["heading"]))

@@ -36,6 +36,16 @@ def run_validator() -> str:
     return r.stdout + r.stderr
 
 
+def run_content_parity() -> str:
+    r = subprocess.run([sys.executable, str(ROOT / "scripts/tests/test_content_parity.py")], capture_output=True, text=True,
+                       cwd=ROOT, env={"PYTHONDONTWRITEBYTECODE": "1", "PATH": "/usr/bin:/bin"})
+    return r.stdout + r.stderr
+
+
+# A control may name the gate that must catch it; the default is the repository validator.
+GATE_RUNNERS = {"validate": run_validator, "content_parity": run_content_parity}
+
+
 def sub_once(pattern: str, repl: str):
     return lambda t: re.sub(pattern, repl, t, count=1, flags=re.S)
 
@@ -173,6 +183,14 @@ CONTROLS = [
     ("an inventory count phrase disagrees with the contract", "en/measurement/index.html",
      insert_after('<div class="body">', "<p>This resource publishes 42 Evidence records, each traced.</p>"),
      "P1-G04 inventory count phrase not from the contract"),
+    # The standing content gate (release candidate, RC-1): a governed sentence dropped from a page, and a number no governed
+    # record or contract holds, must each be reported by scripts/tests/test_content_parity.py.
+    ("a domain answer drops a governed sentence", "en/people/index.html",
+     replace("a gap of 12.55 percentage points", "a gap of percentage points"),
+     "TEXT en/people/index.html", "content_parity"),
+    ("a page prints an ungoverned number", "ar/people/index.html",
+     replace("19.53%", "19.53% (88.8)"),
+     "NUMBER ar/people/index.html", "content_parity"),
 ]
 
 
@@ -193,7 +211,8 @@ def main() -> int:
         backup = Path(tmp) / "dist"
         shutil.copytree(DIST, backup)
         try:
-            for name, rel, mutate, gate in controls:
+            for name, rel, mutate, gate, *runner in controls:
+                run_gate = GATE_RUNNERS[runner[0] if runner else "validate"]
                 page = (ROOT / rel) if rel.startswith(SOURCE_PREFIXES) else (DIST / rel)
                 original = page.read_text(encoding="utf-8")
                 note = ""
@@ -202,7 +221,7 @@ def main() -> int:
                     if broken == original:
                         raise AssertionError("the control changed nothing — its selector no longer matches the page")
                     page.write_text(broken, encoding="utf-8")
-                    fired = gate in run_validator()
+                    fired = gate in run_gate()
                 except Exception as exc:                 # a control that cannot break the page proves nothing either
                     fired, note = False, f" — {exc}"
                 finally:

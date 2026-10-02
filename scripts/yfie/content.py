@@ -730,7 +730,8 @@ class Content:
                     sources.append({"id": sid, "title": card["title"], "href": card["data_href"]})
             items.append({"id": str(e.get("event_id") or ""), "period": self.loc(e, "period", lang), "fact": fact,
                           "relevance": self.loc(e, "fi_relevance", lang) or self.loc(e, "system_implication", lang),
-                          "does_not_establish": self.loc(e, "does_not_establish", lang), "sources": sources})
+                          "does_not_establish": self.loc(e, "does_not_establish", lang), "sources": sources,
+                          "verification_note": self.loc(e, "verification_note", lang)})   # RC-1 item 3: stated with the event when it has not been checked against its original
         if not items:
             return None
         L = lambda k: self.t(k, lang)  # noqa: E731

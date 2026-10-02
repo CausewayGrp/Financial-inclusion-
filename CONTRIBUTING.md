@@ -122,7 +122,8 @@ python3 audit/pre_tranche_c/source_lineage_truth_test.py
 python3 scripts/architecture_diagrams.py --check
 python3 scripts/social_images.py --check               # one governed social image per route and language, current
 python3 audit/tranche_c/checks/bilingual_invariance.py # 0 differing English/Arabic page pairs (exit 1 otherwise)
-python3 scripts/tests/test_cutover_parity.py           # the runtime prints everything the pre-design renderer printed
+python3 scripts/tests/test_content_parity.py           # every page prints its governed copy and no ungoverned number (standing)
+python3 scripts/tests/test_cutover_parity.py           # the cutover proof; exits 2 ("pinned") once a Master change moves its oracle
 python3 scripts/tests/test_public_tools.py             # browser
 python3 audit/tranche_c/checks/viewport_acceptance.py  # browser
 # Slow, and its own CI job: one full validator run per fault, so run it when a gate or the markup it reads changes.

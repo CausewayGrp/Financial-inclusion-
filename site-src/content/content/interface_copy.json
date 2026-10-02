@@ -169,8 +169,8 @@
   },
   {
     "ui_id": "UI-VIS-DISAGREEMENT",
-    "label_en": "Source figures disagree — both are shown",
-    "label_ar": "أرقام المصدر غير متسقة — يُعرض الرقمان",
+    "label_en": "Source figures disagree — the published total is plotted; the percentage the release displays is given in the chart note",
+    "label_ar": "أرقام المصدر غير متسقة — يعرض الرسم البياني الإجمالي المنشور، أما النسبة التي يوردها الإصدار فمذكورة في ملاحظة الرسم",
     "use_rule": "Pre-Tranche-C P3 visual grammar. A published figure and the figure implied by the same source's totals differ."
   },
   {
@@ -1305,121 +1305,121 @@
     "ui_id": "UI-DOM-SCOPE-AND-TIME",
     "label_en": "Scope and time",
     "label_ar": "النطاق والزمن",
-    "use_rule": "build.py _domain_labels['scope']"
+    "use_rule": "scripts/yfie/content.py _DOMAIN_LABELS['scope']"
   },
   {
     "ui_id": "UI-DOM-WHAT-NOT-TO-CONCLUDE",
     "label_en": "What not to conclude",
     "label_ar": "ما لا يُستنتج",
-    "use_rule": "build.py _domain_labels['boundary']"
+    "use_rule": "scripts/yfie/content.py _DOMAIN_LABELS['boundary']"
   },
   {
     "ui_id": "UI-DOM-WHAT-REMAINS-UNKNOWN",
     "label_en": "What remains unknown",
     "label_ar": "ما لا يزال غير معروف",
-    "use_rule": "build.py _domain_labels['unknown']"
+    "use_rule": "scripts/yfie/content.py _DOMAIN_LABELS['unknown']"
   },
   {
     "ui_id": "UI-DOM-COVERAGE-LIMIT",
     "label_en": "Coverage limit",
     "label_ar": "قيد التغطية",
-    "use_rule": "build.py _domain_labels['coverage']"
+    "use_rule": "scripts/yfie/content.py _DOMAIN_LABELS['coverage']"
   },
   {
     "ui_id": "UI-DOM-A-VIEW-THAT-CHANGES-UNDERSTANDING",
     "label_en": "Another view of the evidence",
     "label_ar": "زاوية أخرى للنظر في الأدلة",
-    "use_rule": "build.py _domain_labels['visual']"
+    "use_rule": "scripts/yfie/content.py _DOMAIN_LABELS['visual']"
   },
   {
     "ui_id": "UI-DOM-MORE-EVIDENCE-AND-CONTEXT",
     "label_en": "More evidence and context",
     "label_ar": "مزيد من الأدلة والسياق",
-    "use_rule": "build.py _domain_labels['more']"
+    "use_rule": "scripts/yfie/content.py _DOMAIN_LABELS['more']"
   },
   {
     "ui_id": "UI-DOM-ADDITIONAL-CONTROLLED-DETAIL-FROM-THIS",
     "label_en": "More detail on this question, each item with its own period and limits.",
     "label_ar": "مزيد من التفاصيل حول هذا السؤال، ولكل منها فترته وحدوده.",
-    "use_rule": "build.py _domain_labels['more_intro']"
+    "use_rule": "scripts/yfie/content.py _DOMAIN_LABELS['more_intro']"
   },
   {
     "ui_id": "UI-DOM-WHAT-MEASUREMENT-WOULD-CHANGE-THE",
     "label_en": "What measurement would change the decision?",
     "label_ar": "ما القياس الذي سيغيّر القرار؟",
-    "use_rule": "build.py _domain_labels['measure']"
+    "use_rule": "scripts/yfie/content.py _DOMAIN_LABELS['measure']"
   },
   {
     "ui_id": "UI-DOM-VERIFY-IT-YOURSELF",
     "label_en": "Verify it yourself",
     "label_ar": "تحقق بنفسك",
-    "use_rule": "build.py _domain_labels['verify']"
+    "use_rule": "scripts/yfie/content.py _DOMAIN_LABELS['verify']"
   },
   {
     "ui_id": "UI-DOM-OPEN-THE-EVIDENCE-RECORD-BEHIND",
     "label_en": "Open the evidence record behind each answer, or go to the sources or the methodology.",
     "label_ar": "افتح سجل الدليل الذي تستند إليه كل إجابة، أو انتقل إلى المصادر أو المنهجية.",
-    "use_rule": "build.py _domain_labels['verify_intro']"
+    "use_rule": "scripts/yfie/content.py _DOMAIN_LABELS['verify_intro']"
   },
   {
     "ui_id": "UI-DOM-OPEN-EVIDENCE",
     "label_en": "Open evidence",
     "label_ar": "افتح الأدلة",
-    "use_rule": "build.py _domain_labels['evidence']"
+    "use_rule": "scripts/yfie/content.py _DOMAIN_LABELS['evidence']"
   },
   {
     "ui_id": "UI-DOM-METHODOLOGY",
     "label_en": "Methodology",
     "label_ar": "المنهجية",
-    "use_rule": "build.py _domain_labels['method']"
+    "use_rule": "scripts/yfie/content.py _DOMAIN_LABELS['method']"
   },
   {
     "ui_id": "UI-DOM-OPEN-EVIDENCE-RECORD",
     "label_en": "Open evidence record →",
     "label_ar": "افتح سجل الدليل ←",
-    "use_rule": "build.py _domain_labels['open_record']"
+    "use_rule": "scripts/yfie/content.py _DOMAIN_LABELS['open_record']"
   },
   {
     "ui_id": "UI-DOM-DO-NOT-INFER",
     "label_en": "Do not infer:",
     "label_ar": "لا يُستنتج:",
-    "use_rule": "build.py _domain_labels['do_not']"
+    "use_rule": "scripts/yfie/content.py _DOMAIN_LABELS['do_not']"
   },
   {
     "ui_id": "UI-DOM-ANALYTICAL-QUESTION",
     "label_en": "Analytical question",
     "label_ar": "السؤال التحليلي",
-    "use_rule": "build.py _domain_labels['visual_question']"
+    "use_rule": "scripts/yfie/content.py visual() labels['analytical_question']"
   },
   {
     "ui_id": "UI-DOM-ANALYTICAL-TEXT-ALTERNATIVE",
     "label_en": "Text description of this view",
     "label_ar": "وصف نصي لهذا العرض",
-    "use_rule": "build.py _domain_labels['text_alternative']"
+    "use_rule": "scripts/yfie/content.py visual() labels['text_alternative']"
   },
   {
     "ui_id": "UI-DOM-UNDERSTAND-EXPLORE-VERIFY",
     "label_en": "Understand → Explore → Verify",
     "label_ar": "افهم ← استكشف ← تحقّق",
-    "use_rule": "build.py _domain_labels['question_flow']"
+    "use_rule": "scripts/yfie/content.py _DOMAIN_LABELS['question_flow']"
   },
   {
     "ui_id": "UI-DOM-READING-RULE",
     "label_en": "How numbers are presented",
     "label_ar": "كيف تُعرض الأرقام",
-    "use_rule": "build.py _domain_labels['reading_rule']"
+    "use_rule": "scripts/yfie/content.py _DOMAIN_LABELS['reading_rule']"
   },
   {
     "ui_id": "UI-DOM-EVERY-CONSEQUENTIAL-NUMBER-STAYS-ATTACHED",
     "label_en": "Every consequential number stays attached to its unit, scope, time and limitation. Evidence measured at different times is never presented as if it described the same moment.",
     "label_ar": "يبقى كل رقم جوهري مرتبطًا بوحدته ونطاقه وفترته وحدوده. ولا تعامل الأدلة ذات تواريخ القياس المختلفة كما لو كانت تصف اللحظة نفسها.",
-    "use_rule": "build.py _domain_labels['reading_rule_copy']"
+    "use_rule": "scripts/yfie/content.py _DOMAIN_LABELS['reading_rule_copy']"
   },
   {
     "ui_id": "UI-DOM-EXPLORE-QUESTIONS",
     "label_en": "Explore questions",
     "label_ar": "استكشف الأسئلة",
-    "use_rule": "build.py _domain_labels['start']"
+    "use_rule": "scripts/yfie/content.py _DOMAIN_LABELS['start']"
   },
   {
     "ui_id": "UI-EVID-EVIDENCE-RECORD",
@@ -2482,5 +2482,17 @@
     "label_en": "Switch to English",
     "label_ar": "التبديل إلى العربية",
     "use_rule": "Language switch, accessible name. Written in the language it switches to and rendered with that language (build.py header)."
+  },
+  {
+    "ui_id": "UI-VIS-NOTE-POS-SCOPE",
+    "label_en": "within the payment-system reporting scope of the Central Bank of Yemen – Aden (CBY-Aden)",
+    "label_ar": "ضمن نطاق الإبلاغ عن نظام المدفوعات لدى البنك المركزي اليمني – عدن",
+    "use_rule": "RC-1 item 5 (design/ESCALATIONS.md, D6: RV-CWR-004 infrastructure lane and RV-CWR-009 activity rows). The reporting-scope qualifier of the VIS-POS-* universe, printed after the POS object label on the lane and the activity rows and in their fallback tables (scripts/yfie/visuals.py dated_lanes, chain_figure); bound through the contracts' frame_labels."
+  },
+  {
+    "ui_id": "UI-VIS-NOTE-FIRM-CONSTRAINTS-PARTIAL",
+    "label_en": "Partial list: 8 of the 16 challenges recorded in the source are shown.",
+    "label_ar": "قائمة جزئية: تُعرض 8 من أصل 16 تحديًا مسجّلًا في المصدر.",
+    "use_rule": "RC-1 item 6, Path B (design/ESCALATIONS.md, D6: VIS-FIRM-CONSTRAINTS names sixteen challenges and resolves eight rows). Frame note printed by scripts/yfie/visuals.py firm_constraints through the contract's frame_labels; removed the day FFO-2022-CH-09…16 are verified against the original and bound."
   }
 ]

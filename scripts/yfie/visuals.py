@@ -609,7 +609,8 @@ def remittance_cost(v: dict, cite_label: str, origin: str | None, heading: str =
     vmax, step = axis_scale([r["y"] for r in vals])
     corridors = list(dict.fromkeys(r["x_text"] for r in vals))
     shapes = {}
-    html_ = [f'<div class="panel bars"><p class="ph">{esc(vals[0]["unit"])} · {esc(state_label(v, "MEASURED"))}</p>']
+    head_state = uniform(vals, lambda r: r["state"]) or vals[0]["state"]
+    html_ = [f'<div class="panel bars"><p class="ph">{esc(vals[0]["unit"])} · {esc(state_label(v, head_state))}</p>']
     for c in corridors:
         rows = []
         for r in [x for x in vals if x["x_text"] == c]:
@@ -649,6 +650,7 @@ def payment_anatomy(v: dict, cite_label: str, origin: str | None, heading: str =
 
 # ------------------------------------------------------------------------------------------------ the chain (RV-CWR-009, VIS-PAYMENT-RAILS)
 CHAIN_STEPS = ["RULE", "IMPLEMENTATION", "OPERATION", "ACCESS", "USE", "QUALITY", "OUTCOME"]
+POS_SCOPE_KEY = "UI-VIS-NOTE-POS-SCOPE"   # RC-1 item 5: the VIS-POS-* universe qualifier, bound to RV-CWR-004 and RV-CWR-009 as a frame label
 # The governed step mapping of RV-CWR-009 (`contract.step_mapping`), read as event class → chain step.
 CLASS_STEP = {"NETWORK_RULE": "RULE", "PAYMENTS_ARCHITECTURE_DECISION": "RULE", "PROJECT_START": "RULE", "PAYMENT_RAIL_COMPONENT": "RULE", "ACCESS_USAGE_COMPONENT": "RULE",
               "NETWORK_INTEGRATION": "IMPLEMENTATION", "UNIFIED_NETWORK_COMPANY": "IMPLEMENTATION", "YPCC": "IMPLEMENTATION", "NETWORK_ACTIVITY_SIGNAL": "OPERATION"}
@@ -671,6 +673,9 @@ def chain_figure(v: dict, chain_src: dict, cite_label: str, origin: str | None, 
     locator) or OPEN (never a failure, never a percentage); the first open step after the evidenced ones is where the
     evidence stops and is set in the boundary voice."""
     L = v["chain_labels"]; sub = sub_heading(heading)
+    FLD = v.get("frame_labels") or {}
+    scope = FLD.get(POS_SCOPE_KEY) or ""   # RC-1 item 5: the CBY-Aden reporting-scope qualifier travels with every POS activity row
+    v = {**v, "frame_labels": {k: t for k, t in FLD.items() if k != POS_SCOPE_KEY}}   # printed with the rows, not again as a frame note
     steps = chain_steps(chain_src, include_activity)
     first_open = next((i for i, s in enumerate(steps) if not s["evidenced"]), None)
     items = []
@@ -685,14 +690,15 @@ def chain_figure(v: dict, chain_src: dict, cite_label: str, origin: str | None, 
                         + (f'\u00a0<a class="source-locator" href="{esc(e["source"])}" rel="noopener noreferrer" target="_blank" aria-label="{esc(v["labels"]["source"])} {esc(e["label_text"])}">↗</a>' if str(e.get("source", "")).startswith("http") else "")
                         + "</span></li>")
             else:
-                evs += f'<li><span class="clock"><span class="v">{bdi(when)}</span></span><span class="ev">{esc(e["label_text"])} · {val_unit(e["y"], e["unit"])}</span></li>'
+                evs += f'<li><span class="clock"><span class="v">{bdi(when)}</span></span><span class="ev">{esc(e["label_text"])} · {val_unit(e["y"], e["unit"])}{(" · " + esc(scope)) if scope else ""}</span></li>'
         items.append(f'<li class="{cls}"><div class="st-head"><span class="glyph" aria-hidden="true">{"■" if s["evidenced"] else "□"}</span><{sub}>{esc(L[s["step"]])}</{sub}><span class="st-state">{esc(state)}</span></div>'
                      + (f'<ul class="evs">{evs}</ul>' if evs else "") + "</li>")
     panel = f'<div class="panels"><div class="panel"><ol class="chain">{"".join(items)}</ol></div></div>'
     rows = []
     for s in steps:
         state = L["EVIDENCED"] if s["evidenced"] else L["OPEN"]
-        entries = sorted([(str(e.get("date")), f'{e.get("date")} {e["label_text"]}') for e in s["events"]] + [(str(a.get("x")), f'{a.get("x")} {a["label_text"]} {val_unit_plain(a["y"], a["unit"])}') for a in s["activity"]])
+        entries = sorted([(str(e.get("date")), f'{e.get("date")} {e["label_text"]}') for e in s["events"]]
+                         + [(str(a.get("x")), f'{a.get("x")} {a["label_text"]} {val_unit_plain(a["y"], a["unit"])}' + (f" · {scope}" if scope else "")) for a in s["activity"]])
         ev_text = sep(v).join(t for _, t in entries)
         rows.append([esc(L[s["step"]]), qual(esc(state), iso_run(ev_text))])
     tbl = table(caption_of(v), ["", esc(v["labels"]["what_it_shows"])], rows)
@@ -915,6 +921,7 @@ def dated_lanes(v: dict, cite_label: str, origin: str | None, heading: str = "h2
     The table: one group per lane, its dated rows."""
     L = v["labels"]; FLD = v.get("frame_labels") or {}; CL = v["chain_labels"]; sub = sub_heading(heading)
     FL = [FLD.get(k) or "" for k in LANE_KEYS]
+    scope = FLD.get(POS_SCOPE_KEY) or ""   # RC-1 item 5: printed after the POS object label on the lane and in its table rows
     if not all(FL):   # the three lane titles by their governed keys; positional only if a key is absent
         FL = list(FLD.values())[:3]
     v = {**v, "_frame_notes_drawn": True}   # the three governed frame labels are the lane titles
@@ -954,7 +961,7 @@ def dated_lanes(v: dict, cite_label: str, origin: str | None, heading: str = "h2
         labels = (f'<text class="val" x="{xf:.2f}%" y="10" text-anchor="start">{plain_num(first["y"])}</text>'
                   f'<text class="val" x="{xl:.2f}%" y="10" text-anchor="end">{plain_num(last["y"])}</text>')
     lane2 = strip(marks + labels)
-    lane2_txt = (f'<p class="ln"><b>{esc(first["label_text"])}</b> · {bdi(first["x"])} · {val_unit(first["y"], first["unit_text"])} — {bdi(last["x"])} · {val_unit(last["y"], last["unit_text"])} · {esc(state_label(v, "ADMINISTRATIVE"))}</p>')
+    lane2_txt = (f'<p class="ln"><b>{esc(first["label_text"])}</b>{(" · " + esc(scope)) if scope else ""} · {bdi(first["x"])} · {val_unit(first["y"], first["unit_text"])} — {bdi(last["x"])} · {val_unit(last["y"], last["unit_text"])} · {esc(state_label(v, "ADMINISTRATIVE"))}</p>')
     # lane 3 · institutions and reforms: dated events keyed 1..n
     ev_marks = "".join(svg_mark("circle", f"{X(str(e['date'])):.2f}%", 20, 4) for e in inst)
     clusters: list[list[int]] = []   # events closer than 4 % of the axis share one bracketed key ("3–6")
@@ -981,7 +988,7 @@ def dated_lanes(v: dict, cite_label: str, origin: str | None, heading: str = "h2
              f'<div class="lane outcome"><{sub}>{esc(CL["OUTCOME"])}</{sub}><span class="st-state">{esc(CL["OPEN"])}</span>{lane4}</div>'
              f'{axis_svg}</div></div>')
     groups = [(esc(FL[0]), [[period_txt, esc(f'{p0["series_label_text"]} · {val_unit_plain(p0["y"], p0["unit_text"])} · {p0["group_text"]} · {state_label(v, "MEASURED")}')]]),
-              (esc(FL[1]), [[bdi(r["x"]), esc(f'{r["label_text"]} · {val_unit_plain(r["y"], r["unit_text"])} · {state_label(v, "ADMINISTRATIVE")}')] for r in vals]),
+              (esc(FL[1]), [[bdi(r["x"]), esc(f'{r["label_text"]}{(" · " + scope) if scope else ""} · {val_unit_plain(r["y"], r["unit_text"])} · {state_label(v, "ADMINISTRATIVE")}')] for r in vals]),
               (esc(FL[2]), [[bdi(e["date"]), esc(e["label_text"])] for e in inst]),
               (None, [[esc(CL["OUTCOME"]), esc(CL["OPEN"])]])]
     tbl = grouped_table(caption_of(v), ["", esc(v["labels"]["what_it_shows"])], groups)
@@ -992,13 +999,15 @@ def dated_lanes(v: dict, cite_label: str, origin: str | None, heading: str = "h2
 def firm_constraints(v: dict, cite_label: str, origin: str | None, heading: str = "h2") -> str:
     """CORE · horizontal bars from zero, in the contract's descending order without rank numbers; the record's
     governed measurement limitation (firms could name more than one challenge; the base is not held) in the frame;
-    the table lists the eight governed rows the contract resolves (the contract names sixteen; the other eight are
-    requested Master-first — ESCALATIONS.md)."""
+    the table lists the eight governed rows the contract resolves (the contract names sixteen; the other eight stay
+    unbound until they are checked against the original — ESCALATIONS.md; RC-1 item 6 Path B), so the governed frame
+    note UI-VIS-NOTE-FIRM-CONSTRAINTS-PARTIAL says the list is partial."""
     vals = v["series"][0]["values"]
     vmax, step = axis_scale([r["y"] for r in vals])
     unit = vals[0]["unit"]
     v = {**v, "_frame_notes_drawn": True}
     note = f'<p class="cap note">{esc(v.get("record_limit") or "")}</p>' if v.get("record_limit") else ""
+    note += "".join(f'<p class="cap note">{esc(t)}</p>' for k, t in (v.get("frame_labels") or {}).items() if t)
     panel = (f'<div class="panels"><div class="panel bars"><p class="ph">{esc(unit)} · {esc(state_label(v, "MEASURED"))}</p>'
              f'<div class="p1 noranks">{bar_rows(vals, vmax)}{axis_row(vmax, step)}</div>{note}</div></div>')
     state = uniform(vals, lambda r: r["state"])
