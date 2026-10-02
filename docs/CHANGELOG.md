@@ -1,5 +1,13 @@
 # Repository Change Log
 
+## 2026-10-02 — Release candidate Part B, B0: the owner's Part B decisions recorded
+
+`audit/OWNER_DECISIONS_2026-10-02.md` gains the dated section "Addendum — 2 October 2026 (Part B)" (append only): A4 / C6
+revised (the 13 table-only records' method text is rendered), the human accessibility audit replaced by the extended
+automated audit (no conformance claimed), the Part B steward and editor designation, the static architecture, the Arabic
+default at the neutral root, the unchanged product name, and the owner rules on numbers, pages and closed decisions,
+verbatim.
+
 ## 2026-10-02 — Release candidate G5: records reconciliation
 
 `audit/RECORDS_RECONCILIATION_2026-10-02.md` (with its `audit/INDEX.md` row): one row per item of the brief's G5 list —
