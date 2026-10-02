@@ -569,8 +569,10 @@
       "rule_id": "presentation_contract",
       "sheet": "(none — presentation depth contract)",
       "stable_key": "route",
-      "transformation": "Hand-governed presentation-depth contract maintained in place (NOT generated from the Master). The generator validates every referenced section (route, section_order) against 03 and every referenced visual against 11, and fails otherwise.",
+      "transformation": "Hand-governed presentation-depth contract maintained in place (NOT generated from the Master). The generator validates every referenced section (route, section_order) against 03 every referenced visual against 11, and every question set (EAD-11) against the governed questions and the UI-QUESTIONS-* headings, and fails otherwise.",
       "dependencies": [
+        "content/questions.json",
+        "content/interface_copy.json",
         "content/page_sections.json",
         "visuals/visual_library.json"
       ],

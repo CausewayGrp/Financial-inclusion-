@@ -1,0 +1,114 @@
+{
+ "stage": "G3-EAD-11",
+ "staged_master_sha256": "3c6c66beddedb90db6a54b21c5689b0852ec8fd90538df75af628655f5247c39",
+ "installed": [
+  "site-src/content/presentation_priority.json",
+  "scripts/projection/projection_manifest.json"
+ ],
+ "steps": [
+  {
+   "step": "generate",
+   "exit": 0,
+   "tail": [
+    "  \"presentation_priority.json\",",
+    "  \"visuals/visual_design_contracts.json\"",
+    " ],",
+    " \"output_sha256\": 39",
+    "}",
+    "PROJECTIONS GENERATED"
+   ]
+  },
+  {
+   "step": "rebind",
+   "exit": 0,
+   "tail": [
+    " \"files\": [",
+    "  \"authority/AUTHORITY.json\",",
+    "  \"authority/YFI_CURRENT_PROJECT_CONTEXT.json\",",
+    "  \"handoff/IMPLEMENTATION_MANIFEST.json\"",
+    " ]",
+    "}"
+   ]
+  },
+  {
+   "step": "build",
+   "exit": 0,
+   "tail": [
+    "Built 288 HTML files from 143 controlled page specs."
+   ]
+  },
+  {
+   "step": "public_literal_audit",
+   "exit": 0,
+   "tail": [
+    "PUBLIC_LITERAL_CLOSURE records=12792 unresolved=0"
+   ]
+  },
+  {
+   "step": "architecture_diagrams",
+   "exit": 0,
+   "tail": [
+    "ARCHITECTURE DIAGRAMS WRITTEN: YFIE_PUBLIC_SITE_MAP.svg, YFIE_PAGE_FAMILY_STATE_MAP.svg, YFIE_FULL_STACK_SYSTEM_ARCHITECTURE.svg"
+   ]
+  },
+  {
+   "step": "handoff_inventory",
+   "exit": 0,
+   "tail": [
+    "HANDOFF INVENTORY WRITTEN: 143 routes"
+   ]
+  },
+  {
+   "step": "repository_manifest",
+   "exit": 0,
+   "tail": [
+    "REPOSITORY MANIFEST WRITTEN: 1819 files in 23 classes"
+   ]
+  },
+  {
+   "step": "validate",
+   "exit": 0,
+   "tail": [
+    "HTML=288 ERRORS=0 WARN=0",
+    "WEBSITE REPOSITORY VALIDATION PASS"
+   ]
+  },
+  {
+   "step": "generator_idempotence",
+   "exit": 0,
+   "tail": [
+    " \"master_sha256\": \"3c6c66beddedb90db6a54b21c5689b0852ec8fd90538df75af628655f5247c39\",",
+    " \"outputs\": 39,",
+    " \"differences\": [],",
+    " \"output_sha256\": 39",
+    "}",
+    "PROJECTION CHECK PASS"
+   ]
+  }
+ ],
+ "result": "COMMITTED",
+ "master_sha256": "3c6c66beddedb90db6a54b21c5689b0852ec8fd90538df75af628655f5247c39",
+ "page_specs_sha256": "d0e21e25b5bcfd0ebdac577b9a54aec9e5c07c5e07d0a791aab7e477c66a1485",
+ "byte_identity": {
+  "en/index.html": {
+   "before": "67fa2606caa8e05b443f108e0ae07fe0d69346c47da3f579fec2862494bf8061",
+   "after": "67fa2606caa8e05b443f108e0ae07fe0d69346c47da3f579fec2862494bf8061"
+  },
+  "ar/index.html": {
+   "before": "c7948f1084e67b29d95a255b3c163e53e74ea8e3c441c80b8ed34838f3eeeb8a",
+   "after": "c7948f1084e67b29d95a255b3c163e53e74ea8e3c441c80b8ed34838f3eeeb8a"
+  },
+  "en/explore/index.html": {
+   "before": "a02cd98678af68e41842f853eb99ac2bcb9dbe0b3d4de907a933402482a5e6b4",
+   "after": "a02cd98678af68e41842f853eb99ac2bcb9dbe0b3d4de907a933402482a5e6b4"
+  },
+  "ar/explore/index.html": {
+   "before": "4bee4d33bc8e27f2db4c7c71348c2215ea422975538b47d8dd8d0c0045bc577f",
+   "after": "4bee4d33bc8e27f2db4c7c71348c2215ea422975538b47d8dd8d0c0045bc577f"
+  },
+  "handoff/ROUTE_CONTENT_AND_STATE_INVENTORY.json": {
+   "before": "77b08d9ff0b330317567957a8caf95eae17fea9b29d1c3c9e318c41da9cad421",
+   "after": "77b08d9ff0b330317567957a8caf95eae17fea9b29d1c3c9e318c41da9cad421"
+  }
+ }
+}

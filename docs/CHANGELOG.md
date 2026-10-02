@@ -1,5 +1,16 @@
 # Repository Change Log
 
+## 2026-10-02 — Release candidate G3: EAD-11 — the question sets move into the presentation contract
+
+Steward patch by owner decision (`audit/OWNER_DECISIONS_2026-10-02.md`, EAD-11), installed through `run_stage.py`
+(`audit/release_candidate/g3_stage_presentation.py`; Master unchanged). The two entries recorded under EAD-11 in
+`design/ESCALATIONS.md` — Home's four starting questions and Explore's four groups — sit, values unchanged, under
+`question_sets` in `site-src/content/presentation_priority.json`. The generator rejects an unknown question or heading and a
+missing or repeated question (`derived.presentation_contract`; unit test `test_question_sets_guards`); the renderer
+(`scripts/yfie/content.py`) and the handoff inventory read the sets there, and `scripts/yfie/question_sets.py` is deleted.
+Home and Explore are byte-identical before and after in both languages, as is the handoff inventory (hashes in
+`audit/release_candidate/runs/G3-EAD-11_RUN_REPORT.json`). EAD-11 closed in the register and in `design/ESCALATIONS.md`.
+
 ## 2026-10-02 — Release candidate RC-3: governed interface strings (items 11, 12, 18, 19, 20)
 
 Transaction `audit/release_candidate/rc_3_interface_strings.py` through `run_stage.py` (Master `ecc228beec41` → `3c6c66beddedb`;

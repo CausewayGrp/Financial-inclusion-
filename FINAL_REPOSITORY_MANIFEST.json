@@ -28,7 +28,7 @@
   "BUILD_AND_GATES": 22,
   "CONTROLLED_CONTRACT": 2,
   "CURRENT_DOCUMENT": 13,
-  "CURRENT_PROGRAMME_RECORD": 67,
+  "CURRENT_PROGRAMME_RECORD": 69,
   "DESIGN_PACKAGE": 446,
   "GENERATED_DIAGRAMS": 9,
   "GENERATED_LITERAL_CLOSURE": 1,
@@ -36,7 +36,7 @@
   "GENERATED_PUBLIC_BUILD": 589,
   "GENERATED_SOCIAL_IMAGES": 287,
   "LOGO_AUTHORITY": 1,
-  "PRODUCTION_RENDERER": 10,
+  "PRODUCTION_RENDERER": 9,
   "PROJECTION_CONTRACT": 11,
   "PROJECTION_GENERATOR": 13,
   "RECIPIENT_HANDOFF": 11,
@@ -907,6 +907,10 @@
    "class": "CURRENT_PROGRAMME_RECORD"
   },
   {
+   "path": "audit/release_candidate/g3_stage_presentation.py",
+   "class": "CURRENT_PROGRAMME_RECORD"
+  },
+  {
    "path": "audit/release_candidate/rc_1_stage_inputs.py",
    "class": "CURRENT_PROGRAMME_RECORD"
   },
@@ -928,6 +932,10 @@
   },
   {
    "path": "audit/release_candidate/rc_lib.py",
+   "class": "CURRENT_PROGRAMME_RECORD"
+  },
+  {
+   "path": "audit/release_candidate/runs/G3-EAD-11_RUN_REPORT.json",
    "class": "CURRENT_PROGRAMME_RECORD"
   },
   {
@@ -5872,10 +5880,6 @@
   },
   {
    "path": "scripts/yfie/neutral.py",
-   "class": "PRODUCTION_RENDERER"
-  },
-  {
-   "path": "scripts/yfie/question_sets.py",
    "class": "PRODUCTION_RENDERER"
   },
   {

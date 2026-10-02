@@ -369,6 +369,12 @@ Raised at EAD-01 by Claude Code (29 September 2026), found by the cutover itself
   once it holds nothing. Code cannot make this change: the two controlled contracts are the steward's, in a commit
   naming the finding it closes, with every gate run. Open; EAD-11; blocks no gate today.
 
+  2 October 2026 — landed in the release-candidate pull request (G3), the session acting as steward for this patch only by
+  owner decision (`audit/OWNER_DECISIONS_2026-10-02.md`, EAD-11): the two entries, values unchanged, sit under
+  `question_sets` in `presentation_priority.json` (not in `routes`, which holds the eight Domain Answer routes the
+  validator's S03 and the generator's tier check read); the renderer and the inventory read them; `question_sets.py` is
+  deleted; Home and Explore are byte-identical before and after in both languages. Closed.
+
 - `NEEDS_CONTROLLED_CONTENT — the search results, every route with a search — a result-type facet needs a name and an
   "all types" option — EAD-06 asks for a result-type facet, and the option labels are governed
   (`UI-JS-TYPE-PAGE` … `UI-JS-TYPE-SOURCE-LOCATOR`). What is missing is the control itself: an accessible name for

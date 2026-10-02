@@ -1075,6 +1075,21 @@ def presentation_contract(ctx, e):
                     raise StructureError(f"presentation contract {r['route']} {tier}: section {item['section_order']} does not exist in 03")
                 if item.get("kind") == "visual" and item["object_id"] not in vis:
                     raise StructureError(f"presentation contract {r['route']}: unknown visual {item['object_id']}")
+    # EAD-11: Home's starting questions and Explore's groups — every question ID and heading label must be governed
+    qids = [str(q.get("question_id")) for q in ctx.out["content/questions.json"]]
+    ui = {r.get("ui_id") for r in ctx.out["content/interface_copy.json"]}
+    sets = {str(e.get("route")): e for e in p.get("question_sets") or []}
+    if set(sets) != {"/", "/explore/"}:
+        raise StructureError(f"presentation contract question_sets: routes {sorted(sets)}, expected / and /explore/")
+    home = sets["/"].get("starting_question_ids") or []
+    if not home or len(set(home)) != len(home) or any(q not in qids for q in home):
+        raise StructureError(f"presentation contract question_sets /: starting questions {home} are not distinct governed questions")
+    grouped = [q for g in sets["/explore/"].get("question_groups") or [] for q in g.get("question_ids") or []]
+    for g in sets["/explore/"].get("question_groups") or []:
+        if g.get("heading_ui_id") not in ui:
+            raise StructureError(f"presentation contract question_sets /explore/: unknown heading {g.get('heading_ui_id')}")
+    if sorted(grouped) != sorted(qids):
+        raise StructureError("presentation contract question_sets /explore/: the groups must hold every governed question exactly once")
     return p
 
 

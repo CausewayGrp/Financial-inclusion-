@@ -62,6 +62,12 @@ affects, part of the scope Design and Code already receive, or needed only for p
 - 2026-10-02 — owner decision, see `audit/OWNER_DECISIONS_2026-10-02.md` — **D7** (not a register item; recorded here because §1 is the Design → Code section): the owner records final D7 visual
   acceptance of the Design package on 2 October 2026 (row D7). Also recorded there: A3 / C3 (the double boundary) and A5 / C4 (the
   retired frame on `/reforms/`), both implemented in the release-candidate pull request.
+- 2026-10-02 — **EAD-11 landed** (release candidate G3): the two entries recorded under EAD-11 in `design/ESCALATIONS.md`,
+  values unchanged, are in `site-src/content/presentation_priority.json` under `question_sets` (installed through the runner);
+  the renderer and the handoff inventory read them there, the generator rejects an unknown question or heading, a missing
+  question or a repeated one (unit test `test_question_sets_guards`), and `scripts/yfie/question_sets.py` is deleted. The
+  built Home and Explore pages are byte-identical before and after in both languages, as is the handoff inventory
+  (`audit/release_candidate/runs/G3-EAD-11_RUN_REPORT.json`). Disposition DONE; B16 records it.
 - 2026-10-02 — **EAD-12 (new item; A4 / C6 of `audit/PR8_INDEPENDENT_ACCEPTANCE.md`; owner decision, see `audit/OWNER_DECISIONS_2026-10-02.md`, row A4 / C6)**:
   the 13 Evidence Records with `visual_contract_state = NO_GOVERNED_CONTRACT__TABLE_ONLY` (VIS-PROVIDER-TIME, VIS-MFI-SPINE,
   VIS-FINDEX-SAMPLE-SUPPORT, VIS-FINDEX-ACCESS-USE, VIS-FINDEX-BARRIERS, VIS-FINDEX-RESILIENCE, VIS-FINDEX-FLOW-CHANNELS,

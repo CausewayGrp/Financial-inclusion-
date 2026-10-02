@@ -1101,6 +1101,56 @@
       "tranche_c_note": "TOOL-01 (Tranche C): geography and unit are not governed per Evidence Record, so they are not comparison dimensions; a blank field is never shown as an evidence state."
     }
   },
+  "question_sets_rule": "EAD-11 (steward, 2 October 2026): which governed questions Home starts from and how Explore groups all of them. Selection and grouping only: every question, cluster heading (UI-QUESTIONS-*) and destination is governed in the Master; the generator fails on an unknown question ID or heading label, and the renderer reads these sets from here.",
+  "question_sets": [
+    {
+      "route": "/",
+      "page_family": "Orientation",
+      "starting_question_ids": [
+        "QE-002",
+        "QE-003",
+        "QE-005",
+        "QE-011"
+      ]
+    },
+    {
+      "route": "/explore/",
+      "page_family": "Question Entry",
+      "question_groups": [
+        {
+          "heading_ui_id": "UI-QUESTIONS-UNDERSTAND-THE-WIDER-PICTURE",
+          "question_ids": [
+            "QE-001",
+            "QE-003"
+          ]
+        },
+        {
+          "heading_ui_id": "UI-QUESTIONS-PEOPLE-USE-AND-FLOWS",
+          "question_ids": [
+            "QE-002",
+            "QE-004",
+            "QE-007",
+            "QE-009"
+          ]
+        },
+        {
+          "heading_ui_id": "UI-QUESTIONS-FIRMS-INSTITUTIONS-AND-PROVIDERS",
+          "question_ids": [
+            "QE-005",
+            "QE-006",
+            "QE-008"
+          ]
+        },
+        {
+          "heading_ui_id": "UI-QUESTIONS-VERIFY-AND-DECIDE-WHAT-TO",
+          "question_ids": [
+            "QE-010",
+            "QE-011"
+          ]
+        }
+      ]
+    }
+  ],
   "p1_3_band_rule": "Pre-Tranche-C P1.3: supporting (the always-visible boundary band), primary and progressive section tiers are disjoint and together cover every non-lead section; a band section renders once, in full, under its own governed heading.",
   "tranche_c_notes": [
     "JRN-22: /payments/ historical e-money section and /reforms/ rule-versus-implementation section move to the primary tier; they hold the only answer to part of the governed question.",
