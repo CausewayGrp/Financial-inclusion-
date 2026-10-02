@@ -1,7 +1,5 @@
 # Yemen Financial Inclusion Evidence · أدلة الشمول المالي في اليمن
 
-<img src="site-src/assets/CauseWay_Master_Logo.png" alt="CauseWay" width="72">
-
 [![Verify](https://github.com/CausewayGrp/Financial-inclusion-/actions/workflows/verify.yml/badge.svg?branch=main)](https://github.com/CausewayGrp/Financial-inclusion-/actions/workflows/verify.yml)
 
 A public evidence resource, built and maintained by CauseWay, that takes a reader from a question to the strongest
