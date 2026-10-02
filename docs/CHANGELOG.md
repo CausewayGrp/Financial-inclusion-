@@ -1,5 +1,12 @@
 # Repository Change Log
 
+## 2026-10-02 — Release candidate G1: the owner's decisions recorded under the register rows they affect
+
+`FINAL_OPEN_ITEMS_REGISTER.md` (append only, per its §9 rule): one dated "owner decision, see `audit/OWNER_DECISIONS_2026-10-02.md`"
+line under OWN-01, OWN-02, OWN-03, OWN-04 and OWN-05 (§5), under EAD-11 and for D7 (§1; EAD-03 already had its line from the
+before-merge commit), and the new item **EAD-12** for A4 / C6 — the 13 `NO_GOVERNED_CONTRACT__TABLE_ONLY` records; post-launch;
+no change in this edition. No Master, projection, `dist/` or controlled-contract byte changes.
+
 ## 2026-10-02 — Release candidate: start (G0)
 
 Branch `code/release-candidate-fixes` from `main` at `38a9a97` (pull request #8 merged; its before-merge conditions met). Baseline

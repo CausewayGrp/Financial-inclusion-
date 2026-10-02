@@ -57,6 +57,18 @@ affects, part of the scope Design and Code already receive, or needed only for p
   independent acceptance of pull request #8); decision in `audit/OWNER_DECISIONS_2026-10-02.md`, row A3 / C3; implemented in the
   release-candidate pull request.
 
+- 2026-10-02 — owner decision, see `audit/OWNER_DECISIONS_2026-10-02.md` — **EAD-11**: for the release-candidate pull request only, the implementing session is programme steward for
+  `site-src/content/presentation_priority.json`, limited to the EAD-11 patch recorded in `design/ESCALATIONS.md` (row Steward); applied in that pull request.
+- 2026-10-02 — owner decision, see `audit/OWNER_DECISIONS_2026-10-02.md` — **D7** (not a register item; recorded here because §1 is the Design → Code section): the owner records final D7 visual
+  acceptance of the Design package on 2 October 2026 (row D7). Also recorded there: A3 / C3 (the double boundary) and A5 / C4 (the
+  retired frame on `/reforms/`), both implemented in the release-candidate pull request.
+- 2026-10-02 — **EAD-12 (new item; A4 / C6 of `audit/PR8_INDEPENDENT_ACCEPTANCE.md`; owner decision, see `audit/OWNER_DECISIONS_2026-10-02.md`, row A4 / C6)**:
+  the 13 Evidence Records with `visual_contract_state = NO_GOVERNED_CONTRACT__TABLE_ONLY` (VIS-PROVIDER-TIME, VIS-MFI-SPINE,
+  VIS-FINDEX-SAMPLE-SUPPORT, VIS-FINDEX-ACCESS-USE, VIS-FINDEX-BARRIERS, VIS-FINDEX-RESILIENCE, VIS-FINDEX-FLOW-CHANNELS,
+  VIS-FINDEX-OBSERVED-WAVES, VIS-DEMAND-VINTAGE-LADDER, VIS-BORROWING-SOURCES-2014, VIS-DOMESTIC-REMITTANCE-PATH-2014, VIS-MFI-2014-PANEL,
+  VIS-MFI-RUPTURE-LENS) print neither their Tranche C method text nor the table their state promises. Owner: the steward, Master-first
+  (render the method text, supply rows, or retire the state). Disposition: **post-launch; no change in this edition.**
+
 ## 2. RELEASE_ONLY
 
 | ID | Item | Where it shows today | What closes it | Owner | Origin |
@@ -110,6 +122,16 @@ must never fill them with an estimate, a proxy or a colour.
 | OWN-04 | A reuse licence for CauseWay content (and, separately, for the code) | No licence file; downloads and exports (a record's fields, a chart's data table or framed image, a citation file, a Reading as a hosted PDF) are designed in disabled and enabled states and ship disabled | They ship only after this decision; the browser's own print and save-as-PDF of a page are not downloads and are always available |
 | OWN-05 | Stewardship decisions: maintenance resourcing, an analytics policy (none exists; no analytics ship), Digital Public Good gaps | `handoff/SUPPORT_AND_PARTNERSHIP_READINESS.md` (non-public) | Nothing public depends on it |
 | OWN-06 | A reversed (light-on-dark) logo, only if the design needs one | Not requested yet | Design places the canonical logo on a light field; no derived variant is made (EAD-04) |
+
+- 2026-10-02 — owner decision, see `audit/OWNER_DECISIONS_2026-10-02.md` — **OWN-01**: the funding and relationships paragraph is approved (EN and AR as given there), applied Master-first in the
+  release-candidate pull request (transaction RC-2); publisher name "CauseWay" in Latin script in both languages; CauseWay holds no active
+  contract or partnership with any source institution related to Yemen financial inclusion. Footer unchanged.
+- 2026-10-02 — owner decision, see `audit/OWNER_DECISIONS_2026-10-02.md` — **OWN-02**: confirmed; `office@causewaygrp.com` is monitored.
+- 2026-10-02 — owner decision, see `audit/OWNER_DECISIONS_2026-10-02.md` — **OWN-03**: the public origin is decided when hosting is ready; `public_origin` stays null until then.
+- 2026-10-02 — owner decision, see `audit/OWNER_DECISIONS_2026-10-02.md` — **OWN-04**: licence deferred; launch is link-and-short-citation only; downloads and exports stay disabled; the "reuse
+  terms not assessed" wording stays. Not a gate for a link-and-citation launch.
+- 2026-10-02 — owner decision, see `audit/OWNER_DECISIONS_2026-10-02.md` — **OWN-05**: CauseWay maintains the resource; whole-system review at each new edition; no fixed update cadence is
+  promised; no analytics ship.
 
 ## 6. REJECTED / NO ACTION
 
