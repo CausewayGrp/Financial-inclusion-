@@ -1,7 +1,7 @@
 {
   "schema_version": "1.0",
   "contract_id": "VISUAL-DESIGN-CONTRACT",
-  "authority_master_sha256": "0fb6c16de6dbb8ea85698d77fbf2a6f76fe392e7489928c18b33fcc0dc7515d4",
+  "authority_master_sha256": "2b609e1928f8d7b5ac751ce00fd00f5f85dc4aa28ea2b5367449ea98f1113779",
   "rule": "Design-layer controlled input. It assigns every governed visual contract (Master 11) a design tier and, for SIGNATURE and CORE_ANALYTICAL visuals, declares which governed rows a chart binds to and how they are drawn. It never carries a fact, number, label or sentence: values come from Master data rows, text from Master contract/evidence fields, and legend labels from the governed interface copy (UI-VIS-*). The generator resolves every binding and fails on any unresolved ID, any value that disagrees with its guard, or any visual left untiered.",
   "tiers": {
     "SIGNATURE": "Distinctive to this product, decision-useful, drawable from governed rows and safe when detached. Designed first; gets a full data contract.",
@@ -323,7 +323,7 @@
         "question_ar": "كيف تُقرأ السنة المرجعية نفسها عبر نسخ نشر مختلفة؟",
         "prohibited_inference_ar": "إعادة عرض قيمة السنة نفسها ليست تراجعًا بين عامين. ولا تتكافأ المستويات الخام في سلسلتي البنك المركزي اليمني – عدن وصندوق النقد الدولي، ولا يمكن قراءة تطابق مساريهما تقريبًا بعد تحويلهما إلى رقم قياسي بوصفه تأكيدين مستقلين للاتجاه.",
         "alt_text_ar": "نشر التقرير السنوي للبنك المركزي اليمني – عدن لعام 2024 قيمةً للتحويلات الواردة في ميزان المدفوعات لعام 2024 قدرها 6,245 مليون دولار أمريكي، ثم أعاد تقرير 2025 عرض عام 2024 نفسه بقيمة 3,422.16 مليون دولار؛ وهذه إعادة عرض لقيمة السنة نفسها، لا تراجع بين عامين. وعند تحويل مسار تقرير البنك المركزي في عدن لعام 2025 ومسار تقرير خبراء صندوق النقد الدولي لمشاورات المادة الرابعة 2025 إلى رقم قياسي (2021 = 100)، يبلغ كلٌّ منهما نحو 118 في 2024. والمساران شبه متطابقين: لا يتجاوز الفرق في معدل النمو السنوي خلال 2022–2024 نحو 0.0032 نقطة مئوية، ويعادل مستوى البنك المركزي في عدن نحو 1.838 مرة مستوى صندوق النقد طوال 2021–2024. لذلك لا يمكن قراءتهما تأكيدين مستقلين للاتجاه، ولا تتكافأ مستوياتهما الخام. لا يثبت: إعادة عرض قيمة السنة نفسها ليست تراجعًا بين عامين. ولا تتكافأ المستويات الخام في سلسلتي البنك المركزي اليمني – عدن وصندوق النقد الدولي، ولا يمكن قراءة تطابق مساريهما تقريبًا بعد تحويلهما إلى رقم قياسي بوصفه تأكيدين مستقلين للاتجاه.",
-        "period_ar": "السنة المرجعية 2024 في نسختي نشر؛ ومساران بالرقم القياسي 2021–2024",
+        "period_ar": "السنة المرجعية 2024 في نسختي نشر؛ ومساران محوّلان إلى رقم قياسي، 2021–2024",
         "universe_ar": "التحويلات وفق تعريف كل مصدر: التقريران السنويان للبنك المركزي اليمني – عدن لعامي 2024 و2025؛ وتقرير خبراء صندوق النقد الدولي لمشاورات المادة الرابعة 2025، ضمن النطاق التحليلي للصندوق لمناطق الحكومة المعترف بها دوليًا",
         "canonical_route": "/readings/same-year-different-number/",
         "public_routes": [
@@ -696,7 +696,7 @@
             },
             "unit_label": {
               "en": "Index, 2021 = 100",
-              "ar": "مؤشر، 2021 = 100",
+              "ar": "رقم قياسي، 2021 = 100",
               "ui_id": "UI-VIS-UNIT-INDEX-2021"
             }
           },
@@ -720,7 +720,7 @@
             },
             "unit_label": {
               "en": "Index, 2021 = 100",
-              "ar": "مؤشر، 2021 = 100",
+              "ar": "رقم قياسي، 2021 = 100",
               "ui_id": "UI-VIS-UNIT-INDEX-2021"
             }
           },
@@ -744,7 +744,7 @@
             },
             "unit_label": {
               "en": "Index, 2021 = 100",
-              "ar": "مؤشر، 2021 = 100",
+              "ar": "رقم قياسي، 2021 = 100",
               "ui_id": "UI-VIS-UNIT-INDEX-2021"
             }
           },
@@ -768,7 +768,7 @@
             },
             "unit_label": {
               "en": "Index, 2021 = 100",
-              "ar": "مؤشر، 2021 = 100",
+              "ar": "رقم قياسي، 2021 = 100",
               "ui_id": "UI-VIS-UNIT-INDEX-2021"
             }
           },
@@ -792,7 +792,7 @@
             },
             "unit_label": {
               "en": "Index, 2021 = 100",
-              "ar": "مؤشر، 2021 = 100",
+              "ar": "رقم قياسي، 2021 = 100",
               "ui_id": "UI-VIS-UNIT-INDEX-2021"
             }
           },
@@ -816,7 +816,7 @@
             },
             "unit_label": {
               "en": "Index, 2021 = 100",
-              "ar": "مؤشر، 2021 = 100",
+              "ar": "رقم قياسي، 2021 = 100",
               "ui_id": "UI-VIS-UNIT-INDEX-2021"
             }
           },
@@ -840,7 +840,7 @@
             },
             "unit_label": {
               "en": "Index, 2021 = 100",
-              "ar": "مؤشر، 2021 = 100",
+              "ar": "رقم قياسي، 2021 = 100",
               "ui_id": "UI-VIS-UNIT-INDEX-2021"
             }
           },
@@ -864,7 +864,7 @@
             },
             "unit_label": {
               "en": "Index, 2021 = 100",
-              "ar": "مؤشر، 2021 = 100",
+              "ar": "رقم قياسي، 2021 = 100",
               "ui_id": "UI-VIS-UNIT-INDEX-2021"
             }
           },
@@ -888,7 +888,7 @@
         "blockers": []
       },
       "detached_caption_en": "Same year, two published values · Reference year 2024 in two publication vintages; indexed paths 2021–2024 · Remittances as defined by each source: annual reports of the Central Bank of Yemen – Aden (CBY-Aden) for 2024 and 2025; IMF 2025 Article IV staff report, on the IMF's analytical scope for areas under the internationally recognized government · Source: IMF / Yemeni authorities; Central Bank of Yemen — Aden; International Monetary Fund · Does not establish: A same-year restatement is not a fall between years. The raw levels of the Central Bank of Yemen – Aden (CBY-Aden) and IMF series are not equivalent, and their near-identical indexed paths cannot be read as two independent confirmations of the trend. · Full record: /en/readings/same-year-different-number/",
-      "detached_caption_ar": "السنة نفسها وقيمتان منشورتان · السنة المرجعية 2024 في نسختي نشر؛ ومساران بالرقم القياسي 2021–2024 · التحويلات وفق تعريف كل مصدر: التقريران السنويان للبنك المركزي اليمني – عدن لعامي 2024 و2025؛ وتقرير خبراء صندوق النقد الدولي لمشاورات المادة الرابعة 2025، ضمن النطاق التحليلي للصندوق لمناطق الحكومة المعترف بها دوليًا · المصدر: IMF / Yemeni authorities; Central Bank of Yemen — Aden; International Monetary Fund · لا يثبت: إعادة عرض قيمة السنة نفسها ليست تراجعًا بين عامين. ولا تتكافأ المستويات الخام في سلسلتي البنك المركزي اليمني – عدن وصندوق النقد الدولي، ولا يمكن قراءة تطابق مساريهما تقريبًا بعد تحويلهما إلى رقم قياسي بوصفه تأكيدين مستقلين للاتجاه. · السجل الكامل: /ar/readings/same-year-different-number/"
+      "detached_caption_ar": "السنة نفسها وقيمتان منشورتان · السنة المرجعية 2024 في نسختي نشر؛ ومساران محوّلان إلى رقم قياسي، 2021–2024 · التحويلات وفق تعريف كل مصدر: التقريران السنويان للبنك المركزي اليمني – عدن لعامي 2024 و2025؛ وتقرير خبراء صندوق النقد الدولي لمشاورات المادة الرابعة 2025، ضمن النطاق التحليلي للصندوق لمناطق الحكومة المعترف بها دوليًا · المصدر: IMF / Yemeni authorities; Central Bank of Yemen — Aden; International Monetary Fund · لا يثبت: إعادة عرض قيمة السنة نفسها ليست تراجعًا بين عامين. ولا تتكافأ المستويات الخام في سلسلتي البنك المركزي اليمني – عدن وصندوق النقد الدولي، ولا يمكن قراءة تطابق مساريهما تقريبًا بعد تحويلهما إلى رقم قياسي بوصفه تأكيدين مستقلين للاتجاه. · السجل الكامل: /ar/readings/same-year-different-number/"
     },
     {
       "visual_id": "RV-CWR-009",
@@ -1199,6 +1199,7 @@
                 "id": "PUC-BANK-2026-01",
                 "class": "BANKS_ALL_TYPES",
                 "date": "2026-09-07",
+                "date_ar": null,
                 "source": "SRC-CBY-BANKLIST-AR-2026-001",
                 "count": 26,
                 "count_state": "PRIMARY_CURRENT_LIST_VERIFIED",
@@ -1235,6 +1236,7 @@
                 "id": "PUC-EXCH-2026-01",
                 "class": "EXCHANGE_COMPANIES_ESTABLISHMENTS_AND_REMITTANCE_AGENTS",
                 "date": "Official 2026 annual roster; later 2026 status events separate",
+                "date_ar": null,
                 "source": "SRC-CBY-EXCH-LIST-2026-001",
                 "count": 429,
                 "count_state": "SOURCE_LISTED_ROWS__98_COMPANIES__225_ESTABLISHMENTS__106_REMITTANCE_AGENTS",
@@ -1271,6 +1273,7 @@
                 "id": "PUC-WALLET-2025-01",
                 "class": "E_WALLETS_OR_E_MONEY_SERVICES_AS_CBY_REPORTED",
                 "date": "2024 Q3 / 2025 H1 / 2025-09-10 / 2026 event states",
+                "date_ar": null,
                 "source": "MULTI_SOURCE",
                 "count": null,
                 "count_state": "MULTIPLE_PRIMARY_DATED_COUNTS_WITH_DIFFERENT_WORDING",
@@ -1293,8 +1296,8 @@
                   "ui_id": "UI-VIS-CAT-PRV-EVENTS-WALLETS"
                 },
                 "limit_label": {
-                  "en": "Official sources report 7 e-wallets (2024 Q3), 9 e-wallets (2025 H1), 8 licensed e-wallets (2025-09-10) and more than 9 event participants (2026-01-22). The counts stay separate; no named current list of licensed wallets and payment service providers has yet been established.",
-                  "ar": "تورد المصادر الرسمية 7 محافظ إلكترونية (الربع الثالث 2024)، و9 محافظ (النصف الأول 2025)، و8 محافظ مرخصة (2025-09-10)، وأكثر من 9 مشاركين في فعالية (2026-01-22). وتبقى هذه الأعداد منفصلة، ولم تُحسم بعد قائمة حالية بأسماء المحافظ ومقدمي خدمات الدفع المرخصين.",
+                  "en": "Official sources report 7 e-wallets (2024 Q3), 9 e-wallets (2025 H1), 8 licensed e-wallets (10 September 2025) and more than 9 event participants (22 January 2026). The counts stay separate; no named current list of licensed wallets and payment service providers has yet been established.",
+                  "ar": "تورد المصادر الرسمية 7 محافظ إلكترونية (الربع الثالث 2024)، و9 محافظ (النصف الأول 2025)، و8 محافظ مرخصة (10 سبتمبر 2025)، وأكثر من 9 مشاركين في فعالية (22 يناير 2026). وتبقى هذه الأعداد منفصلة، ولم تُحسم بعد قائمة حالية بأسماء المحافظ ومقدمي خدمات الدفع المرخصين.",
                   "ui_id": "UI-VIS-CAT-PRV-LIMIT-EWALLETS"
                 },
                 "named_label": {
@@ -1307,6 +1310,7 @@
                 "id": "PUC-MFI-2026-01",
                 "class": "NON_BANK_MICROFINANCE_INSTITUTIONS_AND_PROGRAMMES",
                 "date": "observed 2026-09-07",
+                "date_ar": "رُصد في 7 سبتمبر 2026",
                 "source": "SRC-YMN-MEMBERS-2026-001",
                 "count": null,
                 "count_state": "MEMBERSHIP_PAGES_ONLY",
@@ -1972,6 +1976,7 @@
               {
                 "id": "WCR-001",
                 "date": "2024 Q3",
+                "date_ar": "الربع الثالث 2024",
                 "count": 7,
                 "unit": "e-wallets",
                 "state": "PRIMARY_ADMINISTRATIVE_COUNT",
@@ -1990,6 +1995,7 @@
               {
                 "id": "WCR-002",
                 "date": "2025 H1",
+                "date_ar": "النصف الأول 2025",
                 "count": 9,
                 "unit": "e-wallets",
                 "state": "PRIMARY_ADMINISTRATIVE_COUNT",
@@ -2008,6 +2014,7 @@
               {
                 "id": "WCR-003",
                 "date": "2025-09-10",
+                "date_ar": null,
                 "count": 8,
                 "unit": "licensed e-wallets",
                 "state": "PRIMARY_OFFICIAL_DATED_LICENSING_STATEMENT",
@@ -2026,6 +2033,7 @@
               {
                 "id": "WCR-004",
                 "date": "2026-01-22 event",
+                "date_ar": "فعالية 22 يناير 2026",
                 "count": ">9",
                 "unit": "event participants",
                 "state": "PRIMARY_OFFICIAL_EVENT_PARTICIPATION",
@@ -2062,7 +2070,7 @@
         "title_en": "Account ownership and measured gaps: Global Findex 2021 wave (Yemen fieldwork 2022–23)",
         "question_en": "What does the latest representative evidence say about account ownership and measured gaps?",
         "prohibited_inference_en": "These are values from one survey wave, not an annual series and not a 2026 rate. They cannot be mapped to governorates, they are not comparable with account counts reported by the Central Bank of Yemen – Aden (CBY-Aden), and the differences between groups do not establish their causes.",
-        "alt_text_en": "In the 2021 Global Findex wave for Yemen (fieldwork 7 November 2022 – 9 January 2023; World Bank data year 2022), 11.9% of adults aged 15 and over in the areas the survey covered had an account at a financial institution or with a mobile-money provider. Within the same wave: 5.44% of women and 18.35% of men had an account, a difference of 12.91 percentage points; 6.5% of adults in the poorest 40% and 15.5% in the richest 60% by household income, a difference of about 9.0 percentage points; 6.98% of adults with primary education or less and 19.53% of those with secondary education or more, a difference of 12.55 percentage points; and 5.01% of adults aged 15–24 and 16.11% of those aged 25 and over, a difference of 11.10 percentage points. The survey frame excludes areas the source says represent about 23% of the population. These figures are not a 2026 rate and cannot be mapped to governorates. Does not establish: These are values from one survey wave, not an annual series and not a 2026 rate. They cannot be mapped to governorates, they are not comparable with account counts reported by the Central Bank of Yemen – Aden (CBY-Aden), and the differences between groups do not establish their causes.",
+        "alt_text_en": "In the 2021 Global Findex wave for Yemen (fieldwork 7 November 2022 to 9 January 2023; World Bank data year 2022), 11.9% of adults aged 15 and over in the areas the survey covered had an account at a financial institution or with a mobile-money provider. Within the same wave: 5.44% of women and 18.35% of men had an account, a difference of 12.91 percentage points; 6.5% of adults in the poorest 40% and 15.5% in the richest 60% by household income, a difference of about 9.0 percentage points; 6.98% of adults with primary education or less and 19.53% of those with secondary education or more, a difference of 12.55 percentage points; and 5.01% of adults aged 15–24 and 16.11% of those aged 25 and over, a difference of 11.10 percentage points. The survey frame excludes areas the source says represent about 23% of the population. These figures are not a 2026 rate and cannot be mapped to governorates. Does not establish: These are values from one survey wave, not an annual series and not a 2026 rate. They cannot be mapped to governorates, they are not comparable with account counts reported by the Central Bank of Yemen – Aden (CBY-Aden), and the differences between groups do not establish their causes.",
         "period_en": "World Bank reporting year 2022; Global Findex 2021 study; Yemen fieldwork 2022-11-07 to 2023-01-09",
         "universe_en": "Adults aged 15 and over in the areas the survey covered (the survey frame excludes areas with about 23% of the population); subgroups as defined within the same wave.",
         "title_ar": "امتلاك الحساب والفجوات المقاسة: موجة Global Findex 2021 (العمل الميداني في اليمن 2022–2023)",
@@ -2368,13 +2376,13 @@
         "title_en": "Remittances — IMF-reported history, estimate and projections",
         "question_en": "What does the IMF report for past remittance inflows, and what is only estimated or projected?",
         "prohibited_inference_en": "Estimates and projections are not observations, and a forecast revision is not an economic change. The two IMF documents do not form one continuous series. The series is not a measure of informal hawala volume, and its level, which covers areas under the internationally recognized government, is not a figure for the whole of Yemen.",
-        "alt_text_en": "For external-sector remittances, the IMF's 2025 Article IV staff report gives 2018–2024 as reported history based on staff calculations, including US$1,861.7 million in 2024. A later supplement to the same consultation gives US$1,977 million as the 2025 estimate and projections rising from US$2,159 million in 2026 to US$3,110 million in 2030. The two documents were published at different times, so the two parts are not joined into one continuous series. The series covers the IMF's analytical scope for areas under the internationally recognized government, not the whole of Yemen. Estimates and projections are not observations, and the series is not a measure of informal hawala volume. Does not establish: Estimates and projections are not observations, and a forecast revision is not an economic change. The two IMF documents do not form one continuous series. The series is not a measure of informal hawala volume, and its level, which covers areas under the internationally recognized government, is not a figure for the whole of Yemen.",
+        "alt_text_en": "For external-sector remittances, the IMF's 2025 Article IV staff report gives 2018–2024 as reported history based on staff calculations, including US$1,861.7 million in 2024. A later supplement to the same consultation gives US$1,977 million as the 2025 estimate and projections rising from US$2,159 million in 2026 to US$3,110 million in 2030. The two documents were published at different times, so the two parts are not joined into one continuous series. The series covers the IMF's analytical scope for areas under the internationally recognized government, not the whole of Yemen. Does not establish: Estimates and projections are not observations, and a forecast revision is not an economic change. The two IMF documents do not form one continuous series. The series is not a measure of informal hawala volume, and its level, which covers areas under the internationally recognized government, is not a figure for the whole of Yemen.",
         "period_en": "2018–2030",
         "universe_en": "IMF external-sector remittance series on the IMF’s analytical scope for areas under the internationally recognized government; each year labelled as reported history, estimate or projection, with its source document",
         "title_ar": "التحويلات: القيم التاريخية الواردة في تقارير صندوق النقد الدولي والتقدير والتوقعات",
         "question_ar": "ما الذي يورده صندوق النقد الدولي عن تدفقات التحويلات السابقة، وما الذي يظل تقديرًا أو توقعًا؟",
         "prohibited_inference_ar": "التقديرات والتوقعات ليست مشاهدات فعلية، ومراجعة التوقع ليست تغيرًا اقتصاديًا. ولا تشكّل وثيقتا الصندوق سلسلة واحدة متصلة. ولا تقيس السلسلة حجم التحويلات عبر نظام الحوالة غير الرسمي، ولا يمثل مستواها، الذي يغطي المناطق الخاضعة للحكومة المعترف بها دوليًا، رقمًا لليمن كله.",
-        "alt_text_ar": "في سلسلة التحويلات الواردة في ميزان المدفوعات، يورد تقرير خبراء صندوق النقد الدولي لمشاورات المادة الرابعة لعام 2025 قيم 2018–2024 بوصفها قيمًا تاريخية تستند إلى حسابات خبراء الصندوق، ومنها 1,861.7 مليون دولار في 2024. ويورد ملحق لاحق للمشاورات نفسها تقديرًا قدره 1,977 مليون دولار لعام 2025، وتوقعات ترتفع من 2,159 مليون دولار في 2026 إلى 3,110 ملايين دولار في 2030. ولأن الوثيقتين صدرتا في وقتين مختلفين، لا يُوصل الجزءان في سلسلة واحدة متصلة. وتغطي السلسلة النطاق التحليلي للصندوق الخاص بالمناطق الخاضعة للحكومة المعترف بها دوليًا، لا اليمن كله. والتقديرات والتوقعات ليست مشاهدات فعلية، ولا تقيس السلسلة حجم التحويلات عبر نظام الحوالة غير الرسمي. لا يثبت: التقديرات والتوقعات ليست مشاهدات فعلية، ومراجعة التوقع ليست تغيرًا اقتصاديًا. ولا تشكّل وثيقتا الصندوق سلسلة واحدة متصلة. ولا تقيس السلسلة حجم التحويلات عبر نظام الحوالة غير الرسمي، ولا يمثل مستواها، الذي يغطي المناطق الخاضعة للحكومة المعترف بها دوليًا، رقمًا لليمن كله.",
+        "alt_text_ar": "في سلسلة التحويلات الواردة في ميزان المدفوعات، يورد تقرير خبراء صندوق النقد الدولي لمشاورات المادة الرابعة لعام 2025 قيم 2018–2024 بوصفها قيمًا تاريخية تستند إلى حسابات خبراء الصندوق، ومنها 1,861.7 مليون دولار في 2024. ويورد ملحق لاحق للمشاورات نفسها تقديرًا قدره 1,977 مليون دولار لعام 2025، وتوقعات ترتفع من 2,159 مليون دولار في 2026 إلى 3,110 مليون دولار في 2030. ولأن الوثيقتين صدرتا في وقتين مختلفين، لا يُوصل الجزءان في سلسلة واحدة متصلة. وتغطي السلسلة النطاق التحليلي للصندوق الخاص بالمناطق الخاضعة للحكومة المعترف بها دوليًا، لا اليمن كله. لا يثبت: التقديرات والتوقعات ليست مشاهدات فعلية، ومراجعة التوقع ليست تغيرًا اقتصاديًا. ولا تشكّل وثيقتا الصندوق سلسلة واحدة متصلة. ولا تقيس السلسلة حجم التحويلات عبر نظام الحوالة غير الرسمي، ولا يمثل مستواها، الذي يغطي المناطق الخاضعة للحكومة المعترف بها دوليًا، رقمًا لليمن كله.",
         "period_ar": "2018–2030",
         "universe_ar": "سلسلة صندوق النقد الدولي للتحويلات في القطاع الخارجي ضمن النطاق التحليلي للصندوق الخاص بمناطق الحكومة المعترف بها دوليًا، مع نوع الدليل لكل سنة ووثيقة مصدرها.",
         "canonical_route": "/evidence/VIS-REMITTANCE-MACRO/",
@@ -2735,7 +2743,7 @@
         "title_ar": "أجهزة نقاط البيع المبلغ عنها شهريًا",
         "question_ar": "كيف تغير عدد أجهزة نقاط البيع المبلغ عنها شهرًا بعد شهر؟",
         "prohibited_inference_ar": "لا يثبت نمو عدد الأجهزة تبنّي التجار لها، ولا الاستخدام النشط لخدمات نقاط البيع، ولا نموًا في عدد المستخدمين الفريدين، ولا نتيجة في الشمول المالي. وليست نسبة +11% المعروضة في إصدار يناير 2026 ونسبة التغير البالغة 8.55% المشتقة من الإجماليات الخام متسقتين حسابيًا. والإجماليات تخص نطاق الإبلاغ لدى البنك المركزي اليمني – عدن، ولا يثبت الدليل أنها تغطي اليمن كله.",
-        "alt_text_ar": "ارتفع عدد أجهزة نقاط البيع التي يُبلغ عنها البنك المركزي اليمني – عدن من 561 جهازًا في مارس 2025 إلى 1,473 جهازًا في يناير 2026، ضمن نطاق الإبلاغ لديه. وبين ديسمبر 2025 (1,357) ويناير 2026 (1,473) تعطي الإجماليات الخام نموًا نسبته 8.55%، بينما يعرض الرسم المنشور في مصدر يناير نسبة +11%؛ ويعرض الرسم البياني الإجماليات المنشورة، وتُذكر في ملاحظة الرسم النسبةُ التي عرضها الناشر، ويُسجَّل الفرق بينهما بوصفه اختلافًا داخل المصدر. وعدد الأجهزة لا يساوي عدد التجار أو المستخدمين الفريدين ولا يثبت نتيجة في الشمول المالي. لا يثبت: لا يثبت نمو عدد الأجهزة تبنّي التجار لها، ولا الاستخدام النشط لخدمات نقاط البيع، ولا نموًا في عدد المستخدمين الفريدين، ولا نتيجة في الشمول المالي. وليست نسبة +11% المعروضة في إصدار يناير 2026 ونسبة التغير البالغة 8.55% المشتقة من الإجماليات الخام متسقتين حسابيًا. والإجماليات تخص نطاق الإبلاغ لدى البنك المركزي اليمني – عدن، ولا يثبت الدليل أنها تغطي اليمن كله.",
+        "alt_text_ar": "ارتفع عدد أجهزة نقاط البيع التي يُبلغ عنها البنك المركزي اليمني – عدن من 561 جهازًا في مارس 2025 إلى 1,473 جهازًا في يناير 2026، ضمن نطاق إبلاغه. وبين ديسمبر 2025 (1,357) ويناير 2026 (1,473) تعطي الإجماليات الخام نموًا نسبته 8.55%، بينما يعرض الرسم المنشور في مصدر يناير نسبة +11%؛ ويعرض الرسم البياني الإجماليات المنشورة، وتُذكر في ملاحظة الرسم النسبةُ التي عرضها الناشر، ويُسجَّل الفرق بينهما بوصفه اختلافًا داخل المصدر. وعدد الأجهزة لا يساوي عدد التجار أو المستخدمين الفريدين ولا يثبت نتيجة في الشمول المالي. لا يثبت: لا يثبت نمو عدد الأجهزة تبنّي التجار لها، ولا الاستخدام النشط لخدمات نقاط البيع، ولا نموًا في عدد المستخدمين الفريدين، ولا نتيجة في الشمول المالي. وليست نسبة +11% المعروضة في إصدار يناير 2026 ونسبة التغير البالغة 8.55% المشتقة من الإجماليات الخام متسقتين حسابيًا. والإجماليات تخص نطاق الإبلاغ لدى البنك المركزي اليمني – عدن، ولا يثبت الدليل أنها تغطي اليمن كله.",
         "period_ar": "شهريًا من مارس 2025 إلى يناير 2026",
         "universe_ar": "أجهزة نقاط البيع ضمن نطاق الإبلاغ عن نظام المدفوعات لدى البنك المركزي اليمني – عدن؛ ولا يثبت الدليل مدى تغطية هذا النطاق لكل مناطق اليمن.",
         "canonical_route": "/evidence/VIS-POS-TERMINALS/",
@@ -2960,13 +2968,13 @@
         "title_en": "Reported POS transactions, monthly",
         "question_en": "How has reported POS transaction activity changed month by month?",
         "prohibited_inference_en": "Transactions are events, not unique users or merchants, so the series does not show how many people or businesses used POS services. The monthly values are shown as published, without smoothing or interpolation, and the +4.9% displayed in the January 2026 release and the 13.87% change derived from the raw totals are not arithmetically consistent. The totals fall within the reporting scope of the Central Bank of Yemen – Aden (CBY-Aden) and are not shown to cover all of Yemen.",
-        "alt_text_en": "POS transactions reported by the Central Bank of Yemen – Aden (CBY-Aden) rose from 8,015 in March 2025 to 24,026 in January 2026, within CBY-Aden's reporting scope, but not steadily: the monthly high was 27,187 in July 2025. Between December 2025 (21,099) and January 2026 (24,026), the raw totals imply growth of 13.87%, while the January source graphic displays +4.9%; the chart plots the reported totals, the +4.9% is given in the chart note, and the mismatch is recorded as a discrepancy within the source. Transactions are events, not unique users or merchants, so the series does not measure how many people or businesses used POS services. Does not establish: Transactions are events, not unique users or merchants, so the series does not show how many people or businesses used POS services. The monthly values are shown as published, without smoothing or interpolation, and the +4.9% displayed in the January 2026 release and the 13.87% change derived from the raw totals are not arithmetically consistent. The totals fall within the reporting scope of the Central Bank of Yemen – Aden (CBY-Aden) and are not shown to cover all of Yemen.",
+        "alt_text_en": "POS transactions reported by the Central Bank of Yemen – Aden (CBY-Aden) rose from 8,015 in March 2025 to 24,026 in January 2026, within CBY-Aden's reporting scope, but not steadily: the monthly high was 27,187 in July 2025. Between December 2025 (21,099) and January 2026 (24,026), the raw totals imply growth of 13.87%, while the January source graphic displays +4.9%; the chart plots the reported totals, the +4.9% is given in the chart note, and the mismatch is recorded as a discrepancy within the source. Does not establish: Transactions are events, not unique users or merchants, so the series does not show how many people or businesses used POS services. The monthly values are shown as published, without smoothing or interpolation, and the +4.9% displayed in the January 2026 release and the 13.87% change derived from the raw totals are not arithmetically consistent. The totals fall within the reporting scope of the Central Bank of Yemen – Aden (CBY-Aden) and are not shown to cover all of Yemen.",
         "period_en": "Mar-2025–Jan-2026 monthly",
         "universe_en": "POS transactions within the payment-system reporting scope of the Central Bank of Yemen – Aden (CBY-Aden); how far that scope covers each area of Yemen is not established.",
         "title_ar": "معاملات نقاط البيع المبلغ عنها شهريًا",
         "question_ar": "كيف تغير عدد معاملات نقاط البيع المبلغ عنها شهرًا بعد شهر؟",
         "prohibited_inference_ar": "المعاملات أحداث وليست مستخدمين أو تجارًا فريدين، لذلك لا تبيّن السلسلة عدد الأشخاص أو المنشآت الذين استخدموا نقاط البيع. وتُعرض القيم الشهرية كما نُشرت من دون تنعيم أو استيفاء، وليست نسبة +4.9% المعروضة في إصدار يناير 2026 ونسبة التغير البالغة 13.87% المشتقة من الإجماليات الخام متسقتين حسابيًا. والإجماليات تخص نطاق الإبلاغ لدى البنك المركزي اليمني – عدن، ولا يثبت الدليل أنها تغطي اليمن كله.",
-        "alt_text_ar": "ارتفع عدد معاملات نقاط البيع التي يُبلغ عنها البنك المركزي اليمني – عدن من 8,015 معاملة في مارس 2025 إلى 24,026 معاملة في يناير 2026، ضمن نطاق الإبلاغ لديه، ولكن ليس بصورة مطردة: فقد بلغ أعلى مستوى شهري 27,187 معاملة في يوليو 2025. وبين ديسمبر 2025 (21,099) ويناير 2026 (24,026) تعطي الإجماليات الخام نموًا نسبته 13.87%، بينما يعرض رسم مصدر يناير نسبة +4.9%؛ ويعرض الرسم البياني الإجماليات المنشورة، وتُذكر نسبة +4.9% في ملاحظة الرسم، ويُسجَّل الفرق بينهما بوصفه اختلافًا داخل المصدر. والمعاملة حدث وليست مستخدمًا أو تاجرًا فريدًا، لذلك لا تقيس السلسلة عدد الأشخاص أو المنشآت التي استخدمت نقاط البيع. لا يثبت: المعاملات أحداث وليست مستخدمين أو تجارًا فريدين، لذلك لا تبيّن السلسلة عدد الأشخاص أو المنشآت الذين استخدموا نقاط البيع. وتُعرض القيم الشهرية كما نُشرت من دون تنعيم أو استيفاء، وليست نسبة +4.9% المعروضة في إصدار يناير 2026 ونسبة التغير البالغة 13.87% المشتقة من الإجماليات الخام متسقتين حسابيًا. والإجماليات تخص نطاق الإبلاغ لدى البنك المركزي اليمني – عدن، ولا يثبت الدليل أنها تغطي اليمن كله.",
+        "alt_text_ar": "ارتفع عدد معاملات نقاط البيع التي يُبلغ عنها البنك المركزي اليمني – عدن من 8,015 معاملة في مارس 2025 إلى 24,026 معاملة في يناير 2026، ضمن نطاق إبلاغه، ولكن ليس بصورة مطردة: فقد بلغ أعلى مستوى شهري 27,187 معاملة في يوليو 2025. وبين ديسمبر 2025 (21,099) ويناير 2026 (24,026) تعطي الإجماليات الخام نموًا نسبته 13.87%، بينما يعرض رسم مصدر يناير نسبة +4.9%؛ ويعرض الرسم البياني الإجماليات المنشورة، وتُذكر نسبة +4.9% في ملاحظة الرسم، ويُسجَّل الفرق بينهما بوصفه اختلافًا داخل المصدر. لا يثبت: المعاملات أحداث وليست مستخدمين أو تجارًا فريدين، لذلك لا تبيّن السلسلة عدد الأشخاص أو المنشآت الذين استخدموا نقاط البيع. وتُعرض القيم الشهرية كما نُشرت من دون تنعيم أو استيفاء، وليست نسبة +4.9% المعروضة في إصدار يناير 2026 ونسبة التغير البالغة 13.87% المشتقة من الإجماليات الخام متسقتين حسابيًا. والإجماليات تخص نطاق الإبلاغ لدى البنك المركزي اليمني – عدن، ولا يثبت الدليل أنها تغطي اليمن كله.",
         "period_ar": "شهريًا من مارس 2025 إلى يناير 2026",
         "universe_ar": "معاملات نقاط البيع ضمن نطاق الإبلاغ عن نظام المدفوعات لدى البنك المركزي اليمني – عدن؛ ولا يثبت الدليل مدى تغطية هذا النطاق لكل مناطق اليمن.",
         "canonical_route": "/evidence/VIS-POS-TRANSACTIONS/",
@@ -3195,7 +3203,7 @@
         "title_ar": "القيمة الاسمية لمعاملات نقاط البيع المبلغ عنها شهريًا",
         "question_ar": "كيف تغيرت القيمة الاسمية لمعاملات نقاط البيع المبلغ عنها؟",
         "prohibited_inference_ar": "القيم بالريال الاسمي: فلا تثبت نموًا حقيقيًا ولا تغيرًا في القوة الشرائية ولا زيادة في المستخدمين ولا أثرًا على الشمول المالي، ولا يثبت هذا الدليل أي سلسلة معدلة لأثر التضخم. ولا قيمة متحقق منها لشهر سبتمبر 2025، ولا تُقدَّر بالاستيفاء. والإجماليات تخص نطاق الإبلاغ لدى البنك المركزي اليمني – عدن، ولا يثبت الدليل أنها تغطي اليمن كله.",
-        "alt_text_ar": "ارتفعت القيمة الاسمية لمعاملات نقاط البيع التي يُبلغ عنها البنك المركزي اليمني – عدن من 320 مليون ريال يمني في مارس 2025 إلى 1,262 مليون ريال في يناير 2026، ضمن نطاق الإبلاغ لديه. وقيمة سبتمبر 2025 مفقودة لعدم توفر قيمة متحقق منها لذلك الشهر. والسلسلة اسمية ولا تثبت نموًا بالقيمة الحقيقية أو تغيرًا في القوة الشرائية أو زيادة عدد المستخدمين الفريدين أو أثرًا على الشمول المالي. لا يثبت: القيم بالريال الاسمي: فلا تثبت نموًا حقيقيًا ولا تغيرًا في القوة الشرائية ولا زيادة في المستخدمين ولا أثرًا على الشمول المالي، ولا يثبت هذا الدليل أي سلسلة معدلة لأثر التضخم. ولا قيمة متحقق منها لشهر سبتمبر 2025، ولا تُقدَّر بالاستيفاء. والإجماليات تخص نطاق الإبلاغ لدى البنك المركزي اليمني – عدن، ولا يثبت الدليل أنها تغطي اليمن كله.",
+        "alt_text_ar": "ارتفعت القيمة الاسمية لمعاملات نقاط البيع التي يُبلغ عنها البنك المركزي اليمني – عدن من 320 مليون ريال يمني في مارس 2025 إلى 1,262 مليون ريال في يناير 2026، ضمن نطاق إبلاغه. وقيمة سبتمبر 2025 مفقودة لعدم توفر قيمة متحقق منها لذلك الشهر. والسلسلة اسمية ولا تثبت نموًا بالقيمة الحقيقية أو تغيرًا في القوة الشرائية أو زيادة عدد المستخدمين الفريدين أو أثرًا على الشمول المالي. لا يثبت: القيم بالريال الاسمي: فلا تثبت نموًا حقيقيًا ولا تغيرًا في القوة الشرائية ولا زيادة في المستخدمين ولا أثرًا على الشمول المالي، ولا يثبت هذا الدليل أي سلسلة معدلة لأثر التضخم. ولا قيمة متحقق منها لشهر سبتمبر 2025، ولا تُقدَّر بالاستيفاء. والإجماليات تخص نطاق الإبلاغ لدى البنك المركزي اليمني – عدن، ولا يثبت الدليل أنها تغطي اليمن كله.",
         "period_ar": "مارس 2025 – يناير 2026؛ مع فجوة في سبتمبر 2025",
         "universe_ar": "القيمة الاسمية لمعاملات نقاط البيع ضمن نطاق الإبلاغ عن نظام المدفوعات لدى البنك المركزي اليمني – عدن؛ ولا يثبت الدليل مدى تغطية هذا النطاق لكل مناطق اليمن.",
         "canonical_route": "/evidence/VIS-POS-VALUE/",
@@ -4121,9 +4129,9 @@
         "period_en": "end-2015, end-2020 and end-2023 (secondary source), plus a contextual finding through 2021",
         "universe_en": "Microfinance institutions and banks as covered by each source (providers reporting to the Social Fund for Development for 2015 and 2020); the set of providers covered in 2023 and the deduplication of savers are unresolved",
         "title_ar": "المقترضون والمدخرون ومحفظة القروض: نقاط مرجعية مؤرخة منفصلة، لا سلسلة واحدة",
-        "question_ar": "ماذا تظهر الأدلة المتاحة عن تغير المقترضين والمدخرين وحجم المحفظة في التمويل الأصغر؟",
+        "question_ar": "ماذا تظهر الأدلة المتاحة عن تغير المقترضين والمدخرين وحجم محفظة القروض في التمويل الأصغر؟",
         "prohibited_inference_ar": "ليست هذه النقاط المرجعية سلسلة اتجاه منسجمة ولا دليلًا على تباعد، ولا تُظهر نموًا في عدد الأشخاص الفريدين أو تعمقًا حقيقيًا للائتمان أو اتساعًا للشمول أو تحسنًا في نتائج المقترضين أو أثرًا سببيًا للنزاع.",
-        "alt_text_ar": "لدى مقدمي الخدمات الذين يرفعون بياناتهم إلى الصندوق الاجتماعي للتنمية، تسجل الجداول الموثقة 93,118 مقترضًا نشطًا و509,590 مدخرًا في نهاية 2015، و88,445 مقترضًا و1,611,206 من المدخرين/المودعين في نهاية 2020. وتبلغ محفظة القروض 6.741 مليار ريال في نهاية 2015 وفق جدول مقدمي الخدمات، بينما يورد السرد في المصدر نفسه رقمًا يقارب 9 مليارات ريال، وتبلغ 33.379 مليار ريال في نهاية 2020. وتورد ورقة سياسات صادرة عام 2024 عن مركز صنعاء للدراسات الاستراتيجية (Sana’a Center for Strategic Studies)، مستندةً إلى بيانات محفظة التمويل لدى SFD/SMED، عدد 78,686 مقترضًا، وما تسميه 3.3 مليون «مدخر نشط»، ومحفظة اسمية تقارب 44 مليار ريال في نهاية 2023، ولم يُتحقق من مجموعة مقدمي الخدمات التي تغطيها. ولم يثبت أن «المدخر النشط» و«المدخر/المودع» مقياس واحد، ولا تسجل قاعدة الأدلة أساس التقييم بالريال الذي تستخدمه أرقام المحفظة في ظل انقسام المناطق النقدية في اليمن. لذلك تبقى هذه الأرقام نقاطًا مرجعية مؤرخة ومنفصلة: لا تُظهر اتجاهًا ولا تباعدًا، ولا تثبت عددًا من الأشخاص الفريدين أو تعمقًا حقيقيًا للائتمان أو تغيرًا بالدولار. لا يثبت: ليست هذه النقاط المرجعية سلسلة اتجاه منسجمة ولا دليلًا على تباعد، ولا تُظهر نموًا في عدد الأشخاص الفريدين أو تعمقًا حقيقيًا للائتمان أو اتساعًا للشمول أو تحسنًا في نتائج المقترضين أو أثرًا سببيًا للنزاع.",
+        "alt_text_ar": "لدى مقدمي الخدمات الذين يرفعون بياناتهم إلى الصندوق الاجتماعي للتنمية، تسجل الجداول الموثقة 93,118 مقترضًا نشطًا و509,590 مدخرًا في نهاية 2015، و88,445 مقترضًا و1,611,206 من المدخرين/المودعين في نهاية 2020. وتبلغ محفظة القروض 6.741 مليار ريال في نهاية 2015 وفق جدول مقدمي الخدمات، بينما يورد السرد في المصدر نفسه رقمًا يقارب 9 مليارات ريال، وتبلغ 33.379 مليار ريال في نهاية 2020. وتورد ورقة سياسات صادرة عام 2024 عن مركز صنعاء للدراسات الاستراتيجية (Sana’a Center for Strategic Studies)، مستندةً إلى بيانات محفظة القروض لدى SFD/SMED، عدد 78,686 مقترضًا، وما تسميه 3.3 مليون «مدخر نشط»، ومحفظة قروض اسمية تقارب 44 مليار ريال في نهاية 2023، ولم يُتحقق من مجموعة مقدمي الخدمات التي تغطيها. ولم يثبت أن «المدخر النشط» و«المدخر/المودع» مقياس واحد، ولا تسجل قاعدة الأدلة أساس التقييم بالريال الذي تستخدمه أرقام محفظة القروض في ظل انقسام المناطق النقدية في اليمن. لذلك تبقى هذه الأرقام نقاطًا مرجعية مؤرخة ومنفصلة: لا تُظهر اتجاهًا ولا تباعدًا، ولا تثبت عددًا من الأشخاص الفريدين أو تعمقًا حقيقيًا للائتمان أو تغيرًا بالدولار. لا يثبت: ليست هذه النقاط المرجعية سلسلة اتجاه منسجمة ولا دليلًا على تباعد، ولا تُظهر نموًا في عدد الأشخاص الفريدين أو تعمقًا حقيقيًا للائتمان أو اتساعًا للشمول أو تحسنًا في نتائج المقترضين أو أثرًا سببيًا للنزاع.",
         "period_ar": "نهاية 2015 ونهاية 2020 ونهاية 2023 (مصدر ثانوي)، إضافة إلى معلومة سياقية حتى 2021",
         "universe_ar": "مؤسسات وبنوك التمويل الأصغر كما يغطيها كل مصدر (مقدمو الخدمات الذين يرفعون بياناتهم إلى الصندوق الاجتماعي للتنمية لعامي 2015 و2020)؛ ولم تُحسم بعدُ مجموعة مقدمي الخدمات المشمولين في 2023 ولا إزالة تكرار المدخرين",
         "canonical_route": "/finance/",
@@ -4141,7 +4149,7 @@
         "title_en": "FMIIP financial access points: January 2025 baseline and June 2030 target",
         "question_en": "Is a stated target directly comparable with an observed result?",
         "prohibited_inference_en": "A target is not an observation or an achievement. No percentage of the target can be calculated where definitions differ, and the evidence base holds no observed result. Adding different types of access point does not give a valid total without a documented classification and deduplication rule. The June 2030 target of 1,021 access points has meaning only against the January 2025 baseline of 817 under the same project definition.",
-        "alt_text_en": "The results framework of the Financial Market Infrastructure and Inclusion Project (FMIIP) records 817 financial access points as its January 2025 baseline and 1,021 as its June 2030 target, under the project's own definition. No observed result is recorded in the evidence base, so no progress can be shown, and the project count is not comparable with administrative counts of ATMs, POS terminals or agents. Does not establish: A target is not an observation or an achievement. No percentage of the target can be calculated where definitions differ, and the evidence base holds no observed result. Adding different types of access point does not give a valid total without a documented classification and deduplication rule. The June 2030 target of 1,021 access points has meaning only against the January 2025 baseline of 817 under the same project definition.",
+        "alt_text_en": "The results framework of the Financial Market Infrastructure and Inclusion Project (FMIIP) records 817 financial access points as its January 2025 baseline and 1,021 as its June 2030 target, under the project's own definition. No observed result is recorded in the evidence base, so no progress can be shown, and the project count is not comparable with administrative counts of ATMs, point-of-sale (POS) terminals or agents. Does not establish: A target is not an observation or an achievement. No percentage of the target can be calculated where definitions differ, and the evidence base holds no observed result. Adding different types of access point does not give a valid total without a documented classification and deduplication rule. The June 2030 target of 1,021 access points has meaning only against the January 2025 baseline of 817 under the same project definition.",
         "period_en": "Baseline January 2025; target June 2030; no result recorded",
         "universe_en": "Financial access points as defined in the results framework of the World Bank-financed Financial Market Infrastructure and Inclusion Project (FMIIP, P180708)",
         "title_ar": "نقاط الوصول المالي في مشروع FMIIP: خط أساس يناير 2025 ومستهدف يونيو 2030",
@@ -4617,8 +4625,8 @@
         "universe_en": "The complaint path of the Central Bank of Yemen – Aden (CBY-Aden) for banks and non-bank financial institutions, as described in its 2024 consumer-protection brochure",
         "title_ar": "إذا لم تُحل الشكوى، ماذا يحدث؟",
         "question_ar": "ما مسار التظلم الذي تصفه الإرشادات الرسمية عندما لا تُحل الشكوى؟",
-        "prohibited_inference_ar": "لا يثبت وجود مسار للشكاوى قبول الشكاوى أو حلها في الوقت المحدد، ولا جودة الإنصاف أو دفع التعويض، ولا فعالية الإنفاذ، ولا أي نتيجة للمستهلكين. والمدد مأخوذة من كتيّب توعوي صادر في 2024، لا من نص قانوني مستخرج.",
-        "alt_text_ar": "يصف كتيّب توعوي لحماية المستهلك أصدره البنك المركزي اليمني – عدن في 2024 مرحلةً لدى مقدم الخدمة لتسوية الشكوى مدتها 10 أيام عمل كحد أقصى، يمكن تمديدها مدة مماثلة مع إبلاغ المستهلك بمبرر التمديد، ثم التصعيد إلى البنك المركزي في عدن خلال 14 يوم عمل من انتهاء مدة التسوية. وهذه المدد مأخوذة من الكتيّب، لا من نص قانوني مستخرج للتعليمات التنظيمية لحماية المستهلك المالي لعام 2023. ولا يُقاس الأداء الفعلي لمعالجة الشكاوى، إذ لا تتوفر بيانات عن أعداد الشكاوى أو جودة معالجتها أو فعالية الإنفاذ. لا يثبت: لا يثبت وجود مسار للشكاوى قبول الشكاوى أو حلها في الوقت المحدد، ولا جودة الإنصاف أو دفع التعويض، ولا فعالية الإنفاذ، ولا أي نتيجة للمستهلكين. والمدد مأخوذة من كتيّب توعوي صادر في 2024، لا من نص قانوني مستخرج.",
+        "prohibited_inference_ar": "لا يثبت وجود مسار للشكاوى قبول الشكاوى أو حلها في الوقت المحدد، ولا جودة الإنصاف أو دفع التعويض، ولا فاعلية الإنفاذ، ولا أي نتيجة للمستهلكين. والمدد مأخوذة من كتيّب توعوي صادر في 2024، لا من نص قانوني مستخرج.",
+        "alt_text_ar": "يصف كتيّب توعوي لحماية المستهلك أصدره البنك المركزي اليمني – عدن في 2024 مرحلةً لدى مقدم الخدمة لتسوية الشكوى مدتها 10 أيام عمل كحد أقصى، يمكن تمديدها مدة مماثلة مع إبلاغ المستهلك بمبرر التمديد، ثم التصعيد إلى البنك المركزي في عدن خلال 14 يوم عمل من انتهاء مدة التسوية. وهذه المدد مأخوذة من الكتيّب، لا من نص قانوني مستخرج للتعليمات التنظيمية لحماية المستهلك المالي لعام 2023. ولا يُقاس الأداء الفعلي لمعالجة الشكاوى، إذ لا تتوفر بيانات عن أعداد الشكاوى أو جودة معالجتها أو فاعلية الإنفاذ. لا يثبت: لا يثبت وجود مسار للشكاوى قبول الشكاوى أو حلها في الوقت المحدد، ولا جودة الإنصاف أو دفع التعويض، ولا فاعلية الإنفاذ، ولا أي نتيجة للمستهلكين. والمدد مأخوذة من كتيّب توعوي صادر في 2024، لا من نص قانوني مستخرج.",
         "period_ar": "أُعلن عن التعليمات في 28 أغسطس 2023؛ والكتيّب مؤرخ في 23 مارس 2024؛ ولا تتوفر بيانات عن النتائج",
         "universe_ar": "مسار الشكاوى لدى البنك المركزي اليمني – عدن للبنوك والمؤسسات المالية غير المصرفية، كما يصفه كتيّب حماية المستهلك الصادر عنه في 2024.",
         "canonical_route": "/evidence/VIS-FCP-REDRESS-PATH/",
@@ -4727,13 +4735,13 @@
         "title_en": "One system, different things being counted",
         "question_en": "Are people, accounts, wallets, terminals and transactions being kept as different measurement objects?",
         "prohibited_inference_en": "Accounts, e-wallets, subscribers, terminals and transactions are not counts of unique people, and this resource holds no documented method that converts them.",
-        "alt_text_en": "Inclusion evidence for Yemen counts different things in different systems. A population survey counts people: the Global Findex 2021 study for Yemen has 1,000 respondents, and its population estimates require the survey weights. Administrative reports count accounts, e-wallet subscribers, terminals and transactions; programmes count participants, outputs and targets. The Financial Market Infrastructure and Inclusion Project (FMIIP) target of 1,021 access points by 2030, against a January 2025 baseline of 817 under the project's own definition, cannot be added to or compared with counts of ATMs, POS terminals or agents until the project's taxonomy and deduplication rules are documented. A baseline or target changes meaning when the counted object changes: accounts, e-wallets, subscribers, terminals and transactions are not unique people unless a documented method converts them. Does not establish: Accounts, e-wallets, subscribers, terminals and transactions are not counts of unique people, and this resource holds no documented method that converts them.",
+        "alt_text_en": "Inclusion evidence for Yemen counts different things in different systems. A population survey counts people: the Global Findex 2021 study for Yemen has 1,000 respondents, and its population estimates require the survey weights. Administrative reports count accounts, e-wallet subscribers, terminals and transactions; programmes count participants, outputs and targets. The Financial Market Infrastructure and Inclusion Project (FMIIP) target of 1,021 access points by 2030, against a January 2025 baseline of 817 under the project's own definition, cannot be added to or compared with counts of ATMs, POS terminals or agents until the project's taxonomy and deduplication rules are documented. A baseline or target changes meaning when the counted object changes. Does not establish: Accounts, e-wallets, subscribers, terminals and transactions are not counts of unique people, and this resource holds no documented method that converts them.",
         "period_en": "Current evidence available here; dates vary by item",
         "universe_en": "Each lane retains its own survey or administrative universe",
         "title_ar": "منظومة واحدة وأشياء مختلفة تُعد",
         "question_ar": "هل تبقى الأشخاص والحسابات والمحافظ والأجهزة والمعاملات وحدات قياس مختلفة؟",
         "prohibited_inference_ar": "الحسابات والمحافظ الإلكترونية والمشتركون والأجهزة والمعاملات ليست أعدادًا لأشخاص فريدين، ولا يتضمن هذا المورد طريقة موثقة لتحويلها إلى أشخاص.",
-        "alt_text_ar": "تعدّ أدلة الشمول المالي في اليمن أشياء مختلفة في منظومات قياس مختلفة. فالمسح السكاني يعدّ الأفراد: تضم دراسة المؤشر العالمي للشمول المالي (Global Findex) لليمن في موجة 2021 عدد 1,000 مستجيب، وتتطلب تقديراتها السكانية استخدام أوزان المسح. أما التقارير الإدارية فتعدّ الحسابات ومشتركي المحافظ الإلكترونية والأجهزة والمعاملات، وتعدّ البرامج المشاركين والمخرجات والمستهدفات. ولا يمكن جمع مستهدف مشروع البنية التحتية للأسواق المالية والشمول المالي في اليمن (FMIIP) البالغ 1,021 نقطة وصول بحلول 2030، مقابل خط أساس قدره 817 نقطة في يناير 2025 وفق تعريف المشروع نفسه، إلى أعداد أجهزة الصراف الآلي أو نقاط البيع أو الوكلاء، ولا مقارنته بها، ما لم تُوثق تصنيفات المشروع وقواعد إزالة الازدواج. ويتغير معنى خط الأساس أو المستهدف عندما يتغير ما يُعدّ؛ فالحسابات والمحافظ الإلكترونية والمشتركون والأجهزة والمعاملات ليست أشخاصًا فريدين ما لم تحوّلها طريقة موثقة. لا يثبت: الحسابات والمحافظ الإلكترونية والمشتركون والأجهزة والمعاملات ليست أعدادًا لأشخاص فريدين، ولا يتضمن هذا المورد طريقة موثقة لتحويلها إلى أشخاص.",
+        "alt_text_ar": "تعدّ أدلة الشمول المالي في اليمن أشياء مختلفة في منظومات قياس مختلفة. فالمسح السكاني يعدّ الأفراد: تضم دراسة المؤشر العالمي للشمول المالي (Global Findex) لليمن في موجة 2021 عدد 1,000 مستجيب، وتتطلب تقديراتها السكانية استخدام أوزان المسح. أما التقارير الإدارية فتعدّ الحسابات ومشتركي المحافظ الإلكترونية والأجهزة والمعاملات، وتعدّ البرامج المشاركين والمخرجات والمستهدفات. ولا يمكن جمع مستهدف مشروع البنية التحتية للأسواق المالية والشمول المالي في اليمن (FMIIP) البالغ 1,021 نقطة وصول بحلول 2030، مقابل خط أساس قدره 817 نقطة في يناير 2025 وفق تعريف المشروع نفسه، إلى أعداد أجهزة الصراف الآلي أو نقاط البيع أو الوكلاء، ولا مقارنته بها، ما لم تُوثق تصنيفات المشروع وقواعد إزالة الازدواج. ويتغير معنى خط الأساس أو المستهدف عندما يتغير ما يُعدّ. لا يثبت: الحسابات والمحافظ الإلكترونية والمشتركون والأجهزة والمعاملات ليست أعدادًا لأشخاص فريدين، ولا يتضمن هذا المورد طريقة موثقة لتحويلها إلى أشخاص.",
         "period_ar": "الأدلة الحالية المتاحة هنا؛ وتختلف التواريخ بحسب العنصر",
         "universe_ar": "يحتفظ كل مسار بمجتمع المسح أو السجل الإداري الخاص به",
         "canonical_route": "/readings/define-what-you-count/",
@@ -4750,13 +4758,13 @@
         "title_en": "Account growth is not the same as durable digital use",
         "question_en": "What did historical e-money growth actually establish about use?",
         "prohibited_inference_en": "Registered accounts are not unique active people, and the historical five-provider pattern does not show national prevalence in 2026.",
-        "alt_text_en": "In the historical study by the Institute of Banking Studies (IBS) of five electronic-money providers, accounts reached 807,919 in December 2019, with an average dormant or inactive share of 23%; the source notes that some accounts were used once or because circumstances imposed their use. A CauseWay grouping of the study's 2019 transaction values puts 57.03% in cash-in and cash-out, 29.97% in movements between bank and electronic accounts, and 2.41% in bills and purchases combined; the grouping is CauseWay's, not a source headline. Account registrations and digital activity do not, on their own, establish voluntary and sustained use: registered accounts are not unique active people, and the 2016–2019 pattern cannot be extended to national prevalence in 2026. Does not establish: Registered accounts are not unique active people, and the historical five-provider pattern does not show national prevalence in 2026.",
+        "alt_text_en": "In the historical study by the Institute of Banking Studies (IBS) of five electronic-money providers, accounts reached 807,919 in December 2019, with an average dormant or inactive share of 23%; the source notes that some accounts were used once or because circumstances imposed their use. A CauseWay grouping of the study's 2019 transaction values puts 57.03% in cash-in and cash-out, 29.97% in movements between bank and electronic accounts, and 2.41% in bills and purchases combined; the grouping is CauseWay's, not a source headline. Account registrations and digital activity do not, on their own, establish voluntary and sustained use. Does not establish: Registered accounts are not unique active people, and the historical five-provider pattern does not show national prevalence in 2026.",
         "period_en": "2016–2019, with account level at Dec-2019",
         "universe_en": "Five electronic-money providers in the historical study by the Institute of Banking Studies (IBS); transaction-value categories limited to those in the source",
         "title_ar": "نمو الحسابات لا يساوي استخدامًا رقميًا مستمرًا",
         "question_ar": "ماذا أثبت النمو التاريخي للنقود الإلكترونية عن الاستخدام؟",
         "prohibited_inference_ar": "الحسابات المسجلة ليست أشخاصًا فريدين نشطين، ولا يُظهر النمط التاريخي لدى خمسة مقدمي خدمات الانتشارَ الوطني في 2026.",
-        "alt_text_ar": "في الدراسة التاريخية لمعهد الدراسات المصرفية (IBS) التي شملت خمسة مقدمي خدمات للنقود الإلكترونية، بلغ عدد الحسابات 807,919 حسابًا في ديسمبر 2019، بمتوسط 23% للحسابات الخاملة أو غير النشطة، ويذكر المصدر أن بعض الحسابات استُخدم مرة واحدة أو فرضت الظروف استخدامه. ويُظهر تجميع أعدّته CauseWay لقيم معاملات 2019 في الدراسة أن 57.03% منها إيداع وسحب نقدي، و29.97% انتقال بين الحسابات المصرفية والإلكترونية، و2.41% للفواتير والمشتريات معًا؛ وهذا التجميع من إعداد CauseWay وليس رقمًا رئيسيًا في المصدر. ولا يثبت تسجيل الحسابات والنشاط الرقمي وحدهما استخدامًا طوعيًا ومستمرًا: فالحسابات المسجلة ليست أشخاصًا فريدين نشطين، ولا يصح مدّ نمط 2016–2019 إلى الانتشار الوطني في 2026. لا يثبت: الحسابات المسجلة ليست أشخاصًا فريدين نشطين، ولا يُظهر النمط التاريخي لدى خمسة مقدمي خدمات الانتشارَ الوطني في 2026.",
+        "alt_text_ar": "في الدراسة التاريخية لمعهد الدراسات المصرفية (IBS) التي شملت خمسة مقدمي خدمات للنقود الإلكترونية، بلغ عدد الحسابات 807,919 حسابًا في ديسمبر 2019، بمتوسط 23% للحسابات الخاملة أو غير النشطة، ويذكر المصدر أن بعض الحسابات استُخدم مرة واحدة أو فرضت الظروف استخدامه. ويُظهر تجميع أعدّته CauseWay لقيم معاملات 2019 في الدراسة أن 57.03% منها إيداع وسحب نقدي، و29.97% انتقال بين الحسابات المصرفية والإلكترونية، و2.41% للفواتير والمشتريات معًا؛ وهذا التجميع من إعداد CauseWay وليس رقمًا رئيسيًا في المصدر. ولا يثبت تسجيل الحسابات والنشاط الرقمي وحدهما استخدامًا طوعيًا ومستمرًا. لا يثبت: الحسابات المسجلة ليست أشخاصًا فريدين نشطين، ولا يُظهر النمط التاريخي لدى خمسة مقدمي خدمات الانتشارَ الوطني في 2026.",
         "period_ar": "2016–2019، مع مستوى الحسابات في ديسمبر 2019",
         "universe_ar": "خمسة مقدمي خدمات للنقود الإلكترونية في الدراسة التاريخية لمعهد الدراسات المصرفية (IBS)؛ وفئات قيمة المعاملات مقصورة على ما يرد في المصدر",
         "canonical_route": "/readings/digital-workaround-not-yet-durable-inclusion/",
@@ -4776,10 +4784,10 @@
         "alt_text_en": "Among providers reporting to the Social Fund for Development (SFD), verified tables record 93,118 active borrowers at end-2015 and 88,445 at end-2020; a 2024 Sana’a Center for Strategic Studies paper citing SFD/SMED data reports 78,686 for end-2023, for a set of providers not yet verified. “Active savers” (2023) and “savers/depositors” (2020) have not been shown to be the same measure, the rial valuation of the portfolio figures is not recorded, and incompatible 2023 observations are not joined into one series. These anchors are not comparable enough to show a direction for borrowers, savers or portfolio, and they do not establish growth in unique people, broader inclusion, real credit deepening, better borrower outcomes or any cause. Does not establish: Separate nominal and administrative anchors do not show growth in unique people, real credit deepening, better borrower outcomes or any cause.",
         "period_en": "2015, 2020 and bounded 2023 anchors",
         "universe_en": "Source-specific microfinance institution/provider sets covered by the sources; saver/depositor definitions not fully harmonized",
-        "title_ar": "المقترضون والمدخرون والمحفظة: نقاط مرجعية منفصلة، لا اتجاه واحد",
+        "title_ar": "المقترضون والمدخرون ومحفظة القروض: نقاط مرجعية منفصلة، لا اتجاه واحد",
         "question_ar": "هل يأتي تغير التمويل الأصغر من اتساع وصول المقترضين أم من أبعاد أخرى؟",
         "prohibited_inference_ar": "لا تُظهر النقاط المرجعية الإدارية والاسمية المنفصلة نموًا في عدد الأشخاص الفريدين، ولا تعمقًا حقيقيًا للائتمان، ولا تحسنًا في نتائج المقترضين، ولا أي علاقة سببية.",
-        "alt_text_ar": "لدى مقدمي الخدمات الذين يرفعون بياناتهم إلى الصندوق الاجتماعي للتنمية، تسجل الجداول الموثقة 93,118 مقترضًا نشطًا في نهاية 2015 و88,445 في نهاية 2020، بينما تورد ورقة صادرة عام 2024 عن مركز صنعاء للدراسات الاستراتيجية (Sana’a Center for Strategic Studies)، مستندةً إلى بيانات SFD/SMED، عدد 78,686 مقترضًا في نهاية 2023 لمجموعة من مقدمي الخدمات لم يُتحقق منها بعد. ولم يثبت أن «المدخرين النشطين» (2023) و«المدخرين/المودعين» (2020) مقياس واحد، ولا يُسجَّل أساس تقييم أرقام المحفظة بالريال، ولا تُوصل ملاحظات 2023 غير المتوافقة في سلسلة واحدة. ولا تسمح هذه النقاط بتحديد اتجاه للمقترضين أو للمدخرين أو للمحفظة، ولا تثبت نموًا في عدد الأشخاص الفريدين أو اتساعًا للشمول أو تعمقًا حقيقيًا للائتمان أو تحسنًا في نتائج المقترضين أو أي علاقة سببية. لا يثبت: لا تُظهر النقاط المرجعية الإدارية والاسمية المنفصلة نموًا في عدد الأشخاص الفريدين، ولا تعمقًا حقيقيًا للائتمان، ولا تحسنًا في نتائج المقترضين، ولا أي علاقة سببية.",
+        "alt_text_ar": "لدى مقدمي الخدمات الذين يرفعون بياناتهم إلى الصندوق الاجتماعي للتنمية، تسجل الجداول الموثقة 93,118 مقترضًا نشطًا في نهاية 2015 و88,445 في نهاية 2020، بينما تورد ورقة صادرة عام 2024 عن مركز صنعاء للدراسات الاستراتيجية (Sana’a Center for Strategic Studies)، مستندةً إلى بيانات SFD/SMED، عدد 78,686 مقترضًا في نهاية 2023 لمجموعة من مقدمي الخدمات لم يُتحقق منها بعد. ولم يثبت أن «المدخرين النشطين» (2023) و«المدخرين/المودعين» (2020) مقياس واحد، ولا يُسجَّل أساس تقييم أرقام محفظة القروض بالريال، ولا تُوصل ملاحظات 2023 غير المتوافقة في سلسلة واحدة. ولا تسمح هذه النقاط بتحديد اتجاه للمقترضين أو للمدخرين أو لمحفظة القروض، ولا تثبت نموًا في عدد الأشخاص الفريدين أو اتساعًا للشمول أو تعمقًا حقيقيًا للائتمان أو تحسنًا في نتائج المقترضين أو أي علاقة سببية. لا يثبت: لا تُظهر النقاط المرجعية الإدارية والاسمية المنفصلة نموًا في عدد الأشخاص الفريدين، ولا تعمقًا حقيقيًا للائتمان، ولا تحسنًا في نتائج المقترضين، ولا أي علاقة سببية.",
         "period_ar": "نقاط مرجعية لعامي 2015 و2020، ونقطة مقيدة لعام 2023",
         "universe_ar": "مجموعات مؤسسات ومقدمي التمويل الأصغر كما يغطيها كل مصدر؛ وتعريفات المدخرين أو المودعين غير متسقة بالكامل",
         "canonical_route": "/readings/microfinance-structural-divergence/",
@@ -4868,13 +4876,13 @@
         "prohibited_inference_en": "The relationships are not causal claims unless separate evidence supports them; the parts do not form a composite index, and no part is shown to drive another mechanically.",
         "alt_text_en": "Financial inclusion in Yemen is described here as connected parts: people and capability, firms and income, providers, payment rails, remittance and capital flows, regulation and protection, and enabling conditions and constraints. The documented relationships describe context, dependency or plausible mechanisms where evidence supports them; no relationship carries an evidence-strength rating, and the parts do not form a composite score or show that one part causes another. Does not establish: The relationships are not causal claims unless separate evidence supports them; the parts do not form a composite index, and no part is shown to drive another mechanically.",
         "period_en": "Several periods, varying by domain",
-        "universe_en": "people, firms, providers, rails, flows, rules, enabling constraints",
-        "title_ar": "الشمول المالي منظومة مترابطة، لا درجة واحدة",
+        "universe_en": "people, firms, providers, payment rails, flows, rules, and enabling conditions and constraints",
+        "title_ar": "الشمول المالي منظومة مترابطة لا تُختزل في رقم واحد",
         "question_ar": "كيف ترتبط مكونات منظومة الشمول المالي في اليمن ببعضها؟",
         "prohibited_inference_ar": "ليست العلاقات ادعاءات سببية ما لم يدعمها دليل مستقل؛ ولا تشكل الأجزاء مؤشرًا مركبًا، ولا يُظهر هذا الدليل أن جزءًا يحرّك آخر بصورة آلية.",
         "alt_text_ar": "يصف هذا المورد الشمول المالي في اليمن بوصفه أجزاء مترابطة: الناس والقدرات، والمنشآت والدخل، ومقدمو الخدمات، وبنية المدفوعات، وتدفقات التحويلات ورأس المال، والتنظيم والحماية، والعوامل المُمكِّنة والقيود. وتصف العلاقات الموثقة السياق أو الاعتماد أو آليات محتملة حين تسندها الأدلة؛ ولا تحمل أي علاقة تقديرًا لقوة الدليل، ولا تشكل الأجزاء درجة مركبة، ولا تُظهر أن جزءًا منها سبب لآخر. لا يثبت: ليست العلاقات ادعاءات سببية ما لم يدعمها دليل مستقل؛ ولا تشكل الأجزاء مؤشرًا مركبًا، ولا يُظهر هذا الدليل أن جزءًا يحرّك آخر بصورة آلية.",
         "period_ar": "فترات متعددة عبر أكثر من مجال",
-        "universe_ar": "الأشخاص والمنشآت ومقدمو الخدمات وبنية المدفوعات والتدفقات والقواعد التنظيمية والقيود المُمكِّنة أو المعطلة التي تغطيها الأدلة المرتبطة بهذا الملخص.",
+        "universe_ar": "الأشخاص والمنشآت ومقدمو الخدمات وبنية المدفوعات والتدفقات والقواعد التنظيمية والعوامل المُمكِّنة والقيود التي تغطيها الأدلة المرتبطة بهذا الملخص.",
         "canonical_route": "/evidence/VIS-INCLUSION-TRANSMISSION/",
         "public_routes": [
           "/"
@@ -4896,7 +4904,7 @@
         "title_ar": "حداثة الدليل بحسب المجال",
         "question_ar": "ما مدى حداثة الأدلة التي يعتمد عليها كل مجال؟",
         "prohibited_inference_ar": "قدم الدليل لا يجعله باطلًا تلقائيًا، وحداثة الأدلة الإدارية أو التنظيمية لا تجعلها نتيجة سكانية راهنة.",
-        "alt_text_ar": "تختلف تواريخ الأدلة بحسب المجال: فعدد من مشاهدات المدفوعات والتنظيم يعود إلى 2025–2026، بينما تعود أدلة سكانية تمثيلية أساسية إلى فترات أقدم. ويُحدَّد موقع كل دليل بتاريخ رصده أو نشره وبنوعه: مسح ممثل، أو سجل إداري، أو مادة تنظيمية، أو دليل ثانوي، أو فجوة غير محسومة. ولا تعني حداثة البيانات الإدارية أنها تقيس نتيجة سكانية راهنة، كما لا يعني قِدم الدليل أنه غير صالح تلقائيًا. لا يثبت: قدم الدليل لا يجعله باطلًا تلقائيًا، وحداثة الأدلة الإدارية أو التنظيمية لا تجعلها نتيجة سكانية راهنة.",
+        "alt_text_ar": "تختلف تواريخ الأدلة بحسب المجال: فعدد من مشاهدات المدفوعات والتنظيم يعود إلى 2025–2026، بينما تعود أدلة أساسية ممثلة للسكان إلى فترات أقدم. ويُحدَّد موقع كل دليل بتاريخ رصده أو نشره وبنوعه: مسح ممثل، أو سجل إداري، أو مادة تنظيمية، أو دليل ثانوي، أو فجوة غير محسومة. ولا تعني حداثة البيانات الإدارية أنها تقيس نتيجة سكانية راهنة، كما لا يعني قِدم الدليل أنه غير صالح تلقائيًا. لا يثبت: قدم الدليل لا يجعله باطلًا تلقائيًا، وحداثة الأدلة الإدارية أو التنظيمية لا تجعلها نتيجة سكانية راهنة.",
         "period_ar": "إصدار هذا المورد المؤرخ في 26 سبتمبر 2026؛ ويحتفظ كل دليل بالفترة التي يحددها مصدره",
         "universe_ar": "سجلات البيانات والأدلة المصنفة بحسب المجال وفئة الدليل وتاريخ القياس أو النشر.",
         "canonical_route": "/evidence/VIS-EVIDENCE-FRESHNESS/",
@@ -4988,8 +4996,8 @@
         "universe_en": "Official instruments and guidance of the Central Bank of Yemen – Aden (CBY-Aden), with context attributed to the OECD, keeping the framework separate from implementation and outcomes",
         "title_ar": "حماية المستهلك المالي: أي المراحل من الإطار إلى النتيجة تسندها الأدلة؟",
         "question_ar": "إلى أي مدى انتقلت حماية المستهلك من الإطار التنظيمي إلى نتائج مرصودة؟",
-        "prohibited_inference_ar": "لا يثبت وجود التعليمات أو الأداة التنظيمية بذاته قيام مسار للشكاوى أو التنفيذ أو فعالية الحماية، ولا يرفع تحليل منظمة التعاون الاقتصادي والتنمية أو أي مصدر ثانوي آخر مستوى الدليل إلى ذلك.",
-        "alt_text_ar": "أعلن البنك المركزي اليمني – عدن في 28 أغسطس 2023 إصدار التعليمات التنظيمية لحماية المستهلك المالي، وأصدر في 23 مارس 2024 كتيّبًا توعويًا لحماية المستهلك يصف مسارًا للشكوى والتصعيد. ويقدّم استعراض منظمة التعاون الاقتصادي والتنمية (OECD) للقطاع المالي في اليمن الصادر في 2026 سياقًا وتوصيات. وباستثناء ما يذكره الكتيّب عن إنشاء إدارة مختصة بحماية العملاء، لا تتوفر أدلة على التنفيذ أو معالجة الشكاوى أو الإنفاذ أو النتائج للمستهلكين؛ فوجود إطار أو وثيقة إرشادية لا يثبت أن الحماية تعمل فعليًا. لا يثبت: لا يثبت وجود التعليمات أو الأداة التنظيمية بذاته قيام مسار للشكاوى أو التنفيذ أو فعالية الحماية، ولا يرفع تحليل منظمة التعاون الاقتصادي والتنمية أو أي مصدر ثانوي آخر مستوى الدليل إلى ذلك.",
+        "prohibited_inference_ar": "لا يثبت وجود التعليمات أو الأداة التنظيمية بذاته قيام مسار للشكاوى أو التنفيذ أو فاعلية الحماية، ولا يرفع تحليل منظمة التعاون الاقتصادي والتنمية أو أي مصدر ثانوي آخر مستوى الدليل إلى ذلك.",
+        "alt_text_ar": "أعلن البنك المركزي اليمني – عدن في 28 أغسطس 2023 إصدار التعليمات التنظيمية لحماية المستهلك المالي، وأصدر في 23 مارس 2024 كتيّبًا توعويًا لحماية المستهلك يصف مسارًا للشكوى والتصعيد. ويقدّم استعراض منظمة التعاون الاقتصادي والتنمية (OECD) للقطاع المالي في اليمن الصادر في 2026 سياقًا وتوصيات. وباستثناء ما يذكره الكتيّب عن إنشاء إدارة مختصة بحماية العملاء، لا تتوفر أدلة على التنفيذ أو معالجة الشكاوى أو الإنفاذ أو النتائج للمستهلكين؛ فوجود إطار أو وثيقة إرشادية لا يثبت أن الحماية تعمل فعليًا. لا يثبت: لا يثبت وجود التعليمات أو الأداة التنظيمية بذاته قيام مسار للشكاوى أو التنفيذ أو فاعلية الحماية، ولا يرفع تحليل منظمة التعاون الاقتصادي والتنمية أو أي مصدر ثانوي آخر مستوى الدليل إلى ذلك.",
         "period_ar": "من 2023 إلى 2024 (المصادر الرسمية)، مع سياق من منظمة التعاون الاقتصادي والتنمية في 2026؛ ولا تتوفر أدلة على المراحل اللاحقة",
         "universe_ar": "التعليمات والإرشادات الرسمية للبنك المركزي اليمني – عدن، مع سياق منسوب إلى منظمة التعاون الاقتصادي والتنمية (OECD)، وفصل الإطار عن التنفيذ والنتائج.",
         "canonical_route": "/evidence/VIS-OECD-FCP-TIMELINE/",

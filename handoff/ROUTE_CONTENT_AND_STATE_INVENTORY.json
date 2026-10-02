@@ -2,8 +2,8 @@
  "schema": "YFIE_ROUTE_CONTENT_AND_STATE_INVENTORY/1.3",
  "purpose": "Design recipient's map of every route, its family, bindings, collections, next actions and the states Design must cover. Derived; not authority.",
  "generated_from": {
-  "production_master_sha256": "0fb6c16de6dbb8ea85698d77fbf2a6f76fe392e7489928c18b33fcc0dc7515d4",
-  "page_specs_sha256": "1e9a63f2bc1c81b989129ab6407625cec2f64e8ee8967e862987a099ae709900",
+  "production_master_sha256": "2b609e1928f8d7b5ac751ce00fd00f5f85dc4aa28ea2b5367449ea98f1113779",
+  "page_specs_sha256": "4b43636f72264bf427d14319197f1ad076c3d2b2b950cb0991dbb09e9a41d6f9",
   "generator": "scripts/handoff_inventory.py"
  },
  "counts": {
@@ -796,7 +796,7 @@
     "ar": "dist/ar/evidence/CLM-001/index.html"
    },
    "title_en": "Latest representative account-ownership measure available",
-   "title_ar": "أحدث قياس سكاني ممثل متاح لامتلاك الحساب",
+   "title_ar": "أحدث قياس ممثل متاح لامتلاك الحساب",
    "sections": 2,
    "section_rows_split_by_language": false,
    "evidence_ids": [
@@ -1295,7 +1295,7 @@
     "en": "dist/en/evidence/CLM-017/index.html",
     "ar": "dist/ar/evidence/CLM-017/index.html"
    },
-   "title_en": "Latest monthly POS release listed by CBY-Aden: January 2026 (page checked 26 September 2026)",
+   "title_en": "Latest monthly point-of-sale (POS) release listed by CBY-Aden: January 2026 (page checked 26 September 2026)",
    "title_ar": "أحدث إصدار شهري لنقاط البيع لدى البنك المركزي اليمني – عدن: يناير 2026 (اطُّلع على الصفحة في 26 سبتمبر 2026)",
    "sections": 2,
    "section_rows_split_by_language": false,
@@ -1420,7 +1420,7 @@
     "ar": "dist/ar/evidence/CLM-021/index.html"
    },
    "title_en": "Observed fall in borrowers and portfolio of SFD-supported microfinance programmes during 2015",
-   "title_ar": "تراجع مرصود في المقترضين والمحفظة لدى برامج التمويل الأصغر المدعومة من الصندوق الاجتماعي للتنمية خلال 2015",
+   "title_ar": "تراجع مرصود في المقترضين ومحفظة القروض لدى برامج التمويل الأصغر المدعومة من الصندوق الاجتماعي للتنمية خلال 2015",
    "sections": 2,
    "section_rows_split_by_language": false,
    "evidence_ids": [
@@ -2133,7 +2133,7 @@
     "ar": "dist/ar/evidence/CLM-044/index.html"
    },
    "title_en": "An alternative residual model is not the canonical remittance baseline",
-   "title_ar": "نموذج المتبقي البديل ليس خط الأساس المعتمد للتحويلات",
+   "title_ar": "نموذج بديل قائم على متبقي ميزان المدفوعات ليس خط الأساس المعتمد للتحويلات",
    "sections": 2,
    "section_rows_split_by_language": false,
    "evidence_ids": [
@@ -2443,7 +2443,7 @@
     "ar": "dist/ar/evidence/CLM-054/index.html"
    },
    "title_en": "Borrower, saver and portfolio figures come from different sources and definitions and do not yet form one trend",
-   "title_ar": "تأتي أرقام المقترضين والمدخرين والمحفظة من مصادر وتعريفات مختلفة، ولا تشكل بعدُ اتجاهًا واحدًا",
+   "title_ar": "تأتي أرقام المقترضين والمدخرين ومحفظة القروض من مصادر وتعريفات مختلفة، ولا تشكل بعدُ اتجاهًا واحدًا",
    "sections": 2,
    "section_rows_split_by_language": false,
    "evidence_ids": [
@@ -2908,7 +2908,7 @@
     "ar": "dist/ar/evidence/MFI-SPINE-2015-Q4/index.html"
    },
    "title_en": "2015 Q4 microfinance observation with a portfolio contradiction",
-   "title_ar": "مشاهدة التمويل الأصغر للربع الرابع 2015 مع تعارض في قيمة المحفظة",
+   "title_ar": "مشاهدة التمويل الأصغر للربع الرابع 2015 مع تعارض في قيمة محفظة القروض",
    "sections": 2,
    "section_rows_split_by_language": false,
    "evidence_ids": [
@@ -3674,7 +3674,7 @@
     "ar": "dist/ar/evidence/VIS-INCLUSION-TRANSMISSION/index.html"
    },
    "title_en": "Financial inclusion is a connected system, not a single score",
-   "title_ar": "الشمول المالي منظومة مترابطة، لا درجة واحدة",
+   "title_ar": "الشمول المالي منظومة مترابطة لا تُختزل في رقم واحد",
    "sections": 2,
    "section_rows_split_by_language": false,
    "evidence_ids": [
@@ -4617,7 +4617,7 @@
     "en": "dist/en/payments/index.html",
     "ar": "dist/ar/payments/index.html"
    },
-   "title_en": "Payments: POS terminals reported by the Central Bank of Yemen – Aden rose from 561 to 1,473 between March 2025 and January 2026; how many people use them is not measured",
+   "title_en": "Payments: point-of-sale (POS) terminals reported by the Central Bank of Yemen – Aden rose from 561 to 1,473 between March 2025 and January 2026; how many people use them is not measured",
    "title_ar": "المدفوعات: ارتفع عدد أجهزة نقاط البيع التي يُبلغ عنها البنك المركزي اليمني – عدن من 561 إلى 1,473 بين مارس 2025 ويناير 2026؛ أما عدد من يستخدمونها فغير مقيس",
    "sections": 9,
    "section_rows_split_by_language": true,

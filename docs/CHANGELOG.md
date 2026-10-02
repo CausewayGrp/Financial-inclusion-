@@ -1,5 +1,26 @@
 # Repository Change Log
 
+## 2026-10-02 — Release candidate RC-5: Part B editorial passes B2 (Arabic) and B3 (English)
+
+Transaction `audit/release_candidate/rc_5_editorial.py` through `run_stage.py` (Master `0fb6c16de6db` → `2b609e1928f8`;
+454 cells; ledger and run report in `audit/release_candidate/runs/`), with `rc_5_stage_inputs.py` installing the Arabic
+period mappings of the provider matrix in the visual design contract. Every change is listed with FROM, TO and reason in
+`audit/release_candidate/ARABIC_EDITORIAL_LEDGER.md` (B2: 122 applied) and `ENGLISH_EDITORIAL_LEDGER.md` (B3: 150 applied,
+135 with their Arabic pair); no number, unit, period, universe or limit changed. Independent review before commit, Arabic
+and English: both NOT ACCEPTABLE before fixes (Arabic: 1 blocking, ISO period cells displayed reversed on `/ar/providers/`;
+English: 1 blocking, governorates called districts), every blocking and should-fix finding applied; English finding 15
+(a gloss for "P0") is deferred to B15.
+
+- **B2 a–e:** the Arabic observations recorded in `design/ESCALATIONS.md`; one Arabic term per concept; ISO dates in
+  Arabic prose; one form of the Findex fieldwork window; further defects on the main pages.
+- **B2 f (A3 escalation):** accessible summaries that restated their figure's boundary drop the restating sentence.
+- **B2 g, h:** the provider matrix prints Arabic periods and states (new `22_PROVIDERS_DATA` columns
+  `reference_state_ar`, `reference_period_ar`) and a governed context lead-in (UI-VIS-MATRIX-CONTEXT, "Context:" / «السياق:»).
+- **B3:** the English pass — plain register, consistent terms, and meta descriptions written as sentences of 155
+  characters or fewer.
+- Renderer: the matrix's Arabic dates (`date_ar`) and context lead-in; the citation preview wraps long isolated identifiers at 320 px.
+  13 social images regenerated (their frame text changed); the rest stay byte-identical.
+
 ## 2026-10-02 — Release candidate RC-4: Part B items B5, B7, B8, B9
 
 Transaction `audit/release_candidate/rc_4_partb_strings.py` through `run_stage.py` (Master `3c6c66beddedb` → `0fb6c16de6db`;

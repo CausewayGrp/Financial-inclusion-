@@ -550,6 +550,9 @@ class Content:
                             o["label_text"] = val
                     elif not isinstance(val, dict):
                         o[k] = val
+                # RC-5 (B2 g): a governed Arabic period, where the row has one, is the period the Arabic edition prints
+                if lang == "ar" and o.get("date_ar"):
+                    o["date"] = o["date_ar"]
                 # the names the D1 renderer used
                 o["unit"] = o.get("unit_text", "")
                 o["series_label"] = o.get("series_label_text", "")
@@ -595,6 +598,7 @@ class Content:
             chain = self.visual("RV-CWR-009", lang)
             out["_context_events"] = [e for e in chain["objects"].get("reform_events") or [] if e["id"] in ("REF-PAY-011", "REF-PAY-012", "REF-PAY-013")]
             out["labels"]["class_pso"] = self.t("UI-VIS-CAT-PRV-CLASS-PSO", lang) if "UI-VIS-CAT-PRV-CLASS-PSO" in self.ui else ""
+            out["labels"]["context"] = self.t("UI-VIS-MATRIX-CONTEXT", lang) if "UI-VIS-MATRIX-CONTEXT" in self.ui else ""   # RC-5 (B2 h)
             out["matrix_headings"] = {k: (self.t(k, lang) if k in self.ui else "") for k in
                                       ("UI-VIS-MATRIX-AUTHORITY", "UI-VIS-MATRIX-UNIVERSE", "UI-VIS-MATRIX-STATUS", "UI-VIS-MATRIX-NEGATIVE", "UI-VIS-MATRIX-OPERATION")}
         return out

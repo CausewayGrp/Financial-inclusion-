@@ -208,7 +208,7 @@ dialog.search::backdrop{background:rgba(23,33,43,.55)}
 .search-input{width:100%;padding:12px 14px;border:1px solid var(--rule-2);background:var(--paper);font-size:var(--fs-body)}
 .search-input:focus-visible{outline-offset:0}
 .search-status{font-size:var(--fs-clock);color:var(--ink-2);min-height:1.4em}
-.cite-preview{flex-basis:100%;border-top:1px solid var(--rule);padding-top:8px}.cite-preview .cite-h{margin:0;font-size:var(--fs-clock);font-weight:600;color:var(--ink-2)}.cite-preview .cite-text{margin:4px 0 0;font-size:var(--fs-src);color:var(--ink-2);overflow-wrap:anywhere}
+.cite-preview{flex-basis:100%;border-top:1px solid var(--rule);padding-top:8px}.cite-preview .cite-h{margin:0;font-size:var(--fs-clock);font-weight:600;color:var(--ink-2)}.cite-preview .cite-text{margin:4px 0 0;font-size:var(--fs-src);color:var(--ink-2);overflow-wrap:anywhere}.cite-preview .cite-text bdi{white-space:normal;overflow-wrap:anywhere}
 .reuse-once{border-inline-start:3px solid var(--rule-2);padding-inline-start:10px}.src-also{margin:8px 0 0;font-size:var(--fs-src)}
 @media print{.cite-preview,[data-print]{display:none}}
 .search-type{margin-top:6px;padding:6px 10px;border:1px solid var(--rule-2);background:var(--paper);font-size:var(--fs-src);max-width:100%}

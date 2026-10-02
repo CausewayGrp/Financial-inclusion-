@@ -903,7 +903,8 @@ def provider_matrix(v: dict, cite_label: str, origin: str | None, heading: str =
         ctx_link = f'\u00a0<a class="source-locator" href="{esc(e["source"])}" rel="noopener noreferrer" target="_blank" aria-label="{esc(L["source"])} {esc(e["label_text"])}">↗</a>' if str(e.get("source", "")).startswith("http") else ""
         ctx_html += f'<li>{bdi(e.get("date"))}{joined(["", ctx_label])}{ctx_link}</li>'
     # UNKNOWN first, then the institution events as context (the contract's known_gap: never a named universe)
-    ctx_cell = unknown + (f'<ul class="evl ctx">{ctx_html}</ul>' if ctx else "")
+    ctx_lead = f'<p class="cl ctx-l">{esc(L["context"])}</p>' if L.get("context") else ""   # RC-5 (B2 h): the governed lead-in
+    ctx_cell = unknown + (f'{ctx_lead}<ul class="evl ctx">{ctx_html}</ul>' if ctx else "")
     rows.append(f'<li class="prow pso" data-provider-class="PSO"><{sub} class="cls">{pso_label}</{sub}><div class="cells">{cell(0, unknown)}{cell(1, unknown)}'
                 f'{cell(2, ctx_cell)}{cell(3, unknown)}{cell(4, unknown)}</div></li>')
     authorities = list(dict.fromkeys(e["authority_text"] for e in status + negative if e.get("authority_text")))
@@ -931,7 +932,8 @@ def provider_matrix(v: dict, cite_label: str, origin: str | None, heading: str =
         trows = [[dim(0), auth], [dim(1), f'{esc(u["count_state_text"])}: {cnt}. {iso_run(u["named_text"])}'],
                  [dim(2), esc(u["events_text"]) + (f': {ev_txt}' if ev_txt else "")], [dim(3), neg_txt], [dim(4), unk]]
         tables.append(table(caption_of(v, esc(u["class_text"])), ["", esc(L["what_it_shows"])], trows))
-    ctx_txt = sep(v).join([unk] + [f'{bdi(e.get("date"))} <span dir="auto">{esc(e["label_text"])}</span>' for e in ctx])
+    ctx_items = [f'{bdi(e.get("date"))} <span dir="auto">{esc(e["label_text"])}</span>' for e in ctx]
+    ctx_txt = unk + ((sep(v) + esc(L["context"]) + " " + sep(v, "comma").join(ctx_items)) if ctx_items and L.get("context") else "".join(sep(v) + x for x in ctx_items))
     tables.append(table(caption_of(v, pso_label), ["", esc(L["what_it_shows"])],
                         [[dim(0), unk], [dim(1), unk], [dim(2), ctx_txt], [dim(3), unk], [dim(4), unk]]))
     return frame_open(v, heading) + panel + frame_close(v, cite_label, origin, "".join(tables), heading=heading)

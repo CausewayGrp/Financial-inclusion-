@@ -4,7 +4,7 @@
     "theme": "People / access",
     "claim_type": "MEASURED_LEVEL",
     "headline_en": "Latest representative account-ownership measure available",
-    "headline_ar": "أحدث قياس سكاني ممثل متاح لامتلاك الحساب",
+    "headline_ar": "أحدث قياس ممثل متاح لامتلاك الحساب",
     "copy_en": "The latest representative observation of account ownership in Yemen published by the World Bank remains 11.9%. World Bank Data reports it for 2022; it comes from the Yemen Global Findex 2021 study, fielded from 7 November 2022 to 9 January 2023. The Global Findex 2025 edition adds 2024 observations for many economies, but no newer Yemen observation.",
     "copy_ar": "تظل أحدث مشاهدة سكانية ممثلة ينشرها البنك الدولي لامتلاك الحساب في اليمن عند 11.9%. ويعرضها موقع بيانات البنك الدولي لسنة 2022، وهي مستمدة من دراسة اليمن ضمن موجة Global Findex 2021 التي نُفذت ميدانيًا من 7 نوفمبر 2022 إلى 9 يناير 2023. وتضيف نسخة Global Findex 2025 مشاهدات لعام 2024 في اقتصادات عديدة، لكنها لا تضيف مشاهدة أحدث لليمن.",
     "evidence_badge": "PRIMARY_WEIGHTED_SURVEY",
@@ -33,7 +33,7 @@
     "claim_type": "DERIVED_SAME_WAVE_GAP",
     "headline_en": "A measured gender gap in account ownership",
     "headline_ar": "فجوة مقاسة بين النساء والرجال في امتلاك الحساب",
-    "copy_en": "In the 2021 Global Findex wave for Yemen (fieldwork 7 November 2022 – 9 January 2023; World Bank data year 2022), 18.35% of men and 5.44% of women aged 15 and over in the areas the survey covered had an account, a difference of 12.91 percentage points.",
+    "copy_en": "In the 2021 Global Findex wave for Yemen (fieldwork 7 November 2022 to 9 January 2023; World Bank data year 2022), 18.35% of men and 5.44% of women aged 15 and over in the areas the survey covered had an account, a difference of 12.91 percentage points.",
     "copy_ar": "في موجة 2021 من المؤشر العالمي للشمول المالي (Global Findex) الخاصة باليمن (العمل الميداني من 7 نوفمبر 2022 إلى 9 يناير 2023؛ سنة البيانات لدى البنك الدولي 2022)، بلغت نسبة من يملكون حسابًا 18.35% بين الرجال و5.44% بين النساء بعمر 15 سنة فأكثر في المناطق التي شملها المسح، بفارق 12.91 نقطة مئوية.",
     "evidence_badge": "PRIMARY_SURVEY_PLUS_APPROVED_DERIVATION",
     "evidence_inputs": [
@@ -332,7 +332,7 @@
     "headline_en": "Financial-literacy activity does not establish capability outcomes",
     "headline_ar": "أنشطة الثقافة المالية لا تثبت نتائج في القدرات المالية",
     "copy_en": "Global Money Week records of the Central Bank of Yemen – Aden (CBY-Aden) document financial-literacy activities during 2023–2025. Separately, the OECD/INFE 2023 adult financial-literacy survey, which covered 1,000 respondents in Yemen between 11 March and 1 April 2023, reports a financial well-being score of 15 out of 100 for Yemen and an overall financial-literacy score of 42 out of 100. These are different evidence classes: evidence that activities took place does not establish population capability or programme effectiveness.",
-    "copy_ar": "توثق سجلات الأسبوع العالمي للمال لدى البنك المركزي اليمني – عدن تنفيذ أنشطة للثقافة المالية خلال 2023–2025. وبشكل منفصل، يسجل مسح OECD/INFE لعام 2023 للثقافة المالية لدى البالغين، الذي شمل في اليمن 1,000 مستجيب خلال الفترة من 11 مارس إلى 1 أبريل 2023، لليمن 15 من 100 في الرفاه المالي و42 من 100 في النتيجة الإجمالية للثقافة المالية. وهذان نوعان مختلفان من الأدلة؛ فإثبات تنفيذ الأنشطة لا يثبت مستوى القدرات المالية لدى السكان ولا فعالية البرنامج.",
+    "copy_ar": "توثق سجلات الأسبوع العالمي للمال لدى البنك المركزي اليمني – عدن تنفيذ أنشطة للثقافة المالية خلال 2023–2025. وبشكل منفصل، يسجل مسح OECD/INFE لعام 2023 للثقافة المالية لدى البالغين، الذي شمل في اليمن 1,000 مستجيب خلال الفترة من 11 مارس إلى 1 أبريل 2023، لليمن 15 من 100 في الرفاه المالي و42 من 100 في النتيجة الإجمالية للثقافة المالية. وهذان نوعان مختلفان من الأدلة؛ فإثبات تنفيذ الأنشطة لا يثبت مستوى القدرات المالية لدى السكان ولا فاعلية البرنامج.",
     "evidence_badge": "PRIMARY_PROGRAMME_ACTIVITY_PLUS_SEPARATE_POPULATION_EVIDENCE",
     "evidence_inputs": [
       "SRC-CBY-GMW-2023-001",
@@ -341,7 +341,7 @@
       "SRC-OECD-INFE-2023"
     ],
     "does_not_prove_en": "The OECD/INFE scores of 15 out of 100 (financial well-being) and 42 out of 100 (financial literacy) are not results of Global Money Week activity. Programme effectiveness is not established: that would require an evaluation with a baseline and appropriate follow-up measurement, which the activity records do not provide.",
-    "does_not_prove_ar": "لا تمثل نتيجتا مسح OECD/INFE، أي 15 من 100 في الرفاه المالي و42 من 100 في الثقافة المالية، نتاجًا لأنشطة الأسبوع العالمي للمال. ولا تثبت هذه الأدلة فعالية البرنامج، إذ يتطلب ذلك تقييمًا يتضمن خط أساس وقياس متابعة مناسبًا، وهو ما لا توفره سجلات الأنشطة.",
+    "does_not_prove_ar": "لا تمثل نتيجتا مسح OECD/INFE، أي 15 من 100 في الرفاه المالي و42 من 100 في الثقافة المالية، نتاجًا لأنشطة الأسبوع العالمي للمال. ولا تثبت هذه الأدلة فاعلية البرنامج، إذ يتطلب ذلك تقييمًا يتضمن خط أساس وقياس متابعة مناسبًا، وهو ما لا توفره سجلات الأنشطة.",
     "change_trigger_en": "This record is updated when a newer comparable population measure of financial capability, a programme evaluation or a correction to the source evidence is published.",
     "change_trigger_ar": "يُحدَّث هذا السجل عند توفر قياس سكاني أحدث قابل للمقارنة للقدرات، أو تقييم للبرنامج، أو تصحيح في أدلة المصدر.",
     "public_routes": [
@@ -360,7 +360,7 @@
     "headline_en": "Evidence freshness differs by domain",
     "headline_ar": "حداثة الأدلة غير متساوية بين المجالات",
     "copy_en": "The evidence here is not equally current across domains: several payments/regulatory observations are from 2025–2026, while key representative people-side evidence is older.",
-    "copy_ar": "لا تتساوى حداثة الأدلة بين مجالات المنظومة: فعدد من مشاهدات المدفوعات والتنظيم يعود إلى 2025–2026، بينما ترجع أدلة سكانية تمثيلية أساسية إلى فترات أقدم.",
+    "copy_ar": "لا تتساوى حداثة الأدلة بين مجالات المنظومة: فعدد من مشاهدات المدفوعات والتنظيم يعود إلى 2025–2026، بينما ترجع أدلة أساسية ممثلة للسكان إلى فترات أقدم.",
     "evidence_badge": "CROSS_DOMAIN_EVIDENCE_GOVERNANCE",
     "evidence_inputs": [
       "01_DATASET_INDEX",
@@ -436,7 +436,7 @@
     "claim_id": "CLM-017",
     "theme": "Payments",
     "claim_type": "LATEST_EXPOSED_MONTHLY_POS",
-    "headline_en": "Latest monthly POS release listed by CBY-Aden: January 2026 (page checked 26 September 2026)",
+    "headline_en": "Latest monthly point-of-sale (POS) release listed by CBY-Aden: January 2026 (page checked 26 September 2026)",
     "headline_ar": "أحدث إصدار شهري لنقاط البيع لدى البنك المركزي اليمني – عدن: يناير 2026 (اطُّلع على الصفحة في 26 سبتمبر 2026)",
     "copy_en": "The payments page of the Central Bank of Yemen – Aden (CBY-Aden) lists monthly POS releases from March 2025 to January 2026. When the page was checked on 26 September 2026, January 2026 was the latest release listed; no later month is inferred.",
     "copy_ar": "تعرض صفحة المدفوعات لدى البنك المركزي اليمني – عدن إصدارات شهرية لنقاط البيع من مارس 2025 إلى يناير 2026. وعند الاطلاع على الصفحة في 26 سبتمبر 2026 كان إصدار يناير 2026 أحدث إصدار مدرج، من دون استنتاج أي شهر لاحق.",
@@ -548,9 +548,9 @@
     "theme": "Microfinance history",
     "claim_type": "OBSERVED_RUPTURE",
     "headline_en": "Observed fall in borrowers and portfolio of SFD-supported microfinance programmes during 2015",
-    "headline_ar": "تراجع مرصود في المقترضين والمحفظة لدى برامج التمويل الأصغر المدعومة من الصندوق الاجتماعي للتنمية خلال 2015",
+    "headline_ar": "تراجع مرصود في المقترضين ومحفظة القروض لدى برامج التمويل الأصغر المدعومة من الصندوق الاجتماعي للتنمية خلال 2015",
     "copy_en": "Primary tables from the Social Fund for Development (SFD) show active borrowers of SFD-supported reporting programmes falling from 124,917 at end-March 2015 to 106,825 at end-September and 93,118 at end-December, alongside a declining reported portfolio across the verified source snapshots.",
-    "copy_ar": "تُظهر الجداول الأصلية للصندوق الاجتماعي للتنمية تراجع المقترضين النشطين لدى البرامج المدعومة من الصندوق والمُبلِّغة إليه من 124,917 في نهاية مارس 2015 إلى 106,825 في نهاية سبتمبر و93,118 في نهاية ديسمبر، بالتوازي مع انخفاض المحفظة كما وردت في المصدر عبر اللقطات الموثقة.",
+    "copy_ar": "تُظهر الجداول الأصلية للصندوق الاجتماعي للتنمية تراجع المقترضين النشطين لدى البرامج المدعومة من الصندوق والمُبلِّغة إليه من 124,917 في نهاية مارس 2015 إلى 106,825 في نهاية سبتمبر و93,118 في نهاية ديسمبر، بالتوازي مع انخفاض محفظة القروض كما وردت في المصدر عبر اللقطات الموثقة.",
     "evidence_badge": "PRIMARY_ADMINISTRATIVE_OBSERVATIONS",
     "evidence_inputs": [
       "77_MFI_TEMPORAL_SPINE",
@@ -1408,9 +1408,9 @@
     "theme": "Microfinance / structural reading",
     "claim_type": "SEPARATE_BOUNDED_ANCHORS",
     "headline_en": "Borrower, saver and portfolio figures come from different sources and definitions and do not yet form one trend",
-    "headline_ar": "تأتي أرقام المقترضين والمدخرين والمحفظة من مصادر وتعريفات مختلفة، ولا تشكل بعدُ اتجاهًا واحدًا",
+    "headline_ar": "تأتي أرقام المقترضين والمدخرين ومحفظة القروض من مصادر وتعريفات مختلفة، ولا تشكل بعدُ اتجاهًا واحدًا",
     "copy_en": "Among providers reporting to the Social Fund for Development (SFD), verified primary tables record 93,118 active borrowers at end-2015 and 88,445 at end-2020. A 2024 policy paper citing SFD/SMED data reports 78,686 at end-2023; the set of providers it covers has not been verified. The same paper reports what it calls 3.3 million “active savers” in 2023 and a nominal portfolio of about YER44 billion; the verified 2020 anchors are 1,611,206 savers/depositors and YER33.379 billion. “Active savers” and “savers/depositors” have not been shown to be the same measure, and both portfolio figures are nominal rials: between December 2020 and December 2023 the average market rate published by the Central Bank of Yemen – Aden (CBY-Aden) moved from about 793 to about 1,529 rials per US dollar, and the evidence base does not record which rial valuation, across Yemen's divided monetary areas, the portfolio figures use, so no real or US-dollar change can be derived from them. Because the 2023 primary source document, the exact set of providers covered, saver definition/deduplication and period bridge are not yet available in the evidence base for direct verification, these are separate reference points, each with stated limits, not a trend. Together they do not establish unique people, real credit growth, broader inclusion, improved borrower outcomes or causality.",
-    "copy_ar": "لدى مقدمي الخدمات الذين يرفعون بياناتهم إلى الصندوق الاجتماعي للتنمية، تسجل الجداول الأصلية الموثقة 93,118 مقترضًا نشطًا في نهاية 2015 و88,445 في نهاية 2020. وتورد ورقة سياسات منشورة في 2024 تستند إلى بيانات SFD/SMED عدد 78,686 مقترضًا لنهاية 2023، ولم يُتحقق بعد من مجموعة مقدمي الخدمات التي يغطيها. وتورد الورقة نفسها ما تسميه 3.3 مليون «مدخر نشط» في 2023 ومحفظة اسمية تقارب 44 مليار ريال، مقابل نقاط مرجعية موثقة لعام 2020 قدرها 1,611,206 من المدخرين/المودعين و33.379 مليار ريال. ولم يثبت أن «المدخر النشط» و«المدخر/المودع» مقياس واحد، وقيمتا المحفظة اسميتان بالريال: فبين ديسمبر 2020 وديسمبر 2023 انتقل متوسط سعر الصرف في السوق الذي ينشره البنك المركزي اليمني – عدن من نحو 793 إلى نحو 1,529 ريالًا للدولار، ولا تسجل قاعدة الأدلة أساس التقييم بالريال الذي تستخدمه أرقام المحفظة في ظل انقسام المناطق النقدية في اليمن، ولذلك لا يمكن استخلاص تغير حقيقي أو تغير بالدولار منهما. ولأن المصدر الأصلي لعام 2023، ونطاق مقدمي الخدمات، وتعريف المدخرين وإزالة الازدواج، والربط بين الفترات لم تُتح بعد في قاعدة الأدلة للتحقق المباشر، فهذه نقاط مرجعية منفصلة لكلٍّ منها حدوده، لا اتجاه واحد. ولا تثبت عددًا من الأشخاص الفريدين، أو نموًا حقيقيًا للائتمان، أو اتساع الشمول، أو تحسن نتائج المقترضين، أو علاقة سببية.",
+    "copy_ar": "لدى مقدمي الخدمات الذين يرفعون بياناتهم إلى الصندوق الاجتماعي للتنمية، تسجل الجداول الأصلية الموثقة 93,118 مقترضًا نشطًا في نهاية 2015 و88,445 في نهاية 2020. وتورد ورقة سياسات منشورة في 2024 تستند إلى بيانات SFD/SMED عدد 78,686 مقترضًا لنهاية 2023، ولم يُتحقق بعد من مجموعة مقدمي الخدمات التي يغطيها. وتورد الورقة نفسها ما تسميه 3.3 مليون «مدخر نشط» في 2023 ومحفظة قروض اسمية تقارب 44 مليار ريال، مقابل نقاط مرجعية موثقة لعام 2020 قدرها 1,611,206 من المدخرين/المودعين و33.379 مليار ريال. ولم يثبت أن «المدخر النشط» و«المدخر/المودع» مقياس واحد، وقيمتا محفظة القروض اسميتان بالريال: فبين ديسمبر 2020 وديسمبر 2023 انتقل متوسط سعر الصرف في السوق الذي ينشره البنك المركزي اليمني – عدن من نحو 793 إلى نحو 1,529 ريالًا للدولار، ولا تسجل قاعدة الأدلة أساس التقييم بالريال الذي تستخدمه أرقام محفظة القروض في ظل انقسام المناطق النقدية في اليمن، ولذلك لا يمكن استخلاص تغير حقيقي أو تغير بالدولار منهما. ولأن المصدر الأصلي لعام 2023، ونطاق مقدمي الخدمات، وتعريف المدخرين وإزالة الازدواج، والربط بين الفترات لم تُتح بعد في قاعدة الأدلة للتحقق المباشر، فهذه نقاط مرجعية منفصلة لكلٍّ منها حدوده، لا اتجاه واحد. ولا تثبت عددًا من الأشخاص الفريدين، أو نموًا حقيقيًا للائتمان، أو اتساع الشمول، أو تحسن نتائج المقترضين، أو علاقة سببية.",
     "evidence_badge": "SEPARATE_BOUNDED_ANCHORS",
     "evidence_inputs": [
       "202",

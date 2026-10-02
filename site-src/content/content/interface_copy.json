@@ -805,8 +805,8 @@
   },
   {
     "ui_id": "UI-VIS-CAT-PRV-LIMIT-EWALLETS",
-    "label_en": "Official sources report 7 e-wallets (2024 Q3), 9 e-wallets (2025 H1), 8 licensed e-wallets (2025-09-10) and more than 9 event participants (2026-01-22). The counts stay separate; no named current list of licensed wallets and payment service providers has yet been established.",
-    "label_ar": "تورد المصادر الرسمية 7 محافظ إلكترونية (الربع الثالث 2024)، و9 محافظ (النصف الأول 2025)، و8 محافظ مرخصة (2025-09-10)، وأكثر من 9 مشاركين في فعالية (2026-01-22). وتبقى هذه الأعداد منفصلة، ولم تُحسم بعد قائمة حالية بأسماء المحافظ ومقدمي خدمات الدفع المرخصين.",
+    "label_en": "Official sources report 7 e-wallets (2024 Q3), 9 e-wallets (2025 H1), 8 licensed e-wallets (10 September 2025) and more than 9 event participants (22 January 2026). The counts stay separate; no named current list of licensed wallets and payment service providers has yet been established.",
+    "label_ar": "تورد المصادر الرسمية 7 محافظ إلكترونية (الربع الثالث 2024)، و9 محافظ (النصف الأول 2025)، و8 محافظ مرخصة (10 سبتمبر 2025)، وأكثر من 9 مشاركين في فعالية (22 يناير 2026). وتبقى هذه الأعداد منفصلة، ولم تُحسم بعد قائمة حالية بأسماء المحافظ ومقدمي خدمات الدفع المرخصين.",
     "use_rule": "Pre-Tranche-C P4 (V-D5). Chart label: provider_limit value 'Official objects report 7 e-wallets (2024 Q3), 9 e-wallets (2025 H1), 8 licensed e-wallets (2025-09-10), and >9 event participants (2026-01-22). Preserve separately; named positive current wallet/PSP universe remains open.'."
   },
   {
@@ -968,7 +968,7 @@
   {
     "ui_id": "UI-VIS-UNIT-INDEX-2021",
     "label_en": "Index, 2021 = 100",
-    "label_ar": "مؤشر، 2021 = 100",
+    "label_ar": "رقم قياسي، 2021 = 100",
     "use_rule": "Pre-Tranche-C P5.3. Unit of an indexed path (each series divided by its own 2021 value, × 100)."
   },
   {
@@ -1717,8 +1717,8 @@
   },
   {
     "ui_id": "UI-HERO-THIS-RESOURCE-PRESENTS-THE-STRONGEST",
-    "label_en": "This resource presents the strongest defensible answer while keeping scope, limits and source visible.",
-    "label_ar": "يعرض هذا المورد أقوى إجابة تسندها الأدلة، مع إبقاء النطاق والحدود والمصدر ظاهرة.",
+    "label_en": "This resource gives the answer the evidence best supports and shows its scope, limits and source, so you can verify it.",
+    "label_ar": "يقدّم هذا المورد الإجابة التي تسندها الأدلة أكثر من سواها، ويُظهر نطاقها وحدودها ومصدرها لتتمكن من التحقق منها.",
     "use_rule": "build.py hero()"
   },
   {
@@ -1843,8 +1843,8 @@
   },
   {
     "ui_id": "UI-MA-PRIORITY",
-    "label_en": "Priority",
-    "label_ar": "الأولوية",
+    "label_en": "Measurement priority",
+    "label_ar": "أولوية القياس",
     "use_rule": "build.py measurement_cards()"
   },
   {
@@ -2614,5 +2614,11 @@
     "label_en": "Citation preview",
     "label_ar": "معاينة الاستشهاد",
     "use_rule": "RC-4 (Part B B9). The visible preview of the page's or record's citation before it is copied (UI-JS-COPY-CITATION copies it)."
+  },
+  {
+    "ui_id": "UI-VIS-MATRIX-CONTEXT",
+    "label_en": "Context:",
+    "label_ar": "السياق:",
+    "use_rule": "RC-5 (Part B B2 h; RC-3 review escalation). VIS-PROVIDER-OBSERVABILITY: printed before the payment-system operators' institution events (REF-PAY-011…013) in the status dimension and its fallback cell, so they read as context, not as status decisions (scripts/yfie/visuals.py provider_matrix)."
   }
 ]

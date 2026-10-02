@@ -649,6 +649,7 @@
       "fields": {
        "class": "provider_class",
        "date": "reference_state",
+       "date_ar": "reference_state_ar",
        "source": "authoritative_source_id",
        "count": "universe_count",
        "count_state": "count_state",
@@ -748,6 +749,7 @@
       },
       "fields": {
        "date": "reference_period",
+       "date_ar": "reference_period_ar",
        "count": "reported_value",
        "unit": "unit",
        "state": "semantic_state",
