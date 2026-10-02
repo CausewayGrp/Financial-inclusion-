@@ -306,6 +306,24 @@ condition C3), recorded by the session meeting the before-merge conditions:
   (export frames, social frames). Implemented in the release-candidate pull request. Design impact: the frame's foot is
   unchanged; the text alternative loses its repeated tail. Open until that pull request lands.`
 
+Raised in the release-candidate pull request (2 October 2026), by the independent review of transaction RC-3: drawing the
+provider observability matrix (RC-3 item 18) brings two gaps into view that only governed content can close:
+
+- `NEEDS_CONTROLLED_CONTENT — VIS-PROVIDER-OBSERVABILITY (/providers/ and its record, Arabic edition) — Arabic text for
+  four period values — the matrix prints the governed period of each universe and wallet-count row through \`date_token\`
+  (\`scripts/yfie/visuals.py\` provider_matrix), and four of them are English-only Master values with no Arabic column:
+  "2024 Q3" and "2025 H1" (22_PROVIDERS_DATA wallet-count rows WCR-001 and WCR-002, \`reference_period\`), "2026-01-22 event"
+  (WCR-004) and "observed 2026-09-07" (PUC-MFI-2026-01, \`reference_state\`). The Arabic pages therefore show the words
+  "event" and "observed" and the codes "Q3" and "H1" in Latin script, in the drawn form and the fallback table. Needed:
+  \`reference_period_ar\` / \`reference_state_ar\` (or a governed period vocabulary) in the Master, read by the loader for the
+  Arabic edition. Code does not author Arabic data text; the values are unchanged meanwhile.`
+- `NEEDS_CONTROLLED_CONTENT — VIS-PROVIDER-OBSERVABILITY — a lead-in for the payment-system-operators context events —
+  the row prints "Unknown — not zero" in every dimension (the contract's \`known_gap\`), and in the status dimension the
+  three institution events (REF-PAY-011…013) follow as context; only a dotted rule marks them as context on screen, and
+  the fallback table joins them to the UNKNOWN label with a semicolon, so a table or screen-reader user can take a
+  restructuring, a founding assembly and a board meeting for status decisions. Needed: a governed label (for example
+  "Context:" / «للسياق:») printed before the events in both forms. Code does not author it.`
+
 ## Closed at D2 (27 September 2026) — resolved by an authority the repository already holds
 
 - Arabic credit line (`NEEDS_CONTROLLED_CONTENT — RV-CWR-001 and every visual contract with a credit`): the contract

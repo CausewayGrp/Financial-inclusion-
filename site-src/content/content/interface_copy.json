@@ -404,7 +404,7 @@
   {
     "ui_id": "UI-VIS-UNIT-PP",
     "label_en": "Percentage points",
-    "label_ar": "نقاط مئوية",
+    "label_ar": "نقطة مئوية",
     "use_rule": "Pre-Tranche-C P4 (V-D5). Chart label: unit value 'percentage points'."
   },
   {
@@ -2353,8 +2353,8 @@
   },
   {
     "ui_id": "UI-JS-COMPARE-SELECTED",
-    "label_en": "records selected",
-    "label_ar": "سجلات مختارة",
+    "label_en": "Records selected: {n}",
+    "label_ar": "السجلات المختارة: {n}",
     "use_rule": "site-src/app.js COMPARE_LABEL_UI['selected']"
   },
   {
@@ -2494,5 +2494,77 @@
     "label_en": "Partial list: 8 of the 16 challenges recorded in the source are shown.",
     "label_ar": "قائمة جزئية: تُعرض 8 من أصل 16 تحديًا مسجّلًا في المصدر.",
     "use_rule": "RC-1 item 6, Path B (design/ESCALATIONS.md, D6: VIS-FIRM-CONSTRAINTS names sixteen challenges and resolves eight rows). Frame note printed by scripts/yfie/visuals.py firm_constraints through the contract's frame_labels; removed the day FFO-2022-CH-09…16 are verified against the original and bound."
+  },
+  {
+    "ui_id": "UI-JS-SEARCH-RESULTS-OF",
+    "label_en": "Showing {n} of {m} results",
+    "label_ar": "النتائج المعروضة: {n} من {m}",
+    "use_rule": "RC-3 item 11. site-src/app.js search status when fewer hits are shown than match ({n} shown, {m} matching); UI-JS-SEARCH-RESULTS stays for when all hits are shown."
+  },
+  {
+    "ui_id": "UI-VIS-MATRIX-AUTHORITY",
+    "label_en": "Issuing authority or source",
+    "label_ar": "الجهة المصدرة أو المصدر",
+    "use_rule": "RC-3 item 18. VIS-PROVIDER-OBSERVABILITY matrix dimension heading (scripts/yfie/visuals.py provider_matrix); wording from the contract's governed alt text."
+  },
+  {
+    "ui_id": "UI-VIS-MATRIX-UNIVERSE",
+    "label_en": "Dated list or count",
+    "label_ar": "القائمة أو العدد المؤرخ",
+    "use_rule": "RC-3 item 18. VIS-PROVIDER-OBSERVABILITY matrix dimension heading."
+  },
+  {
+    "ui_id": "UI-VIS-MATRIX-STATUS",
+    "label_en": "Dated status decisions",
+    "label_ar": "قرارات الوضع المؤرخة",
+    "use_rule": "RC-3 item 18. VIS-PROVIDER-OBSERVABILITY matrix dimension heading."
+  },
+  {
+    "ui_id": "UI-VIS-MATRIX-NEGATIVE",
+    "label_en": "Official lists of unlicensed names",
+    "label_ar": "قوائم رسمية بالأسماء غير المرخصة",
+    "use_rule": "RC-3 item 18. VIS-PROVIDER-OBSERVABILITY matrix dimension heading."
+  },
+  {
+    "ui_id": "UI-VIS-MATRIX-OPERATION",
+    "label_en": "Evidence of operation",
+    "label_ar": "أدلة التشغيل",
+    "use_rule": "RC-3 item 18. VIS-PROVIDER-OBSERVABILITY matrix dimension heading."
+  },
+  {
+    "ui_id": "UI-VIS-CAT-PRV-CLASS-PSO",
+    "label_en": "Payment-system operators",
+    "label_ar": "مشغلو أنظمة الدفع",
+    "use_rule": "RC-3 item 18. VIS-PROVIDER-OBSERVABILITY fifth class row (UNKNOWN in every dimension; no governed universe row)."
+  },
+  {
+    "ui_id": "UI-JS-SEARCH-TYPE-FACET",
+    "label_en": "Result type",
+    "label_ar": "نوع النتيجة",
+    "use_rule": "RC-3 item 19. site-src/app.js accessible name of the search result-type filter (EAD-06)."
+  },
+  {
+    "ui_id": "UI-JS-SEARCH-TYPE-ALL",
+    "label_en": "All types",
+    "label_ar": "كل الأنواع",
+    "use_rule": "RC-3 item 19. site-src/app.js the result-type filter's no-type state."
+  },
+  {
+    "ui_id": "UI-JS-SEARCH-SEE-ALL-EVIDENCE",
+    "label_en": "See all matching evidence records",
+    "label_ar": "اعرض كل سجلات الأدلة المطابقة",
+    "use_rule": "RC-3 item 19. site-src/app.js the way on when hits are capped: the query carried to the Evidence directory (?q=, EAD-06)."
+  },
+  {
+    "ui_id": "UI-EXTERNAL-NEW-TAB",
+    "label_en": "(opens in a new tab)",
+    "label_ar": "(يُفتح في علامة تبويب جديدة)",
+    "use_rule": "RC-3 item 19. Visually hidden inside every external source link that opens a new tab (scripts/yfie; D5 escalation)."
+  },
+  {
+    "ui_id": "UI-VIS-VALUE-UNIT-PER-ROW",
+    "label_en": "Value (unit given in each row)",
+    "label_ar": "القيمة (الوحدة مذكورة في كل صف)",
+    "use_rule": "RC-3 item 19. Header of a fallback-table value column whose rows carry different units (scripts/yfie/visuals.py; D6 escalation)."
   }
 ]

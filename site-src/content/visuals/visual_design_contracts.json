@@ -1,7 +1,7 @@
 {
   "schema_version": "1.0",
   "contract_id": "VISUAL-DESIGN-CONTRACT",
-  "authority_master_sha256": "ecc228beec41bda3bf596c5638da7ff54af63da5e26c89b5db316733076263ef",
+  "authority_master_sha256": "3c6c66beddedb90db6a54b21c5689b0852ec8fd90538df75af628655f5247c39",
   "rule": "Design-layer controlled input. It assigns every governed visual contract (Master 11) a design tier and, for SIGNATURE and CORE_ANALYTICAL visuals, declares which governed rows a chart binds to and how they are drawn. It never carries a fact, number, label or sentence: values come from Master data rows, text from Master contract/evidence fields, and legend labels from the governed interface copy (UI-VIS-*). The generator resolves every binding and fails on any unresolved ID, any value that disagrees with its guard, or any visual left untiered.",
   "tiers": {
     "SIGNATURE": "Distinctive to this product, decision-useful, drawable from governed rows and safe when detached. Designed first; gets a full data contract.",
@@ -880,7 +880,7 @@
             "guard_of": "CLM-037: maximum annual-growth difference 2022-2024 of about 0.0032 percentage points",
             "unit_label": {
               "en": "Percentage points",
-              "ar": "نقاط مئوية",
+              "ar": "نقطة مئوية",
               "ui_id": "UI-VIS-UNIT-PP"
             }
           }
@@ -2305,7 +2305,7 @@
             "grammar_state": "DERIVED",
             "unit_label": {
               "en": "Percentage points",
-              "ar": "نقاط مئوية",
+              "ar": "نقطة مئوية",
               "ui_id": "UI-VIS-UNIT-PP"
             }
           },
@@ -2320,7 +2320,7 @@
             "grammar_state": "DERIVED",
             "unit_label": {
               "en": "Percentage points",
-              "ar": "نقاط مئوية",
+              "ar": "نقطة مئوية",
               "ui_id": "UI-VIS-UNIT-PP"
             }
           },
@@ -2335,7 +2335,7 @@
             "grammar_state": "DERIVED",
             "unit_label": {
               "en": "Percentage points",
-              "ar": "نقاط مئوية",
+              "ar": "نقطة مئوية",
               "ui_id": "UI-VIS-UNIT-PP"
             }
           },
@@ -2350,7 +2350,7 @@
             "grammar_state": "DERIVED",
             "unit_label": {
               "en": "Percentage points",
-              "ar": "نقاط مئوية",
+              "ar": "نقطة مئوية",
               "ui_id": "UI-VIS-UNIT-PP"
             }
           }

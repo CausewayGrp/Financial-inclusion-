@@ -1,5 +1,22 @@
 # Repository Change Log
 
+## 2026-10-02 — Release candidate RC-3: governed interface strings (items 11, 12, 18, 19, 20)
+
+Transaction `audit/release_candidate/rc_3_interface_strings.py` through `run_stage.py` (Master `ecc228beec41` → `3c6c66beddedb`;
+ledger and run report in `audit/release_candidate/runs/`). Every label is the brief's own wording, English and Arabic together.
+
+- **New strings** (04): UI-JS-SEARCH-RESULTS-OF (item 11); the five provider-matrix headings and UI-VIS-CAT-PRV-CLASS-PSO
+  (item 18); UI-JS-SEARCH-TYPE-FACET, UI-JS-SEARCH-TYPE-ALL, UI-JS-SEARCH-SEE-ALL-EVIDENCE, UI-EXTERNAL-NEW-TAB and
+  UI-VIS-VALUE-UNIT-PER-ROW (item 19). Their runtime and renderer use ships in G4.
+- **Changed strings**: UI-JS-COMPARE-SELECTED in label-value form, "Records selected: {n}" / «السجلات المختارة: {n}», with the
+  Compare status line in `site-src/app.js` filling it (item 19); UI-VIS-UNIT-PP Arabic «نقطة مئوية» (item 20); four source
+  records' resource category "Measurement methods and international references" / «مناهج القياس ومراجع دولية» (item 12).
+- **Provider observability matrix** (VIS-PROVIDER-OBSERVABILITY, /providers/ and its record): drawn now that its six labels
+  are governed (DL-D7-001). The payment-system-operators row prints UNKNOWN in every dimension, the three institution
+  events following as context in the status cell and its fallback table (the contract's `known_gap`; `scripts/yfie/visuals.py`).
+- **Independent review**: ACCEPTABLE. Two findings need governed content and are escalated in `design/ESCALATIONS.md`: Arabic
+  text for four English-only period values the Arabic matrix now shows, and a lead-in marking the operators' context events.
+
 ## 2026-10-02 — Release candidate RC-2: trust copy (items 9, 10, 13, 14, 15)
 
 Transaction `audit/release_candidate/rc_2_trust_copy.py` through `run_stage.py` (Master `ebf03d6fe4cf` → `ecc228beec41`;

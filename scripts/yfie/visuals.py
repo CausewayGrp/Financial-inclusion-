@@ -777,7 +777,8 @@ def provider_matrix(v: dict, cite_label: str, origin: str | None, heading: str =
     the dimensions stacked. Fallback: one two-column table per class, dimension by dimension (the same words).
     Until the five column headings and the fifth row's class label are governed (ESCALATIONS.md, D6), the matrix is
     unshipped: the contract renders as its text frame — the governed alt text, scope and detached frame — with no
-    placeholder (D7, DL-D7-001); the day the six labels are governed, this form draws unchanged."""
+    placeholder (D7, DL-D7-001). The six labels were governed in RC-3 (2 October 2026) and the form draws; the one change made then:
+    the payment-system-operators status cell prints UNKNOWN before its context events, as the contract's known_gap states."""
     if not matrix_governed(v):
         return text_frame(v, cite_label, origin, heading)
     L = v["labels"]; O = v["objects"]; sub = sub_heading(heading)
@@ -866,7 +867,8 @@ def provider_matrix(v: dict, cite_label: str, origin: str | None, heading: str =
         ctx_label = f'<span dir="auto">{esc(e["label_text"])}</span>'
         ctx_link = f'\u00a0<a class="source-locator" href="{esc(e["source"])}" rel="noopener noreferrer" target="_blank" aria-label="{esc(L["source"])} {esc(e["label_text"])}">↗</a>' if str(e.get("source", "")).startswith("http") else ""
         ctx_html += f'<li>{bdi(e.get("date"))}{joined(["", ctx_label])}{ctx_link}</li>'
-    ctx_cell = f'<ul class="evl ctx">{ctx_html}</ul>' if ctx else unknown
+    # UNKNOWN first, then the institution events as context (the contract's known_gap: never a named universe)
+    ctx_cell = unknown + (f'<ul class="evl ctx">{ctx_html}</ul>' if ctx else "")
     rows.append(f'<li class="prow pso" data-provider-class="PSO"><{sub} class="cls">{pso_label}</{sub}><div class="cells">{cell(0, unknown)}{cell(1, unknown)}'
                 f'{cell(2, ctx_cell)}{cell(3, unknown)}{cell(4, unknown)}</div></li>')
     authorities = list(dict.fromkeys(e["authority_text"] for e in status + negative if e.get("authority_text")))
@@ -892,7 +894,7 @@ def provider_matrix(v: dict, cite_label: str, origin: str | None, heading: str =
         trows = [[dim(0), auth], [dim(1), f'{esc(u["count_state_text"])}: {cnt}. {iso_run(u["named_text"])}'],
                  [dim(2), esc(u["events_text"]) + (f': {ev_txt}' if ev_txt else "")], [dim(3), neg_txt], [dim(4), unk]]
         tables.append(table(caption_of(v, esc(u["class_text"])), ["", esc(L["what_it_shows"])], trows))
-    ctx_txt = sep(v).join(f'{bdi(e.get("date"))} <span dir="auto">{esc(e["label_text"])}</span>' for e in ctx) or unk
+    ctx_txt = sep(v).join([unk] + [f'{bdi(e.get("date"))} <span dir="auto">{esc(e["label_text"])}</span>' for e in ctx])
     tables.append(table(caption_of(v, pso_label), ["", esc(L["what_it_shows"])],
                         [[dim(0), unk], [dim(1), unk], [dim(2), ctx_txt], [dim(3), unk], [dim(4), unk]]))
     return frame_open(v, heading) + panel + frame_close(v, cite_label, origin, "".join(tables), heading=heading)
