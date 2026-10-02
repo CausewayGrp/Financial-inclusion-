@@ -1,5 +1,15 @@
 # Repository Change Log
 
+## 2026-10-02 — Release candidate: start (G0)
+
+Branch `code/release-candidate-fixes` from `main` at `38a9a97` (pull request #8 merged; its before-merge conditions met). Baseline
+green: checksums current, `WEBSITE REPOSITORY VALIDATION PASS`; Production Master SHA-256 `17db032b…8690b`, Page Specs
+`d4574804…b69aa`, both as found. This commit saves the owner's brief verbatim as `audit/release_candidate/INSTRUCTIONS.md`
+(indexed in `audit/INDEX.md`; the folder is classed `CURRENT_PROGRAMME_RECORD`) and changes nothing else. The pull request
+description carries the checklist of every Part A and Part B item and the progress log.
+
+Not declared: PUBLIC RELEASE READY. Not claimed: WCAG conformance.
+
 ## 2026-10-02 — Pull request #8: the before-merge conditions C1–C5 met, in records only
 
 `audit/PR8_INDEPENDENT_ACCEPTANCE.md` returned MERGE AFTER CONDITIONS on the production runtime (head `74d79a1`). This commit
