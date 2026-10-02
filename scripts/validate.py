@@ -1634,7 +1634,8 @@ _P1_NAV_LAYERS=((r'<aside class="spine[^"]*">','aside'),          # the side and
                 (r'<details class="more mt12">','details'),        # "all evidence records on this question" (the baseline's all-records list)
                 (r'<section class="qa" id="related">','section'),  # the related-questions list
                 (r'<article class="compact[^"]*"[^>]*>','article'), # a bound object: its clock, title, universe, summary and boundary belong to the record it opens
-                (r'<li class="compact[^"]*"[^>]*>','li'))          # a chronology event and its sources line (the baseline's chronology-sources)
+                (r'<li class="compact[^"]*"[^>]*>','li'),          # a chronology event and its sources line (the baseline's chronology-sources)
+                (r'<div class="cite-preview">','div'))             # B9: the citation preview quotes the page's own title (and a record's governed citation) by design
 # A figure is its own layer: its panel clocks, state labels, governed alt text, table and frame foot are the non-visual
 # equivalent of a drawing, asserted against the visual contract by P3-G02 and design/reference/check_visuals.py — a
 # different job, as the baseline's own exclusion said. Governed text that a contract's alt_text restates verbatim is a
@@ -2543,6 +2544,33 @@ try:
     if "prompt.hidden=records.length>=2" not in _js4: errors.append('RC-G4 missing runtime contract: the Compare prompt only while fewer than two records are selected')
 except Exception as _x:
     errors.append('RC-G4 unreadable '+repr(_x))
+
+# RC-GB (release candidate, Part B B5, B7, B8, B9): the governed strings the brief gives are where they belong.
+try:
+    _uiB={r['ui_id']:r for r in json.load(open(C/'content/interface_copy.json',encoding='utf-8'))}
+    _srcB=json.load(open(C/'sources/source_reference_map.json',encoding='utf-8'))
+    _regB={'Enforcement decision','Circular or instruction','Regulatory decision','Regulation','Official list or roster'}
+    _nreg=sum(1 for s in _srcB if s.get('document_label') in _regB and str(s.get('primary_url') or '').startswith('http'))
+    for _lang in ('en','ar'):
+        _d=(DIST/_lang/'data/index.html').read_text(encoding='utf-8')
+        _lab=lambda k: _html.escape(_uiB[k][f'label_{_lang}'],quote=False)
+        if f'<p class="small reuse-once" data-reuse-terms>{_uiB["UI-DATA-REUSE-TERMS-ONCE"][f"label_{_lang}"]}</p>' not in _html.unescape(_d): errors.append(f'RC-GB B8 the reuse terms are not stated above the source list {_lang}')
+        _m=re.search(r'<details class="source-locator-details source-regulatory-details grp" id="regulatory" open><summary>([^<]*) <span class="count">\(<bdi dir="ltr">(\d+)</bdi>\)',_d)
+        if not _m or _m.group(1)!=_lab('UI-DATA-GROUP-REGULATORY') or int(_m.group(2))!=_nreg: errors.append(f'RC-GB B5 the regulatory group is missing or does not hold all {_nreg} regulatory sources {_lang}')
+        if _uiB['UI-DATA-GROUP-REGULATORY-SCOPE'][f'label_{_lang}'] not in _html.unescape(_d): errors.append(f'RC-GB B5 the regulatory group has no scope line {_lang}')
+        _c=(DIST/_lang/'evidence/compare/index.html').read_text(encoding='utf-8')
+        if _uiB['UI-JS-COMPARE-NOT-OFFERED'][f'label_{_lang}'] not in _html.unescape(_c.split('id="yfie-ui"')[0]): errors.append(f'RC-GB B7 the Compare intro does not carry the selected-set sentence {_lang}')
+        for _f in sorted((DIST/_lang).rglob('index.html')):
+            _h=_f.read_text(encoding='utf-8')
+            if 'data-cite-text' not in _h or 'data-print' not in _h:
+                errors.append(f'RC-GB B9 page without its citation preview or print control {_f.relative_to(DIST)}'); break
+    _jsB=(ROOT/'site-src/app.js').read_text(encoding='utf-8')
+    for _tok,_lbl in (("T('UI-JS-COMPARE-NOT-OFFERED')",'B7 the selected-set sentence under the unknown-record error'),
+                      ("preview.textContent.replace(/\\s+/g,' ').trim()",'B9 the copied citation is the previewed one'),
+                      ("$$('[data-print]').forEach(b=>b.addEventListener('click',()=>window.print()))",'B9 the print control prints')):
+        if _tok not in _jsB: errors.append(f'RC-GB missing runtime contract: {_lbl}')
+except Exception as _x:
+    errors.append('RC-GB unreadable '+repr(_x))
 
 print(f'HTML={len(list(DIST.rglob("*.html")))} ERRORS={len(errors)} WARN={len(warns)}')
 if warns:

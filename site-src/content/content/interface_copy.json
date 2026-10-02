@@ -1993,8 +1993,8 @@
   },
   {
     "ui_id": "UI-DATA-EVERY-SOURCE-HERE-CAN-BE",
-    "label_en": "Every source here can be cited and opened where it was originally published. Each card says whether the source’s reuse terms have been assessed; where they have not, this resource offers no copy of the source for download or republication, so check the source’s own terms before redistributing its material.",
-    "label_ar": "يمكن الاستشهاد بكل مصدر هنا وفتحه حيث نُشر أصلًا. وتبيّن كل بطاقة ما إذا كانت شروط إعادة استخدام المصدر قد قُيّمت؛ وحيث لم تُقيَّم، لا يقدم هذا المورد نسخة من المصدر للتنزيل أو إعادة النشر، فتحقّق من شروط المصدر نفسه قبل إعادة توزيع مادته.",
+    "label_en": "Every source here can be cited and opened where it was originally published. Each card says whether the source’s reuse terms have been assessed; where they have not, this resource offers no copy of the source for download or republication.",
+    "label_ar": "يمكن الاستشهاد بكل مصدر هنا وفتحه حيث نُشر أصلًا. وتبيّن كل بطاقة ما إذا كانت شروط إعادة استخدام المصدر قد قُيّمت؛ وحيث لم تُقيَّم، لا يقدم هذا المورد نسخة من المصدر للتنزيل أو إعادة النشر.",
     "use_rule": "build.py source_directory()"
   },
   {
@@ -2566,5 +2566,53 @@
     "label_en": "Value (unit given in each row)",
     "label_ar": "القيمة (الوحدة مذكورة في كل صف)",
     "use_rule": "RC-3 item 19. Header of a fallback-table value column whose rows carry different units (scripts/yfie/visuals.py; D6 escalation)."
+  },
+  {
+    "ui_id": "UI-DATA-GROUP-REGULATORY",
+    "label_en": "Rules, decisions and official lists",
+    "label_ar": "القواعد والقرارات والقوائم الرسمية",
+    "use_rule": "RC-4 (Part B B5). /data/ heading of the group of sources whose document_label is Enforcement decision, Circular or instruction, Regulatory decision, Regulation, or Official list or roster (scripts/yfie/families.py data_sources)."
+  },
+  {
+    "ui_id": "UI-DATA-GROUP-REGULATORY-SCOPE",
+    "label_en": "These are the regulatory documents held in this evidence base, not a complete register of Yemen's financial regulation.",
+    "label_ar": "هذه هي الوثائق التنظيمية المتوفرة في قاعدة الأدلة هذه، وليست سجلًا كاملًا للتنظيم المالي في اليمن.",
+    "use_rule": "RC-4 (Part B B5). /data/ the regulatory group's one scope line."
+  },
+  {
+    "ui_id": "UI-DATA-DOCUMENT-TYPE-NOT-RECORDED",
+    "label_en": "Document type not recorded",
+    "label_ar": "نوع الوثيقة غير مسجّل",
+    "use_rule": "RC-4 (Part B B5; EAD-07). The document type shown, and the type-filter group, for a listed source with no governed document_label."
+  },
+  {
+    "ui_id": "UI-JS-COMPARE-NOT-OFFERED",
+    "label_en": "Compare offers a selected set of evidence records in this edition. A record that is not offered here can still be read in full on its own page; its absence from Compare is not a judgement about it.",
+    "label_ar": "تتيح أداة المقارنة في هذا الإصدار مجموعة مختارة من سجلات الأدلة. ويمكن قراءة أي سجل غير متاح هنا كاملًا في صفحته، وغيابه عن المقارنة ليس حكمًا عليه.",
+    "use_rule": "RC-4 (Part B B7). site-src/app.js: printed under the Compare error for a record not available for comparison (reason 'unknown'); the same sentence stands in the Compare intro (03 /evidence/compare/ section 1)."
+  },
+  {
+    "ui_id": "UI-DATA-REUSE-TERMS-ONCE",
+    "label_en": "This resource links to original sources and quotes them briefly. It has not assessed the reuse terms of any source; check each source's own terms before reusing its content.",
+    "label_ar": "يربط هذا المورد بالمصادر الأصلية ويقتبس منها باختصار. ولم يُقيّم شروط إعادة استخدام أي مصدر؛ فتحقّق من شروط كل مصدر قبل إعادة استخدام محتواه.",
+    "use_rule": "RC-4 (Part B B8). /data/ stated once above the source list; each card keeps its own reuse-terms label."
+  },
+  {
+    "ui_id": "UI-CITE-PAGE-LINE",
+    "label_en": "{product}. CauseWay. {version}.",
+    "label_ar": "{product}. CauseWay. {version}.",
+    "use_rule": "RC-4 (Part B B9; review finding 4). The citation line of a page that is not an Evidence Record, after its title: the record line UI-CITE-RECORD-LINE without the record name — product, publisher, edition; no new words (scripts/yfie/render.py page_citation)."
+  },
+  {
+    "ui_id": "UI-PRINT-THIS-PAGE",
+    "label_en": "Print this page",
+    "label_ar": "اطبع هذه الصفحة",
+    "use_rule": "RC-4 (Part B B9). The visible print control on every page (scripts/yfie/render.py page_util); the runtime calls the browser's print."
+  },
+  {
+    "ui_id": "UI-CITATION-PREVIEW",
+    "label_en": "Citation preview",
+    "label_ar": "معاينة الاستشهاد",
+    "use_rule": "RC-4 (Part B B9). The visible preview of the page's or record's citation before it is copied (UI-JS-COPY-CITATION copies it)."
   }
 ]

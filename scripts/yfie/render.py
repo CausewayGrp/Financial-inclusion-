@@ -257,7 +257,7 @@ def evidence_record(page: dict, shell: dict) -> str:
         more += f'<div class="qa"><h3 class="rubric">{esc(L["reading_guidance"])}</h3><div class="body">{paras(page["reading_guidance"]["paragraphs"])}</div></div>'
     qa.append(f'<div class="qa" id="q7">{rubric(L["more"], 7, "h2")}<details class="more"><summary>{esc(L["more_intro"])}</summary>{more}</details></div>')
     util = (f'<section class="util" data-record-id="{esc(page["id"])}"><div class="ref"><b>{esc(L["reference"])}</b> {bdi(page["id"])}</div>'
-            f'<div class="actions"><button type="button" class="tbtn evidence-cite-button" data-cite>{esc(L["cite"])}</button>'
+            f'<div class="actions">{cite_tools(shell, page["route"], page["citation"], record=True)}'
             + (f'<a href="{page["compare_href"]}" data-compare-entry>{esc(L["compare"])}</a>' if page.get("compare_href") else "")
             + f'<a href="{page["hrefs"]["rights"]}">{esc(L["reuse"])}</a>'
             f'<a href="{page["hrefs"]["corrections"]}">{esc(L["history"])}</a><a href="{page["hrefs"]["report"]}">{esc(L["report"])}</a></div><p class="small">{esc(L["reuse_note"])}</p></section>')
@@ -305,7 +305,7 @@ def home(page: dict, shell: dict) -> str:
     parts.insert(2, strip(index))   # the phone's in-page navigation after the first figure group; the foot spine keeps only the edges (DEBT-014)
     edges = [(f'{L["records_heading"]} ({len(page["records"])})', [f'<a href="{r["href"]}">{esc(r["title"])}</a>' for r in page["records"]]),
              (L["flow"], [f'<a href="{h}">{esc(t)}</a><br><span class="small">{esc(d)}</span>' for h, t, d in ((page["hrefs"]["readings"], L["readings_nav"], L["cta_readings"]), (page["hrefs"]["measurement"], L["measurement_nav"], L["cta_measurement"]), (page["hrefs"]["data"], L["data_nav"], L["cta_data"]))], L["side"])]
-    body = f'<article class="obj page-obj">{"".join(parts)}{page_util(shell)}</article>{spine(index, edges)}{spine(index, edges, foot=True, foot_index=False)}'
+    body = f'<article class="obj page-obj">{"".join(parts)}{page_util(shell, page)}</article>{spine(index, edges)}{spine(index, edges, foot=True, foot_index=False)}'
     return head(page, shell, "/") + header(shell) + body + footer(shell, print_foot(shell, "/", page["title"]))
 
 
@@ -345,15 +345,47 @@ def reading(page: dict, shell: dict) -> str:
     related = f'<section class="qa" id="related" data-reading-related><h2>{esc(L["related"])}</h2><div><div class="objs">{rel}</div><p class="small mt12"><a href="{L["readings_index_href"]}">{esc(L["all"])}</a></p></div></section>' if page["related"] else ""
     edges = [(L["trace"], [f'<a href="{x["href"]}">{esc(x["proposition"])}</a>' for x in page["trace"]]),
              (L["return"], [f'<a href="{b["href"]}">{esc(b["label"])}</a>' for b in page["return_to"]])]
-    body = f'<article class="obj page-obj">{head_}{bnd}{strip(index)}<div class="essay">{"".join(essay)}</div>{trace}{sources}{related}{page_util(shell)}</article>{spine(index, edges)}{spine(index, edges, foot=True, foot_index=False)}'   # the strip after the boundary is the phone's map of the essay (DEBT-014)
+    body = f'<article class="obj page-obj">{head_}{bnd}{strip(index)}<div class="essay">{"".join(essay)}</div>{trace}{sources}{related}{page_util(shell, page)}</article>{spine(index, edges)}{spine(index, edges, foot=True, foot_index=False)}'   # the strip after the boundary is the phone's map of the essay (DEBT-014)
     return head(page, shell, page["route"], kind="article") + header(shell) + body + footer(shell, print_foot(shell, page["route"], page["title"]))
 
 
-def page_util(shell: dict) -> str:
-    """The page's own actions at the foot of its object (cite, report), reachable at every width — the product bar
-    shows them only on wide screens."""
+_CITE_LTR = re.compile(r'(?<![\w-])((?:CLM|VIS|RV|SRC|EP|MA|CWR|YSC|XW|PSE|DS|REF|OBS|FFO|WB|PB)-[A-Za-z0-9-]*\d[A-Za-z0-9-]*|CauseWay)(?![\w-])')
+
+
+def cite_isolate(html_text: str) -> str:
+    """B9 review (blocking): in an Arabic citation a record or source identifier next to "CauseWay" ran as one
+    left-to-right run ("CLM-001. CauseWay."), so the publisher read before the record. Each identifier and the publisher's
+    name is isolated, as the text layer isolates dates; the copied text is unchanged. Applied to escaped text outside tags."""
+    parts = re.split(r'(<[^>]+>)', html_text)
+    return "".join(p if p.startswith("<") else _CITE_LTR.sub(r'<bdi dir="ltr" class="nw">\1</bdi>', p) for p in parts)
+
+
+def page_citation(shell: dict, title: str) -> str:
+    """B9: the citation of a page that is not an Evidence Record — its governed title, then the governed page line
+    UI-CITE-PAGE-LINE (product, publisher, edition; the record line UI-CITE-RECORD-LINE without the record name). The
+    record citation adds its period, population, boundary and sources; the canonical URL follows either."""
+    t = str(title or "").strip().rstrip(".")
+    return f'{t if t.endswith(("?", "؟", "!")) else t + "."} {shell["cite_page_line"]}'   # never "?." after a question title
+
+
+def cite_tools(shell: dict, route: str, citation: str, record: bool = False) -> str:
+    """B9: the citation preview (what "Copy citation" copies, shown before copying) and the print control. The canonical
+    URL is the build's (absolute once the origin is set); the runtime writes the page's own canonical into it."""
     L = shell["labels"]
-    return (f'<section class="util"><div class="actions"><button type="button" class="tbtn" data-cite>{esc(L["cite"])}</button>'
+    canon = DISC.url(DISC.localized(route, shell["lang"]), DISC.origin())
+    lead = f' {esc(L["current_record"])}' if record else ""
+    cls = "tbtn evidence-cite-button" if record else "tbtn"
+    return (f'<div class="cite-preview"><p class="cite-h">{esc(L["cite_preview"])}</p><p class="cite-text" data-cite-text>{cite_isolate(iso(esc(citation)))}{lead}'
+            f' <bdi dir="ltr" data-cite-url>{esc(canon)}</bdi></p></div><button type="button" class="{cls}" data-cite>{esc(L["copy_citation"])}</button>'
+            f'<button type="button" class="tbtn" data-print>{esc(L["print"])}</button>')
+
+
+def page_util(shell: dict, page: dict | None = None) -> str:
+    """The page's own actions at the foot of its object (cite, print, report), reachable at every width — the product
+    bar shows them only on wide screens."""
+    L = shell["labels"]
+    tools = cite_tools(shell, page["route"], page_citation(shell, page.get("title"))) if page else f'<button type="button" class="tbtn" data-cite>{esc(L["cite"])}</button>'
+    return (f'<section class="util"><div class="actions">{tools}'
             f'<a href="{shell["contact_href"]}">{esc(L["report"])}</a></div></section>')
 
 
@@ -364,7 +396,7 @@ def print_foot(shell: dict, route: str, title: str, citation: str = "") -> str:
     by the print system only (hidden on screen); no word is authored."""
     origin = DISC.origin()
     canon = DISC.url(DISC.localized(route, shell["lang"]), origin)
-    cite = iso(esc(citation)) if citation else f'{iso(esc(title))} — {esc(shell["product"])} — <bdi dir="ltr">{esc(canon)}</bdi>'
+    cite = cite_isolate(iso(esc(citation))) if citation else f'{cite_isolate(iso(esc(page_citation(shell, title))))} <bdi dir="ltr">{esc(canon)}</bdi>'   # B9: the one template
     return (f'<div class="print-foot"><p><b>{esc(shell["product"])}</b> · {esc(shell["edition"])} · <bdi dir="ltr" class="canon">{esc(canon)}</bdi></p>'
             f'<p class="cite">{cite}</p></div>')
 

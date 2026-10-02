@@ -55,12 +55,18 @@ async function copyText(text,button,promptLabel){
   }
   catch(e){prompt(promptLabel,text);}
 }
+// B9 (release candidate): one citation per page, shown in its preview before it is copied; every cite control copies
+// exactly the preview's text, with the page's own canonical address written into it.
+const canonicalHref=$('link[rel="canonical"]')?.href||location.href;
+$$('[data-cite-url]').forEach(e=>{e.textContent=canonicalHref;});
 $$('[data-cite]').forEach(b=>b.addEventListener('click',async()=>{
-  const canonical=$('link[rel="canonical"]')?.href||location.href;
+  const preview=$('[data-cite-text]');
   const governed=$('meta[name="yfie-citation"]')?.content?.trim();
-  const text=governed ? governed+' '+T('UI-JS-CURRENT-RECORD')+canonical : document.title+' — '+canonical;
+  const text=preview ? preview.textContent.replace(/\s+/g,' ').trim()
+    : (governed ? governed+' '+T('UI-JS-CURRENT-RECORD')+canonicalHref : document.title+' — '+canonicalHref);
   await copyText(text,b,T('UI-JS-COPY-CITATION'));
 }));
+$$('[data-print]').forEach(b=>b.addEventListener('click',()=>window.print()));
 $$('[data-source-cite]').forEach(b=>b.addEventListener('click',async()=>{
   const text=(b.dataset.sourceCitation||'').trim(); if(!text)return;
   await copyText(text,b,T('UI-JS-COPY-SOURCE-REFERENCE'));
@@ -222,8 +228,9 @@ if(sourceInput){
   const status=$('[data-source-filter-status]'), noResults=$('[data-source-no-results]'), locatorDetails=$('.source-locator-details');
   const apply=()=>{
     const term=normalize(sourceInput.value.trim()); let shown=0, visibleLocators=0;
-    records.forEach(r=>{const ok=!term||normalize(r.dataset.sourceSearch||'').includes(term);r.hidden=!ok;if(ok){shown++;if(r.classList.contains('source-locator'))visibleLocators++;}});
-    if(term&&visibleLocators&&locatorDetails)locatorDetails.open=true;
+    records.forEach(r=>{const ok=!term||normalize(r.dataset.sourceSearch||'').includes(term);r.hidden=!ok;if(ok){shown++;if(r.classList.contains('source-locator'))visibleLocators++;if(term){const d=r.closest('details');if(d)d.open=true;}}});
+    $$('[data-source-also]').forEach(r=>{r.hidden=!(!term||normalize(r.dataset.sourceSearch||'').includes(term));});   // B5: a link row, never counted
+    if(term&&visibleLocators&&locatorDetails&&!locatorDetails.open)locatorDetails.open=true;
     if(noResults)noResults.hidden=shown!==0;
     if(status)status.textContent=TF(shown===1?'UI-JS-SOURCES-SHOWN-ONE':'UI-JS-SOURCES-SHOWN',{n:shown});   // TOOL-19
   };
@@ -312,7 +319,8 @@ if(compareSelects.length>=2&&out){
   };
   const showUrlError=r=>{
     const detail=r.reason==='count'?errorText.count:r.reason==='unknown'?errorText.unknown+(r.ids||[]).join(', '):errorText.malformed;
-    out.innerHTML=`<div class="compare-url-error" role="alert" data-compare-url-error="${esc(r.reason)}"><h3>${esc(errorText.title)}</h3><p>${esc(detail)}</p><p>${esc(errorText.note)}</p></div>`;
+    const offered=r.reason==='unknown'?`<p data-compare-not-offered>${esc(T('UI-JS-COMPARE-NOT-OFFERED'))}</p>`:'';   // B7
+    out.innerHTML=`<div class="compare-url-error" role="alert" data-compare-url-error="${esc(r.reason)}"><h3>${esc(errorText.title)}</h3><p>${esc(detail)}</p><p>${esc(errorText.note)}</p>${offered}</div>`;
     if(compareStatus)compareStatus.textContent='';
     const cb=$('[data-compare-copy]'); if(cb)cb.disabled=true;   // TOOL-18: never copy a comparison the page is not showing
   };

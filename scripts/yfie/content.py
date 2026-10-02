@@ -18,6 +18,8 @@ from pathlib import Path
 from urllib.parse import quote
 
 ROOT = Path(__file__).resolve().parents[2]
+# B5 (release candidate): the governed document types grouped on /data/ as "Rules, decisions and official lists"
+REGULATORY_LABELS = ("Enforcement decision", "Circular or instruction", "Regulatory decision", "Regulation", "Official list or roster")
 CONTENT = ROOT / "site-src" / "content"
 
 LANGS = ("en", "ar")
@@ -177,6 +179,8 @@ class Content:
         return {
             "lang": lang, "dir": "rtl" if lang == "ar" else "ltr", "other_lang": other,
             "product": self.t("UI-PRODUCT-NAME", lang), "edition": self.t("UI-CONTENT-VERSION", lang),
+            # B9: the governed citation line of a page that is not an Evidence Record (UI-CITE-PAGE-LINE)
+            "cite_page_line": self.tf("UI-CITE-PAGE-LINE", lang, product=self.t("UI-PRODUCT-NAME", lang), version=self.t("UI-CONTENT-VERSION", lang)),
             "labels": {
                 "skip": self.t("UI-HEADER-SKIP-TO-CONTENT", lang), "primary_nav": self.t("UI-HEADER-PRIMARY-NAVIGATION", lang),
                 "trust_nav": self.t("UI-HEADER-TRUST-LINKS", lang), "menu": self.t("UI-HEADER-MENU", lang),
@@ -185,6 +189,9 @@ class Content:
                 "search_status": self.t("UI-SEARCH-SEARCH-STATUS", lang), "search_close": self.t("UI-SEARCH-CLOSE", lang),
                 "new_tab": self.t("UI-EXTERNAL-NEW-TAB", lang),   # release candidate G4 (D5): the visually hidden new-tab cue
                 "cite": self.t("UI-HEADER-CITE-THIS-PAGE", lang), "report": self.t("UI-HEADER-REPORT-AN-ISSUE", lang),
+                # B9 (release candidate): the visible citation preview, its copy action and the print control
+                "cite_preview": self.t("UI-CITATION-PREVIEW", lang), "copy_citation": self.t("UI-JS-COPY-CITATION", lang),
+                "print": self.t("UI-PRINT-THIS-PAGE", lang), "current_record": self.t("UI-JS-CURRENT-RECORD", lang),
                 "copied": self.t("UI-HEADER-COPIED", lang),
                 "lang_switch_name": self.t("UI-LANG-SWITCH-NAME", other), "lang_switch_action": self.t("UI-LANG-SWITCH-ACTION", other),
                 "footer_strapline": self.t("UI-FOOTER-STRAPLINE", lang), "footer_rights": self.t("UI-FOOTER-PUBLISHED-EVIDENCE-REMAINS-ATTRIBUTED-TO", lang),
@@ -286,7 +293,7 @@ class Content:
             return f"{label}: {v}." if v else ""
 
         limitation, measure_limit = self.boundary_parts(obj, lang)
-        parts = [f"{title}.",
+        parts = [title if title.endswith(("?", "؟", "!")) else f"{title}.",   # B9 review: never "?." after a question title
                  self.tf("UI-CITE-RECORD-LINE", lang, product=self.t("UI-PRODUCT-NAME", lang), oid=oid, version=self.t("UI-CONTENT-VERSION", lang)),
                  clause(self.t("UI-CITE-PERIOD", lang), self.loc(obj, "period", lang)),
                  clause(self.t("UI-CITE-POPULATION", lang), self.loc(obj, "universe", lang)),
@@ -512,7 +519,7 @@ class Content:
             "canonical_href": self.href(g.get("canonical_route"), lang),
             "detached_caption": v.get(f"detached_caption_{lang}"),
             "lang": lang, "edition": self.t("UI-CONTENT-VERSION", lang),
-            "count_unit": self.t("UI-VIS-UNIT-COUNT", lang),   # G4 item 7: an Arabic count prints in label-value form   # the product name comes from the shell (every frame reads shell["product"])
+            "count_unit": self.t("UI-VIS-UNIT-COUNT", lang),   # G4 item 7: an Arabic count prints in label-value form
             "labels": {"does_not_establish": lab("UI-VIS-DOES-NOT-ESTABLISH"), "source": lab("UI-VIS-SOURCE"), "full_record": lab("UI-VIS-FULL-RECORD"),
                        "same_year_revision": lab("UI-VIS-SAME-YEAR-REVISION"), "not_comparable": lab("UI-VIS-NOT-COMPARABLE"),
                        "reported": lab("UI-VIS-STATE-REPORTED"), "derived": lab("UI-VIS-STATE-DERIVED"), "unknown": lab("UI-VIS-STATE-UNKNOWN"),
@@ -914,7 +921,7 @@ class Content:
                 s["inventory"] = [{"label": self._INV_LINE.match(x).group(1), "value": self._INV_LINE.match(x).group(2)} for x in lines]
         ar = lang == "ar"
         curated_groups: dict[str, list] = {}
-        supporting, reference = [], []
+        supporting, reference, regulatory, regulatory_also = [], [], [], []
         L = lambda k: self.t(k, lang)  # noqa: E731
         for sid, r in self.sources.items():
             url = self.public_locator(r.get("primary_url"))
@@ -935,14 +942,21 @@ class Content:
                     "date": self.date_words(r.get("document_date"), lang) if display_ready else "",
                     "cite_payload": " · ".join(x for x in [((r.get("display_title_ar") if ar else r.get("display_title")) or "") if display_ready else "", sid, url] if x),
                     "rights_state": L("UI-SRC-REUSE-TERMS-NOT-ASSESSED") if r.get("rights_state") == "NOT_ASSESSED" else L("UI-SRC-REUSE-TERMS-NOT-STATED")}
+            if not r.get("document_label"):   # B5 / EAD-07: a listed source with no governed document type says so
+                card["kind"] = L("UI-DATA-DOCUMENT-TYPE-NOT-RECORDED")
+            card["regulatory"] = r.get("document_label") in REGULATORY_LABELS
             card["kind_line"] = " · ".join(x for x in [card["publisher"], card["kind"], card["date"]] if x)
             if display_ready and r.get("standalone_resource_card_eligible"):
                 card.update({"category": (r.get("resource_category_ar") if ar else r.get("resource_category")) or "", "why": (r.get("why_it_matters_ar") if ar else r.get("why_it_matters")) or "",
                              "does_not_establish": (r.get("does_not_establish_ar") if ar else r.get("does_not_establish")) or ""})
                 curated_groups.setdefault(card["category"], []).append(card)
+                if card["regulatory"]:
+                    regulatory_also.append(card)   # the curated card stays under its category; the group links to it
+            elif card["regulatory"]:
+                regulatory.append(card)            # B5: rules, decisions and official lists, one group
             else:
                 (supporting if dependents else reference).append(card)
-        return {"family": "Data & Source", "route": "/data/", "lang": lang, "title": self.loc(spec, "title", lang), "meta_description": self.loc(spec, "meta_description", lang),
+        return {"family": "Data & Source", "route": "/data/", "regulatory": regulatory, "regulatory_also": regulatory_also, "lang": lang, "title": self.loc(spec, "title", lang), "meta_description": self.loc(spec, "meta_description", lang),
                 "lead": secs[0]["body"] if secs and not secs[0]["heading"] else "", "sections": [s for s in secs if s["heading"]],
                 "curated": [{"category": k, "items": v} for k, v in curated_groups.items()], "supporting": supporting, "reference": reference,
                 "curated_count": sum(len(v) for v in curated_groups.values()), "chronology": self.chronology(lang), "blocks": self.governed_blocks(spec, lang, "/data"),
@@ -953,7 +967,8 @@ class Content:
                            "reference_intro": L("UI-DATA-THESE-REFERENCES-ARE-AVAILABLE-FOR"), "filter": L("UI-DATA-FIND-A-SOURCE-BY-TITLE"), "filter_placeholder": L("UI-DATA-E-G-SRC-CBY"),
                            "no_results": L("UI-DATA-NO-SOURCES-MATCH-THIS-SEARCH"), "rights_note": L("UI-DATA-EVERY-SOURCE-HERE-CAN-BE"), "open_original": L("UI-EVID-OPEN-ORIGINAL-SOURCE"),
                            "copy_reference": L("UI-EVID-COPY-SOURCE-REFERENCE"), "dependents": L("UI-EVID-EVIDENCE-RECORDS-USING-THIS-SOURCE"), "untitled": L("UI-SOURCE-UNTITLED"),
-                           "record": L("UI-SOURCES-SOURCE-RECORD")}}
+                           "record": L("UI-SOURCES-SOURCE-RECORD"), "regulatory": L("UI-DATA-GROUP-REGULATORY"),
+                           "regulatory_scope": L("UI-DATA-GROUP-REGULATORY-SCOPE"), "reuse_once": L("UI-DATA-REUSE-TERMS-ONCE")}}
 
     # ------------------------------------------------------------------------------------------------ reading index, measurement, reference
     def reading_index(self, lang: str) -> dict:

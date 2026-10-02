@@ -253,6 +253,21 @@ def t_compare_prompt(page, base):
     assert page.evaluate("document.querySelector('[data-compare-prompt]').hidden") is False
 
 
+@test("citation and print: the copied citation is exactly the visible preview; every page has a print control")
+def t_cite_preview(page, base):
+    """Part B B9: one citation template, previewed before copying; the canonical address is written into the preview."""
+    page.context.grant_permissions(["clipboard-read", "clipboard-write"])
+    for route in ("/en/people/", "/ar/evidence/CLM-001/"):
+        page.goto(base + route)
+        preview = page.inner_text("[data-cite-text]").strip()
+        assert page.locator("[data-print]").count() >= 1, route
+        assert route in preview, preview                       # the canonical address is in the preview
+        page.click("section.util [data-cite]")
+        page.wait_for_function("navigator.clipboard.readText().then(t=>t.length>0)")
+        copied = page.evaluate("navigator.clipboard.readText()")
+        assert " ".join(copied.split()) == " ".join(preview.split()), (copied, preview)
+
+
 @test("search: a query from the URL is rendered as text, never as markup")
 def t_search_url_state_is_escaped(page, base):
     page.goto(base + "/en/evidence/?q=" + quote('<img src=x onerror=alert(1)>'))

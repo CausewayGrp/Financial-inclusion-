@@ -108,15 +108,20 @@ def next_actions(nx: dict | None, id_: str = "next") -> tuple[str, list]:
     return f'<section class="qa" id="{id_}"><div><h2>{esc(nx["title"])}</h2></div><div><p class="small">{esc(nx["intro"])}</p><nav class="actions" aria-labelledby="next-h">{links}</nav></div></section>'.replace('<h2>', '<h2 id="next-h">', 1), [(id_, nx["title"])]
 
 
+def lead_paragraphs(lead: str) -> str:
+    """A governed lead as its paragraphs: a blank line in the Master starts a new one (the Compare intro, B7)."""
+    return "".join(f"<p>{linkify(iso(esc(x.strip())))}</p>" for x in re.split(r"\n\s*\n", lead) if x.strip())
+
+
 def head_block(page: dict, shell: dict, rubric_text: str = "", question: str = "", lead: str = "", crumb_html: str = "") -> str:
     return (f'<div class="head">{crumb_html}' + (f'<span class="rubric">{esc(rubric_text)}</span>' if rubric_text else "")
             + (f'<p class="q">{esc(question)}</p>' if question else "") + f'<h1 id="page-title">{esc(page["title"])}</h1>'
-            + (f'<div class="st"><p>{linkify(iso(esc(lead)))}</p></div>' if lead else "") + "</div>")
+            + (f'<div class="st">{lead_paragraphs(lead)}</div>' if lead else "") + "</div>")   # B7 review: a blank line starts a paragraph
 
 
 def page_html(page: dict, shell: dict, body: str, index: list, edges: list, kind: str = "website", extra: str = "", foot_index: bool = True) -> str:
     return (head(page, shell, page["route"], kind=kind, extra=extra) + header(shell)
-            + f'<article class="obj page-obj">{body}{page_util(shell)}</article>{spine(index, edges)}{spine(index, edges, foot=True, foot_index=foot_index)}'
+            + f'<article class="obj page-obj">{body}{page_util(shell, page)}</article>{spine(index, edges)}{spine(index, edges, foot=True, foot_index=foot_index)}'
             + footer(shell, print_foot(shell, page["route"], page["title"])))
 
 
@@ -338,7 +343,8 @@ def source_row(c: dict, L: dict, curated: bool = False) -> str:
                 + f'<div class="acts">{open_}{cite}</div>{rights}{deps}</article>')
     if c["display_ready"] and c["title"]:
         return f'<article class="src source-locator" {common}><strong dir="auto">{esc(c["title"])}</strong><span class="kind" dir="auto">{esc(c["kind_line"])}</span>{ref}<div class="acts">{open_}{cite}</div>{rights}{deps}</article>'
-    return f'<article class="src source-locator" {common}><strong>{esc(L["untitled"])}</strong>{ref}<a class="source-url" dir="ltr" href="{esc(c["url"])}" rel="noopener noreferrer" target="_blank">{esc(c["url"])}</a><div class="acts">{cite}</div>{rights}{deps}</article>'
+    kind = f'<span class="kind" dir="auto">{esc(c["kind_line"])}</span>' if c.get("kind_line") else ""   # B5 / EAD-07: "Document type not recorded"
+    return f'<article class="src source-locator" {common}><strong>{esc(L["untitled"])}</strong>{kind}{ref}<a class="source-url" dir="ltr" href="{esc(c["url"])}" rel="noopener noreferrer" target="_blank">{esc(c["url"])}</a><div class="acts">{cite}</div>{rights}{deps}</article>'
 
 
 def data_sources(page: dict, shell: dict) -> str:
@@ -346,11 +352,20 @@ def data_sources(page: dict, shell: dict) -> str:
     parts = [head_block(page, shell, SL["understand_explore_verify"], lead=page["lead"])]
     curated = "".join(f'<div class="cat"><h3>{esc(g["category"])}</h3><div class="objs">{"".join(source_row(c, L, curated=True) for c in g["items"])}</div></div>' for g in page["curated"])
     supporting = "".join(source_row(c, L) for c in page["supporting"])
+    # B5: the regulatory documents in one group with its scope line; a curated one keeps its card and is linked from here
+    also = "".join(f'<p class="src-also" data-source-also data-source-search="{esc(c["search"])}"><a href="#source-{esc(c["id"])}" dir="auto">{esc(c["title"])}</a>'
+                   f' <span class="kind" dir="auto">{esc(c["kind_line"])} · {esc(L["curated"])}</span></p>' for c in page.get("regulatory_also") or [])
+    regulatory = "".join(source_row(c, L) for c in page.get("regulatory") or [])
+    reg_n = len(page.get("regulatory") or []) + len(page.get("regulatory_also") or [])
     reference = "".join(source_row(c, L) for c in page["reference"])
     tool = (f'<section class="qa first" id="directory"><div>{rubric(L["directory"], tag="h2")}</div><div><p class="small">{esc(L["intro"])}</p><p class="small">{esc(L["rights_note"])}</p>'
             f'<div class="search-inline"><input data-source-filter class="search-input" type="search" placeholder="{esc(L["filter_placeholder"])}" aria-label="{esc(L["filter"])}">'
             f'<div class="search-status" data-source-filter-status role="status" aria-live="polite"></div></div>'
+            f'<p class="small reuse-once" data-reuse-terms>{esc(L["reuse_once"])}</p>'   # B8: the reuse terms, stated once above the list
             f'<h3 class="grp" id="curated">{esc(L["curated"])} <span class="count">({bdi(page["curated_count"])})</span></h3><div class="curated">{curated}</div>'
+            + (f'<details class="source-locator-details source-regulatory-details grp" id="regulatory" open><summary>{esc(L["regulatory"])} <span class="count">({bdi(reg_n)})</span></summary>'
+               f'<p class="small">{esc(L["regulatory_scope"])}</p><div class="objs">{regulatory}</div>{also}</details>' if reg_n else "")
+            +
             # The supporting group stays open: it is the only place a locator-only source appears, and
             # `scripts/tests/test_public_tools.py` drives that source's cite control on this page. Closing it by
             # default shortened the page by 44 % but put that governed path behind a disclosure, and Design does not

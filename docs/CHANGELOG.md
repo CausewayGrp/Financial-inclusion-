@@ -1,5 +1,24 @@
 # Repository Change Log
 
+## 2026-10-02 — Release candidate RC-4: Part B items B5, B7, B8, B9
+
+Transaction `audit/release_candidate/rc_4_partb_strings.py` through `run_stage.py` (Master `3c6c66beddedb` → `0fb6c16de6db`;
+ledger and run report in `audit/release_candidate/runs/`). Every string is the brief's wording, English and Arabic; one
+governed citation line (UI-CITE-PAGE-LINE) re-uses the record line's words. Independent review: NOT ACCEPTABLE before fixes
+(1 blocking, 4 should-fix), all applied before commit (ledger `independent_review`).
+
+- **B5 /data/:** "Rules, decisions and official lists" groups the 23 sources whose governed type is an enforcement decision,
+  circular or instruction, regulatory decision, regulation, or official list (the one curated card linked, not duplicated),
+  with its scope line; sources with no governed type show "Document type not recorded" (EAD-07).
+- **B7 Compare:** the "selected set" sentence in the intro and under the "record not available for comparison" error.
+- **B8 /data/:** the reuse terms stated once above the source list; the older directory paragraph drops its closing
+  reuse clause (each card keeps its label).
+- **B9 every page:** a visible citation preview (the record's governed citation, or the page title and UI-CITE-PAGE-LINE,
+  with the canonical address), "Copy citation" copying exactly that text, and "Print this page". In Arabic the record and
+  source identifiers and the publisher's name are isolated left-to-right (the review's blocking finding); no "?." after a
+  question title; the Compare intro keeps its paragraphs.
+- Validator RC-GB, two negative controls and a browser test hold all four.
+
 ## 2026-10-02 — Release candidate Part B, B1: method text on the 13 table-only records
 
 `scripts/yfie/content.py` no longer suppresses the governed method text of the 13 `NO_GOVERNED_CONTRACT__TABLE_ONLY`

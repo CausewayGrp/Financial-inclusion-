@@ -1,8 +1,8 @@
 {
   "schema": "YFIE_PUBLIC_LITERAL_CLOSURE/2.0",
   "audit_version": "2.0 — token-bounded, token-level classification (Pre-Tranche-C P1-D); v1 substring and paragraph-keyword rules removed",
-  "authority_master_sha256": "3c6c66beddedb90db6a54b21c5689b0852ec8fd90538df75af628655f5247c39",
-  "page_specs_sha256": "d0e21e25b5bcfd0ebdac577b9a54aec9e5c07c5e07d0a791aab7e477c66a1485",
+  "authority_master_sha256": "0fb6c16de6dbb8ea85698d77fbf2a6f76fe392e7489928c18b33fcc0dc7515d4",
+  "page_specs_sha256": "1e9a63f2bc1c81b989129ab6407625cec2f64e8ee8967e862987a099ae709900",
   "scope": "Reader-facing Page Spec titles/sections plus governed-copy numeric inventory. Every substantive public numeral must resolve to a governed source-closed object or be explicitly classified as date/period, stable technical identifier, or non-observation system/method metadata.",
   "classification_rule": "UNRESOLVED_SUBSTANTIVE_PUBLIC_NUMBER is a hard validation failure. Route/source presence without an object-level source-closed trace is not sufficient.",
   "record_count": 12792,
@@ -43427,7 +43427,7 @@
       "field": "body_en",
       "token": "2",
       "category": "ALLOWED_METHOD_OR_TOOL_CONSTANT",
-      "context": "Select 2–4 records. Compare definition, period, population or calculation base, geography, unit and method before comparing values. A mismatch is a reason to qualify the comparison, not to hide it; when definitions or populations do not match, “not comparable” is a valid result.\nSelect at least two records."
+      "context": "Select 2–4 records. Compare definition, period, population or calculation base, geography, unit and method before comparing values. A mismatch is a reason to qualify the comparison, not to hide it; when definitions or populations do not match, “not comparable” is a valid result.\n\nCompare offers a selected set of evidence records in this edition. A record that is not offered here can still be read in full on its own page; its absence from Compare is not a judgement about it.\nSelect at least two records."
     },
     {
       "route": "/evidence/compare/",
@@ -43435,7 +43435,7 @@
       "field": "body_en",
       "token": "4",
       "category": "ALLOWED_METHOD_OR_TOOL_CONSTANT",
-      "context": "Select 2–4 records. Compare definition, period, population or calculation base, geography, unit and method before comparing values. A mismatch is a reason to qualify the comparison, not to hide it; when definitions or populations do not match, “not comparable” is a valid result.\nSelect at least two records."
+      "context": "Select 2–4 records. Compare definition, period, population or calculation base, geography, unit and method before comparing values. A mismatch is a reason to qualify the comparison, not to hide it; when definitions or populations do not match, “not comparable” is a valid result.\n\nCompare offers a selected set of evidence records in this edition. A record that is not offered here can still be read in full on its own page; its absence from Compare is not a judgement about it.\nSelect at least two records."
     },
     {
       "route": "/evidence/compare/",
@@ -43443,7 +43443,7 @@
       "field": "body_ar",
       "token": "2",
       "category": "ALLOWED_METHOD_OR_TOOL_CONSTANT",
-      "context": "اختر من 2 إلى 4 سجلات. قارن التعريف والفترة ومجتمع القياس أو قاعدة الاحتساب والنطاق الجغرافي والوحدة والطريقة قبل مقارنة القيم. عدم التطابق سبب لتقييد المقارنة لا لإخفائها، وحين لا تتطابق التعريفات أو المجتمعات يكون الحكم بأنها «غير قابلة للمقارنة» نتيجة صحيحة.\nاختر سجلين على الأقل."
+      "context": "اختر من 2 إلى 4 سجلات. قارن التعريف والفترة ومجتمع القياس أو قاعدة الاحتساب والنطاق الجغرافي والوحدة والطريقة قبل مقارنة القيم. عدم التطابق سبب لتقييد المقارنة لا لإخفائها، وحين لا تتطابق التعريفات أو المجتمعات يكون الحكم بأنها «غير قابلة للمقارنة» نتيجة صحيحة.\n\nتتيح أداة المقارنة في هذا الإصدار مجموعة مختارة من سجلات الأدلة. ويمكن قراءة أي سجل غير متاح هنا كاملًا في صفحته، وغيابه عن المقارنة ليس حكمًا عليه.\nاختر سجلين على الأقل."
     },
     {
       "route": "/evidence/compare/",
@@ -43451,7 +43451,7 @@
       "field": "body_ar",
       "token": "4",
       "category": "ALLOWED_METHOD_OR_TOOL_CONSTANT",
-      "context": "اختر من 2 إلى 4 سجلات. قارن التعريف والفترة ومجتمع القياس أو قاعدة الاحتساب والنطاق الجغرافي والوحدة والطريقة قبل مقارنة القيم. عدم التطابق سبب لتقييد المقارنة لا لإخفائها، وحين لا تتطابق التعريفات أو المجتمعات يكون الحكم بأنها «غير قابلة للمقارنة» نتيجة صحيحة.\nاختر سجلين على الأقل."
+      "context": "اختر من 2 إلى 4 سجلات. قارن التعريف والفترة ومجتمع القياس أو قاعدة الاحتساب والنطاق الجغرافي والوحدة والطريقة قبل مقارنة القيم. عدم التطابق سبب لتقييد المقارنة لا لإخفائها، وحين لا تتطابق التعريفات أو المجتمعات يكون الحكم بأنها «غير قابلة للمقارنة» نتيجة صحيحة.\n\nتتيح أداة المقارنة في هذا الإصدار مجموعة مختارة من سجلات الأدلة. ويمكن قراءة أي سجل غير متاح هنا كاملًا في صفحته، وغيابه عن المقارنة ليس حكمًا عليه.\nاختر سجلين على الأقل."
     },
     {
       "route": "/evidence/compare/",
