@@ -21,6 +21,7 @@ only the first two groups describe the current state. Every file in `audit/` is 
 | F8 R8.6 freeze | [`R8_6_DESIGN_HANDOFF_FREEZE_CLOSURE.md`](R8_6_DESIGN_HANDOFF_FREEZE_CLOSURE.md) |
 | F9 clean-room acceptance | [`FINAL_CLEAN_ROOM_ACCEPTANCE.md`](FINAL_CLEAN_ROOM_ACCEPTANCE.md); open items in `FINAL_OPEN_ITEMS_REGISTER.md` (repository root) |
 | Transactions F3–F9 | [`final_integration/`](final_integration/) — scripts, inputs, Master ledgers and run reports |
+| Independent acceptance of pull request #8 (2 Oct) | [`PR8_INDEPENDENT_ACCEPTANCE.md`](PR8_INDEPENDENT_ACCEPTANCE.md) — the production runtime (EAD-01…EAD-11) verified and adjudicated; verdict MERGE AFTER CONDITIONS; fixes nothing |
 
 Records named above that do not exist yet are written by the session that owns them; until then the session is open.
 

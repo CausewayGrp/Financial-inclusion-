@@ -21,7 +21,7 @@
   ]
  },
  "class_counts": {
-  "AUDIT_HISTORY": 250,
+  "AUDIT_HISTORY": 251,
   "AUTHORITY_MASTER": 1,
   "AUTHORITY_POINTER": 2,
   "AUTHORITY_RULES": 1,
@@ -228,6 +228,10 @@
   },
   {
    "path": "audit/P5_INDEPENDENT_ACCEPTANCE_CORRECTIONS.md",
+   "class": "AUDIT_HISTORY"
+  },
+  {
+   "path": "audit/PR8_INDEPENDENT_ACCEPTANCE.md",
    "class": "AUDIT_HISTORY"
   },
   {
