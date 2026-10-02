@@ -244,8 +244,10 @@ def text_alt(v: dict) -> str:
 
 
 def credit_line(v: dict) -> str:
-    """The governed credit. Publisher names are governed in English only; Arabic frames print them as isolated
-    left-to-right runs (the contract's `credit.language_note`)."""
+    """The governed credit in the page's language (B4: the Arabic edition prints the institutions' Arabic names, an
+    acronym the English uses kept in parentheses; the contract's `credit.language_note`)."""
+    if v.get("lang") == "ar":
+        return f'{esc(v["labels"]["source"])} <span dir="rtl">{esc(v.get("credit") or "")}</span>'
     return f'{esc(v["labels"]["source"])} <bdi dir="ltr" lang="en">{esc(v.get("credit") or "")}</bdi>'
 
 

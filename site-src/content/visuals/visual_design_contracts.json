@@ -1,7 +1,7 @@
 {
   "schema_version": "1.0",
   "contract_id": "VISUAL-DESIGN-CONTRACT",
-  "authority_master_sha256": "2b609e1928f8d7b5ac751ce00fd00f5f85dc4aa28ea2b5367449ea98f1113779",
+  "authority_master_sha256": "97f37eccc1a9e2b1641090009e91fbf359322c66979ccb28f287b963f8d1850f",
   "rule": "Design-layer controlled input. It assigns every governed visual contract (Master 11) a design tier and, for SIGNATURE and CORE_ANALYTICAL visuals, declares which governed rows a chart binds to and how they are drawn. It never carries a fact, number, label or sentence: values come from Master data rows, text from Master contract/evidence fields, and legend labels from the governed interface copy (UI-VIS-*). The generator resolves every binding and fails on any unresolved ID, any value that disagrees with its guard, or any visual left untiered.",
   "tiers": {
     "SIGNATURE": "Distinctive to this product, decision-useful, drawable from governed rows and safe when detached. Designed first; gets a full data contract.",
@@ -374,8 +374,9 @@
               "EP-CBY-REMITTANCE-VINTAGE-K04"
             ]
           },
-          "text": "IMF / Yemeni authorities; Central Bank of Yemen — Aden; International Monetary Fund",
-          "language_note": "Publisher names are governed in English only (15, 34); Arabic frames print them as isolated left-to-right runs."
+          "text": "International Monetary Fund; Central Bank of Yemen — Aden",
+          "text_ar": "صندوق النقد الدولي؛ البنك المركزي اليمني – عدن",
+          "language_note": "Publisher names are governed in both languages (15 publisher/publisher_ar; 34 publisher/publisher_ar). The Arabic uses the institution's established Arabic name without a Latin acronym, and keeps in parentheses a product name that Arabic writes in English (Global Findex, Remittance Prices Worldwide)."
         },
         "frame_labels": {
           "UI-VIS-NOTE-INDEX-CONCORDANCE": {
@@ -887,8 +888,8 @@
         ],
         "blockers": []
       },
-      "detached_caption_en": "Same year, two published values · Reference year 2024 in two publication vintages; indexed paths 2021–2024 · Remittances as defined by each source: annual reports of the Central Bank of Yemen – Aden (CBY-Aden) for 2024 and 2025; IMF 2025 Article IV staff report, on the IMF's analytical scope for areas under the internationally recognized government · Source: IMF / Yemeni authorities; Central Bank of Yemen — Aden; International Monetary Fund · Does not establish: A same-year restatement is not a fall between years. The raw levels of the Central Bank of Yemen – Aden (CBY-Aden) and IMF series are not equivalent, and their near-identical indexed paths cannot be read as two independent confirmations of the trend. · Full record: /en/readings/same-year-different-number/",
-      "detached_caption_ar": "السنة نفسها وقيمتان منشورتان · السنة المرجعية 2024 في نسختي نشر؛ ومساران محوّلان إلى رقم قياسي، 2021–2024 · التحويلات وفق تعريف كل مصدر: التقريران السنويان للبنك المركزي اليمني – عدن لعامي 2024 و2025؛ وتقرير خبراء صندوق النقد الدولي لمشاورات المادة الرابعة 2025، ضمن النطاق التحليلي للصندوق لمناطق الحكومة المعترف بها دوليًا · المصدر: IMF / Yemeni authorities; Central Bank of Yemen — Aden; International Monetary Fund · لا يثبت: إعادة عرض قيمة السنة نفسها ليست تراجعًا بين عامين. ولا تتكافأ المستويات الخام في سلسلتي البنك المركزي اليمني – عدن وصندوق النقد الدولي، ولا يمكن قراءة تطابق مساريهما تقريبًا بعد تحويلهما إلى رقم قياسي بوصفه تأكيدين مستقلين للاتجاه. · السجل الكامل: /ar/readings/same-year-different-number/"
+      "detached_caption_en": "Same year, two published values · Reference year 2024 in two publication vintages; indexed paths 2021–2024 · Remittances as defined by each source: annual reports of the Central Bank of Yemen – Aden (CBY-Aden) for 2024 and 2025; IMF 2025 Article IV staff report, on the IMF's analytical scope for areas under the internationally recognized government · Source: International Monetary Fund; Central Bank of Yemen — Aden · Does not establish: A same-year restatement is not a fall between years. The raw levels of the Central Bank of Yemen – Aden (CBY-Aden) and IMF series are not equivalent, and their near-identical indexed paths cannot be read as two independent confirmations of the trend. · Full record: /en/readings/same-year-different-number/",
+      "detached_caption_ar": "السنة نفسها وقيمتان منشورتان · السنة المرجعية 2024 في نسختي نشر؛ ومساران محوّلان إلى رقم قياسي، 2021–2024 · التحويلات وفق تعريف كل مصدر: التقريران السنويان للبنك المركزي اليمني – عدن لعامي 2024 و2025؛ وتقرير خبراء صندوق النقد الدولي لمشاورات المادة الرابعة 2025، ضمن النطاق التحليلي للصندوق لمناطق الحكومة المعترف بها دوليًا · المصدر: صندوق النقد الدولي؛ البنك المركزي اليمني – عدن · لا يثبت: إعادة عرض قيمة السنة نفسها ليست تراجعًا بين عامين. ولا تتكافأ المستويات الخام في سلسلتي البنك المركزي اليمني – عدن وصندوق النقد الدولي، ولا يمكن قراءة تطابق مساريهما تقريبًا بعد تحويلهما إلى رقم قياسي بوصفه تأكيدين مستقلين للاتجاه. · السجل الكامل: /ar/readings/same-year-different-number/"
     },
     {
       "visual_id": "RV-CWR-009",
@@ -939,7 +940,8 @@
             }
           },
           "text": "Central Bank of Yemen — Aden; United Nations Development Programme (UNDP)",
-          "language_note": "Publisher names are governed in English only (15, 34); Arabic frames print them as isolated left-to-right runs."
+          "text_ar": "البنك المركزي اليمني – عدن؛ برنامج الأمم المتحدة الإنمائي",
+          "language_note": "Publisher names are governed in both languages (15 publisher/publisher_ar; 34 publisher/publisher_ar). The Arabic uses the institution's established Arabic name without a Latin acronym, and keeps in parentheses a product name that Arabic writes in English (Global Findex, Remittance Prices Worldwide)."
         },
         "frame_labels": {
           "UI-VIS-NOTE-POS-SCOPE": {
@@ -1144,7 +1146,7 @@
         "blockers": []
       },
       "detached_caption_en": "The missing links from payment infrastructure to inclusion results · Dates vary by reform/rail; exact event/observation dates travel with nodes · Each state retains its own administrative, provider, user or population universe · Source: Central Bank of Yemen — Aden; United Nations Development Programme (UNDP) · Does not establish: A rule, procurement, installation, institutional event or go-live does not by itself show access, use, quality or outcome; an open step has not yet been measured and does not mean the reform failed. · Full record: /en/readings/from-rail-to-result-missing-middle/",
-      "detached_caption_ar": "الحلقات المفقودة من البنية إلى نتيجة الشمول · تختلف التواريخ بحسب الإصلاح أو نظام الدفع؛ وترافق تواريخ الحدث أو المشاهدة كل حلقة · تحتفظ كل حالة بمجتمعها الإداري أو مجتمع مقدم الخدمة أو المستخدم أو السكان · المصدر: Central Bank of Yemen — Aden; United Nations Development Programme (UNDP) · لا يثبت: لا يُثبت وجودُ قاعدة أو عملية شراء أو تركيب أو حدث مؤسسي أو بدء تشغيل، بمفرده، وصولًا أو استخدامًا أو جودة أو نتيجة؛ والحلقة المفتوحة لم تُقس بعد، ولا تعني أن الإصلاح أخفق. · السجل الكامل: /ar/readings/from-rail-to-result-missing-middle/"
+      "detached_caption_ar": "الحلقات المفقودة من البنية إلى نتيجة الشمول · تختلف التواريخ بحسب الإصلاح أو نظام الدفع؛ وترافق تواريخ الحدث أو المشاهدة كل حلقة · تحتفظ كل حالة بمجتمعها الإداري أو مجتمع مقدم الخدمة أو المستخدم أو السكان · المصدر: البنك المركزي اليمني – عدن؛ برنامج الأمم المتحدة الإنمائي · لا يثبت: لا يُثبت وجودُ قاعدة أو عملية شراء أو تركيب أو حدث مؤسسي أو بدء تشغيل، بمفرده، وصولًا أو استخدامًا أو جودة أو نتيجة؛ والحلقة المفتوحة لم تُقس بعد، ولا تعني أن الإصلاح أخفق. · السجل الكامل: /ar/readings/from-rail-to-result-missing-middle/"
     },
     {
       "visual_id": "VIS-PROVIDER-OBSERVABILITY",
@@ -1188,7 +1190,8 @@
             ]
           },
           "text": "Yemen Microfinance Network; Central Bank of Yemen — Aden",
-          "language_note": "Publisher names are governed in English only (15, 34); Arabic frames print them as isolated left-to-right runs."
+          "text_ar": "شبكة اليمن للتمويل الأصغر؛ البنك المركزي اليمني – عدن",
+          "language_note": "Publisher names are governed in both languages (15 publisher/publisher_ar; 34 publisher/publisher_ar). The Arabic uses the institution's established Arabic name without a Latin acronym, and keeps in parentheses a product name that Arabic writes in English (Global Findex, Remittance Prices Worldwide)."
         },
         "series": [],
         "objects": [
@@ -2060,7 +2063,7 @@
         "blockers": []
       },
       "detached_caption_en": "What do we actually know about each provider class? · Dated lists and decisions, 2024–2026 · Banks, exchange and remittance providers, e-wallets, non-bank microfinance institutions and payment-system operators, as recorded by the issuing authority or source for each class · Source: Yemen Microfinance Network; Central Bank of Yemen — Aden · Does not establish: A list or licence does not show that a provider is operating or reaching customers; a list of unlicensed names is not a register of licensed providers; a decision about named entities does not make a complete list of providers; and the dimensions do not add up to an overall confidence score. · Full record: /en/evidence/VIS-PROVIDER-OBSERVABILITY/",
-      "detached_caption_ar": "ما الذي نعرفه فعلًا عن كل فئة من مقدمي الخدمة؟ · قوائم وقرارات مؤرخة، 2024–2026 · البنوك ومقدمو خدمات الصرافة والحوالات والمحافظ الإلكترونية ومؤسسات التمويل الأصغر غير المصرفية ومشغلو أنظمة الدفع، كما تسجلها الجهة المصدرة أو المصدر الخاص بكل فئة. · المصدر: Yemen Microfinance Network; Central Bank of Yemen — Aden · لا يثبت: لا تثبت القائمة أو الرخصة أن مقدم الخدمة يعمل أو يصل إلى العملاء؛ وقائمة الأسماء غير المرخصة ليست سجلًا بالمرخصين؛ والقرار الخاص بجهات مسماة لا يكوّن قائمة مكتملة بمقدمي الخدمات؛ ولا تُختزل الأبعاد في درجة ثقة إجمالية. · السجل الكامل: /ar/evidence/VIS-PROVIDER-OBSERVABILITY/"
+      "detached_caption_ar": "ما الذي نعرفه فعلًا عن كل فئة من مقدمي الخدمة؟ · قوائم وقرارات مؤرخة، 2024–2026 · البنوك ومقدمو خدمات الصرافة والحوالات والمحافظ الإلكترونية ومؤسسات التمويل الأصغر غير المصرفية ومشغلو أنظمة الدفع، كما تسجلها الجهة المصدرة أو المصدر الخاص بكل فئة. · المصدر: شبكة اليمن للتمويل الأصغر؛ البنك المركزي اليمني – عدن · لا يثبت: لا تثبت القائمة أو الرخصة أن مقدم الخدمة يعمل أو يصل إلى العملاء؛ وقائمة الأسماء غير المرخصة ليست سجلًا بالمرخصين؛ والقرار الخاص بجهات مسماة لا يكوّن قائمة مكتملة بمقدمي الخدمات؛ ولا تُختزل الأبعاد في درجة ثقة إجمالية. · السجل الكامل: /ar/evidence/VIS-PROVIDER-OBSERVABILITY/"
     },
     {
       "visual_id": "VIS-FINDEX-GAPS",
@@ -2099,7 +2102,8 @@
             "passport_id": "EP-FINDEX-2022-ACCOUNT"
           },
           "text": "World Bank Global Findex",
-          "language_note": "Publisher names are governed in English only (15, 34); Arabic frames print them as isolated left-to-right runs."
+          "text_ar": "البنك الدولي، المؤشر العالمي للشمول المالي (Global Findex)",
+          "language_note": "Publisher names are governed in both languages (15 publisher/publisher_ar; 34 publisher/publisher_ar). The Arabic uses the institution's established Arabic name without a Latin acronym, and keeps in parentheses a product name that Arabic writes in English (Global Findex, Remittance Prices Worldwide)."
         },
         "frame_labels": {
           "UI-VIS-NOTE-FINDEX-SAMPLE": {
@@ -2366,7 +2370,7 @@
         "blockers": []
       },
       "detached_caption_en": "Account ownership and measured gaps: Global Findex 2021 wave (Yemen fieldwork 2022–23) · World Bank reporting year 2022; Global Findex 2021 study; Yemen fieldwork 2022-11-07 to 2023-01-09 · Adults aged 15 and over in the areas the survey covered (the survey frame excludes areas with about 23% of the population); subgroups as defined within the same wave. · Source: World Bank Global Findex · Does not establish: These are values from one survey wave, not an annual series and not a 2026 rate. They cannot be mapped to governorates, they are not comparable with account counts reported by the Central Bank of Yemen – Aden (CBY-Aden), and the differences between groups do not establish their causes. · Full record: /en/evidence/VIS-FINDEX-GAPS/",
-      "detached_caption_ar": "امتلاك الحساب والفجوات المقاسة: موجة Global Findex 2021 (العمل الميداني في اليمن 2022–2023) · سنة الإبلاغ في بيانات البنك الدولي: 2022؛ دراسة Global Findex 2021؛ العمل الميداني في اليمن من 2022-11-07 إلى 2023-01-09 · البالغون بعمر 15 سنة فأكثر في المناطق التي شملها المسح (يستبعد إطار المسح مناطق تضم نحو 23% من السكان)، وفق تعريفات الفئات الفرعية داخل الموجة نفسها. · المصدر: World Bank Global Findex · لا يثبت: هذه قيم من موجة مسحية واحدة، وليست سلسلة سنوية ولا معدلًا لعام 2026. ولا يمكن إسقاطها على المحافظات، ولا تُقارن بأعداد الحسابات التي يُبلغ عنها البنك المركزي اليمني – عدن، ولا تثبت الفروق بين الفئات أسبابها. · السجل الكامل: /ar/evidence/VIS-FINDEX-GAPS/"
+      "detached_caption_ar": "امتلاك الحساب والفجوات المقاسة: موجة Global Findex 2021 (العمل الميداني في اليمن 2022–2023) · سنة الإبلاغ في بيانات البنك الدولي: 2022؛ دراسة Global Findex 2021؛ العمل الميداني في اليمن من 2022-11-07 إلى 2023-01-09 · البالغون بعمر 15 سنة فأكثر في المناطق التي شملها المسح (يستبعد إطار المسح مناطق تضم نحو 23% من السكان)، وفق تعريفات الفئات الفرعية داخل الموجة نفسها. · المصدر: البنك الدولي، المؤشر العالمي للشمول المالي (Global Findex) · لا يثبت: هذه قيم من موجة مسحية واحدة، وليست سلسلة سنوية ولا معدلًا لعام 2026. ولا يمكن إسقاطها على المحافظات، ولا تُقارن بأعداد الحسابات التي يُبلغ عنها البنك المركزي اليمني – عدن، ولا تثبت الفروق بين الفئات أسبابها. · السجل الكامل: /ar/evidence/VIS-FINDEX-GAPS/"
     },
     {
       "visual_id": "VIS-REMITTANCE-MACRO",
@@ -2405,7 +2409,8 @@
             "passport_id": "EP-REMITTANCE-MACRO"
           },
           "text": "IMF / Yemeni authorities",
-          "language_note": "Publisher names are governed in English only (15, 34); Arabic frames print them as isolated left-to-right runs."
+          "text_ar": "صندوق النقد الدولي / السلطات اليمنية",
+          "language_note": "Publisher names are governed in both languages (15 publisher/publisher_ar; 34 publisher/publisher_ar). The Arabic uses the institution's established Arabic name without a Latin acronym, and keeps in parentheses a product name that Arabic writes in English (Global Findex, Remittance Prices Worldwide)."
         },
         "series": [
           {
@@ -2726,7 +2731,7 @@
         "blockers": []
       },
       "detached_caption_en": "Remittances — IMF-reported history, estimate and projections · 2018–2030 · IMF external-sector remittance series on the IMF’s analytical scope for areas under the internationally recognized government; each year labelled as reported history, estimate or projection, with its source document · Source: IMF / Yemeni authorities · Does not establish: Estimates and projections are not observations, and a forecast revision is not an economic change. The two IMF documents do not form one continuous series. The series is not a measure of informal hawala volume, and its level, which covers areas under the internationally recognized government, is not a figure for the whole of Yemen. · Full record: /en/evidence/VIS-REMITTANCE-MACRO/",
-      "detached_caption_ar": "التحويلات: القيم التاريخية الواردة في تقارير صندوق النقد الدولي والتقدير والتوقعات · 2018–2030 · سلسلة صندوق النقد الدولي للتحويلات في القطاع الخارجي ضمن النطاق التحليلي للصندوق الخاص بمناطق الحكومة المعترف بها دوليًا، مع نوع الدليل لكل سنة ووثيقة مصدرها. · المصدر: IMF / Yemeni authorities · لا يثبت: التقديرات والتوقعات ليست مشاهدات فعلية، ومراجعة التوقع ليست تغيرًا اقتصاديًا. ولا تشكّل وثيقتا الصندوق سلسلة واحدة متصلة. ولا تقيس السلسلة حجم التحويلات عبر نظام الحوالة غير الرسمي، ولا يمثل مستواها، الذي يغطي المناطق الخاضعة للحكومة المعترف بها دوليًا، رقمًا لليمن كله. · السجل الكامل: /ar/evidence/VIS-REMITTANCE-MACRO/"
+      "detached_caption_ar": "التحويلات: القيم التاريخية الواردة في تقارير صندوق النقد الدولي والتقدير والتوقعات · 2018–2030 · سلسلة صندوق النقد الدولي للتحويلات في القطاع الخارجي ضمن النطاق التحليلي للصندوق الخاص بمناطق الحكومة المعترف بها دوليًا، مع نوع الدليل لكل سنة ووثيقة مصدرها. · المصدر: صندوق النقد الدولي / السلطات اليمنية · لا يثبت: التقديرات والتوقعات ليست مشاهدات فعلية، ومراجعة التوقع ليست تغيرًا اقتصاديًا. ولا تشكّل وثيقتا الصندوق سلسلة واحدة متصلة. ولا تقيس السلسلة حجم التحويلات عبر نظام الحوالة غير الرسمي، ولا يمثل مستواها، الذي يغطي المناطق الخاضعة للحكومة المعترف بها دوليًا، رقمًا لليمن كله. · السجل الكامل: /ar/evidence/VIS-REMITTANCE-MACRO/"
     },
     {
       "visual_id": "VIS-POS-TERMINALS",
@@ -2766,7 +2771,8 @@
             "passport_id": "EP-CBY-POS-MONTHLY"
           },
           "text": "Central Bank of Yemen — Aden",
-          "language_note": "Publisher names are governed in English only (15, 34); Arabic frames print them as isolated left-to-right runs."
+          "text_ar": "البنك المركزي اليمني – عدن",
+          "language_note": "Publisher names are governed in both languages (15 publisher/publisher_ar; 34 publisher/publisher_ar). The Arabic uses the institution's established Arabic name without a Latin acronym, and keeps in parentheses a product name that Arabic writes in English (Global Findex, Remittance Prices Worldwide)."
         },
         "series": [
           {
@@ -2957,7 +2963,7 @@
         "blockers": []
       },
       "detached_caption_en": "Reported POS terminals, monthly · Mar-2025–Jan-2026 monthly · POS terminals within the payment-system reporting scope of the Central Bank of Yemen – Aden (CBY-Aden); how far that scope covers each area of Yemen is not established. · Source: Central Bank of Yemen — Aden · Does not establish: Growth in terminal numbers does not show merchant adoption, active use of POS services, growth in unique users or an inclusion outcome. The +11% displayed in the January 2026 release and the 8.55% change derived from the raw totals are not arithmetically consistent. The totals fall within the reporting scope of the Central Bank of Yemen – Aden (CBY-Aden) and are not shown to cover all of Yemen. · Full record: /en/evidence/VIS-POS-TERMINALS/",
-      "detached_caption_ar": "أجهزة نقاط البيع المبلغ عنها شهريًا · شهريًا من مارس 2025 إلى يناير 2026 · أجهزة نقاط البيع ضمن نطاق الإبلاغ عن نظام المدفوعات لدى البنك المركزي اليمني – عدن؛ ولا يثبت الدليل مدى تغطية هذا النطاق لكل مناطق اليمن. · المصدر: Central Bank of Yemen — Aden · لا يثبت: لا يثبت نمو عدد الأجهزة تبنّي التجار لها، ولا الاستخدام النشط لخدمات نقاط البيع، ولا نموًا في عدد المستخدمين الفريدين، ولا نتيجة في الشمول المالي. وليست نسبة +11% المعروضة في إصدار يناير 2026 ونسبة التغير البالغة 8.55% المشتقة من الإجماليات الخام متسقتين حسابيًا. والإجماليات تخص نطاق الإبلاغ لدى البنك المركزي اليمني – عدن، ولا يثبت الدليل أنها تغطي اليمن كله. · السجل الكامل: /ar/evidence/VIS-POS-TERMINALS/"
+      "detached_caption_ar": "أجهزة نقاط البيع المبلغ عنها شهريًا · شهريًا من مارس 2025 إلى يناير 2026 · أجهزة نقاط البيع ضمن نطاق الإبلاغ عن نظام المدفوعات لدى البنك المركزي اليمني – عدن؛ ولا يثبت الدليل مدى تغطية هذا النطاق لكل مناطق اليمن. · المصدر: البنك المركزي اليمني – عدن · لا يثبت: لا يثبت نمو عدد الأجهزة تبنّي التجار لها، ولا الاستخدام النشط لخدمات نقاط البيع، ولا نموًا في عدد المستخدمين الفريدين، ولا نتيجة في الشمول المالي. وليست نسبة +11% المعروضة في إصدار يناير 2026 ونسبة التغير البالغة 8.55% المشتقة من الإجماليات الخام متسقتين حسابيًا. والإجماليات تخص نطاق الإبلاغ لدى البنك المركزي اليمني – عدن، ولا يثبت الدليل أنها تغطي اليمن كله. · السجل الكامل: /ar/evidence/VIS-POS-TERMINALS/"
     },
     {
       "visual_id": "VIS-POS-TRANSACTIONS",
@@ -2997,7 +3003,8 @@
             "passport_id": "EP-CBY-POS-MONTHLY"
           },
           "text": "Central Bank of Yemen — Aden",
-          "language_note": "Publisher names are governed in English only (15, 34); Arabic frames print them as isolated left-to-right runs."
+          "text_ar": "البنك المركزي اليمني – عدن",
+          "language_note": "Publisher names are governed in both languages (15 publisher/publisher_ar; 34 publisher/publisher_ar). The Arabic uses the institution's established Arabic name without a Latin acronym, and keeps in parentheses a product name that Arabic writes in English (Global Findex, Remittance Prices Worldwide)."
         },
         "series": [
           {
@@ -3186,7 +3193,7 @@
         "blockers": []
       },
       "detached_caption_en": "Reported POS transactions, monthly · Mar-2025–Jan-2026 monthly · POS transactions within the payment-system reporting scope of the Central Bank of Yemen – Aden (CBY-Aden); how far that scope covers each area of Yemen is not established. · Source: Central Bank of Yemen — Aden · Does not establish: Transactions are events, not unique users or merchants, so the series does not show how many people or businesses used POS services. The monthly values are shown as published, without smoothing or interpolation, and the +4.9% displayed in the January 2026 release and the 13.87% change derived from the raw totals are not arithmetically consistent. The totals fall within the reporting scope of the Central Bank of Yemen – Aden (CBY-Aden) and are not shown to cover all of Yemen. · Full record: /en/evidence/VIS-POS-TRANSACTIONS/",
-      "detached_caption_ar": "معاملات نقاط البيع المبلغ عنها شهريًا · شهريًا من مارس 2025 إلى يناير 2026 · معاملات نقاط البيع ضمن نطاق الإبلاغ عن نظام المدفوعات لدى البنك المركزي اليمني – عدن؛ ولا يثبت الدليل مدى تغطية هذا النطاق لكل مناطق اليمن. · المصدر: Central Bank of Yemen — Aden · لا يثبت: المعاملات أحداث وليست مستخدمين أو تجارًا فريدين، لذلك لا تبيّن السلسلة عدد الأشخاص أو المنشآت الذين استخدموا نقاط البيع. وتُعرض القيم الشهرية كما نُشرت من دون تنعيم أو استيفاء، وليست نسبة +4.9% المعروضة في إصدار يناير 2026 ونسبة التغير البالغة 13.87% المشتقة من الإجماليات الخام متسقتين حسابيًا. والإجماليات تخص نطاق الإبلاغ لدى البنك المركزي اليمني – عدن، ولا يثبت الدليل أنها تغطي اليمن كله. · السجل الكامل: /ar/evidence/VIS-POS-TRANSACTIONS/"
+      "detached_caption_ar": "معاملات نقاط البيع المبلغ عنها شهريًا · شهريًا من مارس 2025 إلى يناير 2026 · معاملات نقاط البيع ضمن نطاق الإبلاغ عن نظام المدفوعات لدى البنك المركزي اليمني – عدن؛ ولا يثبت الدليل مدى تغطية هذا النطاق لكل مناطق اليمن. · المصدر: البنك المركزي اليمني – عدن · لا يثبت: المعاملات أحداث وليست مستخدمين أو تجارًا فريدين، لذلك لا تبيّن السلسلة عدد الأشخاص أو المنشآت الذين استخدموا نقاط البيع. وتُعرض القيم الشهرية كما نُشرت من دون تنعيم أو استيفاء، وليست نسبة +4.9% المعروضة في إصدار يناير 2026 ونسبة التغير البالغة 13.87% المشتقة من الإجماليات الخام متسقتين حسابيًا. والإجماليات تخص نطاق الإبلاغ لدى البنك المركزي اليمني – عدن، ولا يثبت الدليل أنها تغطي اليمن كله. · السجل الكامل: /ar/evidence/VIS-POS-TRANSACTIONS/"
     },
     {
       "visual_id": "VIS-POS-VALUE",
@@ -3226,7 +3233,8 @@
             "passport_id": "EP-CBY-POS-MONTHLY"
           },
           "text": "Central Bank of Yemen — Aden",
-          "language_note": "Publisher names are governed in English only (15, 34); Arabic frames print them as isolated left-to-right runs."
+          "text_ar": "البنك المركزي اليمني – عدن",
+          "language_note": "Publisher names are governed in both languages (15 publisher/publisher_ar; 34 publisher/publisher_ar). The Arabic uses the institution's established Arabic name without a Latin acronym, and keeps in parentheses a product name that Arabic writes in English (Global Findex, Remittance Prices Worldwide)."
         },
         "series": [
           {
@@ -3423,7 +3431,7 @@
         "blockers": []
       },
       "detached_caption_en": "Nominal value of reported POS transactions, monthly · Mar-2025–Jan-2026; Sep-2025 gap · Nominal value of POS transactions within the payment-system reporting scope of the Central Bank of Yemen – Aden (CBY-Aden); how far that scope covers each area of Yemen is not established. · Source: Central Bank of Yemen — Aden · Does not establish: The values are nominal rials: they do not show real growth, a change in purchasing power, more users or an effect on financial inclusion, and no inflation-adjusted series is established here. September 2025 has no verified value, and none is interpolated. The totals fall within the reporting scope of the Central Bank of Yemen – Aden (CBY-Aden) and are not shown to cover all of Yemen. · Full record: /en/evidence/VIS-POS-VALUE/",
-      "detached_caption_ar": "القيمة الاسمية لمعاملات نقاط البيع المبلغ عنها شهريًا · مارس 2025 – يناير 2026؛ مع فجوة في سبتمبر 2025 · القيمة الاسمية لمعاملات نقاط البيع ضمن نطاق الإبلاغ عن نظام المدفوعات لدى البنك المركزي اليمني – عدن؛ ولا يثبت الدليل مدى تغطية هذا النطاق لكل مناطق اليمن. · المصدر: Central Bank of Yemen — Aden · لا يثبت: القيم بالريال الاسمي: فلا تثبت نموًا حقيقيًا ولا تغيرًا في القوة الشرائية ولا زيادة في المستخدمين ولا أثرًا على الشمول المالي، ولا يثبت هذا الدليل أي سلسلة معدلة لأثر التضخم. ولا قيمة متحقق منها لشهر سبتمبر 2025، ولا تُقدَّر بالاستيفاء. والإجماليات تخص نطاق الإبلاغ لدى البنك المركزي اليمني – عدن، ولا يثبت الدليل أنها تغطي اليمن كله. · السجل الكامل: /ar/evidence/VIS-POS-VALUE/"
+      "detached_caption_ar": "القيمة الاسمية لمعاملات نقاط البيع المبلغ عنها شهريًا · مارس 2025 – يناير 2026؛ مع فجوة في سبتمبر 2025 · القيمة الاسمية لمعاملات نقاط البيع ضمن نطاق الإبلاغ عن نظام المدفوعات لدى البنك المركزي اليمني – عدن؛ ولا يثبت الدليل مدى تغطية هذا النطاق لكل مناطق اليمن. · المصدر: البنك المركزي اليمني – عدن · لا يثبت: القيم بالريال الاسمي: فلا تثبت نموًا حقيقيًا ولا تغيرًا في القوة الشرائية ولا زيادة في المستخدمين ولا أثرًا على الشمول المالي، ولا يثبت هذا الدليل أي سلسلة معدلة لأثر التضخم. ولا قيمة متحقق منها لشهر سبتمبر 2025، ولا تُقدَّر بالاستيفاء. والإجماليات تخص نطاق الإبلاغ لدى البنك المركزي اليمني – عدن، ولا يثبت الدليل أنها تغطي اليمن كله. · السجل الكامل: /ar/evidence/VIS-POS-VALUE/"
     },
     {
       "visual_id": "VIS-PAYMENT-ANATOMY",
@@ -3462,7 +3470,8 @@
             "passport_id": "EP-CBY-PAY-H1-2025"
           },
           "text": "Central Bank of Yemen — Aden",
-          "language_note": "Publisher names are governed in English only (15, 34); Arabic frames print them as isolated left-to-right runs."
+          "text_ar": "البنك المركزي اليمني – عدن",
+          "language_note": "Publisher names are governed in both languages (15 publisher/publisher_ar; 34 publisher/publisher_ar). The Arabic uses the institution's established Arabic name without a Latin acronym, and keeps in parentheses a product name that Arabic writes in English (Global Findex, Remittance Prices Worldwide)."
         },
         "frame_labels": {
           "UI-VIS-NOTE-NOT-COMPARABLE-2024Q3": {
@@ -3689,7 +3698,7 @@
         "blockers": []
       },
       "detached_caption_en": "What does the payment system actually count? · 2025 H1 · Cards, ATMs, POS terminals, transactions, e-wallets, subscribers and accounts within the payment-system reporting scope of the Central Bank of Yemen – Aden (CBY-Aden), first half of 2025; each has its own unit. · Source: Central Bank of Yemen — Aden · Does not establish: Cards, accounts, subscribers, transactions and terminals are not people, and they cannot be combined into a single digital-inclusion score. The first-half 2025 counts are not comparable with the third-quarter 2024 payments bulletin until the reporting scope and definitions of the two publications are reconciled. · Full record: /en/evidence/VIS-PAYMENT-ANATOMY/",
-      "detached_caption_ar": "ما الذي يقيسه نظام المدفوعات فعلًا؟ · النصف الأول من 2025 · البطاقات وأجهزة الصراف الآلي ونقاط البيع والمعاملات والمحافظ والمشتركون والحسابات ضمن نطاق الإبلاغ عن نظام المدفوعات لدى البنك المركزي اليمني – عدن في النصف الأول من 2025، كلٌّ بوحدته وقاعدة قياسه. · المصدر: Central Bank of Yemen — Aden · لا يثبت: البطاقات والحسابات والمشتركون والمعاملات والأجهزة ليست أشخاصًا، ولا يمكن دمجها في درجة واحدة للشمول الرقمي. ولا تُقارن أعداد النصف الأول من 2025 بنشرة المدفوعات للربع الثالث من 2024 إلى أن يُطابَق نطاق الإبلاغ والتعريفات بين الإصدارين. · السجل الكامل: /ar/evidence/VIS-PAYMENT-ANATOMY/"
+      "detached_caption_ar": "ما الذي يقيسه نظام المدفوعات فعلًا؟ · النصف الأول من 2025 · البطاقات وأجهزة الصراف الآلي ونقاط البيع والمعاملات والمحافظ والمشتركون والحسابات ضمن نطاق الإبلاغ عن نظام المدفوعات لدى البنك المركزي اليمني – عدن في النصف الأول من 2025، كلٌّ بوحدته وقاعدة قياسه. · المصدر: البنك المركزي اليمني – عدن · لا يثبت: البطاقات والحسابات والمشتركون والمعاملات والأجهزة ليست أشخاصًا، ولا يمكن دمجها في درجة واحدة للشمول الرقمي. ولا تُقارن أعداد النصف الأول من 2025 بنشرة المدفوعات للربع الثالث من 2024 إلى أن يُطابَق نطاق الإبلاغ والتعريفات بين الإصدارين. · السجل الكامل: /ar/evidence/VIS-PAYMENT-ANATOMY/"
     },
     {
       "visual_id": "VIS-REMITTANCE-COST",
@@ -3733,8 +3742,9 @@
               "SRC-WB-RPW-UAE-YEM-2025Q3-001"
             ]
           },
-          "text": "World Bank Remittance Prices Worldwide; World Bank",
-          "language_note": "Publisher names are governed in English only (15, 34); Arabic frames print them as isolated left-to-right runs."
+          "text": "World Bank Remittance Prices Worldwide",
+          "text_ar": "قاعدة بيانات البنك الدولي لأسعار الحوالات حول العالم (Remittance Prices Worldwide)",
+          "language_note": "Publisher names are governed in both languages (15 publisher/publisher_ar; 34 publisher/publisher_ar). The Arabic uses the institution's established Arabic name without a Latin acronym, and keeps in parentheses a product name that Arabic writes in English (Global Findex, Remittance Prices Worldwide)."
         },
         "frame_labels": {
           "UI-VIS-RPW-AVERAGE-NOTE": {
@@ -3872,8 +3882,8 @@
         "derived": [],
         "blockers": []
       },
-      "detached_caption_en": "Quoted cost of sending US$200 and US$500 to Yemen from Saudi Arabia and the UAE, 2025 Q3 · 2025 Q3 · Formal remittance products listed by the World Bank Remittance Prices Worldwide database for the Saudi Arabia–Yemen and United Arab Emirates–Yemen corridors, by send amount, 2025 Q3 · Source: World Bank Remittance Prices Worldwide; World Bank · Does not establish: These averages cover two corridors, two send amounts and formal products listed by Remittance Prices Worldwide; they are not a national average cost of remittances to Yemen and do not represent all providers, all remittances or informal channels. · Full record: /en/evidence/VIS-REMITTANCE-COST/",
-      "detached_caption_ar": "التكلفة المعلنة لإرسال 200 و500 دولار أمريكي إلى اليمن من السعودية والإمارات، الربع الثالث من 2025 · الربع الثالث من 2025 · منتجات الحوالات الرسمية المدرجة في قاعدة بيانات البنك الدولي لأسعار الحوالات حول العالم (Remittance Prices Worldwide) لممرَّي السعودية–اليمن والإمارات–اليمن، بحسب مبلغ الإرسال، الربع الثالث من 2025. · المصدر: World Bank Remittance Prices Worldwide; World Bank · لا يثبت: تغطي هذه المتوسطات ممرين ومبلغي إرسال ومنتجات رسمية مدرجة في قاعدة Remittance Prices Worldwide؛ وهي ليست متوسطًا وطنيًا لتكلفة الحوالات إلى اليمن، ولا تمثل جميع مقدمي الخدمة أو جميع الحوالات أو القنوات غير الرسمية. · السجل الكامل: /ar/evidence/VIS-REMITTANCE-COST/"
+      "detached_caption_en": "Quoted cost of sending US$200 and US$500 to Yemen from Saudi Arabia and the UAE, 2025 Q3 · 2025 Q3 · Formal remittance products listed by the World Bank Remittance Prices Worldwide database for the Saudi Arabia–Yemen and United Arab Emirates–Yemen corridors, by send amount, 2025 Q3 · Source: World Bank Remittance Prices Worldwide · Does not establish: These averages cover two corridors, two send amounts and formal products listed by Remittance Prices Worldwide; they are not a national average cost of remittances to Yemen and do not represent all providers, all remittances or informal channels. · Full record: /en/evidence/VIS-REMITTANCE-COST/",
+      "detached_caption_ar": "التكلفة المعلنة لإرسال 200 و500 دولار أمريكي إلى اليمن من السعودية والإمارات، الربع الثالث من 2025 · الربع الثالث من 2025 · منتجات الحوالات الرسمية المدرجة في قاعدة بيانات البنك الدولي لأسعار الحوالات حول العالم (Remittance Prices Worldwide) لممرَّي السعودية–اليمن والإمارات–اليمن، بحسب مبلغ الإرسال، الربع الثالث من 2025. · المصدر: قاعدة بيانات البنك الدولي لأسعار الحوالات حول العالم (Remittance Prices Worldwide) · لا يثبت: تغطي هذه المتوسطات ممرين ومبلغي إرسال ومنتجات رسمية مدرجة في قاعدة Remittance Prices Worldwide؛ وهي ليست متوسطًا وطنيًا لتكلفة الحوالات إلى اليمن، ولا تمثل جميع مقدمي الخدمة أو جميع الحوالات أو القنوات غير الرسمية. · السجل الكامل: /ar/evidence/VIS-REMITTANCE-COST/"
     },
     {
       "visual_id": "VIS-FIRM-FINANCE-PATH",
@@ -3935,8 +3945,9 @@
           "rule": {
             "passport_id": "EP-FIRM-2022"
           },
-          "text": "World Bank 2022 custom enterprise survey",
-          "language_note": "Publisher names are governed in English only (15, 34); Arabic frames print them as isolated left-to-right runs."
+          "text": "World Bank 2022 Yemen Enterprise Survey",
+          "text_ar": "مسح المنشآت في اليمن لعام 2022 الذي أجراه البنك الدولي",
+          "language_note": "Publisher names are governed in both languages (15 publisher/publisher_ar; 34 publisher/publisher_ar). The Arabic uses the institution's established Arabic name without a Latin acronym, and keeps in parentheses a product name that Arabic writes in English (Global Findex, Remittance Prices Worldwide)."
         },
         "frame_labels": {
           "UI-VIS-NOTE-FIRM-CONSTRAINTS-PARTIAL": {
@@ -4113,8 +4124,8 @@
         "derived": [],
         "blockers": []
       },
-      "detached_caption_en": "Finance is not the only constraint surveyed formal firms report, 2022 · 2022 · Formal enterprises in seven selected governorates covered by the 2022 custom survey · Source: World Bank 2022 custom enterprise survey · Does not establish: The shares describe formal firms in a 2022 custom survey of seven governorates; they are not a national ranking of business constraints for all Yemeni firms. They follow the source's own item wording and are not comparable with the standard Enterprise Survey 'biggest obstacle' indicator. · Full record: /en/evidence/VIS-FIRM-CONSTRAINTS/",
-      "detached_caption_ar": "التمويل ليس القيد الوحيد الذي تذكره المنشآت الرسمية المشمولة بالمسح، 2022 · 2022 · المنشآت الرسمية في المحافظات السبع المختارة التي شملها المسح المخصص لعام 2022. · المصدر: World Bank 2022 custom enterprise survey · لا يثبت: تصف النسب المنشآت الرسمية في مسح مخصص شمل سبع محافظات عام 2022، ولا تمثل ترتيبًا وطنيًا لقيود الأعمال لدى جميع منشآت اليمن. وهي تتبع صياغة البنود كما وردت في المصدر، ولا تُقارن بمؤشر «أكبر عائق» في مسوح المنشآت المعيارية للبنك الدولي. · السجل الكامل: /ar/evidence/VIS-FIRM-CONSTRAINTS/"
+      "detached_caption_en": "Finance is not the only constraint surveyed formal firms report, 2022 · 2022 · Formal enterprises in seven selected governorates covered by the 2022 custom survey · Source: World Bank 2022 Yemen Enterprise Survey · Does not establish: The shares describe formal firms in a 2022 custom survey of seven governorates; they are not a national ranking of business constraints for all Yemeni firms. They follow the source's own item wording and are not comparable with the standard Enterprise Survey 'biggest obstacle' indicator. · Full record: /en/evidence/VIS-FIRM-CONSTRAINTS/",
+      "detached_caption_ar": "التمويل ليس القيد الوحيد الذي تذكره المنشآت الرسمية المشمولة بالمسح، 2022 · 2022 · المنشآت الرسمية في المحافظات السبع المختارة التي شملها المسح المخصص لعام 2022. · المصدر: مسح المنشآت في اليمن لعام 2022 الذي أجراه البنك الدولي · لا يثبت: تصف النسب المنشآت الرسمية في مسح مخصص شمل سبع محافظات عام 2022، ولا تمثل ترتيبًا وطنيًا لقيود الأعمال لدى جميع منشآت اليمن. وهي تتبع صياغة البنود كما وردت في المصدر، ولا تُقارن بمؤشر «أكبر عائق» في مسوح المنشآت المعيارية للبنك الدولي. · السجل الكامل: /ar/evidence/VIS-FIRM-CONSTRAINTS/"
     },
     {
       "visual_id": "VIS-MFI-DIVERGENCE",
@@ -4206,8 +4217,9 @@
               "SRC-WB-FMIIP-P180708"
             ]
           },
-          "text": "World Bank Global Findex; Central Bank of Yemen — Aden; World Bank",
-          "language_note": "Publisher names are governed in English only (15, 34); Arabic frames print them as isolated left-to-right runs."
+          "text": "World Bank; Central Bank of Yemen — Aden",
+          "text_ar": "البنك الدولي؛ البنك المركزي اليمني – عدن",
+          "language_note": "Publisher names are governed in both languages (15 publisher/publisher_ar; 34 publisher/publisher_ar). The Arabic uses the institution's established Arabic name without a Latin acronym, and keeps in parentheses a product name that Arabic writes in English (Global Findex, Remittance Prices Worldwide)."
         },
         "frame_labels": {
           "UI-VIS-CAT-LANE-PEOPLE-SURVEY": {
@@ -4586,8 +4598,8 @@
         "derived": [],
         "blockers": []
       },
-      "detached_caption_en": "Different dates: newer infrastructure and reforms, older evidence on people · 2022–23 people fieldwork beside 2025–26 system events · Separate survey, administrative, institutional and programme universes · Source: World Bank Global Findex; Central Bank of Yemen — Aden; World Bank · Does not establish: Newer infrastructure and reform events do not show current access, use or outcomes for people, and the 2022–23 survey value is not a 2026 rate. · Full record: /en/readings/reforms-newer-than-people-evidence/",
-      "detached_caption_ar": "تواريخ مختلفة: بنية وإصلاحات أحدث، وأدلة أقدم عن الأفراد · العمل الميداني السكاني في 2022–2023 إلى جانب أحداث المنظومة في 2025–2026 · مجتمعات مسحية وإدارية ومؤسسية وبرامجية منفصلة · المصدر: World Bank Global Findex; Central Bank of Yemen — Aden; World Bank · لا يثبت: لا تُظهر أحداث البنية والإصلاح الأحدث وصول الأفراد إلى الخدمات المالية أو استخدامهم لها أو النتائج التي تحققت لهم حاليًا، ولا تمثل قيمة مسح 2022–2023 معدلًا لعام 2026. · السجل الكامل: /ar/readings/reforms-newer-than-people-evidence/"
+      "detached_caption_en": "Different dates: newer infrastructure and reforms, older evidence on people · 2022–23 people fieldwork beside 2025–26 system events · Separate survey, administrative, institutional and programme universes · Source: World Bank; Central Bank of Yemen — Aden · Does not establish: Newer infrastructure and reform events do not show current access, use or outcomes for people, and the 2022–23 survey value is not a 2026 rate. · Full record: /en/readings/reforms-newer-than-people-evidence/",
+      "detached_caption_ar": "تواريخ مختلفة: بنية وإصلاحات أحدث، وأدلة أقدم عن الأفراد · العمل الميداني السكاني في 2022–2023 إلى جانب أحداث المنظومة في 2025–2026 · مجتمعات مسحية وإدارية ومؤسسية وبرامجية منفصلة · المصدر: البنك الدولي؛ البنك المركزي اليمني – عدن · لا يثبت: لا تُظهر أحداث البنية والإصلاح الأحدث وصول الأفراد إلى الخدمات المالية أو استخدامهم لها أو النتائج التي تحققت لهم حاليًا، ولا تمثل قيمة مسح 2022–2023 معدلًا لعام 2026. · السجل الكامل: /ar/readings/reforms-newer-than-people-evidence/"
     },
     {
       "visual_id": "VIS-E-MONEY-RULE-STACK",

@@ -1,5 +1,20 @@
 # Repository Change Log
 
+## 2026-10-03 — Release candidate RC-6: Part B item B4, Arabic credit lines
+
+Transaction `audit/release_candidate/rc_6_arabic_credits.py` through `run_stage.py` (Master `2b609e1928f8` → `97f37eccc1a9`;
+9 cells; ledger and run report in `audit/release_candidate/runs/`), with `rc_6_stage_inputs.py` installing the new `34_EVIDENCE_PASSPORTS` column
+`publisher_ar` in `scripts/projection/master_structure.json`. Every drawn figure's credit line now prints in the page's
+language: the Arabic edition gives the institutions' Arabic names, taken from the forms the Master already uses, with
+a product name that Arabic writes in English (Global Findex, Remittance Prices Worldwide) in parentheses. The generator
+(`scripts/projection/derived.py`) credits each institution once. A bare institution name folds into one of its
+products only when its source's governed title names that product; otherwise the bare name is printed once. The Arabic
+detached caption credits in Arabic too. Independent bilingual review: NOT ACCEPTABLE as first staged (blocking: the
+World Bank's FMIIP record was credited to the Global Findex on RV-CWR-004), every finding applied and re-reviewed
+ACCEPTABLE. The survey behind VIS-FIRM-CONSTRAINTS is credited as its source names it, "World Bank 2022 Yemen
+Enterprise Survey" (read in the original); `design/reference/check_visuals.py` checks each credit in its own language
+and direction.
+
 ## 2026-10-02 — Release candidate: Arabic dates isolated, systemically (owner request after RC-5)
 
 The Arabic reviewer's blocking finding in RC-5 (ISO dates displayed reversed) treated as a class. Every Arabic page was

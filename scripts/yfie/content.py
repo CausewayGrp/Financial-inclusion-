@@ -565,7 +565,7 @@ class Content:
                     o["source_title"] = (card["title"] or card["untitled_label"]) if card else ""
                 return o
             out["form"] = c.get("form")
-            out["credit"] = (c.get("credit") or {}).get("text")
+            out["credit"] = (c.get("credit") or {}).get("text_ar" if lang == "ar" else "text") or (c.get("credit") or {}).get("text")   # B4: the Arabic credit in the Arabic edition
             out["frame_labels"] = {k: val.get(lang) for k, val in (c.get("frame_labels") or {}).items()}
             out["series"] = [{"id": s["id"], "state": s.get("state"), "markers": s.get("markers") or [], "missing_x": s.get("missing_x") or [],
                               "values": [localise(val) for val in s.get("values") or []]} for s in c.get("series") or []]

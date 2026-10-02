@@ -1394,17 +1394,19 @@ def visual_design_contracts(ctx, e):
                 derived_vals.append(OrderedDict([("id", d["id"]), ("value", val), ("unit", d["unit"]), ("from", d["minus"]), ("grammar_state", d["state"])]))
             # credit line: governed publisher or authority only
             cr, cred_src, blockers = k.get("credit") or {}, [], []
+            cred_ar = []   # B4 (release candidate): the Arabic credit, entry for entry (15 publisher_ar, 34 publisher_ar)
+            cred_from = []   # B4 review F1: where each entry comes from — the source's governed title decides whether two entries are one publication
             for pid in ([cr["passport_id"]] if cr.get("passport_id") else []) + list(cr.get("passport_ids") or []):
                 p = passports.get(pid)
                 if not p:
                     raise IntegrityError(f"{where}: passport {pid} does not exist")
-                cred_src.append(p.get("publisher"))
+                cred_src.append(p.get("publisher")); cred_ar.append(p.get("publisher_ar")); cred_from.append(None)
             for sid in cr.get("source_ids") or []:
                 s0 = sources.get(sid)
                 if not s0:
                     raise IntegrityError(f"{where}: source {sid} does not exist")
                 if s0.get("publisher"):
-                    cred_src.append(s0["publisher"])
+                    cred_src.append(s0["publisher"]); cred_ar.append(s0.get("publisher_ar")); cred_from.append(s0)
                 else:
                     blockers.append(f"source {sid} has no governed publisher for the credit line")
             if cr.get("source_urls_from_object"):
@@ -1420,24 +1422,59 @@ def visual_design_contracts(ctx, e):
                     if s0 is None:
                         blockers.append(f"{x['id']}: locator {x.get(su['field'])} has no source record")
                     elif s0.get("publisher"):
-                        cred_src.append(s0["publisher"])
+                        cred_src.append(s0["publisher"]); cred_ar.append(s0.get("publisher_ar")); cred_from.append(s0)
                     else:
                         blockers.append(f"{x['id']}: source {s0['source_id']} has no governed publisher for the credit line")
             if cr.get("from_object"):
                 ob = next((o for o in objects if o["id"] == cr["from_object"]), None)
                 if cr.get("authority_field"):
-                    cred_src.extend(x.get(cr["authority_field"]) for x in ob["records"])
+                    # the authority's Arabic name is its decision's source publisher_ar (the authority publishes the decision),
+                    # borrowed only when the source's publisher is that authority (B4 review O6)
+                    for x in ob["records"]:
+                        s0 = sources.get(x.get("source")) or sources.get(x.get("source_id")) or {}
+                        if s0 and s0.get("publisher") != x.get(cr["authority_field"]):
+                            blockers.append(f"{x.get('id')}: authority {x.get(cr['authority_field'])!r} is not the publisher of its source {s0.get('source_id')}")
+                        cred_src.append(x.get(cr["authority_field"])); cred_ar.append(s0.get("publisher_ar")); cred_from.append(s0 or None)
                 if cr.get("source_field"):
                     for x in ob["records"]:
                         s0 = sources.get(x.get(cr["source_field"])) or {}
                         if s0.get("publisher"):
-                            cred_src.append(s0["publisher"])
+                            cred_src.append(s0["publisher"]); cred_ar.append(s0.get("publisher_ar")); cred_from.append(s0)
                         else:
                             blockers.append(f"source {x.get(cr['source_field'])} has no governed publisher for the credit line")
-            credit = "; ".join(dict.fromkeys(x for x in cred_src if x))
+            # B4: each institution is credited once. An exact repeat is dropped. A bare institution name that another entry
+            # contains ("World Bank" in "World Bank Remittance Prices Worldwide") is folded into it only when they are one
+            # publication: the bare entry's source names that product in its governed title (the RPW corridor records).
+            # Otherwise the institution's bare name is printed once instead (B4 review F1): the World Bank's FMIIP record
+            # beside its Global Findex; the IMF staff report beside the passport "IMF / Yemeni authorities", whose title does
+            # not name it.
+            def _canon(x):
+                return re.sub(r"\s+", " ", str(x).replace("IMF", "International Monetary Fund")).strip().lower()
+            def _product(whole, part):
+                return re.sub(r"^[\s/,;:—–-]+|[\s/,;:—–-]+$", "", _canon(whole).replace(_canon(part), "", 1))
+            pairs = []
+            for en, ar, s0 in zip(cred_src, cred_ar + [None] * (len(cred_src) - len(cred_ar)), cred_from + [None] * (len(cred_src) - len(cred_from))):
+                if not en or any(_canon(en) == _canon(e) for e, _ in pairs):
+                    continue
+                wider = [i for i, (e, _) in enumerate(pairs) if _canon(en) in _canon(e)]
+                narrower = [i for i, (e, _) in enumerate(pairs) if _canon(e) in _canon(en)]
+                if wider:
+                    i = wider[0]
+                    if not (s0 and _product(pairs[i][0], en) and _product(pairs[i][0], en) in _canon(s0.get("display_title") or "")):
+                        pairs[i] = (en, ar)   # two publications of one institution: its bare name, once
+                    continue
+                if narrower:
+                    continue   # the bare name already stands for this institution
+                pairs.append((en, ar))
+            credit = "; ".join(e for e, _ in pairs)
+            missing_ar = [e for e, a in pairs if not a]
+            if missing_ar:
+                blockers.append(f"no governed Arabic publisher for the credit line: {missing_ar}")
+            credit_ar = "؛ ".join(a for _, a in pairs if a)
             if not credit:
                 blockers.append("no governed credit line")
-            con["credit"] = OrderedDict([("rule", cr), ("text", credit or None), ("language_note", "Publisher names are governed in English only (15, 34); Arabic frames print them as isolated left-to-right runs.")])
+            con["credit"] = OrderedDict([("rule", cr), ("text", credit or None), ("text_ar", credit_ar or None),
+                                         ("language_note", "Publisher names are governed in both languages (15 publisher/publisher_ar; 34 publisher/publisher_ar). The Arabic uses the institution's established Arabic name without a Latin acronym, and keeps in parentheses a product name that Arabic writes in English (Global Findex, Remittance Prices Worldwide).")])
             # P4 (V-D5): every printed value carries its governed bilingual label
             specs_ = {x["id"]: x for x in (k.get("series") or []) + (k.get("objects") or [])}
             for grp in series + objects:
@@ -1482,7 +1519,7 @@ def visual_design_contracts(ctx, e):
             for lang in ("en", "ar"):
                 rec[f"detached_caption_{lang}"] = text(
                     lang, gov[f"title_{lang}"], gov[f"period_{lang}"], gov[f"universe_{lang}"],
-                    f"{labels['UI-VIS-SOURCE'][lang]} {credit}" if credit else None,
+                    (f"{labels['UI-VIS-SOURCE'][lang]} {credit_ar if lang == 'ar' and credit_ar else credit}" if credit else None),   # B4 review F3: the Arabic caption credits in Arabic
                     f"{labels['UI-VIS-DOES-NOT-ESTABLISH'][lang]} {gov[f'prohibited_inference_{lang}']}",
                     f"{labels['UI-VIS-FULL-RECORD'][lang]} /{lang}{gov['canonical_route']}" if gov["canonical_route"] else None)
         out_vis.append(rec)
