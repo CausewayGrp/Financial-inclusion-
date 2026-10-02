@@ -28,7 +28,7 @@
   "BUILD_AND_GATES": 23,
   "CONTROLLED_CONTRACT": 2,
   "CURRENT_DOCUMENT": 13,
-  "CURRENT_PROGRAMME_RECORD": 84,
+  "CURRENT_PROGRAMME_RECORD": 85,
   "DESIGN_PACKAGE": 446,
   "GENERATED_DIAGRAMS": 9,
   "GENERATED_LITERAL_CLOSURE": 1,
@@ -897,6 +897,10 @@
   },
   {
    "path": "audit/reading_integration/runs/RP-F2_RUN_REPORT.json",
+   "class": "CURRENT_PROGRAMME_RECORD"
+  },
+  {
+   "path": "audit/release_candidate/ARABIC_DATE_ISOLATION_SWEEP.md",
    "class": "CURRENT_PROGRAMME_RECORD"
   },
   {

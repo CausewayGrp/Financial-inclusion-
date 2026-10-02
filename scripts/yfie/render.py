@@ -29,7 +29,7 @@ GROUP_STARTS = ("In the same survey", "Separately,", "These are different measur
 RESOLUTION = ("These are different measures", "هذه مقاييس مختلفة")
 
 
-from .text import bdi, esc, isolate_document, isolate_iso as iso  # noqa: E402  (one text layer for every renderer, D6; `iso` takes escaped text)
+from .text import ID_RUN, bdi, esc, isolate_document, isolate_iso as iso  # noqa: E402  (one text layer for every renderer, D6; `iso` takes escaped text)
 
 
 def paras(items, cls: str = "") -> str:
@@ -349,7 +349,7 @@ def reading(page: dict, shell: dict) -> str:
     return head(page, shell, page["route"], kind="article") + header(shell) + body + footer(shell, print_foot(shell, page["route"], page["title"]))
 
 
-_CITE_LTR = re.compile(r'(?<![\w-])((?:CLM|VIS|RV|SRC|EP|MA|CWR|YSC|XW|PSE|DS|REF|OBS|FFO|WB|PB)-[A-Za-z0-9-]*\d[A-Za-z0-9-]*|CauseWay)(?![\w-])')
+_CITE_LTR = re.compile(f'({ID_RUN.pattern}|(?<![\\w-])CauseWay(?![\\w-]))')   # every identifier (the text layer's ID_RUN) and the publisher
 
 
 def cite_isolate(html_text: str) -> str:

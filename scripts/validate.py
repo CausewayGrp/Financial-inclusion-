@@ -2572,6 +2572,48 @@ try:
 except Exception as _x:
     errors.append('RC-GB unreadable '+repr(_x))
 
+# RC-DATES (owner request of 2 October 2026, after RC-5): after Arabic letters a digit-hyphen-digit run (an ISO date, a
+# date or number range, an identifier's dated tail) displays with its parts reversed unless it is isolated left to right.
+# Every Arabic page: each such run in printed text sits inside an element with dir="ltr" (an SVG drawing: direction="ltr"),
+# and in text that cannot carry markup (the title, the displayed meta content, alt, title and placeholder attributes)
+# between the Unicode isolates LRI and PDI. aria-label is spoken, not printed, and is not read here.
+from html.parser import HTMLParser as _HP   # noqa: E402
+_DASH_RUN=re.compile(r'\d[-‐‑–−]\d')
+_SHOWN_META={'description','og:title','og:description','og:image:alt','twitter:title','twitter:description','twitter:image:alt'}
+class _DateScan(_HP):
+    def __init__(self):
+        super().__init__(convert_charrefs=True); self.stack=[]; self.bad=[]
+    def _plain(self,where,v):
+        if _DASH_RUN.search(re.sub('⁦[^⁩]*⁩','',v or '')): self.bad.append((where,v))
+    def handle_starttag(self,t,a,void=False):
+        a=dict(a)
+        for k in ('alt','title','placeholder'):
+            if k in a: self._plain(f'{t}@{k}',a[k])
+        if t=='meta' and (a.get('name') in _SHOWN_META or a.get('property') in _SHOWN_META): self._plain(f'meta {a.get("name") or a.get("property")}',a.get('content'))
+        if void or t in ('area','base','br','col','embed','hr','img','input','link','meta','param','source','track','wbr'): return
+        self.stack.append((t, t!='html' and (a.get('dir')=='ltr' or a.get('direction')=='ltr'), t in ('script','style','template')))
+    def handle_startendtag(self,t,a): self.handle_starttag(t,a,void=True)
+    def handle_endtag(self,t):
+        for i in range(len(self.stack)-1,-1,-1):
+            if self.stack[i][0]==t: del self.stack[i:]; break
+    def handle_data(self,d):
+        if any(x[2] for x in self.stack) or not _DASH_RUN.search(d): return
+        if self.stack and self.stack[-1][0]=='title': self._plain('title',d); return
+        if not any(x[1] for x in self.stack): self.bad.append(('/'.join(x[0] for x in self.stack[-3:]),d.strip()[:90]))
+try:
+    _nd=0
+    for _f in sorted((DIST/'ar').rglob('*.html')):
+        _p=_DateScan(); _p.feed(_f.read_text(encoding='utf-8')); _nd+=1
+        for _w,_v in _p.bad[:3]: errors.append(f'RC-DATES an Arabic page prints a digit-hyphen-digit run outside an isolate {_f.relative_to(DIST)} [{_w}] {_v!r}')
+    if _nd<140: errors.append(f'RC-DATES read only {_nd} Arabic pages')
+    from yfie.text import ID_RUN as _ID_RUN   # noqa: E402
+    if f'const ID_RUN=/{_ID_RUN.pattern}/g;' not in js:
+        errors.append('RC-DATES the runtime\'s identifier isolation is not the renderer\'s expression (scripts/yfie/text.py ID_RUN)')
+    if ".replace(ID_RUN,m=>`<bdi dir=\"ltr\">${m}</bdi>`)" not in js:
+        errors.append('RC-DATES the runtime does not isolate the identifiers it writes')
+except Exception as _x:
+    errors.append('RC-DATES unreadable '+repr(_x))
+
 print(f'HTML={len(list(DIST.rglob("*.html")))} ERRORS={len(errors)} WARN={len(warns)}')
 if warns:
     for w in warns[:20]: print('WARN',w)

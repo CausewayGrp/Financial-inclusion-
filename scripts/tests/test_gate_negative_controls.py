@@ -176,7 +176,7 @@ CONTROLS = [
     # The runtime's isolation of governed dates and ranges is the renderer's own expression; if the two drift, a value a
     # tool writes into an Arabic page reads differently from one the page was rendered with (the D6 RUNTIME_DEFECT).
     ("the runtime's isolation drifts from the renderer's", "site-src/app.js",
-     replace(r"(?<![\d-])\d{4}-\d{2}", r"(?<![\d-])\d{4}-\d{3}"),
+     replace(r"(?<![A-Za-z0-9_-])\d{4}-\d{2}", r"(?<![A-Za-z0-9_-])\d{4}-\d{3}"),
      "the runtime's left-to-right isolation is not the renderer's expression"),
     ("the runtime loses its isolation helper", "site-src/app.js",
      replace("function iso(s){return esc(s).replace(LTR_RUN", "function iso(s){return esc(s).replace(/$^/"),
@@ -218,6 +218,17 @@ CONTROLS = [
     ("the Compare prompt shows whatever is selected", "site-src/app.js",
      replace("prompt.hidden=records.length>=2", "prompt.hidden=false"),
      "RC-G4 missing runtime contract: the Compare prompt"),
+    # RC-DATES (owner request, after RC-5): a date, range or dated identifier on an Arabic page displays in the English
+    # order only when it is isolated left to right — in markup, or with the Unicode isolates where markup cannot go.
+    ("an Arabic page prints a date range outside an isolate", "ar/evidence/CLM-024/index.html",
+     replace('<bdi dir="ltr" class="nw">2022–2023</bdi>', "2022–2023"),
+     "RC-DATES an Arabic page prints a digit-hyphen-digit run outside an isolate ar/evidence/CLM-024/index.html"),
+    ("an Arabic title and social card lose their Unicode isolates", "ar/evidence/CLM-040/index.html",
+     replace("\u2066", "", 0),
+     "RC-DATES an Arabic page prints a digit-hyphen-digit run outside an isolate ar/evidence/CLM-040/index.html [title]"),
+    ("the runtime stops isolating the identifiers it writes", "site-src/app.js",
+     replace(".replace(ID_RUN,m=>`<bdi dir=\"ltr\">${m}</bdi>`)", ""),
+     "RC-DATES the runtime does not isolate the identifiers it writes"),
     # The standing content gate (release candidate, RC-1): a governed sentence dropped from a page, and a number no governed
     # record or contract holds, must each be reported by scripts/tests/test_content_parity.py.
     ("a domain answer drops a governed sentence", "en/people/index.html",

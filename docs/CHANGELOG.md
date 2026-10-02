@@ -1,5 +1,21 @@
 # Repository Change Log
 
+## 2026-10-02 — Release candidate: Arabic dates isolated, systemically (owner request after RC-5)
+
+The Arabic reviewer's blocking finding in RC-5 (ISO dates displayed reversed) treated as a class. Every Arabic page was
+swept (`audit/release_candidate/ARABIC_DATE_ISOLATION_SWEEP.md`): 114 digit-hyphen-digit runs on 44 pages were printed
+without left-to-right isolation (26 in prose, 42 in citations, 8 in tables, 2 in titles, 36 in meta content), and the
+runtime wrote 16 such text nodes into search results and Compare. All are fixed; no governed word changed.
+
+- `scripts/yfie/text.py`: `NUM_RANGE` isolates a range at the end of a sentence and a range of thousands, and neither it
+  nor `ISO_DATE` starts inside an identifier; a new `ID_RUN` isolates identifiers (citations use it in place of a
+  prefix list); in a right-to-left document the title and the displayed meta content take the Unicode isolates.
+- `site-src/app.js`: `iso()` uses the renderer's revised `LTR_RUN` and isolates identifiers with the same `ID_RUN`.
+- B2c: no ISO date is left in Arabic running prose; ISO stays, isolated, in tables, data cells, citations and the
+  governed period lines.
+- Gate `RC-DATES` in `scripts/validate.py`, a browser test for the runtime, and three negative controls (each caught).
+  Ten social images regenerated (their frame text holds such a run); 276 unchanged.
+
 ## 2026-10-02 — Release candidate: Owner Addendum 2 saved
 
 `audit/release_candidate/INSTRUCTIONS_ADDENDUM_2026-10-02.md` (with its `audit/INDEX.md` row) holds the owner's second

@@ -387,6 +387,29 @@ def t_cite_source(page, base):
 
 
 # ------------------------------------------------------------------------------------------------ Accessibility baseline (P2.4)
+# RC-DATES (owner request, after RC-5): what the runtime writes into an Arabic page — search results, the Compare table,
+# its boundaries and source lists — isolates every date, range and identifier left to right, as the rendered page does.
+_UNISOLATED_JS = r"""() => { const re=/\d[-\u2010\u2011\u2013\u2212]\d/, out=[];
+  const w=document.createTreeWalker(document.body,NodeFilter.SHOW_TEXT); let n;
+  while((n=w.nextNode())){ const p=n.parentElement; if(!p||p.closest('script,style,svg')||!re.test(n.data)) continue;
+    const i=p.closest('[dir="ltr"]'); if(i&&i!==document.documentElement) continue; out.push(n.data.trim().slice(0,90)); }
+  return out; }"""
+
+
+@test("bidi: Arabic search results and Compare print every date, range and identifier isolated")
+def t_ar_runtime_isolation(page, base):
+    seen = []
+    for q in ("2022", "2024", "2026"):
+        page.goto(base + "/ar/evidence/?q=" + q)
+        page.wait_for_selector(".search-hit", timeout=5000)
+        seen += page.evaluate(_UNISOLATED_JS)
+    for recs in ("CLM-001,CLM-010,CLM-032", "CLM-033,CLM-035,CLM-037", "CLM-054,CLM-056,FMIIP-BASELINE-2025-01"):
+        page.goto(base + "/ar/evidence/compare/?records=" + recs)
+        page.wait_for_selector("[data-compare-verdict]", timeout=5000)
+        seen += page.evaluate(_UNISOLATED_JS)
+    assert not seen, f"{len(seen)} un-isolated runs, e.g. {seen[0]!r}"
+
+
 @test("a11y: skip link is first in tab order and moves focus into main")
 def t_skip(page, base):
     page.goto(base + "/ar/people/")
