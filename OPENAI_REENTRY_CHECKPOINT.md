@@ -136,7 +136,7 @@ Every item, with its class, where it shows, what closes it and its owner, is in 
 left an item open and checked each against the current bytes; the items closed since are listed there so they are not
 reopened (among them OWN-07 and OWN-08, closed on 27 September 2026).
 
-- **Sessions:** none open. D7 is complete; the next work is Claude Design's (gates D0–D7 in the brief).
+- **Sessions:** the Design programme is complete (D7 accepted by the owner, 2 October 2026) and the production runtime is merged (pull request #8). The release-candidate pull request (#9) implements the owner's decisions of 2 October 2026; the work after it is release-time only (`FINAL_OPEN_ITEMS_REGISTER.md` §2: hosting and public origin, live security headers, the currentness re-run at the release date, the owner's release acceptance).
 
 ## 5. Re-run
 

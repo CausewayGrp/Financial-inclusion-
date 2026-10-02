@@ -1,6 +1,6 @@
 {
  "schema": "YFIE_DEPLOYMENT/1.0",
- "state": "PRE_RELEASE_REFERENCE_BUILD",
+ "state": "PRE_RELEASE_PRODUCTION_RUNTIME",
  "public_origin": null,
  "rule": "public_origin is set (https://…, no trailing slash) only when the owner has fixed the release domain. With an origin the build writes absolute canonical and hreflang links, a robots.txt that allows crawling and points to sitemap.xml, and the sitemap. Until then robots.txt disallows crawling and no sitemap is written. Release-only decision; see FINAL_OPEN_ITEMS_REGISTER.md. Implementation: scripts/discovery.py."
 }

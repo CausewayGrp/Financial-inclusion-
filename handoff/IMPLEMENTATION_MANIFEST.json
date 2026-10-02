@@ -90,7 +90,7 @@
     "typography_rule": "Required: IBM Plex Sans (English) and IBM Plex Sans Arabic (Arabic), self-hosted from vendor/fonts/ (unchanged woff2 files of @ibm/plex-sans@1.1.0 and @ibm/plex-sans-arabic@1.1.0, OFL-1.1, Reserved Font Name \"Plex\"). Other IBM Plex family members (Serif, Mono, Sans Condensed) may be added for a defined role with a written rationale in the design package. No typeface outside the IBM Plex family; no font CDN; no font for novelty."
   },
   "implementation_target": {
-    "ui": "React static pre-render/export",
+    "ui": "Python production renderer in scripts/yfie (driven by scripts/build.py): static, pre-rendered HTML for every controlled route, with the one runtime site-src/app.js",
     "route_requirement": "All 143 controlled routes in Arabic and English must be real deep-link-safe static output.",
     "single_runtime_rule": "No permanent parallel legacy/new runtime. Migration may use temporary parity work, then obsolete presentation code is removed after acceptance.",
     "future_api_rule": "Future APIs must sit behind adapters and feed the same controlled schemas. They are not required for the first complete build."

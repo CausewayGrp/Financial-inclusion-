@@ -60,8 +60,11 @@ Measured with the same script and the same twelve route classes, so the two reco
 | Warm page, transferred | 0 | 0 |
 | Search interaction | 1,976,885 B (gzip ~321 KB) | unchanged |
 
-- **The logo is still the page**: 94–97 % of every cold load is the 10,018,273-byte master. That is now measured on the
-  implemented site, which is what EAD-03 was waiting for; the derivatives need the owner's approval.
+- **The logo is still the page**: 94–97 % of every cold load is the master logo — 10,018,081 bytes on disk, 10,018,273
+  bytes on the wire with the response headers (corrected 2 October 2026, release candidate G5). That is now measured on the
+  implemented site, which is what EAD-03 was waiting for; the derivatives need the owner's approval. **Done 2 October
+  2026** (owner decision EAD-03): every surface serves pure resamples of the unchanged master and cold pages fell from
+  10.31–10.71 MB to 0.30–0.69 MB (`audit/release_candidate/page_weight/PAGE_WEIGHT_EAD-03.md`).
 - **The whole increase is type.** The baseline named IBM Plex but shipped no font file, so a reader without it installed
   read the product in a fallback face — Arial, or Tahoma for Arabic. The runtime self-hosts the six faces the
   stylesheet declares and preloads the two a first paint needs in the page's language (EAD-08). About 200 KB and three

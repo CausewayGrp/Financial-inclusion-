@@ -21,14 +21,14 @@
   ]
  },
  "class_counts": {
-  "AUDIT_HISTORY": 252,
+  "AUDIT_HISTORY": 253,
   "AUTHORITY_MASTER": 1,
   "AUTHORITY_POINTER": 2,
   "AUTHORITY_RULES": 1,
   "BUILD_AND_GATES": 23,
   "CONTROLLED_CONTRACT": 2,
   "CURRENT_DOCUMENT": 13,
-  "CURRENT_PROGRAMME_RECORD": 72,
+  "CURRENT_PROGRAMME_RECORD": 74,
   "DESIGN_PACKAGE": 446,
   "GENERATED_DIAGRAMS": 9,
   "GENERATED_LITERAL_CLOSURE": 1,
@@ -322,6 +322,10 @@
   {
    "path": "audit/READING_PORTFOLIO_FINAL_ADJUDICATION.md",
    "class": "CURRENT_PROGRAMME_RECORD"
+  },
+  {
+   "path": "audit/RECORDS_RECONCILIATION_2026-10-02.md",
+   "class": "AUDIT_HISTORY"
   },
   {
    "path": "audit/RESOURCE_LIBRARY_CLOSURE.md",
@@ -912,6 +916,10 @@
    "class": "CURRENT_PROGRAMME_RECORD"
   },
   {
+   "path": "audit/release_candidate/g5_stage_records.py",
+   "class": "CURRENT_PROGRAMME_RECORD"
+  },
+  {
    "path": "audit/release_candidate/page_weight/PAGE_WEIGHT_EAD-03.md",
    "class": "CURRENT_PROGRAMME_RECORD"
   },
@@ -949,6 +957,10 @@
   },
   {
    "path": "audit/release_candidate/runs/G3-EAD-11_RUN_REPORT.json",
+   "class": "CURRENT_PROGRAMME_RECORD"
+  },
+  {
+   "path": "audit/release_candidate/runs/G5-RECORDS_RUN_REPORT.json",
    "class": "CURRENT_PROGRAMME_RECORD"
   },
   {

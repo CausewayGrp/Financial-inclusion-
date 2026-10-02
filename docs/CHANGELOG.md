@@ -1,5 +1,22 @@
 # Repository Change Log
 
+## 2026-10-02 — Release candidate G5: records reconciliation
+
+`audit/RECORDS_RECONCILIATION_2026-10-02.md` (with its `audit/INDEX.md` row): one row per item of the brief's G5 list —
+`implementation_target.ui` names the Python renderer (C9); the context's sustainability pointer names the implemented-runtime
+measurement (C9); DEBT-008 reclassified as not blocking release (C8, A8); checkpoint §4 no longer names Design as next;
+EAD-07's label request raised; historical ledgers left as they are, register §8 governing; the master logo's byte count
+corrected in `docs/SUSTAINABILITY_METHOD.md`; `site-src/deployment.json` state `PRE_RELEASE_PRODUCTION_RUNTIME`
+(`public_origin` still null); README's IBM Plex lines checked against the shipped fonts (no change); README status for
+after this pull request. The four files inside the runner's snapshot went through `run_stage.py --install`
+(`audit/release_candidate/g5_stage_records.py`). C1–C5 confirmed still holding.
+
+**Erratum to the entry of 29 September 2026 (EAD-01, "Every gate keeps its assertion …").** That entry says it "corrects the
+planning appendix of 29 September". No such appendix is in the repository: it was the implementing session's working plan
+and was never committed. The statement being corrected — that Explore's clusters "already come governed, through the
+handoff inventory's `question_groups`" — is described in the EAD-11 escalation in `design/ESCALATIONS.md`. The entry
+itself is left as written.
+
 ## 2026-10-02 — Release candidate G4 (part 2): EAD-03 — the logo's web-size derivatives
 
 Owner decision EAD-03 (`audit/OWNER_DECISIONS_2026-10-02.md`). `scripts/logo_derivatives.py` writes eight pure Lanczos

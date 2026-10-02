@@ -1,7 +1,7 @@
 {
   "schema": "YFI_CURRENT_PROJECT_CONTEXT/1.0",
   "role": "COMPACT_PROJECTION_NOT_AUTHORITY",
-  "generated_at": "2026-10-02T17:30:05Z",
+  "generated_at": "2026-10-02T18:09:00Z",
   "system": {
     "name_en": "Yemen Financial Inclusion Evidence",
     "name_ar": "أدلة الشمول المالي في اليمن",
@@ -25,7 +25,7 @@
       "reading_portfolio": "audit/READING_PORTFOLIO_FINAL_ADJUDICATION.md — ten Readings integrated Master-first (RP-F2); BIL-05 CLOSED (bilingual invariance 0)",
       "public_corpus": "audit/F5_PUBLIC_CORPUS_ACCEPTANCE.md — every public text reviewed in Arabic, English and parity (667 findings; ledger audit/F5_CORPUS_FINDINGS_LEDGER.csv)",
       "discovery_accessibility_security": "audit/F6_DISCOVERY_ACCESSIBILITY_RIGHTS_SECURITY_ACCEPTANCE.md — pre-Design contract and gates F6-G01…G08; public origin null until the owner sets it (site-src/deployment.json)",
-      "sustainability": "docs/SUSTAINABILITY_METHOD.md; audit/SUSTAINABILITY_PRE_DESIGN_BASELINE.json (pre-design reference build; remeasure after Design and deployment)",
+      "sustainability": "docs/SUSTAINABILITY_METHOD.md; audit/SUSTAINABILITY_PRE_DESIGN_BASELINE.json (pre-design reference build); docs/SUSTAINABILITY_IMPLEMENTED_RUNTIME.json (the implemented runtime, remeasured 29 September 2026; the logo derivatives' effect in audit/release_candidate/page_weight/PAGE_WEIGHT_EAD-03.md); only the host remains to be measured",
       "handoff_freeze": "audit/R8_6_DESIGN_HANDOFF_FREEZE_CLOSURE.md — one start file, one Design prompt, route/content/state inventory, acceptance criteria, Design-to-Code contract; gates R86-G01…G04",
       "open_items": "FINAL_OPEN_ITEMS_REGISTER.md — 47 items in six classes; zero DESIGN_BLOCKER (OWN-07 and OWN-08 closed by the post-F9 correction, 27 Sep 2026)",
       "clean_room_acceptance": "audit/FINAL_CLEAN_ROOM_ACCEPTANCE.md — three cold-recipient runs, archive test from an empty directory, final gates and scans",

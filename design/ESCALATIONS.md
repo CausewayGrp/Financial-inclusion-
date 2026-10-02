@@ -335,6 +335,14 @@ Raised in the release-candidate pull request (2 October 2026), by the A3 / C3 im
   RV-CWR-005 (AR). The fix is Master-first: drop the restating sentence from \`accessible_summary_*\` in 11, both
   languages checked together. The checks stay strict and report these eight until then.`
 
+Raised in the release-candidate pull request (2 October 2026; release candidate G5), moved from "Anticipated":
+
+- `NEEDS_CONTROLLED_CONTENT — /data/ (the source register) — EAD-07: a governed group label for sources without a
+  document type — a document-type filter on the register is built-ready (142 of the 151 displayed sources carry a governed
+  \`document_label\`), but 9 do not, and a filter with no group for them would hide nine sources the register promises are
+  discoverable. Needed: a governed label for the no-type group (for example "Type not recorded" / its Arabic), English and
+  Arabic together, Master-first in 04. Code ships the filter the day it exists. Raised; EAD-07 in the register.`
+
 ## Closed at D2 (27 September 2026) — resolved by an authority the repository already holds
 
 - Arabic credit line (`NEEDS_CONTROLLED_CONTENT — RV-CWR-001 and every visual contract with a credit`): the contract
@@ -415,7 +423,8 @@ Raised at EAD-01 by Claude Code (29 September 2026), found by the cutover itself
 Recorded so no one fills these gaps silently. Source: brief §10, §12, §15.
 
 - Result-type facet labels exist (`UI-JS-TYPE-*`); a domain facet needs a governed domain field on search records.
-- "Type not recorded" group label for the 9 displayed sources without `document_label` (`/data/`, EAD-07).
+- "Type not recorded" group label for the 9 displayed sources without `document_label` (`/data/`, EAD-07). **Raised
+  2 October 2026** — see "Raised in the release-candidate pull request … EAD-07" under Open.
 - Evidence-workbench facet headings/values (verification state, domain), if a facet is designed.
 - Report-issue intent labels, if a richer reporting intent is designed.
 - Reuse line and download labels following the licence decision (OWN-04) — the export control's labels raised at D6.
