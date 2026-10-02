@@ -95,7 +95,8 @@ def main() -> int:
                 if not visuals.draws(v):   # a drawer whose labels wait renders as a text frame and has no export frame (D7)
                     continue
                 shell = content.shell(lang, v.get("canonical_href", "/"))
-                fig = visuals.figure(v, shell["labels"]["cite"], renderer.DISC.origin())
+                # A3 / C3: a frame that leaves the page keeps the full governed alt text, ending with the boundary
+                fig = visuals.figure({**v, "_detached": True}, shell["labels"]["cite"], renderer.DISC.origin())
                 (out / "_export" / f"{vid}__{lang}.html").write_text(frames.export_document(fig, v, shell), encoding="utf-8")
                 exports += 1
     if args.routes == "all" and hasattr(renderer, "render_site_files"):

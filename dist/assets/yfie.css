@@ -202,6 +202,7 @@ dialog.search::backdrop{background:rgba(23,33,43,.55)}
 .search-input{width:100%;padding:12px 14px;border:1px solid var(--rule-2);background:var(--paper);font-size:var(--fs-body)}
 .search-input:focus-visible{outline-offset:0}
 .search-status{font-size:var(--fs-clock);color:var(--ink-2);min-height:1.4em}
+.search-type{margin-top:6px;padding:6px 10px;border:1px solid var(--rule-2);background:var(--paper);font-size:var(--fs-src);max-width:100%}
 .search-results{display:flex;flex-direction:column;max-height:60vh;overflow:auto}
 .search-results a{display:block;padding:10px 0;border-top:1px solid var(--rule);text-decoration:none}
 .search-results .empty{color:var(--ink-2)}
@@ -343,6 +344,7 @@ svg.ts .lbl.alt2{display:block}
 .search-results .search-hit h4{margin:0;font-size:var(--fs-body);font-weight:600}
 .search-results .search-hit p{color:var(--ink-2);font-size:var(--fs-src);margin:0}
 .search-results .search-hit .meta{font-size:var(--fs-clock);color:var(--mute);font-weight:500}
+.search-results .search-see-all{padding-top:12px;border-top:1px solid var(--rule);font-size:var(--fs-src);font-weight:600}
 .search-results .search-boundary-note{font-size:var(--fs-src);color:var(--counter);border-top:3px double var(--counter);padding-top:8px}
 .hubs{display:flex;flex-direction:column;border-top:1px solid var(--rule-2)}
 details.hub{border-top:1px solid var(--rule)}

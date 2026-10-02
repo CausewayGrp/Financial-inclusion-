@@ -68,6 +68,13 @@ def insert_after(anchor: str, fragment: str):
     return lambda t: t.replace(anchor, anchor + fragment, 1)
 
 
+def full_alt_text(vid: str, lang: str) -> str:
+    """A figure's full governed alt text as a page would print it (escaped): summary, label and boundary (A3 / C3)."""
+    import html as _h, json as _j   # noqa: PLC0415
+    vis = _j.loads((ROOT / "site-src/content/visuals/visual_design_contracts.json").read_text(encoding="utf-8"))["visuals"]
+    return _h.escape(next(v for v in vis if v["visual_id"] == vid)["governed"][f"alt_text_{lang}"], quote=False)
+
+
 # name, the file to break, how to break it, the gate text that must appear.
 # The text must be a substring of the real message: several gates interpolate a route or a visual id into the middle of
 # theirs, so a control that names the gate and then the wording would never match (found by running these).
@@ -175,14 +182,30 @@ CONTROLS = [
      replace("function iso(s){return esc(s).replace(LTR_RUN", "function iso(s){return esc(s).replace(/$^/"),
      "the runtime has no isolation helper"),
     ("the search query stops being URL-addressable", "site-src/app.js",
-     replace("function writeSearchUrl(term){", "function writeSearchUrlX(term){"),
+     replace("function writeSearchUrl(term,type){", "function writeSearchUrlX(term,type){"),
      "missing runtime contract: search query written to the URL"),
+    ("the search status hides the true total when hits are capped", "site-src/app.js",
+     replace("TF('UI-JS-SEARCH-RESULTS-OF',{n:scored.length,m:matching.length})", "TF('UI-JS-SEARCH-RESULTS',{n:scored.length})"),
+     "missing runtime contract: search status with the true total when hits are capped"),
     ("the directory's search stops owning the page address", "en/evidence/index.html",
      replace("data-search-input data-search-url-state", "data-search-input"),
      "the Evidence directory's search does not own the page address"),
     ("an inventory count phrase disagrees with the contract", "en/measurement/index.html",
      insert_after('<div class="body">', "<p>This resource publishes 42 Evidence records, each traced.</p>"),
      "P1-G04 inventory count phrase not from the contract"),
+    # Release candidate G4: the behaviours the owner decisions and the RC-3 labels unlocked must stay shipped.
+    ("an external link loses its new-tab cue", "en/evidence/CLM-001/index.html",
+     replace('<span class="sr-only"> (opens in a new tab)</span>', ""),
+     "RC-G4 new-tab link without its cue"),
+    ("a retired contract is framed on a domain answer again", "en/reforms/index.html",
+     insert_after('<main id="main"', ' data-x=""><figure class="fig" data-visual-id="VIS-CAPITAL-CONTEXT"></figure><span hidden'),
+     "RC-G4 retired contract VIS-CAPITAL-CONTEXT framed on"),
+    ("a page prints a figure's full alt text, boundary and all", "en/people/index.html",
+     insert_after('<p class="small"><b>', full_alt_text("VIS-FINDEX-GAPS", "en")),
+     "RC-G4 the full alt text of VIS-FINDEX-GAPS"),
+    ("the Compare prompt shows whatever is selected", "site-src/app.js",
+     replace("prompt.hidden=records.length>=2", "prompt.hidden=false"),
+     "RC-G4 missing runtime contract: the Compare prompt"),
     # The standing content gate (release candidate, RC-1): a governed sentence dropped from a page, and a number no governed
     # record or contract holds, must each be reported by scripts/tests/test_content_parity.py.
     ("a domain answer drops a governed sentence", "en/people/index.html",

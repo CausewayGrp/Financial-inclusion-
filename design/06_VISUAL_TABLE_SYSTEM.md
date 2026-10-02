@@ -39,7 +39,7 @@ same figure appears on the public routes the Page Specs bind.
 | VIS-E-MONEY-RULE-STACK, VIS-FCP-REDRESS-PATH, VIS-FL-EVIDENCE-LADDER, VIS-EVIDENCE-CLASS-LADDER | SUPPORTING | text frame | their records · the domain or directory page |
 | VIS-FIRM-FINANCE-PATH, VIS-FIRM-FINANCE-SEVERITY, VIS-MFI-DIVERGENCE, VIS-TARGET-RESULT-STATE, VIS-INCLUSION-TRANSMISSION, VIS-EVIDENCE-FRESHNESS, VIS-EVIDENCE-GAPS, VIS-OECD-FCP-TIMELINE, VIS-MECHANISM-METRIC-BRIDGE, VIS-ACCESS-EVIDENCE-LAYER | TABLE_TEXT_FIRST | text frame (rows requested where the rationale describes a table) | their records or pages |
 | VIS-SOURCE-COMPARISON | TABLE_TEXT_FIRST | the Compare tool itself carries it (its alt text as the standfirst, its prohibited inference as the boundary before the controls, D2/D4); a text frame on its record | its record · `/evidence/compare/` |
-| VIS-CAPITAL-CONTEXT | RETIRE | never drawn; its record has no figure. Corrected 2 October 2026: this build shows the contract on `/reforms/` as a governed text frame in the depth group, and the earlier justification here ("keeps the baseline's governed text frame for parity") was wrong on the bytes — the pre-design baseline had no such frame (`audit/PR8_INDEPENDENT_ACCEPTANCE.md` A5). The owner decided that the RETIRE_FROM_DESIGN tier is excluded from the domain depth frames: the frame is removed from `/reforms/` in the release-candidate pull request and the Evidence Record text stays (`audit/OWNER_DECISIONS_2026-10-02.md`, row A5 / C4) | its record · `/reforms/` (frame removed in the release candidate) |
+| VIS-CAPITAL-CONTEXT | RETIRE | never drawn; its record has no figure. Corrected 2 October 2026: this build shows the contract on `/reforms/` as a governed text frame in the depth group, and the earlier justification here ("keeps the baseline's governed text frame for parity") was wrong on the bytes — the pre-design baseline had no such frame (`audit/PR8_INDEPENDENT_ACCEPTANCE.md` A5). The owner decided that the RETIRE_FROM_DESIGN tier is excluded from the domain depth frames: the frame is removed from `/reforms/` in the release-candidate pull request and the Evidence Record text stays (`audit/OWNER_DECISIONS_2026-10-02.md`, row A5 / C4). **Removed by owner decision, 2 October 2026** (release candidate G4 item 5): `scripts/yfie/families.py` skips the RETIRE_FROM_DESIGN tier in the domain depth frames; `/reforms/` keeps the link to the record; `check_visuals.py` `never_drawn` now rejects a text frame for the tier as well | its record · `/reforms/` (frame removed in the release candidate) |
 
 Why the SUPPORTING and TABLE_TEXT_FIRST contracts stay text frames (DL-D6-001): none resolves a row, and none has a
 governed vocabulary for the rungs, layers or steps its rationale names (VIS-FL-EVIDENCE-LADDER's three kinds of
@@ -121,8 +121,9 @@ The table pattern (D6, `visuals.table`, closes DEBT-010 and narrows DEBT-013):
 
 A SUPPORTING or TABLE_TEXT_FIRST contract without a drawing renders `figure.fig.fig-text`: rubric, title, question,
 the governed description as the body (its heading kept in the accessibility tree only, D3), the scope line, the foot
-(§2). The Compare page carries VIS-SOURCE-COMPARISON as the tool (its alt text as the standfirst, its prohibited
-inference as the boundary before the controls); its record page carries the text frame. VIS-CAPITAL-CONTEXT's record
+(§2). The Compare page carries VIS-SOURCE-COMPARISON as the tool (its accessible summary as the standfirst — since A3 / C3,
+2 October 2026, no page prints the full alt text, which ends with the boundary — and its prohibited inference as the
+boundary before the controls); its record page carries the text frame. VIS-CAPITAL-CONTEXT's record
 page has no figure. Rows for the TABLE_TEXT_FIRST contracts whose rationale describes a table are requested
 Master-first (`ESCALATIONS.md`, D2 and D6); with rows, VIS-TARGET-RESULT-STATE becomes the three-row table with the
 governed TARGET and RESULT markers (designed, `03_COMPONENT_CATALOG.md` §3).

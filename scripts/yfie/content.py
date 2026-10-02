@@ -48,6 +48,9 @@ class Content:
         self.closure = {(c["object_type"], c["object_id"]): c for c in _load("sources/public_object_source_closure.json")}
         self.visual_contracts = {v["visual_id"]: v for v in _load("visuals/visual_design_contracts.json")["visuals"]}
         self.grammar_labels = _load("visuals/visual_design_contracts.json")["grammar_labels"]
+        # A3 / C3 (owner decision, 2 October 2026): on the page, a figure's text alternative is its governed accessible
+        # summary, which ends before the boundary; the full alt text (summary · label · inference) is for detached frames
+        self.accessible_summary = {v["visual_id"]: v for v in _load("visuals/visual_library.json")}
         self.relationships = _load("visuals/system_relationships.json")
         self.inventory = {c["key"]: int(c["value"]) for c in _load("content/public_inventory.json")["counts"]}
         # Detail routes: every evidence-detail Page Spec, keyed by the object it renders (navigation only).
@@ -180,6 +183,7 @@ class Content:
                 "search": self.t("UI-SEARCH-SEARCH", lang), "search_title": self.t("UI-SEARCH-SEARCH-THE-PUBLIC-EVIDENCE", lang),
                 "search_placeholder": self.t("UI-SEARCH-SEARCH-QUESTIONS-EVIDENCE-READINGS-AND", lang),
                 "search_status": self.t("UI-SEARCH-SEARCH-STATUS", lang), "search_close": self.t("UI-SEARCH-CLOSE", lang),
+                "new_tab": self.t("UI-EXTERNAL-NEW-TAB", lang),   # release candidate G4 (D5): the visually hidden new-tab cue
                 "cite": self.t("UI-HEADER-CITE-THIS-PAGE", lang), "report": self.t("UI-HEADER-REPORT-AN-ISSUE", lang),
                 "copied": self.t("UI-HEADER-COPIED", lang),
                 "lang_switch_name": self.t("UI-LANG-SWITCH-NAME", other), "lang_switch_action": self.t("UI-LANG-SWITCH-ACTION", other),
@@ -501,10 +505,12 @@ class Content:
         out = {
             "id": vid, "tier": v["tier"], "title": g.get(f"title_{lang}"), "question": g.get(f"question_{lang}"),
             "prohibited_inference": g.get(f"prohibited_inference_{lang}"), "alt_text": g.get(f"alt_text_{lang}"),
+            "summary": (self.accessible_summary.get(vid) or {}).get(f"accessible_summary_{lang}"),
             "period": g.get(f"period_{lang}"), "universe": g.get(f"universe_{lang}"),
             "canonical_href": self.href(g.get("canonical_route"), lang),
             "detached_caption": v.get(f"detached_caption_{lang}"),
-            "lang": lang, "edition": self.t("UI-CONTENT-VERSION", lang),   # the product name comes from the shell (every frame reads shell["product"])
+            "lang": lang, "edition": self.t("UI-CONTENT-VERSION", lang),
+            "count_unit": self.t("UI-VIS-UNIT-COUNT", lang),   # G4 item 7: an Arabic count prints in label-value form   # the product name comes from the shell (every frame reads shell["product"])
             "labels": {"does_not_establish": lab("UI-VIS-DOES-NOT-ESTABLISH"), "source": lab("UI-VIS-SOURCE"), "full_record": lab("UI-VIS-FULL-RECORD"),
                        "same_year_revision": lab("UI-VIS-SAME-YEAR-REVISION"), "not_comparable": lab("UI-VIS-NOT-COMPARABLE"),
                        "reported": lab("UI-VIS-STATE-REPORTED"), "derived": lab("UI-VIS-STATE-DERIVED"), "unknown": lab("UI-VIS-STATE-UNKNOWN"),
@@ -513,7 +519,8 @@ class Content:
                        "text_alternative": self.t("UI-DOM-ANALYTICAL-TEXT-ALTERNATIVE", lang), "scope": self.t("UI-DOM-SCOPE-AND-TIME", lang),
                        "what_not_to_conclude": self.t("UI-DOM-WHAT-NOT-TO-CONCLUDE", lang),
                        "open_source_record": self.t("UI-EVID-OPEN-SOURCE-RECORD", lang), "source_record": self.t("UI-SOURCES-SOURCE-RECORD", lang),
-                       "reference": self.t("UI-SOURCE-REFERENCE", lang), "period": self.t("UI-EVID-WHEN-WAS-IT-MEASURED-OR", lang)},
+                       "reference": self.t("UI-SOURCE-REFERENCE", lang), "period": self.t("UI-EVID-WHEN-WAS-IT-MEASURED-OR", lang),
+                       "value_unit_per_row": self.t("UI-VIS-VALUE-UNIT-PER-ROW", lang)},   # release candidate G4 (D6)
         }
         if c:
             def localise(row: dict) -> dict:

@@ -363,12 +363,30 @@ def print_foot(shell: dict, route: str, title: str, citation: str = "") -> str:
 RENDERERS = {"Orientation": home, "Evidence Record": evidence_record, "Reading": reading}
 
 
+_NEW_TAB_LINK = re.compile(r'(<a\b[^>]*\btarget="_blank"[^>]*>)(.*?)(</a>)', re.S)
+
+
+def mark_new_tab(html: str, cue: str) -> str:
+    """Release candidate G4 (D5 escalation; UI-EXTERNAL-NEW-TAB): every link that opens a new tab says so to assistive
+    technology — a visually hidden cue inside the link, or, where the link is named by aria-label, at the end of that name."""
+    if not cue:
+        return html
+
+    def one(m):
+        open_, inner, close = m.groups()
+        if 'aria-label="' in open_:
+            return re.sub(r'aria-label="([^"]*)"', lambda a: f'aria-label="{a.group(1)} {esc(cue)}"', open_, count=1) + inner + close
+        return f'{open_}{inner}<span class="sr-only"> {esc(cue)}</span>{close}'
+    return _NEW_TAB_LINK.sub(one, html)
+
+
 def render(page: dict, shell: dict, variant: str = "") -> str:
     _COMPACT_N[0] = 0   # ids restart per page (deterministic output whatever the route order)
     if page["family"] in RENDERERS:
-        return isolate_document(RENDERERS[page["family"]](page, shell))
+        return mark_new_tab(isolate_document(RENDERERS[page["family"]](page, shell)), shell["labels"].get("new_tab", ""))
     from . import families   # the D2 families share this module's objects and shell
-    return isolate_document(families.RENDERERS[page["family"]](page, shell))   # the one isolation pass (text.py): no date or range leaves plain
+    # the one isolation pass (text.py): no date or range leaves plain; then every new-tab link carries its cue
+    return mark_new_tab(isolate_document(families.RENDERERS[page["family"]](page, shell)), shell["labels"].get("new_tab", ""))
 
 
 def render_site_files(out: Path, content) -> int:

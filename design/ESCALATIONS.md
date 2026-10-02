@@ -324,6 +324,17 @@ provider observability matrix (RC-3 item 18) brings two gaps into view that only
   restructuring, a founding assembly and a board meeting for status decisions. Needed: a governed label (for example
   "Context:" / «للسياق:») printed before the events in both forms. Code does not author it.`
 
+Raised in the release-candidate pull request (2 October 2026), by the A3 / C3 implementation (G4 item 4):
+
+- `ESCALATE_TO_MASTER (Part B editorial pass, B2 / B3) — five governed accessible summaries restate their figure's
+  boundary — with A3 implemented (on the page the text alternative is the governed accessible summary, the boundary
+  prints once in the foot) and the design checks extended to count the visible text alternative
+  (\`check_visuals.py\` boundary_once_in_foot, \`check_site.py\` boundary_once_per_frame), eight frames still print the
+  opening of their boundary twice, because the accessible summary itself closes with a sentence that restates it:
+  VIS-REMITTANCE-MACRO (EN, AR), VIS-POS-TRANSACTIONS (EN; its frame on /payments/ and its record), RV-CWR-003 (AR) and
+  RV-CWR-005 (AR). The fix is Master-first: drop the restating sentence from \`accessible_summary_*\` in 11, both
+  languages checked together. The checks stay strict and report these eight until then.`
+
 ## Closed at D2 (27 September 2026) — resolved by an authority the repository already holds
 
 - Arabic credit line (`NEEDS_CONTROLLED_CONTENT — RV-CWR-001 and every visual contract with a credit`): the contract

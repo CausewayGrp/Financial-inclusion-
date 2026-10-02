@@ -8,7 +8,7 @@ Serves dist/ (or the directory named by YFIE_SITE_DIR, relative to the repositor
 (handoff/ENGINEERING_HANDOFF_EXPECTATIONS.md; site-src/content/content/navigation_interaction.json "interaction_tools").
 Exit code 0 = all tests pass; 1 = a behaviour regressed; 2 = the browser harness is unavailable.
 """
-import functools, http.server, json, os, socket, sys, threading, traceback
+import functools, http.server, json, os, re, socket, sys, threading, traceback
 from urllib.parse import quote
 
 ROOT = os.path.abspath(os.path.join(os.path.dirname(__file__), "..", ".."))
@@ -212,6 +212,45 @@ def t_search_url_state(page, base):
     page.fill("#global-search-dialog", "remittances")
     page.wait_for_selector("#search-dialog .search-hit")
     assert page.evaluate("location.search") == "", page.url
+
+
+@test("search: capped hits state the true total and lead to the Evidence directory; the result-type filter narrows and is URL-addressable")
+def t_search_capped_and_typed(page, base):
+    """A6 / C7 and EAD-06 (release candidate G4): the dialog shows ten hits; when more match, the status gives the true
+    total in the governed form and a link carries the query to the Evidence directory filtered to evidence records,
+    where every match is shown and the result type is read back from the address."""
+    page.goto(base + "/en/people/")
+    page.click("[data-search-open]")
+    page.fill("#global-search-dialog", "remittances")
+    page.wait_for_selector("#search-dialog .search-see-all a")
+    shown = page.evaluate("document.querySelectorAll('#search-dialog .search-hit').length")
+    status = page.inner_text("#search-dialog [data-search-status]")
+    m = re.fullmatch(r"Showing (\d+) of (\d+) results", status.strip())
+    assert m and int(m.group(1)) == shown == 10 and int(m.group(2)) > 10, status
+    href = page.get_attribute("#search-dialog .search-see-all a", "href")
+    assert href == "/en/evidence/?q=remittances&type=evidence", href
+    page.goto(base + href)
+    page.wait_for_selector("#search-results .search-hit")
+    assert page.input_value("#global-search + [data-search-type]") == "evidence"
+    types = page.evaluate("[...document.querySelectorAll('#search-results .search-hit .meta')].map(e=>e.textContent.split(' · ')[0])")
+    assert types and set(types) == {"Evidence record"}, set(types)
+    assert page.evaluate("document.querySelectorAll('#search-results .search-see-all').length") == 0   # the directory shows every match
+    page.select_option("#global-search + [data-search-type]", "")
+    page.wait_for_function("new URLSearchParams(location.search).get('type')===null")
+    page.goto(base + "/ar/evidence/?q=remittances&type=evidence")   # the same state in the other edition
+    page.wait_for_selector("#search-results .search-hit")
+    assert page.get_attribute("#global-search + [data-search-type]", "aria-label") == "نوع النتيجة"
+
+
+@test("compare: the 'select at least two' prompt shows only while fewer than two records are selected")
+def t_compare_prompt(page, base):
+    """Release candidate G4 item 6: the governed prompt stands beside the controls and is hidden once a comparison shows."""
+    page.goto(base + "/en/evidence/compare/")
+    page.wait_for_selector("#compare-output .compare-verdict")
+    assert page.evaluate("document.querySelector('[data-compare-prompt]').hidden") is True
+    page.goto(base + "/en/evidence/compare/?records=NOT-A-RECORD,ALSO-NOT")   # an input error: no comparison is shown
+    page.wait_for_selector("[data-compare-url-error]")
+    assert page.evaluate("document.querySelector('[data-compare-prompt]').hidden") is False
 
 
 @test("search: a query from the URL is rendered as text, never as markup")

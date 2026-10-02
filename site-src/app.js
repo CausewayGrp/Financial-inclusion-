@@ -122,18 +122,31 @@ function renderHits(hits){
 // EAD-06 (handoff §2: "tool state that matters — Compare records, filters, search query — is URL-addressable,
 // reloadable and survives a language switch"). Only the page's OWN search writes the URL. The dialog is an overlay
 // over whatever page the reader is on, and rewriting that page's address as they type would change what they share.
-function writeSearchUrl(term){
-  const next=location.pathname+(term?`?q=${encodeURIComponent(term)}`:'')+location.hash;
+function writeSearchUrl(term,type){
+  const qs=new URLSearchParams();if(term)qs.set('q',term);if(term&&type)qs.set('type',type);
+  const next=location.pathname+(qs.toString()?`?${qs}`:'')+location.hash;
   if(next!==location.pathname+location.search+location.hash)history.replaceState(null,'',next);
+}
+// RC-3 / EAD-06: the result-type filter (governed name and no-type state; the option labels are the governed type labels).
+function typeFacet(input){
+  const sel=document.createElement('select');
+  sel.className='search-type';sel.setAttribute('data-search-type','');sel.setAttribute('aria-label',T('UI-JS-SEARCH-TYPE-FACET'));
+  sel.innerHTML=`<option value="">${esc(T('UI-JS-SEARCH-TYPE-ALL'))}</option>`+Object.keys(TYPE_LABEL_UI).map(k=>`<option value="${k}">${esc(typeLabel(k))}</option>`).join('');
+  input.insertAdjacentElement('afterend',sel);
+  return sel;
 }
 function bindSearch(input,box,status,urlState){
   if(!input||!box)return;
   let timer;
+  const facet=typeFacet(input);
+  const cap=urlState?Infinity:10;   // the dialog shows ten; the Evidence directory's own search shows every match
+  facet.addEventListener('change',()=>input.dispatchEvent(new Event('input')));
   input.addEventListener('input',()=>{
     clearTimeout(timer);
     timer=setTimeout(async()=>{
       const term=normalize(input.value.trim());
-      if(urlState)writeSearchUrl(input.value.trim());
+      const type=facet.value;
+      if(urlState)writeSearchUrl(input.value.trim(),type);
       if(term.length<2){box.innerHTML=''; if(status)status.textContent=''; return;}
       if(status)status.textContent=T('UI-JS-SEARCHING');
       try{
@@ -153,10 +166,15 @@ function bindSearch(input,box,status,urlState){
           const nextType=String(x.type||x.object_type||'');
           if(currentType==='page'&&nextType!=='page')unique[pos]=x;
         });
-        const scored=unique.slice(0,10);
+        const matching=type?unique.filter(x=>String(x.object_type||x.type||'').toLowerCase()===type):unique;
+        const scored=matching.slice(0,cap);
         const note=alias&&(isAr?alias.boundary_note_ar:alias.boundary_note_en);
-        box.innerHTML=(note?`<p class="search-boundary-note">${esc(note)}</p>`:'')+renderHits(scored);
-        if(status)status.textContent=TF(scored.length===1?'UI-JS-SEARCH-RESULT-ONE':'UI-JS-SEARCH-RESULTS',{n:scored.length});   // TOOL-19
+        // A6 / C7: when fewer hits are shown than match, say so with the true total and carry the query to the Evidence directory (?q=, EAD-06)
+        const capped=scored.length<matching.length;
+        const seeAll=capped?`<p class="search-see-all"><a href="${prefix}/evidence/?q=${encodeURIComponent(input.value.trim())}&amp;type=evidence">${esc(T('UI-JS-SEARCH-SEE-ALL-EVIDENCE'))}</a></p>`:'';
+        box.innerHTML=(note?`<p class="search-boundary-note">${esc(note)}</p>`:'')+renderHits(scored)+seeAll;
+        if(status)status.textContent=capped?TF('UI-JS-SEARCH-RESULTS-OF',{n:scored.length,m:matching.length})
+          :TF(scored.length===1?'UI-JS-SEARCH-RESULT-ONE':'UI-JS-SEARCH-RESULTS',{n:scored.length});   // TOOL-19
       }catch(e){
         box.innerHTML='<div class="empty">'+T('UI-JS-SEARCH-UNAVAILABLE-COPY')+'</div>';
         if(status)status.textContent=T('UI-JS-SEARCH-UNAVAILABLE');
@@ -172,7 +190,9 @@ $$('[data-search-input]').forEach(input=>{
   const urlState=input.hasAttribute('data-search-url-state');
   bindSearch(input,box,status,urlState);
   if(urlState){
-    const q=new URLSearchParams(location.search).get('q');
+    const q=new URLSearchParams(location.search).get('q'), type=new URLSearchParams(location.search).get('type');
+    const facet=input.parentElement?.querySelector('[data-search-type]');
+    if(facet&&type&&Object.prototype.hasOwnProperty.call(TYPE_LABEL_UI,type))facet.value=type;
     if(q!==null&&q!==''){input.value=q;input.dispatchEvent(new Event('input'));}
   }
 });
@@ -300,6 +320,7 @@ if(compareSelects.length>=2&&out){
     const records=compareSelects.map(sel=>data.find(x=>x.id===sel.value)).filter(Boolean);
     writeUrl();
     const cb=$('[data-compare-copy]'); if(cb)cb.disabled=records.length<2;
+    const prompt=$('[data-compare-prompt]'); if(prompt)prompt.hidden=records.length>=2;   // G4: the prompt only while fewer than two are selected
     if(records.length<2){out.innerHTML='';return;}
     const rows=dimensions.map(field=>({field,...assessMany(records,field)}));
     const v=verdict(records,rows);

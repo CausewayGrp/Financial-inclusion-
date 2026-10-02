@@ -16,7 +16,7 @@ from pathlib import Path
 
 from . import render as R
 from .render import CUR, bdi, clock, compact, crumb, esc, footer, head, header, iso, json_block, page_util, paras, print_foot, rubric, source_card, spine, strip
-from .visuals import figure, num
+from .visuals import figure, num, text_alt
 
 ROOT = Path(__file__).resolve().parents[2]
 EMAIL = re.compile(r"\b[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}\b")
@@ -199,7 +199,11 @@ def domain(page: dict, shell: dict) -> str:
         depth += fig(vid)
     if depth:
         depth = f'<div class="multiple">{depth}</div>'
-    for vid in page["visuals"]:
+    for vid, v in page["visuals"].items():
+        # A5 / C4 (owner decision, 2 October 2026): a contract retired from design is not a depth frame on a domain
+        # answer (VIS-CAPITAL-CONTEXT on /reforms/); its record page and the link to it stay
+        if v.get("tier") == "RETIRE_FROM_DESIGN":
+            continue
         depth += fig(vid)
     if depth:
         parts.append(f'<section class="qa figs" id="views"><div>{rubric(L["visual"])}</div><div>{depth}</div></section>')
@@ -291,12 +295,16 @@ def comparison(page: dict, shell: dict) -> str:
                 + slot("compare-c", L["third"], optional, "optional") + slot("compare-d", L["fourth"], optional, "optional"))
     data = json.dumps(page["records"], ensure_ascii=False).replace("</", "<\\/")
     dims = json.dumps(page["dimensions"], ensure_ascii=False).replace("</", "<\\/")
+    # The governed lead closes with the tool's prompt on its own line ("Select at least two records."): it stands beside the
+    # controls, and the runtime shows it only while fewer than two records are selected (release candidate G4 item 6)
+    lead, prompt = page["lead"].rsplit("\n", 1) if "\n" in (page["lead"] or "") else (page["lead"], "")
+    prompt_html = f'<p class="small compare-prompt" data-compare-prompt>{esc(prompt)}</p>' if prompt else ""
     tool = (f'<section class="qa first compare" id="compare" data-comparison-family="Comparison"><div>{rubric(L["intro"])}<h2>{esc(L["title"])}</h2></div><div>'
-            + (f'<p class="st">{esc(v.get("alt_text") or "")}</p>' if v else "") + boundary
+            + (f'<p class="st">{esc(text_alt(v))}</p>' if v else "") + boundary + prompt_html   # A3: the summary; the boundary prints once
             + f'<div class="controls-grid">{controls}</div><div class="actions"><button type="button" class="tbtn" data-compare-copy>{esc(L["copy_link"])}</button></div>'
             f'<p class="small never">{esc(L["never"])}</p><div id="compare-status" class="sr-only" role="status" aria-live="polite" aria-atomic="true"></div><div id="compare-output"></div>'
             f'<script type="application/json" id="yfie-compare">{data}</script><script type="application/json" id="yfie-compare-dimensions">{dims}</script></div></section>')
-    parts = [head_block(page, shell, SL["understand_explore_verify"], lead=page["lead"]), tool]
+    parts = [head_block(page, shell, SL["understand_explore_verify"], lead=lead), tool]
     index = [("compare", L["title"])]
     for s in page["sections"]:
         parts.append(answer(s, len(index) + 1, f"s{s['order']}"))

@@ -1311,9 +1311,15 @@ if 'function iso(s){return esc(s).replace(LTR_RUN' not in js:
     errors.append('S05.3 the runtime has no isolation helper for the governed text it writes')
 # EAD-06 (handoff §2): the search query is tool state that matters, so it is in the URL, reloadable, and carried across
 # the language switch — and only the page's own search writes it, never the dialog floating over another page.
-for _tok,_lbl in [("function writeSearchUrl(term)",'search query written to the URL'),
+for _tok,_lbl in [("function writeSearchUrl(term,type)",'search query written to the URL'),
                   ("new URLSearchParams(location.search).get('q')",'search query read back from the URL'),
-                  ("input.hasAttribute('data-search-url-state')",'only the page\'s own search owns the page address')]:
+                  ("new URLSearchParams(location.search).get('type')",'search result type read back from the URL'),
+                  ("input.hasAttribute('data-search-url-state')",'only the page\'s own search owns the page address'),
+                  # release candidate G4 (A6 / C7, EAD-06): the true total when fewer hits are shown, the way on to the
+                  # Evidence directory, and the governed result-type filter
+                  ("TF('UI-JS-SEARCH-RESULTS-OF',{n:scored.length,m:matching.length})",'search status with the true total when hits are capped'),
+                  ("T('UI-JS-SEARCH-SEE-ALL-EVIDENCE')",'the way on to the Evidence directory when hits are capped'),
+                  ("T('UI-JS-SEARCH-TYPE-FACET')",'the result-type filter with its governed name')]:
     if _tok not in js: errors.append(f'P2-G02 missing runtime contract: {_lbl}')
 for _lang in ('ar','en'):
     _dir=(DIST/_lang/'evidence/index.html').read_text(encoding='utf-8')
@@ -2500,6 +2506,36 @@ try:
                 errors.append(f'R86-G04 {_f.relative_to(ROOT)} names a path that does not exist: {_c}')
 except Exception as _x:
     errors.append('R86-G unreadable '+repr(_x))
+
+# RC-G4 (release candidate, Part A G4): the shipped behaviours the owner decisions and the governed labels unlocked.
+try:
+    _ui4={r['ui_id']:r for r in json.load(open(C/'content/interface_copy.json',encoding='utf-8'))}
+    _vdc4=json.load(open(C/'visuals/visual_design_contracts.json',encoding='utf-8'))['visuals']
+    _retired={v['visual_id'] for v in _vdc4 if v['tier']=='RETIRE_FROM_DESIGN'}
+    _blank=re.compile(r'(<a\b[^>]*\btarget="_blank"[^>]*>)(.*?)</a>',re.S)
+    for _lang in ('en','ar'):
+        _cue=_html.escape(_ui4['UI-EXTERNAL-NEW-TAB'][f'label_{_lang}'],quote=False)
+        _full=[(v['visual_id'],_html.escape(v['governed'].get(f'alt_text_{_lang}') or '',quote=False)) for v in _vdc4]
+        for _f in sorted((DIST/_lang).rglob('index.html')):
+            _h=_f.read_text(encoding='utf-8'); _rel=_f.relative_to(DIST)
+            # D5: every link that opens a new tab says so (a visually hidden cue, or at the end of its aria-label)
+            for _m in _blank.finditer(_h):
+                if f'<span class="sr-only"> {_cue}</span>' not in _m.group(2) and not re.search(r'aria-label="[^"]* '+re.escape(_cue)+'"',_m.group(1)):
+                    errors.append(f'RC-G4 new-tab link without its cue {_rel}'); break
+            # A5 / C4: a retired contract is framed nowhere but its own record page
+            for _vid in _retired:
+                if f'data-visual-id="{_vid}"' in _h and f'/evidence/{_vid}/' not in str(_rel).replace('\\','/')+'/':
+                    errors.append(f'RC-G4 retired contract {_vid} framed on {_rel}')
+            # A3 / C3: no page prints a figure's full alt text (summary · label · inference); the boundary prints once, in the foot
+            for _vid,_alt in _full:
+                if _alt and _alt in _h:
+                    errors.append(f'RC-G4 the full alt text of {_vid} (ending with its boundary) is printed on {_rel}'); break
+        _cmp=(DIST/_lang/'evidence/compare/index.html').read_text(encoding='utf-8')
+        if 'data-compare-prompt' not in _cmp: errors.append(f'RC-G4 the Compare prompt is not marked for the runtime {_lang}')
+    _js4=(ROOT/'site-src/app.js').read_text(encoding='utf-8')
+    if "prompt.hidden=records.length>=2" not in _js4: errors.append('RC-G4 missing runtime contract: the Compare prompt only while fewer than two records are selected')
+except Exception as _x:
+    errors.append('RC-G4 unreadable '+repr(_x))
 
 print(f'HTML={len(list(DIST.rglob("*.html")))} ERRORS={len(errors)} WARN={len(warns)}')
 if warns:

@@ -1,5 +1,29 @@
 # Repository Change Log
 
+## 2026-10-02 — Release candidate G4 (part 1): search, A3, A5, shipped features, Arabic counts
+
+Code only; no Master or contract change. Every behaviour has a validator check (RC-G4, P2-G02) with a negative control, and
+the browser suite covers the tools.
+
+- **Search** (item 1, A6 / C7; EAD-06): when the dialog caps its ten hits, the status gives the true total
+  (UI-JS-SEARCH-RESULTS-OF, "Showing 10 of {m} results") and a link carries the query to the Evidence directory filtered to
+  evidence records (`/evidence/?q=…&type=evidence`); the directory shows every match. A result-type filter
+  (UI-JS-SEARCH-TYPE-FACET / -ALL, the governed type labels) narrows both searches; on the directory it is URL-addressable.
+- **A3 / C3, the double boundary** (item 4): on the page a figure's text alternative — and the Compare standfirst — is the
+  governed accessible summary; the boundary prints once, in the foot. Export frames keep the full alt text (`_detached`).
+  `check_visuals.py` boundary_once_in_foot and `check_site.py` boundary_once_per_frame now count the visible text
+  alternative too; they report eight frames whose governed summary restates its boundary (escalated for the Part B
+  editorial pass in `design/ESCALATIONS.md`).
+- **A5 / C4, the retired frame** (item 5): the RETIRE_FROM_DESIGN tier is excluded from the domain depth frames;
+  `/reforms/` no longer shows VIS-CAPITAL-CONTEXT and keeps its record link; `never_drawn` rejects a text frame;
+  `design/06_VISUAL_TABLE_SYSTEM.md` §1 records the removal.
+- **Shipped features** (item 6): every link that opens a new tab carries UI-EXTERNAL-NEW-TAB (visually hidden, or at the end
+  of its aria-label); fallback tables whose rows carry different units head the value column with
+  UI-VIS-VALUE-UNIT-PER-ROW (VIS-FINDEX-GAPS); the Compare prompt ("Select at least two records.") stands beside the
+  controls and shows only while fewer than two records are selected; the Compare status is in label-value form (RC-3).
+- **Arabic counts in visuals** (item 7): a count printed with its unit noun reads «العدد: 561», «شركات الصرافة: 98».
+- Item 3 (every remaining code FAIL / CONDITION of `audit/PR8_INDEPENDENT_ACCEPTANCE.md`) is A3, A5 and A6, all above.
+
 ## 2026-10-02 — Release candidate G3: EAD-11 — the question sets move into the presentation contract
 
 Steward patch by owner decision (`audit/OWNER_DECISIONS_2026-10-02.md`, EAD-11), installed through `run_stage.py`
