@@ -1,5 +1,13 @@
 # Repository Change Log
 
+## 2026-10-02 — Release candidate Part B, B1: method text on the 13 table-only records
+
+`scripts/yfie/content.py` no longer suppresses the governed method text of the 13 `NO_GOVERNED_CONTRACT__TABLE_ONLY`
+records (owner decision A4 / C6 revised): each record page, and each frame that prints its record's method, shows it in
+both languages. All 13 were read in full and are reader-facing method statements; none was withheld. Validator PB-0401,
+which forbade the text as a "draft encoding note", now requires it like every other record's method (negative control
+added). Register EAD-12 carries a dated line; table rows for the 13 stay post-launch.
+
 ## 2026-10-02 — Release candidate Part B, B0: the owner's Part B decisions recorded
 
 `audit/OWNER_DECISIONS_2026-10-02.md` gains the dated section "Addendum — 2 October 2026 (Part B)" (append only): A4 / C6

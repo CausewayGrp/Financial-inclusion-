@@ -343,7 +343,9 @@ class Content:
             "definition": self.loc(obj, "definition", lang), "universe": self.loc(obj, "universe", lang),
             "period": self.loc(obj, "period", lang), "currentness": self.loc(obj, "currentness", lang),
             "does_not_establish": limitation, "measurement_limits": measure_limit,
-            "method": "" if obj.get("visual_contract_state") else self.loc(obj, "method", lang),
+            # B1 (owner decision A4 / C6 revised, 2 October 2026): every record prints its governed method text, the 13
+            # NO_GOVERNED_CONTRACT__TABLE_ONLY records included
+            "method": self.loc(obj, "method", lang),
             "change_trigger": self.loc(obj, "change_trigger", lang), "verification": verification,
             "reading_guidance": guidance,
             "contract": {k: contract.get(k) for k in ("primary", "supporting", "progressive", "utility", "mobile_priority", "always_visible_boundaries", "first_load_exclusions")},
@@ -564,7 +566,7 @@ class Content:
             out["step_mapping"] = c.get("step_mapping") or {}
             out["rules"] = {k: c.get(k) for k in ("ordering", "transformation", "breaks", "annotation", "mobile", "rtl", "fallback", "missing")}
         ev = self.evidence_objects.get(vid) or {}
-        out["record_method"] = "" if ev.get("visual_contract_state") else self.loc(ev, "method", lang)
+        out["record_method"] = self.loc(ev, "method", lang)   # B1: the 13 table-only records' method text is printed too
         out["record_limit"] = ev.get(f"measurement_limitation_{lang}") or ""   # the record's own measurement limitation (in frame where a contract asks for it)
         out["record_href"] = self.href(self.detail_routes[vid], lang) if vid in self.detail_routes else ""
         out["state_labels"] = {k[len("UI-VIS-STATE-"):]: v[lang] for k, v in self.grammar_labels.items() if k.startswith("UI-VIS-STATE-")}

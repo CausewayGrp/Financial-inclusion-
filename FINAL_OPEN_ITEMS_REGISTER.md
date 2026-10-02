@@ -62,6 +62,10 @@ affects, part of the scope Design and Code already receive, or needed only for p
 - 2026-10-02 — owner decision, see `audit/OWNER_DECISIONS_2026-10-02.md` — **D7** (not a register item; recorded here because §1 is the Design → Code section): the owner records final D7 visual
   acceptance of the Design package on 2 October 2026 (row D7). Also recorded there: A3 / C3 (the double boundary) and A5 / C4 (the
   retired frame on `/reforms/`), both implemented in the release-candidate pull request.
+- 2026-10-02 — **EAD-12, method text** (release candidate B1; owner decision A4 / C6 revised, addendum of 2 October 2026):
+  the 13 `NO_GOVERNED_CONTRACT__TABLE_ONLY` record pages now print their governed method text in both languages (each read
+  as reader-facing method; none withheld); validator PB-0401 now requires it, with a negative control. Table rows for the
+  13 stay post-launch; B16 records the disposition.
 - 2026-10-02 — **EAD-03 done** (release candidate G4 item 2): eight web-size derivatives, pure Lanczos resamples of the
   unchanged master (`scripts/logo_derivatives.py`, `--check` in CI), served with `srcset` on every surface of
   `design/08_ASSET_MAP.md` §1 except the offline social-image template (the 286 images unchanged). Cold page weight

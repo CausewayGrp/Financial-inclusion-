@@ -644,10 +644,9 @@ for spec in evidence_specs:
         if ' | ' in _lim and _lim in text:
             errors.append(f'P4-G02 boundary printed with its internal delimiter {route} {lang}')
         for field in ['method','change_trigger','verification']:
-            if field=='method' and obj.get('visual_contract_state'):
-                if _norm(obj.get(f'method_{lang}') or '') and _norm(obj.get(f'method_{lang}')) in text:
-                    errors.append(f'PB-0401 draft encoding note rendered while no governed contract exists {route} {lang}')
-                continue
+            # PB-0401 revised (release candidate B1; owner decision A4 / C6 revised, 2 October 2026): the 13
+            # NO_GOVERNED_CONTRACT__TABLE_ONLY records' method text is reader-facing governed method and is printed like
+            # every other record's — the check below now requires it on their pages too (it used to forbid it)
             value=_norm(obj.get(f'{field}_{lang}') or obj.get(field) or '')
             if value and value not in text:
                 errors.append(f'S04.1 progressive evidence field missing {route} {lang} {field}')
