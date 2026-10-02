@@ -1,5 +1,13 @@
 # Repository Change Log
 
+## 2026-10-02 — Release candidate: Owner Addendum 2 saved
+
+`audit/release_candidate/INSTRUCTIONS_ADDENDUM_2026-10-02.md` (with its `audit/INDEX.md` row) holds the owner's second
+addendum to the release-candidate brief, verbatim from its BEGIN to its END marker. It adds release defects A1
+(VIS-PAYMENT-RAILS: the text alternative names a step its drawing and table lack) and A2 (search for "law" / «قانون»
+needs a boundary note; the B5 scope line names what is not held), improvements 1–11 inside B15d, and items for B12,
+B13d, B14e and B16. Nothing is applied in this commit; the pull request's checklist carries the items under "Addendum 2".
+
 ## 2026-10-02 — Release candidate RC-5: Part B editorial passes B2 (Arabic) and B3 (English)
 
 Transaction `audit/release_candidate/rc_5_editorial.py` through `run_stage.py` (Master `0fb6c16de6db` → `2b609e1928f8`;
