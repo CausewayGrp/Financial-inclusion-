@@ -43,7 +43,7 @@ def _doc(lang: str, title: str, body_class: str, body: str) -> str:
 # ------------------------------------------------------------------------------------------------ export frame
 def export_document(figure_html: str, v: dict, shell: dict) -> str:
     """One drawn figure as a portable document: identity line, then the figure with its detached frame."""
-    ident = (f'<p class="exp-id"><img src="/assets/CauseWay_Master_Logo.png" alt="CauseWay" width="32" height="32"><span><bdi dir="ltr">CauseWay</bdi> · <b>{esc(shell["product"])}</b> · {esc(shell["edition"])}</span></p>')
+    ident = (f'<p class="exp-id"><img src="/assets/logo/CauseWay_logo_32.png" srcset="/assets/logo/CauseWay_logo_32.png 32w, /assets/logo/CauseWay_logo_64.png 64w" sizes="32px" alt="CauseWay" width="32" height="32"><span><bdi dir="ltr">CauseWay</bdi> · <b>{esc(shell["product"])}</b> · {esc(shell["edition"])}</span></p>')
     return _doc(shell["lang"], f'{v["title"]} — {shell["product"]}', "export-doc", f'<div class="exp">{ident}{figure_html}</div>')   # one box: identity inside its rules, a closing rule under the foot
 
 

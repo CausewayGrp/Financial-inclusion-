@@ -39,6 +39,13 @@ identity line — six raster sizes from one master, or one vector/compressed der
 Nothing else scales the mark, and the lockup above does not change when the derivative arrives; only the file weight
 does (DEBT-016's remaining cost — first paint on a phone — closes then).
 
+**Shipped, 2 October 2026** (release candidate G4 item 2; owner decision EAD-03): `scripts/logo_derivatives.py` writes the
+eight sizes (32, 40, 48, 64, 72, 80, 96, 144 px) to `site-src/assets/logo/` as pure Lanczos resamples of the unchanged
+master and checks them pixel for pixel (`--check`, CI). `render.logo()` serves them with `srcset`/`sizes` on the product bar,
+the institutional band and the 404 head; the export identity line uses 32/64. The social-image template keeps the master
+file: it renders offline and the 286 governed images stay byte-identical. Measured cold page weight: 10.31–10.71 MB before,
+0.30–0.69 MB after (`audit/release_candidate/page_weight/PAGE_WEIGHT_EAD-03.md`).
+
 ## 2. Type
 
 IBM Plex Sans (Latin) and IBM Plex Sans Arabic, self-hosted from `vendor/fonts/ibm-plex-sans/` and

@@ -2532,6 +2532,14 @@ try:
                     errors.append(f'RC-G4 the full alt text of {_vid} (ending with its boundary) is printed on {_rel}'); break
         _cmp=(DIST/_lang/'evidence/compare/index.html').read_text(encoding='utf-8')
         if 'data-compare-prompt' not in _cmp: errors.append(f'RC-G4 the Compare prompt is not marked for the runtime {_lang}')
+    # EAD-03: every page serves the web-size derivatives, never the 10 MB master; every derivative it names exists
+    _logos={x['file'] for x in json.load(open(ROOT/'site-src/assets/logo/INDEX.json',encoding='utf-8'))['derivatives']}
+    for _f in sorted(DIST.rglob('*.html')):
+        if '_export' in _f.parts or '_social' in _f.parts: continue
+        _h=_f.read_text(encoding='utf-8')
+        if 'CauseWay_Master_Logo.png' in _h: errors.append(f'RC-G4 a page loads the master logo instead of a derivative: {_f.relative_to(DIST)}'); break
+        _bad=sorted(set(re.findall(r'/assets/logo/(CauseWay_logo_\d+\.png)',_h))-_logos)
+        if _bad: errors.append(f'RC-G4 a page names a logo derivative that does not exist: {_f.relative_to(DIST)} {_bad}'); break
     _js4=(ROOT/'site-src/app.js').read_text(encoding='utf-8')
     if "prompt.hidden=records.length>=2" not in _js4: errors.append('RC-G4 missing runtime contract: the Compare prompt only while fewer than two records are selected')
 except Exception as _x:

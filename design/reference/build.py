@@ -58,6 +58,7 @@ def main() -> int:
     (out / "static-data").mkdir()
     (out / "_bundle").mkdir()
     shutil.copy2(ROOT / "site-src/assets/CauseWay_Master_Logo.png", out / "assets/CauseWay_Master_Logo.png")
+    shutil.copytree(ROOT / "site-src/assets/logo", out / "assets/logo", ignore=shutil.ignore_patterns("INDEX.json"))   # EAD-03 derivatives (scripts/logo_derivatives.py)
     shutil.copy2(ROOT / "site-src/content/content/search_index.json", out / "static-data/search_index.json")
     shutil.copy2(ROOT / "site-src/content/content/search_aliases.json", out / "static-data/search_aliases.json")
     shutil.copy2(ROOT / "site-src/app.js", out / "assets/app.js")   # baseline runtime for the tools (search, cite, language, menu, compare, sources, corrections)

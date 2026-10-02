@@ -62,6 +62,10 @@ affects, part of the scope Design and Code already receive, or needed only for p
 - 2026-10-02 — owner decision, see `audit/OWNER_DECISIONS_2026-10-02.md` — **D7** (not a register item; recorded here because §1 is the Design → Code section): the owner records final D7 visual
   acceptance of the Design package on 2 October 2026 (row D7). Also recorded there: A3 / C3 (the double boundary) and A5 / C4 (the
   retired frame on `/reforms/`), both implemented in the release-candidate pull request.
+- 2026-10-02 — **EAD-03 done** (release candidate G4 item 2): eight web-size derivatives, pure Lanczos resamples of the
+  unchanged master (`scripts/logo_derivatives.py`, `--check` in CI), served with `srcset` on every surface of
+  `design/08_ASSET_MAP.md` §1 except the offline social-image template (the 286 images unchanged). Cold page weight
+  10.31–10.71 MB → 0.30–0.69 MB (`audit/release_candidate/page_weight/PAGE_WEIGHT_EAD-03.md`). DEBT-016 closed. B16 records it.
 - 2026-10-02 — **EAD-11 landed** (release candidate G3): the two entries recorded under EAD-11 in `design/ESCALATIONS.md`,
   values unchanged, are in `site-src/content/presentation_priority.json` under `question_sets` (installed through the runner);
   the renderer and the handoff inventory read them there, the generator rejects an unknown question or heading, a missing

@@ -86,8 +86,17 @@ def structured_data(page: dict, shell: dict, route: str) -> str:
     return "".join(DISC.ld_script(x) for x in out)
 
 
-def logo(px: int) -> str:
-    return f'<img src="/assets/CauseWay_Master_Logo.png" alt="CauseWay" width="{px}" height="{px}">'
+LOGO_SIZES = (32, 40, 48, 64, 72, 80, 96, 144)   # scripts/logo_derivatives.py: pure resamples of the unchanged master (EAD-03)
+
+
+def logo(px: int, sizes: str = "") -> str:
+    """The canonical mark at an interface size: a web-size derivative (EAD-03, owner decision of 2 October 2026) — the
+    1× file as src and the 1× and 2× files of every size the surface can take in srcset, so a phone never downloads the
+    10 MB master. `sizes` names the surface's CSS widths where they change (the product bar: 40 px, 48 px from 900 px)."""
+    widths = sorted({w for w in LOGO_SIZES if w in (px, px * 2)} | ({w for s in (40, 48) for w in (s, s * 2)} if sizes else set()))
+    srcset = ", ".join(f"/assets/logo/CauseWay_logo_{w}.png {w}w" for w in widths)
+    return (f'<img src="/assets/logo/CauseWay_logo_{px}.png" srcset="{srcset}" sizes="{sizes or f"{px}px"}" '
+            f'alt="CauseWay" width="{px}" height="{px}">')
 
 
 def header(shell: dict) -> str:
@@ -101,7 +110,7 @@ def header(shell: dict) -> str:
         else:
             nav.append(f'<a href="{item["href"]}"{CUR if item.get("active") else ""}>{esc(item["label"])}</a>')
     return (f'<noscript><div class="noscript">{esc(L["noscript"])}</div></noscript><a class="skip" href="#main">{esc(L["skip"])}</a>'
-            f'<header class="bar"><div class="bar-in"><a class="brand" href="{shell["home_href"]}" aria-label="CauseWay — {esc(shell["product"])}">{logo(40)}<span class="brand-text"><span class="brand-pub" dir="ltr">CauseWay</span><span class="brand-name">{esc(shell["product"])}</span></span></a>'
+            f'<header class="bar"><div class="bar-in"><a class="brand" href="{shell["home_href"]}" aria-label="CauseWay — {esc(shell["product"])}">{logo(40, "(min-width: 900px) 48px, 40px")}<span class="brand-text"><span class="brand-pub" dir="ltr">CauseWay</span><span class="brand-name">{esc(shell["product"])}</span></span></a>'
             f'<nav id="primary-nav" class="nav" aria-label="{esc(L["primary_nav"])}">{"".join(nav)}</nav>'
             f'<div class="controls"><button type="button" class="tbtn" data-search-open aria-label="{esc(L["search"])}">{esc(L["search"])}</button>'
             f'<button type="button" class="tbtn cite" data-cite aria-label="{esc(L["cite"])}">{esc(L["cite"])}</button>'

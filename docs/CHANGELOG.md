@@ -1,5 +1,16 @@
 # Repository Change Log
 
+## 2026-10-02 — Release candidate G4 (part 2): EAD-03 — the logo's web-size derivatives
+
+Owner decision EAD-03 (`audit/OWNER_DECISIONS_2026-10-02.md`). `scripts/logo_derivatives.py` writes eight pure Lanczos
+resamples of the unchanged master to `site-src/assets/logo/` (32, 40, 48, 64, 72, 80, 96, 144 px; 36,699 bytes in all) and its
+`--check` compares each one's pixels with a fresh resample (new CI step; CONTRIBUTING.md §5; Pillow 11.3.0 pinned in
+`requirements.txt`). `render.logo()` serves them with `srcset`/`sizes` on the product bar, the institutional band and the
+404 head; the export identity line uses 32/64; the social-image template keeps the master, so the 286 images are unchanged.
+Validator RC-G4 fails a page that loads the master or names a missing derivative (negative control added). Cold page weight,
+EAD-10 method: 10.31–10.71 MB before, 0.30–0.69 MB after (`audit/release_candidate/page_weight/PAGE_WEIGHT_EAD-03.md`).
+DEBT-016 closed; `design/08_ASSET_MAP.md` §1 and the register carry dated lines.
+
 ## 2026-10-02 — Release candidate G4 (part 1): search, A3, A5, shipped features, Arabic counts
 
 Code only; no Master or contract change. Every behaviour has a validator check (RC-G4, P2-G02) with a negative control, and

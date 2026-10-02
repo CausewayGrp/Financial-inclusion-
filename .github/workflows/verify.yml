@@ -80,6 +80,8 @@ jobs:
 
       - name: Social images cover every route and match the governed text they were made from
         run: python3 scripts/social_images.py --check
+      - name: Logo derivatives are pure resamples of the unchanged master (EAD-03)
+        run: python3 scripts/logo_derivatives.py --check
 
       - name: Bilingual numeric invariance (every English/Arabic page pair prints the same numbers)
         run: python3 audit/tranche_c/checks/bilingual_invariance.py

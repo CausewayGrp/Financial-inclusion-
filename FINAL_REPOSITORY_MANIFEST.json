@@ -25,15 +25,16 @@
   "AUTHORITY_MASTER": 1,
   "AUTHORITY_POINTER": 2,
   "AUTHORITY_RULES": 1,
-  "BUILD_AND_GATES": 22,
+  "BUILD_AND_GATES": 23,
   "CONTROLLED_CONTRACT": 2,
   "CURRENT_DOCUMENT": 13,
-  "CURRENT_PROGRAMME_RECORD": 69,
+  "CURRENT_PROGRAMME_RECORD": 72,
   "DESIGN_PACKAGE": 446,
   "GENERATED_DIAGRAMS": 9,
   "GENERATED_LITERAL_CLOSURE": 1,
+  "GENERATED_LOGO_DERIVATIVES": 9,
   "GENERATED_PROJECTION": 37,
-  "GENERATED_PUBLIC_BUILD": 589,
+  "GENERATED_PUBLIC_BUILD": 597,
   "GENERATED_SOCIAL_IMAGES": 287,
   "LOGO_AUTHORITY": 1,
   "PRODUCTION_RENDERER": 9,
@@ -908,6 +909,18 @@
   },
   {
    "path": "audit/release_candidate/g3_stage_presentation.py",
+   "class": "CURRENT_PROGRAMME_RECORD"
+  },
+  {
+   "path": "audit/release_candidate/page_weight/PAGE_WEIGHT_EAD-03.md",
+   "class": "CURRENT_PROGRAMME_RECORD"
+  },
+  {
+   "path": "audit/release_candidate/page_weight/after_logo_derivatives.json",
+   "class": "CURRENT_PROGRAMME_RECORD"
+  },
+  {
+   "path": "audit/release_candidate/page_weight/before_logo_derivatives.json",
    "class": "CURRENT_PROGRAMME_RECORD"
   },
   {
@@ -3767,6 +3780,38 @@
    "class": "GENERATED_PUBLIC_BUILD"
   },
   {
+   "path": "dist/assets/logo/CauseWay_logo_144.png",
+   "class": "GENERATED_PUBLIC_BUILD"
+  },
+  {
+   "path": "dist/assets/logo/CauseWay_logo_32.png",
+   "class": "GENERATED_PUBLIC_BUILD"
+  },
+  {
+   "path": "dist/assets/logo/CauseWay_logo_40.png",
+   "class": "GENERATED_PUBLIC_BUILD"
+  },
+  {
+   "path": "dist/assets/logo/CauseWay_logo_48.png",
+   "class": "GENERATED_PUBLIC_BUILD"
+  },
+  {
+   "path": "dist/assets/logo/CauseWay_logo_64.png",
+   "class": "GENERATED_PUBLIC_BUILD"
+  },
+  {
+   "path": "dist/assets/logo/CauseWay_logo_72.png",
+   "class": "GENERATED_PUBLIC_BUILD"
+  },
+  {
+   "path": "dist/assets/logo/CauseWay_logo_80.png",
+   "class": "GENERATED_PUBLIC_BUILD"
+  },
+  {
+   "path": "dist/assets/logo/CauseWay_logo_96.png",
+   "class": "GENERATED_PUBLIC_BUILD"
+  },
+  {
    "path": "dist/assets/social/about__ar.png",
    "class": "GENERATED_PUBLIC_BUILD"
   },
@@ -5727,6 +5772,10 @@
    "class": "BUILD_AND_GATES"
   },
   {
+   "path": "scripts/logo_derivatives.py",
+   "class": "BUILD_AND_GATES"
+  },
+  {
    "path": "scripts/projection/README.md",
    "class": "PROJECTION_GENERATOR"
   },
@@ -5905,6 +5954,42 @@
   {
    "path": "site-src/assets/CauseWay_Master_Logo.png",
    "class": "LOGO_AUTHORITY"
+  },
+  {
+   "path": "site-src/assets/logo/CauseWay_logo_144.png",
+   "class": "GENERATED_LOGO_DERIVATIVES"
+  },
+  {
+   "path": "site-src/assets/logo/CauseWay_logo_32.png",
+   "class": "GENERATED_LOGO_DERIVATIVES"
+  },
+  {
+   "path": "site-src/assets/logo/CauseWay_logo_40.png",
+   "class": "GENERATED_LOGO_DERIVATIVES"
+  },
+  {
+   "path": "site-src/assets/logo/CauseWay_logo_48.png",
+   "class": "GENERATED_LOGO_DERIVATIVES"
+  },
+  {
+   "path": "site-src/assets/logo/CauseWay_logo_64.png",
+   "class": "GENERATED_LOGO_DERIVATIVES"
+  },
+  {
+   "path": "site-src/assets/logo/CauseWay_logo_72.png",
+   "class": "GENERATED_LOGO_DERIVATIVES"
+  },
+  {
+   "path": "site-src/assets/logo/CauseWay_logo_80.png",
+   "class": "GENERATED_LOGO_DERIVATIVES"
+  },
+  {
+   "path": "site-src/assets/logo/CauseWay_logo_96.png",
+   "class": "GENERATED_LOGO_DERIVATIVES"
+  },
+  {
+   "path": "site-src/assets/logo/INDEX.json",
+   "class": "GENERATED_LOGO_DERIVATIVES"
   },
   {
    "path": "site-src/assets/social/INDEX.json",
