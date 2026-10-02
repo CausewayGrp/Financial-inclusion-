@@ -1,7 +1,7 @@
 {
   "schema_version": "1.0",
   "contract_id": "PUBLIC-INVENTORY-COUNTS",
-  "authority_master_sha256": "ebf03d6fe4cf7fbba1e3be82ca1f0075c3f0e3f44af62069e51d294ad9e05e5e",
+  "authority_master_sha256": "ecc228beec41bda3bf596c5638da7ff54af63da5e26c89b5db316733076263ef",
   "rule": "A repository inventory count is never typed into public copy. Master copy may carry a token {{n:<key>}}; the generator replaces it with the count derived from the named projection, and raises an error for an unknown key, a key not cleared for public display, or any template token left unresolved. Arabic copy uses label-value form ('label: N') so that no counted-noun agreement depends on the number.",
   "token_pattern": "\\{\\{n:([a-z_]+)\\}\\}",
   "unresolved_token_pattern": "\\{\\{[^{}]*\\}\\}|\\{[A-Z][A-Z0-9_]{1,40}\\}",
@@ -25,9 +25,9 @@
     },
     {
       "key": "chronology_events",
-      "value": 24,
+      "value": 23,
       "projection": "visuals/system_chronology.json",
-      "rule": "count_records",
+      "rule": "count_where_not_in",
       "public_token": true,
       "definition_en": "Dated events in the system chronology (14_SYSTEM_CHRONOLOGY)."
     },

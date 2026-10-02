@@ -24,8 +24,8 @@ authority; everything else here is derived from it, implements it, or records ho
 | **Now** | **The Design programme is complete.** Gates D0–D7 are accepted and landed on `main` (pull request #7, 28 September 2026); the owner's final D7 visual acceptance is recorded on 2 October 2026 in [`audit/OWNER_DECISIONS_2026-10-02.md`](audit/OWNER_DECISIONS_2026-10-02.md); the accepted package and the runnable reference implementation are in [`design/`](design/) — see [Design programme](#design-programme--current-state) |
 | **Next** | Merge the production runtime: pull request #8 (branch `claude/hopeful-mccarthy-jgip83`), independently accepted MERGE AFTER CONDITIONS ([`audit/PR8_INDEPENDENT_ACCEPTANCE.md`](audit/PR8_INDEPENDENT_ACCEPTANCE.md)), its before-merge conditions C1–C5 met in records on 2 October 2026. The eleven ENGINEERING_AFTER_DESIGN items stand as [`FINAL_OPEN_ITEMS_REGISTER.md`](FINAL_OPEN_ITEMS_REGISTER.md) §1 records them: EAD-01, EAD-04, EAD-05 and EAD-09 closed 2026-09-29; EAD-08 self-hosted, all but its optional subsetting; EAD-02, EAD-06 and EAD-10 at the point where the rest is not Code's; EAD-03 blocked on the owner's approval (given 2 October 2026, [`audit/OWNER_DECISIONS_2026-10-02.md`](audit/OWNER_DECISIONS_2026-10-02.md), applied in the release-candidate pull request); EAD-07 blocked on controlled content; EAD-11 narrowed, open with the steward. Code's records: [`design/09_CODE_HANDOFF.md`](design/09_CODE_HANDOFF.md) and the brief [`handoff/CLAUDE_CODE_MASTER_PROMPT.md`](handoff/CLAUDE_CODE_MASTER_PROMPT.md), started on the accepted package |
 | **Owner actions** | Push the two checkpoint tags and delete five merged branches ([below](#checkpoints-and-tags)); decide the OWNER_INPUT and RELEASE_ONLY items in [`FINAL_OPEN_ITEMS_REGISTER.md`](FINAL_OPEN_ITEMS_REGISTER.md) |
-| **Production Master** | `authority/Yemen_Financial_Inclusion_Evidence_Master.xlsx` · SHA-256 `ebf03d6fe4cf7fbba1e3be82ca1f0075c3f0e3f44af62069e51d294ad9e05e5e` |
-| **Page Specs** | `site-src/content/page_specs.json` · SHA-256 `5522234dbd987ab3d03cbfb1e664f0dfcf41a70198bf1a3357462090b4f4424d` |
+| **Production Master** | `authority/Yemen_Financial_Inclusion_Evidence_Master.xlsx` · SHA-256 `ecc228beec41bda3bf596c5638da7ff54af63da5e26c89b5db316733076263ef` |
+| **Page Specs** | `site-src/content/page_specs.json` · SHA-256 `b084af5b3479d674834903041dc8d93fe0100c790e580de91659ed9e01d9a0d4` |
 | **Logo authority** | `site-src/assets/CauseWay_Master_Logo.png` · SHA-256 `5830163d…` (full value: `logo_sha256` in [`FINAL_REPOSITORY_MANIFEST.json`](FINAL_REPOSITORY_MANIFEST.json)); never redrawn, recoloured, cropped or regenerated |
 | **Last state OpenAI reviewed** | Commit `f726bda`, tree byte-identical to `…TRANCHE_C_COMPLETE_READING_HOLD.zip` (SHA-256 `63612dea…`); accepted 26 September 2026 |
 | **Currentness cut-off** | 26 September 2026 ([`audit/FINAL_CURRENTNESS_CUTOFF.md`](audit/FINAL_CURRENTNESS_CUTOFF.md)) |
@@ -149,7 +149,7 @@ Master; the validator checks every figure below against it. Counts are an invent
 - 10 Readings; 10 Measurement priorities; 11 governed entry questions.
 - 36 governed visual contracts, each with a design tier in `site-src/content/visuals/visual_design_contracts.json`.
 - 160 source records, of which 151 expose a public original locator; 28 curated resource cards.
-- 24 documented chronology events.
+- 23 documented chronology events (the analytical rule YSC-020 is not counted).
 - 435 public search records.
 
 ## Decisions that shape everything here

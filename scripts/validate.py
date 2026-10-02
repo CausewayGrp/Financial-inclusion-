@@ -1670,7 +1670,9 @@ try:
     def _n(p): return len(json.load(open(C/p,encoding='utf-8')))
     _srm=json.load(open(C/'sources/source_reference_map.json',encoding='utf-8'))
     _expect={'evidence_records':_n('evidence/evidence_objects.json'),'public_claims':_n('evidence/public_claims.json'),
-             'chronology_events':_n('visuals/system_chronology.json'),'sources':_n('sources/source_library.json'),
+             # RC-2: "Dated events in the system chronology" — the analytical rule row (event_class SYSTEM_INTERPRETATION) is not an event
+             'chronology_events':sum(1 for r in json.load(open(C/'visuals/system_chronology.json',encoding='utf-8')) if r.get('event_class')!='SYSTEM_INTERPRETATION'),
+             'sources':_n('sources/source_library.json'),
              'public_locators':sum(1 for s in _srm if str(s.get('primary_url') or '').strip().lower().startswith(('http://','https://'))),
              'curated_resources':sum(1 for s in _srm if s.get('standalone_resource_card_eligible') is True),
              'readings':_n('content/readings.json'),'measurement_priorities':_n('content/measurement_agenda.json'),

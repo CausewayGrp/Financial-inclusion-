@@ -1,0 +1,369 @@
+{
+ "transaction": "RC-2",
+ "summary": "Release-candidate trust copy: items 9, 10, 13, 14, 15 of audit/release_candidate/INSTRUCTIONS.md Part A G2",
+ "items": {
+  "item_9": "DONE — OWN-01 paragraph inserted after the 'CauseWay’s role' paragraph of /about/ §6, EN and AR, verbatim as approved.",
+  "item_10": "DONE — appended to /corrections/ §3 in both languages; the date equals UI-CONTENT-VERSION (unchanged) and audit/FINAL_CURRENTNESS_CUTOFF.md.",
+  "item_13": "DONE — YSC-012 source_ids now name the World Bank account and the two 26 June 2024 CBY-Aden instruments (both dated 2024-06-26 in 15_SOURCE_LIBRARY). The chronology_events count follows its definition through the generator's rule count_where_not_in (event_class SYSTEM_INTERPRETATION excluded: YSC-020, 'Current analytical rule', no source) — 23 — in scripts/projection/controlled_inputs/public_inventory_contract.json (installed), with the same rule in the validator's independent recount (P1-G02) and scripts/rebind_authority.py. The /data/ inventory line keeps 'label: N'.",
+  "item_14": {
+   "rule": "Expected and Actual set to the derived value: public_inventory.json where it holds the key, otherwise the record count of the projection generated from the named sheet (data projections count records, not header rows). A cell that holds a COUNTA formula keeps its formula; only its cached result is updated (the formula computes the same value on recalculation), so the 37 READY/REVIEW status formulas still compare a live count.",
+   "values_00": {
+    "Site pages": 143,
+    "Bilingual page sections": 574,
+    "Questions": 11,
+    "Evidence objects": 110,
+    "Public claims": 60,
+    "Readings": 10,
+    "Measurement priorities": 10,
+    "Visual objects": 36,
+    "System relationships": 26,
+    "Chronology events": 23,
+    "Sources": 160,
+    "Datasets": 211,
+    "Indicators": 216
+   },
+   "values_37": {
+    "All site pages": 143,
+    "Bilingual page sections": 574,
+    "Question entry system": 11,
+    "Public evidence objects": 110,
+    "Public claims": 60,
+    "Readings": 10,
+    "Measurement agenda": 10,
+    "Visualization objects": 36,
+    "System relationships": 26,
+    "Chronology events": 23,
+    "Source records": 160,
+    "Dataset catalogue": 211,
+    "Indicator library": 216,
+    "CBY monetary observations": 686,
+    "Payment observations": 82,
+    "Firm finance observations": 84,
+    "Remittance observations": 23
+   }
+  },
+  "item_15": "CONFIRMED — no Master cell prints an Arabic transliteration of CauseWay (patterns كوزواي, كاوزواي, كوز واي, كاوز واي, كوزوي, كاوزوي; all sheets). The Arabic edition prints 'CauseWay' in Latin script (isolated by <bdi> in the header brand, frames and social cards; in body text a single Latin word between Arabic words, with no adjacent digits or punctuation, needs no isolation to render in order). The only occurrence in the repository is a historical reader report (design/evidence/d7/cold_read/lens-arabic-closure.md), not governed text.",
+  "independent_review": {
+   "reviewer": "independent subagent that did not write the transaction (senior Arab economic editor and senior institutional English editor lenses)",
+   "verdict": "ACCEPTABLE — no blocking finding; items 9 and 10 verbatim and in place in both languages; item 13 and 14 values match the projections",
+   "applied": [
+    "SHOULD FIX 1: the first run replaced seven COUNTA formulas (00 B14, B17, B18; 37 D5, D8, D9, D21) with typed numbers and recorded their stale cached result as the old value; the transaction now keeps each formula and updates only its cached result (rc_lib.set_formula_cache, recorded per cell with formula_kept)",
+    "SHOULD FIX 2: the item 15 note no longer says body text isolates 'CauseWay' (only the header brand, frames and social cards do)"
+   ],
+   "for_the_owner": [
+    "OPTIONAL: item 9 EN opens 'Funding.' where the section's other lead-ins use a colon (AR «التمويل:»); owner wording, not changed",
+    "OPTIONAL: item 9 AR «ليس هذا المورد ناتجًا عن» is slightly broader than 'is not a deliverable of'; equivalent in meaning; owner wording, not changed"
+   ],
+   "deferred": [
+    "YSC-012 source_scope (Master-only, not printed) still describes the World Bank account alone; refresh with the Part B chronology work"
+   ]
+  }
+ },
+ "input_master_sha256": "ebf03d6fe4cf7fbba1e3be82ca1f0075c3f0e3f44af62069e51d294ad9e05e5e",
+ "output_master_sha256": "ecc228beec41bda3bf596c5638da7ff54af63da5e26c89b5db316733076263ef",
+ "cells_written": 32,
+ "changes": [
+  {
+   "finding": "RC-2:ITEM-09",
+   "sheet": "03_PAGE_SECTIONS",
+   "row": 31,
+   "col": 5,
+   "field": "/about/#s6.body_en",
+   "old": "CauseWay’s role: CauseWay develops and maintains this resource. It is responsible for how the evidence is organised and linked, for its own synthesis, documented derivations and editorial analysis, and for correcting errors.\n\nWho remains authoritative: Original publishers remain authoritative for the data and publications they issue. Organising the evidence does not make CauseWay a regulator, statistical authority or source owner. This resource does not confirm whether any named institution is currently licensed or operating. Nothing on this resource is financial, legal or regulatory advice, or confirmation of any institution’s current status. Attribution to CauseWay covers only its own synthesis, derivations and analysis and does not imply that any original publisher endorses them. Citation, factual use and redistribution are separate permissions.\n\nHow to check or challenge: Each figure is recorded in an evidence record that names its original source wherever that source can be named publicly. Material findings are checked against the source they are attributed to, including its unit, population or calculation base, geography, period and method; a figure known only from a secondary source is labelled as secondary. To report a suspected error, write to office@causewaygrp.com with the record or source reference. When a material public conclusion changes, the evidence record and a correction note are updated together.",
+   "new": "CauseWay’s role: CauseWay develops and maintains this resource. It is responsible for how the evidence is organised and linked, for its own synthesis, documented derivations and editorial analysis, and for correcting errors.\n\nFunding. CauseWay funded the development of this edition entirely from its own resources. No donor, regulator, source institution or external commissioning party funded it. This resource is not a deliverable of any contract or partnership with the institutions whose data it presents.\n\nWho remains authoritative: Original publishers remain authoritative for the data and publications they issue. Organising the evidence does not make CauseWay a regulator, statistical authority or source owner. This resource does not confirm whether any named institution is currently licensed or operating. Nothing on this resource is financial, legal or regulatory advice, or confirmation of any institution’s current status. Attribution to CauseWay covers only its own synthesis, derivations and analysis and does not imply that any original publisher endorses them. Citation, factual use and redistribution are separate permissions.\n\nHow to check or challenge: Each figure is recorded in an evidence record that names its original source wherever that source can be named publicly. Material findings are checked against the source they are attributed to, including its unit, population or calculation base, geography, period and method; a figure known only from a secondary source is labelled as secondary. To report a suspected error, write to office@causewaygrp.com with the record or source reference. When a material public conclusion changes, the evidence record and a correction note are updated together."
+  },
+  {
+   "finding": "RC-2:ITEM-09",
+   "sheet": "03_PAGE_SECTIONS",
+   "row": 32,
+   "col": 7,
+   "field": "/about/#s6.body_ar",
+   "old": "دور CauseWay: تطوّر CauseWay هذا المورد وتتولى إدارته. وهي مسؤولة عن كيفية تنظيم الأدلة وربطها، وعن توليفها للأدلة واشتقاقاتها الموثقة وتحليلها التحريري، وعن تصحيح الأخطاء.\n\nمن يبقى المرجع: تبقى الجهات الناشرة الأصلية هي المرجع لما تصدره من بيانات ومنشورات، ولا يجعل ترتيب الأدلة وربطها من CauseWay جهة تنظيمية أو إحصائية أو مالكة للمصدر. ولا يؤكد هذا المورد ما إذا كانت أي مؤسسة مذكورة بالاسم مرخصة أو عاملة حاليًا. ولا يُعد أي محتوى في هذا المورد مشورة مالية أو قانونية أو تنظيمية، ولا تأكيدًا للوضع الحالي لأي مؤسسة. ولا تشمل نسبة العمل إلى CauseWay إلا ما تنتجه من توليف واشتقاق وتحليل، ولا تعني أن أي ناشر أصلي يؤيده. والاستشهاد والإفادة من الوقائع وإعادة التوزيع أذونات منفصلة.\n\nكيف تتحقق أو تعترض: تُحفظ الأرقام في سجلات الأدلة، ويسمّي كل سجل مصدره الأصلي حيثما أمكن تسميته علنًا. وتُراجَع النتائج الجوهرية مقابل المصدر المنسوبة إليه، بما يشمل الوحدة والمجتمع أو قاعدة الاحتساب والجغرافيا والفترة والمنهج؛ ويوسم الرقم الذي لا يُعرف إلا من مصدر ثانوي بأنه ثانوي. وللإبلاغ عن خطأ محتمل، اكتب إلى office@causewaygrp.com مع مرجع السجل أو المصدر. وعندما يتغير استنتاج عام جوهري، يُحدَّث سجل الدليل وملاحظة التصحيح معًا.",
+   "new": "دور CauseWay: تطوّر CauseWay هذا المورد وتتولى إدارته. وهي مسؤولة عن كيفية تنظيم الأدلة وربطها، وعن توليفها للأدلة واشتقاقاتها الموثقة وتحليلها التحريري، وعن تصحيح الأخطاء.\n\nالتمويل: موّلت CauseWay تطوير هذا الإصدار بالكامل من مواردها الخاصة، ولم تموّله أي جهة مانحة أو تنظيمية، ولا أي جهة ناشرة لمصدر، ولا أي جهة خارجية كلّفت به. وليس هذا المورد ناتجًا عن أي عقد أو شراكة مع المؤسسات التي يعرض بياناتها.\n\nمن يبقى المرجع: تبقى الجهات الناشرة الأصلية هي المرجع لما تصدره من بيانات ومنشورات، ولا يجعل ترتيب الأدلة وربطها من CauseWay جهة تنظيمية أو إحصائية أو مالكة للمصدر. ولا يؤكد هذا المورد ما إذا كانت أي مؤسسة مذكورة بالاسم مرخصة أو عاملة حاليًا. ولا يُعد أي محتوى في هذا المورد مشورة مالية أو قانونية أو تنظيمية، ولا تأكيدًا للوضع الحالي لأي مؤسسة. ولا تشمل نسبة العمل إلى CauseWay إلا ما تنتجه من توليف واشتقاق وتحليل، ولا تعني أن أي ناشر أصلي يؤيده. والاستشهاد والإفادة من الوقائع وإعادة التوزيع أذونات منفصلة.\n\nكيف تتحقق أو تعترض: تُحفظ الأرقام في سجلات الأدلة، ويسمّي كل سجل مصدره الأصلي حيثما أمكن تسميته علنًا. وتُراجَع النتائج الجوهرية مقابل المصدر المنسوبة إليه، بما يشمل الوحدة والمجتمع أو قاعدة الاحتساب والجغرافيا والفترة والمنهج؛ ويوسم الرقم الذي لا يُعرف إلا من مصدر ثانوي بأنه ثانوي. وللإبلاغ عن خطأ محتمل، اكتب إلى office@causewaygrp.com مع مرجع السجل أو المصدر. وعندما يتغير استنتاج عام جوهري، يُحدَّث سجل الدليل وملاحظة التصحيح معًا."
+  },
+  {
+   "finding": "RC-2:ITEM-10",
+   "sheet": "03_PAGE_SECTIONS",
+   "row": 63,
+   "col": 5,
+   "field": "/corrections/#s3.body_en",
+   "old": "Material corrections are recorded against stable evidence IDs and release information so earlier citations can still be understood. Where a prior version can be retained publicly and safely, it remains identifiable; where it cannot, the correction note records enough information to explain the change.",
+   "new": "Material corrections are recorded against stable evidence IDs and release information so earlier citations can still be understood. Where a prior version can be retained publicly and safely, it remains identifiable; where it cannot, the correction note records enough information to explain the change.\n\nThis edition reflects what its sources showed when they were checked, up to 26 September 2026. It is not a continuous monitoring service: between editions, the resource states what it held on the edition date."
+  },
+  {
+   "finding": "RC-2:ITEM-10",
+   "sheet": "03_PAGE_SECTIONS",
+   "row": 63,
+   "col": 7,
+   "field": "/corrections/#s3.body_ar",
+   "old": "تُسجل التصحيحات الجوهرية مقابل معرفات أدلة ثابتة ومعلومات الإصدار حتى تظل الاستشهادات السابقة قابلة للفهم. وعندما يمكن الاحتفاظ بنسخة سابقة علنًا وبأمان، يبقى من الممكن التعرف عليها؛ وإذا تعذر ذلك، توثق ملاحظة التصحيح ما يكفي لشرح التغيير.",
+   "new": "تُسجل التصحيحات الجوهرية مقابل معرفات أدلة ثابتة ومعلومات الإصدار حتى تظل الاستشهادات السابقة قابلة للفهم. وعندما يمكن الاحتفاظ بنسخة سابقة علنًا وبأمان، يبقى من الممكن التعرف عليها؛ وإذا تعذر ذلك، توثق ملاحظة التصحيح ما يكفي لشرح التغيير.\n\nيعكس هذا الإصدار ما أظهرته مصادره عند مراجعتها حتى 26 سبتمبر 2026. وهو ليس خدمة رصد مستمر؛ فبين إصدار وآخر يعرض المورد ما كان لديه في تاريخ الإصدار."
+  },
+  {
+   "finding": "RC-2:ITEM-13",
+   "sheet": "14_SYSTEM_CHRONOLOGY",
+   "row": 16,
+   "col": 6,
+   "field": "YSC-012.source_ids",
+   "old": "SRC-WB-YEM-FRAGMENTATION-2025-001",
+   "new": "SRC-WB-YEM-FRAGMENTATION-2025-001 | SRC-CBY-UNLICENSED-EWALLET-2024-001 | SRC-CBY-DEC-23-2024-001"
+  },
+  {
+   "finding": "RC-2:ITEM-14",
+   "sheet": "00_MASTER",
+   "row": 14,
+   "col": 2,
+   "field": "00 Site pages actual",
+   "old": "141",
+   "new": 143,
+   "formula_kept": "=COUNTA('02_SITE_MAP'!A5:A300)",
+   "note": "cached result of the formula updated; the formula is unchanged and computes the same value"
+  },
+  {
+   "finding": "RC-2:ITEM-14",
+   "sheet": "00_MASTER",
+   "row": 14,
+   "col": 3,
+   "field": "00 Site pages expected",
+   "old": "141",
+   "new": 143
+  },
+  {
+   "finding": "RC-2:ITEM-14",
+   "sheet": "00_MASTER",
+   "row": 15,
+   "col": 2,
+   "field": "00 Bilingual page sections actual",
+   "old": "572",
+   "new": 574
+  },
+  {
+   "finding": "RC-2:ITEM-14",
+   "sheet": "00_MASTER",
+   "row": 15,
+   "col": 3,
+   "field": "00 Bilingual page sections expected",
+   "old": "572",
+   "new": 574
+  },
+  {
+   "finding": "RC-2:ITEM-14",
+   "sheet": "00_MASTER",
+   "row": 17,
+   "col": 2,
+   "field": "00 Evidence objects actual",
+   "old": "108",
+   "new": 110,
+   "formula_kept": "=COUNTA('06_EVIDENCE_OBJECTS'!A5:A300)",
+   "note": "cached result of the formula updated; the formula is unchanged and computes the same value"
+  },
+  {
+   "finding": "RC-2:ITEM-14",
+   "sheet": "00_MASTER",
+   "row": 17,
+   "col": 3,
+   "field": "00 Evidence objects expected",
+   "old": "108",
+   "new": 110
+  },
+  {
+   "finding": "RC-2:ITEM-14",
+   "sheet": "00_MASTER",
+   "row": 18,
+   "col": 2,
+   "field": "00 Public claims actual",
+   "old": "59",
+   "new": 60,
+   "formula_kept": "=COUNTA('07_PUBLIC_CLAIMS'!A5:A200)",
+   "note": "cached result of the formula updated; the formula is unchanged and computes the same value"
+  },
+  {
+   "finding": "RC-2:ITEM-14",
+   "sheet": "00_MASTER",
+   "row": 18,
+   "col": 3,
+   "field": "00 Public claims expected",
+   "old": "59",
+   "new": 60
+  },
+  {
+   "finding": "RC-2:ITEM-14",
+   "sheet": "00_MASTER",
+   "row": 23,
+   "col": 2,
+   "field": "00 Chronology events actual",
+   "old": "24",
+   "new": 23
+  },
+  {
+   "finding": "RC-2:ITEM-14",
+   "sheet": "00_MASTER",
+   "row": 23,
+   "col": 3,
+   "field": "00 Chronology events expected",
+   "old": "24",
+   "new": 23
+  },
+  {
+   "finding": "RC-2:ITEM-14",
+   "sheet": "00_MASTER",
+   "row": 24,
+   "col": 2,
+   "field": "00 Sources actual",
+   "old": "159",
+   "new": 160
+  },
+  {
+   "finding": "RC-2:ITEM-14",
+   "sheet": "00_MASTER",
+   "row": 24,
+   "col": 3,
+   "field": "00 Sources expected",
+   "old": "159",
+   "new": 160
+  },
+  {
+   "finding": "RC-2:ITEM-14",
+   "sheet": "00_MASTER",
+   "row": 47,
+   "col": 5,
+   "field": "00 SYSTEM panel",
+   "old": "SYSTEM / المنظومة\n\n24-event macro-financial and financial-inclusion-system chronology.\nSupport-flow states and programme exposure remain distinct from outcomes.",
+   "new": "SYSTEM / المنظومة\n\n23-event macro-financial and financial-inclusion-system chronology.\nSupport-flow states and programme exposure remain distinct from outcomes."
+  },
+  {
+   "finding": "RC-2:ITEM-14",
+   "sheet": "37_READINESS_CHECKLIST",
+   "row": 5,
+   "col": 3,
+   "field": "37 All site pages expected",
+   "old": "141",
+   "new": 143
+  },
+  {
+   "finding": "RC-2:ITEM-14",
+   "sheet": "37_READINESS_CHECKLIST",
+   "row": 5,
+   "col": 4,
+   "field": "37 All site pages actual",
+   "old": "141",
+   "new": 143,
+   "formula_kept": "=COUNTA('02_SITE_MAP'!A5:A300)",
+   "note": "cached result of the formula updated; the formula is unchanged and computes the same value"
+  },
+  {
+   "finding": "RC-2:ITEM-14",
+   "sheet": "37_READINESS_CHECKLIST",
+   "row": 6,
+   "col": 3,
+   "field": "37 Bilingual page sections expected",
+   "old": "572",
+   "new": 574
+  },
+  {
+   "finding": "RC-2:ITEM-14",
+   "sheet": "37_READINESS_CHECKLIST",
+   "row": 6,
+   "col": 4,
+   "field": "37 Bilingual page sections actual",
+   "old": "572",
+   "new": 574
+  },
+  {
+   "finding": "RC-2:ITEM-14",
+   "sheet": "37_READINESS_CHECKLIST",
+   "row": 8,
+   "col": 3,
+   "field": "37 Public evidence objects expected",
+   "old": "108",
+   "new": 110
+  },
+  {
+   "finding": "RC-2:ITEM-14",
+   "sheet": "37_READINESS_CHECKLIST",
+   "row": 8,
+   "col": 4,
+   "field": "37 Public evidence objects actual",
+   "old": "108",
+   "new": 110,
+   "formula_kept": "=COUNTA('06_EVIDENCE_OBJECTS'!A5:A300)",
+   "note": "cached result of the formula updated; the formula is unchanged and computes the same value"
+  },
+  {
+   "finding": "RC-2:ITEM-14",
+   "sheet": "37_READINESS_CHECKLIST",
+   "row": 9,
+   "col": 3,
+   "field": "37 Public claims expected",
+   "old": "59",
+   "new": 60
+  },
+  {
+   "finding": "RC-2:ITEM-14",
+   "sheet": "37_READINESS_CHECKLIST",
+   "row": 9,
+   "col": 4,
+   "field": "37 Public claims actual",
+   "old": "59",
+   "new": 60,
+   "formula_kept": "=COUNTA('07_PUBLIC_CLAIMS'!A5:A200)",
+   "note": "cached result of the formula updated; the formula is unchanged and computes the same value"
+  },
+  {
+   "finding": "RC-2:ITEM-14",
+   "sheet": "37_READINESS_CHECKLIST",
+   "row": 14,
+   "col": 3,
+   "field": "37 Chronology events expected",
+   "old": "24",
+   "new": 23
+  },
+  {
+   "finding": "RC-2:ITEM-14",
+   "sheet": "37_READINESS_CHECKLIST",
+   "row": 14,
+   "col": 4,
+   "field": "37 Chronology events actual",
+   "old": "24",
+   "new": 23
+  },
+  {
+   "finding": "RC-2:ITEM-14",
+   "sheet": "37_READINESS_CHECKLIST",
+   "row": 15,
+   "col": 3,
+   "field": "37 Source records expected",
+   "old": "159",
+   "new": 160
+  },
+  {
+   "finding": "RC-2:ITEM-14",
+   "sheet": "37_READINESS_CHECKLIST",
+   "row": 15,
+   "col": 4,
+   "field": "37 Source records actual",
+   "old": "159",
+   "new": 160
+  },
+  {
+   "finding": "RC-2:ITEM-14",
+   "sheet": "37_READINESS_CHECKLIST",
+   "row": 21,
+   "col": 3,
+   "field": "37 Remittance observations expected",
+   "old": "17",
+   "new": 23
+  },
+  {
+   "finding": "RC-2:ITEM-14",
+   "sheet": "37_READINESS_CHECKLIST",
+   "row": 21,
+   "col": 4,
+   "field": "37 Remittance observations actual",
+   "old": "17",
+   "new": 23,
+   "formula_kept": "=COUNTA('23_REMITTANCES'!A5:A100)",
+   "note": "cached result of the formula updated; the formula is unchanged and computes the same value"
+  }
+ ]
+}

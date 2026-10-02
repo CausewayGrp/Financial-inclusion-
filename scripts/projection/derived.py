@@ -569,6 +569,8 @@ def _inventory_count(ctx, key):
         return sum(1 for r in obj if str(r.get(spec["field"]) or "").strip().lower().startswith(("http://", "https://")))
     if rule == "count_where_true":
         return sum(1 for r in obj if r.get(spec["field"]) is True)
+    if rule == "count_where_not_in":   # release candidate RC-2: a count that follows its own definition (e.g. dated events only)
+        return sum(1 for r in obj if r.get(spec["field"]) not in spec["exclude"])
     if rule == "spec_count":
         return obj["spec_count"]
     raise StructureError(f"public inventory: unknown rule {rule!r} for {key}")

@@ -532,7 +532,7 @@
       "rule_id": "public_inventory",
       "sheet": "05, 06, 07, 08, 10, 11, 14, 15, 34 (via projections) + controlled input public_inventory_contract",
       "stable_key": "key",
-      "transformation": "One record per count declared in controlled_inputs/public_inventory_contract.json, in contract order: key, value (derived from the named projection by the declared rule: count_records, count_where_http_primary_url, count_where_true or spec_count), projection, rule, public_token, definition. Public copy may reference only counts with public_token true, as {{n:key}}.",
+      "transformation": "One record per count declared in controlled_inputs/public_inventory_contract.json, in contract order: key, value (derived from the named projection by the declared rule: count_records, count_where_http_primary_url, count_where_true, count_where_not_in or spec_count), projection, rule, public_token, definition. Public copy may reference only counts with public_token true, as {{n:key}}.",
       "dependencies": [
         "evidence/evidence_objects.json",
         "evidence/public_claims.json",

@@ -144,7 +144,9 @@ class Generation(unittest.TestCase):
         o = self.ctx.out
         self.assertEqual(inv["evidence_records"], len(o["evidence/evidence_objects.json"]))
         self.assertEqual(inv["public_claims"], len(o["evidence/public_claims.json"]))
-        self.assertEqual(inv["chronology_events"], len(o["visuals/system_chronology.json"]))
+        # RC-2: "Dated events in the system chronology" — the analytical rule row (event_class SYSTEM_INTERPRETATION) is not an event
+        self.assertEqual(inv["chronology_events"], sum(1 for r in o["visuals/system_chronology.json"] if r.get("event_class") != "SYSTEM_INTERPRETATION"))
+        self.assertEqual(len(o["visuals/system_chronology.json"]) - inv["chronology_events"], 1)
         self.assertEqual(inv["sources"], len(o["sources/source_library.json"]))
         self.assertEqual(inv["public_locators"], sum(1 for s in o["sources/source_reference_map.json"]
                                                      if str(s["primary_url"] or "").lower().startswith(("http://", "https://"))))

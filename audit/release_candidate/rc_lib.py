@@ -4,7 +4,7 @@
 audit/tranche_c/tc_lib.py locates the end of the 04 governed interface-copy block with a row bound (< 300) that held
 at Tranche C; the block has since grown to row 489. These helpers find the block by its own structure instead — the
 last UI-* row before the "Trust navigation" block title — and are otherwise identical. tc_lib.py is a historical
-record and is not edited.
+record and is not edited. set_formula_cache (RC-2) updates the cached result of a formula cell and keeps its formula.
 """
 import os, sys
 from collections import OrderedDict
@@ -50,3 +50,36 @@ def set_ui(s, finding, ui_id, label_en, label_ar, old_en, old_ar):
         s.set(finding, S04, row, 2, label_en, old_en, f"{ui_id}.label_en")
     if label_ar is not None:
         s.set(finding, S04, row, 3, label_ar, old_ar, f"{ui_id}.label_ar")
+
+
+_FCELL = r'<x:c r="{ref}"([^>]*)><x:f>(.*?)</x:f><x:v>(.*?)</x:v></x:c>'
+
+
+def formula_of(s, sheet, row, col):
+    """The formula a cell holds (without '='), or None for a value cell."""
+    import re   # noqa: PLC0415
+    from projection.master_reader import col_letters   # noqa: PLC0415
+    m = re.search(_FCELL.format(ref=f"{col_letters(col)}{row}"), s.ed._get(sheet), re.S)
+    return m.group(2) if m else None
+
+
+def set_formula_cache(s, finding, sheet, row, col, new, expect_cached, expect_formula, field=None):
+    """Update only the cached result of a formula cell, keeping the formula: the generator reads cached values, and a
+    workbook that recalculates gets the same number from the formula. Both the formula and the cached value are guarded."""
+    import re   # noqa: PLC0415
+    from projection.master_reader import col_letters   # noqa: PLC0415
+    ref = f"{col_letters(col)}{row}"
+    text = s.ed._get(sheet)
+    hits = list(re.finditer(_FCELL.format(ref=ref), text, re.S))
+    if len(hits) != 1:
+        raise TxError(f"{finding}: {sheet}!{ref} is not a single formula cell")
+    m = hits[0]
+    if m.group(2) != expect_formula or m.group(3) != str(expect_cached):
+        raise TxError(f"{finding}: {sheet}!{ref} holds ={m.group(2)} cached {m.group(3)!r}, expected ={expect_formula} cached {expect_cached!r}")
+    if m.group(3) == str(new):
+        return
+    cell = f'<x:c r="{ref}"{m.group(1)}><x:f>{m.group(2)}</x:f><x:v>{new}</x:v></x:c>'
+    s.ed._put(sheet, text[:m.start()] + cell + text[m.end():])
+    s.ledger.append(OrderedDict([("finding", finding), ("sheet", sheet), ("row", row), ("col", col), ("field", field),
+                                 ("old", m.group(3)), ("new", new), ("formula_kept", "=" + m.group(2)),
+                                 ("note", "cached result of the formula updated; the formula is unchanged and computes the same value")]))

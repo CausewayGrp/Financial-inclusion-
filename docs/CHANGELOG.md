@@ -1,5 +1,21 @@
 # Repository Change Log
 
+## 2026-10-02 — Release candidate RC-2: trust copy (items 9, 10, 13, 14, 15)
+
+Transaction `audit/release_candidate/rc_2_trust_copy.py` through `run_stage.py` (Master `ebf03d6fe4cf` → `ecc228beec41`;
+ledger and run report in `audit/release_candidate/runs/`), with `rc_2_stage_inputs.py` staging the public inventory contract,
+the projection manifest and `README.md` (`--install`). Independent bilingual review: ACCEPTABLE; its two should-fix findings
+applied before commit (below), two owner-wording notes recorded in the ledger.
+
+- **/about/** §6: the owner-approved funding paragraph, verbatim, after "CauseWay’s role" (item 9; OWN-01).
+- **/corrections/** "How history works": the edition statement, cut-off 26 September 2026 (item 10; UI-CONTENT-VERSION unchanged).
+- **YSC-012** cites the two 26 June 2024 CBY-Aden instruments; the public count *chronology_events* follows its definition
+  ("Dated events") through the new generator rule `count_where_not_in` — 23, YSC-020 (the analytical rule) excluded — with the
+  same rule in the validator's recount, `scripts/rebind_authority.py` and the generator unit test (item 13).
+- **Sheets 00 and 37**: count statements set to the derived values; the seven COUNTA formula cells keep their formulas and only
+  their cached results change (`rc_lib.set_formula_cache`), so the 37 READY/REVIEW checks still compare a live count (item 14).
+- **Publisher name**: no Arabic transliteration of CauseWay in any Master cell (item 15; no write).
+
 ## 2026-10-02 — Release candidate RC-1: Master truth fixes (items 1–8, 16, 17)
 
 Transaction `audit/release_candidate/rc_1_truth_fixes.py` through `run_stage.py` (Master `17db032b15da` → `ebf03d6fe4cf`;
