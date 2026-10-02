@@ -53,6 +53,9 @@ none blocks the gate. Where the reader's words are quoted they are the reader's,
   ends by restating the contract's prohibited_inference ("Does not establish: The relationships are not causal claims …"),
   so the frame reads the boundary twice however it is composed; readers took the repetition for a templating fault.
   Design impact: none if the alt text is shortened; the frame already prints its own boundary once.`
+  2 October 2026: a narrower statement of a general cause — every one of the 36 contracts' `alt_text` ends with the
+  prohibited inference by one generator rule; see the escalation raised at the independent acceptance of pull request #8
+  (A3 / C3) below, and the owner's decision in `audit/OWNER_DECISIONS_2026-10-02.md`, row A3 / C3.
 - `ESCALATE_TO_MASTER (observations, not defects claimed) — Home section 3 and the bound records — three date forms in
   three cards (prose "November 2022 to January 2023"; the clock "2022-11-07 to 2023-01-09"; "Mar-2025–Jan-2026"); three
   years attached to one number (Findex 2021, fieldwork 2022–23, data year 2022) read as an error on first pass; the
@@ -172,6 +175,11 @@ Design records it and changes nothing; where a lens's words are quoted they are 
   (`design/reference/yfie/text.py`, `LTR_RUN`); the runtime does not. Fix for Code: when the table renderer writes a
   cell, wrap every match of that same expression in `<bdi dir="ltr">` (or set the cell text through a helper that does).
   Design impact: none on the reference; every Arabic Compare table on the product until fixed.`
+  **CLOSED 2026-09-29 by Code (EAD-01 follow-on).** `site-src/app.js` isolates through the renderer's own
+  expression (`scripts/yfie/text.py` `LTR_RUN`), character for character, in one helper applied wherever
+  governed record text reaches a page: the Compare cells and column heads, the boundaries beneath them, the
+  record links, and the search results' titles, summaries and period line. `scripts/validate.py` fails if the
+  runtime's expression is not the renderer's or the helper is gone, and two negative controls prove both.
 - `ESCALATE_TO_MASTER (observations, Arabic edition — the native-editor lens; each prints as governed) — a count
   followed by its unit noun ("561 العدد", "1,473 العدد") where a reader expects "العدد: 561" or a counted noun; the
   invariant plural "نقاط مئوية" after 12.91, 12.55 and 11.1 where the prose writes "نقطة مئوية"; the exchange-class
@@ -265,6 +273,9 @@ Raised at the D7 closure (28 September 2026), from the three independent closure
   text — the boundary must always print in the boundary voice, and the alt text is governed as a whole; Design will
   not truncate a governed string. Either the alt_text should end before the prohibited inference, or the contract
   should record that the two fields overlap by intent.`
+  2 October 2026: a narrower statement of the same general cause as the D3 VIS-INCLUSION-TRANSMISSION item — the overlap
+  is not a property of this contract's governed text but of the generator rule that composes every `alt_text`; see the
+  escalation raised at the independent acceptance of pull request #8 (A3 / C3) below, and `audit/OWNER_DECISIONS_2026-10-02.md`, row A3 / C3.
 - `NEEDS_CONTROLLED_CONTENT — /evidence/ CLM-039 — the record's central comparison is entirely qualitative in the
   governed text (one public interface "showed an older span of years" while others "contained later observations"),
   with no years, no interface names and no size of the gap anywhere on the page, and the "earlier documented access"
@@ -274,6 +285,26 @@ Raised at the D7 closure (28 September 2026), from the three independent closure
 - `ESCALATE_TO_MASTER (observation) — the record's question 7 summary ("Detail for reproducing or challenging this
   record without changing what it means") reads as internal meta-language to a cold reader. Design impact: none — it
   is governed copy; a plainer governed gloss would print in place.`
+
+Raised at the independent acceptance of pull request #8 (2 October 2026; `audit/PR8_INDEPENDENT_ACCEPTANCE.md` A3,
+condition C3), recorded by the session meeting the before-merge conditions:
+
+- `ESCALATE_TO_MASTER (general finding; the steward's) — every drawn and text frame, all 36 contracts, every route that
+  binds one — the boundary prints twice because the generator composes every alt text as the accessible summary, the
+  governed label UI-VIS-DOES-NOT-ESTABLISH and the prohibited inference (`scripts/projection/derived.py:1324`; 36 of 36
+  `alt_text_en` and `alt_text_ar` end with the inference), while the frame foot prints the same inference once more under
+  the governed label "What not to conclude" (`04_PAGE_FAMILY_COMPOSITIONS.md` §1: the boundary once per frame). On the
+  public build at `38147de` every one of the 58 figures of the English edition prints its inference at least twice
+  (VIS-POS-TRANSACTIONS three times); the baseline printed it once because it did not show the alt text visibly.
+  `check_visuals.py` `boundary_once_in_foot` and `check_site.py` `boundary_once_per_frame` count the foot only, so the
+  design checks pass. The two earlier escalations — VIS-INCLUSION-TRANSMISSION (D3, above) and VIS-SOURCE-COMPARISON
+  (D7 closure, above) — are narrower statements of this one cause, not properties of those two contracts. Owner of the
+  fix: the steward (one generator rule, no Master change; or a Design rule for the visible alt tail). Decision, 2 October
+  2026 (`audit/OWNER_DECISIONS_2026-10-02.md`, row A3 / C3): each figure prints its boundary once on the page, in the frame foot; on
+  the page the image's alt attribute and the visible text alternative use the governed accessible summary, which ends
+  before the boundary; the full governed alt text, ending with the boundary, stays wherever a figure leaves the page
+  (export frames, social frames). Implemented in the release-candidate pull request. Design impact: the frame's foot is
+  unchanged; the text alternative loses its repeated tail. Open until that pull request lands.`
 
 ## Closed at D2 (27 September 2026) — resolved by an authority the repository already holds
 
@@ -287,6 +318,62 @@ Raised at the D7 closure (28 September 2026), from the three independent closure
   label ("on this page") would read better; it is a preference, not an authority question.
 - Home section order (for steward confirmation): decided by the brief — §4.5 states the baseline order "is a
   precedent, not a mandate; keep the `#system` anchor". The Lock item stands; nothing to confirm.
+
+Raised at EAD-01 by Claude Code (29 September 2026), found by the cutover itself:
+
+- `NEEDS_CONTROLLED_CONTENT — Home (`/`) and `/explore/` — the R8.4A question selection and grouping — the four
+  questions Home starts from, and which of the four clusters each of the eleven questions sits in, are not governed
+  anywhere. Until EAD-01 they were recovered by `scripts/handoff_inventory.py` **scraping the baseline renderer's own
+  HTML out of `dist/`**, and the renderer read them back from that inventory: a build that was an input to itself.
+  Removing the baseline renderer emptied the scrape and `/explore/` rendered with no questions at all. Code has put
+  them in one named place, `scripts/yfie/question_sets.py`, so nothing is parsed from markup and the regenerated
+  inventory is byte-identical to the accepted one at `2f9a93c` — but a selection decision held in renderer code is
+  exactly what EAD-11 says it should not be.`
+
+  **The change, exactly.** Nothing here is new content: every question, every cluster heading (`UI-QUESTIONS-*`) and
+  every destination is already governed. What is needed is the selection and the grouping, in the presentation
+  contract beside the other presentation decisions — `site-src/content/presentation_priority.json`, which the steward
+  edits in place — as two entries whose values are these, unchanged:
+
+  ```json
+  { "route": "/", "page_family": "Orientation",
+    "starting_question_ids": ["QE-002", "QE-003", "QE-005", "QE-011"] }
+  { "route": "/explore/", "page_family": "Question Entry",
+    "question_groups": [
+      {"heading_ui_id": "UI-QUESTIONS-UNDERSTAND-THE-WIDER-PICTURE",      "question_ids": ["QE-001", "QE-003"]},
+      {"heading_ui_id": "UI-QUESTIONS-PEOPLE-USE-AND-FLOWS",              "question_ids": ["QE-002", "QE-004", "QE-007", "QE-009"]},
+      {"heading_ui_id": "UI-QUESTIONS-FIRMS-INSTITUTIONS-AND-PROVIDERS",  "question_ids": ["QE-005", "QE-006", "QE-008"]},
+      {"heading_ui_id": "UI-QUESTIONS-VERIFY-AND-DECIDE-WHAT-TO",         "question_ids": ["QE-010", "QE-011"]}
+    ] }
+  ```
+
+  When that lands, `scripts/yfie/question_sets.py` reads the contract instead of holding the values, and is deleted
+  once it holds nothing. Code cannot make this change: the two controlled contracts are the steward's, in a commit
+  naming the finding it closes, with every gate run. Open; EAD-11; blocks no gate today.
+
+- `NEEDS_CONTROLLED_CONTENT — the search results, every route with a search — a result-type facet needs a name and an
+  "all types" option — EAD-06 asks for a result-type facet, and the option labels are governed
+  (`UI-JS-TYPE-PAGE` … `UI-JS-TYPE-SOURCE-LOCATOR`). What is missing is the control itself: an accessible name for
+  the facet, and the label of the state where no type is chosen. `UI-DATA-FIND-A-SOURCE-BY-TITLE` is the source
+  directory's own control and says "Find a source by title", so it cannot stand for either. Code does not author a
+  label, so the facet is unshipped until these exist; the `?q=` half of EAD-06 needed no copy and is shipped.
+  Design impact: none — nothing in the reference shows a facet.`
+
+- `DESIGN_QUESTION (Code, EAD-02 — not a Master item) — every page with next actions — two navigation landmarks share
+  one name — the accessibility audit of the implemented site found that `nav.actions` (the page's "Continue from here"
+  section, named by its own `h2`) and the spine's first edge group `nav.edges` (named by its `h3`) carry the **same**
+  governed title on the families where the edge group mirrors the next actions. A screen-reader user listing landmarks
+  sees "Continue from here" / "تابع من هنا" twice and cannot tell them apart: 20 occurrences across the audited pages.
+  This is a best-practice rule rather than a WCAG success criterion, and it appeared when DEBT-014 put the strip and
+  the foot spine on the same page. Code did not choose between the options, because which of the two changes, and to
+  what, is a composition and naming decision:
+    (a) the spine's edge group stops being a landmark (a `div` with its `h3`), keeping the heading and the links —
+        but `09_CODE_HANDOFF.md` records "every `nav` named … edge groups by their `h3`" and `check_site.py` asserts
+        `aside.spine nav.edges[aria-labelledby]`;
+    (b) the edge group is dropped on the families where it duplicates the section entirely (Evidence Directory, Data
+        & sources), since it repeats the same heading and the same links;
+    (c) a governed label distinguishes one of them — which is controlled content, and would be a fourth escalation.
+  Design impact: none on what the page says; a reader who does not use a landmark list sees no difference.`
 
 ## Anticipated (not yet raised — each will be raised only when a D1+ design actually needs it)
 

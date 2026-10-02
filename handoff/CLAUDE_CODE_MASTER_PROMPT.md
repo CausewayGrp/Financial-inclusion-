@@ -1,6 +1,6 @@
-> STATUS: **WAITING FOR THE DESIGN PACKAGE.** Do not start until the Design package in `design/` has been accepted against `handoff/DESIGN_ACCEPTANCE_CRITERIA.md`. This file is not for Claude Design.
+> STATUS: **STARTED — CODE NO LONGER WAITS.** The Design package in `design/` is accepted: the owner recorded the final D7 visual acceptance on 2 October 2026 (`audit/OWNER_DECISIONS_2026-10-02.md`, row D7) and `design/10_ACCEPTANCE_CHECKLIST.md` carries its evidence; the production runtime is pull request #8 and the EAD states are in `FINAL_OPEN_ITEMS_REGISTER.md` §1. History: until 2 October 2026 this line read "WAITING FOR THE DESIGN PACKAGE" with the instruction not to start until the package was accepted against `handoff/DESIGN_ACCEPTANCE_CRITERIA.md`; that literal stays on this line because gate R86-G01 (`scripts/validate.py`) reads it here, and the gate is not changed by a record. This file is not for Claude Design.
 
-# Claude Code — implementation brief (waiting)
+# Claude Code — implementation brief (started 29 September 2026; the package accepted 2 October 2026)
 
 ## When you start
 

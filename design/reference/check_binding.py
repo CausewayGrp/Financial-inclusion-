@@ -5,7 +5,7 @@
   python3 design/reference/check_binding.py [--site design/reference/out]
 
 Proves, from the repository's own inventory, that the one content path binds exactly what the projection roles allow:
-every RENDER and CONTRACT projection is read by `yfie/content.py` (or shipped unchanged for the runtime by `build.py`);
+every RENDER and CONTRACT projection is read by `scripts/yfie/content.py` (or shipped unchanged for the runtime by `build.py`);
 no REFERENCE or VIA_SPEC projection is read by any reference module; a STRUCTURE projection is read by the content
 path only. Then that the built site holds every document the inventory counts (286 edition pages + the root entry +
 the 404), one bundle per edition page, and no copied content model beyond the two files the runtime fetches. Exit 1 on
@@ -31,9 +31,9 @@ def main() -> int:
     inv = json.loads((ROOT / "handoff" / "ROUTE_CONTENT_AND_STATE_INVENTORY.json").read_text(encoding="utf-8"))
     roles = inv["projection_roles"]["files"]
     counts = inv.get("counts", {})
-    content_src = (REF / "yfie" / "content.py").read_text(encoding="utf-8")
+    content_src = (ROOT / "scripts" / "yfie" / "content.py").read_text(encoding="utf-8")
     build_src = (REF / "build.py").read_text(encoding="utf-8")
-    other_src = "".join(f.read_text(encoding="utf-8") for f in sorted((REF / "yfie").glob("*.py")) if f.name != "content.py")   # every module but the content path
+    other_src = "".join(f.read_text(encoding="utf-8") for f in sorted((ROOT / "scripts" / "yfie").glob("*.py")) if f.name != "content.py")   # every module but the content path
     bad: list[str] = []
     named = lambda f, src: (f in src) or (Path(f).name in src)  # noqa: E731
     for f, role in sorted(roles.items()):

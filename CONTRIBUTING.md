@@ -28,7 +28,7 @@ unpushed clone does not exist yet. ZIPs are *outputs* of checkpoint tags (§6), 
 | `site-src/content/presentation_priority.json`, `site-src/content/content/navigation_interaction.json` | Controlled contracts (presentation depth; navigation and interaction), class `CONTROLLED_CONTRACT` | Maintained in place by the programme steward only, in a commit naming the finding it closes; the generator validates them against the Master's projections (and writes the navigation labels, counts and bindings it owns); never edited by Claude Design or Claude Code, who escalate |
 | `dist/**` | Generated static site | Never by hand; `scripts/build.py`; committed so every public change is reviewable |
 | `audit/PUBLIC_LITERAL_CLOSURE.json` | Generated audit | Never by hand; `scripts/audit_public_literals.py` |
-| `scripts/`, `site-src/app.js`, `site-src/styles.css` | Generator, build, gates, runtime | Directly, with the full gate run |
+| `scripts/` (including the renderer `scripts/yfie/`, which holds the stylesheet), `site-src/app.js` | Generator, build, gates, runtime | Directly, with the full gate run |
 | `handoff/` | Design → Code recipient package | Changed only by the programme; DESIGN HANDOFF READY since F9 |
 | `vendor/fonts/` | IBM Plex woff2 files and licence, unchanged | Only by replacing them with a newer unchanged release |
 | `design/architecture/` | Derived diagrams | `scripts/architecture_diagrams.py` |
@@ -100,7 +100,7 @@ unpushed clone does not exist yet. ZIPs are *outputs* of checkpoint tags (§6), 
 
 During a transaction, files inside the runner's snapshot (authority, `site-src/content`, `handoff`, README, checkpoint,
 `dist`, the literal closure, `master_structure.json`, `projection_manifest.json`, `controlled_inputs`,
-`design/architecture`) change only via `--install`. Code outside it (`build.py`, `app.js`, `styles.css`, `derived.py`, `families.py`, `validate.py`, the literal
+`design/architecture`) change only via `--install`. Code outside it (`build.py`, `scripts/yfie/`, `app.js`, `derived.py`, `families.py`, `validate.py`, the literal
 allowances) is edited directly and survives a rollback.
 
 ## 5. The gates
@@ -120,9 +120,14 @@ python3 scripts/repository_manifest.py --check         # every tracked file clas
 python3 scripts/tests/test_literal_audit_determinism.py
 python3 audit/pre_tranche_c/source_lineage_truth_test.py
 python3 scripts/architecture_diagrams.py --check
+python3 scripts/social_images.py --check               # one governed social image per route and language, current
 python3 audit/tranche_c/checks/bilingual_invariance.py # 0 differing English/Arabic page pairs (exit 1 otherwise)
+python3 scripts/tests/test_cutover_parity.py           # the runtime prints everything the pre-design renderer printed
 python3 scripts/tests/test_public_tools.py             # browser
 python3 audit/tranche_c/checks/viewport_acceptance.py  # browser
+# Slow, and its own CI job: one full validator run per fault, so run it when a gate or the markup it reads changes.
+python3 scripts/tests/test_gate_negative_controls.py             # every gate still fails on the fault it was written to catch
+python3 scripts/tests/test_gate_negative_controls.py --only p3    # or just the ones whose name matches
 ```
 
 ## 6. Checkpoints and packages

@@ -1,7 +1,11 @@
 # Design package — Yemen Financial Inclusion Evidence · أدلة الشمول المالي في اليمن
 
-Status: **D7 CLOSURE COMPLETE — READY FOR INDEPENDENT ACCEPTANCE** (28 September 2026; branch
-`claude/dreamy-archimedes-e8qx5v`, from the accepted `main` `0ccdf01`). The technical checkpoint below was followed by
+Status: **D7 ACCEPTED — THE OWNER RECORDED THE FINAL VISUAL ACCEPTANCE ON 2 OCTOBER 2026** (`audit/OWNER_DECISIONS_2026-10-02.md`, row D7;
+the coverage ledger's 1,415 `VERIFIED` rows read `ACCEPTED` from that date, the 18 `DESIGNED` rows unchanged; recorded by
+the session meeting condition C2 of `audit/PR8_INDEPENDENT_ACCEPTANCE.md`, which changes no design decision).
+History — 28 September 2026: this line read **D7 CLOSURE COMPLETE — READY FOR INDEPENDENT ACCEPTANCE** (branch
+`claude/dreamy-archimedes-e8qx5v`, from the accepted `main` `0ccdf01`), and the paragraph below, kept as written, recorded
+the owner's visual acceptance as withheld at that date. The technical checkpoint below was followed by
 the closure the owner asked for, recorded in `10_ACCEPTANCE_CHECKLIST.md` §K.5 and DL-D7-007…013: the one blocker
 (DEBT-019) is closed; of the four visual debts, three are settled — the publisher is now named in type on every first
 screen in both languages (DEBT-016's identification defect, DL-D7-008), the phone composition is recomposed
@@ -22,7 +26,7 @@ one `h1`, the skip link, the language switch, the trust layer, no download or bu
 sources never named, CLM-044 never valued, every external locator with its cue, the shipped fonts) and 59 browser
 assertions on the last-ten-percent surfaces in EN and AR — and the technical criteria of
 `handoff/DESIGN_ACCEPTANCE_CRITERIA.md` are evidenced line by line in `10_ACCEPTANCE_CHECKLIST.md` (`evidence/d7/`).
-**The owner has withheld the final visual acceptance:** D7 is not declared met, the Design package is not declared
+**The owner has withheld the final visual acceptance** (as at 28 September 2026; settled 2 October 2026 — see the status line)**:** D7 is not declared met, the Design package is not declared
 accepted, the coverage ledger keeps its rows at `VERIFIED` (`ACCEPTED` is written only at acceptance), and the README
 is not reconciled. Open at the checkpoint, to be settled at the resumption: the owner's visual review of the built
 product; two verified design findings from the D7 cold readers — DEBT-018 (a governed signed value in Arabic prose,
@@ -79,7 +83,8 @@ Files `01`–`08`, `10` and `design/reference/` are created at the gate that fir
 content path (`yfie/content.py` reads `site-src/content/**` for all eleven families; never a copied content model, never
 retyped text), the neutral harness (`yfie/neutral.py`), the accepted renderer of the converged direction
 (`yfie/render.py` — shell, objects, the trio; `yfie/families.py` — the other families; `theme.py`, the one stylesheet;
-`visuals.py`, the contract drawings) and the checks (`check_content.py`: numeric and text-block parity with `dist/` on
+`visuals.py`, the contract drawings — moved to `scripts/yfie/` at EAD-01 and built through from here) and the checks
+(`check_content.py`: numeric and text-block parity against the frozen pre-design oracle on
 every document; `check_trio.py`: the D1 trio; `check_site.py`: the D2 routes with the family hooks, the §9.2 hard-state
 assertions, degraded renders and the evidence writer). The package is still an incomplete hand-back until every family is
 composed and reviewed on its own ledger row (D3–D4) and the acceptance checklist is complete (D7).

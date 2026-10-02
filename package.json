@@ -6,7 +6,7 @@
   "scripts": {
     "build": "python3 scripts/build.py",
     "validate": "python3 scripts/generate_projections.py --check && python3 scripts/audit_public_literals.py && python3 scripts/validate.py",
-    "verify": "python3 scripts/generate_projections.py --check && python3 -m unittest discover -s scripts/projection/tests -t . && python3 scripts/build.py && python3 scripts/audit_public_literals.py && python3 scripts/validate.py",
+    "verify": "python3 scripts/generate_projections.py --check && python3 -m unittest discover -s scripts/projection/tests -t . && python3 scripts/build.py && python3 scripts/audit_public_literals.py && python3 scripts/validate.py && python3 scripts/tests/test_cutover_parity.py",
     "serve": "http-server dist -p 4173 -c-1",
     "audit:public-literals": "python3 scripts/audit_public_literals.py",
     "generate": "python3 scripts/generate_projections.py",

@@ -72,6 +72,13 @@ function loadSearch(){
   return searchIndexPromise;
 }
 function esc(s){return String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));}
+// D6 RUNTIME_DEFECT, escalated to Code (design/ESCALATIONS.md): after Arabic letters a plain ISO date renders with its
+// parts reversed ("07-11-2022 إلى 09-01-2023" for 2022-11-07 → 2023-01-09), a plain numeric range with its ends
+// swapped and a plain signed value with its sign at the wrong end. Every page isolates those runs in its own text
+// layer; anything this file writes into a page must read the same way. The expression is the renderer's own, character
+// for character — scripts/yfie/text.py LTR_RUN — and scripts/validate.py fails if the two ever drift apart.
+const LTR_RUN=/(?:(?<![\d.,])(?:\d{4}(?:-\d{2}(?:-\d{2})?)?[–-]\d{4}(?:-\d{2}(?:-\d{2})?)?|\d{1,3}–\d{1,3})(?![\d.,]))|(?:(?<![\d-])\d{4}-\d{2}(?:-\d{2})?(?![\d-]))|(?:(?<![\w\u0600-\u06FF-])[+\u2212\u2013-]\d[\d,]*(?:\.\d+)?%?(?![\w]))/g;
+function iso(s){return esc(s).replace(LTR_RUN,m=>`<bdi dir="ltr" class="nw">${m}</bdi>`);}
 // Tranche C (TOOL-12): Arabic-Indic and Persian digits read as Western digits. Mirrored in scripts/validate.py (_r4norm).
 function normalize(s){return String(s||'').toLocaleLowerCase().normalize('NFKD').replace(/[\u0660-\u0669]/g,d=>String(d.charCodeAt(0)-0x0660)).replace(/[\u06F0-\u06F9]/g,d=>String(d.charCodeAt(0)-0x06F0)).replace(/[\u064B-\u065F\u0670]/g,'').replace(/[إأآٱ]/g,'ا').replace(/ى/g,'ي').replace(/ة/g,'ه').replace(/ؤ/g,'و').replace(/ئ/g,'ي');}
 // Tranche C (JRN-05): a typed question is reduced to its content words: punctuation, one-letter tokens and a short
@@ -109,16 +116,24 @@ function renderHits(hits){
     let route=x.route||x.primary_route||x.public_route||'/evidence/'; route=String(route).replace(/^\/(ar|en)/,''); if(!route.startsWith('/'))route='/'+route;
     const type=typeLabel(x.object_type||x.type||'');
     const meta=(isAr?(x.meta_ar||''):(x.meta_en||''));   // PB-0493(c): period or document kind, in the reader's language (TOOL-10)
-    return `<a class="search-hit" href="${prefix}${route}"><div><h4>${esc(title)}</h4>${summary?`<p>${esc(clip(summary,220))}</p>`:''}</div>${type?`<span class="meta">${esc(type)}${meta?' · '+esc(meta):''}</span>`:''}</a>`;
+    return `<a class="search-hit" href="${prefix}${route}"><div><h4>${iso(title)}</h4>${summary?`<p>${iso(clip(summary,220))}</p>`:''}</div>${type?`<span class="meta">${esc(type)}${meta?' · '+iso(meta):''}</span>`:''}</a>`;
   }).join('');
 }
-function bindSearch(input,box,status){
+// EAD-06 (handoff §2: "tool state that matters — Compare records, filters, search query — is URL-addressable,
+// reloadable and survives a language switch"). Only the page's OWN search writes the URL. The dialog is an overlay
+// over whatever page the reader is on, and rewriting that page's address as they type would change what they share.
+function writeSearchUrl(term){
+  const next=location.pathname+(term?`?q=${encodeURIComponent(term)}`:'')+location.hash;
+  if(next!==location.pathname+location.search+location.hash)history.replaceState(null,'',next);
+}
+function bindSearch(input,box,status,urlState){
   if(!input||!box)return;
   let timer;
   input.addEventListener('input',()=>{
     clearTimeout(timer);
     timer=setTimeout(async()=>{
       const term=normalize(input.value.trim());
+      if(urlState)writeSearchUrl(input.value.trim());
       if(term.length<2){box.innerHTML=''; if(status)status.textContent=''; return;}
       if(status)status.textContent=T('UI-JS-SEARCHING');
       try{
@@ -154,7 +169,12 @@ $$('[data-search-input]').forEach(input=>{
   const scope=input.closest('.search-dialog-panel')||input.parentElement?.parentElement||document;
   const box=$('[data-search-results]',scope)||$('#search-results');
   const status=$('[data-search-status]',scope);
-  bindSearch(input,box,status);
+  const urlState=input.hasAttribute('data-search-url-state');
+  bindSearch(input,box,status,urlState);
+  if(urlState){
+    const q=new URLSearchParams(location.search).get('q');
+    if(q!==null&&q!==''){input.value=q;input.dispatchEvent(new Event('input'));}
+  }
 });
 const dialog=$('#search-dialog');
 let searchOpener=null;
@@ -247,7 +267,7 @@ if(compareSelects.length>=2&&out){
     if(rows.some(r=>temporal.has(r.field)&&r.state==='missing'))return {state:'unresolved',title:labels.unresolved,copy:labels.unresolvedCopy};
     return {state:'aligned',title:labels.aligned,copy:labels.alignedCopy};
   };
-  const recordLink=x=>x.route?`<a class="button ghost" href="${prefix}${esc(x.route)}">${esc(labels.openRecord)} — ${esc(x.title)}</a>`:'';
+  const recordLink=x=>x.route?`<a class="button ghost" href="${prefix}${esc(x.route)}">${esc(labels.openRecord)} — ${iso(x.title)}</a>`:'';
   // P2.1: the comparison is shareable. URL state is ?records=ID,ID[,ID[,ID]] in slot order (each ID percent-encoded,
   // commas literal). The URL always reflects the comparison shown; reload, a copied link or a language switch
   // (which keeps the query) reproduces it. A malformed or unknown link is a technical input error, never an evidence verdict.
@@ -283,9 +303,9 @@ if(compareSelects.length>=2&&out){
     if(records.length<2){out.innerHTML='';return;}
     const rows=dimensions.map(field=>({field,...assessMany(records,field)}));
     const v=verdict(records,rows);
-    const head=records.map(x=>`<th scope="col">${esc(x.title)}</th>`).join('');
-    const body=rows.map(r=>`<tr data-compare-state="${esc(r.state)}"><th scope="row">${esc(labels[r.field]||r.field)}</th>${records.map(x=>`<td>${esc(x[r.field]||'—')}</td>`).join('')}<td><span class="compare-state">${esc(r.label)}</span></td></tr>`).join('');
-    const boundaries=records.some(x=>x.boundary)?`<div class="compare-boundaries">${records.map(x=>`<article><strong>${esc(x.title)}</strong><p>${esc(x.boundary||'—')}</p></article>`).join('')}</div>`:'';
+    const head=records.map(x=>`<th scope="col">${iso(x.title)}</th>`).join('');
+    const body=rows.map(r=>`<tr data-compare-state="${esc(r.state)}"><th scope="row">${esc(labels[r.field]||r.field)}</th>${records.map(x=>`<td>${iso(x[r.field]||'—')}</td>`).join('')}<td><span class="compare-state">${esc(r.label)}</span></td></tr>`).join('');
+    const boundaries=records.some(x=>x.boundary)?`<div class="compare-boundaries">${records.map(x=>`<article><strong>${iso(x.title)}</strong><p>${iso(x.boundary||'—')}</p></article>`).join('')}</div>`:'';
     out.innerHTML=`<section class="compare-verdict" data-compare-verdict="${esc(v.state)}" data-noncolour-semantic="text-label-structure"><div class="eyebrow">${esc(labels.assessment)}</div><h3>${esc(v.title)}</h3><p>${esc(v.copy)}</p><p class="compare-no-merge">${esc(labels.noMerge)}</p></section><div class="table-wrap" tabindex="0" role="region" aria-label="${esc(labels.table)}" data-noncolour-semantic="caption-headers-text-labels"><table class="compare-table"><caption class="sr-only">${esc(labels.table)}</caption><thead><tr><th scope="col">${esc(labels.dimension)}</th>${head}<th scope="col">${esc(labels.assessment)}</th></tr></thead><tbody>${body}</tbody></table></div>${boundaries}<div class="compare-record-actions">${records.map(recordLink).join('')}</div>`;
     if(compareStatus)compareStatus.textContent=`${v.title}. ${records.length} ${labels.selected}.`;
   };

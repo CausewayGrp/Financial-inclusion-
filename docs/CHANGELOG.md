@@ -1,5 +1,240 @@
 # Repository Change Log
 
+## 2026-10-02 — Pull request #8: the before-merge conditions C1–C5 met, in records only
+
+`audit/PR8_INDEPENDENT_ACCEPTANCE.md` returned MERGE AFTER CONDITIONS on the production runtime (head `74d79a1`). This commit
+meets its five before-merge conditions and makes the one-line record fixes it listed. No code, test, gate, generator,
+Master byte, projection, `dist/` file or controlled contract changes: `git diff 74d79a1..HEAD -- site-src scripts dist
+design/reference authority/Yemen_Financial_Inclusion_Evidence_Master.xlsx` is empty.
+
+- **Owner decisions recorded.** `audit/OWNER_DECISIONS_2026-10-02.md` (indexed in `audit/INDEX.md`): OWN-01 (the funding and
+  relationships paragraph, EN and AR), the publisher name, OWN-04 (licence deferred; link-and-citation launch), OWN-03,
+  **D7 — the owner's final visual acceptance of the Design package**, the social images, OWN-05, OWN-02, EAD-03 (export
+  approved, master file unchanged), relationships, the steward delegation for the EAD-11 patch, and the dispositions of
+  A3 / C3, A5 / C4 and A4 / C6. Recorded, not applied: the Master-first and runtime changes belong to the release-candidate
+  pull request.
+- **C2 — the premise settled.** `design/00_DESIGN_README.md` and `design/10_ACCEPTANCE_CHECKLIST.md` record the owner's
+  acceptance of 2 October 2026 and keep the 28 September "withheld" status as dated history; `design/COVERAGE.csv` writes
+  `ACCEPTED` on its 1,415 `VERIFIED` rows (18 `DESIGNED` unchanged). Code no longer "waits": `README.md`,
+  `handoff/CLAUDE_CODE_MASTER_PROMPT.md` (its first line keeps the literal gate R86-G01 reads, as dated history),
+  `handoff/README_FIRST.md`, `authority/YFI_CURRENT_PROJECT_CONTEXT.json` `design_prompt_status` (programme state, edited
+  directly — `scripts/rebind_authority.py` owns only its hashes and counts) and `OPENAI_REENTRY_CHECKPOINT.md`. `fca7bf1` is
+  named as what it is — the last commit of pull request #7, landed on `main`, not a merge commit.
+- **C1 — the pull request's records say one thing.** `README.md` rows Next, Claude Code and Working gate carry the EAD
+  states as `FINAL_OPEN_ITEMS_REGISTER.md` §1 has them; `design/09_CODE_HANDOFF.md`: the "Not claimed" row states EAD-02's
+  true split (automated audit done, two failures fixed, no conformance claimed; the human audit open, release-time), the
+  duplicate EAD-11 row is removed, and the test-hooks row reads the measured 27/28 with `scripts/tests/test_public_tools.py`
+  modified (two tests added at EAD-06); the register carries a dated correction to its EAD-01 cell.
+- **C3 — the double boundary, as a general finding.** `design/ESCALATIONS.md`: every frame prints its boundary twice because
+  `scripts/projection/derived.py:1324` ends all 36 contracts' `alt_text` with the prohibited inference while the frame foot
+  prints it again; owner the steward; the two per-contract escalations (VIS-INCLUSION-TRANSMISSION, VIS-SOURCE-COMPARISON)
+  are marked as narrower statements of the same cause; the register carries a pointer; the decision is the owner's A3 / C3 row.
+- **C4 — the `/reforms/` text frame.** `design/06_VISUAL_TABLE_SYSTEM.md` §1 no longer claims the baseline had such a frame
+  (it did not): this build shows it, and the owner decided to exclude the RETIRE tier from the domain depth frames (A5 / C4);
+  the same note sits on the D7 checklist's "RETIRE never drawn" line.
+- **C5 — the register's append rule restored.** A dated erratum in `FINAL_OPEN_ITEMS_REGISTER.md` §9 records the in-place
+  rewrite of the eleven "Where it shows today" cells and the class-count cell on 29 September 2026, each previous text
+  verbatim with the commit that replaced it; the current cells stand.
+- **One-line record fixes** from the acceptance: `README.md` ("The rest are open"; DEBT-008 does not block release and waits
+  on the steward and Design, not the owner — A8; the quick start no longer calls `dist/` "the governed baseline");
+  `CONTRIBUTING.md` §2 and §4 (`site-src/styles.css` no longer exists); the register's EAD-11 item names
+  `scripts/yfie/question_sets.py`; `handoff/CLAUDE_DESIGN_MASTER_PROMPT.md` and `handoff/ENGINEERING_HANDOFF_EXPECTATIONS.md`
+  point to `date_words` in `scripts/yfie/content.py`. `interface_copy.json` and `handoff/IMPLEMENTATION_MANIFEST.json` are
+  governed and untouched (fixed in the release-candidate pull request).
+
+Not declared: PUBLIC RELEASE READY. Not claimed: WCAG conformance.
+
+## 2026-09-29 — EAD-02: the implemented site audited; two real failures found and fixed
+
+`scripts/accessibility_audit.py` audits what a machine can decide about the runtime: 24 pages — one per route class,
+both languages — at 1440 and 390 px, a 320 px reflow pass (400 % of a 1280 px window), reduced motion, images off and
+a keyboard walk, with a pinned general ruleset (axe-core, WCAG 2.0/2.1/2.2 A and AA plus best practice) and the eleven
+outcomes of the accessibility contract measured rather than asserted. The record is `docs/ACCESSIBILITY_AUDIT.md` and
+`.json`, and it includes the text-alternative table for every drawn visual that the register asks for.
+
+**Two failures against outcomes the contract itself states were found, and fixed.**
+
+- **1.4.3 contrast.** The institutional band's fine print measured **4.42:1** where 4.5:1 is required — on all 288
+  pages, in both languages, since D1. `--mute` moved two points darker, `#66717B` → `#646F79`: 4.56:1 on the band,
+  5.13:1 on paper. The role is unchanged, the change is imperceptible, and it is the smallest value that meets the
+  rule the design published. `design/02_TOKENS.json` regenerated.
+- **2.5.8 target size.** Of 129 targets under 24 × 24 px, 117 met one of the criterion's own exceptions — inline, or
+  24 px spacing — which is why a bare count would have meant nothing. Twelve met neither: the band's group links, the
+  disclosure summaries and the record list inside one, all 22–23 px tall with neighbours closer than 24 px. The design
+  already had a rule for exactly this case; it was extended to the three families it had missed.
+
+After the fixes: **0 WCAG violations from the ruleset, 0 contrast failures, 0 targets failing 2.5.8, 0 unnamed
+controls or landmarks, 0 unlabelled controls, 0 reflow overflow at 320 px, 0 heading-level jumps, 0 images without
+`alt`, and no keyboard trap.**
+
+**Two findings were not fixed, because neither is Code's to decide.** Two navigation landmarks carry the same governed
+name — the page's next-actions section and the spine's first edge group — so a screen-reader landmark list shows it
+twice; which one changes, and to what, is a composition and naming decision, escalated with three options. And a
+figure table's empty corner cell is DEBT-013's recorded preference, which needs a governed label.
+
+**Nothing here claims conformance, at any level.** Screen readers in Arabic and English, whether each heading
+describes its section, whether each visual's text alternative carries the same analytical point as the picture, voice
+control and switch access, and forced colours judged by eye are all listed as outstanding for the auditor. The
+Accessibility page continues to say the resource is designed against WCAG 2.2 and is still to be tested.
+
+## 2026-09-29 — EAD-10: the implemented runtime measured, and what EAD-03 now costs
+
+The pre-design baseline was measured before there was a design. The runtime is measured now, with the same script and
+the same twelve route classes in both languages, so the two records compare like with like:
+`docs/SUSTAINABILITY_IMPLEMENTED_RUNTIME.json`, with the table in `docs/SUSTAINABILITY_METHOD.md`.
+
+A cold page transfers 9.83–10.19 MB. **94–97 % of that is the canonical logo.** Everything else on the page together —
+the document, the stylesheet, the script and the type — is 285–656 KB. A warm page transfers nothing. Opening Search
+loads the local index once, about 321 KB with gzip, and only then. The page makes no external request of any kind.
+
+The only increase over the baseline is about 200 KB of self-hosted type, and it buys correctness rather than costing
+it: the baseline named IBM Plex and shipped no font file, so a reader without it installed read the product in a
+fallback face — Arial, or Tahoma for Arabic. The runtime ships the six faces the stylesheet declares and preloads the
+two a first paint needs in the reader's language. HTML is comparable and slightly smaller at the top end; the social
+images cost a page nothing, because a platform fetches one when a link is shared and the page never does.
+
+**This sharpens EAD-03 rather than closing it.** The logo's share is no longer an estimate from a pre-design build; it
+is measured on the site that would ship. The derivative sizes are listed and the export is one command, but a
+derivative of the mark is the owner's to approve, so Code does not run it and the master stays untouched.
+
+**No budget is set and no carbon figure is computed**, and none may be: the release host is not chosen (OWN-03), so
+its compression and caching are unmeasured. That half of EAD-10 is release work, and the method says so.
+
+## 2026-09-29 — EAD-06: the search query is URL-addressable; what the facet still waits on
+
+`handoff/ENGINEERING_HANDOFF_EXPECTATIONS.md` §2 requires that tool state which matters — Compare records, filters,
+the search query — be URL-addressable, reloadable and able to survive a language switch. Compare already met it; the
+search did not. The Evidence directory's own search now writes its query to `?q=`, reads it back on load, restores
+both the field and the results, carries across the switch to the other edition, and clears the address when the field
+is cleared. A query that arrives from the URL is rendered as text and never as markup.
+
+Only the page's own search owns the page address. The dialog floats over whatever page the reader is on, so rewriting
+that page's address as they type would change what they would share; a gate and a negative control hold that line in
+both directions.
+
+**Two of EAD-06's four parts turned out to be already shipped**, by the accepted design, at the cutover: entry into
+Compare from exactly the thirteen comparable records with that record pre-selected, and the mobile form of the
+four-column comparison, which stacks below 640 px with every row a block and each cell numbered in the inline-start
+gutter. They are recorded rather than rebuilt.
+
+**The result-type facet is blocked, and that is worth stating plainly rather than leaving it to look undone.** Its
+option labels are governed (`UI-JS-TYPE-PAGE` … `UI-JS-TYPE-SOURCE-LOCATOR`), but the facet's own accessible name and
+the label for the state where no type is chosen are not, and Code does not author a label. The source directory's
+control cannot stand in: it says "Find a source by title". Escalated as `NEEDS_CONTROLLED_CONTENT`. The search status
+total ("10 of 79" rather than "10 results shown") remains blocked on the governed `{n} of {m}` form escalated at D7 —
+a query matching 79 records still reads as a corpus of ten, and no amount of engineering fixes that without the form.
+
+## 2026-09-29 — The D6 runtime defect fixed: governed dates no longer reverse in the Arabic tools
+
+Design found this at D6 on the printed Arabic Compare page and escalated it to Code, because it never edits the
+runtime: `site-src/app.js` wrote each record's governed period into a table cell as plain text, and after Arabic
+letters the two ISO dates rendered with their parts reversed — "07-11-2022 إلى 09-01-2023" for a period that runs
+2022-11-07 to 2023-01-09. The date a reader saw was not the date the record holds.
+
+Every page already isolates those runs in its own text layer. The runtime now uses **the same expression**, character
+for character — `scripts/yfie/text.py` `LTR_RUN`, covering ISO dates, numeric ranges and signed values — through one
+helper, so a value a tool writes into a page reads the same way as one the page was rendered with. It is applied
+wherever governed record text reaches an Arabic page, not only in the cell the lens happened to read: the Compare
+table's cells and column heads, the boundary paragraphs beneath it, the record links, and the search results' titles,
+summaries and period line.
+
+Two things keep it from drifting back. `scripts/validate.py` fails if the runtime's expression is not the renderer's,
+or if the helper is gone; and `scripts/tests/test_gate_negative_controls.py` proves both of those still fail, on the
+source file rather than on a built page — the suite now accepts controls on either.
+
+## 2026-09-29 — EAD-05: the Method & Measurement navigation group
+
+Design owned this decision and had made it; it is recorded here as shipped rather than as work. The group is a named
+`role="group"` whose governed label is a non-link `glabel`. At 900 px and above a hairline sets it off from the other
+destinations and its label sits on the links' baseline; inside the opened menu below that width it stacks under a
+quieter label. Both labels and both destinations are unchanged and governed, and the same holds in Arabic.
+
+## 2026-09-29 — EAD-09: the governed social images, and `og:image`
+
+`scripts/social_images.py` rasterises the design's own social templates — one 1200 x 630 frame per route and language,
+filled only with governed text (`design/08_ASSET_MAP.md` §4) — into 286 PNGs, and `scripts/build.py` copies them into
+`dist/assets/social/`. Every page now carries `og:image` (root-relative before the owner sets a public origin, absolute
+after, like every other URL in the discovery contract), its declared size, `og:image:alt` (the page's own title) and
+the `summary_large_image` card type. No new text: the templates print what the page already prints.
+
+**Two assertions written for the state before the images existed moved with the feature rather than being dropped.**
+Gate F6-G01 asserted that no page carried an `og:image`; it now asserts that each page carries its *own* governed
+image, at the declared size, present in the build, described by its own title. `check_acceptance.py`'s `no_og_image`
+criterion is repointed the same way. `scripts/tests/test_gate_negative_controls.py` gains two controls that prove both
+still fail: an `og:image` naming an image the build does not ship, and one that loses its declared size.
+
+**Why the images are committed rather than made during the build.** Rasterising needs a browser; `scripts/build.py`
+must stay standard library only and finish in seconds, because it runs inside every Master transaction and in a CI job
+with no Chromium. So they are build inputs, regenerated by one documented command and committed — the same promise
+`dist/` makes, that the reviewed bytes are the served bytes. Staleness is caught without rendering anything:
+`scripts/social_images.py --check` rebuilds every template in pure Python and compares its SHA-256 with the one
+recorded when the image was made, so a governed string changing anywhere fails the check and names the routes to
+regenerate. Comparing rendered bytes instead would make a Chromium version bump look like a content change.
+
+**The cost, stated plainly: 17.1 MB of generated PNG, committed.** That is a real addition to the repository, for a
+feature that only takes effect once a link to the site is shared publicly. It is recorded in
+`FINAL_OPEN_ITEMS_REGISTER.md` with the three steps that reverse it, so the owner can decide otherwise without
+archaeology. Git stores the content once even though the files appear both as inputs and inside `dist/`.
+
+## 2026-09-29 — EAD-01 on `claude/hopeful-mccarthy-jgip83`: one production runtime; the replaced renderer removed
+
+The accepted Design implementation becomes the repository's renderer. `design/reference/yfie/` moves to
+`scripts/yfie/` (by `git mv`, so its history follows it) and `scripts/build.py` becomes a thin driver over it, writing
+the complete static site a host serves: 288 documents in both languages, the neutral root entry, the bilingual 404,
+`robots.txt`, and `sitemap.xml` once the owner sets an origin. The 1,643 lines of baseline page composition are
+deleted, and `site-src/styles.css` with them. `design/reference/` keeps its harness and its six checks and now builds
+**through** the production package, so those checks protect the code that ships; it holds no renderer of its own.
+There is one production renderer, reached by one production entry point.
+
+No governed value, wording, unit, universe, period, evidence state, source relationship, limitation or Arabic term
+changes, and nothing under `authority/`, `audit/`, the projections or the two controlled contracts is touched.
+
+**EAD-04 closes with it, by construction.** The recolouring of the logo (`brightness(0) invert(1)`) lived only in the
+baseline stylesheet, which no longer exists or ships; the accepted stylesheet contains no filter, blend or mask.
+**EAD-08 narrows**: the build ships the six IBM Plex faces the stylesheet declares, with their licence, instead of all
+twenty-four, and the two first-paint faces stay preloaded per language.
+
+**Parity is proved, not asserted.** The pre-design renderer's own answer was frozen before it was removed:
+`scripts/tests/baseline_content_oracle.json` holds, for all 286 documents, the normalised number multiset of `<main>`
+and its rendered text as that renderer gave them at `2f9a93c`, with the SHA-256 of every projection it was derived
+from. `scripts/tests/test_cutover_parity.py` holds the new output to it at `design/reference/check_content.py`'s
+strength — no governed number lost, none gained ungoverned, no governed sentence lost — and reports 286 documents, 0
+differing. It was proved in both directions before it was trusted: it fails when a governed paragraph is dropped from
+one record and when one governed number is altered.
+
+**The cutover found a real defect, and it is fixed here.** Explore's four question clusters were not governed:
+`scripts/handoff_inventory.py` recovered them by scraping the baseline renderer's own HTML out of `dist/`, and the
+accepted renderer read them back from that inventory — a build that was an input to itself. Removing the baseline
+renderer emptied the scrape, the inventory recorded four empty clusters, and `/explore/` rendered with no questions at
+all. The R8.4A sets (Home's four starting questions and Explore's four clusters) now live in one named place,
+`scripts/yfie/question_sets.py`; the inventory reads them from there and parses no markup; and the regenerated
+inventory is byte-identical to the accepted one at `2f9a93c`, so the selection is provably unchanged. EAD-11 stays
+open — the sets belong in a governed contract, which is the steward's to land — but nothing is recovered from rendered
+markup any more. This corrects the planning appendix of 29 September, which recorded that Explore's clusters "already
+come governed, through the handoff inventory's `question_groups`": they came from the baseline's markup.
+
+**Every gate keeps its assertion and changes only how it finds things.** Built into `dist/`, the accepted design
+raised 2,332 validator failures, all of them selectors written against the baseline's class names and attribute order;
+all are re-pointed and the validator is green. Two were outright regex faults the new markup exposed rather than
+selector drift: `\bid="` also matched `data-record-id="`, so every record page reported a duplicate DOM id, and
+`<th(?!…scope=)` also matched `<thead>`, so every table reported a header cell without scope. Where the accepted
+design repeats governed text by design — a clock-first object carries its own period, universe and summary — P1-G06
+keeps the scope it always had, the page's authored prose, and a duplicated authored paragraph still fails it.
+
+**P3-G02 is replaced, not deleted.** It asked that the pre-design baseline draw nothing. It now checks each drawn
+visual against its contract: only a contract the renderer's own registry may draw is drawn, a contract that binds rows
+must print every one of its governed row values, its tier must be one that plots, its governed title and the grammar
+label of every state and marker it carries must be printed, it must carry the ordered-text fallback and a captioned
+value table with a column header, a contract that binds no rows may draw governed structure but no value scale, a
+graphic outside a governed figure fails, and every drawable contract must reach both editions.
+
+**Every re-pointed gate is proved to still catch its own fault.** `scripts/tests/test_gate_negative_controls.py`
+breaks one thing in the built site at a time — an `aria-current` removed, a breadcrumb dropped, a governed row value
+rounded, a question dropped from Explore, a decorative graphic added — and requires the gate to say so. A re-pointed
+selector that silently matches nothing would pass the suite and fail these.
+
+Nothing here declares PUBLIC RELEASE READY, and no WCAG conformance is claimed: the EAD-02 audit is still to be done.
+
 ## 2026-09-28 — Design D7 closure on `claude/dreamy-archimedes-e8qx5v`: every recorded blocker settled, the product judged by independent lenses; ready for independent acceptance
 
 The closure the owner asked for after withholding acceptance at the technical checkpoint below. It changes the built

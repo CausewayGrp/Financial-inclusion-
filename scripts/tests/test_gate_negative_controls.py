@@ -1,0 +1,221 @@
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+"""Every gate re-pointed at the production runtime still fails on the fault it was written to catch (EAD-01).
+
+  python3 scripts/tests/test_gate_negative_controls.py            # all controls
+  python3 scripts/tests/test_gate_negative_controls.py --only bread   # the controls whose name contains "bread"
+
+The cutover replaced the pre-design renderer, and the repository validator found its evidence by the baseline's exact
+class names and attribute order. Those selectors were re-pointed at the accepted design's hooks — and a re-pointed
+selector is worth nothing if it silently matches nothing. So each one is proved here the only way that means anything:
+break one thing in the built site, run the validator, and require the gate to say so.
+
+The assertions were never changed to let the cutover pass. These controls are what makes that checkable rather than
+claimed: if a future change quietly loosens one, its control stops failing and this test goes red.
+
+Each control copies `dist/`, breaks exactly one thing, runs `scripts/validate.py`, and restores. It needs a built site
+(`python3 scripts/build.py`) and it leaves the tree exactly as it found it, including after an interrupt.
+"""
+from __future__ import annotations
+
+import argparse
+import re
+import shutil
+import subprocess
+import sys
+import tempfile
+from pathlib import Path
+
+ROOT = Path(__file__).resolve().parents[2]
+DIST = ROOT / "dist"
+
+
+def run_validator() -> str:
+    r = subprocess.run([sys.executable, str(ROOT / "scripts/validate.py")], capture_output=True, text=True,
+                       cwd=ROOT, env={"PYTHONDONTWRITEBYTECODE": "1", "PATH": "/usr/bin:/bin"})
+    return r.stdout + r.stderr
+
+
+def sub_once(pattern: str, repl: str):
+    return lambda t: re.sub(pattern, repl, t, count=1, flags=re.S)
+
+
+def replace(old: str, new: str, count: int = 1):
+    return lambda t: t.replace(old, new, count) if count else t.replace(old, new)
+
+
+def duplicate(pattern: str):
+    """Insert a second copy of the first match immediately after it."""
+    def fn(t: str) -> str:
+        m = re.search(pattern, t, re.S)
+        if not m:
+            raise AssertionError(f"control could not find {pattern!r}")
+        return t[:m.end()] + m.group(0) + t[m.end():]
+    return fn
+
+
+def insert_after(anchor: str, fragment: str):
+    return lambda t: t.replace(anchor, anchor + fragment, 1)
+
+
+# name, the file to break, how to break it, the gate text that must appear.
+# The text must be a substring of the real message: several gates interpolate a route or a visual id into the middle of
+# theirs, so a control that names the gate and then the wording would never match (found by running these).
+# A path under `site-src/` or `scripts/` is a source file; anything else is a page of the built site.
+SOURCE_PREFIXES = ("site-src/", "scripts/")
+CONTROLS = [
+    ("active navigation loses its aria-current", "en/evidence/CLM-001/index.html",
+     replace('<a href="/en/evidence/" aria-current="page">', '<a href="/en/evidence/">'),
+     "active navigation missing aria-current"),
+    ("a record loses its breadcrumb", "en/evidence/CLM-001/index.html",
+     sub_once(r'<nav class="crumb".*?</nav>', ""),
+     "R4 deep-detail breadcrumb missing"),
+    ("a record loses its utility region", "en/evidence/CLM-001/index.html",
+     replace('class="util" data-record-id=', 'class="util" data-rec-id='),
+     "R4 Evidence Record lacks verify/exit actions"),
+    ("a domain answer loses its verification section", "en/people/index.html",
+     replace('<section class="qa" id="verify">', '<section class="qa" id="verify-x">'),
+     "R4 domain lacks verification next action"),
+    ("a page loses its search utility", "en/about/index.html",
+     replace("data-search-open", "data-search-x"),
+     "S05.2 missing search utility reachable"),
+    ("a record's boundary stops being first-load", "en/evidence/CLM-001/index.html",
+     replace("data-evidence-boundary-first-load", "data-evidence-boundary-later"),
+     "S04.1 Evidence Record structural family mismatch"),
+    ("a governed first-load field is dropped", "en/evidence/CLM-002/index.html",
+     sub_once(r'<div class="qa" id="q3">.*?</div></div>', '<div class="qa" id="q3"></div>'),
+     "S04.1 first-load evidence field missing"),
+    ("JSON-LD disagrees with the visible breadcrumb", "en/evidence/CLM-001/index.html",
+     replace('>Evidence</a> / <span aria-current="page">', '>Evidence hub</a> / <span aria-current="page">'),
+     "F6-G04 breadcrumb data differs"),
+    ("a record loses the source reuse boundary", "en/evidence/CLM-001/index.html",
+     replace('<p class="rights">', '<p class="rgts">', 0),
+     "S04.2 source reuse boundary missing"),
+    ("an authored paragraph is printed twice", "en/people/index.html",
+     duplicate(r'(?<=<div class="body">)<p>.{120,400}?</p>'),
+     "P1-G06 repeated sentence"),
+    ("a band boundary is demoted to an answer", "en/people/index.html",
+     replace('<section class="bnd" id="s4"', '<section class="qa" id="s4"'),
+     "S03 scope count mismatch"),
+    ("a governed section is dropped from a domain answer", "en/people/index.html",
+     sub_once(r'<section class="qa" id="s2"><div>.*?</div><div class="body">.*?</div></section>', ""),
+     "S03 controlled section lost"),
+    ("a table header loses its scope", "en/remittances/index.html",
+     replace('<th scope="col">', "<th>"),
+     "P2-G03 table header cell without scope"),
+    # On a VIS- record the governed accessible summary is also the record's own summary, so it renders twice and
+    # removing one copy proves nothing; `/remittances/` carries this contract's summary exactly once, in the figure's
+    # text alternative. `p` cannot nest, so the first paragraph after the fallback marker is that summary.
+    ("a figure loses its governed accessible summary", "en/remittances/index.html",
+     sub_once(r'(data-visual-fallback="ordered-text">.*?)<p class="small">.*?</p>', r"\1"),
+     "S05.3 governed accessible summary missing"),
+    ("a controlled question is dropped from Explore", "en/explore/index.html",
+     sub_once(r'<li><div><div class="q">.*?</div></li>', ""),
+     "S02 Explore must retain all"),
+    ("the /data/ inventory list is unhooked", "en/data/index.html",
+     replace("data-public-inventory", "data-public-inv"),
+     "P1-G03 /data/ inventory list"),
+    ("a source card loses its reuse-terms state", "en/data/index.html",
+     replace("data-rights-state", "data-rights-st", 0),
+     "P2-G02 /data/ source cards lack their reuse-terms state"),
+    ("the featured Reading differs between pages", "en/explore/index.html",
+     replace("/en/readings/reforms-newer-than-people-evidence/", "/en/readings/define-what-you-count/"),
+     "RP-G03"),
+    # The value is printed twice — once as the drawn label, once in the value table — so a control that changes one
+    # copy proves nothing. Rounding both is the fault: a governed row value the figure no longer prints anywhere.
+    ("a drawn figure rounds a governed row value", "en/remittances/index.html",
+     replace("1,329.2", "1,329", 0),
+     "does not print its governed row value"),
+    ("a drawn label shows a number the contract does not govern", "en/remittances/index.html",
+     replace('<text class="val" x="15.20%" y="150.5" text-anchor="start">1,329.2</text>',
+             '<text class="val" x="15.20%" y="150.5" text-anchor="start">1,329</text>'),
+     "draws a value label that is not a governed value"),
+    # The figure declares the fallback on its own element and again on the block that carries it; the gate must read
+    # the figure's own attribute, so the control breaks exactly that one.
+    ("a drawn figure loses its ordered-text fallback", "en/remittances/index.html",
+     replace('<figure class="fig" data-visual-id="VIS-REMITTANCE-MACRO" data-visual-fallback="ordered-text"',
+             '<figure class="fig" data-visual-id="VIS-REMITTANCE-MACRO" data-visual-fallback="none"'),
+     "drawn without data-visual-fallback"),
+    ("a decorative graphic appears outside a governed figure", "en/about/index.html",
+     insert_after('<main id="main">', '<svg width="10" height="10"></svg>'),
+     "P3-G02 graphic outside a governed visual figure"),
+    ("a DOM id is used twice", "en/about/index.html",
+     insert_after('<main id="main">', '<div id="page-title"></div>'),
+     "duplicate DOM id"),
+    # The closing question also names itself in the in-page index and the strip, so only replacing every copy of it
+    # actually takes it off the end of the essay.
+    ("a Reading no longer ends with its governed question", "en/readings/define-what-you-count/index.html",
+     replace("What would change this reading?", "What changes this?", 0),
+     "RP-G01 Reading essay does not end"),
+    ("a Reading loses its related Readings", "en/readings/define-what-you-count/index.html",
+     sub_once(r'(?<=data-reading-related>)(.*?)</section>', "</section>"),
+     "RP-G01 a Reading links one or two related Readings"),
+    ("og:image names an image the build does not ship", "en/people/index.html",
+     replace('content="/assets/social/people__en.png"', 'content="/assets/social/people__xx.png"'),
+     "F6-G01 og:image is not this page"),
+    ("og:image loses its declared size", "en/people/index.html",
+     replace('<meta property="og:image:width" content="1200">', ""),
+     "F6-G01 og:image does not declare its governed size"),
+    # The runtime's isolation of governed dates and ranges is the renderer's own expression; if the two drift, a value a
+    # tool writes into an Arabic page reads differently from one the page was rendered with (the D6 RUNTIME_DEFECT).
+    ("the runtime's isolation drifts from the renderer's", "site-src/app.js",
+     replace(r"(?<![\d-])\d{4}-\d{2}", r"(?<![\d-])\d{4}-\d{3}"),
+     "the runtime's left-to-right isolation is not the renderer's expression"),
+    ("the runtime loses its isolation helper", "site-src/app.js",
+     replace("function iso(s){return esc(s).replace(LTR_RUN", "function iso(s){return esc(s).replace(/$^/"),
+     "the runtime has no isolation helper"),
+    ("the search query stops being URL-addressable", "site-src/app.js",
+     replace("function writeSearchUrl(term){", "function writeSearchUrlX(term){"),
+     "missing runtime contract: search query written to the URL"),
+    ("the directory's search stops owning the page address", "en/evidence/index.html",
+     replace("data-search-input data-search-url-state", "data-search-input"),
+     "the Evidence directory's search does not own the page address"),
+    ("an inventory count phrase disagrees with the contract", "en/measurement/index.html",
+     insert_after('<div class="body">', "<p>This resource publishes 42 Evidence records, each traced.</p>"),
+     "P1-G04 inventory count phrase not from the contract"),
+]
+
+
+def main() -> int:
+    ap = argparse.ArgumentParser()
+    ap.add_argument("--only", default="")
+    args = ap.parse_args()
+    if not (DIST / "en" / "index.html").exists():
+        print("GATE NEGATIVE CONTROLS: FAIL (no built site: run python3 scripts/build.py)")
+        return 1
+    controls = [c for c in CONTROLS if args.only.lower() in c[0].lower()]
+    if not controls:
+        print(f"no control matches {args.only!r}")
+        return 1
+
+    caught = missed = 0
+    with tempfile.TemporaryDirectory(prefix="yfie-gate-controls-") as tmp:
+        backup = Path(tmp) / "dist"
+        shutil.copytree(DIST, backup)
+        try:
+            for name, rel, mutate, gate in controls:
+                page = (ROOT / rel) if rel.startswith(SOURCE_PREFIXES) else (DIST / rel)
+                original = page.read_text(encoding="utf-8")
+                note = ""
+                try:
+                    broken = mutate(original)
+                    if broken == original:
+                        raise AssertionError("the control changed nothing — its selector no longer matches the page")
+                    page.write_text(broken, encoding="utf-8")
+                    fired = gate in run_validator()
+                except Exception as exc:                 # a control that cannot break the page proves nothing either
+                    fired, note = False, f" — {exc}"
+                finally:
+                    page.write_text(original, encoding="utf-8")
+                print(("  CAUGHT      " if fired else "  NOT CAUGHT ") + f"{name}  [{gate}]{note}")
+                caught += fired
+                missed += not fired
+        finally:
+            shutil.rmtree(DIST)
+            shutil.copytree(backup, DIST)
+    print(f"GATE NEGATIVE CONTROLS: {'PASS' if not missed else 'FAIL'} — {caught} of {len(controls)} faults caught")
+    return 1 if missed else 0
+
+
+if __name__ == "__main__":
+    raise SystemExit(main())

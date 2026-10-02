@@ -327,23 +327,33 @@ def visual_tokens(vis):
 
 
 def baseline_question_sets(ui_by_en):
-    """Home's starting questions and Explore's clusters as the reference build renders them (R8.4A decision; the ID sets
-    are held in scripts/build.py until the production runtime takes them from a governed contract — register EAD-11)."""
-    home, groups, dest = [], [], OrderedDict()
-    p = DIST / "en" / "index.html"
-    if p.exists():
-        t = p.read_text(encoding="utf-8")
-        m = re.search(r'<div class="question-grid compact-grid">(.*?)</div></div></section>', t, re.S)
-        home = re.findall(r'data-question-id="([^"]+)"', m.group(1)) if m else []
-    p = DIST / "en" / "explore" / "index.html"
-    if p.exists():
-        t = p.read_text(encoding="utf-8")
-        for block in re.findall(r'<section class="question-cluster">(.*?)</section>', t, re.S):
-            h = re.search(r"<h3>(.*?)</h3>", block, re.S)
-            head = h.group(1).strip() if h else ""
-            groups.append(OrderedDict([("heading_ui_id", ui_by_en.get(head)), ("question_ids", re.findall(r'data-question-id="([^"]+)"', block))]))
-        for qid, href in re.findall(r'<a class="question-card" data-question-id="([^"]+)" href="([^"]+)"', t):
-            dest[qid] = re.sub(r"^/en(/|$)", "/", href)
+    """Home's starting questions and Explore's clusters (the R8.4A decision), and where each question leads.
+
+    These were recovered by scraping the baseline renderer's own HTML out of `dist/`, which made the build an input to
+    itself: EAD-01 removed that renderer and the scrape then reported four empty clusters, so Explore rendered with no
+    questions. They are read from the renderer's own named sets now (`scripts/yfie/question_sets.py`), and each
+    destination from the question's governed `primary_route` — no markup is parsed. The sets belong in a governed
+    contract; that is EAD-11, and it is the steward's to land."""
+    sys.path.insert(0, str(ROOT / "scripts"))
+    from yfie import question_sets   # noqa: PLC0415
+
+    home = list(question_sets.HOME_STARTING_QUESTION_IDS)
+    groups = [OrderedDict([("heading_ui_id", g["heading_ui_id"]), ("question_ids", list(g["question_ids"]))])
+              for g in question_sets.EXPLORE_QUESTION_GROUPS]
+    routes = {}
+    for q in load(C / "content" / "questions.json"):
+        route = "/" + str(q.get("primary_route") or "/").strip("/") + "/"
+        if route == "//":
+            route = "/"
+        # QE-001 opens Home at the anchor before the system visual; every other question opens its answer route.
+        routes[str(q.get("question_id") or "")] = route + "#system" if route == "/" else route
+    dest = OrderedDict()
+    for g in groups:                      # in the order Explore presents them, as the accepted inventory records them
+        for qid in g["question_ids"]:
+            if qid in routes:
+                dest[qid] = routes[qid]
+    for qid, route in routes.items():     # any question no cluster holds would still be listed
+        dest.setdefault(qid, route)
     return home, groups, dest
 
 

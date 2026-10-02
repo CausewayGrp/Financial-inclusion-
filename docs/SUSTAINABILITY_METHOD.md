@@ -43,6 +43,35 @@ F6-G05).
    assumption and the uncertainty stated.
 3. At each release that changes images, scripts, fonts or the search index.
 
+## What the implemented runtime shows (EAD-10, 29 September 2026)
+
+Measured with the same script and the same twelve route classes, so the two records compare like with like:
+[`docs/SUSTAINABILITY_IMPLEMENTED_RUNTIME.json`](SUSTAINABILITY_IMPLEMENTED_RUNTIME.json).
+
+| | Pre-design baseline | Implemented runtime |
+|---|---|---|
+| Cold page, transferred | 9.64–9.99 MB | 9.83–10.19 MB |
+| Cold page requests | 4 | 7 |
+| Cold page without the logo | 84–444 KB | 285–656 KB |
+| — HTML | 14–374 KB | 17–362 KB |
+| — CSS | 47 KB | 50 KB |
+| — JavaScript | 23 KB | 25 KB |
+| — Fonts | 0 KB | 193–220 KB |
+| Warm page, transferred | 0 | 0 |
+| Search interaction | 1,976,885 B (gzip ~321 KB) | unchanged |
+
+- **The logo is still the page**: 94–97 % of every cold load is the 10,018,273-byte master. That is now measured on the
+  implemented site, which is what EAD-03 was waiting for; the derivatives need the owner's approval.
+- **The whole increase is type.** The baseline named IBM Plex but shipped no font file, so a reader without it installed
+  read the product in a fallback face — Arial, or Tahoma for Arabic. The runtime self-hosts the six faces the
+  stylesheet declares and preloads the two a first paint needs in the page's language (EAD-08). About 200 KB and three
+  requests on a cold page, nothing on a warm one, and the product is legible as designed in both scripts.
+- **The social images cost a page nothing** (EAD-09): a platform fetches one when a link is shared; the page never does.
+- **Still no external request of any kind** — no CDN, no font service, no analytics, no tracker (gate F6-G05).
+
+This is not the operational footprint. The release host is not chosen (OWN-03), so its compression and caching are
+unmeasured, **no budget is set and no carbon figure is computed**. Step 2 below is still open.
+
 ## What the pre-design baseline shows
 
 - The canonical master logo (a 10 MB PNG) is about 96–99 % of every cold page. It is never redrawn, regenerated,

@@ -74,7 +74,7 @@ the owner sets `public_origin`, every URL becomes absolute and the sitemap is wr
 - Reporting stays static: the mail action to the governed address with the record reference; any richer reporting
   intent is client-side composition only — no backend, form element, new address or service level.
 - Dates: the governed form (day, month name, year; Western digits) with the governed Arabic month names used by
-  `source_date_text` in `scripts/build.py` — not a locale library's month names, which vary by region.
+  `date_words` in `scripts/yfie/content.py` (`MONTHS`) — not a locale library's month names, which vary by region.
 - Logo: produce web-size derivatives of `site-src/assets/CauseWay_Master_Logo.png` at the sizes in
   `design/08_ASSET_MAP.md` only with the owner's approval (open item EAD-03), by exact downscaling of the unmodified
   master — never redrawn, recoloured, cropped or regenerated. Keep the master file unchanged.

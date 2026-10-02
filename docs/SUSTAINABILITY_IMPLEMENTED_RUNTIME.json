@@ -1,0 +1,1495 @@
+{
+ "schema": "YFIE_SUSTAINABILITY_IMPLEMENTED_RUNTIME/1.0",
+ "status": "IMPLEMENTED RUNTIME, LOCAL SERVER — not the operational footprint. The release host is not chosen (OWN-03) and its compression and caching are not measured here, so no budget is set and no carbon figure is computed (EAD-10, REJ-04).",
+ "method": {
+  "document": "docs/SUSTAINABILITY_METHOD.md",
+  "script": "audit/final_integration/f7_measure_baseline.py",
+  "note": "The pre-design script, unchanged, on the same twelve route classes in both languages, so the two records compare like with like."
+ },
+ "measured_at": "2026-09-29",
+ "build": {
+  "commit": "8ec23650fce34de505a9d20776438679a1b596df",
+  "renderer": "scripts/yfie via scripts/build.py (EAD-01)",
+  "dist_html_documents": 288
+ },
+ "compared_with": {
+  "record": "audit/SUSTAINABILITY_PRE_DESIGN_BASELINE.json",
+  "build": {
+   "commit_measured": "5d6ce4c4b458339f51c0e7991a2174f48773573d",
+   "production_master_sha256": "ed3c5796cb0cca0109a0eb56f66d344ab0a5faa550e5235e05d65a6147f33fe1",
+   "html_documents": 288
+  },
+  "summary": {
+   "cold_page_transferred_bytes": {
+    "min": 10104040,
+    "max": 10472742
+   },
+   "cold_page_requests": 4,
+   "master_logo_bytes": 10018081,
+   "master_logo_share_of_cold_page": "95.7%–99.1%",
+   "cold_page_bytes_without_logo": {
+    "min": 85767,
+    "max": 454469
+   },
+   "html_document_bytes": {
+    "min": 14113,
+    "max": 382815,
+    "largest": "the source directory (/data/): every source card on one page"
+   },
+   "javascript_bytes": 23663,
+   "css_bytes": 47991,
+   "search_interaction_bytes": 1976885,
+   "search_interaction_modelled_gzip_bytes": 320957,
+   "warm_page_transferred_bytes": 0
+  }
+ },
+ "summary": {
+  "cold_page_transferred_bytes": {
+   "min": 10309618,
+   "max": 10689651
+  },
+  "cold_page_requests": [
+   7
+  ],
+  "cold_page_bytes_without_logo": {
+   "min": 291345,
+   "max": 671378
+  },
+  "html_document_bytes": {
+   "min": 17594,
+   "max": 370199
+  },
+  "css_bytes": {
+   "min": 50916,
+   "max": 50916
+  },
+  "javascript_bytes": {
+   "min": 25445,
+   "max": 25445
+  },
+  "font_bytes": {
+   "min": 197390,
+   "max": 224818
+  },
+  "warm_page_transferred_bytes": [
+   0
+  ]
+ },
+ "what_changed": {
+  "fonts": "The pre-design baseline named IBM Plex but shipped no font file, so a reader without it installed read the product in a fallback face — Arial, or Tahoma for Arabic. The runtime self-hosts the six faces the stylesheet declares (EAD-08) and preloads the two a first paint needs in the page's language. That is the whole of the increase: about 200 KB and three requests on a cold page, and nothing on a warm one.",
+  "html": "Comparable, and slightly smaller at the top end despite carrying more structure per page.",
+  "social_images": "None. A social image is fetched by a platform when a link is shared, never by the page (EAD-09).",
+  "logo": "Unchanged, and still the page: the 10,018,273-byte master is 94-97 % of every cold load. This is now measured on the implemented site, which is what EAD-03 was waiting for."
+ },
+ "findings": [
+  "A cold page transfers 9.83-10.19 MB, of which 94-97 % is the canonical logo. Everything else together is 285-656 KB.",
+  "A warm page transfers nothing: every file comes from the browser cache.",
+  "Opening Search loads the local index once: 1,976,885 bytes, about 321 KB with gzip, and only on that interaction.",
+  "The page makes no external request of any kind: no CDN, no web font service, no analytics, no tracker (gate F6-G05)."
+ ],
+ "uncertainty": "Single run per page on one machine; byte counts are exact for this build and server, request timing is not measured. Real transfer depends on compression, protocol overheads, caching headers and the final design; the modelled gzip figure is an estimate. No figure here may be presented as the operational or carbon footprint of the released site.",
+ "not_claimed": [
+  "No carbon figure, and no energy estimate: the release host, its grid and the reader's device are all unknown.",
+  "No budget: the method sets one only against the deployed site.",
+  "No badge, rating, comparison with another site, or 'green' claim anywhere.",
+  "Not a measurement of the release host: compression and caching here are a local static server's."
+ ],
+ "pages": {
+  "home:en": {
+   "route": "/en/",
+   "cold": {
+    "requests": 7,
+    "transferred_bytes": 10317591,
+    "by_type": {
+     "css": {
+      "requests": 1,
+      "bytes": 50916
+     },
+     "fonts": {
+      "requests": 3,
+      "bytes": 197390
+     },
+     "html": {
+      "requests": 1,
+      "bytes": 25567
+     },
+     "images": {
+      "requests": 1,
+      "bytes": 10018273
+     },
+     "js": {
+      "requests": 1,
+      "bytes": 25445
+     }
+    },
+    "modelled_gzip_bytes": 10242145
+   },
+   "warm": {
+    "requests": 7,
+    "transferred_bytes": 0,
+    "by_type": {
+     "css": {
+      "requests": 1,
+      "bytes": 0
+     },
+     "fonts": {
+      "requests": 3,
+      "bytes": 0
+     },
+     "html": {
+      "requests": 1,
+      "bytes": 0
+     },
+     "images": {
+      "requests": 1,
+      "bytes": 0
+     },
+     "js": {
+      "requests": 1,
+      "bytes": 0
+     }
+    },
+    "modelled_gzip_bytes": 10242145
+   }
+  },
+  "home:ar": {
+   "route": "/ar/",
+   "cold": {
+    "requests": 7,
+    "transferred_bytes": 10352432,
+    "by_type": {
+     "css": {
+      "requests": 1,
+      "bytes": 50916
+     },
+     "fonts": {
+      "requests": 3,
+      "bytes": 224818
+     },
+     "html": {
+      "requests": 1,
+      "bytes": 32980
+     },
+     "images": {
+      "requests": 1,
+      "bytes": 10018273
+     },
+     "js": {
+      "requests": 1,
+      "bytes": 25445
+     }
+    },
+    "modelled_gzip_bytes": 10270586
+   },
+   "warm": {
+    "requests": 7,
+    "transferred_bytes": 0,
+    "by_type": {
+     "css": {
+      "requests": 1,
+      "bytes": 0
+     },
+     "fonts": {
+      "requests": 3,
+      "bytes": 0
+     },
+     "html": {
+      "requests": 1,
+      "bytes": 0
+     },
+     "images": {
+      "requests": 1,
+      "bytes": 0
+     },
+     "js": {
+      "requests": 1,
+      "bytes": 0
+     }
+    },
+    "modelled_gzip_bytes": 10270586
+   }
+  },
+  "explore:en": {
+   "route": "/en/explore/",
+   "cold": {
+    "requests": 7,
+    "transferred_bytes": 10316826,
+    "by_type": {
+     "css": {
+      "requests": 1,
+      "bytes": 50916
+     },
+     "fonts": {
+      "requests": 3,
+      "bytes": 197390
+     },
+     "html": {
+      "requests": 1,
+      "bytes": 24802
+     },
+     "images": {
+      "requests": 1,
+      "bytes": 10018273
+     },
+     "js": {
+      "requests": 1,
+      "bytes": 25445
+     }
+    },
+    "modelled_gzip_bytes": 10242324
+   },
+   "warm": {
+    "requests": 7,
+    "transferred_bytes": 0,
+    "by_type": {
+     "css": {
+      "requests": 1,
+      "bytes": 0
+     },
+     "fonts": {
+      "requests": 3,
+      "bytes": 0
+     },
+     "html": {
+      "requests": 1,
+      "bytes": 0
+     },
+     "images": {
+      "requests": 1,
+      "bytes": 0
+     },
+     "js": {
+      "requests": 1,
+      "bytes": 0
+     }
+    },
+    "modelled_gzip_bytes": 10242324
+   }
+  },
+  "explore:ar": {
+   "route": "/ar/explore/",
+   "cold": {
+    "requests": 7,
+    "transferred_bytes": 10351002,
+    "by_type": {
+     "css": {
+      "requests": 1,
+      "bytes": 50916
+     },
+     "fonts": {
+      "requests": 3,
+      "bytes": 224818
+     },
+     "html": {
+      "requests": 1,
+      "bytes": 31550
+     },
+     "images": {
+      "requests": 1,
+      "bytes": 10018273
+     },
+     "js": {
+      "requests": 1,
+      "bytes": 25445
+     }
+    },
+    "modelled_gzip_bytes": 10270677
+   },
+   "warm": {
+    "requests": 7,
+    "transferred_bytes": 0,
+    "by_type": {
+     "css": {
+      "requests": 1,
+      "bytes": 0
+     },
+     "fonts": {
+      "requests": 3,
+      "bytes": 0
+     },
+     "html": {
+      "requests": 1,
+      "bytes": 0
+     },
+     "images": {
+      "requests": 1,
+      "bytes": 0
+     },
+     "js": {
+      "requests": 1,
+      "bytes": 0
+     }
+    },
+    "modelled_gzip_bytes": 10270677
+   }
+  },
+  "domain_answer:en": {
+   "route": "/en/people/",
+   "cold": {
+    "requests": 7,
+    "transferred_bytes": 10338464,
+    "by_type": {
+     "css": {
+      "requests": 1,
+      "bytes": 50916
+     },
+     "fonts": {
+      "requests": 3,
+      "bytes": 197390
+     },
+     "html": {
+      "requests": 1,
+      "bytes": 46440
+     },
+     "images": {
+      "requests": 1,
+      "bytes": 10018273
+     },
+     "js": {
+      "requests": 1,
+      "bytes": 25445
+     }
+    },
+    "modelled_gzip_bytes": 10245916
+   },
+   "warm": {
+    "requests": 7,
+    "transferred_bytes": 0,
+    "by_type": {
+     "css": {
+      "requests": 1,
+      "bytes": 0
+     },
+     "fonts": {
+      "requests": 3,
+      "bytes": 0
+     },
+     "html": {
+      "requests": 1,
+      "bytes": 0
+     },
+     "images": {
+      "requests": 1,
+      "bytes": 0
+     },
+     "js": {
+      "requests": 1,
+      "bytes": 0
+     }
+    },
+    "modelled_gzip_bytes": 10245916
+   }
+  },
+  "domain_answer:ar": {
+   "route": "/ar/people/",
+   "cold": {
+    "requests": 7,
+    "transferred_bytes": 10379257,
+    "by_type": {
+     "css": {
+      "requests": 1,
+      "bytes": 50916
+     },
+     "fonts": {
+      "requests": 3,
+      "bytes": 224818
+     },
+     "html": {
+      "requests": 1,
+      "bytes": 59805
+     },
+     "images": {
+      "requests": 1,
+      "bytes": 10018273
+     },
+     "js": {
+      "requests": 1,
+      "bytes": 25445
+     }
+    },
+    "modelled_gzip_bytes": 10275299
+   },
+   "warm": {
+    "requests": 7,
+    "transferred_bytes": 0,
+    "by_type": {
+     "css": {
+      "requests": 1,
+      "bytes": 0
+     },
+     "fonts": {
+      "requests": 3,
+      "bytes": 0
+     },
+     "html": {
+      "requests": 1,
+      "bytes": 0
+     },
+     "images": {
+      "requests": 1,
+      "bytes": 0
+     },
+     "js": {
+      "requests": 1,
+      "bytes": 0
+     }
+    },
+    "modelled_gzip_bytes": 10275299
+   }
+  },
+  "evidence_index:en": {
+   "route": "/en/evidence/",
+   "cold": {
+    "requests": 7,
+    "transferred_bytes": 10365862,
+    "by_type": {
+     "css": {
+      "requests": 1,
+      "bytes": 50916
+     },
+     "fonts": {
+      "requests": 3,
+      "bytes": 197390
+     },
+     "html": {
+      "requests": 1,
+      "bytes": 73838
+     },
+     "images": {
+      "requests": 1,
+      "bytes": 10018273
+     },
+     "js": {
+      "requests": 1,
+      "bytes": 25445
+     }
+    },
+    "modelled_gzip_bytes": 10252350
+   },
+   "warm": {
+    "requests": 7,
+    "transferred_bytes": 0,
+    "by_type": {
+     "css": {
+      "requests": 1,
+      "bytes": 0
+     },
+     "fonts": {
+      "requests": 3,
+      "bytes": 0
+     },
+     "html": {
+      "requests": 1,
+      "bytes": 0
+     },
+     "images": {
+      "requests": 1,
+      "bytes": 0
+     },
+     "js": {
+      "requests": 1,
+      "bytes": 0
+     }
+    },
+    "modelled_gzip_bytes": 10252350
+   }
+  },
+  "evidence_index:ar": {
+   "route": "/ar/evidence/",
+   "cold": {
+    "requests": 7,
+    "transferred_bytes": 10415897,
+    "by_type": {
+     "css": {
+      "requests": 1,
+      "bytes": 50916
+     },
+     "fonts": {
+      "requests": 3,
+      "bytes": 224818
+     },
+     "html": {
+      "requests": 1,
+      "bytes": 96445
+     },
+     "images": {
+      "requests": 1,
+      "bytes": 10018273
+     },
+     "js": {
+      "requests": 1,
+      "bytes": 25445
+     }
+    },
+    "modelled_gzip_bytes": 10282997
+   },
+   "warm": {
+    "requests": 7,
+    "transferred_bytes": 0,
+    "by_type": {
+     "css": {
+      "requests": 1,
+      "bytes": 0
+     },
+     "fonts": {
+      "requests": 3,
+      "bytes": 0
+     },
+     "html": {
+      "requests": 1,
+      "bytes": 0
+     },
+     "images": {
+      "requests": 1,
+      "bytes": 0
+     },
+     "js": {
+      "requests": 1,
+      "bytes": 0
+     }
+    },
+    "modelled_gzip_bytes": 10282997
+   }
+  },
+  "evidence_record:en": {
+   "route": "/en/evidence/CLM-001/",
+   "cold": {
+    "requests": 7,
+    "transferred_bytes": 10316114,
+    "by_type": {
+     "css": {
+      "requests": 1,
+      "bytes": 50916
+     },
+     "fonts": {
+      "requests": 3,
+      "bytes": 197390
+     },
+     "html": {
+      "requests": 1,
+      "bytes": 24090
+     },
+     "images": {
+      "requests": 1,
+      "bytes": 10018273
+     },
+     "js": {
+      "requests": 1,
+      "bytes": 25445
+     }
+    },
+    "modelled_gzip_bytes": 10241274
+   },
+   "warm": {
+    "requests": 7,
+    "transferred_bytes": 0,
+    "by_type": {
+     "css": {
+      "requests": 1,
+      "bytes": 0
+     },
+     "fonts": {
+      "requests": 3,
+      "bytes": 0
+     },
+     "html": {
+      "requests": 1,
+      "bytes": 0
+     },
+     "images": {
+      "requests": 1,
+      "bytes": 0
+     },
+     "js": {
+      "requests": 1,
+      "bytes": 0
+     }
+    },
+    "modelled_gzip_bytes": 10241274
+   }
+  },
+  "evidence_record:ar": {
+   "route": "/ar/evidence/CLM-001/",
+   "cold": {
+    "requests": 7,
+    "transferred_bytes": 10350409,
+    "by_type": {
+     "css": {
+      "requests": 1,
+      "bytes": 50916
+     },
+     "fonts": {
+      "requests": 3,
+      "bytes": 224818
+     },
+     "html": {
+      "requests": 1,
+      "bytes": 30957
+     },
+     "images": {
+      "requests": 1,
+      "bytes": 10018273
+     },
+     "js": {
+      "requests": 1,
+      "bytes": 25445
+     }
+    },
+    "modelled_gzip_bytes": 10269560
+   },
+   "warm": {
+    "requests": 7,
+    "transferred_bytes": 0,
+    "by_type": {
+     "css": {
+      "requests": 1,
+      "bytes": 0
+     },
+     "fonts": {
+      "requests": 3,
+      "bytes": 0
+     },
+     "html": {
+      "requests": 1,
+      "bytes": 0
+     },
+     "images": {
+      "requests": 1,
+      "bytes": 0
+     },
+     "js": {
+      "requests": 1,
+      "bytes": 0
+     }
+    },
+    "modelled_gzip_bytes": 10269560
+   }
+  },
+  "compare:en": {
+   "route": "/en/evidence/compare/",
+   "cold": {
+    "requests": 7,
+    "transferred_bytes": 10337219,
+    "by_type": {
+     "css": {
+      "requests": 1,
+      "bytes": 50916
+     },
+     "fonts": {
+      "requests": 3,
+      "bytes": 197390
+     },
+     "html": {
+      "requests": 1,
+      "bytes": 45195
+     },
+     "images": {
+      "requests": 1,
+      "bytes": 10018273
+     },
+     "js": {
+      "requests": 1,
+      "bytes": 25445
+     }
+    },
+    "modelled_gzip_bytes": 10246417
+   },
+   "warm": {
+    "requests": 7,
+    "transferred_bytes": 0,
+    "by_type": {
+     "css": {
+      "requests": 1,
+      "bytes": 0
+     },
+     "fonts": {
+      "requests": 3,
+      "bytes": 0
+     },
+     "html": {
+      "requests": 1,
+      "bytes": 0
+     },
+     "images": {
+      "requests": 1,
+      "bytes": 0
+     },
+     "js": {
+      "requests": 1,
+      "bytes": 0
+     }
+    },
+    "modelled_gzip_bytes": 10246417
+   }
+  },
+  "compare:ar": {
+   "route": "/ar/evidence/compare/",
+   "cold": {
+    "requests": 7,
+    "transferred_bytes": 10382426,
+    "by_type": {
+     "css": {
+      "requests": 1,
+      "bytes": 50916
+     },
+     "fonts": {
+      "requests": 3,
+      "bytes": 224818
+     },
+     "html": {
+      "requests": 1,
+      "bytes": 62974
+     },
+     "images": {
+      "requests": 1,
+      "bytes": 10018273
+     },
+     "js": {
+      "requests": 1,
+      "bytes": 25445
+     }
+    },
+    "modelled_gzip_bytes": 10276051
+   },
+   "warm": {
+    "requests": 7,
+    "transferred_bytes": 0,
+    "by_type": {
+     "css": {
+      "requests": 1,
+      "bytes": 0
+     },
+     "fonts": {
+      "requests": 3,
+      "bytes": 0
+     },
+     "html": {
+      "requests": 1,
+      "bytes": 0
+     },
+     "images": {
+      "requests": 1,
+      "bytes": 0
+     },
+     "js": {
+      "requests": 1,
+      "bytes": 0
+     }
+    },
+    "modelled_gzip_bytes": 10276051
+   }
+  },
+  "sources_directory:en": {
+   "route": "/en/data/",
+   "cold": {
+    "requests": 7,
+    "transferred_bytes": 10602831,
+    "by_type": {
+     "css": {
+      "requests": 1,
+      "bytes": 50916
+     },
+     "fonts": {
+      "requests": 3,
+      "bytes": 197390
+     },
+     "html": {
+      "requests": 1,
+      "bytes": 310807
+     },
+     "images": {
+      "requests": 1,
+      "bytes": 10018273
+     },
+     "js": {
+      "requests": 1,
+      "bytes": 25445
+     }
+    },
+    "modelled_gzip_bytes": 10280692
+   },
+   "warm": {
+    "requests": 7,
+    "transferred_bytes": 0,
+    "by_type": {
+     "css": {
+      "requests": 1,
+      "bytes": 0
+     },
+     "fonts": {
+      "requests": 3,
+      "bytes": 0
+     },
+     "html": {
+      "requests": 1,
+      "bytes": 0
+     },
+     "images": {
+      "requests": 1,
+      "bytes": 0
+     },
+     "js": {
+      "requests": 1,
+      "bytes": 0
+     }
+    },
+    "modelled_gzip_bytes": 10280692
+   }
+  },
+  "sources_directory:ar": {
+   "route": "/ar/data/",
+   "cold": {
+    "requests": 7,
+    "transferred_bytes": 10689651,
+    "by_type": {
+     "css": {
+      "requests": 1,
+      "bytes": 50916
+     },
+     "fonts": {
+      "requests": 3,
+      "bytes": 224818
+     },
+     "html": {
+      "requests": 1,
+      "bytes": 370199
+     },
+     "images": {
+      "requests": 1,
+      "bytes": 10018273
+     },
+     "js": {
+      "requests": 1,
+      "bytes": 25445
+     }
+    },
+    "modelled_gzip_bytes": 10312227
+   },
+   "warm": {
+    "requests": 7,
+    "transferred_bytes": 0,
+    "by_type": {
+     "css": {
+      "requests": 1,
+      "bytes": 0
+     },
+     "fonts": {
+      "requests": 3,
+      "bytes": 0
+     },
+     "html": {
+      "requests": 1,
+      "bytes": 0
+     },
+     "images": {
+      "requests": 1,
+      "bytes": 0
+     },
+     "js": {
+      "requests": 1,
+      "bytes": 0
+     }
+    },
+    "modelled_gzip_bytes": 10312227
+   }
+  },
+  "readings_index:en": {
+   "route": "/en/readings/",
+   "cold": {
+    "requests": 7,
+    "transferred_bytes": 10310822,
+    "by_type": {
+     "css": {
+      "requests": 1,
+      "bytes": 50916
+     },
+     "fonts": {
+      "requests": 3,
+      "bytes": 197390
+     },
+     "html": {
+      "requests": 1,
+      "bytes": 18798
+     },
+     "images": {
+      "requests": 1,
+      "bytes": 10018273
+     },
+     "js": {
+      "requests": 1,
+      "bytes": 25445
+     }
+    },
+    "modelled_gzip_bytes": 10240267
+   },
+   "warm": {
+    "requests": 7,
+    "transferred_bytes": 0,
+    "by_type": {
+     "css": {
+      "requests": 1,
+      "bytes": 0
+     },
+     "fonts": {
+      "requests": 3,
+      "bytes": 0
+     },
+     "html": {
+      "requests": 1,
+      "bytes": 0
+     },
+     "images": {
+      "requests": 1,
+      "bytes": 0
+     },
+     "js": {
+      "requests": 1,
+      "bytes": 0
+     }
+    },
+    "modelled_gzip_bytes": 10240267
+   }
+  },
+  "readings_index:ar": {
+   "route": "/ar/readings/",
+   "cold": {
+    "requests": 7,
+    "transferred_bytes": 10342824,
+    "by_type": {
+     "css": {
+      "requests": 1,
+      "bytes": 50916
+     },
+     "fonts": {
+      "requests": 3,
+      "bytes": 224818
+     },
+     "html": {
+      "requests": 1,
+      "bytes": 23372
+     },
+     "images": {
+      "requests": 1,
+      "bytes": 10018273
+     },
+     "js": {
+      "requests": 1,
+      "bytes": 25445
+     }
+    },
+    "modelled_gzip_bytes": 10268503
+   },
+   "warm": {
+    "requests": 7,
+    "transferred_bytes": 0,
+    "by_type": {
+     "css": {
+      "requests": 1,
+      "bytes": 0
+     },
+     "fonts": {
+      "requests": 3,
+      "bytes": 0
+     },
+     "html": {
+      "requests": 1,
+      "bytes": 0
+     },
+     "images": {
+      "requests": 1,
+      "bytes": 0
+     },
+     "js": {
+      "requests": 1,
+      "bytes": 0
+     }
+    },
+    "modelled_gzip_bytes": 10268503
+   }
+  },
+  "reading:en": {
+   "route": "/en/readings/same-year-different-number/",
+   "cold": {
+    "requests": 7,
+    "transferred_bytes": 10337202,
+    "by_type": {
+     "css": {
+      "requests": 1,
+      "bytes": 50916
+     },
+     "fonts": {
+      "requests": 3,
+      "bytes": 197390
+     },
+     "html": {
+      "requests": 1,
+      "bytes": 45178
+     },
+     "images": {
+      "requests": 1,
+      "bytes": 10018273
+     },
+     "js": {
+      "requests": 1,
+      "bytes": 25445
+     }
+    },
+    "modelled_gzip_bytes": 10245092
+   },
+   "warm": {
+    "requests": 7,
+    "transferred_bytes": 0,
+    "by_type": {
+     "css": {
+      "requests": 1,
+      "bytes": 0
+     },
+     "fonts": {
+      "requests": 3,
+      "bytes": 0
+     },
+     "html": {
+      "requests": 1,
+      "bytes": 0
+     },
+     "images": {
+      "requests": 1,
+      "bytes": 0
+     },
+     "js": {
+      "requests": 1,
+      "bytes": 0
+     }
+    },
+    "modelled_gzip_bytes": 10245092
+   }
+  },
+  "reading:ar": {
+   "route": "/ar/readings/same-year-different-number/",
+   "cold": {
+    "requests": 7,
+    "transferred_bytes": 10376448,
+    "by_type": {
+     "css": {
+      "requests": 1,
+      "bytes": 50916
+     },
+     "fonts": {
+      "requests": 3,
+      "bytes": 224818
+     },
+     "html": {
+      "requests": 1,
+      "bytes": 56996
+     },
+     "images": {
+      "requests": 1,
+      "bytes": 10018273
+     },
+     "js": {
+      "requests": 1,
+      "bytes": 25445
+     }
+    },
+    "modelled_gzip_bytes": 10274255
+   },
+   "warm": {
+    "requests": 7,
+    "transferred_bytes": 0,
+    "by_type": {
+     "css": {
+      "requests": 1,
+      "bytes": 0
+     },
+     "fonts": {
+      "requests": 3,
+      "bytes": 0
+     },
+     "html": {
+      "requests": 1,
+      "bytes": 0
+     },
+     "images": {
+      "requests": 1,
+      "bytes": 0
+     },
+     "js": {
+      "requests": 1,
+      "bytes": 0
+     }
+    },
+    "modelled_gzip_bytes": 10274255
+   }
+  },
+  "methodology:en": {
+   "route": "/en/methodology/",
+   "cold": {
+    "requests": 7,
+    "transferred_bytes": 10335354,
+    "by_type": {
+     "css": {
+      "requests": 1,
+      "bytes": 50916
+     },
+     "fonts": {
+      "requests": 3,
+      "bytes": 197390
+     },
+     "html": {
+      "requests": 1,
+      "bytes": 43330
+     },
+     "images": {
+      "requests": 1,
+      "bytes": 10018273
+     },
+     "js": {
+      "requests": 1,
+      "bytes": 25445
+     }
+    },
+    "modelled_gzip_bytes": 10246374
+   },
+   "warm": {
+    "requests": 7,
+    "transferred_bytes": 0,
+    "by_type": {
+     "css": {
+      "requests": 1,
+      "bytes": 0
+     },
+     "fonts": {
+      "requests": 3,
+      "bytes": 0
+     },
+     "html": {
+      "requests": 1,
+      "bytes": 0
+     },
+     "images": {
+      "requests": 1,
+      "bytes": 0
+     },
+     "js": {
+      "requests": 1,
+      "bytes": 0
+     }
+    },
+    "modelled_gzip_bytes": 10246374
+   }
+  },
+  "methodology:ar": {
+   "route": "/ar/methodology/",
+   "cold": {
+    "requests": 7,
+    "transferred_bytes": 10376158,
+    "by_type": {
+     "css": {
+      "requests": 1,
+      "bytes": 50916
+     },
+     "fonts": {
+      "requests": 3,
+      "bytes": 224818
+     },
+     "html": {
+      "requests": 1,
+      "bytes": 56706
+     },
+     "images": {
+      "requests": 1,
+      "bytes": 10018273
+     },
+     "js": {
+      "requests": 1,
+      "bytes": 25445
+     }
+    },
+    "modelled_gzip_bytes": 10275980
+   },
+   "warm": {
+    "requests": 7,
+    "transferred_bytes": 0,
+    "by_type": {
+     "css": {
+      "requests": 1,
+      "bytes": 0
+     },
+     "fonts": {
+      "requests": 3,
+      "bytes": 0
+     },
+     "html": {
+      "requests": 1,
+      "bytes": 0
+     },
+     "images": {
+      "requests": 1,
+      "bytes": 0
+     },
+     "js": {
+      "requests": 1,
+      "bytes": 0
+     }
+    },
+    "modelled_gzip_bytes": 10275980
+   }
+  },
+  "measurement:en": {
+   "route": "/en/measurement/",
+   "cold": {
+    "requests": 7,
+    "transferred_bytes": 10336082,
+    "by_type": {
+     "css": {
+      "requests": 1,
+      "bytes": 50916
+     },
+     "fonts": {
+      "requests": 3,
+      "bytes": 197390
+     },
+     "html": {
+      "requests": 1,
+      "bytes": 44058
+     },
+     "images": {
+      "requests": 1,
+      "bytes": 10018273
+     },
+     "js": {
+      "requests": 1,
+      "bytes": 25445
+     }
+    },
+    "modelled_gzip_bytes": 10246509
+   },
+   "warm": {
+    "requests": 7,
+    "transferred_bytes": 0,
+    "by_type": {
+     "css": {
+      "requests": 1,
+      "bytes": 0
+     },
+     "fonts": {
+      "requests": 3,
+      "bytes": 0
+     },
+     "html": {
+      "requests": 1,
+      "bytes": 0
+     },
+     "images": {
+      "requests": 1,
+      "bytes": 0
+     },
+     "js": {
+      "requests": 1,
+      "bytes": 0
+     }
+    },
+    "modelled_gzip_bytes": 10246509
+   }
+  },
+  "measurement:ar": {
+   "route": "/ar/measurement/",
+   "cold": {
+    "requests": 7,
+    "transferred_bytes": 10379362,
+    "by_type": {
+     "css": {
+      "requests": 1,
+      "bytes": 50916
+     },
+     "fonts": {
+      "requests": 3,
+      "bytes": 224818
+     },
+     "html": {
+      "requests": 1,
+      "bytes": 59910
+     },
+     "images": {
+      "requests": 1,
+      "bytes": 10018273
+     },
+     "js": {
+      "requests": 1,
+      "bytes": 25445
+     }
+    },
+    "modelled_gzip_bytes": 10276175
+   },
+   "warm": {
+    "requests": 7,
+    "transferred_bytes": 0,
+    "by_type": {
+     "css": {
+      "requests": 1,
+      "bytes": 0
+     },
+     "fonts": {
+      "requests": 3,
+      "bytes": 0
+     },
+     "html": {
+      "requests": 1,
+      "bytes": 0
+     },
+     "images": {
+      "requests": 1,
+      "bytes": 0
+     },
+     "js": {
+      "requests": 1,
+      "bytes": 0
+     }
+    },
+    "modelled_gzip_bytes": 10276175
+   }
+  },
+  "trust_about:en": {
+   "route": "/en/about/",
+   "cold": {
+    "requests": 7,
+    "transferred_bytes": 10309618,
+    "by_type": {
+     "css": {
+      "requests": 1,
+      "bytes": 50916
+     },
+     "fonts": {
+      "requests": 3,
+      "bytes": 197390
+     },
+     "html": {
+      "requests": 1,
+      "bytes": 17594
+     },
+     "images": {
+      "requests": 1,
+      "bytes": 10018273
+     },
+     "js": {
+      "requests": 1,
+      "bytes": 25445
+     }
+    },
+    "modelled_gzip_bytes": 10240338
+   },
+   "warm": {
+    "requests": 7,
+    "transferred_bytes": 0,
+    "by_type": {
+     "css": {
+      "requests": 1,
+      "bytes": 0
+     },
+     "fonts": {
+      "requests": 3,
+      "bytes": 0
+     },
+     "html": {
+      "requests": 1,
+      "bytes": 0
+     },
+     "images": {
+      "requests": 1,
+      "bytes": 0
+     },
+     "js": {
+      "requests": 1,
+      "bytes": 0
+     }
+    },
+    "modelled_gzip_bytes": 10240338
+   }
+  },
+  "trust_about:ar": {
+   "route": "/ar/about/",
+   "cold": {
+    "requests": 7,
+    "transferred_bytes": 10341385,
+    "by_type": {
+     "css": {
+      "requests": 1,
+      "bytes": 50916
+     },
+     "fonts": {
+      "requests": 3,
+      "bytes": 224818
+     },
+     "html": {
+      "requests": 1,
+      "bytes": 21933
+     },
+     "images": {
+      "requests": 1,
+      "bytes": 10018273
+     },
+     "js": {
+      "requests": 1,
+      "bytes": 25445
+     }
+    },
+    "modelled_gzip_bytes": 10268477
+   },
+   "warm": {
+    "requests": 7,
+    "transferred_bytes": 0,
+    "by_type": {
+     "css": {
+      "requests": 1,
+      "bytes": 0
+     },
+     "fonts": {
+      "requests": 3,
+      "bytes": 0
+     },
+     "html": {
+      "requests": 1,
+      "bytes": 0
+     },
+     "images": {
+      "requests": 1,
+      "bytes": 0
+     },
+     "js": {
+      "requests": 1,
+      "bytes": 0
+     }
+    },
+    "modelled_gzip_bytes": 10268477
+   }
+  },
+  "interaction_search:en": {
+   "route": "/en/ + open Search, type a query",
+   "incremental": {
+    "requests": 2,
+    "transferred_bytes": 1976885,
+    "by_type": {
+     "data": {
+      "requests": 2,
+      "bytes": 1976885
+     }
+    },
+    "modelled_gzip_bytes": 320957
+   }
+  },
+  "interaction_search:ar": {
+   "route": "/ar/ + open Search, type a query",
+   "incremental": {
+    "requests": 2,
+    "transferred_bytes": 1976885,
+    "by_type": {
+     "data": {
+      "requests": 2,
+      "bytes": 1976885
+     }
+    },
+    "modelled_gzip_bytes": 320957
+   }
+  }
+ }
+}

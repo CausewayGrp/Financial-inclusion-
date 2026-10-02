@@ -184,6 +184,44 @@ def t_search_results(page, base):
         assert ("does not mean" in txt) if lang == "en" else ("لا يعني" in txt), txt
 
 
+@test("search: the page's own query is URL-addressable, reloadable and survives a language switch")
+def t_search_url_state(page, base):
+    """EAD-06 / handoff §2: tool state that matters is in the URL. The directory's own search owns the page address;
+    the dialog, which floats over whatever page the reader is on, must leave it alone."""
+    page.goto(base + "/en/evidence/")
+    page.fill("#global-search", "remittances")
+    page.wait_for_selector("#search-results .search-hit")
+    assert page.evaluate("new URLSearchParams(location.search).get('q')") == "remittances", page.url
+
+    page.goto(base + "/en/evidence/?q=remittances")          # a shared or reloaded address restores the search
+    page.wait_for_selector("#search-results .search-hit")
+    assert page.input_value("#global-search") == "remittances"
+
+    page.click("[data-lang]")                                 # and it survives the switch to the other edition
+    page.wait_for_url("**/ar/evidence/**")
+    page.wait_for_selector("#search-results .search-hit")
+    assert page.evaluate("new URLSearchParams(location.search).get('q')") == "remittances", page.url
+
+    page.goto(base + "/en/evidence/?q=remittances")           # clearing the field clears the address
+    page.wait_for_selector("#search-results .search-hit")
+    page.fill("#global-search", "")
+    page.wait_for_function("new URLSearchParams(location.search).get('q')===null")
+
+    page.goto(base + "/en/people/")                           # the dialog never rewrites the page it floats over
+    page.click("[data-search-open]")
+    page.fill("#global-search-dialog", "remittances")
+    page.wait_for_selector("#search-dialog .search-hit")
+    assert page.evaluate("location.search") == "", page.url
+
+
+@test("search: a query from the URL is rendered as text, never as markup")
+def t_search_url_state_is_escaped(page, base):
+    page.goto(base + "/en/evidence/?q=" + quote('<img src=x onerror=alert(1)>'))
+    page.wait_for_selector("#search-results [data-search-empty], #search-results .search-hit")
+    assert page.input_value("#global-search") == '<img src=x onerror=alert(1)>'
+    assert page.evaluate("document.querySelectorAll('#search-results img, #search-results script').length") == 0
+
+
 @test("search: a failed index load is a technical state, announced")
 def t_search_failure(page, base):
     page.route("**/static-data/search_index.json", lambda r: r.fulfill(status=503, body="unavailable"))

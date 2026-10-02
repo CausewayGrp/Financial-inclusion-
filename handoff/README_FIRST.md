@@ -34,8 +34,9 @@ the Production Master and cannot be changed by design.
 authority/Yemen_Financial_Inclusion_Evidence_Master.xlsx      the only authority (never parsed by the browser)
   → scripts/generate_projections.py                           deterministic, byte-for-byte
   → site-src/content/**                                       the projections you design from (never edit by hand)
-  → scripts/build.py                                          the reference renderer
-  → dist/                                                     the public reference build (never edit by hand)
+  → scripts/yfie/                                             the one production renderer (the accepted design)
+  → scripts/build.py                                          its build driver
+  → dist/                                                     the public build (never edit by hand)
 ```
 
 Production Master SHA-256 `17db032b15da16fc4b5b3c3b49f19aebf2ecb4ec46634613fe8505d0f038690b`; Page Specs
@@ -150,5 +151,5 @@ states, routes, content bindings, visual contracts, responsive rules, accessibil
 | `ENGINEERING_HANDOFF_EXPECTATIONS.md` | runtime, discovery, security, performance and release rules for Code (and the constraints they put on Design) |
 | `DESIGN_STARTING_TOKENS.json` | starting token hypotheses (palette, type, spacing) — replace freely with a documented system |
 | `IMPLEMENTATION_MANIFEST.json` | machine-readable summary: authority hashes, counts, routes, navigation, prohibitions (rebound on every Master change) |
-| `CLAUDE_CODE_MASTER_PROMPT.md` | waits for the Design package; not for Design |
+| `CLAUDE_CODE_MASTER_PROMPT.md` | the Code brief — started on the accepted Design package (the owner's acceptance recorded 2 October 2026, `audit/OWNER_DECISIONS_2026-10-02.md`); not for Design |
 | `SUPPORT_AND_PARTNERSHIP_READINESS.md` | CauseWay stewardship note — **not public and not a Design input**; ignore it |
