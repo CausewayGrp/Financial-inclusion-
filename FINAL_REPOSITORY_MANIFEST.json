@@ -21,7 +21,7 @@
   ]
  },
  "class_counts": {
-  "AUDIT_HISTORY": 251,
+  "AUDIT_HISTORY": 252,
   "AUTHORITY_MASTER": 1,
   "AUTHORITY_POINTER": 2,
   "AUTHORITY_RULES": 1,
@@ -208,6 +208,10 @@
   },
   {
    "path": "audit/METHODOLOGY_COMPLETENESS_CLOSURE.md",
+   "class": "AUDIT_HISTORY"
+  },
+  {
+   "path": "audit/OWNER_DECISIONS_2026-10-02.md",
    "class": "AUDIT_HISTORY"
   },
   {

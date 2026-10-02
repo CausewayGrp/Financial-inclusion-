@@ -53,6 +53,9 @@ none blocks the gate. Where the reader's words are quoted they are the reader's,
   ends by restating the contract's prohibited_inference ("Does not establish: The relationships are not causal claims …"),
   so the frame reads the boundary twice however it is composed; readers took the repetition for a templating fault.
   Design impact: none if the alt text is shortened; the frame already prints its own boundary once.`
+  2 October 2026: a narrower statement of a general cause — every one of the 36 contracts' `alt_text` ends with the
+  prohibited inference by one generator rule; see the escalation raised at the independent acceptance of pull request #8
+  (A3 / C3) below, and the owner's decision in `audit/OWNER_DECISIONS_2026-10-02.md`, row A3 / C3.
 - `ESCALATE_TO_MASTER (observations, not defects claimed) — Home section 3 and the bound records — three date forms in
   three cards (prose "November 2022 to January 2023"; the clock "2022-11-07 to 2023-01-09"; "Mar-2025–Jan-2026"); three
   years attached to one number (Findex 2021, fieldwork 2022–23, data year 2022) read as an error on first pass; the
@@ -270,6 +273,9 @@ Raised at the D7 closure (28 September 2026), from the three independent closure
   text — the boundary must always print in the boundary voice, and the alt text is governed as a whole; Design will
   not truncate a governed string. Either the alt_text should end before the prohibited inference, or the contract
   should record that the two fields overlap by intent.`
+  2 October 2026: a narrower statement of the same general cause as the D3 VIS-INCLUSION-TRANSMISSION item — the overlap
+  is not a property of this contract's governed text but of the generator rule that composes every `alt_text`; see the
+  escalation raised at the independent acceptance of pull request #8 (A3 / C3) below, and `audit/OWNER_DECISIONS_2026-10-02.md`, row A3 / C3.
 - `NEEDS_CONTROLLED_CONTENT — /evidence/ CLM-039 — the record's central comparison is entirely qualitative in the
   governed text (one public interface "showed an older span of years" while others "contained later observations"),
   with no years, no interface names and no size of the gap anywhere on the page, and the "earlier documented access"
@@ -279,6 +285,26 @@ Raised at the D7 closure (28 September 2026), from the three independent closure
 - `ESCALATE_TO_MASTER (observation) — the record's question 7 summary ("Detail for reproducing or challenging this
   record without changing what it means") reads as internal meta-language to a cold reader. Design impact: none — it
   is governed copy; a plainer governed gloss would print in place.`
+
+Raised at the independent acceptance of pull request #8 (2 October 2026; `audit/PR8_INDEPENDENT_ACCEPTANCE.md` A3,
+condition C3), recorded by the session meeting the before-merge conditions:
+
+- `ESCALATE_TO_MASTER (general finding; the steward's) — every drawn and text frame, all 36 contracts, every route that
+  binds one — the boundary prints twice because the generator composes every alt text as the accessible summary, the
+  governed label UI-VIS-DOES-NOT-ESTABLISH and the prohibited inference (`scripts/projection/derived.py:1324`; 36 of 36
+  `alt_text_en` and `alt_text_ar` end with the inference), while the frame foot prints the same inference once more under
+  the governed label "What not to conclude" (`04_PAGE_FAMILY_COMPOSITIONS.md` §1: the boundary once per frame). On the
+  public build at `38147de` every one of the 58 figures of the English edition prints its inference at least twice
+  (VIS-POS-TRANSACTIONS three times); the baseline printed it once because it did not show the alt text visibly.
+  `check_visuals.py` `boundary_once_in_foot` and `check_site.py` `boundary_once_per_frame` count the foot only, so the
+  design checks pass. The two earlier escalations — VIS-INCLUSION-TRANSMISSION (D3, above) and VIS-SOURCE-COMPARISON
+  (D7 closure, above) — are narrower statements of this one cause, not properties of those two contracts. Owner of the
+  fix: the steward (one generator rule, no Master change; or a Design rule for the visible alt tail). Decision, 2 October
+  2026 (`audit/OWNER_DECISIONS_2026-10-02.md`, row A3 / C3): each figure prints its boundary once on the page, in the frame foot; on
+  the page the image's alt attribute and the visible text alternative use the governed accessible summary, which ends
+  before the boundary; the full governed alt text, ending with the boundary, stays wherever a figure leaves the page
+  (export frames, social frames). Implemented in the release-candidate pull request. Design impact: the frame's foot is
+  unchanged; the text alternative loses its repeated tail. Open until that pull request lands.`
 
 ## Closed at D2 (27 September 2026) — resolved by an authority the repository already holds
 

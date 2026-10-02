@@ -1,8 +1,14 @@
 # Acceptance checklist — D7 (28 September 2026)
 
-**Status: D7 TECHNICAL CHECKPOINT COMPLETE — FINAL VISUAL ACCEPTANCE WITHHELD.** Every check is green on the checkpoint
-tree and every technical line below carries its evidence; the gate's final visual acceptance is withheld by the owner
-(§K.4, last paragraph), so nothing here declares D7 met or the Design package accepted.
+**Status: D7 MET — FINAL VISUAL ACCEPTANCE RECORDED BY THE OWNER ON 2 OCTOBER 2026** (`audit/OWNER_DECISIONS_2026-10-02.md`, row D7). Every
+check is green on the checkpoint tree and every technical line below carries its evidence; with the owner's visual
+acceptance recorded, the Design package is accepted and `COVERAGE.csv` writes `ACCEPTED` on its 1,415 verified rows
+(the 18 `DESIGNED` rows stay as explained in §K). Recorded by the session meeting condition C2 of
+`audit/PR8_INDEPENDENT_ACCEPTANCE.md`; no line below was re-evidenced or changed by it, except the two dated notes
+under §F and §K that cite the owner's record. Not PUBLIC RELEASE READY; no WCAG conformance is claimed.
+History — 28 September 2026: this line read **D7 TECHNICAL CHECKPOINT COMPLETE — FINAL VISUAL ACCEPTANCE WITHHELD**
+(the gate's final visual acceptance was withheld by the owner, §K.4, last paragraph, so nothing here declared D7 met or
+the Design package accepted).
 
 `handoff/DESIGN_ACCEPTANCE_CRITERIA.md` completed line by line with evidence, on the checkpoint tree of branch
 `claude/dreamy-archimedes-e8qx5v` (from the accepted `main` `0ccdf01`). A line without evidence is not met; every line
@@ -189,6 +195,10 @@ readers (English; Arabic) read the checkpoint tree (§K.4).
   RETIRE never drawn. — `check_visuals.py --phases contracts`: 36 contracts × EN/AR on every binding route, 2,812
   assertions, 0 failures (`drawn`, `values_printed`, `withheld_never_printed`, `no_value_plotted`, `never_a_chart`,
   `record_page_has_no_figure`; the waiting matrix `waits_as_text_frame`).
+  Note, 2 October 2026: the RETIRE contract VIS-CAPITAL-CONTEXT is never drawn, but this build shows it on `/reforms/` as a
+  governed text frame in the depth group — a frame the pre-design baseline did not have (`audit/PR8_INDEPENDENT_ACCEPTANCE.md`
+  A5). The owner decided on 2 October 2026 that the RETIRE_FROM_DESIGN tier is excluded from the domain depth frames and
+  the frame is removed in the release-candidate pull request; the Evidence Record text stays (`audit/OWNER_DECISIONS_2026-10-02.md`, row A5 / C4).
 - [x] Legends and labels only from `UI-VIS-*` and `<field>_label`; colour never the only carrier; no red/amber/green;
   nothing fades with age; breaks, gaps and disagreements drawn. — `markers_labelled`, `palette_only` (the ten palette
   values), the forced-colours checks; `03_COMPONENT_CATALOG.md` §3 (every grammar state's governed label);
@@ -355,8 +365,8 @@ readers (English; Arabic) read the checkpoint tree (§K.4).
 - [x] The decision log has entries for every gate D0–D7 with the fields of brief §19; the ledger shows every route ×
   language × width and every state `ACCEPTED` with its checks and `code_handoff` `YES`, or explains each gap. —
   `00_DESIGN_README.md` §9: DL-D0-001…003, DL-D1-001…008, DL-D2-001…008, DL-D3-001…005, DL-D4-001…004, DL-D5-001…004,
-  DL-D6-001…007, DL-D7-001…005; `COVERAGE.csv`: 1,433 rows — 1,415 `VERIFIED` (the `ACCEPTED` status with the D7 evidence per row is written only
-  when the gate is accepted, which the owner has withheld), `code_handoff` `YES` on every row; 18 rows `DESIGNED` with the gap explained (the two verification
+  DL-D6-001…007, DL-D7-001…005; `COVERAGE.csv`: 1,433 rows — 1,415 `VERIFIED` at the checkpoint (the `ACCEPTED` status with the D7 evidence per row is written only
+  when the gate is accepted, which the owner had withheld; written on 2 October 2026 on the owner's recorded acceptance, `audit/OWNER_DECISIONS_2026-10-02.md`), `code_handoff` `YES` on every row; 18 rows `DESIGNED` with the gap explained (the two verification
   states no record carries, `SOURCE_NOT_YET_BOUND` and `NO_SOURCE_RECORD`, and the seven grammar states no governed
   contract row carries — HISTORICAL, PROGRAMME, PARTIAL, UNKNOWN, BREAK_UNIVERSE, TARGET, RESULT — each designed in the
   catalogue with its governed label and never drawn on an invented record or row).

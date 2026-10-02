@@ -151,5 +151,5 @@ states, routes, content bindings, visual contracts, responsive rules, accessibil
 | `ENGINEERING_HANDOFF_EXPECTATIONS.md` | runtime, discovery, security, performance and release rules for Code (and the constraints they put on Design) |
 | `DESIGN_STARTING_TOKENS.json` | starting token hypotheses (palette, type, spacing) — replace freely with a documented system |
 | `IMPLEMENTATION_MANIFEST.json` | machine-readable summary: authority hashes, counts, routes, navigation, prohibitions (rebound on every Master change) |
-| `CLAUDE_CODE_MASTER_PROMPT.md` | waits for the Design package; not for Design |
+| `CLAUDE_CODE_MASTER_PROMPT.md` | the Code brief — started on the accepted Design package (the owner's acceptance recorded 2 October 2026, `audit/OWNER_DECISIONS_2026-10-02.md`); not for Design |
 | `SUPPORT_AND_PARTNERSHIP_READINESS.md` | CauseWay stewardship note — **not public and not a Design input**; ignore it |

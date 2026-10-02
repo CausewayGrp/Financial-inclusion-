@@ -22,6 +22,7 @@ only the first two groups describe the current state. Every file in `audit/` is 
 | F9 clean-room acceptance | [`FINAL_CLEAN_ROOM_ACCEPTANCE.md`](FINAL_CLEAN_ROOM_ACCEPTANCE.md); open items in `FINAL_OPEN_ITEMS_REGISTER.md` (repository root) |
 | Transactions F3–F9 | [`final_integration/`](final_integration/) — scripts, inputs, Master ledgers and run reports |
 | Independent acceptance of pull request #8 (2 Oct) | [`PR8_INDEPENDENT_ACCEPTANCE.md`](PR8_INDEPENDENT_ACCEPTANCE.md) — the production runtime (EAD-01…EAD-11) verified and adjudicated; verdict MERGE AFTER CONDITIONS; fixes nothing |
+| Owner decisions (2 Oct) | [`OWNER_DECISIONS_2026-10-02.md`](OWNER_DECISIONS_2026-10-02.md) — the owner's decisions of 2 October 2026: OWN-01…OWN-05, the publisher name, EAD-03, D7 final visual acceptance, and the dispositions of the acceptance findings A3 / C3, A5 / C4 and A4 / C6; recorded, not applied |
 
 Records named above that do not exist yet are written by the session that owns them; until then the session is open.
 

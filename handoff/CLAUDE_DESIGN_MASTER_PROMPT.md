@@ -698,7 +698,7 @@ Tier counts are in `tier_counts`; the tier of every visual is in the inventory.
   language switch — each at the widths of §0, with the longest Arabic strings the corpus holds.
 - **Dates** follow the governed form: day, month name, year, Western digits — "26 September 2026", «26 سبتمبر 2026».
   Arabic month names are يناير فبراير مارس أبريل مايو يونيو يوليو أغسطس سبتمبر أكتوبر نوفمبر ديسمبر (as in
-  `source_date_text` in `scripts/build.py`); do not use a locale library's month names, which vary by region.
+  `date_words` in `scripts/yfie/content.py`, `MONTHS`); do not use a locale library's month names, which vary by region.
 
 ---
 

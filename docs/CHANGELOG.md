@@ -1,5 +1,49 @@
 # Repository Change Log
 
+## 2026-10-02 — Pull request #8: the before-merge conditions C1–C5 met, in records only
+
+`audit/PR8_INDEPENDENT_ACCEPTANCE.md` returned MERGE AFTER CONDITIONS on the production runtime (head `74d79a1`). This commit
+meets its five before-merge conditions and makes the one-line record fixes it listed. No code, test, gate, generator,
+Master byte, projection, `dist/` file or controlled contract changes: `git diff 74d79a1..HEAD -- site-src scripts dist
+design/reference authority/Yemen_Financial_Inclusion_Evidence_Master.xlsx` is empty.
+
+- **Owner decisions recorded.** `audit/OWNER_DECISIONS_2026-10-02.md` (indexed in `audit/INDEX.md`): OWN-01 (the funding and
+  relationships paragraph, EN and AR), the publisher name, OWN-04 (licence deferred; link-and-citation launch), OWN-03,
+  **D7 — the owner's final visual acceptance of the Design package**, the social images, OWN-05, OWN-02, EAD-03 (export
+  approved, master file unchanged), relationships, the steward delegation for the EAD-11 patch, and the dispositions of
+  A3 / C3, A5 / C4 and A4 / C6. Recorded, not applied: the Master-first and runtime changes belong to the release-candidate
+  pull request.
+- **C2 — the premise settled.** `design/00_DESIGN_README.md` and `design/10_ACCEPTANCE_CHECKLIST.md` record the owner's
+  acceptance of 2 October 2026 and keep the 28 September "withheld" status as dated history; `design/COVERAGE.csv` writes
+  `ACCEPTED` on its 1,415 `VERIFIED` rows (18 `DESIGNED` unchanged). Code no longer "waits": `README.md`,
+  `handoff/CLAUDE_CODE_MASTER_PROMPT.md` (its first line keeps the literal gate R86-G01 reads, as dated history),
+  `handoff/README_FIRST.md`, `authority/YFI_CURRENT_PROJECT_CONTEXT.json` `design_prompt_status` (programme state, edited
+  directly — `scripts/rebind_authority.py` owns only its hashes and counts) and `OPENAI_REENTRY_CHECKPOINT.md`. `fca7bf1` is
+  named as what it is — the last commit of pull request #7, landed on `main`, not a merge commit.
+- **C1 — the pull request's records say one thing.** `README.md` rows Next, Claude Code and Working gate carry the EAD
+  states as `FINAL_OPEN_ITEMS_REGISTER.md` §1 has them; `design/09_CODE_HANDOFF.md`: the "Not claimed" row states EAD-02's
+  true split (automated audit done, two failures fixed, no conformance claimed; the human audit open, release-time), the
+  duplicate EAD-11 row is removed, and the test-hooks row reads the measured 27/28 with `scripts/tests/test_public_tools.py`
+  modified (two tests added at EAD-06); the register carries a dated correction to its EAD-01 cell.
+- **C3 — the double boundary, as a general finding.** `design/ESCALATIONS.md`: every frame prints its boundary twice because
+  `scripts/projection/derived.py:1324` ends all 36 contracts' `alt_text` with the prohibited inference while the frame foot
+  prints it again; owner the steward; the two per-contract escalations (VIS-INCLUSION-TRANSMISSION, VIS-SOURCE-COMPARISON)
+  are marked as narrower statements of the same cause; the register carries a pointer; the decision is the owner's A3 / C3 row.
+- **C4 — the `/reforms/` text frame.** `design/06_VISUAL_TABLE_SYSTEM.md` §1 no longer claims the baseline had such a frame
+  (it did not): this build shows it, and the owner decided to exclude the RETIRE tier from the domain depth frames (A5 / C4);
+  the same note sits on the D7 checklist's "RETIRE never drawn" line.
+- **C5 — the register's append rule restored.** A dated erratum in `FINAL_OPEN_ITEMS_REGISTER.md` §9 records the in-place
+  rewrite of the eleven "Where it shows today" cells and the class-count cell on 29 September 2026, each previous text
+  verbatim with the commit that replaced it; the current cells stand.
+- **One-line record fixes** from the acceptance: `README.md` ("The rest are open"; DEBT-008 does not block release and waits
+  on the steward and Design, not the owner — A8; the quick start no longer calls `dist/` "the governed baseline");
+  `CONTRIBUTING.md` §2 and §4 (`site-src/styles.css` no longer exists); the register's EAD-11 item names
+  `scripts/yfie/question_sets.py`; `handoff/CLAUDE_DESIGN_MASTER_PROMPT.md` and `handoff/ENGINEERING_HANDOFF_EXPECTATIONS.md`
+  point to `date_words` in `scripts/yfie/content.py`. `interface_copy.json` and `handoff/IMPLEMENTATION_MANIFEST.json` are
+  governed and untouched (fixed in the release-candidate pull request).
+
+Not declared: PUBLIC RELEASE READY. Not claimed: WCAG conformance.
+
 ## 2026-09-29 — EAD-02: the implemented site audited; two real failures found and fixed
 
 `scripts/accessibility_audit.py` audits what a machine can decide about the runtime: 24 pages — one per route class,
