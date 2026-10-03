@@ -5,6 +5,73 @@ repository never declares PUBLIC RELEASE READY, and only the owner releases it (
 Every step except the account, the domain, the licence decision, the release acceptance and the tag is a Claude Code
 step; the route on `causewaygrp.com` is CauseWay's web administrator's ("Hosting").
 
+## Deploy and verify (one page)
+
+Written for someone who has never seen this repository. The steps table further down says who decides what; this page
+says how to do it and what you should see. `$B` is the address being checked:
+`https://causewaygrp.com/financial-inclusion-evidence` once the corporate route exists, or
+`https://<project>.pages.dev/financial-inclusion-evidence` before it.
+
+**Before you start**
+
+- Python 3.11 and Git. Node.js 22 only to deploy by hand with `npx wrangler`.
+- `git clone https://github.com/CausewayGrp/Financial-inclusion-.git && cd Financial-inclusion-`
+- `python3 -m pip install -r requirements.txt`, then `python3 -m playwright install chromium` for the browser tests.
+- A Cloudflare Pages project whose production branch is `main`:
+  `npx wrangler pages project create <project> --production-branch main`. A deployment to any other branch is a
+  preview: Pages marks it `X-Robots-Tag: noindex` and does not serve it at `<project>.pages.dev`.
+- The owner's dated lines in `audit/OWNER_DECISIONS_*.md` for steps 2 and 7a (step 13 only at release).
+  `site-src/deployment.json` then has `public_origin` set and `licence_text_confirmed: true`. The deploy workflow
+  refuses to publish otherwise.
+
+**Build and check**, each command with the last line it must print:
+
+```bash
+python3 scripts/checksums.py --check            # CHECKSUM MANIFEST CURRENT: <n> files
+python3 scripts/validate.py                     # WEBSITE REPOSITORY VALIDATION PASS
+python3 scripts/build.py --out build/site       # Built <n> HTML files from <n> controlled page specs … under /financial-inclusion-evidence
+python3 scripts/tests/test_base_path.py         # BASE PATH: PASS — https://causewaygrp.com/financial-inclusion-evidence/
+python3 scripts/tests/test_security_headers.py  # SECURITY HEADERS: PASS — … 0 problems
+```
+
+**Deploy.** Merge the approved pull request into `main`, or run the "Deploy" workflow by hand (GitHub → Actions →
+Deploy → Run workflow). It refuses a null origin or an unconfirmed licence text, runs the gates, builds the site under
+its path, sweeps it, and uploads it. Done when the run is green and `https://<project>.pages.dev/financial-inclusion-evidence/`
+opens the Arabic edition.
+
+**The ten-minute check**, after every deploy:
+
+```bash
+B=https://causewaygrp.com/financial-inclusion-evidence
+for u in / /ar/ /en/ /en/payments/ /ar/evidence/CLM-001/ /assets/app.js /static-data/search_index.json /en/no-such-page/; do
+  echo "== $u"; curl -sSI "$B$u" | grep -iE '^(HTTP|set-cookie|x-robots-tag|x-powered-by|content-security-policy|location)'
+done
+#   every address: HTTP 200 (the last one: 404) and a content-security-policy line;
+#   never a set-cookie, x-robots-tag or x-powered-by line, and no location line
+curl -sSL -o /dev/null -w '%{http_code} %{num_redirects}\n' "$B"           # 200 1   (the bare address: one redirect to "$B/")
+curl -sSI "$B/en/payments" | grep -iE '^(HTTP|location)'                     # 308, location: /financial-inclusion-evidence/en/payments/
+#                                                                              (never a pages.dev host)
+curl -s "$B/en/" | grep -c 'name="robots" content="noindex, nofollow"'       # 1 before step 13; 0 after it
+curl -sSI "$B/sitemap.xml" | grep -iE '^(HTTP|content-type)'                 # 200 and application/xml
+python3 scripts/tests/test_security_headers.py --base "$B"                   # SECURITY HEADERS: PASS — … 0 problems
+YFIE_BASE_URL="$B" python3 scripts/tests/test_public_tools.py               # PUBLIC TOOL TESTS PASS: …
+```
+
+`test_security_headers.py --base` loads every page and reads every response with all its headers. It fails on any
+`Set-Cookie`, `X-Robots-Tag` or `X-Powered-By`, on any cookie the browser holds afterwards, on a missing page that does
+not answer 404, and on a bare address that does not answer one permanent redirect to `$B/` (301 from the
+corporate route, 308 from Pages itself). Finish by opening `$B/` on a phone: the Arabic
+edition opens, the language switch works, and a search for "remittances" finds results.
+
+**Roll back.**
+
+1. Cloudflare dashboard → Workers & Pages → the project → Deployments → the last good deployment → ⋯ → "Rollback to
+   this deployment". This takes effect at once, and nothing else changes.
+2. If the corporate route misbehaves, remove `server/middleware/0.financial-inclusion-evidence.ts` from CauseWay's
+   frontend and redeploy the corporate site. The path then answers with the corporate site's own 404.
+3. In this repository, revert the faulty commit on a branch (`git revert <commit>`). When CI is green, merge it, and
+   the next deploy goes out. History is never rewritten.
+
 ## Hosting
 
 ### The address and what the domain looks like today
@@ -41,17 +108,7 @@ What follows from them:
    rule), no script, no cookie and no `Set-Cookie`. The corporate `session` cookie is not passed on to our host.
 3. **Rollback is one step.**
 
-The checks, on the live address (steps 8 to 10):
-
-```bash
-curl -sI https://causewaygrp.com/financial-inclusion-evidence/en/
-#   must show content-security-policy, x-frame-options and the other headers of _headers;
-#   must not show set-cookie or x-robots-tag (nor x-powered-by: harmless, but not ours)
-curl -sI https://causewaygrp.com/financial-inclusion-evidence/en/payments
-#   a redirect whose Location stays on causewaygrp.com, never on pages.dev
-python3 scripts/tests/test_security_headers.py --base https://causewaygrp.com/financial-inclusion-evidence
-#   every page, every security header, no policy violation (an injected script would be blocked and reported)
-```
+The checks are the ten-minute check of "Deploy and verify", run on the live address in steps 8 to 10.
 
 ### How the site is built for the path
 
@@ -68,6 +125,11 @@ python3 scripts/tests/test_security_headers.py --base https://causewaygrp.com/fi
   the site under `financial-inclusion-evidence/` and `_headers` at the root, where Pages reads it.
 - One request does leave the path, and no page makes it: no page declares an icon, so browsers ask the domain root for
   `/favicon.ico`, and `causewaygrp.com` answers it. The test reports it without failing.
+- The build checks every slash-leading string in the runtime, not only the ones that name a folder of the site. After
+  its own rewrites, each such string must be a listed route key, and it must occur exactly as often as listed
+  (`JS_ROUTE_KEYS` in `scripts/base_path.py`). Anything else stops the build. This includes an address built by
+  concatenation or a template, such as `'/'+lang+'/about/'`. The sweep applies the same rule, and a second negative
+  control proves that it does.
 - No host has been tested from inside Yemen. Step 10 asks a person with local access to open the live site before the
   owner accepts the release. GitHub Pages is not an option, because it cannot send security headers
   (`docs/DEPLOYMENT.md`); Netlify, the earlier alternative, reads the same `_headers` but is not one of the three routes.
@@ -83,40 +145,64 @@ reader → causewaygrp.com (DigitalOcean DNS → the corporate Nuxt application)
   address, `https://<project>.pages.dev/financial-inclusion-evidence/`, is the same site. Steps 9 and 10 can therefore
   test it before the proxy exists.
 - **The corporate side.** This is a later, separate task in CauseWay's own frontend repository, not part of this pull
-  request. The snippet below is guidance only:
+  request. The code below is guidance only. It is one server middleware, not `routeRules`. The adversarial
+  verification of 3 October 2026 ran both in a real Nitro 2.13.4 server in front of a stand-in for Pages, and found
+  that `routeRules` cannot do this job:
+  - a redirect rule for the bare path also matches the address with its slash, so the release address redirects to
+    itself forever;
+  - a route-rule proxy cannot remove response headers, so the corporate `session` cookie, `x-robots-tag` and
+    `x-powered-by` still reach our responses;
+  - the route-rule proxy follows our host's own redirects itself.
+
+  The middleware below did the job in the same test:
+  - it removed those three headers;
+  - it sent an empty `Cookie` upstream;
+  - it passed our host's 308 on with its relative `Location`;
+  - it answered the bare path with one 301, without a loop;
+  - it left `/financial-inclusion-evidencex` alone.
 
   ```ts
-  // nuxt.config.ts in CauseWay's frontend repository: guidance, not applied from here
-  export default defineNuxtConfig({
-    routeRules: {
-      '/financial-inclusion-evidence': { redirect: { to: '/financial-inclusion-evidence/', statusCode: 301 } },
-      '/financial-inclusion-evidence/**': {
-        proxy: {
-          to: 'https://<project>.pages.dev/financial-inclusion-evidence/**',
-          headers: { cookie: '' },   // the corporate session cookie is not passed on to our host
-        },
-      },
-    },
+  // server/middleware/0.financial-inclusion-evidence.ts in CauseWay's frontend repository: guidance, not applied from here.
+  // Remove any routeRules entry for /financial-inclusion-evidence.
+  import { proxyRequest, sendRedirect } from 'h3'
+  const BASE = '/financial-inclusion-evidence'
+  const UPSTREAM = 'https://<project>.pages.dev'
+  const STRIP = ['set-cookie', 'x-robots-tag', 'x-powered-by']
+  export default defineEventHandler((event) => {
+    const path = event.path.split('?')[0]
+    if (path !== BASE && !path.startsWith(BASE + '/')) return
+    if (path === BASE) return sendRedirect(event, BASE + '/' + event.path.slice(BASE.length), 301)
+    return proxyRequest(event, UPSTREAM + event.path, {
+      headers: { cookie: '' },                 // the corporate session cookie never reaches our host
+      fetchOptions: { redirect: 'manual' },    // our host's redirects reach the reader unchanged
+      onResponse(ev) { for (const h of STRIP) ev.node.res.removeHeader(h) },
+    })
   })
   ```
 
-- **Security headers.** Pages sends them from `_headers`. The proxy passes the response headers through. If a reverse
-  proxy such as nginx sits in front of the Nuxt process, the same forward can be set there instead; it must keep the
-  same three properties, and the checks above apply unchanged.
+  If nginx sits in front of the Nuxt process, the same forward can be set there instead, with the same effect:
+  `location /financial-inclusion-evidence/ { proxy_pass https://<project>.pages.dev; proxy_set_header Host <project>.pages.dev;
+  proxy_ssl_server_name on; proxy_set_header Cookie ""; proxy_hide_header Set-Cookie; proxy_hide_header X-Robots-Tag;
+  proxy_hide_header X-Powered-By; }`, plus `location = /financial-inclusion-evidence { return 301 /financial-inclusion-evidence/; }`.
+
+- **Security headers.** Pages sends them from `_headers`, and the middleware passes them through unchanged. The checks
+  of "Deploy and verify" apply unchanged.
 - **Nothing corporate added.**
-  - The proxy returns the Pages response unchanged, so no corporate script enters our pages. Our policy allows only
-    our own scripts (`script-src 'self'`), so an injected script would be blocked, and the header test reports it.
+  - The proxy returns the Pages response body unchanged, so no corporate script is written into our pages. That is
+    the guarantee. Under this route our policy's `'self'` is `https://causewaygrp.com`, so `script-src 'self'` would
+    also allow the corporate site's own scripts (`/_nuxt/…`). It blocks inline scripts, but it does not separate us
+    from the corporate site.
+  - The web administrator confirms that no service worker is registered with scope `/` on `causewaygrp.com`. A service
+    worker at that scope could reach our pages. On 3 October 2026, `/sw.js` answered 404.
   - `headers: { cookie: '' }` replaces the incoming `Cookie` header, so the `session` cookie never reaches our host.
-  - Pages sends no `Set-Cookie`.
-  - The corporate application adds its `session` cookie and its `x-robots-tag` to the responses it serves. It adds
-    them to ours as well if they are set by a middleware or plugin that runs before the route rules. The frontend task
-    therefore excludes `/financial-inclusion-evidence/**` from the session and from the robots header. The checks
-    above must pass before release.
+  - Pages sends no `Set-Cookie`. The corporate application sets its `session` cookie and its `x-robots-tag` before
+    routing; it does so even on its own 404 for this path. The middleware removes both from our responses.
+    `test_security_headers.py --base` fails if either is still there, and it must pass before release.
 - **Do not** add a host rule `https://<project>.pages.dev/*` with `X-Robots-Tag: noindex` to `_headers`. The proxy
   fetches from that host, so the header would reach `causewaygrp.com`. The `pages.dev` copy does not compete in search,
   because every page's canonical names `causewaygrp.com`.
 - **Rollback.** Pages keeps every deployment, and "Rollback to this deployment" restores the previous one at once. The
-  proxy needs no change. If the proxy itself misbehaves, removing the route rule (one commit in the frontend
+  proxy needs no change. If the proxy itself misbehaves, removing the middleware file (one commit in the frontend
   repository) takes the path down; route 3 can then be used.
 
 ### Route 2, equivalent: a DigitalOcean App Platform static-site component at `/financial-inclusion-evidence`
@@ -126,8 +212,8 @@ DigitalOcean's current documentation, read on 3 October 2026, settles the second
 
 - **Headers: no.** A static-site component cannot send custom response headers. The app specification has no header
   field for static sites or ingress rules. Only CORS headers can be configured. Static sites are served with App
-  Platform's own `Cache-Control`: 24 hours at the edge and 10 seconds in the browser, unless the edge cache is
-  switched off. The public feature request for static-site headers is still open. So `Content-Security-Policy`,
+  Platform's own `Cache-Control`: 24 hours at the edge and 10 seconds in the browser, and edge caching
+  cannot be turned off for apps with static sites. The public feature request for static-site headers is still open. So `Content-Security-Policy`,
   `X-Frame-Options`, `Permissions-Policy` and the other headers of `_headers` cannot be sent this way.
 - **Path prefix.** An ingress rule that matches the prefix `/financial-inclusion-evidence` sends the request to the
   component. By default App Platform trims the matched prefix, so `/financial-inclusion-evidence/en/` reaches the
@@ -147,12 +233,15 @@ Deployments in App Platform"; and the feature request "Static site headers and r
 
 - **Origin.** `public_origin` is `https://evidence.causewaygrp.com`, with no path. The base path is then empty, and the
   published site has the same layout as `dist/`.
-- **DNS and host.** The same Pages project serves the site at its root. One CNAME, `evidence` → `<project>.pages.dev`,
-  goes in DigitalOcean DNS, and the domain is added to the Pages project. Pages accepts a subdomain on outside DNS
-  through a CNAME; the apex would need the zone on Cloudflare.
-- **The 301.** The corporate application redirects the old path:
-  `'/financial-inclusion-evidence/**': { redirect: { to: 'https://evidence.causewaygrp.com/**', statusCode: 301 } }`,
-  plus the bare path.
+- **DNS and host.** The same Pages project serves the site at its root. In this order:
+  1. Add `evidence.causewaygrp.com` under the Pages project's Custom domains.
+  2. Create one CNAME, `evidence` → `<project>.pages.dev`, in DigitalOcean DNS.
+
+  With the CNAME first, Cloudflare answers the domain with error 522. Pages accepts a subdomain on outside DNS through
+  a CNAME; the apex would need the zone on Cloudflare.
+- **The 301.** The corporate application redirects the old path. Use the same middleware form as route 1, so that the
+  bare path and the path with a slash are told apart:
+  `if (path === BASE || path.startsWith(BASE + '/')) return sendRedirect(event, 'https://evidence.causewaygrp.com' + (event.path.slice(BASE.length) || '/'), 301)`.
 - **Security headers.** Pages serves them from `_headers` directly. The corporate application answers only the 301.
 - **Nothing corporate added.** Our pages are on another host name. The `session` cookie is host-only (it has no
   `Domain` attribute), so browsers do not send it to `evidence.causewaygrp.com`. The 301 response may carry the
@@ -171,6 +260,11 @@ includes the root entry and the 404 (owner decision B3; gate RC-NOINDEX). At rel
 - adds `Sitemap: https://causewaygrp.com/financial-inclusion-evidence/sitemap.xml` to the domain's root `robots.txt`,
   and makes sure no `Disallow` rule there covers `/financial-inclusion-evidence/`; or
 - submits that sitemap in Google Search Console (and Bing Webmaster Tools) for the `causewaygrp.com` property.
+
+The noindex meta is in the pages only. Before release, the sitemap, the search data and the social images can be
+fetched with no noindex signal. They are not pages, the pages that link to them say `noindex, nofollow`, and no
+sitemap is named anywhere until step 13, so this is accepted rather than covered by an `X-Robots-Tag` header (which
+the route 1 proxy would have to be taught to keep).
 
 Two more facts for the web administrator:
 
@@ -191,7 +285,8 @@ Two more facts for the web administrator:
 | 5 | **Every gate.** Every step of `.github/workflows/verify.yml`, locally and in CI: checksums, projection check, validator, literal-audit determinism, lineage, diagrams, social images, logo derivatives, bilingual invariance, content parity, exports, public tools, viewport acceptance, security headers, base path, negative controls. | Claude Code | CI on the release commit | CI is green on the commit that will be tagged |
 | 6 | **Pages project and credentials.** Create the Cloudflare Pages project for direct uploads. Create an API token limited to "Cloudflare Pages: Edit". | Owner | Cloudflare dashboard | The project name and the token exist |
 | 7 | **Repository settings.** Secrets `CLOUDFLARE_API_TOKEN` and `CLOUDFLARE_ACCOUNT_ID`; variables `YFIE_CF_PAGES_PROJECT` and `YFIE_DEPLOY_ENABLED=true`. | Owner (the secrets); Claude Code may set the variables where the session has settings access | GitHub → Settings → Secrets and variables → Actions | The deploy workflow is no longer skipped |
-| 8 | **Deploy, then route the address.** Merge to `main`, or run "Deploy" by hand (workflow_dispatch). The workflow refuses a null origin, runs the gates, proves `dist/` is a fresh build, builds the published site, sweeps it under its path, then uploads it. Then the corporate route of "Hosting" is applied in CauseWay's frontend repository: route 1, the proxy and its exclusions; route 3, the CNAME and the 301. | Claude Code (merge on the owner's approval of the PR); the route by CauseWay's web administrator | `.github/workflows/deploy.yml`; the frontend repository | The workflow is green, `https://<project>.pages.dev/financial-inclusion-evidence/` serves the site, and the checks of "What every route must keep" pass on `causewaygrp.com` |
+| 7a | **Licence text confirmed by counsel.** CauseWay's counsel confirms the CC BY 4.0 text that /rights/ and /terms/ print, in both languages, before the first deploy makes them public at the Pages address. Then `licence_text_confirmed` goes to `true` in `site-src/deployment.json`, in the same commit as the dated line. Until then the deploy workflow refuses to publish, and `YFIE_DEPLOY_ENABLED` stays unset. | Owner, with counsel; Claude Code (the switch) | A dated line in `audit/OWNER_DECISIONS_*.md`; one commit | The confirmation is recorded and the switch is `true` |
+| 8 | **Deploy, then route the address.** Merge to `main`, or run "Deploy" by hand (workflow_dispatch). The workflow refuses a null origin, runs the gates, proves `dist/` is a fresh build, builds the published site, sweeps it under its path, then uploads it. Then the corporate route of "Hosting" is applied in CauseWay's frontend repository: route 1, the middleware; route 3, the custom domain, the CNAME and the 301. | Claude Code (merge on the owner's approval of the PR); the route by CauseWay's web administrator | `.github/workflows/deploy.yml`; the frontend repository | The workflow is green, `https://<project>.pages.dev/financial-inclusion-evidence/` serves the site, and the ten-minute check of "Deploy and verify" passes on `causewaygrp.com` |
 | 9 | **Headers and HTTPS.** Check that HTTPS works on the address. `Strict-Transport-Security` is the domain's decision ("Hosting"): add it under `/*` in `site-src/hosting/_headers` only with the web administrator's agreement, since under route 1 it covers all of `causewaygrp.com` (and every subdomain with `includeSubDomains`); then rebuild and redeploy. Run `python3 scripts/tests/test_security_headers.py --base https://causewaygrp.com/financial-inclusion-evidence`. | Claude Code; HSTS on the web administrator's agreement | One commit; the test against the live host | Every page loads with every security header and no policy violation |
 | 10 | **Every page on the live host.** `YFIE_BASE_URL=https://causewaygrp.com/financial-inclusion-evidence python3 scripts/tests/test_public_tools.py` against the live address; the live run bypasses the page policy, which step 9 tests (viewport acceptance runs on the same build in step 5). Remeasure performance with `scripts/performance_budget.py`, adapted to the origin, and record the result beside `release_candidate_b14d` in `docs/SUSTAINABILITY_IMPLEMENTED_RUNTIME.json`. A person opens the site on a phone in Yemen, or on a connection routed there, in Arabic. | Claude Code; the in-country check by a person the owner names | The tests; a dated note | The tests pass, the budget is met or its miss is recorded, and the in-country check is recorded |
 | 11 | **Usage counts (optional).** Only cookieless, first-party, aggregate counts with no personal data. The /privacy/ page must say so in both languages, Master-first, *before* activation, as it requires. | Owner decides; Claude Code implements | A Master transaction for /privacy/, then the code | Activated only after the Privacy page is live |
@@ -201,7 +296,7 @@ Two more facts for the web administrator:
 
 ## Rolling back
 
-Each route's rollback is under "Hosting". For a faulty deployment: Cloudflare Pages keeps every deployment, and
+The three lines are in "Deploy and verify"; each route's rollback is under "Hosting". For a faulty deployment: Cloudflare Pages keeps every deployment, and
 "Rollback to this deployment" in the dashboard restores the previous one at once (Owner or Claude Code with dashboard
 access); the corporate route needs no change. The repository then reverts the faulty commit on a branch, CI goes green,
 and a new deploy goes out (Claude Code). History is never rewritten.

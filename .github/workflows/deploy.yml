@@ -46,14 +46,18 @@ jobs:
       - name: Install the pinned toolchain
         run: python -m pip install --disable-pip-version-check -r requirements.txt
 
-      - name: Refuse a pre-release build (public_origin must be set, downloads only by the owner's switch)
+      - name: Refuse a pre-release build (public_origin set, licence text confirmed by counsel, downloads only by the owner's switch)
         run: |
           python3 - <<'PY'
           import json, sys
           d = json.load(open("site-src/deployment.json", encoding="utf-8"))
           if not d.get("public_origin"):
               sys.exit("public_origin is null: set it to the release domain first (docs/RELEASE_RUNBOOK.md, step 'Origin')")
-          print("public_origin:", d["public_origin"], "| pre_release:", d.get("pre_release"), "| public_downloads:", d.get("public_downloads"))
+          if d.get("licence_text_confirmed") is not True:
+              sys.exit("licence_text_confirmed is not true: counsel confirms the CC BY 4.0 text on /rights/ and /terms/ first "
+                       "(docs/RELEASE_RUNBOOK.md, step 7a)")
+          print("public_origin:", d["public_origin"], "| pre_release:", d.get("pre_release"), "| public_downloads:",
+                d.get("public_downloads"), "| licence_text_confirmed:", d.get("licence_text_confirmed"))
           PY
 
       - name: Gates (the same as CI's)

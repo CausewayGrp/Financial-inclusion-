@@ -2936,6 +2936,10 @@ try:
         errors.append("RC-B14 public_downloads is not false: publishing the exports waits on counsel's confirmation of the CC BY 4.0 text")
     if (DIST / "downloads").exists():
         errors.append("RC-B14 dist/downloads exists while downloads are switched off")
+    # the deploy workflow refuses to publish until counsel has confirmed the CC BY 4.0 text (docs/RELEASE_RUNBOOK.md, 7a);
+    # the switch is the owner's, set in the same commit as the dated line that records the confirmation
+    if not isinstance(_dep14.get("licence_text_confirmed"), bool):
+        errors.append("RC-B14 site-src/deployment.json: licence_text_confirmed must be true or false")
 except Exception as _x:
     errors.append("RC-B14 unreadable " + repr(_x))
 

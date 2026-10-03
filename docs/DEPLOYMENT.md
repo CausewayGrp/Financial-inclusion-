@@ -95,6 +95,9 @@ codebook and provenance on every row: record ID, source IDs, public locators and
 
 Publishing them is one switch: `public_downloads` in `site-src/deployment.json`. It stays `false` until CauseWay's
 counsel confirms the CC BY 4.0 text (the owner adopted the licence on 3 October 2026). While it is false, the validator (RC-B14) fails if a download appears in `dist/`.
+The same confirmation comes before any deploy at all, because /rights/ and /terms/ print the licence text:
+`licence_text_confirmed` in `site-src/deployment.json` stays `false` until counsel confirms it, and the deploy
+workflow refuses to publish until it is `true` (`docs/RELEASE_RUNBOOK.md`, step 7a).
 
 - **Rendering.** `app.js` builds result and comparison markup from governed JSON and escapes every value (`esc`); Code
   must keep escaping (or Trusted Types) for anything rendered from data, and must not render source text as HTML.

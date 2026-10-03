@@ -1,5 +1,50 @@
 # Repository Change Log
 
+## 2026-10-03 — The base-path work after its adversarial verification: runbook route 1, release checks, counsel step
+
+The adversarial verification of the base-path and noindex commits found the build side sound. `dist/` is
+byte-identical apart from the noindex meta; there are no escapes; the controls fail for the right reason. It found the
+hosting runbook not ready. Every major finding and every minor one is folded in here. Code, gates and records only:
+no Master change, and no public page changes.
+- **Route 1 is one server middleware, not `routeRules`** (`docs/RELEASE_RUNBOOK.md`). The verifier ran the earlier
+  snippet in a real Nitro 2.13.4 server and found three faults:
+  - the bare-path redirect also matched the address with its slash, so the release address redirected to itself;
+  - a route-rule proxy cannot strip the corporate `session` cookie, `x-robots-tag` or `x-powered-by`;
+  - it follows our host's redirects itself.
+  The verified middleware replaces it, with the nginx equivalent. The `script-src 'self'` sentence is corrected: under
+  route 1, `'self'` is the corporate origin, and the unchanged body is the guarantee. A service-worker check is added
+  for the web administrator.
+- **A one-page "Deploy and verify"** at the top of the runbook, written for a stranger:
+  - prerequisites;
+  - each command with the last line it must print;
+  - the ten-minute check (a curl list over eight addresses, the bare address, the slashless redirect, the noindex
+    count, the sitemap, the header and tool tests);
+  - rollback in three lines.
+- **The release check now proves absence** (`scripts/tests/test_security_headers.py`). Every response is read with
+  all its headers, through `all_headers()`, because Playwright's `headers` leaves cookies out. The test fails on:
+  - any `Set-Cookie`, `X-Robots-Tag` or `X-Powered-By`;
+  - any cookie the browser holds after the walk;
+  - with `--base`, a missing page that does not answer 404, and a bare address that does not answer one permanent
+    redirect (301 from the route, 308 from Pages) to the address with its slash.
+  Injecting a `Set-Cookie` into the local server's headers makes it fail, as it must.
+- **Counsel before the first deploy.**
+  - New runbook step 7a.
+  - `site-src/deployment.json` gains `licence_text_confirmed: false`, with its rule. The deploy workflow refuses to
+    publish until it is true, because the first deploy makes /rights/ public at the Pages address. RC-B14 requires it
+    to be a boolean.
+  - `docs/DEPLOYMENT.md` says the same.
+- **Addresses built by concatenation are now seen** (`scripts/base_path.py`, `scripts/tests/test_base_path.py`). After
+  the runtime patches, every slash-leading string literal outside the base path must be a listed route key, at its
+  listed count (`JS_ROUTE_KEYS`: 16 in `app.js`, 1 in `lang-redirect.js`). That covers single, double and back quotes,
+  templates included. Anything else stops the build, and the sweep applies the same rule. The verifier had shown that
+  `'/'+lang+'/about/'` and `` `/${lang}/about/` `` passed the earlier rule ("a literal naming a top-level folder"). A
+  second negative control appends `'/'+'en'+'/about/'` to the runtime, and the sweep must report it.
+- **Minor.**
+  - Route 2: edge caching cannot be turned off for static sites.
+  - Route 3: add the custom domain to Pages before the CNAME (otherwise error 522), and give the 301 in middleware form.
+  - The noindex covers pages only; the sitemap, search data and images are accepted without an `X-Robots-Tag`, with
+    the reason recorded.
+
 ## 2026-10-03 — CI: the negative controls run side by side on isolated copies; owner note of 13:00 recorded
 
 - **The controls job could not go green** (owner note of 3 October 2026, 13:00, point 1). "Gate negative controls"

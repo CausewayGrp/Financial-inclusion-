@@ -27,6 +27,7 @@ What is not rewritten, on purpose: the `route` values of the search index and of
 from __future__ import annotations
 
 import re
+from collections import Counter
 from pathlib import Path
 
 # HTML attributes whose value is one address. The renderer writes every attribute in double quotes.
@@ -63,8 +64,20 @@ JS_PATCHES = {
         ('location.replace("/"+l+"/");', 'location.replace("{B}/"+l+"/");', 1),
     ],
 }
-# A quoted literal that starts with "/" and names a top-level entry of the built site is an address. After the patches
-# none may be left outside the base path.
+# Every other quoted literal that starts with "/" (single, double or back quote; a template with ${…} included) is
+# counted after the patches, per file, and must occur exactly as often as listed here. These are route keys, which the
+# runtime joins to its relocated language prefix, and the normaliser's prefix tests; none is an address on its own. A
+# literal that is not listed stops the build until a patch relocates it or it is listed on purpose. (The adversarial
+# verification of 3 October 2026 showed that the earlier rule, "a literal naming a top-level entry", let an address
+# built by concatenation or a template through: '/'+lang+'/about/', `/${lang}/about/`.)
+JS_ROUTE_KEYS = {
+    "assets/app.js": {
+        "'/'": 5, "'/evidence/'": 1, "'/data/#regulatory'": 1,
+        "'/people/'": 1, "'/firms/'": 1, "'/finance/'": 1, "'/providers/'": 1, "'/payments/'": 1,
+        "'/remittances/'": 1, "'/access/'": 1, "'/reforms/'": 1, "'/measurement/'": 1,
+    },
+    "assets/lang-redirect.js": {'"/"': 1},   # the closing slash of "{B}/"+l+"/"
+}
 _JS_LITERAL = re.compile(r"""(['"`])(/[^'"`\s]*)""")
 
 
@@ -96,18 +109,21 @@ def relocate_html(base: str, text: str) -> str:
     return _STYLE_EL.sub(lambda m: m.group(1) + relocate_css(base, m.group(2)) + m.group(3), text)
 
 
-def relocate_js(base: str, rel: str, text: str, top_level: set[str]) -> str:
+def relocate_js(base: str, rel: str, text: str) -> str:
     for old, new, count in JS_PATCHES.get(rel, []):
         found = text.count(old)
         if found != count:
             raise SystemExit(f"base path: {rel} holds {found} of {old!r}, expected {count}; "
                              "update scripts/base_path.py JS_PATCHES with the runtime")
         text = text.replace(old, new.replace("{BRE}", base.replace("/", "\\/")).replace("{B}", base))
-    left = [m.group(2) for m in _JS_LITERAL.finditer(text)
-            if m.group(2).split("/")[1].split("?")[0].split("#")[0] in top_level and not m.group(2).startswith(base + "/")]
-    if left:
-        raise SystemExit(f"base path: {rel} still builds a root-absolute address {left[0]!r}; "
-                         "add it to scripts/base_path.py JS_PATCHES")
+    found = Counter(m.group(1) + m.group(2) + m.group(1) for m in _JS_LITERAL.finditer(text)
+                    if not m.group(2).startswith(base + "/"))
+    listed = Counter(JS_ROUTE_KEYS.get(rel, {}))
+    if found != listed:
+        extra, gone = sorted((found - listed).elements()), sorted((listed - found).elements())
+        raise SystemExit(f"base path: {rel} holds slash-leading literals outside the base path that are not listed "
+                         f"{extra[:5]!r}, or lacks listed ones {gone[:5]!r}; relocate them in JS_PATCHES or list them "
+                         "in JS_ROUTE_KEYS (scripts/base_path.py)")
     return text
 
 
@@ -127,7 +143,6 @@ def relocate(out: Path, base: str) -> int:
         return 0
     if not re.fullmatch(r"(?:/[a-z0-9-]+)+", base):
         raise SystemExit(f"base path: {base!r} is not a path of lowercase segments")
-    top_level = {p.name for p in out.iterdir()}
     changed = 0
     for f in sorted(p for p in out.rglob("*") if p.is_file()):
         rel = f.relative_to(out).as_posix()
@@ -136,7 +151,7 @@ def relocate(out: Path, base: str) -> int:
         elif f.suffix == ".css":
             fn = lambda t: relocate_css(base, t)  # noqa: E731
         elif f.suffix == ".js":
-            fn = lambda t, rel=rel: relocate_js(base, rel, t, top_level)  # noqa: E731
+            fn = lambda t, rel=rel: relocate_js(base, rel, t)  # noqa: E731
         elif rel == "_headers":
             fn = lambda t: relocate_headers(base, t)  # noqa: E731
         else:

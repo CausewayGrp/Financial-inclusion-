@@ -26,9 +26,11 @@ Anything requested outside the path gets a bare 404. Then:
 (c) Metadata. canonical, hreflang (en, ar, x-default), og:url, og:image, the sitemap and every JSON-LD address start
     with the full origin and the base path, and name the page itself where they should.
 
-Negative control, in the same run: one root-absolute link (href="/en/about/") is injected into one page of the
+Negative controls, in the same run: one root-absolute link (href="/en/about/") is injected into one page of the
 temporary build. The sweep must report it, and in the browser following it must be reported as a request that escaped
-the path. If either stays silent, the gate is worth nothing and the run fails.
+the path. And an address built by concatenation ('/'+'en'+'/about/') is appended to the runtime: the sweep must report
+it, because every slash-leading literal outside the base must be a listed route key at its listed count. If any stays
+silent, the gate is worth nothing and the run fails.
 
 Exit 0 = pass; 1 = a fault (or the negative control was not caught); 2 = the browser harness is unavailable.
 """
@@ -48,6 +50,7 @@ import subprocess
 import sys
 import tempfile
 import threading
+from collections import Counter
 from pathlib import Path
 from urllib.parse import urljoin, urlsplit
 
@@ -56,6 +59,8 @@ ORIGIN = "https://causewaygrp.com/financial-inclusion-evidence"
 LANGS = ("ar", "en")
 NEGATIVE_PAGE = "en/payments/index.html"
 NEGATIVE_LINK = '<p><a id="yfie-negative-control" href="/en/about/">about</a></p>'
+# The second control: an address the runtime would build by concatenation, which only the counted literal rule sees.
+NEGATIVE_JS = ("assets/app.js", ";void function(){if(0)location.href='/'+'en'+'/about/'}();")
 
 # HTML attributes whose value is one address
 URL_ATTRS = {"href", "src", "action", "formaction", "poster", "cite", "data", "background", "manifest", "ping", "xlink:href"}
@@ -72,6 +77,7 @@ def _load(name: str, path: Path):
 
 
 HEADERS = _load("yfie_security_headers", ROOT / "scripts" / "tests" / "test_security_headers.py")   # one _headers reader
+BASE_PATH = _load("yfie_base_path", ROOT / "scripts" / "base_path.py")   # the runtime's listed route keys
 
 
 class Site:
@@ -265,12 +271,19 @@ class Sweep:
             elif f.suffix == ".css":
                 self.css(rel, text, s.base + "/" + rel)
             elif f.suffix == ".js":
+                # Every slash-leading literal outside the base is a listed route key, at its listed count
+                # (scripts/base_path.py JS_ROUTE_KEYS), so an address built by concatenation or a template is reported
+                # here too: '/'+lang+'/about/' adds a sixth '/' and an unlisted '/about/'.
+                outside = Counter()
                 for m in JS_LITERAL.finditer(text):
                     lit = m.group(2)
                     if lit.startswith(s.base + "/"):
                         self.url(f"{rel} literal", lit)
-                    elif s.names_top(lit):
-                        self.fail(f"{rel} literal", f"root-absolute address outside the base path {lit!r}")
+                    else:
+                        self.checked += 1
+                        outside[m.group(1) + lit + m.group(1)] += 1
+                for lit in sorted((outside - Counter(BASE_PATH.JS_ROUTE_KEYS.get(rel, {}))).elements()):
+                    self.fail(f"{rel} literal", f"slash-leading literal outside the base path, not a listed route key {lit!r}")
             elif f.suffix == ".json":
                 try:
                     self.json_value(rel, json.loads(text), None)
@@ -569,6 +582,19 @@ def browser_checks(site: Site, server: str, chromium: str | None) -> tuple[list[
     return problems + net.problems, loads, net.count
 
 
+def negative_control_js(site: Site) -> list[str]:
+    """Append a runtime address built by concatenation; the sweep must report it. Returns what stayed silent."""
+    rel, code = NEGATIVE_JS
+    f = site.root / rel
+    original = f.read_text(encoding="utf-8")
+    f.write_text(original + code, encoding="utf-8")
+    try:
+        hits = [p for p in Sweep(site).run().problems if p.startswith(rel) and "'/about/'" in p]
+        return [] if hits else ["the sweep did not report the address built by concatenation in " + rel]
+    finally:
+        f.write_text(original, encoding="utf-8")
+
+
 def negative_control(site: Site, server: str | None, chromium: str | None) -> list[str]:
     """Inject one root-absolute link; both the sweep and the browser must report it. Returns what stayed silent."""
     f = site.root / NEGATIVE_PAGE
@@ -656,7 +682,7 @@ def main() -> int:
             except Exception as exc:
                 problems.append(f"browser harness: {type(exc).__name__}: {exc}")
         try:
-            silent = negative_control(site, server, chromium)
+            silent = negative_control(site, server, chromium) + negative_control_js(site)
         finally:
             if srv:
                 srv.shutdown()
@@ -664,8 +690,9 @@ def main() -> int:
             print("FAIL", p)
         if len(problems) > args.show:
             print(f"… and {len(problems) - args.show} more")
-        print(f"NEGATIVE CONTROL: {'CAUGHT' if not silent else 'NOT CAUGHT — ' + '; '.join(silent)} "
-              f"(href=\"/en/about/\" injected into {NEGATIVE_PAGE}{'' if server else '; sweep only'})")
+        print(f"NEGATIVE CONTROLS: {'CAUGHT' if not silent else 'NOT CAUGHT — ' + '; '.join(silent)} "
+              f"(href=\"/en/about/\" injected into {NEGATIVE_PAGE}{'' if server else ', sweep only'}; "
+              f"'/'+'en'+'/about/' appended to {NEGATIVE_JS[0]}, sweep)")
         ok = not problems and not silent
         print(f"BASE PATH: {'PASS' if ok else 'FAIL'} — {args.origin}/ ")
         return 0 if ok else 1

@@ -14,6 +14,13 @@ would join the two values). It also checks that every page receives each securit
 One directive is not applied locally: `upgrade-insecure-requests` would send this plain-HTTP test server's own
 requests to HTTPS. It changes no permission and reports no violation, so the policy that is tested is otherwise exact.
 This is a local check of the header file; it is not a test of any live host.
+
+Both modes also check what must never be on our responses: every response under the address is read with all its
+headers (Playwright's `headers` leaves cookie headers out; `all_headers()` does not), and none may carry `Set-Cookie`,
+`X-Robots-Tag` or `X-Powered-By`, and the browser may hold no cookie for the site after the walk. With `--base` (the
+release runbook, route 1: a corporate proxy in front of our host) it also requests a missing page, which must answer
+404, and the bare address without its trailing slash, which must answer one permanent redirect (301 from the route,
+308 from Pages itself) to the address with the slash (adversarial verification of the base-path work, 3 October 2026).
 """
 from __future__ import annotations
 
@@ -24,11 +31,13 @@ import socketserver
 import sys
 import threading
 from pathlib import Path
+from urllib.parse import urljoin
 
 ROOT = Path(__file__).resolve().parents[2]
 DIST = ROOT / "dist"
 SECURITY = ("Content-Security-Policy", "X-Content-Type-Options", "Referrer-Policy", "Permissions-Policy",
             "Cross-Origin-Opener-Policy", "X-Frame-Options")
+NEVER = ("set-cookie", "x-robots-tag", "x-powered-by")   # a host or proxy in front of us must not add these
 
 
 def parse_headers(text: str) -> list[tuple[str, list[tuple[str, str]]]]:
@@ -127,8 +136,12 @@ def main() -> int:
             # still counts (CI run 37092238972 failed on such aborts, attributed to the page that followed)
             page.on("requestfailed", lambda r: errors.append(f"request failed: {r.url} {r.failure}")
                     if r.url.startswith(base) and "ERR_ABORTED" not in str(r.failure) else None)
+            responses: list = []
+            page.on("response", lambda r: responses.append(r))
+            checked = 0
             for p in pages:
                 errors.clear()
+                responses.clear()
                 resp = page.goto(base + p, wait_until="load")
                 csp = page.evaluate("window.__csp")
                 if resp is None or (resp.status != 200 and p != "/404.html"):
@@ -137,14 +150,35 @@ def main() -> int:
                     got = {k.lower() for k in resp.headers}
                     problems += [f"{p}: the response carries no {h}" for h in SECURITY if h.lower() not in got]
                 problems += [f"{p}: CSP violation {v}" for v in csp] + [f"{p}: {e}" for e in errors]
+                for r in list(responses):
+                    if r.url.startswith(base):
+                        checked += 1
+                        try:
+                            names = {k.lower() for k in r.all_headers()}
+                        except Exception:   # a response the next navigation discarded
+                            continue
+                        problems += [f"{p}: {r.url[len(base):]} carries {h}" for h in NEVER if h in names]
+            if ctx.cookies():
+                problems.append(f"the browser holds {len(ctx.cookies())} cookie(s) for the site after the walk")
+            if args.base:
+                r = ctx.request.get(base + "/en/no-such-page/", max_redirects=0)
+                if r.status != 404:
+                    problems.append(f"/en/no-such-page/: HTTP {r.status}, not 404")
+                problems += [f"/en/no-such-page/ carries {h}" for h in NEVER if h in {x["name"].lower() for x in r.headers_array}]
+                r = ctx.request.get(base, max_redirects=0)
+                loc = r.headers.get("location", "")
+                if r.status not in (301, 308) or urljoin(base, loc) != base + "/":   # 301 from the route; 308 from Pages itself
+                    problems.append(f"the bare address answers HTTP {r.status} to {loc!r}, not one permanent redirect to the address with its slash")
+                elif ctx.request.get(base, max_redirects=1).status != 200:
+                    problems.append("the bare address does not reach the site after one redirect")
             browser.close()
     finally:
         if srv:
             srv.shutdown()
     for x in problems[:40]:
         print("FAIL", x)
-    print(f"SECURITY HEADERS: {'PASS' if not problems else 'FAIL'} — {len(pages)} pages loaded under dist/_headers; "
-          f"{len(problems)} problems")
+    print(f"SECURITY HEADERS: {'PASS' if not problems else 'FAIL'} — {len(pages)} pages loaded under "
+          f"{args.base or 'dist/_headers'}; {checked} responses read for {', '.join(NEVER)}; {len(problems)} problems")
     return 1 if problems else 0
 
 
