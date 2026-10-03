@@ -129,6 +129,17 @@ The public text stays exactly as it is until the source is read; closing any of 
   original (Annex III, p. 146); rows 9–16 are bound with labels in the source's item wording and the partial-list note is
   unbound. The survey is named as the source names it ("the 2022 Yemen Enterprise Survey"); the method cites Table 8 and
   states that Figure 108 differs for transport or road blockades.
+- 2026-10-03 — **EXT-02 closed** (transaction RC-8): the signed Decision No. 10 of 2026 (Ref. 345/CBY/2026, scan
+  https://www.cby-ye.com/files/6a27bc7883b9c.pdf) is dated 8 June 2026; the held 9 June was the news page's date.
+  `SRC-CBY-ENF-10-2026` carries `document_date` 2026-06-08, the scan and the date in its title; PSE-012 prints 2026-06-08.
+- 2026-10-03 — **EXT-03 closed** (RC-8, owner note of 3 October 2026, point 1): the four entities of Decision No. 18 are
+  transcribed Arabic first from the signed scan and held as non-public lineage only (PRV-EXCH-E023..E025, PRV-REM-E006);
+  no page, table, search record or social image names them. PSE-015 prints what the other decisions print; CLM-019 no
+  longer says "not yet transcribed". The `public_use` fields that still allow a subject for five other events are an
+  open escalation (`design/ESCALATIONS.md`, RC-8), with nothing printed.
+- 2026-10-03 — **EXT-04 narrowed** by the same owner note: the status-event table prints no entity names, in either
+  language, so "Arabic entity names from the source instruments" is no longer part of this item; it stays open for the
+  governed Arabic event text only.
 
 ## 4. KNOWN_EVIDENCE_FRONTIER
 

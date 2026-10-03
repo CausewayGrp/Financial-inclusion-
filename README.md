@@ -24,11 +24,11 @@ authority; everything else here is derived from it, implements it, or records ho
 | **Now** | **The release candidate.** Pull request #9 (branch `code/release-candidate-fixes`) implements the owner's decisions of 2 October 2026 ([`audit/OWNER_DECISIONS_2026-10-02.md`](audit/OWNER_DECISIONS_2026-10-02.md)) and the after-merge conditions of pull request #8: three Master transactions (RC-1 truth fixes, RC-2 trust copy, RC-3 governed interface strings), the question sets in the presentation contract (EAD-11), the logo's web-size derivatives (EAD-03; cold pages from about 10.3 MB to under 0.7 MB), each figure's boundary printed once (A3), the retired frame removed from `/reforms/` (A5), the search status with its true total and a result-type filter (A6), and these records reconciled ([`audit/RECORDS_RECONCILIATION_2026-10-02.md`](audit/RECORDS_RECONCILIATION_2026-10-02.md)); Part B of the same pull request finishes, challenges and hardens the product. The brief: [`audit/release_candidate/INSTRUCTIONS.md`](audit/release_candidate/INSTRUCTIONS.md). The Design programme is complete (D0–D7, pull request #7; the owner's D7 acceptance of 2 October 2026) and the production runtime is merged (pull request #8) — see [Design programme](#design-programme--current-state) |
 | **Next** | Independent review of pull request #9. Once it lands, the open items that remain are release-time only ([`FINAL_OPEN_ITEMS_REGISTER.md`](FINAL_OPEN_ITEMS_REGISTER.md) §2): hosting and the public origin, live security headers, the currentness re-run at the release date, and the owner's release acceptance; the post-launch items carry their dispositions in the register |
 | **Owner actions** | Push the two checkpoint tags and delete five merged branches ([below](#checkpoints-and-tags)); decide the OWNER_INPUT and RELEASE_ONLY items in [`FINAL_OPEN_ITEMS_REGISTER.md`](FINAL_OPEN_ITEMS_REGISTER.md) |
-| **Production Master** | `authority/Yemen_Financial_Inclusion_Evidence_Master.xlsx` · SHA-256 `5c0688d3d29d580c4cbca4da61d2e71087ebae99594fd0b6b6bb0a63f9d59ccf` |
-| **Page Specs** | `site-src/content/page_specs.json` · SHA-256 `8d1deaecff51d83c37b82332bf5829bb9bd3d4b8a6f4bd719433b3b8aef1eba5` |
+| **Production Master** | `authority/Yemen_Financial_Inclusion_Evidence_Master.xlsx` · SHA-256 `8385ede6ebd9d6760c9cfdd16b4bf5d5c80a6a787753b329fe3a3cde46ff7da3` |
+| **Page Specs** | `site-src/content/page_specs.json` · SHA-256 `ba6d2bb062ea022e98b3a0af09cf71a29c65daa8bd2f09653d14b1b2116ff2de` |
 | **Logo authority** | `site-src/assets/CauseWay_Master_Logo.png` · SHA-256 `5830163d…` (full value: `logo_sha256` in [`FINAL_REPOSITORY_MANIFEST.json`](FINAL_REPOSITORY_MANIFEST.json)); never redrawn, recoloured, cropped or regenerated |
 | **Last state OpenAI reviewed** | Commit `f726bda`, tree byte-identical to `…TRANCHE_C_COMPLETE_READING_HOLD.zip` (SHA-256 `63612dea…`); accepted 26 September 2026 |
-| **Currentness cut-off** | 26 September 2026 ([`audit/FINAL_CURRENTNESS_CUTOFF.md`](audit/FINAL_CURRENTNESS_CUTOFF.md)) |
+| **Currentness cut-off** | 3 October 2026 for the watch points re-read in the release-candidate sweep ([`audit/release_candidate/ORIGINAL_SOURCE_VERIFICATION.md`](audit/release_candidate/ORIGINAL_SOURCE_VERIFICATION.md) §3–4); 26 September 2026 for the rest ([`audit/FINAL_CURRENTNESS_CUTOFF.md`](audit/FINAL_CURRENTNESS_CUTOFF.md)) |
 | **Re-entry document** | [`OPENAI_REENTRY_CHECKPOINT.md`](OPENAI_REENTRY_CHECKPOINT.md) |
 
 The same state is recorded in [`authority/YFI_CURRENT_PROJECT_CONTEXT.json`](authority/YFI_CURRENT_PROJECT_CONTEXT.json),
@@ -148,9 +148,9 @@ Master; the validator checks every figure below against it. Counts are an invent
   rendered).
 - 10 Readings; 10 Measurement priorities; 11 governed entry questions.
 - 36 governed visual contracts, each with a design tier in `site-src/content/visuals/visual_design_contracts.json`.
-- 160 source records, of which 151 expose a public original locator; 28 curated resource cards.
+- 165 source records, of which 156 expose a public original locator; 28 curated resource cards.
 - 23 documented chronology events (the analytical rule YSC-020 is not counted).
-- 435 public search records.
+- 440 public search records.
 
 ## Decisions that shape everything here
 

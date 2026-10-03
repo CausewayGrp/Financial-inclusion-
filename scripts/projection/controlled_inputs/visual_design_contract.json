@@ -589,8 +589,8 @@
        "file": "data/payments_data.json",
        "header_key": "observation_id",
        "ids": [
-        "OBS-00080",
-        "OBS-00081"
+        "OBS-00095",
+        "OBS-00096"
        ]
       },
       "fields": {
@@ -609,8 +609,8 @@
     ],
     "step_mapping": {
      "UI-VIS-CHAIN-RULE": "NETWORK_RULE and PAYMENTS_ARCHITECTURE_DECISION events, and the funded project steps PROJECT_START, PAYMENT_RAIL_COMPONENT and ACCESS_USAGE_COMPONENT (a project component is a programme, not implementation)",
-     "UI-VIS-CHAIN-IMPLEMENTATION": "NETWORK_INTEGRATION, UNIFIED_NETWORK_COMPANY and YPCC events, and the POS terminal stock (OBS-00080)",
-     "UI-VIS-CHAIN-OPERATION": "POS transactions (OBS-00081) and NETWORK_ACTIVITY_SIGNAL; activity counts evidence operation, not use",
+     "UI-VIS-CHAIN-IMPLEMENTATION": "NETWORK_INTEGRATION, UNIFIED_NETWORK_COMPANY and YPCC events, and the POS terminal stock (OBS-00095, June 2026)",
+     "UI-VIS-CHAIN-OPERATION": "POS transactions (OBS-00096, June 2026) and NETWORK_ACTIVITY_SIGNAL; activity counts evidence operation, not use",
      "UI-VIS-CHAIN-ACCESS": "OPEN (the FMIIP access-point baseline is a project metric, not access by people)",
      "UI-VIS-CHAIN-USE": "OPEN",
      "UI-VIS-CHAIN-QUALITY": "OPEN",
@@ -988,12 +988,19 @@
        "2025-10",
        "2025-11",
        "2025-12",
-       "2026-01"
+       "2026-01",
+       "2026-02",
+       "2026-03",
+       "2026-04",
+       "2026-05",
+       "2026-06"
       ],
       "must_equal": {
        "OBS-00051": 561,
        "OBS-00077": 1357,
-       "OBS-00080": 1473
+       "OBS-00080": 1473,
+       "OBS-00092": 1636,
+       "OBS-00095": 1651
       },
       "label_fields": {
        "unit": "unit"
@@ -1017,7 +1024,7 @@
    "visual_id": "VIS-POS-TRANSACTIONS",
    "tier": "CORE_ANALYTICAL",
    "family": "POS_MONTHLY_SMALL_MULTIPLE",
-   "rationale": "Panel 2 of the POS small multiple. The path is not steady (July 2025 high), which endpoint framing hid.",
+   "rationale": "Panel 2 of the POS small multiple. The path is not steady (May 2026 high), which endpoint framing hid.",
    "contract": {
     "form": "Line of monthly transaction counts; panel 2 of the POS small multiple.",
     "series": [
@@ -1054,12 +1061,19 @@
        "2025-10",
        "2025-11",
        "2025-12",
-       "2026-01"
+       "2026-01",
+       "2026-02",
+       "2026-03",
+       "2026-04",
+       "2026-05",
+       "2026-06"
       ],
       "must_equal": {
        "OBS-00052": 8015,
        "OBS-00064": 27187,
-       "OBS-00081": 24026
+       "OBS-00081": 24026,
+       "OBS-00093": 36201,
+       "OBS-00096": 27504
       },
       "label_fields": {
        "unit": "unit"
@@ -1123,11 +1137,18 @@
        "2025-10",
        "2025-11",
        "2025-12",
-       "2026-01"
+       "2026-01",
+       "2026-02",
+       "2026-03",
+       "2026-04",
+       "2026-05",
+       "2026-06"
       ],
       "must_equal": {
        "OBS-00053": 320,
-       "OBS-00082": 1262
+       "OBS-00082": 1262,
+       "OBS-00094": 1579,
+       "OBS-00097": 1045
       },
       "must_be_missing": [
        "2025-09"

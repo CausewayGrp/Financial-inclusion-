@@ -343,6 +343,20 @@ Raised in the release-candidate pull request (2 October 2026; release candidate 
   discoverable. Needed: a governed label for the no-type group (for example "Type not recorded" / its Arabic), English and
   Arabic together, Master-first in 04. Code ships the filter the day it exists. Raised; EAD-07 in the register.`
 
+Raised at RC-8 (3 October 2026), by the owner's note of 3 October 2026, 03:10, point 1 (`audit/OWNER_DECISIONS_2026-10-02.md`):
+
+- `ESCALATE_TO_MASTER (conflict recorded, nothing printed) — 22_PROVIDERS_DATA status events — entity names — the owner's
+  rule withholds the entity names of the CBY-Aden enforcement decisions on every surface (CLM-019, the decision cards,
+  the status-event table; only NEG-EW-011 prints a name, from the 2024 circular), and the build prints none: each
+  decision shows its date, class and action, and its decision number in the source list. But the governed
+  `public_use` field of six status events still allows the subject to be shown: PSE-006, PSE-007 and PSE-010 ("May
+  show the exact dated branch-level status event"), PSE-012 (until RC-8: "May show the event subject"), and PSE-013
+  and PSE-014 ("May show the exact dated event and subject"). As the owner directed, nothing is printed. RC-8 rewrote
+  the two fields it had to touch for other reasons (PSE-012, date; PSE-015, Decision 18) so that they no longer
+  allow names. The other five are left as they are, for the owner to decide: either rewrite their `public_use` to
+  the withholding rule, or keep them as they are and record that the rule overrides them.` Open, non-blocking:
+  nothing prints a name.
+
 ## Closed at D2 (27 September 2026) — resolved by an authority the repository already holds
 
 - Arabic credit line (`NEEDS_CONTROLLED_CONTENT — RV-CWR-001 and every visual contract with a credit`): the contract

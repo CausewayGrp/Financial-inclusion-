@@ -42,3 +42,20 @@ None of the candidates changes a Measurement Agenda priority. The frontiers they
 - It is not a continuous monitoring service. After 26 September 2026 the product states only what it held on that date.
 - A "no newer item found" result is limited to the publisher pages named above.
 - Reading prose will be revised by the independent Reading package; any currentness statement inside a Reading is re-checked against this cut-off when that package is applied.
+
+## Release-candidate recheck — 3 October 2026 (appended; the Tranche C record above is unchanged)
+
+With the network open, the watch points were re-read in their originals on 3 October 2026; every request and result,
+"checked on 3 October 2026, nothing newer" included, is in `audit/release_candidate/ORIGINAL_SOURCE_VERIFICATION.md`
+§3, and what the Master now holds in §4 (transaction RC-8). The changes against the table above:
+
+| Candidate | Result on 3 October 2026 | Classification | Where |
+|---|---|---|---|
+| CBY-Aden payments page recheck (PAYCUR) | The Arabic payments page (https://cby-ye.com/pages/33) lists monthly POS releases to **June 2026**; the English page still ends at January 2026. The 26 September recheck read the English page only | PUBLIC CLAIM CHANGE | CLM-003, CLM-017, VIS-POS-*, /payments/, Home, /access/, Readings; RC-8 |
+| CBY-Aden list of licensed banks | Newer Arabic file (July 2026), 26 banks, names unchanged | Copy fix (check date 3 October 2026) and locator | CLM-008/055 and every dated mention; RC-8 |
+| CBY-Aden Governor's decisions | Newest is No. 18 (24 September 2026); No. 10 is dated 8 June 2026 on the instrument | Date fix (PSE-012) | /providers/; RC-8 |
+| World Bank FMIIP ISR, Global Findex 2025, IMF eLibrary | Nothing newer; Findex 2025 does not cover Yemen | NO CHANGE | — |
+| Remittance Prices Worldwide; SFD/SMED | Not readable from this session | NO CHANGE (stays as checked on 26 September 2026; EXT-06 open) | — |
+
+The edition label moves to 3 October 2026 ("This edition reflects what its sources showed when they were checked, up to
+3 October 2026"). B14e re-runs this sweep before the release candidate closes and appends its own dated result here.

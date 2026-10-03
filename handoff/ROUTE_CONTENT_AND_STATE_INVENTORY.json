@@ -2,23 +2,23 @@
  "schema": "YFIE_ROUTE_CONTENT_AND_STATE_INVENTORY/1.3",
  "purpose": "Design recipient's map of every route, its family, bindings, collections, next actions and the states Design must cover. Derived; not authority.",
  "generated_from": {
-  "production_master_sha256": "5c0688d3d29d580c4cbca4da61d2e71087ebae99594fd0b6b6bb0a63f9d59ccf",
-  "page_specs_sha256": "8d1deaecff51d83c37b82332bf5829bb9bd3d4b8a6f4bd719433b3b8aef1eba5",
+  "production_master_sha256": "8385ede6ebd9d6760c9cfdd16b4bf5d5c80a6a787753b329fe3a3cde46ff7da3",
+  "page_specs_sha256": "ba6d2bb062ea022e98b3a0af09cf71a29c65daa8bd2f09653d14b1b2116ff2de",
   "generator": "scripts/handoff_inventory.py"
  },
  "counts": {
   "evidence_records": 110,
   "public_claims": 60,
   "chronology_events": 23,
-  "sources": 160,
-  "public_locators": 151,
+  "sources": 165,
+  "public_locators": 156,
   "curated_resources": 28,
   "readings": 10,
   "measurement_priorities": 10,
   "entry_questions": 11,
   "visual_contracts": 36,
   "evidence_passports": 55,
-  "search_records": 435,
+  "search_records": 440,
   "page_specs": 143
  },
  "projection_roles": {
@@ -190,7 +190,7 @@
     "MA-001"
    ],
    "source_ids": [],
-   "source_references": 5,
+   "source_references": 8,
    "next_actions": [],
    "next_action_policy": "TASK_OR_QUESTION",
    "collection": {
@@ -269,7 +269,7 @@
     "MA-010"
    ],
    "source_ids": [],
-   "source_references": 12,
+   "source_references": 15,
    "next_actions": [
     "/evidence/"
    ],
@@ -420,6 +420,11 @@
      "SRC-CBY-POS-2025-11",
      "SRC-CBY-POS-2025-12",
      "SRC-CBY-POS-2026-01",
+     "SRC-CBY-POS-2026-02",
+     "SRC-CBY-POS-2026-03",
+     "SRC-CBY-POS-2026-04",
+     "SRC-CBY-POS-2026-05",
+     "SRC-CBY-POS-2026-06",
      "SRC-IMF-AIV-2025-STAFF-001",
      "SRC-IMF-AIV-2025-SUPP-001",
      "SRC-WB-ES-2013-PROFILE-001",
@@ -868,12 +873,12 @@
    "reading_ids": [],
    "measurement_ids": [],
    "source_ids": [],
-   "source_references": 3,
+   "source_references": 6,
    "next_actions": [],
    "next_action_policy": "SOURCE_RELATED_CORRECTION_OR_REUSE",
    "lineage_state": "BOUND_EXACT",
    "verification_state": "SOURCES_LISTED",
-   "public_sources_listed": 3,
+   "public_sources_listed": 6,
    "structured_data": [
     "BreadcrumbList"
    ],
@@ -1295,8 +1300,8 @@
     "en": "dist/en/evidence/CLM-017/index.html",
     "ar": "dist/ar/evidence/CLM-017/index.html"
    },
-   "title_en": "Latest monthly point-of-sale (POS) release listed by CBY-Aden: January 2026 (page checked 26 September 2026)",
-   "title_ar": "أحدث إصدار شهري لنقاط البيع لدى البنك المركزي اليمني – عدن: يناير 2026 (اطُّلع على الصفحة في 26 سبتمبر 2026)",
+   "title_en": "Latest monthly point-of-sale (POS) release listed by CBY-Aden: June 2026 on its Arabic page, January 2026 on its English page (checked 3 October 2026)",
+   "title_ar": "أحدث إصدار شهري لنقاط البيع لدى البنك المركزي اليمني – عدن: يونيو 2026 في صفحته بالعربية، ويناير 2026 في صفحته بالإنجليزية (اطُّلع عليهما في 3 أكتوبر 2026)",
    "sections": 2,
    "section_rows_split_by_language": false,
    "evidence_ids": [
@@ -1306,12 +1311,12 @@
    "reading_ids": [],
    "measurement_ids": [],
    "source_ids": [],
-   "source_references": 2,
+   "source_references": 3,
    "next_actions": [],
    "next_action_policy": "SOURCE_RELATED_CORRECTION_OR_REUSE",
    "lineage_state": "BOUND_EXACT",
    "verification_state": "SOURCES_LISTED",
-   "public_sources_listed": 2,
+   "public_sources_listed": 3,
    "structured_data": [
     "BreadcrumbList"
    ],
@@ -3944,12 +3949,12 @@
    "reading_ids": [],
    "measurement_ids": [],
    "source_ids": [],
-   "source_references": 11,
+   "source_references": 16,
    "next_actions": [],
    "next_action_policy": "SOURCE_RELATED_CORRECTION_OR_REUSE",
    "lineage_state": "BOUND_EXACT",
    "verification_state": "SOURCES_LISTED",
-   "public_sources_listed": 11,
+   "public_sources_listed": 16,
    "structured_data": [
     "BreadcrumbList"
    ],
@@ -3977,12 +3982,12 @@
    "reading_ids": [],
    "measurement_ids": [],
    "source_ids": [],
-   "source_references": 11,
+   "source_references": 16,
    "next_actions": [],
    "next_action_policy": "SOURCE_RELATED_CORRECTION_OR_REUSE",
    "lineage_state": "BOUND_EXACT",
    "verification_state": "SOURCES_LISTED",
-   "public_sources_listed": 11,
+   "public_sources_listed": 16,
    "structured_data": [
     "BreadcrumbList"
    ],
@@ -4010,12 +4015,12 @@
    "reading_ids": [],
    "measurement_ids": [],
    "source_ids": [],
-   "source_references": 10,
+   "source_references": 15,
    "next_actions": [],
    "next_action_policy": "SOURCE_RELATED_CORRECTION_OR_REUSE",
    "lineage_state": "BOUND_EXACT",
    "verification_state": "SOURCES_LISTED",
-   "public_sources_listed": 10,
+   "public_sources_listed": 15,
    "structured_data": [
     "BreadcrumbList"
    ],
@@ -4598,7 +4603,7 @@
    "reading_ids": [],
    "measurement_ids": [],
    "source_ids": [],
-   "source_references": 29,
+   "source_references": 30,
    "next_actions": [
     "/evidence/",
     "/data/",
@@ -4617,8 +4622,8 @@
     "en": "dist/en/payments/index.html",
     "ar": "dist/ar/payments/index.html"
    },
-   "title_en": "Payments: point-of-sale (POS) terminals reported by the Central Bank of Yemen – Aden rose from 561 to 1,473 between March 2025 and January 2026; how many people use them is not measured",
-   "title_ar": "المدفوعات: ارتفع عدد أجهزة نقاط البيع التي يُبلغ عنها البنك المركزي اليمني – عدن من 561 إلى 1,473 بين مارس 2025 ويناير 2026؛ أما عدد من يستخدمونها فغير مقيس",
+   "title_en": "Payments: point-of-sale (POS) terminals reported by the Central Bank of Yemen – Aden rose from 561 to 1,651 between March 2025 and June 2026; how many people use them is not measured",
+   "title_ar": "المدفوعات: ارتفع عدد أجهزة نقاط البيع التي يُبلغ عنها البنك المركزي اليمني – عدن من 561 إلى 1,651 بين مارس 2025 ويونيو 2026؛ أما عدد من يستخدمونها فغير مقيس",
    "sections": 9,
    "section_rows_split_by_language": true,
    "evidence_ids": [
@@ -4659,7 +4664,7 @@
     "MA-010"
    ],
    "source_ids": [],
-   "source_references": 31,
+   "source_references": 36,
    "next_actions": [
     "/evidence/CLM-003/"
    ],
@@ -4733,7 +4738,7 @@
     "MA-010"
    ],
    "source_ids": [],
-   "source_references": 23,
+   "source_references": 26,
    "next_actions": [
     "/evidence/CLM-001/"
    ],
@@ -4852,7 +4857,7 @@
    ],
    "measurement_ids": [],
    "source_ids": [],
-   "source_references": 37,
+   "source_references": 40,
    "next_actions": [
     "/measurement/",
     "/evidence/"
@@ -4991,7 +4996,7 @@
    "source_ids": [
     "SRC-WB-FINDEX-001"
    ],
-   "source_references": 9,
+   "source_references": 12,
    "next_actions": [],
    "next_action_policy": "VERIFY_BOUND_EVIDENCE_RECORDS",
    "structured_data": [
@@ -5112,7 +5117,7 @@
     "MA-010"
    ],
    "source_ids": [],
-   "source_references": 10,
+   "source_references": 13,
    "next_actions": [],
    "next_action_policy": "VERIFY_BOUND_EVIDENCE_RECORDS",
    "structured_data": [
@@ -5236,7 +5241,7 @@
    "source_ids": [
     "SRC-IMF-YEM-SMP-2026"
    ],
-   "source_references": 12,
+   "source_references": 15,
    "next_actions": [],
    "next_action_policy": "VERIFY_BOUND_EVIDENCE_RECORDS",
    "structured_data": [
@@ -5338,7 +5343,7 @@
     "MA-010"
    ],
    "source_ids": [],
-   "source_references": 34,
+   "source_references": 37,
    "next_actions": [
     "/evidence/CLM-011/"
    ],
@@ -5559,7 +5564,7 @@
      "page_family": "Evidence Record",
      "lineage_state": "BOUND_EXACT",
      "verification_state": "SOURCES_LISTED",
-     "public_sources_listed": 3,
+     "public_sources_listed": 6,
      "visual_ids": [],
      "visual_grammar_present": [],
      "reading_ids": []

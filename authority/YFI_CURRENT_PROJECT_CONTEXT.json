@@ -1,7 +1,7 @@
 {
   "schema": "YFI_CURRENT_PROJECT_CONTEXT/1.0",
   "role": "COMPACT_PROJECTION_NOT_AUTHORITY",
-  "generated_at": "2026-10-03T00:00:00Z",
+  "generated_at": "2026-10-03T12:00:00Z",
   "system": {
     "name_en": "Yemen Financial Inclusion Evidence",
     "name_ar": "أدلة الشمول المالي في اليمن",
@@ -21,7 +21,7 @@
     "tranche_c": {
       "closure": "audit/TRANCHE_C_FINAL_ACCEPTANCE.md",
       "findings_ledger": "audit/TRANCHE_C_FINDINGS_LEDGER.csv",
-      "currentness_cutoff": "audit/FINAL_CURRENTNESS_CUTOFF.md — 26 September 2026",
+      "currentness_cutoff": "audit/FINAL_CURRENTNESS_CUTOFF.md — 26 September 2026; release-candidate recheck of 3 October 2026 appended (edition of 3 October 2026)",
       "reading_portfolio": "audit/READING_PORTFOLIO_FINAL_ADJUDICATION.md — ten Readings integrated Master-first (RP-F2); BIL-05 CLOSED (bilingual invariance 0)",
       "public_corpus": "audit/F5_PUBLIC_CORPUS_ACCEPTANCE.md — every public text reviewed in Arabic, English and parity (667 findings; ledger audit/F5_CORPUS_FINDINGS_LEDGER.csv)",
       "discovery_accessibility_security": "audit/F6_DISCOVERY_ACCESSIBILITY_RIGHTS_SECURITY_ACCEPTANCE.md — pre-Design contract and gates F6-G01…G08; public origin null until the owner sets it (site-src/deployment.json)",
@@ -37,7 +37,7 @@
   "production_master": {
     "path": "authority/Yemen_Financial_Inclusion_Evidence_Master.xlsx",
     "drive_id": "1xAbdDHJd5bYo0Pzo_a6dR6HsZ056LzJU",
-    "sha256": "5c0688d3d29d580c4cbca4da61d2e71087ebae99594fd0b6b6bb0a63f9d59ccf",
+    "sha256": "8385ede6ebd9d6760c9cfdd16b4bf5d5c80a6a787753b329fe3a3cde46ff7da3",
     "is_sole_authority": true,
     "authority_dimensions": [
       "semantic",
@@ -51,7 +51,7 @@
   },
   "controlled_projection": {
     "page_specs_path": "site-src/content/page_specs.json",
-    "page_specs_sha256": "8d1deaecff51d83c37b82332bf5829bb9bd3d4b8a6f4bd719433b3b8aef1eba5",
+    "page_specs_sha256": "ba6d2bb062ea022e98b3a0af09cf71a29c65daa8bd2f09653d14b1b2116ff2de",
     "page_specs": 143,
     "all_page_specs_master_hash_match": true,
     "page_specs_index_master_hash_match": true
@@ -66,9 +66,9 @@
     "readings": 10,
     "measurement_priorities": 10,
     "visual_contracts": 36,
-    "search_records": 435,
-    "sources": 160,
-    "publicly_addressable_sources": 151,
+    "search_records": 440,
+    "sources": 165,
+    "publicly_addressable_sources": 156,
     "curated_source_report_cards": 28,
     "chronology_events": 23,
     "reading_sections": 68
@@ -190,7 +190,7 @@
     ]
   },
   "validation": {
-    "master_sha256_recorded": "5c0688d3d29d580c4cbca4da61d2e71087ebae99594fd0b6b6bb0a63f9d59ccf",
+    "master_sha256_recorded": "8385ede6ebd9d6760c9cfdd16b4bf5d5c80a6a787753b329fe3a3cde46ff7da3",
     "projection_hash_binding": "PASS",
     "schema_required_keys": [
       "schema",

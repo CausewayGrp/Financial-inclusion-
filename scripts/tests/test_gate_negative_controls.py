@@ -229,6 +229,10 @@ CONTROLS = [
     ("the runtime stops isolating the identifiers it writes", "site-src/app.js",
      replace(".replace(ID_RUN,m=>`<bdi dir=\"ltr\">${m}</bdi>`)", ""),
      "RC-DATES the runtime does not isolate the identifiers it writes"),
+    # RC-A1 (Owner Addendum 2, A1): the text alternative of a chain figure names only steps the drawing has.
+    ("a chain figure's text alternative names a step its drawing lacks", "en/evidence/VIS-PAYMENT-RAILS/index.html",
+     sub_once(r'(<div class="alt"[^>]*>.*?<p class="small">)', r'\1The mobile e-money amendment (9 July 2025). '),
+     "RC-A1 a chain figure's text alternative names a step its drawing lacks en/evidence/VIS-PAYMENT-RAILS/index.html"),
     # The standing content gate (release candidate, RC-1): a governed sentence dropped from a page, and a number no governed
     # record or contract holds, must each be reported by scripts/tests/test_content_parity.py.
     ("a domain answer drops a governed sentence", "en/people/index.html",

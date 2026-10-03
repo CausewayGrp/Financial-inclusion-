@@ -50,17 +50,26 @@
     "dependency_ids": [
       "SRC-CBY-POS-2025-03",
       "SRC-CBY-POS-2025-12",
-      "SRC-CBY-POS-2026-01"
+      "SRC-CBY-POS-2026-01",
+      "SRC-CBY-POS-2026-04",
+      "SRC-CBY-POS-2026-05",
+      "SRC-CBY-POS-2026-06"
     ],
     "direct_source_ids": [
       "SRC-CBY-POS-2025-03",
       "SRC-CBY-POS-2025-12",
-      "SRC-CBY-POS-2026-01"
+      "SRC-CBY-POS-2026-01",
+      "SRC-CBY-POS-2026-04",
+      "SRC-CBY-POS-2026-05",
+      "SRC-CBY-POS-2026-06"
     ],
     "resolved_source_ids": [
       "SRC-CBY-POS-2025-03",
       "SRC-CBY-POS-2025-12",
-      "SRC-CBY-POS-2026-01"
+      "SRC-CBY-POS-2026-01",
+      "SRC-CBY-POS-2026-04",
+      "SRC-CBY-POS-2026-05",
+      "SRC-CBY-POS-2026-06"
     ],
     "resolved_via_object_ids": [],
     "context_reference_ids": [],
@@ -79,6 +88,21 @@
       {
         "source_id": "SRC-CBY-POS-2026-01",
         "primary_url": "https://www.cby-ye.com/files/69b058d4bc306.pdf",
+        "metadata_state": "DISPLAY_READY"
+      },
+      {
+        "source_id": "SRC-CBY-POS-2026-04",
+        "primary_url": "https://cby-ye.com/files/6a6f968423908.pdf",
+        "metadata_state": "DISPLAY_READY"
+      },
+      {
+        "source_id": "SRC-CBY-POS-2026-05",
+        "primary_url": "https://cby-ye.com/files/6a6f96ed5c009.pdf",
+        "metadata_state": "DISPLAY_READY"
+      },
+      {
+        "source_id": "SRC-CBY-POS-2026-06",
+        "primary_url": "https://cby-ye.com/files/6a6f973c98c25.pdf",
         "metadata_state": "DISPLAY_READY"
       }
     ],
@@ -612,14 +636,17 @@
     ],
     "lineage_state": "BOUND_EXACT",
     "dependency_ids": [
+      "SRC-CBY-POS-2026-06",
       "SRC-CBY-POS-2026-01",
       "SRC-CBY-POS-PUBLICATION-PAGE-2026-001"
     ],
     "direct_source_ids": [
+      "SRC-CBY-POS-2026-06",
       "SRC-CBY-POS-2026-01",
       "SRC-CBY-POS-PUBLICATION-PAGE-2026-001"
     ],
     "resolved_source_ids": [
+      "SRC-CBY-POS-2026-06",
       "SRC-CBY-POS-2026-01",
       "SRC-CBY-POS-PUBLICATION-PAGE-2026-001"
     ],
@@ -627,6 +654,11 @@
     "context_reference_ids": [],
     "unresolved_dependency_ids": [],
     "source_locators": [
+      {
+        "source_id": "SRC-CBY-POS-2026-06",
+        "primary_url": "https://cby-ye.com/files/6a6f973c98c25.pdf",
+        "metadata_state": "DISPLAY_READY"
+      },
       {
         "source_id": "SRC-CBY-POS-2026-01",
         "primary_url": "https://www.cby-ye.com/files/69b058d4bc306.pdf",
@@ -2184,7 +2216,7 @@
     "source_locators": [
       {
         "source_id": "SRC-CBY-BANKLIST-AR-2026-001",
-        "primary_url": "https://english.cby-ye.com/files/69dfc71a51c14.pdf",
+        "primary_url": "https://cby-ye.com/files/6a665add29feb.pdf",
         "metadata_state": "DISPLAY_READY"
       }
     ],
@@ -2406,7 +2438,12 @@
       "SRC-CBY-POS-2025-10",
       "SRC-CBY-POS-2025-11",
       "SRC-CBY-POS-2025-12",
-      "SRC-CBY-POS-2026-01"
+      "SRC-CBY-POS-2026-01",
+      "SRC-CBY-POS-2026-02",
+      "SRC-CBY-POS-2026-03",
+      "SRC-CBY-POS-2026-04",
+      "SRC-CBY-POS-2026-05",
+      "SRC-CBY-POS-2026-06"
     ],
     "direct_source_ids": [
       "SRC-CBY-POS-2025-03",
@@ -2419,7 +2456,12 @@
       "SRC-CBY-POS-2025-10",
       "SRC-CBY-POS-2025-11",
       "SRC-CBY-POS-2025-12",
-      "SRC-CBY-POS-2026-01"
+      "SRC-CBY-POS-2026-01",
+      "SRC-CBY-POS-2026-02",
+      "SRC-CBY-POS-2026-03",
+      "SRC-CBY-POS-2026-04",
+      "SRC-CBY-POS-2026-05",
+      "SRC-CBY-POS-2026-06"
     ],
     "resolved_source_ids": [
       "SRC-CBY-POS-2025-03",
@@ -2432,7 +2474,12 @@
       "SRC-CBY-POS-2025-10",
       "SRC-CBY-POS-2025-11",
       "SRC-CBY-POS-2025-12",
-      "SRC-CBY-POS-2026-01"
+      "SRC-CBY-POS-2026-01",
+      "SRC-CBY-POS-2026-02",
+      "SRC-CBY-POS-2026-03",
+      "SRC-CBY-POS-2026-04",
+      "SRC-CBY-POS-2026-05",
+      "SRC-CBY-POS-2026-06"
     ],
     "resolved_via_object_ids": [],
     "context_reference_ids": [],
@@ -2491,6 +2538,31 @@
       {
         "source_id": "SRC-CBY-POS-2026-01",
         "primary_url": "https://www.cby-ye.com/files/69b058d4bc306.pdf",
+        "metadata_state": "DISPLAY_READY"
+      },
+      {
+        "source_id": "SRC-CBY-POS-2026-02",
+        "primary_url": "https://cby-ye.com/files/6a6f958d49cc2.pdf",
+        "metadata_state": "DISPLAY_READY"
+      },
+      {
+        "source_id": "SRC-CBY-POS-2026-03",
+        "primary_url": "https://cby-ye.com/files/6a6f960871730.pdf",
+        "metadata_state": "DISPLAY_READY"
+      },
+      {
+        "source_id": "SRC-CBY-POS-2026-04",
+        "primary_url": "https://cby-ye.com/files/6a6f968423908.pdf",
+        "metadata_state": "DISPLAY_READY"
+      },
+      {
+        "source_id": "SRC-CBY-POS-2026-05",
+        "primary_url": "https://cby-ye.com/files/6a6f96ed5c009.pdf",
+        "metadata_state": "DISPLAY_READY"
+      },
+      {
+        "source_id": "SRC-CBY-POS-2026-06",
+        "primary_url": "https://cby-ye.com/files/6a6f973c98c25.pdf",
         "metadata_state": "DISPLAY_READY"
       }
     ],
@@ -2515,7 +2587,12 @@
       "SRC-CBY-POS-2025-10",
       "SRC-CBY-POS-2025-11",
       "SRC-CBY-POS-2025-12",
-      "SRC-CBY-POS-2026-01"
+      "SRC-CBY-POS-2026-01",
+      "SRC-CBY-POS-2026-02",
+      "SRC-CBY-POS-2026-03",
+      "SRC-CBY-POS-2026-04",
+      "SRC-CBY-POS-2026-05",
+      "SRC-CBY-POS-2026-06"
     ],
     "direct_source_ids": [
       "SRC-CBY-POS-2025-03",
@@ -2528,7 +2605,12 @@
       "SRC-CBY-POS-2025-10",
       "SRC-CBY-POS-2025-11",
       "SRC-CBY-POS-2025-12",
-      "SRC-CBY-POS-2026-01"
+      "SRC-CBY-POS-2026-01",
+      "SRC-CBY-POS-2026-02",
+      "SRC-CBY-POS-2026-03",
+      "SRC-CBY-POS-2026-04",
+      "SRC-CBY-POS-2026-05",
+      "SRC-CBY-POS-2026-06"
     ],
     "resolved_source_ids": [
       "SRC-CBY-POS-2025-03",
@@ -2541,7 +2623,12 @@
       "SRC-CBY-POS-2025-10",
       "SRC-CBY-POS-2025-11",
       "SRC-CBY-POS-2025-12",
-      "SRC-CBY-POS-2026-01"
+      "SRC-CBY-POS-2026-01",
+      "SRC-CBY-POS-2026-02",
+      "SRC-CBY-POS-2026-03",
+      "SRC-CBY-POS-2026-04",
+      "SRC-CBY-POS-2026-05",
+      "SRC-CBY-POS-2026-06"
     ],
     "resolved_via_object_ids": [],
     "context_reference_ids": [],
@@ -2601,6 +2688,31 @@
         "source_id": "SRC-CBY-POS-2026-01",
         "primary_url": "https://www.cby-ye.com/files/69b058d4bc306.pdf",
         "metadata_state": "DISPLAY_READY"
+      },
+      {
+        "source_id": "SRC-CBY-POS-2026-02",
+        "primary_url": "https://cby-ye.com/files/6a6f958d49cc2.pdf",
+        "metadata_state": "DISPLAY_READY"
+      },
+      {
+        "source_id": "SRC-CBY-POS-2026-03",
+        "primary_url": "https://cby-ye.com/files/6a6f960871730.pdf",
+        "metadata_state": "DISPLAY_READY"
+      },
+      {
+        "source_id": "SRC-CBY-POS-2026-04",
+        "primary_url": "https://cby-ye.com/files/6a6f968423908.pdf",
+        "metadata_state": "DISPLAY_READY"
+      },
+      {
+        "source_id": "SRC-CBY-POS-2026-05",
+        "primary_url": "https://cby-ye.com/files/6a6f96ed5c009.pdf",
+        "metadata_state": "DISPLAY_READY"
+      },
+      {
+        "source_id": "SRC-CBY-POS-2026-06",
+        "primary_url": "https://cby-ye.com/files/6a6f973c98c25.pdf",
+        "metadata_state": "DISPLAY_READY"
       }
     ],
     "closure_state": "CLOSED_TO_SOURCE_ID",
@@ -2623,7 +2735,12 @@
       "SRC-CBY-POS-2025-10",
       "SRC-CBY-POS-2025-11",
       "SRC-CBY-POS-2025-12",
-      "SRC-CBY-POS-2026-01"
+      "SRC-CBY-POS-2026-01",
+      "SRC-CBY-POS-2026-02",
+      "SRC-CBY-POS-2026-03",
+      "SRC-CBY-POS-2026-04",
+      "SRC-CBY-POS-2026-05",
+      "SRC-CBY-POS-2026-06"
     ],
     "direct_source_ids": [
       "SRC-CBY-POS-2025-03",
@@ -2635,7 +2752,12 @@
       "SRC-CBY-POS-2025-10",
       "SRC-CBY-POS-2025-11",
       "SRC-CBY-POS-2025-12",
-      "SRC-CBY-POS-2026-01"
+      "SRC-CBY-POS-2026-01",
+      "SRC-CBY-POS-2026-02",
+      "SRC-CBY-POS-2026-03",
+      "SRC-CBY-POS-2026-04",
+      "SRC-CBY-POS-2026-05",
+      "SRC-CBY-POS-2026-06"
     ],
     "resolved_source_ids": [
       "SRC-CBY-POS-2025-03",
@@ -2647,7 +2769,12 @@
       "SRC-CBY-POS-2025-10",
       "SRC-CBY-POS-2025-11",
       "SRC-CBY-POS-2025-12",
-      "SRC-CBY-POS-2026-01"
+      "SRC-CBY-POS-2026-01",
+      "SRC-CBY-POS-2026-02",
+      "SRC-CBY-POS-2026-03",
+      "SRC-CBY-POS-2026-04",
+      "SRC-CBY-POS-2026-05",
+      "SRC-CBY-POS-2026-06"
     ],
     "resolved_via_object_ids": [],
     "context_reference_ids": [],
@@ -2701,6 +2828,31 @@
       {
         "source_id": "SRC-CBY-POS-2026-01",
         "primary_url": "https://www.cby-ye.com/files/69b058d4bc306.pdf",
+        "metadata_state": "DISPLAY_READY"
+      },
+      {
+        "source_id": "SRC-CBY-POS-2026-02",
+        "primary_url": "https://cby-ye.com/files/6a6f958d49cc2.pdf",
+        "metadata_state": "DISPLAY_READY"
+      },
+      {
+        "source_id": "SRC-CBY-POS-2026-03",
+        "primary_url": "https://cby-ye.com/files/6a6f960871730.pdf",
+        "metadata_state": "DISPLAY_READY"
+      },
+      {
+        "source_id": "SRC-CBY-POS-2026-04",
+        "primary_url": "https://cby-ye.com/files/6a6f968423908.pdf",
+        "metadata_state": "DISPLAY_READY"
+      },
+      {
+        "source_id": "SRC-CBY-POS-2026-05",
+        "primary_url": "https://cby-ye.com/files/6a6f96ed5c009.pdf",
+        "metadata_state": "DISPLAY_READY"
+      },
+      {
+        "source_id": "SRC-CBY-POS-2026-06",
+        "primary_url": "https://cby-ye.com/files/6a6f973c98c25.pdf",
         "metadata_state": "DISPLAY_READY"
       }
     ],
@@ -3931,7 +4083,7 @@
     "source_locators": [
       {
         "source_id": "SRC-CBY-BANKLIST-AR-2026-001",
-        "primary_url": "https://english.cby-ye.com/files/69dfc71a51c14.pdf",
+        "primary_url": "https://cby-ye.com/files/6a665add29feb.pdf",
         "metadata_state": "DISPLAY_READY"
       }
     ],
@@ -4598,12 +4750,18 @@
     "direct_source_ids": [
       "SRC-CBY-POS-2025-03",
       "SRC-CBY-POS-2025-12",
-      "SRC-CBY-POS-2026-01"
+      "SRC-CBY-POS-2026-01",
+      "SRC-CBY-POS-2026-04",
+      "SRC-CBY-POS-2026-05",
+      "SRC-CBY-POS-2026-06"
     ],
     "resolved_source_ids": [
       "SRC-CBY-POS-2025-03",
       "SRC-CBY-POS-2025-12",
-      "SRC-CBY-POS-2026-01"
+      "SRC-CBY-POS-2026-01",
+      "SRC-CBY-POS-2026-04",
+      "SRC-CBY-POS-2026-05",
+      "SRC-CBY-POS-2026-06"
     ],
     "resolved_via_object_ids": [],
     "context_reference_ids": [],
@@ -4622,6 +4780,21 @@
       {
         "source_id": "SRC-CBY-POS-2026-01",
         "primary_url": "https://www.cby-ye.com/files/69b058d4bc306.pdf",
+        "metadata_state": "DISPLAY_READY"
+      },
+      {
+        "source_id": "SRC-CBY-POS-2026-04",
+        "primary_url": "https://cby-ye.com/files/6a6f968423908.pdf",
+        "metadata_state": "DISPLAY_READY"
+      },
+      {
+        "source_id": "SRC-CBY-POS-2026-05",
+        "primary_url": "https://cby-ye.com/files/6a6f96ed5c009.pdf",
+        "metadata_state": "DISPLAY_READY"
+      },
+      {
+        "source_id": "SRC-CBY-POS-2026-06",
+        "primary_url": "https://cby-ye.com/files/6a6f973c98c25.pdf",
         "metadata_state": "DISPLAY_READY"
       }
     ],
@@ -4786,7 +4959,7 @@
     "source_locators": [
       {
         "source_id": "SRC-CBY-BANKLIST-AR-2026-001",
-        "primary_url": "https://english.cby-ye.com/files/69dfc71a51c14.pdf",
+        "primary_url": "https://cby-ye.com/files/6a665add29feb.pdf",
         "metadata_state": "DISPLAY_READY"
       }
     ],
@@ -5129,10 +5302,12 @@
       "CLM-017"
     ],
     "direct_source_ids": [
+      "SRC-CBY-POS-2026-06",
       "SRC-CBY-POS-2026-01",
       "SRC-CBY-POS-PUBLICATION-PAGE-2026-001"
     ],
     "resolved_source_ids": [
+      "SRC-CBY-POS-2026-06",
       "SRC-CBY-POS-2026-01",
       "SRC-CBY-POS-PUBLICATION-PAGE-2026-001"
     ],
@@ -5140,6 +5315,11 @@
     "context_reference_ids": [],
     "unresolved_dependency_ids": [],
     "source_locators": [
+      {
+        "source_id": "SRC-CBY-POS-2026-06",
+        "primary_url": "https://cby-ye.com/files/6a6f973c98c25.pdf",
+        "metadata_state": "DISPLAY_READY"
+      },
       {
         "source_id": "SRC-CBY-POS-2026-01",
         "primary_url": "https://www.cby-ye.com/files/69b058d4bc306.pdf",
@@ -6878,7 +7058,7 @@
     "source_locators": [
       {
         "source_id": "SRC-CBY-BANKLIST-AR-2026-001",
-        "primary_url": "https://english.cby-ye.com/files/69dfc71a51c14.pdf",
+        "primary_url": "https://cby-ye.com/files/6a665add29feb.pdf",
         "metadata_state": "DISPLAY_READY"
       }
     ],
@@ -7274,6 +7454,9 @@
       "SRC-CBY-POS-2025-03",
       "SRC-CBY-POS-2025-12",
       "SRC-CBY-POS-2026-01",
+      "SRC-CBY-POS-2026-04",
+      "SRC-CBY-POS-2026-05",
+      "SRC-CBY-POS-2026-06",
       "SRC-UNDP-FMIIP-001",
       "SRC-CBY-PAYREPORT-H1-2025",
       "SRC-WB-FMIIP-P180708"
@@ -7325,6 +7508,21 @@
         "metadata_state": "DISPLAY_READY"
       },
       {
+        "source_id": "SRC-CBY-POS-2026-04",
+        "primary_url": "https://cby-ye.com/files/6a6f968423908.pdf",
+        "metadata_state": "DISPLAY_READY"
+      },
+      {
+        "source_id": "SRC-CBY-POS-2026-05",
+        "primary_url": "https://cby-ye.com/files/6a6f96ed5c009.pdf",
+        "metadata_state": "DISPLAY_READY"
+      },
+      {
+        "source_id": "SRC-CBY-POS-2026-06",
+        "primary_url": "https://cby-ye.com/files/6a6f973c98c25.pdf",
+        "metadata_state": "DISPLAY_READY"
+      },
+      {
         "source_id": "SRC-UNDP-FMIIP-001",
         "primary_url": "https://www.undp.org/yemen/projects/yemen-financial-market-infrastructure-and-inclusion-project",
         "metadata_state": "DISPLAY_READY"
@@ -7369,6 +7567,9 @@
       "SRC-CBY-POS-2025-03",
       "SRC-CBY-POS-2025-12",
       "SRC-CBY-POS-2026-01",
+      "SRC-CBY-POS-2026-04",
+      "SRC-CBY-POS-2026-05",
+      "SRC-CBY-POS-2026-06",
       "SRC-CBY-UNIFIED-NET-2026-001",
       "SRC-CBY-BANK-NETWORK-MTG-2026-001",
       "SRC-CBY-YPCC-FOUND-2026-001",
@@ -7416,6 +7617,21 @@
       {
         "source_id": "SRC-CBY-POS-2026-01",
         "primary_url": "https://www.cby-ye.com/files/69b058d4bc306.pdf",
+        "metadata_state": "DISPLAY_READY"
+      },
+      {
+        "source_id": "SRC-CBY-POS-2026-04",
+        "primary_url": "https://cby-ye.com/files/6a6f968423908.pdf",
+        "metadata_state": "DISPLAY_READY"
+      },
+      {
+        "source_id": "SRC-CBY-POS-2026-05",
+        "primary_url": "https://cby-ye.com/files/6a6f96ed5c009.pdf",
+        "metadata_state": "DISPLAY_READY"
+      },
+      {
+        "source_id": "SRC-CBY-POS-2026-06",
+        "primary_url": "https://cby-ye.com/files/6a6f973c98c25.pdf",
         "metadata_state": "DISPLAY_READY"
       },
       {
@@ -7576,7 +7792,7 @@
       },
       {
         "source_id": "SRC-CBY-BANKLIST-AR-2026-001",
-        "primary_url": "https://english.cby-ye.com/files/69dfc71a51c14.pdf",
+        "primary_url": "https://cby-ye.com/files/6a665add29feb.pdf",
         "metadata_state": "DISPLAY_READY"
       },
       {
@@ -7720,6 +7936,9 @@
       "SRC-CBY-POS-2025-03",
       "SRC-CBY-POS-2025-12",
       "SRC-CBY-POS-2026-01",
+      "SRC-CBY-POS-2026-04",
+      "SRC-CBY-POS-2026-05",
+      "SRC-CBY-POS-2026-06",
       "SRC-CBY-UNIFIED-NET-2026-001",
       "SRC-CBY-BANK-NETWORK-MTG-2026-001",
       "SRC-CBY-YPCC-FOUND-2026-001",
@@ -7754,6 +7973,21 @@
       {
         "source_id": "SRC-CBY-POS-2026-01",
         "primary_url": "https://www.cby-ye.com/files/69b058d4bc306.pdf",
+        "metadata_state": "DISPLAY_READY"
+      },
+      {
+        "source_id": "SRC-CBY-POS-2026-04",
+        "primary_url": "https://cby-ye.com/files/6a6f968423908.pdf",
+        "metadata_state": "DISPLAY_READY"
+      },
+      {
+        "source_id": "SRC-CBY-POS-2026-05",
+        "primary_url": "https://cby-ye.com/files/6a6f96ed5c009.pdf",
+        "metadata_state": "DISPLAY_READY"
+      },
+      {
+        "source_id": "SRC-CBY-POS-2026-06",
+        "primary_url": "https://cby-ye.com/files/6a6f973c98c25.pdf",
         "metadata_state": "DISPLAY_READY"
       },
       {
@@ -8226,7 +8460,12 @@
       "SRC-CBY-POS-2025-10",
       "SRC-CBY-POS-2025-11",
       "SRC-CBY-POS-2025-12",
-      "SRC-CBY-POS-2026-01"
+      "SRC-CBY-POS-2026-01",
+      "SRC-CBY-POS-2026-02",
+      "SRC-CBY-POS-2026-03",
+      "SRC-CBY-POS-2026-04",
+      "SRC-CBY-POS-2026-05",
+      "SRC-CBY-POS-2026-06"
     ],
     "resolved_source_ids": [
       "SRC-CBY-POS-2025-03",
@@ -8239,7 +8478,12 @@
       "SRC-CBY-POS-2025-10",
       "SRC-CBY-POS-2025-11",
       "SRC-CBY-POS-2025-12",
-      "SRC-CBY-POS-2026-01"
+      "SRC-CBY-POS-2026-01",
+      "SRC-CBY-POS-2026-02",
+      "SRC-CBY-POS-2026-03",
+      "SRC-CBY-POS-2026-04",
+      "SRC-CBY-POS-2026-05",
+      "SRC-CBY-POS-2026-06"
     ],
     "resolved_via_object_ids": [],
     "context_reference_ids": [],
@@ -8298,6 +8542,31 @@
       {
         "source_id": "SRC-CBY-POS-2026-01",
         "primary_url": "https://www.cby-ye.com/files/69b058d4bc306.pdf",
+        "metadata_state": "DISPLAY_READY"
+      },
+      {
+        "source_id": "SRC-CBY-POS-2026-02",
+        "primary_url": "https://cby-ye.com/files/6a6f958d49cc2.pdf",
+        "metadata_state": "DISPLAY_READY"
+      },
+      {
+        "source_id": "SRC-CBY-POS-2026-03",
+        "primary_url": "https://cby-ye.com/files/6a6f960871730.pdf",
+        "metadata_state": "DISPLAY_READY"
+      },
+      {
+        "source_id": "SRC-CBY-POS-2026-04",
+        "primary_url": "https://cby-ye.com/files/6a6f968423908.pdf",
+        "metadata_state": "DISPLAY_READY"
+      },
+      {
+        "source_id": "SRC-CBY-POS-2026-05",
+        "primary_url": "https://cby-ye.com/files/6a6f96ed5c009.pdf",
+        "metadata_state": "DISPLAY_READY"
+      },
+      {
+        "source_id": "SRC-CBY-POS-2026-06",
+        "primary_url": "https://cby-ye.com/files/6a6f973c98c25.pdf",
         "metadata_state": "DISPLAY_READY"
       }
     ],
@@ -8327,7 +8596,12 @@
       "SRC-CBY-POS-2025-10",
       "SRC-CBY-POS-2025-11",
       "SRC-CBY-POS-2025-12",
-      "SRC-CBY-POS-2026-01"
+      "SRC-CBY-POS-2026-01",
+      "SRC-CBY-POS-2026-02",
+      "SRC-CBY-POS-2026-03",
+      "SRC-CBY-POS-2026-04",
+      "SRC-CBY-POS-2026-05",
+      "SRC-CBY-POS-2026-06"
     ],
     "resolved_source_ids": [
       "SRC-CBY-POS-2025-03",
@@ -8340,7 +8614,12 @@
       "SRC-CBY-POS-2025-10",
       "SRC-CBY-POS-2025-11",
       "SRC-CBY-POS-2025-12",
-      "SRC-CBY-POS-2026-01"
+      "SRC-CBY-POS-2026-01",
+      "SRC-CBY-POS-2026-02",
+      "SRC-CBY-POS-2026-03",
+      "SRC-CBY-POS-2026-04",
+      "SRC-CBY-POS-2026-05",
+      "SRC-CBY-POS-2026-06"
     ],
     "resolved_via_object_ids": [],
     "context_reference_ids": [],
@@ -8400,6 +8679,31 @@
         "source_id": "SRC-CBY-POS-2026-01",
         "primary_url": "https://www.cby-ye.com/files/69b058d4bc306.pdf",
         "metadata_state": "DISPLAY_READY"
+      },
+      {
+        "source_id": "SRC-CBY-POS-2026-02",
+        "primary_url": "https://cby-ye.com/files/6a6f958d49cc2.pdf",
+        "metadata_state": "DISPLAY_READY"
+      },
+      {
+        "source_id": "SRC-CBY-POS-2026-03",
+        "primary_url": "https://cby-ye.com/files/6a6f960871730.pdf",
+        "metadata_state": "DISPLAY_READY"
+      },
+      {
+        "source_id": "SRC-CBY-POS-2026-04",
+        "primary_url": "https://cby-ye.com/files/6a6f968423908.pdf",
+        "metadata_state": "DISPLAY_READY"
+      },
+      {
+        "source_id": "SRC-CBY-POS-2026-05",
+        "primary_url": "https://cby-ye.com/files/6a6f96ed5c009.pdf",
+        "metadata_state": "DISPLAY_READY"
+      },
+      {
+        "source_id": "SRC-CBY-POS-2026-06",
+        "primary_url": "https://cby-ye.com/files/6a6f973c98c25.pdf",
+        "metadata_state": "DISPLAY_READY"
       }
     ],
     "closure_state": "CLOSED_TO_SOURCE_ID",
@@ -8426,7 +8730,12 @@
       "SRC-CBY-POS-2025-10",
       "SRC-CBY-POS-2025-11",
       "SRC-CBY-POS-2025-12",
-      "SRC-CBY-POS-2026-01"
+      "SRC-CBY-POS-2026-01",
+      "SRC-CBY-POS-2026-02",
+      "SRC-CBY-POS-2026-03",
+      "SRC-CBY-POS-2026-04",
+      "SRC-CBY-POS-2026-05",
+      "SRC-CBY-POS-2026-06"
     ],
     "resolved_source_ids": [
       "SRC-CBY-POS-2025-03",
@@ -8438,7 +8747,12 @@
       "SRC-CBY-POS-2025-10",
       "SRC-CBY-POS-2025-11",
       "SRC-CBY-POS-2025-12",
-      "SRC-CBY-POS-2026-01"
+      "SRC-CBY-POS-2026-01",
+      "SRC-CBY-POS-2026-02",
+      "SRC-CBY-POS-2026-03",
+      "SRC-CBY-POS-2026-04",
+      "SRC-CBY-POS-2026-05",
+      "SRC-CBY-POS-2026-06"
     ],
     "resolved_via_object_ids": [],
     "context_reference_ids": [],
@@ -8492,6 +8806,31 @@
       {
         "source_id": "SRC-CBY-POS-2026-01",
         "primary_url": "https://www.cby-ye.com/files/69b058d4bc306.pdf",
+        "metadata_state": "DISPLAY_READY"
+      },
+      {
+        "source_id": "SRC-CBY-POS-2026-02",
+        "primary_url": "https://cby-ye.com/files/6a6f958d49cc2.pdf",
+        "metadata_state": "DISPLAY_READY"
+      },
+      {
+        "source_id": "SRC-CBY-POS-2026-03",
+        "primary_url": "https://cby-ye.com/files/6a6f960871730.pdf",
+        "metadata_state": "DISPLAY_READY"
+      },
+      {
+        "source_id": "SRC-CBY-POS-2026-04",
+        "primary_url": "https://cby-ye.com/files/6a6f968423908.pdf",
+        "metadata_state": "DISPLAY_READY"
+      },
+      {
+        "source_id": "SRC-CBY-POS-2026-05",
+        "primary_url": "https://cby-ye.com/files/6a6f96ed5c009.pdf",
+        "metadata_state": "DISPLAY_READY"
+      },
+      {
+        "source_id": "SRC-CBY-POS-2026-06",
+        "primary_url": "https://cby-ye.com/files/6a6f973c98c25.pdf",
         "metadata_state": "DISPLAY_READY"
       }
     ],
@@ -9070,6 +9409,9 @@
       "SRC-CBY-POS-2025-03",
       "SRC-CBY-POS-2025-12",
       "SRC-CBY-POS-2026-01",
+      "SRC-CBY-POS-2026-04",
+      "SRC-CBY-POS-2026-05",
+      "SRC-CBY-POS-2026-06",
       "SRC-UNDP-FMIIP-001",
       "SRC-CBY-PAYREPORT-H1-2025",
       "SRC-WB-FMIIP-P180708"
@@ -9121,6 +9463,21 @@
         "metadata_state": "DISPLAY_READY"
       },
       {
+        "source_id": "SRC-CBY-POS-2026-04",
+        "primary_url": "https://cby-ye.com/files/6a6f968423908.pdf",
+        "metadata_state": "DISPLAY_READY"
+      },
+      {
+        "source_id": "SRC-CBY-POS-2026-05",
+        "primary_url": "https://cby-ye.com/files/6a6f96ed5c009.pdf",
+        "metadata_state": "DISPLAY_READY"
+      },
+      {
+        "source_id": "SRC-CBY-POS-2026-06",
+        "primary_url": "https://cby-ye.com/files/6a6f973c98c25.pdf",
+        "metadata_state": "DISPLAY_READY"
+      },
+      {
         "source_id": "SRC-UNDP-FMIIP-001",
         "primary_url": "https://www.undp.org/yemen/projects/yemen-financial-market-infrastructure-and-inclusion-project",
         "metadata_state": "DISPLAY_READY"
@@ -9165,6 +9522,9 @@
       "SRC-CBY-POS-2025-03",
       "SRC-CBY-POS-2025-12",
       "SRC-CBY-POS-2026-01",
+      "SRC-CBY-POS-2026-04",
+      "SRC-CBY-POS-2026-05",
+      "SRC-CBY-POS-2026-06",
       "SRC-CBY-UNIFIED-NET-2026-001",
       "SRC-CBY-BANK-NETWORK-MTG-2026-001",
       "SRC-CBY-YPCC-FOUND-2026-001",
@@ -9212,6 +9572,21 @@
       {
         "source_id": "SRC-CBY-POS-2026-01",
         "primary_url": "https://www.cby-ye.com/files/69b058d4bc306.pdf",
+        "metadata_state": "DISPLAY_READY"
+      },
+      {
+        "source_id": "SRC-CBY-POS-2026-04",
+        "primary_url": "https://cby-ye.com/files/6a6f968423908.pdf",
+        "metadata_state": "DISPLAY_READY"
+      },
+      {
+        "source_id": "SRC-CBY-POS-2026-05",
+        "primary_url": "https://cby-ye.com/files/6a6f96ed5c009.pdf",
+        "metadata_state": "DISPLAY_READY"
+      },
+      {
+        "source_id": "SRC-CBY-POS-2026-06",
+        "primary_url": "https://cby-ye.com/files/6a6f973c98c25.pdf",
         "metadata_state": "DISPLAY_READY"
       },
       {
@@ -9370,7 +9745,7 @@
       },
       {
         "source_id": "SRC-CBY-BANKLIST-AR-2026-001",
-        "primary_url": "https://english.cby-ye.com/files/69dfc71a51c14.pdf",
+        "primary_url": "https://cby-ye.com/files/6a665add29feb.pdf",
         "metadata_state": "DISPLAY_READY"
       },
       {
@@ -9510,6 +9885,9 @@
       "SRC-CBY-POS-2025-03",
       "SRC-CBY-POS-2025-12",
       "SRC-CBY-POS-2026-01",
+      "SRC-CBY-POS-2026-04",
+      "SRC-CBY-POS-2026-05",
+      "SRC-CBY-POS-2026-06",
       "SRC-CBY-UNIFIED-NET-2026-001",
       "SRC-CBY-BANK-NETWORK-MTG-2026-001",
       "SRC-CBY-YPCC-FOUND-2026-001",
@@ -9544,6 +9922,21 @@
       {
         "source_id": "SRC-CBY-POS-2026-01",
         "primary_url": "https://www.cby-ye.com/files/69b058d4bc306.pdf",
+        "metadata_state": "DISPLAY_READY"
+      },
+      {
+        "source_id": "SRC-CBY-POS-2026-04",
+        "primary_url": "https://cby-ye.com/files/6a6f968423908.pdf",
+        "metadata_state": "DISPLAY_READY"
+      },
+      {
+        "source_id": "SRC-CBY-POS-2026-05",
+        "primary_url": "https://cby-ye.com/files/6a6f96ed5c009.pdf",
+        "metadata_state": "DISPLAY_READY"
+      },
+      {
+        "source_id": "SRC-CBY-POS-2026-06",
+        "primary_url": "https://cby-ye.com/files/6a6f973c98c25.pdf",
         "metadata_state": "DISPLAY_READY"
       },
       {

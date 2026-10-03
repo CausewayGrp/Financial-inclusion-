@@ -1,5 +1,34 @@
 # Repository Change Log
 
+## 2026-10-03 — Release candidate RC-8: truth and currentness (A1, A2, POS to June 2026, Decisions 10 and 18, locators, edition)
+
+One merged transaction, as the owner's note of 3 October 2026 allows: `audit/release_candidate/rc_8_truth_currentness.py`
+(with `rc_8_pos_copy.py` for the POS copy) through `run_stage.py` (Master `5c0688d3d29d` → `8385ede6ebd9`; ledger and run
+report in `audit/release_candidate/runs/`), with `rc_8_stage_inputs.py` installing the contract change. Every original is
+recorded in `audit/release_candidate/ORIGINAL_SOURCE_VERIFICATION.md` §4.
+
+- **POS series to June 2026.** The February–June 2026 releases of CBY-Aden are listed on its Arabic payments page only;
+  the 26 September check had read the English page, which still ends at January 2026. Fifteen observations
+  (OBS-00083..00097), five source records, and every surface that named the January endpoint: Home, /access/,
+  /payments/, CLM-003, CLM-017, the three POS panels, the Readings and the chain figure RV-CWR-009 (contract and
+  `scripts/yfie/visuals.py` move to the June rows; `scripts/validate.py` pins 1,651). The May release contradicts itself
+  (+2.4% terminals, +9.9% transactions against totals that do not give them): per the owner, the totals and the
+  displayed percentages are printed, no change is derived for that month, and the chart marks May like January. The
+  YER value tile is labelled «مليار» from January 2026; the series stays in YER million, disclosed.
+- **A1** (Owner Addendum 2): the text alternative and record answer of VIS-PAYMENT-RAILS no longer name two steps the
+  drawing lacks; new gate RC-A1 in `scripts/validate.py` with a negative control.
+- **A2**: the search alias for "law" / «قانون» carries a boundary note; the /data/ regulatory scope line names the
+  issuer and says that the evidence base holds no laws.
+- **Decision No. 10** (EXT-02 closed): dated 8 June 2026 on the signed instrument; PSE-012 and the source record follow.
+- **Decision No. 18** (EXT-03 closed): the four entity names are non-public lineage only, printed nowhere; PSE-015 prints
+  as the other decisions; CLM-019 states the rule; the class label reads "Exchange company, establishments and
+  remittance agent". The five other status events whose governed `public_use` still allows a subject are escalated
+  (`design/ESCALATIONS.md`); nothing prints a name.
+- **Locators and edition.** The licensed-bank list moves to the newer Arabic file (July 2026; 26 banks, names
+  unchanged), checked 3 October 2026; the POS publication-page record lists the Arabic POS page; the January re-issue
+  is listed. The edition moves to 3 October 2026 (`audit/FINAL_CURRENTNESS_CUTOFF.md`, appended); all 286 social images
+  are regenerated because each carries the edition label. README counts follow (165 source records, 440 search records).
+
 ## 2026-10-03 — Release candidate RC-7: Part A items 3 and 6 on Path A (originals read)
 
 Transaction `audit/release_candidate/rc_7_path_a.py` through `run_stage.py` (Master `97f37eccc1a9` → `5c0688d3d29d`;

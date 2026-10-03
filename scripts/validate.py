@@ -59,7 +59,7 @@ for lang,dirv in [('ar','rtl'),('en','ltr')]:
                 rr=href.split('?',1)[0].split('#',1)[0].strip('/'); bits=rr.split('/',1); lf=DIST/bits[0]/(bits[1] if len(bits)>1 else '')/'index.html'
                 if not lf.exists(): errors.append(f'broken internal link {href} in {f}')
 home=(DIST/'ar/index.html').read_text(encoding='utf-8')
-for token in ['11.9%','12.91','561','1,473']:
+for token in ['11.9%','12.91','561','1,651']:
     if token not in home: errors.append('home semantic token missing '+token)
 for f in DIST.rglob('*.html'):
     t=f.read_text(encoding='utf-8')
@@ -1048,10 +1048,10 @@ for spec in specs:
 
 # Representative numeric signatures prove that material numbers survive both public editions.
 s05_numeric_signatures={
-    '/':['11.9%','12.91','561','1,473'],
+    '/':['11.9%','12.91','561','1,651'],
     '/people/':['11.9%','12.91'],
     '/firms/':['22%','50%','46%'],
-    '/payments/':['561','1,473'],
+    '/payments/':['561','1,651'],
     '/providers/':['98','225','106'],
     # Tranche C TC-A (EN-30): the limitation says "more than a quarter" without the redundant "(1/4)".
     '/evidence/CLM-001/':['11.9%','2022-11-07','2023-01-09','23%'],
@@ -2613,6 +2613,37 @@ try:
         errors.append('RC-DATES the runtime does not isolate the identifiers it writes')
 except Exception as _x:
     errors.append('RC-DATES unreadable '+repr(_x))
+
+# RC-A1 (Owner Addendum 2, A1): a chain figure's text alternative may not name a dated step its drawing lacks. On every
+# page that draws RV-CWR-009 or VIS-PAYMENT-RAILS, each day-precise date the text description names ("26 June 2024",
+# «26 يونيو 2024») is the date of a drawn step of the same figure.
+_MONTHS = {m: i for i, m in enumerate(("January", "February", "March", "April", "May", "June", "July", "August", "September",
+                                       "October", "November", "December"), 1)}
+_MONTHS.update({m: i for i, m in enumerate(("يناير", "فبراير", "مارس", "أبريل", "مايو", "يونيو", "يوليو", "أغسطس", "سبتمبر",
+                                            "أكتوبر", "نوفمبر", "ديسمبر"), 1)})
+_DAY_DATE = re.compile(r"(?<!\d)(\d{1,2}) (" + "|".join(_MONTHS) + r") (\d{4})")
+try:
+    _na1 = 0
+    for _lang in ("en", "ar"):
+        for _f in sorted((DIST / _lang).rglob("index.html")):
+            _h = _f.read_text(encoding="utf-8")
+            for _vid in ("RV-CWR-009", "VIS-PAYMENT-RAILS"):
+                for _m in re.finditer(r'<figure class="fig[^"]*"[^>]*data-visual-id="' + _vid + r'".*?</figure>', _h, re.S):
+                    _fig = _m.group(0)
+                    _alt = re.search(r'<div class="alt"[^>]*>(.*?)</div>', _fig, re.S)
+                    if not _alt:
+                        continue
+                    _na1 += 1
+                    _drawn = set(re.findall(r'<bdi dir="ltr" class="nw">(\d{4}-\d{2}-\d{2})</bdi>', _fig.replace(_alt.group(0), "")))
+                    _text = _html.unescape(re.sub(r"<[^>]+>", "", _alt.group(1)))
+                    for _d, _mo, _y in _DAY_DATE.findall(_text):
+                        _iso = f"{_y}-{_MONTHS[_mo]:02d}-{int(_d):02d}"
+                        if _iso not in _drawn:
+                            errors.append(f"RC-A1 a chain figure's text alternative names a step its drawing lacks {_f.relative_to(DIST)} {_vid} {_d} {_mo} {_y}")
+    if _na1 < 4:
+        errors.append(f"RC-A1 read only {_na1} chain-figure text alternatives")
+except Exception as _x:
+    errors.append("RC-A1 unreadable " + repr(_x))
 
 print(f'HTML={len(list(DIST.rglob("*.html")))} ERRORS={len(errors)} WARN={len(warns)}')
 if warns:

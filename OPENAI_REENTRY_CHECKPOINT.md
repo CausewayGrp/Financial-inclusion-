@@ -30,8 +30,8 @@ so that a cold Design recipient can run D0–D7 from the repository alone.
 
 | Item | Value |
 |---|---|
-| Production Master | `authority/Yemen_Financial_Inclusion_Evidence_Master.xlsx` — SHA-256 `5c0688d3d29d580c4cbca4da61d2e71087ebae99594fd0b6b6bb0a63f9d59ccf` |
-| Page Specs | `site-src/content/page_specs.json` — SHA-256 `8d1deaecff51d83c37b82332bf5829bb9bd3d4b8a6f4bd719433b3b8aef1eba5` |
+| Production Master | `authority/Yemen_Financial_Inclusion_Evidence_Master.xlsx` — SHA-256 `8385ede6ebd9d6760c9cfdd16b4bf5d5c80a6a787753b329fe3a3cde46ff7da3` |
+| Page Specs | `site-src/content/page_specs.json` — SHA-256 `ba6d2bb062ea022e98b3a0af09cf71a29c65daa8bd2f09653d14b1b2116ff2de` |
 | Entry state recorded with the Drive IDs (lineage, not current) | Master `e69804106e04d093098688f2d01cea51e13191f255d774a090f3e5dd8dec9bc7`; Page Specs `ff2b0f559cde5fede3fe31d7dfb2539a00921e8b00b816c2863790cd9de49007` |
 | Master lineage in D7 | `f0150122…` (entry) → `caabff47…` (RP-F2) → `0e8730c2…` / `69899ae2…` (RL-F3, RL-F3b) → `2a7fd52b…` / `440614d7…` (R85-A, R85-B) → `168a0ad8…` / `ed3c5796…` (RF5, RF5b) |
 | Canonical repository | GitHub `CausewayGrp/Financial-inclusion-`, branch `main` — the only working copy. The last state OpenAI reviewed is commit `f726bda` (tree byte-identical to `…TRANCHE_C_COMPLETE_READING_HOLD.zip`, SHA-256 `63612dea…`); its tag and the Design-handoff tag are owner actions (§7) |
@@ -117,7 +117,7 @@ build, literal audit, diagrams, repository manifest, validate, generator check; 
   `audit/FINAL_CLEAN_ROOM_ACCEPTANCE.md`.
 
 Tranche C itself is recorded in `audit/TRANCHE_C_FINAL_ACCEPTANCE.md` and `audit/TRANCHE_C_FINDINGS_LEDGER.csv`.
-Currentness cut-off: 26 September 2026 (`audit/FINAL_CURRENTNESS_CUTOFF.md`).
+Currentness cut-off: 26 September 2026 (`audit/FINAL_CURRENTNESS_CUTOFF.md`); release-candidate recheck of 3 October 2026 appended there (edition of 3 October 2026).
 
 ## 3. House rulings carried forward
 
@@ -179,7 +179,7 @@ python3 scripts/handoff_inventory.py --check
   git show -s --format='%H %s' "$C"            # check it before tagging
   git tag -s checkpoint/design-handoff-ready "$C" \
       -m "DESIGN HANDOFF READY — R8.6 closed; post-F9 correction and design-enablement control pass applied" \
-      -m "Master 5c0688d3d29d580c4cbca4da61d2e71087ebae99594fd0b6b6bb0a63f9d59ccf"
+      -m "Master 8385ede6ebd9d6760c9cfdd16b4bf5d5c80a6a787753b329fe3a3cde46ff7da3"
   git push origin checkpoint/tranche-c-complete-reading-hold checkpoint/design-handoff-ready
   ```
 

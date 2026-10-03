@@ -865,8 +865,8 @@
   },
   {
     "ui_id": "UI-VIS-CAT-PRV-EVCLASS-COMPANY-ESTS-AGENT",
-    "label_en": "Exchange company establishments and remittance agent",
-    "label_ar": "منشآت شركة صرافة ووكيل حوالات",
+    "label_en": "Exchange company, establishments and remittance agent",
+    "label_ar": "شركة صرافة ومنشآت صرافة ووكيل حوالات",
     "use_rule": "Pre-Tranche-C P4 (V-D5). Chart label: provider_event_class value 'EXCHANGE_COMPANY_ESTABLISHMENTS_AND_REMITTANCE_AGENT'."
   },
   {
@@ -1081,8 +1081,8 @@
   },
   {
     "ui_id": "UI-CONTENT-VERSION",
-    "label_en": "Edition of 26 September 2026",
-    "label_ar": "إصدار 26 سبتمبر 2026",
+    "label_en": "Edition of 3 October 2026",
+    "label_ar": "إصدار 3 أكتوبر 2026",
     "use_rule": "Tranche C TC-F (VER-07/TOOL-14). Content version cited with every record; changes only with a governed release."
   },
   {
@@ -2575,8 +2575,8 @@
   },
   {
     "ui_id": "UI-DATA-GROUP-REGULATORY-SCOPE",
-    "label_en": "These are the regulatory documents held in this evidence base, not a complete register of Yemen's financial regulation.",
-    "label_ar": "هذه هي الوثائق التنظيمية المتوفرة في قاعدة الأدلة هذه، وليست سجلًا كاملًا للتنظيم المالي في اليمن.",
+    "label_en": "These are the regulatory documents held in this evidence base, not a complete register of Yemen's financial regulation. All were issued by the Central Bank of Yemen – Aden. The evidence base holds no laws, and this group holds no instrument issued in Sana'a.",
+    "label_ar": "هذه هي الوثائق التنظيمية المتوفرة في قاعدة الأدلة هذه، وليست سجلًا كاملًا للتنظيم المالي في اليمن. وقد أصدرها جميعًا البنك المركزي اليمني – عدن. ولا تضم قاعدة الأدلة أي قانون، ولا تضم هذه المجموعة أي وثيقة صادرة في صنعاء.",
     "use_rule": "RC-4 (Part B B5). /data/ the regulatory group's one scope line."
   },
   {

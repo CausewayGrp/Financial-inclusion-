@@ -688,7 +688,7 @@ POS_SCOPE_KEY = "UI-VIS-NOTE-POS-SCOPE"   # RC-1 item 5: the VIS-POS-* universe 
 # The governed step mapping of RV-CWR-009 (`contract.step_mapping`), read as event class → chain step.
 CLASS_STEP = {"NETWORK_RULE": "RULE", "PAYMENTS_ARCHITECTURE_DECISION": "RULE", "PROJECT_START": "RULE", "PAYMENT_RAIL_COMPONENT": "RULE", "ACCESS_USAGE_COMPONENT": "RULE",
               "NETWORK_INTEGRATION": "IMPLEMENTATION", "UNIFIED_NETWORK_COMPANY": "IMPLEMENTATION", "YPCC": "IMPLEMENTATION", "NETWORK_ACTIVITY_SIGNAL": "OPERATION"}
-ACTIVITY_STEP = {"OBS-00080": "IMPLEMENTATION", "OBS-00081": "OPERATION"}
+ACTIVITY_STEP = {"OBS-00095": "IMPLEMENTATION", "OBS-00096": "OPERATION"}   # June 2026 terminal stock and transactions (RC-8)
 
 
 def chain_steps(chain_src: dict, include_activity: bool) -> list[dict]:
