@@ -2,8 +2,8 @@
  "schema": "YFIE_ROUTE_CONTENT_AND_STATE_INVENTORY/1.3",
  "purpose": "Design recipient's map of every route, its family, bindings, collections, next actions and the states Design must cover. Derived; not authority.",
  "generated_from": {
-  "production_master_sha256": "ebfb929c86bb54c690b96059b71ae6ff40a5af4cc27c50d80ed7fa4bcea653cb",
-  "page_specs_sha256": "add00f4a0c210b6889da98f6ff00498340687491db43ff005f5039559dd04646",
+  "production_master_sha256": "e24fe737116bf0a7569dae052120d869d609806fa0e24da3601f3e8810d3da47",
+  "page_specs_sha256": "253894b2862fd6fcd391ede71ee6ba04770d6644bd2e9ac2356b55b6868cc957",
   "generator": "scripts/handoff_inventory.py"
  },
  "counts": {
@@ -802,8 +802,8 @@
     "en": "dist/en/evidence/CLM-001/index.html",
     "ar": "dist/ar/evidence/CLM-001/index.html"
    },
-   "title_en": "Latest representative account-ownership measure available",
-   "title_ar": "أحدث قياس ممثل متاح لامتلاك الحساب",
+   "title_en": "Account ownership: the representative measure from the Global Findex 2021 wave",
+   "title_ar": "امتلاك الحساب: القياس الممثل من موجة Global Findex 2021",
    "sections": 2,
    "section_rows_split_by_language": false,
    "evidence_ids": [
@@ -1550,8 +1550,8 @@
     "en": "dist/en/evidence/CLM-025/index.html",
     "ar": "dist/ar/evidence/CLM-025/index.html"
    },
-   "title_en": "Geographic coverage limits of the latest Findex wave",
-   "title_ar": "حدود التغطية الجغرافية لأحدث موجة من Findex",
+   "title_en": "Geographic coverage limits of the Global Findex 2021 wave in Yemen",
+   "title_ar": "حدود التغطية الجغرافية لموجة Global Findex 2021 في اليمن",
    "sections": 2,
    "section_rows_split_by_language": false,
    "evidence_ids": [
@@ -2759,8 +2759,8 @@
     "en": "dist/en/evidence/DS-FINDEX-HISTORY-CROSSWALK/index.html",
     "ar": "dist/ar/evidence/DS-FINDEX-HISTORY-CROSSWALK/index.html"
    },
-   "title_en": "Which historical Findex measures can be compared with the latest wave",
-   "title_ar": "مقاييس Findex التاريخية التي يمكن مقارنتها بأحدث موجة",
+   "title_en": "Which historical Findex measures can be compared with the 2021 wave",
+   "title_ar": "مقاييس Findex التاريخية التي يمكن مقارنتها بموجة 2021",
    "sections": 2,
    "section_rows_split_by_language": false,
    "evidence_ids": [
@@ -3102,8 +3102,8 @@
     "en": "dist/en/evidence/VIS-DEMAND-VINTAGE-LADDER/index.html",
     "ar": "dist/ar/evidence/VIS-DEMAND-VINTAGE-LADDER/index.html"
    },
-   "title_en": "Latest observation for each people-side financial function",
-   "title_ar": "أحدث مشاهدة لكل وظيفة مالية على جانب الأفراد",
+   "title_en": "Year of the last weighted value for each people-side financial function",
+   "title_ar": "سنة آخر قيمة موزونة لكل وظيفة مالية على جانب الأفراد",
    "sections": 2,
    "section_rows_split_by_language": false,
    "evidence_ids": [
@@ -3808,8 +3808,8 @@
     "en": "dist/en/evidence/VIS-MFI-SPINE/index.html",
     "ar": "dist/ar/evidence/VIS-MFI-SPINE/index.html"
    },
-   "title_en": "Microfinance observations by date, with gaps and breaks shown",
-   "title_ar": "مشاهدات التمويل الأصغر بحسب التاريخ، مع إظهار الفجوات والانقطاعات",
+   "title_en": "Microfinance observations by date, with their gaps and breaks",
+   "title_ar": "مشاهدات التمويل الأصغر بحسب التاريخ، مع فجواتها وانقطاعاتها",
    "sections": 2,
    "section_rows_split_by_language": false,
    "evidence_ids": [

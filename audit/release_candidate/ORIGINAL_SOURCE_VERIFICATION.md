@@ -214,3 +214,17 @@ undp.org and Remittance Prices Worldwide with HTTP 403.
 - 4 FMIIP component start dates of July 2025 (UNDP). The World Bank ISR gives the project's effectiveness as
   1 September 2025, so these four dates are worth the re-check (register).
 - 93,118 borrowers at end-2015 (SFD newsletter No. 72). A secondary source, the Sana'a Center paper, agrees.
+
+## 9. The base of VIS-FIRM-FINANCE-SEVERITY, read again for B16 (3 October 2026; RC-16)
+
+`SRC-WB-FSD-2024-001` (Yemen Financial Sector Diagnostics, 2024) was fetched at its locator on 3 October 2026 (HTTP 200,
+9.9 MB) and p. 145 read in the text layer. The sentence before Figure 107 reads: "Around 69% believed that access to
+finance is a major obstacle to their operations (this ranking tabulated after excluding those that checked 'no need for
+a loan') when asking for the reasons of not applying." Figure 107's values are unchanged: 68.71, 23.13, 3.4 and 4.76.
+
+- **Values.** MATCH, as in §8.
+- **Base.** AMBIGUOUS IN THE SOURCE. The record says the tabulation excludes firms that needed no loan, which is true.
+  But the phrase "when asking for the reasons of not applying" places it among the non-applicants, which would make the
+  base narrower: firms that did not apply, less those that needed no loan. The source does not say which.
+- **Action.** RC-16 adds this to the record's measurement limitation in both languages, and says which base the source
+  used is not established. No value changes. Register item "the base of VIS-FIRM-FINANCE-SEVERITY": DONE.

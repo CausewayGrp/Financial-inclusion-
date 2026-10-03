@@ -2892,6 +2892,25 @@ try:
 except Exception as _x:
     errors.append("RC-B15 unreadable " + repr(_x))
 
+# RC-LATEST (Owner Addendum 2, "Lessons from comparable products"; RC-16): no title, page description or h1 calls
+# anything "latest" without saying when — a label that goes stale silently the day a newer measure appears. A use
+# that carries its own check date ("as checked on 3 October 2026", "both checked 3 October 2026") or that denies a
+# single latest year is kept. Checked on the English edition; the Arabic changes with it (EN and AR are co-authoritative).
+try:
+    _LATEST = re.compile(r"\blatest\b", re.I)
+    _DATED = re.compile(r"\b(?:as (?:checked on|of)|checked(?: on)?) \d{1,2} [A-Z][a-z]+ \d{4}|\bno (?:single|common) latest\b", re.I)
+    _HEADS = re.compile(r'<meta (?:name|property)="(?:description|og:title|og:description|twitter:title|twitter:description)" content="([^"]*)"')
+    for _f in sorted((DIST / "en").rglob("index.html")):
+        _h = _f.read_text(encoding="utf-8")
+        _head = _h.split("</head>", 1)[0]
+        for _t in re.findall(r"<title>(.*?)</title>", _head, re.S) + _HEADS.findall(_head) + re.findall(r"<h1[^>]*>(.*?)</h1>", _h, re.S):
+            _s = _html.unescape(re.sub(r"<[^>]+>", "", _t))
+            if _LATEST.search(_s) and not _DATED.search(_s):
+                errors.append(f"RC-LATEST an undated 'latest' in a title or description {_f.relative_to(DIST)}: {_s[:90]}")
+                break
+except Exception as _x:
+    errors.append("RC-LATEST unreadable " + repr(_x))
+
 # RC-B13 (Part B B13): the research library on /data/. Its filters stay hidden until the runtime runs (the list is
 # complete without JavaScript); every listed source carries its filter keys; every option of a filter matches at least
 # one source; a locator that is a web.archive.org copy is never offered as the original.

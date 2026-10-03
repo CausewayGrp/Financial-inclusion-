@@ -1,0 +1,359 @@
+{
+ "transaction": "RC-16",
+ "summary": "Addendum 2 lessons: no undated 'latest' label; survey coverage stated",
+ "items": {
+  "titles": 8,
+  "descriptions": 14,
+  "headings": 4,
+  "coverage": 8,
+  "B15_B-7_title": 2,
+  "severity_base": 2
+ },
+ "input_master_sha256": "ebfb929c86bb54c690b96059b71ae6ff40a5af4cc27c50d80ed7fa4bcea653cb",
+ "output_master_sha256": "e24fe737116bf0a7569dae052120d869d609806fa0e24da3601f3e8810d3da47",
+ "cells_written": 38,
+ "changes": [
+  {
+   "finding": "RC-16:LATEST",
+   "sheet": "06_EVIDENCE_OBJECTS",
+   "row": 5,
+   "col": 4,
+   "field": "CLM-001.title_en",
+   "old": "Latest representative account-ownership measure available",
+   "new": "Account ownership: the representative measure from the Global Findex 2021 wave"
+  },
+  {
+   "finding": "RC-16:LATEST",
+   "sheet": "06_EVIDENCE_OBJECTS",
+   "row": 5,
+   "col": 5,
+   "field": "CLM-001.title_ar",
+   "old": "أحدث قياس ممثل متاح لامتلاك الحساب",
+   "new": "امتلاك الحساب: القياس الممثل من موجة Global Findex 2021"
+  },
+  {
+   "finding": "RC-16:LATEST",
+   "sheet": "06_EVIDENCE_OBJECTS",
+   "row": 40,
+   "col": 4,
+   "field": "CLM-025.title_en",
+   "old": "Geographic coverage limits of the latest Findex wave",
+   "new": "Geographic coverage limits of the Global Findex 2021 wave in Yemen"
+  },
+  {
+   "finding": "RC-16:LATEST",
+   "sheet": "06_EVIDENCE_OBJECTS",
+   "row": 40,
+   "col": 5,
+   "field": "CLM-025.title_ar",
+   "old": "حدود التغطية الجغرافية لأحدث موجة من Findex",
+   "new": "حدود التغطية الجغرافية لموجة Global Findex 2021 في اليمن"
+  },
+  {
+   "finding": "RC-16:LATEST",
+   "sheet": "06_EVIDENCE_OBJECTS",
+   "row": 53,
+   "col": 4,
+   "field": "VIS-DEMAND-VINTAGE-LADDER.title_en",
+   "old": "Latest observation for each people-side financial function",
+   "new": "Year of the last weighted value for each people-side financial function"
+  },
+  {
+   "finding": "RC-16:LATEST",
+   "sheet": "06_EVIDENCE_OBJECTS",
+   "row": 53,
+   "col": 5,
+   "field": "VIS-DEMAND-VINTAGE-LADDER.title_ar",
+   "old": "أحدث مشاهدة لكل وظيفة مالية على جانب الأفراد",
+   "new": "سنة آخر قيمة موزونة لكل وظيفة مالية على جانب الأفراد"
+  },
+  {
+   "finding": "RC-16:LATEST",
+   "sheet": "06_EVIDENCE_OBJECTS",
+   "row": 57,
+   "col": 4,
+   "field": "DS-FINDEX-HISTORY-CROSSWALK.title_en",
+   "old": "Which historical Findex measures can be compared with the latest wave",
+   "new": "Which historical Findex measures can be compared with the 2021 wave"
+  },
+  {
+   "finding": "RC-16:LATEST",
+   "sheet": "06_EVIDENCE_OBJECTS",
+   "row": 57,
+   "col": 5,
+   "field": "DS-FINDEX-HISTORY-CROSSWALK.title_ar",
+   "old": "مقاييس Findex التاريخية التي يمكن مقارنتها بأحدث موجة",
+   "new": "مقاييس Findex التاريخية التي يمكن مقارنتها بموجة 2021"
+  },
+  {
+   "finding": "RC-16:B15-B-7",
+   "sheet": "06_EVIDENCE_OBJECTS",
+   "row": 27,
+   "col": 4,
+   "field": "VIS-MFI-SPINE.title_en",
+   "old": "Microfinance observations by date, with gaps and breaks shown",
+   "new": "Microfinance observations by date, with their gaps and breaks"
+  },
+  {
+   "finding": "RC-16:B15-B-7",
+   "sheet": "06_EVIDENCE_OBJECTS",
+   "row": 27,
+   "col": 5,
+   "field": "VIS-MFI-SPINE.title_ar",
+   "old": "مشاهدات التمويل الأصغر بحسب التاريخ، مع إظهار الفجوات والانقطاعات",
+   "new": "مشاهدات التمويل الأصغر بحسب التاريخ، مع فجواتها وانقطاعاتها"
+  },
+  {
+   "finding": "RC-16:LATEST",
+   "sheet": "02_SITE_MAP",
+   "row": 11,
+   "col": 7,
+   "field": "/evidence/CLM-001/.meta_description_en",
+   "old": "The latest representative observation of account ownership in Yemen published by the World Bank remains 11.9% (Global Findex 2021; fieldwork 2022–23).",
+   "new": "As checked on 3 October 2026, the most recent representative observation of account ownership in Yemen published by the World Bank was 11.9% (Global Findex 2021; fieldwork 2022–23)."
+  },
+  {
+   "finding": "RC-16:LATEST",
+   "sheet": "02_SITE_MAP",
+   "row": 11,
+   "col": 8,
+   "field": "/evidence/CLM-001/.meta_description_ar",
+   "old": "تظل أحدث مشاهدة ممثلة ينشرها البنك الدولي لامتلاك الحساب في اليمن عند 11.9% (Global Findex 2021؛ العمل الميداني 2022–2023).",
+   "new": "عند الاطلاع في 3 أكتوبر 2026، كانت أحدث مشاهدة ممثلة نشرها البنك الدولي لامتلاك الحساب في اليمن 11.9% (Global Findex 2021؛ العمل الميداني 2022–2023)."
+  },
+  {
+   "finding": "RC-16:LATEST",
+   "sheet": "02_SITE_MAP",
+   "row": 35,
+   "col": 7,
+   "field": "/evidence/CLM-025/.meta_description_en",
+   "old": "The latest Yemen Findex wave excludes Al Baydaa, Al Jawf, Mareb, Sadah, Socotra and several districts elsewhere: areas with about 23% of the population.",
+   "new": "The Global Findex 2021 wave for Yemen excludes Al Baydaa, Al Jawf, Mareb, Sadah, Socotra and several districts elsewhere: areas with about 23% of the population."
+  },
+  {
+   "finding": "RC-16:LATEST",
+   "sheet": "02_SITE_MAP",
+   "row": 35,
+   "col": 8,
+   "field": "/evidence/CLM-025/.meta_description_ar",
+   "old": "تستبعد أحدث موجة من Findex في اليمن محافظات البيضاء والجوف ومأرب وصعدة وسقطرى وعددًا من المديريات في محافظات أخرى، وهي مناطق تضم نحو 23% من السكان.",
+   "new": "تستبعد موجة Findex 2021 في اليمن محافظات البيضاء والجوف ومأرب وصعدة وسقطرى وعددًا من المديريات في محافظات أخرى، وهي مناطق تضم نحو 23% من السكان."
+  },
+  {
+   "finding": "RC-16:LATEST",
+   "sheet": "02_SITE_MAP",
+   "row": 73,
+   "col": 7,
+   "field": "/evidence/DS-FINDEX-HISTORY-CROSSWALK/.meta_description_en",
+   "old": "This comparability map links historical Findex measures for Yemen to those for the latest wave, keeping publishable values apart from pending ones.",
+   "new": "This comparability map links historical Findex measures for Yemen to those for the 2021 wave, keeping publishable values apart from pending ones."
+  },
+  {
+   "finding": "RC-16:LATEST",
+   "sheet": "02_SITE_MAP",
+   "row": 73,
+   "col": 8,
+   "field": "/evidence/DS-FINDEX-HISTORY-CROSSWALK/.meta_description_ar",
+   "old": "تربط خريطة قابلية المقارنة هذه مقاييس Findex التاريخية لليمن بمقاييس أحدث موجة، مع الفصل بين القيم القابلة للنشر والمقاييس التي لم تُستكمل حساباتها.",
+   "new": "تربط خريطة قابلية المقارنة هذه مقاييس Findex التاريخية لليمن بمقاييس موجة 2021، مع الفصل بين القيم القابلة للنشر والمقاييس التي لم تُستكمل حساباتها."
+  },
+  {
+   "finding": "RC-16:LATEST",
+   "sheet": "02_SITE_MAP",
+   "row": 83,
+   "col": 7,
+   "field": "/evidence/VIS-DEMAND-VINTAGE-LADDER/.meta_description_en",
+   "old": "The latest weighted evidence differs by function: account ownership from the 2021 Findex wave; saving, borrowing and domestic remittances from 2014.",
+   "new": "As checked on 3 October 2026, the latest weighted evidence on people differs by function: account ownership from the 2021 Findex wave; saving, borrowing and domestic remittances from 2014."
+  },
+  {
+   "finding": "RC-16:LATEST",
+   "sheet": "02_SITE_MAP",
+   "row": 83,
+   "col": 8,
+   "field": "/evidence/VIS-DEMAND-VINTAGE-LADDER/.meta_description_ar",
+   "old": "يختلف أحدث دليل موزون بحسب الوظيفة: امتلاك الحساب من موجة Findex 2021، والادخار والاقتراض والحوالات المحلية من 2014.",
+   "new": "عند الاطلاع في 3 أكتوبر 2026، كان أحدث دليل موزون عن الأفراد يختلف بحسب الوظيفة: امتلاك الحساب من موجة Findex 2021، والادخار والاقتراض والحوالات المحلية من 2014."
+  },
+  {
+   "finding": "RC-16:LATEST",
+   "sheet": "02_SITE_MAP",
+   "row": 128,
+   "col": 7,
+   "field": "/people/.meta_description_en",
+   "old": "The latest representative survey, the Global Findex 2021 wave (fieldwork 2022–23), found 11.9% of adults in surveyed areas had an account; not a 2026 rate.",
+   "new": "The Global Findex 2021 wave, a representative survey (fieldwork 2022–23), found that 11.9% of adults in surveyed areas had an account; not a 2026 rate."
+  },
+  {
+   "finding": "RC-16:LATEST",
+   "sheet": "02_SITE_MAP",
+   "row": 128,
+   "col": 8,
+   "field": "/people/.meta_description_ar",
+   "old": "وجد أحدث مسح ممثل، موجة Global Findex 2021 (العمل الميداني 2022–2023)، أن 11.9% من البالغين في المناطق المشمولة يملكون حسابًا؛ وليس هذا معدلًا لعام 2026.",
+   "new": "وجدت موجة Global Findex 2021، وهي مسح ممثل (العمل الميداني 2022–2023)، أن 11.9% من البالغين في المناطق المشمولة يملكون حسابًا؛ وليس هذا معدلًا لعام 2026."
+  },
+  {
+   "finding": "RC-16:LATEST",
+   "sheet": "02_SITE_MAP",
+   "row": 137,
+   "col": 7,
+   "field": "/readings/gender-gap-measured-causes-open/.meta_description_en",
+   "old": "In the latest Global Findex wave for Yemen, 18.35% of men and 5.44% of women in surveyed areas had an account: a measured gap whose explanation is open.",
+   "new": "In the Global Findex 2021 wave for Yemen, 18.35% of men and 5.44% of women in surveyed areas had an account: a measured gap whose explanation is open."
+  },
+  {
+   "finding": "RC-16:LATEST",
+   "sheet": "02_SITE_MAP",
+   "row": 137,
+   "col": 8,
+   "field": "/readings/gender-gap-measured-causes-open/.meta_description_ar",
+   "old": "في أحدث موجة من Findex في اليمن، كان لدى 18.35% من الرجال و5.44% من النساء في المناطق المشمولة حساب؛ وهي فجوة مقاسة ما يزال تفسيرها مفتوحًا.",
+   "new": "في موجة Global Findex 2021 الخاصة باليمن، كان لدى 18.35% من الرجال و5.44% من النساء في المناطق المشمولة حساب؛ وهي فجوة مقاسة ما يزال تفسيرها مفتوحًا."
+  },
+  {
+   "finding": "RC-16:LATEST",
+   "sheet": "02_SITE_MAP",
+   "row": 140,
+   "col": 7,
+   "field": "/readings/reforms-newer-than-people-evidence/.meta_description_en",
+   "old": "The latest representative measure of account ownership in Yemen is 11.9% of adults in surveyed areas (fieldwork 2022–23); the system has kept moving.",
+   "new": "As checked on 3 October 2026, the most recent representative measure of account ownership in Yemen is 11.9% of adults in surveyed areas (Findex 2021; fieldwork 2022–23); the system has moved since."
+  },
+  {
+   "finding": "RC-16:LATEST",
+   "sheet": "02_SITE_MAP",
+   "row": 140,
+   "col": 8,
+   "field": "/readings/reforms-newer-than-people-evidence/.meta_description_ar",
+   "old": "يبقى أحدث قياس ممثل لامتلاك الحساب في اليمن عند 11.9% من البالغين في المناطق المشمولة (العمل الميداني 2022–2023)؛ والمنظومة لم تتوقف.",
+   "new": "عند الاطلاع في 3 أكتوبر 2026، كانت أحدث نسبة ممثلة لامتلاك الحساب في اليمن 11.9% من البالغين في المناطق المشمولة (Findex 2021؛ العمل الميداني 2022–2023)؛ والمنظومة تغيّرت منذ ذلك الحين."
+  },
+  {
+   "finding": "RC-16:LATEST",
+   "sheet": "03_PAGE_SECTIONS",
+   "row": 190,
+   "col": 4,
+   "field": "/people/.heading_en",
+   "old": "The latest representative account-ownership measure available",
+   "new": "Account ownership: the representative measure from the Global Findex 2021 wave"
+  },
+  {
+   "finding": "RC-16:LATEST",
+   "sheet": "03_PAGE_SECTIONS",
+   "row": 191,
+   "col": 6,
+   "field": "/people/.heading_ar",
+   "old": "أحدث قياس ممثل متاح لامتلاك الحساب",
+   "new": "امتلاك الحساب: القياس الممثل من موجة Global Findex 2021"
+  },
+  {
+   "finding": "RC-16:LATEST",
+   "sheet": "03_PAGE_SECTIONS",
+   "row": 202,
+   "col": 4,
+   "field": "/people/.heading_en",
+   "old": "The latest wave does not cover all geography",
+   "new": "The 2021 wave does not cover all of Yemen"
+  },
+  {
+   "finding": "RC-16:LATEST",
+   "sheet": "03_PAGE_SECTIONS",
+   "row": 203,
+   "col": 6,
+   "field": "/people/.heading_ar",
+   "old": "التغطية الجغرافية لأحدث موجة ليست كاملة",
+   "new": "التغطية الجغرافية لموجة 2021 ليست كاملة"
+  },
+  {
+   "finding": "RC-16:COVERAGE",
+   "sheet": "06_EVIDENCE_OBJECTS",
+   "row": 43,
+   "col": 12,
+   "field": "VIS-FINDEX-ACCESS-USE.universe_en",
+   "old": "Findex account-ownership, account-use and digital-use indicators, each indicator with its own population and measurement base.",
+   "new": "Findex account-ownership, account-use and digital-use indicators, each indicator with its own population and measurement base. The survey frame excludes Al Baydaa, Al Jawf, Mareb, Sadah, Socotra and several districts elsewhere: areas with about 23% of the population."
+  },
+  {
+   "finding": "RC-16:COVERAGE",
+   "sheet": "06_EVIDENCE_OBJECTS",
+   "row": 43,
+   "col": 13,
+   "field": "VIS-FINDEX-ACCESS-USE.universe_ar",
+   "old": "مؤشرات امتلاك الحساب واستخدامه والاستخدام الرقمي في Findex، مع مجتمع وقاعدة قياس منفصلين لكل مؤشر.",
+   "new": "مؤشرات امتلاك الحساب واستخدامه والاستخدام الرقمي في Findex، مع مجتمع وقاعدة قياس منفصلين لكل مؤشر. ويستبعد إطار المسح محافظات البيضاء والجوف ومأرب وصعدة وسقطرى وعددًا من المديريات في محافظات أخرى، وهي مناطق تضم نحو 23% من السكان."
+  },
+  {
+   "finding": "RC-16:COVERAGE",
+   "sheet": "06_EVIDENCE_OBJECTS",
+   "row": 44,
+   "col": 12,
+   "field": "VIS-FINDEX-BARRIERS.universe_en",
+   "old": "Adults without an account, within the measurement base of the Findex barrier indicators.",
+   "new": "Adults without an account, within the measurement base of the Findex barrier indicators. The survey frame excludes Al Baydaa, Al Jawf, Mareb, Sadah, Socotra and several districts elsewhere: areas with about 23% of the population."
+  },
+  {
+   "finding": "RC-16:COVERAGE",
+   "sheet": "06_EVIDENCE_OBJECTS",
+   "row": 44,
+   "col": 13,
+   "field": "VIS-FINDEX-BARRIERS.universe_ar",
+   "old": "البالغون الذين لا يملكون حسابًا ضمن قاعدة الاحتساب الخاصة بمؤشرات العوائق في Findex.",
+   "new": "البالغون الذين لا يملكون حسابًا ضمن قاعدة الاحتساب الخاصة بمؤشرات العوائق في Findex. ويستبعد إطار المسح محافظات البيضاء والجوف ومأرب وصعدة وسقطرى وعددًا من المديريات في محافظات أخرى، وهي مناطق تضم نحو 23% من السكان."
+  },
+  {
+   "finding": "RC-16:COVERAGE",
+   "sheet": "06_EVIDENCE_OBJECTS",
+   "row": 45,
+   "col": 12,
+   "field": "VIS-FINDEX-RESILIENCE.universe_en",
+   "old": "The populations and categories defined by the Findex questions on raising money and financial resilience, with the measurement base and missing answers kept for each question.",
+   "new": "The populations and categories defined by the Findex questions on raising money and financial resilience, with the measurement base and missing answers kept for each question. The survey frame excludes Al Baydaa, Al Jawf, Mareb, Sadah, Socotra and several districts elsewhere: areas with about 23% of the population."
+  },
+  {
+   "finding": "RC-16:COVERAGE",
+   "sheet": "06_EVIDENCE_OBJECTS",
+   "row": 45,
+   "col": 13,
+   "field": "VIS-FINDEX-RESILIENCE.universe_ar",
+   "old": "المجتمعات والفئات التي تعرفها أسئلة القدرة على تدبير المال والصمود المالي في Findex، مع الحفاظ على قاعدة الاحتساب والإجابات المفقودة لكل سؤال.",
+   "new": "المجتمعات والفئات التي تعرفها أسئلة القدرة على تدبير المال والصمود المالي في Findex، مع الحفاظ على قاعدة الاحتساب والإجابات المفقودة لكل سؤال. ويستبعد إطار المسح محافظات البيضاء والجوف ومأرب وصعدة وسقطرى وعددًا من المديريات في محافظات أخرى، وهي مناطق تضم نحو 23% من السكان."
+  },
+  {
+   "finding": "RC-16:COVERAGE",
+   "sheet": "06_EVIDENCE_OBJECTS",
+   "row": 46,
+   "col": 12,
+   "field": "VIS-FINDEX-FLOW-CHANNELS.universe_en",
+   "old": "Adults who received wages, government transfers, agricultural payments or remittances, each group taken separately in Findex; not shares of all adults unless the source says so.",
+   "new": "Adults who received wages, government transfers, agricultural payments or remittances, each group taken separately in Findex; not shares of all adults unless the source says so. The survey frame excludes Al Baydaa, Al Jawf, Mareb, Sadah, Socotra and several districts elsewhere: areas with about 23% of the population."
+  },
+  {
+   "finding": "RC-16:COVERAGE",
+   "sheet": "06_EVIDENCE_OBJECTS",
+   "row": 46,
+   "col": 13,
+   "field": "VIS-FINDEX-FLOW-CHANNELS.universe_ar",
+   "old": "البالغون الذين تلقوا أجورًا أو تحويلات حكومية أو مدفوعات زراعية أو حوالات، كل فئة على حدة، في Findex؛ ولا تُعامل كنسبة من جميع البالغين ما لم ينص المصدر على ذلك.",
+   "new": "البالغون الذين تلقوا أجورًا أو تحويلات حكومية أو مدفوعات زراعية أو حوالات، كل فئة على حدة، في Findex؛ ولا تُعامل كنسبة من جميع البالغين ما لم ينص المصدر على ذلك. ويستبعد إطار المسح محافظات البيضاء والجوف ومأرب وصعدة وسقطرى وعددًا من المديريات في محافظات أخرى، وهي مناطق تضم نحو 23% من السكان."
+  },
+  {
+   "finding": "RC-16:SEVERITY-BASE",
+   "sheet": "06_EVIDENCE_OBJECTS",
+   "row": 75,
+   "col": 16,
+   "field": "VIS-FIRM-FINANCE-SEVERITY.limitations_en",
+   "old": "The combined 91.84% is not the share of all Yemeni firms, or of all surveyed firms, that face a major or moderate finance obstacle; it applies only to the formal firms in the report's filtered tabulation. | The report's tabulation excludes firms that said they did not need a loan, and the number of firms it covers is not recorded in the evidence base. The survey covers formal firms in seven governorates and is not national.",
+   "new": "The combined 91.84% is not the share of all Yemeni firms, or of all surveyed firms, that face a major or moderate finance obstacle; it applies only to the formal firms in the report's filtered tabulation. | The report's tabulation excludes firms that said they did not need a loan, and the number of firms it covers is not recorded in the evidence base. The survey covers formal firms in seven governorates and is not national. The source introduces the tabulation 'when asking for the reasons of not applying' (p. 145), so its base may be narrower still: firms that did not apply for a loan, less those that said they did not need one. Which base the source used is not established here."
+  },
+  {
+   "finding": "RC-16:SEVERITY-BASE",
+   "sheet": "06_EVIDENCE_OBJECTS",
+   "row": 75,
+   "col": 17,
+   "field": "VIS-FIRM-FINANCE-SEVERITY.limitations_ar",
+   "old": "لا تمثل النسبة المجمعة البالغة 91.84% حصة جميع المنشآت اليمنية، ولا حصة جميع المنشآت المشمولة بالمسح، التي تواجه عائقًا تمويليًا كبيرًا أو متوسطًا؛ بل تخص المنشآت الرسمية المشمولة بالجدول المصفّى في التقرير وحدها. | يستبعد جدول التقرير المنشآت التي قالت إنها لا تحتاج إلى قرض، ولا تتضمن قاعدة الأدلة عدد المنشآت التي يشملها. ويقتصر المسح على المنشآت الرسمية في سبع محافظات، وليس مسحًا وطنيًا.",
+   "new": "لا تمثل النسبة المجمعة البالغة 91.84% حصة جميع المنشآت اليمنية، ولا حصة جميع المنشآت المشمولة بالمسح، التي تواجه عائقًا تمويليًا كبيرًا أو متوسطًا؛ بل تخص المنشآت الرسمية المشمولة بالجدول المصفّى في التقرير وحدها. | يستبعد جدول التقرير المنشآت التي قالت إنها لا تحتاج إلى قرض، ولا تتضمن قاعدة الأدلة عدد المنشآت التي يشملها. ويقتصر المسح على المنشآت الرسمية في سبع محافظات، وليس مسحًا وطنيًا. ويعرض المصدر هذا الجدول في سياق السؤال عن أسباب عدم التقدم بطلب قرض (الصفحة 145)، لذا قد تكون قاعدته أضيق: المنشآت التي لم تتقدم بطلب قرض، باستثناء التي قالت إنها لا تحتاج إليه. ولم يُثبت هنا أي القاعدتين استخدمها المصدر."
+  }
+ ]
+}

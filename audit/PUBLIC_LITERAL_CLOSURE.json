@@ -1,15 +1,15 @@
 {
   "schema": "YFIE_PUBLIC_LITERAL_CLOSURE/2.0",
   "audit_version": "2.0 — token-bounded, token-level classification (Pre-Tranche-C P1-D); v1 substring and paragraph-keyword rules removed",
-  "authority_master_sha256": "ebfb929c86bb54c690b96059b71ae6ff40a5af4cc27c50d80ed7fa4bcea653cb",
-  "page_specs_sha256": "add00f4a0c210b6889da98f6ff00498340687491db43ff005f5039559dd04646",
+  "authority_master_sha256": "e24fe737116bf0a7569dae052120d869d609806fa0e24da3601f3e8810d3da47",
+  "page_specs_sha256": "253894b2862fd6fcd391ede71ee6ba04770d6644bd2e9ac2356b55b6868cc957",
   "scope": "Reader-facing Page Spec titles/sections plus governed-copy numeric inventory. Every substantive public numeral must resolve to a governed source-closed object or be explicitly classified as date/period, stable technical identifier, or non-observation system/method metadata.",
   "classification_rule": "UNRESOLVED_SUBSTANTIVE_PUBLIC_NUMBER is a hard validation failure. Route/source presence without an object-level source-closed trace is not sufficient.",
-  "record_count": 13298,
+  "record_count": 13360,
   "summary": {
     "ROUTE_SOURCE_CLOSED__OBJECT_TRACE_AVAILABLE": 981,
-    "DATE_OR_PERIOD": 1698,
-    "GOVERNED_OBJECT_SOURCE_CLOSED": 10335,
+    "DATE_OR_PERIOD": 1714,
+    "GOVERNED_OBJECT_SOURCE_CLOSED": 10381,
     "STABLE_ID_OR_TECHNICAL_STANDARD": 9,
     "INVENTORY_COUNT_FROM_CONTRACT": 14,
     "CONTROLLED_DATASET_INVENTORY_OR_METHOD_METADATA": 153,
@@ -2868,6 +2868,22 @@
     },
     {
       "route": "/evidence/CLM-001/",
+      "surface": "title",
+      "field": "title_en",
+      "token": "2021",
+      "category": "DATE_OR_PERIOD",
+      "context": "Account ownership: the representative measure from the Global Findex 2021 wave"
+    },
+    {
+      "route": "/evidence/CLM-001/",
+      "surface": "title",
+      "field": "title_ar",
+      "token": "2021",
+      "category": "DATE_OR_PERIOD",
+      "context": "امتلاك الحساب: القياس الممثل من موجة Global Findex 2021"
+    },
+    {
+      "route": "/evidence/CLM-001/",
       "surface": "section",
       "field": "body_en",
       "token": "11.9%",
@@ -2995,6 +3011,24 @@
       "token": "2024",
       "category": "DATE_OR_PERIOD",
       "context": "تظل أحدث مشاهدة سكانية ممثلة ينشرها البنك الدولي لامتلاك الحساب في اليمن عند 11.9%. ويعرضها موقع بيانات البنك الدولي لسنة 2022، وهي مستمدة من دراسة اليمن ضمن موجة Global Findex 2021 التي نُفذت ميدانيًا من 7 نوفمبر 2022 إلى 9 يناير 2023. وتضيف نسخة Global Findex 2025 مشاهدات لعام 2024 في اقتصادات عديدة، لكنها لا تضيف مشاهدة أحدث لليمن."
+    },
+    {
+      "route": "/evidence/CLM-001/",
+      "surface": "governed_numeric_inventory",
+      "field": "title_en",
+      "token": "2021",
+      "category": "GOVERNED_OBJECT_SOURCE_CLOSED",
+      "context": "Account ownership: the representative measure from the Global Findex 2021 wave",
+      "source_object": "CLM-001"
+    },
+    {
+      "route": "/evidence/CLM-001/",
+      "surface": "governed_numeric_inventory",
+      "field": "title_ar",
+      "token": "2021",
+      "category": "GOVERNED_OBJECT_SOURCE_CLOSED",
+      "context": "امتلاك الحساب: القياس الممثل من موجة Global Findex 2021",
+      "source_object": "CLM-001"
     },
     {
       "route": "/evidence/CLM-001/",
@@ -11851,6 +11885,22 @@
     },
     {
       "route": "/evidence/CLM-025/",
+      "surface": "title",
+      "field": "title_en",
+      "token": "2021",
+      "category": "DATE_OR_PERIOD",
+      "context": "Geographic coverage limits of the Global Findex 2021 wave in Yemen"
+    },
+    {
+      "route": "/evidence/CLM-025/",
+      "surface": "title",
+      "field": "title_ar",
+      "token": "2021",
+      "category": "DATE_OR_PERIOD",
+      "context": "حدود التغطية الجغرافية لموجة Global Findex 2021 في اليمن"
+    },
+    {
+      "route": "/evidence/CLM-025/",
       "surface": "section",
       "field": "body_en",
       "token": "23%",
@@ -11865,6 +11915,24 @@
       "token": "23%",
       "category": "ROUTE_SOURCE_CLOSED__OBJECT_TRACE_AVAILABLE",
       "context": "تستبعد أحدث موجة من المؤشر العالمي للشمول المالي (Global Findex) في اليمن محافظات البيضاء والجوف ومأرب وصعدة وسقطرى وعددًا من المديريات في محافظات أخرى. ويذكر المصدر أن المناطق المستبعدة تمثل نحو 23% من السكان، وأن أكثر من ربع وحدات المعاينة الأولية استُبدل أثناء العمل الميداني.",
+      "source_object": "CLM-025"
+    },
+    {
+      "route": "/evidence/CLM-025/",
+      "surface": "governed_numeric_inventory",
+      "field": "title_en",
+      "token": "2021",
+      "category": "GOVERNED_OBJECT_SOURCE_CLOSED",
+      "context": "Geographic coverage limits of the Global Findex 2021 wave in Yemen",
+      "source_object": "CLM-025"
+    },
+    {
+      "route": "/evidence/CLM-025/",
+      "surface": "governed_numeric_inventory",
+      "field": "title_ar",
+      "token": "2021",
+      "category": "GOVERNED_OBJECT_SOURCE_CLOSED",
+      "context": "حدود التغطية الجغرافية لموجة Global Findex 2021 في اليمن",
       "source_object": "CLM-025"
     },
     {
@@ -23582,6 +23650,22 @@
     },
     {
       "route": "/evidence/DS-FINDEX-HISTORY-CROSSWALK/",
+      "surface": "title",
+      "field": "title_en",
+      "token": "2021",
+      "category": "DATE_OR_PERIOD",
+      "context": "Which historical Findex measures can be compared with the 2021 wave"
+    },
+    {
+      "route": "/evidence/DS-FINDEX-HISTORY-CROSSWALK/",
+      "surface": "title",
+      "field": "title_ar",
+      "token": "2021",
+      "category": "DATE_OR_PERIOD",
+      "context": "مقاييس Findex التاريخية التي يمكن مقارنتها بموجة 2021"
+    },
+    {
+      "route": "/evidence/DS-FINDEX-HISTORY-CROSSWALK/",
       "surface": "section",
       "field": "body_en",
       "token": "36",
@@ -23596,6 +23680,24 @@
       "token": "36",
       "category": "ROUTE_COMPOSITE_TRACE__MEMBERS_LISTED",
       "context": "خريطة قابلية مقارنة تربط 36 مقياسًا تاريخيًا من Findex بأحدث مجموعة مقاييس مخطط لها، مع الفصل الصريح بين القيم التاريخية القابلة للنشر والمقاييس الأحدث التي لم تُستكمل حساباتها المطلوبة بعد.",
+      "source_object": "DS-FINDEX-HISTORY-CROSSWALK"
+    },
+    {
+      "route": "/evidence/DS-FINDEX-HISTORY-CROSSWALK/",
+      "surface": "governed_numeric_inventory",
+      "field": "title_en",
+      "token": "2021",
+      "category": "DATE_OR_PERIOD",
+      "context": "Which historical Findex measures can be compared with the 2021 wave",
+      "source_object": "DS-FINDEX-HISTORY-CROSSWALK"
+    },
+    {
+      "route": "/evidence/DS-FINDEX-HISTORY-CROSSWALK/",
+      "surface": "governed_numeric_inventory",
+      "field": "title_ar",
+      "token": "2021",
+      "category": "DATE_OR_PERIOD",
+      "context": "مقاييس Findex التاريخية التي يمكن مقارنتها بموجة 2021",
       "source_object": "DS-FINDEX-HISTORY-CROSSWALK"
     },
     {
@@ -29100,6 +29202,24 @@
     {
       "route": "/evidence/VIS-FINDEX-ACCESS-USE/",
       "surface": "governed_numeric_inventory",
+      "field": "universe_en",
+      "token": "23%",
+      "category": "GOVERNED_OBJECT_SOURCE_CLOSED",
+      "context": "Findex account-ownership, account-use and digital-use indicators, each indicator with its own population and measurement base. The survey frame excludes Al Baydaa, Al Jawf, Mareb, Sadah, Socotra and several districts elsewhere: areas with about 23% of the population.",
+      "source_object": "VIS-FINDEX-ACCESS-USE"
+    },
+    {
+      "route": "/evidence/VIS-FINDEX-ACCESS-USE/",
+      "surface": "governed_numeric_inventory",
+      "field": "universe_ar",
+      "token": "23%",
+      "category": "GOVERNED_OBJECT_SOURCE_CLOSED",
+      "context": "مؤشرات امتلاك الحساب واستخدامه والاستخدام الرقمي في Findex، مع مجتمع وقاعدة قياس منفصلين لكل مؤشر. ويستبعد إطار المسح محافظات البيضاء والجوف ومأرب وصعدة وسقطرى وعددًا من المديريات في محافظات أخرى، وهي مناطق تضم نحو 23% من السكان.",
+      "source_object": "VIS-FINDEX-ACCESS-USE"
+    },
+    {
+      "route": "/evidence/VIS-FINDEX-ACCESS-USE/",
+      "surface": "governed_numeric_inventory",
       "field": "method_en",
       "token": "2021",
       "category": "GOVERNED_OBJECT_SOURCE_CLOSED",
@@ -29377,6 +29497,24 @@
     {
       "route": "/evidence/VIS-FINDEX-BARRIERS/",
       "surface": "governed_numeric_inventory",
+      "field": "universe_en",
+      "token": "23%",
+      "category": "GOVERNED_OBJECT_SOURCE_CLOSED",
+      "context": "Adults without an account, within the measurement base of the Findex barrier indicators. The survey frame excludes Al Baydaa, Al Jawf, Mareb, Sadah, Socotra and several districts elsewhere: areas with about 23% of the population.",
+      "source_object": "VIS-FINDEX-BARRIERS"
+    },
+    {
+      "route": "/evidence/VIS-FINDEX-BARRIERS/",
+      "surface": "governed_numeric_inventory",
+      "field": "universe_ar",
+      "token": "23%",
+      "category": "GOVERNED_OBJECT_SOURCE_CLOSED",
+      "context": "البالغون الذين لا يملكون حسابًا ضمن قاعدة الاحتساب الخاصة بمؤشرات العوائق في Findex. ويستبعد إطار المسح محافظات البيضاء والجوف ومأرب وصعدة وسقطرى وعددًا من المديريات في محافظات أخرى، وهي مناطق تضم نحو 23% من السكان.",
+      "source_object": "VIS-FINDEX-BARRIERS"
+    },
+    {
+      "route": "/evidence/VIS-FINDEX-BARRIERS/",
+      "surface": "governed_numeric_inventory",
       "field": "method_en",
       "token": "2021",
       "category": "GOVERNED_OBJECT_SOURCE_CLOSED",
@@ -29604,6 +29742,24 @@
       "token": "2023",
       "category": "GOVERNED_OBJECT_SOURCE_CLOSED",
       "context": "موجة 2021 / العمل الميداني في اليمن 2022–2023",
+      "source_object": "VIS-FINDEX-FLOW-CHANNELS"
+    },
+    {
+      "route": "/evidence/VIS-FINDEX-FLOW-CHANNELS/",
+      "surface": "governed_numeric_inventory",
+      "field": "universe_en",
+      "token": "23%",
+      "category": "GOVERNED_OBJECT_SOURCE_CLOSED",
+      "context": "Adults who received wages, government transfers, agricultural payments or remittances, each group taken separately in Findex; not shares of all adults unless the source says so. The survey frame excludes Al Baydaa, Al Jawf, Mareb, Sadah, Socotra and several districts elsewhere: areas with about 23% of the population.",
+      "source_object": "VIS-FINDEX-FLOW-CHANNELS"
+    },
+    {
+      "route": "/evidence/VIS-FINDEX-FLOW-CHANNELS/",
+      "surface": "governed_numeric_inventory",
+      "field": "universe_ar",
+      "token": "23%",
+      "category": "GOVERNED_OBJECT_SOURCE_CLOSED",
+      "context": "البالغون الذين تلقوا أجورًا أو تحويلات حكومية أو مدفوعات زراعية أو حوالات، كل فئة على حدة، في Findex؛ ولا تُعامل كنسبة من جميع البالغين ما لم ينص المصدر على ذلك. ويستبعد إطار المسح محافظات البيضاء والجوف ومأرب وصعدة وسقطرى وعددًا من المديريات في محافظات أخرى، وهي مناطق تضم نحو 23% من السكان.",
       "source_object": "VIS-FINDEX-FLOW-CHANNELS"
     },
     {
@@ -32923,6 +33079,24 @@
     {
       "route": "/evidence/VIS-FINDEX-RESILIENCE/",
       "surface": "governed_numeric_inventory",
+      "field": "universe_en",
+      "token": "23%",
+      "category": "GOVERNED_OBJECT_SOURCE_CLOSED",
+      "context": "The populations and categories defined by the Findex questions on raising money and financial resilience, with the measurement base and missing answers kept for each question. The survey frame excludes Al Baydaa, Al Jawf, Mareb, Sadah, Socotra and several districts elsewhere: areas with about 23% of the population.",
+      "source_object": "VIS-FINDEX-RESILIENCE"
+    },
+    {
+      "route": "/evidence/VIS-FINDEX-RESILIENCE/",
+      "surface": "governed_numeric_inventory",
+      "field": "universe_ar",
+      "token": "23%",
+      "category": "GOVERNED_OBJECT_SOURCE_CLOSED",
+      "context": "المجتمعات والفئات التي تعرفها أسئلة القدرة على تدبير المال والصمود المالي في Findex، مع الحفاظ على قاعدة الاحتساب والإجابات المفقودة لكل سؤال. ويستبعد إطار المسح محافظات البيضاء والجوف ومأرب وصعدة وسقطرى وعددًا من المديريات في محافظات أخرى، وهي مناطق تضم نحو 23% من السكان.",
+      "source_object": "VIS-FINDEX-RESILIENCE"
+    },
+    {
+      "route": "/evidence/VIS-FINDEX-RESILIENCE/",
+      "surface": "governed_numeric_inventory",
       "field": "method_en",
       "token": "2021",
       "category": "GOVERNED_OBJECT_SOURCE_CLOSED",
@@ -35576,7 +35750,16 @@
       "field": "limitations_en",
       "token": "91.84%",
       "category": "GOVERNED_OBJECT_SOURCE_CLOSED",
-      "context": "The combined 91.84% is not the share of all Yemeni firms, or of all surveyed firms, that face a major or moderate finance obstacle; it applies only to the formal firms in the report's filtered tabulation. | The report's tabulation excludes firms that said they did not need a loan, and the number of firms it covers is not recorded in the evidence base. The survey covers formal firms in seven governorates and is not national.",
+      "context": "The combined 91.84% is not the share of all Yemeni firms, or of all surveyed firms, that face a major or moderate finance obstacle; it applies only to the formal firms in the report's filtered tabulation. | The report's tabulation excludes firms that said they did not need a loan, and the number of firms it covers is not recorded in the evidence base. The survey covers formal firms in seven governorates and is not national. The source introduces the tabulation 'when asking for the reasons of not applying' (p. 145), so its base may be narrower still: firms that did not apply for a loan, less those that said they did not need one. Which base the source used is not established here.",
+      "source_object": "VIS-FIRM-FINANCE-SEVERITY"
+    },
+    {
+      "route": "/evidence/VIS-FIRM-FINANCE-SEVERITY/",
+      "surface": "governed_numeric_inventory",
+      "field": "limitations_en",
+      "token": "145",
+      "category": "GOVERNED_OBJECT_SOURCE_CLOSED",
+      "context": "The combined 91.84% is not the share of all Yemeni firms, or of all surveyed firms, that face a major or moderate finance obstacle; it applies only to the formal firms in the report's filtered tabulation. | The report's tabulation excludes firms that said they did not need a loan, and the number of firms it covers is not recorded in the evidence base. The survey covers formal firms in seven governorates and is not national. The source introduces the tabulation 'when asking for the reasons of not applying' (p. 145), so its base may be narrower still: firms that did not apply for a loan, less those that said they did not need one. Which base the source used is not established here.",
       "source_object": "VIS-FIRM-FINANCE-SEVERITY"
     },
     {
@@ -35585,7 +35768,16 @@
       "field": "limitations_ar",
       "token": "91.84%",
       "category": "GOVERNED_OBJECT_SOURCE_CLOSED",
-      "context": "لا تمثل النسبة المجمعة البالغة 91.84% حصة جميع المنشآت اليمنية، ولا حصة جميع المنشآت المشمولة بالمسح، التي تواجه عائقًا تمويليًا كبيرًا أو متوسطًا؛ بل تخص المنشآت الرسمية المشمولة بالجدول المصفّى في التقرير وحدها. | يستبعد جدول التقرير المنشآت التي قالت إنها لا تحتاج إلى قرض، ولا تتضمن قاعدة الأدلة عدد المنشآت التي يشملها. ويقتصر المسح على المنشآت الرسمية في سبع محافظات، وليس مسحًا وطنيًا.",
+      "context": "لا تمثل النسبة المجمعة البالغة 91.84% حصة جميع المنشآت اليمنية، ولا حصة جميع المنشآت المشمولة بالمسح، التي تواجه عائقًا تمويليًا كبيرًا أو متوسطًا؛ بل تخص المنشآت الرسمية المشمولة بالجدول المصفّى في التقرير وحدها. | يستبعد جدول التقرير المنشآت التي قالت إنها لا تحتاج إلى قرض، ولا تتضمن قاعدة الأدلة عدد المنشآت التي يشملها. ويقتصر المسح على المنشآت الرسمية في سبع محافظات، وليس مسحًا وطنيًا. ويعرض المصدر هذا الجدول في سياق السؤال عن أسباب عدم التقدم بطلب قرض (الصفحة 145)، لذا قد تكون قاعدته أضيق: المنشآت التي لم تتقدم بطلب قرض، باستثناء التي قالت إنها لا تحتاج إليه. ولم يُثبت هنا أي القاعدتين استخدمها المصدر.",
+      "source_object": "VIS-FIRM-FINANCE-SEVERITY"
+    },
+    {
+      "route": "/evidence/VIS-FIRM-FINANCE-SEVERITY/",
+      "surface": "governed_numeric_inventory",
+      "field": "limitations_ar",
+      "token": "145",
+      "category": "GOVERNED_OBJECT_SOURCE_CLOSED",
+      "context": "لا تمثل النسبة المجمعة البالغة 91.84% حصة جميع المنشآت اليمنية، ولا حصة جميع المنشآت المشمولة بالمسح، التي تواجه عائقًا تمويليًا كبيرًا أو متوسطًا؛ بل تخص المنشآت الرسمية المشمولة بالجدول المصفّى في التقرير وحدها. | يستبعد جدول التقرير المنشآت التي قالت إنها لا تحتاج إلى قرض، ولا تتضمن قاعدة الأدلة عدد المنشآت التي يشملها. ويقتصر المسح على المنشآت الرسمية في سبع محافظات، وليس مسحًا وطنيًا. ويعرض المصدر هذا الجدول في سياق السؤال عن أسباب عدم التقدم بطلب قرض (الصفحة 145)، لذا قد تكون قاعدته أضيق: المنشآت التي لم تتقدم بطلب قرض، باستثناء التي قالت إنها لا تحتاج إليه. ولم يُثبت هنا أي القاعدتين استخدمها المصدر.",
       "source_object": "VIS-FIRM-FINANCE-SEVERITY"
     },
     {
@@ -45769,6 +45961,24 @@
     {
       "route": "/evidence/compare/",
       "surface": "governed_numeric_inventory",
+      "field": "headline_en",
+      "token": "2021",
+      "category": "GOVERNED_OBJECT_SOURCE_CLOSED",
+      "context": "Account ownership: the representative measure from the Global Findex 2021 wave",
+      "source_object": "CLM-001"
+    },
+    {
+      "route": "/evidence/compare/",
+      "surface": "governed_numeric_inventory",
+      "field": "headline_ar",
+      "token": "2021",
+      "category": "GOVERNED_OBJECT_SOURCE_CLOSED",
+      "context": "امتلاك الحساب: القياس الممثل من موجة Global Findex 2021",
+      "source_object": "CLM-001"
+    },
+    {
+      "route": "/evidence/compare/",
+      "surface": "governed_numeric_inventory",
       "field": "copy_en",
       "token": "11.9%",
       "category": "GOVERNED_OBJECT_SOURCE_CLOSED",
@@ -47169,6 +47379,24 @@
       "category": "DATE_OR_PERIOD",
       "context": "لا يثبت هذا الدليل حصة موثقة من رصيد 2023، ولا حصة من العملاء الفريدين، ولا حصة سوقية عامة لأي مقدم خدمة.",
       "source_object": "CLM-056"
+    },
+    {
+      "route": "/evidence/compare/",
+      "surface": "governed_numeric_inventory",
+      "field": "title_en",
+      "token": "2021",
+      "category": "GOVERNED_OBJECT_SOURCE_CLOSED",
+      "context": "Account ownership: the representative measure from the Global Findex 2021 wave",
+      "source_object": "CLM-001"
+    },
+    {
+      "route": "/evidence/compare/",
+      "surface": "governed_numeric_inventory",
+      "field": "title_ar",
+      "token": "2021",
+      "category": "GOVERNED_OBJECT_SOURCE_CLOSED",
+      "context": "امتلاك الحساب: القياس الممثل من موجة Global Findex 2021",
+      "source_object": "CLM-001"
     },
     {
       "route": "/evidence/compare/",
@@ -66182,7 +66410,16 @@
       "field": "limitations_en",
       "token": "91.84%",
       "category": "GOVERNED_OBJECT_SOURCE_CLOSED",
-      "context": "The combined 91.84% is not the share of all Yemeni firms, or of all surveyed firms, that face a major or moderate finance obstacle; it applies only to the formal firms in the report's filtered tabulation. | The report's tabulation excludes firms that said they did not need a loan, and the number of firms it covers is not recorded in the evidence base. The survey covers formal firms in seven governorates and is not national.",
+      "context": "The combined 91.84% is not the share of all Yemeni firms, or of all surveyed firms, that face a major or moderate finance obstacle; it applies only to the formal firms in the report's filtered tabulation. | The report's tabulation excludes firms that said they did not need a loan, and the number of firms it covers is not recorded in the evidence base. The survey covers formal firms in seven governorates and is not national. The source introduces the tabulation 'when asking for the reasons of not applying' (p. 145), so its base may be narrower still: firms that did not apply for a loan, less those that said they did not need one. Which base the source used is not established here.",
+      "source_object": "VIS-FIRM-FINANCE-SEVERITY"
+    },
+    {
+      "route": "/firms/",
+      "surface": "governed_numeric_inventory",
+      "field": "limitations_en",
+      "token": "145",
+      "category": "GOVERNED_OBJECT_SOURCE_CLOSED",
+      "context": "The combined 91.84% is not the share of all Yemeni firms, or of all surveyed firms, that face a major or moderate finance obstacle; it applies only to the formal firms in the report's filtered tabulation. | The report's tabulation excludes firms that said they did not need a loan, and the number of firms it covers is not recorded in the evidence base. The survey covers formal firms in seven governorates and is not national. The source introduces the tabulation 'when asking for the reasons of not applying' (p. 145), so its base may be narrower still: firms that did not apply for a loan, less those that said they did not need one. Which base the source used is not established here.",
       "source_object": "VIS-FIRM-FINANCE-SEVERITY"
     },
     {
@@ -66191,7 +66428,16 @@
       "field": "limitations_ar",
       "token": "91.84%",
       "category": "GOVERNED_OBJECT_SOURCE_CLOSED",
-      "context": "لا تمثل النسبة المجمعة البالغة 91.84% حصة جميع المنشآت اليمنية، ولا حصة جميع المنشآت المشمولة بالمسح، التي تواجه عائقًا تمويليًا كبيرًا أو متوسطًا؛ بل تخص المنشآت الرسمية المشمولة بالجدول المصفّى في التقرير وحدها. | يستبعد جدول التقرير المنشآت التي قالت إنها لا تحتاج إلى قرض، ولا تتضمن قاعدة الأدلة عدد المنشآت التي يشملها. ويقتصر المسح على المنشآت الرسمية في سبع محافظات، وليس مسحًا وطنيًا.",
+      "context": "لا تمثل النسبة المجمعة البالغة 91.84% حصة جميع المنشآت اليمنية، ولا حصة جميع المنشآت المشمولة بالمسح، التي تواجه عائقًا تمويليًا كبيرًا أو متوسطًا؛ بل تخص المنشآت الرسمية المشمولة بالجدول المصفّى في التقرير وحدها. | يستبعد جدول التقرير المنشآت التي قالت إنها لا تحتاج إلى قرض، ولا تتضمن قاعدة الأدلة عدد المنشآت التي يشملها. ويقتصر المسح على المنشآت الرسمية في سبع محافظات، وليس مسحًا وطنيًا. ويعرض المصدر هذا الجدول في سياق السؤال عن أسباب عدم التقدم بطلب قرض (الصفحة 145)، لذا قد تكون قاعدته أضيق: المنشآت التي لم تتقدم بطلب قرض، باستثناء التي قالت إنها لا تحتاج إليه. ولم يُثبت هنا أي القاعدتين استخدمها المصدر.",
+      "source_object": "VIS-FIRM-FINANCE-SEVERITY"
+    },
+    {
+      "route": "/firms/",
+      "surface": "governed_numeric_inventory",
+      "field": "limitations_ar",
+      "token": "145",
+      "category": "GOVERNED_OBJECT_SOURCE_CLOSED",
+      "context": "لا تمثل النسبة المجمعة البالغة 91.84% حصة جميع المنشآت اليمنية، ولا حصة جميع المنشآت المشمولة بالمسح، التي تواجه عائقًا تمويليًا كبيرًا أو متوسطًا؛ بل تخص المنشآت الرسمية المشمولة بالجدول المصفّى في التقرير وحدها. | يستبعد جدول التقرير المنشآت التي قالت إنها لا تحتاج إلى قرض، ولا تتضمن قاعدة الأدلة عدد المنشآت التي يشملها. ويقتصر المسح على المنشآت الرسمية في سبع محافظات، وليس مسحًا وطنيًا. ويعرض المصدر هذا الجدول في سياق السؤال عن أسباب عدم التقدم بطلب قرض (الصفحة 145)، لذا قد تكون قاعدته أضيق: المنشآت التي لم تتقدم بطلب قرض، باستثناء التي قالت إنها لا تحتاج إليه. ولم يُثبت هنا أي القاعدتين استخدمها المصدر.",
       "source_object": "VIS-FIRM-FINANCE-SEVERITY"
     },
     {
@@ -68829,6 +69075,24 @@
     {
       "route": "/",
       "surface": "governed_numeric_inventory",
+      "field": "headline_en",
+      "token": "2021",
+      "category": "GOVERNED_OBJECT_SOURCE_CLOSED",
+      "context": "Account ownership: the representative measure from the Global Findex 2021 wave",
+      "source_object": "CLM-001"
+    },
+    {
+      "route": "/",
+      "surface": "governed_numeric_inventory",
+      "field": "headline_ar",
+      "token": "2021",
+      "category": "GOVERNED_OBJECT_SOURCE_CLOSED",
+      "context": "امتلاك الحساب: القياس الممثل من موجة Global Findex 2021",
+      "source_object": "CLM-001"
+    },
+    {
+      "route": "/",
+      "surface": "governed_numeric_inventory",
       "field": "copy_en",
       "token": "11.9%",
       "category": "GOVERNED_OBJECT_SOURCE_CLOSED",
@@ -69419,6 +69683,24 @@
       "category": "GOVERNED_OBJECT_SOURCE_CLOSED",
       "context": "ليس نمو عدد أجهزة نقاط البيع معدلًا للشمول المالي، ولا يثبت تبنّي التجار لها أو نموًا في عدد المستخدمين الفريدين. والإجماليات تخص نطاق الإبلاغ لدى البنك المركزي اليمني – عدن، ولا يثبت الدليل أنها إجماليات وطنية. وفي سلسلة الأجهزة نفسها اختلاف أصغر داخل المصدر في نسبة يونيو 2025، كما يتضمن إصدارا يناير 2026 ومايو 2026 فروقًا جوهرية بين بعض نسب النمو المعروضة والإجماليات الخام للأجهزة والمعاملات. أما فجوة سبتمبر 2025 فتخص سلسلة قيمة المعاملات بالريال اليمني، لا عدد الأجهزة.",
       "source_object": "CLM-003"
+    },
+    {
+      "route": "/",
+      "surface": "governed_numeric_inventory",
+      "field": "title_en",
+      "token": "2021",
+      "category": "GOVERNED_OBJECT_SOURCE_CLOSED",
+      "context": "Account ownership: the representative measure from the Global Findex 2021 wave",
+      "source_object": "CLM-001"
+    },
+    {
+      "route": "/",
+      "surface": "governed_numeric_inventory",
+      "field": "title_ar",
+      "token": "2021",
+      "category": "GOVERNED_OBJECT_SOURCE_CLOSED",
+      "context": "امتلاك الحساب: القياس الممثل من موجة Global Findex 2021",
+      "source_object": "CLM-001"
     },
     {
       "route": "/",
@@ -71958,6 +72240,24 @@
     {
       "route": "/methodology/",
       "surface": "governed_numeric_inventory",
+      "field": "headline_en",
+      "token": "2021",
+      "category": "GOVERNED_OBJECT_SOURCE_CLOSED",
+      "context": "Geographic coverage limits of the Global Findex 2021 wave in Yemen",
+      "source_object": "CLM-025"
+    },
+    {
+      "route": "/methodology/",
+      "surface": "governed_numeric_inventory",
+      "field": "headline_ar",
+      "token": "2021",
+      "category": "GOVERNED_OBJECT_SOURCE_CLOSED",
+      "context": "حدود التغطية الجغرافية لموجة Global Findex 2021 في اليمن",
+      "source_object": "CLM-025"
+    },
+    {
+      "route": "/methodology/",
+      "surface": "governed_numeric_inventory",
       "field": "copy_en",
       "token": "23%",
       "category": "GOVERNED_OBJECT_SOURCE_CLOSED",
@@ -73200,6 +73500,24 @@
     {
       "route": "/methodology/",
       "surface": "governed_numeric_inventory",
+      "field": "title_en",
+      "token": "2021",
+      "category": "GOVERNED_OBJECT_SOURCE_CLOSED",
+      "context": "Geographic coverage limits of the Global Findex 2021 wave in Yemen",
+      "source_object": "CLM-025"
+    },
+    {
+      "route": "/methodology/",
+      "surface": "governed_numeric_inventory",
+      "field": "title_ar",
+      "token": "2021",
+      "category": "GOVERNED_OBJECT_SOURCE_CLOSED",
+      "context": "حدود التغطية الجغرافية لموجة Global Findex 2021 في اليمن",
+      "source_object": "CLM-025"
+    },
+    {
+      "route": "/methodology/",
+      "surface": "governed_numeric_inventory",
       "field": "summary_en",
       "token": "23%",
       "category": "GOVERNED_OBJECT_SOURCE_CLOSED",
@@ -73826,6 +74144,24 @@
       "category": "GOVERNED_OBJECT_SOURCE_CLOSED",
       "context": "لا تُعرض أي قيم بعد. وعند إنتاجها ستعود إلى موجة Findex 2021، التي نُفذ عملها الميداني في اليمن من 7 نوفمبر 2022 إلى 9 يناير 2023، وهي أحدث موجة متاحة لليمن.",
       "source_object": "VIS-FINDEX-SAMPLE-SUPPORT"
+    },
+    {
+      "route": "/methodology/",
+      "surface": "governed_numeric_inventory",
+      "field": "title_en",
+      "token": "2021",
+      "category": "DATE_OR_PERIOD",
+      "context": "Which historical Findex measures can be compared with the 2021 wave",
+      "source_object": "DS-FINDEX-HISTORY-CROSSWALK"
+    },
+    {
+      "route": "/methodology/",
+      "surface": "governed_numeric_inventory",
+      "field": "title_ar",
+      "token": "2021",
+      "category": "DATE_OR_PERIOD",
+      "context": "مقاييس Findex التاريخية التي يمكن مقارنتها بموجة 2021",
+      "source_object": "DS-FINDEX-HISTORY-CROSSWALK"
     },
     {
       "route": "/methodology/",
@@ -84754,6 +85090,14 @@
     {
       "route": "/people/",
       "surface": "section",
+      "field": "heading_en",
+      "token": "2021",
+      "category": "DATE_OR_PERIOD",
+      "context": "Account ownership: the representative measure from the Global Findex 2021 wave"
+    },
+    {
+      "route": "/people/",
+      "surface": "section",
       "field": "body_en",
       "token": "2021",
       "category": "DATE_OR_PERIOD",
@@ -84791,6 +85135,14 @@
       "token": "2026",
       "category": "DATE_OR_PERIOD",
       "context": "Global Findex 2021 reports 11.9% account ownership for Yemen; the Yemen fieldwork was carried out in 2022–23. The value is a survey measure for that wave and fieldwork period, not a 2026 population rate."
+    },
+    {
+      "route": "/people/",
+      "surface": "section",
+      "field": "heading_ar",
+      "token": "2021",
+      "category": "DATE_OR_PERIOD",
+      "context": "امتلاك الحساب: القياس الممثل من موجة Global Findex 2021"
     },
     {
       "route": "/people/",
@@ -85628,6 +85980,14 @@
     {
       "route": "/people/",
       "surface": "section",
+      "field": "heading_en",
+      "token": "2021",
+      "category": "DATE_OR_PERIOD",
+      "context": "The 2021 wave does not cover all of Yemen"
+    },
+    {
+      "route": "/people/",
+      "surface": "section",
       "field": "body_en",
       "token": "23%",
       "category": "ROUTE_SOURCE_CLOSED__OBJECT_TRACE_AVAILABLE",
@@ -85674,6 +86034,14 @@
       "token": "2023",
       "category": "DATE_OR_PERIOD",
       "context": "The latest Yemen Findex wave excludes Al Baydaa, Al Jawf, Mareb, Sadah, Socotra and several districts elsewhere; the source states that excluded areas represent approximately 23% of the population and that over one-fourth of primary sampling units were replaced during fieldwork. The Yemen sample has 1,000 respondents, interviewed from 7 November 2022 to 9 January 2023, and population estimates require the survey weights."
+    },
+    {
+      "route": "/people/",
+      "surface": "section",
+      "field": "heading_ar",
+      "token": "2021",
+      "category": "DATE_OR_PERIOD",
+      "context": "التغطية الجغرافية لموجة 2021 ليست كاملة"
     },
     {
       "route": "/people/",
@@ -85876,6 +86244,24 @@
       "token": "1",
       "category": "DATE_OR_PERIOD",
       "context": "امتلاك الحساب بعدٌ واحد من أبعاد الشمول المالي، والقدرة المالية والرفاه المالي بعدان آخران. ففي المسح الدولي للثقافة المالية لدى البالغين الذي أجرته منظمة التعاون الاقتصادي والتنمية وشبكتها الدولية للتثقيف المالي (OECD/INFE) عام 2023، سجل اليمن 42 من 100 في النتيجة الإجمالية للثقافة المالية و15 من 100 في الرفاه المالي. وشمل المسح في اليمن 1,000 مستجيب أُجريت مقابلاتهم هاتفيًا ووجهًا لوجه بين 11 مارس و1 أبريل 2023، ويشير التقرير إلى أن البيانات جُمعت في إطار مشروع للمساعدة الفنية أو مشروع إقليمي. ولا يبيّن التقرير ما إذا كانت عينة اليمن تغطي جميع المناطق أو تمثل البلاد على المستوى الوطني. وتبقى هاتان النتيجتان مكمّلتين لمقياس امتلاك الحساب في Global Findex، لا بديلًا عنه ولا قابلتين للدمج معه، ولا تمثل أي منهما نسبة السكان المشمولين ماليًا."
+    },
+    {
+      "route": "/people/",
+      "surface": "governed_numeric_inventory",
+      "field": "headline_en",
+      "token": "2021",
+      "category": "GOVERNED_OBJECT_SOURCE_CLOSED",
+      "context": "Account ownership: the representative measure from the Global Findex 2021 wave",
+      "source_object": "CLM-001"
+    },
+    {
+      "route": "/people/",
+      "surface": "governed_numeric_inventory",
+      "field": "headline_ar",
+      "token": "2021",
+      "category": "GOVERNED_OBJECT_SOURCE_CLOSED",
+      "context": "امتلاك الحساب: القياس الممثل من موجة Global Findex 2021",
+      "source_object": "CLM-001"
     },
     {
       "route": "/people/",
@@ -86542,6 +86928,24 @@
       "category": "GOVERNED_OBJECT_SOURCE_CLOSED",
       "context": "يضم ملف دراسة اليمن ضمن موجة 2021 من المؤشر العالمي للشمول المالي 1,000 مستجيب و113 متغيرًا. ونُفذ العمل الميداني من 7 نوفمبر 2022 إلى 9 يناير 2023، وتتطلب جميع تقديرات السكان استخدام أوزان المسح.",
       "source_object": "CLM-023"
+    },
+    {
+      "route": "/people/",
+      "surface": "governed_numeric_inventory",
+      "field": "headline_en",
+      "token": "2021",
+      "category": "GOVERNED_OBJECT_SOURCE_CLOSED",
+      "context": "Geographic coverage limits of the Global Findex 2021 wave in Yemen",
+      "source_object": "CLM-025"
+    },
+    {
+      "route": "/people/",
+      "surface": "governed_numeric_inventory",
+      "field": "headline_ar",
+      "token": "2021",
+      "category": "GOVERNED_OBJECT_SOURCE_CLOSED",
+      "context": "حدود التغطية الجغرافية لموجة Global Findex 2021 في اليمن",
+      "source_object": "CLM-025"
     },
     {
       "route": "/people/",
@@ -87379,6 +87783,24 @@
       "category": "GOVERNED_OBJECT_SOURCE_CLOSED",
       "context": "لا يثبت هذا الدليل فجوة وطنية بين النساء والرجال في 2026، ولا معدل وصول في الريف، ولا توافر الخدمة محليًا.",
       "source_object": "CLM-052"
+    },
+    {
+      "route": "/people/",
+      "surface": "governed_numeric_inventory",
+      "field": "title_en",
+      "token": "2021",
+      "category": "GOVERNED_OBJECT_SOURCE_CLOSED",
+      "context": "Account ownership: the representative measure from the Global Findex 2021 wave",
+      "source_object": "CLM-001"
+    },
+    {
+      "route": "/people/",
+      "surface": "governed_numeric_inventory",
+      "field": "title_ar",
+      "token": "2021",
+      "category": "GOVERNED_OBJECT_SOURCE_CLOSED",
+      "context": "امتلاك الحساب: القياس الممثل من موجة Global Findex 2021",
+      "source_object": "CLM-001"
     },
     {
       "route": "/people/",
@@ -89471,6 +89893,24 @@
     {
       "route": "/people/",
       "surface": "governed_numeric_inventory",
+      "field": "title_en",
+      "token": "2021",
+      "category": "GOVERNED_OBJECT_SOURCE_CLOSED",
+      "context": "Geographic coverage limits of the Global Findex 2021 wave in Yemen",
+      "source_object": "CLM-025"
+    },
+    {
+      "route": "/people/",
+      "surface": "governed_numeric_inventory",
+      "field": "title_ar",
+      "token": "2021",
+      "category": "GOVERNED_OBJECT_SOURCE_CLOSED",
+      "context": "حدود التغطية الجغرافية لموجة Global Findex 2021 في اليمن",
+      "source_object": "CLM-025"
+    },
+    {
+      "route": "/people/",
+      "surface": "governed_numeric_inventory",
       "field": "summary_en",
       "token": "23%",
       "category": "GOVERNED_OBJECT_SOURCE_CLOSED",
@@ -90137,6 +90577,24 @@
     {
       "route": "/people/",
       "surface": "governed_numeric_inventory",
+      "field": "universe_en",
+      "token": "23%",
+      "category": "GOVERNED_OBJECT_SOURCE_CLOSED",
+      "context": "Findex account-ownership, account-use and digital-use indicators, each indicator with its own population and measurement base. The survey frame excludes Al Baydaa, Al Jawf, Mareb, Sadah, Socotra and several districts elsewhere: areas with about 23% of the population.",
+      "source_object": "VIS-FINDEX-ACCESS-USE"
+    },
+    {
+      "route": "/people/",
+      "surface": "governed_numeric_inventory",
+      "field": "universe_ar",
+      "token": "23%",
+      "category": "GOVERNED_OBJECT_SOURCE_CLOSED",
+      "context": "مؤشرات امتلاك الحساب واستخدامه والاستخدام الرقمي في Findex، مع مجتمع وقاعدة قياس منفصلين لكل مؤشر. ويستبعد إطار المسح محافظات البيضاء والجوف ومأرب وصعدة وسقطرى وعددًا من المديريات في محافظات أخرى، وهي مناطق تضم نحو 23% من السكان.",
+      "source_object": "VIS-FINDEX-ACCESS-USE"
+    },
+    {
+      "route": "/people/",
+      "surface": "governed_numeric_inventory",
       "field": "method_en",
       "token": "2021",
       "category": "GOVERNED_OBJECT_SOURCE_CLOSED",
@@ -90393,6 +90851,24 @@
       "token": "2023",
       "category": "GOVERNED_OBJECT_SOURCE_CLOSED",
       "context": "موجة Findex 2021؛ العمل الميداني في اليمن من نوفمبر 2022 إلى يناير 2023",
+      "source_object": "VIS-FINDEX-BARRIERS"
+    },
+    {
+      "route": "/people/",
+      "surface": "governed_numeric_inventory",
+      "field": "universe_en",
+      "token": "23%",
+      "category": "GOVERNED_OBJECT_SOURCE_CLOSED",
+      "context": "Adults without an account, within the measurement base of the Findex barrier indicators. The survey frame excludes Al Baydaa, Al Jawf, Mareb, Sadah, Socotra and several districts elsewhere: areas with about 23% of the population.",
+      "source_object": "VIS-FINDEX-BARRIERS"
+    },
+    {
+      "route": "/people/",
+      "surface": "governed_numeric_inventory",
+      "field": "universe_ar",
+      "token": "23%",
+      "category": "GOVERNED_OBJECT_SOURCE_CLOSED",
+      "context": "البالغون الذين لا يملكون حسابًا ضمن قاعدة الاحتساب الخاصة بمؤشرات العوائق في Findex. ويستبعد إطار المسح محافظات البيضاء والجوف ومأرب وصعدة وسقطرى وعددًا من المديريات في محافظات أخرى، وهي مناطق تضم نحو 23% من السكان.",
       "source_object": "VIS-FINDEX-BARRIERS"
     },
     {
@@ -90713,6 +91189,24 @@
     {
       "route": "/people/",
       "surface": "governed_numeric_inventory",
+      "field": "universe_en",
+      "token": "23%",
+      "category": "GOVERNED_OBJECT_SOURCE_CLOSED",
+      "context": "The populations and categories defined by the Findex questions on raising money and financial resilience, with the measurement base and missing answers kept for each question. The survey frame excludes Al Baydaa, Al Jawf, Mareb, Sadah, Socotra and several districts elsewhere: areas with about 23% of the population.",
+      "source_object": "VIS-FINDEX-RESILIENCE"
+    },
+    {
+      "route": "/people/",
+      "surface": "governed_numeric_inventory",
+      "field": "universe_ar",
+      "token": "23%",
+      "category": "GOVERNED_OBJECT_SOURCE_CLOSED",
+      "context": "المجتمعات والفئات التي تعرفها أسئلة القدرة على تدبير المال والصمود المالي في Findex، مع الحفاظ على قاعدة الاحتساب والإجابات المفقودة لكل سؤال. ويستبعد إطار المسح محافظات البيضاء والجوف ومأرب وصعدة وسقطرى وعددًا من المديريات في محافظات أخرى، وهي مناطق تضم نحو 23% من السكان.",
+      "source_object": "VIS-FINDEX-RESILIENCE"
+    },
+    {
+      "route": "/people/",
+      "surface": "governed_numeric_inventory",
       "field": "method_en",
       "token": "2021",
       "category": "GOVERNED_OBJECT_SOURCE_CLOSED",
@@ -90924,6 +91418,24 @@
       "token": "2023",
       "category": "GOVERNED_OBJECT_SOURCE_CLOSED",
       "context": "موجة 2021 / العمل الميداني في اليمن 2022–2023",
+      "source_object": "VIS-FINDEX-FLOW-CHANNELS"
+    },
+    {
+      "route": "/people/",
+      "surface": "governed_numeric_inventory",
+      "field": "universe_en",
+      "token": "23%",
+      "category": "GOVERNED_OBJECT_SOURCE_CLOSED",
+      "context": "Adults who received wages, government transfers, agricultural payments or remittances, each group taken separately in Findex; not shares of all adults unless the source says so. The survey frame excludes Al Baydaa, Al Jawf, Mareb, Sadah, Socotra and several districts elsewhere: areas with about 23% of the population.",
+      "source_object": "VIS-FINDEX-FLOW-CHANNELS"
+    },
+    {
+      "route": "/people/",
+      "surface": "governed_numeric_inventory",
+      "field": "universe_ar",
+      "token": "23%",
+      "category": "GOVERNED_OBJECT_SOURCE_CLOSED",
+      "context": "البالغون الذين تلقوا أجورًا أو تحويلات حكومية أو مدفوعات زراعية أو حوالات، كل فئة على حدة، في Findex؛ ولا تُعامل كنسبة من جميع البالغين ما لم ينص المصدر على ذلك. ويستبعد إطار المسح محافظات البيضاء والجوف ومأرب وصعدة وسقطرى وعددًا من المديريات في محافظات أخرى، وهي مناطق تضم نحو 23% من السكان.",
       "source_object": "VIS-FINDEX-FLOW-CHANNELS"
     },
     {
@@ -93985,6 +94497,24 @@
       "category": "GOVERNED_OBJECT_SOURCE_CLOSED",
       "context": "تعود أحدث المشاهدات في هذه المجموعة إلى عام 2014، مع مقارنات مختارة من عام 2011، ولا تُقرأ على أنها تصف فترة لاحقة ما لم تُنشر مشاهدة أحدث قابلة للمقارنة.",
       "source_object": "DS-FINDEX-PUBLIC-HISTORY"
+    },
+    {
+      "route": "/people/",
+      "surface": "governed_numeric_inventory",
+      "field": "title_en",
+      "token": "2021",
+      "category": "DATE_OR_PERIOD",
+      "context": "Which historical Findex measures can be compared with the 2021 wave",
+      "source_object": "DS-FINDEX-HISTORY-CROSSWALK"
+    },
+    {
+      "route": "/people/",
+      "surface": "governed_numeric_inventory",
+      "field": "title_ar",
+      "token": "2021",
+      "category": "DATE_OR_PERIOD",
+      "context": "مقاييس Findex التاريخية التي يمكن مقارنتها بموجة 2021",
+      "source_object": "DS-FINDEX-HISTORY-CROSSWALK"
     },
     {
       "route": "/people/",
@@ -112704,6 +113234,24 @@
       "token": "2023",
       "category": "GOVERNED_OBJECT_SOURCE_CLOSED",
       "context": "موجة 2021 / العمل الميداني في اليمن 2022–2023",
+      "source_object": "VIS-FINDEX-FLOW-CHANNELS"
+    },
+    {
+      "route": "/remittances/",
+      "surface": "governed_numeric_inventory",
+      "field": "universe_en",
+      "token": "23%",
+      "category": "GOVERNED_OBJECT_SOURCE_CLOSED",
+      "context": "Adults who received wages, government transfers, agricultural payments or remittances, each group taken separately in Findex; not shares of all adults unless the source says so. The survey frame excludes Al Baydaa, Al Jawf, Mareb, Sadah, Socotra and several districts elsewhere: areas with about 23% of the population.",
+      "source_object": "VIS-FINDEX-FLOW-CHANNELS"
+    },
+    {
+      "route": "/remittances/",
+      "surface": "governed_numeric_inventory",
+      "field": "universe_ar",
+      "token": "23%",
+      "category": "GOVERNED_OBJECT_SOURCE_CLOSED",
+      "context": "البالغون الذين تلقوا أجورًا أو تحويلات حكومية أو مدفوعات زراعية أو حوالات، كل فئة على حدة، في Findex؛ ولا تُعامل كنسبة من جميع البالغين ما لم ينص المصدر على ذلك. ويستبعد إطار المسح محافظات البيضاء والجوف ومأرب وصعدة وسقطرى وعددًا من المديريات في محافظات أخرى، وهي مناطق تضم نحو 23% من السكان.",
       "source_object": "VIS-FINDEX-FLOW-CHANNELS"
     },
     {

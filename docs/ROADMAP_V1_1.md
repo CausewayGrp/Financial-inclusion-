@@ -70,7 +70,8 @@ The ranked items found by the panel and the red team that were not built in B15 
 | 23 | B-4 (rest): search aliases from the three remittance gaps to MA-001 | Donor | Master data; no new priority (REJ-02) |
 | 24 | U4: a dated rulebook and status timeline per provider class | Provider | A contract over the system chronology and the e-money rule stack; chronology ≠ causality; no names |
 | 25 | /providers/: "some were issued before the roster and some after it" beside "the roster's issue date is not stated" (bilingual review of RC-15; predates the pull request) | Supervisor | Decision (steward): date the roster by its file (22 September 2026) or drop the before-and-after clause; Master-first |
-| 26 | U8: a checklist for tracking whether transfer accounts stay in use | Humanitarian cash manager | Copy from CWR-010 and MA-009, keeping "cash-out is not failure"; as a file only after the licence decision |
+| 26 | A coverage sentence on the three records that set several Findex waves side by side (CLM-031, VIS-DEMAND-VINTAGE-LADDER, DS-FINDEX-HISTORY-CROSSWALK), naming the 2021 wave alone (RC-16 review) | Economist, academic | Copy, Master-first; each already links CLM-025 through its wave |
+| 27 | U8: a checklist for tracking whether transfer accounts stay in use | Humanitarian cash manager | Copy from CWR-010 and MA-009, keeping "cash-out is not failure"; as a file only after the licence decision |
 
 ## 4. Named in Owner Addendum 2 (do not build now)
 

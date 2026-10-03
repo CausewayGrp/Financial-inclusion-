@@ -1,5 +1,31 @@
 # Repository Change Log
 
+## 2026-10-03 — Release candidate RC-16: no undated "latest"; survey coverage stated; one base disclosed
+
+One Master transaction (ebfb929c… → e24fe737…, 38 cells; `audit/release_candidate/rc_16_as_of.py`). It applies two
+"lessons from comparable products" of Owner Addendum 2, where governed fields exist, and closes two items. English and
+Arabic change together.
+- **No undated "latest".** A label that calls a measure "the latest" goes stale silently the day a newer one appears.
+  - Record titles and /people/ headings now name the wave: for example, "Account ownership: the representative measure
+    from the Global Findex 2021 wave".
+  - Page descriptions that keep the claim now say when it was checked ("As checked on 3 October 2026, …"), as CLM-017's
+    already did.
+  - A new gate, RC-LATEST, with a negative control, fails any title, description or h1 that says "latest" without a
+    check date. A denial of a single latest year still passes.
+- **Coverage.** Four 2021-wave indicator records now name the areas the survey excluded (about 23% of the population),
+  in CLM-025's governed words.
+- **B15 condition, VIS-MFI-SPINE.** The title no longer promises a view of gaps it does not draw.
+- **Register item, VIS-FIRM-FINANCE-SEVERITY.** The World Bank diagnostic, read again at p. 145, introduces its
+  tabulation "when asking for the reasons of not applying". The base may therefore be narrower than the record said.
+  The record's measurement limitation now says so, and that the base is not established
+  (`ORIGINAL_SOURCE_VERIFICATION.md` §9).
+- **Short citation.** It gives each original source's year when the source's title does not.
+- **Review.** One bilingual reviewer, NOT ACCEPTABLE at the first run:
+  - "When each function was last measured" was false: saving and borrowing were measured in 2021, but have no weighted
+    values yet.
+  - The vintage ladder's description, without "latest", changed its claim.
+  Both were corrected, with the minor findings, in one rerun.
+
 ## 2026-10-03 — B15 d: figures print governed precision and link their record by name, never to themselves
 
 Code only (`scripts/yfie/visuals.py`, `render.py`, `theme.py`), from the product challenge (`PRODUCT_CHALLENGE.md`).

@@ -248,6 +248,10 @@ CONTROLS = [
     ("an archived copy is offered as the original", "en/data/index.html",
      sub_once(r'(<a class="source-locator" href="https://web\.archive\.org/[^"]*"[^>]*>)[^<]*', r'\1Open original source ↗'),
      "RC-B13 an archived copy is offered as the original en"),
+    # RC-LATEST (Owner Addendum 2, lessons; RC-16): no title or description calls anything "latest" without its date.
+    ("a page title calls a measure 'latest' without saying when", "en/people/index.html",
+     sub_once(r'(<title>)', r'\1Latest '),
+     "RC-LATEST an undated 'latest' in a title or description en/people/index.html"),
     # RC-B15 (Part B B15 d; RC-15): Home links the priorities bound to it; a figure never links its own record page.
     ("Home drops a measurement priority bound to it", "ar/index.html",
      replace('href="/ar/measurement/#MA-005"', 'href="/ar/measurement/"', 0),

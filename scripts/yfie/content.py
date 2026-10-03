@@ -329,7 +329,7 @@ class Content:
 
     def short_citation(self, spec: dict, obj: dict, lang: str) -> str:
         """RC-15 (B15 d, C-2; OWN-04): the short citation the launch uses — the governed title, the record line (record
-        ID, CauseWay, edition) and each original source as publisher, title and public locator. The long form
+        ID, CauseWay, edition) and each original source as publisher, title, year and public locator. The long form
         (citation()) keeps the period, population and limits beside it."""
         oid = str(obj.get("object_id") or "")
         title = (self.loc(obj, "title", lang) or self.loc(spec, "title", lang) or oid).strip().rstrip(".")
@@ -345,7 +345,11 @@ class Content:
             s0 = self.sources.get(sid) or {}
             pub = ((s0.get("publisher_ar") if ar else None) or s0.get("publisher") or "") if card["title"] else ""
             name = card["title"] or self.tf("UI-CITE-SOURCE-REFERENCE", lang, sid=sid)
-            names.append(("، " if ar else ", ").join(x for x in (pub, name, card["url"]) if x))
+            # RC-16 (Owner Addendum 2, lessons): publisher, title, year, locator — the governed document year, unless the
+            # title already carries it
+            yr = str(s0.get("document_date") or "")[:4] if card["title"] else ""
+            yr = yr if yr.isdigit() and yr not in name else ""
+            names.append(("، " if ar else ", ").join(x for x in (pub, name, yr, card["url"]) if x))
         parts = [title if title.endswith(("?", "؟", "!")) else f"{title}.",
                  self.tf("UI-CITE-RECORD-LINE", lang, product=self.t("UI-PRODUCT-NAME", lang), oid=oid, version=self.t("UI-CONTENT-VERSION", lang))]
         if names:

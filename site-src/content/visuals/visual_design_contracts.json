@@ -1,7 +1,7 @@
 {
   "schema_version": "1.0",
   "contract_id": "VISUAL-DESIGN-CONTRACT",
-  "authority_master_sha256": "ebfb929c86bb54c690b96059b71ae6ff40a5af4cc27c50d80ed7fa4bcea653cb",
+  "authority_master_sha256": "e24fe737116bf0a7569dae052120d869d609806fa0e24da3601f3e8810d3da47",
   "rule": "Design-layer controlled input. It assigns every governed visual contract (Master 11) a design tier and, for SIGNATURE and CORE_ANALYTICAL visuals, declares which governed rows a chart binds to and how they are drawn. It never carries a fact, number, label or sentence: values come from Master data rows, text from Master contract/evidence fields, and legend labels from the governed interface copy (UI-VIS-*). The generator resolves every binding and fails on any unresolved ID, any value that disagrees with its guard, or any visual left untiered.",
   "tiers": {
     "SIGNATURE": "Distinctive to this product, decision-useful, drawable from governed rows and safe when detached. Designed first; gets a full data contract.",
