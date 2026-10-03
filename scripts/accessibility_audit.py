@@ -331,7 +331,13 @@ def visual_alternatives() -> list:
 def main() -> int:
     ap = argparse.ArgumentParser()
     ap.add_argument("--axe", default=None)
+    ap.add_argument("--all", action="store_true", help="every route of the built site (B10), not one page per route class")
+    ap.add_argument("--json", default=None, help="also write the raw axe findings with every page and node sample here")
     args = ap.parse_args()
+    global ROUTES
+    if args.all:
+        specs = json.loads((ROOT / "site-src" / "content" / "page_specs.json").read_text(encoding="utf-8"))["page_specs"]
+        ROUTES = sorted({str(s.get("route")) for s in specs if s.get("route")})
     if not (DIST / "en" / "index.html").exists():
         print("ACCESSIBILITY AUDIT: no built site (run python3 scripts/build.py)")
         return 1
@@ -362,6 +368,8 @@ def main() -> int:
                               tags: v.tags.filter(t => t.startsWith('wcag')), n: v.nodes.length,
                               sample: v.nodes[0] ? v.nodes[0].html.slice(0, 140) : ''})); }""", AXE_TAGS)
                         for v in res:
+                            if args.json:
+                                record.setdefault("raw", []).append({"page": f"{lang}{route}@{w}", **v})
                             f = findings[v["id"]]
                             f["nodes"] += v["n"]; f["routes"].add(f"{lang}{route}@{w}")
                             f["help"] = v["help"]; f["tags"] = v["tags"]; f["impact"] = v["impact"]
@@ -376,6 +384,8 @@ def main() -> int:
                                        "pages": len(v["routes"]), "help": v["help"], "sample": v.get("sample", "")}
                                       for k, v in sorted(findings.items(), key=lambda x: -x[1]["nodes"])]
 
+            if args.json:
+                Path(args.json).write_text(json.dumps(record.get("raw", []), ensure_ascii=False, indent=1), encoding="utf-8")
             ctx = ctx_factory(); page = ctx.new_page()
             record["outcomes"]["keyboard"] = {lang: keyboard_walk(page, base, "/evidence/", lang) for lang in ("en", "ar")}
             record["outcomes"]["focus_visible"] = {lang: focus_visible(page, base, lang) for lang in ("en", "ar")}

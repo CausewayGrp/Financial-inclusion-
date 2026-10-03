@@ -1,5 +1,11 @@
 # Repository Change Log
 
+## 2026-10-03 — Accessibility audit over every page (B10 c, tooling)
+
+`scripts/accessibility_audit.py` gains `--all`, which audits every route of the built site in both languages instead of
+one page per route class (Part B B10 c asks for all pages). It also gains `--json`, which writes the raw axe findings
+with the page and a node sample for each. No page changes.
+
 ## 2026-10-03 — Release candidate RC-10: the evidence landscape; RC-9's review; long time axes
 
 Transaction `audit/release_candidate/rc_10_evidence_landscape.py` through `run_stage.py` (Master `26a97c34d517` →
