@@ -36,18 +36,21 @@ One implementation, `scripts/discovery.py`, used by the build and checked by the
 
 | Item | Contract |
 |---|---|
-| Public origin | `site-src/deployment.json` → `public_origin`: **null** until the owner fixes the release domain (release-only decision). Never guessed |
+| Public origin | `site-src/deployment.json` → `public_origin`: **null** until release (owner decision B8, 3 October 2026). Never guessed. It may carry a path: the decided address is `https://causewaygrp.com/financial-inclusion-evidence` (B1), and its path is the base path (below) |
+| Base path | The origin's path (`/financial-inclusion-evidence`; empty when there is none). `dist/`, the review build every gate reads, keeps root-relative links; the published site, `scripts/build.py --out DIR`, carries every link, asset, stylesheet, runtime fetch, language prefix, root redirect and `_headers` path pattern under it (`scripts/base_path.py`). Proved by `scripts/tests/test_base_path.py`, which builds the decided origin, serves it under the path and fails on any request that leaves it |
 | Canonical | Self-canonical in the page's own language |
 | hreflang | Every page lists `en`, `ar` and `x-default` (→ `/`); the pair is reciprocal |
-| robots.txt | Origin null (now): `Disallow: /` — a pre-release build is not for indexing. Origin set: `Allow: /` and `Sitemap:` |
+| Pre-release | `site-src/deployment.json` → `pre_release`: **true** until release (owner decision B3). Every page, the root entry and the 404 included, carries `<meta name="robots" content="noindex, nofollow">`; at release it goes false and the 404 keeps its own `noindex` (gate RC-NOINDEX) |
+| robots.txt | Origin null (now): `Disallow: /` — a pre-release build is not for indexing. Origin set: `Allow:` the base path and `Sitemap:`. Under a path crawlers ignore this file: the domain's own `/robots.txt` names the sitemap, or it is submitted in Search Console (`docs/RELEASE_RUNBOOK.md`, "Hosting") |
 | sitemap.xml | Written only with an origin: every localized page once (286), each with its three alternates; no `lastmod` (the Master holds no page-level modification date) |
 | Titles and descriptions | One native `<title>` and one meta description per page, unique within each language; one `<h1>` |
 | Structured data | `WebSite` on Home; `BreadcrumbList` where a breadcrumb is shown (Evidence Records, Readings), with the visible names; `Article` on the ten Readings (headline, description = standfirst, language, publisher CauseWay, part of the resource). No author, dates or `Dataset`: none is governed, and the resource publishes evidence records and a source directory, not datasets |
 | Social image | `og:image` is the page's own 1200 × 630 image, rasterised from the design's governed template (EAD-09) and served from `/assets/social/`; root-relative before an origin is set, absolute after, like every other URL here. `og:image:alt` is the page's own title; the card type is `summary_large_image` |
 | Search | Local index (`static-data/search_index.json`): page, question, evidence, Reading, Measurement, source and source-locator result types |
 
-When the origin is set the same build makes every canonical, hreflang, sitemap and structured-data URL absolute; nothing
-else changes.
+When the origin is set the same build makes every canonical, hreflang, sitemap and structured-data URL absolute; when it
+carries a path, the published site (`scripts/build.py --out`) also moves its own addresses under that path. Nothing else
+changes.
 
 ## Security and privacy expectations for Code
 

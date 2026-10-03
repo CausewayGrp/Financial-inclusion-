@@ -584,6 +584,7 @@ _n_evidence_objects=len(json.load(open(C/'evidence/evidence_objects.json',encodi
 if len(evidence_specs)!=_n_evidence_objects:          # one public Evidence Record page per 06 record (derived, not frozen)
     errors.append(f'S04.1 Evidence Record pages ({len(evidence_specs)}) differ from 06 records ({_n_evidence_objects})')
 object_to_spec={}
+sys.path.insert(0,str(ROOT/'scripts')); import discovery as _DISC_S041   # one implementation of the language alternates
 source_dependents={sid:set() for sid in public_source_ids}
 for spec in evidence_specs:
     route=str(spec.get('route') or '')
@@ -668,8 +669,9 @@ for spec in evidence_specs:
         for leak in ['LOCATOR_ONLY','DISPLAY_READY','NO_PUBLIC_LOCATOR','OBJECT_LEVEL_OR_UNSPECIFIED','rights_display_state','metadata_state']:
             if leak in raw: errors.append(f'S04.1 internal source/publication state leaked {route} {lang} {leak}')
         # Language equivalent must remain at the same Evidence Record route (header JS preserves query/hash globally).
+        # The address is discovery's (scripts/discovery.py): root-relative today, absolute once the owner sets the origin.
         other='en' if lang=='ar' else 'ar'
-        if f'hreflang="{other}" href="/{other}/{route.strip("/")}/"' not in raw:
+        if f'hreflang="{other}" href="{_DISC_S041.url(_DISC_S041.localized(route,other),_DISC_S041.origin())}"' not in raw:
             errors.append(f'S04.1 Evidence Record language alternate mismatch {route} {lang}')
     # Source references must resolve to controlled source records. Public locators link through Data + original; no-public-locator stays suppressed.
     for ref in spec.get('source_references') or []:
@@ -2446,7 +2448,7 @@ try:
     if len(_locs)!=len(set(_locs)) or set(_locs)!=_pages: errors.append(f'F6-G03 sitemap coverage: {len(set(_locs))} locations for {len(_pages)} pages')
     if _test.count('hreflang="x-default"')!=len(_locs) or _test.count('<xhtml:link')!=3*len(_locs): errors.append('F6-G03 sitemap alternates incomplete')
     _nf=(DIST/'404.html').read_text(encoding='utf-8')
-    if '<meta name="robots" content="noindex">' not in _nf: errors.append('F6-G05 404 page is indexable')
+    if _DISC.robots_meta('noindex') not in _nf: errors.append('F6-G05 404 page is indexable')
     _root=(DIST/'index.html').read_text(encoding='utf-8')
     if 'hreflang="x-default" href="'+_DISC.url('/',_org)+'"' not in _root or re.search(r'<script>(?!\s*$)',_root): errors.append('F6-G05 root entry route: x-default links or inline script')
     for _f in DIST.rglob('*.html'):
@@ -2936,6 +2938,32 @@ try:
         errors.append("RC-B14 dist/downloads exists while downloads are switched off")
 except Exception as _x:
     errors.append("RC-B14 unreadable " + repr(_x))
+
+# RC-NOINDEX (owner decision B3, 3 October 2026): until release every page — the root entry and the 404 included —
+# carries one robots meta, "noindex, nofollow", in its head, because under a path crawlers ignore the robots.txt the
+# build writes. pre_release in site-src/deployment.json is a boolean; at release it is false, and then no page but the
+# 404 says noindex.
+try:
+    import discovery as _DISC_NI
+    _dep_ni = json.loads((ROOT / "site-src" / "deployment.json").read_text(encoding="utf-8"))
+    if not isinstance(_dep_ni.get("pre_release"), bool):
+        errors.append("RC-NOINDEX site-src/deployment.json: pre_release must be true or false")
+    _want_ni = '<meta name="robots" content="' + _DISC_NI.PRE_RELEASE_ROBOTS + '">'
+    _pages_ni = sorted(DIST.rglob("*.html"))
+    for _f in _pages_ni:
+        _t = _f.read_text(encoding="utf-8")
+        _hd = _t[:_t.find("</head>")] if "</head>" in _t else ""
+        _metas = re.findall(r'<meta name="robots"[^>]*>', _t)
+        _rel = _f.relative_to(DIST).as_posix()
+        if _DISC_NI.pre_release():
+            if _metas != [_want_ni] or _want_ni not in _hd:
+                errors.append(f"RC-NOINDEX {_rel} lacks the pre-release noindex, nofollow meta in its head ({len(_metas)} robots metas)")
+        elif _rel != "404.html" and _metas:
+            errors.append(f"RC-NOINDEX {_rel} still says {_metas[0]} after release")
+    if len(_pages_ni) < 288:
+        errors.append(f"RC-NOINDEX only {len(_pages_ni)} pages were checked")
+except Exception as _x:
+    errors.append("RC-NOINDEX unreadable " + repr(_x))
 
 # RC-PERF (Part B B14 d): the byte part of the provisional performance budget, from the files themselves. A cold page of
 # each of the twelve page families, in each language, transfers its HTML, the stylesheet and the runtime compressed,

@@ -9,7 +9,7 @@ Serves dist/ (or the directory named by YFIE_SITE_DIR, relative to the repositor
 Exit code 0 = all tests pass; 1 = a behaviour regressed; 2 = the browser harness is unavailable.
 """
 import functools, http.server, json, os, re, socket, sys, threading, traceback
-from urllib.parse import quote
+from urllib.parse import quote, urljoin, urlsplit
 
 ROOT = os.path.abspath(os.path.join(os.path.dirname(__file__), "..", ".."))
 DIST = os.path.join(ROOT, os.environ.get("YFIE_SITE_DIR") or "dist")   # F9: the reference implementation is tested unchanged
@@ -228,8 +228,8 @@ def t_search_capped_and_typed(page, base):
     m = re.fullmatch(r"Showing (\d+) of (\d+) results", status.strip())
     assert m and int(m.group(1)) == shown == 10 and int(m.group(2)) > 10, status
     href = page.get_attribute("#search-dialog .search-see-all a", "href")
-    assert href == "/en/evidence/?q=remittances&type=evidence", href
-    page.goto(base + href)
+    assert href == urlsplit(base).path + "/en/evidence/?q=remittances&type=evidence", href   # a live origin may carry a path (B1)
+    page.goto(urljoin(base, href))
     page.wait_for_selector("#search-results .search-hit")
     assert page.input_value("#global-search + [data-search-type]") == "evidence"
     types = page.evaluate("[...document.querySelectorAll('#search-results .search-hit .meta')].map(e=>e.textContent.split(' · ')[0])")
@@ -294,7 +294,7 @@ def t_measurement_anchor(page, base):
     hrefs = page.evaluate("[...document.querySelectorAll('#search-results .search-hit')].map(a=>a.getAttribute('href'))")
     anchored = [h for h in hrefs if "/measurement/#MA-" in h]
     assert anchored, hrefs
-    page.goto(base + anchored[0])
+    page.goto(urljoin(base, anchored[0]))
     assert page.evaluate(f"!!document.getElementById('{anchored[0].split('#')[1]}')"), "anchor missing on /measurement/"
 
 
@@ -390,7 +390,7 @@ def t_report_issue(page, base):
     for lang in ("en", "ar"):
         page.goto(f"{base}/{lang}/evidence/CLM-010/")
         href = page.get_attribute("a[href*='/contact/?record=']", "href")
-        page.goto(base + href)
+        page.goto(urljoin(base, href))
         assert "CLM-010" in page.inner_text("[data-correction-record]")
         assert page.is_visible("[data-correction-mail]")
         mail = page.get_attribute("[data-correction-mail]", "href")
@@ -558,7 +558,9 @@ def main():
         exe = os.environ.get("YFIE_CHROMIUM")
         browser = pw.chromium.launch(**({"executable_path": exe} if exe else {}))
         for t in tests:
-            ctx = browser.new_context()
+            # A live host sends the strict policy (script-src 'self'), which forbids the evaluated predicates these tests
+            # wait on; the policy itself is test_security_headers.py's, so the tools are tested here with it bypassed.
+            ctx = browser.new_context(**({"bypass_csp": True} if live else {}))
             page = ctx.new_page()
             errors = []
             page.on("pageerror", lambda e: errors.append(str(e)))

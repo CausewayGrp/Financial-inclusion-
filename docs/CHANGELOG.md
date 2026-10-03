@@ -1,5 +1,67 @@
 # Repository Change Log
 
+## 2026-10-03 — Owner B3: every page says noindex, nofollow until release
+
+Crawlers ignore a `robots.txt` that sits under a path, so until release the pages say it themselves (owner decision B3).
+- **The flag.** `site-src/deployment.json` gains `"pre_release": true`, with its rule. `scripts/discovery.py` gives
+  one robots meta. While the flag is true, every page carries `<meta name="robots" content="noindex, nofollow">` in
+  its head: the 286 localized pages, the root entry and the 404, whose `noindex` becomes `noindex, nofollow`.
+  `dist/` changes by exactly that meta in each of its 288 HTML files, and in nothing else (checked file by file).
+- **Release.** At release the flag goes false: the meta disappears and the 404 keeps its own `noindex`. The runbook's
+  step 13 now does this after the owner's acceptance, together with the web administrator's sitemap step. Step 3
+  keeps the flag true. `docs/DEPLOYMENT.md` states it, and the deploy workflow prints it.
+- **Gate RC-NOINDEX** (`scripts/validate.py`). `pre_release` must be a boolean. While it is true, every built page
+  carries exactly one robots meta, the pre-release one, in its head. Once it is false, no page but the 404 says
+  noindex. F6-G05 accepts either form of the 404's noindex. The new negative control, "a page loses its pre-release
+  noindex", is caught.
+
+## 2026-10-03 — Owner B1, B2, B5: the site under https://causewaygrp.com/financial-inclusion-evidence/
+
+Code, gate and runbook; no Master change and no public page changes. `dist/` was built before and after and all 598
+files keep their sha256.
+- **The origin may carry a path** (B1). `scripts/discovery.py` accepts `https://<host>` with an optional path of
+  lowercase segments of a-z, 0-9 and "-", with no trailing slash, query or fragment, and derives the base path from it.
+  `public_origin` stays null (B8); `site-src/deployment.json` states the rule.
+- **The published site honours the base path.** `scripts/build.py --out DIR [--origin URL]` writes the site as it is
+  published, without touching `site-src/deployment.json` or `dist/`. After the pages are written,
+  `scripts/base_path.py` moves every root-absolute reference under the path:
+  - links, images, srcset, the stylesheet and font preloads, and the root entry's refresh;
+  - the stylesheet's `url()`;
+  - the runtime's two fetches, its language prefix (search results, Compare, corrections) and the language switch;
+  - the root redirect and its stored choice;
+  - the `_headers` path patterns.
+  Each runtime address is listed and must occur as often as stated, or the build stops. Canonical, hreflang, `og:url`,
+  `og:image`, structured data, the sitemap and the printed canonical addresses already carry the path through the
+  origin. Under a path, `robots.txt` says that crawlers read only the domain's own file.
+- **`dist/` stays the review build.** Its links stay root-relative, so every gate keeps reading it at a server root.
+  This was checked: a scratch run of the validator on a base-path `dist/` reported 1,870 errors. On the same build with
+  root-relative links it reported only S04.1's language-alternate check, which expected root-relative `hreflang` for
+  any origin. That check now uses discovery's address; its result is unchanged while the origin is null.
+- **Gate (B2).** `scripts/tests/test_base_path.py` builds the decided origin into a temporary directory and serves it
+  under `/financial-inclusion-evidence/`, with its own `_headers` applied by full path and a 404 page at any depth.
+  - (a) It sweeps 296 files and 22,025 addresses.
+  - (b) In Chromium, at 390 and 1440 px in both languages, it loads the root entry, Home, /payments/, a record, /data/,
+    the three-measure Compare and a deep 404. It uses search, Compare, Copy citation, Share, print and the language
+    switch, and records every request (60 page loads, 584 requests).
+  - (c) It checks every discovery address.
+  - Its negative control injects `href="/en/about/"` into one page: the sweep and the browser both report it.
+  - It runs once, in CI's "Browser acceptance" job. Against a build left unrelocated it fails at once.
+  - Noted, not failed: browsers ask the domain root for `/favicon.ico` because no page declares an icon.
+- **Live runs under a path.** Three `test_public_tools.py` tests join server-relative links to the base correctly. The
+  live run bypasses the page policy, which `test_security_headers.py` tests; under the strict policy, Playwright's
+  evaluated waits were refused. Both suites pass against the base-path build served under the path: 35 of 36 tools,
+  one not applicable, and 288 pages under the relocated headers.
+- **Deploy.** `.github/workflows/deploy.yml` (still inactive) publishes `scripts/build.py --out` and sweeps it under its
+  path. Its publish root holds the site under the path and `_headers` at the root.
+- **Runbook (B4, B5).** `docs/RELEASE_RUNBOOK.md` "Hosting" is rewritten around the owner's three routes, with the B4
+  facts confirmed by one read-only request and a DNS lookup:
+  - preferred: our Pages project behind a Nitro `routeRules` proxy, which is guidance for CauseWay's frontend repository;
+  - App Platform: a static-site component cannot send custom response headers, so the proxy route stands;
+  - fallback: `evidence.causewaygrp.com` with a 301.
+  Each route states how the headers survive, that no corporate robots header, script or cookie reaches our responses,
+  and how it rolls back. It adds the web administrator's sitemap step, and the warning that HSTS is a whole-domain
+  decision. `docs/DEPLOYMENT.md` and CONTRIBUTING §5 follow.
+
 ## 2026-10-03 — The validator in half the time; the negative-control job back inside its limit
 
 CI's "Gate negative controls" job was cancelled at its 45-minute limit on `ab380cf`. It runs the full validator once per

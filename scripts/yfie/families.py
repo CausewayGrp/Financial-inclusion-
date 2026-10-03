@@ -535,7 +535,7 @@ def reference(page: dict, shell: dict) -> str:
 def root_page(shell_ar: dict, shell_en: dict) -> str:
     origin = R.DISC.origin()
     links = R.DISC.head_links("/", "ar", origin).split(">", 1)[1]
-    return (f'<!doctype html><html><head><meta charset="utf-8"><title>{esc(shell_ar["product"])} · {esc(shell_en["product"])}</title>{links}'
+    return (f'<!doctype html><html><head><meta charset="utf-8">{R.DISC.robots_meta()}<title>{esc(shell_ar["product"])} · {esc(shell_en["product"])}</title>{links}'
             f'<script src="/assets/lang-redirect.js"></script><noscript><meta http-equiv="refresh" content="0;url=/ar/"></noscript></head></html>')
 
 
@@ -548,7 +548,7 @@ def not_found(page: dict, shell_ar: dict) -> str:
                 f'<div class="actions"><a href="/{lang}/">{esc(s["home"])}</a><a href="/{lang}/explore/">{esc(s["explore"])}</a><a href="/{lang}/evidence/">{esc(s["evidence"])}</a>'
                 f'<button type="button" class="tbtn" data-search-open>{esc(s["search"])}</button></div></section>')
     return (f'<!doctype html><html lang="ar" dir="rtl"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">'
-            f'<title>{esc(page["title"]["ar"])} — {esc(page["product"]["en"])}</title><meta name="robots" content="noindex"><link rel="stylesheet" href="/assets/yfie.css"></head><body>'
+            f'<title>{esc(page["title"]["ar"])} — {esc(page["product"]["en"])}</title>{R.DISC.robots_meta("noindex")}<link rel="stylesheet" href="/assets/yfie.css"></head><body>'
             f'<main id="main"><div class="page"><article class="obj page-obj"><div class="head">{R.logo(48)}<span class="rubric">404 · {esc(page["title"]["ar"])} / <span dir="ltr">{esc(page["title"]["en"])}</span></span></div>'
             f'{section("ar")}{section("en")}</article></div></main>{R.search_dialog(shell_ar)}{json_block("yfie-ui", shell_ar["ui_json"])}<script src="/assets/app.js" defer></script></body></html>')
 

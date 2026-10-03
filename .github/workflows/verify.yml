@@ -150,6 +150,9 @@ jobs:
       - name: Security headers (B14 b; every page served under dist/_headers, no policy violation)
         run: python3 scripts/tests/test_security_headers.py
 
+      - name: Base path (owner B2; built for https://causewaygrp.com/financial-inclusion-evidence, served under the path; negative control included)
+        run: python3 scripts/tests/test_base_path.py
+
   controls:
     # Every gate that finds its evidence in the built site is proved to still fail on the fault it was written to catch
     # (EAD-01: the cutover re-pointed those selectors, and a selector that silently matches nothing would pass the

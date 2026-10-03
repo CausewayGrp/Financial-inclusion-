@@ -53,7 +53,7 @@ def head(page: dict, shell: dict, route: str, kind: str = "website", extra: str 
     lang = shell["lang"]
     origin = DISC.origin()
     return (f'<!doctype html><html lang="{lang}" dir="{shell["dir"]}"><head><meta charset="utf-8">'
-            f'<meta name="viewport" content="width=device-width,initial-scale=1"><title>{esc(page["title"])} — {esc(shell["product"])}</title>'
+            f'<meta name="viewport" content="width=device-width,initial-scale=1">{DISC.robots_meta()}<title>{esc(page["title"])} — {esc(shell["product"])}</title>'
             f'<meta name="description" content="{esc(page.get("meta_description"))}">{extra}<link rel="stylesheet" href="/assets/yfie.css">{font_preloads(lang)}'
             f'{DISC.head_links(route, lang, origin)}{DISC.social_meta(page["title"], page.get("meta_description") or "", lang, route, shell["product"], kind, origin)}'
             f"{structured_data(page, shell, route)}</head><body>")

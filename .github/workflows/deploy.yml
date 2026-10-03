@@ -1,4 +1,5 @@
-# Deploy dist/ to Cloudflare Pages (Part B B14 c). Prepared and inactive: the job runs only when the owner has set the
+# Deploy the site to Cloudflare Pages (Part B B14 c; owner decision B1: the published build, under the origin's path,
+# from scripts/build.py --out). Prepared and inactive: the job runs only when the owner has set the
 # repository variable YFIE_DEPLOY_ENABLED to "true", and it refuses to deploy a build whose public_origin is still
 # null. Until then every run is skipped and nothing is sent anywhere. Steps and the reasons for the host are in
 # docs/RELEASE_RUNBOOK.md ("Hosting").
@@ -52,7 +53,7 @@ jobs:
           d = json.load(open("site-src/deployment.json", encoding="utf-8"))
           if not d.get("public_origin"):
               sys.exit("public_origin is null: set it to the release domain first (docs/RELEASE_RUNBOOK.md, step 'Origin')")
-          print("public_origin:", d["public_origin"], "| public_downloads:", d.get("public_downloads"))
+          print("public_origin:", d["public_origin"], "| pre_release:", d.get("pre_release"), "| public_downloads:", d.get("public_downloads"))
           PY
 
       - name: Gates (the same as CI's)
@@ -72,12 +73,30 @@ jobs:
             exit 1
           fi
 
+      # Owner decision B1: the published site is `scripts/build.py --out`, which moves every root-absolute address under
+      # the origin's path (dist/ keeps root-relative links for the gates). The Pages project holds the site at that same
+      # path, with the host headers at its root, where Pages reads them; the corporate site forwards the path unchanged
+      # (docs/RELEASE_RUNBOOK.md, "Hosting"). With an origin at a domain root the publish root is dist/'s layout.
+      - name: Build and stage the published site
+        run: |
+          ORIGIN="$(python3 -c 'import json; print(json.load(open("site-src/deployment.json", encoding="utf-8"))["public_origin"])')"
+          BASE="$(python3 -c 'import sys; sys.path.insert(0, "scripts"); import discovery as d; print(d.base_path(d.origin()))')"
+          rm -rf build/site build/publish
+          python3 scripts/build.py --out build/site
+          if [ -n "$BASE" ]; then
+            python3 scripts/tests/test_base_path.py --site build/site --origin "$ORIGIN" --no-browser
+          fi
+          mkdir -p "build/publish${BASE}"
+          cp -R build/site/. "build/publish${BASE}/"
+          if [ -n "$BASE" ]; then mv "build/publish${BASE}/_headers" build/publish/_headers; fi
+          echo "Publishing ${ORIGIN}/ from build/publish${BASE}/"
+
       - name: Set up Node for the deploy tool
         uses: actions/setup-node@820762786026740c76f36085b0efc47a31fe5020 # v7.0.0
         with:
           node-version: "22"
 
-      - name: Deploy dist/ to Cloudflare Pages
+      - name: Deploy the published site to Cloudflare Pages
         env:
           CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
@@ -85,4 +104,4 @@ jobs:
         run: |
           test -n "$CLOUDFLARE_API_TOKEN" && test -n "$CLOUDFLARE_ACCOUNT_ID" && test -n "$PROJECT" \
             || { echo "::error::CLOUDFLARE_API_TOKEN, CLOUDFLARE_ACCOUNT_ID and YFIE_CF_PAGES_PROJECT must all be set"; exit 1; }
-          npx --yes wrangler@4.147.0 pages deploy dist --project-name "$PROJECT" --branch main --commit-dirty=false
+          npx --yes wrangler@4.147.0 pages deploy build/publish --project-name "$PROJECT" --branch main --commit-dirty=false
