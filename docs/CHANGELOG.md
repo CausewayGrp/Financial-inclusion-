@@ -1,5 +1,12 @@
 # Repository Change Log
 
+## 2026-10-03 — Roadmap for version 1.1, first draft (B15 f)
+
+`docs/ROADMAP_V1_1.md` puts first, as the brief asks, international context from same-source aggregates, with Yemen's
+coverage caveats, and then public downloads after the licence decision. It lists the items Owner Addendum 2 sends to the
+roadmap, the inputs that would complete the 17 text-first visuals, and the library and currentness items. The product
+challenge's deferred findings are added after B15 d.
+
 ## 2026-10-03 — Release candidate RC-14: first screens and drawn figures re-read; one date corrected
 
 Transaction `audit/release_candidate/rc_14_bank_list_date.py` through `run_stage.py` (Master `6568e6e6fcbb` →
