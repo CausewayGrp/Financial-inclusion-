@@ -2787,6 +2787,26 @@ try:
 except Exception as _x:
     errors.append("RC-B14 unreadable " + repr(_x))
 
+# RC-PERF (Part B B14 d): the byte part of the provisional performance budget, from the files themselves. A cold page of
+# each of the twelve page families, in each language, transfers its HTML, the stylesheet and the runtime compressed,
+# the three faces of its script and the header logo; together they stay within 350 KB
+# (docs/SUSTAINABILITY_IMPLEMENTED_RUNTIME.json, release_candidate_b14d; timings: scripts/performance_budget.py).
+try:
+    import gzip as _gz
+    _budget = 350 * 1024
+    _gzs = lambda p: len(_gz.compress(p.read_bytes(), 6, mtime=0))  # noqa: E731
+    _shared = _gzs(DIST / "assets" / "yfie.css") + _gzs(DIST / "assets" / "app.js") + (DIST / "assets" / "logo" / "CauseWay_logo_40.png").stat().st_size
+    _faces = {"en": sum(f.stat().st_size for f in (DIST / "assets" / "fonts" / "ibm-plex-sans").glob("*.woff2")),
+              "ar": sum(f.stat().st_size for f in (DIST / "assets" / "fonts" / "ibm-plex-sans-arabic").glob("*.woff2"))}
+    for _r in ("", "explore", "people", "evidence", "evidence/CLM-001", "evidence/compare", "data", "readings",
+               "readings/same-year-different-number", "methodology", "measurement", "about"):
+        for _lang in ("en", "ar"):
+            _n = _gzs(DIST / _lang / _r / "index.html") + _shared + _faces[_lang]
+            if _n > _budget:
+                errors.append(f"RC-PERF a cold /{_lang}/{_r} page needs {_n // 1024} KB, over the 350 KB budget")
+except Exception as _x:
+    errors.append("RC-PERF unreadable " + repr(_x))
+
 # RC-B13 (Part B B13): the research library on /data/. Its filters stay hidden until the runtime runs (the list is
 # complete without JavaScript); every listed source carries its filter keys; every option of a filter matches at least
 # one source; a locator that is a web.archive.org copy is never offered as the original.

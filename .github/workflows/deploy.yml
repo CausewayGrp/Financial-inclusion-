@@ -1,0 +1,88 @@
+# Deploy dist/ to Cloudflare Pages (Part B B14 c). Prepared and inactive: the job runs only when the owner has set the
+# repository variable YFIE_DEPLOY_ENABLED to "true", and it refuses to deploy a build whose public_origin is still
+# null. Until then every run is skipped and nothing is sent anywhere. Steps and the reasons for the host are in
+# docs/RELEASE_RUNBOOK.md ("Hosting").
+#
+# What the owner sets, once a Cloudflare account and the release domain exist (repository Settings → Secrets and variables):
+#   variable  YFIE_DEPLOY_ENABLED     "true" to switch deployment on (absent or anything else: off)
+#   variable  YFIE_CF_PAGES_PROJECT   the Cloudflare Pages project name
+#   secret    CLOUDFLARE_API_TOKEN    an API token limited to "Cloudflare Pages: Edit" on that account
+#   secret    CLOUDFLARE_ACCOUNT_ID   the account ID
+name: Deploy (inactive until the owner switches it on)
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: deploy-production
+  cancel-in-progress: false
+
+jobs:
+  deploy:
+    name: Build, gate and deploy dist/
+    if: ${{ vars.YFIE_DEPLOY_ENABLED == 'true' }}
+    runs-on: ubuntu-24.04
+    timeout-minutes: 30
+    environment: production
+    steps:
+      - name: Check out
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+
+      - name: Set up Python 3.11
+        uses: actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97 # v7.0.0
+        with:
+          python-version: "3.11"
+          cache: pip
+          cache-dependency-path: requirements.txt
+
+      - name: Install the pinned toolchain
+        run: python -m pip install --disable-pip-version-check -r requirements.txt
+
+      - name: Refuse a pre-release build (public_origin must be set, downloads only by the owner's switch)
+        run: |
+          python3 - <<'PY'
+          import json, sys
+          d = json.load(open("site-src/deployment.json", encoding="utf-8"))
+          if not d.get("public_origin"):
+              sys.exit("public_origin is null: set it to the release domain first (docs/RELEASE_RUNBOOK.md, step 'Origin')")
+          print("public_origin:", d["public_origin"], "| public_downloads:", d.get("public_downloads"))
+          PY
+
+      - name: Gates (the same as CI's)
+        run: |
+          python3 scripts/checksums.py --check
+          python3 scripts/generate_projections.py --check
+          python3 scripts/validate.py
+          python3 scripts/tests/test_content_parity.py
+          python3 scripts/tests/test_exports.py --out build/exports
+
+      - name: The committed dist/ is a fresh build
+        run: |
+          python3 scripts/build.py
+          if [ -n "$(git status --porcelain --untracked-files=all -- dist)" ]; then
+            git status --short -- dist | head -20
+            echo "::error::dist/ differs from a fresh build; commit the build before deploying."
+            exit 1
+          fi
+
+      - name: Set up Node for the deploy tool
+        uses: actions/setup-node@820762786026740c76f36085b0efc47a31fe5020 # v7.0.0
+        with:
+          node-version: "22"
+
+      - name: Deploy dist/ to Cloudflare Pages
+        env:
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          PROJECT: ${{ vars.YFIE_CF_PAGES_PROJECT }}
+        run: |
+          test -n "$CLOUDFLARE_API_TOKEN" && test -n "$CLOUDFLARE_ACCOUNT_ID" && test -n "$PROJECT" \
+            || { echo "::error::CLOUDFLARE_API_TOKEN, CLOUDFLARE_ACCOUNT_ID and YFIE_CF_PAGES_PROJECT must all be set"; exit 1; }
+          npx --yes wrangler@4.147.0 pages deploy dist --project-name "$PROJECT" --branch main --commit-dirty=false

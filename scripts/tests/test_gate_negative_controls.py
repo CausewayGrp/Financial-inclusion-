@@ -233,6 +233,10 @@ CONTROLS = [
     ("the evidence landscape drops a row", "en/evidence/VIS-EVIDENCE-FRESHNESS/index.html",
      sub_once(r'(<div data-evidence-landscape>.*?)<tr><th scope="row">.*?</tr>', r'\1'),
      "RC-LAND the evidence landscape prints 33 of 34 governed rows en"),
+    # RC-PERF (Part B B14 d): a page family that outgrows the byte budget is reported.
+    ("a page outgrows the performance budget", "en/data/index.html",
+     replace("</main>", "<!--" + __import__("base64").b64encode(__import__("os").urandom(400 * 1024)).decode() + "--></main>"),
+     "RC-PERF a cold /en/data page needs"),
     # RC-B12 (Part B B12): a text-first contract's bound table prints its governed numbers.
     ("a bound text-first table prints a number no governed row holds", "en/evidence/VIS-TARGET-RESULT-STATE/index.html",
      sub_once(r'(<div data-text-first-table>.*?)<bdi dir="ltr">1,021</bdi>', r'\1<bdi dir="ltr">1,201</bdi>'),

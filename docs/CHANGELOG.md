@@ -1,5 +1,23 @@
 # Repository Change Log
 
+## 2026-10-03 — B14 c and d: an inactive deploy workflow; the performance budget
+
+- **Deploy workflow (B14 c).** `.github/workflows/deploy.yml` deploys `dist/` to Cloudflare Pages. It runs only when the
+  owner sets the repository variable `YFIE_DEPLOY_ENABLED` to `true`; until then every run is skipped. It refuses a
+  build whose `public_origin` is null, runs CI's gates, proves `dist/` is a fresh build, then deploys with a pinned
+  `wrangler`. Secrets and variables are named in the file; the host choice and the steps go to the runbook (B14 f).
+- **Performance budget (B14 d).** `scripts/performance_budget.py` serves `dist/` as a host would under `dist/_headers`
+  (gzip and the cache rules). It loads the twelve page families in English and Arabic, cold and warm, on Lighthouse's
+  mobile profile: 150 ms RTT, 1.6 Mbit/s, CPU ×4.
+  - A cold page transfers 227–304 KB in 7 requests. First paint is 0.78–2.3 s and load 1.4–2.9 s.
+  - A second visit transfers 0 bytes.
+  - Without compression a page would be about 370 KB; the 10 MB pages of 29 September went with the logo derivatives.
+  - The largest remaining cost is the three canonical font faces of the page's script (71–87 %). They are not changed.
+  - A provisional budget is recorded in `docs/SUSTAINABILITY_IMPLEMENTED_RUNTIME.json` (`release_candidate_b14d`):
+    350 KB, 8 requests, LCP 2.5 s, load 3 s. Every family meets it.
+  - Gate RC-PERF holds the byte part on every build, from the files themselves; its negative control is caught.
+    Nothing here is an operational or carbon figure.
+
 ## 2026-10-03 — Release candidate RC-13: the signed-scan dates of the 2026 enforcement decisions (B14 e)
 
 Transaction `audit/release_candidate/rc_13_decision_dates.py` through `run_stage.py` (Master `efb5a7c2ce38` →
