@@ -89,24 +89,42 @@ const LTR_RUN=/(?:(?<![A-Za-z0-9_.,-])(?:\d{4}(?:-\d{2}(?:-\d{2})?)?[–-]\d{4}(
 const ID_RUN=/(?<![A-Za-z0-9_-])(?=[A-Z][A-Za-z0-9-]*\d)[A-Z][A-Z0-9]*(?:-[A-Za-z0-9]+)+(?![A-Za-z0-9_-])/g;   // identifiers: isolated too, but breakable (scripts/yfie/text.py ID_RUN)
 function iso(s){return esc(s).replace(LTR_RUN,m=>`<bdi dir="ltr" class="nw">${m}</bdi>`).split(/(<[^>]+>)/).map((p,k)=>k%2?p:p.replace(ID_RUN,m=>`<bdi dir="ltr">${m}</bdi>`)).join('');}
 // Tranche C (TOOL-12): Arabic-Indic and Persian digits read as Western digits. Mirrored in scripts/validate.py (_r4norm).
-function normalize(s){return String(s||'').toLocaleLowerCase().normalize('NFKD').replace(/[\u0660-\u0669]/g,d=>String(d.charCodeAt(0)-0x0660)).replace(/[\u06F0-\u06F9]/g,d=>String(d.charCodeAt(0)-0x06F0)).replace(/[\u064B-\u065F\u0670]/g,'').replace(/[إأآٱ]/g,'ا').replace(/ى/g,'ي').replace(/ة/g,'ه').replace(/ؤ/g,'و').replace(/ئ/g,'ي');}
+function normalize(s){return String(s||'').toLocaleLowerCase().normalize('NFKD').replace(/[\u0660-\u0669]/g,d=>String(d.charCodeAt(0)-0x0660)).replace(/[\u06F0-\u06F9]/g,d=>String(d.charCodeAt(0)-0x06F0)).replace(/[\u064B-\u065F\u0670]/g,'').replace(/[إأآٱ]/g,'ا').replace(/ى/g,'ي').replace(/ة/g,'ه').replace(/ؤ/g,'و').replace(/ئ/g,'ي')
+  .replace(/(\d)[,\u066C](?=\d{3}(?!\d))/g,'$1').replace(/(\d)\u066B(?=\d)/g,'$1.');}   // B15 (C-5): "6,245" = "6245"; Arabic separators
 // Tranche C (JRN-05): a typed question is reduced to its content words: punctuation, one-letter tokens and a short
 // bilingual stop-word list are dropped. Mirrored in scripts/validate.py (_r4tokens).
 const STOP=new Set(['what','do','does','we','is','are','the','and','of','in','about','how','which','who','a','an','to','for','on','there','ما','ماذا','هل','في','من','على','عن','و','التي','الذي','هو','هي','كم','كيف']);
-function queryTokens(term){return term.replace(/[?,.;:!—–"“”«»()؟،؛'’]/g,' ').split(/\s+/).filter(t=>t.length>1&&!STOP.has(t)).map(queryToken);}
+function queryTokens(term){return term.replace(/[?,;:!—–"“”«»()؟،؛'’]/g,' ').replace(/(?<!\d)\.|\.(?!\d)/g,' ').split(/\s+/).filter(t=>t.length>1&&!STOP.has(t)).map(queryToken);}
+// B15 (C-5, A-2): a number matches only as a whole number; a word only from the start of a word (after the Arabic
+// proclitics و ف ب ل ك and the article), and a word of three letters or fewer only whole; an identifier still matches
+// inside a reference (TOOL-10). Mirrored in scripts/validate.py (_r4re).
+const WCH='a-z0-9\u0621-\u064A';
+function tokenRe(t){
+  const e=t.replace(/[.*+?^${}()|[\]\\]/g,'\\$&');
+  if(/^\d+(?:\.\d+)?%?$/.test(t))return new RegExp(`(?<![0-9.,])${e}(?![0-9]|[.,][0-9])`);
+  if(/[-\d]/.test(t))return null;
+  const ar=/[\u0621-\u064A]/.test(t);
+  const pre=ar?'(?:[وفبلك])?(?:ال|لل)?':'';
+  const tail=t.length<=3?(ar?`(?:ه|ي|ات)?(?![${WCH}])`:`s?(?![${WCH}])`):'';
+  return new RegExp(`(?<![${WCH}])${pre}${e}${tail}`);
+}
+function hasTok(text,t,re){return re?re.test(text):text.includes(t);}
 // PB-0491: light query-token normalisation (Arabic definite article; English plural/verb endings). Mirrored in scripts/validate.py.
 function queryToken(t){if(/^ال/.test(t)&&t.length>3)return t.slice(2);if(/^[a-z]+$/.test(t)&&t.length>4){if(/ies$/.test(t))return t.slice(0,-3)+'y';if(/ing$/.test(t))return t.slice(0,-3);if(/ed$/.test(t))return t.slice(0,-2);if(/s$/.test(t)&&!/ss$/.test(t))return t.slice(0,-1);}return t;}
 const DOMAIN_ROUTES=new Set(['/people/','/firms/','/finance/','/providers/','/payments/','/remittances/','/access/','/reforms/','/measurement/']);
 let aliasPromise=null;
 function loadAliases(){if(!aliasPromise)aliasPromise=fetch('/static-data/search_aliases.json').then(r=>{if(!r.ok)throw new Error('aliases');return r.json();}).catch(()=>{aliasPromise=null;return [];});return aliasPromise;}   // B15 (A-1): retried after a failure
 function aliasFor(term,aliases){const q=term.split(/\s+/).filter(Boolean).map(queryToken).join(' ');for(const a of aliases){const terms=String((isAr?a.terms_ar:a.terms_en)||'').split(';').concat(String((isAr?a.terms_en:a.terms_ar)||'').split(';')).map(x=>normalize(x.trim()).split(/\s+/).filter(Boolean).map(queryToken).join(' ')).filter(Boolean);if(terms.includes(q))return a;}return null;}
+function aliasPhrases(a){return String(a.terms_en||'').split(';').concat(String(a.terms_ar||'').split(';')).map(x=>normalize(x.trim()).split(/\s+/).filter(t=>t.length>1&&!STOP.has(t)).map(queryToken)).filter(p=>p.length);}
 function scoreRecord(x,tokens,phraseTokens,alias){
   const title=normalize(isAr?(x.title_ar||''):(x.title_en||''));const summary=normalize(isAr?(x.summary_ar||''):(x.summary_en||''));const text=normalize(isAr?(x.search_text_ar||''):(x.search_text_en||''));
   const boundary=normalize(isAr?(x.boundary_text_ar||''):(x.boundary_text_en||''));const stable=normalize([x.id,x.source_id,x.object_id,x.claim_id,x.reading_id].filter(Boolean).join(' '));
   let score=0;tokens.forEach(t=>{if(stable===t)score+=12;else if(/[-\d]/.test(t)&&stable.includes(t))score+=7;   // TOOL-10: a word is not matched inside opaque references
-    if(title.includes(t))score+=6;if(summary.includes(t))score+=3;if(text.includes(t))score+=1;if(boundary.includes(t))score+=0.5;});
+    const re=tokenRe(t);if(hasTok(title,t,re))score+=6;if(hasTok(summary,t,re))score+=3;if(hasTok(text,t,re))score+=1;if(hasTok(boundary,t,re))score+=0.5;});
+  // B15 (A-3): a query that is a governed alias term also finds the group's other terms, ranked below literal hits
+  if(alias){aliasPhrases(alias).forEach(ph=>{const all=f=>ph.every(t=>hasTok(f,t,tokenRe(t)));if(all(title))score+=3;else if(all(summary))score+=1.5;else if(all(text))score+=0.5;});}
   const route=String(x.route||'');
-  if(score>0&&x.type==='page'&&DOMAIN_ROUTES.has(route)&&phraseTokens.length&&phraseTokens.every(t=>title.includes(t)))score+=20;
+  if(score>0&&x.type==='page'&&DOMAIN_ROUTES.has(route)&&phraseTokens.length&&phraseTokens.every(t=>hasTok(title,t,tokenRe(t))))score+=20;
   if(alias){String(alias.targets||'').split('|').map(v=>v.trim()).forEach(tg=>{if(tg.startsWith('route:')&&x.type==='page'&&route===tg.slice(6))score+=25;if(tg.startsWith('document_type:')&&x.document_type===tg.slice(14))score+=10;});}
   return [score,title];
 }

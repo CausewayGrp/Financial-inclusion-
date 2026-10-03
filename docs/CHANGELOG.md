@@ -1,5 +1,20 @@
 # Repository Change Log
 
+## 2026-10-03 — B15 d: search matches numbers whole, Arabic words from their start, and governed aliases
+
+From the product challenge, these were ranked first by the red team (`PRODUCT_CHALLENGE.md`). All are code only, in
+`site-src/app.js`, mirrored in `scripts/validate.py`, whose search smoke tests and canonical probe still pass.
+- **C-5, numbers.** "6,245", "6245" and «٦٬٢٤٥» are now the same query. A decimal point stays inside a number, and a
+  number matches only as a whole number. Before, "6245" found nothing, "6,245" was searched as "245", and "11.9%"
+  surfaced an enforcement decision before the Findex records.
+- **A-2, words.** A word matches from the start of a word, after the Arabic proclitics و ف ب ل ك and the article. A
+  word of three letters or fewer matches only whole. Identifiers still match inside references (TOOL-10).
+  - «تعز» no longer returns «تعزيز…».
+  - «الريف» returns 1 result instead of 131.
+- **A-3, aliases.** A query that is a term of a governed alias group also finds the group's other terms, ranked below
+  literal hits. «المرأة» now returns 15 results, CLM-002 among them, instead of 2.
+- A browser test covers all three, and public tools pass 34/35 (1 n/a).
+
 ## 2026-10-03 — B15 d, first improvements: search recovers after a failed load; two layout fixes
 
 From the product challenge's panel findings (`audit/release_candidate/PRODUCT_CHALLENGE.md`, written once the red team

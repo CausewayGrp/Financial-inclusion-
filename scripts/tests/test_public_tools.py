@@ -345,6 +345,22 @@ def t_source_library(page, base):
         assert "year=" not in page.url
 
 
+@test("search: numbers with or without separators, Arabic words from their start, governed aliases widen the query (B15)")
+def t_search_matching(page, base):
+    def hits(lang, q):
+        page.goto(f"{base}/{lang}/")
+        page.click("[data-search-open]")
+        page.fill("[data-search-input]", q)
+        page.wait_for_function("document.querySelector('[data-search-status]') && document.querySelector('[data-search-status]').textContent.trim().length > 0")
+        page.wait_for_timeout(300)
+        return page.evaluate("[...document.querySelectorAll('[data-search-results] a')].map(a => [a.getAttribute('href'), a.textContent])")
+    plain, grouped = hits("en", "6245"), hits("en", "6,245")
+    assert plain and [h for h, _ in plain] == [h for h, _ in grouped], (plain[:3], grouped[:3])
+    assert hits("ar", "٦٬٢٤٥"), "an Arabic-Indic number with its separator finds nothing"
+    assert not any("تعزيز" in t for _, t in hits("ar", "تعز")), "a short Arabic word matched inside a longer one"
+    assert any("CLM-002" in (h or "") for h, _ in hits("ar", "المرأة")), "the governed alias group did not widen «المرأة»"
+
+
 @test("language switch keeps route, query and hash")
 def t_lang_state(page, base):
     page.goto(base + "/en/measurement/#MA-003")

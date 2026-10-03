@@ -1496,7 +1496,22 @@ def _r4norm(value):
     value=''.join(str(ord(c)-0x0660) if '\u0660'<=c<='\u0669' else str(ord(c)-0x06F0) if '\u06F0'<=c<='\u06F9' else c for c in value)   # Tranche C TOOL-12
     value=re.sub(r'[\u064B-\u065F\u0670]','',value)
     value=value.replace('إ','ا').replace('أ','ا').replace('آ','ا').replace('ٱ','ا').replace('ى','ي').replace('ة','ه').replace('ؤ','و').replace('ئ','ي')
+    value=re.sub(r'(\d)[,\u066C](?=\d{3}(?!\d))',r'\1',value)   # B15 (C-5), identical to app.js normalize()
+    value=re.sub(r'(\d)\u066B(?=\d)',r'\1.',value)
     return value
+_R4_WCH='a-z0-9\u0621-\u064A'
+def _r4re(t):
+    # B15 (C-5, A-2): identical to site-src/app.js tokenRe()
+    e=re.escape(t)
+    if re.fullmatch(r'\d+(?:\.\d+)?%?',t): return re.compile(rf'(?<![0-9.,]){e}(?![0-9]|[.,][0-9])')
+    if re.search(r'[-\d]',t): return None
+    ar=bool(re.search(r'[\u0621-\u064A]',t))
+    pre='(?:[وفبلك])?(?:ال|لل)?' if ar else ''
+    tail=((rf'(?:ه|ي|ات)?(?![{_R4_WCH}])' if ar else rf's?(?![{_R4_WCH}])') if len(t)<=3 else '')
+    return re.compile(rf'(?<![{_R4_WCH}]){pre}{e}{tail}')
+def _r4has(text,t):
+    rx=_r4re(t)
+    return bool(rx.search(text)) if rx else (t in text)
 def _r4qtok(t):
     # PB-0491 light query-token normalisation, identical to site-src/app.js queryToken().
     if t.startswith('ال') and len(t)>3: return t[2:]
@@ -1519,7 +1534,13 @@ def _r4alias(term,lang):
         if q in [t for t in terms if t]: return a
     return None
 _R4_STOP={'what','do','does','we','is','are','the','and','of','in','about','how','which','who','a','an','to','for','on','there','ما','ماذا','هل','في','من','على','عن','و','التي','الذي','هو','هي','كم','كيف'}
-_R4_PUNCT=re.compile(r'[?,.;:!—–"“”«»()؟،؛\'’]')
+_R4_PUNCT=re.compile(r'[?,;:!—–"“”«»()؟،؛\'’]|(?<!\d)\.|\.(?!\d)')   # B15 (C-5): a decimal point inside a number is kept
+def _r4phrases(a):
+    out=[]
+    for x in str(a.get('terms_en') or '').split(';')+str(a.get('terms_ar') or '').split(';'):
+        ph=[_r4qtok(t) for t in _r4norm(x.strip()).split() if len(t)>1 and t not in _R4_STOP]
+        if ph: out.append(ph)
+    return out
 def _r4search(query,lang,limit=10):
     # Tranche C (JRN-05/TOOL-10): identical to site-src/app.js queryTokens() and result de-duplication by destination.
     term=_r4norm(query.strip())
@@ -1536,12 +1557,17 @@ def _r4search(query,lang,limit=10):
         for tok in tokens:
             if stable==tok: score+=12
             elif re.search(r'[-\d]',tok) and tok in stable: score+=7
-            if tok in title: score+=6
-            if tok in summary: score+=3
-            if tok in textv: score+=1
-            if tok in boundary: score+=0.5
+            if _r4has(title,tok): score+=6
+            if _r4has(summary,tok): score+=3
+            if _r4has(textv,tok): score+=1
+            if _r4has(boundary,tok): score+=0.5
+        if alias:   # B15 (A-3): identical to app.js aliasPhrases()
+            for ph in _r4phrases(alias):
+                if all(_r4has(title,t) for t in ph): score+=3
+                elif all(_r4has(summary,t) for t in ph): score+=1.5
+                elif all(_r4has(textv,t) for t in ph): score+=0.5
         xr=str(x.get('route') or '')
-        if score>0 and x.get('type')=='page' and xr in _R4_DOMAIN and tokens and all(t in title for t in tokens): score+=20
+        if score>0 and x.get('type')=='page' and xr in _R4_DOMAIN and tokens and all(_r4has(title,t) for t in tokens): score+=20
         if alias:
             for tg in [v.strip() for v in str(alias.get('targets') or '').split('|')]:
                 if tg.startswith('route:') and x.get('type')=='page' and xr==tg[6:]: score+=25
