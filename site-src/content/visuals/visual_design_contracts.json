@@ -1,7 +1,7 @@
 {
   "schema_version": "1.0",
   "contract_id": "VISUAL-DESIGN-CONTRACT",
-  "authority_master_sha256": "efb5a7c2ce38946d58e34d9f76c375f2f805fe6eaf06ea01537c963558322aa7",
+  "authority_master_sha256": "6568e6e6fcbbc1795805a950d0ff769a224cc1579182de0f80f2a868ee3d9fd3",
   "rule": "Design-layer controlled input. It assigns every governed visual contract (Master 11) a design tier and, for SIGNATURE and CORE_ANALYTICAL visuals, declares which governed rows a chart binds to and how they are drawn. It never carries a fact, number, label or sentence: values come from Master data rows, text from Master contract/evidence fields, and legend labels from the governed interface copy (UI-VIS-*). The generator resolves every binding and fails on any unresolved ID, any value that disagrees with its guard, or any visual left untiered.",
   "tiers": {
     "SIGNATURE": "Distinctive to this product, decision-useful, drawable from governed rows and safe when detached. Designed first; gets a full data contract.",
@@ -1456,7 +1456,7 @@
               },
               {
                 "id": "PSE-003",
-                "date": "2026-08-06",
+                "date": "2026-08-05",
                 "authority": "Central Bank of Yemen — Aden",
                 "class": "EXCHANGE_ESTABLISHMENT_AND_REMITTANCE_AGENT",
                 "state": "LICENCE_SUSPENSION_AND_CLOSURE_EVENT",
@@ -1479,7 +1479,7 @@
               },
               {
                 "id": "PSE-004",
-                "date": "2026-08-20",
+                "date": "2026-08-19",
                 "authority": "Central Bank of Yemen — Aden",
                 "class": "EXCHANGE_COMPANY_OR_ESTABLISHMENT",
                 "state": "LICENCE_SUSPENSION_AND_CLOSURE_EVENT",

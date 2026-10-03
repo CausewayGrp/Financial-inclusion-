@@ -171,6 +171,10 @@ The public text stays exactly as it is until the source is read; closing any of 
   (`173_CBY_ANNUAL_VINTAGES`, `198_IBS2020_UPSTREAM`, `201_MFB2023_RECON`, `219_SMEPS_PROGRAMME_EVIDENCE`;
   `B12_TEXT_FIRST_DISPOSITIONS.md`). The records still trace to public originals. Action at B16: bring the tables in, or
   record them as external working tables.
+- 2026-10-03 — **Closed: dates of the other 2026 enforcement decisions** (RC-13; `ORIGINAL_SOURCE_VERIFICATION.md` §7). The
+  twelve signed scans were read. Ten match. Decision No. 13 is dated 5 August 2026 (the news page 6 August) and Decision
+  No. 14 is dated 19 August 2026 (the news page 20 August); both are corrected Master-first. Every decision now records
+  its scan as a locator.
 - 2026-10-03 — **B12** (RC-12, `audit/release_candidate/B12_TEXT_FIRST_DISPOSITIONS.md`): of the 23 text-only
   contracts, 2 now render their designed table from governed rows (VIS-TARGET-RESULT-STATE, VIS-FIRM-FINANCE-PATH) and 4
   are complete as designed. 17 wait on a named Master input; they go to B16.

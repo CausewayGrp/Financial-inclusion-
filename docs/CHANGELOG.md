@@ -1,5 +1,17 @@
 # Repository Change Log
 
+## 2026-10-03 — Release candidate RC-13: the signed-scan dates of the 2026 enforcement decisions (B14 e)
+
+Transaction `audit/release_candidate/rc_13_decision_dates.py` through `run_stage.py` (Master `efb5a7c2ce38` →
+`6568e6e6fcbb`; 32 cells).
+- **Decisions read.** The twelve 2026 decisions whose dates came from CBY-Aden's news pages were checked against the
+  signed scan each page links. Ten match.
+- **Two corrected.** Decision No. 13 was signed on 5 August 2026 and Decision No. 14 on 19 August 2026, each the day
+  before its news page. Both sources (titles in English and Arabic, document dates) and their status events (PSE-003,
+  PSE-004) now carry the instrument's date, as Decision No. 10 has since RC-8.
+- **Scans recorded.** Every decision records its scan as an additional locator, with the check date.
+- **Records.** `ORIGINAL_SOURCE_VERIFICATION.md` §7 holds every reading. The register item is closed.
+
 ## 2026-10-03 — B14 a and b: data exports prepared and switched off; host headers
 
 - **Exports (B14 a).** `scripts/exports.py` writes the Evidence Records (110), public claims (60), sources (156), visual

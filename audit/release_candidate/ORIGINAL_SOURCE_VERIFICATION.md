@@ -158,3 +158,31 @@ All findings were applied in `rc_8b_review_fixes.py` (ledger `runs/RC-8b_MASTER_
 | SFD newsletters, the publisher's current files (`sfd-yemen.org/uploads/issues/Newsletter-Quarter-<q>-<year>.pdf`) | Issue number, quarter and the provider-table values that the Master binds. | No. 57 (Q1 2012): 69,121 / 96,593 / 3,962. No. 66 (Q2 2014): 116,188 / 495,940 / 12,693. No. 80 (Q4 2017): 85,259 / 746,387 / 7,800. No. 85 (Q1 2019): 85,219 and "YR 14.664 billions". No. 92 (Q4 2020): 88,445 / 1,611,206 / 33,379. All found: **same documents**, and the locators were moved in RC-12. |
 | SFD newsletter No. 62 (Q2 2013), the publisher's current file | The same check. | **Another edition.** Its provider table, headed "until end of June 2014", totals 84,760 / 151,465 / 6,845. Its narrative gives "88 thousand" borrowers, "176 thousand" savers and a portfolio "approached 8 billion". The bound values are 88,169 / 175,447 / 7,845, from the original edition ("…en-62-2 NEW2…"). The locator became that address's web.archive.org copy. The archived file could not be opened here (egress policy). Register item. |
 | `SRC-IBS-EPAY-YEM-2020`, pp. 54 and 68; `SRC-SMEPS-AR2024-2025`, printed pp. 8–9 | The rows that RV-CWR-005 and RV-CWR-008 panel 3 would need. | Read and recorded as missing Master rows in `B12_TEXT_FIRST_DISPOSITIONS.md`. Nothing is bound. |
+
+## 7. The signed scans of the other 2026 enforcement decisions (3 October 2026, RC-13; B14 e)
+
+The register item from the adversarial review of RC-8 was that the dates printed for Decisions 1–6, 9, 11, 13–15 and 17
+of 2026 were CBY-Aden's news-page dates. Each news page (`cby-ye.com/news/<n>`) links a one-page signed scan
+(`cby-ye.com/files/<id>.pdf`). All twelve links were confirmed on 3 October 2026. The scans are image-only, so they were
+rendered and read: once by a reader who did not write RC-13, and again here for the two that differ. In every scan the
+Hijri date converts to the Gregorian date printed beside it.
+
+| Decision (2026) | News page | Signed scan, as printed | Master before | Result |
+|---|---|---|---|---|
+| 1 | 907, 1 Jan | "Ref: 02/CBY/2026 · Date: 1/1/2026"; «12 رجب 1447هـ الموافق 1 يناير 2026م» | 2026-01-01 | Match |
+| 2 | 908, 1 Jan | "Ref: 3/CBY/2026 · Date: 1/1/2026"; «12 رجب 1447هـ الموافق 1 يناير 2026م» | 2026-01-01 | Match (the news page's link label misprints «2025») |
+| 3 | 910, 8 Jan | "Ref: 11/CBY/2026 · Date: 08/01/2026"; «19 رجب 1447هـ الموافق 8 يناير 2025م» | 2026-01-08 | Match (the year beside the signature is a misprint; the header and the Hijri give 2026) |
+| 4 | 911, 8 Jan | "Ref: 12/CBY/2026 · Date: 08/01/2026"; «19 رجب 1447هـ الموافق 8 يناير 2025م» | 2026-01-08 | Match (same misprint) |
+| 5 | 912, 13 Jan | "Ref: 23/CBY/2026 · Date: 13/01/2026"; «24 رجب 1447هـ الموافق 13 يناير 2026م» | 2026-01-13 | Match |
+| 6 | 913, 13 Jan | "Ref: 24/CBY/2026 · Date: 13/01/2026"; «24 رجب 1447هـ الموافق 13 يناير 2026م» | 2026-01-13 | Match |
+| 9 | 943, 21 May | "Ref:337/CBY/2026 · Date: 21/05/2026"; «4 ذو الحجة 1447هـ الموافق 21 مايو 2026م» | 2026-05-21 | Match |
+| 11 | 945, 10 Jun | "Ref:352/CBY/2026 · Date:10/6/2026"; «24 ذو الحجة 1447هـ الموافق 10 يونيو 2026م» | 2026-06-10 | Match |
+| 13 | 964, 6 Aug | "Ref:474/CBY/2026 · Date: 5/8/2026"; «22 صفر 1448هـ الموافق 5 أغسطس 2026م» | 2026-08-06 | **Corrected to 2026-08-05** |
+| 14 | 968, 20 Aug | "Ref:498/CBY/2026 · Date:19/8/2026"; «6 ربيع الأول 1448هـ الموافق 19 أغسطس 2026م» | 2026-08-20 | **Corrected to 2026-08-19** |
+| 15 | 969, 27 Aug | "Ref:517/CBY/2026 · Date:27/8/2026"; «14 ربيع الأول 1448هـ الموافق 27 أغسطس 2026م» | 2026-08-27 | Match |
+| 17 | 973, 17 Sep | "Ref:589/CBY/2026 · Date:17/9/2026"; «6 ربيع الثاني 1448هـ الموافق 17 سبتمبر 2026م» | 2026-09-17 | Match |
+
+Every scan's file id shows it was uploaded on its news page's date, so a news date is when the instrument was
+published, not when it was signed. RC-13 corrected Decisions 13 and 14 (source titles in both languages, document dates,
+and status events PSE-003 and PSE-004). It also recorded each of the twelve scans as an additional locator, with the
+check date. No record's text prints either date, and the order of events is unchanged.

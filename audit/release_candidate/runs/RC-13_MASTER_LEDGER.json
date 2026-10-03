@@ -1,0 +1,301 @@
+{
+ "transaction": "RC-13",
+ "summary": "B14 e: signed-scan dates of the other 2026 decisions",
+ "items": {
+  "dates_corrected": 2,
+  "scans_recorded": 12
+ },
+ "input_master_sha256": "efb5a7c2ce38946d58e34d9f76c375f2f805fe6eaf06ea01537c963558322aa7",
+ "output_master_sha256": "6568e6e6fcbbc1795805a950d0ff769a224cc1579182de0f80f2a868ee3d9fd3",
+ "cells_written": 32,
+ "changes": [
+  {
+   "finding": "RC-13:B14e",
+   "sheet": "15_SOURCE_LIBRARY",
+   "row": 16,
+   "col": 6,
+   "field": "SRC-CBY-ENF-13-2026.display_title",
+   "old": "Governor's Decision No. 13 of 2026 on licence suspensions and closures (6 August 2026)",
+   "new": "Governor's Decision No. 13 of 2026 on licence suspensions and closures (5 August 2026)"
+  },
+  {
+   "finding": "RC-13:B14e",
+   "sheet": "15_SOURCE_LIBRARY",
+   "row": 16,
+   "col": 12,
+   "field": "SRC-CBY-ENF-13-2026.display_title_ar",
+   "old": "قرار المحافظ رقم (13) لسنة 2026 بشأن إيقاف تراخيص وإغلاق مقرات (6 أغسطس 2026)",
+   "new": "قرار المحافظ رقم (13) لسنة 2026 بشأن إيقاف تراخيص وإغلاق مقرات (5 أغسطس 2026)"
+  },
+  {
+   "finding": "RC-13:B14e",
+   "sheet": "15_SOURCE_LIBRARY",
+   "row": 17,
+   "col": 6,
+   "field": "SRC-CBY-ENF-14-2026.display_title",
+   "old": "Governor's Decision No. 14 of 2026 on licence suspensions and closures (20 August 2026)",
+   "new": "Governor's Decision No. 14 of 2026 on licence suspensions and closures (19 August 2026)"
+  },
+  {
+   "finding": "RC-13:B14e",
+   "sheet": "15_SOURCE_LIBRARY",
+   "row": 17,
+   "col": 12,
+   "field": "SRC-CBY-ENF-14-2026.display_title_ar",
+   "old": "قرار المحافظ رقم (14) لسنة 2026 بشأن إيقاف تراخيص وإغلاق مقرات (20 أغسطس 2026)",
+   "new": "قرار المحافظ رقم (14) لسنة 2026 بشأن إيقاف تراخيص وإغلاق مقرات (19 أغسطس 2026)"
+  },
+  {
+   "finding": "RC-13:B14e",
+   "sheet": "15_SOURCE_LIBRARY",
+   "row": 16,
+   "col": 28,
+   "field": "SRC-CBY-ENF-13-2026.document_date",
+   "old": "2026-08-06",
+   "new": "2026-08-05"
+  },
+  {
+   "finding": "RC-13:B14e",
+   "sheet": "22_PROVIDERS_DATA",
+   "row": 79,
+   "col": 2,
+   "field": "PSE-003.event_date",
+   "old": "2026-08-06",
+   "new": "2026-08-05"
+  },
+  {
+   "finding": "RC-13:B14e",
+   "sheet": "15_SOURCE_LIBRARY",
+   "row": 17,
+   "col": 28,
+   "field": "SRC-CBY-ENF-14-2026.document_date",
+   "old": "2026-08-20",
+   "new": "2026-08-19"
+  },
+  {
+   "finding": "RC-13:B14e",
+   "sheet": "22_PROVIDERS_DATA",
+   "row": 80,
+   "col": 2,
+   "field": "PSE-004.event_date",
+   "old": "2026-08-20",
+   "new": "2026-08-19"
+  },
+  {
+   "finding": "RC-13:B14e",
+   "sheet": "15_SOURCE_LIBRARY",
+   "row": 7,
+   "col": 3,
+   "field": "SRC-CBY-ENF-01-2026.additional_urls",
+   "old": null,
+   "new": "[\"https://www.cby-ye.com/files/69566356f386a.pdf\"]"
+  },
+  {
+   "finding": "RC-13:B14e",
+   "sheet": "15_SOURCE_LIBRARY",
+   "row": 7,
+   "col": 22,
+   "field": "SRC-CBY-ENF-01-2026.retrieval_date",
+   "old": null,
+   "new": "2026-10-03"
+  },
+  {
+   "finding": "RC-13:B14e",
+   "sheet": "15_SOURCE_LIBRARY",
+   "row": 8,
+   "col": 3,
+   "field": "SRC-CBY-ENF-02-2026.additional_urls",
+   "old": null,
+   "new": "[\"https://www.cby-ye.com/files/69566423792f1.pdf\"]"
+  },
+  {
+   "finding": "RC-13:B14e",
+   "sheet": "15_SOURCE_LIBRARY",
+   "row": 8,
+   "col": 22,
+   "field": "SRC-CBY-ENF-02-2026.retrieval_date",
+   "old": null,
+   "new": "2026-10-03"
+  },
+  {
+   "finding": "RC-13:B14e",
+   "sheet": "15_SOURCE_LIBRARY",
+   "row": 9,
+   "col": 3,
+   "field": "SRC-CBY-ENF-03-2026.additional_urls",
+   "old": null,
+   "new": "[\"https://www.cby-ye.com/files/695fdd05de273.pdf\"]"
+  },
+  {
+   "finding": "RC-13:B14e",
+   "sheet": "15_SOURCE_LIBRARY",
+   "row": 9,
+   "col": 22,
+   "field": "SRC-CBY-ENF-03-2026.retrieval_date",
+   "old": null,
+   "new": "2026-10-03"
+  },
+  {
+   "finding": "RC-13:B14e",
+   "sheet": "15_SOURCE_LIBRARY",
+   "row": 10,
+   "col": 3,
+   "field": "SRC-CBY-ENF-04-2026.additional_urls",
+   "old": null,
+   "new": "[\"https://www.cby-ye.com/files/695fddc70da3b.pdf\"]"
+  },
+  {
+   "finding": "RC-13:B14e",
+   "sheet": "15_SOURCE_LIBRARY",
+   "row": 10,
+   "col": 22,
+   "field": "SRC-CBY-ENF-04-2026.retrieval_date",
+   "old": null,
+   "new": "2026-10-03"
+  },
+  {
+   "finding": "RC-13:B14e",
+   "sheet": "15_SOURCE_LIBRARY",
+   "row": 11,
+   "col": 3,
+   "field": "SRC-CBY-ENF-05-2026.additional_urls",
+   "old": null,
+   "new": "[\"https://www.cby-ye.com/files/69666b96b0089.pdf\"]"
+  },
+  {
+   "finding": "RC-13:B14e",
+   "sheet": "15_SOURCE_LIBRARY",
+   "row": 11,
+   "col": 22,
+   "field": "SRC-CBY-ENF-05-2026.retrieval_date",
+   "old": null,
+   "new": "2026-10-03"
+  },
+  {
+   "finding": "RC-13:B14e",
+   "sheet": "15_SOURCE_LIBRARY",
+   "row": 12,
+   "col": 3,
+   "field": "SRC-CBY-ENF-06-2026.additional_urls",
+   "old": null,
+   "new": "[\"https://www.cby-ye.com/files/69666bc45faf0.pdf\"]"
+  },
+  {
+   "finding": "RC-13:B14e",
+   "sheet": "15_SOURCE_LIBRARY",
+   "row": 12,
+   "col": 22,
+   "field": "SRC-CBY-ENF-06-2026.retrieval_date",
+   "old": null,
+   "new": "2026-10-03"
+  },
+  {
+   "finding": "RC-13:B14e",
+   "sheet": "15_SOURCE_LIBRARY",
+   "row": 13,
+   "col": 3,
+   "field": "SRC-CBY-ENF-09-2026.additional_urls",
+   "old": null,
+   "new": "[\"https://www.cby-ye.com/files/6a0f1baad6f36.pdf\"]"
+  },
+  {
+   "finding": "RC-13:B14e",
+   "sheet": "15_SOURCE_LIBRARY",
+   "row": 13,
+   "col": 22,
+   "field": "SRC-CBY-ENF-09-2026.retrieval_date",
+   "old": null,
+   "new": "2026-10-03"
+  },
+  {
+   "finding": "RC-13:B14e",
+   "sheet": "15_SOURCE_LIBRARY",
+   "row": 15,
+   "col": 3,
+   "field": "SRC-CBY-ENF-11-2026.additional_urls",
+   "old": null,
+   "new": "[\"https://www.cby-ye.com/files/6a296e96cf10f.pdf\"]"
+  },
+  {
+   "finding": "RC-13:B14e",
+   "sheet": "15_SOURCE_LIBRARY",
+   "row": 15,
+   "col": 22,
+   "field": "SRC-CBY-ENF-11-2026.retrieval_date",
+   "old": null,
+   "new": "2026-10-03"
+  },
+  {
+   "finding": "RC-13:B14e",
+   "sheet": "15_SOURCE_LIBRARY",
+   "row": 16,
+   "col": 3,
+   "field": "SRC-CBY-ENF-13-2026.additional_urls",
+   "old": null,
+   "new": "[\"https://www.cby-ye.com/files/6a749e284951b.pdf\"]"
+  },
+  {
+   "finding": "RC-13:B14e",
+   "sheet": "15_SOURCE_LIBRARY",
+   "row": 16,
+   "col": 22,
+   "field": "SRC-CBY-ENF-13-2026.retrieval_date",
+   "old": null,
+   "new": "2026-10-03"
+  },
+  {
+   "finding": "RC-13:B14e",
+   "sheet": "15_SOURCE_LIBRARY",
+   "row": 17,
+   "col": 3,
+   "field": "SRC-CBY-ENF-14-2026.additional_urls",
+   "old": null,
+   "new": "[\"https://www.cby-ye.com/files/6a870ae11a5d5.pdf\"]"
+  },
+  {
+   "finding": "RC-13:B14e",
+   "sheet": "15_SOURCE_LIBRARY",
+   "row": 17,
+   "col": 22,
+   "field": "SRC-CBY-ENF-14-2026.retrieval_date",
+   "old": null,
+   "new": "2026-10-03"
+  },
+  {
+   "finding": "RC-13:B14e",
+   "sheet": "15_SOURCE_LIBRARY",
+   "row": 18,
+   "col": 3,
+   "field": "SRC-CBY-ENF-15-2026.additional_urls",
+   "old": null,
+   "new": "[\"https://www.cby-ye.com/files/6a9055206c613.pdf\"]"
+  },
+  {
+   "finding": "RC-13:B14e",
+   "sheet": "15_SOURCE_LIBRARY",
+   "row": 18,
+   "col": 22,
+   "field": "SRC-CBY-ENF-15-2026.retrieval_date",
+   "old": null,
+   "new": "2026-10-03"
+  },
+  {
+   "finding": "RC-13:B14e",
+   "sheet": "15_SOURCE_LIBRARY",
+   "row": 157,
+   "col": 3,
+   "field": "SRC-CBY-ENF-17-2026.additional_urls",
+   "old": null,
+   "new": "[\"https://www.cby-ye.com/files/6aabe46e975f1.pdf\"]"
+  },
+  {
+   "finding": "RC-13:B14e",
+   "sheet": "15_SOURCE_LIBRARY",
+   "row": 157,
+   "col": 22,
+   "field": "SRC-CBY-ENF-17-2026.retrieval_date",
+   "old": null,
+   "new": "2026-10-03"
+  }
+ ]
+}
