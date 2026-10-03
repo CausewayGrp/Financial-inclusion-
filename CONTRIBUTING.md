@@ -127,6 +127,8 @@ python3 scripts/tests/test_content_parity.py           # every page prints its g
 python3 scripts/tests/test_cutover_parity.py           # the cutover proof; exits 2 ("pinned") once a Master change moves its oracle
 python3 scripts/tests/test_public_tools.py             # browser
 python3 audit/tranche_c/checks/viewport_acceptance.py  # browser
+python3 scripts/tests/test_security_headers.py         # browser: every page under dist/_headers, no policy violation
+python3 scripts/tests/test_base_path.py                # browser: built for the decided origin, served under its path (B2)
 # Slow, and its own CI job: one full validator run per fault, so run it when a gate or the markup it reads changes.
 python3 scripts/tests/test_gate_negative_controls.py             # every gate still fails on the fault it was written to catch
 python3 scripts/tests/test_gate_negative_controls.py --only p3    # or just the ones whose name matches

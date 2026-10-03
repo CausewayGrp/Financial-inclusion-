@@ -584,6 +584,7 @@ _n_evidence_objects=len(json.load(open(C/'evidence/evidence_objects.json',encodi
 if len(evidence_specs)!=_n_evidence_objects:          # one public Evidence Record page per 06 record (derived, not frozen)
     errors.append(f'S04.1 Evidence Record pages ({len(evidence_specs)}) differ from 06 records ({_n_evidence_objects})')
 object_to_spec={}
+sys.path.insert(0,str(ROOT/'scripts')); import discovery as _DISC_S041   # one implementation of the language alternates
 source_dependents={sid:set() for sid in public_source_ids}
 for spec in evidence_specs:
     route=str(spec.get('route') or '')
@@ -668,8 +669,9 @@ for spec in evidence_specs:
         for leak in ['LOCATOR_ONLY','DISPLAY_READY','NO_PUBLIC_LOCATOR','OBJECT_LEVEL_OR_UNSPECIFIED','rights_display_state','metadata_state']:
             if leak in raw: errors.append(f'S04.1 internal source/publication state leaked {route} {lang} {leak}')
         # Language equivalent must remain at the same Evidence Record route (header JS preserves query/hash globally).
+        # The address is discovery's (scripts/discovery.py): root-relative today, absolute once the owner sets the origin.
         other='en' if lang=='ar' else 'ar'
-        if f'hreflang="{other}" href="/{other}/{route.strip("/")}/"' not in raw:
+        if f'hreflang="{other}" href="{_DISC_S041.url(_DISC_S041.localized(route,other),_DISC_S041.origin())}"' not in raw:
             errors.append(f'S04.1 Evidence Record language alternate mismatch {route} {lang}')
     # Source references must resolve to controlled source records. Public locators link through Data + original; no-public-locator stays suppressed.
     for ref in spec.get('source_references') or []:
