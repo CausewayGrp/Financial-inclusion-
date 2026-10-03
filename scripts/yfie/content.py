@@ -228,6 +228,7 @@ class Content:
             },
             "nav": nav, "trust": trust, "footer": footer, "home_href": self.href("/", lang), "contact_href": self.href("/contact/", lang),
             "ui_json": self.ui_json(lang),
+            "mobile_menu": self.nav.get("mobile_menu") or None,   # owner decisions of 3 October 2026, point 3
         }
 
     @staticmethod

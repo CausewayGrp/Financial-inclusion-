@@ -425,6 +425,19 @@ Raised at RC-17 (3 October 2026), by the adversarial review of the owner's point
   Needed: the owner's choice — accept it as disclosed here, or let /evidence/NEG-EW-011/ point to CLM-015, which
   covers all twelve alike.` Open; nothing prints a name. B16: RELEASE (the owner's choice at release acceptance).
 
+Closed on 3 October 2026 by the steward's patch to the navigation contract (owner decisions of 3 October 2026, 09:05
+point 3 and 09:50 A.3; `audit/OWNER_DECISIONS_2026-10-02.md`):
+
+- **A-12 and C-6, About at 390 px: CLOSED.**
+  - Below 900 px, the opened menu carries the governed trust links, About first, under the footer's own group label.
+  - The contract gains one key, `mobile_menu`, and nothing else in the file changes. Existing labels only.
+- **C-8, Cite at 390 px: CLOSED.** The opened menu carries the existing "Cite this page" control; the header itself is
+  unchanged.
+- **Checks:**
+  - The menu was checked at 320 and 390 px in both languages: 7 links, About first, the cite control reachable, no
+    overflow, header heights unchanged.
+  - Gate RC-NAV holds it on every page, with a negative control. The designation ends with this commit.
+
 ## Closed at D2 (27 September 2026) — resolved by an authority the repository already holds
 
 - Arabic credit line (`NEEDS_CONTROLLED_CONTENT — RV-CWR-001 and every visual contract with a credit`): the contract

@@ -110,6 +110,14 @@ def header(shell: dict) -> str:
             nav.append(f'<span class="group" role="group" aria-label="{esc(item["label"])}"><span class="glabel">{esc(item["label"])}</span>{kids}</span>')
         else:
             nav.append(f'<a href="{item["href"]}"{CUR if item.get("active") else ""}>{esc(item["label"])}</a>')
+    # Owner decisions of 3 October 2026, point 3 (A-12, C-6, C-8; navigation contract `mobile_menu`): below 900 px the
+    # opened menu carries the trust links, About first, under the footer's governed group label, and the governed cite
+    # control. The header itself is unchanged; above 900 px the bar shows these in their usual places.
+    if shell.get("mobile_menu"):
+        trust_label = next((g["label"] for g in shell["footer"] if any(l["href"].endswith("/about/") for l in g["links"])), L["trust_nav"])
+        trust = "".join(f'<a href="{t["href"]}"{CUR if t.get("active") else ""}>{esc(t["label"])}</a>' for t in shell["trust"])
+        nav.append(f'<span class="group m-only" role="group" aria-label="{esc(trust_label)}" data-menu-trust><span class="glabel">{esc(trust_label)}</span>{trust}</span>'
+                   f'<button type="button" class="tbtn m-only" data-cite data-menu-cite>{esc(L["cite"])}</button>')
     return (f'<noscript><div class="noscript">{esc(L["noscript"])}</div></noscript><a class="skip" href="#main">{esc(L["skip"])}</a>'
             f'<header class="bar"><div class="bar-in"><a class="brand" href="{shell["home_href"]}" aria-label="CauseWay — {esc(shell["product"])}">{logo(40, "(min-width: 900px) 48px, 40px")}<span class="brand-text"><span class="brand-pub" dir="ltr">CauseWay</span><span class="brand-name">{esc(shell["product"])}</span></span></a>'
             f'<nav id="primary-nav" class="nav" aria-label="{esc(L["primary_nav"])}">{"".join(nav)}</nav>'

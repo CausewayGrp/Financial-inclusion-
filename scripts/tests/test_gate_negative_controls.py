@@ -288,6 +288,10 @@ CONTROLS = [
     ("a name from the 2024 e-wallet circular enters the search index", "static-data/search_index.json",
      replace('"title_ar": "', '"title_ar": "وي كاش '),
      "RC-NAMES a name from the 2024 e-wallet circular is published static-data/search_index.json NEG-EW-011"),
+    # RC-NAV (owner decisions of 3 October 2026, point 3): the opened mobile menu carries the trust links, About first.
+    ("the mobile menu drops About", "ar/evidence/CLM-002/index.html",
+     sub_once(r'(data-menu-trust>.*?)<a href="/ar/about/"[^>]*>[^<]*</a>', r'\1'),
+     "RC-NAV ar/evidence/CLM-002/index.html the opened menu does not carry the trust links, About first"),
     # RC-A1 (Owner Addendum 2, A1): the text alternative of a chain figure names only steps the drawing has.
     ("a chain figure's text alternative names a step its drawing lacks", "en/evidence/VIS-PAYMENT-RAILS/index.html",
      sub_once(r'(<div class="alt"[^>]*>.*?<p class="small">)', r'\1The mobile e-money amendment (9 July 2025). '),

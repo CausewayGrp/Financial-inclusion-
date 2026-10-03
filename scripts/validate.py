@@ -3050,6 +3050,41 @@ try:
 except Exception as _x:
     errors.append("RC-ADD2 unreadable " + repr(_x))
 
+# RC-NAV (owner decisions of 3 October 2026, point 3; findings A-12, C-6, C-8): below 900 px the opened menu holds the
+# governed trust links, About first, in the contract's order, and the governed "Cite this page" control; the header is
+# unchanged. Read from the navigation contract's `mobile_menu` key and the built pages.
+try:
+    _nv = json.loads((C / "content" / "navigation_interaction.json").read_text(encoding="utf-8"))
+    if not _nv.get("mobile_menu"):
+        errors.append("RC-NAV the navigation contract has no mobile_menu")
+    _tn = [x["route"] for x in _nv.get("trust_navigation", [])]
+    if not _tn or not _tn[0].rstrip("/").endswith("/about"):
+        errors.append("RC-NAV the contract's trust links do not start with About")
+    _ucite = {l: next(u[f"label_{l}"] for u in _nv.get("utilities", []) if u.get("id") == "cite") for l in ("en", "ar")}
+    _nnav = 0
+    for _f in sorted(DIST.rglob("index.html")):
+        _rel = _f.relative_to(DIST).parts
+        if not _rel or _rel[0] not in ("en", "ar"):
+            continue
+        _l = _rel[0]
+        _h = _f.read_text(encoding="utf-8")
+        _nav = _h.split('id="primary-nav"', 1)[1].split("</nav>", 1)[0] if 'id="primary-nav"' in _h else ""
+        _tr = _nav.split("data-menu-trust", 1)[1].split("<button", 1)[0] if "data-menu-trust" in _nav else ""
+        _hrefs = [re.sub(r"^/(en|ar)", "", x) for x in re.findall(r'href="([^"]+)"', _tr)]
+        if _hrefs != _tn:
+            errors.append(f"RC-NAV {_f.relative_to(DIST)} the opened menu does not carry the trust links, About first: {_hrefs[:3]}")
+        _mc = re.search(r'<button[^>]*data-menu-cite[^>]*>([^<]*)</button>', _nav)
+        if not _mc or _html.unescape(_mc.group(1)) != _ucite[_l]:
+            errors.append(f"RC-NAV {_f.relative_to(DIST)} the opened menu lacks the governed cite control")
+        _ctl = _h.split('<div class="controls">', 1)[1].split("</div>", 1)[0] if '<div class="controls">' in _h else ""
+        if _ctl.count("data-cite") != 1 or "data-menu" in _ctl.replace("data-menu aria", ""):
+            errors.append(f"RC-NAV {_f.relative_to(DIST)} the header's controls changed")
+        _nnav += 1
+    if _nnav < 100:
+        errors.append(f"RC-NAV read only {_nnav} pages")
+except Exception as _x:
+    errors.append("RC-NAV unreadable " + repr(_x))
+
 # RC-B13 (Part B B13): the research library on /data/. Its filters stay hidden until the runtime runs (the list is
 # complete without JavaScript); every listed source carries its filter keys; every option of a filter matches at least
 # one source; a locator that is a web.archive.org copy is never offered as the original.

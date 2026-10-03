@@ -1,5 +1,27 @@
 # Repository Change Log
 
+## 2026-10-03 — Steward patch: About, the trust links and "Cite this page" in the opened mobile menu (A-12, C-6, C-8)
+
+One patch to the controlled contract `site-src/content/content/navigation_interaction.json`, by this session as
+designated programme steward for that patch only (owner decisions of 3 October 2026, 09:05 point 3 and 09:50 A.3).
+- **Contract.** One key, `mobile_menu`, appended in the file's own JSON style; every earlier byte is unchanged. It names
+  the decision, the scope (below 900 px), the order (the trust links as listed, About first; then the utilities' cite
+  control) and the rule: existing governed labels only, and the header unchanged.
+- **Renderer** (`render.py`, `content.py`, `theme.py`). The opened menu carries the trust links under the footer's
+  governed group label ("Trust and responsible use"), then the cite control. Both are hidden from 900 px, where the bar
+  and the footer already show them.
+- **Checked in a browser:**
+  - 320 and 390 px, English and Arabic, on Home and a record: 7 links, About first.
+  - The cite control is reachable by scrolling, because the header is static.
+  - No horizontal overflow.
+  - Header heights are unchanged: 100, 68, 68 and 66 px.
+- **Gate RC-NAV.** Every built page's opened menu carries the contract's trust links, About first, and the governed
+  cite control, and the header's controls are unchanged. A negative control drops About from one Arabic record and is
+  caught.
+- **All gates pass:**
+  - the validator, content parity, public tools 35/36 (one not applicable), viewport 168/168;
+  - security headers, the projection check, bilingual invariance, social images.
+
 ## 2026-10-03 — Release candidate RC-17: names withheld; Addendum 2 governed improvements; who publishes this; CC BY 4.0
 
 One Master transaction (e24fe737… → 433f38bf…, 150 cells; `audit/release_candidate/rc_17_addendum2.py`), with its

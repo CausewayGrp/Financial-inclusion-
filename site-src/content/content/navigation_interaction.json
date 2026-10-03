@@ -3965,5 +3965,21 @@
       "label_en": "Contact",
       "label_ar": "التواصل"
     }
-  ]
+  ],
+  "mobile_menu": {
+    "decided_by": "Owner decisions of 3 October 2026, 09:05 Cairo point 3 and 09:50 Cairo A.3 (findings A-12, C-6, C-8): the session designated programme steward for this one patch (audit/OWNER_DECISIONS_2026-10-02.md)",
+    "applies_below_px": 900,
+    "after_global_navigation": [
+      {
+        "source": "trust_navigation",
+        "order": "as listed, About first"
+      },
+      {
+        "source": "utilities",
+        "id": "cite"
+      }
+    ],
+    "labels": "existing governed labels only: each trust_navigation label, the footer group label that holds /about/, and the utilities 'cite' label",
+    "header": "unchanged: the cite control is added inside the opened menu, not to the header, so the 320 px header carries no extra load"
+  }
 }
