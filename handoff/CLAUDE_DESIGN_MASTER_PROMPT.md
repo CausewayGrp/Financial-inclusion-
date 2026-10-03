@@ -100,8 +100,8 @@ regulation, programmes, constraints — and the numbers exist to reveal that sys
 
 | Layer | Path | Role |
 |---|---|---|
-| Production Master | `authority/Yemen_Financial_Inclusion_Evidence_Master.xlsx` (SHA-256 `97f37eccc1a9e2b1641090009e91fbf359322c66979ccb28f287b963f8d1850f`) | The only semantic, evidence, source, rights and publication authority |
-| Page Specs | `site-src/content/page_specs.json` (SHA-256 `1d55a517f2d82a63efa910bd033e2989ecb949353ad4caa4e1c2ac29052d1c0a`) | Every route: titles, descriptions, sections, bound objects, prohibited inferences, render rules |
+| Production Master | `authority/Yemen_Financial_Inclusion_Evidence_Master.xlsx` (SHA-256 `5c0688d3d29d580c4cbca4da61d2e71087ebae99594fd0b6b6bb0a63f9d59ccf`) | The only semantic, evidence, source, rights and publication authority |
+| Page Specs | `site-src/content/page_specs.json` (SHA-256 `8d1deaecff51d83c37b82332bf5829bb9bd3d4b8a6f4bd719433b3b8aef1eba5`) | Every route: titles, descriptions, sections, bound objects, prohibited inferences, render rules |
 | Interface copy | `site-src/content/content/interface_copy.json` | Every interface label in both languages (`UI-*` IDs). With the navigation labels below (primary, trust and footer, which the generator writes from the Master's navigation rows into `navigation_interaction.json`), the only source of interface wording |
 | Presentation depth (contract) | `site-src/content/presentation_priority.json` | For the Domain Answer, Evidence Record and Comparison families: what shows first, what may be disclosed later, how many Measurement cards a domain page shows |
 | Navigation and interaction (contract) | `site-src/content/content/navigation_interaction.json` | Navigation, trust layer, footer, breadcrumbs, next actions, page families, journeys, tools, hard-state cases |

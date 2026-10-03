@@ -1,5 +1,29 @@
 # Repository Change Log
 
+## 2026-10-03 — Release candidate RC-7: Part A items 3 and 6 on Path A (originals read)
+
+Transaction `audit/release_candidate/rc_7_path_a.py` through `run_stage.py` (Master `97f37eccc1a9` → `5c0688d3d29d`;
+180 cells; ledger and run report in `audit/release_candidate/runs/`), with `rc_7_stage_inputs.py` installing the VIS-FIRM-CONSTRAINTS contract change. Every
+check is recorded in `audit/release_candidate/ORIGINAL_SOURCE_VERIFICATION.md`.
+
+- **Item 3, IMF Country Report No. 26/80** (read in full from the IMF eLibrary). YSC-008 confirmed. YSC-014's values
+  are confirmed against the staff report's text and now attributed to it as the banking sector's ratios, ending at
+  2.5; a note says the report's FSI table gives other values and that neither states a unit or the ratios' coverage.
+  YSC-015 takes the report's wording; YSC-017 reads US$350 million (not "about"), with a note that the report's debt
+  sustainability analysis dates the same amount to June 2025. The four "not yet checked" notes are removed; EXT-01 is
+  closed in the register.
+- **Item 6, World Bank, Yemen Financial Sector Diagnostics (2024), Table 8.** All sixteen values match; rows 9–16 are
+  drawn with eight new labels in the source's item wording, and the partial-list note is gone. The survey is named as
+  the source names it, "the 2022 Yemen Enterprise Survey" ("custom" is not the source's word), in both languages.
+  The method cites Table 8, discloses that Figure 108 and the source's other tabulations (Figure 83; p. 145) differ,
+  and names the formal-firm sample; the boundary against the "biggest obstacle" indicator rests on the indicator and is
+  stated on CLM-005 too. The report's Arabic title is written one way.
+- Independent reviews before commit: one reviewer (ACCEPTABLE, ten should-fix) and a three-lens workflow with
+  adversarial checks (English and Arabic lenses NOT ACCEPTABLE before fixes); every blocking and should-fix finding
+  applied (ledger `independent_review`).
+- `audit/OWNER_DECISIONS_2026-10-02.md` gains the owner's note of 3 October 2026, 03:10 (Decision 18 names withheld;
+  POS update conditions; review depth and order by release value), verbatim, append only.
+
 ## 2026-10-03 — Release candidate RC-6: Part B item B4, Arabic credit lines
 
 Transaction `audit/release_candidate/rc_6_arabic_credits.py` through `run_stage.py` (Master `2b609e1928f8` → `97f37eccc1a9`;

@@ -46,3 +46,39 @@ Appended by the implementing session in the release-candidate pull request (#9),
 > 1. No unsourced number or claim. A number or claim may be added only through the full Master-first path: read in the original source, bound to a source-traced record, written in both languages, accepted by the literal audit. Numbers that are already governed may be bound as rows of an existing visual contract.
 > 2. No new page or route, unless the product challenge (B15) shows a task failure that cannot be fixed on an existing page and the red team agrees; such a page carries its full Page Spec, both languages, a search record and a social image, and passes every gate.
 > 3. Closed decisions stay closed: dashboards, composite scores, league-table rankings, a synchronised "current state", an eleventh Measurement priority (REJ-02), Dataset structured data before downloads and a licence exist (REJ-03), a carbon figure (REJ-04), a fixed update cadence, a separate regulatory "record" route, and third-party or advertising trackers. Two are refined, not reopened: cookieless, first-party aggregate usage counts (B14) and international context from same-source aggregates (B15).
+
+## Owner note — 3 October 2026, 03:10
+
+Recorded verbatim (append only), as the owner asked, so that it survives compaction and any new window.
+
+1. Decision 18 names. The governed rule withholds entity names for the CBY-Aden enforcement decisions (CLM-019; the 14 decision cards; only NEG-EW-011 prints a name, from the 2024 circular). Apply it consistently:
+   - Keep the transcribed names in the Master as non-public lineage only, with the signed scan as locator.
+   - Print them nowhere: not on any page, table, search record or social image.
+   - In the status-event table, PSE-015 prints what the other decisions print: date, decision number, class, action and the governed withholding wording, not "names pending".
+   - If the governed rule actually allows names for some decisions, do not print. Record the conflict in design/ESCALATIONS.md.
+
+2. POS update to June 2026. Update from the CBY-Aden originals as planned, with these conditions:
+   - Where a release contradicts itself (May), do not resolve it and do not compute a change the source contradicts. Print the source's totals, and either use the existing "Source figures disagree — both are shown" pattern or withhold the derived change with a stated reason.
+   - Keep every boundary (terminals ≠ people ≠ use; the CBY-Aden scope) on every surface the new values reach.
+   - Record the Arabic-site discovery and the January locator change in ORIGINAL_SOURCE_VERIFICATION.md.
+
+3. Budget. The account has used 51% of its weekly limit, which resets on 9 October. The release candidate must finish within what remains. From now on:
+   - Review depth follows risk.
+     - For governed copy, the brief's rule is one independent subagent that did not write the change, reading every pair Arabic first and then English. Use exactly that.
+     - Add a second, adversarial reviewer only for new public numbers or for entity and regulatory statements.
+     - Do not run three-lens review workflows.
+   - Fold review findings into one rerun per transaction.
+     - Batch related changes so each transaction carries more and reruns less: RC-8 to RC-10 may merge where they touch different cells.
+   - Do not re-verify what is already verified and committed. Do not poll or wait on finished work.
+   - Order what remains by value to the release:
+     1. truth and currentness (RC-7, A1, A2, POS, the Decision 10 date and locators);
+     2. B6;
+     3. the evidence landscape;
+     4. B10 accessibility;
+     5. B12 and B13;
+     6. B14;
+     7. B15 as a focused challenge: the ten users' tasks, with the named red team in one combined pass;
+     8. B16;
+     9. B17.
+     Low-value polish goes to the roadmap, not into this pull request.
+   - If the limit comes close, stop at a clean point, push, write the RESUME POINT and stop. Never leave work uncommitted.

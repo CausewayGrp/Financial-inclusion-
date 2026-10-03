@@ -241,7 +241,15 @@
     "Business challenge: Political instability": "UI-VIS-CAT-FIRM-CH-POLITICAL",
     "Business challenge: Access to finance": "UI-VIS-CAT-FIRM-CH-FINANCE",
     "Business challenge: Siege": "UI-VIS-CAT-FIRM-CH-SIEGE",
-    "Business challenge: Informal competitor practices": "UI-VIS-CAT-FIRM-CH-INFORMAL"
+    "Business challenge: Informal competitor practices": "UI-VIS-CAT-FIRM-CH-INFORMAL",
+    "Business challenge: Labor regulations": "UI-VIS-CAT-FIRM-CH-LABOUR",
+    "Business challenge: Customs/trade regulation": "UI-VIS-CAT-FIRM-CH-CUSTOMS",
+    "Business challenge: Corruption": "UI-VIS-CAT-FIRM-CH-CORRUPTION",
+    "Business challenge: Land": "UI-VIS-CAT-FIRM-CH-LAND",
+    "Business challenge: Business licensing": "UI-VIS-CAT-FIRM-CH-LICENSING",
+    "Business challenge: Inadequately educated workforce": "UI-VIS-CAT-FIRM-CH-WORKFORCE",
+    "Business challenge: Courts": "UI-VIS-CAT-FIRM-CH-COURTS",
+    "Business challenge: Crime/theft/disorder": "UI-VIS-CAT-FIRM-CH-CRIME"
    },
    "mfi_lane": {
     "borrowers": "UI-VIS-CAT-MFI-BORROWERS",
@@ -1294,7 +1302,15 @@
         "FFO-2022-CH-05",
         "FFO-2022-CH-06",
         "FFO-2022-CH-07",
-        "FFO-2022-CH-08"
+        "FFO-2022-CH-08",
+        "FFO-2022-CH-09",
+        "FFO-2022-CH-10",
+        "FFO-2022-CH-11",
+        "FFO-2022-CH-12",
+        "FFO-2022-CH-13",
+        "FFO-2022-CH-14",
+        "FFO-2022-CH-15",
+        "FFO-2022-CH-16"
        ]
       },
       "fields": {
@@ -1316,7 +1332,7 @@
      }
     ],
     "ordering": "By share, descending, without rank numbers.",
-    "transformation": "None. The eight items named in the governed contract are drawn; the other eight governed items (FFO-2022-CH-09..16) appear in the table fallback.",
+    "transformation": "None. All sixteen items of the source's Table 8 (Annex III, p. 146) are drawn and listed (FFO-2022-CH-01..16), each checked against the original on 3 October 2026 (RC-7).",
     "missing": "The base for this question is not held; stated in frame.",
     "breaks": "None.",
     "annotation": "Firms could name more than one challenge (shares add to more than 100%); seven-governorate survey; not a national ranking.",
@@ -1325,10 +1341,7 @@
     },
     "mobile": "Full-width bars.",
     "rtl": "Bars from the reading start.",
-    "fallback": "Table of all 16 governed items.",
-    "frame_labels": [
-     "UI-VIS-NOTE-FIRM-CONSTRAINTS-PARTIAL"
-    ]
+    "fallback": "Table of all 16 governed items."
    }
   },
   {

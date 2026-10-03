@@ -119,6 +119,16 @@ The public text stays exactly as it is until the source is read; closing any of 
   reason (documents.worldbank.org refused). FFO-2022-CH-09…16 stay unbound; the figure prints the governed frame note
   "Partial list: 8 of the 16 challenges recorded in the source are shown." Closing it is a read of `SRC-WB-FSD-2024-001`,
   Annex III, Table 8 / Figure 108, p.146, then binding the eight rows Master-first (ledger item 6).
+- 2026-10-03 — **EXT-01 closed** (transaction RC-7, Path A): IMF Country Report No. 26/80 read in full from the IMF eLibrary
+  (www.imf.org refuses automated clients at its CDN). YSC-008 confirmed (staff report ¶6); YSC-014 values confirmed against ¶13
+  and corrected in attribution ("the IMF staff report", not "the IMF's banking data") and end value (2½, not "about 2.5"), with
+  a note that the report's FSI table (Table 5) gives other values and no unit; YSC-015 corrected to the report's wording (¶8,
+  ¶39); YSC-017 corrected to US$350 million (¶12). The four "not yet checked" notes are removed; locators in
+  `audit/release_candidate/runs/RC-7_MASTER_LEDGER.json` and `audit/release_candidate/ORIGINAL_SOURCE_VERIFICATION.md`.
+- 2026-10-03 — **VIS-FIRM-CONSTRAINTS, challenges 9–16 closed** (RC-7, Path A): all sixteen values match Table 8 of the
+  original (Annex III, p. 146); rows 9–16 are bound with labels in the source's item wording and the partial-list note is
+  unbound. The survey is named as the source names it ("the 2022 Yemen Enterprise Survey"); the method cites Table 8 and
+  states that Figure 108 differs for transport or road blockades.
 
 ## 4. KNOWN_EVIDENCE_FRONTIER
 

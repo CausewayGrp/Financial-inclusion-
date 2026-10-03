@@ -1,7 +1,7 @@
 {
   "schema_version": "1.0",
   "contract_id": "VISUAL-DESIGN-CONTRACT",
-  "authority_master_sha256": "97f37eccc1a9e2b1641090009e91fbf359322c66979ccb28f287b963f8d1850f",
+  "authority_master_sha256": "5c0688d3d29d580c4cbca4da61d2e71087ebae99594fd0b6b6bb0a63f9d59ccf",
   "rule": "Design-layer controlled input. It assigns every governed visual contract (Master 11) a design tier and, for SIGNATURE and CORE_ANALYTICAL visuals, declares which governed rows a chart binds to and how they are drawn. It never carries a fact, number, label or sentence: values come from Master data rows, text from Master contract/evidence fields, and legend labels from the governed interface copy (UI-VIS-*). The generator resolves every binding and fails on any unresolved ID, any value that disagrees with its guard, or any visual left untiered.",
   "tiers": {
     "SIGNATURE": "Distinctive to this product, decision-useful, drawable from governed rows and safe when detached. Designed first; gets a full data contract.",
@@ -3916,16 +3916,16 @@
       "governed": {
         "title_en": "Finance is not the only constraint surveyed formal firms report, 2022",
         "question_en": "How often did surveyed formal firms name access to finance, compared with other business challenges?",
-        "prohibited_inference_en": "The shares describe formal firms in a 2022 custom survey of seven governorates; they are not a national ranking of business constraints for all Yemeni firms. They follow the source's own item wording and are not comparable with the standard Enterprise Survey 'biggest obstacle' indicator.",
-        "alt_text_en": "Among formal firms in the 2022 custom survey of seven governorates, 50% named electricity as a business challenge, 46% fuel shortages, 32% transport or road blockades, 30% tax administration or tax rates, 27% political instability and 22% access to finance; 18% named siege and 17% practices of informal competitors. Firms could name more than one challenge, so the shares add up to more than 100%, and neither the number of firms answering nor the exact question wording is recorded in the evidence base. These results apply to the survey sample in seven governorates and are not a national ranking for all Yemeni firms. Does not establish: The shares describe formal firms in a 2022 custom survey of seven governorates; they are not a national ranking of business constraints for all Yemeni firms. They follow the source's own item wording and are not comparable with the standard Enterprise Survey 'biggest obstacle' indicator.",
+        "prohibited_inference_en": "The shares describe formal firms in the 2022 Yemen Enterprise Survey of seven governorates; they are not a national ranking of business constraints for all Yemeni firms. They follow the source's own item wording and can count more than one challenge per firm, so they are not comparable with the 'biggest obstacle' indicator of the World Bank's standard Enterprise Surveys.",
+        "alt_text_en": "Among formal firms in the 2022 Yemen Enterprise Survey of seven governorates, 50% named electricity as a business challenge, 46% fuel shortages, 32% transport or road blockades, 30% tax administration or tax rates, 27% political instability and 22% access to finance; 18% named siege and 17% practices of informal competitors, and each of the other eight challenges listed was named by 15% or fewer, down to 0% for crime, theft and disorder. Firms could name more than one challenge, so the shares add up to more than 100%, and neither the number of firms answering nor the exact question wording is recorded in the evidence base. These results apply to the survey sample in seven governorates and are not a national ranking for all Yemeni firms. Does not establish: The shares describe formal firms in the 2022 Yemen Enterprise Survey of seven governorates; they are not a national ranking of business constraints for all Yemeni firms. They follow the source's own item wording and can count more than one challenge per firm, so they are not comparable with the 'biggest obstacle' indicator of the World Bank's standard Enterprise Surveys.",
         "period_en": "2022",
-        "universe_en": "Formal enterprises in seven selected governorates covered by the 2022 custom survey",
+        "universe_en": "Formal enterprises in seven selected governorates covered by the 2022 Yemen Enterprise Survey",
         "title_ar": "التمويل ليس القيد الوحيد الذي تذكره المنشآت الرسمية المشمولة بالمسح، 2022",
         "question_ar": "ما نسبة المنشآت الرسمية المشمولة بالمسح التي ذكرت الوصول إلى التمويل، مقارنةً بتحديات الأعمال الأخرى؟",
-        "prohibited_inference_ar": "تصف النسب المنشآت الرسمية في مسح مخصص شمل سبع محافظات عام 2022، ولا تمثل ترتيبًا وطنيًا لقيود الأعمال لدى جميع منشآت اليمن. وهي تتبع صياغة البنود كما وردت في المصدر، ولا تُقارن بمؤشر «أكبر عائق» في مسوح المنشآت المعيارية للبنك الدولي.",
-        "alt_text_ar": "بين المنشآت الرسمية في المسح المخصص الذي شمل سبع محافظات عام 2022، ذكرت 50% منها الكهرباء بوصفها تحديًا للأعمال، و46% نقص الوقود، و32% صعوبات النقل أو إغلاق الطرق، و30% الإدارة الضريبية أو معدلات الضرائب، و27% عدم الاستقرار السياسي، و22% الوصول إلى التمويل، فيما ذكرت 18% الحصار و17% ممارسات المنافسين غير الرسميين. وكان بإمكان المنشأة ذكر أكثر من تحدٍّ، لذلك يتجاوز مجموع النسب 100%، ولا تتضمن قاعدة الأدلة عدد المنشآت التي أجابت عن السؤال ولا صياغته الدقيقة. وتخص هذه النتائج عينة المسح في المحافظات السبع، ولا تمثل ترتيبًا وطنيًا لجميع منشآت اليمن. لا يثبت: تصف النسب المنشآت الرسمية في مسح مخصص شمل سبع محافظات عام 2022، ولا تمثل ترتيبًا وطنيًا لقيود الأعمال لدى جميع منشآت اليمن. وهي تتبع صياغة البنود كما وردت في المصدر، ولا تُقارن بمؤشر «أكبر عائق» في مسوح المنشآت المعيارية للبنك الدولي.",
+        "prohibited_inference_ar": "تصف النسب المنشآت الرسمية في مسح المنشآت في اليمن لعام 2022، وهو مسح شمل سبع محافظات، ولا تمثل ترتيبًا وطنيًا لقيود الأعمال لدى جميع منشآت اليمن. وهي تتبع صياغة البنود كما وردت في المصدر، وقد تحتسب أكثر من تحدٍّ للمنشأة الواحدة، ولذلك لا تُقارن بمؤشر «أكبر عائق» في المسوح المعيارية للمنشآت التي يجريها البنك الدولي.",
+        "alt_text_ar": "بين المنشآت الرسمية في مسح المنشآت في اليمن لعام 2022، وهو مسح شمل سبع محافظات، ذكرت 50% منها الكهرباء بوصفها تحديًا للأعمال، و46% نقص الوقود، و32% صعوبات النقل أو إغلاق الطرق، و30% الإدارة الضريبية أو معدلات الضرائب، و27% عدم الاستقرار السياسي، و22% الوصول إلى التمويل، فيما ذكرت 18% الحصار و17% ممارسات المنافسين غير الرسميين، وذكرت 15% أو أقل كلًّا من التحديات الثمانية الأخرى المدرجة، وصولًا إلى 0% للجريمة والسرقة والاضطرابات. وكان بإمكان المنشأة ذكر أكثر من تحدٍّ، لذلك يتجاوز مجموع النسب 100%، ولا تتضمن قاعدة الأدلة عدد المنشآت التي أجابت عن السؤال ولا صياغته الدقيقة. وتخص هذه النتائج عينة المسح في المحافظات السبع، ولا تمثل ترتيبًا وطنيًا لجميع منشآت اليمن. لا يثبت: تصف النسب المنشآت الرسمية في مسح المنشآت في اليمن لعام 2022، وهو مسح شمل سبع محافظات، ولا تمثل ترتيبًا وطنيًا لقيود الأعمال لدى جميع منشآت اليمن. وهي تتبع صياغة البنود كما وردت في المصدر، وقد تحتسب أكثر من تحدٍّ للمنشأة الواحدة، ولذلك لا تُقارن بمؤشر «أكبر عائق» في المسوح المعيارية للمنشآت التي يجريها البنك الدولي.",
         "period_ar": "2022",
-        "universe_ar": "المنشآت الرسمية في المحافظات السبع المختارة التي شملها المسح المخصص لعام 2022.",
+        "universe_ar": "المنشآت الرسمية في المحافظات السبع المختارة التي شملها مسح المنشآت في اليمن لعام 2022.",
         "canonical_route": "/evidence/VIS-FIRM-CONSTRAINTS/",
         "public_routes": [
           "/firms"
@@ -3934,7 +3934,7 @@
       "contract": {
         "form": "Horizontal bars sorted by share, no rank numbers; multi-response note in frame.",
         "ordering": "By share, descending, without rank numbers.",
-        "transformation": "None. The eight items named in the governed contract are drawn; the other eight governed items (FFO-2022-CH-09..16) appear in the table fallback.",
+        "transformation": "None. All sixteen items of the source's Table 8 (Annex III, p. 146) are drawn and listed (FFO-2022-CH-01..16), each checked against the original on 3 October 2026 (RC-7).",
         "missing": "The base for this question is not held; stated in frame.",
         "breaks": "None.",
         "annotation": "Firms could name more than one challenge (shares add to more than 100%); seven-governorate survey; not a national ranking.",
@@ -3946,14 +3946,8 @@
             "passport_id": "EP-FIRM-2022"
           },
           "text": "World Bank 2022 Yemen Enterprise Survey",
-          "text_ar": "مسح المنشآت في اليمن لعام 2022 الذي أجراه البنك الدولي",
+          "text_ar": "مسح البنك الدولي للمنشآت في اليمن لعام 2022",
           "language_note": "Publisher names are governed in both languages (15 publisher/publisher_ar; 34 publisher/publisher_ar). The Arabic uses the institution's established Arabic name without a Latin acronym, and keeps in parentheses a product name that Arabic writes in English (Global Findex, Remittance Prices Worldwide)."
-        },
-        "frame_labels": {
-          "UI-VIS-NOTE-FIRM-CONSTRAINTS-PARTIAL": {
-            "en": "Partial list: 8 of the 16 challenges recorded in the source are shown.",
-            "ar": "قائمة جزئية: تُعرض 8 من أصل 16 تحديًا مسجّلًا في المصدر."
-          }
         },
         "series": [
           {
@@ -4108,9 +4102,161 @@
                   "ui_id": "UI-VIS-UNIT-PCT"
                 },
                 "x_label": {
-                  "en": "Practices of informal competitors",
-                  "ar": "ممارسات المنافسين غير الرسميين",
+                  "en": "Practices of competitors in the informal sector",
+                  "ar": "ممارسات المنافسين في القطاع غير الرسمي",
                   "ui_id": "UI-VIS-CAT-FIRM-CH-INFORMAL"
+                }
+              },
+              {
+                "id": "FFO-2022-CH-09",
+                "x": "Business challenge: Labor regulations",
+                "unit": "percent",
+                "source": "SRC-WB-FSD-2024-001",
+                "y": 15,
+                "grammar_state": "MEASURED",
+                "markers": [],
+                "unit_label": {
+                  "en": "Percent",
+                  "ar": "نسبة مئوية",
+                  "ui_id": "UI-VIS-UNIT-PCT"
+                },
+                "x_label": {
+                  "en": "Labour regulations",
+                  "ar": "لوائح العمل",
+                  "ui_id": "UI-VIS-CAT-FIRM-CH-LABOUR"
+                }
+              },
+              {
+                "id": "FFO-2022-CH-10",
+                "x": "Business challenge: Customs/trade regulation",
+                "unit": "percent",
+                "source": "SRC-WB-FSD-2024-001",
+                "y": 14,
+                "grammar_state": "MEASURED",
+                "markers": [],
+                "unit_label": {
+                  "en": "Percent",
+                  "ar": "نسبة مئوية",
+                  "ui_id": "UI-VIS-UNIT-PCT"
+                },
+                "x_label": {
+                  "en": "Customs and trade regulation",
+                  "ar": "الجمارك ولوائح التجارة",
+                  "ui_id": "UI-VIS-CAT-FIRM-CH-CUSTOMS"
+                }
+              },
+              {
+                "id": "FFO-2022-CH-11",
+                "x": "Business challenge: Corruption",
+                "unit": "percent",
+                "source": "SRC-WB-FSD-2024-001",
+                "y": 10,
+                "grammar_state": "MEASURED",
+                "markers": [],
+                "unit_label": {
+                  "en": "Percent",
+                  "ar": "نسبة مئوية",
+                  "ui_id": "UI-VIS-UNIT-PCT"
+                },
+                "x_label": {
+                  "en": "Corruption",
+                  "ar": "الفساد",
+                  "ui_id": "UI-VIS-CAT-FIRM-CH-CORRUPTION"
+                }
+              },
+              {
+                "id": "FFO-2022-CH-12",
+                "x": "Business challenge: Land",
+                "unit": "percent",
+                "source": "SRC-WB-FSD-2024-001",
+                "y": 7,
+                "grammar_state": "MEASURED",
+                "markers": [],
+                "unit_label": {
+                  "en": "Percent",
+                  "ar": "نسبة مئوية",
+                  "ui_id": "UI-VIS-UNIT-PCT"
+                },
+                "x_label": {
+                  "en": "Access to land",
+                  "ar": "الحصول على الأراضي",
+                  "ui_id": "UI-VIS-CAT-FIRM-CH-LAND"
+                }
+              },
+              {
+                "id": "FFO-2022-CH-13",
+                "x": "Business challenge: Business licensing",
+                "unit": "percent",
+                "source": "SRC-WB-FSD-2024-001",
+                "y": 6,
+                "grammar_state": "MEASURED",
+                "markers": [],
+                "unit_label": {
+                  "en": "Percent",
+                  "ar": "نسبة مئوية",
+                  "ui_id": "UI-VIS-UNIT-PCT"
+                },
+                "x_label": {
+                  "en": "Business licensing and permits",
+                  "ar": "تراخيص الأعمال والتصاريح",
+                  "ui_id": "UI-VIS-CAT-FIRM-CH-LICENSING"
+                }
+              },
+              {
+                "id": "FFO-2022-CH-14",
+                "x": "Business challenge: Inadequately educated workforce",
+                "unit": "percent",
+                "source": "SRC-WB-FSD-2024-001",
+                "y": 5,
+                "grammar_state": "MEASURED",
+                "markers": [],
+                "unit_label": {
+                  "en": "Percent",
+                  "ar": "نسبة مئوية",
+                  "ui_id": "UI-VIS-UNIT-PCT"
+                },
+                "x_label": {
+                  "en": "Inadequately educated workers",
+                  "ar": "العمالة التي تفتقر إلى التعليم الكافي",
+                  "ui_id": "UI-VIS-CAT-FIRM-CH-WORKFORCE"
+                }
+              },
+              {
+                "id": "FFO-2022-CH-15",
+                "x": "Business challenge: Courts",
+                "unit": "percent",
+                "source": "SRC-WB-FSD-2024-001",
+                "y": 1,
+                "grammar_state": "MEASURED",
+                "markers": [],
+                "unit_label": {
+                  "en": "Percent",
+                  "ar": "نسبة مئوية",
+                  "ui_id": "UI-VIS-UNIT-PCT"
+                },
+                "x_label": {
+                  "en": "Courts",
+                  "ar": "المحاكم",
+                  "ui_id": "UI-VIS-CAT-FIRM-CH-COURTS"
+                }
+              },
+              {
+                "id": "FFO-2022-CH-16",
+                "x": "Business challenge: Crime/theft/disorder",
+                "unit": "percent",
+                "source": "SRC-WB-FSD-2024-001",
+                "y": 0,
+                "grammar_state": "MEASURED",
+                "markers": [],
+                "unit_label": {
+                  "en": "Percent",
+                  "ar": "نسبة مئوية",
+                  "ui_id": "UI-VIS-UNIT-PCT"
+                },
+                "x_label": {
+                  "en": "Crime, theft and disorder",
+                  "ar": "الجريمة والسرقة والاضطرابات",
+                  "ui_id": "UI-VIS-CAT-FIRM-CH-CRIME"
                 }
               }
             ],
@@ -4124,8 +4270,8 @@
         "derived": [],
         "blockers": []
       },
-      "detached_caption_en": "Finance is not the only constraint surveyed formal firms report, 2022 · 2022 · Formal enterprises in seven selected governorates covered by the 2022 custom survey · Source: World Bank 2022 Yemen Enterprise Survey · Does not establish: The shares describe formal firms in a 2022 custom survey of seven governorates; they are not a national ranking of business constraints for all Yemeni firms. They follow the source's own item wording and are not comparable with the standard Enterprise Survey 'biggest obstacle' indicator. · Full record: /en/evidence/VIS-FIRM-CONSTRAINTS/",
-      "detached_caption_ar": "التمويل ليس القيد الوحيد الذي تذكره المنشآت الرسمية المشمولة بالمسح، 2022 · 2022 · المنشآت الرسمية في المحافظات السبع المختارة التي شملها المسح المخصص لعام 2022. · المصدر: مسح المنشآت في اليمن لعام 2022 الذي أجراه البنك الدولي · لا يثبت: تصف النسب المنشآت الرسمية في مسح مخصص شمل سبع محافظات عام 2022، ولا تمثل ترتيبًا وطنيًا لقيود الأعمال لدى جميع منشآت اليمن. وهي تتبع صياغة البنود كما وردت في المصدر، ولا تُقارن بمؤشر «أكبر عائق» في مسوح المنشآت المعيارية للبنك الدولي. · السجل الكامل: /ar/evidence/VIS-FIRM-CONSTRAINTS/"
+      "detached_caption_en": "Finance is not the only constraint surveyed formal firms report, 2022 · 2022 · Formal enterprises in seven selected governorates covered by the 2022 Yemen Enterprise Survey · Source: World Bank 2022 Yemen Enterprise Survey · Does not establish: The shares describe formal firms in the 2022 Yemen Enterprise Survey of seven governorates; they are not a national ranking of business constraints for all Yemeni firms. They follow the source's own item wording and can count more than one challenge per firm, so they are not comparable with the 'biggest obstacle' indicator of the World Bank's standard Enterprise Surveys. · Full record: /en/evidence/VIS-FIRM-CONSTRAINTS/",
+      "detached_caption_ar": "التمويل ليس القيد الوحيد الذي تذكره المنشآت الرسمية المشمولة بالمسح، 2022 · 2022 · المنشآت الرسمية في المحافظات السبع المختارة التي شملها مسح المنشآت في اليمن لعام 2022. · المصدر: مسح البنك الدولي للمنشآت في اليمن لعام 2022 · لا يثبت: تصف النسب المنشآت الرسمية في مسح المنشآت في اليمن لعام 2022، وهو مسح شمل سبع محافظات، ولا تمثل ترتيبًا وطنيًا لقيود الأعمال لدى جميع منشآت اليمن. وهي تتبع صياغة البنود كما وردت في المصدر، وقد تحتسب أكثر من تحدٍّ للمنشأة الواحدة، ولذلك لا تُقارن بمؤشر «أكبر عائق» في المسوح المعيارية للمنشآت التي يجريها البنك الدولي. · السجل الكامل: /ar/evidence/VIS-FIRM-CONSTRAINTS/"
     },
     {
       "visual_id": "VIS-MFI-DIVERGENCE",

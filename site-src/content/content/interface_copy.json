@@ -595,8 +595,8 @@
   },
   {
     "ui_id": "UI-VIS-CAT-FIRM-CH-INFORMAL",
-    "label_en": "Practices of informal competitors",
-    "label_ar": "ممارسات المنافسين غير الرسميين",
+    "label_en": "Practices of competitors in the informal sector",
+    "label_ar": "ممارسات المنافسين في القطاع غير الرسمي",
     "use_rule": "Pre-Tranche-C P4 (V-D5). Chart label: firm_challenge value 'Business challenge: Informal competitor practices'."
   },
   {
@@ -2620,5 +2620,53 @@
     "label_en": "Context:",
     "label_ar": "السياق:",
     "use_rule": "RC-5 (Part B B2 h; RC-3 review escalation). VIS-PROVIDER-OBSERVABILITY: printed before the payment-system operators' institution events (REF-PAY-011…013) in the status dimension and its fallback cell, so they read as context, not as status decisions (scripts/yfie/visuals.py provider_matrix)."
+  },
+  {
+    "ui_id": "UI-VIS-CAT-FIRM-CH-LABOUR",
+    "label_en": "Labour regulations",
+    "label_ar": "لوائح العمل",
+    "use_rule": "RC-7 (Part A item 6, Path A). VIS-FIRM-CONSTRAINTS bar and table label for a row of Table 8, Annex III, p. 146 of Yemen Financial Sector Diagnostics (World Bank, 2024), in the source's own item wording, checked against the original on 3 October 2026."
+  },
+  {
+    "ui_id": "UI-VIS-CAT-FIRM-CH-CUSTOMS",
+    "label_en": "Customs and trade regulation",
+    "label_ar": "الجمارك ولوائح التجارة",
+    "use_rule": "RC-7 (Part A item 6, Path A). VIS-FIRM-CONSTRAINTS bar and table label for a row of Table 8, Annex III, p. 146 of Yemen Financial Sector Diagnostics (World Bank, 2024), in the source's own item wording, checked against the original on 3 October 2026."
+  },
+  {
+    "ui_id": "UI-VIS-CAT-FIRM-CH-CORRUPTION",
+    "label_en": "Corruption",
+    "label_ar": "الفساد",
+    "use_rule": "RC-7 (Part A item 6, Path A). VIS-FIRM-CONSTRAINTS bar and table label for a row of Table 8, Annex III, p. 146 of Yemen Financial Sector Diagnostics (World Bank, 2024), in the source's own item wording, checked against the original on 3 October 2026."
+  },
+  {
+    "ui_id": "UI-VIS-CAT-FIRM-CH-LAND",
+    "label_en": "Access to land",
+    "label_ar": "الحصول على الأراضي",
+    "use_rule": "RC-7 (Part A item 6, Path A). VIS-FIRM-CONSTRAINTS bar and table label for a row of Table 8, Annex III, p. 146 of Yemen Financial Sector Diagnostics (World Bank, 2024), in the source's own item wording, checked against the original on 3 October 2026."
+  },
+  {
+    "ui_id": "UI-VIS-CAT-FIRM-CH-LICENSING",
+    "label_en": "Business licensing and permits",
+    "label_ar": "تراخيص الأعمال والتصاريح",
+    "use_rule": "RC-7 (Part A item 6, Path A). VIS-FIRM-CONSTRAINTS bar and table label for a row of Table 8, Annex III, p. 146 of Yemen Financial Sector Diagnostics (World Bank, 2024), in the source's own item wording, checked against the original on 3 October 2026."
+  },
+  {
+    "ui_id": "UI-VIS-CAT-FIRM-CH-WORKFORCE",
+    "label_en": "Inadequately educated workers",
+    "label_ar": "العمالة التي تفتقر إلى التعليم الكافي",
+    "use_rule": "RC-7 (Part A item 6, Path A). VIS-FIRM-CONSTRAINTS bar and table label for a row of Table 8, Annex III, p. 146 of Yemen Financial Sector Diagnostics (World Bank, 2024), in the source's own item wording, checked against the original on 3 October 2026."
+  },
+  {
+    "ui_id": "UI-VIS-CAT-FIRM-CH-COURTS",
+    "label_en": "Courts",
+    "label_ar": "المحاكم",
+    "use_rule": "RC-7 (Part A item 6, Path A). VIS-FIRM-CONSTRAINTS bar and table label for a row of Table 8, Annex III, p. 146 of Yemen Financial Sector Diagnostics (World Bank, 2024), in the source's own item wording, checked against the original on 3 October 2026."
+  },
+  {
+    "ui_id": "UI-VIS-CAT-FIRM-CH-CRIME",
+    "label_en": "Crime, theft and disorder",
+    "label_ar": "الجريمة والسرقة والاضطرابات",
+    "use_rule": "RC-7 (Part A item 6, Path A). VIS-FIRM-CONSTRAINTS bar and table label for a row of Table 8, Annex III, p. 146 of Yemen Financial Sector Diagnostics (World Bank, 2024), in the source's own item wording, checked against the original on 3 October 2026."
   }
 ]
