@@ -430,6 +430,40 @@ def t_menu(page, base):
     assert page.evaluate("document.activeElement.matches('[data-menu]')")
 
 
+def tab_to(page, selector: str, limit: int = 900) -> bool:
+    """Press Tab until the focused element matches `selector` (B10 c: every tool is reached from the keyboard)."""
+    for _ in range(limit):
+        page.keyboard.press("Tab")
+        if page.evaluate("(s) => !!document.activeElement && document.activeElement.matches(s)", selector):
+            return True
+    return False
+
+
+@test("a11y: keyboard walk — search, language switch, print, cite, source filter and Compare are reached by Tab and work from the keyboard")
+def t_keyboard_walk(page, base):
+    for lang in ("en", "ar"):
+        page.goto(f"{base}/{lang}/people/")
+        assert tab_to(page, "[data-search-open]"), "search opener not reached"
+        page.keyboard.press("Enter")
+        page.wait_for_function("document.activeElement && document.activeElement.matches('[data-search-input]')")
+        page.keyboard.press("Escape")
+        page.goto(f"{base}/{lang}/people/")
+        assert tab_to(page, "[data-lang]"), "language switch not reached"
+        for sel in ("[data-print]", "[data-cite]"):
+            page.goto(f"{base}/{lang}/evidence/CLM-001/")
+            assert tab_to(page, sel), f"{sel} not reached"
+            assert page.evaluate("(s) => { const e = document.activeElement; return (e.getAttribute('aria-label') || e.textContent).trim().length > 0 }", sel)
+        page.goto(f"{base}/{lang}/data/")
+        assert tab_to(page, "[data-source-filter]"), "source filter not reached"
+        page.keyboard.type("CBY")
+        page.wait_for_function("document.querySelector('[data-source-filter-status]').textContent.trim().length > 0")
+        page.goto(f"{base}/{lang}/evidence/compare/?records=CLM-001,CLM-054")
+        before = page.evaluate("new URLSearchParams(location.search).get('records')")
+        assert tab_to(page, "#compare-b"), "Compare selector not reached"
+        page.keyboard.press("ArrowDown")
+        page.wait_for_function("(b) => new URLSearchParams(location.search).get('records') !== b", arg=before)
+
+
 @test("a11y: technical-error and status regions are announced (role/aria-live)")
 def t_announce(page, base):
     page.goto(base + "/en/evidence/compare/?records=CLM-001")

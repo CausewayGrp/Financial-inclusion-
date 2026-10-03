@@ -1,5 +1,28 @@
 # Repository Change Log
 
+## 2026-10-03 — B10 closed: the full-site accessibility audit record, the keyboard walk, one corner label
+
+- **Audit record (B10 c).** `scripts/accessibility_audit.py --all` over 143 routes × English and Arabic × 1,440 and
+  390 px (286 pages, 572 page-widths), axe-core 4.10.2. Results:
+  - 0 axe rules violated, and 0 contrast failures.
+  - 18,966 targets measured; 302 are under 24 × 24 px, of which 284 meet the inline exception and 18 the spacing
+    exception, so 0 meet neither.
+  - No unnamed interactive element, landmark or control; one `h1` per page; no heading jumps; no image without `alt`;
+    nothing wider than the viewport.
+
+  `docs/ACCESSIBILITY_AUDIT.md` and `.json` are an audit record and claim no conformance. Screen-reader passes and every
+  human judgement stay outstanding. The JSON now keeps each page's target count and only its targets under 24 px; every
+  measured target would take 3.7 MB. The summary line counts routes and pages exactly.
+- **The last empty corner cell.** The year column of the source-comparison tables on the Reading "Same year, different
+  number" is now headed by the governed period label (`visuals.rv001_tables`).
+- **Keyboard walk (B10 c).** `scripts/tests/test_public_tools.py` gains a browser test in both languages. Search, the
+  language switch, print, cite, the source filter and Compare are each reached by Tab and work from the keyboard.
+  Public tools: 32/33 pass (1 not applicable to the current data).
+- **Negative controls.**
+  - RC-LAND's control is caught.
+  - RC-B6's control was not caught: the priority card links MA-006 twice, and the control removed only the first link.
+    It now removes both, and the fault is caught. The gate itself was not changed.
+
 ## 2026-10-03 — Release candidate RC-11: B10 accessibility, B11 /payments/ note, RC-10's review
 
 Transaction `audit/release_candidate/rc_11_b10_b11.py` through `run_stage.py` (Master `ed004282e057` → `36a61f8d5429`;

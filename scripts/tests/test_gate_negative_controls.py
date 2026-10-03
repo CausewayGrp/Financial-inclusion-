@@ -235,7 +235,7 @@ CONTROLS = [
      "RC-LAND the evidence landscape prints 33 of 34 governed rows en"),
     # RC-B6 (Part B B6): a Reading page links every priority its bindings name.
     ("a Reading page drops a bound measurement priority", "en/readings/from-rail-to-result-missing-middle/index.html",
-     sub_once(r'href="/en/measurement/#MA-006"', 'href="/en/measurement/"'),
+     replace('href="/en/measurement/#MA-006"', 'href="/en/measurement/"', 0),   # both links: the card's title and its "Open" link
      "RC-B6 a Reading page does not link its measurement priority en/readings/from-rail-to-result-missing-middle/ MA-006"),
     # RC-NAMES (owner note, 3 October 2026, point 1): no enforcement-decision entity name is published.
     ("an enforcement-decision entity name is published", "en/providers/index.html",

@@ -106,7 +106,7 @@ def rv001_tables(d: dict, v: dict, cls: str = "rvtab") -> str:
     for label, series, index in ((d["label_cby"], d["cby"], d["cby_index"]), (d["label_imf"], d["imf"], d["imf_index"])):
         rows = "".join(f'<tr><th scope="row">{yr}</th><td class="num">{num(next(r for r in series if r["x"] == yr)["y"])}</td><td class="num">{num(index[yr]["value"])}</td></tr>' for yr in (2021, 2022, 2023, 2024))
         lanes.append(f'<table class="{cls}"><caption>{cap} — <span dir="auto">{esc(label)}</span> — {esc(d["unit_index"])} · {esc(L["derived"])}</caption><thead>'
-                     f'<tr><th scope="col"></th><th scope="col">{esc(d["unit_usd"])}</th><th scope="col">{esc(d["unit_index"])}</th></tr></thead><tbody>{rows}</tbody></table>')
+                     f'<tr><th scope="col">{esc(th(v, "period"))}</th><th scope="col">{esc(d["unit_usd"])}</th><th scope="col">{esc(d["unit_index"])}</th></tr></thead><tbody>{rows}</tbody></table>')
     return t1 + lanes[0] + f'<p class="marker between-tables">{esc(L["not_comparable"])}</p>' + lanes[1]
 
 
