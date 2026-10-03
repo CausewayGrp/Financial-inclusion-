@@ -629,3 +629,12 @@ Recorded so no one fills these gaps silently. Source: brief §10, §12, §15.
   - X-ESC-B15-06 — **RELEASE** — Exports for researchers: a versioned dataset, dated observation tables, a citation file (U3, U6, U7). → Licence decided: CC BY 4.0 for CauseWay's own content (owner instructions of 3 October 2026, 09:50 (audit/OWNER_DECISIONS_2026-10-02.md), E). public_downloads stays false in this pull request; at release CauseWay's counsel confirms the CC BY 4.0 text, then the switch publishes the downloads, which carry the licence (docs/RELEASE_RUNBOOK.md step 2).
   - X-ESC-B15-07 — **DONE** — What CauseWay is (C-6): /about/ says who funds the resource mid-paragraph; nothing says what CauseWay is. → DONE in RC-17 `a4ff911`: the owner's pair on what CauseWay is, added to /about/ before the funding paragraph, in both languages (owner instructions of 3 October 2026, 09:50 (audit/OWNER_DECISIONS_2026-10-02.md), D). Nothing else about the organisation is written.
   - X-ESC-RC17-01 — **RELEASE** — NEG-EW-011's record ID is the circular's own item number; with the circular linked, withholding the name does not withhold the identity (RC-17 adversarial revie… → The owner's choice at release acceptance: accept it as disclosed, or point /evidence/NEG-EW-011/ to CLM-015. Until then the record keeps its ID and route, as the owner decided (point 2); nothing prints a name.
+
+### 4 October 2026 — closed by the owner decision of 3 October 2026, 23:54 Aden
+
+- X-ESC-RC17-01 — **DONE** — Owner decision of 3 October 2026, 23:54 Aden (`audit/OWNER_DECISIONS_2026-10-02.md`):
+  /evidence/NEG-EW-011/ is no longer published as its own record; its address leads to CLM-015, the aggregate record of
+  the circular. Applied Master-first in RC-19 (the 02 and 06 rows removed; `site-src/hosting/moved_routes.json`; gate
+  RC-19). The circular's names stay non-public lineage in 22_PROVIDERS_DATA, where RC-NAMES reads them. No other
+  published per-entity record has an ID equal to an item number of a document it links: PSE-011, the only other
+  per-entity record, carries the programme's own status-event number, not a number of Governor's Decision No. 9 of 2026.

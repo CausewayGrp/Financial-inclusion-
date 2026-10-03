@@ -1,7 +1,7 @@
 {
   "schema": "YFI_CURRENT_PROJECT_CONTEXT/1.0",
   "role": "COMPACT_PROJECTION_NOT_AUTHORITY",
-  "generated_at": "2026-10-03T10:43:30Z",
+  "generated_at": "2026-10-03T22:08:21Z",
   "system": {
     "name_en": "Yemen Financial Inclusion Evidence",
     "name_ar": "أدلة الشمول المالي في اليمن",
@@ -45,7 +45,7 @@
   "production_master": {
     "path": "authority/Yemen_Financial_Inclusion_Evidence_Master.xlsx",
     "drive_id": "1xAbdDHJd5bYo0Pzo_a6dR6HsZ056LzJU",
-    "sha256": "c700dc52bf81966939c6d6ec53afe494d1bf699389c04850f74b9dec436ea7e4",
+    "sha256": "90014e3bd27133c34b8435090230cf5b28a3301dec9f366c6fedf047b5ea2838",
     "is_sole_authority": true,
     "authority_dimensions": [
       "semantic",
@@ -59,22 +59,22 @@
   },
   "controlled_projection": {
     "page_specs_path": "site-src/content/page_specs.json",
-    "page_specs_sha256": "6e87e36b1db89c7aa4ce31573a3507cbe6bd49d81f5984f2e6bc494dffedff40",
-    "page_specs": 143,
+    "page_specs_sha256": "0298a3c6b5c72ab9da1fa99667f79303475f39e12bbe41c2f6f581459f8a2b86",
+    "page_specs": 142,
     "all_page_specs_master_hash_match": true,
     "page_specs_index_master_hash_match": true
   },
   "controlled_scale": {
-    "page_specs": 143,
-    "page_sections": 575,
+    "page_specs": 142,
+    "page_sections": 573,
     "entry_questions": 11,
-    "evidence_objects": 110,
+    "evidence_objects": 109,
     "public_claims": 60,
     "evidence_passports": 55,
     "readings": 10,
     "measurement_priorities": 10,
     "visual_contracts": 36,
-    "search_records": 440,
+    "search_records": 438,
     "sources": 165,
     "publicly_addressable_sources": 156,
     "curated_source_report_cards": 28,
@@ -198,7 +198,7 @@
     ]
   },
   "validation": {
-    "master_sha256_recorded": "c700dc52bf81966939c6d6ec53afe494d1bf699389c04850f74b9dec436ea7e4",
+    "master_sha256_recorded": "90014e3bd27133c34b8435090230cf5b28a3301dec9f366c6fedf047b5ea2838",
     "projection_hash_binding": "PASS",
     "schema_required_keys": [
       "schema",

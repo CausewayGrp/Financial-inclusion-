@@ -725,7 +725,7 @@ for lang in ('ar','en'):
             errors.append(f'S04.1 no-public-locator source gained dependent public navigation {lang} {sid}')
 
 # app.js already owns context-preserving language switching and source focus; S04.1 must not regress them.
-for token,label in [("location.href='/'+target+p+location.search+location.hash",'same-route language switch'),("new URLSearchParams(location.search).get('source')",'query-aware source focus')]:
+for token,label in [("u.search=location.search; u.hash=location.hash",'same-route language switch (R-05: a link to the same route; the runtime keeps the query and the anchor)'),("new URLSearchParams(location.search).get('source')",'query-aware source focus')]:
     if token not in js: errors.append('S04.1 missing '+label)
 
 
@@ -1112,11 +1112,11 @@ _ar_record=(DIST/'ar/evidence/CLM-003/index.html').read_text(encoding='utf-8')
 if '<bdi dir="ltr"' not in _ar_record or 'unicode-bidi:isolate' not in css:
     errors.append('S05.1 stable Latin identifier bidi isolation missing')
 for token,label in [
-    ("location.pathname.replace(/^\\/(ar|en)/",'language switch equivalent route preservation'),
-    ('location.search+location.hash','language switch query/hash preservation'),
+    ('u.search=location.search','language switch query preservation (R-05; the same route is the link itself, RC-19)'),
+    ('u.hash=location.hash','language switch anchor preservation'),
     ('"domain_ar"','Arabic Measurement domain localization'),
 ]:
-    target=js if token.startswith('location.') else build_src
+    target=js if token.startswith(('location.','u.')) else build_src
     if token not in target: errors.append('S05.1 missing '+label)
 
 
@@ -2447,7 +2447,7 @@ try:
     elif _sm.exists(): errors.append('F6-G03 sitemap.xml written without a public origin')
     _test=_DISC.sitemap_xml(_routes6,'https://example.org')
     _locs=re.findall(r'<loc>([^<]+)</loc>',_test)
-    _pages={('https://example.org/'+str(p.relative_to(DIST).parent).replace('\\','/')+'/') for L in ('en','ar') for p in (DIST/L).rglob('index.html')}
+    _pages={('https://example.org/'+str(p.relative_to(DIST).parent).replace('\\','/')+'/') for L in ('en','ar') for p in (DIST/L).rglob('index.html') if 'data-moved-to=' not in p.read_text(encoding='utf-8')}   # RC-19: a retired address is not a page
     if len(_locs)!=len(set(_locs)) or set(_locs)!=_pages: errors.append(f'F6-G03 sitemap coverage: {len(set(_locs))} locations for {len(_pages)} pages')
     if _test.count('hreflang="x-default"')!=len(_locs) or _test.count('<xhtml:link')!=3*len(_locs): errors.append('F6-G03 sitemap alternates incomplete')
     _nf=(DIST/'404.html').read_text(encoding='utf-8')
@@ -2614,6 +2614,7 @@ try:
         if _uiB['UI-JS-COMPARE-NOT-OFFERED'][f'label_{_lang}'] not in _html.unescape(_c.split('id="yfie-ui"')[0]): errors.append(f'RC-GB B7 the Compare intro does not carry the selected-set sentence {_lang}')
         for _f in sorted((DIST/_lang).rglob('index.html')):
             _h=_f.read_text(encoding='utf-8')
+            if 'data-moved-to=' in _h: continue   # RC-19: a retired address leads on to its record; it is not a citable page
             if 'data-cite-text' not in _h or 'data-print' not in _h:
                 errors.append(f'RC-GB B9 page without its citation preview or print control {_f.relative_to(DIST)}'); break
     _jsB=(ROOT/'site-src/app.js').read_text(encoding='utf-8')
@@ -3285,6 +3286,123 @@ try:
         errors.append(f"RC-1115 only {_nq3} records with a q3 section")
 except Exception as _x:
     errors.append("RC-1115 unreadable " + repr(_x))
+
+# RC-19 (independent review of 70398d1, owner message of 4 October 2026; owner decision of 3 October 2026, 23:54 Aden).
+# (1) R-01: no published text dates FMIIP to July 2025 ("started in July 2025" came from an unread UNDP page; the World
+#     Bank's ISR gives approval 17 June 2025 and effectiveness 1 September 2025): no "July 2025", «يوليو 2025» or
+#     "2025-07" within 250 characters of the project's name, in any page or data file.
+# (2) X-ESC-RC17-01: a retired record address (site-src/hosting/moved_routes.json) has no page spec, no search record
+#     and no link from another page; in both languages its page refreshes to the target, names the target as canonical,
+#     is never indexed and prints the governed heading.
+# (3) R-05: on every page with the product header, the language switch is a link to the same route in the other edition
+#     and the menu is a link to the footer, which carries id="site-footer"; neither is a button.
+# (4) R-10: in Home's figure groups and a record's first answer, only the first sentence's figures are emphasised.
+try:
+    _jul = r"(?:July 2025|يوليو 2025|2025-07(?!\d))"
+    # the project dated by the date: its name, then the date within the same clause, or the date just before its name
+    _fmj = re.compile(r"(?:FMIIP|Financial Market Infrastructure and Inclusion|البنية التحتية للأسواق المالية)[^.;؛]{0,90}?" + _jul
+                      + r"|" + _jul + r"[^.;؛]{0,40}?(?:FMIIP|Financial Market Infrastructure and Inclusion|البنية التحتية للأسواق المالية)")
+    def _units(_f):   # one sentence of one block (a paragraph, cell, item or heading) or of one JSON string
+        _r = _f.read_text(encoding="utf-8")
+        if _f.suffix == ".json":
+            def _walk(_o):
+                if isinstance(_o, str):
+                    yield _o
+                elif isinstance(_o, dict):
+                    for _v in _o.values():
+                        yield from _walk(_v)
+                elif isinstance(_o, list):
+                    for _v in _o:
+                        yield from _walk(_v)
+            _bl = list(_walk(json.loads(_r)))
+        else:
+            _bl = re.split(r"</(?:p|li|td|th|h\d|div|dd|dt|figcaption|caption|summary)>", _r)
+        for _b in _bl:
+            for _s in re.split(r"(?<=[.!?؟])\s", re.sub(r"<[^>]+>", " ", _html.unescape(_b))):
+                yield _s
+    for _f in sorted(list(DIST.rglob("*.html")) + list(DIST.rglob("*.json"))):
+        if any(_fmj.search(_s) for _s in _units(_f)):
+            errors.append(f"RC-19 {_f.relative_to(DIST)} dates FMIIP to July 2025")
+    _moved = json.loads((ROOT / "site-src" / "hosting" / "moved_routes.json").read_text(encoding="utf-8"))["moved"]
+    if not _moved:
+        errors.append("RC-19 no retired record address is listed")
+    _routes = {s.get("route") for s in json.loads((C / "page_specs.json").read_text(encoding="utf-8"))["page_specs"]}
+    _uic = {u["ui_id"]: u for u in json.loads((C / "content" / "interface_copy.json").read_text(encoding="utf-8"))}
+    _sidx = (DIST / "static-data" / "search_index.json").read_text(encoding="utf-8")
+    for _mv in _moved:
+        _fr, _to = _mv["from"], _mv["to"]
+        _oid = _fr.strip("/").split("/")[-1]
+        if _fr in _routes or _to not in _routes:
+            errors.append(f"RC-19 {_fr} still has a page spec, or its target {_to} has none")
+        if f'"{_oid}"' in _sidx or _fr in _sidx:
+            errors.append(f"RC-19 the search index still carries {_oid}")
+        for _lang in ("en", "ar"):
+            _pf = DIST / _lang / _fr.strip("/") / "index.html"
+            if not _pf.exists():
+                errors.append(f"RC-19 /{_lang}{_fr} has no page")
+                continue
+            _h = _pf.read_text(encoding="utf-8")
+            _tg = f"/{_lang}{_to}"
+            _ok = (f'<meta http-equiv="refresh" content="0;url={_tg}">' in _h and re.search(r'<link rel="canonical" href="[^"]*' + re.escape(_tg) + '"', _h)
+                   and re.search(r'<meta name="robots" content="noindex', _h) and f'data-moved-to="{_to.strip("/")}"' in _h
+                   and f'<h1 id="page-title">{_html.escape((_uic.get("UI-MOVED-RECORD-TITLE") or {}).get(f"label_{_lang}", "?"), quote=False)}</h1>' in _h)
+            if not _ok:
+                errors.append(f"RC-19 /{_lang}{_fr} is not the moved-record page for {_to}")
+            _soc = _fr.strip("/").replace("/", "_") + f"__{_lang}"
+            if list((DIST / "assets" / "social").glob(_soc + ".*")) or _soc in (ROOT / "site-src/assets/social/INDEX.json").read_text(encoding="utf-8"):
+                errors.append(f"RC-19 a social image still stands for the retired address {_fr} ({_lang})")
+            for _g in sorted((DIST / _lang).rglob("index.html")):
+                if _g != _pf and f'href="/{_lang}{_fr}"' in _g.read_text(encoding="utf-8"):
+                    errors.append(f"RC-19 {_g.relative_to(DIST)} still links the retired address {_fr}")
+                    break
+    _nlang = 0
+    for _f in sorted(DIST.glob("*/**/index.html")):
+        _rel = _f.relative_to(DIST).as_posix()
+        _h = _f.read_text(encoding="utf-8")
+        if '<header class="bar">' not in _h:
+            continue
+        _lang = _rel.split("/", 1)[0]; _oth = "en" if _lang == "ar" else "ar"
+        _route = "/" + _rel.split("/", 1)[1][:-len("index.html")]
+        _ctl = _h.split('<div class="controls">', 1)[1].split("</div>", 1)[0] if '<div class="controls">' in _h else ""
+        if re.search(r"<button[^>]*data-(?:lang|menu)\b", _ctl) \
+                or not re.search(r'<a class="tbtn lang" href="/' + _oth + re.escape(_route if _route != "/" else "/") + r'"[^>]*data-lang="' + _oth + '"', _ctl) \
+                or not re.search(r'<a class="tbtn menu" href="#site-footer"[^>]*data-menu', _ctl) or 'id="site-footer"' not in _h:
+            errors.append(f"RC-19 {_rel} the language switch or the menu is not a working link")
+        _nlang += 1
+    if _nlang < 280:
+        errors.append(f"RC-19 read only {_nlang} pages with the product header")
+    _send = re.compile(r"(?<!\bNo)(?<!\bpp)(?<!\bp)[.!?؟](?=\s|$)")
+    _blocks = []
+    for _lang in ("en", "ar"):
+        _h = (DIST / _lang / "index.html").read_text(encoding="utf-8")
+        _s3 = _h.split('id="s3"', 1)[1].split("</section>", 1)[0] if 'id="s3"' in _h else ""
+        _blocks += [(f"/{_lang}/ Home", b) for b in re.findall(r'<p class="sent[^"]*">(.*?)</p>', _s3, re.S)]
+    for _f in sorted(DIST.glob("*/evidence/*/index.html")):
+        _q1 = re.search(r'<div class="qa first" id="q1">.*?<div class="st"><p>(.*?)</p>', _f.read_text(encoding="utf-8"), re.S)
+        if _q1:
+            _blocks.append((str(_f.relative_to(DIST)), _q1.group(1)))
+    for _where, _b in _blocks:
+        _txt = re.sub(r'<b class="fnum">', "\x01", _b)
+        _txt = re.sub(r"<bdi\b.*?</bdi>", "x", _txt, flags=re.S)
+        _txt = re.sub(r"<[^>]+>", "", _txt)
+        _end = _send.search(_txt)
+        if _end and "\x01" in _txt[_end.end():]:
+            errors.append(f"RC-19 {_where}: a figure after the first sentence is emphasised like the finding")
+    if len(_blocks) < 100:
+        errors.append(f"RC-19 read only {len(_blocks)} figure blocks")
+    # (5) R-04: the deploy workflow deploys only a commit the full Verify workflow proved (no push trigger of its own;
+    #     a manual run calls the reusable Verify first); (6) R-17: the image's nginx is pinned by digest.
+    _dy = (ROOT / ".github/workflows/deploy.yml").read_text(encoding="utf-8")
+    _on = _dy.split("\non:", 1)[1].split("\njobs:", 1)[0] if "\non:" in _dy else ""
+    if re.search(r"^\s+push:", _on, re.M) or "workflows: [Verify]" not in _on or "uses: ./.github/workflows/verify.yml" not in _dy \
+            or "needs: verify" not in _dy or "github.event.workflow_run.conclusion == 'success'" not in _dy \
+            or "needs.verify.result == 'success'" not in _dy:
+        errors.append("RC-19 the deploy workflow can deploy a commit the full verification has not passed")
+    _dk = (ROOT / "site-src/hosting/digitalocean/Dockerfile").read_text(encoding="utf-8")
+    if not re.search(r"^FROM nginx:[\w.\-]+@sha256:[0-9a-f]{64}$", _dk, re.M):
+        errors.append("RC-19 the App Platform image's nginx base is not pinned by digest")
+except Exception as _x:
+    errors.append("RC-19 unreadable " + repr(_x))
 
 print(f'HTML={len(list(DIST.rglob("*.html")))} ERRORS={len(errors)} WARN={len(warns)}')
 if warns:

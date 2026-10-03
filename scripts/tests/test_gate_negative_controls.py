@@ -386,6 +386,27 @@ CONTROLS = [
     ("RC-1115: /measurement/ drops the dimensions from one Arabic card", "ar/measurement/index.html",
      replace("<p data-ma-dimensions>", "<p>"),
      "RC-1115 /measurement/ does not print the dimensions on the same cards with equal counts"),
+    # RC-19 (independent review of 70398d1; owner decision of 3 October 2026, 23:54 Aden): FMIIP is never dated to July
+    # 2025; a retired record address leads on to its record and nothing links it or keeps its social image; the language
+    # switch and the menu are links; only the first sentence's figures are emphasised.
+    ("RC-19: FMIIP is dated to July 2025 again", "en/reforms/index.html",
+     sub_once(r'(<main[^>]*>)', r'\1<p>The FMIIP, which started in July 2025, has three components.</p>'),
+     "RC-19 en/reforms/index.html dates FMIIP to July 2025"),
+    ("RC-19: the retired address stops leading to its record", "en/evidence/NEG-EW-011/index.html",
+     replace('<meta http-equiv="refresh" content="0;url=/en/evidence/CLM-015/">', ""),
+     "RC-19 /en/evidence/NEG-EW-011/ is not the moved-record page for /evidence/CLM-015/"),
+    ("RC-19: a page links the retired address", "en/providers/index.html",
+     sub_once(r'(<main[^>]*>)', r'\1<a href="/en/evidence/NEG-EW-011/">record</a>'),
+     "RC-19 en/providers/index.html still links the retired address /evidence/NEG-EW-011/"),
+    ("RC-19: the language switch is a button again", "ar/payments/index.html",
+     sub_once(r'<a class="tbtn lang" href="[^"]*" hreflang="en"', '<button type="button" class="tbtn lang"'),
+     "RC-19 ar/payments/index.html the language switch or the menu is not a working link"),
+    ("RC-19: the coverage figure is emphasised like the finding", "en/index.html",
+     replace("Areas holding about 23%", 'Areas holding about <b class="fnum">23%</b>'),
+     "RC-19 /en/ Home: a figure after the first sentence is emphasised like the finding"),
+    ("RC-19: a social image stands for the retired address", "assets/social/evidence_NEG-EW-011__en.png",
+     lambda t: t + "an image",
+     "RC-19 a social image still stands for the retired address /evidence/NEG-EW-011/ (en)"),
     # The standing content gate (release candidate, RC-1): a governed sentence dropped from a page, and a number no governed
     # record or contract holds, must each be reported by scripts/tests/test_content_parity.py.
     ("a domain answer drops a governed sentence", "en/people/index.html",

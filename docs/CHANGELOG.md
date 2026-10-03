@@ -1,5 +1,62 @@
 # Repository Change Log
 
+## 2026-10-04 — RC-19: the fix batch from the independent review of 70398d1
+
+Master `c700dc52bf81…` → `90014e3bd27133c34b8435090230cf5b28a3301dec9f366c6fedf047b5ea2838` through `run_stage.py`
+(`audit/release_candidate/rc_19_independent_review.py`; ledger and report in `audit/release_candidate/runs/RC-19_*`).
+Owner message of 4 October 2026, about 00:10 Aden (the freeze lifted for this batch only), and the owner decision of
+3 October 2026, 23:54 Aden. English and Arabic changed together.
+- **R-01, the FMIIP dates.** "Started in July 2025" came from the UNDP project page, which refuses automated requests
+  and was never read here. The World Bank's ISR (sequence 2, SRC-WB-FMIIP-ISR2-2026-001, read on 4 October 2026; the
+  same in sequence 1) gives Board approval 17 June 2025, signing 26 June 2025 and effectiveness 1 September 2025, and no
+  start date. The prose of VIS-PAYMENT-RAILS and RV-CWR-009 now gives approval and effectiveness. The event
+  REF-PAY-002 is "FMIIP effective", 2025-09-01; the three components are dated 2025-06-17, labelled "approved with the
+  project". All four are bound to the ISR. The access component carries the ISR's name ("support for access to and use
+  of the payment infrastructure"); "access-point database" and the IRG-areas qualifier, which only the UNDP page gave,
+  are dropped from the public text.
+- **X-ESC-RC17-01, owner decision of 3 October 2026, 23:54 Aden.** /evidence/NEG-EW-011/ is no longer published as its
+  own record: its 02 and 06 rows are removed, with its design-intent entry and its route in the navigation contract
+  (steward patch under the owner's decision). Its address leads to CLM-015 through a page that is never indexed, names
+  CLM-015 as canonical, says why in two governed labels and moves on without JavaScript
+  (`site-src/hosting/moved_routes.json`, `render.moved_page`). Its two social images are removed. The circular's names
+  stay non-public lineage in 22_PROVIDERS_DATA, where RC-NAMES reads them. No other published per-entity record has an
+  ID equal to an item number of a document it links (PSE-011's ID is the programme's own). Counts: 142 page specs, 109
+  Evidence Records, 438 search records, 284 social images.
+- **R-08, /privacy/ section 3.** It now says what is decided: hosted on DigitalOcean App Platform, reached through
+  causewaygrp.com, which receives each request (and the corporate cookie, if the browser holds it) and passes it on.
+  Which details are kept, for what purpose, for how long and by whom stays open. Runbook step 9a re-confirms it.
+- **R-05, no JavaScript.** The language switch is a link to the same route in the other edition; the menu is a link to
+  the footer, which carries every navigation and trust link; the runtime enhances both. The note now names exactly what
+  needs JavaScript (search, Compare, the copy and print buttons). New browser test `scripts/tests/test_no_javascript.py`
+  with its own negative control; in CI.
+- **R-10.** Only the first sentence's figures are emphasised (`render.fig_emph`): the 23% coverage figure on Home is set
+  like the text around it.
+- **R-04.** `deploy.yml` starts only after the workflow "Verify" has succeeded on a push to `main`, and deploys the
+  commit Verify proved; a manual run calls the reusable Verify first.
+- **R-07.** `scripts/do_deploy.py` changes only the image tag of the app's live specification, and refuses to deploy
+  while a rollback is pinned.
+- **R-09.** `scripts/tests/test_corporate_proxy.py` runs the runbook's forwarding middleware, extracted from the runbook,
+  in a pinned Nitro 2.13.4 harness (`scripts/hosting/corporate_proxy_harness/`) in front of our nginx block: every page
+  under the header test, no corporate header or cookie, the cookie never upstream, with a negative control. It found
+  that the bare-path 301 still carried the corporate headers; the runbook's middleware now removes them there too.
+  Not in CI (it installs from npm). The runbook's step 8 adds the web administrator's check of where those headers
+  originate.
+- **R-17.** The App Platform image is pinned to `nginx:1.24.0-alpine@sha256:77e5d4a6…`, the nginx version the gates
+  prove; `test_digitalocean_hosting.py --image` runs every header check against that image, in CI.
+- **Gate RC-19** (`scripts/validate.py`), with six negative controls, 6 of 6 caught: FMIIP never dated to July 2025;
+  the retired address (page, links, search, social image); the switch and the menu are links; first-sentence emphasis;
+  the deploy gating and the digest pin are asserted too. The header test waits for a page that moves on.
+- **Records.** The owner decision of 23:54 recorded verbatim; the 13:00 note, whose quotation was empty (R-03),
+  appended as a dated erratum; R-02's three section-5 reasons, R-13, R-14 and the next-edition items (R-11, R-15, R-16,
+  the unprojected sheets) appended to `OPEN_ITEMS_DISPOSITION.md`; X-ESC-RC17-01 closed in `design/ESCALATIONS.md`;
+  runbook step 2 rewritten (R-12).
+- **Reviews.** One bilingual reviewer read the changed pairs, Arabic first: four NOT ACCEPTABLE with replacements, all
+  folded; it then re-read the three pairs the adversarial review changed (the Reading's FMIIP clause, the component
+  labels, /privacy/) and returned three more exact replacements ("development", as the World Bank says, not
+  "establishing"; «ملف تعريف الارتباط»; the bank's house name), all folded. The adversarial reviewer read the FMIIP
+  dates, NEG-EW-011 and /privacy/; its findings are folded, except two recorded in the pull request with their reasons.
+  The transaction was then run once, from the committed state.
+
 ## 2026-10-03 — B16: every open item dispositioned; G0 in the browser; 4.3 and 4.4 to the next edition
 
 - `audit/release_candidate/OPEN_ITEMS_DISPOSITION.md` (new, with an `audit/INDEX.md` row) is built by

@@ -58,6 +58,8 @@ p{margin:0 0 .85em}p:last-child{margin-bottom:0}
 .controls{display:flex;align-items:center;gap:12px;font-size:14px;font-weight:500;white-space:nowrap}
 .controls .tbtn,.controls a{text-decoration:none}
 .controls .lang{border:1px solid var(--rule-2);padding:6px 9px}
+/* R-05: the language switch and the menu are links; they keep the box the buttons had (44 px including padding and border) */
+.controls a.tbtn{display:inline-flex;align-items:center;box-sizing:border-box}
 .controls .cite,.controls .report{display:none}
 /* page and object */
 .page{max-width:1240px;margin:0 auto;padding:18px 16px 40px;display:flex;flex-direction:column;gap:18px}
@@ -243,6 +245,7 @@ html[dir=rtl]{--fs-display:42px;--fs-q:24px;--fs-st:22px;--fs-body:18px;--fs-rea
 .controls{gap:16px}
 .controls .cite,.controls .report{display:inline;color:var(--ink-2)}
 .controls .menu{display:none}
+.controls a.menu{display:none}
 .nav .m-only{display:none}
 .page{padding:28px 32px 56px;display:grid;grid-template-columns:minmax(0,1fr) 280px;column-gap:40px;row-gap:0;align-items:start}
 .page>.obj{grid-column:1;max-width:840px}

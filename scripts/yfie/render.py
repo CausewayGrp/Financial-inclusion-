@@ -124,8 +124,11 @@ def header(shell: dict) -> str:
             f'<div class="controls"><button type="button" class="tbtn" data-search-open aria-label="{esc(L["search"])}">{esc(L["search"])}</button>'
             f'<button type="button" class="tbtn cite" data-cite aria-label="{esc(L["cite"])}">{esc(L["cite"])}</button>'
             f'<a class="report" href="{shell["contact_href"]}">{esc(L["report"])}</a>'
-            f'<button type="button" class="tbtn lang" data-lang="{other}" aria-label="{esc(L["lang_switch_action"])}" lang="{other}" dir="{"ltr" if other == "en" else "rtl"}">{esc(L["lang_switch_name"])}</button>'
-            f'<button type="button" class="tbtn menu" data-menu aria-label="{esc(L["menu"])}" aria-controls="primary-nav" aria-expanded="false">{esc(L["menu"])}</button></div>'
+            # R-05 (independent review of 70398d1): the language switch and the menu are links, so both work without
+            # JavaScript. The switch opens the same route in the other edition; the menu opens the footer, which carries
+            # every navigation and trust link. The runtime enhances the menu into a disclosure button (app.js).
+            f'<a class="tbtn lang" href="{shell["other_href"]}" hreflang="{other}" data-lang="{other}" aria-label="{esc(L["lang_switch_action"])}" lang="{other}" dir="{"ltr" if other == "en" else "rtl"}">{esc(L["lang_switch_name"])}</a>'
+            f'<a class="tbtn menu" href="#site-footer" data-menu aria-label="{esc(L["menu"])}" aria-controls="primary-nav" aria-expanded="false">{esc(L["menu"])}</a></div>'
             f'<div id="utility-status" class="sr-only" role="status" aria-live="polite" aria-atomic="true" data-copied-label="{esc(L["copied"])}"></div></div></header>'
             f'{search_dialog(shell)}<main id="main"><div class="page">')
 
@@ -145,7 +148,7 @@ def footer(shell: dict, tail: str = "") -> str:
     trust_label = next((g["label"] for g in shell["footer"] if any(l["href"].endswith("/about/") for l in g["links"])), L["trust_nav"])
     groups = "".join(f'<div><strong>{esc(g["label"])}</strong>' + "".join(f'<a href="{l["href"]}">{esc(l["label"])}</a>' for l in g["links"]) + "</div>"
                      for g in shell["footer"] if not any(l["href"].endswith("/about/") for l in g["links"]))
-    return (f'</div></main><footer class="inst"><div class="inst-in"><div class="trust"><h3>{esc(trust_label)}</h3><nav aria-label="{esc(L["trust_nav"])}">{trust}</nav></div>'
+    return (f'</div></main><footer id="site-footer" class="inst"><div class="inst-in"><div class="trust"><h3>{esc(trust_label)}</h3><nav aria-label="{esc(L["trust_nav"])}">{trust}</nav></div>'
             f'<div class="id">{logo(40)}<p>{esc(L["footer_strapline"])}</p></div><nav class="groups" aria-label="{esc(L["footer_nav"])}">{groups}</nav>'
             f'<div class="fine">© 2026 CauseWay · {esc(L["footer_rights"])} · {esc(shell["edition"])}</div></div>{tail}</footer>'
             f'{json_block("yfie-ui", shell["ui_json"])}<script src="/assets/app.js" defer></script></body></html>')
@@ -164,15 +167,27 @@ def rubric(t, n: int | None = None, tag: str = "span", cls: str = "rubric") -> s
 _FIG = re.compile(r'(?<![\d.,/:\-])(\d{1,3}(?:,\d{3})+(?:\.\d+)?%?|\d+\.\d+%?|\d+%|(?!(?:19|20)\d\d(?!\d))\d{3,})(?![\d/:\-]|[.,]\d)')
 
 
+# R-10 (independent review of 70398d1): only the figures of the first sentence — the finding — are emphasised. A later
+# sentence qualifies it (coverage, exclusion, derivation, a source's own discrepancy), and the same weight would make
+# its figure read as a second finding ("11.9% … 23%"). A sentence ends at . ! ? or ؟ before a space or the end of the
+# text, except after "No" or "p"/"pp" (an instrument or page number continues the sentence).
+_SENT_END = re.compile(r'(?<!\bNo)(?<!\bpp)(?<!\bp)[.!?؟](?=\s|$)')
+
+
 def fig_emph(html_text: str) -> str:
     parts = re.split(r'(<[^>]+>)', html_text)
-    out, in_bdi = [], 0
+    out, in_bdi, done = [], 0, False
     for p in parts:
         if p.startswith("<"):
             in_bdi += 1 if p.startswith("<bdi") else (-1 if p.startswith("</bdi") else 0)
             out.append(p)
+        elif in_bdi or done:
+            out.append(p)
         else:
-            out.append(p if in_bdi else _FIG.sub(r'<b class="fnum">\1</b>', p))
+            m = _SENT_END.search(p)
+            head, tail = (p[:m.end()], p[m.end():]) if m else (p, "")
+            out.append(_FIG.sub(r'<b class="fnum">\1</b>', head) + tail)
+            done = bool(m)
     return "".join(out)
 
 
@@ -497,7 +512,42 @@ def render_site_files(out: Path, content) -> int:
     origin = DISC.origin()
     (out / "index.html").write_text(isolate_document(families.root_page(content.shell("ar", "/"), content.shell("en", "/"))), encoding="utf-8")
     (out / "404.html").write_text(isolate_document(families.not_found(content.not_found(), content.shell("ar", "/"))), encoding="utf-8")
+    for r in moved_routes():
+        for lang in ("ar", "en"):
+            dest = out / lang / r["from"].strip("/") / "index.html"
+            dest.parent.mkdir(parents=True, exist_ok=True)
+            dest.write_text(isolate_document(moved_page(content, lang, r)), encoding="utf-8")
     (out / "robots.txt").write_text(DISC.robots_txt(origin), encoding="utf-8")
     if origin:
         (out / "sitemap.xml").write_text(DISC.sitemap_xml(content.routes(), origin), encoding="utf-8")
-    return 2
+    return 2 + 2 * len(moved_routes())
+
+
+# ------------------------------------------------------------------------------------------------ retired addresses
+# Owner decision of 3 October 2026, 23:54 Aden (X-ESC-RC17-01): a record that is no longer published on its own keeps
+# its address, which leads to the record that now covers it. The map is site-src/hosting/moved_routes.json (hosting
+# configuration, like _headers). The page is never indexed, names the target as its canonical address, says why in two
+# governed labels (UI-MOVED-RECORD-*), links the target by its governed title and moves the reader on at once; it works
+# without JavaScript. Checked by RC-19 (scripts/validate.py).
+MOVED_ROUTES = Path(__file__).resolve().parents[2] / "site-src" / "hosting" / "moved_routes.json"
+
+
+def moved_routes() -> list[dict]:
+    return json.loads(MOVED_ROUTES.read_text(encoding="utf-8"))["moved"] if MOVED_ROUTES.exists() else []
+
+
+def moved_page(content, lang: str, r: dict) -> str:
+    shell = content.shell(lang, r["from"])
+    target = content.href(r["to"], lang)
+    title = content.loc(content.spec_by_route[r["to"]], "title", lang)
+    heading, body = content.t("UI-MOVED-RECORD-TITLE", lang), content.t("UI-MOVED-RECORD-BODY", lang)
+    origin = DISC.origin()
+    return (f'<!doctype html><html lang="{lang}" dir="{shell["dir"]}"><head><meta charset="utf-8">'
+            f'<meta name="viewport" content="width=device-width,initial-scale=1">{DISC.robots_meta("noindex")}'
+            f'<meta http-equiv="refresh" content="0;url={target}">'
+            f'<link rel="icon" type="image/png" sizes="32x32" href="/assets/logo/CauseWay_logo_32.png"><title>{esc(heading)} — {esc(shell["product"])}</title>'
+            f'<meta name="description" content="{esc(body)}"><link rel="stylesheet" href="/assets/yfie.css">{font_preloads(lang)}'
+            f'{DISC.head_links(r["to"], lang, origin)}</head><body>'
+            f'{header(shell)}<article class="obj page-obj" data-moved-to="{r["to"].strip("/")}"><h1 id="page-title">{esc(heading)}</h1>'
+            f'<p class="st">{esc(body)}</p><div class="actions"><a href="{target}">{esc(title)}</a></div></article>'
+            f'{footer(shell)}')

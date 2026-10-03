@@ -13,8 +13,14 @@
 #   secret    DIGITALOCEAN_ACCESS_TOKEN   a token with write access to that registry and to App Platform
 name: Deploy to DigitalOcean (inactive until the owner switches it on)
 
+# R-04 (independent review of 70398d1): nothing deploys before the full verification has passed on the commit being
+# deployed — governance gates, browser acceptance and every negative-control shard (workflow "Verify"). A push to main
+# runs Verify; this workflow then starts on Verify's completion and deploys only the commit Verify proved, only when
+# Verify succeeded on a push to main. A manual run first runs the same verification itself (the reusable workflow).
 on:
-  push:
+  workflow_run:
+    workflows: [Verify]
+    types: [completed]
     branches: [main]
   workflow_dispatch:
 
@@ -26,16 +32,28 @@ concurrency:
   cancel-in-progress: false
 
 jobs:
+  verify:
+    # A manual run proves its own commit first, with every job of Verify (browser and controls included).
+    name: Full verification (manual runs)
+    if: ${{ github.event_name == 'workflow_dispatch' && vars.YFIE_DEPLOY_ENABLED == 'true' }}
+    uses: ./.github/workflows/verify.yml
+
   deploy:
     name: Build, gate and deploy the published site
-    if: ${{ vars.YFIE_DEPLOY_ENABLED == 'true' }}
+    needs: verify
+    # Runs only when deployment is switched on, and only on a verified commit: after Verify succeeded on a push to main,
+    # or after the verification job above succeeded on a manual run. A skipped or failed verification never deploys.
+    if: ${{ always() && vars.YFIE_DEPLOY_ENABLED == 'true' && ((github.event_name == 'workflow_run' && github.event.workflow_run.conclusion == 'success' && github.event.workflow_run.event == 'push' && github.event.workflow_run.head_branch == 'main') || (github.event_name == 'workflow_dispatch' && needs.verify.result == 'success')) }}
     runs-on: ubuntu-24.04
     timeout-minutes: 30
     environment: production
+    env:
+      DEPLOY_SHA: ${{ github.event.workflow_run.head_sha || github.sha }}
     steps:
-      - name: Check out
+      - name: Check out the verified commit
         uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
         with:
+          ref: ${{ github.event.workflow_run.head_sha || github.sha }}
           persist-credentials: false
 
       - name: Set up Python 3.11
@@ -107,7 +125,7 @@ jobs:
         run: |
           test -n "$DIGITALOCEAN_ACCESS_TOKEN" && test -n "$REGISTRY" \
             || { echo "::error::DIGITALOCEAN_ACCESS_TOKEN and YFIE_DO_REGISTRY must both be set"; exit 1; }
-          IMAGE="registry.digitalocean.com/${REGISTRY}/yfie-site:${GITHUB_SHA}"
+          IMAGE="registry.digitalocean.com/${REGISTRY}/yfie-site:${DEPLOY_SHA}"
           docker build --pull -f site-src/hosting/digitalocean/Dockerfile --build-arg "BASE=${BASE}" -t "$IMAGE" build/do
           echo "$DIGITALOCEAN_ACCESS_TOKEN" | docker login registry.digitalocean.com -u "$DIGITALOCEAN_ACCESS_TOKEN" --password-stdin
           docker push "$IMAGE"
@@ -116,4 +134,4 @@ jobs:
         env:
           DIGITALOCEAN_ACCESS_TOKEN: ${{ secrets.DIGITALOCEAN_ACCESS_TOKEN }}
           APP_ID: ${{ vars.YFIE_DO_APP_ID }}
-        run: python3 scripts/do_deploy.py --tag "$GITHUB_SHA" --app-id "$APP_ID"
+        run: python3 scripts/do_deploy.py --tag "$DEPLOY_SHA" --app-id "$APP_ID"

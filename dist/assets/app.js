@@ -18,8 +18,11 @@ function closeMenu(returnFocus=false){
   if(n)n.classList.remove('open');
   if(b){b.setAttribute('aria-expanded','false'); if(returnFocus)b.focus();}
 }
-$$('[data-menu]').forEach(b=>b.addEventListener('click',()=>{
+// R-05: the menu is a link to the footer navigation, so it works without JavaScript; here it becomes the disclosure button.
+$$('[data-menu]').forEach(b=>{if(b.tagName==='A')b.setAttribute('role','button');});
+$$('[data-menu]').forEach(b=>b.addEventListener('click',e=>{
   const n=$('#primary-nav'); if(!n)return;
+  e.preventDefault();
   const open=n.classList.toggle('open');
   b.setAttribute('aria-expanded',String(open));
   if(open){
@@ -34,10 +37,11 @@ document.addEventListener('focusin',e=>{const n=$('#primary-nav'),b=$('[data-men
 window.addEventListener('resize',()=>{if(window.innerWidth>960)closeMenu(false);});
 document.addEventListener('click',e=>{const n=$('#primary-nav'),b=$('[data-menu]');if(!n?.classList.contains('open'))return;if(n.contains(e.target)||b?.contains(e.target))return;closeMenu(false);});
 
+// R-05: the switch is a link to the same route in the other edition; here it also keeps the query and the anchor
+// (a Compare selection, a section) and stores the choice.
 $$('[data-lang]').forEach(b=>b.addEventListener('click',()=>{
   const target=b.dataset.lang; try{localStorage.setItem('yfie-lang',target);}catch(e){}   // TOOL-07: storage may be blocked
-  let p=location.pathname.replace(/^\/(ar|en)/,''); if(!p.startsWith('/'))p='/'+p;
-  location.href='/'+target+p+location.search+location.hash;
+  if(b.href){const u=new URL(b.href,location.href); u.search=location.search; u.hash=location.hash; b.href=u.toString();}
 }));
 
 function announceUtility(message){

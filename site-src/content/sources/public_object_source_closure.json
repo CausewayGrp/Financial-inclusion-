@@ -1421,36 +1421,6 @@
   },
   {
     "object_type": "evidence_object",
-    "object_id": "NEG-EW-011",
-    "public_routes": [
-      "/providers/",
-      "/payments/"
-    ],
-    "lineage_state": "BOUND_EXACT",
-    "dependency_ids": [
-      "SRC-CBY-UNLICENSED-EWALLET-2024-001"
-    ],
-    "direct_source_ids": [
-      "SRC-CBY-UNLICENSED-EWALLET-2024-001"
-    ],
-    "resolved_source_ids": [
-      "SRC-CBY-UNLICENSED-EWALLET-2024-001"
-    ],
-    "resolved_via_object_ids": [],
-    "context_reference_ids": [],
-    "unresolved_dependency_ids": [],
-    "source_locators": [
-      {
-        "source_id": "SRC-CBY-UNLICENSED-EWALLET-2024-001",
-        "primary_url": "https://cby-ye.com/files/667c32dabd223.pdf",
-        "metadata_state": "DISPLAY_READY"
-      }
-    ],
-    "closure_state": "CLOSED_TO_SOURCE_ID",
-    "rule": "Evidence records show only exact bound sources, listed member records, or an explicit unbound or framing state (Tranche B Stage 1, PB-0001/PB-0002). Dataset-level tokens are never expanded into source lists; an input that is not bound to a source stays explicit as unresolved. Never invent a source, title, publisher, date, licence or missing fact."
-  },
-  {
-    "object_type": "evidence_object",
     "object_id": "MFI-SPINE-2015-Q4",
     "public_routes": [
       "/finance/"

@@ -5,6 +5,7 @@ DigitalOcean, at https://causewaygrp.com/financial-inclusion-evidence/).
 
   python3 scripts/tests/test_digitalocean_hosting.py               # build, serve in nginx, header test, negative control
   python3 scripts/tests/test_digitalocean_hosting.py --site DIR    # a site already built with the decided origin
+  python3 scripts/tests/test_digitalocean_hosting.py --image       # the same checks against the App Platform image itself
 
 Builds the published site for the decided origin into a temporary directory (`scripts/build.py --origin … --out …`;
 site-src/deployment.json and dist/ are not touched), writes its nginx server block with `scripts/hosting_nginx.py` —
@@ -19,6 +20,11 @@ site from a real nginx on a local port. Then:
     directory without its slash answers 301 to the same path with it; every Cache-Control value of `_headers` is sent
     for a path it covers; the sitemap is application/xml; an address outside the base path answers 404.
 (c) Negative control: the same block with X-Frame-Options removed from the site-wide rule must make (a) FAIL.
+
+With --image (R-17), (a) and (b) run against the container that site-src/hosting/digitalocean/Dockerfile builds — its
+pinned nginx base, the same generated block — instead of a local nginx, and the image's nginx version must equal the
+local nginx's when both are present; the negative control (c) runs only with the local nginx, where it proves the
+header test itself. Needs Docker.
 
 Plain HTTP on a local port is the one difference from the live route: the policy is served without
 `upgrade-insecure-requests` (`--local-http`), exactly as the local header test serves it. Needs nginx on PATH (the CI
@@ -99,6 +105,34 @@ http {{
     return proc, port
 
 
+def start_image(work: Path, site: Path, block: str) -> tuple[str, int, str]:
+    """Build site-src/hosting/digitalocean/Dockerfile from a context laid out as deploy.yml stages it and run it on a local
+    port. Returns (container id, port, the image's nginx version)."""
+    ctx = work / "ctx"
+    shutil.rmtree(ctx, ignore_errors=True)
+    (ctx / "site").mkdir(parents=True)
+    (ctx / "default.conf").write_text(block, encoding="utf-8")
+    shutil.copytree(site, ctx / "site", dirs_exist_ok=True)
+    (ctx / "site" / "_headers").unlink(missing_ok=True)
+    tag = f"yfie-do-test:{os.getpid()}"
+    b = subprocess.run(["docker", "build", "-q", "-f", str(ROOT / "site-src/hosting/digitalocean/Dockerfile"),
+                        "--build-arg", f"BASE={BASE.strip('/')}", "-t", tag, str(ctx)], capture_output=True, text=True)
+    if b.returncode:
+        raise SystemExit("the image does not build:\n" + b.stderr[-1500:])
+    ver = subprocess.run(["docker", "run", "--rm", tag, "nginx", "-v"], capture_output=True, text=True).stderr.strip()
+    with socket.socket() as s:
+        s.bind(("127.0.0.1", 0)); port = s.getsockname()[1]
+    cid = subprocess.run(["docker", "run", "-d", "--rm", "-p", f"127.0.0.1:{port}:8080", tag],
+                         capture_output=True, text=True, check=True).stdout.strip()
+    for _ in range(50):
+        try:
+            urllib.request.urlopen(f"http://127.0.0.1:{port}{BASE}/", timeout=2)
+            break
+        except Exception:
+            time.sleep(0.2)
+    return cid, port, ver
+
+
 def header_test(port: int) -> tuple[int, str]:
     r = subprocess.run([sys.executable, str(ROOT / "scripts/tests/test_security_headers.py"), "--base",
                         f"http://127.0.0.1:{port}{BASE}"], capture_output=True, text=True, cwd=ROOT)
@@ -108,8 +142,12 @@ def header_test(port: int) -> tuple[int, str]:
 def main() -> int:
     ap = argparse.ArgumentParser()
     ap.add_argument("--site", default="")
+    ap.add_argument("--image", action="store_true", help="test the App Platform image (Docker) instead of a local nginx")
     args = ap.parse_args()
-    if not shutil.which("nginx") or MIME is None:
+    if args.image and not shutil.which("docker"):
+        print("DIGITALOCEAN HOSTING: FAIL — --image needs Docker")
+        return 1
+    if not args.image and (not shutil.which("nginx") or MIME is None):
         print("DIGITALOCEAN HOSTING: FAIL — nginx (and its mime.types) is not installed")
         return 1
     problems: list[str] = []
@@ -123,7 +161,16 @@ def main() -> int:
         rules = parse_headers(htext)
         block = hosting_nginx.server_block(htext, BASE, local_http=True)
 
-        proc, port = start_nginx(tmp / "run", site, block)
+        if args.image:
+            (tmp / "run").mkdir(parents=True, exist_ok=True)
+            cid, port, ver = start_image(tmp / "run", site, block)
+            print(f"image nginx: {ver}")
+            local = subprocess.run(["nginx", "-v"], capture_output=True, text=True).stderr.strip() if shutil.which("nginx") else ""
+            if local and ver.split("/")[-1].split()[0] != local.split("/")[-1].split()[0]:
+                problems.append(f"the image runs {ver!r} while the gates prove {local!r}")
+            proc = None
+        else:
+            proc, port = start_nginx(tmp / "run", site, block)
         try:
             rc, out = header_test(port)
             print(out.splitlines()[-1] if out else "(no output)")
@@ -150,9 +197,18 @@ def main() -> int:
             if st != 404:
                 problems.append(f"an address outside the base path answers {st}, not 404")
         finally:
-            proc.terminate(); proc.wait(timeout=10)
+            if proc is None:
+                subprocess.run(["docker", "rm", "-f", cid], capture_output=True)
+            else:
+                proc.terminate(); proc.wait(timeout=10)
 
-        # (c) negative control: one security header removed from the site-wide rule
+        # (c) negative control: one security header removed from the site-wide rule (local nginx only; see above)
+        if args.image:
+            for p in problems:
+                print("FAIL", p)
+            print(f"DIGITALOCEAN HOSTING (IMAGE): {'PASS' if not problems else 'FAIL'} — site-src/hosting/digitalocean/Dockerfile "
+                  f"({ver}), served under {BASE}/; {len(problems)} problems")
+            return 1 if problems else 0
         broken = "\n".join(l for l in block.splitlines() if "X-Frame-Options" not in l) + "\n"
         proc, port = start_nginx(tmp / "run", site, broken)
         try:

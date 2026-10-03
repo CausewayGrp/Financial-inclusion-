@@ -1,6 +1,6 @@
 # Release runbook — from "the owner has a hosting account and a domain" to "live"
 
-**Status, 3 October 2026:** prepared, not started. Nothing here has been executed. The site is not released; this
+**Status, 4 October 2026 (after the independent review of 70398d1):** prepared, not started. Nothing here has been executed. The site is not released; this
 repository never declares PUBLIC RELEASE READY, and only the owner releases it (step 14). Each step names who does it.
 Every step except the account, the domain, the licence decision, the release acceptance and the tag is a Claude Code
 step; the route on `causewaygrp.com` is CauseWay's web administrator's ("Hosting").
@@ -20,7 +20,8 @@ says how to do it and what you should see. `$B` is the address being checked:
 - A DigitalOcean account with a Container Registry, and a personal access token with write access to that registry
   and to App Platform, stored as the repository secret `DIGITALOCEAN_ACCESS_TOKEN`; the variables `YFIE_DO_REGISTRY`
   and, after the first deploy has created the app, `YFIE_DO_APP_ID` (step 7).
-- The owner's dated lines in `audit/OWNER_DECISIONS_*.md` for steps 2 and 7a (step 13 only at release).
+- The owner's dated line in `audit/OWNER_DECISIONS_*.md` for step 7a (counsel's confirmation of the CC BY 4.0 text;
+  step 13 only at release).
   `site-src/deployment.json` then has `public_origin` set and `licence_text_confirmed: true`. The deploy workflow
   refuses to publish otherwise.
 
@@ -33,15 +34,22 @@ python3 scripts/build.py --out build/site            # Built <n> HTML files from
 python3 scripts/tests/test_base_path.py              # BASE PATH: PASS — https://causewaygrp.com/financial-inclusion-evidence/
 python3 scripts/tests/test_security_headers.py       # SECURITY HEADERS: PASS — … 0 problems
 python3 scripts/tests/test_digitalocean_hosting.py   # DIGITALOCEAN HOSTING: PASS — the nginx block of _headers, … 0 problems
+python3 scripts/tests/test_digitalocean_hosting.py --image   # DIGITALOCEAN HOSTING (IMAGE): PASS — … (nginx version: nginx/1.24.0) … 0 problems (Docker)
+python3 scripts/tests/test_no_javascript.py          # NO JAVASCRIPT: PASS — … 0 problems
 ```
 
-**Deploy.** Merge the approved pull request into `main`, or run the "Deploy to DigitalOcean" workflow by hand (GitHub →
-Actions → Run workflow). It refuses a null origin or an unconfirmed licence text, runs the gates, builds the site
-under its path, sweeps it, proves its nginx block in a real nginx, builds the image
-(`site-src/hosting/digitalocean/Dockerfile`), pushes it to the registry tagged with the commit, points the app at it
-(`scripts/do_deploy.py`) and waits until App Platform reports the deployment ACTIVE. The first run, with
-`YFIE_DO_APP_ID` unset, creates the app and prints its id. Done when the run is green and
-`https://<app>.ondigitalocean.app/financial-inclusion-evidence/` opens the Arabic edition.
+**Deploy.** Merge the approved pull request into `main`. The push runs the full verification (workflow "Verify":
+governance gates, browser acceptance and every negative-control shard); only when Verify has succeeded on that push
+does "Deploy to DigitalOcean" start, and it deploys exactly the commit Verify proved. A manual run (GitHub → Actions →
+Deploy to DigitalOcean → Run workflow) first runs the same verification itself and deploys only if it passes. The
+deploy job refuses a null origin or an unconfirmed licence text, builds the site under its path, sweeps it, proves its
+nginx block in a real nginx, builds the image (`site-src/hosting/digitalocean/Dockerfile`, nginx 1.24.0 pinned by
+digest, the version the gates prove), pushes it to the registry tagged with the commit, points the app at it
+(`scripts/do_deploy.py`, which changes only the image tag of the app's live specification, so a domain, region or alert
+set in the control panel stays) and waits until App Platform reports the deployment ACTIVE. The first run, with
+`YFIE_DO_APP_ID` unset, creates the app and prints its id: store it at once, because until it is set every run creates
+another app. Done when the run is green and `https://<app>.ondigitalocean.app/financial-inclusion-evidence/` opens the
+Arabic edition.
 
 **The ten-minute check**, after every deploy:
 
@@ -70,7 +78,9 @@ and a search for "remittances" finds results.
 **Roll back.**
 
 1. DigitalOcean control panel → Apps → the app → Activity → the last good deployment → "Rollback". App Platform keeps
-   the recent successful deployments, and the rollback takes effect without a rebuild; nothing else changes.
+   the recent successful deployments, and the rollback takes effect without a rebuild; nothing else changes. While the
+   app is rolled back it is pinned to that deployment: once the fix is ready, commit or revert the rollback in the same
+   place. `scripts/do_deploy.py` refuses to deploy while the app is pinned, and says so.
 2. If the corporate route misbehaves, remove `server/middleware/0.financial-inclusion-evidence.ts` from CauseWay's
    frontend and redeploy the corporate site. The path then answers with the corporate site's own 404.
 3. In this repository, revert the faulty commit on a branch (`git revert <commit>`). When CI is green, merge it, and
@@ -177,7 +187,11 @@ Why this shape, from facts that can be checked:
     `x-powered-by` still reach our responses;
   - the route-rule proxy follows our host's own redirects itself.
 
-  The middleware below did the job in the same test:
+  The middleware below did the job in the same test. That first test was not kept in this repository; since R-09
+  (independent review of 70398d1) `scripts/tests/test_corporate_proxy.py` repeats it with the harness in
+  `scripts/hosting/corporate_proxy_harness/` (Nitro 2.13.4, pinned), running the block below as printed here. It
+  proves the middleware against headers set inside Nitro; a header added by a server in front of Nitro is outside the
+  middleware's reach (step 8 says how the web administrator checks for it):
   - it removed those three headers;
   - it sent an empty `Cookie` upstream;
   - it passed our host's redirect on with its relative `Location`;
@@ -194,7 +208,10 @@ Why this shape, from facts that can be checked:
   export default defineEventHandler((event) => {
     const path = event.path.split('?')[0]
     if (path !== BASE && !path.startsWith(BASE + '/')) return
-    if (path === BASE) return sendRedirect(event, BASE + '/' + event.path.slice(BASE.length), 301)
+    if (path === BASE) {                       // the bare path: one 301, without the corporate headers either
+    for (const h of STRIP) event.node.res.removeHeader(h)
+    return sendRedirect(event, BASE + '/' + event.path.slice(BASE.length), 301)
+  }
     return proxyRequest(event, UPSTREAM + event.path, {
       headers: { cookie: '' },                 // the corporate session cookie never reaches our host
       fetchOptions: { redirect: 'manual' },    // our host's redirects reach the reader unchanged
@@ -304,15 +321,16 @@ Two more facts for the web administrator:
 | # | Step | Who | How | Done when |
 |---|---|---|---|---|
 | 1 | **Account and domain.** A DigitalOcean account (the decided host) with a Container Registry. The domain stays where it is (DigitalOcean DNS): route 1 needs no DNS change, route 3 one record that App Platform names ("Hosting"). | Owner | DigitalOcean control panel | The account and the registry exist |
-| 2 | **Licence decision for downloads.** Decide whether the data exports (`scripts/exports.py`) may be published, and under what terms. | Owner | A dated line in `audit/OWNER_DECISIONS_*.md` | The decision is recorded. If it is yes, Claude Code sets `public_downloads: true` in `site-src/deployment.json`, after the codebook's bilingual review, and states the terms on /data/ Master-first |
+| 2 | **Licence and downloads.** The licence is decided: CC BY 4.0 for CauseWay's own content (owner instructions of 3 October 2026, 09:50, E). Nothing is decided here; what remains is counsel's confirmation of the text (step 7a). Once it is recorded, the owner may switch the downloads on. | Owner (the switch, after step 7a) | A dated line in `audit/OWNER_DECISIONS_*.md` | If the owner switches them on, Claude Code sets `public_downloads: true` in `site-src/deployment.json`, after the codebook's bilingual review; the exports carry the licence, and Dataset structured data may then be added (REJ-03 lifts) |
 | 3 | **Origin.** Set `public_origin` in `site-src/deployment.json` to `https://causewaygrp.com/financial-inclusion-evidence` (route 1, the decided address) or `https://evidence.causewaygrp.com` (route 3): no trailing slash. In the same commit, lift RC-B14's condition that `public_origin` is null (it holds owner decision B8 until then). `pre_release` stays true: the pages stay `noindex, nofollow` until step 13. Rebuild: `python3 scripts/social_images.py && python3 scripts/build.py && python3 scripts/audit_public_literals.py`. `dist/` keeps root-relative links for the gates; the published site, `scripts/build.py --out build/site`, carries the path. | Claude Code | One commit | The validator passes; canonical, hreflang, `og:url`, `og:image`, structured data and `sitemap.xml` are absolute and carry the path, and `robots.txt` allows crawling and names the sitemap (`scripts/discovery.py`, F6 gates); for route 1, `python3 scripts/tests/test_base_path.py` passes |
 | 4 | **Currentness at the release date.** `python3 scripts/currentness_rerun.py --append`. Anything newer is read in its original and enters the Master by transaction. The edition date (`UI-CONTENT-VERSION`) moves to the release date, Master-first. | Claude Code | `run_stage.py` | The appended result shows no unread NEWER item, and the "check by hand" points have been checked in a browser |
-| 5 | **Every gate.** Every step of `.github/workflows/verify.yml`, locally and in CI: checksums, projection check, validator, literal-audit determinism, lineage, diagrams, social images, logo derivatives, bilingual invariance, content parity, exports, public tools, viewport acceptance, security headers, base path, negative controls. | Claude Code | CI on the release commit | CI is green on the commit that will be tagged |
+| 5 | **Every gate.** Every step of `.github/workflows/verify.yml`, locally and in CI: checksums, projection check, validator, literal-audit determinism, lineage, diagrams, social images, logo derivatives, bilingual invariance, content parity, exports, public tools, viewport acceptance, security headers, base path, the DigitalOcean route and image, no JavaScript, negative controls. | Claude Code | CI on the release commit | CI is green on the commit that will be tagged |
 | 6 | **Credentials.** A DigitalOcean personal access token with write access to the registry and to App Platform (no wider scope than the deploy needs). The app itself is created by the first deploy (step 8). | Owner | DigitalOcean control panel → API | The token exists |
 | 7 | **Repository settings.** Secret `DIGITALOCEAN_ACCESS_TOKEN`; variables `YFIE_DO_REGISTRY` and `YFIE_DEPLOY_ENABLED=true`; after the first deploy, `YFIE_DO_APP_ID` (the workflow prints it). | Owner (the secret); Claude Code may set the variables where the session has settings access | GitHub → Settings → Secrets and variables → Actions | The deploy workflow is no longer skipped |
 | 7a | **Licence text confirmed by counsel.** CauseWay's counsel confirms the CC BY 4.0 text that /rights/ and /terms/ print, in both languages, before the first deploy makes them public at the app's own address. Then `licence_text_confirmed` goes to `true` in `site-src/deployment.json`, in the same commit as the dated line. Until then the deploy workflow refuses to publish, and `YFIE_DEPLOY_ENABLED` stays unset. | Owner, with counsel; Claude Code (the switch) | A dated line in `audit/OWNER_DECISIONS_*.md`; one commit | The confirmation is recorded and the switch is `true` |
-| 8 | **Deploy, then route the address.** Merge to `main`, or run "Deploy to DigitalOcean" by hand (workflow_dispatch). The workflow refuses a null origin, runs the gates, proves `dist/` is a fresh build, builds the published site, sweeps it under its path, proves its nginx block in a real nginx, then builds, pushes and deploys the image and waits until it is live. Then the corporate route of "Hosting" is applied in CauseWay's frontend repository: route 1, the middleware with the app's address as `UPSTREAM`; route 3, the custom domain and the 301. | Claude Code (merge on the owner's approval of the PR); the route by CauseWay's web administrator | `.github/workflows/deploy.yml`; the frontend repository | The workflow is green, `https://<app>.ondigitalocean.app/financial-inclusion-evidence/` serves the site, and the ten-minute check of "Deploy and verify" passes on `causewaygrp.com` |
+| 8 | **Deploy, then route the address.** Merge to `main`, or run "Deploy to DigitalOcean" by hand (workflow_dispatch). The deploy starts only after the full verification (workflow "Verify", every job) has passed on that commit (R-04). It refuses a null origin, runs the gates, proves `dist/` is a fresh build, builds the published site, sweeps it under its path, proves its nginx block in a real nginx, then builds, pushes and deploys the image and waits until it is live. Then the corporate route of "Hosting" is applied in CauseWay's frontend repository: route 1, the middleware with the app's address as `UPSTREAM`; route 3, the custom domain and the 301. **Before the route goes live, the web administrator establishes where the corporate `session` cookie, `x-robots-tag` and `x-powered-by` are added** (R-09): by the Nuxt/Nitro application (a module, plugin or server middleware — the forwarding middleware removes them), or by a server in front of it on the Droplet (nginx, a load balancer, a CDN — the middleware cannot remove them, so that server must not add them under `/financial-inclusion-evidence/`, or must hide them there, e.g. `proxy_hide_header`). `python3 scripts/tests/test_corporate_proxy.py` runs the runbook's middleware, as printed, in a pinned Nitro 2.13.4 in front of our nginx block (Node.js and npm needed). The live header test of step 9 is the release condition either way. | Claude Code (merge on the owner's approval of the PR); the route by CauseWay's web administrator | `.github/workflows/deploy.yml`; the frontend repository | The workflow is green, `https://<app>.ondigitalocean.app/financial-inclusion-evidence/` serves the site, and the ten-minute check of "Deploy and verify" passes on `causewaygrp.com` |
 | 9 | **Headers and HTTPS.** Check that HTTPS works on the address. `Strict-Transport-Security` is the domain's decision ("Hosting"): add it under `/*` in `site-src/hosting/_headers` only with the web administrator's agreement, since under route 1 it covers all of `causewaygrp.com` (and every subdomain with `includeSubDomains`); then rebuild and redeploy. Run `python3 scripts/tests/test_security_headers.py --base https://causewaygrp.com/financial-inclusion-evidence`. | Claude Code; HSTS on the web administrator's agreement | One commit; the test against the live host | Every page loads with every security header and no policy violation |
+| 9a | **Privacy notice, re-confirmed** (R-08). /privacy/ section 3 states what is decided: the site is hosted on DigitalOcean App Platform and reached through causewaygrp.com, which receives each request and passes it on; it leaves open which log fields are kept, for how long and by whom. Before step 13, the web administrator states what the corporate server and its front servers log for this path and for how long, and the owner reads App Platform's log retention for the app; Claude Code then writes it on /privacy/, Master-first, in both languages, or confirms that the page is still true. | Web administrator and owner (the facts); Claude Code (the page) | A Master transaction, or a dated note that nothing changed | /privacy/ says nothing the hosting does not do, and omits nothing it was told |
 | 10 | **Every page on the live host.** `YFIE_BASE_URL=https://causewaygrp.com/financial-inclusion-evidence python3 scripts/tests/test_public_tools.py` against the live address; the live run bypasses the page policy, which step 9 tests (viewport acceptance runs on the same build in step 5). Remeasure performance with `scripts/performance_budget.py`, adapted to the origin, and record the result beside `release_candidate_b14d` in `docs/SUSTAINABILITY_IMPLEMENTED_RUNTIME.json`. A person opens the site on a phone in Yemen, or on a connection routed there, in Arabic. | Claude Code; the in-country check by a person the owner names | The tests; a dated note | The tests pass, the budget is met or its miss is recorded, and the in-country check is recorded |
 | 11 | **Usage counts (optional).** Only cookieless, first-party, aggregate counts with no personal data. The /privacy/ page must say so in both languages, Master-first, *before* activation, as it requires. | Owner decides; Claude Code implements | A Master transaction for /privacy/, then the code | Activated only after the Privacy page is live |
 | 12 | **Open items.** Every item in `FINAL_OPEN_ITEMS_REGISTER.md` and `design/ESCALATIONS.md` marked RELEASE is done or re-dispositioned (`audit/release_candidate/OPEN_ITEMS_DISPOSITION.md`). | Claude Code | Dated lines | No RELEASE item is open |

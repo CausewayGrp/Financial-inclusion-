@@ -158,6 +158,12 @@ jobs:
           command -v nginx || sudo apt-get install -y -q nginx-light
           python3 scripts/tests/test_digitalocean_hosting.py
 
+      - name: DigitalOcean image (R-17; the pinned nginx image of site-src/hosting/digitalocean/Dockerfile, every page under the header test)
+        run: python3 scripts/tests/test_digitalocean_hosting.py --image
+
+      - name: No JavaScript (R-05; the note, the language switch and the menu with JavaScript off; negative control included)
+        run: python3 scripts/tests/test_no_javascript.py
+
   controls:
     # Every gate that finds its evidence in the built site is proved to still fail on the fault it was written to catch
     # (EAD-01: the cutover re-pointed those selectors, and a selector that silently matches nothing would pass the

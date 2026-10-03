@@ -21,11 +21,11 @@ authority; everything else here is derived from it, implements it, or records ho
 |---|---|
 | **Position** | **DESIGN HANDOFF READY** — R8.6 closed and the F0–F9 integration programme accepted clean-room ([record](audit/FINAL_CLEAN_ROOM_ACCEPTANCE.md)); the post-F9 correction and the design-enablement control pass of 27 September 2026 applied |
 | **Not declared** | Not PUBLIC RELEASE READY |
-| **Now** | **The release candidate.** Pull request #9 (branch `code/release-candidate-fixes`, draft) carries the owner's decisions of 2 and 3 October 2026 ([`audit/OWNER_DECISIONS_2026-10-02.md`](audit/OWNER_DECISIONS_2026-10-02.md)) and the after-merge conditions of pull request #8: the Master transactions RC-1 … RC-18 ( the table in the pull request and [`docs/CHANGELOG.md`](docs/CHANGELOG.md)), the base path for the decided address, the presentation gate RC-1115, and the DigitalOcean hosting route ([`docs/RELEASE_RUNBOOK.md`](docs/RELEASE_RUNBOOK.md)). The brief: [`audit/release_candidate/INSTRUCTIONS.md`](audit/release_candidate/INSTRUCTIONS.md). The Design programme is complete (D0–D7, pull request #7; the owner's D7 acceptance of 2 October 2026) and the production runtime is merged (pull request #8, `38a9a97`) — see [Design programme](#design-programme--current-state) |
-| **Next** | Independent review of pull request #9. Once it lands, what remains is release-time only ([`docs/RELEASE_RUNBOOK.md`](docs/RELEASE_RUNBOOK.md) steps 1–14; [`FINAL_OPEN_ITEMS_REGISTER.md`](FINAL_OPEN_ITEMS_REGISTER.md) §2): the DigitalOcean account, registry and token, the public origin, the corporate proxy, counsel's confirmation of the licence text, the corrections responder, the currentness re-run at the release date, the live header and in-country checks, and the owner's release acceptance |
+| **Now** | **The release candidate.** Pull request #9 (branch `code/release-candidate-fixes`) carries the owner's decisions of 2 and 3 October 2026 ([`audit/OWNER_DECISIONS_2026-10-02.md`](audit/OWNER_DECISIONS_2026-10-02.md)) and the after-merge conditions of pull request #8: the Master transactions RC-1 … RC-19 (RC-19 is the fix batch from the independent review of `70398d1`; the table in the pull request and [`docs/CHANGELOG.md`](docs/CHANGELOG.md)), the base path for the decided address, the presentation gate RC-1115, and the DigitalOcean hosting route ([`docs/RELEASE_RUNBOOK.md`](docs/RELEASE_RUNBOOK.md)). The brief: [`audit/release_candidate/INSTRUCTIONS.md`](audit/release_candidate/INSTRUCTIONS.md). The Design programme is complete (D0–D7, pull request #7; the owner's D7 acceptance of 2 October 2026) and the production runtime is merged (pull request #8, `38a9a97`) — see [Design programme](#design-programme--current-state) |
+| **Next** | A further independent review of pull request #9. Once it lands, what remains is release-time only ([`docs/RELEASE_RUNBOOK.md`](docs/RELEASE_RUNBOOK.md) steps 1–14; [`FINAL_OPEN_ITEMS_REGISTER.md`](FINAL_OPEN_ITEMS_REGISTER.md) §2): the DigitalOcean account, registry and token, the public origin, the corporate proxy, counsel's confirmation of the licence text, the corrections responder, the currentness re-run at the release date, the live header and in-country checks, and the owner's release acceptance |
 | **Owner actions** | Push the two checkpoint tags and delete six merged branches ([below](#checkpoints-and-tags)); supply the release inputs of [`docs/RELEASE_RUNBOOK.md`](docs/RELEASE_RUNBOOK.md) and decide the OWNER_INPUT and RELEASE_ONLY items in [`FINAL_OPEN_ITEMS_REGISTER.md`](FINAL_OPEN_ITEMS_REGISTER.md) |
-| **Production Master** | `authority/Yemen_Financial_Inclusion_Evidence_Master.xlsx` · SHA-256 `c700dc52bf81966939c6d6ec53afe494d1bf699389c04850f74b9dec436ea7e4` |
-| **Page Specs** | `site-src/content/page_specs.json` · SHA-256 `6e87e36b1db89c7aa4ce31573a3507cbe6bd49d81f5984f2e6bc494dffedff40` |
+| **Production Master** | `authority/Yemen_Financial_Inclusion_Evidence_Master.xlsx` · SHA-256 `90014e3bd27133c34b8435090230cf5b28a3301dec9f366c6fedf047b5ea2838` |
+| **Page Specs** | `site-src/content/page_specs.json` · SHA-256 `0298a3c6b5c72ab9da1fa99667f79303475f39e12bbe41c2f6f581459f8a2b86` |
 | **Logo authority** | `site-src/assets/CauseWay_Master_Logo.png` · SHA-256 `5830163d…` (full value: `logo_sha256` in [`FINAL_REPOSITORY_MANIFEST.json`](FINAL_REPOSITORY_MANIFEST.json)); never redrawn, recoloured, cropped or regenerated |
 | **Last state OpenAI reviewed** | Commit `f726bda`, tree byte-identical to `…TRANCHE_C_COMPLETE_READING_HOLD.zip` (SHA-256 `63612dea…`); accepted 26 September 2026 |
 | **Currentness cut-off** | 3 October 2026 for the watch points re-read in the release-candidate sweep ([`audit/release_candidate/ORIGINAL_SOURCE_VERIFICATION.md`](audit/release_candidate/ORIGINAL_SOURCE_VERIFICATION.md) §3–4); 26 September 2026 for the rest ([`audit/FINAL_CURRENTNESS_CUTOFF.md`](audit/FINAL_CURRENTNESS_CUTOFF.md)) |
@@ -143,14 +143,16 @@ validates ([`CONTRIBUTING.md` §2](CONTRIBUTING.md#2-who-owns-what-and-how-it-ch
 Counts come from [`public_inventory.json`](site-src/content/content/public_inventory.json), which is derived from the
 Master; the validator checks every figure below against it. Counts are an inventory, not a measure of evidence strength.
 
-- 143 controlled Page Specs; 286 localized route documents + root + 404 = 288 static HTML documents.
-- 110 Evidence Records, of which 60 are controlled public claims; 55 Evidence Passports (reference material, never
+- 142 controlled Page Specs; 284 localized route documents + root + 404 = 286 static HTML documents. Two more pages, one
+  per language, stand at the retired address /evidence/NEG-EW-011/ and lead to CLM-015 (owner decision of 3 October
+  2026, 23:54 Aden; RC-19).
+- 109 Evidence Records, of which 60 are controlled public claims; 55 Evidence Passports (reference material, never
   rendered).
 - 10 Readings; 10 Measurement priorities; 11 governed entry questions.
 - 36 governed visual contracts, each with a design tier in `site-src/content/visuals/visual_design_contracts.json`.
 - 165 source records, of which 156 expose a public original locator; 28 curated resource cards.
 - 23 documented chronology events (the analytical rule YSC-020 is not counted).
-- 440 public search records.
+- 438 public search records.
 
 ## Decisions that shape everything here
 
@@ -291,7 +293,7 @@ git tag -l 'checkpoint/*' -n1                                     # checkpoints,
 | `site-src/content/presentation_priority.json`, `site-src/content/content/navigation_interaction.json` | Controlled contracts: presentation depth; navigation and interaction | The steward, in place, naming the finding; validated by the generator |
 | `site-src/app.js`, `site-src/lang-redirect.js`, `site-src/assets/` | The tools runtime, the neutral root entry and the canonical CauseWay logo (never redrawn) | Directly, with the gates |
 | [`scripts/yfie/`](scripts/yfie/) | **The one production renderer**: the accepted Design implementation — content path, page families, visual contracts, the stylesheet, the text layer | Directly, with the gates |
-| `site-src/assets/social/` | The 286 governed social images (1200 × 630, one per route and language), rasterised from the design's template because that needs a browser; the build copies them into `dist/` | `scripts/social_images.py` only |
+| `site-src/assets/social/` | The 284 governed social images (1200 × 630, one per route and language), rasterised from the design's template because that needs a browser; the build copies them into `dist/` | `scripts/social_images.py` only |
 | [`scripts/`](scripts/) | Generator, build driver, literal audit, validator, rebind, inventory, checksums, tests | Directly, with the gates |
 | `dist/` | The generated public site, committed so every public change is reviewable | `scripts/build.py` only |
 | [`design/architecture/`](design/architecture/) | Programme diagrams: three derived from the navigation contract and inventory, the Design-to-Code flow hand-maintained | `scripts/architecture_diagrams.py`; the flow by the steward |

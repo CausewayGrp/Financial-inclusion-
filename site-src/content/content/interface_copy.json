@@ -625,9 +625,9 @@
   },
   {
     "ui_id": "UI-VIS-CAT-EVT-FMIIP-START",
-    "label_en": "FMIIP starts",
-    "label_ar": "بدء مشروع FMIIP",
-    "use_rule": "Pre-Tranche-C P4 (V-D5). Chart label: event value 'FMIIP starts'."
+    "label_en": "FMIIP effective",
+    "label_ar": "بدء نفاذ مشروع FMIIP",
+    "use_rule": "Pre-Tranche-C P4 (V-D5); RC-19 R-01. Chart label: event value 'FMIIP effective' (World Bank ISR: effectiveness 1 September 2025)."
   },
   {
     "ui_id": "UI-VIS-CAT-EVT-FMIIP-APPROVAL",
@@ -637,20 +637,20 @@
   },
   {
     "ui_id": "UI-VIS-CAT-EVT-FPS",
-    "label_en": "FMIIP component: support for developing a Fast Payment System",
-    "label_ar": "مكوّن في مشروع FMIIP: دعم تطوير نظام الدفع السريع",
+    "label_en": "FMIIP component, approved with the project: support for developing a Fast Payment System",
+    "label_ar": "مكوّن أُقرّ مع مشروع FMIIP: دعم تطوير نظام الدفع السريع",
     "use_rule": "Pre-Tranche-C P4 (V-D5). Chart label: event value 'Fast Payment System'."
   },
   {
     "ui_id": "UI-VIS-CAT-EVT-RTGS-CORE",
-    "label_en": "FMIIP component: support for establishing a real-time gross settlement (RTGS) system and upgrading CBY-Aden core banking",
-    "label_ar": "مكوّن في مشروع FMIIP: دعم إنشاء نظام التسوية الإجمالية الفورية (RTGS) وتحديث النظام المصرفي الأساسي للبنك المركزي اليمني – عدن",
+    "label_en": "FMIIP component, approved with the project: support for developing a real-time gross settlement (RTGS) system and upgrading CBY-Aden core banking",
+    "label_ar": "مكوّن أُقرّ مع مشروع FMIIP: دعم تطوير نظام التسوية الإجمالية الفورية (RTGS) وتحديث النظام المصرفي الأساسي للبنك المركزي اليمني – عدن",
     "use_rule": "Pre-Tranche-C P4 (V-D5). Chart label: event value 'RTGS + CBY core banking'."
   },
   {
     "ui_id": "UI-VIS-CAT-EVT-ACCESS-DB",
-    "label_en": "FMIIP component: access-point database",
-    "label_ar": "مكوّن في مشروع FMIIP: قاعدة بيانات لنقاط الوصول",
+    "label_en": "FMIIP component, approved with the project: support for access to and use of the payment infrastructure",
+    "label_ar": "مكوّن أُقرّ مع مشروع FMIIP: دعم الوصول إلى البنية التحتية للمدفوعات واستخدامها",
     "use_rule": "Pre-Tranche-C P4 (V-D5). Chart label: event value 'Access-point database and usage support'."
   },
   {
@@ -1087,9 +1087,9 @@
   },
   {
     "ui_id": "UI-NOSCRIPT-NOTE",
-    "label_en": "Search, Compare and the copy buttons need JavaScript. Every page of evidence remains readable without it.",
-    "label_ar": "يحتاج البحث والمقارنة وأزرار النسخ إلى JavaScript، وتبقى كل صفحات الأدلة قابلة للقراءة من دونه.",
-    "use_rule": "Tranche C TC-F (TOOL-17)."
+    "label_en": "Search, Compare and the copy and print buttons need JavaScript. Every other page, the menu and the language switch work without it.",
+    "label_ar": "يحتاج البحث والمقارنة وأزرار النسخ والطباعة إلى JavaScript، وتعمل سائر الصفحات والقائمة وتبديل اللغة من دونه.",
+    "use_rule": "Tranche C TC-F (TOOL-17); RC-19 R-05: the language switch and the menu are links, so they work without JavaScript."
   },
   {
     "ui_id": "UI-ANSWER-CRUMB-LABEL",
@@ -3070,5 +3070,17 @@
     "label_en": "Dimensions it would cover:",
     "label_ar": "الأبعاد التي سيغطيها القياس:",
     "use_rule": "RC-18 (owner note of 3 October 2026, 11:15, 4.2). /measurement/: the label before a priority's governed dimensions_en/dimensions_ar."
+  },
+  {
+    "ui_id": "UI-MOVED-RECORD-TITLE",
+    "label_en": "This record is no longer published on its own",
+    "label_ar": "لم يعد هذا السجل منشورًا بمفرده",
+    "use_rule": "RC-19 (owner decision of 3 October 2026, 23:54 Aden, X-ESC-RC17-01). Heading of the page at a retired record address."
+  },
+  {
+    "ui_id": "UI-MOVED-RECORD-BODY",
+    "label_en": "This address now leads to the record of the Central Bank of Yemen – Aden (CBY-Aden) circular of 26 June 2024. Names from the regulator's lists are not reproduced here.",
+    "label_ar": "يُحيل هذا الرابط الآن إلى سجل التعميم المؤرخ في 26 يونيو 2024 والصادر عن البنك المركزي اليمني – عدن. ولا تُذكر هنا الأسماء الواردة في قوائم الجهة الرقابية.",
+    "use_rule": "RC-19 (owner decision of 3 October 2026, 23:54 Aden). Body of the page at a retired record address; the link that follows is the target record's governed title."
   }
 ]

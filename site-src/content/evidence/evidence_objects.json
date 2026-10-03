@@ -1494,55 +1494,6 @@
     "measurement_limitation_ar": null
   },
   {
-    "object_id": "NEG-EW-011",
-    "object_class": "NEGATIVE_AUTHORITY_OBJECT",
-    "public_routes": [
-      "/providers/",
-      "/payments/"
-    ],
-    "title_en": "Wallet service named in a June 2024 CBY-Aden list of unlicensed services",
-    "title_ar": "خدمة محفظة وردت في قائمة البنك المركزي اليمني – عدن للخدمات غير المرخصة (يونيو 2024)",
-    "summary_en": "This wallet service is one of the 12 wallets, entities or services that a 26 June 2024 circular of the Central Bank of Yemen – Aden (CBY-Aden) names as unlicensed by CBY-Aden on that date, and with which banks and exchange businesses were told not to deal. Names from the regulator's lists are not reproduced here; the circular itself is linked from this record. The service's status under any other authority, and its status after that date, are not established here.",
-    "summary_ar": "خدمة المحفظة هذه واحدة من 12 محفظة أو جهة أو خدمة يسمّيها تعميم للبنك المركزي اليمني – عدن بتاريخ 26 يونيو 2024 بوصفها غير مرخصة لديه في ذلك التاريخ، ويوجّه البنوك وشركات الصرافة إلى عدم التعامل معها. ولا تُذكر هنا أسماء الجهات الواردة في قوائم الجهة الرقابية، ويمكن الوصول إلى التعميم نفسه من هذا السجل. ولا يثبت هذا الدليل وضع الخدمة لدى أي سلطة أخرى، ولا وضعها بعد ذلك التاريخ.",
-    "definition_en": "One service named as unlicensed in a circular of the Central Bank of Yemen – Aden (CBY-Aden) dated 26 June 2024.",
-    "definition_ar": "خدمة واحدة سمّاها تعميم البنك المركزي اليمني – عدن المؤرخ في 26 يونيو 2024 بوصفها غير مرخصة.",
-    "period_en": "26 June 2024",
-    "period_ar": "26 يونيو 2024",
-    "universe_en": "One of the 12 wallets, entities or services the circular names; the name is not reproduced here.",
-    "universe_ar": "واحدة من المحافظ أو الجهات أو الخدمات الـ12 التي يسمّيها التعميم؛ ولا يُذكر اسمها هنا.",
-    "method_en": "Taken from the text of the circular of the Central Bank of Yemen – Aden (CBY-Aden) dated 26 June 2024, which names 12 wallets, entities or services. The name is kept in this resource's internal source records and is not reproduced here.",
-    "method_ar": "مأخوذ من نص تعميم البنك المركزي اليمني – عدن المؤرخ في 26 يونيو 2024، الذي يسمّي 12 محفظة أو جهة أو خدمة. ويُحفظ الاسم في سجل المصادر الداخلي لهذا المورد ولا يُذكر هنا.",
-    "limitations_en": "The unlicensed status applies to 26 June 2024 and is not a 2026 status; later status, including any licensing, is not tracked here. A list of unlicensed names does not identify which services are licensed, and the circular does not establish the service's status under any other authority.",
-    "limitations_ar": "يخص وصف عدم الترخيص تاريخ 26 يونيو 2024، ولا يمثل وضعًا لعام 2026؛ ولا يتتبع هذا السجل الوضع اللاحق، بما في ذلك أي ترخيص. ولا تحدد قائمة الأسماء غير المرخصة الخدمات المرخصة، ولا يثبت التعميم وضع الخدمة لدى أي سلطة أخرى.",
-    "currentness_en": "The circular is dated 26 June 2024. It does not describe the service's status after that date.",
-    "currentness_ar": "التعميم مؤرخ في 26 يونيو 2024، ولا يصف وضع الخدمة بعد ذلك التاريخ.",
-    "change_trigger_en": "This record is updated when an authoritative source is revised or replaced, a newer comparable observation becomes available, the definition, population or method changes, or the conditions for public use change.",
-    "change_trigger_ar": "يُحدَّث هذا السجل عند مراجعة المصدر المعتمد أو استبداله، أو توفر مشاهدة أحدث قابلة للمقارنة، أو تغير التعريف أو المجتمع أو الطريقة، أو تغير شروط الاستخدام العام.",
-    "verification_en": "This record is drawn from the source(s) listed on this page. Open a source record to reach the original document, and check that the definition, period, population and geography match what is stated here.",
-    "verification_ar": "يستند هذا السجل إلى المصدر أو المصادر المدرجة في هذه الصفحة. افتح سجل المصدر للوصول إلى الوثيقة الأصلية، وتحقق من تطابق التعريف والفترة والمجتمع والنطاق الجغرافي مع ما يرد هنا.",
-    "source_dependencies": [
-      "SRC-CBY-UNLICENSED-EWALLET-2024-001"
-    ],
-    "source_links": [
-      {
-        "source_id": "SRC-CBY-UNLICENSED-EWALLET-2024-001",
-        "url": "https://cby-ye.com/files/667c32dabd223.pdf",
-        "audit_state": "PASS_AUTHORITY_OR_PROVIDER_LOCATOR"
-      }
-    ],
-    "lineage_state": "BOUND_EXACT",
-    "visual_contract_state": null,
-    "source_use_roles": "SRC-CBY-UNLICENSED-EWALLET-2024-001=status event",
-    "public_route_list": [
-      "/providers/",
-      "/payments/"
-    ],
-    "does_not_establish_en": "The unlicensed status applies to 26 June 2024 and is not a 2026 status; later status, including any licensing, is not tracked here. A list of unlicensed names does not identify which services are licensed, and the circular does not establish the service's status under any other authority.",
-    "does_not_establish_ar": "يخص وصف عدم الترخيص تاريخ 26 يونيو 2024، ولا يمثل وضعًا لعام 2026؛ ولا يتتبع هذا السجل الوضع اللاحق، بما في ذلك أي ترخيص. ولا تحدد قائمة الأسماء غير المرخصة الخدمات المرخصة، ولا يثبت التعميم وضع الخدمة لدى أي سلطة أخرى.",
-    "measurement_limitation_en": null,
-    "measurement_limitation_ar": null
-  },
-  {
     "object_id": "MFI-SPINE-2015-Q4",
     "object_class": "TEMPORAL_OBSERVATION",
     "public_routes": [
@@ -3517,8 +3468,8 @@
     ],
     "title_en": "How the payment architecture is changing",
     "title_ar": "كيف تتغير بنية المدفوعات؟",
-    "summary_en": "The recorded payment-reform steps from June 2024 to August 2026 sit at separate stages. Rules: Governor's Decision No. 23 of 2024, issued by the Central Bank of Yemen – Aden (CBY-Aden), requiring exchange companies, exchange establishments and money-transfer agents to execute new domestic cash transfers only through the unified money-transfer network (26 June 2024). Project: the World Bank-financed Financial Market Infrastructure and Inclusion Project (FMIIP), which started in July 2025, with components supporting the development of a Fast Payment System (FPS) and the establishment of a Real-Time Gross Settlement system (RTGS). Decisions and institutions: a CBY-Aden board decision on what it calls a mandatory national QR standard (29 March 2026), unified-network integration work (17 June 2026), restructuring of the Unified Money Network company (27 July 2026) and the founding assembly of the Yemeni Payments and Clearing Company (YPCC) on 3 August 2026. The FMIIP baseline for January 2025 records FPS and RTGS as not yet operational, with no participating institutions, and no later operational state is recorded. The only information on use is a January 2026 CBY-Aden statement about activity on the unified network, which is CBY-Aden's own statement, not an independent measurement.",
-    "summary_ar": "تقع خطوات إصلاح المدفوعات المسجلة من يونيو 2024 إلى أغسطس 2026 في مراحل منفصلة. القواعد: قرار المحافظ رقم (23) لسنة 2024 الصادر عن البنك المركزي اليمني – عدن، الذي يُلزم شركات ومنشآت الصرافة ووكلاء الحوالات بتنفيذ الحوالات النقدية الداخلية الجديدة حصرًا عبر الشبكة الموحدة للحوالات المالية (26 يونيو 2024). المشروع: مشروع البنية التحتية للأسواق المالية والشمول المالي في اليمن (FMIIP) الممول من البنك الدولي، الذي بدأ في يوليو 2025، ويتضمن مكونات لدعم تطوير نظام الدفع السريع (FPS) وإنشاء نظام التسوية الإجمالية الفورية (RTGS). القرارات والمؤسسات: قرار لمجلس إدارة البنك المركزي في عدن بشأن ما يسميه معيارًا وطنيًا إلزاميًا لرمز QR (29 مارس 2026)، وأعمال تكامل الشبكة الموحدة (17 يونيو 2026)، وإعادة هيكلة شركة الشبكة الموحدة للأموال (27 يوليو 2026)، وانعقاد الجمعية التأسيسية للشركة اليمنية للمدفوعات والمقاصة (YPCC) في 3 أغسطس 2026. ويسجل خط أساس مشروع FMIIP في يناير 2025 أن نظامي FPS وRTGS لم يكونا قيد التشغيل بعد ولا مؤسسات مشاركة فيهما، ولا يُسجَّل أي وضع تشغيلي لاحق. والمعلومة الوحيدة عن الاستخدام تصريح للبنك المركزي في عدن في يناير 2026 عن النشاط عبر الشبكة الموحدة، وهو تصريح من البنك المركزي في عدن نفسه، وليس قياسًا مستقلًا.",
+    "summary_en": "The recorded payment-reform steps from June 2024 to August 2026 sit at separate stages. Rules: Governor's Decision No. 23 of 2024, issued by the Central Bank of Yemen – Aden (CBY-Aden), requiring exchange companies, exchange establishments and money-transfer agents to execute new domestic cash transfers only through the unified money-transfer network (26 June 2024). Project: the World Bank-financed Financial Market Infrastructure and Inclusion Project (FMIIP), approved by the World Bank's Board on 17 June 2025 and effective from 1 September 2025, with components supporting the development of a Fast Payment System (FPS) and the establishment of a Real-Time Gross Settlement system (RTGS). Decisions and institutions: a CBY-Aden board decision on what it calls a mandatory national QR standard (29 March 2026), unified-network integration work (17 June 2026), restructuring of the Unified Money Network company (27 July 2026) and the founding assembly of the Yemeni Payments and Clearing Company (YPCC) on 3 August 2026. The FMIIP baseline for January 2025 records FPS and RTGS as not yet operational, with no participating institutions, and no later operational state is recorded. The only information on use is a January 2026 CBY-Aden statement about activity on the unified network, which is CBY-Aden's own statement, not an independent measurement.",
+    "summary_ar": "تقع خطوات إصلاح المدفوعات المسجلة من يونيو 2024 إلى أغسطس 2026 في مراحل منفصلة. القواعد: قرار المحافظ رقم (23) لسنة 2024 الصادر عن البنك المركزي اليمني – عدن، الذي يُلزم شركات ومنشآت الصرافة ووكلاء الحوالات بتنفيذ الحوالات النقدية الداخلية الجديدة حصرًا عبر الشبكة الموحدة للحوالات المالية (26 يونيو 2024). المشروع: مشروع البنية التحتية للأسواق المالية والشمول المالي في اليمن (FMIIP) الممول من البنك الدولي، الذي أقرّه مجلس البنك الدولي في 17 يونيو 2025 وأصبح نافذًا اعتبارًا من 1 سبتمبر 2025، ويتضمن مكونات لدعم تطوير نظام الدفع السريع (FPS) وإنشاء نظام التسوية الإجمالية الفورية (RTGS). القرارات والمؤسسات: قرار لمجلس إدارة البنك المركزي في عدن بشأن ما يسميه معيارًا وطنيًا إلزاميًا لرمز QR (29 مارس 2026)، وأعمال تكامل الشبكة الموحدة (17 يونيو 2026)، وإعادة هيكلة شركة الشبكة الموحدة للأموال (27 يوليو 2026)، وانعقاد الجمعية التأسيسية للشركة اليمنية للمدفوعات والمقاصة (YPCC) في 3 أغسطس 2026. ويسجل خط أساس مشروع FMIIP في يناير 2025 أن نظامي FPS وRTGS لم يكونا قيد التشغيل بعد ولا مؤسسات مشاركة فيهما، ولا يُسجَّل أي وضع تشغيلي لاحق. والمعلومة الوحيدة عن الاستخدام تصريح للبنك المركزي في عدن في يناير 2026 عن النشاط عبر الشبكة الموحدة، وهو تصريح من البنك المركزي في عدن نفسه، وليس قياسًا مستقلًا.",
     "definition_en": "Dated payment-reform steps — rules, project components, decisions, integration work and new institutions — recorded between June 2024 and August 2026, each at the furthest stage its evidence supports.",
     "definition_ar": "خطوات مؤرخة لإصلاح نظام المدفوعات، من قواعد ومكونات مشاريع وقرارات وأعمال تكامل ومؤسسات جديدة، سُجلت بين يونيو 2024 وأغسطس 2026، كلٌّ منها عند أبعد مرحلة يثبتها دليلها.",
     "period_en": "2024–2026",

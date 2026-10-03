@@ -143,7 +143,11 @@ def main() -> int:
                 errors.clear()
                 responses.clear()
                 resp = page.goto(base + p, wait_until="load")
-                csp = page.evaluate("window.__csp")
+                try:
+                    csp = page.evaluate("window.__csp")
+                except Exception:   # RC-19: a retired record address moves on to its record at once (meta refresh)
+                    page.wait_for_load_state("load")
+                    csp = page.evaluate("window.__csp")
                 if resp is None or (resp.status != 200 and p != "/404.html"):
                     problems.append(f"{p}: HTTP {resp.status if resp else 'none'}")
                 if resp is not None:

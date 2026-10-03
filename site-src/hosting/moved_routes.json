@@ -1,0 +1,10 @@
+{
+ "rule": "Addresses of records that are no longer published on their own. Each keeps its address, which leads to the record that now covers it, through a page that is never indexed and names the target as its canonical address (scripts/yfie/render.py, moved_page; gate RC-19 in scripts/validate.py). An entry is added only by an owner decision recorded in audit/OWNER_DECISIONS_*.md, and its source route is removed from the Master (02 and 06) in the same transaction.",
+ "moved": [
+  {
+   "from": "/evidence/NEG-EW-011/",
+   "to": "/evidence/CLM-015/",
+   "decision": "Owner decision of 3 October 2026, 23:54 Aden (X-ESC-RC17-01): the record's ID was the circular's own item number and the circular was linked from it, so withholding the name did not withhold the identity. Applied in RC-19."
+  }
+ ]
+}

@@ -47,6 +47,7 @@ RULES = [
                          "scripts/handoff_inventory.py", "scripts/social_images.py", "scripts/logo_derivatives.py", "scripts/hosting_nginx.py", "scripts/do_deploy.py", "scripts/accessibility_audit.py",
                          "scripts/exports.py", "scripts/performance_budget.py", "scripts/currentness_rerun.py",
                          "scripts/literal_audit_allowances.json", "scripts/search_canonical_probe.json", "scripts/tests/*",
+                         "scripts/hosting/*",   # R-09: the corporate proxy harness that scripts/tests/test_corporate_proxy.py runs
                          "audit/tranche_c/checks/*.py", "audit/pre_tranche_c/source_lineage_truth_test.py"]),
     ("GENERATED_PUBLIC_BUILD", ["dist/*", "dist/**/*"]),
     ("GENERATED_LITERAL_CLOSURE", ["audit/PUBLIC_LITERAL_CLOSURE.json"]),

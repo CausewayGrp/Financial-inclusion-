@@ -4,9 +4,9 @@
   "authority_scope": "NAVIGATION_AND_INTERACTION_ONLY",
   "semantic_authority": "Production Master via current Page Specs; this contract cannot alter facts, claims, values, units, universes, periods, methods, sources, rights, evidence class or publication state.",
   "authority_binding": {
-    "master_sha256": "c700dc52bf81966939c6d6ec53afe494d1bf699389c04850f74b9dec436ea7e4",
-    "page_specs_sha256": "6e87e36b1db89c7aa4ce31573a3507cbe6bd49d81f5984f2e6bc494dffedff40",
-    "page_spec_count": 143
+    "master_sha256": "90014e3bd27133c34b8435090230cf5b28a3301dec9f366c6fedf047b5ea2838",
+    "page_specs_sha256": "0298a3c6b5c72ab9da1fa99667f79303475f39e12bbe41c2f6f581459f8a2b86",
+    "page_spec_count": 142
   },
   "experience_principle": "UNDERSTAND → EXPLORE → VERIFY",
   "global_navigation": [
@@ -268,7 +268,7 @@
     },
     {
       "page_family": "Evidence Record",
-      "route_count": 110,
+      "route_count": 109,
       "unique_user_value_role": "CANONICAL_PUBLIC_VERIFICATION_ENDPOINT",
       "primary_next_action_policy": "SOURCE_RELATED_CORRECTION_OR_REUSE",
       "depth_role": "VERIFICATION",
@@ -1790,26 +1790,6 @@
       "page_class": "evidence_detail",
       "page_family": "Evidence Record",
       "stable_object_id": "MFI-SPINE-2015-Q4",
-      "entry_modes": [
-        "deep_link",
-        "search",
-        "verification_link_or_search"
-      ],
-      "search_record_count": 2,
-      "unique_value_role": "CANONICAL_PUBLIC_VERIFICATION_ENDPOINT",
-      "value_basis": "CURRENT_PAGE_SPEC_AND_BOUND_GOVERNED_OBJECTS",
-      "next_action_policy": "SOURCE_RELATED_CORRECTION_OR_REUSE",
-      "explicit_next_actions": [],
-      "deletion_disposition": "KEEP",
-      "deletion_reason_code": "STABLE_VERIFICATION_ENDPOINT",
-      "depth_role": "VERIFICATION",
-      "navigation_prominence": "ADDRESSABLE_VERIFICATION"
-    },
-    {
-      "route": "/evidence/NEG-EW-011/",
-      "page_class": "evidence_detail",
-      "page_family": "Evidence Record",
-      "stable_object_id": "NEG-EW-011",
       "entry_modes": [
         "deep_link",
         "search",
@@ -3639,7 +3619,7 @@
       "No archive factual proposition changes current controlled evidence in R4."
     ]
   },
-  "public_search_record_count": 440,
+  "public_search_record_count": 438,
   "r6_information_design_contract": {
     "status": "R6_CLOSED",
     "principle": "ONE_TRUTH__MULTIPLE_DEPTHS__TASK_LED_ENTRY__VERIFICATION_ALWAYS_AVAILABLE",

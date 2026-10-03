@@ -129,6 +129,10 @@ python3 scripts/tests/test_public_tools.py             # browser
 python3 audit/tranche_c/checks/viewport_acceptance.py  # browser
 python3 scripts/tests/test_security_headers.py         # browser: every page under dist/_headers, no policy violation
 python3 scripts/tests/test_base_path.py                # browser: built for the decided origin, served under its path (B2)
+python3 scripts/tests/test_digitalocean_hosting.py    # nginx: the _headers block in a real nginx; --image: in the pinned App Platform image (Docker)
+python3 scripts/tests/test_no_javascript.py           # browser: the note, the language switch and the menu with JavaScript off (R-05)
+# Before the corporate route goes live (Node.js, npm and nginx; not in CI):
+python3 scripts/tests/test_corporate_proxy.py         # the runbook's forwarding middleware in a pinned Nitro, in front of our nginx block
 # Slow, and its own CI job: one full validator run per fault, so run it when a gate or the markup it reads changes.
 python3 scripts/tests/test_gate_negative_controls.py             # every gate still fails on the fault it was written to catch
                                                                   # (one worker per CPU, each on its own copy of the tree)

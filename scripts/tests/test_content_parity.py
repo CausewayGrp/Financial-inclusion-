@@ -126,8 +126,24 @@ def main() -> int:
     governed_vis = CP.governed_visual_numbers()
     built = CO.pages(site)
     bad = 0
+    ui = {r.get("ui_id"): r for r in json.loads((ROOT / "site-src/content/content/interface_copy.json").read_text(encoding="utf-8"))}
     for rel, path in sorted(built.items()):
         lang, route = CP.route_of(rel)
+        raw = Path(path).read_text(encoding="utf-8")
+        if "data-moved-to=" in raw:
+            # RC-19: a retired record address is not a page of its own; it prints exactly its two governed labels and the
+            # governed title of the record it leads to, and no number beyond theirs
+            import re as _re   # noqa: PLC0415
+            target = "/" + _re.search(r'data-moved-to="([^"]+)"', raw).group(1) + "/"
+            want = [ui["UI-MOVED-RECORD-TITLE"][f"label_{lang}"], ui["UI-MOVED-RECORD-BODY"][f"label_{lang}"],
+                    content.page(target, lang)["title"]]
+            text = CO.main_text(path)
+            allowed = Counter(n for w in want for n in _re.findall(r"\d+(?:[.,]\d+)*", w))
+            printed = Counter(CO.main_numbers(path, drop_axis_labels=True))
+            if any(w not in text for w in want) or [k for k in printed if k not in allowed]:
+                bad += 1
+                print(f"MOVED {rel}: not exactly the governed moved-record text for {target}")
+            continue
         try:
             page_data = content.page(route, lang)
         except Exception as exc:   # a built document the loader cannot describe is itself a failure

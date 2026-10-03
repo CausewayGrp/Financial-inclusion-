@@ -51,11 +51,8 @@ JS_PATCHES = {
         # the language prefix every link the runtime writes starts with (search results, Compare, corrections)
         ("const prefix=location.pathname.startsWith('/en/')?'/en':'/ar';",
          "const prefix=location.pathname.startsWith('{B}/en/')?'{B}/en':'{B}/ar';", 1),
-        # the language switch: the same page in the other language, query and hash kept
-        ("let p=location.pathname.replace(/^\\/(ar|en)/,'');",
-         "let p=location.pathname.replace(/^{BRE}(?:\\/(ar|en))?/,'');", 1),
-        ("location.href='/'+target+p+location.search+location.hash;",
-         "location.href='{B}/'+target+p+location.search+location.hash;", 1),
+        # (R-05: the language switch is a link written by the build, relocated with every other href; the runtime only keeps
+        # the query and the anchor, from the link's own address)
         # the search index and its governed aliases
         ("fetch('/static-data/", "fetch('{B}/static-data/", 2),
     ],
@@ -72,7 +69,7 @@ JS_PATCHES = {
 # built by concatenation or a template through: '/'+lang+'/about/', `/${lang}/about/`.)
 JS_ROUTE_KEYS = {
     "assets/app.js": {
-        "'/'": 5, "'/evidence/'": 1, "'/data/#regulatory'": 1,
+        "'/'": 3, "'/evidence/'": 1, "'/data/#regulatory'": 1,
         "'/people/'": 1, "'/firms/'": 1, "'/finance/'": 1, "'/providers/'": 1, "'/payments/'": 1,
         "'/remittances/'": 1, "'/access/'": 1, "'/reforms/'": 1, "'/measurement/'": 1,
     },

@@ -3,9 +3,9 @@
  "purpose": "What every tracked file is. One authority -> one projection path -> one runtime content path -> one current recipient start path. Hashes: SHA256SUMS.txt.",
  "authority": {
   "production_master": "authority/Yemen_Financial_Inclusion_Evidence_Master.xlsx",
-  "production_master_sha256": "c700dc52bf81966939c6d6ec53afe494d1bf699389c04850f74b9dec436ea7e4",
+  "production_master_sha256": "90014e3bd27133c34b8435090230cf5b28a3301dec9f366c6fedf047b5ea2838",
   "page_specs": "site-src/content/page_specs.json",
-  "page_specs_sha256": "6e87e36b1db89c7aa4ce31573a3507cbe6bd49d81f5984f2e6bc494dffedff40",
+  "page_specs_sha256": "0298a3c6b5c72ab9da1fa99667f79303475f39e12bbe41c2f6f581459f8a2b86",
   "logo": "site-src/assets/CauseWay_Master_Logo.png",
   "logo_sha256": "5830163d50f9badbef3227ec44e7705548e2fcc8a06b2d6ae33d56ade60c6a90",
   "rule": "The Production Master is the only semantic authority. Everything under site-src/content, dist, design/architecture and audit/PUBLIC_LITERAL_CLOSURE.json is generated from it and never edited by hand, except the two CONTROLLED_CONTRACT files, which the programme steward maintains in place and the generator validates against the Master's projections."
@@ -25,24 +25,24 @@
   "AUTHORITY_MASTER": 1,
   "AUTHORITY_POINTER": 2,
   "AUTHORITY_RULES": 1,
-  "BUILD_AND_GATES": 33,
+  "BUILD_AND_GATES": 41,
   "CONTROLLED_CONTRACT": 2,
   "CURRENT_DOCUMENT": 13,
-  "CURRENT_PROGRAMME_RECORD": 153,
+  "CURRENT_PROGRAMME_RECORD": 156,
   "DESIGN_PACKAGE": 446,
   "GENERATED_DIAGRAMS": 9,
   "GENERATED_LITERAL_CLOSURE": 1,
   "GENERATED_LOGO_DERIVATIVES": 9,
   "GENERATED_PROJECTION": 37,
-  "GENERATED_PUBLIC_BUILD": 597,
-  "GENERATED_SOCIAL_IMAGES": 287,
+  "GENERATED_PUBLIC_BUILD": 595,
+  "GENERATED_SOCIAL_IMAGES": 285,
   "LOGO_AUTHORITY": 1,
   "PRODUCTION_RENDERER": 9,
   "PROJECTION_CONTRACT": 11,
   "PROJECTION_GENERATOR": 13,
   "RECIPIENT_HANDOFF": 11,
   "REPOSITORY_ENGINEERING": 10,
-  "RUNTIME_SOURCE": 6,
+  "RUNTIME_SOURCE": 7,
   "STANDING_POLICY": 5,
   "VENDORED_FONTS": 27
  },
@@ -1072,6 +1072,10 @@
    "class": "CURRENT_PROGRAMME_RECORD"
   },
   {
+   "path": "audit/release_candidate/rc_19_independent_review.py",
+   "class": "CURRENT_PROGRAMME_RECORD"
+  },
+  {
    "path": "audit/release_candidate/rc_1_stage_inputs.py",
    "class": "CURRENT_PROGRAMME_RECORD"
   },
@@ -1225,6 +1229,14 @@
   },
   {
    "path": "audit/release_candidate/runs/RC-18_RUN_REPORT.json",
+   "class": "CURRENT_PROGRAMME_RECORD"
+  },
+  {
+   "path": "audit/release_candidate/runs/RC-19_MASTER_LEDGER.json",
+   "class": "CURRENT_PROGRAMME_RECORD"
+  },
+  {
+   "path": "audit/release_candidate/runs/RC-19_RUN_REPORT.json",
    "class": "CURRENT_PROGRAMME_RECORD"
   },
   {
@@ -4744,14 +4756,6 @@
    "class": "GENERATED_PUBLIC_BUILD"
   },
   {
-   "path": "dist/assets/social/evidence_NEG-EW-011__ar.png",
-   "class": "GENERATED_PUBLIC_BUILD"
-  },
-  {
-   "path": "dist/assets/social/evidence_NEG-EW-011__en.png",
-   "class": "GENERATED_PUBLIC_BUILD"
-  },
-  {
    "path": "dist/assets/social/evidence_PSE-011__ar.png",
    "class": "GENERATED_PUBLIC_BUILD"
   },
@@ -6124,6 +6128,30 @@
    "class": "BUILD_AND_GATES"
   },
   {
+   "path": "scripts/hosting/corporate_proxy_harness/README.md",
+   "class": "BUILD_AND_GATES"
+  },
+  {
+   "path": "scripts/hosting/corporate_proxy_harness/nitro.config.ts",
+   "class": "BUILD_AND_GATES"
+  },
+  {
+   "path": "scripts/hosting/corporate_proxy_harness/package-lock.json",
+   "class": "BUILD_AND_GATES"
+  },
+  {
+   "path": "scripts/hosting/corporate_proxy_harness/package.json",
+   "class": "BUILD_AND_GATES"
+  },
+  {
+   "path": "scripts/hosting/corporate_proxy_harness/server/middleware/0.0-corporate-standin.ts",
+   "class": "BUILD_AND_GATES"
+  },
+  {
+   "path": "scripts/hosting/corporate_proxy_harness/server/routes/[...].ts",
+   "class": "BUILD_AND_GATES"
+  },
+  {
    "path": "scripts/hosting_nginx.py",
    "class": "BUILD_AND_GATES"
   },
@@ -6260,6 +6288,10 @@
    "class": "BUILD_AND_GATES"
   },
   {
+   "path": "scripts/tests/test_corporate_proxy.py",
+   "class": "BUILD_AND_GATES"
+  },
+  {
    "path": "scripts/tests/test_cutover_parity.py",
    "class": "BUILD_AND_GATES"
   },
@@ -6277,6 +6309,10 @@
   },
   {
    "path": "scripts/tests/test_literal_audit_determinism.py",
+   "class": "BUILD_AND_GATES"
+  },
+  {
+   "path": "scripts/tests/test_no_javascript.py",
    "class": "BUILD_AND_GATES"
   },
   {
@@ -6973,14 +7009,6 @@
   },
   {
    "path": "site-src/assets/social/evidence_MFI-SPINE-2015-Q4__en.png",
-   "class": "GENERATED_SOCIAL_IMAGES"
-  },
-  {
-   "path": "site-src/assets/social/evidence_NEG-EW-011__ar.png",
-   "class": "GENERATED_SOCIAL_IMAGES"
-  },
-  {
-   "path": "site-src/assets/social/evidence_NEG-EW-011__en.png",
    "class": "GENERATED_SOCIAL_IMAGES"
   },
   {
@@ -7689,6 +7717,10 @@
   },
   {
    "path": "site-src/hosting/digitalocean/app_spec.json",
+   "class": "RUNTIME_SOURCE"
+  },
+  {
+   "path": "site-src/hosting/moved_routes.json",
    "class": "RUNTIME_SOURCE"
   },
   {

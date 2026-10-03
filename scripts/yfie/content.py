@@ -215,6 +215,7 @@ class Content:
                                                               for l in g.get("links", [])]} for g in self.nav.get("footer_groups", [])]
         return {
             "lang": lang, "dir": "rtl" if lang == "ar" else "ltr", "other_lang": other,
+            "other_href": self.href(route, other),   # R-05: the language switch is a link to the same route in the other edition
             "product": self.t("UI-PRODUCT-NAME", lang), "edition": self.t("UI-CONTENT-VERSION", lang),
             # B9: the governed citation line of a page that is not an Evidence Record (UI-CITE-PAGE-LINE)
             "cite_page_line": self.tf("UI-CITE-PAGE-LINE", lang, product=self.t("UI-PRODUCT-NAME", lang), version=self.t("UI-CONTENT-VERSION", lang)),

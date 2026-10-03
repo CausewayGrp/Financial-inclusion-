@@ -580,3 +580,46 @@ marked and no connecting line.
 - **Point 2.** A permission, not an instruction: it is used only if an existing contract takes those rows without a new
   visual family, new Design work or a widened meaning. The disposition is in
   `audit/release_candidate/OPEN_ITEMS_DISPOSITION.md`.
+
+## Owner decision of 3 October 2026, 23:54 Aden (X-ESC-RC17-01)
+
+Received in this session on 4 October 2026 within the owner's message on the independent review of `70398d1`; recorded
+verbatim, and nothing else from that message.
+
+> "Owner decision, 3 October 2026, 23:54 Aden — X-ESC-RC17-01. /evidence/NEG-EW-011/ is no longer published as its own record. Its address points to CLM-015, the aggregate record of the 26 June 2024 circular. Reason: the record's ID is the circular's own item number and the circular is linked from it, so withholding the name did not withhold the identity. This applies the owner's names-withheld decision; it does not change it."
+
+Applied in RC-19 (`audit/release_candidate/rc_19_independent_review.py`; `site-src/hosting/moved_routes.json`; gate
+RC-19). X-ESC-RC17-01 is closed in `design/ESCALATIONS.md`.
+
+## Erratum, 4 October 2026: the owner note of 3 October 2026, 13:00 Cairo
+
+The entry "Owner note of 3 October 2026, 13:00 Cairo (changes no decision)" above says the note is "recorded verbatim",
+but its quotation is empty: the note's text was never written into this file (independent review of `70398d1`,
+finding R-03). That entry is not edited. The note, exactly as the owner sent it (supplied again by the owner on
+4 October 2026), is:
+
+> OWNER NOTE, 3 October 2026, 13:00 Cairo. Short; it changes no decision. Record it append-only with the others.
+>
+> I read your triage and the head da63bfb. The triage is right, and I accept it as your plan. Two things I saw from outside could stop the finish line, and they come before anything else.
+>
+> 1. CI cannot go green as it stands.
+> - On da63bfb, "Gate negative controls" was cancelled at its 45-minute timeout: it started 08:13:59Z and was cancelled 08:59:15Z, while the other two jobs passed. On b49fe93 the same job took about 38 minutes. Every new gate adds a full validator run, so the job will keep growing past its limit.
+> - B17 needs all three jobs green, and every push now also burns about 50 of the account's runner minutes.
+> - You own the fix. Make it fast without weakening it. Sharding the controls across a job matrix, or running faults in parallel on isolated copies of the tree, are two ways; choose what you judge best. Every control must still run and still fail on its fault.
+> - Prove it once locally, then on CI.
+>
+> 2. The base-path work lives on a second branch (code/base-path-hosting, 2 ahead and 4 behind).
+> - Bring it into code/release-candidate-fixes as soon as its verification passes, so there is one branch again and the built site carries noindex.
+> - Then delete nothing; the owner cleans up branches after merge.
+>
+> 3. Two smaller points.
+> - Your change to my /about/ pair ("against the sources it names", because 17 records have no single original source) is correct. Keep it, and record that the owner accepts it.
+> - site-src/content/data/providers_data.json still carries the NEG-EW-011 name, in English and Arabic. It does not reach dist/. Confirm that this projection is non-public lineage by design and that RC-NAMES would fail if any renderer printed it. If either is not true, fix it.
+>
+> 4. Spending the remaining budget so the work finishes.
+> - The four reader agents and the adversarial base-path check stopped at the usage limit and returned nothing. Size reviews to the change: one bilingual reviewer per transaction, reading only the changed pairs; the adversarial reviewer only for names, regulatory statements and new numbers.
+> - Do G0 yourself in the browser if agents keep failing.
+> - Push at every safe point; the last push was 08:11Z.
+> - I will send no further notes before your final report unless you escalate a blocker. Everything you need is already recorded.
+
+The "How this session reads it" lines under the original entry answer these points and stand as written.
