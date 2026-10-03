@@ -5,7 +5,7 @@
   YFIE_SITE_DIR=design/reference/out python3 audit/tranche_c/checks/viewport_acceptance.py   (another built site)
 
 Per page and width: horizontal page overflow; skip link first in tab order; every focusable element in <main> reachable;
-images without alt; headings present; reduced-motion media honoured (no smooth scroll when requested); image-off
+images without alt; no inline <b> in <main> styled as a box, and no emphasised figure (b.fnum) taller than its line (RC-1115); headings present; reduced-motion media honoured (no smooth scroll when requested); image-off
 (text alternatives exist for the logo); RTL pages declare dir="rtl". WCAG outcomes only; no conformance claim.
 """
 import functools, http.server, json, os, socket, sys, threading
@@ -46,12 +46,20 @@ def main():
                       const dir=d.getAttribute('dir');
                       const sb=getComputedStyle(d).scrollBehavior;
                       const wide=[...document.querySelectorAll('main *')].filter(e=>{const r=e.getBoundingClientRect();return r.width>0&&r.right>d.clientWidth+2&&getComputedStyle(e).position!=='fixed'&&!e.closest('.table-wrap')}).slice(0,3).map(e=>e.tagName+'.'+(e.className||''));
-                      return {over,imgs,h1,dir,sb,wide};
+                      // RC-1115 (B.0): an emphasised figure is inline type, never a box: no padding, margin, border or
+                      // background, and each of its line boxes no taller than one line, so it cannot cover the line above.
+                      const boxed=[...document.querySelectorAll('main b')].filter(e=>{const c=getComputedStyle(e);
+                        if(c.display!=='inline')return false;
+                        const lh=parseFloat(getComputedStyle(e.parentElement).lineHeight)||parseFloat(c.fontSize)*1.6;
+                        const box=['paddingTop','paddingBottom','paddingLeft','paddingRight','marginTop','marginBottom','borderTopWidth','borderBottomWidth'].some(k=>parseFloat(c[k])>0)||c.backgroundColor!=='rgba(0, 0, 0, 0)'||c.backgroundImage!=='none';
+                        const tall=e.classList.contains('fnum')&&[...e.getClientRects()].some(r=>r.height>lh*1.25+2);
+                        return box||tall;}).slice(0,3).map(e=>e.className+':'+e.textContent.trim().slice(0,20));
+                      return {over,imgs,h1,dir,sb,wide,boxed};
                     }""")
                     page.keyboard.press("Tab")
                     first = page.evaluate("document.activeElement && document.activeElement.className")
                     rows.append({"width": w, "lang": lang, "route": r, **res, "first_tab": first,
-                                 "ok": res["over"] <= 1 and res["imgs"] == 0 and res["h1"] == 1 and first == "skip"
+                                 "ok": res["over"] <= 1 and res["imgs"] == 0 and not res["boxed"] and res["h1"] == 1 and first == "skip"
                                        and (res["dir"] == ("rtl" if lang == "ar" else "ltr"))})
             ctx.close()
         b.close()

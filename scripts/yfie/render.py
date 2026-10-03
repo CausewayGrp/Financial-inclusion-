@@ -172,7 +172,7 @@ def fig_emph(html_text: str) -> str:
             in_bdi += 1 if p.startswith("<bdi") else (-1 if p.startswith("</bdi") else 0)
             out.append(p)
         else:
-            out.append(p if in_bdi else _FIG.sub(r'<b class="fig">\1</b>', p))
+            out.append(p if in_bdi else _FIG.sub(r'<b class="fnum">\1</b>', p))
     return "".join(out)
 
 

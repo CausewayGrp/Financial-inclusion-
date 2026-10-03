@@ -1,5 +1,8 @@
 # Host headers for the static site (Part B B14 b; REL-01; the contract is docs/DEPLOYMENT.md, "Security and privacy").
-# Read from the publish root by Cloudflare Pages and Netlify. GitHub Pages cannot set headers (docs/DEPLOYMENT.md).
+# The release host is DigitalOcean (owner decision of 3 October 2026): scripts/hosting_nginx.py writes this file, as
+# relocated under the base path by scripts/build.py --out, into the nginx server block the App Platform service runs,
+# proved in a real nginx by scripts/tests/test_digitalocean_hosting.py. Cloudflare Pages and Netlify read the file as
+# it is; GitHub Pages cannot set headers (docs/DEPLOYMENT.md). Only a trailing '/*' pattern is supported.
 # Source: site-src/hosting/_headers, copied unchanged into dist/ by scripts/build.py; checked by
 # scripts/tests/test_security_headers.py, which serves dist/ with these headers and loads every page.
 # Path rules never overlap, so no host ever joins two values of one header.
@@ -39,8 +42,6 @@
 /assets/lang-redirect.js
   Cache-Control: public, max-age=3600
 /assets/yfie.css
-  Cache-Control: public, max-age=3600
-/assets/CauseWay_Master_Logo.png
   Cache-Control: public, max-age=3600
 /assets/logo/*
   Cache-Control: public, max-age=3600

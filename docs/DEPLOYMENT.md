@@ -71,8 +71,11 @@ font, image or frame, no form (gate F6-G05). The host should send:
 
 `site-src/hosting/_headers` holds the headers above, plus cache rules: five minutes, revalidated, for HTML and the
 search data; an hour for assets whose names are not fingerprinted; thirty days for the canonical fonts.
-`scripts/build.py` copies it unchanged to `dist/_headers`. Cloudflare Pages and Netlify read that file from the publish
-root. Its path rules never overlap, because both hosts would join two values of one header.
+`scripts/build.py` copies it unchanged to `dist/_headers`. The release host is DigitalOcean (owner decision of 3 October
+2026): an App Platform static-site component cannot send these headers, so the site runs as an nginx service, and
+`scripts/hosting_nginx.py` writes the file into its nginx server block (`docs/RELEASE_RUNBOOK.md`, "Hosting";
+proved by `scripts/tests/test_digitalocean_hosting.py`). Cloudflare Pages and Netlify would read the file itself. Its
+path rules never overlap, because such hosts would join two values of one header.
 
 `Strict-Transport-Security` stays commented out until HTTPS is confirmed on the release domain (`docs/RELEASE_RUNBOOK.md`).
 

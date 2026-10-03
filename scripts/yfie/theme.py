@@ -208,7 +208,8 @@ dialog.search::backdrop{background:rgba(23,33,43,.55)}
 .search-input{width:100%;box-sizing:border-box;padding:12px 14px;border:1px solid var(--rule-2);background:var(--paper);font-size:var(--fs-body)}
 .search-input:focus-visible{outline-offset:0}
 .search-status{font-size:var(--fs-clock);color:var(--ink-2);min-height:1.4em}
-b.fig{font-weight:700;font-size:1.08em;font-variant-numeric:lining-nums}
+/* Inline figure emphasis (RC-18 4.1, RC-1115): its own class, inline type only — never the .fig figure frame. */
+b.fnum{font-weight:700;font-size:1.08em;font-variant-numeric:lining-nums}
 .cite-preview{flex-basis:100%;border-top:1px solid var(--rule);padding-top:8px}.cite-preview .cite-h{margin:0;font-size:var(--fs-clock);font-weight:600;color:var(--ink-2)}.cite-preview .cite-text{margin:4px 0 0;font-size:var(--fs-src);color:var(--ink-2);overflow-wrap:anywhere}.cite-preview .cite-text bdi.url,.cite-preview .cite-text bdi[data-cite-url]{display:inline-block;max-width:100%;vertical-align:top;white-space:normal;overflow-wrap:anywhere}.cite-long{margin-top:6px}.cite-long summary{cursor:pointer;font-size:var(--fs-clock);color:var(--ink-2)}.cite-long .tbtn{margin-top:6px}
 .reuse-once{border-inline-start:3px solid var(--rule-2);padding-inline-start:10px}.src-also{margin:8px 0 0;font-size:var(--fs-src)}
 @media print{.cite-preview,[data-print]{display:none}}

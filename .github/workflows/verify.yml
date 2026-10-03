@@ -153,6 +153,11 @@ jobs:
       - name: Base path (owner B2; built for https://causewaygrp.com/financial-inclusion-evidence, served under the path; negative control included)
         run: python3 scripts/tests/test_base_path.py
 
+      - name: DigitalOcean route (owner decision of 3 October 2026; the nginx block of _headers in a real nginx, every page under the header test; negative control included)
+        run: |
+          command -v nginx || sudo apt-get install -y -q nginx-light
+          python3 scripts/tests/test_digitalocean_hosting.py
+
   controls:
     # Every gate that finds its evidence in the built site is proved to still fail on the fault it was written to catch
     # (EAD-01: the cutover re-pointed those selectors, and a selector that silently matches nothing would pass the

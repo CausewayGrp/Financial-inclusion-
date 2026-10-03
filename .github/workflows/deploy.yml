@@ -1,15 +1,17 @@
-# Deploy the site to Cloudflare Pages (Part B B14 c; owner decision B1: the published build, under the origin's path,
-# from scripts/build.py --out). Prepared and inactive: the job runs only when the owner has set the
-# repository variable YFIE_DEPLOY_ENABLED to "true", and it refuses to deploy a build whose public_origin is still
-# null. Until then every run is skipped and nothing is sent anywhere. Steps and the reasons for the host are in
-# docs/RELEASE_RUNBOOK.md ("Hosting").
+# Deploy the site to DigitalOcean App Platform (owner decision of 3 October 2026: production hosting is DigitalOcean, at
+# https://causewaygrp.com/financial-inclusion-evidence/; the published build, under the origin's path, from
+# scripts/build.py --out). Prepared and inactive: the job runs only when the owner has set the repository variable
+# YFIE_DEPLOY_ENABLED to "true", and it refuses to deploy a build whose public_origin is still null or whose licence
+# text counsel has not confirmed. Until then every run is skipped and nothing is sent anywhere. The route, its reasons
+# and the corporate side are in docs/RELEASE_RUNBOOK.md ("Hosting"): an nginx service in our own App Platform app,
+# serving the header contract of _headers (scripts/hosting_nginx.py), reached through the corporate site's proxy.
 #
-# What the owner sets, once a Cloudflare account and the release domain exist (repository Settings → Secrets and variables):
-#   variable  YFIE_DEPLOY_ENABLED     "true" to switch deployment on (absent or anything else: off)
-#   variable  YFIE_CF_PAGES_PROJECT   the Cloudflare Pages project name
-#   secret    CLOUDFLARE_API_TOKEN    an API token limited to "Cloudflare Pages: Edit" on that account
-#   secret    CLOUDFLARE_ACCOUNT_ID   the account ID
-name: Deploy (inactive until the owner switches it on)
+# What the owner sets, once a DigitalOcean account with a container registry exists (Settings → Secrets and variables):
+#   variable  YFIE_DEPLOY_ENABLED         "true" to switch deployment on (absent or anything else: off)
+#   variable  YFIE_DO_REGISTRY            the DigitalOcean Container Registry name
+#   variable  YFIE_DO_APP_ID              the App Platform app id (the first run creates the app and prints it)
+#   secret    DIGITALOCEAN_ACCESS_TOKEN   a token with write access to that registry and to App Platform
+name: Deploy to DigitalOcean (inactive until the owner switches it on)
 
 on:
   push:
@@ -25,7 +27,7 @@ concurrency:
 
 jobs:
   deploy:
-    name: Build, gate and deploy dist/
+    name: Build, gate and deploy the published site
     if: ${{ vars.YFIE_DEPLOY_ENABLED == 'true' }}
     runs-on: ubuntu-24.04
     timeout-minutes: 30
@@ -78,34 +80,40 @@ jobs:
           fi
 
       # Owner decision B1: the published site is `scripts/build.py --out`, which moves every root-absolute address under
-      # the origin's path (dist/ keeps root-relative links for the gates). The Pages project holds the site at that same
-      # path, with the host headers at its root, where Pages reads them; the corporate site forwards the path unchanged
-      # (docs/RELEASE_RUNBOOK.md, "Hosting"). With an origin at a domain root the publish root is dist/'s layout.
-      - name: Build and stage the published site
+      # the origin's path (dist/ keeps root-relative links for the gates). nginx serves it at that same path with the
+      # header contract written from its _headers (scripts/hosting_nginx.py); the corporate site forwards the path
+      # unchanged (docs/RELEASE_RUNBOOK.md, "Hosting"). The block is proved in a real nginx before the image is built.
+      - name: Build, sweep and stage the published site
         run: |
           ORIGIN="$(python3 -c 'import json; print(json.load(open("site-src/deployment.json", encoding="utf-8"))["public_origin"])')"
           BASE="$(python3 -c 'import sys; sys.path.insert(0, "scripts"); import discovery as d; print(d.base_path(d.origin()))')"
-          rm -rf build/site build/publish
+          rm -rf build/site build/do
           python3 scripts/build.py --out build/site
           if [ -n "$BASE" ]; then
             python3 scripts/tests/test_base_path.py --site build/site --origin "$ORIGIN" --no-browser
           fi
-          mkdir -p "build/publish${BASE}"
-          cp -R build/site/. "build/publish${BASE}/"
-          if [ -n "$BASE" ]; then mv "build/publish${BASE}/_headers" build/publish/_headers; fi
-          echo "Publishing ${ORIGIN}/ from build/publish${BASE}/"
+          python3 -m playwright install chromium
+          sudo apt-get install -y -q nginx-light >/dev/null 2>&1 || command -v nginx
+          python3 scripts/tests/test_digitalocean_hosting.py --site build/site
+          python3 scripts/hosting_nginx.py --site build/site --out build/do/default.conf
+          mkdir -p build/do/site && cp -R build/site/. build/do/site/ && rm -f build/do/site/_headers
+          echo "BASE=${BASE#/}" >> "$GITHUB_ENV"
+          echo "Publishing ${ORIGIN}/ from build/do/site/"
 
-      - name: Set up Node for the deploy tool
-        uses: actions/setup-node@820762786026740c76f36085b0efc47a31fe5020 # v7.0.0
-        with:
-          node-version: "22"
-
-      - name: Deploy the published site to Cloudflare Pages
+      - name: Build and push the image to the DigitalOcean Container Registry
         env:
-          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
-          CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
-          PROJECT: ${{ vars.YFIE_CF_PAGES_PROJECT }}
+          DIGITALOCEAN_ACCESS_TOKEN: ${{ secrets.DIGITALOCEAN_ACCESS_TOKEN }}
+          REGISTRY: ${{ vars.YFIE_DO_REGISTRY }}
         run: |
-          test -n "$CLOUDFLARE_API_TOKEN" && test -n "$CLOUDFLARE_ACCOUNT_ID" && test -n "$PROJECT" \
-            || { echo "::error::CLOUDFLARE_API_TOKEN, CLOUDFLARE_ACCOUNT_ID and YFIE_CF_PAGES_PROJECT must all be set"; exit 1; }
-          npx --yes wrangler@4.147.0 pages deploy build/publish --project-name "$PROJECT" --branch main --commit-dirty=false
+          test -n "$DIGITALOCEAN_ACCESS_TOKEN" && test -n "$REGISTRY" \
+            || { echo "::error::DIGITALOCEAN_ACCESS_TOKEN and YFIE_DO_REGISTRY must both be set"; exit 1; }
+          IMAGE="registry.digitalocean.com/${REGISTRY}/yfie-site:${GITHUB_SHA}"
+          docker build --pull -f site-src/hosting/digitalocean/Dockerfile --build-arg "BASE=${BASE}" -t "$IMAGE" build/do
+          echo "$DIGITALOCEAN_ACCESS_TOKEN" | docker login registry.digitalocean.com -u "$DIGITALOCEAN_ACCESS_TOKEN" --password-stdin
+          docker push "$IMAGE"
+
+      - name: Deploy the image to App Platform and wait until it is live
+        env:
+          DIGITALOCEAN_ACCESS_TOKEN: ${{ secrets.DIGITALOCEAN_ACCESS_TOKEN }}
+          APP_ID: ${{ vars.YFIE_DO_APP_ID }}
+        run: python3 scripts/do_deploy.py --tag "$GITHUB_SHA" --app-id "$APP_ID"

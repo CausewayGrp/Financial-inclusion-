@@ -556,3 +556,27 @@ Received in this session as a chat message on 3 October 2026; recorded verbatim.
   - one bilingual reviewer per transaction, reading only the changed pairs;
   - the adversarial reviewer only for names, regulatory statements and new numbers.
   The G0 presentation pass is done in the browser by this session.
+
+## Owner decisions of 3 October 2026, 22:36 Aden (hosting; Findex observed waves)
+
+Received in this session within the owner's execution brief for finishing pull request #9; the two owner statements it
+carries are recorded here, and nothing else from the brief.
+
+**1. Hosting.** Production hosting is DigitalOcean, under CauseWay's domain, at
+`https://causewaygrp.com/financial-inclusion-evidence/`. This replaces the runbook's earlier preference order, in which
+Cloudflare Pages came first. The release conditions do not change: our security headers, cache rules, 404, redirects
+and noindex-until-release must be provable on that platform; the corporate cookie, `X-Robots-Tag` and `X-Powered-By`
+must never reach our responses; rollback must be defined. No credential, DNS state or deployment is to be invented.
+
+**2. Findex observed waves (open item 4.3).** The owner permits, and does not require, showing the three observations
+— 2011, 3.7%, financial-institution accounts only; 2014, 6.4%; the 2021 wave (World Bank data year 2022), 11.9% in
+the areas surveyed — as rows of an existing contract such as RV-CWR-004's people lane, with the definition change
+marked and no connecting line.
+
+**How this session reads it.**
+- **Point 1.** Applied in `docs/RELEASE_RUNBOOK.md` ("Hosting", route 1), `.github/workflows/deploy.yml`,
+  `scripts/hosting_nginx.py`, `site-src/hosting/digitalocean/` and `scripts/tests/test_digitalocean_hosting.py`; the
+  reasoning and what the owner still supplies are in the runbook and the pull request.
+- **Point 2.** A permission, not an instruction: it is used only if an existing contract takes those rows without a new
+  visual family, new Design work or a widened meaning. The disposition is in
+  `audit/release_candidate/OPEN_ITEMS_DISPOSITION.md`.

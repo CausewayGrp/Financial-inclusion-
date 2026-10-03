@@ -176,16 +176,19 @@ python3 scripts/handoff_inventory.py --check
       -m "Tranche C complete — Reading prose held for the independent Reading package" \
       -m "Tree byte-identical to Yemen_Financial_Inclusion_Evidence_TRANCHE_C_COMPLETE_READING_HOLD.zip (SHA-256 63612dea…; full value in audit/directives/D7_FINAL_INTEGRATION_TO_DESIGN_HANDOFF_2026-09-26.md)"
   C=$(git log origin/main -1 --format=%H -F --grep='docs(handoff): design-enablement control pass')
-  git show -s --format='%H %s' "$C"            # check it before tagging
+  git show -s --format='%H %s' "$C"            # check it before tagging: 6d954c17…
+  M=$(git show "$C":authority/Yemen_Financial_Inclusion_Evidence_Master.xlsx | sha256sum | cut -c1-64)
+  echo "$M"                                     # check it: the Master bound at that commit begins 17db032b15da
   git tag -s checkpoint/design-handoff-ready "$C" \
       -m "DESIGN HANDOFF READY — R8.6 closed; post-F9 correction and design-enablement control pass applied" \
-      -m "Master c700dc52bf81966939c6d6ec53afe494d1bf699389c04850f74b9dec436ea7e4"
+      -m "Master $M"
   git push origin checkpoint/tranche-c-complete-reading-hold checkpoint/design-handoff-ready
   ```
 
   The design-handoff tag goes on the commit Claude Design starts from: the design-enablement control-pass commit
   (subject `docs(handoff): design-enablement control pass …`, recorded in `docs/CHANGELOG.md` and in the second addendum
   to `audit/FINAL_CLEAN_ROOM_ACCEPTANCE.md`), whose parent `937bf80` is the post-F9 correction commit — not on whatever
-  `main` has become since; never move an existing checkpoint tag. `.github/workflows/checkpoint.yml` then rebuilds and verifies the archive and attaches it to a
+  `main` has become since; never move an existing checkpoint tag. The tag names the Master bound at that commit, read from the
+  commit itself, never the current Master: a Master transaction since then must not change what the tag records. `.github/workflows/checkpoint.yml` then rebuilds and verifies the archive and attaches it to a
   pre-release.
 - **The owner and release items** in `FINAL_OPEN_ITEMS_REGISTER.md` (OWNER_INPUT and RELEASE_ONLY).

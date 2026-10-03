@@ -25,7 +25,7 @@
   "AUTHORITY_MASTER": 1,
   "AUTHORITY_POINTER": 2,
   "AUTHORITY_RULES": 1,
-  "BUILD_AND_GATES": 30,
+  "BUILD_AND_GATES": 33,
   "CONTROLLED_CONTRACT": 2,
   "CURRENT_DOCUMENT": 13,
   "CURRENT_PROGRAMME_RECORD": 152,
@@ -42,7 +42,7 @@
   "PROJECTION_GENERATOR": 13,
   "RECIPIENT_HANDOFF": 11,
   "REPOSITORY_ENGINEERING": 10,
-  "RUNTIME_SOURCE": 4,
+  "RUNTIME_SOURCE": 6,
   "STANDING_POLICY": 5,
   "VENDORED_FONTS": 27
  },
@@ -6104,6 +6104,10 @@
    "class": "BUILD_AND_GATES"
   },
   {
+   "path": "scripts/do_deploy.py",
+   "class": "BUILD_AND_GATES"
+  },
+  {
    "path": "scripts/exports.py",
    "class": "BUILD_AND_GATES"
   },
@@ -6113,6 +6117,10 @@
   },
   {
    "path": "scripts/handoff_inventory.py",
+   "class": "BUILD_AND_GATES"
+  },
+  {
+   "path": "scripts/hosting_nginx.py",
    "class": "BUILD_AND_GATES"
   },
   {
@@ -6249,6 +6257,10 @@
   },
   {
    "path": "scripts/tests/test_cutover_parity.py",
+   "class": "BUILD_AND_GATES"
+  },
+  {
+   "path": "scripts/tests/test_digitalocean_hosting.py",
    "class": "BUILD_AND_GATES"
   },
   {
@@ -7665,6 +7677,14 @@
   },
   {
    "path": "site-src/hosting/_headers",
+   "class": "RUNTIME_SOURCE"
+  },
+  {
+   "path": "site-src/hosting/digitalocean/Dockerfile",
+   "class": "RUNTIME_SOURCE"
+  },
+  {
+   "path": "site-src/hosting/digitalocean/app_spec.json",
    "class": "RUNTIME_SOURCE"
   },
   {

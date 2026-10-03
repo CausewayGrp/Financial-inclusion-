@@ -21,9 +21,9 @@ authority; everything else here is derived from it, implements it, or records ho
 |---|---|
 | **Position** | **DESIGN HANDOFF READY** — R8.6 closed and the F0–F9 integration programme accepted clean-room ([record](audit/FINAL_CLEAN_ROOM_ACCEPTANCE.md)); the post-F9 correction and the design-enablement control pass of 27 September 2026 applied |
 | **Not declared** | Not PUBLIC RELEASE READY |
-| **Now** | **The release candidate.** Pull request #9 (branch `code/release-candidate-fixes`) implements the owner's decisions of 2 October 2026 ([`audit/OWNER_DECISIONS_2026-10-02.md`](audit/OWNER_DECISIONS_2026-10-02.md)) and the after-merge conditions of pull request #8: three Master transactions (RC-1 truth fixes, RC-2 trust copy, RC-3 governed interface strings), the question sets in the presentation contract (EAD-11), the logo's web-size derivatives (EAD-03; cold pages from about 10.3 MB to under 0.7 MB), each figure's boundary printed once (A3), the retired frame removed from `/reforms/` (A5), the search status with its true total and a result-type filter (A6), and these records reconciled ([`audit/RECORDS_RECONCILIATION_2026-10-02.md`](audit/RECORDS_RECONCILIATION_2026-10-02.md)); Part B of the same pull request finishes, challenges and hardens the product. The brief: [`audit/release_candidate/INSTRUCTIONS.md`](audit/release_candidate/INSTRUCTIONS.md). The Design programme is complete (D0–D7, pull request #7; the owner's D7 acceptance of 2 October 2026) and the production runtime is merged (pull request #8) — see [Design programme](#design-programme--current-state) |
-| **Next** | Independent review of pull request #9. Once it lands, the open items that remain are release-time only ([`FINAL_OPEN_ITEMS_REGISTER.md`](FINAL_OPEN_ITEMS_REGISTER.md) §2): hosting and the public origin, live security headers, the currentness re-run at the release date, and the owner's release acceptance; the post-launch items carry their dispositions in the register |
-| **Owner actions** | Push the two checkpoint tags and delete five merged branches ([below](#checkpoints-and-tags)); decide the OWNER_INPUT and RELEASE_ONLY items in [`FINAL_OPEN_ITEMS_REGISTER.md`](FINAL_OPEN_ITEMS_REGISTER.md) |
+| **Now** | **The release candidate.** Pull request #9 (branch `code/release-candidate-fixes`, draft) carries the owner's decisions of 2 and 3 October 2026 ([`audit/OWNER_DECISIONS_2026-10-02.md`](audit/OWNER_DECISIONS_2026-10-02.md)) and the after-merge conditions of pull request #8: the Master transactions RC-1 … RC-18 ( the table in the pull request and [`docs/CHANGELOG.md`](docs/CHANGELOG.md)), the base path for the decided address, the presentation gate RC-1115, and the DigitalOcean hosting route ([`docs/RELEASE_RUNBOOK.md`](docs/RELEASE_RUNBOOK.md)). The brief: [`audit/release_candidate/INSTRUCTIONS.md`](audit/release_candidate/INSTRUCTIONS.md). The Design programme is complete (D0–D7, pull request #7; the owner's D7 acceptance of 2 October 2026) and the production runtime is merged (pull request #8, `38a9a97`) — see [Design programme](#design-programme--current-state) |
+| **Next** | Independent review of pull request #9. Once it lands, what remains is release-time only ([`docs/RELEASE_RUNBOOK.md`](docs/RELEASE_RUNBOOK.md) steps 1–14; [`FINAL_OPEN_ITEMS_REGISTER.md`](FINAL_OPEN_ITEMS_REGISTER.md) §2): the DigitalOcean account, registry and token, the public origin, the corporate proxy, counsel's confirmation of the licence text, the corrections responder, the currentness re-run at the release date, the live header and in-country checks, and the owner's release acceptance |
+| **Owner actions** | Push the two checkpoint tags and delete six merged branches ([below](#checkpoints-and-tags)); supply the release inputs of [`docs/RELEASE_RUNBOOK.md`](docs/RELEASE_RUNBOOK.md) and decide the OWNER_INPUT and RELEASE_ONLY items in [`FINAL_OPEN_ITEMS_REGISTER.md`](FINAL_OPEN_ITEMS_REGISTER.md) |
 | **Production Master** | `authority/Yemen_Financial_Inclusion_Evidence_Master.xlsx` · SHA-256 `c700dc52bf81966939c6d6ec53afe494d1bf699389c04850f74b9dec436ea7e4` |
 | **Page Specs** | `site-src/content/page_specs.json` · SHA-256 `6e87e36b1db89c7aa4ce31573a3507cbe6bd49d81f5984f2e6bc494dffedff40` |
 | **Logo authority** | `site-src/assets/CauseWay_Master_Logo.png` · SHA-256 `5830163d…` (full value: `logo_sha256` in [`FINAL_REPOSITORY_MANIFEST.json`](FINAL_REPOSITORY_MANIFEST.json)); never redrawn, recoloured, cropped or regenerated |
@@ -231,11 +231,11 @@ Every item, classed and owned, is in [`FINAL_OPEN_ITEMS_REGISTER.md`](FINAL_OPEN
 
 ## Owner actions
 
-1. **Push the two checkpoint tags, and delete the five merged branches** — both are refused to the working sessions
+1. **Push the two checkpoint tags, and delete the six merged branches** — both are refused to the working sessions
    (HTTP 403). The exact tag commands are in [`OPENAI_REENTRY_CHECKPOINT.md` §7](OPENAI_REENTRY_CHECKPOINT.md#7-owner-actions);
    the branches are listed under [Checkpoints and tags](#checkpoints-and-tags).
 2. **Decide the owner inputs** in the register: the CauseWay identity and funding statement, the contact mailbox, the
-   public origin, counsel's confirmation of the CC BY 4.0 text, stewardship, and a reversed logo only if Design asks for one.
+   DigitalOcean hosting inputs and the public origin, counsel's confirmation of the CC BY 4.0 text, stewardship, and a reversed logo only if Design asks for one.
 3. **Before any public release:** the RELEASE_ONLY items, a post-implementation accessibility audit and a named release
    acceptance. Nothing in this repository declares public release readiness.
 
@@ -252,9 +252,10 @@ and attaches it to a pre-release ([`CONTRIBUTING.md` §6](CONTRIBUTING.md#6-chec
 
 A checkpoint tag is never moved or rewritten. Until the tags exist, commits and the changelog identify each state.
 
-Five branches are fully merged into `main` and can be deleted: `claude/dreamy-archimedes-e8qx5v`,
-`claude/bold-maxwell-r3o015`, `claude/epic-cori-60fpeb`, `claude/practical-cray-sr26c5` and
-`design/d0-orientation`. Deleting a branch and pushing a tag are both refused to the working sessions
+Six branches are fully merged into `main` and can be deleted: `claude/dreamy-archimedes-e8qx5v`,
+`claude/bold-maxwell-r3o015`, `claude/epic-cori-60fpeb`, `claude/practical-cray-sr26c5`, `design/d0-orientation`
+and `claude/hopeful-mccarthy-jgip83` (pull request #8). `code/base-path-hosting` is merged into pull request #9 and can
+go once that lands. Deleting a branch and pushing a tag are both refused to the working sessions
 (HTTP 403), so both are owner actions.
 
 ## Where to find everything

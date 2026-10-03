@@ -3227,6 +3227,65 @@ try:
 except Exception as _x:
     errors.append("RC-B13 unreadable " + repr(_x))
 
+# RC-1115 (owner note of 3 October 2026, 11:15, points 4.1, 4.2 and 4.5; RC-18): the presentation rules RC-18 built.
+# (1) An inline figure is emphasised with its own class, b.fnum, which carries no box styling — never the .fig figure
+#     frame (the B.0 defect: padding, margin, border and background covered the line above) — and Home's first figure
+#     group opens its first sentence's figures with an emphasised one, in both languages; (2) a record with a q3 section names FOR WHOM in its head,
+#     before its h1; (3) Home section 6 links the drawn payment chain; (4) every page has exactly one icon link, to the
+#     32 px derivative; (5) the master logo is not shipped; (6) /measurement/ prints the dimensions on the same cards in
+#     English and Arabic, with equal item counts. The browser half of (1) is in viewport_acceptance.py.
+try:
+    _css = (DIST / "assets" / "yfie.css").read_text(encoding="utf-8")
+    for _sel, _body in re.findall(r'([^{}]*\.fnum\b[^{}]*)\{([^{}]*)\}', _css):
+        if re.search(r'(^|;)\s*(padding|margin|border|background|container-type)', _body):
+            errors.append(f"RC-1115 the inline figure emphasis carries box styling: {_sel.strip()[:60]}")
+    if not re.search(r'(^|[}\s,])b\.fnum\{', _css):
+        errors.append("RC-1115 the stylesheet has no b.fnum rule")
+    _nfr = 0
+    for _f in sorted(DIST.rglob("*.html")):
+        _h = _f.read_text(encoding="utf-8")
+        if re.search(r'<(?!figure\b)[a-z]+ class="(?:[^"]* )?fig(?: [^"]*)?"', _h):
+            errors.append(f"RC-1115 {_f.relative_to(DIST)} an element other than a figure carries the .fig frame class")
+        _ic = re.findall(r'<link rel="[^"]*icon[^"]*"[^>]*>', _h)
+        if len(_ic) != 1 or 'href="/assets/logo/CauseWay_logo_32.png"' not in _ic[0]:
+            errors.append(f"RC-1115 {_f.relative_to(DIST)} does not carry exactly one icon link to the 32 px logo")
+        _nfr += 1
+    if _nfr < 280:
+        errors.append(f"RC-1115 read only {_nfr} pages")
+    if list(DIST.rglob("CauseWay_Master_Logo.png")):
+        errors.append("RC-1115 the master logo is shipped in dist/")
+    _ma = {}
+    for _lang in ("en", "ar"):
+        _h = (DIST / _lang / "index.html").read_text(encoding="utf-8")
+        _s3 = _h.split('id="s3"', 1)[1].split("</section>", 1)[0] if 'id="s3"' in _h else ""
+        _first = re.search(r'<p class="sent">(.*?)</p>', _s3, re.S)
+        _d1 = re.search(r'(?:^|>)[^<]*?\d', _first.group(1)) if _first else None   # the sentence's first figure
+        if not _d1 or not _first.group(1)[:_d1.start() + 1].endswith('<b class="fnum">'):
+            errors.append(f"RC-1115 /{_lang}/ Home's first figure group does not carry an emphasised figure")
+        _s6 = _h.split('id="s6"', 1)[1].split("</section>", 1)[0] if 'id="s6"' in _h else ""
+        if f'href="/{_lang}/evidence/VIS-PAYMENT-RAILS/"' not in _s6:
+            errors.append(f"RC-1115 /{_lang}/ Home section 6 does not link the drawn payment chain")
+        _m = (DIST / _lang / "measurement" / "index.html").read_text(encoding="utf-8")
+        _ma[_lang] = {_cid: len(re.split(r"[,،]", _d.group(1)))
+                      for _cid, _b in re.findall(r'<article class="obj prio" id="([^"]+)"(.*?)</article>', _m, re.S)
+                      for _d in [re.search(r'<p data-ma-dimensions><b>[^<]*</b>(.*?)</p>', _b)] if _d}
+    if not _ma["en"] or _ma["en"] != _ma["ar"]:
+        errors.append(f"RC-1115 /measurement/ does not print the dimensions on the same cards with equal counts: en {_ma['en']} ar {_ma['ar']}")
+    _nq3 = 0
+    for _f in sorted(DIST.glob("*/evidence/*/index.html")):
+        _h = _f.read_text(encoding="utf-8")
+        _q3 = re.search(r'id="q3"><h2 class="rubric"><span class="n">03</span>([^<]*)</h2><div class="body"><p>(.*?)</p>', _h)
+        if not _q3 or not _q3.group(2).strip():
+            continue
+        _nq3 += 1
+        _head = _h.split('<div class="head">', 1)[1].split('<h1', 1)[0] if '<div class="head">' in _h else ""
+        if f'<div class="clock"><span class="k">{_q3.group(1)}</span><span class="v">{_q3.group(2)}</span></div>' not in _head:
+            errors.append(f"RC-1115 {_f.relative_to(DIST)} has a q3 section but no FOR WHOM clock before its h1")
+    if _nq3 < 200:
+        errors.append(f"RC-1115 only {_nq3} records with a q3 section")
+except Exception as _x:
+    errors.append("RC-1115 unreadable " + repr(_x))
+
 print(f'HTML={len(list(DIST.rglob("*.html")))} ERRORS={len(errors)} WARN={len(warns)}')
 if warns:
     for w in warns[:20]: print('WARN',w)

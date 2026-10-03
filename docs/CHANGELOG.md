@@ -1,5 +1,63 @@
 # Repository Change Log
 
+## 2026-10-03 — RC-1115: the inline-figure defect fixed and the presentation gate; 4.6 records; DigitalOcean hosting
+
+**B.0, a release defect from RC-18 (`f7deaac`).** RC-18 emphasised inline figures as `<b class="fig">`, but `.fig` is
+the figure frame in the stylesheet (background, padding, margin, a 3 px top border). Every emphasised figure therefore
+rendered as a padded box that covered the line above it: on Home at 390 px in Arabic, the 5.44% box hid «الرجال» and
+the 23% box overprinted «البنك الدولي 2022)»; on CLM-001 at 1440 px in English, the 11.9% box covered "ownership". The
+browser suites passed, because nothing tested for it.
+- **Reproduced first.** `audit/tranche_c/checks/viewport_acceptance.py` now fails when an inline `<b>` in `<main>`
+  carries box styling, or an emphasised figure is taller than its line. On the unfixed build: 18 of 168 page-width
+  checks failed, on Home and CLM-001, in both languages and at all four widths.
+- **Fixed in its owning layer** (no Master change): the renderer emphasises a figure with its own class, `b.fnum`
+  (`scripts/yfie/render.py`), and the stylesheet styles that class with weight and size only
+  (`scripts/yfie/theme.py`). The `.fig` frame rules are untouched. 168 of 168 pass, and Home in Arabic at 390 px and
+  CLM-001 in English at 1440 px were checked by eye.
+
+**RC-1115, the presentation gate** (`scripts/validate.py`), with one negative control per assertion
+(`scripts/tests/test_gate_negative_controls.py`; 8 of 8 caught):
+1. `b.fnum` carries no padding, margin, border, background or container type; no element except a `<figure>` carries
+   the `.fig` class (the B.0 regression); the first sentence of Home's first figure group opens its figures with an
+   emphasised one, in English and Arabic. The handoff's assertion of `<b class="fig">` would have locked the defect in,
+   so it was replaced.
+2. Every Evidence Record with a q3 section names FOR WHOM in its head, before the h1, with the same label and value.
+3. Home section 6 links `/evidence/VIS-PAYMENT-RAILS/`.
+4. Every HTML page has exactly one icon link, to `/assets/logo/CauseWay_logo_32.png`.
+5. `CauseWay_Master_Logo.png` is not in `dist/`.
+6. `/measurement/` prints `data-ma-dimensions` on the same cards in English and Arabic, with equal item counts.
+
+**4.6, current-state records.**
+- `OPENAI_REENTRY_CHECKPOINT.md` §7: the tag command for `checkpoint/design-handoff-ready` printed the *current*
+  Master hash, which is wrong for that commit and which every rebind rewrites. It now reads the hash from the tagged
+  commit itself (`git show "$C":authority/…xlsx | sha256sum`) and says what to expect (`17db032b15da…`). No 64-hex
+  literal is added, so the P4-G04 gate and `scripts/rebind_authority.py` need no lineage entry. The lineage entry that
+  the handoff planned is therefore not added: once nothing prints that hash, nothing needs to whitelist it.
+- `authority/YFI_CURRENT_PROJECT_CONTEXT.json`: `programme_state` names pull request #8 ("code: the production runtime —
+  EAD-01 to EAD-11") as merged into `main` at `38a9a97` on 2 October 2026, and pull request #9 as the release
+  candidate. It no longer says that the runtime "is pull request #8".
+- `README.md`: the present-state rows (Now, Next, Owner actions; six merged branches).
+
+**Hosting: DigitalOcean** (owner decision of 3 October 2026, 22:36 Aden; recorded in
+`audit/OWNER_DECISIONS_2026-10-02.md`).
+- Verified again with one read-only request: `causewaygrp.com` is not on App Platform. It resolves to the single
+  DigitalOcean address `206.189.57.121` and sends no Cloudflare edge headers. An App Platform static-site component
+  cannot send our security headers. So the route is our own App Platform app running an nginx **service**, reached
+  through the corporate site's proxy middleware, which was already adversarially tested.
+- `scripts/hosting_nginx.py` writes the nginx server block from the published site's `_headers`, so the header
+  contract stays one file. `scripts/tests/test_digitalocean_hosting.py` runs that block in a real nginx and loads
+  every page through `test_security_headers.py --base`: 288 pages, 0 problems. It also checks the relative 301s,
+  every `Cache-Control`, the sitemap's type and a 404 outside the path, and its negative control (X-Frame-Options
+  removed) is caught. It runs in CI's browser job.
+- `site-src/hosting/digitalocean/` holds the Dockerfile and the app specification. `scripts/do_deploy.py` and
+  `.github/workflows/deploy.yml` are retargeted from Cloudflare Pages to the DigitalOcean Container Registry and App
+  Platform. The workflow is still inactive until the owner switches it on, and still refuses a null origin or an
+  unconfirmed licence text.
+- `docs/RELEASE_RUNBOOK.md`: DigitalOcean is route 1. The same nginx block on the corporate Droplet is route 2. The
+  rejected static-site component is recorded with its reason. A subdomain on the same app is the fallback. Cloudflare
+  Pages is removed.
+- The stale `_headers` rule for the master logo, which is no longer shipped, is removed.
+
 ## 2026-10-03 — CI: the negative controls split across six runners; the validator 38 s → 25 s; one control re-aimed
 
 The first CI run of the parallel harness (run 37117577689, on `f7deaac`) did not go green:

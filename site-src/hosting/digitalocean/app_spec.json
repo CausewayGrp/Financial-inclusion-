@@ -1,0 +1,27 @@
+{
+  "name": "yfie-financial-inclusion-evidence",
+  "services": [
+    {
+      "name": "site",
+      "image": {
+        "registry_type": "DOCR",
+        "repository": "yfie-site",
+        "tag": "SET_BY_THE_DEPLOY_WORKFLOW"
+      },
+      "http_port": 8080,
+      "instance_count": 1,
+      "instance_size_slug": "apps-s-1vcpu-0.5gb",
+      "health_check": {
+        "http_path": "/financial-inclusion-evidence/"
+      }
+    }
+  ],
+  "ingress": {
+    "rules": [
+      {
+        "match": {"path": {"prefix": "/"}},
+        "component": {"name": "site"}
+      }
+    ]
+  }
+}

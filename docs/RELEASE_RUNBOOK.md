@@ -10,16 +10,16 @@ step; the route on `causewaygrp.com` is CauseWay's web administrator's ("Hosting
 Written for someone who has never seen this repository. The steps table further down says who decides what; this page
 says how to do it and what you should see. `$B` is the address being checked:
 `https://causewaygrp.com/financial-inclusion-evidence` once the corporate route exists, or
-`https://<project>.pages.dev/financial-inclusion-evidence` before it.
+`https://<app>.ondigitalocean.app/financial-inclusion-evidence` (the App Platform app's own address) before it.
 
 **Before you start**
 
-- Python 3.11 and Git. Node.js 22 only to deploy by hand with `npx wrangler`.
+- Python 3.11, Git and nginx (`apt-get install nginx-light`; the GitHub runner image has it).
 - `git clone https://github.com/CausewayGrp/Financial-inclusion-.git && cd Financial-inclusion-`
 - `python3 -m pip install -r requirements.txt`, then `python3 -m playwright install chromium` for the browser tests.
-- A Cloudflare Pages project whose production branch is `main`:
-  `npx wrangler pages project create <project> --production-branch main`. A deployment to any other branch is a
-  preview: Pages marks it `X-Robots-Tag: noindex` and does not serve it at `<project>.pages.dev`.
+- A DigitalOcean account with a Container Registry, and a personal access token with write access to that registry
+  and to App Platform, stored as the repository secret `DIGITALOCEAN_ACCESS_TOKEN`; the variables `YFIE_DO_REGISTRY`
+  and, after the first deploy has created the app, `YFIE_DO_APP_ID` (step 7).
 - The owner's dated lines in `audit/OWNER_DECISIONS_*.md` for steps 2 and 7a (step 13 only at release).
   `site-src/deployment.json` then has `public_origin` set and `licence_text_confirmed: true`. The deploy workflow
   refuses to publish otherwise.
@@ -27,17 +27,21 @@ says how to do it and what you should see. `$B` is the address being checked:
 **Build and check**, each command with the last line it must print:
 
 ```bash
-python3 scripts/checksums.py --check            # CHECKSUM MANIFEST CURRENT: <n> files
-python3 scripts/validate.py                     # WEBSITE REPOSITORY VALIDATION PASS
-python3 scripts/build.py --out build/site       # Built <n> HTML files from <n> controlled page specs … under /financial-inclusion-evidence
-python3 scripts/tests/test_base_path.py         # BASE PATH: PASS — https://causewaygrp.com/financial-inclusion-evidence/
-python3 scripts/tests/test_security_headers.py  # SECURITY HEADERS: PASS — … 0 problems
+python3 scripts/checksums.py --check                 # CHECKSUM MANIFEST CURRENT: <n> files
+python3 scripts/validate.py                          # WEBSITE REPOSITORY VALIDATION PASS
+python3 scripts/build.py --out build/site            # Built <n> HTML files from <n> controlled page specs … under /financial-inclusion-evidence
+python3 scripts/tests/test_base_path.py              # BASE PATH: PASS — https://causewaygrp.com/financial-inclusion-evidence/
+python3 scripts/tests/test_security_headers.py       # SECURITY HEADERS: PASS — … 0 problems
+python3 scripts/tests/test_digitalocean_hosting.py   # DIGITALOCEAN HOSTING: PASS — the nginx block of _headers, … 0 problems
 ```
 
-**Deploy.** Merge the approved pull request into `main`, or run the "Deploy" workflow by hand (GitHub → Actions →
-Deploy → Run workflow). It refuses a null origin or an unconfirmed licence text, runs the gates, builds the site under
-its path, sweeps it, and uploads it. Done when the run is green and `https://<project>.pages.dev/financial-inclusion-evidence/`
-opens the Arabic edition.
+**Deploy.** Merge the approved pull request into `main`, or run the "Deploy to DigitalOcean" workflow by hand (GitHub →
+Actions → Run workflow). It refuses a null origin or an unconfirmed licence text, runs the gates, builds the site
+under its path, sweeps it, proves its nginx block in a real nginx, builds the image
+(`site-src/hosting/digitalocean/Dockerfile`), pushes it to the registry tagged with the commit, points the app at it
+(`scripts/do_deploy.py`) and waits until App Platform reports the deployment ACTIVE. The first run, with
+`YFIE_DO_APP_ID` unset, creates the app and prints its id. Done when the run is green and
+`https://<app>.ondigitalocean.app/financial-inclusion-evidence/` opens the Arabic edition.
 
 **The ten-minute check**, after every deploy:
 
@@ -49,8 +53,8 @@ done
 #   every address: HTTP 200 (the last one: 404) and a content-security-policy line;
 #   never a set-cookie, x-robots-tag or x-powered-by line, and no location line
 curl -sSL -o /dev/null -w '%{http_code} %{num_redirects}\n' "$B"           # 200 1   (the bare address: one redirect to "$B/")
-curl -sSI "$B/en/payments" | grep -iE '^(HTTP|location)'                     # 308, location: /financial-inclusion-evidence/en/payments/
-#                                                                              (never a pages.dev host)
+curl -sSI "$B/en/payments" | grep -iE '^(HTTP|location)'                     # 301, location: /financial-inclusion-evidence/en/payments/
+#                                                                              (relative: never an ondigitalocean.app host)
 curl -s "$B/en/" | grep -c 'name="robots" content="noindex, nofollow"'       # 1 before step 13; 0 after it
 curl -sSI "$B/sitemap.xml" | grep -iE '^(HTTP|content-type)'                 # 200 and application/xml
 python3 scripts/tests/test_security_headers.py --base "$B"                   # SECURITY HEADERS: PASS — … 0 problems
@@ -59,14 +63,14 @@ YFIE_BASE_URL="$B" python3 scripts/tests/test_public_tools.py               # PU
 
 `test_security_headers.py --base` loads every page and reads every response with all its headers. It fails on any
 `Set-Cookie`, `X-Robots-Tag` or `X-Powered-By`, on any cookie the browser holds afterwards, on a missing page that does
-not answer 404, and on a bare address that does not answer one permanent redirect to `$B/` (301 from the
-corporate route, 308 from Pages itself). Finish by opening `$B/` on a phone: the Arabic
-edition opens, the language switch works, and a search for "remittances" finds results.
+not answer 404, and on a bare address that does not answer one permanent redirect to `$B/` (301, from the corporate
+route or from nginx itself). Finish by opening `$B/` on a phone: the Arabic edition opens, the language switch works,
+and a search for "remittances" finds results.
 
 **Roll back.**
 
-1. Cloudflare dashboard → Workers & Pages → the project → Deployments → the last good deployment → ⋯ → "Rollback to
-   this deployment". This takes effect at once, and nothing else changes.
+1. DigitalOcean control panel → Apps → the app → Activity → the last good deployment → "Rollback". App Platform keeps
+   the recent successful deployments, and the rollback takes effect without a rebuild; nothing else changes.
 2. If the corporate route misbehaves, remove `server/middleware/0.financial-inclusion-evidence.ts` from CauseWay's
    frontend and redeploy the corporate site. The path then answers with the corporate site's own 404.
 3. In this repository, revert the faulty commit on a branch (`git revert <commit>`). When CI is green, merge it, and
@@ -94,7 +98,6 @@ read-only request (`curl -sI https://causewaygrp.com/`) and a DNS lookup. Nothin
 
 What follows from them:
 
-- DNS is not on Cloudflare, so a Cloudflare Worker route on `causewaygrp.com` is not available as things stand.
 - App Platform serves apps through its built-in Cloudflare CDN, whose responses carry `cf-ray` and `server: cloudflare`.
   This response carried neither, and the domain resolves to one DigitalOcean address. That suggests the corporate site
   does not run on App Platform; it is more likely a Droplet. The web administrator confirms it.
@@ -121,8 +124,8 @@ The checks are the ten-minute check of "Deploy and verify", run on the live addr
 - `scripts/tests/test_base_path.py` builds the decided origin into a temporary directory and serves it under the path.
   It sweeps every file, drives the public tools at 390 and 1440 px in both languages, and fails on any request that
   leaves the path. It runs in CI on every pull request, with its own negative control.
-- The deploy workflow builds the published site, sweeps it with the same test, and uploads a publish root that holds
-  the site under `financial-inclusion-evidence/` and `_headers` at the root, where Pages reads it.
+- The deploy workflow builds the published site, sweeps it with the same test, proves its nginx block in a real nginx,
+  and ships it as an image that holds the site under `financial-inclusion-evidence/` (route 1).
 - Every page declares its icon, the 32 px derivative under `assets/logo/` (RC-18), so browsers no longer ask the domain
   root for `/favicon.ico`, and no request leaves the path.
 - The build checks every slash-leading string in the runtime, not only the ones that name a folder of the site. After
@@ -132,22 +135,42 @@ The checks are the ten-minute check of "Deploy and verify", run on the live addr
   control proves that it does.
 - No host has been tested from inside Yemen. Step 10 asks a person with local access to open the live site before the
   owner accepts the release. GitHub Pages is not an option, because it cannot send security headers
-  (`docs/DEPLOYMENT.md`); Netlify, the earlier alternative, reads the same `_headers` but is not one of the three routes.
+  (`docs/DEPLOYMENT.md`).
 
-### Route 1, preferred: our own Cloudflare Pages project, reached through the corporate site
+### Route 1, decided: our own App Platform app, an nginx service, reached through the corporate site
+
+Owner decision of 3 October 2026 (22:36 Aden): production hosting is DigitalOcean, under CauseWay's domain, at
+`https://causewaygrp.com/financial-inclusion-evidence/`. It replaces the earlier preference for a Cloudflare Pages
+project, which this runbook no longer describes.
 
 ```text
-reader → causewaygrp.com (DigitalOcean DNS → the corporate Nuxt application)
-           └─ /financial-inclusion-evidence/**  → proxy, path unchanged →  https://<project>.pages.dev/financial-inclusion-evidence/**
+reader → causewaygrp.com (DigitalOcean DNS → the corporate Nuxt application on its Droplet)
+           └─ /financial-inclusion-evidence/**  → proxy, path unchanged →  https://<app>.ondigitalocean.app/financial-inclusion-evidence/**
+                                                                            (App Platform service: nginx, site-src/hosting/digitalocean/)
 ```
 
-- **Our side (this repository).** The deploy workflow publishes the site as described above. The Pages project's own
-  address, `https://<project>.pages.dev/financial-inclusion-evidence/`, is the same site. Steps 9 and 10 can therefore
-  test it before the proxy exists.
-- **The corporate side.** This is a later, separate task in CauseWay's own frontend repository, not part of this pull
-  request. The code below is guidance only. It is one server middleware, not `routeRules`. The adversarial
-  verification of 3 October 2026 ran both in a real Nitro 2.13.4 server in front of a stand-in for Pages, and found
-  that `routeRules` cannot do this job:
+Why this shape, from facts that can be checked:
+
+- **The corporate site does not run on App Platform.** Re-checked on 3 October 2026 at about 19:50 UTC with one
+  read-only request: `causewaygrp.com` still resolves to the single DigitalOcean address `206.189.57.121`, and the
+  response carries `x-powered-by: Nuxt`, the `session` cookie and the `x-robots-tag`, but no `cf-ray` or
+  `server: cloudflare` (App Platform serves through its Cloudflare edge). So our site cannot simply be a component of
+  the corporate app at the subpath; the corporate site has to forward the path to a separate deployment.
+- **A static-site component cannot send our headers** (route 2 below), so the separate deployment is a *service*: an
+  nginx image holding the published site under its path. Its server block is written by `scripts/hosting_nginx.py`
+  from the site's own `_headers`, so the header contract stays one file. `scripts/tests/test_digitalocean_hosting.py`
+  runs that block in a real nginx in CI and loads every page through `test_security_headers.py --base`, with a
+  negative control.
+
+- **Our side (this repository).** The deploy workflow builds the image and deploys it ("Deploy and verify"). The app's
+  own address, `https://<app>.ondigitalocean.app/financial-inclusion-evidence/`, is the same site, so steps 9 and 10
+  can test it before the proxy exists. App specification: `site-src/hosting/digitalocean/app_spec.json` (one service,
+  port 8080, health check on the base path, the smallest instance). It has not yet been run against DigitalOcean; the
+  first deploy (step 8) is its test.
+- **The corporate side.** A later, separate task in CauseWay's own frontend repository, not part of this pull request.
+  The code below is guidance only. It is one server middleware, not `routeRules`. The adversarial verification of
+  3 October 2026 ran both in a real Nitro 2.13.4 server in front of a stand-in host, and found that `routeRules`
+  cannot do this job:
   - a redirect rule for the bare path also matches the address with its slash, so the release address redirects to
     itself forever;
   - a route-rule proxy cannot remove response headers, so the corporate `session` cookie, `x-robots-tag` and
@@ -157,7 +180,7 @@ reader → causewaygrp.com (DigitalOcean DNS → the corporate Nuxt application)
   The middleware below did the job in the same test:
   - it removed those three headers;
   - it sent an empty `Cookie` upstream;
-  - it passed our host's 308 on with its relative `Location`;
+  - it passed our host's redirect on with its relative `Location`;
   - it answered the bare path with one 301, without a loop;
   - it left `/financial-inclusion-evidencex` alone.
 
@@ -166,7 +189,7 @@ reader → causewaygrp.com (DigitalOcean DNS → the corporate Nuxt application)
   // Remove any routeRules entry for /financial-inclusion-evidence.
   import { proxyRequest, sendRedirect } from 'h3'
   const BASE = '/financial-inclusion-evidence'
-  const UPSTREAM = 'https://<project>.pages.dev'
+  const UPSTREAM = 'https://<app>.ondigitalocean.app'
   const STRIP = ['set-cookie', 'x-robots-tag', 'x-powered-by']
   export default defineEventHandler((event) => {
     const path = event.path.split('?')[0]
@@ -181,72 +204,74 @@ reader → causewaygrp.com (DigitalOcean DNS → the corporate Nuxt application)
   ```
 
   If nginx sits in front of the Nuxt process, the same forward can be set there instead, with the same effect:
-  `location /financial-inclusion-evidence/ { proxy_pass https://<project>.pages.dev; proxy_set_header Host <project>.pages.dev;
+  `location /financial-inclusion-evidence/ { proxy_pass https://<app>.ondigitalocean.app; proxy_set_header Host <app>.ondigitalocean.app;
   proxy_ssl_server_name on; proxy_set_header Cookie ""; proxy_hide_header Set-Cookie; proxy_hide_header X-Robots-Tag;
   proxy_hide_header X-Powered-By; }`, plus `location = /financial-inclusion-evidence { return 301 /financial-inclusion-evidence/; }`.
 
-- **Security headers.** Pages sends them from `_headers`, and the middleware passes them through unchanged. The checks
-  of "Deploy and verify" apply unchanged.
+- **Security headers.** nginx sends them from the generated block, on every response under the path (`always`: the
+  404 and the redirects too); the middleware passes them through unchanged. The checks of "Deploy and verify" apply
+  unchanged. nginx answers a directory without its slash with a 301 whose `Location` is relative
+  (`absolute_redirect off`), so the app's own host name never reaches the reader.
+- **Cache.** The block sends the `Cache-Control` of `_headers`. App Platform's edge sits in front of the service; the
+  ten-minute check reads the `Cache-Control` the reader actually receives, and step 10 records it. If the edge holds a
+  page longer than five minutes, a corrected record reaches readers later: record it, and purge the edge cache
+  (the app's Settings) after a correction.
 - **Nothing corporate added.**
-  - The proxy returns the Pages response body unchanged, so no corporate script is written into our pages. That is
-    the guarantee. Under this route our policy's `'self'` is `https://causewaygrp.com`, so `script-src 'self'` would
-    also allow the corporate site's own scripts (`/_nuxt/…`). It blocks inline scripts, but it does not separate us
-    from the corporate site.
+  - The proxy returns our response body unchanged, so no corporate script is written into our pages. That is the
+    guarantee. Under this route our policy's `'self'` is `https://causewaygrp.com`, so `script-src 'self'` would also
+    allow the corporate site's own scripts (`/_nuxt/…`). It blocks inline scripts, but it does not separate us from
+    the corporate site.
   - The web administrator confirms that no service worker is registered with scope `/` on `causewaygrp.com`. A service
     worker at that scope could reach our pages. On 3 October 2026, `/sw.js` answered 404.
   - `headers: { cookie: '' }` replaces the incoming `Cookie` header, so the `session` cookie never reaches our host.
-  - Pages sends no `Set-Cookie`. The corporate application sets its `session` cookie and its `x-robots-tag` before
-    routing; it does so even on its own 404 for this path. The middleware removes both from our responses.
-    `test_security_headers.py --base` fails if either is still there, and it must pass before release.
-- **Do not** add a host rule `https://<project>.pages.dev/*` with `X-Robots-Tag: noindex` to `_headers`. The proxy
-  fetches from that host, so the header would reach `causewaygrp.com`. The `pages.dev` copy does not compete in search,
-  because every page's canonical names `causewaygrp.com`.
-- **Rollback.** Pages keeps every deployment, and "Rollback to this deployment" restores the previous one at once. The
-  proxy needs no change. If the proxy itself misbehaves, removing the middleware file (one commit in the frontend
-  repository) takes the path down; route 3 can then be used.
+  - nginx sends no `Set-Cookie`. The corporate application sets its `session` cookie and its `x-robots-tag` before
+    routing; it does so even on its own 404 for this path. The middleware removes both from our responses, and any
+    header the App Platform edge might add of the three. `test_security_headers.py --base` fails if one is still
+    there, and it must pass before release.
+- **The app's own address.** `<app>.ondigitalocean.app` serves the same pages. They do not compete in search, because
+  every page's canonical names `causewaygrp.com` and, until step 13, every page says `noindex, nofollow`.
+- **Rollback.** App Platform's Activity tab rolls back to an earlier successful deployment at once; each image is
+  also kept in the registry under its commit. The proxy needs no change. If the proxy itself misbehaves, removing the
+  middleware file (one commit in the frontend repository) takes the path down; route 3 can then be used.
+- **Cost and region.** One service at the smallest instance size, plus the registry. The region is the owner's choice
+  (add `"region"` to the app specification, or move the app in the control panel); it is not a release condition.
 
-### Route 2, equivalent: a DigitalOcean App Platform static-site component at `/financial-inclusion-evidence`
+### Route 2, alternative: the same nginx block on the corporate Droplet, with no proxy
 
-This route was to be used only if the corporate site runs on App Platform and our security headers can be served.
-DigitalOcean's current documentation, read on 3 October 2026, settles the second condition:
+If the corporate Droplet's front server is nginx, and the web administrator prefers it, the published site can be
+served from the Droplet itself: copy `build/site` (without `_headers`) to a directory on the Droplet, and include the
+generated block's `location` sections in the existing `causewaygrp.com` server, with `root` pointing at the directory
+that holds `financial-inclusion-evidence/`. There is then no proxy hop and the corporate application never sees the
+path. Conditions: the corporate server must not set `add_header` lines that the included locations would not replace
+(nginx inherits none into a location that sets its own, which the block does), and deployment becomes a copy to the
+Droplet (an SSH key as a repository secret) instead of an image. It is not the decided route because it couples our
+deploys and rollback to the corporate server; the front server is not visible from outside (the response carries no
+`server` header).
 
-- **Headers: no.** A static-site component cannot send custom response headers. The app specification has no header
-  field for static sites or ingress rules. Only CORS headers can be configured. Static sites are served with App
-  Platform's own `Cache-Control`: 24 hours at the edge and 10 seconds in the browser, and edge caching
-  cannot be turned off for apps with static sites. The public feature request for static-site headers is still open. So `Content-Security-Policy`,
-  `X-Frame-Options`, `Permissions-Policy` and the other headers of `_headers` cannot be sent this way.
-- **Path prefix.** An ingress rule that matches the prefix `/financial-inclusion-evidence` sends the request to the
-  component. By default App Platform trims the matched prefix, so `/financial-inclusion-evidence/en/` reaches the
-  component as `/en/`. `preserve_path_prefix: true` keeps it. With the default, the component would serve
-  `build/site` as built, with `404.html` as its error document.
-- **Rollback** would be App Platform's own: the app's Activity tab can roll back to any of the ten most recent
-  successful deployments.
-- **Decision.** This route cannot serve our security headers, so the proxy route stands. In any case the corporate site
-  does not appear to run on App Platform (see above). Re-check at release only if DigitalOcean ships static-site
-  headers.
-
-Sources: DigitalOcean, "How to Manage Static Sites in App Platform" (last verified 13 July 2026); "Reference for App
-Specification" (1 September 2026); "How to Configure Edge Settings in App Platform" (29 June 2026); "How to Manage
-Deployments in App Platform"; and the feature request "Static site headers and routing" on ideas.digitalocean.com.
+A DigitalOcean App Platform **static-site** component at the subpath was examined and rejected on 3 October 2026,
+from DigitalOcean's documentation: a static-site component cannot send custom response headers (the app
+specification has no header field for static sites or ingress rules; only CORS headers can be set), and static sites
+are served with App Platform's own `Cache-Control`. `Content-Security-Policy`, `X-Frame-Options`,
+`Permissions-Policy` and the other headers of `_headers` could not be sent that way. Sources: DigitalOcean, "How to
+Manage Static Sites in App Platform"; "Reference for App Specification"; "How to Configure Edge Settings in App
+Platform"; the feature request "Static site headers and routing" on ideas.digitalocean.com. Re-check only if
+DigitalOcean ships static-site headers.
 
 ### Route 3, fallback: `evidence.causewaygrp.com`, with a 301 from the subpath
 
 - **Origin.** `public_origin` is `https://evidence.causewaygrp.com`, with no path. The base path is then empty, and the
-  published site has the same layout as `dist/`.
-- **DNS and host.** The same Pages project serves the site at its root. In this order:
-  1. Add `evidence.causewaygrp.com` under the Pages project's Custom domains.
-  2. Create one CNAME, `evidence` → `<project>.pages.dev`, in DigitalOcean DNS.
-
-  With the CNAME first, Cloudflare answers the domain with error 522. Pages accepts a subdomain on outside DNS through
-  a CNAME; the apex would need the zone on Cloudflare.
+  published site has the same layout as `dist/`; `scripts/hosting_nginx.py` writes the block for the root.
+- **DNS and host.** The same App Platform app serves the site under a custom domain: add `evidence.causewaygrp.com`
+  in the app's Settings → Domains (App Platform issues the certificate), and, because the domain's DNS is at
+  DigitalOcean, let App Platform create the record or add the CNAME it names.
 - **The 301.** The corporate application redirects the old path. Use the same middleware form as route 1, so that the
   bare path and the path with a slash are told apart:
   `if (path === BASE || path.startsWith(BASE + '/')) return sendRedirect(event, 'https://evidence.causewaygrp.com' + (event.path.slice(BASE.length) || '/'), 301)`.
-- **Security headers.** Pages serves them from `_headers` directly. The corporate application answers only the 301.
+- **Security headers.** nginx serves them directly. The corporate application answers only the 301.
 - **Nothing corporate added.** Our pages are on another host name. The `session` cookie is host-only (it has no
   `Domain` attribute), so browsers do not send it to `evidence.causewaygrp.com`. The 301 response may carry the
   corporate cookie and robots header, but it has no content.
-- **Rollback.** Pages rollback, as in route 1. Removing the redirect returns the subpath to the corporate site.
+- **Rollback.** App Platform rollback, as in route 1. Removing the redirect returns the subpath to the corporate site.
 - Choose the route before release: changing the origin later changes every canonical address.
 
 ### Search engines: a step for the web administrator
@@ -278,15 +303,15 @@ Two more facts for the web administrator:
 
 | # | Step | Who | How | Done when |
 |---|---|---|---|---|
-| 1 | **Account and domain.** A Cloudflare account for the Pages project. The domain stays where it is (DigitalOcean DNS): route 1 needs no DNS change, route 3 one CNAME ("Hosting"). | Owner | Cloudflare dashboard | The account exists |
+| 1 | **Account and domain.** A DigitalOcean account (the decided host) with a Container Registry. The domain stays where it is (DigitalOcean DNS): route 1 needs no DNS change, route 3 one record that App Platform names ("Hosting"). | Owner | DigitalOcean control panel | The account and the registry exist |
 | 2 | **Licence decision for downloads.** Decide whether the data exports (`scripts/exports.py`) may be published, and under what terms. | Owner | A dated line in `audit/OWNER_DECISIONS_*.md` | The decision is recorded. If it is yes, Claude Code sets `public_downloads: true` in `site-src/deployment.json`, after the codebook's bilingual review, and states the terms on /data/ Master-first |
 | 3 | **Origin.** Set `public_origin` in `site-src/deployment.json` to `https://causewaygrp.com/financial-inclusion-evidence` (route 1, the decided address) or `https://evidence.causewaygrp.com` (route 3): no trailing slash. In the same commit, lift RC-B14's condition that `public_origin` is null (it holds owner decision B8 until then). `pre_release` stays true: the pages stay `noindex, nofollow` until step 13. Rebuild: `python3 scripts/social_images.py && python3 scripts/build.py && python3 scripts/audit_public_literals.py`. `dist/` keeps root-relative links for the gates; the published site, `scripts/build.py --out build/site`, carries the path. | Claude Code | One commit | The validator passes; canonical, hreflang, `og:url`, `og:image`, structured data and `sitemap.xml` are absolute and carry the path, and `robots.txt` allows crawling and names the sitemap (`scripts/discovery.py`, F6 gates); for route 1, `python3 scripts/tests/test_base_path.py` passes |
 | 4 | **Currentness at the release date.** `python3 scripts/currentness_rerun.py --append`. Anything newer is read in its original and enters the Master by transaction. The edition date (`UI-CONTENT-VERSION`) moves to the release date, Master-first. | Claude Code | `run_stage.py` | The appended result shows no unread NEWER item, and the "check by hand" points have been checked in a browser |
 | 5 | **Every gate.** Every step of `.github/workflows/verify.yml`, locally and in CI: checksums, projection check, validator, literal-audit determinism, lineage, diagrams, social images, logo derivatives, bilingual invariance, content parity, exports, public tools, viewport acceptance, security headers, base path, negative controls. | Claude Code | CI on the release commit | CI is green on the commit that will be tagged |
-| 6 | **Pages project and credentials.** Create the Cloudflare Pages project for direct uploads. Create an API token limited to "Cloudflare Pages: Edit". | Owner | Cloudflare dashboard | The project name and the token exist |
-| 7 | **Repository settings.** Secrets `CLOUDFLARE_API_TOKEN` and `CLOUDFLARE_ACCOUNT_ID`; variables `YFIE_CF_PAGES_PROJECT` and `YFIE_DEPLOY_ENABLED=true`. | Owner (the secrets); Claude Code may set the variables where the session has settings access | GitHub → Settings → Secrets and variables → Actions | The deploy workflow is no longer skipped |
-| 7a | **Licence text confirmed by counsel.** CauseWay's counsel confirms the CC BY 4.0 text that /rights/ and /terms/ print, in both languages, before the first deploy makes them public at the Pages address. Then `licence_text_confirmed` goes to `true` in `site-src/deployment.json`, in the same commit as the dated line. Until then the deploy workflow refuses to publish, and `YFIE_DEPLOY_ENABLED` stays unset. | Owner, with counsel; Claude Code (the switch) | A dated line in `audit/OWNER_DECISIONS_*.md`; one commit | The confirmation is recorded and the switch is `true` |
-| 8 | **Deploy, then route the address.** Merge to `main`, or run "Deploy" by hand (workflow_dispatch). The workflow refuses a null origin, runs the gates, proves `dist/` is a fresh build, builds the published site, sweeps it under its path, then uploads it. Then the corporate route of "Hosting" is applied in CauseWay's frontend repository: route 1, the middleware; route 3, the custom domain, the CNAME and the 301. | Claude Code (merge on the owner's approval of the PR); the route by CauseWay's web administrator | `.github/workflows/deploy.yml`; the frontend repository | The workflow is green, `https://<project>.pages.dev/financial-inclusion-evidence/` serves the site, and the ten-minute check of "Deploy and verify" passes on `causewaygrp.com` |
+| 6 | **Credentials.** A DigitalOcean personal access token with write access to the registry and to App Platform (no wider scope than the deploy needs). The app itself is created by the first deploy (step 8). | Owner | DigitalOcean control panel → API | The token exists |
+| 7 | **Repository settings.** Secret `DIGITALOCEAN_ACCESS_TOKEN`; variables `YFIE_DO_REGISTRY` and `YFIE_DEPLOY_ENABLED=true`; after the first deploy, `YFIE_DO_APP_ID` (the workflow prints it). | Owner (the secret); Claude Code may set the variables where the session has settings access | GitHub → Settings → Secrets and variables → Actions | The deploy workflow is no longer skipped |
+| 7a | **Licence text confirmed by counsel.** CauseWay's counsel confirms the CC BY 4.0 text that /rights/ and /terms/ print, in both languages, before the first deploy makes them public at the app's own address. Then `licence_text_confirmed` goes to `true` in `site-src/deployment.json`, in the same commit as the dated line. Until then the deploy workflow refuses to publish, and `YFIE_DEPLOY_ENABLED` stays unset. | Owner, with counsel; Claude Code (the switch) | A dated line in `audit/OWNER_DECISIONS_*.md`; one commit | The confirmation is recorded and the switch is `true` |
+| 8 | **Deploy, then route the address.** Merge to `main`, or run "Deploy to DigitalOcean" by hand (workflow_dispatch). The workflow refuses a null origin, runs the gates, proves `dist/` is a fresh build, builds the published site, sweeps it under its path, proves its nginx block in a real nginx, then builds, pushes and deploys the image and waits until it is live. Then the corporate route of "Hosting" is applied in CauseWay's frontend repository: route 1, the middleware with the app's address as `UPSTREAM`; route 3, the custom domain and the 301. | Claude Code (merge on the owner's approval of the PR); the route by CauseWay's web administrator | `.github/workflows/deploy.yml`; the frontend repository | The workflow is green, `https://<app>.ondigitalocean.app/financial-inclusion-evidence/` serves the site, and the ten-minute check of "Deploy and verify" passes on `causewaygrp.com` |
 | 9 | **Headers and HTTPS.** Check that HTTPS works on the address. `Strict-Transport-Security` is the domain's decision ("Hosting"): add it under `/*` in `site-src/hosting/_headers` only with the web administrator's agreement, since under route 1 it covers all of `causewaygrp.com` (and every subdomain with `includeSubDomains`); then rebuild and redeploy. Run `python3 scripts/tests/test_security_headers.py --base https://causewaygrp.com/financial-inclusion-evidence`. | Claude Code; HSTS on the web administrator's agreement | One commit; the test against the live host | Every page loads with every security header and no policy violation |
 | 10 | **Every page on the live host.** `YFIE_BASE_URL=https://causewaygrp.com/financial-inclusion-evidence python3 scripts/tests/test_public_tools.py` against the live address; the live run bypasses the page policy, which step 9 tests (viewport acceptance runs on the same build in step 5). Remeasure performance with `scripts/performance_budget.py`, adapted to the origin, and record the result beside `release_candidate_b14d` in `docs/SUSTAINABILITY_IMPLEMENTED_RUNTIME.json`. A person opens the site on a phone in Yemen, or on a connection routed there, in Arabic. | Claude Code; the in-country check by a person the owner names | The tests; a dated note | The tests pass, the budget is met or its miss is recorded, and the in-country check is recorded |
 | 11 | **Usage counts (optional).** Only cookieless, first-party, aggregate counts with no personal data. The /privacy/ page must say so in both languages, Master-first, *before* activation, as it requires. | Owner decides; Claude Code implements | A Master transaction for /privacy/, then the code | Activated only after the Privacy page is live |
@@ -296,10 +321,11 @@ Two more facts for the web administrator:
 
 ## Rolling back
 
-The three lines are in "Deploy and verify"; each route's rollback is under "Hosting". For a faulty deployment: Cloudflare Pages keeps every deployment, and
-"Rollback to this deployment" in the dashboard restores the previous one at once (Owner or Claude Code with dashboard
-access); the corporate route needs no change. The repository then reverts the faulty commit on a branch, CI goes green,
-and a new deploy goes out (Claude Code). History is never rewritten.
+The three lines are in "Deploy and verify"; each route's rollback is under "Hosting". For a faulty deployment: App
+Platform keeps the recent successful deployments, and "Rollback" in the app's Activity tab restores the previous one
+at once (Owner, or Claude Code with control-panel access); the corporate route needs no change. The repository then
+reverts the faulty commit on a branch, CI goes green, and a new deploy goes out (Claude Code). History is never
+rewritten.
 
 ## What this runbook does not do
 
