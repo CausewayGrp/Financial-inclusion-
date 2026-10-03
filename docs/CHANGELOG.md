@@ -1,5 +1,13 @@
 # Repository Change Log
 
+## 2026-10-03 — Gate RC-NAMES: no enforcement-decision entity name is published
+
+`scripts/validate.py` gains gate RC-NAMES (owner note of 3 October 2026, point 1). It reads every provider row known only
+from a CBY-Aden status event (`PRV-*-E*`, 31 rows, English and Arabic) and fails if any core name appears in a built page,
+data file or script under `dist/`. It passes on the current build: no name appears in any of 295 files. Negative control
+"an enforcement-decision entity name is published" added to `scripts/tests/test_gate_negative_controls.py`. The bilingual
+review of RC-8 suggested this gate; no Master or page change.
+
 ## 2026-10-03 — Release candidate RC-8: truth and currentness (A1, A2, POS to June 2026, Decisions 10 and 18, locators, edition)
 
 One merged transaction, as the owner's note of 3 October 2026 allows: `audit/release_candidate/rc_8_truth_currentness.py`

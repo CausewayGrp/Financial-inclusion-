@@ -2645,6 +2645,27 @@ try:
 except Exception as _x:
     errors.append("RC-A1 unreadable " + repr(_x))
 
+# RC-NAMES (owner note, 3 October 2026, point 1): the entities named in CBY-Aden enforcement decisions are non-public
+# lineage. No name of a provider row known only from a status event (PRV-*-E*, both languages) may appear in any built
+# page, data file or script. Names are compared on their core (before " - " / " — " and any trailing parenthesis).
+try:
+    _pd = json.loads((C / "data" / "providers_data.json").read_text(encoding="utf-8"))
+    _core = lambda s: re.split(r"\s+[-—–]\s+", re.sub(r"\s*\(.*?\)\s*$", "", str(s or "")).strip())[0].strip()   # noqa: E731
+    _names = sorted({_core(s) for r in _pd["rows"] if r and isinstance(r[0], str) and re.match(r"^PRV-[A-Z]+-E\d+$", r[0])
+                     for s in (r[1], r[2]) if len(_core(s)) >= 6})
+    if len(_names) < 30:
+        errors.append(f"RC-NAMES read only {len(_names)} event-subject names")
+    for _f in sorted(DIST.rglob("*")):
+        if _f.suffix not in (".html", ".json", ".js", ".txt", ".xml", ".csv"):
+            continue
+        _t = _f.read_text(encoding="utf-8", errors="ignore")
+        _t2 = _html.unescape(_t)
+        for _n in _names:
+            if _n in _t or _n in _t2:
+                errors.append(f"RC-NAMES an enforcement-decision entity name is published {_f.relative_to(DIST)} {_n}")
+except Exception as _x:
+    errors.append("RC-NAMES unreadable " + repr(_x))
+
 print(f'HTML={len(list(DIST.rglob("*.html")))} ERRORS={len(errors)} WARN={len(warns)}')
 if warns:
     for w in warns[:20]: print('WARN',w)
