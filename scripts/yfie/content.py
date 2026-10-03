@@ -19,6 +19,7 @@ from urllib.parse import quote
 
 ROOT = Path(__file__).resolve().parents[2]
 # B5 (release candidate): the governed document types grouped on /data/ as "Rules, decisions and official lists"
+DECISION_SPLIT = re.compile(r"(?<=[.?؟]),")   # B6: decisions_unlocked items end a sentence, then a comma
 REGULATORY_LABELS = ("Enforcement decision", "Circular or instruction", "Regulatory decision", "Regulation", "Official list or roster")
 CONTENT = ROOT / "site-src" / "content"
 
@@ -484,6 +485,8 @@ class Content:
                 sources.append(card)
         related = [{"title": self.loc(x, "title", lang), "thesis": self.loc(x, "thesis", lang), "href": self.href(x.get("route"), lang),
                     "evidence_period": self.loc(x, "evidence_period", lang)} for x in spec.get("related_readings") or []]
+        ma_by_id = {str(m.get("measurement_id")): m for m in self.measurement_agenda}   # B6: the Reading's governed priorities
+        measurement = [self.measurement_object(ma_by_id[str(x)], lang) for x in (r.get("measurement_bindings") or []) if str(x) in ma_by_id]
         L = lambda k: self.t(k, lang)  # noqa: E731
         return {
             "family": "Reading", "route": route, "lang": lang, "id": rid,
@@ -495,11 +498,11 @@ class Content:
             "prohibited_inference": self.loc(r, "prohibited_inference", lang),
             "sections": [s for s in secs if s["order"] != 1],  # section 1 repeats the thesis; shown once as the standfirst
             "visuals": visuals, "trace": steps, "trace_status": status, "trace_state": rstate, "compare_href": compare_href,
-            "return_to": back, "sources": sources, "related": related,
+            "return_to": back, "sources": sources, "related": related, "measurement": measurement,
             "labels": {"eyebrow": L("UI-READING-EYEBROW"), "evidence_period": L("UI-READING-EVIDENCE-PERIOD"), "last_reviewed": L("UI-READING-LAST-REVIEWED"),
                        "do_not_infer": L("UI-READING-DO-NOT-INFER"), "trace": L("UI-READING-TRACE-H"), "trace_intro": L("UI-READING-PATH-INTRO"),
                        "compare": L("UI-READING-TEST-COMPARABILITY-OF-THIS-READING"), "return": L("UI-READING-RETURN"),
-                       "related": L("UI-READING-RELATED-H"), "all": L("UI-READING-ALL-H"), "sources": L("UI-SOURCES-SOURCES"),
+                       "related": L("UI-READING-RELATED-H"), "all": L("UI-READING-ALL-H"), "sources": L("UI-SOURCES-SOURCES"), "measurement": L("UI-RELATED-MEASUREMENT"),
                        "source_record": L("UI-SOURCES-SOURCE-RECORD"), "reference": L("UI-SOURCE-REFERENCE"),
                        "open_record": L("UI-EVID-OPEN-EVIDENCE-RECORD"), "readings_index_href": self.href("/readings/", lang),
                        "does_not_establish": self.grammar_labels["UI-VIS-DOES-NOT-ESTABLISH"][lang]},
@@ -702,8 +705,13 @@ class Content:
                "unlocked": self.loc(m, "unlocked_decision", lang), "href": f"/{lang}/measurement/#{quote(mid)}",
                "examined": [{"title": self.loc(x, "title", lang), "href": self.href(x.get("route"), lang)} for x in examined or []],
                "labels": {"priority": L("UI-MA-PRIORITY"), "current": L("UI-MA-CURRENT-EVIDENCE"), "missing": L("UI-MA-MISSING-EVIDENCE"), "unlocked": L("UI-MA-DECISION-UNLOCKED"),
-                          "open": L("UI-MA-OPEN"), "more": L("UI-MA-MORE"), "examined": L("UI-MEASUREMENT-EXAMINED-IN"), "reference": L("UI-SOURCE-REFERENCE"), "needed": L("UI-BLOCK-EVIDENCE-NEEDED")}}
+                          "open": L("UI-MA-OPEN"), "more": L("UI-MA-MORE"), "examined": L("UI-MEASUREMENT-EXAMINED-IN"), "reference": L("UI-SOURCE-REFERENCE"), "needed": L("UI-BLOCK-EVIDENCE-NEEDED"),
+                          "decisions": L("UI-MA-DECISIONS"), "blocked": L("UI-MA-BLOCKED")}}
         if full:
+            # B6: the governed decisions_unlocked (items joined by commas after a sentence end) and blocked_evidence
+            du = self.loc(m, "decisions_unlocked", lang)
+            out["decisions"] = [x.strip() for x in DECISION_SPLIT.split(du) if x.strip()] if du else []
+            out["blocked"] = self.loc(m, "blocked_evidence", lang)
             out["more"] = [{"label": L(uid), "text": self.loc(m, f, lang)} for f, uid in (("guardrail", "UI-MA-GUARDRAIL"), ("feasibility", "UI-MA-FEASIBILITY"), ("priority_basis", "UI-MA-BASIS"), ("what_changes", "UI-MA-CHANGES")) if self.loc(m, f, lang)]
         return out
 

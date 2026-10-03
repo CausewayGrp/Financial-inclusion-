@@ -229,6 +229,10 @@ CONTROLS = [
     ("the runtime stops isolating the identifiers it writes", "site-src/app.js",
      replace(".replace(ID_RUN,m=>`<bdi dir=\"ltr\">${m}</bdi>`)", ""),
      "RC-DATES the runtime does not isolate the identifiers it writes"),
+    # RC-B6 (Part B B6): a Reading page links every priority its bindings name.
+    ("a Reading page drops a bound measurement priority", "en/readings/from-rail-to-result-missing-middle/index.html",
+     sub_once(r'href="/en/measurement/#MA-006"', 'href="/en/measurement/"'),
+     "RC-B6 a Reading page does not link its measurement priority en/readings/from-rail-to-result-missing-middle/ MA-006"),
     # RC-NAMES (owner note, 3 October 2026, point 1): no enforcement-decision entity name is published.
     ("an enforcement-decision entity name is published", "en/providers/index.html",
      sub_once(r'(<main[^>]*>)', r'\1<p>Saddam Express Exchange and Transfers Company</p>'),

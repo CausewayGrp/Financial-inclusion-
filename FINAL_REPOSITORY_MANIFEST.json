@@ -3,9 +3,9 @@
  "purpose": "What every tracked file is. One authority -> one projection path -> one runtime content path -> one current recipient start path. Hashes: SHA256SUMS.txt.",
  "authority": {
   "production_master": "authority/Yemen_Financial_Inclusion_Evidence_Master.xlsx",
-  "production_master_sha256": "d52dfc53cef8500b50a2873c68b6c3d13f2763c5ec0ed8af6d93c59f28b612ee",
+  "production_master_sha256": "26a97c34d5178640ad716b6b7a3536beec26c795f9ea799d6d8506c1c1e3902e",
   "page_specs": "site-src/content/page_specs.json",
-  "page_specs_sha256": "39a73873de3ee87b90bf7bcd025a2f88dbe6e1a7bcb5dab39a1c8fb5327b9fe7",
+  "page_specs_sha256": "74d6349b7f7169be29398e94854b979adb0136b9b3e8a7e1af9e0713a7af56be",
   "logo": "site-src/assets/CauseWay_Master_Logo.png",
   "logo_sha256": "5830163d50f9badbef3227ec44e7705548e2fcc8a06b2d6ae33d56ade60c6a90",
   "rule": "The Production Master is the only semantic authority. Everything under site-src/content, dist, design/architecture and audit/PUBLIC_LITERAL_CLOSURE.json is generated from it and never edited by hand, except the two CONTROLLED_CONTRACT files, which the programme steward maintains in place and the generator validates against the Master's projections."
@@ -28,7 +28,7 @@
   "BUILD_AND_GATES": 23,
   "CONTROLLED_CONTRACT": 2,
   "CURRENT_DOCUMENT": 13,
-  "CURRENT_PROGRAMME_RECORD": 103,
+  "CURRENT_PROGRAMME_RECORD": 107,
   "DESIGN_PACKAGE": 446,
   "GENERATED_DIAGRAMS": 9,
   "GENERATED_LITERAL_CLOSURE": 1,
@@ -924,6 +924,10 @@
    "class": "CURRENT_PROGRAMME_RECORD"
   },
   {
+   "path": "audit/release_candidate/MEASUREMENT_LINKS.md",
+   "class": "CURRENT_PROGRAMME_RECORD"
+  },
+  {
    "path": "audit/release_candidate/ORIGINAL_SOURCE_VERIFICATION.md",
    "class": "CURRENT_PROGRAMME_RECORD"
   },
@@ -1020,6 +1024,10 @@
    "class": "CURRENT_PROGRAMME_RECORD"
   },
   {
+   "path": "audit/release_candidate/rc_9_b6_measurement.py",
+   "class": "CURRENT_PROGRAMME_RECORD"
+  },
+  {
    "path": "audit/release_candidate/rc_lib.py",
    "class": "CURRENT_PROGRAMME_RECORD"
   },
@@ -1101,6 +1109,14 @@
   },
   {
    "path": "audit/release_candidate/runs/RC-8b_RUN_REPORT.json",
+   "class": "CURRENT_PROGRAMME_RECORD"
+  },
+  {
+   "path": "audit/release_candidate/runs/RC-9_MASTER_LEDGER.json",
+   "class": "CURRENT_PROGRAMME_RECORD"
+  },
+  {
+   "path": "audit/release_candidate/runs/RC-9_RUN_REPORT.json",
    "class": "CURRENT_PROGRAMME_RECORD"
   },
   {

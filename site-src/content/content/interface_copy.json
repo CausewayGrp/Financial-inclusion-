@@ -2668,5 +2668,17 @@
     "label_en": "Crime, theft and disorder",
     "label_ar": "الجريمة والسرقة والاضطرابات",
     "use_rule": "RC-7 (Part A item 6, Path A). VIS-FIRM-CONSTRAINTS bar and table label for a row of Table 8, Annex III, p. 146 of Yemen Financial Sector Diagnostics (World Bank, 2024), in the source's own item wording, checked against the original on 3 October 2026."
+  },
+  {
+    "ui_id": "UI-MA-DECISIONS",
+    "label_en": "Questions it would answer:",
+    "label_ar": "الأسئلة التي سيجيب عنها القياس:",
+    "use_rule": "RC-9 (Part B B6). /measurement/ label before a priority's governed decisions_unlocked items."
+  },
+  {
+    "ui_id": "UI-MA-BLOCKED",
+    "label_en": "Evidence that cannot be produced without it:",
+    "label_ar": "الأدلة التي لا يمكن إنتاجها من دونه:",
+    "use_rule": "RC-9 (Part B B6). /measurement/ label before a priority's governed blocked_evidence."
   }
 ]

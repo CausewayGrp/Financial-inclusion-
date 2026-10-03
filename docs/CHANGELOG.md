@@ -1,5 +1,25 @@
 # Repository Change Log
 
+## 2026-10-03 — Release candidate RC-9: Part B item B6, measurement linkage
+
+Transaction `audit/release_candidate/rc_9_b6_measurement.py` through `run_stage.py` (Master `d52dfc53cef8` → `26a97c34d517`;
+8 cells). Every link is justified in `audit/release_candidate/MEASUREMENT_LINKS.md` (new; INDEX row), quoting both sides
+in both languages.
+
+- Five Reading → priority bindings added (CWR-001 → MA-001; CWR-003 → MA-002; CWR-006 → MA-005; CWR-007 → MA-007;
+  CWR-009 → MA-006), and the seven existing ones kept. CWR-002 stays unlinked: no priority covers reconciling a restated
+  official series, and the gap is recorded rather than filled.
+- Each Reading page now shows its priorities under "Related measurement priorities" (`scripts/yfie/content.py`,
+  `render.py`). Every priority, MA-009 included, is reachable from a Reading or from a domain page.
+- /measurement/ shows each priority's governed `decisions_unlocked` (as a list) and `blocked_evidence`, under two new
+  labels (`UI-MA-DECISIONS`, `UI-MA-BLOCKED`). MA-010's Arabic now spells «تاليًا».
+- Gate RC-B6 in `scripts/validate.py` checks that every binding is linked on its Reading page in both languages, and that
+  each priority's decision list has the same number of items in both languages. It has a negative control.
+- P1-G06 (no repeated sentence on a flagship page) now treats the "This gap is examined in" link list like the other link
+  lists it already sets aside, because one Reading can now serve two priorities. Nothing else in the gate changes.
+- The Findex 2025 non-coverage and the Findex exclusions (about 23% of the population) were checked for this item: both
+  are already stated (MATCH).
+
 ## 2026-10-03 — Release candidate RC-8b: the independent reviews of RC-8, in one rerun
 
 Transaction `audit/release_candidate/rc_8b_review_fixes.py` through `run_stage.py` (Master `8385ede6ebd9` → `d52dfc53cef8`;

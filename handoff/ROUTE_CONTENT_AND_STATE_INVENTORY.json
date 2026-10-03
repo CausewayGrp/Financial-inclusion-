@@ -2,8 +2,8 @@
  "schema": "YFIE_ROUTE_CONTENT_AND_STATE_INVENTORY/1.3",
  "purpose": "Design recipient's map of every route, its family, bindings, collections, next actions and the states Design must cover. Derived; not authority.",
  "generated_from": {
-  "production_master_sha256": "d52dfc53cef8500b50a2873c68b6c3d13f2763c5ec0ed8af6d93c59f28b612ee",
-  "page_specs_sha256": "39a73873de3ee87b90bf7bcd025a2f88dbe6e1a7bcb5dab39a1c8fb5327b9fe7",
+  "production_master_sha256": "26a97c34d5178640ad716b6b7a3536beec26c795f9ea799d6d8506c1c1e3902e",
+  "page_specs_sha256": "74d6349b7f7169be29398e94854b979adb0136b9b3e8a7e1af9e0713a7af56be",
   "generator": "scripts/handoff_inventory.py"
  },
  "counts": {
@@ -4991,6 +4991,7 @@
     "CWR-008"
    ],
    "measurement_ids": [
+    "MA-002",
     "MA-005"
    ],
    "source_ids": [
@@ -5114,6 +5115,7 @@
     "CWR-010"
    ],
    "measurement_ids": [
+    "MA-006",
     "MA-010"
    ],
    "source_ids": [],
@@ -5154,7 +5156,8 @@
     "CWR-007"
    ],
    "measurement_ids": [
-    "MA-003"
+    "MA-003",
+    "MA-007"
    ],
    "source_ids": [],
    "source_references": 3,
@@ -5194,7 +5197,9 @@
     "CWR-003",
     "CWR-006"
    ],
-   "measurement_ids": [],
+   "measurement_ids": [
+    "MA-005"
+   ],
    "source_ids": [
     "SRC-SANAA-MF-2020",
     "SRC-WB-FSD-2024-001"
@@ -5280,7 +5285,9 @@
     "CWR-002",
     "CWR-004"
    ],
-   "measurement_ids": [],
+   "measurement_ids": [
+    "MA-001"
+   ],
    "source_ids": [
     "SRC-CBY-AR2024-BOP",
     "SRC-CBY-AR2025-BOP"

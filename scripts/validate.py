@@ -1635,7 +1635,8 @@ _P1_NAV_LAYERS=((r'<aside class="spine[^"]*">','aside'),          # the side and
                 (r'<section class="qa" id="related">','section'),  # the related-questions list
                 (r'<article class="compact[^"]*"[^>]*>','article'), # a bound object: its clock, title, universe, summary and boundary belong to the record it opens
                 (r'<li class="compact[^"]*"[^>]*>','li'),          # a chronology event and its sources line (the baseline's chronology-sources)
-                (r'<div class="cite-preview">','div'))             # B9: the citation preview quotes the page's own title (and a record's governed citation) by design
+                (r'<div class="cite-preview">','div'),             # B9: the citation preview quotes the page's own title (and a record's governed citation) by design
+                (r'<p class="small" data-measurement-readings>','p'))   # B6: the Readings a priority is examined in — a link list; one Reading may serve two priorities
 # A figure is its own layer: its panel clocks, state labels, governed alt text, table and frame foot are the non-visual
 # equivalent of a drawing, asserted against the visual contract by P3-G02 and design/reference/check_visuals.py — a
 # different job, as the baseline's own exclusion said. Governed text that a contract's alt_text restates verbatim is a
@@ -2665,6 +2666,46 @@ try:
                 errors.append(f"RC-NAMES an enforcement-decision entity name is published {_f.relative_to(DIST)} {_n}")
 except Exception as _x:
     errors.append("RC-NAMES unreadable " + repr(_x))
+
+# RC-B6 (Part B B6): each Reading page links, in both languages, to every Measurement Agenda priority its governed
+# measurement_bindings name; /measurement/ shows each priority's governed decisions_unlocked as a list (the same number
+# of items in English and Arabic, at least one) and its blocked_evidence.
+try:
+    _specs = json.loads((C / "page_specs.json").read_text(encoding="utf-8"))["page_specs"]
+    _nb = 0
+    for _sp in _specs:
+        for _rd in _sp.get("governed_readings") or []:
+            _route = _sp.get("route") or ""
+            if not _route.startswith("/readings/") or _route == "/readings/":   # domain and index pages may feature a Reading; the bindings render on the Reading itself
+                continue
+            for _lang in ("en", "ar"):
+                _f = DIST / _lang / _route.strip("/") / "index.html"
+                if not _f.exists():
+                    continue
+                _h = _f.read_text(encoding="utf-8")
+                _sec = re.search(r"<section[^>]*data-reading-measurement.*?</section>", _h, re.S)
+                for _mid in _rd.get("measurement_bindings") or []:
+                    _nb += 1
+                    if not _sec or f'href="/{_lang}/measurement/#{_mid}"' not in _sec.group(0):
+                        errors.append(f"RC-B6 a Reading page does not link its measurement priority {_lang}{_route} {_mid}")
+    if _nb < 24:
+        errors.append(f"RC-B6 read only {_nb} Reading measurement bindings")
+    _counts = {}
+    for _lang in ("en", "ar"):
+        _h = (DIST / _lang / "measurement" / "index.html").read_text(encoding="utf-8")
+        for _m in re.finditer(r'<article class="obj prio" id="(MA-\d+)".*?</article>', _h, re.S):
+            _a = _m.group(0)
+            _d = re.search(r"<div data-ma-decisions>.*?</ul></div>", _a, re.S)
+            _counts.setdefault(_m.group(1), {})[_lang] = _d.group(0).count("<li>") if _d else 0
+            if "data-ma-blocked" not in _a:
+                errors.append(f"RC-B6 /measurement/ priority without its blocked evidence {_lang} {_m.group(1)}")
+    if len(_counts) < 10:
+        errors.append(f"RC-B6 read only {len(_counts)} measurement priorities")
+    for _mid, _c in sorted(_counts.items()):
+        if not _c.get("en") or _c.get("en") != _c.get("ar"):
+            errors.append(f"RC-B6 /measurement/ decisions differ between languages or are missing {_mid} {_c}")
+except Exception as _x:
+    errors.append("RC-B6 unreadable " + repr(_x))
 
 print(f'HTML={len(list(DIST.rglob("*.html")))} ERRORS={len(errors)} WARN={len(warns)}')
 if warns:

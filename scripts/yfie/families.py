@@ -435,7 +435,10 @@ def measurement(page: dict, shell: dict) -> str:
         more = "".join(f'<dt>{esc(x["label"])}</dt><dd>{esc(x["text"])}</dd>' for x in m.get("more") or [])
         examined = (f'<p class="small" data-measurement-readings><b>{esc(ML["examined"])}</b> ' + " · ".join(f'<a href="{x["href"]}">{esc(x["title"])}</a>' for x in m["examined"]) + "</p>") if m["examined"] else ""
         prios.append(f'<article class="obj prio" id="{esc(m["id"])}" tabindex="-1"><div class="head"><div class="clock"><span class="k">{esc(ML["priority"])}</span><span class="v">{bdi(m["priority"])} · {esc(m["domain"])}</span></div><h3>{esc(m["title"])}</h3></div>'
-                     f'<div class="body"><p><b>{esc(ML["current"])}</b> {esc(m["current"])}</p><p><b>{esc(ML["missing"])}</b> {esc(m["missing"])}</p><p><b>{esc(ML["unlocked"])}</b> {esc(m["unlocked"])}</p></div>{examined}'
+                     f'<div class="body"><p><b>{esc(ML["current"])}</b> {esc(m["current"])}</p><p><b>{esc(ML["missing"])}</b> {esc(m["missing"])}</p><p><b>{esc(ML["unlocked"])}</b> {esc(m["unlocked"])}</p>'
+                     + (f'<div data-ma-decisions><p><b>{esc(ML["decisions"])}</b></p><ul class="rlist">' + "".join(f"<li>{esc(x)}</li>" for x in m["decisions"]) + "</ul></div>" if m.get("decisions") else "")
+                     + (f'<p data-ma-blocked><b>{esc(ML["blocked"])}</b> {esc(m["blocked"])}</p>' if m.get("blocked") else "")   # B6
+                     + f'</div>{examined}'
                      f'<div class="ref"><b>{esc(ML["reference"])}</b> {bdi(m["id"])}</div>' + (f'<details class="more"><summary>{esc(ML["more"])}</summary><dl class="kv">{more}</dl></details>' if more else "") + "</article>")
     ag = next((s for s in page["sections"] if s["order"] == 10), None)
     first_secs = [s for s in page["sections"] if s["order"] != 10]

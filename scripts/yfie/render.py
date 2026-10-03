@@ -312,7 +312,8 @@ def home(page: dict, shell: dict) -> str:
 def reading(page: dict, shell: dict) -> str:
     L = page["labels"]; SL = shell["labels"]
     origin = DISC.origin()
-    index = [(f's-{s["section_id"]}', s["heading"]) for s in page["sections"] if s["heading"]] + [("trace", L["trace"]), ("sources", L["sources"]), ("related", L["related"])]
+    index = ([(f's-{s["section_id"]}', s["heading"]) for s in page["sections"] if s["heading"]] + [("trace", L["trace"]), ("sources", L["sources"])]
+             + ([("measure", L["measurement"])] if page.get("measurement") else []) + [("related", L["related"])])
     head_ = (f'<div class="head">{crumb(page["breadcrumb"], shell)}{rubric(L["eyebrow"])}<p class="q">{esc(page["question"])}</p><h1 id="page-title">{esc(page["title"])}</h1><div class="st"><p>{esc(page["thesis"])}</p></div>'
              f'<div class="clocks">{clock(L["evidence_period"], esc(page["evidence_period"]))}<div class="clock"><span class="k">{esc(L["last_reviewed"])}</span><span class="v"><time datetime="{esc(page["last_reviewed_iso"])}">{esc(page["last_reviewed"])}</time></span></div></div></div>')
     bnd = f'<section class="bnd" data-reading-boundary>{rubric(L["do_not_infer"], tag="h2")}<p>{esc(page["prohibited_inference"])}</p></section>'
@@ -345,7 +346,10 @@ def reading(page: dict, shell: dict) -> str:
     related = f'<section class="qa" id="related" data-reading-related><h2>{esc(L["related"])}</h2><div><div class="objs">{rel}</div><p class="small mt12"><a href="{L["readings_index_href"]}">{esc(L["all"])}</a></p></div></section>' if page["related"] else ""
     edges = [(L["trace"], [f'<a href="{x["href"]}">{esc(x["proposition"])}</a>' for x in page["trace"]]),
              (L["return"], [f'<a href="{b["href"]}">{esc(b["label"])}</a>' for b in page["return_to"]])]
-    body = f'<article class="obj page-obj">{head_}{bnd}{strip(index)}<div class="essay">{"".join(essay)}</div>{trace}{sources}{related}{page_util(shell, page)}</article>{spine(index, edges)}{spine(index, edges, foot=True, foot_index=False)}'   # the strip after the boundary is the phone's map of the essay (DEBT-014)
+    from .families import measure_obj   # noqa: PLC0415  (families imports this module)
+    measure = (f'<section class="qa" id="measure" data-reading-measurement><h2>{esc(L["measurement"])}</h2><div><div class="objs">'
+               f'{"".join(measure_obj(m) for m in page["measurement"])}</div></div></section>') if page.get("measurement") else ""   # B6
+    body = f'<article class="obj page-obj">{head_}{bnd}{strip(index)}<div class="essay">{"".join(essay)}</div>{trace}{sources}{measure}{related}{page_util(shell, page)}</article>{spine(index, edges)}{spine(index, edges, foot=True, foot_index=False)}'   # the strip after the boundary is the phone's map of the essay (DEBT-014)
     return head(page, shell, page["route"], kind="article") + header(shell) + body + footer(shell, print_foot(shell, page["route"], page["title"]))
 
 
