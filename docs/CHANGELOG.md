@@ -1,5 +1,19 @@
 # Repository Change Log
 
+## 2026-10-03 — Release candidate RC-14: first screens and drawn figures re-read; one date corrected
+
+Transaction `audit/release_candidate/rc_14_bank_list_date.py` through `run_stage.py` (Master `6568e6e6fcbb` →
+`4282c50b9bbd`; 27 cells).
+- **The re-read.** A reader who wrote none of this work re-read 65 first-screen and drawn numbers in their originals:
+  Findex, the CBY-Aden annual reports, the H1 2025 payment report, the provider matrix, the dated events, and the
+  /finance/, /reforms/ and /access/ leads.
+  - 42 match. Every English and Arabic first screen prints the same numbers.
+  - One date did not match: the provider matrix printed the bank list as "26 · 2026-09-07". The list carries no
+    printed date and was re-read on 3 October 2026, so the universe count and the 26 bank rows now carry 2026-10-03.
+    The count is unchanged. RC-8 had missed this ISO-format field.
+  - 22 values (IMF tables, RPW, UNDP dates, one SFD figure) cannot be read from here today. They are recorded for a
+    person with a browser at release: `ORIGINAL_SOURCE_VERIFICATION.md` §8 and the register.
+
 ## 2026-10-03 — Six reverse traces (Owner Addendum 2, before B16)
 
 `audit/release_candidate/REVERSE_TRACES.md` traces six public objects to their locators: Home's headline claims,

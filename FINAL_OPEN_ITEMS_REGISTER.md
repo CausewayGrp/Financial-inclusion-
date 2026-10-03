@@ -185,6 +185,13 @@ The public text stays exactly as it is until the source is read; closing any of 
     dealings in virtual assets. The /data/ regulatory group already says it holds "not a complete register", so nothing
     printed is false.
   - Action at B16: decide which to add. Each must be read in the original and titled in both languages, Master-first.
+- 2026-10-03 — **First screens and drawn figures re-read** (`ORIGINAL_SOURCE_VERIFICATION.md` §8).
+  - 42 of 65 numbers match their originals. One date did not: the bank row of the provider matrix, which RC-14
+    corrects to 2026-10-03.
+  - **Open for release (a person with a browser):** 22 values whose hosts now refuse automated requests. These are 13 IMF
+    values (CR 26/80 Table 4, supplement Table 2), 4 RPW corridor costs, 4 FMIIP component start dates of July 2025
+    (UNDP) and SFD's 93,118.
+  - The UNDP dates especially need checking: the World Bank ISR gives the project's effectiveness as 1 September 2025.
 - 2026-10-03 — **B12** (RC-12, `audit/release_candidate/B12_TEXT_FIRST_DISPOSITIONS.md`): of the 23 text-only
   contracts, 2 now render their designed table from governed rows (VIS-TARGET-RESULT-STATE, VIS-FIRM-FINANCE-PATH) and 4
   are complete as designed. 17 wait on a named Master input; they go to B16.

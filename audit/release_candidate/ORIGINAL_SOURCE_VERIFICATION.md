@@ -186,3 +186,31 @@ Every scan's file id shows it was uploaded on its news page's date, so a news da
 published, not when it was signed. RC-13 corrected Decisions 13 and 14 (source titles in both languages, document dates,
 and status events PSE-003 and PSE-004). It also recorded each of the twelve scans as an additional locator, with the
 check date. No record's text prints either date, and the order of events is unchanged.
+
+## 8. First screens and drawn figures, re-read before B15 (3 October 2026; RC-14)
+
+The owner asked, in the update of 02:10, that every number on a first screen and every drawn number be re-read in its
+original before B15. A reader who wrote none of this pull request checked 65 numbers and dates against their originals.
+Those verified in §1–§7 were left out. Every rendered first screen and figure was also compared between English and
+Arabic: the numbers are identical.
+
+| Group | Original | Result |
+|---|---|---|
+| Global Findex 2022, Yemen (Home, /people/, VIS-FINDEX-GAPS, RV-CWR-004): 11.9 %, 5.44, 18.35, 15.5, 6.5, 6.98, 19.53, 5.01, 16.11 and gaps of 12.91, 9.0, 12.55 and 11.10 pp | World Bank API, `FX.OWN.TOTL{,.FE,.MA,.40,.60,.PL,.SO,.YG,.OL}.ZS`, year 2022 (updated 13 July 2026) | 13 match. Universes match the indicator definitions |
+| Remittances, CBY-Aden annual reports (/remittances/, RV-CWR-001): 6,245 (2024, AR2024); 2,900.22 / 3,066.58 / 3,240.46 / 3,422.16 / 3,614.05 (2021–2025, AR2025); index 105.74 / 111.73 / 118 | AR2024 Table 4-1 p. 40 and p. 48; AR2025 Table 4-1 p. 44 and p. 52 | 9 match, the index recomputed |
+| Payment anatomy, H1 2025 report: cards 2,341,752; ATMs 914; e-wallets 9; subscribers 2,102,484; POS 791 | cby-ye.com/files/693a7845e7f26.pdf | 5 match |
+| Provider matrix: e-wallets 7 (2024 Q3), 8 licensed (10 September 2025), more than 9 (22 January 2026); 12 unlicensed names (26 June 2024) | files/677c2e75a4d8c.pdf p. 3; news/876; news/915; files/667c32dabd223.pdf | 4 match |
+| Provider matrix, bank row: "26 · 2026-09-07" | files/6a665add29feb.pdf, which carries no printed date; re-read on 3 October 2026 (§4) | **The date did not match.** RC-14 changes it to 2026-10-03, as the row's source title and the /providers/ lead already print. The count is unchanged |
+| Dated events (RV-CWR-009, RV-CWR-004): 2024-06-26; 2025-06-17; 2026-01-22; 2026-03-29; 2026-06-17; 2026-07-27; 2026-08-03; 2026-08-04 | Decision 23 of 2024 (scan); the World Bank press release and projects API; CBY news 915, 922, 946, 957, 961, 962 | 8 match |
+| /finance/ lead: 78,686 (end-2023) | Sana'a Center paper of 23 September 2024, citing SFD/SMED monthly reports | Match |
+| /reforms/ lead: consumer-protection instructions (August 2023); e-money amendment (Decision 4 of 2025, dated 9 July 2025) | news/567; files/6875fc55a253e.pdf | 2 match |
+| /access/ lead: "2016–2019 study"; e-money concentrated in cities | IBS 2020 study, p. 54 | Match |
+
+**Not readable on 3 October 2026 (22).** These are left for a person with a browser at release (`docs/RELEASE_RUNBOOK.md`,
+step 4). The IMF eLibrary now answers automated requests with a WAF challenge; sfd-yemen.org with an access-denied page;
+undp.org and Remittance Prices Worldwide with HTTP 403.
+- 13 IMF values: CR 26/80 Table 4 and the supplement's Table 2 (VIS-REMITTANCE-MACRO, RV-CWR-001 panel 2).
+- 4 corridor costs: Remittance Prices Worldwide, 2025 Q3.
+- 4 FMIIP component start dates of July 2025 (UNDP). The World Bank ISR gives the project's effectiveness as
+  1 September 2025, so these four dates are worth the re-check (register).
+- 93,118 borrowers at end-2015 (SFD newsletter No. 72). A secondary source, the Sana'a Center paper, agrees.

@@ -39,8 +39,8 @@ authority/Yemen_Financial_Inclusion_Evidence_Master.xlsx      the only authority
   → dist/                                                     the public build (never edit by hand)
 ```
 
-Production Master SHA-256 `6568e6e6fcbbc1795805a950d0ff769a224cc1579182de0f80f2a868ee3d9fd3`; Page Specs
-(`site-src/content/page_specs.json`) SHA-256 `f11442b9b7ea9d9dfe989213473303a3f3b8ac8618c6e42dd672985e1a794bd8`. If the
+Production Master SHA-256 `4282c50b9bbd8c28d751cd795b932266b1760454c030965221fdc2e539880f53`; Page Specs
+(`site-src/content/page_specs.json`) SHA-256 `9e0c9c3b37c9881fdefe85e7000512c0498939272ba18a7052ca8581b73b5727`. If the
 repository shows other hashes, the repository is right — re-read it; never restore a hash from a document.
 
 A content defect is never fixed in a page, a JSON file or a component. It is escalated (§10) and fixed in the Master by
