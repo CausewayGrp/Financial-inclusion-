@@ -147,6 +147,33 @@ The public text stays exactly as it is until the source is read; closing any of 
 - 2026-10-03 — **Exchange and remittance roster replaced** (RC-8b). The file linked on 3 October 2026 (created 22 September
   2026) lists 100 companies, 231 establishments and 111 remittance agents; the Master and the site now follow it, and
   CLM-009 states that the roster file has been replaced during 2026.
+- 2026-10-03 — **B13d link check** (RC-12, `audit/release_candidate/LINK_CHECK.md`): 156 public locators checked.
+  - 129 OK.
+  - Five SFD newsletters moved to the publisher's new file names; each was read and matched (locators moved).
+  - Four have no current address and now point to the web.archive.org copy of the original address, labelled as an
+    archived copy on the site.
+  - 14 cannot be verified from this environment because the publisher's CDN refuses automated requests; a person
+    checks them with a browser at release.
+  - Still open: `SRC-CBY-SANAA-C12-2024`, the CBY Sana'a circular 12 of 2024, has no working address and no archived
+    copy. `SRC-CBY-AR2015-HIST-001` returned 503 at both checks; re-check it at B14e.
+- 2026-10-03 — **New: SFD newsletter No. 62 exists in two editions** (RC-12). The bound Q2 2013 values (88,169 / 175,447 /
+  7,845) follow the original edition. The publisher now hosts another edition, whose provider table totals 84,760 /
+  151,465 / 6,845 under the heading "until end of June 2014", while its narrative matches the bound values. The locator is
+  the original address's archived copy. Action, owner or steward: decide whether a governed caveat names the two editions.
+- 2026-10-03 — **New: the FMIIP ISR's "0"** (B12). The World Bank's Implementation Status Report, sequence 2, prints
+  "Actual (Current) 0" for access points and for beneficiaries. That is a reporting placeholder, and it is not bound. The
+  promotion condition of VIS-TARGET-RESULT-STATE stands: an observed result under FMIIP-RF-004's definition.
+- 2026-10-03 — **New: the base of VIS-FIRM-FINANCE-SEVERITY** (B12). The source's sentence on p. 145 places the
+  tabulation under "reasons of not applying". The base may therefore be firms that did not apply, which is narrower than
+  the governed universe ("excludes firms that said they did not need a loan"). Action at B16: a governed limitation, or
+  leave as is, after a reviewer reads p. 145.
+- 2026-10-03 — **New: four origin tables named by `16_DATASET_CATALOG` are not sheets of the Master**
+  (`173_CBY_ANNUAL_VINTAGES`, `198_IBS2020_UPSTREAM`, `201_MFB2023_RECON`, `219_SMEPS_PROGRAMME_EVIDENCE`;
+  `B12_TEXT_FIRST_DISPOSITIONS.md`). The records still trace to public originals. Action at B16: bring the tables in, or
+  record them as external working tables.
+- 2026-10-03 — **B12** (RC-12, `audit/release_candidate/B12_TEXT_FIRST_DISPOSITIONS.md`): of the 23 text-only
+  contracts, 2 now render their designed table from governed rows (VIS-TARGET-RESULT-STATE, VIS-FIRM-FINANCE-PATH) and 4
+  are complete as designed. 17 wait on a named Master input; they go to B16.
 
 ## 4. KNOWN_EVIDENCE_FRONTIER
 

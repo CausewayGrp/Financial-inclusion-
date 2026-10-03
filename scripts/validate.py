@@ -2742,6 +2742,72 @@ try:
 except Exception as _x:
     errors.append("RC-LAND unreadable " + repr(_x))
 
+# RC-B12 (Part B B12): a text-first contract that binds a table from governed rows prints it on its record page in both
+# languages, with every governed row header and every bound number, and no other number.
+try:
+    _vdc = json.loads((C / "visuals" / "visual_design_contracts.json").read_text(encoding="utf-8"))
+    _tabled = [v for v in _vdc["visuals"] if v.get("table")]
+    if len(_tabled) < 2:
+        errors.append(f"RC-B12 only {len(_tabled)} text-first contracts bind a table")
+    for _v in _tabled:
+        _nums = sorted([str(c["number"]) for r in _v["table"]["rows"] for c in r.get("cells", []) if "number" in c]
+                       + [str(r["group"]["number"]) for r in _v["table"]["rows"] if "group" in r])
+        for _lang in ("en", "ar"):
+            _h = (DIST / _lang / "evidence" / _v["visual_id"] / "index.html").read_text(encoding="utf-8")
+            _t = re.search(r"<div data-text-first-table>.*?</table>", _h, re.S)
+            if not _t:
+                errors.append(f"RC-B12 a bound text-first table is missing {_lang} {_v['visual_id']}")
+                continue
+            _body = _t.group(0).split("</caption>", 1)[-1]
+            _heads = [_html.unescape(x) for x in re.findall(r'<th scope="row">([^<]*)</th>', _body)]
+            _want = [r["head"][_lang] for r in _v["table"]["rows"] if "head" in r]
+            if _heads != _want:
+                errors.append(f"RC-B12 the row headers differ from the governed rows {_lang} {_v['visual_id']}")
+            _got = sorted(x.replace(",", "") for x in re.findall(r'<bdi dir="ltr">([\d,.]+)</bdi>', _body))
+            if _got != _nums:
+                errors.append(f"RC-B12 the table's numbers differ from the bound rows {_lang} {_v['visual_id']} {_got} != {_nums}")
+except Exception as _x:
+    errors.append("RC-B12 unreadable " + repr(_x))
+
+# RC-B13 (Part B B13): the research library on /data/. Its filters stay hidden until the runtime runs (the list is
+# complete without JavaScript); every listed source carries its filter keys; every option of a filter matches at least
+# one source; a locator that is a web.archive.org copy is never offered as the original.
+try:
+    _ic13 = json.loads((C / "content" / "interface_copy.json").read_text(encoding="utf-8"))
+    _ic13 = {x.get("ui_id"): x for x in (_ic13["labels"] if isinstance(_ic13, dict) and "labels" in _ic13 else _ic13)}
+    for _lang in ("en", "ar"):
+        _h = (DIST / _lang / "data" / "index.html").read_text(encoding="utf-8")
+        if not re.search(r'<div class="source-facets" data-source-facets hidden>', _h):
+            errors.append(f"RC-B13 the library's filters are missing or shown without the runtime {_lang}")
+        _recs = re.findall(r"<article [^>]*data-source-record[^>]*>", _h)
+        _keys = {k: [] for k in ("type", "publisher", "year", "domain")}
+        for _a in _recs:
+            for _k in _keys:
+                _m = re.search(rf'data-f-{_k}="([^"]*)"', _a)
+                if not _m or not _m.group(1):
+                    _sid = re.search(r'id="([^"]+)"', _a)
+                    errors.append(f"RC-B13 a listed source has no {_k} key {_lang} {_sid.group(1) if _sid else '?'}")
+                else:
+                    _keys[_k] += _m.group(1).split(" ") if _k == "domain" else [_m.group(1)]
+        if len(_recs) < 150:
+            errors.append(f"RC-B13 only {len(_recs)} listed sources {_lang}")
+        for _k, _vals in _keys.items():
+            _sel = re.search(rf'<select data-source-facet="{_k}">(.*?)</select>', _h, re.S)
+            if not _sel:
+                errors.append(f"RC-B13 the {_k} filter is missing {_lang}")
+                continue
+            for _o in re.findall(r'<option value="([^"]+)">', _sel.group(1)):
+                if _o not in _vals:
+                    errors.append(f"RC-B13 the {_k} filter offers {_o!r}, which no listed source carries {_lang}")
+        _orig = _ic13["UI-EVID-OPEN-ORIGINAL-SOURCE"][f"label_{_lang}"]
+        for _a in re.findall(r'<a class="source-locator" href="https://web\.archive\.org/[^"]*"[^>]*>([^<]*)', _h):   # the link text, before its "opens in a new tab" span
+            if _html.unescape(_a).strip() == _orig.strip():
+                errors.append(f"RC-B13 an archived copy is offered as the original {_lang}")
+        if not re.search(r'<a class="source-locator" href="https://web\.archive\.org/', _h):
+            errors.append(f"RC-B13 no archived locator is labelled {_lang}")
+except Exception as _x:
+    errors.append("RC-B13 unreadable " + repr(_x))
+
 print(f'HTML={len(list(DIST.rglob("*.html")))} ERRORS={len(errors)} WARN={len(warns)}')
 if warns:
     for w in warns[:20]: print('WARN',w)

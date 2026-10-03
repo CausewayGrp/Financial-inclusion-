@@ -233,6 +233,17 @@ CONTROLS = [
     ("the evidence landscape drops a row", "en/evidence/VIS-EVIDENCE-FRESHNESS/index.html",
      sub_once(r'(<div data-evidence-landscape>.*?)<tr><th scope="row">.*?</tr>', r'\1'),
      "RC-LAND the evidence landscape prints 33 of 34 governed rows en"),
+    # RC-B12 (Part B B12): a text-first contract's bound table prints its governed numbers.
+    ("a bound text-first table prints a number no governed row holds", "en/evidence/VIS-TARGET-RESULT-STATE/index.html",
+     sub_once(r'(<div data-text-first-table>.*?)<bdi dir="ltr">1,021</bdi>', r'\1<bdi dir="ltr">1,201</bdi>'),
+     "RC-B12 the table's numbers differ from the bound rows en VIS-TARGET-RESULT-STATE"),
+    # RC-B13 (Part B B13): every listed source carries its filter keys; an archived copy never claims to be the original.
+    ("a listed source loses its year key", "ar/data/index.html",
+     sub_once(r'(<article [^>]*data-source-record[^>]*?) data-f-year="[^"]*"', r'\1'),
+     "RC-B13 a listed source has no year key ar"),
+    ("an archived copy is offered as the original", "en/data/index.html",
+     sub_once(r'(<a class="source-locator" href="https://web\.archive\.org/[^"]*"[^>]*>)[^<]*', r'\1Open original source ↗'),
+     "RC-B13 an archived copy is offered as the original en"),
     # RC-B6 (Part B B6): a Reading page links every priority its bindings name.
     ("a Reading page drops a bound measurement priority", "en/readings/from-rail-to-result-missing-middle/index.html",
      replace('href="/en/measurement/#MA-006"', 'href="/en/measurement/"', 0),   # both links: the card's title and its "Open" link

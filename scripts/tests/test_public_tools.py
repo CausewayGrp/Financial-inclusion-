@@ -322,6 +322,29 @@ def t_source_nomatch(page, base):
     assert page.is_visible("[data-source-no-results]") and "does not mean" in page.inner_text("[data-source-no-results]")
 
 
+@test("sources: library filters narrow the list, travel in the URL, and a shared link restores them (B13)")
+def t_source_library(page, base):
+    for lang in ("en", "ar"):
+        page.goto(f"{base}/{lang}/data/")
+        assert page.is_visible("[data-source-facets]"), "filters hidden with the runtime running"
+        total = page.evaluate("document.querySelectorAll('[data-source-record]:not([hidden])').length")
+        year = page.evaluate("[...document.querySelectorAll('[data-source-facet=year] option')].map(o => o.value).find(v => /^\\d{4}$/.test(v))")
+        page.select_option("[data-source-facet=year]", year)
+        shown = page.evaluate("document.querySelectorAll('[data-source-record]:not([hidden])').length")
+        want = page.evaluate(f"document.querySelectorAll('[data-source-record][data-f-year=\"{year}\"]').length")
+        assert 0 < shown == want < total, (shown, want, total)
+        assert f"year={year}" in page.url, page.url
+        page.select_option("[data-source-sort]", "newest")
+        assert "sort=newest" in page.url
+        shared = page.url
+        page.goto(shared)
+        assert page.evaluate(f"document.querySelector('[data-source-facet=year]').value") == year
+        assert page.evaluate("document.querySelectorAll('[data-source-record]:not([hidden])').length") == want
+        page.click("[data-source-facets-clear]")
+        assert page.evaluate("document.querySelectorAll('[data-source-record]:not([hidden])').length") == total
+        assert "year=" not in page.url
+
+
 @test("language switch keeps route, query and hash")
 def t_lang_state(page, base):
     page.goto(base + "/en/measurement/#MA-003")

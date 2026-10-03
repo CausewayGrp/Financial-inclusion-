@@ -96,7 +96,7 @@ def rv001_tables(d: dict, v: dict, cls: str = "rvtab") -> str:
     group with its own source. Scoped headers; caption with title, period and universe."""
     L = v["labels"]
     cap = f'{esc(v["title"])} — {esc(v["period"])} — {esc(v["universe"])}'
-    t1 = (f'<table class="{cls}"><caption>{cap} — {num(d["panel1"][0]["x"], year=True)} · {esc(d["unit_usd"])} · {esc(L["reported"])}</caption><thead><tr><th scope="col">{esc(L["source"])}</th><th scope="col">{esc(d["unit_usd"])}</th></tr></thead><tbody>'
+    t1 = (f'<table class="{cls}"><caption>{cap} — {num(d["panel1"][0]["x"], year=True)} · {esc(d["unit_usd"])} · {esc(L["reported"])}</caption><thead><tr><th scope="col">{esc(th(v, "source"))}</th><th scope="col">{esc(d["unit_usd"])}</th></tr></thead><tbody>'
           + "".join(f'<tr><th scope="row">{esc(r["series_label"])}</th><td class="num">{num(r["y"])}</td></tr>' for r in d["panel1"])
           + f'<tr><td colspan="2" class="marker">{esc(L["same_year_revision"])}</td></tr></tbody></table>')
     # Panel 2: one table per lane. The two indexed paths are separate series that never share a value axis (Lock §4.1.5),
@@ -274,8 +274,44 @@ def text_frame(v: dict, cite_label: str, origin: str | None, heading: str = "h2"
             f'<p class="cap">{esc(v["question"])}</p>'
             f'<div class="alt alt-body" data-visual-fallback="ordered-text"><{sub_heading(heading)} class="alt-h sr-only">{esc(v["labels"]["text_alternative"])}</{sub_heading(heading)}><p class="body"><b>{esc(v["labels"]["what_it_shows"])}</b> {iso_run(text_alt(v))}</p>'
             + (f'<p class="small"><b>{esc(v["labels"]["scope"])}:</b> {iso_run(scope)}</p>' if scope else "")
-            + (landscape_table(v) if v.get("landscape") else "")
+            + (landscape_table(v) if v.get("landscape") else "") + (text_table(v) if v.get("text_table") else "")
             + '</div>' + frame_foot(v, cite_label, origin, open_label) + '</figure>')
+
+
+def text_table(v: dict) -> str:
+    """RC-12 (B12): the table a text-first contract's rationale describes, from governed rows only (the generator's
+    `table`): a governed heading on every column, governed row headers, numbers through the one number rule, a governed
+    string spanning cells where no value is held, and a governed marker row across the table."""
+    t = v["text_table"]
+    n = len(t["head"])
+    if any(not str(h).strip() for h in t["head"]):
+        raise ValueError(f"a text-first table has an unnamed column: {t['head']}")
+    def td(c: dict) -> str:
+        span = f' colspan="{c["span"]}"' if c.get("span", 1) > 1 else ""
+        if "number" in c:
+            body = num(c["number"]) + (f' {esc(c["unit"])}' if c.get("unit") else "")
+            return f'<td class="num"{span}>{body}</td>' if not c.get("unit") else f"<td{span}>{body}</td>"
+        return f'<td{span}>{iso_run(c["text"])}</td>'
+    bodies, cur = [], []
+    for r in t["rows"]:
+        if "group" in r:   # a row group opened by its base (the design's row-group pattern, `grouped_table`)
+            if cur:
+                bodies.append(cur)
+            g = r["group"]
+            cur = [f'<tr><th scope="rowgroup" colspan="{n}" class="rg">{esc(g["lead"])} {num(g["number"])} {esc(g["unit"])}</th></tr>']
+        elif "marker" in r:
+            if cur:
+                bodies.append(cur)
+            bodies.append([f'<tr><td colspan="{n}" class="marker">{esc(r["marker"])}</td></tr>'])
+            cur = []
+        else:
+            cur.append(f'<tr><th scope="row">{esc(r["head"])}</th>{"".join(td(c) for c in r["cells"])}</tr>')
+    if cur:
+        bodies.append(cur)
+    head = "".join(f'<th scope="col">{esc(h)}</th>' for h in t["head"])
+    tbl = (f'<table class="rvtab"><caption>{caption_of(v, esc(qual(*t["caption"])))}</caption><thead><tr>{head}</tr></thead>'
+           + "".join(f'<tbody>{"".join(b)}</tbody>' for b in bodies) + '</table>')
+    return f'<div data-text-first-table>{table_region(v, tbl)}</div>'
 
 
 def landscape_table(v: dict) -> str:

@@ -324,6 +324,29 @@ def comparison(page: dict, shell: dict) -> str:
 
 
 # ------------------------------------------------------------------------------------------------ Data & Source
+METHODS_SHELF = "measurement-methods-and-international-references"   # RC-12 (B13 c): the governed category's key
+
+
+def facet_attrs(c: dict) -> str:
+    """RC-12 (B13 a): the language-neutral filter keys and the sort date a source carries for the library's filters."""
+    f = c.get("facets") or {}
+    return "".join(f' data-f-{k}="{esc(f.get(k, ""))}"' for k in ("type", "publisher", "year", "domain", "date"))
+
+
+def library_controls(page: dict, L: dict) -> str:
+    """RC-12 (B13 a): the research library's filters and order. Hidden until the runtime runs, so without JavaScript
+    the full list stays as it is; every option is a governed value of a listed source (no option can return nothing)."""
+    def sel(key: str, label: str) -> str:
+        opts = "".join(f'<option value="{esc(k)}">{esc(v)}</option>' for k, v in page["facets"][key])
+        return (f'<label class="facet"><span>{esc(label)}</span><select data-source-facet="{key}">'
+                f'<option value="">{esc(L["f_any"])}</option>{opts}</select></label>')
+    order = (f'<label class="facet"><span>{esc(L["sort"])}</span><select data-source-sort><option value="">{esc(L["sort_grouped"])}</option>'
+             f'<option value="newest">{esc(L["sort_newest"])}</option></select></label>')
+    return (f'<div class="source-facets" data-source-facets hidden>{sel("type", L["f_type"])}{sel("publisher", L["f_publisher"])}'
+            f'{sel("year", L["f_year"])}{sel("domain", L["f_domain"])}{order}'
+            f'<button type="button" class="tbtn" data-source-facets-clear>{esc(L["f_clear"])}</button></div>')
+
+
 def source_row(c: dict, L: dict, curated: bool = False) -> str:
     """A source in the register. Curated cards carry their category, why they matter and their boundary; citation
     cards their governed title, kind and date; locator-only sources their reference and locator (never a title)."""
@@ -331,11 +354,15 @@ def source_row(c: dict, L: dict, curated: bool = False) -> str:
     if c["dependents"]:
         deps = (f'<details class="deps" data-dependent-evidence="{esc(c["id"])}"><summary>{esc(L["dependents"])} ({bdi(len(c["dependents"]))})</summary><ul class="rlist">'
                 + "".join(f'<li><a href="{d["href"]}">{esc(d["title"])}</a></li>' for d in c["dependents"]) + "</ul></details>")
+    if c.get("readings"):   # RC-12 (B13 b): the Evidence Readings that use the source
+        deps += (f'<details class="deps" data-source-readings="{esc(c["id"])}"><summary>{esc(L["readings"])} ({bdi(len(c["readings"]))})</summary><ul class="rlist">'
+                 + "".join(f'<li><a href="{d["href"]}">{esc(d["title"])}</a></li>' for d in c["readings"]) + "</ul></details>")
     cite = f'<button type="button" class="tbtn" data-source-cite data-source-citation="{esc(c["cite_payload"])}">{esc(L["copy_reference"])}</button>'
-    open_ = f'<a class="source-locator" href="{esc(c["url"])}" rel="noopener noreferrer" target="_blank">{esc(L["open_original"])}</a>'
+    # RC-12 (B13 d): a locator that is an archived copy (web.archive.org) says so on its link
+    open_ = f'<a class="source-locator" href="{esc(c["url"])}" rel="noopener noreferrer" target="_blank"{" data-archived-copy" if c.get("archived") else ""}>{esc(L["open_archived"] if c.get("archived") else L["open_original"])}</a>'
     rights = f'<p class="rights" data-rights-state>{esc(c["rights_state"])}</p>'
     ref = f'<span class="rref">{esc(L["reference"])} {bdi(c["id"])}</span>'
-    common = f'id="source-{esc(c["id"])}" data-source-record data-source-search="{esc(c["search"])}" tabindex="-1"'
+    common = f'id="source-{esc(c["id"])}" data-source-record data-source-search="{esc(c["search"])}" tabindex="-1"' + facet_attrs(c)
     if curated:
         return (f'<article class="src card" {common}><h4 dir="auto">{esc(c["title"])}</h4><span class="kind" dir="auto">{esc(c["kind_line"])}</span>{ref}'
                 + (f'<p class="small">{esc(c["why"])}</p>' if c["why"] else "")
@@ -350,10 +377,12 @@ def source_row(c: dict, L: dict, curated: bool = False) -> str:
 def data_sources(page: dict, shell: dict) -> str:
     L = page["labels"]; SL = shell["labels"]
     parts = [head_block(page, shell, SL["understand_explore_verify"], lead=page["lead"])]
-    curated = "".join(f'<div class="cat"><h3>{esc(g["category"])}</h3><div class="objs">{"".join(source_row(c, L, curated=True) for c in g["items"])}</div></div>' for g in page["curated"])
+    # RC-12 (B13 c): each curated shelf is addressable (#shelf-<key>), and the methods and international references shelf
+    # is reached from the page index
+    curated = "".join(f'<div class="cat" id="shelf-{esc(g["key"])}"><h3>{esc(g["category"])}</h3><div class="objs">{"".join(source_row(c, L, curated=True) for c in g["items"])}</div></div>' for g in page["curated"])
     supporting = "".join(source_row(c, L) for c in page["supporting"])
     # B5: the regulatory documents in one group with its scope line; a curated one keeps its card and is linked from here
-    also = "".join(f'<p class="src-also" data-source-also data-source-search="{esc(c["search"])}"><a href="#source-{esc(c["id"])}" dir="auto">{esc(c["title"])}</a>'
+    also = "".join(f'<p class="src-also" data-source-also data-source-search="{esc(c["search"])}"{facet_attrs(c)}><a href="#source-{esc(c["id"])}" dir="auto">{esc(c["title"])}</a>'
                    f' <span class="kind" dir="auto">{esc(c["kind_line"])} · {esc(L["curated"])}</span></p>' for c in page.get("regulatory_also") or [])
     regulatory = "".join(source_row(c, L) for c in page.get("regulatory") or [])
     reg_n = len(page.get("regulatory") or []) + len(page.get("regulatory_also") or [])
@@ -361,6 +390,7 @@ def data_sources(page: dict, shell: dict) -> str:
     tool = (f'<section class="qa first" id="directory"><div>{rubric(L["directory"], tag="h2")}</div><div><p class="small">{esc(L["intro"])}</p><p class="small">{esc(L["rights_note"])}</p>'
             f'<div class="search-inline"><input data-source-filter class="search-input" type="search" placeholder="{esc(L["filter_placeholder"])}" aria-label="{esc(L["filter"])}">'
             f'<div class="search-status" data-source-filter-status role="status" aria-live="polite"></div></div>'
+            + library_controls(page, L) +
             f'<p class="small reuse-once" data-reuse-terms>{esc(L["reuse_once"])}</p>'   # B8: the reuse terms, stated once above the list
             f'<h3 class="grp" id="curated">{esc(L["curated"])} <span class="count">({bdi(page["curated_count"])})</span></h3><div class="curated">{curated}</div>'
             + (f'<details class="source-locator-details source-regulatory-details grp" id="regulatory" open><summary>{esc(L["regulatory"])} <span class="count">({bdi(reg_n)})</span></summary>'
@@ -374,7 +404,7 @@ def data_sources(page: dict, shell: dict) -> str:
             f'<details class="source-locator-details source-reference-details grp"><summary>{esc(L["reference_group"])} <span class="count">({bdi(len(page["reference"]))})</span></summary><p class="small">{esc(L["reference_intro"])}</p><div class="objs">{reference}</div></details>'
             f'<div class="empty small" data-source-no-results hidden>{esc(L["no_results"])}</div></div></section>')
     parts.append(tool)
-    index = [("directory", L["directory"])]
+    index = [("directory", L["directory"])] + [(f"shelf-{g['key']}", g["category"]) for g in page["curated"] if g["key"] == METHODS_SHELF]
     for s in page["sections"]:
         if s.get("inventory"):
             items = "".join(f'<div><dt>{esc(x["label"])}</dt><dd dir="ltr">{esc(x["value"])}</dd></div>' for x in s["inventory"])

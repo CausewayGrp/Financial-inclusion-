@@ -1,5 +1,55 @@
 # Repository Change Log
 
+## 2026-10-03 — Release candidate RC-12: B12 text-first tables, B13 research library and link check, two reviews
+
+Transaction `audit/release_candidate/rc_12_b12_b13.py` through `run_stage.py` (Master `36a61f8d5429` → `efb5a7c2ce38`;
+65 cells). `rc_12_stage_inputs.py` binds the two tables in the contract.
+
+- **RC-11's review (RC-11b), NOT ACCEPTABLE on one string; all applied.**
+  - The /payments/ frame note no longer gives OBS-00036 a half-year period, which its caveat leaves open. It no longer
+    calls consecutive months comparable without qualification either: three releases' displayed percentages contradict
+    the published totals, and the note now says that each mismatch is recorded as a discrepancy within the source.
+  - Arabic «الحلقة» for the chain's step column.
+  - "Group or gap" and "Date or period" headings.
+  - The landscape's empty-row label names what is empty.
+  - A governed "Source" corner label for the source-comparison table, replacing the prefix "Source:".
+- **B12.** The two text-first contracts whose rationale describes a table now render it from governed rows inside the
+  text frame:
+  - VIS-TARGET-RESULT-STATE shows baseline, target, and a result row saying "No observed result is held in the evidence
+    base — not zero". The World Bank ISR's placeholder "0" is not bound.
+  - VIS-FIRM-FINANCE-PATH shows each base as a row group ("Out of 328 formal establishments surveyed", "Out of 18 valid
+    loan-source responses"), with a governed marker: it is not established that the 18 come from the 31.
+
+  The generator gains `_vdc_text_table`: governed rows only, `must_equal` guards, governed headings and row headers, and
+  only on the text-first tiers. A new gate, RC-B12, checks every row header and every number on both record pages.
+  `audit/release_candidate/B12_TEXT_FIRST_DISPOSITIONS.md` disposes all 23 text-only contracts: 2 bound, 4 complete as
+  designed, and 17 with the missing Master input named.
+- **B13 a–c, the research library on /data/.**
+  - Filters by document type, publisher, document year and the domain page that uses the source, plus an order by
+    document date.
+  - The state travels in the URL (`?type=&publisher=&year=&domain=&sort=&q=`), so a filtered list can be shared.
+  - The controls appear only when the runtime runs, so without JavaScript the full list is unchanged.
+  - Each source lists the Evidence Readings that use it, besides its records.
+  - The methods and international references shelf is addressable and in the page index.
+
+  Two filters the brief names cannot be offered. The language of a source is not a governed field. Every listed source
+  already has a public original, because the publication firewall lists no other. Gate RC-B13 checks the filters, the
+  keys and the archived labels; a browser test checks filtering, the shared URL and clearing.
+- **B13 d, the link check** (`audit/release_candidate/LINK_CHECK.md`): all 156 public locators were requested.
+  - 129 OK.
+  - Five SFD newsletters had moved to the publisher's new file names; each was read and holds the values the Master
+    cites, and its locator now points to the new address.
+  - Four have no current address. Their locator is now the web.archive.org copy of the original address, and the site
+    labels it "Open archived copy (web.archive.org)".
+  - Issue 62's current file is another edition, with different table totals: a register item.
+  - 14 are refused by the publisher's CDN, which is not a broken link.
+  - One is unresolved, one host is down, one has a TLS failure and one needs sign-in.
+- **RC-12's own review, NOT ACCEPTABLE on two strings; folded in before commit.**
+  - The frame note's last sentence names the published monthly totals.
+  - The 18 responses keep the governed Arabic term «استجابة».
+  - Three Arabic should-fix items.
+- Negative controls added for RC-B12 (one) and RC-B13 (two); each is caught.
+
 ## 2026-10-03 — B10 closed: the full-site accessibility audit record, the keyboard walk, one corner label
 
 - **Audit record (B10 c).** `scripts/accessibility_audit.py --all` over 143 routes × English and Arabic × 1,440 and

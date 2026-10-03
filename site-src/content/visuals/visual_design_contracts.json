@@ -1,7 +1,7 @@
 {
   "schema_version": "1.0",
   "contract_id": "VISUAL-DESIGN-CONTRACT",
-  "authority_master_sha256": "36a61f8d5429f740e583f826f4209f263b117469e16005e471983b72a2330df0",
+  "authority_master_sha256": "efb5a7c2ce38946d58e34d9f76c375f2f805fe6eaf06ea01537c963558322aa7",
   "rule": "Design-layer controlled input. It assigns every governed visual contract (Master 11) a design tier and, for SIGNATURE and CORE_ANALYTICAL visuals, declares which governed rows a chart binds to and how they are drawn. It never carries a fact, number, label or sentence: values come from Master data rows, text from Master contract/evidence fields, and legend labels from the governed interface copy (UI-VIS-*). The generator resolves every binding and fails on any unresolved ID, any value that disagrees with its guard, or any visual left untiered.",
   "tiers": {
     "SIGNATURE": "Distinctive to this product, decision-useful, drawable from governed rows and safe when detached. Designed first; gets a full data contract.",
@@ -3085,8 +3085,8 @@
         },
         "frame_labels": {
           "UI-VIS-NOTE-POS-H1-WITHHELD": {
-            "en": "The payment-system report for the first half of 2025 also gives a POS-transaction total for that half-year. It is withheld here because its definition and period need a methodology note before public use. The monthly releases are shown because each reports the same POS measures for one month within the same reporting scope, so consecutive months are comparable.",
-            "ar": "يذكر تقرير نظام المدفوعات للنصف الأول من 2025 أيضًا إجماليًا لمعاملات نقاط البيع في ذلك النصف، وهو محجوب هنا لأن تعريفه وفترته يحتاجان إلى ملاحظة منهجية قبل النشر. أما الإصدارات الشهرية فتُعرض لأن كلًّا منها يذكر مقاييس نقاط البيع نفسها لشهر واحد ضمن نطاق الإبلاغ نفسه، فتكون الأشهر المتتالية قابلة للمقارنة."
+            "en": "The first-half 2025 payment report also gives an aggregate figure for POS transactions. It is withheld here because its definition and period need a methodology note before public use. The monthly releases are shown because each reports POS transactions for one month within the same reporting scope, so their published totals can be read side by side. Where a release's displayed percentage change does not match the published monthly totals, the mismatch is recorded as a discrepancy within the source.",
+            "ar": "يذكر تقرير المدفوعات للنصف الأول من 2025 أيضًا رقمًا إجماليًا لمعاملات نقاط البيع، وهو محجوب هنا لأن تعريفه وفترته يحتاجان إلى ملاحظة منهجية قبل النشر. أما الإصدارات الشهرية فتُعرض لأن كلًّا منها يذكر معاملات نقاط البيع لشهر واحد ضمن نطاق الإبلاغ نفسه، فيمكن قراءة إجمالياتها المنشورة جنبًا إلى جنب. وحيث لا تتفق نسبة التغير المعروضة في إصدارٍ ما مع الإجماليات الشهرية المنشورة، يُسجَّل الفرق بوصفه اختلافًا داخل المصدر."
           }
         },
         "series": [
@@ -4152,6 +4152,128 @@
         "public_routes": [
           "/firms"
         ]
+      },
+      "table": {
+        "form": "Item and number under each base (a row group opened by \"Out of\" and the base), in the source's order. A governed marker separates the establishments with a line of credit from the loan-source responses: the Master does not establish that the 18 come from the 31, so nothing is drawn or read as a funnel.",
+        "head": [
+          {
+            "en": "Item",
+            "ar": "البند",
+            "ui_id": "UI-VIS-TH-ITEM"
+          },
+          {
+            "en": "Number",
+            "ar": "العدد",
+            "ui_id": "UI-VIS-UNIT-COUNT"
+          }
+        ],
+        "caption": [],
+        "rows": [
+          {
+            "group": {
+              "lead": {
+                "en": "Out of",
+                "ar": "من أصل",
+                "ui_id": "UI-VIS-TH-BASE"
+              },
+              "number": 328,
+              "ref": "firm.FFO-2022-004.denominator_n",
+              "unit": {
+                "en": "formal establishments surveyed",
+                "ar": "منشأة رسمية شملها المسح",
+                "ui_id": "UI-VIS-UNIT-FIRMS-SURVEYED"
+              }
+            }
+          },
+          {
+            "head": {
+              "en": "Formal establishments reporting a line of credit",
+              "ar": "المنشآت الرسمية التي أفادت بامتلاك خط ائتمان",
+              "ui_id": "UI-VIS-CAT-FIRM-CREDIT-LINE"
+            },
+            "cells": [
+              {
+                "number": 31,
+                "ref": "firm.FFO-2022-004.value"
+              }
+            ]
+          },
+          {
+            "marker": {
+              "en": "Not established: whether the loan-source responses below come from the establishments with a line of credit above.",
+              "ar": "لم يثبت ما إذا كانت الاستجابات لسؤال مصدر القرض أدناه صادرة عن المنشآت التي أفادت بامتلاك خط ائتمان أعلاه.",
+              "ui_id": "UI-VIS-NOTE-FIRM-LOAN-SUBSET"
+            }
+          },
+          {
+            "group": {
+              "lead": {
+                "en": "Out of",
+                "ar": "من أصل",
+                "ui_id": "UI-VIS-TH-BASE"
+              },
+              "number": 18,
+              "ref": "firm.FFO-2022-LS-01.denominator_n",
+              "unit": {
+                "en": "valid loan-source responses",
+                "ar": "استجابة صالحة لسؤال مصدر القرض",
+                "ui_id": "UI-VIS-UNIT-VALID-RESPONSES"
+              }
+            }
+          },
+          {
+            "head": {
+              "en": "Private commercial banks",
+              "ar": "البنوك التجارية الخاصة",
+              "ui_id": "UI-VIS-CAT-FIRM-LOAN-PRIVATE-BANKS"
+            },
+            "cells": [
+              {
+                "number": 10,
+                "ref": "firm.FFO-2022-LS-01.value"
+              }
+            ]
+          },
+          {
+            "head": {
+              "en": "State-owned bank or government agency",
+              "ar": "بنك مملوك للدولة أو جهة حكومية",
+              "ui_id": "UI-VIS-CAT-FIRM-LOAN-STATE"
+            },
+            "cells": [
+              {
+                "number": 1,
+                "ref": "firm.FFO-2022-LS-02.value"
+              }
+            ]
+          },
+          {
+            "head": {
+              "en": "Non-bank financial institution or microfinance provider",
+              "ar": "مؤسسة مالية غير مصرفية أو مقدم تمويل أصغر",
+              "ui_id": "UI-VIS-CAT-FIRM-LOAN-NONBANK"
+            },
+            "cells": [
+              {
+                "number": 5,
+                "ref": "firm.FFO-2022-LS-03.value"
+              }
+            ]
+          },
+          {
+            "head": {
+              "en": "Other non-financial institution",
+              "ar": "مؤسسة أخرى غير مالية",
+              "ui_id": "UI-VIS-CAT-FIRM-LOAN-OTHER"
+            },
+            "cells": [
+              {
+                "number": 2,
+                "ref": "firm.FFO-2022-LS-04.value"
+              }
+            ]
+          }
+        ]
       }
     },
     {
@@ -4563,6 +4685,86 @@
         "canonical_route": "/evidence/VIS-TARGET-RESULT-STATE/",
         "public_routes": [
           "/reforms"
+        ]
+      },
+      "table": {
+        "form": "Three rows (state, date, value): the project's baseline, its target, and the result, which the evidence base does not hold. No dated axis, no percentage of the target, no comparison with administrative counts.",
+        "head": [
+          {
+            "en": "Item",
+            "ar": "البند",
+            "ui_id": "UI-VIS-TH-ITEM"
+          },
+          {
+            "en": "Date or period",
+            "ar": "التاريخ أو الفترة",
+            "ui_id": "UI-VIS-TH-DATE"
+          },
+          {
+            "en": "Access points as defined by the project",
+            "ar": "نقاط وصول وفق تعريف المشروع",
+            "ui_id": "UI-VIS-UNIT-PROJECT-ACCESS-POINTS"
+          }
+        ],
+        "caption": [
+          {
+            "en": "Programme figure — not a national rate",
+            "ar": "رقم برنامج — ليس معدلًا وطنيًا",
+            "ui_id": "UI-VIS-STATE-PROGRAMME"
+          }
+        ],
+        "rows": [
+          {
+            "head": {
+              "en": "Baseline — the starting value the project reports",
+              "ar": "خط الأساس — القيمة الابتدائية التي يوردها المشروع",
+              "ui_id": "UI-VIS-BASELINE"
+            },
+            "cells": [
+              {
+                "month": "2025-01",
+                "ref": "fmiip.FMIIP-RF-004.baseline_period_iso"
+              },
+              {
+                "number": 817,
+                "ref": "fmiip.FMIIP-RF-004.baseline_value"
+              }
+            ]
+          },
+          {
+            "head": {
+              "en": "Target — not a result",
+              "ar": "مستهدف — ليس نتيجة متحققة",
+              "ui_id": "UI-VIS-TARGET"
+            },
+            "cells": [
+              {
+                "month": "2030-06",
+                "ref": "fmiip.FMIIP-RF-004.target_period_iso"
+              },
+              {
+                "number": 1021,
+                "ref": "fmiip.FMIIP-RF-004.target_value"
+              }
+            ]
+          },
+          {
+            "head": {
+              "en": "Observed value",
+              "ar": "قيمة مرصودة",
+              "ui_id": "UI-VIS-RESULT"
+            },
+            "cells": [
+              {
+                "text": {
+                  "en": "No observed result is held in the evidence base — not zero",
+                  "ar": "لا تتضمن قاعدة الأدلة نتيجة مرصودة — ليست صفرًا",
+                  "ui_id": "UI-VIS-RESULT-NOT-HELD"
+                },
+                "span": 2
+              }
+            ]
+          }
         ]
       }
     },

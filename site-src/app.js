@@ -227,15 +227,40 @@ const sourceInput=$('[data-source-filter]');
 if(sourceInput){
   const records=$$('[data-source-record]');
   const status=$('[data-source-filter-status]'), noResults=$('[data-source-no-results]'), locatorDetails=$('.source-locator-details');
+  // RC-12 (B13 a): filters by document type, publisher, year and the domain page that uses a source, an order by
+  // document date, and the whole state in the URL so a filtered list can be shared; the controls appear only here, so
+  // without JavaScript the full list is unchanged
+  const facetBox=$('[data-source-facets]'), facets=$$('[data-source-facet]'), sortSel=$('[data-source-sort]');
+  const facetOk=r=>facets.every(f=>!f.value||(f.dataset.sourceFacet==='domain'?(r.dataset.fDomain||'').split(' ').includes(f.value):r.dataset['f'+f.dataset.sourceFacet[0].toUpperCase()+f.dataset.sourceFacet.slice(1)]===f.value));
+  records.forEach((r,i)=>{r.dataset.order=i;});
+  const reorder=()=>{const newest=sortSel&&sortSel.value==='newest';
+    new Set(records.map(r=>r.parentElement)).forEach(box=>{const kids=records.filter(r=>r.parentElement===box);
+      kids.sort((a,b)=>newest?((b.dataset.fDate||'').localeCompare(a.dataset.fDate||'')||(a.dataset.order-b.dataset.order)):(a.dataset.order-b.dataset.order));
+      kids.forEach(k=>box.appendChild(k));});};
+  const share=()=>{const q=new URLSearchParams(location.search);
+    facets.forEach(f=>{if(f.value)q.set(f.dataset.sourceFacet,f.value);else q.delete(f.dataset.sourceFacet);});
+    if(sortSel&&sortSel.value)q.set('sort',sortSel.value);else q.delete('sort');
+    if(sourceInput.value.trim()&&!q.has('source'))q.set('q',sourceInput.value.trim());else q.delete('q');
+    const s=q.toString();history.replaceState(null,'',location.pathname+(s?'?'+s:'')+location.hash);};
   const apply=()=>{
     const term=normalize(sourceInput.value.trim()); let shown=0, visibleLocators=0;
-    records.forEach(r=>{const ok=!term||normalize(r.dataset.sourceSearch||'').includes(term);r.hidden=!ok;if(ok){shown++;if(r.classList.contains('source-locator'))visibleLocators++;if(term){const d=r.closest('details');if(d)d.open=true;}}});
-    $$('[data-source-also]').forEach(r=>{r.hidden=!(!term||normalize(r.dataset.sourceSearch||'').includes(term));});   // B5: a link row, never counted
-    if(term&&visibleLocators&&locatorDetails&&!locatorDetails.open)locatorDetails.open=true;
+    const filtering=!!term||facets.some(f=>f.value);
+    records.forEach(r=>{const ok=(!term||normalize(r.dataset.sourceSearch||'').includes(term))&&facetOk(r);r.hidden=!ok;if(ok){shown++;if(r.classList.contains('source-locator'))visibleLocators++;if(filtering){const d=r.closest('details');if(d)d.open=true;}}});
+    $$('[data-source-also]').forEach(r=>{r.hidden=!((!term||normalize(r.dataset.sourceSearch||'').includes(term))&&facetOk(r));});   // B5: a link row, never counted
+    if(filtering&&visibleLocators&&locatorDetails&&!locatorDetails.open)locatorDetails.open=true;
     if(noResults)noResults.hidden=shown!==0;
     if(status)status.textContent=TF(shown===1?'UI-JS-SOURCES-SHOWN-ONE':'UI-JS-SOURCES-SHOWN',{n:shown});   // TOOL-19
   };
-  sourceInput.addEventListener('input',apply);
+  sourceInput.addEventListener('input',()=>{apply();share();});
+  if(facetBox){
+    const params=new URLSearchParams(location.search);
+    facets.forEach(f=>{const v=params.get(f.dataset.sourceFacet);if(v&&[...f.options].some(o=>o.value===v))f.value=v;f.addEventListener('change',()=>{apply();share();});});
+    if(sortSel){if(params.get('sort')==='newest')sortSel.value='newest';sortSel.addEventListener('change',()=>{reorder();share();});}
+    if(params.get('q')&&!params.get('source'))sourceInput.value=params.get('q');
+    const clear=$('[data-source-facets-clear]');
+    if(clear)clear.addEventListener('click',()=>{facets.forEach(f=>{f.value='';});if(sortSel)sortSel.value='';sourceInput.value='';reorder();apply();share();});
+    facetBox.hidden=false; reorder();
+  }
   const requested=new URLSearchParams(location.search).get('source');
   const target=requested?document.getElementById('source-'+requested):null;
   if(requested&&target){

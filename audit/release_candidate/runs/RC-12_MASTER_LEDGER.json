@@ -1,0 +1,610 @@
+{
+ "transaction": "RC-12",
+ "summary": "B12 tables; B13 library and locators; RC-11 review",
+ "items": {
+  "RC-11b": 6,
+  "B12": 5,
+  "B13": 12,
+  "B13d_locators": {
+   "SRC-SFD-Q1-2012-001": 2,
+   "SRC-SFD-Q2-2014-001": 3,
+   "SRC-SFD-Q4-2017-001": 3,
+   "SRC-SFD-Q1-2019-001": 3,
+   "SRC-SFD-Q4-2020-001": 3,
+   "SRC-SFD-Q2-2013-001": 3,
+   "SRC-SFD-NEWSLETTER-2000-Q4-001": 2,
+   "SRC-SFD-MF-HISTORY-TOR-2012-001": 4,
+   "SRC-SFD-SMED-LP-2023-NOV": 2
+  }
+ },
+ "input_master_sha256": "36a61f8d5429f740e583f826f4209f263b117469e16005e471983b72a2330df0",
+ "output_master_sha256": "efb5a7c2ce38946d58e34d9f76c375f2f805fe6eaf06ea01537c963558322aa7",
+ "cells_written": 65,
+ "changes": [
+  {
+   "finding": "RC-11b",
+   "sheet": "04_NAV_UX",
+   "row": 558,
+   "col": 2,
+   "field": "UI-VIS-NOTE-POS-H1-WITHHELD.label_en",
+   "old": "The payment-system report for the first half of 2025 also gives a POS-transaction total for that half-year. It is withheld here because its definition and period need a methodology note before public use. The monthly releases are shown because each reports the same POS measures for one month within the same reporting scope, so consecutive months are comparable.",
+   "new": "The first-half 2025 payment report also gives an aggregate figure for POS transactions. It is withheld here because its definition and period need a methodology note before public use. The monthly releases are shown because each reports POS transactions for one month within the same reporting scope, so their published totals can be read side by side. Where a release's displayed percentage change does not match the published monthly totals, the mismatch is recorded as a discrepancy within the source."
+  },
+  {
+   "finding": "RC-11b",
+   "sheet": "04_NAV_UX",
+   "row": 558,
+   "col": 3,
+   "field": "UI-VIS-NOTE-POS-H1-WITHHELD.label_ar",
+   "old": "يذكر تقرير نظام المدفوعات للنصف الأول من 2025 أيضًا إجماليًا لمعاملات نقاط البيع في ذلك النصف، وهو محجوب هنا لأن تعريفه وفترته يحتاجان إلى ملاحظة منهجية قبل النشر. أما الإصدارات الشهرية فتُعرض لأن كلًّا منها يذكر مقاييس نقاط البيع نفسها لشهر واحد ضمن نطاق الإبلاغ نفسه، فتكون الأشهر المتتالية قابلة للمقارنة.",
+   "new": "يذكر تقرير المدفوعات للنصف الأول من 2025 أيضًا رقمًا إجماليًا لمعاملات نقاط البيع، وهو محجوب هنا لأن تعريفه وفترته يحتاجان إلى ملاحظة منهجية قبل النشر. أما الإصدارات الشهرية فتُعرض لأن كلًّا منها يذكر معاملات نقاط البيع لشهر واحد ضمن نطاق الإبلاغ نفسه، فيمكن قراءة إجمالياتها المنشورة جنبًا إلى جنب. وحيث لا تتفق نسبة التغير المعروضة في إصدارٍ ما مع الإجماليات الشهرية المنشورة، يُسجَّل الفرق بوصفه اختلافًا داخل المصدر."
+  },
+  {
+   "finding": "RC-11b",
+   "sheet": "04_NAV_UX",
+   "row": 554,
+   "col": 3,
+   "field": "UI-VIS-TH-STEP.label_ar",
+   "old": "الخطوة",
+   "new": "الحلقة"
+  },
+  {
+   "finding": "RC-11b",
+   "sheet": "04_NAV_UX",
+   "row": 551,
+   "col": 2,
+   "field": "UI-VIS-TH-GROUP.label_en",
+   "old": "Group",
+   "new": "Group or gap"
+  },
+  {
+   "finding": "RC-11b",
+   "sheet": "04_NAV_UX",
+   "row": 551,
+   "col": 3,
+   "field": "UI-VIS-TH-GROUP.label_ar",
+   "old": "الفئة",
+   "new": "الفئة أو الفجوة"
+  },
+  {
+   "finding": "RC-11b",
+   "sheet": "04_NAV_UX",
+   "row": 556,
+   "col": 2,
+   "field": "UI-VIS-TH-DATE.label_en",
+   "old": "Date",
+   "new": "Date or period"
+  },
+  {
+   "finding": "RC-11b",
+   "sheet": "04_NAV_UX",
+   "row": 556,
+   "col": 3,
+   "field": "UI-VIS-TH-DATE.label_ar",
+   "old": "التاريخ",
+   "new": "التاريخ أو الفترة"
+  },
+  {
+   "finding": "RC-11b",
+   "sheet": "04_NAV_UX",
+   "row": 559,
+   "col": 2,
+   "field": "UI-LAND-NO-NEXT.label_en",
+   "old": "No domain page or measurement priority in this base",
+   "new": "No page in this base to verify it, and no measurement priority"
+  },
+  {
+   "finding": "RC-11b",
+   "sheet": "04_NAV_UX",
+   "row": 559,
+   "col": 3,
+   "field": "UI-LAND-NO-NEXT.label_ar",
+   "old": "لا توجد صفحة مجال ولا أولوية قياس في قاعدة الأدلة هذه",
+   "new": "لا توجد في قاعدة الأدلة هذه صفحة للتحقق منه ولا أولوية قياس"
+  },
+  {
+   "finding": "RC-11b",
+   "sheet": "04_NAV_UX",
+   "row": null,
+   "col": null,
+   "field": "UI-VIS-TH-SOURCE",
+   "old": null,
+   "new": "Source || المصدر"
+  },
+  {
+   "finding": "RC-12:B12",
+   "sheet": "04_NAV_UX",
+   "row": null,
+   "col": null,
+   "field": "UI-VIS-RESULT-NOT-HELD",
+   "old": null,
+   "new": "No observed result is held in the evidence base — not zero || لا تتضمن قاعدة الأدلة نتيجة مرصودة — ليست صفرًا"
+  },
+  {
+   "finding": "RC-12:B12",
+   "sheet": "04_NAV_UX",
+   "row": null,
+   "col": null,
+   "field": "UI-VIS-TH-BASE",
+   "old": null,
+   "new": "Out of || من أصل"
+  },
+  {
+   "finding": "RC-12:B12",
+   "sheet": "04_NAV_UX",
+   "row": null,
+   "col": null,
+   "field": "UI-VIS-UNIT-FIRMS-SURVEYED",
+   "old": null,
+   "new": "formal establishments surveyed || منشأة رسمية شملها المسح"
+  },
+  {
+   "finding": "RC-12:B12",
+   "sheet": "04_NAV_UX",
+   "row": null,
+   "col": null,
+   "field": "UI-VIS-UNIT-VALID-RESPONSES",
+   "old": null,
+   "new": "valid loan-source responses || استجابة صالحة لسؤال مصدر القرض"
+  },
+  {
+   "finding": "RC-12:B12",
+   "sheet": "04_NAV_UX",
+   "row": null,
+   "col": null,
+   "field": "UI-VIS-NOTE-FIRM-LOAN-SUBSET",
+   "old": null,
+   "new": "Not established: whether the loan-source responses below come from the establishments with a line of credit above. || لم يثبت ما إذا كانت الاستجابات لسؤال مصدر القرض أدناه صادرة عن المنشآت التي أفادت بامتلاك خط ائتمان أعلاه."
+  },
+  {
+   "finding": "RC-12:B13",
+   "sheet": "04_NAV_UX",
+   "row": null,
+   "col": null,
+   "field": "UI-DATA-FILTER-TYPE",
+   "old": null,
+   "new": "Document type || نوع الوثيقة"
+  },
+  {
+   "finding": "RC-12:B13",
+   "sheet": "04_NAV_UX",
+   "row": null,
+   "col": null,
+   "field": "UI-DATA-FILTER-PUBLISHER",
+   "old": null,
+   "new": "Publisher || الناشر"
+  },
+  {
+   "finding": "RC-12:B13",
+   "sheet": "04_NAV_UX",
+   "row": null,
+   "col": null,
+   "field": "UI-DATA-FILTER-YEAR",
+   "old": null,
+   "new": "Year of the document || سنة الوثيقة"
+  },
+  {
+   "finding": "RC-12:B13",
+   "sheet": "04_NAV_UX",
+   "row": null,
+   "col": null,
+   "field": "UI-DATA-FILTER-DOMAIN",
+   "old": null,
+   "new": "Used on || مستخدم في"
+  },
+  {
+   "finding": "RC-12:B13",
+   "sheet": "04_NAV_UX",
+   "row": null,
+   "col": null,
+   "field": "UI-DATA-FILTER-ANY",
+   "old": null,
+   "new": "Any || الكل"
+  },
+  {
+   "finding": "RC-12:B13",
+   "sheet": "04_NAV_UX",
+   "row": null,
+   "col": null,
+   "field": "UI-DATA-FILTER-NOT-RECORDED",
+   "old": null,
+   "new": "Not recorded || غير مسجّل"
+  },
+  {
+   "finding": "RC-12:B13",
+   "sheet": "04_NAV_UX",
+   "row": null,
+   "col": null,
+   "field": "UI-DATA-FILTER-CLEAR",
+   "old": null,
+   "new": "Clear filters || مسح عوامل التصفية"
+  },
+  {
+   "finding": "RC-12:B13",
+   "sheet": "04_NAV_UX",
+   "row": null,
+   "col": null,
+   "field": "UI-DATA-SORT",
+   "old": null,
+   "new": "Order || الترتيب"
+  },
+  {
+   "finding": "RC-12:B13",
+   "sheet": "04_NAV_UX",
+   "row": null,
+   "col": null,
+   "field": "UI-DATA-SORT-GROUPED",
+   "old": null,
+   "new": "As grouped || حسب المجموعات"
+  },
+  {
+   "finding": "RC-12:B13",
+   "sheet": "04_NAV_UX",
+   "row": null,
+   "col": null,
+   "field": "UI-DATA-SORT-NEWEST",
+   "old": null,
+   "new": "Newest document first || الوثائق الأحدث أولًا"
+  },
+  {
+   "finding": "RC-12:B13",
+   "sheet": "04_NAV_UX",
+   "row": null,
+   "col": null,
+   "field": "UI-DATA-READINGS-USING-SOURCE",
+   "old": null,
+   "new": "Evidence Readings using this source || قراءات الأدلة التي تستخدم هذا المصدر"
+  },
+  {
+   "finding": "RC-12:B13",
+   "sheet": "04_NAV_UX",
+   "row": null,
+   "col": null,
+   "field": "UI-EVID-OPEN-ARCHIVED-COPY",
+   "old": null,
+   "new": "Open archived copy (web.archive.org) || افتح النسخة المؤرشفة (web.archive.org)"
+  },
+  {
+   "finding": "RC-12:B13d",
+   "sheet": "15_SOURCE_LIBRARY",
+   "row": 82,
+   "col": 2,
+   "field": "SRC-SFD-Q1-2012-001 locator",
+   "old": "https://www.sfd-yemen.org/uploads/issues/DESIGN%201st%20NL%202012%20-%20No-20121222-162100.pdf",
+   "new": "https://sfd-yemen.org/uploads/issues/Newsletter-Quarter-1-2012.pdf"
+  },
+  {
+   "finding": "RC-12:B13d",
+   "sheet": "21_MFI_DATA",
+   "row": 90,
+   "col": 17,
+   "field": "SRC-SFD-Q1-2012-001 locator",
+   "old": "https://www.sfd-yemen.org/uploads/issues/DESIGN%201st%20NL%202012%20-%20No-20121222-162100.pdf",
+   "new": "https://sfd-yemen.org/uploads/issues/Newsletter-Quarter-1-2012.pdf"
+  },
+  {
+   "finding": "RC-12:B13d",
+   "sheet": "15_SOURCE_LIBRARY",
+   "row": 82,
+   "col": 22,
+   "field": "SRC-SFD-Q1-2012-001.retrieval_date",
+   "old": null,
+   "new": "2026-10-03"
+  },
+  {
+   "finding": "RC-12:B13d",
+   "sheet": "15_SOURCE_LIBRARY",
+   "row": 85,
+   "col": 2,
+   "field": "SRC-SFD-Q2-2014-001 locator",
+   "old": "https://www.sfd-yemen.org/uploads/issues/SFD_Nwesletter_en66%20final-20141224-124427.pdf",
+   "new": "https://sfd-yemen.org/uploads/issues/Newsletter-Quarter-2-2014.pdf"
+  },
+  {
+   "finding": "RC-12:B13d",
+   "sheet": "21_MFI_DATA",
+   "row": 63,
+   "col": 14,
+   "field": "SRC-SFD-Q2-2014-001 locator",
+   "old": "https://www.sfd-yemen.org/uploads/issues/SFD_Nwesletter_en66%20final-20141224-124427.pdf",
+   "new": "https://sfd-yemen.org/uploads/issues/Newsletter-Quarter-2-2014.pdf"
+  },
+  {
+   "finding": "RC-12:B13d",
+   "sheet": "21_MFI_DATA",
+   "row": 95,
+   "col": 17,
+   "field": "SRC-SFD-Q2-2014-001 locator",
+   "old": "https://www.sfd-yemen.org/uploads/issues/SFD_Nwesletter_en66%20final-20141224-124427.pdf",
+   "new": "https://sfd-yemen.org/uploads/issues/Newsletter-Quarter-2-2014.pdf"
+  },
+  {
+   "finding": "RC-12:B13d",
+   "sheet": "15_SOURCE_LIBRARY",
+   "row": 85,
+   "col": 22,
+   "field": "SRC-SFD-Q2-2014-001.retrieval_date",
+   "old": null,
+   "new": "2026-10-03"
+  },
+  {
+   "finding": "RC-12:B13d",
+   "sheet": "15_SOURCE_LIBRARY",
+   "row": 90,
+   "col": 2,
+   "field": "SRC-SFD-Q4-2017-001 locator",
+   "old": "https://www.sfd-yemen.org/uploads/issues/Newsletter%20Eng%204th-2017%20%20-20-4-18-20190129-214133.pdf",
+   "new": "https://sfd-yemen.org/uploads/issues/Newsletter-Quarter-4-2017.pdf"
+  },
+  {
+   "finding": "RC-12:B13d",
+   "sheet": "21_MFI_DATA",
+   "row": 66,
+   "col": 14,
+   "field": "SRC-SFD-Q4-2017-001 locator",
+   "old": "https://www.sfd-yemen.org/uploads/issues/Newsletter%20Eng%204th-2017%20%20-20-4-18-20190129-214133.pdf",
+   "new": "https://sfd-yemen.org/uploads/issues/Newsletter-Quarter-4-2017.pdf"
+  },
+  {
+   "finding": "RC-12:B13d",
+   "sheet": "21_MFI_DATA",
+   "row": 101,
+   "col": 17,
+   "field": "SRC-SFD-Q4-2017-001 locator",
+   "old": "https://www.sfd-yemen.org/uploads/issues/Newsletter%20Eng%204th-2017%20%20-20-4-18-20190129-214133.pdf",
+   "new": "https://sfd-yemen.org/uploads/issues/Newsletter-Quarter-4-2017.pdf"
+  },
+  {
+   "finding": "RC-12:B13d",
+   "sheet": "15_SOURCE_LIBRARY",
+   "row": 90,
+   "col": 22,
+   "field": "SRC-SFD-Q4-2017-001.retrieval_date",
+   "old": null,
+   "new": "2026-10-03"
+  },
+  {
+   "finding": "RC-12:B13d",
+   "sheet": "15_SOURCE_LIBRARY",
+   "row": 92,
+   "col": 2,
+   "field": "SRC-SFD-Q1-2019-001 locator",
+   "old": "https://www.sfd-yemen.org/uploads/issues/1st%20NL%202019-20200123-102323.pdf",
+   "new": "https://sfd-yemen.org/uploads/issues/Newsletter-Quarter-1-2019.pdf"
+  },
+  {
+   "finding": "RC-12:B13d",
+   "sheet": "21_MFI_DATA",
+   "row": 68,
+   "col": 14,
+   "field": "SRC-SFD-Q1-2019-001 locator",
+   "old": "https://www.sfd-yemen.org/uploads/issues/1st%20NL%202019-20200123-102323.pdf",
+   "new": "https://sfd-yemen.org/uploads/issues/Newsletter-Quarter-1-2019.pdf"
+  },
+  {
+   "finding": "RC-12:B13d",
+   "sheet": "21_MFI_DATA",
+   "row": 103,
+   "col": 17,
+   "field": "SRC-SFD-Q1-2019-001 locator",
+   "old": "https://www.sfd-yemen.org/uploads/issues/1st%20NL%202019-20200123-102323.pdf",
+   "new": "https://sfd-yemen.org/uploads/issues/Newsletter-Quarter-1-2019.pdf"
+  },
+  {
+   "finding": "RC-12:B13d",
+   "sheet": "15_SOURCE_LIBRARY",
+   "row": 92,
+   "col": 22,
+   "field": "SRC-SFD-Q1-2019-001.retrieval_date",
+   "old": null,
+   "new": "2026-10-03"
+  },
+  {
+   "finding": "RC-12:B13d",
+   "sheet": "15_SOURCE_LIBRARY",
+   "row": 93,
+   "col": 2,
+   "field": "SRC-SFD-Q4-2020-001 locator",
+   "old": "https://sfd-yemen.org/uploads/issues/4th%20NL%202020-20211125-090031.pdf",
+   "new": "https://sfd-yemen.org/uploads/issues/Newsletter-Quarter-4-2020.pdf"
+  },
+  {
+   "finding": "RC-12:B13d",
+   "sheet": "21_MFI_DATA",
+   "row": 69,
+   "col": 14,
+   "field": "SRC-SFD-Q4-2020-001 locator",
+   "old": "https://sfd-yemen.org/uploads/issues/4th%20NL%202020-20211125-090031.pdf",
+   "new": "https://sfd-yemen.org/uploads/issues/Newsletter-Quarter-4-2020.pdf"
+  },
+  {
+   "finding": "RC-12:B13d",
+   "sheet": "21_MFI_DATA",
+   "row": 105,
+   "col": 17,
+   "field": "SRC-SFD-Q4-2020-001 locator",
+   "old": "https://sfd-yemen.org/uploads/issues/4th%20NL%202020-20211125-090031.pdf",
+   "new": "https://sfd-yemen.org/uploads/issues/Newsletter-Quarter-4-2020.pdf"
+  },
+  {
+   "finding": "RC-12:B13d",
+   "sheet": "15_SOURCE_LIBRARY",
+   "row": 93,
+   "col": 22,
+   "field": "SRC-SFD-Q4-2020-001.retrieval_date",
+   "old": null,
+   "new": "2026-10-03"
+  },
+  {
+   "finding": "RC-12:B13d",
+   "sheet": "15_SOURCE_LIBRARY",
+   "row": 84,
+   "col": 2,
+   "field": "SRC-SFD-Q2-2013-001 locator",
+   "old": "https://sfd.sfd-yemen.org/uploads/issues/SFD_Nwesletter_en-62-2%20NEW2-20140312-132450.pdf",
+   "new": "https://web.archive.org/web/20240619144721/https://sfd.sfd-yemen.org/uploads/issues/SFD_Nwesletter_en-62-2%20NEW2-20140312-132450.pdf"
+  },
+  {
+   "finding": "RC-12:B13d",
+   "sheet": "21_MFI_DATA",
+   "row": 62,
+   "col": 14,
+   "field": "SRC-SFD-Q2-2013-001 locator",
+   "old": "https://sfd.sfd-yemen.org/uploads/issues/SFD_Nwesletter_en-62-2%20NEW2-20140312-132450.pdf",
+   "new": "https://web.archive.org/web/20240619144721/https://sfd.sfd-yemen.org/uploads/issues/SFD_Nwesletter_en-62-2%20NEW2-20140312-132450.pdf"
+  },
+  {
+   "finding": "RC-12:B13d",
+   "sheet": "21_MFI_DATA",
+   "row": 93,
+   "col": 17,
+   "field": "SRC-SFD-Q2-2013-001 locator",
+   "old": "https://sfd.sfd-yemen.org/uploads/issues/SFD_Nwesletter_en-62-2%20NEW2-20140312-132450.pdf",
+   "new": "https://web.archive.org/web/20240619144721/https://sfd.sfd-yemen.org/uploads/issues/SFD_Nwesletter_en-62-2%20NEW2-20140312-132450.pdf"
+  },
+  {
+   "finding": "RC-12:B13d",
+   "sheet": "15_SOURCE_LIBRARY",
+   "row": 84,
+   "col": 22,
+   "field": "SRC-SFD-Q2-2013-001.retrieval_date",
+   "old": null,
+   "new": "2026-10-03"
+  },
+  {
+   "finding": "RC-12:B13d",
+   "sheet": "15_SOURCE_LIBRARY",
+   "row": 84,
+   "col": 3,
+   "field": "SRC-SFD-Q2-2013-001.additional_urls",
+   "old": null,
+   "new": "[\"https://sfd.sfd-yemen.org/uploads/issues/SFD_Nwesletter_en-62-2%20NEW2-20140312-132450.pdf\"]"
+  },
+  {
+   "finding": "RC-12:B13d",
+   "sheet": "15_SOURCE_LIBRARY",
+   "row": 78,
+   "col": 2,
+   "field": "SRC-SFD-NEWSLETTER-2000-Q4-001 locator",
+   "old": "https://www.sfd-yemen.org/uploads/issues/Newsletter-12-ENGLISH%20-20120718-113859.pdf",
+   "new": "https://web.archive.org/web/20250213094943/https://sfd-yemen.org/uploads/issues/Newsletter-12-ENGLISH%20-20120718-113859.pdf"
+  },
+  {
+   "finding": "RC-12:B13d",
+   "sheet": "21_MFI_DATA",
+   "row": 81,
+   "col": 9,
+   "field": "SRC-SFD-NEWSLETTER-2000-Q4-001 locator",
+   "old": "https://www.sfd-yemen.org/uploads/issues/Newsletter-12-ENGLISH%20-20120718-113859.pdf",
+   "new": "https://web.archive.org/web/20250213094943/https://sfd-yemen.org/uploads/issues/Newsletter-12-ENGLISH%20-20120718-113859.pdf"
+  },
+  {
+   "finding": "RC-12:B13d",
+   "sheet": "15_SOURCE_LIBRARY",
+   "row": 78,
+   "col": 22,
+   "field": "SRC-SFD-NEWSLETTER-2000-Q4-001.retrieval_date",
+   "old": null,
+   "new": "2026-10-03"
+  },
+  {
+   "finding": "RC-12:B13d",
+   "sheet": "15_SOURCE_LIBRARY",
+   "row": 78,
+   "col": 3,
+   "field": "SRC-SFD-NEWSLETTER-2000-Q4-001.additional_urls",
+   "old": null,
+   "new": "[\"https://www.sfd-yemen.org/uploads/issues/Newsletter-12-ENGLISH%20-20120718-113859.pdf\"]"
+  },
+  {
+   "finding": "RC-12:B13d",
+   "sheet": "06_EVIDENCE_OBJECTS",
+   "row": 36,
+   "col": 25,
+   "field": "SRC-SFD-MF-HISTORY-TOR-2012-001 locator",
+   "old": "[{\"source_id\":\"SRC-SFD-MF-HISTORY-TOR-2012-001\",\"url\":\"https://www.sfd-yemen.org/uploads/issues/Microfinance%20Islamic%20Products%20Study%28TOR%29-20130109-132034.pdf\",\"audit_state\":\"PASS_AUTHORITY_OR_PROVIDER_LOCATOR\"},{\"source_id\":\"SRC-SFD-HIST-2004-Q3-001\",\"url\":\"https://www.sfd-yemen.org/uploads/issues/Newsletter-2004-Q3-20120331-111302.pdf\",\"audit_state\":\"PASS_AUTHORITY_OR_PROVIDER_LOCATOR\"}]",
+   "new": "[{\"source_id\":\"SRC-SFD-MF-HISTORY-TOR-2012-001\",\"url\":\"https://web.archive.org/web/20241006192210/https://sfd-yemen.org/uploads/issues/Microfinance%20Islamic%20Products%20Study(TOR)-20130109-132034.pdf\",\"audit_state\":\"PASS_AUTHORITY_OR_PROVIDER_LOCATOR\"},{\"source_id\":\"SRC-SFD-HIST-2004-Q3-001\",\"url\":\"https://www.sfd-yemen.org/uploads/issues/Newsletter-2004-Q3-20120331-111302.pdf\",\"audit_state\":\"PASS_AUTHORITY_OR_PROVIDER_LOCATOR\"}]"
+  },
+  {
+   "finding": "RC-12:B13d",
+   "sheet": "15_SOURCE_LIBRARY",
+   "row": 77,
+   "col": 2,
+   "field": "SRC-SFD-MF-HISTORY-TOR-2012-001 locator",
+   "old": "https://www.sfd-yemen.org/uploads/issues/Microfinance%20Islamic%20Products%20Study%28TOR%29-20130109-132034.pdf",
+   "new": "https://web.archive.org/web/20241006192210/https://sfd-yemen.org/uploads/issues/Microfinance%20Islamic%20Products%20Study(TOR)-20130109-132034.pdf"
+  },
+  {
+   "finding": "RC-12:B13d",
+   "sheet": "21_MFI_DATA",
+   "row": 78,
+   "col": 9,
+   "field": "SRC-SFD-MF-HISTORY-TOR-2012-001 locator",
+   "old": "https://www.sfd-yemen.org/uploads/issues/Microfinance%20Islamic%20Products%20Study%28TOR%29-20130109-132034.pdf",
+   "new": "https://web.archive.org/web/20241006192210/https://sfd-yemen.org/uploads/issues/Microfinance%20Islamic%20Products%20Study(TOR)-20130109-132034.pdf"
+  },
+  {
+   "finding": "RC-12:B13d",
+   "sheet": "21_MFI_DATA",
+   "row": 82,
+   "col": 9,
+   "field": "SRC-SFD-MF-HISTORY-TOR-2012-001 locator",
+   "old": "https://www.sfd-yemen.org/uploads/issues/Microfinance%20Islamic%20Products%20Study%28TOR%29-20130109-132034.pdf",
+   "new": "https://web.archive.org/web/20241006192210/https://sfd-yemen.org/uploads/issues/Microfinance%20Islamic%20Products%20Study(TOR)-20130109-132034.pdf"
+  },
+  {
+   "finding": "RC-12:B13d",
+   "sheet": "15_SOURCE_LIBRARY",
+   "row": 77,
+   "col": 22,
+   "field": "SRC-SFD-MF-HISTORY-TOR-2012-001.retrieval_date",
+   "old": null,
+   "new": "2026-10-03"
+  },
+  {
+   "finding": "RC-12:B13d",
+   "sheet": "15_SOURCE_LIBRARY",
+   "row": 77,
+   "col": 3,
+   "field": "SRC-SFD-MF-HISTORY-TOR-2012-001.additional_urls",
+   "old": null,
+   "new": "[\"https://www.sfd-yemen.org/uploads/issues/Microfinance%20Islamic%20Products%20Study%28TOR%29-20130109-132034.pdf\"]"
+  },
+  {
+   "finding": "RC-12:B13d",
+   "sheet": "15_SOURCE_LIBRARY",
+   "row": 136,
+   "col": 2,
+   "field": "SRC-SFD-SMED-LP-2023-NOV locator",
+   "old": "https://smed.sfd-yemen.org/index.php/en/blog-4/aaflp1/477-nov-2023",
+   "new": "https://web.archive.org/web/20241112185856/https://smed.sfd-yemen.org/index.php/en/blog-4/aaflp1/477-nov-2023"
+  },
+  {
+   "finding": "RC-12:B13d",
+   "sheet": "21_MFI_DATA",
+   "row": 72,
+   "col": 14,
+   "field": "SRC-SFD-SMED-LP-2023-NOV locator",
+   "old": "https://smed.sfd-yemen.org/index.php/en/blog-4/aaflp1/477-nov-2023",
+   "new": "https://web.archive.org/web/20241112185856/https://smed.sfd-yemen.org/index.php/en/blog-4/aaflp1/477-nov-2023"
+  },
+  {
+   "finding": "RC-12:B13d",
+   "sheet": "15_SOURCE_LIBRARY",
+   "row": 136,
+   "col": 22,
+   "field": "SRC-SFD-SMED-LP-2023-NOV.retrieval_date",
+   "old": null,
+   "new": "2026-10-03"
+  },
+  {
+   "finding": "RC-12:B13d",
+   "sheet": "15_SOURCE_LIBRARY",
+   "row": 136,
+   "col": 3,
+   "field": "SRC-SFD-SMED-LP-2023-NOV.additional_urls",
+   "old": null,
+   "new": "[\"https://smed.sfd-yemen.org/index.php/en/blog-4/aaflp1/477-nov-2023\"]"
+  }
+ ]
+}

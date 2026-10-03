@@ -1101,6 +1101,84 @@ def presentation_contract(ctx, e):
 # ------------------------------------------------------------------------------------------------
 _VDC_TIERS = ("SIGNATURE", "CORE_ANALYTICAL", "SUPPORTING", "TABLE_TEXT_FIRST", "RETIRE_FROM_DESIGN")
 _VDC_CONTRACT_TIERS = ("SIGNATURE", "CORE_ANALYTICAL")
+_VDC_TABLE_TIERS = ("TABLE_TEXT_FIRST", "SUPPORTING")
+
+
+def _vdc_text_table(ctx, t, ui, dl, where):
+    """RC-12 (B12): a governed-row table for a text-first contract. `objects` select governed rows exactly as a data
+    contract does (`_vdc_objects`, with its guards); `head` and `caption` name governed interface strings; each row's
+    header is a governed string, either named (`ui`) or resolved from a row field through a display-label namespace
+    (`ref` + `ns`); each cell is a governed row value (`ref` = "<object>.<row id>.<field>", printed `as` a number or
+    a month, optionally with a governed unit) or a governed string (`ui`, optionally spanning cells); a `group` row
+    opens a row group with its base (a governed lead, number and unit); a `marker` row is one governed sentence across
+    the table. Nothing is typed into the table that the Master does not hold."""
+    objs = {o["id"]: {r["id"]: r for r in _vdc_objects(ctx, o, f"{where} objects {o['id']}")["records"]} for o in t["objects"]}
+    ns_map = dl.get("namespaces") or {}
+
+    def lab(uid):
+        if uid not in ui:
+            raise IntegrityError(f"{where}: {uid} is not governed interface copy (04)")
+        return OrderedDict([("en", ui[uid]["label_en"]), ("ar", ui[uid]["label_ar"]), ("ui_id", uid)])
+
+    def ref(r):
+        oid, rid, fld = r.split(".", 2)
+        rec = (objs.get(oid) or {}).get(rid)
+        if rec is None or fld not in rec or rec[fld] in (None, ""):
+            raise IntegrityError(f"{where}: {r} does not resolve to a governed value")
+        return rec[fld]
+
+    def cell(c):
+        if "ui" in c:
+            out = OrderedDict([("text", lab(c["ui"]))])
+        else:
+            val = ref(c["ref"])
+            kind = c.get("as", "number")
+            if kind == "number":
+                num = _vdc_num(val)
+                if num is None:
+                    raise IntegrityError(f"{where}: {c['ref']} is not a number ({val!r})")
+                out = OrderedDict([("number", num)])
+            elif kind == "month":
+                if not re.fullmatch(r"\d{4}-\d{2}", str(val)):
+                    raise IntegrityError(f"{where}: {c['ref']} is not a month ({val!r})")
+                out = OrderedDict([("month", str(val))])
+            else:
+                raise IntegrityError(f"{where}: unknown cell kind {kind!r}")
+            out["ref"] = c["ref"]
+            if c.get("unit"):
+                out["unit"] = lab(c["unit"])
+        if c.get("span"):
+            out["span"] = int(c["span"])
+        return out
+
+    def head_of(h):
+        if isinstance(h, str):
+            return lab(h)
+        val = str(ref(h["ref"]))
+        uid = (ns_map.get(h["ns"]) or {}).get(val)
+        if uid is None:
+            raise IntegrityError(f"{where}: {h['ref']}={val!r} has no governed label in namespace {h['ns']}")
+        return lab(uid)
+
+    rows = []
+    for r in t["rows"]:
+        if "marker" in r:
+            rows.append(OrderedDict([("marker", lab(r["marker"]))]))
+            continue
+        if "group" in r:   # a row group opened by its base: a governed lead, a governed number and its governed unit
+            g = r["group"]
+            num = _vdc_num(ref(g["ref"]))
+            if num is None:
+                raise IntegrityError(f"{where}: {g['ref']} is not a number")
+            rows.append(OrderedDict([("group", OrderedDict([("lead", lab(g["lead"])), ("number", num), ("ref", g["ref"]), ("unit", lab(g["unit"]))]))]))
+            continue
+        cells = [cell(c) for c in r["cells"]]
+        width = sum(c.get("span", 1) for c in cells)
+        if width != len(t["head"]) - 1:
+            raise IntegrityError(f"{where}: a row fills {width} of {len(t['head']) - 1} data columns")
+        rows.append(OrderedDict([("head", head_of(r["head"])), ("cells", cells)]))
+    return OrderedDict([("form", t.get("form", "")), ("head", [lab(h) for h in t["head"]]),
+                        ("caption", [lab(c) for c in t.get("caption") or []]), ("rows", rows)])
 
 
 def _vdc_blocks(snapshot, header_key, where):
@@ -1522,6 +1600,12 @@ def visual_design_contracts(ctx, e):
                     (f"{labels['UI-VIS-SOURCE'][lang]} {credit_ar if lang == 'ar' and credit_ar else credit}" if credit else None),   # B4 review F3: the Arabic caption credits in Arabic
                     f"{labels['UI-VIS-DOES-NOT-ESTABLISH'][lang]} {gov[f'prohibited_inference_{lang}']}",
                     f"{labels['UI-VIS-FULL-RECORD'][lang]} /{lang}{gov['canonical_route']}" if gov["canonical_route"] else None)
+        if spec.get("table"):
+            # RC-12 (Part B B12): a text-first contract whose rationale describes a table renders it from governed rows
+            # inside its text frame; never a drawing, and never on a tier that takes a data contract
+            if tier not in _VDC_TABLE_TIERS:
+                raise IntegrityError(f"{where}: a governed-row table is for the {'/'.join(_VDC_TABLE_TIERS)} tiers only")
+            rec["table"] = _vdc_text_table(ctx, spec["table"], ui, dl, f"{where} table")
         out_vis.append(rec)
     if label_problems:
         raise IntegrityError("visual design contract labels:\n  " + "\n  ".join(label_problems))

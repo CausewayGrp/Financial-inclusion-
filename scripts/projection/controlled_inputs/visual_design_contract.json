@@ -1304,7 +1304,134 @@
    "visual_id": "VIS-FIRM-FINANCE-PATH",
    "tier": "TABLE_TEXT_FIRST",
    "rationale": "The 31 firms with a line of credit out of 328 (FFO-2022-004) and the 18 valid loan-source responses (FFO-2022-LS-01..04) are rendered as a table (stage, count, base). Two stages drawn in sequence would read as a funnel, which requires the 18 responses to come from the 31 firms; the Master does not establish that.",
-   "promotion_requires": "The Master states whether the 18 loan-source responses are a subset of the 31 firms with a line of credit."
+   "promotion_requires": "The Master states whether the 18 loan-source responses are a subset of the 31 firms with a line of credit.",
+   "table": {
+    "form": "Item and number under each base (a row group opened by \"Out of\" and the base), in the source's order. A governed marker separates the establishments with a line of credit from the loan-source responses: the Master does not establish that the 18 come from the 31, so nothing is drawn or read as a funnel.",
+    "objects": [
+     {
+      "id": "firm",
+      "rows": {
+       "file": "data/firm_finance.json",
+       "header_key": "observation_id",
+       "ids": [
+        "FFO-2022-004",
+        "FFO-2022-LS-01",
+        "FFO-2022-LS-02",
+        "FFO-2022-LS-03",
+        "FFO-2022-LS-04"
+       ]
+      },
+      "fields": {
+       "metric_label": "metric_label",
+       "breakdown_value": "breakdown_value",
+       "value": "value",
+       "denominator_n": "denominator_n",
+       "source": "source_id"
+      },
+      "must_equal": {
+       "FFO-2022-004": {
+        "value": 31,
+        "denominator_n": 328
+       },
+       "FFO-2022-LS-01": {
+        "value": 10,
+        "denominator_n": 18
+       },
+       "FFO-2022-LS-02": {
+        "value": 1,
+        "denominator_n": 18
+       },
+       "FFO-2022-LS-03": {
+        "value": 5,
+        "denominator_n": 18
+       },
+       "FFO-2022-LS-04": {
+        "value": 2,
+        "denominator_n": 18
+       }
+      }
+     }
+    ],
+    "head": [
+     "UI-VIS-TH-ITEM",
+     "UI-VIS-UNIT-COUNT"
+    ],
+    "caption": [],
+    "rows": [
+     {
+      "group": {
+       "lead": "UI-VIS-TH-BASE",
+       "ref": "firm.FFO-2022-004.denominator_n",
+       "unit": "UI-VIS-UNIT-FIRMS-SURVEYED"
+      }
+     },
+     {
+      "head": {
+       "ref": "firm.FFO-2022-004.metric_label",
+       "ns": "firm_finance"
+      },
+      "cells": [
+       {
+        "ref": "firm.FFO-2022-004.value"
+       }
+      ]
+     },
+     {
+      "marker": "UI-VIS-NOTE-FIRM-LOAN-SUBSET"
+     },
+     {
+      "group": {
+       "lead": "UI-VIS-TH-BASE",
+       "ref": "firm.FFO-2022-LS-01.denominator_n",
+       "unit": "UI-VIS-UNIT-VALID-RESPONSES"
+      }
+     },
+     {
+      "head": {
+       "ref": "firm.FFO-2022-LS-01.breakdown_value",
+       "ns": "firm_finance"
+      },
+      "cells": [
+       {
+        "ref": "firm.FFO-2022-LS-01.value"
+       }
+      ]
+     },
+     {
+      "head": {
+       "ref": "firm.FFO-2022-LS-02.breakdown_value",
+       "ns": "firm_finance"
+      },
+      "cells": [
+       {
+        "ref": "firm.FFO-2022-LS-02.value"
+       }
+      ]
+     },
+     {
+      "head": {
+       "ref": "firm.FFO-2022-LS-03.breakdown_value",
+       "ns": "firm_finance"
+      },
+      "cells": [
+       {
+        "ref": "firm.FFO-2022-LS-03.value"
+       }
+      ]
+     },
+     {
+      "head": {
+       "ref": "firm.FFO-2022-LS-04.breakdown_value",
+       "ns": "firm_finance"
+      },
+      "cells": [
+       {
+        "ref": "firm.FFO-2022-LS-04.value"
+       }
+      ]
+     }
+    ]
+   }
   },
   {
    "visual_id": "VIS-FIRM-CONSTRAINTS",
@@ -1378,7 +1505,82 @@
    "visual_id": "VIS-TARGET-RESULT-STATE",
    "tier": "TABLE_TEXT_FIRST",
    "rationale": "The FMIIP access-point baseline and target (FMIIP-RF-004) and the result, which is not held, are rendered as a three-row table (state, date, value). Two markers on a dated axis would invite a trajectory that no observation supports.",
-   "promotion_requires": "An observed result for the same indicator under the project's own definition (FMIIP-RF-004), Master-first."
+   "promotion_requires": "An observed result for the same indicator under the project's own definition (FMIIP-RF-004), Master-first.",
+   "table": {
+    "form": "Three rows (state, date, value): the project's baseline, its target, and the result, which the evidence base does not hold. No dated axis, no percentage of the target, no comparison with administrative counts.",
+    "objects": [
+     {
+      "id": "fmiip",
+      "rows": {
+       "file": "data/reforms_regulation.json",
+       "header_key": "metric_id",
+       "ids": [
+        "FMIIP-RF-004"
+       ]
+      },
+      "fields": {
+       "baseline_period": "baseline_period",
+       "baseline_value": "baseline_value",
+       "target_period": "target_period",
+       "target_value": "target_value",
+       "source": "source_id"
+      },
+      "month_year_fields": [
+       "baseline_period",
+       "target_period"
+      ],
+      "must_equal": {
+       "FMIIP-RF-004": {
+        "baseline_value": 817,
+        "target_value": 1021
+       }
+      }
+     }
+    ],
+    "head": [
+     "UI-VIS-TH-ITEM",
+     "UI-VIS-TH-DATE",
+     "UI-VIS-UNIT-PROJECT-ACCESS-POINTS"
+    ],
+    "caption": [
+     "UI-VIS-STATE-PROGRAMME"
+    ],
+    "rows": [
+     {
+      "head": "UI-VIS-BASELINE",
+      "cells": [
+       {
+        "ref": "fmiip.FMIIP-RF-004.baseline_period_iso",
+        "as": "month"
+       },
+       {
+        "ref": "fmiip.FMIIP-RF-004.baseline_value"
+       }
+      ]
+     },
+     {
+      "head": "UI-VIS-TARGET",
+      "cells": [
+       {
+        "ref": "fmiip.FMIIP-RF-004.target_period_iso",
+        "as": "month"
+       },
+       {
+        "ref": "fmiip.FMIIP-RF-004.target_value"
+       }
+      ]
+     },
+     {
+      "head": "UI-VIS-RESULT",
+      "cells": [
+       {
+        "ui": "UI-VIS-RESULT-NOT-HELD",
+        "span": 2
+       }
+      ]
+     }
+    ]
+   }
   },
   {
    "visual_id": "RV-CWR-004",

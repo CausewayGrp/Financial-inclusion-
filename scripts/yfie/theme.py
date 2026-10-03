@@ -351,6 +351,7 @@ svg.ts .lbl.alt2{display:block}
 .chain .source-locator{text-decoration:none;font-weight:600}
 /* evidence directory */
 .search-inline{display:flex;flex-direction:column;gap:8px;max-width:var(--measure)}
+.source-facets{display:flex;flex-wrap:wrap;gap:8px 16px;margin:12px 0;max-width:var(--measure)}.source-facets[hidden]{display:none}.source-facets .facet{display:flex;flex-direction:column;gap:4px;min-width:0;flex:1 1 140px}.source-facets select{min-height:44px;max-width:100%;font:inherit}.source-facets .tbtn{align-self:flex-end}
 .search-inline .search-results{max-height:none}
 .search-results .search-hit{display:flex;flex-direction:column;gap:4px;padding:12px 0;border-top:1px solid var(--rule);text-decoration:none}
 .search-results .search-hit h4{margin:0;font-size:var(--fs-body);font-weight:600}
@@ -450,7 +451,7 @@ ol.objs.chron{list-style:none;margin:10px 0 0;padding:0}
 .nf+.nf{margin-top:8px}
 /* forced colours for the D2 marks */
 @media (forced-colors:active){.bar{fill:CanvasText}.brk,.miss,.ring{stroke:CanvasText}.chain .step,.chain .step.open,.chain .step.stop,.pair,.gap,.compare-verdict,.compare-boundaries,.compare-state,.mks .mk,.hublist li{border-color:CanvasText!important}.withheld,.isnot,.bnd-line,.compare-verdict,.compare-verdict h3,.compare-verdict p{color:CanvasText}}
-@media print{.search-inline,.controls-grid,.never,.compare-record-actions,details.deps,[data-source-filter-status]{display:none!important}details.hub::details-content,details.grp::details-content{content-visibility:visible;display:block}svg.ts .val.dense{display:block}}
+@media print{.search-inline,.source-facets,.controls-grid,.never,.compare-record-actions,details.deps,[data-source-filter-status]{display:none!important}details.hub::details-content,details.grp::details-content{content-visibility:visible;display:block}svg.ts .val.dense{display:block}}
 @media (min-width:600px){
 .controls-grid{grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:12px 20px}
 .inventory div{max-width:var(--measure)}
@@ -648,7 +649,7 @@ body{color:#000}
 .obj p{orphans:3;widows:3}
 .qa.figs>div:first-child,.qa .rubric{break-after:avoid}
 .qa.figs .fig,.rubric+*{break-before:avoid}
-section#search,.search-inline{display:none!important}
+section#search,.search-inline,.source-facets{display:none!important}
 .rvtab.wide{min-width:0}
 section.bnd+section.bnd{break-before:auto}
 .head+*{break-before:avoid}

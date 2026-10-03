@@ -2851,8 +2851,8 @@
   },
   {
     "ui_id": "UI-VIS-TH-GROUP",
-    "label_en": "Group",
-    "label_ar": "الفئة",
+    "label_en": "Group or gap",
+    "label_ar": "الفئة أو الفجوة",
     "use_rule": "RC-11 (Part B B10 b, NCC-02). The heading of a fallback table's row-header column; no corner cell is empty."
   },
   {
@@ -2870,7 +2870,7 @@
   {
     "ui_id": "UI-VIS-TH-STEP",
     "label_en": "Step",
-    "label_ar": "الخطوة",
+    "label_ar": "الحلقة",
     "use_rule": "RC-11 (Part B B10 b, NCC-02). The heading of a fallback table's row-header column; no corner cell is empty."
   },
   {
@@ -2881,8 +2881,8 @@
   },
   {
     "ui_id": "UI-VIS-TH-DATE",
-    "label_en": "Date",
-    "label_ar": "التاريخ",
+    "label_en": "Date or period",
+    "label_ar": "التاريخ أو الفترة",
     "use_rule": "RC-11 (Part B B10 b, NCC-02). The heading of a fallback table's row-header column; no corner cell is empty."
   },
   {
@@ -2893,14 +2893,122 @@
   },
   {
     "ui_id": "UI-VIS-NOTE-POS-H1-WITHHELD",
-    "label_en": "The payment-system report for the first half of 2025 also gives a POS-transaction total for that half-year. It is withheld here because its definition and period need a methodology note before public use. The monthly releases are shown because each reports the same POS measures for one month within the same reporting scope, so consecutive months are comparable.",
-    "label_ar": "يذكر تقرير نظام المدفوعات للنصف الأول من 2025 أيضًا إجماليًا لمعاملات نقاط البيع في ذلك النصف، وهو محجوب هنا لأن تعريفه وفترته يحتاجان إلى ملاحظة منهجية قبل النشر. أما الإصدارات الشهرية فتُعرض لأن كلًّا منها يذكر مقاييس نقاط البيع نفسها لشهر واحد ضمن نطاق الإبلاغ نفسه، فتكون الأشهر المتتالية قابلة للمقارنة.",
+    "label_en": "The first-half 2025 payment report also gives an aggregate figure for POS transactions. It is withheld here because its definition and period need a methodology note before public use. The monthly releases are shown because each reports POS transactions for one month within the same reporting scope, so their published totals can be read side by side. Where a release's displayed percentage change does not match the published monthly totals, the mismatch is recorded as a discrepancy within the source.",
+    "label_ar": "يذكر تقرير المدفوعات للنصف الأول من 2025 أيضًا رقمًا إجماليًا لمعاملات نقاط البيع، وهو محجوب هنا لأن تعريفه وفترته يحتاجان إلى ملاحظة منهجية قبل النشر. أما الإصدارات الشهرية فتُعرض لأن كلًّا منها يذكر معاملات نقاط البيع لشهر واحد ضمن نطاق الإبلاغ نفسه، فيمكن قراءة إجمالياتها المنشورة جنبًا إلى جنب. وحيث لا تتفق نسبة التغير المعروضة في إصدارٍ ما مع الإجماليات الشهرية المنشورة، يُسجَّل الفرق بوصفه اختلافًا داخل المصدر.",
     "use_rule": "RC-11 (Part B B11). Frame note of VIS-POS-TRANSACTIONS: the withheld H1 2025 transaction total (OBS-00036) and why the monthly series is admissible; from governed fields only."
   },
   {
     "ui_id": "UI-LAND-NO-NEXT",
-    "label_en": "No domain page or measurement priority in this base",
-    "label_ar": "لا توجد صفحة مجال ولا أولوية قياس في قاعدة الأدلة هذه",
+    "label_en": "No page in this base to verify it, and no measurement priority",
+    "label_ar": "لا توجد في قاعدة الأدلة هذه صفحة للتحقق منه ولا أولوية قياس",
     "use_rule": "RC-10b. Evidence landscape: the last cell of a row that has neither a domain page nor a priority."
+  },
+  {
+    "ui_id": "UI-VIS-TH-SOURCE",
+    "label_en": "Source",
+    "label_ar": "المصدر",
+    "use_rule": "RC-11b. The heading of a row-header column whose rows are publications (the source-comparison table)."
+  },
+  {
+    "ui_id": "UI-VIS-RESULT-NOT-HELD",
+    "label_en": "No observed result is held in the evidence base — not zero",
+    "label_ar": "لا تتضمن قاعدة الأدلة نتيجة مرصودة — ليست صفرًا",
+    "use_rule": "RC-12 (Part B B12). A governed string of a text-first contract's table, bound from governed rows."
+  },
+  {
+    "ui_id": "UI-VIS-TH-BASE",
+    "label_en": "Out of",
+    "label_ar": "من أصل",
+    "use_rule": "RC-12 (Part B B12). A governed string of a text-first contract's table, bound from governed rows."
+  },
+  {
+    "ui_id": "UI-VIS-UNIT-FIRMS-SURVEYED",
+    "label_en": "formal establishments surveyed",
+    "label_ar": "منشأة رسمية شملها المسح",
+    "use_rule": "RC-12 (Part B B12). A governed string of a text-first contract's table, bound from governed rows."
+  },
+  {
+    "ui_id": "UI-VIS-UNIT-VALID-RESPONSES",
+    "label_en": "valid loan-source responses",
+    "label_ar": "استجابة صالحة لسؤال مصدر القرض",
+    "use_rule": "RC-12 (Part B B12). A governed string of a text-first contract's table, bound from governed rows."
+  },
+  {
+    "ui_id": "UI-VIS-NOTE-FIRM-LOAN-SUBSET",
+    "label_en": "Not established: whether the loan-source responses below come from the establishments with a line of credit above.",
+    "label_ar": "لم يثبت ما إذا كانت الاستجابات لسؤال مصدر القرض أدناه صادرة عن المنشآت التي أفادت بامتلاك خط ائتمان أعلاه.",
+    "use_rule": "RC-12 (Part B B12). A governed string of a text-first contract's table, bound from governed rows."
+  },
+  {
+    "ui_id": "UI-DATA-FILTER-TYPE",
+    "label_en": "Document type",
+    "label_ar": "نوع الوثيقة",
+    "use_rule": "RC-12 (Part B B13). The research library on /data/: filters, order, backlinks and locator labels."
+  },
+  {
+    "ui_id": "UI-DATA-FILTER-PUBLISHER",
+    "label_en": "Publisher",
+    "label_ar": "الناشر",
+    "use_rule": "RC-12 (Part B B13). The research library on /data/: filters, order, backlinks and locator labels."
+  },
+  {
+    "ui_id": "UI-DATA-FILTER-YEAR",
+    "label_en": "Year of the document",
+    "label_ar": "سنة الوثيقة",
+    "use_rule": "RC-12 (Part B B13). The research library on /data/: filters, order, backlinks and locator labels."
+  },
+  {
+    "ui_id": "UI-DATA-FILTER-DOMAIN",
+    "label_en": "Used on",
+    "label_ar": "مستخدم في",
+    "use_rule": "RC-12 (Part B B13). The research library on /data/: filters, order, backlinks and locator labels."
+  },
+  {
+    "ui_id": "UI-DATA-FILTER-ANY",
+    "label_en": "Any",
+    "label_ar": "الكل",
+    "use_rule": "RC-12 (Part B B13). The research library on /data/: filters, order, backlinks and locator labels."
+  },
+  {
+    "ui_id": "UI-DATA-FILTER-NOT-RECORDED",
+    "label_en": "Not recorded",
+    "label_ar": "غير مسجّل",
+    "use_rule": "RC-12 (Part B B13). The research library on /data/: filters, order, backlinks and locator labels."
+  },
+  {
+    "ui_id": "UI-DATA-FILTER-CLEAR",
+    "label_en": "Clear filters",
+    "label_ar": "مسح عوامل التصفية",
+    "use_rule": "RC-12 (Part B B13). The research library on /data/: filters, order, backlinks and locator labels."
+  },
+  {
+    "ui_id": "UI-DATA-SORT",
+    "label_en": "Order",
+    "label_ar": "الترتيب",
+    "use_rule": "RC-12 (Part B B13). The research library on /data/: filters, order, backlinks and locator labels."
+  },
+  {
+    "ui_id": "UI-DATA-SORT-GROUPED",
+    "label_en": "As grouped",
+    "label_ar": "حسب المجموعات",
+    "use_rule": "RC-12 (Part B B13). The research library on /data/: filters, order, backlinks and locator labels."
+  },
+  {
+    "ui_id": "UI-DATA-SORT-NEWEST",
+    "label_en": "Newest document first",
+    "label_ar": "الوثائق الأحدث أولًا",
+    "use_rule": "RC-12 (Part B B13). The research library on /data/: filters, order, backlinks and locator labels."
+  },
+  {
+    "ui_id": "UI-DATA-READINGS-USING-SOURCE",
+    "label_en": "Evidence Readings using this source",
+    "label_ar": "قراءات الأدلة التي تستخدم هذا المصدر",
+    "use_rule": "RC-12 (Part B B13). The research library on /data/: filters, order, backlinks and locator labels."
+  },
+  {
+    "ui_id": "UI-EVID-OPEN-ARCHIVED-COPY",
+    "label_en": "Open archived copy (web.archive.org)",
+    "label_ar": "افتح النسخة المؤرشفة (web.archive.org)",
+    "use_rule": "RC-12 (Part B B13). The research library on /data/: filters, order, backlinks and locator labels."
   }
 ]
