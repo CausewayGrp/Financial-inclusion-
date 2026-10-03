@@ -522,3 +522,37 @@ Received in this session as a chat message on 3 October 2026; recorded verbatim.
   / «بالرجوع إلى المصادر التي يسمّيها». The note's own test puts truth first ("never believing something the evidence
   does not support"), so the change stands. If the owner wants the original words, it is one cell in one transaction.
 - **Sections 4 and 5.** The triage is in the pull request description, as asked in section 2.
+
+
+## Owner note of 3 October 2026, 13:00 Cairo (changes no decision)
+
+Received in this session as a chat message on 3 October 2026; recorded verbatim.
+
+
+
+**How this session reads it.**
+- **Point 1 (CI).** The controls job runs every fault on its own full copy of the work tree, one copy per CPU, inside
+  the single job "Gate negative controls". That keeps the job's name, so the required status check does not change,
+  and it adds no runner minutes for extra jobs. `--shard K/N` also exists, for a job matrix if the controls ever
+  outgrow one runner. Nothing is weakened:
+  - every control still runs;
+  - each must still fail on its own fault;
+  - the clean copies must now also pass first, and a control's expected message must not already appear in the clean
+    output, which the old harness never checked.
+  The proof, locally and then on CI, is in `docs/CHANGELOG.md` and the pull-request log.
+- **Point 2 (base path).** The adversarial verification of `code/base-path-hosting` did return, after this note was
+  written (`audit/release_candidate/` records it with the base-path merge). Its verdict:
+  - the build side is sound: `dist/` stays byte-identical apart from the noindex meta; there are no escapes; the
+    gate's controls fail as they should;
+  - the hosting runbook was not ready, and its findings are folded in before the merge.
+  The branch then enters `code/release-candidate-fixes` as its own two commits. No branch is deleted.
+- **Point 3.**
+  - **/about/.** The owner accepts the /about/ change of RC-17 ("against the sources it names" / «بالرجوع إلى المصادر
+    التي يسمّيها»). It stands as built in `a4ff911`.
+  - **providers_data.json.** Confirmed in `docs/CHANGELOG.md` (the entry for the controls commit): what the file is,
+    who reads it, and why it never reaches `dist/`. Three new negative controls prove that RC-NAMES fails if a
+    renderer printed the NEG-EW-011 label in either language, or if the projection were copied into the site.
+- **Point 4.** Reviews are sized as asked:
+  - one bilingual reviewer per transaction, reading only the changed pairs;
+  - the adversarial reviewer only for names, regulatory statements and new numbers.
+  The G0 presentation pass is done in the browser by this session.

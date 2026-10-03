@@ -2,8 +2,10 @@
 # -*- coding: utf-8 -*-
 """Every gate re-pointed at the production runtime still fails on the fault it was written to catch (EAD-01).
 
-  python3 scripts/tests/test_gate_negative_controls.py            # all controls
+  python3 scripts/tests/test_gate_negative_controls.py              # all controls, one worker per CPU
   python3 scripts/tests/test_gate_negative_controls.py --only bread   # the controls whose name contains "bread"
+  python3 scripts/tests/test_gate_negative_controls.py --jobs 1       # one at a time
+  python3 scripts/tests/test_gate_negative_controls.py --shard 2/3    # every third control, from the second (CI matrix)
 
 The cutover replaced the pre-design renderer, and the repository validator found its evidence by the baseline's exact
 class names and attribute order. Those selectors were re-pointed at the accepted design's hooks — and a re-pointed
@@ -13,37 +15,61 @@ break one thing in the built site, run the validator, and require the gate to sa
 The assertions were never changed to let the cutover pass. These controls are what makes that checkable rather than
 claimed: if a future change quietly loosens one, its control stops failing and this test goes red.
 
-Each control copies `dist/`, breaks exactly one thing, runs `scripts/validate.py`, and restores. It needs a built site
-(`python3 scripts/build.py`) and it leaves the tree exactly as it found it, including after an interrupt.
+Each control breaks exactly one thing, runs its gate (`scripts/validate.py` unless it names another) and restores. It
+needs a built site (`python3 scripts/build.py`). The faults are never made in the repository: each worker gets its own
+full copy of the work tree (every file Git tracks or would track, `dist/` included), made before the first fault, and
+a fault and its gate run only inside that copy. So the controls run side by side, one per CPU (owner note of
+3 October 2026, 13:00, point 1: one validator run per control had grown past the CI job's 45 minutes), and none can
+leak into another or into the tree. Before any fault, the gates run once on every copy and must pass, and no control's
+expected message may appear in that clean output: a message the clean tree already prints would prove nothing. The
+repository itself is never written, so an interrupt leaves it as it was.
 """
 from __future__ import annotations
 
 import argparse
+import os
+import queue
 import re
 import shutil
 import subprocess
 import sys
 import tempfile
+import time
+from concurrent.futures import ThreadPoolExecutor, as_completed
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[2]
 DIST = ROOT / "dist"
 
 
-def run_validator() -> str:
-    r = subprocess.run([sys.executable, str(ROOT / "scripts/validate.py")], capture_output=True, text=True,
-                       cwd=ROOT, env={"PYTHONDONTWRITEBYTECODE": "1", "PATH": "/usr/bin:/bin"})
-    return r.stdout + r.stderr
+def _run(tree: Path, script: str) -> tuple[int, str]:
+    r = subprocess.run([sys.executable, str(tree / script)], capture_output=True, text=True,
+                       cwd=tree, env={"PYTHONDONTWRITEBYTECODE": "1", "PATH": "/usr/bin:/bin"})
+    return r.returncode, r.stdout + r.stderr
 
 
-def run_content_parity() -> str:
-    r = subprocess.run([sys.executable, str(ROOT / "scripts/tests/test_content_parity.py")], capture_output=True, text=True,
-                       cwd=ROOT, env={"PYTHONDONTWRITEBYTECODE": "1", "PATH": "/usr/bin:/bin"})
-    return r.stdout + r.stderr
+# A control may name the gate that must catch it; the default is the repository validator. Each runs inside a copy.
+GATE_SCRIPTS = {"validate": "scripts/validate.py", "content_parity": "scripts/tests/test_content_parity.py"}
 
 
-# A control may name the gate that must catch it; the default is the repository validator.
-GATE_RUNNERS = {"validate": run_validator, "content_parity": run_content_parity}
+def tree_files() -> list[str]:
+    """The work tree a gate reads: every file Git tracks or would track (not ignored), as it is on disk now."""
+    try:
+        out = subprocess.run(["git", "ls-files", "-z", "--cached", "--others", "--exclude-standard"], cwd=ROOT,
+                             capture_output=True, check=True).stdout
+        return sorted({p for p in out.decode("utf-8").split("\0") if p and (ROOT / p).is_file()})
+    except (OSError, subprocess.CalledProcessError):   # an extracted archive: the same set checksums.py covers there
+        sys.path.insert(0, str(ROOT / "scripts"))
+        import checksums   # noqa: PLC0415
+        return sorted(checksums.tracked_files())
+
+
+def copy_tree(files: list[str], dest: Path) -> None:
+    """A full, independent copy (no hard links: a fault written into a copy can never reach the repository)."""
+    for rel in files:
+        target = dest / rel
+        target.parent.mkdir(parents=True, exist_ok=True)
+        shutil.copy2(ROOT / rel, target)
 
 
 def sub_once(pattern: str, repl: str):
@@ -66,6 +92,20 @@ def duplicate(pattern: str):
 
 def insert_after(anchor: str, fragment: str):
     return lambda t: t.replace(anchor, anchor + fragment, 1)
+
+
+def lineage_label(rid: str, col: int) -> str:
+    """A 22_PROVIDERS_DATA lineage label exactly as a renderer would print it (escaped): the bytes such a regression emits.
+    The projection site-src/content/data/providers_data.json is non-public lineage: no renderer reads it and the build
+    copies only the search files into static-data/ (owner note of 3 October 2026, 13:00, point 3)."""
+    import html as _h, json as _j   # noqa: PLC0415
+    rows = _j.loads((ROOT / "site-src/content/data/providers_data.json").read_text(encoding="utf-8"))["rows"]
+    return _h.escape(str(next(r for r in rows if r and r[0] == rid)[col]), quote=False)
+
+
+def into_main(fragment_fn):
+    """Insert a fragment, computed when the control runs, as the first child of <main>."""
+    return lambda t: re.sub(r"(<main[^>]*>)", lambda m: m.group(1) + fragment_fn(), t, count=1)
 
 
 def full_alt_text(vid: str, lang: str) -> str:
@@ -288,6 +328,17 @@ CONTROLS = [
     ("a name from the 2024 e-wallet circular enters the search index", "static-data/search_index.json",
      replace('"title_ar": "', '"title_ar": "وي كاش '),
      "RC-NAMES a name from the 2024 e-wallet circular is published static-data/search_index.json NEG-EW-011"),
+    # The lineage projection holds the names (owner note of 3 October 2026, 13:00, point 3): a renderer that printed a
+    # NEG-EW-011 label, in either language, or a build that copied the projection into the site, must each be caught.
+    ("a renderer prints the circular's English lineage label", "en/payments/index.html",
+     into_main(lambda: f"<td>{lineage_label('NEG-EW-011', 5)}</td>"),
+     "RC-NAMES a name from the 2024 e-wallet circular is published en/payments/index.html NEG-EW-011"),
+    ("a renderer prints the circular's Arabic lineage label", "ar/payments/index.html",
+     into_main(lambda: f"<td>{lineage_label('NEG-EW-011', 4)}</td>"),
+     "RC-NAMES a name from the 2024 e-wallet circular is published ar/payments/index.html NEG-EW-011"),
+    ("the provider lineage projection is copied into the built site", "static-data/providers_data.json",
+     lambda t: t + (ROOT / "site-src/content/data/providers_data.json").read_text(encoding="utf-8"),
+     "RC-NAMES an enforcement-decision entity name is published static-data/providers_data.json"),
     # RC-0950 (owner instructions of 3 October 2026, 09:50, C5 and E1): the reading rule is printed on /methodology/ only;
     # a record's citation is two lines.
     ("a domain answer prints the reading rule under its heading", "en/payments/index.html",
@@ -319,45 +370,103 @@ CONTROLS = [
 ]
 
 
+def run_control(tree: Path, control) -> tuple[bool, str, float]:
+    """Break one thing in the copy, run the gate that must catch it there, restore the copy. (caught, note, seconds)"""
+    name, rel, mutate, gate, *runner = control
+    script = GATE_SCRIPTS[runner[0] if runner else "validate"]
+    page = tree / rel if rel.startswith(SOURCE_PREFIXES) else tree / "dist" / rel
+    started = time.monotonic()
+    existed = page.exists()            # a control may add a file the build never writes; it is removed afterwards
+    original = page.read_text(encoding="utf-8") if existed else ""
+    note = ""
+    try:
+        broken = mutate(original)
+        if broken == original:
+            raise AssertionError("the control changed nothing — its selector no longer matches the page")
+        page.write_text(broken, encoding="utf-8")
+        fired = gate in _run(tree, script)[1]
+    except Exception as exc:                 # a control that cannot break the page proves nothing either
+        fired, note = False, f" — {exc}"
+    finally:
+        if existed:
+            page.write_text(original, encoding="utf-8")
+        else:
+            page.unlink(missing_ok=True)
+    return fired, note, time.monotonic() - started
+
+
 def main() -> int:
     ap = argparse.ArgumentParser()
-    ap.add_argument("--only", default="")
+    ap.add_argument("--only", default="", help="run only the controls whose name contains this text")
+    ap.add_argument("--jobs", type=int, default=0, help="workers, each on its own copy of the tree (default: one per CPU)")
+    ap.add_argument("--shard", default="1/1", help="K/N: run every N-th control, starting from the K-th (a CI matrix)")
     args = ap.parse_args()
     if not (DIST / "en" / "index.html").exists():
         print("GATE NEGATIVE CONTROLS: FAIL (no built site: run python3 scripts/build.py)")
         return 1
-    controls = [c for c in CONTROLS if args.only.lower() in c[0].lower()]
-    if not controls:
-        print(f"no control matches {args.only!r}")
+    try:
+        k, n = (int(x) for x in args.shard.split("/"))
+        assert 1 <= k <= n
+    except (ValueError, AssertionError):
+        print(f"--shard takes K/N with 1 <= K <= N, not {args.shard!r}")
         return 1
+    controls = [c for i, c in enumerate(CONTROLS) if args.only.lower() in c[0].lower() and i % n == k - 1]
+    if not controls:
+        print(f"no control matches {args.only!r} in shard {args.shard}")
+        return 1
+    jobs = max(1, min(args.jobs or os.cpu_count() or 1, len(controls)))
+    started = time.monotonic()
+    files = tree_files()
+
+    with tempfile.TemporaryDirectory(prefix="yfie-gate-controls-") as tmp:
+        trees = [Path(tmp) / f"tree-{w}" for w in range(jobs)]
+        with ThreadPoolExecutor(jobs) as pool:
+            list(pool.map(lambda d: copy_tree(files, d), trees))
+            # The clean copies first: every gate a control relies on passes there, and no expected message is printed.
+            scripts = sorted({GATE_SCRIPTS[c[4] if len(c) > 4 else "validate"] for c in controls})
+            clean = list(pool.map(lambda job: (job, _run(*job)), [(trees[i % jobs], s) for i, s in enumerate(scripts)]))
+        baseline_bad = False
+        for (tree, script), (rc, out) in clean:
+            if rc != 0:
+                baseline_bad = True
+                print(f"  CLEAN COPY FAILS  {script} — the copy of the tree does not pass before any fault:")
+                print("    " + "\n    ".join(out.strip().splitlines()[-15:]))
+            for c in controls:
+                if GATE_SCRIPTS[c[4] if len(c) > 4 else "validate"] == script and c[3] in out:
+                    baseline_bad = True
+                    print(f"  PRINTED CLEAN     {c[0]}  [{c[3]}] — the clean tree already prints this message")
+        if baseline_bad:
+            print("GATE NEGATIVE CONTROLS: FAIL — the clean copies are not clean, so no fault could be proved")
+            return 1
+        print(f"  {len(controls)} controls on {jobs} isolated copies of the tree ({len(files)} files each); clean copies pass",
+              flush=True)
+
+        free: queue.Queue[Path] = queue.Queue()
+        for d in trees:
+            free.put(d)
+
+        def task(control):
+            tree = free.get()
+            try:
+                return run_control(tree, control)
+            finally:
+                free.put(tree)
+
+        results = [None] * len(controls)
+        with ThreadPoolExecutor(jobs) as pool:
+            futures = {pool.submit(task, c): i for i, c in enumerate(controls)}
+            for done, fut in enumerate(as_completed(futures), 1):
+                i = futures[fut]
+                results[i] = fut.result()
+                print(f"  [{done}/{len(controls)}] {'caught' if results[i][0] else 'NOT CAUGHT'}: {controls[i][0]}", flush=True)
 
     caught = missed = 0
-    with tempfile.TemporaryDirectory(prefix="yfie-gate-controls-") as tmp:
-        backup = Path(tmp) / "dist"
-        shutil.copytree(DIST, backup)
-        try:
-            for name, rel, mutate, gate, *runner in controls:
-                run_gate = GATE_RUNNERS[runner[0] if runner else "validate"]
-                page = (ROOT / rel) if rel.startswith(SOURCE_PREFIXES) else (DIST / rel)
-                original = page.read_text(encoding="utf-8")
-                note = ""
-                try:
-                    broken = mutate(original)
-                    if broken == original:
-                        raise AssertionError("the control changed nothing — its selector no longer matches the page")
-                    page.write_text(broken, encoding="utf-8")
-                    fired = gate in run_gate()
-                except Exception as exc:                 # a control that cannot break the page proves nothing either
-                    fired, note = False, f" — {exc}"
-                finally:
-                    page.write_text(original, encoding="utf-8")
-                print(("  CAUGHT      " if fired else "  NOT CAUGHT ") + f"{name}  [{gate}]{note}")
-                caught += fired
-                missed += not fired
-        finally:
-            shutil.rmtree(DIST)
-            shutil.copytree(backup, DIST)
-    print(f"GATE NEGATIVE CONTROLS: {'PASS' if not missed else 'FAIL'} — {caught} of {len(controls)} faults caught")
+    for (name, _rel, _mutate, gate, *_), (fired, note, secs) in zip(controls, results):
+        print(("  CAUGHT      " if fired else "  NOT CAUGHT ") + f"{name}  [{gate}]{note}  ({secs:.0f} s)")
+        caught += fired
+        missed += not fired
+    print(f"GATE NEGATIVE CONTROLS: {'PASS' if not missed else 'FAIL'} — {caught} of {len(controls)} faults caught "
+          f"(shard {args.shard}, {jobs} workers, {time.monotonic() - started:.0f} s)")
     return 1 if missed else 0
 
 

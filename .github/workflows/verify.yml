@@ -156,11 +156,15 @@ jobs:
   controls:
     # Every gate that finds its evidence in the built site is proved to still fail on the fault it was written to catch
     # (EAD-01: the cutover re-pointed those selectors, and a selector that silently matches nothing would pass the
-    # suites). One full validator run per fault, so this is the slow job; it runs beside the browser one, not before it.
+    # suites). One full gate run per fault, so this is the slow job; it runs beside the browser one, not before it.
+    # The faults run side by side, one per CPU, each on its own full copy of the work tree, after the clean copies have
+    # passed (owner note of 3 October 2026, 13:00, point 1: run serially the job had grown past 45 minutes). The job
+    # keeps its name, so the required check does not change; if the controls ever outgrow one runner, a matrix over
+    # `--shard K/N` splits them with nothing dropped.
     name: Gate negative controls
     needs: gates
     runs-on: ubuntu-24.04
-    timeout-minutes: 45
+    timeout-minutes: 30
     steps:
       - name: Check out
         uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
@@ -180,4 +184,5 @@ jobs:
       - name: Every gate still fails on the fault it was written to catch
         run: |
           python3 scripts/build.py
-          python3 scripts/tests/test_gate_negative_controls.py
+          nproc
+          python3 scripts/tests/test_gate_negative_controls.py --jobs "$(nproc)"

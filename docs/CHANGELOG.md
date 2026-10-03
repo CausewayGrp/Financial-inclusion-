@@ -1,5 +1,42 @@
 # Repository Change Log
 
+## 2026-10-03 — CI: the negative controls run side by side on isolated copies; owner note of 13:00 recorded
+
+- **The controls job could not go green** (owner note of 3 October 2026, 13:00, point 1). "Gate negative controls"
+  was cancelled at its 45-minute limit on `da63bfb`: one full validator run per control, run one after another. The
+  validator was already cut from 83 s to 38 s (`d06f8bd`). The harness now runs the controls in parallel, each on its
+  own copy of the tree (`scripts/tests/test_gate_negative_controls.py`):
+  - **Isolated copies.** It makes one full copy of the work tree per worker: every file Git tracks or would track,
+    `dist/` included, copied rather than hard-linked. A fault is written and its gate run only inside one copy, so
+    no fault can reach another or the repository.
+  - **Workers.** There is one worker per CPU (`--jobs N`). `--shard K/N` splits the controls for a job matrix, with
+    nothing dropped.
+  - **Stronger than before.** Before any fault, every gate a control relies on runs once on the clean copies and must
+    pass. No control's expected message may already appear in that clean output: a message the clean tree prints
+    would prove nothing. The old harness checked neither.
+  - **CI.** `.github/workflows/verify.yml` runs the controls with `--jobs "$(nproc)"`, inside the same single job, so
+    the required check keeps its name and no runner minutes go on extra jobs. Its timeout goes from 45 to 30 minutes.
+  - **Local proof.** On 4 CPUs, all 67 controls of `80da278` ran on 4 copies: 67 of 67 caught in 11 min 41 s of wall-clock time (39 min of CPU), against about 42 minutes run one after
+    another; the clean copies passed first. The full run of this head,
+    70 controls, is in the pull-request log.
+- **`providers_data.json` is non-public lineage, and RC-NAMES would catch a renderer that printed it** (13:00, point
+  3). Confirmed:
+  - `site-src/content/data/providers_data.json` is the generator's projection of the Master sheet 22_PROVIDERS_DATA.
+  - It is read only by the generator's tests, the handoff inventory, the validator (RC-NAMES takes its patterns from
+    the lineage labels) and these controls. No renderer, export or social-image script reads it, and `scripts/build.py`
+    copies only `search_index.json` and `search_aliases.json` into `static-data/`.
+  - The NEG-EW-011 name occurs in no other file under `site-src/` (one English and one Arabic label in this file).
+  - Three controls now prove the second half, so it no longer rests on reading the code:
+    - a renderer that prints NEG-EW-011's English lineage label, escaped as a page would print it, is caught;
+    - so is one that prints the Arabic label;
+    - a build that copies the whole projection into `static-data/` is caught.
+    The third control first appended the projection to an existing JSON file. That made the file invalid, the
+    validator stopped before RC-NAMES ran, and the harness reported the control NOT CAUGHT, which is its job.
+    A control may now add a file the build never writes (`static-data/providers_data.json`); the file is removed
+    afterwards.
+- **Records.** The owner note of 13:00 is recorded verbatim, append-only, in `audit/OWNER_DECISIONS_2026-10-02.md`,
+  with the owner's acceptance of the /about/ wording "against the sources it names".
+
 ## 2026-10-03 — Owner B3: every page says noindex, nofollow until release
 
 Crawlers ignore a `robots.txt` that sits under a path, so until release the pages say it themselves (owner decision B3).

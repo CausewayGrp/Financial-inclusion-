@@ -131,6 +131,7 @@ python3 scripts/tests/test_security_headers.py         # browser: every page und
 python3 scripts/tests/test_base_path.py                # browser: built for the decided origin, served under its path (B2)
 # Slow, and its own CI job: one full validator run per fault, so run it when a gate or the markup it reads changes.
 python3 scripts/tests/test_gate_negative_controls.py             # every gate still fails on the fault it was written to catch
+                                                                  # (one worker per CPU, each on its own copy of the tree)
 python3 scripts/tests/test_gate_negative_controls.py --only p3    # or just the ones whose name matches
 ```
 
