@@ -189,7 +189,7 @@ if authority_dir.exists():
 repo_xlsx=[]
 for p in ROOT.rglob('*.xlsx'):
     rel=p.relative_to(ROOT)
-    if rel.parts and rel.parts[0] in {'dist','98_TEMPORARY__NONAUTHORITATIVE'}:
+    if rel.parts and rel.parts[0] in {'dist','98_TEMPORARY__NONAUTHORITATIVE','.claude'}:   # .claude/: local agent worktrees, git-ignored, never part of the repository
         continue
     repo_xlsx.append(p)
 if repo_xlsx!=[master_path]:
@@ -2672,24 +2672,135 @@ try:
 except Exception as _x:
     errors.append("RC-A1 unreadable " + repr(_x))
 
-# RC-NAMES (owner note, 3 October 2026, point 1): the entities named in CBY-Aden enforcement decisions are non-public
-# lineage. No name of a provider row known only from a status event (PRV-*-E*, both languages) may appear in any built
-# page, data file or script. Names are compared on their core (before " - " / " — " and any trailing parenthesis).
+# RC-NAMES (owner note of 3 October 2026, 03:10, point 1; owner decisions of 3 October 2026, 09:05, points 1 and 2;
+# hardened after the RC-17 adversarial review). Two sets of names are non-public lineage and print nowhere: the entities
+# and branches named in CBY-Aden enforcement decisions (22_PROVIDERS_DATA, PRV-*-E* and PRV-*-B* rows, both languages),
+# and the twelve names of the June 2024 e-wallet circular (NEG-EW-001…012). Every text file in the built site (pages,
+# data, the search index, scripts, styles, SVG, headers) and every social-image frame is read through one normaliser:
+# tags and entities, percent and \u escapes, NFKC, Arabic diacritics, tatweel, bidi and zero-width marks, letter forms
+# (alef, hamza, ta marbuta, alef maqsura, Persian kaf and yeh), hyphens and no-break spaces. A name is matched on its
+# distinctive core, with an optional Arabic proclitic (و ب ل ف ك) and article, whether its words are spaced, hyphenated
+# or joined ("WeCash", «ويكاش»). A core that is ordinary vocabulary (Arabic «الشامل», «الاتحاد», English "money" …) is
+# matched only beside its class word («شركه الشامل», «الشامل للصرافه»), so the words stay usable in prose. The circular's
+# names are matched by patterns kept here, each tested against its own lineage label so that none can drift from it.
+# Failures name the record ID, never the name.
+import unicodedata as _ud
+from urllib.parse import unquote as _unquote
+_AR = "ء-ي"
+def _rcn_norm(s):
+    s = _html.unescape(str(s or ""))
+    s = re.sub(r"\\u([0-9a-fA-F]{4})", lambda m: chr(int(m.group(1), 16)), s)
+    if "%" in s:
+        s = _unquote(s)
+    s = re.sub(r"<[^>]{0,400}>", " ", s)
+    s = _ud.normalize("NFKC", s)
+    s = re.sub(r"[ً-ْٰـ​-‏‪-‮⁦-⁩﻿­]", "", s)
+    s = re.sub("[إأآٱ]", "ا", s).replace("ة", "ه").replace("ى", "ي").replace("ک", "ك").replace("ی", "ي").replace("ؤ", "و").replace("ئ", "ي")
+    s = re.sub(r"[  -   \s_\-‐-―]+", " ", s)
+    return s.lower()
+def _rcn_en_strip(s):   # the English article never distinguishes a name
+    return re.sub(r"(?<![a-z])(al|el) ", "", s)
+def _rcn_ar(core):      # an Arabic core with optional proclitic and article, its words spaced or joined
+    toks = [re.sub(r"^ال", "", w) for w in core.split()]
+    return r"(?<![" + _AR + r"])(?:[وبلفك])?(?:ال)?" + r"\s*(?:ال)?".join(map(re.escape, toks)) + r"(?![" + _AR + r"])"
+def _rcn_en(core):
+    toks = [w for w in _rcn_en_strip(core).split()]
+    return r"(?<![a-z])" + r"\s*".join(map(re.escape, toks)) + r"(?![a-z])"
+_RCN_CIRCULAR = {   # NEG-EW id: (English patterns, Arabic patterns), on normalised text (_rcn_norm, then the article dropped)
+    "NEG-EW-001": ([r"(?<![a-z])cash\s*wallet"], [r"محفظه\s*كاش(?![" + _AR + r"])"]),
+    "NEG-EW-002": ([r"(?<![a-z])dawli\s*money"], [r"(?<![" + _AR + r"])(?:[وبلفك])?(?:ال)?دولي\s*موني"]),
+    "NEG-EW-003": ([r"(?<![a-z])jaw+al[iy](?![a-z])"], [r"(?<![" + _AR + r"])(?:[وبلفك])?(?:ال)?جوالي(?![" + _AR + r"])"]),
+    "NEG-EW-004": ([r"(?<![a-z])floos[a-z]*"], [r"(?<![" + _AR + r"])(?:[وبلفك])?فلوسك(?![" + _AR + r"])"]),
+    "NEG-EW-005": ([r"(?<![a-z])saba\s*cash"], [r"(?<![" + _AR + r"])(?:[وبلفك])?سبا\s*كاش"]),
+    "NEG-EW-006": ([r"(?<![a-z])mobile\s*money\s*wallet"], [r"محفظه\s*موبايل\s*موني"]),
+    "NEG-EW-007": ([r"(?<![a-z])yemen\s*wallet"], [r"(?<![" + _AR + r"])(?:[وبلفك])?يمن\s*والت"]),
+    "NEG-EW-008": ([r"(?<![a-z])(?:electronic|e)\s*riy?al(?![a-z])"], [r"(?<![" + _AR + r"])(?:[وبلفك])?(?:ال)?ريال\s*(?:ال)?الكتروني"]),
+    "NEG-EW-009": ([r"(?<![a-z])riy?al\s*mobile"], [r"(?<![" + _AR + r"])(?:[وبلفك])?ريال\s*موبايل"]),
+    "NEG-EW-010": ([r"(?<![a-z])jaib(?![a-z])"], [r"محفظه\s*(?:ال)?جيب(?![" + _AR + r"])"]),
+    "NEG-EW-011": ([r"(?<![a-z])we\s*cash"], [r"(?<![" + _AR + r"])(?:[وبلفك])?وي\s*كاش"]),
+    "NEG-EW-012": ([r"(?<![a-z])mutakamil[a-z]*"], [r"محفظه\s*(?:ال)?متكامله"]),
+}
+_RCN_GENERIC_EN = {"exchange", "company", "establishment", "and", "transfers", "transfer", "branch", "remittance", "agent", "the", "of", "for"}
+_RCN_COMMON_EN = {"money", "express", "ahmed", "ali", "abu", "saleh", "omar", "khalid", "sadiq", "amin", "alam", "sarafah", "bin", "saddam", "marta"}
+_RCN_GENERIC_AR = {"شركه", "منشاه", "فرع", "للصرافه", "الصرافه", "صرافه", "والتحويلات", "للتحويلات", "التحويلات", "وكيل", "حواله", "حوالات"}
+_RCN_COMMON_AR = {"الشامل", "الخضر", "سهيل", "الثور", "الطيار", "المتحدون", "الاحقاف", "البراق", "الابرق", "عالم", "الاتحاد", "صادق",
+                  "علي", "احمد", "خالد", "صدام", "عمر", "موني", "اكسبرس", "اكسبريس", "ابو", "صالح", "امين", "بن"}
 try:
-    _pd = json.loads((C / "data" / "providers_data.json").read_text(encoding="utf-8"))
-    _core = lambda s: re.split(r"\s+[-—–]\s+", re.sub(r"\s*\(.*?\)\s*$", "", str(s or "")).strip())[0].strip()   # noqa: E731
-    _names = sorted({_core(s) for r in _pd["rows"] if r and isinstance(r[0], str) and re.match(r"^PRV-[A-Z]+-E\d+$", r[0])
-                     for s in (r[1], r[2]) if len(_core(s)) >= 6})
-    if len(_names) < 30:
-        errors.append(f"RC-NAMES read only {len(_names)} event-subject names")
-    for _f in sorted(DIST.rglob("*")):
-        if _f.suffix not in (".html", ".json", ".js", ".txt", ".xml", ".csv"):
+    _pdr = json.loads((C / "data" / "providers_data.json").read_text(encoding="utf-8"))["rows"]
+    _rcn = []   # (record id, compiled pattern, applies to: "en" text or "ar" text)
+    # 1 · the enforcement-decision subjects, their cores derived from the lineage labels
+    _ent = [r for r in _pdr if r and isinstance(r[0], str) and re.match(r"^PRV-[A-Z]+-[EB]\d+[A-Z]?$", r[0])]
+    for _r in _ent:
+        _en_l, _ar_l = str(_r[1] or ""), str(_r[2] or "")
+        if "named in" in _en_l or "مسمى في" in _ar_l:
+            continue   # a row that describes an unnamed individual carries no name
+        _en_c = _rcn_en_strip(_rcn_norm(re.split(r"\s+[-—–]\s+", re.sub(r"\s*\(.*?\)\s*", " ", _en_l).strip())[0]))
+        _en_t = [w for w in _en_c.replace("'", "").split() if w not in _RCN_GENERIC_EN]
+        _ar_c = _rcn_norm(re.split(r"\s+[-—–]\s+", re.sub(r"\s*\(.*?\)\s*", " ", _ar_l).strip())[0])
+        _ar_t = [w for w in _ar_c.split() if w not in _RCN_GENERIC_AR]
+        if not _en_t or not _ar_t:
+            errors.append(f"RC-NAMES {_r[0]} has no distinctive core")
             continue
-        _t = _f.read_text(encoding="utf-8", errors="ignore")
-        _t2 = _html.unescape(_t)
-        for _n in _names:
-            if _n in _t or _n in _t2:
-                errors.append(f"RC-NAMES an enforcement-decision entity name is published {_f.relative_to(DIST)} {_n}")
+        if len(_en_t) > 1:   # the whole core; a one-word core is matched below, word by word
+            _rcn.append((_r[0], re.compile(_rcn_en(" ".join(_en_t))), "en"))
+        if len(_ar_t) > 1:
+            _rcn.append((_r[0], re.compile(_rcn_ar(" ".join(_ar_t))), "ar"))
+        for _w in _en_t:
+            if _w not in _RCN_COMMON_EN and (len(_w) >= 4 or len(_en_t) == 1):
+                _rcn.append((_r[0], re.compile(_rcn_en(_w)), "en"))
+        _cls = r"(?:شركه|منشاه|فرع|وكيل)"
+        for _w in _ar_t:
+            _wx = _rcn_ar(_w)
+            if _w in _RCN_COMMON_AR:   # ordinary vocabulary: a one-word core only beside its class word; in a longer core,
+                if len(_ar_t) == 1:      # only as part of the whole core (above)
+                    _wb = _wx.split(r"(?:[وبلفك])?", 1)[1]
+                    _rcn.append((_r[0], re.compile(_cls + r"\s*(?:ال)?" + _wb.replace("(?:ال)?", "", 1)), "ar"))
+                    _rcn.append((_r[0], re.compile(_wx[:-len(r"(?![" + _AR + r"])")] + r"\s*لل(?:صرافه|تحويلات)"), "ar"))
+            elif len(_w) >= 4 or len(_ar_t) == 1:
+                _rcn.append((_r[0], re.compile(_wx), "ar"))
+    if len({x[0] for x in _rcn}) < 33:
+        errors.append(f"RC-NAMES read only {len({x[0] for x in _rcn})} enforcement-decision subjects")
+    # 2 · the circular's twelve names: each pattern must match its own lineage label
+    _neg = {r[0]: r for r in _pdr if r and isinstance(r[0], str) and re.match(r"^NEG-EW-\d{3}$", r[0])}
+    if sorted(_neg) != sorted(_RCN_CIRCULAR):
+        errors.append(f"RC-NAMES the 2024 circular has {len(_neg)} lineage rows; the gate knows {len(_RCN_CIRCULAR)}")
+    for _id, (_ens, _ars) in _RCN_CIRCULAR.items():
+        _row = _neg.get(_id) or [None] * 6
+        _lab_en, _lab_ar = _rcn_en_strip(_rcn_norm(_row[5])), _rcn_norm(_row[4])
+        for _p in _ens:
+            if not re.search(_p, _lab_en):
+                errors.append(f"RC-NAMES the gate's pattern for {_id} no longer matches its English lineage label")
+            _rcn.append((_id, re.compile(_p), "en"))
+        for _p in _ars:
+            if not re.search(_p, _lab_ar):
+                errors.append(f"RC-NAMES the gate's pattern for {_id} no longer matches its Arabic lineage label")
+            _rcn.append((_id, re.compile(_p), "ar"))
+    # 3 · every published text, and every social-image frame
+    _texts = []
+    for _f in sorted(DIST.rglob("*")):
+        if not _f.is_file() or _f.suffix.lower() in (".png", ".jpg", ".jpeg", ".webp", ".gif", ".ico", ".woff", ".woff2", ".ttf", ".otf", ".pdf", ".zip", ".gz", ".br"):
+            continue
+        try:
+            _texts.append((str(_f.relative_to(DIST)), _f.read_bytes().decode("utf-8")))
+        except UnicodeDecodeError:
+            continue
+    try:
+        sys.path.insert(0, str(ROOT / "scripts"))
+        import social_images as _soc
+        _texts += [("social frame " + k, v) for k, v in _soc.frames().items()]
+    except Exception as _x:
+        errors.append("RC-NAMES could not read the social-image frames " + repr(_x))
+    if len(_texts) < 500:
+        errors.append(f"RC-NAMES read only {len(_texts)} texts")
+    for _where, _t in _texts:
+        _n = _rcn_norm(_t)
+        _ne = _rcn_en_strip(_n)
+        _hit = set()
+        for _id, _x, _l in _rcn:
+            if _id not in _hit and _x.search(_ne if _l == "en" else _n):
+                _hit.add(_id)
+                _kind = "a name from the 2024 e-wallet circular" if _id.startswith("NEG-") else "an enforcement-decision entity name"
+                errors.append(f"RC-NAMES {_kind} is published {_where} {_id}")
 except Exception as _x:
     errors.append("RC-NAMES unreadable " + repr(_x))
 
@@ -2910,6 +3021,34 @@ try:
                 break
 except Exception as _x:
     errors.append("RC-LATEST unreadable " + repr(_x))
+
+# RC-ADD2 (Owner Addendum 2, improvements 1, 2 and 5; RC-17): the regulatory group on /data/ is in document-date order,
+# newest first; "Verify it yourself" on /reforms/ and /providers/ opens it; the two preset comparisons are offered;
+# "decision" targets the regulatory decisions; the search empty state says that names are not reproduced.
+try:
+    _ui17 = {x["ui_id"]: x for x in json.loads((C / "content" / "interface_copy.json").read_text(encoding="utf-8"))}
+    for _lang in ("en", "ar"):
+        _d = (DIST / _lang / "data" / "index.html").read_text(encoding="utf-8")
+        _reg = _d.split('id="regulatory"', 1)[1].split("</details>", 1)[0] if 'id="regulatory"' in _d else ""
+        _dates = [x for x in re.findall(r'data-f-date="([^"]*)"', _reg)]
+        _dated = [x for x in _dates if x]
+        if not _dated or _dated != sorted(_dated, reverse=True) or ("" in _dates and _dates.index("") < len(_dated)):
+            errors.append(f"RC-ADD2 the regulatory group on /{_lang}/data/ is not in document-date order, newest first")
+        for _r in ("reforms", "providers"):
+            if f'href="/{_lang}/data/#regulatory"' not in (DIST / _lang / _r / "index.html").read_text(encoding="utf-8"):
+                errors.append(f"RC-ADD2 /{_lang}/{_r}/ does not open Data & sources at the regulatory group")
+        for _r, _ids in (("evidence/compare", "CLM-001,CLM-054,FMIIP-BASELINE-2025-01"), ("remittances", "CLM-032,CLM-037,CLM-041")):
+            _h = (DIST / _lang / _r / "index.html").read_text(encoding="utf-8")
+            _lab = "UI-COMPARE-PRESET-REMITTANCES" if _r == "remittances" else "UI-COMPARE-PRESET"
+            if f'href="/{_lang}/evidence/compare/?records={_ids}"' not in _h or _ui17[_lab][f"label_{_lang}"] not in _html.unescape(_h):
+                errors.append(f"RC-ADD2 /{_lang}/{_r}/ lost its preset comparison")
+    _a2 = next((a for a in _R4_ALIASES if a.get("alias_id") == "SEARCH-ALIAS-002"), {})
+    if "document_type:regulatory decision" not in str(_a2.get("targets") or ""):
+        errors.append("RC-ADD2 alias 002 ('decision') no longer targets the regulatory decisions")
+    if "T('UI-JS-SEARCH-NAMES-NOTE')" not in (ROOT / "site-src" / "app.js").read_text(encoding="utf-8") or "UI-JS-SEARCH-NAMES-NOTE" not in _ui17:
+        errors.append("RC-ADD2 the search empty state lost its governed sentence on names")
+except Exception as _x:
+    errors.append("RC-ADD2 unreadable " + repr(_x))
 
 # RC-B13 (Part B B13): the research library on /data/. Its filters stay hidden until the runtime runs (the list is
 # complete without JavaScript); every listed source carries its filter keys; every option of a filter matches at least

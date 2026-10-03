@@ -40,6 +40,12 @@ def _facet_key(value) -> str:
     return k or "none"
 
 
+# RC-17 (Owner Addendum 2, improvement 5): preset comparisons a reader can run, each set of records chosen by the owner's
+# addendum and offered only where every record is in the Compare set; the link label is governed (UI-COMPARE-PRESET)
+COMPARE_PRESETS = {"/remittances/": ["CLM-032", "CLM-037", "CLM-041"],
+                   "/evidence/compare/": ["CLM-001", "CLM-054", "FMIIP-BASELINE-2025-01"]}
+
+
 class Content:
     """One loaded view of the governed projections."""
 
@@ -326,6 +332,15 @@ class Content:
                  clause(self.t("UI-CITE-ORIGINAL-SOURCES", lang), ("؛ " if ar else "; ").join(names)),
                  self.t("UI-CITE-PUBLISHERS-AUTHORITATIVE", lang)]
         return " ".join(p for p in parts if p)
+
+    def compare_preset(self, route: str, lang: str) -> dict | None:
+        """RC-17 (Owner Addendum 2, improvement 5): a preset comparison link, offered only when every record is in the
+        Compare set."""
+        ids = COMPARE_PRESETS.get(route) or []
+        if not ids or not all(x in self.compare_ids for x in ids):
+            return None
+        label = "UI-COMPARE-PRESET-REMITTANCES" if route == "/remittances/" else "UI-COMPARE-PRESET"   # the cards there do not show all three
+        return {"href": f"/{lang}/evidence/compare/?records={','.join(ids)}", "label": self.t(label, lang)}
 
     def short_citation(self, spec: dict, obj: dict, lang: str) -> str:
         """RC-15 (B15 d, C-2; OWN-04): the short citation the launch uses — the governed title, the record line (record
@@ -1009,7 +1024,12 @@ class Content:
             "related": self.related_questions(route, lang),
             "verify": [r for r in (self.compact_record(oid, lang, claims.get(oid)) for oid in verify_ids) if r],
             "all_records": self.bound_records(spec, lang), "chronology": self.chronology(lang) if route == "/finance/" else None,
-            "hrefs": {"explore": self.href("/explore/", lang), "evidence": self.href("/evidence/", lang), "data": self.href("/data/", lang), "methodology": self.href("/methodology/", lang)},
+            # RC-17 (Owner Addendum 2, improvement 1): where an answer rests on regulatory instruments, "Verify it yourself"
+            # opens Data & sources at its regulatory group
+            "hrefs": {"explore": self.href("/explore/", lang), "evidence": self.href("/evidence/", lang),
+                      "data": self.href("/data/", lang) + ("#regulatory" if route in ("/reforms/", "/providers/") else ""),
+                      "methodology": self.href("/methodology/", lang)},
+            "compare_preset": self.compare_preset(route, lang),
             "labels": labels,
         }
 
@@ -1065,7 +1085,7 @@ class Content:
         field_map = {"source_reference": "source"}
         dimensions = [field_map.get(x, x) for x in contract.get("supporting") or [] if field_map.get(x, x) in {"definition", "universe", "geography", "unit", "period", "method", "source", "currentness"}]
         L = lambda k: self.t(k, lang)  # noqa: E731
-        return {"family": "Comparison", "route": "/evidence/compare/", "lang": lang, "title": self.loc(spec, "title", lang), "meta_description": self.loc(spec, "meta_description", lang),
+        return {"family": "Comparison", "route": "/evidence/compare/", "lang": lang, "compare_preset": self.compare_preset("/evidence/compare/", lang), "title": self.loc(spec, "title", lang), "meta_description": self.loc(spec, "meta_description", lang),
                 "lead": secs[0]["body"] if secs and not secs[0]["heading"] else "", "sections": [s for s in secs if s["heading"]],
                 "records": records, "dimensions": dimensions, "visual": self.visual("VIS-SOURCE-COMPARISON", lang) if "VIS-SOURCE-COMPARISON" in self.visual_contracts else None,
                 "next": self.journey_next("/evidence/compare/", lang),
@@ -1137,6 +1157,9 @@ class Content:
                 regulatory.append(card)            # B5: rules, decisions and official lists, one group
             else:
                 (supporting if dependents else reference).append(card)
+        # RC-17 (Owner Addendum 2, improvement 1): the regulatory group in document-date order, newest first; an undated
+        # document last (the sort is stable, so equal dates keep their governed order)
+        regulatory.sort(key=lambda c: c["facets"].get("date") or "", reverse=True)
         return {"family": "Data & Source", "route": "/data/", "regulatory": regulatory, "regulatory_also": regulatory_also, "lang": lang, "title": self.loc(spec, "title", lang), "meta_description": self.loc(spec, "meta_description", lang),
                 "lead": secs[0]["body"] if secs and not secs[0]["heading"] else "", "sections": [s for s in secs if s["heading"]],
                 "curated": list(curated_groups.values()), "supporting": supporting, "reference": reference,

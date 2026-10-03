@@ -155,3 +155,17 @@ while also saying the roster's issue date is not stated. The only date anchor is
 It does not claim WCAG conformance, legal review, rights clearance, native-language certification or a security
 guarantee. It publishes no enforcement-decision entity name. It declares neither DESIGN HANDOFF READY nor PUBLIC RELEASE
 READY.
+
+## 6. Erratum (3 October 2026, appended)
+
+- **A-7.** §2 says /payments/ reaches CWR-010 "through MA-009's card". That is wrong. /payments/ shows only the MA-002
+  and MA-007 cards (the page's measurement limit), so CWR-010 is two clicks away, through CLM-045 in "Verify it
+  yourself". The sub-item audit of Owner Addendum 2 found this. The direct link stays an editorial choice
+  (`docs/ROADMAP_V1_1.md` §3, item 2). The RC-15 docstring and changelog repeat the claim; this line corrects all three.
+- **B-2 and game-changer U2.** The owner decided on 3 October 2026, 09:05 Cairo (`audit/OWNER_DECISIONS_2026-10-02.md`,
+  point 2) to withhold all twelve names of the 2024 circular alike, including NEG-EW-011's. This was done in RC-17, and
+  the Addendum's instruction that "We Cash" rank first in search is withdrawn.
+- **A-12, C-6, C-8.** About and Cite reach the phone menu through the owner's one-patch steward designation (point 3).
+- **C-10.** The domain strip is not in this release (point 4; roadmap §3, item 27).
+- **What CauseWay is (C-6).** No new organisational description in this release (point 7).
+

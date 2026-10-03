@@ -236,7 +236,8 @@ def domain(page: dict, shell: dict) -> str:
     all_recs = "".join(f'<li><a href="{r["href"]}">{esc(r["title"])}</a></li>' for r in page["all_records"])
     verify = "".join(compact_obj(r, L, L["open_record"]) for r in page["verify"])
     parts.append(f'<section class="qa" id="verify"><div><h2>{esc(L["verify"])}</h2></div><div><p class="small">{esc(L["verify_intro"])}</p><div class="objs">{verify}</div>'
-                 f'<div class="actions"><a href="{page["hrefs"]["evidence"]}">{esc(L["evidence"])}</a><a href="{page["hrefs"]["data"]}">{esc(L["data"])}</a><a href="{page["hrefs"]["methodology"]}">{esc(L["method"])}</a></div>'
+                 f'<div class="actions"><a href="{page["hrefs"]["evidence"]}">{esc(L["evidence"])}</a><a href="{page["hrefs"]["data"]}">{esc(L["data"])}</a><a href="{page["hrefs"]["methodology"]}">{esc(L["method"])}</a>'
+                 + (f'<a href="{page["compare_preset"]["href"]}" data-compare-preset>{esc(page["compare_preset"]["label"])}</a>' if page.get("compare_preset") else "") + '</div>'
                  + (f'<details class="more mt12"><summary>{esc(L["all_records"])} ({bdi(len(page["all_records"]))})</summary><ul class="rlist">{all_recs}</ul></details>' if all_recs else "") + "</div></section>")
     index.append(("verify", L["verify"]))
     parts.insert(2 + len(page["band"]), strip(index))   # after the always-visible boundaries, before the first answer (DEBT-014; band stays first)
@@ -313,8 +314,12 @@ def comparison(page: dict, shell: dict) -> str:
             f'<script type="application/json" id="yfie-compare">{data}</script><script type="application/json" id="yfie-compare-dimensions">{dims}</script></div></section>')
     parts = [head_block(page, shell, SL["understand_explore_verify"], lead=lead), tool]
     index = [("compare", L["title"])]
+    pre = page.get("compare_preset")
     for s in page["sections"]:
-        parts.append(answer(s, len(index) + 1, f"s{s['order']}"))
+        html_ = answer(s, len(index) + 1, f"s{s['order']}")
+        if pre and s["order"] == 2 and html_.endswith("</div></section>"):   # RC-17: under "Three measures that cannot be combined"
+            html_ = html_[: -len("</div></section>")] + f'<p class="small mt8" data-compare-preset><a href="{pre["href"]}">{esc(pre["label"])}</a></p></div></section>'
+        parts.append(html_)
         index.append((f"s{s['order']}", s["heading"]))
     n, ni = next_actions(page.get("next"))
     parts.append(n); index += ni

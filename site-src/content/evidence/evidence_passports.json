@@ -339,7 +339,7 @@
     "critical_limit": "Later enforcement events are not subtracted mechanically from the 2026 annual roster. A current count of operating providers would require entity-by-entity reconciliation, a defined status date and a clear operating criterion. Silence about another provider does not establish that it is active or compliant.",
     "authority_class": "PRIMARY_OFFICIAL_STATUS_EVENTS",
     "route": "/providers/",
-    "display_requirements": "Show the decision date, named entity or branch type, action, annual-roster context and the fact that current operation requires entity-level reconciliation.",
+    "display_requirements": "Show the decision date, decision number, entity class or branch type, and action, with the annual-roster context and the fact that current operation requires entity-level reconciliation. Entity names are non-public lineage and are not shown.",
     "publisher_ar": null,
     "route_list": [
       "/providers/",

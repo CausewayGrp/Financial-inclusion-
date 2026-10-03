@@ -151,7 +151,10 @@ function typeLabel(type){
 // TOOL-23: summaries are shortened at a word boundary before escaping, with an ellipsis.
 function clip(s,n){s=String(s||'');if(s.length<=n)return s;const cut=s.slice(0,n);const sp=cut.lastIndexOf(' ');return (sp>n*0.6?cut.slice(0,sp):cut).replace(/[\s,;:،؛]+$/,'')+'…';}
 function renderHits(hits){
-  if(!hits.length) return '<div class="empty" data-search-empty>'+T('UI-JS-SEARCH-NO-RESULT')+'</div>';
+  // RC-17 (owner decisions of 3 October 2026, point 2): names from the regulator's lists and enforcement decisions are
+  // not in the index; the empty state says so once and points to the original documents on Data & sources
+  if(!hits.length) return '<div class="empty" data-search-empty>'+T('UI-JS-SEARCH-NO-RESULT')
+    +'<p class="small" data-search-names-note><a href="'+prefix+'/data/#regulatory">'+esc(T('UI-JS-SEARCH-NAMES-NOTE'))+'</a></p></div>';
   return hits.map(x=>{
     const title=(isAr?(x.title_ar||x.question_ar||x.label_ar):(x.title_en||x.question_en||x.label_en))||x.id||'Evidence';
     const summary=(isAr?(x.summary_ar||''):(x.summary_en||''));

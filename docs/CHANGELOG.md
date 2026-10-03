@@ -1,5 +1,95 @@
 # Repository Change Log
 
+## 2026-10-03 — Release candidate RC-17: names withheld; Addendum 2 governed improvements; who publishes this; CC BY 4.0
+
+One Master transaction (e24fe737… → 433f38bf…, 150 cells; `audit/release_candidate/rc_17_addendum2.py`), with its
+code. It covers Owner Addendum 2's improvements that were still open and the governed parts of the owner's decisions of
+3 October 2026 (`audit/OWNER_DECISIONS_2026-10-02.md`): 09:05, points 1 and 2, and the consolidated note of 09:50,
+recorded verbatim, which governs (A.1–A.2, C1–C4, D, E and B7). English and Arabic change together.
+- **Who publishes this (09:50 D).**
+  - /about/, in "CauseWay's role", carries the owner's paragraph on what CauseWay is, before the funding paragraph,
+    which is byte-identical. "CauseWay" stays in Latin script in Arabic.
+  - One truth change was made, and is recorded in the decisions file: records are checked "against the sources it
+    names", because seventeen records have no single original source.
+- **Licence (09:50 E).**
+  - /rights/ opens with the licence. A new last section states it: CC BY 4.0 for the content CauseWay owns, with the
+    logo excluded.
+  - It does not cover third-party material, which stays under its publishers' terms; the resource hosts no copies of
+    their files.
+  - CauseWay asks for a two-line credit: this resource, then the original source the record names.
+  - It makes no claim of rights clearance.
+  - /terms/ points to it and gives the same citation rule.
+  - `public_downloads` stays false.
+  - The public-literal audit allows the licence version, "4.0", on those two routes only, as an identifier.
+- **/payments/ headline (09:50 C2).** The title, og title and search title is now short: "Payments: reported POS
+  terminals rose between March 2025 and June 2026; how many people use them is not measured". The full sentence, with
+  561 → 1,651 and the reporting scope, opens the page as its lead.
+- **/privacy/ (09:50 B7).** One sentence, in both languages: the resource sets no cookies. At its public address on
+  causewaygrp.com, browsers may also send a cookie that the causewaygrp.com website sets for all its pages, and the
+  resource does not read it. The runbook makes the proxy strip that cookie in both directions.
+- **Names withheld (points 1 and 2).**
+  - All twelve names of the June 2024 e-wallet circular are withheld alike.
+    - NEG-EW-011 keeps its ID, route and count of 12, its date boundary, its "does not establish" text and its link to
+      the circular. It now reads as one wallet service among twelve; its page description changes the same way.
+    - The search empty state carries one governed sentence: names from the regulator's lists and enforcement
+      decisions are not reproduced here, and the originals are linked from Data & sources.
+  - No governed field now allows an enforcement-decision name:
+    - every status event's `public_use`;
+    - the `public_claim_rule` and note of the 30 enforcement-subject rows;
+    - the provider-status passport's display requirement;
+    - the status events' own text, which now names each subject by its entity ID.
+  - CLM-015's method and /providers/ section 6 now say that the names are kept in internal source records and are not
+    reproduced.
+- **RC-NAMES, hardened.**
+  - **One normaliser:** tags, entities, percent and \u escapes, NFKC, Arabic marks and letter forms, hyphens and
+    no-break spaces.
+  - **Matching:** each name is matched on its distinctive core, with an optional Arabic prefix, whether spaced or
+    joined. Ordinary vocabulary is matched only beside its class word.
+  - **Coverage:** branch rows, every text file in the built site and every social-image frame. Failures name the record
+    ID, never the name.
+  - **Negative controls:** four new ones (a short form, a joined spelling, an Arabic prefix, «محفظة» with a one-word
+    name) on top of the earlier three.
+- **Regulatory findability (improvement 1).**
+  - The circular is typed as an instruction/circular, and the 2025 e-money amendment as a regulatory decision.
+  - The search alias "decision" / «قرار» targets regulatory decisions.
+  - /reforms/ names the amendment as Governor's Decision No. 4 of 2025.
+  - VIS-PAYMENT-RAILS names the 26 June 2024 rule as Governor's Decision No. 23 of 2024, binding exchange companies,
+    exchange establishments and money-transfer agents to the unified network only. Both were read in the signed scans.
+  - /data/'s regulatory group is in document-date order, newest first. "Verify it yourself" on /reforms/ and
+    /providers/ opens it.
+- **Search (improvement 2).** New aliases for Findex / «فيندكس» and PSP / «مزوّد خدمات الدفع». Alias 007 says that
+  «محفظة» means both an e-wallet and a loan portfolio. A whole-phrase ranking bonus was built, then withdrawn: it lifted
+  records above the governed primary routes in the search smoke tests. It is now post-launch.
+- **Compare presets (improvement 5).** /evidence/compare/ and /remittances/ offer a preset comparison, with governed
+  link labels.
+- **Copy, counts, currentness (improvements 9–11, a lesson).**
+  - The /payments/ title is shorter and makes the same claim within the same scope.
+  - The self-description counts are taken from the sheets: 165 sources and 97 payment observations, stored as numbers.
+  - "resolve … resolve" on Home and Explore is gone.
+  - Four 2021-wave records say that the Global Findex 2025 edition adds no newer Yemen observation.
+- **Gates.** RC-ADD2 is new, with checks for date order, the regulatory link, the presets, alias 002 and the
+  empty-state sentence.
+- **Review.** Two rounds, each folded into the one rerun.
+  - **First round:**
+    - **Bilingual reviewer:** ACCEPTABLE with nine minor findings, all folded.
+    - **Adversarial reviewer (entity and regulatory statements):** NOT ACCEPTABLE. Its findings were folded: the gates,
+      the remaining governed fields, the related public text and the decision's scope.
+  - **Second round, on the 09:50 copy:**
+    - **Bilingual reviewer:** NOT ACCEPTABLE. It found that "does not host" third-party data was false, and that
+      «عنوان الصفحة» reads as "page title". It also flagged the Creative Commons Arabic name, «ملفات البيانات المُصدَّرة»,
+      a URL bidi glitch, the internal-records term, and a connective.
+    - **Hostile reviewer:** NOT ACCEPTABLE. It found that "as each record's citation does" was false, that the logo was
+      inside the grant, that /providers/ claimed every decision is recorded where it shows a selection, and that the
+      owner copy's "its original source" was not true of every record. It also asked for a dated headline and for the
+      cookie stripping and release check, which are in the runbook.
+    - All were fixed.
+  - **Escalated:** NEG-EW-011's ID is the circular's own item number, so withholding the name does not withhold the
+    identity. This goes to the owner (`design/ESCALATIONS.md`, raised at RC-17).
+- **Records.**
+  - In `design/ESCALATIONS.md`, RC-8, B-2, C-10, B-7, the exports item and C-6 are closed by dated lines pointing to the
+    decisions file.
+  - The domain strip is in `docs/ROADMAP_V1_1.md` as item 27.
+
 ## 2026-10-03 — Release candidate RC-16: no undated "latest"; survey coverage stated; one base disclosed
 
 One Master transaction (ebfb929c… → e24fe737…, 38 cells; `audit/release_candidate/rc_16_as_of.py`). It applies two

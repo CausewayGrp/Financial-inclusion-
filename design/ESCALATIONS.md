@@ -387,6 +387,44 @@ around them meanwhile.
 - `ESCALATE_TO_OWNER — what CauseWay is (C-6) — /about/ says who funds the resource mid-paragraph, but nothing says what
   CauseWay is. A heading is Master copy (roadmap); the organisation's description must come from the owner.` Open.
 
+Closed on 3 October 2026 by the owner's decisions of 3 October 2026 (`audit/OWNER_DECISIONS_2026-10-02.md`). The 09:05
+note was restated, with additions, by the consolidated note of 09:50, which governs. Nothing above is rewritten:
+
+- **RC-8, the status events' `public_use`: CLOSED by point 1, in RC-17.**
+  - Every status event's `public_use` now says that entity names are non-public lineage and are not printed.
+  - The same rule now governs the `public_claim_rule` of the 30 enforcement-subject rows and the provider-status
+    passport's display requirement.
+  - The events' own text now names each subject by its entity ID.
+  - RC-NAMES stays. It is hardened to match short forms, joined spellings and Arabic prefixes, and it now covers the
+    branch rows and the social-image frames.
+- **B-2, a naming rule for the 2024 circular: CLOSED by point 2, in RC-17.**
+  - The twelve names are withheld alike.
+  - NEG-EW-011 keeps its ID, route and count, and is rewritten in both languages as one wallet service among twelve.
+  - The search empty state carries the governed sentence on names.
+  - The "We Cash ranks first" instruction is withdrawn.
+  - One consequence goes back to the owner (raised at RC-17, below).
+- **C-10, a domain strip: CLOSED for this release by point 4.** It is in `docs/ROADMAP_V1_1.md`, item 28.
+- **B-7, VIS-MFI-SPINE: CLOSED for this release by point 5.** It is post-launch.
+- **Exports for researchers (U3, U6, U7): CLOSED by the 09:50 note, section E.**
+  - The owner adopts CC BY 4.0 for CauseWay's own content.
+  - `public_downloads` stays false in this pull request.
+  - The switch is one release step, after CauseWay's counsel confirms the licence text.
+  - The exports carry the licence.
+- **C-6, what CauseWay is: CLOSED by the 09:50 note, section D, in RC-17.** The owner's pair is added to /about/ before the
+  funding paragraph, in both languages, and nothing else about the organisation is written. This replaces the 09:05
+  point 7.
+- **A-12 (About) and C-8 (Cite) at 390 px:** decided by point 3 (09:50 A.3). They close with the steward's patch to the
+  navigation contract, in its own commit.
+
+Raised at RC-17 (3 October 2026), by the adversarial review of the owner's point 2:
+
+- `ESCALATE_TO_OWNER — NEG-EW-011's number identifies the service — the circular numbers its twelve names 1 to 12 in the
+  order of NEG-EW-001…012, so the record ID is the circular's own item number. With the circular linked from the
+  record, a reader who opens it can identify the eleventh listed service: withholding the name does not withhold the
+  identity, and the record still singles out one of the twelve. This follows from the owner's "same ID, same route".
+  Needed: the owner's choice — accept it as disclosed here, or let /evidence/NEG-EW-011/ point to CLM-015, which
+  covers all twelve alike.` Open; nothing prints a name. B16: RELEASE (the owner's choice at release acceptance).
+
 ## Closed at D2 (27 September 2026) — resolved by an authority the repository already holds
 
 - Arabic credit line (`NEEDS_CONTROLLED_CONTENT — RV-CWR-001 and every visual contract with a credit`): the contract

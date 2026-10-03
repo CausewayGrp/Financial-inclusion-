@@ -72,6 +72,10 @@ The ranked items found by the panel and the red team that were not built in B15 
 | 25 | /providers/: "some were issued before the roster and some after it" beside "the roster's issue date is not stated" (bilingual review of RC-15; predates the pull request) | Supervisor | Decision (steward): date the roster by its file (22 September 2026) or drop the before-and-after clause; Master-first |
 | 26 | A coverage sentence on the three records that set several Findex waves side by side (CLM-031, VIS-DEMAND-VINTAGE-LADDER, DS-FINDEX-HISTORY-CROSSWALK), naming the 2021 wave alone (RC-16 review) | Economist, academic | Copy, Master-first; each already links CLM-025 through its wave |
 | 27 | U8: a checklist for tracking whether transfer accounts stay in use | Humanitarian cash manager | Copy from CWR-010 and MA-009, keeping "cash-out is not failure"; as a file only after the licence decision |
+| 28 | C-10: a domain strip across the eight domain answers | Every reader | Design: a new navigation element (owner decisions of 3 October 2026, 09:05 point 4 and 09:50 A.4: not in this release) |
+| 29 | The system chronology on /reforms/, /payments/ and /remittances/, with an event-card variant (owner instructions of 3 October 2026, 09:50, C6) | Supervisor, journalist | Design: the chronology renders on /finance/ only, and an event card is a new component; the events' relevance text would need checking against each page's question, and chronology ≠ causality |
+| 30 | A lighter /ar/data/ (09:50, C6) | Arabic reader on a phone | Code and design: the page is complete without JavaScript by rule (DL-D7-013), so lightening it means paging or splitting the source list, not hiding it |
+| 31 | CWR-010 on /payments/ (09:50, C6) | Humanitarian cash manager | Master: the generator allows two Readings per answer page and /payments/ has two; a third needs a design decision on which one yields (RC-15) |
 
 ## 4. Named in Owner Addendum 2 (do not build now)
 

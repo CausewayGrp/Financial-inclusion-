@@ -266,7 +266,28 @@ CONTROLS = [
     # RC-NAMES (owner note, 3 October 2026, point 1): no enforcement-decision entity name is published.
     ("an enforcement-decision entity name is published", "en/providers/index.html",
      sub_once(r'(<main[^>]*>)', r'\1<p>Saddam Express Exchange and Transfers Company</p>'),
-     "RC-NAMES an enforcement-decision entity name is published en/providers/index.html Saddam Express Exchange and Transfers Company"),
+     "RC-NAMES an enforcement-decision entity name is published en/providers/index.html PRV-EXCH-E023"),
+    # hardened after the RC-17 adversarial review: a short form, a joined spelling, a prefixed or partial Arabic name
+    ("an enforcement-decision entity is published by its short form", "en/readings/index.html",
+     sub_once(r'(<main[^>]*>)', r'\1<p>Al-Buraq</p>'),
+     "RC-NAMES an enforcement-decision entity name is published en/readings/index.html PRV-EXCH-E022"),
+    # RC-NAMES, the 2024 circular (owner decisions of 3 October 2026, point 2): none of its twelve names prints, on a page
+    # or in the search index.
+    ("a name from the 2024 e-wallet circular is published on a page", "en/payments/index.html",
+     sub_once(r'(<main[^>]*>)', r'\1<p>Floosak</p>'),
+     "RC-NAMES a name from the 2024 e-wallet circular is published en/payments/index.html NEG-EW-004"),
+    ("a circular name is published joined up", "en/evidence/NEG-EW-011/index.html",
+     sub_once(r'(<main[^>]*>)', r'\1<p>WeCash</p>'),
+     "RC-NAMES a name from the 2024 e-wallet circular is published en/evidence/NEG-EW-011/index.html NEG-EW-011"),
+    ("a circular name is published with an Arabic proclitic", "ar/payments/index.html",
+     sub_once(r'(<main[^>]*>)', r'\1<p>وجوالي</p>'),
+     "RC-NAMES a name from the 2024 e-wallet circular is published ar/payments/index.html NEG-EW-003"),
+    ("a circular name is published with its wallet word only", "ar/providers/index.html",
+     sub_once(r'(<main[^>]*>)', r'\1<p>محفظة جيب</p>'),
+     "RC-NAMES a name from the 2024 e-wallet circular is published ar/providers/index.html NEG-EW-010"),
+    ("a name from the 2024 e-wallet circular enters the search index", "static-data/search_index.json",
+     replace('"title_ar": "', '"title_ar": "وي كاش '),
+     "RC-NAMES a name from the 2024 e-wallet circular is published static-data/search_index.json NEG-EW-011"),
     # RC-A1 (Owner Addendum 2, A1): the text alternative of a chain figure names only steps the drawing has.
     ("a chain figure's text alternative names a step its drawing lacks", "en/evidence/VIS-PAYMENT-RAILS/index.html",
      sub_once(r'(<div class="alt"[^>]*>.*?<p class="small">)', r'\1The mobile e-money amendment (9 July 2025). '),

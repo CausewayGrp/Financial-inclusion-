@@ -11,7 +11,7 @@
     "alias_id": "SEARCH-ALIAS-002",
     "terms_en": "decision; decisions",
     "terms_ar": "قرار; قرارات",
-    "targets": "document_type:decision/enforcement | route:/providers/ | route:/reforms/",
+    "targets": "document_type:regulatory decision | route:/reforms/ | route:/providers/",
     "boundary_note_en": null,
     "boundary_note_ar": null
   },
@@ -52,8 +52,8 @@
     "terms_en": "wallet; e-wallet; e-wallets; electronic wallet",
     "terms_ar": "محفظة; محافظ; المحافظ الإلكترونية; المحفظة الإلكترونية",
     "targets": "route:/payments/",
-    "boundary_note_en": null,
-    "boundary_note_ar": null
+    "boundary_note_en": "Discovery aid only: in Arabic «محفظة» means both an e-wallet and a loan portfolio. E-wallet records are under Payments; loan-portfolio records are under Finance (microfinance and banks).",
+    "boundary_note_ar": "أداة اكتشاف فقط: قد تعني كلمة «محفظة» المحفظة الإلكترونية أو محفظة القروض. وسجلات المحافظ الإلكترونية في صفحة المدفوعات، أما سجلات محافظ القروض ففي صفحة التمويل (التمويل الأصغر والبنوك)."
   },
   {
     "alias_id": "SEARCH-ALIAS-008",
@@ -220,6 +220,22 @@
     "terms_en": "internet; connectivity",
     "terms_ar": "الإنترنت; الانترنت; الاتصال; الاتصال بالإنترنت",
     "targets": "route:/measurement/ | route:/people/",
+    "boundary_note_en": null,
+    "boundary_note_ar": null
+  },
+  {
+    "alias_id": "SEARCH-ALIAS-029",
+    "terms_en": "Findex; Global Findex",
+    "terms_ar": "فيندكس; فندكس; Findex; المؤشر العالمي للشمول المالي",
+    "targets": "route:/people/",
+    "boundary_note_en": null,
+    "boundary_note_ar": null
+  },
+  {
+    "alias_id": "SEARCH-ALIAS-030",
+    "terms_en": "PSP; PSPs; payment service provider; payment service providers",
+    "terms_ar": "مزود خدمات الدفع; مزودو خدمات الدفع; مزودي خدمات الدفع; مقدم خدمات الدفع; مقدمو خدمات الدفع; مقدمي خدمات الدفع",
+    "targets": "document_type:regulation | route:/payments/",
     "boundary_note_en": null,
     "boundary_note_ar": null
   }

@@ -3046,5 +3046,23 @@
     "label_en": "Share this record",
     "label_ar": "شارك هذا السجل",
     "use_rule": "RC-15 (Part B B15 e, U1). Evidence Record: shares the record's title, period, population, what not to conclude and its link — Web Share where the device offers it, otherwise the same text is copied."
+  },
+  {
+    "ui_id": "UI-JS-SEARCH-NAMES-NOTE",
+    "label_en": "Names of entities from the regulator's lists and enforcement decisions are not reproduced here; the original documents are linked from Data & sources.",
+    "label_ar": "لا تُذكر هنا أسماء الجهات الواردة في قوائم الجهة الرقابية وقرارات الإنفاذ؛ ويمكن الوصول إلى الوثائق الأصلية من صفحة البيانات والمصادر.",
+    "use_rule": "RC-17 (owner decisions of 3 October 2026, point 2). Search: the governed sentence under the empty result."
+  },
+  {
+    "ui_id": "UI-COMPARE-PRESET-REMITTANCES",
+    "label_en": "Compare the CBY-Aden and IMF remittance records side by side",
+    "label_ar": "قارن سجلات التحويلات لدى البنك المركزي اليمني – عدن وصندوق النقد الدولي جنبًا إلى جنب",
+    "use_rule": "RC-17 (Owner Addendum 2, improvement 5; bilingual review). /remittances/ 'Verify it yourself': the preset CLM-032, CLM-037, CLM-041, which the page's cards do not all show, so the label names them."
+  },
+  {
+    "ui_id": "UI-COMPARE-PRESET",
+    "label_en": "Compare these records side by side",
+    "label_ar": "قارن هذه السجلات جنبًا إلى جنب",
+    "use_rule": "RC-17 (Owner Addendum 2, improvement 5). A preset Compare link under a governed paragraph or a page's verify actions; the records are named in code (scripts/yfie)."
   }
 ]
