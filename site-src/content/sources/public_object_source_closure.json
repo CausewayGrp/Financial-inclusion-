@@ -241,13 +241,16 @@
     ],
     "lineage_state": "BOUND_EXACT",
     "dependency_ids": [
-      "SRC-CBY-UNLICENSED-EWALLET-2024-001"
+      "SRC-CBY-UNLICENSED-EWALLET-2024-001",
+      "SRC-CBY-DEC-23-2024-001"
     ],
     "direct_source_ids": [
-      "SRC-CBY-UNLICENSED-EWALLET-2024-001"
+      "SRC-CBY-UNLICENSED-EWALLET-2024-001",
+      "SRC-CBY-DEC-23-2024-001"
     ],
     "resolved_source_ids": [
-      "SRC-CBY-UNLICENSED-EWALLET-2024-001"
+      "SRC-CBY-UNLICENSED-EWALLET-2024-001",
+      "SRC-CBY-DEC-23-2024-001"
     ],
     "resolved_via_object_ids": [],
     "context_reference_ids": [],
@@ -256,6 +259,11 @@
       {
         "source_id": "SRC-CBY-UNLICENSED-EWALLET-2024-001",
         "primary_url": "https://cby-ye.com/files/667c32dabd223.pdf",
+        "metadata_state": "DISPLAY_READY"
+      },
+      {
+        "source_id": "SRC-CBY-DEC-23-2024-001",
+        "primary_url": "https://cby-ye.com/files/667c596ef3bea.pdf",
         "metadata_state": "DISPLAY_READY"
       }
     ],
@@ -1656,7 +1664,8 @@
     "object_id": "CLM-026",
     "public_routes": [
       "/people/",
-      "/methodology/"
+      "/methodology/",
+      "/measurement/"
     ],
     "lineage_state": "BOUND_EXACT",
     "dependency_ids": [
@@ -5313,10 +5322,12 @@
       "CLM-015"
     ],
     "direct_source_ids": [
-      "SRC-CBY-UNLICENSED-EWALLET-2024-001"
+      "SRC-CBY-UNLICENSED-EWALLET-2024-001",
+      "SRC-CBY-DEC-23-2024-001"
     ],
     "resolved_source_ids": [
-      "SRC-CBY-UNLICENSED-EWALLET-2024-001"
+      "SRC-CBY-UNLICENSED-EWALLET-2024-001",
+      "SRC-CBY-DEC-23-2024-001"
     ],
     "resolved_via_object_ids": [],
     "context_reference_ids": [],
@@ -5325,6 +5336,11 @@
       {
         "source_id": "SRC-CBY-UNLICENSED-EWALLET-2024-001",
         "primary_url": "https://cby-ye.com/files/667c32dabd223.pdf",
+        "metadata_state": "DISPLAY_READY"
+      },
+      {
+        "source_id": "SRC-CBY-DEC-23-2024-001",
+        "primary_url": "https://cby-ye.com/files/667c596ef3bea.pdf",
         "metadata_state": "DISPLAY_READY"
       }
     ],
@@ -5952,7 +5968,8 @@
     "object_id": "CLM-026",
     "public_routes": [
       "/people/",
-      "/methodology/"
+      "/methodology/",
+      "/measurement/"
     ],
     "lineage_state": "BOUND_EXACT",
     "dependency_ids": [
@@ -10172,7 +10189,8 @@
     "public_routes": [
       "/payments/",
       "/people/",
-      "/reforms/"
+      "/reforms/",
+      "/explore/"
     ],
     "lineage_state": null,
     "dependency_ids": [],
@@ -10190,6 +10208,7 @@
     "object_id": "MA-003",
     "public_routes": [
       "/people/",
+      "/",
       "/explore/"
     ],
     "lineage_state": null,
@@ -10228,6 +10247,7 @@
     "public_routes": [
       "/access/",
       "/providers/",
+      "/",
       "/explore/"
     ],
     "lineage_state": null,
@@ -10304,7 +10324,8 @@
     "public_routes": [
       "/payments/",
       "/people/",
-      "/reforms/"
+      "/reforms/",
+      "/explore/"
     ],
     "lineage_state": null,
     "dependency_ids": [],
@@ -10324,7 +10345,8 @@
       "/reforms/",
       "/payments/",
       "/access/",
-      "/people/"
+      "/people/",
+      "/explore/"
     ],
     "lineage_state": null,
     "dependency_ids": [],

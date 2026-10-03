@@ -401,17 +401,44 @@ def t_report_issue(page, base):
     assert not page.is_visible("[data-correction-mail]"), "mail action must not carry an unknown reference"
 
 
-@test("cite: an Evidence Record copies its governed citation plus the record link, in both languages")
+@test("cite: an Evidence Record copies its short citation plus the record link, and its governed long form on request, in both languages")
 def t_cite_record(page, base):
+    """RC-15 (B15 d, C-2; OWN-04): the short citation (title, record ID, edition, original source and locator) is the
+    default; the long form, with the period, population and limits, is the governed citation and copies on its own."""
     page.context.grant_permissions(["clipboard-read", "clipboard-write"], origin=base)
     for lang in ("en", "ar"):
         page.goto(f"{base}/{lang}/evidence/CLM-001/")
         governed = page.evaluate("document.querySelector('meta[name=\"yfie-citation\"]')?.content?.trim()||''")
+        short = " ".join(page.inner_text("[data-cite-text]").split())
         page.click(".evidence-cite-button")
-        page.wait_for_function("document.querySelector('#utility-status').textContent.length>0")
+        page.wait_for_function("navigator.clipboard.readText().then(t=>t.length>0)")
+        text = " ".join(page.evaluate("navigator.clipboard.readText()").split())
+        assert text == short and "CLM-001" in text and "/evidence/CLM-001/" in text, (short[:80], text[:80])
+        assert len(text) < len(governed), "the short citation is not shorter than the long form"
+        page.evaluate("navigator.clipboard.writeText('')")
+        page.click(".cite-long summary")
+        page.click("[data-cite-long]")
+        page.wait_for_function("navigator.clipboard.readText().then(t=>t.length>0)")
+        long_ = " ".join(page.evaluate("navigator.clipboard.readText()").split())
+        assert governed and long_.startswith(" ".join(governed.split())), (governed[:60], long_[:80])
+        assert "/evidence/CLM-001/" in long_, long_
+
+
+@test("share: a record shares its title, period, population and boundary verbatim, with its link (copied where Web Share is absent)")
+def t_share_record(page, base):
+    """RC-15 (B15 e, U1): without Web Share (a desktop browser) the share text is copied; it carries the governed
+    boundary of the record whole and the record's address."""
+    page.context.grant_permissions(["clipboard-read", "clipboard-write"], origin=base)
+    page.add_init_script("Object.defineProperty(navigator,'share',{value:undefined,configurable:true})")
+    for lang in ("en", "ar"):
+        page.goto(f"{base}/{lang}/evidence/CLM-002/")
+        want = page.get_attribute("[data-share]", "data-share-text")
+        page.evaluate("navigator.clipboard.writeText('')")
+        page.click("[data-share]")
+        page.wait_for_function("navigator.clipboard.readText().then(t=>t.length>0)")
         text = page.evaluate("navigator.clipboard.readText()")
-        assert governed and text.startswith(governed), (governed[:60], text[:80])
-        assert "/evidence/CLM-001/" in text, text
+        assert want and text.startswith(want.strip()), (want[:60], text[:80])
+        assert f"/{lang}/evidence/CLM-002/" in text, text
 
 
 @test("cite: a locator-only source is cited by reference and locator, never with the reference repeated as a title")

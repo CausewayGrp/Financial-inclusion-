@@ -2,8 +2,8 @@
  "schema": "YFIE_ROUTE_CONTENT_AND_STATE_INVENTORY/1.3",
  "purpose": "Design recipient's map of every route, its family, bindings, collections, next actions and the states Design must cover. Derived; not authority.",
  "generated_from": {
-  "production_master_sha256": "4282c50b9bbd8c28d751cd795b932266b1760454c030965221fdc2e539880f53",
-  "page_specs_sha256": "9e0c9c3b37c9881fdefe85e7000512c0498939272ba18a7052ca8581b73b5727",
+  "production_master_sha256": "ebfb929c86bb54c690b96059b71ae6ff40a5af4cc27c50d80ed7fa4bcea653cb",
+  "page_specs_sha256": "add00f4a0c210b6889da98f6ff00498340687491db43ff005f5039559dd04646",
   "generator": "scripts/handoff_inventory.py"
  },
  "counts": {
@@ -187,7 +187,9 @@
     "CWR-004"
    ],
    "measurement_ids": [
-    "MA-001"
+    "MA-001",
+    "MA-003",
+    "MA-005"
    ],
    "source_ids": [],
    "source_references": 8,
@@ -1249,12 +1251,12 @@
    "reading_ids": [],
    "measurement_ids": [],
    "source_ids": [],
-   "source_references": 1,
+   "source_references": 2,
    "next_actions": [],
    "next_action_policy": "SOURCE_RELATED_CORRECTION_OR_REUSE",
    "lineage_state": "BOUND_EXACT",
    "verification_state": "SOURCES_LISTED",
-   "public_sources_listed": 1,
+   "public_sources_listed": 2,
    "structured_data": [
     "BreadcrumbList"
    ],
@@ -4337,10 +4339,13 @@
    ],
    "measurement_ids": [
     "MA-001",
+    "MA-002",
     "MA-003",
     "MA-004",
     "MA-005",
-    "MA-006"
+    "MA-006",
+    "MA-009",
+    "MA-010"
    ],
    "source_ids": [],
    "source_references": 0,
@@ -4534,6 +4539,7 @@
    "section_rows_split_by_language": true,
    "evidence_ids": [
     "CLM-009",
+    "CLM-026",
     "VIS-EVIDENCE-GAPS"
    ],
    "visual_ids": [
@@ -4542,7 +4548,7 @@
    "reading_ids": [],
    "measurement_ids": [],
    "source_ids": [],
-   "source_references": 1,
+   "source_references": 3,
    "next_actions": [
     "/explore/",
     "/evidence/"
@@ -4664,7 +4670,7 @@
     "MA-010"
    ],
    "source_ids": [],
-   "source_references": 36,
+   "source_references": 37,
    "next_actions": [
     "/evidence/CLM-003/"
    ],
@@ -4816,7 +4822,7 @@
     "MA-007"
    ],
    "source_ids": [],
-   "source_references": 30,
+   "source_references": 31,
    "next_actions": [
     "/evidence/CLM-009/"
    ],

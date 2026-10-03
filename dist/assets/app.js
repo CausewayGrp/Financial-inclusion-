@@ -66,6 +66,21 @@ $$('[data-cite]').forEach(b=>b.addEventListener('click',async()=>{
     : (governed ? governed+' '+T('UI-JS-CURRENT-RECORD')+canonicalHref : document.title+' — '+canonicalHref);
   await copyText(text,b,T('UI-JS-COPY-CITATION'));
 }));
+// RC-15 (B15 e, U1): share a record — its governed title, period, population and what not to conclude, never cut,
+// with its link. Web Share where the device offers it; otherwise the same text is copied.
+$$('[data-share]').forEach(b=>b.addEventListener('click',async()=>{
+  const text=(b.dataset.shareText||'').trim(); if(!text)return;
+  if(navigator.share){
+    try{await navigator.share({title:document.title,text,url:canonicalHref});return;}
+    catch(e){if(e&&e.name==='AbortError')return;}
+  }
+  await copyText(text+'\n'+canonicalHref,b,T('UI-JS-SHARE-RECORD'));
+}));
+// RC-15 (B15 d, C-2; OWN-04): the long form of a record's citation is copied as it is previewed
+$$('[data-cite-long]').forEach(b=>b.addEventListener('click',async()=>{
+  const long=$('[data-cite-long-text]'); if(!long)return;
+  await copyText(long.textContent.replace(/\s+/g,' ').trim(),b,T('UI-JS-COPY-LONG-CITATION'));
+}));
 $$('[data-print]').forEach(b=>b.addEventListener('click',()=>window.print()));
 $$('[data-source-cite]').forEach(b=>b.addEventListener('click',async()=>{
   const text=(b.dataset.sourceCitation||'').trim(); if(!text)return;

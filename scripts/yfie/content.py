@@ -211,6 +211,9 @@ class Content:
                 # B9 (release candidate): the visible citation preview, its copy action and the print control
                 "cite_preview": self.t("UI-CITATION-PREVIEW", lang), "copy_citation": self.t("UI-JS-COPY-CITATION", lang),
                 "print": self.t("UI-PRINT-THIS-PAGE", lang), "current_record": self.t("UI-JS-CURRENT-RECORD", lang),
+                # RC-15 (B15 d, C-2; OWN-04): the short citation is copied by default; the long form stays beside it
+                "cite_long": self.t("UI-CITE-LONG-FORM", lang), "copy_long": self.t("UI-JS-COPY-LONG-CITATION", lang),
+                "share_record": self.t("UI-JS-SHARE-RECORD", lang),   # RC-15 (B15 e, U1)
                 "copied": self.t("UI-HEADER-COPIED", lang),
                 "lang_switch_name": self.t("UI-LANG-SWITCH-NAME", other), "lang_switch_action": self.t("UI-LANG-SWITCH-ACTION", other),
                 "footer_strapline": self.t("UI-FOOTER-STRAPLINE", lang), "footer_rights": self.t("UI-FOOTER-PUBLISHED-EVIDENCE-REMAINS-ATTRIBUTED-TO", lang),
@@ -324,6 +327,63 @@ class Content:
                  self.t("UI-CITE-PUBLISHERS-AUTHORITATIVE", lang)]
         return " ".join(p for p in parts if p)
 
+    def short_citation(self, spec: dict, obj: dict, lang: str) -> str:
+        """RC-15 (B15 d, C-2; OWN-04): the short citation the launch uses — the governed title, the record line (record
+        ID, CauseWay, edition) and each original source as publisher, title and public locator. The long form
+        (citation()) keeps the period, population and limits beside it."""
+        oid = str(obj.get("object_id") or "")
+        title = (self.loc(obj, "title", lang) or self.loc(spec, "title", lang) or oid).strip().rstrip(".")
+        closure = self.closure.get(("evidence_object", oid)) or {}
+        own = set(closure.get("resolved_source_ids") or []) if closure.get("closure_state") in ("CLOSED_TO_SOURCE_ID", "PARTIALLY_RESOLVED") else set()
+        ar = lang == "ar"
+        names = []
+        for ref in spec.get("source_references") or []:
+            sid = str(ref.get("source_id") or "").strip()
+            card = self.source_card(sid, lang) if sid in own else None
+            if not card:
+                continue
+            s0 = self.sources.get(sid) or {}
+            pub = ((s0.get("publisher_ar") if ar else None) or s0.get("publisher") or "") if card["title"] else ""
+            name = card["title"] or self.tf("UI-CITE-SOURCE-REFERENCE", lang, sid=sid)
+            names.append(("، " if ar else ", ").join(x for x in (pub, name, card["url"]) if x))
+        parts = [title if title.endswith(("?", "؟", "!")) else f"{title}.",
+                 self.tf("UI-CITE-RECORD-LINE", lang, product=self.t("UI-PRODUCT-NAME", lang), oid=oid, version=self.t("UI-CONTENT-VERSION", lang))]
+        if names:
+            parts.append(f'{self.t("UI-CITE-ORIGINAL-SOURCES", lang)}: {("؛ " if ar else "; ").join(names)}.')
+        return " ".join(parts)
+
+    def share_text(self, spec: dict, obj: dict, lang: str) -> str:
+        """RC-15 (B15 e, U1): what "Share this record" sends — the governed title, period, population and what not to
+        conclude, each verbatim and never cut, one per line; the runtime adds the record's link."""
+        oid = str(obj.get("object_id") or "")
+        title = (self.loc(obj, "title", lang) or self.loc(spec, "title", lang) or oid).strip()
+        limitation, _ = self.boundary_parts(obj, lang)
+        lines = [title] + [f"{self.t(k, lang)}: {v.strip()}" for k, v in (("UI-CITE-PERIOD", self.loc(obj, "period", lang)),
+                                                                        ("UI-CITE-POPULATION", self.loc(obj, "universe", lang)),
+                                                                        ("UI-DOM-WHAT-NOT-TO-CONCLUDE", limitation)) if v and v.strip()]
+        return "\n".join(lines)
+
+    def series_links(self, obj: dict, sid: str, main_url: str) -> list[str]:
+        """RC-15 (B15 d, C-1): the indicator series a record names for one source (its 06 source links, a locator whose
+        path is /indicator/<code>) that differ from the source's main locator — only those the source library registers
+        for that source (primary or additional). Any other extra locator (an earlier file of a list, say) is not a series
+        and is not shown here."""
+        s0 = self.sources.get(sid) or {}
+        extra = s0.get("additional_urls") or []
+        if isinstance(extra, str):
+            try:
+                extra = json.loads(extra)
+            except ValueError:
+                extra = [x.strip() for x in extra.split(";")]
+        registered = {str(s0.get("primary_url") or "")} | {str(x) for x in extra}
+        out = []
+        for link in obj.get("source_links") or []:
+            url = str(link.get("url") or "") if isinstance(link, dict) else ""
+            if (isinstance(link, dict) and link.get("source_id") == sid and url and url != main_url and url in registered
+                    and self.public_locator(url) and "/indicator/" in urlparse(url).path and url not in out):
+                out.append(url)
+        return out
+
     def evidence_record(self, route: str, lang: str) -> dict:
         spec = self.spec_by_route[route]
         obj = (spec.get("governed_evidence_objects") or [{}])[0]
@@ -336,6 +396,8 @@ class Content:
             sid = str(ref.get("source_id") or "").strip()
             card = self.source_card(sid, lang) if sid else None
             if card:
+                card["series"] = self.series_links(self.evidence_objects.get(oid) or obj, sid, card["url"])
+                card["labels"]["series_used"] = self.t("UI-EVID-SERIES-USED", lang)
                 sources.append(card)
             elif sid:
                 suppressed += 1
@@ -384,7 +446,8 @@ class Content:
             "no_source_message": (L("UI-EVID-NO-STANDALONE-PUBLIC-LOCATOR-IS") if suppressed else L("UI-EVID-THIS-RECORD-CURRENTLY-HAS-NO")) if not (sources or statement_id or members) else "",
             "trace_ids": [sid for sid in bound_ids if self.source_card(sid, lang)],
             "used_in_readings": used_in, "routes_back": routes_back,
-            "citation": self.citation(spec, obj, lang),
+            "citation": self.citation(spec, obj, lang), "citation_short": self.short_citation(spec, obj, lang),
+            "share_text": self.share_text(spec, obj, lang),
             "compare_href": f"/{lang}/evidence/compare/?records={quote(oid)}" if oid in self.compare_ids else "",
             "visual": self.visual(oid, lang) if oid in self.visual_contracts else None,   # a VIS- record is its visual's canonical route (brief §12)
             "hrefs": {"evidence": self.href("/evidence/", lang), "data": self.href("/data/", lang), "methodology": self.href("/methodology/", lang),
@@ -715,8 +778,12 @@ class Content:
                     "evidence_period": self.loc(f, "evidence_period", lang), "href": self.href(f.get("route"), lang)} if f else None
         system = self.visual("VIS-INCLUSION-TRANSMISSION", lang)
         L = lambda k: self.t(k, lang)  # noqa: E731
+        # RC-15 (B15 d, A-8): the measurement priorities bound to "/" (MA-001, MA-003, MA-005), by their governed titles,
+        # under the section that names the three gaps
+        gaps = [{"id": str(m.get("measurement_id")), "title": self.loc(m, "title", lang),
+                 "href": f"/{lang}/measurement/#{quote(str(m.get('measurement_id')))}"} for m in spec.get("governed_measurement_priorities") or []]
         return {
-            "family": "Orientation", "route": "/", "lang": lang,
+            "family": "Orientation", "route": "/", "lang": lang, "gap_priorities": gaps,
             "title": self.loc(spec, "title", lang), "meta_description": self.loc(spec, "meta_description", lang),
             "sections": secs, "starting_questions": starting, "records": records, "featured": featured, "system_visual": system,
             "question_count": self.inventory["entry_questions"],
@@ -734,7 +801,8 @@ class Content:
                        "open_evidence_record": L("UI-EVID-OPEN-EVIDENCE-RECORD"), "visual_eyebrow": L("UI-DOM-A-VIEW-THAT-CHANGES-UNDERSTANDING"),
                        "scope": L("UI-DOM-SCOPE-AND-TIME"), "boundary": L("UI-DOM-WHAT-NOT-TO-CONCLUDE"),
                        "period": L("UI-EVID-WHEN-WAS-IT-MEASURED-OR"), "applies": L("UI-EVID-WHO-OR-WHAT-DOES-IT"),
-                       "does_not_establish": self.grammar_labels["UI-VIS-DOES-NOT-ESTABLISH"][lang]},
+                       "does_not_establish": self.grammar_labels["UI-VIS-DOES-NOT-ESTABLISH"][lang],
+                       "gaps_heading": L("UI-RELATED-MEASUREMENT"), "gaps_note": L("UI-HOME-GAPS-NOTE")},
         }
 
     # ------------------------------------------------------------------------------------------------ shared (D2)
@@ -808,7 +876,9 @@ class Content:
         if visuals:
             out.append({"kind": "visuals", "heading": "", "items": visuals})
         if measures:
-            out.append({"kind": "measurement", "heading": self.t(ma_h, lang), "items": measures})
+            # RC-15 (B15 d, B-5): Explore shows the P0 priorities and says so (gate RC-B15 keeps the set equal to them)
+            note = self.t("UI-EXPLORE-MA-BASIS", lang) if route_key == "/explore" else ""
+            out.append({"kind": "measurement", "heading": self.t(ma_h, lang), "items": measures, "note": note})
         return out
 
     def related_questions(self, route: str, lang: str) -> dict | None:
@@ -1101,7 +1171,9 @@ class Content:
         examined = spec.get("measurement_readings") or {}
         return {"family": "Measurement", "route": "/measurement/", "lang": lang, "title": self.loc(spec, "title", lang), "meta_description": self.loc(spec, "meta_description", lang),
                 "lead": secs[0]["body"] if secs and not secs[0]["heading"] else "", "sections": [s for s in secs if s["heading"]],
-                "priorities": [self.measurement_object(m, lang, examined.get(str(m.get("measurement_id"))), full=True) for m in self.measurement_agenda],
+                # RC-15 (B15 d, A-8): the governed classes in order (P0, then P1), each in ID order; no item is ranked
+                "priorities": [self.measurement_object(m, lang, examined.get(str(m.get("measurement_id"))), full=True)
+                               for m in sorted(self.measurement_agenda, key=lambda m: (str(m.get("priority") or ""), str(m.get("measurement_id") or "")))],
                 "blocks": self.governed_blocks(spec, lang, "/measurement"), "next": self.journey_next("/measurement/", lang), "labels": self.common_labels(lang)}
 
     def contact_address(self) -> str:

@@ -201,8 +201,8 @@
   },
   {
     "alias_id": "SEARCH-ALIAS-026",
-    "terms_en": "humanitarian; cash transfer; cash transfers; social protection; G2P",
-    "terms_ar": "إنساني; المساعدات الإنسانية; التحويلات النقدية; الحماية الاجتماعية; مدفوعات الحكومة للأفراد",
+    "terms_en": "humanitarian; cash transfer; cash transfers; social protection; G2P; cash assistance",
+    "terms_ar": "إنساني; المساعدات الإنسانية; التحويلات النقدية; الحماية الاجتماعية; مدفوعات الحكومة للأفراد; المساعدات النقدية",
     "targets": "route:/readings/after-transfer-persistence/ | route:/payments/",
     "boundary_note_en": null,
     "boundary_note_ar": null
@@ -212,6 +212,14 @@
     "terms_en": "licence; license; licensing; suspension; closure",
     "terms_ar": "ترخيص; تراخيص; إيقاف; تعليق; إغلاق",
     "targets": "route:/providers/ | document_type:decision/enforcement",
+    "boundary_note_en": null,
+    "boundary_note_ar": null
+  },
+  {
+    "alias_id": "SEARCH-ALIAS-028",
+    "terms_en": "internet; connectivity",
+    "terms_ar": "الإنترنت; الانترنت; الاتصال; الاتصال بالإنترنت",
+    "targets": "route:/measurement/ | route:/people/",
     "boundary_note_en": null,
     "boundary_note_ar": null
   }

@@ -357,6 +357,36 @@ Raised at RC-8 (3 October 2026), by the owner's note of 3 October 2026, 03:10, p
   the withholding rule, or keep them as they are and record that the rule overrides them.` Open, non-blocking:
   nothing prints a name.
 
+Raised in the release-candidate pull request (3 October 2026), by the product challenge (B15;
+`audit/release_candidate/PRODUCT_CHALLENGE.md`). The red team sent these to the steward or the owner; nothing is built
+around them meanwhile.
+
+- `ESCALATE_TO_STEWARD (navigation contract) — About at 390 px (A-12, C-6) — About is reachable only from the footer on a
+  phone; the reader who asks "who publishes and funds this?" does not find it in the menu. Needed: About in the mobile
+  menu (\`navigation_interaction.json\`). The publisher's Arabic name stays "CauseWay" in Latin script (owner rule; the
+  red team blocked «كوزواي»).` Open.
+- `ESCALATE_TO_STEWARD (navigation contract) — Cite at 390 px (C-8) — "Cite this page" is in neither the mobile header nor
+  the menu; on CLM-002 the only cite control is 3.7 screens down. Needed: a cite entry in the mobile header or the menu.`
+  Open.
+- `ESCALATE_TO_STEWARD (navigation contract) — a domain strip (C-10) — there is no direct route across the eight domain
+  answers, and "Data & sources" holds no data. Needed: a decision on a domain strip; the labels follow Master-first.`
+  Open.
+- `ESCALATE_TO_OWNER — a naming rule for the 2024 e-wallet circular (B-2) — one of its 12 names prints (NEG-EW-011) and
+  eleven do not. The red team advises against naming the other eleven (the list is dated 2024 and marked
+  DO_NOT_CARRY_FORWARD; a fairness risk). Needed: the owner's rule for all twelve alike, either withhold all or
+  publish all with the date boundary. Linking the parent records to their children is allowed and is in the roadmap.`
+  Open.
+- `ESCALATE_TO_OWNER — VIS-MFI-SPINE (B-7) — the record is titled "observations by date, with gaps and breaks shown", but
+  it renders no chart and no table (a table-only record, left until after launch by decision A4 / C6). Needed: a
+  contract that binds the governed observations, with each gap printed "no usable observation — not zero". Until then
+  the title must not promise "gaps shown" (Master-first wording; roadmap).` Open.
+- `ESCALATE_TO_OWNER — exports for researchers (game-changers U3, U6, U7) — a versioned dataset of all records, dated
+  observation tables, and a citation file (BibTeX or RIS). \`scripts/exports.py\` is ready and \`public_downloads\` is
+  false. Needed: the licence decision (OWN-04; REJ-03 keeps Dataset structured data closed until a licence exists).`
+  Open; release-dependent.
+- `ESCALATE_TO_OWNER — what CauseWay is (C-6) — /about/ says who funds the resource mid-paragraph, but nothing says what
+  CauseWay is. A heading is Master copy (roadmap); the organisation's description must come from the owner.` Open.
+
 ## Closed at D2 (27 September 2026) — resolved by an authority the repository already holds
 
 - Arabic credit line (`NEEDS_CONTROLLED_CONTENT — RV-CWR-001 and every visual contract with a credit`): the contract

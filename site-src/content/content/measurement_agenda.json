@@ -92,13 +92,15 @@
     "affected_routes": [
       "/payments",
       "/people",
-      "/reforms"
+      "/reforms",
+      "/explore"
     ],
     "domain_ar": "المدفوعات / الأفراد",
     "affected_route_list": [
       "/payments/",
       "/people/",
-      "/reforms/"
+      "/reforms/",
+      "/explore/"
     ]
   },
   {
@@ -145,11 +147,13 @@
     "recommended_visual_ar": "حدود أدلة الفئات: فرق مقاس ← عوامل مرتبطة ← اختبار سببي",
     "affected_routes": [
       "/people",
+      "/",
       "/explore"
     ],
     "domain_ar": "الأفراد / الإنصاف",
     "affected_route_list": [
       "/people/",
+      "/",
       "/explore/"
     ]
   },
@@ -249,12 +253,14 @@
     "affected_routes": [
       "/access",
       "/providers",
+      "/",
       "/explore"
     ],
     "domain_ar": "مقدمو الخدمات / الجغرافيا",
     "affected_route_list": [
       "/access/",
       "/providers/",
+      "/",
       "/explore/"
     ]
   },
@@ -446,13 +452,15 @@
     "affected_routes": [
       "/payments",
       "/people",
-      "/reforms"
+      "/reforms",
+      "/explore"
     ],
     "domain_ar": "الحماية الاجتماعية / المدفوعات",
     "affected_route_list": [
       "/payments/",
       "/people/",
-      "/reforms/"
+      "/reforms/",
+      "/explore/"
     ]
   },
   {
@@ -499,14 +507,16 @@
       "/reforms",
       "/payments",
       "/access",
-      "/people"
+      "/people",
+      "/explore"
     ],
     "domain_ar": "الإصلاحات / المدفوعات / الجودة",
     "affected_route_list": [
       "/reforms/",
       "/payments/",
       "/access/",
-      "/people/"
+      "/people/",
+      "/explore/"
     ]
   }
 ]

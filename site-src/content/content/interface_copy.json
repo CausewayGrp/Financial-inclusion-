@@ -2893,8 +2893,8 @@
   },
   {
     "ui_id": "UI-VIS-NOTE-POS-H1-WITHHELD",
-    "label_en": "The first-half 2025 payment report also gives an aggregate figure for POS transactions. It is withheld here because its definition and period need a methodology note before public use. The monthly releases are shown because each reports POS transactions for one month within the same reporting scope, so their published totals can be read side by side. Where a release's displayed percentage change does not match the published monthly totals, the mismatch is recorded as a discrepancy within the source.",
-    "label_ar": "يذكر تقرير المدفوعات للنصف الأول من 2025 أيضًا رقمًا إجماليًا لمعاملات نقاط البيع، وهو محجوب هنا لأن تعريفه وفترته يحتاجان إلى ملاحظة منهجية قبل النشر. أما الإصدارات الشهرية فتُعرض لأن كلًّا منها يذكر معاملات نقاط البيع لشهر واحد ضمن نطاق الإبلاغ نفسه، فيمكن قراءة إجمالياتها المنشورة جنبًا إلى جنب. وحيث لا تتفق نسبة التغير المعروضة في إصدارٍ ما مع الإجماليات الشهرية المنشورة، يُسجَّل الفرق بوصفه اختلافًا داخل المصدر.",
+    "label_en": "The first-half 2025 payment report also gives an aggregate figure for POS transactions. It is withheld here because its definition and period need a methodology note before public use. The monthly releases are shown because each reports POS transactions for a single month, so their published totals can be read side by side; whether the reporting scope stayed the same across the change of release format in July 2025 has not been verified. Where a release's displayed percentage change does not match the published monthly totals, the mismatch is recorded as a discrepancy within the source.",
+    "label_ar": "يذكر تقرير المدفوعات للنصف الأول من 2025 أيضًا رقمًا إجماليًا لمعاملات نقاط البيع، وهو محجوب هنا لأن تعريفه وفترته يحتاجان إلى ملاحظة منهجية قبل النشر. أما الإصدارات الشهرية فتُعرض لأن كلًّا منها يذكر معاملات نقاط البيع لشهر واحد، فيمكن قراءة إجمالياتها المنشورة جنبًا إلى جنب؛ ولم يُتحقق من استمرارية نطاق الإبلاغ عند تغيّر شكل الإصدار في يوليو 2025. وحيث لا تتفق نسبة التغير المعروضة في إصدارٍ ما مع الإجماليات الشهرية المنشورة، يُسجَّل الفرق بوصفه اختلافًا داخل المصدر.",
     "use_rule": "RC-11 (Part B B11). Frame note of VIS-POS-TRANSACTIONS: the withheld H1 2025 transaction total (OBS-00036) and why the monthly series is admissible; from governed fields only."
   },
   {
@@ -3010,5 +3010,41 @@
     "label_en": "Open archived copy (web.archive.org)",
     "label_ar": "افتح النسخة المؤرشفة (web.archive.org)",
     "use_rule": "RC-12 (Part B B13). The research library on /data/: filters, order, backlinks and locator labels."
+  },
+  {
+    "ui_id": "UI-HOME-GAPS-NOTE",
+    "label_en": "Each priority below describes evidence that is still missing for one of these gaps. Listing it here does not claim that collecting that evidence would close the gap or explain it.",
+    "label_ar": "تصف كل أولوية أدناه أدلةً ما زالت مفقودة تتصل بإحدى هذه الفجوات. ولا يعني إدراجها هنا أن جمع تلك الأدلة سيسدّ الفجوة أو يفسّرها.",
+    "use_rule": "RC-15 (Part B B15 d, A-8). Home: the line under the measurement priorities bound to the gaps section."
+  },
+  {
+    "ui_id": "UI-EXPLORE-MA-BASIS",
+    "label_en": "These are the priorities the Measurement Agenda marks P0. The full agenda, including its P1 items, is on the Measurement Agenda page.",
+    "label_ar": "هذه هي البنود المصنفة P0 في أولويات القياس. وتعرض صفحة أولويات القياس القائمة الكاملة، بما فيها البنود المصنفة P1.",
+    "use_rule": "RC-15 (Part B B15 d, B-5). Explore: the line under 'What the evidence cannot yet answer'; the gate RC-B15 keeps the set equal to the P0 items."
+  },
+  {
+    "ui_id": "UI-EVID-SERIES-USED",
+    "label_en": "Series this record uses",
+    "label_ar": "السلاسل التي يستخدمها هذا السجل",
+    "use_rule": "RC-15 (Part B B15 d, C-1). Evidence Record source card: the record's own series locators, where they differ from the source's main locator."
+  },
+  {
+    "ui_id": "UI-CITE-LONG-FORM",
+    "label_en": "Long form, with the period, population and limits",
+    "label_ar": "الصيغة المطوّلة، مع الفترة والمجتمع والحدود",
+    "use_rule": "RC-15 (Part B B15 d, C-2; OWN-04). Evidence Record: the disclosure that holds the long citation under the short one."
+  },
+  {
+    "ui_id": "UI-JS-COPY-LONG-CITATION",
+    "label_en": "Copy long form",
+    "label_ar": "انسخ الصيغة المطوّلة",
+    "use_rule": "RC-15 (Part B B15 d, C-2). Evidence Record: copies the long citation."
+  },
+  {
+    "ui_id": "UI-JS-SHARE-RECORD",
+    "label_en": "Share this record",
+    "label_ar": "شارك هذا السجل",
+    "use_rule": "RC-15 (Part B B15 e, U1). Evidence Record: shares the record's title, period, population, what not to conclude and its link — Web Share where the device offers it, otherwise the same text is copied."
   }
 ]

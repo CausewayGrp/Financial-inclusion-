@@ -96,7 +96,9 @@ def blocks(page: dict, L: dict, start_id: str = "blk") -> tuple[str, list]:
             items = "".join(compact_obj(r, L, boundary=True) for r in b["items"])
         else:
             items = "".join(measure_obj(m) for m in b["items"])
-        out.append(f'<section class="qa" id="{id_}"><div><h2>{esc(b["heading"])}</h2></div><div class="objs">{items}</div></section>')
+        # RC-15 (B15 d, B-5): a governed line that says which priorities a page shows (Explore: the P0 items)
+        note = f'<p class="small" data-ma-basis>{esc(b["note"])}</p>' if b.get("note") else ""
+        out.append(f'<section class="qa" id="{id_}"><div><h2>{esc(b["heading"])}</h2></div><div>{note}<div class="objs">{items}</div></div></section>')
         index.append((id_, b["heading"]))
     return "".join(out), index
 

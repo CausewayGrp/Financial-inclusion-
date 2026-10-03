@@ -2833,6 +2833,60 @@ try:
 except Exception as _x:
     errors.append("RC-PERF unreadable " + repr(_x))
 
+# RC-B15 (Part B B15 d; RC-15): the product challenge's allowed changes stay in place.
+# - Home lists, under the gaps section, every measurement priority bound to "/" by its governed title.
+# - Explore shows exactly the priorities the agenda marks P0, as its governed line says; /measurement/ lists P0 before P1.
+# - No record says the 2026 decisions "are matched" with the roster: the Master marks every subject not yet reconciled.
+# - An Evidence Record previews its short citation (OWN-04) and keeps the long form; CLM-002 links the two series it uses.
+try:
+    _ma15 = json.loads((C / "content" / "measurement_agenda.json").read_text(encoding="utf-8"))
+    _ui15 = {x["ui_id"]: x for x in json.loads((C / "content" / "interface_copy.json").read_text(encoding="utf-8"))}
+    _p0 = [m["measurement_id"] for m in _ma15 if m.get("priority") == "P0"]
+    _home15 = [m["measurement_id"] for m in _ma15 if "/" in (m.get("affected_route_list") or [])]
+    _expl15 = [m["measurement_id"] for m in _ma15 if "/explore/" in (m.get("affected_route_list") or [])]
+    if sorted(_expl15) != sorted(_p0):
+        errors.append(f"RC-B15 Explore's priorities {_expl15} are not the P0 set {_p0} its governed line names")
+    _order15 = [m["measurement_id"] for m in sorted(_ma15, key=lambda m: (str(m.get("priority") or ""), m["measurement_id"]))]
+    for _lang in ("en", "ar"):
+        _h = (DIST / _lang / "index.html").read_text(encoding="utf-8")
+        _blk = _h.split("data-home-gap-priorities", 1)[1].split("</ul>", 1)[0] if "data-home-gap-priorities" in _h else ""
+        for _m in _home15:
+            if f'/{_lang}/measurement/#{_m}"' not in _blk:
+                errors.append(f"RC-B15 Home ({_lang}) does not link the bound priority {_m} under the gaps section")
+        if _ui15["UI-HOME-GAPS-NOTE"][f"label_{_lang}"] not in _html.unescape(_h):
+            errors.append(f"RC-B15 Home ({_lang}) lost the line under its gap priorities")
+        _e = _html.unescape((DIST / _lang / "explore" / "index.html").read_text(encoding="utf-8"))
+        if _ui15["UI-EXPLORE-MA-BASIS"][f"label_{_lang}"] not in _e:
+            errors.append(f"RC-B15 Explore ({_lang}) does not say which priorities it shows")
+        _ms = (DIST / _lang / "measurement" / "index.html").read_text(encoding="utf-8")
+        _seen = [m for m in re.findall(r'<article class="obj prio" id="(MA-\d+)"', _ms)]
+        if _seen != _order15:
+            errors.append(f"RC-B15 /{_lang}/measurement/ lists {_seen}, not P0 then P1 in ID order")
+        _r = (DIST / _lang / "evidence" / "CLM-001" / "index.html").read_text(encoding="utf-8")
+        if "data-cite-long-text" not in _r or "data-cite-long" not in _r:
+            errors.append(f"RC-B15 /{_lang}/evidence/CLM-001/ lost the long form of its citation")
+        _pv = _html.unescape(re.sub(r"<[^>]+>", "", _r.split("data-cite-text>", 1)[1].split("</p>", 1)[0])) if "data-cite-text>" in _r else ""
+        if "CLM-001" not in _pv or _ui15["UI-CITE-ORIGINAL-SOURCES"][f"label_{_lang}"] not in _pv or "https://" not in _pv:
+            errors.append(f"RC-B15 /{_lang}/evidence/CLM-001/ does not preview its short citation (record ID, original source and locator)")
+        _sh = re.search(r'data-share data-share-text="([^"]*)"', _r)
+        _bd = _html.unescape(_sh.group(1)).replace("\u2066", "").replace("\u2069", "") if _sh else ""   # the Arabic share text isolates its dates and IDs
+        _ev1 = next((o for o in json.loads((C / "evidence" / "evidence_objects.json").read_text(encoding="utf-8")) if o.get("object_id") == "CLM-001"), {})
+        _lim1 = str(_ev1.get(f"does_not_establish_{_lang}") or _ev1.get(f"limitations_{_lang}") or "").split(" | ")[0].strip()
+        if not _sh or _ui15["UI-JS-SHARE-RECORD"][f"label_{_lang}"] not in _html.unescape(_r) or (_lim1 and _lim1 not in _bd):
+            errors.append(f"RC-B15 /{_lang}/evidence/CLM-001/ has no share control carrying its boundary verbatim")
+        _c2 = (DIST / _lang / "evidence" / "CLM-002" / "index.html").read_text(encoding="utf-8")
+        for _code in ("FX.OWN.TOTL.MA.ZS", "FX.OWN.TOTL.FE.ZS"):
+            if f"/indicator/{_code}?locations=YE" not in _c2:
+                errors.append(f"RC-B15 /{_lang}/evidence/CLM-002/ does not link the series {_code} it is calculated from")
+    for _f in ("evidence/evidence_objects.json", "evidence/public_claims.json"):
+        _txt = (C / _f).read_text(encoding="utf-8")
+        # the first RC-15 wording, withdrawn after review, is banned too: decisions ARE attached to the entities they name
+        if any(_p in _txt for _p in ("are matched with", "matched to it entity by entity, because", "تُطابَق معها جهةً جهة،",
+                                     "each decision would have to be matched to named entities", "يلزم مطابقة كل قرار مع الجهات المسماة")):
+            errors.append(f"RC-B15 {_f} says the 2026 decisions are matched with the roster; the matching has not been done")
+except Exception as _x:
+    errors.append("RC-B15 unreadable " + repr(_x))
+
 # RC-B13 (Part B B13): the research library on /data/. Its filters stay hidden until the runtime runs (the list is
 # complete without JavaScript); every listed source carries its filter keys; every option of a filter matches at least
 # one source; a locator that is a web.archive.org copy is never offered as the original.

@@ -1,7 +1,7 @@
 {
   "schema_version": "1.0",
   "contract_id": "VISUAL-DESIGN-CONTRACT",
-  "authority_master_sha256": "4282c50b9bbd8c28d751cd795b932266b1760454c030965221fdc2e539880f53",
+  "authority_master_sha256": "ebfb929c86bb54c690b96059b71ae6ff40a5af4cc27c50d80ed7fa4bcea653cb",
   "rule": "Design-layer controlled input. It assigns every governed visual contract (Master 11) a design tier and, for SIGNATURE and CORE_ANALYTICAL visuals, declares which governed rows a chart binds to and how they are drawn. It never carries a fact, number, label or sentence: values come from Master data rows, text from Master contract/evidence fields, and legend labels from the governed interface copy (UI-VIS-*). The generator resolves every binding and fails on any unresolved ID, any value that disagrees with its guard, or any visual left untiered.",
   "tiers": {
     "SIGNATURE": "Distinctive to this product, decision-useful, drawable from governed rows and safe when detached. Designed first; gets a full data contract.",
@@ -3085,8 +3085,8 @@
         },
         "frame_labels": {
           "UI-VIS-NOTE-POS-H1-WITHHELD": {
-            "en": "The first-half 2025 payment report also gives an aggregate figure for POS transactions. It is withheld here because its definition and period need a methodology note before public use. The monthly releases are shown because each reports POS transactions for one month within the same reporting scope, so their published totals can be read side by side. Where a release's displayed percentage change does not match the published monthly totals, the mismatch is recorded as a discrepancy within the source.",
-            "ar": "يذكر تقرير المدفوعات للنصف الأول من 2025 أيضًا رقمًا إجماليًا لمعاملات نقاط البيع، وهو محجوب هنا لأن تعريفه وفترته يحتاجان إلى ملاحظة منهجية قبل النشر. أما الإصدارات الشهرية فتُعرض لأن كلًّا منها يذكر معاملات نقاط البيع لشهر واحد ضمن نطاق الإبلاغ نفسه، فيمكن قراءة إجمالياتها المنشورة جنبًا إلى جنب. وحيث لا تتفق نسبة التغير المعروضة في إصدارٍ ما مع الإجماليات الشهرية المنشورة، يُسجَّل الفرق بوصفه اختلافًا داخل المصدر."
+            "en": "The first-half 2025 payment report also gives an aggregate figure for POS transactions. It is withheld here because its definition and period need a methodology note before public use. The monthly releases are shown because each reports POS transactions for a single month, so their published totals can be read side by side; whether the reporting scope stayed the same across the change of release format in July 2025 has not been verified. Where a release's displayed percentage change does not match the published monthly totals, the mismatch is recorded as a discrepancy within the source.",
+            "ar": "يذكر تقرير المدفوعات للنصف الأول من 2025 أيضًا رقمًا إجماليًا لمعاملات نقاط البيع، وهو محجوب هنا لأن تعريفه وفترته يحتاجان إلى ملاحظة منهجية قبل النشر. أما الإصدارات الشهرية فتُعرض لأن كلًّا منها يذكر معاملات نقاط البيع لشهر واحد، فيمكن قراءة إجمالياتها المنشورة جنبًا إلى جنب؛ ولم يُتحقق من استمرارية نطاق الإبلاغ عند تغيّر شكل الإصدار في يوليو 2025. وحيث لا تتفق نسبة التغير المعروضة في إصدارٍ ما مع الإجماليات الشهرية المنشورة، يُسجَّل الفرق بوصفه اختلافًا داخل المصدر."
           }
         },
         "series": [

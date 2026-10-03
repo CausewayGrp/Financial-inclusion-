@@ -1,5 +1,41 @@
 # Repository Change Log
 
+## 2026-10-03 — Release candidate RC-15: the product challenge's governed copy and data, the short citation, sharing a record
+
+One Master transaction (4282c50b… → ebfb929c…, 44 cells; `audit/release_candidate/rc_15_b15_copy.py`). It carries the
+changes the B15 red team allowed, ranked in `audit/release_candidate/PRODUCT_CHALLENGE.md`, and the code that renders
+their bindings. English and Arabic change together. One bilingual reviewer and one adversarial reviewer both returned
+NOT ACCEPTABLE at the first run; every finding was folded into one rerun.
+- **B-1, truth.** CLM-019, CLM-009, VIS-PROVIDER-TIME and the site-map description said the 2026 decisions "are matched"
+  with the roster. The Master marks every subject not yet reconciled. They now say the matching with the roster would
+  have to be done and has not been; each decision stays attached to the entities it names.
+- **A-8, B-5.** Home lists, under its gaps section, the three priorities bound to it (MA-001, MA-003, MA-005) by their
+  governed titles, with a line saying a link is not a claim to close or explain a gap. Explore shows every P0 priority
+  and says so. /measurement/ lists P0 then P1, each in ID order.
+- **B-6.** CLM-026 (32 measures specified; estimates not yet published) is bound to /measurement/.
+- **C-1.** CLM-002 links the two World Bank series it subtracts, on its source card.
+- **C-2, OWN-04.** An Evidence Record previews and copies a short citation: title, record ID, CauseWay, edition, then
+  each original source as publisher, title and locator, then the record's address. The long form stays one disclosure
+  away and copies on its own. A citation isolates each URL as it isolates identifiers.
+- **U1, game-changer.** "Share this record" sends the title, period, population and what not to conclude, verbatim,
+  with the link. It uses Web Share where the device offers it and copies the same text elsewhere; the Arabic text
+  isolates its dates and identifiers.
+- **Copy.**
+  - B-3: CLM-007 "gives a higher value", not "shows materially higher".
+  - B-10: CLM-015 says Decision No. 23 of 2024 is a separate instrument of the same date and lists it as a context source.
+  - B-12: /payments/ says what the transaction series does support, and the POS chart note no longer asserts one
+    reporting scope.
+  - C-3: Compare's description names the rows it shows.
+- **Search.** Alias 026 gains "cash assistance" / «المساعدات النقدية». A new alias 028 maps internet to connectivity.
+- **Not done.** Surfacing CWR-010 on /payments/ was not done: an answer page carries at most two Readings. That is in
+  the roadmap.
+- **Records.** `PRODUCT_CHALLENGE.md` (new, indexed); `docs/ROADMAP_V1_1.md` §3 filled; seven escalations to the steward
+  and the owner in `design/ESCALATIONS.md`.
+- **Gates.** RC-B15 checks Home, Explore, the /measurement/ order, the matching wording (the withdrawn first wording is
+  banned too), the short and long citations, the share control and CLM-002's series. A negative control checks that
+  Home keeps its bound priorities. The browser test for a record's citation now copies the short form and the long form;
+  a new test shares a record.
+
 ## 2026-10-03 — B15 d: search matches numbers whole, Arabic words from their start, and governed aliases
 
 From the product challenge, these were ranked first by the red team (`PRODUCT_CHALLENGE.md`). All are code only, in

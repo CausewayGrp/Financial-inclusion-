@@ -715,9 +715,9 @@
     "section_order": 1,
     "section_role": null,
     "heading_en": null,
-    "body_en": "Select 2–4 records. Compare definition, period, population or calculation base, geography, unit and method before comparing values. A mismatch is a reason to qualify the comparison, not to hide it; when definitions or populations do not match, “not comparable” is a valid result.\n\nCompare offers a selected set of evidence records in this edition. A record that is not offered here can still be read in full on its own page; its absence from Compare is not a judgement about it.\nSelect at least two records.",
+    "body_en": "Select 2–4 records. The table compares definition, population or calculation base, period, method, source and currentness; read each record for its geography and unit before comparing values. A mismatch is a reason to qualify the comparison, not to hide it; when definitions or populations do not match, “not comparable” is a valid result.\n\nCompare offers a selected set of evidence records in this edition. A record that is not offered here can still be read in full on its own page; its absence from Compare is not a judgement about it.\nSelect at least two records.",
     "heading_ar": null,
-    "body_ar": "اختر من 2 إلى 4 سجلات. قارن التعريف والفترة ومجتمع القياس أو قاعدة الاحتساب والنطاق الجغرافي والوحدة والطريقة قبل مقارنة القيم. عدم التطابق سبب لتقييد المقارنة لا لإخفائها، وحين لا تتطابق التعريفات أو المجتمعات يكون الحكم بأنها «غير قابلة للمقارنة» نتيجة صحيحة.\n\nتتيح أداة المقارنة في هذا الإصدار مجموعة مختارة من سجلات الأدلة. ويمكن قراءة أي سجل غير متاح هنا كاملًا في صفحته، وغيابه عن المقارنة ليس حكمًا عليه.\nاختر سجلين على الأقل."
+    "body_ar": "اختر من 2 إلى 4 سجلات. يقارن الجدول التعريف ومجتمع القياس أو قاعدة الاحتساب والفترة والطريقة والمصدر وحداثة الدليل؛ واقرأ كل سجل لمعرفة نطاقه الجغرافي ووحدته قبل مقارنة القيم. عدم التطابق سبب لتقييد المقارنة لا لإخفائها، وحين لا تتطابق التعريفات أو المجتمعات يكون الحكم بأنها «غير قابلة للمقارنة» نتيجة صحيحة.\n\nتتيح أداة المقارنة في هذا الإصدار مجموعة مختارة من سجلات الأدلة. ويمكن قراءة أي سجل غير متاح هنا كاملًا في صفحته، وغيابه عن المقارنة ليس حكمًا عليه.\nاختر سجلين على الأقل."
   },
   {
     "route": "/explore/",
@@ -1498,7 +1498,7 @@
     "section_order": 2,
     "section_role": "Analysis",
     "heading_en": "POS: three different signals",
-    "body_en": "Within the reporting scope of the Central Bank of Yemen – Aden (CBY-Aden), reported POS terminals rose from 561 to 1,651 between March 2025 and June 2026, transaction counts from 8,015 to 27,504 (after a high of 36,201 in May 2026) and nominal transaction value from YER 320 million to YER 1,045 million (after a high of YER 1,579 million in May 2026). This page keeps these three measures separate. A terminal is infrastructure, a transaction is an event and transaction value is a nominal monetary amount; none equals a person.",
+    "body_en": "Within the reporting scope of the Central Bank of Yemen – Aden (CBY-Aden), reported POS terminals rose from 561 to 1,651 between March 2025 and June 2026, transaction counts from 8,015 to 27,504 (after a high of 36,201 in May 2026) and nominal transaction value from YER 320 million to YER 1,045 million (after a high of YER 1,579 million in May 2026). This page keeps these three measures separate. A terminal is infrastructure, a transaction is an event and transaction value is a nominal monetary amount; none equals a person. The transaction series supports only a narrower reading: the totals CBY-Aden reports are higher in June 2026 than in March 2025, but they did not rise steadily and fell in several months; whether the reporting scope stayed the same, including across the change of release format in July 2025, has not been verified.",
     "heading_ar": null,
     "body_ar": null
   },
@@ -1509,7 +1509,7 @@
     "heading_en": null,
     "body_en": null,
     "heading_ar": "نقاط البيع: ثلاث إشارات مختلفة",
-    "body_ar": "ضمن نطاق بيانات البنك المركزي اليمني – عدن، ارتفع بين مارس 2025 ويونيو 2026 العدد المنشور لأجهزة نقاط البيع من 561 إلى 1,651 جهازًا، وعدد المعاملات من 8,015 إلى 27,504 (بعد ذروة بلغت 36,201 معاملة في مايو 2026)، والقيمة الاسمية للمعاملات من 320 مليون ريال إلى 1,045 مليون ريال (بعد ذروة بلغت 1,579 مليون ريال في مايو 2026). وتُبقي هذه الصفحة المقاييس الثلاثة منفصلة: الجهاز بنية تحتية، والمعاملة حدث، وقيمة المعاملة مبلغ مالي اسمي؛ ولا يساوي أي منها شخصًا."
+    "body_ar": "ضمن نطاق بيانات البنك المركزي اليمني – عدن، ارتفع بين مارس 2025 ويونيو 2026 العدد المنشور لأجهزة نقاط البيع من 561 إلى 1,651 جهازًا، وعدد المعاملات من 8,015 إلى 27,504 (بعد ذروة بلغت 36,201 معاملة في مايو 2026)، والقيمة الاسمية للمعاملات من 320 مليون ريال إلى 1,045 مليون ريال (بعد ذروة بلغت 1,579 مليون ريال في مايو 2026). وتُبقي هذه الصفحة المقاييس الثلاثة منفصلة: الجهاز بنية تحتية، والمعاملة حدث، وقيمة المعاملة مبلغ مالي اسمي؛ ولا يساوي أي منها شخصًا. ولا تدعم سلسلة المعاملات إلا قراءة أضيق: فالإجماليات التي يُبلغ عنها البنك المركزي في عدن أعلى في يونيو 2026 منها في مارس 2025، لكنها لم ترتفع باطراد وانخفضت في عدة أشهر؛ ولم يُتحقق من استمرارية نطاق الإبلاغ، بما في ذلك عند تغيّر شكل الإصدار في يوليو 2025."
   },
   {
     "route": "/payments/",
@@ -3226,9 +3226,9 @@
     "section_order": 1,
     "section_role": null,
     "heading_en": null,
-    "body_en": "The official 2026 roster of exchange and remittance providers issued by the Central Bank of Yemen – Aden (CBY-Aden) lists 100 exchange companies, 231 individual exchange establishments and 111 remittance agents. These are roster entries counted by the roster's own classes: the three class totals are not a count of unique providers, nor a verified count of providers operating now. Because the roster does not state its issue date, CBY-Aden's 2026 decisions (dated January to September 2026) suspending or withdrawing the licences of named entities, or closing their premises, are matched with the roster entity by entity, because a decision may or may not already be reflected in it.",
+    "body_en": "The official 2026 roster of exchange and remittance providers issued by the Central Bank of Yemen – Aden (CBY-Aden) lists 100 exchange companies, 231 individual exchange establishments and 111 remittance agents. These are roster entries counted by the roster's own classes: the three class totals are not a count of unique providers, nor a verified count of providers operating now. Because the roster does not state its issue date, CBY-Aden's 2026 decisions (dated January to September 2026) suspending or withdrawing the licences of named entities, or closing their premises, would have to be matched with the roster entity by entity, since a decision may or may not already be reflected in it; that matching has not been done.",
     "heading_ar": null,
-    "body_ar": "تضم القائمة الرسمية لعام 2026 لمقدمي خدمات الصرافة والحوالات، الصادرة عن البنك المركزي اليمني – عدن، كلًّا من 100 شركة صرافة و231 منشأة صرافة فردية و111 وكيلًا للحوالات. وهذه قيود معدودة بحسب فئات القائمة نفسها: فمجموع الفئات الثلاث ليس عددًا لمقدمي خدمات فريدين، ولا عددًا متحققًا منه لمن يعمل منهم حاليًا. ولأن القائمة لا تذكر تاريخ صدورها، تُطابَق قرارات البنك المركزي في عدن الصادرة خلال 2026 (بين يناير وسبتمبر 2026) بتعليق تراخيص جهات مسماة أو سحبها أو بإغلاق مقارها مع القائمة جهةً جهة، إذ قد يكون أثر القرار منعكسًا فيها وقد لا يكون."
+    "body_ar": "تضم القائمة الرسمية لعام 2026 لمقدمي خدمات الصرافة والحوالات، الصادرة عن البنك المركزي اليمني – عدن، كلًّا من 100 شركة صرافة و231 منشأة صرافة فردية و111 وكيلًا للحوالات. وهذه قيود معدودة بحسب فئات القائمة نفسها: فمجموع الفئات الثلاث ليس عددًا لمقدمي خدمات فريدين، ولا عددًا متحققًا منه لمن يعمل منهم حاليًا. ولأن القائمة لا تذكر تاريخ صدورها، يلزم مطابقتها جهةً جهة مع قرارات البنك المركزي في عدن الصادرة خلال 2026 (بين يناير وسبتمبر 2026) بتعليق تراخيص جهات مسماة أو سحبها أو بإغلاق مقارها، إذ قد يكون أثر القرار منعكسًا فيها وقد لا يكون؛ ولم تُجرَ هذه المطابقة بعد."
   },
   {
     "route": "/evidence/CLM-009/",
@@ -3280,9 +3280,9 @@
     "section_order": 1,
     "section_role": null,
     "heading_en": null,
-    "body_en": "A 26 June 2024 circular of the Central Bank of Yemen – Aden (CBY-Aden) names 12 electronic wallets, entities or services as unlicensed by that authority on that date and prohibits banks and exchange businesses from dealing with them. Status under any other authority is not established here.",
+    "body_en": "A 26 June 2024 circular of the Central Bank of Yemen – Aden (CBY-Aden) names 12 electronic wallets, entities or services as unlicensed by that authority on that date and prohibits banks and exchange businesses from dealing with them. Status under any other authority is not established here. Governor's Decision No. 23 of 2024 on domestic money-transfer activity carries the same date; the circular and the decision are separate instruments, and this record establishes no link between them.",
     "heading_ar": null,
-    "body_ar": "يسمّي تعميم صادر عن البنك المركزي اليمني – عدن بتاريخ 26 يونيو 2024 ما مجموعه 12 محفظة أو جهة أو خدمة إلكترونية بوصفها غير مرخصة لديه في ذلك التاريخ، ويحظر على البنوك وشركات الصرافة التعامل معها. ولا يثبت هذا الدليل وضعها لدى أي سلطة أخرى."
+    "body_ar": "يسمّي تعميم صادر عن البنك المركزي اليمني – عدن بتاريخ 26 يونيو 2024 ما مجموعه 12 محفظة أو جهة أو خدمة إلكترونية بوصفها غير مرخصة لديه في ذلك التاريخ، ويحظر على البنوك وشركات الصرافة التعامل معها. ولا يثبت هذا الدليل وضعها لدى أي سلطة أخرى. ويحمل قرار المحافظ رقم (23) لسنة 2024 بشأن مزاولة نشاط التحويلات المالية الداخلية التاريخ نفسه؛ والتعميم والقرار أداتان منفصلتان، ولا يثبت هذا السجل أي صلة بينهما."
   },
   {
     "route": "/evidence/CLM-015/",
@@ -3352,9 +3352,9 @@
     "section_order": 1,
     "section_role": null,
     "heading_en": null,
-    "body_en": "The official 2026 exchange and remittance roster of the Central Bank of Yemen – Aden (CBY-Aden) lists 100 exchange companies, 231 individual exchange establishments and 111 remittance agents. Selected decisions of the CBY-Aden Governor dated January to September 2026 suspend or withdraw the licences of named entities or close their premises; they are kept separate from the roster and matched to it entity by entity, because the roster's issue date is not stated. Listing or licensing is not evidence of current operation.",
+    "body_en": "The official 2026 exchange and remittance roster of the Central Bank of Yemen – Aden (CBY-Aden) lists 100 exchange companies, 231 individual exchange establishments and 111 remittance agents. Selected decisions of the CBY-Aden Governor dated January to September 2026 suspend or withdraw the licences of named entities or close their premises; they are kept separate from the roster, and, because the roster's issue date is not stated, each would have to be matched to it entity by entity; that matching has not been done. Listing or licensing is not evidence of current operation.",
     "heading_ar": null,
-    "body_ar": "تضم القائمة الرسمية لعام 2026 للصرافة والحوالات، الصادرة عن البنك المركزي اليمني – عدن، كلًّا من 100 شركة صرافة و231 منشأة صرافة فردية و111 وكيلًا للحوالات. وتعلّق قرارات مختارة لمحافظ البنك المركزي في عدن مؤرخة بين يناير وسبتمبر 2026 تراخيص جهات مسماة أو تسحبها أو تغلق مقارها؛ وتبقى هذه القرارات منفصلة عن القائمة وتُطابَق معها جهةً جهة، لأن القائمة لا تذكر تاريخ صدورها. والإدراج أو الترخيص ليس دليلًا على التشغيل الحالي."
+    "body_ar": "تضم القائمة الرسمية لعام 2026 للصرافة والحوالات، الصادرة عن البنك المركزي اليمني – عدن، كلًّا من 100 شركة صرافة و231 منشأة صرافة فردية و111 وكيلًا للحوالات. وتعلّق قرارات مختارة لمحافظ البنك المركزي في عدن مؤرخة بين يناير وسبتمبر 2026 تراخيص جهات مسماة أو تسحبها أو تغلق مقارها؛ وتبقى هذه القرارات منفصلة عن القائمة، ولأن القائمة لا تذكر تاريخ صدورها، يلزم مطابقة كل قرار معها جهةً جهة؛ ولم تُجرَ هذه المطابقة بعد. والإدراج أو الترخيص ليس دليلًا على التشغيل الحالي."
   },
   {
     "route": "/evidence/VIS-PROVIDER-TIME/",
@@ -3532,9 +3532,9 @@
     "section_order": 1,
     "section_role": null,
     "heading_en": null,
-    "body_en": "Governor's decisions of the Central Bank of Yemen – Aden (CBY-Aden) dated January to September 2026 record licence withdrawals, suspensions and closures for specific exchange and remittance providers. This record covers selected CBY-Aden Governor's decisions of 2026 concerning exchange and remittance providers (Nos. 1–6, 9–11, 13–15, 17 and 18); other decision numbers are not included and their subjects are not assessed. The official 2026 roster can be counted by class, but these decisions are matched with it entity by entity and are not subtracted from it to produce a count of providers operating now.",
+    "body_en": "Governor's decisions of the Central Bank of Yemen – Aden (CBY-Aden) dated January to September 2026 record licence withdrawals, suspensions and closures for specific exchange and remittance providers. This record covers selected CBY-Aden Governor's decisions of 2026 concerning exchange and remittance providers (Nos. 1–6, 9–11, 13–15, 17 and 18); other decision numbers are not included and their subjects are not assessed. The official 2026 roster can be counted by class, but these decisions are not subtracted from it to produce a count of providers operating now: each would first have to be matched with the roster entity by entity, and that matching has not been done.",
     "heading_ar": null,
-    "body_ar": "تسجل قرارات محافظ البنك المركزي اليمني – عدن المؤرخة بين يناير وسبتمبر 2026 سحب تراخيص أو تعليقها أو إغلاق مقار لجهات محددة من مقدمي خدمات الصرافة والحوالات. ويغطي هذا السجل قرارات مختارة لمحافظ البنك المركزي في عدن صدرت في 2026 وتتعلق بمقدمي خدمات الصرافة والحوالات (الأرقام 1–6 و9–11 و13–15 و17 و18)؛ ولا يشمل أرقام القرارات الأخرى، ولا يقيّم موضوعاتها. ويمكن عدّ القائمة الرسمية لعام 2026 بحسب الفئة، لكن هذه القرارات تُطابَق معها جهةً جهة، ولا تُطرح منها لاستخراج عدد لمقدمي الخدمات العاملين حاليًا."
+    "body_ar": "تسجل قرارات محافظ البنك المركزي اليمني – عدن المؤرخة بين يناير وسبتمبر 2026 سحب تراخيص أو تعليقها أو إغلاق مقار لجهات محددة من مقدمي خدمات الصرافة والحوالات. ويغطي هذا السجل قرارات مختارة لمحافظ البنك المركزي في عدن صدرت في 2026 وتتعلق بمقدمي خدمات الصرافة والحوالات (الأرقام 1–6 و9–11 و13–15 و17 و18)؛ ولا يشمل أرقام القرارات الأخرى، ولا يقيّم موضوعاتها. ويمكن عدّ القائمة الرسمية لعام 2026 بحسب الفئة، لكن هذه القرارات لا تُطرح منها لاستخراج عدد لمقدمي الخدمات العاملين حاليًا: إذ يلزم أولًا مطابقة كل قرار مع القائمة جهةً جهة، ولم تُجرَ هذه المطابقة بعد."
   },
   {
     "route": "/evidence/CLM-019/",
@@ -3622,9 +3622,9 @@
     "section_order": 1,
     "section_role": null,
     "heading_en": null,
-    "body_en": "The history in the IMF 2025 Article IV staff report shows materially higher remittance inflows in 2024 than in 2018 (both values from the same document); the 2025 estimate and the 2026–2030 projections come from a later supplement and are estimates and projections, not reported values. The IMF series covers the IMF's analytical scope for areas under the internationally recognized government, so its level is not a whole-of-Yemen figure and is not comparable in level with the annual-report values of the Central Bank of Yemen – Aden (CBY-Aden).",
+    "body_en": "The history in the IMF 2025 Article IV staff report gives a higher value for remittance inflows in 2024 than in 2018 (both values from the same document); the 2025 estimate and the 2026–2030 projections come from a later supplement and are estimates and projections, not reported values. The IMF series covers the IMF's analytical scope for areas under the internationally recognized government, so its level is not a whole-of-Yemen figure and is not comparable in level with the annual-report values of the Central Bank of Yemen – Aden (CBY-Aden).",
     "heading_ar": null,
-    "body_ar": "تُظهر القيم التاريخية الواردة في تقرير خبراء صندوق النقد الدولي لمشاورات المادة الرابعة لعام 2025 أن التحويلات الواردة في ميزان المدفوعات كانت في 2024 أعلى بصورة جوهرية منها في 2018 (والقيمتان من الوثيقة نفسها)، أما تقدير 2025 وتوقعات 2026–2030 فمصدرها ملحق لاحق، وهي نوع دليل مختلف. وتغطي سلسلة الصندوق نطاقه التحليلي الخاص بالمناطق الخاضعة للحكومة المعترف بها دوليًا، لذلك لا يمثل مستواها رقمًا لليمن كله، ولا يُقارن مستواها بقيم التقارير السنوية للبنك المركزي اليمني – عدن."
+    "body_ar": "تورد السلسلة التاريخية في تقرير خبراء صندوق النقد الدولي لمشاورات المادة الرابعة لعام 2025 قيمةً للتحويلات الواردة في ميزان المدفوعات في 2024 أعلى منها في 2018 (والقيمتان من الوثيقة نفسها)، أما تقدير 2025 وتوقعات 2026–2030 فمصدرها ملحق لاحق، وهي تقدير وتوقعات، لا قيم مُبلَّغ عنها. وتغطي سلسلة الصندوق نطاقه التحليلي الخاص بالمناطق الخاضعة للحكومة المعترف بها دوليًا، لذلك لا يمثل مستواها رقمًا لليمن كله، ولا يُقارن مستواها بقيم التقارير السنوية للبنك المركزي اليمني – عدن."
   },
   {
     "route": "/evidence/CLM-007/",

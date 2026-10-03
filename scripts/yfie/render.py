@@ -15,6 +15,7 @@ import json
 import re
 import sys
 from pathlib import Path
+from urllib.parse import urlparse
 
 ROOT = Path(__file__).resolve().parents[2]
 sys.path.insert(0, str(ROOT / "scripts"))
@@ -29,7 +30,7 @@ GROUP_STARTS = ("In the same survey", "Separately,", "These are different measur
 RESOLUTION = ("These are different measures", "هذه مقاييس مختلفة")
 
 
-from .text import ID_RUN, bdi, esc, isolate_document, isolate_iso as iso  # noqa: E402  (one text layer for every renderer, D6; `iso` takes escaped text)
+from .text import ID_RUN, bdi, esc, isolate_document, isolate_iso as iso, isolate_plain  # noqa: E402  (one text layer for every renderer, D6; `iso` takes escaped text)
 
 
 def paras(items, cls: str = "") -> str:
@@ -165,7 +166,12 @@ def source_card(s: dict) -> str:
     head_ = (f'<strong dir="auto">{esc(s["title"])}</strong><span class="kind" dir="auto">{esc(s["kind_line"])}</span>{ref}' if s["display_ready"] and s["title"]
              else f'<strong>{esc(s["untitled_label"])}</strong>{ref}')
     rights = f'<p class="rights">{esc(s["rights_note"])}</p>' if s["rights_note"] else ""
-    return (f'<article class="src" data-evidence-source="{esc(s["id"])}">{head_}<div class="acts"><a href="{s["data_href"]}">{esc(L["open_source_record"])}</a>'
+    # RC-15 (B15 d, C-1): the series this record uses, where they differ from the source's main locator (link text: the
+    # locator's own series code)
+    series = (f'<p class="small" data-series-used><b>{esc(L["series_used"])}</b> '
+              + " · ".join(f'<a href="{esc(u)}" rel="noopener noreferrer" target="_blank"><bdi dir="ltr">{esc(urlparse(u).path.rstrip("/").rsplit("/", 1)[-1])}</bdi></a>' for u in s["series"])
+              + "</p>") if s.get("series") else ""
+    return (f'<article class="src" data-evidence-source="{esc(s["id"])}">{head_}{series}<div class="acts"><a href="{s["data_href"]}">{esc(L["open_source_record"])}</a>'
             f'<a class="source-locator" href="{esc(s["url"])}" rel="noopener noreferrer" target="_blank">{esc(L["open_original"])}</a>'
             f'<button type="button" class="tbtn" data-source-cite data-source-citation="{esc(s["cite_payload"])}">{esc(L["copy_reference"])}</button></div>{rights}</article>')
 
@@ -259,7 +265,8 @@ def evidence_record(page: dict, shell: dict) -> str:
         more += f'<div class="qa"><h3 class="rubric">{esc(L["reading_guidance"])}</h3><div class="body">{paras(page["reading_guidance"]["paragraphs"])}</div></div>'
     qa.append(f'<div class="qa" id="q7">{rubric(L["more"], 7, "h2")}<details class="more"><summary>{esc(L["more_intro"])}</summary>{more}</details></div>')
     util = (f'<section class="util" data-record-id="{esc(page["id"])}"><div class="ref"><b>{esc(L["reference"])}</b> {bdi(page["id"])}</div>'
-            f'<div class="actions">{cite_tools(shell, page["route"], page["citation"], record=True)}'
+            f'<div class="actions">{cite_tools(shell, page["route"], page["citation_short"], record=True, long_form=page["citation"])}'
+            f'<button type="button" class="tbtn" data-share data-share-text="{esc(isolate_plain(page["share_text"]) if shell["lang"] == "ar" else page["share_text"])}">{esc(shell["labels"]["share_record"])}</button>'
             + (f'<a href="{page["compare_href"]}" data-compare-entry>{esc(L["compare"])}</a>' if page.get("compare_href") else "")
             + f'<a href="{page["hrefs"]["rights"]}">{esc(L["reuse"])}</a>'
             f'<a href="{page["hrefs"]["corrections"]}">{esc(L["history"])}</a><a href="{page["hrefs"]["report"]}">{esc(L["report"])}</a></div><p class="small">{esc(L["reuse_note"])}</p></section>')
@@ -299,8 +306,12 @@ def home(page: dict, shell: dict) -> str:
     rest = f'<div class="objs mt18">{"".join(compact(r, L, L["open_evidence_record"]) for r in recs)}</div>' if recs else ""
     parts.append(f'<section class="qa" id="s6"><div>{rubric(S[6]["role"])}<h2 id="system" tabindex="-1">{esc(S[6]["heading"])}</h2></div><div><div class="body">{paras(S[6]["paragraphs"])}</div>{rest}'
                  f'<span class="rubric mt18">{esc(L["visual_eyebrow"])}</span>{figure(v, shell["labels"]["cite"], DISC.origin(), heading="h3", boundary_label=L["boundary"], open_label=L["open_record"])}</div></section>')
+    # RC-15 (B15 d, A-8): the gaps section links the measurement priorities bound to Home, by their governed titles
+    gp = page.get("gap_priorities") or []
+    gaps = (f'<h3 class="mt18">{esc(L["gaps_heading"])}</h3><p class="small">{esc(L["gaps_note"])}</p><ul class="rlist" data-home-gap-priorities>'
+            + "".join(f'<li><a href="{m["href"]}">{esc(m["title"])}</a></li>' for m in gp) + "</ul>") if gp else ""
     for o, i in ((7, "s7"), (8, "s8")):
-        parts.append(f'<section class="qa" id="{i}"><div>{h2(S[o])}</div><div class="body">{paras(S[o]["paragraphs"])}</div></section>')
+        parts.append(f'<section class="qa" id="{i}"><div>{h2(S[o])}</div><div class="body">{paras(S[o]["paragraphs"])}{gaps if o == 7 else ""}</div></section>')
     f = page["featured"]
     if f:
         parts.append(f'<section class="qa" id="sf">{rubric(L["featured"], tag="h2")}<div><article class="compact first-obj">{clock(L["evidence_period"], esc(f["evidence_period"]))}<div class="q"><a href="{f["href"]}">{esc(f["title"])}</a></div><div class="st"><p>{esc(f["thesis"])}</p></div><div class="open"><a href="{f["href"]}">{esc(L["open_reading"])}</a> · <a href="{page["hrefs"]["readings"]}">{esc(L["all_readings"])}</a></div></article></div></section>')
@@ -355,7 +366,9 @@ def reading(page: dict, shell: dict) -> str:
     return head(page, shell, page["route"], kind="article") + header(shell) + body + footer(shell, print_foot(shell, page["route"], page["title"]))
 
 
-_CITE_LTR = re.compile(f'({ID_RUN.pattern}|(?<![\\w-])CauseWay(?![\\w-]))')   # every identifier (the text layer's ID_RUN) and the publisher
+# every locator (RC-15, C-2: the short citation names each original source's URL), every identifier (the text layer's
+# ID_RUN) and the publisher; a URL is matched first, so an identifier inside it is not isolated twice
+_CITE_LTR = re.compile(f'(https?://[^\\s<؛،]*[^\\s<؛،.,;)]|{ID_RUN.pattern}|(?<![\\w-])CauseWay(?![\\w-]))')
 
 
 def cite_isolate(html_text: str) -> str:
@@ -374,15 +387,19 @@ def page_citation(shell: dict, title: str) -> str:
     return f'{t if t.endswith(("?", "؟", "!")) else t + "."} {shell["cite_page_line"]}'   # never "?." after a question title
 
 
-def cite_tools(shell: dict, route: str, citation: str, record: bool = False) -> str:
+def cite_tools(shell: dict, route: str, citation: str, record: bool = False, long_form: str = "") -> str:
     """B9: the citation preview (what "Copy citation" copies, shown before copying) and the print control. The canonical
     URL is the build's (absolute once the origin is set); the runtime writes the page's own canonical into it."""
     L = shell["labels"]
     canon = DISC.url(DISC.localized(route, shell["lang"]), DISC.origin())
     lead = f' {esc(L["current_record"])}' if record else ""
     cls = "tbtn evidence-cite-button" if record else "tbtn"
+    # RC-15 (B15 d, C-2; OWN-04): a record copies its short citation; the long form, with the period, population and
+    # limits, is one disclosure away and copies on its own
+    long_ = (f'<details class="cite-long"><summary>{esc(L["cite_long"])}</summary><p class="cite-text" data-cite-long-text>{cite_isolate(iso(esc(long_form)))}{lead}'
+             f' <bdi dir="ltr" data-cite-url>{esc(canon)}</bdi></p><button type="button" class="tbtn" data-cite-long>{esc(L["copy_long"])}</button></details>') if long_form else ""
     return (f'<div class="cite-preview"><p class="cite-h">{esc(L["cite_preview"])}</p><p class="cite-text" data-cite-text>{cite_isolate(iso(esc(citation)))}{lead}'
-            f' <bdi dir="ltr" data-cite-url>{esc(canon)}</bdi></p></div><button type="button" class="{cls}" data-cite>{esc(L["copy_citation"])}</button>'
+            f' <bdi dir="ltr" data-cite-url>{esc(canon)}</bdi></p>{long_}</div><button type="button" class="{cls}" data-cite>{esc(L["copy_citation"])}</button>'
             f'<button type="button" class="tbtn" data-print>{esc(L["print"])}</button>')
 
 

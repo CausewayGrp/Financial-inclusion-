@@ -6354,9 +6354,12 @@
     "rights_display_state": "OBJECT_LEVEL_OR_UNSPECIFIED",
     "citation_behavior": "Use the original locator and object-level controlled citation/source text; do not infer missing bibliographic or rights metadata.",
     "linked_evidence_object_ids": [
+      "CLM-015",
       "VIS-PAYMENT-RAILS"
     ],
-    "linked_claim_ids": [],
+    "linked_claim_ids": [
+      "CLM-015"
+    ],
     "linked_reading_ids": [],
     "linked_visual_ids": [
       "VIS-PAYMENT-RAILS"

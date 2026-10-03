@@ -43,7 +43,34 @@ on every row (`scripts/exports.py`; B14 a).
 The ranked items found by the panel and the red team that were not built in B15 d are listed in
 `audit/release_candidate/PRODUCT_CHALLENGE.md`, with the reason each was deferred. They are copied here in that ranking:
 
-*(filled in after B15 d)*
+| # | Finding | Who gains | What it needs |
+|---|---|---|---|
+| 1 | C-7: page and table locators on source links (CLM-032's sources are 51- and 54-page PDFs) | Economist, academic, journalist | Data: each source read page by page; a locator field on source links, Master-first |
+| 2 | A-7 (rest): the Reading "The payment arrived. What happened next?" on /payments/ | Humanitarian cash manager, citizen | Decision: an answer page carries at most two Readings, and /payments/ has CWR-005 and CWR-009; the editor chooses which gives way. Then one Master field (CWR-010 `domain_surface_routes`) |
+| 3 | An inline link in governed prose (A-7's sentence to CWR-010; B-3's boundary to CLM-036) | Every reader | Design and code: a governed inline-link mechanism (governed prose holds no links today, only e-mail addresses) |
+| 4 | B-6 (rest) and U9: each priority split into "analyse what exists" and "collect new" | Donor, policymaker | Copy: governed text per priority, both languages; the split keeps "requires authorised respondent-level data", with no feasibility upgrade and no ranking |
+| 5 | B-2 (rest): parent records linked to their entity records (CLM-015 → NEG-EW-011; CLM-019 → its status events) | Supervisor, provider | Code; the naming rule waits on the owner (`design/ESCALATIONS.md`) |
+| 6 | A-9 (rest): a boundary on each Home figure card | Citizen | Design: a short form of each boundary, governed; CLM-003's boundary alone is 96 words, and boundaries may not be collapsed |
+| 7 | A-11: a short bilingual glossary («إطار المسح», «وحدات المعاينة الأولية», «نقطة مئوية»); CLM-001 linked to the access-and-use figure | Citizen, policymaker | Copy, Master-first; no new route |
+| 8 | B-8: "same provider set: yes / no / unknown" on the microfinance observations | Strategy officer, economist | Data: read from each source; "unknown" is a valid value |
+| 9 | B-9: one line comparing the 2025 and 2026 rosters, warning that the difference is not net market entry | Supervisor, journalist | Copy, Master-first; no computed difference |
+| 10 | A-16: the page index collapsed at the top of long pages; a governed "back to top" | Citizen on a phone | Code and one governed label; only the index collapses, never evidence or boundaries |
+| 11 | A-4 (rest): the evidence-landscape rows indexed for search; «ابدأ من الأسئلة» as a link | Citizen | Code (the generator's search records) |
+| 12 | C-6 (rest): a "Who publishes and funds this" heading on /about/ | Journalist, donor | Copy, Master-first; the organisation's description from the owner |
+| 13 | A-1 (rest): a «أعد المحاولة» / "Try again" button when the search index fails to load | Citizen on a weak connection | One governed label; code |
+| 14 | A-5, A-6: search in the other language on zero hits; the search index split by language at build time | Citizen on a weak connection | Code |
+| 15 | A-13: the report link keeps the record ID at 390 px; a governed Arabic e-mail subject; a body with no personal-data fields | Every reader | Code and copy |
+| 16 | A-14: script-only controls hidden when JavaScript is off | Every reader | Code |
+| 17 | A-17 (rest): Arabic month names in meta lines | Arabic reader | Code (the date-words helper exists) |
+| 18 | C-2 (rest): the publisher in a source card's copied reference | Academic | Code (the publisher is governed) |
+| 19 | B-11: "Issuing authority: Unknown — not zero" reworded; the Reading slug "microfinance-structural-divergence" renamed before launch | Strategy officer | Copy, Master-first; the slug only before launch |
+| 20 | C-11, C-13, C-14: empty groups hidden when /data/ is filtered; Compare starts empty; the 404 follows the path's language | Every reader | Code; any hint text governed |
+| 21 | C-12: /evidence/ "Start here" opens with the headline records | Every reader | Master data (the Page Spec's bound records) |
+| 22 | C-15 (rest): a shorter Home opening | Citizen on a phone | Copy, Master-first; "Another view of the evidence" stays (red team) |
+| 23 | B-4 (rest): search aliases from the three remittance gaps to MA-001 | Donor | Master data; no new priority (REJ-02) |
+| 24 | U4: a dated rulebook and status timeline per provider class | Provider | A contract over the system chronology and the e-money rule stack; chronology ≠ causality; no names |
+| 25 | /providers/: "some were issued before the roster and some after it" beside "the roster's issue date is not stated" (bilingual review of RC-15; predates the pull request) | Supervisor | Decision (steward): date the roster by its file (22 September 2026) or drop the before-and-after clause; Master-first |
+| 26 | U8: a checklist for tracking whether transfer accounts stay in use | Humanitarian cash manager | Copy from CWR-010 and MA-009, keeping "cash-out is not failure"; as a file only after the licence decision |
 
 ## 4. Named in Owner Addendum 2 (do not build now)
 
