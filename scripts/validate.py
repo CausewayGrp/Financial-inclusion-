@@ -1491,15 +1491,18 @@ for trust in ('/privacy/','/rights/','/terms/'):
         errors.append('R4 trust route remains search-only '+trust)
 
 # Search smoke tests reproduce the browser's current scoring logic closely enough to catch journey regressions.
+_R4_DIGITS=str.maketrans({**{chr(0x0660+i):str(i) for i in range(10)},**{chr(0x06F0+i):str(i) for i in range(10)}})
+@__import__('functools').lru_cache(maxsize=None)   # the same texts are normalised once per query; a pure function, so cached
 def _r4norm(value):
     value=str(value or '').casefold()
-    value=''.join(str(ord(c)-0x0660) if '\u0660'<=c<='\u0669' else str(ord(c)-0x06F0) if '\u06F0'<=c<='\u06F9' else c for c in value)   # Tranche C TOOL-12
+    value=value.translate(_R4_DIGITS)   # Tranche C TOOL-12: Arabic-Indic and Persian digits to ASCII, as before
     value=re.sub(r'[\u064B-\u065F\u0670]','',value)
     value=value.replace('إ','ا').replace('أ','ا').replace('آ','ا').replace('ٱ','ا').replace('ى','ي').replace('ة','ه').replace('ؤ','و').replace('ئ','ي')
     value=re.sub(r'(\d)[,\u066C](?=\d{3}(?!\d))',r'\1',value)   # B15 (C-5), identical to app.js normalize()
     value=re.sub(r'(\d)\u066B(?=\d)',r'\1.',value)
     return value
 _R4_WCH='a-z0-9\u0621-\u064A'
+@__import__('functools').lru_cache(maxsize=None)
 def _r4re(t):
     # B15 (C-5, A-2): identical to site-src/app.js tokenRe()
     e=re.escape(t)
@@ -2706,6 +2709,12 @@ def _rcn_ar(core):      # an Arabic core with optional proclitic and article, it
 def _rcn_en(core):
     toks = [w for w in _rcn_en_strip(core).split()]
     return r"(?<![a-z])" + r"\s*".join(map(re.escape, toks)) + r"(?![a-z])"
+_RCN_NEEDLES = {   # NEG-EW id: (English needles, Arabic needles): a literal every match of its patterns contains
+    "NEG-EW-001": (("wallet",), ("كاش",)), "NEG-EW-002": (("dawli",), ("دولي",)), "NEG-EW-003": (("jaw",), ("جوالي",)),
+    "NEG-EW-004": (("floos",), ("فلوسك",)), "NEG-EW-005": (("saba",), ("سبا",)), "NEG-EW-006": (("wallet",), ("موبايل",)),
+    "NEG-EW-007": (("wallet",), ("والت",)), "NEG-EW-008": (("rial", "riyal"), ("ريال",)), "NEG-EW-009": (("mobile",), ("موبايل",)),
+    "NEG-EW-010": (("jaib",), ("جيب",)), "NEG-EW-011": (("cash",), ("كاش",)), "NEG-EW-012": (("mutakamil",), ("متكامله",)),
+}
 _RCN_CIRCULAR = {   # NEG-EW id: (English patterns, Arabic patterns), on normalised text (_rcn_norm, then the article dropped)
     "NEG-EW-001": ([r"(?<![a-z])cash\s*wallet"], [r"محفظه\s*كاش(?![" + _AR + r"])"]),
     "NEG-EW-002": ([r"(?<![a-z])dawli\s*money"], [r"(?<![" + _AR + r"])(?:[وبلفك])?(?:ال)?دولي\s*موني"]),
@@ -2742,22 +2751,23 @@ try:
             errors.append(f"RC-NAMES {_r[0]} has no distinctive core")
             continue
         if len(_en_t) > 1:   # the whole core; a one-word core is matched below, word by word
-            _rcn.append((_r[0], re.compile(_rcn_en(" ".join(_en_t))), "en"))
+            _rcn.append((_r[0], re.compile(_rcn_en(" ".join(_en_t))), "en", (max(_en_t, key=len),)))
         if len(_ar_t) > 1:
-            _rcn.append((_r[0], re.compile(_rcn_ar(" ".join(_ar_t))), "ar"))
+            _rcn.append((_r[0], re.compile(_rcn_ar(" ".join(_ar_t))), "ar", (max((re.sub(r"^ال", "", w) for w in _ar_t), key=len),)))
         for _w in _en_t:
             if _w not in _RCN_COMMON_EN and (len(_w) >= 4 or len(_en_t) == 1):
-                _rcn.append((_r[0], re.compile(_rcn_en(_w)), "en"))
+                _rcn.append((_r[0], re.compile(_rcn_en(_w)), "en", (_w,)))
         _cls = r"(?:شركه|منشاه|فرع|وكيل)"
         for _w in _ar_t:
             _wx = _rcn_ar(_w)
             if _w in _RCN_COMMON_AR:   # ordinary vocabulary: a one-word core only beside its class word; in a longer core,
                 if len(_ar_t) == 1:      # only as part of the whole core (above)
                     _wb = _wx.split(r"(?:[وبلفك])?", 1)[1]
-                    _rcn.append((_r[0], re.compile(_cls + r"\s*(?:ال)?" + _wb.replace("(?:ال)?", "", 1)), "ar"))
-                    _rcn.append((_r[0], re.compile(_wx[:-len(r"(?![" + _AR + r"])")] + r"\s*لل(?:صرافه|تحويلات)"), "ar"))
+                    _nd = (re.sub(r"^ال", "", _w),)
+                    _rcn.append((_r[0], re.compile(_cls + r"\s*(?:ال)?" + _wb.replace("(?:ال)?", "", 1)), "ar", _nd))
+                    _rcn.append((_r[0], re.compile(_wx[:-len(r"(?![" + _AR + r"])")] + r"\s*لل(?:صرافه|تحويلات)"), "ar", _nd))
             elif len(_w) >= 4 or len(_ar_t) == 1:
-                _rcn.append((_r[0], re.compile(_wx), "ar"))
+                _rcn.append((_r[0], re.compile(_wx), "ar", (re.sub(r"^ال", "", _w),)))
     if len({x[0] for x in _rcn}) < 33:
         errors.append(f"RC-NAMES read only {len({x[0] for x in _rcn})} enforcement-decision subjects")
     # 2 · the circular's twelve names: each pattern must match its own lineage label
@@ -2767,14 +2777,16 @@ try:
     for _id, (_ens, _ars) in _RCN_CIRCULAR.items():
         _row = _neg.get(_id) or [None] * 6
         _lab_en, _lab_ar = _rcn_en_strip(_rcn_norm(_row[5])), _rcn_norm(_row[4])
+        if not all(any(_nd in _lab for _nd in _nds) for _lab, _nds in ((_lab_en, _RCN_NEEDLES[_id][0]), (_lab_ar, _RCN_NEEDLES[_id][1]))):
+            errors.append(f"RC-NAMES the gate's needle for {_id} is missing from its own lineage label")
         for _p in _ens:
             if not re.search(_p, _lab_en):
                 errors.append(f"RC-NAMES the gate's pattern for {_id} no longer matches its English lineage label")
-            _rcn.append((_id, re.compile(_p), "en"))
+            _rcn.append((_id, re.compile(_p), "en", _RCN_NEEDLES[_id][0]))
         for _p in _ars:
             if not re.search(_p, _lab_ar):
                 errors.append(f"RC-NAMES the gate's pattern for {_id} no longer matches its Arabic lineage label")
-            _rcn.append((_id, re.compile(_p), "ar"))
+            _rcn.append((_id, re.compile(_p), "ar", _RCN_NEEDLES[_id][1]))
     # 3 · every published text, and every social-image frame
     _texts = []
     for _f in sorted(DIST.rglob("*")):
@@ -2796,8 +2808,9 @@ try:
         _n = _rcn_norm(_t)
         _ne = _rcn_en_strip(_n)
         _hit = set()
-        for _id, _x, _l in _rcn:
-            if _id not in _hit and _x.search(_ne if _l == "en" else _n):
+        for _id, _x, _l, _nds in _rcn:
+            _tx = _ne if _l == "en" else _n
+            if _id not in _hit and any(_nd in _tx for _nd in _nds) and _x.search(_tx):
                 _hit.add(_id)
                 _kind = "a name from the 2024 e-wallet circular" if _id.startswith("NEG-") else "an enforcement-decision entity name"
                 errors.append(f"RC-NAMES {_kind} is published {_where} {_id}")

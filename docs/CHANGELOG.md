@@ -1,5 +1,19 @@
 # Repository Change Log
 
+## 2026-10-03 — The validator in half the time; the negative-control job back inside its limit
+
+CI's "Gate negative controls" job was cancelled at its 45-minute limit on `ab380cf`. It runs the full validator once per
+control (66 controls). The validator had grown to 83 s locally.
+- **RC-NAMES** (hardened in RC-17) ran 122 patterns over every built text and social frame: 76,000 regex searches,
+  about 36 s. Each pattern now carries a literal needle, its core word, and its regex runs only on texts that contain
+  it. Every match of a pattern contains its needle; for the circular's patterns this is proved on their own lineage
+  labels at each run. Results are unchanged: 37 of 37 variants caught, 13 of 13 ordinary-vocabulary strings clean, 0
+  hits on the site.
+- **The search-smoke mirror** normalised the same texts again for each of its 102 queries. `_r4norm` and `_r4re`, both
+  pure functions, are now cached, and the digit mapping is one `str.translate` with the same result.
+- **Result:** 83 s to 38 s locally, still PASS. The five search controls and the seven name controls are caught. The
+  job's limit is unchanged.
+
 ## 2026-10-03 — Owner note of 11:15 recorded; the B16 inputs and the session's check scripts made safe
 
 Records only (the owner's note of 3 October 2026, about 11:15 Cairo, section 0):

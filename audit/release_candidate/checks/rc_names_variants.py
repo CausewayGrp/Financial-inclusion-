@@ -20,5 +20,5 @@ tests = ["محفظة جيب", "وجوالي", "WeCash", "Al-Buraq", "We&nbsp;Cas
          "الشامل", "صندوق النقد", "money transfer", "the rial", "electronic money", "جيب المستخدم", "Yemen's wallets", "Abu Dhabi"]
 for s in tests:
     n = g["_rcn_norm"](s); ne = g["_rcn_en_strip"](n)
-    hits = sorted({i for i, x, l in g["_rcn"] if x.search(ne if l == "en" else n)})
+    hits = sorted({i for i, x, l, nds in g["_rcn"] if any(d in (ne if l == "en" else n) for d in nds) and x.search(ne if l == "en" else n)})
     print(f"{s!r:40} -> {hits}")
