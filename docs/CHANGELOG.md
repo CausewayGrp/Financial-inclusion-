@@ -1,5 +1,26 @@
 # Repository Change Log
 
+## 2026-10-03 — B14 a and b: data exports prepared and switched off; host headers
+
+- **Exports (B14 a).** `scripts/exports.py` writes the Evidence Records (110), public claims (60), sources (156), visual
+  rows (130), chronology (24) and Measurement Agenda (10) to `build/exports/`, never to `dist/`. Each is CSV (UTF-8 with a
+  BOM) and JSON, with a bilingual codebook and provenance on every row: record ID, source IDs, public locators and the
+  Master's SHA-256. A source without a public locator is never named.
+  - `scripts/tests/test_exports.py` checks every value against the projections by a separate path, and proves itself on
+    a planted wrong value.
+  - CI attaches the files as the artefact `yfie-data-exports`; `/build/` is ignored.
+  - Publishing is the switch `public_downloads` in `site-src/deployment.json`. It stays `false` until the owner's licence
+    decision; `build.py` copies the exports only when it is true.
+  - The codebook's wording is a draft, to be reviewed bilingually before the switch is turned on.
+- **Host headers (B14 b).** `site-src/hosting/_headers` is copied unchanged to `dist/_headers`, read by Cloudflare Pages
+  and Netlify. It carries the policy of `docs/DEPLOYMENT.md`: CSP with `frame-ancestors 'none'`, `nosniff`,
+  Referrer-Policy, Permissions-Policy, COOP and `X-Frame-Options`. Cache rules are short for HTML and search data, an
+  hour for unfingerprinted assets and thirty days for the canonical fonts. HSTS stays commented out until HTTPS is
+  confirmed on the release domain. GitHub Pages cannot set headers, and the deployment page says so.
+  - `scripts/tests/test_security_headers.py` serves `dist/` under those headers and loads all 288 pages in headless
+    Chromium: 0 policy violations, 0 failed requests, 0 script errors. CI's browser job runs it.
+- **Gate RC-B14.** `dist/_headers` matches its source, and `public_origin` and `public_downloads` stay off.
+
 ## 2026-10-03 — Release candidate RC-12: B12 text-first tables, B13 research library and link check, two reviews
 
 Transaction `audit/release_candidate/rc_12_b12_b13.py` through `run_stage.py` (Master `36a61f8d5429` → `efb5a7c2ce38`;

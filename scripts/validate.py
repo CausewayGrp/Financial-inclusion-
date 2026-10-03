@@ -2441,7 +2441,7 @@ try:
         if not _p: continue
         if _docs.search(_p) and _p!='authority/Yemen_Financial_Inclusion_Evidence_Master.xlsx': errors.append(f'F6-G07 bundled document {_p}')
         # woff2: the self-hosted IBM Plex faces the stylesheet declares (EAD-08). Still no office, PDF or archive file.
-        if _p.startswith('dist/') and not re.search(r'\.(?:html|css|js|json|png|txt|xml|woff2)$',_p): errors.append(f'F6-G07 non-web file in dist {_p}')
+        if _p.startswith('dist/') and not re.search(r'\.(?:html|css|js|json|png|txt|xml|woff2)$',_p) and _p!='dist/_headers': errors.append(f'F6-G07 non-web file in dist {_p}')   # B14 b: the host headers file
         if re.search(r'\.(?:png|xlsx|jpg|jpeg|gif|ico|woff2?)$',_p,re.I): continue
         try: _tx=(ROOT/_p).read_text(encoding='utf-8')
         except Exception: continue
@@ -2768,6 +2768,24 @@ try:
                 errors.append(f"RC-B12 the table's numbers differ from the bound rows {_lang} {_v['visual_id']} {_got} != {_nums}")
 except Exception as _x:
     errors.append("RC-B12 unreadable " + repr(_x))
+
+# RC-B14 (Part B B14 a, b): the host headers ship unchanged with the site, and nothing release-only is switched on —
+# no public origin, no published download — until the owner decides (site-src/deployment.json).
+try:
+    _hdr_src, _hdr_out = ROOT / "site-src" / "hosting" / "_headers", DIST / "_headers"
+    if not _hdr_out.exists() or _hdr_out.read_bytes() != _hdr_src.read_bytes():
+        errors.append("RC-B14 dist/_headers is missing or differs from site-src/hosting/_headers")
+    elif "Content-Security-Policy:" not in _hdr_src.read_text(encoding="utf-8") or "frame-ancestors 'none'" not in _hdr_src.read_text(encoding="utf-8"):
+        errors.append("RC-B14 the host headers lost the security policy")
+    _dep14 = json.loads((ROOT / "site-src" / "deployment.json").read_text(encoding="utf-8"))
+    if _dep14.get("public_origin") is not None:
+        errors.append("RC-B14 public_origin is set: a release-only decision")
+    if _dep14.get("public_downloads") is not False:
+        errors.append("RC-B14 public_downloads is not false: publishing the exports waits on the owner's licence decision")
+    if (DIST / "downloads").exists():
+        errors.append("RC-B14 dist/downloads exists while downloads are switched off")
+except Exception as _x:
+    errors.append("RC-B14 unreadable " + repr(_x))
 
 # RC-B13 (Part B B13): the research library on /data/. Its filters stay hidden until the runtime runs (the list is
 # complete without JavaScript); every listed source carries its filter keys; every option of a filter matches at least

@@ -25,7 +25,7 @@
   "AUTHORITY_MASTER": 1,
   "AUTHORITY_POINTER": 2,
   "AUTHORITY_RULES": 1,
-  "BUILD_AND_GATES": 23,
+  "BUILD_AND_GATES": 26,
   "CONTROLLED_CONTRACT": 2,
   "CURRENT_DOCUMENT": 13,
   "CURRENT_PROGRAMME_RECORD": 121,
@@ -34,7 +34,7 @@
   "GENERATED_LITERAL_CLOSURE": 1,
   "GENERATED_LOGO_DERIVATIVES": 9,
   "GENERATED_PROJECTION": 37,
-  "GENERATED_PUBLIC_BUILD": 597,
+  "GENERATED_PUBLIC_BUILD": 598,
   "GENERATED_SOCIAL_IMAGES": 287,
   "LOGO_AUTHORITY": 1,
   "PRODUCTION_RENDERER": 9,
@@ -42,7 +42,7 @@
   "PROJECTION_GENERATOR": 13,
   "RECIPIENT_HANDOFF": 11,
   "REPOSITORY_ENGINEERING": 9,
-  "RUNTIME_SOURCE": 3,
+  "RUNTIME_SOURCE": 4,
   "STANDING_POLICY": 5,
   "VENDORED_FONTS": 27
  },
@@ -3364,6 +3364,10 @@
    "class": "GENERATED_PUBLIC_BUILD"
   },
   {
+   "path": "dist/_headers",
+   "class": "GENERATED_PUBLIC_BUILD"
+  },
+  {
    "path": "dist/ar/about/index.html",
    "class": "GENERATED_PUBLIC_BUILD"
   },
@@ -5960,6 +5964,10 @@
    "class": "BUILD_AND_GATES"
   },
   {
+   "path": "scripts/exports.py",
+   "class": "BUILD_AND_GATES"
+  },
+  {
    "path": "scripts/generate_projections.py",
    "class": "PROJECTION_GENERATOR"
   },
@@ -6096,6 +6104,10 @@
    "class": "BUILD_AND_GATES"
   },
   {
+   "path": "scripts/tests/test_exports.py",
+   "class": "BUILD_AND_GATES"
+  },
+  {
    "path": "scripts/tests/test_gate_negative_controls.py",
    "class": "BUILD_AND_GATES"
   },
@@ -6105,6 +6117,10 @@
   },
   {
    "path": "scripts/tests/test_public_tools.py",
+   "class": "BUILD_AND_GATES"
+  },
+  {
+   "path": "scripts/tests/test_security_headers.py",
    "class": "BUILD_AND_GATES"
   },
   {
@@ -7497,6 +7513,10 @@
   },
   {
    "path": "site-src/deployment.json",
+   "class": "RUNTIME_SOURCE"
+  },
+  {
+   "path": "site-src/hosting/_headers",
    "class": "RUNTIME_SOURCE"
   },
   {

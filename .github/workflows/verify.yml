@@ -99,6 +99,17 @@ jobs:
           if [ "$rc" -eq 2 ]; then echo "::notice::Cutover oracle pinned to earlier projections; content parity is the standing gate."; exit 0; fi
           exit "$rc"
 
+      - name: Data exports (B14 a; prepared and switched off, every value proved against the projections)
+        run: python3 scripts/tests/test_exports.py --out build/exports
+
+      - name: Attach the exports as an artefact (publishing waits on the owner's licence decision)
+        uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a # v7.0.1
+        with:
+          name: yfie-data-exports
+          path: build/exports/
+          if-no-files-found: error
+          retention-days: 30
+
       - name: Gates leave the working tree clean
         run: |
           if [ -n "$(git status --porcelain --untracked-files=all)" ]; then
@@ -135,6 +146,9 @@ jobs:
 
       - name: Viewport acceptance (EN/AR at 320, 390, 640 and 1440 px)
         run: python3 audit/tranche_c/checks/viewport_acceptance.py
+
+      - name: Security headers (B14 b; every page served under dist/_headers, no policy violation)
+        run: python3 scripts/tests/test_security_headers.py
 
   controls:
     # Every gate that finds its evidence in the built site is proved to still fail on the fault it was written to catch

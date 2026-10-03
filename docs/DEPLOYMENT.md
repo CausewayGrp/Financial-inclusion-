@@ -64,6 +64,35 @@ font, image or frame, no form (gate F6-G05). The host should send:
 | `Permissions-Policy` | `camera=(), microphone=(), geolocation=(), payment=(), usb=()` |
 | `Cross-Origin-Opener-Policy` | `same-origin` |
 
+### Host configuration, in the repository (B14 b, 3 October 2026)
+
+`site-src/hosting/_headers` holds the headers above, plus cache rules: five minutes, revalidated, for HTML and the
+search data; an hour for assets whose names are not fingerprinted; thirty days for the canonical fonts.
+`scripts/build.py` copies it unchanged to `dist/_headers`. Cloudflare Pages and Netlify read that file from the publish
+root. Its path rules never overlap, because both hosts would join two values of one header.
+
+`Strict-Transport-Security` stays commented out until HTTPS is confirmed on the release domain (`docs/RELEASE_RUNBOOK.md`).
+
+**GitHub Pages cannot set response headers.** It would serve `_headers` as an ordinary file. If GitHub Pages is ever
+used, the policy can come only from a `<meta http-equiv="Content-Security-Policy">`. That cannot carry `frame-ancestors`
+or the other headers, so it is not the recommended host.
+
+`scripts/tests/test_security_headers.py` serves `dist/` locally under `dist/_headers` and loads every page in headless
+Chromium. It fails on any policy violation, failed request or script error. It is a local check of the file and makes no
+claim about any live host.
+
+### Data exports, switched off (B14 a, 3 October 2026)
+
+`scripts/exports.py` writes six datasets to `build/exports/`, never to `dist/`: the Evidence Records, the public claims,
+the sources, the visual rows, the chronology and the Measurement Agenda. Each comes as CSV and JSON, with a bilingual
+codebook and provenance on every row: record ID, source IDs, public locators and the Master's SHA-256.
+
+`scripts/tests/test_exports.py` proves every value against the projections. CI attaches the files as the artefact
+`yfie-data-exports`.
+
+Publishing them is one switch: `public_downloads` in `site-src/deployment.json`. It stays `false` until the owner's
+licence decision. While it is false, the validator (RC-B14) fails if a download appears in `dist/`.
+
 - **Rendering.** `app.js` builds result and comparison markup from governed JSON and escapes every value (`esc`); Code
   must keep escaping (or Trusted Types) for anything rendered from data, and must not render source text as HTML.
 - **External links.** Links to original sources open in a new tab with `rel="noopener noreferrer"`; the site fetches

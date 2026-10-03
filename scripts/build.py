@@ -27,6 +27,7 @@ package — content bundles, export frames, social frames — are not part of a 
 """
 from __future__ import annotations
 
+import json
 import shutil
 import sys
 from pathlib import Path
@@ -65,6 +66,8 @@ def copy_assets(out: Path) -> None:
         (out / "assets/fonts" / folder).mkdir(parents=True)
         for name in names:
             shutil.copy2(ROOT / "vendor/fonts" / folder / name, out / "assets/fonts" / folder / name)
+    # B14 b: the host headers (security policy and cache rules) for hosts that read `_headers` from the publish root
+    shutil.copy2(SRC / "hosting/_headers", out / "_headers")
 
 
 def main() -> int:
@@ -81,6 +84,12 @@ def main() -> int:
             d.mkdir(parents=True, exist_ok=True)
             (d / "index.html").write_text(html, encoding="utf-8")
     extra = render.render_site_files(DIST, content)   # the root entry, the bilingual 404, robots.txt, sitemap.xml with an origin
+    # B14 a: the data exports are published only when the owner turns the switch on (site-src/deployment.json)
+    if json.loads((SRC / "deployment.json").read_text(encoding="utf-8")).get("public_downloads") is True:
+        exports = ROOT / "build" / "exports"
+        if not (exports / "MANIFEST.json").exists():
+            raise SystemExit("public_downloads is on but build/exports/ is missing: run python3 scripts/exports.py first")
+        shutil.copytree(exports, DIST / "downloads")
     print(f"Built {len(routes) * 2 + extra} HTML files from {len(routes)} controlled page specs.")
     return 0
 

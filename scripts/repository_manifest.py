@@ -37,13 +37,15 @@ RULES = [
     # The logo's web-size derivatives (EAD-03): pure resamples of the unchanged master by scripts/logo_derivatives.py,
     # whose --check proves it pixel for pixel; committed because the build stays standard-library only.
     ("GENERATED_LOGO_DERIVATIVES", ["site-src/assets/logo/*"]),
-    ("RUNTIME_SOURCE", ["site-src/app.js", "site-src/lang-redirect.js", "site-src/deployment.json", "site-src/assets/*"]),
+    ("RUNTIME_SOURCE", ["site-src/app.js", "site-src/lang-redirect.js", "site-src/deployment.json", "site-src/assets/*",
+                        "site-src/hosting/*"]),   # B14 b: the host headers, copied unchanged into dist/
     # The one production renderer (EAD-01): the accepted Design implementation, promoted out of design/reference.
     # scripts/build.py drives it into dist/; design/reference/ builds *through* it and holds no renderer of its own.
     ("PRODUCTION_RENDERER", ["scripts/yfie/*.py"]),
     ("BUILD_AND_GATES", ["scripts/build.py", "scripts/validate.py", "scripts/audit_public_literals.py",
                          "scripts/architecture_diagrams.py", "scripts/checksums.py", "scripts/repository_manifest.py", "scripts/discovery.py",
                          "scripts/handoff_inventory.py", "scripts/social_images.py", "scripts/logo_derivatives.py", "scripts/accessibility_audit.py",
+                         "scripts/exports.py",
                          "scripts/literal_audit_allowances.json", "scripts/search_canonical_probe.json", "scripts/tests/*",
                          "audit/tranche_c/checks/*.py", "audit/pre_tranche_c/source_lineage_truth_test.py"]),
     ("GENERATED_PUBLIC_BUILD", ["dist/*", "dist/**/*"]),
