@@ -1,5 +1,38 @@
 # Repository Change Log
 
+## 2026-10-03 — Release candidate RC-10: the evidence landscape; RC-9's review; long time axes
+
+Transaction `audit/release_candidate/rc_10_evidence_landscape.py` through `run_stage.py` (Master `26a97c34d517` →
+`ed004282e057`), with `rc_10_stage_inputs.py` declaring the new 00_MASTER block in `master_structure.json`.
+
+- **Evidence landscape** (Owner Addendum 2, improvement 3, for VIS-EVIDENCE-FRESHNESS).
+  - The 34 dimensions of `audit/INDICATOR_COVERAGE_MATRIX.csv` are governed rows of a new 00_MASTER block, "EVIDENCE
+    LANDSCAPE".
+  - They render as a table inside the VIS-EVIDENCE-FRESHNESS frame (its record page and /evidence/), grouped by the
+    eight domains, with five columns: dimension; latest evidence in this base, with its period (the linked records'
+    titles and periods); evidence type; coverage; where to verify and what would change it (the domain page and the
+    Measurement Agenda priority).
+  - Every cell is governed text or a categorical label. There are no colour ramps, totals, roll-ups or process notes.
+  - A row with nothing says "No evidence in this base".
+  - Differences from the audit matrix: Education and Age are sufficient for their question (their gaps are on /people/
+    since RC-1), and Income links VIS-FINDEX-GAPS.
+  - Gate RC-LAND has a negative control. Links in the table meet the 24 px target.
+- **RC-9's independent review (RC-9b).**
+  - CWR-001 → MA-001 is removed: balance-of-payments inflows are not MA-001's domestic household receipt. CWR-001 is
+    recorded as a gap in `MEASUREMENT_LINKS.md`.
+  - Reading pages say what a link to a priority means.
+  - Four Arabic fixes in the priorities' decision lists.
+- **Roster total completed.** The provider matrix's limit label and INS-016 said 429; they now say 442, the roster
+  total since RC-8b. `design/reference/check_visuals.py` found it (values_printed).
+- **Long time axes.** Since RC-8 the POS panels have sixteen months, and their month and value labels collided at
+  every width in both languages (`check_visuals.py`, labels_clear; that check is not in CI). A series longer than
+  twelve periods now:
+  - labels alternate months only;
+  - prints value labels for its landmarks only: first, last, flagged months and the series high;
+  - lets the table name every value.
+
+  The label placer also allows for the wider digits of the Arabic font.
+
 ## 2026-10-03 — Release candidate RC-9: Part B item B6, measurement linkage
 
 Transaction `audit/release_candidate/rc_9_b6_measurement.py` through `run_stage.py` (Master `d52dfc53cef8` → `26a97c34d517`;

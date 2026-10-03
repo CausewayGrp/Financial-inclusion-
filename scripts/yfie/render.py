@@ -347,7 +347,7 @@ def reading(page: dict, shell: dict) -> str:
     edges = [(L["trace"], [f'<a href="{x["href"]}">{esc(x["proposition"])}</a>' for x in page["trace"]]),
              (L["return"], [f'<a href="{b["href"]}">{esc(b["label"])}</a>' for b in page["return_to"]])]
     from .families import measure_obj   # noqa: PLC0415  (families imports this module)
-    measure = (f'<section class="qa" id="measure" data-reading-measurement><h2>{esc(L["measurement"])}</h2><div><div class="objs">'
+    measure = (f'<section class="qa" id="measure" data-reading-measurement><h2>{esc(L["measurement"])}</h2><div><p class="small">{esc(L["measurement_note"])}</p><div class="objs">'
                f'{"".join(measure_obj(m) for m in page["measurement"])}</div></div></section>') if page.get("measurement") else ""   # B6
     body = f'<article class="obj page-obj">{head_}{bnd}{strip(index)}<div class="essay">{"".join(essay)}</div>{trace}{sources}{measure}{related}{page_util(shell, page)}</article>{spine(index, edges)}{spine(index, edges, foot=True, foot_index=False)}'   # the strip after the boundary is the phone's map of the essay (DEBT-014)
     return head(page, shell, page["route"], kind="article") + header(shell) + body + footer(shell, print_foot(shell, page["route"], page["title"]))

@@ -1,0 +1,661 @@
+{
+ "transaction": "RC-10",
+ "summary": "Evidence landscape (Addendum 2, improvement 3)",
+ "items": {
+  "rows": 34,
+  "labels": 26
+ },
+ "input_master_sha256": "26a97c34d5178640ad716b6b7a3536beec26c795f9ea799d6d8506c1c1e3902e",
+ "output_master_sha256": "ed004282e0570618bbcc628a112cd325634ed39d8faf9e4e6cb7c2688bb6ded8",
+ "cells_written": 72,
+ "changes": [
+  {
+   "finding": "RC-10:LANDSCAPE",
+   "sheet": "00_MASTER",
+   "row": null,
+   "col": null,
+   "field": "EVIDENCE LANDSCAPE / مشهد الأدلة",
+   "old": null,
+   "new": "EVIDENCE LANDSCAPE / مشهد الأدلة"
+  },
+  {
+   "finding": "RC-10:LANDSCAPE",
+   "sheet": "00_MASTER",
+   "row": null,
+   "col": null,
+   "field": "landscape_id",
+   "old": null,
+   "new": "landscape_id | domain_route | dimension_en | dimension_ar | evidence_class | coverage_state | record_ids | verify_routes | measurement_ids"
+  },
+  {
+   "finding": "RC-10:LANDSCAPE",
+   "sheet": "00_MASTER",
+   "row": null,
+   "col": null,
+   "field": "ELS-001",
+   "old": null,
+   "new": "ELS-001 | /people/ | Account ownership | امتلاك الحساب | SURVEY | SUFFICIENT_FOR_QUESTION | [\"CLM-001\", \"CLM-025\"] | [\"/people/\"] | [\"MA-001\"]"
+  },
+  {
+   "finding": "RC-10:LANDSCAPE",
+   "sheet": "00_MASTER",
+   "row": null,
+   "col": null,
+   "field": "ELS-002",
+   "old": null,
+   "new": "ELS-002 | /people/ | Savings | الادخار | SURVEY | PARTIAL | [\"CLM-029\", \"CLM-031\"] | [\"/people/\"] | [\"MA-001\"]"
+  },
+  {
+   "finding": "RC-10:LANDSCAPE",
+   "sheet": "00_MASTER",
+   "row": null,
+   "col": null,
+   "field": "ELS-003",
+   "old": null,
+   "new": "ELS-003 | /people/ | Borrowing by people | اقتراض الأفراد | SURVEY | PARTIAL | [\"CLM-028\"] | [\"/people/\"] | [\"MA-001\"]"
+  },
+  {
+   "finding": "RC-10:LANDSCAPE",
+   "sheet": "00_MASTER",
+   "row": null,
+   "col": null,
+   "field": "ELS-004",
+   "old": null,
+   "new": "ELS-004 | /people/ | Digital payments by people | المدفوعات الرقمية لدى الأفراد | SURVEY | MEASUREMENT_GAP | [] | [] | [\"MA-001\", \"MA-002\"]"
+  },
+  {
+   "finding": "RC-10:LANDSCAPE",
+   "sheet": "00_MASTER",
+   "row": null,
+   "col": null,
+   "field": "ELS-005",
+   "old": null,
+   "new": "ELS-005 | /people/ | Affordability of accounts and services | القدرة على تحمّل كلفة الحسابات والخدمات | SURVEY | MEASUREMENT_GAP | [] | [] | [\"MA-001\"]"
+  },
+  {
+   "finding": "RC-10:LANDSCAPE",
+   "sheet": "00_MASTER",
+   "row": null,
+   "col": null,
+   "field": "ELS-006",
+   "old": null,
+   "new": "ELS-006 | /people/ | Financial literacy and capability | الثقافة المالية والقدرة المالية | SURVEY;PROGRAMME | PARTIAL | [\"CLM-013\", \"VIS-FL-EVIDENCE-LADDER\"] | [\"/people/\"] | [\"MA-001\"]"
+  },
+  {
+   "finding": "RC-10:LANDSCAPE",
+   "sheet": "00_MASTER",
+   "row": null,
+   "col": null,
+   "field": "ELS-007",
+   "old": null,
+   "new": "ELS-007 | /people/ | Digital capability (phone, internet) | القدرة الرقمية (الهاتف والإنترنت) | SURVEY | MEASUREMENT_GAP | [] | [] | [\"MA-001\", \"MA-007\"]"
+  },
+  {
+   "finding": "RC-10:LANDSCAPE",
+   "sheet": "00_MASTER",
+   "row": null,
+   "col": null,
+   "field": "ELS-008",
+   "old": null,
+   "new": "ELS-008 | /people/ | Financial health and resilience | الصحة المالية والقدرة على الصمود | SURVEY | MEASUREMENT_GAP | [\"VIS-FINDEX-RESILIENCE\"] | [] | [\"MA-001\"]"
+  },
+  {
+   "finding": "RC-10:LANDSCAPE",
+   "sheet": "00_MASTER",
+   "row": null,
+   "col": null,
+   "field": "ELS-009",
+   "old": null,
+   "new": "ELS-009 | /people/ | Gender | النوع الاجتماعي | SURVEY | SUFFICIENT_FOR_QUESTION | [\"CLM-002\"] | [\"/people/\"] | [\"MA-003\"]"
+  },
+  {
+   "finding": "RC-10:LANDSCAPE",
+   "sheet": "00_MASTER",
+   "row": null,
+   "col": null,
+   "field": "ELS-010",
+   "old": null,
+   "new": "ELS-010 | /people/ | Income | الدخل | SURVEY | SUFFICIENT_FOR_QUESTION | [\"VIS-FINDEX-GAPS\"] | [\"/people/\"] | [\"MA-003\"]"
+  },
+  {
+   "finding": "RC-10:LANDSCAPE",
+   "sheet": "00_MASTER",
+   "row": null,
+   "col": null,
+   "field": "ELS-011",
+   "old": null,
+   "new": "ELS-011 | /people/ | Education | التعليم | SURVEY | SUFFICIENT_FOR_QUESTION | [\"VIS-FINDEX-GAPS\"] | [\"/people/\"] | [\"MA-003\"]"
+  },
+  {
+   "finding": "RC-10:LANDSCAPE",
+   "sheet": "00_MASTER",
+   "row": null,
+   "col": null,
+   "field": "ELS-012",
+   "old": null,
+   "new": "ELS-012 | /people/ | Age | العمر | SURVEY | SUFFICIENT_FOR_QUESTION | [\"VIS-FINDEX-GAPS\"] | [\"/people/\"] | [\"MA-003\"]"
+  },
+  {
+   "finding": "RC-10:LANDSCAPE",
+   "sheet": "00_MASTER",
+   "row": null,
+   "col": null,
+   "field": "ELS-013",
+   "old": null,
+   "new": "ELS-013 | /people/ | Displacement status | وضع النزوح | CONTEXT | MEASUREMENT_GAP | [] | [] | [\"MA-003\"]"
+  },
+  {
+   "finding": "RC-10:LANDSCAPE",
+   "sheet": "00_MASTER",
+   "row": null,
+   "col": null,
+   "field": "ELS-014",
+   "old": null,
+   "new": "ELS-014 | /people/ | Disability | الإعاقة | None | NO_EVIDENCE | [] | [] | [\"MA-003\"]"
+  },
+  {
+   "finding": "RC-10:LANDSCAPE",
+   "sheet": "00_MASTER",
+   "row": null,
+   "col": null,
+   "field": "ELS-015",
+   "old": null,
+   "new": "ELS-015 | /access/ | Access points and where services operate | نقاط الوصول وأماكن عمل الخدمات | PROGRAMME | MEASUREMENT_GAP | [\"XW-FMIIP-005\"] | [\"/access/\"] | [\"MA-005\"]"
+  },
+  {
+   "finding": "RC-10:LANDSCAPE",
+   "sheet": "00_MASTER",
+   "row": null,
+   "col": null,
+   "field": "ELS-016",
+   "old": null,
+   "new": "ELS-016 | /access/ | Rural and urban differences | الفروق بين الريف والحضر | ANALYTICAL | MEASUREMENT_GAP | [\"CLM-052\"] | [\"/access/\"] | [\"MA-001\", \"MA-005\"]"
+  },
+  {
+   "finding": "RC-10:LANDSCAPE",
+   "sheet": "00_MASTER",
+   "row": null,
+   "col": null,
+   "field": "ELS-017",
+   "old": null,
+   "new": "ELS-017 | /access/ | Service reliability and quality | موثوقية الخدمة وجودتها | None | NO_EVIDENCE | [] | [] | [\"MA-010\"]"
+  },
+  {
+   "finding": "RC-10:LANDSCAPE",
+   "sheet": "00_MASTER",
+   "row": null,
+   "col": null,
+   "field": "ELS-018",
+   "old": null,
+   "new": "ELS-018 | /payments/ | Active use and how often | الاستخدام الفعلي ومدى تكراره | SURVEY;ANALYTICAL;PROGRAMME | PARTIAL | [\"CLM-050\"] | [\"/payments/\"] | [\"MA-002\"]"
+  },
+  {
+   "finding": "RC-10:LANDSCAPE",
+   "sheet": "00_MASTER",
+   "row": null,
+   "col": null,
+   "field": "ELS-019",
+   "old": null,
+   "new": "ELS-019 | /payments/ | Payment infrastructure | البنية التحتية للمدفوعات | ADMINISTRATIVE | SUFFICIENT_FOR_QUESTION | [\"CLM-003\", \"CLM-017\"] | [\"/payments/\"] | [\"MA-002\", \"MA-010\"]"
+  },
+  {
+   "finding": "RC-10:LANDSCAPE",
+   "sheet": "00_MASTER",
+   "row": null,
+   "col": null,
+   "field": "ELS-020",
+   "old": null,
+   "new": "ELS-020 | /payments/ | Identity checks and account opening | التحقق من الهوية وفتح الحسابات | REGULATORY;SURVEY | PARTIAL | [\"CLM-012\"] | [\"/payments/\"] | [\"MA-007\"]"
+  },
+  {
+   "finding": "RC-10:LANDSCAPE",
+   "sheet": "00_MASTER",
+   "row": null,
+   "col": null,
+   "field": "ELS-021",
+   "old": null,
+   "new": "ELS-021 | /payments/ | Humanitarian and government transfers: use afterwards | التحويلات الإنسانية والحكومية: الاستخدام بعدها | PROGRAMME | MEASUREMENT_GAP | [\"CLM-045\"] | [\"/payments/\"] | [\"MA-009\"]"
+  },
+  {
+   "finding": "RC-10:LANDSCAPE",
+   "sheet": "00_MASTER",
+   "row": null,
+   "col": null,
+   "field": "ELS-022",
+   "old": null,
+   "new": "ELS-022 | /remittances/ | Remittances received by households | التحويلات التي تتلقاها الأسر | SURVEY | PARTIAL | [\"CLM-030\"] | [\"/remittances/\"] | [\"MA-001\"]"
+  },
+  {
+   "finding": "RC-10:LANDSCAPE",
+   "sheet": "00_MASTER",
+   "row": null,
+   "col": null,
+   "field": "ELS-023",
+   "old": null,
+   "new": "ELS-023 | /remittances/ | Remittance flows to the country | تدفقات التحويلات إلى البلد | ADMINISTRATIVE;ANALYTICAL | PARTIAL | [\"CLM-007\", \"CLM-032\"] | [\"/remittances/\"] | []"
+  },
+  {
+   "finding": "RC-10:LANDSCAPE",
+   "sheet": "00_MASTER",
+   "row": null,
+   "col": null,
+   "field": "ELS-024",
+   "old": null,
+   "new": "ELS-024 | /remittances/ | Remittance cost | كلفة التحويلات | OTHER | PARTIAL | [\"VIS-REMITTANCE-COST\"] | [\"/remittances/\"] | []"
+  },
+  {
+   "finding": "RC-10:LANDSCAPE",
+   "sheet": "00_MASTER",
+   "row": null,
+   "col": null,
+   "field": "ELS-025",
+   "old": null,
+   "new": "ELS-025 | /providers/ | Provider presence (formal status) | وجود مقدمي الخدمات (الوضع الرسمي) | REGULATORY | SUFFICIENT_FOR_QUESTION | [\"CLM-008\", \"CLM-009\", \"CLM-019\"] | [\"/providers/\"] | [\"MA-005\"]"
+  },
+  {
+   "finding": "RC-10:LANDSCAPE",
+   "sheet": "00_MASTER",
+   "row": null,
+   "col": null,
+   "field": "ELS-026",
+   "old": null,
+   "new": "ELS-026 | /providers/ | Digital safety and fraud | الأمان الرقمي والاحتيال | None | NO_EVIDENCE | [] | [] | [\"MA-006\"]"
+  },
+  {
+   "finding": "RC-10:LANDSCAPE",
+   "sheet": "00_MASTER",
+   "row": null,
+   "col": null,
+   "field": "ELS-027",
+   "old": null,
+   "new": "ELS-027 | /finance/ | Microfinance outreach | انتشار التمويل الأصغر | ADMINISTRATIVE;ANALYTICAL | PARTIAL | [\"CLM-053\"] | [\"/finance/\"] | [\"MA-004\"]"
+  },
+  {
+   "finding": "RC-10:LANDSCAPE",
+   "sheet": "00_MASTER",
+   "row": null,
+   "col": null,
+   "field": "ELS-028",
+   "old": null,
+   "new": "ELS-028 | /finance/ | Banking system (credit, deposits) | القطاع المصرفي (الائتمان والودائع) | ADMINISTRATIVE | PARTIAL | [\"CLM-033\", \"CLM-038\"] | [\"/finance/\"] | [\"MA-008\"]"
+  },
+  {
+   "finding": "RC-10:LANDSCAPE",
+   "sheet": "00_MASTER",
+   "row": null,
+   "col": null,
+   "field": "ELS-029",
+   "old": null,
+   "new": "ELS-029 | /finance/ | Insurance | التأمين | None | NO_EVIDENCE | [] | [] | []"
+  },
+  {
+   "finding": "RC-10:LANDSCAPE",
+   "sheet": "00_MASTER",
+   "row": null,
+   "col": null,
+   "field": "ELS-030",
+   "old": null,
+   "new": "ELS-030 | /finance/ | Pensions | المعاشات التقاعدية | None | NO_EVIDENCE | [] | [] | []"
+  },
+  {
+   "finding": "RC-10:LANDSCAPE",
+   "sheet": "00_MASTER",
+   "row": null,
+   "col": null,
+   "field": "ELS-031",
+   "old": null,
+   "new": "ELS-031 | /firms/ | Firm finance | تمويل المنشآت | SURVEY | PARTIAL | [\"CLM-005\", \"CLM-006\"] | [\"/firms/\"] | [\"MA-004\"]"
+  },
+  {
+   "finding": "RC-10:LANDSCAPE",
+   "sheet": "00_MASTER",
+   "row": null,
+   "col": null,
+   "field": "ELS-032",
+   "old": null,
+   "new": "ELS-032 | /firms/ | Reach of programmes for small firms | وصول البرامج إلى المنشآت الصغيرة | PROGRAMME | PARTIAL | [\"CLM-059\", \"CLM-060\"] | [\"/firms/\"] | [\"MA-004\"]"
+  },
+  {
+   "finding": "RC-10:LANDSCAPE",
+   "sheet": "00_MASTER",
+   "row": null,
+   "col": null,
+   "field": "ELS-033",
+   "old": null,
+   "new": "ELS-033 | /reforms/ | Consumer protection and redress | حماية المستهلك ومعالجة الشكاوى | REGULATORY | PARTIAL | [\"CLM-011\", \"DS-FCP-ARCH\"] | [\"/reforms/\"] | [\"MA-006\"]"
+  },
+  {
+   "finding": "RC-10:LANDSCAPE",
+   "sheet": "00_MASTER",
+   "row": null,
+   "col": null,
+   "field": "ELS-034",
+   "old": null,
+   "new": "ELS-034 | /reforms/ | Regulatory implementation | تطبيق الإطار التنظيمي | REGULATORY | PARTIAL | [\"CLM-012\", \"CLM-018\"] | [\"/reforms/\"] | [\"MA-010\"]"
+  },
+  {
+   "finding": "RC-10:LANDSCAPE",
+   "sheet": "04_NAV_UX",
+   "row": null,
+   "col": null,
+   "field": "UI-LAND-COL-DIMENSION",
+   "old": null,
+   "new": "Dimension || البُعد"
+  },
+  {
+   "finding": "RC-10:LANDSCAPE",
+   "sheet": "04_NAV_UX",
+   "row": null,
+   "col": null,
+   "field": "UI-LAND-COL-EVIDENCE",
+   "old": null,
+   "new": "Latest evidence in this base, with its period || أحدث دليل في قاعدة الأدلة هذه، مع فترته"
+  },
+  {
+   "finding": "RC-10:LANDSCAPE",
+   "sheet": "04_NAV_UX",
+   "row": null,
+   "col": null,
+   "field": "UI-LAND-COL-CLASS",
+   "old": null,
+   "new": "Evidence type || نوع الدليل"
+  },
+  {
+   "finding": "RC-10:LANDSCAPE",
+   "sheet": "04_NAV_UX",
+   "row": null,
+   "col": null,
+   "field": "UI-LAND-COL-COVERAGE",
+   "old": null,
+   "new": "Coverage || مدى التغطية"
+  },
+  {
+   "finding": "RC-10:LANDSCAPE",
+   "sheet": "04_NAV_UX",
+   "row": null,
+   "col": null,
+   "field": "UI-LAND-COL-NEXT",
+   "old": null,
+   "new": "Where to verify · what would change it || أين يُتحقق منه · ما الذي سيغيّره"
+  },
+  {
+   "finding": "RC-10:LANDSCAPE",
+   "sheet": "04_NAV_UX",
+   "row": null,
+   "col": null,
+   "field": "UI-LAND-DOM-PEOPLE",
+   "old": null,
+   "new": "People || الأفراد"
+  },
+  {
+   "finding": "RC-10:LANDSCAPE",
+   "sheet": "04_NAV_UX",
+   "row": null,
+   "col": null,
+   "field": "UI-LAND-DOM-ACCESS",
+   "old": null,
+   "new": "Access || الوصول"
+  },
+  {
+   "finding": "RC-10:LANDSCAPE",
+   "sheet": "04_NAV_UX",
+   "row": null,
+   "col": null,
+   "field": "UI-LAND-DOM-PAYMENTS",
+   "old": null,
+   "new": "Payments || المدفوعات"
+  },
+  {
+   "finding": "RC-10:LANDSCAPE",
+   "sheet": "04_NAV_UX",
+   "row": null,
+   "col": null,
+   "field": "UI-LAND-DOM-REMITTANCES",
+   "old": null,
+   "new": "Remittances || التحويلات"
+  },
+  {
+   "finding": "RC-10:LANDSCAPE",
+   "sheet": "04_NAV_UX",
+   "row": null,
+   "col": null,
+   "field": "UI-LAND-DOM-PROVIDERS",
+   "old": null,
+   "new": "Providers || مقدمو الخدمات"
+  },
+  {
+   "finding": "RC-10:LANDSCAPE",
+   "sheet": "04_NAV_UX",
+   "row": null,
+   "col": null,
+   "field": "UI-LAND-DOM-FINANCE",
+   "old": null,
+   "new": "Finance || التمويل"
+  },
+  {
+   "finding": "RC-10:LANDSCAPE",
+   "sheet": "04_NAV_UX",
+   "row": null,
+   "col": null,
+   "field": "UI-LAND-DOM-FIRMS",
+   "old": null,
+   "new": "Firms || المنشآت"
+  },
+  {
+   "finding": "RC-10:LANDSCAPE",
+   "sheet": "04_NAV_UX",
+   "row": null,
+   "col": null,
+   "field": "UI-LAND-DOM-REFORMS",
+   "old": null,
+   "new": "Reforms || الإصلاحات"
+  },
+  {
+   "finding": "RC-10:LANDSCAPE",
+   "sheet": "04_NAV_UX",
+   "row": null,
+   "col": null,
+   "field": "UI-LAND-CLASS-SURVEY",
+   "old": null,
+   "new": "Survey || مسح"
+  },
+  {
+   "finding": "RC-10:LANDSCAPE",
+   "sheet": "04_NAV_UX",
+   "row": null,
+   "col": null,
+   "field": "UI-LAND-CLASS-ADMINISTRATIVE",
+   "old": null,
+   "new": "Administrative record || سجل إداري"
+  },
+  {
+   "finding": "RC-10:LANDSCAPE",
+   "sheet": "04_NAV_UX",
+   "row": null,
+   "col": null,
+   "field": "UI-LAND-CLASS-REGULATORY",
+   "old": null,
+   "new": "Regulatory material || مادة تنظيمية"
+  },
+  {
+   "finding": "RC-10:LANDSCAPE",
+   "sheet": "04_NAV_UX",
+   "row": null,
+   "col": null,
+   "field": "UI-LAND-CLASS-PROGRAMME",
+   "old": null,
+   "new": "Programme record || سجل برنامج"
+  },
+  {
+   "finding": "RC-10:LANDSCAPE",
+   "sheet": "04_NAV_UX",
+   "row": null,
+   "col": null,
+   "field": "UI-LAND-CLASS-ANALYTICAL",
+   "old": null,
+   "new": "Secondary analysis || تحليل ثانوي"
+  },
+  {
+   "finding": "RC-10:LANDSCAPE",
+   "sheet": "04_NAV_UX",
+   "row": null,
+   "col": null,
+   "field": "UI-LAND-CLASS-CONTEXT",
+   "old": null,
+   "new": "Context source || مصدر سياقي"
+  },
+  {
+   "finding": "RC-10:LANDSCAPE",
+   "sheet": "04_NAV_UX",
+   "row": null,
+   "col": null,
+   "field": "UI-LAND-CLASS-OTHER",
+   "old": null,
+   "new": "Other source || مصدر آخر"
+  },
+  {
+   "finding": "RC-10:LANDSCAPE",
+   "sheet": "04_NAV_UX",
+   "row": null,
+   "col": null,
+   "field": "UI-LAND-COV-SUFFICIENT_FOR_QUESTION",
+   "old": null,
+   "new": "Sufficient for its question || كافٍ لسؤاله"
+  },
+  {
+   "finding": "RC-10:LANDSCAPE",
+   "sheet": "04_NAV_UX",
+   "row": null,
+   "col": null,
+   "field": "UI-LAND-COV-PARTIAL",
+   "old": null,
+   "new": "Partial || جزئي"
+  },
+  {
+   "finding": "RC-10:LANDSCAPE",
+   "sheet": "04_NAV_UX",
+   "row": null,
+   "col": null,
+   "field": "UI-LAND-COV-MEASUREMENT_GAP",
+   "old": null,
+   "new": "Measurement gap || فجوة قياس"
+  },
+  {
+   "finding": "RC-10:LANDSCAPE",
+   "sheet": "04_NAV_UX",
+   "row": null,
+   "col": null,
+   "field": "UI-LAND-COV-NO_EVIDENCE",
+   "old": null,
+   "new": "No evidence in this base || لا توجد أدلة في قاعدة الأدلة هذه"
+  },
+  {
+   "finding": "RC-10:LANDSCAPE",
+   "sheet": "04_NAV_UX",
+   "row": null,
+   "col": null,
+   "field": "UI-LAND-NO-PUBLIC-RECORD",
+   "old": null,
+   "new": "No public record in this base || لا يوجد سجل منشور في قاعدة الأدلة هذه"
+  },
+  {
+   "finding": "RC-10:LANDSCAPE",
+   "sheet": "04_NAV_UX",
+   "row": null,
+   "col": null,
+   "field": "UI-LAND-NOTE",
+   "old": null,
+   "new": "Categorical states only: no scores and no totals. || حالات وصفية فقط: لا درجات ولا مجاميع."
+  },
+  {
+   "finding": "RC-9b",
+   "sheet": "08_READINGS",
+   "row": 5,
+   "col": 20,
+   "field": "CWR-001.measurement_bindings",
+   "old": "[\"MA-001\"]",
+   "new": "[]"
+  },
+  {
+   "finding": "RC-9b",
+   "sheet": "10_MEASUREMENT_AGENDA",
+   "row": 6,
+   "col": 17,
+   "field": "MA-002.decisions_unlocked_ar",
+   "old": "هل يعكس التمويل الرقمي استخدامًا متكررًا أم مجرد تسجيل أو نشاط لمرة واحدة؟,ما القنوات أو مقدمو الخدمات الذين يرتبطون باستخدام أكثر استمرارية؟,إلى أي مدى يمكن تفسير النشاط الإداري باعتباره استخدامًا ماليًا مستمرًا؟",
+   "new": "هل يعكس التمويل الرقمي استخدامًا متكررًا أم مجرد تسجيل أو نشاط لمرة واحدة؟,ما القنوات أو مقدمو الخدمات الذين يرتبطون باستخدام أكثر استمرارية؟,إلى أي مدى يمكن تفسير النشاط المسجل في البيانات الإدارية باعتباره استخدامًا ماليًا مستمرًا؟"
+  },
+  {
+   "finding": "RC-9b",
+   "sheet": "10_MEASUREMENT_AGENDA",
+   "row": 11,
+   "col": 17,
+   "field": "MA-007.decisions_unlocked_ar",
+   "old": "في أي مرحلة يترك المستخدمون مسار الانضمام؟,ما خطوات الهوية/اعرف عميلك التي تولد أكبر احتكاك في الوقت أو التكلفة أو الرفض؟,ما المعالجات المرشحة التي يمكن اختبارها في مواجهة الاحتكاكات المرصودة؟",
+   "new": "في أي مرحلة يترك المستخدمون مسار الانضمام؟,ما خطوات التحقق من الهوية وإجراءات «اعرف عميلك» التي تولد احتكاكًا في الوقت أو التكلفة أو الرفض؟,ما المعالجات المرشحة التي يمكن اختبارها في مواجهة الاحتكاكات المرصودة؟"
+  },
+  {
+   "finding": "RC-9b",
+   "sheet": "10_MEASUREMENT_AGENDA",
+   "row": 8,
+   "col": 17,
+   "field": "MA-004.decisions_unlocked_ar",
+   "old": "كم منشأة تحتاج التمويل، وكم تتقدم، وكم يُقبل أو يُرفض طلبها، وبأي شروط؟,ما أنواع المنشآت والمناطق التي تواجه أكبر احتكاكات في الحصول على التمويل؟,أين تظهر أكبر الاحتكاكات المقاسة على امتداد مسار الحصول على التمويل؟",
+   "new": "كم منشأة تحتاج التمويل، وكم تتقدم بطلب، وكم يُقبل أو يُرفض طلبها، وبأي شروط؟,ما أنواع المنشآت والمناطق التي تواجه أكبر احتكاكات في الحصول على التمويل؟,أين تظهر أكبر الاحتكاكات المقاسة على امتداد مسار الحصول على التمويل؟"
+  },
+  {
+   "finding": "RC-9b",
+   "sheet": "10_MEASUREMENT_AGENDA",
+   "row": 9,
+   "col": 17,
+   "field": "MA-005.decisions_unlocked_ar",
+   "old": "أين توجد نقاط وصول مالي عاملة فعليًا؟,ما السكان أو المناطق التي تواجه مسافات أطول أو كثافة أقل في قنوات الخدمة؟,ما المواقع المدرجة أو المرخصة التي لا يمكن بعد التحقق من تشغيلها؟",
+   "new": "أين توجد نقاط وصول مالي عاملة فعليًا؟,ما الفئات السكانية أو المناطق التي تواجه مسافات أطول أو كثافة أقل في قنوات الخدمة؟,ما المواقع المدرجة أو المرخصة التي لا يمكن بعد التحقق من تشغيلها؟"
+  },
+  {
+   "finding": "RC-9b",
+   "sheet": "04_NAV_UX",
+   "row": null,
+   "col": null,
+   "field": "UI-READING-MEASUREMENT-NOTE",
+   "old": null,
+   "new": "Each priority below would supply evidence that this Reading says is missing; the link does not mean the priority would settle the Reading. || من شأن كل أولوية أدناه أن توفر أدلةً تقول هذه القراءة إنها ناقصة، ولا يعني هذا الربط أن الأولوية ستحسم القراءة."
+  },
+  {
+   "finding": "RC-10:ROSTER-442",
+   "sheet": "04_NAV_UX",
+   "row": 209,
+   "col": 2,
+   "field": "UI-VIS-CAT-PRV-LIMIT-EXCHANGE.label_en",
+   "old": "429 is the arithmetic sum of rows listed in the source across three classes, not a count of unique providers or of operating providers.",
+   "new": "442 is the arithmetic sum of rows listed in the source across three classes, not a count of unique providers or of operating providers."
+  },
+  {
+   "finding": "RC-10:ROSTER-442",
+   "sheet": "04_NAV_UX",
+   "row": 209,
+   "col": 3,
+   "field": "UI-VIS-CAT-PRV-LIMIT-EXCHANGE.label_ar",
+   "old": "الرقم 429 مجموع حسابي لصفوف مدرجة في المصدر عبر ثلاث فئات، وليس عددًا لمقدمي خدمات فريدين ولا لمقدمي خدمات عاملين.",
+   "new": "الرقم 442 مجموع حسابي لصفوف مدرجة في المصدر عبر ثلاث فئات، وليس عددًا لمقدمي خدمات فريدين ولا لمقدمي خدمات عاملين."
+  },
+  {
+   "finding": "RC-10:ROSTER-442",
+   "sheet": "04_NAV_UX",
+   "row": 209,
+   "col": 4,
+   "field": null,
+   "old": "Pre-Tranche-C P4 (V-D5). Chart label: provider_limit value '429 is the arithmetic sum of source-listed rows across three classes, not a deduplicated unique-provider or currently operating-provider count.'.",
+   "new": "Pre-Tranche-C P4 (V-D5). Chart label: provider_limit value '442 is the arithmetic sum of source-listed rows across three classes, not a deduplicated unique-provider or currently operating-provider count.'."
+  },
+  {
+   "finding": "RC-10:ROSTER-442",
+   "sheet": "33_ANALYTICS_MASTER",
+   "row": 57,
+   "col": 7,
+   "field": null,
+   "old": "Do not call 382→429 unique-provider growth, net entry, current operating-provider growth or nationwide service expansion.",
+   "new": "Do not call 382→442 unique-provider growth, net entry, current operating-provider growth or nationwide service expansion."
+  }
+ ]
+}

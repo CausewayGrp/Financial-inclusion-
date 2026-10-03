@@ -274,7 +274,27 @@ def text_frame(v: dict, cite_label: str, origin: str | None, heading: str = "h2"
             f'<p class="cap">{esc(v["question"])}</p>'
             f'<div class="alt alt-body" data-visual-fallback="ordered-text"><{sub_heading(heading)} class="alt-h sr-only">{esc(v["labels"]["text_alternative"])}</{sub_heading(heading)}><p class="body"><b>{esc(v["labels"]["what_it_shows"])}</b> {iso_run(text_alt(v))}</p>'
             + (f'<p class="small"><b>{esc(v["labels"]["scope"])}:</b> {iso_run(scope)}</p>' if scope else "")
+            + (landscape_table(v) if v.get("landscape") else "")
             + '</div>' + frame_foot(v, cite_label, origin, open_label) + '</figure>')
+
+
+def landscape_table(v: dict) -> str:
+    """RC-10: the evidence landscape as a grouped table (one tbody per domain, five governed column headings), inside
+    the text frame of VIS-EVIDENCE-FRESHNESS; categorical states only, no colour, totals or roll-ups. Declared wide:
+    five columns scroll inside their named region on a phone."""
+    ls = v["landscape"]
+    sep = "؛ " if v.get("lang") == "ar" else "; "
+    groups = []
+    for g in ls["groups"]:
+        rows = []
+        for r in g["rows"]:
+            ev = sep.join(f'<a href="{esc(x["href"])}">{esc(x["title"])}</a>' + (f' · {iso_run(x["period"])}' if x["period"] else "") for x in r["records"]) or esc(r["empty"])
+            nxt = " · ".join([f'<a href="{esc(x["href"])}">{esc(x["label"])}</a>' for x in r["verify"]] + [f'<a href="{esc(x["href"])}">{esc(x["title"])}</a>' for x in r["priorities"]])
+            rows.append([esc(r["dimension"]), ev, esc(sep.join(r["classes"])), f'<span data-coverage>{esc(r["coverage"])}</span>', nxt or "·"])
+        groups.append((esc(g["label"]), rows))
+    t = grouped_table(caption_of(v, esc(ls["note"])), [esc(h) for h in ls["head"]], groups, cls="rvtab wide")
+    return f'<div data-evidence-landscape>{table_region(v, t)}</div>'
+
 
 
 # ================================================================================================ D2 drawings
@@ -434,7 +454,8 @@ def findex_gaps(v: dict, cite_label: str, origin: str | None, heading: str = "h2
 # ------------------------------------------------------------------------------------------------ time-series lines
 LABEL_ROWS = (12, 26, 40)   # rows above the mark, 14 px apart: a value label's ink (digits, no descender) is 9 px tall at 12.5 px, so labels on neighbouring rows keep 5 px of air
 LABEL_LINE = 13             # the vertical clearance two labels need when they overlap horizontally (ink 9 px + 4 px)
-LABEL_REGIMES = {"wide": (5.36, 6.4), "narrow": (2.56, 5.4)}   # px per 1 % of the panel and px per character, measured: the 600 px viewport (536 px panel, 12.5 px labels) where every label shows; the 320 px one (256 px panel, 10.5 px labels) where only the landmarks show
+LABEL_REGIMES = {"wide": (5.36, 6.4), "narrow": (2.56, 5.4)}
+LABEL_CPX_SCALE = {"ar": 1.15}   # RC-10: the Arabic edition sets its Latin digits in IBM Plex Sans Arabic, about 15 % wider than Plex Sans   # px per 1 % of the panel and px per character, measured: the 600 px viewport (536 px panel, 12.5 px labels) where every label shows; the 320 px one (256 px panel, 10.5 px labels) where only the landmarks show
 
 
 def label_span(x_pct: float, anchor: str, text: str, ppp: float, cpx: float) -> tuple[float, float]:
@@ -443,7 +464,7 @@ def label_span(x_pct: float, anchor: str, text: str, ppp: float, cpx: float) -> 
     return (cx, cx + w) if anchor == "start" else ((cx - w, cx) if anchor == "end" else (cx - w / 2, cx + w / 2))
 
 
-def place_label(placed: list, x: float, y: float, text: str, keep: bool, anchor: str) -> float:
+def place_label(placed: list, x: float, y: float, text: str, keep: bool, anchor: str, cscale: float = 1.0) -> float:
     """The baseline of a value label: the first row above its mark (12, 26 or 40 px) at which its ink keeps clear of
     every earlier label it could touch horizontally — checked in the wide regime (every label visible, the
     narrowest panel that shows them) and, for a landmark label, in the narrow regime too (landmarks only, the 320 px
@@ -457,6 +478,7 @@ def place_label(placed: list, x: float, y: float, text: str, keep: bool, anchor:
                 if name == "narrow" and not pkeep:
                     continue
                 ppp, cpx = LABEL_REGIMES[name]
+                cpx *= cscale
                 a0, a1 = label_span(x, anchor, text, ppp, cpx); b0, b1 = label_span(px, panchor, ptext, ppp, cpx)
                 if min(a1, b1) - max(a0, b0) > -2:
                     return False
@@ -500,12 +522,19 @@ def line_panel(v: dict, series: dict, panel_id: str, height: int = 200) -> tuple
     g.append(f'<text class="lbl origin" x="10.5%" y="{hi+4}" text-anchor="end">0</text>')
     for i, x in enumerate(xs):
         cls = "lbl" if (i in (0, (len(xs) // 2) // 2 * 2, len(xs) - 1) or len(xs) <= 7) else ("lbl alt2" if i % 2 == 0 else "lbl alt")
+        if len(xs) > 12 and cls != "lbl" and (i % 2 == 1 or (i == len(xs) - 2 and (len(xs) - 1) % 2 == 1)):
+            cls = "lbl alt3"   # RC-10: beyond twelve periods alternate labels only, at every width (the table names every period)
         g.append(f'<text class="{cls}" x="{X(x):.2f}%" y="{hi+18}" text-anchor="middle">{esc(x)}</text>')
     missing = {str(m["x"]): m.get("marker") for m in series.get("missing_x") or []}
     break_before = {i for i, r in enumerate(valued) if any(m.startswith("BREAK") for m in r["markers"])}
     notes = []
     prev = None
     dense = len(vals) > 8
+    # RC-10: beyond twelve points (the POS panels since RC-8: sixteen months) even the 600 px panel cannot hold every
+    # value label on three rows; such a series labels only its landmarks — first, last, flagged and the series high —
+    # at every width, and its table carries every value
+    very_dense = len(vals) > 12
+    y_high = max((r["y"] for r in vals if r.get("y") is not None), default=None)
     placed: list = []   # (x %, anchor, text, landmark?, baseline) of every label on the panel
     state_texts = []
     if band:
@@ -534,7 +563,7 @@ def line_panel(v: dict, series: dict, panel_id: str, height: int = 200) -> tuple
             mark += f'<circle class="ring" cx="{x:.2f}%" cy="{y:.1f}" r="9"/>'
         g.append(mark)
         own_marks = [m for m in r["markers"] if m not in (series.get("markers") or [])]   # a series-wide marker (NOMINAL) marks no point
-        keep = bool(i == 0 or i == len(valued) - 1 or own_marks or (prev is not None and prev["state"] != r["state"]))
+        keep = bool(i == 0 or i == len(valued) - 1 or own_marks or (prev is not None and prev["state"] != r["state"]) or (very_dense and r["y"] == y_high))
         anchor, dx = "middle", 0.0
         if i == 0:
             anchor, dx = "start", -0.8
@@ -545,7 +574,10 @@ def line_panel(v: dict, series: dict, panel_id: str, height: int = 200) -> tuple
         elif i in break_before:
             anchor, dx = "start", -0.8
         text = plain_num(r["y"])
-        ly = place_label(placed, x + dx, y, text, keep or not dense, anchor)
+        if very_dense and not keep:
+            prev = r
+            continue
+        ly = place_label(placed, x + dx, y, text, keep or not dense, anchor, LABEL_CPX_SCALE.get(v.get("lang"), 1.0))
         placed.append((x + dx, anchor, text, keep or not dense, ly))
         g.append(f'<text class="val{" dense" if dense and not keep else ""}" x="{x + dx:.2f}%" y="{ly:.1f}" text-anchor="{anchor}">{text}</text>')
         prev = r

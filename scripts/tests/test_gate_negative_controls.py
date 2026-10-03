@@ -229,6 +229,10 @@ CONTROLS = [
     ("the runtime stops isolating the identifiers it writes", "site-src/app.js",
      replace(".replace(ID_RUN,m=>`<bdi dir=\"ltr\">${m}</bdi>`)", ""),
      "RC-DATES the runtime does not isolate the identifiers it writes"),
+    # RC-LAND (Owner Addendum 2, improvement 3): the landscape prints every governed row.
+    ("the evidence landscape drops a row", "en/evidence/VIS-EVIDENCE-FRESHNESS/index.html",
+     sub_once(r'(<div data-evidence-landscape>.*?)<tr><th scope="row">.*?</tr>', r'\1'),
+     "RC-LAND the evidence landscape prints 33 of 34 governed rows en"),
     # RC-B6 (Part B B6): a Reading page links every priority its bindings name.
     ("a Reading page drops a bound measurement priority", "en/readings/from-rail-to-result-missing-middle/index.html",
      sub_once(r'href="/en/measurement/#MA-006"', 'href="/en/measurement/"'),

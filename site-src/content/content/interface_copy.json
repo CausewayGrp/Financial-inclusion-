@@ -799,9 +799,9 @@
   },
   {
     "ui_id": "UI-VIS-CAT-PRV-LIMIT-EXCHANGE",
-    "label_en": "429 is the arithmetic sum of rows listed in the source across three classes, not a count of unique providers or of operating providers.",
-    "label_ar": "الرقم 429 مجموع حسابي لصفوف مدرجة في المصدر عبر ثلاث فئات، وليس عددًا لمقدمي خدمات فريدين ولا لمقدمي خدمات عاملين.",
-    "use_rule": "Pre-Tranche-C P4 (V-D5). Chart label: provider_limit value '429 is the arithmetic sum of source-listed rows across three classes, not a deduplicated unique-provider or currently operating-provider count.'."
+    "label_en": "442 is the arithmetic sum of rows listed in the source across three classes, not a count of unique providers or of operating providers.",
+    "label_ar": "الرقم 442 مجموع حسابي لصفوف مدرجة في المصدر عبر ثلاث فئات، وليس عددًا لمقدمي خدمات فريدين ولا لمقدمي خدمات عاملين.",
+    "use_rule": "Pre-Tranche-C P4 (V-D5). Chart label: provider_limit value '442 is the arithmetic sum of source-listed rows across three classes, not a deduplicated unique-provider or currently operating-provider count.'."
   },
   {
     "ui_id": "UI-VIS-CAT-PRV-LIMIT-EWALLETS",
@@ -2680,5 +2680,167 @@
     "label_en": "Evidence that cannot be produced without it:",
     "label_ar": "الأدلة التي لا يمكن إنتاجها من دونه:",
     "use_rule": "RC-9 (Part B B6). /measurement/ label before a priority's governed blocked_evidence."
+  },
+  {
+    "ui_id": "UI-LAND-COL-DIMENSION",
+    "label_en": "Dimension",
+    "label_ar": "البُعد",
+    "use_rule": "RC-10 (Owner Addendum 2, improvement 3). Evidence landscape table on VIS-EVIDENCE-FRESHNESS."
+  },
+  {
+    "ui_id": "UI-LAND-COL-EVIDENCE",
+    "label_en": "Latest evidence in this base, with its period",
+    "label_ar": "أحدث دليل في قاعدة الأدلة هذه، مع فترته",
+    "use_rule": "RC-10 (Owner Addendum 2, improvement 3). Evidence landscape table on VIS-EVIDENCE-FRESHNESS."
+  },
+  {
+    "ui_id": "UI-LAND-COL-CLASS",
+    "label_en": "Evidence type",
+    "label_ar": "نوع الدليل",
+    "use_rule": "RC-10 (Owner Addendum 2, improvement 3). Evidence landscape table on VIS-EVIDENCE-FRESHNESS."
+  },
+  {
+    "ui_id": "UI-LAND-COL-COVERAGE",
+    "label_en": "Coverage",
+    "label_ar": "مدى التغطية",
+    "use_rule": "RC-10 (Owner Addendum 2, improvement 3). Evidence landscape table on VIS-EVIDENCE-FRESHNESS."
+  },
+  {
+    "ui_id": "UI-LAND-COL-NEXT",
+    "label_en": "Where to verify · what would change it",
+    "label_ar": "أين يُتحقق منه · ما الذي سيغيّره",
+    "use_rule": "RC-10 (Owner Addendum 2, improvement 3). Evidence landscape table on VIS-EVIDENCE-FRESHNESS."
+  },
+  {
+    "ui_id": "UI-LAND-DOM-PEOPLE",
+    "label_en": "People",
+    "label_ar": "الأفراد",
+    "use_rule": "RC-10 (Owner Addendum 2, improvement 3). Evidence landscape table on VIS-EVIDENCE-FRESHNESS."
+  },
+  {
+    "ui_id": "UI-LAND-DOM-ACCESS",
+    "label_en": "Access",
+    "label_ar": "الوصول",
+    "use_rule": "RC-10 (Owner Addendum 2, improvement 3). Evidence landscape table on VIS-EVIDENCE-FRESHNESS."
+  },
+  {
+    "ui_id": "UI-LAND-DOM-PAYMENTS",
+    "label_en": "Payments",
+    "label_ar": "المدفوعات",
+    "use_rule": "RC-10 (Owner Addendum 2, improvement 3). Evidence landscape table on VIS-EVIDENCE-FRESHNESS."
+  },
+  {
+    "ui_id": "UI-LAND-DOM-REMITTANCES",
+    "label_en": "Remittances",
+    "label_ar": "التحويلات",
+    "use_rule": "RC-10 (Owner Addendum 2, improvement 3). Evidence landscape table on VIS-EVIDENCE-FRESHNESS."
+  },
+  {
+    "ui_id": "UI-LAND-DOM-PROVIDERS",
+    "label_en": "Providers",
+    "label_ar": "مقدمو الخدمات",
+    "use_rule": "RC-10 (Owner Addendum 2, improvement 3). Evidence landscape table on VIS-EVIDENCE-FRESHNESS."
+  },
+  {
+    "ui_id": "UI-LAND-DOM-FINANCE",
+    "label_en": "Finance",
+    "label_ar": "التمويل",
+    "use_rule": "RC-10 (Owner Addendum 2, improvement 3). Evidence landscape table on VIS-EVIDENCE-FRESHNESS."
+  },
+  {
+    "ui_id": "UI-LAND-DOM-FIRMS",
+    "label_en": "Firms",
+    "label_ar": "المنشآت",
+    "use_rule": "RC-10 (Owner Addendum 2, improvement 3). Evidence landscape table on VIS-EVIDENCE-FRESHNESS."
+  },
+  {
+    "ui_id": "UI-LAND-DOM-REFORMS",
+    "label_en": "Reforms",
+    "label_ar": "الإصلاحات",
+    "use_rule": "RC-10 (Owner Addendum 2, improvement 3). Evidence landscape table on VIS-EVIDENCE-FRESHNESS."
+  },
+  {
+    "ui_id": "UI-LAND-CLASS-SURVEY",
+    "label_en": "Survey",
+    "label_ar": "مسح",
+    "use_rule": "RC-10 (Owner Addendum 2, improvement 3). Evidence landscape table on VIS-EVIDENCE-FRESHNESS."
+  },
+  {
+    "ui_id": "UI-LAND-CLASS-ADMINISTRATIVE",
+    "label_en": "Administrative record",
+    "label_ar": "سجل إداري",
+    "use_rule": "RC-10 (Owner Addendum 2, improvement 3). Evidence landscape table on VIS-EVIDENCE-FRESHNESS."
+  },
+  {
+    "ui_id": "UI-LAND-CLASS-REGULATORY",
+    "label_en": "Regulatory material",
+    "label_ar": "مادة تنظيمية",
+    "use_rule": "RC-10 (Owner Addendum 2, improvement 3). Evidence landscape table on VIS-EVIDENCE-FRESHNESS."
+  },
+  {
+    "ui_id": "UI-LAND-CLASS-PROGRAMME",
+    "label_en": "Programme record",
+    "label_ar": "سجل برنامج",
+    "use_rule": "RC-10 (Owner Addendum 2, improvement 3). Evidence landscape table on VIS-EVIDENCE-FRESHNESS."
+  },
+  {
+    "ui_id": "UI-LAND-CLASS-ANALYTICAL",
+    "label_en": "Secondary analysis",
+    "label_ar": "تحليل ثانوي",
+    "use_rule": "RC-10 (Owner Addendum 2, improvement 3). Evidence landscape table on VIS-EVIDENCE-FRESHNESS."
+  },
+  {
+    "ui_id": "UI-LAND-CLASS-CONTEXT",
+    "label_en": "Context source",
+    "label_ar": "مصدر سياقي",
+    "use_rule": "RC-10 (Owner Addendum 2, improvement 3). Evidence landscape table on VIS-EVIDENCE-FRESHNESS."
+  },
+  {
+    "ui_id": "UI-LAND-CLASS-OTHER",
+    "label_en": "Other source",
+    "label_ar": "مصدر آخر",
+    "use_rule": "RC-10 (Owner Addendum 2, improvement 3). Evidence landscape table on VIS-EVIDENCE-FRESHNESS."
+  },
+  {
+    "ui_id": "UI-LAND-COV-SUFFICIENT_FOR_QUESTION",
+    "label_en": "Sufficient for its question",
+    "label_ar": "كافٍ لسؤاله",
+    "use_rule": "RC-10 (Owner Addendum 2, improvement 3). Evidence landscape table on VIS-EVIDENCE-FRESHNESS."
+  },
+  {
+    "ui_id": "UI-LAND-COV-PARTIAL",
+    "label_en": "Partial",
+    "label_ar": "جزئي",
+    "use_rule": "RC-10 (Owner Addendum 2, improvement 3). Evidence landscape table on VIS-EVIDENCE-FRESHNESS."
+  },
+  {
+    "ui_id": "UI-LAND-COV-MEASUREMENT_GAP",
+    "label_en": "Measurement gap",
+    "label_ar": "فجوة قياس",
+    "use_rule": "RC-10 (Owner Addendum 2, improvement 3). Evidence landscape table on VIS-EVIDENCE-FRESHNESS."
+  },
+  {
+    "ui_id": "UI-LAND-COV-NO_EVIDENCE",
+    "label_en": "No evidence in this base",
+    "label_ar": "لا توجد أدلة في قاعدة الأدلة هذه",
+    "use_rule": "RC-10 (Owner Addendum 2, improvement 3). Evidence landscape table on VIS-EVIDENCE-FRESHNESS."
+  },
+  {
+    "ui_id": "UI-LAND-NO-PUBLIC-RECORD",
+    "label_en": "No public record in this base",
+    "label_ar": "لا يوجد سجل منشور في قاعدة الأدلة هذه",
+    "use_rule": "RC-10 (Owner Addendum 2, improvement 3). Evidence landscape table on VIS-EVIDENCE-FRESHNESS."
+  },
+  {
+    "ui_id": "UI-LAND-NOTE",
+    "label_en": "Categorical states only: no scores and no totals.",
+    "label_ar": "حالات وصفية فقط: لا درجات ولا مجاميع.",
+    "use_rule": "RC-10 (Owner Addendum 2, improvement 3). Evidence landscape table on VIS-EVIDENCE-FRESHNESS."
+  },
+  {
+    "ui_id": "UI-READING-MEASUREMENT-NOTE",
+    "label_en": "Each priority below would supply evidence that this Reading says is missing; the link does not mean the priority would settle the Reading.",
+    "label_ar": "من شأن كل أولوية أدناه أن توفر أدلةً تقول هذه القراءة إنها ناقصة، ولا يعني هذا الربط أن الأولوية ستحسم القراءة.",
+    "use_rule": "RC-9b (Part B B6, independent review S1). Reading pages: the line under 'Related measurement priorities'."
   }
 ]

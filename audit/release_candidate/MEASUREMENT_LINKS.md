@@ -353,3 +353,35 @@ would also put MA-009 on its domain pages, but that is a steward decision and is
   non-coverage of Yemen, and the latest wave's exclusions (Al Baydaa, Al Jawf, Mareb, Sadah, Socotra and several
   districts; about 23% of the population). Both are already stated: CLM-002, CLM-027, VIS-FINDEX-ACCESS-USE and
   VIS-FINDEX-OBSERVED-WAVES for the first; CLM-025 and /people/ for the second. Result: MATCH; nothing to add.
+
+## Independent review of RC-9, applied in RC-9b (3 October 2026)
+
+One bilingual reviewer who did not write B6 read it, Arabic first. Verdict: NOT ACCEPTABLE, with one blocking finding.
+All findings are applied in `rc_10_evidence_landscape.py`, tagged RC-9b, in cells RC-10 does not touch.
+
+- **Blocking: CWR-001 → MA-001 removed.**
+  - The Reading concerns balance-of-payments inflows, i.e. cross-border personal transfers. Its unknown is how those
+    inflows are distributed across households, governorates and channels.
+  - MA-001's remittance evidence is domestic household receipt («الحوالات المحلية»), and its missing evidence names
+    neither receipt from abroad nor amounts. The link therefore mixed two universes.
+  - CWR-001 now joins CWR-002 under "Gaps in the agenda". No priority covers the distribution of the balance-of-payments
+    remittance flow.
+  - Widening MA-001 to receipt from within Yemen and from abroad would close this gap, but that is a content decision
+    for the programme steward and is not taken here.
+  - MA-001 stays reachable from CWR-004, /people/ and /remittances/.
+- **S1: what a link means.** Reading pages print a line under "Related measurement priorities", from the new label
+  `UI-READING-MEASUREMENT-NOTE`: "Each priority below would supply evidence that this Reading says is missing; the link
+  does not mean the priority would settle the Reading."
+- **S2–S5: Arabic in `decisions_unlocked_ar`.**
+  - MA-002: «النشاط الإداري» → «النشاط المسجل في البيانات الإدارية».
+  - MA-007: «خطوات الهوية/اعرف عميلك … أكبر احتكاك» → «خطوات التحقق من الهوية وإجراءات «اعرف عميلك» … احتكاكًا».
+  - MA-004: «وكم تتقدم» → «وكم تتقدم بطلب».
+  - MA-005: «ما السكان» → «ما الفئات السكانية».
+- **Accepted as checked.**
+  - The two labels.
+  - All 20 decision lists: three items each, in the same order in both languages, and an exact match to the governed
+    strings.
+  - The other four links.
+  - The semantic firewall on the changed pages.
+
+After RC-9b, 8 of the 10 Readings carry links; CWR-001 and CWR-002 are recorded gaps.

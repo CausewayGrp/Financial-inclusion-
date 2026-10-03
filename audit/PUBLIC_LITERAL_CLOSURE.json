@@ -1,8 +1,8 @@
 {
   "schema": "YFIE_PUBLIC_LITERAL_CLOSURE/2.0",
   "audit_version": "2.0 — token-bounded, token-level classification (Pre-Tranche-C P1-D); v1 substring and paragraph-keyword rules removed",
-  "authority_master_sha256": "26a97c34d5178640ad716b6b7a3536beec26c795f9ea799d6d8506c1c1e3902e",
-  "page_specs_sha256": "74d6349b7f7169be29398e94854b979adb0136b9b3e8a7e1af9e0713a7af56be",
+  "authority_master_sha256": "ed004282e0570618bbcc628a112cd325634ed39d8faf9e4e6cb7c2688bb6ded8",
+  "page_specs_sha256": "ddf11abe5195ff1b4aed930a6afb34e44b5ca108bd9ab47d1e1ee8628534faad",
   "scope": "Reader-facing Page Spec titles/sections plus governed-copy numeric inventory. Every substantive public numeral must resolve to a governed source-closed object or be explicitly classified as date/period, stable technical identifier, or non-observation system/method metadata.",
   "classification_rule": "UNRESOLVED_SUBSTANTIVE_PUBLIC_NUMBER is a hard validation failure. Route/source presence without an object-level source-closed trace is not sufficient.",
   "record_count": 13268,

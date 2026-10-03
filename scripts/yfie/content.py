@@ -502,13 +502,52 @@ class Content:
             "labels": {"eyebrow": L("UI-READING-EYEBROW"), "evidence_period": L("UI-READING-EVIDENCE-PERIOD"), "last_reviewed": L("UI-READING-LAST-REVIEWED"),
                        "do_not_infer": L("UI-READING-DO-NOT-INFER"), "trace": L("UI-READING-TRACE-H"), "trace_intro": L("UI-READING-PATH-INTRO"),
                        "compare": L("UI-READING-TEST-COMPARABILITY-OF-THIS-READING"), "return": L("UI-READING-RETURN"),
-                       "related": L("UI-READING-RELATED-H"), "all": L("UI-READING-ALL-H"), "sources": L("UI-SOURCES-SOURCES"), "measurement": L("UI-RELATED-MEASUREMENT"),
+                       "related": L("UI-READING-RELATED-H"), "all": L("UI-READING-ALL-H"), "sources": L("UI-SOURCES-SOURCES"), "measurement": L("UI-RELATED-MEASUREMENT"), "measurement_note": L("UI-READING-MEASUREMENT-NOTE"),
                        "source_record": L("UI-SOURCES-SOURCE-RECORD"), "reference": L("UI-SOURCE-REFERENCE"),
                        "open_record": L("UI-EVID-OPEN-EVIDENCE-RECORD"), "readings_index_href": self.href("/readings/", lang),
                        "does_not_establish": self.grammar_labels["UI-VIS-DOES-NOT-ESTABLISH"][lang]},
         }
 
     # ------------------------------------------------------------------------------------------------ visuals
+    LANDSCAPE_DOMAINS = ("/people/", "/access/", "/payments/", "/remittances/", "/providers/", "/finance/", "/firms/", "/reforms/")
+
+    def landscape(self, lang: str) -> dict | None:
+        """RC-10 (Owner Addendum 2, improvement 3): the evidence landscape, the 00_MASTER block "EVIDENCE LANDSCAPE", as
+        rows grouped by the eight domains. Every cell is governed: the row's dimension, the titles and periods of the
+        public records it names, categorical labels, the domain pages and the Measurement Agenda priorities."""
+        snap = _load("content/master_principles.json")
+        rows = snap.get("rows") or []
+        hi = next((i for i, r in enumerate(rows) if r and r[0] == "landscape_id"), None)
+        if hi is None:
+            return None
+        hdr = [str(h) if h is not None else "" for h in rows[hi]]
+        recs = []
+        for r in rows[hi + 1:]:
+            if not r or not r[0]:
+                break
+            recs.append({h: (r[i] if i < len(r) else None) for i, h in enumerate(hdr) if h})
+        L = lambda k: self.t(k, lang)  # noqa: E731
+        dom_label = {d: L("UI-LAND-DOM-" + d.strip("/").upper()) for d in self.LANDSCAPE_DOMAINS}
+        ma_by_id = {str(m.get("measurement_id")): m for m in self.measurement_agenda}
+        groups = []
+        for d in self.LANDSCAPE_DOMAINS:
+            items = []
+            for r in [x for x in recs if x.get("domain_route") == d]:
+                cov = str(r.get("coverage_state") or "")
+                records = [x for x in (self.compact_record(oid, lang) for oid in json.loads(r.get("record_ids") or "[]")) if x]
+                classes = [L("UI-LAND-CLASS-" + c.strip()) for c in str(r.get("evidence_class") or "").split(";") if c.strip()]
+                items.append({"id": r.get("landscape_id"), "dimension": r.get(f"dimension_{lang}") or "",
+                              "records": [{"title": x["title"], "href": x["href"], "period": x["period"]} for x in records],
+                              "empty": L("UI-LAND-COV-NO_EVIDENCE") if cov == "NO_EVIDENCE" else L("UI-LAND-NO-PUBLIC-RECORD"),
+                              "classes": classes or [L("UI-LAND-COV-NO_EVIDENCE")], "coverage": L("UI-LAND-COV-" + cov),
+                              "verify": [{"label": dom_label.get(rt) or rt, "href": self.href(rt, lang)} for rt in json.loads(r.get("verify_routes") or "[]")],
+                              "priorities": [{"title": self.loc(ma_by_id[m], "title", lang), "href": f"/{lang}/measurement/#{quote(m)}"}
+                                             for m in json.loads(r.get("measurement_ids") or "[]") if m in ma_by_id]})
+            if items:
+                groups.append({"label": dom_label[d], "rows": items})
+        return {"groups": groups, "head": [L(k) for k in ("UI-LAND-COL-DIMENSION", "UI-LAND-COL-EVIDENCE", "UI-LAND-COL-CLASS", "UI-LAND-COL-COVERAGE", "UI-LAND-COL-NEXT")],
+                "note": L("UI-LAND-NOTE")}
+
     def visual(self, vid: str, lang: str) -> dict:
         v = self.visual_contracts[vid]
         g = v["governed"]
@@ -534,6 +573,8 @@ class Content:
                        "reference": self.t("UI-SOURCE-REFERENCE", lang), "period": self.t("UI-EVID-WHEN-WAS-IT-MEASURED-OR", lang),
                        "value_unit_per_row": self.t("UI-VIS-VALUE-UNIT-PER-ROW", lang)},   # release candidate G4 (D6)
         }
+        if vid == "VIS-EVIDENCE-FRESHNESS":
+            out["landscape"] = self.landscape(lang)   # RC-10: the text frame carries the evidence landscape table
         if c:
             def localise(row: dict) -> dict:
                 """A governed row with every `<field>_label` resolved to the page language (the generator's display-label

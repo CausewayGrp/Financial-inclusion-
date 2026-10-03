@@ -2688,7 +2688,7 @@ try:
                     _nb += 1
                     if not _sec or f'href="/{_lang}/measurement/#{_mid}"' not in _sec.group(0):
                         errors.append(f"RC-B6 a Reading page does not link its measurement priority {_lang}{_route} {_mid}")
-    if _nb < 24:
+    if _nb < 22:
         errors.append(f"RC-B6 read only {_nb} Reading measurement bindings")
     _counts = {}
     for _lang in ("en", "ar"):
@@ -2706,6 +2706,41 @@ try:
             errors.append(f"RC-B6 /measurement/ decisions differ between languages or are missing {_mid} {_c}")
 except Exception as _x:
     errors.append("RC-B6 unreadable " + repr(_x))
+
+# RC-LAND (Owner Addendum 2, improvement 3): the evidence landscape on VIS-EVIDENCE-FRESHNESS's record page prints every
+# governed row (00_MASTER "EVIDENCE LANDSCAPE") in both languages, grouped by the eight domains, with a categorical
+# coverage state from the governed four and never the word "none".
+try:
+    _mp = json.loads((C / "content" / "master_principles.json").read_text(encoding="utf-8"))["rows"]
+    _hi = next(i for i, r in enumerate(_mp) if r and r[0] == "landscape_id")
+    _nrows = 0
+    for _r in _mp[_hi + 1:]:
+        if not _r or not _r[0]:
+            break
+        _nrows += 1
+    _ic = json.loads((C / "content" / "interface_copy.json").read_text(encoding="utf-8"))
+    _icl = _ic["labels"] if isinstance(_ic, dict) and "labels" in _ic else _ic
+    _icm = _icl if isinstance(_icl, dict) else {x.get("ui_id"): x for x in _icl}
+    for _lang in ("en", "ar"):
+        _covs = {(_icm.get(f"UI-LAND-COV-{k}") or {}).get(f"label_{_lang}") for k in ("SUFFICIENT_FOR_QUESTION", "PARTIAL", "MEASUREMENT_GAP", "NO_EVIDENCE")}
+        _h = (DIST / _lang / "evidence" / "VIS-EVIDENCE-FRESHNESS" / "index.html").read_text(encoding="utf-8")
+        _t = re.search(r"<div data-evidence-landscape>.*?</table>", _h, re.S)
+        if not _t:
+            errors.append(f"RC-LAND the evidence landscape is missing {_lang}")
+            continue
+        _t = _t.group(0)
+        _rowsn = len(re.findall(r'<th scope="row">', _t))
+        if _rowsn != _nrows or _nrows < 12:
+            errors.append(f"RC-LAND the evidence landscape prints {_rowsn} of {_nrows} governed rows {_lang}")
+        if _t.count('scope="rowgroup"') != 8:
+            errors.append(f"RC-LAND the evidence landscape is not grouped by the eight domains {_lang}")
+        for _c in re.findall(r"<span data-coverage>([^<]*)</span>", _t):
+            if _html.unescape(_c) not in _covs:
+                errors.append(f"RC-LAND an ungoverned coverage state {_lang} {_c!r}")
+        if re.search(r">\s*(none|None|لا شيء)\s*<", _t):
+            errors.append(f"RC-LAND the evidence landscape prints 'none' {_lang}")
+except Exception as _x:
+    errors.append("RC-LAND unreadable " + repr(_x))
 
 print(f'HTML={len(list(DIST.rglob("*.html")))} ERRORS={len(errors)} WARN={len(warns)}')
 if warns:

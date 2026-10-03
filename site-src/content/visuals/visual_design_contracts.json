@@ -1,7 +1,7 @@
 {
   "schema_version": "1.0",
   "contract_id": "VISUAL-DESIGN-CONTRACT",
-  "authority_master_sha256": "26a97c34d5178640ad716b6b7a3536beec26c795f9ea799d6d8506c1c1e3902e",
+  "authority_master_sha256": "ed004282e0570618bbcc628a112cd325634ed39d8faf9e4e6cb7c2688bb6ded8",
   "rule": "Design-layer controlled input. It assigns every governed visual contract (Master 11) a design tier and, for SIGNATURE and CORE_ANALYTICAL visuals, declares which governed rows a chart binds to and how they are drawn. It never carries a fact, number, label or sentence: values come from Master data rows, text from Master contract/evidence fields, and legend labels from the governed interface copy (UI-VIS-*). The generator resolves every binding and fails on any unresolved ID, any value that disagrees with its guard, or any visual left untiered.",
   "tiers": {
     "SIGNATURE": "Distinctive to this product, decision-useful, drawable from governed rows and safe when detached. Designed first; gets a full data contract.",
@@ -1262,8 +1262,8 @@
                   "ui_id": "UI-VIS-CAT-PRV-EVENTS-SELECTED-2026"
                 },
                 "limit_label": {
-                  "en": "429 is the arithmetic sum of rows listed in the source across three classes, not a count of unique providers or of operating providers.",
-                  "ar": "الرقم 429 مجموع حسابي لصفوف مدرجة في المصدر عبر ثلاث فئات، وليس عددًا لمقدمي خدمات فريدين ولا لمقدمي خدمات عاملين.",
+                  "en": "442 is the arithmetic sum of rows listed in the source across three classes, not a count of unique providers or of operating providers.",
+                  "ar": "الرقم 442 مجموع حسابي لصفوف مدرجة في المصدر عبر ثلاث فئات، وليس عددًا لمقدمي خدمات فريدين ولا لمقدمي خدمات عاملين.",
                   "ui_id": "UI-VIS-CAT-PRV-LIMIT-EXCHANGE"
                 },
                 "named_label": {

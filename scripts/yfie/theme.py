@@ -282,7 +282,7 @@ h1{max-width:22ch}
 # D2 additions — the same tokens and roles; the families beyond the trio, the D2 figures, the tools' hooks.
 CSS_D2 = r"""/* ---- D2: families, figures, tools (same tokens; maintained with CSS above) ---- */
 [hidden]{display:none!important}
-.chain .source-locator,.hublist a,.src .source-url,.chron a,.deps a{display:inline-block;padding:3px 0;min-height:24px}
+.chain .source-locator,.hublist a,.src .source-url,.chron a,.deps a,[data-evidence-landscape] a{display:inline-block;padding:3px 0;min-height:24px}
 /* 2.5.8, measured at EAD-02: these three sat 1–2 px under the 24 px minimum with neighbours closer than 24 px, so
    neither the inline nor the spacing exception carried them. The rule is the one above, applied where it was missed. */
 .groups a,details.more>summary,details.more .rlist a{display:inline-block;padding:3px 0;min-height:24px}
@@ -324,6 +324,7 @@ details.more .qa h3{font-size:var(--fs-body);font-weight:600;margin-bottom:4px}
 .ring{fill:none;stroke:var(--counter);stroke-width:1.5}
 svg.ts .val.dense{display:none}
 svg.ts .lbl.alt{display:none}
+svg.ts .lbl.alt3{display:none}
 svg.ts .lbl.alt2{display:block}
 .anatomy{list-style:none;margin:8px 0 0;padding:0;display:flex;flex-direction:column;border-top:1px solid var(--rule-2)}
 .obj-card{padding:12px 0;border-top:1px solid var(--rule);display:flex;flex-direction:column;gap:3px}
