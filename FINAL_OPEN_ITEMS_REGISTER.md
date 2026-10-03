@@ -140,6 +140,13 @@ The public text stays exactly as it is until the source is read; closing any of 
 - 2026-10-03 — **EXT-04 narrowed** by the same owner note: the status-event table prints no entity names, in either
   language, so "Arabic entity names from the source instruments" is no longer part of this item; it stays open for the
   governed Arabic event text only.
+- 2026-10-03 — **New: dates of the other 2026 enforcement decisions** (adversarial review of RC-8). The dates printed for
+  Decisions 1–6, 9, 11, 13–15 and 17 of 2026 are the dates of CBY-Aden’s news pages. Decision No. 10 showed that the signed
+  instrument's date can differ from that date by a day. Action, at the B14e currentness re-run: read each decision's
+  signed scan where the news page links one, and correct the date Master-first wherever the instrument differs.
+- 2026-10-03 — **Exchange and remittance roster replaced** (RC-8b). The file linked on 3 October 2026 (created 22 September
+  2026) lists 100 companies, 231 establishments and 111 remittance agents; the Master and the site now follow it, and
+  CLM-009 states that the roster file has been replaced during 2026.
 
 ## 4. KNOWN_EVIDENCE_FRONTIER
 

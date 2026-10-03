@@ -1,5 +1,34 @@
 # Repository Change Log
 
+## 2026-10-03 — Release candidate RC-8b: the independent reviews of RC-8, in one rerun
+
+Transaction `audit/release_candidate/rc_8b_review_fixes.py` through `run_stage.py` (Master `8385ede6ebd9` → `d52dfc53cef8`;
+86 cells), with `rc_8b_stage_inputs.py` installing the contract change. Findings and the originals re-read are in
+`audit/release_candidate/ORIGINAL_SOURCE_VERIFICATION.md` §5.
+
+- **POS value unit (blocking).** RC-8 said the series is read in YER million "because only that reading reconciles with the
+  printed changes". That reason was false, because a percentage change cannot tell millions from billions. The releases
+  write the decimal mark as a comma. From January 2026 they give the value in billions: "1,262" billion is 1.262 billion,
+  i.e. YER 1,262 million. The disclosure now says so in both languages, in the summaries, chart note, passport and
+  observation caveats.
+- **Exchange and remittance roster (blocking).** CBY-Aden replaced the roster file. The one linked on 3 October 2026
+  (created 22 September 2026) lists 100 companies, 231 establishments and 111 remittance agents (442 rows), where the
+  19 August file listed 98, 225 and 106 (429). Counts, copy, contract pins, the validator's /providers/ signature and the
+  locator follow the new file. CLM-009 says the file has been replaced during 2026.
+- **CLM-019 (blocking).** The method no longer says names come "from the signed decisions"; only Decisions 10 and 18 have
+  scans.
+- **Should-fix.**
+  - "Payments page" is used consistently.
+  - The reporting-scope boundary appears where 1,651 is printed.
+  - The site's "Data & sources" page is named correctly.
+  - The evidence base holds "no law as a source document".
+  - The English uses "do not yield".
+  - The February percentage differences are "under 0.1 point, recorded, not flagged".
+  - The bank list has "no printed date".
+  - The value rows' `source_value_as_reported` carries «مليار».
+- **New open item.** The other 2026 decision dates are news-page dates; their signed scans are to be read at B14e
+  (`FINAL_OPEN_ITEMS_REGISTER.md`).
+
 ## 2026-10-03 — Gate RC-NAMES: no enforcement-decision entity name is published
 
 `scripts/validate.py` gains gate RC-NAMES (owner note of 3 October 2026, point 1). It reads every provider row known only

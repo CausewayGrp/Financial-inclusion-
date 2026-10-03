@@ -729,7 +729,7 @@
     "ui_id": "UI-VIS-CAT-PRV-COUNT-LISTED-ROWS",
     "label_en": "Rows listed in the source, by category (companies, establishments, remittance agents)",
     "label_ar": "صفوف مدرجة في المصدر حسب الفئة (شركات ومنشآت ووكلاء حوالات)",
-    "use_rule": "Pre-Tranche-C P4 (V-D5). Chart label: provider_count_state value 'SOURCE_LISTED_ROWS__98_COMPANIES__225_ESTABLISHMENTS__106_REMITTANCE_AGENTS'."
+    "use_rule": "Pre-Tranche-C P4 (V-D5). Chart label: provider_count_state value 'SOURCE_LISTED_ROWS__100_COMPANIES__231_ESTABLISHMENTS__111_REMITTANCE_AGENTS'."
   },
   {
     "ui_id": "UI-VIS-CAT-PRV-COUNT-SEVERAL",
@@ -2575,8 +2575,8 @@
   },
   {
     "ui_id": "UI-DATA-GROUP-REGULATORY-SCOPE",
-    "label_en": "These are the regulatory documents held in this evidence base, not a complete register of Yemen's financial regulation. All were issued by the Central Bank of Yemen – Aden. The evidence base holds no laws, and this group holds no instrument issued in Sana'a.",
-    "label_ar": "هذه هي الوثائق التنظيمية المتوفرة في قاعدة الأدلة هذه، وليست سجلًا كاملًا للتنظيم المالي في اليمن. وقد أصدرها جميعًا البنك المركزي اليمني – عدن. ولا تضم قاعدة الأدلة أي قانون، ولا تضم هذه المجموعة أي وثيقة صادرة في صنعاء.",
+    "label_en": "These are the regulatory documents held in this evidence base, not a complete register of Yemen's financial regulation. All were issued by the Central Bank of Yemen – Aden. The evidence base holds no law as a source document, and this group holds no instrument issued in Sana'a.",
+    "label_ar": "هذه هي الوثائق التنظيمية المتوفرة في قاعدة الأدلة هذه، وليست سجلًا كاملًا للتنظيم المالي في اليمن. وقد أصدرها جميعًا البنك المركزي اليمني – عدن. ولا تضم قاعدة الأدلة أي قانون بوصفه وثيقة مصدرية، ولا تضم هذه المجموعة أي وثيقة صادرة في صنعاء.",
     "use_rule": "RC-4 (Part B B5). /data/ the regulatory group's one scope line."
   },
   {

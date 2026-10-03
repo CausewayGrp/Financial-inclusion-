@@ -1052,7 +1052,7 @@ s05_numeric_signatures={
     '/people/':['11.9%','12.91'],
     '/firms/':['22%','50%','46%'],
     '/payments/':['561','1,651'],
-    '/providers/':['98','225','106'],
+    '/providers/':['100','231','111'],
     # Tranche C TC-A (EN-30): the limitation says "more than a quarter" without the redundant "(1/4)".
     '/evidence/CLM-001/':['11.9%','2022-11-07','2023-01-09','23%'],
     '/evidence/CLM-060/':['19%','15%','40%','2024','2021'],

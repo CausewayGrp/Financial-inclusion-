@@ -2,8 +2,8 @@
  "schema": "YFIE_ROUTE_CONTENT_AND_STATE_INVENTORY/1.3",
  "purpose": "Design recipient's map of every route, its family, bindings, collections, next actions and the states Design must cover. Derived; not authority.",
  "generated_from": {
-  "production_master_sha256": "8385ede6ebd9d6760c9cfdd16b4bf5d5c80a6a787753b329fe3a3cde46ff7da3",
-  "page_specs_sha256": "ba6d2bb062ea022e98b3a0af09cf71a29c65daa8bd2f09653d14b1b2116ff2de",
+  "production_master_sha256": "d52dfc53cef8500b50a2873c68b6c3d13f2763c5ec0ed8af6d93c59f28b612ee",
+  "page_specs_sha256": "39a73873de3ee87b90bf7bcd025a2f88dbe6e1a7bcb5dab39a1c8fb5327b9fe7",
   "generator": "scripts/handoff_inventory.py"
  },
  "counts": {
@@ -1300,8 +1300,8 @@
     "en": "dist/en/evidence/CLM-017/index.html",
     "ar": "dist/ar/evidence/CLM-017/index.html"
    },
-   "title_en": "Latest monthly point-of-sale (POS) release listed by CBY-Aden: June 2026 on its Arabic page, January 2026 on its English page (checked 3 October 2026)",
-   "title_ar": "أحدث إصدار شهري لنقاط البيع لدى البنك المركزي اليمني – عدن: يونيو 2026 في صفحته بالعربية، ويناير 2026 في صفحته بالإنجليزية (اطُّلع عليهما في 3 أكتوبر 2026)",
+   "title_en": "Latest monthly point-of-sale (POS) release listed by CBY-Aden: June 2026 on its Arabic payments page, January 2026 on its English payments page (both checked 3 October 2026)",
+   "title_ar": "أحدث إصدار شهري لنقاط البيع لدى البنك المركزي اليمني – عدن: يونيو 2026 في صفحة المدفوعات بالعربية، ويناير 2026 في صفحة المدفوعات بالإنجليزية (اطُّلع عليهما في 3 أكتوبر 2026)",
    "sections": 2,
    "section_rows_split_by_language": false,
    "evidence_ids": [
@@ -4622,8 +4622,8 @@
     "en": "dist/en/payments/index.html",
     "ar": "dist/ar/payments/index.html"
    },
-   "title_en": "Payments: point-of-sale (POS) terminals reported by the Central Bank of Yemen – Aden rose from 561 to 1,651 between March 2025 and June 2026; how many people use them is not measured",
-   "title_ar": "المدفوعات: ارتفع عدد أجهزة نقاط البيع التي يُبلغ عنها البنك المركزي اليمني – عدن من 561 إلى 1,651 بين مارس 2025 ويونيو 2026؛ أما عدد من يستخدمونها فغير مقيس",
+   "title_en": "Payments: point-of-sale (POS) terminals reported by the Central Bank of Yemen – Aden rose from 561 to 1,651 between March 2025 and June 2026, within its reporting scope; how many people use them is not measured",
+   "title_ar": "المدفوعات: ارتفع عدد أجهزة نقاط البيع التي يُبلغ عنها البنك المركزي اليمني – عدن من 561 إلى 1,651 بين مارس 2025 ويونيو 2026، ضمن نطاق إبلاغه؛ أما عدد من يستخدمونها فغير مقيس",
    "sections": 9,
    "section_rows_split_by_language": true,
    "evidence_ids": [

@@ -129,3 +129,22 @@ changes, and the two records the owner asked to be kept here:
 
 Not carried in RC-8 (next): the Global Findex 2025 non-coverage of Yemen and the Microdata Library's named exclusions
 (about 23% of the population) — both MATCH what the resource says; adding them is enrichment, queued after B6.
+
+## 5. Independent reviews of RC-8, folded into RC-8b (3 October 2026)
+
+Two reviewers who did not write RC-8 read it: one bilingual reviewer (Arabic first; NOT ACCEPTABLE, one blocking finding)
+and one adversarial reviewer who re-read the originals (BROKEN, two blocking findings). The adversarial reviewer
+confirmed every new number against the originals: the February–June 2026 tiles; the May treatment (no derived change
+anywhere in `dist/`); the monthly highs; Decision No. 10's date (the scan reads "Ref:345/CBY/2026, Date: 8/6/2026" and
+«الموافق 8 يونيو 2026م»); Decision No. 18's four names character for character, with none in `dist/` or the search data;
+the 23 regulatory documents, all from CBY-Aden; the bank list's 26 rows, 12 of them named as microfinance banks.
+All findings were applied in `rc_8b_review_fixes.py` (ledger `runs/RC-8b_MASTER_LEDGER.json`).
+
+| Finding | Check in the original | Result |
+|---|---|---|
+| The reason given for reading the POS value in YER million was false: a month-on-month percentage is the same in millions and in billions | December 2025 file (69b058981b681) prints «910,688» under «مليون» with ▲24.4%; April 2025 prints «317,639 مليون» beside March's «320» (the Master already records it as 317.639) | **Corrected.** Every release writes the decimal mark as a comma. From January 2026 the value is given in billions, so «1,262» under «مليار» is 1.262 billion, i.e. YER 1,262 million. The label is right, and the series stays in YER million. The summaries, chart note, passport and observation caveats now say this. The value per transaction (about YER 52,500) is close to the Q3 2024 report's. December's printed +24.4% matches no reading of November's 783,583 (+16.2%); recorded here, not used |
+| The exchange and remittance roster has been replaced | cby-ye.com/pages/14 links https://cby-ye.com/files/6ab391c11043b.pdf (created 22 September 2026; 20 pages, the last blank but for a stray "232"); the serial numbering restarts per section and ends at **100, 231 and 111**; the third heading «ثالثا: وكلاء الحوالات المرخصة لمزاولة نشاط الصرافة للعام 2026م» was read by eye on page 8 after establishment row 231 | **Corrected.** The Master held the 19 August file (6a87039fd05bb; 11 pages; 98 / 225 / 106; 429 rows). Counts, copy, contract pins and the locator now follow the 22 September file (442 rows). CLM-009 states that CBY-Aden has replaced the roster file during 2026. The 22 September file still lists an establishment that Decision No. 18 (24 September) suspended; this fits the rule that decisions are not subtracted from the roster |
+| CLM-019 said entity names were recorded "from the signed decisions" | Only Decisions 10 and 18 have a signed-scan locator; the others are read from news pages | **Corrected** to "entity names, where transcribed, are held only in this resource's internal source records" |
+| The other 2026 decision dates are news-page dates | Decision No. 10 shows that the instrument date can differ from the news page's date by a day | **Open.** Recorded in `FINAL_OPEN_ITEMS_REGISTER.md` for the B14e re-run: read each decision's signed scan where one is linked |
+| Regulatory group "(23)" with 22 cards | `dist/*/data/`: the group renders 22 cards plus a link to the curated card of Decision No. 23 of 2024 | No change: the count is right |
+| The bank list's foot may carry a handwritten «٢٦/٧» | July 2026 scan | The source title now says "no printed date" rather than "undated" |

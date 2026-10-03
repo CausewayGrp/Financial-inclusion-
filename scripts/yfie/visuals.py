@@ -803,7 +803,7 @@ def provider_matrix(v: dict, cite_label: str, origin: str | None, heading: str =
     """SIGNATURE · one row per provider class, five dimensions in the contract's column order (issuing authority or
     source; dated named universe or count; status events; negative authority; evidence of operation). Cells hold
     governed words and dates, never dots; a dimension with no governed row is UNKNOWN in the state grammar (never
-    zero, never 'none exist'); counts only as governed: the roster by category (never 429 as providers), the wallet
+    zero, never 'none exist'); counts only as governed: the roster by category (never the 442-row total as providers), the wallet
     counts listed by date and wording (never one number). Every dated cell links its source record. The five column
     headings and the fifth row's class label are not governed yet (escalated): they render as placeholders, each cell
     keeps its own governed label as well, and the payment-system-operators row — the contract's known gap — is always

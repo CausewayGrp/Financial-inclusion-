@@ -59,3 +59,9 @@ With the network open, the watch points were re-read in their originals on 3 Oct
 
 The edition label moves to 3 October 2026 ("This edition reflects what its sources showed when they were checked, up to
 3 October 2026"). B14e re-runs this sweep before the release candidate closes and appends its own dated result here.
+
+Addendum, 3 October 2026 (RC-8b, after the independent reviews of RC-8): CBY-Aden's 2026 exchange and remittance roster
+was found replaced on its licensing page (https://cby-ye.com/pages/14). The new file is dated 22 September 2026 by its PDF
+metadata, with no printed date, and lists 100 companies, 231 establishments and 111 remittance agents. The 19 August file
+listed 98, 225 and 106. Classification: PUBLIC CLAIM CHANGE. CLM-009, VIS-PROVIDER-TIME, /providers/ and /access/ are
+updated.

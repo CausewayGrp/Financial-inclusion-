@@ -1,0 +1,789 @@
+{
+ "transaction": "RC-8b",
+ "summary": "RC-8 independent reviews folded into one rerun",
+ "items": {
+  "global_substitutions": {
+   " do not give": 11,
+   "2026 totals give the +": 4
+  }
+ },
+ "input_master_sha256": "8385ede6ebd9d6760c9cfdd16b4bf5d5c80a6a787753b329fe3a3cde46ff7da3",
+ "output_master_sha256": "d52dfc53cef8500b50a2873c68b6c3d13f2763c5ec0ed8af6d93c59f28b612ee",
+ "cells_written": 86,
+ "changes": [
+  {
+   "finding": "RC-8b",
+   "sheet": "06_EVIDENCE_OBJECTS",
+   "row": 24,
+   "col": 14,
+   "field": null,
+   "old": "Each decision is taken from its official publication by the Central Bank of Yemen – Aden (CBY-Aden) and recorded by date, decision number, action and the class of entity it names. The names of the entities are recorded in this resource's lineage from the signed decisions and are not printed on this site. The decisions are not treated as a census of all providers or as proof that a listed provider is currently operating.",
+   "new": "Each decision is taken from its official publication by the Central Bank of Yemen – Aden (CBY-Aden) and recorded by date, decision number, action and the class of entity it names. Entity names, where transcribed, are held only in this resource's internal source records and are not published on this site. The decisions are not treated as a census of all providers or as proof that a listed provider is currently operating."
+  },
+  {
+   "finding": "RC-8b",
+   "sheet": "06_EVIDENCE_OBJECTS",
+   "row": 24,
+   "col": 15,
+   "field": null,
+   "old": "يؤخذ كل قرار من نشره الرسمي لدى البنك المركزي اليمني – عدن، ويُسجَّل بحسب تاريخه ورقمه ونوع الإجراء وفئة الجهات التي يسميها. وتُسجَّل أسماء الجهات في سجل المصادر الداخلي لهذا المورد من القرارات الموقعة، ولا تُطبع في هذا الموقع. ولا تُعامل القرارات بوصفها تعدادًا لجميع مقدمي الخدمات أو دليلًا على أن مقدم خدمة مدرجًا يعمل حاليًا.",
+   "new": "يؤخذ كل قرار من نشره الرسمي لدى البنك المركزي اليمني – عدن، ويُسجَّل بحسب تاريخه ورقمه ونوع الإجراء وفئة الجهات التي يسميها. وحيثما نُقلت أسماء الجهات، فهي محفوظة في سجل المصادر الداخلي لهذا المورد فقط، ولا تُنشر في هذا الموقع. ولا تُعامل القرارات بوصفها تعدادًا لجميع مقدمي الخدمات أو دليلًا على أن مقدم خدمة مدرجًا يعمل حاليًا."
+  },
+  {
+   "finding": "RC-8b",
+   "sheet": "03_PAGE_SECTIONS",
+   "row": 177,
+   "col": 4,
+   "field": null,
+   "old": "June 2026 was the latest monthly POS release on CBY-Aden's Arabic payments page as checked on 3 October 2026; its English page still ends at January 2026",
+   "new": "June 2026 was the latest monthly POS release on CBY-Aden's Arabic payments page as checked on 3 October 2026; its English payments page still ends at January 2026"
+  },
+  {
+   "finding": "RC-8b",
+   "sheet": "03_PAGE_SECTIONS",
+   "row": 178,
+   "col": 6,
+   "field": null,
+   "old": "يونيو 2026 هو أحدث إصدار شهري لنقاط البيع في صفحة المدفوعات بالعربية لدى البنك المركزي اليمني – عدن، كما اطُّلع عليها في 3 أكتوبر 2026؛ ولا تزال صفحته بالإنجليزية تنتهي عند يناير 2026",
+   "new": "يونيو 2026 هو أحدث إصدار شهري لنقاط البيع في صفحة المدفوعات بالعربية لدى البنك المركزي اليمني – عدن، كما اطُّلع عليها في 3 أكتوبر 2026؛ ولا تزال صفحة المدفوعات بالإنجليزية تنتهي عند يناير 2026"
+  },
+  {
+   "finding": "RC-8b",
+   "sheet": "06_EVIDENCE_OBJECTS",
+   "row": 22,
+   "col": 4,
+   "field": null,
+   "old": "Latest monthly point-of-sale (POS) release listed by CBY-Aden: June 2026 on its Arabic page, January 2026 on its English page (checked 3 October 2026)",
+   "new": "Latest monthly point-of-sale (POS) release listed by CBY-Aden: June 2026 on its Arabic payments page, January 2026 on its English payments page (both checked 3 October 2026)"
+  },
+  {
+   "finding": "RC-8b",
+   "sheet": "06_EVIDENCE_OBJECTS",
+   "row": 22,
+   "col": 5,
+   "field": null,
+   "old": "أحدث إصدار شهري لنقاط البيع لدى البنك المركزي اليمني – عدن: يونيو 2026 في صفحته بالعربية، ويناير 2026 في صفحته بالإنجليزية (اطُّلع عليهما في 3 أكتوبر 2026)",
+   "new": "أحدث إصدار شهري لنقاط البيع لدى البنك المركزي اليمني – عدن: يونيو 2026 في صفحة المدفوعات بالعربية، ويناير 2026 في صفحة المدفوعات بالإنجليزية (اطُّلع عليهما في 3 أكتوبر 2026)"
+  },
+  {
+   "finding": "RC-8b",
+   "sheet": "02_SITE_MAP",
+   "row": 127,
+   "col": 5,
+   "field": null,
+   "old": "Payments: point-of-sale (POS) terminals reported by the Central Bank of Yemen – Aden rose from 561 to 1,651 between March 2025 and June 2026; how many people use them is not measured",
+   "new": "Payments: point-of-sale (POS) terminals reported by the Central Bank of Yemen – Aden rose from 561 to 1,651 between March 2025 and June 2026, within its reporting scope; how many people use them is not measured"
+  },
+  {
+   "finding": "RC-8b",
+   "sheet": "02_SITE_MAP",
+   "row": 127,
+   "col": 6,
+   "field": null,
+   "old": "المدفوعات: ارتفع عدد أجهزة نقاط البيع التي يُبلغ عنها البنك المركزي اليمني – عدن من 561 إلى 1,651 بين مارس 2025 ويونيو 2026؛ أما عدد من يستخدمونها فغير مقيس",
+   "new": "المدفوعات: ارتفع عدد أجهزة نقاط البيع التي يُبلغ عنها البنك المركزي اليمني – عدن من 561 إلى 1,651 بين مارس 2025 ويونيو 2026، ضمن نطاق إبلاغه؛ أما عدد من يستخدمونها فغير مقيس"
+  },
+  {
+   "finding": "RC-8b",
+   "sheet": "03_PAGE_SECTIONS",
+   "row": 247,
+   "col": 5,
+   "field": null,
+   "old": "“11.9% of adults aged 15 and over in the areas surveyed had an account” (Global Findex, fieldwork 2022–2023) and “POS terminals reported by the Central Bank of Yemen – Aden rose from 561 to 1,651 between March 2025 and June 2026” are both legitimate observations. The first is about people, estimated from a weighted survey. The second is about pieces of infrastructure counted in an administrative system.\nOne terminal can serve many people, and one person can use many terminals. A person can hold several accounts; an account can generate many transactions; a registered subscriber may be inactive.\n> The noun is part of the metric. Change the noun and the story can change without anything changing in reality.",
+   "new": "“11.9% of adults aged 15 and over in the areas surveyed had an account” (Global Findex, fieldwork 2022–2023) and “POS terminals reported by the Central Bank of Yemen – Aden rose from 561 to 1,651 between March 2025 and June 2026, within its reporting scope” are both legitimate observations. The first is about people, estimated from a weighted survey. The second is about pieces of infrastructure counted in an administrative system.\nOne terminal can serve many people, and one person can use many terminals. A person can hold several accounts; an account can generate many transactions; a registered subscriber may be inactive.\n> The noun is part of the metric. Change the noun and the story can change without anything changing in reality."
+  },
+  {
+   "finding": "RC-8b",
+   "sheet": "03_PAGE_SECTIONS",
+   "row": 247,
+   "col": 7,
+   "field": null,
+   "old": "«كان 11.9% من البالغين بعمر 15 سنة فأكثر في المناطق التي شملها المسح يملكون حسابًا» (مسح Findex العالمي، العمل الميداني 2022–2023)، و«ارتفع عدد أجهزة نقاط البيع التي يبلغ عنها البنك المركزي اليمني – عدن من 561 إلى 1,651 بين مارس 2025 ويونيو 2026»: ملاحظتان مشروعتان. الأولى عن أشخاص، مقدَّرة من مسح مرجّح. والثانية عن معدات من البنية التحتية تُحصى في نظام إداري.\nقد يخدم الجهاز الواحد أشخاصًا كثيرين، وقد يستخدم الشخص الواحد أجهزة كثيرة. وقد يملك الشخص أكثر من حساب، وقد يولد الحساب الواحد معاملات كثيرة، وقد يكون المشترك المسجل غير نشط.\n> ما نعدّه جزء من المؤشر نفسه؛ فإذا تغيّر المعدود قد تتغير القصة من دون أن يتغير شيء في الواقع.",
+   "new": "«كان 11.9% من البالغين بعمر 15 سنة فأكثر في المناطق التي شملها المسح يملكون حسابًا» (مسح Findex العالمي، العمل الميداني 2022–2023)، و«ارتفع عدد أجهزة نقاط البيع التي يبلغ عنها البنك المركزي اليمني – عدن من 561 إلى 1,651 بين مارس 2025 ويونيو 2026، ضمن نطاق إبلاغه»: ملاحظتان مشروعتان. الأولى عن أشخاص، مقدَّرة من مسح مرجّح. والثانية عن معدات من البنية التحتية تُحصى في نظام إداري.\nقد يخدم الجهاز الواحد أشخاصًا كثيرين، وقد يستخدم الشخص الواحد أجهزة كثيرة. وقد يملك الشخص أكثر من حساب، وقد يولد الحساب الواحد معاملات كثيرة، وقد يكون المشترك المسجل غير نشط.\n> ما نعدّه جزء من المؤشر نفسه؛ فإذا تغيّر المعدود قد تتغير القصة من دون أن يتغير شيء في الواقع."
+  },
+  {
+   "finding": "RC-8b",
+   "sheet": "04_NAV_UX",
+   "row": 534,
+   "col": 5,
+   "field": "SEARCH-ALIAS-001.boundary_note_en",
+   "old": "Discovery aid only: this evidence base holds no laws. It holds regulations, circulars, decisions and official lists issued by the Central Bank of Yemen – Aden, listed on the Data page.",
+   "new": "Discovery aid only: this evidence base holds no law as a source document. It holds regulations, circulars, decisions and official lists issued by the Central Bank of Yemen – Aden, listed on the Data & sources page."
+  },
+  {
+   "finding": "RC-8b",
+   "sheet": "04_NAV_UX",
+   "row": 534,
+   "col": 6,
+   "field": "SEARCH-ALIAS-001.boundary_note_ar",
+   "old": "أداة اكتشاف فقط: لا تضم قاعدة الأدلة هذه أي قانون. وتضم لوائح وتعاميم وقرارات وقوائم رسمية صادرة عن البنك المركزي اليمني – عدن، مدرجة في صفحة البيانات.",
+   "new": "أداة اكتشاف فقط: لا تضم قاعدة الأدلة هذه أي قانون بوصفه وثيقة مصدرية. وتضم لوائح وتعاميم وقرارات وقوائم رسمية صادرة عن البنك المركزي اليمني – عدن، مدرجة في صفحة البيانات والمصادر."
+  },
+  {
+   "finding": "RC-8b",
+   "sheet": "06_EVIDENCE_OBJECTS",
+   "row": 68,
+   "col": 6,
+   "field": null,
+   "old": "The nominal value of POS transactions reported by the Central Bank of Yemen – Aden (CBY-Aden) rose from YER 320 million in March 2025 to YER 1,045 million in June 2026, within CBY-Aden's reporting scope, but not steadily: the monthly high was YER 1,579 million in May 2026. The September 2025 value is missing because no verified value is available for that month. From the January 2026 release onward the value is labelled “billion”; this resource reads it as YER million, the unit the earlier releases state, because only that reading reconciles with the month-on-month changes the releases print. The series is nominal and does not establish real-value growth, purchasing-power change, unique-user growth or financial-inclusion impact.",
+   "new": "The nominal value of POS transactions reported by the Central Bank of Yemen – Aden (CBY-Aden) rose from YER 320 million in March 2025 to YER 1,045 million in June 2026, within CBY-Aden's reporting scope, but not steadily: the monthly high was YER 1,579 million in May 2026. The September 2025 value is missing because no verified value is available for that month. From the January 2026 release onward the value is stated in billions, where the earlier releases stated millions; all of them write the decimal mark as a comma, so the January figure printed as 1,262 billion is 1.262 billion, that is YER 1,262 million. This resource keeps the whole series in YER million. The series is nominal and does not establish real-value growth, purchasing-power change, unique-user growth or financial-inclusion impact."
+  },
+  {
+   "finding": "RC-8b",
+   "sheet": "11_VISUAL_LIBRARY",
+   "row": 18,
+   "col": 21,
+   "field": null,
+   "old": "The nominal value of POS transactions reported by the Central Bank of Yemen – Aden (CBY-Aden) rose from YER 320 million in March 2025 to YER 1,045 million in June 2026, within CBY-Aden's reporting scope, but not steadily: the monthly high was YER 1,579 million in May 2026. The September 2025 value is missing because no verified value is available for that month. From the January 2026 release onward the value is labelled “billion”; this resource reads it as YER million, the unit the earlier releases state, because only that reading reconciles with the month-on-month changes the releases print. The series is nominal and does not establish real-value growth, purchasing-power change, unique-user growth or financial-inclusion impact.",
+   "new": "The nominal value of POS transactions reported by the Central Bank of Yemen – Aden (CBY-Aden) rose from YER 320 million in March 2025 to YER 1,045 million in June 2026, within CBY-Aden's reporting scope, but not steadily: the monthly high was YER 1,579 million in May 2026. The September 2025 value is missing because no verified value is available for that month. From the January 2026 release onward the value is stated in billions, where the earlier releases stated millions; all of them write the decimal mark as a comma, so the January figure printed as 1,262 billion is 1.262 billion, that is YER 1,262 million. This resource keeps the whole series in YER million. The series is nominal and does not establish real-value growth, purchasing-power change, unique-user growth or financial-inclusion impact."
+  },
+  {
+   "finding": "RC-8b",
+   "sheet": "06_EVIDENCE_OBJECTS",
+   "row": 68,
+   "col": 7,
+   "field": null,
+   "old": "ارتفعت القيمة الاسمية لمعاملات نقاط البيع التي يُبلغ عنها البنك المركزي اليمني – عدن من 320 مليون ريال يمني في مارس 2025 إلى 1,045 مليون ريال في يونيو 2026، ضمن نطاق إبلاغه، ولكن ليس بصورة مطردة: فقد بلغ أعلى مستوى شهري 1,579 مليون ريال في مايو 2026. وقيمة سبتمبر 2025 مفقودة لعدم توفر قيمة متحقق منها لذلك الشهر. وابتداءً من إصدار يناير 2026 تُدرج القيمة تحت وحدة «مليار»، لكن هذا المورد يقرؤها بملايين الريالات، وهي الوحدة التي تذكرها الإصدارات السابقة، لأن هذه القراءة وحدها تتسق مع نسب التغير الشهرية التي تطبعها الإصدارات. والسلسلة اسمية ولا تثبت نموًا بالقيمة الحقيقية أو تغيرًا في القوة الشرائية أو زيادة عدد المستخدمين الفريدين أو أثرًا على الشمول المالي.",
+   "new": "ارتفعت القيمة الاسمية لمعاملات نقاط البيع التي يُبلغ عنها البنك المركزي اليمني – عدن من 320 مليون ريال يمني في مارس 2025 إلى 1,045 مليون ريال في يونيو 2026، ضمن نطاق إبلاغه، ولكن ليس بصورة مطردة: فقد بلغ أعلى مستوى شهري 1,579 مليون ريال في مايو 2026. وقيمة سبتمبر 2025 مفقودة لعدم توفر قيمة متحقق منها لذلك الشهر. وابتداءً من إصدار يناير 2026 تُذكر القيمة بالمليار، بينما ذكرتها الإصدارات السابقة بالمليون؛ وتستعمل الإصدارات كلها الفاصلة علامةً عشرية، فرقم يناير المنشور بصيغة 1,262 مليار يعني 1.262 مليار ريال، أي 1,262 مليون ريال. ويُبقي هذا المورد السلسلة كلها بملايين الريالات. والسلسلة اسمية ولا تثبت نموًا بالقيمة الحقيقية أو تغيرًا في القوة الشرائية أو زيادة عدد المستخدمين الفريدين أو أثرًا على الشمول المالي."
+  },
+  {
+   "finding": "RC-8b",
+   "sheet": "11_VISUAL_LIBRARY",
+   "row": 18,
+   "col": 22,
+   "field": null,
+   "old": "ارتفعت القيمة الاسمية لمعاملات نقاط البيع التي يُبلغ عنها البنك المركزي اليمني – عدن من 320 مليون ريال يمني في مارس 2025 إلى 1,045 مليون ريال في يونيو 2026، ضمن نطاق إبلاغه، ولكن ليس بصورة مطردة: فقد بلغ أعلى مستوى شهري 1,579 مليون ريال في مايو 2026. وقيمة سبتمبر 2025 مفقودة لعدم توفر قيمة متحقق منها لذلك الشهر. وابتداءً من إصدار يناير 2026 تُدرج القيمة تحت وحدة «مليار»، لكن هذا المورد يقرؤها بملايين الريالات، وهي الوحدة التي تذكرها الإصدارات السابقة، لأن هذه القراءة وحدها تتسق مع نسب التغير الشهرية التي تطبعها الإصدارات. والسلسلة اسمية ولا تثبت نموًا بالقيمة الحقيقية أو تغيرًا في القوة الشرائية أو زيادة عدد المستخدمين الفريدين أو أثرًا على الشمول المالي.",
+   "new": "ارتفعت القيمة الاسمية لمعاملات نقاط البيع التي يُبلغ عنها البنك المركزي اليمني – عدن من 320 مليون ريال يمني في مارس 2025 إلى 1,045 مليون ريال في يونيو 2026، ضمن نطاق إبلاغه، ولكن ليس بصورة مطردة: فقد بلغ أعلى مستوى شهري 1,579 مليون ريال في مايو 2026. وقيمة سبتمبر 2025 مفقودة لعدم توفر قيمة متحقق منها لذلك الشهر. وابتداءً من إصدار يناير 2026 تُذكر القيمة بالمليار، بينما ذكرتها الإصدارات السابقة بالمليون؛ وتستعمل الإصدارات كلها الفاصلة علامةً عشرية، فرقم يناير المنشور بصيغة 1,262 مليار يعني 1.262 مليار ريال، أي 1,262 مليون ريال. ويُبقي هذا المورد السلسلة كلها بملايين الريالات. والسلسلة اسمية ولا تثبت نموًا بالقيمة الحقيقية أو تغيرًا في القوة الشرائية أو زيادة عدد المستخدمين الفريدين أو أثرًا على الشمول المالي."
+  },
+  {
+   "finding": "RC-8b",
+   "sheet": "06_EVIDENCE_OBJECTS",
+   "row": 68,
+   "col": 14,
+   "field": null,
+   "old": "Monthly values in Yemeni rials as published in the monthly POS releases of the Central Bank of Yemen – Aden (CBY-Aden), normalised to millions of rials; the values are nominal and are not adjusted for inflation or exchange-rate changes. From the January 2026 release onward the value is labelled “billion”, while the earlier releases state million YER; the month-on-month changes the releases print reconcile only when the values are read in millions, so this resource continues to read them as YER million. No value is available for September 2025, and none is interpolated. Each value is shown to the nearest million rials (for example, 317.639 million is shown as 318).",
+   "new": "Monthly values in Yemeni rials as published in the monthly POS releases of the Central Bank of Yemen – Aden (CBY-Aden), normalised to millions of rials; the values are nominal and are not adjusted for inflation or exchange-rate changes. From the January 2026 release onward the value is stated in billions, while the earlier releases state millions; all of them write the decimal mark as a comma, so the January figure printed as 1,262 billion is 1.262 billion, that is YER 1,262 million, and this resource keeps the series in YER million. No value is available for September 2025, and none is interpolated. Each value is shown to the nearest million rials (for example, 317.639 million is shown as 318)."
+  },
+  {
+   "finding": "RC-8b",
+   "sheet": "06_EVIDENCE_OBJECTS",
+   "row": 68,
+   "col": 15,
+   "field": null,
+   "old": "قيم شهرية بالريال اليمني كما نشرها البنك المركزي اليمني – عدن في إصداراته الشهرية عن نقاط البيع، موحّدة بملايين الريالات؛ وهي قيم اسمية غير معدلة لأثر التضخم أو تغيرات سعر الصرف. وابتداءً من إصدار يناير 2026 تُدرج القيمة تحت وحدة «مليار»، بينما تذكر الإصدارات السابقة أنها بملايين الريالات؛ ولا تتسق نسب التغير الشهرية التي تطبعها الإصدارات إلا إذا قُرئت القيم بالملايين، لذلك يواصل هذا المورد قراءتها بملايين الريالات. ولا تتوفر قيمة لشهر سبتمبر 2025، ولا تُقدَّر بالاستيفاء. وتُعرض كل قيمة مقرّبة إلى أقرب مليون ريال (فمثلًا تُعرض 317.639 مليون ريال على أنها 318).",
+   "new": "قيم شهرية بالريال اليمني كما نشرها البنك المركزي اليمني – عدن في إصداراته الشهرية عن نقاط البيع، موحّدة بملايين الريالات؛ وهي قيم اسمية غير معدلة لأثر التضخم أو تغيرات سعر الصرف. وابتداءً من إصدار يناير 2026 تُذكر القيمة بالمليار، بينما تذكرها الإصدارات السابقة بالمليون؛ وتستعمل الإصدارات كلها الفاصلة علامةً عشرية، فرقم يناير المنشور بصيغة 1,262 مليار يعني 1.262 مليار ريال، أي 1,262 مليون ريال، ويُبقي هذا المورد السلسلة بملايين الريالات. ولا تتوفر قيمة لشهر سبتمبر 2025، ولا تُقدَّر بالاستيفاء. وتُعرض كل قيمة مقرّبة إلى أقرب مليون ريال (فمثلًا تُعرض 317.639 مليون ريال على أنها 318)."
+  },
+  {
+   "finding": "RC-8b",
+   "sheet": "34_EVIDENCE_PASSPORTS",
+   "row": 6,
+   "col": 9,
+   "field": null,
+   "old": "The September 2025 POS transaction-value observation in YER is missing; the September terminal count itself is present at 1,060. For December 2025→January 2026, terminal totals 1,357→1,473 imply approximately +8.55% while the January source graphic displays +11%; transaction totals 21,099→24,026 imply approximately +13.87% while the January source graphic displays +4.9%. For April 2026→May 2026, the May source graphic displays +2.4% for terminals and +9.9% for transactions, which the published totals (1,583→1,636; 30,559→36,201) do not give; because the source contradicts itself, no change is derived for that month (owner note, 3 October 2026). A smaller source-internal mismatch also appears in June 2025: 733→791 terminals imply approximately +7.91%, while the June graphic displays +7.6%. The February 2026 release displays +1.9% for terminals and −2.3% for value where the totals give about +1.97% and −2.38%; this is read as truncation, not contradiction. From the January 2026 release onward the YER value tile is labelled “billion” (مليار), while earlier releases state million YER; the printed month-on-month changes reconcile only in YER million, so the values are read as YER million. The February–June 2026 releases are listed on the Arabic payments page only. Keep raw totals and source-displayed percentages distinct rather than silently reconciling them.",
+   "new": "The September 2025 POS transaction-value observation in YER is missing; the September terminal count itself is present at 1,060. For December 2025→January 2026, terminal totals 1,357→1,473 imply approximately +8.55% while the January source graphic displays +11%; transaction totals 21,099→24,026 imply approximately +13.87% while the January source graphic displays +4.9%. For April 2026→May 2026, the May source graphic displays +2.4% for terminals and +9.9% for transactions, which the published totals (1,583→1,636; 30,559→36,201) do not give; because the source contradicts itself, no change is derived for that month (owner note, 3 October 2026). A smaller source-internal mismatch also appears in June 2025: 733→791 terminals imply approximately +7.91%, while the June graphic displays +7.6%. The February 2026 release displays +1.9% for terminals and −2.3% for value where the totals give about +1.97% and −2.38%; this is read as truncation, not contradiction. From the January 2026 release onward the YER value tile is labelled “billion” (مليار), while earlier releases state million YER. Every release writes the decimal mark as a comma (April 2025 prints 317,639 under million: 317.639 million; January 2026 prints 1,262 under billion: 1.262 billion = YER 1,262 million), so the series is kept in YER million. Month-on-month percentages cannot tell the two scales apart; the comma reading, and a value per transaction close to the Q3 2024 report's (about YER 52,500), do. The February–June 2026 releases are listed on the Arabic payments page only. Keep raw totals and source-displayed percentages distinct rather than silently reconciling them."
+  },
+  {
+   "finding": "RC-8b",
+   "sheet": "34_EVIDENCE_PASSPORTS",
+   "row": 6,
+   "col": 9,
+   "field": null,
+   "old": "The September 2025 POS transaction-value observation in YER is missing; the September terminal count itself is present at 1,060. For December 2025→January 2026, terminal totals 1,357→1,473 imply approximately +8.55% while the January source graphic displays +11%; transaction totals 21,099→24,026 imply approximately +13.87% while the January source graphic displays +4.9%. For April 2026→May 2026, the May source graphic displays +2.4% for terminals and +9.9% for transactions, which the published totals (1,583→1,636; 30,559→36,201) do not give; because the source contradicts itself, no change is derived for that month (owner note, 3 October 2026). A smaller source-internal mismatch also appears in June 2025: 733→791 terminals imply approximately +7.91%, while the June graphic displays +7.6%. The February 2026 release displays +1.9% for terminals and −2.3% for value where the totals give about +1.97% and −2.38%; this is read as truncation, not contradiction. From the January 2026 release onward the YER value tile is labelled “billion” (مليار), while earlier releases state million YER. Every release writes the decimal mark as a comma (April 2025 prints 317,639 under million: 317.639 million; January 2026 prints 1,262 under billion: 1.262 billion = YER 1,262 million), so the series is kept in YER million. Month-on-month percentages cannot tell the two scales apart; the comma reading, and a value per transaction close to the Q3 2024 report's (about YER 52,500), do. The February–June 2026 releases are listed on the Arabic payments page only. Keep raw totals and source-displayed percentages distinct rather than silently reconciling them.",
+   "new": "The September 2025 POS transaction-value observation in YER is missing; the September terminal count itself is present at 1,060. For December 2025→January 2026, terminal totals 1,357→1,473 imply approximately +8.55% while the January source graphic displays +11%; transaction totals 21,099→24,026 imply approximately +13.87% while the January source graphic displays +4.9%. For April 2026→May 2026, the May source graphic displays +2.4% for terminals and +9.9% for transactions, which the published totals (1,583→1,636; 30,559→36,201) do not give; because the source contradicts itself, no change is derived for that month (owner note, 3 October 2026). A smaller source-internal mismatch also appears in June 2025: 733→791 terminals imply approximately +7.91%, while the June graphic displays +7.6%. The February 2026 release displays +1.9% for terminals and −2.3% for value where the totals give about +1.97% and −2.38%; these differences are under 0.1 point and are recorded, not flagged. From the January 2026 release onward the YER value tile is labelled “billion” (مليار), while earlier releases state million YER. Every release writes the decimal mark as a comma (April 2025 prints 317,639 under million: 317.639 million; January 2026 prints 1,262 under billion: 1.262 billion = YER 1,262 million), so the series is kept in YER million. Month-on-month percentages cannot tell the two scales apart; the comma reading, and a value per transaction close to the Q3 2024 report's (about YER 52,500), do. The February–June 2026 releases are listed on the Arabic payments page only. Keep raw totals and source-displayed percentages distinct rather than silently reconciling them."
+  },
+  {
+   "finding": "RC-8b",
+   "sheet": "19_PAYMENTS_DATA",
+   "row": 87,
+   "col": 15,
+   "field": null,
+   "old": "February 2026 displays +1.9% where the totals give about 1.97%: read as truncation, not contradiction.",
+   "new": "February 2026 displays +1.9% where the totals give about 1.97%: a difference under 0.1 point, recorded, not flagged."
+  },
+  {
+   "finding": "RC-8b",
+   "sheet": "19_PAYMENTS_DATA",
+   "row": 89,
+   "col": 15,
+   "field": "OBS-00085.caveats",
+   "old": "Normalized to YER millions. The tile is labelled «مليار» (billion), as in every release from January 2026; it is read as YER million in continuity with the earlier releases, which state million YER, because only that reading reconciles with the month-on-month changes the releases print (displayed −2.3%).",
+   "new": "Normalized to YER millions. The tile prints 1,232 under «مليار» (billion) with a comma as the decimal mark: 1.232 billion, that is YER 1,232 million, the series unit; the earlier releases print millions the same way (April 2025: 317,639 under million = 317.639 million). Displayed change −2.3%."
+  },
+  {
+   "finding": "RC-8b",
+   "sheet": "19_PAYMENTS_DATA",
+   "row": 89,
+   "col": 12,
+   "field": "OBS-00085.source_value_as_reported",
+   "old": "1,232",
+   "new": "1,232 مليار"
+  },
+  {
+   "finding": "RC-8b",
+   "sheet": "19_PAYMENTS_DATA",
+   "row": 92,
+   "col": 15,
+   "field": "OBS-00088.caveats",
+   "old": "Normalized to YER millions. The tile is labelled «مليار» (billion), as in every release from January 2026; it is read as YER million in continuity with the earlier releases, which state million YER, because only that reading reconciles with the month-on-month changes the releases print (displayed −8.8%).",
+   "new": "Normalized to YER millions. The tile prints 1,124 under «مليار» (billion) with a comma as the decimal mark: 1.124 billion, that is YER 1,124 million, the series unit; the earlier releases print millions the same way (April 2025: 317,639 under million = 317.639 million). Displayed change −8.8%."
+  },
+  {
+   "finding": "RC-8b",
+   "sheet": "19_PAYMENTS_DATA",
+   "row": 92,
+   "col": 12,
+   "field": "OBS-00088.source_value_as_reported",
+   "old": "1,124",
+   "new": "1,124 مليار"
+  },
+  {
+   "finding": "RC-8b",
+   "sheet": "19_PAYMENTS_DATA",
+   "row": 95,
+   "col": 15,
+   "field": "OBS-00091.caveats",
+   "old": "Normalized to YER millions. The tile is labelled «مليار» (billion), as in every release from January 2026; it is read as YER million in continuity with the earlier releases, which state million YER, because only that reading reconciles with the month-on-month changes the releases print (displayed +10.7%).",
+   "new": "Normalized to YER millions. The tile prints 1,244 under «مليار» (billion) with a comma as the decimal mark: 1.244 billion, that is YER 1,244 million, the series unit; the earlier releases print millions the same way (April 2025: 317,639 under million = 317.639 million). Displayed change +10.7%."
+  },
+  {
+   "finding": "RC-8b",
+   "sheet": "19_PAYMENTS_DATA",
+   "row": 95,
+   "col": 12,
+   "field": "OBS-00091.source_value_as_reported",
+   "old": "1,244",
+   "new": "1,244 مليار"
+  },
+  {
+   "finding": "RC-8b",
+   "sheet": "19_PAYMENTS_DATA",
+   "row": 98,
+   "col": 15,
+   "field": "OBS-00094.caveats",
+   "old": "Normalized to YER millions. The tile is labelled «مليار» (billion), as in every release from January 2026; it is read as YER million in continuity with the earlier releases, which state million YER, because only that reading reconciles with the month-on-month changes the releases print (displayed +26.9%).",
+   "new": "Normalized to YER millions. The tile prints 1,579 under «مليار» (billion) with a comma as the decimal mark: 1.579 billion, that is YER 1,579 million, the series unit; the earlier releases print millions the same way (April 2025: 317,639 under million = 317.639 million). Displayed change +26.9%."
+  },
+  {
+   "finding": "RC-8b",
+   "sheet": "19_PAYMENTS_DATA",
+   "row": 98,
+   "col": 12,
+   "field": "OBS-00094.source_value_as_reported",
+   "old": "1,579",
+   "new": "1,579 مليار"
+  },
+  {
+   "finding": "RC-8b",
+   "sheet": "19_PAYMENTS_DATA",
+   "row": 101,
+   "col": 15,
+   "field": "OBS-00097.caveats",
+   "old": "Normalized to YER millions. The tile is labelled «مليار» (billion), as in every release from January 2026; it is read as YER million in continuity with the earlier releases, which state million YER, because only that reading reconciles with the month-on-month changes the releases print (displayed −33.8%).",
+   "new": "Normalized to YER millions. The tile prints 1,045 under «مليار» (billion) with a comma as the decimal mark: 1.045 billion, that is YER 1,045 million, the series unit; the earlier releases print millions the same way (April 2025: 317,639 under million = 317.639 million). Displayed change −33.8%."
+  },
+  {
+   "finding": "RC-8b",
+   "sheet": "19_PAYMENTS_DATA",
+   "row": 101,
+   "col": 12,
+   "field": "OBS-00097.source_value_as_reported",
+   "old": "1,045",
+   "new": "1,045 مليار"
+  },
+  {
+   "finding": "RC-8b",
+   "sheet": "03_PAGE_SECTIONS",
+   "row": 216,
+   "col": 5,
+   "field": null,
+   "old": "The list of licensed banks issued by the Central Bank of Yemen – Aden (CBY-Aden), as checked on 3 October 2026, names 26 banks, and its 2026 exchange and remittance roster lists 98 exchange companies, 225 individual exchange establishments and 106 remittance agents. These sources show who holds which formal status under that authority on a stated date. Operation, activity, reach and service quality require additional evidence.",
+   "new": "The list of licensed banks issued by the Central Bank of Yemen – Aden (CBY-Aden), as checked on 3 October 2026, names 26 banks, and its 2026 exchange and remittance roster lists 100 exchange companies, 231 individual exchange establishments and 111 remittance agents. These sources show who holds which formal status under that authority on a stated date. Operation, activity, reach and service quality require additional evidence."
+  },
+  {
+   "finding": "RC-8b",
+   "sheet": "03_PAGE_SECTIONS",
+   "row": 216,
+   "col": 7,
+   "field": null,
+   "old": "تضم قائمة البنوك المرخصة الصادرة عن البنك المركزي اليمني – عدن، كما اطُّلع عليها في 3 أكتوبر 2026، 26 بنكًا، وتضم قائمته لعام 2026 لشركات الصرافة والحوالات 98 شركة صرافة و225 منشأة صرافة فردية و106 وكلاء حوالات. وتبين هذه المصادر من يحمل أي صفة رسمية لدى تلك السلطة في تاريخ محدد. أما التشغيل والنشاط والوصول وجودة الخدمة فتحتاج إلى أدلة إضافية.",
+   "new": "تضم قائمة البنوك المرخصة الصادرة عن البنك المركزي اليمني – عدن، كما اطُّلع عليها في 3 أكتوبر 2026، 26 بنكًا، وتضم قائمته لعام 2026 لشركات الصرافة والحوالات 100 شركة صرافة و231 منشأة صرافة فردية و111 وكيلًا للحوالات. وتبين هذه المصادر من يحمل أي صفة رسمية لدى تلك السلطة في تاريخ محدد. أما التشغيل والنشاط والوصول وجودة الخدمة فتحتاج إلى أدلة إضافية."
+  },
+  {
+   "finding": "RC-8b",
+   "sheet": "03_PAGE_SECTIONS",
+   "row": 219,
+   "col": 5,
+   "field": null,
+   "old": "The official 2026 roster of the Central Bank of Yemen – Aden (CBY-Aden) lists 98 exchange companies, 225 individual exchange establishments and 106 remittance agents. These are three source-defined categories, not a deduplicated total of unique firms. The 2026 suspension, withdrawal or closure decisions are separate status evidence: they are dated January–September 2026, some were issued before the roster and some after it, and the roster’s own issue date is not stated. They have to be reconciled entity by entity before any count of providers operating on a given date is stated.",
+   "new": "The official 2026 roster of the Central Bank of Yemen – Aden (CBY-Aden) lists 100 exchange companies, 231 individual exchange establishments and 111 remittance agents. These are three source-defined categories, not a deduplicated total of unique firms. The 2026 suspension, withdrawal or closure decisions are separate status evidence: they are dated January–September 2026, some were issued before the roster and some after it, and the roster’s own issue date is not stated. They have to be reconciled entity by entity before any count of providers operating on a given date is stated."
+  },
+  {
+   "finding": "RC-8b",
+   "sheet": "03_PAGE_SECTIONS",
+   "row": 220,
+   "col": 7,
+   "field": null,
+   "old": "تسجل القائمة الرسمية للبنك المركزي اليمني – عدن لعام 2026 عدد 98 شركة صرافة و225 منشأة صرافة فردية و106 وكلاء حوالات. هذه ثلاث فئات كما يعرّفها المصدر، وليست إجماليًا لجهات فريدة بعد إزالة الازدواج. أما قرارات التعليق أو سحب الترخيص أو الإغلاق الصادرة في 2026 فأدلة منفصلة على الوضع: فهي مؤرخة بين يناير وسبتمبر 2026، وصدر بعضها قبل القائمة وبعضها بعدها، ولا تذكر القائمة نفسها تاريخ صدورها. ولذلك يجب مطابقتها جهةً جهة قبل إعلان أي عدد لمقدمي الخدمات العاملين في تاريخ محدد.",
+   "new": "تسجل القائمة الرسمية للبنك المركزي اليمني – عدن لعام 2026 عدد 100 شركة صرافة و231 منشأة صرافة فردية و111 وكيلًا للحوالات. هذه ثلاث فئات كما يعرّفها المصدر، وليست إجماليًا لجهات فريدة بعد إزالة الازدواج. أما قرارات التعليق أو سحب الترخيص أو الإغلاق الصادرة في 2026 فأدلة منفصلة على الوضع: فهي مؤرخة بين يناير وسبتمبر 2026، وصدر بعضها قبل القائمة وبعضها بعدها، ولا تذكر القائمة نفسها تاريخ صدورها. ولذلك يجب مطابقتها جهةً جهة قبل إعلان أي عدد لمقدمي الخدمات العاملين في تاريخ محدد."
+  },
+  {
+   "finding": "RC-8b",
+   "sheet": "03_PAGE_SECTIONS",
+   "row": 355,
+   "col": 5,
+   "field": null,
+   "old": "Official lists document a substantial exchange and remittance provider presence relevant to the access question. The 2026 roster of the Central Bank of Yemen – Aden (CBY-Aden) lists 98 exchange companies, 225 individual exchange establishments and 106 remittance agents — three source categories, not a deduplicated count of firms — and the CBY-Aden list of licensed banks, as checked on 3 October 2026, names 26 banks. Listing or licensing is not operation. The 2026 suspension, withdrawal or closure decisions are separate status events: they are dated January–September 2026, some were issued before the roster and some after it, and the roster’s own issue date is not stated. Separately, the results framework of the World Bank-financed Financial Market Infrastructure and Inclusion Project (FMIIP) sets a January 2025 baseline of 817 financial access points against a 2030 target of 1,021, under a project definition that the evidence base does not document. None of these figures shows where services operate or how far people are from them.",
+   "new": "Official lists document a substantial exchange and remittance provider presence relevant to the access question. The 2026 roster of the Central Bank of Yemen – Aden (CBY-Aden) lists 100 exchange companies, 231 individual exchange establishments and 111 remittance agents — three source categories, not a deduplicated count of firms — and the CBY-Aden list of licensed banks, as checked on 3 October 2026, names 26 banks. Listing or licensing is not operation. The 2026 suspension, withdrawal or closure decisions are separate status events: they are dated January–September 2026, some were issued before the roster and some after it, and the roster’s own issue date is not stated. Separately, the results framework of the World Bank-financed Financial Market Infrastructure and Inclusion Project (FMIIP) sets a January 2025 baseline of 817 financial access points against a 2030 target of 1,021, under a project definition that the evidence base does not document. None of these figures shows where services operate or how far people are from them."
+  },
+  {
+   "finding": "RC-8b",
+   "sheet": "03_PAGE_SECTIONS",
+   "row": 356,
+   "col": 7,
+   "field": null,
+   "old": "توثق القوائم الرسمية حضورًا كبيرًا لمقدمي خدمات الصرافة والحوالات يتصل بسؤال الوصول: فقائمة البنك المركزي اليمني – عدن لعام 2026 تضم 98 شركة صرافة و225 منشأة صرافة فردية و106 وكلاء حوالات — وهي ثلاث فئات يحددها المصدر، لا عددًا لمنشآت فريدة بعد إزالة الازدواج — وتضم قائمته للبنوك المرخصة، كما اطُّلع عليها في 3 أكتوبر 2026، 26 بنكًا. والإدراج أو الترخيص لا يعني التشغيل. أما قرارات التعليق أو سحب الترخيص أو الإغلاق الصادرة في 2026 فأحداث منفصلة تخص وضع كل جهة: فهي مؤرخة بين يناير وسبتمبر 2026، وصدر بعضها قبل القائمة وبعضها بعدها، ولا تذكر القائمة نفسها تاريخ صدورها. وبصورة مستقلة، يحدد إطار نتائج مشروع البنية التحتية للأسواق المالية والشمول المالي في اليمن (FMIIP) خط أساس قدره 817 نقطة وصول مالي في يناير 2025 مقابل مستهدف قدره 1,021 نقطة في 2030، وفق تعريف للمشروع لا توثقه قاعدة الأدلة. ولا يبين أي من هذه الأرقام أين تعمل الخدمات ولا مدى بُعد الناس عنها.",
+   "new": "توثق القوائم الرسمية حضورًا كبيرًا لمقدمي خدمات الصرافة والحوالات يتصل بسؤال الوصول: فقائمة البنك المركزي اليمني – عدن لعام 2026 تضم 100 شركة صرافة و231 منشأة صرافة فردية و111 وكيلًا للحوالات — وهي ثلاث فئات يحددها المصدر، لا عددًا لمنشآت فريدة بعد إزالة الازدواج — وتضم قائمته للبنوك المرخصة، كما اطُّلع عليها في 3 أكتوبر 2026، 26 بنكًا. والإدراج أو الترخيص لا يعني التشغيل. أما قرارات التعليق أو سحب الترخيص أو الإغلاق الصادرة في 2026 فأحداث منفصلة تخص وضع كل جهة: فهي مؤرخة بين يناير وسبتمبر 2026، وصدر بعضها قبل القائمة وبعضها بعدها، ولا تذكر القائمة نفسها تاريخ صدورها. وبصورة مستقلة، يحدد إطار نتائج مشروع البنية التحتية للأسواق المالية والشمول المالي في اليمن (FMIIP) خط أساس قدره 817 نقطة وصول مالي في يناير 2025 مقابل مستهدف قدره 1,021 نقطة في 2030، وفق تعريف للمشروع لا توثقه قاعدة الأدلة. ولا يبين أي من هذه الأرقام أين تعمل الخدمات ولا مدى بُعد الناس عنها."
+  },
+  {
+   "finding": "RC-8b",
+   "sheet": "06_EVIDENCE_OBJECTS",
+   "row": 7,
+   "col": 6,
+   "field": null,
+   "old": "The official 2026 roster of exchange and remittance providers issued by the Central Bank of Yemen – Aden (CBY-Aden) lists 98 exchange companies, 225 individual exchange establishments and 106 remittance agents. These are roster entries counted by the roster's own classes: the three class totals are not a count of unique providers, nor a verified count of providers operating now. Because the roster does not state its issue date, CBY-Aden's 2026 decisions (dated January to September 2026) suspending or withdrawing the licences of named entities, or closing their premises, are matched with the roster entity by entity, because a decision may or may not already be reflected in it.",
+   "new": "The official 2026 roster of exchange and remittance providers issued by the Central Bank of Yemen – Aden (CBY-Aden) lists 100 exchange companies, 231 individual exchange establishments and 111 remittance agents. These are roster entries counted by the roster's own classes: the three class totals are not a count of unique providers, nor a verified count of providers operating now. Because the roster does not state its issue date, CBY-Aden's 2026 decisions (dated January to September 2026) suspending or withdrawing the licences of named entities, or closing their premises, are matched with the roster entity by entity, because a decision may or may not already be reflected in it."
+  },
+  {
+   "finding": "RC-8b",
+   "sheet": "06_EVIDENCE_OBJECTS",
+   "row": 7,
+   "col": 7,
+   "field": null,
+   "old": "تضم القائمة الرسمية لعام 2026 لمقدمي خدمات الصرافة والحوالات، الصادرة عن البنك المركزي اليمني – عدن، كلًّا من 98 شركة صرافة و225 منشأة صرافة فردية و106 وكلاء حوالات. وهذه قيود معدودة بحسب فئات القائمة نفسها: فمجموع الفئات الثلاث ليس عددًا لمقدمي خدمات فريدين، ولا عددًا متحققًا منه لمن يعمل منهم حاليًا. ولأن القائمة لا تذكر تاريخ صدورها، تُطابَق قرارات البنك المركزي في عدن الصادرة خلال 2026 (بين يناير وسبتمبر 2026) بتعليق تراخيص جهات مسماة أو سحبها أو بإغلاق مقارها مع القائمة جهةً جهة، إذ قد يكون أثر القرار منعكسًا فيها وقد لا يكون.",
+   "new": "تضم القائمة الرسمية لعام 2026 لمقدمي خدمات الصرافة والحوالات، الصادرة عن البنك المركزي اليمني – عدن، كلًّا من 100 شركة صرافة و231 منشأة صرافة فردية و111 وكيلًا للحوالات. وهذه قيود معدودة بحسب فئات القائمة نفسها: فمجموع الفئات الثلاث ليس عددًا لمقدمي خدمات فريدين، ولا عددًا متحققًا منه لمن يعمل منهم حاليًا. ولأن القائمة لا تذكر تاريخ صدورها، تُطابَق قرارات البنك المركزي في عدن الصادرة خلال 2026 (بين يناير وسبتمبر 2026) بتعليق تراخيص جهات مسماة أو سحبها أو بإغلاق مقارها مع القائمة جهةً جهة، إذ قد يكون أثر القرار منعكسًا فيها وقد لا يكون."
+  },
+  {
+   "finding": "RC-8b",
+   "sheet": "06_EVIDENCE_OBJECTS",
+   "row": 14,
+   "col": 6,
+   "field": null,
+   "old": "The official 2026 exchange and remittance roster of the Central Bank of Yemen – Aden (CBY-Aden) lists 98 exchange companies, 225 individual exchange establishments and 106 remittance agents. Selected decisions of the CBY-Aden Governor dated January to September 2026 suspend or withdraw the licences of named entities or close their premises; they are kept separate from the roster and matched to it entity by entity, because the roster's issue date is not stated. Listing or licensing is not evidence of current operation.",
+   "new": "The official 2026 exchange and remittance roster of the Central Bank of Yemen – Aden (CBY-Aden) lists 100 exchange companies, 231 individual exchange establishments and 111 remittance agents. Selected decisions of the CBY-Aden Governor dated January to September 2026 suspend or withdraw the licences of named entities or close their premises; they are kept separate from the roster and matched to it entity by entity, because the roster's issue date is not stated. Listing or licensing is not evidence of current operation."
+  },
+  {
+   "finding": "RC-8b",
+   "sheet": "06_EVIDENCE_OBJECTS",
+   "row": 14,
+   "col": 7,
+   "field": null,
+   "old": "تضم القائمة الرسمية لعام 2026 للصرافة والحوالات، الصادرة عن البنك المركزي اليمني – عدن، كلًّا من 98 شركة صرافة و225 منشأة صرافة فردية و106 وكلاء حوالات. وتعلّق قرارات مختارة لمحافظ البنك المركزي في عدن مؤرخة بين يناير وسبتمبر 2026 تراخيص جهات مسماة أو تسحبها أو تغلق مقارها؛ وتبقى هذه القرارات منفصلة عن القائمة وتُطابَق معها جهةً جهة، لأن القائمة لا تذكر تاريخ صدورها. والإدراج أو الترخيص ليس دليلًا على التشغيل الحالي.",
+   "new": "تضم القائمة الرسمية لعام 2026 للصرافة والحوالات، الصادرة عن البنك المركزي اليمني – عدن، كلًّا من 100 شركة صرافة و231 منشأة صرافة فردية و111 وكيلًا للحوالات. وتعلّق قرارات مختارة لمحافظ البنك المركزي في عدن مؤرخة بين يناير وسبتمبر 2026 تراخيص جهات مسماة أو تسحبها أو تغلق مقارها؛ وتبقى هذه القرارات منفصلة عن القائمة وتُطابَق معها جهةً جهة، لأن القائمة لا تذكر تاريخ صدورها. والإدراج أو الترخيص ليس دليلًا على التشغيل الحالي."
+  },
+  {
+   "finding": "RC-8b",
+   "sheet": "06_EVIDENCE_OBJECTS",
+   "row": 7,
+   "col": 14,
+   "field": null,
+   "old": "Entries were counted from the official 11-page roster of the Central Bank of Yemen – Aden (CBY-Aden) by reading the document visually, using its own class headings and serial numbering; the numbering in the three classes ends at 98, 225 and 106.",
+   "new": "Entries were counted from the official 20-page roster of the Central Bank of Yemen – Aden (CBY-Aden) by reading the document visually, using its own class headings and serial numbering; the numbering in the three classes ends at 98, 225 and 106."
+  },
+  {
+   "finding": "RC-8b",
+   "sheet": "06_EVIDENCE_OBJECTS",
+   "row": 7,
+   "col": 14,
+   "field": null,
+   "old": "Entries were counted from the official 20-page roster of the Central Bank of Yemen – Aden (CBY-Aden) by reading the document visually, using its own class headings and serial numbering; the numbering in the three classes ends at 98, 225 and 106.",
+   "new": "Entries were counted from the official 20-page roster of the Central Bank of Yemen – Aden (CBY-Aden) by reading the document visually, using its own class headings and serial numbering; the numbering in the three classes ends at 100, 231 and 111."
+  },
+  {
+   "finding": "RC-8b",
+   "sheet": "06_EVIDENCE_OBJECTS",
+   "row": 7,
+   "col": 15,
+   "field": null,
+   "old": "عُدّت القيود من القائمة الرسمية للبنك المركزي اليمني – عدن المكونة من 11 صفحة بقراءة الوثيقة بصريًا، وباستخدام عناوين الفئات وترقيمها التسلسلي كما وردت فيها؛ وينتهي الترقيم في الفئات الثلاث عند 98 و225 و106.",
+   "new": "عُدّت القيود من القائمة الرسمية للبنك المركزي اليمني – عدن المكونة من 20 صفحة بقراءة الوثيقة بصريًا، وباستخدام عناوين الفئات وترقيمها التسلسلي كما وردت فيها؛ وينتهي الترقيم في الفئات الثلاث عند 98 و225 و106."
+  },
+  {
+   "finding": "RC-8b",
+   "sheet": "06_EVIDENCE_OBJECTS",
+   "row": 7,
+   "col": 15,
+   "field": null,
+   "old": "عُدّت القيود من القائمة الرسمية للبنك المركزي اليمني – عدن المكونة من 20 صفحة بقراءة الوثيقة بصريًا، وباستخدام عناوين الفئات وترقيمها التسلسلي كما وردت فيها؛ وينتهي الترقيم في الفئات الثلاث عند 98 و225 و106.",
+   "new": "عُدّت القيود من القائمة الرسمية للبنك المركزي اليمني – عدن المكونة من 20 صفحة بقراءة الوثيقة بصريًا، وباستخدام عناوين الفئات وترقيمها التسلسلي كما وردت فيها؛ وينتهي الترقيم في الفئات الثلاث عند 100 و231 و111."
+  },
+  {
+   "finding": "RC-8b",
+   "sheet": "06_EVIDENCE_OBJECTS",
+   "row": 7,
+   "col": 18,
+   "field": null,
+   "old": "The counts refer to the official 2026 annual roster, whose issue date is not stated. Decisions of the Central Bank of Yemen – Aden (CBY-Aden) dated January to September 2026 may change the licence or operating status of named entities; they are separate evidence and are not applied to these counts.",
+   "new": "The counts refer to the official 2026 annual roster, whose issue date is not stated. Decisions of the Central Bank of Yemen – Aden (CBY-Aden) dated January to September 2026 may change the licence or operating status of named entities; they are separate evidence and are not applied to these counts. CBY-Aden has replaced the roster file during 2026; the counts are those of the file linked on its website when checked on 3 October 2026."
+  },
+  {
+   "finding": "RC-8b",
+   "sheet": "06_EVIDENCE_OBJECTS",
+   "row": 7,
+   "col": 19,
+   "field": null,
+   "old": "تعود الأعداد إلى القائمة السنوية الرسمية لعام 2026، ولا يُذكر تاريخ صدورها. وقد تغيّر قرارات البنك المركزي اليمني – عدن المؤرخة بين يناير وسبتمبر 2026 وضع الترخيص أو التشغيل لجهات مسماة؛ وهي أدلة منفصلة لا تُطبَّق على هذه الأعداد.",
+   "new": "تعود الأعداد إلى القائمة السنوية الرسمية لعام 2026، ولا يُذكر تاريخ صدورها. وقد تغيّر قرارات البنك المركزي اليمني – عدن المؤرخة بين يناير وسبتمبر 2026 وضع الترخيص أو التشغيل لجهات مسماة؛ وهي أدلة منفصلة لا تُطبَّق على هذه الأعداد. وقد استبدل البنك المركزي اليمني – عدن ملف القائمة خلال عام 2026؛ والأعداد هي أعداد الملف المنشور في موقعه كما اطُّلع عليه في 3 أكتوبر 2026."
+  },
+  {
+   "finding": "RC-8b",
+   "sheet": "00_MASTER",
+   "row": 41,
+   "col": 5,
+   "field": null,
+   "old": "PROVIDERS / مقدمو الخدمات\n\n2026 CBY-Aden roster: 98 exchange companies, 225 exchange establishments, 106 remittance agents (source category entries, not unique firms)\nListing or licensing ≠ current operating status",
+   "new": "PROVIDERS / مقدمو الخدمات\n\n2026 CBY-Aden roster: 100 exchange companies, 231 exchange establishments, 111 remittance agents (source category entries, not unique firms)\nListing or licensing ≠ current operating status"
+  },
+  {
+   "finding": "RC-8b",
+   "sheet": "33_ANALYTICS_MASTER",
+   "row": 55,
+   "col": 4,
+   "field": null,
+   "old": "For banks, this resource has a current official licensed-list source but licensing is not operation. For exchange/remittance actors, the official 2026 annual roster now yields category counts—98 companies, 225 individual establishments and 106 remittance agents—while later enforcement events require entity-level status reconciliation. For wallets, official dated counts exist but the complete named positive universe remains open.",
+   "new": "For banks, this resource has a current official licensed-list source but licensing is not operation. For exchange/remittance actors, the official 2026 annual roster now yields category counts—100 companies, 231 individual establishments and 111 remittance agents—while later enforcement events require entity-level status reconciliation. For wallets, official dated counts exist but the complete named positive universe remains open."
+  },
+  {
+   "finding": "RC-8b",
+   "sheet": "33_ANALYTICS_MASTER",
+   "row": 57,
+   "col": 4,
+   "field": null,
+   "old": "The 2025 official CBY roster records 79 exchange companies, 195 establishments and 108 remittance agents (382 category entries). The official 2026 roster records 98 companies, 225 establishments and 106 remittance agents (429 listed rows). The change is useful as annual-roster evidence, but a market-entry/exit or current-operation interpretation requires entity matching and treatment of later suspension/closure events.",
+   "new": "The 2025 official CBY roster records 79 exchange companies, 195 establishments and 108 remittance agents (382 category entries). The official 2026 roster records 100 companies, 231 establishments and 111 remittance agents (442 listed rows). The change is useful as annual-roster evidence, but a market-entry/exit or current-operation interpretation requires entity matching and treatment of later suspension/closure events."
+  },
+  {
+   "finding": "RC-8b",
+   "sheet": "16_DATASET_CATALOG",
+   "row": 215,
+   "col": 10,
+   "field": null,
+   "old": "Official roster category counts: 98 exchange companies, 225 individual establishments, 106 remittance agents, plus 429 arithmetic total rows. Roster ≠ current operation.",
+   "new": "Official roster category counts: 100 exchange companies, 231 individual establishments, 111 remittance agents, plus 442 arithmetic total rows. Roster ≠ current operation."
+  },
+  {
+   "finding": "RC-8b",
+   "sheet": "17_INDICATOR_LIBRARY",
+   "row": 217,
+   "col": 9,
+   "field": null,
+   "old": "98 listed companies; annual roster presence does not prove current operation.",
+   "new": "100 listed companies; annual roster presence does not prove current operation."
+  },
+  {
+   "finding": "RC-8b",
+   "sheet": "17_INDICATOR_LIBRARY",
+   "row": 218,
+   "col": 9,
+   "field": null,
+   "old": "225 listed establishments; annual roster presence does not prove current operation.",
+   "new": "231 listed establishments; annual roster presence does not prove current operation."
+  },
+  {
+   "finding": "RC-8b",
+   "sheet": "17_INDICATOR_LIBRARY",
+   "row": 219,
+   "col": 9,
+   "field": null,
+   "old": "106 listed agents; annual roster presence does not prove current operation.",
+   "new": "111 listed agents; annual roster presence does not prove current operation."
+  },
+  {
+   "finding": "RC-8b",
+   "sheet": "17_INDICATOR_LIBRARY",
+   "row": 220,
+   "col": 9,
+   "field": null,
+   "old": "429 is an arithmetic row total only; do not call it a deduplicated unique-provider count.",
+   "new": "442 is an arithmetic row total only; do not call it a deduplicated unique-provider count."
+  },
+  {
+   "finding": "RC-8b",
+   "sheet": "04_NAV_UX",
+   "row": 197,
+   "col": 4,
+   "field": null,
+   "old": "Pre-Tranche-C P4 (V-D5). Chart label: provider_count_state value 'SOURCE_LISTED_ROWS__98_COMPANIES__225_ESTABLISHMENTS__106_REMITTANCE_AGENTS'.",
+   "new": "Pre-Tranche-C P4 (V-D5). Chart label: provider_count_state value 'SOURCE_LISTED_ROWS__100_COMPANIES__231_ESTABLISHMENTS__111_REMITTANCE_AGENTS'."
+  },
+  {
+   "finding": "RC-8b",
+   "sheet": "15_SOURCE_LIBRARY",
+   "row": 6,
+   "col": 6,
+   "field": null,
+   "old": "List of licensed banks in the Republic of Yemen (undated; as checked on 3 October 2026)",
+   "new": "List of licensed banks in the Republic of Yemen (no printed date; as checked on 3 October 2026)"
+  },
+  {
+   "finding": "RC-8b",
+   "sheet": "15_SOURCE_LIBRARY",
+   "row": 6,
+   "col": 12,
+   "field": null,
+   "old": "كشف بالبنوك المرخصة بالجمهورية اليمنية (غير مؤرخ؛ كما اطُّلع عليه في 3 أكتوبر 2026)",
+   "new": "كشف بالبنوك المرخصة بالجمهورية اليمنية (لا يحمل تاريخًا مطبوعًا؛ كما اطُّلع عليه في 3 أكتوبر 2026)"
+  },
+  {
+   "finding": "RC-8b",
+   "sheet": "04_NAV_UX",
+   "row": 505,
+   "col": 2,
+   "field": null,
+   "old": "These are the regulatory documents held in this evidence base, not a complete register of Yemen's financial regulation. All were issued by the Central Bank of Yemen – Aden. The evidence base holds no laws, and this group holds no instrument issued in Sana'a.",
+   "new": "These are the regulatory documents held in this evidence base, not a complete register of Yemen's financial regulation. All were issued by the Central Bank of Yemen – Aden. The evidence base holds no law as a source document, and this group holds no instrument issued in Sana'a."
+  },
+  {
+   "finding": "RC-8b",
+   "sheet": "04_NAV_UX",
+   "row": 505,
+   "col": 3,
+   "field": null,
+   "old": "هذه هي الوثائق التنظيمية المتوفرة في قاعدة الأدلة هذه، وليست سجلًا كاملًا للتنظيم المالي في اليمن. وقد أصدرها جميعًا البنك المركزي اليمني – عدن. ولا تضم قاعدة الأدلة أي قانون، ولا تضم هذه المجموعة أي وثيقة صادرة في صنعاء.",
+   "new": "هذه هي الوثائق التنظيمية المتوفرة في قاعدة الأدلة هذه، وليست سجلًا كاملًا للتنظيم المالي في اليمن. وقد أصدرها جميعًا البنك المركزي اليمني – عدن. ولا تضم قاعدة الأدلة أي قانون بوصفه وثيقة مصدرية، ولا تضم هذه المجموعة أي وثيقة صادرة في صنعاء."
+  },
+  {
+   "finding": "RC-8b",
+   "sheet": "22_PROVIDERS_DATA",
+   "row": 143,
+   "col": 4,
+   "field": "CBY-ROSTER-2026-COMP.count",
+   "old": "98",
+   "new": 100
+  },
+  {
+   "finding": "RC-8b",
+   "sheet": "22_PROVIDERS_DATA",
+   "row": 144,
+   "col": 4,
+   "field": "CBY-ROSTER-2026-EST.count",
+   "old": "225",
+   "new": 231
+  },
+  {
+   "finding": "RC-8b",
+   "sheet": "22_PROVIDERS_DATA",
+   "row": 145,
+   "col": 4,
+   "field": "CBY-ROSTER-2026-AGT.count",
+   "old": "106",
+   "new": 111
+  },
+  {
+   "finding": "RC-8b",
+   "sheet": "22_PROVIDERS_DATA",
+   "row": 146,
+   "col": 4,
+   "field": "CBY-ROSTER-2026-ROWS.count",
+   "old": "429",
+   "new": 442
+  },
+  {
+   "finding": "RC-8b",
+   "sheet": "22_PROVIDERS_DATA",
+   "row": 70,
+   "col": 5,
+   "field": null,
+   "old": "429",
+   "new": 442
+  },
+  {
+   "finding": "RC-8b",
+   "sheet": "22_PROVIDERS_DATA",
+   "row": 70,
+   "col": 6,
+   "field": null,
+   "old": "SOURCE_LISTED_ROWS__98_COMPANIES__225_ESTABLISHMENTS__106_REMITTANCE_AGENTS",
+   "new": "SOURCE_LISTED_ROWS__100_COMPANIES__231_ESTABLISHMENTS__111_REMITTANCE_AGENTS"
+  },
+  {
+   "finding": "RC-8b",
+   "sheet": "22_PROVIDERS_DATA",
+   "row": 70,
+   "col": 8,
+   "field": null,
+   "old": "OFFICIAL_11_PAGE_PDF_VISUALLY_VERIFIED",
+   "new": "OFFICIAL_20_PAGE_PDF_VISUALLY_VERIFIED__FILE_OF_2026-09-22"
+  },
+  {
+   "finding": "RC-8b",
+   "sheet": "22_PROVIDERS_DATA",
+   "row": 70,
+   "col": 11,
+   "field": null,
+   "old": "429 is the arithmetic sum of source-listed rows across three classes, not a deduplicated unique-provider or currently operating-provider count.",
+   "new": "442 is the arithmetic sum of source-listed rows across three classes, not a deduplicated unique-provider or currently operating-provider count."
+  },
+  {
+   "finding": "RC-8b",
+   "sheet": "15_SOURCE_LIBRARY",
+   "row": 19,
+   "col": 2,
+   "field": "SRC-CBY-EXCH-LIST-2026-001.primary_url",
+   "old": "https://www.cby-ye.com/files/6a87039fd05bb.pdf",
+   "new": "https://cby-ye.com/files/6ab391c11043b.pdf"
+  },
+  {
+   "finding": "RC-8b",
+   "sheet": "15_SOURCE_LIBRARY",
+   "row": 19,
+   "col": 3,
+   "field": "SRC-CBY-EXCH-LIST-2026-001.additional_urls",
+   "old": null,
+   "new": "[\"https://cby-ye.com/pages/14\", \"https://www.cby-ye.com/files/6a87039fd05bb.pdf\"]"
+  },
+  {
+   "finding": "RC-8b",
+   "sheet": "15_SOURCE_LIBRARY",
+   "row": 19,
+   "col": 22,
+   "field": "SRC-CBY-EXCH-LIST-2026-001.retrieval_date",
+   "old": null,
+   "new": "2026-10-03"
+  },
+  {
+   "finding": "RC-8b",
+   "sheet": "06_EVIDENCE_OBJECTS",
+   "row": 6,
+   "col": 6,
+   "field": null,
+   "old": "POS terminals reported by the Central Bank of Yemen – Aden (CBY-Aden) rose from 561 in March 2025 to 1,651 in June 2026, within CBY-Aden's reporting scope. The December 2025 total of 1,357 and the January 2026 total of 1,473 imply growth of 8.55%, while the January source graphic displays +11%. The May 2026 source graphic displays +2.4%, which the April 2026 total of 1,583 and the May 2026 total of 1,636 do not give; because the source contradicts itself, no change is computed for April to May 2026. The POS terminals chart plots the published totals, the displayed percentages are stated under 'How was it produced?' in this record, and each difference is recorded as an inconsistency within the source.",
+   "new": "POS terminals reported by the Central Bank of Yemen – Aden (CBY-Aden) rose from 561 in March 2025 to 1,651 in June 2026, within CBY-Aden's reporting scope. The December 2025 total of 1,357 and the January 2026 total of 1,473 imply growth of 8.55%, while the January source graphic displays +11%. The May 2026 source graphic displays +2.4%, which the April 2026 total of 1,583 and the May 2026 total of 1,636 do not yield; because the source contradicts itself, no change is computed for April to May 2026. The POS terminals chart plots the published totals, the displayed percentages are stated under 'How was it produced?' in this record, and each difference is recorded as an inconsistency within the source."
+  },
+  {
+   "finding": "RC-8b",
+   "sheet": "06_EVIDENCE_OBJECTS",
+   "row": 6,
+   "col": 14,
+   "field": null,
+   "old": "Monthly terminal totals as published in the monthly POS releases of the Central Bank of Yemen – Aden (CBY-Aden). The 8.55% change is derived by this resource: the January 2026 total (1,473) divided by the December 2025 total (1,357), minus one. It is shown beside the +11% displayed in the January release rather than replacing it. The May 2026 release displays +2.4%, which the published April (1,583) and May (1,636) totals do not give. Because the release contradicts itself, this resource derives no change for April to May 2026; it shows the two published totals and the displayed percentage.",
+   "new": "Monthly terminal totals as published in the monthly POS releases of the Central Bank of Yemen – Aden (CBY-Aden). The 8.55% change is derived by this resource: the January 2026 total (1,473) divided by the December 2025 total (1,357), minus one. It is shown beside the +11% displayed in the January release rather than replacing it. The May 2026 release displays +2.4%, which the published April (1,583) and May (1,636) totals do not yield. Because the release contradicts itself, this resource derives no change for April to May 2026; it shows the two published totals and the displayed percentage."
+  },
+  {
+   "finding": "RC-8b",
+   "sheet": "06_EVIDENCE_OBJECTS",
+   "row": 66,
+   "col": 6,
+   "field": null,
+   "old": "POS terminals reported by the Central Bank of Yemen – Aden (CBY-Aden) rose from 561 in March 2025 to 1,651 in June 2026, within CBY-Aden's reporting scope. Between December 2025 (1,357) and January 2026 (1,473), the raw totals imply growth of 8.55%, while the January source graphic displays +11%. The May 2026 source graphic displays +2.4%, which the published totals for April 2026 (1,583) and May 2026 (1,636) do not give; because the source contradicts itself, this resource computes no change for April to May 2026. The chart plots the reported totals, the publisher's displayed percentages are given in the chart note, and each mismatch is recorded as a discrepancy within the source. Terminal counts are devices, not merchants, unique users or an inclusion outcome.",
+   "new": "POS terminals reported by the Central Bank of Yemen – Aden (CBY-Aden) rose from 561 in March 2025 to 1,651 in June 2026, within CBY-Aden's reporting scope. Between December 2025 (1,357) and January 2026 (1,473), the raw totals imply growth of 8.55%, while the January source graphic displays +11%. The May 2026 source graphic displays +2.4%, which the published totals for April 2026 (1,583) and May 2026 (1,636) do not yield; because the source contradicts itself, this resource computes no change for April to May 2026. The chart plots the reported totals, the publisher's displayed percentages are given in the chart note, and each mismatch is recorded as a discrepancy within the source. Terminal counts are devices, not merchants, unique users or an inclusion outcome."
+  },
+  {
+   "finding": "RC-8b",
+   "sheet": "06_EVIDENCE_OBJECTS",
+   "row": 66,
+   "col": 14,
+   "field": null,
+   "old": "Monthly terminal totals as published in the monthly POS releases of the Central Bank of Yemen – Aden (CBY-Aden). The December 2025 to January 2026 change of 8.55% is derived by this resource (1,473 divided by 1,357, minus one) and is kept beside the +11% displayed in the January release; neither figure replaces the other. The May 2026 release displays +2.4%, which the published April (1,583) and May (1,636) totals do not give; because the release contradicts itself, no April to May change is derived, and the two totals and the displayed percentage are shown as published. A smaller mismatch in June 2025 is also kept: 733 to 791 terminals implies 7.91%, while the June release displays +7.6%.",
+   "new": "Monthly terminal totals as published in the monthly POS releases of the Central Bank of Yemen – Aden (CBY-Aden). The December 2025 to January 2026 change of 8.55% is derived by this resource (1,473 divided by 1,357, minus one) and is kept beside the +11% displayed in the January release; neither figure replaces the other. The May 2026 release displays +2.4%, which the published April (1,583) and May (1,636) totals do not yield; because the release contradicts itself, no April to May change is derived, and the two totals and the displayed percentage are shown as published. A smaller mismatch in June 2025 is also kept: 733 to 791 terminals implies 7.91%, while the June release displays +7.6%."
+  },
+  {
+   "finding": "RC-8b",
+   "sheet": "06_EVIDENCE_OBJECTS",
+   "row": 67,
+   "col": 6,
+   "field": null,
+   "old": "POS transactions reported by the Central Bank of Yemen – Aden (CBY-Aden) rose from 8,015 in March 2025 to 27,504 in June 2026, within CBY-Aden's reporting scope, but not steadily: the monthly high was 36,201 in May 2026. Between December 2025 (21,099) and January 2026 (24,026), the raw totals imply growth of 13.87%, while the January source graphic displays +4.9%. The May 2026 source graphic displays +9.9%, which the published totals for April 2026 (30,559) and May 2026 (36,201) do not give; because the source contradicts itself, this resource computes no change for April to May 2026. The chart plots the reported totals, the displayed percentages are given in the chart note, and each mismatch is recorded as a discrepancy within the source.",
+   "new": "POS transactions reported by the Central Bank of Yemen – Aden (CBY-Aden) rose from 8,015 in March 2025 to 27,504 in June 2026, within CBY-Aden's reporting scope, but not steadily: the monthly high was 36,201 in May 2026. Between December 2025 (21,099) and January 2026 (24,026), the raw totals imply growth of 13.87%, while the January source graphic displays +4.9%. The May 2026 source graphic displays +9.9%, which the published totals for April 2026 (30,559) and May 2026 (36,201) do not yield; because the source contradicts itself, this resource computes no change for April to May 2026. The chart plots the reported totals, the displayed percentages are given in the chart note, and each mismatch is recorded as a discrepancy within the source."
+  },
+  {
+   "finding": "RC-8b",
+   "sheet": "06_EVIDENCE_OBJECTS",
+   "row": 67,
+   "col": 14,
+   "field": null,
+   "old": "Monthly transaction totals as published in the monthly POS releases of the Central Bank of Yemen – Aden (CBY-Aden), without smoothing or filling. The December 2025 to January 2026 change of 13.87% is derived by this resource (24,026 divided by 21,099, minus one) and is kept beside the +4.9% displayed in the January release. The May 2026 release displays +9.9%, which the published April (30,559) and May (36,201) totals do not give; because the release contradicts itself, no April to May change is derived, and the two totals and the displayed percentage are shown as published.",
+   "new": "Monthly transaction totals as published in the monthly POS releases of the Central Bank of Yemen – Aden (CBY-Aden), without smoothing or filling. The December 2025 to January 2026 change of 13.87% is derived by this resource (24,026 divided by 21,099, minus one) and is kept beside the +4.9% displayed in the January release. The May 2026 release displays +9.9%, which the published April (30,559) and May (36,201) totals do not yield; because the release contradicts itself, no April to May change is derived, and the two totals and the displayed percentage are shown as published."
+  },
+  {
+   "finding": "RC-8b",
+   "sheet": "11_VISUAL_LIBRARY",
+   "row": 16,
+   "col": 7,
+   "field": null,
+   "old": "Monthly POS-terminal totals as published. For December 2025 to January 2026 the source displays +11%, while the totals of 1,357 and 1,473 imply +8.55%; for April to May 2026 it displays +2.4%, which the totals of 1,583 and 1,636 do not give, and no change is derived for that month. The published figures are kept and none is corrected.",
+   "new": "Monthly POS-terminal totals as published. For December 2025 to January 2026 the source displays +11%, while the totals of 1,357 and 1,473 imply +8.55%; for April to May 2026 it displays +2.4%, which the totals of 1,583 and 1,636 do not yield, and no change is derived for that month. The published figures are kept and none is corrected."
+  },
+  {
+   "finding": "RC-8b",
+   "sheet": "11_VISUAL_LIBRARY",
+   "row": 16,
+   "col": 21,
+   "field": null,
+   "old": "POS terminals reported by the Central Bank of Yemen – Aden (CBY-Aden) rose from 561 in March 2025 to 1,651 in June 2026, within CBY-Aden's reporting scope. Between December 2025 (1,357) and January 2026 (1,473), the raw totals imply growth of 8.55%, while the January source graphic displays +11%. The May 2026 source graphic displays +2.4%, which the published totals for April 2026 (1,583) and May 2026 (1,636) do not give; because the source contradicts itself, this resource computes no change for April to May 2026. The chart plots the reported totals, the publisher's displayed percentages are given in the chart note, and each mismatch is recorded as a discrepancy within the source. Terminal counts are devices, not merchants, unique users or an inclusion outcome.",
+   "new": "POS terminals reported by the Central Bank of Yemen – Aden (CBY-Aden) rose from 561 in March 2025 to 1,651 in June 2026, within CBY-Aden's reporting scope. Between December 2025 (1,357) and January 2026 (1,473), the raw totals imply growth of 8.55%, while the January source graphic displays +11%. The May 2026 source graphic displays +2.4%, which the published totals for April 2026 (1,583) and May 2026 (1,636) do not yield; because the source contradicts itself, this resource computes no change for April to May 2026. The chart plots the reported totals, the publisher's displayed percentages are given in the chart note, and each mismatch is recorded as a discrepancy within the source. Terminal counts are devices, not merchants, unique users or an inclusion outcome."
+  },
+  {
+   "finding": "RC-8b",
+   "sheet": "11_VISUAL_LIBRARY",
+   "row": 17,
+   "col": 7,
+   "field": null,
+   "old": "Raw monthly POS-transaction totals. Between December 2025 (21,099) and January 2026 (24,026) the raw totals imply +13.87% growth, while the January source graphic displays +4.9%; between April 2026 (30,559) and May 2026 (36,201) the May source graphic displays +9.9%, which the totals do not give, and no change is derived for that month. In each case the published figures stay visible as a discrepancy within the source and none is corrected silently.",
+   "new": "Raw monthly POS-transaction totals. Between December 2025 (21,099) and January 2026 (24,026) the raw totals imply +13.87% growth, while the January source graphic displays +4.9%; between April 2026 (30,559) and May 2026 (36,201) the May source graphic displays +9.9%, which the totals do not yield, and no change is derived for that month. In each case the published figures stay visible as a discrepancy within the source and none is corrected silently."
+  },
+  {
+   "finding": "RC-8b",
+   "sheet": "11_VISUAL_LIBRARY",
+   "row": 17,
+   "col": 21,
+   "field": null,
+   "old": "POS transactions reported by the Central Bank of Yemen – Aden (CBY-Aden) rose from 8,015 in March 2025 to 27,504 in June 2026, within CBY-Aden's reporting scope, but not steadily: the monthly high was 36,201 in May 2026. Between December 2025 (21,099) and January 2026 (24,026), the raw totals imply growth of 13.87%, while the January source graphic displays +4.9%. The May 2026 source graphic displays +9.9%, which the published totals for April 2026 (30,559) and May 2026 (36,201) do not give; because the source contradicts itself, this resource computes no change for April to May 2026. The chart plots the reported totals, the displayed percentages are given in the chart note, and each mismatch is recorded as a discrepancy within the source.",
+   "new": "POS transactions reported by the Central Bank of Yemen – Aden (CBY-Aden) rose from 8,015 in March 2025 to 27,504 in June 2026, within CBY-Aden's reporting scope, but not steadily: the monthly high was 36,201 in May 2026. Between December 2025 (21,099) and January 2026 (24,026), the raw totals imply growth of 13.87%, while the January source graphic displays +4.9%. The May 2026 source graphic displays +9.9%, which the published totals for April 2026 (30,559) and May 2026 (36,201) do not yield; because the source contradicts itself, this resource computes no change for April to May 2026. The chart plots the reported totals, the displayed percentages are given in the chart note, and each mismatch is recorded as a discrepancy within the source."
+  },
+  {
+   "finding": "RC-8b",
+   "sheet": "34_EVIDENCE_PASSPORTS",
+   "row": 6,
+   "col": 9,
+   "field": null,
+   "old": "The September 2025 POS transaction-value observation in YER is missing; the September terminal count itself is present at 1,060. For December 2025→January 2026, terminal totals 1,357→1,473 imply approximately +8.55% while the January source graphic displays +11%; transaction totals 21,099→24,026 imply approximately +13.87% while the January source graphic displays +4.9%. For April 2026→May 2026, the May source graphic displays +2.4% for terminals and +9.9% for transactions, which the published totals (1,583→1,636; 30,559→36,201) do not give; because the source contradicts itself, no change is derived for that month (owner note, 3 October 2026). A smaller source-internal mismatch also appears in June 2025: 733→791 terminals imply approximately +7.91%, while the June graphic displays +7.6%. The February 2026 release displays +1.9% for terminals and −2.3% for value where the totals give about +1.97% and −2.38%; these differences are under 0.1 point and are recorded, not flagged. From the January 2026 release onward the YER value tile is labelled “billion” (مليار), while earlier releases state million YER. Every release writes the decimal mark as a comma (April 2025 prints 317,639 under million: 317.639 million; January 2026 prints 1,262 under billion: 1.262 billion = YER 1,262 million), so the series is kept in YER million. Month-on-month percentages cannot tell the two scales apart; the comma reading, and a value per transaction close to the Q3 2024 report's (about YER 52,500), do. The February–June 2026 releases are listed on the Arabic payments page only. Keep raw totals and source-displayed percentages distinct rather than silently reconciling them.",
+   "new": "The September 2025 POS transaction-value observation in YER is missing; the September terminal count itself is present at 1,060. For December 2025→January 2026, terminal totals 1,357→1,473 imply approximately +8.55% while the January source graphic displays +11%; transaction totals 21,099→24,026 imply approximately +13.87% while the January source graphic displays +4.9%. For April 2026→May 2026, the May source graphic displays +2.4% for terminals and +9.9% for transactions, which the published totals (1,583→1,636; 30,559→36,201) do not yield; because the source contradicts itself, no change is derived for that month (owner note, 3 October 2026). A smaller source-internal mismatch also appears in June 2025: 733→791 terminals imply approximately +7.91%, while the June graphic displays +7.6%. The February 2026 release displays +1.9% for terminals and −2.3% for value where the totals give about +1.97% and −2.38%; these differences are under 0.1 point and are recorded, not flagged. From the January 2026 release onward the YER value tile is labelled “billion” (مليار), while earlier releases state million YER. Every release writes the decimal mark as a comma (April 2025 prints 317,639 under million: 317.639 million; January 2026 prints 1,262 under billion: 1.262 billion = YER 1,262 million), so the series is kept in YER million. Month-on-month percentages cannot tell the two scales apart; the comma reading, and a value per transaction close to the Q3 2024 report's (about YER 52,500), do. The February–June 2026 releases are listed on the Arabic payments page only. Keep raw totals and source-displayed percentages distinct rather than silently reconciling them."
+  },
+  {
+   "finding": "RC-8b",
+   "sheet": "06_EVIDENCE_OBJECTS",
+   "row": 66,
+   "col": 16,
+   "field": null,
+   "old": "Growth in terminal numbers does not show merchant adoption, active use of POS services, growth in unique users or an inclusion outcome. The +11% displayed in the January 2026 release and the 8.55% change derived from the raw totals are not arithmetically consistent. Nor do the published April and May 2026 totals give the +2.4% displayed in the May 2026 release; no change is computed for that month. The totals fall within the reporting scope of the Central Bank of Yemen – Aden (CBY-Aden) and are not shown to cover all of Yemen. | From July 2025 the monthly releases take the form of a one-page infographic; continuity of the reporting scope across that change has not been verified.",
+   "new": "Growth in terminal numbers does not show merchant adoption, active use of POS services, growth in unique users or an inclusion outcome. The +11% displayed in the January 2026 release and the 8.55% change derived from the raw totals are not arithmetically consistent. Nor do the published April and May 2026 totals yield the +2.4% displayed in the May 2026 release; no change is computed for that month. The totals fall within the reporting scope of the Central Bank of Yemen – Aden (CBY-Aden) and are not shown to cover all of Yemen. | From July 2025 the monthly releases take the form of a one-page infographic; continuity of the reporting scope across that change has not been verified."
+  },
+  {
+   "finding": "RC-8b",
+   "sheet": "06_EVIDENCE_OBJECTS",
+   "row": 67,
+   "col": 16,
+   "field": null,
+   "old": "Transactions are events, not unique users or merchants, so the series does not show how many people or businesses used POS services. The monthly values are shown as published, without smoothing or interpolation, and the +4.9% displayed in the January 2026 release and the 13.87% change derived from the raw totals are not arithmetically consistent. Nor do the published April and May 2026 totals give the +9.9% displayed in the May 2026 release; no change is computed for that month. The totals fall within the reporting scope of the Central Bank of Yemen – Aden (CBY-Aden) and are not shown to cover all of Yemen. | From July 2025 the monthly releases take the form of a one-page infographic; continuity of the reporting scope across that change has not been verified.",
+   "new": "Transactions are events, not unique users or merchants, so the series does not show how many people or businesses used POS services. The monthly values are shown as published, without smoothing or interpolation, and the +4.9% displayed in the January 2026 release and the 13.87% change derived from the raw totals are not arithmetically consistent. Nor do the published April and May 2026 totals yield the +9.9% displayed in the May 2026 release; no change is computed for that month. The totals fall within the reporting scope of the Central Bank of Yemen – Aden (CBY-Aden) and are not shown to cover all of Yemen. | From July 2025 the monthly releases take the form of a one-page infographic; continuity of the reporting scope across that change has not been verified."
+  },
+  {
+   "finding": "RC-8b",
+   "sheet": "11_VISUAL_LIBRARY",
+   "row": 16,
+   "col": 19,
+   "field": null,
+   "old": "Growth in terminal numbers does not show merchant adoption, active use of POS services, growth in unique users or an inclusion outcome. The +11% displayed in the January 2026 release and the 8.55% change derived from the raw totals are not arithmetically consistent. Nor do the published April and May 2026 totals give the +2.4% displayed in the May 2026 release; no change is computed for that month. The totals fall within the reporting scope of the Central Bank of Yemen – Aden (CBY-Aden) and are not shown to cover all of Yemen.",
+   "new": "Growth in terminal numbers does not show merchant adoption, active use of POS services, growth in unique users or an inclusion outcome. The +11% displayed in the January 2026 release and the 8.55% change derived from the raw totals are not arithmetically consistent. Nor do the published April and May 2026 totals yield the +2.4% displayed in the May 2026 release; no change is computed for that month. The totals fall within the reporting scope of the Central Bank of Yemen – Aden (CBY-Aden) and are not shown to cover all of Yemen."
+  },
+  {
+   "finding": "RC-8b",
+   "sheet": "11_VISUAL_LIBRARY",
+   "row": 17,
+   "col": 19,
+   "field": null,
+   "old": "Transactions are events, not unique users or merchants, so the series does not show how many people or businesses used POS services. The monthly values are shown as published, without smoothing or interpolation, and the +4.9% displayed in the January 2026 release and the 13.87% change derived from the raw totals are not arithmetically consistent. Nor do the published April and May 2026 totals give the +9.9% displayed in the May 2026 release; no change is computed for that month. The totals fall within the reporting scope of the Central Bank of Yemen – Aden (CBY-Aden) and are not shown to cover all of Yemen.",
+   "new": "Transactions are events, not unique users or merchants, so the series does not show how many people or businesses used POS services. The monthly values are shown as published, without smoothing or interpolation, and the +4.9% displayed in the January 2026 release and the 13.87% change derived from the raw totals are not arithmetically consistent. Nor do the published April and May 2026 totals yield the +9.9% displayed in the May 2026 release; no change is computed for that month. The totals fall within the reporting scope of the Central Bank of Yemen – Aden (CBY-Aden) and are not shown to cover all of Yemen."
+  }
+ ]
+}

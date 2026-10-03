@@ -281,7 +281,7 @@
    },
    "provider_count_state": {
     "PRIMARY_CURRENT_LIST_VERIFIED": "UI-VIS-CAT-PRV-COUNT-CURRENT-LIST",
-    "SOURCE_LISTED_ROWS__98_COMPANIES__225_ESTABLISHMENTS__106_REMITTANCE_AGENTS": "UI-VIS-CAT-PRV-COUNT-LISTED-ROWS",
+    "SOURCE_LISTED_ROWS__100_COMPANIES__231_ESTABLISHMENTS__111_REMITTANCE_AGENTS": "UI-VIS-CAT-PRV-COUNT-LISTED-ROWS",
     "MULTIPLE_PRIMARY_DATED_COUNTS_WITH_DIFFERENT_WORDING": "UI-VIS-CAT-PRV-COUNT-SEVERAL",
     "MEMBERSHIP_PAGES_ONLY": "UI-VIS-CAT-PRV-COUNT-MEMBERSHIP"
    },
@@ -299,7 +299,7 @@
    },
    "provider_limit": {
     "List presence proves licensing/listing only; operation is not inferred.": "UI-VIS-CAT-PRV-LIMIT-BANKS",
-    "429 is the arithmetic sum of source-listed rows across three classes, not a deduplicated unique-provider or currently operating-provider count.": "UI-VIS-CAT-PRV-LIMIT-EXCHANGE",
+    "442 is the arithmetic sum of source-listed rows across three classes, not a deduplicated unique-provider or currently operating-provider count.": "UI-VIS-CAT-PRV-LIMIT-EXCHANGE",
     "Official objects report 7 e-wallets (2024 Q3), 9 e-wallets (2025 H1), 8 licensed e-wallets (2025-09-10), and >9 event participants (2026-01-22). Preserve separately; named positive current wallet/PSP universe remains open.": "UI-VIS-CAT-PRV-LIMIT-EWALLETS",
     "YMN membership presence is not licence or operation verification and is not a complete national universe.": "UI-VIS-CAT-PRV-LIMIT-MFI"
    },
@@ -693,9 +693,9 @@
        "source": "source_id"
       },
       "must_equal": {
-       "CBY-ROSTER-2026-COMP": 98,
-       "CBY-ROSTER-2026-EST": 225,
-       "CBY-ROSTER-2026-AGT": 106
+       "CBY-ROSTER-2026-COMP": 100,
+       "CBY-ROSTER-2026-EST": 231,
+       "CBY-ROSTER-2026-AGT": 111
       },
       "label_fields": {
        "unit": "unit"
@@ -770,7 +770,7 @@
      }
     ],
     "ordering": "Rows: banks, exchange and remittance actors, wallets and e-money, microfinance (non-bank), payment-system operators (UNKNOWN). Columns in the order above.",
-    "transformation": "Counts only as governed; the 429 roster total is not shown as a number of providers. Wallet counts appear as 'counts differ by source and date' with the dated values listed, never one number.",
+    "transformation": "Counts only as governed; the 442 roster total is not shown as a number of providers. Wallet counts appear as 'counts differ by source and date' with the dated values listed, never one number.",
     "missing": "A dimension with no governed row is UNKNOWN (UI-VIS-STATE-UNKNOWN), e.g. negative authority for classes other than wallets ('none held', not 'none exist'); operation evidence for every class.",
     "breaks": "None.",
     "annotation": "UI-VIS-ISSUER-SCOPE in frame for the rows whose authority is Central Bank of Yemen — Aden (authority field of the status and negative-authority rows); the microfinance row's source is the Yemen Microfinance Network's membership pages.",
