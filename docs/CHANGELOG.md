@@ -1,5 +1,15 @@
 # Repository Change Log
 
+## 2026-10-03 — Fix: the header test no longer counts a navigation's aborted requests
+
+CI's browser job failed once on `4a90371`, in `scripts/tests/test_security_headers.py`. Six `net::ERR_ABORTED` font
+requests were listed as failures of three Evidence Records. They were the previous page's font preloads, still in flight
+when the next page started loading, and the test credited them to the page that followed. The next head passed, which
+does not make it a flake.
+
+The test now ignores `ERR_ABORTED` only. A request the policy blocks reports `ERR_BLOCKED_BY_CSP` and still fails the
+test, and violations are caught by their own event. All 288 pages pass.
+
 ## 2026-10-03 — B14 c and d: an inactive deploy workflow; the performance budget
 
 - **Deploy workflow (B14 c).** `.github/workflows/deploy.yml` deploys `dist/` to Cloudflare Pages. It runs only when the

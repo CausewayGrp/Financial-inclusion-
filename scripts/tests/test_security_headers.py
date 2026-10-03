@@ -120,7 +120,11 @@ def main() -> int:
             errors: list[str] = []
             page.on("pageerror", lambda e: errors.append(f"script error: {e}"))
             page.on("console", lambda m: errors.append(f"console: {m.text}") if m.type == "error" and "Content Security Policy" in m.text else None)
-            page.on("requestfailed", lambda r: errors.append(f"request failed: {r.url} {r.failure}") if r.url.startswith(base) else None)
+            # a request the browser abandons when the next page starts loading (net::ERR_ABORTED, e.g. a font preload still
+            # in flight) is not a failure of either page; a request the policy blocks reports net::ERR_BLOCKED_BY_CSP and
+            # still counts (CI run 37092238972 failed on such aborts, attributed to the page that followed)
+            page.on("requestfailed", lambda r: errors.append(f"request failed: {r.url} {r.failure}")
+                    if r.url.startswith(base) and "ERR_ABORTED" not in str(r.failure) else None)
             for p in pages:
                 errors.clear()
                 resp = page.goto(base + p, wait_until="load")
