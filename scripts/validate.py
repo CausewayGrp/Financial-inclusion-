@@ -1515,8 +1515,11 @@ def _r4re(t):
     tail=((rf'(?:ه|ي|ات)?(?![{_R4_WCH}])' if ar else rf's?(?![{_R4_WCH}])') if len(t)<=3 else '')
     return re.compile(rf'(?<![{_R4_WCH}]){pre}{e}{tail}')
 def _r4has(text,t):
+    # Every token pattern contains the token itself as a literal, so a text without it cannot match: the substring test
+    # decides most calls without the regular expression, with the same result (owner note of 3 October 2026, 13:00, 1).
+    if t not in text: return False
     rx=_r4re(t)
-    return bool(rx.search(text)) if rx else (t in text)
+    return bool(rx.search(text)) if rx else True
 def _r4qtok(t):
     # PB-0491 light query-token normalisation, identical to site-src/app.js queryToken().
     if t.startswith('ال') and len(t)>3: return t[2:]
@@ -2467,6 +2470,23 @@ try:
     import checksums as _CS   # F9: git ls-files, or every file of an extracted archive (the same set SHA256SUMS.txt covers)
     _tracked=_CS.tracked_files()
     _secret=re.compile(r'AKIA[0-9A-Z]{16}|-----BEGIN (?:RSA |EC |OPENSSH |DSA )?PRIVATE KEY-----|\bghp_[A-Za-z0-9]{36}\b|\bgithub_pat_[A-Za-z0-9_]{40,}|\bxox[baprs]-[A-Za-z0-9-]{10,}|\bsk-[A-Za-z0-9]{32,}|\bAIza[0-9A-Za-z_\-]{35}\b|(?i:\b(?:password|passwd|secret|api[_-]?key|access[_-]?token)\s*[:=]\s*["\'][^"\'\s]{8,}["\'])')
+    # The scan is split in two, with the same result as the single pattern above: each case-sensitive key form starts with
+    # a fixed literal, and the case-insensitive assignment needs one of its keywords; a text holding neither is not
+    # searched. Under IGNORECASE Python also folds four non-ASCII letters to ASCII (U+0130, U+0131, U+017F, U+212A);
+    # lower() and the two replacements below cover them, so the keyword test is never narrower than the pattern.
+    _sec_i=_secret.pattern.index('|(?i:')
+    _secret_cs,_secret_ci=re.compile(_secret.pattern[:_sec_i]),re.compile(_secret.pattern[_sec_i+1:])
+    _SEC_LIT=('AKIA','-----BEGIN ','ghp_','github_pat_','xox','sk-','AIza')
+    _SEC_KW=('password','passwd','secret','apikey','api_key','api-key','accesstoken','access_token','access-token')
+    def _secret_search(_tx):
+        if any(_l in _tx for _l in _SEC_LIT):
+            _m=_secret_cs.search(_tx)
+            if _m: return _secret.search(_tx)   # the first match of the whole pattern, as before
+        _lo=_tx.lower()
+        if 'ı' in _lo or 'ſ' in _lo: _lo=_lo.replace('ı','i').replace('ſ','s')
+        if any(_k in _lo for _k in _SEC_KW):
+            return _secret.search(_tx)
+        return None
     _docs=re.compile(r'\.(?:pdf|docx?|xlsx?|pptx?|zip|7z|rar|gz|tar)$',re.I)
     for _p in _tracked:
         if not _p: continue
@@ -2476,7 +2496,7 @@ try:
         if re.search(r'\.(?:png|xlsx|jpg|jpeg|gif|ico|woff2?)$',_p,re.I): continue
         try: _tx=(ROOT/_p).read_text(encoding='utf-8')
         except Exception: continue
-        _m=_secret.search(_tx)
+        _m=_secret_search(_tx)
         if _m: errors.append(f'F6-G06 secret-like pattern in {_p}: {_m.group(0)[:12]}…')
     for _r in json.load(open(C/'sources/source_library.json',encoding='utf-8')):
         if not (_r.get('rights_state') and _r.get('public_card_state')): errors.append(f'F6-G08 source {_r.get("source_id")} lacks rights or card state')

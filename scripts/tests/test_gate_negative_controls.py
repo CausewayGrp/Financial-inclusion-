@@ -18,9 +18,9 @@ claimed: if a future change quietly loosens one, its control stops failing and t
 Each control breaks exactly one thing, runs its gate (`scripts/validate.py` unless it names another) and restores. It
 needs a built site (`python3 scripts/build.py`). The faults are never made in the repository: each worker gets its own
 full copy of the work tree (every file Git tracks or would track, `dist/` included), made before the first fault, and
-a fault and its gate run only inside that copy. So the controls run side by side, one per CPU (owner note of
-3 October 2026, 13:00, point 1: one validator run per control had grown past the CI job's 45 minutes), and none can
-leak into another or into the tree. Before any fault, the gates run once on every copy and must pass, and no control's
+a fault and its gate run only inside that copy. So the controls run side by side, one per CPU, and none can leak into
+another or into the tree. CI splits them across six runners instead (`--shard K/6`, `.github/workflows/verify.yml`):
+on its 2-CPU runner two faults side by side took as long as two in a row (owner note of 3 October 2026, 13:00, point 1). Before any fault, the gates run once on every copy and must pass, and no control's
 expected message may appear in that clean output: a message the clean tree already prints would prove nothing. The
 repository itself is never written, so an interrupt leaves it as it was.
 """
@@ -139,9 +139,11 @@ CONTROLS = [
     ("a record's boundary stops being first-load", "en/evidence/CLM-001/index.html",
      replace("data-evidence-boundary-first-load", "data-evidence-boundary-later"),
      "S04.1 Evidence Record structural family mismatch"),
+    # The definition (q2) is printed once. Since RC-18 the universe (q3) is also in the record's head (WHEN, then FOR
+    # WHOM), so blanking q3 no longer removes a field from first load (found on CI, run 37117577689).
     ("a governed first-load field is dropped", "en/evidence/CLM-002/index.html",
-     sub_once(r'<div class="qa" id="q3">.*?</div></div>', '<div class="qa" id="q3"></div>'),
-     "S04.1 first-load evidence field missing"),
+     sub_once(r'<div class="qa" id="q2">.*?</div></div>', '<div class="qa" id="q2"></div>'),
+     "S04.1 first-load evidence field missing /evidence/CLM-002/ en definition"),
     ("JSON-LD disagrees with the visible breadcrumb", "en/evidence/CLM-001/index.html",
      replace('>Evidence</a> / <span aria-current="page">', '>Evidence hub</a> / <span aria-current="page">'),
      "F6-G04 breadcrumb data differs"),
@@ -466,7 +468,7 @@ def main() -> int:
         caught += fired
         missed += not fired
     print(f"GATE NEGATIVE CONTROLS: {'PASS' if not missed else 'FAIL'} — {caught} of {len(controls)} faults caught "
-          f"(shard {args.shard}, {jobs} workers, {time.monotonic() - started:.0f} s)")
+          f"(shard {args.shard} of all {len(CONTROLS)} controls, {jobs} workers, {time.monotonic() - started:.0f} s)")
     return 1 if missed else 0
 
 

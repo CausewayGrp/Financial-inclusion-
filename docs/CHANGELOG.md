@@ -1,5 +1,33 @@
 # Repository Change Log
 
+## 2026-10-03 — CI: the negative controls split across six runners; the validator 38 s → 25 s; one control re-aimed
+
+The first CI run of the parallel harness (run 37117577689, on `f7deaac`) did not go green:
+- "Gate negative controls" was cancelled at its new 30-minute limit after 54 of 70 controls. The other two jobs
+  passed.
+- On that 2-CPU runner, one validator run took 30.5 s in the gates job, but two faults side by side took 65 s per
+  pair. Workers on one runner gain nothing there.
+- One control was NOT CAUGHT: "a governed first-load field is dropped".
+
+Fixed, without weakening anything:
+- **Six runners** (`.github/workflows/verify.yml`). A matrix of six shards, `--shard K/6 --jobs 1`, each on its own
+  runner. Shard K runs every sixth control from the K-th, so together the shards run each control exactly once. An
+  aggregate job, still named "Gate negative controls", is green only when every shard passed. The required check
+  keeps its name, and a skipped or cancelled shard turns it red. Each shard's limit is 20 minutes.
+- **A faster validator, with the same results** (`scripts/validate.py`):
+  - The search mirror's token test checks the literal first: every token pattern contains its token, so a text
+    without it cannot match.
+  - The secret scan is split. Its case-sensitive key forms each start with a fixed literal. Its case-insensitive
+    assignment needs one of its keywords; the keyword test covers the four non-ASCII letters Python folds under
+    IGNORECASE. A text holding neither is not searched.
+  - Planted secrets of both kinds (an AKIA key, `PassWord = "…"`) are still reported.
+  - 38 s → 25 s locally.
+- **The uncaught control was the control's fault, not the gate's.** Since RC-18, a record's head prints the universe
+  (FOR WHOM) as well as its third answer. So blanking `#q3` no longer removed that field from the first screen, and
+  S04.1 rightly stayed silent. The control now blanks the definition (`#q2`), which is printed once, and S04.1
+  catches it ("… /evidence/CLM-002/ en definition").
+- **Local proof:** the six shards in turn, 70 of 70 caught (12, 12, 12, 12, 11 and 11 per shard, about 110 s each on 4 local workers).
+
 ## 2026-10-03 — RC-18: figure first inside D7; /corrections/ invites source institutions; citizen aliases; dimensions; favicon
 
 Master `433f38bf…` → `c700dc52bf81966939c6d6ec53afe494d1bf699389c04850f74b9dec436ea7e4` through `run_stage.py` (script
