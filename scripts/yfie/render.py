@@ -192,7 +192,9 @@ def spine(index: list, edges: list, foot: bool = False, foot_index: bool = True)
     edge group by its own governed heading — no label is authored (D2, closes DEBT-006)."""
     sfx = "f" if foot else "s"
     idx = "".join(f'<li><a href="#{a}"><span class="n">{i+1:02d}</span><span>{esc(t)}</span></a></li>' for i, (a, t) in enumerate(index))
-    ed = "".join(f'<nav class="edges" aria-labelledby="edge-{sfx}{n}"><h3 id="edge-{sfx}{n}">{esc(e[0])}</h3>' + (f'<p class="small">{esc(e[2])}</p>' if len(e) > 2 and e[2] else "") + "<ul>" + "".join(f"<li>{x}</li>" for x in e[1]) + "</ul></nav>"
+    # B10 a: an edge group is named by its heading and the page's h1, so it never shares a name with the page's own
+    # next-actions landmark ("Continue from here"); both are governed text already on the page
+    ed = "".join(f'<nav class="edges" aria-labelledby="edge-{sfx}{n} page-title"><h3 id="edge-{sfx}{n}">{esc(e[0])}</h3>' + (f'<p class="small">{esc(e[2])}</p>' if len(e) > 2 and e[2] else "") + "<ul>" + "".join(f"<li>{x}</li>" for x in e[1]) + "</ul></nav>"
                  for n, e in enumerate(edges) if e[1])
     cls = "spine foot-spine" if foot else "spine"
     index_html = f'<nav class="index" aria-labelledby="page-title"><ul>{idx}</ul></nav>' if (not foot or foot_index) else ""

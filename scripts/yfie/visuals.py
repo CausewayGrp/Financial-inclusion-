@@ -288,9 +288,9 @@ def landscape_table(v: dict) -> str:
     for g in ls["groups"]:
         rows = []
         for r in g["rows"]:
-            ev = sep.join(f'<a href="{esc(x["href"])}">{esc(x["title"])}</a>' + (f' · {iso_run(x["period"])}' if x["period"] else "") for x in r["records"]) or esc(r["empty"])
+            ev = sep.join(f'<a href="{esc(x["href"])}">{esc(x["title"])}</a>' + (f' · {iso_run(x["period"].rstrip().rstrip(".").rstrip())}' if x["period"] else "") for x in r["records"]) or esc(r["empty"])
             nxt = " · ".join([f'<a href="{esc(x["href"])}">{esc(x["label"])}</a>' for x in r["verify"]] + [f'<a href="{esc(x["href"])}">{esc(x["title"])}</a>' for x in r["priorities"]])
-            rows.append([esc(r["dimension"]), ev, esc(sep.join(r["classes"])), f'<span data-coverage>{esc(r["coverage"])}</span>', nxt or "·"])
+            rows.append([esc(r["dimension"]), ev, esc(sep.join(r["classes"])), f'<span data-coverage>{esc(r["coverage"])}</span>', nxt or esc(ls["no_next"])])
         groups.append((esc(g["label"]), rows))
     t = grouped_table(caption_of(v, esc(ls["note"])), [esc(h) for h in ls["head"]], groups, cls="rvtab wide")
     return f'<div data-evidence-landscape>{table_region(v, t)}</div>'
@@ -342,6 +342,12 @@ def frame_close(v: dict, cite_label: str, origin: str | None, tables: str, notes
 
 
 NUMERIC = __import__("re").compile(r'^(?:<bdi dir="ltr">)?[\d,.]+(?:</bdi>)?$')
+
+
+def th(v: dict, kind: str) -> str:
+    """B10 (NCC-02): the governed heading of a table's row-header column — period, group, corridor, object, step,
+    dimension, date or item — so no corner cell is empty."""
+    return (v.get("labels") or {}).get("th", {}).get(kind, "")
 
 
 def table(caption: str, head: list, rows: list, cls: str = "rvtab", foot: str = "") -> str:
@@ -446,7 +452,7 @@ def findex_gaps(v: dict, cite_label: str, origin: str | None, heading: str = "h2
     rows = [[esc(r["x_text"]), qual(num(r["y"]), esc(r["unit"]) if (per_row or r["unit"] != common_unit) else "", "" if state else esc(state_label(v, r["state"])))] for r in vals]
     gap_unit = uniform([d for d, _, _ in pairs], lambda d: d.get("unit")) or ""
     gaps = [[esc(f'{by_id[d["from"][0]]["x_text"]} − {by_id[d["from"][1]]["x_text"]}'), qual(num(d["value"]), "" if gap_unit else esc(d.get("unit") or ""))] for d, _, _ in pairs]
-    tbl = grouped_table(caption_of(v, qual("" if per_row else esc(common_unit), esc(state_label(v, state)) if state else "")), ["", head],
+    tbl = grouped_table(caption_of(v, qual("" if per_row else esc(common_unit), esc(state_label(v, state)) if state else "")), [esc(th(v, "group")), head],
                         [(None, rows), (qual(esc(gap_unit), esc(derived_label)), gaps)])   # the gaps: their own unit and the DERIVED state as the group's header, the pair as the row
     return frame_open(v, heading) + f'<div class="panels">{"".join(html_)}</div>' + frame_close(v, cite_label, origin, tbl, heading=heading)
 
@@ -645,7 +651,7 @@ def ts_table(v: dict, series: dict, unit: str) -> str:
                                   f'<span dir="auto">{esc(r["series_label"])}</span>' if r.get("series_label") and not doc else "")])
     caption = caption_of(v, qual(esc(unit), esc(state_label(v, state)) if state else "", f'<span dir="auto">{esc(doc)}</span>' if doc else "",
                                  esc(sep(v).join(marker_label(v, m) for m in sorted(shared) if marker_label(v, m)))))
-    return table(caption, ["", esc(unit)], rows)
+    return table(caption, [esc(th(v, "period")), esc(unit)], rows)
 
 
 def remittance_macro(v: dict, cite_label: str, origin: str | None, heading: str = "h2") -> str:
@@ -687,7 +693,7 @@ def remittance_cost(v: dict, cite_label: str, origin: str | None, heading: str =
     html_.append('<div class="p1">' + axis_row(vmax, step) + "</div></div>")
     state = uniform(vals, lambda r: r["state"])
     rows = [[f'{esc(r["x_text"])} — {esc(r["group_text"])}', qual(num(r["y"]), "" if state else esc(state_label(v, r["state"])))] for r in vals]
-    tbl = table(caption_of(v, qual(esc(vals[0]["unit"]), esc(state_label(v, state)) if state else "")), ["", esc(vals[0]["unit"])], rows)
+    tbl = table(caption_of(v, qual(esc(vals[0]["unit"]), esc(state_label(v, state)) if state else "")), [esc(th(v, "corridor")), esc(vals[0]["unit"])], rows)
     return frame_open(v, heading) + f'<div class="panels">{"".join(html_)}</div>' + frame_close(v, cite_label, origin, tbl, heading=heading)
 
 
@@ -710,7 +716,7 @@ def payment_anatomy(v: dict, cite_label: str, origin: str | None, heading: str =
     head, per_row = value_head(v, vals, vals[0]["unit"])
     rows = [[esc(r["x_text"]), qual(esc(withheld_label) if r.get("withheld") or r.get("y") is None else num(r["y"]), esc(r["unit"]) if (per_row or r["unit"] != vals[0]["unit"]) else "", esc(r["is_not_text"]),
                                     esc(sep(v).join(marker_label(v, m) for m in r["markers"] if m != "WITHHELD" and m not in shared_marks)))] for r in vals]
-    tbl = table(caption_of(v, qual("" if per_row else esc(vals[0]["unit"]), esc(state_label(v, "ADMINISTRATIVE")), esc(sep(v).join(marker_label(v, m) for m in sorted(shared_marks))))), ["", head], rows)
+    tbl = table(caption_of(v, qual("" if per_row else esc(vals[0]["unit"]), esc(state_label(v, "ADMINISTRATIVE")), esc(sep(v).join(marker_label(v, m) for m in sorted(shared_marks))))), [esc(th(v, "object")), head], rows)
     return frame_open(v, heading) + panel + frame_close(v, cite_label, origin, tbl, heading=heading)
 
 
@@ -767,7 +773,7 @@ def chain_figure(v: dict, chain_src: dict, cite_label: str, origin: str | None, 
                          + [(str(a.get("x")), f'{a.get("x")} {a["label_text"]} {val_unit_plain(a["y"], a["unit"], v)}' + (f" · {scope}" if scope else "")) for a in s["activity"]])
         ev_text = sep(v).join(t for _, t in entries)
         rows.append([esc(L[s["step"]]), qual(esc(state), iso_run(ev_text))])
-    tbl = table(caption_of(v), ["", esc(v["labels"]["what_it_shows"])], rows)
+    tbl = table(caption_of(v), [esc(th(v, "step")), esc(v["labels"]["what_it_shows"])], rows)
     return frame_open(v, heading) + panel + frame_close(v, cite_label, origin, tbl, heading=heading)
 
 
@@ -965,10 +971,10 @@ def provider_matrix(v: dict, cite_label: str, origin: str | None, heading: str =
         neg_txt = f'{date_token(negative[0].get("date"))} <span dir="auto">{esc(negative[0]["authority_text"])}</span>: {esc(negative[0]["state_text"])}' if (pid == "PUC-WALLET-2025-01" and negative) else unk
         trows = [[dim(0), auth], [dim(1), f'{esc(u["count_state_text"])}: {cnt}. {iso_run(u["named_text"])}'],
                  [dim(2), esc(u["events_text"]) + (f': {ev_txt}' if ev_txt else "")], [dim(3), neg_txt], [dim(4), unk]]
-        tables.append(table(caption_of(v, esc(u["class_text"])), ["", esc(L["what_it_shows"])], trows))
+        tables.append(table(caption_of(v, esc(u["class_text"])), [esc(th(v, "dimension")), esc(L["what_it_shows"])], trows))
     ctx_items = [f'{bdi(e.get("date"))} <span dir="auto">{esc(e["label_text"])}</span>' for e in ctx]
     ctx_txt = unk + ((sep(v) + esc(L["context"]) + " " + sep(v, "comma").join(ctx_items)) if ctx_items and L.get("context") else "".join(sep(v) + x for x in ctx_items))
-    tables.append(table(caption_of(v, pso_label), ["", esc(L["what_it_shows"])],
+    tables.append(table(caption_of(v, pso_label), [esc(th(v, "dimension")), esc(L["what_it_shows"])],
                         [[dim(0), unk], [dim(1), unk], [dim(2), ctx_txt], [dim(3), unk], [dim(4), unk]]))
     return frame_open(v, heading) + panel + frame_close(v, cite_label, origin, "".join(tables), heading=heading)
 
@@ -1066,7 +1072,7 @@ def dated_lanes(v: dict, cite_label: str, origin: str | None, heading: str = "h2
               (esc(FL[1]), [[bdi(r["x"]), esc(f'{r["label_text"]}{(" · " + scope) if scope else ""} · {val_unit_plain(r["y"], r["unit_text"], v)} · {state_label(v, "ADMINISTRATIVE")}')] for r in vals]),
               (esc(FL[2]), [[bdi(e["date"]), esc(e["label_text"])] for e in inst]),
               (None, [[esc(CL["OUTCOME"]), esc(CL["OPEN"])]])]
-    tbl = grouped_table(caption_of(v), ["", esc(v["labels"]["what_it_shows"])], groups)
+    tbl = grouped_table(caption_of(v), [esc(th(v, "date")), esc(v["labels"]["what_it_shows"])], groups)
     return frame_open(v, heading) + panel + frame_close(v, cite_label, origin, tbl, heading=heading)
 
 
@@ -1088,7 +1094,7 @@ def firm_constraints(v: dict, cite_label: str, origin: str | None, heading: str 
     state = uniform(vals, lambda r: r["state"])
     head, per_row = value_head(v, vals, unit)
     rows = [[esc(r["x_text"]), qual(num(r["y"]), esc(r["unit"]) if (per_row or r["unit"] != unit) else "", "" if state else esc(state_label(v, r["state"])))] for r in vals]
-    tbl = table(caption_of(v, qual("" if per_row else esc(unit), esc(state_label(v, state)) if state else "")), ["", head], rows)
+    tbl = table(caption_of(v, qual("" if per_row else esc(unit), esc(state_label(v, state)) if state else "")), [esc(th(v, "item")), head], rows)
     return frame_open(v, heading) + panel + frame_close(v, cite_label, origin, tbl, heading=heading)
 
 

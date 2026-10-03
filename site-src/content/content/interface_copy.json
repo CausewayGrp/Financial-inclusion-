@@ -2708,7 +2708,7 @@
   {
     "ui_id": "UI-LAND-COL-NEXT",
     "label_en": "Where to verify · what would change it",
-    "label_ar": "أين يُتحقق منه · ما الذي سيغيّره",
+    "label_ar": "أين يُتحقق منه · ما الذي قد يغيّره",
     "use_rule": "RC-10 (Owner Addendum 2, improvement 3). Evidence landscape table on VIS-EVIDENCE-FRESHNESS."
   },
   {
@@ -2842,5 +2842,65 @@
     "label_en": "Each priority below would supply evidence that this Reading says is missing; the link does not mean the priority would settle the Reading.",
     "label_ar": "من شأن كل أولوية أدناه أن توفر أدلةً تقول هذه القراءة إنها ناقصة، ولا يعني هذا الربط أن الأولوية ستحسم القراءة.",
     "use_rule": "RC-9b (Part B B6, independent review S1). Reading pages: the line under 'Related measurement priorities'."
+  },
+  {
+    "ui_id": "UI-VIS-TH-PERIOD",
+    "label_en": "Period",
+    "label_ar": "الفترة",
+    "use_rule": "RC-11 (Part B B10 b, NCC-02). The heading of a fallback table's row-header column; no corner cell is empty."
+  },
+  {
+    "ui_id": "UI-VIS-TH-GROUP",
+    "label_en": "Group",
+    "label_ar": "الفئة",
+    "use_rule": "RC-11 (Part B B10 b, NCC-02). The heading of a fallback table's row-header column; no corner cell is empty."
+  },
+  {
+    "ui_id": "UI-VIS-TH-CORRIDOR",
+    "label_en": "Corridor and amount",
+    "label_ar": "الممر والمبلغ",
+    "use_rule": "RC-11 (Part B B10 b, NCC-02). The heading of a fallback table's row-header column; no corner cell is empty."
+  },
+  {
+    "ui_id": "UI-VIS-TH-OBJECT",
+    "label_en": "What is counted",
+    "label_ar": "ما يُعدّ",
+    "use_rule": "RC-11 (Part B B10 b, NCC-02). The heading of a fallback table's row-header column; no corner cell is empty."
+  },
+  {
+    "ui_id": "UI-VIS-TH-STEP",
+    "label_en": "Step",
+    "label_ar": "الخطوة",
+    "use_rule": "RC-11 (Part B B10 b, NCC-02). The heading of a fallback table's row-header column; no corner cell is empty."
+  },
+  {
+    "ui_id": "UI-VIS-TH-DIMENSION",
+    "label_en": "Dimension",
+    "label_ar": "البُعد",
+    "use_rule": "RC-11 (Part B B10 b, NCC-02). The heading of a fallback table's row-header column; no corner cell is empty."
+  },
+  {
+    "ui_id": "UI-VIS-TH-DATE",
+    "label_en": "Date",
+    "label_ar": "التاريخ",
+    "use_rule": "RC-11 (Part B B10 b, NCC-02). The heading of a fallback table's row-header column; no corner cell is empty."
+  },
+  {
+    "ui_id": "UI-VIS-TH-ITEM",
+    "label_en": "Item",
+    "label_ar": "البند",
+    "use_rule": "RC-11 (Part B B10 b, NCC-02). The heading of a fallback table's row-header column; no corner cell is empty."
+  },
+  {
+    "ui_id": "UI-VIS-NOTE-POS-H1-WITHHELD",
+    "label_en": "The payment-system report for the first half of 2025 also gives a POS-transaction total for that half-year. It is withheld here because its definition and period need a methodology note before public use. The monthly releases are shown because each reports the same POS measures for one month within the same reporting scope, so consecutive months are comparable.",
+    "label_ar": "يذكر تقرير نظام المدفوعات للنصف الأول من 2025 أيضًا إجماليًا لمعاملات نقاط البيع في ذلك النصف، وهو محجوب هنا لأن تعريفه وفترته يحتاجان إلى ملاحظة منهجية قبل النشر. أما الإصدارات الشهرية فتُعرض لأن كلًّا منها يذكر مقاييس نقاط البيع نفسها لشهر واحد ضمن نطاق الإبلاغ نفسه، فتكون الأشهر المتتالية قابلة للمقارنة.",
+    "use_rule": "RC-11 (Part B B11). Frame note of VIS-POS-TRANSACTIONS: the withheld H1 2025 transaction total (OBS-00036) and why the monthly series is admissible; from governed fields only."
+  },
+  {
+    "ui_id": "UI-LAND-NO-NEXT",
+    "label_en": "No domain page or measurement priority in this base",
+    "label_ar": "لا توجد صفحة مجال ولا أولوية قياس في قاعدة الأدلة هذه",
+    "use_rule": "RC-10b. Evidence landscape: the last cell of a row that has neither a domain page nor a priority."
   }
 ]

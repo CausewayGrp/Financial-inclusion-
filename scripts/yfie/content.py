@@ -546,7 +546,7 @@ class Content:
             if items:
                 groups.append({"label": dom_label[d], "rows": items})
         return {"groups": groups, "head": [L(k) for k in ("UI-LAND-COL-DIMENSION", "UI-LAND-COL-EVIDENCE", "UI-LAND-COL-CLASS", "UI-LAND-COL-COVERAGE", "UI-LAND-COL-NEXT")],
-                "note": L("UI-LAND-NOTE")}
+                "note": L("UI-LAND-NOTE"), "no_next": L("UI-LAND-NO-NEXT")}
 
     def visual(self, vid: str, lang: str) -> dict:
         v = self.visual_contracts[vid]
@@ -571,7 +571,8 @@ class Content:
                        "what_not_to_conclude": self.t("UI-DOM-WHAT-NOT-TO-CONCLUDE", lang),
                        "open_source_record": self.t("UI-EVID-OPEN-SOURCE-RECORD", lang), "source_record": self.t("UI-SOURCES-SOURCE-RECORD", lang),
                        "reference": self.t("UI-SOURCE-REFERENCE", lang), "period": self.t("UI-EVID-WHEN-WAS-IT-MEASURED-OR", lang),
-                       "value_unit_per_row": self.t("UI-VIS-VALUE-UNIT-PER-ROW", lang)},   # release candidate G4 (D6)
+                       "value_unit_per_row": self.t("UI-VIS-VALUE-UNIT-PER-ROW", lang),   # release candidate G4 (D6)
+                       "th": {k: self.t(f"UI-VIS-TH-{k.upper()}", lang) for k in ("period", "group", "corridor", "object", "step", "dimension", "date", "item")}},   # B10 (NCC-02)
         }
         if vid == "VIS-EVIDENCE-FRESHNESS":
             out["landscape"] = self.landscape(lang)   # RC-10: the text frame carries the evidence landscape table

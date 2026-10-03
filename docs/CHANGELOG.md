@@ -1,5 +1,32 @@
 # Repository Change Log
 
+## 2026-10-03 — Release candidate RC-11: B10 accessibility, B11 /payments/ note, RC-10's review
+
+Transaction `audit/release_candidate/rc_11_b10_b11.py` through `run_stage.py` (Master `ed004282e057` → `36a61f8d5429`;
+30 cells). `rc_11_stage_inputs.py` binds the B11 frame note in the contract.
+
+- **B10 a.** Each edge group in the verification spine is now named by its own heading plus the page's `h1`. It no longer
+  shares the name "Continue from here" with the page's next-actions landmark. axe `landmark-unique` had flagged this on
+  44 page-widths.
+- **B10 b (NCC-02).** Every fallback table now names its row-header column with a governed label: period, group,
+  corridor and amount, what is counted, step, dimension, date or item. axe `empty-table-header` had flagged 128 nodes on
+  76 page-widths.
+- **B10 c.** The axe audit runs over all 286 documents at 1440 and 390 px (`--all`), with the record in
+  `docs/ACCESSIBILITY_AUDIT.md`. A new browser test walks search, language switch, print, cite, source filter and Compare
+  from the keyboard in both languages. No conformance is claimed.
+- **B11.** VIS-POS-TRANSACTIONS gains one frame note, written only from governed fields. It names the withheld
+  first-half-2025 POS-transaction total and says why the monthly series is shown beside it.
+- **RC-10b** (RC-10's review was ACCEPTABLE; all eleven should-fix items applied):
+  - Arabic terms «الجنس» and «النشط».
+  - Payment infrastructure states its scope.
+  - Remittances received by people, not households.
+  - Programmes for MSMEs.
+  - Evidence types now match the linked records; CLM-015, CLM-054 and the FMIIP baseline are linked.
+  - «قد» in the column heading.
+  - A governed label replaces a lone "·".
+  - No doubled punctuation.
+  - VIS-EVIDENCE-FRESHNESS lists its member records, so its verification reads as a composite of linked records.
+
 ## 2026-10-03 — Accessibility audit over every page (B10 c, tooling)
 
 `scripts/accessibility_audit.py` gains `--all`, which audits every route of the built site in both languages instead of
