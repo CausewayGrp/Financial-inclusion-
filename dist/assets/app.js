@@ -74,7 +74,9 @@ $$('[data-source-cite]').forEach(b=>b.addEventListener('click',async()=>{
 
 let searchIndexPromise=null;
 function loadSearch(){
-  if(!searchIndexPromise) searchIndexPromise=fetch('/static-data/search_index.json').then(r=>{if(!r.ok)throw new Error('search index');return r.json();}).then(x=>Array.isArray(x)?x:(x.records||[]));
+  // B15 (A-1): a failed load is not kept, so the next search tries again (a dropped connection must not break search
+  // until the page is reloaded)
+  if(!searchIndexPromise) searchIndexPromise=fetch('/static-data/search_index.json').then(r=>{if(!r.ok)throw new Error('search index');return r.json();}).then(x=>Array.isArray(x)?x:(x.records||[])).catch(e=>{searchIndexPromise=null;throw e;});
   return searchIndexPromise;
 }
 function esc(s){return String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));}
@@ -96,7 +98,7 @@ function queryTokens(term){return term.replace(/[?,.;:!—–"“”«»()؟،؛
 function queryToken(t){if(/^ال/.test(t)&&t.length>3)return t.slice(2);if(/^[a-z]+$/.test(t)&&t.length>4){if(/ies$/.test(t))return t.slice(0,-3)+'y';if(/ing$/.test(t))return t.slice(0,-3);if(/ed$/.test(t))return t.slice(0,-2);if(/s$/.test(t)&&!/ss$/.test(t))return t.slice(0,-1);}return t;}
 const DOMAIN_ROUTES=new Set(['/people/','/firms/','/finance/','/providers/','/payments/','/remittances/','/access/','/reforms/','/measurement/']);
 let aliasPromise=null;
-function loadAliases(){if(!aliasPromise)aliasPromise=fetch('/static-data/search_aliases.json').then(r=>r.ok?r.json():[]).catch(()=>[]);return aliasPromise;}
+function loadAliases(){if(!aliasPromise)aliasPromise=fetch('/static-data/search_aliases.json').then(r=>{if(!r.ok)throw new Error('aliases');return r.json();}).catch(()=>{aliasPromise=null;return [];});return aliasPromise;}   // B15 (A-1): retried after a failure
 function aliasFor(term,aliases){const q=term.split(/\s+/).filter(Boolean).map(queryToken).join(' ');for(const a of aliases){const terms=String((isAr?a.terms_ar:a.terms_en)||'').split(';').concat(String((isAr?a.terms_en:a.terms_ar)||'').split(';')).map(x=>normalize(x.trim()).split(/\s+/).filter(Boolean).map(queryToken).join(' ')).filter(Boolean);if(terms.includes(q))return a;}return null;}
 function scoreRecord(x,tokens,phraseTokens,alias){
   const title=normalize(isAr?(x.title_ar||''):(x.title_en||''));const summary=normalize(isAr?(x.summary_ar||''):(x.summary_en||''));const text=normalize(isAr?(x.search_text_ar||''):(x.search_text_en||''));

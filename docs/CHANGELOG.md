@@ -1,5 +1,15 @@
 # Repository Change Log
 
+## 2026-10-03 — B15 d, first improvements: search recovers after a failed load; two layout fixes
+
+From the product challenge's panel findings (`audit/release_candidate/PRODUCT_CHALLENGE.md`, written once the red team
+reports):
+- **A-1.** If the search index or the aliases fail to load once (a dropped connection), the failure is no longer kept.
+  The next search tries again. Before, search stayed broken until the page was reloaded.
+- **A-15, C-16.** The search input no longer overruns its dialog's padding (`box-sizing`).
+- **C-4.** At 1,200 px and wider, the Compare tool uses its section's full width. A four-record table now fits its
+  region (840 px) instead of scrolling inside a 584 px column. The scrolling region stays for narrower screens.
+
 ## 2026-10-03 — Roadmap for version 1.1, first draft (B15 f)
 
 `docs/ROADMAP_V1_1.md` puts first, as the brief asks, international context from same-source aggregates, with Yemen's
