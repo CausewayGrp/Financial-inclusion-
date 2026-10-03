@@ -14,8 +14,10 @@ Every value is copied from the governed projections under `site-src/content/`; n
 re-worded. The publication firewall holds: a source without a public locator is never named, and a non-display-ready
 source carries no title. `scripts/tests/test_exports.py` proves every exported value against the projections.
 
-Publishing is one switch, `public_downloads` in `site-src/deployment.json`, which stays false until the owner's licence
-decision (FINAL_OPEN_ITEMS_REGISTER.md; docs/RELEASE_RUNBOOK.md). While it is false, nothing here reaches `dist/`, and
+Publishing is one switch, `public_downloads` in `site-src/deployment.json`. The owner adopted CC BY 4.0 for CauseWay's
+own content on 3 October 2026 (audit/OWNER_DECISIONS_2026-10-02.md, 09:50, E); the switch stays false until CauseWay's
+counsel confirms the licence text (docs/RELEASE_RUNBOOK.md). The exports carry the licence: LICENCE.txt holds the
+governed /rights/ licence section, verbatim in both languages, and MANIFEST.json names it. While it is false, nothing here reaches `dist/`, and
 the validator fails if a download is found there. The codebook's wording is a draft: it needs the bilingual review that
 governed copy receives before the switch is turned on.
 """
@@ -197,6 +199,17 @@ def codebook(data: dict) -> list[OrderedDict]:
     return rows
 
 
+LICENCE_URL = "https://creativecommons.org/licenses/by/4.0/"
+
+
+def licence_section() -> dict:
+    """The governed licence section of /rights/ (the one whose heading names CC BY 4.0), copied verbatim."""
+    hits = [s for s in load("content/page_sections.json") if s.get("route") == "/rights/" and "CC BY 4.0" in str(s.get("heading_en") or "")]
+    if len(hits) != 1 or not all("creativecommons.org/licenses/by/4.0" in str(hits[0].get(k)) for k in ("body_en", "body_ar")):
+        raise SystemExit("exports: /rights/ must govern exactly one CC BY 4.0 section, with the licence URL in both languages")
+    return hits[0]
+
+
 def write(out: Path, name: str, rows: list[OrderedDict]) -> None:
     (out / f"{name}.json").write_text(json.dumps(rows, ensure_ascii=False, indent=1) + "\n", encoding="utf-8")
     with (out / f"{name}.csv").open("w", encoding="utf-8-sig", newline="") as fh:
@@ -212,8 +225,12 @@ def build(out: Path) -> dict:
     for n, rows in data.items():
         write(out, n, rows)
     write(out, "codebook", codebook(data))
+    lic = licence_section()
+    (out / "LICENCE.txt").write_text("\n\n".join(lic[k] for k in ("heading_en", "body_en", "heading_ar", "body_ar")) + "\n", encoding="utf-8")
     manifest = OrderedDict([("schema", "YFIE_EXPORTS/1.0"), ("master_sha256", sha), ("published", False),
-                            ("switch", "site-src/deployment.json public_downloads (false until the owner's licence decision)"),
+                            ("switch", "site-src/deployment.json public_downloads (false until CauseWay's counsel confirms the CC BY 4.0 text)"),
+                            ("licence", OrderedDict([("id", "CC-BY-4.0"), ("url", LICENCE_URL), ("text", "LICENCE.txt"),
+                                                     ("covers", "CauseWay's own content; third-party source material is not covered and stays under its publishers' terms")])),
                             ("datasets", OrderedDict((n, len(r)) for n, r in data.items()))])
     (out / "MANIFEST.json").write_text(json.dumps(manifest, indent=1) + "\n", encoding="utf-8")
     return manifest

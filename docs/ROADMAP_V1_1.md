@@ -26,7 +26,7 @@ see whether 11.9 % of adults with an account is low for the region and for simil
 - Design: a comparator row, in the table pattern; no rank.
 - Code: none new.
 
-## 2. Public downloads, after the licence decision
+## 2. Public downloads, after counsel confirms the CC BY 4.0 text
 
 *Who gains:* the academic researcher, the economist, the journalist.
 
@@ -34,7 +34,7 @@ see whether 11.9 % of adults with an account is low for the region and for simil
 on every row (`scripts/exports.py`; B14 a).
 
 *Needs:*
-- Decision: the owner's licence decision (`docs/RELEASE_RUNBOOK.md`, step 2).
+- Decision: taken. The owner adopted CC BY 4.0 for CauseWay's own content (owner instructions of 3 October 2026, 09:50, E); what remains is CauseWay's counsel confirming the licence text (`docs/RELEASE_RUNBOOK.md`, step 2).
 - Copy: the codebook's bilingual review; the reuse terms stated on /data/, Master-first.
 - Code: `public_downloads: true`.
 

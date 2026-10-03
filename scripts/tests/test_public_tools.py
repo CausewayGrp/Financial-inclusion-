@@ -414,6 +414,9 @@ def t_cite_record(page, base):
         page.wait_for_function("navigator.clipboard.readText().then(t=>t.length>0)")
         text = " ".join(page.evaluate("navigator.clipboard.readText()").split())
         assert text == short and "CLM-001" in text and "/evidence/CLM-001/" in text, (short[:80], text[:80])
+        # two lines: this resource with the page address, then the original sources (owner instructions, 3 October 2026, E1)
+        lines = page.evaluate("navigator.clipboard.readText()").split("\n")
+        assert len(lines) == 2 and "/evidence/CLM-001/" in lines[0] and lines[1].startswith(("Original sources", "المصادر الأصلية")), lines
         assert len(text) < len(governed), "the short citation is not shorter than the long form"
         page.evaluate("navigator.clipboard.writeText('')")
         page.click(".cite-long summary")

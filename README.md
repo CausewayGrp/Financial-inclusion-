@@ -136,7 +136,7 @@ validates ([`CONTRIBUTING.md` §2](CONTRIBUTING.md#2-who-owns-what-and-how-it-ch
 | Typefaces | IBM Plex Sans and IBM Plex Sans Arabic, self-hosted unchanged from [`vendor/fonts/`](vendor/fonts/README.md) (OFL-1.1) |
 | Routes | Every route exists at `/en/…` and `/ar/…`; `/` opens the reader's chosen edition; there is a 404 in both |
 | Accessibility | Designed against WCAG 2.2 AA outcomes; conformance is not claimed before the implemented site is audited |
-| Downloads and exports | Designed, and shipped disabled, until the owner decides the content licence (OWN-04); third-party documents are never redistributed |
+| Downloads and exports | Designed, and shipped disabled. The owner adopted CC BY 4.0 for CauseWay's own content (3 October 2026); the downloads switch on at release once CauseWay's counsel confirms the CC BY 4.0 text. Third-party documents are never redistributed |
 
 ### Scale
 
@@ -226,7 +226,7 @@ Every item, classed and owned, is in [`FINAL_OPEN_ITEMS_REGISTER.md`](FINAL_OPEN
 | Release only | 4 | Security headers at the host; source reuse rights; optional native Arabic certification; named release acceptance |
 | External evidence dependencies | 11 | Sources not yet read in the original — among them IMF Country Report 26/80 (four chronology facts), the date of Decision No. 10 of 2026, the entity names in Decision No. 18 of 2026, the OECD 2026 figures and the SFD/SMED primary. The public text stays unchanged until each is read |
 | Known evidence frontiers | 8 | Stated on the pages and never filled: the withheld CLM-044 value; the ~147-firm base behind the 91.84% table; the CBY-Aden ↔ IMF remittance crosswalk; the causes of the gender gap; reconciled current operating-provider status; the size of the 2022 banking restatement; composite records without listed members; one deferred sub-national series |
-| Owner input | 6 | CauseWay identity and funding statement; contact-mailbox confirmation; the public origin; a content licence (gates every CauseWay-content download and export); stewardship decisions; a reversed logo if Design needs one |
+| Owner input | 6 | CauseWay identity and funding statement (supplied 3 October 2026); contact-mailbox confirmation; the public origin; counsel confirms the CC BY 4.0 text (the licence is adopted; it gates every CauseWay-content download and export); stewardship decisions; a reversed logo if Design needs one |
 | Rejected / no action | 7 | Recorded so nobody reopens them by accident |
 
 ## Owner actions
@@ -235,7 +235,7 @@ Every item, classed and owned, is in [`FINAL_OPEN_ITEMS_REGISTER.md`](FINAL_OPEN
    (HTTP 403). The exact tag commands are in [`OPENAI_REENTRY_CHECKPOINT.md` §7](OPENAI_REENTRY_CHECKPOINT.md#7-owner-actions);
    the branches are listed under [Checkpoints and tags](#checkpoints-and-tags).
 2. **Decide the owner inputs** in the register: the CauseWay identity and funding statement, the contact mailbox, the
-   public origin, the content licence, stewardship, and a reversed logo only if Design asks for one.
+   public origin, counsel's confirmation of the CC BY 4.0 text, stewardship, and a reversed logo only if Design asks for one.
 3. **Before any public release:** the RELEASE_ONLY items, a post-implementation accessibility audit and a named release
    acceptance. Nothing in this repository declares public release readiness.
 

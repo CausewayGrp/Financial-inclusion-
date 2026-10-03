@@ -1,5 +1,30 @@
 # Repository Change Log
 
+## 2026-10-03 — "How numbers are presented" once; the citation in two lines; the exports carry the licence
+
+Code, from the owner's instructions of 3 October 2026, 09:50 (C5 and E), plus one presentation fix found on the way.
+- **C5.** The reading rule ("How numbers are presented" and its governed sentence) was a block under every domain
+  heading. It is now printed once, on /methodology/, as its first section (#how-numbers). Each domain answer links to
+  it once from its spine, under the governed "Methodology" heading. The domain head keeps its two governed actions.
+- **The citation in two lines (E1; Addendum 2 lesson).** A record's short citation now previews and copies as two lines:
+  - first, this resource: the title, the product, the record, CauseWay, the edition and the page address;
+  - second, the original sources: publisher, title, year and link.
+  The public tools test reads the clipboard and checks both lines.
+- **Arabic citations (presentation).**
+  - Record IDs no longer break at their hyphen; "-CLM … 001" is gone.
+  - Each URL is its own left-to-right block, so a wrapped address reads in order.
+- **Exports (E3).** When the switch is on, the exports carry the licence: LICENCE.txt holds the governed /rights/ licence
+  section verbatim in both languages, and MANIFEST.json names CC-BY-4.0. `public_downloads` stays false; the switch
+  waits on counsel's confirmation of the CC BY 4.0 text.
+- **E4.** "The licence decision" is replaced in the owner's open list by "counsel confirms the CC BY 4.0 text": README,
+  roadmap §2, DEPLOYMENT.md, the RC-B14 message and the frames docstring. The runbook and deployment.json follow with
+  the hosting work.
+- **Gates.**
+  - **RC-0950:** the reading rule is printed on /methodology/ only and linked once from each domain answer; every record
+    citation that names a source is two lines, with the page address ending the first.
+  - **Negative controls:** two new ones.
+  - **test_exports:** checks the licence.
+
 ## 2026-10-03 — Steward patch: About, the trust links and "Cite this page" in the opened mobile menu (A-12, C-6, C-8)
 
 One patch to the controlled contract `site-src/content/content/navigation_interaction.json`, by this session as

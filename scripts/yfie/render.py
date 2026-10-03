@@ -386,7 +386,9 @@ def cite_isolate(html_text: str) -> str:
     left-to-right run ("CLM-001. CauseWay."), so the publisher read before the record. Each identifier and the publisher's
     name is isolated, as the text layer isolates dates; the copied text is unchanged. Applied to escaped text outside tags."""
     parts = re.split(r'(<[^>]+>)', html_text)
-    return "".join(p if p.startswith("<") else _CITE_LTR.sub(r'<bdi dir="ltr" class="nw">\1</bdi>', p) for p in parts)
+    # G0 (owner instructions of 3 October 2026, 09:50): only a URL may wrap inside a citation; an identifier stays whole
+    # (an Arabic citation showed "-CLM … 001" when the record ID broke at its hyphen)
+    return "".join(p if p.startswith("<") else _CITE_LTR.sub(lambda m: f'<bdi dir="ltr" class="nw{" url" if m.group(1).startswith("http") else ""}">{m.group(1)}</bdi>', p) for p in parts)
 
 
 def page_citation(shell: dict, title: str) -> str:
@@ -408,8 +410,11 @@ def cite_tools(shell: dict, route: str, citation: str, record: bool = False, lon
     # limits, is one disclosure away and copies on its own
     long_ = (f'<details class="cite-long"><summary>{esc(L["cite_long"])}</summary><p class="cite-text" data-cite-long-text>{cite_isolate(iso(esc(long_form)))}{lead}'
              f' <bdi dir="ltr" data-cite-url>{esc(canon)}</bdi></p><button type="button" class="tbtn" data-cite-long>{esc(L["copy_long"])}</button></details>') if long_form else ""
-    return (f'<div class="cite-preview"><p class="cite-h">{esc(L["cite_preview"])}</p><p class="cite-text" data-cite-text>{cite_isolate(iso(esc(citation)))}{lead}'
-            f' <bdi dir="ltr" data-cite-url>{esc(canon)}</bdi></p>{long_}</div><button type="button" class="{cls}" data-cite>{esc(L["copy_citation"])}</button>'
+    # a record's short citation has two lines: this resource (ending with the page address), then the original sources
+    line1, _, line2 = str(citation).partition("\n")
+    second = f'<br><span class="cite-l2" data-cite-line>{cite_isolate(iso(esc(line2)))}</span>' if line2 else ""
+    return (f'<div class="cite-preview"><p class="cite-h">{esc(L["cite_preview"])}</p><p class="cite-text" data-cite-text><span data-cite-line>{cite_isolate(iso(esc(line1)))}{lead}'
+            f' <bdi dir="ltr" data-cite-url>{esc(canon)}</bdi></span>{second}</p>{long_}</div><button type="button" class="{cls}" data-cite>{esc(L["copy_citation"])}</button>'
             f'<button type="button" class="tbtn" data-print>{esc(L["print"])}</button>')
 
 

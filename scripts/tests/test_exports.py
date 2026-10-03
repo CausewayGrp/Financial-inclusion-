@@ -54,9 +54,14 @@ def main() -> int:
     X.write(planted, "evidence_records", rows)
     if not any("evidence_records" in p and "summary_en" in p for p in check(planted)):
         problems.append("the checker did not report a planted wrong value")
+    manifest = json.loads((out / "MANIFEST.json").read_text(encoding="utf-8"))
+    counts = manifest["datasets"]
+    # owner instructions of 3 October 2026, 09:50, E3: the exports carry the licence
+    lic = (out / "LICENCE.txt").read_text(encoding="utf-8") if (out / "LICENCE.txt").exists() else ""
+    if (manifest.get("licence") or {}).get("id") != "CC-BY-4.0" or "CC BY 4.0" not in lic or "creativecommons.org/licenses/by/4.0" not in lic:
+        problems.append("exports: MANIFEST.json and LICENCE.txt must carry the CC BY 4.0 licence (owner instructions, 3 October 2026, E3)")
     for p in problems[:40]:
         print("FAIL", p)
-    counts = json.loads((out / "MANIFEST.json").read_text(encoding="utf-8"))["datasets"]
     print(f"EXPORTS: {'PASS' if not problems else 'FAIL'} — " + ", ".join(f"{k} {v}" for k, v in counts.items())
           + f"; every value checked against the projections; a planted wrong value caught; not published ({len(problems)} problems)")
     return 1 if problems else 0
@@ -125,7 +130,7 @@ def check(out: Path) -> list[str]:
                 problems.append("sources: the firewall does not hold (a source without a public locator, or a public one missing)")
     dep = json.loads((ROOT / "site-src" / "deployment.json").read_text(encoding="utf-8"))
     if dep.get("public_downloads") is not False:
-        problems.append("deployment.json: public_downloads must stay false until the owner's licence decision")
+        problems.append("deployment.json: public_downloads must stay false until CauseWay's counsel confirms the CC BY 4.0 text")
     if (ROOT / "dist" / "downloads").exists():
         problems.append("dist/downloads exists while downloads are switched off")
     return problems

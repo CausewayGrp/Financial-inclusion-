@@ -2918,7 +2918,7 @@ try:
     if _dep14.get("public_origin") is not None:
         errors.append("RC-B14 public_origin is set: a release-only decision")
     if _dep14.get("public_downloads") is not False:
-        errors.append("RC-B14 public_downloads is not false: publishing the exports waits on the owner's licence decision")
+        errors.append("RC-B14 public_downloads is not false: publishing the exports waits on counsel's confirmation of the CC BY 4.0 text")
     if (DIST / "downloads").exists():
         errors.append("RC-B14 dist/downloads exists while downloads are switched off")
 except Exception as _x:
@@ -3084,6 +3084,44 @@ try:
         errors.append(f"RC-NAV read only {_nnav} pages")
 except Exception as _x:
     errors.append("RC-NAV unreadable " + repr(_x))
+
+# RC-0950 (owner instructions of 3 October 2026, 09:50): C5 — "How numbers are presented" is printed once, on
+# /methodology/ (#how-numbers), and each domain answer links to it once from its spine instead of printing it under its
+# heading; E1 — a record's short citation is two lines, this resource (ending with the page address) then the original
+# sources it names.
+try:
+    _ui0950 = {x["ui_id"]: x for x in json.loads((C / "content" / "interface_copy.json").read_text(encoding="utf-8"))}
+    _domains = [r["route"] for r in json.loads((C / "presentation_priority.json").read_text(encoding="utf-8"))["routes"] if r.get("page_family") == "Domain Answer"]
+    if len(_domains) != 8:
+        errors.append(f"RC-0950 read {len(_domains)} domain answers, not 8")
+    for _lang in ("en", "ar"):
+        _copy = _html.escape(_ui0950["UI-DOM-EVERY-CONSEQUENTIAL-NUMBER-STAYS-ATTACHED"][f"label_{_lang}"], quote=False)
+        _m = (DIST / _lang / "methodology" / "index.html").read_text(encoding="utf-8")
+        if _m.count('id="how-numbers"') != 1 or _copy not in _m:
+            errors.append(f"RC-0950 /{_lang}/methodology/ does not print the reading rule once at #how-numbers")
+        for _f in sorted((DIST / _lang).rglob("index.html")):
+            _h = _f.read_text(encoding="utf-8")
+            _rel = "/" + str(_f.parent.relative_to(DIST / _lang)).replace("\\", "/").strip(".") + "/"
+            _rel = "/" if _rel in ("//", "/./") else _rel.replace("//", "/")
+            if _rel != "/methodology/" and _copy in _h:
+                errors.append(f"RC-0950 /{_lang}{_rel} prints the reading rule; it belongs on /methodology/ only")
+        for _r in _domains:
+            _h = (DIST / _lang / _r.strip("/") / "index.html").read_text(encoding="utf-8")
+            if len(set(re.findall(rf'<a href="/{_lang}/methodology/#how-numbers" data-reading-rule>', _h))) != 1:
+                errors.append(f"RC-0950 /{_lang}{_r} does not link the reading rule from its spine")
+    _two = 0
+    for _f in sorted(DIST.glob("*/evidence/*/index.html")):
+        _h = _f.read_text(encoding="utf-8")
+        _pv = _h.split("data-cite-text>", 1)[1].split("</p>", 1)[0] if "data-cite-text>" in _h else ""
+        _lines = _pv.count("data-cite-line")
+        _src = ("Original sources" in _pv) or ("المصادر الأصلية" in _pv)
+        if _src and (_lines != 2 or "data-cite-url" not in _pv.split("<br>", 1)[0]):
+            errors.append(f"RC-0950 {_f.relative_to(DIST)} the citation is not two lines with the page address ending the first")
+        _two += _src
+    if _two < 150:
+        errors.append(f"RC-0950 only {_two} record citations name an original source")
+except Exception as _x:
+    errors.append("RC-0950 unreadable " + repr(_x))
 
 # RC-B13 (Part B B13): the research library on /data/. Its filters stay hidden until the runtime runs (the list is
 # complete without JavaScript); every listed source carries its filter keys; every option of a filter matches at least

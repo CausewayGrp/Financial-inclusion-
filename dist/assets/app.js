@@ -62,7 +62,9 @@ $$('[data-cite-url]').forEach(e=>{e.textContent=canonicalHref;});
 $$('[data-cite]').forEach(b=>b.addEventListener('click',async()=>{
   const preview=$('[data-cite-text]');
   const governed=$('meta[name="yfie-citation"]')?.content?.trim();
-  const text=preview ? preview.textContent.replace(/\s+/g,' ').trim()
+  const lines=preview ? [...preview.querySelectorAll('[data-cite-line]')] : [];
+  const text=lines.length ? lines.map(l=>l.textContent.replace(/\s+/g,' ').trim()).filter(Boolean).join('\n')
+    : preview ? preview.textContent.replace(/\s+/g,' ').trim()
     : (governed ? governed+' '+T('UI-JS-CURRENT-RECORD')+canonicalHref : document.title+' — '+canonicalHref);
   await copyText(text,b,T('UI-JS-COPY-CITATION'));
 }));

@@ -170,9 +170,9 @@ def domain(page: dict, shell: dict) -> str:
     origin = R.DISC.origin()
     # the governed question is the head's framing line (rubric "the question this page answers"); the Explore link sits in the head's actions
     parts = [head_block(page, shell, L["answer_crumb"] if page["question"] else L["question_flow"], question=page["question"], lead=page["lead"])]
-    # the governed reading rule (the baseline's hero aside) as the head's fine print, and the two governed head actions
-    parts.append(f'<div class="head-rule"><span class="rubric">{esc(L["reading_rule"])}</span><p class="small">{esc(L["reading_rule_copy"])}</p>'
-                 f'<div class="actions"><a href="{page["hrefs"]["explore"]}">{esc(L["start"])}</a><a href="{page["primary_verify"]}">{esc(L["verify_action"])}</a></div></div>')
+    # the two governed head actions. The reading rule ("How numbers are presented") is printed once, on /methodology/,
+    # and reached from this page's spine (owner instructions of 3 October 2026, 09:50, C5)
+    parts.append(f'<div class="head-rule"><div class="actions"><a href="{page["hrefs"]["explore"]}">{esc(L["start"])}</a><a href="{page["primary_verify"]}">{esc(L["verify_action"])}</a></div></div>')
     index = []
     # the always-visible boundaries (the contract's supporting sections) come before the answers, as the contract's mobile priority orders them
     for s in page["band"]:
@@ -243,7 +243,8 @@ def domain(page: dict, shell: dict) -> str:
     parts.insert(2 + len(page["band"]), strip(index))   # after the always-visible boundaries, before the first answer (DEBT-014; band stays first)
     edges = [(L["verify"], [f'<a href="{r["href"]}">{esc(r["title"])}</a>' for r in page["verify"]], L["verify_intro"]),
              (L["readings"], [f'<a href="{r["href"]}">{esc(r["title"])}</a>' for r in page["readings"]]),
-             (page["related"]["heading"] if page["related"] else "", [f'<a href="{l["href"]}">{esc(l["label"])}</a>' for l in (page["related"] or {}).get("links", [])])]
+             (page["related"]["heading"] if page["related"] else "", [f'<a href="{l["href"]}">{esc(l["label"])}</a>' for l in (page["related"] or {}).get("links", [])]),
+             (L["method"], [f'<a href="{page["hrefs"]["reading_rule"]}" data-reading-rule>{esc(L["reading_rule"])}</a>'])]   # 09:50 C5: under the governed "Methodology" heading
     return page_html(page, shell, "".join(parts), index, edges, foot_index=False)
 
 
@@ -514,6 +515,10 @@ def reference(page: dict, shell: dict) -> str:
         else:
             parts.append(f'<section class="qa first ctx" id="record" data-correction-context><div><h2>{esc(ctx["title"])}</h2></div><div><p class="small">{esc(ctx["intro"])}</p><div class="small" data-correction-empty>{esc(ctx["empty"])}</div>{origin_html}</div></section>')
             index.append(("record", ctx["title"]))
+    if page.get("reading_rule"):   # owner instructions of 3 October 2026, 09:50, C5: printed once, here
+        rr = page["reading_rule"]
+        parts.append(answer({"heading": rr["heading"], "role": "", "paragraphs": [rr["copy"]]}, len(index) + 1, "how-numbers"))
+        index.append(("how-numbers", rr["heading"]))
     for s in page["sections"]:
         parts.append(answer(s, len(index) + 1, f"s{s['order']}"))
         index.append((f"s{s['order']}", s["heading"]))

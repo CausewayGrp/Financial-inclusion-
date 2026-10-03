@@ -6,7 +6,7 @@
   link and the edition — plus the resource's identity line (the canonical logo, unaltered, at 32 px). The build writes
   one per drawn contract and language into `out/_export/` (an underscore path: not part of the hostable site). The
   export *control* on pages is designed (`03_COMPONENT_CATALOG.md`) but unshipped: every CauseWay-content export ships
-  disabled until the owner's licence decision (OWN-04), and its labels are not governed yet (ESCALATIONS.md).
+  disabled until CauseWay's counsel confirms the CC BY 4.0 text (OWN-04), and its labels are not governed yet (ESCALATIONS.md).
 - A **social frame** is the 1200 × 630 template of a page's shared image, built only from governed text: the product
   name and the logo (72 px), the family rubric, the governed question where the page answers one, the title, the
   page's clock (a record's period and universe and its reference; a Reading's evidence period), the governed boundary

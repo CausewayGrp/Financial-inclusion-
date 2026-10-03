@@ -288,6 +288,14 @@ CONTROLS = [
     ("a name from the 2024 e-wallet circular enters the search index", "static-data/search_index.json",
      replace('"title_ar": "', '"title_ar": "وي كاش '),
      "RC-NAMES a name from the 2024 e-wallet circular is published static-data/search_index.json NEG-EW-011"),
+    # RC-0950 (owner instructions of 3 October 2026, 09:50, C5 and E1): the reading rule is printed on /methodology/ only;
+    # a record's citation is two lines.
+    ("a domain answer prints the reading rule under its heading", "en/payments/index.html",
+     sub_once(r'(<main[^>]*>)', r'\1<p class="small">Every consequential number stays attached to its unit, scope, time and limitation. Evidence measured at different times is never presented as if it described the same moment.</p>'),
+     "RC-0950 /en/payments/ prints the reading rule; it belongs on /methodology/ only"),
+    ("a record's citation loses its second line", "ar/evidence/CLM-001/index.html",
+     sub_once(r'<br><span class="cite-l2" data-cite-line>', r'<span class="cite-l2">'),
+     "RC-0950 ar/evidence/CLM-001/index.html the citation is not two lines with the page address ending the first"),
     # RC-NAV (owner decisions of 3 October 2026, point 3): the opened mobile menu carries the trust links, About first.
     ("the mobile menu drops About", "ar/evidence/CLM-002/index.html",
      sub_once(r'(data-menu-trust>.*?)<a href="/ar/about/"[^>]*>[^<]*</a>', r'\1'),

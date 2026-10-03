@@ -368,9 +368,9 @@ class Content:
             names.append(("، " if ar else ", ").join(x for x in (pub, name, yr, card["url"]) if x))
         parts = [title if title.endswith(("?", "؟", "!")) else f"{title}.",
                  self.tf("UI-CITE-RECORD-LINE", lang, product=self.t("UI-PRODUCT-NAME", lang), oid=oid, version=self.t("UI-CONTENT-VERSION", lang))]
-        if names:
-            parts.append(f'{self.t("UI-CITE-ORIGINAL-SOURCES", lang)}: {("؛ " if ar else "; ").join(names)}.')
-        return " ".join(parts)
+        # two lines: this resource, then the original sources (the renderer puts the page address at the end of line 1)
+        line2 = f'{self.t("UI-CITE-ORIGINAL-SOURCES", lang)}: {("؛ " if ar else "; ").join(names)}.' if names else ""
+        return " ".join(parts) + ("\n" + line2 if line2 else "")
 
     def share_text(self, spec: dict, obj: dict, lang: str) -> str:
         """RC-15 (B15 e, U1): what "Share this record" sends — the governed title, period, population and what not to
@@ -1029,7 +1029,8 @@ class Content:
             # opens Data & sources at its regulatory group
             "hrefs": {"explore": self.href("/explore/", lang), "evidence": self.href("/evidence/", lang),
                       "data": self.href("/data/", lang) + ("#regulatory" if route in ("/reforms/", "/providers/") else ""),
-                      "methodology": self.href("/methodology/", lang)},
+                      "methodology": self.href("/methodology/", lang),
+                      "reading_rule": self.href("/methodology/", lang) + "#how-numbers"},   # owner instructions of 3 October 2026, 09:50, C5
             "compare_preset": self.compare_preset(route, lang),
             "labels": labels,
         }
@@ -1219,6 +1220,8 @@ class Content:
         out = {"family": "Reference / Trust", "route": route, "lang": lang, "title": self.loc(spec, "title", lang), "meta_description": self.loc(spec, "meta_description", lang),
                "lead": secs[0]["body"] if secs and not secs[0]["heading"] else "", "sections": [s for s in secs if s["heading"]],
                "blocks": self.governed_blocks(spec, lang, rt), "next": self.journey_next(route, lang), "template": rt, "labels": self.common_labels(lang)}
+        if rt == "/methodology":   # owner instructions of 3 October 2026, 09:50, C5
+            out["reading_rule"] = {"heading": L("UI-DOM-READING-RULE"), "copy": L("UI-DOM-EVERY-CONSEQUENTIAL-NUMBER-STAYS-ATTACHED")}
         if rt in ("/contact", "/corrections"):
             out["context"] = {"mode": "contact" if rt == "/contact" else "corrections", "record_ids": sorted(self.detail_routes),
                               "current": L("UI-ORIGIN-RECORD-YOU-ARE-REPORTING-ON") if rt == "/contact" else L("UI-ORIGIN-RECORD-YOU-CAME-FROM"),
