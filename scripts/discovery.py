@@ -63,6 +63,23 @@ def origin():
     return deployment().get("public_origin")
 
 
+PRE_RELEASE_ROBOTS = "noindex, nofollow"
+
+
+def pre_release():
+    """Until release no page is to be indexed and no link followed (owner decision B3). Under a path the build's own
+    robots.txt is not read by crawlers, so every page says it itself. Only an explicit false in site-src/deployment.json
+    switches it off, at release."""
+    return deployment().get("pre_release") is not False
+
+
+def robots_meta(release_value=None):
+    """The page's robots meta: the pre-release rule on every page until release; afterwards `release_value` (the 404's
+    own noindex) or none."""
+    value = PRE_RELEASE_ROBOTS if pre_release() else release_value
+    return f'<meta name="robots" content="{value}">' if value else ""
+
+
 def base_path(org=None):
     """The path the site is served under: "" with no origin or an origin at a domain root, otherwise the origin's path
     ("/financial-inclusion-evidence"), with no trailing slash."""

@@ -1,5 +1,20 @@
 # Repository Change Log
 
+## 2026-10-03 — Owner B3: every page says noindex, nofollow until release
+
+Crawlers ignore a `robots.txt` that sits under a path, so until release the pages say it themselves (owner decision B3).
+- **The flag.** `site-src/deployment.json` gains `"pre_release": true`, with its rule. `scripts/discovery.py` gives
+  one robots meta. While the flag is true, every page carries `<meta name="robots" content="noindex, nofollow">` in
+  its head: the 286 localized pages, the root entry and the 404, whose `noindex` becomes `noindex, nofollow`.
+  `dist/` changes by exactly that meta in each of its 288 HTML files, and in nothing else (checked file by file).
+- **Release.** At release the flag goes false: the meta disappears and the 404 keeps its own `noindex`. The runbook's
+  step 13 now does this after the owner's acceptance, together with the web administrator's sitemap step. Step 3
+  keeps the flag true. `docs/DEPLOYMENT.md` states it, and the deploy workflow prints it.
+- **Gate RC-NOINDEX** (`scripts/validate.py`). `pre_release` must be a boolean. While it is true, every built page
+  carries exactly one robots meta, the pre-release one, in its head. Once it is false, no page but the 404 says
+  noindex. F6-G05 accepts either form of the 404's noindex. The new negative control, "a page loses its pre-release
+  noindex", is caught.
+
 ## 2026-10-03 — Owner B1, B2, B5: the site under https://causewaygrp.com/financial-inclusion-evidence/
 
 Code, gate and runbook; no Master change and no public page changes. `dist/` was built before and after and all 598

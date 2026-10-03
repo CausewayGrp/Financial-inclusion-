@@ -53,7 +53,7 @@ jobs:
           d = json.load(open("site-src/deployment.json", encoding="utf-8"))
           if not d.get("public_origin"):
               sys.exit("public_origin is null: set it to the release domain first (docs/RELEASE_RUNBOOK.md, step 'Origin')")
-          print("public_origin:", d["public_origin"], "| public_downloads:", d.get("public_downloads"))
+          print("public_origin:", d["public_origin"], "| pre_release:", d.get("pre_release"), "| public_downloads:", d.get("public_downloads"))
           PY
 
       - name: Gates (the same as CI's)
