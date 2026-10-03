@@ -25,6 +25,10 @@ def nums(path):
     m = re.search(r"<main.*?</main>", raw, re.S)
     t = re.sub(r"<script.*?</script>", "", m.group(0) if m else raw, flags=re.S)
     t = html.unescape(re.sub(r"<[^>]+>", " ", t)).translate(AR)
+    # RC-18: a tag boundary is not a word boundary of its own. Inline formatting (a figure set in bold inside its
+    # sentence, "<b>7.117</b> مليار") left two spaces where the text has one, so the bare «مليار دولار» rule below (one
+    # billion when no figure precedes) fired on "7.117  مليار". One space, as the text reads; the rule is unchanged.
+    t = re.sub(r"\s+", " ", t)
     t = re.sub(r"\b(\d{4})-(\d{2})-(\d{2})\b", lambda x: f"{int(x.group(3))} {x.group(1)}", t)   # ISO dates → day and year (month names are words in both editions)
     t = re.sub(r"\b(\d{2})(\d{2})[–-](\d{2})\b(?!\d|[,.]\d)", r"\1\2–\1\3", t)   # 2022–23 → 2022–2023 (same years, short form)
     t = re.sub(r"\b[QH][1-4]\b", " ", t)                     # quarter/half labels (Q3, H1) are written in words in Arabic

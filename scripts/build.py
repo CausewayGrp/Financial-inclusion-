@@ -66,7 +66,8 @@ FONT_FILES = {
 def copy_assets(out: Path) -> None:
     (out / "assets").mkdir(parents=True)
     (out / "static-data").mkdir()
-    shutil.copy2(SRC / "assets/CauseWay_Master_Logo.png", out / "assets/CauseWay_Master_Logo.png")   # the social-image template keeps the master
+    # 4.5 (owner note, 11:15): the 10 MB master logo is not shipped — no published page loads it (gate RC-G4), and
+    # scripts/social_images.py stages its own copy for the social template
     shutil.copytree(SRC / "assets/logo", out / "assets/logo", ignore=shutil.ignore_patterns("INDEX.json"))   # EAD-03: the web-size derivatives every page serves (scripts/logo_derivatives.py)
     shutil.copy2(SRC / "app.js", out / "assets/app.js")                      # the tools runtime: search, compare, cite, menu, language
     shutil.copy2(SRC / "lang-redirect.js", out / "assets/lang-redirect.js")  # the neutral root entry (F6)

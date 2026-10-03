@@ -123,8 +123,8 @@ The checks are the ten-minute check of "Deploy and verify", run on the live addr
   leaves the path. It runs in CI on every pull request, with its own negative control.
 - The deploy workflow builds the published site, sweeps it with the same test, and uploads a publish root that holds
   the site under `financial-inclusion-evidence/` and `_headers` at the root, where Pages reads it.
-- One request does leave the path, and no page makes it: no page declares an icon, so browsers ask the domain root for
-  `/favicon.ico`, and `causewaygrp.com` answers it. The test reports it without failing.
+- Every page declares its icon, the 32 px derivative under `assets/logo/` (RC-18), so browsers no longer ask the domain
+  root for `/favicon.ico`, and no request leaves the path.
 - The build checks every slash-leading string in the runtime, not only the ones that name a folder of the site. After
   its own rewrites, each such string must be a listed route key, and it must occur exactly as often as listed
   (`JS_ROUTE_KEYS` in `scripts/base_path.py`). Anything else stops the build. This includes an address built by

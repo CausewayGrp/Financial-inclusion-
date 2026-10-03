@@ -473,7 +473,8 @@ def measurement(page: dict, shell: dict) -> str:
         more = "".join(f'<dt>{esc(x["label"])}</dt><dd>{esc(x["text"])}</dd>' for x in m.get("more") or [])
         examined = (f'<p class="small" data-measurement-readings><b>{esc(ML["examined"])}</b> ' + " · ".join(f'<a href="{x["href"]}">{esc(x["title"])}</a>' for x in m["examined"]) + "</p>") if m["examined"] else ""
         prios.append(f'<article class="obj prio" id="{esc(m["id"])}" tabindex="-1"><div class="head"><div class="clock"><span class="k">{esc(ML["priority"])}</span><span class="v">{bdi(m["priority"])} · {esc(m["domain"])}</span></div><h3>{esc(m["title"])}</h3></div>'
-                     f'<div class="body"><p><b>{esc(ML["current"])}</b> {esc(m["current"])}</p><p><b>{esc(ML["missing"])}</b> {esc(m["missing"])}</p><p><b>{esc(ML["unlocked"])}</b> {esc(m["unlocked"])}</p>'
+                     f'<div class="body">' + (f'<p data-ma-dimensions><b>{esc(ML["dimensions"])}</b> {esc(("، " if shell["lang"] == "ar" else ", ").join(m["dimensions"]))}</p>' if m.get("dimensions") else "")
+                     + f'<p><b>{esc(ML["current"])}</b> {esc(m["current"])}</p><p><b>{esc(ML["missing"])}</b> {esc(m["missing"])}</p><p><b>{esc(ML["unlocked"])}</b> {esc(m["unlocked"])}</p>'
                      + (f'<div data-ma-decisions><p><b>{esc(ML["decisions"])}</b></p><ul class="rlist">' + "".join(f"<li>{esc(x)}</li>" for x in m["decisions"]) + "</ul></div>" if m.get("decisions") else "")
                      + (f'<p data-ma-blocked><b>{esc(ML["blocked"])}</b> {esc(m["blocked"])}</p>' if m.get("blocked") else "")   # B6
                      + f'</div>{examined}'
@@ -535,7 +536,7 @@ def reference(page: dict, shell: dict) -> str:
 def root_page(shell_ar: dict, shell_en: dict) -> str:
     origin = R.DISC.origin()
     links = R.DISC.head_links("/", "ar", origin).split(">", 1)[1]
-    return (f'<!doctype html><html><head><meta charset="utf-8">{R.DISC.robots_meta()}<title>{esc(shell_ar["product"])} · {esc(shell_en["product"])}</title>{links}'
+    return (f'<!doctype html><html><head><meta charset="utf-8">{R.DISC.robots_meta()}<link rel="icon" type="image/png" sizes="32x32" href="/assets/logo/CauseWay_logo_32.png"><title>{esc(shell_ar["product"])} · {esc(shell_en["product"])}</title>{links}'
             f'<script src="/assets/lang-redirect.js"></script><noscript><meta http-equiv="refresh" content="0;url=/ar/"></noscript></head></html>')
 
 
@@ -547,7 +548,7 @@ def not_found(page: dict, shell_ar: dict) -> str:
         return (f'<section lang="{lang}" dir="{"rtl" if lang == "ar" else "ltr"}" class="nf"><{h}{hid}>{esc(s["heading"])}</{h}><p class="st">{esc(s["body"])}</p>'
                 f'<div class="actions"><a href="/{lang}/">{esc(s["home"])}</a><a href="/{lang}/explore/">{esc(s["explore"])}</a><a href="/{lang}/evidence/">{esc(s["evidence"])}</a>'
                 f'<button type="button" class="tbtn" data-search-open>{esc(s["search"])}</button></div></section>')
-    return (f'<!doctype html><html lang="ar" dir="rtl"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">'
+    return (f'<!doctype html><html lang="ar" dir="rtl"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><link rel="icon" type="image/png" sizes="32x32" href="/assets/logo/CauseWay_logo_32.png">'
             f'<title>{esc(page["title"]["ar"])} — {esc(page["product"]["en"])}</title>{R.DISC.robots_meta("noindex")}<link rel="stylesheet" href="/assets/yfie.css"></head><body>'
             f'<main id="main"><div class="page"><article class="obj page-obj"><div class="head">{R.logo(48)}<span class="rubric">404 · {esc(page["title"]["ar"])} / <span dir="ltr">{esc(page["title"]["en"])}</span></span></div>'
             f'{section("ar")}{section("en")}</article></div></main>{R.search_dialog(shell_ar)}{json_block("yfie-ui", shell_ar["ui_json"])}<script src="/assets/app.js" defer></script></body></html>')

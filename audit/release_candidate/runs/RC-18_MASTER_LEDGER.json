@@ -1,0 +1,99 @@
+{
+ "transaction": "RC-18",
+ "summary": "Owner note 11:15, 4.1 and 4.2: figure first inside D7; corrections invitation; citizen aliases; dimensions label",
+ "input_master_sha256": "433f38bf53db735cd08472bf9417884de0af9acfe3838bff1a38e2065f000842",
+ "output_master_sha256": "c700dc52bf81966939c6d6ec53afe494d1bf699389c04850f74b9dec436ea7e4",
+ "cells_written": 10,
+ "changes": [
+  {
+   "finding": "RC-18:4.2",
+   "sheet": "04_NAV_UX",
+   "row": null,
+   "col": null,
+   "field": "UI-MA-DIMENSIONS",
+   "old": null,
+   "new": "Dimensions it would cover: || الأبعاد التي سيغطيها القياس:"
+  },
+  {
+   "finding": "RC-18:4.1",
+   "sheet": "03_PAGE_SECTIONS",
+   "row": 5,
+   "col": 5,
+   "field": "/#s1.body_en",
+   "old": "Yemen Financial Inclusion Evidence is a bilingual public evidence resource that helps users understand, compare and verify evidence on financial inclusion in Yemen. It helps decision-making by making clear what the evidence establishes, what it does not, when and to whom it applies, and where it comes from. It does not make decisions for users or simulate policy outcomes. The evidence spans people, firms, providers, payments, money flows, rules and infrastructure, measured at different times and under different definitions. Start with the question you need to answer.",
+   "new": "Yemen Financial Inclusion Evidence is a bilingual public resource on financial inclusion in Yemen. For each figure, it shows what the evidence establishes and what it does not, when and for whom the figure applies, and where it comes from."
+  },
+  {
+   "finding": "RC-18:4.1",
+   "sheet": "03_PAGE_SECTIONS",
+   "row": 5,
+   "col": 7,
+   "field": "/#s1.body_ar",
+   "old": "«أدلة الشمول المالي في اليمن» مورد عام ثنائي اللغة يساعد المستخدمين على فهم أدلة الشمول المالي في اليمن ومقارنتها والتحقق منها. ويدعم اتخاذ القرار من خلال توضيح ما الذي تسنده الأدلة، وما الذي لا تثبته، والفترة والمجتمع اللذين تغطيهما، ومصادرها. ولا يتخذ القرارات نيابة عن المستخدمين ولا يحاكي نتائج السياسات. وتشمل الأدلة الناس والمنشآت ومقدمي الخدمات والمدفوعات والتدفقات المالية والتنظيمات والبنية التحتية، وقد جُمعت في أوقات ووفق تعريفات مختلفة. ابدأ بالسؤال الذي تريد الإجابة عنه.",
+   "new": "«أدلة الشمول المالي في اليمن» مورد عام ثنائي اللغة عن الشمول المالي في اليمن. ويبيّن لكل رقم ما الذي تثبته الأدلة وما الذي لا تثبته، ومتى ولمن ينطبق، ومن أين جاء."
+  },
+  {
+   "finding": "RC-18:4.1",
+   "sheet": "03_PAGE_SECTIONS",
+   "row": 8,
+   "col": 5,
+   "field": "/#s3.body_en",
+   "old": "The latest representative population measure is the World Bank’s Global Findex 2021 survey of Yemen (fieldwork 7 November 2022 to 9 January 2023; World Bank data year 2022): 11.9% of adults aged 15 and over in the areas surveyed had an account at a financial institution or with a mobile-money provider. Areas holding about 23% of the population were not surveyed. In the same survey, 18.35% of men and 5.44% of women had an account, a gap of 12.91 percentage points. Separately, point-of-sale (POS) terminals reported by the Central Bank of Yemen – Aden (CBY-Aden) rose from 561 in March 2025 to 1,651 in June 2026, within CBY-Aden’s reporting scope. These are different measures: people, a disparity within one survey, and infrastructure. None substitutes for another.",
+   "new": "11.9% of adults aged 15 and over in the areas surveyed had an account at a financial institution or with a mobile-money provider, according to the latest representative population measure: the World Bank’s Global Findex 2021 survey of Yemen (fieldwork 7 November 2022 to 9 January 2023; World Bank data year 2022). Areas holding about 23% of the population were not surveyed. In the same survey, 18.35% of men and 5.44% of women had an account, a gap of 12.91 percentage points. Separately, point-of-sale (POS) terminals reported by the Central Bank of Yemen – Aden (CBY-Aden) rose from 561 in March 2025 to 1,651 in June 2026, within CBY-Aden’s reporting scope. These are different measures: people, a disparity within one survey, and infrastructure. None substitutes for another."
+  },
+  {
+   "finding": "RC-18:4.1",
+   "sheet": "03_PAGE_SECTIONS",
+   "row": 9,
+   "col": 7,
+   "field": "/#s3.body_ar",
+   "old": "أحدث قياس ممثل للسكان هو مسح المؤشر العالمي للشمول المالي (Global Findex) لعام 2021 في اليمن، الصادر عن البنك الدولي (نُفذ العمل الميداني من 7 نوفمبر 2022 إلى 9 يناير 2023؛ وسنة البيانات لدى البنك الدولي 2022): كان لدى 11.9% من البالغين بعمر 15 سنة فأكثر في المناطق التي شملها المسح حساب لدى مؤسسة مالية أو لدى مقدم خدمة أموال عبر الهاتف المحمول. ولم يشمل المسح مناطق يسكنها نحو 23% من السكان. وفي المسح نفسه، كان لدى 18.35% من الرجال و5.44% من النساء حساب، بفارق 12.91 نقطة مئوية. وبصورة منفصلة، ارتفع عدد أجهزة نقاط البيع التي يُبلغ عنها البنك المركزي اليمني – عدن من 561 في مارس 2025 إلى 1,651 في يونيو 2026، ضمن نطاق إبلاغه. هذه مقاييس مختلفة: أشخاص، وفجوة داخل مسح واحد، وبنية تحتية؛ ولا يحل أي منها محل الآخر.",
+   "new": "كان لدى 11.9% من البالغين بعمر 15 سنة فأكثر في المناطق التي شملها المسح حساب لدى مؤسسة مالية أو لدى مقدم خدمة أموال عبر الهاتف المحمول، وفق أحدث قياس ممثل للسكان: مسح المؤشر العالمي للشمول المالي (Global Findex) لعام 2021 في اليمن، الصادر عن البنك الدولي (نُفذ العمل الميداني من 7 نوفمبر 2022 إلى 9 يناير 2023؛ وسنة البيانات لدى البنك الدولي 2022). ولم يشمل المسح مناطق يسكنها نحو 23% من السكان. وفي المسح نفسه، كان لدى 18.35% من الرجال و5.44% من النساء حساب، بفارق 12.91 نقطة مئوية. وبصورة منفصلة، ارتفع عدد أجهزة نقاط البيع التي يُبلغ عنها البنك المركزي اليمني – عدن من 561 في مارس 2025 إلى 1,651 في يونيو 2026، ضمن نطاق إبلاغه. هذه مقاييس مختلفة: أشخاص، وفجوة داخل مسح واحد، وبنية تحتية؛ ولا يحل أي منها محل الآخر."
+  },
+  {
+   "finding": "RC-18:4.2",
+   "sheet": "03_PAGE_SECTIONS",
+   "row": 61,
+   "col": 5,
+   "field": "/corrections/#s1.body_en",
+   "old": "Material corrections to published evidence and superseded records, and how they are recorded.",
+   "new": "Material corrections to published evidence and superseded records, and how they are recorded. Institutions whose documents or data are used in this resource can request a correction to any record through the same route as any reader: write to office@causewaygrp.com with the record or source reference."
+  },
+  {
+   "finding": "RC-18:4.2",
+   "sheet": "03_PAGE_SECTIONS",
+   "row": 61,
+   "col": 7,
+   "field": "/corrections/#s1.body_ar",
+   "old": "التصحيحات الجوهرية للأدلة المنشورة والسجلات المستبدلة، وكيف تُسجَّل.",
+   "new": "التصحيحات الجوهرية للأدلة المنشورة والسجلات المستبدلة، وكيف تُسجَّل. ويمكن للمؤسسات التي تُستخدم وثائقها أو بياناتها في هذا المورد أن تطلب تصحيح أي سجل عبر المسار نفسه المتاح لأي قارئ: بالكتابة إلى office@causewaygrp.com مع مرجع السجل أو المصدر."
+  },
+  {
+   "finding": "RC-18:4.2",
+   "sheet": "04_NAV_UX",
+   "row": null,
+   "col": null,
+   "field": "SEARCH-ALIAS-031",
+   "old": null,
+   "new": "loan; loans; borrowing; borrow || قرض; قروض; اقتراض; الاقتراض; سلفة || route:/finance/ | route:/people/"
+  },
+  {
+   "finding": "RC-18:4.2",
+   "sheet": "04_NAV_UX",
+   "row": null,
+   "col": null,
+   "field": "SEARCH-ALIAS-032",
+   "old": null,
+   "new": "transfer abroad; send money abroad; international transfer || تحويل للخارج; تحويل إلى الخارج; تحويل خارجي; تحويلات خارجية; حوالة خارجية; حوالات خارجية; حوالة من الخارج; تحويل من الخارج; حوالات المغتربين; تحويلات المغتربين; تحويل دولي; حوالة دولية || route:/remittances/ || Discovery aid only: the remittance evidence here is about money sent to Yemen and transfers within Yemen. It does not cover money sent from Yemen to other countries. || أداة اكتشاف فقط: تتناول أدلة التحويلات هنا الأموال المرسلة إلى اليمن والحوالات داخل اليمن، ولا تتناول الأموال المرسلة من اليمن إلى الخارج."
+  },
+  {
+   "finding": "RC-18:4.2",
+   "sheet": "04_NAV_UX",
+   "row": null,
+   "col": null,
+   "field": "SEARCH-ALIAS-033",
+   "old": null,
+   "new": "cash-out; cash out; cashout; cash withdrawal || كاش; كاش آوت; سحب كاش; سحب نقدي || route:/payments/"
+  }
+ ]
+}

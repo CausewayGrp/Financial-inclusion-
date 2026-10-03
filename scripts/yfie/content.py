@@ -46,6 +46,18 @@ COMPARE_PRESETS = {"/remittances/": ["CLM-032", "CLM-037", "CLM-041"],
                    "/evidence/compare/": ["CLM-001", "CLM-054", "FMIIP-BASELINE-2025-01"]}
 
 
+def dimension_list(value) -> list[str]:
+    """A Measurement priority's governed dimensions: the English field is a bracketed list of quoted items, the Arabic
+    a comma-separated list. Both become a plain list of the governed items, in their order."""
+    s = str(value or "").strip()
+    if not s:
+        return []
+    if s.startswith("["):
+        import ast
+        return [str(x).strip() for x in ast.literal_eval(s) if str(x).strip()]
+    return [x.strip() for x in re.split(r"[,،]", s) if x.strip()]
+
+
 class Content:
     """One loaded view of the governed projections."""
 
@@ -797,6 +809,10 @@ class Content:
         featured = {"id": f.get("reading_id"), "title": self.loc(f, "title", lang), "thesis": self.loc(f, "thesis", lang),
                     "evidence_period": self.loc(f, "evidence_period", lang), "href": self.href(f.get("route"), lang)} if f else None
         system = self.visual("VIS-INCLUSION-TRANSMISSION", lang)
+        ch = self.evidence_objects.get("VIS-PAYMENT-RAILS") if "VIS-PAYMENT-RAILS" in self.detail_routes else None
+        chain = {"id": "VIS-PAYMENT-RAILS", "title": self.loc(ch, "title", lang), "href": self.href(self.detail_routes["VIS-PAYMENT-RAILS"], lang),
+                 "summary": self.loc(ch, "summary", lang), "period": self.loc(ch, "period", lang), "universe": self.loc(ch, "universe", lang),
+                 "does_not_establish": self.boundary_parts(ch, lang)[0], "is_visual_record": True} if ch else None
         L = lambda k: self.t(k, lang)  # noqa: E731
         # RC-15 (B15 d, A-8): the measurement priorities bound to "/" (MA-001, MA-003, MA-005), by their governed titles,
         # under the section that names the three gaps
@@ -805,7 +821,7 @@ class Content:
         return {
             "family": "Orientation", "route": "/", "lang": lang, "gap_priorities": gaps,
             "title": self.loc(spec, "title", lang), "meta_description": self.loc(spec, "meta_description", lang),
-            "sections": secs, "starting_questions": starting, "records": records, "featured": featured, "system_visual": system,
+            "sections": secs, "starting_questions": starting, "records": records, "featured": featured, "system_visual": system, "chain_record": chain,
             "question_count": self.inventory["entry_questions"],
             "hrefs": {"explore": self.href("/explore/", lang), "evidence": self.href("/evidence/", lang), "readings": self.href("/readings/", lang),
                       "measurement": self.href("/measurement/", lang), "data": self.href("/data/", lang), "methodology": self.href("/methodology/", lang)},
@@ -874,12 +890,13 @@ class Content:
                "examined": [{"title": self.loc(x, "title", lang), "href": self.href(x.get("route"), lang)} for x in examined or []],
                "labels": {"priority": L("UI-MA-PRIORITY"), "current": L("UI-MA-CURRENT-EVIDENCE"), "missing": L("UI-MA-MISSING-EVIDENCE"), "unlocked": L("UI-MA-DECISION-UNLOCKED"),
                           "open": L("UI-MA-OPEN"), "more": L("UI-MA-MORE"), "examined": L("UI-MEASUREMENT-EXAMINED-IN"), "reference": L("UI-SOURCE-REFERENCE"), "needed": L("UI-BLOCK-EVIDENCE-NEEDED"),
-                          "decisions": L("UI-MA-DECISIONS"), "blocked": L("UI-MA-BLOCKED")}}
+                          "decisions": L("UI-MA-DECISIONS"), "blocked": L("UI-MA-BLOCKED"), "dimensions": L("UI-MA-DIMENSIONS")}}
         if full:
             # B6: the governed decisions_unlocked (items joined by commas after a sentence end) and blocked_evidence
             du = self.loc(m, "decisions_unlocked", lang)
             out["decisions"] = [x.strip() for x in DECISION_SPLIT.split(du) if x.strip()] if du else []
             out["blocked"] = self.loc(m, "blocked_evidence", lang)
+            out["dimensions"] = dimension_list(self.loc(m, "dimensions", lang))   # 4.2 (owner note, 11:15)
             out["more"] = [{"label": L(uid), "text": self.loc(m, f, lang)} for f, uid in (("guardrail", "UI-MA-GUARDRAIL"), ("feasibility", "UI-MA-FEASIBILITY"), ("priority_basis", "UI-MA-BASIS"), ("what_changes", "UI-MA-CHANGES")) if self.loc(m, f, lang)]
         return out
 

@@ -1,5 +1,52 @@
 # Repository Change Log
 
+## 2026-10-03 — RC-18: figure first inside D7; /corrections/ invites source institutions; citizen aliases; dimensions; favicon
+
+Master `433f38bf…` → `c700dc52bf81966939c6d6ec53afe494d1bf699389c04850f74b9dec436ea7e4` through `run_stage.py` (script
+`audit/release_candidate/rc_18_figure_first.py`; ledger and report in `audit/release_candidate/runs/RC-18_*`). Owner
+note of 3 October 2026, about 11:15, sections 4.1, 4.2 and 4.5. English and Arabic changed together.
+- **4.1, figure first, inside D7.** D7's Design Intent Lock forbids lifted figures and stat tiles, and keeps Home's
+  product statement first. So the figure leads where D7 allows it, rather than as the separate key-figure field the
+  triage first proposed:
+  - Home's product statement is two sentences.
+  - Home's first figure group opens with its figure ("11.9% of adults aged 15 and over …, according to the latest
+    representative population measure: …").
+  - Every figure in Home's paced groups, and in a record's first answer, is set in the figure weight inside its own
+    sentence (`fig_emph` in `scripts/yfie/render.py`; dates, identifiers, ranges and isolated values left alone).
+  - A record's head now gives WHEN and then FOR WHOM ("Who or what does it apply to?") before its title.
+- **4.2.**
+  - /corrections/ invites the institutions whose documents or data are used to request corrections by the same route
+    as any reader.
+  - Three aliases cover words citizens type that landed wrong or nowhere: 031 «قرض / قروض / سلفة» → /finance/ and
+    /people/; 032 transfers abroad → /remittances/, with a boundary note that the evidence covers money sent to and
+    within Yemen, not money sent abroad; 033 «كاش», cash-out → /payments/.
+  - /measurement/ prints each priority's governed dimensions after a new label, UI-MA-DIMENSIONS ("Dimensions it would
+    cover:" / «الأبعاد التي سيغطيها القياس:»).
+  - Home's section 6 links the drawn payment-rails chain (VIS-PAYMENT-RAILS) first.
+- **4.5.** Every page declares the 32 px logo derivative as its icon, so the console 404 and the request outside the
+  base path are gone. `scripts/build.py` no longer copies the unreferenced 9.6 MB master logo into `dist/`; it stays in
+  the repository, unchanged.
+- **Reviews.** One bilingual reviewer read only the changed pairs and returned NOT ACCEPTABLE with exact replacements.
+  All are folded:
+  - the dimensions label;
+  - alias 032's extra Arabic terms and its boundary note;
+  - Home's first sentence ("For each figure, … when and for whom the figure applies") and «تثبته»;
+  - "according to the latest …";
+  - «سلفة»;
+  - alias 033's terms.
+  The script records why «كاش» is safe as a search term: RC-NAMES matches the circular's names only with their other
+  words.
+- **A checker fix.** The first run rolled back on RP-G06 (CLM-043). The figure tag, stripped to a space, left a double
+  space, and the Arabic «مليار دولار» rule then read a false "1". `audit/tranche_c/checks/bilingual_invariance.py` now
+  collapses whitespace after stripping tags; with that fix, 0 pairs differ.
+- **Gates.** Every gate passes:
+  - validator; content parity (286); bilingual invariance (143 pairs); literal audit (13,410, 0 unresolved);
+    determinism; lineage; diagrams; social images; logo derivatives; exports;
+  - public tools 35/36 (1 not applicable); viewport 168/168; security headers (2,712 responses); base path (644
+    requests, no favicon request at the domain root).
+  The runbook's favicon line is updated. A gate of its own for these presentation rules (RC-1115) is still to come;
+  see the pull request's RESUME POINT.
+
 ## 2026-10-03 — The base-path work after its adversarial verification: runbook route 1, release checks, counsel step
 
 The adversarial verification of the base-path and noindex commits found the build side sound. `dist/` is

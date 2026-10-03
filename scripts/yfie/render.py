@@ -53,7 +53,7 @@ def head(page: dict, shell: dict, route: str, kind: str = "website", extra: str 
     lang = shell["lang"]
     origin = DISC.origin()
     return (f'<!doctype html><html lang="{lang}" dir="{shell["dir"]}"><head><meta charset="utf-8">'
-            f'<meta name="viewport" content="width=device-width,initial-scale=1">{DISC.robots_meta()}<title>{esc(page["title"])} — {esc(shell["product"])}</title>'
+            f'<meta name="viewport" content="width=device-width,initial-scale=1">{DISC.robots_meta()}<link rel="icon" type="image/png" sizes="32x32" href="/assets/logo/CauseWay_logo_32.png"><title>{esc(page["title"])} — {esc(shell["product"])}</title>'
             f'<meta name="description" content="{esc(page.get("meta_description"))}">{extra}<link rel="stylesheet" href="/assets/yfie.css">{font_preloads(lang)}'
             f'{DISC.head_links(route, lang, origin)}{DISC.social_meta(page["title"], page.get("meta_description") or "", lang, route, shell["product"], kind, origin)}'
             f"{structured_data(page, shell, route)}</head><body>")
@@ -157,6 +157,25 @@ def rubric(t, n: int | None = None, tag: str = "span", cls: str = "rubric") -> s
     return f'<{tag} class="{cls}">{num_}{esc(t)}</{tag}>'
 
 
+# 4.1 (owner note of 3 October 2026, 11:15): the figure is set in its own governed sentence, in the figure weight — never
+# lifted out of it (D7 Design Intent Lock §4.1.1: no lifted figures, no stat tiles). A value is a percentage, a decimal, a
+# number with thousands separators, or a whole number of three digits or more that is not a year; dates, identifiers and
+# ranges (hyphenated, slashed or already isolated) are left as they are. Applied to text outside tags only.
+_FIG = re.compile(r'(?<![\d.,/:\-])(\d{1,3}(?:,\d{3})+(?:\.\d+)?%?|\d+\.\d+%?|\d+%|(?!(?:19|20)\d\d(?!\d))\d{3,})(?![\d/:\-]|[.,]\d)')
+
+
+def fig_emph(html_text: str) -> str:
+    parts = re.split(r'(<[^>]+>)', html_text)
+    out, in_bdi = [], 0
+    for p in parts:
+        if p.startswith("<"):
+            in_bdi += 1 if p.startswith("<bdi") else (-1 if p.startswith("</bdi") else 0)
+            out.append(p)
+        else:
+            out.append(p if in_bdi else _FIG.sub(r'<b class="fig">\1</b>', p))
+    return "".join(out)
+
+
 def clock(label, value_escaped: str) -> str:
     return f'<div class="clock"><span class="k">{esc(label)}</span><span class="v">{iso(value_escaped)}</span></div>'
 
@@ -241,10 +260,11 @@ def evidence_record(page: dict, shell: dict) -> str:
     L = page["labels"]
     meta = f'<meta name="yfie-citation" content="{esc(page["citation"])}"><meta name="yfie-record-id" content="{esc(page["id"])}">'
     index = [("q1", L["establishes"]), ("q2", L["measures"]), ("q3", L["applies"]), ("q4", L["currentness"]), ("q5", L["does_not_establish"]), ("q6", L["source"]), ("q7", L["more"])]
-    head_ = (f'<div class="head">{crumb(page["breadcrumb"], shell)}{rubric(L["family"])}{clock(L["period"], esc(page["period"]))}<h1 id="page-title">{esc(page["title"])}</h1>'
+    for_whom = clock(L["applies"], esc(page["universe"])) if page.get("universe") else ""   # 4.1: WHEN, then FOR WHOM, before the claim
+    head_ = (f'<div class="head">{crumb(page["breadcrumb"], shell)}{rubric(L["family"])}{clock(L["period"], esc(page["period"]))}{for_whom}<h1 id="page-title">{esc(page["title"])}</h1>'
              + (f'<p class="st">{esc(page["lead"])}</p>' if page["lead"] else "") + "</div>")
     own_fig = (f'<span class="rubric mt18">{esc(L["visual_eyebrow"])}</span>' + figure({**page["visual"], "here": True}, shell["labels"]["cite"], DISC.origin(), heading="h3")) if page.get("visual") and page["visual"].get("tier") != "RETIRE_FROM_DESIGN" else ""
-    qa = [f'<div class="qa first" id="q1">{rubric(L["establishes"], 1, "h2")}<div class="st"><p>{esc(page["summary"])}</p></div>{own_fig}</div>' + strip(index),
+    qa = [f'<div class="qa first" id="q1">{rubric(L["establishes"], 1, "h2")}<div class="st"><p>{fig_emph(iso(esc(page["summary"])))}</p></div>{own_fig}</div>' + strip(index),
           f'<div class="qa" id="q2">{rubric(L["measures"], 2, "h2")}<div class="body"><p>{esc(page["definition"])}</p></div></div>',
           f'<div class="qa" id="q3">{rubric(L["applies"], 3, "h2")}<div class="body"><p>{esc(page["universe"])}</p></div></div>',
           f'<div class="qa" id="q4">{rubric(L["currentness"], 4, "h2")}<div class="body"><p>{esc(page["currentness"])}</p></div></div>']
@@ -297,7 +317,7 @@ def home(page: dict, shell: dict) -> str:
     recs = list(page["records"])
     demo = []
     for res, html_ in paced_groups(S[3]["body"]):
-        demo.append(html_)
+        demo.append(fig_emph(html_))
         if recs and not res:
             demo.append(compact(recs.pop(0), L, L["open_evidence_record"], cls="compact bound"))
     def h2(sec):   # governed kicker (role) above the governed heading
@@ -311,6 +331,9 @@ def home(page: dict, shell: dict) -> str:
     v = page["system_visual"]
     # the records not behind a figure (the framing record) belong to the system-context section they frame, not to a
     # group labelled "behind these figures" (D3 test: the label promised four and showed one)
+    # 4.2 (owner note, 11:15): the section describes the chain from rule to result; its drawn chain (VIS-PAYMENT-RAILS,
+    # on /reforms/) is offered first, then the framing record
+    recs = ([page["chain_record"]] if page.get("chain_record") else []) + recs
     rest = f'<div class="objs mt18">{"".join(compact(r, L, L["open_evidence_record"]) for r in recs)}</div>' if recs else ""
     parts.append(f'<section class="qa" id="s6"><div>{rubric(S[6]["role"])}<h2 id="system" tabindex="-1">{esc(S[6]["heading"])}</h2></div><div><div class="body">{paras(S[6]["paragraphs"])}</div>{rest}'
                  f'<span class="rubric mt18">{esc(L["visual_eyebrow"])}</span>{figure(v, shell["labels"]["cite"], DISC.origin(), heading="h3", boundary_label=L["boundary"], open_label=L["open_record"])}</div></section>')

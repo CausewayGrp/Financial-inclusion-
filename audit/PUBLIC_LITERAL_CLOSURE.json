@@ -1,8 +1,8 @@
 {
   "schema": "YFIE_PUBLIC_LITERAL_CLOSURE/2.0",
   "audit_version": "2.0 — token-bounded, token-level classification (Pre-Tranche-C P1-D); v1 substring and paragraph-keyword rules removed",
-  "authority_master_sha256": "433f38bf53db735cd08472bf9417884de0af9acfe3838bff1a38e2065f000842",
-  "page_specs_sha256": "3a9a363d977190f3c8cc042492766ff962ca81f93abf110d8295bfc01fe0bcd7",
+  "authority_master_sha256": "c700dc52bf81966939c6d6ec53afe494d1bf699389c04850f74b9dec436ea7e4",
+  "page_specs_sha256": "6e87e36b1db89c7aa4ce31573a3507cbe6bd49d81f5984f2e6bc494dffedff40",
   "scope": "Reader-facing Page Spec titles/sections plus governed-copy numeric inventory. Every substantive public numeral must resolve to a governed source-closed object or be explicitly classified as date/period, stable technical identifier, or non-observation system/method metadata.",
   "classification_rule": "UNRESOLVED_SUBSTANTIVE_PUBLIC_NUMBER is a hard validation failure. Route/source presence without an object-level source-closed trace is not sufficient.",
   "record_count": 13410,
@@ -68978,49 +68978,9 @@
       "route": "/",
       "surface": "section",
       "field": "body_en",
-      "token": "2021",
-      "category": "DATE_OR_PERIOD",
-      "context": "The latest representative population measure is the World Bank’s Global Findex 2021 survey of Yemen (fieldwork 7 November 2022 to 9 January 2023; World Bank data year 2022): 11.9% of adults aged 15 and over in the areas surveyed had an account at a financial institution or with a mobile-money provider. Areas holding about 23% of the population were not surveyed. In the same survey, 18.35% of men and 5.44% of women had an account, a gap of 12.91 percentage points. Separately, point-of-sale (POS) terminals reported by the Central Bank of Yemen – Aden (CBY-Aden) rose from 561 in March 2025 to 1,651 in June 2026, within CBY-Aden’s reporting scope. These are different measures: people, a disparity within one survey, and infrastructure. None substitutes for another."
-    },
-    {
-      "route": "/",
-      "surface": "section",
-      "field": "body_en",
-      "token": "7",
-      "category": "DATE_OR_PERIOD",
-      "context": "The latest representative population measure is the World Bank’s Global Findex 2021 survey of Yemen (fieldwork 7 November 2022 to 9 January 2023; World Bank data year 2022): 11.9% of adults aged 15 and over in the areas surveyed had an account at a financial institution or with a mobile-money provider. Areas holding about 23% of the population were not surveyed. In the same survey, 18.35% of men and 5.44% of women had an account, a gap of 12.91 percentage points. Separately, point-of-sale (POS) terminals reported by the Central Bank of Yemen – Aden (CBY-Aden) rose from 561 in March 2025 to 1,651 in June 2026, within CBY-Aden’s reporting scope. These are different measures: people, a disparity within one survey, and infrastructure. None substitutes for another."
-    },
-    {
-      "route": "/",
-      "surface": "section",
-      "field": "body_en",
-      "token": "2022",
-      "category": "DATE_OR_PERIOD",
-      "context": "The latest representative population measure is the World Bank’s Global Findex 2021 survey of Yemen (fieldwork 7 November 2022 to 9 January 2023; World Bank data year 2022): 11.9% of adults aged 15 and over in the areas surveyed had an account at a financial institution or with a mobile-money provider. Areas holding about 23% of the population were not surveyed. In the same survey, 18.35% of men and 5.44% of women had an account, a gap of 12.91 percentage points. Separately, point-of-sale (POS) terminals reported by the Central Bank of Yemen – Aden (CBY-Aden) rose from 561 in March 2025 to 1,651 in June 2026, within CBY-Aden’s reporting scope. These are different measures: people, a disparity within one survey, and infrastructure. None substitutes for another."
-    },
-    {
-      "route": "/",
-      "surface": "section",
-      "field": "body_en",
-      "token": "9",
-      "category": "DATE_OR_PERIOD",
-      "context": "The latest representative population measure is the World Bank’s Global Findex 2021 survey of Yemen (fieldwork 7 November 2022 to 9 January 2023; World Bank data year 2022): 11.9% of adults aged 15 and over in the areas surveyed had an account at a financial institution or with a mobile-money provider. Areas holding about 23% of the population were not surveyed. In the same survey, 18.35% of men and 5.44% of women had an account, a gap of 12.91 percentage points. Separately, point-of-sale (POS) terminals reported by the Central Bank of Yemen – Aden (CBY-Aden) rose from 561 in March 2025 to 1,651 in June 2026, within CBY-Aden’s reporting scope. These are different measures: people, a disparity within one survey, and infrastructure. None substitutes for another."
-    },
-    {
-      "route": "/",
-      "surface": "section",
-      "field": "body_en",
-      "token": "2023",
-      "category": "DATE_OR_PERIOD",
-      "context": "The latest representative population measure is the World Bank’s Global Findex 2021 survey of Yemen (fieldwork 7 November 2022 to 9 January 2023; World Bank data year 2022): 11.9% of adults aged 15 and over in the areas surveyed had an account at a financial institution or with a mobile-money provider. Areas holding about 23% of the population were not surveyed. In the same survey, 18.35% of men and 5.44% of women had an account, a gap of 12.91 percentage points. Separately, point-of-sale (POS) terminals reported by the Central Bank of Yemen – Aden (CBY-Aden) rose from 561 in March 2025 to 1,651 in June 2026, within CBY-Aden’s reporting scope. These are different measures: people, a disparity within one survey, and infrastructure. None substitutes for another."
-    },
-    {
-      "route": "/",
-      "surface": "section",
-      "field": "body_en",
       "token": "11.9%",
       "category": "ROUTE_SOURCE_CLOSED__OBJECT_TRACE_AVAILABLE",
-      "context": "The latest representative population measure is the World Bank’s Global Findex 2021 survey of Yemen (fieldwork 7 November 2022 to 9 January 2023; World Bank data year 2022): 11.9% of adults aged 15 and over in the areas surveyed had an account at a financial institution or with a mobile-money provider. Areas holding about 23% of the population were not surveyed. In the same survey, 18.35% of men and 5.44% of women had an account, a gap of 12.91 percentage points. Separately, point-of-sale (POS) terminals reported by the Central Bank of Yemen – Aden (CBY-Aden) rose from 561 in March 2025 to 1,651 in June 2026, within CBY-Aden’s reporting scope. These are different measures: people, a disparity within one survey, and infrastructure. None substitutes for another.",
+      "context": "11.9% of adults aged 15 and over in the areas surveyed had an account at a financial institution or with a mobile-money provider, according to the latest representative population measure: the World Bank’s Global Findex 2021 survey of Yemen (fieldwork 7 November 2022 to 9 January 2023; World Bank data year 2022). Areas holding about 23% of the population were not surveyed. In the same survey, 18.35% of men and 5.44% of women had an account, a gap of 12.91 percentage points. Separately, point-of-sale (POS) terminals reported by the Central Bank of Yemen – Aden (CBY-Aden) rose from 561 in March 2025 to 1,651 in June 2026, within CBY-Aden’s reporting scope. These are different measures: people, a disparity within one survey, and infrastructure. None substitutes for another.",
       "source_object": "CLM-001"
     },
     {
@@ -69029,8 +68989,48 @@
       "field": "body_en",
       "token": "15",
       "category": "ROUTE_SOURCE_CLOSED__OBJECT_TRACE_AVAILABLE",
-      "context": "The latest representative population measure is the World Bank’s Global Findex 2021 survey of Yemen (fieldwork 7 November 2022 to 9 January 2023; World Bank data year 2022): 11.9% of adults aged 15 and over in the areas surveyed had an account at a financial institution or with a mobile-money provider. Areas holding about 23% of the population were not surveyed. In the same survey, 18.35% of men and 5.44% of women had an account, a gap of 12.91 percentage points. Separately, point-of-sale (POS) terminals reported by the Central Bank of Yemen – Aden (CBY-Aden) rose from 561 in March 2025 to 1,651 in June 2026, within CBY-Aden’s reporting scope. These are different measures: people, a disparity within one survey, and infrastructure. None substitutes for another.",
+      "context": "11.9% of adults aged 15 and over in the areas surveyed had an account at a financial institution or with a mobile-money provider, according to the latest representative population measure: the World Bank’s Global Findex 2021 survey of Yemen (fieldwork 7 November 2022 to 9 January 2023; World Bank data year 2022). Areas holding about 23% of the population were not surveyed. In the same survey, 18.35% of men and 5.44% of women had an account, a gap of 12.91 percentage points. Separately, point-of-sale (POS) terminals reported by the Central Bank of Yemen – Aden (CBY-Aden) rose from 561 in March 2025 to 1,651 in June 2026, within CBY-Aden’s reporting scope. These are different measures: people, a disparity within one survey, and infrastructure. None substitutes for another.",
       "source_object": "CLM-001"
+    },
+    {
+      "route": "/",
+      "surface": "section",
+      "field": "body_en",
+      "token": "2021",
+      "category": "DATE_OR_PERIOD",
+      "context": "11.9% of adults aged 15 and over in the areas surveyed had an account at a financial institution or with a mobile-money provider, according to the latest representative population measure: the World Bank’s Global Findex 2021 survey of Yemen (fieldwork 7 November 2022 to 9 January 2023; World Bank data year 2022). Areas holding about 23% of the population were not surveyed. In the same survey, 18.35% of men and 5.44% of women had an account, a gap of 12.91 percentage points. Separately, point-of-sale (POS) terminals reported by the Central Bank of Yemen – Aden (CBY-Aden) rose from 561 in March 2025 to 1,651 in June 2026, within CBY-Aden’s reporting scope. These are different measures: people, a disparity within one survey, and infrastructure. None substitutes for another."
+    },
+    {
+      "route": "/",
+      "surface": "section",
+      "field": "body_en",
+      "token": "7",
+      "category": "DATE_OR_PERIOD",
+      "context": "11.9% of adults aged 15 and over in the areas surveyed had an account at a financial institution or with a mobile-money provider, according to the latest representative population measure: the World Bank’s Global Findex 2021 survey of Yemen (fieldwork 7 November 2022 to 9 January 2023; World Bank data year 2022). Areas holding about 23% of the population were not surveyed. In the same survey, 18.35% of men and 5.44% of women had an account, a gap of 12.91 percentage points. Separately, point-of-sale (POS) terminals reported by the Central Bank of Yemen – Aden (CBY-Aden) rose from 561 in March 2025 to 1,651 in June 2026, within CBY-Aden’s reporting scope. These are different measures: people, a disparity within one survey, and infrastructure. None substitutes for another."
+    },
+    {
+      "route": "/",
+      "surface": "section",
+      "field": "body_en",
+      "token": "2022",
+      "category": "DATE_OR_PERIOD",
+      "context": "11.9% of adults aged 15 and over in the areas surveyed had an account at a financial institution or with a mobile-money provider, according to the latest representative population measure: the World Bank’s Global Findex 2021 survey of Yemen (fieldwork 7 November 2022 to 9 January 2023; World Bank data year 2022). Areas holding about 23% of the population were not surveyed. In the same survey, 18.35% of men and 5.44% of women had an account, a gap of 12.91 percentage points. Separately, point-of-sale (POS) terminals reported by the Central Bank of Yemen – Aden (CBY-Aden) rose from 561 in March 2025 to 1,651 in June 2026, within CBY-Aden’s reporting scope. These are different measures: people, a disparity within one survey, and infrastructure. None substitutes for another."
+    },
+    {
+      "route": "/",
+      "surface": "section",
+      "field": "body_en",
+      "token": "9",
+      "category": "DATE_OR_PERIOD",
+      "context": "11.9% of adults aged 15 and over in the areas surveyed had an account at a financial institution or with a mobile-money provider, according to the latest representative population measure: the World Bank’s Global Findex 2021 survey of Yemen (fieldwork 7 November 2022 to 9 January 2023; World Bank data year 2022). Areas holding about 23% of the population were not surveyed. In the same survey, 18.35% of men and 5.44% of women had an account, a gap of 12.91 percentage points. Separately, point-of-sale (POS) terminals reported by the Central Bank of Yemen – Aden (CBY-Aden) rose from 561 in March 2025 to 1,651 in June 2026, within CBY-Aden’s reporting scope. These are different measures: people, a disparity within one survey, and infrastructure. None substitutes for another."
+    },
+    {
+      "route": "/",
+      "surface": "section",
+      "field": "body_en",
+      "token": "2023",
+      "category": "DATE_OR_PERIOD",
+      "context": "11.9% of adults aged 15 and over in the areas surveyed had an account at a financial institution or with a mobile-money provider, according to the latest representative population measure: the World Bank’s Global Findex 2021 survey of Yemen (fieldwork 7 November 2022 to 9 January 2023; World Bank data year 2022). Areas holding about 23% of the population were not surveyed. In the same survey, 18.35% of men and 5.44% of women had an account, a gap of 12.91 percentage points. Separately, point-of-sale (POS) terminals reported by the Central Bank of Yemen – Aden (CBY-Aden) rose from 561 in March 2025 to 1,651 in June 2026, within CBY-Aden’s reporting scope. These are different measures: people, a disparity within one survey, and infrastructure. None substitutes for another."
     },
     {
       "route": "/",
@@ -69038,7 +69038,7 @@
       "field": "body_en",
       "token": "23%",
       "category": "ROUTE_SOURCE_CLOSED__OBJECT_TRACE_AVAILABLE",
-      "context": "The latest representative population measure is the World Bank’s Global Findex 2021 survey of Yemen (fieldwork 7 November 2022 to 9 January 2023; World Bank data year 2022): 11.9% of adults aged 15 and over in the areas surveyed had an account at a financial institution or with a mobile-money provider. Areas holding about 23% of the population were not surveyed. In the same survey, 18.35% of men and 5.44% of women had an account, a gap of 12.91 percentage points. Separately, point-of-sale (POS) terminals reported by the Central Bank of Yemen – Aden (CBY-Aden) rose from 561 in March 2025 to 1,651 in June 2026, within CBY-Aden’s reporting scope. These are different measures: people, a disparity within one survey, and infrastructure. None substitutes for another.",
+      "context": "11.9% of adults aged 15 and over in the areas surveyed had an account at a financial institution or with a mobile-money provider, according to the latest representative population measure: the World Bank’s Global Findex 2021 survey of Yemen (fieldwork 7 November 2022 to 9 January 2023; World Bank data year 2022). Areas holding about 23% of the population were not surveyed. In the same survey, 18.35% of men and 5.44% of women had an account, a gap of 12.91 percentage points. Separately, point-of-sale (POS) terminals reported by the Central Bank of Yemen – Aden (CBY-Aden) rose from 561 in March 2025 to 1,651 in June 2026, within CBY-Aden’s reporting scope. These are different measures: people, a disparity within one survey, and infrastructure. None substitutes for another.",
       "source_object": "CLM-001"
     },
     {
@@ -69047,7 +69047,7 @@
       "field": "body_en",
       "token": "18.35%",
       "category": "ROUTE_SOURCE_CLOSED__OBJECT_TRACE_AVAILABLE",
-      "context": "The latest representative population measure is the World Bank’s Global Findex 2021 survey of Yemen (fieldwork 7 November 2022 to 9 January 2023; World Bank data year 2022): 11.9% of adults aged 15 and over in the areas surveyed had an account at a financial institution or with a mobile-money provider. Areas holding about 23% of the population were not surveyed. In the same survey, 18.35% of men and 5.44% of women had an account, a gap of 12.91 percentage points. Separately, point-of-sale (POS) terminals reported by the Central Bank of Yemen – Aden (CBY-Aden) rose from 561 in March 2025 to 1,651 in June 2026, within CBY-Aden’s reporting scope. These are different measures: people, a disparity within one survey, and infrastructure. None substitutes for another.",
+      "context": "11.9% of adults aged 15 and over in the areas surveyed had an account at a financial institution or with a mobile-money provider, according to the latest representative population measure: the World Bank’s Global Findex 2021 survey of Yemen (fieldwork 7 November 2022 to 9 January 2023; World Bank data year 2022). Areas holding about 23% of the population were not surveyed. In the same survey, 18.35% of men and 5.44% of women had an account, a gap of 12.91 percentage points. Separately, point-of-sale (POS) terminals reported by the Central Bank of Yemen – Aden (CBY-Aden) rose from 561 in March 2025 to 1,651 in June 2026, within CBY-Aden’s reporting scope. These are different measures: people, a disparity within one survey, and infrastructure. None substitutes for another.",
       "source_object": "CLM-002"
     },
     {
@@ -69056,7 +69056,7 @@
       "field": "body_en",
       "token": "5.44%",
       "category": "ROUTE_SOURCE_CLOSED__OBJECT_TRACE_AVAILABLE",
-      "context": "The latest representative population measure is the World Bank’s Global Findex 2021 survey of Yemen (fieldwork 7 November 2022 to 9 January 2023; World Bank data year 2022): 11.9% of adults aged 15 and over in the areas surveyed had an account at a financial institution or with a mobile-money provider. Areas holding about 23% of the population were not surveyed. In the same survey, 18.35% of men and 5.44% of women had an account, a gap of 12.91 percentage points. Separately, point-of-sale (POS) terminals reported by the Central Bank of Yemen – Aden (CBY-Aden) rose from 561 in March 2025 to 1,651 in June 2026, within CBY-Aden’s reporting scope. These are different measures: people, a disparity within one survey, and infrastructure. None substitutes for another.",
+      "context": "11.9% of adults aged 15 and over in the areas surveyed had an account at a financial institution or with a mobile-money provider, according to the latest representative population measure: the World Bank’s Global Findex 2021 survey of Yemen (fieldwork 7 November 2022 to 9 January 2023; World Bank data year 2022). Areas holding about 23% of the population were not surveyed. In the same survey, 18.35% of men and 5.44% of women had an account, a gap of 12.91 percentage points. Separately, point-of-sale (POS) terminals reported by the Central Bank of Yemen – Aden (CBY-Aden) rose from 561 in March 2025 to 1,651 in June 2026, within CBY-Aden’s reporting scope. These are different measures: people, a disparity within one survey, and infrastructure. None substitutes for another.",
       "source_object": "CLM-002"
     },
     {
@@ -69065,7 +69065,7 @@
       "field": "body_en",
       "token": "12.91",
       "category": "ROUTE_SOURCE_CLOSED__OBJECT_TRACE_AVAILABLE",
-      "context": "The latest representative population measure is the World Bank’s Global Findex 2021 survey of Yemen (fieldwork 7 November 2022 to 9 January 2023; World Bank data year 2022): 11.9% of adults aged 15 and over in the areas surveyed had an account at a financial institution or with a mobile-money provider. Areas holding about 23% of the population were not surveyed. In the same survey, 18.35% of men and 5.44% of women had an account, a gap of 12.91 percentage points. Separately, point-of-sale (POS) terminals reported by the Central Bank of Yemen – Aden (CBY-Aden) rose from 561 in March 2025 to 1,651 in June 2026, within CBY-Aden’s reporting scope. These are different measures: people, a disparity within one survey, and infrastructure. None substitutes for another.",
+      "context": "11.9% of adults aged 15 and over in the areas surveyed had an account at a financial institution or with a mobile-money provider, according to the latest representative population measure: the World Bank’s Global Findex 2021 survey of Yemen (fieldwork 7 November 2022 to 9 January 2023; World Bank data year 2022). Areas holding about 23% of the population were not surveyed. In the same survey, 18.35% of men and 5.44% of women had an account, a gap of 12.91 percentage points. Separately, point-of-sale (POS) terminals reported by the Central Bank of Yemen – Aden (CBY-Aden) rose from 561 in March 2025 to 1,651 in June 2026, within CBY-Aden’s reporting scope. These are different measures: people, a disparity within one survey, and infrastructure. None substitutes for another.",
       "source_object": "CLM-002"
     },
     {
@@ -69074,7 +69074,7 @@
       "field": "body_en",
       "token": "561",
       "category": "ROUTE_SOURCE_CLOSED__OBJECT_TRACE_AVAILABLE",
-      "context": "The latest representative population measure is the World Bank’s Global Findex 2021 survey of Yemen (fieldwork 7 November 2022 to 9 January 2023; World Bank data year 2022): 11.9% of adults aged 15 and over in the areas surveyed had an account at a financial institution or with a mobile-money provider. Areas holding about 23% of the population were not surveyed. In the same survey, 18.35% of men and 5.44% of women had an account, a gap of 12.91 percentage points. Separately, point-of-sale (POS) terminals reported by the Central Bank of Yemen – Aden (CBY-Aden) rose from 561 in March 2025 to 1,651 in June 2026, within CBY-Aden’s reporting scope. These are different measures: people, a disparity within one survey, and infrastructure. None substitutes for another.",
+      "context": "11.9% of adults aged 15 and over in the areas surveyed had an account at a financial institution or with a mobile-money provider, according to the latest representative population measure: the World Bank’s Global Findex 2021 survey of Yemen (fieldwork 7 November 2022 to 9 January 2023; World Bank data year 2022). Areas holding about 23% of the population were not surveyed. In the same survey, 18.35% of men and 5.44% of women had an account, a gap of 12.91 percentage points. Separately, point-of-sale (POS) terminals reported by the Central Bank of Yemen – Aden (CBY-Aden) rose from 561 in March 2025 to 1,651 in June 2026, within CBY-Aden’s reporting scope. These are different measures: people, a disparity within one survey, and infrastructure. None substitutes for another.",
       "source_object": "CLM-003"
     },
     {
@@ -69083,7 +69083,7 @@
       "field": "body_en",
       "token": "2025",
       "category": "DATE_OR_PERIOD",
-      "context": "The latest representative population measure is the World Bank’s Global Findex 2021 survey of Yemen (fieldwork 7 November 2022 to 9 January 2023; World Bank data year 2022): 11.9% of adults aged 15 and over in the areas surveyed had an account at a financial institution or with a mobile-money provider. Areas holding about 23% of the population were not surveyed. In the same survey, 18.35% of men and 5.44% of women had an account, a gap of 12.91 percentage points. Separately, point-of-sale (POS) terminals reported by the Central Bank of Yemen – Aden (CBY-Aden) rose from 561 in March 2025 to 1,651 in June 2026, within CBY-Aden’s reporting scope. These are different measures: people, a disparity within one survey, and infrastructure. None substitutes for another."
+      "context": "11.9% of adults aged 15 and over in the areas surveyed had an account at a financial institution or with a mobile-money provider, according to the latest representative population measure: the World Bank’s Global Findex 2021 survey of Yemen (fieldwork 7 November 2022 to 9 January 2023; World Bank data year 2022). Areas holding about 23% of the population were not surveyed. In the same survey, 18.35% of men and 5.44% of women had an account, a gap of 12.91 percentage points. Separately, point-of-sale (POS) terminals reported by the Central Bank of Yemen – Aden (CBY-Aden) rose from 561 in March 2025 to 1,651 in June 2026, within CBY-Aden’s reporting scope. These are different measures: people, a disparity within one survey, and infrastructure. None substitutes for another."
     },
     {
       "route": "/",
@@ -69091,7 +69091,7 @@
       "field": "body_en",
       "token": "1,651",
       "category": "ROUTE_SOURCE_CLOSED__OBJECT_TRACE_AVAILABLE",
-      "context": "The latest representative population measure is the World Bank’s Global Findex 2021 survey of Yemen (fieldwork 7 November 2022 to 9 January 2023; World Bank data year 2022): 11.9% of adults aged 15 and over in the areas surveyed had an account at a financial institution or with a mobile-money provider. Areas holding about 23% of the population were not surveyed. In the same survey, 18.35% of men and 5.44% of women had an account, a gap of 12.91 percentage points. Separately, point-of-sale (POS) terminals reported by the Central Bank of Yemen – Aden (CBY-Aden) rose from 561 in March 2025 to 1,651 in June 2026, within CBY-Aden’s reporting scope. These are different measures: people, a disparity within one survey, and infrastructure. None substitutes for another.",
+      "context": "11.9% of adults aged 15 and over in the areas surveyed had an account at a financial institution or with a mobile-money provider, according to the latest representative population measure: the World Bank’s Global Findex 2021 survey of Yemen (fieldwork 7 November 2022 to 9 January 2023; World Bank data year 2022). Areas holding about 23% of the population were not surveyed. In the same survey, 18.35% of men and 5.44% of women had an account, a gap of 12.91 percentage points. Separately, point-of-sale (POS) terminals reported by the Central Bank of Yemen – Aden (CBY-Aden) rose from 561 in March 2025 to 1,651 in June 2026, within CBY-Aden’s reporting scope. These are different measures: people, a disparity within one survey, and infrastructure. None substitutes for another.",
       "source_object": "CLM-003"
     },
     {
@@ -69100,47 +69100,7 @@
       "field": "body_en",
       "token": "2026",
       "category": "DATE_OR_PERIOD",
-      "context": "The latest representative population measure is the World Bank’s Global Findex 2021 survey of Yemen (fieldwork 7 November 2022 to 9 January 2023; World Bank data year 2022): 11.9% of adults aged 15 and over in the areas surveyed had an account at a financial institution or with a mobile-money provider. Areas holding about 23% of the population were not surveyed. In the same survey, 18.35% of men and 5.44% of women had an account, a gap of 12.91 percentage points. Separately, point-of-sale (POS) terminals reported by the Central Bank of Yemen – Aden (CBY-Aden) rose from 561 in March 2025 to 1,651 in June 2026, within CBY-Aden’s reporting scope. These are different measures: people, a disparity within one survey, and infrastructure. None substitutes for another."
-    },
-    {
-      "route": "/",
-      "surface": "section",
-      "field": "body_ar",
-      "token": "2021",
-      "category": "DATE_OR_PERIOD",
-      "context": "أحدث قياس ممثل للسكان هو مسح المؤشر العالمي للشمول المالي (Global Findex) لعام 2021 في اليمن، الصادر عن البنك الدولي (نُفذ العمل الميداني من 7 نوفمبر 2022 إلى 9 يناير 2023؛ وسنة البيانات لدى البنك الدولي 2022): كان لدى 11.9% من البالغين بعمر 15 سنة فأكثر في المناطق التي شملها المسح حساب لدى مؤسسة مالية أو لدى مقدم خدمة أموال عبر الهاتف المحمول. ولم يشمل المسح مناطق يسكنها نحو 23% من السكان. وفي المسح نفسه، كان لدى 18.35% من الرجال و5.44% من النساء حساب، بفارق 12.91 نقطة مئوية. وبصورة منفصلة، ارتفع عدد أجهزة نقاط البيع التي يُبلغ عنها البنك المركزي اليمني – عدن من 561 في مارس 2025 إلى 1,651 في يونيو 2026، ضمن نطاق إبلاغه. هذه مقاييس مختلفة: أشخاص، وفجوة داخل مسح واحد، وبنية تحتية؛ ولا يحل أي منها محل الآخر."
-    },
-    {
-      "route": "/",
-      "surface": "section",
-      "field": "body_ar",
-      "token": "7",
-      "category": "DATE_OR_PERIOD",
-      "context": "أحدث قياس ممثل للسكان هو مسح المؤشر العالمي للشمول المالي (Global Findex) لعام 2021 في اليمن، الصادر عن البنك الدولي (نُفذ العمل الميداني من 7 نوفمبر 2022 إلى 9 يناير 2023؛ وسنة البيانات لدى البنك الدولي 2022): كان لدى 11.9% من البالغين بعمر 15 سنة فأكثر في المناطق التي شملها المسح حساب لدى مؤسسة مالية أو لدى مقدم خدمة أموال عبر الهاتف المحمول. ولم يشمل المسح مناطق يسكنها نحو 23% من السكان. وفي المسح نفسه، كان لدى 18.35% من الرجال و5.44% من النساء حساب، بفارق 12.91 نقطة مئوية. وبصورة منفصلة، ارتفع عدد أجهزة نقاط البيع التي يُبلغ عنها البنك المركزي اليمني – عدن من 561 في مارس 2025 إلى 1,651 في يونيو 2026، ضمن نطاق إبلاغه. هذه مقاييس مختلفة: أشخاص، وفجوة داخل مسح واحد، وبنية تحتية؛ ولا يحل أي منها محل الآخر."
-    },
-    {
-      "route": "/",
-      "surface": "section",
-      "field": "body_ar",
-      "token": "2022",
-      "category": "DATE_OR_PERIOD",
-      "context": "أحدث قياس ممثل للسكان هو مسح المؤشر العالمي للشمول المالي (Global Findex) لعام 2021 في اليمن، الصادر عن البنك الدولي (نُفذ العمل الميداني من 7 نوفمبر 2022 إلى 9 يناير 2023؛ وسنة البيانات لدى البنك الدولي 2022): كان لدى 11.9% من البالغين بعمر 15 سنة فأكثر في المناطق التي شملها المسح حساب لدى مؤسسة مالية أو لدى مقدم خدمة أموال عبر الهاتف المحمول. ولم يشمل المسح مناطق يسكنها نحو 23% من السكان. وفي المسح نفسه، كان لدى 18.35% من الرجال و5.44% من النساء حساب، بفارق 12.91 نقطة مئوية. وبصورة منفصلة، ارتفع عدد أجهزة نقاط البيع التي يُبلغ عنها البنك المركزي اليمني – عدن من 561 في مارس 2025 إلى 1,651 في يونيو 2026، ضمن نطاق إبلاغه. هذه مقاييس مختلفة: أشخاص، وفجوة داخل مسح واحد، وبنية تحتية؛ ولا يحل أي منها محل الآخر."
-    },
-    {
-      "route": "/",
-      "surface": "section",
-      "field": "body_ar",
-      "token": "9",
-      "category": "DATE_OR_PERIOD",
-      "context": "أحدث قياس ممثل للسكان هو مسح المؤشر العالمي للشمول المالي (Global Findex) لعام 2021 في اليمن، الصادر عن البنك الدولي (نُفذ العمل الميداني من 7 نوفمبر 2022 إلى 9 يناير 2023؛ وسنة البيانات لدى البنك الدولي 2022): كان لدى 11.9% من البالغين بعمر 15 سنة فأكثر في المناطق التي شملها المسح حساب لدى مؤسسة مالية أو لدى مقدم خدمة أموال عبر الهاتف المحمول. ولم يشمل المسح مناطق يسكنها نحو 23% من السكان. وفي المسح نفسه، كان لدى 18.35% من الرجال و5.44% من النساء حساب، بفارق 12.91 نقطة مئوية. وبصورة منفصلة، ارتفع عدد أجهزة نقاط البيع التي يُبلغ عنها البنك المركزي اليمني – عدن من 561 في مارس 2025 إلى 1,651 في يونيو 2026، ضمن نطاق إبلاغه. هذه مقاييس مختلفة: أشخاص، وفجوة داخل مسح واحد، وبنية تحتية؛ ولا يحل أي منها محل الآخر."
-    },
-    {
-      "route": "/",
-      "surface": "section",
-      "field": "body_ar",
-      "token": "2023",
-      "category": "DATE_OR_PERIOD",
-      "context": "أحدث قياس ممثل للسكان هو مسح المؤشر العالمي للشمول المالي (Global Findex) لعام 2021 في اليمن، الصادر عن البنك الدولي (نُفذ العمل الميداني من 7 نوفمبر 2022 إلى 9 يناير 2023؛ وسنة البيانات لدى البنك الدولي 2022): كان لدى 11.9% من البالغين بعمر 15 سنة فأكثر في المناطق التي شملها المسح حساب لدى مؤسسة مالية أو لدى مقدم خدمة أموال عبر الهاتف المحمول. ولم يشمل المسح مناطق يسكنها نحو 23% من السكان. وفي المسح نفسه، كان لدى 18.35% من الرجال و5.44% من النساء حساب، بفارق 12.91 نقطة مئوية. وبصورة منفصلة، ارتفع عدد أجهزة نقاط البيع التي يُبلغ عنها البنك المركزي اليمني – عدن من 561 في مارس 2025 إلى 1,651 في يونيو 2026، ضمن نطاق إبلاغه. هذه مقاييس مختلفة: أشخاص، وفجوة داخل مسح واحد، وبنية تحتية؛ ولا يحل أي منها محل الآخر."
+      "context": "11.9% of adults aged 15 and over in the areas surveyed had an account at a financial institution or with a mobile-money provider, according to the latest representative population measure: the World Bank’s Global Findex 2021 survey of Yemen (fieldwork 7 November 2022 to 9 January 2023; World Bank data year 2022). Areas holding about 23% of the population were not surveyed. In the same survey, 18.35% of men and 5.44% of women had an account, a gap of 12.91 percentage points. Separately, point-of-sale (POS) terminals reported by the Central Bank of Yemen – Aden (CBY-Aden) rose from 561 in March 2025 to 1,651 in June 2026, within CBY-Aden’s reporting scope. These are different measures: people, a disparity within one survey, and infrastructure. None substitutes for another."
     },
     {
       "route": "/",
@@ -69148,7 +69108,7 @@
       "field": "body_ar",
       "token": "11.9%",
       "category": "ROUTE_SOURCE_CLOSED__OBJECT_TRACE_AVAILABLE",
-      "context": "أحدث قياس ممثل للسكان هو مسح المؤشر العالمي للشمول المالي (Global Findex) لعام 2021 في اليمن، الصادر عن البنك الدولي (نُفذ العمل الميداني من 7 نوفمبر 2022 إلى 9 يناير 2023؛ وسنة البيانات لدى البنك الدولي 2022): كان لدى 11.9% من البالغين بعمر 15 سنة فأكثر في المناطق التي شملها المسح حساب لدى مؤسسة مالية أو لدى مقدم خدمة أموال عبر الهاتف المحمول. ولم يشمل المسح مناطق يسكنها نحو 23% من السكان. وفي المسح نفسه، كان لدى 18.35% من الرجال و5.44% من النساء حساب، بفارق 12.91 نقطة مئوية. وبصورة منفصلة، ارتفع عدد أجهزة نقاط البيع التي يُبلغ عنها البنك المركزي اليمني – عدن من 561 في مارس 2025 إلى 1,651 في يونيو 2026، ضمن نطاق إبلاغه. هذه مقاييس مختلفة: أشخاص، وفجوة داخل مسح واحد، وبنية تحتية؛ ولا يحل أي منها محل الآخر.",
+      "context": "كان لدى 11.9% من البالغين بعمر 15 سنة فأكثر في المناطق التي شملها المسح حساب لدى مؤسسة مالية أو لدى مقدم خدمة أموال عبر الهاتف المحمول، وفق أحدث قياس ممثل للسكان: مسح المؤشر العالمي للشمول المالي (Global Findex) لعام 2021 في اليمن، الصادر عن البنك الدولي (نُفذ العمل الميداني من 7 نوفمبر 2022 إلى 9 يناير 2023؛ وسنة البيانات لدى البنك الدولي 2022). ولم يشمل المسح مناطق يسكنها نحو 23% من السكان. وفي المسح نفسه، كان لدى 18.35% من الرجال و5.44% من النساء حساب، بفارق 12.91 نقطة مئوية. وبصورة منفصلة، ارتفع عدد أجهزة نقاط البيع التي يُبلغ عنها البنك المركزي اليمني – عدن من 561 في مارس 2025 إلى 1,651 في يونيو 2026، ضمن نطاق إبلاغه. هذه مقاييس مختلفة: أشخاص، وفجوة داخل مسح واحد، وبنية تحتية؛ ولا يحل أي منها محل الآخر.",
       "source_object": "CLM-001"
     },
     {
@@ -69157,8 +69117,48 @@
       "field": "body_ar",
       "token": "15",
       "category": "ROUTE_SOURCE_CLOSED__OBJECT_TRACE_AVAILABLE",
-      "context": "أحدث قياس ممثل للسكان هو مسح المؤشر العالمي للشمول المالي (Global Findex) لعام 2021 في اليمن، الصادر عن البنك الدولي (نُفذ العمل الميداني من 7 نوفمبر 2022 إلى 9 يناير 2023؛ وسنة البيانات لدى البنك الدولي 2022): كان لدى 11.9% من البالغين بعمر 15 سنة فأكثر في المناطق التي شملها المسح حساب لدى مؤسسة مالية أو لدى مقدم خدمة أموال عبر الهاتف المحمول. ولم يشمل المسح مناطق يسكنها نحو 23% من السكان. وفي المسح نفسه، كان لدى 18.35% من الرجال و5.44% من النساء حساب، بفارق 12.91 نقطة مئوية. وبصورة منفصلة، ارتفع عدد أجهزة نقاط البيع التي يُبلغ عنها البنك المركزي اليمني – عدن من 561 في مارس 2025 إلى 1,651 في يونيو 2026، ضمن نطاق إبلاغه. هذه مقاييس مختلفة: أشخاص، وفجوة داخل مسح واحد، وبنية تحتية؛ ولا يحل أي منها محل الآخر.",
+      "context": "كان لدى 11.9% من البالغين بعمر 15 سنة فأكثر في المناطق التي شملها المسح حساب لدى مؤسسة مالية أو لدى مقدم خدمة أموال عبر الهاتف المحمول، وفق أحدث قياس ممثل للسكان: مسح المؤشر العالمي للشمول المالي (Global Findex) لعام 2021 في اليمن، الصادر عن البنك الدولي (نُفذ العمل الميداني من 7 نوفمبر 2022 إلى 9 يناير 2023؛ وسنة البيانات لدى البنك الدولي 2022). ولم يشمل المسح مناطق يسكنها نحو 23% من السكان. وفي المسح نفسه، كان لدى 18.35% من الرجال و5.44% من النساء حساب، بفارق 12.91 نقطة مئوية. وبصورة منفصلة، ارتفع عدد أجهزة نقاط البيع التي يُبلغ عنها البنك المركزي اليمني – عدن من 561 في مارس 2025 إلى 1,651 في يونيو 2026، ضمن نطاق إبلاغه. هذه مقاييس مختلفة: أشخاص، وفجوة داخل مسح واحد، وبنية تحتية؛ ولا يحل أي منها محل الآخر.",
       "source_object": "CLM-001"
+    },
+    {
+      "route": "/",
+      "surface": "section",
+      "field": "body_ar",
+      "token": "2021",
+      "category": "DATE_OR_PERIOD",
+      "context": "كان لدى 11.9% من البالغين بعمر 15 سنة فأكثر في المناطق التي شملها المسح حساب لدى مؤسسة مالية أو لدى مقدم خدمة أموال عبر الهاتف المحمول، وفق أحدث قياس ممثل للسكان: مسح المؤشر العالمي للشمول المالي (Global Findex) لعام 2021 في اليمن، الصادر عن البنك الدولي (نُفذ العمل الميداني من 7 نوفمبر 2022 إلى 9 يناير 2023؛ وسنة البيانات لدى البنك الدولي 2022). ولم يشمل المسح مناطق يسكنها نحو 23% من السكان. وفي المسح نفسه، كان لدى 18.35% من الرجال و5.44% من النساء حساب، بفارق 12.91 نقطة مئوية. وبصورة منفصلة، ارتفع عدد أجهزة نقاط البيع التي يُبلغ عنها البنك المركزي اليمني – عدن من 561 في مارس 2025 إلى 1,651 في يونيو 2026، ضمن نطاق إبلاغه. هذه مقاييس مختلفة: أشخاص، وفجوة داخل مسح واحد، وبنية تحتية؛ ولا يحل أي منها محل الآخر."
+    },
+    {
+      "route": "/",
+      "surface": "section",
+      "field": "body_ar",
+      "token": "7",
+      "category": "DATE_OR_PERIOD",
+      "context": "كان لدى 11.9% من البالغين بعمر 15 سنة فأكثر في المناطق التي شملها المسح حساب لدى مؤسسة مالية أو لدى مقدم خدمة أموال عبر الهاتف المحمول، وفق أحدث قياس ممثل للسكان: مسح المؤشر العالمي للشمول المالي (Global Findex) لعام 2021 في اليمن، الصادر عن البنك الدولي (نُفذ العمل الميداني من 7 نوفمبر 2022 إلى 9 يناير 2023؛ وسنة البيانات لدى البنك الدولي 2022). ولم يشمل المسح مناطق يسكنها نحو 23% من السكان. وفي المسح نفسه، كان لدى 18.35% من الرجال و5.44% من النساء حساب، بفارق 12.91 نقطة مئوية. وبصورة منفصلة، ارتفع عدد أجهزة نقاط البيع التي يُبلغ عنها البنك المركزي اليمني – عدن من 561 في مارس 2025 إلى 1,651 في يونيو 2026، ضمن نطاق إبلاغه. هذه مقاييس مختلفة: أشخاص، وفجوة داخل مسح واحد، وبنية تحتية؛ ولا يحل أي منها محل الآخر."
+    },
+    {
+      "route": "/",
+      "surface": "section",
+      "field": "body_ar",
+      "token": "2022",
+      "category": "DATE_OR_PERIOD",
+      "context": "كان لدى 11.9% من البالغين بعمر 15 سنة فأكثر في المناطق التي شملها المسح حساب لدى مؤسسة مالية أو لدى مقدم خدمة أموال عبر الهاتف المحمول، وفق أحدث قياس ممثل للسكان: مسح المؤشر العالمي للشمول المالي (Global Findex) لعام 2021 في اليمن، الصادر عن البنك الدولي (نُفذ العمل الميداني من 7 نوفمبر 2022 إلى 9 يناير 2023؛ وسنة البيانات لدى البنك الدولي 2022). ولم يشمل المسح مناطق يسكنها نحو 23% من السكان. وفي المسح نفسه، كان لدى 18.35% من الرجال و5.44% من النساء حساب، بفارق 12.91 نقطة مئوية. وبصورة منفصلة، ارتفع عدد أجهزة نقاط البيع التي يُبلغ عنها البنك المركزي اليمني – عدن من 561 في مارس 2025 إلى 1,651 في يونيو 2026، ضمن نطاق إبلاغه. هذه مقاييس مختلفة: أشخاص، وفجوة داخل مسح واحد، وبنية تحتية؛ ولا يحل أي منها محل الآخر."
+    },
+    {
+      "route": "/",
+      "surface": "section",
+      "field": "body_ar",
+      "token": "9",
+      "category": "DATE_OR_PERIOD",
+      "context": "كان لدى 11.9% من البالغين بعمر 15 سنة فأكثر في المناطق التي شملها المسح حساب لدى مؤسسة مالية أو لدى مقدم خدمة أموال عبر الهاتف المحمول، وفق أحدث قياس ممثل للسكان: مسح المؤشر العالمي للشمول المالي (Global Findex) لعام 2021 في اليمن، الصادر عن البنك الدولي (نُفذ العمل الميداني من 7 نوفمبر 2022 إلى 9 يناير 2023؛ وسنة البيانات لدى البنك الدولي 2022). ولم يشمل المسح مناطق يسكنها نحو 23% من السكان. وفي المسح نفسه، كان لدى 18.35% من الرجال و5.44% من النساء حساب، بفارق 12.91 نقطة مئوية. وبصورة منفصلة، ارتفع عدد أجهزة نقاط البيع التي يُبلغ عنها البنك المركزي اليمني – عدن من 561 في مارس 2025 إلى 1,651 في يونيو 2026، ضمن نطاق إبلاغه. هذه مقاييس مختلفة: أشخاص، وفجوة داخل مسح واحد، وبنية تحتية؛ ولا يحل أي منها محل الآخر."
+    },
+    {
+      "route": "/",
+      "surface": "section",
+      "field": "body_ar",
+      "token": "2023",
+      "category": "DATE_OR_PERIOD",
+      "context": "كان لدى 11.9% من البالغين بعمر 15 سنة فأكثر في المناطق التي شملها المسح حساب لدى مؤسسة مالية أو لدى مقدم خدمة أموال عبر الهاتف المحمول، وفق أحدث قياس ممثل للسكان: مسح المؤشر العالمي للشمول المالي (Global Findex) لعام 2021 في اليمن، الصادر عن البنك الدولي (نُفذ العمل الميداني من 7 نوفمبر 2022 إلى 9 يناير 2023؛ وسنة البيانات لدى البنك الدولي 2022). ولم يشمل المسح مناطق يسكنها نحو 23% من السكان. وفي المسح نفسه، كان لدى 18.35% من الرجال و5.44% من النساء حساب، بفارق 12.91 نقطة مئوية. وبصورة منفصلة، ارتفع عدد أجهزة نقاط البيع التي يُبلغ عنها البنك المركزي اليمني – عدن من 561 في مارس 2025 إلى 1,651 في يونيو 2026، ضمن نطاق إبلاغه. هذه مقاييس مختلفة: أشخاص، وفجوة داخل مسح واحد، وبنية تحتية؛ ولا يحل أي منها محل الآخر."
     },
     {
       "route": "/",
@@ -69166,7 +69166,7 @@
       "field": "body_ar",
       "token": "23%",
       "category": "ROUTE_SOURCE_CLOSED__OBJECT_TRACE_AVAILABLE",
-      "context": "أحدث قياس ممثل للسكان هو مسح المؤشر العالمي للشمول المالي (Global Findex) لعام 2021 في اليمن، الصادر عن البنك الدولي (نُفذ العمل الميداني من 7 نوفمبر 2022 إلى 9 يناير 2023؛ وسنة البيانات لدى البنك الدولي 2022): كان لدى 11.9% من البالغين بعمر 15 سنة فأكثر في المناطق التي شملها المسح حساب لدى مؤسسة مالية أو لدى مقدم خدمة أموال عبر الهاتف المحمول. ولم يشمل المسح مناطق يسكنها نحو 23% من السكان. وفي المسح نفسه، كان لدى 18.35% من الرجال و5.44% من النساء حساب، بفارق 12.91 نقطة مئوية. وبصورة منفصلة، ارتفع عدد أجهزة نقاط البيع التي يُبلغ عنها البنك المركزي اليمني – عدن من 561 في مارس 2025 إلى 1,651 في يونيو 2026، ضمن نطاق إبلاغه. هذه مقاييس مختلفة: أشخاص، وفجوة داخل مسح واحد، وبنية تحتية؛ ولا يحل أي منها محل الآخر.",
+      "context": "كان لدى 11.9% من البالغين بعمر 15 سنة فأكثر في المناطق التي شملها المسح حساب لدى مؤسسة مالية أو لدى مقدم خدمة أموال عبر الهاتف المحمول، وفق أحدث قياس ممثل للسكان: مسح المؤشر العالمي للشمول المالي (Global Findex) لعام 2021 في اليمن، الصادر عن البنك الدولي (نُفذ العمل الميداني من 7 نوفمبر 2022 إلى 9 يناير 2023؛ وسنة البيانات لدى البنك الدولي 2022). ولم يشمل المسح مناطق يسكنها نحو 23% من السكان. وفي المسح نفسه، كان لدى 18.35% من الرجال و5.44% من النساء حساب، بفارق 12.91 نقطة مئوية. وبصورة منفصلة، ارتفع عدد أجهزة نقاط البيع التي يُبلغ عنها البنك المركزي اليمني – عدن من 561 في مارس 2025 إلى 1,651 في يونيو 2026، ضمن نطاق إبلاغه. هذه مقاييس مختلفة: أشخاص، وفجوة داخل مسح واحد، وبنية تحتية؛ ولا يحل أي منها محل الآخر.",
       "source_object": "CLM-001"
     },
     {
@@ -69175,7 +69175,7 @@
       "field": "body_ar",
       "token": "18.35%",
       "category": "ROUTE_SOURCE_CLOSED__OBJECT_TRACE_AVAILABLE",
-      "context": "أحدث قياس ممثل للسكان هو مسح المؤشر العالمي للشمول المالي (Global Findex) لعام 2021 في اليمن، الصادر عن البنك الدولي (نُفذ العمل الميداني من 7 نوفمبر 2022 إلى 9 يناير 2023؛ وسنة البيانات لدى البنك الدولي 2022): كان لدى 11.9% من البالغين بعمر 15 سنة فأكثر في المناطق التي شملها المسح حساب لدى مؤسسة مالية أو لدى مقدم خدمة أموال عبر الهاتف المحمول. ولم يشمل المسح مناطق يسكنها نحو 23% من السكان. وفي المسح نفسه، كان لدى 18.35% من الرجال و5.44% من النساء حساب، بفارق 12.91 نقطة مئوية. وبصورة منفصلة، ارتفع عدد أجهزة نقاط البيع التي يُبلغ عنها البنك المركزي اليمني – عدن من 561 في مارس 2025 إلى 1,651 في يونيو 2026، ضمن نطاق إبلاغه. هذه مقاييس مختلفة: أشخاص، وفجوة داخل مسح واحد، وبنية تحتية؛ ولا يحل أي منها محل الآخر.",
+      "context": "كان لدى 11.9% من البالغين بعمر 15 سنة فأكثر في المناطق التي شملها المسح حساب لدى مؤسسة مالية أو لدى مقدم خدمة أموال عبر الهاتف المحمول، وفق أحدث قياس ممثل للسكان: مسح المؤشر العالمي للشمول المالي (Global Findex) لعام 2021 في اليمن، الصادر عن البنك الدولي (نُفذ العمل الميداني من 7 نوفمبر 2022 إلى 9 يناير 2023؛ وسنة البيانات لدى البنك الدولي 2022). ولم يشمل المسح مناطق يسكنها نحو 23% من السكان. وفي المسح نفسه، كان لدى 18.35% من الرجال و5.44% من النساء حساب، بفارق 12.91 نقطة مئوية. وبصورة منفصلة، ارتفع عدد أجهزة نقاط البيع التي يُبلغ عنها البنك المركزي اليمني – عدن من 561 في مارس 2025 إلى 1,651 في يونيو 2026، ضمن نطاق إبلاغه. هذه مقاييس مختلفة: أشخاص، وفجوة داخل مسح واحد، وبنية تحتية؛ ولا يحل أي منها محل الآخر.",
       "source_object": "CLM-002"
     },
     {
@@ -69184,7 +69184,7 @@
       "field": "body_ar",
       "token": "5.44%",
       "category": "ROUTE_SOURCE_CLOSED__OBJECT_TRACE_AVAILABLE",
-      "context": "أحدث قياس ممثل للسكان هو مسح المؤشر العالمي للشمول المالي (Global Findex) لعام 2021 في اليمن، الصادر عن البنك الدولي (نُفذ العمل الميداني من 7 نوفمبر 2022 إلى 9 يناير 2023؛ وسنة البيانات لدى البنك الدولي 2022): كان لدى 11.9% من البالغين بعمر 15 سنة فأكثر في المناطق التي شملها المسح حساب لدى مؤسسة مالية أو لدى مقدم خدمة أموال عبر الهاتف المحمول. ولم يشمل المسح مناطق يسكنها نحو 23% من السكان. وفي المسح نفسه، كان لدى 18.35% من الرجال و5.44% من النساء حساب، بفارق 12.91 نقطة مئوية. وبصورة منفصلة، ارتفع عدد أجهزة نقاط البيع التي يُبلغ عنها البنك المركزي اليمني – عدن من 561 في مارس 2025 إلى 1,651 في يونيو 2026، ضمن نطاق إبلاغه. هذه مقاييس مختلفة: أشخاص، وفجوة داخل مسح واحد، وبنية تحتية؛ ولا يحل أي منها محل الآخر.",
+      "context": "كان لدى 11.9% من البالغين بعمر 15 سنة فأكثر في المناطق التي شملها المسح حساب لدى مؤسسة مالية أو لدى مقدم خدمة أموال عبر الهاتف المحمول، وفق أحدث قياس ممثل للسكان: مسح المؤشر العالمي للشمول المالي (Global Findex) لعام 2021 في اليمن، الصادر عن البنك الدولي (نُفذ العمل الميداني من 7 نوفمبر 2022 إلى 9 يناير 2023؛ وسنة البيانات لدى البنك الدولي 2022). ولم يشمل المسح مناطق يسكنها نحو 23% من السكان. وفي المسح نفسه، كان لدى 18.35% من الرجال و5.44% من النساء حساب، بفارق 12.91 نقطة مئوية. وبصورة منفصلة، ارتفع عدد أجهزة نقاط البيع التي يُبلغ عنها البنك المركزي اليمني – عدن من 561 في مارس 2025 إلى 1,651 في يونيو 2026، ضمن نطاق إبلاغه. هذه مقاييس مختلفة: أشخاص، وفجوة داخل مسح واحد، وبنية تحتية؛ ولا يحل أي منها محل الآخر.",
       "source_object": "CLM-002"
     },
     {
@@ -69193,7 +69193,7 @@
       "field": "body_ar",
       "token": "12.91",
       "category": "ROUTE_SOURCE_CLOSED__OBJECT_TRACE_AVAILABLE",
-      "context": "أحدث قياس ممثل للسكان هو مسح المؤشر العالمي للشمول المالي (Global Findex) لعام 2021 في اليمن، الصادر عن البنك الدولي (نُفذ العمل الميداني من 7 نوفمبر 2022 إلى 9 يناير 2023؛ وسنة البيانات لدى البنك الدولي 2022): كان لدى 11.9% من البالغين بعمر 15 سنة فأكثر في المناطق التي شملها المسح حساب لدى مؤسسة مالية أو لدى مقدم خدمة أموال عبر الهاتف المحمول. ولم يشمل المسح مناطق يسكنها نحو 23% من السكان. وفي المسح نفسه، كان لدى 18.35% من الرجال و5.44% من النساء حساب، بفارق 12.91 نقطة مئوية. وبصورة منفصلة، ارتفع عدد أجهزة نقاط البيع التي يُبلغ عنها البنك المركزي اليمني – عدن من 561 في مارس 2025 إلى 1,651 في يونيو 2026، ضمن نطاق إبلاغه. هذه مقاييس مختلفة: أشخاص، وفجوة داخل مسح واحد، وبنية تحتية؛ ولا يحل أي منها محل الآخر.",
+      "context": "كان لدى 11.9% من البالغين بعمر 15 سنة فأكثر في المناطق التي شملها المسح حساب لدى مؤسسة مالية أو لدى مقدم خدمة أموال عبر الهاتف المحمول، وفق أحدث قياس ممثل للسكان: مسح المؤشر العالمي للشمول المالي (Global Findex) لعام 2021 في اليمن، الصادر عن البنك الدولي (نُفذ العمل الميداني من 7 نوفمبر 2022 إلى 9 يناير 2023؛ وسنة البيانات لدى البنك الدولي 2022). ولم يشمل المسح مناطق يسكنها نحو 23% من السكان. وفي المسح نفسه، كان لدى 18.35% من الرجال و5.44% من النساء حساب، بفارق 12.91 نقطة مئوية. وبصورة منفصلة، ارتفع عدد أجهزة نقاط البيع التي يُبلغ عنها البنك المركزي اليمني – عدن من 561 في مارس 2025 إلى 1,651 في يونيو 2026، ضمن نطاق إبلاغه. هذه مقاييس مختلفة: أشخاص، وفجوة داخل مسح واحد، وبنية تحتية؛ ولا يحل أي منها محل الآخر.",
       "source_object": "CLM-002"
     },
     {
@@ -69202,7 +69202,7 @@
       "field": "body_ar",
       "token": "561",
       "category": "ROUTE_SOURCE_CLOSED__OBJECT_TRACE_AVAILABLE",
-      "context": "أحدث قياس ممثل للسكان هو مسح المؤشر العالمي للشمول المالي (Global Findex) لعام 2021 في اليمن، الصادر عن البنك الدولي (نُفذ العمل الميداني من 7 نوفمبر 2022 إلى 9 يناير 2023؛ وسنة البيانات لدى البنك الدولي 2022): كان لدى 11.9% من البالغين بعمر 15 سنة فأكثر في المناطق التي شملها المسح حساب لدى مؤسسة مالية أو لدى مقدم خدمة أموال عبر الهاتف المحمول. ولم يشمل المسح مناطق يسكنها نحو 23% من السكان. وفي المسح نفسه، كان لدى 18.35% من الرجال و5.44% من النساء حساب، بفارق 12.91 نقطة مئوية. وبصورة منفصلة، ارتفع عدد أجهزة نقاط البيع التي يُبلغ عنها البنك المركزي اليمني – عدن من 561 في مارس 2025 إلى 1,651 في يونيو 2026، ضمن نطاق إبلاغه. هذه مقاييس مختلفة: أشخاص، وفجوة داخل مسح واحد، وبنية تحتية؛ ولا يحل أي منها محل الآخر.",
+      "context": "كان لدى 11.9% من البالغين بعمر 15 سنة فأكثر في المناطق التي شملها المسح حساب لدى مؤسسة مالية أو لدى مقدم خدمة أموال عبر الهاتف المحمول، وفق أحدث قياس ممثل للسكان: مسح المؤشر العالمي للشمول المالي (Global Findex) لعام 2021 في اليمن، الصادر عن البنك الدولي (نُفذ العمل الميداني من 7 نوفمبر 2022 إلى 9 يناير 2023؛ وسنة البيانات لدى البنك الدولي 2022). ولم يشمل المسح مناطق يسكنها نحو 23% من السكان. وفي المسح نفسه، كان لدى 18.35% من الرجال و5.44% من النساء حساب، بفارق 12.91 نقطة مئوية. وبصورة منفصلة، ارتفع عدد أجهزة نقاط البيع التي يُبلغ عنها البنك المركزي اليمني – عدن من 561 في مارس 2025 إلى 1,651 في يونيو 2026، ضمن نطاق إبلاغه. هذه مقاييس مختلفة: أشخاص، وفجوة داخل مسح واحد، وبنية تحتية؛ ولا يحل أي منها محل الآخر.",
       "source_object": "CLM-003"
     },
     {
@@ -69211,7 +69211,7 @@
       "field": "body_ar",
       "token": "2025",
       "category": "DATE_OR_PERIOD",
-      "context": "أحدث قياس ممثل للسكان هو مسح المؤشر العالمي للشمول المالي (Global Findex) لعام 2021 في اليمن، الصادر عن البنك الدولي (نُفذ العمل الميداني من 7 نوفمبر 2022 إلى 9 يناير 2023؛ وسنة البيانات لدى البنك الدولي 2022): كان لدى 11.9% من البالغين بعمر 15 سنة فأكثر في المناطق التي شملها المسح حساب لدى مؤسسة مالية أو لدى مقدم خدمة أموال عبر الهاتف المحمول. ولم يشمل المسح مناطق يسكنها نحو 23% من السكان. وفي المسح نفسه، كان لدى 18.35% من الرجال و5.44% من النساء حساب، بفارق 12.91 نقطة مئوية. وبصورة منفصلة، ارتفع عدد أجهزة نقاط البيع التي يُبلغ عنها البنك المركزي اليمني – عدن من 561 في مارس 2025 إلى 1,651 في يونيو 2026، ضمن نطاق إبلاغه. هذه مقاييس مختلفة: أشخاص، وفجوة داخل مسح واحد، وبنية تحتية؛ ولا يحل أي منها محل الآخر."
+      "context": "كان لدى 11.9% من البالغين بعمر 15 سنة فأكثر في المناطق التي شملها المسح حساب لدى مؤسسة مالية أو لدى مقدم خدمة أموال عبر الهاتف المحمول، وفق أحدث قياس ممثل للسكان: مسح المؤشر العالمي للشمول المالي (Global Findex) لعام 2021 في اليمن، الصادر عن البنك الدولي (نُفذ العمل الميداني من 7 نوفمبر 2022 إلى 9 يناير 2023؛ وسنة البيانات لدى البنك الدولي 2022). ولم يشمل المسح مناطق يسكنها نحو 23% من السكان. وفي المسح نفسه، كان لدى 18.35% من الرجال و5.44% من النساء حساب، بفارق 12.91 نقطة مئوية. وبصورة منفصلة، ارتفع عدد أجهزة نقاط البيع التي يُبلغ عنها البنك المركزي اليمني – عدن من 561 في مارس 2025 إلى 1,651 في يونيو 2026، ضمن نطاق إبلاغه. هذه مقاييس مختلفة: أشخاص، وفجوة داخل مسح واحد، وبنية تحتية؛ ولا يحل أي منها محل الآخر."
     },
     {
       "route": "/",
@@ -69219,7 +69219,7 @@
       "field": "body_ar",
       "token": "1,651",
       "category": "ROUTE_SOURCE_CLOSED__OBJECT_TRACE_AVAILABLE",
-      "context": "أحدث قياس ممثل للسكان هو مسح المؤشر العالمي للشمول المالي (Global Findex) لعام 2021 في اليمن، الصادر عن البنك الدولي (نُفذ العمل الميداني من 7 نوفمبر 2022 إلى 9 يناير 2023؛ وسنة البيانات لدى البنك الدولي 2022): كان لدى 11.9% من البالغين بعمر 15 سنة فأكثر في المناطق التي شملها المسح حساب لدى مؤسسة مالية أو لدى مقدم خدمة أموال عبر الهاتف المحمول. ولم يشمل المسح مناطق يسكنها نحو 23% من السكان. وفي المسح نفسه، كان لدى 18.35% من الرجال و5.44% من النساء حساب، بفارق 12.91 نقطة مئوية. وبصورة منفصلة، ارتفع عدد أجهزة نقاط البيع التي يُبلغ عنها البنك المركزي اليمني – عدن من 561 في مارس 2025 إلى 1,651 في يونيو 2026، ضمن نطاق إبلاغه. هذه مقاييس مختلفة: أشخاص، وفجوة داخل مسح واحد، وبنية تحتية؛ ولا يحل أي منها محل الآخر.",
+      "context": "كان لدى 11.9% من البالغين بعمر 15 سنة فأكثر في المناطق التي شملها المسح حساب لدى مؤسسة مالية أو لدى مقدم خدمة أموال عبر الهاتف المحمول، وفق أحدث قياس ممثل للسكان: مسح المؤشر العالمي للشمول المالي (Global Findex) لعام 2021 في اليمن، الصادر عن البنك الدولي (نُفذ العمل الميداني من 7 نوفمبر 2022 إلى 9 يناير 2023؛ وسنة البيانات لدى البنك الدولي 2022). ولم يشمل المسح مناطق يسكنها نحو 23% من السكان. وفي المسح نفسه، كان لدى 18.35% من الرجال و5.44% من النساء حساب، بفارق 12.91 نقطة مئوية. وبصورة منفصلة، ارتفع عدد أجهزة نقاط البيع التي يُبلغ عنها البنك المركزي اليمني – عدن من 561 في مارس 2025 إلى 1,651 في يونيو 2026، ضمن نطاق إبلاغه. هذه مقاييس مختلفة: أشخاص، وفجوة داخل مسح واحد، وبنية تحتية؛ ولا يحل أي منها محل الآخر.",
       "source_object": "CLM-003"
     },
     {
@@ -69228,7 +69228,7 @@
       "field": "body_ar",
       "token": "2026",
       "category": "DATE_OR_PERIOD",
-      "context": "أحدث قياس ممثل للسكان هو مسح المؤشر العالمي للشمول المالي (Global Findex) لعام 2021 في اليمن، الصادر عن البنك الدولي (نُفذ العمل الميداني من 7 نوفمبر 2022 إلى 9 يناير 2023؛ وسنة البيانات لدى البنك الدولي 2022): كان لدى 11.9% من البالغين بعمر 15 سنة فأكثر في المناطق التي شملها المسح حساب لدى مؤسسة مالية أو لدى مقدم خدمة أموال عبر الهاتف المحمول. ولم يشمل المسح مناطق يسكنها نحو 23% من السكان. وفي المسح نفسه، كان لدى 18.35% من الرجال و5.44% من النساء حساب، بفارق 12.91 نقطة مئوية. وبصورة منفصلة، ارتفع عدد أجهزة نقاط البيع التي يُبلغ عنها البنك المركزي اليمني – عدن من 561 في مارس 2025 إلى 1,651 في يونيو 2026، ضمن نطاق إبلاغه. هذه مقاييس مختلفة: أشخاص، وفجوة داخل مسح واحد، وبنية تحتية؛ ولا يحل أي منها محل الآخر."
+      "context": "كان لدى 11.9% من البالغين بعمر 15 سنة فأكثر في المناطق التي شملها المسح حساب لدى مؤسسة مالية أو لدى مقدم خدمة أموال عبر الهاتف المحمول، وفق أحدث قياس ممثل للسكان: مسح المؤشر العالمي للشمول المالي (Global Findex) لعام 2021 في اليمن، الصادر عن البنك الدولي (نُفذ العمل الميداني من 7 نوفمبر 2022 إلى 9 يناير 2023؛ وسنة البيانات لدى البنك الدولي 2022). ولم يشمل المسح مناطق يسكنها نحو 23% من السكان. وفي المسح نفسه، كان لدى 18.35% من الرجال و5.44% من النساء حساب، بفارق 12.91 نقطة مئوية. وبصورة منفصلة، ارتفع عدد أجهزة نقاط البيع التي يُبلغ عنها البنك المركزي اليمني – عدن من 561 في مارس 2025 إلى 1,651 في يونيو 2026، ضمن نطاق إبلاغه. هذه مقاييس مختلفة: أشخاص، وفجوة داخل مسح واحد، وبنية تحتية؛ ولا يحل أي منها محل الآخر."
     },
     {
       "route": "/",
