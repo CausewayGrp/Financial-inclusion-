@@ -1,5 +1,21 @@
 # Repository Change Log
 
+## 2026-10-03 — Owner note of 11:15 recorded; the B16 inputs and the session's check scripts made safe
+
+Records only (the owner's note of 3 October 2026, about 11:15 Cairo, section 0):
+- `audit/OWNER_DECISIONS_2026-10-02.md`: the note recorded verbatim, append-only. The session's reading follows it. One
+  part is flagged to the owner: the single truth change in the /about/ pair (3.5) stands, with the one-cell way back.
+- `audit/release_candidate/b16/`: the B16 disposition generator and its inputs.
+  - The read-only extraction at `c055abc`: 126 open items.
+  - The updates since then, and the items B16 adds.
+  - The head and tail text.
+  Until now these lived only in the session. Running `python3 audit/release_candidate/b16/make_disposition.py`
+  rebuilds the disposition table.
+- `audit/release_candidate/checks/`: the session's browser checks.
+  - `check_menu.py` and `reach.py`: the opened mobile menu at 320 and 390 px.
+  - `g0_shots.py`: the presentation pass's screenshots and first-screen text.
+  - `rc_names_variants.py`: the hardened RC-NAMES matcher on 50 variant and ordinary-vocabulary strings.
+
 ## 2026-10-03 — "How numbers are presented" once; the citation in two lines; the exports carry the licence
 
 Code, from the owner's instructions of 3 October 2026, 09:50 (C5 and E), plus one presentation fix found on the way.

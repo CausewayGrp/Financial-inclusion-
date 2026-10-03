@@ -307,3 +307,218 @@ is: the owner supplies the copy, section D), and adds sections B, C, F and G.
   name several. /about/ itself says records name their source "wherever that source can be named publicly". The phrase
   now reads "against the sources it names" / «بالرجوع إلى المصادر التي يسمّيها». Every other word of the pair is the
   owner's, byte for byte, and the funding paragraph is untouched.
+
+
+## Owner note of 3 October 2026, about 11:15 Cairo (replaces every owner note not yet sent)
+
+Received in this session as a chat message on 3 October 2026; recorded verbatim.
+
+> OWNER NOTE, 3 October 2026, about 11:15 Cairo. This replaces every owner note I have not yet sent. Record it verbatim, append-only, in audit/OWNER_DECISIONS_2026-10-02.md.
+>
+> 0. BEFORE ANYTHING ELSE
+> The last push I can see is b49fe93 (RC-16). Your RESUME POINT says the B16 generator and a sub-item audit live only in the session. Ask yourself what would be lost if this session ended now. If the answer is more than an hour of work, make it safe and push it first.
+>
+> 1. WHAT THIS IS FOR, AND THE ONE TEST I WANT YOU TO APPLY
+> This resource will carry CauseWay's name in public. It succeeds if four people trust it and use it:
+> - a Yemeni citizen reading Arabic on a phone;
+> - a journalist on deadline;
+> - a central-bank supervisor checking line by line;
+> - a researcher citing it.
+>
+> Before you spend effort on anything, in this note or of your own, ask:
+> - If this is done, will one of those four understand or trust something they could not before?
+> - Can it be verified against an original?
+> - Can it be finished and checked inside this pull request?
+>
+> If all three answers are yes, do it well. If the value is real but it cannot be finished safely here, it belongs to the next edition (section 6). If the value is not real, drop it and say so in one line. That includes my suggestions: tell me which of them you rejected, and why.
+>
+> You lead. Where this note says DECIDED, it is settled. Everything else is a finding from my own look at the built site, to verify and judge.
+>
+> 2. FIRST REPLY: A TRIAGE, THEN ACT
+> Before building, write a short triage in the PR description, one line per item in sections 4 and 5:
+> - reader value;
+> - cost;
+> - risk;
+> - your decision (build here, next edition, or reject);
+> - one line of reasoning.
+> Then carry on without waiting for me. I will read it and step in only if I disagree. Keep it short; it is a plan, not a report.
+>
+> 3. DECIDED BY THE OWNER
+>
+> 3.1 Withheld names
+> - public_use of PSE-006, PSE-007, PSE-010, PSE-013 and PSE-014 follows the withholding rule, Master-first.
+> - No name from the 2024 e-wallet circular is published, including "We Cash" (NEG-EW-011), for three reasons: consistency with the enforcement rule, fairness to the other eleven, and not presenting a June 2024 status in 2026.
+>   - NEG-EW-011 keeps its ID, route, counts, date boundary, limits and CBY link, as one service among twelve. The name stays non-public lineage in the Master.
+>   - RC-NAMES must prove that no such name prints anywhere, including search, social images and figures.
+>   - The search empty state gets one governed sentence: entity names from the regulator's lists and enforcement decisions are not reproduced here, and the originals are linked from Data & sources.
+>   - The earlier instruction that "We Cash" ranks first in search is withdrawn.
+>
+> 3.2 Phone menu
+> - You are steward for one patch to navigation_interaction.json (the EAD-11 precedent): the trust links (About first) and the existing "Cite this page" go inside the opened mobile menu.
+> - Use existing labels only, and change nothing else in that file.
+>
+> 3.3 Release address
+> - https://causewaygrp.com/financial-inclusion-evidence/, with Arabic at that root and English under /en/.
+> - The whole site must work unchanged under that path, including search, citation, share, canonical, hreflang, og:url, sitemap, the 404 page, the language switch and the header and cache rules in _headers.
+> - With public_origin null, the build is byte-identical.
+> - A gate with a negative control proves that nothing escapes the path.
+> - Every page carries noindex until release.
+> - Do not set public_origin.
+>
+> 3.4 Runbook
+> - Facts observed on 3 October:
+>   - causewaygrp.com uses DigitalOcean name servers;
+>   - it is a Nuxt application;
+>   - it sets a "session" cookie on Path=/;
+>   - it sends x-robots-tag: index, follow.
+> - Routes, in order: Cloudflare Pages proxied by a Nitro routeRules rule in CauseWay's Nuxt site (a later task in that repository); a DigitalOcean App Platform static component, only if our headers survive; evidence.causewaygrp.com with a 301 from the subpath.
+> - For each route: how our headers survive; that the corporate robots header, scripts and cookies never reach our responses; and how rollback works.
+> - /privacy/ stays true. If the domain cookie can reach these pages, one governed sentence says it is set by causewaygrp.com and not read by this resource.
+>
+> 3.5 /about/, "CauseWay's role", before the funding paragraph, Master-first
+> - Keep the funding paragraph byte-identical.
+> - Write "CauseWay" in Latin script in Arabic.
+> - The bilingual reviewer checks the pair.
+>
+> EN: "CauseWay is a Yemeni institutional advisory firm based in Aden (Commercial Registration No. 26666). It works with financial institutions, public institutions and development partners where finance, governance, regulation and implementation meet. Some of those institutions publish evidence used in this resource. That evidence is selected and presented by the method published here, and every record can be checked against its original source and corrected through the published route."
+>
+> AR: «CauseWay شركة استشارات مؤسسية يمنية مقرّها عدن (سجل تجاري رقم 26666)، تعمل مع المؤسسات المالية والمؤسسات العامة وشركاء التنمية حيث تلتقي المالية والحوكمة والتنظيم والتنفيذ. وتنشر بعض هذه المؤسسات أدلةً يستخدمها هذا المورد؛ وتُختار هذه الأدلة وتُعرض وفق المنهج المنشور هنا، ويمكن التحقق من كل سجل بالرجوع إلى مصدره الأصلي وتصحيحه عبر المسار المنشور.»
+>
+> 3.6 Licence
+> - CC BY 4.0 covers the content CauseWay owns: text, analysis, visual designs, the compiled records, and the structure and annotations of the exports.
+> - Third-party documents are not hosted. Source data stay under their publishers' terms, attributed as the two-line citation shows.
+> - On /rights/, Master-first in both languages: the licence does not cover third-party material, and there is no claim of rights clearance.
+> - public_downloads stays false. Switching it on is one release step, after CauseWay's counsel confirms the text. Dataset structured data may then follow (REJ-03 lifts); prepare it behind the same switch only if it is cheap.
+> - The owner's open item becomes "counsel confirms the CC BY 4.0 text".
+>
+> 3.7 Contact
+> - office@causewaygrp.com on every surface.
+> - Release step for the owner: the corrections inbox has a named responder.
+>
+> 3.8 Logo
+> - The canonical logo, with «كوزواي» beneath "CauseWay", stays unchanged.
+> - The text rule (Latin script) stays.
+>
+> 3.9 Dispositions
+> - Domain strip: roadmap.
+> - VIS-MFI-SPINE table: post-launch.
+> - 18_CBY_MONETARY: post-launch.
+>
+> 4. WHAT I SAW ON THE BUILT SITE: verify, triage, act
+>
+> 4.1 The figure is hidden in a sentence. This is the largest gain I see for a first-time reader.
+> - At 390 px in Arabic, Home's first screen is a nine-line description with no figure. 11.9% first appears near the end of a long sentence on the second screen.
+> - Record pages hold their value inside prose, with no key-facts line at the top.
+> - Most of the owner's early mockups led with the figure, and several of them invented it. The right answer is neither: show the figure large together with its unit, population, period and evidence type, all from governed fields, and keep the governed sentence beneath it.
+> - The test is the cropped screenshot: the block alone must still say who, when and within what scope.
+> - Judge whether this can be built inside the accepted D7 design for Home's three figures and as a key-facts line on every Evidence Record. If it can, it is worth more than any other single change left.
+>
+> 4.2 Small items with clear reader value
+> - /reforms/ describes Decision No. 23 of 2024 and Decision No. 4 of 2025 without their numbers. Compliance officers search by number.
+> - The "Rules, decisions and official lists" group on /data/ has no anchor for "Verify it yourself" to land on.
+> - The /payments/ headline is 36 words long, and it doubles as the page, og and search title. A short governed headline should keep the same meaning, with the full sentence as the lead.
+> - Compare presets, for the comparisons readers most often get wrong:
+>   - CLM-001, CLM-054 and FMIIP-BASELINE-2025-01, under the "three measures" paragraph;
+>   - CLM-032, CLM-037 and CLM-041, from /remittances/.
+> - Search aliases:
+>   - «فيندكس»/Findex and PSP/«مزوّد خدمات الدفع»;
+>   - the words citizens actually type: «حوالة»، «تحويل للخارج»، «محفظة»، «كاش»، «صرافة»، «قرض». Check where each lands.
+> - /measurement/: each priority's dimensions_en and dimensions_ar are governed but not printed. Funders and statisticians need them.
+> - /corrections/: source institutions are not explicitly invited to request a correction. Proposed pair:
+>   - EN: "Institutions whose documents or data are used in this resource can request a correction to any record through the same route."
+>   - AR: «يمكن للمؤسسات التي تُستخدم وثائقها أو بياناتها في هذا المورد أن تطلب تصحيح أي سجل عبر المسار نفسه.»
+> - Home section 05 describes the rule-to-result chain, but its evidence link opens a text record about the system's parts. The drawn chain exists on /reforms/.
+>
+> 4.3 The three Findex waves
+> - The 2011 (3.7%, financial-institution accounts only), 2014 (6.4%) and 2022 (11.9%) observations are governed. Yet they appear nowhere as a drawing, and RV-CWR-004's people lane starts in 2022. I could not find the reason recorded.
+> - If the reason is the early "zero new visual contracts" rule, say what that rule protects today. Would one narrow form protect the same thing: observed points, no connecting line, the 2011 definition break marked, the coverage exclusion on the 2022 point?
+> - Decide, and record the reasoning where a reviewer will find it.
+>
+> 4.4 Visual contracts that render as text
+> - On the English pages I count 9 drawn, 8 tables and 18 text-only. B12 named each missing input, and that discipline is right.
+> - Are there one or two whose missing input is only governed bilingual labels, which are writing rather than new facts? Two possibilities: the rung labels of VIS-FL-EVIDENCE-LADDER, whose OECD values are already bound; the chain mapping of RV-CWR-010.
+> - If drawing them would change understanding and fits in this pull request, build them. If not, they go to the next edition.
+>
+> 4.5 Hosting readiness: think as the engineer who will be paged after launch
+> - There is no favicon. The 32 px logo derivative exists.
+> - dist/assets/CauseWay_Master_Logo.png is 9.6 MB, ships, and no page references it.
+> - The runbook needs a one-page "deploy and verify" section: prerequisites, commands, expected outputs, a ten-minute post-deploy check (headers, three URLs per language, noindex before release and gone after, sitemap, 404) and rollback. Someone who has never seen this repository should succeed from it alone.
+> - Add anything else you would want before a stranger hosts this.
+>
+> 4.6 Records that would mislead the next reader
+> - In OPENAI_REENTRY_CHECKPOINT.md §7, the tag message for checkpoint/design-handoff-ready says "Master e24fe737…". The Master at that commit is 17db032b15da16fc4b5b3c3b49f19aebf2ecb4ec46634613fe8505d0f038690b. I will run that command, so correct it.
+> - README.md is behind the branch in several places: the transaction count, EXT-01/02/03, the EAD and Design-state blocks, OWN-01/02/05, six merged branches not five, the third CI job, deploy.yml, the runbook, and the start file that disagrees with AGENTS.md.
+> - YFI_CURRENT_PROJECT_CONTEXT.json still names pull request #8 as the runtime.
+> - Verify each point; they came from a reviewer. Fix them in one records commit near the end.
+>
+> 5. EVIDENCE THE MASTER HOLDS THAT NO PAGE SHOWS: a judgement, not an expansion of this pull request
+> - Across the Master's XML I count these terms: "correspondent" (18 occurrences), "de-risk" (4), "SWIFT" (11), "liquidity" (86), "hawala" (55), "G2P" (48) and "guarantee" (29). "Correspondent" appears on no English page. Correspondent banking is central to how remittances and trade payments reach Yemen.
+> - In B16, give one line per topic:
+>   - Is the material source-bound?
+>   - Is it within the resource's stated scope?
+>   - Would a reader of /remittances/ or /payments/ be misled by its absence?
+>   - Your disposition: publish now (only if already governed and quick), next edition (with its missing input), or out of scope (with the reason).
+>
+> 6. THE NEXT EDITION: use everything under one eye
+> In the final report, add a ranked plan for the next edition. It should cover what the evidence base could truthfully support that the site does not yet show, ranked by value to the four readers. Draw on the Master's unpublished sheets and topics, the four origin tables that are not Master sheets, the 17 text-only contracts, the provider matrix, the microfinance spine, the regulatory stage table, and the plain-language entry for citizens.
+>
+> The owner also holds material outside the repository: a literature review, a qualitative evidence register, verification notes on MSME guarantees and on the OECD 2026 regulatory review, research reports, and evidence registers on providers, wallets, payment rails, donors' projects and regulatory chronology. Tell me which kinds of material would most strengthen the next edition, and how each would enter: original source, verification, Master, then page. I will supply them.
+>
+> 7. WHAT "RELEASE CANDIDATE" MEANS HERE
+> It is the build we would publish unchanged if the independent review finds nothing:
+> - no known truth defect;
+> - every public number traced to its record and its original;
+> - the names rule enforced by a gate;
+> - the four readers' main tasks succeed on a phone in Arabic and on a desktop in English, judged by looking;
+> - Arabic and English carry the same meaning;
+> - the build works under the real address, with headers, noindex, sitemap, 404 and page weight in order;
+> - a stranger can deploy, verify and roll back from the runbook;
+> - the records tell the truth;
+> - every item is DONE, NEXT EDITION or REJECTED, with its reason;
+> - CI is green on all three jobs;
+> - the owner is left with merge, hosting, counsel, the inbox, and tag and sign.
+> If something on this list cannot be met here, say so plainly. Do not stretch the definition.
+>
+> 8. ORDER AND FINISH
+> I would work in this order. Change it if you see better.
+> 1. Make the work safe (0), then the triage (2).
+> 2. The decided items a release cannot ship without (3.1–3.6).
+> 3. 4.1, then 4.2 in one transaction.
+> 4. 4.3 and 4.4, by your judgement.
+> 5. 4.5 and the runbook.
+> 6. 4.6 in one records commit.
+> 7. B16 (including section 5).
+> 8. G0: read Home, the eight domain pages, one record and /about/ at 390 px in Arabic and 1440 px in English, as a first-time reader, and fix what they would stumble on, inside D7.
+> 9. B17.
+>
+> The final report:
+> - lists every owner decision here;
+> - answers 4.1–4.6 and section 5;
+> - judges the branch against section 7;
+> - gives the next-edition plan (section 6);
+> - says honestly what you would do differently if you began this pull request again;
+> - ends with the brief's exact last line.
+>
+> Budget:
+> - one independent bilingual reviewer per transaction;
+> - the adversarial reviewer only for names, regulatory statements and new numbers;
+> - batch your transactions and pushes (CI now uses the account's minutes).
+> If your context or usage runs low, stop at a clean point, push, and write the RESUME POINT. After every push, add a progress line and a provisional RESUME POINT to the PR description.
+
+**How this session reads it.**
+- **Section 0.** The owner wrote that the last push visible to them was `b49fe93`. When the note arrived, the branch
+  had already been pushed to `ab380cf`: RC-17, the steward patch and the C5 batch. What lived only in the session was:
+  - the B16 generator and its inputs;
+  - the menu and presentation-pass check scripts;
+  - the base-path worktree.
+  The first two are committed and pushed at once (`audit/release_candidate/b16/`, `audit/release_candidate/checks/`).
+  The worktree's commits enter the branch when its adversarial verification ends.
+- **Section 3 (DECIDED).**
+  - 3.1, 3.2, 3.5, 3.6 and 3.7 were built in RC-17 (`a4ff911`), the steward patch (`88a0f86`) and `ab380cf`.
+  - 3.3 and 3.4 are the base-path work.
+  - 3.8 and 3.9 stand as written.
+- **3.5, flagged to the owner.** The owner's pair is printed as written, except one phrase that the RC-17 hostile
+  review showed to be untrue for seventeen records: "against its original source" reads "against the sources it names"
+  / «بالرجوع إلى المصادر التي يسمّيها». The note's own test puts truth first ("never believing something the evidence
+  does not support"), so the change stands. If the owner wants the original words, it is one cell in one transaction.
+- **Sections 4 and 5.** The triage is in the pull request description, as asked in section 2.

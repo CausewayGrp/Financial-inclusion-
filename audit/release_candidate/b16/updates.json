@@ -1,0 +1,59 @@
+{
+ "X-ESC-D3-01": {
+  "why": "Post-launch: a governed label for a text-first frame's description (Design, Master-first). The B15 panel found no task failure from it (PRODUCT_CHALLENGE.md); the heading stays in the accessibility tree."
+ },
+ "X-ESC-D3-05": {
+  "why": "DONE: the publisher's name is set in type in the lockup on every page (DL-D7-008; DEBT-016); its weight fixed by the EAD-03 logo derivatives (fbe9f27)."
+ },
+ "X-ESC-D6-05": {
+  "why": "DONE: rows FFO-2022-CH-09…16 bound in RC-7 (e82de29; ORIGINAL_SOURCE_VERIFICATION.md §2)."
+ },
+ "X-ESC-D6-06c": {
+  "why": "Post-launch, as the B16 brief expects ('the 26 governed relationship statements, 21 lack references'): visuals/system_relationships.json holds 26 statements (SL-001…026), 21 without evidence references, English only. Same work as X-B12-VIS-INCLUSION-TRANSMISSION (its 13 relationships)."
+ },
+ "X-ESC-D7-13b": {
+  "why": "Post-launch: a governed gloss for 'P0' at first use on domain pages (copy, Master-first). Explore now says its priorities are the P0 items (UI-EXPLORE-MA-BASIS, RC-15 0a3ac6f)."
+ },
+ "X-ESC-D7C-03": {
+  "why": "Post-launch copy fix, Master-first (UI-EVID-ADDITIONAL-DETAIL-FOR-REPRODUCING-OR). The B15 panel found no task failure from it."
+ },
+ "X-LINK-TLS-SIGNIN": {
+  "why": "RELEASE: a person with a browser checks both locators at release (docs/RELEASE_RUNBOOK.md steps 4 and 12). If a locator stays sign-in only, the source card gets a note under rule 5, Master-first. LINK_CHECK.md records both outcomes."
+ },
+ "X-REG-FMIIP-ISR0": {
+  "why": "DONE: decided in RC-12 (98f43f5; B12_TEXT_FIRST_DISPOSITIONS.md): the ISR's placeholder 0 is not bound. The drawing that waits for an observed result is X-B12-VIS-TARGET-RESULT-STATE-DRAWING."
+ },
+ "X-REG-SEVERITY-BASE": {
+  "disp": "DONE",
+  "why": "DONE in RC-16 (b49fe93): p. 145 read again at the locator (ORIGINAL_SOURCE_VERIFICATION.md §9); the base is ambiguous in the source, and the record's measurement limitation now says so in both languages. No value changes."
+ },
+ "X-REG-ORIGIN-TABLES": {
+  "why": "Post-launch: recorded as external working tables. Records trace to public originals through source IDs. Bringing the tables in is the same work as the B12 rows for RV-CWR-002, -005 and -008."
+ },
+ "FRN-08": {
+  "why": "A limit of the evidence, stated on its page; closes only with new evidence, Master-first. Owner Addendum 2 rejects food-security monitoring (ADD2-REJ-11)."
+ },
+ "EAD-12": {
+  "why": "Method text DONE in B1 (d9df1d2; validator PB-0401). Table rows post-launch by owner decision A4 / C6, as the B16 brief expects ('table rows for the 13 table-only records')."
+ },
+ "X-ESC-RC8-01": {
+  "disp": "DONE",
+  "why": "DONE in RC-17 {RC17}: public_use of PSE-001…010, 012, 013 and 014 rewritten to the withholding rule, Master-first; RC-NAMES stays (owner decisions of 3 October 2026 (audit/OWNER_DECISIONS_2026-10-02.md), point 1)."
+ },
+ "OWN-04": {
+  "disp": "RELEASE",
+  "why": "RELEASE: the licence is decided (CC BY 4.0, owner instructions of 3 October 2026, 09:50 (audit/OWNER_DECISIONS_2026-10-02.md), E). What remains is that CauseWay's counsel confirms the CC BY 4.0 text; then public_downloads goes true, the downloads publish with the licence, and Dataset structured data may be added (REJ-03 lifts). docs/RELEASE_RUNBOOK.md step 2."
+ },
+ "X-ESC-D6-04": {
+  "disp": "RELEASE",
+  "why": "RELEASE: the licence is decided (CC BY 4.0, owner instructions of 3 October 2026, 09:50 (audit/OWNER_DECISIONS_2026-10-02.md), E). What remains is that CauseWay's counsel confirms the CC BY 4.0 text; then public_downloads goes true, the downloads publish with the licence, and Dataset structured data may be added (REJ-03 lifts). docs/RELEASE_RUNBOOK.md step 2. The figure-foot export control follows the same switch. Same as X-ESC-ANT-05."
+ },
+ "X-ESC-ANT-05": {
+  "disp": "RELEASE",
+  "why": "RELEASE: the licence is decided (CC BY 4.0, owner instructions of 3 October 2026, 09:50 (audit/OWNER_DECISIONS_2026-10-02.md), E). What remains is that CauseWay's counsel confirms the CC BY 4.0 text; then public_downloads goes true, the downloads publish with the licence, and Dataset structured data may be added (REJ-03 lifts). docs/RELEASE_RUNBOOK.md step 2. The reuse line and download labels follow the same switch. Same as X-ESC-D6-04."
+ },
+ "EXT-04": {
+  "disp": "POST-LAUNCH",
+  "why": "Post-launch with Owner Addendum 2 improvement 6 (ADD2-IMP-6): the status-event table (date · decision number · class · action) needs its governed contract; the entity names stay withheld (owner decisions of 3 October 2026, points 1–2)."
+ }
+}

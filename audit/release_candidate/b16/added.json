@@ -1,0 +1,686 @@
+[
+ {
+  "id": "X-ESC-B15-01",
+  "record": "design/ESCALATIONS.md",
+  "item": "About at 390 px (A-12, C-6): About is reachable only from the footer on a phone.",
+  "disp": "DONE",
+  "why": "DONE {NAV}: the governed trust links, About first, are in the opened mobile menu; the session designated programme steward for this one patch (owner decisions of 3 October 2026 (audit/OWNER_DECISIONS_2026-10-02.md), point 3).",
+  "where": "design/ESCALATIONS.md",
+  "section": ""
+ },
+ {
+  "id": "X-ESC-B15-02",
+  "record": "design/ESCALATIONS.md",
+  "item": "Cite at 390 px (C-8): 'Cite this page' is in neither the mobile header nor the menu.",
+  "disp": "DONE",
+  "why": "DONE {NAV}: the governed 'Cite this page' control is inside the opened mobile menu, not the header (owner decisions of 3 October 2026 (audit/OWNER_DECISIONS_2026-10-02.md), point 3).",
+  "where": "design/ESCALATIONS.md",
+  "section": ""
+ },
+ {
+  "id": "X-ESC-B15-03",
+  "record": "design/ESCALATIONS.md",
+  "item": "A domain strip across the eight domain answers (C-10).",
+  "disp": "POST-LAUNCH",
+  "why": "Roadmap (owner instructions of 3 October 2026, 09:50 (audit/OWNER_DECISIONS_2026-10-02.md), A.4); docs/ROADMAP_V1_1.md item 28. The domains are reachable from the main navigation and Explore.",
+  "where": "design/ESCALATIONS.md",
+  "section": ""
+ },
+ {
+  "id": "X-ESC-B15-04",
+  "record": "design/ESCALATIONS.md",
+  "item": "A naming rule for the twelve names of the 2024 e-wallet circular (B-2).",
+  "disp": "DONE",
+  "why": "DONE in RC-17 {RC17}: all twelve names withheld alike; NEG-EW-011 rewritten in both languages as one wallet service among twelve; gate RC-NAMES covers the circular and the search index, with two negative controls (owner decisions of 3 October 2026 (audit/OWNER_DECISIONS_2026-10-02.md), point 2).",
+  "where": "design/ESCALATIONS.md",
+  "section": ""
+ },
+ {
+  "id": "X-ESC-B15-05",
+  "record": "design/ESCALATIONS.md",
+  "item": "VIS-MFI-SPINE: a contract that binds the governed observations, gaps printed 'no usable observation — not zero' (B-7).",
+  "disp": "POST-LAUNCH",
+  "why": "Post-launch (owner instructions of 3 October 2026, 09:50 (audit/OWNER_DECISIONS_2026-10-02.md), A.5). Its title no longer promises a view of the gaps it does not draw (RC-16).",
+  "where": "design/ESCALATIONS.md",
+  "section": ""
+ },
+ {
+  "id": "X-ESC-B15-06",
+  "record": "design/ESCALATIONS.md",
+  "item": "Exports for researchers: a versioned dataset, dated observation tables, a citation file (U3, U6, U7).",
+  "disp": "RELEASE",
+  "why": "Licence decided: CC BY 4.0 for CauseWay's own content (owner instructions of 3 October 2026, 09:50 (audit/OWNER_DECISIONS_2026-10-02.md), E). public_downloads stays false in this pull request; at release CauseWay's counsel confirms the CC BY 4.0 text, then the switch publishes the downloads, which carry the licence (docs/RELEASE_RUNBOOK.md step 2).",
+  "where": "design/ESCALATIONS.md",
+  "section": ""
+ },
+ {
+  "id": "X-ESC-B15-07",
+  "record": "design/ESCALATIONS.md",
+  "item": "What CauseWay is (C-6): /about/ says who funds the resource mid-paragraph; nothing says what CauseWay is.",
+  "disp": "DONE",
+  "why": "DONE in RC-17 {RC17}: the owner's pair on what CauseWay is, added to /about/ before the funding paragraph, in both languages (owner instructions of 3 October 2026, 09:50 (audit/OWNER_DECISIONS_2026-10-02.md), D). Nothing else about the organisation is written.",
+  "where": "design/ESCALATIONS.md",
+  "section": ""
+ },
+ {
+  "id": "X-ESC-RC17-01",
+  "record": "design/ESCALATIONS.md",
+  "where": "design/ESCALATIONS.md",
+  "section": "",
+  "item": "NEG-EW-011's record ID is the circular's own item number; with the circular linked, withholding the name does not withhold the identity (RC-17 adversarial review).",
+  "disp": "RELEASE",
+  "why": "The owner's choice at release acceptance: accept it as disclosed, or point /evidence/NEG-EW-011/ to CLM-015. Until then the record keeps its ID and route, as the owner decided (point 2); nothing prints a name."
+ },
+ {
+  "id": "ADD2-REJ-01",
+  "record": "audit/release_candidate/INSTRUCTIONS_ADDENDUM_2026-10-02.md",
+  "item": "A composite evidence-maturity score.",
+  "disp": "REJECTED",
+  "why": "Composite scores are closed (brief, rule 3); the evidence landscape stays categorical (RC-10, gate RC-LAND).",
+  "where": "audit/release_candidate/INSTRUCTIONS_ADDENDUM_2026-10-02.md",
+  "section": ""
+ },
+ {
+  "id": "ADD2-REJ-02",
+  "record": "audit/release_candidate/INSTRUCTIONS_ADDENDUM_2026-10-02.md",
+  "item": "An interpolated account-ownership path.",
+  "disp": "REJECTED",
+  "why": "Missing ≠ zero and observed ≠ estimated: the years between Findex waves are not measured (/people/ says so; no interpolation by rule).",
+  "where": "audit/release_candidate/INSTRUCTIONS_ADDENDUM_2026-10-02.md",
+  "section": ""
+ },
+ {
+  "id": "ADD2-REJ-03",
+  "record": "audit/release_candidate/INSTRUCTIONS_ADDENDUM_2026-10-02.md",
+  "item": "Operating-provider counts derived from rosters.",
+  "disp": "REJECTED",
+  "why": "Licence ≠ operation (semantic firewall); the matching of the 2026 decisions with the roster has not been done (RC-15, B-1).",
+  "where": "audit/release_candidate/INSTRUCTIONS_ADDENDUM_2026-10-02.md",
+  "section": ""
+ },
+ {
+  "id": "ADD2-REJ-04",
+  "record": "audit/release_candidate/INSTRUCTIONS_ADDENDUM_2026-10-02.md",
+  "item": "POS terminals per adult.",
+  "disp": "REJECTED",
+  "why": "Infrastructure ≠ outcome and people ≠ accounts; no population total is used to turn counts into shares (/evidence/compare/ §2).",
+  "where": "audit/release_candidate/INSTRUCTIONS_ADDENDUM_2026-10-02.md",
+  "section": ""
+ },
+ {
+  "id": "ADD2-REJ-05",
+  "record": "audit/release_candidate/INSTRUCTIONS_ADDENDUM_2026-10-02.md",
+  "item": "'True level' factors for remittances.",
+  "disp": "REJECTED",
+  "why": "No crosswalk exists between CBY-Aden and IMF levels (FRN-03); a factor would invent a conversion (Compare: 'no invented conversion factor').",
+  "where": "audit/release_candidate/INSTRUCTIONS_ADDENDUM_2026-10-02.md",
+  "section": ""
+ },
+ {
+  "id": "ADD2-REJ-06",
+  "record": "audit/release_candidate/INSTRUCTIONS_ADDENDUM_2026-10-02.md",
+  "item": "Access maps built from rosters.",
+  "disp": "REJECTED",
+  "why": "A licensed or listed location is not an operating access point; MA-005 names the register that would be needed.",
+  "where": "audit/release_candidate/INSTRUCTIONS_ADDENDUM_2026-10-02.md",
+  "section": ""
+ },
+ {
+  "id": "ADD2-REJ-07",
+  "record": "audit/release_candidate/INSTRUCTIONS_ADDENDUM_2026-10-02.md",
+  "item": "A provider '2026 status' badge.",
+  "disp": "REJECTED",
+  "why": "A synchronised 'current state' is closed (brief, rule 3); status events are dated and never summarised as a current status.",
+  "where": "audit/release_candidate/INSTRUCTIONS_ADDENDUM_2026-10-02.md",
+  "section": ""
+ },
+ {
+  "id": "ADD2-REJ-08",
+  "record": "audit/release_candidate/INSTRUCTIONS_ADDENDUM_2026-10-02.md",
+  "item": "An 'is my wallet licensed?' lookup.",
+  "disp": "REJECTED",
+  "why": "The resource holds no complete named set of licensed wallet providers (CLM-015, VIS-PROVIDER-TIME); a lookup would imply a census. A separate regulatory record route is closed (rule 3).",
+  "where": "audit/release_candidate/INSTRUCTIONS_ADDENDUM_2026-10-02.md",
+  "section": ""
+ },
+ {
+  "id": "ADD2-REJ-09",
+  "record": "audit/release_candidate/INSTRUCTIONS_ADDENDUM_2026-10-02.md",
+  "item": "Provider profile pages.",
+  "disp": "REJECTED",
+  "why": "No new route unless a task fails on every existing page (rule 2); entity names of enforcement decisions are non-public (owner note, 3 October 2026).",
+  "where": "audit/release_candidate/INSTRUCTIONS_ADDENDUM_2026-10-02.md",
+  "section": ""
+ },
+ {
+  "id": "ADD2-REJ-10",
+  "record": "audit/release_candidate/INSTRUCTIONS_ADDENDUM_2026-10-02.md",
+  "item": "A rial converter.",
+  "disp": "REJECTED",
+  "why": "No invented conversion factor; the January 2023 valuation change and the CBY-Aden scope make a converter misleading (CLM-033, YSC-016).",
+  "where": "audit/release_candidate/INSTRUCTIONS_ADDENDUM_2026-10-02.md",
+  "section": ""
+ },
+ {
+  "id": "ADD2-REJ-11",
+  "record": "audit/release_candidate/INSTRUCTIONS_ADDENDUM_2026-10-02.md",
+  "item": "Food-security monitoring.",
+  "disp": "REJECTED",
+  "why": "Outside the resource's scope; the World Bank food-security exchange-rate series stays deferred (FRN-08).",
+  "where": "audit/release_candidate/INSTRUCTIONS_ADDENDUM_2026-10-02.md",
+  "section": ""
+ },
+ {
+  "id": "ADD2-REJ-12",
+  "record": "audit/release_candidate/INSTRUCTIONS_ADDENDUM_2026-10-02.md",
+  "item": "The Uzbekistan comparator.",
+  "disp": "REJECTED",
+  "why": "Not a same-definition, same-wave aggregate; international context comes from same-source aggregates only (docs/ROADMAP_V1_1.md §1).",
+  "where": "audit/release_candidate/INSTRUCTIONS_ADDENDUM_2026-10-02.md",
+  "section": ""
+ },
+ {
+  "id": "ADD2-REJ-13",
+  "record": "audit/release_candidate/INSTRUCTIONS_ADDENDUM_2026-10-02.md",
+  "item": "A 'five key numbers' explainer.",
+  "disp": "REJECTED",
+  "why": "League-table framing and figures detached from their boundaries are closed; every number keeps its period, universe and limit.",
+  "where": "audit/release_candidate/INSTRUCTIONS_ADDENDUM_2026-10-02.md",
+  "section": ""
+ },
+ {
+  "id": "ADD2-REJ-14",
+  "record": "audit/release_candidate/INSTRUCTIONS_ADDENDUM_2026-10-02.md",
+  "item": "Merging regulatory instruments into the system chronology.",
+  "disp": "REJECTED",
+  "why": "Chronology ≠ causality, and a separate regulatory record route is closed (rule 3); instruments stay in the /data/ regulatory group (B5).",
+  "where": "audit/release_candidate/INSTRUCTIONS_ADDENDUM_2026-10-02.md",
+  "section": ""
+ },
+ {
+  "id": "B15-BLOCK-01",
+  "record": "audit/release_candidate/PRODUCT_CHALLENGE.md",
+  "item": "«كوزواي» as the publisher's Arabic name (A-12).",
+  "disp": "REJECTED",
+  "why": "Red team, B15: Governance: the owner set 'CauseWay' in Latin script only.",
+  "where": "audit/release_candidate/PRODUCT_CHALLENGE.md",
+  "section": ""
+ },
+ {
+  "id": "B15-BLOCK-02",
+  "record": "audit/release_candidate/PRODUCT_CHALLENGE.md",
+  "item": "Relabelling the IMF remittance history 'may include model-based personal transfers' (B-3).",
+  "disp": "REJECTED",
+  "why": "Red team, B15: Truth: CLM-036 disclaims the formula and scope of specific values, so it cannot be carried onto the Article IV history unread.",
+  "where": "audit/release_candidate/PRODUCT_CHALLENGE.md",
+  "section": ""
+ },
+ {
+  "id": "B15-BLOCK-03",
+  "record": "audit/release_candidate/PRODUCT_CHALLENGE.md",
+  "item": "An eleventh Measurement priority for remittances (B-4).",
+  "disp": "REJECTED",
+  "why": "Red team, B15: Governance: REJ-02; aliases to MA-001 are allowed instead.",
+  "where": "audit/release_candidate/PRODUCT_CHALLENGE.md",
+  "section": ""
+ },
+ {
+  "id": "B15-BLOCK-04",
+  "record": "audit/release_candidate/PRODUCT_CHALLENGE.md",
+  "item": "Removing Home's 'Another view of the evidence' (C-15).",
+  "disp": "REJECTED",
+  "why": "Red team, B15: Truth and accessibility: it is the system figure's text description and Home's only 'not causal, not composite' boundary.",
+  "where": "audit/release_candidate/PRODUCT_CHALLENGE.md",
+  "section": ""
+ },
+ {
+  "id": "B15-BLOCK-05",
+  "record": "audit/release_candidate/PRODUCT_CHALLENGE.md",
+  "item": "An entity-level status register (game-changer U2).",
+  "disp": "REJECTED",
+  "why": "Red team, B15: It would publish names and is the closed regulatory record route.",
+  "where": "audit/release_candidate/PRODUCT_CHALLENGE.md",
+  "section": ""
+ },
+ {
+  "id": "B15-BLOCK-06",
+  "record": "audit/release_candidate/PRODUCT_CHALLENGE.md",
+  "item": "A 'strength' rating on a policy brief (game-changer U10).",
+  "disp": "REJECTED",
+  "why": "Red team, B15: None is governed, and composites are closed.",
+  "where": "audit/release_candidate/PRODUCT_CHALLENGE.md",
+  "section": ""
+ },
+ {
+  "id": "ADD2-IMP-A1",
+  "record": "audit/release_candidate/INSTRUCTIONS_ADDENDUM_2026-10-02.md",
+  "where": "audit/release_candidate/INSTRUCTIONS_ADDENDUM_2026-10-02.md",
+  "section": "",
+  "item": "VIS-PAYMENT-RAILS: drawing, table and text alternative agree",
+  "disp": "DONE",
+  "why": "RC-8 (fda3965); gate RC-A1 with a negative control."
+ },
+ {
+  "id": "ADD2-IMP-A2",
+  "record": "audit/release_candidate/INSTRUCTIONS_ADDENDUM_2026-10-02.md",
+  "where": "audit/release_candidate/INSTRUCTIONS_ADDENDUM_2026-10-02.md",
+  "section": "",
+  "item": "Search alias 001 boundary note; the /data/ scope line names laws and Sana'a instruments",
+  "disp": "DONE",
+  "why": "RC-8 (fda3965), RC-8b (7947347)."
+ },
+ {
+  "id": "ADD2-IMP-1a",
+  "record": "audit/release_candidate/INSTRUCTIONS_ADDENDUM_2026-10-02.md",
+  "where": "audit/release_candidate/INSTRUCTIONS_ADDENDUM_2026-10-02.md",
+  "section": "",
+  "item": "document_type of the e-wallet circular and the e-money amendment",
+  "disp": "DONE",
+  "why": "RC-17 {RC17}: instruction/circular and regulatory decision."
+ },
+ {
+  "id": "ADD2-IMP-1b",
+  "record": "audit/release_candidate/INSTRUCTIONS_ADDENDUM_2026-10-02.md",
+  "where": "audit/release_candidate/INSTRUCTIONS_ADDENDUM_2026-10-02.md",
+  "section": "",
+  "item": "ENF-10's date from its original",
+  "disp": "DONE",
+  "why": "RC-8 (fda3965): 8 June 2026, the signed decision (EXT-02 closed)."
+ },
+ {
+  "id": "ADD2-IMP-1c",
+  "record": "audit/release_candidate/INSTRUCTIONS_ADDENDUM_2026-10-02.md",
+  "where": "audit/release_candidate/INSTRUCTIONS_ADDENDUM_2026-10-02.md",
+  "section": "",
+  "item": "The regulatory group ordered by document date, with an anchor, linked from 'Verify it yourself' on /reforms/ and /providers/",
+  "disp": "DONE",
+  "why": "RC-17 {RC17}: newest first; #regulatory; both pages link it (gate RC-ADD2)."
+ },
+ {
+  "id": "ADD2-IMP-1d",
+  "record": "audit/release_candidate/INSTRUCTIONS_ADDENDUM_2026-10-02.md",
+  "where": "audit/release_candidate/INSTRUCTIONS_ADDENDUM_2026-10-02.md",
+  "section": "",
+  "item": "/reforms/ names the instruments by number where it describes them",
+  "disp": "DONE",
+  "why": "RC-17 {RC17}: Governor's Decision No. 4 of 2025 (section 4) and No. 23 of 2024 (VIS-PAYMENT-RAILS, shown on /reforms/), from their governed titles."
+ },
+ {
+  "id": "ADD2-IMP-1e",
+  "record": "audit/release_candidate/INSTRUCTIONS_ADDENDUM_2026-10-02.md",
+  "where": "audit/release_candidate/INSTRUCTIONS_ADDENDUM_2026-10-02.md",
+  "section": "",
+  "item": "'decision' / «قرار' ranks rule-making decisions above enforcement decisions; 'N of M' when capped",
+  "disp": "DONE",
+  "why": "RC-17 {RC17}: alias 002 targets regulatory decisions; 'Showing N of M' since RC-3 / G4 (d668f11, 7895694)."
+ },
+ {
+  "id": "ADD2-IMP-2a",
+  "record": "audit/release_candidate/INSTRUCTIONS_ADDENDUM_2026-10-02.md",
+  "where": "audit/release_candidate/INSTRUCTIONS_ADDENDUM_2026-10-02.md",
+  "section": "",
+  "item": "A whole-phrase bonus on titles and summaries",
+  "disp": "POST-LAUNCH",
+  "why": "Built and tested in RC-17, then withdrawn: it lifted records above the governed primary routes in the search smoke (PB-0494, P2-G01). Its main purpose, 'We Cash' first, was withdrawn by the owner (decisions of 3 October 2026, point 2). Needs the smoke expectations reviewed first."
+ },
+ {
+  "id": "ADD2-IMP-2b",
+  "record": "audit/release_candidate/INSTRUCTIONS_ADDENDUM_2026-10-02.md",
+  "where": "audit/release_candidate/INSTRUCTIONS_ADDENDUM_2026-10-02.md",
+  "section": "",
+  "item": "Arabic tokens of two letters or fewer match whole words",
+  "disp": "DONE",
+  "why": "9236ffc (tokens of three letters or fewer match whole, after proclitics)."
+ },
+ {
+  "id": "ADD2-IMP-2c",
+  "record": "audit/release_candidate/INSTRUCTIONS_ADDENDUM_2026-10-02.md",
+  "where": "audit/release_candidate/INSTRUCTIONS_ADDENDUM_2026-10-02.md",
+  "section": "",
+  "item": "'We Cash' and «وي كاش» find their record first",
+  "disp": "REJECTED",
+  "why": "Withdrawn by the owner: the circular's twelve names are withheld alike and never enter the search index (decisions of 3 October 2026, point 2; RC-17; gate RC-NAMES)."
+ },
+ {
+  "id": "ADD2-IMP-2d",
+  "record": "audit/release_candidate/INSTRUCTIONS_ADDENDUM_2026-10-02.md",
+  "where": "audit/release_candidate/INSTRUCTIONS_ADDENDUM_2026-10-02.md",
+  "section": "",
+  "item": "Aliases Findex / «فيندكس» and PSP / «مزوّد خدمات الدفع»",
+  "disp": "DONE",
+  "why": "RC-17 {RC17}: aliases 029 and 030."
+ },
+ {
+  "id": "ADD2-IMP-2e",
+  "record": "audit/release_candidate/INSTRUCTIONS_ADDENDUM_2026-10-02.md",
+  "where": "audit/release_candidate/INSTRUCTIONS_ADDENDUM_2026-10-02.md",
+  "section": "",
+  "item": "Alias 007's note that «محفظة» means both e-wallet and loan portfolio",
+  "disp": "DONE",
+  "why": "RC-17 {RC17}."
+ },
+ {
+  "id": "ADD2-IMP-3a",
+  "record": "audit/release_candidate/INSTRUCTIONS_ADDENDUM_2026-10-02.md",
+  "where": "audit/release_candidate/INSTRUCTIONS_ADDENDUM_2026-10-02.md",
+  "section": "",
+  "item": "Evidence landscape table, 34 rows in 8 domains, categorical",
+  "disp": "DONE",
+  "why": "RC-10 (ae86d2d); gate RC-LAND."
+ },
+ {
+  "id": "ADD2-IMP-3b",
+  "record": "audit/release_candidate/INSTRUCTIONS_ADDENDUM_2026-10-02.md",
+  "where": "audit/release_candidate/INSTRUCTIONS_ADDENDUM_2026-10-02.md",
+  "section": "",
+  "item": "DS-DEMAND-VINTAGE-LENS ten-function table",
+  "disp": "POST-LAUNCH",
+  "why": "Its origin table (109_DEMAND_VINTAGE_LENS) is not a Master sheet; needs Master rows, a contract and the B12 table pattern (same family as EAD-12)."
+ },
+ {
+  "id": "ADD2-IMP-4a",
+  "record": "audit/release_candidate/INSTRUCTIONS_ADDENDUM_2026-10-02.md",
+  "where": "audit/release_candidate/INSTRUCTIONS_ADDENDUM_2026-10-02.md",
+  "section": "",
+  "item": "CWR-010 reachable from /payments/",
+  "disp": "POST-LAUNCH",
+  "why": "Roadmap item 31 (owner instructions of 3 October 2026, 09:50, C6): an answer page carries at most two Readings and /payments/ has two; a third needs a design decision on which one yields. CWR-010 is two clicks away today (via CLM-045)."
+ },
+ {
+  "id": "ADD2-IMP-4b",
+  "record": "audit/release_candidate/INSTRUCTIONS_ADDENDUM_2026-10-02.md",
+  "where": "audit/release_candidate/INSTRUCTIONS_ADDENDUM_2026-10-02.md",
+  "section": "",
+  "item": "CLM-045 and YSC-022 cross-referenced (delivered ≠ targeted ≠ persistent)",
+  "disp": "POST-LAUNCH",
+  "why": "Needs a Master binding and a place in the record template."
+ },
+ {
+  "id": "ADD2-IMP-4c",
+  "record": "audit/release_candidate/INSTRUCTIONS_ADDENDUM_2026-10-02.md",
+  "where": "audit/release_candidate/INSTRUCTIONS_ADDENDUM_2026-10-02.md",
+  "section": "",
+  "item": "MA-001's card on /remittances/ leads with its remittance sentence",
+  "disp": "POST-LAUNCH",
+  "why": "Needs a governed title variant and code; no new priority (REJ-02)."
+ },
+ {
+  "id": "ADD2-IMP-5a",
+  "record": "audit/release_candidate/INSTRUCTIONS_ADDENDUM_2026-10-02.md",
+  "where": "audit/release_candidate/INSTRUCTIONS_ADDENDUM_2026-10-02.md",
+  "section": "",
+  "item": "Preset Compare links (CLM-001, CLM-054, FMIIP-BASELINE-2025-01; CLM-032, CLM-037, CLM-041)",
+  "disp": "DONE",
+  "why": "RC-17 {RC17}: under 'Three measures that cannot be combined' and in /remittances/ 'Verify it yourself' (gate RC-ADD2)."
+ },
+ {
+  "id": "ADD2-IMP-5b",
+  "record": "audit/release_candidate/INSTRUCTIONS_ADDENDUM_2026-10-02.md",
+  "where": "audit/release_candidate/INSTRUCTIONS_ADDENDUM_2026-10-02.md",
+  "section": "",
+  "item": "The Compare lead promises only what Compare compares",
+  "disp": "DONE",
+  "why": "RC-15 (0a3ac6f), C-3."
+ },
+ {
+  "id": "ADD2-IMP-6",
+  "record": "audit/release_candidate/INSTRUCTIONS_ADDENDUM_2026-10-02.md",
+  "where": "audit/release_candidate/INSTRUCTIONS_ADDENDUM_2026-10-02.md",
+  "section": "",
+  "item": "Status-event table PSE-001…015 under VIS-PROVIDER-TIME; PSE-015 never omitted; a frame note on status-event records",
+  "disp": "POST-LAUNCH",
+  "why": "Needs name-free class and action columns, a contract and code. Entity names stay withheld (owner decisions of 3 October 2026, points 1 and 2). EXT-04."
+ },
+ {
+  "id": "ADD2-IMP-7",
+  "record": "audit/release_candidate/INSTRUCTIONS_ADDENDUM_2026-10-02.md",
+  "where": "audit/release_candidate/INSTRUCTIONS_ADDENDUM_2026-10-02.md",
+  "section": "",
+  "item": "Pairings: CLM-010 with CLM-050 on /payments/; YSC-016 with CLM-054",
+  "disp": "POST-LAUNCH",
+  "why": "CLM-010 and CLM-050 already sit side by side in 'Verify it yourself'; a pairing note needs a Master binding and code."
+ },
+ {
+  "id": "ADD2-IMP-8",
+  "record": "audit/release_candidate/INSTRUCTIONS_ADDENDUM_2026-10-02.md",
+  "where": "audit/release_candidate/INSTRUCTIONS_ADDENDUM_2026-10-02.md",
+  "section": "",
+  "item": "Chronology on /reforms/, /payments/ and /remittances/; an event variant; YSC-020 as a frame note",
+  "disp": "POST-LAUNCH",
+  "why": "Roadmap item 29 (owner instructions of 3 October 2026, 09:50, C6): the chronology renders on /finance/ only; an event card is a new component, and each event's relevance would need checking against each page's question (chronology ≠ causality)."
+ },
+ {
+  "id": "ADD2-IMP-9a",
+  "record": "audit/release_candidate/INSTRUCTIONS_ADDENDUM_2026-10-02.md",
+  "where": "audit/release_candidate/INSTRUCTIONS_ADDENDUM_2026-10-02.md",
+  "section": "",
+  "item": "Trust links in the opened mobile menu",
+  "disp": "DONE",
+  "why": "Steward patch to the navigation contract under the owner's designation (decisions of 3 October 2026, point 3), {NAV}."
+ },
+ {
+  "id": "ADD2-IMP-9b",
+  "record": "audit/release_candidate/INSTRUCTIONS_ADDENDUM_2026-10-02.md",
+  "where": "audit/release_candidate/INSTRUCTIONS_ADDENDUM_2026-10-02.md",
+  "section": "",
+  "item": "The prose text alternative in a details element where a drawing and a table exist",
+  "disp": "POST-LAUNCH",
+  "why": "A design refinement; the visual contract checks assert the visible text alternative."
+ },
+ {
+  "id": "ADD2-IMP-9c",
+  "record": "audit/release_candidate/INSTRUCTIONS_ADDENDUM_2026-10-02.md",
+  "where": "audit/release_candidate/INSTRUCTIONS_ADDENDUM_2026-10-02.md",
+  "section": "",
+  "item": "A shorter /payments/ headline",
+  "disp": "DONE",
+  "why": "RC-17 {RC17}: a short, dated headline (17 words, from 36) serves as title, og title and search title; the full sentence opens the page as its lead (owner instructions of 3 October 2026, 09:50, C2)."
+ },
+ {
+  "id": "ADD2-IMP-9d",
+  "record": "audit/release_candidate/INSTRUCTIONS_ADDENDUM_2026-10-02.md",
+  "where": "audit/release_candidate/INSTRUCTIONS_ADDENDUM_2026-10-02.md",
+  "section": "",
+  "item": "'How numbers are presented' shown once",
+  "disp": "DONE",
+  "why": "{C5}: printed once, on /methodology/ (#how-numbers), and linked once from each domain spine (owner instructions of 3 October 2026, 09:50, C5); gate RC-0950."
+ },
+ {
+  "id": "ADD2-IMP-9e",
+  "record": "audit/release_candidate/INSTRUCTIONS_ADDENDUM_2026-10-02.md",
+  "where": "audit/release_candidate/INSTRUCTIONS_ADDENDUM_2026-10-02.md",
+  "section": "",
+  "item": "One boundary band before the first answer",
+  "disp": "POST-LAUNCH",
+  "why": "Steward: the bands are the contract's supporting sections (presentation_priority.json)."
+ },
+ {
+  "id": "ADD2-IMP-9f",
+  "record": "audit/release_candidate/INSTRUCTIONS_ADDENDUM_2026-10-02.md",
+  "where": "audit/release_candidate/INSTRUCTIONS_ADDENDUM_2026-10-02.md",
+  "section": "",
+  "item": "The spine index lists answer sections only",
+  "disp": "POST-LAUNCH",
+  "why": "Code; the index also serves the phone's in-page navigation (DEBT-014)."
+ },
+ {
+  "id": "ADD2-IMP-9g",
+  "record": "audit/release_candidate/INSTRUCTIONS_ADDENDUM_2026-10-02.md",
+  "where": "audit/release_candidate/INSTRUCTIONS_ADDENDUM_2026-10-02.md",
+  "section": "",
+  "item": "/ar/data/ compact by default",
+  "disp": "POST-LAUNCH",
+  "why": "Roadmap item 30 (owner instructions of 3 October 2026, 09:50, C6): /ar/data/ is complete without JavaScript by rule (DL-D7-013), so lightening it means paging or splitting the source list, which is design work."
+ },
+ {
+  "id": "ADD2-IMP-9h",
+  "record": "audit/release_candidate/INSTRUCTIONS_ADDENDUM_2026-10-02.md",
+  "where": "audit/release_candidate/INSTRUCTIONS_ADDENDUM_2026-10-02.md",
+  "section": "",
+  "item": "Home's first figure higher on a phone",
+  "disp": "POST-LAUNCH",
+  "why": "Governed copy order; steward."
+ },
+ {
+  "id": "ADD2-IMP-9i",
+  "record": "audit/release_candidate/INSTRUCTIONS_ADDENDUM_2026-10-02.md",
+  "where": "audit/release_candidate/INSTRUCTIONS_ADDENDUM_2026-10-02.md",
+  "section": "",
+  "item": "POS chart labels no longer collide",
+  "disp": "DONE",
+  "why": "RC-10 (ae86d2d); check_visuals.py 0 failures."
+ },
+ {
+  "id": "ADD2-IMP-10",
+  "record": "audit/release_candidate/INSTRUCTIONS_ADDENDUM_2026-10-02.md",
+  "where": "audit/release_candidate/INSTRUCTIONS_ADDENDUM_2026-10-02.md",
+  "section": "",
+  "item": "The 00_MASTER and 37_READINESS_CHECKLIST counts",
+  "disp": "DONE",
+  "why": "RC-17 {RC17}: 165 sources, 97 payment observations, counted from the sheets."
+ },
+ {
+  "id": "ADD2-IMP-11",
+  "record": "audit/release_candidate/INSTRUCTIONS_ADDENDUM_2026-10-02.md",
+  "where": "audit/release_candidate/INSTRUCTIONS_ADDENDUM_2026-10-02.md",
+  "section": "",
+  "item": "'resolve … resolve' on Home and Explore",
+  "disp": "DONE",
+  "why": "RC-17 {RC17}."
+ },
+ {
+  "id": "ADD2-IMP-L1",
+  "record": "audit/release_candidate/INSTRUCTIONS_ADDENDUM_2026-10-02.md",
+  "where": "audit/release_candidate/INSTRUCTIONS_ADDENDUM_2026-10-02.md",
+  "section": "",
+  "item": "Never 'latest' without a date; a lint gate",
+  "disp": "DONE",
+  "why": "RC-16 (b49fe93); gate RC-LATEST."
+ },
+ {
+  "id": "ADD2-IMP-L2",
+  "record": "audit/release_candidate/INSTRUCTIONS_ADDENDUM_2026-10-02.md",
+  "where": "audit/release_candidate/INSTRUCTIONS_ADDENDUM_2026-10-02.md",
+  "section": "",
+  "item": "Survey coverage stated on survey records",
+  "disp": "DONE",
+  "why": "2021-wave population records: RC-10, RC-16 (b49fe93). The 2014-wave records need that wave's coverage read from its own source, and the multi-wave records need a wave-specific sentence: docs/ROADMAP_V1_1.md §3, item 26."
+ },
+ {
+  "id": "ADD2-IMP-L3",
+  "record": "audit/release_candidate/INSTRUCTIONS_ADDENDUM_2026-10-02.md",
+  "where": "audit/release_candidate/INSTRUCTIONS_ADDENDUM_2026-10-02.md",
+  "section": "",
+  "item": "Findex 2025's absence stated wherever people-side currency is discussed",
+  "disp": "DONE",
+  "why": "RC-10 (ae86d2d) and RC-17 {RC17} on the 2021-wave records; the multi-wave records follow item 26 of the roadmap."
+ },
+ {
+  "id": "ADD2-IMP-L4",
+  "record": "audit/release_candidate/INSTRUCTIONS_ADDENDUM_2026-10-02.md",
+  "where": "audit/release_candidate/INSTRUCTIONS_ADDENDUM_2026-10-02.md",
+  "section": "",
+  "item": "A two-part citation: this resource, and the original source with publisher, title, year, locator",
+  "disp": "DONE",
+  "why": "RC-15 (0a3ac6f), RC-16 (b49fe93) and {C5}: the short citation is two lines, this resource with the page address, then the original sources (publisher, title, year, link); gate RC-0950."
+ },
+ {
+  "id": "ADD2-IMP-L5",
+  "record": "audit/release_candidate/INSTRUCTIONS_ADDENDUM_2026-10-02.md",
+  "where": "audit/release_candidate/INSTRUCTIONS_ADDENDUM_2026-10-02.md",
+  "section": "",
+  "item": "Show the dates the governed fields hold together; never 'next update'",
+  "disp": "POST-LAUNCH",
+  "why": "'Next update' appears nowhere (checked). A checked-on date (retrieval_date) beside the period and the document date needs governed labels and code."
+ },
+ {
+  "id": "ADD2-IMP-J1",
+  "record": "audit/release_candidate/INSTRUCTIONS_ADDENDUM_2026-10-02.md",
+  "where": "audit/release_candidate/INSTRUCTIONS_ADDENDUM_2026-10-02.md",
+  "section": "",
+  "item": "18_CBY_MONETARY: a bounded expression on an existing contract",
+  "disp": "POST-LAUNCH",
+  "why": "Deferred post-launch (owner instructions of 3 October 2026, 09:50, C7): the January 2023 valuation break and the CBY-Aden scope make a nominal-rial reading easy to misuse, and no existing contract fits without design."
+ },
+ {
+  "id": "ADD2-IMP-J2",
+  "record": "audit/release_candidate/INSTRUCTIONS_ADDENDUM_2026-10-02.md",
+  "where": "audit/release_candidate/INSTRUCTIONS_ADDENDUM_2026-10-02.md",
+  "section": "",
+  "item": "A publisher facet in the library, labelled 'publisher'",
+  "disp": "DONE",
+  "why": "Done in B13 (owner instructions of 3 October 2026, 09:50, C7): RC-12 (98f43f5), B13 a, labelled 'publisher'."
+ },
+ {
+  "id": "OWN0950-B",
+  "record": "audit/OWNER_DECISIONS_2026-10-02.md",
+  "where": "audit/OWNER_DECISIONS_2026-10-02.md",
+  "section": "",
+  "item": "Release address https://causewaygrp.com/financial-inclusion-evidence/: base path from public_origin, pre-release noindex, subpath gate with a negative control, hosting runbook (B1–B6, B8)",
+  "disp": "DONE",
+  "why": "{BASE}: built in this pull request; public_origin stays null (B8)."
+ },
+ {
+  "id": "OWN0950-B-HOST",
+  "record": "audit/OWNER_DECISIONS_2026-10-02.md",
+  "where": "audit/OWNER_DECISIONS_2026-10-02.md",
+  "section": "",
+  "item": "Hosting at the address: Pages project, the Nitro proxy in CauseWay's frontend (or the App Platform component, or the subdomain fallback), the root robots.txt or Search Console step",
+  "disp": "RELEASE",
+  "why": "docs/RELEASE_RUNBOOK.md hosting section: the owner provides the account and the domain; CauseWay's web administrator adds the proxy route (a separate task in CauseWay's frontend repository) and the sitemap reference; release checks that no Set-Cookie and no corporate x-robots-tag reach these pages."
+ },
+ {
+  "id": "OWN0950-B7",
+  "record": "audit/OWNER_DECISIONS_2026-10-02.md",
+  "where": "audit/OWNER_DECISIONS_2026-10-02.md",
+  "section": "",
+  "item": "/privacy/ true at the public address: the domain's cookie",
+  "disp": "DONE",
+  "why": "RC-17 {RC17}: one governed sentence in both languages; the proxy strips Cookie and Set-Cookie on the path (runbook)."
+ },
+ {
+  "id": "OWN0950-C5",
+  "record": "audit/OWNER_DECISIONS_2026-10-02.md",
+  "where": "audit/OWNER_DECISIONS_2026-10-02.md",
+  "section": "",
+  "item": "'How numbers are presented' once",
+  "disp": "DONE",
+  "why": "{C5} (same as ADD2-IMP-9d)."
+ },
+ {
+  "id": "OWN0950-F",
+  "record": "audit/OWNER_DECISIONS_2026-10-02.md",
+  "where": "audit/OWNER_DECISIONS_2026-10-02.md",
+  "section": "",
+  "item": "One contact address on every surface (office@causewaygrp.com)",
+  "disp": "DONE",
+  "why": "Checked on 3 October 2026: office@causewaygrp.com is the only address printed; info@ appears nowhere."
+ },
+ {
+  "id": "OWN0950-F-INBOX",
+  "record": "audit/OWNER_DECISIONS_2026-10-02.md",
+  "where": "audit/OWNER_DECISIONS_2026-10-02.md",
+  "section": "",
+  "item": "The corrections inbox is monitored and has a named responder",
+  "disp": "RELEASE",
+  "why": "Owner's release step (owner instructions of 3 October 2026, 09:50, F); docs/RELEASE_RUNBOOK.md."
+ },
+ {
+  "id": "OWN0950-E-COUNSEL",
+  "record": "audit/OWNER_DECISIONS_2026-10-02.md",
+  "where": "audit/OWNER_DECISIONS_2026-10-02.md",
+  "section": "",
+  "item": "Counsel confirms the CC BY 4.0 text",
+  "disp": "RELEASE",
+  "why": "Before /rights/ is public, since the grant takes effect when the site is released (hostile review of RC-17), and before public_downloads goes true (owner instructions of 3 October 2026, 09:50, E3–E4)."
+ },
+ {
+  "id": "OWN0950-E-DATASET",
+  "record": "audit/OWNER_DECISIONS_2026-10-02.md",
+  "where": "audit/OWNER_DECISIONS_2026-10-02.md",
+  "section": "",
+  "item": "Dataset structured data behind the downloads switch (REJ-03 lifts when the switch is on)",
+  "disp": "DONE",
+  "why": "{DATASET}"
+ }
+]
