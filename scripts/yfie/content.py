@@ -645,7 +645,7 @@ class Content:
             "detached_caption": v.get(f"detached_caption_{lang}"),
             "lang": lang, "edition": self.t("UI-CONTENT-VERSION", lang),
             "count_unit": self.t("UI-VIS-UNIT-COUNT", lang),   # G4 item 7: an Arabic count prints in label-value form
-            "labels": {"does_not_establish": lab("UI-VIS-DOES-NOT-ESTABLISH"), "source": lab("UI-VIS-SOURCE"), "full_record": lab("UI-VIS-FULL-RECORD"),
+            "labels": {"does_not_establish": lab("UI-VIS-DOES-NOT-ESTABLISH"), "source": lab("UI-VIS-SOURCE"), "full_record": lab("UI-VIS-FULL-RECORD"), "open_record": self.t("UI-EVID-OPEN-EVIDENCE-RECORD", lang),
                        "same_year_revision": lab("UI-VIS-SAME-YEAR-REVISION"), "not_comparable": lab("UI-VIS-NOT-COMPARABLE"),
                        "reported": lab("UI-VIS-STATE-REPORTED"), "derived": lab("UI-VIS-STATE-DERIVED"), "unknown": lab("UI-VIS-STATE-UNKNOWN"),
                        "issuer_scope": lab("UI-VIS-ISSUER-SCOPE"),

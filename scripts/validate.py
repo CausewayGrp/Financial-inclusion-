@@ -2838,6 +2838,7 @@ except Exception as _x:
 # - Explore shows exactly the priorities the agenda marks P0, as its governed line says; /measurement/ lists P0 before P1.
 # - No record says the 2026 decisions "are matched" with the roster: the Master marks every subject not yet reconciled.
 # - An Evidence Record previews its short citation (OWN-04) and keeps the long form; CLM-002 links the two series it uses.
+# - A figure on its own record page carries no link to itself.
 try:
     _ma15 = json.loads((C / "content" / "measurement_agenda.json").read_text(encoding="utf-8"))
     _ui15 = {x["ui_id"]: x for x in json.loads((C / "content" / "interface_copy.json").read_text(encoding="utf-8"))}
@@ -2878,6 +2879,10 @@ try:
         for _code in ("FX.OWN.TOTL.MA.ZS", "FX.OWN.TOTL.FE.ZS"):
             if f"/indicator/{_code}?locations=YE" not in _c2:
                 errors.append(f"RC-B15 /{_lang}/evidence/CLM-002/ does not link the series {_code} it is calculated from")
+        for _f in sorted((DIST / _lang / "evidence").glob("VIS-*/index.html")):
+            _vid = _f.parent.name
+            if f'<a class="canon-l" href="/{_lang}/evidence/{_vid}/">' in _f.read_text(encoding="utf-8"):
+                errors.append(f"RC-B15 /{_lang}/evidence/{_vid}/ links its own figure to itself"); break
     for _f in ("evidence/evidence_objects.json", "evidence/public_claims.json"):
         _txt = (C / _f).read_text(encoding="utf-8")
         # the first RC-15 wording, withdrawn after review, is banned too: decisions ARE attached to the entities they name

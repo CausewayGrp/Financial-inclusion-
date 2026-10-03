@@ -1,5 +1,17 @@
 # Repository Change Log
 
+## 2026-10-03 — B15 d: figures print governed precision and link their record by name, never to themselves
+
+Code only (`scripts/yfie/visuals.py`, `render.py`, `theme.py`), from the product challenge (`PRODUCT_CHALLENGE.md`).
+- **A-9, A-10, C-16.** A difference drawn in a figure prints at the precision of the published values it is calculated
+  from, as the governed text prints it. The gender-gap chart read "9" and "11.1" where the text reads "9.0" and "11.10";
+  it now reads 9.0 and 11.10, which also settles the Arabic «9 نقطة مئوية».
+- **A-17, C-9.** On screen, a figure's foot links its record with the governed label "Open evidence record" /
+  «افتح سجل الدليل», instead of a raw left-to-right path in Arabic text. A figure on its own record page, or a Reading's
+  own figure, carries no link to itself. In print and detached frames, "Full record:" with the path is kept.
+- **Gates.** RC-B15 now also fails a figure that links its own record page, with a negative control. The visual contract
+  checks pass (2,850 assertions, 133 print checks, 0 failures).
+
 ## 2026-10-03 — Release candidate RC-15: the product challenge's governed copy and data, the short citation, sharing a record
 
 One Master transaction (4282c50b… → ebfb929c…, 44 cells; `audit/release_candidate/rc_15_b15_copy.py`). It carries the

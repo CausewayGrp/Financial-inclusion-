@@ -248,10 +248,13 @@ CONTROLS = [
     ("an archived copy is offered as the original", "en/data/index.html",
      sub_once(r'(<a class="source-locator" href="https://web\.archive\.org/[^"]*"[^>]*>)[^<]*', r'\1Open original source ↗'),
      "RC-B13 an archived copy is offered as the original en"),
-    # RC-B15 (Part B B15 d; RC-15): Home links the priorities bound to it.
+    # RC-B15 (Part B B15 d; RC-15): Home links the priorities bound to it; a figure never links its own record page.
     ("Home drops a measurement priority bound to it", "ar/index.html",
      replace('href="/ar/measurement/#MA-005"', 'href="/ar/measurement/"', 0),
      "RC-B15 Home (ar) does not link the bound priority MA-005 under the gaps section"),
+    ("a figure links its own record page", "en/evidence/VIS-FINDEX-GAPS/index.html",
+     sub_once(r'(<span class="ed">)', r'<a class="canon-l" href="/en/evidence/VIS-FINDEX-GAPS/">Open evidence record</a>\1'),
+     "RC-B15 /en/evidence/VIS-FINDEX-GAPS/ links its own figure to itself"),
     # RC-B6 (Part B B6): a Reading page links every priority its bindings name.
     ("a Reading page drops a bound measurement priority", "en/readings/from-rail-to-result-missing-middle/index.html",
      replace('href="/en/measurement/#MA-006"', 'href="/en/measurement/"', 0),   # both links: the card's title and its "Open" link

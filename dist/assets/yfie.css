@@ -529,7 +529,7 @@ svg.ts .val.dense{display:block}
 @media (forced-colors:active){.lane-svg .span,.lane-svg .stem{stroke:CanvasText}.prow,.prow .cell,.prow .lim,.prow .unk,.prow .evl li{border-color:CanvasText!important}.prow .n,.prow .cl,.prow .lim,.prow .unk,.lanes-dated .lane.outcome h3{color:CanvasText}}
 .fig{container-type:inline-size}
 .rvtab.wide{min-width:1080px}
-.fig .foot .canon-l{display:inline-block;padding:3px 0;min-height:24px}
+.fig .foot .canon-l{display:inline-block;padding:3px 0;min-height:24px}.fig .foot .canon-p{display:none}@media print{.fig .foot .canon-p{display:inline}.fig .foot .canon-s{display:none}}
 .prow .evl .dates{display:block;margin-top:2px;color:var(--ink-2)}
 .prow .evl a.dl{text-decoration-color:var(--rule-2);display:inline-block;padding:3px 0;min-height:24px}
 @container (min-width:480px){

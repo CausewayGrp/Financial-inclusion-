@@ -235,7 +235,7 @@ def evidence_record(page: dict, shell: dict) -> str:
     index = [("q1", L["establishes"]), ("q2", L["measures"]), ("q3", L["applies"]), ("q4", L["currentness"]), ("q5", L["does_not_establish"]), ("q6", L["source"]), ("q7", L["more"])]
     head_ = (f'<div class="head">{crumb(page["breadcrumb"], shell)}{rubric(L["family"])}{clock(L["period"], esc(page["period"]))}<h1 id="page-title">{esc(page["title"])}</h1>'
              + (f'<p class="st">{esc(page["lead"])}</p>' if page["lead"] else "") + "</div>")
-    own_fig = (f'<span class="rubric mt18">{esc(L["visual_eyebrow"])}</span>' + figure(page["visual"], shell["labels"]["cite"], DISC.origin(), heading="h3")) if page.get("visual") and page["visual"].get("tier") != "RETIRE_FROM_DESIGN" else ""
+    own_fig = (f'<span class="rubric mt18">{esc(L["visual_eyebrow"])}</span>' + figure({**page["visual"], "here": True}, shell["labels"]["cite"], DISC.origin(), heading="h3")) if page.get("visual") and page["visual"].get("tier") != "RETIRE_FROM_DESIGN" else ""
     qa = [f'<div class="qa first" id="q1">{rubric(L["establishes"], 1, "h2")}<div class="st"><p>{esc(page["summary"])}</p></div>{own_fig}</div>' + strip(index),
           f'<div class="qa" id="q2">{rubric(L["measures"], 2, "h2")}<div class="body"><p>{esc(page["definition"])}</p></div></div>',
           f'<div class="qa" id="q3">{rubric(L["applies"], 3, "h2")}<div class="body"><p>{esc(page["universe"])}</p></div></div>',
@@ -341,7 +341,9 @@ def reading(page: dict, shell: dict) -> str:
                 blocks.append(f'<blockquote class="pull"><p>{esc(b["text"])}</p></blockquote>')
             else:
                 blocks.append('<ul class="rlist">' + "".join(f"<li>{esc(x)}</li>" for x in b["items"]) + "</ul>")
-        figs = "".join(figure(v, SL["cite"], origin) for v in page["visuals"]) if i == 0 else ""
+        # RC-15 (B15 d, C-9): a Reading's own figure does not link the Reading to itself on screen
+        here = DISC.localized(page["route"], shell["lang"])
+        figs = "".join(figure({**v, "here": v.get("canonical_href") == here}, SL["cite"], origin) for v in page["visuals"]) if i == 0 else ""
         essay.append(f'<section data-reading-section="{esc(s["section_id"])}">{h}<div class="{"st" if i == 0 else "read"}">{"".join(blocks)}</div>{figs}</section>')
     steps = []
     for x in page["trace"]:

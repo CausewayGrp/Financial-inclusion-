@@ -23,6 +23,19 @@ def plain_num(x, year: bool = False) -> str:
     return esc(x)
 
 
+def decimals(x) -> int:
+    """The number of decimals a governed value is published with (16.11 → 2, 12.6 → 1, 5 → 0)."""
+    if isinstance(x, float) and not x.is_integer():
+        return len(repr(x).split(".")[1])
+    return 0
+
+
+def at_precision(x, dec: int) -> str:
+    """RC-15 (B15 d, A-9/C-16): a difference printed at the precision of the published values it is calculated from, as
+    the governed text prints it (16.11 − 5.01 = 11.10, not 11.1; 12.6 − 3.6 = 9.0, not 9)."""
+    return f"{x:,.{dec}f}" if isinstance(x, (int, float)) and not isinstance(x, bool) and dec > 0 else plain_num(x)
+
+
 def num(x, year: bool = False) -> str:
     """plain_num, isolated as a left-to-right run for HTML text (never inside SVG <text>)."""
     return f'<bdi dir="ltr">{plain_num(x, year)}</bdi>'
@@ -204,10 +217,12 @@ def frame_foot(v: dict, cite_label: str, origin: str | None, open_label: str | N
     L = v["labels"]
     canon = (origin or "") + v["canonical_href"]
     credit = f'<p>{credit_line(v)}</p>' if v.get("credit") else ""
-    link = (f'<a class="canon" dir="ltr" href="{esc(v["canonical_href"])}">{esc(canon)}</a>' if not open_label
-            else f'<a class="canon-l" href="{esc(v["canonical_href"])}">{esc(open_label)}</a>')
+    # RC-15 (B15 d, A-17): on screen the record link reads as the governed open-record label, and the record's own page
+    # carries none (no self-link); "Full record:" with the path stays in print, export and detached frames
+    path = f'<span class="canon-p">{esc(L["full_record"])} <a class="canon" dir="ltr" href="{esc(v["canonical_href"])}">{esc(canon)}</a> ·\u00a0</span>'
+    screen = "" if v.get("here") else f'<span class="canon-s"><a class="canon-l" href="{esc(v["canonical_href"])}">{esc(open_label or L["open_record"])}</a> ·\u00a0</span>'
     return (f'<div class="foot"><p class="b"><b>{esc(L["what_not_to_conclude"])}:</b> {iso_run(v["prohibited_inference"])}</p>{credit}'
-            f'<p>{esc(L["full_record"])} {link} ·\u00a0<span class="ed">{esc(v.get("edition") or "")}</span>'
+            f'<p>{path}{screen}<span class="ed">{esc(v.get("edition") or "")}</span>'
             f'<span class="cite-sep"> ·\u00a0<button type="button" class="tbtn" data-cite>{esc(cite_label)}</button></span></p></div>')
 
 
@@ -477,17 +492,18 @@ def findex_gaps(v: dict, cite_label: str, origin: str | None, heading: str = "h2
     common_unit = vals[0]["unit"]
     html_ = [f'<div class="panel bars"><p class="ph">{esc(common_unit)} · {esc(state_label(v, "MEASURED"))}</p>']
     html_.append('<div class="p1">' + bar_rows([r for r in vals if r["id"] not in paired], vmax) + "</div>")
+    gap_text = {d["id"]: at_precision(d["value"], max(decimals(a["y"]), decimals(b["y"]))) for d, a, b in pairs}
     for d, a, b in pairs:
         pair_rows = [b, a] if vals.index(b) < vals.index(a) else [a, b]   # governed order of the contract (women before men, …)
         own_unit = any(r["unit"] != common_unit for r in pair_rows)
         html_.append(f'<div class="pair"><div class="p1">{bar_rows(pair_rows, vmax, unit_col=own_unit)}</div>'
-                     f'<p class="gap"><span class="bracket" aria-hidden="true"></span>{esc(derived_label)} · {val_unit(d["value"], d["unit"])}</p></div>')
+                     f'<p class="gap"><span class="bracket" aria-hidden="true"></span>{esc(derived_label)} · {val_unit(gap_text[d["id"]], d["unit"])}</p></div>')
     html_.append('<div class="p1">' + axis_row(vmax, step) + "</div></div>")
     state = uniform(vals, lambda r: r["state"])
     head, per_row = value_head(v, vals, common_unit)
     rows = [[esc(r["x_text"]), qual(num(r["y"]), esc(r["unit"]) if (per_row or r["unit"] != common_unit) else "", "" if state else esc(state_label(v, r["state"])))] for r in vals]
     gap_unit = uniform([d for d, _, _ in pairs], lambda d: d.get("unit")) or ""
-    gaps = [[esc(f'{by_id[d["from"][0]]["x_text"]} − {by_id[d["from"][1]]["x_text"]}'), qual(num(d["value"]), "" if gap_unit else esc(d.get("unit") or ""))] for d, _, _ in pairs]
+    gaps = [[esc(f'{by_id[d["from"][0]]["x_text"]} − {by_id[d["from"][1]]["x_text"]}'), qual(num(gap_text[d["id"]]), "" if gap_unit else esc(d.get("unit") or ""))] for d, _, _ in pairs]
     tbl = grouped_table(caption_of(v, qual("" if per_row else esc(common_unit), esc(state_label(v, state)) if state else "")), [esc(th(v, "group")), head],
                         [(None, rows), (qual(esc(gap_unit), esc(derived_label)), gaps)])   # the gaps: their own unit and the DERIVED state as the group's header, the pair as the row
     return frame_open(v, heading) + f'<div class="panels">{"".join(html_)}</div>' + frame_close(v, cite_label, origin, tbl, heading=heading)
