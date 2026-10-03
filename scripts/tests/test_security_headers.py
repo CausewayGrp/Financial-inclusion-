@@ -4,6 +4,7 @@
 
   python3 scripts/tests/test_security_headers.py            # every page in both languages, the root and the 404
   python3 scripts/tests/test_security_headers.py --limit 20 # a quick sample
+  python3 scripts/tests/test_security_headers.py --base https://<release-domain>   # the live host (release runbook)
 
 Serves `dist/` locally with the headers `dist/_headers` declares (the file Cloudflare Pages and Netlify read), then
 loads every page in headless Chromium and fails on any Content-Security-Policy violation, any blocked or failed
@@ -86,6 +87,7 @@ def serve(rules):
 def main() -> int:
     ap = argparse.ArgumentParser()
     ap.add_argument("--limit", type=int, default=0)
+    ap.add_argument("--base", default="", help="a live origin to load instead of the local server; its own headers are checked")
     args = ap.parse_args()
     hf = DIST / "_headers"
     if not hf.exists():
@@ -108,8 +110,8 @@ def main() -> int:
             problems += [f"{p}: no {h}" for h in SECURITY if h not in got]
         if "Cache-Control" not in got:
             problems.append(f"{p}: no Cache-Control rule")
-    srv = serve(rules)
-    base = f"http://127.0.0.1:{srv.server_address[1]}"
+    srv = None if args.base else serve(rules)
+    base = args.base.rstrip("/") if args.base else f"http://127.0.0.1:{srv.server_address[1]}"
     from playwright.sync_api import sync_playwright
     try:
         with sync_playwright() as pw:
@@ -131,12 +133,14 @@ def main() -> int:
                 csp = page.evaluate("window.__csp")
                 if resp is None or (resp.status != 200 and p != "/404.html"):
                     problems.append(f"{p}: HTTP {resp.status if resp else 'none'}")
-                if resp is not None and "content-security-policy" not in {k.lower() for k in resp.headers}:
-                    problems.append(f"{p}: the response carries no policy")
+                if resp is not None:
+                    got = {k.lower() for k in resp.headers}
+                    problems += [f"{p}: the response carries no {h}" for h in SECURITY if h.lower() not in got]
                 problems += [f"{p}: CSP violation {v}" for v in csp] + [f"{p}: {e}" for e in errors]
             browser.close()
     finally:
-        srv.shutdown()
+        if srv:
+            srv.shutdown()
     for x in problems[:40]:
         print("FAIL", x)
     print(f"SECURITY HEADERS: {'PASS' if not problems else 'FAIL'} — {len(pages)} pages loaded under dist/_headers; "

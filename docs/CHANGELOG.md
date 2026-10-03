@@ -1,5 +1,25 @@
 # Repository Change Log
 
+## 2026-10-03 — B14 e and f: the currentness re-run as one command; the release runbook
+
+- **Currentness re-run (B14 e).** `scripts/currentness_rerun.py` reads every watch point in its original and compares it
+  with what the Master holds: CBY-Aden's POS releases, its decisions and its regulation page, the World Bank's FMIIP
+  status reports, Global Findex for Yemen, and the hosts that refuse automated requests. `--append` adds the dated
+  result to `audit/FINAL_CURRENTNESS_CUTOFF.md`; it was run on 3 October 2026.
+  - Nothing newer: POS releases to June 2026, decisions to No. 18, the ISR of 8 April 2026, and Findex's 2022 data year.
+  - IMF, Remittance Prices Worldwide and the CBY Sana'a host are "check by hand".
+  - Nine CBY-Aden regulatory documents on its regulation page are not held. The /data/ group already says it is not a
+    complete register. They go to B16 (register).
+  - The signed-scan dates were RC-13.
+- **Release runbook (B14 f).** `docs/RELEASE_RUNBOOK.md` gives fourteen steps from "the owner has a hosting account and
+  a domain" to "live", each naming who does it: origin, currentness at the release date, every gate, credentials, the
+  inactive deploy switch, HTTPS and HSTS, the live checks, optional cookieless counts behind the Privacy page, open items,
+  the owner's acceptance and the tag.
+  - Cloudflare Pages is recommended, with Netlify as the alternative and the reasons stated. Neither has been tested
+    from inside Yemen, and the runbook says so.
+  - `test_security_headers.py --base` and `YFIE_BASE_URL` for `test_public_tools.py` run the same checks against the
+    live host.
+
 ## 2026-10-03 — Fix: the header test no longer counts a navigation's aborted requests
 
 CI's browser job failed once on `4a90371`, in `scripts/tests/test_security_headers.py`. Six `net::ERR_ABORTED` font

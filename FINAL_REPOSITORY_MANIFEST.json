@@ -21,11 +21,11 @@
   ]
  },
  "class_counts": {
-  "AUDIT_HISTORY": 253,
+  "AUDIT_HISTORY": 254,
   "AUTHORITY_MASTER": 1,
   "AUTHORITY_POINTER": 2,
   "AUTHORITY_RULES": 1,
-  "BUILD_AND_GATES": 27,
+  "BUILD_AND_GATES": 28,
   "CONTROLLED_CONTRACT": 2,
   "CURRENT_DOCUMENT": 13,
   "CURRENT_PROGRAMME_RECORD": 124,
@@ -5804,6 +5804,10 @@
    "class": "AUDIT_HISTORY"
   },
   {
+   "path": "docs/RELEASE_RUNBOOK.md",
+   "class": "AUDIT_HISTORY"
+  },
+  {
    "path": "docs/REPOSITORY_BUILD_SUMMARY.json",
    "class": "AUDIT_HISTORY"
   },
@@ -5973,6 +5977,10 @@
   },
   {
    "path": "scripts/checksums.py",
+   "class": "BUILD_AND_GATES"
+  },
+  {
+   "path": "scripts/currentness_rerun.py",
    "class": "BUILD_AND_GATES"
   },
   {
