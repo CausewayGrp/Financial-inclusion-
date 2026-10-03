@@ -1,5 +1,13 @@
 # Repository Change Log
 
+## 2026-10-03 — Six reverse traces (Owner Addendum 2, before B16)
+
+`audit/release_candidate/REVERSE_TRACES.md` traces six public objects to their locators: Home's headline claims,
+VIS-FINDEX-GAPS, VIS-POS-VALUE, RV-CWR-001, the /reforms/ chain and IMF-attributed event YSC-014. Each goes from public
+object to record, to source, to locator, and each locator was requested.
+- Six of six are unbroken, so nothing needed fixing.
+- The one locator not verifiable from here is the UNDP project page, whose CDN refuses automated requests.
+
 ## 2026-10-03 — B14 e and f: the currentness re-run as one command; the release runbook
 
 - **Currentness re-run (B14 e).** `scripts/currentness_rerun.py` reads every watch point in its original and compares it
