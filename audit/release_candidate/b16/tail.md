@@ -4,7 +4,7 @@
   - point 1 (X-ESC-RC8-01) is DONE in RC-17;
   - point 2 (X-ESC-B15-04) is DONE in RC-17;
   - point 3 (X-ESC-B15-01, -02) is DONE in the steward patch;
-  - point 4 (X-ESC-B15-03) and point 5 (X-ESC-B15-05) are POST-LAUNCH;
+  - point 4 (X-ESC-B15-03) and point 5 (X-ESC-B15-05) are NEXT EDITION;
   - point 6 (X-ESC-B15-06, OWN-04, X-ESC-D6-04, X-ESC-ANT-05) is RELEASE, waiting on the licence decision, with
     `public_downloads` false until then;
   - point 7 (X-ESC-B15-07) is REJECTED for this release.
@@ -25,13 +25,13 @@
 
 ## What remains for the owner
 
-The owner merges this pull request, provides the hosting account and domain, decides the content licence, pushes the
-release tag and signs the release. The RELEASE rows above are the steps of `docs/RELEASE_RUNBOOK.md` that come with
-those acts:
+The owner merges this pull request, supplies the DigitalOcean account, registry and token, has counsel confirm the
+CC BY 4.0 text, names the corrections responder, pushes the release tag and signs the release. The RELEASE rows above
+are the steps of `docs/RELEASE_RUNBOOK.md` that come with those acts:
 
-- the public origin and live security headers;
+- the public origin, the first deploy and the corporate proxy, then the live security-header and ten-minute checks;
 - the currentness re-run at the release date;
-- a browser check of the locators that refuse automated requests;
+- a browser check of the locators that refuse automated requests, and the in-country phone check;
 - the owner's release acceptance.
 
 One choice is left that the owner's own decision created (X-ESC-RC17-01). NEG-EW-011's ID is the circular's own item number, so the record identifies the service. The owner can accept that as disclosed, or point the route to CLM-015. If the owner does not choose, the current state, which the owner decided, stands.

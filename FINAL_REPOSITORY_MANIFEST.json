@@ -28,7 +28,7 @@
   "BUILD_AND_GATES": 33,
   "CONTROLLED_CONTRACT": 2,
   "CURRENT_DOCUMENT": 13,
-  "CURRENT_PROGRAMME_RECORD": 152,
+  "CURRENT_PROGRAMME_RECORD": 153,
   "DESIGN_PACKAGE": 446,
   "GENERATED_DIAGRAMS": 9,
   "GENERATED_LITERAL_CLOSURE": 1,
@@ -937,6 +937,10 @@
   },
   {
    "path": "audit/release_candidate/MEASUREMENT_LINKS.md",
+   "class": "CURRENT_PROGRAMME_RECORD"
+  },
+  {
+   "path": "audit/release_candidate/OPEN_ITEMS_DISPOSITION.md",
    "class": "CURRENT_PROGRAMME_RECORD"
   },
   {

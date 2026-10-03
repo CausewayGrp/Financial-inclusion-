@@ -1,5 +1,27 @@
 # Repository Change Log
 
+## 2026-10-03 — B16: every open item dispositioned; G0 in the browser; 4.3 and 4.4 to the next edition
+
+- `audit/release_candidate/OPEN_ITEMS_DISPOSITION.md` (new, with an `audit/INDEX.md` row) is built by
+  `audit/release_candidate/b16/make_disposition.py`. It has 221 items: 93 DONE, 18 RELEASE, 88 NEXT EDITION and 22
+  REJECTED, with none undecided.
+  - It adds the owner note of 11:15 (4.1–4.6 and G0), section 5's seven topics with one line each (correspondent
+    banking, de-risking, SWIFT, liquidity, hawala, G2P, guarantees), the three rejections reopened for challenge, and
+    the G0 findings.
+  - Commit placeholders are resolved against the live ancestry. POST-LAUNCH is printed as NEXT EDITION.
+  - One earlier DONE is corrected: Dataset structured data was never prepared, and F6-G04 still forbids it, so it is
+    NEXT EDITION.
+- **4.3 (Findex waves): NEXT EDITION.** No governed contract takes the three waves, and RV-CWR-004's people lane is
+  governed as 2022–23 fieldwork; adding 2011 and 2014 would widen it. The record already prints all three
+  observations, with the 2011 definition limit and the 2022 coverage, on /people/.
+- **4.4 (the two ladders): NEXT EDITION.** The B12 inputs are still missing: the recipients' reference period, a data
+  projection, and governed Arabic step labels.
+- **G0.** 22 views at 390 px in Arabic and 1440 px in English. There is no release defect beyond the inline-figure box
+  already fixed. CWR-005 is bounded. The regulation path names the instrument, the authority, the date and the stage
+  the evidence reaches. 29 of 30 ordinary searches land right ("ID" is next edition). The guided paths resolve.
+- Each item's own record gains one dated, append-only block pointing here: `design/ESCALATIONS.md`,
+  `FINAL_OPEN_ITEMS_REGISTER.md` and `design/DESIGN_DEBT.md`.
+
 ## 2026-10-03 — RC-1115: the inline-figure defect fixed and the presentation gate; 4.6 records; DigitalOcean hosting
 
 **B.0, a release defect from RC-18 (`f7deaac`).** RC-18 emphasised inline figures as `<b class="fig">`, but `.fig` is
