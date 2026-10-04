@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 360" role="img" aria-labelledby="t d">
+  <title id="t">Repository layers</title>
+  <desc id="d">Authoritative files sit above derived outputs. Audit is historical verification, not a second production authority.</desc>
+  <style>
+    text { font-family: "IBM Plex Sans", "Segoe UI", sans-serif; fill: #1c242b; }
+    .h { font-size: 15px; font-weight: 600; }
+    .s { font-size: 12px; fill: #3d4a54; }
+    .k { font-size: 11px; letter-spacing: .08em; fill: #5c6b76; }
+  </style>
+  <rect width="880" height="360" fill="#f7f5f1"/>
+  <text class="k" x="36" y="36">EDIT HERE ONLY THROUGH THE CANONICAL PATH</text>
+  <rect x="36" y="52" width="808" height="70" fill="#fff" stroke="#1c242b"/>
+  <text class="h" x="52" y="80">authority/ — Production Master</text>
+  <text class="s" x="52" y="102">Semantic change starts here, then projections and the site are regenerated.</text>
+  <rect x="36" y="138" width="394" height="86" fill="#fff" stroke="#8a8176"/>
+  <text class="h" x="52" y="166">site-src/ and design/</text>
+  <text class="s" x="52" y="188">Presentation and accepted contracts.</text>
+  <text class="s" x="52" y="206">Not a second evidence store.</text>
+  <rect x="450" y="138" width="394" height="86" fill="#fff" stroke="#8a8176"/>
+  <text class="h" x="466" y="166">scripts/</text>
+  <text class="s" x="466" y="188">Projection, build, checksums, validation.</text>
+  <text class="s" x="466" y="206">The only way dist/ may change.</text>
+  <rect x="36" y="240" width="394" height="80" fill="#fff" stroke="#b7b0a6"/>
+  <text class="h" x="52" y="268">dist/ — generated</text>
+  <text class="s" x="52" y="290">Do not hand-edit. Rebuild and checksum.</text>
+  <rect x="450" y="240" width="394" height="80" fill="#fff" stroke="#b7b0a6"/>
+  <text class="h" x="466" y="268">audit/ — verification</text>
+  <text class="s" x="466" y="290">Lineage and review. Not production authority.</text>
+</svg>

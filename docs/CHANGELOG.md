@@ -1,5 +1,10 @@
 # Repository Change Log
 
+## 2026-10-04 — Non-design v1 front door
+
+README, the current-state projection and the re-entry checkpoint now say the non-design v1 product is complete, the current phase is design / presentation integration, and C1–C3 are post-v1. Public release is not declared. Three documentation diagrams added. No Master or product change.
+
+
 ## 2026-10-04 — B3 decision, Batch C held, Batch D records
 
 - **B3.** The 24 chronology events are not search results. They have no event route and no search-eligibility field. Search stays evidence, measurement and source.

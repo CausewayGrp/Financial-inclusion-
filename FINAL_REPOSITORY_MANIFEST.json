@@ -21,7 +21,7 @@
   ]
  },
  "class_counts": {
-  "AUDIT_HISTORY": 321,
+  "AUDIT_HISTORY": 324,
   "AUTHORITY_MASTER": 1,
   "AUTHORITY_POINTER": 2,
   "AUTHORITY_RULES": 1,
@@ -6290,6 +6290,18 @@
   {
    "path": "docs/SUSTAINABILITY_METHOD.md",
    "class": "CURRENT_DOCUMENT"
+  },
+  {
+   "path": "docs/diagrams/authority-flow.svg",
+   "class": "AUDIT_HISTORY"
+  },
+  {
+   "path": "docs/diagrams/public-path.svg",
+   "class": "AUDIT_HISTORY"
+  },
+  {
+   "path": "docs/diagrams/repository-layers.svg",
+   "class": "AUDIT_HISTORY"
   },
   {
    "path": "handoff/CLAUDE_CODE_MASTER_PROMPT.md",

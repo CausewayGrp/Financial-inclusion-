@@ -157,3 +157,7 @@ C1, C2 and C3 are the three items Edition 2 recorded as needing a steward contra
 ## Batch D — records agree
 
 Programme records that still named pull request #9 as the current release candidate are corrected to the merged history: #9 and #10 are on `main`; the open content pass is pull request #11. This does not declare the content pass complete, and it does not declare public release readiness. The home-page pilot is not in this commit.
+
+## Close of the non-design v1 pass
+
+Owner decisions, not reopened: B1 and B2 complete; B3 closed, chronology is not a Search family; C1, C2 and C3 deferred to post-v1. They are not release blockers. The non-design v1 product is complete. Public release is not declared. The current phase is design / presentation integration.

@@ -1,5 +1,8 @@
 # OpenAI re-entry checkpoint — Yemen Financial Inclusion Evidence
 
+**Current state, 4 October 2026.** Non-design v1 product complete. Current phase: design / presentation integration. C1, C2 and C3 are post-v1 owner decisions, not release blockers. Public release is not declared. The active front door is `README.md`. The text below is the September checkpoint and is history.
+
+
 **Programme:** Final integration to the Design handoff — directive D7 (`audit/directives/`), sessions F0–F9.
 **Position (current):** OpenAI accepted the Tranche C checkpoint on 26 September 2026 (recipient verification 31/31) and
 supplied the independent ten-Reading package with directive D7. Sessions F0–F9 are closed: the Reading portfolio is
