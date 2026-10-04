@@ -3,9 +3,9 @@
  "purpose": "What every tracked file is. One authority -> one projection path -> one runtime content path -> one current recipient start path. Hashes: SHA256SUMS.txt.",
  "authority": {
   "production_master": "authority/Yemen_Financial_Inclusion_Evidence_Master.xlsx",
-  "production_master_sha256": "e81b2ebc40687fb344bb1c155ae85208b5b9f62dd1e59d4687bb0d88d480d229",
+  "production_master_sha256": "dd14eed79a97c5222d989ef8fb251aa4b0493c1b3889b215d267e6f2643b8dc7",
   "page_specs": "site-src/content/page_specs.json",
-  "page_specs_sha256": "3a08b9b7918e8c956c0ce9fa5b8f834767210328c57e7f456caaddcef58219e6",
+  "page_specs_sha256": "c463cda3d7933066f6511d3f13a1dbe808d97f47f363453917e411948dd0bb2a",
   "logo": "site-src/assets/CauseWay_Master_Logo.png",
   "logo_sha256": "5830163d50f9badbef3227ec44e7705548e2fcc8a06b2d6ae33d56ade60c6a90",
   "rule": "The Production Master is the only semantic authority. Everything under site-src/content, dist, design/architecture and audit/PUBLIC_LITERAL_CLOSURE.json is generated from it and never edited by hand, except the two CONTROLLED_CONTRACT files, which the programme steward maintains in place and the generator validates against the Master's projections."
@@ -21,7 +21,7 @@
   ]
  },
  "class_counts": {
-  "AUDIT_HISTORY": 286,
+  "AUDIT_HISTORY": 293,
   "AUTHORITY_MASTER": 1,
   "AUTHORITY_POINTER": 2,
   "AUTHORITY_RULES": 1,
@@ -476,6 +476,14 @@
    "class": "AUDIT_HISTORY"
   },
   {
+   "path": "audit/edition_2/e2_6_imf_correspondent.py",
+   "class": "AUDIT_HISTORY"
+  },
+  {
+   "path": "audit/edition_2/e2_6b_review_fixes.py",
+   "class": "AUDIT_HISTORY"
+  },
+  {
    "path": "audit/edition_2/runs/E2-1_MASTER_LEDGER.json",
    "class": "AUDIT_HISTORY"
   },
@@ -553,6 +561,22 @@
   },
   {
    "path": "audit/edition_2/runs/E2-5b_RUN_REPORT.json",
+   "class": "AUDIT_HISTORY"
+  },
+  {
+   "path": "audit/edition_2/runs/E2-6_MASTER_LEDGER.json",
+   "class": "AUDIT_HISTORY"
+  },
+  {
+   "path": "audit/edition_2/runs/E2-6_RUN_REPORT.json",
+   "class": "AUDIT_HISTORY"
+  },
+  {
+   "path": "audit/edition_2/runs/E2-6b_MASTER_LEDGER.json",
+   "class": "AUDIT_HISTORY"
+  },
+  {
+   "path": "audit/edition_2/runs/E2-6b_RUN_REPORT.json",
    "class": "AUDIT_HISTORY"
   },
   {
@@ -6029,6 +6053,10 @@
   },
   {
    "path": "docs/HANDOFF_STATE.json",
+   "class": "AUDIT_HISTORY"
+  },
+  {
+   "path": "docs/JUDGEMENT.md",
    "class": "AUDIT_HISTORY"
   },
   {

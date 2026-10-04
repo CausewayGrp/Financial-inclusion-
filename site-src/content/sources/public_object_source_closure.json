@@ -1407,13 +1407,16 @@
     ],
     "lineage_state": "BOUND_EXACT",
     "dependency_ids": [
-      "SRC-OECD-YEM-RESILIENCE-001"
+      "SRC-OECD-YEM-RESILIENCE-001",
+      "SRC-IMF-YEM-AIV-2025-2026"
     ],
     "direct_source_ids": [
-      "SRC-OECD-YEM-RESILIENCE-001"
+      "SRC-OECD-YEM-RESILIENCE-001",
+      "SRC-IMF-YEM-AIV-2025-2026"
     ],
     "resolved_source_ids": [
-      "SRC-OECD-YEM-RESILIENCE-001"
+      "SRC-OECD-YEM-RESILIENCE-001",
+      "SRC-IMF-YEM-AIV-2025-2026"
     ],
     "resolved_via_object_ids": [],
     "context_reference_ids": [],
@@ -1422,6 +1425,11 @@
       {
         "source_id": "SRC-OECD-YEM-RESILIENCE-001",
         "primary_url": "https://doi.org/10.1787/81ed2898-en",
+        "metadata_state": "DISPLAY_READY"
+      },
+      {
+        "source_id": "SRC-IMF-YEM-AIV-2025-2026",
+        "primary_url": "https://www.imf.org/-/media/files/publications/cr/2026/english/1yemea2026001-source-pdf.pdf",
         "metadata_state": "DISPLAY_READY"
       }
     ],

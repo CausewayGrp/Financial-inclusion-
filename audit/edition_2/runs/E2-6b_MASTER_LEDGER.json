@@ -1,0 +1,99 @@
+{
+ "transaction": "E2-6b",
+ "summary": "E2-6 review: each speaker named in the title; passages, not IMF statements; the Executive Director's role",
+ "input_master_sha256": "4ae052c9e51ab97ced5119364024aa2d4f39b1230a1e9031f9eb49ef92369a73",
+ "output_master_sha256": "dd14eed79a97c5222d989ef8fb251aa4b0493c1b3889b215d267e6f2643b8dc7",
+ "cells_written": 10,
+ "changes": [
+  {
+   "finding": "E2-6b:REVIEW",
+   "sheet": "06_EVIDENCE_OBJECTS",
+   "row": 33,
+   "col": 4,
+   "field": "QUAL-001.title_en",
+   "old": "OECD and IMF: institutional fragility, weak formal access and correspondent banking (qualitative assessments)",
+   "new": "OECD, IMF Executive Board and Yemeni authorities: institutional fragility, weak formal access and correspondent banking (qualitative accounts)"
+  },
+  {
+   "finding": "E2-6b:REVIEW",
+   "sheet": "06_EVIDENCE_OBJECTS",
+   "row": 33,
+   "col": 5,
+   "field": "QUAL-001.title_ar",
+   "old": "OECD وصندوق النقد الدولي: الهشاشة المؤسسية وضعف الوصول الرسمي والمراسلة المصرفية (تقديرات نوعية)",
+   "new": "OECD والمجلس التنفيذي لصندوق النقد الدولي والسلطات اليمنية: الهشاشة المؤسسية وضعف الوصول الرسمي والمراسلة المصرفية (تقديرات وروايات نوعية)"
+  },
+  {
+   "finding": "E2-6b:REVIEW",
+   "sheet": "06_EVIDENCE_OBJECTS",
+   "row": 33,
+   "col": 8,
+   "field": "QUAL-001.definition_en",
+   "old": "A qualitative interpretation by the Organisation for Economic Co-operation and Development (OECD), published in 2026, of how fragmented institutions, supervisory gaps and weak formal access relate to financial-sector fragility and low trust in Yemen; and two IMF statements of 2026 on correspondent banking: the Executive Board's assessment and the authorities' account.",
+   "new": "A qualitative interpretation by the Organisation for Economic Co-operation and Development (OECD), published in 2026, of how fragmented institutions, supervisory gaps and weak formal access relate to financial-sector fragility and low trust in Yemen; and two passages of IMF Country Report No. 26/80 (2026) on correspondent banking: the Executive Board's assessment and the authorities' account."
+  },
+  {
+   "finding": "E2-6b:REVIEW",
+   "sheet": "06_EVIDENCE_OBJECTS",
+   "row": 33,
+   "col": 9,
+   "field": "QUAL-001.definition_ar",
+   "old": "تفسير نوعي نشرته منظمة التعاون الاقتصادي والتنمية (OECD) في 2026 للعلاقة بين تفتت المؤسسات وفجوات الرقابة وضعف الوصول الرسمي من جهة، وهشاشة القطاع المالي وانخفاض الثقة في اليمن من جهة أخرى؛ وبيانان لصندوق النقد الدولي في 2026 عن المراسلة المصرفية: تقدير المجلس التنفيذي، ورواية السلطات.",
+   "new": "تفسير نوعي نشرته منظمة التعاون الاقتصادي والتنمية (OECD) في 2026 للعلاقة بين تفتت المؤسسات وفجوات الرقابة وضعف الوصول الرسمي من جهة، وهشاشة القطاع المالي وانخفاض الثقة في اليمن من جهة أخرى؛ وفقرتان من التقرير القُطري لصندوق النقد الدولي رقم 26/80 (2026) عن المراسلة المصرفية: تقدير المجلس التنفيذي، ورواية السلطات."
+  },
+  {
+   "finding": "E2-6b:REVIEW",
+   "sheet": "06_EVIDENCE_OBJECTS",
+   "row": 33,
+   "col": 14,
+   "field": "QUAL-001.method_en",
+   "old": "Qualitative synthesis in the financial-sector chapter (Chapter 2) of Promoting Economic Resilience in Yemen, published by the Organisation for Economic Co-operation and Development (OECD) in 2026, drawing on consultations, workshops and sector analysis under an OECD–EU project. The IMF statements are quoted from IMF Country Report No. 26/80 (April 2026): the press release on the Executive Board's assessment (PDF page 4) and the statement by the Executive Director for the Republic of Yemen (PDF page 90).",
+   "new": "Qualitative synthesis in the financial-sector chapter (Chapter 2) of Promoting Economic Resilience in Yemen, published by the Organisation for Economic Co-operation and Development (OECD) in 2026, drawing on consultations, workshops and sector analysis under an OECD–EU project. The two passages are drawn from IMF Country Report No. 26/80 (April 2026): the press release on the Executive Board's assessment (PDF page 4) and the statement by the Executive Director for the Republic of Yemen (PDF page 90)."
+  },
+  {
+   "finding": "E2-6b:REVIEW",
+   "sheet": "06_EVIDENCE_OBJECTS",
+   "row": 33,
+   "col": 15,
+   "field": "QUAL-001.method_ar",
+   "old": "تركيب نوعي ورد في فصل القطاع المالي (الفصل الثاني) من تقرير «تعزيز المرونة الاقتصادية في اليمن» الصادر عن منظمة التعاون الاقتصادي والتنمية (OECD) في 2026، ويستند إلى مشاورات وورش عمل وتحليل قطاعي ضمن مشروع مشترك بين المنظمة والاتحاد الأوروبي. ويُنقل بيانا صندوق النقد الدولي من تقريره القُطري رقم 26/80 (أبريل 2026): البيان الصحفي عن تقدير المجلس التنفيذي (الصفحة 4 من ملف PDF)، وبيان المدير التنفيذي للجمهورية اليمنية (الصفحة 90 من ملف PDF).",
+   "new": "تركيب نوعي ورد في فصل القطاع المالي (الفصل الثاني) من تقرير «تعزيز المرونة الاقتصادية في اليمن» الصادر عن منظمة التعاون الاقتصادي والتنمية (OECD) في 2026، ويستند إلى مشاورات وورش عمل وتحليل قطاعي ضمن مشروع مشترك بين المنظمة والاتحاد الأوروبي. وتُستمد الفقرتان من التقرير القُطري لصندوق النقد الدولي رقم 26/80 (أبريل 2026): البيان الصحفي عن تقدير المجلس التنفيذي (الصفحة 4 من ملف PDF)، وبيان المدير التنفيذي للجمهورية اليمنية (الصفحة 90 من ملف PDF)."
+  },
+  {
+   "finding": "E2-6b:REVIEW",
+   "sheet": "06_EVIDENCE_OBJECTS",
+   "row": 33,
+   "col": 15,
+   "field": "QUAL-001.method_ar",
+   "old": "تركيب نوعي ورد في فصل القطاع المالي (الفصل الثاني) من تقرير «تعزيز المرونة الاقتصادية في اليمن» الصادر عن منظمة التعاون الاقتصادي والتنمية (OECD) في 2026، ويستند إلى مشاورات وورش عمل وتحليل قطاعي ضمن مشروع مشترك بين المنظمة والاتحاد الأوروبي. وتُستمد الفقرتان من التقرير القُطري لصندوق النقد الدولي رقم 26/80 (أبريل 2026): البيان الصحفي عن تقدير المجلس التنفيذي (الصفحة 4 من ملف PDF)، وبيان المدير التنفيذي للجمهورية اليمنية (الصفحة 90 من ملف PDF).",
+   "new": "تركيب نوعي ورد في فصل القطاع المالي (الفصل الثاني) من تقرير «تعزيز المرونة الاقتصادية في اليمن» الصادر عن منظمة التعاون الاقتصادي والتنمية (OECD) في 2026، ويستند إلى مشاورات وورش عمل وتحليل قطاعي ضمن مشروع مشترك بين المنظمة والاتحاد الأوروبي. وتُستمد الفقرتان من التقرير القُطري لصندوق النقد الدولي رقم 26/80 (أبريل 2026): البيان الصحفي عن تقدير المجلس التنفيذي (الصفحة 4 من ملف PDF)، وبيان المدير التنفيذي عن الجمهورية اليمنية (الصفحة 90 من ملف PDF)."
+  },
+  {
+   "finding": "E2-6b:REVIEW",
+   "sheet": "06_EVIDENCE_OBJECTS",
+   "row": 33,
+   "col": 6,
+   "field": "QUAL-001.summary_en",
+   "old": "The Organisation for Economic Co-operation and Development (OECD) links fragmented institutions, supervisory gaps and weak formal access to financial-sector fragility and low trust. On correspondent banking, the OECD writes that the conflict has severely undermined the confidence of several foreign correspondent banks, given perceived risks of money laundering and terrorism financing, isolating the Yemeni banking sector from regional and international financial networks. The IMF's Executive Board, concluding the 2025 Article IV consultation on 31 March 2026, considered the relocation of major banks to Aden an opportunity to strengthen financial stability and integrity, and encouraged enhancing the AML-CFT framework to safeguard correspondent banking relationships. In the statement of Yemen's Executive Director at the IMF, the authorities say that after the United States designated the Houthis a foreign terrorist organization, all major banks moved their headquarters to Aden to protect correspondent banking relationships and maintain liquidity. The evidence is contextual interpretation, not measured prevalence or a causal effect estimate.",
+   "new": "The Organisation for Economic Co-operation and Development (OECD) links fragmented institutions, supervisory gaps and weak formal access to financial-sector fragility and low trust. On correspondent banking, the OECD writes that the conflict has severely undermined the confidence of several foreign correspondent banks, given perceived risks of money laundering and terrorism financing, isolating the Yemeni banking sector from regional and international financial networks. The IMF's Executive Board, concluding the 2025 Article IV consultation on 31 March 2026, considered the relocation of major banks to Aden an opportunity to strengthen financial stability and integrity, and encouraged enhancing the AML-CFT framework to safeguard correspondent banking relationships. In the statement by the Executive Director for the Republic of Yemen, the authorities say that after the United States designated the Houthis a foreign terrorist organization, all major banks moved their headquarters to Aden to protect correspondent banking relationships and maintain liquidity. The evidence is contextual interpretation, not measured prevalence or a causal effect estimate."
+  },
+  {
+   "finding": "E2-6b:REVIEW",
+   "sheet": "06_EVIDENCE_OBJECTS",
+   "row": 33,
+   "col": 7,
+   "field": "QUAL-001.summary_ar",
+   "old": "يربط تحليل منظمة التعاون الاقتصادي والتنمية (OECD) بين تفتت المؤسسات وفجوات الرقابة وضعف الوصول الرسمي وبين هشاشة القطاع المالي وانخفاض الثقة. وفي ما يخص المراسلة المصرفية، تكتب المنظمة أن النزاع أضعف بشدة ثقة عدد من البنوك المراسلة الأجنبية، بالنظر إلى المخاطر المتصوَّرة لغسل الأموال وتمويل الإرهاب، مما عزل القطاع المصرفي اليمني عن الشبكات المالية الإقليمية والدولية. وعند اختتام مشاورات المادة الرابعة لعام 2025 في 31 مارس 2026، رأى المجلس التنفيذي لصندوق النقد الدولي في نقل البنوك الرئيسية إلى عدن فرصةً لتعزيز الاستقرار المالي والنزاهة المالية، وشجّع على تعزيز إطار مكافحة غسل الأموال وتمويل الإرهاب لصون علاقات المراسلة المصرفية. وفي بيان المدير التنفيذي لليمن لدى الصندوق، تقول السلطات إنه بعد أن صنّفت الولايات المتحدة الحوثيين منظمةً إرهابية أجنبية، نقلت جميع البنوك الرئيسية مقارّها إلى عدن لحماية علاقات المراسلة المصرفية والحفاظ على السيولة. هذا دليل تفسيري سياقي، وليس قياسًا للانتشار أو تقديرًا لأثر سببي.",
+   "new": "يربط تحليل منظمة التعاون الاقتصادي والتنمية (OECD) بين تفتت المؤسسات وفجوات الرقابة وضعف الوصول الرسمي وبين هشاشة القطاع المالي وانخفاض الثقة. وفي ما يخص المراسلة المصرفية، تكتب المنظمة أن النزاع أضعف بشدة ثقة عدد من البنوك المراسلة الأجنبية، بالنظر إلى المخاطر المتصوَّرة لغسل الأموال وتمويل الإرهاب، مما عزل القطاع المصرفي اليمني عن الشبكات المالية الإقليمية والدولية. وعند اختتام مشاورات المادة الرابعة لعام 2025 في 31 مارس 2026، رأى المجلس التنفيذي لصندوق النقد الدولي في نقل البنوك الرئيسية إلى عدن فرصةً لتعزيز الاستقرار المالي والنزاهة المالية، وشجّع على تعزيز إطار مكافحة غسل الأموال وتمويل الإرهاب لصون علاقات المراسلة المصرفية. وفي بيان المدير التنفيذي عن الجمهورية اليمنية في الصندوق، تقول السلطات إنه بعد أن صنّفت الولايات المتحدة الحوثيين منظمةً إرهابية أجنبية، نقلت جميع البنوك الرئيسية مقارّها إلى عدن لحماية علاقات المراسلة المصرفية والحفاظ على السيولة. هذا دليل تفسيري سياقي، وليس قياسًا للانتشار أو تقديرًا لأثر سببي."
+  },
+  {
+   "finding": "E2-6b:REVIEW",
+   "sheet": "02_SITE_MAP",
+   "row": 79,
+   "col": 7,
+   "field": "/evidence/QUAL-001/.meta_description_en",
+   "old": "The OECD on institutional fragility and weak formal access, and the IMF Board and the authorities on correspondent banking: qualitative assessments, each with its speaker.",
+   "new": "The OECD on institutional fragility and weak formal access, and the IMF Executive Board and the authorities on correspondent banking: qualitative assessments, each with its speaker."
+  }
+ ]
+}

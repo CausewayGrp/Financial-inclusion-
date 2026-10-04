@@ -1,5 +1,13 @@
 # Repository Change Log
 
+## 2026-10-04 — E2-6, E2-6b: the IMF on correspondent banking, each speaker named; docs/JUDGEMENT.md
+
+Master `e81b2ebc4068…` → `4ae052c9e51a…` (E2-6) → `dd14eed79a97c5222d989ef8fb251aa4b0493c1b3889b215d267e6f2643b8dc7`
+(E2-6b, review folded in). IMF Country Report No. 26/80 (owner-supplied PDF): the Executive Board's assessment (PDF p. 4)
+and the statement by the Executive Director for the Republic of Yemen (PDF p. 90) join QUAL-001 beside the OECD, each
+attributed; neither counts relationships, and a relocation is not a measure of de-risking. `docs/JUDGEMENT.md` (one page)
+joins AGENTS.md's reading order.
+
 ## 2026-10-04 — Edition 2 records: the lane's dispositions, what was not built, what the owner could supply
 
 `audit/edition_2/EDITION_2_LOG.md` closes with the candidates recorded and not built (e, the Findex waves drawn; f, phone
