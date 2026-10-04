@@ -74,7 +74,8 @@
       "fields": {
         "public_routes": "pipe_route_list",
         "source_dependencies": "semicolon_list",
-        "source_links": "json"
+        "source_links": "json",
+        "value_states": "json"
       },
       "derived_fields": [
         {
@@ -103,7 +104,7 @@
           "rule": "boundary_tail"
         }
       ],
-      "transformation": "One record per non-blank main-block row, keys in header order, values verbatim unless a field transform is declared. source_dependencies is projected as its ';'-separated token list and lineage_state verbatim (PB-0003). limitations_* carries part A (what the evidence does not establish) and, when recorded, part B (the limit of the measure) after the authored delimiter ' | '; both languages must carry the same structure. does_not_establish_* and measurement_limitation_* are the two parts (Pre-Tranche-C P4.3). public_routes is the authored ' | ' route list, projected as a list of routes with a trailing slash (Tranche C JRN-02).",
+      "transformation": "One record per non-blank main-block row, keys in header order, values verbatim unless a field transform is declared. source_dependencies is projected as its ';'-separated token list and lineage_state verbatim (PB-0003). limitations_* carries part A (what the evidence does not establish) and, when recorded, part B (the limit of the measure) after the authored delimiter ' | '; both languages must carry the same structure. does_not_establish_* and measurement_limitation_* are the two parts (Pre-Tranche-C P4.3). public_routes is the authored ' | ' route list, projected as a list of routes with a trailing slash (Tranche C JRN-02). value_states (Edition 2, E2-7) is the per-value verification ledger, projected as JSON so that its locators are never matched as reader-facing text.",
       "trailing_newline": false,
       "boundary_parity": [
         [

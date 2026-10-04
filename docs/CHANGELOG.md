@@ -1,5 +1,25 @@
 # Repository Change Log
 
+## 2026-10-04 — E2-7: a state for every published value; discrepancies fixed Master-first
+
+Master `dd14eed79a97…` → `332a942f6685e1463301f17d5bb1475cc2c341fab6b323ae06859c74b7f6914c` through `run_stage.py`
+(`audit/edition_2/e2_7_value_states.py`; inputs in `audit/edition_2/inputs/`). The originals were re-read on 4 October 2026.
+- **06 `value_states`** (new column, projected as JSON): one state per printed value and date of the 109 records the
+  literal audit traces (READ with locator, DERIVED, SITE, SEE, UNREACHABLE, TRIVIAL).
+- **Fixed, both languages:**
+  - POS limitation: every release since March 2025 is a one-page infographic, not "from July 2025".
+  - CLM-059 and /firms/: SMEPS reports the USD 54.7 million as disbursed.
+  - CLM-062: Figure 114, with the base of 217 on pp. 139 and 141.
+- **Bound:** sources read for a value now bind to its record (13 records).
+- **Named beside their values:**
+  - CLM-049, /reforms/ (the IMF release, 403): not re-read.
+  - CLM-020 and MF-ORIG-001+002 (the 2012 SFD document): not re-read.
+  - VIS-REMITTANCE-COST: reproduced exactly from the RPW quote-level dataset (8 and 6 quotes, one 22.71% outlier named).
+- **CLM-032 (lead 1):** the 2021 and 2022 remittance vintages in four CBY-Aden annual reports.
+- **Source library:** retrieval and document dates filled in 15.
+- **01:** the v0.42R3 lineage recorded.
+- **Renderer and runtime:** a printed table number ("4-1") is isolated left to right in Arabic.
+
 ## 2026-10-04 — E2-6, E2-6b: the IMF on correspondent banking, each speaker named; docs/JUDGEMENT.md
 
 Master `e81b2ebc4068…` → `4ae052c9e51a…` (E2-6) → `dd14eed79a97c5222d989ef8fb251aa4b0493c1b3889b215d267e6f2643b8dc7`

@@ -13,7 +13,10 @@ ISO_DATE = re.compile(r"(?<![A-Za-z0-9_-])\d{4}-\d{2}(?:-\d{2})?(?![\d-])")   # 
 # identifier ("SRC-…-2026-2030-001") or a decimal
 NUM_RANGE = re.compile(r"(?<![A-Za-z0-9_.,-])(?:\d{4}(?:-\d{2}(?:-\d{2})?)?[–-]\d{4}(?:-\d{2}(?:-\d{2})?)?|\d{1,3}(?:,\d{3})+–\d{1,3}(?:,\d{3})+|\d{1,3}–\d{1,3})(?!\d|[.,]\d)")
 SIGNED = re.compile(r"(?<![\w\u0600-\u06FF-])[+\u2212\u2013-]\d[\d,]*(?:\.\d+)?%?(?![\w])")   # +11%, +4.9%, −0.5 — the sign and the percent sign are bidi-neutral, so after Arabic letters an un-isolated run renders "%11+"
-LTR_RUN = re.compile(f"(?:{NUM_RANGE.pattern})|(?:{ISO_DATE.pattern})|(?:{SIGNED.pattern})")
+# a table or figure number as its source prints it ("Table 4-1"): after Arabic letters its parts would display reversed
+# (edition 2, E2-7)
+TABLE_NO = re.compile(r"(?<![\w.,\u2013-])\d{1,2}-\d{1,2}(?![\w.,\u2013-])")
+LTR_RUN = re.compile(f"(?:{NUM_RANGE.pattern})|(?:{ISO_DATE.pattern})|(?:{SIGNED.pattern})|(?:{TABLE_NO.pattern})")
 # A record, source or object identifier with a digit (CLM-001, FMIIP-BASELINE-2025-01, SRC-CBY-AR2022-001): left to right
 # and isolated wherever governed text reaches an Arabic page, but never "nw" — it breaks at its own hyphens.
 ID_RUN = re.compile(r"(?<![A-Za-z0-9_-])(?=[A-Z][A-Za-z0-9-]*\d)[A-Z][A-Z0-9]*(?:-[A-Za-z0-9]+)+(?![A-Za-z0-9_-])")
