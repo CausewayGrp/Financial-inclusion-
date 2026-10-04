@@ -1163,8 +1163,13 @@ class Content:
             for fk, label in (("type", card["kind"]), ("publisher", card["publisher"] or L("UI-DATA-FILTER-NOT-RECORDED")),
                               ("year", card["facets"]["year"] if card["facets"]["year"] != "none" else L("UI-DATA-FILTER-NOT-RECORDED"))):
                 facet_opts[fk].setdefault(card["facets"][fk], label)
-            for rt in doms:   # the domain's governed name, as the evidence landscape prints it (RC-10)
-                facet_opts["domain"].setdefault(rt.strip("/"), L("UI-LAND-DOM-" + rt.strip("/").upper()))
+            if doms:
+                for rt in doms:   # the domain's governed name, as the evidence landscape prints it (RC-10)
+                    facet_opts["domain"].setdefault(rt.strip("/"), L("UI-LAND-DOM-" + rt.strip("/").upper()))
+            else:
+                # B1: "Used on" must offer the same Not recorded value its sibling facets offer, or a source
+                # whose domain key is none cannot be reached by that filter.
+                facet_opts["domain"].setdefault("none", L("UI-DATA-FILTER-NOT-RECORDED"))
             card["regulatory"] = r.get("document_label") in REGULATORY_LABELS
             card["kind_line"] = " · ".join(x for x in [card["publisher"], card["kind"], card["date"]] if x)
             if display_ready and r.get("standalone_resource_card_eligible"):

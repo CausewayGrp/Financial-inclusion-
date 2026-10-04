@@ -3218,9 +3218,13 @@ try:
             if not _sel:
                 errors.append(f"RC-B13 the {_k} filter is missing {_lang}")
                 continue
-            for _o in re.findall(r'<option value="([^"]+)">', _sel.group(1)):
+            _offered = re.findall(r'<option value="([^"]+)">', _sel.group(1))
+            for _o in _offered:
                 if _o not in _vals:
                     errors.append(f"RC-B13 the {_k} filter offers {_o!r}, which no listed source carries {_lang}")
+            for _val in sorted(set(_vals)):
+                if _val not in _offered:
+                    errors.append(f"RC-B13 the {_k} filter has no option for {_val!r}, so a listed source is unreachable {_lang}")
         _orig = _ic13["UI-EVID-OPEN-ORIGINAL-SOURCE"][f"label_{_lang}"]
         for _a in re.findall(r'<a class="source-locator" href="https://web\.archive\.org/[^"]*"[^>]*>([^<]*)', _h):   # the link text, before its "opens in a new tab" span
             if _html.unescape(_a).strip() == _orig.strip():
