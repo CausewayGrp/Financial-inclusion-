@@ -770,21 +770,24 @@
       "SRC-CBY-BANK-NETWORK-MTG-2026-001",
       "SRC-CBY-YPCC-FOUND-2026-001",
       "SRC-CBY-YPCC-BOARD-2026-001",
-      "SRC-WB-FMIIP-P180708"
+      "SRC-WB-FMIIP-P180708",
+      "SRC-WB-FMIIP-ISR2-2026-001"
     ],
     "direct_source_ids": [
       "SRC-CBY-UNIFIED-NET-2026-001",
       "SRC-CBY-BANK-NETWORK-MTG-2026-001",
       "SRC-CBY-YPCC-FOUND-2026-001",
       "SRC-CBY-YPCC-BOARD-2026-001",
-      "SRC-WB-FMIIP-P180708"
+      "SRC-WB-FMIIP-P180708",
+      "SRC-WB-FMIIP-ISR2-2026-001"
     ],
     "resolved_source_ids": [
       "SRC-CBY-UNIFIED-NET-2026-001",
       "SRC-CBY-BANK-NETWORK-MTG-2026-001",
       "SRC-CBY-YPCC-FOUND-2026-001",
       "SRC-CBY-YPCC-BOARD-2026-001",
-      "SRC-WB-FMIIP-P180708"
+      "SRC-WB-FMIIP-P180708",
+      "SRC-WB-FMIIP-ISR2-2026-001"
     ],
     "resolved_via_object_ids": [],
     "context_reference_ids": [],
@@ -813,6 +816,11 @@
       {
         "source_id": "SRC-WB-FMIIP-P180708",
         "primary_url": "https://maps.worldbank.org/projects/wb/pid/P180708?status=active",
+        "metadata_state": "DISPLAY_READY"
+      },
+      {
+        "source_id": "SRC-WB-FMIIP-ISR2-2026-001",
+        "primary_url": "https://documents.worldbank.org/en/publication/documents-reports/documentdetail/099040826144025755",
         "metadata_state": "DISPLAY_READY"
       }
     ],
@@ -5419,14 +5427,16 @@
       "SRC-CBY-BANK-NETWORK-MTG-2026-001",
       "SRC-CBY-YPCC-FOUND-2026-001",
       "SRC-CBY-YPCC-BOARD-2026-001",
-      "SRC-WB-FMIIP-P180708"
+      "SRC-WB-FMIIP-P180708",
+      "SRC-WB-FMIIP-ISR2-2026-001"
     ],
     "resolved_source_ids": [
       "SRC-CBY-UNIFIED-NET-2026-001",
       "SRC-CBY-BANK-NETWORK-MTG-2026-001",
       "SRC-CBY-YPCC-FOUND-2026-001",
       "SRC-CBY-YPCC-BOARD-2026-001",
-      "SRC-WB-FMIIP-P180708"
+      "SRC-WB-FMIIP-P180708",
+      "SRC-WB-FMIIP-ISR2-2026-001"
     ],
     "resolved_via_object_ids": [],
     "context_reference_ids": [],
@@ -5455,6 +5465,11 @@
       {
         "source_id": "SRC-WB-FMIIP-P180708",
         "primary_url": "https://maps.worldbank.org/projects/wb/pid/P180708?status=active",
+        "metadata_state": "DISPLAY_READY"
+      },
+      {
+        "source_id": "SRC-WB-FMIIP-ISR2-2026-001",
+        "primary_url": "https://documents.worldbank.org/en/publication/documents-reports/documentdetail/099040826144025755",
         "metadata_state": "DISPLAY_READY"
       }
     ],
@@ -7638,6 +7653,7 @@
       "SRC-CBY-YPCC-FOUND-2026-001",
       "SRC-CBY-YPCC-BOARD-2026-001",
       "SRC-WB-FMIIP-P180708",
+      "SRC-WB-FMIIP-ISR2-2026-001",
       "SRC-WB-FINDEX-001"
     ],
     "resolved_via_object_ids": [
@@ -7720,6 +7736,11 @@
       {
         "source_id": "SRC-WB-FMIIP-P180708",
         "primary_url": "https://maps.worldbank.org/projects/wb/pid/P180708?status=active",
+        "metadata_state": "DISPLAY_READY"
+      },
+      {
+        "source_id": "SRC-WB-FMIIP-ISR2-2026-001",
+        "primary_url": "https://documents.worldbank.org/en/publication/documents-reports/documentdetail/099040826144025755",
         "metadata_state": "DISPLAY_READY"
       },
       {
@@ -8007,6 +8028,7 @@
       "SRC-CBY-YPCC-FOUND-2026-001",
       "SRC-CBY-YPCC-BOARD-2026-001",
       "SRC-WB-FMIIP-P180708",
+      "SRC-WB-FMIIP-ISR2-2026-001",
       "SRC-UNDP-FMIIP-001",
       "SRC-CBY-PAYREPORT-H1-2025"
     ],
@@ -8076,6 +8098,11 @@
       {
         "source_id": "SRC-WB-FMIIP-P180708",
         "primary_url": "https://maps.worldbank.org/projects/wb/pid/P180708?status=active",
+        "metadata_state": "DISPLAY_READY"
+      },
+      {
+        "source_id": "SRC-WB-FMIIP-ISR2-2026-001",
+        "primary_url": "https://documents.worldbank.org/en/publication/documents-reports/documentdetail/099040826144025755",
         "metadata_state": "DISPLAY_READY"
       },
       {
@@ -9631,6 +9658,7 @@
       "SRC-CBY-YPCC-FOUND-2026-001",
       "SRC-CBY-YPCC-BOARD-2026-001",
       "SRC-WB-FMIIP-P180708",
+      "SRC-WB-FMIIP-ISR2-2026-001",
       "SRC-WB-FINDEX-001"
     ],
     "resolved_via_object_ids": [
@@ -9713,6 +9741,11 @@
       {
         "source_id": "SRC-WB-FMIIP-P180708",
         "primary_url": "https://maps.worldbank.org/projects/wb/pid/P180708?status=active",
+        "metadata_state": "DISPLAY_READY"
+      },
+      {
+        "source_id": "SRC-WB-FMIIP-ISR2-2026-001",
+        "primary_url": "https://documents.worldbank.org/en/publication/documents-reports/documentdetail/099040826144025755",
         "metadata_state": "DISPLAY_READY"
       },
       {
@@ -9994,6 +10027,7 @@
       "SRC-CBY-YPCC-FOUND-2026-001",
       "SRC-CBY-YPCC-BOARD-2026-001",
       "SRC-WB-FMIIP-P180708",
+      "SRC-WB-FMIIP-ISR2-2026-001",
       "SRC-UNDP-FMIIP-001",
       "SRC-CBY-PAYREPORT-H1-2025"
     ],
@@ -10063,6 +10097,11 @@
       {
         "source_id": "SRC-WB-FMIIP-P180708",
         "primary_url": "https://maps.worldbank.org/projects/wb/pid/P180708?status=active",
+        "metadata_state": "DISPLAY_READY"
+      },
+      {
+        "source_id": "SRC-WB-FMIIP-ISR2-2026-001",
+        "primary_url": "https://documents.worldbank.org/en/publication/documents-reports/documentdetail/099040826144025755",
         "metadata_state": "DISPLAY_READY"
       },
       {

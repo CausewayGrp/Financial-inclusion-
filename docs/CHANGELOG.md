@@ -1,5 +1,20 @@
 # Repository Change Log
 
+## 2026-10-04 — E2-1, E2-1b: FPS and RTGS at 31 August 2025 (edition 2, first transaction)
+
+Master `90014e3bd271…` → `594abed998bb…` (E2-1) → `51a7f1930fcd21e514d608785abdb2a8887eeb6d4e2d591629477b87ebb7da75`
+(E2-1b, the independent review folded in) through `run_stage.py` (`audit/edition_2/e2_1_payment_rails_isr.py`,
+`audit/edition_2/e2_1b_review_fixes.py`; ledgers and reports in `audit/edition_2/runs/`). Branch `code/edition-2`.
+- VIS-PAYMENT-RAILS, CLM-018 and section 3 of CWR-009 said "no later operational state is recorded" while
+  VIS-PAYMENT-RAILS cites the World Bank's ISR sequence 2 (8 April 2026), which reports FPS and RTGS "developed and
+  operational: No" at 31 August 2025 (pp. 3–4) and the RTGS tender launched, the FPS tender expected shortly (p. 2).
+  The boundaries now say so, with "the day before the project became effective" so the status is not read as a stall;
+  "no later operational state" stays. CLM-018 gains the ISR as a source.
+- Gate RC-A1 keeps day-precise dates of undrawn steps out of a chain figure's text alternative, so the dated state sits
+  in the figure's boundary and the text alternative says it without a date.
+- The Arabic of CWR-009 section 3 names the fast payment system «نظام الدفع السريع», as every other cell does.
+- Four social images regenerated (CLM-018, VIS-PAYMENT-RAILS, both languages).
+
 ## 2026-10-04 — RC-19: the fix batch from the independent review of 70398d1
 
 Master `c700dc52bf81…` → `90014e3bd27133c34b8435090230cf5b28a3301dec9f366c6fedf047b5ea2838` through `run_stage.py`
