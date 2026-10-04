@@ -375,10 +375,13 @@ if(compareSelects.length>=2&&out){
     const parts=raw.split(',');
     if(!raw.trim()||parts.some(p=>!p.trim()))return {state:'error',reason:'malformed'};
     const ids=parts.map(p=>p.trim());
-    if(ids.length<2||ids.length>4)return {state:'error',reason:'count'};
+    if(ids.length>4)return {state:'error',reason:'count'};
     if(ids.some(id=>!/^[A-Za-z0-9._+-]+$/.test(id)))return {state:'error',reason:'malformed'};
     const unknown=ids.filter(id=>!validIds.has(id));
     if(unknown.length)return {state:'error',reason:'unknown',ids:unknown};
+    // B2: a reader entry is one valid record. Load it; do not treat it as a bad link.
+    // Two to four remain the comparison. Zero-length and five-plus stay count/malformed.
+    if(ids.length<2)return ids.length===1?{state:'ok',ids}:{state:'error',reason:'count'};
     return {state:'ok',ids};
   };
   const serialize=()=>compareSelects.map(sel=>sel.value).filter(Boolean).map(encodeURIComponent).join(',');
