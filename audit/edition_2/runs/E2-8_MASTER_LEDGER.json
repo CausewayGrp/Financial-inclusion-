@@ -1,0 +1,720 @@
+{
+ "transaction": "E2-8",
+ "summary": "A state for every dated chronology event; three event dates and one verb corrected to their sources; the IMF release named as not re-read; source dates",
+ "input_master_sha256": "332a942f6685e1463301f17d5bb1475cc2c341fab6b323ae06859c74b7f6914c",
+ "output_master_sha256": "6d10b18d6c00be00bf41f24be0b0e101932dea822a9edc9f5b8ceb4b8b4ff33b",
+ "cells_written": 79,
+ "changes": [
+  {
+   "finding": "E2-8:CHRONOLOGY",
+   "sheet": "14_SYSTEM_CHRONOLOGY",
+   "row": 4,
+   "col": 20,
+   "field": "header.value_states",
+   "old": null,
+   "new": "value_states"
+  },
+  {
+   "finding": "E2-8:CHRONOLOGY",
+   "sheet": "14_SYSTEM_CHRONOLOGY",
+   "row": 5,
+   "col": 20,
+   "field": "YSC-001.value_states",
+   "old": null,
+   "new": "[{\"t\":\"2014–2015\",\"k\":\"d\",\"s\":\"READ\",\"src\":\"SRC-IMF-AIV-2025-STAFF-001\",\"loc\":\"IMF CR 26/80 PDF (src/imf_cr2680_upload.pdf, obtained 2026-10-04; imf.org pages 403 today), staff report printed p.5 (PDF p.10) para 1\"},{\"t\":\"late 2014\",\"k\":\"d\",\"s\":\"READ\",\"src\":\"SRC-IMF-AIV-2025-STAFF-001\",\"loc\":\"IMF CR 26/80 PDF (src/imf_cr2680_upload.pdf, obtained 2026-10-04; imf.org pages 403 today), printed p.5 (PDF p.10) para 1; also DSA p.5 (PDF p.64) para 10\"},{\"t\":\"late 2015\",\"k\":\"d\",\"s\":\"READ\",\"src\":\"SRC-WB-YEM-OUTLOOK-2016-001\",\"loc\":\"worldbank.org/en/country/yemen/publication/economic-outlook-spring-2016, body para 'The escalated conflict...'\"},{\"t\":\"US$2 billion\",\"k\":\"v\",\"s\":\"READ\",\"src\":\"SRC-WB-YEM-OUTLOOK-2016-001\",\"loc\":\"worldbank.org/en/country/yemen/publication/economic-outlook-spring-2016, body para 'The escalated conflict...'\"},{\"t\":\"two months of imports\",\"k\":\"v\",\"s\":\"READ\",\"src\":\"SRC-WB-YEM-OUTLOOK-2016-001\",\"loc\":\"worldbank.org/en/country/yemen/publication/economic-outlook-spring-2016, body para 'The escalated conflict...'\"}]"
+  },
+  {
+   "finding": "E2-8:CHRONOLOGY",
+   "sheet": "14_SYSTEM_CHRONOLOGY",
+   "row": 6,
+   "col": 20,
+   "field": "YSC-002.value_states",
+   "old": null,
+   "new": "[{\"t\":\"February 2016\",\"k\":\"d\",\"s\":\"READ\",\"src\":\"SRC-WB-YEM-OUTLOOK-2016-001\",\"loc\":\"worldbank.org/en/country/yemen/publication/economic-outlook-spring-2016, body para 'The escalated conflict...'\"}]"
+  },
+  {
+   "finding": "E2-8:CHRONOLOGY",
+   "sheet": "14_SYSTEM_CHRONOLOGY",
+   "row": 7,
+   "col": 20,
+   "field": "YSC-003.value_states",
+   "old": null,
+   "new": "[{\"t\":\"2016\",\"k\":\"d\",\"s\":\"READ\",\"src\":\"SRC-WB-YEM-FRAGMENTATION-2025-001\",\"loc\":\"FMIIP PAD (22 May 2025), PDF p. 12, para. 8: 'In 2016, a decision was made ... to relocate the Central Bank of Yemen from Sana'a to Aden'\"},{\"t\":\"2016\",\"k\":\"d\",\"s\":\"READ\",\"src\":\"SRC-WB-YEM-FRAGMENTATION-2025-001\",\"loc\":\"FMIIP PAD PDF p.12 para 8\"}]"
+  },
+  {
+   "finding": "E2-8:CHRONOLOGY",
+   "sheet": "14_SYSTEM_CHRONOLOGY",
+   "row": 8,
+   "col": 20,
+   "field": "YSC-004.value_states",
+   "old": null,
+   "new": "[{\"t\":\"2017–2018\",\"k\":\"d\",\"s\":\"READ\",\"src\":\"SRC-WB-YEM-MONITOR-FALL2018-001\",\"loc\":\"Economic Monitoring Brief Fall 2018, PDF p.4, 'MONEY AND BANKING'\"},{\"t\":\"YER 811 billion\",\"k\":\"v\",\"s\":\"READ\",\"src\":\"SRC-WB-YEM-MONITOR-FALL2018-001\",\"loc\":\"Economic Monitoring Brief Fall 2018, PDF p.4, 'MONEY AND BANKING'\"},{\"t\":\"2014\",\"k\":\"d\",\"s\":\"READ\",\"src\":\"SRC-WB-YEM-MONITOR-FALL2018-001\",\"loc\":\"Economic Monitoring Brief Fall 2018, PDF p.4, 'MONEY AND BANKING'\"},{\"t\":\"YER 1,673 billion\",\"k\":\"v\",\"s\":\"READ\",\"src\":\"SRC-WB-YEM-MONITOR-FALL2018-001\",\"loc\":\"Economic Monitoring Brief Fall 2018, PDF p.4, 'MONEY AND BANKING'\"},{\"t\":\"end-2017\",\"k\":\"d\",\"s\":\"READ\",\"src\":\"SRC-WB-YEM-MONITOR-FALL2018-001\",\"loc\":\"Economic Monitoring Brief Fall 2018, PDF p.4, 'MONEY AND BANKING'\"},{\"t\":\"2018\",\"k\":\"d\",\"s\":\"READ\",\"src\":\"SRC-WB-YEM-MONITOR-FALL2018-001\",\"loc\":\"Economic Monitoring Brief Fall 2018, PDF p.4, 'MONEY AND BANKING'\"}]"
+  },
+  {
+   "finding": "E2-8:CHRONOLOGY",
+   "sheet": "14_SYSTEM_CHRONOLOGY",
+   "row": 9,
+   "col": 20,
+   "field": "YSC-005.value_states",
+   "old": null,
+   "new": "[{\"t\":\"March 2018\",\"k\":\"d\",\"s\":\"READ\",\"src\":\"SRC-SPA-SAU-CBY-DEPOSIT-2018-001\",\"loc\":\"SPA item w643267 (EN, corrected, 16 Mar 2018) and 1739575 (AR, 15 Mar 2018): agreement signed for the US$2 billion deposit\"},{\"t\":\"March 2018\",\"k\":\"d\",\"s\":\"READ\",\"src\":\"SRC-SPA-SAU-CBY-DEPOSIT-2018-001\",\"loc\":\"spa.gov.sa/w643267 body; spa.gov.sa/1739575 dateline\"},{\"t\":\"US$2 billion\",\"k\":\"v\",\"s\":\"READ\",\"src\":\"SRC-SPA-SAU-CBY-DEPOSIT-2018-001\",\"loc\":\"spa.gov.sa/w643267 title and body\"},{\"t\":\"stated aim (financial/economic position, riyal)\",\"k\":\"v\",\"s\":\"READ\",\"src\":\"SRC-SPA-SAU-CBY-DEPOSIT-2018-001\",\"loc\":\"spa.gov.sa/w643267 body\"}]"
+  },
+  {
+   "finding": "E2-8:CHRONOLOGY",
+   "sheet": "14_SYSTEM_CHRONOLOGY",
+   "row": 10,
+   "col": 20,
+   "field": "YSC-006.value_states",
+   "old": null,
+   "new": "[{\"t\":\"December 2019\",\"k\":\"d\",\"s\":\"READ\",\"src\":\"SRC-WB-YEM-MEU-2019-12-001\",\"loc\":\"Yemen MEU December 2019, PDF p.2 (main text) and PDF p.7 (Annex 2)\"}]"
+  },
+  {
+   "finding": "E2-8:CHRONOLOGY",
+   "sheet": "14_SYSTEM_CHRONOLOGY",
+   "row": 11,
+   "col": 20,
+   "field": "YSC-007.value_states",
+   "old": null,
+   "new": "[{\"t\":\"Early 2020\",\"k\":\"d\",\"s\":\"READ\",\"src\":\"SRC-WB-YEM-ECON-2020-04-001\",\"loc\":\"Additional URL: Yemen Monthly Economic Update February 2020, PDF p.3\"},{\"t\":\"2018\",\"k\":\"d\",\"s\":\"READ\",\"src\":\"SRC-SPA-SAU-CBY-DEPOSIT-2018-001\",\"loc\":\"SPA item w643267 (16 Mar 2018): the US$2 billion deposit agreement; source bound to YSC-007 in E2-8\"},{\"t\":\"US$2 billion\",\"k\":\"v\",\"s\":\"READ\",\"src\":\"SRC-WB-YEM-ECON-2020-04-001\",\"loc\":\"MEU Feb 2020 PDF p.3\"},{\"t\":\"end-January 2020\",\"k\":\"d\",\"s\":\"READ\",\"src\":\"SRC-WB-YEM-ECON-2020-04-001\",\"loc\":\"MEU Feb 2020 PDF p.3\"},{\"t\":\"multiple exchange-rate regimes; COVID-19 remittance risk\",\"k\":\"v\",\"s\":\"READ\",\"src\":\"SRC-WB-YEM-ECON-2020-04-001\",\"loc\":\"April 2020 page body\"}]"
+  },
+  {
+   "finding": "E2-8:CHRONOLOGY",
+   "sheet": "14_SYSTEM_CHRONOLOGY",
+   "row": 12,
+   "col": 20,
+   "field": "YSC-008.value_states",
+   "old": null,
+   "new": "[{\"t\":\"October 2022\",\"k\":\"d\",\"s\":\"READ\",\"src\":\"SRC-IMF-AIV-2025-STAFF-001\",\"loc\":\"IMF CR 26/80 PDF (src/imf_cr2680_upload.pdf, obtained 2026-10-04; imf.org pages 403 today), staff report printed p.6 (PDF p.11) para 6\"},{\"t\":\"January 2023\",\"k\":\"d\",\"s\":\"READ\",\"src\":\"SRC-IMF-AIV-2025-STAFF-001\",\"loc\":\"IMF CR 26/80 PDF (src/imf_cr2680_upload.pdf, obtained 2026-10-04; imf.org pages 403 today), printed p.6 (PDF p.11) para 6\"}]"
+  },
+  {
+   "finding": "E2-8:CHRONOLOGY",
+   "sheet": "14_SYSTEM_CHRONOLOGY",
+   "row": 13,
+   "col": 20,
+   "field": "YSC-009.value_states",
+   "old": null,
+   "new": "[{\"t\":\"21 February 2023\",\"k\":\"d\",\"s\":\"READ\",\"src\":\"SRC-SPA-SAU-CBY-DEPOSIT-2023-001\",\"loc\":\"spa.gov.sa/w1857622 dateline\"},{\"t\":\"US$1 billion\",\"k\":\"v\",\"s\":\"READ\",\"src\":\"SRC-SPA-SAU-CBY-DEPOSIT-2023-001\",\"loc\":\"spa.gov.sa/w1857622 body\"}]"
+  },
+  {
+   "finding": "E2-8:CHRONOLOGY",
+   "sheet": "14_SYSTEM_CHRONOLOGY",
+   "row": 14,
+   "col": 20,
+   "field": "YSC-010.value_states",
+   "old": null,
+   "new": "[{\"t\":\"2023–2024\",\"k\":\"d\",\"s\":\"READ\",\"src\":\"SRC-IMF-AIV-2025-STAFF-001\",\"loc\":\"IMF CR 26/80 PDF (src/imf_cr2680_upload.pdf, obtained 2026-10-04; imf.org pages 403 today), staff report printed p.9 (PDF p.14) para 12\"},{\"t\":\"US$1.2 billion\",\"k\":\"v\",\"s\":\"READ\",\"src\":\"SRC-IMF-AIV-2025-STAFF-001\",\"loc\":\"IMF CR 26/80 PDF (src/imf_cr2680_upload.pdf, obtained 2026-10-04; imf.org pages 403 today), staff report printed p.9 (PDF p.14) para 12\"},{\"t\":\"US$1 billion\",\"k\":\"v\",\"s\":\"READ\",\"src\":\"SRC-IMF-AIV-2025-STAFF-001\",\"loc\":\"IMF CR 26/80 PDF (src/imf_cr2680_upload.pdf, obtained 2026-10-04; imf.org pages 403 today), staff report printed p.9 (PDF p.14) para 12\"},{\"t\":\"US$0.775 billion\",\"k\":\"v\",\"s\":\"READ\",\"src\":\"SRC-IMF-AIV-2025-STAFF-001\",\"loc\":\"IMF CR 26/80 PDF (src/imf_cr2680_upload.pdf, obtained 2026-10-04; imf.org pages 403 today), staff report printed p.9 (PDF p.14) para 12\"},{\"t\":\"US$1.05 billion\",\"k\":\"v\",\"s\":\"READ\",\"src\":\"SRC-IMF-AIV-2025-STAFF-001\",\"loc\":\"IMF CR 26/80 PDF (src/imf_cr2680_upload.pdf, obtained 2026-10-04; imf.org pages 403 today), staff report printed p.9 (PDF p.14) para 12\"}]"
+  },
+  {
+   "finding": "E2-8:CHRONOLOGY",
+   "sheet": "14_SYSTEM_CHRONOLOGY",
+   "row": 15,
+   "col": 20,
+   "field": "YSC-011.value_states",
+   "old": null,
+   "new": "[{\"t\":\"2022–2024\",\"k\":\"d\",\"s\":\"READ\",\"src\":\"SRC-IMF-AIV-2025-STAFF-001\",\"loc\":\"IMF CR 26/80 PDF (src/imf_cr2680_upload.pdf, obtained 2026-10-04; imf.org pages 403 today), printed p.9 (PDF p.14) para 11; Figure 2 p.25 (PDF p.30)\"},{\"t\":\"40.5%\",\"k\":\"v\",\"s\":\"READ\",\"src\":\"SRC-IMF-AIV-2025-STAFF-001\",\"loc\":\"IMF CR 26/80 PDF (src/imf_cr2680_upload.pdf, obtained 2026-10-04; imf.org pages 403 today), printed p.9 (PDF p.14) para 11\"},{\"t\":\"14.5%\",\"k\":\"v\",\"s\":\"READ\",\"src\":\"SRC-IMF-AIV-2025-STAFF-001\",\"loc\":\"IMF CR 26/80 PDF (src/imf_cr2680_upload.pdf, obtained 2026-10-04; imf.org pages 403 today), printed p.9 (PDF p.14) para 11\"}]"
+  },
+  {
+   "finding": "E2-8:CHRONOLOGY",
+   "sheet": "14_SYSTEM_CHRONOLOGY",
+   "row": 16,
+   "col": 20,
+   "field": "YSC-012.value_states",
+   "old": null,
+   "new": "[{\"t\":\"March 2024\",\"k\":\"d\",\"s\":\"READ\",\"src\":\"SRC-WB-YEM-FRAGMENTATION-2025-001\",\"loc\":\"YEM Fall 2024 (additional URL of SRC-WB-YEM-FRAGMENTATION-2025-001), printed p.11 (PDF p.21); also PDF p.19\"},{\"t\":\"100-rial\",\"k\":\"v\",\"s\":\"READ\",\"src\":\"SRC-WB-YEM-FRAGMENTATION-2025-001\",\"loc\":\"YEM Fall 2024 (additional URL of SRC-WB-YEM-FRAGMENTATION-2025-001), printed p.11 (PDF p.21); also PDF p.19\"},{\"t\":\"April 2024\",\"k\":\"d\",\"s\":\"READ\",\"src\":\"SRC-WB-YEM-FRAGMENTATION-2025-001\",\"loc\":\"YEM Fall 2024 (additional URL of SRC-WB-YEM-FRAGMENTATION-2025-001), printed p.11 (PDF p.21); also PDF p.19\"},{\"t\":\"June 2024\",\"k\":\"d\",\"s\":\"READ\",\"src\":\"SRC-WB-YEM-FRAGMENTATION-2025-001\",\"loc\":\"YEM Fall 2024 (additional URL of SRC-WB-YEM-FRAGMENTATION-2025-001), printed p.11 (PDF p.21); also PDF p.19\"},{\"t\":\"June 2024 (wallets/payment services)\",\"k\":\"d\",\"s\":\"READ\",\"src\":\"SRC-CBY-UNLICENSED-EWALLET-2024-001\",\"loc\":\"cby-ye.com/files/667c32dabd223.pdf p.1 header (scanned; viewed as image)\"},{\"t\":\"June 2024 (remittance networks)\",\"k\":\"d\",\"s\":\"READ\",\"src\":\"SRC-CBY-DEC-23-2024-001\",\"loc\":\"cby-ye.com/files/667c596ef3bea.pdf p.1 header and title (scanned; viewed as image)\"}]"
+  },
+  {
+   "finding": "E2-8:CHRONOLOGY",
+   "sheet": "14_SYSTEM_CHRONOLOGY",
+   "row": 17,
+   "col": 20,
+   "field": "YSC-024.value_states",
+   "old": null,
+   "new": "[{\"t\":\"30 May 2024\",\"k\":\"d\",\"s\":\"READ\",\"src\":\"SRC-WB-G2PX-YEM-UCT-2024-001\",\"loc\":\"worldbank.org/en/events/2024/05/30/digitalizing-g2p-payments-in-yemen, event description ('Event Details Date: May 30, 2024')\"},{\"t\":\"eight districts\",\"k\":\"v\",\"s\":\"READ\",\"src\":\"SRC-WB-G2PX-YEM-UCT-2024-001\",\"loc\":\"worldbank.org/en/events/2024/05/30/digitalizing-g2p-payments-in-yemen, event description\"},{\"t\":\"45,460\",\"k\":\"v\",\"s\":\"READ\",\"src\":\"SRC-WB-G2PX-YEM-UCT-2024-001\",\"loc\":\"worldbank.org/en/events/2024/05/30/digitalizing-g2p-payments-in-yemen, event description\"}]"
+  },
+  {
+   "finding": "E2-8:CHRONOLOGY",
+   "sheet": "14_SYSTEM_CHRONOLOGY",
+   "row": 18,
+   "col": 20,
+   "field": "YSC-013.value_states",
+   "old": null,
+   "new": "[{\"t\":\"2024\",\"k\":\"d\",\"s\":\"READ\",\"src\":\"SRC-CBY-AR2024-BOP\",\"loc\":\"CBY-Aden Annual Report 2024, Table 4-1 BoP, printed p.40 (PDF p.40); also annex p.48\"},{\"t\":\"USD 6,245 million\",\"k\":\"v\",\"s\":\"READ\",\"src\":\"SRC-CBY-AR2024-BOP\",\"loc\":\"AR2024 Table 4-1, printed p.40\"},{\"t\":\"USD 3,422.16 million\",\"k\":\"v\",\"s\":\"READ\",\"src\":\"SRC-CBY-AR2025-BOP\",\"loc\":\"CBY-Aden Annual Report 2025, Table 4-1, printed p.44 (PDF p.44); annex p.52\"},{\"t\":\"45.2%\",\"k\":\"v\",\"s\":\"DERIVED\",\"src\":\"SRC-CBY-AR2025-BOP\",\"loc\":\"AR2024 p.40 and AR2025 p.44\"}]"
+  },
+  {
+   "finding": "E2-8:CHRONOLOGY",
+   "sheet": "14_SYSTEM_CHRONOLOGY",
+   "row": 19,
+   "col": 20,
+   "field": "YSC-014.value_states",
+   "old": null,
+   "new": "[{\"t\":\"2022\",\"k\":\"d\",\"s\":\"READ\",\"src\":\"SRC-IMF-AIV-2025-STAFF-001\",\"loc\":\"IMF CR 26/80 PDF (src/imf_cr2680_upload.pdf, obtained 2026-10-04; imf.org pages 403 today), staff report printed p.9 (PDF p.14) para 13\"},{\"t\":\"April 2025\",\"k\":\"d\",\"s\":\"READ\",\"src\":\"SRC-IMF-AIV-2025-STAFF-001\",\"loc\":\"IMF CR 26/80 PDF (src/imf_cr2680_upload.pdf, obtained 2026-10-04; imf.org pages 403 today), staff report printed p.9 (PDF p.14) para 13\"},{\"t\":\"148\",\"k\":\"v\",\"s\":\"READ\",\"src\":\"SRC-IMF-AIV-2025-STAFF-001\",\"loc\":\"IMF CR 26/80 PDF (src/imf_cr2680_upload.pdf, obtained 2026-10-04; imf.org pages 403 today), staff report printed p.9 (PDF p.14) para 13\"},{\"t\":\"69\",\"k\":\"v\",\"s\":\"READ\",\"src\":\"SRC-IMF-AIV-2025-STAFF-001\",\"loc\":\"IMF CR 26/80 PDF (src/imf_cr2680_upload.pdf, obtained 2026-10-04; imf.org pages 403 today), staff report printed p.9 (PDF p.14) para 13\"},{\"t\":\"about 5\",\"k\":\"v\",\"s\":\"READ\",\"src\":\"SRC-IMF-AIV-2025-STAFF-001\",\"loc\":\"IMF CR 26/80 PDF (src/imf_cr2680_upload.pdf, obtained 2026-10-04; imf.org pages 403 today), staff report printed p.9 (PDF p.14) para 13\"},{\"t\":\"2.5\",\"k\":\"v\",\"s\":\"READ\",\"src\":\"SRC-IMF-AIV-2025-STAFF-001\",\"loc\":\"IMF CR 26/80 PDF (src/imf_cr2680_upload.pdf, obtained 2026-10-04; imf.org pages 403 today), staff report printed p.9 (PDF p.14) para 13\"}]"
+  },
+  {
+   "finding": "E2-8:CHRONOLOGY",
+   "sheet": "14_SYSTEM_CHRONOLOGY",
+   "row": 20,
+   "col": 20,
+   "field": "YSC-018.value_states",
+   "old": null,
+   "new": "[{\"t\":\"17 June 2025\",\"k\":\"d\",\"s\":\"READ\",\"src\":\"SRC-WB-FMIIP-P180708\",\"loc\":\"WB press release 2025-06-17 (additional URL) dateline; WB Projects API v3 boardapprovaldate 2025-06-17\"},{\"t\":\"US$20 million\",\"k\":\"v\",\"s\":\"READ\",\"src\":\"SRC-WB-FMIIP-P180708\",\"loc\":\"press release 2025-06-17; ISR2 PDF p.7 (IDA-E4770, 20.00)\"},{\"t\":\"active\",\"k\":\"v\",\"s\":\"READ\",\"src\":\"SRC-WB-FMIIP-P180708\",\"loc\":\"search.worldbank.org/api/v3/projects?id=P180708\"},{\"t\":\"implemented by UNDP\",\"k\":\"v\",\"s\":\"READ\",\"src\":\"SRC-WB-FMIIP-P180708\",\"loc\":\"API v3 impagency; press release\"},{\"t\":\"30 June 2030\",\"k\":\"d\",\"s\":\"READ\",\"src\":\"SRC-WB-FMIIP-ISR2-2026-001\",\"loc\":\"ISR seq.2 PDF p.7 '7.3 Key Dates' and p.8 'Key Events'; API v3 closingdate 2030-06-30\"},{\"t\":\"report no. 2\",\"k\":\"v\",\"s\":\"READ\",\"src\":\"SRC-WB-FMIIP-ISR2-2026-001\",\"loc\":\"ISR PDF p.1 header\"},{\"t\":\"8 April 2026\",\"k\":\"d\",\"s\":\"READ\",\"src\":\"SRC-WB-FMIIP-ISR2-2026-001\",\"loc\":\"ISR PDF p.1 header and page footers 'Apr 08, 2026'; WDS docdt 2026-04-08\"}]"
+  },
+  {
+   "finding": "E2-8:CHRONOLOGY",
+   "sheet": "14_SYSTEM_CHRONOLOGY",
+   "row": 21,
+   "col": 20,
+   "field": "YSC-015.value_states",
+   "old": null,
+   "new": "[{\"t\":\"July 2025\",\"k\":\"d\",\"s\":\"READ\",\"src\":\"SRC-IMF-AIV-2025-STAFF-001\",\"loc\":\"IMF CR 26/80 PDF (src/imf_cr2680_upload.pdf, obtained 2026-10-04; imf.org pages 403 today), staff appraisal printed p.21 (PDF p.26); description printed p.7 (PDF p.12) para 8\"}]"
+  },
+  {
+   "finding": "E2-8:CHRONOLOGY",
+   "sheet": "14_SYSTEM_CHRONOLOGY",
+   "row": 22,
+   "col": 20,
+   "field": "YSC-016.value_states",
+   "old": null,
+   "new": "[{\"t\":\"Mid-July–early August 2025\",\"k\":\"d\",\"s\":\"READ\",\"src\":\"SRC-IMF-AIV-2025-STAFF-001\",\"loc\":\"IMF CR 26/80 PDF (src/imf_cr2680_upload.pdf, obtained 2026-10-04; imf.org pages 403 today), printed p.7 (PDF p.12) para 8; DSA printed p.9 (PDF p.68)\"},{\"t\":\"YER2,900\",\"k\":\"v\",\"s\":\"READ\",\"src\":\"SRC-IMF-AIV-2025-STAFF-001\",\"loc\":\"IMF CR 26/80 PDF (src/imf_cr2680_upload.pdf, obtained 2026-10-04; imf.org pages 403 today), printed p.7 (PDF p.12) para 8; DSA printed p.9 (PDF p.68)\"},{\"t\":\"YER1,600\",\"k\":\"v\",\"s\":\"READ\",\"src\":\"SRC-IMF-AIV-2025-STAFF-001\",\"loc\":\"IMF CR 26/80 PDF (src/imf_cr2680_upload.pdf, obtained 2026-10-04; imf.org pages 403 today), printed p.7 (PDF p.12) para 8; DSA printed p.9 (PDF p.68)\"}]"
+  },
+  {
+   "finding": "E2-8:CHRONOLOGY",
+   "sheet": "14_SYSTEM_CHRONOLOGY",
+   "row": 23,
+   "col": 20,
+   "field": "YSC-017.value_states",
+   "old": null,
+   "new": "[{\"t\":\"September 2025\",\"k\":\"d\",\"s\":\"READ\",\"src\":\"SRC-IMF-AIV-2025-STAFF-001\",\"loc\":\"IMF CR 26/80 PDF (src/imf_cr2680_upload.pdf, obtained 2026-10-04; imf.org pages 403 today), staff report printed p.9 (PDF p.14) para 12\"},{\"t\":\"US$350 million\",\"k\":\"v\",\"s\":\"READ\",\"src\":\"SRC-IMF-AIV-2025-STAFF-001\",\"loc\":\"IMF CR 26/80 PDF (src/imf_cr2680_upload.pdf, obtained 2026-10-04; imf.org pages 403 today), staff report printed p.9 (PDF p.14) para 12\"},{\"t\":\"one month of imports\",\"k\":\"v\",\"s\":\"READ\",\"src\":\"SRC-IMF-AIV-2025-STAFF-001\",\"loc\":\"IMF CR 26/80 PDF (src/imf_cr2680_upload.pdf, obtained 2026-10-04; imf.org pages 403 today), staff report printed p.9 (PDF p.14) para 12\"}]"
+  },
+  {
+   "finding": "E2-8:CHRONOLOGY",
+   "sheet": "14_SYSTEM_CHRONOLOGY",
+   "row": 24,
+   "col": 20,
+   "field": "YSC-019.value_states",
+   "old": null,
+   "new": "[{\"t\":\"1 March 2026\",\"k\":\"d\",\"s\":\"READ\",\"src\":\"SRC-SPA-SAU-BUDGET-2026-001\",\"loc\":\"spa.gov.sa/en/N2525739 dateline; AR N2525728 dateline\"},{\"t\":\"SAR1.3 billion\",\"k\":\"v\",\"s\":\"READ\",\"src\":\"SRC-SPA-SAU-BUDGET-2026-001\",\"loc\":\"spa.gov.sa/en/N2525739 body; AR N2525728\"}]"
+  },
+  {
+   "finding": "E2-8:CHRONOLOGY",
+   "sheet": "14_SYSTEM_CHRONOLOGY",
+   "row": 25,
+   "col": 20,
+   "field": "YSC-021.value_states",
+   "old": null,
+   "new": "[{\"t\":\"4 June 2026\",\"k\":\"d\",\"s\":\"READ\",\"src\":\"SRC-WB-YEM-CPF-2026-2030-001\",\"loc\":\"CPF PDF cover '[June 4, 2026]'; WDS docdt 2026-06-04\"},{\"t\":\"FY2026–FY2030\",\"k\":\"d\",\"s\":\"READ\",\"src\":\"SRC-WB-YEM-CPF-2026-2030-001\",\"loc\":\"CPF PDF cover; cpf page\"},{\"t\":\"four new operations\",\"k\":\"v\",\"s\":\"READ\",\"src\":\"SRC-WB-YEM-CPF-2026-2030-001\",\"loc\":\"World Bank press release of 4 June 2026 (additional locator of the CPF source, bound in E2-8): 'approved ... alongside four new operations totaling US$285 million'\"},{\"t\":\"US$285 million\",\"k\":\"v\",\"s\":\"READ\",\"src\":\"SRC-WB-YEM-CPF-2026-2030-001\",\"loc\":\"World Bank press release of 4 June 2026 (additional locator of the CPF source, bound in E2-8): 'approved ... alongside four new operations totaling US$285 million'\"},{\"t\":\"focus areas\",\"k\":\"v\",\"s\":\"READ\",\"src\":\"SRC-WB-YEM-CPF-2026-2030-001\",\"loc\":\"worldbank.org/ext/en/country/yemen/cpf\"}]"
+  },
+  {
+   "finding": "E2-8:CHRONOLOGY",
+   "sheet": "14_SYSTEM_CHRONOLOGY",
+   "row": 26,
+   "col": 20,
+   "field": "YSC-022.value_states",
+   "old": null,
+   "new": "[{\"t\":\"30 June 2026\",\"k\":\"d\",\"s\":\"READ\",\"src\":\"SRC-WB-YEM-CNL-2026-001\",\"loc\":\"worldbank.org press release 2026-06-30, body\"},{\"t\":\"US$100 million\",\"k\":\"v\",\"s\":\"READ\",\"src\":\"SRC-WB-YEM-CNL-2026-001\",\"loc\":\"worldbank.org press release 2026-06-30, body\"},{\"t\":\"1.8 million people\",\"k\":\"v\",\"s\":\"READ\",\"src\":\"SRC-WB-YEM-CNL-2026-001\",\"loc\":\"worldbank.org press release 2026-06-30, body\"},{\"t\":\"55,000\",\"k\":\"v\",\"s\":\"READ\",\"src\":\"SRC-WB-YEM-CNL-2026-001\",\"loc\":\"worldbank.org press release 2026-06-30, body\"},{\"t\":\"675,000\",\"k\":\"v\",\"s\":\"READ\",\"src\":\"SRC-WB-YEM-CNL-2026-001\",\"loc\":\"worldbank.org press release 2026-06-30, body\"}]"
+  },
+  {
+   "finding": "E2-8:CHRONOLOGY",
+   "sheet": "14_SYSTEM_CHRONOLOGY",
+   "row": 27,
+   "col": 20,
+   "field": "YSC-023.value_states",
+   "old": null,
+   "new": "[{\"t\":\"16 July 2026\",\"k\":\"d\",\"s\":\"UNREACHABLE\",\"src\":\"SRC-IMF-YEM-SMP-2026\",\"loc\":\"imf.org/en/news/articles/2026/07/16/pr26249-... : curl 403 (also /en/News/ casing), WebFetch 403, Wayback reset, archive.org availability API: no snapshot. Only a third-party mirror (Mirage News, src/mirage_imf_yemen_smp.html) was seen - no\",\"why\":\"imf.org refuses automated requests (HTTP 403); no archive copy reachable\"},{\"t\":\"18-month\",\"k\":\"v\",\"s\":\"UNREACHABLE\",\"src\":\"SRC-IMF-YEM-SMP-2026\",\"loc\":\"imf.org/en/news/articles/2026/07/16/pr26249-... : curl 403 (also /en/News/ casing), WebFetch 403, Wayback reset, archive.org availability API: no snapshot. Only a third-party mirror (Mirage News, src/mirage_imf_yemen_smp.html) was seen - no\",\"why\":\"imf.org refuses automated requests (HTTP 403); no archive copy reachable\"},{\"t\":\"subject to IMF Management approval\",\"k\":\"v\",\"s\":\"UNREACHABLE\",\"src\":\"SRC-IMF-YEM-SMP-2026\",\"loc\":\"imf.org/en/news/articles/2026/07/16/pr26249-... : curl 403 (also /en/News/ casing), WebFetch 403, Wayback reset, archive.org availability API: no snapshot. Only a third-party mirror (Mirage News, src/mirage_imf_yemen_smp.html) was seen - no\",\"why\":\"imf.org refuses automated requests (HTTP 403); no archive copy reachable\"},{\"t\":\"will not result in an Executive Board discussion\",\"k\":\"v\",\"s\":\"UNREACHABLE\",\"src\":\"SRC-IMF-YEM-SMP-2026\",\"loc\":\"imf.org/en/news/articles/2026/07/16/pr26249-... : curl 403 (also /en/News/ casing), WebFetch 403, Wayback reset, archive.org availability API: no snapshot. Only a third-party mirror (Mirage News, src/mirage_imf_yemen_smp.html) was seen - no\",\"why\":\"imf.org refuses automated requests (HTTP 403); no archive copy reachable\"}]"
+  },
+  {
+   "finding": "E2-8:CHRONOLOGY",
+   "sheet": "14_SYSTEM_CHRONOLOGY",
+   "row": 28,
+   "col": 20,
+   "field": "YSC-020.value_states",
+   "old": null,
+   "new": "[]"
+  },
+  {
+   "finding": "E2-8:CHRONOLOGY",
+   "sheet": "14_SYSTEM_CHRONOLOGY",
+   "row": 7,
+   "col": 2,
+   "field": "YSC-003.period_en",
+   "old": "September 2016",
+   "new": "2016"
+  },
+  {
+   "finding": "E2-8:CHRONOLOGY",
+   "sheet": "14_SYSTEM_CHRONOLOGY",
+   "row": 7,
+   "col": 17,
+   "field": "YSC-003.period_ar",
+   "old": "سبتمبر 2016",
+   "new": "2016"
+  },
+  {
+   "finding": "E2-8:CHRONOLOGY",
+   "sheet": "14_SYSTEM_CHRONOLOGY",
+   "row": 9,
+   "col": 2,
+   "field": "YSC-005.period_en",
+   "old": "January–March 2018",
+   "new": "March 2018"
+  },
+  {
+   "finding": "E2-8:CHRONOLOGY",
+   "sheet": "14_SYSTEM_CHRONOLOGY",
+   "row": 9,
+   "col": 17,
+   "field": "YSC-005.period_ar",
+   "old": "يناير–مارس 2018",
+   "new": "مارس 2018"
+  },
+  {
+   "finding": "E2-8:CHRONOLOGY",
+   "sheet": "14_SYSTEM_CHRONOLOGY",
+   "row": 25,
+   "col": 4,
+   "field": "YSC-021.fact_en",
+   "old": "The World Bank Group endorsed a Country Partnership Framework for Yemen for FY2026–FY2030 and approved four new operations totaling US$285 million. The framework focuses on nutrition, electricity, agribusiness, mariculture and fisheries, with women’s participation and private-sector development as cross-cutting enablers.",
+   "new": "The World Bank Group's Board of Executive Directors approved a Country Partnership Framework for Yemen for FY2026–FY2030 and approved four new operations totaling US$285 million. The framework focuses on nutrition, electricity, agribusiness, mariculture and fisheries, with women’s participation and private-sector development as cross-cutting enablers."
+  },
+  {
+   "finding": "E2-8:CHRONOLOGY",
+   "sheet": "14_SYSTEM_CHRONOLOGY",
+   "row": 25,
+   "col": 5,
+   "field": "YSC-021.fact_ar",
+   "old": "أقرت مجموعة البنك الدولي إطار شراكة قطرية لليمن للسنوات المالية 2026–2030، ووافقت على أربع عمليات جديدة بقيمة إجمالية قدرها 285 مليون دولار. يركز الإطار على التغذية والكهرباء والأعمال الزراعية والاستزراع البحري ومصايد الأسماك، مع اعتبار مشاركة النساء وتنمية القطاع الخاص عاملين عابرين للمجالات.",
+   "new": "وافق مجلس المديرين التنفيذيين لمجموعة البنك الدولي على إطار شراكة قطرية لليمن للسنوات المالية 2026–2030، ووافقت على أربع عمليات جديدة بقيمة إجمالية قدرها 285 مليون دولار. يركز الإطار على التغذية والكهرباء والأعمال الزراعية والاستزراع البحري ومصايد الأسماك، مع اعتبار مشاركة النساء وتنمية القطاع الخاص عاملين عابرين للمجالات."
+  },
+  {
+   "finding": "E2-8:CHRONOLOGY",
+   "sheet": "14_SYSTEM_CHRONOLOGY",
+   "row": 11,
+   "col": 6,
+   "field": "YSC-007.source_ids",
+   "old": "SRC-WB-YEM-ECON-2020-04-001",
+   "new": "SRC-WB-YEM-ECON-2020-04-001 | SRC-SPA-SAU-CBY-DEPOSIT-2018-001"
+  },
+  {
+   "finding": "E2-8:CHRONOLOGY",
+   "sheet": "14_SYSTEM_CHRONOLOGY",
+   "row": 27,
+   "col": 18,
+   "field": "YSC-023.verification_note_en",
+   "old": null,
+   "new": "The IMF press release could not be re-opened on 4 October 2026 (the IMF website refuses automated requests); this entry has not been re-read in the original for this edition."
+  },
+  {
+   "finding": "E2-8:CHRONOLOGY",
+   "sheet": "14_SYSTEM_CHRONOLOGY",
+   "row": 27,
+   "col": 19,
+   "field": "YSC-023.verification_note_ar",
+   "old": null,
+   "new": "تعذّرت إعادة فتح البيان الصحفي لصندوق النقد الدولي في 4 أكتوبر 2026 (يرفض موقع الصندوق الطلبات الآلية)، فلم يُتحقق من هذا المدخل في الأصل في هذه الطبعة."
+  },
+  {
+   "finding": "E2-8:CHRONOLOGY",
+   "sheet": "15_SOURCE_LIBRARY",
+   "row": 162,
+   "col": 3,
+   "field": "SRC-WB-YEM-CPF-2026-2030-001.additional_urls",
+   "old": "[\"https://www.worldbank.org/ext/en/country/yemen/cpf\"]",
+   "new": "[\"https://www.worldbank.org/ext/en/country/yemen/cpf\", \"https://www.worldbank.org/en/news/press-release/2026/06/04/yemen-world-bank-group-launches-new-country-partnership-framework-and-projects-to-support-better-livelihoods-and-more-jo\"]"
+  },
+  {
+   "finding": "E2-8:CHRONOLOGY",
+   "sheet": "15_SOURCE_LIBRARY",
+   "row": 110,
+   "col": 22,
+   "field": "SRC-ACAPS-YEM-REMIT-2021.retrieval_date",
+   "old": null,
+   "new": "2026-10-04"
+  },
+  {
+   "finding": "E2-8:CHRONOLOGY",
+   "sheet": "15_SOURCE_LIBRARY",
+   "row": 169,
+   "col": 22,
+   "field": "SRC-AMB-MFB-SUPERVISION-2026.retrieval_date",
+   "old": "2026-09-26",
+   "new": "2026-10-04"
+  },
+  {
+   "finding": "E2-8:CHRONOLOGY",
+   "sheet": "15_SOURCE_LIBRARY",
+   "row": 158,
+   "col": 22,
+   "field": "SRC-BIS-CPMI-FPS-RTGS-2021-001.retrieval_date",
+   "old": null,
+   "new": "2026-10-04"
+  },
+  {
+   "finding": "E2-8:CHRONOLOGY",
+   "sheet": "15_SOURCE_LIBRARY",
+   "row": 159,
+   "col": 22,
+   "field": "SRC-BIS-CPMI-PAFI-FINTECH-2020-001.retrieval_date",
+   "old": null,
+   "new": "2026-10-04"
+  },
+  {
+   "finding": "E2-8:CHRONOLOGY",
+   "sheet": "15_SOURCE_LIBRARY",
+   "row": 99,
+   "col": 22,
+   "field": "SRC-CBY-HIST-METHOD-001.retrieval_date",
+   "old": "2026-09-26",
+   "new": "2026-10-04"
+  },
+  {
+   "finding": "E2-8:CHRONOLOGY",
+   "sheet": "15_SOURCE_LIBRARY",
+   "row": 102,
+   "col": 22,
+   "field": "SRC-CBY-SANAA-C14-2024.retrieval_date",
+   "old": null,
+   "new": "2026-10-04"
+  },
+  {
+   "finding": "E2-8:CHRONOLOGY",
+   "sheet": "15_SOURCE_LIBRARY",
+   "row": 103,
+   "col": 22,
+   "field": "SRC-CBY-SANAA-CURR-2024.retrieval_date",
+   "old": "2026-09-26",
+   "new": "2026-10-04"
+  },
+  {
+   "finding": "E2-8:CHRONOLOGY",
+   "sheet": "15_SOURCE_LIBRARY",
+   "row": 153,
+   "col": 22,
+   "field": "SRC-CGAP-ARAB-MEAS-2017-001.retrieval_date",
+   "old": null,
+   "new": "2026-10-04"
+  },
+  {
+   "finding": "E2-8:CHRONOLOGY",
+   "sheet": "15_SOURCE_LIBRARY",
+   "row": 107,
+   "col": 22,
+   "field": "SRC-IGC-AIDDATA-REMIT-YEM-2026.retrieval_date",
+   "old": null,
+   "new": "2026-10-04"
+  },
+  {
+   "finding": "E2-8:CHRONOLOGY",
+   "sheet": "15_SOURCE_LIBRARY",
+   "row": 56,
+   "col": 22,
+   "field": "SRC-KFW-RMMV-2023-001.retrieval_date",
+   "old": null,
+   "new": "2026-10-04"
+  },
+  {
+   "finding": "E2-8:CHRONOLOGY",
+   "sheet": "15_SOURCE_LIBRARY",
+   "row": 165,
+   "col": 22,
+   "field": "SRC-KFW-YEM-MSME-FIN-III-47229.retrieval_date",
+   "old": null,
+   "new": "2026-10-04"
+  },
+  {
+   "finding": "E2-8:CHRONOLOGY",
+   "sheet": "15_SOURCE_LIBRARY",
+   "row": 126,
+   "col": 22,
+   "field": "SRC-LIT-INVEST-ISLAMIC-FI-2024.retrieval_date",
+   "old": null,
+   "new": "2026-10-04"
+  },
+  {
+   "finding": "E2-8:CHRONOLOGY",
+   "sheet": "15_SOURCE_LIBRARY",
+   "row": 133,
+   "col": 22,
+   "field": "SRC-MDPI-UTAUT-YEM-2022.retrieval_date",
+   "old": null,
+   "new": "2026-10-04"
+  },
+  {
+   "finding": "E2-8:CHRONOLOGY",
+   "sheet": "15_SOURCE_LIBRARY",
+   "row": 131,
+   "col": 22,
+   "field": "SRC-SANAA-EMONEY-2022.retrieval_date",
+   "old": null,
+   "new": "2026-10-04"
+  },
+  {
+   "finding": "E2-8:CHRONOLOGY",
+   "sheet": "15_SOURCE_LIBRARY",
+   "row": 130,
+   "col": 22,
+   "field": "SRC-SANAA-MF-2020.retrieval_date",
+   "old": null,
+   "new": "2026-10-04"
+  },
+  {
+   "finding": "E2-8:CHRONOLOGY",
+   "sheet": "15_SOURCE_LIBRARY",
+   "row": 109,
+   "col": 22,
+   "field": "SRC-SC-TRADE-FIN-YEM-2026.retrieval_date",
+   "old": null,
+   "new": "2026-10-04"
+  },
+  {
+   "finding": "E2-8:CHRONOLOGY",
+   "sheet": "15_SOURCE_LIBRARY",
+   "row": 41,
+   "col": 22,
+   "field": "SRC-WB-ES-2013-PROFILE-001.retrieval_date",
+   "old": null,
+   "new": "2026-10-04"
+  },
+  {
+   "finding": "E2-8:CHRONOLOGY",
+   "sheet": "15_SOURCE_LIBRARY",
+   "row": 94,
+   "col": 22,
+   "field": "SRC-WB-FINDEX-003.retrieval_date",
+   "old": null,
+   "new": "2026-10-04"
+  },
+  {
+   "finding": "E2-8:CHRONOLOGY",
+   "sheet": "15_SOURCE_LIBRARY",
+   "row": 95,
+   "col": 22,
+   "field": "SRC-WB-FINDEX-2014-001.retrieval_date",
+   "old": null,
+   "new": "2026-10-04"
+  },
+  {
+   "finding": "E2-8:CHRONOLOGY",
+   "sheet": "15_SOURCE_LIBRARY",
+   "row": 161,
+   "col": 22,
+   "field": "SRC-WB-G2PX-001.retrieval_date",
+   "old": null,
+   "new": "2026-10-04"
+  },
+  {
+   "finding": "E2-8:CHRONOLOGY",
+   "sheet": "15_SOURCE_LIBRARY",
+   "row": 108,
+   "col": 22,
+   "field": "SRC-WB-MDB40-2024.retrieval_date",
+   "old": null,
+   "new": "2026-10-04"
+  },
+  {
+   "finding": "E2-8:CHRONOLOGY",
+   "sheet": "15_SOURCE_LIBRARY",
+   "row": 97,
+   "col": 22,
+   "field": "SRC-WB-NFID-RFX-2026-001.retrieval_date",
+   "old": null,
+   "new": "2026-10-04"
+  },
+  {
+   "finding": "E2-8:CHRONOLOGY",
+   "sheet": "15_SOURCE_LIBRARY",
+   "row": 163,
+   "col": 22,
+   "field": "SRC-WB-YEM-CNL-2026-001.retrieval_date",
+   "old": null,
+   "new": "2026-10-04"
+  },
+  {
+   "finding": "E2-8:CHRONOLOGY",
+   "sheet": "15_SOURCE_LIBRARY",
+   "row": 162,
+   "col": 22,
+   "field": "SRC-WB-YEM-CPF-2026-2030-001.retrieval_date",
+   "old": null,
+   "new": "2026-10-04"
+  },
+  {
+   "finding": "E2-8:CHRONOLOGY",
+   "sheet": "15_SOURCE_LIBRARY",
+   "row": 146,
+   "col": 22,
+   "field": "SRC-WB-YEM-ECON-2020-04-001.retrieval_date",
+   "old": null,
+   "new": "2026-10-04"
+  },
+  {
+   "finding": "E2-8:CHRONOLOGY",
+   "sheet": "15_SOURCE_LIBRARY",
+   "row": 164,
+   "col": 22,
+   "field": "SRC-WB-YEM-ECON-MONITOR-2026-SPRING-001.retrieval_date",
+   "old": null,
+   "new": "2026-10-04"
+  },
+  {
+   "finding": "E2-8:CHRONOLOGY",
+   "sheet": "15_SOURCE_LIBRARY",
+   "row": 148,
+   "col": 22,
+   "field": "SRC-WB-YEM-FRAGMENTATION-2025-001.retrieval_date",
+   "old": null,
+   "new": "2026-10-04"
+  },
+  {
+   "finding": "E2-8:CHRONOLOGY",
+   "sheet": "15_SOURCE_LIBRARY",
+   "row": 145,
+   "col": 22,
+   "field": "SRC-WB-YEM-MEU-2019-12-001.retrieval_date",
+   "old": null,
+   "new": "2026-10-04"
+  },
+  {
+   "finding": "E2-8:CHRONOLOGY",
+   "sheet": "15_SOURCE_LIBRARY",
+   "row": 54,
+   "col": 22,
+   "field": "SRC-WB-YEM-MFI-2004-001.retrieval_date",
+   "old": null,
+   "new": "2026-10-04"
+  },
+  {
+   "finding": "E2-8:CHRONOLOGY",
+   "sheet": "15_SOURCE_LIBRARY",
+   "row": 143,
+   "col": 22,
+   "field": "SRC-WB-YEM-MONITOR-FALL2018-001.retrieval_date",
+   "old": null,
+   "new": "2026-10-04"
+  },
+  {
+   "finding": "E2-8:CHRONOLOGY",
+   "sheet": "15_SOURCE_LIBRARY",
+   "row": 142,
+   "col": 22,
+   "field": "SRC-WB-YEM-OUTLOOK-2016-001.retrieval_date",
+   "old": null,
+   "new": "2026-10-04"
+  },
+  {
+   "finding": "E2-8:CHRONOLOGY",
+   "sheet": "15_SOURCE_LIBRARY",
+   "row": 45,
+   "col": 22,
+   "field": "SRC-YMN-AR-2012-001.retrieval_date",
+   "old": null,
+   "new": "2026-10-04"
+  },
+  {
+   "finding": "E2-8:CHRONOLOGY",
+   "sheet": "15_SOURCE_LIBRARY",
+   "row": 47,
+   "col": 22,
+   "field": "SRC-YMN-MEMBERS-2026-001.retrieval_date",
+   "old": null,
+   "new": "2026-10-04"
+  },
+  {
+   "finding": "E2-8:CHRONOLOGY",
+   "sheet": "15_SOURCE_LIBRARY",
+   "row": 158,
+   "col": 28,
+   "field": "SRC-BIS-CPMI-FPS-RTGS-2021-001.document_date",
+   "old": null,
+   "new": "2021-12-14"
+  },
+  {
+   "finding": "E2-8:CHRONOLOGY",
+   "sheet": "15_SOURCE_LIBRARY",
+   "row": 159,
+   "col": 28,
+   "field": "SRC-BIS-CPMI-PAFI-FINTECH-2020-001.document_date",
+   "old": null,
+   "new": "2020-04-14"
+  },
+  {
+   "finding": "E2-8:CHRONOLOGY",
+   "sheet": "15_SOURCE_LIBRARY",
+   "row": 103,
+   "col": 28,
+   "field": "SRC-CBY-SANAA-CURR-2024.document_date",
+   "old": null,
+   "new": "2024-06-04"
+  },
+  {
+   "finding": "E2-8:CHRONOLOGY",
+   "sheet": "15_SOURCE_LIBRARY",
+   "row": 153,
+   "col": 28,
+   "field": "SRC-CGAP-ARAB-MEAS-2017-001.document_date",
+   "old": null,
+   "new": "2017-03"
+  },
+  {
+   "finding": "E2-8:CHRONOLOGY",
+   "sheet": "15_SOURCE_LIBRARY",
+   "row": 126,
+   "col": 28,
+   "field": "SRC-LIT-INVEST-ISLAMIC-FI-2024.document_date",
+   "old": null,
+   "new": "2024-06-30"
+  },
+  {
+   "finding": "E2-8:CHRONOLOGY",
+   "sheet": "15_SOURCE_LIBRARY",
+   "row": 131,
+   "col": 28,
+   "field": "SRC-SANAA-EMONEY-2022.document_date",
+   "old": null,
+   "new": "2022-03-07"
+  },
+  {
+   "finding": "E2-8:CHRONOLOGY",
+   "sheet": "15_SOURCE_LIBRARY",
+   "row": 163,
+   "col": 28,
+   "field": "SRC-WB-YEM-CNL-2026-001.document_date",
+   "old": null,
+   "new": "2026-06-30"
+  },
+  {
+   "finding": "E2-8:CHRONOLOGY",
+   "sheet": "15_SOURCE_LIBRARY",
+   "row": 162,
+   "col": 28,
+   "field": "SRC-WB-YEM-CPF-2026-2030-001.document_date",
+   "old": null,
+   "new": "2026-06-04"
+  },
+  {
+   "finding": "E2-8:CHRONOLOGY",
+   "sheet": "15_SOURCE_LIBRARY",
+   "row": 164,
+   "col": 28,
+   "field": "SRC-WB-YEM-ECON-MONITOR-2026-SPRING-001.document_date",
+   "old": null,
+   "new": "2026-05-21"
+  },
+  {
+   "finding": "E2-8:CHRONOLOGY",
+   "sheet": "15_SOURCE_LIBRARY",
+   "row": 148,
+   "col": 28,
+   "field": "SRC-WB-YEM-FRAGMENTATION-2025-001.document_date",
+   "old": null,
+   "new": "2025-05-22"
+  },
+  {
+   "finding": "E2-8:CHRONOLOGY",
+   "sheet": "15_SOURCE_LIBRARY",
+   "row": 132,
+   "col": 28,
+   "field": "SRC-SANAA-MFB-2024.document_date",
+   "old": "2024",
+   "new": "2024-09-23"
+  }
+ ]
+}

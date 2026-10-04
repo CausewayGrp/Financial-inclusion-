@@ -115,6 +115,19 @@ def full_alt_text(vid: str, lang: str) -> str:
     return _h.escape(next(v for v in vis if v["visual_id"] == vid)["governed"][f"alt_text_{lang}"], quote=False)
 
 
+def edit_states(oid: str, edit):
+    """Change one record's value_states in the projected evidence objects (E2-READ / E2-DATES): `edit` maps the list."""
+    import json as _j   # noqa: PLC0415
+
+    def mutate(text):
+        objs = _j.loads(text)
+        for o in objs:
+            if o["object_id"] == oid:
+                o["value_states"] = edit(o["value_states"])
+        return _j.dumps(objs, ensure_ascii=False, indent=2)
+    return mutate
+
+
 # name, the file to break, how to break it, the gate text that must appear.
 # The text must be a substring of the real message: several gates interpolate a route or a visual id into the middle of
 # theirs, so a control that names the gate and then the wording would never match (found by running these).
@@ -391,6 +404,22 @@ CONTROLS = [
     ("the guarantee volume loses its boundary", "en/firms/index.html",
      replace("not how many firms could borrow", "how firms borrowed", 0),
      "E2-YLG en/firms/index.html prints the guarantee volume without saying it is not firms' access to finance"),
+    # E2-READ and E2-DATES (owner message of 4 October 2026, block 1): bound is not read; dates are values.
+    ("a page prints an event date no record states", "en/reforms/index.html",
+     into_main(lambda: "<p>On 17 May 2019 the authority closed the register.</p>"),
+     "E2-DATES en/reforms/index.html prints the date 2019-05-17, which no record, event or source states"),
+    ("a record's printed date loses its state", "site-src/content/evidence/evidence_objects.json",
+     edit_states("CLM-001", lambda vs: [e for e in vs if e["t"] != "7 November 2022"]),
+     "E2-DATES CLM-001 summary_en prints the date 2022-11-07 without a stated state in its record"),
+    ("a traced value loses its state", "site-src/content/evidence/evidence_objects.json",
+     edit_states("CLM-001", lambda vs: [e for e in vs if e["t"] != "11.9%"]),
+     "E2-READ /people/ prints '11.9%', traced to CLM-001, which gives it no state"),
+    ("a read value loses its locator", "site-src/content/evidence/evidence_objects.json",
+     edit_states("CLM-001", lambda vs: [dict(e, loc="") if e["t"] == "11.9%" else e for e in vs]),
+     "E2-READ CLM-001 value '11.9%' is READ without a source and locator"),
+    ("a value whose original was not opened loses its label", "en/evidence/CLM-049/index.html",
+     replace("not been re-read in the original", "been checked", 0),
+     "E2-READ en/evidence/CLM-049/ prints"),
     # RC-NOINDEX (owner decision B3): until release every page carries the pre-release noindex meta.
     ("a page loses its pre-release noindex", "en/people/index.html",
      replace('<meta name="robots" content="noindex, nofollow">', ""),

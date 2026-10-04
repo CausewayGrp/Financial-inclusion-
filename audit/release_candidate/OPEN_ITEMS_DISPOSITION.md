@@ -379,3 +379,15 @@ and their reasons are in `audit/edition_2/EDITION_2_LOG.md`.
 | VIS-PAYMENT-RAILS wording | **DONE.** E2-1: FPS and RTGS not operational at 31 August 2025 per the ISR; "no later operational state" kept. |
 
 Nothing in this addendum declares DESIGN HANDOFF READY or PUBLIC RELEASE READY.
+
+### Second edition-2 pass (owner message of 4 October 2026, 12:40 Aden)
+
+| Item | Disposition |
+|---|---|
+| S5-CORRESPONDENT | **DONE.** E2-6: the IMF Executive Board's assessment and the authorities' statement in QUAL-001, each attributed. |
+| E2-VERIFY (bound is not read) | **DONE, new.** E2-7, E2-8: a state for every traced value and date (06, 14 `value_states`); discrepancies fixed Master-first; unreachable originals labelled; gates E2-READ, E2-DATES. |
+| E2-LEAD1 (remittance revisions) | **DONE.** CLM-032: four CBY-Aden vintages for 2021 and 2022. |
+| E2-LEAD3 (IMF soundness indicators) | **NEXT EDITION.** Needs a record route (steward's navigation contract); the NPL series reports 0.0 where nothing was reported. |
+| E2-LEAD4 (public locators) | **Partly DONE.** Two with a job bound; the rest recorded with their jobs in the edition-2 log. |
+| E2-LEAD5 (contradiction register) | **Partly DONE.** Built as `audit/edition_2/CONTRADICTION_REGISTER.md`; a public form needs a /methodology/ tier (steward). |
+| Owner's browser list | **OWNER.** The originals that refuse automated requests are listed in the edition-2 log. |

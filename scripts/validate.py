@@ -3559,6 +3559,112 @@ try:
 except Exception as _x:
     errors.append("E2-YLG unreadable " + repr(_x))
 
+# E2-READ and E2-DATES (owner message of 4 October 2026, block 1): bound is not read. Every value and date a page prints
+# carries a state in the Master (06 / 14 value_states: READ with locator, DERIVED from values read, SITE = this resource's
+# own date or count, SEE:<record>, LOCATOR = a page or table number of a cited original, TRIVIAL, UNREACHABLE).
+# E2-READ: every number the literal audit traces to a record has a state in that record; a READ or DERIVED state names
+# its source and locator; and every page that prints a value whose original could not be opened says so beside it, in
+# its own language. E2-DATES: every date in a record's or a chronology event's governed text has a stated state in that
+# record, and every day-month-year or month-year date on a built page is a stated date or the governed document date or
+# title date of a source with a public locator.
+_E2_OK = ("READ", "DERIVED", "SITE", "UNREACHABLE", "LOCATOR", "TRIVIAL")
+_E2_LABEL = {"en": "not been re-read in the original", "ar": "فلم تُعَد في هذا الإصدار قراءةُ"}
+_E2_EN = ("January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November",
+          "December")
+_E2_AR = ("يناير", "فبراير", "مارس", "أبريل", "مايو", "يونيو", "يوليو", "أغسطس", "سبتمبر", "أكتوبر", "نوفمبر", "ديسمبر")
+
+
+def _e2_dates(txt, months):
+    for _m in re.finditer(r"(?<!\d)(?:(\d{1,2})\s+)?(" + "|".join(months) + r")\s+(\d{4})(?!\d)", txt):
+        yield f"{_m.group(3)}-{months.index(_m.group(2)) + 1:02d}" + (f"-{int(_m.group(1)):02d}" if _m.group(1) else "")
+
+
+def _e2_iso(t):
+    return set(_e2_dates(t, _E2_EN)) | set(_e2_dates(t, _E2_AR)) | set(re.findall(r"(?<!\d)\d{4}-\d{2}(?:-\d{2})?(?!\d)", t))
+
+
+try:
+    _ev = json.loads((ROOT / "site-src/content/evidence/evidence_objects.json").read_text(encoding="utf-8"))
+    _ch = json.loads((ROOT / "site-src/content/visuals/system_chronology.json").read_text(encoding="utf-8"))
+    _sl = json.loads((ROOT / "site-src/content/sources/source_library.json").read_text(encoding="utf-8"))
+    _sl = _sl if isinstance(_sl, list) else _sl.get("sources", [])
+    _evid = {o["object_id"]: o for o in _ev}
+    _stated, _unreach, _nst = set(), {}, 0
+    for _rec in list(_ev) + list(_ch):
+        _vs = _rec.get("value_states")
+        _rid = _rec.get("object_id") or _rec.get("event_id")
+        if _vs is None:
+            continue
+        _nst += 1
+        _have = set()
+        for _e in _vs:
+            _ok = _e.get("s") in _E2_OK or str(_e.get("s")).startswith("SEE:")
+            if not _ok:
+                errors.append(f"E2-READ {_rid} value {_e.get('t')!r} has the state {_e.get('s')!r}, which is not a stated state")
+            if _e.get("s") in ("READ", "DERIVED") and not (_e.get("src") and _e.get("loc")):
+                errors.append(f"E2-READ {_rid} value {_e.get('t')!r} is {_e.get('s')} without a source and locator")
+            if _e.get("s") == "UNREACHABLE":
+                _unreach.setdefault(_rid, []).append(_e.get("t"))
+            if _ok:
+                _have |= _e2_iso(str(_e.get("t")))
+        _stated |= _have
+        for _fld in ("title", "summary", "definition", "period", "universe", "method", "limitations", "currentness", "fact"):
+            for _lang, _months in (("en", _E2_EN), ("ar", _E2_AR)):
+                for _d in _e2_dates(str(_rec.get(f"{_fld}_{_lang}") or ""), _months):
+                    if _d not in _have:
+                        errors.append(f"E2-DATES {_rid} {_fld}_{_lang} prints the date {_d} without a stated state in its record")
+    if _nst < 120:
+        errors.append(f"E2-READ only {_nst} records and events carry value states")
+    # every number the literal audit traces to a record has a state there (years are periods, as in the literal audit)
+    _nt = 0
+    for _r in json.loads((ROOT / "audit/PUBLIC_LITERAL_CLOSURE.json").read_text(encoding="utf-8"))["records"]:
+        _o = _r.get("source_object")
+        if _o not in _evid or _r.get("category") == "DATE_OR_PERIOD":
+            continue
+        _c = re.search(r"\d+(?:[,.]\d+)*", _r["token"])
+        if not _c or re.fullmatch(r"(?:19|20)\d\d", _c.group(0).replace(",", "")):
+            continue
+        _nt += 1
+        _c = _c.group(0).replace(",", "")
+        if not any(_c in str(_e.get("t")).replace(",", "") for _e in (_evid[_o].get("value_states") or [])):
+            errors.append(f"E2-READ {_r['route']} prints {_r['token']!r}, traced to {_o}, which gives it no state")
+    if _nt < 5000:
+        errors.append(f"E2-READ read only {_nt} traced numbers")
+    # a value whose original could not be opened is labelled wherever its record prints it
+    for _rid, _toks in _unreach.items():
+        _o = _evid.get(_rid)
+        _routes = (_o.get("public_route_list") or []) + [f"/evidence/{_rid}/"] if _o else [
+            r if r.endswith("/") else r + "/" for r in (str(next(x for x in _ch if x["event_id"] == _rid).get("linked_routes") or "").replace(" ", "").split("|")) if r]
+        for _route in dict.fromkeys(_routes):
+            for _lang in ("en", "ar"):
+                _f = DIST / _lang / _route.strip("/") / "index.html"
+                if not _f.exists():
+                    continue
+                _t = re.sub(r"\s+", " ", _html.unescape(re.sub(r"<[^>]+>", " ", re.sub(r"<(script|style)\b[^>]*>.*?</\1>", " ", _f.read_text(encoding="utf-8"), flags=re.S))))
+                _t = _t.replace("⁦", "").replace("⁩", "")
+                _shown = [t for t in _toks if re.search(r"(?<![\d,.])" + re.escape(t) + r"(?![\d,])", _t)]
+                if _shown and _E2_LABEL[_lang] not in _t:
+                    errors.append(f"E2-READ {_lang}{_route} prints {_shown[0]!r} of {_rid}, whose original could not be opened, without saying so")
+    # every printed date on a built page is stated
+    _srcd = set()
+    for _s in _sl:
+        if str(_s.get("primary_url") or "").startswith(("http://", "https://")):
+            if _s.get("document_date"):
+                _srcd.add(str(_s["document_date"])[:10])
+            _srcd |= _e2_iso(str(_s.get("display_title") or "")) | _e2_iso(str(_s.get("display_title_ar") or ""))
+    _np = 0
+    for _lang, _months in (("en", _E2_EN), ("ar", _E2_AR)):
+        for _f in sorted((DIST / _lang).rglob("index.html")):
+            _np += 1
+            _t = re.sub(r"\s+", " ", _html.unescape(re.sub(r"<[^>]+>", " ", re.sub(r"<(script|style)\b[^>]*>.*?</\1>", " ", _f.read_text(encoding="utf-8"), flags=re.S))))
+            for _d in sorted(set(_e2_dates(_t.replace("⁦", "").replace("⁩", ""), _months))):
+                if _d not in _stated and _d not in _srcd:
+                    errors.append(f"E2-DATES {_f.relative_to(DIST)} prints the date {_d}, which no record, event or source states")
+    if _np < 280:
+        errors.append(f"E2-DATES read only {_np} pages")
+except Exception as _x:
+    errors.append("E2-READ/E2-DATES unreadable " + repr(_x))
+
 print(f'HTML={len(list(DIST.rglob("*.html")))} ERRORS={len(errors)} WARN={len(warns)}')
 if warns:
     for w in warns[:20]: print('WARN',w)

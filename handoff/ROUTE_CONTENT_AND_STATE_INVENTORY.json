@@ -2,8 +2,8 @@
  "schema": "YFIE_ROUTE_CONTENT_AND_STATE_INVENTORY/1.3",
  "purpose": "Design recipient's map of every route, its family, bindings, collections, next actions and the states Design must cover. Derived; not authority.",
  "generated_from": {
-  "production_master_sha256": "332a942f6685e1463301f17d5bb1475cc2c341fab6b323ae06859c74b7f6914c",
-  "page_specs_sha256": "a3f901346cf4bf13966078dd4192dd05db885a2f263115d68de6437dc928cbc5",
+  "production_master_sha256": "f3e06fb935d0181211cc73f648eff588388ddda41a4c8f7eb2406b8396333514",
+  "page_specs_sha256": "016ca988b57f63419c4685d0b8b2eb31be7984a0554ae5318796f9e64481b12e",
   "generator": "scripts/handoff_inventory.py"
  },
  "counts": {
@@ -2893,12 +2893,12 @@
    "reading_ids": [],
    "measurement_ids": [],
    "source_ids": [],
-   "source_references": 2,
+   "source_references": 3,
    "next_actions": [],
    "next_action_policy": "SOURCE_RELATED_CORRECTION_OR_REUSE",
    "lineage_state": "BOUND_EXACT",
    "verification_state": "SOURCES_LISTED",
-   "public_sources_listed": 2,
+   "public_sources_listed": 3,
    "structured_data": [
     "BreadcrumbList"
    ],

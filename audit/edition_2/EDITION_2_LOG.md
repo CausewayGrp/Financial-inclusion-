@@ -126,3 +126,78 @@
 - E2-4 shipped a design flaw (counterpart numbers inside records) that only the adversarial reviewer caught. The rule
   it broke (a number traces to the record that governs it) should have been my first check; it is now a gate.
 - E2-2 broke two existing negative controls on CI, which I would have seen by running the full suite before pushing.
+
+## Second owner message (4 October 2026, 12:40 Aden): verification, leads, method
+
+Appended; the lines above stand.
+
+**Verification (block 1).** Every value and date that the literal audit traces to an Evidence Record was re-read in its
+original on 4 October 2026: 109 records and the 24 chronology events. Each now carries a state in the Master (06 and 14
+`value_states`). The gates E2-READ and E2-DATES assert it on what a reader sees.
+- **Counts (records):** 534 read, 39 derived from values read, 15 the site's own dates or counts, 2 governed by another
+  record, 6 unreachable, 212 trivial.
+- **Counts (events):** 76 read or derived, 4 unreachable, 5 not found. The not-found items were fixed: YSC-003, YSC-005,
+  YSC-007, YSC-021.
+- **Mismatches fixed Master-first, both languages:** the POS infographic sentence; SMEPS's USD 54.7 million, which it
+  reports as disbursed; the FSD figure locator; the CPF verb "approved"; three event dates now held to what their
+  sources state; CLM-054's savers universe (microfinance banks).
+- **Read and unreachable values:** SFD's 93,118 is now read in the publisher's file (newsletter No. 72, p. 13). The four
+  RPW corridor costs are reproduced exactly from the World Bank's quote-level dataset. The unreachable values are
+  labelled where they print.
+
+**Owner's browser list** (these originals refuse automated requests from here):
+- IMF press release PR26/249 of 16 July 2026 (CLM-049, YSC-023).
+- The two RPW corridor pages (VIS-REMITTANCE-COST; values reproduced, page not seen).
+- The 2012 SFD microfinance TOR (web.archive.org; the 1997 origin).
+- SFD/SMED loan-portfolio page, November 2023 (78,686 is read only in the Sana'a Center paper).
+- SFD newsletter Q4 2000; CBY Annual Report 2015 (centralbank.gov.ye, 503).
+- Mandumah record 932295; the Sana'a circular No. 12 of 2024 (404).
+- OECD youth digital financial inclusion (2020); the World Bank FASTT fast-payments flagship.
+- ResearchGate 393091523; ASJP article 273259.
+- UNDP FMIIP page; IMF D4D page (read via another route).
+
+**Locator discrepancies:**
+- SRC-CBY-SANAA-C14-2024 points to UN Panel of Experts report S/2024/731, not to the circular.
+- The SRC-WB-NFID-RFX-2026-001 page no longer shows a Yemen item.
+
+**Leads (block 2):**
+1. **Remittance revisions.** BUILT in CLM-032. For 2021 the 2022–2025 reports print 4,043, 5,400.0, 5,625 and 2,900.22
+   (USD million). The 2022 annex's shifted labels are noted.
+2. **IMF vs CBY balance-of-payments method.** Already held in CLM-036 and CLM-037 (Table 4 confirmed). No change.
+3. **IMF financial soundness indicators.** RECORDED, NOT BUILT. No existing record fits, and a new route needs the
+   steward's navigation contract. The IMF table also prints 0.0 for non-performing loans in 2014–2019, a value that was
+   not reported, so drawing that series would print missing as zero.
+4. **Public locators.** 38 CBY-Aden documents and 36 SFD newsletters are live. Only two had a job now: the Sana'a Center
+   microfinance-bank brief (dated exactly, 23 September 2024; DeepRoot brief No. 29 is the same file) and the CPF press
+   release (bound to YSC-021). The rest are recorded, with their jobs, for the next edition:
+   - SFD Nos. 64, 67, 68, 86, 88 and 90 would add points to the microfinance spine.
+   - The SDRPY notice of 27 December 2024 (US$300 million deposit) would add a stage to CLM-046.
+   - The December 2022 Monetary and Financial Developments issue would serve CLM-033.
+   - IGC "From cash to capital" is already in the library and is cited by no record.
+5. **Contradiction register.** Built from governed records in `audit/edition_2/CONTRADICTION_REGISTER.md` (15 pairs).
+   Public form RECORDED, NOT BUILT: it needs a /methodology/ tier in the steward's presentation contract.
+6. **Findex income and education splits.** Confirmed bound (25_FINDEX_BASELINE, VIS-FINDEX-GAPS).
+7. **Low priority:**
+   - The "decision it unlocks" field already exists (10_MEASUREMENT_AGENDA).
+   - The rule that pledge, deposit and disbursement are never added already exists (CLM-046).
+   - The IBS e-payment study is already used (CLM-050 to CLM-052).
+
+**Method (block 3):**
+- `docs/JUDGEMENT.md` added to AGENTS.md's reading order.
+- 01_SOURCE_ORIGINS records the v0.42R3 lineage: not found; v0.43 is the newest predecessor found.
+- **What moved:**
+  - S5-CORRESPONDENT: the IMF report was supplied, so it is built (E2-6).
+  - RPW provider counts: now known (8 and 6 quotes).
+  - SFD 93,118: now read.
+- **What did not move:** the Findex microdata (login), the guarantee record and the difference block (steward
+  contracts), and phone length (Design).
+- **Review of E2-7 and E2-8.** One independent reviewer, bilingual and adversarial, Arabic first. Nothing blocking; every
+  new number was confirmed in its original. Seven SHOULD findings and four NITs are folded into E2-7c:
+  - "independent account" becomes "independent source";
+  - the RPW outlier quote lifts both the US$200 and US$500 averages;
+  - the corridor averages match only "to the two decimals published";
+  - the Arabic labels say "not re-read" («لم تُعَد قراءةُ»), with «هذا الإصدار»;
+  - SFD's 1997 inception is read, and only the 1997 start of microfinance is unreachable;
+  - CLM-032's vintages are given as editions of one year, with their differing source notes.
+- **Recorded, not built:** the reviewer's NIT 11. Number fragments that the tokenizer splits off (e.g. "26%" inside
+  "1.26%") are stated as TRIVIAL; a state class of their own would be cleaner and changes no reader text.

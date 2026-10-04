@@ -1530,15 +1530,18 @@
     "lineage_state": "BOUND_EXACT",
     "dependency_ids": [
       "SRC-SFD-MF-HISTORY-TOR-2012-001",
-      "SRC-SFD-HIST-2004-Q3-001"
+      "SRC-SFD-HIST-2004-Q3-001",
+      "SRC-SFD-Q4-2012-001"
     ],
     "direct_source_ids": [
       "SRC-SFD-MF-HISTORY-TOR-2012-001",
-      "SRC-SFD-HIST-2004-Q3-001"
+      "SRC-SFD-HIST-2004-Q3-001",
+      "SRC-SFD-Q4-2012-001"
     ],
     "resolved_source_ids": [
       "SRC-SFD-MF-HISTORY-TOR-2012-001",
-      "SRC-SFD-HIST-2004-Q3-001"
+      "SRC-SFD-HIST-2004-Q3-001",
+      "SRC-SFD-Q4-2012-001"
     ],
     "resolved_via_object_ids": [],
     "context_reference_ids": [],
@@ -1552,6 +1555,11 @@
       {
         "source_id": "SRC-SFD-HIST-2004-Q3-001",
         "primary_url": "https://www.sfd-yemen.org/uploads/issues/Newsletter-2004-Q3-20120331-111302.pdf",
+        "metadata_state": "DISPLAY_READY"
+      },
+      {
+        "source_id": "SRC-SFD-Q4-2012-001",
+        "primary_url": "https://www.sfd-yemen.org/uploads/issues/SFD_Nwesletter_en-6-20130422-060753.pdf",
         "metadata_state": "DISPLAY_READY"
       }
     ],

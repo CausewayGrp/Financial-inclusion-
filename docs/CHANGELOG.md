@@ -1,5 +1,21 @@
 # Repository Change Log
 
+## 2026-10-04 — E2-8, E2-7b, E2-7c: chronology states, gates E2-READ and E2-DATES, the review folded in
+
+Master `332a942f6685…` → `6d10b18d6c00…` (E2-8) → `7222cb53d2ce…` (E2-7b) →
+`f3e06fb935d0181211cc73f648eff588388ddda41a4c8f7eb2406b8396333514` (E2-7c).
+- **E2-8:** the 24 chronology events carry value states (14 `value_states`).
+  - YSC-003 and YSC-005 are dated as their sources date them (2016; March 2018).
+  - YSC-007 binds the SPA item that dates the 2018 deposit.
+  - YSC-021: the Board "approved"; its press release bound.
+  - YSC-023 is labelled as not re-read.
+  - Source dates filled.
+- **E2-7b:** the gaps the new gates found (QUAL-001 dates, locators, the POS February 2026 change) and CLM-054's
+  savers universe (microfinance banks).
+- **E2-7c:** the independent bilingual and adversarial review of E2-7.
+- **Gates:** E2-READ and E2-DATES in `scripts/validate.py`, five negative controls.
+- **Records:** `audit/edition_2/CONTRADICTION_REGISTER.md`; edition-2 log and open-items addendum.
+
 ## 2026-10-04 — E2-7: a state for every published value; discrepancies fixed Master-first
 
 Master `dd14eed79a97…` → `332a942f6685e1463301f17d5bb1475cc2c341fab6b323ae06859c74b7f6914c` through `run_stage.py`
