@@ -1,5 +1,12 @@
 # Repository Change Log
 
+## 2026-10-04 — Two negative controls re-aimed after E2-2
+
+CI on `8377b7a`: two content-parity controls ("a domain answer drops a governed sentence", "a page prints an ungoverned
+number") changed nothing, because their selectors named the two-decimal Findex text E2-2 replaced ("a gap of 12.55
+percentage points", "19.53%"). They now name the current text ("12.5", "19.5%"); both are caught again. No gate
+changed.
+
 ## 2026-10-04 — E2-3, E2-3b: one same-source context row beside Yemen's account ownership (edition 2, candidate c)
 
 Master `39d06c358abd…` → `f6e15a16851f…` (E2-3) → `1c107148bd9268b279f5f522b02260c2b3a7737e6c5cda0343534e8fb88273f5`

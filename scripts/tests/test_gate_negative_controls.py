@@ -428,10 +428,10 @@ CONTROLS = [
     # The standing content gate (release candidate, RC-1): a governed sentence dropped from a page, and a number no governed
     # record or contract holds, must each be reported by scripts/tests/test_content_parity.py.
     ("a domain answer drops a governed sentence", "en/people/index.html",
-     replace("a gap of 12.55 percentage points", "a gap of percentage points"),
+     replace("a gap of 12.5 percentage points", "a gap of percentage points"),
      "TEXT en/people/index.html", "content_parity"),
     ("a page prints an ungoverned number", "ar/people/index.html",
-     replace("19.53%", "19.53% (88.8)"),
+     replace("19.5%", "19.5% (88.8)"),
      "NUMBER ar/people/index.html", "content_parity"),
 ]
 
