@@ -360,3 +360,22 @@ above are not rewritten; the following lines correct or extend them, and win whe
 values), DONE 94, NEXT EDITION 92, REJECTED 22, total 225, undecided 0.
 
 Nothing in this record declares DESIGN HANDOFF READY or PUBLIC RELEASE READY.
+
+## Addendum, 4 October 2026 — edition 2, the value lane (branch `code/edition-2`)
+
+Appended by the edition-2 session. The lines above are not rewritten; these lines win where they differ. The decisions
+and their reasons are in `audit/edition_2/EDITION_2_LOG.md`.
+
+| ID | Disposition and reason |
+|---|---|
+| R-11 / X-ESC-D3-03b | **DONE (precision).** E2-2: every Findex share at one decimal from the World Bank's unrounded values, gaps as differences of printed shares, the rule on /methodology/ section 7; gate E2-PREC. Intervals stay NEXT EDITION with EXT-07 (no published margin of error; microdata needs a login). |
+| REOPEN-INTL | **DONE.** E2-3: the World Bank's low-income aggregate for the same Findex wave (35.2%, 19 economies, Yemen included) beside 11.9%, as context, never a ranking; gate E2-CTX. The input was public, not missing. |
+| S5-GUARANTEES | **DONE (in CLM-059).** E2-5: the YLG volumes read in the OECD original (PDF, printed page 32) beside SMEPS, with the firewall; gate E2-YLG. A record of its own needs the steward's navigation contract. |
+| S5-CORRESPONDENT | **Partly DONE.** E2-5: the OECD's statement in QUAL-001 as an assessment. The IMF CR 26/80 statements stay NEXT EDITION (original unreadable here; owner input). |
+| S5-DERISKING | **NEXT EDITION, unchanged.** No source read here observes a dated withdrawal of correspondent relationships; the OECD and Sana'a Center texts are assessments. |
+| N1115-4.3 / REOPEN-WAVES | **NEXT EDITION, reason restated** in the edition-2 log (the waves are printed; a drawing invites the trend reading; cost of a new visual family). |
+| E2-PAIRS | **DONE, new.** E2-4: three contradictory-looking pairs explained where they meet (subscribers vs active accounts; 2019 accounts vs 2024 subscribers; 2025 vs 2026 roster); gate E2-DIFF. |
+| E2-PHONE | **NEXT EDITION, new.** Phone length measured; folding drawn figures' value tables is a Design decision (A3/C3, accepted Design); proposal in the edition-2 log. |
+| VIS-PAYMENT-RAILS wording | **DONE.** E2-1: FPS and RTGS not operational at 31 August 2025 per the ISR; "no later operational state" kept. |
+
+Nothing in this addendum declares DESIGN HANDOFF READY or PUBLIC RELEASE READY.

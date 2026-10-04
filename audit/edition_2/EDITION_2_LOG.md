@@ -75,3 +75,54 @@
   (read and matching; it belongs in a record of its own source, which would be a new route or a widened firm-survey
   record; recorded for the next pass). A dedicated guarantee record (its own route) needs the steward's navigation
   contract.
+- **a, the other firm-finance sources — READ, not bound.** The Sana'a Center's February 2026 paper (Trade Finance in
+  Yemen, No. 36; SRC-SC-TRADE-FIN-YEM-2026; PDF read) is analysis resting on secondary figures, and its de-risking
+  account is narrative with causal language ("paralyzed"); it could enter only as a qualitative record of its own, which
+  is a new route. KfW project 47229 (SRC-KFW-YEM-MSME-FIN-III-47229; page read) is programme funding (EUR 4.5 million
+  refinancing MFI micro-loans through SFD/SMED), an input, not an observation of guarantees or lending.
+
+## Recorded, not built (each with its reason)
+
+- **e — the three Findex waves drawn (VIS-FINDEX-OBSERVED-WAVES).** The three observations, the 2011 definition break
+  and the 2022 coverage limit are already printed on /people/ (section 5), in CLM-027 and in the record itself. A picture
+  of three rising points is the very misreading the page warns against when cropped or forwarded, and the form costs a
+  new visual family (contract, renderer, checks, Arabic labels). The owner's permission stands, unused; the strongest
+  form if built remains N1115-4.3's (three unconnected marks, the break and the coverage note on the marks).
+- **f — phone length by progressive disclosure.** Measured at 390 px in Arabic: /ar/payments/ 30.9 screens,
+  /ar/finance/ 31.7, /ar/reforms/ 23.8, /ar/providers/ 24.1, /ar/firms/ 20.5, /ar/remittances/ 18.1, /ar/people/ 16.9,
+  /ar/access/ 11.0. On /ar/payments/ each drawn figure's text description and value table take 1,100–1,660 px (the
+  value tables alone 711–1,075 px, about 3,640 px or 4.3 screens on that page). Folding the tables into a closed
+  disclosure would hide no governed limit (the limits are in the frame foot), but the drawings are hidden from screen
+  readers, so the text and table are the figure for them, the owner's A3/C3 decision calls the text alternative
+  "visible", and the accepted Design shows both open: an interaction decision for Design, not Code. Proposal for
+  Design: on phones only, the value table of a figure that is also drawn sits in a disclosure labelled with the
+  governed table caption; the prose text alternative and the frame foot stay open.
+- **d — the next form.** A typed difference relation (revision; non-comparability; method break; universe or
+  denominator; unresolved conflict) rendered as its own block on every page where a pair meets. Needs a new presentation
+  tier in the steward's presentation contract and a Master relation table; the governed paragraphs of E2-4 are its
+  content.
+- **a — a dedicated guarantee record.** Its own route needs an entry in the steward's navigation contract
+  (navigation_interaction.json lists every record route). CLM-059 carries the figures meanwhile.
+- **b — design-based intervals and unweighted bases for Findex subgroups (EXT-07).** No margin of error is published for
+  Yemen's 2022 survey and the microdata needs a login; see the owner list.
+- **IMF CR 26/80's correspondent-banking statements.** Unreadable here (imf.org 403; eLibrary 202, empty); see the owner
+  list.
+
+## What the owner could supply (documents only)
+
+1. **The Global Findex 2021 microdata file for Yemen** (World Bank Microdata Library, catalog 5862,
+   YEM_2022_FINDEX_v01_M; free registration and acceptance of the library's terms of use, which is the owner's call).
+   Why: design-based intervals and unweighted bases for every subgroup share and gap (EXT-07, X-ESC-D3-03b), the only
+   way to replace "uncertainty not quantified here" with a number.
+2. **IMF Country Report No. 26/80 as a PDF** (Republic of Yemen: 2025 Article IV Consultation). Why: the Executive
+   Board's assessment (p. 4) on correspondent banking relationships and the authorities' statement (p. 90) on banks
+   relocating to Aden can be bound only once read in the original here, each with its speaker kept, and the relocation
+   kept apart from any measure of de-risking.
+
+## Self-critique (short form; the PR carries the report)
+
+- The first reply's challenge on c was half wrong: the regional aggregate is on the fiscal-year-2024 regions, without
+  Afghanistan and Pakistan; the API label misled me. Reproducing the aggregate before judging it caught that.
+- E2-4 shipped a design flaw (counterpart numbers inside records) that only the adversarial reviewer caught. The rule
+  it broke (a number traces to the record that governs it) should have been my first check; it is now a gate.
+- E2-2 broke two existing negative controls on CI, which I would have seen by running the full suite before pushing.

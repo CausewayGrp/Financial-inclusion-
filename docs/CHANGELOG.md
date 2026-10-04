@@ -1,5 +1,13 @@
 # Repository Change Log
 
+## 2026-10-04 — Edition 2 records: the lane's dispositions, what was not built, what the owner could supply
+
+`audit/edition_2/EDITION_2_LOG.md` closes with the candidates recorded and not built (e, the Findex waves drawn; f, phone
+length, measured and handed to Design; d's next form; a's remainder; b's intervals), the two documents the owner could
+supply (the Global Findex 2021 microdata for Yemen; IMF Country Report No. 26/80) and a short self-critique.
+`audit/release_candidate/OPEN_ITEMS_DISPOSITION.md` gains an edition-2 addendum (R-11, REOPEN-INTL, S5-GUARANTEES,
+S5-CORRESPONDENT, S5-DERISKING, N1115-4.3, E2-PAIRS, E2-PHONE, the payment-rails wording). No Master change.
+
 ## 2026-10-04 — E2-5, E2-5b: guarantees and correspondent banking, read in the originals (edition 2, candidate a)
 
 Master `7cc4fafc0116…` → `a01011868a4b…` (E2-5) → `e81b2ebc40687fb344bb1c155ae85208b5b9f62dd1e59d4687bb0d88d480d229`
