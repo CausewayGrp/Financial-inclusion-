@@ -119,7 +119,7 @@ def full_alt_text(vid: str, lang: str) -> str:
 # The text must be a substring of the real message: several gates interpolate a route or a visual id into the middle of
 # theirs, so a control that names the gate and then the wording would never match (found by running these).
 # A path under `site-src/` or `scripts/` is a source file; anything else is a page of the built site.
-SOURCE_PREFIXES = ("site-src/", "scripts/")
+SOURCE_PREFIXES = ("site-src/", "scripts/", "audit/")   # audit/: the generated literal closure (E2-DIFF)
 CONTROLS = [
     ("active navigation loses its aria-current", "en/evidence/CLM-001/index.html",
      replace('<a href="/en/evidence/" aria-current="page">', '<a href="/en/evidence/">'),
@@ -375,6 +375,18 @@ CONTROLS = [
     ("the low-income context figure reaches Home", "ar/index.html",
      sub_once(r"(<p class=\"sent[^\"]*\">)", r"\1للمقارنة: 35.2% في 19 اقتصادًا منخفض الدخل. "),
      "E2-CTX ar/index.html prints the low-income context figure on Home"),
+    # E2-DIFF (edition 2, candidate d): a pair that looks contradictory is explained where it meets, and each number
+    # traces to the record that governs it.
+    ("a pair that looks contradictory loses its explanation", "en/payments/index.html",
+     replace("Why the numbers differ: the January 2025 baseline", "The January 2025 baseline"),
+     "E2-DIFF en/payments/index.html does not say why 2,102,484 / 375,252 / FMIIP-BASELINE-2025-01 differ"),
+    ("a record stops naming its counterpart", "ar/evidence/CLM-016/index.html",
+     lambda t: re.sub(r"\(السجل (?:<bdi[^>]*>)?CLM-009(?:</bdi>)?\)", "", t),
+     "E2-DIFF ar/evidence/CLM-016/index.html does not say why CLM-009 differ"),
+    ("a pair number traces to its counterpart's record", "audit/PUBLIC_LITERAL_CLOSURE.json",
+     sub_once(r'("route": "/reforms/",\s*"surface": "section",\s*"field": "body_en",\s*"token": "2,102,484",\s*"category": "[A-Z_]+",'
+              r'\s*"context": "(?:[^"\\]|\\.)*",\s*"source_object": ")CLM-010(")', r"\1FMIIP-BASELINE-2025-01\2"),
+     "E2-DIFF 2,102,484 on /reforms/ traces to FMIIP-BASELINE-2025-01, not to CLM-010"),
     # RC-NOINDEX (owner decision B3): until release every page carries the pre-release noindex meta.
     ("a page loses its pre-release noindex", "en/people/index.html",
      replace('<meta name="robots" content="noindex, nofollow">', ""),

@@ -53,3 +53,14 @@
   mean is dominated by two large economies far from Yemen's conditions. Kept off Home and out of drawings (a lone pair
   reads as a ranking); gate E2-CTX. Reader gain: a journalist or citizen can place 11.9% in the World Bank's own
   context for economies at similar income, without a ranking, and see that Yemen is inside that average.
+- **d, E2-4 / E2-4b ("why the numbers differ") — BUILT for three pairs.** Found by sweeping every number on the
+  eight domain pages. Reader gain: a journalist meeting 2.1 million subscribers and 375,252 active accounts, or two
+  roster totals a year apart, reads in the same paragraph why they differ and what story would be wrong. Lesson from the
+  review, now a gate: a record names its counterpart, never quotes its number, or the source trace lies. Next form
+  (not built): a typed difference relation (revision, non-comparability, method break, universe or denominator,
+  unresolved conflict) as its own block; it needs a new presentation tier, i.e. the steward's contract.
+- **Full negative-control suite, 4 October 2026 (before d): 89 of 89 caught locally.**
+- **b follow-on, firm survey — DECIDED, not changed.** The firm-survey decimals (91.84%, 68.71%, 69.12% …) are the
+  World Bank FSD 2024 report's printed table values; the Findex case differed because the World Bank's database is
+  unrounded and its own Yemen table prints one decimal. Printing a source's published value as printed keeps it
+  verifiable; the small bases are already stated on each record.

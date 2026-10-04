@@ -3489,6 +3489,54 @@ try:
 except Exception as _x:
     errors.append("E2-CTX unreadable " + repr(_x))
 
+# E2-DIFF (edition 2, candidate d): where two governed numbers that look contradictory meet a reader, one paragraph
+# explains why they differ. Asserted on what a reader sees, in both languages: on each domain page where a declared pair
+# meets, one paragraph carries the lead "Why the numbers differ" / «لماذا تختلف الأرقام», both numbers and the record ID
+# of the counterpart; on each record of a pair, one paragraph carries the lead and the counterpart's record ID (a record
+# prints only the numbers its own sources give: the counterpart is named, never quoted). Pairs: transactions E2-4, E2-4b.
+_DIFF_PAIRS = [
+    ("payments/index.html", ("2,102,484", "375,252", "FMIIP-BASELINE-2025-01")),
+    ("reforms/index.html", ("2,102,484", "375,252", "CLM-010")),
+    ("payments/index.html", ("807,919", "414,631", "581,075", "CLM-010")),
+    ("providers/index.html", ("79", "195", "108", "CLM-016")),
+    ("evidence/CLM-010/index.html", ("FMIIP-BASELINE-2025-01",)), ("evidence/CLM-010/index.html", ("CLM-050",)),
+    ("evidence/FMIIP-BASELINE-2025-01/index.html", ("CLM-010",)), ("evidence/CLM-050/index.html", ("CLM-010",)),
+    ("evidence/CLM-016/index.html", ("CLM-009",)), ("evidence/CLM-009/index.html", ("CLM-016",)),
+]
+try:
+    for _lang, _lead in (("en", "Why the numbers differ"), ("ar", "لماذا تختلف الأرقام")):
+        for _rel, _toks in _DIFF_PAIRS:
+            _f = DIST / _lang / _rel
+            if not _f.exists():
+                errors.append(f"E2-DIFF {_lang}/{_rel} is missing")
+                continue
+            _h = re.sub(r"<(script|style)\b[^>]*>.*?</\1>", " ", _f.read_text(encoding="utf-8"), flags=re.S)
+            _ok = False
+            for _blk in re.findall(r"<(p|li|dd)\b[^>]*>(.*?)</\1>", _h, re.S):
+                _bt = re.sub(r"\s+", " ", _html.unescape(re.sub(r"<[^>]+>", " ", _blk[1])))
+                if _lead in _bt and all(re.search(r"(?<![\d,A-Z-])" + re.escape(_k) + r"(?![\d,]|-\d)", _bt) for _k in _toks):
+                    _ok = True
+                    break
+            if not _ok:
+                errors.append(f"E2-DIFF {_lang}/{_rel} does not say why {' / '.join(_toks)} differ")
+    # …and each number on a page traces to the record that governs it, never to the counterpart that names it
+    #    (hard rule 5; the E2-4 review's blocking finding)
+    _trace = {("/payments/", "375,252"): "FMIIP-BASELINE-2025-01", ("/payments/", "2,102,484"): "CLM-010",
+              ("/reforms/", "2,102,484"): "CLM-010", ("/reforms/", "375,252"): "FMIIP-BASELINE-2025-01",
+              ("/payments/", "807,919"): "CLM-050", ("/payments/", "414,631"): "CLM-010",
+              ("/providers/", "195"): "CLM-016", ("/providers/", "231"): "CLM-009"}
+    _seen = set()
+    for _r in json.load(open(ROOT / "audit/PUBLIC_LITERAL_CLOSURE.json", encoding="utf-8"))["records"]:
+        _k = (_r.get("route"), _r.get("token"))
+        if _k in _trace and str(_r.get("field", "")).startswith("body"):
+            _seen.add(_k)
+            if _r.get("source_object") != _trace[_k]:
+                errors.append(f"E2-DIFF {_k[1]} on {_k[0]} traces to {_r.get('source_object')}, not to {_trace[_k]}, the record that governs it")
+    if len(_seen) < len(_trace):
+        errors.append(f"E2-DIFF found {len(_seen)} of {len(_trace)} traced pair numbers in the literal closure")
+except Exception as _x:
+    errors.append("E2-DIFF unreadable " + repr(_x))
+
 print(f'HTML={len(list(DIST.rglob("*.html")))} ERRORS={len(errors)} WARN={len(warns)}')
 if warns:
     for w in warns[:20]: print('WARN',w)

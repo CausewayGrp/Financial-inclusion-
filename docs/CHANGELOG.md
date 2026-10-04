@@ -1,5 +1,35 @@
 # Repository Change Log
 
+## 2026-10-04 — E2-4, E2-4b: "Why the numbers differ" where contradictory-looking numbers meet (edition 2, candidate d)
+
+Master `1c107148bd92…` → `04c727047a76…` (E2-4) → `7cc4fafc0116e352aabec49783b0c450ce4653a7cceefa6943e4f7f99c0349e1`
+(E2-4b, the independent bilingual and adversarial review folded in) through `run_stage.py`
+(`audit/edition_2/e2_4_why_numbers_differ.py`, `audit/edition_2/e2_4b_review_fixes.py`).
+- A sweep of every record that prints a number on the eight domain pages found three pairs a reader meets without an
+  explanation (the remittance revision, 22% vs 91.84% and the POS series already have one):
+  A. 2,102,484 e-wallet subscribers (CBY-Aden, first half of 2025; CLM-010) and 375,252 active e-wallet accounts (FMIIP
+     baseline, January 2025; FMIIP-BASELINE-2025-01), on /payments/ and /reforms/;
+  B. 807,919 e-money accounts (IBS study of five providers, December 2019; CLM-050) and 414,631 to 581,075 subscribers
+     (CBY-Aden, 2024; CLM-010), on /payments/ — it read as a fall;
+  C. the 2025 roster (79, 195, 108; CLM-016) and the 2026 roster (100, 231, 111; CLM-009), on /providers/ — it read as
+     new providers.
+- The same treatment each time, from what the records govern: a paragraph that opens "Why the numbers differ:" /
+  «لماذا تختلف الأرقام:», names both numbers with publisher, date and the counterpart's record ID, says what each counts
+  and what the gap cannot be read as; and in both records' limitations a sentence that names the counterpart by record
+  ID and measure, never by its number.
+- The review's blocking finding, fixed in E2-4b: E2-4 had written each counterpart's number into the other record, so
+  the literal closure traced CBY-Aden's 2,102,484 to the World Bank project record (hard rule 5). Now each number traces
+  to the record that governs it; CLM-010 is bound to /reforms/ and FMIIP-BASELINE-2025-01 to /payments/ for that.
+  Wording for pairs A and C now rests only on governed statements ("carry different labels … not reconciled"; "this
+  evidence base has not compared the two rosters entry by entry").
+- Renderer: in a right-to-left document the one isolation pass (`isolate_document`) now isolates identifiers in
+  running text too (FMIIP-BASELINE-2025-01 in Arabic prose), so their digits never read as a date (RC-DATES).
+- Gate E2-DIFF: the explanation paragraph on each page and record of a pair, and each pair number's trace to its
+  governing record in the literal closure. Three negative controls, all caught; the negative-control runner can now
+  fault a file under `audit/`.
+- Not built here: a typed "difference" relation rendered as its own block. A new section on a domain page needs the
+  steward's presentation contract; recorded as the next form in audit/edition_2/EDITION_2_LOG.md.
+
 ## 2026-10-04 — Two negative controls re-aimed after E2-2
 
 CI on `8377b7a`: two content-parity controls ("a domain answer drops a governed sentence", "a page prints an ungoverned

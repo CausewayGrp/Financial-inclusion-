@@ -146,7 +146,8 @@
     "public_routes": [
       "/evidence/compare/",
       "/payments/",
-      "/providers/"
+      "/providers/",
+      "/reforms/"
     ],
     "lineage_state": "BOUND_EXACT",
     "dependency_ids": [
@@ -4696,7 +4697,8 @@
     "object_id": "FMIIP-BASELINE-2025-01",
     "public_routes": [
       "/reforms/",
-      "/evidence/compare/"
+      "/evidence/compare/",
+      "/payments/"
     ],
     "lineage_state": "BOUND_EXACT",
     "dependency_ids": [
@@ -5071,7 +5073,8 @@
     "public_routes": [
       "/evidence/compare/",
       "/payments/",
-      "/providers/"
+      "/providers/",
+      "/reforms/"
     ],
     "lineage_state": "BOUND_EXACT",
     "dependency_ids": [

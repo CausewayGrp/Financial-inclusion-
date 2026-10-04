@@ -1,0 +1,94 @@
+{
+ "stage": "E2-4b",
+ "staged_master_sha256": "7cc4fafc0116e352aabec49783b0c450ce4653a7cceefa6943e4f7f99c0349e1",
+ "installed": [],
+ "steps": [
+  {
+   "step": "generate",
+   "exit": 0,
+   "tail": [
+    "  \"presentation_priority.json\",",
+    "  \"visuals/visual_design_contracts.json\"",
+    " ],",
+    " \"output_sha256\": 39",
+    "}",
+    "PROJECTIONS GENERATED"
+   ]
+  },
+  {
+   "step": "rebind",
+   "exit": 0,
+   "tail": [
+    "  \"README.md\",",
+    "  \"OPENAI_REENTRY_CHECKPOINT.md\",",
+    "  \"handoff/README_FIRST.md\",",
+    "  \"handoff/CLAUDE_DESIGN_MASTER_PROMPT.md\"",
+    " ]",
+    "}"
+   ]
+  },
+  {
+   "step": "build",
+   "exit": 0,
+   "tail": [
+    "Built 288 HTML files from 142 controlled page specs."
+   ]
+  },
+  {
+   "step": "public_literal_audit",
+   "exit": 0,
+   "tail": [
+    "PUBLIC_LITERAL_CLOSURE records=13702 unresolved=0"
+   ]
+  },
+  {
+   "step": "architecture_diagrams",
+   "exit": 0,
+   "tail": [
+    "ARCHITECTURE DIAGRAMS WRITTEN: YFIE_PUBLIC_SITE_MAP.svg, YFIE_PAGE_FAMILY_STATE_MAP.svg, YFIE_FULL_STACK_SYSTEM_ARCHITECTURE.svg"
+   ]
+  },
+  {
+   "step": "handoff_inventory",
+   "exit": 0,
+   "tail": [
+    "HANDOFF INVENTORY WRITTEN: 142 routes"
+   ]
+  },
+  {
+   "step": "repository_manifest",
+   "exit": 0,
+   "tail": [
+    "REPOSITORY MANIFEST WRITTEN: 1970 files in 24 classes"
+   ]
+  },
+  {
+   "step": "validate",
+   "exit": 1,
+   "tail": [
+    "HTML=288 ERRORS=2 WARN=0",
+    "FAIL RC-DATES an Arabic page prints a digit-hyphen-digit run outside an isolate ar/evidence/CLM-010/index.html [article/section/p] 'لا يثبت التسلسل 7 ثم 9 ثم 8 دخول مقدمي خدمات إلى السوق أو خروجهم منه، ولا صافي نمو في عدده'",
+    "FAIL RC-DATES an Arabic page prints a digit-hyphen-digit run outside an isolate ar/payments/index.html [section/div/p] 'لماذا تختلف الأرقام: يحصي خط أساس يناير 2025 لمشروع FMIIP الممول من البنك الدولي 375,252 ح'"
+   ],
+   "allowed_errors": [
+    "FAIL RC-DATES an Arabic page prints a digit-hyphen-digit run outside an isolate ar/evidence/CLM-010/index.html [article/section/p] 'لا يثبت التسلسل 7 ثم 9 ثم 8 دخول مقدمي خدمات إلى السوق أو خروجهم منه، ولا صافي نمو في عدده'",
+    "FAIL RC-DATES an Arabic page prints a digit-hyphen-digit run outside an isolate ar/payments/index.html [section/div/p] 'لماذا تختلف الأرقام: يحصي خط أساس يناير 2025 لمشروع FMIIP الممول من البنك الدولي 375,252 ح'"
+   ]
+  },
+  {
+   "step": "generator_idempotence",
+   "exit": 0,
+   "tail": [
+    " \"master_sha256\": \"7cc4fafc0116e352aabec49783b0c450ce4653a7cceefa6943e4f7f99c0349e1\",",
+    " \"outputs\": 39,",
+    " \"differences\": [],",
+    " \"output_sha256\": 39",
+    "}",
+    "PROJECTION CHECK PASS"
+   ]
+  }
+ ],
+ "result": "COMMITTED",
+ "master_sha256": "7cc4fafc0116e352aabec49783b0c450ce4653a7cceefa6943e4f7f99c0349e1",
+ "page_specs_sha256": "bc008ccafd5ae3d4ac535da546db399f8237596eb69296410ea1b0a81f50ef7f"
+}

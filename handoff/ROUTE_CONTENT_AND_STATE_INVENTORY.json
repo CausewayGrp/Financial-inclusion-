@@ -2,8 +2,8 @@
  "schema": "YFIE_ROUTE_CONTENT_AND_STATE_INVENTORY/1.3",
  "purpose": "Design recipient's map of every route, its family, bindings, collections, next actions and the states Design must cover. Derived; not authority.",
  "generated_from": {
-  "production_master_sha256": "1c107148bd9268b279f5f522b02260c2b3a7737e6c5cda0343534e8fb88273f5",
-  "page_specs_sha256": "8c0203be9d8e7dea7fec0b9095e07e89de02d388436247ebe1cf620be875e736",
+  "production_master_sha256": "7cc4fafc0116e352aabec49783b0c450ce4653a7cceefa6943e4f7f99c0349e1",
+  "page_specs_sha256": "bc008ccafd5ae3d4ac535da546db399f8237596eb69296410ea1b0a81f50ef7f",
   "generator": "scripts/handoff_inventory.py"
  },
  "counts": {
@@ -4612,6 +4612,7 @@
     "CLM-050",
     "CLM-051",
     "CLM-052",
+    "FMIIP-BASELINE-2025-01",
     "VIS-E-MONEY-RULE-STACK",
     "VIS-PAYMENT-ANATOMY",
     "VIS-POS-TERMINALS",
@@ -5287,6 +5288,7 @@
    "sections": 11,
    "section_rows_split_by_language": true,
    "evidence_ids": [
+    "CLM-010",
     "CLM-011",
     "CLM-012",
     "CLM-013",
@@ -5320,7 +5322,7 @@
     "MA-010"
    ],
    "source_ids": [],
-   "source_references": 37,
+   "source_references": 39,
    "next_actions": [
     "/evidence/CLM-011/"
    ],

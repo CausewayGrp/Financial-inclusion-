@@ -225,8 +225,8 @@
       "PUC-EXCH-2026-01",
       "SRC-CBY-EXCH-LIST-2026-001"
     ],
-    "does_not_prove_en": "Adding the three classes does not give a count of unique providers, because no rule for identifying the same entity across classes has been applied. Inclusion in the annual roster is not proof of current operation, branch activity or service availability, including for entities named in 2026 enforcement decisions.",
-    "does_not_prove_ar": "لا يعطي جمع الفئات الثلاث عددًا لمقدمي خدمات فريدين، لأنه لم تُطبَّق قاعدة لتحديد الكيان نفسه عبر الفئات. ولا يثبت الإدراج في القائمة السنوية التشغيل الحالي أو نشاط الفروع أو توافر الخدمة، بما في ذلك للجهات التي سمّتها قرارات الإنفاذ الصادرة خلال 2026.",
+    "does_not_prove_en": "Adding the three classes does not give a count of unique providers, because no rule for identifying the same entity across classes has been applied. Inclusion in the annual roster is not proof of current operation, branch activity or service availability, including for entities named in 2026 enforcement decisions. Why the numbers differ: the 2025 roster (record CLM-016) listed fewer entries in each of its three classes. The higher 2026 entries cannot be read as new providers entering the market: both rosters count entries by class rather than unique firms, this evidence base has not compared the two rosters entry by entry, and the 2026 roster states no issue date.",
+    "does_not_prove_ar": "لا يعطي جمع الفئات الثلاث عددًا لمقدمي خدمات فريدين، لأنه لم تُطبَّق قاعدة لتحديد الكيان نفسه عبر الفئات. ولا يثبت الإدراج في القائمة السنوية التشغيل الحالي أو نشاط الفروع أو توافر الخدمة، بما في ذلك للجهات التي سمّتها قرارات الإنفاذ الصادرة خلال 2026. لماذا تختلف الأرقام: أدرجت قائمة 2025 (السجل CLM-016) قيودًا أقل في كل فئة من فئاتها الثلاث. ولا تُقرأ الأعداد الأعلى في قائمة 2026 دخولًا لمقدمي خدمات جدد إلى السوق: فالقائمتان تحصيان القيود بحسب الفئة لا الشركات الفريدة، ولم تقارن قاعدة الأدلة هذه بين القائمتين قيدًا قيدًا، ولا تذكر قائمة 2026 تاريخ صدورها.",
     "change_trigger_en": "These counts are updated when the Central Bank of Yemen – Aden (CBY-Aden) publishes a revised or newer annual roster. A statement about current operating status requires official status decisions to be matched to named entities first.",
     "change_trigger_ar": "تُحدَّث هذه الأعداد إذا نشر البنك المركزي اليمني – عدن قائمة سنوية منقحة أو أحدث. ولا يُستنتج وضع التشغيل الحالي إلا بعد مطابقة قرارات الإنفاذ الرسمية بالجهات المسماة.",
     "public_routes": [
@@ -260,19 +260,21 @@
       "OBS-00016",
       "OBS-00034"
     ],
-    "does_not_prove_en": "The sequence 7, 9 and 8 does not show providers entering or leaving the market, or net growth in providers. The move from 581,075 subscribers (2024 Q3) to 2,102,484 (2025 H1) is not a measure of growth, and subscribers are not unique people or active users.",
-    "does_not_prove_ar": "لا يثبت التسلسل 7 ثم 9 ثم 8 دخول مقدمي خدمات إلى السوق أو خروجهم منه، ولا صافي نمو في عددهم. وليس الانتقال من 581,075 مشتركًا (الربع الثالث 2024) إلى 2,102,484 (النصف الأول 2025) مقياسًا للنمو، والمشتركون ليسوا أشخاصًا فريدين ولا مستخدمين نشطين.",
+    "does_not_prove_en": "The sequence 7, 9 and 8 does not show providers entering or leaving the market, or net growth in providers. The move from 581,075 subscribers (2024 Q3) to 2,102,484 (2025 H1) is not a measure of growth, and subscribers are not unique people or active users. Why the numbers differ: the January 2025 baseline of active e-wallet accounts of the World Bank-financed FMIIP project (record FMIIP-BASELINE-2025-01) is far lower than the 2025 subscriber count here. The two carry different labels under definitions the evidence base does not document and that have not been reconciled, so the gap cannot be read as growth, as inactivity or as an error, and neither is a count of people. Nor can the 2024 subscriber counts here be read as a fall from the e-money accounts counted in December 2019 (record CLM-050): that study covered five providers and counted accounts, under a definition never reconciled with CBY-Aden's.",
+    "does_not_prove_ar": "لا يثبت التسلسل 7 ثم 9 ثم 8 دخول مقدمي خدمات إلى السوق أو خروجهم منه، ولا صافي نمو في عددهم. وليس الانتقال من 581,075 مشتركًا (الربع الثالث 2024) إلى 2,102,484 (النصف الأول 2025) مقياسًا للنمو، والمشتركون ليسوا أشخاصًا فريدين ولا مستخدمين نشطين. لماذا تختلف الأرقام: خط أساس يناير 2025 لحسابات المحافظ الإلكترونية النشطة في مشروع FMIIP الممول من البنك الدولي (السجل FMIIP-BASELINE-2025-01) أقل بكثير من عدد المشتركين لعام 2025 هنا. ويحمل الرقمان تسميتين مختلفتين وفق تعريفين لا توثقهما قاعدة الأدلة ولم يُطابَق بينهما؛ لذلك لا يُقرأ الفرق بينهما نموًا ولا خمولًا ولا خطأً، ولا يمثل أيٌّ منهما عددًا من الأشخاص. كذلك لا تُقرأ أعداد المشتركين لعام 2024 هنا تراجعًا عن حسابات النقود الإلكترونية المحصاة في ديسمبر 2019 (السجل CLM-050): فتلك الدراسة شملت خمسة مقدمي خدمات وأحصت حسابات، وفق تعريف لم يُطابَق قط مع تعريف البنك المركزي اليمني – عدن.",
     "change_trigger_en": "This record is updated when an authoritative source is revised or replaced, a newer comparable observation becomes available, the definition, population or method changes, or the conditions for public use change.",
     "change_trigger_ar": "يُحدَّث هذا السجل عند مراجعة المصدر المعتمد أو استبداله، أو توفر مشاهدة أحدث قابلة للمقارنة، أو تغير التعريف أو المجتمع أو الطريقة، أو تغير شروط الاستخدام العام.",
     "public_routes": [
       "/evidence/compare",
       "/payments",
-      "/providers"
+      "/providers",
+      "/reforms"
     ],
     "public_route_list": [
       "/evidence/compare/",
       "/payments/",
-      "/providers/"
+      "/providers/",
+      "/reforms/"
     ]
   },
   {
@@ -421,8 +423,8 @@
       "71_PROVIDER_BASELINE_2025",
       "EP-CBY-EXCH-ROSTER-2025"
     ],
-    "does_not_prove_en": "382 is not the 2026 count, a count of unique current firms or active providers, or a measure of branch footprint.",
-    "does_not_prove_ar": "ليس الرقم 382 عدد عام 2026، ولا عددًا لشركات فريدة حالية أو لمقدمي خدمات عاملين، ولا مقياسًا لشبكة الفروع.",
+    "does_not_prove_en": "382 is not the 2026 count, a count of unique current firms or active providers, or a measure of branch footprint. Why the numbers differ: the 2026 roster (record CLM-009) lists more entries in each of its three classes. The higher 2026 entries cannot be read as new providers entering the market: both rosters count entries by class rather than unique firms, this evidence base has not compared the two rosters entry by entry, and the 2026 roster states no issue date.",
+    "does_not_prove_ar": "ليس الرقم 382 عدد عام 2026، ولا عددًا لشركات فريدة حالية أو لمقدمي خدمات عاملين، ولا مقياسًا لشبكة الفروع. لماذا تختلف الأرقام: تُدرج قائمة 2026 (السجل CLM-009) قيودًا أكثر في كل فئة من فئاتها الثلاث. ولا تُقرأ الأعداد الأعلى في قائمة 2026 دخولًا لمقدمي خدمات جدد إلى السوق: فالقائمتان تحصيان القيود بحسب الفئة لا الشركات الفريدة، ولم تقارن قاعدة الأدلة هذه بين القائمتين قيدًا قيدًا، ولا تذكر قائمة 2026 تاريخ صدورها.",
     "change_trigger_en": "This record is updated when an authoritative source is revised or replaced, a newer comparable observation becomes available, the definition, population or method changes, or the conditions for public use change.",
     "change_trigger_ar": "يُحدَّث هذا السجل عند مراجعة المصدر المعتمد أو استبداله، أو توفر مشاهدة أحدث قابلة للمقارنة، أو تغير التعريف أو المجتمع أو الطريقة، أو تغير شروط الاستخدام العام.",
     "public_routes": [
@@ -1310,8 +1312,8 @@
       "199",
       "EP-IBS-EMONEY-2019-K04"
     ],
-    "does_not_prove_en": "The total is not a count of active users or unique people, a national inclusion rate or a 2026 level.",
-    "does_not_prove_ar": "ليس الإجمالي عددًا لمستخدمين نشطين أو لأشخاص فريدين، ولا معدل شمول وطنيًا، ولا مستوى حاليًا لعام 2026.",
+    "does_not_prove_en": "The total is not a count of active users or unique people, a national inclusion rate or a 2026 level. Why the numbers differ: CBY-Aden's lower e-wallet subscriber counts for 2024 (record CLM-010) cannot be read as a fall from this total. This study covered five providers and counted accounts; CBY-Aden counts subscribers under its own definition and reporting scope. The two have not been reconciled, and neither counts people.",
+    "does_not_prove_ar": "ليس الإجمالي عددًا لمستخدمين نشطين أو لأشخاص فريدين، ولا معدل شمول وطنيًا، ولا مستوى حاليًا لعام 2026. لماذا تختلف الأرقام: لا تُقرأ أعداد مشتركي المحافظ الإلكترونية الأدنى التي يوردها البنك المركزي اليمني – عدن لعام 2024 (السجل CLM-010) تراجعًا عن هذا الإجمالي. فهذه الدراسة شملت خمسة مقدمي خدمات وأحصت حسابات، أما البنك المركزي فيحصي مشتركين وفق تعريفه ونطاق إبلاغه. ولم يُطابَق بين الرقمين، ولا يحصي أيٌّ منهما أشخاصًا.",
     "change_trigger_en": "This record is updated when an authoritative source is revised or replaced, a newer comparable observation becomes available, the definition, population or method changes, or the conditions for public use change.",
     "change_trigger_ar": "يُحدَّث هذا السجل عند مراجعة المصدر المعتمد أو استبداله، أو توفر مشاهدة أحدث قابلة للمقارنة، أو تغير التعريف أو المجتمع أو الطريقة، أو تغير شروط الاستخدام العام.",
     "public_routes": [

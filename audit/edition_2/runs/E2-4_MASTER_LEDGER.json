@@ -1,0 +1,171 @@
+{
+ "transaction": "E2-4",
+ "summary": "Why the numbers differ: three pairs that look contradictory (e-wallet subscribers vs active accounts; 2019 accounts vs 2024 subscribers; 2025 vs 2026 roster), in both records and where they meet",
+ "input_master_sha256": "1c107148bd9268b279f5f522b02260c2b3a7737e6c5cda0343534e8fb88273f5",
+ "output_master_sha256": "04c727047a76bc5f3def57e263e260fa9ddc0464597164d449544810f7738a29",
+ "cells_written": 18,
+ "changes": [
+  {
+   "finding": "E2-4:WHY-DIFFER",
+   "sheet": "06_EVIDENCE_OBJECTS",
+   "row": 8,
+   "col": 16,
+   "field": "CLM-010.limitations_en",
+   "old": "The sequence 7, 9 and 8 does not show providers entering or leaving the market, or net growth in providers. The move from 581,075 subscribers (2024 Q3) to 2,102,484 (2025 H1) is not a measure of growth, and subscribers are not unique people or active users.",
+   "new": "The sequence 7, 9 and 8 does not show providers entering or leaving the market, or net growth in providers. The move from 581,075 subscribers (2024 Q3) to 2,102,484 (2025 H1) is not a measure of growth, and subscribers are not unique people or active users. Why the numbers differ: the World Bank-financed FMIIP project's baseline for January 2025 counts 375,252 active e-wallet accounts, far fewer than the 2,102,484 e-wallet subscribers CBY-Aden reports for the first half of 2025. The two count different things, accounts the project defines as active and subscribers as CBY-Aden reports them, under definitions the evidence base does not document, so the gap cannot be read as growth, as inactivity or as an error, and neither is a count of people. Why the numbers differ: the 807,919 e-money accounts of December 2019 and CBY-Aden's 414,631 to 581,075 e-wallet subscribers in the first three quarters of 2024 cannot be read as a fall. The first counts accounts at the five providers one study of the Institute of Banking Studies (IBS) covered; the second counts subscribers under CBY-Aden's own definition and reporting scope. The two have not been reconciled, and neither counts people."
+  },
+  {
+   "finding": "E2-4:WHY-DIFFER",
+   "sheet": "06_EVIDENCE_OBJECTS",
+   "row": 8,
+   "col": 17,
+   "field": "CLM-010.limitations_ar",
+   "old": "لا يثبت التسلسل 7 ثم 9 ثم 8 دخول مقدمي خدمات إلى السوق أو خروجهم منه، ولا صافي نمو في عددهم. وليس الانتقال من 581,075 مشتركًا (الربع الثالث 2024) إلى 2,102,484 (النصف الأول 2025) مقياسًا للنمو، والمشتركون ليسوا أشخاصًا فريدين ولا مستخدمين نشطين.",
+   "new": "لا يثبت التسلسل 7 ثم 9 ثم 8 دخول مقدمي خدمات إلى السوق أو خروجهم منه، ولا صافي نمو في عددهم. وليس الانتقال من 581,075 مشتركًا (الربع الثالث 2024) إلى 2,102,484 (النصف الأول 2025) مقياسًا للنمو، والمشتركون ليسوا أشخاصًا فريدين ولا مستخدمين نشطين. لماذا تختلف الأرقام: يحصي خط الأساس لمشروع FMIIP، الممول من البنك الدولي، في يناير 2025 ما عدده 375,252 حساب محفظة إلكترونية نشطًا، وهو أقل بكثير من 2,102,484 مشتركًا في المحافظ الإلكترونية يُبلغ عنهم البنك المركزي اليمني – عدن للنصف الأول من 2025. فهما يحصيان شيئين مختلفين، حساباتٍ يعرّفها المشروع بأنها نشطة ومشتركين كما يُبلغ عنهم البنك المركزي، وفق تعريفين لا توثقهما قاعدة الأدلة؛ لذلك لا يُقرأ الفرق بينهما نموًا ولا خمولًا ولا خطأً، ولا يمثل أيٌّ منهما عددًا من الأشخاص. لماذا تختلف الأرقام: لا يُقرأ الفرق بين 807,919 حساب نقود إلكترونية في ديسمبر 2019 وما بين 414,631 و581,075 مشتركًا في المحافظ الإلكترونية أورده البنك المركزي اليمني – عدن للأرباع الثلاثة الأولى من 2024 تراجعًا. فالأول يحصي حسابات لدى خمسة مقدمي خدمات شملتهم دراسة واحدة لمعهد الدراسات المصرفية، والثاني يحصي مشتركين وفق تعريف البنك المركزي ونطاق إبلاغه. ولم يُوفَّق بين الرقمين، ولا يحصي أيٌّ منهما أشخاصًا."
+  },
+  {
+   "finding": "E2-4:WHY-DIFFER",
+   "sheet": "06_EVIDENCE_OBJECTS",
+   "row": 113,
+   "col": 16,
+   "field": "FMIIP-BASELINE-2025-01.limitations_en",
+   "old": "Accounts are not unique people, and active e-wallet accounts are not subscribers unless a definition shows otherwise. Accounts classified by owner are not a count of women. Merchants are not POS terminals, and agents are not customers. These baselines have not been reconciled with the payment-report totals of the Central Bank of Yemen – Aden (CBY-Aden) or with survey measures of account ownership, and dividing them by a population total does not give a share of people.",
+   "new": "Accounts are not unique people, and active e-wallet accounts are not subscribers unless a definition shows otherwise. Accounts classified by owner are not a count of women. Merchants are not POS terminals, and agents are not customers. These baselines have not been reconciled with the payment-report totals of the Central Bank of Yemen – Aden (CBY-Aden) or with survey measures of account ownership, and dividing them by a population total does not give a share of people. Why the numbers differ: CBY-Aden reports 2,102,484 e-wallet subscribers for the first half of 2025, far more than the project's 375,252 active e-wallet accounts in January 2025. The two count different things under definitions the evidence base does not document, so the gap cannot be read as growth, as inactivity or as an error, and neither is a count of people."
+  },
+  {
+   "finding": "E2-4:WHY-DIFFER",
+   "sheet": "06_EVIDENCE_OBJECTS",
+   "row": 113,
+   "col": 17,
+   "field": "FMIIP-BASELINE-2025-01.limitations_ar",
+   "old": "الحسابات ليست أشخاصًا فريدين، وحسابات المحافظ النشطة ليست مرادفة لعدد المشتركين ما لم يثبت التعريف ذلك. والحسابات المصنفة بحسب ملكيتها ليست عددًا للنساء. والتجار ليسوا أجهزة نقاط بيع، والوكلاء ليسوا عملاء. ولم تُطابَق خطوط الأساس هذه مع مجاميع تقارير المدفوعات لدى البنك المركزي اليمني – عدن ولا مع قياسات امتلاك الحساب في المسوح، ولا تعطي قسمتها على عدد السكان نسبةً من الأشخاص.",
+   "new": "الحسابات ليست أشخاصًا فريدين، وحسابات المحافظ النشطة ليست مرادفة لعدد المشتركين ما لم يثبت التعريف ذلك. والحسابات المصنفة بحسب ملكيتها ليست عددًا للنساء. والتجار ليسوا أجهزة نقاط بيع، والوكلاء ليسوا عملاء. ولم تُطابَق خطوط الأساس هذه مع مجاميع تقارير المدفوعات لدى البنك المركزي اليمني – عدن ولا مع قياسات امتلاك الحساب في المسوح، ولا تعطي قسمتها على عدد السكان نسبةً من الأشخاص. لماذا تختلف الأرقام: يُبلغ البنك المركزي اليمني – عدن عن 2,102,484 مشتركًا في المحافظ الإلكترونية للنصف الأول من 2025، وهو أكثر بكثير من 375,252 حساب محفظة إلكترونية نشطًا يحصيها المشروع في يناير 2025. فهما يحصيان شيئين مختلفين وفق تعريفين لا توثقهما قاعدة الأدلة؛ لذلك لا يُقرأ الفرق بينهما نموًا ولا خمولًا ولا خطأً، ولا يمثل أيٌّ منهما عددًا من الأشخاص."
+  },
+  {
+   "finding": "E2-4:WHY-DIFFER",
+   "sheet": "06_EVIDENCE_OBJECTS",
+   "row": 93,
+   "col": 16,
+   "field": "CLM-050.limitations_en",
+   "old": "The total is not a count of active users or unique people, a national inclusion rate or a 2026 level. | Accounts are not unique people and are not automatically active; the 23% is a source-wide average, not a provider-specific or current rate.",
+   "new": "The total is not a count of active users or unique people, a national inclusion rate or a 2026 level. Why the numbers differ: the 807,919 e-money accounts of December 2019 and CBY-Aden's 414,631 to 581,075 e-wallet subscribers in the first three quarters of 2024 cannot be read as a fall. The first counts accounts at the five providers one study of the Institute of Banking Studies (IBS) covered; the second counts subscribers under CBY-Aden's own definition and reporting scope. The two have not been reconciled, and neither counts people. | Accounts are not unique people and are not automatically active; the 23% is a source-wide average, not a provider-specific or current rate."
+  },
+  {
+   "finding": "E2-4:WHY-DIFFER",
+   "sheet": "06_EVIDENCE_OBJECTS",
+   "row": 93,
+   "col": 17,
+   "field": "CLM-050.limitations_ar",
+   "old": "ليس الإجمالي عددًا لمستخدمين نشطين أو لأشخاص فريدين، ولا معدل شمول وطنيًا، ولا مستوى حاليًا لعام 2026. | الحسابات لا تساوي أشخاصًا فريدين ولا تكون نشطة تلقائيًا؛ ونسبة 23% متوسط يورده المصدر وليست نسبة خاصة بكل مقدم خدمة أو نسبة حالية.",
+   "new": "ليس الإجمالي عددًا لمستخدمين نشطين أو لأشخاص فريدين، ولا معدل شمول وطنيًا، ولا مستوى حاليًا لعام 2026. لماذا تختلف الأرقام: لا يُقرأ الفرق بين 807,919 حساب نقود إلكترونية في ديسمبر 2019 وما بين 414,631 و581,075 مشتركًا في المحافظ الإلكترونية أورده البنك المركزي اليمني – عدن للأرباع الثلاثة الأولى من 2024 تراجعًا. فالأول يحصي حسابات لدى خمسة مقدمي خدمات شملتهم دراسة واحدة لمعهد الدراسات المصرفية، والثاني يحصي مشتركين وفق تعريف البنك المركزي ونطاق إبلاغه. ولم يُوفَّق بين الرقمين، ولا يحصي أيٌّ منهما أشخاصًا. | الحسابات لا تساوي أشخاصًا فريدين ولا تكون نشطة تلقائيًا؛ ونسبة 23% متوسط يورده المصدر وليست نسبة خاصة بكل مقدم خدمة أو نسبة حالية."
+  },
+  {
+   "finding": "E2-4:WHY-DIFFER",
+   "sheet": "06_EVIDENCE_OBJECTS",
+   "row": 21,
+   "col": 16,
+   "field": "CLM-016.limitations_en",
+   "old": "382 is not the 2026 count, a count of unique current firms or active providers, or a measure of branch footprint. | The figure is the sum of category entries on the 2025 roster, which the 2026 roster supersedes; entries are counted as listed, not as distinct operating firms.",
+   "new": "382 is not the 2026 count, a count of unique current firms or active providers, or a measure of branch footprint. Why the numbers differ: the official 2026 roster lists 100 exchange companies, 231 individual exchange establishments and 111 remittance agents, more than the 79, 195 and 108 of the 2025 roster. The higher 2026 entries are not a count of new providers: both rosters count entries by class rather than unique firms, the 2026 roster states no issue date, and the 2026 suspension and withdrawal decisions have not been matched with it entity by entity. | The figure is the sum of category entries on the 2025 roster, which the 2026 roster supersedes; entries are counted as listed, not as distinct operating firms."
+  },
+  {
+   "finding": "E2-4:WHY-DIFFER",
+   "sheet": "06_EVIDENCE_OBJECTS",
+   "row": 21,
+   "col": 17,
+   "field": "CLM-016.limitations_ar",
+   "old": "ليس الرقم 382 عدد عام 2026، ولا عددًا لشركات فريدة حالية أو لمقدمي خدمات عاملين، ولا مقياسًا لشبكة الفروع. | الرقم مجموع القيود في قائمة 2025 حسب الفئة، وقد حلت محلها قائمة 2026؛ وتُعدّ القيود كما وردت، لا بوصفها شركات عاملة مستقلة.",
+   "new": "ليس الرقم 382 عدد عام 2026، ولا عددًا لشركات فريدة حالية أو لمقدمي خدمات عاملين، ولا مقياسًا لشبكة الفروع. لماذا تختلف الأرقام: تُدرج القائمة الرسمية لعام 2026 عدد 100 شركة صرافة و231 منشأة صرافة فردية و111 وكيلًا للحوالات، وهي أكثر من 79 و195 و108 في قائمة 2025. ولا تمثل الأعداد الأعلى في قائمة 2026 عددًا لمقدمي خدمات جدد: فالقائمتان تحصيان القيود بحسب الفئة لا الشركات الفريدة، ولا تذكر قائمة 2026 تاريخ صدورها، ولم تُطابَق قرارات التعليق وسحب الترخيص الصادرة في 2026 معها جهةً جهة. | الرقم مجموع القيود في قائمة 2025 حسب الفئة، وقد حلت محلها قائمة 2026؛ وتُعدّ القيود كما وردت، لا بوصفها شركات عاملة مستقلة."
+  },
+  {
+   "finding": "E2-4:WHY-DIFFER",
+   "sheet": "06_EVIDENCE_OBJECTS",
+   "row": 7,
+   "col": 16,
+   "field": "CLM-009.limitations_en",
+   "old": "Adding the three classes does not give a count of unique providers, because no rule for identifying the same entity across classes has been applied. Inclusion in the annual roster is not proof of current operation, branch activity or service availability, including for entities named in 2026 enforcement decisions.",
+   "new": "Adding the three classes does not give a count of unique providers, because no rule for identifying the same entity across classes has been applied. Inclusion in the annual roster is not proof of current operation, branch activity or service availability, including for entities named in 2026 enforcement decisions. Why the numbers differ: the official 2025 roster listed 79 exchange companies, 195 exchange establishments and 108 remittance agents. The higher 2026 entries are not a count of new providers: both rosters count entries by class rather than unique firms, the 2026 roster states no issue date, and the 2026 suspension and withdrawal decisions have not been matched with it entity by entity."
+  },
+  {
+   "finding": "E2-4:WHY-DIFFER",
+   "sheet": "06_EVIDENCE_OBJECTS",
+   "row": 7,
+   "col": 17,
+   "field": "CLM-009.limitations_ar",
+   "old": "لا يعطي جمع الفئات الثلاث عددًا لمقدمي خدمات فريدين، لأنه لم تُطبَّق قاعدة لتحديد الكيان نفسه عبر الفئات. ولا يثبت الإدراج في القائمة السنوية التشغيل الحالي أو نشاط الفروع أو توافر الخدمة، بما في ذلك للجهات التي سمّتها قرارات الإنفاذ الصادرة خلال 2026.",
+   "new": "لا يعطي جمع الفئات الثلاث عددًا لمقدمي خدمات فريدين، لأنه لم تُطبَّق قاعدة لتحديد الكيان نفسه عبر الفئات. ولا يثبت الإدراج في القائمة السنوية التشغيل الحالي أو نشاط الفروع أو توافر الخدمة، بما في ذلك للجهات التي سمّتها قرارات الإنفاذ الصادرة خلال 2026. لماذا تختلف الأرقام: أدرجت القائمة الرسمية لعام 2025 عدد 79 شركة صرافة و195 منشأة صرافة و108 وكلاء للحوالات. ولا تمثل الأعداد الأعلى في قائمة 2026 عددًا لمقدمي خدمات جدد: فالقائمتان تحصيان القيود بحسب الفئة لا الشركات الفريدة، ولا تذكر قائمة 2026 تاريخ صدورها، ولم تُطابَق قرارات التعليق وسحب الترخيص الصادرة في 2026 معها جهةً جهة."
+  },
+  {
+   "finding": "E2-4:WHY-DIFFER",
+   "sheet": "03_PAGE_SECTIONS",
+   "row": 353,
+   "col": 5,
+   "field": "/payments/#s5.body_en",
+   "old": "The CBY-Aden payments report for the third quarter of 2024 gives e-wallet subscriber counts of 414,631 for Q1, 507,585 for Q2 and 581,075 for Q3. The first-half 2025 infographic reports 2,102,484 subscribers. The two publications' subscriber definitions and reporting scope have not been reconciled, so the 2025 figure is not joined to the 2024 quarters and the difference is not read as growth. A subscriber count is not a count of unique people or of active users, and neither publication measures how many adults use a wallet.",
+   "new": "The CBY-Aden payments report for the third quarter of 2024 gives e-wallet subscriber counts of 414,631 for Q1, 507,585 for Q2 and 581,075 for Q3. The first-half 2025 infographic reports 2,102,484 subscribers. The two publications' subscriber definitions and reporting scope have not been reconciled, so the 2025 figure is not joined to the 2024 quarters and the difference is not read as growth. A subscriber count is not a count of unique people or of active users, and neither publication measures how many adults use a wallet. Why the numbers differ: the World Bank-financed FMIIP project's baseline for January 2025 counts 375,252 active e-wallet accounts, far fewer than the 2,102,484 e-wallet subscribers CBY-Aden reports for the first half of 2025. The two count different things, accounts the project defines as active and subscribers as CBY-Aden reports them, under definitions the evidence base does not document, so the gap cannot be read as growth, as inactivity or as an error, and neither is a count of people."
+  },
+  {
+   "finding": "E2-4:WHY-DIFFER",
+   "sheet": "03_PAGE_SECTIONS",
+   "row": 354,
+   "col": 7,
+   "field": "/payments/#s5.body_ar",
+   "old": "يورد تقرير المدفوعات الصادر عن البنك المركزي اليمني – عدن للربع الثالث من 2024 أعداد مشتركي المحافظ الإلكترونية: 414,631 في الربع الأول، و507,585 في الربع الثاني، و581,075 في الربع الثالث. أما إنفوغرافيك النصف الأول من 2025 فيورد 2,102,484 مشتركًا. ولم يُطابَق تعريف المشترك ولا نطاق الإبلاغ بين الإصدارين، لذلك لا يُوصل رقم 2025 بأرباع 2024، ولا يُقرأ الفرق بينهما نموًا. وعدد المشتركين ليس عددًا للأشخاص الفريدين ولا للمستخدمين النشطين، ولا يقيس أيٌّ من الإصدارين عدد البالغين الذين يستخدمون المحافظ.",
+   "new": "يورد تقرير المدفوعات الصادر عن البنك المركزي اليمني – عدن للربع الثالث من 2024 أعداد مشتركي المحافظ الإلكترونية: 414,631 في الربع الأول، و507,585 في الربع الثاني، و581,075 في الربع الثالث. أما إنفوغرافيك النصف الأول من 2025 فيورد 2,102,484 مشتركًا. ولم يُطابَق تعريف المشترك ولا نطاق الإبلاغ بين الإصدارين، لذلك لا يُوصل رقم 2025 بأرباع 2024، ولا يُقرأ الفرق بينهما نموًا. وعدد المشتركين ليس عددًا للأشخاص الفريدين ولا للمستخدمين النشطين، ولا يقيس أيٌّ من الإصدارين عدد البالغين الذين يستخدمون المحافظ. لماذا تختلف الأرقام: يحصي خط الأساس لمشروع FMIIP، الممول من البنك الدولي، في يناير 2025 ما عدده 375,252 حساب محفظة إلكترونية نشطًا، وهو أقل بكثير من 2,102,484 مشتركًا في المحافظ الإلكترونية يُبلغ عنهم البنك المركزي اليمني – عدن للنصف الأول من 2025. فهما يحصيان شيئين مختلفين، حساباتٍ يعرّفها المشروع بأنها نشطة ومشتركين كما يُبلغ عنهم البنك المركزي، وفق تعريفين لا توثقهما قاعدة الأدلة؛ لذلك لا يُقرأ الفرق بينهما نموًا ولا خمولًا ولا خطأً، ولا يمثل أيٌّ منهما عددًا من الأشخاص."
+  },
+  {
+   "finding": "E2-4:WHY-DIFFER",
+   "sheet": "03_PAGE_SECTIONS",
+   "row": 181,
+   "col": 5,
+   "field": "/payments/#s6.body_en",
+   "old": "Within a study of five e-money providers by the Institute of Banking Studies (IBS), e-money accounts reached 807,919 in December 2019, while the same source reports an average 23% dormant/inactive share and notes that some accounts were used once or because circumstances imposed their use. CauseWay’s reproducible grouping of the source’s 2019 transaction-value table indicates 57.03% cash-in/cash-out, 29.97% movement between bank and electronic accounts, and 2.41% for bills and purchases together. These are historical patterns within the study’s providers, not current national prevalence.",
+   "new": "Within a study of five e-money providers by the Institute of Banking Studies (IBS), e-money accounts reached 807,919 in December 2019, while the same source reports an average 23% dormant/inactive share and notes that some accounts were used once or because circumstances imposed their use. CauseWay’s reproducible grouping of the source’s 2019 transaction-value table indicates 57.03% cash-in/cash-out, 29.97% movement between bank and electronic accounts, and 2.41% for bills and purchases together. These are historical patterns within the study’s providers, not current national prevalence. Why the numbers differ: the 807,919 e-money accounts of December 2019 and CBY-Aden's 414,631 to 581,075 e-wallet subscribers in the first three quarters of 2024 cannot be read as a fall. The first counts accounts at the five providers one study of the Institute of Banking Studies (IBS) covered; the second counts subscribers under CBY-Aden's own definition and reporting scope. The two have not been reconciled, and neither counts people."
+  },
+  {
+   "finding": "E2-4:WHY-DIFFER",
+   "sheet": "03_PAGE_SECTIONS",
+   "row": 182,
+   "col": 7,
+   "field": "/payments/#s6.body_ar",
+   "old": "ضمن نطاق دراسة لمعهد الدراسات المصرفية شملت خمسة مقدمي خدمات، بلغ عدد حسابات النقود الإلكترونية 807,919 حسابًا في ديسمبر 2019، بينما يذكر المصدر نفسه متوسطًا قدره 23% للحسابات الخاملة أو غير النشطة، ويشير إلى أن بعض الحسابات استُخدمت مرة واحدة أو فرضت الظروف استخدامها. ويشير تجميع CauseWay القابل لإعادة الإنتاج لجدول قيمة المعاملات لعام 2019 إلى 57.03% للإيداع والسحب النقدي، و29.97% للحركة بين الحسابات المصرفية والإلكترونية، و2.41% للفواتير والمشتريات معًا. هذه أنماط تاريخية داخل نطاق المصدر، وليست تقديرات وطنية حالية.",
+   "new": "ضمن نطاق دراسة لمعهد الدراسات المصرفية شملت خمسة مقدمي خدمات، بلغ عدد حسابات النقود الإلكترونية 807,919 حسابًا في ديسمبر 2019، بينما يذكر المصدر نفسه متوسطًا قدره 23% للحسابات الخاملة أو غير النشطة، ويشير إلى أن بعض الحسابات استُخدمت مرة واحدة أو فرضت الظروف استخدامها. ويشير تجميع CauseWay القابل لإعادة الإنتاج لجدول قيمة المعاملات لعام 2019 إلى 57.03% للإيداع والسحب النقدي، و29.97% للحركة بين الحسابات المصرفية والإلكترونية، و2.41% للفواتير والمشتريات معًا. هذه أنماط تاريخية داخل نطاق المصدر، وليست تقديرات وطنية حالية. لماذا تختلف الأرقام: لا يُقرأ الفرق بين 807,919 حساب نقود إلكترونية في ديسمبر 2019 وما بين 414,631 و581,075 مشتركًا في المحافظ الإلكترونية أورده البنك المركزي اليمني – عدن للأرباع الثلاثة الأولى من 2024 تراجعًا. فالأول يحصي حسابات لدى خمسة مقدمي خدمات شملتهم دراسة واحدة لمعهد الدراسات المصرفية، والثاني يحصي مشتركين وفق تعريف البنك المركزي ونطاق إبلاغه. ولم يُوفَّق بين الرقمين، ولا يحصي أيٌّ منهما أشخاصًا."
+  },
+  {
+   "finding": "E2-4:WHY-DIFFER",
+   "sheet": "03_PAGE_SECTIONS",
+   "row": 301,
+   "col": 5,
+   "field": "/reforms/#s6.body_en",
+   "old": "The World Bank-financed Financial Market Infrastructure and Inclusion Project (FMIIP) separates three functions: a Fast Payment System (FPS), which the project supports in areas under the internationally recognized government; a Real-Time Gross Settlement system (RTGS), to be managed by the Central Bank of Yemen – Aden (CBY-Aden) alongside a core-banking upgrade; and a separate access-and-use component covering access-point mapping, capacity building, merchant onboarding in underserved areas and outreach. The project links RTGS to large-value payments between financial institutions, while the FPS is the fast electronic-payment component. The 2026 sequence then adds a CBY-Aden board decision on what the source calls a national QR standard and e-wallet interconnection, unified-network integration work, and the establishment and governance of the Yemeni Payments and Clearing Company (YPCC). These are different kinds of step — project design, architecture decision, integration and institution-building. None by itself proves go-live, reliability, user adoption, transaction coverage or an inclusion effect. The project’s results framework also records January 2025 baselines for its own project-defined indicators: 817 financial access points (2030 target: 1,021), 1,062,441 active bank accounts (200,898 of them owned by women), 375,252 active e-wallet accounts, 170 merchants accepting electronic payments and 65 agents of licensed financial institutions. These are project baselines that count access points, accounts, merchants and agents — not people — and they have not been reconciled with CBY-Aden’s payment-report totals or with survey measures of account ownership.",
+   "new": "The World Bank-financed Financial Market Infrastructure and Inclusion Project (FMIIP) separates three functions: a Fast Payment System (FPS), which the project supports in areas under the internationally recognized government; a Real-Time Gross Settlement system (RTGS), to be managed by the Central Bank of Yemen – Aden (CBY-Aden) alongside a core-banking upgrade; and a separate access-and-use component covering access-point mapping, capacity building, merchant onboarding in underserved areas and outreach. The project links RTGS to large-value payments between financial institutions, while the FPS is the fast electronic-payment component. The 2026 sequence then adds a CBY-Aden board decision on what the source calls a national QR standard and e-wallet interconnection, unified-network integration work, and the establishment and governance of the Yemeni Payments and Clearing Company (YPCC). These are different kinds of step — project design, architecture decision, integration and institution-building. None by itself proves go-live, reliability, user adoption, transaction coverage or an inclusion effect. The project’s results framework also records January 2025 baselines for its own project-defined indicators: 817 financial access points (2030 target: 1,021), 1,062,441 active bank accounts (200,898 of them owned by women), 375,252 active e-wallet accounts, 170 merchants accepting electronic payments and 65 agents of licensed financial institutions. These are project baselines that count access points, accounts, merchants and agents — not people — and they have not been reconciled with CBY-Aden’s payment-report totals or with survey measures of account ownership. Why the numbers differ: CBY-Aden reports 2,102,484 e-wallet subscribers for the first half of 2025, far more than the project's 375,252 active e-wallet accounts in January 2025. The two count different things under definitions the evidence base does not document, so the gap cannot be read as growth, as inactivity or as an error, and neither is a count of people."
+  },
+  {
+   "finding": "E2-4:WHY-DIFFER",
+   "sheet": "03_PAGE_SECTIONS",
+   "row": 302,
+   "col": 7,
+   "field": "/reforms/#s6.body_ar",
+   "old": "يفصل مشروع البنية التحتية للأسواق المالية والشمول المالي في اليمن (FMIIP) بين ثلاث وظائف: نظام الدفع السريع (FPS) الذي يدعمه المشروع في المناطق الخاضعة للحكومة المعترف بها دوليًا، ونظام التسوية الإجمالية الفورية (RTGS) المقرر أن يديره البنك المركزي اليمني – عدن إلى جانب تحديث نظامه المصرفي الأساسي، ومكوّن مستقل لدعم الوصول والاستخدام يشمل حصر نقاط الوصول جغرافيًا وبناء القدرات ودعم انضمام التجار في المناطق المحرومة والتوعية. ويربط المشروع نظام RTGS بالمدفوعات الكبيرة بين المؤسسات المالية، بينما يمثل FPS مكوّن المدفوعات الإلكترونية السريعة. ثم تضيف تطورات 2026 قرارًا لمجلس إدارة البنك المركزي اليمني – عدن بشأن ما يسميه المصدر معيارًا وطنيًا لرمز الاستجابة السريعة (QR) وربط المحافظ الإلكترونية، وأعمال تكامل الشبكة الموحدة، وإنشاء الشركة اليمنية للمدفوعات والمقاصة وحوكمتها. هذه وقائع مختلفة الطبيعة — تصميم مشروع، وقرار لبنية المدفوعات، وتكامل، وبناء مؤسسة. ولا يثبت أي منها بذاته بدء التشغيل أو الاعتمادية أو تبني المستخدمين أو تغطية المعاملات أو أثرًا على الشمول. ويسجل إطار نتائج المشروع كذلك خطوط أساس في يناير 2025 لمؤشراته المعرّفة داخل المشروع: 817 نقطة وصول مالي (المستهدف في 2030: 1,021)، و1,062,441 حسابًا مصرفيًا نشطًا (منها 200,898 حسابًا مملوكًا لنساء)، و375,252 حساب محفظة إلكترونية نشطًا، و170 تاجرًا يقبلون المدفوعات الإلكترونية، و65 وكيلًا لمؤسسات مالية مرخصة. وهذه خطوط أساس للمشروع تعدّ نقاط الوصول والحسابات والتجار والوكلاء، لا الأشخاص، ولم تُطابق مع مجاميع تقارير المدفوعات لدى البنك المركزي اليمني – عدن ولا مع قياسات امتلاك الحساب في المسوح.",
+   "new": "يفصل مشروع البنية التحتية للأسواق المالية والشمول المالي في اليمن (FMIIP) بين ثلاث وظائف: نظام الدفع السريع (FPS) الذي يدعمه المشروع في المناطق الخاضعة للحكومة المعترف بها دوليًا، ونظام التسوية الإجمالية الفورية (RTGS) المقرر أن يديره البنك المركزي اليمني – عدن إلى جانب تحديث نظامه المصرفي الأساسي، ومكوّن مستقل لدعم الوصول والاستخدام يشمل حصر نقاط الوصول جغرافيًا وبناء القدرات ودعم انضمام التجار في المناطق المحرومة والتوعية. ويربط المشروع نظام RTGS بالمدفوعات الكبيرة بين المؤسسات المالية، بينما يمثل FPS مكوّن المدفوعات الإلكترونية السريعة. ثم تضيف تطورات 2026 قرارًا لمجلس إدارة البنك المركزي اليمني – عدن بشأن ما يسميه المصدر معيارًا وطنيًا لرمز الاستجابة السريعة (QR) وربط المحافظ الإلكترونية، وأعمال تكامل الشبكة الموحدة، وإنشاء الشركة اليمنية للمدفوعات والمقاصة وحوكمتها. هذه وقائع مختلفة الطبيعة — تصميم مشروع، وقرار لبنية المدفوعات، وتكامل، وبناء مؤسسة. ولا يثبت أي منها بذاته بدء التشغيل أو الاعتمادية أو تبني المستخدمين أو تغطية المعاملات أو أثرًا على الشمول. ويسجل إطار نتائج المشروع كذلك خطوط أساس في يناير 2025 لمؤشراته المعرّفة داخل المشروع: 817 نقطة وصول مالي (المستهدف في 2030: 1,021)، و1,062,441 حسابًا مصرفيًا نشطًا (منها 200,898 حسابًا مملوكًا لنساء)، و375,252 حساب محفظة إلكترونية نشطًا، و170 تاجرًا يقبلون المدفوعات الإلكترونية، و65 وكيلًا لمؤسسات مالية مرخصة. وهذه خطوط أساس للمشروع تعدّ نقاط الوصول والحسابات والتجار والوكلاء، لا الأشخاص، ولم تُطابق مع مجاميع تقارير المدفوعات لدى البنك المركزي اليمني – عدن ولا مع قياسات امتلاك الحساب في المسوح. لماذا تختلف الأرقام: يُبلغ البنك المركزي اليمني – عدن عن 2,102,484 مشتركًا في المحافظ الإلكترونية للنصف الأول من 2025، وهو أكثر بكثير من 375,252 حساب محفظة إلكترونية نشطًا يحصيها المشروع في يناير 2025. فهما يحصيان شيئين مختلفين وفق تعريفين لا توثقهما قاعدة الأدلة؛ لذلك لا يُقرأ الفرق بينهما نموًا ولا خمولًا ولا خطأً، ولا يمثل أيٌّ منهما عددًا من الأشخاص."
+  },
+  {
+   "finding": "E2-4:WHY-DIFFER",
+   "sheet": "03_PAGE_SECTIONS",
+   "row": 219,
+   "col": 5,
+   "field": "/providers/#s4.body_en",
+   "old": "The official 2026 roster of the Central Bank of Yemen – Aden (CBY-Aden) lists 100 exchange companies, 231 individual exchange establishments and 111 remittance agents. These are three source-defined categories, not a deduplicated total of unique firms. The 2026 suspension, withdrawal or closure decisions are separate status evidence: they are dated January–September 2026, some were issued before the roster and some after it, and the roster’s own issue date is not stated. They have to be reconciled entity by entity before any count of providers operating on a given date is stated.",
+   "new": "The official 2026 roster of the Central Bank of Yemen – Aden (CBY-Aden) lists 100 exchange companies, 231 individual exchange establishments and 111 remittance agents. These are three source-defined categories, not a deduplicated total of unique firms. The 2026 suspension, withdrawal or closure decisions are separate status evidence: they are dated January–September 2026, some were issued before the roster and some after it, and the roster’s own issue date is not stated. They have to be reconciled entity by entity before any count of providers operating on a given date is stated. Why the numbers differ: the official 2025 roster listed 79 exchange companies, 195 exchange establishments and 108 remittance agents. The higher 2026 entries are not a count of new providers: both rosters count entries by class rather than unique firms, the 2026 roster states no issue date, and the 2026 suspension and withdrawal decisions have not been matched with it entity by entity."
+  },
+  {
+   "finding": "E2-4:WHY-DIFFER",
+   "sheet": "03_PAGE_SECTIONS",
+   "row": 220,
+   "col": 7,
+   "field": "/providers/#s4.body_ar",
+   "old": "تسجل القائمة الرسمية للبنك المركزي اليمني – عدن لعام 2026 عدد 100 شركة صرافة و231 منشأة صرافة فردية و111 وكيلًا للحوالات. هذه ثلاث فئات كما يعرّفها المصدر، وليست إجماليًا لجهات فريدة بعد إزالة الازدواج. أما قرارات التعليق أو سحب الترخيص أو الإغلاق الصادرة في 2026 فأدلة منفصلة على الوضع: فهي مؤرخة بين يناير وسبتمبر 2026، وصدر بعضها قبل القائمة وبعضها بعدها، ولا تذكر القائمة نفسها تاريخ صدورها. ولذلك يجب مطابقتها جهةً جهة قبل إعلان أي عدد لمقدمي الخدمات العاملين في تاريخ محدد.",
+   "new": "تسجل القائمة الرسمية للبنك المركزي اليمني – عدن لعام 2026 عدد 100 شركة صرافة و231 منشأة صرافة فردية و111 وكيلًا للحوالات. هذه ثلاث فئات كما يعرّفها المصدر، وليست إجماليًا لجهات فريدة بعد إزالة الازدواج. أما قرارات التعليق أو سحب الترخيص أو الإغلاق الصادرة في 2026 فأدلة منفصلة على الوضع: فهي مؤرخة بين يناير وسبتمبر 2026، وصدر بعضها قبل القائمة وبعضها بعدها، ولا تذكر القائمة نفسها تاريخ صدورها. ولذلك يجب مطابقتها جهةً جهة قبل إعلان أي عدد لمقدمي الخدمات العاملين في تاريخ محدد. لماذا تختلف الأرقام: أدرجت القائمة الرسمية لعام 2025 عدد 79 شركة صرافة و195 منشأة صرافة و108 وكلاء للحوالات. ولا تمثل الأعداد الأعلى في قائمة 2026 عددًا لمقدمي خدمات جدد: فالقائمتان تحصيان القيود بحسب الفئة لا الشركات الفريدة، ولا تذكر قائمة 2026 تاريخ صدورها، ولم تُطابَق قرارات التعليق وسحب الترخيص الصادرة في 2026 معها جهةً جهة."
+  }
+ ]
+}
