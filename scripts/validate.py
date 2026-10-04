@@ -3464,6 +3464,31 @@ try:
 except Exception as _x:
     errors.append("E2-PREC unreadable " + repr(_x))
 
+# E2-CTX (edition 2, candidate c; REOPEN-INTL): the one same-source context figure beside Yemen's account ownership,
+# the World Bank's low-income aggregate for the same Findex wave (35.2%), is never shown bare. Asserted on what a reader
+# sees: every paragraph, list item or table cell that prints it also names what it averages (low-income economies and
+# their number, 19), and it never reaches Home, where a lone pair of numbers would read as a ranking.
+try:
+    _nctx = 0
+    for _f in sorted(DIST.glob("*/**/index.html")) + sorted(DIST.glob("*/index.html")):
+        _rel = str(_f.relative_to(DIST))
+        if not _rel.startswith(("en/", "ar/")):
+            continue
+        _h = re.sub(r"<(script|style)\b[^>]*>.*?</\1>", " ", _f.read_text(encoding="utf-8"), flags=re.S)
+        for _b in re.findall(r"<(?:p|li|td|dd)\b[^>]*>(.*?)</(?:p|li|td|dd)>", _h, re.S):
+            _bt = re.sub(r"\s+", " ", _html.unescape(re.sub(r"<[^>]+>", " ", _b)))
+            if not re.search(r"(?<![\d.])35\.2\s?%?(?!\d)", _bt):
+                continue
+            _nctx += 1
+            if _rel in ("en/index.html", "ar/index.html"):
+                errors.append(f"E2-CTX {_rel} prints the low-income context figure on Home")
+            if not (("low-income" in _bt or "low income" in _bt or "منخفضة الدخل" in _bt) and re.search(r"(?<!\d)19(?!\d)", _bt)):
+                errors.append(f"E2-CTX {_rel} prints the low-income context figure without naming what it averages: {_bt[:120]!r}")
+    if _nctx < 4:
+        errors.append(f"E2-CTX read only {_nctx} context-figure blocks")
+except Exception as _x:
+    errors.append("E2-CTX unreadable " + repr(_x))
+
 print(f'HTML={len(list(DIST.rglob("*.html")))} ERRORS={len(errors)} WARN={len(warns)}')
 if warns:
     for w in warns[:20]: print('WARN',w)

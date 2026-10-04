@@ -367,6 +367,14 @@ CONTROLS = [
     ("a Findex gap prints to two decimals on Home", "en/index.html",
      replace('<b class="fnum">12.9</b>', '<b class="fnum">12.91</b>'),
      "E2-PREC en/index.html prints a Findex share or gap to two decimals: 12.91"),
+    # E2-CTX (edition 2, REOPEN-INTL): the low-income context figure is never bare and never on Home.
+    ("the low-income context figure loses what it averages", "en/people/index.html",
+     replace("across the 19 low-income economies surveyed in it, Yemen among them, is 35.2%",
+             "is 35.2%"),
+     "E2-CTX en/people/index.html prints the low-income context figure without naming what it averages"),
+    ("the low-income context figure reaches Home", "ar/index.html",
+     sub_once(r"(<p class=\"sent[^\"]*\">)", r"\1للمقارنة: 35.2% في 19 اقتصادًا منخفض الدخل. "),
+     "E2-CTX ar/index.html prints the low-income context figure on Home"),
     # RC-NOINDEX (owner decision B3): until release every page carries the pre-release noindex meta.
     ("a page loses its pre-release noindex", "en/people/index.html",
      replace('<meta name="robots" content="noindex, nofollow">', ""),

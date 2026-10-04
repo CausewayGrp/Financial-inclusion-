@@ -171,6 +171,19 @@
       "Older adults, ages 25 and over. Verified 26 Sep 2026 against the World Bank API (16.1081…)."
     ],
     [
+      "WB-FINDEX-CTX-2021-LIC",
+      "account_t_d",
+      "Account ownership (same definition as FX.OWN.TOTL.ZS)",
+      "low-income economies (19 economies with a 2021-wave observation, Yemen included)",
+      "2021 wave",
+      35.2,
+      "percent of population ages 15+",
+      "World Bank Global Findex",
+      "https://thedocs.worldbank.org/en/doc/be6615202d1f08a25855c8ac2d615122-0050012025/related/GlobalFindexDatabase2025.csv",
+      "PUBLIC_PRIMARY_AGGREGATE_CONTEXT",
+      "World Bank aggregate 0.351821646573129 (Global Findex Database 2025, row Low income, 2021, all); reproduced as the adult-population-weighted mean of the 19 economies the file classes Low income with a 2021-wave observation, Yemen's 2022 observation included. Context only: not a benchmark, target or ranking."
+    ],
+    [
       "WB-FINDEX-CURRENTNESS-2025-001",
       "FINDEX_EDITION",
       "Current Global Findex edition and Yemen observation coverage",

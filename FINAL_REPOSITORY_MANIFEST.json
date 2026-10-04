@@ -3,9 +3,9 @@
  "purpose": "What every tracked file is. One authority -> one projection path -> one runtime content path -> one current recipient start path. Hashes: SHA256SUMS.txt.",
  "authority": {
   "production_master": "authority/Yemen_Financial_Inclusion_Evidence_Master.xlsx",
-  "production_master_sha256": "39d06c358abdfb06ef350014e6a3407e7a91871918f7af1e5a2b105ea183f514",
+  "production_master_sha256": "1c107148bd9268b279f5f522b02260c2b3a7737e6c5cda0343534e8fb88273f5",
   "page_specs": "site-src/content/page_specs.json",
-  "page_specs_sha256": "b81aa377362c578458712c94542f9602c2b46a4828d41d4a32a571463719d1db",
+  "page_specs_sha256": "8c0203be9d8e7dea7fec0b9095e07e89de02d388436247ebe1cf620be875e736",
   "logo": "site-src/assets/CauseWay_Master_Logo.png",
   "logo_sha256": "5830163d50f9badbef3227ec44e7705548e2fcc8a06b2d6ae33d56ade60c6a90",
   "rule": "The Production Master is the only semantic authority. Everything under site-src/content, dist, design/architecture and audit/PUBLIC_LITERAL_CLOSURE.json is generated from it and never edited by hand, except the two CONTROLLED_CONTRACT files, which the programme steward maintains in place and the generator validates against the Master's projections."
@@ -21,7 +21,7 @@
   ]
  },
  "class_counts": {
-  "AUDIT_HISTORY": 268,
+  "AUDIT_HISTORY": 274,
   "AUTHORITY_MASTER": 1,
   "AUTHORITY_POINTER": 2,
   "AUTHORITY_RULES": 1,
@@ -452,6 +452,14 @@
    "class": "AUDIT_HISTORY"
   },
   {
+   "path": "audit/edition_2/e2_3_findex_context.py",
+   "class": "AUDIT_HISTORY"
+  },
+  {
+   "path": "audit/edition_2/e2_3b_review_fixes.py",
+   "class": "AUDIT_HISTORY"
+  },
+  {
    "path": "audit/edition_2/runs/E2-1_MASTER_LEDGER.json",
    "class": "AUDIT_HISTORY"
   },
@@ -481,6 +489,22 @@
   },
   {
    "path": "audit/edition_2/runs/E2-2b_RUN_REPORT.json",
+   "class": "AUDIT_HISTORY"
+  },
+  {
+   "path": "audit/edition_2/runs/E2-3_MASTER_LEDGER.json",
+   "class": "AUDIT_HISTORY"
+  },
+  {
+   "path": "audit/edition_2/runs/E2-3_RUN_REPORT.json",
+   "class": "AUDIT_HISTORY"
+  },
+  {
+   "path": "audit/edition_2/runs/E2-3b_MASTER_LEDGER.json",
+   "class": "AUDIT_HISTORY"
+  },
+  {
+   "path": "audit/edition_2/runs/E2-3b_RUN_REPORT.json",
    "class": "AUDIT_HISTORY"
   },
   {

@@ -1,5 +1,23 @@
 # Repository Change Log
 
+## 2026-10-04 — E2-3, E2-3b: one same-source context row beside Yemen's account ownership (edition 2, candidate c)
+
+Master `39d06c358abd…` → `f6e15a16851f…` (E2-3) → `1c107148bd9268b279f5f522b02260c2b3a7737e6c5cda0343534e8fb88273f5`
+(E2-3b, the independent bilingual and adversarial review folded in) through `run_stage.py`
+(`audit/edition_2/e2_3_findex_context.py`, `audit/edition_2/e2_3b_review_fixes.py`). Closes REOPEN-INTL.
+- "Missing input: the owner should supply Findex aggregates" was not true: the World Bank publishes them in the Global
+  Findex Database 2025 file, linked from the page CLM-001 already cites. The row "Low income", 2021 wave, account
+  ownership is 0.351821646573129; reproduced twice (this session and the reviewer, independently) as the
+  adult-population-weighted mean of the 19 low-income economies surveyed in that wave, Yemen's 2022 observation among
+  them (Yemen weighs 6.6%; without Yemen 36.8%).
+- CLM-001 (summary, method, limitations) and /people/ section 2, English and Arabic: "For context, the World Bank's
+  figure for the same survey wave across the 19 low-income economies surveyed in it, Yemen among them, is 35.2%", with
+  "context, not a benchmark, a target or a ranking", what it averages, the classification named by its source, and
+  that Yemen's own figure covers only the areas surveyed. One row only; the income group rather than the region
+  (reasons in the transaction). Data row WB-FINDEX-CTX-2021-LIC in 25_FINDEX_BASELINE with the file's locator.
+- Gate E2-CTX: every block a reader sees with the figure names what it averages (low-income, 19), and it never reaches
+  Home. Two negative controls, both caught.
+
 ## 2026-10-04 — E2-2, E2-2b: one display precision for every Global Findex figure (edition 2, candidate b)
 
 Master `51a7f1930fcd…` → `d0bd9324c18e…` (E2-2) → `39d06c358abdfb06ef350014e6a3407e7a91871918f7af1e5a2b105ea183f514`

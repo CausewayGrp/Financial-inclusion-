@@ -48,3 +48,8 @@
   Pakistan). This corrects the first reply's challenge: the regional series does not include Afghanistan and
   Pakistan, although the World Bank's indicator API now labels it with the new region name. The Little Data Book
   (p. 159) already printed Yemen beside its region and income group: the World Bank's own presentation.
+- **c, E2-3 / E2-3b (same-source context) — BUILT.** One row: the World Bank's low-income aggregate for the same wave,
+  35.2% (19 economies surveyed in the wave, Yemen included). Income group over region: one row only, and the regional
+  mean is dominated by two large economies far from Yemen's conditions. Kept off Home and out of drawings (a lone pair
+  reads as a ranking); gate E2-CTX. Reader gain: a journalist or citizen can place 11.9% in the World Bank's own
+  context for economies at similar income, without a ranking, and see that Yemen is inside that average.

@@ -1,16 +1,16 @@
 {
   "schema": "YFIE_PUBLIC_LITERAL_CLOSURE/2.0",
   "audit_version": "2.0 — token-bounded, token-level classification (Pre-Tranche-C P1-D); v1 substring and paragraph-keyword rules removed",
-  "authority_master_sha256": "39d06c358abdfb06ef350014e6a3407e7a91871918f7af1e5a2b105ea183f514",
-  "page_specs_sha256": "b81aa377362c578458712c94542f9602c2b46a4828d41d4a32a571463719d1db",
+  "authority_master_sha256": "1c107148bd9268b279f5f522b02260c2b3a7737e6c5cda0343534e8fb88273f5",
+  "page_specs_sha256": "8c0203be9d8e7dea7fec0b9095e07e89de02d388436247ebe1cf620be875e736",
   "scope": "Reader-facing Page Spec titles/sections plus governed-copy numeric inventory. Every substantive public numeral must resolve to a governed source-closed object or be explicitly classified as date/period, stable technical identifier, or non-observation system/method metadata.",
   "classification_rule": "UNRESOLVED_SUBSTANTIVE_PUBLIC_NUMBER is a hard validation failure. Route/source presence without an object-level source-closed trace is not sufficient.",
-  "record_count": 13378,
+  "record_count": 13427,
   "summary": {
     "STABLE_ID_OR_TECHNICAL_STANDARD": 15,
-    "ROUTE_SOURCE_CLOSED__OBJECT_TRACE_AVAILABLE": 981,
+    "ROUTE_SOURCE_CLOSED__OBJECT_TRACE_AVAILABLE": 989,
     "DATE_OR_PERIOD": 1722,
-    "GOVERNED_OBJECT_SOURCE_CLOSED": 10377,
+    "GOVERNED_OBJECT_SOURCE_CLOSED": 10418,
     "INVENTORY_COUNT_FROM_CONTRACT": 14,
     "CONTROLLED_DATASET_INVENTORY_OR_METHOD_METADATA": 153,
     "ROUTE_PARTIAL_TRACE__PARTIAL_STATE_SHOWN": 10,
@@ -2904,7 +2904,7 @@
       "field": "body_en",
       "token": "11.9%",
       "category": "ROUTE_SOURCE_CLOSED__OBJECT_TRACE_AVAILABLE",
-      "context": "The latest representative observation of account ownership in Yemen published by the World Bank remains 11.9%. World Bank Data reports it for 2022; it comes from the Yemen Global Findex 2021 study, fielded from 7 November 2022 to 9 January 2023. The Global Findex 2025 edition adds 2024 observations for many economies, but no newer Yemen observation.",
+      "context": "The latest representative observation of account ownership in Yemen published by the World Bank remains 11.9%. World Bank Data reports it for 2022; it comes from the Yemen Global Findex 2021 study, fielded from 7 November 2022 to 9 January 2023. The Global Findex 2025 edition adds 2024 observations for many economies, but no newer Yemen observation. For context, the World Bank's figure for the same survey wave across the 19 low-income economies surveyed in it, Yemen among them, is 35.2%.",
       "source_object": "CLM-001"
     },
     {
@@ -2913,7 +2913,7 @@
       "field": "body_en",
       "token": "2022",
       "category": "DATE_OR_PERIOD",
-      "context": "The latest representative observation of account ownership in Yemen published by the World Bank remains 11.9%. World Bank Data reports it for 2022; it comes from the Yemen Global Findex 2021 study, fielded from 7 November 2022 to 9 January 2023. The Global Findex 2025 edition adds 2024 observations for many economies, but no newer Yemen observation."
+      "context": "The latest representative observation of account ownership in Yemen published by the World Bank remains 11.9%. World Bank Data reports it for 2022; it comes from the Yemen Global Findex 2021 study, fielded from 7 November 2022 to 9 January 2023. The Global Findex 2025 edition adds 2024 observations for many economies, but no newer Yemen observation. For context, the World Bank's figure for the same survey wave across the 19 low-income economies surveyed in it, Yemen among them, is 35.2%."
     },
     {
       "route": "/evidence/CLM-001/",
@@ -2921,7 +2921,7 @@
       "field": "body_en",
       "token": "2021",
       "category": "DATE_OR_PERIOD",
-      "context": "The latest representative observation of account ownership in Yemen published by the World Bank remains 11.9%. World Bank Data reports it for 2022; it comes from the Yemen Global Findex 2021 study, fielded from 7 November 2022 to 9 January 2023. The Global Findex 2025 edition adds 2024 observations for many economies, but no newer Yemen observation."
+      "context": "The latest representative observation of account ownership in Yemen published by the World Bank remains 11.9%. World Bank Data reports it for 2022; it comes from the Yemen Global Findex 2021 study, fielded from 7 November 2022 to 9 January 2023. The Global Findex 2025 edition adds 2024 observations for many economies, but no newer Yemen observation. For context, the World Bank's figure for the same survey wave across the 19 low-income economies surveyed in it, Yemen among them, is 35.2%."
     },
     {
       "route": "/evidence/CLM-001/",
@@ -2929,7 +2929,7 @@
       "field": "body_en",
       "token": "7",
       "category": "DATE_OR_PERIOD",
-      "context": "The latest representative observation of account ownership in Yemen published by the World Bank remains 11.9%. World Bank Data reports it for 2022; it comes from the Yemen Global Findex 2021 study, fielded from 7 November 2022 to 9 January 2023. The Global Findex 2025 edition adds 2024 observations for many economies, but no newer Yemen observation."
+      "context": "The latest representative observation of account ownership in Yemen published by the World Bank remains 11.9%. World Bank Data reports it for 2022; it comes from the Yemen Global Findex 2021 study, fielded from 7 November 2022 to 9 January 2023. The Global Findex 2025 edition adds 2024 observations for many economies, but no newer Yemen observation. For context, the World Bank's figure for the same survey wave across the 19 low-income economies surveyed in it, Yemen among them, is 35.2%."
     },
     {
       "route": "/evidence/CLM-001/",
@@ -2937,7 +2937,7 @@
       "field": "body_en",
       "token": "9",
       "category": "DATE_OR_PERIOD",
-      "context": "The latest representative observation of account ownership in Yemen published by the World Bank remains 11.9%. World Bank Data reports it for 2022; it comes from the Yemen Global Findex 2021 study, fielded from 7 November 2022 to 9 January 2023. The Global Findex 2025 edition adds 2024 observations for many economies, but no newer Yemen observation."
+      "context": "The latest representative observation of account ownership in Yemen published by the World Bank remains 11.9%. World Bank Data reports it for 2022; it comes from the Yemen Global Findex 2021 study, fielded from 7 November 2022 to 9 January 2023. The Global Findex 2025 edition adds 2024 observations for many economies, but no newer Yemen observation. For context, the World Bank's figure for the same survey wave across the 19 low-income economies surveyed in it, Yemen among them, is 35.2%."
     },
     {
       "route": "/evidence/CLM-001/",
@@ -2945,7 +2945,7 @@
       "field": "body_en",
       "token": "2023",
       "category": "DATE_OR_PERIOD",
-      "context": "The latest representative observation of account ownership in Yemen published by the World Bank remains 11.9%. World Bank Data reports it for 2022; it comes from the Yemen Global Findex 2021 study, fielded from 7 November 2022 to 9 January 2023. The Global Findex 2025 edition adds 2024 observations for many economies, but no newer Yemen observation."
+      "context": "The latest representative observation of account ownership in Yemen published by the World Bank remains 11.9%. World Bank Data reports it for 2022; it comes from the Yemen Global Findex 2021 study, fielded from 7 November 2022 to 9 January 2023. The Global Findex 2025 edition adds 2024 observations for many economies, but no newer Yemen observation. For context, the World Bank's figure for the same survey wave across the 19 low-income economies surveyed in it, Yemen among them, is 35.2%."
     },
     {
       "route": "/evidence/CLM-001/",
@@ -2953,7 +2953,7 @@
       "field": "body_en",
       "token": "2025",
       "category": "DATE_OR_PERIOD",
-      "context": "The latest representative observation of account ownership in Yemen published by the World Bank remains 11.9%. World Bank Data reports it for 2022; it comes from the Yemen Global Findex 2021 study, fielded from 7 November 2022 to 9 January 2023. The Global Findex 2025 edition adds 2024 observations for many economies, but no newer Yemen observation."
+      "context": "The latest representative observation of account ownership in Yemen published by the World Bank remains 11.9%. World Bank Data reports it for 2022; it comes from the Yemen Global Findex 2021 study, fielded from 7 November 2022 to 9 January 2023. The Global Findex 2025 edition adds 2024 observations for many economies, but no newer Yemen observation. For context, the World Bank's figure for the same survey wave across the 19 low-income economies surveyed in it, Yemen among them, is 35.2%."
     },
     {
       "route": "/evidence/CLM-001/",
@@ -2961,7 +2961,25 @@
       "field": "body_en",
       "token": "2024",
       "category": "DATE_OR_PERIOD",
-      "context": "The latest representative observation of account ownership in Yemen published by the World Bank remains 11.9%. World Bank Data reports it for 2022; it comes from the Yemen Global Findex 2021 study, fielded from 7 November 2022 to 9 January 2023. The Global Findex 2025 edition adds 2024 observations for many economies, but no newer Yemen observation."
+      "context": "The latest representative observation of account ownership in Yemen published by the World Bank remains 11.9%. World Bank Data reports it for 2022; it comes from the Yemen Global Findex 2021 study, fielded from 7 November 2022 to 9 January 2023. The Global Findex 2025 edition adds 2024 observations for many economies, but no newer Yemen observation. For context, the World Bank's figure for the same survey wave across the 19 low-income economies surveyed in it, Yemen among them, is 35.2%."
+    },
+    {
+      "route": "/evidence/CLM-001/",
+      "surface": "section",
+      "field": "body_en",
+      "token": "19",
+      "category": "ROUTE_SOURCE_CLOSED__OBJECT_TRACE_AVAILABLE",
+      "context": "The latest representative observation of account ownership in Yemen published by the World Bank remains 11.9%. World Bank Data reports it for 2022; it comes from the Yemen Global Findex 2021 study, fielded from 7 November 2022 to 9 January 2023. The Global Findex 2025 edition adds 2024 observations for many economies, but no newer Yemen observation. For context, the World Bank's figure for the same survey wave across the 19 low-income economies surveyed in it, Yemen among them, is 35.2%.",
+      "source_object": "CLM-001"
+    },
+    {
+      "route": "/evidence/CLM-001/",
+      "surface": "section",
+      "field": "body_en",
+      "token": "35.2%",
+      "category": "ROUTE_SOURCE_CLOSED__OBJECT_TRACE_AVAILABLE",
+      "context": "The latest representative observation of account ownership in Yemen published by the World Bank remains 11.9%. World Bank Data reports it for 2022; it comes from the Yemen Global Findex 2021 study, fielded from 7 November 2022 to 9 January 2023. The Global Findex 2025 edition adds 2024 observations for many economies, but no newer Yemen observation. For context, the World Bank's figure for the same survey wave across the 19 low-income economies surveyed in it, Yemen among them, is 35.2%.",
+      "source_object": "CLM-001"
     },
     {
       "route": "/evidence/CLM-001/",
@@ -2969,7 +2987,7 @@
       "field": "body_ar",
       "token": "11.9%",
       "category": "ROUTE_SOURCE_CLOSED__OBJECT_TRACE_AVAILABLE",
-      "context": "تظل أحدث مشاهدة سكانية ممثلة ينشرها البنك الدولي لامتلاك الحساب في اليمن عند 11.9%. ويعرضها موقع بيانات البنك الدولي لسنة 2022، وهي مستمدة من دراسة اليمن ضمن موجة Global Findex 2021 التي نُفذت ميدانيًا من 7 نوفمبر 2022 إلى 9 يناير 2023. وتضيف نسخة Global Findex 2025 مشاهدات لعام 2024 في اقتصادات عديدة، لكنها لا تضيف مشاهدة أحدث لليمن.",
+      "context": "تظل أحدث مشاهدة سكانية ممثلة ينشرها البنك الدولي لامتلاك الحساب في اليمن عند 11.9%. ويعرضها موقع بيانات البنك الدولي لسنة 2022، وهي مستمدة من دراسة اليمن ضمن موجة Global Findex 2021 التي نُفذت ميدانيًا من 7 نوفمبر 2022 إلى 9 يناير 2023. وتضيف نسخة Global Findex 2025 مشاهدات لعام 2024 في اقتصادات عديدة، لكنها لا تضيف مشاهدة أحدث لليمن. وللسياق، يبلغ رقم البنك الدولي لموجة المسح نفسها في الاقتصادات منخفضة الدخل الـ19 التي شملتها الموجة، ومنها اليمن، 35.2%.",
       "source_object": "CLM-001"
     },
     {
@@ -2978,7 +2996,7 @@
       "field": "body_ar",
       "token": "2022",
       "category": "DATE_OR_PERIOD",
-      "context": "تظل أحدث مشاهدة سكانية ممثلة ينشرها البنك الدولي لامتلاك الحساب في اليمن عند 11.9%. ويعرضها موقع بيانات البنك الدولي لسنة 2022، وهي مستمدة من دراسة اليمن ضمن موجة Global Findex 2021 التي نُفذت ميدانيًا من 7 نوفمبر 2022 إلى 9 يناير 2023. وتضيف نسخة Global Findex 2025 مشاهدات لعام 2024 في اقتصادات عديدة، لكنها لا تضيف مشاهدة أحدث لليمن."
+      "context": "تظل أحدث مشاهدة سكانية ممثلة ينشرها البنك الدولي لامتلاك الحساب في اليمن عند 11.9%. ويعرضها موقع بيانات البنك الدولي لسنة 2022، وهي مستمدة من دراسة اليمن ضمن موجة Global Findex 2021 التي نُفذت ميدانيًا من 7 نوفمبر 2022 إلى 9 يناير 2023. وتضيف نسخة Global Findex 2025 مشاهدات لعام 2024 في اقتصادات عديدة، لكنها لا تضيف مشاهدة أحدث لليمن. وللسياق، يبلغ رقم البنك الدولي لموجة المسح نفسها في الاقتصادات منخفضة الدخل الـ19 التي شملتها الموجة، ومنها اليمن، 35.2%."
     },
     {
       "route": "/evidence/CLM-001/",
@@ -2986,7 +3004,7 @@
       "field": "body_ar",
       "token": "2021",
       "category": "DATE_OR_PERIOD",
-      "context": "تظل أحدث مشاهدة سكانية ممثلة ينشرها البنك الدولي لامتلاك الحساب في اليمن عند 11.9%. ويعرضها موقع بيانات البنك الدولي لسنة 2022، وهي مستمدة من دراسة اليمن ضمن موجة Global Findex 2021 التي نُفذت ميدانيًا من 7 نوفمبر 2022 إلى 9 يناير 2023. وتضيف نسخة Global Findex 2025 مشاهدات لعام 2024 في اقتصادات عديدة، لكنها لا تضيف مشاهدة أحدث لليمن."
+      "context": "تظل أحدث مشاهدة سكانية ممثلة ينشرها البنك الدولي لامتلاك الحساب في اليمن عند 11.9%. ويعرضها موقع بيانات البنك الدولي لسنة 2022، وهي مستمدة من دراسة اليمن ضمن موجة Global Findex 2021 التي نُفذت ميدانيًا من 7 نوفمبر 2022 إلى 9 يناير 2023. وتضيف نسخة Global Findex 2025 مشاهدات لعام 2024 في اقتصادات عديدة، لكنها لا تضيف مشاهدة أحدث لليمن. وللسياق، يبلغ رقم البنك الدولي لموجة المسح نفسها في الاقتصادات منخفضة الدخل الـ19 التي شملتها الموجة، ومنها اليمن، 35.2%."
     },
     {
       "route": "/evidence/CLM-001/",
@@ -2994,7 +3012,7 @@
       "field": "body_ar",
       "token": "7",
       "category": "DATE_OR_PERIOD",
-      "context": "تظل أحدث مشاهدة سكانية ممثلة ينشرها البنك الدولي لامتلاك الحساب في اليمن عند 11.9%. ويعرضها موقع بيانات البنك الدولي لسنة 2022، وهي مستمدة من دراسة اليمن ضمن موجة Global Findex 2021 التي نُفذت ميدانيًا من 7 نوفمبر 2022 إلى 9 يناير 2023. وتضيف نسخة Global Findex 2025 مشاهدات لعام 2024 في اقتصادات عديدة، لكنها لا تضيف مشاهدة أحدث لليمن."
+      "context": "تظل أحدث مشاهدة سكانية ممثلة ينشرها البنك الدولي لامتلاك الحساب في اليمن عند 11.9%. ويعرضها موقع بيانات البنك الدولي لسنة 2022، وهي مستمدة من دراسة اليمن ضمن موجة Global Findex 2021 التي نُفذت ميدانيًا من 7 نوفمبر 2022 إلى 9 يناير 2023. وتضيف نسخة Global Findex 2025 مشاهدات لعام 2024 في اقتصادات عديدة، لكنها لا تضيف مشاهدة أحدث لليمن. وللسياق، يبلغ رقم البنك الدولي لموجة المسح نفسها في الاقتصادات منخفضة الدخل الـ19 التي شملتها الموجة، ومنها اليمن، 35.2%."
     },
     {
       "route": "/evidence/CLM-001/",
@@ -3002,7 +3020,7 @@
       "field": "body_ar",
       "token": "9",
       "category": "DATE_OR_PERIOD",
-      "context": "تظل أحدث مشاهدة سكانية ممثلة ينشرها البنك الدولي لامتلاك الحساب في اليمن عند 11.9%. ويعرضها موقع بيانات البنك الدولي لسنة 2022، وهي مستمدة من دراسة اليمن ضمن موجة Global Findex 2021 التي نُفذت ميدانيًا من 7 نوفمبر 2022 إلى 9 يناير 2023. وتضيف نسخة Global Findex 2025 مشاهدات لعام 2024 في اقتصادات عديدة، لكنها لا تضيف مشاهدة أحدث لليمن."
+      "context": "تظل أحدث مشاهدة سكانية ممثلة ينشرها البنك الدولي لامتلاك الحساب في اليمن عند 11.9%. ويعرضها موقع بيانات البنك الدولي لسنة 2022، وهي مستمدة من دراسة اليمن ضمن موجة Global Findex 2021 التي نُفذت ميدانيًا من 7 نوفمبر 2022 إلى 9 يناير 2023. وتضيف نسخة Global Findex 2025 مشاهدات لعام 2024 في اقتصادات عديدة، لكنها لا تضيف مشاهدة أحدث لليمن. وللسياق، يبلغ رقم البنك الدولي لموجة المسح نفسها في الاقتصادات منخفضة الدخل الـ19 التي شملتها الموجة، ومنها اليمن، 35.2%."
     },
     {
       "route": "/evidence/CLM-001/",
@@ -3010,7 +3028,7 @@
       "field": "body_ar",
       "token": "2023",
       "category": "DATE_OR_PERIOD",
-      "context": "تظل أحدث مشاهدة سكانية ممثلة ينشرها البنك الدولي لامتلاك الحساب في اليمن عند 11.9%. ويعرضها موقع بيانات البنك الدولي لسنة 2022، وهي مستمدة من دراسة اليمن ضمن موجة Global Findex 2021 التي نُفذت ميدانيًا من 7 نوفمبر 2022 إلى 9 يناير 2023. وتضيف نسخة Global Findex 2025 مشاهدات لعام 2024 في اقتصادات عديدة، لكنها لا تضيف مشاهدة أحدث لليمن."
+      "context": "تظل أحدث مشاهدة سكانية ممثلة ينشرها البنك الدولي لامتلاك الحساب في اليمن عند 11.9%. ويعرضها موقع بيانات البنك الدولي لسنة 2022، وهي مستمدة من دراسة اليمن ضمن موجة Global Findex 2021 التي نُفذت ميدانيًا من 7 نوفمبر 2022 إلى 9 يناير 2023. وتضيف نسخة Global Findex 2025 مشاهدات لعام 2024 في اقتصادات عديدة، لكنها لا تضيف مشاهدة أحدث لليمن. وللسياق، يبلغ رقم البنك الدولي لموجة المسح نفسها في الاقتصادات منخفضة الدخل الـ19 التي شملتها الموجة، ومنها اليمن، 35.2%."
     },
     {
       "route": "/evidence/CLM-001/",
@@ -3018,7 +3036,7 @@
       "field": "body_ar",
       "token": "2025",
       "category": "DATE_OR_PERIOD",
-      "context": "تظل أحدث مشاهدة سكانية ممثلة ينشرها البنك الدولي لامتلاك الحساب في اليمن عند 11.9%. ويعرضها موقع بيانات البنك الدولي لسنة 2022، وهي مستمدة من دراسة اليمن ضمن موجة Global Findex 2021 التي نُفذت ميدانيًا من 7 نوفمبر 2022 إلى 9 يناير 2023. وتضيف نسخة Global Findex 2025 مشاهدات لعام 2024 في اقتصادات عديدة، لكنها لا تضيف مشاهدة أحدث لليمن."
+      "context": "تظل أحدث مشاهدة سكانية ممثلة ينشرها البنك الدولي لامتلاك الحساب في اليمن عند 11.9%. ويعرضها موقع بيانات البنك الدولي لسنة 2022، وهي مستمدة من دراسة اليمن ضمن موجة Global Findex 2021 التي نُفذت ميدانيًا من 7 نوفمبر 2022 إلى 9 يناير 2023. وتضيف نسخة Global Findex 2025 مشاهدات لعام 2024 في اقتصادات عديدة، لكنها لا تضيف مشاهدة أحدث لليمن. وللسياق، يبلغ رقم البنك الدولي لموجة المسح نفسها في الاقتصادات منخفضة الدخل الـ19 التي شملتها الموجة، ومنها اليمن، 35.2%."
     },
     {
       "route": "/evidence/CLM-001/",
@@ -3026,7 +3044,25 @@
       "field": "body_ar",
       "token": "2024",
       "category": "DATE_OR_PERIOD",
-      "context": "تظل أحدث مشاهدة سكانية ممثلة ينشرها البنك الدولي لامتلاك الحساب في اليمن عند 11.9%. ويعرضها موقع بيانات البنك الدولي لسنة 2022، وهي مستمدة من دراسة اليمن ضمن موجة Global Findex 2021 التي نُفذت ميدانيًا من 7 نوفمبر 2022 إلى 9 يناير 2023. وتضيف نسخة Global Findex 2025 مشاهدات لعام 2024 في اقتصادات عديدة، لكنها لا تضيف مشاهدة أحدث لليمن."
+      "context": "تظل أحدث مشاهدة سكانية ممثلة ينشرها البنك الدولي لامتلاك الحساب في اليمن عند 11.9%. ويعرضها موقع بيانات البنك الدولي لسنة 2022، وهي مستمدة من دراسة اليمن ضمن موجة Global Findex 2021 التي نُفذت ميدانيًا من 7 نوفمبر 2022 إلى 9 يناير 2023. وتضيف نسخة Global Findex 2025 مشاهدات لعام 2024 في اقتصادات عديدة، لكنها لا تضيف مشاهدة أحدث لليمن. وللسياق، يبلغ رقم البنك الدولي لموجة المسح نفسها في الاقتصادات منخفضة الدخل الـ19 التي شملتها الموجة، ومنها اليمن، 35.2%."
+    },
+    {
+      "route": "/evidence/CLM-001/",
+      "surface": "section",
+      "field": "body_ar",
+      "token": "19",
+      "category": "ROUTE_SOURCE_CLOSED__OBJECT_TRACE_AVAILABLE",
+      "context": "تظل أحدث مشاهدة سكانية ممثلة ينشرها البنك الدولي لامتلاك الحساب في اليمن عند 11.9%. ويعرضها موقع بيانات البنك الدولي لسنة 2022، وهي مستمدة من دراسة اليمن ضمن موجة Global Findex 2021 التي نُفذت ميدانيًا من 7 نوفمبر 2022 إلى 9 يناير 2023. وتضيف نسخة Global Findex 2025 مشاهدات لعام 2024 في اقتصادات عديدة، لكنها لا تضيف مشاهدة أحدث لليمن. وللسياق، يبلغ رقم البنك الدولي لموجة المسح نفسها في الاقتصادات منخفضة الدخل الـ19 التي شملتها الموجة، ومنها اليمن، 35.2%.",
+      "source_object": "CLM-001"
+    },
+    {
+      "route": "/evidence/CLM-001/",
+      "surface": "section",
+      "field": "body_ar",
+      "token": "35.2%",
+      "category": "ROUTE_SOURCE_CLOSED__OBJECT_TRACE_AVAILABLE",
+      "context": "تظل أحدث مشاهدة سكانية ممثلة ينشرها البنك الدولي لامتلاك الحساب في اليمن عند 11.9%. ويعرضها موقع بيانات البنك الدولي لسنة 2022، وهي مستمدة من دراسة اليمن ضمن موجة Global Findex 2021 التي نُفذت ميدانيًا من 7 نوفمبر 2022 إلى 9 يناير 2023. وتضيف نسخة Global Findex 2025 مشاهدات لعام 2024 في اقتصادات عديدة، لكنها لا تضيف مشاهدة أحدث لليمن. وللسياق، يبلغ رقم البنك الدولي لموجة المسح نفسها في الاقتصادات منخفضة الدخل الـ19 التي شملتها الموجة، ومنها اليمن، 35.2%.",
+      "source_object": "CLM-001"
     },
     {
       "route": "/evidence/CLM-001/",
@@ -3052,7 +3088,7 @@
       "field": "summary_en",
       "token": "11.9%",
       "category": "GOVERNED_OBJECT_SOURCE_CLOSED",
-      "context": "The latest representative observation of account ownership in Yemen published by the World Bank remains 11.9%. World Bank Data reports it for 2022; it comes from the Yemen Global Findex 2021 study, fielded from 7 November 2022 to 9 January 2023. The Global Findex 2025 edition adds 2024 observations for many economies, but no newer Yemen observation.",
+      "context": "The latest representative observation of account ownership in Yemen published by the World Bank remains 11.9%. World Bank Data reports it for 2022; it comes from the Yemen Global Findex 2021 study, fielded from 7 November 2022 to 9 January 2023. The Global Findex 2025 edition adds 2024 observations for many economies, but no newer Yemen observation. For context, the World Bank's figure for the same survey wave across the 19 low-income economies surveyed in it, Yemen among them, is 35.2%.",
       "source_object": "CLM-001"
     },
     {
@@ -3061,7 +3097,7 @@
       "field": "summary_en",
       "token": "2022",
       "category": "GOVERNED_OBJECT_SOURCE_CLOSED",
-      "context": "The latest representative observation of account ownership in Yemen published by the World Bank remains 11.9%. World Bank Data reports it for 2022; it comes from the Yemen Global Findex 2021 study, fielded from 7 November 2022 to 9 January 2023. The Global Findex 2025 edition adds 2024 observations for many economies, but no newer Yemen observation.",
+      "context": "The latest representative observation of account ownership in Yemen published by the World Bank remains 11.9%. World Bank Data reports it for 2022; it comes from the Yemen Global Findex 2021 study, fielded from 7 November 2022 to 9 January 2023. The Global Findex 2025 edition adds 2024 observations for many economies, but no newer Yemen observation. For context, the World Bank's figure for the same survey wave across the 19 low-income economies surveyed in it, Yemen among them, is 35.2%.",
       "source_object": "CLM-001"
     },
     {
@@ -3070,7 +3106,7 @@
       "field": "summary_en",
       "token": "2021",
       "category": "GOVERNED_OBJECT_SOURCE_CLOSED",
-      "context": "The latest representative observation of account ownership in Yemen published by the World Bank remains 11.9%. World Bank Data reports it for 2022; it comes from the Yemen Global Findex 2021 study, fielded from 7 November 2022 to 9 January 2023. The Global Findex 2025 edition adds 2024 observations for many economies, but no newer Yemen observation.",
+      "context": "The latest representative observation of account ownership in Yemen published by the World Bank remains 11.9%. World Bank Data reports it for 2022; it comes from the Yemen Global Findex 2021 study, fielded from 7 November 2022 to 9 January 2023. The Global Findex 2025 edition adds 2024 observations for many economies, but no newer Yemen observation. For context, the World Bank's figure for the same survey wave across the 19 low-income economies surveyed in it, Yemen among them, is 35.2%.",
       "source_object": "CLM-001"
     },
     {
@@ -3079,7 +3115,7 @@
       "field": "summary_en",
       "token": "7",
       "category": "GOVERNED_OBJECT_SOURCE_CLOSED",
-      "context": "The latest representative observation of account ownership in Yemen published by the World Bank remains 11.9%. World Bank Data reports it for 2022; it comes from the Yemen Global Findex 2021 study, fielded from 7 November 2022 to 9 January 2023. The Global Findex 2025 edition adds 2024 observations for many economies, but no newer Yemen observation.",
+      "context": "The latest representative observation of account ownership in Yemen published by the World Bank remains 11.9%. World Bank Data reports it for 2022; it comes from the Yemen Global Findex 2021 study, fielded from 7 November 2022 to 9 January 2023. The Global Findex 2025 edition adds 2024 observations for many economies, but no newer Yemen observation. For context, the World Bank's figure for the same survey wave across the 19 low-income economies surveyed in it, Yemen among them, is 35.2%.",
       "source_object": "CLM-001"
     },
     {
@@ -3088,7 +3124,7 @@
       "field": "summary_en",
       "token": "9",
       "category": "GOVERNED_OBJECT_SOURCE_CLOSED",
-      "context": "The latest representative observation of account ownership in Yemen published by the World Bank remains 11.9%. World Bank Data reports it for 2022; it comes from the Yemen Global Findex 2021 study, fielded from 7 November 2022 to 9 January 2023. The Global Findex 2025 edition adds 2024 observations for many economies, but no newer Yemen observation.",
+      "context": "The latest representative observation of account ownership in Yemen published by the World Bank remains 11.9%. World Bank Data reports it for 2022; it comes from the Yemen Global Findex 2021 study, fielded from 7 November 2022 to 9 January 2023. The Global Findex 2025 edition adds 2024 observations for many economies, but no newer Yemen observation. For context, the World Bank's figure for the same survey wave across the 19 low-income economies surveyed in it, Yemen among them, is 35.2%.",
       "source_object": "CLM-001"
     },
     {
@@ -3097,7 +3133,7 @@
       "field": "summary_en",
       "token": "2023",
       "category": "GOVERNED_OBJECT_SOURCE_CLOSED",
-      "context": "The latest representative observation of account ownership in Yemen published by the World Bank remains 11.9%. World Bank Data reports it for 2022; it comes from the Yemen Global Findex 2021 study, fielded from 7 November 2022 to 9 January 2023. The Global Findex 2025 edition adds 2024 observations for many economies, but no newer Yemen observation.",
+      "context": "The latest representative observation of account ownership in Yemen published by the World Bank remains 11.9%. World Bank Data reports it for 2022; it comes from the Yemen Global Findex 2021 study, fielded from 7 November 2022 to 9 January 2023. The Global Findex 2025 edition adds 2024 observations for many economies, but no newer Yemen observation. For context, the World Bank's figure for the same survey wave across the 19 low-income economies surveyed in it, Yemen among them, is 35.2%.",
       "source_object": "CLM-001"
     },
     {
@@ -3106,7 +3142,7 @@
       "field": "summary_en",
       "token": "2025",
       "category": "GOVERNED_OBJECT_SOURCE_CLOSED",
-      "context": "The latest representative observation of account ownership in Yemen published by the World Bank remains 11.9%. World Bank Data reports it for 2022; it comes from the Yemen Global Findex 2021 study, fielded from 7 November 2022 to 9 January 2023. The Global Findex 2025 edition adds 2024 observations for many economies, but no newer Yemen observation.",
+      "context": "The latest representative observation of account ownership in Yemen published by the World Bank remains 11.9%. World Bank Data reports it for 2022; it comes from the Yemen Global Findex 2021 study, fielded from 7 November 2022 to 9 January 2023. The Global Findex 2025 edition adds 2024 observations for many economies, but no newer Yemen observation. For context, the World Bank's figure for the same survey wave across the 19 low-income economies surveyed in it, Yemen among them, is 35.2%.",
       "source_object": "CLM-001"
     },
     {
@@ -3115,7 +3151,25 @@
       "field": "summary_en",
       "token": "2024",
       "category": "GOVERNED_OBJECT_SOURCE_CLOSED",
-      "context": "The latest representative observation of account ownership in Yemen published by the World Bank remains 11.9%. World Bank Data reports it for 2022; it comes from the Yemen Global Findex 2021 study, fielded from 7 November 2022 to 9 January 2023. The Global Findex 2025 edition adds 2024 observations for many economies, but no newer Yemen observation.",
+      "context": "The latest representative observation of account ownership in Yemen published by the World Bank remains 11.9%. World Bank Data reports it for 2022; it comes from the Yemen Global Findex 2021 study, fielded from 7 November 2022 to 9 January 2023. The Global Findex 2025 edition adds 2024 observations for many economies, but no newer Yemen observation. For context, the World Bank's figure for the same survey wave across the 19 low-income economies surveyed in it, Yemen among them, is 35.2%.",
+      "source_object": "CLM-001"
+    },
+    {
+      "route": "/evidence/CLM-001/",
+      "surface": "governed_numeric_inventory",
+      "field": "summary_en",
+      "token": "19",
+      "category": "GOVERNED_OBJECT_SOURCE_CLOSED",
+      "context": "The latest representative observation of account ownership in Yemen published by the World Bank remains 11.9%. World Bank Data reports it for 2022; it comes from the Yemen Global Findex 2021 study, fielded from 7 November 2022 to 9 January 2023. The Global Findex 2025 edition adds 2024 observations for many economies, but no newer Yemen observation. For context, the World Bank's figure for the same survey wave across the 19 low-income economies surveyed in it, Yemen among them, is 35.2%.",
+      "source_object": "CLM-001"
+    },
+    {
+      "route": "/evidence/CLM-001/",
+      "surface": "governed_numeric_inventory",
+      "field": "summary_en",
+      "token": "35.2%",
+      "category": "GOVERNED_OBJECT_SOURCE_CLOSED",
+      "context": "The latest representative observation of account ownership in Yemen published by the World Bank remains 11.9%. World Bank Data reports it for 2022; it comes from the Yemen Global Findex 2021 study, fielded from 7 November 2022 to 9 January 2023. The Global Findex 2025 edition adds 2024 observations for many economies, but no newer Yemen observation. For context, the World Bank's figure for the same survey wave across the 19 low-income economies surveyed in it, Yemen among them, is 35.2%.",
       "source_object": "CLM-001"
     },
     {
@@ -3124,7 +3178,7 @@
       "field": "summary_ar",
       "token": "11.9%",
       "category": "GOVERNED_OBJECT_SOURCE_CLOSED",
-      "context": "تظل أحدث مشاهدة سكانية ممثلة ينشرها البنك الدولي لامتلاك الحساب في اليمن عند 11.9%. ويعرضها موقع بيانات البنك الدولي لسنة 2022، وهي مستمدة من دراسة اليمن ضمن موجة Global Findex 2021 التي نُفذت ميدانيًا من 7 نوفمبر 2022 إلى 9 يناير 2023. وتضيف نسخة Global Findex 2025 مشاهدات لعام 2024 في اقتصادات عديدة، لكنها لا تضيف مشاهدة أحدث لليمن.",
+      "context": "تظل أحدث مشاهدة سكانية ممثلة ينشرها البنك الدولي لامتلاك الحساب في اليمن عند 11.9%. ويعرضها موقع بيانات البنك الدولي لسنة 2022، وهي مستمدة من دراسة اليمن ضمن موجة Global Findex 2021 التي نُفذت ميدانيًا من 7 نوفمبر 2022 إلى 9 يناير 2023. وتضيف نسخة Global Findex 2025 مشاهدات لعام 2024 في اقتصادات عديدة، لكنها لا تضيف مشاهدة أحدث لليمن. وللسياق، يبلغ رقم البنك الدولي لموجة المسح نفسها في الاقتصادات منخفضة الدخل الـ19 التي شملتها الموجة، ومنها اليمن، 35.2%.",
       "source_object": "CLM-001"
     },
     {
@@ -3133,7 +3187,7 @@
       "field": "summary_ar",
       "token": "2022",
       "category": "GOVERNED_OBJECT_SOURCE_CLOSED",
-      "context": "تظل أحدث مشاهدة سكانية ممثلة ينشرها البنك الدولي لامتلاك الحساب في اليمن عند 11.9%. ويعرضها موقع بيانات البنك الدولي لسنة 2022، وهي مستمدة من دراسة اليمن ضمن موجة Global Findex 2021 التي نُفذت ميدانيًا من 7 نوفمبر 2022 إلى 9 يناير 2023. وتضيف نسخة Global Findex 2025 مشاهدات لعام 2024 في اقتصادات عديدة، لكنها لا تضيف مشاهدة أحدث لليمن.",
+      "context": "تظل أحدث مشاهدة سكانية ممثلة ينشرها البنك الدولي لامتلاك الحساب في اليمن عند 11.9%. ويعرضها موقع بيانات البنك الدولي لسنة 2022، وهي مستمدة من دراسة اليمن ضمن موجة Global Findex 2021 التي نُفذت ميدانيًا من 7 نوفمبر 2022 إلى 9 يناير 2023. وتضيف نسخة Global Findex 2025 مشاهدات لعام 2024 في اقتصادات عديدة، لكنها لا تضيف مشاهدة أحدث لليمن. وللسياق، يبلغ رقم البنك الدولي لموجة المسح نفسها في الاقتصادات منخفضة الدخل الـ19 التي شملتها الموجة، ومنها اليمن، 35.2%.",
       "source_object": "CLM-001"
     },
     {
@@ -3142,7 +3196,7 @@
       "field": "summary_ar",
       "token": "2021",
       "category": "GOVERNED_OBJECT_SOURCE_CLOSED",
-      "context": "تظل أحدث مشاهدة سكانية ممثلة ينشرها البنك الدولي لامتلاك الحساب في اليمن عند 11.9%. ويعرضها موقع بيانات البنك الدولي لسنة 2022، وهي مستمدة من دراسة اليمن ضمن موجة Global Findex 2021 التي نُفذت ميدانيًا من 7 نوفمبر 2022 إلى 9 يناير 2023. وتضيف نسخة Global Findex 2025 مشاهدات لعام 2024 في اقتصادات عديدة، لكنها لا تضيف مشاهدة أحدث لليمن.",
+      "context": "تظل أحدث مشاهدة سكانية ممثلة ينشرها البنك الدولي لامتلاك الحساب في اليمن عند 11.9%. ويعرضها موقع بيانات البنك الدولي لسنة 2022، وهي مستمدة من دراسة اليمن ضمن موجة Global Findex 2021 التي نُفذت ميدانيًا من 7 نوفمبر 2022 إلى 9 يناير 2023. وتضيف نسخة Global Findex 2025 مشاهدات لعام 2024 في اقتصادات عديدة، لكنها لا تضيف مشاهدة أحدث لليمن. وللسياق، يبلغ رقم البنك الدولي لموجة المسح نفسها في الاقتصادات منخفضة الدخل الـ19 التي شملتها الموجة، ومنها اليمن، 35.2%.",
       "source_object": "CLM-001"
     },
     {
@@ -3151,7 +3205,7 @@
       "field": "summary_ar",
       "token": "7",
       "category": "GOVERNED_OBJECT_SOURCE_CLOSED",
-      "context": "تظل أحدث مشاهدة سكانية ممثلة ينشرها البنك الدولي لامتلاك الحساب في اليمن عند 11.9%. ويعرضها موقع بيانات البنك الدولي لسنة 2022، وهي مستمدة من دراسة اليمن ضمن موجة Global Findex 2021 التي نُفذت ميدانيًا من 7 نوفمبر 2022 إلى 9 يناير 2023. وتضيف نسخة Global Findex 2025 مشاهدات لعام 2024 في اقتصادات عديدة، لكنها لا تضيف مشاهدة أحدث لليمن.",
+      "context": "تظل أحدث مشاهدة سكانية ممثلة ينشرها البنك الدولي لامتلاك الحساب في اليمن عند 11.9%. ويعرضها موقع بيانات البنك الدولي لسنة 2022، وهي مستمدة من دراسة اليمن ضمن موجة Global Findex 2021 التي نُفذت ميدانيًا من 7 نوفمبر 2022 إلى 9 يناير 2023. وتضيف نسخة Global Findex 2025 مشاهدات لعام 2024 في اقتصادات عديدة، لكنها لا تضيف مشاهدة أحدث لليمن. وللسياق، يبلغ رقم البنك الدولي لموجة المسح نفسها في الاقتصادات منخفضة الدخل الـ19 التي شملتها الموجة، ومنها اليمن، 35.2%.",
       "source_object": "CLM-001"
     },
     {
@@ -3160,7 +3214,7 @@
       "field": "summary_ar",
       "token": "9",
       "category": "GOVERNED_OBJECT_SOURCE_CLOSED",
-      "context": "تظل أحدث مشاهدة سكانية ممثلة ينشرها البنك الدولي لامتلاك الحساب في اليمن عند 11.9%. ويعرضها موقع بيانات البنك الدولي لسنة 2022، وهي مستمدة من دراسة اليمن ضمن موجة Global Findex 2021 التي نُفذت ميدانيًا من 7 نوفمبر 2022 إلى 9 يناير 2023. وتضيف نسخة Global Findex 2025 مشاهدات لعام 2024 في اقتصادات عديدة، لكنها لا تضيف مشاهدة أحدث لليمن.",
+      "context": "تظل أحدث مشاهدة سكانية ممثلة ينشرها البنك الدولي لامتلاك الحساب في اليمن عند 11.9%. ويعرضها موقع بيانات البنك الدولي لسنة 2022، وهي مستمدة من دراسة اليمن ضمن موجة Global Findex 2021 التي نُفذت ميدانيًا من 7 نوفمبر 2022 إلى 9 يناير 2023. وتضيف نسخة Global Findex 2025 مشاهدات لعام 2024 في اقتصادات عديدة، لكنها لا تضيف مشاهدة أحدث لليمن. وللسياق، يبلغ رقم البنك الدولي لموجة المسح نفسها في الاقتصادات منخفضة الدخل الـ19 التي شملتها الموجة، ومنها اليمن، 35.2%.",
       "source_object": "CLM-001"
     },
     {
@@ -3169,7 +3223,7 @@
       "field": "summary_ar",
       "token": "2023",
       "category": "GOVERNED_OBJECT_SOURCE_CLOSED",
-      "context": "تظل أحدث مشاهدة سكانية ممثلة ينشرها البنك الدولي لامتلاك الحساب في اليمن عند 11.9%. ويعرضها موقع بيانات البنك الدولي لسنة 2022، وهي مستمدة من دراسة اليمن ضمن موجة Global Findex 2021 التي نُفذت ميدانيًا من 7 نوفمبر 2022 إلى 9 يناير 2023. وتضيف نسخة Global Findex 2025 مشاهدات لعام 2024 في اقتصادات عديدة، لكنها لا تضيف مشاهدة أحدث لليمن.",
+      "context": "تظل أحدث مشاهدة سكانية ممثلة ينشرها البنك الدولي لامتلاك الحساب في اليمن عند 11.9%. ويعرضها موقع بيانات البنك الدولي لسنة 2022، وهي مستمدة من دراسة اليمن ضمن موجة Global Findex 2021 التي نُفذت ميدانيًا من 7 نوفمبر 2022 إلى 9 يناير 2023. وتضيف نسخة Global Findex 2025 مشاهدات لعام 2024 في اقتصادات عديدة، لكنها لا تضيف مشاهدة أحدث لليمن. وللسياق، يبلغ رقم البنك الدولي لموجة المسح نفسها في الاقتصادات منخفضة الدخل الـ19 التي شملتها الموجة، ومنها اليمن، 35.2%.",
       "source_object": "CLM-001"
     },
     {
@@ -3178,7 +3232,7 @@
       "field": "summary_ar",
       "token": "2025",
       "category": "GOVERNED_OBJECT_SOURCE_CLOSED",
-      "context": "تظل أحدث مشاهدة سكانية ممثلة ينشرها البنك الدولي لامتلاك الحساب في اليمن عند 11.9%. ويعرضها موقع بيانات البنك الدولي لسنة 2022، وهي مستمدة من دراسة اليمن ضمن موجة Global Findex 2021 التي نُفذت ميدانيًا من 7 نوفمبر 2022 إلى 9 يناير 2023. وتضيف نسخة Global Findex 2025 مشاهدات لعام 2024 في اقتصادات عديدة، لكنها لا تضيف مشاهدة أحدث لليمن.",
+      "context": "تظل أحدث مشاهدة سكانية ممثلة ينشرها البنك الدولي لامتلاك الحساب في اليمن عند 11.9%. ويعرضها موقع بيانات البنك الدولي لسنة 2022، وهي مستمدة من دراسة اليمن ضمن موجة Global Findex 2021 التي نُفذت ميدانيًا من 7 نوفمبر 2022 إلى 9 يناير 2023. وتضيف نسخة Global Findex 2025 مشاهدات لعام 2024 في اقتصادات عديدة، لكنها لا تضيف مشاهدة أحدث لليمن. وللسياق، يبلغ رقم البنك الدولي لموجة المسح نفسها في الاقتصادات منخفضة الدخل الـ19 التي شملتها الموجة، ومنها اليمن، 35.2%.",
       "source_object": "CLM-001"
     },
     {
@@ -3187,7 +3241,16 @@
       "field": "summary_ar",
       "token": "2024",
       "category": "GOVERNED_OBJECT_SOURCE_CLOSED",
-      "context": "تظل أحدث مشاهدة سكانية ممثلة ينشرها البنك الدولي لامتلاك الحساب في اليمن عند 11.9%. ويعرضها موقع بيانات البنك الدولي لسنة 2022، وهي مستمدة من دراسة اليمن ضمن موجة Global Findex 2021 التي نُفذت ميدانيًا من 7 نوفمبر 2022 إلى 9 يناير 2023. وتضيف نسخة Global Findex 2025 مشاهدات لعام 2024 في اقتصادات عديدة، لكنها لا تضيف مشاهدة أحدث لليمن.",
+      "context": "تظل أحدث مشاهدة سكانية ممثلة ينشرها البنك الدولي لامتلاك الحساب في اليمن عند 11.9%. ويعرضها موقع بيانات البنك الدولي لسنة 2022، وهي مستمدة من دراسة اليمن ضمن موجة Global Findex 2021 التي نُفذت ميدانيًا من 7 نوفمبر 2022 إلى 9 يناير 2023. وتضيف نسخة Global Findex 2025 مشاهدات لعام 2024 في اقتصادات عديدة، لكنها لا تضيف مشاهدة أحدث لليمن. وللسياق، يبلغ رقم البنك الدولي لموجة المسح نفسها في الاقتصادات منخفضة الدخل الـ19 التي شملتها الموجة، ومنها اليمن، 35.2%.",
+      "source_object": "CLM-001"
+    },
+    {
+      "route": "/evidence/CLM-001/",
+      "surface": "governed_numeric_inventory",
+      "field": "summary_ar",
+      "token": "35.2%",
+      "category": "GOVERNED_OBJECT_SOURCE_CLOSED",
+      "context": "تظل أحدث مشاهدة سكانية ممثلة ينشرها البنك الدولي لامتلاك الحساب في اليمن عند 11.9%. ويعرضها موقع بيانات البنك الدولي لسنة 2022، وهي مستمدة من دراسة اليمن ضمن موجة Global Findex 2021 التي نُفذت ميدانيًا من 7 نوفمبر 2022 إلى 9 يناير 2023. وتضيف نسخة Global Findex 2025 مشاهدات لعام 2024 في اقتصادات عديدة، لكنها لا تضيف مشاهدة أحدث لليمن. وللسياق، يبلغ رقم البنك الدولي لموجة المسح نفسها في الاقتصادات منخفضة الدخل الـ19 التي شملتها الموجة، ومنها اليمن، 35.2%.",
       "source_object": "CLM-001"
     },
     {
@@ -3454,10 +3517,37 @@
     {
       "route": "/evidence/CLM-001/",
       "surface": "governed_numeric_inventory",
+      "field": "method_en",
+      "token": "35.2%",
+      "category": "GOVERNED_OBJECT_SOURCE_CLOSED",
+      "context": "Weighted survey estimate. The low-income context figure, 35.2%, is the World Bank's own aggregate for the same wave and indicator; this resource reproduced it as the average of the published values of the 19 low-income economies surveyed in the wave, weighted by their adult populations.",
+      "source_object": "CLM-001"
+    },
+    {
+      "route": "/evidence/CLM-001/",
+      "surface": "governed_numeric_inventory",
+      "field": "method_en",
+      "token": "19",
+      "category": "GOVERNED_OBJECT_SOURCE_CLOSED",
+      "context": "Weighted survey estimate. The low-income context figure, 35.2%, is the World Bank's own aggregate for the same wave and indicator; this resource reproduced it as the average of the published values of the 19 low-income economies surveyed in the wave, weighted by their adult populations.",
+      "source_object": "CLM-001"
+    },
+    {
+      "route": "/evidence/CLM-001/",
+      "surface": "governed_numeric_inventory",
+      "field": "method_ar",
+      "token": "35.2%",
+      "category": "GOVERNED_OBJECT_SOURCE_CLOSED",
+      "context": "تقدير مسحي موزون وفق تصميم المسح وأوزانه. ورقم السياق للاقتصادات منخفضة الدخل، 35.2%، هو التجميع الذي ينشره البنك الدولي نفسه للموجة والمؤشر ذاتيهما؛ وقد أعاد هذا المورد احتسابه متوسطًا للقيم المنشورة للاقتصادات منخفضة الدخل الـ19 التي شملتها الموجة، مرجّحًا بعدد البالغين في كل منها.",
+      "source_object": "CLM-001"
+    },
+    {
+      "route": "/evidence/CLM-001/",
+      "surface": "governed_numeric_inventory",
       "field": "limitations_en",
       "token": "2026",
       "category": "GOVERNED_OBJECT_SOURCE_CLOSED",
-      "context": "It is not a 2026 rate, and it cannot be broken down or mapped by governorate. It is not the share of adults with a bank account: accounts at other financial institutions and personal use of a mobile-money service also count. | The survey frame excludes areas holding about 23% of the population, and more than a quarter of primary sampling units were replaced.",
+      "context": "It is not a 2026 rate, and it cannot be broken down or mapped by governorate. It is not the share of adults with a bank account: accounts at other financial institutions and personal use of a mobile-money service also count. | The survey frame excludes areas holding about 23% of the population, and more than a quarter of primary sampling units were replaced. The low-income figure is context, not a benchmark, a target or a ranking: it averages economies in very different conditions, includes Yemen itself and uses the income classification in the Global Findex Database 2025, while Yemen's own figure covers only the areas its survey reached.",
       "source_object": "CLM-001"
     },
     {
@@ -3466,7 +3556,16 @@
       "field": "limitations_en",
       "token": "23%",
       "category": "GOVERNED_OBJECT_SOURCE_CLOSED",
-      "context": "It is not a 2026 rate, and it cannot be broken down or mapped by governorate. It is not the share of adults with a bank account: accounts at other financial institutions and personal use of a mobile-money service also count. | The survey frame excludes areas holding about 23% of the population, and more than a quarter of primary sampling units were replaced.",
+      "context": "It is not a 2026 rate, and it cannot be broken down or mapped by governorate. It is not the share of adults with a bank account: accounts at other financial institutions and personal use of a mobile-money service also count. | The survey frame excludes areas holding about 23% of the population, and more than a quarter of primary sampling units were replaced. The low-income figure is context, not a benchmark, a target or a ranking: it averages economies in very different conditions, includes Yemen itself and uses the income classification in the Global Findex Database 2025, while Yemen's own figure covers only the areas its survey reached.",
+      "source_object": "CLM-001"
+    },
+    {
+      "route": "/evidence/CLM-001/",
+      "surface": "governed_numeric_inventory",
+      "field": "limitations_en",
+      "token": "2025,",
+      "category": "GOVERNED_OBJECT_SOURCE_CLOSED",
+      "context": "It is not a 2026 rate, and it cannot be broken down or mapped by governorate. It is not the share of adults with a bank account: accounts at other financial institutions and personal use of a mobile-money service also count. | The survey frame excludes areas holding about 23% of the population, and more than a quarter of primary sampling units were replaced. The low-income figure is context, not a benchmark, a target or a ranking: it averages economies in very different conditions, includes Yemen itself and uses the income classification in the Global Findex Database 2025, while Yemen's own figure covers only the areas its survey reached.",
       "source_object": "CLM-001"
     },
     {
@@ -3475,7 +3574,7 @@
       "field": "limitations_ar",
       "token": "2026",
       "category": "GOVERNED_OBJECT_SOURCE_CLOSED",
-      "context": "ليست هذه النسبة معدلًا لعام 2026، ولا يمكن تجزئتها أو إسقاطها على المحافظات. وليست نسبة من يملكون حسابًا مصرفيًا فحسب، إذ تُحتسب أيضًا الحسابات لدى المؤسسات المالية الأخرى والاستخدام الشخصي لخدمة أموال عبر الهاتف المحمول. | يستبعد إطار المسح مناطق يقطنها نحو 23% من السكان، كما استُبدل أكثر من ربع وحدات المعاينة الأولية.",
+      "context": "ليست هذه النسبة معدلًا لعام 2026، ولا يمكن تجزئتها أو إسقاطها على المحافظات. وليست نسبة من يملكون حسابًا مصرفيًا فحسب، إذ تُحتسب أيضًا الحسابات لدى المؤسسات المالية الأخرى والاستخدام الشخصي لخدمة أموال عبر الهاتف المحمول. | يستبعد إطار المسح مناطق يقطنها نحو 23% من السكان، كما استُبدل أكثر من ربع وحدات المعاينة الأولية. ورقم الاقتصادات منخفضة الدخل للسياق فقط، وليس معيارًا ولا هدفًا ولا ترتيبًا: فهو متوسط لاقتصادات ذات ظروف متباينة جدًا، ويشمل اليمن نفسه، ويستند إلى تصنيف الدخل المعتمد في قاعدة بيانات Global Findex 2025، في حين يقتصر رقم اليمن على المناطق التي بلغها المسح.",
       "source_object": "CLM-001"
     },
     {
@@ -3484,7 +3583,16 @@
       "field": "limitations_ar",
       "token": "23%",
       "category": "GOVERNED_OBJECT_SOURCE_CLOSED",
-      "context": "ليست هذه النسبة معدلًا لعام 2026، ولا يمكن تجزئتها أو إسقاطها على المحافظات. وليست نسبة من يملكون حسابًا مصرفيًا فحسب، إذ تُحتسب أيضًا الحسابات لدى المؤسسات المالية الأخرى والاستخدام الشخصي لخدمة أموال عبر الهاتف المحمول. | يستبعد إطار المسح مناطق يقطنها نحو 23% من السكان، كما استُبدل أكثر من ربع وحدات المعاينة الأولية.",
+      "context": "ليست هذه النسبة معدلًا لعام 2026، ولا يمكن تجزئتها أو إسقاطها على المحافظات. وليست نسبة من يملكون حسابًا مصرفيًا فحسب، إذ تُحتسب أيضًا الحسابات لدى المؤسسات المالية الأخرى والاستخدام الشخصي لخدمة أموال عبر الهاتف المحمول. | يستبعد إطار المسح مناطق يقطنها نحو 23% من السكان، كما استُبدل أكثر من ربع وحدات المعاينة الأولية. ورقم الاقتصادات منخفضة الدخل للسياق فقط، وليس معيارًا ولا هدفًا ولا ترتيبًا: فهو متوسط لاقتصادات ذات ظروف متباينة جدًا، ويشمل اليمن نفسه، ويستند إلى تصنيف الدخل المعتمد في قاعدة بيانات Global Findex 2025، في حين يقتصر رقم اليمن على المناطق التي بلغها المسح.",
+      "source_object": "CLM-001"
+    },
+    {
+      "route": "/evidence/CLM-001/",
+      "surface": "governed_numeric_inventory",
+      "field": "limitations_ar",
+      "token": "2025",
+      "category": "GOVERNED_OBJECT_SOURCE_CLOSED",
+      "context": "ليست هذه النسبة معدلًا لعام 2026، ولا يمكن تجزئتها أو إسقاطها على المحافظات. وليست نسبة من يملكون حسابًا مصرفيًا فحسب، إذ تُحتسب أيضًا الحسابات لدى المؤسسات المالية الأخرى والاستخدام الشخصي لخدمة أموال عبر الهاتف المحمول. | يستبعد إطار المسح مناطق يقطنها نحو 23% من السكان، كما استُبدل أكثر من ربع وحدات المعاينة الأولية. ورقم الاقتصادات منخفضة الدخل للسياق فقط، وليس معيارًا ولا هدفًا ولا ترتيبًا: فهو متوسط لاقتصادات ذات ظروف متباينة جدًا، ويشمل اليمن نفسه، ويستند إلى تصنيف الدخل المعتمد في قاعدة بيانات Global Findex 2025، في حين يقتصر رقم اليمن على المناطق التي بلغها المسح.",
       "source_object": "CLM-001"
     },
     {
@@ -45973,7 +46081,7 @@
       "field": "copy_en",
       "token": "11.9%",
       "category": "GOVERNED_OBJECT_SOURCE_CLOSED",
-      "context": "The latest representative observation of account ownership in Yemen published by the World Bank remains 11.9%. World Bank Data reports it for 2022; it comes from the Yemen Global Findex 2021 study, fielded from 7 November 2022 to 9 January 2023. The Global Findex 2025 edition adds 2024 observations for many economies, but no newer Yemen observation.",
+      "context": "The latest representative observation of account ownership in Yemen published by the World Bank remains 11.9%. World Bank Data reports it for 2022; it comes from the Yemen Global Findex 2021 study, fielded from 7 November 2022 to 9 January 2023. The Global Findex 2025 edition adds 2024 observations for many economies, but no newer Yemen observation. For context, the World Bank's figure for the same survey wave across the 19 low-income economies surveyed in it, Yemen among them, is 35.2%.",
       "source_object": "CLM-001"
     },
     {
@@ -45982,7 +46090,7 @@
       "field": "copy_en",
       "token": "2022",
       "category": "GOVERNED_OBJECT_SOURCE_CLOSED",
-      "context": "The latest representative observation of account ownership in Yemen published by the World Bank remains 11.9%. World Bank Data reports it for 2022; it comes from the Yemen Global Findex 2021 study, fielded from 7 November 2022 to 9 January 2023. The Global Findex 2025 edition adds 2024 observations for many economies, but no newer Yemen observation.",
+      "context": "The latest representative observation of account ownership in Yemen published by the World Bank remains 11.9%. World Bank Data reports it for 2022; it comes from the Yemen Global Findex 2021 study, fielded from 7 November 2022 to 9 January 2023. The Global Findex 2025 edition adds 2024 observations for many economies, but no newer Yemen observation. For context, the World Bank's figure for the same survey wave across the 19 low-income economies surveyed in it, Yemen among them, is 35.2%.",
       "source_object": "CLM-001"
     },
     {
@@ -45991,7 +46099,7 @@
       "field": "copy_en",
       "token": "2021",
       "category": "GOVERNED_OBJECT_SOURCE_CLOSED",
-      "context": "The latest representative observation of account ownership in Yemen published by the World Bank remains 11.9%. World Bank Data reports it for 2022; it comes from the Yemen Global Findex 2021 study, fielded from 7 November 2022 to 9 January 2023. The Global Findex 2025 edition adds 2024 observations for many economies, but no newer Yemen observation.",
+      "context": "The latest representative observation of account ownership in Yemen published by the World Bank remains 11.9%. World Bank Data reports it for 2022; it comes from the Yemen Global Findex 2021 study, fielded from 7 November 2022 to 9 January 2023. The Global Findex 2025 edition adds 2024 observations for many economies, but no newer Yemen observation. For context, the World Bank's figure for the same survey wave across the 19 low-income economies surveyed in it, Yemen among them, is 35.2%.",
       "source_object": "CLM-001"
     },
     {
@@ -46000,7 +46108,7 @@
       "field": "copy_en",
       "token": "7",
       "category": "GOVERNED_OBJECT_SOURCE_CLOSED",
-      "context": "The latest representative observation of account ownership in Yemen published by the World Bank remains 11.9%. World Bank Data reports it for 2022; it comes from the Yemen Global Findex 2021 study, fielded from 7 November 2022 to 9 January 2023. The Global Findex 2025 edition adds 2024 observations for many economies, but no newer Yemen observation.",
+      "context": "The latest representative observation of account ownership in Yemen published by the World Bank remains 11.9%. World Bank Data reports it for 2022; it comes from the Yemen Global Findex 2021 study, fielded from 7 November 2022 to 9 January 2023. The Global Findex 2025 edition adds 2024 observations for many economies, but no newer Yemen observation. For context, the World Bank's figure for the same survey wave across the 19 low-income economies surveyed in it, Yemen among them, is 35.2%.",
       "source_object": "CLM-001"
     },
     {
@@ -46009,7 +46117,7 @@
       "field": "copy_en",
       "token": "9",
       "category": "GOVERNED_OBJECT_SOURCE_CLOSED",
-      "context": "The latest representative observation of account ownership in Yemen published by the World Bank remains 11.9%. World Bank Data reports it for 2022; it comes from the Yemen Global Findex 2021 study, fielded from 7 November 2022 to 9 January 2023. The Global Findex 2025 edition adds 2024 observations for many economies, but no newer Yemen observation.",
+      "context": "The latest representative observation of account ownership in Yemen published by the World Bank remains 11.9%. World Bank Data reports it for 2022; it comes from the Yemen Global Findex 2021 study, fielded from 7 November 2022 to 9 January 2023. The Global Findex 2025 edition adds 2024 observations for many economies, but no newer Yemen observation. For context, the World Bank's figure for the same survey wave across the 19 low-income economies surveyed in it, Yemen among them, is 35.2%.",
       "source_object": "CLM-001"
     },
     {
@@ -46018,7 +46126,7 @@
       "field": "copy_en",
       "token": "2023",
       "category": "GOVERNED_OBJECT_SOURCE_CLOSED",
-      "context": "The latest representative observation of account ownership in Yemen published by the World Bank remains 11.9%. World Bank Data reports it for 2022; it comes from the Yemen Global Findex 2021 study, fielded from 7 November 2022 to 9 January 2023. The Global Findex 2025 edition adds 2024 observations for many economies, but no newer Yemen observation.",
+      "context": "The latest representative observation of account ownership in Yemen published by the World Bank remains 11.9%. World Bank Data reports it for 2022; it comes from the Yemen Global Findex 2021 study, fielded from 7 November 2022 to 9 January 2023. The Global Findex 2025 edition adds 2024 observations for many economies, but no newer Yemen observation. For context, the World Bank's figure for the same survey wave across the 19 low-income economies surveyed in it, Yemen among them, is 35.2%.",
       "source_object": "CLM-001"
     },
     {
@@ -46027,7 +46135,7 @@
       "field": "copy_en",
       "token": "2025",
       "category": "GOVERNED_OBJECT_SOURCE_CLOSED",
-      "context": "The latest representative observation of account ownership in Yemen published by the World Bank remains 11.9%. World Bank Data reports it for 2022; it comes from the Yemen Global Findex 2021 study, fielded from 7 November 2022 to 9 January 2023. The Global Findex 2025 edition adds 2024 observations for many economies, but no newer Yemen observation.",
+      "context": "The latest representative observation of account ownership in Yemen published by the World Bank remains 11.9%. World Bank Data reports it for 2022; it comes from the Yemen Global Findex 2021 study, fielded from 7 November 2022 to 9 January 2023. The Global Findex 2025 edition adds 2024 observations for many economies, but no newer Yemen observation. For context, the World Bank's figure for the same survey wave across the 19 low-income economies surveyed in it, Yemen among them, is 35.2%.",
       "source_object": "CLM-001"
     },
     {
@@ -46036,7 +46144,25 @@
       "field": "copy_en",
       "token": "2024",
       "category": "GOVERNED_OBJECT_SOURCE_CLOSED",
-      "context": "The latest representative observation of account ownership in Yemen published by the World Bank remains 11.9%. World Bank Data reports it for 2022; it comes from the Yemen Global Findex 2021 study, fielded from 7 November 2022 to 9 January 2023. The Global Findex 2025 edition adds 2024 observations for many economies, but no newer Yemen observation.",
+      "context": "The latest representative observation of account ownership in Yemen published by the World Bank remains 11.9%. World Bank Data reports it for 2022; it comes from the Yemen Global Findex 2021 study, fielded from 7 November 2022 to 9 January 2023. The Global Findex 2025 edition adds 2024 observations for many economies, but no newer Yemen observation. For context, the World Bank's figure for the same survey wave across the 19 low-income economies surveyed in it, Yemen among them, is 35.2%.",
+      "source_object": "CLM-001"
+    },
+    {
+      "route": "/evidence/compare/",
+      "surface": "governed_numeric_inventory",
+      "field": "copy_en",
+      "token": "19",
+      "category": "GOVERNED_OBJECT_SOURCE_CLOSED",
+      "context": "The latest representative observation of account ownership in Yemen published by the World Bank remains 11.9%. World Bank Data reports it for 2022; it comes from the Yemen Global Findex 2021 study, fielded from 7 November 2022 to 9 January 2023. The Global Findex 2025 edition adds 2024 observations for many economies, but no newer Yemen observation. For context, the World Bank's figure for the same survey wave across the 19 low-income economies surveyed in it, Yemen among them, is 35.2%.",
+      "source_object": "CLM-001"
+    },
+    {
+      "route": "/evidence/compare/",
+      "surface": "governed_numeric_inventory",
+      "field": "copy_en",
+      "token": "35.2%",
+      "category": "GOVERNED_OBJECT_SOURCE_CLOSED",
+      "context": "The latest representative observation of account ownership in Yemen published by the World Bank remains 11.9%. World Bank Data reports it for 2022; it comes from the Yemen Global Findex 2021 study, fielded from 7 November 2022 to 9 January 2023. The Global Findex 2025 edition adds 2024 observations for many economies, but no newer Yemen observation. For context, the World Bank's figure for the same survey wave across the 19 low-income economies surveyed in it, Yemen among them, is 35.2%.",
       "source_object": "CLM-001"
     },
     {
@@ -46045,7 +46171,7 @@
       "field": "copy_ar",
       "token": "11.9%",
       "category": "GOVERNED_OBJECT_SOURCE_CLOSED",
-      "context": "تظل أحدث مشاهدة سكانية ممثلة ينشرها البنك الدولي لامتلاك الحساب في اليمن عند 11.9%. ويعرضها موقع بيانات البنك الدولي لسنة 2022، وهي مستمدة من دراسة اليمن ضمن موجة Global Findex 2021 التي نُفذت ميدانيًا من 7 نوفمبر 2022 إلى 9 يناير 2023. وتضيف نسخة Global Findex 2025 مشاهدات لعام 2024 في اقتصادات عديدة، لكنها لا تضيف مشاهدة أحدث لليمن.",
+      "context": "تظل أحدث مشاهدة سكانية ممثلة ينشرها البنك الدولي لامتلاك الحساب في اليمن عند 11.9%. ويعرضها موقع بيانات البنك الدولي لسنة 2022، وهي مستمدة من دراسة اليمن ضمن موجة Global Findex 2021 التي نُفذت ميدانيًا من 7 نوفمبر 2022 إلى 9 يناير 2023. وتضيف نسخة Global Findex 2025 مشاهدات لعام 2024 في اقتصادات عديدة، لكنها لا تضيف مشاهدة أحدث لليمن. وللسياق، يبلغ رقم البنك الدولي لموجة المسح نفسها في الاقتصادات منخفضة الدخل الـ19 التي شملتها الموجة، ومنها اليمن، 35.2%.",
       "source_object": "CLM-001"
     },
     {
@@ -46054,7 +46180,7 @@
       "field": "copy_ar",
       "token": "2022",
       "category": "GOVERNED_OBJECT_SOURCE_CLOSED",
-      "context": "تظل أحدث مشاهدة سكانية ممثلة ينشرها البنك الدولي لامتلاك الحساب في اليمن عند 11.9%. ويعرضها موقع بيانات البنك الدولي لسنة 2022، وهي مستمدة من دراسة اليمن ضمن موجة Global Findex 2021 التي نُفذت ميدانيًا من 7 نوفمبر 2022 إلى 9 يناير 2023. وتضيف نسخة Global Findex 2025 مشاهدات لعام 2024 في اقتصادات عديدة، لكنها لا تضيف مشاهدة أحدث لليمن.",
+      "context": "تظل أحدث مشاهدة سكانية ممثلة ينشرها البنك الدولي لامتلاك الحساب في اليمن عند 11.9%. ويعرضها موقع بيانات البنك الدولي لسنة 2022، وهي مستمدة من دراسة اليمن ضمن موجة Global Findex 2021 التي نُفذت ميدانيًا من 7 نوفمبر 2022 إلى 9 يناير 2023. وتضيف نسخة Global Findex 2025 مشاهدات لعام 2024 في اقتصادات عديدة، لكنها لا تضيف مشاهدة أحدث لليمن. وللسياق، يبلغ رقم البنك الدولي لموجة المسح نفسها في الاقتصادات منخفضة الدخل الـ19 التي شملتها الموجة، ومنها اليمن، 35.2%.",
       "source_object": "CLM-001"
     },
     {
@@ -46063,7 +46189,7 @@
       "field": "copy_ar",
       "token": "2021",
       "category": "GOVERNED_OBJECT_SOURCE_CLOSED",
-      "context": "تظل أحدث مشاهدة سكانية ممثلة ينشرها البنك الدولي لامتلاك الحساب في اليمن عند 11.9%. ويعرضها موقع بيانات البنك الدولي لسنة 2022، وهي مستمدة من دراسة اليمن ضمن موجة Global Findex 2021 التي نُفذت ميدانيًا من 7 نوفمبر 2022 إلى 9 يناير 2023. وتضيف نسخة Global Findex 2025 مشاهدات لعام 2024 في اقتصادات عديدة، لكنها لا تضيف مشاهدة أحدث لليمن.",
+      "context": "تظل أحدث مشاهدة سكانية ممثلة ينشرها البنك الدولي لامتلاك الحساب في اليمن عند 11.9%. ويعرضها موقع بيانات البنك الدولي لسنة 2022، وهي مستمدة من دراسة اليمن ضمن موجة Global Findex 2021 التي نُفذت ميدانيًا من 7 نوفمبر 2022 إلى 9 يناير 2023. وتضيف نسخة Global Findex 2025 مشاهدات لعام 2024 في اقتصادات عديدة، لكنها لا تضيف مشاهدة أحدث لليمن. وللسياق، يبلغ رقم البنك الدولي لموجة المسح نفسها في الاقتصادات منخفضة الدخل الـ19 التي شملتها الموجة، ومنها اليمن، 35.2%.",
       "source_object": "CLM-001"
     },
     {
@@ -46072,7 +46198,7 @@
       "field": "copy_ar",
       "token": "7",
       "category": "GOVERNED_OBJECT_SOURCE_CLOSED",
-      "context": "تظل أحدث مشاهدة سكانية ممثلة ينشرها البنك الدولي لامتلاك الحساب في اليمن عند 11.9%. ويعرضها موقع بيانات البنك الدولي لسنة 2022، وهي مستمدة من دراسة اليمن ضمن موجة Global Findex 2021 التي نُفذت ميدانيًا من 7 نوفمبر 2022 إلى 9 يناير 2023. وتضيف نسخة Global Findex 2025 مشاهدات لعام 2024 في اقتصادات عديدة، لكنها لا تضيف مشاهدة أحدث لليمن.",
+      "context": "تظل أحدث مشاهدة سكانية ممثلة ينشرها البنك الدولي لامتلاك الحساب في اليمن عند 11.9%. ويعرضها موقع بيانات البنك الدولي لسنة 2022، وهي مستمدة من دراسة اليمن ضمن موجة Global Findex 2021 التي نُفذت ميدانيًا من 7 نوفمبر 2022 إلى 9 يناير 2023. وتضيف نسخة Global Findex 2025 مشاهدات لعام 2024 في اقتصادات عديدة، لكنها لا تضيف مشاهدة أحدث لليمن. وللسياق، يبلغ رقم البنك الدولي لموجة المسح نفسها في الاقتصادات منخفضة الدخل الـ19 التي شملتها الموجة، ومنها اليمن، 35.2%.",
       "source_object": "CLM-001"
     },
     {
@@ -46081,7 +46207,7 @@
       "field": "copy_ar",
       "token": "9",
       "category": "GOVERNED_OBJECT_SOURCE_CLOSED",
-      "context": "تظل أحدث مشاهدة سكانية ممثلة ينشرها البنك الدولي لامتلاك الحساب في اليمن عند 11.9%. ويعرضها موقع بيانات البنك الدولي لسنة 2022، وهي مستمدة من دراسة اليمن ضمن موجة Global Findex 2021 التي نُفذت ميدانيًا من 7 نوفمبر 2022 إلى 9 يناير 2023. وتضيف نسخة Global Findex 2025 مشاهدات لعام 2024 في اقتصادات عديدة، لكنها لا تضيف مشاهدة أحدث لليمن.",
+      "context": "تظل أحدث مشاهدة سكانية ممثلة ينشرها البنك الدولي لامتلاك الحساب في اليمن عند 11.9%. ويعرضها موقع بيانات البنك الدولي لسنة 2022، وهي مستمدة من دراسة اليمن ضمن موجة Global Findex 2021 التي نُفذت ميدانيًا من 7 نوفمبر 2022 إلى 9 يناير 2023. وتضيف نسخة Global Findex 2025 مشاهدات لعام 2024 في اقتصادات عديدة، لكنها لا تضيف مشاهدة أحدث لليمن. وللسياق، يبلغ رقم البنك الدولي لموجة المسح نفسها في الاقتصادات منخفضة الدخل الـ19 التي شملتها الموجة، ومنها اليمن، 35.2%.",
       "source_object": "CLM-001"
     },
     {
@@ -46090,7 +46216,7 @@
       "field": "copy_ar",
       "token": "2023",
       "category": "GOVERNED_OBJECT_SOURCE_CLOSED",
-      "context": "تظل أحدث مشاهدة سكانية ممثلة ينشرها البنك الدولي لامتلاك الحساب في اليمن عند 11.9%. ويعرضها موقع بيانات البنك الدولي لسنة 2022، وهي مستمدة من دراسة اليمن ضمن موجة Global Findex 2021 التي نُفذت ميدانيًا من 7 نوفمبر 2022 إلى 9 يناير 2023. وتضيف نسخة Global Findex 2025 مشاهدات لعام 2024 في اقتصادات عديدة، لكنها لا تضيف مشاهدة أحدث لليمن.",
+      "context": "تظل أحدث مشاهدة سكانية ممثلة ينشرها البنك الدولي لامتلاك الحساب في اليمن عند 11.9%. ويعرضها موقع بيانات البنك الدولي لسنة 2022، وهي مستمدة من دراسة اليمن ضمن موجة Global Findex 2021 التي نُفذت ميدانيًا من 7 نوفمبر 2022 إلى 9 يناير 2023. وتضيف نسخة Global Findex 2025 مشاهدات لعام 2024 في اقتصادات عديدة، لكنها لا تضيف مشاهدة أحدث لليمن. وللسياق، يبلغ رقم البنك الدولي لموجة المسح نفسها في الاقتصادات منخفضة الدخل الـ19 التي شملتها الموجة، ومنها اليمن، 35.2%.",
       "source_object": "CLM-001"
     },
     {
@@ -46099,7 +46225,7 @@
       "field": "copy_ar",
       "token": "2025",
       "category": "GOVERNED_OBJECT_SOURCE_CLOSED",
-      "context": "تظل أحدث مشاهدة سكانية ممثلة ينشرها البنك الدولي لامتلاك الحساب في اليمن عند 11.9%. ويعرضها موقع بيانات البنك الدولي لسنة 2022، وهي مستمدة من دراسة اليمن ضمن موجة Global Findex 2021 التي نُفذت ميدانيًا من 7 نوفمبر 2022 إلى 9 يناير 2023. وتضيف نسخة Global Findex 2025 مشاهدات لعام 2024 في اقتصادات عديدة، لكنها لا تضيف مشاهدة أحدث لليمن.",
+      "context": "تظل أحدث مشاهدة سكانية ممثلة ينشرها البنك الدولي لامتلاك الحساب في اليمن عند 11.9%. ويعرضها موقع بيانات البنك الدولي لسنة 2022، وهي مستمدة من دراسة اليمن ضمن موجة Global Findex 2021 التي نُفذت ميدانيًا من 7 نوفمبر 2022 إلى 9 يناير 2023. وتضيف نسخة Global Findex 2025 مشاهدات لعام 2024 في اقتصادات عديدة، لكنها لا تضيف مشاهدة أحدث لليمن. وللسياق، يبلغ رقم البنك الدولي لموجة المسح نفسها في الاقتصادات منخفضة الدخل الـ19 التي شملتها الموجة، ومنها اليمن، 35.2%.",
       "source_object": "CLM-001"
     },
     {
@@ -46108,7 +46234,16 @@
       "field": "copy_ar",
       "token": "2024",
       "category": "GOVERNED_OBJECT_SOURCE_CLOSED",
-      "context": "تظل أحدث مشاهدة سكانية ممثلة ينشرها البنك الدولي لامتلاك الحساب في اليمن عند 11.9%. ويعرضها موقع بيانات البنك الدولي لسنة 2022، وهي مستمدة من دراسة اليمن ضمن موجة Global Findex 2021 التي نُفذت ميدانيًا من 7 نوفمبر 2022 إلى 9 يناير 2023. وتضيف نسخة Global Findex 2025 مشاهدات لعام 2024 في اقتصادات عديدة، لكنها لا تضيف مشاهدة أحدث لليمن.",
+      "context": "تظل أحدث مشاهدة سكانية ممثلة ينشرها البنك الدولي لامتلاك الحساب في اليمن عند 11.9%. ويعرضها موقع بيانات البنك الدولي لسنة 2022، وهي مستمدة من دراسة اليمن ضمن موجة Global Findex 2021 التي نُفذت ميدانيًا من 7 نوفمبر 2022 إلى 9 يناير 2023. وتضيف نسخة Global Findex 2025 مشاهدات لعام 2024 في اقتصادات عديدة، لكنها لا تضيف مشاهدة أحدث لليمن. وللسياق، يبلغ رقم البنك الدولي لموجة المسح نفسها في الاقتصادات منخفضة الدخل الـ19 التي شملتها الموجة، ومنها اليمن، 35.2%.",
+      "source_object": "CLM-001"
+    },
+    {
+      "route": "/evidence/compare/",
+      "surface": "governed_numeric_inventory",
+      "field": "copy_ar",
+      "token": "35.2%",
+      "category": "GOVERNED_OBJECT_SOURCE_CLOSED",
+      "context": "تظل أحدث مشاهدة سكانية ممثلة ينشرها البنك الدولي لامتلاك الحساب في اليمن عند 11.9%. ويعرضها موقع بيانات البنك الدولي لسنة 2022، وهي مستمدة من دراسة اليمن ضمن موجة Global Findex 2021 التي نُفذت ميدانيًا من 7 نوفمبر 2022 إلى 9 يناير 2023. وتضيف نسخة Global Findex 2025 مشاهدات لعام 2024 في اقتصادات عديدة، لكنها لا تضيف مشاهدة أحدث لليمن. وللسياق، يبلغ رقم البنك الدولي لموجة المسح نفسها في الاقتصادات منخفضة الدخل الـ19 التي شملتها الموجة، ومنها اليمن، 35.2%.",
       "source_object": "CLM-001"
     },
     {
@@ -47395,7 +47530,7 @@
       "field": "summary_en",
       "token": "11.9%",
       "category": "GOVERNED_OBJECT_SOURCE_CLOSED",
-      "context": "The latest representative observation of account ownership in Yemen published by the World Bank remains 11.9%. World Bank Data reports it for 2022; it comes from the Yemen Global Findex 2021 study, fielded from 7 November 2022 to 9 January 2023. The Global Findex 2025 edition adds 2024 observations for many economies, but no newer Yemen observation.",
+      "context": "The latest representative observation of account ownership in Yemen published by the World Bank remains 11.9%. World Bank Data reports it for 2022; it comes from the Yemen Global Findex 2021 study, fielded from 7 November 2022 to 9 January 2023. The Global Findex 2025 edition adds 2024 observations for many economies, but no newer Yemen observation. For context, the World Bank's figure for the same survey wave across the 19 low-income economies surveyed in it, Yemen among them, is 35.2%.",
       "source_object": "CLM-001"
     },
     {
@@ -47404,7 +47539,7 @@
       "field": "summary_en",
       "token": "2022",
       "category": "GOVERNED_OBJECT_SOURCE_CLOSED",
-      "context": "The latest representative observation of account ownership in Yemen published by the World Bank remains 11.9%. World Bank Data reports it for 2022; it comes from the Yemen Global Findex 2021 study, fielded from 7 November 2022 to 9 January 2023. The Global Findex 2025 edition adds 2024 observations for many economies, but no newer Yemen observation.",
+      "context": "The latest representative observation of account ownership in Yemen published by the World Bank remains 11.9%. World Bank Data reports it for 2022; it comes from the Yemen Global Findex 2021 study, fielded from 7 November 2022 to 9 January 2023. The Global Findex 2025 edition adds 2024 observations for many economies, but no newer Yemen observation. For context, the World Bank's figure for the same survey wave across the 19 low-income economies surveyed in it, Yemen among them, is 35.2%.",
       "source_object": "CLM-001"
     },
     {
@@ -47413,7 +47548,7 @@
       "field": "summary_en",
       "token": "2021",
       "category": "GOVERNED_OBJECT_SOURCE_CLOSED",
-      "context": "The latest representative observation of account ownership in Yemen published by the World Bank remains 11.9%. World Bank Data reports it for 2022; it comes from the Yemen Global Findex 2021 study, fielded from 7 November 2022 to 9 January 2023. The Global Findex 2025 edition adds 2024 observations for many economies, but no newer Yemen observation.",
+      "context": "The latest representative observation of account ownership in Yemen published by the World Bank remains 11.9%. World Bank Data reports it for 2022; it comes from the Yemen Global Findex 2021 study, fielded from 7 November 2022 to 9 January 2023. The Global Findex 2025 edition adds 2024 observations for many economies, but no newer Yemen observation. For context, the World Bank's figure for the same survey wave across the 19 low-income economies surveyed in it, Yemen among them, is 35.2%.",
       "source_object": "CLM-001"
     },
     {
@@ -47422,7 +47557,7 @@
       "field": "summary_en",
       "token": "7",
       "category": "GOVERNED_OBJECT_SOURCE_CLOSED",
-      "context": "The latest representative observation of account ownership in Yemen published by the World Bank remains 11.9%. World Bank Data reports it for 2022; it comes from the Yemen Global Findex 2021 study, fielded from 7 November 2022 to 9 January 2023. The Global Findex 2025 edition adds 2024 observations for many economies, but no newer Yemen observation.",
+      "context": "The latest representative observation of account ownership in Yemen published by the World Bank remains 11.9%. World Bank Data reports it for 2022; it comes from the Yemen Global Findex 2021 study, fielded from 7 November 2022 to 9 January 2023. The Global Findex 2025 edition adds 2024 observations for many economies, but no newer Yemen observation. For context, the World Bank's figure for the same survey wave across the 19 low-income economies surveyed in it, Yemen among them, is 35.2%.",
       "source_object": "CLM-001"
     },
     {
@@ -47431,7 +47566,7 @@
       "field": "summary_en",
       "token": "9",
       "category": "GOVERNED_OBJECT_SOURCE_CLOSED",
-      "context": "The latest representative observation of account ownership in Yemen published by the World Bank remains 11.9%. World Bank Data reports it for 2022; it comes from the Yemen Global Findex 2021 study, fielded from 7 November 2022 to 9 January 2023. The Global Findex 2025 edition adds 2024 observations for many economies, but no newer Yemen observation.",
+      "context": "The latest representative observation of account ownership in Yemen published by the World Bank remains 11.9%. World Bank Data reports it for 2022; it comes from the Yemen Global Findex 2021 study, fielded from 7 November 2022 to 9 January 2023. The Global Findex 2025 edition adds 2024 observations for many economies, but no newer Yemen observation. For context, the World Bank's figure for the same survey wave across the 19 low-income economies surveyed in it, Yemen among them, is 35.2%.",
       "source_object": "CLM-001"
     },
     {
@@ -47440,7 +47575,7 @@
       "field": "summary_en",
       "token": "2023",
       "category": "GOVERNED_OBJECT_SOURCE_CLOSED",
-      "context": "The latest representative observation of account ownership in Yemen published by the World Bank remains 11.9%. World Bank Data reports it for 2022; it comes from the Yemen Global Findex 2021 study, fielded from 7 November 2022 to 9 January 2023. The Global Findex 2025 edition adds 2024 observations for many economies, but no newer Yemen observation.",
+      "context": "The latest representative observation of account ownership in Yemen published by the World Bank remains 11.9%. World Bank Data reports it for 2022; it comes from the Yemen Global Findex 2021 study, fielded from 7 November 2022 to 9 January 2023. The Global Findex 2025 edition adds 2024 observations for many economies, but no newer Yemen observation. For context, the World Bank's figure for the same survey wave across the 19 low-income economies surveyed in it, Yemen among them, is 35.2%.",
       "source_object": "CLM-001"
     },
     {
@@ -47449,7 +47584,7 @@
       "field": "summary_en",
       "token": "2025",
       "category": "GOVERNED_OBJECT_SOURCE_CLOSED",
-      "context": "The latest representative observation of account ownership in Yemen published by the World Bank remains 11.9%. World Bank Data reports it for 2022; it comes from the Yemen Global Findex 2021 study, fielded from 7 November 2022 to 9 January 2023. The Global Findex 2025 edition adds 2024 observations for many economies, but no newer Yemen observation.",
+      "context": "The latest representative observation of account ownership in Yemen published by the World Bank remains 11.9%. World Bank Data reports it for 2022; it comes from the Yemen Global Findex 2021 study, fielded from 7 November 2022 to 9 January 2023. The Global Findex 2025 edition adds 2024 observations for many economies, but no newer Yemen observation. For context, the World Bank's figure for the same survey wave across the 19 low-income economies surveyed in it, Yemen among them, is 35.2%.",
       "source_object": "CLM-001"
     },
     {
@@ -47458,7 +47593,25 @@
       "field": "summary_en",
       "token": "2024",
       "category": "GOVERNED_OBJECT_SOURCE_CLOSED",
-      "context": "The latest representative observation of account ownership in Yemen published by the World Bank remains 11.9%. World Bank Data reports it for 2022; it comes from the Yemen Global Findex 2021 study, fielded from 7 November 2022 to 9 January 2023. The Global Findex 2025 edition adds 2024 observations for many economies, but no newer Yemen observation.",
+      "context": "The latest representative observation of account ownership in Yemen published by the World Bank remains 11.9%. World Bank Data reports it for 2022; it comes from the Yemen Global Findex 2021 study, fielded from 7 November 2022 to 9 January 2023. The Global Findex 2025 edition adds 2024 observations for many economies, but no newer Yemen observation. For context, the World Bank's figure for the same survey wave across the 19 low-income economies surveyed in it, Yemen among them, is 35.2%.",
+      "source_object": "CLM-001"
+    },
+    {
+      "route": "/evidence/compare/",
+      "surface": "governed_numeric_inventory",
+      "field": "summary_en",
+      "token": "19",
+      "category": "GOVERNED_OBJECT_SOURCE_CLOSED",
+      "context": "The latest representative observation of account ownership in Yemen published by the World Bank remains 11.9%. World Bank Data reports it for 2022; it comes from the Yemen Global Findex 2021 study, fielded from 7 November 2022 to 9 January 2023. The Global Findex 2025 edition adds 2024 observations for many economies, but no newer Yemen observation. For context, the World Bank's figure for the same survey wave across the 19 low-income economies surveyed in it, Yemen among them, is 35.2%.",
+      "source_object": "CLM-001"
+    },
+    {
+      "route": "/evidence/compare/",
+      "surface": "governed_numeric_inventory",
+      "field": "summary_en",
+      "token": "35.2%",
+      "category": "GOVERNED_OBJECT_SOURCE_CLOSED",
+      "context": "The latest representative observation of account ownership in Yemen published by the World Bank remains 11.9%. World Bank Data reports it for 2022; it comes from the Yemen Global Findex 2021 study, fielded from 7 November 2022 to 9 January 2023. The Global Findex 2025 edition adds 2024 observations for many economies, but no newer Yemen observation. For context, the World Bank's figure for the same survey wave across the 19 low-income economies surveyed in it, Yemen among them, is 35.2%.",
       "source_object": "CLM-001"
     },
     {
@@ -47467,7 +47620,7 @@
       "field": "summary_ar",
       "token": "11.9%",
       "category": "GOVERNED_OBJECT_SOURCE_CLOSED",
-      "context": "تظل أحدث مشاهدة سكانية ممثلة ينشرها البنك الدولي لامتلاك الحساب في اليمن عند 11.9%. ويعرضها موقع بيانات البنك الدولي لسنة 2022، وهي مستمدة من دراسة اليمن ضمن موجة Global Findex 2021 التي نُفذت ميدانيًا من 7 نوفمبر 2022 إلى 9 يناير 2023. وتضيف نسخة Global Findex 2025 مشاهدات لعام 2024 في اقتصادات عديدة، لكنها لا تضيف مشاهدة أحدث لليمن.",
+      "context": "تظل أحدث مشاهدة سكانية ممثلة ينشرها البنك الدولي لامتلاك الحساب في اليمن عند 11.9%. ويعرضها موقع بيانات البنك الدولي لسنة 2022، وهي مستمدة من دراسة اليمن ضمن موجة Global Findex 2021 التي نُفذت ميدانيًا من 7 نوفمبر 2022 إلى 9 يناير 2023. وتضيف نسخة Global Findex 2025 مشاهدات لعام 2024 في اقتصادات عديدة، لكنها لا تضيف مشاهدة أحدث لليمن. وللسياق، يبلغ رقم البنك الدولي لموجة المسح نفسها في الاقتصادات منخفضة الدخل الـ19 التي شملتها الموجة، ومنها اليمن، 35.2%.",
       "source_object": "CLM-001"
     },
     {
@@ -47476,7 +47629,7 @@
       "field": "summary_ar",
       "token": "2022",
       "category": "GOVERNED_OBJECT_SOURCE_CLOSED",
-      "context": "تظل أحدث مشاهدة سكانية ممثلة ينشرها البنك الدولي لامتلاك الحساب في اليمن عند 11.9%. ويعرضها موقع بيانات البنك الدولي لسنة 2022، وهي مستمدة من دراسة اليمن ضمن موجة Global Findex 2021 التي نُفذت ميدانيًا من 7 نوفمبر 2022 إلى 9 يناير 2023. وتضيف نسخة Global Findex 2025 مشاهدات لعام 2024 في اقتصادات عديدة، لكنها لا تضيف مشاهدة أحدث لليمن.",
+      "context": "تظل أحدث مشاهدة سكانية ممثلة ينشرها البنك الدولي لامتلاك الحساب في اليمن عند 11.9%. ويعرضها موقع بيانات البنك الدولي لسنة 2022، وهي مستمدة من دراسة اليمن ضمن موجة Global Findex 2021 التي نُفذت ميدانيًا من 7 نوفمبر 2022 إلى 9 يناير 2023. وتضيف نسخة Global Findex 2025 مشاهدات لعام 2024 في اقتصادات عديدة، لكنها لا تضيف مشاهدة أحدث لليمن. وللسياق، يبلغ رقم البنك الدولي لموجة المسح نفسها في الاقتصادات منخفضة الدخل الـ19 التي شملتها الموجة، ومنها اليمن، 35.2%.",
       "source_object": "CLM-001"
     },
     {
@@ -47485,7 +47638,7 @@
       "field": "summary_ar",
       "token": "2021",
       "category": "GOVERNED_OBJECT_SOURCE_CLOSED",
-      "context": "تظل أحدث مشاهدة سكانية ممثلة ينشرها البنك الدولي لامتلاك الحساب في اليمن عند 11.9%. ويعرضها موقع بيانات البنك الدولي لسنة 2022، وهي مستمدة من دراسة اليمن ضمن موجة Global Findex 2021 التي نُفذت ميدانيًا من 7 نوفمبر 2022 إلى 9 يناير 2023. وتضيف نسخة Global Findex 2025 مشاهدات لعام 2024 في اقتصادات عديدة، لكنها لا تضيف مشاهدة أحدث لليمن.",
+      "context": "تظل أحدث مشاهدة سكانية ممثلة ينشرها البنك الدولي لامتلاك الحساب في اليمن عند 11.9%. ويعرضها موقع بيانات البنك الدولي لسنة 2022، وهي مستمدة من دراسة اليمن ضمن موجة Global Findex 2021 التي نُفذت ميدانيًا من 7 نوفمبر 2022 إلى 9 يناير 2023. وتضيف نسخة Global Findex 2025 مشاهدات لعام 2024 في اقتصادات عديدة، لكنها لا تضيف مشاهدة أحدث لليمن. وللسياق، يبلغ رقم البنك الدولي لموجة المسح نفسها في الاقتصادات منخفضة الدخل الـ19 التي شملتها الموجة، ومنها اليمن، 35.2%.",
       "source_object": "CLM-001"
     },
     {
@@ -47494,7 +47647,7 @@
       "field": "summary_ar",
       "token": "7",
       "category": "GOVERNED_OBJECT_SOURCE_CLOSED",
-      "context": "تظل أحدث مشاهدة سكانية ممثلة ينشرها البنك الدولي لامتلاك الحساب في اليمن عند 11.9%. ويعرضها موقع بيانات البنك الدولي لسنة 2022، وهي مستمدة من دراسة اليمن ضمن موجة Global Findex 2021 التي نُفذت ميدانيًا من 7 نوفمبر 2022 إلى 9 يناير 2023. وتضيف نسخة Global Findex 2025 مشاهدات لعام 2024 في اقتصادات عديدة، لكنها لا تضيف مشاهدة أحدث لليمن.",
+      "context": "تظل أحدث مشاهدة سكانية ممثلة ينشرها البنك الدولي لامتلاك الحساب في اليمن عند 11.9%. ويعرضها موقع بيانات البنك الدولي لسنة 2022، وهي مستمدة من دراسة اليمن ضمن موجة Global Findex 2021 التي نُفذت ميدانيًا من 7 نوفمبر 2022 إلى 9 يناير 2023. وتضيف نسخة Global Findex 2025 مشاهدات لعام 2024 في اقتصادات عديدة، لكنها لا تضيف مشاهدة أحدث لليمن. وللسياق، يبلغ رقم البنك الدولي لموجة المسح نفسها في الاقتصادات منخفضة الدخل الـ19 التي شملتها الموجة، ومنها اليمن، 35.2%.",
       "source_object": "CLM-001"
     },
     {
@@ -47503,7 +47656,7 @@
       "field": "summary_ar",
       "token": "9",
       "category": "GOVERNED_OBJECT_SOURCE_CLOSED",
-      "context": "تظل أحدث مشاهدة سكانية ممثلة ينشرها البنك الدولي لامتلاك الحساب في اليمن عند 11.9%. ويعرضها موقع بيانات البنك الدولي لسنة 2022، وهي مستمدة من دراسة اليمن ضمن موجة Global Findex 2021 التي نُفذت ميدانيًا من 7 نوفمبر 2022 إلى 9 يناير 2023. وتضيف نسخة Global Findex 2025 مشاهدات لعام 2024 في اقتصادات عديدة، لكنها لا تضيف مشاهدة أحدث لليمن.",
+      "context": "تظل أحدث مشاهدة سكانية ممثلة ينشرها البنك الدولي لامتلاك الحساب في اليمن عند 11.9%. ويعرضها موقع بيانات البنك الدولي لسنة 2022، وهي مستمدة من دراسة اليمن ضمن موجة Global Findex 2021 التي نُفذت ميدانيًا من 7 نوفمبر 2022 إلى 9 يناير 2023. وتضيف نسخة Global Findex 2025 مشاهدات لعام 2024 في اقتصادات عديدة، لكنها لا تضيف مشاهدة أحدث لليمن. وللسياق، يبلغ رقم البنك الدولي لموجة المسح نفسها في الاقتصادات منخفضة الدخل الـ19 التي شملتها الموجة، ومنها اليمن، 35.2%.",
       "source_object": "CLM-001"
     },
     {
@@ -47512,7 +47665,7 @@
       "field": "summary_ar",
       "token": "2023",
       "category": "GOVERNED_OBJECT_SOURCE_CLOSED",
-      "context": "تظل أحدث مشاهدة سكانية ممثلة ينشرها البنك الدولي لامتلاك الحساب في اليمن عند 11.9%. ويعرضها موقع بيانات البنك الدولي لسنة 2022، وهي مستمدة من دراسة اليمن ضمن موجة Global Findex 2021 التي نُفذت ميدانيًا من 7 نوفمبر 2022 إلى 9 يناير 2023. وتضيف نسخة Global Findex 2025 مشاهدات لعام 2024 في اقتصادات عديدة، لكنها لا تضيف مشاهدة أحدث لليمن.",
+      "context": "تظل أحدث مشاهدة سكانية ممثلة ينشرها البنك الدولي لامتلاك الحساب في اليمن عند 11.9%. ويعرضها موقع بيانات البنك الدولي لسنة 2022، وهي مستمدة من دراسة اليمن ضمن موجة Global Findex 2021 التي نُفذت ميدانيًا من 7 نوفمبر 2022 إلى 9 يناير 2023. وتضيف نسخة Global Findex 2025 مشاهدات لعام 2024 في اقتصادات عديدة، لكنها لا تضيف مشاهدة أحدث لليمن. وللسياق، يبلغ رقم البنك الدولي لموجة المسح نفسها في الاقتصادات منخفضة الدخل الـ19 التي شملتها الموجة، ومنها اليمن، 35.2%.",
       "source_object": "CLM-001"
     },
     {
@@ -47521,7 +47674,7 @@
       "field": "summary_ar",
       "token": "2025",
       "category": "GOVERNED_OBJECT_SOURCE_CLOSED",
-      "context": "تظل أحدث مشاهدة سكانية ممثلة ينشرها البنك الدولي لامتلاك الحساب في اليمن عند 11.9%. ويعرضها موقع بيانات البنك الدولي لسنة 2022، وهي مستمدة من دراسة اليمن ضمن موجة Global Findex 2021 التي نُفذت ميدانيًا من 7 نوفمبر 2022 إلى 9 يناير 2023. وتضيف نسخة Global Findex 2025 مشاهدات لعام 2024 في اقتصادات عديدة، لكنها لا تضيف مشاهدة أحدث لليمن.",
+      "context": "تظل أحدث مشاهدة سكانية ممثلة ينشرها البنك الدولي لامتلاك الحساب في اليمن عند 11.9%. ويعرضها موقع بيانات البنك الدولي لسنة 2022، وهي مستمدة من دراسة اليمن ضمن موجة Global Findex 2021 التي نُفذت ميدانيًا من 7 نوفمبر 2022 إلى 9 يناير 2023. وتضيف نسخة Global Findex 2025 مشاهدات لعام 2024 في اقتصادات عديدة، لكنها لا تضيف مشاهدة أحدث لليمن. وللسياق، يبلغ رقم البنك الدولي لموجة المسح نفسها في الاقتصادات منخفضة الدخل الـ19 التي شملتها الموجة، ومنها اليمن، 35.2%.",
       "source_object": "CLM-001"
     },
     {
@@ -47530,7 +47683,16 @@
       "field": "summary_ar",
       "token": "2024",
       "category": "GOVERNED_OBJECT_SOURCE_CLOSED",
-      "context": "تظل أحدث مشاهدة سكانية ممثلة ينشرها البنك الدولي لامتلاك الحساب في اليمن عند 11.9%. ويعرضها موقع بيانات البنك الدولي لسنة 2022، وهي مستمدة من دراسة اليمن ضمن موجة Global Findex 2021 التي نُفذت ميدانيًا من 7 نوفمبر 2022 إلى 9 يناير 2023. وتضيف نسخة Global Findex 2025 مشاهدات لعام 2024 في اقتصادات عديدة، لكنها لا تضيف مشاهدة أحدث لليمن.",
+      "context": "تظل أحدث مشاهدة سكانية ممثلة ينشرها البنك الدولي لامتلاك الحساب في اليمن عند 11.9%. ويعرضها موقع بيانات البنك الدولي لسنة 2022، وهي مستمدة من دراسة اليمن ضمن موجة Global Findex 2021 التي نُفذت ميدانيًا من 7 نوفمبر 2022 إلى 9 يناير 2023. وتضيف نسخة Global Findex 2025 مشاهدات لعام 2024 في اقتصادات عديدة، لكنها لا تضيف مشاهدة أحدث لليمن. وللسياق، يبلغ رقم البنك الدولي لموجة المسح نفسها في الاقتصادات منخفضة الدخل الـ19 التي شملتها الموجة، ومنها اليمن، 35.2%.",
+      "source_object": "CLM-001"
+    },
+    {
+      "route": "/evidence/compare/",
+      "surface": "governed_numeric_inventory",
+      "field": "summary_ar",
+      "token": "35.2%",
+      "category": "GOVERNED_OBJECT_SOURCE_CLOSED",
+      "context": "تظل أحدث مشاهدة سكانية ممثلة ينشرها البنك الدولي لامتلاك الحساب في اليمن عند 11.9%. ويعرضها موقع بيانات البنك الدولي لسنة 2022، وهي مستمدة من دراسة اليمن ضمن موجة Global Findex 2021 التي نُفذت ميدانيًا من 7 نوفمبر 2022 إلى 9 يناير 2023. وتضيف نسخة Global Findex 2025 مشاهدات لعام 2024 في اقتصادات عديدة، لكنها لا تضيف مشاهدة أحدث لليمن. وللسياق، يبلغ رقم البنك الدولي لموجة المسح نفسها في الاقتصادات منخفضة الدخل الـ19 التي شملتها الموجة، ومنها اليمن، 35.2%.",
       "source_object": "CLM-001"
     },
     {
@@ -47797,10 +47959,37 @@
     {
       "route": "/evidence/compare/",
       "surface": "governed_numeric_inventory",
+      "field": "method_en",
+      "token": "35.2%",
+      "category": "GOVERNED_OBJECT_SOURCE_CLOSED",
+      "context": "Weighted survey estimate. The low-income context figure, 35.2%, is the World Bank's own aggregate for the same wave and indicator; this resource reproduced it as the average of the published values of the 19 low-income economies surveyed in the wave, weighted by their adult populations.",
+      "source_object": "CLM-001"
+    },
+    {
+      "route": "/evidence/compare/",
+      "surface": "governed_numeric_inventory",
+      "field": "method_en",
+      "token": "19",
+      "category": "GOVERNED_OBJECT_SOURCE_CLOSED",
+      "context": "Weighted survey estimate. The low-income context figure, 35.2%, is the World Bank's own aggregate for the same wave and indicator; this resource reproduced it as the average of the published values of the 19 low-income economies surveyed in the wave, weighted by their adult populations.",
+      "source_object": "CLM-001"
+    },
+    {
+      "route": "/evidence/compare/",
+      "surface": "governed_numeric_inventory",
+      "field": "method_ar",
+      "token": "35.2%",
+      "category": "GOVERNED_OBJECT_SOURCE_CLOSED",
+      "context": "تقدير مسحي موزون وفق تصميم المسح وأوزانه. ورقم السياق للاقتصادات منخفضة الدخل، 35.2%، هو التجميع الذي ينشره البنك الدولي نفسه للموجة والمؤشر ذاتيهما؛ وقد أعاد هذا المورد احتسابه متوسطًا للقيم المنشورة للاقتصادات منخفضة الدخل الـ19 التي شملتها الموجة، مرجّحًا بعدد البالغين في كل منها.",
+      "source_object": "CLM-001"
+    },
+    {
+      "route": "/evidence/compare/",
+      "surface": "governed_numeric_inventory",
       "field": "limitations_en",
       "token": "2026",
       "category": "GOVERNED_OBJECT_SOURCE_CLOSED",
-      "context": "It is not a 2026 rate, and it cannot be broken down or mapped by governorate. It is not the share of adults with a bank account: accounts at other financial institutions and personal use of a mobile-money service also count. | The survey frame excludes areas holding about 23% of the population, and more than a quarter of primary sampling units were replaced.",
+      "context": "It is not a 2026 rate, and it cannot be broken down or mapped by governorate. It is not the share of adults with a bank account: accounts at other financial institutions and personal use of a mobile-money service also count. | The survey frame excludes areas holding about 23% of the population, and more than a quarter of primary sampling units were replaced. The low-income figure is context, not a benchmark, a target or a ranking: it averages economies in very different conditions, includes Yemen itself and uses the income classification in the Global Findex Database 2025, while Yemen's own figure covers only the areas its survey reached.",
       "source_object": "CLM-001"
     },
     {
@@ -47809,7 +47998,16 @@
       "field": "limitations_en",
       "token": "23%",
       "category": "GOVERNED_OBJECT_SOURCE_CLOSED",
-      "context": "It is not a 2026 rate, and it cannot be broken down or mapped by governorate. It is not the share of adults with a bank account: accounts at other financial institutions and personal use of a mobile-money service also count. | The survey frame excludes areas holding about 23% of the population, and more than a quarter of primary sampling units were replaced.",
+      "context": "It is not a 2026 rate, and it cannot be broken down or mapped by governorate. It is not the share of adults with a bank account: accounts at other financial institutions and personal use of a mobile-money service also count. | The survey frame excludes areas holding about 23% of the population, and more than a quarter of primary sampling units were replaced. The low-income figure is context, not a benchmark, a target or a ranking: it averages economies in very different conditions, includes Yemen itself and uses the income classification in the Global Findex Database 2025, while Yemen's own figure covers only the areas its survey reached.",
+      "source_object": "CLM-001"
+    },
+    {
+      "route": "/evidence/compare/",
+      "surface": "governed_numeric_inventory",
+      "field": "limitations_en",
+      "token": "2025,",
+      "category": "GOVERNED_OBJECT_SOURCE_CLOSED",
+      "context": "It is not a 2026 rate, and it cannot be broken down or mapped by governorate. It is not the share of adults with a bank account: accounts at other financial institutions and personal use of a mobile-money service also count. | The survey frame excludes areas holding about 23% of the population, and more than a quarter of primary sampling units were replaced. The low-income figure is context, not a benchmark, a target or a ranking: it averages economies in very different conditions, includes Yemen itself and uses the income classification in the Global Findex Database 2025, while Yemen's own figure covers only the areas its survey reached.",
       "source_object": "CLM-001"
     },
     {
@@ -47818,7 +48016,7 @@
       "field": "limitations_ar",
       "token": "2026",
       "category": "GOVERNED_OBJECT_SOURCE_CLOSED",
-      "context": "ليست هذه النسبة معدلًا لعام 2026، ولا يمكن تجزئتها أو إسقاطها على المحافظات. وليست نسبة من يملكون حسابًا مصرفيًا فحسب، إذ تُحتسب أيضًا الحسابات لدى المؤسسات المالية الأخرى والاستخدام الشخصي لخدمة أموال عبر الهاتف المحمول. | يستبعد إطار المسح مناطق يقطنها نحو 23% من السكان، كما استُبدل أكثر من ربع وحدات المعاينة الأولية.",
+      "context": "ليست هذه النسبة معدلًا لعام 2026، ولا يمكن تجزئتها أو إسقاطها على المحافظات. وليست نسبة من يملكون حسابًا مصرفيًا فحسب، إذ تُحتسب أيضًا الحسابات لدى المؤسسات المالية الأخرى والاستخدام الشخصي لخدمة أموال عبر الهاتف المحمول. | يستبعد إطار المسح مناطق يقطنها نحو 23% من السكان، كما استُبدل أكثر من ربع وحدات المعاينة الأولية. ورقم الاقتصادات منخفضة الدخل للسياق فقط، وليس معيارًا ولا هدفًا ولا ترتيبًا: فهو متوسط لاقتصادات ذات ظروف متباينة جدًا، ويشمل اليمن نفسه، ويستند إلى تصنيف الدخل المعتمد في قاعدة بيانات Global Findex 2025، في حين يقتصر رقم اليمن على المناطق التي بلغها المسح.",
       "source_object": "CLM-001"
     },
     {
@@ -47827,7 +48025,16 @@
       "field": "limitations_ar",
       "token": "23%",
       "category": "GOVERNED_OBJECT_SOURCE_CLOSED",
-      "context": "ليست هذه النسبة معدلًا لعام 2026، ولا يمكن تجزئتها أو إسقاطها على المحافظات. وليست نسبة من يملكون حسابًا مصرفيًا فحسب، إذ تُحتسب أيضًا الحسابات لدى المؤسسات المالية الأخرى والاستخدام الشخصي لخدمة أموال عبر الهاتف المحمول. | يستبعد إطار المسح مناطق يقطنها نحو 23% من السكان، كما استُبدل أكثر من ربع وحدات المعاينة الأولية.",
+      "context": "ليست هذه النسبة معدلًا لعام 2026، ولا يمكن تجزئتها أو إسقاطها على المحافظات. وليست نسبة من يملكون حسابًا مصرفيًا فحسب، إذ تُحتسب أيضًا الحسابات لدى المؤسسات المالية الأخرى والاستخدام الشخصي لخدمة أموال عبر الهاتف المحمول. | يستبعد إطار المسح مناطق يقطنها نحو 23% من السكان، كما استُبدل أكثر من ربع وحدات المعاينة الأولية. ورقم الاقتصادات منخفضة الدخل للسياق فقط، وليس معيارًا ولا هدفًا ولا ترتيبًا: فهو متوسط لاقتصادات ذات ظروف متباينة جدًا، ويشمل اليمن نفسه، ويستند إلى تصنيف الدخل المعتمد في قاعدة بيانات Global Findex 2025، في حين يقتصر رقم اليمن على المناطق التي بلغها المسح.",
+      "source_object": "CLM-001"
+    },
+    {
+      "route": "/evidence/compare/",
+      "surface": "governed_numeric_inventory",
+      "field": "limitations_ar",
+      "token": "2025",
+      "category": "GOVERNED_OBJECT_SOURCE_CLOSED",
+      "context": "ليست هذه النسبة معدلًا لعام 2026، ولا يمكن تجزئتها أو إسقاطها على المحافظات. وليست نسبة من يملكون حسابًا مصرفيًا فحسب، إذ تُحتسب أيضًا الحسابات لدى المؤسسات المالية الأخرى والاستخدام الشخصي لخدمة أموال عبر الهاتف المحمول. | يستبعد إطار المسح مناطق يقطنها نحو 23% من السكان، كما استُبدل أكثر من ربع وحدات المعاينة الأولية. ورقم الاقتصادات منخفضة الدخل للسياق فقط، وليس معيارًا ولا هدفًا ولا ترتيبًا: فهو متوسط لاقتصادات ذات ظروف متباينة جدًا، ويشمل اليمن نفسه، ويستند إلى تصنيف الدخل المعتمد في قاعدة بيانات Global Findex 2025، في حين يقتصر رقم اليمن على المناطق التي بلغها المسح.",
       "source_object": "CLM-001"
     },
     {
@@ -69087,7 +69294,7 @@
       "field": "copy_en",
       "token": "11.9%",
       "category": "GOVERNED_OBJECT_SOURCE_CLOSED",
-      "context": "The latest representative observation of account ownership in Yemen published by the World Bank remains 11.9%. World Bank Data reports it for 2022; it comes from the Yemen Global Findex 2021 study, fielded from 7 November 2022 to 9 January 2023. The Global Findex 2025 edition adds 2024 observations for many economies, but no newer Yemen observation.",
+      "context": "The latest representative observation of account ownership in Yemen published by the World Bank remains 11.9%. World Bank Data reports it for 2022; it comes from the Yemen Global Findex 2021 study, fielded from 7 November 2022 to 9 January 2023. The Global Findex 2025 edition adds 2024 observations for many economies, but no newer Yemen observation. For context, the World Bank's figure for the same survey wave across the 19 low-income economies surveyed in it, Yemen among them, is 35.2%.",
       "source_object": "CLM-001"
     },
     {
@@ -69096,7 +69303,7 @@
       "field": "copy_en",
       "token": "2022",
       "category": "GOVERNED_OBJECT_SOURCE_CLOSED",
-      "context": "The latest representative observation of account ownership in Yemen published by the World Bank remains 11.9%. World Bank Data reports it for 2022; it comes from the Yemen Global Findex 2021 study, fielded from 7 November 2022 to 9 January 2023. The Global Findex 2025 edition adds 2024 observations for many economies, but no newer Yemen observation.",
+      "context": "The latest representative observation of account ownership in Yemen published by the World Bank remains 11.9%. World Bank Data reports it for 2022; it comes from the Yemen Global Findex 2021 study, fielded from 7 November 2022 to 9 January 2023. The Global Findex 2025 edition adds 2024 observations for many economies, but no newer Yemen observation. For context, the World Bank's figure for the same survey wave across the 19 low-income economies surveyed in it, Yemen among them, is 35.2%.",
       "source_object": "CLM-001"
     },
     {
@@ -69105,7 +69312,7 @@
       "field": "copy_en",
       "token": "2021",
       "category": "GOVERNED_OBJECT_SOURCE_CLOSED",
-      "context": "The latest representative observation of account ownership in Yemen published by the World Bank remains 11.9%. World Bank Data reports it for 2022; it comes from the Yemen Global Findex 2021 study, fielded from 7 November 2022 to 9 January 2023. The Global Findex 2025 edition adds 2024 observations for many economies, but no newer Yemen observation.",
+      "context": "The latest representative observation of account ownership in Yemen published by the World Bank remains 11.9%. World Bank Data reports it for 2022; it comes from the Yemen Global Findex 2021 study, fielded from 7 November 2022 to 9 January 2023. The Global Findex 2025 edition adds 2024 observations for many economies, but no newer Yemen observation. For context, the World Bank's figure for the same survey wave across the 19 low-income economies surveyed in it, Yemen among them, is 35.2%.",
       "source_object": "CLM-001"
     },
     {
@@ -69114,7 +69321,7 @@
       "field": "copy_en",
       "token": "7",
       "category": "GOVERNED_OBJECT_SOURCE_CLOSED",
-      "context": "The latest representative observation of account ownership in Yemen published by the World Bank remains 11.9%. World Bank Data reports it for 2022; it comes from the Yemen Global Findex 2021 study, fielded from 7 November 2022 to 9 January 2023. The Global Findex 2025 edition adds 2024 observations for many economies, but no newer Yemen observation.",
+      "context": "The latest representative observation of account ownership in Yemen published by the World Bank remains 11.9%. World Bank Data reports it for 2022; it comes from the Yemen Global Findex 2021 study, fielded from 7 November 2022 to 9 January 2023. The Global Findex 2025 edition adds 2024 observations for many economies, but no newer Yemen observation. For context, the World Bank's figure for the same survey wave across the 19 low-income economies surveyed in it, Yemen among them, is 35.2%.",
       "source_object": "CLM-001"
     },
     {
@@ -69123,7 +69330,7 @@
       "field": "copy_en",
       "token": "9",
       "category": "GOVERNED_OBJECT_SOURCE_CLOSED",
-      "context": "The latest representative observation of account ownership in Yemen published by the World Bank remains 11.9%. World Bank Data reports it for 2022; it comes from the Yemen Global Findex 2021 study, fielded from 7 November 2022 to 9 January 2023. The Global Findex 2025 edition adds 2024 observations for many economies, but no newer Yemen observation.",
+      "context": "The latest representative observation of account ownership in Yemen published by the World Bank remains 11.9%. World Bank Data reports it for 2022; it comes from the Yemen Global Findex 2021 study, fielded from 7 November 2022 to 9 January 2023. The Global Findex 2025 edition adds 2024 observations for many economies, but no newer Yemen observation. For context, the World Bank's figure for the same survey wave across the 19 low-income economies surveyed in it, Yemen among them, is 35.2%.",
       "source_object": "CLM-001"
     },
     {
@@ -69132,7 +69339,7 @@
       "field": "copy_en",
       "token": "2023",
       "category": "GOVERNED_OBJECT_SOURCE_CLOSED",
-      "context": "The latest representative observation of account ownership in Yemen published by the World Bank remains 11.9%. World Bank Data reports it for 2022; it comes from the Yemen Global Findex 2021 study, fielded from 7 November 2022 to 9 January 2023. The Global Findex 2025 edition adds 2024 observations for many economies, but no newer Yemen observation.",
+      "context": "The latest representative observation of account ownership in Yemen published by the World Bank remains 11.9%. World Bank Data reports it for 2022; it comes from the Yemen Global Findex 2021 study, fielded from 7 November 2022 to 9 January 2023. The Global Findex 2025 edition adds 2024 observations for many economies, but no newer Yemen observation. For context, the World Bank's figure for the same survey wave across the 19 low-income economies surveyed in it, Yemen among them, is 35.2%.",
       "source_object": "CLM-001"
     },
     {
@@ -69141,7 +69348,7 @@
       "field": "copy_en",
       "token": "2025",
       "category": "GOVERNED_OBJECT_SOURCE_CLOSED",
-      "context": "The latest representative observation of account ownership in Yemen published by the World Bank remains 11.9%. World Bank Data reports it for 2022; it comes from the Yemen Global Findex 2021 study, fielded from 7 November 2022 to 9 January 2023. The Global Findex 2025 edition adds 2024 observations for many economies, but no newer Yemen observation.",
+      "context": "The latest representative observation of account ownership in Yemen published by the World Bank remains 11.9%. World Bank Data reports it for 2022; it comes from the Yemen Global Findex 2021 study, fielded from 7 November 2022 to 9 January 2023. The Global Findex 2025 edition adds 2024 observations for many economies, but no newer Yemen observation. For context, the World Bank's figure for the same survey wave across the 19 low-income economies surveyed in it, Yemen among them, is 35.2%.",
       "source_object": "CLM-001"
     },
     {
@@ -69150,7 +69357,25 @@
       "field": "copy_en",
       "token": "2024",
       "category": "GOVERNED_OBJECT_SOURCE_CLOSED",
-      "context": "The latest representative observation of account ownership in Yemen published by the World Bank remains 11.9%. World Bank Data reports it for 2022; it comes from the Yemen Global Findex 2021 study, fielded from 7 November 2022 to 9 January 2023. The Global Findex 2025 edition adds 2024 observations for many economies, but no newer Yemen observation.",
+      "context": "The latest representative observation of account ownership in Yemen published by the World Bank remains 11.9%. World Bank Data reports it for 2022; it comes from the Yemen Global Findex 2021 study, fielded from 7 November 2022 to 9 January 2023. The Global Findex 2025 edition adds 2024 observations for many economies, but no newer Yemen observation. For context, the World Bank's figure for the same survey wave across the 19 low-income economies surveyed in it, Yemen among them, is 35.2%.",
+      "source_object": "CLM-001"
+    },
+    {
+      "route": "/",
+      "surface": "governed_numeric_inventory",
+      "field": "copy_en",
+      "token": "19",
+      "category": "GOVERNED_OBJECT_SOURCE_CLOSED",
+      "context": "The latest representative observation of account ownership in Yemen published by the World Bank remains 11.9%. World Bank Data reports it for 2022; it comes from the Yemen Global Findex 2021 study, fielded from 7 November 2022 to 9 January 2023. The Global Findex 2025 edition adds 2024 observations for many economies, but no newer Yemen observation. For context, the World Bank's figure for the same survey wave across the 19 low-income economies surveyed in it, Yemen among them, is 35.2%.",
+      "source_object": "CLM-001"
+    },
+    {
+      "route": "/",
+      "surface": "governed_numeric_inventory",
+      "field": "copy_en",
+      "token": "35.2%",
+      "category": "GOVERNED_OBJECT_SOURCE_CLOSED",
+      "context": "The latest representative observation of account ownership in Yemen published by the World Bank remains 11.9%. World Bank Data reports it for 2022; it comes from the Yemen Global Findex 2021 study, fielded from 7 November 2022 to 9 January 2023. The Global Findex 2025 edition adds 2024 observations for many economies, but no newer Yemen observation. For context, the World Bank's figure for the same survey wave across the 19 low-income economies surveyed in it, Yemen among them, is 35.2%.",
       "source_object": "CLM-001"
     },
     {
@@ -69159,7 +69384,7 @@
       "field": "copy_ar",
       "token": "11.9%",
       "category": "GOVERNED_OBJECT_SOURCE_CLOSED",
-      "context": "تظل أحدث مشاهدة سكانية ممثلة ينشرها البنك الدولي لامتلاك الحساب في اليمن عند 11.9%. ويعرضها موقع بيانات البنك الدولي لسنة 2022، وهي مستمدة من دراسة اليمن ضمن موجة Global Findex 2021 التي نُفذت ميدانيًا من 7 نوفمبر 2022 إلى 9 يناير 2023. وتضيف نسخة Global Findex 2025 مشاهدات لعام 2024 في اقتصادات عديدة، لكنها لا تضيف مشاهدة أحدث لليمن.",
+      "context": "تظل أحدث مشاهدة سكانية ممثلة ينشرها البنك الدولي لامتلاك الحساب في اليمن عند 11.9%. ويعرضها موقع بيانات البنك الدولي لسنة 2022، وهي مستمدة من دراسة اليمن ضمن موجة Global Findex 2021 التي نُفذت ميدانيًا من 7 نوفمبر 2022 إلى 9 يناير 2023. وتضيف نسخة Global Findex 2025 مشاهدات لعام 2024 في اقتصادات عديدة، لكنها لا تضيف مشاهدة أحدث لليمن. وللسياق، يبلغ رقم البنك الدولي لموجة المسح نفسها في الاقتصادات منخفضة الدخل الـ19 التي شملتها الموجة، ومنها اليمن، 35.2%.",
       "source_object": "CLM-001"
     },
     {
@@ -69168,7 +69393,7 @@
       "field": "copy_ar",
       "token": "2022",
       "category": "GOVERNED_OBJECT_SOURCE_CLOSED",
-      "context": "تظل أحدث مشاهدة سكانية ممثلة ينشرها البنك الدولي لامتلاك الحساب في اليمن عند 11.9%. ويعرضها موقع بيانات البنك الدولي لسنة 2022، وهي مستمدة من دراسة اليمن ضمن موجة Global Findex 2021 التي نُفذت ميدانيًا من 7 نوفمبر 2022 إلى 9 يناير 2023. وتضيف نسخة Global Findex 2025 مشاهدات لعام 2024 في اقتصادات عديدة، لكنها لا تضيف مشاهدة أحدث لليمن.",
+      "context": "تظل أحدث مشاهدة سكانية ممثلة ينشرها البنك الدولي لامتلاك الحساب في اليمن عند 11.9%. ويعرضها موقع بيانات البنك الدولي لسنة 2022، وهي مستمدة من دراسة اليمن ضمن موجة Global Findex 2021 التي نُفذت ميدانيًا من 7 نوفمبر 2022 إلى 9 يناير 2023. وتضيف نسخة Global Findex 2025 مشاهدات لعام 2024 في اقتصادات عديدة، لكنها لا تضيف مشاهدة أحدث لليمن. وللسياق، يبلغ رقم البنك الدولي لموجة المسح نفسها في الاقتصادات منخفضة الدخل الـ19 التي شملتها الموجة، ومنها اليمن، 35.2%.",
       "source_object": "CLM-001"
     },
     {
@@ -69177,7 +69402,7 @@
       "field": "copy_ar",
       "token": "2021",
       "category": "GOVERNED_OBJECT_SOURCE_CLOSED",
-      "context": "تظل أحدث مشاهدة سكانية ممثلة ينشرها البنك الدولي لامتلاك الحساب في اليمن عند 11.9%. ويعرضها موقع بيانات البنك الدولي لسنة 2022، وهي مستمدة من دراسة اليمن ضمن موجة Global Findex 2021 التي نُفذت ميدانيًا من 7 نوفمبر 2022 إلى 9 يناير 2023. وتضيف نسخة Global Findex 2025 مشاهدات لعام 2024 في اقتصادات عديدة، لكنها لا تضيف مشاهدة أحدث لليمن.",
+      "context": "تظل أحدث مشاهدة سكانية ممثلة ينشرها البنك الدولي لامتلاك الحساب في اليمن عند 11.9%. ويعرضها موقع بيانات البنك الدولي لسنة 2022، وهي مستمدة من دراسة اليمن ضمن موجة Global Findex 2021 التي نُفذت ميدانيًا من 7 نوفمبر 2022 إلى 9 يناير 2023. وتضيف نسخة Global Findex 2025 مشاهدات لعام 2024 في اقتصادات عديدة، لكنها لا تضيف مشاهدة أحدث لليمن. وللسياق، يبلغ رقم البنك الدولي لموجة المسح نفسها في الاقتصادات منخفضة الدخل الـ19 التي شملتها الموجة، ومنها اليمن، 35.2%.",
       "source_object": "CLM-001"
     },
     {
@@ -69186,7 +69411,7 @@
       "field": "copy_ar",
       "token": "7",
       "category": "GOVERNED_OBJECT_SOURCE_CLOSED",
-      "context": "تظل أحدث مشاهدة سكانية ممثلة ينشرها البنك الدولي لامتلاك الحساب في اليمن عند 11.9%. ويعرضها موقع بيانات البنك الدولي لسنة 2022، وهي مستمدة من دراسة اليمن ضمن موجة Global Findex 2021 التي نُفذت ميدانيًا من 7 نوفمبر 2022 إلى 9 يناير 2023. وتضيف نسخة Global Findex 2025 مشاهدات لعام 2024 في اقتصادات عديدة، لكنها لا تضيف مشاهدة أحدث لليمن.",
+      "context": "تظل أحدث مشاهدة سكانية ممثلة ينشرها البنك الدولي لامتلاك الحساب في اليمن عند 11.9%. ويعرضها موقع بيانات البنك الدولي لسنة 2022، وهي مستمدة من دراسة اليمن ضمن موجة Global Findex 2021 التي نُفذت ميدانيًا من 7 نوفمبر 2022 إلى 9 يناير 2023. وتضيف نسخة Global Findex 2025 مشاهدات لعام 2024 في اقتصادات عديدة، لكنها لا تضيف مشاهدة أحدث لليمن. وللسياق، يبلغ رقم البنك الدولي لموجة المسح نفسها في الاقتصادات منخفضة الدخل الـ19 التي شملتها الموجة، ومنها اليمن، 35.2%.",
       "source_object": "CLM-001"
     },
     {
@@ -69195,7 +69420,7 @@
       "field": "copy_ar",
       "token": "9",
       "category": "GOVERNED_OBJECT_SOURCE_CLOSED",
-      "context": "تظل أحدث مشاهدة سكانية ممثلة ينشرها البنك الدولي لامتلاك الحساب في اليمن عند 11.9%. ويعرضها موقع بيانات البنك الدولي لسنة 2022، وهي مستمدة من دراسة اليمن ضمن موجة Global Findex 2021 التي نُفذت ميدانيًا من 7 نوفمبر 2022 إلى 9 يناير 2023. وتضيف نسخة Global Findex 2025 مشاهدات لعام 2024 في اقتصادات عديدة، لكنها لا تضيف مشاهدة أحدث لليمن.",
+      "context": "تظل أحدث مشاهدة سكانية ممثلة ينشرها البنك الدولي لامتلاك الحساب في اليمن عند 11.9%. ويعرضها موقع بيانات البنك الدولي لسنة 2022، وهي مستمدة من دراسة اليمن ضمن موجة Global Findex 2021 التي نُفذت ميدانيًا من 7 نوفمبر 2022 إلى 9 يناير 2023. وتضيف نسخة Global Findex 2025 مشاهدات لعام 2024 في اقتصادات عديدة، لكنها لا تضيف مشاهدة أحدث لليمن. وللسياق، يبلغ رقم البنك الدولي لموجة المسح نفسها في الاقتصادات منخفضة الدخل الـ19 التي شملتها الموجة، ومنها اليمن، 35.2%.",
       "source_object": "CLM-001"
     },
     {
@@ -69204,7 +69429,7 @@
       "field": "copy_ar",
       "token": "2023",
       "category": "GOVERNED_OBJECT_SOURCE_CLOSED",
-      "context": "تظل أحدث مشاهدة سكانية ممثلة ينشرها البنك الدولي لامتلاك الحساب في اليمن عند 11.9%. ويعرضها موقع بيانات البنك الدولي لسنة 2022، وهي مستمدة من دراسة اليمن ضمن موجة Global Findex 2021 التي نُفذت ميدانيًا من 7 نوفمبر 2022 إلى 9 يناير 2023. وتضيف نسخة Global Findex 2025 مشاهدات لعام 2024 في اقتصادات عديدة، لكنها لا تضيف مشاهدة أحدث لليمن.",
+      "context": "تظل أحدث مشاهدة سكانية ممثلة ينشرها البنك الدولي لامتلاك الحساب في اليمن عند 11.9%. ويعرضها موقع بيانات البنك الدولي لسنة 2022، وهي مستمدة من دراسة اليمن ضمن موجة Global Findex 2021 التي نُفذت ميدانيًا من 7 نوفمبر 2022 إلى 9 يناير 2023. وتضيف نسخة Global Findex 2025 مشاهدات لعام 2024 في اقتصادات عديدة، لكنها لا تضيف مشاهدة أحدث لليمن. وللسياق، يبلغ رقم البنك الدولي لموجة المسح نفسها في الاقتصادات منخفضة الدخل الـ19 التي شملتها الموجة، ومنها اليمن، 35.2%.",
       "source_object": "CLM-001"
     },
     {
@@ -69213,7 +69438,7 @@
       "field": "copy_ar",
       "token": "2025",
       "category": "GOVERNED_OBJECT_SOURCE_CLOSED",
-      "context": "تظل أحدث مشاهدة سكانية ممثلة ينشرها البنك الدولي لامتلاك الحساب في اليمن عند 11.9%. ويعرضها موقع بيانات البنك الدولي لسنة 2022، وهي مستمدة من دراسة اليمن ضمن موجة Global Findex 2021 التي نُفذت ميدانيًا من 7 نوفمبر 2022 إلى 9 يناير 2023. وتضيف نسخة Global Findex 2025 مشاهدات لعام 2024 في اقتصادات عديدة، لكنها لا تضيف مشاهدة أحدث لليمن.",
+      "context": "تظل أحدث مشاهدة سكانية ممثلة ينشرها البنك الدولي لامتلاك الحساب في اليمن عند 11.9%. ويعرضها موقع بيانات البنك الدولي لسنة 2022، وهي مستمدة من دراسة اليمن ضمن موجة Global Findex 2021 التي نُفذت ميدانيًا من 7 نوفمبر 2022 إلى 9 يناير 2023. وتضيف نسخة Global Findex 2025 مشاهدات لعام 2024 في اقتصادات عديدة، لكنها لا تضيف مشاهدة أحدث لليمن. وللسياق، يبلغ رقم البنك الدولي لموجة المسح نفسها في الاقتصادات منخفضة الدخل الـ19 التي شملتها الموجة، ومنها اليمن، 35.2%.",
       "source_object": "CLM-001"
     },
     {
@@ -69222,7 +69447,16 @@
       "field": "copy_ar",
       "token": "2024",
       "category": "GOVERNED_OBJECT_SOURCE_CLOSED",
-      "context": "تظل أحدث مشاهدة سكانية ممثلة ينشرها البنك الدولي لامتلاك الحساب في اليمن عند 11.9%. ويعرضها موقع بيانات البنك الدولي لسنة 2022، وهي مستمدة من دراسة اليمن ضمن موجة Global Findex 2021 التي نُفذت ميدانيًا من 7 نوفمبر 2022 إلى 9 يناير 2023. وتضيف نسخة Global Findex 2025 مشاهدات لعام 2024 في اقتصادات عديدة، لكنها لا تضيف مشاهدة أحدث لليمن.",
+      "context": "تظل أحدث مشاهدة سكانية ممثلة ينشرها البنك الدولي لامتلاك الحساب في اليمن عند 11.9%. ويعرضها موقع بيانات البنك الدولي لسنة 2022، وهي مستمدة من دراسة اليمن ضمن موجة Global Findex 2021 التي نُفذت ميدانيًا من 7 نوفمبر 2022 إلى 9 يناير 2023. وتضيف نسخة Global Findex 2025 مشاهدات لعام 2024 في اقتصادات عديدة، لكنها لا تضيف مشاهدة أحدث لليمن. وللسياق، يبلغ رقم البنك الدولي لموجة المسح نفسها في الاقتصادات منخفضة الدخل الـ19 التي شملتها الموجة، ومنها اليمن، 35.2%.",
+      "source_object": "CLM-001"
+    },
+    {
+      "route": "/",
+      "surface": "governed_numeric_inventory",
+      "field": "copy_ar",
+      "token": "35.2%",
+      "category": "GOVERNED_OBJECT_SOURCE_CLOSED",
+      "context": "تظل أحدث مشاهدة سكانية ممثلة ينشرها البنك الدولي لامتلاك الحساب في اليمن عند 11.9%. ويعرضها موقع بيانات البنك الدولي لسنة 2022، وهي مستمدة من دراسة اليمن ضمن موجة Global Findex 2021 التي نُفذت ميدانيًا من 7 نوفمبر 2022 إلى 9 يناير 2023. وتضيف نسخة Global Findex 2025 مشاهدات لعام 2024 في اقتصادات عديدة، لكنها لا تضيف مشاهدة أحدث لليمن. وللسياق، يبلغ رقم البنك الدولي لموجة المسح نفسها في الاقتصادات منخفضة الدخل الـ19 التي شملتها الموجة، ومنها اليمن، 35.2%.",
       "source_object": "CLM-001"
     },
     {
@@ -69699,7 +69933,7 @@
       "field": "summary_en",
       "token": "11.9%",
       "category": "GOVERNED_OBJECT_SOURCE_CLOSED",
-      "context": "The latest representative observation of account ownership in Yemen published by the World Bank remains 11.9%. World Bank Data reports it for 2022; it comes from the Yemen Global Findex 2021 study, fielded from 7 November 2022 to 9 January 2023. The Global Findex 2025 edition adds 2024 observations for many economies, but no newer Yemen observation.",
+      "context": "The latest representative observation of account ownership in Yemen published by the World Bank remains 11.9%. World Bank Data reports it for 2022; it comes from the Yemen Global Findex 2021 study, fielded from 7 November 2022 to 9 January 2023. The Global Findex 2025 edition adds 2024 observations for many economies, but no newer Yemen observation. For context, the World Bank's figure for the same survey wave across the 19 low-income economies surveyed in it, Yemen among them, is 35.2%.",
       "source_object": "CLM-001"
     },
     {
@@ -69708,7 +69942,7 @@
       "field": "summary_en",
       "token": "2022",
       "category": "GOVERNED_OBJECT_SOURCE_CLOSED",
-      "context": "The latest representative observation of account ownership in Yemen published by the World Bank remains 11.9%. World Bank Data reports it for 2022; it comes from the Yemen Global Findex 2021 study, fielded from 7 November 2022 to 9 January 2023. The Global Findex 2025 edition adds 2024 observations for many economies, but no newer Yemen observation.",
+      "context": "The latest representative observation of account ownership in Yemen published by the World Bank remains 11.9%. World Bank Data reports it for 2022; it comes from the Yemen Global Findex 2021 study, fielded from 7 November 2022 to 9 January 2023. The Global Findex 2025 edition adds 2024 observations for many economies, but no newer Yemen observation. For context, the World Bank's figure for the same survey wave across the 19 low-income economies surveyed in it, Yemen among them, is 35.2%.",
       "source_object": "CLM-001"
     },
     {
@@ -69717,7 +69951,7 @@
       "field": "summary_en",
       "token": "2021",
       "category": "GOVERNED_OBJECT_SOURCE_CLOSED",
-      "context": "The latest representative observation of account ownership in Yemen published by the World Bank remains 11.9%. World Bank Data reports it for 2022; it comes from the Yemen Global Findex 2021 study, fielded from 7 November 2022 to 9 January 2023. The Global Findex 2025 edition adds 2024 observations for many economies, but no newer Yemen observation.",
+      "context": "The latest representative observation of account ownership in Yemen published by the World Bank remains 11.9%. World Bank Data reports it for 2022; it comes from the Yemen Global Findex 2021 study, fielded from 7 November 2022 to 9 January 2023. The Global Findex 2025 edition adds 2024 observations for many economies, but no newer Yemen observation. For context, the World Bank's figure for the same survey wave across the 19 low-income economies surveyed in it, Yemen among them, is 35.2%.",
       "source_object": "CLM-001"
     },
     {
@@ -69726,7 +69960,7 @@
       "field": "summary_en",
       "token": "7",
       "category": "GOVERNED_OBJECT_SOURCE_CLOSED",
-      "context": "The latest representative observation of account ownership in Yemen published by the World Bank remains 11.9%. World Bank Data reports it for 2022; it comes from the Yemen Global Findex 2021 study, fielded from 7 November 2022 to 9 January 2023. The Global Findex 2025 edition adds 2024 observations for many economies, but no newer Yemen observation.",
+      "context": "The latest representative observation of account ownership in Yemen published by the World Bank remains 11.9%. World Bank Data reports it for 2022; it comes from the Yemen Global Findex 2021 study, fielded from 7 November 2022 to 9 January 2023. The Global Findex 2025 edition adds 2024 observations for many economies, but no newer Yemen observation. For context, the World Bank's figure for the same survey wave across the 19 low-income economies surveyed in it, Yemen among them, is 35.2%.",
       "source_object": "CLM-001"
     },
     {
@@ -69735,7 +69969,7 @@
       "field": "summary_en",
       "token": "9",
       "category": "GOVERNED_OBJECT_SOURCE_CLOSED",
-      "context": "The latest representative observation of account ownership in Yemen published by the World Bank remains 11.9%. World Bank Data reports it for 2022; it comes from the Yemen Global Findex 2021 study, fielded from 7 November 2022 to 9 January 2023. The Global Findex 2025 edition adds 2024 observations for many economies, but no newer Yemen observation.",
+      "context": "The latest representative observation of account ownership in Yemen published by the World Bank remains 11.9%. World Bank Data reports it for 2022; it comes from the Yemen Global Findex 2021 study, fielded from 7 November 2022 to 9 January 2023. The Global Findex 2025 edition adds 2024 observations for many economies, but no newer Yemen observation. For context, the World Bank's figure for the same survey wave across the 19 low-income economies surveyed in it, Yemen among them, is 35.2%.",
       "source_object": "CLM-001"
     },
     {
@@ -69744,7 +69978,7 @@
       "field": "summary_en",
       "token": "2023",
       "category": "GOVERNED_OBJECT_SOURCE_CLOSED",
-      "context": "The latest representative observation of account ownership in Yemen published by the World Bank remains 11.9%. World Bank Data reports it for 2022; it comes from the Yemen Global Findex 2021 study, fielded from 7 November 2022 to 9 January 2023. The Global Findex 2025 edition adds 2024 observations for many economies, but no newer Yemen observation.",
+      "context": "The latest representative observation of account ownership in Yemen published by the World Bank remains 11.9%. World Bank Data reports it for 2022; it comes from the Yemen Global Findex 2021 study, fielded from 7 November 2022 to 9 January 2023. The Global Findex 2025 edition adds 2024 observations for many economies, but no newer Yemen observation. For context, the World Bank's figure for the same survey wave across the 19 low-income economies surveyed in it, Yemen among them, is 35.2%.",
       "source_object": "CLM-001"
     },
     {
@@ -69753,7 +69987,7 @@
       "field": "summary_en",
       "token": "2025",
       "category": "GOVERNED_OBJECT_SOURCE_CLOSED",
-      "context": "The latest representative observation of account ownership in Yemen published by the World Bank remains 11.9%. World Bank Data reports it for 2022; it comes from the Yemen Global Findex 2021 study, fielded from 7 November 2022 to 9 January 2023. The Global Findex 2025 edition adds 2024 observations for many economies, but no newer Yemen observation.",
+      "context": "The latest representative observation of account ownership in Yemen published by the World Bank remains 11.9%. World Bank Data reports it for 2022; it comes from the Yemen Global Findex 2021 study, fielded from 7 November 2022 to 9 January 2023. The Global Findex 2025 edition adds 2024 observations for many economies, but no newer Yemen observation. For context, the World Bank's figure for the same survey wave across the 19 low-income economies surveyed in it, Yemen among them, is 35.2%.",
       "source_object": "CLM-001"
     },
     {
@@ -69762,7 +69996,25 @@
       "field": "summary_en",
       "token": "2024",
       "category": "GOVERNED_OBJECT_SOURCE_CLOSED",
-      "context": "The latest representative observation of account ownership in Yemen published by the World Bank remains 11.9%. World Bank Data reports it for 2022; it comes from the Yemen Global Findex 2021 study, fielded from 7 November 2022 to 9 January 2023. The Global Findex 2025 edition adds 2024 observations for many economies, but no newer Yemen observation.",
+      "context": "The latest representative observation of account ownership in Yemen published by the World Bank remains 11.9%. World Bank Data reports it for 2022; it comes from the Yemen Global Findex 2021 study, fielded from 7 November 2022 to 9 January 2023. The Global Findex 2025 edition adds 2024 observations for many economies, but no newer Yemen observation. For context, the World Bank's figure for the same survey wave across the 19 low-income economies surveyed in it, Yemen among them, is 35.2%.",
+      "source_object": "CLM-001"
+    },
+    {
+      "route": "/",
+      "surface": "governed_numeric_inventory",
+      "field": "summary_en",
+      "token": "19",
+      "category": "GOVERNED_OBJECT_SOURCE_CLOSED",
+      "context": "The latest representative observation of account ownership in Yemen published by the World Bank remains 11.9%. World Bank Data reports it for 2022; it comes from the Yemen Global Findex 2021 study, fielded from 7 November 2022 to 9 January 2023. The Global Findex 2025 edition adds 2024 observations for many economies, but no newer Yemen observation. For context, the World Bank's figure for the same survey wave across the 19 low-income economies surveyed in it, Yemen among them, is 35.2%.",
+      "source_object": "CLM-001"
+    },
+    {
+      "route": "/",
+      "surface": "governed_numeric_inventory",
+      "field": "summary_en",
+      "token": "35.2%",
+      "category": "GOVERNED_OBJECT_SOURCE_CLOSED",
+      "context": "The latest representative observation of account ownership in Yemen published by the World Bank remains 11.9%. World Bank Data reports it for 2022; it comes from the Yemen Global Findex 2021 study, fielded from 7 November 2022 to 9 January 2023. The Global Findex 2025 edition adds 2024 observations for many economies, but no newer Yemen observation. For context, the World Bank's figure for the same survey wave across the 19 low-income economies surveyed in it, Yemen among them, is 35.2%.",
       "source_object": "CLM-001"
     },
     {
@@ -69771,7 +70023,7 @@
       "field": "summary_ar",
       "token": "11.9%",
       "category": "GOVERNED_OBJECT_SOURCE_CLOSED",
-      "context": "تظل أحدث مشاهدة سكانية ممثلة ينشرها البنك الدولي لامتلاك الحساب في اليمن عند 11.9%. ويعرضها موقع بيانات البنك الدولي لسنة 2022، وهي مستمدة من دراسة اليمن ضمن موجة Global Findex 2021 التي نُفذت ميدانيًا من 7 نوفمبر 2022 إلى 9 يناير 2023. وتضيف نسخة Global Findex 2025 مشاهدات لعام 2024 في اقتصادات عديدة، لكنها لا تضيف مشاهدة أحدث لليمن.",
+      "context": "تظل أحدث مشاهدة سكانية ممثلة ينشرها البنك الدولي لامتلاك الحساب في اليمن عند 11.9%. ويعرضها موقع بيانات البنك الدولي لسنة 2022، وهي مستمدة من دراسة اليمن ضمن موجة Global Findex 2021 التي نُفذت ميدانيًا من 7 نوفمبر 2022 إلى 9 يناير 2023. وتضيف نسخة Global Findex 2025 مشاهدات لعام 2024 في اقتصادات عديدة، لكنها لا تضيف مشاهدة أحدث لليمن. وللسياق، يبلغ رقم البنك الدولي لموجة المسح نفسها في الاقتصادات منخفضة الدخل الـ19 التي شملتها الموجة، ومنها اليمن، 35.2%.",
       "source_object": "CLM-001"
     },
     {
@@ -69780,7 +70032,7 @@
       "field": "summary_ar",
       "token": "2022",
       "category": "GOVERNED_OBJECT_SOURCE_CLOSED",
-      "context": "تظل أحدث مشاهدة سكانية ممثلة ينشرها البنك الدولي لامتلاك الحساب في اليمن عند 11.9%. ويعرضها موقع بيانات البنك الدولي لسنة 2022، وهي مستمدة من دراسة اليمن ضمن موجة Global Findex 2021 التي نُفذت ميدانيًا من 7 نوفمبر 2022 إلى 9 يناير 2023. وتضيف نسخة Global Findex 2025 مشاهدات لعام 2024 في اقتصادات عديدة، لكنها لا تضيف مشاهدة أحدث لليمن.",
+      "context": "تظل أحدث مشاهدة سكانية ممثلة ينشرها البنك الدولي لامتلاك الحساب في اليمن عند 11.9%. ويعرضها موقع بيانات البنك الدولي لسنة 2022، وهي مستمدة من دراسة اليمن ضمن موجة Global Findex 2021 التي نُفذت ميدانيًا من 7 نوفمبر 2022 إلى 9 يناير 2023. وتضيف نسخة Global Findex 2025 مشاهدات لعام 2024 في اقتصادات عديدة، لكنها لا تضيف مشاهدة أحدث لليمن. وللسياق، يبلغ رقم البنك الدولي لموجة المسح نفسها في الاقتصادات منخفضة الدخل الـ19 التي شملتها الموجة، ومنها اليمن، 35.2%.",
       "source_object": "CLM-001"
     },
     {
@@ -69789,7 +70041,7 @@
       "field": "summary_ar",
       "token": "2021",
       "category": "GOVERNED_OBJECT_SOURCE_CLOSED",
-      "context": "تظل أحدث مشاهدة سكانية ممثلة ينشرها البنك الدولي لامتلاك الحساب في اليمن عند 11.9%. ويعرضها موقع بيانات البنك الدولي لسنة 2022، وهي مستمدة من دراسة اليمن ضمن موجة Global Findex 2021 التي نُفذت ميدانيًا من 7 نوفمبر 2022 إلى 9 يناير 2023. وتضيف نسخة Global Findex 2025 مشاهدات لعام 2024 في اقتصادات عديدة، لكنها لا تضيف مشاهدة أحدث لليمن.",
+      "context": "تظل أحدث مشاهدة سكانية ممثلة ينشرها البنك الدولي لامتلاك الحساب في اليمن عند 11.9%. ويعرضها موقع بيانات البنك الدولي لسنة 2022، وهي مستمدة من دراسة اليمن ضمن موجة Global Findex 2021 التي نُفذت ميدانيًا من 7 نوفمبر 2022 إلى 9 يناير 2023. وتضيف نسخة Global Findex 2025 مشاهدات لعام 2024 في اقتصادات عديدة، لكنها لا تضيف مشاهدة أحدث لليمن. وللسياق، يبلغ رقم البنك الدولي لموجة المسح نفسها في الاقتصادات منخفضة الدخل الـ19 التي شملتها الموجة، ومنها اليمن، 35.2%.",
       "source_object": "CLM-001"
     },
     {
@@ -69798,7 +70050,7 @@
       "field": "summary_ar",
       "token": "7",
       "category": "GOVERNED_OBJECT_SOURCE_CLOSED",
-      "context": "تظل أحدث مشاهدة سكانية ممثلة ينشرها البنك الدولي لامتلاك الحساب في اليمن عند 11.9%. ويعرضها موقع بيانات البنك الدولي لسنة 2022، وهي مستمدة من دراسة اليمن ضمن موجة Global Findex 2021 التي نُفذت ميدانيًا من 7 نوفمبر 2022 إلى 9 يناير 2023. وتضيف نسخة Global Findex 2025 مشاهدات لعام 2024 في اقتصادات عديدة، لكنها لا تضيف مشاهدة أحدث لليمن.",
+      "context": "تظل أحدث مشاهدة سكانية ممثلة ينشرها البنك الدولي لامتلاك الحساب في اليمن عند 11.9%. ويعرضها موقع بيانات البنك الدولي لسنة 2022، وهي مستمدة من دراسة اليمن ضمن موجة Global Findex 2021 التي نُفذت ميدانيًا من 7 نوفمبر 2022 إلى 9 يناير 2023. وتضيف نسخة Global Findex 2025 مشاهدات لعام 2024 في اقتصادات عديدة، لكنها لا تضيف مشاهدة أحدث لليمن. وللسياق، يبلغ رقم البنك الدولي لموجة المسح نفسها في الاقتصادات منخفضة الدخل الـ19 التي شملتها الموجة، ومنها اليمن، 35.2%.",
       "source_object": "CLM-001"
     },
     {
@@ -69807,7 +70059,7 @@
       "field": "summary_ar",
       "token": "9",
       "category": "GOVERNED_OBJECT_SOURCE_CLOSED",
-      "context": "تظل أحدث مشاهدة سكانية ممثلة ينشرها البنك الدولي لامتلاك الحساب في اليمن عند 11.9%. ويعرضها موقع بيانات البنك الدولي لسنة 2022، وهي مستمدة من دراسة اليمن ضمن موجة Global Findex 2021 التي نُفذت ميدانيًا من 7 نوفمبر 2022 إلى 9 يناير 2023. وتضيف نسخة Global Findex 2025 مشاهدات لعام 2024 في اقتصادات عديدة، لكنها لا تضيف مشاهدة أحدث لليمن.",
+      "context": "تظل أحدث مشاهدة سكانية ممثلة ينشرها البنك الدولي لامتلاك الحساب في اليمن عند 11.9%. ويعرضها موقع بيانات البنك الدولي لسنة 2022، وهي مستمدة من دراسة اليمن ضمن موجة Global Findex 2021 التي نُفذت ميدانيًا من 7 نوفمبر 2022 إلى 9 يناير 2023. وتضيف نسخة Global Findex 2025 مشاهدات لعام 2024 في اقتصادات عديدة، لكنها لا تضيف مشاهدة أحدث لليمن. وللسياق، يبلغ رقم البنك الدولي لموجة المسح نفسها في الاقتصادات منخفضة الدخل الـ19 التي شملتها الموجة، ومنها اليمن، 35.2%.",
       "source_object": "CLM-001"
     },
     {
@@ -69816,7 +70068,7 @@
       "field": "summary_ar",
       "token": "2023",
       "category": "GOVERNED_OBJECT_SOURCE_CLOSED",
-      "context": "تظل أحدث مشاهدة سكانية ممثلة ينشرها البنك الدولي لامتلاك الحساب في اليمن عند 11.9%. ويعرضها موقع بيانات البنك الدولي لسنة 2022، وهي مستمدة من دراسة اليمن ضمن موجة Global Findex 2021 التي نُفذت ميدانيًا من 7 نوفمبر 2022 إلى 9 يناير 2023. وتضيف نسخة Global Findex 2025 مشاهدات لعام 2024 في اقتصادات عديدة، لكنها لا تضيف مشاهدة أحدث لليمن.",
+      "context": "تظل أحدث مشاهدة سكانية ممثلة ينشرها البنك الدولي لامتلاك الحساب في اليمن عند 11.9%. ويعرضها موقع بيانات البنك الدولي لسنة 2022، وهي مستمدة من دراسة اليمن ضمن موجة Global Findex 2021 التي نُفذت ميدانيًا من 7 نوفمبر 2022 إلى 9 يناير 2023. وتضيف نسخة Global Findex 2025 مشاهدات لعام 2024 في اقتصادات عديدة، لكنها لا تضيف مشاهدة أحدث لليمن. وللسياق، يبلغ رقم البنك الدولي لموجة المسح نفسها في الاقتصادات منخفضة الدخل الـ19 التي شملتها الموجة، ومنها اليمن، 35.2%.",
       "source_object": "CLM-001"
     },
     {
@@ -69825,7 +70077,7 @@
       "field": "summary_ar",
       "token": "2025",
       "category": "GOVERNED_OBJECT_SOURCE_CLOSED",
-      "context": "تظل أحدث مشاهدة سكانية ممثلة ينشرها البنك الدولي لامتلاك الحساب في اليمن عند 11.9%. ويعرضها موقع بيانات البنك الدولي لسنة 2022، وهي مستمدة من دراسة اليمن ضمن موجة Global Findex 2021 التي نُفذت ميدانيًا من 7 نوفمبر 2022 إلى 9 يناير 2023. وتضيف نسخة Global Findex 2025 مشاهدات لعام 2024 في اقتصادات عديدة، لكنها لا تضيف مشاهدة أحدث لليمن.",
+      "context": "تظل أحدث مشاهدة سكانية ممثلة ينشرها البنك الدولي لامتلاك الحساب في اليمن عند 11.9%. ويعرضها موقع بيانات البنك الدولي لسنة 2022، وهي مستمدة من دراسة اليمن ضمن موجة Global Findex 2021 التي نُفذت ميدانيًا من 7 نوفمبر 2022 إلى 9 يناير 2023. وتضيف نسخة Global Findex 2025 مشاهدات لعام 2024 في اقتصادات عديدة، لكنها لا تضيف مشاهدة أحدث لليمن. وللسياق، يبلغ رقم البنك الدولي لموجة المسح نفسها في الاقتصادات منخفضة الدخل الـ19 التي شملتها الموجة، ومنها اليمن، 35.2%.",
       "source_object": "CLM-001"
     },
     {
@@ -69834,7 +70086,16 @@
       "field": "summary_ar",
       "token": "2024",
       "category": "GOVERNED_OBJECT_SOURCE_CLOSED",
-      "context": "تظل أحدث مشاهدة سكانية ممثلة ينشرها البنك الدولي لامتلاك الحساب في اليمن عند 11.9%. ويعرضها موقع بيانات البنك الدولي لسنة 2022، وهي مستمدة من دراسة اليمن ضمن موجة Global Findex 2021 التي نُفذت ميدانيًا من 7 نوفمبر 2022 إلى 9 يناير 2023. وتضيف نسخة Global Findex 2025 مشاهدات لعام 2024 في اقتصادات عديدة، لكنها لا تضيف مشاهدة أحدث لليمن.",
+      "context": "تظل أحدث مشاهدة سكانية ممثلة ينشرها البنك الدولي لامتلاك الحساب في اليمن عند 11.9%. ويعرضها موقع بيانات البنك الدولي لسنة 2022، وهي مستمدة من دراسة اليمن ضمن موجة Global Findex 2021 التي نُفذت ميدانيًا من 7 نوفمبر 2022 إلى 9 يناير 2023. وتضيف نسخة Global Findex 2025 مشاهدات لعام 2024 في اقتصادات عديدة، لكنها لا تضيف مشاهدة أحدث لليمن. وللسياق، يبلغ رقم البنك الدولي لموجة المسح نفسها في الاقتصادات منخفضة الدخل الـ19 التي شملتها الموجة، ومنها اليمن، 35.2%.",
+      "source_object": "CLM-001"
+    },
+    {
+      "route": "/",
+      "surface": "governed_numeric_inventory",
+      "field": "summary_ar",
+      "token": "35.2%",
+      "category": "GOVERNED_OBJECT_SOURCE_CLOSED",
+      "context": "تظل أحدث مشاهدة سكانية ممثلة ينشرها البنك الدولي لامتلاك الحساب في اليمن عند 11.9%. ويعرضها موقع بيانات البنك الدولي لسنة 2022، وهي مستمدة من دراسة اليمن ضمن موجة Global Findex 2021 التي نُفذت ميدانيًا من 7 نوفمبر 2022 إلى 9 يناير 2023. وتضيف نسخة Global Findex 2025 مشاهدات لعام 2024 في اقتصادات عديدة، لكنها لا تضيف مشاهدة أحدث لليمن. وللسياق، يبلغ رقم البنك الدولي لموجة المسح نفسها في الاقتصادات منخفضة الدخل الـ19 التي شملتها الموجة، ومنها اليمن، 35.2%.",
       "source_object": "CLM-001"
     },
     {
@@ -70101,10 +70362,37 @@
     {
       "route": "/",
       "surface": "governed_numeric_inventory",
+      "field": "method_en",
+      "token": "35.2%",
+      "category": "GOVERNED_OBJECT_SOURCE_CLOSED",
+      "context": "Weighted survey estimate. The low-income context figure, 35.2%, is the World Bank's own aggregate for the same wave and indicator; this resource reproduced it as the average of the published values of the 19 low-income economies surveyed in the wave, weighted by their adult populations.",
+      "source_object": "CLM-001"
+    },
+    {
+      "route": "/",
+      "surface": "governed_numeric_inventory",
+      "field": "method_en",
+      "token": "19",
+      "category": "GOVERNED_OBJECT_SOURCE_CLOSED",
+      "context": "Weighted survey estimate. The low-income context figure, 35.2%, is the World Bank's own aggregate for the same wave and indicator; this resource reproduced it as the average of the published values of the 19 low-income economies surveyed in the wave, weighted by their adult populations.",
+      "source_object": "CLM-001"
+    },
+    {
+      "route": "/",
+      "surface": "governed_numeric_inventory",
+      "field": "method_ar",
+      "token": "35.2%",
+      "category": "GOVERNED_OBJECT_SOURCE_CLOSED",
+      "context": "تقدير مسحي موزون وفق تصميم المسح وأوزانه. ورقم السياق للاقتصادات منخفضة الدخل، 35.2%، هو التجميع الذي ينشره البنك الدولي نفسه للموجة والمؤشر ذاتيهما؛ وقد أعاد هذا المورد احتسابه متوسطًا للقيم المنشورة للاقتصادات منخفضة الدخل الـ19 التي شملتها الموجة، مرجّحًا بعدد البالغين في كل منها.",
+      "source_object": "CLM-001"
+    },
+    {
+      "route": "/",
+      "surface": "governed_numeric_inventory",
       "field": "limitations_en",
       "token": "2026",
       "category": "GOVERNED_OBJECT_SOURCE_CLOSED",
-      "context": "It is not a 2026 rate, and it cannot be broken down or mapped by governorate. It is not the share of adults with a bank account: accounts at other financial institutions and personal use of a mobile-money service also count. | The survey frame excludes areas holding about 23% of the population, and more than a quarter of primary sampling units were replaced.",
+      "context": "It is not a 2026 rate, and it cannot be broken down or mapped by governorate. It is not the share of adults with a bank account: accounts at other financial institutions and personal use of a mobile-money service also count. | The survey frame excludes areas holding about 23% of the population, and more than a quarter of primary sampling units were replaced. The low-income figure is context, not a benchmark, a target or a ranking: it averages economies in very different conditions, includes Yemen itself and uses the income classification in the Global Findex Database 2025, while Yemen's own figure covers only the areas its survey reached.",
       "source_object": "CLM-001"
     },
     {
@@ -70113,7 +70401,16 @@
       "field": "limitations_en",
       "token": "23%",
       "category": "GOVERNED_OBJECT_SOURCE_CLOSED",
-      "context": "It is not a 2026 rate, and it cannot be broken down or mapped by governorate. It is not the share of adults with a bank account: accounts at other financial institutions and personal use of a mobile-money service also count. | The survey frame excludes areas holding about 23% of the population, and more than a quarter of primary sampling units were replaced.",
+      "context": "It is not a 2026 rate, and it cannot be broken down or mapped by governorate. It is not the share of adults with a bank account: accounts at other financial institutions and personal use of a mobile-money service also count. | The survey frame excludes areas holding about 23% of the population, and more than a quarter of primary sampling units were replaced. The low-income figure is context, not a benchmark, a target or a ranking: it averages economies in very different conditions, includes Yemen itself and uses the income classification in the Global Findex Database 2025, while Yemen's own figure covers only the areas its survey reached.",
+      "source_object": "CLM-001"
+    },
+    {
+      "route": "/",
+      "surface": "governed_numeric_inventory",
+      "field": "limitations_en",
+      "token": "2025,",
+      "category": "GOVERNED_OBJECT_SOURCE_CLOSED",
+      "context": "It is not a 2026 rate, and it cannot be broken down or mapped by governorate. It is not the share of adults with a bank account: accounts at other financial institutions and personal use of a mobile-money service also count. | The survey frame excludes areas holding about 23% of the population, and more than a quarter of primary sampling units were replaced. The low-income figure is context, not a benchmark, a target or a ranking: it averages economies in very different conditions, includes Yemen itself and uses the income classification in the Global Findex Database 2025, while Yemen's own figure covers only the areas its survey reached.",
       "source_object": "CLM-001"
     },
     {
@@ -70122,7 +70419,7 @@
       "field": "limitations_ar",
       "token": "2026",
       "category": "GOVERNED_OBJECT_SOURCE_CLOSED",
-      "context": "ليست هذه النسبة معدلًا لعام 2026، ولا يمكن تجزئتها أو إسقاطها على المحافظات. وليست نسبة من يملكون حسابًا مصرفيًا فحسب، إذ تُحتسب أيضًا الحسابات لدى المؤسسات المالية الأخرى والاستخدام الشخصي لخدمة أموال عبر الهاتف المحمول. | يستبعد إطار المسح مناطق يقطنها نحو 23% من السكان، كما استُبدل أكثر من ربع وحدات المعاينة الأولية.",
+      "context": "ليست هذه النسبة معدلًا لعام 2026، ولا يمكن تجزئتها أو إسقاطها على المحافظات. وليست نسبة من يملكون حسابًا مصرفيًا فحسب، إذ تُحتسب أيضًا الحسابات لدى المؤسسات المالية الأخرى والاستخدام الشخصي لخدمة أموال عبر الهاتف المحمول. | يستبعد إطار المسح مناطق يقطنها نحو 23% من السكان، كما استُبدل أكثر من ربع وحدات المعاينة الأولية. ورقم الاقتصادات منخفضة الدخل للسياق فقط، وليس معيارًا ولا هدفًا ولا ترتيبًا: فهو متوسط لاقتصادات ذات ظروف متباينة جدًا، ويشمل اليمن نفسه، ويستند إلى تصنيف الدخل المعتمد في قاعدة بيانات Global Findex 2025، في حين يقتصر رقم اليمن على المناطق التي بلغها المسح.",
       "source_object": "CLM-001"
     },
     {
@@ -70131,7 +70428,16 @@
       "field": "limitations_ar",
       "token": "23%",
       "category": "GOVERNED_OBJECT_SOURCE_CLOSED",
-      "context": "ليست هذه النسبة معدلًا لعام 2026، ولا يمكن تجزئتها أو إسقاطها على المحافظات. وليست نسبة من يملكون حسابًا مصرفيًا فحسب، إذ تُحتسب أيضًا الحسابات لدى المؤسسات المالية الأخرى والاستخدام الشخصي لخدمة أموال عبر الهاتف المحمول. | يستبعد إطار المسح مناطق يقطنها نحو 23% من السكان، كما استُبدل أكثر من ربع وحدات المعاينة الأولية.",
+      "context": "ليست هذه النسبة معدلًا لعام 2026، ولا يمكن تجزئتها أو إسقاطها على المحافظات. وليست نسبة من يملكون حسابًا مصرفيًا فحسب، إذ تُحتسب أيضًا الحسابات لدى المؤسسات المالية الأخرى والاستخدام الشخصي لخدمة أموال عبر الهاتف المحمول. | يستبعد إطار المسح مناطق يقطنها نحو 23% من السكان، كما استُبدل أكثر من ربع وحدات المعاينة الأولية. ورقم الاقتصادات منخفضة الدخل للسياق فقط، وليس معيارًا ولا هدفًا ولا ترتيبًا: فهو متوسط لاقتصادات ذات ظروف متباينة جدًا، ويشمل اليمن نفسه، ويستند إلى تصنيف الدخل المعتمد في قاعدة بيانات Global Findex 2025، في حين يقتصر رقم اليمن على المناطق التي بلغها المسح.",
+      "source_object": "CLM-001"
+    },
+    {
+      "route": "/",
+      "surface": "governed_numeric_inventory",
+      "field": "limitations_ar",
+      "token": "2025",
+      "category": "GOVERNED_OBJECT_SOURCE_CLOSED",
+      "context": "ليست هذه النسبة معدلًا لعام 2026، ولا يمكن تجزئتها أو إسقاطها على المحافظات. وليست نسبة من يملكون حسابًا مصرفيًا فحسب، إذ تُحتسب أيضًا الحسابات لدى المؤسسات المالية الأخرى والاستخدام الشخصي لخدمة أموال عبر الهاتف المحمول. | يستبعد إطار المسح مناطق يقطنها نحو 23% من السكان، كما استُبدل أكثر من ربع وحدات المعاينة الأولية. ورقم الاقتصادات منخفضة الدخل للسياق فقط، وليس معيارًا ولا هدفًا ولا ترتيبًا: فهو متوسط لاقتصادات ذات ظروف متباينة جدًا، ويشمل اليمن نفسه، ويستند إلى تصنيف الدخل المعتمد في قاعدة بيانات Global Findex 2025، في حين يقتصر رقم اليمن على المناطق التي بلغها المسح.",
       "source_object": "CLM-001"
     },
     {
@@ -84987,7 +85293,7 @@
       "field": "body_en",
       "token": "2021",
       "category": "DATE_OR_PERIOD",
-      "context": "Global Findex 2021 reports 11.9% account ownership for Yemen; the Yemen fieldwork was carried out in 2022–23. The value is a survey measure for that wave and fieldwork period, not a 2026 population rate."
+      "context": "Global Findex 2021 reports 11.9% account ownership for Yemen; the Yemen fieldwork was carried out in 2022–23. The value is a survey measure for that wave and fieldwork period, not a 2026 population rate. For context only, the World Bank's figure for the same wave across the 19 low-income economies surveyed in it, Yemen among them, is 35.2%; it averages very different economies and is not a benchmark or a ranking."
     },
     {
       "route": "/people/",
@@ -84995,7 +85301,7 @@
       "field": "body_en",
       "token": "11.9%",
       "category": "ROUTE_SOURCE_CLOSED__OBJECT_TRACE_AVAILABLE",
-      "context": "Global Findex 2021 reports 11.9% account ownership for Yemen; the Yemen fieldwork was carried out in 2022–23. The value is a survey measure for that wave and fieldwork period, not a 2026 population rate.",
+      "context": "Global Findex 2021 reports 11.9% account ownership for Yemen; the Yemen fieldwork was carried out in 2022–23. The value is a survey measure for that wave and fieldwork period, not a 2026 population rate. For context only, the World Bank's figure for the same wave across the 19 low-income economies surveyed in it, Yemen among them, is 35.2%; it averages very different economies and is not a benchmark or a ranking.",
       "source_object": "CLM-001"
     },
     {
@@ -85004,7 +85310,7 @@
       "field": "body_en",
       "token": "2022",
       "category": "DATE_OR_PERIOD",
-      "context": "Global Findex 2021 reports 11.9% account ownership for Yemen; the Yemen fieldwork was carried out in 2022–23. The value is a survey measure for that wave and fieldwork period, not a 2026 population rate."
+      "context": "Global Findex 2021 reports 11.9% account ownership for Yemen; the Yemen fieldwork was carried out in 2022–23. The value is a survey measure for that wave and fieldwork period, not a 2026 population rate. For context only, the World Bank's figure for the same wave across the 19 low-income economies surveyed in it, Yemen among them, is 35.2%; it averages very different economies and is not a benchmark or a ranking."
     },
     {
       "route": "/people/",
@@ -85012,7 +85318,7 @@
       "field": "body_en",
       "token": "23",
       "category": "DATE_OR_PERIOD",
-      "context": "Global Findex 2021 reports 11.9% account ownership for Yemen; the Yemen fieldwork was carried out in 2022–23. The value is a survey measure for that wave and fieldwork period, not a 2026 population rate."
+      "context": "Global Findex 2021 reports 11.9% account ownership for Yemen; the Yemen fieldwork was carried out in 2022–23. The value is a survey measure for that wave and fieldwork period, not a 2026 population rate. For context only, the World Bank's figure for the same wave across the 19 low-income economies surveyed in it, Yemen among them, is 35.2%; it averages very different economies and is not a benchmark or a ranking."
     },
     {
       "route": "/people/",
@@ -85020,7 +85326,25 @@
       "field": "body_en",
       "token": "2026",
       "category": "DATE_OR_PERIOD",
-      "context": "Global Findex 2021 reports 11.9% account ownership for Yemen; the Yemen fieldwork was carried out in 2022–23. The value is a survey measure for that wave and fieldwork period, not a 2026 population rate."
+      "context": "Global Findex 2021 reports 11.9% account ownership for Yemen; the Yemen fieldwork was carried out in 2022–23. The value is a survey measure for that wave and fieldwork period, not a 2026 population rate. For context only, the World Bank's figure for the same wave across the 19 low-income economies surveyed in it, Yemen among them, is 35.2%; it averages very different economies and is not a benchmark or a ranking."
+    },
+    {
+      "route": "/people/",
+      "surface": "section",
+      "field": "body_en",
+      "token": "19",
+      "category": "ROUTE_SOURCE_CLOSED__OBJECT_TRACE_AVAILABLE",
+      "context": "Global Findex 2021 reports 11.9% account ownership for Yemen; the Yemen fieldwork was carried out in 2022–23. The value is a survey measure for that wave and fieldwork period, not a 2026 population rate. For context only, the World Bank's figure for the same wave across the 19 low-income economies surveyed in it, Yemen among them, is 35.2%; it averages very different economies and is not a benchmark or a ranking.",
+      "source_object": "CLM-001"
+    },
+    {
+      "route": "/people/",
+      "surface": "section",
+      "field": "body_en",
+      "token": "35.2%",
+      "category": "ROUTE_SOURCE_CLOSED__OBJECT_TRACE_AVAILABLE",
+      "context": "Global Findex 2021 reports 11.9% account ownership for Yemen; the Yemen fieldwork was carried out in 2022–23. The value is a survey measure for that wave and fieldwork period, not a 2026 population rate. For context only, the World Bank's figure for the same wave across the 19 low-income economies surveyed in it, Yemen among them, is 35.2%; it averages very different economies and is not a benchmark or a ranking.",
+      "source_object": "CLM-001"
     },
     {
       "route": "/people/",
@@ -85036,7 +85360,7 @@
       "field": "body_ar",
       "token": "2021",
       "category": "DATE_OR_PERIOD",
-      "context": "تسجل موجة 2021 من المؤشر العالمي للشمول المالي (Global Findex) لليمن امتلاك حساب بنسبة 11.9%، مع تنفيذ العمل الميداني في اليمن خلال 2022–2023. هذا قياس مسحي لتلك الموجة والفترة، وليس نسبة سكانية لعام 2026."
+      "context": "تسجل موجة 2021 من المؤشر العالمي للشمول المالي (Global Findex) لليمن امتلاك حساب بنسبة 11.9%، مع تنفيذ العمل الميداني في اليمن خلال 2022–2023. هذا قياس مسحي لتلك الموجة والفترة، وليس نسبة سكانية لعام 2026. وللسياق فقط، يبلغ رقم البنك الدولي للموجة نفسها في الاقتصادات منخفضة الدخل الـ19 التي شملتها، ومنها اليمن، 35.2%؛ وهو متوسط لاقتصادات متباينة جدًا، وليس معيارًا ولا ترتيبًا."
     },
     {
       "route": "/people/",
@@ -85044,7 +85368,7 @@
       "field": "body_ar",
       "token": "11.9%",
       "category": "ROUTE_SOURCE_CLOSED__OBJECT_TRACE_AVAILABLE",
-      "context": "تسجل موجة 2021 من المؤشر العالمي للشمول المالي (Global Findex) لليمن امتلاك حساب بنسبة 11.9%، مع تنفيذ العمل الميداني في اليمن خلال 2022–2023. هذا قياس مسحي لتلك الموجة والفترة، وليس نسبة سكانية لعام 2026.",
+      "context": "تسجل موجة 2021 من المؤشر العالمي للشمول المالي (Global Findex) لليمن امتلاك حساب بنسبة 11.9%، مع تنفيذ العمل الميداني في اليمن خلال 2022–2023. هذا قياس مسحي لتلك الموجة والفترة، وليس نسبة سكانية لعام 2026. وللسياق فقط، يبلغ رقم البنك الدولي للموجة نفسها في الاقتصادات منخفضة الدخل الـ19 التي شملتها، ومنها اليمن، 35.2%؛ وهو متوسط لاقتصادات متباينة جدًا، وليس معيارًا ولا ترتيبًا.",
       "source_object": "CLM-001"
     },
     {
@@ -85053,7 +85377,7 @@
       "field": "body_ar",
       "token": "2022",
       "category": "DATE_OR_PERIOD",
-      "context": "تسجل موجة 2021 من المؤشر العالمي للشمول المالي (Global Findex) لليمن امتلاك حساب بنسبة 11.9%، مع تنفيذ العمل الميداني في اليمن خلال 2022–2023. هذا قياس مسحي لتلك الموجة والفترة، وليس نسبة سكانية لعام 2026."
+      "context": "تسجل موجة 2021 من المؤشر العالمي للشمول المالي (Global Findex) لليمن امتلاك حساب بنسبة 11.9%، مع تنفيذ العمل الميداني في اليمن خلال 2022–2023. هذا قياس مسحي لتلك الموجة والفترة، وليس نسبة سكانية لعام 2026. وللسياق فقط، يبلغ رقم البنك الدولي للموجة نفسها في الاقتصادات منخفضة الدخل الـ19 التي شملتها، ومنها اليمن، 35.2%؛ وهو متوسط لاقتصادات متباينة جدًا، وليس معيارًا ولا ترتيبًا."
     },
     {
       "route": "/people/",
@@ -85061,7 +85385,7 @@
       "field": "body_ar",
       "token": "2023",
       "category": "DATE_OR_PERIOD",
-      "context": "تسجل موجة 2021 من المؤشر العالمي للشمول المالي (Global Findex) لليمن امتلاك حساب بنسبة 11.9%، مع تنفيذ العمل الميداني في اليمن خلال 2022–2023. هذا قياس مسحي لتلك الموجة والفترة، وليس نسبة سكانية لعام 2026."
+      "context": "تسجل موجة 2021 من المؤشر العالمي للشمول المالي (Global Findex) لليمن امتلاك حساب بنسبة 11.9%، مع تنفيذ العمل الميداني في اليمن خلال 2022–2023. هذا قياس مسحي لتلك الموجة والفترة، وليس نسبة سكانية لعام 2026. وللسياق فقط، يبلغ رقم البنك الدولي للموجة نفسها في الاقتصادات منخفضة الدخل الـ19 التي شملتها، ومنها اليمن، 35.2%؛ وهو متوسط لاقتصادات متباينة جدًا، وليس معيارًا ولا ترتيبًا."
     },
     {
       "route": "/people/",
@@ -85069,7 +85393,25 @@
       "field": "body_ar",
       "token": "2026",
       "category": "DATE_OR_PERIOD",
-      "context": "تسجل موجة 2021 من المؤشر العالمي للشمول المالي (Global Findex) لليمن امتلاك حساب بنسبة 11.9%، مع تنفيذ العمل الميداني في اليمن خلال 2022–2023. هذا قياس مسحي لتلك الموجة والفترة، وليس نسبة سكانية لعام 2026."
+      "context": "تسجل موجة 2021 من المؤشر العالمي للشمول المالي (Global Findex) لليمن امتلاك حساب بنسبة 11.9%، مع تنفيذ العمل الميداني في اليمن خلال 2022–2023. هذا قياس مسحي لتلك الموجة والفترة، وليس نسبة سكانية لعام 2026. وللسياق فقط، يبلغ رقم البنك الدولي للموجة نفسها في الاقتصادات منخفضة الدخل الـ19 التي شملتها، ومنها اليمن، 35.2%؛ وهو متوسط لاقتصادات متباينة جدًا، وليس معيارًا ولا ترتيبًا."
+    },
+    {
+      "route": "/people/",
+      "surface": "section",
+      "field": "body_ar",
+      "token": "19",
+      "category": "ROUTE_SOURCE_CLOSED__OBJECT_TRACE_AVAILABLE",
+      "context": "تسجل موجة 2021 من المؤشر العالمي للشمول المالي (Global Findex) لليمن امتلاك حساب بنسبة 11.9%، مع تنفيذ العمل الميداني في اليمن خلال 2022–2023. هذا قياس مسحي لتلك الموجة والفترة، وليس نسبة سكانية لعام 2026. وللسياق فقط، يبلغ رقم البنك الدولي للموجة نفسها في الاقتصادات منخفضة الدخل الـ19 التي شملتها، ومنها اليمن، 35.2%؛ وهو متوسط لاقتصادات متباينة جدًا، وليس معيارًا ولا ترتيبًا.",
+      "source_object": "CLM-001"
+    },
+    {
+      "route": "/people/",
+      "surface": "section",
+      "field": "body_ar",
+      "token": "35.2%",
+      "category": "ROUTE_SOURCE_CLOSED__OBJECT_TRACE_AVAILABLE",
+      "context": "تسجل موجة 2021 من المؤشر العالمي للشمول المالي (Global Findex) لليمن امتلاك حساب بنسبة 11.9%، مع تنفيذ العمل الميداني في اليمن خلال 2022–2023. هذا قياس مسحي لتلك الموجة والفترة، وليس نسبة سكانية لعام 2026. وللسياق فقط، يبلغ رقم البنك الدولي للموجة نفسها في الاقتصادات منخفضة الدخل الـ19 التي شملتها، ومنها اليمن، 35.2%؛ وهو متوسط لاقتصادات متباينة جدًا، وليس معيارًا ولا ترتيبًا.",
+      "source_object": "CLM-001"
     },
     {
       "route": "/people/",
@@ -86155,7 +86497,7 @@
       "field": "copy_en",
       "token": "11.9%",
       "category": "GOVERNED_OBJECT_SOURCE_CLOSED",
-      "context": "The latest representative observation of account ownership in Yemen published by the World Bank remains 11.9%. World Bank Data reports it for 2022; it comes from the Yemen Global Findex 2021 study, fielded from 7 November 2022 to 9 January 2023. The Global Findex 2025 edition adds 2024 observations for many economies, but no newer Yemen observation.",
+      "context": "The latest representative observation of account ownership in Yemen published by the World Bank remains 11.9%. World Bank Data reports it for 2022; it comes from the Yemen Global Findex 2021 study, fielded from 7 November 2022 to 9 January 2023. The Global Findex 2025 edition adds 2024 observations for many economies, but no newer Yemen observation. For context, the World Bank's figure for the same survey wave across the 19 low-income economies surveyed in it, Yemen among them, is 35.2%.",
       "source_object": "CLM-001"
     },
     {
@@ -86164,7 +86506,7 @@
       "field": "copy_en",
       "token": "2022",
       "category": "GOVERNED_OBJECT_SOURCE_CLOSED",
-      "context": "The latest representative observation of account ownership in Yemen published by the World Bank remains 11.9%. World Bank Data reports it for 2022; it comes from the Yemen Global Findex 2021 study, fielded from 7 November 2022 to 9 January 2023. The Global Findex 2025 edition adds 2024 observations for many economies, but no newer Yemen observation.",
+      "context": "The latest representative observation of account ownership in Yemen published by the World Bank remains 11.9%. World Bank Data reports it for 2022; it comes from the Yemen Global Findex 2021 study, fielded from 7 November 2022 to 9 January 2023. The Global Findex 2025 edition adds 2024 observations for many economies, but no newer Yemen observation. For context, the World Bank's figure for the same survey wave across the 19 low-income economies surveyed in it, Yemen among them, is 35.2%.",
       "source_object": "CLM-001"
     },
     {
@@ -86173,7 +86515,7 @@
       "field": "copy_en",
       "token": "2021",
       "category": "GOVERNED_OBJECT_SOURCE_CLOSED",
-      "context": "The latest representative observation of account ownership in Yemen published by the World Bank remains 11.9%. World Bank Data reports it for 2022; it comes from the Yemen Global Findex 2021 study, fielded from 7 November 2022 to 9 January 2023. The Global Findex 2025 edition adds 2024 observations for many economies, but no newer Yemen observation.",
+      "context": "The latest representative observation of account ownership in Yemen published by the World Bank remains 11.9%. World Bank Data reports it for 2022; it comes from the Yemen Global Findex 2021 study, fielded from 7 November 2022 to 9 January 2023. The Global Findex 2025 edition adds 2024 observations for many economies, but no newer Yemen observation. For context, the World Bank's figure for the same survey wave across the 19 low-income economies surveyed in it, Yemen among them, is 35.2%.",
       "source_object": "CLM-001"
     },
     {
@@ -86182,7 +86524,7 @@
       "field": "copy_en",
       "token": "7",
       "category": "GOVERNED_OBJECT_SOURCE_CLOSED",
-      "context": "The latest representative observation of account ownership in Yemen published by the World Bank remains 11.9%. World Bank Data reports it for 2022; it comes from the Yemen Global Findex 2021 study, fielded from 7 November 2022 to 9 January 2023. The Global Findex 2025 edition adds 2024 observations for many economies, but no newer Yemen observation.",
+      "context": "The latest representative observation of account ownership in Yemen published by the World Bank remains 11.9%. World Bank Data reports it for 2022; it comes from the Yemen Global Findex 2021 study, fielded from 7 November 2022 to 9 January 2023. The Global Findex 2025 edition adds 2024 observations for many economies, but no newer Yemen observation. For context, the World Bank's figure for the same survey wave across the 19 low-income economies surveyed in it, Yemen among them, is 35.2%.",
       "source_object": "CLM-001"
     },
     {
@@ -86191,7 +86533,7 @@
       "field": "copy_en",
       "token": "9",
       "category": "GOVERNED_OBJECT_SOURCE_CLOSED",
-      "context": "The latest representative observation of account ownership in Yemen published by the World Bank remains 11.9%. World Bank Data reports it for 2022; it comes from the Yemen Global Findex 2021 study, fielded from 7 November 2022 to 9 January 2023. The Global Findex 2025 edition adds 2024 observations for many economies, but no newer Yemen observation.",
+      "context": "The latest representative observation of account ownership in Yemen published by the World Bank remains 11.9%. World Bank Data reports it for 2022; it comes from the Yemen Global Findex 2021 study, fielded from 7 November 2022 to 9 January 2023. The Global Findex 2025 edition adds 2024 observations for many economies, but no newer Yemen observation. For context, the World Bank's figure for the same survey wave across the 19 low-income economies surveyed in it, Yemen among them, is 35.2%.",
       "source_object": "CLM-001"
     },
     {
@@ -86200,7 +86542,7 @@
       "field": "copy_en",
       "token": "2023",
       "category": "GOVERNED_OBJECT_SOURCE_CLOSED",
-      "context": "The latest representative observation of account ownership in Yemen published by the World Bank remains 11.9%. World Bank Data reports it for 2022; it comes from the Yemen Global Findex 2021 study, fielded from 7 November 2022 to 9 January 2023. The Global Findex 2025 edition adds 2024 observations for many economies, but no newer Yemen observation.",
+      "context": "The latest representative observation of account ownership in Yemen published by the World Bank remains 11.9%. World Bank Data reports it for 2022; it comes from the Yemen Global Findex 2021 study, fielded from 7 November 2022 to 9 January 2023. The Global Findex 2025 edition adds 2024 observations for many economies, but no newer Yemen observation. For context, the World Bank's figure for the same survey wave across the 19 low-income economies surveyed in it, Yemen among them, is 35.2%.",
       "source_object": "CLM-001"
     },
     {
@@ -86209,7 +86551,7 @@
       "field": "copy_en",
       "token": "2025",
       "category": "GOVERNED_OBJECT_SOURCE_CLOSED",
-      "context": "The latest representative observation of account ownership in Yemen published by the World Bank remains 11.9%. World Bank Data reports it for 2022; it comes from the Yemen Global Findex 2021 study, fielded from 7 November 2022 to 9 January 2023. The Global Findex 2025 edition adds 2024 observations for many economies, but no newer Yemen observation.",
+      "context": "The latest representative observation of account ownership in Yemen published by the World Bank remains 11.9%. World Bank Data reports it for 2022; it comes from the Yemen Global Findex 2021 study, fielded from 7 November 2022 to 9 January 2023. The Global Findex 2025 edition adds 2024 observations for many economies, but no newer Yemen observation. For context, the World Bank's figure for the same survey wave across the 19 low-income economies surveyed in it, Yemen among them, is 35.2%.",
       "source_object": "CLM-001"
     },
     {
@@ -86218,7 +86560,25 @@
       "field": "copy_en",
       "token": "2024",
       "category": "GOVERNED_OBJECT_SOURCE_CLOSED",
-      "context": "The latest representative observation of account ownership in Yemen published by the World Bank remains 11.9%. World Bank Data reports it for 2022; it comes from the Yemen Global Findex 2021 study, fielded from 7 November 2022 to 9 January 2023. The Global Findex 2025 edition adds 2024 observations for many economies, but no newer Yemen observation.",
+      "context": "The latest representative observation of account ownership in Yemen published by the World Bank remains 11.9%. World Bank Data reports it for 2022; it comes from the Yemen Global Findex 2021 study, fielded from 7 November 2022 to 9 January 2023. The Global Findex 2025 edition adds 2024 observations for many economies, but no newer Yemen observation. For context, the World Bank's figure for the same survey wave across the 19 low-income economies surveyed in it, Yemen among them, is 35.2%.",
+      "source_object": "CLM-001"
+    },
+    {
+      "route": "/people/",
+      "surface": "governed_numeric_inventory",
+      "field": "copy_en",
+      "token": "19",
+      "category": "GOVERNED_OBJECT_SOURCE_CLOSED",
+      "context": "The latest representative observation of account ownership in Yemen published by the World Bank remains 11.9%. World Bank Data reports it for 2022; it comes from the Yemen Global Findex 2021 study, fielded from 7 November 2022 to 9 January 2023. The Global Findex 2025 edition adds 2024 observations for many economies, but no newer Yemen observation. For context, the World Bank's figure for the same survey wave across the 19 low-income economies surveyed in it, Yemen among them, is 35.2%.",
+      "source_object": "CLM-001"
+    },
+    {
+      "route": "/people/",
+      "surface": "governed_numeric_inventory",
+      "field": "copy_en",
+      "token": "35.2%",
+      "category": "GOVERNED_OBJECT_SOURCE_CLOSED",
+      "context": "The latest representative observation of account ownership in Yemen published by the World Bank remains 11.9%. World Bank Data reports it for 2022; it comes from the Yemen Global Findex 2021 study, fielded from 7 November 2022 to 9 January 2023. The Global Findex 2025 edition adds 2024 observations for many economies, but no newer Yemen observation. For context, the World Bank's figure for the same survey wave across the 19 low-income economies surveyed in it, Yemen among them, is 35.2%.",
       "source_object": "CLM-001"
     },
     {
@@ -86227,7 +86587,7 @@
       "field": "copy_ar",
       "token": "11.9%",
       "category": "GOVERNED_OBJECT_SOURCE_CLOSED",
-      "context": "تظل أحدث مشاهدة سكانية ممثلة ينشرها البنك الدولي لامتلاك الحساب في اليمن عند 11.9%. ويعرضها موقع بيانات البنك الدولي لسنة 2022، وهي مستمدة من دراسة اليمن ضمن موجة Global Findex 2021 التي نُفذت ميدانيًا من 7 نوفمبر 2022 إلى 9 يناير 2023. وتضيف نسخة Global Findex 2025 مشاهدات لعام 2024 في اقتصادات عديدة، لكنها لا تضيف مشاهدة أحدث لليمن.",
+      "context": "تظل أحدث مشاهدة سكانية ممثلة ينشرها البنك الدولي لامتلاك الحساب في اليمن عند 11.9%. ويعرضها موقع بيانات البنك الدولي لسنة 2022، وهي مستمدة من دراسة اليمن ضمن موجة Global Findex 2021 التي نُفذت ميدانيًا من 7 نوفمبر 2022 إلى 9 يناير 2023. وتضيف نسخة Global Findex 2025 مشاهدات لعام 2024 في اقتصادات عديدة، لكنها لا تضيف مشاهدة أحدث لليمن. وللسياق، يبلغ رقم البنك الدولي لموجة المسح نفسها في الاقتصادات منخفضة الدخل الـ19 التي شملتها الموجة، ومنها اليمن، 35.2%.",
       "source_object": "CLM-001"
     },
     {
@@ -86236,7 +86596,7 @@
       "field": "copy_ar",
       "token": "2022",
       "category": "GOVERNED_OBJECT_SOURCE_CLOSED",
-      "context": "تظل أحدث مشاهدة سكانية ممثلة ينشرها البنك الدولي لامتلاك الحساب في اليمن عند 11.9%. ويعرضها موقع بيانات البنك الدولي لسنة 2022، وهي مستمدة من دراسة اليمن ضمن موجة Global Findex 2021 التي نُفذت ميدانيًا من 7 نوفمبر 2022 إلى 9 يناير 2023. وتضيف نسخة Global Findex 2025 مشاهدات لعام 2024 في اقتصادات عديدة، لكنها لا تضيف مشاهدة أحدث لليمن.",
+      "context": "تظل أحدث مشاهدة سكانية ممثلة ينشرها البنك الدولي لامتلاك الحساب في اليمن عند 11.9%. ويعرضها موقع بيانات البنك الدولي لسنة 2022، وهي مستمدة من دراسة اليمن ضمن موجة Global Findex 2021 التي نُفذت ميدانيًا من 7 نوفمبر 2022 إلى 9 يناير 2023. وتضيف نسخة Global Findex 2025 مشاهدات لعام 2024 في اقتصادات عديدة، لكنها لا تضيف مشاهدة أحدث لليمن. وللسياق، يبلغ رقم البنك الدولي لموجة المسح نفسها في الاقتصادات منخفضة الدخل الـ19 التي شملتها الموجة، ومنها اليمن، 35.2%.",
       "source_object": "CLM-001"
     },
     {
@@ -86245,7 +86605,7 @@
       "field": "copy_ar",
       "token": "2021",
       "category": "GOVERNED_OBJECT_SOURCE_CLOSED",
-      "context": "تظل أحدث مشاهدة سكانية ممثلة ينشرها البنك الدولي لامتلاك الحساب في اليمن عند 11.9%. ويعرضها موقع بيانات البنك الدولي لسنة 2022، وهي مستمدة من دراسة اليمن ضمن موجة Global Findex 2021 التي نُفذت ميدانيًا من 7 نوفمبر 2022 إلى 9 يناير 2023. وتضيف نسخة Global Findex 2025 مشاهدات لعام 2024 في اقتصادات عديدة، لكنها لا تضيف مشاهدة أحدث لليمن.",
+      "context": "تظل أحدث مشاهدة سكانية ممثلة ينشرها البنك الدولي لامتلاك الحساب في اليمن عند 11.9%. ويعرضها موقع بيانات البنك الدولي لسنة 2022، وهي مستمدة من دراسة اليمن ضمن موجة Global Findex 2021 التي نُفذت ميدانيًا من 7 نوفمبر 2022 إلى 9 يناير 2023. وتضيف نسخة Global Findex 2025 مشاهدات لعام 2024 في اقتصادات عديدة، لكنها لا تضيف مشاهدة أحدث لليمن. وللسياق، يبلغ رقم البنك الدولي لموجة المسح نفسها في الاقتصادات منخفضة الدخل الـ19 التي شملتها الموجة، ومنها اليمن، 35.2%.",
       "source_object": "CLM-001"
     },
     {
@@ -86254,7 +86614,7 @@
       "field": "copy_ar",
       "token": "7",
       "category": "GOVERNED_OBJECT_SOURCE_CLOSED",
-      "context": "تظل أحدث مشاهدة سكانية ممثلة ينشرها البنك الدولي لامتلاك الحساب في اليمن عند 11.9%. ويعرضها موقع بيانات البنك الدولي لسنة 2022، وهي مستمدة من دراسة اليمن ضمن موجة Global Findex 2021 التي نُفذت ميدانيًا من 7 نوفمبر 2022 إلى 9 يناير 2023. وتضيف نسخة Global Findex 2025 مشاهدات لعام 2024 في اقتصادات عديدة، لكنها لا تضيف مشاهدة أحدث لليمن.",
+      "context": "تظل أحدث مشاهدة سكانية ممثلة ينشرها البنك الدولي لامتلاك الحساب في اليمن عند 11.9%. ويعرضها موقع بيانات البنك الدولي لسنة 2022، وهي مستمدة من دراسة اليمن ضمن موجة Global Findex 2021 التي نُفذت ميدانيًا من 7 نوفمبر 2022 إلى 9 يناير 2023. وتضيف نسخة Global Findex 2025 مشاهدات لعام 2024 في اقتصادات عديدة، لكنها لا تضيف مشاهدة أحدث لليمن. وللسياق، يبلغ رقم البنك الدولي لموجة المسح نفسها في الاقتصادات منخفضة الدخل الـ19 التي شملتها الموجة، ومنها اليمن، 35.2%.",
       "source_object": "CLM-001"
     },
     {
@@ -86263,7 +86623,7 @@
       "field": "copy_ar",
       "token": "9",
       "category": "GOVERNED_OBJECT_SOURCE_CLOSED",
-      "context": "تظل أحدث مشاهدة سكانية ممثلة ينشرها البنك الدولي لامتلاك الحساب في اليمن عند 11.9%. ويعرضها موقع بيانات البنك الدولي لسنة 2022، وهي مستمدة من دراسة اليمن ضمن موجة Global Findex 2021 التي نُفذت ميدانيًا من 7 نوفمبر 2022 إلى 9 يناير 2023. وتضيف نسخة Global Findex 2025 مشاهدات لعام 2024 في اقتصادات عديدة، لكنها لا تضيف مشاهدة أحدث لليمن.",
+      "context": "تظل أحدث مشاهدة سكانية ممثلة ينشرها البنك الدولي لامتلاك الحساب في اليمن عند 11.9%. ويعرضها موقع بيانات البنك الدولي لسنة 2022، وهي مستمدة من دراسة اليمن ضمن موجة Global Findex 2021 التي نُفذت ميدانيًا من 7 نوفمبر 2022 إلى 9 يناير 2023. وتضيف نسخة Global Findex 2025 مشاهدات لعام 2024 في اقتصادات عديدة، لكنها لا تضيف مشاهدة أحدث لليمن. وللسياق، يبلغ رقم البنك الدولي لموجة المسح نفسها في الاقتصادات منخفضة الدخل الـ19 التي شملتها الموجة، ومنها اليمن، 35.2%.",
       "source_object": "CLM-001"
     },
     {
@@ -86272,7 +86632,7 @@
       "field": "copy_ar",
       "token": "2023",
       "category": "GOVERNED_OBJECT_SOURCE_CLOSED",
-      "context": "تظل أحدث مشاهدة سكانية ممثلة ينشرها البنك الدولي لامتلاك الحساب في اليمن عند 11.9%. ويعرضها موقع بيانات البنك الدولي لسنة 2022، وهي مستمدة من دراسة اليمن ضمن موجة Global Findex 2021 التي نُفذت ميدانيًا من 7 نوفمبر 2022 إلى 9 يناير 2023. وتضيف نسخة Global Findex 2025 مشاهدات لعام 2024 في اقتصادات عديدة، لكنها لا تضيف مشاهدة أحدث لليمن.",
+      "context": "تظل أحدث مشاهدة سكانية ممثلة ينشرها البنك الدولي لامتلاك الحساب في اليمن عند 11.9%. ويعرضها موقع بيانات البنك الدولي لسنة 2022، وهي مستمدة من دراسة اليمن ضمن موجة Global Findex 2021 التي نُفذت ميدانيًا من 7 نوفمبر 2022 إلى 9 يناير 2023. وتضيف نسخة Global Findex 2025 مشاهدات لعام 2024 في اقتصادات عديدة، لكنها لا تضيف مشاهدة أحدث لليمن. وللسياق، يبلغ رقم البنك الدولي لموجة المسح نفسها في الاقتصادات منخفضة الدخل الـ19 التي شملتها الموجة، ومنها اليمن، 35.2%.",
       "source_object": "CLM-001"
     },
     {
@@ -86281,7 +86641,7 @@
       "field": "copy_ar",
       "token": "2025",
       "category": "GOVERNED_OBJECT_SOURCE_CLOSED",
-      "context": "تظل أحدث مشاهدة سكانية ممثلة ينشرها البنك الدولي لامتلاك الحساب في اليمن عند 11.9%. ويعرضها موقع بيانات البنك الدولي لسنة 2022، وهي مستمدة من دراسة اليمن ضمن موجة Global Findex 2021 التي نُفذت ميدانيًا من 7 نوفمبر 2022 إلى 9 يناير 2023. وتضيف نسخة Global Findex 2025 مشاهدات لعام 2024 في اقتصادات عديدة، لكنها لا تضيف مشاهدة أحدث لليمن.",
+      "context": "تظل أحدث مشاهدة سكانية ممثلة ينشرها البنك الدولي لامتلاك الحساب في اليمن عند 11.9%. ويعرضها موقع بيانات البنك الدولي لسنة 2022، وهي مستمدة من دراسة اليمن ضمن موجة Global Findex 2021 التي نُفذت ميدانيًا من 7 نوفمبر 2022 إلى 9 يناير 2023. وتضيف نسخة Global Findex 2025 مشاهدات لعام 2024 في اقتصادات عديدة، لكنها لا تضيف مشاهدة أحدث لليمن. وللسياق، يبلغ رقم البنك الدولي لموجة المسح نفسها في الاقتصادات منخفضة الدخل الـ19 التي شملتها الموجة، ومنها اليمن، 35.2%.",
       "source_object": "CLM-001"
     },
     {
@@ -86290,7 +86650,16 @@
       "field": "copy_ar",
       "token": "2024",
       "category": "GOVERNED_OBJECT_SOURCE_CLOSED",
-      "context": "تظل أحدث مشاهدة سكانية ممثلة ينشرها البنك الدولي لامتلاك الحساب في اليمن عند 11.9%. ويعرضها موقع بيانات البنك الدولي لسنة 2022، وهي مستمدة من دراسة اليمن ضمن موجة Global Findex 2021 التي نُفذت ميدانيًا من 7 نوفمبر 2022 إلى 9 يناير 2023. وتضيف نسخة Global Findex 2025 مشاهدات لعام 2024 في اقتصادات عديدة، لكنها لا تضيف مشاهدة أحدث لليمن.",
+      "context": "تظل أحدث مشاهدة سكانية ممثلة ينشرها البنك الدولي لامتلاك الحساب في اليمن عند 11.9%. ويعرضها موقع بيانات البنك الدولي لسنة 2022، وهي مستمدة من دراسة اليمن ضمن موجة Global Findex 2021 التي نُفذت ميدانيًا من 7 نوفمبر 2022 إلى 9 يناير 2023. وتضيف نسخة Global Findex 2025 مشاهدات لعام 2024 في اقتصادات عديدة، لكنها لا تضيف مشاهدة أحدث لليمن. وللسياق، يبلغ رقم البنك الدولي لموجة المسح نفسها في الاقتصادات منخفضة الدخل الـ19 التي شملتها الموجة، ومنها اليمن، 35.2%.",
+      "source_object": "CLM-001"
+    },
+    {
+      "route": "/people/",
+      "surface": "governed_numeric_inventory",
+      "field": "copy_ar",
+      "token": "35.2%",
+      "category": "GOVERNED_OBJECT_SOURCE_CLOSED",
+      "context": "تظل أحدث مشاهدة سكانية ممثلة ينشرها البنك الدولي لامتلاك الحساب في اليمن عند 11.9%. ويعرضها موقع بيانات البنك الدولي لسنة 2022، وهي مستمدة من دراسة اليمن ضمن موجة Global Findex 2021 التي نُفذت ميدانيًا من 7 نوفمبر 2022 إلى 9 يناير 2023. وتضيف نسخة Global Findex 2025 مشاهدات لعام 2024 في اقتصادات عديدة، لكنها لا تضيف مشاهدة أحدث لليمن. وللسياق، يبلغ رقم البنك الدولي لموجة المسح نفسها في الاقتصادات منخفضة الدخل الـ19 التي شملتها الموجة، ومنها اليمن، 35.2%.",
       "source_object": "CLM-001"
     },
     {
@@ -87694,7 +88063,7 @@
       "field": "summary_en",
       "token": "11.9%",
       "category": "GOVERNED_OBJECT_SOURCE_CLOSED",
-      "context": "The latest representative observation of account ownership in Yemen published by the World Bank remains 11.9%. World Bank Data reports it for 2022; it comes from the Yemen Global Findex 2021 study, fielded from 7 November 2022 to 9 January 2023. The Global Findex 2025 edition adds 2024 observations for many economies, but no newer Yemen observation.",
+      "context": "The latest representative observation of account ownership in Yemen published by the World Bank remains 11.9%. World Bank Data reports it for 2022; it comes from the Yemen Global Findex 2021 study, fielded from 7 November 2022 to 9 January 2023. The Global Findex 2025 edition adds 2024 observations for many economies, but no newer Yemen observation. For context, the World Bank's figure for the same survey wave across the 19 low-income economies surveyed in it, Yemen among them, is 35.2%.",
       "source_object": "CLM-001"
     },
     {
@@ -87703,7 +88072,7 @@
       "field": "summary_en",
       "token": "2022",
       "category": "GOVERNED_OBJECT_SOURCE_CLOSED",
-      "context": "The latest representative observation of account ownership in Yemen published by the World Bank remains 11.9%. World Bank Data reports it for 2022; it comes from the Yemen Global Findex 2021 study, fielded from 7 November 2022 to 9 January 2023. The Global Findex 2025 edition adds 2024 observations for many economies, but no newer Yemen observation.",
+      "context": "The latest representative observation of account ownership in Yemen published by the World Bank remains 11.9%. World Bank Data reports it for 2022; it comes from the Yemen Global Findex 2021 study, fielded from 7 November 2022 to 9 January 2023. The Global Findex 2025 edition adds 2024 observations for many economies, but no newer Yemen observation. For context, the World Bank's figure for the same survey wave across the 19 low-income economies surveyed in it, Yemen among them, is 35.2%.",
       "source_object": "CLM-001"
     },
     {
@@ -87712,7 +88081,7 @@
       "field": "summary_en",
       "token": "2021",
       "category": "GOVERNED_OBJECT_SOURCE_CLOSED",
-      "context": "The latest representative observation of account ownership in Yemen published by the World Bank remains 11.9%. World Bank Data reports it for 2022; it comes from the Yemen Global Findex 2021 study, fielded from 7 November 2022 to 9 January 2023. The Global Findex 2025 edition adds 2024 observations for many economies, but no newer Yemen observation.",
+      "context": "The latest representative observation of account ownership in Yemen published by the World Bank remains 11.9%. World Bank Data reports it for 2022; it comes from the Yemen Global Findex 2021 study, fielded from 7 November 2022 to 9 January 2023. The Global Findex 2025 edition adds 2024 observations for many economies, but no newer Yemen observation. For context, the World Bank's figure for the same survey wave across the 19 low-income economies surveyed in it, Yemen among them, is 35.2%.",
       "source_object": "CLM-001"
     },
     {
@@ -87721,7 +88090,7 @@
       "field": "summary_en",
       "token": "7",
       "category": "GOVERNED_OBJECT_SOURCE_CLOSED",
-      "context": "The latest representative observation of account ownership in Yemen published by the World Bank remains 11.9%. World Bank Data reports it for 2022; it comes from the Yemen Global Findex 2021 study, fielded from 7 November 2022 to 9 January 2023. The Global Findex 2025 edition adds 2024 observations for many economies, but no newer Yemen observation.",
+      "context": "The latest representative observation of account ownership in Yemen published by the World Bank remains 11.9%. World Bank Data reports it for 2022; it comes from the Yemen Global Findex 2021 study, fielded from 7 November 2022 to 9 January 2023. The Global Findex 2025 edition adds 2024 observations for many economies, but no newer Yemen observation. For context, the World Bank's figure for the same survey wave across the 19 low-income economies surveyed in it, Yemen among them, is 35.2%.",
       "source_object": "CLM-001"
     },
     {
@@ -87730,7 +88099,7 @@
       "field": "summary_en",
       "token": "9",
       "category": "GOVERNED_OBJECT_SOURCE_CLOSED",
-      "context": "The latest representative observation of account ownership in Yemen published by the World Bank remains 11.9%. World Bank Data reports it for 2022; it comes from the Yemen Global Findex 2021 study, fielded from 7 November 2022 to 9 January 2023. The Global Findex 2025 edition adds 2024 observations for many economies, but no newer Yemen observation.",
+      "context": "The latest representative observation of account ownership in Yemen published by the World Bank remains 11.9%. World Bank Data reports it for 2022; it comes from the Yemen Global Findex 2021 study, fielded from 7 November 2022 to 9 January 2023. The Global Findex 2025 edition adds 2024 observations for many economies, but no newer Yemen observation. For context, the World Bank's figure for the same survey wave across the 19 low-income economies surveyed in it, Yemen among them, is 35.2%.",
       "source_object": "CLM-001"
     },
     {
@@ -87739,7 +88108,7 @@
       "field": "summary_en",
       "token": "2023",
       "category": "GOVERNED_OBJECT_SOURCE_CLOSED",
-      "context": "The latest representative observation of account ownership in Yemen published by the World Bank remains 11.9%. World Bank Data reports it for 2022; it comes from the Yemen Global Findex 2021 study, fielded from 7 November 2022 to 9 January 2023. The Global Findex 2025 edition adds 2024 observations for many economies, but no newer Yemen observation.",
+      "context": "The latest representative observation of account ownership in Yemen published by the World Bank remains 11.9%. World Bank Data reports it for 2022; it comes from the Yemen Global Findex 2021 study, fielded from 7 November 2022 to 9 January 2023. The Global Findex 2025 edition adds 2024 observations for many economies, but no newer Yemen observation. For context, the World Bank's figure for the same survey wave across the 19 low-income economies surveyed in it, Yemen among them, is 35.2%.",
       "source_object": "CLM-001"
     },
     {
@@ -87748,7 +88117,7 @@
       "field": "summary_en",
       "token": "2025",
       "category": "GOVERNED_OBJECT_SOURCE_CLOSED",
-      "context": "The latest representative observation of account ownership in Yemen published by the World Bank remains 11.9%. World Bank Data reports it for 2022; it comes from the Yemen Global Findex 2021 study, fielded from 7 November 2022 to 9 January 2023. The Global Findex 2025 edition adds 2024 observations for many economies, but no newer Yemen observation.",
+      "context": "The latest representative observation of account ownership in Yemen published by the World Bank remains 11.9%. World Bank Data reports it for 2022; it comes from the Yemen Global Findex 2021 study, fielded from 7 November 2022 to 9 January 2023. The Global Findex 2025 edition adds 2024 observations for many economies, but no newer Yemen observation. For context, the World Bank's figure for the same survey wave across the 19 low-income economies surveyed in it, Yemen among them, is 35.2%.",
       "source_object": "CLM-001"
     },
     {
@@ -87757,7 +88126,25 @@
       "field": "summary_en",
       "token": "2024",
       "category": "GOVERNED_OBJECT_SOURCE_CLOSED",
-      "context": "The latest representative observation of account ownership in Yemen published by the World Bank remains 11.9%. World Bank Data reports it for 2022; it comes from the Yemen Global Findex 2021 study, fielded from 7 November 2022 to 9 January 2023. The Global Findex 2025 edition adds 2024 observations for many economies, but no newer Yemen observation.",
+      "context": "The latest representative observation of account ownership in Yemen published by the World Bank remains 11.9%. World Bank Data reports it for 2022; it comes from the Yemen Global Findex 2021 study, fielded from 7 November 2022 to 9 January 2023. The Global Findex 2025 edition adds 2024 observations for many economies, but no newer Yemen observation. For context, the World Bank's figure for the same survey wave across the 19 low-income economies surveyed in it, Yemen among them, is 35.2%.",
+      "source_object": "CLM-001"
+    },
+    {
+      "route": "/people/",
+      "surface": "governed_numeric_inventory",
+      "field": "summary_en",
+      "token": "19",
+      "category": "GOVERNED_OBJECT_SOURCE_CLOSED",
+      "context": "The latest representative observation of account ownership in Yemen published by the World Bank remains 11.9%. World Bank Data reports it for 2022; it comes from the Yemen Global Findex 2021 study, fielded from 7 November 2022 to 9 January 2023. The Global Findex 2025 edition adds 2024 observations for many economies, but no newer Yemen observation. For context, the World Bank's figure for the same survey wave across the 19 low-income economies surveyed in it, Yemen among them, is 35.2%.",
+      "source_object": "CLM-001"
+    },
+    {
+      "route": "/people/",
+      "surface": "governed_numeric_inventory",
+      "field": "summary_en",
+      "token": "35.2%",
+      "category": "GOVERNED_OBJECT_SOURCE_CLOSED",
+      "context": "The latest representative observation of account ownership in Yemen published by the World Bank remains 11.9%. World Bank Data reports it for 2022; it comes from the Yemen Global Findex 2021 study, fielded from 7 November 2022 to 9 January 2023. The Global Findex 2025 edition adds 2024 observations for many economies, but no newer Yemen observation. For context, the World Bank's figure for the same survey wave across the 19 low-income economies surveyed in it, Yemen among them, is 35.2%.",
       "source_object": "CLM-001"
     },
     {
@@ -87766,7 +88153,7 @@
       "field": "summary_ar",
       "token": "11.9%",
       "category": "GOVERNED_OBJECT_SOURCE_CLOSED",
-      "context": "تظل أحدث مشاهدة سكانية ممثلة ينشرها البنك الدولي لامتلاك الحساب في اليمن عند 11.9%. ويعرضها موقع بيانات البنك الدولي لسنة 2022، وهي مستمدة من دراسة اليمن ضمن موجة Global Findex 2021 التي نُفذت ميدانيًا من 7 نوفمبر 2022 إلى 9 يناير 2023. وتضيف نسخة Global Findex 2025 مشاهدات لعام 2024 في اقتصادات عديدة، لكنها لا تضيف مشاهدة أحدث لليمن.",
+      "context": "تظل أحدث مشاهدة سكانية ممثلة ينشرها البنك الدولي لامتلاك الحساب في اليمن عند 11.9%. ويعرضها موقع بيانات البنك الدولي لسنة 2022، وهي مستمدة من دراسة اليمن ضمن موجة Global Findex 2021 التي نُفذت ميدانيًا من 7 نوفمبر 2022 إلى 9 يناير 2023. وتضيف نسخة Global Findex 2025 مشاهدات لعام 2024 في اقتصادات عديدة، لكنها لا تضيف مشاهدة أحدث لليمن. وللسياق، يبلغ رقم البنك الدولي لموجة المسح نفسها في الاقتصادات منخفضة الدخل الـ19 التي شملتها الموجة، ومنها اليمن، 35.2%.",
       "source_object": "CLM-001"
     },
     {
@@ -87775,7 +88162,7 @@
       "field": "summary_ar",
       "token": "2022",
       "category": "GOVERNED_OBJECT_SOURCE_CLOSED",
-      "context": "تظل أحدث مشاهدة سكانية ممثلة ينشرها البنك الدولي لامتلاك الحساب في اليمن عند 11.9%. ويعرضها موقع بيانات البنك الدولي لسنة 2022، وهي مستمدة من دراسة اليمن ضمن موجة Global Findex 2021 التي نُفذت ميدانيًا من 7 نوفمبر 2022 إلى 9 يناير 2023. وتضيف نسخة Global Findex 2025 مشاهدات لعام 2024 في اقتصادات عديدة، لكنها لا تضيف مشاهدة أحدث لليمن.",
+      "context": "تظل أحدث مشاهدة سكانية ممثلة ينشرها البنك الدولي لامتلاك الحساب في اليمن عند 11.9%. ويعرضها موقع بيانات البنك الدولي لسنة 2022، وهي مستمدة من دراسة اليمن ضمن موجة Global Findex 2021 التي نُفذت ميدانيًا من 7 نوفمبر 2022 إلى 9 يناير 2023. وتضيف نسخة Global Findex 2025 مشاهدات لعام 2024 في اقتصادات عديدة، لكنها لا تضيف مشاهدة أحدث لليمن. وللسياق، يبلغ رقم البنك الدولي لموجة المسح نفسها في الاقتصادات منخفضة الدخل الـ19 التي شملتها الموجة، ومنها اليمن، 35.2%.",
       "source_object": "CLM-001"
     },
     {
@@ -87784,7 +88171,7 @@
       "field": "summary_ar",
       "token": "2021",
       "category": "GOVERNED_OBJECT_SOURCE_CLOSED",
-      "context": "تظل أحدث مشاهدة سكانية ممثلة ينشرها البنك الدولي لامتلاك الحساب في اليمن عند 11.9%. ويعرضها موقع بيانات البنك الدولي لسنة 2022، وهي مستمدة من دراسة اليمن ضمن موجة Global Findex 2021 التي نُفذت ميدانيًا من 7 نوفمبر 2022 إلى 9 يناير 2023. وتضيف نسخة Global Findex 2025 مشاهدات لعام 2024 في اقتصادات عديدة، لكنها لا تضيف مشاهدة أحدث لليمن.",
+      "context": "تظل أحدث مشاهدة سكانية ممثلة ينشرها البنك الدولي لامتلاك الحساب في اليمن عند 11.9%. ويعرضها موقع بيانات البنك الدولي لسنة 2022، وهي مستمدة من دراسة اليمن ضمن موجة Global Findex 2021 التي نُفذت ميدانيًا من 7 نوفمبر 2022 إلى 9 يناير 2023. وتضيف نسخة Global Findex 2025 مشاهدات لعام 2024 في اقتصادات عديدة، لكنها لا تضيف مشاهدة أحدث لليمن. وللسياق، يبلغ رقم البنك الدولي لموجة المسح نفسها في الاقتصادات منخفضة الدخل الـ19 التي شملتها الموجة، ومنها اليمن، 35.2%.",
       "source_object": "CLM-001"
     },
     {
@@ -87793,7 +88180,7 @@
       "field": "summary_ar",
       "token": "7",
       "category": "GOVERNED_OBJECT_SOURCE_CLOSED",
-      "context": "تظل أحدث مشاهدة سكانية ممثلة ينشرها البنك الدولي لامتلاك الحساب في اليمن عند 11.9%. ويعرضها موقع بيانات البنك الدولي لسنة 2022، وهي مستمدة من دراسة اليمن ضمن موجة Global Findex 2021 التي نُفذت ميدانيًا من 7 نوفمبر 2022 إلى 9 يناير 2023. وتضيف نسخة Global Findex 2025 مشاهدات لعام 2024 في اقتصادات عديدة، لكنها لا تضيف مشاهدة أحدث لليمن.",
+      "context": "تظل أحدث مشاهدة سكانية ممثلة ينشرها البنك الدولي لامتلاك الحساب في اليمن عند 11.9%. ويعرضها موقع بيانات البنك الدولي لسنة 2022، وهي مستمدة من دراسة اليمن ضمن موجة Global Findex 2021 التي نُفذت ميدانيًا من 7 نوفمبر 2022 إلى 9 يناير 2023. وتضيف نسخة Global Findex 2025 مشاهدات لعام 2024 في اقتصادات عديدة، لكنها لا تضيف مشاهدة أحدث لليمن. وللسياق، يبلغ رقم البنك الدولي لموجة المسح نفسها في الاقتصادات منخفضة الدخل الـ19 التي شملتها الموجة، ومنها اليمن، 35.2%.",
       "source_object": "CLM-001"
     },
     {
@@ -87802,7 +88189,7 @@
       "field": "summary_ar",
       "token": "9",
       "category": "GOVERNED_OBJECT_SOURCE_CLOSED",
-      "context": "تظل أحدث مشاهدة سكانية ممثلة ينشرها البنك الدولي لامتلاك الحساب في اليمن عند 11.9%. ويعرضها موقع بيانات البنك الدولي لسنة 2022، وهي مستمدة من دراسة اليمن ضمن موجة Global Findex 2021 التي نُفذت ميدانيًا من 7 نوفمبر 2022 إلى 9 يناير 2023. وتضيف نسخة Global Findex 2025 مشاهدات لعام 2024 في اقتصادات عديدة، لكنها لا تضيف مشاهدة أحدث لليمن.",
+      "context": "تظل أحدث مشاهدة سكانية ممثلة ينشرها البنك الدولي لامتلاك الحساب في اليمن عند 11.9%. ويعرضها موقع بيانات البنك الدولي لسنة 2022، وهي مستمدة من دراسة اليمن ضمن موجة Global Findex 2021 التي نُفذت ميدانيًا من 7 نوفمبر 2022 إلى 9 يناير 2023. وتضيف نسخة Global Findex 2025 مشاهدات لعام 2024 في اقتصادات عديدة، لكنها لا تضيف مشاهدة أحدث لليمن. وللسياق، يبلغ رقم البنك الدولي لموجة المسح نفسها في الاقتصادات منخفضة الدخل الـ19 التي شملتها الموجة، ومنها اليمن، 35.2%.",
       "source_object": "CLM-001"
     },
     {
@@ -87811,7 +88198,7 @@
       "field": "summary_ar",
       "token": "2023",
       "category": "GOVERNED_OBJECT_SOURCE_CLOSED",
-      "context": "تظل أحدث مشاهدة سكانية ممثلة ينشرها البنك الدولي لامتلاك الحساب في اليمن عند 11.9%. ويعرضها موقع بيانات البنك الدولي لسنة 2022، وهي مستمدة من دراسة اليمن ضمن موجة Global Findex 2021 التي نُفذت ميدانيًا من 7 نوفمبر 2022 إلى 9 يناير 2023. وتضيف نسخة Global Findex 2025 مشاهدات لعام 2024 في اقتصادات عديدة، لكنها لا تضيف مشاهدة أحدث لليمن.",
+      "context": "تظل أحدث مشاهدة سكانية ممثلة ينشرها البنك الدولي لامتلاك الحساب في اليمن عند 11.9%. ويعرضها موقع بيانات البنك الدولي لسنة 2022، وهي مستمدة من دراسة اليمن ضمن موجة Global Findex 2021 التي نُفذت ميدانيًا من 7 نوفمبر 2022 إلى 9 يناير 2023. وتضيف نسخة Global Findex 2025 مشاهدات لعام 2024 في اقتصادات عديدة، لكنها لا تضيف مشاهدة أحدث لليمن. وللسياق، يبلغ رقم البنك الدولي لموجة المسح نفسها في الاقتصادات منخفضة الدخل الـ19 التي شملتها الموجة، ومنها اليمن، 35.2%.",
       "source_object": "CLM-001"
     },
     {
@@ -87820,7 +88207,7 @@
       "field": "summary_ar",
       "token": "2025",
       "category": "GOVERNED_OBJECT_SOURCE_CLOSED",
-      "context": "تظل أحدث مشاهدة سكانية ممثلة ينشرها البنك الدولي لامتلاك الحساب في اليمن عند 11.9%. ويعرضها موقع بيانات البنك الدولي لسنة 2022، وهي مستمدة من دراسة اليمن ضمن موجة Global Findex 2021 التي نُفذت ميدانيًا من 7 نوفمبر 2022 إلى 9 يناير 2023. وتضيف نسخة Global Findex 2025 مشاهدات لعام 2024 في اقتصادات عديدة، لكنها لا تضيف مشاهدة أحدث لليمن.",
+      "context": "تظل أحدث مشاهدة سكانية ممثلة ينشرها البنك الدولي لامتلاك الحساب في اليمن عند 11.9%. ويعرضها موقع بيانات البنك الدولي لسنة 2022، وهي مستمدة من دراسة اليمن ضمن موجة Global Findex 2021 التي نُفذت ميدانيًا من 7 نوفمبر 2022 إلى 9 يناير 2023. وتضيف نسخة Global Findex 2025 مشاهدات لعام 2024 في اقتصادات عديدة، لكنها لا تضيف مشاهدة أحدث لليمن. وللسياق، يبلغ رقم البنك الدولي لموجة المسح نفسها في الاقتصادات منخفضة الدخل الـ19 التي شملتها الموجة، ومنها اليمن، 35.2%.",
       "source_object": "CLM-001"
     },
     {
@@ -87829,7 +88216,16 @@
       "field": "summary_ar",
       "token": "2024",
       "category": "GOVERNED_OBJECT_SOURCE_CLOSED",
-      "context": "تظل أحدث مشاهدة سكانية ممثلة ينشرها البنك الدولي لامتلاك الحساب في اليمن عند 11.9%. ويعرضها موقع بيانات البنك الدولي لسنة 2022، وهي مستمدة من دراسة اليمن ضمن موجة Global Findex 2021 التي نُفذت ميدانيًا من 7 نوفمبر 2022 إلى 9 يناير 2023. وتضيف نسخة Global Findex 2025 مشاهدات لعام 2024 في اقتصادات عديدة، لكنها لا تضيف مشاهدة أحدث لليمن.",
+      "context": "تظل أحدث مشاهدة سكانية ممثلة ينشرها البنك الدولي لامتلاك الحساب في اليمن عند 11.9%. ويعرضها موقع بيانات البنك الدولي لسنة 2022، وهي مستمدة من دراسة اليمن ضمن موجة Global Findex 2021 التي نُفذت ميدانيًا من 7 نوفمبر 2022 إلى 9 يناير 2023. وتضيف نسخة Global Findex 2025 مشاهدات لعام 2024 في اقتصادات عديدة، لكنها لا تضيف مشاهدة أحدث لليمن. وللسياق، يبلغ رقم البنك الدولي لموجة المسح نفسها في الاقتصادات منخفضة الدخل الـ19 التي شملتها الموجة، ومنها اليمن، 35.2%.",
+      "source_object": "CLM-001"
+    },
+    {
+      "route": "/people/",
+      "surface": "governed_numeric_inventory",
+      "field": "summary_ar",
+      "token": "35.2%",
+      "category": "GOVERNED_OBJECT_SOURCE_CLOSED",
+      "context": "تظل أحدث مشاهدة سكانية ممثلة ينشرها البنك الدولي لامتلاك الحساب في اليمن عند 11.9%. ويعرضها موقع بيانات البنك الدولي لسنة 2022، وهي مستمدة من دراسة اليمن ضمن موجة Global Findex 2021 التي نُفذت ميدانيًا من 7 نوفمبر 2022 إلى 9 يناير 2023. وتضيف نسخة Global Findex 2025 مشاهدات لعام 2024 في اقتصادات عديدة، لكنها لا تضيف مشاهدة أحدث لليمن. وللسياق، يبلغ رقم البنك الدولي لموجة المسح نفسها في الاقتصادات منخفضة الدخل الـ19 التي شملتها الموجة، ومنها اليمن، 35.2%.",
       "source_object": "CLM-001"
     },
     {
@@ -88096,10 +88492,37 @@
     {
       "route": "/people/",
       "surface": "governed_numeric_inventory",
+      "field": "method_en",
+      "token": "35.2%",
+      "category": "GOVERNED_OBJECT_SOURCE_CLOSED",
+      "context": "Weighted survey estimate. The low-income context figure, 35.2%, is the World Bank's own aggregate for the same wave and indicator; this resource reproduced it as the average of the published values of the 19 low-income economies surveyed in the wave, weighted by their adult populations.",
+      "source_object": "CLM-001"
+    },
+    {
+      "route": "/people/",
+      "surface": "governed_numeric_inventory",
+      "field": "method_en",
+      "token": "19",
+      "category": "GOVERNED_OBJECT_SOURCE_CLOSED",
+      "context": "Weighted survey estimate. The low-income context figure, 35.2%, is the World Bank's own aggregate for the same wave and indicator; this resource reproduced it as the average of the published values of the 19 low-income economies surveyed in the wave, weighted by their adult populations.",
+      "source_object": "CLM-001"
+    },
+    {
+      "route": "/people/",
+      "surface": "governed_numeric_inventory",
+      "field": "method_ar",
+      "token": "35.2%",
+      "category": "GOVERNED_OBJECT_SOURCE_CLOSED",
+      "context": "تقدير مسحي موزون وفق تصميم المسح وأوزانه. ورقم السياق للاقتصادات منخفضة الدخل، 35.2%، هو التجميع الذي ينشره البنك الدولي نفسه للموجة والمؤشر ذاتيهما؛ وقد أعاد هذا المورد احتسابه متوسطًا للقيم المنشورة للاقتصادات منخفضة الدخل الـ19 التي شملتها الموجة، مرجّحًا بعدد البالغين في كل منها.",
+      "source_object": "CLM-001"
+    },
+    {
+      "route": "/people/",
+      "surface": "governed_numeric_inventory",
       "field": "limitations_en",
       "token": "2026",
       "category": "GOVERNED_OBJECT_SOURCE_CLOSED",
-      "context": "It is not a 2026 rate, and it cannot be broken down or mapped by governorate. It is not the share of adults with a bank account: accounts at other financial institutions and personal use of a mobile-money service also count. | The survey frame excludes areas holding about 23% of the population, and more than a quarter of primary sampling units were replaced.",
+      "context": "It is not a 2026 rate, and it cannot be broken down or mapped by governorate. It is not the share of adults with a bank account: accounts at other financial institutions and personal use of a mobile-money service also count. | The survey frame excludes areas holding about 23% of the population, and more than a quarter of primary sampling units were replaced. The low-income figure is context, not a benchmark, a target or a ranking: it averages economies in very different conditions, includes Yemen itself and uses the income classification in the Global Findex Database 2025, while Yemen's own figure covers only the areas its survey reached.",
       "source_object": "CLM-001"
     },
     {
@@ -88108,7 +88531,16 @@
       "field": "limitations_en",
       "token": "23%",
       "category": "GOVERNED_OBJECT_SOURCE_CLOSED",
-      "context": "It is not a 2026 rate, and it cannot be broken down or mapped by governorate. It is not the share of adults with a bank account: accounts at other financial institutions and personal use of a mobile-money service also count. | The survey frame excludes areas holding about 23% of the population, and more than a quarter of primary sampling units were replaced.",
+      "context": "It is not a 2026 rate, and it cannot be broken down or mapped by governorate. It is not the share of adults with a bank account: accounts at other financial institutions and personal use of a mobile-money service also count. | The survey frame excludes areas holding about 23% of the population, and more than a quarter of primary sampling units were replaced. The low-income figure is context, not a benchmark, a target or a ranking: it averages economies in very different conditions, includes Yemen itself and uses the income classification in the Global Findex Database 2025, while Yemen's own figure covers only the areas its survey reached.",
+      "source_object": "CLM-001"
+    },
+    {
+      "route": "/people/",
+      "surface": "governed_numeric_inventory",
+      "field": "limitations_en",
+      "token": "2025,",
+      "category": "GOVERNED_OBJECT_SOURCE_CLOSED",
+      "context": "It is not a 2026 rate, and it cannot be broken down or mapped by governorate. It is not the share of adults with a bank account: accounts at other financial institutions and personal use of a mobile-money service also count. | The survey frame excludes areas holding about 23% of the population, and more than a quarter of primary sampling units were replaced. The low-income figure is context, not a benchmark, a target or a ranking: it averages economies in very different conditions, includes Yemen itself and uses the income classification in the Global Findex Database 2025, while Yemen's own figure covers only the areas its survey reached.",
       "source_object": "CLM-001"
     },
     {
@@ -88117,7 +88549,7 @@
       "field": "limitations_ar",
       "token": "2026",
       "category": "GOVERNED_OBJECT_SOURCE_CLOSED",
-      "context": "ليست هذه النسبة معدلًا لعام 2026، ولا يمكن تجزئتها أو إسقاطها على المحافظات. وليست نسبة من يملكون حسابًا مصرفيًا فحسب، إذ تُحتسب أيضًا الحسابات لدى المؤسسات المالية الأخرى والاستخدام الشخصي لخدمة أموال عبر الهاتف المحمول. | يستبعد إطار المسح مناطق يقطنها نحو 23% من السكان، كما استُبدل أكثر من ربع وحدات المعاينة الأولية.",
+      "context": "ليست هذه النسبة معدلًا لعام 2026، ولا يمكن تجزئتها أو إسقاطها على المحافظات. وليست نسبة من يملكون حسابًا مصرفيًا فحسب، إذ تُحتسب أيضًا الحسابات لدى المؤسسات المالية الأخرى والاستخدام الشخصي لخدمة أموال عبر الهاتف المحمول. | يستبعد إطار المسح مناطق يقطنها نحو 23% من السكان، كما استُبدل أكثر من ربع وحدات المعاينة الأولية. ورقم الاقتصادات منخفضة الدخل للسياق فقط، وليس معيارًا ولا هدفًا ولا ترتيبًا: فهو متوسط لاقتصادات ذات ظروف متباينة جدًا، ويشمل اليمن نفسه، ويستند إلى تصنيف الدخل المعتمد في قاعدة بيانات Global Findex 2025، في حين يقتصر رقم اليمن على المناطق التي بلغها المسح.",
       "source_object": "CLM-001"
     },
     {
@@ -88126,7 +88558,16 @@
       "field": "limitations_ar",
       "token": "23%",
       "category": "GOVERNED_OBJECT_SOURCE_CLOSED",
-      "context": "ليست هذه النسبة معدلًا لعام 2026، ولا يمكن تجزئتها أو إسقاطها على المحافظات. وليست نسبة من يملكون حسابًا مصرفيًا فحسب، إذ تُحتسب أيضًا الحسابات لدى المؤسسات المالية الأخرى والاستخدام الشخصي لخدمة أموال عبر الهاتف المحمول. | يستبعد إطار المسح مناطق يقطنها نحو 23% من السكان، كما استُبدل أكثر من ربع وحدات المعاينة الأولية.",
+      "context": "ليست هذه النسبة معدلًا لعام 2026، ولا يمكن تجزئتها أو إسقاطها على المحافظات. وليست نسبة من يملكون حسابًا مصرفيًا فحسب، إذ تُحتسب أيضًا الحسابات لدى المؤسسات المالية الأخرى والاستخدام الشخصي لخدمة أموال عبر الهاتف المحمول. | يستبعد إطار المسح مناطق يقطنها نحو 23% من السكان، كما استُبدل أكثر من ربع وحدات المعاينة الأولية. ورقم الاقتصادات منخفضة الدخل للسياق فقط، وليس معيارًا ولا هدفًا ولا ترتيبًا: فهو متوسط لاقتصادات ذات ظروف متباينة جدًا، ويشمل اليمن نفسه، ويستند إلى تصنيف الدخل المعتمد في قاعدة بيانات Global Findex 2025، في حين يقتصر رقم اليمن على المناطق التي بلغها المسح.",
+      "source_object": "CLM-001"
+    },
+    {
+      "route": "/people/",
+      "surface": "governed_numeric_inventory",
+      "field": "limitations_ar",
+      "token": "2025",
+      "category": "GOVERNED_OBJECT_SOURCE_CLOSED",
+      "context": "ليست هذه النسبة معدلًا لعام 2026، ولا يمكن تجزئتها أو إسقاطها على المحافظات. وليست نسبة من يملكون حسابًا مصرفيًا فحسب، إذ تُحتسب أيضًا الحسابات لدى المؤسسات المالية الأخرى والاستخدام الشخصي لخدمة أموال عبر الهاتف المحمول. | يستبعد إطار المسح مناطق يقطنها نحو 23% من السكان، كما استُبدل أكثر من ربع وحدات المعاينة الأولية. ورقم الاقتصادات منخفضة الدخل للسياق فقط، وليس معيارًا ولا هدفًا ولا ترتيبًا: فهو متوسط لاقتصادات ذات ظروف متباينة جدًا، ويشمل اليمن نفسه، ويستند إلى تصنيف الدخل المعتمد في قاعدة بيانات Global Findex 2025، في حين يقتصر رقم اليمن على المناطق التي بلغها المسح.",
       "source_object": "CLM-001"
     },
     {
