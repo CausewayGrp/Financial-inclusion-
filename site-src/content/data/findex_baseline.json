@@ -405,6 +405,45 @@
       "Point estimate 9.3%; 95% confidence interval 7.4% to 11.3%; base 1,000 respondents; design effect 1.17. Reproduces the World Bank's published unrounded value for Yemen 2022 (indicator g20.any). CauseWay derivation: Hajek ratio estimator with Taylor-linearization variance on the published survey weight (wgt) only. The public-use file carries no PSU or stratum identifier, so clustering is not captured and the true interval may be wider, never narrower. A simple binomial standard error is not used. The respondent file is held under the World Bank Microdata Research License and is never redistributed, committed to this repository or published."
     ],
     [
+      "WB-FINDEX-OBS-2022-010",
+      "save.any.t.d",
+      "Saved any money in the past year",
+      "total",
+      2022,
+      21.6,
+      "percent of population ages 15+",
+      "World Bank Global Findex",
+      "https://data.worldbank.org/indicator/FX.OWN.TOTL.ZS?locations=YE",
+      "PUBLIC_PRIMARY_AGGREGATE",
+      "Weighted World Bank value for the 2021 Findex wave; the same series also carries a 2014 value (20.6%). A 95% interval of 18.4% to 24.9% is derived from the respondent file (CW-FINDEX-MOE-2022-015)."
+    ],
+    [
+      "WB-FINDEX-OBS-2022-011",
+      "borrow.any.t.d",
+      "Borrowed any money in the past year",
+      "total",
+      2022,
+      51.3,
+      "percent of population ages 15+",
+      "World Bank Global Findex",
+      "https://data.worldbank.org/indicator/FX.OWN.TOTL.ZS?locations=YE",
+      "PUBLIC_PRIMARY_AGGREGATE",
+      "Weighted World Bank value for the 2021 Findex wave; the same series also carries a 2014 value (66.0%), which is not the 65.9% printed on the World Bank's own 2014 country page - see finding FC-A-04. A 95% interval of 47.1% to 55.5% is derived from the respondent file (CW-FINDEX-MOE-2022-016)."
+    ],
+    [
+      "WB-FINDEX-OBS-2022-012",
+      "g20.any",
+      "Made or received a digital payment",
+      "total",
+      2022,
+      9.3,
+      "percent of population ages 15+",
+      "World Bank Global Findex",
+      "https://data.worldbank.org/indicator/FX.OWN.TOTL.ZS?locations=YE",
+      "PUBLIC_PRIMARY_AGGREGATE",
+      "Weighted World Bank value for the 2021 Findex wave; the same series also carries a 2014 value (4.4%). A 95% interval of 7.4% to 11.3% is derived from the respondent file (CW-FINDEX-MOE-2022-017)."
+    ],
+    [
       "WB-FINDEX-CURRENTNESS-2025-001",
       "FINDEX_EDITION",
       "Current Global Findex edition and Yemen observation coverage",

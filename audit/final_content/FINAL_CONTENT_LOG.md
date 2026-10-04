@@ -79,3 +79,56 @@ margin of error); remittance-channel shares (see the finding below).
 | FC-A-01 | Five records and one page section said no weighted value later than 2014 exists for saving and borrowing. The World Bank publishes 2022 values for both (`save.any.t.d` 21.6%, `borrow.any.t.d` 51.3%), and this derivation reproduces them exactly. The statement was false. | Fixed Master-first in FC-2 |
 | FC-A-02 | The World Bank's published indicator `fin29` ("Received domestic remittances: into an account") prints **0.000000** for Yemen 2022, while the respondent file records 39 respondents answering yes (2.3% of adults weighted, 7.1% of recipients). A printed zero in the publisher's own series is not a measured zero. | Not published; recorded here and carried to the handover. No remittance-channel share is published from this wave. |
 | FC-A-03 | `fin22a` as the World Bank publishes it (1.79%) is a composite that includes mobile money; the single microdata variable of the same name gives 1.29%. A definitional difference, not a defect. | No change; recorded so the two are never equated |
+
+### FC-2 · source locators (finding FC-2:A2-LOCATORS)
+
+Every locator written was opened from this session on 4 October 2026 and its status, content type and byte size
+observed; every document date and issue number recorded was read off the document itself.
+
+| # | What the sweep found | Done |
+|---|---|---|
+| 1 | `SRC-CBY-SANAA-C14-2024` pointed at the **wrong document**: not Circular No. 14 of 2024 but the 537-page final report of the UN Panel of Experts on Yemen (UN doc S/2024/731, 11 October 2024), on a mirror. The circular is *inside* it, reproduced as an image at printed page 114, "Figure 28.2 — Circular No 14 dated 26 March 2024 issued by CBY, Sana'a", captioned "Source: Panel". | Locator moved to the UN's own address; the record states the page the circular is reproduced on, so a reader reaches a document that really contains it. No public locator for the circular itself could be opened: the Sana'a bank's own domain is unreachable from here, and **cbyemen.com has been repurposed and now serves an unrelated commercial site — it must never be cited.** |
+| 2 | `SRC-CBY-SANAA-C12-2024`'s locator returns **HTTP 404** (observed twice). Not on the owner's list; the sweep found it. | Replaced with the working address on the same host (200, 3-page PDF). |
+| 3 | All 686 observations of the CBY monetary series traced to **one** source record — the May 2026 issue — so a reader checking a 2021 or 2022 monthly value was sent to a document published four years later. | The series' own index page, the bank's regulations and publications pages, and the **thirteen 2021–2022 issues** now stand beside it (nineteen addresses, all opened). Issue numbers read from the documents; **May 2022 prints none, so none is claimed for it.** |
+| 4 | **The brief's premise was partly out of date.** The five SFD newsletters of 2012–2020 and IGC "From cash to capital" are *already* in the Source Library — twelve SFD records (`SRC-SFD-Q1-2012-001` … `SRC-SFD-Q4-2020-001`) and `SRC-IGC-AIDDATA-REMIT-YEM-2026`. Edition 1 or 2 had closed them. | Not duplicated. The IGC record held only its landing page, so the two documents behind it (a 90-page final report and a 12-page policy brief, both opened) were added to it. |
+| 5 | The two Yemen e-money and microfinance-bank papers were genuinely missing. | Added as `SRC-SANAA-CTR-EMONEY-2022` and `SRC-SANAA-CTR-MFB-2024`, with the titles, issuing bodies and dates printed on their own pages. |
+| 6 | **Most CBY-Aden documents print no date of their own** — only a period or a year. | Checked one by one; no date was invented. Where a date is recorded it is printed on the document. |
+
+**Left out, with the reason** (all carried to `docs/HANDOVER_TO_DEVELOPER.md`): the SDRPY deposit notice — sdrpy.gov.sa
+could not be opened at all (TLS failure on every attempt), and the Saudi Press Agency item that reports the deposit
+opens but renders its body in JavaScript, so only its headline could be read; the amount, date and recipient were not
+read in the original and **nothing is published from it**. Same reason, different wall: the OECD youth paper, the World
+Bank FASTT paper and the UNDP FMIIP project page each answer an automated request with a bot challenge.
+
+### FC-3 / FC-3b · a false currentness claim removed (finding FC-A-01)
+
+Five records and one page section said, in both languages, that no weighted value later than 2014 existed for saving,
+borrowing and domestic remittances, and `/people/` headed the section "Saving and borrowing tell a different — older —
+story". **That was false**, and the FC-1 reconciliation exposed it: the World Bank publishes 2022 values in the very
+series this resource cites, and the respondent file reproduces each exactly.
+
+`CLM-026` was the record that said these estimates were unpublished, and named three preconditions: authorized
+respondent-level data, the correct survey weights, and successful reproduction of the official benchmark values.
+**All three are now met**, so that record carries the three published values with their derived intervals and keeps the
+other 29 measures of its panel explicitly pending. `/people/` leads with them and keeps the 2014 source-and-method
+detail below, named as 2014 and explicitly not subtracted from them.
+
+Three restraints, each deliberate:
+
+1. **No 2014 → 2022 difference is computed.** The 2014 values were read from the Little Data Book 2015, p. 160, and the
+   World Bank's current database gives 66.0% for 2014 borrowing where the printed page gives 65.9%. Subtracting a 2022
+   database value from a 2014 printed-page value would manufacture a change out of a revision (finding FC-A-04).
+2. **No domestic-remittance value is published for 2022.** The World Bank's current series for received domestic
+   remittances carries 2022 (31.9%, reproduced exactly) but **no 2014 value at all**, while this resource's 2014 figure
+   comes from the country profile. A series that does not hold the earlier year cannot establish a change against it.
+3. **A digital payment is not account use.** `VIS-FINDEX-ACCESS-USE` said no digital-use value exists; a
+   digital-*payment* value now does, and the record says it is a different measure, because a payment can be made or
+   received without an account. The access/use ladder is unchanged.
+
+FC-3b exists because two steps of FC-3 — the `/people/` section and the three published observation rows — were lost
+when that script was restructured mid-session and did not run. FC-3's own ledger shows the gap. Nothing in FC-3 was
+undone.
+
+| # | Finding | Disposition |
+|---|---|---|
+| FC-A-04 | The World Bank's 2014 value for borrowing any money is 65.982360 in its current database (66.0 at one decimal) but 65.9 on its own printed 2014 country page. Both are the publisher's; they disagree. | Each record keeps the value from the source it was read in, and no difference between the two vintages is computed. Recorded, not repaired. |

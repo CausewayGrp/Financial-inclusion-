@@ -24,8 +24,8 @@ authority; everything else here is derived from it, implements it, or records ho
 | **Now** | **The release candidate.** Pull request #9 (branch `code/release-candidate-fixes`) carries the owner's decisions of 2 and 3 October 2026 ([`audit/OWNER_DECISIONS_2026-10-02.md`](audit/OWNER_DECISIONS_2026-10-02.md)) and the after-merge conditions of pull request #8: the Master transactions RC-1 … RC-19 (RC-19 is the fix batch from the independent review of `70398d1`; the table in the pull request and [`docs/CHANGELOG.md`](docs/CHANGELOG.md)), the base path for the decided address, the presentation gate RC-1115, and the DigitalOcean hosting route ([`docs/RELEASE_RUNBOOK.md`](docs/RELEASE_RUNBOOK.md)). The brief: [`audit/release_candidate/INSTRUCTIONS.md`](audit/release_candidate/INSTRUCTIONS.md). The Design programme is complete (D0–D7, pull request #7; the owner's D7 acceptance of 2 October 2026) and the production runtime is merged (pull request #8, `38a9a97`) — see [Design programme](#design-programme--current-state) |
 | **Next** | A further independent review of pull request #9. Once it lands, what remains is release-time only ([`docs/RELEASE_RUNBOOK.md`](docs/RELEASE_RUNBOOK.md) steps 1–14; [`FINAL_OPEN_ITEMS_REGISTER.md`](FINAL_OPEN_ITEMS_REGISTER.md) §2): the DigitalOcean account, registry and token, the public origin, the corporate proxy, counsel's confirmation of the licence text, the corrections responder, the currentness re-run at the release date, the live header and in-country checks, and the owner's release acceptance |
 | **Owner actions** | Push the two checkpoint tags and delete six merged branches ([below](#checkpoints-and-tags)); supply the release inputs of [`docs/RELEASE_RUNBOOK.md`](docs/RELEASE_RUNBOOK.md) and decide the OWNER_INPUT and RELEASE_ONLY items in [`FINAL_OPEN_ITEMS_REGISTER.md`](FINAL_OPEN_ITEMS_REGISTER.md) |
-| **Production Master** | `authority/Yemen_Financial_Inclusion_Evidence_Master.xlsx` · SHA-256 `2713c086b7f98c0145e48a21d31812cdefebef7e90cd1364de51954b078e968e` |
-| **Page Specs** | `site-src/content/page_specs.json` · SHA-256 `5821a53750083a2e64eeab8674fd0f01970e8b4e2dcd61c6015e8a6b2ad373da` |
+| **Production Master** | `authority/Yemen_Financial_Inclusion_Evidence_Master.xlsx` · SHA-256 `fdb24bdfeae5c2604e326dd19effb4d79a783d44272f4dc08da2373979893999` |
+| **Page Specs** | `site-src/content/page_specs.json` · SHA-256 `6c1d39df01cc31240f14ddab51f7cd761536a700f0328f7972fcaaee8b51be7b` |
 | **Logo authority** | `site-src/assets/CauseWay_Master_Logo.png` · SHA-256 `5830163d…` (full value: `logo_sha256` in [`FINAL_REPOSITORY_MANIFEST.json`](FINAL_REPOSITORY_MANIFEST.json)); never redrawn, recoloured, cropped or regenerated |
 | **Last state OpenAI reviewed** | Commit `f726bda`, tree byte-identical to `…TRANCHE_C_COMPLETE_READING_HOLD.zip` (SHA-256 `63612dea…`); accepted 26 September 2026 |
 | **Currentness cut-off** | 3 October 2026 for the watch points re-read in the release-candidate sweep ([`audit/release_candidate/ORIGINAL_SOURCE_VERIFICATION.md`](audit/release_candidate/ORIGINAL_SOURCE_VERIFICATION.md) §3–4); 26 September 2026 for the rest ([`audit/FINAL_CURRENTNESS_CUTOFF.md`](audit/FINAL_CURRENTNESS_CUTOFF.md)) |
@@ -150,9 +150,9 @@ Master; the validator checks every figure below against it. Counts are an invent
   rendered).
 - 10 Readings; 10 Measurement priorities; 11 governed entry questions.
 - 36 governed visual contracts, each with a design tier in `site-src/content/visuals/visual_design_contracts.json`.
-- 165 source records, of which 156 expose a public original locator; 28 curated resource cards.
+- 167 source records, of which 158 expose a public original locator; 28 curated resource cards.
 - 23 documented chronology events (the analytical rule YSC-020 is not counted).
-- 438 public search records.
+- 440 public search records.
 
 ## Decisions that shape everything here
 

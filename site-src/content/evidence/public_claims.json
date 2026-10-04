@@ -685,16 +685,16 @@
     "claim_type": "DEMAND_PANEL_STATE",
     "headline_en": "Demand-side measures defined; custom estimates not yet published",
     "headline_ar": "مقاييس جانب الطلب محددة، والتقديرات المخصصة لم تُنشر بعد",
-    "copy_en": "A 32-metric demand-side panel has been specified across access, barriers, digital use, saving, borrowing, resilience, remittances, income flows, financial worry and connectivity. Custom weighted estimates are not published yet because they require authorized respondent-level data, correct survey weights and successful reproduction of the official benchmark values.",
-    "copy_ar": "حُدِّدت مجموعة من 32 مقياسًا لجانب الطلب تغطي الوصول والعوائق والاستخدام الرقمي والادخار والاقتراض والقدرة على الصمود والحوالات وتدفقات الدخل والقلق المالي والاتصال. ولم تُنشر التقديرات الموزونة المخصصة بعد، لأنها تتطلب بيانات على مستوى المستجيبين مصرحًا باستخدامها، وأوزان المسح الصحيحة، وإعادة إنتاج القيم المرجعية الرسمية بنجاح.",
+    "copy_en": "A 32-metric demand-side panel has been specified across access, barriers, digital use, saving, borrowing, resilience, remittances, income flows, financial worry and connectivity. Three of its measures now have published values for the 2021 wave, each reproduced from the respondent file: 21.6% of adults saved any money in the past year, 51.3% borrowed any money, and 9.3% made or received a digital payment. The other measures remain unpublished: a published value to reproduce is what they lack, not access to the data.",
+    "copy_ar": "حُدِّدت مجموعة من 32 مقياسًا لجانب الطلب تغطي الوصول والعوائق والاستخدام الرقمي والادخار والاقتراض والقدرة على الصمود والحوالات وتدفقات الدخل والقلق المالي والاتصال. وأصبحت لـسـتة من مقاييسها — بل لـثلاثة منها — قيم منشورة لموجة 2021، أُعيد احتساب كل منها من ملف المستجيبين: فقد ادخر 21.6% من البالغين أي مبلغ خلال السنة الماضية، واقترض 51.3% أي مبلغ، وأجرى 9.3% مدفوعة رقمية أو تلقاها. وتبقى المقاييس الأخرى غير منشورة: فما ينقصها قيمة منشورة يُعاد احتسابها، لا الوصول إلى البيانات.",
     "evidence_badge": "ANALYTIC_CONTRACT_PLUS_OPEN_MICRODATA_PENDING",
     "evidence_inputs": [
       "85_FINDEX_PANEL_CATALOG",
       "86_FINDEX_SUBGROUP_MATRIX",
       "89_FINDEX_MICRODATA_GATE"
     ],
-    "does_not_prove_en": "The 32 specified measures are planned, not measured: none is yet a published indicator, because the weighted estimates have not been reproduced and checked against official benchmarks.",
-    "does_not_prove_ar": "المقاييس المحددة، وعددها 32 مقياسًا، مخططة وليست مقاسة: فلا يمثل أي منها مؤشرًا منشورًا بعد، لأن تقديراتها الموزونة لم يُعَد إنتاجها ولم يُتحقق منها مقابل القيم المرجعية الرسمية.",
+    "does_not_prove_en": "Twenty-nine of the 32 specified measures are planned, not measured: none of them is a published indicator, because there is no published value for this wave to reproduce a weighted estimate against.",
+    "does_not_prove_ar": "تسعة وعشرون من المقاييس المحددة البالغة 32 مخططة وليست مقاسة: فلا يمثل أي منها مؤشرًا منشورًا، لأنه لا توجد قيمة منشورة لهذه الموجة يُقارن بها التقدير الموزون.",
     "change_trigger_en": "This record is updated when an authoritative source is revised or replaced, a newer comparable observation becomes available, the definition, population or method changes, or the conditions for public use change.",
     "change_trigger_ar": "يُحدَّث هذا السجل عند مراجعة المصدر المعتمد أو استبداله، أو توفر مشاهدة أحدث قابلة للمقارنة، أو تغير التعريف أو المجتمع أو الطريقة، أو تغير شروط الاستخدام العام.",
     "public_routes": [

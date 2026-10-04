@@ -1704,8 +1704,8 @@
     "route": "/people/",
     "section_order": 6,
     "section_role": "Analysis",
-    "heading_en": "Saving and borrowing tell a different — older — story",
-    "body_en": "In the 2014 World Bank weighted country profile, 65.9% of adults reported borrowing any money, including 51.7% from family or friends, 15.0% from a private informal lender and 0.4% from a financial institution. Separately, 20.6% reported saving any money, including 0.9% at a financial institution and 4.5% through a savings club or a person outside the family. The categories are not additive, and each percentage applies to the all-adult base used by that question.",
+    "heading_en": "Saving, borrowing and digital payments in the same wave",
+    "body_en": "The same 2021 wave measures more than account ownership. In it, 21.6% of adults reported saving any money in the past year (95% interval 18.4% to 24.9%), 51.3% reported borrowing any money (47.1% to 55.5%) and 9.3% reported making or receiving a digital payment (7.4% to 11.3%). Borrowing is far more common than saving, and both are far more common than having an account — borrowing here includes borrowing from family or friends, which needs no provider at all. The intervals are derived by this resource from the survey's own weights; the World Bank publishes none. For the sources people borrowed from and the methods they saved by, the latest values this resource holds are older, from the World Bank's 2014 country profile: 51.7% of adults borrowed from family or friends, 15.0% from a private informal lender and 0.4% from a financial institution, while 0.9% saved at a financial institution and 4.5% through a savings club or a person outside the family. Those categories are not additive, each percentage applies to the all-adult base used by its question, and they are not subtracted from the 2022 figures above.",
     "heading_ar": null,
     "body_ar": null
   },
@@ -1715,8 +1715,8 @@
     "section_role": "التحليل",
     "heading_en": null,
     "body_en": null,
-    "heading_ar": "الاقتراض والادخار يقدمان صورة أخرى — لكنها أقدم",
-    "body_ar": "في الملف القطري الموزون للبنك الدولي لعام 2014، أفاد 65.9% من البالغين بأنهم اقترضوا أي مبلغ، واقترض 51.7% من جميع البالغين من الأسرة أو الأصدقاء، و15.0% من مقرض خاص غير رسمي، و0.4% من مؤسسة مالية. وبشكل منفصل، أفاد 20.6% بأنهم ادخروا أي مبلغ، وادخر 0.9% من جميع البالغين لدى مؤسسة مالية و4.5% عبر جمعية ادخار أو شخص من خارج الأسرة. وهذه الفئات غير قابلة للجمع، وكل نسبة تنطبق على قاعدة جميع البالغين المستخدمة في السؤال المعني."
+    "heading_ar": "الادخار والاقتراض والمدفوعات الرقمية في الموجة نفسها",
+    "body_ar": "تقيس موجة 2021 نفسها أكثر من امتلاك الحساب. ففيها أفاد 21.6% من البالغين بأنهم ادخروا أي مبلغ خلال السنة الماضية (فترة ثقة 95% من 18.4% إلى 24.9%)، وأفاد 51.3% بأنهم اقترضوا أي مبلغ (من 47.1% إلى 55.5%)، و9.3% بأنهم أجروا مدفوعة رقمية أو تلقوها (من 7.4% إلى 11.3%). والاقتراض أشيع بكثير من الادخار، وكلاهما أشيع بكثير من امتلاك حساب — فالاقتراض هنا يشمل الاقتراض من الأسرة أو الأصدقاء وهو لا يحتاج مقدم خدمة أبدًا. والفترات يستخرجها هذا المورد من أوزان المسح نفسها؛ ولا ينشر البنك الدولي أي منها. أما جهات الاقتراض وأساليب الادخار فأحدث ما يحمله هذا المورد عنها أقدم، من الملف القطري للبنك الدولي لعام 2014: فقد اقترض 51.7% من البالغين من الأسرة أو الأصدقاء، و15.0% من مقرض خاص غير رسمي، و0.4% من مؤسسة مالية، بينما ادخر 0.9% لدى مؤسسة مالية و4.5% عبر جمعية ادخار أو شخص من خارج الأسرة. وهذه الفئات غير قابلة للجمع، وكل نسبة تنطبق على قاعدة جميع البالغين المستخدمة في سؤالها، ولا تُطرح من أرقام 2022 أعلاه."
   },
   {
     "route": "/people/",
@@ -3829,9 +3829,9 @@
     "section_order": 1,
     "section_role": null,
     "heading_en": null,
-    "body_en": "A 32-metric demand-side panel has been specified across access, barriers, digital use, saving, borrowing, resilience, remittances, income flows, financial worry and connectivity. Custom weighted estimates are not published yet because they require authorized respondent-level data, correct survey weights and successful reproduction of the official benchmark values.",
+    "body_en": "A 32-metric demand-side panel has been specified across access, barriers, digital use, saving, borrowing, resilience, remittances, income flows, financial worry and connectivity. Three of its measures now have published values for the 2021 wave, each reproduced from the respondent file: 21.6% of adults saved any money in the past year, 51.3% borrowed any money, and 9.3% made or received a digital payment. The other measures remain unpublished: a published value to reproduce is what they lack, not access to the data.",
     "heading_ar": null,
-    "body_ar": "حُدِّدت مجموعة من 32 مقياسًا لجانب الطلب تغطي الوصول والعوائق والاستخدام الرقمي والادخار والاقتراض والقدرة على الصمود والحوالات وتدفقات الدخل والقلق المالي والاتصال. ولم تُنشر التقديرات الموزونة المخصصة بعد، لأنها تتطلب بيانات على مستوى المستجيبين مصرحًا باستخدامها، وأوزان المسح الصحيحة، وإعادة إنتاج القيم المرجعية الرسمية بنجاح."
+    "body_ar": "حُدِّدت مجموعة من 32 مقياسًا لجانب الطلب تغطي الوصول والعوائق والاستخدام الرقمي والادخار والاقتراض والقدرة على الصمود والحوالات وتدفقات الدخل والقلق المالي والاتصال. وأصبحت لـسـتة من مقاييسها — بل لـثلاثة منها — قيم منشورة لموجة 2021، أُعيد احتساب كل منها من ملف المستجيبين: فقد ادخر 21.6% من البالغين أي مبلغ خلال السنة الماضية، واقترض 51.3% أي مبلغ، وأجرى 9.3% مدفوعة رقمية أو تلقاها. وتبقى المقاييس الأخرى غير منشورة: فما ينقصها قيمة منشورة يُعاد احتسابها، لا الوصول إلى البيانات."
   },
   {
     "route": "/evidence/CLM-026/",
@@ -3865,9 +3865,9 @@
     "section_order": 1,
     "section_role": null,
     "heading_en": null,
-    "body_en": "In the 2021 Global Findex wave for Yemen (fieldwork 7 November 2022 to 9 January 2023), 11.9% of adults aged 15 and over in the areas the survey covered had an account. Weighted estimates of how many adults used an account, or used one digitally, have not yet been produced for this wave, so ownership is the only level available; owning an account does not show that it is used.",
+    "body_en": "In the 2021 Global Findex wave for Yemen (fieldwork 7 November 2022 to 9 January 2023), 11.9% of adults aged 15 and over in the areas the survey covered had an account. Weighted estimates of how many adults used an account, or used one digitally, have not been produced for this wave, so ownership is the only level of this ladder available; owning an account does not show that it is used. A different measure of the same wave is published: 9.3% of adults made or received a digital payment (95% interval 7.4% to 11.3%). That is not account use, because a payment can be made or received without an account.",
     "heading_ar": null,
-    "body_ar": "في موجة 2021 من المؤشر العالمي للشمول المالي (Global Findex) الخاصة باليمن (العمل الميداني من 7 نوفمبر 2022 إلى 9 يناير 2023)، بلغت نسبة البالغين بعمر 15 سنة فأكثر في المناطق التي شملها المسح ممن يملكون حسابًا 11.9%. ولم تُنتج بعد لهذه الموجة تقديرات موزونة لنسبة من استخدموا حسابًا أو استخدموه رقميًا، لذلك يبقى امتلاك الحساب المستوى الوحيد المتاح؛ وامتلاك الحساب لا يدل على استخدامه."
+    "body_ar": "في موجة 2021 من المؤشر العالمي للشمول المالي (Global Findex) الخاصة باليمن (العمل الميداني من 7 نوفمبر 2022 إلى 9 يناير 2023)، بلغت نسبة البالغين بعمر 15 سنة فأكثر في المناطق التي شملها المسح ممن يملكون حسابًا 11.9%. ولم تُنتج لهذه الموجة تقديرات موزونة لنسبة من استخدموا حسابًا أو استخدموه رقميًا، لذلك يبقى امتلاك الحساب المستوى الوحيد المتاح في هذا التدرج؛ وامتلاك الحساب لا يدل على استخدامه. ويُنشر مقياس مختلف من الموجة نفسها: فقد أجرى 9.3% من البالغين مدفوعة رقمية أو تلقوها (فترة ثقة 95% من 7.4% إلى 11.3%). وهذا ليس استخدامًا للحساب، لأن المدفوعة الرقمية يمكن إجراءها أو تلقيها دون حساب."
   },
   {
     "route": "/evidence/VIS-FINDEX-ACCESS-USE/",
@@ -4045,9 +4045,9 @@
     "section_order": 1,
     "section_role": null,
     "heading_en": null,
-    "body_en": "The latest weighted evidence differs by financial function: account ownership has a value from the 2021 Findex wave (11.9%, reported for 2022), while the latest weighted values for saving, borrowing and domestic remittances date from 2014 (20.6% of adults saved any money, 65.9% borrowed any money and 18.3% received domestic remittances), and weighted estimates of resilience and of the reasons for not having an account have not yet been calculated for the 2021 wave.",
+    "body_en": "The latest weighted evidence differs by financial function: the 2021 Findex wave gives 2022 values for account ownership (11.9%), for saving (21.6%) and borrowing (51.3%) any money and for making or receiving a digital payment (9.3%); the latest weighted value this resource publishes for domestic remittances is from 2014 (18.3% received them), because the World Bank's current series for that measure holds no 2014 value to read it against; and weighted estimates of resilience and of the reasons for not having an account have not yet been calculated for the 2021 wave.",
     "heading_ar": null,
-    "body_ar": "يختلف أحدث دليل موزون بحسب الوظيفة المالية: فلامتلاك الحساب قيمة من موجة Findex 2021 (11.9%، منشورة لسنة 2022)، بينما تعود أحدث القيم الموزونة للادخار والاقتراض والحوالات المحلية إلى 2014 (ادخر 20.6% من البالغين أي مبلغ، واقترض 65.9% أي مبلغ، وتلقى 18.3% حوالات محلية)، ولا تزال تقديرات الصمود المالي وأسباب عدم امتلاك الحساب لموجة 2021 بانتظار الاحتساب."
+    "body_ar": "يختلف أحدث دليل موزون بحسب الوظيفة المالية: فموجة Findex 2021 تعطي قيماً لعام 2022 لامتلاك الحساب (11.9%)، ولادخار أي مبلغ (21.6%) واقتراضه (51.3%)، ولإجراء مدفوعة رقمية أو تلقيها (9.3%)؛ أما أحدث قيمة موزونة ينشرها هذا المورد للحوالات المحلية فهي من 2014 (تلقاها 18.3%)، لأن سلسلة البنك الدولي الحالية لهذا المقياس لا تحمل قيمة لعام 2014 تُقارن بها؛ ولا تزال تقديرات الصمود المالي وأسباب عدم امتلاك الحساب لموجة 2021 بانتظار الاحتساب."
   },
   {
     "route": "/evidence/VIS-DEMAND-VINTAGE-LADDER/",
