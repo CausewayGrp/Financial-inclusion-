@@ -1,0 +1,288 @@
+{
+ "transaction": "E2-7c",
+ "summary": "E2-7 independent review folded in: wording, the RPW outlier at both amounts, Arabic labels, SFD 1997 split, CLM-032 vintages",
+ "input_master_sha256": "7222cb53d2ce829832866db2304cfa66f5b47013a9adf4ddf81197c8b07ef292",
+ "output_master_sha256": "f3e06fb935d0181211cc73f648eff588388ddda41a4c8f7eb2406b8396333514",
+ "cells_written": 31,
+ "changes": [
+  {
+   "finding": "E2-7c:REVIEW",
+   "sheet": "06_EVIDENCE_OBJECTS",
+   "row": 110,
+   "col": 16,
+   "field": "CLM-059.limitations_en",
+   "old": "Programme-supported MSMEs are not the national MSME universe, programme disbursement is not financial-sector lending, and programme outputs are not national or causal outcomes. The 2021–2024 total is not a count of unique firms. A guarantee volume is not firms' access to finance: guaranteed transactions are not unique firms, and guarantees and loan principal show what the programme backed, not how many firms could borrow, on what terms, or what share of MSME lending they represent. The SMEPS and YLG figures come from different sources, periods and units (firms supported vs guaranteed transactions); they must not be added, and the evidence base does not establish whether they overlap. | Programme figures count the programme's own participants and disbursements; they are not drawn from a national sample of firms. The USD 54.7 million 2021–2024 total is disbursed funding as SMEPS reports it; it is not shown by an independent account.",
+   "new": "Programme-supported MSMEs are not the national MSME universe, programme disbursement is not financial-sector lending, and programme outputs are not national or causal outcomes. The 2021–2024 total is not a count of unique firms. A guarantee volume is not firms' access to finance: guaranteed transactions are not unique firms, and guarantees and loan principal show what the programme backed, not how many firms could borrow, on what terms, or what share of MSME lending they represent. The SMEPS and YLG figures come from different sources, periods and units (firms supported vs guaranteed transactions); they must not be added, and the evidence base does not establish whether they overlap. | Programme figures count the programme's own participants and disbursements; they are not drawn from a national sample of firms. The USD 54.7 million 2021–2024 total is disbursed funding as SMEPS reports it; no independent source confirms it."
+  },
+  {
+   "finding": "E2-7c:REVIEW",
+   "sheet": "06_EVIDENCE_OBJECTS",
+   "row": 110,
+   "col": 17,
+   "field": "CLM-059.limitations_ar",
+   "old": "ليست المنشآت التي دعمها البرنامج مجموعَ المنشآت الأصغر والصغيرة والمتوسطة على المستوى الوطني، وليس صرف البرنامج إقراضًا من القطاع المالي، وليست المخرجات البرنامجية نتائج وطنية أو سببية. ولا يمثل إجمالي 2021–2024 عددًا للمنشآت الفريدة. وليس حجم الضمانات وصولًا للمنشآت إلى التمويل: فالمعاملات المضمونة ليست منشآت فريدة، والضمانات وأصل القروض يبينان ما دعمه البرنامج، لا عدد المنشآت التي تمكنت من الاقتراض ولا شروطه ولا حصته من إقراض المنشآت الأصغر والصغيرة والمتوسطة. وتأتي أرقام SMEPS وأرقام YLG من مصادر وفترات ووحدات مختلفة (منشآت مدعومة مقابل معاملات مضمونة)؛ فلا تُجمع، ولا تثبت قاعدة الأدلة ما إذا كانت تتداخل. | تحصي أرقام البرنامج المشاركين فيه وما صرفه، ولا تستند إلى عينة وطنية من المنشآت. وإجمالي 54.7 مليون دولار للفترة 2021–2024 تمويل مصروف كما تفيد به الوكالة، ولا يثبته حساب مستقل.",
+   "new": "ليست المنشآت التي دعمها البرنامج مجموعَ المنشآت الأصغر والصغيرة والمتوسطة على المستوى الوطني، وليس صرف البرنامج إقراضًا من القطاع المالي، وليست المخرجات البرنامجية نتائج وطنية أو سببية. ولا يمثل إجمالي 2021–2024 عددًا للمنشآت الفريدة. وليس حجم الضمانات وصولًا للمنشآت إلى التمويل: فالمعاملات المضمونة ليست منشآت فريدة، والضمانات وأصل القروض يبينان ما دعمه البرنامج، لا عدد المنشآت التي تمكنت من الاقتراض ولا شروطه ولا حصته من إقراض المنشآت الأصغر والصغيرة والمتوسطة. وتأتي أرقام SMEPS وأرقام YLG من مصادر وفترات ووحدات مختلفة (منشآت مدعومة مقابل معاملات مضمونة)؛ فلا تُجمع، ولا تثبت قاعدة الأدلة ما إذا كانت تتداخل. | تحصي أرقام البرنامج المشاركين فيه وما صرفه، ولا تستند إلى عينة وطنية من المنشآت. وإجمالي 54.7 مليون دولار للفترة 2021–2024 تمويل مصروف كما تفيد به الوكالة، ولا يؤكده مصدر مستقل."
+  },
+  {
+   "finding": "E2-7c:REVIEW",
+   "sheet": "06_EVIDENCE_OBJECTS",
+   "row": 110,
+   "col": 7,
+   "field": "CLM-059.summary_ar",
+   "old": "تفيد وكالة تنمية المنشآت الصغيرة والأصغر (SMEPS) بأنها دعمت في عام 2024 عددًا بلغ 8,217 منشأة من المنشآت الأصغر والصغيرة والمتوسطة، وصرفت 22,865,322 دولارًا. وللفترة 2021–2024 تفيد الوكالة بأن دعمها شمل 31,560 منشأة، وبإجمالي برامجي قدره 54.7 مليون دولار تفيد بأنه مصروف. وقد يحتسب إجمالي 2021–2024 المنشأة نفسها في أكثر من سنة، ولذلك لا يمثل عددًا للمنشآت الفريدة. وهذه نتائج برنامجية تبلغ عنها الوكالة نفسها، وتصف نطاق البرنامج وتمويله، لا انتشار المنشآت الأصغر والصغيرة والمتوسطة على المستوى الوطني ولا حجم الإقراض في القطاع المالي. وبصورة منفصلة، تفيد منظمة التعاون الاقتصادي والتنمية (OECD) بأن برنامج ضمان القروض اليمني (YLG)، الذي يقدم ضمانات جزئية للقروض التي تمنحها البنوك ومؤسسات التمويل الأصغر للمنشآت الأصغر والصغيرة والمتوسطة، بلغ عدد المعاملات التي ضمنها منذ عام 2017 ما مجموعه 5,731 معاملة، بضمانات تراكمية قدرها 42.8 مليون دولار بالقيمة الاسمية لأصل قروض قدره 63.6 مليون دولار.",
+   "new": "تفيد وكالة تنمية المنشآت الصغيرة والأصغر (SMEPS) بأنها دعمت في عام 2024 عددًا بلغ 8,217 منشأة من المنشآت الأصغر والصغيرة والمتوسطة، وصرفت 22,865,322 دولارًا. وللفترة 2021–2024 تفيد الوكالة بأن دعمها شمل 31,560 منشأة، وبأنها صرفت إجماليًا برامجيًا قدره 54.7 مليون دولار. وقد يحتسب إجمالي 2021–2024 المنشأة نفسها في أكثر من سنة، ولذلك لا يمثل عددًا للمنشآت الفريدة. وهذه نتائج برنامجية تبلغ عنها الوكالة نفسها، وتصف نطاق البرنامج وتمويله، لا انتشار المنشآت الأصغر والصغيرة والمتوسطة على المستوى الوطني ولا حجم الإقراض في القطاع المالي. وبصورة منفصلة، تفيد منظمة التعاون الاقتصادي والتنمية (OECD) بأن برنامج ضمان القروض اليمني (YLG)، الذي يقدم ضمانات جزئية للقروض التي تمنحها البنوك ومؤسسات التمويل الأصغر للمنشآت الأصغر والصغيرة والمتوسطة، بلغ عدد المعاملات التي ضمنها منذ عام 2017 ما مجموعه 5,731 معاملة، بضمانات تراكمية قدرها 42.8 مليون دولار بالقيمة الاسمية لأصل قروض قدره 63.6 مليون دولار."
+  },
+  {
+   "finding": "E2-7c:REVIEW",
+   "sheet": "06_EVIDENCE_OBJECTS",
+   "row": 71,
+   "col": 16,
+   "field": "VIS-REMITTANCE-COST.limitations_en",
+   "old": "These averages cover two corridors, two send amounts and formal products listed by Remittance Prices Worldwide; they are not a national average cost of remittances to Yemen and do not represent all providers, all remittances or informal channels. | Each average is specific to its send amount and can vary by provider, payment instrument, receiving method, fee and exchange-rate margin; each rests on few quotes (8 and 6), and one of the six United Arab Emirates quotes for US$200, at 22.71%, lifts that average well above the other five (2.97% to 5.25%).",
+   "new": "These averages cover two corridors, two send amounts and formal products listed by Remittance Prices Worldwide; they are not a national average cost of remittances to Yemen and do not represent all providers, all remittances or informal channels. | Each average is specific to its send amount and can vary by provider, payment instrument, receiving method, fee and exchange-rate margin; each rests on few quotes (8 for Saudi Arabia–Yemen, 6 for United Arab Emirates–Yemen), and a single United Arab Emirates quote, at 22.71% for US$200 and 20.24% for US$500, lifts both United Arab Emirates averages well above the other five quotes (2.97% to 5.25% for US$200; 2.26% to 3.12% for US$500)."
+  },
+  {
+   "finding": "E2-7c:REVIEW",
+   "sheet": "06_EVIDENCE_OBJECTS",
+   "row": 71,
+   "col": 17,
+   "field": "VIS-REMITTANCE-COST.limitations_ar",
+   "old": "تغطي هذه المتوسطات ممرين ومبلغي إرسال ومنتجات رسمية مدرجة في قاعدة Remittance Prices Worldwide؛ وهي ليست متوسطًا وطنيًا لتكلفة الحوالات إلى اليمن، ولا تمثل جميع مقدمي الخدمة أو جميع الحوالات أو القنوات غير الرسمية. | كل متوسط خاص بمبلغ الإرسال المحدد، وقد يختلف باختلاف مقدم الخدمة وأداة الدفع وطريقة الاستلام والرسوم وهامش سعر الصرف؛ ويستند كل متوسط إلى عروض قليلة (8 و6)، ويرفع عرضٌ واحد من عروض الإمارات الستة لمبلغ 200 دولار، قدره 22.71%، ذلك المتوسط كثيرًا فوق العروض الخمسة الأخرى (من 2.97% إلى 5.25%).",
+   "new": "تغطي هذه المتوسطات ممرين ومبلغي إرسال ومنتجات رسمية مدرجة في قاعدة Remittance Prices Worldwide؛ وهي ليست متوسطًا وطنيًا لتكلفة الحوالات إلى اليمن، ولا تمثل جميع مقدمي الخدمة أو جميع الحوالات أو القنوات غير الرسمية. | كل متوسط خاص بمبلغ الإرسال المحدد، وقد يختلف باختلاف مقدم الخدمة وأداة الدفع وطريقة الاستلام والرسوم وهامش سعر الصرف؛ ويستند كل متوسط إلى عدد قليل من عروض الأسعار (8 لممر السعودية–اليمن، و6 لممر الإمارات–اليمن)، ويرفع عرضٌ واحد من عروض الإمارات، قدره 22.71% لمبلغ 200 دولار و20.24% لمبلغ 500 دولار، متوسطَي الإمارات كليهما بفارق كبير فوق العروض الخمسة الأخرى (من 2.97% إلى 5.25% لمبلغ 200 دولار، ومن 2.26% إلى 3.12% لمبلغ 500 دولار)."
+  },
+  {
+   "finding": "E2-7c:REVIEW",
+   "sheet": "06_EVIDENCE_OBJECTS",
+   "row": 71,
+   "col": 14,
+   "field": "VIS-REMITTANCE-COST.method_en",
+   "old": "Averages published by the World Bank Remittance Prices Worldwide database on its Saudi Arabia–Yemen and United Arab Emirates–Yemen corridor pages ('Total Average', third quarter of 2025), for send amounts of US$200 and US$500, from standardized collection of provider price quotes. The corridor pages refuse automated requests; on 4 October 2026 each of the four averages was reproduced exactly as the simple average of the third-quarter 2025 quotes in the World Bank's Remittance Prices Worldwide quote-level dataset (8 quotes for Saudi Arabia–Yemen, 6 for United Arab Emirates–Yemen).",
+   "new": "Averages published by the World Bank Remittance Prices Worldwide database on its Saudi Arabia–Yemen and United Arab Emirates–Yemen corridor pages ('Total Average', third quarter of 2025), for send amounts of US$200 and US$500, from standardized collection of provider price quotes. The corridor pages refuse automated requests (on 4 October 2026); that day each of the four averages was reproduced, to the two decimals published, as the simple average of the third-quarter 2025 quotes in the World Bank's Remittance Prices Worldwide quote-level dataset (8 quotes for Saudi Arabia–Yemen, 6 for United Arab Emirates–Yemen)."
+  },
+  {
+   "finding": "E2-7c:REVIEW",
+   "sheet": "06_EVIDENCE_OBJECTS",
+   "row": 71,
+   "col": 15,
+   "field": "VIS-REMITTANCE-COST.method_ar",
+   "old": "متوسطات تنشرها قاعدة بيانات البنك الدولي لأسعار الحوالات حول العالم (Remittance Prices Worldwide) في صفحتي ممرَّي السعودية–اليمن والإمارات–اليمن («المتوسط الإجمالي» للربع الثالث من 2025)، لمبلغي إرسال قدرهما 200 و500 دولار، استنادًا إلى جمع موحّد لعروض أسعار مقدمي الخدمة. وترفض صفحتا الممرين الطلبات الآلية؛ وفي 4 أكتوبر 2026 أُعيد حساب كلٍّ من المتوسطات الأربعة فطابق المنشور، بوصفه المتوسط البسيط لعروض أسعار الربع الثالث من 2025 في مجموعة بيانات عروض الأسعار التفصيلية لقاعدة Remittance Prices Worldwide التابعة للبنك الدولي (8 عروض لممر السعودية–اليمن، و6 لممر الإمارات–اليمن).",
+   "new": "متوسطات تنشرها قاعدة بيانات البنك الدولي لأسعار الحوالات حول العالم (Remittance Prices Worldwide) في صفحتي ممرَّي السعودية–اليمن والإمارات–اليمن («المتوسط الإجمالي» للربع الثالث من 2025)، لمبلغي إرسال قدرهما 200 و500 دولار، استنادًا إلى جمع موحّد لعروض أسعار مقدمي الخدمة. وترفض صفحتا الممرين الطلبات الآلية (في 4 أكتوبر 2026)؛ وفي ذلك اليوم أُعيد حساب كلٍّ من المتوسطات الأربعة بوصفه المتوسط البسيط لعروض أسعار الربع الثالث من 2025 في مجموعة بيانات عروض الأسعار التفصيلية لقاعدة Remittance Prices Worldwide التابعة للبنك الدولي (8 عروض لممر السعودية–اليمن، و6 لممر الإمارات–اليمن)، فطابق القيمة المنشورة حتى منزلتين عشريتين."
+  },
+  {
+   "finding": "E2-7c:REVIEW",
+   "sheet": "06_EVIDENCE_OBJECTS",
+   "row": 92,
+   "col": 7,
+   "field": "CLM-049.summary_ar",
+   "old": "في 16 يوليو 2026 أعلن خبراء صندوق النقد الدولي والسلطات اليمنية التوصل إلى اتفاق على مستوى الخبراء بشأن سياسات وإصلاحات رئيسية يمكن أن يستند إليها برنامج مقترح مدته 18 شهرًا يراقبه خبراء صندوق النقد الدولي (SMP). وأوضح الصندوق أن الاتفاق يخضع لموافقة الإدارة ولن يترتب عليه نقاش في المجلس التنفيذي. وليس هذا ترتيب تمويل من الصندوق. وتعذّر على هذا المورد إعادة فتح البيان الصحفي لصندوق النقد الدولي في 4 أكتوبر 2026 (يرفض موقع الصندوق الطلبات الآلية)، فلم يُتحقق من التاريخ ومدة 18 شهرًا والوضع المذكور أعلاه في الأصل في هذه الطبعة.",
+   "new": "في 16 يوليو 2026 أعلن خبراء صندوق النقد الدولي والسلطات اليمنية التوصل إلى اتفاق على مستوى الخبراء بشأن سياسات وإصلاحات رئيسية يمكن أن يستند إليها برنامج مقترح مدته 18 شهرًا يراقبه خبراء صندوق النقد الدولي (SMP). وأوضح الصندوق أن الاتفاق يخضع لموافقة الإدارة ولن يترتب عليه نقاش في المجلس التنفيذي. وليس هذا ترتيب تمويل من الصندوق. وتعذّر على هذا المورد إعادة فتح البيان الصحفي لصندوق النقد الدولي في 4 أكتوبر 2026 (يرفض موقع الصندوق الطلبات الآلية)، فلم تُعَد في هذا الإصدار قراءةُ التاريخ ومدة الـ18 شهرًا ووضعِ الاتفاق المذكورة أعلاه في الأصل."
+  },
+  {
+   "finding": "E2-7c:REVIEW",
+   "sheet": "06_EVIDENCE_OBJECTS",
+   "row": 102,
+   "col": 18,
+   "field": "CLM-032.currentness_en",
+   "old": "The record covers reference years 2020 to 2025 as published in the 2022 to 2025 annual reports of the Central Bank of Yemen – Aden (CBY-Aden); the restatement concerns 2024, first published in the 2024 annual report and restated in the 2025 annual report. It should not be read as describing a later edition unless a newer annual report is published.",
+   "new": "The record covers reference years 2020 to 2025 as published in the 2022 to 2025 annual reports of the Central Bank of Yemen – Aden (CBY-Aden); the headline restatement concerns 2024, first published in the 2024 annual report and restated in the 2025 annual report; the values for 2021 and 2022 differ across the 2022, 2023, 2024 and 2025 reports. It should not be read as describing a later edition unless a newer annual report is published."
+  },
+  {
+   "finding": "E2-7c:REVIEW",
+   "sheet": "06_EVIDENCE_OBJECTS",
+   "row": 102,
+   "col": 19,
+   "field": "CLM-032.currentness_ar",
+   "old": "يغطي السجل السنوات المرجعية من 2020 إلى 2025 كما نُشرت في التقارير السنوية للبنك المركزي اليمني – عدن من 2022 إلى 2025؛ وتخص إعادة العرض عام 2024، الذي نُشر أولًا في التقرير السنوي 2024 ثم أُعيد عرضه في التقرير السنوي 2025. ولا يُقرأ السجل على أنه يصف نسخة لاحقة ما لم يُنشر تقرير سنوي أحدث.",
+   "new": "يغطي السجل السنوات المرجعية من 2020 إلى 2025 كما نُشرت في التقارير السنوية للبنك المركزي اليمني – عدن من 2022 إلى 2025؛ وتخص إعادة العرض الرئيسية عام 2024، الذي نُشر أولًا في التقرير السنوي 2024 ثم أُعيد عرضه في التقرير السنوي 2025؛ وتختلف قيمتا عامي 2021 و2022 بين تقارير 2022 و2023 و2024 و2025. ولا يُقرأ السجل على أنه يصف نسخة لاحقة ما لم يُنشر تقرير سنوي أحدث."
+  },
+  {
+   "finding": "E2-7c:REVIEW",
+   "sheet": "06_EVIDENCE_OBJECTS",
+   "row": 102,
+   "col": 6,
+   "field": "CLM-032.summary_en",
+   "old": "Annual reports of the Central Bank of Yemen – Aden (CBY-Aden) publish materially different remittance values for the same reference year. For 2024, the 2024 annual report gave USD 6,245 million, while the 2025 annual report restated 2024 at USD 3,422.16 million. This is a same-year restatement, not evidence of economic movement between years. The same holds further back: for 2021, the annual reports of 2022, 2023, 2024 and 2025 print USD 4,043, 5,400.0, 5,625 and 2,900.22 million; for 2022, USD 4,454, 6,000, 6,000 and 3,066.58 million.",
+   "new": "Annual reports of the Central Bank of Yemen – Aden (CBY-Aden) publish materially different remittance values for the same reference year. For 2024, the 2024 annual report gave USD 6,245 million, while the 2025 annual report restated 2024 at USD 3,422.16 million. This is a same-year restatement, not evidence of economic movement between years. The same holds further back. For reference year 2021, the 2022, 2023, 2024 and 2025 editions of the annual report give USD 4,043, 5,400.0, 5,625 and 2,900.22 million; for reference year 2022, they give USD 4,454, 6,000, 6,000 and 3,066.58 million. These are successive editions' values for one year, not a series over time."
+  },
+  {
+   "finding": "E2-7c:REVIEW",
+   "sheet": "06_EVIDENCE_OBJECTS",
+   "row": 102,
+   "col": 7,
+   "field": "CLM-032.summary_ar",
+   "old": "تنشر التقارير السنوية للبنك المركزي اليمني – عدن قيمًا مختلفة بصورة جوهرية للتحويلات الواردة في ميزان المدفوعات عن السنة المرجعية نفسها. فقد أورد التقرير السنوي 2024 قيمة عام 2024 عند 6,245 مليون دولار، بينما أعاد التقرير السنوي 2025 عرض عام 2024 عند 3,422.16 مليون دولار. وهذه إعادة عرض للسنة نفسها، وليست دليلًا على حركة اقتصادية بين عامين. ويصح ذلك على سنوات أسبق أيضًا: فلعام 2021 تطبع التقارير السنوية لأعوام 2022 و2023 و2024 و2025 القيم 4,043 و5,400.0 و5,625 و2,900.22 مليون دولار، ولعام 2022 القيم 4,454 و6,000 و6,000 و3,066.58 مليون دولار.",
+   "new": "تنشر التقارير السنوية للبنك المركزي اليمني – عدن قيمًا مختلفة بصورة جوهرية للتحويلات الواردة في ميزان المدفوعات عن السنة المرجعية نفسها. فقد أورد التقرير السنوي 2024 قيمة عام 2024 عند 6,245 مليون دولار، بينما أعاد التقرير السنوي 2025 عرض عام 2024 عند 3,422.16 مليون دولار. وهذه إعادة عرض للسنة نفسها، وليست دليلًا على حركة اقتصادية بين عامين. ويصح ذلك على سنوات أسبق أيضًا: فلسنة 2021 المرجعية تورد إصدارات التقرير السنوي لأعوام 2022 و2023 و2024 و2025 القيم 4,043 و5,400.0 و5,625 و2,900.22 مليون دولار، ولسنة 2022 المرجعية القيم 4,454 و6,000 و6,000 و3,066.58 مليون دولار. وهذه قيم إصدارات متعاقبة لسنة واحدة، لا سلسلة زمنية."
+  },
+  {
+   "finding": "E2-7c:REVIEW",
+   "sheet": "06_EVIDENCE_OBJECTS",
+   "row": 102,
+   "col": 16,
+   "field": "CLM-032.limitations_en",
+   "old": "The same-year revision is not an economic collapse and not a change between years. | The method reconstruction is strongly supported, but no public crosswalk states exactly how the levels, geography and statistical concepts of the Central Bank of Yemen – Aden (CBY-Aden) and the IMF correspond. A same-year revision remains distinct from change over time. In the 2022 report's statistical annex (p. 45) the row labels are shifted by one line, so the row labelled remittances there prints the transfers balance; this record uses Table 4-1 (p. 37).",
+   "new": "The same-year revision is not an economic collapse and not a change between years. | The method reconstruction is strongly supported, but no public crosswalk states exactly how the levels, geography and statistical concepts of the Central Bank of Yemen – Aden (CBY-Aden) and the IMF correspond. A same-year revision remains distinct from change over time. In the 2022 report's statistical annex (p. 45) the row labels are shifted by one line, so the row labelled remittances there prints the transfers balance; this record uses Table 4-1 (p. 37). The source notes also differ: the 2022 report cites the CBY and IMF staff estimates (October 2022), the 2023 and 2024 reports the CBY and the IMF, and the 2025 report the CBY, the Yemen Customs Authority, two ministries and international trade and banking sources."
+  },
+  {
+   "finding": "E2-7c:REVIEW",
+   "sheet": "06_EVIDENCE_OBJECTS",
+   "row": 102,
+   "col": 17,
+   "field": "CLM-032.limitations_ar",
+   "old": "ليست مراجعة قيمة السنة نفسها انهيارًا اقتصاديًا ولا تغيرًا فعليًا بين عامين. | إعادة بناء المنهج مدعومة بقوة، لكن المطابقة الدقيقة بين مستويات البنك المركزي اليمني – عدن وصندوق النقد الدولي من حيث الجغرافيا والمفهوم الإحصائي غير منشورة؛ وتظل مراجعة النسخة منفصلة عن التغير الزمني. وفي الملحق الإحصائي لتقرير 2022 (ص 45) تنزاح تسميات الصفوف سطرًا واحدًا، فيطبع الصف المسمى «حوالات العاملين» ميزان التحويلات؛ ويعتمد هذا السجل على الجدول 4-1 (ص 37).",
+   "new": "ليست مراجعة قيمة السنة نفسها انهيارًا اقتصاديًا ولا تغيرًا فعليًا بين عامين. | إعادة بناء المنهج مدعومة بقوة، لكن المطابقة الدقيقة بين مستويات البنك المركزي اليمني – عدن وصندوق النقد الدولي من حيث الجغرافيا والمفهوم الإحصائي غير منشورة؛ وتظل مراجعة النسخة منفصلة عن التغير الزمني. وفي الملحق الإحصائي لتقرير 2022 (ص 45) تنزاح تسميات الصفوف بمقدار سطر واحد، فيحمل الصف المسمى «حوالات العاملين» قيمة ميزان التحويلات؛ ويعتمد هذا السجل على الجدول 4-1 (ص 37). وتختلف ملاحظات المصدر أيضًا: فتقرير 2022 يستند إلى البنك المركزي وتقديرات خبراء صندوق النقد الدولي (أكتوبر 2022)، وتقريرا 2023 و2024 إلى البنك المركزي وصندوق النقد الدولي، وتقرير 2025 إلى البنك المركزي ومصلحة الجمارك اليمنية ووزارتين ومصادر دولية للتجارة والمصارف."
+  },
+  {
+   "finding": "E2-7c:REVIEW",
+   "sheet": "06_EVIDENCE_OBJECTS",
+   "row": 65,
+   "col": 16,
+   "field": "VIS-POS-TERMINALS.limitations_en",
+   "old": "Growth in terminal numbers does not show merchant adoption, active use of POS services, growth in unique users or an inclusion outcome. The +11% displayed in the January 2026 release and the 8.55% change derived from the raw totals are not arithmetically consistent. Nor do the published April and May 2026 totals yield the +2.4% displayed in the May 2026 release; no change is computed for that month. The totals fall within the reporting scope of the Central Bank of Yemen – Aden (CBY-Aden) and are not shown to cover all of Yemen. | Every monthly release from March 2025 is a one-page infographic, and its design changes in January and again in February 2026; continuity of the reporting scope across these changes has not been verified.",
+   "new": "Growth in terminal numbers does not show merchant adoption, active use of POS services, growth in unique users or an inclusion outcome. The +11% displayed in the January 2026 release and the 8.55% change derived from the raw totals are not arithmetically consistent. Nor do the published April and May 2026 totals yield the +2.4% displayed in the May 2026 release; no change is computed for that month. The totals fall within the reporting scope of the Central Bank of Yemen – Aden (CBY-Aden) and are not shown to cover all of Yemen. | Every monthly release from March 2025 is a one-page infographic, and its design changed in January 2026 and again in February 2026; continuity of the reporting scope across these changes has not been verified."
+  },
+  {
+   "finding": "E2-7c:REVIEW",
+   "sheet": "06_EVIDENCE_OBJECTS",
+   "row": 65,
+   "col": 17,
+   "field": "VIS-POS-TERMINALS.limitations_ar",
+   "old": "لا يثبت نمو عدد الأجهزة تبنّي التجار لها، ولا الاستخدام النشط لخدمات نقاط البيع، ولا نموًا في عدد المستخدمين الفريدين، ولا نتيجة في الشمول المالي. وليست نسبة +11% المعروضة في إصدار يناير 2026 ونسبة التغير البالغة 8.55% المشتقة من الإجماليات الخام متسقتين حسابيًا. كما لا يعطي الإجماليان المنشوران لشهري أبريل ومايو 2026 نسبة +2.4% المعروضة في إصدار مايو 2026، ولا تُحسب نسبة تغير لذلك الشهر. والإجماليات تخص نطاق الإبلاغ لدى البنك المركزي اليمني – عدن، ولا يثبت الدليل أنها تغطي اليمن كله. | وكل إصدار شهري منذ مارس 2025 إنفوغرافيك من صفحة واحدة، ويتغير تصميمه في يناير ثم في فبراير 2026؛ ولم يُتحقق من استمرارية نطاق الإبلاغ عبر هذه التغيرات.",
+   "new": "لا يثبت نمو عدد الأجهزة تبنّي التجار لها، ولا الاستخدام النشط لخدمات نقاط البيع، ولا نموًا في عدد المستخدمين الفريدين، ولا نتيجة في الشمول المالي. وليست نسبة +11% المعروضة في إصدار يناير 2026 ونسبة التغير البالغة 8.55% المشتقة من الإجماليات الخام متسقتين حسابيًا. كما لا يعطي الإجماليان المنشوران لشهري أبريل ومايو 2026 نسبة +2.4% المعروضة في إصدار مايو 2026، ولا تُحسب نسبة تغير لذلك الشهر. والإجماليات تخص نطاق الإبلاغ لدى البنك المركزي اليمني – عدن، ولا يثبت الدليل أنها تغطي اليمن كله. | وكل إصدار شهري منذ مارس 2025 إنفوغرافيك من صفحة واحدة، وقد تغيّر تصميمه في يناير 2026 ثم في فبراير 2026؛ ولم يُتحقق من استمرارية نطاق الإبلاغ عبر هذه التغيرات."
+  },
+  {
+   "finding": "E2-7c:REVIEW",
+   "sheet": "06_EVIDENCE_OBJECTS",
+   "row": 66,
+   "col": 16,
+   "field": "VIS-POS-TRANSACTIONS.limitations_en",
+   "old": "Transactions are events, not unique users or merchants, so the series does not show how many people or businesses used POS services. The monthly values are shown as published, without smoothing or interpolation, and the +4.9% displayed in the January 2026 release and the 13.87% change derived from the raw totals are not arithmetically consistent. Nor do the published April and May 2026 totals yield the +9.9% displayed in the May 2026 release; no change is computed for that month. The totals fall within the reporting scope of the Central Bank of Yemen – Aden (CBY-Aden) and are not shown to cover all of Yemen. | Every monthly release from March 2025 is a one-page infographic, and its design changes in January and again in February 2026; continuity of the reporting scope across these changes has not been verified.",
+   "new": "Transactions are events, not unique users or merchants, so the series does not show how many people or businesses used POS services. The monthly values are shown as published, without smoothing or interpolation, and the +4.9% displayed in the January 2026 release and the 13.87% change derived from the raw totals are not arithmetically consistent. Nor do the published April and May 2026 totals yield the +9.9% displayed in the May 2026 release; no change is computed for that month. The totals fall within the reporting scope of the Central Bank of Yemen – Aden (CBY-Aden) and are not shown to cover all of Yemen. | Every monthly release from March 2025 is a one-page infographic, and its design changed in January 2026 and again in February 2026; continuity of the reporting scope across these changes has not been verified."
+  },
+  {
+   "finding": "E2-7c:REVIEW",
+   "sheet": "06_EVIDENCE_OBJECTS",
+   "row": 66,
+   "col": 17,
+   "field": "VIS-POS-TRANSACTIONS.limitations_ar",
+   "old": "المعاملات أحداث وليست مستخدمين أو تجارًا فريدين، لذلك لا تبيّن السلسلة عدد الأشخاص أو المنشآت الذين استخدموا نقاط البيع. وتُعرض القيم الشهرية كما نُشرت من دون تنعيم أو استيفاء، وليست نسبة +4.9% المعروضة في إصدار يناير 2026 ونسبة التغير البالغة 13.87% المشتقة من الإجماليات الخام متسقتين حسابيًا. كما لا يعطي الإجماليان المنشوران لشهري أبريل ومايو 2026 نسبة +9.9% المعروضة في إصدار مايو 2026، ولا تُحسب نسبة تغير لذلك الشهر. والإجماليات تخص نطاق الإبلاغ لدى البنك المركزي اليمني – عدن، ولا يثبت الدليل أنها تغطي اليمن كله. | وكل إصدار شهري منذ مارس 2025 إنفوغرافيك من صفحة واحدة، ويتغير تصميمه في يناير ثم في فبراير 2026؛ ولم يُتحقق من استمرارية نطاق الإبلاغ عبر هذه التغيرات.",
+   "new": "المعاملات أحداث وليست مستخدمين أو تجارًا فريدين، لذلك لا تبيّن السلسلة عدد الأشخاص أو المنشآت الذين استخدموا نقاط البيع. وتُعرض القيم الشهرية كما نُشرت من دون تنعيم أو استيفاء، وليست نسبة +4.9% المعروضة في إصدار يناير 2026 ونسبة التغير البالغة 13.87% المشتقة من الإجماليات الخام متسقتين حسابيًا. كما لا يعطي الإجماليان المنشوران لشهري أبريل ومايو 2026 نسبة +9.9% المعروضة في إصدار مايو 2026، ولا تُحسب نسبة تغير لذلك الشهر. والإجماليات تخص نطاق الإبلاغ لدى البنك المركزي اليمني – عدن، ولا يثبت الدليل أنها تغطي اليمن كله. | وكل إصدار شهري منذ مارس 2025 إنفوغرافيك من صفحة واحدة، وقد تغيّر تصميمه في يناير 2026 ثم في فبراير 2026؛ ولم يُتحقق من استمرارية نطاق الإبلاغ عبر هذه التغيرات."
+  },
+  {
+   "finding": "E2-7c:REVIEW",
+   "sheet": "06_EVIDENCE_OBJECTS",
+   "row": 67,
+   "col": 16,
+   "field": "VIS-POS-VALUE.limitations_en",
+   "old": "The values are nominal rials: they do not show real growth, a change in purchasing power, more users or an effect on financial inclusion, and no inflation-adjusted series is established here. September 2025 has no verified value, and none is interpolated. The totals fall within the reporting scope of the Central Bank of Yemen – Aden (CBY-Aden) and are not shown to cover all of Yemen. | Every monthly release from March 2025 is a one-page infographic, and its design changes in January and again in February 2026; continuity of the reporting scope across these changes has not been verified.",
+   "new": "The values are nominal rials: they do not show real growth, a change in purchasing power, more users or an effect on financial inclusion, and no inflation-adjusted series is established here. September 2025 has no verified value, and none is interpolated. The totals fall within the reporting scope of the Central Bank of Yemen – Aden (CBY-Aden) and are not shown to cover all of Yemen. | Every monthly release from March 2025 is a one-page infographic, and its design changed in January 2026 and again in February 2026; continuity of the reporting scope across these changes has not been verified."
+  },
+  {
+   "finding": "E2-7c:REVIEW",
+   "sheet": "06_EVIDENCE_OBJECTS",
+   "row": 67,
+   "col": 17,
+   "field": "VIS-POS-VALUE.limitations_ar",
+   "old": "القيم بالريال الاسمي: فلا تثبت نموًا حقيقيًا ولا تغيرًا في القوة الشرائية ولا زيادة في المستخدمين ولا أثرًا على الشمول المالي، ولا يثبت هذا الدليل أي سلسلة معدلة لأثر التضخم. ولا قيمة متحقق منها لشهر سبتمبر 2025، ولا تُقدَّر بالاستيفاء. والإجماليات تخص نطاق الإبلاغ لدى البنك المركزي اليمني – عدن، ولا يثبت الدليل أنها تغطي اليمن كله. | وكل إصدار شهري منذ مارس 2025 إنفوغرافيك من صفحة واحدة، ويتغير تصميمه في يناير ثم في فبراير 2026؛ ولم يُتحقق من استمرارية نطاق الإبلاغ عبر هذه التغيرات.",
+   "new": "القيم بالريال الاسمي: فلا تثبت نموًا حقيقيًا ولا تغيرًا في القوة الشرائية ولا زيادة في المستخدمين ولا أثرًا على الشمول المالي، ولا يثبت هذا الدليل أي سلسلة معدلة لأثر التضخم. ولا قيمة متحقق منها لشهر سبتمبر 2025، ولا تُقدَّر بالاستيفاء. والإجماليات تخص نطاق الإبلاغ لدى البنك المركزي اليمني – عدن، ولا يثبت الدليل أنها تغطي اليمن كله. | وكل إصدار شهري منذ مارس 2025 إنفوغرافيك من صفحة واحدة، وقد تغيّر تصميمه في يناير 2026 ثم في فبراير 2026؛ ولم يُتحقق من استمرارية نطاق الإبلاغ عبر هذه التغيرات."
+  },
+  {
+   "finding": "E2-7c:REVIEW",
+   "sheet": "06_EVIDENCE_OBJECTS",
+   "row": 25,
+   "col": 6,
+   "field": "CLM-020.summary_en",
+   "old": "This resource treats 1997 and 1998 as distinct milestones: material hosted by the Social Fund for Development (SFD) ties the institutional and microfinance origin to 1997, while official SFD history describes active microfinance involvement through its small/micro enterprise programme from the start of operations in 1998. The 2012 SFD document that dates the start of microfinance to 1997 could not be re-opened on 4 October 2026 (its archived copy is not reachable from this resource), so that date has not been re-read in the original for this edition.",
+   "new": "This resource treats 1997 and 1998 as distinct milestones: material hosted by the Social Fund for Development (SFD) ties the institutional and microfinance origin to 1997, while official SFD history describes active microfinance involvement through its small/micro enterprise programme from the start of operations in 1998. SFD's 1997 inception is re-read in its fourth-quarter 2012 newsletter (p. 1), but the SFD terms of reference that date the start of microfinance to 1997 could not be re-opened on 4 October 2026 (their archived copy is not reachable from this resource), so that dating has not been re-read in the original for this edition."
+  },
+  {
+   "finding": "E2-7c:REVIEW",
+   "sheet": "06_EVIDENCE_OBJECTS",
+   "row": 25,
+   "col": 7,
+   "field": "CLM-020.summary_ar",
+   "old": "يتعامل هذا المورد مع عامي 1997 و1998 كمحطتين منفصلتين: تربط مواد يستضيفها الصندوق الاجتماعي للتنمية النشأة المؤسسية للتمويل الأصغر بعام 1997، بينما يصف التاريخ الرسمي للصندوق انخراطه الفعلي في التمويل الأصغر عبر برنامج تنمية المنشآت الصغيرة والأصغر منذ بدء عملياته في 1998. وتعذّرت في 4 أكتوبر 2026 إعادة فتح وثيقة الصندوق لعام 2012 التي تؤرخ بداية التمويل الأصغر بعام 1997 (لا يمكن الوصول إلى نسختها المؤرشفة من هذا المورد)، فلم يُتحقق من هذا التاريخ في الأصل في هذه الطبعة.",
+   "new": "يتعامل هذا المورد مع عامي 1997 و1998 كمحطتين منفصلتين: تربط مواد يستضيفها الصندوق الاجتماعي للتنمية النشأة المؤسسية للتمويل الأصغر بعام 1997، بينما يصف التاريخ الرسمي للصندوق انخراطه الفعلي في التمويل الأصغر عبر برنامج تنمية المنشآت الصغيرة والأصغر منذ بدء عملياته في 1998. وأُعيدت قراءة نشأة الصندوق عام 1997 في نشرته للربع الرابع من 2012 (ص 1)، أما الشروط المرجعية للصندوق التي تؤرخ بداية التمويل الأصغر بعام 1997 فتعذّرت إعادة فتحها في 4 أكتوبر 2026 (لا يمكن الوصول إلى نسختها المؤرشفة من هذا المورد)، فلم تُعَد في هذا الإصدار قراءةُ هذا التأريخ في الأصل."
+  },
+  {
+   "finding": "E2-7c:REVIEW",
+   "sheet": "06_EVIDENCE_OBJECTS",
+   "row": 25,
+   "col": 29,
+   "field": "CLM-020.value_states",
+   "old": "[{\"t\":\"1997\",\"k\":\"d\",\"s\":\"UNREACHABLE\",\"src\":\"SRC-SFD-MF-HISTORY-TOR-2012-001\",\"loc\":\"web.archive.org copy of the 2012 TOR\",\"why\":\"TOR not opened: web.archive.org blocked by egress policy (HTTP 403 'Blocked by egress policy' / connection reset); publisher path sfd-yemen.org/uploads/issues/Microfinance%20Islamic%20Products%20Study\"},{\"t\":\"1998\",\"k\":\"d\",\"s\":\"READ\",\"src\":\"SRC-SFD-HIST-2004-Q3-001\",\"loc\":\"SFD Newsletter Edition No. 27 (data as of 30/09/2004), PDF p. 1 (printed p. 8 column)\"},{\"t\":\"4 October 2026\",\"k\":\"d\",\"s\":\"SITE\"}]",
+   "new": "[{\"t\":\"1997\",\"k\":\"d\",\"s\":\"UNREACHABLE\",\"src\":\"SRC-SFD-MF-HISTORY-TOR-2012-001\",\"loc\":\"web.archive.org copy of the 2012 TOR\",\"why\":\"TOR not opened: web.archive.org blocked by egress policy (HTTP 403 'Blocked by egress policy' / connection reset); publisher path sfd-yemen.org/uploads/issues/Microfinance%20Islamic%20Products%20Study\"},{\"t\":\"1998\",\"k\":\"d\",\"s\":\"READ\",\"src\":\"SRC-SFD-HIST-2004-Q3-001\",\"loc\":\"SFD Newsletter Edition No. 27 (data as of 30/09/2004), PDF p. 1 (printed p. 8 column)\"},{\"t\":\"4 October 2026\",\"k\":\"d\",\"s\":\"SITE\"},{\"t\":\"1997\",\"k\":\"d\",\"s\":\"READ\",\"src\":\"SRC-SFD-Q4-2012-001\",\"loc\":\"SFD Newsletter No. 60 (Oct–Dec 2012), p. 1: 'Since its inception in 1997, the Social Fund for Development' (SFD's inception, not the start of microfinance)\"}]"
+  },
+  {
+   "finding": "E2-7c:REVIEW",
+   "sheet": "06_EVIDENCE_OBJECTS",
+   "row": 35,
+   "col": 6,
+   "field": "MF-ORIG-001+002.summary_en",
+   "old": "History hosted by the Social Fund for Development (SFD) supports two distinct milestones: 1997 as the institutional origin and start of microfinance, and 1998 as the start of active programme involvement. The two dates answer different historical questions. The 2012 SFD document that dates the start of microfinance to 1997 could not be re-opened on 4 October 2026 (its archived copy is not reachable from this resource), so that date has not been re-read in the original for this edition.",
+   "new": "History hosted by the Social Fund for Development (SFD) supports two distinct milestones: 1997 as the institutional origin and start of microfinance, and 1998 as the start of active programme involvement. The two dates answer different historical questions. SFD's 1997 inception is re-read in its fourth-quarter 2012 newsletter (p. 1), but the SFD terms of reference that date the start of microfinance to 1997 could not be re-opened on 4 October 2026 (their archived copy is not reachable from this resource), so that dating has not been re-read in the original for this edition."
+  },
+  {
+   "finding": "E2-7c:REVIEW",
+   "sheet": "06_EVIDENCE_OBJECTS",
+   "row": 35,
+   "col": 7,
+   "field": "MF-ORIG-001+002.summary_ar",
+   "old": "تدعم المصادر المستضافة لدى الصندوق الاجتماعي للتنمية مستويين تاريخيين مختلفين: عام 1997 بوصفه الأصل المؤسسي وبداية التمويل الأصغر، وعام 1998 بوصفه بداية الانخراط الفعلي في البرنامج. ويجيب التاريخان عن سؤالين مختلفين. وتعذّرت في 4 أكتوبر 2026 إعادة فتح وثيقة الصندوق لعام 2012 التي تؤرخ بداية التمويل الأصغر بعام 1997 (لا يمكن الوصول إلى نسختها المؤرشفة من هذا المورد)، فلم يُتحقق من هذا التاريخ في الأصل في هذه الطبعة.",
+   "new": "تدعم المصادر المستضافة لدى الصندوق الاجتماعي للتنمية مستويين تاريخيين مختلفين: عام 1997 بوصفه الأصل المؤسسي وبداية التمويل الأصغر، وعام 1998 بوصفه بداية الانخراط الفعلي في البرنامج. ويجيب التاريخان عن سؤالين مختلفين. وأُعيدت قراءة نشأة الصندوق عام 1997 في نشرته للربع الرابع من 2012 (ص 1)، أما الشروط المرجعية للصندوق التي تؤرخ بداية التمويل الأصغر بعام 1997 فتعذّرت إعادة فتحها في 4 أكتوبر 2026 (لا يمكن الوصول إلى نسختها المؤرشفة من هذا المورد)، فلم تُعَد في هذا الإصدار قراءةُ هذا التأريخ في الأصل."
+  },
+  {
+   "finding": "E2-7c:REVIEW",
+   "sheet": "06_EVIDENCE_OBJECTS",
+   "row": 35,
+   "col": 29,
+   "field": "MF-ORIG-001+002.value_states",
+   "old": "[{\"t\":\"1997\",\"k\":\"d\",\"s\":\"UNREACHABLE\",\"src\":\"SRC-SFD-MF-HISTORY-TOR-2012-001\",\"loc\":\"web.archive.org copy of the 2012 TOR\",\"why\":\"TOR not opened: web.archive.org blocked by egress policy (HTTP 403 'Blocked by egress policy' / connection reset); publisher path sfd-yemen.org/uploads/issues/Microfinance%20Islamic%20Products%20Study\"},{\"t\":\"1998\",\"k\":\"d\",\"s\":\"READ\",\"src\":\"SRC-SFD-HIST-2004-Q3-001\",\"loc\":\"SFD Newsletter Edition No. 27 (data as of 30/09/2004), PDF p. 1 (printed p. 8 column)\"},{\"t\":\"4 October 2026\",\"k\":\"d\",\"s\":\"SITE\"}]",
+   "new": "[{\"t\":\"1997\",\"k\":\"d\",\"s\":\"UNREACHABLE\",\"src\":\"SRC-SFD-MF-HISTORY-TOR-2012-001\",\"loc\":\"web.archive.org copy of the 2012 TOR\",\"why\":\"TOR not opened: web.archive.org blocked by egress policy (HTTP 403 'Blocked by egress policy' / connection reset); publisher path sfd-yemen.org/uploads/issues/Microfinance%20Islamic%20Products%20Study\"},{\"t\":\"1998\",\"k\":\"d\",\"s\":\"READ\",\"src\":\"SRC-SFD-HIST-2004-Q3-001\",\"loc\":\"SFD Newsletter Edition No. 27 (data as of 30/09/2004), PDF p. 1 (printed p. 8 column)\"},{\"t\":\"4 October 2026\",\"k\":\"d\",\"s\":\"SITE\"},{\"t\":\"1997\",\"k\":\"d\",\"s\":\"READ\",\"src\":\"SRC-SFD-Q4-2012-001\",\"loc\":\"SFD Newsletter No. 60 (Oct–Dec 2012), p. 1: 'Since its inception in 1997, the Social Fund for Development' (SFD's inception, not the start of microfinance)\"}]"
+  },
+  {
+   "finding": "E2-7c:REVIEW",
+   "sheet": "06_EVIDENCE_OBJECTS",
+   "row": 35,
+   "col": 24,
+   "field": "MF-ORIG-001+002.source_dependencies",
+   "old": "SRC-SFD-MF-HISTORY-TOR-2012-001; SRC-SFD-HIST-2004-Q3-001",
+   "new": "SRC-SFD-MF-HISTORY-TOR-2012-001; SRC-SFD-HIST-2004-Q3-001; SRC-SFD-Q4-2012-001"
+  },
+  {
+   "finding": "E2-7c:REVIEW",
+   "sheet": "06_EVIDENCE_OBJECTS",
+   "row": 71,
+   "col": 29,
+   "field": "VIS-REMITTANCE-COST.value_states",
+   "old": "[{\"t\":\"2.70%\",\"k\":\"v\",\"s\":\"DERIVED\",\"src\":\"SRC-WB-RPW-SA-YEM-2025Q3-001\",\"loc\":\"RPW Complete Dataset rpw_dataset_2011_2025_q3.xlsx, sheet \\\"Dataset (from Q2 2016)\\\", period \\\"2025_3Q\\\", rows source_code SAU / destination_code YEM, column \\\"cc1 total cost %\\\"\"},{\"t\":\"1.26%\",\"k\":\"v\",\"s\":\"DERIVED\",\"src\":\"SRC-WB-RPW-SA-YEM-2025Q3-001\",\"loc\":\"RPW Complete Dataset rpw_dataset_2011_2025_q3.xlsx, sheet \\\"Dataset (from Q2 2016)\\\", period \\\"2025_3Q\\\", rows SAU/YEM, column \\\"cc2 total cost %\\\"\"},{\"t\":\"7.53%\",\"k\":\"v\",\"s\":\"DERIVED\",\"src\":\"SRC-WB-RPW-UAE-YEM-2025Q3-001\",\"loc\":\"RPW Complete Dataset rpw_dataset_2011_2025_q3.xlsx, sheet \\\"Dataset (from Q2 2016)\\\", period \\\"2025_3Q\\\", rows ARE/YEM, column \\\"cc1 total cost %\\\"\"},{\"t\":\"5.62%\",\"k\":\"v\",\"s\":\"DERIVED\",\"src\":\"SRC-WB-RPW-UAE-YEM-2025Q3-001\",\"loc\":\"RPW Complete Dataset rpw_dataset_2011_2025_q3.xlsx, sheet \\\"Dataset (from Q2 2016)\\\", period \\\"2025_3Q\\\", rows ARE/YEM, column \\\"cc2 total cost %\\\"\"},{\"t\":\"200\",\"k\":\"v\",\"s\":\"READ\",\"src\":\"SRC-WB-RPW-SA-YEM-2025Q3-001\",\"loc\":\"RPW Complete Dataset rpw_dataset_2011_2025_q3.xlsx, sheet \\\"Dataset (from Q2 2016)\\\", period \\\"2025_3Q\\\", column \\\"cc1 denomination amount\\\" = 200 (USD)\"},{\"t\":\"500\",\"k\":\"v\",\"s\":\"READ\",\"src\":\"SRC-WB-RPW-SA-YEM-2025Q3-001\",\"loc\":\"RPW Complete Dataset rpw_dataset_2011_2025_q3.xlsx, sheet \\\"Dataset (from Q2 2016)\\\", period \\\"2025_3Q\\\", column \\\"cc2 denomination amount\\\" = 500 (USD)\"},{\"t\":\"500,\",\"k\":\"v\",\"s\":\"READ\",\"src\":\"SRC-WB-RPW-UAE-YEM-2025Q3-001\",\"loc\":\"RPW Complete Dataset rpw_dataset_2011_2025_q3.xlsx, sheet \\\"Dataset (from Q2 2016)\\\", period \\\"2025_3Q\\\", column \\\"cc2 denomination amount\\\" = 500\"},{\"t\":\"2025 Q3\",\"k\":\"v\",\"s\":\"READ\",\"src\":\"SRC-WB-RPW-SA-YEM-2025Q3-001\",\"loc\":\"RPW Complete Dataset rpw_dataset_2011_2025_q3.xlsx, sheet \\\"Dataset (from Q2 2016)\\\", period \\\"2025_3Q\\\"; quotes dated 15 Aug - 2 Sep 2025; dataset file name rpw_dataset_2011_2025_q3.xlsx; RPW report Issue 54 \\\"September 2025\\\"\"},{\"t\":\"26\",\"k\":\"v\",\"s\":\"TRIVIAL\"},{\"t\":\"26%\",\"k\":\"v\",\"s\":\"TRIVIAL\"},{\"t\":\"62%\",\"k\":\"v\",\"s\":\"TRIVIAL\"},{\"t\":\"26 September 2026\",\"k\":\"d\",\"s\":\"SITE\"},{\"t\":\"8\",\"k\":\"v\",\"s\":\"READ\",\"src\":\"SRC-WB-RPW-SA-YEM-2025Q3-001\",\"loc\":\"RPW quote-level dataset rpw_dataset_2011_2025_q3.xlsx, sheet 'Dataset (from Q2 2016)', period 2025_3Q, Saudi Arabia to Yemen: 8 rows\"},{\"t\":\"6\",\"k\":\"v\",\"s\":\"READ\",\"src\":\"SRC-WB-RPW-UAE-YEM-2025Q3-001\",\"loc\":\"same dataset, period 2025_3Q, United Arab Emirates to Yemen: 6 rows\"},{\"t\":\"22.71%\",\"k\":\"v\",\"s\":\"READ\",\"src\":\"SRC-WB-RPW-UAE-YEM-2025Q3-001\",\"loc\":\"same dataset, UAE to Yemen 2025_3Q, cc1 total cost % of the highest quote\"},{\"t\":\"2.97%\",\"k\":\"v\",\"s\":\"READ\",\"src\":\"SRC-WB-RPW-UAE-YEM-2025Q3-001\",\"loc\":\"same dataset, UAE to Yemen 2025_3Q, lowest cc1 total cost %\"},{\"t\":\"5.25%\",\"k\":\"v\",\"s\":\"READ\",\"src\":\"SRC-WB-RPW-UAE-YEM-2025Q3-001\",\"loc\":\"same dataset, UAE to Yemen 2025_3Q, second-highest cc1 total cost %\"},{\"t\":\"4 October 2026\",\"k\":\"d\",\"s\":\"SITE\"}]",
+   "new": "[{\"t\":\"2.70%\",\"k\":\"v\",\"s\":\"DERIVED\",\"src\":\"SRC-WB-RPW-SA-YEM-2025Q3-001\",\"loc\":\"RPW Complete Dataset rpw_dataset_2011_2025_q3.xlsx, sheet \\\"Dataset (from Q2 2016)\\\", period \\\"2025_3Q\\\", rows source_code SAU / destination_code YEM, column \\\"cc1 total cost %\\\"\"},{\"t\":\"1.26%\",\"k\":\"v\",\"s\":\"DERIVED\",\"src\":\"SRC-WB-RPW-SA-YEM-2025Q3-001\",\"loc\":\"RPW Complete Dataset rpw_dataset_2011_2025_q3.xlsx, sheet \\\"Dataset (from Q2 2016)\\\", period \\\"2025_3Q\\\", rows SAU/YEM, column \\\"cc2 total cost %\\\"\"},{\"t\":\"7.53%\",\"k\":\"v\",\"s\":\"DERIVED\",\"src\":\"SRC-WB-RPW-UAE-YEM-2025Q3-001\",\"loc\":\"RPW Complete Dataset rpw_dataset_2011_2025_q3.xlsx, sheet \\\"Dataset (from Q2 2016)\\\", period \\\"2025_3Q\\\", rows ARE/YEM, column \\\"cc1 total cost %\\\"\"},{\"t\":\"5.62%\",\"k\":\"v\",\"s\":\"DERIVED\",\"src\":\"SRC-WB-RPW-UAE-YEM-2025Q3-001\",\"loc\":\"RPW Complete Dataset rpw_dataset_2011_2025_q3.xlsx, sheet \\\"Dataset (from Q2 2016)\\\", period \\\"2025_3Q\\\", rows ARE/YEM, column \\\"cc2 total cost %\\\"\"},{\"t\":\"200\",\"k\":\"v\",\"s\":\"READ\",\"src\":\"SRC-WB-RPW-SA-YEM-2025Q3-001\",\"loc\":\"RPW Complete Dataset rpw_dataset_2011_2025_q3.xlsx, sheet \\\"Dataset (from Q2 2016)\\\", period \\\"2025_3Q\\\", column \\\"cc1 denomination amount\\\" = 200 (USD)\"},{\"t\":\"500\",\"k\":\"v\",\"s\":\"READ\",\"src\":\"SRC-WB-RPW-SA-YEM-2025Q3-001\",\"loc\":\"RPW Complete Dataset rpw_dataset_2011_2025_q3.xlsx, sheet \\\"Dataset (from Q2 2016)\\\", period \\\"2025_3Q\\\", column \\\"cc2 denomination amount\\\" = 500 (USD)\"},{\"t\":\"500,\",\"k\":\"v\",\"s\":\"READ\",\"src\":\"SRC-WB-RPW-UAE-YEM-2025Q3-001\",\"loc\":\"RPW Complete Dataset rpw_dataset_2011_2025_q3.xlsx, sheet \\\"Dataset (from Q2 2016)\\\", period \\\"2025_3Q\\\", column \\\"cc2 denomination amount\\\" = 500\"},{\"t\":\"2025 Q3\",\"k\":\"v\",\"s\":\"READ\",\"src\":\"SRC-WB-RPW-SA-YEM-2025Q3-001\",\"loc\":\"RPW Complete Dataset rpw_dataset_2011_2025_q3.xlsx, sheet \\\"Dataset (from Q2 2016)\\\", period \\\"2025_3Q\\\"; quotes dated 15 Aug - 2 Sep 2025; dataset file name rpw_dataset_2011_2025_q3.xlsx; RPW report Issue 54 \\\"September 2025\\\"\"},{\"t\":\"26\",\"k\":\"v\",\"s\":\"TRIVIAL\"},{\"t\":\"26%\",\"k\":\"v\",\"s\":\"TRIVIAL\"},{\"t\":\"62%\",\"k\":\"v\",\"s\":\"TRIVIAL\"},{\"t\":\"26 September 2026\",\"k\":\"d\",\"s\":\"SITE\"},{\"t\":\"8\",\"k\":\"v\",\"s\":\"READ\",\"src\":\"SRC-WB-RPW-SA-YEM-2025Q3-001\",\"loc\":\"RPW quote-level dataset rpw_dataset_2011_2025_q3.xlsx, sheet 'Dataset (from Q2 2016)', period 2025_3Q, Saudi Arabia to Yemen: 8 rows\"},{\"t\":\"6\",\"k\":\"v\",\"s\":\"READ\",\"src\":\"SRC-WB-RPW-UAE-YEM-2025Q3-001\",\"loc\":\"same dataset, period 2025_3Q, United Arab Emirates to Yemen: 6 rows\"},{\"t\":\"22.71%\",\"k\":\"v\",\"s\":\"READ\",\"src\":\"SRC-WB-RPW-UAE-YEM-2025Q3-001\",\"loc\":\"same dataset, UAE to Yemen 2025_3Q, cc1 total cost % of the highest quote\"},{\"t\":\"2.97%\",\"k\":\"v\",\"s\":\"READ\",\"src\":\"SRC-WB-RPW-UAE-YEM-2025Q3-001\",\"loc\":\"same dataset, UAE to Yemen 2025_3Q, lowest cc1 total cost %\"},{\"t\":\"5.25%\",\"k\":\"v\",\"s\":\"READ\",\"src\":\"SRC-WB-RPW-UAE-YEM-2025Q3-001\",\"loc\":\"same dataset, UAE to Yemen 2025_3Q, second-highest cc1 total cost %\"},{\"t\":\"4 October 2026\",\"k\":\"d\",\"s\":\"SITE\"},{\"t\":\"20.24%\",\"k\":\"v\",\"s\":\"READ\",\"src\":\"SRC-WB-RPW-UAE-YEM-2025Q3-001\",\"loc\":\"RPW quote-level dataset, sheet 'Dataset (from Q2 2016)', 2025_3Q, United Arab Emirates to Yemen, cc2 total cost % of the same outlier quote\"},{\"t\":\"2.26%\",\"k\":\"v\",\"s\":\"READ\",\"src\":\"SRC-WB-RPW-UAE-YEM-2025Q3-001\",\"loc\":\"RPW quote-level dataset, sheet 'Dataset (from Q2 2016)', 2025_3Q, United Arab Emirates to Yemen, lowest cc2 total cost % of the other five\"},{\"t\":\"3.12%\",\"k\":\"v\",\"s\":\"READ\",\"src\":\"SRC-WB-RPW-UAE-YEM-2025Q3-001\",\"loc\":\"RPW quote-level dataset, sheet 'Dataset (from Q2 2016)', 2025_3Q, United Arab Emirates to Yemen, highest cc2 total cost % of the other five\"}]"
+  },
+  {
+   "finding": "E2-7c:REVIEW",
+   "sheet": "06_EVIDENCE_OBJECTS",
+   "row": 102,
+   "col": 29,
+   "field": "CLM-032.value_states",
+   "old": "[{\"t\":\"6,245\",\"k\":\"v\",\"s\":\"READ\",\"src\":\"SRC-CBY-AR2024-BOP\",\"loc\":\"CBY-Aden Annual Report 2024, Table 4-1 \\\"Balance of Payments (USD million)\\\" PDF/printed p.40 (2023-2024) and statistical annex \\\"Balance of Payments (USD million)\\\" p.48 (2020-2024), row \\\"Remittances\\\", 2024 column\"},{\"t\":\"USD 6,245 million\",\"k\":\"v\",\"s\":\"READ\",\"src\":\"SRC-CBY-AR2024-BOP\",\"loc\":\"CBY-Aden Annual Report 2024, Table 4-1 \\\"Balance of Payments (USD million)\\\" PDF/printed p.40 (2023-2024) and statistical annex \\\"Balance of Payments (USD million)\\\" p.48 (2020-2024)\"},{\"t\":\"3,422.16\",\"k\":\"v\",\"s\":\"READ\",\"src\":\"SRC-CBY-AR2025-BOP\",\"loc\":\"CBY-Aden Annual Report 2025, Table 4-1 \\\"Balance of Payments\\\" (USD million), PDF/printed p.44 (2024-2025), and statistical annex \\\"Balance of Payments\\\" (USD million) PDF/printed p.52 (2021-2025)\"},{\"t\":\"USD 3,422.16 million\",\"k\":\"v\",\"s\":\"READ\",\"src\":\"SRC-CBY-AR2025-BOP\",\"loc\":\"CBY-Aden Annual Report 2025, Table 4-1 \\\"Balance of Payments\\\" (USD million), PDF/printed p.44 (2024-2025), and statistical annex \\\"Balance of Payments\\\" (USD million) PDF/printed p.52 (2021-2025)\"},{\"t\":\"4,043\",\"k\":\"v\",\"s\":\"READ\",\"src\":\"SRC-CBY-AR2022-001\",\"loc\":\"Annual Report 2022 (Arabic), Table 4-1 Balance of Payments, p. 37, row تحويلات العاملين, 2021\"},{\"t\":\"4,454\",\"k\":\"v\",\"s\":\"READ\",\"src\":\"SRC-CBY-AR2022-001\",\"loc\":\"Annual Report 2022 (Arabic), Table 4-1, p. 37, row تحويلات العاملين, 2022\"},{\"t\":\"5,400.0\",\"k\":\"v\",\"s\":\"READ\",\"src\":\"SRC-CBY-AR2023-001\",\"loc\":\"Annual Report 2023 (English), statistical annex Balance of Payments, p. 54, row Remittances, 2021\"},{\"t\":\"6,000\",\"k\":\"v\",\"s\":\"READ\",\"src\":\"SRC-CBY-AR2023-001\",\"loc\":\"Annual Report 2023, Table 4-1 p. 46 and annex p. 54, row Remittances, 2022; also Annual Report 2024 annex p. 48\"},{\"t\":\"5,625\",\"k\":\"v\",\"s\":\"READ\",\"src\":\"SRC-CBY-AR2024-BOP\",\"loc\":\"Annual Report 2024, statistical annex Balance of Payments, p. 48, row Remittances, 2021\"},{\"t\":\"2,900.22\",\"k\":\"v\",\"s\":\"READ\",\"src\":\"SRC-CBY-AR2025-BOP\",\"loc\":\"Annual Report 2025, statistical annex Balance of Payments, p. 52, row Remittances, 2021\"},{\"t\":\"3,066.58\",\"k\":\"v\",\"s\":\"READ\",\"src\":\"SRC-CBY-AR2025-BOP\",\"loc\":\"Annual Report 2025, statistical annex Balance of Payments, p. 52, row Remittances, 2022\"},{\"t\":\"4-1\",\"k\":\"v\",\"s\":\"LOCATOR\"},{\"t\":\"37\",\"k\":\"v\",\"s\":\"LOCATOR\"},{\"t\":\"45\",\"k\":\"v\",\"s\":\"LOCATOR\"},{\"t\":\"46\",\"k\":\"v\",\"s\":\"LOCATOR\"},{\"t\":\"48\",\"k\":\"v\",\"s\":\"LOCATOR\"},{\"t\":\"52\",\"k\":\"v\",\"s\":\"LOCATOR\"},{\"t\":\"54\",\"k\":\"v\",\"s\":\"LOCATOR\"}]",
+   "new": "[{\"t\":\"6,245\",\"k\":\"v\",\"s\":\"READ\",\"src\":\"SRC-CBY-AR2024-BOP\",\"loc\":\"CBY-Aden Annual Report 2024, Table 4-1 \\\"Balance of Payments (USD million)\\\" PDF/printed p.40 (2023-2024) and statistical annex \\\"Balance of Payments (USD million)\\\" p.48 (2020-2024), row \\\"Remittances\\\", 2024 column\"},{\"t\":\"USD 6,245 million\",\"k\":\"v\",\"s\":\"READ\",\"src\":\"SRC-CBY-AR2024-BOP\",\"loc\":\"CBY-Aden Annual Report 2024, Table 4-1 \\\"Balance of Payments (USD million)\\\" PDF/printed p.40 (2023-2024) and statistical annex \\\"Balance of Payments (USD million)\\\" p.48 (2020-2024)\"},{\"t\":\"3,422.16\",\"k\":\"v\",\"s\":\"READ\",\"src\":\"SRC-CBY-AR2025-BOP\",\"loc\":\"CBY-Aden Annual Report 2025, Table 4-1 \\\"Balance of Payments\\\" (USD million), PDF/printed p.44 (2024-2025), and statistical annex \\\"Balance of Payments\\\" (USD million) PDF/printed p.52 (2021-2025)\"},{\"t\":\"USD 3,422.16 million\",\"k\":\"v\",\"s\":\"READ\",\"src\":\"SRC-CBY-AR2025-BOP\",\"loc\":\"CBY-Aden Annual Report 2025, Table 4-1 \\\"Balance of Payments\\\" (USD million), PDF/printed p.44 (2024-2025), and statistical annex \\\"Balance of Payments\\\" (USD million) PDF/printed p.52 (2021-2025)\"},{\"t\":\"4,043\",\"k\":\"v\",\"s\":\"READ\",\"src\":\"SRC-CBY-AR2022-001\",\"loc\":\"Annual Report 2022 (Arabic), Table 4-1 Balance of Payments, p. 37, row تحويلات العاملين, 2021\"},{\"t\":\"4,454\",\"k\":\"v\",\"s\":\"READ\",\"src\":\"SRC-CBY-AR2022-001\",\"loc\":\"Annual Report 2022 (Arabic), Table 4-1, p. 37, row تحويلات العاملين, 2022\"},{\"t\":\"5,400.0\",\"k\":\"v\",\"s\":\"READ\",\"src\":\"SRC-CBY-AR2023-001\",\"loc\":\"Annual Report 2023 (English), statistical annex Balance of Payments, p. 54, row Remittances, 2021\"},{\"t\":\"6,000\",\"k\":\"v\",\"s\":\"READ\",\"src\":\"SRC-CBY-AR2023-001\",\"loc\":\"Annual Report 2023, Table 4-1 p. 46 and annex p. 54, row Remittances, 2022; also Annual Report 2024 annex p. 48\"},{\"t\":\"5,625\",\"k\":\"v\",\"s\":\"READ\",\"src\":\"SRC-CBY-AR2024-BOP\",\"loc\":\"Annual Report 2024, statistical annex Balance of Payments, p. 48, row Remittances, 2021\"},{\"t\":\"2,900.22\",\"k\":\"v\",\"s\":\"READ\",\"src\":\"SRC-CBY-AR2025-BOP\",\"loc\":\"Annual Report 2025, statistical annex Balance of Payments, p. 52, row Remittances, 2021\"},{\"t\":\"3,066.58\",\"k\":\"v\",\"s\":\"READ\",\"src\":\"SRC-CBY-AR2025-BOP\",\"loc\":\"Annual Report 2025, statistical annex Balance of Payments, p. 52, row Remittances, 2022\"},{\"t\":\"4-1\",\"k\":\"v\",\"s\":\"LOCATOR\"},{\"t\":\"37\",\"k\":\"v\",\"s\":\"LOCATOR\"},{\"t\":\"45\",\"k\":\"v\",\"s\":\"LOCATOR\"},{\"t\":\"46\",\"k\":\"v\",\"s\":\"LOCATOR\"},{\"t\":\"48\",\"k\":\"v\",\"s\":\"LOCATOR\"},{\"t\":\"52\",\"k\":\"v\",\"s\":\"LOCATOR\"},{\"t\":\"54\",\"k\":\"v\",\"s\":\"LOCATOR\"},{\"t\":\"October 2022\",\"k\":\"d\",\"s\":\"READ\",\"src\":\"SRC-CBY-AR2022-001\",\"loc\":\"Annual Report 2022 (Arabic), Table 4-1, p. 37, source line: CBY and IMF staff estimates, October 2022\"}]"
+  },
+  {
+   "finding": "E2-7c:REVIEW",
+   "sheet": "03_PAGE_SECTIONS",
+   "row": 304,
+   "col": 7,
+   "field": "/reforms/#s7.body_ar",
+   "old": "في 16 يوليو 2026 أعلن خبراء صندوق النقد والسلطات اليمنية اتفاقًا على مستوى الخبراء بشأن سياسات وإصلاحات يمكن أن يستند إليها برنامج مقترح يراقبه خبراء صندوق النقد الدولي (SMP) مدته 18 شهرًا. وأوضح الصندوق أن الاتفاق يخضع لموافقة الإدارة ولن يترتب عليه نقاش في المجلس التنفيذي. وليس هذا ترتيب تمويل من الصندوق ولا يجوز تقديمه كموافقة من المجلس التنفيذي. وتعذّرت إعادة فتح بيان الصندوق في 4 أكتوبر 2026، فلم يُتحقق من هذه التفاصيل في الأصل في هذه الطبعة.",
+   "new": "في 16 يوليو 2026 أعلن خبراء صندوق النقد والسلطات اليمنية اتفاقًا على مستوى الخبراء بشأن سياسات وإصلاحات يمكن أن يستند إليها برنامج مقترح يراقبه خبراء صندوق النقد الدولي (SMP) مدته 18 شهرًا. وأوضح الصندوق أن الاتفاق يخضع لموافقة الإدارة ولن يترتب عليه نقاش في المجلس التنفيذي. وليس هذا ترتيب تمويل من الصندوق ولا يجوز تقديمه كموافقة من المجلس التنفيذي. وتعذّرت إعادة فتح بيان الصندوق في 4 أكتوبر 2026، فلم تُعَد في هذا الإصدار قراءةُ هذه التفاصيل في الأصل."
+  },
+  {
+   "finding": "E2-7c:REVIEW",
+   "sheet": "14_SYSTEM_CHRONOLOGY",
+   "row": 27,
+   "col": 19,
+   "field": "YSC-023.verification_note_ar",
+   "old": "تعذّرت إعادة فتح البيان الصحفي لصندوق النقد الدولي في 4 أكتوبر 2026 (يرفض موقع الصندوق الطلبات الآلية)، فلم يُتحقق من هذا المدخل في الأصل في هذه الطبعة.",
+   "new": "تعذّرت إعادة فتح البيان الصحفي لصندوق النقد الدولي في 4 أكتوبر 2026 (يرفض موقع الصندوق الطلبات الآلية)، فلم تُعَد في هذا الإصدار قراءةُ هذا المدخل في الأصل."
+  }
+ ]
+}

@@ -115,11 +115,24 @@ def full_alt_text(vid: str, lang: str) -> str:
     return _h.escape(next(v for v in vis if v["visual_id"] == vid)["governed"][f"alt_text_{lang}"], quote=False)
 
 
+def edit_states(oid: str, edit):
+    """Change one record's value_states in the projected evidence objects (E2-READ / E2-DATES): `edit` maps the list."""
+    import json as _j   # noqa: PLC0415
+
+    def mutate(text):
+        objs = _j.loads(text)
+        for o in objs:
+            if o["object_id"] == oid:
+                o["value_states"] = edit(o["value_states"])
+        return _j.dumps(objs, ensure_ascii=False, indent=2)
+    return mutate
+
+
 # name, the file to break, how to break it, the gate text that must appear.
 # The text must be a substring of the real message: several gates interpolate a route or a visual id into the middle of
 # theirs, so a control that names the gate and then the wording would never match (found by running these).
 # A path under `site-src/` or `scripts/` is a source file; anything else is a page of the built site.
-SOURCE_PREFIXES = ("site-src/", "scripts/")
+SOURCE_PREFIXES = ("site-src/", "scripts/", "audit/")   # audit/: the generated literal closure (E2-DIFF)
 CONTROLS = [
     ("active navigation loses its aria-current", "en/evidence/CLM-001/index.html",
      replace('<a href="/en/evidence/" aria-current="page">', '<a href="/en/evidence/">'),
@@ -357,6 +370,56 @@ CONTROLS = [
     ("a chain figure's text alternative names a step its drawing lacks", "en/evidence/VIS-PAYMENT-RAILS/index.html",
      sub_once(r'(<div class="alt"[^>]*>.*?<p class="small">)', r'\1The mobile e-money amendment (9 July 2025). '),
      "RC-A1 a chain figure's text alternative names a step its drawing lacks en/evidence/VIS-PAYMENT-RAILS/index.html"),
+    # E2-PREC (edition 2, R-11): every Global Findex share and gap a reader sees prints to one decimal place.
+    ("a Findex share prints to two decimals again", "en/people/index.html",
+     replace("18.3%", "18.35%"),
+     "E2-PREC en/people/index.html prints a Findex share or gap to two decimals: 18.35"),
+    ("a Findex gap prints to two decimals in a table cell", "ar/evidence/VIS-FINDEX-GAPS/index.html",
+     replace(">12.9</bdi></td>", ">12.91</bdi></td>"),
+     "E2-PREC ar/evidence/VIS-FINDEX-GAPS/index.html prints a Findex share or gap to two decimals: 12.91"),
+    ("a Findex gap prints to two decimals on Home", "en/index.html",
+     replace('<b class="fnum">12.9</b>', '<b class="fnum">12.91</b>'),
+     "E2-PREC en/index.html prints a Findex share or gap to two decimals: 12.91"),
+    # E2-CTX (edition 2, REOPEN-INTL): the low-income context figure is never bare and never on Home.
+    ("the low-income context figure loses what it averages", "en/people/index.html",
+     replace("across the 19 low-income economies surveyed in it, Yemen among them, is 35.2%",
+             "is 35.2%"),
+     "E2-CTX en/people/index.html prints the low-income context figure without naming what it averages"),
+    ("the low-income context figure reaches Home", "ar/index.html",
+     sub_once(r"(<p class=\"sent[^\"]*\">)", r"\1للمقارنة: 35.2% في 19 اقتصادًا منخفض الدخل. "),
+     "E2-CTX ar/index.html prints the low-income context figure on Home"),
+    # E2-DIFF (edition 2, candidate d): a pair that looks contradictory is explained where it meets, and each number
+    # traces to the record that governs it.
+    ("a pair that looks contradictory loses its explanation", "en/payments/index.html",
+     replace("Why the numbers differ: the January 2025 baseline", "The January 2025 baseline"),
+     "E2-DIFF en/payments/index.html does not say why 2,102,484 / 375,252 / FMIIP-BASELINE-2025-01 differ"),
+    ("a record stops naming its counterpart", "ar/evidence/CLM-016/index.html",
+     lambda t: re.sub(r"\(السجل (?:<bdi[^>]*>)?CLM-009(?:</bdi>)?\)", "", t),
+     "E2-DIFF ar/evidence/CLM-016/index.html does not say why CLM-009 differ"),
+    ("a pair number traces to its counterpart's record", "audit/PUBLIC_LITERAL_CLOSURE.json",
+     sub_once(r'("route": "/reforms/",\s*"surface": "section",\s*"field": "body_en",\s*"token": "2,102,484",\s*"category": "[A-Z_]+",'
+              r'\s*"context": "(?:[^"\\]|\\.)*",\s*"source_object": ")CLM-010(")', r"\1FMIIP-BASELINE-2025-01\2"),
+     "E2-DIFF 2,102,484 on /reforms/ traces to FMIIP-BASELINE-2025-01, not to CLM-010"),
+    # E2-YLG (edition 2, candidate a): a guarantee volume is never shown without its boundary.
+    ("the guarantee volume loses its boundary", "en/firms/index.html",
+     replace("not how many firms could borrow", "how firms borrowed", 0),
+     "E2-YLG en/firms/index.html prints the guarantee volume without saying it is not firms' access to finance"),
+    # E2-READ and E2-DATES (owner message of 4 October 2026, block 1): bound is not read; dates are values.
+    ("a page prints an event date no record states", "en/reforms/index.html",
+     into_main(lambda: "<p>On 17 May 2019 the authority closed the register.</p>"),
+     "E2-DATES en/reforms/index.html prints the date 2019-05-17, which no record, event or source states"),
+    ("a record's printed date loses its state", "site-src/content/evidence/evidence_objects.json",
+     edit_states("CLM-001", lambda vs: [e for e in vs if e["t"] != "7 November 2022"]),
+     "E2-DATES CLM-001 summary_en prints the date 2022-11-07 without a stated state in its record"),
+    ("a traced value loses its state", "site-src/content/evidence/evidence_objects.json",
+     edit_states("CLM-001", lambda vs: [e for e in vs if e["t"] != "11.9%"]),
+     "E2-READ /people/ prints '11.9%', traced to CLM-001, which gives it no state"),
+    ("a read value loses its locator", "site-src/content/evidence/evidence_objects.json",
+     edit_states("CLM-001", lambda vs: [dict(e, loc="") if e["t"] == "11.9%" else e for e in vs]),
+     "E2-READ CLM-001 value '11.9%' is READ without a source and locator"),
+    ("a value whose original was not opened loses its label", "en/evidence/CLM-049/index.html",
+     replace("not been re-read in the original", "been checked", 0),
+     "E2-READ en/evidence/CLM-049/ prints"),
     # RC-NOINDEX (owner decision B3): until release every page carries the pre-release noindex meta.
     ("a page loses its pre-release noindex", "en/people/index.html",
      replace('<meta name="robots" content="noindex, nofollow">', ""),
@@ -410,10 +473,10 @@ CONTROLS = [
     # The standing content gate (release candidate, RC-1): a governed sentence dropped from a page, and a number no governed
     # record or contract holds, must each be reported by scripts/tests/test_content_parity.py.
     ("a domain answer drops a governed sentence", "en/people/index.html",
-     replace("a gap of 12.55 percentage points", "a gap of percentage points"),
+     replace("a gap of 12.5 percentage points", "a gap of percentage points"),
      "TEXT en/people/index.html", "content_parity"),
     ("a page prints an ungoverned number", "ar/people/index.html",
-     replace("19.53%", "19.53% (88.8)"),
+     replace("19.5%", "19.5% (88.8)"),
      "NUMBER ar/people/index.html", "content_parity"),
 ]
 

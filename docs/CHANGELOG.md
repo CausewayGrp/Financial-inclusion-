@@ -1,5 +1,172 @@
 # Repository Change Log
 
+## 2026-10-04 — E2-8, E2-7b, E2-7c: chronology states, gates E2-READ and E2-DATES, the review folded in
+
+Master `332a942f6685…` → `6d10b18d6c00…` (E2-8) → `7222cb53d2ce…` (E2-7b) →
+`f3e06fb935d0181211cc73f648eff588388ddda41a4c8f7eb2406b8396333514` (E2-7c).
+- **E2-8:** the 24 chronology events carry value states (14 `value_states`).
+  - YSC-003 and YSC-005 are dated as their sources date them (2016; March 2018).
+  - YSC-007 binds the SPA item that dates the 2018 deposit.
+  - YSC-021: the Board "approved"; its press release bound.
+  - YSC-023 is labelled as not re-read.
+  - Source dates filled.
+- **E2-7b:** the gaps the new gates found (QUAL-001 dates, locators, the POS February 2026 change) and CLM-054's
+  savers universe (microfinance banks).
+- **E2-7c:** the independent bilingual and adversarial review of E2-7.
+- **Gates:** E2-READ and E2-DATES in `scripts/validate.py`, five negative controls.
+- **Records:** `audit/edition_2/CONTRADICTION_REGISTER.md`; edition-2 log and open-items addendum.
+
+## 2026-10-04 — E2-7: a state for every published value; discrepancies fixed Master-first
+
+Master `dd14eed79a97…` → `332a942f6685e1463301f17d5bb1475cc2c341fab6b323ae06859c74b7f6914c` through `run_stage.py`
+(`audit/edition_2/e2_7_value_states.py`; inputs in `audit/edition_2/inputs/`). The originals were re-read on 4 October 2026.
+- **06 `value_states`** (new column, projected as JSON): one state per printed value and date of the 109 records the
+  literal audit traces (READ with locator, DERIVED, SITE, SEE, UNREACHABLE, TRIVIAL).
+- **Fixed, both languages:**
+  - POS limitation: every release since March 2025 is a one-page infographic, not "from July 2025".
+  - CLM-059 and /firms/: SMEPS reports the USD 54.7 million as disbursed.
+  - CLM-062: Figure 114, with the base of 217 on pp. 139 and 141.
+- **Bound:** sources read for a value now bind to its record (13 records).
+- **Named beside their values:**
+  - CLM-049, /reforms/ (the IMF release, 403): not re-read.
+  - CLM-020 and MF-ORIG-001+002 (the 2012 SFD document): not re-read.
+  - VIS-REMITTANCE-COST: reproduced exactly from the RPW quote-level dataset (8 and 6 quotes, one 22.71% outlier named).
+- **CLM-032 (lead 1):** the 2021 and 2022 remittance vintages in four CBY-Aden annual reports.
+- **Source library:** retrieval and document dates filled in 15.
+- **01:** the v0.42R3 lineage recorded.
+- **Renderer and runtime:** a printed table number ("4-1") is isolated left to right in Arabic.
+
+## 2026-10-04 — E2-6, E2-6b: the IMF on correspondent banking, each speaker named; docs/JUDGEMENT.md
+
+Master `e81b2ebc4068…` → `4ae052c9e51a…` (E2-6) → `dd14eed79a97c5222d989ef8fb251aa4b0493c1b3889b215d267e6f2643b8dc7`
+(E2-6b, review folded in). IMF Country Report No. 26/80 (owner-supplied PDF): the Executive Board's assessment (PDF p. 4)
+and the statement by the Executive Director for the Republic of Yemen (PDF p. 90) join QUAL-001 beside the OECD, each
+attributed; neither counts relationships, and a relocation is not a measure of de-risking. `docs/JUDGEMENT.md` (one page)
+joins AGENTS.md's reading order.
+
+## 2026-10-04 — Edition 2 records: the lane's dispositions, what was not built, what the owner could supply
+
+`audit/edition_2/EDITION_2_LOG.md` closes with the candidates recorded and not built (e, the Findex waves drawn; f, phone
+length, measured and handed to Design; d's next form; a's remainder; b's intervals), the two documents the owner could
+supply (the Global Findex 2021 microdata for Yemen; IMF Country Report No. 26/80) and a short self-critique.
+`audit/release_candidate/OPEN_ITEMS_DISPOSITION.md` gains an edition-2 addendum (R-11, REOPEN-INTL, S5-GUARANTEES,
+S5-CORRESPONDENT, S5-DERISKING, N1115-4.3, E2-PAIRS, E2-PHONE, the payment-rails wording). No Master change.
+
+## 2026-10-04 — E2-5, E2-5b: guarantees and correspondent banking, read in the originals (edition 2, candidate a)
+
+Master `7cc4fafc0116…` → `a01011868a4b…` (E2-5) → `e81b2ebc40687fb344bb1c155ae85208b5b9f62dd1e59d4687bb0d88d480d229`
+(E2-5b, the independent bilingual and adversarial review folded in) through `run_stage.py`
+(`audit/edition_2/e2_5_guarantees_correspondent.py`, `audit/edition_2/e2_5b_review_fixes.py`).
+- **Read in the original.** The OECD's HTML refuses automated requests (HTTP 403), but its full-report PDF does not:
+  Promoting Economic Resilience in Yemen (OECD, 2026), printed page 32, gives the Yemen Loan Guarantee Program's 5,731
+  guaranteed transactions since 2017 and, in nominal terms, a cumulative USD 42.8 million of guarantees for USD 63.6
+  million of loan principal; the same page confirms the SMEPS facts. OECD-YEM-012 to 017 become CONFIRMED.
+- **CLM-059** (now "Programme reach describes the programmes, not all MSMEs in Yemen") carries the YLG volumes beside
+  SMEPS, each with its own source, with the boundaries: a guarantee volume is not firms' access to finance;
+  transactions are not unique firms; the two programmes' figures must not be added; the cumulative period has no stated
+  end. /firms/ section 7 carries one paragraph. No new route: a new Evidence Record would need the steward's navigation
+  contract.
+- **QUAL-001** (the OECD's qualitative interpretation, /finance/) carries the OECD's correspondent-banking sentence
+  (confidence of several foreign correspondent banks severely undermined; perceived money-laundering and
+  terrorism-financing risks), with the boundary that it counts no relationships, dates no change and is not a measure of
+  de-risking.
+- **Not bound:** IMF Country Report No. 26/80's statements (imf.org 403; IMF eLibrary 202 with no body). Owner input in
+  audit/edition_2/EDITION_2_LOG.md.
+- Gate E2-YLG: every page printing the guarantee volume says it is not firms' access to finance; one negative control.
+
+## 2026-10-04 — E2-4, E2-4b: "Why the numbers differ" where contradictory-looking numbers meet (edition 2, candidate d)
+
+Master `1c107148bd92…` → `04c727047a76…` (E2-4) → `7cc4fafc0116e352aabec49783b0c450ce4653a7cceefa6943e4f7f99c0349e1`
+(E2-4b, the independent bilingual and adversarial review folded in) through `run_stage.py`
+(`audit/edition_2/e2_4_why_numbers_differ.py`, `audit/edition_2/e2_4b_review_fixes.py`).
+- A sweep of every record that prints a number on the eight domain pages found three pairs a reader meets without an
+  explanation (the remittance revision, 22% vs 91.84% and the POS series already have one):
+  A. 2,102,484 e-wallet subscribers (CBY-Aden, first half of 2025; CLM-010) and 375,252 active e-wallet accounts (FMIIP
+     baseline, January 2025; FMIIP-BASELINE-2025-01), on /payments/ and /reforms/;
+  B. 807,919 e-money accounts (IBS study of five providers, December 2019; CLM-050) and 414,631 to 581,075 subscribers
+     (CBY-Aden, 2024; CLM-010), on /payments/ — it read as a fall;
+  C. the 2025 roster (79, 195, 108; CLM-016) and the 2026 roster (100, 231, 111; CLM-009), on /providers/ — it read as
+     new providers.
+- The same treatment each time, from what the records govern: a paragraph that opens "Why the numbers differ:" /
+  «لماذا تختلف الأرقام:», names both numbers with publisher, date and the counterpart's record ID, says what each counts
+  and what the gap cannot be read as; and in both records' limitations a sentence that names the counterpart by record
+  ID and measure, never by its number.
+- The review's blocking finding, fixed in E2-4b: E2-4 had written each counterpart's number into the other record, so
+  the literal closure traced CBY-Aden's 2,102,484 to the World Bank project record (hard rule 5). Now each number traces
+  to the record that governs it; CLM-010 is bound to /reforms/ and FMIIP-BASELINE-2025-01 to /payments/ for that.
+  Wording for pairs A and C now rests only on governed statements ("carry different labels … not reconciled"; "this
+  evidence base has not compared the two rosters entry by entry").
+- Renderer: in a right-to-left document the one isolation pass (`isolate_document`) now isolates identifiers in
+  running text too (FMIIP-BASELINE-2025-01 in Arabic prose), so their digits never read as a date (RC-DATES).
+- Gate E2-DIFF: the explanation paragraph on each page and record of a pair, and each pair number's trace to its
+  governing record in the literal closure. Three negative controls, all caught; the negative-control runner can now
+  fault a file under `audit/`.
+- Not built here: a typed "difference" relation rendered as its own block. A new section on a domain page needs the
+  steward's presentation contract; recorded as the next form in audit/edition_2/EDITION_2_LOG.md.
+
+## 2026-10-04 — Two negative controls re-aimed after E2-2
+
+CI on `8377b7a`: two content-parity controls ("a domain answer drops a governed sentence", "a page prints an ungoverned
+number") changed nothing, because their selectors named the two-decimal Findex text E2-2 replaced ("a gap of 12.55
+percentage points", "19.53%"). They now name the current text ("12.5", "19.5%"); both are caught again. No gate
+changed.
+
+## 2026-10-04 — E2-3, E2-3b: one same-source context row beside Yemen's account ownership (edition 2, candidate c)
+
+Master `39d06c358abd…` → `f6e15a16851f…` (E2-3) → `1c107148bd9268b279f5f522b02260c2b3a7737e6c5cda0343534e8fb88273f5`
+(E2-3b, the independent bilingual and adversarial review folded in) through `run_stage.py`
+(`audit/edition_2/e2_3_findex_context.py`, `audit/edition_2/e2_3b_review_fixes.py`). Closes REOPEN-INTL.
+- "Missing input: the owner should supply Findex aggregates" was not true: the World Bank publishes them in the Global
+  Findex Database 2025 file, linked from the page CLM-001 already cites. The row "Low income", 2021 wave, account
+  ownership is 0.351821646573129; reproduced twice (this session and the reviewer, independently) as the
+  adult-population-weighted mean of the 19 low-income economies surveyed in that wave, Yemen's 2022 observation among
+  them (Yemen weighs 6.6%; without Yemen 36.8%).
+- CLM-001 (summary, method, limitations) and /people/ section 2, English and Arabic: "For context, the World Bank's
+  figure for the same survey wave across the 19 low-income economies surveyed in it, Yemen among them, is 35.2%", with
+  "context, not a benchmark, a target or a ranking", what it averages, the classification named by its source, and
+  that Yemen's own figure covers only the areas surveyed. One row only; the income group rather than the region
+  (reasons in the transaction). Data row WB-FINDEX-CTX-2021-LIC in 25_FINDEX_BASELINE with the file's locator.
+- Gate E2-CTX: every block a reader sees with the figure names what it averages (low-income, 19), and it never reaches
+  Home. Two negative controls, both caught.
+
+## 2026-10-04 — E2-2, E2-2b: one display precision for every Global Findex figure (edition 2, candidate b)
+
+Master `51a7f1930fcd…` → `d0bd9324c18e…` (E2-2) → `39d06c358abdfb06ef350014e6a3407e7a91871918f7af1e5a2b105ea183f514`
+(E2-2b, the independent review folded in) through `run_stage.py` (`audit/edition_2/e2_2_findex_precision.py`,
+`audit/edition_2/e2_2b_review_fixes.py`). Finding R-11 of the independent review of `70398d1` (X-ESC-D3-03b).
+- **The rule** (/methodology/ section 7, English and Arabic): every Global Findex share prints to one decimal place,
+  rounded from the World Bank's unrounded values, and a gap is the difference of the printed shares. One decimal
+  matches the World Bank's own Yemen table (The Little Data Book on Financial Inclusion 2015, p. 159); the page says it
+  is a display convention, not a claim of accuracy to a tenth of a point.
+- **Values** from the Global Findex Database 2025 file (unrounded, read on 4 October 2026): women 5.4, men 18.3 (the
+  old 18.35 was itself a rounding of 18.345; rounding it again would have given 18.4), primary or less 7.0, secondary
+  or more 19.5, ages 15–24 5.0, ages 25+ 16.1; gaps 12.9, 12.5, 11.1, 9.0. 31 text cells in 02, 03, 06, 10 and 11, six
+  values in 25_FINDEX_BASELINE, the VIS-FINDEX-GAPS guards in `controlled_inputs/visual_design_contract.json`.
+  "About 9.0" lost its hedge (the gap is exact under the rule); Arabic «نقطة» after a decimal.
+- **Intervals:** none is published for Yemen's 2022 survey and the microdata needs a login, so none is computed; the
+  limitations already say so. Owner input: the microdata file (audit/edition_2/EDITION_2_LOG.md).
+- **Renderer:** VIS-FINDEX-GAPS prints every value at the panel's published precision (7.0, not 7), in the bars and the
+  table (`scripts/yfie/visuals.py`). P3-G02 compares values with trailing zeros dropped (7.0 = 7).
+- **Gate E2-PREC** (validator) asserts what a reader sees: no Findex share or gap with two decimals on any Findex
+  record, /people/ or the gender-gap Reading; no two-decimal number within 0.05 of a Findex share or gap on any page;
+  every drawn Findex value at one decimal. Three negative controls, all caught. The home and /people/ numeric
+  signatures read 12.9.
+
+## 2026-10-04 — E2-1, E2-1b: FPS and RTGS at 31 August 2025 (edition 2, first transaction)
+
+Master `90014e3bd271…` → `594abed998bb…` (E2-1) → `51a7f1930fcd21e514d608785abdb2a8887eeb6d4e2d591629477b87ebb7da75`
+(E2-1b, the independent review folded in) through `run_stage.py` (`audit/edition_2/e2_1_payment_rails_isr.py`,
+`audit/edition_2/e2_1b_review_fixes.py`; ledgers and reports in `audit/edition_2/runs/`). Branch `code/edition-2`.
+- VIS-PAYMENT-RAILS, CLM-018 and section 3 of CWR-009 said "no later operational state is recorded" while
+  VIS-PAYMENT-RAILS cites the World Bank's ISR sequence 2 (8 April 2026), which reports FPS and RTGS "developed and
+  operational: No" at 31 August 2025 (pp. 3–4) and the RTGS tender launched, the FPS tender expected shortly (p. 2).
+  The boundaries now say so, with "the day before the project became effective" so the status is not read as a stall;
+  "no later operational state" stays. CLM-018 gains the ISR as a source.
+- Gate RC-A1 keeps day-precise dates of undrawn steps out of a chain figure's text alternative, so the dated state sits
+  in the figure's boundary and the text alternative says it without a date.
+- The Arabic of CWR-009 section 3 names the fast payment system «نظام الدفع السريع», as every other cell does.
+- Four social images regenerated (CLM-018, VIS-PAYMENT-RAILS, both languages).
+
 ## 2026-10-04 — RC-19: the fix batch from the independent review of 70398d1
 
 Master `c700dc52bf81…` → `90014e3bd27133c34b8435090230cf5b28a3301dec9f366c6fedf047b5ea2838` through `run_stage.py`

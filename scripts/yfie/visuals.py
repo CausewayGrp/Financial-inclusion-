@@ -453,16 +453,17 @@ def table_region(v: dict, tables: str) -> str:
 
 
 # ------------------------------------------------------------------------------------------------ bars (VIS-FINDEX-GAPS)
-def bar_rows(rows: list, vmax: float, unit_col: bool = False) -> str:
+def bar_rows(rows: list, vmax: float, unit_col: bool = False, dec: int = 0) -> str:
     """Horizontal bars from zero on a shared axis; one HTML row per governed group (the label wraps and mirrors), the
-    value printed at the bar's end. Rows may print their own unit when it differs from the panel's."""
+    value printed at the bar's end. Rows may print their own unit when it differs from the panel's. `dec` > 0 prints
+    every value at that published precision (E2-2: 7.0, not 7)."""
     out = []
     for r in rows:
         x = _pct(r["y"], vmax=vmax)
         unit = f'<span class="unit-l">{esc(r["unit"])}</span>' if unit_col and r.get("unit") else ""
         out.append(f'<div class="row"><div class="rl">{esc(r["x_text"])}{unit}</div>'
                    f'<svg class="trk" width="100%" height="30" aria-hidden="true" focusable="false" direction="ltr"><rect class="bar" x="1%" y="7" width="{x-1:.2f}%" height="16"/>'
-                   f'<text class="val" x="{x+1:.2f}%" y="19" text-anchor="start">{plain_num(r["y"])}</text></svg></div>')
+                   f'<text class="val" x="{x+1:.2f}%" y="19" text-anchor="start">{at_precision(r["y"], dec)}</text></svg></div>')
     return "".join(out)
 
 
@@ -490,18 +491,21 @@ def findex_gaps(v: dict, cite_label: str, origin: str | None, heading: str = "h2
     pairs = [(d, by_id[d["from"][0]], by_id[d["from"][1]]) for d in v["derived"] if len(d.get("from") or []) == 2 and all(i in by_id for i in d["from"])]
     paired = {r["id"] for _, a, b in pairs for r in (a, b)}
     common_unit = vals[0]["unit"]
+    # E2-2 (edition 2, R-11): one display precision for every Findex share, the panel's published precision (one decimal:
+    # /methodology/ section 7), so a governed 7.0 prints as 7.0 in the bars and the table, as the governed text prints it
+    dec = max(decimals(r["y"]) for r in vals)
     html_ = [f'<div class="panel bars"><p class="ph">{esc(common_unit)} · {esc(state_label(v, "MEASURED"))}</p>']
-    html_.append('<div class="p1">' + bar_rows([r for r in vals if r["id"] not in paired], vmax) + "</div>")
-    gap_text = {d["id"]: at_precision(d["value"], max(decimals(a["y"]), decimals(b["y"]))) for d, a, b in pairs}
+    html_.append('<div class="p1">' + bar_rows([r for r in vals if r["id"] not in paired], vmax, dec=dec) + "</div>")
+    gap_text = {d["id"]: at_precision(d["value"], dec) for d, a, b in pairs}
     for d, a, b in pairs:
         pair_rows = [b, a] if vals.index(b) < vals.index(a) else [a, b]   # governed order of the contract (women before men, …)
         own_unit = any(r["unit"] != common_unit for r in pair_rows)
-        html_.append(f'<div class="pair"><div class="p1">{bar_rows(pair_rows, vmax, unit_col=own_unit)}</div>'
+        html_.append(f'<div class="pair"><div class="p1">{bar_rows(pair_rows, vmax, unit_col=own_unit, dec=dec)}</div>'
                      f'<p class="gap"><span class="bracket" aria-hidden="true"></span>{esc(derived_label)} · {val_unit(gap_text[d["id"]], d["unit"])}</p></div>')
     html_.append('<div class="p1">' + axis_row(vmax, step) + "</div></div>")
     state = uniform(vals, lambda r: r["state"])
     head, per_row = value_head(v, vals, common_unit)
-    rows = [[esc(r["x_text"]), qual(num(r["y"]), esc(r["unit"]) if (per_row or r["unit"] != common_unit) else "", "" if state else esc(state_label(v, r["state"])))] for r in vals]
+    rows = [[esc(r["x_text"]), qual(f'<bdi dir="ltr">{at_precision(r["y"], dec)}</bdi>', esc(r["unit"]) if (per_row or r["unit"] != common_unit) else "", "" if state else esc(state_label(v, r["state"])))] for r in vals]
     gap_unit = uniform([d for d, _, _ in pairs], lambda d: d.get("unit")) or ""
     gaps = [[esc(f'{by_id[d["from"][0]]["x_text"]} − {by_id[d["from"][1]]["x_text"]}'), qual(num(gap_text[d["id"]]), "" if gap_unit else esc(d.get("unit") or ""))] for d, _, _ in pairs]
     tbl = grouped_table(caption_of(v, qual("" if per_row else esc(common_unit), esc(state_label(v, state)) if state else "")), [esc(th(v, "group")), head],

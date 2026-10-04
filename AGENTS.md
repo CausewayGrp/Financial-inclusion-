@@ -9,6 +9,7 @@ change protocol is `CONTRIBUTING.md`; this file is the short list you must not g
 2. `OPENAI_REENTRY_CHECKPOINT.md` — the current checkpoint and open items.
 3. `authority/CORE_CONSTITUTION.md` — durable rules.
 4. `CONTRIBUTING.md` — how changes are made, committed and synced.
+5. `docs/JUDGEMENT.md` — one page on how to decide what to build, in what form, and when to stop.
 
 Claude Design and Claude Code do not use this list: their start file is `handoff/README_FIRST.md`, with its own reading
 order. The programme state lives in `README.md`, the checkpoint and `authority/YFI_CURRENT_PROJECT_CONTEXT.json`, which

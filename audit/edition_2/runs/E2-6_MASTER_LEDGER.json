@@ -1,0 +1,171 @@
+{
+ "transaction": "E2-6",
+ "summary": "IMF CR 26/80: the Board's assessment and the authorities' statement on correspondent banking in QUAL-001, each with its speaker",
+ "input_master_sha256": "e81b2ebc40687fb344bb1c155ae85208b5b9f62dd1e59d4687bb0d88d480d229",
+ "output_master_sha256": "4ae052c9e51ab97ced5119364024aa2d4f39b1230a1e9031f9eb49ef92369a73",
+ "cells_written": 18,
+ "changes": [
+  {
+   "finding": "E2-6:S5-CORRESPONDENT",
+   "sheet": "06_EVIDENCE_OBJECTS",
+   "row": 33,
+   "col": 4,
+   "field": "QUAL-001.title_en",
+   "old": "OECD: institutional fragility and weak formal access (qualitative interpretation)",
+   "new": "OECD and IMF: institutional fragility, weak formal access and correspondent banking (qualitative assessments)"
+  },
+  {
+   "finding": "E2-6:S5-CORRESPONDENT",
+   "sheet": "06_EVIDENCE_OBJECTS",
+   "row": 33,
+   "col": 5,
+   "field": "QUAL-001.title_ar",
+   "old": "OECD: الهشاشة المؤسسية وضعف الوصول الرسمي (تفسير نوعي)",
+   "new": "OECD وصندوق النقد الدولي: الهشاشة المؤسسية وضعف الوصول الرسمي والمراسلة المصرفية (تقديرات نوعية)"
+  },
+  {
+   "finding": "E2-6:S5-CORRESPONDENT",
+   "sheet": "06_EVIDENCE_OBJECTS",
+   "row": 33,
+   "col": 6,
+   "field": "QUAL-001.summary_en",
+   "old": "The Organisation for Economic Co-operation and Development (OECD) links fragmented institutions, supervisory gaps and weak formal access to financial-sector fragility and low trust. On correspondent banking, the OECD writes that the conflict has severely undermined the confidence of several foreign correspondent banks, given perceived risks of money laundering and terrorism financing, isolating the Yemeni banking sector from regional and international financial networks. The evidence is contextual interpretation, not measured prevalence or a causal effect estimate.",
+   "new": "The Organisation for Economic Co-operation and Development (OECD) links fragmented institutions, supervisory gaps and weak formal access to financial-sector fragility and low trust. On correspondent banking, the OECD writes that the conflict has severely undermined the confidence of several foreign correspondent banks, given perceived risks of money laundering and terrorism financing, isolating the Yemeni banking sector from regional and international financial networks. The IMF's Executive Board, concluding the 2025 Article IV consultation on 31 March 2026, considered the relocation of major banks to Aden an opportunity to strengthen financial stability and integrity, and encouraged enhancing the AML-CFT framework to safeguard correspondent banking relationships. In the statement of Yemen's Executive Director at the IMF, the authorities say that after the United States designated the Houthis a foreign terrorist organization, all major banks moved their headquarters to Aden to protect correspondent banking relationships and maintain liquidity. The evidence is contextual interpretation, not measured prevalence or a causal effect estimate."
+  },
+  {
+   "finding": "E2-6:S5-CORRESPONDENT",
+   "sheet": "06_EVIDENCE_OBJECTS",
+   "row": 33,
+   "col": 7,
+   "field": "QUAL-001.summary_ar",
+   "old": "يربط تحليل منظمة التعاون الاقتصادي والتنمية (OECD) بين تفتت المؤسسات وفجوات الرقابة وضعف الوصول الرسمي وبين هشاشة القطاع المالي وانخفاض الثقة. وفي ما يخص المراسلة المصرفية، تكتب المنظمة أن النزاع أضعف بشدة ثقة عدد من البنوك المراسلة الأجنبية، بالنظر إلى المخاطر المتصوَّرة لغسل الأموال وتمويل الإرهاب، مما عزل القطاع المصرفي اليمني عن الشبكات المالية الإقليمية والدولية. هذا دليل تفسيري سياقي، وليس قياسًا للانتشار أو تقديرًا لأثر سببي.",
+   "new": "يربط تحليل منظمة التعاون الاقتصادي والتنمية (OECD) بين تفتت المؤسسات وفجوات الرقابة وضعف الوصول الرسمي وبين هشاشة القطاع المالي وانخفاض الثقة. وفي ما يخص المراسلة المصرفية، تكتب المنظمة أن النزاع أضعف بشدة ثقة عدد من البنوك المراسلة الأجنبية، بالنظر إلى المخاطر المتصوَّرة لغسل الأموال وتمويل الإرهاب، مما عزل القطاع المصرفي اليمني عن الشبكات المالية الإقليمية والدولية. وعند اختتام مشاورات المادة الرابعة لعام 2025 في 31 مارس 2026، رأى المجلس التنفيذي لصندوق النقد الدولي في نقل البنوك الرئيسية إلى عدن فرصةً لتعزيز الاستقرار المالي والنزاهة المالية، وشجّع على تعزيز إطار مكافحة غسل الأموال وتمويل الإرهاب لصون علاقات المراسلة المصرفية. وفي بيان المدير التنفيذي لليمن لدى الصندوق، تقول السلطات إنه بعد أن صنّفت الولايات المتحدة الحوثيين منظمةً إرهابية أجنبية، نقلت جميع البنوك الرئيسية مقارّها إلى عدن لحماية علاقات المراسلة المصرفية والحفاظ على السيولة. هذا دليل تفسيري سياقي، وليس قياسًا للانتشار أو تقديرًا لأثر سببي."
+  },
+  {
+   "finding": "E2-6:S5-CORRESPONDENT",
+   "sheet": "06_EVIDENCE_OBJECTS",
+   "row": 33,
+   "col": 8,
+   "field": "QUAL-001.definition_en",
+   "old": "A qualitative interpretation by the Organisation for Economic Co-operation and Development (OECD), published in 2026, of how fragmented institutions, supervisory gaps and weak formal access relate to financial-sector fragility and low trust in Yemen.",
+   "new": "A qualitative interpretation by the Organisation for Economic Co-operation and Development (OECD), published in 2026, of how fragmented institutions, supervisory gaps and weak formal access relate to financial-sector fragility and low trust in Yemen; and two IMF statements of 2026 on correspondent banking: the Executive Board's assessment and the authorities' account."
+  },
+  {
+   "finding": "E2-6:S5-CORRESPONDENT",
+   "sheet": "06_EVIDENCE_OBJECTS",
+   "row": 33,
+   "col": 9,
+   "field": "QUAL-001.definition_ar",
+   "old": "تفسير نوعي نشرته منظمة التعاون الاقتصادي والتنمية (OECD) في 2026 للعلاقة بين تفتت المؤسسات وفجوات الرقابة وضعف الوصول الرسمي من جهة، وهشاشة القطاع المالي وانخفاض الثقة في اليمن من جهة أخرى.",
+   "new": "تفسير نوعي نشرته منظمة التعاون الاقتصادي والتنمية (OECD) في 2026 للعلاقة بين تفتت المؤسسات وفجوات الرقابة وضعف الوصول الرسمي من جهة، وهشاشة القطاع المالي وانخفاض الثقة في اليمن من جهة أخرى؛ وبيانان لصندوق النقد الدولي في 2026 عن المراسلة المصرفية: تقدير المجلس التنفيذي، ورواية السلطات."
+  },
+  {
+   "finding": "E2-6:S5-CORRESPONDENT",
+   "sheet": "06_EVIDENCE_OBJECTS",
+   "row": 33,
+   "col": 12,
+   "field": "QUAL-001.universe_en",
+   "old": "OECD/EU institutional analysis based on consultations, workshops and sector analysis.",
+   "new": "OECD/EU institutional analysis based on consultations, workshops and sector analysis; the IMF Executive Board's assessment and the Yemeni authorities' statement in the 2025 Article IV consultation."
+  },
+  {
+   "finding": "E2-6:S5-CORRESPONDENT",
+   "sheet": "06_EVIDENCE_OBJECTS",
+   "row": 33,
+   "col": 13,
+   "field": "QUAL-001.universe_ar",
+   "old": "تحليل مؤسسي ضمن مشروع مشترك بين منظمة التعاون الاقتصادي والتنمية والاتحاد الأوروبي، يستند إلى مشاورات وورش عمل وتحليل قطاعي.",
+   "new": "تحليل مؤسسي ضمن مشروع مشترك بين منظمة التعاون الاقتصادي والتنمية والاتحاد الأوروبي، يستند إلى مشاورات وورش عمل وتحليل قطاعي؛ وتقدير المجلس التنفيذي لصندوق النقد الدولي وبيان السلطات اليمنية في مشاورات المادة الرابعة لعام 2025."
+  },
+  {
+   "finding": "E2-6:S5-CORRESPONDENT",
+   "sheet": "06_EVIDENCE_OBJECTS",
+   "row": 33,
+   "col": 14,
+   "field": "QUAL-001.method_en",
+   "old": "Qualitative synthesis in the financial-sector chapter (Chapter 2) of Promoting Economic Resilience in Yemen, published by the Organisation for Economic Co-operation and Development (OECD) in 2026, drawing on consultations, workshops and sector analysis under an OECD–EU project.",
+   "new": "Qualitative synthesis in the financial-sector chapter (Chapter 2) of Promoting Economic Resilience in Yemen, published by the Organisation for Economic Co-operation and Development (OECD) in 2026, drawing on consultations, workshops and sector analysis under an OECD–EU project. The IMF statements are quoted from IMF Country Report No. 26/80 (April 2026): the press release on the Executive Board's assessment (PDF page 4) and the statement by the Executive Director for the Republic of Yemen (PDF page 90)."
+  },
+  {
+   "finding": "E2-6:S5-CORRESPONDENT",
+   "sheet": "06_EVIDENCE_OBJECTS",
+   "row": 33,
+   "col": 15,
+   "field": "QUAL-001.method_ar",
+   "old": "تركيب نوعي ورد في فصل القطاع المالي (الفصل الثاني) من تقرير «تعزيز المرونة الاقتصادية في اليمن» الصادر عن منظمة التعاون الاقتصادي والتنمية (OECD) في 2026، ويستند إلى مشاورات وورش عمل وتحليل قطاعي ضمن مشروع مشترك بين المنظمة والاتحاد الأوروبي.",
+   "new": "تركيب نوعي ورد في فصل القطاع المالي (الفصل الثاني) من تقرير «تعزيز المرونة الاقتصادية في اليمن» الصادر عن منظمة التعاون الاقتصادي والتنمية (OECD) في 2026، ويستند إلى مشاورات وورش عمل وتحليل قطاعي ضمن مشروع مشترك بين المنظمة والاتحاد الأوروبي. ويُنقل بيانا صندوق النقد الدولي من تقريره القُطري رقم 26/80 (أبريل 2026): البيان الصحفي عن تقدير المجلس التنفيذي (الصفحة 4 من ملف PDF)، وبيان المدير التنفيذي للجمهورية اليمنية (الصفحة 90 من ملف PDF)."
+  },
+  {
+   "finding": "E2-6:S5-CORRESPONDENT",
+   "sheet": "06_EVIDENCE_OBJECTS",
+   "row": 33,
+   "col": 16,
+   "field": "QUAL-001.limitations_en",
+   "old": "It cannot establish prevalence, a quantified level of trust or a causal effect size. Its statement on correspondent banks counts no relationships and dates no change: it is the OECD's assessment, not a supervisory record or a measure of de-risking.",
+   "new": "It cannot establish prevalence, a quantified level of trust or a causal effect size. Its statement on correspondent banks counts no relationships and dates no change: it is the OECD's assessment, not a supervisory record or a measure of de-risking. The IMF passages are the Board's assessment and the authorities' account: neither counts correspondent relationships, and a bank's relocation is not a measure of de-risking or of restored access."
+  },
+  {
+   "finding": "E2-6:S5-CORRESPONDENT",
+   "sheet": "06_EVIDENCE_OBJECTS",
+   "row": 33,
+   "col": 17,
+   "field": "QUAL-001.limitations_ar",
+   "old": "لا يثبت الانتشار أو مستوى ثقة كميًا أو حجم أثر سببي. ولا تحصي عبارتها عن البنوك المراسلة أي علاقات، ولا تحدد متى حدث ذلك: فهي تقدير المنظمة، لا سجل رقابي ولا قياس لظاهرة تجنّب المخاطر (de-risking).",
+   "new": "لا يثبت الانتشار أو مستوى ثقة كميًا أو حجم أثر سببي. ولا تحصي عبارتها عن البنوك المراسلة أي علاقات، ولا تحدد متى حدث ذلك: فهي تقدير المنظمة، لا سجل رقابي ولا قياس لظاهرة تجنّب المخاطر (de-risking). وعبارتا صندوق النقد الدولي هما تقدير المجلس التنفيذي ورواية السلطات: لا تحصي أيٌّ منهما علاقات المراسلة، وليس نقل بنك لمقره قياسًا لتجنّب المخاطر ولا لاستعادة الوصول."
+  },
+  {
+   "finding": "E2-6:S5-CORRESPONDENT",
+   "sheet": "06_EVIDENCE_OBJECTS",
+   "row": 33,
+   "col": 24,
+   "field": "QUAL-001.source_dependencies",
+   "old": "SRC-OECD-YEM-RESILIENCE-001",
+   "new": "SRC-OECD-YEM-RESILIENCE-001; SRC-IMF-YEM-AIV-2025-2026"
+  },
+  {
+   "finding": "E2-6:S5-CORRESPONDENT",
+   "sheet": "06_EVIDENCE_OBJECTS",
+   "row": 33,
+   "col": 25,
+   "field": "QUAL-001.source_links",
+   "old": "[{\"source_id\":\"SRC-OECD-YEM-RESILIENCE-001\",\"url\":\"https://doi.org/10.1787/81ed2898-en\",\"audit_state\":\"SECONDARY_RESEARCH_LOCATOR\"}]",
+   "new": "[{\"source_id\":\"SRC-OECD-YEM-RESILIENCE-001\",\"url\":\"https://doi.org/10.1787/81ed2898-en\",\"audit_state\":\"SECONDARY_RESEARCH_LOCATOR\"},{\"source_id\":\"SRC-IMF-YEM-AIV-2025-2026\",\"url\":\"https://www.imf.org/-/media/files/publications/cr/2026/english/1yemea2026001-source-pdf.pdf\",\"audit_state\":\"PRIMARY_OFFICIAL_DOCUMENT\"}]"
+  },
+  {
+   "finding": "E2-6:S5-CORRESPONDENT",
+   "sheet": "02_SITE_MAP",
+   "row": 79,
+   "col": 7,
+   "field": "/evidence/QUAL-001/.meta_description_en",
+   "old": "The OECD links fragmented institutions, supervisory gaps and weak formal access to financial-sector fragility and low trust: a qualitative interpretation.",
+   "new": "The OECD on institutional fragility and weak formal access, and the IMF Board and the authorities on correspondent banking: qualitative assessments, each with its speaker."
+  },
+  {
+   "finding": "E2-6:S5-CORRESPONDENT",
+   "sheet": "02_SITE_MAP",
+   "row": 79,
+   "col": 8,
+   "field": "/evidence/QUAL-001/.meta_description_ar",
+   "old": "تربط منظمة التعاون الاقتصادي والتنمية (OECD) تفتت المؤسسات وفجوات الرقابة وضعف الوصول الرسمي بهشاشة القطاع المالي وانخفاض الثقة: تفسير نوعي.",
+   "new": "منظمة التعاون الاقتصادي والتنمية عن الهشاشة المؤسسية وضعف الوصول الرسمي، والمجلس التنفيذي لصندوق النقد الدولي والسلطات عن المراسلة المصرفية: تقديرات نوعية، لكلٍّ منها قائلها."
+  },
+  {
+   "finding": "E2-6:S5-CORRESPONDENT",
+   "sheet": "15_SOURCE_LIBRARY",
+   "row": 104,
+   "col": 28,
+   "field": "SRC-IMF-YEM-AIV-2025-2026.document_date",
+   "old": null,
+   "new": "2026-04"
+  },
+  {
+   "finding": "E2-6:S5-CORRESPONDENT",
+   "sheet": "15_SOURCE_LIBRARY",
+   "row": 104,
+   "col": 22,
+   "field": "SRC-IMF-YEM-AIV-2025-2026.retrieval_date",
+   "old": null,
+   "new": "2026-10-04"
+  }
+ ]
+}

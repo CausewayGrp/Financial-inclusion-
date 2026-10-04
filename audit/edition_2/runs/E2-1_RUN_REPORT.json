@@ -1,0 +1,89 @@
+{
+ "stage": "E2-1",
+ "staged_master_sha256": "594abed998bb100239c0d5ab23742fc6f8997ed4d2d509f1ecfafb630b66ee89",
+ "installed": [],
+ "steps": [
+  {
+   "step": "generate",
+   "exit": 0,
+   "tail": [
+    "  \"presentation_priority.json\",",
+    "  \"visuals/visual_design_contracts.json\"",
+    " ],",
+    " \"output_sha256\": 39",
+    "}",
+    "PROJECTIONS GENERATED"
+   ]
+  },
+  {
+   "step": "rebind",
+   "exit": 0,
+   "tail": [
+    "  \"README.md\",",
+    "  \"OPENAI_REENTRY_CHECKPOINT.md\",",
+    "  \"handoff/README_FIRST.md\",",
+    "  \"handoff/CLAUDE_DESIGN_MASTER_PROMPT.md\"",
+    " ]",
+    "}"
+   ]
+  },
+  {
+   "step": "build",
+   "exit": 0,
+   "tail": [
+    "Built 288 HTML files from 142 controlled page specs."
+   ]
+  },
+  {
+   "step": "public_literal_audit",
+   "exit": 0,
+   "tail": [
+    "PUBLIC_LITERAL_CLOSURE records=13383 unresolved=0"
+   ]
+  },
+  {
+   "step": "architecture_diagrams",
+   "exit": 0,
+   "tail": [
+    "ARCHITECTURE DIAGRAMS WRITTEN: YFIE_PUBLIC_SITE_MAP.svg, YFIE_PAGE_FAMILY_STATE_MAP.svg, YFIE_FULL_STACK_SYSTEM_ARCHITECTURE.svg"
+   ]
+  },
+  {
+   "step": "handoff_inventory",
+   "exit": 0,
+   "tail": [
+    "HANDOFF INVENTORY WRITTEN: 142 routes"
+   ]
+  },
+  {
+   "step": "repository_manifest",
+   "exit": 0,
+   "tail": [
+    "REPOSITORY MANIFEST WRITTEN: 1951 files in 24 classes"
+   ]
+  },
+  {
+   "step": "validate",
+   "exit": 0,
+   "tail": [
+    "HTML=288 ERRORS=0 WARN=0",
+    "WEBSITE REPOSITORY VALIDATION PASS"
+   ]
+  },
+  {
+   "step": "generator_idempotence",
+   "exit": 0,
+   "tail": [
+    " \"master_sha256\": \"594abed998bb100239c0d5ab23742fc6f8997ed4d2d509f1ecfafb630b66ee89\",",
+    " \"outputs\": 39,",
+    " \"differences\": [],",
+    " \"output_sha256\": 39",
+    "}",
+    "PROJECTION CHECK PASS"
+   ]
+  }
+ ],
+ "result": "COMMITTED",
+ "master_sha256": "594abed998bb100239c0d5ab23742fc6f8997ed4d2d509f1ecfafb630b66ee89",
+ "page_specs_sha256": "9e10da2236a8ef473af0bf32cf1f849211283f156e37cd288cade14aa607e44b"
+}

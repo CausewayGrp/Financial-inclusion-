@@ -821,11 +821,11 @@
       "state": "MEASURED",
       "must_equal": {
        "WB-FINDEX-OBS-2022-001": 11.9,
-       "WB-FINDEX-OBS-2022-002": 5.44,
-       "WB-FINDEX-OBS-2022-003": 18.35,
-       "WB-FINDEX-OBS-2022-007": 19.53,
-       "WB-FINDEX-OBS-2022-008": 5.01,
-       "WB-FINDEX-OBS-2022-009": 16.11
+       "WB-FINDEX-OBS-2022-002": 5.4,
+       "WB-FINDEX-OBS-2022-003": 18.3,
+       "WB-FINDEX-OBS-2022-007": 19.5,
+       "WB-FINDEX-OBS-2022-008": 5.0,
+       "WB-FINDEX-OBS-2022-009": 16.1
       },
       "label_fields": {
        "x": "findex_group",
@@ -840,7 +840,7 @@
        "WB-FINDEX-OBS-2022-003",
        "WB-FINDEX-OBS-2022-002"
       ],
-      "must_equal": 12.91,
+      "must_equal": 12.9,
       "unit": "percentage points",
       "state": "DERIVED"
      },
@@ -860,7 +860,7 @@
        "WB-FINDEX-OBS-2022-007",
        "WB-FINDEX-OBS-2022-006"
       ],
-      "must_equal": 12.55,
+      "must_equal": 12.5,
       "unit": "percentage points",
       "state": "DERIVED"
      },

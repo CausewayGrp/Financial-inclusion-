@@ -2,8 +2,8 @@
  "schema": "YFIE_ROUTE_CONTENT_AND_STATE_INVENTORY/1.3",
  "purpose": "Design recipient's map of every route, its family, bindings, collections, next actions and the states Design must cover. Derived; not authority.",
  "generated_from": {
-  "production_master_sha256": "90014e3bd27133c34b8435090230cf5b28a3301dec9f366c6fedf047b5ea2838",
-  "page_specs_sha256": "0298a3c6b5c72ab9da1fa99667f79303475f39e12bbe41c2f6f581459f8a2b86",
+  "production_master_sha256": "f3e06fb935d0181211cc73f648eff588388ddda41a4c8f7eb2406b8396333514",
+  "page_specs_sha256": "016ca988b57f63419c4685d0b8b2eb31be7984a0554ae5318796f9e64481b12e",
   "generator": "scripts/handoff_inventory.py"
  },
  "counts": {
@@ -192,7 +192,7 @@
     "MA-005"
    ],
    "source_ids": [],
-   "source_references": 8,
+   "source_references": 11,
    "next_actions": [],
    "next_action_policy": "TASK_OR_QUESTION",
    "collection": {
@@ -271,7 +271,7 @@
     "MA-010"
    ],
    "source_ids": [],
-   "source_references": 15,
+   "source_references": 18,
    "next_actions": [
     "/evidence/"
    ],
@@ -669,7 +669,7 @@
     "MA-006"
    ],
    "source_ids": [],
-   "source_references": 36,
+   "source_references": 37,
    "next_actions": [
     "/evidence/compare/",
     "/data/",
@@ -812,12 +812,12 @@
    "reading_ids": [],
    "measurement_ids": [],
    "source_ids": [],
-   "source_references": 2,
+   "source_references": 3,
    "next_actions": [],
    "next_action_policy": "SOURCE_RELATED_CORRECTION_OR_REUSE",
    "lineage_state": "BOUND_EXACT",
    "verification_state": "SOURCES_LISTED",
-   "public_sources_listed": 2,
+   "public_sources_listed": 3,
    "structured_data": [
     "BreadcrumbList"
    ],
@@ -843,12 +843,12 @@
    "reading_ids": [],
    "measurement_ids": [],
    "source_ids": [],
-   "source_references": 1,
+   "source_references": 2,
    "next_actions": [],
    "next_action_policy": "SOURCE_RELATED_CORRECTION_OR_REUSE",
    "lineage_state": "BOUND_EXACT",
    "verification_state": "SOURCES_LISTED",
-   "public_sources_listed": 1,
+   "public_sources_listed": 2,
    "structured_data": [
     "BreadcrumbList"
    ],
@@ -874,12 +874,12 @@
    "reading_ids": [],
    "measurement_ids": [],
    "source_ids": [],
-   "source_references": 6,
+   "source_references": 8,
    "next_actions": [],
    "next_action_policy": "SOURCE_RELATED_CORRECTION_OR_REUSE",
    "lineage_state": "BOUND_EXACT",
    "verification_state": "SOURCES_LISTED",
-   "public_sources_listed": 6,
+   "public_sources_listed": 8,
    "structured_data": [
     "BreadcrumbList"
    ],
@@ -1064,12 +1064,12 @@
    "reading_ids": [],
    "measurement_ids": [],
    "source_ids": [],
-   "source_references": 1,
+   "source_references": 2,
    "next_actions": [],
    "next_action_policy": "SOURCE_RELATED_CORRECTION_OR_REUSE",
    "lineage_state": "BOUND_EXACT",
    "verification_state": "SOURCES_LISTED",
-   "public_sources_listed": 1,
+   "public_sources_listed": 2,
    "structured_data": [
     "BreadcrumbList"
    ],
@@ -1126,12 +1126,12 @@
    "reading_ids": [],
    "measurement_ids": [],
    "source_ids": [],
-   "source_references": 2,
+   "source_references": 3,
    "next_actions": [],
    "next_action_policy": "SOURCE_RELATED_CORRECTION_OR_REUSE",
    "lineage_state": "BOUND_EXACT",
    "verification_state": "SOURCES_LISTED",
-   "public_sources_listed": 2,
+   "public_sources_listed": 3,
    "structured_data": [
     "BreadcrumbList"
    ],
@@ -1343,12 +1343,12 @@
    "reading_ids": [],
    "measurement_ids": [],
    "source_ids": [],
-   "source_references": 5,
+   "source_references": 6,
    "next_actions": [],
    "next_action_policy": "SOURCE_RELATED_CORRECTION_OR_REUSE",
    "lineage_state": "BOUND_EXACT",
    "verification_state": "SOURCES_LISTED",
-   "public_sources_listed": 5,
+   "public_sources_listed": 6,
    "structured_data": [
     "BreadcrumbList"
    ],
@@ -1467,12 +1467,12 @@
    "reading_ids": [],
    "measurement_ids": [],
    "source_ids": [],
-   "source_references": 16,
+   "source_references": 17,
    "next_actions": [],
    "next_action_policy": "SOURCE_RELATED_CORRECTION_OR_REUSE",
    "lineage_state": "BOUND_EXACT",
    "verification_state": "SOURCES_LISTED",
-   "public_sources_listed": 16,
+   "public_sources_listed": 17,
    "structured_data": [
     "BreadcrumbList"
    ],
@@ -1622,12 +1622,12 @@
    "reading_ids": [],
    "measurement_ids": [],
    "source_ids": [],
-   "source_references": 2,
+   "source_references": 3,
    "next_actions": [],
    "next_action_policy": "SOURCE_RELATED_CORRECTION_OR_REUSE",
    "lineage_state": "BOUND_EXACT",
    "verification_state": "SOURCES_LISTED",
-   "public_sources_listed": 2,
+   "public_sources_listed": 3,
    "structured_data": [
     "BreadcrumbList"
    ],
@@ -1777,12 +1777,12 @@
    "reading_ids": [],
    "measurement_ids": [],
    "source_ids": [],
-   "source_references": 2,
+   "source_references": 4,
    "next_actions": [],
    "next_action_policy": "SOURCE_RELATED_CORRECTION_OR_REUSE",
    "lineage_state": "BOUND_EXACT",
    "verification_state": "SOURCES_LISTED",
-   "public_sources_listed": 2,
+   "public_sources_listed": 4,
    "structured_data": [
     "BreadcrumbList"
    ],
@@ -2603,8 +2603,8 @@
     "en": "dist/en/evidence/CLM-059/index.html",
     "ar": "dist/ar/evidence/CLM-059/index.html"
    },
-   "title_en": "SMEPS programme reach describes the programme, not all MSMEs in Yemen",
-   "title_ar": "وصول برنامج SMEPS دليل على نطاق البرنامج، لا على حجم قطاع المنشآت في اليمن",
+   "title_en": "Programme reach describes the programmes, not all MSMEs in Yemen",
+   "title_ar": "وصول البرامج دليل على نطاقها، لا على حجم قطاع المنشآت في اليمن",
    "sections": 2,
    "section_rows_split_by_language": false,
    "evidence_ids": [
@@ -2614,12 +2614,12 @@
    "reading_ids": [],
    "measurement_ids": [],
    "source_ids": [],
-   "source_references": 1,
+   "source_references": 2,
    "next_actions": [],
    "next_action_policy": "SOURCE_RELATED_CORRECTION_OR_REUSE",
    "lineage_state": "BOUND_EXACT",
    "verification_state": "SOURCES_LISTED",
-   "public_sources_listed": 1,
+   "public_sources_listed": 2,
    "structured_data": [
     "BreadcrumbList"
    ],
@@ -2893,12 +2893,12 @@
    "reading_ids": [],
    "measurement_ids": [],
    "source_ids": [],
-   "source_references": 2,
+   "source_references": 3,
    "next_actions": [],
    "next_action_policy": "SOURCE_RELATED_CORRECTION_OR_REUSE",
    "lineage_state": "BOUND_EXACT",
    "verification_state": "SOURCES_LISTED",
-   "public_sources_listed": 2,
+   "public_sources_listed": 3,
    "structured_data": [
     "BreadcrumbList"
    ],
@@ -2975,8 +2975,8 @@
     "en": "dist/en/evidence/QUAL-001/index.html",
     "ar": "dist/ar/evidence/QUAL-001/index.html"
    },
-   "title_en": "OECD: institutional fragility and weak formal access (qualitative interpretation)",
-   "title_ar": "OECD: الهشاشة المؤسسية وضعف الوصول الرسمي (تفسير نوعي)",
+   "title_en": "OECD, IMF Executive Board and Yemeni authorities: institutional fragility, weak formal access and correspondent banking (qualitative accounts)",
+   "title_ar": "OECD والمجلس التنفيذي لصندوق النقد الدولي والسلطات اليمنية: الهشاشة المؤسسية وضعف الوصول الرسمي والمراسلة المصرفية (تقديرات وروايات نوعية)",
    "sections": 2,
    "section_rows_split_by_language": false,
    "evidence_ids": [
@@ -2986,12 +2986,12 @@
    "reading_ids": [],
    "measurement_ids": [],
    "source_ids": [],
-   "source_references": 1,
+   "source_references": 2,
    "next_actions": [],
    "next_action_policy": "SOURCE_RELATED_CORRECTION_OR_REUSE",
    "lineage_state": "BOUND_EXACT",
    "verification_state": "SOURCES_LISTED",
-   "public_sources_listed": 1,
+   "public_sources_listed": 2,
    "structured_data": [
     "BreadcrumbList"
    ],
@@ -3277,12 +3277,12 @@
    "reading_ids": [],
    "measurement_ids": [],
    "source_ids": [],
-   "source_references": 2,
+   "source_references": 3,
    "next_actions": [],
    "next_action_policy": "SOURCE_RELATED_CORRECTION_OR_REUSE",
    "lineage_state": "BOUND_EXACT",
    "verification_state": "SOURCES_LISTED",
-   "public_sources_listed": 2,
+   "public_sources_listed": 3,
    "structured_data": [
     "BreadcrumbList"
    ],
@@ -3308,12 +3308,12 @@
    "reading_ids": [],
    "measurement_ids": [],
    "source_ids": [],
-   "source_references": 1,
+   "source_references": 2,
    "next_actions": [],
    "next_action_policy": "SOURCE_RELATED_CORRECTION_OR_REUSE",
    "lineage_state": "BOUND_EXACT",
    "verification_state": "SOURCES_LISTED",
-   "public_sources_listed": 1,
+   "public_sources_listed": 2,
    "structured_data": [
     "BreadcrumbList"
    ],
@@ -3403,12 +3403,12 @@
    "reading_ids": [],
    "measurement_ids": [],
    "source_ids": [],
-   "source_references": 1,
+   "source_references": 2,
    "next_actions": [],
    "next_action_policy": "SOURCE_RELATED_CORRECTION_OR_REUSE",
    "lineage_state": "BOUND_EXACT",
    "verification_state": "SOURCES_LISTED",
-   "public_sources_listed": 1,
+   "public_sources_listed": 2,
    "structured_data": [
     "BreadcrumbList"
    ],
@@ -3434,12 +3434,12 @@
    "reading_ids": [],
    "measurement_ids": [],
    "source_ids": [],
-   "source_references": 2,
+   "source_references": 3,
    "next_actions": [],
    "next_action_policy": "SOURCE_RELATED_CORRECTION_OR_REUSE",
    "lineage_state": "BOUND_EXACT",
    "verification_state": "SOURCES_LISTED",
-   "public_sources_listed": 2,
+   "public_sources_listed": 3,
    "structured_data": [
     "BreadcrumbList"
    ],
@@ -3985,12 +3985,12 @@
    "reading_ids": [],
    "measurement_ids": [],
    "source_ids": [],
-   "source_references": 15,
+   "source_references": 16,
    "next_actions": [],
    "next_action_policy": "SOURCE_RELATED_CORRECTION_OR_REUSE",
    "lineage_state": "BOUND_EXACT",
    "verification_state": "SOURCES_LISTED",
-   "public_sources_listed": 15,
+   "public_sources_listed": 16,
    "structured_data": [
     "BreadcrumbList"
    ],
@@ -4257,7 +4257,7 @@
    "reading_ids": [],
    "measurement_ids": [],
    "source_ids": [],
-   "source_references": 19,
+   "source_references": 20,
    "next_actions": [
     "/evidence/",
     "/data/",
@@ -4430,7 +4430,7 @@
     "MA-008"
    ],
    "source_ids": [],
-   "source_references": 38,
+   "source_references": 39,
    "next_actions": [
     "/evidence/CLM-022/"
    ],
@@ -4480,7 +4480,7 @@
     "MA-008"
    ],
    "source_ids": [],
-   "source_references": 5,
+   "source_references": 6,
    "next_actions": [
     "/evidence/CLM-005/"
    ],
@@ -4516,7 +4516,7 @@
    "reading_ids": [],
    "measurement_ids": [],
    "source_ids": [],
-   "source_references": 3,
+   "source_references": 4,
    "next_actions": [
     "/explore/",
     "/evidence/"
@@ -4577,7 +4577,7 @@
    "reading_ids": [],
    "measurement_ids": [],
    "source_ids": [],
-   "source_references": 30,
+   "source_references": 31,
    "next_actions": [
     "/evidence/",
     "/data/",
@@ -4612,6 +4612,7 @@
     "CLM-050",
     "CLM-051",
     "CLM-052",
+    "FMIIP-BASELINE-2025-01",
     "VIS-E-MONEY-RULE-STACK",
     "VIS-PAYMENT-ANATOMY",
     "VIS-POS-TERMINALS",
@@ -4637,7 +4638,7 @@
     "MA-010"
    ],
    "source_ids": [],
-   "source_references": 37,
+   "source_references": 38,
    "next_actions": [
     "/evidence/CLM-003/"
    ],
@@ -4711,7 +4712,7 @@
     "MA-010"
    ],
    "source_ids": [],
-   "source_references": 26,
+   "source_references": 29,
    "next_actions": [
     "/evidence/CLM-001/"
    ],
@@ -4829,7 +4830,7 @@
    ],
    "measurement_ids": [],
    "source_ids": [],
-   "source_references": 40,
+   "source_references": 43,
    "next_actions": [
     "/measurement/",
     "/evidence/"
@@ -4969,7 +4970,7 @@
    "source_ids": [
     "SRC-WB-FINDEX-001"
    ],
-   "source_references": 12,
+   "source_references": 14,
    "next_actions": [],
    "next_action_policy": "VERIFY_BOUND_EVIDENCE_RECORDS",
    "structured_data": [
@@ -5091,7 +5092,7 @@
     "MA-010"
    ],
    "source_ids": [],
-   "source_references": 13,
+   "source_references": 16,
    "next_actions": [],
    "next_action_policy": "VERIFY_BOUND_EVIDENCE_RECORDS",
    "structured_data": [
@@ -5218,7 +5219,7 @@
    "source_ids": [
     "SRC-IMF-YEM-SMP-2026"
    ],
-   "source_references": 15,
+   "source_references": 18,
    "next_actions": [],
    "next_action_policy": "VERIFY_BOUND_EVIDENCE_RECORDS",
    "structured_data": [
@@ -5262,7 +5263,7 @@
     "SRC-CBY-AR2024-BOP",
     "SRC-CBY-AR2025-BOP"
    ],
-   "source_references": 5,
+   "source_references": 7,
    "next_actions": [],
    "next_action_policy": "VERIFY_BOUND_EVIDENCE_RECORDS",
    "structured_data": [
@@ -5287,6 +5288,7 @@
    "sections": 11,
    "section_rows_split_by_language": true,
    "evidence_ids": [
+    "CLM-010",
     "CLM-011",
     "CLM-012",
     "CLM-013",
@@ -5320,7 +5322,7 @@
     "MA-010"
    ],
    "source_ids": [],
-   "source_references": 37,
+   "source_references": 41,
    "next_actions": [
     "/evidence/CLM-011/"
    ],
@@ -5377,7 +5379,7 @@
     "MA-001"
    ],
    "source_ids": [],
-   "source_references": 15,
+   "source_references": 17,
    "next_actions": [
     "/evidence/CLM-007/"
    ],
@@ -5541,7 +5543,7 @@
      "page_family": "Evidence Record",
      "lineage_state": "BOUND_EXACT",
      "verification_state": "SOURCES_LISTED",
-     "public_sources_listed": 6,
+     "public_sources_listed": 8,
      "visual_ids": [],
      "visual_grammar_present": [],
      "reading_ids": []

@@ -1,0 +1,91 @@
+{
+ "stage": "E2-2",
+ "staged_master_sha256": "d0bd9324c18e641d52c9f562aa6a1cb7b8f8d4c42c59ec694fdca0946bf79b59",
+ "installed": [
+  "scripts/projection/controlled_inputs/visual_design_contract.json"
+ ],
+ "steps": [
+  {
+   "step": "generate",
+   "exit": 0,
+   "tail": [
+    "  \"presentation_priority.json\",",
+    "  \"visuals/visual_design_contracts.json\"",
+    " ],",
+    " \"output_sha256\": 39",
+    "}",
+    "PROJECTIONS GENERATED"
+   ]
+  },
+  {
+   "step": "rebind",
+   "exit": 0,
+   "tail": [
+    "  \"README.md\",",
+    "  \"OPENAI_REENTRY_CHECKPOINT.md\",",
+    "  \"handoff/README_FIRST.md\",",
+    "  \"handoff/CLAUDE_DESIGN_MASTER_PROMPT.md\"",
+    " ]",
+    "}"
+   ]
+  },
+  {
+   "step": "build",
+   "exit": 0,
+   "tail": [
+    "Built 288 HTML files from 142 controlled page specs."
+   ]
+  },
+  {
+   "step": "public_literal_audit",
+   "exit": 0,
+   "tail": [
+    "PUBLIC_LITERAL_CLOSURE records=13376 unresolved=0"
+   ]
+  },
+  {
+   "step": "architecture_diagrams",
+   "exit": 0,
+   "tail": [
+    "ARCHITECTURE DIAGRAMS WRITTEN: YFIE_PUBLIC_SITE_MAP.svg, YFIE_PAGE_FAMILY_STATE_MAP.svg, YFIE_FULL_STACK_SYSTEM_ARCHITECTURE.svg"
+   ]
+  },
+  {
+   "step": "handoff_inventory",
+   "exit": 0,
+   "tail": [
+    "HANDOFF INVENTORY WRITTEN: 142 routes"
+   ]
+  },
+  {
+   "step": "repository_manifest",
+   "exit": 0,
+   "tail": [
+    "REPOSITORY MANIFEST WRITTEN: 1955 files in 24 classes"
+   ]
+  },
+  {
+   "step": "validate",
+   "exit": 0,
+   "tail": [
+    "HTML=288 ERRORS=0 WARN=0",
+    "WEBSITE REPOSITORY VALIDATION PASS"
+   ]
+  },
+  {
+   "step": "generator_idempotence",
+   "exit": 0,
+   "tail": [
+    " \"master_sha256\": \"d0bd9324c18e641d52c9f562aa6a1cb7b8f8d4c42c59ec694fdca0946bf79b59\",",
+    " \"outputs\": 39,",
+    " \"differences\": [],",
+    " \"output_sha256\": 39",
+    "}",
+    "PROJECTION CHECK PASS"
+   ]
+  }
+ ],
+ "result": "COMMITTED",
+ "master_sha256": "d0bd9324c18e641d52c9f562aa6a1cb7b8f8d4c42c59ec694fdca0946bf79b59",
+ "page_specs_sha256": "7bab67ba1cd3cb3e818cef42b5d7f6b50721fa85c0c29a1df1d7f6e71bbd837d"
+}

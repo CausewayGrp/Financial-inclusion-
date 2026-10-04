@@ -106,7 +106,7 @@ function esc(s){return String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&l
 // swapped and a plain signed value with its sign at the wrong end. Every page isolates those runs in its own text
 // layer; anything this file writes into a page must read the same way. The expression is the renderer's own, character
 // for character — scripts/yfie/text.py LTR_RUN — and scripts/validate.py fails if the two ever drift apart.
-const LTR_RUN=/(?:(?<![A-Za-z0-9_.,-])(?:\d{4}(?:-\d{2}(?:-\d{2})?)?[–-]\d{4}(?:-\d{2}(?:-\d{2})?)?|\d{1,3}(?:,\d{3})+–\d{1,3}(?:,\d{3})+|\d{1,3}–\d{1,3})(?!\d|[.,]\d))|(?:(?<![A-Za-z0-9_-])\d{4}-\d{2}(?:-\d{2})?(?![\d-]))|(?:(?<![\w\u0600-\u06FF-])[+\u2212\u2013-]\d[\d,]*(?:\.\d+)?%?(?![\w]))/g;
+const LTR_RUN=/(?:(?<![A-Za-z0-9_.,-])(?:\d{4}(?:-\d{2}(?:-\d{2})?)?[–-]\d{4}(?:-\d{2}(?:-\d{2})?)?|\d{1,3}(?:,\d{3})+–\d{1,3}(?:,\d{3})+|\d{1,3}–\d{1,3})(?!\d|[.,]\d))|(?:(?<![A-Za-z0-9_-])\d{4}-\d{2}(?:-\d{2})?(?![\d-]))|(?:(?<![\w\u0600-\u06FF-])[+\u2212\u2013-]\d[\d,]*(?:\.\d+)?%?(?![\w]))|(?:(?<![\w.,\u2013-])\d{1,2}-\d{1,2}(?![\w.,\u2013-]))/g;
 const ID_RUN=/(?<![A-Za-z0-9_-])(?=[A-Z][A-Za-z0-9-]*\d)[A-Z][A-Z0-9]*(?:-[A-Za-z0-9]+)+(?![A-Za-z0-9_-])/g;   // identifiers: isolated too, but breakable (scripts/yfie/text.py ID_RUN)
 function iso(s){return esc(s).replace(LTR_RUN,m=>`<bdi dir="ltr" class="nw">${m}</bdi>`).split(/(<[^>]+>)/).map((p,k)=>k%2?p:p.replace(ID_RUN,m=>`<bdi dir="ltr">${m}</bdi>`)).join('');}
 // Tranche C (TOOL-12): Arabic-Indic and Persian digits read as Western digits. Mirrored in scripts/validate.py (_r4norm).

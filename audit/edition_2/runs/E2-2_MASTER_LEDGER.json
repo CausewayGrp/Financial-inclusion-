@@ -1,0 +1,360 @@
+{
+ "transaction": "E2-2",
+ "summary": "One display precision for every Global Findex figure: one decimal, from the World Bank's unrounded values",
+ "input_master_sha256": "51a7f1930fcd21e514d608785abdb2a8887eeb6d4e2d591629477b87ebb7da75",
+ "output_master_sha256": "d0bd9324c18e641d52c9f562aa6a1cb7b8f8d4c42c59ec694fdca0946bf79b59",
+ "cells_written": 39,
+ "changes": [
+  {
+   "finding": "E2-2:R-11",
+   "sheet": "02_SITE_MAP",
+   "row": 12,
+   "col": 7,
+   "field": "/evidence/CLM-002/.c7",
+   "old": "In the 2021 Global Findex wave for Yemen (fieldwork 2022–23), 18.35% of men and 5.44% of women aged 15+ in the areas surveyed had an account.",
+   "new": "In the 2021 Global Findex wave for Yemen (fieldwork 2022–23), 18.3% of men and 5.4% of women aged 15+ in the areas surveyed had an account."
+  },
+  {
+   "finding": "E2-2:R-11",
+   "sheet": "02_SITE_MAP",
+   "row": 12,
+   "col": 8,
+   "field": "/evidence/CLM-002/.c8",
+   "old": "في موجة 2021 من Global Findex لليمن (العمل الميداني 2022–2023)، كان لدى 18.35% من الرجال و5.44% من النساء بعمر 15 سنة فأكثر في المناطق المشمولة حساب.",
+   "new": "في موجة 2021 من Global Findex لليمن (العمل الميداني 2022–2023)، كان لدى 18.3% من الرجال و5.4% من النساء بعمر 15 سنة فأكثر في المناطق المشمولة حساب."
+  },
+  {
+   "finding": "E2-2:R-11",
+   "sheet": "02_SITE_MAP",
+   "row": 136,
+   "col": 7,
+   "field": "/readings/gender-gap-measured-causes-open/.c7",
+   "old": "In the Global Findex 2021 wave for Yemen, 18.35% of men and 5.44% of women in surveyed areas had an account: a measured gap whose explanation is open.",
+   "new": "In the Global Findex 2021 wave for Yemen, 18.3% of men and 5.4% of women in surveyed areas had an account: a measured gap whose explanation is open."
+  },
+  {
+   "finding": "E2-2:R-11",
+   "sheet": "02_SITE_MAP",
+   "row": 136,
+   "col": 8,
+   "field": "/readings/gender-gap-measured-causes-open/.c8",
+   "old": "في موجة Global Findex 2021 الخاصة باليمن، كان لدى 18.35% من الرجال و5.44% من النساء في المناطق المشمولة حساب؛ وهي فجوة مقاسة ما يزال تفسيرها مفتوحًا.",
+   "new": "في موجة Global Findex 2021 الخاصة باليمن، كان لدى 18.3% من الرجال و5.4% من النساء في المناطق المشمولة حساب؛ وهي فجوة مقاسة ما يزال تفسيرها مفتوحًا."
+  },
+  {
+   "finding": "E2-2:R-11",
+   "sheet": "03_PAGE_SECTIONS",
+   "row": 8,
+   "col": 5,
+   "field": "/.c5",
+   "old": "11.9% of adults aged 15 and over in the areas surveyed had an account at a financial institution or with a mobile-money provider, according to the latest representative population measure: the World Bank’s Global Findex 2021 survey of Yemen (fieldwork 7 November 2022 to 9 January 2023; World Bank data year 2022). Areas holding about 23% of the population were not surveyed. In the same survey, 18.35% of men and 5.44% of women had an account, a gap of 12.91 percentage points. Separately, point-of-sale (POS) terminals reported by the Central Bank of Yemen – Aden (CBY-Aden) rose from 561 in March 2025 to 1,651 in June 2026, within CBY-Aden’s reporting scope. These are different measures: people, a disparity within one survey, and infrastructure. None substitutes for another.",
+   "new": "11.9% of adults aged 15 and over in the areas surveyed had an account at a financial institution or with a mobile-money provider, according to the latest representative population measure: the World Bank’s Global Findex 2021 survey of Yemen (fieldwork 7 November 2022 to 9 January 2023; World Bank data year 2022). Areas holding about 23% of the population were not surveyed. In the same survey, 18.3% of men and 5.4% of women had an account, a gap of 12.9 percentage points. Separately, point-of-sale (POS) terminals reported by the Central Bank of Yemen – Aden (CBY-Aden) rose from 561 in March 2025 to 1,651 in June 2026, within CBY-Aden’s reporting scope. These are different measures: people, a disparity within one survey, and infrastructure. None substitutes for another."
+  },
+  {
+   "finding": "E2-2:R-11",
+   "sheet": "03_PAGE_SECTIONS",
+   "row": 9,
+   "col": 7,
+   "field": "/.c7",
+   "old": "كان لدى 11.9% من البالغين بعمر 15 سنة فأكثر في المناطق التي شملها المسح حساب لدى مؤسسة مالية أو لدى مقدم خدمة أموال عبر الهاتف المحمول، وفق أحدث قياس ممثل للسكان: مسح المؤشر العالمي للشمول المالي (Global Findex) لعام 2021 في اليمن، الصادر عن البنك الدولي (نُفذ العمل الميداني من 7 نوفمبر 2022 إلى 9 يناير 2023؛ وسنة البيانات لدى البنك الدولي 2022). ولم يشمل المسح مناطق يسكنها نحو 23% من السكان. وفي المسح نفسه، كان لدى 18.35% من الرجال و5.44% من النساء حساب، بفارق 12.91 نقطة مئوية. وبصورة منفصلة، ارتفع عدد أجهزة نقاط البيع التي يُبلغ عنها البنك المركزي اليمني – عدن من 561 في مارس 2025 إلى 1,651 في يونيو 2026، ضمن نطاق إبلاغه. هذه مقاييس مختلفة: أشخاص، وفجوة داخل مسح واحد، وبنية تحتية؛ ولا يحل أي منها محل الآخر.",
+   "new": "كان لدى 11.9% من البالغين بعمر 15 سنة فأكثر في المناطق التي شملها المسح حساب لدى مؤسسة مالية أو لدى مقدم خدمة أموال عبر الهاتف المحمول، وفق أحدث قياس ممثل للسكان: مسح المؤشر العالمي للشمول المالي (Global Findex) لعام 2021 في اليمن، الصادر عن البنك الدولي (نُفذ العمل الميداني من 7 نوفمبر 2022 إلى 9 يناير 2023؛ وسنة البيانات لدى البنك الدولي 2022). ولم يشمل المسح مناطق يسكنها نحو 23% من السكان. وفي المسح نفسه، كان لدى 18.3% من الرجال و5.4% من النساء حساب، بفارق 12.9 نقطة مئوية. وبصورة منفصلة، ارتفع عدد أجهزة نقاط البيع التي يُبلغ عنها البنك المركزي اليمني – عدن من 561 في مارس 2025 إلى 1,651 في يونيو 2026، ضمن نطاق إبلاغه. هذه مقاييس مختلفة: أشخاص، وفجوة داخل مسح واحد، وبنية تحتية؛ ولا يحل أي منها محل الآخر."
+  },
+  {
+   "finding": "E2-2:R-11",
+   "sheet": "03_PAGE_SECTIONS",
+   "row": 189,
+   "col": 5,
+   "field": "/people/.c5",
+   "old": "The latest representative survey available, the Global Findex 2021 wave (survey round; Yemen fieldwork 7 November 2022 to 9 January 2023), found that 11.9% of adults aged 15 and over in the areas surveyed had an account: 5.44% of women and 18.35% of men. That establishes a low level of account ownership and measured gaps between groups for that wave. It is not a 2026 rate, it does not explain the gaps, and it cannot be combined with other measures of access, use, resilience or geography into one “latest” number.",
+   "new": "The latest representative survey available, the Global Findex 2021 wave (survey round; Yemen fieldwork 7 November 2022 to 9 January 2023), found that 11.9% of adults aged 15 and over in the areas surveyed had an account: 5.4% of women and 18.3% of men. That establishes a low level of account ownership and measured gaps between groups for that wave. It is not a 2026 rate, it does not explain the gaps, and it cannot be combined with other measures of access, use, resilience or geography into one “latest” number."
+  },
+  {
+   "finding": "E2-2:R-11",
+   "sheet": "03_PAGE_SECTIONS",
+   "row": 189,
+   "col": 7,
+   "field": "/people/.c7",
+   "old": "يُظهر أحدث مسح ممثل متاح — موجة المؤشر العالمي للشمول المالي (Global Findex) لعام 2021، أي جولة المسح التي نُفذ عملها الميداني في اليمن من 7 نوفمبر 2022 إلى 9 يناير 2023 — أن 11.9% من البالغين بعمر 15 سنة فأكثر في المناطق التي شملها المسح يملكون حسابًا، بواقع 5.44% بين النساء و18.35% بين الرجال. ويثبت ذلك مستوى منخفضًا لامتلاك الحساب وفجوات مقيسة بين الفئات في تلك الموجة، لكنه ليس معدلًا لعام 2026، ولا يفسر أسباب الفجوات، ولا يمكن دمجه مع مقاييس أخرى للوصول أو الاستخدام أو الصمود المالي أو الجغرافيا في رقم «أحدث» واحد.",
+   "new": "يُظهر أحدث مسح ممثل متاح — موجة المؤشر العالمي للشمول المالي (Global Findex) لعام 2021، أي جولة المسح التي نُفذ عملها الميداني في اليمن من 7 نوفمبر 2022 إلى 9 يناير 2023 — أن 11.9% من البالغين بعمر 15 سنة فأكثر في المناطق التي شملها المسح يملكون حسابًا، بواقع 5.4% بين النساء و18.3% بين الرجال. ويثبت ذلك مستوى منخفضًا لامتلاك الحساب وفجوات مقيسة بين الفئات في تلك الموجة، لكنه ليس معدلًا لعام 2026، ولا يفسر أسباب الفجوات، ولا يمكن دمجه مع مقاييس أخرى للوصول أو الاستخدام أو الصمود المالي أو الجغرافيا في رقم «أحدث» واحد."
+  },
+  {
+   "finding": "E2-2:R-11",
+   "sheet": "03_PAGE_SECTIONS",
+   "row": 192,
+   "col": 5,
+   "field": "/people/.c5",
+   "old": "In the same wave, 5.44% of women and 18.35% of men have an account — a difference of 12.91 percentage points. Adults in the richest 60% by household income (15.5%) and in the poorest 40% (6.5%) differ by about 9.0 percentage points. Among adults with primary education or less, 6.98% have an account, compared with 19.53% of adults with secondary education or more: a gap of 12.55 percentage points. Adults aged 15–24 (5.01%) and adults aged 25 and over (16.11%) differ by 11.10 percentage points. Because each comparison is within one survey wave, the disparities can be described; their causes cannot be established from these differences alone, and they are not 2026 estimates.",
+   "new": "In the same wave, 5.4% of women and 18.3% of men have an account — a difference of 12.9 percentage points. Adults in the richest 60% by household income (15.5%) and in the poorest 40% (6.5%) differ by about 9.0 percentage points. Among adults with primary education or less, 7.0% have an account, compared with 19.5% of adults with secondary education or more: a gap of 12.5 percentage points. Adults aged 15–24 (5.0%) and adults aged 25 and over (16.1%) differ by 11.1 percentage points. Because each comparison is within one survey wave, the disparities can be described; their causes cannot be established from these differences alone, and they are not 2026 estimates."
+  },
+  {
+   "finding": "E2-2:R-11",
+   "sheet": "03_PAGE_SECTIONS",
+   "row": 193,
+   "col": 7,
+   "field": "/people/.c7",
+   "old": "في الموجة نفسها تملك 5.44% من النساء و18.35% من الرجال حسابًا، بفارق 12.91 نقطة مئوية. ويبلغ الفارق بين البالغين في أغنى 60% بحسب دخل الأسرة (15.5%) وفي أفقر 40% (6.5%) نحو 9.0 نقاط مئوية. وتبلغ نسبة امتلاك الحساب 6.98% بين البالغين الذين لم يتجاوز تعليمهم المرحلة الابتدائية، مقابل 19.53% بين الحاصلين على تعليم ثانوي فأعلى، أي بفارق 12.55 نقطة مئوية. ويبلغ الفارق بين الشباب بعمر 15–24 سنة (5.01%) والبالغين بعمر 25 سنة فأكثر (16.11%) 11.10 نقطة مئوية. وهذه مقارنات داخل موجة مسح واحدة: يمكن وصف الفروق، لكن لا يمكن استنتاج أسبابها منها وحدها، ولا تمثل تقديرات لعام 2026.",
+   "new": "في الموجة نفسها تملك 5.4% من النساء و18.3% من الرجال حسابًا، بفارق 12.9 نقطة مئوية. ويبلغ الفارق بين البالغين في أغنى 60% بحسب دخل الأسرة (15.5%) وفي أفقر 40% (6.5%) نحو 9.0 نقاط مئوية. وتبلغ نسبة امتلاك الحساب 7.0% بين البالغين الذين لم يتجاوز تعليمهم المرحلة الابتدائية، مقابل 19.5% بين الحاصلين على تعليم ثانوي فأعلى، أي بفارق 12.5 نقطة مئوية. ويبلغ الفارق بين الشباب بعمر 15–24 سنة (5.0%) والبالغين بعمر 25 سنة فأكثر (16.1%) 11.1 نقطة مئوية. وهذه مقارنات داخل موجة مسح واحدة: يمكن وصف الفروق، لكن لا يمكن استنتاج أسبابها منها وحدها، ولا تمثل تقديرات لعام 2026."
+  },
+  {
+   "finding": "E2-2:R-11",
+   "sheet": "03_PAGE_SECTIONS",
+   "row": 194,
+   "col": 5,
+   "field": "/people/.c5",
+   "old": "The 11.9% measure is not a 2026 rate and cannot be mapped by governorate from this wave. The 12.91-point gender difference, the 9.0-point income difference, the 12.55-point education difference and the 11.10-point age difference do not establish their causes. Administrative counts of accounts, wallets, savers, transactions or devices cannot substitute for a weighted people-level measure. The evidence base does not include confidence intervals for these subgroup values, and none are calculated here, so small differences between subgroups should not be over-read.",
+   "new": "The 11.9% measure is not a 2026 rate and cannot be mapped by governorate from this wave. The 12.9-point gender difference, the 9.0-point income difference, the 12.5-point education difference and the 11.1-point age difference do not establish their causes. Administrative counts of accounts, wallets, savers, transactions or devices cannot substitute for a weighted people-level measure. The evidence base does not include confidence intervals for these subgroup values, and none are calculated here, so small differences between subgroups should not be over-read."
+  },
+  {
+   "finding": "E2-2:R-11",
+   "sheet": "03_PAGE_SECTIONS",
+   "row": 195,
+   "col": 7,
+   "field": "/people/.c7",
+   "old": "نسبة 11.9% ليست معدلًا لعام 2026 ولا تسمح هذه الموجة برسم خريطة حسب المحافظات. كما أن فارق 12.91 نقطة بين الرجال والنساء وفارق 9.0 نقاط بين فئتي الدخل وفارق 12.55 نقطة بين فئتي التعليم وفارق 11.10 نقطة بين فئتي العمر لا تثبت أسبابها. ولا يجوز استخدام أعداد الحسابات أو المحافظ الإلكترونية أو المدخرين أو المعاملات أو الأجهزة بدل قياس سكاني موزون للأشخاص. ولا تتضمن قاعدة الأدلة فترات ثقة لقيم هذه الفئات، ولا تُحسب هنا، لذلك لا ينبغي تحميل الفروق الصغيرة بين الفئات أكثر مما تحتمل.",
+   "new": "نسبة 11.9% ليست معدلًا لعام 2026 ولا تسمح هذه الموجة برسم خريطة حسب المحافظات. كما أن فارق 12.9 نقطة بين الرجال والنساء وفارق 9.0 نقاط بين فئتي الدخل وفارق 12.5 نقطة بين فئتي التعليم وفارق 11.1 نقطة بين فئتي العمر لا تثبت أسبابها. ولا يجوز استخدام أعداد الحسابات أو المحافظ الإلكترونية أو المدخرين أو المعاملات أو الأجهزة بدل قياس سكاني موزون للأشخاص. ولا تتضمن قاعدة الأدلة فترات ثقة لقيم هذه الفئات، ولا تُحسب هنا، لذلك لا ينبغي تحميل الفروق الصغيرة بين الفئات أكثر مما تحتمل."
+  },
+  {
+   "finding": "E2-2:R-11",
+   "sheet": "03_PAGE_SECTIONS",
+   "row": 270,
+   "col": 5,
+   "field": "/readings/gender-gap-measured-causes-open/.c5",
+   "old": "In the latest Global Findex wave for Yemen, 18.35% of men and 5.44% of women aged 15 and over in the areas surveyed had an account, a gap of 12.91 percentage points. This is a valid comparison within one survey wave. It is a measured disparity, and it is not, by itself, an explanation.\nThe gap also sits inside a low-access system. Overall account ownership in the same wave is 11.9%, and men’s measured level is low too. The sharper question is therefore:\n> Why does an already low-access financial system reach women so much less than men?\nThat moves attention away from “fixing women” and towards the conditions under which access is produced.",
+   "new": "In the latest Global Findex wave for Yemen, 18.3% of men and 5.4% of women aged 15 and over in the areas surveyed had an account, a gap of 12.9 percentage points. This is a valid comparison within one survey wave. It is a measured disparity, and it is not, by itself, an explanation.\nThe gap also sits inside a low-access system. Overall account ownership in the same wave is 11.9%, and men’s measured level is low too. The sharper question is therefore:\n> Why does an already low-access financial system reach women so much less than men?\nThat moves attention away from “fixing women” and towards the conditions under which access is produced."
+  },
+  {
+   "finding": "E2-2:R-11",
+   "sheet": "03_PAGE_SECTIONS",
+   "row": 270,
+   "col": 7,
+   "field": "/readings/gender-gap-measured-causes-open/.c7",
+   "old": "في أحدث موجة من مسح Findex العالمي في اليمن، كان 18.35% من الرجال و5.44% من النساء بعمر 15 سنة فأكثر، في المناطق التي شملها المسح، يملكون حسابًا، بفجوة قدرها 12.91 نقطة مئوية. وهذه مقارنة سليمة داخل موجة مسح واحدة؛ إنها تفاوت مقاس، لكنها ليست في حد ذاتها تفسيرًا.\nوتقع الفجوة أيضًا داخل منظومة منخفضة الوصول أصلًا؛ إذ يبلغ امتلاك الحساب إجمالًا 11.9% في الموجة نفسها، ومستوى الرجال المقاس منخفض بدوره. ولذلك يصبح السؤال الأدق:\n> لماذا تصل منظومة مالية منخفضة الوصول أصلًا إلى النساء بدرجة أقل بكثير من الرجال؟\nوهذا ينقل الاهتمام من «إصلاح النساء» إلى الظروف التي يتشكل فيها الوصول.",
+   "new": "في أحدث موجة من مسح Findex العالمي في اليمن، كان 18.3% من الرجال و5.4% من النساء بعمر 15 سنة فأكثر، في المناطق التي شملها المسح، يملكون حسابًا، بفجوة قدرها 12.9 نقطة مئوية. وهذه مقارنة سليمة داخل موجة مسح واحدة؛ إنها تفاوت مقاس، لكنها ليست في حد ذاتها تفسيرًا.\nوتقع الفجوة أيضًا داخل منظومة منخفضة الوصول أصلًا؛ إذ يبلغ امتلاك الحساب إجمالًا 11.9% في الموجة نفسها، ومستوى الرجال المقاس منخفض بدوره. ولذلك يصبح السؤال الأدق:\n> لماذا تصل منظومة مالية منخفضة الوصول أصلًا إلى النساء بدرجة أقل بكثير من الرجال؟\nوهذا ينقل الاهتمام من «إصلاح النساء» إلى الظروف التي يتشكل فيها الوصول."
+  },
+  {
+   "finding": "E2-2:R-11",
+   "sheet": "03_PAGE_SECTIONS",
+   "row": 271,
+   "col": 5,
+   "field": "/readings/gender-gap-measured-causes-open/.c5",
+   "old": "Plausible mechanisms include income, employment, identity documents, phone ownership and control, distance, mobility, trust, household decision-making, provider practice and product design. For Yemen these are hypotheses to test, not findings; the current evidence does not divide the 12.91-point gap among them.\nThe same survey records a gap of about 9.0 percentage points between adults in the poorest 40% of households by income (6.5%) and those in the richest 60% (15.5%). That does not explain the gender gap. It shows why one-dimensional explanations are risky.",
+   "new": "Plausible mechanisms include income, employment, identity documents, phone ownership and control, distance, mobility, trust, household decision-making, provider practice and product design. For Yemen these are hypotheses to test, not findings; the current evidence does not divide the 12.9-point gap among them.\nThe same survey records a gap of about 9.0 percentage points between adults in the poorest 40% of households by income (6.5%) and those in the richest 60% (15.5%). That does not explain the gender gap. It shows why one-dimensional explanations are risky."
+  },
+  {
+   "finding": "E2-2:R-11",
+   "sheet": "03_PAGE_SECTIONS",
+   "row": 271,
+   "col": 7,
+   "field": "/readings/gender-gap-measured-causes-open/.c7",
+   "old": "من الآليات المحتملة: الدخل، والعمل، ووثائق الهوية، وامتلاك الهاتف والتحكم فيه، والمسافة، والقدرة على التنقل، والثقة، واتخاذ القرار داخل الأسرة، وممارسات مقدمي الخدمة، وتصميم المنتجات. وهذه في حالة اليمن فرضيات ينبغي اختبارها، لا نتائج؛ فالأدلة الحالية لا توزع فجوة الـ12.91 نقطة بين هذه الآليات.\nويسجل المسح نفسه فجوة تقارب 9.0 نقاط مئوية بين البالغين في أفقر 40% من الأسر بحسب الدخل (6.5%) وأغنى 60% (15.5%). وهذا لا يفسر الفجوة بين النساء والرجال، لكنه يبين لماذا تنطوي التفسيرات الأحادية على مخاطرة.",
+   "new": "من الآليات المحتملة: الدخل، والعمل، ووثائق الهوية، وامتلاك الهاتف والتحكم فيه، والمسافة، والقدرة على التنقل، والثقة، واتخاذ القرار داخل الأسرة، وممارسات مقدمي الخدمة، وتصميم المنتجات. وهذه في حالة اليمن فرضيات ينبغي اختبارها، لا نتائج؛ فالأدلة الحالية لا توزع فجوة الـ12.9 نقطة بين هذه الآليات.\nويسجل المسح نفسه فجوة تقارب 9.0 نقاط مئوية بين البالغين في أفقر 40% من الأسر بحسب الدخل (6.5%) وأغنى 60% (15.5%). وهذا لا يفسر الفجوة بين النساء والرجال، لكنه يبين لماذا تنطوي التفسيرات الأحادية على مخاطرة."
+  },
+  {
+   "finding": "E2-2:R-11",
+   "sheet": "06_EVIDENCE_OBJECTS",
+   "row": 28,
+   "col": 6,
+   "field": "CLM-002.c6",
+   "old": "In the 2021 Global Findex wave for Yemen (fieldwork 7 November 2022 to 9 January 2023; World Bank data year 2022), 18.35% of men and 5.44% of women aged 15 and over in the areas the survey covered had an account, a difference of 12.91 percentage points.",
+   "new": "In the 2021 Global Findex wave for Yemen (fieldwork 7 November 2022 to 9 January 2023; World Bank data year 2022), 18.3% of men and 5.4% of women aged 15 and over in the areas the survey covered had an account, a difference of 12.9 percentage points."
+  },
+  {
+   "finding": "E2-2:R-11",
+   "sheet": "06_EVIDENCE_OBJECTS",
+   "row": 28,
+   "col": 7,
+   "field": "CLM-002.c7",
+   "old": "في موجة 2021 من المؤشر العالمي للشمول المالي (Global Findex) الخاصة باليمن (العمل الميداني من 7 نوفمبر 2022 إلى 9 يناير 2023؛ سنة البيانات لدى البنك الدولي 2022)، بلغت نسبة من يملكون حسابًا 18.35% بين الرجال و5.44% بين النساء بعمر 15 سنة فأكثر في المناطق التي شملها المسح، بفارق 12.91 نقطة مئوية.",
+   "new": "في موجة 2021 من المؤشر العالمي للشمول المالي (Global Findex) الخاصة باليمن (العمل الميداني من 7 نوفمبر 2022 إلى 9 يناير 2023؛ سنة البيانات لدى البنك الدولي 2022)، بلغت نسبة من يملكون حسابًا 18.3% بين الرجال و5.4% بين النساء بعمر 15 سنة فأكثر في المناطق التي شملها المسح، بفارق 12.9 نقطة مئوية."
+  },
+  {
+   "finding": "E2-2:R-11",
+   "sheet": "06_EVIDENCE_OBJECTS",
+   "row": 28,
+   "col": 14,
+   "field": "CLM-002.c14",
+   "old": "Calculated by this resource as the difference between two weighted estimates published by the World Bank for the same wave: men 18.35% minus women 5.44% (World Bank series FX.OWN.TOTL.MA.ZS minus FX.OWN.TOTL.FE.ZS, data year 2022).",
+   "new": "Calculated by this resource as the difference between two weighted estimates published by the World Bank for the same wave: men 18.3% minus women 5.4% (World Bank series FX.OWN.TOTL.MA.ZS minus FX.OWN.TOTL.FE.ZS, data year 2022)."
+  },
+  {
+   "finding": "E2-2:R-11",
+   "sheet": "06_EVIDENCE_OBJECTS",
+   "row": 28,
+   "col": 15,
+   "field": "CLM-002.c15",
+   "old": "احتسبه هذا المورد بوصفه الفارق بين تقديرين موزونين نشرهما البنك الدولي للموجة نفسها: 18.35% للرجال ناقص 5.44% للنساء (سلسلة البنك الدولي FX.OWN.TOTL.MA.ZS ناقص FX.OWN.TOTL.FE.ZS، سنة البيانات 2022).",
+   "new": "احتسبه هذا المورد بوصفه الفارق بين تقديرين موزونين نشرهما البنك الدولي للموجة نفسها: 18.3% للرجال ناقص 5.4% للنساء (سلسلة البنك الدولي FX.OWN.TOTL.MA.ZS ناقص FX.OWN.TOTL.FE.ZS، سنة البيانات 2022)."
+  },
+  {
+   "finding": "E2-2:R-11",
+   "sheet": "06_EVIDENCE_OBJECTS",
+   "row": 64,
+   "col": 6,
+   "field": "VIS-FINDEX-GAPS.c6",
+   "old": "In the 2021 Global Findex wave for Yemen (fieldwork 7 November 2022 to 9 January 2023; World Bank data year 2022), 11.9% of adults aged 15 and over in the areas the survey covered had an account at a financial institution or with a mobile-money provider. Within the same wave: 5.44% of women and 18.35% of men had an account, a difference of 12.91 percentage points; 6.5% of adults in the poorest 40% and 15.5% in the richest 60% by household income, a difference of about 9.0 percentage points; 6.98% of adults with primary education or less and 19.53% of those with secondary education or more, a difference of 12.55 percentage points; and 5.01% of adults aged 15–24 and 16.11% of those aged 25 and over, a difference of 11.10 percentage points. The survey frame excludes areas the source says represent about 23% of the population. These figures are not a 2026 rate and cannot be mapped to governorates.",
+   "new": "In the 2021 Global Findex wave for Yemen (fieldwork 7 November 2022 to 9 January 2023; World Bank data year 2022), 11.9% of adults aged 15 and over in the areas the survey covered had an account at a financial institution or with a mobile-money provider. Within the same wave: 5.4% of women and 18.3% of men had an account, a difference of 12.9 percentage points; 6.5% of adults in the poorest 40% and 15.5% in the richest 60% by household income, a difference of about 9.0 percentage points; 7.0% of adults with primary education or less and 19.5% of those with secondary education or more, a difference of 12.5 percentage points; and 5.0% of adults aged 15–24 and 16.1% of those aged 25 and over, a difference of 11.1 percentage points. The survey frame excludes areas the source says represent about 23% of the population. These figures are not a 2026 rate and cannot be mapped to governorates."
+  },
+  {
+   "finding": "E2-2:R-11",
+   "sheet": "06_EVIDENCE_OBJECTS",
+   "row": 64,
+   "col": 7,
+   "field": "VIS-FINDEX-GAPS.c7",
+   "old": "في موجة 2021 من المؤشر العالمي للشمول المالي (Global Findex) الخاصة باليمن (العمل الميداني من 7 نوفمبر 2022 إلى 9 يناير 2023؛ سنة البيانات لدى البنك الدولي 2022)، بلغت نسبة البالغين بعمر 15 سنة فأكثر في المناطق التي شملها المسح ممن يملكون حسابًا لدى مؤسسة مالية أو لدى مقدم خدمة أموال عبر الهاتف المحمول 11.9%. وفي الموجة نفسها: 5.44% بين النساء و18.35% بين الرجال، بفارق 12.91 نقطة مئوية؛ و6.5% بين البالغين في أفقر 40% و15.5% في أغنى 60% بحسب دخل الأسرة، بفارق يقارب 9.0 نقاط مئوية؛ و6.98% بين من لم يتجاوز تعليمهم المرحلة الابتدائية و19.53% بين الحاصلين على تعليم ثانوي فأعلى، بفارق 12.55 نقطة مئوية؛ و5.01% بين الشباب بعمر 15–24 سنة و16.11% بين البالغين بعمر 25 سنة فأكثر، بفارق 11.10 نقطة مئوية. ويستبعد إطار المسح مناطق يذكر المصدر أنها تضم نحو 23% من السكان. ولا تمثل هذه الأرقام معدلًا لعام 2026 ولا يمكن إسقاطها على المحافظات.",
+   "new": "في موجة 2021 من المؤشر العالمي للشمول المالي (Global Findex) الخاصة باليمن (العمل الميداني من 7 نوفمبر 2022 إلى 9 يناير 2023؛ سنة البيانات لدى البنك الدولي 2022)، بلغت نسبة البالغين بعمر 15 سنة فأكثر في المناطق التي شملها المسح ممن يملكون حسابًا لدى مؤسسة مالية أو لدى مقدم خدمة أموال عبر الهاتف المحمول 11.9%. وفي الموجة نفسها: 5.4% بين النساء و18.3% بين الرجال، بفارق 12.9 نقطة مئوية؛ و6.5% بين البالغين في أفقر 40% و15.5% في أغنى 60% بحسب دخل الأسرة، بفارق يقارب 9.0 نقاط مئوية؛ و7.0% بين من لم يتجاوز تعليمهم المرحلة الابتدائية و19.5% بين الحاصلين على تعليم ثانوي فأعلى، بفارق 12.5 نقطة مئوية؛ و5.0% بين الشباب بعمر 15–24 سنة و16.1% بين البالغين بعمر 25 سنة فأكثر، بفارق 11.1 نقطة مئوية. ويستبعد إطار المسح مناطق يذكر المصدر أنها تضم نحو 23% من السكان. ولا تمثل هذه الأرقام معدلًا لعام 2026 ولا يمكن إسقاطها على المحافظات."
+  },
+  {
+   "finding": "E2-2:R-11",
+   "sheet": "10_MEASUREMENT_AGENDA",
+   "row": 7,
+   "col": 8,
+   "field": "MA-003.c8",
+   "old": "Within the same survey wave, account ownership differs by 12.91 percentage points between women (5.44%) and men (18.35%), and by about 9.0 percentage points between adults in the poorest 40% (6.5%) and the richest 60% (15.5%) by household income. Comparable current differences by age group and displacement status are not established in the evidence base, and the contribution of identity, device, income, geography, trust and household constraints to any measured disparity is not established.",
+   "new": "Within the same survey wave, account ownership differs by 12.9 percentage points between women (5.4%) and men (18.3%), and by about 9.0 percentage points between adults in the poorest 40% (6.5%) and the richest 60% (15.5%) by household income. Comparable current differences by age group and displacement status are not established in the evidence base, and the contribution of identity, device, income, geography, trust and household constraints to any measured disparity is not established."
+  },
+  {
+   "finding": "E2-2:R-11",
+   "sheet": "10_MEASUREMENT_AGENDA",
+   "row": 7,
+   "col": 9,
+   "field": "MA-003.c9",
+   "old": "في موجة المسح نفسها يختلف امتلاك الحساب بين النساء (5.44%) والرجال (18.35%) بمقدار 12.91 نقطة مئوية، وبين البالغين في أفقر 40% (6.5%) وأغنى 60% (15.5%) بحسب دخل الأسرة بنحو 9.0 نقاط مئوية. أما الفروق الراهنة القابلة للمقارنة بحسب الفئة العمرية وحالة النزوح فلا تثبتها قاعدة الأدلة الحالية، كما لا تثبت مقدار إسهام الهوية أو الجهاز أو الدخل أو الجغرافيا أو الثقة أو قيود الأسرة في تفسير أي تفاوت مقاس.",
+   "new": "في موجة المسح نفسها يختلف امتلاك الحساب بين النساء (5.4%) والرجال (18.3%) بمقدار 12.9 نقطة مئوية، وبين البالغين في أفقر 40% (6.5%) وأغنى 60% (15.5%) بحسب دخل الأسرة بنحو 9.0 نقاط مئوية. أما الفروق الراهنة القابلة للمقارنة بحسب الفئة العمرية وحالة النزوح فلا تثبتها قاعدة الأدلة الحالية، كما لا تثبت مقدار إسهام الهوية أو الجهاز أو الدخل أو الجغرافيا أو الثقة أو قيود الأسرة في تفسير أي تفاوت مقاس."
+  },
+  {
+   "finding": "E2-2:R-11",
+   "sheet": "11_VISUAL_LIBRARY",
+   "row": 10,
+   "col": 21,
+   "field": "VIS-FINDEX-GAPS.c21",
+   "old": "In the 2021 Global Findex wave for Yemen (fieldwork 7 November 2022 to 9 January 2023; World Bank data year 2022), 11.9% of adults aged 15 and over in the areas the survey covered had an account at a financial institution or with a mobile-money provider. Within the same wave: 5.44% of women and 18.35% of men had an account, a difference of 12.91 percentage points; 6.5% of adults in the poorest 40% and 15.5% in the richest 60% by household income, a difference of about 9.0 percentage points; 6.98% of adults with primary education or less and 19.53% of those with secondary education or more, a difference of 12.55 percentage points; and 5.01% of adults aged 15–24 and 16.11% of those aged 25 and over, a difference of 11.10 percentage points. The survey frame excludes areas the source says represent about 23% of the population. These figures are not a 2026 rate and cannot be mapped to governorates.",
+   "new": "In the 2021 Global Findex wave for Yemen (fieldwork 7 November 2022 to 9 January 2023; World Bank data year 2022), 11.9% of adults aged 15 and over in the areas the survey covered had an account at a financial institution or with a mobile-money provider. Within the same wave: 5.4% of women and 18.3% of men had an account, a difference of 12.9 percentage points; 6.5% of adults in the poorest 40% and 15.5% in the richest 60% by household income, a difference of about 9.0 percentage points; 7.0% of adults with primary education or less and 19.5% of those with secondary education or more, a difference of 12.5 percentage points; and 5.0% of adults aged 15–24 and 16.1% of those aged 25 and over, a difference of 11.1 percentage points. The survey frame excludes areas the source says represent about 23% of the population. These figures are not a 2026 rate and cannot be mapped to governorates."
+  },
+  {
+   "finding": "E2-2:R-11",
+   "sheet": "11_VISUAL_LIBRARY",
+   "row": 10,
+   "col": 22,
+   "field": "VIS-FINDEX-GAPS.c22",
+   "old": "في موجة 2021 من المؤشر العالمي للشمول المالي (Global Findex) الخاصة باليمن (العمل الميداني من 7 نوفمبر 2022 إلى 9 يناير 2023؛ سنة البيانات لدى البنك الدولي 2022)، بلغت نسبة البالغين بعمر 15 سنة فأكثر في المناطق التي شملها المسح ممن يملكون حسابًا لدى مؤسسة مالية أو لدى مقدم خدمة أموال عبر الهاتف المحمول 11.9%. وفي الموجة نفسها: 5.44% بين النساء و18.35% بين الرجال، بفارق 12.91 نقطة مئوية؛ و6.5% بين البالغين في أفقر 40% و15.5% في أغنى 60% بحسب دخل الأسرة، بفارق يقارب 9.0 نقاط مئوية؛ و6.98% بين من لم يتجاوز تعليمهم المرحلة الابتدائية و19.53% بين الحاصلين على تعليم ثانوي فأعلى، بفارق 12.55 نقطة مئوية؛ و5.01% بين الشباب بعمر 15–24 سنة و16.11% بين البالغين بعمر 25 سنة فأكثر، بفارق 11.10 نقطة مئوية. ويستبعد إطار المسح مناطق يذكر المصدر أنها تضم نحو 23% من السكان. ولا تمثل هذه الأرقام معدلًا لعام 2026 ولا يمكن إسقاطها على المحافظات.",
+   "new": "في موجة 2021 من المؤشر العالمي للشمول المالي (Global Findex) الخاصة باليمن (العمل الميداني من 7 نوفمبر 2022 إلى 9 يناير 2023؛ سنة البيانات لدى البنك الدولي 2022)، بلغت نسبة البالغين بعمر 15 سنة فأكثر في المناطق التي شملها المسح ممن يملكون حسابًا لدى مؤسسة مالية أو لدى مقدم خدمة أموال عبر الهاتف المحمول 11.9%. وفي الموجة نفسها: 5.4% بين النساء و18.3% بين الرجال، بفارق 12.9 نقطة مئوية؛ و6.5% بين البالغين في أفقر 40% و15.5% في أغنى 60% بحسب دخل الأسرة، بفارق يقارب 9.0 نقاط مئوية؛ و7.0% بين من لم يتجاوز تعليمهم المرحلة الابتدائية و19.5% بين الحاصلين على تعليم ثانوي فأعلى، بفارق 12.5 نقطة مئوية؛ و5.0% بين الشباب بعمر 15–24 سنة و16.1% بين البالغين بعمر 25 سنة فأكثر، بفارق 11.1 نقطة مئوية. ويستبعد إطار المسح مناطق يذكر المصدر أنها تضم نحو 23% من السكان. ولا تمثل هذه الأرقام معدلًا لعام 2026 ولا يمكن إسقاطها على المحافظات."
+  },
+  {
+   "finding": "E2-2:R-11",
+   "sheet": "11_VISUAL_LIBRARY",
+   "row": 37,
+   "col": 7,
+   "field": "RV-CWR-007.c7",
+   "old": "The chart starts with the levels measured in the same survey wave — 5.44% of women and 18.35% of men had an account, a difference of 12.91 percentage points — and places possible mechanisms in a separate layer of hypotheses to test, not causal arrows.",
+   "new": "The chart starts with the levels measured in the same survey wave — 5.4% of women and 18.3% of men had an account, a difference of 12.9 percentage points — and places possible mechanisms in a separate layer of hypotheses to test, not causal arrows."
+  },
+  {
+   "finding": "E2-2:R-11",
+   "sheet": "11_VISUAL_LIBRARY",
+   "row": 37,
+   "col": 8,
+   "field": "RV-CWR-007.c8",
+   "old": "يبدأ بالمستويات المقاسة داخل الموجة نفسها — امتلكت 5.44% من النساء و18.35% من الرجال حسابًا، بفارق 12.91 نقطة مئوية — ثم يضع الآليات المحتملة في طبقة منفصلة تحتاج إلى اختبار بدل رسم أسهم سببية.",
+   "new": "يبدأ بالمستويات المقاسة داخل الموجة نفسها — امتلكت 5.4% من النساء و18.3% من الرجال حسابًا، بفارق 12.9 نقطة مئوية — ثم يضع الآليات المحتملة في طبقة منفصلة تحتاج إلى اختبار بدل رسم أسهم سببية."
+  },
+  {
+   "finding": "E2-2:R-11",
+   "sheet": "11_VISUAL_LIBRARY",
+   "row": 37,
+   "col": 18,
+   "field": "RV-CWR-007.c18",
+   "old": "Lead with the measured 12.91 percentage-point same-wave gap, then place mechanisms to test in a separate test-needed layer rather than causal arrows.",
+   "new": "Lead with the measured 12.9 percentage-point same-wave gap, then place mechanisms to test in a separate test-needed layer rather than causal arrows."
+  },
+  {
+   "finding": "E2-2:R-11",
+   "sheet": "11_VISUAL_LIBRARY",
+   "row": 37,
+   "col": 21,
+   "field": "RV-CWR-007.c21",
+   "old": "In the Global Findex 2021 wave for Yemen (fieldwork 7 November 2022 to 9 January 2023), 5.44% of women and 18.35% of men aged 15 and over in the survey's coverage had an account, a difference of 12.91 percentage points; the survey excluded areas holding about 23% of the population. Possible mechanisms such as identity, mobile-phone access, income, distance and trust are hypotheses still to be tested, not measured causes. The wave is not a 2026 estimate and not a map of differences by governorate.",
+   "new": "In the Global Findex 2021 wave for Yemen (fieldwork 7 November 2022 to 9 January 2023), 5.4% of women and 18.3% of men aged 15 and over in the survey's coverage had an account, a difference of 12.9 percentage points; the survey excluded areas holding about 23% of the population. Possible mechanisms such as identity, mobile-phone access, income, distance and trust are hypotheses still to be tested, not measured causes. The wave is not a 2026 estimate and not a map of differences by governorate."
+  },
+  {
+   "finding": "E2-2:R-11",
+   "sheet": "11_VISUAL_LIBRARY",
+   "row": 37,
+   "col": 22,
+   "field": "RV-CWR-007.c22",
+   "old": "في موجة 2021 من المؤشر العالمي للشمول المالي (Global Findex) لليمن (العمل الميداني من 7 نوفمبر 2022 إلى 9 يناير 2023)، امتلكت 5.44% من النساء و18.35% من الرجال بعمر 15 سنة فأكثر ضمن تغطية المسح حسابًا، بفارق 12.91 نقطة مئوية؛ وقد استبعد المسح مناطق يقطنها نحو 23% من السكان. أما الآليات المحتملة، مثل الهوية والوصول إلى الهاتف المحمول والدخل والمسافة والثقة، ففرضيات لم تُختبر بعد، لا أسباب مقاسة. ولا تمثل الموجة تقديرًا لعام 2026 ولا خريطة للفروق بين المحافظات.",
+   "new": "في موجة 2021 من المؤشر العالمي للشمول المالي (Global Findex) لليمن (العمل الميداني من 7 نوفمبر 2022 إلى 9 يناير 2023)، امتلكت 5.4% من النساء و18.3% من الرجال بعمر 15 سنة فأكثر ضمن تغطية المسح حسابًا، بفارق 12.9 نقطة مئوية؛ وقد استبعد المسح مناطق يقطنها نحو 23% من السكان. أما الآليات المحتملة، مثل الهوية والوصول إلى الهاتف المحمول والدخل والمسافة والثقة، ففرضيات لم تُختبر بعد، لا أسباب مقاسة. ولا تمثل الموجة تقديرًا لعام 2026 ولا خريطة للفروق بين المحافظات."
+  },
+  {
+   "finding": "E2-2:R-11",
+   "sheet": "25_FINDEX_BASELINE",
+   "row": 6,
+   "col": 6,
+   "field": "WB-FINDEX-OBS-2022-002.value",
+   "old": "5.44",
+   "new": 5.4
+  },
+  {
+   "finding": "E2-2:R-11",
+   "sheet": "25_FINDEX_BASELINE",
+   "row": 7,
+   "col": 6,
+   "field": "WB-FINDEX-OBS-2022-003.value",
+   "old": "18.35",
+   "new": 18.3
+  },
+  {
+   "finding": "E2-2:R-11",
+   "sheet": "25_FINDEX_BASELINE",
+   "row": 10,
+   "col": 6,
+   "field": "WB-FINDEX-OBS-2022-006.value",
+   "old": "6.98",
+   "new": 7.0
+  },
+  {
+   "finding": "E2-2:R-11",
+   "sheet": "25_FINDEX_BASELINE",
+   "row": 11,
+   "col": 6,
+   "field": "WB-FINDEX-OBS-2022-007.value",
+   "old": "19.53",
+   "new": 19.5
+  },
+  {
+   "finding": "E2-2:R-11",
+   "sheet": "25_FINDEX_BASELINE",
+   "row": 12,
+   "col": 6,
+   "field": "WB-FINDEX-OBS-2022-008.value",
+   "old": "5.01",
+   "new": 5.0
+  },
+  {
+   "finding": "E2-2:R-11",
+   "sheet": "25_FINDEX_BASELINE",
+   "row": 13,
+   "col": 6,
+   "field": "WB-FINDEX-OBS-2022-009.value",
+   "old": "16.11",
+   "new": 16.1
+  },
+  {
+   "finding": "E2-2:R-11",
+   "sheet": "03_PAGE_SECTIONS",
+   "row": 361,
+   "col": 5,
+   "field": "/methodology/#s7.body_en",
+   "old": "Survey estimates carry sampling and coverage uncertainty. Where a source publishes a confidence interval or standard error, it is reported with the estimate. Where it does not, no interval, standard error or significance test is added unless it can be reproduced from the survey's own weights and design. A derived value, such as the difference between two percentages, keeps the precision of its inputs, with no added decimal places, and small differences between estimates are not read as a ranking.",
+   "new": "Survey estimates carry sampling and coverage uncertainty. Where a source publishes a confidence interval or standard error, it is reported with the estimate. Where it does not, no interval, standard error or significance test is added unless it can be reproduced from the survey's own weights and design. A derived value, such as the difference between two percentages, keeps the precision of its inputs, with no added decimal places, and small differences between estimates are not read as a ranking. Global Findex shares are printed to one decimal place, rounded from the World Bank's unrounded values, and a gap between two groups is the difference of the two printed shares. One decimal place is the precision of the World Bank's own published tables for Yemen; more would suggest a precision that a survey of about 1,000 adults does not have."
+  },
+  {
+   "finding": "E2-2:R-11",
+   "sheet": "03_PAGE_SECTIONS",
+   "row": 362,
+   "col": 7,
+   "field": "/methodology/#s7.body_ar",
+   "old": "تنطوي تقديرات المسوح على قدر من عدم اليقين مصدره المعاينة ونطاق التغطية. فإذا نشر المصدر فترة ثقة أو خطأً معياريًا عُرض مع التقدير، وإذا لم ينشره فلا تُضاف فترة ثقة ولا خطأ معياري ولا اختبار دلالة ما لم يمكن إعادة احتسابها من أوزان المسح وتصميمه. وتحتفظ القيمة المشتقة، كالفرق بين نسبتين، بدقة مدخلاتها من دون منازل عشرية إضافية، ولا تُقرأ الفروق الطفيفة بين التقديرات على أنها ترتيب.",
+   "new": "تنطوي تقديرات المسوح على قدر من عدم اليقين مصدره المعاينة ونطاق التغطية. فإذا نشر المصدر فترة ثقة أو خطأً معياريًا عُرض مع التقدير، وإذا لم ينشره فلا تُضاف فترة ثقة ولا خطأ معياري ولا اختبار دلالة ما لم يمكن إعادة احتسابها من أوزان المسح وتصميمه. وتحتفظ القيمة المشتقة، كالفرق بين نسبتين، بدقة مدخلاتها من دون منازل عشرية إضافية، ولا تُقرأ الفروق الطفيفة بين التقديرات على أنها ترتيب. وتُعرض نسب المؤشر العالمي للشمول المالي (Global Findex) بمنزلة عشرية واحدة، مقرّبةً من القيم غير المقرّبة لدى البنك الدولي، والفجوة بين فئتين هي الفرق بين النسبتين المعروضتين. والمنزلة العشرية الواحدة هي الدقة التي ينشر بها البنك الدولي نفسه جداوله الخاصة باليمن، وأي منازل إضافية توحي بدقة لا يملكها مسح لنحو 1,000 بالغ."
+  }
+ ]
+}

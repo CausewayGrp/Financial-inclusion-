@@ -59,7 +59,7 @@ for lang,dirv in [('ar','rtl'),('en','ltr')]:
                 rr=href.split('?',1)[0].split('#',1)[0].strip('/'); bits=rr.split('/',1); lf=DIST/bits[0]/(bits[1] if len(bits)>1 else '')/'index.html'
                 if not lf.exists(): errors.append(f'broken internal link {href} in {f}')
 home=(DIST/'ar/index.html').read_text(encoding='utf-8')
-for token in ['11.9%','12.91','561','1,651']:
+for token in ['11.9%','12.9','561','1,651']:
     if token not in home: errors.append('home semantic token missing '+token)
 for f in DIST.rglob('*.html'):
     t=f.read_text(encoding='utf-8')
@@ -1050,8 +1050,8 @@ for spec in specs:
 
 # Representative numeric signatures prove that material numbers survive both public editions.
 s05_numeric_signatures={
-    '/':['11.9%','12.91','561','1,651'],
-    '/people/':['11.9%','12.91'],
+    '/':['11.9%','12.9','561','1,651'],
+    '/people/':['11.9%','12.9'],
     '/firms/':['22%','50%','46%'],
     '/payments/':['561','1,651'],
     '/providers/':['100','231','111'],
@@ -1946,9 +1946,11 @@ def _p3_rows(vid):
 def _p3_numtext(x):
     return ('%f'%x).rstrip('0').rstrip('.') if isinstance(x,float) else str(x)
 def _p3_nums(fragment):
+    # E2-2: a value printed at its published precision with trailing zeros (7.0 for a governed 7.0) is the same value;
+    # trailing zeros after the decimal mark are dropped before comparing, never a significant digit
     _tmp=DIST/'.p3-figure.html'
     _tmp.write_text('<main>'+fragment+'</main>',encoding='utf-8')
-    try: return set(_BI.nums(str(_tmp)))
+    try: return {re.sub(r'(\.\d*?)0+$',r'\1',n).rstrip('.') if re.fullmatch(r'[\d,]+\.\d+',n) else n for n in _BI.nums(str(_tmp))}
     finally: _tmp.unlink()
 _p3_drawn={}
 for _f in sorted(DIST.rglob('*.html')):
@@ -3403,6 +3405,265 @@ try:
         errors.append("RC-19 the App Platform image's nginx base is not pinned by digest")
 except Exception as _x:
     errors.append("RC-19 unreadable " + repr(_x))
+
+# E2-PREC (edition 2, candidate b; finding R-11): one display precision for every Global Findex figure. Shares are
+# printed to one decimal place, rounded from the World Bank's unrounded values, and a gap is the difference of the
+# printed shares (/methodology/ section 7). Asserted on what a reader sees (visible text: headings, prose, tables,
+# chart labels and text alternatives; attributes are not text), in both languages:
+# (1) on every Evidence Record whose sources include a Global Findex source, on /people/ and on the gender-gap Reading,
+#     no number prints with two or more decimal places;
+# (2) on every page, no number with two or more decimal places lies within 0.05 of a governed 2022 Findex share or of a
+#     same-dimension gap between two of them (this reaches Home, /measurement/, Readings and search-led pages).
+_PREC_ANY = re.compile(r"(?<![\d.,])\d+\.\d{2,}(?![\d])")
+def _visible(_p):
+    _h = re.sub(r"<(script|style)\b[^>]*>.*?</\1>", " ", _p.read_text(encoding="utf-8"), flags=re.S)
+    return re.sub(r"\s+", " ", _html.unescape(re.sub(r"<[^>]+>", " ", _h)))
+try:
+    _fx = [o["object_id"] for o in json.load(open(ROOT / "site-src/content/evidence/evidence_objects.json", encoding="utf-8"))
+           if "FINDEX" in str(o.get("source_dependencies") or "").upper()]
+    _fb = json.load(open(ROOT / "site-src/content/data/findex_baseline.json", encoding="utf-8"))
+    _fb = _fb["rows"]
+    _hi = next(i for i, r in enumerate(_fb) if r and r[0] == "observation_id")
+    _fb = [dict(zip(_fb[_hi], r)) for r in _fb[_hi + 1:] if r and r[0]]
+    _lv = {r["group"]: float(r["value"]) for r in _fb if isinstance(r, dict) and str(r.get("observation_id", "")).startswith("WB-FINDEX-OBS-2022")
+           and isinstance(r.get("value"), (int, float))}
+    _pairs = (("male", "female"), ("richest 60%", "poorest 40%"), ("secondary education or more", "primary education or less"),
+              ("ages 25+", "ages 15-24"))
+    _targets = list(_lv.values()) + [_lv[a] - _lv[b] for a, b in _pairs if a in _lv and b in _lv]
+    if len(_targets) < 13:
+        errors.append(f"E2-PREC read only {len(_targets)} Findex shares and gaps")
+    _np = 0
+    _strict = {f"{_l}/evidence/{_i}/index.html" for _l in ("en", "ar") for _i in _fx} | \
+              {f"{_l}/{_r}" for _l in ("en", "ar") for _r in ("people/index.html", "readings/gender-gap-measured-causes-open/index.html")}
+    for _f in sorted(DIST.glob("*/**/index.html")) + sorted(DIST.glob("*/index.html")):
+        _rel = str(_f.relative_to(DIST))
+        if not _rel.startswith(("en/", "ar/")):
+            continue
+        _txt = _visible(_f)
+        _strictp = _rel in _strict
+        _np += _strictp
+        for _m in _PREC_ANY.finditer(_txt):
+            _v = float(_m.group(0))
+            if _strictp or any(abs(_v - _t) < 0.05 for _t in _targets):
+                errors.append(f"E2-PREC {_rel} prints a Findex share or gap to two decimals: {_m.group(0)}")
+    if _np < 30:
+        errors.append(f"E2-PREC read only {_np} Findex pages")
+    # (3) the drawing prints every share and gap at the same one-decimal precision as the text (7.0, never 7), in its bars
+    #     and in its table, wherever VIS-FINDEX-GAPS is drawn
+    _nv = 0
+    for _f in sorted(DIST.glob("*/**/index.html")):
+        for _m in re.finditer(r'<figure class="fig[^"]*"[^>]*data-visual-id="VIS-FINDEX-GAPS".*?</figure>', _f.read_text(encoding="utf-8"), re.S):
+            _vals = re.findall(r'<text class="val"[^>]*>([^<]*)</text>', _m.group(0)) + \
+                    re.findall(r'<td[^>]*>(?:<span[^>]*>)?<bdi dir="ltr">([^<]*)</bdi>', _m.group(0))
+            _nv += len(_vals)
+            for _s in _vals:
+                if not re.fullmatch(r"\d+\.\d", _s.strip()):
+                    errors.append(f"E2-PREC {_f.relative_to(DIST)} VIS-FINDEX-GAPS prints {_s.strip()!r}, not one decimal place")
+    if _nv < 40:
+        errors.append(f"E2-PREC read only {_nv} drawn Findex values")
+except Exception as _x:
+    errors.append("E2-PREC unreadable " + repr(_x))
+
+# E2-CTX (edition 2, candidate c; REOPEN-INTL): the one same-source context figure beside Yemen's account ownership,
+# the World Bank's low-income aggregate for the same Findex wave (35.2%), is never shown bare. Asserted on what a reader
+# sees: every paragraph, list item or table cell that prints it also names what it averages (low-income economies and
+# their number, 19), and it never reaches Home, where a lone pair of numbers would read as a ranking.
+try:
+    _nctx = 0
+    for _f in sorted(DIST.glob("*/**/index.html")) + sorted(DIST.glob("*/index.html")):
+        _rel = str(_f.relative_to(DIST))
+        if not _rel.startswith(("en/", "ar/")):
+            continue
+        _h = re.sub(r"<(script|style)\b[^>]*>.*?</\1>", " ", _f.read_text(encoding="utf-8"), flags=re.S)
+        for _b in re.findall(r"<(?:p|li|td|dd)\b[^>]*>(.*?)</(?:p|li|td|dd)>", _h, re.S):
+            _bt = re.sub(r"\s+", " ", _html.unescape(re.sub(r"<[^>]+>", " ", _b)))
+            if not re.search(r"(?<![\d.])35\.2\s?%?(?!\d)", _bt):
+                continue
+            _nctx += 1
+            if _rel in ("en/index.html", "ar/index.html"):
+                errors.append(f"E2-CTX {_rel} prints the low-income context figure on Home")
+            if not (("low-income" in _bt or "low income" in _bt or "منخفضة الدخل" in _bt) and re.search(r"(?<!\d)19(?!\d)", _bt)):
+                errors.append(f"E2-CTX {_rel} prints the low-income context figure without naming what it averages: {_bt[:120]!r}")
+    if _nctx < 4:
+        errors.append(f"E2-CTX read only {_nctx} context-figure blocks")
+except Exception as _x:
+    errors.append("E2-CTX unreadable " + repr(_x))
+
+# E2-DIFF (edition 2, candidate d): where two governed numbers that look contradictory meet a reader, one paragraph
+# explains why they differ. Asserted on what a reader sees, in both languages: on each domain page where a declared pair
+# meets, one paragraph carries the lead "Why the numbers differ" / «لماذا تختلف الأرقام», both numbers and the record ID
+# of the counterpart; on each record of a pair, one paragraph carries the lead and the counterpart's record ID (a record
+# prints only the numbers its own sources give: the counterpart is named, never quoted). Pairs: transactions E2-4, E2-4b.
+_DIFF_PAIRS = [
+    ("payments/index.html", ("2,102,484", "375,252", "FMIIP-BASELINE-2025-01")),
+    ("reforms/index.html", ("2,102,484", "375,252", "CLM-010")),
+    ("payments/index.html", ("807,919", "414,631", "581,075", "CLM-010")),
+    ("providers/index.html", ("79", "195", "108", "CLM-016")),
+    ("evidence/CLM-010/index.html", ("FMIIP-BASELINE-2025-01",)), ("evidence/CLM-010/index.html", ("CLM-050",)),
+    ("evidence/FMIIP-BASELINE-2025-01/index.html", ("CLM-010",)), ("evidence/CLM-050/index.html", ("CLM-010",)),
+    ("evidence/CLM-016/index.html", ("CLM-009",)), ("evidence/CLM-009/index.html", ("CLM-016",)),
+]
+try:
+    for _lang, _lead in (("en", "Why the numbers differ"), ("ar", "لماذا تختلف الأرقام")):
+        for _rel, _toks in _DIFF_PAIRS:
+            _f = DIST / _lang / _rel
+            if not _f.exists():
+                errors.append(f"E2-DIFF {_lang}/{_rel} is missing")
+                continue
+            _h = re.sub(r"<(script|style)\b[^>]*>.*?</\1>", " ", _f.read_text(encoding="utf-8"), flags=re.S)
+            _ok = False
+            for _blk in re.findall(r"<(p|li|dd)\b[^>]*>(.*?)</\1>", _h, re.S):
+                _bt = re.sub(r"\s+", " ", _html.unescape(re.sub(r"<[^>]+>", " ", _blk[1])))
+                if _lead in _bt and all(re.search(r"(?<![\d,A-Z-])" + re.escape(_k) + r"(?![\d,]|-\d)", _bt) for _k in _toks):
+                    _ok = True
+                    break
+            if not _ok:
+                errors.append(f"E2-DIFF {_lang}/{_rel} does not say why {' / '.join(_toks)} differ")
+    # …and each number on a page traces to the record that governs it, never to the counterpart that names it
+    #    (hard rule 5; the E2-4 review's blocking finding)
+    _trace = {("/payments/", "375,252"): "FMIIP-BASELINE-2025-01", ("/payments/", "2,102,484"): "CLM-010",
+              ("/reforms/", "2,102,484"): "CLM-010", ("/reforms/", "375,252"): "FMIIP-BASELINE-2025-01",
+              ("/payments/", "807,919"): "CLM-050", ("/payments/", "414,631"): "CLM-010",
+              ("/providers/", "195"): "CLM-016", ("/providers/", "231"): "CLM-009"}
+    _seen = set()
+    for _r in json.load(open(ROOT / "audit/PUBLIC_LITERAL_CLOSURE.json", encoding="utf-8"))["records"]:
+        _k = (_r.get("route"), _r.get("token"))
+        if _k in _trace and str(_r.get("field", "")).startswith("body"):
+            _seen.add(_k)
+            if _r.get("source_object") != _trace[_k]:
+                errors.append(f"E2-DIFF {_k[1]} on {_k[0]} traces to {_r.get('source_object')}, not to {_trace[_k]}, the record that governs it")
+    if len(_seen) < len(_trace):
+        errors.append(f"E2-DIFF found {len(_seen)} of {len(_trace)} traced pair numbers in the literal closure")
+except Exception as _x:
+    errors.append("E2-DIFF unreadable " + repr(_x))
+
+# E2-YLG (edition 2, candidate a): the Yemen Loan Guarantee volumes (5,731 guaranteed transactions; OECD, read in the
+# original) never reach a reader as a measure of firms' access to finance. Asserted on what a reader sees: every page
+# that prints 5,731 also prints, in its own language, that guarantee volumes do not show how many firms could borrow.
+try:
+    _ny = 0
+    _ylg = {"en": "not how many firms could borrow", "ar": "لا عدد المنشآت التي تمكنت من الاقتراض"}
+    for _f in sorted(DIST.glob("*/**/index.html")) + sorted(DIST.glob("*/index.html")):
+        _rel = str(_f.relative_to(DIST))
+        if not _rel.startswith(("en/", "ar/")):
+            continue
+        _h = re.sub(r"<(script|style)\b[^>]*>.*?</\1>", " ", _f.read_text(encoding="utf-8"), flags=re.S)
+        _txt = re.sub(r"\s+", " ", _html.unescape(re.sub(r"<[^>]+>", " ", _h)))
+        if not re.search(r"(?<![\d,])5,731(?![\d,])", _txt):
+            continue
+        _ny += 1
+        if _ylg[_rel[:2]] not in _txt:
+            errors.append(f"E2-YLG {_rel} prints the guarantee volume without saying it is not firms' access to finance")
+    if _ny < 4:
+        errors.append(f"E2-YLG read only {_ny} pages with the guarantee volume")
+except Exception as _x:
+    errors.append("E2-YLG unreadable " + repr(_x))
+
+# E2-READ and E2-DATES (owner message of 4 October 2026, block 1): bound is not read. Every value and date a page prints
+# carries a state in the Master (06 / 14 value_states: READ with locator, DERIVED from values read, SITE = this resource's
+# own date or count, SEE:<record>, LOCATOR = a page or table number of a cited original, TRIVIAL, UNREACHABLE).
+# E2-READ: every number the literal audit traces to a record has a state in that record; a READ or DERIVED state names
+# its source and locator; and every page that prints a value whose original could not be opened says so beside it, in
+# its own language. E2-DATES: every date in a record's or a chronology event's governed text has a stated state in that
+# record, and every day-month-year or month-year date on a built page is a stated date or the governed document date or
+# title date of a source with a public locator.
+_E2_OK = ("READ", "DERIVED", "SITE", "UNREACHABLE", "LOCATOR", "TRIVIAL")
+_E2_LABEL = {"en": "not been re-read in the original", "ar": "فلم تُعَد في هذا الإصدار قراءةُ"}
+_E2_EN = ("January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November",
+          "December")
+_E2_AR = ("يناير", "فبراير", "مارس", "أبريل", "مايو", "يونيو", "يوليو", "أغسطس", "سبتمبر", "أكتوبر", "نوفمبر", "ديسمبر")
+
+
+def _e2_dates(txt, months):
+    for _m in re.finditer(r"(?<!\d)(?:(\d{1,2})\s+)?(" + "|".join(months) + r")\s+(\d{4})(?!\d)", txt):
+        yield f"{_m.group(3)}-{months.index(_m.group(2)) + 1:02d}" + (f"-{int(_m.group(1)):02d}" if _m.group(1) else "")
+
+
+def _e2_iso(t):
+    return set(_e2_dates(t, _E2_EN)) | set(_e2_dates(t, _E2_AR)) | set(re.findall(r"(?<!\d)\d{4}-\d{2}(?:-\d{2})?(?!\d)", t))
+
+
+try:
+    _ev = json.loads((ROOT / "site-src/content/evidence/evidence_objects.json").read_text(encoding="utf-8"))
+    _ch = json.loads((ROOT / "site-src/content/visuals/system_chronology.json").read_text(encoding="utf-8"))
+    _sl = json.loads((ROOT / "site-src/content/sources/source_library.json").read_text(encoding="utf-8"))
+    _sl = _sl if isinstance(_sl, list) else _sl.get("sources", [])
+    _evid = {o["object_id"]: o for o in _ev}
+    _stated, _unreach, _nst = set(), {}, 0
+    for _rec in list(_ev) + list(_ch):
+        _vs = _rec.get("value_states")
+        _rid = _rec.get("object_id") or _rec.get("event_id")
+        if _vs is None:
+            continue
+        _nst += 1
+        _have = set()
+        for _e in _vs:
+            _ok = _e.get("s") in _E2_OK or str(_e.get("s")).startswith("SEE:")
+            if not _ok:
+                errors.append(f"E2-READ {_rid} value {_e.get('t')!r} has the state {_e.get('s')!r}, which is not a stated state")
+            if _e.get("s") in ("READ", "DERIVED") and not (_e.get("src") and _e.get("loc")):
+                errors.append(f"E2-READ {_rid} value {_e.get('t')!r} is {_e.get('s')} without a source and locator")
+            if _e.get("s") == "UNREACHABLE":
+                _unreach.setdefault(_rid, []).append(_e.get("t"))
+            if _ok:
+                _have |= _e2_iso(str(_e.get("t")))
+        _stated |= _have
+        for _fld in ("title", "summary", "definition", "period", "universe", "method", "limitations", "currentness", "fact"):
+            for _lang, _months in (("en", _E2_EN), ("ar", _E2_AR)):
+                for _d in _e2_dates(str(_rec.get(f"{_fld}_{_lang}") or ""), _months):
+                    if _d not in _have:
+                        errors.append(f"E2-DATES {_rid} {_fld}_{_lang} prints the date {_d} without a stated state in its record")
+    if _nst < 120:
+        errors.append(f"E2-READ only {_nst} records and events carry value states")
+    # every number the literal audit traces to a record has a state there (years are periods, as in the literal audit)
+    _nt = 0
+    for _r in json.loads((ROOT / "audit/PUBLIC_LITERAL_CLOSURE.json").read_text(encoding="utf-8"))["records"]:
+        _o = _r.get("source_object")
+        if _o not in _evid or _r.get("category") == "DATE_OR_PERIOD":
+            continue
+        _c = re.search(r"\d+(?:[,.]\d+)*", _r["token"])
+        if not _c or re.fullmatch(r"(?:19|20)\d\d", _c.group(0).replace(",", "")):
+            continue
+        _nt += 1
+        _c = _c.group(0).replace(",", "")
+        if not any(_c in str(_e.get("t")).replace(",", "") for _e in (_evid[_o].get("value_states") or [])):
+            errors.append(f"E2-READ {_r['route']} prints {_r['token']!r}, traced to {_o}, which gives it no state")
+    if _nt < 5000:
+        errors.append(f"E2-READ read only {_nt} traced numbers")
+    # a value whose original could not be opened is labelled wherever its record prints it
+    for _rid, _toks in _unreach.items():
+        _o = _evid.get(_rid)
+        _routes = (_o.get("public_route_list") or []) + [f"/evidence/{_rid}/"] if _o else [
+            r if r.endswith("/") else r + "/" for r in (str(next(x for x in _ch if x["event_id"] == _rid).get("linked_routes") or "").replace(" ", "").split("|")) if r]
+        for _route in dict.fromkeys(_routes):
+            for _lang in ("en", "ar"):
+                _f = DIST / _lang / _route.strip("/") / "index.html"
+                if not _f.exists():
+                    continue
+                _t = re.sub(r"\s+", " ", _html.unescape(re.sub(r"<[^>]+>", " ", re.sub(r"<(script|style)\b[^>]*>.*?</\1>", " ", _f.read_text(encoding="utf-8"), flags=re.S))))
+                _t = _t.replace("⁦", "").replace("⁩", "")
+                _shown = [t for t in _toks if re.search(r"(?<![\d,.])" + re.escape(t) + r"(?![\d,])", _t)]
+                if _shown and _E2_LABEL[_lang] not in _t:
+                    errors.append(f"E2-READ {_lang}{_route} prints {_shown[0]!r} of {_rid}, whose original could not be opened, without saying so")
+    # every printed date on a built page is stated
+    _srcd = set()
+    for _s in _sl:
+        if str(_s.get("primary_url") or "").startswith(("http://", "https://")):
+            if _s.get("document_date"):
+                _srcd.add(str(_s["document_date"])[:10])
+            _srcd |= _e2_iso(str(_s.get("display_title") or "")) | _e2_iso(str(_s.get("display_title_ar") or ""))
+    _np = 0
+    for _lang, _months in (("en", _E2_EN), ("ar", _E2_AR)):
+        for _f in sorted((DIST / _lang).rglob("index.html")):
+            _np += 1
+            _t = re.sub(r"\s+", " ", _html.unescape(re.sub(r"<[^>]+>", " ", re.sub(r"<(script|style)\b[^>]*>.*?</\1>", " ", _f.read_text(encoding="utf-8"), flags=re.S))))
+            for _d in sorted(set(_e2_dates(_t.replace("⁦", "").replace("⁩", ""), _months))):
+                if _d not in _stated and _d not in _srcd:
+                    errors.append(f"E2-DATES {_f.relative_to(DIST)} prints the date {_d}, which no record, event or source states")
+    if _np < 280:
+        errors.append(f"E2-DATES read only {_np} pages")
+except Exception as _x:
+    errors.append("E2-READ/E2-DATES unreadable " + repr(_x))
 
 print(f'HTML={len(list(DIST.rglob("*.html")))} ERRORS={len(errors)} WARN={len(warns)}')
 if warns:

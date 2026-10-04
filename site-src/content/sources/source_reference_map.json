@@ -581,7 +581,7 @@
     "publisher_ar": "البنك المركزي اليمني – عدن",
     "document_label": "News release",
     "document_label_ar": "بيان صحفي",
-    "document_date": null,
+    "document_date": "2025-09-10",
     "resource_category": null,
     "resource_category_ar": null,
     "why_it_matters": null,
@@ -847,13 +847,23 @@
     "rights_display_state": "OBJECT_LEVEL_OR_UNSPECIFIED",
     "citation_behavior": "Use the original locator and object-level controlled citation/source text; do not infer missing bibliographic or rights metadata.",
     "linked_evidence_object_ids": [
+      "CLM-003",
       "VIS-POS-TERMINALS",
       "VIS-POS-TRANSACTIONS",
       "VIS-POS-VALUE"
     ],
-    "linked_claim_ids": [],
-    "linked_reading_ids": [],
+    "linked_claim_ids": [
+      "CLM-003"
+    ],
+    "linked_reading_ids": [
+      "CWR-003",
+      "CWR-004",
+      "CWR-009"
+    ],
     "linked_visual_ids": [
+      "RV-CWR-003",
+      "RV-CWR-004",
+      "RV-CWR-009",
       "VIS-POS-TERMINALS",
       "VIS-POS-TRANSACTIONS",
       "VIS-POS-VALUE"
@@ -970,14 +980,26 @@
     "rights_display_state": "OBJECT_LEVEL_OR_UNSPECIFIED",
     "citation_behavior": "Use the original locator and object-level controlled citation/source text; do not infer missing bibliographic or rights metadata.",
     "linked_evidence_object_ids": [
+      "CLM-003",
       "VIS-POS-TERMINALS",
-      "VIS-POS-TRANSACTIONS"
+      "VIS-POS-TRANSACTIONS",
+      "VIS-POS-VALUE"
     ],
-    "linked_claim_ids": [],
-    "linked_reading_ids": [],
+    "linked_claim_ids": [
+      "CLM-003"
+    ],
+    "linked_reading_ids": [
+      "CWR-003",
+      "CWR-004",
+      "CWR-009"
+    ],
     "linked_visual_ids": [
+      "RV-CWR-003",
+      "RV-CWR-004",
+      "RV-CWR-009",
       "VIS-POS-TERMINALS",
-      "VIS-POS-TRANSACTIONS"
+      "VIS-POS-TRANSACTIONS",
+      "VIS-POS-VALUE"
     ],
     "linked_measurement_ids": [],
     "rule": "DISPLAY_READY fields come only from the Production Master. LOCATOR_ONLY preserves the locator without inventing missing bibliography or rights metadata."
@@ -1419,7 +1441,7 @@
     "publisher_ar": "صندوق النقد الدولي",
     "document_label": "Staff report",
     "document_label_ar": "تقرير خبراء",
-    "document_date": null,
+    "document_date": "2025-11-20",
     "resource_category": null,
     "resource_category_ar": null,
     "why_it_matters": null,
@@ -1459,7 +1481,7 @@
     "publisher_ar": "صندوق النقد الدولي",
     "document_label": "Staff report",
     "document_label_ar": "تقرير خبراء",
-    "document_date": null,
+    "document_date": "2026-03-18",
     "resource_category": null,
     "resource_category_ar": null,
     "why_it_matters": null,
@@ -1576,7 +1598,7 @@
   {
     "source_id": "SRC-WB-RPW-SA-YEM-2025Q3-001",
     "primary_url": "https://remittanceprices.worldbank.org/corridor/Saudi%20Arabia/Yemen",
-    "additional_urls": null,
+    "additional_urls": "[\"https://datacatalogfiles.worldbank.org/ddh-published/0037898/DR0095523/rpw_dataset_2011_2025_q3.xlsx\"]",
     "datasets_or_use": "DS-REMITTANCES, DS-K04-REMIT-REGIMES, DS-K04-CASH-FIN-TRANSMISSION",
     "row_count": 2,
     "metadata_state": "DISPLAY_READY",
@@ -1613,7 +1635,7 @@
   {
     "source_id": "SRC-WB-RPW-UAE-YEM-2025Q3-001",
     "primary_url": "https://remittanceprices.worldbank.org/corridor/United%20Arab%20Emirates/Yemen",
-    "additional_urls": null,
+    "additional_urls": "[\"https://datacatalogfiles.worldbank.org/ddh-published/0037898/DR0095523/rpw_dataset_2011_2025_q3.xlsx\"]",
     "datasets_or_use": "DS-REMITTANCES",
     "row_count": 2,
     "metadata_state": "DISPLAY_READY",
@@ -1707,9 +1729,12 @@
     "rights_display_state": "OBJECT_LEVEL_OR_UNSPECIFIED",
     "citation_behavior": "Use the original locator and object-level controlled citation/source text; do not infer missing bibliographic or rights metadata.",
     "linked_evidence_object_ids": [
+      "CLM-022",
       "VIS-MFI-SPINE"
     ],
-    "linked_claim_ids": [],
+    "linked_claim_ids": [
+      "CLM-022"
+    ],
     "linked_reading_ids": [],
     "linked_visual_ids": [],
     "linked_measurement_ids": [],
@@ -1845,21 +1870,29 @@
     "rights_display_state": "OBJECT_LEVEL_OR_UNSPECIFIED",
     "citation_behavior": "Use the original locator and object-level controlled citation/source text; do not infer missing bibliographic or rights metadata.",
     "linked_evidence_object_ids": [
+      "CLM-001",
+      "CLM-002",
       "CLM-023",
       "CLM-024",
       "CLM-025",
       "CLM-026",
+      "CLM-027",
       "VIS-FINDEX-ACCESS-USE",
       "VIS-FINDEX-BARRIERS",
       "VIS-FINDEX-FLOW-CHANNELS",
+      "VIS-FINDEX-GAPS",
+      "VIS-FINDEX-OBSERVED-WAVES",
       "VIS-FINDEX-RESILIENCE",
       "VIS-FINDEX-SAMPLE-SUPPORT"
     ],
     "linked_claim_ids": [
+      "CLM-001",
+      "CLM-002",
       "CLM-023",
       "CLM-024",
       "CLM-025",
-      "CLM-026"
+      "CLM-026",
+      "CLM-027"
     ],
     "linked_reading_ids": [
       "CWR-003",
@@ -1869,7 +1902,8 @@
     "linked_visual_ids": [
       "RV-CWR-003",
       "RV-CWR-004",
-      "RV-CWR-007"
+      "RV-CWR-007",
+      "VIS-FINDEX-GAPS"
     ],
     "linked_measurement_ids": [],
     "rule": "DISPLAY_READY fields come only from the Production Master. LOCATOR_ONLY preserves the locator without inventing missing bibliography or rights metadata."
@@ -1905,6 +1939,7 @@
       "CLM-002",
       "CLM-026",
       "CLM-027",
+      "VIS-FINDEX-ACCESS-USE",
       "VIS-FINDEX-GAPS",
       "VIS-FINDEX-OBSERVED-WAVES"
     ],
@@ -1955,11 +1990,14 @@
     "rights_display_state": "OBJECT_LEVEL_OR_UNSPECIFIED",
     "citation_behavior": "Use the original locator and object-level controlled citation/source text; do not infer missing bibliographic or rights metadata.",
     "linked_evidence_object_ids": [
+      "CLM-059",
       "DS-QUAL-EVIDENCE",
       "QUAL-001",
       "VIS-OECD-FCP-TIMELINE"
     ],
-    "linked_claim_ids": [],
+    "linked_claim_ids": [
+      "CLM-059"
+    ],
     "linked_reading_ids": [],
     "linked_visual_ids": [
       "VIS-OECD-FCP-TIMELINE"
@@ -2119,7 +2157,7 @@
     "publisher_ar": "البنك المركزي اليمني – عدن",
     "document_label": "News release",
     "document_label_ar": "بيان صحفي",
-    "document_date": null,
+    "document_date": "2023-03-20",
     "resource_category": null,
     "resource_category_ar": null,
     "why_it_matters": null,
@@ -2159,7 +2197,7 @@
     "publisher_ar": "البنك المركزي اليمني – عدن",
     "document_label": "News release",
     "document_label_ar": "بيان صحفي",
-    "document_date": null,
+    "document_date": "2024-03-18",
     "resource_category": null,
     "resource_category_ar": null,
     "why_it_matters": null,
@@ -2199,7 +2237,7 @@
     "publisher_ar": "البنك المركزي اليمني – عدن",
     "document_label": "News release",
     "document_label_ar": "بيان صحفي",
-    "document_date": null,
+    "document_date": "2024-04-03",
     "resource_category": null,
     "resource_category_ar": null,
     "why_it_matters": null,
@@ -2236,7 +2274,7 @@
     "publisher_ar": "البنك المركزي اليمني – عدن",
     "document_label": "News release",
     "document_label_ar": "بيان صحفي",
-    "document_date": null,
+    "document_date": "2025-03-16",
     "resource_category": null,
     "resource_category_ar": null,
     "why_it_matters": null,
@@ -2319,7 +2357,7 @@
     "publisher_ar": "البنك المركزي اليمني – عدن",
     "document_label": "News release",
     "document_label_ar": "بيان صحفي",
-    "document_date": null,
+    "document_date": "2024-03-23",
     "resource_category": null,
     "resource_category_ar": null,
     "why_it_matters": null,
@@ -2332,12 +2370,17 @@
     "rights_display_state": "OBJECT_LEVEL_OR_UNSPECIFIED",
     "citation_behavior": "Use the original locator and object-level controlled citation/source text; do not infer missing bibliographic or rights metadata.",
     "linked_evidence_object_ids": [
+      "CLM-011",
       "DS-FCP-ARCH",
+      "VIS-FCP-REDRESS-PATH",
       "VIS-OECD-FCP-TIMELINE"
     ],
-    "linked_claim_ids": [],
+    "linked_claim_ids": [
+      "CLM-011"
+    ],
     "linked_reading_ids": [],
     "linked_visual_ids": [
+      "VIS-FCP-REDRESS-PATH",
       "VIS-OECD-FCP-TIMELINE"
     ],
     "linked_measurement_ids": [],
@@ -2394,7 +2437,7 @@
     "publisher_ar": "البنك المركزي اليمني – عدن",
     "document_label": "News release",
     "document_label_ar": "بيان صحفي",
-    "document_date": null,
+    "document_date": "2026-03-29",
     "resource_category": null,
     "resource_category_ar": null,
     "why_it_matters": null,
@@ -2556,7 +2599,7 @@
     "publisher_ar": "البنك المركزي اليمني – عدن",
     "document_label": "News release",
     "document_label_ar": "بيان صحفي",
-    "document_date": null,
+    "document_date": "2026-01-22",
     "resource_category": null,
     "resource_category_ar": null,
     "why_it_matters": null,
@@ -2633,7 +2676,7 @@
     "publisher_ar": "البنك المركزي اليمني – عدن",
     "document_label": "Official list or roster",
     "document_label_ar": "قائمة رسمية",
-    "document_date": null,
+    "document_date": "2025",
     "resource_category": null,
     "resource_category_ar": null,
     "why_it_matters": null,
@@ -2670,7 +2713,7 @@
     "publisher_ar": "البنك المركزي اليمني – عدن",
     "document_label": "News release",
     "document_label_ar": "بيان صحفي",
-    "document_date": null,
+    "document_date": "2026-06-17",
     "resource_category": null,
     "resource_category_ar": null,
     "why_it_matters": null,
@@ -2715,7 +2758,7 @@
     "publisher_ar": "البنك المركزي اليمني – عدن",
     "document_label": "News release",
     "document_label_ar": "بيان صحفي",
-    "document_date": null,
+    "document_date": "2026-07-27",
     "resource_category": null,
     "resource_category_ar": null,
     "why_it_matters": null,
@@ -2760,7 +2803,7 @@
     "publisher_ar": "البنك المركزي اليمني – عدن",
     "document_label": "News release",
     "document_label_ar": "بيان صحفي",
-    "document_date": null,
+    "document_date": "2026-08-03",
     "resource_category": null,
     "resource_category_ar": null,
     "why_it_matters": null,
@@ -2805,7 +2848,7 @@
     "publisher_ar": "البنك المركزي اليمني – عدن",
     "document_label": "News release",
     "document_label_ar": "بيان صحفي",
-    "document_date": null,
+    "document_date": "2026-08-04",
     "resource_category": null,
     "resource_category_ar": null,
     "why_it_matters": null,
@@ -2999,7 +3042,7 @@
     "publisher_ar": "الصندوق الاجتماعي للتنمية",
     "document_label": "Newsletter",
     "document_label_ar": "نشرة دورية",
-    "document_date": null,
+    "document_date": "2009",
     "resource_category": null,
     "resource_category_ar": null,
     "why_it_matters": null,
@@ -3037,7 +3080,7 @@
     "publisher_ar": "الصندوق الاجتماعي للتنمية",
     "document_label": "Newsletter",
     "document_label_ar": "نشرة دورية",
-    "document_date": null,
+    "document_date": "2010",
     "resource_category": null,
     "resource_category_ar": null,
     "why_it_matters": null,
@@ -3075,7 +3118,7 @@
     "publisher_ar": "الصندوق الاجتماعي للتنمية",
     "document_label": "Newsletter",
     "document_label_ar": "نشرة دورية",
-    "document_date": null,
+    "document_date": "2011",
     "resource_category": null,
     "resource_category_ar": null,
     "why_it_matters": null,
@@ -3113,7 +3156,7 @@
     "publisher_ar": "الصندوق الاجتماعي للتنمية",
     "document_label": "Newsletter",
     "document_label_ar": "نشرة دورية",
-    "document_date": null,
+    "document_date": "2012",
     "resource_category": null,
     "resource_category_ar": null,
     "why_it_matters": null,
@@ -3151,7 +3194,7 @@
     "publisher_ar": "الصندوق الاجتماعي للتنمية",
     "document_label": "Newsletter",
     "document_label_ar": "نشرة دورية",
-    "document_date": null,
+    "document_date": "2012",
     "resource_category": null,
     "resource_category_ar": null,
     "why_it_matters": null,
@@ -3166,6 +3209,7 @@
     "linked_evidence_object_ids": [
       "CLM-020",
       "CLM-022",
+      "MF-ORIG-001+002",
       "VIS-MFI-SPINE"
     ],
     "linked_claim_ids": [
@@ -3229,7 +3273,7 @@
     "publisher_ar": "الصندوق الاجتماعي للتنمية",
     "document_label": "Newsletter",
     "document_label_ar": "نشرة دورية",
-    "document_date": null,
+    "document_date": "2014",
     "resource_category": null,
     "resource_category_ar": null,
     "why_it_matters": null,
@@ -3267,7 +3311,7 @@
     "publisher_ar": "الصندوق الاجتماعي للتنمية",
     "document_label": "Newsletter",
     "document_label_ar": "نشرة دورية",
-    "document_date": null,
+    "document_date": "2015",
     "resource_category": null,
     "resource_category_ar": null,
     "why_it_matters": null,
@@ -3308,7 +3352,7 @@
     "publisher_ar": "الصندوق الاجتماعي للتنمية",
     "document_label": "Newsletter",
     "document_label_ar": "نشرة دورية",
-    "document_date": null,
+    "document_date": "2015",
     "resource_category": null,
     "resource_category_ar": null,
     "why_it_matters": null,
@@ -3349,7 +3393,7 @@
     "publisher_ar": "الصندوق الاجتماعي للتنمية",
     "document_label": "Newsletter",
     "document_label_ar": "نشرة دورية",
-    "document_date": null,
+    "document_date": "2015",
     "resource_category": null,
     "resource_category_ar": null,
     "why_it_matters": null,
@@ -3397,7 +3441,7 @@
     "publisher_ar": "الصندوق الاجتماعي للتنمية",
     "document_label": "Newsletter",
     "document_label_ar": "نشرة دورية",
-    "document_date": null,
+    "document_date": "2016",
     "resource_category": null,
     "resource_category_ar": null,
     "why_it_matters": null,
@@ -3435,7 +3479,7 @@
     "publisher_ar": "الصندوق الاجتماعي للتنمية",
     "document_label": "Newsletter",
     "document_label_ar": "نشرة دورية",
-    "document_date": null,
+    "document_date": "2017",
     "resource_category": null,
     "resource_category_ar": null,
     "why_it_matters": null,
@@ -3473,7 +3517,7 @@
     "publisher_ar": "الصندوق الاجتماعي للتنمية",
     "document_label": "Newsletter",
     "document_label_ar": "نشرة دورية",
-    "document_date": null,
+    "document_date": "2018",
     "resource_category": null,
     "resource_category_ar": null,
     "why_it_matters": null,
@@ -3511,7 +3555,7 @@
     "publisher_ar": "الصندوق الاجتماعي للتنمية",
     "document_label": "Newsletter",
     "document_label_ar": "نشرة دورية",
-    "document_date": null,
+    "document_date": "2019",
     "resource_category": null,
     "resource_category_ar": null,
     "why_it_matters": null,
@@ -3549,7 +3593,7 @@
     "publisher_ar": "الصندوق الاجتماعي للتنمية",
     "document_label": "Newsletter",
     "document_label_ar": "نشرة دورية",
-    "document_date": null,
+    "document_date": "2020",
     "resource_category": null,
     "resource_category_ar": null,
     "why_it_matters": null,
@@ -3752,11 +3796,19 @@
     "rights_display_state": "OBJECT_LEVEL_OR_UNSPECIFIED",
     "citation_behavior": "Use the original locator and object-level controlled citation/source text; do not infer missing bibliographic or rights metadata.",
     "linked_evidence_object_ids": [
+      "CLM-018",
       "VIS-PAYMENT-RAILS"
     ],
-    "linked_claim_ids": [],
-    "linked_reading_ids": [],
+    "linked_claim_ids": [
+      "CLM-018"
+    ],
+    "linked_reading_ids": [
+      "CWR-004",
+      "CWR-009"
+    ],
     "linked_visual_ids": [
+      "RV-CWR-004",
+      "RV-CWR-009",
       "VIS-PAYMENT-RAILS"
     ],
     "linked_measurement_ids": [],
@@ -3908,7 +3960,7 @@
     "publisher_ar": "وكالة الأنباء اليمنية سبأ (saba.ye)",
     "document_label": "Web page",
     "document_label_ar": "صفحة إلكترونية",
-    "document_date": null,
+    "document_date": "2024-06-04",
     "resource_category": null,
     "resource_category_ar": null,
     "why_it_matters": null,
@@ -3941,7 +3993,7 @@
     "publisher_ar": "صندوق النقد الدولي",
     "document_label": "Staff report",
     "document_label_ar": "تقرير خبراء",
-    "document_date": null,
+    "document_date": "2026-04",
     "resource_category": "Yemen’s economy and policy context",
     "resource_category_ar": "السياق الاقتصادي والسياساتي في اليمن",
     "why_it_matters": "Provides the most recent IMF Article IV macro-financial framework, external-sector and banking context, and methodological information used to interpret remittances, reserves, banking conditions and reform context.",
@@ -3957,7 +4009,8 @@
       "CLM-036",
       "CLM-037",
       "CLM-041",
-      "CLM-042"
+      "CLM-042",
+      "QUAL-001"
     ],
     "linked_claim_ids": [
       "CLM-036",
@@ -4338,7 +4391,7 @@
     "publisher_ar": "صندوق النقد الدولي",
     "document_label": "Method or standard",
     "document_label_ar": "منهج أو معيار",
-    "document_date": null,
+    "document_date": "2009",
     "resource_category": null,
     "resource_category_ar": null,
     "why_it_matters": null,
@@ -4377,7 +4430,7 @@
     "publisher_ar": "صندوق النقد الدولي",
     "document_label": "Method or standard",
     "document_label_ar": "منهج أو معيار",
-    "document_date": null,
+    "document_date": "2014",
     "resource_category": null,
     "resource_category_ar": null,
     "why_it_matters": null,
@@ -4414,7 +4467,7 @@
     "publisher_ar": "صندوق النقد الدولي",
     "document_label": "Method or standard",
     "document_label_ar": "منهج أو معيار",
-    "document_date": null,
+    "document_date": "2025-07",
     "resource_category": null,
     "resource_category_ar": null,
     "why_it_matters": null,
@@ -4970,7 +5023,7 @@
     "publisher_ar": "مركز صنعاء للدراسات الاستراتيجية",
     "document_label": "Research or policy paper",
     "document_label_ar": "ورقة بحثية أو سياساتية",
-    "document_date": null,
+    "document_date": "2022-03-07",
     "resource_category": "Research and analysis on Yemen’s financial sector",
     "resource_category_ar": "البحوث والتحليلات حول القطاع المالي في اليمن",
     "why_it_matters": "Provides Yemen-specific analytical context on e-money regulation, provider models, payment infrastructure and institutional fragmentation. It is useful for interpreting the historical pathway to today’s payment reforms and for framing questions to be checked against primary regulatory sources.",
@@ -5003,7 +5056,7 @@
     "publisher_ar": "مركز صنعاء للدراسات الاستراتيجية",
     "document_label": "Research or policy paper",
     "document_label_ar": "ورقة بحثية أو سياساتية",
-    "document_date": "2024",
+    "document_date": "2024-09-23",
     "resource_category": "Research and analysis on Yemen’s financial sector",
     "resource_category_ar": "البحوث والتحليلات حول القطاع المالي في اليمن",
     "why_it_matters": "Provides Yemen-specific analysis of the changing microfinance-bank landscape, licensing incentives, institutional fragmentation and sustainability risks. It is useful for interpreting provider and microfinance evidence and for framing questions that require primary supervisory or institution-level data.",
@@ -5465,7 +5518,7 @@
     "publisher_ar": "وكالة الأنباء السعودية",
     "document_label": "News release",
     "document_label_ar": "بيان صحفي",
-    "document_date": null,
+    "document_date": "2018-03-16",
     "resource_category": null,
     "resource_category_ar": null,
     "why_it_matters": null,
@@ -5568,7 +5621,7 @@
     "publisher_ar": "وكالة الأنباء السعودية",
     "document_label": "News release",
     "document_label_ar": "بيان صحفي",
-    "document_date": null,
+    "document_date": "2023-02-21",
     "resource_category": null,
     "resource_category_ar": null,
     "why_it_matters": null,
@@ -5605,7 +5658,7 @@
     "publisher_ar": "البنك الدولي",
     "document_label": "Project document",
     "document_label_ar": "وثيقة مشروع",
-    "document_date": null,
+    "document_date": "2025-05-22",
     "resource_category": null,
     "resource_category_ar": null,
     "why_it_matters": null,
@@ -5638,7 +5691,7 @@
     "publisher_ar": "وكالة الأنباء السعودية",
     "document_label": "News release",
     "document_label_ar": "بيان صحفي",
-    "document_date": null,
+    "document_date": "2026-03-01",
     "resource_category": null,
     "resource_category_ar": null,
     "why_it_matters": null,
@@ -5760,7 +5813,7 @@
     "publisher_ar": "البنك الدولي",
     "document_label": "Project document",
     "document_label_ar": "وثيقة مشروع",
-    "document_date": null,
+    "document_date": "2025-05-22",
     "resource_category": "Programmes and projects in Yemen",
     "resource_category_ar": "البرامج والمشروعات في اليمن",
     "why_it_matters": "Official World Bank project record and results framework for FMIIP, including commitment, dates, development objective and the baseline/target indicators used to distinguish implementation outputs from measured outcomes.",
@@ -5811,7 +5864,7 @@
     "publisher_ar": "المجموعة الاستشارية لمساعدة الفقراء (CGAP)",
     "document_label": "Research or policy paper",
     "document_label_ar": "ورقة بحثية أو سياساتية",
-    "document_date": null,
+    "document_date": "2017-03",
     "resource_category": "Measurement methods and international references",
     "resource_category_ar": "مناهج القياس ومراجع دولية",
     "why_it_matters": "Useful for framing measurement choices and comparability questions in Arab financial-inclusion systems.",
@@ -5890,15 +5943,19 @@
     "rights_display_state": "OBJECT_LEVEL_OR_UNSPECIFIED",
     "citation_behavior": "Use the original locator and object-level controlled citation/source text; do not infer missing bibliographic or rights metadata.",
     "linked_evidence_object_ids": [
+      "CLM-032",
       "CLM-033"
     ],
     "linked_claim_ids": [
+      "CLM-032",
       "CLM-033"
     ],
     "linked_reading_ids": [
+      "CWR-001",
       "CWR-002"
     ],
     "linked_visual_ids": [
+      "RV-CWR-001",
       "RV-CWR-002"
     ],
     "linked_measurement_ids": [],
@@ -5931,17 +5988,21 @@
     "rights_display_state": "OBJECT_LEVEL_OR_UNSPECIFIED",
     "citation_behavior": "Use the original locator and object-level controlled citation/source text; do not infer missing bibliographic or rights metadata.",
     "linked_evidence_object_ids": [
+      "CLM-032",
       "CLM-033",
       "CLM-038"
     ],
     "linked_claim_ids": [
+      "CLM-032",
       "CLM-033",
       "CLM-038"
     ],
     "linked_reading_ids": [
+      "CWR-001",
       "CWR-002"
     ],
     "linked_visual_ids": [
+      "RV-CWR-001",
       "RV-CWR-002"
     ],
     "linked_measurement_ids": [],
@@ -5998,7 +6059,7 @@
     "publisher_ar": "لجنة المدفوعات والبنى التحتية للأسواق (CPMI)، بنك التسويات الدولية",
     "document_label": "Research or policy paper",
     "document_label_ar": "ورقة بحثية أو سياساتية",
-    "document_date": null,
+    "document_date": "2021-12-14",
     "resource_category": "Payment-system design and digital payments",
     "resource_category_ar": "تصميم أنظمة الدفع والمدفوعات الرقمية",
     "why_it_matters": "Clarifies how retail fast-payment systems relate to RTGS, including central-bank roles, settlement design, operating hours, availability and reliability — useful for interpreting Yemen's separate FPS and RTGS components without conflating them.",
@@ -6031,7 +6092,7 @@
     "publisher_ar": "لجنة المدفوعات والبنى التحتية للأسواق (CPMI) ومجموعة البنك الدولي",
     "document_label": "Research or policy paper",
     "document_label_ar": "ورقة بحثية أو سياساتية",
-    "document_date": null,
+    "document_date": "2020-04-14",
     "resource_category": "Payment-system design and digital payments",
     "resource_category_ar": "تصميم أنظمة الدفع والمدفوعات الرقمية",
     "why_it_matters": "Extends the PAFI framework for the fintech era and is useful for separating access to safe transaction accounts, frequent use, enabling payment infrastructure and the risks that accompany digitalisation.",
@@ -6119,7 +6180,7 @@
   {
     "source_id": "SRC-WB-YEM-CPF-2026-2030-001",
     "primary_url": "https://documents.worldbank.org/en/publication/documents-reports/documentdetail/099051226123536066",
-    "additional_urls": "[\"https://www.worldbank.org/ext/en/country/yemen/cpf\"]",
+    "additional_urls": "[\"https://www.worldbank.org/ext/en/country/yemen/cpf\", \"https://www.worldbank.org/en/news/press-release/2026/06/04/yemen-world-bank-group-launches-new-country-partnership-framework-and-projects-to-support-better-livelihoods-and-more-jo\"]",
     "datasets_or_use": "RESOURCE_LIBRARY_ONLY__CURRENT_YEMEN_DEVELOPMENT_CONTEXT",
     "row_count": 0,
     "metadata_state": "DISPLAY_READY",
@@ -6130,7 +6191,7 @@
     "publisher_ar": "مجموعة البنك الدولي",
     "document_label": "Research or policy paper",
     "document_label_ar": "ورقة بحثية أو سياساتية",
-    "document_date": null,
+    "document_date": "2026-06-04",
     "resource_category": "Yemen’s economy and policy context",
     "resource_category_ar": "السياق الاقتصادي والسياساتي في اليمن",
     "why_it_matters": "Sets out the World Bank Group's current country strategy for Yemen on livelihoods, jobs, women’s economic participation, private-sector development and institutional strengthening, helping place financial-inclusion evidence inside the wider development programme.",
@@ -6163,7 +6224,7 @@
     "publisher_ar": "البنك الدولي",
     "document_label": "News release",
     "document_label_ar": "بيان صحفي",
-    "document_date": null,
+    "document_date": "2026-06-30",
     "resource_category": "Programmes and projects in Yemen",
     "resource_category_ar": "البرامج والمشروعات في اليمن",
     "why_it_matters": "A current programme reference linking cash support, livelihoods, village savings and loan associations, and identity documentation; useful for asking what happens between programme delivery, formal onboarding and durable financial use.",
@@ -6196,7 +6257,7 @@
     "publisher_ar": "البنك الدولي",
     "document_label": "Research or policy paper",
     "document_label_ar": "ورقة بحثية أو سياساتية",
-    "document_date": null,
+    "document_date": "2026-05-21",
     "resource_category": "Yemen’s economy and policy context",
     "resource_category_ar": "السياق الاقتصادي والسياساتي في اليمن",
     "why_it_matters": "Provides a recent World Bank macroeconomic reading of Yemen, including the business environment, access-to-finance constraints, aid conditions and the 2026 reform context; useful for keeping financial-inclusion analysis connected to the economy without turning macro conditions into inclusion measures.",
@@ -6262,7 +6323,7 @@
     "publisher_ar": "البنك الدولي (G2Px)",
     "document_label": "Event or programme page",
     "document_label_ar": "صفحة فعالية أو برنامج",
-    "document_date": null,
+    "document_date": "2024-05-30",
     "resource_category": "Programmes and projects in Yemen",
     "resource_category_ar": "البرامج والمشروعات في اليمن",
     "why_it_matters": "Official World Bank/G2Px material documents an eight-district UCT digital-payment pilot benefiting 45,460 recipients and an emphasis on payments into fully functional accounts and recipient choice. It provides direct Yemen evidence for the intermediate step from cash-transfer delivery to exposure to formal digital financial services.",
@@ -6316,9 +6377,11 @@
     "rights_display_state": "OBJECT_LEVEL_OR_UNSPECIFIED",
     "citation_behavior": "Use the original locator and object-level controlled citation/source text; do not infer missing bibliographic or rights metadata.",
     "linked_evidence_object_ids": [
+      "CLM-009",
       "CLM-019"
     ],
     "linked_claim_ids": [
+      "CLM-009",
       "CLM-019"
     ],
     "linked_reading_ids": [],

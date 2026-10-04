@@ -13,7 +13,10 @@ ISO_DATE = re.compile(r"(?<![A-Za-z0-9_-])\d{4}-\d{2}(?:-\d{2})?(?![\d-])")   # 
 # identifier ("SRC-…-2026-2030-001") or a decimal
 NUM_RANGE = re.compile(r"(?<![A-Za-z0-9_.,-])(?:\d{4}(?:-\d{2}(?:-\d{2})?)?[–-]\d{4}(?:-\d{2}(?:-\d{2})?)?|\d{1,3}(?:,\d{3})+–\d{1,3}(?:,\d{3})+|\d{1,3}–\d{1,3})(?!\d|[.,]\d)")
 SIGNED = re.compile(r"(?<![\w\u0600-\u06FF-])[+\u2212\u2013-]\d[\d,]*(?:\.\d+)?%?(?![\w])")   # +11%, +4.9%, −0.5 — the sign and the percent sign are bidi-neutral, so after Arabic letters an un-isolated run renders "%11+"
-LTR_RUN = re.compile(f"(?:{NUM_RANGE.pattern})|(?:{ISO_DATE.pattern})|(?:{SIGNED.pattern})")
+# a table or figure number as its source prints it ("Table 4-1"): after Arabic letters its parts would display reversed
+# (edition 2, E2-7)
+TABLE_NO = re.compile(r"(?<![\w.,\u2013-])\d{1,2}-\d{1,2}(?![\w.,\u2013-])")
+LTR_RUN = re.compile(f"(?:{NUM_RANGE.pattern})|(?:{ISO_DATE.pattern})|(?:{SIGNED.pattern})|(?:{TABLE_NO.pattern})")
 # A record, source or object identifier with a digit (CLM-001, FMIIP-BASELINE-2025-01, SRC-CBY-AR2022-001): left to right
 # and isolated wherever governed text reaches an Arabic page, but never "nw" — it breaks at its own hyphens.
 ID_RUN = re.compile(r"(?<![A-Za-z0-9_-])(?=[A-Z][A-Za-z0-9-]*\d)[A-Z][A-Z0-9]*(?:-[A-Za-z0-9]+)+(?![A-Za-z0-9_-])")
@@ -76,6 +79,22 @@ _SKIP = {"svg", "math", "title", "textarea", "option", "pre", "code"}   # text t
 _VOID = {"area", "base", "br", "col", "embed", "hr", "img", "input", "link", "meta", "param", "source", "track", "wbr"}
 
 
+def _isolate_text(tok: str, rtl: bool) -> str:
+    """One text run of a document: ISO dates and numeric ranges isolated unbroken; in a right-to-left document an
+    identifier (FMIIP-BASELINE-2025-01, CLM-010) isolated too, breakable, and its digits never read as a date or range
+    (edition 2, E2-4b: governed prose that names a record by its ID)."""
+    dates = lambda s: LTR_RUN.sub(lambda mm: f'<bdi dir="ltr" class="nw">{mm.group(0)}</bdi>', s)   # noqa: E731
+    if not rtl:
+        return dates(tok)
+    out, last = [], 0
+    for m in ID_RUN.finditer(tok):
+        out.append(dates(tok[last:m.start()]))
+        out.append(f'<bdi dir="ltr">{m.group(0)}</bdi>')
+        last = m.end()
+    out.append(dates(tok[last:]))
+    return "".join(out)
+
+
 def isolate_document(html_text: str) -> str:
     """The one isolation pass over a finished document: every ISO date and numeric range in its text isolated
     left-to-right, wherever a renderer left it plain. Untouched: script and style (raw), SVG, the title and form
@@ -84,6 +103,7 @@ def isolate_document(html_text: str) -> str:
     meta content, which cannot carry markup, take Unicode isolates instead (`isolate_head`)."""
     out, stack, skip, ltr, pos = [], [], 0, 0, 0
     text = html_text
+    rtl = bool(re.match(r'\s*<!doctype html>\s*<html[^>]*\sdir="rtl"', text, re.I))
     while pos < len(text):
         m = _TOKEN.match(text, pos)
         if not m:
@@ -113,6 +133,6 @@ def isolate_document(html_text: str) -> str:
                 lt = 1 if (name not in ("html", "body") and re.search(r'\sdir="ltr"', tok)) else 0
                 stack.append((name, sk, lt)); skip += sk; ltr += lt
             continue
-        out.append(tok if (skip or ltr) else LTR_RUN.sub(lambda mm: f'<bdi dir="ltr" class="nw">{mm.group(0)}</bdi>', tok))
+        out.append(tok if (skip or ltr) else _isolate_text(tok, rtl))
     done = "".join(out)
     return isolate_head(done) if re.match(r'\s*<!doctype html>\s*<html[^>]*\sdir="rtl"', done, re.I) else done

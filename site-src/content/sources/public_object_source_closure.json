@@ -10,15 +10,18 @@
     "lineage_state": "BOUND_EXACT",
     "dependency_ids": [
       "SRC-WB-FINDEX-AGG-2022",
-      "SRC-WB-FINDEX-2025-EDITION"
+      "SRC-WB-FINDEX-2025-EDITION",
+      "SRC-WB-FINDEX-001"
     ],
     "direct_source_ids": [
       "SRC-WB-FINDEX-AGG-2022",
-      "SRC-WB-FINDEX-2025-EDITION"
+      "SRC-WB-FINDEX-2025-EDITION",
+      "SRC-WB-FINDEX-001"
     ],
     "resolved_source_ids": [
       "SRC-WB-FINDEX-AGG-2022",
-      "SRC-WB-FINDEX-2025-EDITION"
+      "SRC-WB-FINDEX-2025-EDITION",
+      "SRC-WB-FINDEX-001"
     ],
     "resolved_via_object_ids": [],
     "context_reference_ids": [],
@@ -32,6 +35,11 @@
       {
         "source_id": "SRC-WB-FINDEX-2025-EDITION",
         "primary_url": "https://www.worldbank.org/en/publication/globalfindex/download-data",
+        "metadata_state": "DISPLAY_READY"
+      },
+      {
+        "source_id": "SRC-WB-FINDEX-001",
+        "primary_url": "https://microdata.worldbank.org/catalog/5862",
         "metadata_state": "DISPLAY_READY"
       }
     ],
@@ -53,7 +61,9 @@
       "SRC-CBY-POS-2026-01",
       "SRC-CBY-POS-2026-04",
       "SRC-CBY-POS-2026-05",
-      "SRC-CBY-POS-2026-06"
+      "SRC-CBY-POS-2026-06",
+      "SRC-CBY-POS-2025-06",
+      "SRC-CBY-POS-2025-09"
     ],
     "direct_source_ids": [
       "SRC-CBY-POS-2025-03",
@@ -61,7 +71,9 @@
       "SRC-CBY-POS-2026-01",
       "SRC-CBY-POS-2026-04",
       "SRC-CBY-POS-2026-05",
-      "SRC-CBY-POS-2026-06"
+      "SRC-CBY-POS-2026-06",
+      "SRC-CBY-POS-2025-06",
+      "SRC-CBY-POS-2025-09"
     ],
     "resolved_source_ids": [
       "SRC-CBY-POS-2025-03",
@@ -69,7 +81,9 @@
       "SRC-CBY-POS-2026-01",
       "SRC-CBY-POS-2026-04",
       "SRC-CBY-POS-2026-05",
-      "SRC-CBY-POS-2026-06"
+      "SRC-CBY-POS-2026-06",
+      "SRC-CBY-POS-2025-06",
+      "SRC-CBY-POS-2025-09"
     ],
     "resolved_via_object_ids": [],
     "context_reference_ids": [],
@@ -104,6 +118,16 @@
         "source_id": "SRC-CBY-POS-2026-06",
         "primary_url": "https://cby-ye.com/files/6a6f973c98c25.pdf",
         "metadata_state": "DISPLAY_READY"
+      },
+      {
+        "source_id": "SRC-CBY-POS-2025-06",
+        "primary_url": "https://www.cby-ye.com/files/690b4d09cc314.pdf",
+        "metadata_state": "DISPLAY_READY"
+      },
+      {
+        "source_id": "SRC-CBY-POS-2025-09",
+        "primary_url": "https://www.cby-ye.com/files/693a77d1ded3e.pdf",
+        "metadata_state": "DISPLAY_READY"
       }
     ],
     "closure_state": "CLOSED_TO_SOURCE_ID",
@@ -119,13 +143,16 @@
     ],
     "lineage_state": "BOUND_EXACT",
     "dependency_ids": [
-      "SRC-CBY-EXCH-LIST-2026-001"
+      "SRC-CBY-EXCH-LIST-2026-001",
+      "SRC-CBY-ENF-18-2026"
     ],
     "direct_source_ids": [
-      "SRC-CBY-EXCH-LIST-2026-001"
+      "SRC-CBY-EXCH-LIST-2026-001",
+      "SRC-CBY-ENF-18-2026"
     ],
     "resolved_source_ids": [
-      "SRC-CBY-EXCH-LIST-2026-001"
+      "SRC-CBY-EXCH-LIST-2026-001",
+      "SRC-CBY-ENF-18-2026"
     ],
     "resolved_via_object_ids": [],
     "context_reference_ids": [],
@@ -134,6 +161,11 @@
       {
         "source_id": "SRC-CBY-EXCH-LIST-2026-001",
         "primary_url": "https://cby-ye.com/files/6ab391c11043b.pdf",
+        "metadata_state": "DISPLAY_READY"
+      },
+      {
+        "source_id": "SRC-CBY-ENF-18-2026",
+        "primary_url": "https://cby-ye.com/news/975",
         "metadata_state": "DISPLAY_READY"
       }
     ],
@@ -146,7 +178,8 @@
     "public_routes": [
       "/evidence/compare/",
       "/payments/",
-      "/providers/"
+      "/providers/",
+      "/reforms/"
     ],
     "lineage_state": "BOUND_EXACT",
     "dependency_ids": [
@@ -204,15 +237,18 @@
     "lineage_state": "BOUND_EXACT",
     "dependency_ids": [
       "SRC-CBY-FCP-INSTR-2023-001",
-      "SRC-CBY-FCP-BROCHURE-2024-001"
+      "SRC-CBY-FCP-BROCHURE-2024-001",
+      "SRC-CBY-FCP-AWARE-2024-001"
     ],
     "direct_source_ids": [
       "SRC-CBY-FCP-INSTR-2023-001",
-      "SRC-CBY-FCP-BROCHURE-2024-001"
+      "SRC-CBY-FCP-BROCHURE-2024-001",
+      "SRC-CBY-FCP-AWARE-2024-001"
     ],
     "resolved_source_ids": [
       "SRC-CBY-FCP-INSTR-2023-001",
-      "SRC-CBY-FCP-BROCHURE-2024-001"
+      "SRC-CBY-FCP-BROCHURE-2024-001",
+      "SRC-CBY-FCP-AWARE-2024-001"
     ],
     "resolved_via_object_ids": [],
     "context_reference_ids": [],
@@ -226,6 +262,11 @@
       {
         "source_id": "SRC-CBY-FCP-BROCHURE-2024-001",
         "primary_url": "https://cby-ye.com/files/65fe1e8d2ec08.pdf",
+        "metadata_state": "DISPLAY_READY"
+      },
+      {
+        "source_id": "SRC-CBY-FCP-AWARE-2024-001",
+        "primary_url": "https://cby-ye.com/news/652",
         "metadata_state": "DISPLAY_READY"
       }
     ],
@@ -429,15 +470,18 @@
     "lineage_state": "BOUND_EXACT",
     "dependency_ids": [
       "SRC-CBY-FCP-INSTR-2023-001",
-      "SRC-CBY-FCP-BROCHURE-2024-001"
+      "SRC-CBY-FCP-BROCHURE-2024-001",
+      "SRC-CBY-FCP-AWARE-2024-001"
     ],
     "direct_source_ids": [
       "SRC-CBY-FCP-INSTR-2023-001",
-      "SRC-CBY-FCP-BROCHURE-2024-001"
+      "SRC-CBY-FCP-BROCHURE-2024-001",
+      "SRC-CBY-FCP-AWARE-2024-001"
     ],
     "resolved_source_ids": [
       "SRC-CBY-FCP-INSTR-2023-001",
-      "SRC-CBY-FCP-BROCHURE-2024-001"
+      "SRC-CBY-FCP-BROCHURE-2024-001",
+      "SRC-CBY-FCP-AWARE-2024-001"
     ],
     "resolved_via_object_ids": [],
     "context_reference_ids": [],
@@ -451,6 +495,11 @@
       {
         "source_id": "SRC-CBY-FCP-BROCHURE-2024-001",
         "primary_url": "https://cby-ye.com/files/65fe1e8d2ec08.pdf",
+        "metadata_state": "DISPLAY_READY"
+      },
+      {
+        "source_id": "SRC-CBY-FCP-AWARE-2024-001",
+        "primary_url": "https://cby-ye.com/news/652",
         "metadata_state": "DISPLAY_READY"
       }
     ],
@@ -770,21 +819,24 @@
       "SRC-CBY-BANK-NETWORK-MTG-2026-001",
       "SRC-CBY-YPCC-FOUND-2026-001",
       "SRC-CBY-YPCC-BOARD-2026-001",
-      "SRC-WB-FMIIP-P180708"
+      "SRC-WB-FMIIP-P180708",
+      "SRC-WB-FMIIP-ISR2-2026-001"
     ],
     "direct_source_ids": [
       "SRC-CBY-UNIFIED-NET-2026-001",
       "SRC-CBY-BANK-NETWORK-MTG-2026-001",
       "SRC-CBY-YPCC-FOUND-2026-001",
       "SRC-CBY-YPCC-BOARD-2026-001",
-      "SRC-WB-FMIIP-P180708"
+      "SRC-WB-FMIIP-P180708",
+      "SRC-WB-FMIIP-ISR2-2026-001"
     ],
     "resolved_source_ids": [
       "SRC-CBY-UNIFIED-NET-2026-001",
       "SRC-CBY-BANK-NETWORK-MTG-2026-001",
       "SRC-CBY-YPCC-FOUND-2026-001",
       "SRC-CBY-YPCC-BOARD-2026-001",
-      "SRC-WB-FMIIP-P180708"
+      "SRC-WB-FMIIP-P180708",
+      "SRC-WB-FMIIP-ISR2-2026-001"
     ],
     "resolved_via_object_ids": [],
     "context_reference_ids": [],
@@ -813,6 +865,11 @@
       {
         "source_id": "SRC-WB-FMIIP-P180708",
         "primary_url": "https://maps.worldbank.org/projects/wb/pid/P180708?status=active",
+        "metadata_state": "DISPLAY_READY"
+      },
+      {
+        "source_id": "SRC-WB-FMIIP-ISR2-2026-001",
+        "primary_url": "https://documents.worldbank.org/en/publication/documents-reports/documentdetail/099040826144025755",
         "metadata_state": "DISPLAY_READY"
       }
     ],
@@ -1217,13 +1274,16 @@
     ],
     "lineage_state": "BOUND_EXACT",
     "dependency_ids": [
-      "SRC-WB-FINDEX-AGG-2022"
+      "SRC-WB-FINDEX-AGG-2022",
+      "SRC-WB-FINDEX-001"
     ],
     "direct_source_ids": [
-      "SRC-WB-FINDEX-AGG-2022"
+      "SRC-WB-FINDEX-AGG-2022",
+      "SRC-WB-FINDEX-001"
     ],
     "resolved_source_ids": [
-      "SRC-WB-FINDEX-AGG-2022"
+      "SRC-WB-FINDEX-AGG-2022",
+      "SRC-WB-FINDEX-001"
     ],
     "resolved_via_object_ids": [],
     "context_reference_ids": [],
@@ -1232,6 +1292,11 @@
       {
         "source_id": "SRC-WB-FINDEX-AGG-2022",
         "primary_url": "https://data.worldbank.org/indicator/FX.OWN.TOTL.ZS?locations=YE",
+        "metadata_state": "DISPLAY_READY"
+      },
+      {
+        "source_id": "SRC-WB-FINDEX-001",
+        "primary_url": "https://microdata.worldbank.org/catalog/5862",
         "metadata_state": "DISPLAY_READY"
       }
     ],
@@ -1398,13 +1463,16 @@
     ],
     "lineage_state": "BOUND_EXACT",
     "dependency_ids": [
-      "SRC-OECD-YEM-RESILIENCE-001"
+      "SRC-OECD-YEM-RESILIENCE-001",
+      "SRC-IMF-YEM-AIV-2025-2026"
     ],
     "direct_source_ids": [
-      "SRC-OECD-YEM-RESILIENCE-001"
+      "SRC-OECD-YEM-RESILIENCE-001",
+      "SRC-IMF-YEM-AIV-2025-2026"
     ],
     "resolved_source_ids": [
-      "SRC-OECD-YEM-RESILIENCE-001"
+      "SRC-OECD-YEM-RESILIENCE-001",
+      "SRC-IMF-YEM-AIV-2025-2026"
     ],
     "resolved_via_object_ids": [],
     "context_reference_ids": [],
@@ -1413,6 +1481,11 @@
       {
         "source_id": "SRC-OECD-YEM-RESILIENCE-001",
         "primary_url": "https://doi.org/10.1787/81ed2898-en",
+        "metadata_state": "DISPLAY_READY"
+      },
+      {
+        "source_id": "SRC-IMF-YEM-AIV-2025-2026",
+        "primary_url": "https://www.imf.org/-/media/files/publications/cr/2026/english/1yemea2026001-source-pdf.pdf",
         "metadata_state": "DISPLAY_READY"
       }
     ],
@@ -1457,15 +1530,18 @@
     "lineage_state": "BOUND_EXACT",
     "dependency_ids": [
       "SRC-SFD-MF-HISTORY-TOR-2012-001",
-      "SRC-SFD-HIST-2004-Q3-001"
+      "SRC-SFD-HIST-2004-Q3-001",
+      "SRC-SFD-Q4-2012-001"
     ],
     "direct_source_ids": [
       "SRC-SFD-MF-HISTORY-TOR-2012-001",
-      "SRC-SFD-HIST-2004-Q3-001"
+      "SRC-SFD-HIST-2004-Q3-001",
+      "SRC-SFD-Q4-2012-001"
     ],
     "resolved_source_ids": [
       "SRC-SFD-MF-HISTORY-TOR-2012-001",
-      "SRC-SFD-HIST-2004-Q3-001"
+      "SRC-SFD-HIST-2004-Q3-001",
+      "SRC-SFD-Q4-2012-001"
     ],
     "resolved_via_object_ids": [],
     "context_reference_ids": [],
@@ -1479,6 +1555,11 @@
       {
         "source_id": "SRC-SFD-HIST-2004-Q3-001",
         "primary_url": "https://www.sfd-yemen.org/uploads/issues/Newsletter-2004-Q3-20120331-111302.pdf",
+        "metadata_state": "DISPLAY_READY"
+      },
+      {
+        "source_id": "SRC-SFD-Q4-2012-001",
+        "primary_url": "https://www.sfd-yemen.org/uploads/issues/SFD_Nwesletter_en-6-20130422-060753.pdf",
         "metadata_state": "DISPLAY_READY"
       }
     ],
@@ -1706,13 +1787,16 @@
     ],
     "lineage_state": "BOUND_EXACT",
     "dependency_ids": [
-      "SRC-WB-FINDEX-001"
+      "SRC-WB-FINDEX-001",
+      "SRC-WB-FINDEX-AGG-2022"
     ],
     "direct_source_ids": [
-      "SRC-WB-FINDEX-001"
+      "SRC-WB-FINDEX-001",
+      "SRC-WB-FINDEX-AGG-2022"
     ],
     "resolved_source_ids": [
-      "SRC-WB-FINDEX-001"
+      "SRC-WB-FINDEX-001",
+      "SRC-WB-FINDEX-AGG-2022"
     ],
     "resolved_via_object_ids": [],
     "context_reference_ids": [],
@@ -1721,6 +1805,11 @@
       {
         "source_id": "SRC-WB-FINDEX-001",
         "primary_url": "https://microdata.worldbank.org/catalog/5862",
+        "metadata_state": "DISPLAY_READY"
+      },
+      {
+        "source_id": "SRC-WB-FINDEX-AGG-2022",
+        "primary_url": "https://data.worldbank.org/indicator/FX.OWN.TOTL.ZS?locations=YE",
         "metadata_state": "DISPLAY_READY"
       }
     ],
@@ -1824,15 +1913,18 @@
     "lineage_state": "BOUND_EXACT",
     "dependency_ids": [
       "SRC-WB-FINDEX-LDB-2015-001",
-      "SRC-WB-FINDEX-AGG-2022"
+      "SRC-WB-FINDEX-AGG-2022",
+      "SRC-WB-FINDEX-001"
     ],
     "direct_source_ids": [
       "SRC-WB-FINDEX-LDB-2015-001",
-      "SRC-WB-FINDEX-AGG-2022"
+      "SRC-WB-FINDEX-AGG-2022",
+      "SRC-WB-FINDEX-001"
     ],
     "resolved_source_ids": [
       "SRC-WB-FINDEX-LDB-2015-001",
-      "SRC-WB-FINDEX-AGG-2022"
+      "SRC-WB-FINDEX-AGG-2022",
+      "SRC-WB-FINDEX-001"
     ],
     "resolved_via_object_ids": [],
     "context_reference_ids": [],
@@ -1846,6 +1938,11 @@
       {
         "source_id": "SRC-WB-FINDEX-AGG-2022",
         "primary_url": "https://data.worldbank.org/indicator/FX.OWN.TOTL.ZS?locations=YE",
+        "metadata_state": "DISPLAY_READY"
+      },
+      {
+        "source_id": "SRC-WB-FINDEX-001",
+        "primary_url": "https://microdata.worldbank.org/catalog/5862",
         "metadata_state": "DISPLAY_READY"
       }
     ],
@@ -1979,15 +2076,18 @@
     "lineage_state": "BOUND_EXACT",
     "dependency_ids": [
       "SRC-WB-FINDEX-LDB-2015-001",
-      "SRC-WB-FINDEX-AGG-2022"
+      "SRC-WB-FINDEX-AGG-2022",
+      "SRC-WB-FINDEX-001"
     ],
     "direct_source_ids": [
       "SRC-WB-FINDEX-LDB-2015-001",
-      "SRC-WB-FINDEX-AGG-2022"
+      "SRC-WB-FINDEX-AGG-2022",
+      "SRC-WB-FINDEX-001"
     ],
     "resolved_source_ids": [
       "SRC-WB-FINDEX-LDB-2015-001",
-      "SRC-WB-FINDEX-AGG-2022"
+      "SRC-WB-FINDEX-AGG-2022",
+      "SRC-WB-FINDEX-001"
     ],
     "resolved_via_object_ids": [],
     "context_reference_ids": [],
@@ -2001,6 +2101,11 @@
       {
         "source_id": "SRC-WB-FINDEX-AGG-2022",
         "primary_url": "https://data.worldbank.org/indicator/FX.OWN.TOTL.ZS?locations=YE",
+        "metadata_state": "DISPLAY_READY"
+      },
+      {
+        "source_id": "SRC-WB-FINDEX-001",
+        "primary_url": "https://microdata.worldbank.org/catalog/5862",
         "metadata_state": "DISPLAY_READY"
       }
     ],
@@ -2320,7 +2425,8 @@
       "SRC-SFD-Q4-2015-001",
       "SRC-SFD-Q4-2017-001",
       "SRC-SFD-Q4-2018-001",
-      "SRC-SFD-Q4-2020-001"
+      "SRC-SFD-Q4-2020-001",
+      "SRC-YMN-IMPACT-2021-001"
     ],
     "direct_source_ids": [
       "SRC-SFD-MF-HISTORY-TOR-2012-001",
@@ -2338,7 +2444,8 @@
       "SRC-SFD-Q4-2015-001",
       "SRC-SFD-Q4-2017-001",
       "SRC-SFD-Q4-2018-001",
-      "SRC-SFD-Q4-2020-001"
+      "SRC-SFD-Q4-2020-001",
+      "SRC-YMN-IMPACT-2021-001"
     ],
     "resolved_source_ids": [
       "SRC-SFD-MF-HISTORY-TOR-2012-001",
@@ -2356,7 +2463,8 @@
       "SRC-SFD-Q4-2015-001",
       "SRC-SFD-Q4-2017-001",
       "SRC-SFD-Q4-2018-001",
-      "SRC-SFD-Q4-2020-001"
+      "SRC-SFD-Q4-2020-001",
+      "SRC-YMN-IMPACT-2021-001"
     ],
     "resolved_via_object_ids": [],
     "context_reference_ids": [],
@@ -2441,6 +2549,11 @@
         "source_id": "SRC-SFD-Q4-2020-001",
         "primary_url": "https://sfd-yemen.org/uploads/issues/Newsletter-Quarter-4-2020.pdf",
         "metadata_state": "DISPLAY_READY"
+      },
+      {
+        "source_id": "SRC-YMN-IMPACT-2021-001",
+        "primary_url": "https://yemennetwork.org/wp-content/uploads/2022/11/YMN_Impact-Assessment_Final_Arabic_Final_V2.pdf",
+        "metadata_state": "DISPLAY_READY"
       }
     ],
     "closure_state": "CLOSED_TO_SOURCE_ID",
@@ -2454,13 +2567,16 @@
     ],
     "lineage_state": "BOUND_EXACT",
     "dependency_ids": [
-      "SRC-WB-FINDEX-AGG-2022"
+      "SRC-WB-FINDEX-AGG-2022",
+      "SRC-WB-FINDEX-001"
     ],
     "direct_source_ids": [
-      "SRC-WB-FINDEX-AGG-2022"
+      "SRC-WB-FINDEX-AGG-2022",
+      "SRC-WB-FINDEX-001"
     ],
     "resolved_source_ids": [
-      "SRC-WB-FINDEX-AGG-2022"
+      "SRC-WB-FINDEX-AGG-2022",
+      "SRC-WB-FINDEX-001"
     ],
     "resolved_via_object_ids": [],
     "context_reference_ids": [],
@@ -2469,6 +2585,11 @@
       {
         "source_id": "SRC-WB-FINDEX-AGG-2022",
         "primary_url": "https://data.worldbank.org/indicator/FX.OWN.TOTL.ZS?locations=YE",
+        "metadata_state": "DISPLAY_READY"
+      },
+      {
+        "source_id": "SRC-WB-FINDEX-001",
+        "primary_url": "https://microdata.worldbank.org/catalog/5862",
         "metadata_state": "DISPLAY_READY"
       }
     ],
@@ -2795,7 +2916,8 @@
       "SRC-CBY-POS-2026-03",
       "SRC-CBY-POS-2026-04",
       "SRC-CBY-POS-2026-05",
-      "SRC-CBY-POS-2026-06"
+      "SRC-CBY-POS-2026-06",
+      "SRC-CBY-POS-2025-09"
     ],
     "direct_source_ids": [
       "SRC-CBY-POS-2025-03",
@@ -2812,7 +2934,8 @@
       "SRC-CBY-POS-2026-03",
       "SRC-CBY-POS-2026-04",
       "SRC-CBY-POS-2026-05",
-      "SRC-CBY-POS-2026-06"
+      "SRC-CBY-POS-2026-06",
+      "SRC-CBY-POS-2025-09"
     ],
     "resolved_source_ids": [
       "SRC-CBY-POS-2025-03",
@@ -2829,7 +2952,8 @@
       "SRC-CBY-POS-2026-03",
       "SRC-CBY-POS-2026-04",
       "SRC-CBY-POS-2026-05",
-      "SRC-CBY-POS-2026-06"
+      "SRC-CBY-POS-2026-06",
+      "SRC-CBY-POS-2025-09"
     ],
     "resolved_via_object_ids": [],
     "context_reference_ids": [],
@@ -2908,6 +3032,11 @@
       {
         "source_id": "SRC-CBY-POS-2026-06",
         "primary_url": "https://cby-ye.com/files/6a6f973c98c25.pdf",
+        "metadata_state": "DISPLAY_READY"
+      },
+      {
+        "source_id": "SRC-CBY-POS-2025-09",
+        "primary_url": "https://www.cby-ye.com/files/693a77d1ded3e.pdf",
         "metadata_state": "DISPLAY_READY"
       }
     ],
@@ -4272,15 +4401,21 @@
       "SRC-CBY-AR2025-BOP",
       "K04-CBY-060",
       "AVA-004",
-      "EP-CBY-REMITTANCE-VINTAGE-K04"
+      "EP-CBY-REMITTANCE-VINTAGE-K04",
+      "SRC-CBY-AR2022-001",
+      "SRC-CBY-AR2023-001"
     ],
     "direct_source_ids": [
       "SRC-CBY-AR2024-BOP",
-      "SRC-CBY-AR2025-BOP"
+      "SRC-CBY-AR2025-BOP",
+      "SRC-CBY-AR2022-001",
+      "SRC-CBY-AR2023-001"
     ],
     "resolved_source_ids": [
       "SRC-CBY-AR2024-BOP",
-      "SRC-CBY-AR2025-BOP"
+      "SRC-CBY-AR2025-BOP",
+      "SRC-CBY-AR2022-001",
+      "SRC-CBY-AR2023-001"
     ],
     "resolved_via_object_ids": [],
     "context_reference_ids": [
@@ -4298,6 +4433,16 @@
       {
         "source_id": "SRC-CBY-AR2025-BOP",
         "primary_url": "https://english.cby-ye.com/files/6a54b8fcd8b68.pdf",
+        "metadata_state": "DISPLAY_READY"
+      },
+      {
+        "source_id": "SRC-CBY-AR2022-001",
+        "primary_url": "https://cby-ye.com/files/64a1f54c878e1.pdf",
+        "metadata_state": "DISPLAY_READY"
+      },
+      {
+        "source_id": "SRC-CBY-AR2023-001",
+        "primary_url": "https://www.english.cby-ye.com/files/66e7e260be038.pdf",
         "metadata_state": "DISPLAY_READY"
       }
     ],
@@ -4602,13 +4747,16 @@
     ],
     "lineage_state": "BOUND_EXACT",
     "dependency_ids": [
-      "SRC-SMEPS-AR2024-2025"
+      "SRC-SMEPS-AR2024-2025",
+      "SRC-OECD-YEM-RESILIENCE-001"
     ],
     "direct_source_ids": [
-      "SRC-SMEPS-AR2024-2025"
+      "SRC-SMEPS-AR2024-2025",
+      "SRC-OECD-YEM-RESILIENCE-001"
     ],
     "resolved_source_ids": [
-      "SRC-SMEPS-AR2024-2025"
+      "SRC-SMEPS-AR2024-2025",
+      "SRC-OECD-YEM-RESILIENCE-001"
     ],
     "resolved_via_object_ids": [],
     "context_reference_ids": [],
@@ -4617,6 +4765,11 @@
       {
         "source_id": "SRC-SMEPS-AR2024-2025",
         "primary_url": "https://smeps.org.ye/post/85",
+        "metadata_state": "DISPLAY_READY"
+      },
+      {
+        "source_id": "SRC-OECD-YEM-RESILIENCE-001",
+        "primary_url": "https://doi.org/10.1787/81ed2898-en",
         "metadata_state": "DISPLAY_READY"
       }
     ],
@@ -4688,7 +4841,8 @@
     "object_id": "FMIIP-BASELINE-2025-01",
     "public_routes": [
       "/reforms/",
-      "/evidence/compare/"
+      "/evidence/compare/",
+      "/payments/"
     ],
     "lineage_state": "BOUND_EXACT",
     "dependency_ids": [
@@ -4729,11 +4883,13 @@
     ],
     "direct_source_ids": [
       "SRC-WB-FINDEX-AGG-2022",
-      "SRC-WB-FINDEX-2025-EDITION"
+      "SRC-WB-FINDEX-2025-EDITION",
+      "SRC-WB-FINDEX-001"
     ],
     "resolved_source_ids": [
       "SRC-WB-FINDEX-AGG-2022",
-      "SRC-WB-FINDEX-2025-EDITION"
+      "SRC-WB-FINDEX-2025-EDITION",
+      "SRC-WB-FINDEX-001"
     ],
     "resolved_via_object_ids": [],
     "context_reference_ids": [],
@@ -4747,6 +4903,11 @@
       {
         "source_id": "SRC-WB-FINDEX-2025-EDITION",
         "primary_url": "https://www.worldbank.org/en/publication/globalfindex/download-data",
+        "metadata_state": "DISPLAY_READY"
+      },
+      {
+        "source_id": "SRC-WB-FINDEX-001",
+        "primary_url": "https://microdata.worldbank.org/catalog/5862",
         "metadata_state": "DISPLAY_READY"
       }
     ],
@@ -4769,10 +4930,12 @@
       "CLM-002"
     ],
     "direct_source_ids": [
-      "SRC-WB-FINDEX-AGG-2022"
+      "SRC-WB-FINDEX-AGG-2022",
+      "SRC-WB-FINDEX-001"
     ],
     "resolved_source_ids": [
-      "SRC-WB-FINDEX-AGG-2022"
+      "SRC-WB-FINDEX-AGG-2022",
+      "SRC-WB-FINDEX-001"
     ],
     "resolved_via_object_ids": [],
     "context_reference_ids": [],
@@ -4781,6 +4944,11 @@
       {
         "source_id": "SRC-WB-FINDEX-AGG-2022",
         "primary_url": "https://data.worldbank.org/indicator/FX.OWN.TOTL.ZS?locations=YE",
+        "metadata_state": "DISPLAY_READY"
+      },
+      {
+        "source_id": "SRC-WB-FINDEX-001",
+        "primary_url": "https://microdata.worldbank.org/catalog/5862",
         "metadata_state": "DISPLAY_READY"
       }
     ],
@@ -4808,7 +4976,9 @@
       "SRC-CBY-POS-2026-01",
       "SRC-CBY-POS-2026-04",
       "SRC-CBY-POS-2026-05",
-      "SRC-CBY-POS-2026-06"
+      "SRC-CBY-POS-2026-06",
+      "SRC-CBY-POS-2025-06",
+      "SRC-CBY-POS-2025-09"
     ],
     "resolved_source_ids": [
       "SRC-CBY-POS-2025-03",
@@ -4816,7 +4986,9 @@
       "SRC-CBY-POS-2026-01",
       "SRC-CBY-POS-2026-04",
       "SRC-CBY-POS-2026-05",
-      "SRC-CBY-POS-2026-06"
+      "SRC-CBY-POS-2026-06",
+      "SRC-CBY-POS-2025-06",
+      "SRC-CBY-POS-2025-09"
     ],
     "resolved_via_object_ids": [],
     "context_reference_ids": [],
@@ -4850,6 +5022,16 @@
       {
         "source_id": "SRC-CBY-POS-2026-06",
         "primary_url": "https://cby-ye.com/files/6a6f973c98c25.pdf",
+        "metadata_state": "DISPLAY_READY"
+      },
+      {
+        "source_id": "SRC-CBY-POS-2025-06",
+        "primary_url": "https://www.cby-ye.com/files/690b4d09cc314.pdf",
+        "metadata_state": "DISPLAY_READY"
+      },
+      {
+        "source_id": "SRC-CBY-POS-2025-09",
+        "primary_url": "https://www.cby-ye.com/files/693a77d1ded3e.pdf",
         "metadata_state": "DISPLAY_READY"
       }
     ],
@@ -5038,10 +5220,12 @@
       "CLM-009"
     ],
     "direct_source_ids": [
-      "SRC-CBY-EXCH-LIST-2026-001"
+      "SRC-CBY-EXCH-LIST-2026-001",
+      "SRC-CBY-ENF-18-2026"
     ],
     "resolved_source_ids": [
-      "SRC-CBY-EXCH-LIST-2026-001"
+      "SRC-CBY-EXCH-LIST-2026-001",
+      "SRC-CBY-ENF-18-2026"
     ],
     "resolved_via_object_ids": [],
     "context_reference_ids": [],
@@ -5050,6 +5234,11 @@
       {
         "source_id": "SRC-CBY-EXCH-LIST-2026-001",
         "primary_url": "https://cby-ye.com/files/6ab391c11043b.pdf",
+        "metadata_state": "DISPLAY_READY"
+      },
+      {
+        "source_id": "SRC-CBY-ENF-18-2026",
+        "primary_url": "https://cby-ye.com/news/975",
         "metadata_state": "DISPLAY_READY"
       }
     ],
@@ -5063,7 +5252,8 @@
     "public_routes": [
       "/evidence/compare/",
       "/payments/",
-      "/providers/"
+      "/providers/",
+      "/reforms/"
     ],
     "lineage_state": "BOUND_EXACT",
     "dependency_ids": [
@@ -5131,11 +5321,13 @@
     ],
     "direct_source_ids": [
       "SRC-CBY-FCP-INSTR-2023-001",
-      "SRC-CBY-FCP-BROCHURE-2024-001"
+      "SRC-CBY-FCP-BROCHURE-2024-001",
+      "SRC-CBY-FCP-AWARE-2024-001"
     ],
     "resolved_source_ids": [
       "SRC-CBY-FCP-INSTR-2023-001",
-      "SRC-CBY-FCP-BROCHURE-2024-001"
+      "SRC-CBY-FCP-BROCHURE-2024-001",
+      "SRC-CBY-FCP-AWARE-2024-001"
     ],
     "resolved_via_object_ids": [],
     "context_reference_ids": [],
@@ -5149,6 +5341,11 @@
       {
         "source_id": "SRC-CBY-FCP-BROCHURE-2024-001",
         "primary_url": "https://cby-ye.com/files/65fe1e8d2ec08.pdf",
+        "metadata_state": "DISPLAY_READY"
+      },
+      {
+        "source_id": "SRC-CBY-FCP-AWARE-2024-001",
+        "primary_url": "https://cby-ye.com/news/652",
         "metadata_state": "DISPLAY_READY"
       }
     ],
@@ -5419,14 +5616,16 @@
       "SRC-CBY-BANK-NETWORK-MTG-2026-001",
       "SRC-CBY-YPCC-FOUND-2026-001",
       "SRC-CBY-YPCC-BOARD-2026-001",
-      "SRC-WB-FMIIP-P180708"
+      "SRC-WB-FMIIP-P180708",
+      "SRC-WB-FMIIP-ISR2-2026-001"
     ],
     "resolved_source_ids": [
       "SRC-CBY-UNIFIED-NET-2026-001",
       "SRC-CBY-BANK-NETWORK-MTG-2026-001",
       "SRC-CBY-YPCC-FOUND-2026-001",
       "SRC-CBY-YPCC-BOARD-2026-001",
-      "SRC-WB-FMIIP-P180708"
+      "SRC-WB-FMIIP-P180708",
+      "SRC-WB-FMIIP-ISR2-2026-001"
     ],
     "resolved_via_object_ids": [],
     "context_reference_ids": [],
@@ -5455,6 +5654,11 @@
       {
         "source_id": "SRC-WB-FMIIP-P180708",
         "primary_url": "https://maps.worldbank.org/projects/wb/pid/P180708?status=active",
+        "metadata_state": "DISPLAY_READY"
+      },
+      {
+        "source_id": "SRC-WB-FMIIP-ISR2-2026-001",
+        "primary_url": "https://documents.worldbank.org/en/publication/documents-reports/documentdetail/099040826144025755",
         "metadata_state": "DISPLAY_READY"
       }
     ],
@@ -5723,7 +5927,8 @@
       "SRC-SFD-Q4-2015-001",
       "SRC-SFD-Q4-2017-001",
       "SRC-SFD-Q4-2018-001",
-      "SRC-SFD-Q4-2020-001"
+      "SRC-SFD-Q4-2020-001",
+      "SRC-YMN-IMPACT-2021-001"
     ],
     "resolved_source_ids": [
       "SRC-SFD-MF-HISTORY-TOR-2012-001",
@@ -5741,7 +5946,8 @@
       "SRC-SFD-Q4-2015-001",
       "SRC-SFD-Q4-2017-001",
       "SRC-SFD-Q4-2018-001",
-      "SRC-SFD-Q4-2020-001"
+      "SRC-SFD-Q4-2020-001",
+      "SRC-YMN-IMPACT-2021-001"
     ],
     "resolved_via_object_ids": [],
     "context_reference_ids": [],
@@ -5825,6 +6031,11 @@
       {
         "source_id": "SRC-SFD-Q4-2020-001",
         "primary_url": "https://sfd-yemen.org/uploads/issues/Newsletter-Quarter-4-2020.pdf",
+        "metadata_state": "DISPLAY_READY"
+      },
+      {
+        "source_id": "SRC-YMN-IMPACT-2021-001",
+        "primary_url": "https://yemennetwork.org/wp-content/uploads/2022/11/YMN_Impact-Assessment_Final_Arabic_Final_V2.pdf",
         "metadata_state": "DISPLAY_READY"
       }
     ],
@@ -5993,11 +6204,13 @@
     ],
     "direct_source_ids": [
       "SRC-WB-FINDEX-LDB-2015-001",
-      "SRC-WB-FINDEX-AGG-2022"
+      "SRC-WB-FINDEX-AGG-2022",
+      "SRC-WB-FINDEX-001"
     ],
     "resolved_source_ids": [
       "SRC-WB-FINDEX-LDB-2015-001",
-      "SRC-WB-FINDEX-AGG-2022"
+      "SRC-WB-FINDEX-AGG-2022",
+      "SRC-WB-FINDEX-001"
     ],
     "resolved_via_object_ids": [],
     "context_reference_ids": [],
@@ -6011,6 +6224,11 @@
       {
         "source_id": "SRC-WB-FINDEX-AGG-2022",
         "primary_url": "https://data.worldbank.org/indicator/FX.OWN.TOTL.ZS?locations=YE",
+        "metadata_state": "DISPLAY_READY"
+      },
+      {
+        "source_id": "SRC-WB-FINDEX-001",
+        "primary_url": "https://microdata.worldbank.org/catalog/5862",
         "metadata_state": "DISPLAY_READY"
       }
     ],
@@ -6165,11 +6383,15 @@
     ],
     "direct_source_ids": [
       "SRC-CBY-AR2024-BOP",
-      "SRC-CBY-AR2025-BOP"
+      "SRC-CBY-AR2025-BOP",
+      "SRC-CBY-AR2022-001",
+      "SRC-CBY-AR2023-001"
     ],
     "resolved_source_ids": [
       "SRC-CBY-AR2024-BOP",
-      "SRC-CBY-AR2025-BOP"
+      "SRC-CBY-AR2025-BOP",
+      "SRC-CBY-AR2022-001",
+      "SRC-CBY-AR2023-001"
     ],
     "resolved_via_object_ids": [],
     "context_reference_ids": [
@@ -6187,6 +6409,16 @@
       {
         "source_id": "SRC-CBY-AR2025-BOP",
         "primary_url": "https://english.cby-ye.com/files/6a54b8fcd8b68.pdf",
+        "metadata_state": "DISPLAY_READY"
+      },
+      {
+        "source_id": "SRC-CBY-AR2022-001",
+        "primary_url": "https://cby-ye.com/files/64a1f54c878e1.pdf",
+        "metadata_state": "DISPLAY_READY"
+      },
+      {
+        "source_id": "SRC-CBY-AR2023-001",
+        "primary_url": "https://www.english.cby-ye.com/files/66e7e260be038.pdf",
         "metadata_state": "DISPLAY_READY"
       }
     ],
@@ -7258,13 +7490,18 @@
     "dependency_ids": [
       "219_SMEPS_PROGRAMME_EVIDENCE",
       "EP-SMEPS-2024-PROGRAMME",
+      "OECD-YEM-015",
+      "OECD-YEM-016",
+      "OECD-YEM-017",
       "CLM-059"
     ],
     "direct_source_ids": [
-      "SRC-SMEPS-AR2024-2025"
+      "SRC-SMEPS-AR2024-2025",
+      "SRC-OECD-YEM-RESILIENCE-001"
     ],
     "resolved_source_ids": [
-      "SRC-SMEPS-AR2024-2025"
+      "SRC-SMEPS-AR2024-2025",
+      "SRC-OECD-YEM-RESILIENCE-001"
     ],
     "resolved_via_object_ids": [],
     "context_reference_ids": [],
@@ -7273,6 +7510,11 @@
       {
         "source_id": "SRC-SMEPS-AR2024-2025",
         "primary_url": "https://smeps.org.ye/post/85",
+        "metadata_state": "DISPLAY_READY"
+      },
+      {
+        "source_id": "SRC-OECD-YEM-RESILIENCE-001",
+        "primary_url": "https://doi.org/10.1787/81ed2898-en",
         "metadata_state": "DISPLAY_READY"
       }
     ],
@@ -7378,6 +7620,8 @@
     "resolved_source_ids": [
       "SRC-CBY-AR2024-BOP",
       "SRC-CBY-AR2025-BOP",
+      "SRC-CBY-AR2022-001",
+      "SRC-CBY-AR2023-001",
       "SRC-IMF-D4D-YEM-ESS-2025",
       "SRC-IMF-YEM-AIV-2025-2026",
       "SRC-CCY-REMIT-ESTIMATE-2025"
@@ -7407,6 +7651,16 @@
       {
         "source_id": "SRC-CBY-AR2025-BOP",
         "primary_url": "https://english.cby-ye.com/files/6a54b8fcd8b68.pdf",
+        "metadata_state": "DISPLAY_READY"
+      },
+      {
+        "source_id": "SRC-CBY-AR2022-001",
+        "primary_url": "https://cby-ye.com/files/64a1f54c878e1.pdf",
+        "metadata_state": "DISPLAY_READY"
+      },
+      {
+        "source_id": "SRC-CBY-AR2023-001",
+        "primary_url": "https://www.english.cby-ye.com/files/66e7e260be038.pdf",
         "metadata_state": "DISPLAY_READY"
       },
       {
@@ -7520,6 +7774,8 @@
       "SRC-CBY-POS-2026-04",
       "SRC-CBY-POS-2026-05",
       "SRC-CBY-POS-2026-06",
+      "SRC-CBY-POS-2025-06",
+      "SRC-CBY-POS-2025-09",
       "SRC-UNDP-FMIIP-001",
       "SRC-CBY-PAYREPORT-H1-2025",
       "SRC-WB-FMIIP-P180708"
@@ -7586,6 +7842,16 @@
         "metadata_state": "DISPLAY_READY"
       },
       {
+        "source_id": "SRC-CBY-POS-2025-06",
+        "primary_url": "https://www.cby-ye.com/files/690b4d09cc314.pdf",
+        "metadata_state": "DISPLAY_READY"
+      },
+      {
+        "source_id": "SRC-CBY-POS-2025-09",
+        "primary_url": "https://www.cby-ye.com/files/693a77d1ded3e.pdf",
+        "metadata_state": "DISPLAY_READY"
+      },
+      {
         "source_id": "SRC-UNDP-FMIIP-001",
         "primary_url": "https://www.undp.org/yemen/projects/yemen-financial-market-infrastructure-and-inclusion-project",
         "metadata_state": "DISPLAY_READY"
@@ -7627,18 +7893,21 @@
       "SRC-IMF-YEM-SMP-2026",
       "SRC-WB-FINDEX-AGG-2022",
       "SRC-WB-FINDEX-2025-EDITION",
+      "SRC-WB-FINDEX-001",
       "SRC-CBY-POS-2025-03",
       "SRC-CBY-POS-2025-12",
       "SRC-CBY-POS-2026-01",
       "SRC-CBY-POS-2026-04",
       "SRC-CBY-POS-2026-05",
       "SRC-CBY-POS-2026-06",
+      "SRC-CBY-POS-2025-06",
+      "SRC-CBY-POS-2025-09",
       "SRC-CBY-UNIFIED-NET-2026-001",
       "SRC-CBY-BANK-NETWORK-MTG-2026-001",
       "SRC-CBY-YPCC-FOUND-2026-001",
       "SRC-CBY-YPCC-BOARD-2026-001",
       "SRC-WB-FMIIP-P180708",
-      "SRC-WB-FINDEX-001"
+      "SRC-WB-FMIIP-ISR2-2026-001"
     ],
     "resolved_via_object_ids": [
       "CLM-001",
@@ -7665,6 +7934,11 @@
       {
         "source_id": "SRC-WB-FINDEX-2025-EDITION",
         "primary_url": "https://www.worldbank.org/en/publication/globalfindex/download-data",
+        "metadata_state": "DISPLAY_READY"
+      },
+      {
+        "source_id": "SRC-WB-FINDEX-001",
+        "primary_url": "https://microdata.worldbank.org/catalog/5862",
         "metadata_state": "DISPLAY_READY"
       },
       {
@@ -7698,6 +7972,16 @@
         "metadata_state": "DISPLAY_READY"
       },
       {
+        "source_id": "SRC-CBY-POS-2025-06",
+        "primary_url": "https://www.cby-ye.com/files/690b4d09cc314.pdf",
+        "metadata_state": "DISPLAY_READY"
+      },
+      {
+        "source_id": "SRC-CBY-POS-2025-09",
+        "primary_url": "https://www.cby-ye.com/files/693a77d1ded3e.pdf",
+        "metadata_state": "DISPLAY_READY"
+      },
+      {
         "source_id": "SRC-CBY-UNIFIED-NET-2026-001",
         "primary_url": "https://cby-ye.com/news/957",
         "metadata_state": "DISPLAY_READY"
@@ -7723,8 +8007,8 @@
         "metadata_state": "DISPLAY_READY"
       },
       {
-        "source_id": "SRC-WB-FINDEX-001",
-        "primary_url": "https://microdata.worldbank.org/catalog/5862",
+        "source_id": "SRC-WB-FMIIP-ISR2-2026-001",
+        "primary_url": "https://documents.worldbank.org/en/publication/documents-reports/documentdetail/099040826144025755",
         "metadata_state": "DISPLAY_READY"
       }
     ],
@@ -7890,8 +8174,8 @@
     "direct_source_ids": [],
     "resolved_source_ids": [
       "SRC-WB-FINDEX-AGG-2022",
-      "SRC-WB-FINDEX-2025-EDITION",
-      "SRC-WB-FINDEX-001"
+      "SRC-WB-FINDEX-001",
+      "SRC-WB-FINDEX-2025-EDITION"
     ],
     "resolved_via_object_ids": [
       "CLM-002",
@@ -7911,13 +8195,13 @@
         "metadata_state": "DISPLAY_READY"
       },
       {
-        "source_id": "SRC-WB-FINDEX-2025-EDITION",
-        "primary_url": "https://www.worldbank.org/en/publication/globalfindex/download-data",
+        "source_id": "SRC-WB-FINDEX-001",
+        "primary_url": "https://microdata.worldbank.org/catalog/5862",
         "metadata_state": "DISPLAY_READY"
       },
       {
-        "source_id": "SRC-WB-FINDEX-001",
-        "primary_url": "https://microdata.worldbank.org/catalog/5862",
+        "source_id": "SRC-WB-FINDEX-2025-EDITION",
+        "primary_url": "https://www.worldbank.org/en/publication/globalfindex/download-data",
         "metadata_state": "DISPLAY_READY"
       }
     ],
@@ -8002,11 +8286,14 @@
       "SRC-CBY-POS-2026-04",
       "SRC-CBY-POS-2026-05",
       "SRC-CBY-POS-2026-06",
+      "SRC-CBY-POS-2025-06",
+      "SRC-CBY-POS-2025-09",
       "SRC-CBY-UNIFIED-NET-2026-001",
       "SRC-CBY-BANK-NETWORK-MTG-2026-001",
       "SRC-CBY-YPCC-FOUND-2026-001",
       "SRC-CBY-YPCC-BOARD-2026-001",
       "SRC-WB-FMIIP-P180708",
+      "SRC-WB-FMIIP-ISR2-2026-001",
       "SRC-UNDP-FMIIP-001",
       "SRC-CBY-PAYREPORT-H1-2025"
     ],
@@ -8054,6 +8341,16 @@
         "metadata_state": "DISPLAY_READY"
       },
       {
+        "source_id": "SRC-CBY-POS-2025-06",
+        "primary_url": "https://www.cby-ye.com/files/690b4d09cc314.pdf",
+        "metadata_state": "DISPLAY_READY"
+      },
+      {
+        "source_id": "SRC-CBY-POS-2025-09",
+        "primary_url": "https://www.cby-ye.com/files/693a77d1ded3e.pdf",
+        "metadata_state": "DISPLAY_READY"
+      },
+      {
         "source_id": "SRC-CBY-UNIFIED-NET-2026-001",
         "primary_url": "https://cby-ye.com/news/957",
         "metadata_state": "DISPLAY_READY"
@@ -8076,6 +8373,11 @@
       {
         "source_id": "SRC-WB-FMIIP-P180708",
         "primary_url": "https://maps.worldbank.org/projects/wb/pid/P180708?status=active",
+        "metadata_state": "DISPLAY_READY"
+      },
+      {
+        "source_id": "SRC-WB-FMIIP-ISR2-2026-001",
+        "primary_url": "https://documents.worldbank.org/en/publication/documents-reports/documentdetail/099040826144025755",
         "metadata_state": "DISPLAY_READY"
       },
       {
@@ -8308,11 +8610,13 @@
     ],
     "direct_source_ids": [
       "SRC-CBY-FCP-INSTR-2023-001",
-      "SRC-CBY-FCP-BROCHURE-2024-001"
+      "SRC-CBY-FCP-BROCHURE-2024-001",
+      "SRC-CBY-FCP-AWARE-2024-001"
     ],
     "resolved_source_ids": [
       "SRC-CBY-FCP-INSTR-2023-001",
-      "SRC-CBY-FCP-BROCHURE-2024-001"
+      "SRC-CBY-FCP-BROCHURE-2024-001",
+      "SRC-CBY-FCP-AWARE-2024-001"
     ],
     "resolved_via_object_ids": [],
     "context_reference_ids": [],
@@ -8326,6 +8630,11 @@
       {
         "source_id": "SRC-CBY-FCP-BROCHURE-2024-001",
         "primary_url": "https://cby-ye.com/files/65fe1e8d2ec08.pdf",
+        "metadata_state": "DISPLAY_READY"
+      },
+      {
+        "source_id": "SRC-CBY-FCP-AWARE-2024-001",
+        "primary_url": "https://cby-ye.com/news/652",
         "metadata_state": "DISPLAY_READY"
       }
     ],
@@ -8345,10 +8654,12 @@
       "41_DERIVED_ANALYTICS"
     ],
     "direct_source_ids": [
-      "SRC-WB-FINDEX-AGG-2022"
+      "SRC-WB-FINDEX-AGG-2022",
+      "SRC-WB-FINDEX-001"
     ],
     "resolved_source_ids": [
-      "SRC-WB-FINDEX-AGG-2022"
+      "SRC-WB-FINDEX-AGG-2022",
+      "SRC-WB-FINDEX-001"
     ],
     "resolved_via_object_ids": [],
     "context_reference_ids": [],
@@ -8357,6 +8668,11 @@
       {
         "source_id": "SRC-WB-FINDEX-AGG-2022",
         "primary_url": "https://data.worldbank.org/indicator/FX.OWN.TOTL.ZS?locations=YE",
+        "metadata_state": "DISPLAY_READY"
+      },
+      {
+        "source_id": "SRC-WB-FINDEX-001",
+        "primary_url": "https://microdata.worldbank.org/catalog/5862",
         "metadata_state": "DISPLAY_READY"
       }
     ],
@@ -8836,7 +9152,8 @@
       "SRC-CBY-POS-2026-03",
       "SRC-CBY-POS-2026-04",
       "SRC-CBY-POS-2026-05",
-      "SRC-CBY-POS-2026-06"
+      "SRC-CBY-POS-2026-06",
+      "SRC-CBY-POS-2025-09"
     ],
     "resolved_source_ids": [
       "SRC-CBY-POS-2025-03",
@@ -8853,7 +9170,8 @@
       "SRC-CBY-POS-2026-03",
       "SRC-CBY-POS-2026-04",
       "SRC-CBY-POS-2026-05",
-      "SRC-CBY-POS-2026-06"
+      "SRC-CBY-POS-2026-06",
+      "SRC-CBY-POS-2025-09"
     ],
     "resolved_via_object_ids": [],
     "context_reference_ids": [],
@@ -8932,6 +9250,11 @@
       {
         "source_id": "SRC-CBY-POS-2026-06",
         "primary_url": "https://cby-ye.com/files/6a6f973c98c25.pdf",
+        "metadata_state": "DISPLAY_READY"
+      },
+      {
+        "source_id": "SRC-CBY-POS-2025-09",
+        "primary_url": "https://www.cby-ye.com/files/693a77d1ded3e.pdf",
         "metadata_state": "DISPLAY_READY"
       }
     ],
@@ -9377,6 +9700,8 @@
     "resolved_source_ids": [
       "SRC-CBY-AR2024-BOP",
       "SRC-CBY-AR2025-BOP",
+      "SRC-CBY-AR2022-001",
+      "SRC-CBY-AR2023-001",
       "SRC-IMF-D4D-YEM-ESS-2025",
       "SRC-IMF-YEM-AIV-2025-2026",
       "SRC-CCY-REMIT-ESTIMATE-2025"
@@ -9406,6 +9731,16 @@
       {
         "source_id": "SRC-CBY-AR2025-BOP",
         "primary_url": "https://english.cby-ye.com/files/6a54b8fcd8b68.pdf",
+        "metadata_state": "DISPLAY_READY"
+      },
+      {
+        "source_id": "SRC-CBY-AR2022-001",
+        "primary_url": "https://cby-ye.com/files/64a1f54c878e1.pdf",
+        "metadata_state": "DISPLAY_READY"
+      },
+      {
+        "source_id": "SRC-CBY-AR2023-001",
+        "primary_url": "https://www.english.cby-ye.com/files/66e7e260be038.pdf",
         "metadata_state": "DISPLAY_READY"
       },
       {
@@ -9513,6 +9848,8 @@
       "SRC-CBY-POS-2026-04",
       "SRC-CBY-POS-2026-05",
       "SRC-CBY-POS-2026-06",
+      "SRC-CBY-POS-2025-06",
+      "SRC-CBY-POS-2025-09",
       "SRC-UNDP-FMIIP-001",
       "SRC-CBY-PAYREPORT-H1-2025",
       "SRC-WB-FMIIP-P180708"
@@ -9579,6 +9916,16 @@
         "metadata_state": "DISPLAY_READY"
       },
       {
+        "source_id": "SRC-CBY-POS-2025-06",
+        "primary_url": "https://www.cby-ye.com/files/690b4d09cc314.pdf",
+        "metadata_state": "DISPLAY_READY"
+      },
+      {
+        "source_id": "SRC-CBY-POS-2025-09",
+        "primary_url": "https://www.cby-ye.com/files/693a77d1ded3e.pdf",
+        "metadata_state": "DISPLAY_READY"
+      },
+      {
         "source_id": "SRC-UNDP-FMIIP-001",
         "primary_url": "https://www.undp.org/yemen/projects/yemen-financial-market-infrastructure-and-inclusion-project",
         "metadata_state": "DISPLAY_READY"
@@ -9620,18 +9967,21 @@
       "SRC-IMF-YEM-SMP-2026",
       "SRC-WB-FINDEX-AGG-2022",
       "SRC-WB-FINDEX-2025-EDITION",
+      "SRC-WB-FINDEX-001",
       "SRC-CBY-POS-2025-03",
       "SRC-CBY-POS-2025-12",
       "SRC-CBY-POS-2026-01",
       "SRC-CBY-POS-2026-04",
       "SRC-CBY-POS-2026-05",
       "SRC-CBY-POS-2026-06",
+      "SRC-CBY-POS-2025-06",
+      "SRC-CBY-POS-2025-09",
       "SRC-CBY-UNIFIED-NET-2026-001",
       "SRC-CBY-BANK-NETWORK-MTG-2026-001",
       "SRC-CBY-YPCC-FOUND-2026-001",
       "SRC-CBY-YPCC-BOARD-2026-001",
       "SRC-WB-FMIIP-P180708",
-      "SRC-WB-FINDEX-001"
+      "SRC-WB-FMIIP-ISR2-2026-001"
     ],
     "resolved_via_object_ids": [
       "CLM-001",
@@ -9658,6 +10008,11 @@
       {
         "source_id": "SRC-WB-FINDEX-2025-EDITION",
         "primary_url": "https://www.worldbank.org/en/publication/globalfindex/download-data",
+        "metadata_state": "DISPLAY_READY"
+      },
+      {
+        "source_id": "SRC-WB-FINDEX-001",
+        "primary_url": "https://microdata.worldbank.org/catalog/5862",
         "metadata_state": "DISPLAY_READY"
       },
       {
@@ -9691,6 +10046,16 @@
         "metadata_state": "DISPLAY_READY"
       },
       {
+        "source_id": "SRC-CBY-POS-2025-06",
+        "primary_url": "https://www.cby-ye.com/files/690b4d09cc314.pdf",
+        "metadata_state": "DISPLAY_READY"
+      },
+      {
+        "source_id": "SRC-CBY-POS-2025-09",
+        "primary_url": "https://www.cby-ye.com/files/693a77d1ded3e.pdf",
+        "metadata_state": "DISPLAY_READY"
+      },
+      {
         "source_id": "SRC-CBY-UNIFIED-NET-2026-001",
         "primary_url": "https://cby-ye.com/news/957",
         "metadata_state": "DISPLAY_READY"
@@ -9716,8 +10081,8 @@
         "metadata_state": "DISPLAY_READY"
       },
       {
-        "source_id": "SRC-WB-FINDEX-001",
-        "primary_url": "https://microdata.worldbank.org/catalog/5862",
+        "source_id": "SRC-WB-FMIIP-ISR2-2026-001",
+        "primary_url": "https://documents.worldbank.org/en/publication/documents-reports/documentdetail/099040826144025755",
         "metadata_state": "DISPLAY_READY"
       }
     ],
@@ -9880,8 +10245,8 @@
     "direct_source_ids": [],
     "resolved_source_ids": [
       "SRC-WB-FINDEX-AGG-2022",
-      "SRC-WB-FINDEX-2025-EDITION",
-      "SRC-WB-FINDEX-001"
+      "SRC-WB-FINDEX-001",
+      "SRC-WB-FINDEX-2025-EDITION"
     ],
     "resolved_via_object_ids": [
       "CLM-002",
@@ -9901,13 +10266,13 @@
         "metadata_state": "DISPLAY_READY"
       },
       {
-        "source_id": "SRC-WB-FINDEX-2025-EDITION",
-        "primary_url": "https://www.worldbank.org/en/publication/globalfindex/download-data",
+        "source_id": "SRC-WB-FINDEX-001",
+        "primary_url": "https://microdata.worldbank.org/catalog/5862",
         "metadata_state": "DISPLAY_READY"
       },
       {
-        "source_id": "SRC-WB-FINDEX-001",
-        "primary_url": "https://microdata.worldbank.org/catalog/5862",
+        "source_id": "SRC-WB-FINDEX-2025-EDITION",
+        "primary_url": "https://www.worldbank.org/en/publication/globalfindex/download-data",
         "metadata_state": "DISPLAY_READY"
       }
     ],
@@ -9989,11 +10354,14 @@
       "SRC-CBY-POS-2026-04",
       "SRC-CBY-POS-2026-05",
       "SRC-CBY-POS-2026-06",
+      "SRC-CBY-POS-2025-06",
+      "SRC-CBY-POS-2025-09",
       "SRC-CBY-UNIFIED-NET-2026-001",
       "SRC-CBY-BANK-NETWORK-MTG-2026-001",
       "SRC-CBY-YPCC-FOUND-2026-001",
       "SRC-CBY-YPCC-BOARD-2026-001",
       "SRC-WB-FMIIP-P180708",
+      "SRC-WB-FMIIP-ISR2-2026-001",
       "SRC-UNDP-FMIIP-001",
       "SRC-CBY-PAYREPORT-H1-2025"
     ],
@@ -10041,6 +10409,16 @@
         "metadata_state": "DISPLAY_READY"
       },
       {
+        "source_id": "SRC-CBY-POS-2025-06",
+        "primary_url": "https://www.cby-ye.com/files/690b4d09cc314.pdf",
+        "metadata_state": "DISPLAY_READY"
+      },
+      {
+        "source_id": "SRC-CBY-POS-2025-09",
+        "primary_url": "https://www.cby-ye.com/files/693a77d1ded3e.pdf",
+        "metadata_state": "DISPLAY_READY"
+      },
+      {
         "source_id": "SRC-CBY-UNIFIED-NET-2026-001",
         "primary_url": "https://cby-ye.com/news/957",
         "metadata_state": "DISPLAY_READY"
@@ -10063,6 +10441,11 @@
       {
         "source_id": "SRC-WB-FMIIP-P180708",
         "primary_url": "https://maps.worldbank.org/projects/wb/pid/P180708?status=active",
+        "metadata_state": "DISPLAY_READY"
+      },
+      {
+        "source_id": "SRC-WB-FMIIP-ISR2-2026-001",
+        "primary_url": "https://documents.worldbank.org/en/publication/documents-reports/documentdetail/099040826144025755",
         "metadata_state": "DISPLAY_READY"
       },
       {

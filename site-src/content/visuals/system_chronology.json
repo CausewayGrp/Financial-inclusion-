@@ -18,7 +18,44 @@
     "interpretation_note": null,
     "period_ar": "2014–2015",
     "verification_note_en": null,
-    "verification_note_ar": null
+    "verification_note_ar": null,
+    "value_states": [
+      {
+        "t": "2014–2015",
+        "k": "d",
+        "s": "READ",
+        "src": "SRC-IMF-AIV-2025-STAFF-001",
+        "loc": "IMF CR 26/80 PDF (src/imf_cr2680_upload.pdf, obtained 2026-10-04; imf.org pages 403 today), staff report printed p.5 (PDF p.10) para 1"
+      },
+      {
+        "t": "late 2014",
+        "k": "d",
+        "s": "READ",
+        "src": "SRC-IMF-AIV-2025-STAFF-001",
+        "loc": "IMF CR 26/80 PDF (src/imf_cr2680_upload.pdf, obtained 2026-10-04; imf.org pages 403 today), printed p.5 (PDF p.10) para 1; also DSA p.5 (PDF p.64) para 10"
+      },
+      {
+        "t": "late 2015",
+        "k": "d",
+        "s": "READ",
+        "src": "SRC-WB-YEM-OUTLOOK-2016-001",
+        "loc": "worldbank.org/en/country/yemen/publication/economic-outlook-spring-2016, body para 'The escalated conflict...'"
+      },
+      {
+        "t": "US$2 billion",
+        "k": "v",
+        "s": "READ",
+        "src": "SRC-WB-YEM-OUTLOOK-2016-001",
+        "loc": "worldbank.org/en/country/yemen/publication/economic-outlook-spring-2016, body para 'The escalated conflict...'"
+      },
+      {
+        "t": "two months of imports",
+        "k": "v",
+        "s": "READ",
+        "src": "SRC-WB-YEM-OUTLOOK-2016-001",
+        "loc": "worldbank.org/en/country/yemen/publication/economic-outlook-spring-2016, body para 'The escalated conflict...'"
+      }
+    ]
   },
   {
     "event_id": "YSC-002",
@@ -39,11 +76,20 @@
     "interpretation_note": null,
     "period_ar": "فبراير 2016",
     "verification_note_en": null,
-    "verification_note_ar": null
+    "verification_note_ar": null,
+    "value_states": [
+      {
+        "t": "February 2016",
+        "k": "d",
+        "s": "READ",
+        "src": "SRC-WB-YEM-OUTLOOK-2016-001",
+        "loc": "worldbank.org/en/country/yemen/publication/economic-outlook-spring-2016, body para 'The escalated conflict...'"
+      }
+    ]
   },
   {
     "event_id": "YSC-003",
-    "period_en": "September 2016",
+    "period_en": "2016",
     "event_class": "INSTITUTIONAL_FRAGMENTATION",
     "fact_en": "A 2016 decision relocated the Central Bank of Yemen from Sana'a to Aden, leaving two central-bank authorities operating under the divided political and territorial order.",
     "fact_ar": "نقل قرار صدر في 2016 مقر البنك المركزي اليمني من صنعاء إلى عدن، لتنشأ سلطتان للبنك المركزي تعملان ضمن الانقسام السياسي والجغرافي.",
@@ -58,9 +104,25 @@
     "relationship_type": "CONTEXT",
     "linked_routes": "/providers | /access | /payments | /reforms | /finance",
     "interpretation_note": null,
-    "period_ar": "سبتمبر 2016",
+    "period_ar": "2016",
     "verification_note_en": null,
-    "verification_note_ar": null
+    "verification_note_ar": null,
+    "value_states": [
+      {
+        "t": "2016",
+        "k": "d",
+        "s": "READ",
+        "src": "SRC-WB-YEM-FRAGMENTATION-2025-001",
+        "loc": "FMIIP PAD (22 May 2025), PDF p. 12, para. 8: 'In 2016, a decision was made ... to relocate the Central Bank of Yemen from Sana'a to Aden'"
+      },
+      {
+        "t": "2016",
+        "k": "d",
+        "s": "READ",
+        "src": "SRC-WB-YEM-FRAGMENTATION-2025-001",
+        "loc": "FMIIP PAD PDF p.12 para 8"
+      }
+    ]
   },
   {
     "event_id": "YSC-004",
@@ -81,11 +143,55 @@
     "interpretation_note": "RC-1 item 17: the source value YER 810.9 billion (2014) is displayed as YER 811 billion so that the two values of this series share one display precision (whole YER billion); the 2017 value 1,673 is as published.",
     "period_ar": "2017–2018",
     "verification_note_en": null,
-    "verification_note_ar": null
+    "verification_note_ar": null,
+    "value_states": [
+      {
+        "t": "2017–2018",
+        "k": "d",
+        "s": "READ",
+        "src": "SRC-WB-YEM-MONITOR-FALL2018-001",
+        "loc": "Economic Monitoring Brief Fall 2018, PDF p.4, 'MONEY AND BANKING'"
+      },
+      {
+        "t": "YER 811 billion",
+        "k": "v",
+        "s": "READ",
+        "src": "SRC-WB-YEM-MONITOR-FALL2018-001",
+        "loc": "Economic Monitoring Brief Fall 2018, PDF p.4, 'MONEY AND BANKING'"
+      },
+      {
+        "t": "2014",
+        "k": "d",
+        "s": "READ",
+        "src": "SRC-WB-YEM-MONITOR-FALL2018-001",
+        "loc": "Economic Monitoring Brief Fall 2018, PDF p.4, 'MONEY AND BANKING'"
+      },
+      {
+        "t": "YER 1,673 billion",
+        "k": "v",
+        "s": "READ",
+        "src": "SRC-WB-YEM-MONITOR-FALL2018-001",
+        "loc": "Economic Monitoring Brief Fall 2018, PDF p.4, 'MONEY AND BANKING'"
+      },
+      {
+        "t": "end-2017",
+        "k": "d",
+        "s": "READ",
+        "src": "SRC-WB-YEM-MONITOR-FALL2018-001",
+        "loc": "Economic Monitoring Brief Fall 2018, PDF p.4, 'MONEY AND BANKING'"
+      },
+      {
+        "t": "2018",
+        "k": "d",
+        "s": "READ",
+        "src": "SRC-WB-YEM-MONITOR-FALL2018-001",
+        "loc": "Economic Monitoring Brief Fall 2018, PDF p.4, 'MONEY AND BANKING'"
+      }
+    ]
   },
   {
     "event_id": "YSC-005",
-    "period_en": "January–March 2018",
+    "period_en": "March 2018",
     "event_class": "INTERNATIONAL_SUPPORT",
     "fact_en": "Saudi Arabia issued a directive for, and then signed an agreement to deliver, a US$2 billion deposit to the Central Bank of Yemen, with the stated aim of supporting the financial and economic position and the riyal.",
     "fact_ar": "وجّهت المملكة العربية السعودية بتقديم وديعة بقيمة ملياري دولار للبنك المركزي اليمني، ثم وقّعت اتفاقيتها، بهدف دعم الوضع المالي والاقتصادي والريال.",
@@ -100,9 +206,39 @@
     "relationship_type": "DEPENDENCY",
     "linked_routes": "/finance | /firms | /reforms",
     "interpretation_note": "Do not add downstream use of the same funds as a separate donor inflow.",
-    "period_ar": "يناير–مارس 2018",
+    "period_ar": "مارس 2018",
     "verification_note_en": null,
-    "verification_note_ar": null
+    "verification_note_ar": null,
+    "value_states": [
+      {
+        "t": "March 2018",
+        "k": "d",
+        "s": "READ",
+        "src": "SRC-SPA-SAU-CBY-DEPOSIT-2018-001",
+        "loc": "SPA item w643267 (EN, corrected, 16 Mar 2018) and 1739575 (AR, 15 Mar 2018): agreement signed for the US$2 billion deposit"
+      },
+      {
+        "t": "March 2018",
+        "k": "d",
+        "s": "READ",
+        "src": "SRC-SPA-SAU-CBY-DEPOSIT-2018-001",
+        "loc": "spa.gov.sa/w643267 body; spa.gov.sa/1739575 dateline"
+      },
+      {
+        "t": "US$2 billion",
+        "k": "v",
+        "s": "READ",
+        "src": "SRC-SPA-SAU-CBY-DEPOSIT-2018-001",
+        "loc": "spa.gov.sa/w643267 title and body"
+      },
+      {
+        "t": "stated aim (financial/economic position, riyal)",
+        "k": "v",
+        "s": "READ",
+        "src": "SRC-SPA-SAU-CBY-DEPOSIT-2018-001",
+        "loc": "spa.gov.sa/w643267 body"
+      }
+    ]
   },
   {
     "event_id": "YSC-006",
@@ -123,7 +259,16 @@
     "interpretation_note": null,
     "period_ar": "ديسمبر 2019",
     "verification_note_en": null,
-    "verification_note_ar": null
+    "verification_note_ar": null,
+    "value_states": [
+      {
+        "t": "December 2019",
+        "k": "d",
+        "s": "READ",
+        "src": "SRC-WB-YEM-MEU-2019-12-001",
+        "loc": "Yemen MEU December 2019, PDF p.2 (main text) and PDF p.7 (Annex 2)"
+      }
+    ]
   },
   {
     "event_id": "YSC-007",
@@ -131,7 +276,7 @@
     "event_class": "EXTERNAL_LIQUIDITY_RISK",
     "fact_en": "World Bank monitoring reported that the bulk of the 2018 Saudi US$2 billion deposit had been exhausted by end-January 2020 and highlighted multiple exchange-rate regimes and remittance risks from the COVID-19 shock.",
     "fact_ar": "أفادت متابعة البنك الدولي بأن الجزء الأكبر من الوديعة السعودية البالغة ملياري دولار لعام 2018 كان قد استُنفد بحلول نهاية يناير 2020، وأبرزت تعدد نظم أسعار الصرف ومخاطر صدمة كوفيد-19 على التحويلات.",
-    "source_ids": "SRC-WB-YEM-ECON-2020-04-001",
+    "source_ids": "SRC-WB-YEM-ECON-2020-04-001 | SRC-SPA-SAU-CBY-DEPOSIT-2018-001",
     "source_scope": "World Bank 2020 monitoring and risk assessment.",
     "system_implication_en": "FX support, remittances and import capacity became increasingly interdependent under fragmented exchange regimes.",
     "system_implication_ar": "ازدادت درجة الترابط بين دعم النقد الأجنبي والتحويلات وقدرة الاستيراد في ظل نظم صرف مجزأة.",
@@ -144,7 +289,44 @@
     "interpretation_note": null,
     "period_ar": "أوائل 2020",
     "verification_note_en": null,
-    "verification_note_ar": null
+    "verification_note_ar": null,
+    "value_states": [
+      {
+        "t": "Early 2020",
+        "k": "d",
+        "s": "READ",
+        "src": "SRC-WB-YEM-ECON-2020-04-001",
+        "loc": "Additional URL: Yemen Monthly Economic Update February 2020, PDF p.3"
+      },
+      {
+        "t": "2018",
+        "k": "d",
+        "s": "READ",
+        "src": "SRC-SPA-SAU-CBY-DEPOSIT-2018-001",
+        "loc": "SPA item w643267 (16 Mar 2018): the US$2 billion deposit agreement; source bound to YSC-007 in E2-8"
+      },
+      {
+        "t": "US$2 billion",
+        "k": "v",
+        "s": "READ",
+        "src": "SRC-WB-YEM-ECON-2020-04-001",
+        "loc": "MEU Feb 2020 PDF p.3"
+      },
+      {
+        "t": "end-January 2020",
+        "k": "d",
+        "s": "READ",
+        "src": "SRC-WB-YEM-ECON-2020-04-001",
+        "loc": "MEU Feb 2020 PDF p.3"
+      },
+      {
+        "t": "multiple exchange-rate regimes; COVID-19 remittance risk",
+        "k": "v",
+        "s": "READ",
+        "src": "SRC-WB-YEM-ECON-2020-04-001",
+        "loc": "April 2020 page body"
+      }
+    ]
   },
   {
     "event_id": "YSC-008",
@@ -165,7 +347,23 @@
     "interpretation_note": null,
     "period_ar": "أكتوبر 2022–يناير 2023",
     "verification_note_en": null,
-    "verification_note_ar": null
+    "verification_note_ar": null,
+    "value_states": [
+      {
+        "t": "October 2022",
+        "k": "d",
+        "s": "READ",
+        "src": "SRC-IMF-AIV-2025-STAFF-001",
+        "loc": "IMF CR 26/80 PDF (src/imf_cr2680_upload.pdf, obtained 2026-10-04; imf.org pages 403 today), staff report printed p.6 (PDF p.11) para 6"
+      },
+      {
+        "t": "January 2023",
+        "k": "d",
+        "s": "READ",
+        "src": "SRC-IMF-AIV-2025-STAFF-001",
+        "loc": "IMF CR 26/80 PDF (src/imf_cr2680_upload.pdf, obtained 2026-10-04; imf.org pages 403 today), printed p.6 (PDF p.11) para 6"
+      }
+    ]
   },
   {
     "event_id": "YSC-009",
@@ -186,7 +384,23 @@
     "interpretation_note": "US$0.775bn made available is a subset/state transition of this US$1bn deposit, not new support.",
     "period_ar": "21 فبراير 2023",
     "verification_note_en": null,
-    "verification_note_ar": null
+    "verification_note_ar": null,
+    "value_states": [
+      {
+        "t": "21 February 2023",
+        "k": "d",
+        "s": "READ",
+        "src": "SRC-SPA-SAU-CBY-DEPOSIT-2023-001",
+        "loc": "spa.gov.sa/w1857622 dateline"
+      },
+      {
+        "t": "US$1 billion",
+        "k": "v",
+        "s": "READ",
+        "src": "SRC-SPA-SAU-CBY-DEPOSIT-2023-001",
+        "loc": "spa.gov.sa/w1857622 body"
+      }
+    ]
   },
   {
     "event_id": "YSC-010",
@@ -207,7 +421,44 @@
     "interpretation_note": "Track each amount by flow state; do not sum custody, amount made available and auction use as independent inflows.",
     "period_ar": "2023–2024",
     "verification_note_en": null,
-    "verification_note_ar": null
+    "verification_note_ar": null,
+    "value_states": [
+      {
+        "t": "2023–2024",
+        "k": "d",
+        "s": "READ",
+        "src": "SRC-IMF-AIV-2025-STAFF-001",
+        "loc": "IMF CR 26/80 PDF (src/imf_cr2680_upload.pdf, obtained 2026-10-04; imf.org pages 403 today), staff report printed p.9 (PDF p.14) para 12"
+      },
+      {
+        "t": "US$1.2 billion",
+        "k": "v",
+        "s": "READ",
+        "src": "SRC-IMF-AIV-2025-STAFF-001",
+        "loc": "IMF CR 26/80 PDF (src/imf_cr2680_upload.pdf, obtained 2026-10-04; imf.org pages 403 today), staff report printed p.9 (PDF p.14) para 12"
+      },
+      {
+        "t": "US$1 billion",
+        "k": "v",
+        "s": "READ",
+        "src": "SRC-IMF-AIV-2025-STAFF-001",
+        "loc": "IMF CR 26/80 PDF (src/imf_cr2680_upload.pdf, obtained 2026-10-04; imf.org pages 403 today), staff report printed p.9 (PDF p.14) para 12"
+      },
+      {
+        "t": "US$0.775 billion",
+        "k": "v",
+        "s": "READ",
+        "src": "SRC-IMF-AIV-2025-STAFF-001",
+        "loc": "IMF CR 26/80 PDF (src/imf_cr2680_upload.pdf, obtained 2026-10-04; imf.org pages 403 today), staff report printed p.9 (PDF p.14) para 12"
+      },
+      {
+        "t": "US$1.05 billion",
+        "k": "v",
+        "s": "READ",
+        "src": "SRC-IMF-AIV-2025-STAFF-001",
+        "loc": "IMF CR 26/80 PDF (src/imf_cr2680_upload.pdf, obtained 2026-10-04; imf.org pages 403 today), staff report printed p.9 (PDF p.14) para 12"
+      }
+    ]
   },
   {
     "event_id": "YSC-011",
@@ -228,7 +479,30 @@
     "interpretation_note": null,
     "period_ar": "2022–2024",
     "verification_note_en": null,
-    "verification_note_ar": null
+    "verification_note_ar": null,
+    "value_states": [
+      {
+        "t": "2022–2024",
+        "k": "d",
+        "s": "READ",
+        "src": "SRC-IMF-AIV-2025-STAFF-001",
+        "loc": "IMF CR 26/80 PDF (src/imf_cr2680_upload.pdf, obtained 2026-10-04; imf.org pages 403 today), printed p.9 (PDF p.14) para 11; Figure 2 p.25 (PDF p.30)"
+      },
+      {
+        "t": "40.5%",
+        "k": "v",
+        "s": "READ",
+        "src": "SRC-IMF-AIV-2025-STAFF-001",
+        "loc": "IMF CR 26/80 PDF (src/imf_cr2680_upload.pdf, obtained 2026-10-04; imf.org pages 403 today), printed p.9 (PDF p.14) para 11"
+      },
+      {
+        "t": "14.5%",
+        "k": "v",
+        "s": "READ",
+        "src": "SRC-IMF-AIV-2025-STAFF-001",
+        "loc": "IMF CR 26/80 PDF (src/imf_cr2680_upload.pdf, obtained 2026-10-04; imf.org pages 403 today), printed p.9 (PDF p.14) para 11"
+      }
+    ]
   },
   {
     "event_id": "YSC-012",
@@ -249,7 +523,51 @@
     "interpretation_note": null,
     "period_ar": "مارس–يونيو 2024",
     "verification_note_en": null,
-    "verification_note_ar": null
+    "verification_note_ar": null,
+    "value_states": [
+      {
+        "t": "March 2024",
+        "k": "d",
+        "s": "READ",
+        "src": "SRC-WB-YEM-FRAGMENTATION-2025-001",
+        "loc": "YEM Fall 2024 (additional URL of SRC-WB-YEM-FRAGMENTATION-2025-001), printed p.11 (PDF p.21); also PDF p.19"
+      },
+      {
+        "t": "100-rial",
+        "k": "v",
+        "s": "READ",
+        "src": "SRC-WB-YEM-FRAGMENTATION-2025-001",
+        "loc": "YEM Fall 2024 (additional URL of SRC-WB-YEM-FRAGMENTATION-2025-001), printed p.11 (PDF p.21); also PDF p.19"
+      },
+      {
+        "t": "April 2024",
+        "k": "d",
+        "s": "READ",
+        "src": "SRC-WB-YEM-FRAGMENTATION-2025-001",
+        "loc": "YEM Fall 2024 (additional URL of SRC-WB-YEM-FRAGMENTATION-2025-001), printed p.11 (PDF p.21); also PDF p.19"
+      },
+      {
+        "t": "June 2024",
+        "k": "d",
+        "s": "READ",
+        "src": "SRC-WB-YEM-FRAGMENTATION-2025-001",
+        "loc": "YEM Fall 2024 (additional URL of SRC-WB-YEM-FRAGMENTATION-2025-001), printed p.11 (PDF p.21); also PDF p.19"
+      },
+      {
+        "t": "June 2024 (wallets/payment services)",
+        "k": "d",
+        "s": "READ",
+        "src": "SRC-CBY-UNLICENSED-EWALLET-2024-001",
+        "loc": "cby-ye.com/files/667c32dabd223.pdf p.1 header (scanned; viewed as image)"
+      },
+      {
+        "t": "June 2024 (remittance networks)",
+        "k": "d",
+        "s": "READ",
+        "src": "SRC-CBY-DEC-23-2024-001",
+        "loc": "cby-ye.com/files/667c596ef3bea.pdf p.1 header and title (scanned; viewed as image)"
+      }
+    ]
   },
   {
     "event_id": "YSC-024",
@@ -270,7 +588,30 @@
     "interpretation_note": "Place this event between cash-delivery evidence and the post-transfer persistence question; do not collapse pilot exposure into durable inclusion.",
     "period_ar": "حتى 30 مايو 2024",
     "verification_note_en": null,
-    "verification_note_ar": null
+    "verification_note_ar": null,
+    "value_states": [
+      {
+        "t": "30 May 2024",
+        "k": "d",
+        "s": "READ",
+        "src": "SRC-WB-G2PX-YEM-UCT-2024-001",
+        "loc": "worldbank.org/en/events/2024/05/30/digitalizing-g2p-payments-in-yemen, event description ('Event Details Date: May 30, 2024')"
+      },
+      {
+        "t": "eight districts",
+        "k": "v",
+        "s": "READ",
+        "src": "SRC-WB-G2PX-YEM-UCT-2024-001",
+        "loc": "worldbank.org/en/events/2024/05/30/digitalizing-g2p-payments-in-yemen, event description"
+      },
+      {
+        "t": "45,460",
+        "k": "v",
+        "s": "READ",
+        "src": "SRC-WB-G2PX-YEM-UCT-2024-001",
+        "loc": "worldbank.org/en/events/2024/05/30/digitalizing-g2p-payments-in-yemen, event description"
+      }
+    ]
   },
   {
     "event_id": "YSC-013",
@@ -291,7 +632,37 @@
     "interpretation_note": "Do not connect revised vintages as if they were consecutive economic observations.",
     "period_ar": "قيمة 2024 كما رُوجعت بين إصدارات التقرير السنوي للبنك المركزي اليمني – عدن",
     "verification_note_en": null,
-    "verification_note_ar": null
+    "verification_note_ar": null,
+    "value_states": [
+      {
+        "t": "2024",
+        "k": "d",
+        "s": "READ",
+        "src": "SRC-CBY-AR2024-BOP",
+        "loc": "CBY-Aden Annual Report 2024, Table 4-1 BoP, printed p.40 (PDF p.40); also annex p.48"
+      },
+      {
+        "t": "USD 6,245 million",
+        "k": "v",
+        "s": "READ",
+        "src": "SRC-CBY-AR2024-BOP",
+        "loc": "AR2024 Table 4-1, printed p.40"
+      },
+      {
+        "t": "USD 3,422.16 million",
+        "k": "v",
+        "s": "READ",
+        "src": "SRC-CBY-AR2025-BOP",
+        "loc": "CBY-Aden Annual Report 2025, Table 4-1, printed p.44 (PDF p.44); annex p.52"
+      },
+      {
+        "t": "45.2%",
+        "k": "v",
+        "s": "DERIVED",
+        "src": "SRC-CBY-AR2025-BOP",
+        "loc": "AR2024 p.40 and AR2025 p.44"
+      }
+    ]
   },
   {
     "event_id": "YSC-014",
@@ -312,7 +683,51 @@
     "interpretation_note": null,
     "period_ar": "2022–أبريل 2025",
     "verification_note_en": "These values are from the text of the staff report (paragraph 13). The report's own table of financial soundness indicators (Table 5) gives different values and dates for the same two ratios. Neither the text nor the table states a unit. The report says its data relate to areas under the authorities' control unless otherwise stated (paragraph 2), but its statistical annex says the banks' balance-sheet data cover the whole of Yemen (Annex IV); it does not state the coverage of these two ratios.",
-    "verification_note_ar": "هذه القيم من متن تقرير الخبراء (الفقرة 13). أما جدول مؤشرات السلامة المالية في التقرير نفسه (الجدول 5) فيورد قيمًا وتواريخ مختلفة للنسبتين نفسيهما. ولا يذكر المتن ولا الجدول وحدة القياس. ويذكر التقرير أن بياناته تخص المناطق الخاضعة لسيطرة السلطات ما لم يُذكر خلاف ذلك (الفقرة 2)، غير أن ملحقه الإحصائي يذكر أن بيانات الميزانيات العمومية للبنوك تغطي اليمن كله (الملحق الرابع)، ولا يحدد نطاق هاتين النسبتين."
+    "verification_note_ar": "هذه القيم من متن تقرير الخبراء (الفقرة 13). أما جدول مؤشرات السلامة المالية في التقرير نفسه (الجدول 5) فيورد قيمًا وتواريخ مختلفة للنسبتين نفسيهما. ولا يذكر المتن ولا الجدول وحدة القياس. ويذكر التقرير أن بياناته تخص المناطق الخاضعة لسيطرة السلطات ما لم يُذكر خلاف ذلك (الفقرة 2)، غير أن ملحقه الإحصائي يذكر أن بيانات الميزانيات العمومية للبنوك تغطي اليمن كله (الملحق الرابع)، ولا يحدد نطاق هاتين النسبتين.",
+    "value_states": [
+      {
+        "t": "2022",
+        "k": "d",
+        "s": "READ",
+        "src": "SRC-IMF-AIV-2025-STAFF-001",
+        "loc": "IMF CR 26/80 PDF (src/imf_cr2680_upload.pdf, obtained 2026-10-04; imf.org pages 403 today), staff report printed p.9 (PDF p.14) para 13"
+      },
+      {
+        "t": "April 2025",
+        "k": "d",
+        "s": "READ",
+        "src": "SRC-IMF-AIV-2025-STAFF-001",
+        "loc": "IMF CR 26/80 PDF (src/imf_cr2680_upload.pdf, obtained 2026-10-04; imf.org pages 403 today), staff report printed p.9 (PDF p.14) para 13"
+      },
+      {
+        "t": "148",
+        "k": "v",
+        "s": "READ",
+        "src": "SRC-IMF-AIV-2025-STAFF-001",
+        "loc": "IMF CR 26/80 PDF (src/imf_cr2680_upload.pdf, obtained 2026-10-04; imf.org pages 403 today), staff report printed p.9 (PDF p.14) para 13"
+      },
+      {
+        "t": "69",
+        "k": "v",
+        "s": "READ",
+        "src": "SRC-IMF-AIV-2025-STAFF-001",
+        "loc": "IMF CR 26/80 PDF (src/imf_cr2680_upload.pdf, obtained 2026-10-04; imf.org pages 403 today), staff report printed p.9 (PDF p.14) para 13"
+      },
+      {
+        "t": "about 5",
+        "k": "v",
+        "s": "READ",
+        "src": "SRC-IMF-AIV-2025-STAFF-001",
+        "loc": "IMF CR 26/80 PDF (src/imf_cr2680_upload.pdf, obtained 2026-10-04; imf.org pages 403 today), staff report printed p.9 (PDF p.14) para 13"
+      },
+      {
+        "t": "2.5",
+        "k": "v",
+        "s": "READ",
+        "src": "SRC-IMF-AIV-2025-STAFF-001",
+        "loc": "IMF CR 26/80 PDF (src/imf_cr2680_upload.pdf, obtained 2026-10-04; imf.org pages 403 today), staff report printed p.9 (PDF p.14) para 13"
+      }
+    ]
   },
   {
     "event_id": "YSC-018",
@@ -333,7 +748,58 @@
     "interpretation_note": "Project cost/commitment must not be counted as an observed financial flow to users.",
     "period_ar": "فترة المشروع من 17 يونيو 2025 حتى 2030",
     "verification_note_en": null,
-    "verification_note_ar": null
+    "verification_note_ar": null,
+    "value_states": [
+      {
+        "t": "17 June 2025",
+        "k": "d",
+        "s": "READ",
+        "src": "SRC-WB-FMIIP-P180708",
+        "loc": "WB press release 2025-06-17 (additional URL) dateline; WB Projects API v3 boardapprovaldate 2025-06-17"
+      },
+      {
+        "t": "US$20 million",
+        "k": "v",
+        "s": "READ",
+        "src": "SRC-WB-FMIIP-P180708",
+        "loc": "press release 2025-06-17; ISR2 PDF p.7 (IDA-E4770, 20.00)"
+      },
+      {
+        "t": "active",
+        "k": "v",
+        "s": "READ",
+        "src": "SRC-WB-FMIIP-P180708",
+        "loc": "search.worldbank.org/api/v3/projects?id=P180708"
+      },
+      {
+        "t": "implemented by UNDP",
+        "k": "v",
+        "s": "READ",
+        "src": "SRC-WB-FMIIP-P180708",
+        "loc": "API v3 impagency; press release"
+      },
+      {
+        "t": "30 June 2030",
+        "k": "d",
+        "s": "READ",
+        "src": "SRC-WB-FMIIP-ISR2-2026-001",
+        "loc": "ISR seq.2 PDF p.7 '7.3 Key Dates' and p.8 'Key Events'; API v3 closingdate 2030-06-30"
+      },
+      {
+        "t": "report no. 2",
+        "k": "v",
+        "s": "READ",
+        "src": "SRC-WB-FMIIP-ISR2-2026-001",
+        "loc": "ISR PDF p.1 header"
+      },
+      {
+        "t": "8 April 2026",
+        "k": "d",
+        "s": "READ",
+        "src": "SRC-WB-FMIIP-ISR2-2026-001",
+        "loc": "ISR PDF p.1 header and page footers 'Apr 08, 2026'; WDS docdt 2026-04-08"
+      }
+    ]
   },
   {
     "event_id": "YSC-015",
@@ -354,7 +820,16 @@
     "interpretation_note": null,
     "period_ar": "من يوليو 2025 فصاعدًا",
     "verification_note_en": null,
-    "verification_note_ar": null
+    "verification_note_ar": null,
+    "value_states": [
+      {
+        "t": "July 2025",
+        "k": "d",
+        "s": "READ",
+        "src": "SRC-IMF-AIV-2025-STAFF-001",
+        "loc": "IMF CR 26/80 PDF (src/imf_cr2680_upload.pdf, obtained 2026-10-04; imf.org pages 403 today), staff appraisal printed p.21 (PDF p.26); description printed p.7 (PDF p.12) para 8"
+      }
+    ]
   },
   {
     "event_id": "YSC-016",
@@ -375,7 +850,30 @@
     "interpretation_note": null,
     "period_ar": "منتصف يوليو–أوائل أغسطس 2025",
     "verification_note_en": null,
-    "verification_note_ar": null
+    "verification_note_ar": null,
+    "value_states": [
+      {
+        "t": "Mid-July–early August 2025",
+        "k": "d",
+        "s": "READ",
+        "src": "SRC-IMF-AIV-2025-STAFF-001",
+        "loc": "IMF CR 26/80 PDF (src/imf_cr2680_upload.pdf, obtained 2026-10-04; imf.org pages 403 today), printed p.7 (PDF p.12) para 8; DSA printed p.9 (PDF p.68)"
+      },
+      {
+        "t": "YER2,900",
+        "k": "v",
+        "s": "READ",
+        "src": "SRC-IMF-AIV-2025-STAFF-001",
+        "loc": "IMF CR 26/80 PDF (src/imf_cr2680_upload.pdf, obtained 2026-10-04; imf.org pages 403 today), printed p.7 (PDF p.12) para 8; DSA printed p.9 (PDF p.68)"
+      },
+      {
+        "t": "YER1,600",
+        "k": "v",
+        "s": "READ",
+        "src": "SRC-IMF-AIV-2025-STAFF-001",
+        "loc": "IMF CR 26/80 PDF (src/imf_cr2680_upload.pdf, obtained 2026-10-04; imf.org pages 403 today), printed p.7 (PDF p.12) para 8; DSA printed p.9 (PDF p.68)"
+      }
+    ]
   },
   {
     "event_id": "YSC-017",
@@ -396,7 +894,30 @@
     "interpretation_note": null,
     "period_ar": "سبتمبر 2025",
     "verification_note_en": "This value and its date are from the text of the staff report (paragraph 12). The debt sustainability analysis published in the same country report gives reserves of the same amount as of June 2025.",
-    "verification_note_ar": "هذه القيمة وتاريخها من متن تقرير الخبراء (الفقرة 12). أما تحليل القدرة على تحمّل الدين المنشور في التقرير القُطري نفسه فيورد احتياطيات بالمبلغ نفسه في يونيو 2025."
+    "verification_note_ar": "هذه القيمة وتاريخها من متن تقرير الخبراء (الفقرة 12). أما تحليل القدرة على تحمّل الدين المنشور في التقرير القُطري نفسه فيورد احتياطيات بالمبلغ نفسه في يونيو 2025.",
+    "value_states": [
+      {
+        "t": "September 2025",
+        "k": "d",
+        "s": "READ",
+        "src": "SRC-IMF-AIV-2025-STAFF-001",
+        "loc": "IMF CR 26/80 PDF (src/imf_cr2680_upload.pdf, obtained 2026-10-04; imf.org pages 403 today), staff report printed p.9 (PDF p.14) para 12"
+      },
+      {
+        "t": "US$350 million",
+        "k": "v",
+        "s": "READ",
+        "src": "SRC-IMF-AIV-2025-STAFF-001",
+        "loc": "IMF CR 26/80 PDF (src/imf_cr2680_upload.pdf, obtained 2026-10-04; imf.org pages 403 today), staff report printed p.9 (PDF p.14) para 12"
+      },
+      {
+        "t": "one month of imports",
+        "k": "v",
+        "s": "READ",
+        "src": "SRC-IMF-AIV-2025-STAFF-001",
+        "loc": "IMF CR 26/80 PDF (src/imf_cr2680_upload.pdf, obtained 2026-10-04; imf.org pages 403 today), staff report printed p.9 (PDF p.14) para 12"
+      }
+    ]
   },
   {
     "event_id": "YSC-019",
@@ -417,14 +938,30 @@
     "interpretation_note": "Keep SAR-denominated agreement and IMF USD-denominated support states separate until identity is proven.",
     "period_ar": "1 مارس 2026",
     "verification_note_en": null,
-    "verification_note_ar": null
+    "verification_note_ar": null,
+    "value_states": [
+      {
+        "t": "1 March 2026",
+        "k": "d",
+        "s": "READ",
+        "src": "SRC-SPA-SAU-BUDGET-2026-001",
+        "loc": "spa.gov.sa/en/N2525739 dateline; AR N2525728 dateline"
+      },
+      {
+        "t": "SAR1.3 billion",
+        "k": "v",
+        "s": "READ",
+        "src": "SRC-SPA-SAU-BUDGET-2026-001",
+        "loc": "spa.gov.sa/en/N2525739 body; AR N2525728"
+      }
+    ]
   },
   {
     "event_id": "YSC-021",
     "period_en": "4 June 2026",
     "event_class": "COUNTRY_STRATEGY_AND_PORTFOLIO",
-    "fact_en": "The World Bank Group endorsed a Country Partnership Framework for Yemen for FY2026–FY2030 and approved four new operations totaling US$285 million. The framework focuses on nutrition, electricity, agribusiness, mariculture and fisheries, with women’s participation and private-sector development as cross-cutting enablers.",
-    "fact_ar": "أقرت مجموعة البنك الدولي إطار شراكة قطرية لليمن للسنوات المالية 2026–2030، ووافقت على أربع عمليات جديدة بقيمة إجمالية قدرها 285 مليون دولار. يركز الإطار على التغذية والكهرباء والأعمال الزراعية والاستزراع البحري ومصايد الأسماك، مع اعتبار مشاركة النساء وتنمية القطاع الخاص عاملين عابرين للمجالات.",
+    "fact_en": "The World Bank Group's Board of Executive Directors approved a Country Partnership Framework for Yemen for FY2026–FY2030 and approved four new operations totaling US$285 million. The framework focuses on nutrition, electricity, agribusiness, mariculture and fisheries, with women’s participation and private-sector development as cross-cutting enablers.",
+    "fact_ar": "وافق مجلس المديرين التنفيذيين لمجموعة البنك الدولي على إطار شراكة قطرية لليمن للسنوات المالية 2026–2030، ووافقت على أربع عمليات جديدة بقيمة إجمالية قدرها 285 مليون دولار. يركز الإطار على التغذية والكهرباء والأعمال الزراعية والاستزراع البحري ومصايد الأسماك، مع اعتبار مشاركة النساء وتنمية القطاع الخاص عاملين عابرين للمجالات.",
     "source_ids": "SRC-WB-YEM-CPF-2026-2030-001",
     "source_scope": "Country-strategy and operation-approval context; not project implementation results or financial-inclusion outcomes.",
     "system_implication_en": "Financial-inclusion evidence can be read within the World Bank Group’s FY2026–FY2030 strategy for Yemen, which links jobs, livelihoods, infrastructure, private-sector conditions and women’s economic participation.",
@@ -438,7 +975,44 @@
     "interpretation_note": "Keep country-strategy priorities separate from measured results and from the evidence needed to evaluate financial inclusion.",
     "period_ar": "4 يونيو 2026",
     "verification_note_en": null,
-    "verification_note_ar": null
+    "verification_note_ar": null,
+    "value_states": [
+      {
+        "t": "4 June 2026",
+        "k": "d",
+        "s": "READ",
+        "src": "SRC-WB-YEM-CPF-2026-2030-001",
+        "loc": "CPF PDF cover '[June 4, 2026]'; WDS docdt 2026-06-04"
+      },
+      {
+        "t": "FY2026–FY2030",
+        "k": "d",
+        "s": "READ",
+        "src": "SRC-WB-YEM-CPF-2026-2030-001",
+        "loc": "CPF PDF cover; cpf page"
+      },
+      {
+        "t": "four new operations",
+        "k": "v",
+        "s": "READ",
+        "src": "SRC-WB-YEM-CPF-2026-2030-001",
+        "loc": "World Bank press release of 4 June 2026 (additional locator of the CPF source, bound in E2-8): 'approved ... alongside four new operations totaling US$285 million'"
+      },
+      {
+        "t": "US$285 million",
+        "k": "v",
+        "s": "READ",
+        "src": "SRC-WB-YEM-CPF-2026-2030-001",
+        "loc": "World Bank press release of 4 June 2026 (additional locator of the CPF source, bound in E2-8): 'approved ... alongside four new operations totaling US$285 million'"
+      },
+      {
+        "t": "focus areas",
+        "k": "v",
+        "s": "READ",
+        "src": "SRC-WB-YEM-CPF-2026-2030-001",
+        "loc": "worldbank.org/ext/en/country/yemen/cpf"
+      }
+    ]
   },
   {
     "event_id": "YSC-022",
@@ -459,7 +1033,44 @@
     "interpretation_note": "Treat delivery, documentation, onboarding, use and persistence as distinct links in the evidence chain.",
     "period_ar": "30 يونيو 2026",
     "verification_note_en": null,
-    "verification_note_ar": null
+    "verification_note_ar": null,
+    "value_states": [
+      {
+        "t": "30 June 2026",
+        "k": "d",
+        "s": "READ",
+        "src": "SRC-WB-YEM-CNL-2026-001",
+        "loc": "worldbank.org press release 2026-06-30, body"
+      },
+      {
+        "t": "US$100 million",
+        "k": "v",
+        "s": "READ",
+        "src": "SRC-WB-YEM-CNL-2026-001",
+        "loc": "worldbank.org press release 2026-06-30, body"
+      },
+      {
+        "t": "1.8 million people",
+        "k": "v",
+        "s": "READ",
+        "src": "SRC-WB-YEM-CNL-2026-001",
+        "loc": "worldbank.org press release 2026-06-30, body"
+      },
+      {
+        "t": "55,000",
+        "k": "v",
+        "s": "READ",
+        "src": "SRC-WB-YEM-CNL-2026-001",
+        "loc": "worldbank.org press release 2026-06-30, body"
+      },
+      {
+        "t": "675,000",
+        "k": "v",
+        "s": "READ",
+        "src": "SRC-WB-YEM-CNL-2026-001",
+        "loc": "worldbank.org press release 2026-06-30, body"
+      }
+    ]
   },
   {
     "event_id": "YSC-023",
@@ -479,8 +1090,42 @@
     "linked_routes": "/finance | /providers | /reforms | /payments",
     "interpretation_note": "Preserve the distinction between staff-level agreement, Management approval, policy implementation and observed outcome.",
     "period_ar": "16 يوليو 2026",
-    "verification_note_en": null,
-    "verification_note_ar": null
+    "verification_note_en": "The IMF press release could not be re-opened on 4 October 2026 (the IMF website refuses automated requests); this entry has not been re-read in the original for this edition.",
+    "verification_note_ar": "تعذّرت إعادة فتح البيان الصحفي لصندوق النقد الدولي في 4 أكتوبر 2026 (يرفض موقع الصندوق الطلبات الآلية)، فلم تُعَد في هذا الإصدار قراءةُ هذا المدخل في الأصل.",
+    "value_states": [
+      {
+        "t": "16 July 2026",
+        "k": "d",
+        "s": "UNREACHABLE",
+        "src": "SRC-IMF-YEM-SMP-2026",
+        "loc": "imf.org/en/news/articles/2026/07/16/pr26249-... : curl 403 (also /en/News/ casing), WebFetch 403, Wayback reset, archive.org availability API: no snapshot. Only a third-party mirror (Mirage News, src/mirage_imf_yemen_smp.html) was seen - no",
+        "why": "imf.org refuses automated requests (HTTP 403); no archive copy reachable"
+      },
+      {
+        "t": "18-month",
+        "k": "v",
+        "s": "UNREACHABLE",
+        "src": "SRC-IMF-YEM-SMP-2026",
+        "loc": "imf.org/en/news/articles/2026/07/16/pr26249-... : curl 403 (also /en/News/ casing), WebFetch 403, Wayback reset, archive.org availability API: no snapshot. Only a third-party mirror (Mirage News, src/mirage_imf_yemen_smp.html) was seen - no",
+        "why": "imf.org refuses automated requests (HTTP 403); no archive copy reachable"
+      },
+      {
+        "t": "subject to IMF Management approval",
+        "k": "v",
+        "s": "UNREACHABLE",
+        "src": "SRC-IMF-YEM-SMP-2026",
+        "loc": "imf.org/en/news/articles/2026/07/16/pr26249-... : curl 403 (also /en/News/ casing), WebFetch 403, Wayback reset, archive.org availability API: no snapshot. Only a third-party mirror (Mirage News, src/mirage_imf_yemen_smp.html) was seen - no",
+        "why": "imf.org refuses automated requests (HTTP 403); no archive copy reachable"
+      },
+      {
+        "t": "will not result in an Executive Board discussion",
+        "k": "v",
+        "s": "UNREACHABLE",
+        "src": "SRC-IMF-YEM-SMP-2026",
+        "loc": "imf.org/en/news/articles/2026/07/16/pr26249-... : curl 403 (also /en/News/ casing), WebFetch 403, Wayback reset, archive.org availability API: no snapshot. Only a third-party mirror (Mirage News, src/mirage_imf_yemen_smp.html) was seen - no",
+        "why": "imf.org refuses automated requests (HTTP 403); no archive copy reachable"
+      }
+    ]
   },
   {
     "event_id": "YSC-020",
@@ -501,6 +1146,7 @@
     "interpretation_note": null,
     "period_ar": "قاعدة التحليل المعمول بها",
     "verification_note_en": null,
-    "verification_note_ar": null
+    "verification_note_ar": null,
+    "value_states": []
   }
 ]
