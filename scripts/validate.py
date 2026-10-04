@@ -3537,6 +3537,28 @@ try:
 except Exception as _x:
     errors.append("E2-DIFF unreadable " + repr(_x))
 
+# E2-YLG (edition 2, candidate a): the Yemen Loan Guarantee volumes (5,731 guaranteed transactions; OECD, read in the
+# original) never reach a reader as a measure of firms' access to finance. Asserted on what a reader sees: every page
+# that prints 5,731 also prints, in its own language, that guarantee volumes do not show how many firms could borrow.
+try:
+    _ny = 0
+    _ylg = {"en": "not how many firms could borrow", "ar": "لا عدد المنشآت التي تمكنت من الاقتراض"}
+    for _f in sorted(DIST.glob("*/**/index.html")) + sorted(DIST.glob("*/index.html")):
+        _rel = str(_f.relative_to(DIST))
+        if not _rel.startswith(("en/", "ar/")):
+            continue
+        _h = re.sub(r"<(script|style)\b[^>]*>.*?</\1>", " ", _f.read_text(encoding="utf-8"), flags=re.S)
+        _txt = re.sub(r"\s+", " ", _html.unescape(re.sub(r"<[^>]+>", " ", _h)))
+        if not re.search(r"(?<![\d,])5,731(?![\d,])", _txt):
+            continue
+        _ny += 1
+        if _ylg[_rel[:2]] not in _txt:
+            errors.append(f"E2-YLG {_rel} prints the guarantee volume without saying it is not firms' access to finance")
+    if _ny < 4:
+        errors.append(f"E2-YLG read only {_ny} pages with the guarantee volume")
+except Exception as _x:
+    errors.append("E2-YLG unreadable " + repr(_x))
+
 print(f'HTML={len(list(DIST.rglob("*.html")))} ERRORS={len(errors)} WARN={len(warns)}')
 if warns:
     for w in warns[:20]: print('WARN',w)

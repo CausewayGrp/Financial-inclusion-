@@ -1,5 +1,27 @@
 # Repository Change Log
 
+## 2026-10-04 — E2-5, E2-5b: guarantees and correspondent banking, read in the originals (edition 2, candidate a)
+
+Master `7cc4fafc0116…` → `a01011868a4b…` (E2-5) → `e81b2ebc40687fb344bb1c155ae85208b5b9f62dd1e59d4687bb0d88d480d229`
+(E2-5b, the independent bilingual and adversarial review folded in) through `run_stage.py`
+(`audit/edition_2/e2_5_guarantees_correspondent.py`, `audit/edition_2/e2_5b_review_fixes.py`).
+- **Read in the original.** The OECD's HTML refuses automated requests (HTTP 403), but its full-report PDF does not:
+  Promoting Economic Resilience in Yemen (OECD, 2026), printed page 32, gives the Yemen Loan Guarantee Program's 5,731
+  guaranteed transactions since 2017 and, in nominal terms, a cumulative USD 42.8 million of guarantees for USD 63.6
+  million of loan principal; the same page confirms the SMEPS facts. OECD-YEM-012 to 017 become CONFIRMED.
+- **CLM-059** (now "Programme reach describes the programmes, not all MSMEs in Yemen") carries the YLG volumes beside
+  SMEPS, each with its own source, with the boundaries: a guarantee volume is not firms' access to finance;
+  transactions are not unique firms; the two programmes' figures must not be added; the cumulative period has no stated
+  end. /firms/ section 7 carries one paragraph. No new route: a new Evidence Record would need the steward's navigation
+  contract.
+- **QUAL-001** (the OECD's qualitative interpretation, /finance/) carries the OECD's correspondent-banking sentence
+  (confidence of several foreign correspondent banks severely undermined; perceived money-laundering and
+  terrorism-financing risks), with the boundary that it counts no relationships, dates no change and is not a measure of
+  de-risking.
+- **Not bound:** IMF Country Report No. 26/80's statements (imf.org 403; IMF eLibrary 202 with no body). Owner input in
+  audit/edition_2/EDITION_2_LOG.md.
+- Gate E2-YLG: every page printing the guarantee volume says it is not firms' access to finance; one negative control.
+
 ## 2026-10-04 — E2-4, E2-4b: "Why the numbers differ" where contradictory-looking numbers meet (edition 2, candidate d)
 
 Master `1c107148bd92…` → `04c727047a76…` (E2-4) → `7cc4fafc0116e352aabec49783b0c450ce4653a7cceefa6943e4f7f99c0349e1`

@@ -387,6 +387,10 @@ CONTROLS = [
      sub_once(r'("route": "/reforms/",\s*"surface": "section",\s*"field": "body_en",\s*"token": "2,102,484",\s*"category": "[A-Z_]+",'
               r'\s*"context": "(?:[^"\\]|\\.)*",\s*"source_object": ")CLM-010(")', r"\1FMIIP-BASELINE-2025-01\2"),
      "E2-DIFF 2,102,484 on /reforms/ traces to FMIIP-BASELINE-2025-01, not to CLM-010"),
+    # E2-YLG (edition 2, candidate a): a guarantee volume is never shown without its boundary.
+    ("the guarantee volume loses its boundary", "en/firms/index.html",
+     replace("not how many firms could borrow", "how firms borrowed", 0),
+     "E2-YLG en/firms/index.html prints the guarantee volume without saying it is not firms' access to finance"),
     # RC-NOINDEX (owner decision B3): until release every page carries the pre-release noindex meta.
     ("a page loses its pre-release noindex", "en/people/index.html",
      replace('<meta name="robots" content="noindex, nofollow">', ""),

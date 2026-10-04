@@ -4611,13 +4611,16 @@
     ],
     "lineage_state": "BOUND_EXACT",
     "dependency_ids": [
-      "SRC-SMEPS-AR2024-2025"
+      "SRC-SMEPS-AR2024-2025",
+      "SRC-OECD-YEM-RESILIENCE-001"
     ],
     "direct_source_ids": [
-      "SRC-SMEPS-AR2024-2025"
+      "SRC-SMEPS-AR2024-2025",
+      "SRC-OECD-YEM-RESILIENCE-001"
     ],
     "resolved_source_ids": [
-      "SRC-SMEPS-AR2024-2025"
+      "SRC-SMEPS-AR2024-2025",
+      "SRC-OECD-YEM-RESILIENCE-001"
     ],
     "resolved_via_object_ids": [],
     "context_reference_ids": [],
@@ -4626,6 +4629,11 @@
       {
         "source_id": "SRC-SMEPS-AR2024-2025",
         "primary_url": "https://smeps.org.ye/post/85",
+        "metadata_state": "DISPLAY_READY"
+      },
+      {
+        "source_id": "SRC-OECD-YEM-RESILIENCE-001",
+        "primary_url": "https://doi.org/10.1787/81ed2898-en",
         "metadata_state": "DISPLAY_READY"
       }
     ],
@@ -7276,13 +7284,18 @@
     "dependency_ids": [
       "219_SMEPS_PROGRAMME_EVIDENCE",
       "EP-SMEPS-2024-PROGRAMME",
+      "OECD-YEM-015",
+      "OECD-YEM-016",
+      "OECD-YEM-017",
       "CLM-059"
     ],
     "direct_source_ids": [
-      "SRC-SMEPS-AR2024-2025"
+      "SRC-SMEPS-AR2024-2025",
+      "SRC-OECD-YEM-RESILIENCE-001"
     ],
     "resolved_source_ids": [
-      "SRC-SMEPS-AR2024-2025"
+      "SRC-SMEPS-AR2024-2025",
+      "SRC-OECD-YEM-RESILIENCE-001"
     ],
     "resolved_via_object_ids": [],
     "context_reference_ids": [],
@@ -7291,6 +7304,11 @@
       {
         "source_id": "SRC-SMEPS-AR2024-2025",
         "primary_url": "https://smeps.org.ye/post/85",
+        "metadata_state": "DISPLAY_READY"
+      },
+      {
+        "source_id": "SRC-OECD-YEM-RESILIENCE-001",
+        "primary_url": "https://doi.org/10.1787/81ed2898-en",
         "metadata_state": "DISPLAY_READY"
       }
     ],

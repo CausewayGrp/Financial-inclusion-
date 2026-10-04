@@ -64,3 +64,14 @@
   World Bank FSD 2024 report's printed table values; the Findex case differed because the World Bank's database is
   unrounded and its own Yemen table prints one decimal. Printing a source's published value as printed keeps it
   verifiable; the small bases are already stated on each record.
+- **a, E2-5 / E2-5b (firm finance beyond 2022; correspondent banking) — BUILT in part.** Route to the OECD text: the
+  full-report PDF (oecd.org/content/dam/…/81ed2898-en.pdf) answers where the HTML refuses. YLG volumes bound into CLM-059
+  with the firewall in the record and on /firms/; the OECD's correspondent-banking sentence into QUAL-001. Reader gain: an
+  MSME owner or journalist sees what the guarantee programme has backed since 2017 and, in the same place, why that is
+  not a measure of firms' access to credit; a /finance/ reader sees the OECD's account of why Yemeni banks are cut off
+  from correspondents, labelled as an assessment. The search snippet of the OECD page quoted other YLG-adjacent figures
+  (150 firms, 47,928 jobs): in the original these are SMEPS figures, not YLG's, which shows why a snippet is never a
+  reading. Not built: the IMF CR 26/80 statements (original unreadable here) and the World Bank FSD 2024 Box 5 sentence
+  (read and matching; it belongs in a record of its own source, which would be a new route or a widened firm-survey
+  record; recorded for the next pass). A dedicated guarantee record (its own route) needs the steward's navigation
+  contract.

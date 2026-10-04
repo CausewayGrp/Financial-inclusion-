@@ -1,0 +1,315 @@
+{
+ "transaction": "E2-5",
+ "summary": "Yemen Loan Guarantee volumes (OECD, read in the original) beside SMEPS in CLM-059 and on /firms/; the OECD's correspondent-banking statement in QUAL-001; OECD-YEM-012 to 017 confirmed",
+ "input_master_sha256": "7cc4fafc0116e352aabec49783b0c450ce4653a7cceefa6943e4f7f99c0349e1",
+ "output_master_sha256": "a01011868a4bd0cff1cc369a70a9d367ae5f5de183320f99f362b3abe5923ef1",
+ "cells_written": 34,
+ "changes": [
+  {
+   "finding": "E2-5:S5-GUARANTEES/S5-CORRESPONDENT",
+   "sheet": "06_EVIDENCE_OBJECTS",
+   "row": 110,
+   "col": 4,
+   "field": "CLM-059.title_en",
+   "old": "SMEPS programme reach describes the programme, not all MSMEs in Yemen",
+   "new": "Programme reach describes the programme, not all MSMEs in Yemen"
+  },
+  {
+   "finding": "E2-5:S5-GUARANTEES/S5-CORRESPONDENT",
+   "sheet": "06_EVIDENCE_OBJECTS",
+   "row": 110,
+   "col": 5,
+   "field": "CLM-059.title_ar",
+   "old": "وصول برنامج SMEPS دليل على نطاق البرنامج، لا على حجم قطاع المنشآت في اليمن",
+   "new": "وصول البرامج دليل على نطاقها، لا على حجم قطاع المنشآت في اليمن"
+  },
+  {
+   "finding": "E2-5:S5-GUARANTEES/S5-CORRESPONDENT",
+   "sheet": "06_EVIDENCE_OBJECTS",
+   "row": 110,
+   "col": 6,
+   "field": "CLM-059.summary_en",
+   "old": "The Small and Micro Enterprise Promotion Service (SMEPS) reports that in 2024 it supported 8,217 micro, small and medium enterprises (MSMEs) and disbursed USD 22,865,322. For 2021–2024 it reports support to 31,560 MSMEs and a USD 54.7 million programme total whose status (committed or disbursed) is not recorded in the evidence base. The 2021–2024 total may count the same enterprise in more than one year, so it is not a count of unique firms. These are programme results reported by SMEPS itself: they describe programme reach and finance, not national MSME prevalence or financial-sector lending.",
+   "new": "The Small and Micro Enterprise Promotion Service (SMEPS) reports that in 2024 it supported 8,217 micro, small and medium enterprises (MSMEs) and disbursed USD 22,865,322. For 2021–2024 it reports support to 31,560 MSMEs and a USD 54.7 million programme total whose status (committed or disbursed) is not recorded in the evidence base. The 2021–2024 total may count the same enterprise in more than one year, so it is not a count of unique firms. These are programme results reported by SMEPS itself: they describe programme reach and finance, not national MSME prevalence or financial-sector lending. Separately, the Organisation for Economic Co-operation and Development (OECD) reports that since 2017 the Yemen Loan Guarantee Program (YLG), which offers partial guarantees on loans that banks and microfinance institutions make to MSMEs, has guaranteed 5,731 transactions, with a cumulative USD 42.8 million of guarantees for USD 63.6 million of loan principal."
+  },
+  {
+   "finding": "E2-5:S5-GUARANTEES/S5-CORRESPONDENT",
+   "sheet": "06_EVIDENCE_OBJECTS",
+   "row": 110,
+   "col": 7,
+   "field": "CLM-059.summary_ar",
+   "old": "تفيد وكالة تنمية المنشآت الصغيرة والأصغر (SMEPS) بأنها دعمت في عام 2024 عددًا بلغ 8,217 منشأة من المنشآت الأصغر والصغيرة والمتوسطة، وصرفت 22,865,322 دولارًا. وللفترة 2021–2024 تفيد الوكالة بأن دعمها شمل 31,560 منشأة، وبإجمالي برامجي قدره 54.7 مليون دولار لا تسجّل قاعدة الأدلة ما إذا كان مبلغًا ملتزَمًا به أم مصروفًا. وقد يحتسب إجمالي 2021–2024 المنشأة نفسها في أكثر من سنة، ولذلك لا يمثل عددًا للمنشآت الفريدة. وهذه نتائج برنامجية تبلغ عنها الوكالة نفسها، وتصف نطاق البرنامج وتمويله، لا انتشار المنشآت الأصغر والصغيرة والمتوسطة على المستوى الوطني ولا حجم الإقراض في القطاع المالي.",
+   "new": "تفيد وكالة تنمية المنشآت الصغيرة والأصغر (SMEPS) بأنها دعمت في عام 2024 عددًا بلغ 8,217 منشأة من المنشآت الأصغر والصغيرة والمتوسطة، وصرفت 22,865,322 دولارًا. وللفترة 2021–2024 تفيد الوكالة بأن دعمها شمل 31,560 منشأة، وبإجمالي برامجي قدره 54.7 مليون دولار لا تسجّل قاعدة الأدلة ما إذا كان مبلغًا ملتزَمًا به أم مصروفًا. وقد يحتسب إجمالي 2021–2024 المنشأة نفسها في أكثر من سنة، ولذلك لا يمثل عددًا للمنشآت الفريدة. وهذه نتائج برنامجية تبلغ عنها الوكالة نفسها، وتصف نطاق البرنامج وتمويله، لا انتشار المنشآت الأصغر والصغيرة والمتوسطة على المستوى الوطني ولا حجم الإقراض في القطاع المالي. وبصورة منفصلة، تفيد منظمة التعاون الاقتصادي والتنمية (OECD) بأن برنامج ضمان القروض اليمني (YLG)، الذي يقدم ضمانات جزئية للقروض التي تمنحها البنوك ومؤسسات التمويل الأصغر للمنشآت الأصغر والصغيرة والمتوسطة، ضمن منذ عام 2017 ما مجموعه 5,731 معاملة، بضمانات تراكمية قدرها 42.8 مليون دولار لأصل قروض قدره 63.6 مليون دولار."
+  },
+  {
+   "finding": "E2-5:S5-GUARANTEES/S5-CORRESPONDENT",
+   "sheet": "06_EVIDENCE_OBJECTS",
+   "row": 110,
+   "col": 8,
+   "field": "CLM-059.definition_en",
+   "old": "The number of micro, small and medium enterprises (MSMEs) that SMEPS reports supporting, and the programme funds it reports, for 2024 and for 2021–2024.",
+   "new": "The number of micro, small and medium enterprises (MSMEs) that SMEPS reports supporting, and the programme funds it reports, for 2024 and for 2021–2024; and the transactions, guarantees and loan principal of the Yemen Loan Guarantee Program (YLG) since 2017, as the OECD reports them."
+  },
+  {
+   "finding": "E2-5:S5-GUARANTEES/S5-CORRESPONDENT",
+   "sheet": "06_EVIDENCE_OBJECTS",
+   "row": 110,
+   "col": 9,
+   "field": "CLM-059.definition_ar",
+   "old": "عدد المنشآت الأصغر والصغيرة والمتوسطة التي تفيد وكالة SMEPS بأنها دعمتها، والمبالغ البرامجية التي تفيد بها، لعام 2024 وللفترة 2021–2024.",
+   "new": "عدد المنشآت الأصغر والصغيرة والمتوسطة التي تفيد وكالة SMEPS بأنها دعمتها، والمبالغ البرامجية التي تفيد بها، لعام 2024 وللفترة 2021–2024؛ والمعاملات والضمانات وأصل القروض في برنامج ضمان القروض اليمني (YLG) منذ عام 2017، كما تفيد بها منظمة التعاون الاقتصادي والتنمية (OECD)."
+  },
+  {
+   "finding": "E2-5:S5-GUARANTEES/S5-CORRESPONDENT",
+   "sheet": "06_EVIDENCE_OBJECTS",
+   "row": 110,
+   "col": 10,
+   "field": "CLM-059.period_en",
+   "old": "2024; cumulative 2021–2024",
+   "new": "2024; cumulative 2021–2024 (SMEPS); cumulative since 2017, reported in 2026 (YLG)"
+  },
+  {
+   "finding": "E2-5:S5-GUARANTEES/S5-CORRESPONDENT",
+   "sheet": "06_EVIDENCE_OBJECTS",
+   "row": 110,
+   "col": 11,
+   "field": "CLM-059.period_ar",
+   "old": "2024؛ وتراكمي 2021–2024",
+   "new": "2024؛ وتراكمي 2021–2024 (SMEPS)؛ وتراكمي منذ 2017، أُبلغ عنه في 2026 (YLG)"
+  },
+  {
+   "finding": "E2-5:S5-GUARANTEES/S5-CORRESPONDENT",
+   "sheet": "06_EVIDENCE_OBJECTS",
+   "row": 110,
+   "col": 12,
+   "field": "CLM-059.universe_en",
+   "old": "Micro, small and medium enterprises supported by SMEPS programmes, and the programme portfolio",
+   "new": "Micro, small and medium enterprises supported by SMEPS programmes, and the programme portfolio; loan transactions guaranteed by the Yemen Loan Guarantee Program (YLG)"
+  },
+  {
+   "finding": "E2-5:S5-GUARANTEES/S5-CORRESPONDENT",
+   "sheet": "06_EVIDENCE_OBJECTS",
+   "row": 110,
+   "col": 13,
+   "field": "CLM-059.universe_ar",
+   "old": "المنشآت الأصغر والصغيرة والمتوسطة التي دعمتها برامج وكالة SMEPS، ومحفظة هذه البرامج.",
+   "new": "المنشآت الأصغر والصغيرة والمتوسطة التي دعمتها برامج وكالة SMEPS، ومحفظة هذه البرامج؛ ومعاملات القروض التي ضمنها برنامج ضمان القروض اليمني (YLG)."
+  },
+  {
+   "finding": "E2-5:S5-GUARANTEES/S5-CORRESPONDENT",
+   "sheet": "06_EVIDENCE_OBJECTS",
+   "row": 110,
+   "col": 14,
+   "field": "CLM-059.method_en",
+   "old": "Programme outputs and funding as reported by SMEPS in its 2024 annual report.",
+   "new": "Programme outputs and funding as reported by SMEPS in its 2024 annual report. The YLG figures as reported by the OECD in Promoting Economic Resilience in Yemen (2026), page 32."
+  },
+  {
+   "finding": "E2-5:S5-GUARANTEES/S5-CORRESPONDENT",
+   "sheet": "06_EVIDENCE_OBJECTS",
+   "row": 110,
+   "col": 15,
+   "field": "CLM-059.method_ar",
+   "old": "مخرجات البرامج وتمويلها كما أوردتها وكالة SMEPS في تقريرها السنوي لعام 2024.",
+   "new": "مخرجات البرامج وتمويلها كما أوردتها وكالة SMEPS في تقريرها السنوي لعام 2024. وأرقام برنامج YLG كما أوردتها منظمة التعاون الاقتصادي والتنمية (OECD) في تقرير «تعزيز الصمود الاقتصادي في اليمن» (2026)، الصفحة 32."
+  },
+  {
+   "finding": "E2-5:S5-GUARANTEES/S5-CORRESPONDENT",
+   "sheet": "06_EVIDENCE_OBJECTS",
+   "row": 110,
+   "col": 16,
+   "field": "CLM-059.limitations_en",
+   "old": "Programme-supported MSMEs are not the national MSME universe, programme disbursement is not financial-sector lending, and programme outputs are not national or causal outcomes. The 2021–2024 total is not a count of unique firms. | Programme figures count the programme's own participants and disbursements; they are not drawn from a national sample of firms. Whether the USD 54.7 million 2021–2024 total is committed or disbursed funding is not recorded in the evidence base.",
+   "new": "Programme-supported MSMEs are not the national MSME universe, programme disbursement is not financial-sector lending, and programme outputs are not national or causal outcomes. The 2021–2024 total is not a count of unique firms. A guarantee volume is not firms' access to finance: guaranteed transactions are not unique firms, and guarantees and loan principal show what the programme backed, not how many firms could borrow, on what terms, or what share of MSME lending they represent. | Programme figures count the programme's own participants and disbursements; they are not drawn from a national sample of firms. Whether the USD 54.7 million 2021–2024 total is committed or disbursed funding is not recorded in the evidence base."
+  },
+  {
+   "finding": "E2-5:S5-GUARANTEES/S5-CORRESPONDENT",
+   "sheet": "06_EVIDENCE_OBJECTS",
+   "row": 110,
+   "col": 17,
+   "field": "CLM-059.limitations_ar",
+   "old": "ليست المنشآت التي دعمها البرنامج مجموعَ المنشآت الأصغر والصغيرة والمتوسطة على المستوى الوطني، وليس صرف البرنامج إقراضًا من القطاع المالي، وليست المخرجات البرنامجية نتائج وطنية أو سببية. ولا يمثل إجمالي 2021–2024 عددًا للمنشآت الفريدة. | تحصي أرقام البرنامج المشاركين فيه وما صرفه، ولا تستند إلى عينة وطنية من المنشآت. ولا تسجّل قاعدة الأدلة ما إذا كان إجمالي 54.7 مليون دولار للفترة 2021–2024 مبلغًا ملتزَمًا به أم مصروفًا.",
+   "new": "ليست المنشآت التي دعمها البرنامج مجموعَ المنشآت الأصغر والصغيرة والمتوسطة على المستوى الوطني، وليس صرف البرنامج إقراضًا من القطاع المالي، وليست المخرجات البرنامجية نتائج وطنية أو سببية. ولا يمثل إجمالي 2021–2024 عددًا للمنشآت الفريدة. وليس حجم الضمانات وصولًا للمنشآت إلى التمويل: فالمعاملات المضمونة ليست منشآت فريدة، والضمانات وأصل القروض يبينان ما دعمه البرنامج، لا عدد المنشآت التي تمكنت من الاقتراض ولا شروطه ولا حصته من إقراض المنشآت الأصغر والصغيرة والمتوسطة. | تحصي أرقام البرنامج المشاركين فيه وما صرفه، ولا تستند إلى عينة وطنية من المنشآت. ولا تسجّل قاعدة الأدلة ما إذا كان إجمالي 54.7 مليون دولار للفترة 2021–2024 مبلغًا ملتزَمًا به أم مصروفًا."
+  },
+  {
+   "finding": "E2-5:S5-GUARANTEES/S5-CORRESPONDENT",
+   "sheet": "06_EVIDENCE_OBJECTS",
+   "row": 110,
+   "col": 18,
+   "field": "CLM-059.currentness_en",
+   "old": "The latest observation in this record refers to 2024, with a cumulative total for 2021–2024. It should not be read as describing a later period unless a newer comparable observation is published.",
+   "new": "The latest observation in this record refers to 2024, with a cumulative total for 2021–2024. The YLG figures are cumulative since 2017 as reported in a report published in 2026, which states no end date for that period. It should not be read as describing a later period unless a newer comparable observation is published."
+  },
+  {
+   "finding": "E2-5:S5-GUARANTEES/S5-CORRESPONDENT",
+   "sheet": "06_EVIDENCE_OBJECTS",
+   "row": 110,
+   "col": 19,
+   "field": "CLM-059.currentness_ar",
+   "old": "تعود أحدث مشاهدة في هذا السجل إلى عام 2024، مع إجمالي تراكمي للفترة 2021–2024، ولا تُقرأ على أنها تصف فترة لاحقة ما لم تُنشر مشاهدة أحدث قابلة للمقارنة.",
+   "new": "تعود أحدث مشاهدة في هذا السجل إلى عام 2024، مع إجمالي تراكمي للفترة 2021–2024، وأرقام برنامج YLG تراكمية منذ عام 2017 كما وردت في تقرير نُشر عام 2026، لا يذكر تاريخًا لنهاية تلك الفترة. ولا تُقرأ على أنها تصف فترة لاحقة ما لم تُنشر مشاهدة أحدث قابلة للمقارنة."
+  },
+  {
+   "finding": "E2-5:S5-GUARANTEES/S5-CORRESPONDENT",
+   "sheet": "06_EVIDENCE_OBJECTS",
+   "row": 110,
+   "col": 24,
+   "field": "CLM-059.source_dependencies",
+   "old": "SRC-SMEPS-AR2024-2025",
+   "new": "SRC-SMEPS-AR2024-2025; SRC-OECD-YEM-RESILIENCE-001"
+  },
+  {
+   "finding": "E2-5:S5-GUARANTEES/S5-CORRESPONDENT",
+   "sheet": "06_EVIDENCE_OBJECTS",
+   "row": 110,
+   "col": 25,
+   "field": "CLM-059.source_links",
+   "old": "[{\"source_id\":\"SRC-SMEPS-AR2024-2025\",\"url\":\"https://smeps.org.ye/post/85\",\"audit_state\":\"PASS_AUTHORITY_OR_PROVIDER_LOCATOR\"}]",
+   "new": "[{\"source_id\":\"SRC-SMEPS-AR2024-2025\",\"url\":\"https://smeps.org.ye/post/85\",\"audit_state\":\"PASS_AUTHORITY_OR_PROVIDER_LOCATOR\"},{\"source_id\":\"SRC-OECD-YEM-RESILIENCE-001\",\"url\":\"https://doi.org/10.1787/81ed2898-en\",\"audit_state\":\"SECONDARY_RESEARCH_LOCATOR\"}]"
+  },
+  {
+   "finding": "E2-5:S5-GUARANTEES/S5-CORRESPONDENT",
+   "sheet": "06_EVIDENCE_OBJECTS",
+   "row": 33,
+   "col": 6,
+   "field": "QUAL-001.summary_en",
+   "old": "The Organisation for Economic Co-operation and Development (OECD) links fragmented institutions, supervisory gaps and weak formal access to financial-sector fragility and low trust. The evidence is contextual interpretation, not measured prevalence or a causal effect estimate.",
+   "new": "The Organisation for Economic Co-operation and Development (OECD) links fragmented institutions, supervisory gaps and weak formal access to financial-sector fragility and low trust. On correspondent banking, the OECD writes that the conflict has severely undermined the confidence of several foreign correspondent banks, given perceived risks of money laundering and terrorism financing, isolating the Yemeni banking sector from regional and international financial networks. The evidence is contextual interpretation, not measured prevalence or a causal effect estimate."
+  },
+  {
+   "finding": "E2-5:S5-GUARANTEES/S5-CORRESPONDENT",
+   "sheet": "06_EVIDENCE_OBJECTS",
+   "row": 33,
+   "col": 7,
+   "field": "QUAL-001.summary_ar",
+   "old": "يربط تحليل منظمة التعاون الاقتصادي والتنمية (OECD) بين تفتت المؤسسات وفجوات الرقابة وضعف الوصول الرسمي وبين هشاشة القطاع المالي وانخفاض الثقة. هذا دليل تفسيري سياقي، وليس قياسًا للانتشار أو تقديرًا لأثر سببي.",
+   "new": "يربط تحليل منظمة التعاون الاقتصادي والتنمية (OECD) بين تفتت المؤسسات وفجوات الرقابة وضعف الوصول الرسمي وبين هشاشة القطاع المالي وانخفاض الثقة. وفي ما يخص المراسلة المصرفية، تكتب المنظمة أن النزاع أضعف بشدة ثقة عدد من البنوك المراسلة الأجنبية، بالنظر إلى المخاطر المتصوَّرة لغسل الأموال وتمويل الإرهاب، مما عزل القطاع المصرفي اليمني عن الشبكات المالية الإقليمية والدولية. هذا دليل تفسيري سياقي، وليس قياسًا للانتشار أو تقديرًا لأثر سببي."
+  },
+  {
+   "finding": "E2-5:S5-GUARANTEES/S5-CORRESPONDENT",
+   "sheet": "06_EVIDENCE_OBJECTS",
+   "row": 33,
+   "col": 16,
+   "field": "QUAL-001.limitations_en",
+   "old": "It cannot establish prevalence, a quantified level of trust or a causal effect size.",
+   "new": "It cannot establish prevalence, a quantified level of trust or a causal effect size. Its statement on correspondent banks counts no relationships and dates no loss: it is the OECD's assessment, not a supervisory record or a measure of de-risking."
+  },
+  {
+   "finding": "E2-5:S5-GUARANTEES/S5-CORRESPONDENT",
+   "sheet": "06_EVIDENCE_OBJECTS",
+   "row": 33,
+   "col": 17,
+   "field": "QUAL-001.limitations_ar",
+   "old": "لا يثبت الانتشار أو مستوى ثقة كميًا أو حجم أثر سببي.",
+   "new": "لا يثبت الانتشار أو مستوى ثقة كميًا أو حجم أثر سببي. ولا يحصي ما يقوله عن البنوك المراسلة أي علاقات، ولا يؤرخ أي انقطاع: فهو تقدير المنظمة، لا سجل رقابي ولا قياس لتقليص المخاطر (de-risking)."
+  },
+  {
+   "finding": "E2-5:S5-GUARANTEES/S5-CORRESPONDENT",
+   "sheet": "02_SITE_MAP",
+   "row": 69,
+   "col": 7,
+   "field": "/evidence/CLM-059/.meta_description_en",
+   "old": "Support and disbursement figures reported by the Small and Micro Enterprise Promotion Service (SMEPS) describe the programme, not all MSMEs in Yemen.",
+   "new": "Figures reported by the Small and Micro Enterprise Promotion Service (SMEPS) and, via the OECD, by the Yemen Loan Guarantee Program describe the programmes, not all MSMEs in Yemen."
+  },
+  {
+   "finding": "E2-5:S5-GUARANTEES/S5-CORRESPONDENT",
+   "sheet": "02_SITE_MAP",
+   "row": 69,
+   "col": 8,
+   "field": "/evidence/CLM-059/.meta_description_ar",
+   "old": "أرقام الدعم والصرف التي تفيد بها وكالة تنمية المنشآت الصغيرة والأصغر (SMEPS) تصف البرنامج، لا جميع المنشآت في اليمن.",
+   "new": "أرقام وكالة تنمية المنشآت الصغيرة والأصغر (SMEPS)، وأرقام برنامج ضمان القروض اليمني كما تنقلها OECD، تصف البرنامجين، لا جميع المنشآت في اليمن."
+  },
+  {
+   "finding": "E2-5:S5-GUARANTEES/S5-CORRESPONDENT",
+   "sheet": "07_PUBLIC_CLAIMS",
+   "row": 62,
+   "col": 5,
+   "field": "CLM-059.evidence_inputs",
+   "old": "[\"219_SMEPS_PROGRAMME_EVIDENCE\",\"EP-SMEPS-2024-PROGRAMME\"]",
+   "new": "[\"219_SMEPS_PROGRAMME_EVIDENCE\",\"EP-SMEPS-2024-PROGRAMME\",\"OECD-YEM-015\",\"OECD-YEM-016\",\"OECD-YEM-017\"]"
+  },
+  {
+   "finding": "E2-5:S5-GUARANTEES/S5-CORRESPONDENT",
+   "sheet": "07_PUBLIC_CLAIMS",
+   "row": 62,
+   "col": 2,
+   "field": "CLM-059.theme",
+   "old": "Firms / SME programme reach",
+   "new": "Firms / SME programme reach and guarantees"
+  },
+  {
+   "finding": "E2-5:S5-GUARANTEES/S5-CORRESPONDENT",
+   "sheet": "03_PAGE_SECTIONS",
+   "row": 128,
+   "col": 5,
+   "field": "/firms/#s7.body_en",
+   "old": "The Small and Micro Enterprise Promotion Service (SMEPS) reports that in 2024 it supported 8,217 MSMEs and disbursed USD 22,865,322, and that across 2021–2024 its support reached 31,560 MSMEs with a programme total of USD 54.7 million; the evidence base does not specify whether this total is funding committed or funding disbursed. The 2021–2024 total is not established as a count of unique firms. These are programme-delivery measures for the firms the programme supported; they are not a count of Yemen’s MSME population, a measure of financial-sector lending, or proof of causal impact.",
+   "new": "The Small and Micro Enterprise Promotion Service (SMEPS) reports that in 2024 it supported 8,217 MSMEs and disbursed USD 22,865,322, and that across 2021–2024 its support reached 31,560 MSMEs with a programme total of USD 54.7 million; the evidence base does not specify whether this total is funding committed or funding disbursed. The 2021–2024 total is not established as a count of unique firms. These are programme-delivery measures for the firms the programme supported; they are not a count of Yemen’s MSME population, a measure of financial-sector lending, or proof of causal impact.\nA different kind of programme evidence: the OECD reports that since 2017 the Yemen Loan Guarantee Program (YLG) has guaranteed 5,731 transactions, with USD 42.8 million of guarantees for USD 63.6 million of loan principal. These are guarantee volumes: they show what the programme backed, not how many firms could borrow, on what terms, or what share of MSME lending they represent."
+  },
+  {
+   "finding": "E2-5:S5-GUARANTEES/S5-CORRESPONDENT",
+   "sheet": "03_PAGE_SECTIONS",
+   "row": 129,
+   "col": 7,
+   "field": "/firms/#s7.body_ar",
+   "old": "تفيد وكالة تنمية المنشآت الصغيرة والأصغر (SMEPS) بأنها دعمت 8,217 منشأة من المنشآت الأصغر والصغيرة والمتوسطة في 2024 وصرفت 22,865,322 دولارًا، وأن دعمها خلال 2021–2024 شمل 31,560 منشأة بإجمالي للبرنامج قدره 54.7 مليون دولار، ولا تحدد قاعدة الأدلة ما إذا كان هذا الإجمالي تمويلًا ملتزمًا به أم مصروفًا. ولم يثبت أن إجمالي 2021–2024 عدد لمنشآت فريدة. وهذه مقاييس لتنفيذ البرنامج في المنشآت التي دعمها، ولا تمثل عدد المنشآت في اليمن ولا حجم إقراض القطاع المالي، ولا تثبت أثرًا سببيًا.",
+   "new": "تفيد وكالة تنمية المنشآت الصغيرة والأصغر (SMEPS) بأنها دعمت 8,217 منشأة من المنشآت الأصغر والصغيرة والمتوسطة في 2024 وصرفت 22,865,322 دولارًا، وأن دعمها خلال 2021–2024 شمل 31,560 منشأة بإجمالي للبرنامج قدره 54.7 مليون دولار، ولا تحدد قاعدة الأدلة ما إذا كان هذا الإجمالي تمويلًا ملتزمًا به أم مصروفًا. ولم يثبت أن إجمالي 2021–2024 عدد لمنشآت فريدة. وهذه مقاييس لتنفيذ البرنامج في المنشآت التي دعمها، ولا تمثل عدد المنشآت في اليمن ولا حجم إقراض القطاع المالي، ولا تثبت أثرًا سببيًا.\nونوع آخر من الأدلة البرنامجية: تفيد منظمة التعاون الاقتصادي والتنمية (OECD) بأن برنامج ضمان القروض اليمني (YLG) ضمن منذ عام 2017 ما مجموعه 5,731 معاملة، بضمانات قدرها 42.8 مليون دولار لأصل قروض قدره 63.6 مليون دولار. وهذه أحجام ضمانات: تبين ما دعمه البرنامج، لا عدد المنشآت التي تمكنت من الاقتراض ولا شروطه ولا حصته من إقراض المنشآت الأصغر والصغيرة والمتوسطة."
+  },
+  {
+   "finding": "E2-5:S5-GUARANTEES/S5-CORRESPONDENT",
+   "sheet": "29_OECD_BENCHMARKS",
+   "row": 46,
+   "col": 11,
+   "field": "OECD-YEM-012.verification_state",
+   "old": "NOT_VERIFIED_AGAINST_OECD_TEXT",
+   "new": "CONFIRMED"
+  },
+  {
+   "finding": "E2-5:S5-GUARANTEES/S5-CORRESPONDENT",
+   "sheet": "29_OECD_BENCHMARKS",
+   "row": 47,
+   "col": 11,
+   "field": "OECD-YEM-013.verification_state",
+   "old": "NOT_VERIFIED_AGAINST_OECD_TEXT",
+   "new": "CONFIRMED"
+  },
+  {
+   "finding": "E2-5:S5-GUARANTEES/S5-CORRESPONDENT",
+   "sheet": "29_OECD_BENCHMARKS",
+   "row": 48,
+   "col": 11,
+   "field": "OECD-YEM-014.verification_state",
+   "old": "NOT_VERIFIED_AGAINST_OECD_TEXT",
+   "new": "CONFIRMED"
+  },
+  {
+   "finding": "E2-5:S5-GUARANTEES/S5-CORRESPONDENT",
+   "sheet": "29_OECD_BENCHMARKS",
+   "row": 49,
+   "col": 11,
+   "field": "OECD-YEM-015.verification_state",
+   "old": "NOT_VERIFIED_AGAINST_OECD_TEXT",
+   "new": "CONFIRMED"
+  },
+  {
+   "finding": "E2-5:S5-GUARANTEES/S5-CORRESPONDENT",
+   "sheet": "29_OECD_BENCHMARKS",
+   "row": 50,
+   "col": 11,
+   "field": "OECD-YEM-016.verification_state",
+   "old": "NOT_VERIFIED_AGAINST_OECD_TEXT",
+   "new": "CONFIRMED"
+  },
+  {
+   "finding": "E2-5:S5-GUARANTEES/S5-CORRESPONDENT",
+   "sheet": "29_OECD_BENCHMARKS",
+   "row": 51,
+   "col": 11,
+   "field": "OECD-YEM-017.verification_state",
+   "old": "NOT_VERIFIED_AGAINST_OECD_TEXT",
+   "new": "CONFIRMED"
+  }
+ ]
+}
