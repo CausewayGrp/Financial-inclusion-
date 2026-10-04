@@ -66,7 +66,7 @@ def counts():
         ("generated_locale_pages", 2 * ps["spec_count"]),                       # one page per Page Spec and language
         ("generated_html_total_including_root_and_404", 2 * ps["spec_count"] + 2),
         ("public_object_source_closure_records", len(L("sources/public_object_source_closure.json"))),
-        ("chronology_events", len(L("visuals/system_chronology.json"))),
+        ("chronology_events", sum(1 for r in L("visuals/system_chronology.json") if r.get("event_class") != "SYSTEM_INTERPRETATION")),   # dated events (RC-2)
         ("sources_without_public_locator", len(smap) - sum(1 for s in smap if str(s.get("primary_url") or "").strip().lower().startswith(("http://", "https://")))),
     ])
 

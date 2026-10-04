@@ -16,7 +16,7 @@ from pathlib import Path
 
 from . import render as R
 from .render import CUR, bdi, clock, compact, crumb, esc, footer, head, header, iso, json_block, page_util, paras, print_foot, rubric, source_card, spine, strip
-from .visuals import figure, num
+from .visuals import figure, num, text_alt
 
 ROOT = Path(__file__).resolve().parents[2]
 EMAIL = re.compile(r"\b[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}\b")
@@ -96,7 +96,9 @@ def blocks(page: dict, L: dict, start_id: str = "blk") -> tuple[str, list]:
             items = "".join(compact_obj(r, L, boundary=True) for r in b["items"])
         else:
             items = "".join(measure_obj(m) for m in b["items"])
-        out.append(f'<section class="qa" id="{id_}"><div><h2>{esc(b["heading"])}</h2></div><div class="objs">{items}</div></section>')
+        # RC-15 (B15 d, B-5): a governed line that says which priorities a page shows (Explore: the P0 items)
+        note = f'<p class="small" data-ma-basis>{esc(b["note"])}</p>' if b.get("note") else ""
+        out.append(f'<section class="qa" id="{id_}"><div><h2>{esc(b["heading"])}</h2></div><div>{note}<div class="objs">{items}</div></div></section>')
         index.append((id_, b["heading"]))
     return "".join(out), index
 
@@ -108,15 +110,20 @@ def next_actions(nx: dict | None, id_: str = "next") -> tuple[str, list]:
     return f'<section class="qa" id="{id_}"><div><h2>{esc(nx["title"])}</h2></div><div><p class="small">{esc(nx["intro"])}</p><nav class="actions" aria-labelledby="next-h">{links}</nav></div></section>'.replace('<h2>', '<h2 id="next-h">', 1), [(id_, nx["title"])]
 
 
+def lead_paragraphs(lead: str) -> str:
+    """A governed lead as its paragraphs: a blank line in the Master starts a new one (the Compare intro, B7)."""
+    return "".join(f"<p>{linkify(iso(esc(x.strip())))}</p>" for x in re.split(r"\n\s*\n", lead) if x.strip())
+
+
 def head_block(page: dict, shell: dict, rubric_text: str = "", question: str = "", lead: str = "", crumb_html: str = "") -> str:
     return (f'<div class="head">{crumb_html}' + (f'<span class="rubric">{esc(rubric_text)}</span>' if rubric_text else "")
             + (f'<p class="q">{esc(question)}</p>' if question else "") + f'<h1 id="page-title">{esc(page["title"])}</h1>'
-            + (f'<div class="st"><p>{linkify(iso(esc(lead)))}</p></div>' if lead else "") + "</div>")
+            + (f'<div class="st">{lead_paragraphs(lead)}</div>' if lead else "") + "</div>")   # B7 review: a blank line starts a paragraph
 
 
 def page_html(page: dict, shell: dict, body: str, index: list, edges: list, kind: str = "website", extra: str = "", foot_index: bool = True) -> str:
     return (head(page, shell, page["route"], kind=kind, extra=extra) + header(shell)
-            + f'<article class="obj page-obj">{body}{page_util(shell)}</article>{spine(index, edges)}{spine(index, edges, foot=True, foot_index=foot_index)}'
+            + f'<article class="obj page-obj">{body}{page_util(shell, page)}</article>{spine(index, edges)}{spine(index, edges, foot=True, foot_index=foot_index)}'
             + footer(shell, print_foot(shell, page["route"], page["title"])))
 
 
@@ -163,9 +170,9 @@ def domain(page: dict, shell: dict) -> str:
     origin = R.DISC.origin()
     # the governed question is the head's framing line (rubric "the question this page answers"); the Explore link sits in the head's actions
     parts = [head_block(page, shell, L["answer_crumb"] if page["question"] else L["question_flow"], question=page["question"], lead=page["lead"])]
-    # the governed reading rule (the baseline's hero aside) as the head's fine print, and the two governed head actions
-    parts.append(f'<div class="head-rule"><span class="rubric">{esc(L["reading_rule"])}</span><p class="small">{esc(L["reading_rule_copy"])}</p>'
-                 f'<div class="actions"><a href="{page["hrefs"]["explore"]}">{esc(L["start"])}</a><a href="{page["primary_verify"]}">{esc(L["verify_action"])}</a></div></div>')
+    # the two governed head actions. The reading rule ("How numbers are presented") is printed once, on /methodology/,
+    # and reached from this page's spine (owner instructions of 3 October 2026, 09:50, C5)
+    parts.append(f'<div class="head-rule"><div class="actions"><a href="{page["hrefs"]["explore"]}">{esc(L["start"])}</a><a href="{page["primary_verify"]}">{esc(L["verify_action"])}</a></div></div>')
     index = []
     # the always-visible boundaries (the contract's supporting sections) come before the answers, as the contract's mobile priority orders them
     for s in page["band"]:
@@ -199,7 +206,11 @@ def domain(page: dict, shell: dict) -> str:
         depth += fig(vid)
     if depth:
         depth = f'<div class="multiple">{depth}</div>'
-    for vid in page["visuals"]:
+    for vid, v in page["visuals"].items():
+        # A5 / C4 (owner decision, 2 October 2026): a contract retired from design is not a depth frame on a domain
+        # answer (VIS-CAPITAL-CONTEXT on /reforms/); its record page and the link to it stay
+        if v.get("tier") == "RETIRE_FROM_DESIGN":
+            continue
         depth += fig(vid)
     if depth:
         parts.append(f'<section class="qa figs" id="views"><div>{rubric(L["visual"])}</div><div>{depth}</div></section>')
@@ -225,13 +236,15 @@ def domain(page: dict, shell: dict) -> str:
     all_recs = "".join(f'<li><a href="{r["href"]}">{esc(r["title"])}</a></li>' for r in page["all_records"])
     verify = "".join(compact_obj(r, L, L["open_record"]) for r in page["verify"])
     parts.append(f'<section class="qa" id="verify"><div><h2>{esc(L["verify"])}</h2></div><div><p class="small">{esc(L["verify_intro"])}</p><div class="objs">{verify}</div>'
-                 f'<div class="actions"><a href="{page["hrefs"]["evidence"]}">{esc(L["evidence"])}</a><a href="{page["hrefs"]["data"]}">{esc(L["data"])}</a><a href="{page["hrefs"]["methodology"]}">{esc(L["method"])}</a></div>'
+                 f'<div class="actions"><a href="{page["hrefs"]["evidence"]}">{esc(L["evidence"])}</a><a href="{page["hrefs"]["data"]}">{esc(L["data"])}</a><a href="{page["hrefs"]["methodology"]}">{esc(L["method"])}</a>'
+                 + (f'<a href="{page["compare_preset"]["href"]}" data-compare-preset>{esc(page["compare_preset"]["label"])}</a>' if page.get("compare_preset") else "") + '</div>'
                  + (f'<details class="more mt12"><summary>{esc(L["all_records"])} ({bdi(len(page["all_records"]))})</summary><ul class="rlist">{all_recs}</ul></details>' if all_recs else "") + "</div></section>")
     index.append(("verify", L["verify"]))
     parts.insert(2 + len(page["band"]), strip(index))   # after the always-visible boundaries, before the first answer (DEBT-014; band stays first)
     edges = [(L["verify"], [f'<a href="{r["href"]}">{esc(r["title"])}</a>' for r in page["verify"]], L["verify_intro"]),
              (L["readings"], [f'<a href="{r["href"]}">{esc(r["title"])}</a>' for r in page["readings"]]),
-             (page["related"]["heading"] if page["related"] else "", [f'<a href="{l["href"]}">{esc(l["label"])}</a>' for l in (page["related"] or {}).get("links", [])])]
+             (page["related"]["heading"] if page["related"] else "", [f'<a href="{l["href"]}">{esc(l["label"])}</a>' for l in (page["related"] or {}).get("links", [])]),
+             (L["method"], [f'<a href="{page["hrefs"]["reading_rule"]}" data-reading-rule>{esc(L["reading_rule"])}</a>'])]   # 09:50 C5: under the governed "Methodology" heading
     return page_html(page, shell, "".join(parts), index, edges, foot_index=False)
 
 
@@ -243,7 +256,8 @@ def chronology_block(ch: dict, L: dict, id_: str) -> str:
         items.append(f'<li class="compact" id="{esc(e["id"])}">{clock(L["period"], esc(e["period"]))}<div class="q">{esc(e["fact"])}</div>'
                      + (f'<div class="small"><b>{esc(CL["relevance"])}</b> {esc(e["relevance"])}</div>' if e["relevance"] else "")
                      + (f'<div class="small bnd-line"><b>{esc(CL["does_not_establish"])}</b> {esc(e["does_not_establish"])}</div>' if e["does_not_establish"] else "")
-                     + (f'<div class="small"><b>{esc(CL["sources"])}</b> {src}</div>' if src else "") + "</li>")
+                     + (f'<div class="small"><b>{esc(CL["sources"])}</b> {src}</div>' if src else "")
+                     + (f'<div class="small vnote">{esc(e["verification_note"])}</div>' if e.get("verification_note") else "") + "</li>")
     return f'<section class="qa" id="{id_}"><div><h2>{esc(ch["heading"])}</h2></div><div><p class="small">{esc(ch["intro"])}</p><ol class="objs chron">{"".join(items)}</ol></div></section>'
 
 
@@ -290,15 +304,23 @@ def comparison(page: dict, shell: dict) -> str:
                 + slot("compare-c", L["third"], optional, "optional") + slot("compare-d", L["fourth"], optional, "optional"))
     data = json.dumps(page["records"], ensure_ascii=False).replace("</", "<\\/")
     dims = json.dumps(page["dimensions"], ensure_ascii=False).replace("</", "<\\/")
+    # The governed lead closes with the tool's prompt on its own line ("Select at least two records."): it stands beside the
+    # controls, and the runtime shows it only while fewer than two records are selected (release candidate G4 item 6)
+    lead, prompt = page["lead"].rsplit("\n", 1) if "\n" in (page["lead"] or "") else (page["lead"], "")
+    prompt_html = f'<p class="small compare-prompt" data-compare-prompt>{esc(prompt)}</p>' if prompt else ""
     tool = (f'<section class="qa first compare" id="compare" data-comparison-family="Comparison"><div>{rubric(L["intro"])}<h2>{esc(L["title"])}</h2></div><div>'
-            + (f'<p class="st">{esc(v.get("alt_text") or "")}</p>' if v else "") + boundary
+            + (f'<p class="st">{esc(text_alt(v))}</p>' if v else "") + boundary + prompt_html   # A3: the summary; the boundary prints once
             + f'<div class="controls-grid">{controls}</div><div class="actions"><button type="button" class="tbtn" data-compare-copy>{esc(L["copy_link"])}</button></div>'
             f'<p class="small never">{esc(L["never"])}</p><div id="compare-status" class="sr-only" role="status" aria-live="polite" aria-atomic="true"></div><div id="compare-output"></div>'
             f'<script type="application/json" id="yfie-compare">{data}</script><script type="application/json" id="yfie-compare-dimensions">{dims}</script></div></section>')
-    parts = [head_block(page, shell, SL["understand_explore_verify"], lead=page["lead"]), tool]
+    parts = [head_block(page, shell, SL["understand_explore_verify"], lead=lead), tool]
     index = [("compare", L["title"])]
+    pre = page.get("compare_preset")
     for s in page["sections"]:
-        parts.append(answer(s, len(index) + 1, f"s{s['order']}"))
+        html_ = answer(s, len(index) + 1, f"s{s['order']}")
+        if pre and s["order"] == 2 and html_.endswith("</div></section>"):   # RC-17: under "Three measures that cannot be combined"
+            html_ = html_[: -len("</div></section>")] + f'<p class="small mt8" data-compare-preset><a href="{pre["href"]}">{esc(pre["label"])}</a></p></div></section>'
+        parts.append(html_)
         index.append((f"s{s['order']}", s["heading"]))
     n, ni = next_actions(page.get("next"))
     parts.append(n); index += ni
@@ -310,6 +332,29 @@ def comparison(page: dict, shell: dict) -> str:
 
 
 # ------------------------------------------------------------------------------------------------ Data & Source
+METHODS_SHELF = "measurement-methods-and-international-references"   # RC-12 (B13 c): the governed category's key
+
+
+def facet_attrs(c: dict) -> str:
+    """RC-12 (B13 a): the language-neutral filter keys and the sort date a source carries for the library's filters."""
+    f = c.get("facets") or {}
+    return "".join(f' data-f-{k}="{esc(f.get(k, ""))}"' for k in ("type", "publisher", "year", "domain", "date"))
+
+
+def library_controls(page: dict, L: dict) -> str:
+    """RC-12 (B13 a): the research library's filters and order. Hidden until the runtime runs, so without JavaScript
+    the full list stays as it is; every option is a governed value of a listed source (no option can return nothing)."""
+    def sel(key: str, label: str) -> str:
+        opts = "".join(f'<option value="{esc(k)}">{esc(v)}</option>' for k, v in page["facets"][key])
+        return (f'<label class="facet"><span>{esc(label)}</span><select data-source-facet="{key}">'
+                f'<option value="">{esc(L["f_any"])}</option>{opts}</select></label>')
+    order = (f'<label class="facet"><span>{esc(L["sort"])}</span><select data-source-sort><option value="">{esc(L["sort_grouped"])}</option>'
+             f'<option value="newest">{esc(L["sort_newest"])}</option></select></label>')
+    return (f'<div class="source-facets" data-source-facets hidden>{sel("type", L["f_type"])}{sel("publisher", L["f_publisher"])}'
+            f'{sel("year", L["f_year"])}{sel("domain", L["f_domain"])}{order}'
+            f'<button type="button" class="tbtn" data-source-facets-clear>{esc(L["f_clear"])}</button></div>')
+
+
 def source_row(c: dict, L: dict, curated: bool = False) -> str:
     """A source in the register. Curated cards carry their category, why they matter and their boundary; citation
     cards their governed title, kind and date; locator-only sources their reference and locator (never a title)."""
@@ -317,11 +362,15 @@ def source_row(c: dict, L: dict, curated: bool = False) -> str:
     if c["dependents"]:
         deps = (f'<details class="deps" data-dependent-evidence="{esc(c["id"])}"><summary>{esc(L["dependents"])} ({bdi(len(c["dependents"]))})</summary><ul class="rlist">'
                 + "".join(f'<li><a href="{d["href"]}">{esc(d["title"])}</a></li>' for d in c["dependents"]) + "</ul></details>")
+    if c.get("readings"):   # RC-12 (B13 b): the Evidence Readings that use the source
+        deps += (f'<details class="deps" data-source-readings="{esc(c["id"])}"><summary>{esc(L["readings"])} ({bdi(len(c["readings"]))})</summary><ul class="rlist">'
+                 + "".join(f'<li><a href="{d["href"]}">{esc(d["title"])}</a></li>' for d in c["readings"]) + "</ul></details>")
     cite = f'<button type="button" class="tbtn" data-source-cite data-source-citation="{esc(c["cite_payload"])}">{esc(L["copy_reference"])}</button>'
-    open_ = f'<a class="source-locator" href="{esc(c["url"])}" rel="noopener noreferrer" target="_blank">{esc(L["open_original"])}</a>'
+    # RC-12 (B13 d): a locator that is an archived copy (web.archive.org) says so on its link
+    open_ = f'<a class="source-locator" href="{esc(c["url"])}" rel="noopener noreferrer" target="_blank"{" data-archived-copy" if c.get("archived") else ""}>{esc(L["open_archived"] if c.get("archived") else L["open_original"])}</a>'
     rights = f'<p class="rights" data-rights-state>{esc(c["rights_state"])}</p>'
     ref = f'<span class="rref">{esc(L["reference"])} {bdi(c["id"])}</span>'
-    common = f'id="source-{esc(c["id"])}" data-source-record data-source-search="{esc(c["search"])}" tabindex="-1"'
+    common = f'id="source-{esc(c["id"])}" data-source-record data-source-search="{esc(c["search"])}" tabindex="-1"' + facet_attrs(c)
     if curated:
         return (f'<article class="src card" {common}><h4 dir="auto">{esc(c["title"])}</h4><span class="kind" dir="auto">{esc(c["kind_line"])}</span>{ref}'
                 + (f'<p class="small">{esc(c["why"])}</p>' if c["why"] else "")
@@ -329,19 +378,32 @@ def source_row(c: dict, L: dict, curated: bool = False) -> str:
                 + f'<div class="acts">{open_}{cite}</div>{rights}{deps}</article>')
     if c["display_ready"] and c["title"]:
         return f'<article class="src source-locator" {common}><strong dir="auto">{esc(c["title"])}</strong><span class="kind" dir="auto">{esc(c["kind_line"])}</span>{ref}<div class="acts">{open_}{cite}</div>{rights}{deps}</article>'
-    return f'<article class="src source-locator" {common}><strong>{esc(L["untitled"])}</strong>{ref}<a class="source-url" dir="ltr" href="{esc(c["url"])}" rel="noopener noreferrer" target="_blank">{esc(c["url"])}</a><div class="acts">{cite}</div>{rights}{deps}</article>'
+    kind = f'<span class="kind" dir="auto">{esc(c["kind_line"])}</span>' if c.get("kind_line") else ""   # B5 / EAD-07: "Document type not recorded"
+    return f'<article class="src source-locator" {common}><strong>{esc(L["untitled"])}</strong>{kind}{ref}<a class="source-url" dir="ltr" href="{esc(c["url"])}" rel="noopener noreferrer" target="_blank">{esc(c["url"])}</a><div class="acts">{cite}</div>{rights}{deps}</article>'
 
 
 def data_sources(page: dict, shell: dict) -> str:
     L = page["labels"]; SL = shell["labels"]
     parts = [head_block(page, shell, SL["understand_explore_verify"], lead=page["lead"])]
-    curated = "".join(f'<div class="cat"><h3>{esc(g["category"])}</h3><div class="objs">{"".join(source_row(c, L, curated=True) for c in g["items"])}</div></div>' for g in page["curated"])
+    # RC-12 (B13 c): each curated shelf is addressable (#shelf-<key>), and the methods and international references shelf
+    # is reached from the page index
+    curated = "".join(f'<div class="cat" id="shelf-{esc(g["key"])}"><h3>{esc(g["category"])}</h3><div class="objs">{"".join(source_row(c, L, curated=True) for c in g["items"])}</div></div>' for g in page["curated"])
     supporting = "".join(source_row(c, L) for c in page["supporting"])
+    # B5: the regulatory documents in one group with its scope line; a curated one keeps its card and is linked from here
+    also = "".join(f'<p class="src-also" data-source-also data-source-search="{esc(c["search"])}"{facet_attrs(c)}><a href="#source-{esc(c["id"])}" dir="auto">{esc(c["title"])}</a>'
+                   f' <span class="kind" dir="auto">{esc(c["kind_line"])} · {esc(L["curated"])}</span></p>' for c in page.get("regulatory_also") or [])
+    regulatory = "".join(source_row(c, L) for c in page.get("regulatory") or [])
+    reg_n = len(page.get("regulatory") or []) + len(page.get("regulatory_also") or [])
     reference = "".join(source_row(c, L) for c in page["reference"])
     tool = (f'<section class="qa first" id="directory"><div>{rubric(L["directory"], tag="h2")}</div><div><p class="small">{esc(L["intro"])}</p><p class="small">{esc(L["rights_note"])}</p>'
             f'<div class="search-inline"><input data-source-filter class="search-input" type="search" placeholder="{esc(L["filter_placeholder"])}" aria-label="{esc(L["filter"])}">'
             f'<div class="search-status" data-source-filter-status role="status" aria-live="polite"></div></div>'
+            + library_controls(page, L) +
+            f'<p class="small reuse-once" data-reuse-terms>{esc(L["reuse_once"])}</p>'   # B8: the reuse terms, stated once above the list
             f'<h3 class="grp" id="curated">{esc(L["curated"])} <span class="count">({bdi(page["curated_count"])})</span></h3><div class="curated">{curated}</div>'
+            + (f'<details class="source-locator-details source-regulatory-details grp" id="regulatory" open><summary>{esc(L["regulatory"])} <span class="count">({bdi(reg_n)})</span></summary>'
+               f'<p class="small">{esc(L["regulatory_scope"])}</p><div class="objs">{regulatory}</div>{also}</details>' if reg_n else "")
+            +
             # The supporting group stays open: it is the only place a locator-only source appears, and
             # `scripts/tests/test_public_tools.py` drives that source's cite control on this page. Closing it by
             # default shortened the page by 44 % but put that governed path behind a disclosure, and Design does not
@@ -350,7 +412,7 @@ def data_sources(page: dict, shell: dict) -> str:
             f'<details class="source-locator-details source-reference-details grp"><summary>{esc(L["reference_group"])} <span class="count">({bdi(len(page["reference"]))})</span></summary><p class="small">{esc(L["reference_intro"])}</p><div class="objs">{reference}</div></details>'
             f'<div class="empty small" data-source-no-results hidden>{esc(L["no_results"])}</div></div></section>')
     parts.append(tool)
-    index = [("directory", L["directory"])]
+    index = [("directory", L["directory"])] + [(f"shelf-{g['key']}", g["category"]) for g in page["curated"] if g["key"] == METHODS_SHELF]
     for s in page["sections"]:
         if s.get("inventory"):
             items = "".join(f'<div><dt>{esc(x["label"])}</dt><dd dir="ltr">{esc(x["value"])}</dd></div>' for x in s["inventory"])
@@ -363,7 +425,8 @@ def data_sources(page: dict, shell: dict) -> str:
                 ev.append(f'<li class="compact" id="{esc(e["id"])}">{clock(L["period"], esc(e["period"]))}<div class="q">{esc(e["fact"])}</div>'
                           + (f'<div class="small"><b>{esc(CL["relevance"])}</b> {esc(e["relevance"])}</div>' if e["relevance"] else "")
                           + (f'<div class="small bnd-line"><b>{esc(CL["does_not_establish"])}</b> {esc(e["does_not_establish"])}</div>' if e["does_not_establish"] else "")
-                          + (f'<div class="small"><b>{esc(CL["sources"])}</b> {src}</div>' if src else "") + "</li>")
+                          + (f'<div class="small"><b>{esc(CL["sources"])}</b> {src}</div>' if src else "")
+                          + (f'<div class="small vnote">{esc(e["verification_note"])}</div>' if e.get("verification_note") else "") + "</li>")
             parts.append(f'<section class="qa" id="chronology"><div>{rubric(s.get("role") or "")}<h2>{esc(s["heading"])}</h2></div><div><div class="body">{body_paras(s["paragraphs"])}</div>'
                          f'<p class="small mt12"><b>{esc(ch["heading"])}</b> · {esc(ch["intro"])}</p><ol class="objs chron">{"".join(ev)}</ol></div></section>')
             index.append(("chronology", s["heading"]))
@@ -410,7 +473,11 @@ def measurement(page: dict, shell: dict) -> str:
         more = "".join(f'<dt>{esc(x["label"])}</dt><dd>{esc(x["text"])}</dd>' for x in m.get("more") or [])
         examined = (f'<p class="small" data-measurement-readings><b>{esc(ML["examined"])}</b> ' + " · ".join(f'<a href="{x["href"]}">{esc(x["title"])}</a>' for x in m["examined"]) + "</p>") if m["examined"] else ""
         prios.append(f'<article class="obj prio" id="{esc(m["id"])}" tabindex="-1"><div class="head"><div class="clock"><span class="k">{esc(ML["priority"])}</span><span class="v">{bdi(m["priority"])} · {esc(m["domain"])}</span></div><h3>{esc(m["title"])}</h3></div>'
-                     f'<div class="body"><p><b>{esc(ML["current"])}</b> {esc(m["current"])}</p><p><b>{esc(ML["missing"])}</b> {esc(m["missing"])}</p><p><b>{esc(ML["unlocked"])}</b> {esc(m["unlocked"])}</p></div>{examined}'
+                     f'<div class="body">' + (f'<p data-ma-dimensions><b>{esc(ML["dimensions"])}</b> {esc(("، " if shell["lang"] == "ar" else ", ").join(m["dimensions"]))}</p>' if m.get("dimensions") else "")
+                     + f'<p><b>{esc(ML["current"])}</b> {esc(m["current"])}</p><p><b>{esc(ML["missing"])}</b> {esc(m["missing"])}</p><p><b>{esc(ML["unlocked"])}</b> {esc(m["unlocked"])}</p>'
+                     + (f'<div data-ma-decisions><p><b>{esc(ML["decisions"])}</b></p><ul class="rlist">' + "".join(f"<li>{esc(x)}</li>" for x in m["decisions"]) + "</ul></div>" if m.get("decisions") else "")
+                     + (f'<p data-ma-blocked><b>{esc(ML["blocked"])}</b> {esc(m["blocked"])}</p>' if m.get("blocked") else "")   # B6
+                     + f'</div>{examined}'
                      f'<div class="ref"><b>{esc(ML["reference"])}</b> {bdi(m["id"])}</div>' + (f'<details class="more"><summary>{esc(ML["more"])}</summary><dl class="kv">{more}</dl></details>' if more else "") + "</article>")
     ag = next((s for s in page["sections"] if s["order"] == 10), None)
     first_secs = [s for s in page["sections"] if s["order"] != 10]
@@ -449,6 +516,10 @@ def reference(page: dict, shell: dict) -> str:
         else:
             parts.append(f'<section class="qa first ctx" id="record" data-correction-context><div><h2>{esc(ctx["title"])}</h2></div><div><p class="small">{esc(ctx["intro"])}</p><div class="small" data-correction-empty>{esc(ctx["empty"])}</div>{origin_html}</div></section>')
             index.append(("record", ctx["title"]))
+    if page.get("reading_rule"):   # owner instructions of 3 October 2026, 09:50, C5: printed once, here
+        rr = page["reading_rule"]
+        parts.append(answer({"heading": rr["heading"], "role": "", "paragraphs": [rr["copy"]]}, len(index) + 1, "how-numbers"))
+        index.append(("how-numbers", rr["heading"]))
     for s in page["sections"]:
         parts.append(answer(s, len(index) + 1, f"s{s['order']}"))
         index.append((f"s{s['order']}", s["heading"]))
@@ -465,7 +536,7 @@ def reference(page: dict, shell: dict) -> str:
 def root_page(shell_ar: dict, shell_en: dict) -> str:
     origin = R.DISC.origin()
     links = R.DISC.head_links("/", "ar", origin).split(">", 1)[1]
-    return (f'<!doctype html><html><head><meta charset="utf-8"><title>{esc(shell_ar["product"])} · {esc(shell_en["product"])}</title>{links}'
+    return (f'<!doctype html><html><head><meta charset="utf-8">{R.DISC.robots_meta()}<link rel="icon" type="image/png" sizes="32x32" href="/assets/logo/CauseWay_logo_32.png"><title>{esc(shell_ar["product"])} · {esc(shell_en["product"])}</title>{links}'
             f'<script src="/assets/lang-redirect.js"></script><noscript><meta http-equiv="refresh" content="0;url=/ar/"></noscript></head></html>')
 
 
@@ -477,8 +548,8 @@ def not_found(page: dict, shell_ar: dict) -> str:
         return (f'<section lang="{lang}" dir="{"rtl" if lang == "ar" else "ltr"}" class="nf"><{h}{hid}>{esc(s["heading"])}</{h}><p class="st">{esc(s["body"])}</p>'
                 f'<div class="actions"><a href="/{lang}/">{esc(s["home"])}</a><a href="/{lang}/explore/">{esc(s["explore"])}</a><a href="/{lang}/evidence/">{esc(s["evidence"])}</a>'
                 f'<button type="button" class="tbtn" data-search-open>{esc(s["search"])}</button></div></section>')
-    return (f'<!doctype html><html lang="ar" dir="rtl"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">'
-            f'<title>{esc(page["title"]["ar"])} — {esc(page["product"]["en"])}</title><meta name="robots" content="noindex"><link rel="stylesheet" href="/assets/yfie.css"></head><body>'
+    return (f'<!doctype html><html lang="ar" dir="rtl"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><link rel="icon" type="image/png" sizes="32x32" href="/assets/logo/CauseWay_logo_32.png">'
+            f'<title>{esc(page["title"]["ar"])} — {esc(page["product"]["en"])}</title>{R.DISC.robots_meta("noindex")}<link rel="stylesheet" href="/assets/yfie.css"></head><body>'
             f'<main id="main"><div class="page"><article class="obj page-obj"><div class="head">{R.logo(48)}<span class="rubric">404 · {esc(page["title"]["ar"])} / <span dir="ltr">{esc(page["title"]["en"])}</span></span></div>'
             f'{section("ar")}{section("en")}</article></div></main>{R.search_dialog(shell_ar)}{json_block("yfie-ui", shell_ar["ui_json"])}<script src="/assets/app.js" defer></script></body></html>')
 

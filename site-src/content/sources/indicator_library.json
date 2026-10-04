@@ -555,9 +555,9 @@
     "label": "POS terminals",
     "domain": "Payments & digital finance",
     "units": "count",
-    "rows": 13,
+    "rows": 18,
     "period_min": "2024 Q3",
-    "period_max": "2026-01",
+    "period_max": "2026-06",
     "use_rule": "Use only within the dataset's comparability/publication rules."
   },
   {
@@ -566,9 +566,9 @@
     "label": "POS transactions",
     "domain": "Payments & digital finance",
     "units": "count",
-    "rows": 14,
+    "rows": 19,
     "period_min": "2024 Q1",
-    "period_max": "2026-01",
+    "period_max": "2026-06",
     "use_rule": "Use only within the dataset's comparability/publication rules."
   },
   {
@@ -577,9 +577,9 @@
     "label": "POS transaction value",
     "domain": "Payments & digital finance",
     "units": "YER_million",
-    "rows": 13,
+    "rows": 18,
     "period_min": "2024 Q1",
-    "period_max": "2026-01",
+    "period_max": "2026-06",
     "use_rule": "Use only within the dataset's comparability/publication rules."
   },
   {
@@ -2340,7 +2340,7 @@
     "rows": 1,
     "period_min": 2026,
     "period_max": 2026,
-    "use_rule": "98 listed companies; annual roster presence does not prove current operation."
+    "use_rule": "100 listed companies; annual roster presence does not prove current operation."
   },
   {
     "dataset_id": "DS-CBY-EXCHANGE-ROSTER-2026-COUNTS",
@@ -2351,7 +2351,7 @@
     "rows": 1,
     "period_min": 2026,
     "period_max": 2026,
-    "use_rule": "225 listed establishments; annual roster presence does not prove current operation."
+    "use_rule": "231 listed establishments; annual roster presence does not prove current operation."
   },
   {
     "dataset_id": "DS-CBY-EXCHANGE-ROSTER-2026-COUNTS",
@@ -2362,7 +2362,7 @@
     "rows": 1,
     "period_min": 2026,
     "period_max": 2026,
-    "use_rule": "106 listed agents; annual roster presence does not prove current operation."
+    "use_rule": "111 listed agents; annual roster presence does not prove current operation."
   },
   {
     "dataset_id": "DS-CBY-EXCHANGE-ROSTER-2026-COUNTS",
@@ -2373,6 +2373,6 @@
     "rows": 1,
     "period_min": 2026,
     "period_max": 2026,
-    "use_rule": "429 is an arithmetic row total only; do not call it a deduplicated unique-provider count."
+    "use_rule": "442 is an arithmetic row total only; do not call it a deduplicated unique-provider count."
   }
 ]

@@ -64,6 +64,8 @@ p{margin:0 0 .85em}p:last-child{margin-bottom:0}
 .controls{display:flex;align-items:center;gap:12px;font-size:14px;font-weight:500;white-space:nowrap}
 .controls .tbtn,.controls a{text-decoration:none}
 .controls .lang{border:1px solid var(--rule-2);padding:6px 9px}
+/* R-05: the language switch and the menu are links; they keep the box the buttons had (44 px including padding and border) */
+.controls a.tbtn{display:inline-flex;align-items:center;box-sizing:border-box}
 .controls .cite,.controls .report{display:none}
 /* page and object */
 .page{max-width:1240px;margin:0 auto;padding:18px 16px 40px;display:flex;flex-direction:column;gap:18px}
@@ -196,7 +198,7 @@ svg.rv2{display:block;overflow:visible;font-family:var(--font)}
 .bar-in{position:relative}
 .nav.open{display:flex;flex-direction:column;gap:2px;position:absolute;inset-inline:0;top:100%;background:var(--paper);border-bottom:2px solid var(--ink);padding:12px 16px;z-index:20;font-size:var(--fs-nav);font-weight:500}
 .nav.open a{padding:10px 0;text-decoration:none;border-bottom:1px solid var(--rule)}
-.nav.open .group{display:flex;flex-direction:column}
+.nav.open .group{display:flex;flex-direction:column}.nav.open .tbtn.m-only{align-self:flex-start;margin-top:10px}
 .nav.open .glabel{color:var(--mute);font-size:12px;font-weight:600;padding:10px 0 2px}
 [dir=ltr] .nav.open .glabel{text-transform:uppercase;letter-spacing:.08em}
 .controls .tbtn,.controls a{min-height:44px}
@@ -205,9 +207,15 @@ dialog.search::backdrop{background:rgba(23,33,43,.55)}
 .search-panel{padding:18px 20px 22px;display:flex;flex-direction:column;gap:12px}
 .search-head{display:flex;justify-content:space-between;align-items:baseline;gap:16px}
 .search-head strong{font-size:var(--fs-q)}
-.search-input{width:100%;padding:12px 14px;border:1px solid var(--rule-2);background:var(--paper);font-size:var(--fs-body)}
+.search-input{width:100%;box-sizing:border-box;padding:12px 14px;border:1px solid var(--rule-2);background:var(--paper);font-size:var(--fs-body)}
 .search-input:focus-visible{outline-offset:0}
 .search-status{font-size:var(--fs-clock);color:var(--ink-2);min-height:1.4em}
+/* Inline figure emphasis (RC-18 4.1, RC-1115): its own class, inline type only — never the .fig figure frame. */
+b.fnum{font-weight:700;font-size:1.08em;font-variant-numeric:lining-nums}
+.cite-preview{flex-basis:100%;border-top:1px solid var(--rule);padding-top:8px}.cite-preview .cite-h{margin:0;font-size:var(--fs-clock);font-weight:600;color:var(--ink-2)}.cite-preview .cite-text{margin:4px 0 0;font-size:var(--fs-src);color:var(--ink-2);overflow-wrap:anywhere}.cite-preview .cite-text bdi.url,.cite-preview .cite-text bdi[data-cite-url]{display:inline-block;max-width:100%;vertical-align:top;white-space:normal;overflow-wrap:anywhere}.cite-long{margin-top:6px}.cite-long summary{cursor:pointer;font-size:var(--fs-clock);color:var(--ink-2)}.cite-long .tbtn{margin-top:6px}
+.reuse-once{border-inline-start:3px solid var(--rule-2);padding-inline-start:10px}.src-also{margin:8px 0 0;font-size:var(--fs-src)}
+@media print{.cite-preview,[data-print]{display:none}}
+.search-type{margin-top:6px;padding:6px 10px;border:1px solid var(--rule-2);background:var(--paper);font-size:var(--fs-src);max-width:100%}
 .search-results{display:flex;flex-direction:column;max-height:60vh;overflow:auto}
 .search-results a{display:block;padding:10px 0;border-top:1px solid var(--rule);text-decoration:none}
 .search-results .empty{color:var(--ink-2)}
@@ -243,6 +251,8 @@ html[dir=rtl]{--fs-display:42px;--fs-q:24px;--fs-st:22px;--fs-body:18px;--fs-rea
 .controls{gap:16px}
 .controls .cite,.controls .report{display:inline;color:var(--ink-2)}
 .controls .menu{display:none}
+.controls a.menu{display:none}
+.nav .m-only{display:none}
 .page{padding:28px 32px 56px;display:grid;grid-template-columns:minmax(0,1fr) 280px;column-gap:40px;row-gap:0;align-items:start}
 .page>.obj{grid-column:1;max-width:840px}
 .spine:not(.foot-spine){display:flex}
@@ -267,6 +277,7 @@ h1{max-width:22ch}
 .qa{display:grid;grid-template-columns:220px minmax(0,1fr);gap:4px 36px;padding-top:16px}
 .qa>:first-child{grid-column:1}
 .qa>:not(:first-child){grid-column:2}
+.qa.compare>:not(:first-child){grid-column:1 / -1}
 .qa .rubric{padding-top:4px}
 .compact{display:grid;grid-template-columns:220px minmax(0,1fr);gap:4px 36px;padding:16px 0}
 .compact>.clock{grid-column:1;grid-row:1 / span 4}
@@ -278,7 +289,7 @@ h1{max-width:22ch}
 # D2 additions — the same tokens and roles; the families beyond the trio, the D2 figures, the tools' hooks.
 CSS_D2 = r"""/* ---- D2: families, figures, tools (same tokens; maintained with CSS above) ---- */
 [hidden]{display:none!important}
-.chain .source-locator,.hublist a,.src .source-url,.chron a,.deps a{display:inline-block;padding:3px 0;min-height:24px}
+.chain .source-locator,.hublist a,.src .source-url,.chron a,.deps a,[data-evidence-landscape] a{display:inline-block;padding:3px 0;min-height:24px}
 /* 2.5.8, measured at EAD-02: these three sat 1–2 px under the 24 px minimum with neighbours closer than 24 px, so
    neither the inline nor the spacing exception carried them. The rule is the one above, applied where it was missed. */
 .groups a,details.more>summary,details.more .rlist a{display:inline-block;padding:3px 0;min-height:24px}
@@ -320,6 +331,7 @@ details.more .qa h3{font-size:var(--fs-body);font-weight:600;margin-bottom:4px}
 .ring{fill:none;stroke:var(--counter);stroke-width:1.5}
 svg.ts .val.dense{display:none}
 svg.ts .lbl.alt{display:none}
+svg.ts .lbl.alt3{display:none}
 svg.ts .lbl.alt2{display:block}
 .anatomy{list-style:none;margin:8px 0 0;padding:0;display:flex;flex-direction:column;border-top:1px solid var(--rule-2)}
 .obj-card{padding:12px 0;border-top:1px solid var(--rule);display:flex;flex-direction:column;gap:3px}
@@ -346,11 +358,13 @@ svg.ts .lbl.alt2{display:block}
 .chain .source-locator{text-decoration:none;font-weight:600}
 /* evidence directory */
 .search-inline{display:flex;flex-direction:column;gap:8px;max-width:var(--measure)}
+.source-facets{display:flex;flex-wrap:wrap;gap:8px 16px;margin:12px 0;max-width:var(--measure)}.source-facets[hidden]{display:none}.source-facets .facet{display:flex;flex-direction:column;gap:4px;min-width:0;flex:1 1 140px}.source-facets select{min-height:44px;max-width:100%;font:inherit}.source-facets .tbtn{align-self:flex-end}
 .search-inline .search-results{max-height:none}
 .search-results .search-hit{display:flex;flex-direction:column;gap:4px;padding:12px 0;border-top:1px solid var(--rule);text-decoration:none}
 .search-results .search-hit h4{margin:0;font-size:var(--fs-body);font-weight:600}
 .search-results .search-hit p{color:var(--ink-2);font-size:var(--fs-src);margin:0}
 .search-results .search-hit .meta{font-size:var(--fs-clock);color:var(--mute);font-weight:500}
+.search-results .search-see-all{padding-top:12px;border-top:1px solid var(--rule);font-size:var(--fs-src);font-weight:600}
 .search-results .search-boundary-note{font-size:var(--fs-src);color:var(--counter);border-top:3px double var(--counter);padding-top:8px}
 .hubs{display:flex;flex-direction:column;border-top:1px solid var(--rule-2)}
 details.hub{border-top:1px solid var(--rule)}
@@ -444,7 +458,7 @@ ol.objs.chron{list-style:none;margin:10px 0 0;padding:0}
 .nf+.nf{margin-top:8px}
 /* forced colours for the D2 marks */
 @media (forced-colors:active){.bar{fill:CanvasText}.brk,.miss,.ring{stroke:CanvasText}.chain .step,.chain .step.open,.chain .step.stop,.pair,.gap,.compare-verdict,.compare-boundaries,.compare-state,.mks .mk,.hublist li{border-color:CanvasText!important}.withheld,.isnot,.bnd-line,.compare-verdict,.compare-verdict h3,.compare-verdict p{color:CanvasText}}
-@media print{.search-inline,.controls-grid,.never,.compare-record-actions,details.deps,[data-source-filter-status]{display:none!important}details.hub::details-content,details.grp::details-content{content-visibility:visible;display:block}svg.ts .val.dense{display:block}}
+@media print{.search-inline,.source-facets,.controls-grid,.never,.compare-record-actions,details.deps,[data-source-filter-status]{display:none!important}details.hub::details-content,details.grp::details-content{content-visibility:visible;display:block}svg.ts .val.dense{display:block}}
 @media (min-width:600px){
 .controls-grid{grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:12px 20px}
 .inventory div{max-width:var(--measure)}
@@ -533,7 +547,7 @@ CSS_D6 = r"""/* ---- D6: visuals, frames, print (same tokens; maintained with CS
 @media (forced-colors:active){.lane-svg .span,.lane-svg .stem{stroke:CanvasText}.prow,.prow .cell,.prow .lim,.prow .unk,.prow .evl li{border-color:CanvasText!important}.prow .n,.prow .cl,.prow .lim,.prow .unk,.lanes-dated .lane.outcome h3{color:CanvasText}}
 .fig{container-type:inline-size}
 .rvtab.wide{min-width:1080px}
-.fig .foot .canon-l{display:inline-block;padding:3px 0;min-height:24px}
+.fig .foot .canon-l{display:inline-block;padding:3px 0;min-height:24px}.fig .foot .canon-p{display:none}@media print{.fig .foot .canon-p{display:inline}.fig .foot .canon-s{display:none}}
 .prow .evl .dates{display:block;margin-top:2px;color:var(--ink-2)}
 .prow .evl a.dl{text-decoration-color:var(--rule-2);display:inline-block;padding:3px 0;min-height:24px}
 @container (min-width:480px){
@@ -642,7 +656,7 @@ body{color:#000}
 .obj p{orphans:3;widows:3}
 .qa.figs>div:first-child,.qa .rubric{break-after:avoid}
 .qa.figs .fig,.rubric+*{break-before:avoid}
-section#search,.search-inline{display:none!important}
+section#search,.search-inline,.source-facets{display:none!important}
 .rvtab.wide{min-width:0}
 section.bnd+section.bnd{break-before:auto}
 .head+*{break-before:avoid}

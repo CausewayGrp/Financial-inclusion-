@@ -306,6 +306,138 @@ condition C3), recorded by the session meeting the before-merge conditions:
   (export frames, social frames). Implemented in the release-candidate pull request. Design impact: the frame's foot is
   unchanged; the text alternative loses its repeated tail. Open until that pull request lands.`
 
+Raised in the release-candidate pull request (2 October 2026), by the independent review of transaction RC-3: drawing the
+provider observability matrix (RC-3 item 18) brings two gaps into view that only governed content can close:
+
+- `NEEDS_CONTROLLED_CONTENT — VIS-PROVIDER-OBSERVABILITY (/providers/ and its record, Arabic edition) — Arabic text for
+  four period values — the matrix prints the governed period of each universe and wallet-count row through \`date_token\`
+  (\`scripts/yfie/visuals.py\` provider_matrix), and four of them are English-only Master values with no Arabic column:
+  "2024 Q3" and "2025 H1" (22_PROVIDERS_DATA wallet-count rows WCR-001 and WCR-002, \`reference_period\`), "2026-01-22 event"
+  (WCR-004) and "observed 2026-09-07" (PUC-MFI-2026-01, \`reference_state\`). The Arabic pages therefore show the words
+  "event" and "observed" and the codes "Q3" and "H1" in Latin script, in the drawn form and the fallback table. Needed:
+  \`reference_period_ar\` / \`reference_state_ar\` (or a governed period vocabulary) in the Master, read by the loader for the
+  Arabic edition. Code does not author Arabic data text; the values are unchanged meanwhile.`
+- `NEEDS_CONTROLLED_CONTENT — VIS-PROVIDER-OBSERVABILITY — a lead-in for the payment-system-operators context events —
+  the row prints "Unknown — not zero" in every dimension (the contract's \`known_gap\`), and in the status dimension the
+  three institution events (REF-PAY-011…013) follow as context; only a dotted rule marks them as context on screen, and
+  the fallback table joins them to the UNKNOWN label with a semicolon, so a table or screen-reader user can take a
+  restructuring, a founding assembly and a board meeting for status decisions. Needed: a governed label (for example
+  "Context:" / «للسياق:») printed before the events in both forms. Code does not author it.`
+
+Raised in the release-candidate pull request (2 October 2026), by the A3 / C3 implementation (G4 item 4):
+
+- `ESCALATE_TO_MASTER (Part B editorial pass, B2 / B3) — five governed accessible summaries restate their figure's
+  boundary — with A3 implemented (on the page the text alternative is the governed accessible summary, the boundary
+  prints once in the foot) and the design checks extended to count the visible text alternative
+  (\`check_visuals.py\` boundary_once_in_foot, \`check_site.py\` boundary_once_per_frame), eight frames still print the
+  opening of their boundary twice, because the accessible summary itself closes with a sentence that restates it:
+  VIS-REMITTANCE-MACRO (EN, AR), VIS-POS-TRANSACTIONS (EN; its frame on /payments/ and its record), RV-CWR-003 (AR) and
+  RV-CWR-005 (AR). The fix is Master-first: drop the restating sentence from \`accessible_summary_*\` in 11, both
+  languages checked together. The checks stay strict and report these eight until then.`
+
+Raised in the release-candidate pull request (2 October 2026; release candidate G5), moved from "Anticipated":
+
+- `NEEDS_CONTROLLED_CONTENT — /data/ (the source register) — EAD-07: a governed group label for sources without a
+  document type — a document-type filter on the register is built-ready (142 of the 151 displayed sources carry a governed
+  \`document_label\`), but 9 do not, and a filter with no group for them would hide nine sources the register promises are
+  discoverable. Needed: a governed label for the no-type group (for example "Type not recorded" / its Arabic), English and
+  Arabic together, Master-first in 04. Code ships the filter the day it exists. Raised; EAD-07 in the register.`
+
+Raised at RC-8 (3 October 2026), by the owner's note of 3 October 2026, 03:10, point 1 (`audit/OWNER_DECISIONS_2026-10-02.md`):
+
+- `ESCALATE_TO_MASTER (conflict recorded, nothing printed) — 22_PROVIDERS_DATA status events — entity names — the owner's
+  rule withholds the entity names of the CBY-Aden enforcement decisions on every surface (CLM-019, the decision cards,
+  the status-event table; only NEG-EW-011 prints a name, from the 2024 circular), and the build prints none: each
+  decision shows its date, class and action, and its decision number in the source list. But the governed
+  `public_use` field of six status events still allows the subject to be shown: PSE-006, PSE-007 and PSE-010 ("May
+  show the exact dated branch-level status event"), PSE-012 (until RC-8: "May show the event subject"), and PSE-013
+  and PSE-014 ("May show the exact dated event and subject"). As the owner directed, nothing is printed. RC-8 rewrote
+  the two fields it had to touch for other reasons (PSE-012, date; PSE-015, Decision 18) so that they no longer
+  allow names. The other five are left as they are, for the owner to decide: either rewrite their `public_use` to
+  the withholding rule, or keep them as they are and record that the rule overrides them.` Open, non-blocking:
+  nothing prints a name.
+
+Raised in the release-candidate pull request (3 October 2026), by the product challenge (B15;
+`audit/release_candidate/PRODUCT_CHALLENGE.md`). The red team sent these to the steward or the owner; nothing is built
+around them meanwhile.
+
+- `ESCALATE_TO_STEWARD (navigation contract) — About at 390 px (A-12, C-6) — About is reachable only from the footer on a
+  phone; the reader who asks "who publishes and funds this?" does not find it in the menu. Needed: About in the mobile
+  menu (\`navigation_interaction.json\`). The publisher's Arabic name stays "CauseWay" in Latin script (owner rule; the
+  red team blocked «كوزواي»).` Open.
+- `ESCALATE_TO_STEWARD (navigation contract) — Cite at 390 px (C-8) — "Cite this page" is in neither the mobile header nor
+  the menu; on CLM-002 the only cite control is 3.7 screens down. Needed: a cite entry in the mobile header or the menu.`
+  Open.
+- `ESCALATE_TO_STEWARD (navigation contract) — a domain strip (C-10) — there is no direct route across the eight domain
+  answers, and "Data & sources" holds no data. Needed: a decision on a domain strip; the labels follow Master-first.`
+  Open.
+- `ESCALATE_TO_OWNER — a naming rule for the 2024 e-wallet circular (B-2) — one of its 12 names prints (NEG-EW-011) and
+  eleven do not. The red team advises against naming the other eleven (the list is dated 2024 and marked
+  DO_NOT_CARRY_FORWARD; a fairness risk). Needed: the owner's rule for all twelve alike, either withhold all or
+  publish all with the date boundary. Linking the parent records to their children is allowed and is in the roadmap.`
+  Open.
+- `ESCALATE_TO_OWNER — VIS-MFI-SPINE (B-7) — the record is titled "observations by date, with gaps and breaks shown", but
+  it renders no chart and no table (a table-only record, left until after launch by decision A4 / C6). Needed: a
+  contract that binds the governed observations, with each gap printed "no usable observation — not zero". Until then
+  the title must not promise "gaps shown" (Master-first wording; roadmap).` Open.
+- `ESCALATE_TO_OWNER — exports for researchers (game-changers U3, U6, U7) — a versioned dataset of all records, dated
+  observation tables, and a citation file (BibTeX or RIS). \`scripts/exports.py\` is ready and \`public_downloads\` is
+  false. Needed: the licence decision (OWN-04; REJ-03 keeps Dataset structured data closed until a licence exists).`
+  Open; release-dependent.
+- `ESCALATE_TO_OWNER — what CauseWay is (C-6) — /about/ says who funds the resource mid-paragraph, but nothing says what
+  CauseWay is. A heading is Master copy (roadmap); the organisation's description must come from the owner.` Open.
+
+Closed on 3 October 2026 by the owner's decisions of 3 October 2026 (`audit/OWNER_DECISIONS_2026-10-02.md`). The 09:05
+note was restated, with additions, by the consolidated note of 09:50, which governs. Nothing above is rewritten:
+
+- **RC-8, the status events' `public_use`: CLOSED by point 1, in RC-17.**
+  - Every status event's `public_use` now says that entity names are non-public lineage and are not printed.
+  - The same rule now governs the `public_claim_rule` of the 30 enforcement-subject rows and the provider-status
+    passport's display requirement.
+  - The events' own text now names each subject by its entity ID.
+  - RC-NAMES stays. It is hardened to match short forms, joined spellings and Arabic prefixes, and it now covers the
+    branch rows and the social-image frames.
+- **B-2, a naming rule for the 2024 circular: CLOSED by point 2, in RC-17.**
+  - The twelve names are withheld alike.
+  - NEG-EW-011 keeps its ID, route and count, and is rewritten in both languages as one wallet service among twelve.
+  - The search empty state carries the governed sentence on names.
+  - The "We Cash ranks first" instruction is withdrawn.
+  - One consequence goes back to the owner (raised at RC-17, below).
+- **C-10, a domain strip: CLOSED for this release by point 4.** It is in `docs/ROADMAP_V1_1.md`, item 28.
+- **B-7, VIS-MFI-SPINE: CLOSED for this release by point 5.** It is post-launch.
+- **Exports for researchers (U3, U6, U7): CLOSED by the 09:50 note, section E.**
+  - The owner adopts CC BY 4.0 for CauseWay's own content.
+  - `public_downloads` stays false in this pull request.
+  - The switch is one release step, after CauseWay's counsel confirms the licence text.
+  - The exports carry the licence.
+- **C-6, what CauseWay is: CLOSED by the 09:50 note, section D, in RC-17.** The owner's pair is added to /about/ before the
+  funding paragraph, in both languages, and nothing else about the organisation is written. This replaces the 09:05
+  point 7.
+- **A-12 (About) and C-8 (Cite) at 390 px:** decided by point 3 (09:50 A.3). They close with the steward's patch to the
+  navigation contract, in its own commit.
+
+Raised at RC-17 (3 October 2026), by the adversarial review of the owner's point 2:
+
+- `ESCALATE_TO_OWNER — NEG-EW-011's number identifies the service — the circular numbers its twelve names 1 to 12 in the
+  order of NEG-EW-001…012, so the record ID is the circular's own item number. With the circular linked from the
+  record, a reader who opens it can identify the eleventh listed service: withholding the name does not withhold the
+  identity, and the record still singles out one of the twelve. This follows from the owner's "same ID, same route".
+  Needed: the owner's choice — accept it as disclosed here, or let /evidence/NEG-EW-011/ point to CLM-015, which
+  covers all twelve alike.` Open; nothing prints a name. B16: RELEASE (the owner's choice at release acceptance).
+
+Closed on 3 October 2026 by the steward's patch to the navigation contract (owner decisions of 3 October 2026, 09:05
+point 3 and 09:50 A.3; `audit/OWNER_DECISIONS_2026-10-02.md`):
+
+- **A-12 and C-6, About at 390 px: CLOSED.**
+  - Below 900 px, the opened menu carries the governed trust links, About first, under the footer's own group label.
+  - The contract gains one key, `mobile_menu`, and nothing else in the file changes. Existing labels only.
+- **C-8, Cite at 390 px: CLOSED.** The opened menu carries the existing "Cite this page" control; the header itself is
+  unchanged.
+- **Checks:**
+  - The menu was checked at 320 and 390 px in both languages: 7 links, About first, the cite control reachable, no
+    overflow, header heights unchanged.
+  - Gate RC-NAV holds it on every page, with a negative control. The designation ends with this commit.
+
 ## Closed at D2 (27 September 2026) — resolved by an authority the repository already holds
 
 - Arabic credit line (`NEEDS_CONTROLLED_CONTENT — RV-CWR-001 and every visual contract with a credit`): the contract
@@ -351,6 +483,12 @@ Raised at EAD-01 by Claude Code (29 September 2026), found by the cutover itself
   once it holds nothing. Code cannot make this change: the two controlled contracts are the steward's, in a commit
   naming the finding it closes, with every gate run. Open; EAD-11; blocks no gate today.
 
+  2 October 2026 — landed in the release-candidate pull request (G3), the session acting as steward for this patch only by
+  owner decision (`audit/OWNER_DECISIONS_2026-10-02.md`, EAD-11): the two entries, values unchanged, sit under
+  `question_sets` in `presentation_priority.json` (not in `routes`, which holds the eight Domain Answer routes the
+  validator's S03 and the generator's tier check read); the renderer and the inventory read them; `question_sets.py` is
+  deleted; Home and Explore are byte-identical before and after in both languages. Closed.
+
 - `NEEDS_CONTROLLED_CONTENT — the search results, every route with a search — a result-type facet needs a name and an
   "all types" option — EAD-06 asks for a result-type facet, and the option labels are governed
   (`UI-JS-TYPE-PAGE` … `UI-JS-TYPE-SOURCE-LOCATOR`). What is missing is the control itself: an accessible name for
@@ -380,7 +518,8 @@ Raised at EAD-01 by Claude Code (29 September 2026), found by the cutover itself
 Recorded so no one fills these gaps silently. Source: brief §10, §12, §15.
 
 - Result-type facet labels exist (`UI-JS-TYPE-*`); a domain facet needs a governed domain field on search records.
-- "Type not recorded" group label for the 9 displayed sources without `document_label` (`/data/`, EAD-07).
+- "Type not recorded" group label for the 9 displayed sources without `document_label` (`/data/`, EAD-07). **Raised
+  2 October 2026** — see "Raised in the release-candidate pull request … EAD-07" under Open.
 - Evidence-workbench facet headings/values (verification state, domain), if a facet is designed.
 - Report-issue intent labels, if a richer reporting intent is designed.
 - Reuse line and download labels following the licence decision (OWN-04) — the export control's labels raised at D6.
@@ -415,3 +554,87 @@ Recorded so no one fills these gaps silently. Source: brief §10, §12, §15.
 - D7 branch name (2026-09-28): D7 is developed and pushed on `claude/dreamy-archimedes-e8qx5v` (planned
   `design/d7-acceptance`), created at the accepted `main` `0ccdf0128308412b9aca5d59a48b3723d4690214` (the merge of pull
   request #6, D6 accepted and reconciled); one pull request for the gate, as at D6.
+
+- 2026-10-03 — **B16 disposition** (append-only; the reasons and evidence for each line are in
+  [`audit/release_candidate/OPEN_ITEMS_DISPOSITION.md`](../audit/release_candidate/OPEN_ITEMS_DISPOSITION.md)):
+  - X-ESC-D1-01 — **NEXT EDITION** — Home (/) §3: a controlled pacing marker so the build paces the governed 'three figures' paragraph without parsing connectives (alias DEBT-008). → Named in the B16 brief's expected post-launch list ('the DEBT-008 pacing marker'). Fallback ships (render.py paced_groups). Reclassified in G5 (30523ee; audit/RECORDS_RECONCILIATION_2026-10-02.md row 3). Owner: steward (marker, Master-first) and Design.
+  - X-ESC-D1-02 — **DONE** — RV-CWR-001 imf_staff_path carries evidence state REPORTED while the Reading calls the IMF path a staff reconstruction; should the lane carry an estimate state? → Adjudicated KEEP in RC-1, commit 76aaeec; audit/release_candidate/runs/RC-1_MASTER_LEDGER.json item_8.c (IMF rows carry calculation_state SOURCE_REPORTED__IMF_STAFF_CALCULATIONS). No closing line yet in ESCALATIONS.md.
+  - X-ESC-D2-01 — **DONE** — Column labels for every drawn figure's fallback table (group/object, state, note); narrowed at D6 to the provider-matrix headings plus an empty corner cell (a p… → Matrix headings governed in RC-3 (d668f11); every fallback table's row-header column labelled in RC-11 B10 b / NCC-02 (a95c7ef); last empty corner cell labelled in 66521a3. axe empty-table-header 0 (docs/ACCESSIBILITY_AUDIT.md).
+  - X-ESC-D2-02a — **DONE** — Rows requested for VIS-TARGET-RESULT-STATE (/reforms/ and its record): a TABLE_TEXT_FIRST contract that resolved no rows (baseline, target, absent result). → RC-12, commit 98f43f5: table bound to FMIIP-RF-004 (baseline Jan 2025 817; target Jun 2030 1,021; result row 'No observed result is held … — not zero'); gate RC-B12. The drawing stays open as X-B12-VIS-TARGET-RESULT-STATE-DRAWING.
+  - X-ESC-D2-02b — **NEXT EDITION** — Rows requested for VIS-MFI-DIVERGENCE (/finance/): the divergence table its rationale describes resolves no rows. → B12 names the missing input: a governed saver-definition crosswalk, a rial-valuation field per portfolio anchor, EN/AR labels for three state tokens, an Arabic universe state. Same work as EXT-10 and X-B12-VIS-MFI-DIVERGENCE.
+  - X-ESC-D3-01 — **NEXT EDITION** — A governed label for the description of a text-first frame (only UI-VIS-TEXT-ALTERNATIVE 'Text description of this view' exists; a Home reader took it for a mis… → Post-launch: a governed label for a text-first frame's description (Design, Master-first). The B15 panel found no task failure from it (PRODUCT_CHALLENGE.md); the heading stays in the accessibility tree.
+  - X-ESC-D3-02 — **DONE** — VIS-INCLUSION-TRANSMISSION: the governed alt_text ends by restating the prohibited inference, so the frame reads its boundary twice. → Owner decision A3 / C3 implemented in G4 part 1, commit 7895694 (on the page the text alternative is the accessible summary; boundary once in the foot; checks extended). Closes with X-ESC-PR8-A3.
+  - X-ESC-D3-03a — **DONE** — Home §3 cold-reader observations, terms and date forms: 'POS', 'CBY-Aden', 'wave', 'rails', 'enabling constraints', 'Evidence signals' not understood; three dat… → RC-5, commit 1da995e: B3 a glosses / plain labels (B3-001…B3-024) and B2 d one prose form of the Findex window (ENGLISH_ and ARABIC_EDITORIAL_LEDGER.md). Checked in dist/en/index.html: 'Evidence signals' and 'enabling constraints' absent; 'wave (survey round)' printed. ISO clock lines stay ISO by rule B2 c.
+  - X-ESC-D3-03b — **NEXT EDITION** — Home §3 residue: same-wave figures at two decimals (18.35 %, 5.44 %, 12.91 points) read as false precision; three years attached to one number; period form 'Mar… → Unchanged on dist/en/index.html (18.35%, 5.44%, 12.91 and 'Mar-2025–Jun-2026' still print). Source precision is governed; a display-precision or period-form rule is a Master-first content decision. Design impact none.
+  - X-ESC-D3-04 — **NEXT EDITION** — CLM record 'Financial inclusion is a connected system, not a single score' is clocked like a measurement; a governed record kind (framing vs measured) would let… → Not changed in this pull request. The B16 brief lists 'record-class labels' as expected post-launch.
+  - X-ESC-D3-05 — **DONE** — Masthead: the publisher's name as governed text; the 10 MB master PNG served on every page (DEBT-016). → DONE: the publisher's name is set in type in the lockup on every page (DL-D7-008; DEBT-016); its weight fixed by the EAD-03 logo derivatives (fbe9f27).
+  - X-ESC-D3-06 — **DONE** — Arabic Home terminology: «قياس سكاني ممثل», «لا درجة واحدة», «إشارات من الأدلة», «ضمن نطاق الإبلاغ لديه», ISO range in Arabic prose, «أدلة» in the title. → RC-5 B2 a (1da995e; ARABIC_EDITORIAL_LEDGER.md B2-006…B2-036, 'One term per concept'); ISO dates in Arabic prose swept (2e1991d, gate RC-DATES). «أدلة» kept by owner decision B0 'Product name … unchanged' (OWNER_DECISIONS addendum). Certification stays REL-03.
+  - X-ESC-D3-07 — **DONE** — Home label 'This resource presents the strongest defensible answer …' read as an untestable self-assessment. → RC-5 B3-025 (1da995e): UI-HERO-THIS-RESOURCE-PRESENTS-THE-STRONGEST rewritten ('so you can verify it'); 'strongest defensible' absent from dist/en/index.html.
+  - X-ESC-D5-01 — **DONE** — An accessible cue that every external source link opens a new window. → UI-EXTERNAL-NEW-TAB governed in RC-3 (d668f11), shipped in G4 part 1 (7895694); dist pages carry '(opens in a new tab)' in link aria-labels.
+  - X-ESC-D6-01 — **DONE** — VIS-PROVIDER-OBSERVABILITY: the five dimension headings of the matrix (UI-VIS-MATRIX-AUTHORITY … -OPERATION). → RC-3 (d668f11) governs the five headings; matrix drawn on /providers/ and its record in both languages (headers verified in dist/en/providers/index.html).
+  - X-ESC-D6-02 — **DONE** — VIS-PROVIDER-OBSERVABILITY: class label of the payment-system-operators row (UI-VIS-CAT-PRV-CLASS-PSO). → RC-3 (d668f11): UI-VIS-CAT-PRV-CLASS-PSO governed; row prints UNKNOWN in every dimension with context events.
+  - X-ESC-D6-03 — **DONE** — VIS-PROVIDER-OBSERVABILITY: English-only dated cells ('observed 2026-09-07', '2026-01-22 event', '2024 Q3 / 2025 H1', roster note) and '>9' in the Arabic editio… → RC-5 B2 g (1da995e): new 22_PROVIDERS_DATA columns reference_period_ar / reference_state_ar (B2-001…004); '>9' in label-value form (G4 item 7). dist/ar/providers/index.html prints «الربع الثالث 2024», «النصف الأول 2025»; no 'observed'/'roster' English found.
+  - X-ESC-D6-04 — **RELEASE** — Export control in every drawn figure's foot: action labels and states (unavailable until the licence decision; licence; file format). → RELEASE: the licence is decided (CC BY 4.0, owner instructions of 3 October 2026, 09:50 (audit/OWNER_DECISIONS_2026-10-02.md), E). What remains is that CauseWay's counsel confirms the CC BY 4.0 text; then public_downloads goes true, the downloads publish with the licence, and Dataset structured data may be added (REJ-03 lifts). docs/RELEASE_RUNBOOK.md step 2. The figure-foot export control follows the same switch. Same as X-ESC-ANT-05.
+  - X-ESC-D6-05 — **DONE** — VIS-FIRM-CONSTRAINTS: rows FFO-2022-CH-09…16 exist only in a REFERENCE-role file; bind them. → DONE: rows FFO-2022-CH-09…16 bound in RC-7 (e82de29; ORIGINAL_SOURCE_VERIFICATION.md §2).
+  - X-ESC-D6-06a — **DONE** — Rows requested for VIS-FIRM-FINANCE-PATH (/firms/ and its record). → RC-12, commit 98f43f5: FFO-2022-004 (31 of 328) and FFO-2022-LS-01..04 (10, 1, 5, 2 of 18) with a governed 'not established' marker row. The drawn path stays open as X-B12-VIS-FIRM-FINANCE-PATH-DRAWING.
+  - X-ESC-D6-06b — **DONE** — Rows requested for VIS-FIRM-FINANCE-SEVERITY (/firms/ and its record). → B12 'Complete as designed (no table)' (98f43f5): values bound in the record (68.71 %, 23.13 %; 91.84 % derived). The separate base question is X-REG-SEVERITY-BASE.
+  - X-ESC-D6-06c — **NEXT EDITION** — Rows requested for VIS-INCLUSION-TRANSMISSION (its record and Home): the system's relationships exist only as English prose in STRUCTURE/REFERENCE files. → Post-launch, as the B16 brief expects ('the 26 governed relationship statements, 21 lack references'): visuals/system_relationships.json holds 26 statements (SL-001…026), 21 without evidence references, English only. Same work as X-B12-VIS-INCLUSION-TRANSMISSION (its 13 relationships).
+  - X-ESC-D6-07 — **NEXT EDITION** — RV-CWR-004 people lane: series carries x = 2022 while the lane is drawn as the fieldwork span read from ISO dates inside the period text; give the contract row … → Not changed in this pull request; the lane prints the governed period correctly, so the gain is binding robustness only.
+  - X-ESC-D6-08 — **DONE** — Meta descriptions open with the page's own title (284 of 286), so a shared card reads the title twice. → RC-5 B3 b (1da995e) authored 126 routes' descriptions. Measured on current dist/: 40 of 286 (20 routes × 2 languages) still begin with the title: /accessibility/, /corrections/, /privacy/, /rights/, /terms/, /explore/, /readings/, three Readings and ten record pages (e.g. CLM-022, CLM-039, VIS-PAYMENT-RAILS) — routes B3 judged as passing; the social template prints the title once. If the residual 40 matter, POST-LAUNCH.
+  - X-ESC-D6-09 — **DONE** — Credit lines: RV-CWR-001 names the IMF twice; VIS-REMITTANCE-MACRO credit covers IMF staff projections; RV-CWR-004 lists 'World Bank' twice; VIS-PROVIDER-OBSERV… → RC-6 / B4, commit fb2cf9b (Arabic credits; duplicates folded). Not verified here: the VIS-PROVIDER-OBSERVABILITY workshop credit and the VIS-REMITTANCE-MACRO projection-years credit — check before closing.
+  - X-ESC-D6-10 — **DONE** — VIS-REMITTANCE-COST: MEASURED ('Measured in a survey') heads averages of RPW price quotes. → RC-1 item 8 b, commit 76aaeec (RC-1_MASTER_LEDGER.json item_8).
+  - X-ESC-D6-11 — **DONE** — VIS-PAYMENT-RAILS: alt text names the e-money amendment of 9 July 2025, which the drawing's rows lack; the SUPPORTING contract carries no credit. → Owner Addendum 2 A1, RC-8 commit fda3965, gate RC-A1 with a negative control. The 'no credit' half was not verified here.
+  - X-ESC-D6-12 — **DONE** — RV-CWR-009 / VIS-PAYMENT-RAILS: NETWORK_ACTIVITY_SIGNAL (an attributed CBY-Aden exhibition statement) evidences the OPERATION step (licence ≠ operation). → Adjudicated KEEP in RC-1 (76aaeec); RC-1_MASTER_LEDGER.json item_8.a gives the reason.
+  - X-ESC-D6-13 — **DONE** — VIS-FIRM-CONSTRAINTS: nothing in the frame says the list is partial (8 of 16). → RC-1 added the partial-list note (Path B, 76aaeec); RC-7 bound all sixteen and removed it (e82de29).
+  - X-ESC-D6-14 — **DONE** — RV-CWR-004 infrastructure lane and RV-CWR-009 activity rows: POS values lack the CBY-Aden reporting-scope qualifier, so a crop presents a CBY-Aden count as nati… → RC-1 item 5 (76aaeec); RC-8b adds the boundary wherever 1,651 prints (7947347).
+  - X-ESC-D6-15 — **DONE** — Meta descriptions ending mid-sentence with '…' (Home, About, Data & sources) and Compare's instruction 'Select 2–4 records.' → RC-5 B3 b (1da995e). Measured on current dist/: 0 of 286 descriptions end with '…'.
+  - X-ESC-D6-16 — **DONE** — A governed neutral header for a fallback-table value column whose rows carry different units (VIS-FINDEX-GAPS). → RC-3 label (d668f11); shipped G4 part 1 (7895694).
+  - X-ESC-D6-17 — **DONE** — Arabic native-editor lens: count + unit noun ('561 العدد'), «نقاط مئوية», exchange-class labels as counted phrases, '>9 مشاركون', two index terms, 'Source:' col… → Label-value counts G4 item 7 (7895694); «نقطة مئوية» RC-3 item 20 (d668f11); «رقم قياسي» RC-5 B2 (1da995e); Arabic credits RC-6 (fb2cf9b); governed 'Source' corner label RC-12 (98f43f5); '>9 مشاركون' kept with stated reason in the ledger.
+  - X-ESC-D7-01 — **DONE** — /people/ §02 says no education gap is in the evidence base while VIS-FINDEX-GAPS on the same page derives a 12.55 pp education gap (defect claimed). → RC-1 item 1, commit 76aaeec.
+  - X-ESC-D7-02 — **DONE** — Search status reads '10 results shown' for 79 matches; needs a governed 'N of M' form and a way on. → RC-3 items 11 and 19 (d668f11); G4 item 1 (7895694).
+  - X-ESC-D7-03 — **DONE** — /evidence/compare/: a governed sentence saying why 13 of the 110 records form the comparable set, for the intro and the 'not available for comparison' error. → RC-4 B7, commit ae0f3db (owner's wording). Note: it does not restate the evidence-state rule of Methodology §09; the owner's brief chose this sentence.
+  - X-ESC-D7-04 — **NEXT EDITION** — /evidence/compare/ §01 'Three measures that cannot be combined': after a live comparison the worked example can read as analysis of the selected pair; a rubric … → Not changed. Owner Addendum 2 improvement 5 (a preset link ?records=CLM-001,CLM-054,FMIIP-BASELINE-2025-01 under that paragraph) is not in dist/ (grep found none); B15 d may build it, otherwise post-launch.
+  - X-ESC-D7-05 — **DONE** — Home, /providers/, /measurement/: text-first frames ('Another view of the evidence') repeat governed prose and print the boundary twice. → Boundary-twice half fixed by A3 (7895694) and RC-5 B2 f (1da995e). The 'adds nothing' half is X-ESC-D3-01 and the B12 items.
+  - X-ESC-D7-06 — **DONE** — Runtime: 'Cite this page' copies title, product and URL while the record citation carries more; neither has a preview. → RC-4 B9, commit ae0f3db; validator RC-GB and a browser test.
+  - X-ESC-D7-07 — **DONE** — /payments/ and the Reading 'Same year, different number': one value in two magnitudes; two Arabic readers misread a YER-million series by a factor of a thousand… → RC-1 items 4 and 17 (76aaeec; audit/release_candidate/FOUR_DIGIT_UNIT_CHECK.md); unit disclosure corrected in RC-8b (7947347).
+  - X-ESC-D7-08 — **DONE** — Findex fieldwork window in three forms across Home, /people/ and Compare; no canonical form to cite. → RC-5 B2 d (1da995e). Period, data and citation fields keep ISO by rule B2 c (stated in the ledger).
+  - X-ESC-D7-09 — **DONE** — /payments/: a governed sentence beside VIS-POS-TRANSACTIONS naming the withheld H1 2025 release and why the monthly series is admissible. → RC-11 B11 (a95c7ef), revised by RC-11b inside RC-12 (98f43f5).
+  - X-ESC-D7-10 — **DONE** — Compare tool Arabic copy: '2 سجلات مختارة', the 'select at least two' prompt shown with two loaded, the boundary printed twice. → RC-3 UI-JS-COMPARE-SELECTED (d668f11); G4 item 6 (7895694).
+  - X-ESC-D7-11 — **DONE** — Arabic terminology: one concept, several governed terms (التحويلات / الحوالات المحلية; خدمة أموال عبر الهاتف المحمول / النقود الإلكترونية; المحفظة الاسمية; resi… → RC-5 B2 b (1da995e); term table in ARABIC_EDITORIAL_LEDGER.md. Certification stays REL-03.
+  - X-ESC-D7-12 — **DONE** — CLM-003 and VIS-POS-TRANSACTIONS: legend says both figures are shown though the drawing plots one value per month. → RC-1 item 7, commit 76aaeec.
+  - X-ESC-D7-13a — **DONE** — /data/ and /explore/: all 151 source cards print 'Reuse terms: not assessed', which reads as unfinished; a page-level statement would help. → RC-4 B8 (ae0f3db); the per-card label stays by owner decision OWN-04.
+  - X-ESC-D7-13b — **NEXT EDITION** — 'P0 · People' on /explore/ and domain pages is expanded only on /measurement/; a governed gloss for the priority code at first use. → Post-launch: a governed gloss for 'P0' at first use on domain pages (copy, Master-first). Explore now says its priorities are the P0 items (UI-EXPLORE-MA-BASIS, RC-15 0a3ac6f).
+  - X-ESC-D7C-01 — **DONE** — /evidence/compare/ (VIS-SOURCE-COMPARISON): alt_text ends with the prohibited inference, so two sentences print twice about 70 px apart. → A3 implemented in G4 part 1 (7895694): the Compare standfirst uses the accessible summary. Closes with X-ESC-PR8-A3.
+  - X-ESC-D7C-02 — **NEXT EDITION** — /evidence/CLM-039/: the central comparison is qualitative (no years, interfaces or gap size); the 'earlier documented access' is undated. → Named in the B16 brief's expected post-launch list ('the CLM-039 comparison sentence'). CLM-039 is also a partial-lineage record (EXT-08).
+  - X-ESC-D7C-03 — **NEXT EDITION** — Record question 7 summary 'Detail for reproducing or challenging this record without changing what it means' reads as internal meta-language. → Post-launch copy fix, Master-first (UI-EVID-ADDITIONAL-DETAIL-FOR-REPRODUCING-OR). The B15 panel found no task failure from it.
+  - X-ESC-PR8-A3 — **DONE** — General finding: every frame prints its boundary twice because the generator ends all 36 alt_text with the prohibited inference while the foot prints it again. → G4 part 1, commit 7895694 (checks extended to count the visible text alternative); the eight residual frames fixed in RC-5 B2 f (1da995e). Closes when pull request #9 merges.
+  - X-ESC-RC3-01 — **DONE** — VIS-PROVIDER-OBSERVABILITY Arabic edition: Arabic text for four English-only period values (WCR-001, WCR-002, WCR-004, PUC-MFI-2026-01). → RC-5 B2 g (1da995e); ARABIC_EDITORIAL_LEDGER.md B2-001…004.
+  - X-ESC-RC3-02 — **DONE** — VIS-PROVIDER-OBSERVABILITY: a governed lead-in marking the payment-system operators' context events. → RC-5 B2 h (1da995e); label present in interface_copy.json.
+  - X-ESC-G4-01 — **DONE** — Five governed accessible summaries restate their boundary, so eight frames still print it twice (VIS-REMITTANCE-MACRO EN/AR, VIS-POS-TRANSACTIONS EN, RV-CWR-003… → RC-5 B2 f (1da995e; B2-126…129 and the English pair, 'AR review 9'). check_visuals.py was not re-run here to confirm zero reports.
+  - X-ESC-G5-01 — **DONE** — /data/: EAD-07 — a governed group label for the 9 sources without a document type, so a type filter hides none. → Label UI-DATA-DOCUMENT-TYPE-NOT-RECORDED in RC-4 (ae0f3db); type filter shipped in RC-12 B13 (98f43f5); dist/en/data has the 'none' option and 9 cards.
+  - X-ESC-RC8-01 — **DONE** — Governed public_use of status events PSE-006, PSE-007, PSE-010, PSE-013, PSE-014 still allows the subject to be shown, against the owner's withholding rule; own… → DONE in RC-17 `a4ff911`: public_use of PSE-001…010, 012, 013 and 014 rewritten to the withholding rule, Master-first; RC-NAMES stays (owner decisions of 3 October 2026 (audit/OWNER_DECISIONS_2026-10-02.md), point 1).
+  - X-ESC-EAD01-02 — **DONE** — Search result-type facet: an accessible name and an 'all types' option. → RC-3 item 19 (d668f11); G4 part 1 (7895694).
+  - X-ESC-EAD01-03 — **DONE** — Two navigation landmarks (nav.actions, nav.edges) share one governed name ('Continue from here'), 20 occurrences. → RC-11 B10 a (a95c7ef); axe landmark-unique 0 in the full audit (66521a3).
+  - X-ESC-ANT-01 — **NEXT EDITION** — A domain facet in search needs a governed domain field on search records. → Owner Addendum 2 puts 'A domain search facet' into docs/ROADMAP_V1_1.md ('do not build now').
+  - X-ESC-ANT-03 — **NEXT EDITION** — Evidence-workbench facet headings and values (verification state, domain), if a facet is designed. → No such facet designed; nothing raised. Not needed for launch.
+  - X-ESC-ANT-04 — **NEXT EDITION** — Report-issue intent labels, if a richer reporting intent is designed. → Not designed; /contact/?record= ships.
+  - X-ESC-ANT-05 — **RELEASE** — Reuse line and download labels after the licence decision (OWN-04). → RELEASE: the licence is decided (CC BY 4.0, owner instructions of 3 October 2026, 09:50 (audit/OWNER_DECISIONS_2026-10-02.md), E). What remains is that CauseWay's counsel confirms the CC BY 4.0 text; then public_downloads goes true, the downloads publish with the licence, and Dataset structured data may be added (REJ-03 lifts). docs/RELEASE_RUNBOOK.md step 2. The reuse line and download labels follow the same switch. Same as X-ESC-D6-04.
+  - X-ESC-ANT-06 — **NEXT EDITION** — IBM pre-split Latin font subsets (vendoring with provenance). → EAD-08 residual. B14 d measured the fonts as 71–87 % of a cold page (8c977f3); budget met without subsetting.
+  - X-ESC-ANT-07 — **NEXT EDITION** — Rows for the other TABLE_TEXT_FIRST contracts whose rationale describes a table but resolves no rows. → Superseded in substance by the B12 dispositions (X-B12-* items).
+  - X-ESC-B15-01 — **DONE** — About at 390 px (A-12, C-6): About is reachable only from the footer on a phone. → DONE `88a0f86`: the governed trust links, About first, are in the opened mobile menu; the session designated programme steward for this one patch (owner decisions of 3 October 2026 (audit/OWNER_DECISIONS_2026-10-02.md), point 3).
+  - X-ESC-B15-02 — **DONE** — Cite at 390 px (C-8): 'Cite this page' is in neither the mobile header nor the menu. → DONE `88a0f86`: the governed 'Cite this page' control is inside the opened mobile menu, not the header (owner decisions of 3 October 2026 (audit/OWNER_DECISIONS_2026-10-02.md), point 3).
+  - X-ESC-B15-03 — **NEXT EDITION** — A domain strip across the eight domain answers (C-10). → Roadmap (owner instructions of 3 October 2026, 09:50 (audit/OWNER_DECISIONS_2026-10-02.md), A.4); docs/ROADMAP_V1_1.md item 28. The domains are reachable from the main navigation and Explore.
+  - X-ESC-B15-04 — **DONE** — A naming rule for the twelve names of the 2024 e-wallet circular (B-2). → DONE in RC-17 `a4ff911`: all twelve names withheld alike; NEG-EW-011 rewritten in both languages as one wallet service among twelve; gate RC-NAMES covers the circular and the search index, with two negative controls (owner decisions of 3 October 2026 (audit/OWNER_DECISIONS_2026-10-02.md), point 2).
+  - X-ESC-B15-05 — **NEXT EDITION** — VIS-MFI-SPINE: a contract that binds the governed observations, gaps printed 'no usable observation — not zero' (B-7). → Post-launch (owner instructions of 3 October 2026, 09:50 (audit/OWNER_DECISIONS_2026-10-02.md), A.5). Its title no longer promises a view of the gaps it does not draw (RC-16).
+  - X-ESC-B15-06 — **RELEASE** — Exports for researchers: a versioned dataset, dated observation tables, a citation file (U3, U6, U7). → Licence decided: CC BY 4.0 for CauseWay's own content (owner instructions of 3 October 2026, 09:50 (audit/OWNER_DECISIONS_2026-10-02.md), E). public_downloads stays false in this pull request; at release CauseWay's counsel confirms the CC BY 4.0 text, then the switch publishes the downloads, which carry the licence (docs/RELEASE_RUNBOOK.md step 2).
+  - X-ESC-B15-07 — **DONE** — What CauseWay is (C-6): /about/ says who funds the resource mid-paragraph; nothing says what CauseWay is. → DONE in RC-17 `a4ff911`: the owner's pair on what CauseWay is, added to /about/ before the funding paragraph, in both languages (owner instructions of 3 October 2026, 09:50 (audit/OWNER_DECISIONS_2026-10-02.md), D). Nothing else about the organisation is written.
+  - X-ESC-RC17-01 — **RELEASE** — NEG-EW-011's record ID is the circular's own item number; with the circular linked, withholding the name does not withhold the identity (RC-17 adversarial revie… → The owner's choice at release acceptance: accept it as disclosed, or point /evidence/NEG-EW-011/ to CLM-015. Until then the record keeps its ID and route, as the owner decided (point 2); nothing prints a name.
+
+### 4 October 2026 — closed by the owner decision of 3 October 2026, 23:54 Aden
+
+- X-ESC-RC17-01 — **DONE** — Owner decision of 3 October 2026, 23:54 Aden (`audit/OWNER_DECISIONS_2026-10-02.md`):
+  /evidence/NEG-EW-011/ is no longer published as its own record; its address leads to CLM-015, the aggregate record of
+  the circular. Applied Master-first in RC-19 (the 02 and 06 rows removed; `site-src/hosting/moved_routes.json`; gate
+  RC-19). The circular's names stay non-public lineage in 22_PROVIDERS_DATA, where RC-NAMES reads them. No other
+  published per-entity record has an ID equal to an item number of a document it links: PSE-011, the only other
+  per-entity record, carries the programme's own status-event number, not a number of Governor's Decision No. 9 of 2026.

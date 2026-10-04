@@ -1,0 +1,418 @@
+{
+ "transaction": "RC-15",
+ "summary": "B15 d governed copy and data allowed by the red team",
+ "items": {
+  "B-1": 12,
+  "B-3": 3,
+  "B-10": 2,
+  "B-12": 2,
+  "A-8_B-5": 5,
+  "A-7": 2,
+  "B-6": 2,
+  "C-1": 1,
+  "A-4": 1,
+  "C-3": 4,
+  "interface_rows": 6
+ },
+ "input_master_sha256": "4282c50b9bbd8c28d751cd795b932266b1760454c030965221fdc2e539880f53",
+ "output_master_sha256": "ebfb929c86bb54c690b96059b71ae6ff40a5af4cc27c50d80ed7fa4bcea653cb",
+ "cells_written": 44,
+ "changes": [
+  {
+   "finding": "RC-15:UI",
+   "sheet": "04_NAV_UX",
+   "row": null,
+   "col": null,
+   "field": "UI-HOME-GAPS-NOTE",
+   "old": null,
+   "new": "Each priority below describes evidence that is still missing for one of these gaps. Listing it here does not claim that collecting that evidence would close the gap or explain it. || تصف كل أولوية أدناه أدلةً ما زالت مفقودة تتصل بإحدى هذه الفجوات. ولا يعني إدراجها هنا أن جمع تلك الأدلة سيسدّ الفجوة أو يفسّرها."
+  },
+  {
+   "finding": "RC-15:UI",
+   "sheet": "04_NAV_UX",
+   "row": null,
+   "col": null,
+   "field": "UI-EXPLORE-MA-BASIS",
+   "old": null,
+   "new": "These are the priorities the Measurement Agenda marks P0. The full agenda, including its P1 items, is on the Measurement Agenda page. || هذه هي البنود المصنفة P0 في أولويات القياس. وتعرض صفحة أولويات القياس القائمة الكاملة، بما فيها البنود المصنفة P1."
+  },
+  {
+   "finding": "RC-15:UI",
+   "sheet": "04_NAV_UX",
+   "row": null,
+   "col": null,
+   "field": "UI-EVID-SERIES-USED",
+   "old": null,
+   "new": "Series this record uses || السلاسل التي يستخدمها هذا السجل"
+  },
+  {
+   "finding": "RC-15:UI",
+   "sheet": "04_NAV_UX",
+   "row": null,
+   "col": null,
+   "field": "UI-CITE-LONG-FORM",
+   "old": null,
+   "new": "Long form, with the period, population and limits || الصيغة المطوّلة، مع الفترة والمجتمع والحدود"
+  },
+  {
+   "finding": "RC-15:UI",
+   "sheet": "04_NAV_UX",
+   "row": null,
+   "col": null,
+   "field": "UI-JS-COPY-LONG-CITATION",
+   "old": null,
+   "new": "Copy long form || انسخ الصيغة المطوّلة"
+  },
+  {
+   "finding": "RC-15:UI",
+   "sheet": "04_NAV_UX",
+   "row": null,
+   "col": null,
+   "field": "UI-JS-SHARE-RECORD",
+   "old": null,
+   "new": "Share this record || شارك هذا السجل"
+  },
+  {
+   "finding": "RC-15:B-1",
+   "sheet": "06_EVIDENCE_OBJECTS",
+   "row": 24,
+   "col": 6,
+   "field": "CLM-019.summary_en",
+   "old": "Governor's decisions of the Central Bank of Yemen – Aden (CBY-Aden) dated January to September 2026 record licence withdrawals, suspensions and closures for specific exchange and remittance providers. This record covers selected CBY-Aden Governor's decisions of 2026 concerning exchange and remittance providers (Nos. 1–6, 9–11, 13–15, 17 and 18); other decision numbers are not included and their subjects are not assessed. The official 2026 roster can be counted by class, but these decisions are matched with it entity by entity and are not subtracted from it to produce a count of providers operating now.",
+   "new": "Governor's decisions of the Central Bank of Yemen – Aden (CBY-Aden) dated January to September 2026 record licence withdrawals, suspensions and closures for specific exchange and remittance providers. This record covers selected CBY-Aden Governor's decisions of 2026 concerning exchange and remittance providers (Nos. 1–6, 9–11, 13–15, 17 and 18); other decision numbers are not included and their subjects are not assessed. The official 2026 roster can be counted by class, but these decisions are not subtracted from it to produce a count of providers operating now: each would first have to be matched with the roster entity by entity, and that matching has not been done."
+  },
+  {
+   "finding": "RC-15:B-1",
+   "sheet": "06_EVIDENCE_OBJECTS",
+   "row": 24,
+   "col": 7,
+   "field": "CLM-019.summary_ar",
+   "old": "تسجل قرارات محافظ البنك المركزي اليمني – عدن المؤرخة بين يناير وسبتمبر 2026 سحب تراخيص أو تعليقها أو إغلاق مقار لجهات محددة من مقدمي خدمات الصرافة والحوالات. ويغطي هذا السجل قرارات مختارة لمحافظ البنك المركزي في عدن صدرت في 2026 وتتعلق بمقدمي خدمات الصرافة والحوالات (الأرقام 1–6 و9–11 و13–15 و17 و18)؛ ولا يشمل أرقام القرارات الأخرى، ولا يقيّم موضوعاتها. ويمكن عدّ القائمة الرسمية لعام 2026 بحسب الفئة، لكن هذه القرارات تُطابَق معها جهةً جهة، ولا تُطرح منها لاستخراج عدد لمقدمي الخدمات العاملين حاليًا.",
+   "new": "تسجل قرارات محافظ البنك المركزي اليمني – عدن المؤرخة بين يناير وسبتمبر 2026 سحب تراخيص أو تعليقها أو إغلاق مقار لجهات محددة من مقدمي خدمات الصرافة والحوالات. ويغطي هذا السجل قرارات مختارة لمحافظ البنك المركزي في عدن صدرت في 2026 وتتعلق بمقدمي خدمات الصرافة والحوالات (الأرقام 1–6 و9–11 و13–15 و17 و18)؛ ولا يشمل أرقام القرارات الأخرى، ولا يقيّم موضوعاتها. ويمكن عدّ القائمة الرسمية لعام 2026 بحسب الفئة، لكن هذه القرارات لا تُطرح منها لاستخراج عدد لمقدمي الخدمات العاملين حاليًا: إذ يلزم أولًا مطابقة كل قرار مع القائمة جهةً جهة، ولم تُجرَ هذه المطابقة بعد."
+  },
+  {
+   "finding": "RC-15:B-1",
+   "sheet": "06_EVIDENCE_OBJECTS",
+   "row": 24,
+   "col": 16,
+   "field": "CLM-019.limitations_en",
+   "old": "The 2026 annual roster can be counted by class, but it is not a census of operating providers. Subtracting suspension, withdrawal and closure decisions from the roster does not give a current count of operating providers: the roster does not state its issue date, so each decision is matched to named entities one by one, without assuming whether the roster already reflects it. A provider not named in these decisions is not thereby shown to be active or compliant. The record does not cover 2026 decision numbers other than those listed, and it does not assess their subjects.",
+   "new": "The 2026 annual roster can be counted by class, but it is not a census of operating providers. Subtracting suspension, withdrawal and closure decisions from the roster does not give a current count of operating providers: the roster does not state its issue date, so each entity a decision names would have to be matched with the roster one by one, without assuming whether the roster already reflects the decision, and that matching has not been done. A provider not named in these decisions is not thereby shown to be active or compliant. The record does not cover 2026 decision numbers other than those listed, and it does not assess their subjects."
+  },
+  {
+   "finding": "RC-15:B-1",
+   "sheet": "06_EVIDENCE_OBJECTS",
+   "row": 24,
+   "col": 17,
+   "field": "CLM-019.limitations_ar",
+   "old": "يمكن عدّ القائمة السنوية لعام 2026 بحسب الفئة، لكنها ليست تعدادًا لمقدمي الخدمات العاملين. ولا يعطي طرح قرارات التعليق أو سحب الترخيص أو الإغلاق من القائمة عددًا حاليًا لمقدمي الخدمات العاملين: فالقائمة لا تذكر تاريخ صدورها، لذلك يُطابَق كل قرار مع الجهات المسماة جهةً جهة، من دون افتراض أن القائمة تعكسه أو لا تعكسه. ولا يثبت عدم ذكر جهة في هذه القرارات أنها عاملة أو ممتثلة. ولا يشمل السجل أرقام قرارات 2026 غير المذكورة، ولا يقيّم موضوعاتها.",
+   "new": "يمكن عدّ القائمة السنوية لعام 2026 بحسب الفئة، لكنها ليست تعدادًا لمقدمي الخدمات العاملين. ولا يعطي طرح قرارات التعليق أو سحب الترخيص أو الإغلاق من القائمة عددًا حاليًا لمقدمي الخدمات العاملين: فالقائمة لا تذكر تاريخ صدورها، لذلك يلزم مطابقة كل جهة يسميها القرار مع القائمة جهةً جهة، من دون افتراض أن القائمة تعكس القرار أو لا تعكسه، ولم تُجرَ هذه المطابقة بعد. ولا يثبت عدم ذكر جهة في هذه القرارات أنها عاملة أو ممتثلة. ولا يشمل السجل أرقام قرارات 2026 غير المذكورة، ولا يقيّم موضوعاتها."
+  },
+  {
+   "finding": "RC-15:B-1",
+   "sheet": "06_EVIDENCE_OBJECTS",
+   "row": 7,
+   "col": 6,
+   "field": "CLM-009.summary_en",
+   "old": "The official 2026 roster of exchange and remittance providers issued by the Central Bank of Yemen – Aden (CBY-Aden) lists 100 exchange companies, 231 individual exchange establishments and 111 remittance agents. These are roster entries counted by the roster's own classes: the three class totals are not a count of unique providers, nor a verified count of providers operating now. Because the roster does not state its issue date, CBY-Aden's 2026 decisions (dated January to September 2026) suspending or withdrawing the licences of named entities, or closing their premises, are matched with the roster entity by entity, because a decision may or may not already be reflected in it.",
+   "new": "The official 2026 roster of exchange and remittance providers issued by the Central Bank of Yemen – Aden (CBY-Aden) lists 100 exchange companies, 231 individual exchange establishments and 111 remittance agents. These are roster entries counted by the roster's own classes: the three class totals are not a count of unique providers, nor a verified count of providers operating now. Because the roster does not state its issue date, CBY-Aden's 2026 decisions (dated January to September 2026) suspending or withdrawing the licences of named entities, or closing their premises, would have to be matched with the roster entity by entity, since a decision may or may not already be reflected in it; that matching has not been done."
+  },
+  {
+   "finding": "RC-15:B-1",
+   "sheet": "06_EVIDENCE_OBJECTS",
+   "row": 7,
+   "col": 7,
+   "field": "CLM-009.summary_ar",
+   "old": "تضم القائمة الرسمية لعام 2026 لمقدمي خدمات الصرافة والحوالات، الصادرة عن البنك المركزي اليمني – عدن، كلًّا من 100 شركة صرافة و231 منشأة صرافة فردية و111 وكيلًا للحوالات. وهذه قيود معدودة بحسب فئات القائمة نفسها: فمجموع الفئات الثلاث ليس عددًا لمقدمي خدمات فريدين، ولا عددًا متحققًا منه لمن يعمل منهم حاليًا. ولأن القائمة لا تذكر تاريخ صدورها، تُطابَق قرارات البنك المركزي في عدن الصادرة خلال 2026 (بين يناير وسبتمبر 2026) بتعليق تراخيص جهات مسماة أو سحبها أو بإغلاق مقارها مع القائمة جهةً جهة، إذ قد يكون أثر القرار منعكسًا فيها وقد لا يكون.",
+   "new": "تضم القائمة الرسمية لعام 2026 لمقدمي خدمات الصرافة والحوالات، الصادرة عن البنك المركزي اليمني – عدن، كلًّا من 100 شركة صرافة و231 منشأة صرافة فردية و111 وكيلًا للحوالات. وهذه قيود معدودة بحسب فئات القائمة نفسها: فمجموع الفئات الثلاث ليس عددًا لمقدمي خدمات فريدين، ولا عددًا متحققًا منه لمن يعمل منهم حاليًا. ولأن القائمة لا تذكر تاريخ صدورها، يلزم مطابقتها جهةً جهة مع قرارات البنك المركزي في عدن الصادرة خلال 2026 (بين يناير وسبتمبر 2026) بتعليق تراخيص جهات مسماة أو سحبها أو بإغلاق مقارها، إذ قد يكون أثر القرار منعكسًا فيها وقد لا يكون؛ ولم تُجرَ هذه المطابقة بعد."
+  },
+  {
+   "finding": "RC-15:B-1",
+   "sheet": "06_EVIDENCE_OBJECTS",
+   "row": 14,
+   "col": 6,
+   "field": "VIS-PROVIDER-TIME.summary_en",
+   "old": "The official 2026 exchange and remittance roster of the Central Bank of Yemen – Aden (CBY-Aden) lists 100 exchange companies, 231 individual exchange establishments and 111 remittance agents. Selected decisions of the CBY-Aden Governor dated January to September 2026 suspend or withdraw the licences of named entities or close their premises; they are kept separate from the roster and matched to it entity by entity, because the roster's issue date is not stated. Listing or licensing is not evidence of current operation.",
+   "new": "The official 2026 exchange and remittance roster of the Central Bank of Yemen – Aden (CBY-Aden) lists 100 exchange companies, 231 individual exchange establishments and 111 remittance agents. Selected decisions of the CBY-Aden Governor dated January to September 2026 suspend or withdraw the licences of named entities or close their premises; they are kept separate from the roster, and, because the roster's issue date is not stated, each would have to be matched to it entity by entity; that matching has not been done. Listing or licensing is not evidence of current operation."
+  },
+  {
+   "finding": "RC-15:B-1",
+   "sheet": "06_EVIDENCE_OBJECTS",
+   "row": 14,
+   "col": 7,
+   "field": "VIS-PROVIDER-TIME.summary_ar",
+   "old": "تضم القائمة الرسمية لعام 2026 للصرافة والحوالات، الصادرة عن البنك المركزي اليمني – عدن، كلًّا من 100 شركة صرافة و231 منشأة صرافة فردية و111 وكيلًا للحوالات. وتعلّق قرارات مختارة لمحافظ البنك المركزي في عدن مؤرخة بين يناير وسبتمبر 2026 تراخيص جهات مسماة أو تسحبها أو تغلق مقارها؛ وتبقى هذه القرارات منفصلة عن القائمة وتُطابَق معها جهةً جهة، لأن القائمة لا تذكر تاريخ صدورها. والإدراج أو الترخيص ليس دليلًا على التشغيل الحالي.",
+   "new": "تضم القائمة الرسمية لعام 2026 للصرافة والحوالات، الصادرة عن البنك المركزي اليمني – عدن، كلًّا من 100 شركة صرافة و231 منشأة صرافة فردية و111 وكيلًا للحوالات. وتعلّق قرارات مختارة لمحافظ البنك المركزي في عدن مؤرخة بين يناير وسبتمبر 2026 تراخيص جهات مسماة أو تسحبها أو تغلق مقارها؛ وتبقى هذه القرارات منفصلة عن القائمة، ولأن القائمة لا تذكر تاريخ صدورها، يلزم مطابقة كل قرار معها جهةً جهة؛ ولم تُجرَ هذه المطابقة بعد. والإدراج أو الترخيص ليس دليلًا على التشغيل الحالي."
+  },
+  {
+   "finding": "RC-15:B-1",
+   "sheet": "06_EVIDENCE_OBJECTS",
+   "row": 14,
+   "col": 16,
+   "field": "VIS-PROVIDER-TIME.limitations_en",
+   "old": "The 2026 roster can be counted by class, but the counts are not a verified census of providers operating now. The 2026 decisions are matched to named entities one by one, without assuming whether the roster already reflects them, because the roster does not state its issue date; the complete named set of wallet and payment-service providers is not established.",
+   "new": "The 2026 roster can be counted by class, but the counts are not a verified census of providers operating now. Each decision is attached to the entities it names. Because the roster does not state its issue date, those entities would have to be matched with the roster one by one, without assuming either way whether it already reflects the decisions; that matching has not been done, and the complete named set of wallet and payment-service providers is not established."
+  },
+  {
+   "finding": "RC-15:B-1",
+   "sheet": "06_EVIDENCE_OBJECTS",
+   "row": 14,
+   "col": 17,
+   "field": "VIS-PROVIDER-TIME.limitations_ar",
+   "old": "يمكن عدّ قائمة 2026 بحسب الفئة، لكن هذه الأعداد ليست تعدادًا متحققًا منه لمقدمي الخدمات العاملين حاليًا. وتُطابَق قرارات 2026 مع الجهات المسماة جهةً جهة، من دون افتراض أن القائمة تعكسها أو لا تعكسها، لأن القائمة لا تذكر تاريخ صدورها؛ ولا يثبت الدليل المجموعة الكاملة المسماة لمقدمي المحافظ وخدمات الدفع.",
+   "new": "يمكن عدّ قائمة 2026 بحسب الفئة، لكن هذه الأعداد ليست تعدادًا متحققًا منه لمقدمي الخدمات العاملين حاليًا. ويُربط كل قرار بالجهات التي يسميها. ولأن القائمة لا تذكر تاريخ صدورها، يلزم مطابقة هذه الجهات مع القائمة جهةً جهة، من دون افتراض أن القائمة تعكس القرارات أو لا تعكسها؛ ولم تُجرَ هذه المطابقة بعد. ولا يثبت الدليل المجموعة الكاملة المسماة لمقدمي المحافظ وخدمات الدفع."
+  },
+  {
+   "finding": "RC-15:B-1",
+   "sheet": "02_SITE_MAP",
+   "row": 113,
+   "col": 7,
+   "field": "/evidence/VIS-PROVIDER-TIME/.meta_description_en",
+   "old": "The 2026 exchange and remittance roster of the Central Bank of Yemen – Aden is kept apart from dated 2026 Governor's decisions, matched entity by entity.",
+   "new": "The 2026 exchange and remittance roster of the Central Bank of Yemen – Aden is kept apart from dated 2026 Governor's decisions, which have not yet been matched to it entity by entity."
+  },
+  {
+   "finding": "RC-15:B-1",
+   "sheet": "02_SITE_MAP",
+   "row": 113,
+   "col": 8,
+   "field": "/evidence/VIS-PROVIDER-TIME/.meta_description_ar",
+   "old": "تبقى القائمة الرسمية للصرافة والحوالات لعام 2026 لدى البنك المركزي اليمني – عدن منفصلة عن قرارات المحافظ المؤرخة في 2026، وتُطابَق معها جهةً جهة.",
+   "new": "تبقى القائمة الرسمية للصرافة والحوالات لعام 2026 لدى البنك المركزي اليمني – عدن منفصلة عن قرارات المحافظ المؤرخة في 2026، ولم تُطابَق معها جهةً جهة بعد."
+  },
+  {
+   "finding": "RC-15:B-3",
+   "sheet": "06_EVIDENCE_OBJECTS",
+   "row": 29,
+   "col": 6,
+   "field": "CLM-007.summary_en",
+   "old": "The history in the IMF 2025 Article IV staff report shows materially higher remittance inflows in 2024 than in 2018 (both values from the same document); the 2025 estimate and the 2026–2030 projections come from a later supplement and are estimates and projections, not reported values. The IMF series covers the IMF's analytical scope for areas under the internationally recognized government, so its level is not a whole-of-Yemen figure and is not comparable in level with the annual-report values of the Central Bank of Yemen – Aden (CBY-Aden).",
+   "new": "The history in the IMF 2025 Article IV staff report gives a higher value for remittance inflows in 2024 than in 2018 (both values from the same document); the 2025 estimate and the 2026–2030 projections come from a later supplement and are estimates and projections, not reported values. The IMF series covers the IMF's analytical scope for areas under the internationally recognized government, so its level is not a whole-of-Yemen figure and is not comparable in level with the annual-report values of the Central Bank of Yemen – Aden (CBY-Aden)."
+  },
+  {
+   "finding": "RC-15:B-3",
+   "sheet": "06_EVIDENCE_OBJECTS",
+   "row": 29,
+   "col": 7,
+   "field": "CLM-007.summary_ar",
+   "old": "تُظهر القيم التاريخية الواردة في تقرير خبراء صندوق النقد الدولي لمشاورات المادة الرابعة لعام 2025 أن التحويلات الواردة في ميزان المدفوعات كانت في 2024 أعلى بصورة جوهرية منها في 2018 (والقيمتان من الوثيقة نفسها)، أما تقدير 2025 وتوقعات 2026–2030 فمصدرها ملحق لاحق، وهي نوع دليل مختلف. وتغطي سلسلة الصندوق نطاقه التحليلي الخاص بالمناطق الخاضعة للحكومة المعترف بها دوليًا، لذلك لا يمثل مستواها رقمًا لليمن كله، ولا يُقارن مستواها بقيم التقارير السنوية للبنك المركزي اليمني – عدن.",
+   "new": "تورد السلسلة التاريخية في تقرير خبراء صندوق النقد الدولي لمشاورات المادة الرابعة لعام 2025 قيمةً للتحويلات الواردة في ميزان المدفوعات في 2024 أعلى منها في 2018 (والقيمتان من الوثيقة نفسها)، أما تقدير 2025 وتوقعات 2026–2030 فمصدرها ملحق لاحق، وهي نوع دليل مختلف. وتغطي سلسلة الصندوق نطاقه التحليلي الخاص بالمناطق الخاضعة للحكومة المعترف بها دوليًا، لذلك لا يمثل مستواها رقمًا لليمن كله، ولا يُقارن مستواها بقيم التقارير السنوية للبنك المركزي اليمني – عدن."
+  },
+  {
+   "finding": "RC-15:B-3",
+   "sheet": "06_EVIDENCE_OBJECTS",
+   "row": 29,
+   "col": 7,
+   "field": "CLM-007.summary_ar",
+   "old": "تورد السلسلة التاريخية في تقرير خبراء صندوق النقد الدولي لمشاورات المادة الرابعة لعام 2025 قيمةً للتحويلات الواردة في ميزان المدفوعات في 2024 أعلى منها في 2018 (والقيمتان من الوثيقة نفسها)، أما تقدير 2025 وتوقعات 2026–2030 فمصدرها ملحق لاحق، وهي نوع دليل مختلف. وتغطي سلسلة الصندوق نطاقه التحليلي الخاص بالمناطق الخاضعة للحكومة المعترف بها دوليًا، لذلك لا يمثل مستواها رقمًا لليمن كله، ولا يُقارن مستواها بقيم التقارير السنوية للبنك المركزي اليمني – عدن.",
+   "new": "تورد السلسلة التاريخية في تقرير خبراء صندوق النقد الدولي لمشاورات المادة الرابعة لعام 2025 قيمةً للتحويلات الواردة في ميزان المدفوعات في 2024 أعلى منها في 2018 (والقيمتان من الوثيقة نفسها)، أما تقدير 2025 وتوقعات 2026–2030 فمصدرها ملحق لاحق، وهي تقدير وتوقعات، لا قيم مُبلَّغ عنها. وتغطي سلسلة الصندوق نطاقه التحليلي الخاص بالمناطق الخاضعة للحكومة المعترف بها دوليًا، لذلك لا يمثل مستواها رقمًا لليمن كله، ولا يُقارن مستواها بقيم التقارير السنوية للبنك المركزي اليمني – عدن."
+  },
+  {
+   "finding": "RC-15:B-10",
+   "sheet": "06_EVIDENCE_OBJECTS",
+   "row": 10,
+   "col": 6,
+   "field": "CLM-015.summary_en",
+   "old": "A 26 June 2024 circular of the Central Bank of Yemen – Aden (CBY-Aden) names 12 electronic wallets, entities or services as unlicensed by that authority on that date and prohibits banks and exchange businesses from dealing with them. Status under any other authority is not established here.",
+   "new": "A 26 June 2024 circular of the Central Bank of Yemen – Aden (CBY-Aden) names 12 electronic wallets, entities or services as unlicensed by that authority on that date and prohibits banks and exchange businesses from dealing with them. Status under any other authority is not established here. Governor's Decision No. 23 of 2024 on domestic money-transfer activity carries the same date; the circular and the decision are separate instruments, and this record establishes no link between them."
+  },
+  {
+   "finding": "RC-15:B-10",
+   "sheet": "06_EVIDENCE_OBJECTS",
+   "row": 10,
+   "col": 7,
+   "field": "CLM-015.summary_ar",
+   "old": "يسمّي تعميم صادر عن البنك المركزي اليمني – عدن بتاريخ 26 يونيو 2024 ما مجموعه 12 محفظة أو جهة أو خدمة إلكترونية بوصفها غير مرخصة لديه في ذلك التاريخ، ويحظر على البنوك وشركات الصرافة التعامل معها. ولا يثبت هذا الدليل وضعها لدى أي سلطة أخرى.",
+   "new": "يسمّي تعميم صادر عن البنك المركزي اليمني – عدن بتاريخ 26 يونيو 2024 ما مجموعه 12 محفظة أو جهة أو خدمة إلكترونية بوصفها غير مرخصة لديه في ذلك التاريخ، ويحظر على البنوك وشركات الصرافة التعامل معها. ولا يثبت هذا الدليل وضعها لدى أي سلطة أخرى. ويحمل قرار المحافظ رقم (23) لسنة 2024 بشأن مزاولة نشاط التحويلات المالية الداخلية التاريخ نفسه؛ والتعميم والقرار أداتان منفصلتان، ولا يثبت هذا السجل أي صلة بينهما."
+  },
+  {
+   "finding": "RC-15:B-10",
+   "sheet": "06_EVIDENCE_OBJECTS",
+   "row": 10,
+   "col": 24,
+   "field": "CLM-015.source_dependencies",
+   "old": "SRC-CBY-UNLICENSED-EWALLET-2024-001",
+   "new": "SRC-CBY-UNLICENSED-EWALLET-2024-001; SRC-CBY-DEC-23-2024-001"
+  },
+  {
+   "finding": "RC-15:B-10",
+   "sheet": "06_EVIDENCE_OBJECTS",
+   "row": 10,
+   "col": 28,
+   "field": "CLM-015.source_use_roles",
+   "old": "SRC-CBY-UNLICENSED-EWALLET-2024-001=status event",
+   "new": "SRC-CBY-UNLICENSED-EWALLET-2024-001=status event; SRC-CBY-DEC-23-2024-001=context"
+  },
+  {
+   "finding": "RC-15:B-12",
+   "sheet": "03_PAGE_SECTIONS",
+   "row": 175,
+   "col": 5,
+   "field": "/payments/#s2.body_en",
+   "old": "Within the reporting scope of the Central Bank of Yemen – Aden (CBY-Aden), reported POS terminals rose from 561 to 1,651 between March 2025 and June 2026, transaction counts from 8,015 to 27,504 (after a high of 36,201 in May 2026) and nominal transaction value from YER 320 million to YER 1,045 million (after a high of YER 1,579 million in May 2026). This page keeps these three measures separate. A terminal is infrastructure, a transaction is an event and transaction value is a nominal monetary amount; none equals a person.",
+   "new": "Within the reporting scope of the Central Bank of Yemen – Aden (CBY-Aden), reported POS terminals rose from 561 to 1,651 between March 2025 and June 2026, transaction counts from 8,015 to 27,504 (after a high of 36,201 in May 2026) and nominal transaction value from YER 320 million to YER 1,045 million (after a high of YER 1,579 million in May 2026). This page keeps these three measures separate. A terminal is infrastructure, a transaction is an event and transaction value is a nominal monetary amount; none equals a person. The transaction series supports only a narrower reading: the totals CBY-Aden reports are higher in June 2026 than in March 2025, but they did not rise steadily and fell in several months; whether the reporting scope stayed the same, including across the change of release format in July 2025, has not been verified."
+  },
+  {
+   "finding": "RC-15:B-12",
+   "sheet": "03_PAGE_SECTIONS",
+   "row": 176,
+   "col": 7,
+   "field": "/payments/#s2.body_ar",
+   "old": "ضمن نطاق بيانات البنك المركزي اليمني – عدن، ارتفع بين مارس 2025 ويونيو 2026 العدد المنشور لأجهزة نقاط البيع من 561 إلى 1,651 جهازًا، وعدد المعاملات من 8,015 إلى 27,504 (بعد ذروة بلغت 36,201 معاملة في مايو 2026)، والقيمة الاسمية للمعاملات من 320 مليون ريال إلى 1,045 مليون ريال (بعد ذروة بلغت 1,579 مليون ريال في مايو 2026). وتُبقي هذه الصفحة المقاييس الثلاثة منفصلة: الجهاز بنية تحتية، والمعاملة حدث، وقيمة المعاملة مبلغ مالي اسمي؛ ولا يساوي أي منها شخصًا.",
+   "new": "ضمن نطاق بيانات البنك المركزي اليمني – عدن، ارتفع بين مارس 2025 ويونيو 2026 العدد المنشور لأجهزة نقاط البيع من 561 إلى 1,651 جهازًا، وعدد المعاملات من 8,015 إلى 27,504 (بعد ذروة بلغت 36,201 معاملة في مايو 2026)، والقيمة الاسمية للمعاملات من 320 مليون ريال إلى 1,045 مليون ريال (بعد ذروة بلغت 1,579 مليون ريال في مايو 2026). وتُبقي هذه الصفحة المقاييس الثلاثة منفصلة: الجهاز بنية تحتية، والمعاملة حدث، وقيمة المعاملة مبلغ مالي اسمي؛ ولا يساوي أي منها شخصًا. ولا تدعم سلسلة المعاملات إلا قراءة أضيق: فالإجماليات التي يُبلغ عنها البنك المركزي في عدن أعلى في يونيو 2026 منها في مارس 2025، لكنها لم ترتفع باطراد وانخفضت في عدة أشهر؛ ولم يُتحقق من استمرارية نطاق الإبلاغ، بما في ذلك عند تغيّر شكل الإصدار في يوليو 2025."
+  },
+  {
+   "finding": "RC-15:A-8",
+   "sheet": "10_MEASUREMENT_AGENDA",
+   "row": 7,
+   "col": 28,
+   "field": "MA-003.affected_routes",
+   "old": "[\"/people\",\"/explore\"]",
+   "new": "[\"/people\",\"/\",\"/explore\"]"
+  },
+  {
+   "finding": "RC-15:A-8",
+   "sheet": "10_MEASUREMENT_AGENDA",
+   "row": 9,
+   "col": 28,
+   "field": "MA-005.affected_routes",
+   "old": "[\"/access\",\"/providers\",\"/explore\"]",
+   "new": "[\"/access\",\"/providers\",\"/\",\"/explore\"]"
+  },
+  {
+   "finding": "RC-15:A-8",
+   "sheet": "10_MEASUREMENT_AGENDA",
+   "row": 6,
+   "col": 28,
+   "field": "MA-002.affected_routes",
+   "old": "[\"/payments\",\"/people\",\"/reforms\"]",
+   "new": "[\"/payments\",\"/people\",\"/reforms\",\"/explore\"]"
+  },
+  {
+   "finding": "RC-15:A-8",
+   "sheet": "10_MEASUREMENT_AGENDA",
+   "row": 13,
+   "col": 28,
+   "field": "MA-009.affected_routes",
+   "old": "[\"/payments\",\"/people\",\"/reforms\"]",
+   "new": "[\"/payments\",\"/people\",\"/reforms\",\"/explore\"]"
+  },
+  {
+   "finding": "RC-15:A-8",
+   "sheet": "10_MEASUREMENT_AGENDA",
+   "row": 14,
+   "col": 28,
+   "field": "MA-010.affected_routes",
+   "old": "[\"/reforms\",\"/payments\",\"/access\",\"/people\"]",
+   "new": "[\"/reforms\",\"/payments\",\"/access\",\"/people\",\"/explore\"]"
+  },
+  {
+   "finding": "RC-15:B-6",
+   "sheet": "07_PUBLIC_CLAIMS",
+   "row": 30,
+   "col": 6,
+   "field": "CLM-026.public_routes",
+   "old": "[\"/people\",\"/methodology\"]",
+   "new": "[\"/people\",\"/methodology\",\"/measurement\"]"
+  },
+  {
+   "finding": "RC-15:B-6",
+   "sheet": "06_EVIDENCE_OBJECTS",
+   "row": 41,
+   "col": 3,
+   "field": "CLM-026.public_routes",
+   "old": "/people/ | /methodology/",
+   "new": "/people/ | /methodology/ | /measurement/"
+  },
+  {
+   "finding": "RC-15:C-1",
+   "sheet": "06_EVIDENCE_OBJECTS",
+   "row": 28,
+   "col": 25,
+   "field": "CLM-002.source_links",
+   "old": "[{\"source_id\":\"SRC-WB-FINDEX-AGG-2022\",\"url\":\"https://data.worldbank.org/indicator/FX.OWN.TOTL.ZS?locations=YE\",\"audit_state\":\"PASS_AUTHORITY_OR_PROVIDER_LOCATOR\"}]",
+   "new": "[{\"source_id\":\"SRC-WB-FINDEX-AGG-2022\",\"url\":\"https://data.worldbank.org/indicator/FX.OWN.TOTL.ZS?locations=YE\",\"audit_state\":\"PASS_AUTHORITY_OR_PROVIDER_LOCATOR\"},{\"source_id\":\"SRC-WB-FINDEX-AGG-2022\",\"url\":\"https://data.worldbank.org/indicator/FX.OWN.TOTL.MA.ZS?locations=YE\",\"audit_state\":\"PASS_AUTHORITY_OR_PROVIDER_LOCATOR\"},{\"source_id\":\"SRC-WB-FINDEX-AGG-2022\",\"url\":\"https://data.worldbank.org/indicator/FX.OWN.TOTL.FE.ZS?locations=YE\",\"audit_state\":\"PASS_AUTHORITY_OR_PROVIDER_LOCATOR\"}]"
+  },
+  {
+   "finding": "RC-15:A-7",
+   "sheet": "04_NAV_UX",
+   "row": 622,
+   "col": 2,
+   "field": "SEARCH-ALIAS-026.terms_en",
+   "old": "humanitarian; cash transfer; cash transfers; social protection; G2P",
+   "new": "humanitarian; cash transfer; cash transfers; social protection; G2P; cash assistance"
+  },
+  {
+   "finding": "RC-15:A-7",
+   "sheet": "04_NAV_UX",
+   "row": 622,
+   "col": 3,
+   "field": "SEARCH-ALIAS-026.terms_ar",
+   "old": "إنساني; المساعدات الإنسانية; التحويلات النقدية; الحماية الاجتماعية; مدفوعات الحكومة للأفراد",
+   "new": "إنساني; المساعدات الإنسانية; التحويلات النقدية; الحماية الاجتماعية; مدفوعات الحكومة للأفراد; المساعدات النقدية"
+  },
+  {
+   "finding": "RC-15:A-4",
+   "sheet": "04_NAV_UX",
+   "row": 624,
+   "col": null,
+   "field": "SEARCH-ALIAS-028",
+   "old": null,
+   "new": "internet; connectivity || الإنترنت; الانترنت; الاتصال; الاتصال بالإنترنت || route:/measurement/ | route:/people/"
+  },
+  {
+   "finding": "RC-15:B-12",
+   "sheet": "04_NAV_UX",
+   "row": 558,
+   "col": 2,
+   "field": "UI-VIS-NOTE-POS-H1-WITHHELD",
+   "old": "The first-half 2025 payment report also gives an aggregate figure for POS transactions. It is withheld here because its definition and period need a methodology note before public use. The monthly releases are shown because each reports POS transactions for one month within the same reporting scope, so their published totals can be read side by side. Where a release's displayed percentage change does not match the published monthly totals, the mismatch is recorded as a discrepancy within the source.",
+   "new": "The first-half 2025 payment report also gives an aggregate figure for POS transactions. It is withheld here because its definition and period need a methodology note before public use. The monthly releases are shown because each reports POS transactions for a single month, so their published totals can be read side by side; whether the reporting scope stayed the same across the change of release format in July 2025 has not been verified. Where a release's displayed percentage change does not match the published monthly totals, the mismatch is recorded as a discrepancy within the source."
+  },
+  {
+   "finding": "RC-15:B-12",
+   "sheet": "04_NAV_UX",
+   "row": 558,
+   "col": 3,
+   "field": "UI-VIS-NOTE-POS-H1-WITHHELD",
+   "old": "يذكر تقرير المدفوعات للنصف الأول من 2025 أيضًا رقمًا إجماليًا لمعاملات نقاط البيع، وهو محجوب هنا لأن تعريفه وفترته يحتاجان إلى ملاحظة منهجية قبل النشر. أما الإصدارات الشهرية فتُعرض لأن كلًّا منها يذكر معاملات نقاط البيع لشهر واحد ضمن نطاق الإبلاغ نفسه، فيمكن قراءة إجمالياتها المنشورة جنبًا إلى جنب. وحيث لا تتفق نسبة التغير المعروضة في إصدارٍ ما مع الإجماليات الشهرية المنشورة، يُسجَّل الفرق بوصفه اختلافًا داخل المصدر.",
+   "new": "يذكر تقرير المدفوعات للنصف الأول من 2025 أيضًا رقمًا إجماليًا لمعاملات نقاط البيع، وهو محجوب هنا لأن تعريفه وفترته يحتاجان إلى ملاحظة منهجية قبل النشر. أما الإصدارات الشهرية فتُعرض لأن كلًّا منها يذكر معاملات نقاط البيع لشهر واحد، فيمكن قراءة إجمالياتها المنشورة جنبًا إلى جنب؛ ولم يُتحقق من استمرارية نطاق الإبلاغ عند تغيّر شكل الإصدار في يوليو 2025. وحيث لا تتفق نسبة التغير المعروضة في إصدارٍ ما مع الإجماليات الشهرية المنشورة، يُسجَّل الفرق بوصفه اختلافًا داخل المصدر."
+  },
+  {
+   "finding": "RC-15:C-3",
+   "sheet": "02_SITE_MAP",
+   "row": 119,
+   "col": 7,
+   "field": "/evidence/compare/.meta_description_en",
+   "old": "Records are set side by side on definition, period, population, geography, unit and method; when they do not match, “not comparable” is a valid result.",
+   "new": "Records are set side by side on definition, population, period, method, source and currentness; when they do not match, “not comparable” is a valid result."
+  },
+  {
+   "finding": "RC-15:C-3",
+   "sheet": "02_SITE_MAP",
+   "row": 119,
+   "col": 8,
+   "field": "/evidence/compare/.meta_description_ar",
+   "old": "تُعرض السجلات جنبًا إلى جنب من حيث التعريف والفترة والمجتمع والنطاق الجغرافي والوحدة والطريقة؛ وحين لا تتطابق يكون الحكم «غير قابلة للمقارنة» نتيجة صحيحة.",
+   "new": "تُعرض السجلات جنبًا إلى جنب من حيث التعريف والمجتمع والفترة والطريقة والمصدر وحداثة الدليل؛ وحين لا تتطابق يكون الحكم «غير قابلة للمقارنة» نتيجة صحيحة."
+  },
+  {
+   "finding": "RC-15:C-3",
+   "sheet": "03_PAGE_SECTIONS",
+   "row": 84,
+   "col": 5,
+   "field": "/evidence/compare/#s1.body_en",
+   "old": "Select 2–4 records. Compare definition, period, population or calculation base, geography, unit and method before comparing values. A mismatch is a reason to qualify the comparison, not to hide it; when definitions or populations do not match, “not comparable” is a valid result.\n\nCompare offers a selected set of evidence records in this edition. A record that is not offered here can still be read in full on its own page; its absence from Compare is not a judgement about it.\nSelect at least two records.",
+   "new": "Select 2–4 records. The table compares definition, population or calculation base, period, method, source and currentness; read each record for its geography and unit before comparing values. A mismatch is a reason to qualify the comparison, not to hide it; when definitions or populations do not match, “not comparable” is a valid result.\n\nCompare offers a selected set of evidence records in this edition. A record that is not offered here can still be read in full on its own page; its absence from Compare is not a judgement about it.\nSelect at least two records."
+  },
+  {
+   "finding": "RC-15:C-3",
+   "sheet": "03_PAGE_SECTIONS",
+   "row": 84,
+   "col": 7,
+   "field": "/evidence/compare/#s1.body_ar",
+   "old": "اختر من 2 إلى 4 سجلات. قارن التعريف والفترة ومجتمع القياس أو قاعدة الاحتساب والنطاق الجغرافي والوحدة والطريقة قبل مقارنة القيم. عدم التطابق سبب لتقييد المقارنة لا لإخفائها، وحين لا تتطابق التعريفات أو المجتمعات يكون الحكم بأنها «غير قابلة للمقارنة» نتيجة صحيحة.\n\nتتيح أداة المقارنة في هذا الإصدار مجموعة مختارة من سجلات الأدلة. ويمكن قراءة أي سجل غير متاح هنا كاملًا في صفحته، وغيابه عن المقارنة ليس حكمًا عليه.\nاختر سجلين على الأقل.",
+   "new": "اختر من 2 إلى 4 سجلات. يقارن الجدول التعريف ومجتمع القياس أو قاعدة الاحتساب والفترة والطريقة والمصدر وحداثة الدليل؛ واقرأ كل سجل لمعرفة نطاقه الجغرافي ووحدته قبل مقارنة القيم. عدم التطابق سبب لتقييد المقارنة لا لإخفائها، وحين لا تتطابق التعريفات أو المجتمعات يكون الحكم بأنها «غير قابلة للمقارنة» نتيجة صحيحة.\n\nتتيح أداة المقارنة في هذا الإصدار مجموعة مختارة من سجلات الأدلة. ويمكن قراءة أي سجل غير متاح هنا كاملًا في صفحته، وغيابه عن المقارنة ليس حكمًا عليه.\nاختر سجلين على الأقل."
+  }
+ ]
+}

@@ -1,0 +1,239 @@
+{
+ "transaction": "RC-3",
+ "summary": "Release-candidate governed interface strings: items 11, 12, 18, 19, 20 of audit/release_candidate/INSTRUCTIONS.md Part A G2",
+ "items": {
+  "item_11": "DONE — UI-JS-SEARCH-RESULTS-OF added (EN 'Showing {n} of {m} results'; AR «النتائج المعروضة: {n} من {m}»).",
+  "item_12": "DONE — 4 source records relabelled in both languages.",
+  "item_18": "DONE — the five matrix headings and UI-VIS-CAT-PRV-CLASS-PSO added; the matrix draws on /providers/ and its record in both languages (DL-D7-001). One renderer change rides with this transaction (scripts/yfie/visuals.py provider_matrix): the payment-system-operators row printed its three institution events in the status dimension without the UNKNOWN label; it now prints UNKNOWN in all five dimensions, the events following as context, in the drawn form and the fallback table (the contract's known_gap).",
+  "independent_review": {
+   "reviewer": "independent subagent that did not write the transaction (senior Arab economic editor, senior institutional English editor and accessibility lenses)",
+   "verdict": "ACCEPTABLE — every string verbatim the brief's wording in both languages; items 12, 18, 20 and the Compare status hold; no placeholder or raw UI id in any body text",
+   "applied": [
+    "SHOULD FIX 3: this note named no code change; it now records the provider_matrix change (and the renderer docstring says so)"
+   ],
+   "escalated": [
+    "SHOULD FIX 1: four English-only Master period values (WCR-001, WCR-002, WCR-004 reference_period; PUC-MFI-2026-01 reference_state) now show on the Arabic matrix — design/ESCALATIONS.md, NEEDS_CONTROLLED_CONTENT, raised 2 October 2026",
+    "SHOULD FIX 2: no governed lead-in marks the payment-system-operators context events as context — design/ESCALATIONS.md, NEEDS_CONTROLLED_CONTENT"
+   ],
+   "for_the_owner": [
+    "OPTIONAL: «9 نقطة مئوية» in the VIS-FINDEX-GAPS frame uses one invariant unit label (prose says «9.0 نقاط مئوية»); the chart prints 9 where the prose prints 9.0 (pre-existing)",
+    "OPTIONAL: «مناهج القياس ومراجع دولية» could read «مناهج القياس والمراجع الدولية»; owner wording, not changed",
+    "OPTIONAL: the English unit prints capitalised after a value ('12.91 Percentage points'; pre-existing)"
+   ]
+  },
+  "item_19": "DONE — five rows added; UI-JS-COMPARE-SELECTED now 'Records selected: {n}' / «السجلات المختارة: {n}».",
+  "item_20": "DONE — UI-VIS-UNIT-PP label_ar «نقطة مئوية» (EN unchanged)."
+ },
+ "input_master_sha256": "ecc228beec41bda3bf596c5638da7ff54af63da5e26c89b5db316733076263ef",
+ "output_master_sha256": "3c6c66beddedb90db6a54b21c5689b0852ec8fd90538df75af628655f5247c39",
+ "cells_written": 23,
+ "changes": [
+  {
+   "finding": "RC-3:ITEM-19",
+   "sheet": "04_NAV_UX",
+   "row": 468,
+   "col": 2,
+   "field": "UI-JS-COMPARE-SELECTED.label_en",
+   "old": "records selected",
+   "new": "Records selected: {n}"
+  },
+  {
+   "finding": "RC-3:ITEM-19",
+   "sheet": "04_NAV_UX",
+   "row": 468,
+   "col": 3,
+   "field": "UI-JS-COMPARE-SELECTED.label_ar",
+   "old": "سجلات مختارة",
+   "new": "السجلات المختارة: {n}"
+  },
+  {
+   "finding": "RC-3:ITEM-20",
+   "sheet": "04_NAV_UX",
+   "row": 143,
+   "col": 3,
+   "field": "UI-VIS-UNIT-PP.label_ar",
+   "old": "نقاط مئوية",
+   "new": "نقطة مئوية"
+  },
+  {
+   "finding": "RC-3:ITEM-12",
+   "sheet": "15_SOURCE_LIBRARY",
+   "row": 145,
+   "col": 8,
+   "field": "SRC-OECD-INFE-2023.resource_category",
+   "old": "Measurement standards and methods",
+   "new": "Measurement methods and international references"
+  },
+  {
+   "finding": "RC-3:ITEM-12",
+   "sheet": "15_SOURCE_LIBRARY",
+   "row": 145,
+   "col": 13,
+   "field": "SRC-OECD-INFE-2023.resource_category_ar",
+   "old": "معايير القياس ومناهجه",
+   "new": "مناهج القياس ومراجع دولية"
+  },
+  {
+   "finding": "RC-3:ITEM-12",
+   "sheet": "15_SOURCE_LIBRARY",
+   "row": 146,
+   "col": 8,
+   "field": "SRC-WB-FINDEX-2025-EDITION.resource_category",
+   "old": "Measurement standards and methods",
+   "new": "Measurement methods and international references"
+  },
+  {
+   "finding": "RC-3:ITEM-12",
+   "sheet": "15_SOURCE_LIBRARY",
+   "row": 146,
+   "col": 13,
+   "field": "SRC-WB-FINDEX-2025-EDITION.resource_category_ar",
+   "old": "معايير القياس ومناهجه",
+   "new": "مناهج القياس ومراجع دولية"
+  },
+  {
+   "finding": "RC-3:ITEM-12",
+   "sheet": "15_SOURCE_LIBRARY",
+   "row": 148,
+   "col": 8,
+   "field": "SRC-CGAP-ARAB-MEAS-2017-001.resource_category",
+   "old": "Measurement standards and methods",
+   "new": "Measurement methods and international references"
+  },
+  {
+   "finding": "RC-3:ITEM-12",
+   "sheet": "15_SOURCE_LIBRARY",
+   "row": 148,
+   "col": 13,
+   "field": "SRC-CGAP-ARAB-MEAS-2017-001.resource_category_ar",
+   "old": "معايير القياس ومناهجه",
+   "new": "مناهج القياس ومراجع دولية"
+  },
+  {
+   "finding": "RC-3:ITEM-12",
+   "sheet": "15_SOURCE_LIBRARY",
+   "row": 149,
+   "col": 8,
+   "field": "SRC-OECD-YOUTH-DFI-2020-001.resource_category",
+   "old": "Measurement standards and methods",
+   "new": "Measurement methods and international references"
+  },
+  {
+   "finding": "RC-3:ITEM-12",
+   "sheet": "15_SOURCE_LIBRARY",
+   "row": 149,
+   "col": 13,
+   "field": "SRC-OECD-YOUTH-DFI-2020-001.resource_category_ar",
+   "old": "معايير القياس ومناهجه",
+   "new": "مناهج القياس ومراجع دولية"
+  },
+  {
+   "finding": "RC-3:ITEMS-11-18-19",
+   "sheet": "04_NAV_UX",
+   "row": null,
+   "col": null,
+   "field": "UI-JS-SEARCH-RESULTS-OF",
+   "old": null,
+   "new": "Showing {n} of {m} results || النتائج المعروضة: {n} من {m}"
+  },
+  {
+   "finding": "RC-3:ITEMS-11-18-19",
+   "sheet": "04_NAV_UX",
+   "row": null,
+   "col": null,
+   "field": "UI-VIS-MATRIX-AUTHORITY",
+   "old": null,
+   "new": "Issuing authority or source || الجهة المصدرة أو المصدر"
+  },
+  {
+   "finding": "RC-3:ITEMS-11-18-19",
+   "sheet": "04_NAV_UX",
+   "row": null,
+   "col": null,
+   "field": "UI-VIS-MATRIX-UNIVERSE",
+   "old": null,
+   "new": "Dated list or count || القائمة أو العدد المؤرخ"
+  },
+  {
+   "finding": "RC-3:ITEMS-11-18-19",
+   "sheet": "04_NAV_UX",
+   "row": null,
+   "col": null,
+   "field": "UI-VIS-MATRIX-STATUS",
+   "old": null,
+   "new": "Dated status decisions || قرارات الوضع المؤرخة"
+  },
+  {
+   "finding": "RC-3:ITEMS-11-18-19",
+   "sheet": "04_NAV_UX",
+   "row": null,
+   "col": null,
+   "field": "UI-VIS-MATRIX-NEGATIVE",
+   "old": null,
+   "new": "Official lists of unlicensed names || قوائم رسمية بالأسماء غير المرخصة"
+  },
+  {
+   "finding": "RC-3:ITEMS-11-18-19",
+   "sheet": "04_NAV_UX",
+   "row": null,
+   "col": null,
+   "field": "UI-VIS-MATRIX-OPERATION",
+   "old": null,
+   "new": "Evidence of operation || أدلة التشغيل"
+  },
+  {
+   "finding": "RC-3:ITEMS-11-18-19",
+   "sheet": "04_NAV_UX",
+   "row": null,
+   "col": null,
+   "field": "UI-VIS-CAT-PRV-CLASS-PSO",
+   "old": null,
+   "new": "Payment-system operators || مشغلو أنظمة الدفع"
+  },
+  {
+   "finding": "RC-3:ITEMS-11-18-19",
+   "sheet": "04_NAV_UX",
+   "row": null,
+   "col": null,
+   "field": "UI-JS-SEARCH-TYPE-FACET",
+   "old": null,
+   "new": "Result type || نوع النتيجة"
+  },
+  {
+   "finding": "RC-3:ITEMS-11-18-19",
+   "sheet": "04_NAV_UX",
+   "row": null,
+   "col": null,
+   "field": "UI-JS-SEARCH-TYPE-ALL",
+   "old": null,
+   "new": "All types || كل الأنواع"
+  },
+  {
+   "finding": "RC-3:ITEMS-11-18-19",
+   "sheet": "04_NAV_UX",
+   "row": null,
+   "col": null,
+   "field": "UI-JS-SEARCH-SEE-ALL-EVIDENCE",
+   "old": null,
+   "new": "See all matching evidence records || اعرض كل سجلات الأدلة المطابقة"
+  },
+  {
+   "finding": "RC-3:ITEMS-11-18-19",
+   "sheet": "04_NAV_UX",
+   "row": null,
+   "col": null,
+   "field": "UI-EXTERNAL-NEW-TAB",
+   "old": null,
+   "new": "(opens in a new tab) || (يُفتح في علامة تبويب جديدة)"
+  },
+  {
+   "finding": "RC-3:ITEMS-11-18-19",
+   "sheet": "04_NAV_UX",
+   "row": null,
+   "col": null,
+   "field": "UI-VIS-VALUE-UNIT-PER-ROW",
+   "old": null,
+   "new": "Value (unit given in each row) || القيمة (الوحدة مذكورة في كل صف)"
+  }
+ ]
+}

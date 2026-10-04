@@ -36,18 +36,21 @@ One implementation, `scripts/discovery.py`, used by the build and checked by the
 
 | Item | Contract |
 |---|---|
-| Public origin | `site-src/deployment.json` → `public_origin`: **null** until the owner fixes the release domain (release-only decision). Never guessed |
+| Public origin | `site-src/deployment.json` → `public_origin`: **null** until release (owner decision B8, 3 October 2026). Never guessed. It may carry a path: the decided address is `https://causewaygrp.com/financial-inclusion-evidence` (B1), and its path is the base path (below) |
+| Base path | The origin's path (`/financial-inclusion-evidence`; empty when there is none). `dist/`, the review build every gate reads, keeps root-relative links; the published site, `scripts/build.py --out DIR`, carries every link, asset, stylesheet, runtime fetch, language prefix, root redirect and `_headers` path pattern under it (`scripts/base_path.py`). Proved by `scripts/tests/test_base_path.py`, which builds the decided origin, serves it under the path and fails on any request that leaves it |
 | Canonical | Self-canonical in the page's own language |
 | hreflang | Every page lists `en`, `ar` and `x-default` (→ `/`); the pair is reciprocal |
-| robots.txt | Origin null (now): `Disallow: /` — a pre-release build is not for indexing. Origin set: `Allow: /` and `Sitemap:` |
+| Pre-release | `site-src/deployment.json` → `pre_release`: **true** until release (owner decision B3). Every page, the root entry and the 404 included, carries `<meta name="robots" content="noindex, nofollow">`; at release it goes false and the 404 keeps its own `noindex` (gate RC-NOINDEX) |
+| robots.txt | Origin null (now): `Disallow: /` — a pre-release build is not for indexing. Origin set: `Allow:` the base path and `Sitemap:`. Under a path crawlers ignore this file: the domain's own `/robots.txt` names the sitemap, or it is submitted in Search Console (`docs/RELEASE_RUNBOOK.md`, "Hosting") |
 | sitemap.xml | Written only with an origin: every localized page once (286), each with its three alternates; no `lastmod` (the Master holds no page-level modification date) |
 | Titles and descriptions | One native `<title>` and one meta description per page, unique within each language; one `<h1>` |
 | Structured data | `WebSite` on Home; `BreadcrumbList` where a breadcrumb is shown (Evidence Records, Readings), with the visible names; `Article` on the ten Readings (headline, description = standfirst, language, publisher CauseWay, part of the resource). No author, dates or `Dataset`: none is governed, and the resource publishes evidence records and a source directory, not datasets |
 | Social image | `og:image` is the page's own 1200 × 630 image, rasterised from the design's governed template (EAD-09) and served from `/assets/social/`; root-relative before an origin is set, absolute after, like every other URL here. `og:image:alt` is the page's own title; the card type is `summary_large_image` |
 | Search | Local index (`static-data/search_index.json`): page, question, evidence, Reading, Measurement, source and source-locator result types |
 
-When the origin is set the same build makes every canonical, hreflang, sitemap and structured-data URL absolute; nothing
-else changes.
+When the origin is set the same build makes every canonical, hreflang, sitemap and structured-data URL absolute; when it
+carries a path, the published site (`scripts/build.py --out`) also moves its own addresses under that path. Nothing else
+changes.
 
 ## Security and privacy expectations for Code
 
@@ -63,6 +66,41 @@ font, image or frame, no form (gate F6-G05). The host should send:
 | `Referrer-Policy` | `strict-origin-when-cross-origin` |
 | `Permissions-Policy` | `camera=(), microphone=(), geolocation=(), payment=(), usb=()` |
 | `Cross-Origin-Opener-Policy` | `same-origin` |
+
+### Host configuration, in the repository (B14 b, 3 October 2026)
+
+`site-src/hosting/_headers` holds the headers above, plus cache rules: five minutes, revalidated, for HTML and the
+search data; an hour for assets whose names are not fingerprinted; thirty days for the canonical fonts.
+`scripts/build.py` copies it unchanged to `dist/_headers`. The release host is DigitalOcean (owner decision of 3 October
+2026): an App Platform static-site component cannot send these headers, so the site runs as an nginx service, and
+`scripts/hosting_nginx.py` writes the file into its nginx server block (`docs/RELEASE_RUNBOOK.md`, "Hosting";
+proved by `scripts/tests/test_digitalocean_hosting.py`). Cloudflare Pages and Netlify would read the file itself. Its
+path rules never overlap, because such hosts would join two values of one header.
+
+`Strict-Transport-Security` stays commented out until HTTPS is confirmed on the release domain (`docs/RELEASE_RUNBOOK.md`).
+
+**GitHub Pages cannot set response headers.** It would serve `_headers` as an ordinary file. If GitHub Pages is ever
+used, the policy can come only from a `<meta http-equiv="Content-Security-Policy">`. That cannot carry `frame-ancestors`
+or the other headers, so it is not the recommended host.
+
+`scripts/tests/test_security_headers.py` serves `dist/` locally under `dist/_headers` and loads every page in headless
+Chromium. It fails on any policy violation, failed request or script error. It is a local check of the file and makes no
+claim about any live host.
+
+### Data exports, switched off (B14 a, 3 October 2026)
+
+`scripts/exports.py` writes six datasets to `build/exports/`, never to `dist/`: the Evidence Records, the public claims,
+the sources, the visual rows, the chronology and the Measurement Agenda. Each comes as CSV and JSON, with a bilingual
+codebook and provenance on every row: record ID, source IDs, public locators and the Master's SHA-256.
+
+`scripts/tests/test_exports.py` proves every value against the projections. CI attaches the files as the artefact
+`yfie-data-exports`.
+
+Publishing them is one switch: `public_downloads` in `site-src/deployment.json`. It stays `false` until CauseWay's
+counsel confirms the CC BY 4.0 text (the owner adopted the licence on 3 October 2026). While it is false, the validator (RC-B14) fails if a download appears in `dist/`.
+The same confirmation comes before any deploy at all, because /rights/ and /terms/ print the licence text:
+`licence_text_confirmed` in `site-src/deployment.json` stays `false` until counsel confirms it, and the deploy
+workflow refuses to publish until it is `true` (`docs/RELEASE_RUNBOOK.md`, step 7a).
 
 - **Rendering.** `app.js` builds result and comparison markup from governed JSON and escapes every value (`esc`); Code
   must keep escaping (or Trusted Types) for anything rendered from data, and must not render source text as HTML.

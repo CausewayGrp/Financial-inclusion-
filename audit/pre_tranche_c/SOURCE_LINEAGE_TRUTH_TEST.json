@@ -2,16 +2,16 @@
  "rule": "Evidence records show only exact bound sources, listed member records, or an explicit unbound or framing state (Tranche B Stage 1, PB-0001/PB-0002). Dataset-level tokens are never expanded into source lists; an input that is not bound to a source stays explicit as unresolved. Never invent a source, title, publisher, date, licence or missing fact.",
  "as_of": "Pre-Tranche-C P5",
  "evidence_record_lineage_state_counts": {
-  "BOUND_EXACT": 93,
+  "BOUND_EXACT": 92,
   "COMPOSITE_OF_OBJECTS": 13,
   "FRAMING_NO_FACT": 1,
   "BOUND_PARTIAL": 3
  },
  "closure_state_counts_by_object_type": {
   "evidence_object": {
-   "CLOSED_TO_SOURCE_ID": 93,
-   "COMPOSITE_MEMBERS_NOT_LISTED": 9,
-   "COMPOSITE_OF_OBJECTS": 4,
+   "CLOSED_TO_SOURCE_ID": 92,
+   "COMPOSITE_MEMBERS_NOT_LISTED": 8,
+   "COMPOSITE_OF_OBJECTS": 5,
    "FRAMING_NO_FACT": 1,
    "PARTIALLY_RESOLVED": 3
   },
@@ -28,8 +28,8 @@
   },
   "visual": {
    "CLOSED_TO_SOURCE_ID": 26,
-   "COMPOSITE_MEMBERS_NOT_LISTED": 8,
-   "COMPOSITE_OF_OBJECTS": 1,
+   "COMPOSITE_MEMBERS_NOT_LISTED": 7,
+   "COMPOSITE_OF_OBJECTS": 2,
    "PARTIALLY_RESOLVED": 1
   },
   "measurement": {
@@ -43,9 +43,47 @@
    "members": []
   },
   "VIS-EVIDENCE-FRESHNESS": {
-   "state": "COMPOSITE_MEMBERS_NOT_LISTED",
+   "state": "COMPOSITE_OF_OBJECTS",
    "open_inputs": [],
-   "members": []
+   "members": [
+    "CLM-001",
+    "CLM-025",
+    "CLM-029",
+    "CLM-031",
+    "CLM-028",
+    "CLM-013",
+    "VIS-FL-EVIDENCE-LADDER",
+    "VIS-FINDEX-RESILIENCE",
+    "CLM-002",
+    "VIS-FINDEX-GAPS",
+    "XW-FMIIP-005",
+    "CLM-052",
+    "CLM-050",
+    "FMIIP-BASELINE-2025-01",
+    "CLM-003",
+    "CLM-017",
+    "CLM-012",
+    "CLM-045",
+    "CLM-030",
+    "CLM-007",
+    "CLM-032",
+    "VIS-REMITTANCE-COST",
+    "CLM-008",
+    "CLM-009",
+    "CLM-019",
+    "CLM-015",
+    "CLM-053",
+    "CLM-054",
+    "CLM-033",
+    "CLM-038",
+    "CLM-005",
+    "CLM-006",
+    "CLM-059",
+    "CLM-060",
+    "CLM-011",
+    "DS-FCP-ARCH",
+    "CLM-018"
+   ]
   },
   "VIS-SOURCE-COMPARISON": {
    "state": "COMPOSITE_MEMBERS_NOT_LISTED",
@@ -167,13 +205,15 @@
    "result": "PASS",
    "detail": {
     "dataset_tokens_on_records": [
+     "DS-FCP-ARCH",
      "DS-FINDEX-PUBLIC-HISTORY",
      "DS-K04-REMIT-SOURCE-LENSES",
      "DS-K04-SAUDI-SUPPORT-TRANSMISSION",
      "DS-V041-STRICT-COUNSEL"
     ],
     "member_record_references": [
-     "DS-FINDEX-HISTORY-CROSSWALK -> DS-FINDEX-PUBLIC-HISTORY"
+     "DS-FINDEX-HISTORY-CROSSWALK -> DS-FINDEX-PUBLIC-HISTORY",
+     "VIS-EVIDENCE-FRESHNESS -> DS-FCP-ARCH"
     ]
    }
   },

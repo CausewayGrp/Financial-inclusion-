@@ -124,7 +124,7 @@ def hard_state(pg, route: str, lang: str) -> dict:
         out["statement_before_first_figure"] = ev(JS_ORDER, [".head .st", "#s3 .compact"])
         out["one_link_per_bound_object"] = ev("[...document.querySelectorAll('.compact.bound')].every(a=>a.querySelectorAll('a').length===1)")
         # the frame prints its boundary once; the governed text alternative may restate it (that is content — escalated)
-        out["boundary_once_per_frame"] = ev("[...document.querySelectorAll('figure.fig')].every(f=>{const t=f.querySelector('.foot .b');if(!t)return false;const s=t.innerText.replace(/^[^:]*:\\s*/,'').slice(0,40);const c=f.cloneNode(true);c.querySelectorAll('.alt,figcaption').forEach(e=>e.remove());return c.textContent.split(s).length===2})")
+        out["boundary_once_per_frame"] = ev("[...document.querySelectorAll('figure.fig')].every(f=>{const t=f.querySelector('.foot .b');if(!t)return false;const s=t.innerText.replace(/^[^:]*:\\s*/,'').slice(0,40);const c=f.cloneNode(true);c.querySelectorAll('.alt .table-wrap,.alt table,figcaption').forEach(e=>e.remove());return c.textContent.split(s).length===2})")   # A3: the visible text alternative counts too
         out["records_edge_lists_all"] = ev("document.querySelector('aside.spine:not(.foot-spine) nav.edges').querySelectorAll('li').length===4")
         out["double_rule_spans_column"] = ev("(()=>{const b=document.querySelector('section.bnd'),o=document.querySelector('article.page-obj');return !!b&&Math.abs(b.getBoundingClientRect().width-o.getBoundingClientRect().width)<2})()")
     if route == "/people/":   # dense_domain: wave, fieldwork, population and limitation attached to the headline figure
@@ -194,7 +194,7 @@ def hard_state(pg, route: str, lang: str) -> dict:
             out["compare_entry"] = (q("[data-compare-entry]") == 1) == bool(b.get("compare_href"))
             out["own_visual"] = (q(f"#q1 figure.fig[data-visual-id='{v['id']}'][data-visual-fallback]") == 1) if (v and v.get("tier") != "RETIRE_FROM_DESIGN") else (q("#q1 figure.fig") == 0)
             out["used_in_readings"] = (q("article.page-obj[data-used-in-readings]") == 1) == bool(b["used_in_readings"])
-            out["boundary_once_per_frame"] = ev("[...document.querySelectorAll('figure.fig')].every(f=>{const t=f.querySelector('.foot .b');if(!t)return false;const s=t.innerText.replace(/^[^:]*:\\s*/,'').slice(0,40);const c=f.cloneNode(true);c.querySelectorAll('.alt,figcaption').forEach(e=>e.remove());return c.textContent.split(s).length===2})")
+            out["boundary_once_per_frame"] = ev("[...document.querySelectorAll('figure.fig')].every(f=>{const t=f.querySelector('.foot .b');if(!t)return false;const s=t.innerText.replace(/^[^:]*:\\s*/,'').slice(0,40);const c=f.cloneNode(true);c.querySelectorAll('.alt .table-wrap,.alt table,figcaption').forEach(e=>e.remove());return c.textContent.split(s).length===2})")   # A3: the visible text alternative counts too
     if route in ("/firms/", "/finance/", "/providers/"):   # the remaining domain answers (D4): the contract's order and every bound object
         b = bundle(route, lang)
         if b:

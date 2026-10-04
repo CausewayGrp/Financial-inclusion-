@@ -4,14 +4,14 @@
     "terms_en": "law; laws",
     "terms_ar": "قانون; قوانين",
     "targets": "document_type:law | route:/reforms/ | route:/data/",
-    "boundary_note_en": null,
-    "boundary_note_ar": null
+    "boundary_note_en": "Discovery aid only: this evidence base holds no law as a source document. It holds regulations, circulars, decisions and official lists issued by the Central Bank of Yemen – Aden, listed on the Data & sources page.",
+    "boundary_note_ar": "أداة اكتشاف فقط: لا تضم قاعدة الأدلة هذه أي قانون بوصفه وثيقة مصدرية. وتضم لوائح وتعاميم وقرارات وقوائم رسمية صادرة عن البنك المركزي اليمني – عدن، مدرجة في صفحة البيانات والمصادر."
   },
   {
     "alias_id": "SEARCH-ALIAS-002",
     "terms_en": "decision; decisions",
     "terms_ar": "قرار; قرارات",
-    "targets": "document_type:decision/enforcement | route:/providers/ | route:/reforms/",
+    "targets": "document_type:regulatory decision | route:/reforms/ | route:/providers/",
     "boundary_note_en": null,
     "boundary_note_ar": null
   },
@@ -52,8 +52,8 @@
     "terms_en": "wallet; e-wallet; e-wallets; electronic wallet",
     "terms_ar": "محفظة; محافظ; المحافظ الإلكترونية; المحفظة الإلكترونية",
     "targets": "route:/payments/",
-    "boundary_note_en": null,
-    "boundary_note_ar": null
+    "boundary_note_en": "Discovery aid only: in Arabic «محفظة» means both an e-wallet and a loan portfolio. E-wallet records are under Payments; loan-portfolio records are under Finance (microfinance and banks).",
+    "boundary_note_ar": "أداة اكتشاف فقط: قد تعني كلمة «محفظة» المحفظة الإلكترونية أو محفظة القروض. وسجلات المحافظ الإلكترونية في صفحة المدفوعات، أما سجلات محافظ القروض ففي صفحة التمويل (التمويل الأصغر والبنوك)."
   },
   {
     "alias_id": "SEARCH-ALIAS-008",
@@ -201,8 +201,8 @@
   },
   {
     "alias_id": "SEARCH-ALIAS-026",
-    "terms_en": "humanitarian; cash transfer; cash transfers; social protection; G2P",
-    "terms_ar": "إنساني; المساعدات الإنسانية; التحويلات النقدية; الحماية الاجتماعية; مدفوعات الحكومة للأفراد",
+    "terms_en": "humanitarian; cash transfer; cash transfers; social protection; G2P; cash assistance",
+    "terms_ar": "إنساني; المساعدات الإنسانية; التحويلات النقدية; الحماية الاجتماعية; مدفوعات الحكومة للأفراد; المساعدات النقدية",
     "targets": "route:/readings/after-transfer-persistence/ | route:/payments/",
     "boundary_note_en": null,
     "boundary_note_ar": null
@@ -212,6 +212,54 @@
     "terms_en": "licence; license; licensing; suspension; closure",
     "terms_ar": "ترخيص; تراخيص; إيقاف; تعليق; إغلاق",
     "targets": "route:/providers/ | document_type:decision/enforcement",
+    "boundary_note_en": null,
+    "boundary_note_ar": null
+  },
+  {
+    "alias_id": "SEARCH-ALIAS-028",
+    "terms_en": "internet; connectivity",
+    "terms_ar": "الإنترنت; الانترنت; الاتصال; الاتصال بالإنترنت",
+    "targets": "route:/measurement/ | route:/people/",
+    "boundary_note_en": null,
+    "boundary_note_ar": null
+  },
+  {
+    "alias_id": "SEARCH-ALIAS-029",
+    "terms_en": "Findex; Global Findex",
+    "terms_ar": "فيندكس; فندكس; Findex; المؤشر العالمي للشمول المالي",
+    "targets": "route:/people/",
+    "boundary_note_en": null,
+    "boundary_note_ar": null
+  },
+  {
+    "alias_id": "SEARCH-ALIAS-030",
+    "terms_en": "PSP; PSPs; payment service provider; payment service providers",
+    "terms_ar": "مزود خدمات الدفع; مزودو خدمات الدفع; مزودي خدمات الدفع; مقدم خدمات الدفع; مقدمو خدمات الدفع; مقدمي خدمات الدفع",
+    "targets": "document_type:regulation | route:/payments/",
+    "boundary_note_en": null,
+    "boundary_note_ar": null
+  },
+  {
+    "alias_id": "SEARCH-ALIAS-031",
+    "terms_en": "loan; loans; borrowing; borrow",
+    "terms_ar": "قرض; قروض; اقتراض; الاقتراض; سلفة",
+    "targets": "route:/finance/ | route:/people/",
+    "boundary_note_en": null,
+    "boundary_note_ar": null
+  },
+  {
+    "alias_id": "SEARCH-ALIAS-032",
+    "terms_en": "transfer abroad; send money abroad; international transfer",
+    "terms_ar": "تحويل للخارج; تحويل إلى الخارج; تحويل خارجي; تحويلات خارجية; حوالة خارجية; حوالات خارجية; حوالة من الخارج; تحويل من الخارج; حوالات المغتربين; تحويلات المغتربين; تحويل دولي; حوالة دولية",
+    "targets": "route:/remittances/",
+    "boundary_note_en": "Discovery aid only: the remittance evidence here is about money sent to Yemen and transfers within Yemen. It does not cover money sent from Yemen to other countries.",
+    "boundary_note_ar": "أداة اكتشاف فقط: تتناول أدلة التحويلات هنا الأموال المرسلة إلى اليمن والحوالات داخل اليمن، ولا تتناول الأموال المرسلة من اليمن إلى الخارج."
+  },
+  {
+    "alias_id": "SEARCH-ALIAS-033",
+    "terms_en": "cash-out; cash out; cashout; cash withdrawal",
+    "terms_ar": "كاش; كاش آوت; سحب كاش; سحب نقدي",
+    "targets": "route:/payments/",
     "boundary_note_en": null,
     "boundary_note_ar": null
   }

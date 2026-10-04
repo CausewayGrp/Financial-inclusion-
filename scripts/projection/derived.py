@@ -569,6 +569,8 @@ def _inventory_count(ctx, key):
         return sum(1 for r in obj if str(r.get(spec["field"]) or "").strip().lower().startswith(("http://", "https://")))
     if rule == "count_where_true":
         return sum(1 for r in obj if r.get(spec["field"]) is True)
+    if rule == "count_where_not_in":   # release candidate RC-2: a count that follows its own definition (e.g. dated events only)
+        return sum(1 for r in obj if r.get(spec["field"]) not in spec["exclude"])
     if rule == "spec_count":
         return obj["spec_count"]
     raise StructureError(f"public inventory: unknown rule {rule!r} for {key}")
@@ -1073,6 +1075,21 @@ def presentation_contract(ctx, e):
                     raise StructureError(f"presentation contract {r['route']} {tier}: section {item['section_order']} does not exist in 03")
                 if item.get("kind") == "visual" and item["object_id"] not in vis:
                     raise StructureError(f"presentation contract {r['route']}: unknown visual {item['object_id']}")
+    # EAD-11: Home's starting questions and Explore's groups — every question ID and heading label must be governed
+    qids = [str(q.get("question_id")) for q in ctx.out["content/questions.json"]]
+    ui = {r.get("ui_id") for r in ctx.out["content/interface_copy.json"]}
+    sets = {str(e.get("route")): e for e in p.get("question_sets") or []}
+    if set(sets) != {"/", "/explore/"}:
+        raise StructureError(f"presentation contract question_sets: routes {sorted(sets)}, expected / and /explore/")
+    home = sets["/"].get("starting_question_ids") or []
+    if not home or len(set(home)) != len(home) or any(q not in qids for q in home):
+        raise StructureError(f"presentation contract question_sets /: starting questions {home} are not distinct governed questions")
+    grouped = [q for g in sets["/explore/"].get("question_groups") or [] for q in g.get("question_ids") or []]
+    for g in sets["/explore/"].get("question_groups") or []:
+        if g.get("heading_ui_id") not in ui:
+            raise StructureError(f"presentation contract question_sets /explore/: unknown heading {g.get('heading_ui_id')}")
+    if sorted(grouped) != sorted(qids):
+        raise StructureError("presentation contract question_sets /explore/: the groups must hold every governed question exactly once")
     return p
 
 
@@ -1084,6 +1101,84 @@ def presentation_contract(ctx, e):
 # ------------------------------------------------------------------------------------------------
 _VDC_TIERS = ("SIGNATURE", "CORE_ANALYTICAL", "SUPPORTING", "TABLE_TEXT_FIRST", "RETIRE_FROM_DESIGN")
 _VDC_CONTRACT_TIERS = ("SIGNATURE", "CORE_ANALYTICAL")
+_VDC_TABLE_TIERS = ("TABLE_TEXT_FIRST", "SUPPORTING")
+
+
+def _vdc_text_table(ctx, t, ui, dl, where):
+    """RC-12 (B12): a governed-row table for a text-first contract. `objects` select governed rows exactly as a data
+    contract does (`_vdc_objects`, with its guards); `head` and `caption` name governed interface strings; each row's
+    header is a governed string, either named (`ui`) or resolved from a row field through a display-label namespace
+    (`ref` + `ns`); each cell is a governed row value (`ref` = "<object>.<row id>.<field>", printed `as` a number or
+    a month, optionally with a governed unit) or a governed string (`ui`, optionally spanning cells); a `group` row
+    opens a row group with its base (a governed lead, number and unit); a `marker` row is one governed sentence across
+    the table. Nothing is typed into the table that the Master does not hold."""
+    objs = {o["id"]: {r["id"]: r for r in _vdc_objects(ctx, o, f"{where} objects {o['id']}")["records"]} for o in t["objects"]}
+    ns_map = dl.get("namespaces") or {}
+
+    def lab(uid):
+        if uid not in ui:
+            raise IntegrityError(f"{where}: {uid} is not governed interface copy (04)")
+        return OrderedDict([("en", ui[uid]["label_en"]), ("ar", ui[uid]["label_ar"]), ("ui_id", uid)])
+
+    def ref(r):
+        oid, rid, fld = r.split(".", 2)
+        rec = (objs.get(oid) or {}).get(rid)
+        if rec is None or fld not in rec or rec[fld] in (None, ""):
+            raise IntegrityError(f"{where}: {r} does not resolve to a governed value")
+        return rec[fld]
+
+    def cell(c):
+        if "ui" in c:
+            out = OrderedDict([("text", lab(c["ui"]))])
+        else:
+            val = ref(c["ref"])
+            kind = c.get("as", "number")
+            if kind == "number":
+                num = _vdc_num(val)
+                if num is None:
+                    raise IntegrityError(f"{where}: {c['ref']} is not a number ({val!r})")
+                out = OrderedDict([("number", num)])
+            elif kind == "month":
+                if not re.fullmatch(r"\d{4}-\d{2}", str(val)):
+                    raise IntegrityError(f"{where}: {c['ref']} is not a month ({val!r})")
+                out = OrderedDict([("month", str(val))])
+            else:
+                raise IntegrityError(f"{where}: unknown cell kind {kind!r}")
+            out["ref"] = c["ref"]
+            if c.get("unit"):
+                out["unit"] = lab(c["unit"])
+        if c.get("span"):
+            out["span"] = int(c["span"])
+        return out
+
+    def head_of(h):
+        if isinstance(h, str):
+            return lab(h)
+        val = str(ref(h["ref"]))
+        uid = (ns_map.get(h["ns"]) or {}).get(val)
+        if uid is None:
+            raise IntegrityError(f"{where}: {h['ref']}={val!r} has no governed label in namespace {h['ns']}")
+        return lab(uid)
+
+    rows = []
+    for r in t["rows"]:
+        if "marker" in r:
+            rows.append(OrderedDict([("marker", lab(r["marker"]))]))
+            continue
+        if "group" in r:   # a row group opened by its base: a governed lead, a governed number and its governed unit
+            g = r["group"]
+            num = _vdc_num(ref(g["ref"]))
+            if num is None:
+                raise IntegrityError(f"{where}: {g['ref']} is not a number")
+            rows.append(OrderedDict([("group", OrderedDict([("lead", lab(g["lead"])), ("number", num), ("ref", g["ref"]), ("unit", lab(g["unit"]))]))]))
+            continue
+        cells = [cell(c) for c in r["cells"]]
+        width = sum(c.get("span", 1) for c in cells)
+        if width != len(t["head"]) - 1:
+            raise IntegrityError(f"{where}: a row fills {width} of {len(t['head']) - 1} data columns")
+        rows.append(OrderedDict([("head", head_of(r["head"])), ("cells", cells)]))
+    return OrderedDict([("form", t.get("form", "")), ("head", [lab(h) for h in t["head"]]),
+                        ("caption", [lab(c) for c in t.get("caption") or []]), ("rows", rows)])
 
 
 def _vdc_blocks(snapshot, header_key, where):
@@ -1377,17 +1472,19 @@ def visual_design_contracts(ctx, e):
                 derived_vals.append(OrderedDict([("id", d["id"]), ("value", val), ("unit", d["unit"]), ("from", d["minus"]), ("grammar_state", d["state"])]))
             # credit line: governed publisher or authority only
             cr, cred_src, blockers = k.get("credit") or {}, [], []
+            cred_ar = []   # B4 (release candidate): the Arabic credit, entry for entry (15 publisher_ar, 34 publisher_ar)
+            cred_from = []   # B4 review F1: where each entry comes from — the source's governed title decides whether two entries are one publication
             for pid in ([cr["passport_id"]] if cr.get("passport_id") else []) + list(cr.get("passport_ids") or []):
                 p = passports.get(pid)
                 if not p:
                     raise IntegrityError(f"{where}: passport {pid} does not exist")
-                cred_src.append(p.get("publisher"))
+                cred_src.append(p.get("publisher")); cred_ar.append(p.get("publisher_ar")); cred_from.append(None)
             for sid in cr.get("source_ids") or []:
                 s0 = sources.get(sid)
                 if not s0:
                     raise IntegrityError(f"{where}: source {sid} does not exist")
                 if s0.get("publisher"):
-                    cred_src.append(s0["publisher"])
+                    cred_src.append(s0["publisher"]); cred_ar.append(s0.get("publisher_ar")); cred_from.append(s0)
                 else:
                     blockers.append(f"source {sid} has no governed publisher for the credit line")
             if cr.get("source_urls_from_object"):
@@ -1403,24 +1500,59 @@ def visual_design_contracts(ctx, e):
                     if s0 is None:
                         blockers.append(f"{x['id']}: locator {x.get(su['field'])} has no source record")
                     elif s0.get("publisher"):
-                        cred_src.append(s0["publisher"])
+                        cred_src.append(s0["publisher"]); cred_ar.append(s0.get("publisher_ar")); cred_from.append(s0)
                     else:
                         blockers.append(f"{x['id']}: source {s0['source_id']} has no governed publisher for the credit line")
             if cr.get("from_object"):
                 ob = next((o for o in objects if o["id"] == cr["from_object"]), None)
                 if cr.get("authority_field"):
-                    cred_src.extend(x.get(cr["authority_field"]) for x in ob["records"])
+                    # the authority's Arabic name is its decision's source publisher_ar (the authority publishes the decision),
+                    # borrowed only when the source's publisher is that authority (B4 review O6)
+                    for x in ob["records"]:
+                        s0 = sources.get(x.get("source")) or sources.get(x.get("source_id")) or {}
+                        if s0 and s0.get("publisher") != x.get(cr["authority_field"]):
+                            blockers.append(f"{x.get('id')}: authority {x.get(cr['authority_field'])!r} is not the publisher of its source {s0.get('source_id')}")
+                        cred_src.append(x.get(cr["authority_field"])); cred_ar.append(s0.get("publisher_ar")); cred_from.append(s0 or None)
                 if cr.get("source_field"):
                     for x in ob["records"]:
                         s0 = sources.get(x.get(cr["source_field"])) or {}
                         if s0.get("publisher"):
-                            cred_src.append(s0["publisher"])
+                            cred_src.append(s0["publisher"]); cred_ar.append(s0.get("publisher_ar")); cred_from.append(s0)
                         else:
                             blockers.append(f"source {x.get(cr['source_field'])} has no governed publisher for the credit line")
-            credit = "; ".join(dict.fromkeys(x for x in cred_src if x))
+            # B4: each institution is credited once. An exact repeat is dropped. A bare institution name that another entry
+            # contains ("World Bank" in "World Bank Remittance Prices Worldwide") is folded into it only when they are one
+            # publication: the bare entry's source names that product in its governed title (the RPW corridor records).
+            # Otherwise the institution's bare name is printed once instead (B4 review F1): the World Bank's FMIIP record
+            # beside its Global Findex; the IMF staff report beside the passport "IMF / Yemeni authorities", whose title does
+            # not name it.
+            def _canon(x):
+                return re.sub(r"\s+", " ", str(x).replace("IMF", "International Monetary Fund")).strip().lower()
+            def _product(whole, part):
+                return re.sub(r"^[\s/,;:—–-]+|[\s/,;:—–-]+$", "", _canon(whole).replace(_canon(part), "", 1))
+            pairs = []
+            for en, ar, s0 in zip(cred_src, cred_ar + [None] * (len(cred_src) - len(cred_ar)), cred_from + [None] * (len(cred_src) - len(cred_from))):
+                if not en or any(_canon(en) == _canon(e) for e, _ in pairs):
+                    continue
+                wider = [i for i, (e, _) in enumerate(pairs) if _canon(en) in _canon(e)]
+                narrower = [i for i, (e, _) in enumerate(pairs) if _canon(e) in _canon(en)]
+                if wider:
+                    i = wider[0]
+                    if not (s0 and _product(pairs[i][0], en) and _product(pairs[i][0], en) in _canon(s0.get("display_title") or "")):
+                        pairs[i] = (en, ar)   # two publications of one institution: its bare name, once
+                    continue
+                if narrower:
+                    continue   # the bare name already stands for this institution
+                pairs.append((en, ar))
+            credit = "; ".join(e for e, _ in pairs)
+            missing_ar = [e for e, a in pairs if not a]
+            if missing_ar:
+                blockers.append(f"no governed Arabic publisher for the credit line: {missing_ar}")
+            credit_ar = "؛ ".join(a for _, a in pairs if a)
             if not credit:
                 blockers.append("no governed credit line")
-            con["credit"] = OrderedDict([("rule", cr), ("text", credit or None), ("language_note", "Publisher names are governed in English only (15, 34); Arabic frames print them as isolated left-to-right runs.")])
+            con["credit"] = OrderedDict([("rule", cr), ("text", credit or None), ("text_ar", credit_ar or None),
+                                         ("language_note", "Publisher names are governed in both languages (15 publisher/publisher_ar; 34 publisher/publisher_ar). The Arabic uses the institution's established Arabic name without a Latin acronym, and keeps in parentheses a product name that Arabic writes in English (Global Findex, Remittance Prices Worldwide).")])
             # P4 (V-D5): every printed value carries its governed bilingual label
             specs_ = {x["id"]: x for x in (k.get("series") or []) + (k.get("objects") or [])}
             for grp in series + objects:
@@ -1465,9 +1597,15 @@ def visual_design_contracts(ctx, e):
             for lang in ("en", "ar"):
                 rec[f"detached_caption_{lang}"] = text(
                     lang, gov[f"title_{lang}"], gov[f"period_{lang}"], gov[f"universe_{lang}"],
-                    f"{labels['UI-VIS-SOURCE'][lang]} {credit}" if credit else None,
+                    (f"{labels['UI-VIS-SOURCE'][lang]} {credit_ar if lang == 'ar' and credit_ar else credit}" if credit else None),   # B4 review F3: the Arabic caption credits in Arabic
                     f"{labels['UI-VIS-DOES-NOT-ESTABLISH'][lang]} {gov[f'prohibited_inference_{lang}']}",
                     f"{labels['UI-VIS-FULL-RECORD'][lang]} /{lang}{gov['canonical_route']}" if gov["canonical_route"] else None)
+        if spec.get("table"):
+            # RC-12 (Part B B12): a text-first contract whose rationale describes a table renders it from governed rows
+            # inside its text frame; never a drawing, and never on a tier that takes a data contract
+            if tier not in _VDC_TABLE_TIERS:
+                raise IntegrityError(f"{where}: a governed-row table is for the {'/'.join(_VDC_TABLE_TIERS)} tiers only")
+            rec["table"] = _vdc_text_table(ctx, spec["table"], ui, dl, f"{where} table")
         out_vis.append(rec)
     if label_problems:
         raise IntegrityError("visual design contract labels:\n  " + "\n  ".join(label_problems))

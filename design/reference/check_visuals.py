@@ -12,7 +12,7 @@ list), on its canonical route and on every public route that binds it, in Englis
   states or the governed text); a TABLE_TEXT_FIRST contract is the governed text, never a chart; the RETIRE_FROM_DESIGN
   contract is never drawn and has no figure on its record page;
 - the detached frame is complete in every figure: title, question, scope (period · universe), the prohibited inference
-  once in the boundary voice, the credit where the contract has one (isolated left-to-right), the canonical link, the
+  once in the boundary voice, the credit where the contract has one (in the page's language, isolated in its direction), the canonical link, the
   edition; the text alternative with the governed alt text and, for drawn contracts, a table with a caption and scoped
   headers; every SVG left-to-right; every ISO date and numeric range isolated left-to-right (after Arabic letters a
   plain date renders reversed and a plain range swaps its ends); no two text labels of a drawing meeting (ink boxes);
@@ -126,11 +126,14 @@ FIG_STATE = """(vid) => { const LOOSE=""" + LOOSE_JS + """; const f=document.que
   const q=s=>f.querySelectorAll(s).length; const txt=f.textContent.replace(/\\s+/g,' ');
   const foot=f.querySelector('.foot'); const b=f.querySelector('.foot .b');
   const clone=f.cloneNode(true); clone.querySelectorAll('.alt,figcaption').forEach(e=>e.remove()); const frameTxt=clone.textContent.replace(/\\s+/g,' ');
+  // A3 / C3 (release candidate): the boundary is counted across the frame AND its visible text alternative (only the
+  // alternative's tables and the screen-reader figcaption are left out), so a second copy in the alternative fails
+  const clone2=f.cloneNode(true); clone2.querySelectorAll('.alt .table-wrap,.alt table,figcaption').forEach(e=>e.remove()); const pageTxt=clone2.textContent.replace(/\\s+/g,' ');
   const els=[...f.querySelectorAll('svg *')]; const fills=els.filter(e=>!['line','g'].includes(e.tagName)).map(e=>getComputedStyle(e).fill).concat(els.map(e=>getComputedStyle(e).stroke));
   return {text:txt, frame:frameTxt, textOnly:f.classList.contains('fig-text'), svg:q('svg'), vals:q('svg text.val'), canvas:q('canvas')+q('img'), inline:q('[style]'),
     ltr:[...f.querySelectorAll('svg')].every(s=>s.getAttribute('direction')==='ltr'), title:(f.querySelector('.fig-t')||{}).textContent||'',
-    caps:[...f.querySelectorAll('p.cap')].map(p=>p.textContent), bnd:b?b.textContent:'', bndOnce:(()=>{if(!b)return false;const s=b.innerText.replace(/^[^:]*:\\s*/,'').slice(0,40);return frameTxt.split(s).length===2})(),
-    credit:!!f.querySelector('.foot bdi[dir=ltr]'), canon:(f.querySelector('.foot a.canon, .foot a.canon-l')||{}).getAttribute?.('href')||'', ed:(f.querySelector('.foot .ed')||{}).textContent||'',
+    caps:[...f.querySelectorAll('p.cap')].map(p=>p.textContent), bnd:b?b.textContent:'', bndOnce:(()=>{if(!b)return false;const s=b.innerText.replace(/^[^:]*:\\s*/,'').slice(0,40);return pageTxt.split(s).length===2})(),
+    credit:!!f.querySelector('.foot bdi[dir=ltr]'), creditRtl:!!f.querySelector('.foot span[dir=rtl]'), canon:(f.querySelector('.foot a.canon, .foot a.canon-l')||{}).getAttribute?.('href')||'', ed:(f.querySelector('.foot .ed')||{}).textContent||'',
     alt:!!f.querySelector('.alt[data-visual-fallback]'), altText:(f.querySelector('.alt[data-visual-fallback]')||{}).textContent||'', table:q('.alt table'), caption:q('.alt table caption'), th:q('.alt table th[scope]'),
     emptyTh:[...f.querySelectorAll('.alt table thead th:not(:first-child)')].filter(t=>!t.textContent.trim()).length, wrapNamed:[...f.querySelectorAll('.alt .table-wrap')].every(w=>w.getAttribute('role')==='region'&&(w.getAttribute('aria-label')||'').trim().length>0),
     fills:[...new Set(fills)], ncc:[...f.querySelectorAll('.ncc')].map(e=>e.textContent), fw:f.getBoundingClientRect().width, fr:f.getBoundingClientRect().right,
@@ -158,6 +161,8 @@ def check_contract(pg, base: str, c: dict, lang: str, failures: list, evidence: 
             tool = pg.evaluate("() => ({b:(document.querySelector('[data-compare-boundary]')||{}).textContent||'', st:[...document.querySelectorAll('main p.st')].map(p=>p.textContent).join(' '), fig:!!document.querySelector(`figure.fig[data-visual-id='VIS-SOURCE-COMPARISON']`)})")
             checks["tool_carries_boundary"] = (g.get(f"prohibited_inference_{lang}") or "")[:40] in tool["b"]
             checks["tool_carries_alt_text"] = (g.get(f"alt_text_{lang}") or "")[:60] in tool["st"]
+            # A3 / C3: the standfirst is the accessible summary, which ends before the boundary
+            checks["tool_standfirst_ends_before_boundary"] = (g.get(f"prohibited_inference_{lang}") or "")[:40] not in tool["st"]
             checks["no_figure_beside_the_tool"] = not tool["fig"]
             n += len(checks)
             bad = [k for k, v in checks.items() if not v]
@@ -168,7 +173,9 @@ def check_contract(pg, base: str, c: dict, lang: str, failures: list, evidence: 
             if route == g["canonical_route"]:
                 checks["record_page_has_no_figure"] = st is None
             else:
-                checks["never_drawn"] = st is None or (st["textOnly"] and st["svg"] == 0 and st["canvas"] == 0)
+                # A5 / C4 (release candidate): a retired contract is neither drawn nor framed off its record page — no
+                # text frame either (the owner decision of 2 October 2026 removed the /reforms/ frame)
+                checks["never_drawn"] = st is None
         else:
             checks["figure_present"] = st is not None
             if st:
@@ -177,8 +184,11 @@ def check_contract(pg, base: str, c: dict, lang: str, failures: list, evidence: 
                 body = st["text"] if st["textOnly"] else st["frame"]   # a text frame's scope line is its body (D3)
                 checks["scope_in_frame"] = all((x or "") in body for x in (g.get(f"period_{lang}"), g.get(f"universe_{lang}")))
                 checks["boundary_once_in_foot"] = st["bndOnce"] and (g.get(f"prohibited_inference_{lang}") or "")[:40] in st["bnd"]
-                credit = ((c.get("contract") or {}).get("credit") or {}).get("text")
-                checks["credit_isolated"] = (credit in st["frame"] and st["credit"]) if credit else True
+                # B4 (release candidate): the credit is printed in the page's language and isolated in its direction — the
+                # English names left to right, the Arabic names (credit.text_ar) right to left
+                cr = (c.get("contract") or {}).get("credit") or {}
+                credit = cr.get("text_ar") if lang == "ar" and cr.get("text_ar") else cr.get("text")
+                checks["credit_isolated"] = (credit in st["frame"] and (st["creditRtl"] if lang == "ar" and cr.get("text_ar") else st["credit"])) if credit else True
                 canon = f"/{lang}{g['canonical_route']}"
                 checks["canonical_link"] = st["canon"] == canon
                 checks["edition_in_frame"] = st["ed"].strip() != "" and st["ed"] in st["frame"]

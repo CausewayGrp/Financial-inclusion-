@@ -1491,5 +1491,822 @@
     "modelled_gzip_bytes": 320957
    }
   }
+ },
+ "release_candidate_b14d": {
+  "added": "2026-10-03, Part B B14 d (release candidate)",
+  "script": "scripts/performance_budget.py (cold and warm loads per page family, EN and AR, throttled mobile profile; dist/ served under dist/_headers with gzip for text files)",
+  "profile": {
+   "viewport": "390x844",
+   "rtt_ms": 150,
+   "down_kbps": 1638.4,
+   "up_kbps": 750,
+   "cpu_slowdown": 4,
+   "compression": "gzip for text files",
+   "cache": "cold: a fresh browser context per page"
+  },
+  "before": {
+   "record_of_2026_09_29": "This file's summary above: a cold page transferred 10.3-10.7 MB, 94-97 % of it the canonical master logo, on a local server without compression or cache rules.",
+   "uncompressed_now": {
+    "transferred_bytes": {
+     "min": 306899,
+     "max": 759769
+    },
+    "note": "The same build served without compression, to show what the host's compression saves."
+   }
+  },
+  "after": {
+   "cold_transferred_bytes": {
+    "min": 232683,
+    "max": 311616
+   },
+   "cold_requests": {
+    "min": 7,
+    "max": 7
+   },
+   "first_contentful_paint_ms": {
+    "min": 780,
+    "max": 2288
+   },
+   "largest_contentful_paint_ms": {
+    "min": 780,
+    "max": 2288
+   },
+   "load_event_ms": {
+    "min": 1445,
+    "max": 2873
+   },
+   "warm_transferred_bytes": {
+    "min": 0,
+    "max": 0
+   },
+   "font_share_of_cold_bytes": {
+    "min": 0.709,
+    "max": 0.865
+   },
+   "pages": {
+    "home:en": {
+     "route": "/en/",
+     "requests": 7,
+     "transferred_bytes": 234579,
+     "by_type": {
+      "other": {
+       "requests": 1,
+       "bytes": 7949
+      },
+      "images": {
+       "requests": 1,
+       "bytes": 5420
+      },
+      "css": {
+       "requests": 1,
+       "bytes": 11886
+      },
+      "js": {
+       "requests": 1,
+       "bytes": 11127
+      },
+      "fonts": {
+       "requests": 3,
+       "bytes": 198197
+      }
+     },
+     "fcp_ms": 852,
+     "lcp_ms": 852,
+     "load_ms": 1462,
+     "warm_transferred_bytes": 0
+    },
+    "home:ar": {
+     "route": "/ar/",
+     "requests": 7,
+     "transferred_bytes": 263051,
+     "by_type": {
+      "other": {
+       "requests": 1,
+       "bytes": 8993
+      },
+      "images": {
+       "requests": 1,
+       "bytes": 5420
+      },
+      "css": {
+       "requests": 1,
+       "bytes": 11886
+      },
+      "js": {
+       "requests": 1,
+       "bytes": 11127
+      },
+      "fonts": {
+       "requests": 3,
+       "bytes": 225625
+      }
+     },
+     "fcp_ms": 972,
+     "lcp_ms": 972,
+     "load_ms": 1584,
+     "warm_transferred_bytes": 0
+    },
+    "explore:en": {
+     "route": "/en/explore/",
+     "requests": 7,
+     "transferred_bytes": 234745,
+     "by_type": {
+      "other": {
+       "requests": 1,
+       "bytes": 8115
+      },
+      "images": {
+       "requests": 1,
+       "bytes": 5420
+      },
+      "css": {
+       "requests": 1,
+       "bytes": 11886
+      },
+      "js": {
+       "requests": 1,
+       "bytes": 11127
+      },
+      "fonts": {
+       "requests": 3,
+       "bytes": 198197
+      }
+     },
+     "fcp_ms": 812,
+     "lcp_ms": 812,
+     "load_ms": 1461,
+     "warm_transferred_bytes": 0
+    },
+    "explore:ar": {
+     "route": "/ar/explore/",
+     "requests": 7,
+     "transferred_bytes": 263149,
+     "by_type": {
+      "other": {
+       "requests": 1,
+       "bytes": 9091
+      },
+      "images": {
+       "requests": 1,
+       "bytes": 5420
+      },
+      "css": {
+       "requests": 1,
+       "bytes": 11886
+      },
+      "js": {
+       "requests": 1,
+       "bytes": 11127
+      },
+      "fonts": {
+       "requests": 3,
+       "bytes": 225625
+      }
+     },
+     "fcp_ms": 1024,
+     "lcp_ms": 1024,
+     "load_ms": 1604,
+     "warm_transferred_bytes": 0
+    },
+    "domain_answer:en": {
+     "route": "/en/people/",
+     "requests": 7,
+     "transferred_bytes": 238397,
+     "by_type": {
+      "other": {
+       "requests": 1,
+       "bytes": 11767
+      },
+      "images": {
+       "requests": 1,
+       "bytes": 5420
+      },
+      "css": {
+       "requests": 1,
+       "bytes": 11886
+      },
+      "js": {
+       "requests": 1,
+       "bytes": 11127
+      },
+      "fonts": {
+       "requests": 3,
+       "bytes": 198197
+      }
+     },
+     "fcp_ms": 860,
+     "lcp_ms": 860,
+     "load_ms": 1461,
+     "warm_transferred_bytes": 0
+    },
+    "domain_answer:ar": {
+     "route": "/ar/people/",
+     "requests": 7,
+     "transferred_bytes": 267832,
+     "by_type": {
+      "other": {
+       "requests": 1,
+       "bytes": 13774
+      },
+      "images": {
+       "requests": 1,
+       "bytes": 5420
+      },
+      "css": {
+       "requests": 1,
+       "bytes": 11886
+      },
+      "js": {
+       "requests": 1,
+       "bytes": 11127
+      },
+      "fonts": {
+       "requests": 3,
+       "bytes": 225625
+      }
+     },
+     "fcp_ms": 1208,
+     "lcp_ms": 1208,
+     "load_ms": 1672,
+     "warm_transferred_bytes": 0
+    },
+    "evidence_index:en": {
+     "route": "/en/evidence/",
+     "requests": 7,
+     "transferred_bytes": 246964,
+     "by_type": {
+      "other": {
+       "requests": 1,
+       "bytes": 20334
+      },
+      "images": {
+       "requests": 1,
+       "bytes": 5420
+      },
+      "css": {
+       "requests": 1,
+       "bytes": 11886
+      },
+      "js": {
+       "requests": 1,
+       "bytes": 11127
+      },
+      "fonts": {
+       "requests": 3,
+       "bytes": 198197
+      }
+     },
+     "fcp_ms": 904,
+     "lcp_ms": 904,
+     "load_ms": 1462,
+     "warm_transferred_bytes": 0
+    },
+    "evidence_index:ar": {
+     "route": "/ar/evidence/",
+     "requests": 7,
+     "transferred_bytes": 278423,
+     "by_type": {
+      "other": {
+       "requests": 1,
+       "bytes": 24365
+      },
+      "images": {
+       "requests": 1,
+       "bytes": 5420
+      },
+      "css": {
+       "requests": 1,
+       "bytes": 11886
+      },
+      "js": {
+       "requests": 1,
+       "bytes": 11127
+      },
+      "fonts": {
+       "requests": 3,
+       "bytes": 225625
+      }
+     },
+     "fcp_ms": 1532,
+     "lcp_ms": 1532,
+     "load_ms": 1806,
+     "warm_transferred_bytes": 0
+    },
+    "evidence_record:en": {
+     "route": "/en/evidence/CLM-001/",
+     "requests": 7,
+     "transferred_bytes": 233731,
+     "by_type": {
+      "other": {
+       "requests": 1,
+       "bytes": 7101
+      },
+      "images": {
+       "requests": 1,
+       "bytes": 5420
+      },
+      "css": {
+       "requests": 1,
+       "bytes": 11886
+      },
+      "js": {
+       "requests": 1,
+       "bytes": 11127
+      },
+      "fonts": {
+       "requests": 3,
+       "bytes": 198197
+      }
+     },
+     "fcp_ms": 800,
+     "lcp_ms": 800,
+     "load_ms": 1461,
+     "warm_transferred_bytes": 0
+    },
+    "evidence_record:ar": {
+     "route": "/ar/evidence/CLM-001/",
+     "requests": 7,
+     "transferred_bytes": 262100,
+     "by_type": {
+      "other": {
+       "requests": 1,
+       "bytes": 8042
+      },
+      "images": {
+       "requests": 1,
+       "bytes": 5420
+      },
+      "css": {
+       "requests": 1,
+       "bytes": 11886
+      },
+      "js": {
+       "requests": 1,
+       "bytes": 11127
+      },
+      "fonts": {
+       "requests": 3,
+       "bytes": 225625
+      }
+     },
+     "fcp_ms": 960,
+     "lcp_ms": 960,
+     "load_ms": 1601,
+     "warm_transferred_bytes": 0
+    },
+    "compare:en": {
+     "route": "/en/evidence/compare/",
+     "requests": 7,
+     "transferred_bytes": 238919,
+     "by_type": {
+      "other": {
+       "requests": 1,
+       "bytes": 12289
+      },
+      "images": {
+       "requests": 1,
+       "bytes": 5420
+      },
+      "css": {
+       "requests": 1,
+       "bytes": 11886
+      },
+      "js": {
+       "requests": 1,
+       "bytes": 11127
+      },
+      "fonts": {
+       "requests": 3,
+       "bytes": 198197
+      }
+     },
+     "fcp_ms": 828,
+     "lcp_ms": 828,
+     "load_ms": 1462,
+     "warm_transferred_bytes": 0
+    },
+    "compare:ar": {
+     "route": "/ar/evidence/compare/",
+     "requests": 7,
+     "transferred_bytes": 268646,
+     "by_type": {
+      "other": {
+       "requests": 1,
+       "bytes": 14588
+      },
+      "images": {
+       "requests": 1,
+       "bytes": 5420
+      },
+      "css": {
+       "requests": 1,
+       "bytes": 11886
+      },
+      "js": {
+       "requests": 1,
+       "bytes": 11127
+      },
+      "fonts": {
+       "requests": 3,
+       "bytes": 225625
+      }
+     },
+     "fcp_ms": 1028,
+     "lcp_ms": 1028,
+     "load_ms": 1591,
+     "warm_transferred_bytes": 0
+    },
+    "sources_directory:en": {
+     "route": "/en/data/",
+     "requests": 7,
+     "transferred_bytes": 279571,
+     "by_type": {
+      "other": {
+       "requests": 1,
+       "bytes": 52941
+      },
+      "images": {
+       "requests": 1,
+       "bytes": 5420
+      },
+      "css": {
+       "requests": 1,
+       "bytes": 11886
+      },
+      "js": {
+       "requests": 1,
+       "bytes": 11127
+      },
+      "fonts": {
+       "requests": 3,
+       "bytes": 198197
+      }
+     },
+     "fcp_ms": 1184,
+     "lcp_ms": 1184,
+     "load_ms": 1725,
+     "warm_transferred_bytes": 0
+    },
+    "sources_directory:ar": {
+     "route": "/ar/data/",
+     "requests": 7,
+     "transferred_bytes": 311616,
+     "by_type": {
+      "images": {
+       "requests": 1,
+       "bytes": 5420
+      },
+      "css": {
+       "requests": 1,
+       "bytes": 11886
+      },
+      "other": {
+       "requests": 1,
+       "bytes": 57558
+      },
+      "fonts": {
+       "requests": 3,
+       "bytes": 225625
+      },
+      "js": {
+       "requests": 1,
+       "bytes": 11127
+      }
+     },
+     "fcp_ms": 2288,
+     "lcp_ms": 2288,
+     "load_ms": 2873,
+     "warm_transferred_bytes": 0
+    },
+    "readings_index:en": {
+     "route": "/en/readings/",
+     "requests": 7,
+     "transferred_bytes": 232683,
+     "by_type": {
+      "other": {
+       "requests": 1,
+       "bytes": 6053
+      },
+      "images": {
+       "requests": 1,
+       "bytes": 5420
+      },
+      "css": {
+       "requests": 1,
+       "bytes": 11886
+      },
+      "js": {
+       "requests": 1,
+       "bytes": 11127
+      },
+      "fonts": {
+       "requests": 3,
+       "bytes": 198197
+      }
+     },
+     "fcp_ms": 816,
+     "lcp_ms": 816,
+     "load_ms": 1464,
+     "warm_transferred_bytes": 0
+    },
+    "readings_index:ar": {
+     "route": "/ar/readings/",
+     "requests": 7,
+     "transferred_bytes": 260934,
+     "by_type": {
+      "other": {
+       "requests": 1,
+       "bytes": 6876
+      },
+      "images": {
+       "requests": 1,
+       "bytes": 5420
+      },
+      "css": {
+       "requests": 1,
+       "bytes": 11886
+      },
+      "js": {
+       "requests": 1,
+       "bytes": 11127
+      },
+      "fonts": {
+       "requests": 3,
+       "bytes": 225625
+      }
+     },
+     "fcp_ms": 928,
+     "lcp_ms": 928,
+     "load_ms": 1595,
+     "warm_transferred_bytes": 0
+    },
+    "reading:en": {
+     "route": "/en/readings/same-year-different-number/",
+     "requests": 7,
+     "transferred_bytes": 237496,
+     "by_type": {
+      "other": {
+       "requests": 1,
+       "bytes": 10866
+      },
+      "images": {
+       "requests": 1,
+       "bytes": 5420
+      },
+      "css": {
+       "requests": 1,
+       "bytes": 11886
+      },
+      "js": {
+       "requests": 1,
+       "bytes": 11127
+      },
+      "fonts": {
+       "requests": 3,
+       "bytes": 198197
+      }
+     },
+     "fcp_ms": 876,
+     "lcp_ms": 876,
+     "load_ms": 1461,
+     "warm_transferred_bytes": 0
+    },
+    "reading:ar": {
+     "route": "/ar/readings/same-year-different-number/",
+     "requests": 7,
+     "transferred_bytes": 266648,
+     "by_type": {
+      "other": {
+       "requests": 1,
+       "bytes": 12590
+      },
+      "images": {
+       "requests": 1,
+       "bytes": 5420
+      },
+      "css": {
+       "requests": 1,
+       "bytes": 11886
+      },
+      "js": {
+       "requests": 1,
+       "bytes": 11127
+      },
+      "fonts": {
+       "requests": 3,
+       "bytes": 225625
+      }
+     },
+     "fcp_ms": 1200,
+     "lcp_ms": 1200,
+     "load_ms": 1660,
+     "warm_transferred_bytes": 0
+    },
+    "methodology:en": {
+     "route": "/en/methodology/",
+     "requests": 7,
+     "transferred_bytes": 239049,
+     "by_type": {
+      "other": {
+       "requests": 1,
+       "bytes": 12419
+      },
+      "images": {
+       "requests": 1,
+       "bytes": 5420
+      },
+      "css": {
+       "requests": 1,
+       "bytes": 11886
+      },
+      "js": {
+       "requests": 1,
+       "bytes": 11127
+      },
+      "fonts": {
+       "requests": 3,
+       "bytes": 198197
+      }
+     },
+     "fcp_ms": 856,
+     "lcp_ms": 856,
+     "load_ms": 1445,
+     "warm_transferred_bytes": 0
+    },
+    "methodology:ar": {
+     "route": "/ar/methodology/",
+     "requests": 7,
+     "transferred_bytes": 268728,
+     "by_type": {
+      "other": {
+       "requests": 1,
+       "bytes": 14670
+      },
+      "images": {
+       "requests": 1,
+       "bytes": 5420
+      },
+      "css": {
+       "requests": 1,
+       "bytes": 11886
+      },
+      "js": {
+       "requests": 1,
+       "bytes": 11127
+      },
+      "fonts": {
+       "requests": 3,
+       "bytes": 225625
+      }
+     },
+     "fcp_ms": 1148,
+     "lcp_ms": 1148,
+     "load_ms": 1703,
+     "warm_transferred_bytes": 0
+    },
+    "measurement:en": {
+     "route": "/en/measurement/",
+     "requests": 7,
+     "transferred_bytes": 240208,
+     "by_type": {
+      "other": {
+       "requests": 1,
+       "bytes": 13578
+      },
+      "images": {
+       "requests": 1,
+       "bytes": 5420
+      },
+      "css": {
+       "requests": 1,
+       "bytes": 11886
+      },
+      "js": {
+       "requests": 1,
+       "bytes": 11127
+      },
+      "fonts": {
+       "requests": 3,
+       "bytes": 198197
+      }
+     },
+     "fcp_ms": 844,
+     "lcp_ms": 844,
+     "load_ms": 1461,
+     "warm_transferred_bytes": 0
+    },
+    "measurement:ar": {
+     "route": "/ar/measurement/",
+     "requests": 7,
+     "transferred_bytes": 270067,
+     "by_type": {
+      "other": {
+       "requests": 1,
+       "bytes": 16009
+      },
+      "images": {
+       "requests": 1,
+       "bytes": 5420
+      },
+      "css": {
+       "requests": 1,
+       "bytes": 11886
+      },
+      "js": {
+       "requests": 1,
+       "bytes": 11127
+      },
+      "fonts": {
+       "requests": 3,
+       "bytes": 225625
+      }
+     },
+     "fcp_ms": 1400,
+     "lcp_ms": 1400,
+     "load_ms": 1763,
+     "warm_transferred_bytes": 0
+    },
+    "trust_about:en": {
+     "route": "/en/about/",
+     "requests": 7,
+     "transferred_bytes": 232853,
+     "by_type": {
+      "other": {
+       "requests": 1,
+       "bytes": 6223
+      },
+      "images": {
+       "requests": 1,
+       "bytes": 5420
+      },
+      "css": {
+       "requests": 1,
+       "bytes": 11886
+      },
+      "js": {
+       "requests": 1,
+       "bytes": 11127
+      },
+      "fonts": {
+       "requests": 3,
+       "bytes": 198197
+      }
+     },
+     "fcp_ms": 780,
+     "lcp_ms": 780,
+     "load_ms": 1462,
+     "warm_transferred_bytes": 0
+    },
+    "trust_about:ar": {
+     "route": "/ar/about/",
+     "requests": 7,
+     "transferred_bytes": 261034,
+     "by_type": {
+      "other": {
+       "requests": 1,
+       "bytes": 6976
+      },
+      "images": {
+       "requests": 1,
+       "bytes": 5420
+      },
+      "css": {
+       "requests": 1,
+       "bytes": 11886
+      },
+      "js": {
+       "requests": 1,
+       "bytes": 11127
+      },
+      "fonts": {
+       "requests": 3,
+       "bytes": 225625
+      }
+     },
+     "fcp_ms": 952,
+     "lcp_ms": 952,
+     "load_ms": 1593,
+     "warm_transferred_bytes": 0
+    }
+   }
+  },
+  "what_removed_the_cost": [
+   "The web-size logo derivatives (EAD-03, release candidate G4): every page serves a 1.4-11.6 KB derivative instead of the 10 MB master, which stays unchanged and is used only by the social-image template.",
+   "Compression and cache rules in the host configuration (site-src/hosting/_headers, B14 b): text files compressed, HTML and search data revalidated after five minutes, assets cached for an hour and the canonical fonts for thirty days, so a second visit transfers nothing.",
+   "Already in place and kept: the two faces a first paint needs, preloaded in the page's language only, and font-display: swap on every face."
+  ],
+  "largest_remaining_cost": "The three canonical IBM Plex faces of the page's script: 71-87 % of a cold page. They are the canonical font files and are not subset, dropped or replaced (B14 d forbids changing them); they are cached for thirty days after the first visit.",
+  "budget": {
+   "status": "PROVISIONAL — set against this local throttled profile, to be confirmed on the release host (docs/RELEASE_RUNBOOK.md); not an operational or carbon figure.",
+   "per_page_family_both_languages": {
+    "cold_transferred_bytes_max": 358400,
+    "cold_requests_max": 8,
+    "largest_contentful_paint_ms_max": 2500,
+    "load_event_ms_max": 3000
+   },
+   "met_now": true,
+   "gate": "scripts/validate.py RC-PERF holds the byte part of the budget on every build, from the files themselves (no browser, so it cannot be flaky); the timing part is re-measured with scripts/performance_budget.py."
+  },
+  "uncertainty": "One run per page on one machine; byte counts are exact for this build and server, timings indicative. The release host's compression (it may use Brotli), protocol and caching will differ."
  }
 }

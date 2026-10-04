@@ -1,0 +1,119 @@
+{
+ "transaction": "RC-6",
+ "summary": "Part B B4: Arabic credit lines",
+ "items": {
+  "B4": "DONE — 34 publisher_ar for the seven passports the credit lines use; the generator composes the Arabic credit from 15 publisher_ar and 34 publisher_ar and credits each institution once: an exact repeat is dropped; a bare institution name folds into one of its products only when its source's title names that product (VIS-REMITTANCE-COST: the RPW corridor records); two publications of one institution print its bare name once (RV-CWR-004: the Global Findex and the FMIIP record → 'World Bank'; RV-CWR-001: 'IMF / Yemeni authorities' and the IMF staff report → 'International Monetary Fund'). The Arabic detached caption credits in Arabic.",
+  "names": {
+   "Central Bank of Yemen — Aden": "البنك المركزي اليمني – عدن",
+   "World Bank Global Findex": "البنك الدولي، المؤشر العالمي للشمول المالي (Global Findex)",
+   "World Bank 2022 Yemen Enterprise Survey": "مسح المنشآت في اليمن لعام 2022 الذي أجراه البنك الدولي",
+   "IMF / Yemeni authorities": "صندوق النقد الدولي / السلطات اليمنية",
+   "World Bank Remittance Prices Worldwide": "قاعدة بيانات البنك الدولي لأسعار الحوالات حول العالم (Remittance Prices Worldwide)"
+  },
+  "independent_review": {
+   "verdict_before_fixes": "NOT ACCEPTABLE: 1 BLOCKING (F1), 3 SHOULD FIX (F2–F4), 8 OPTIONAL",
+   "applied": [
+    "F1 RV-CWR-004 credited the World Bank's FMIIP record to the Global Findex: same-publication test on the source title",
+    "F2 «(IMF)» dropped; the language note states the rule the Arabic follows",
+    "F3 the Arabic detached caption printed the English credit",
+    "F4 the survey named as its source names it ('2022 Yemen Enterprise Survey'), English and Arabic; 'custom' is not the source's word (read in the original, 3 October 2026)",
+    "O6 (optional) the authority's Arabic name is borrowed only when the authority publishes the source"
+   ],
+   "recorded": [
+    "O1 'Sources:' for two-entry lines needs a new governed label (not added)",
+    "O2 the source library writes 'Central Bank of Yemen — Aden' with an em dash; English prose uses an en dash",
+    "O3 'IMF / Yemeni authorities' can read as joint publication (VIS-REMITTANCE-MACRO; for the owner)",
+    "O4 the survey's tables are published in Yemen Financial Sector Diagnostics (2024); its two Arabic titles are aligned in RC-7",
+    "O5 the three World Bank lines use three Arabic constructions",
+    "O7 Latin text inside the Arabic credit carries no lang attribute",
+    "O8 four design and audit records still say credits are English-only; superseded by B4"
+   ]
+  }
+ },
+ "input_master_sha256": "2b609e1928f8d7b5ac751ce00fd00f5f85dc4aa28ea2b5367449ea98f1113779",
+ "output_master_sha256": "97f37eccc1a9e2b1641090009e91fbf359322c66979ccb28f287b963f8d1850f",
+ "cells_written": 9,
+ "changes": [
+  {
+   "finding": "RC-6:B4-F4",
+   "sheet": "34_EVIDENCE_PASSPORTS",
+   "row": 9,
+   "col": 4,
+   "field": "EP-FIRM-2022.publisher",
+   "old": "World Bank 2022 custom enterprise survey",
+   "new": "World Bank 2022 Yemen Enterprise Survey"
+  },
+  {
+   "finding": "RC-6:B4",
+   "sheet": "34_EVIDENCE_PASSPORTS",
+   "row": 4,
+   "col": 13,
+   "field": "34 header",
+   "old": null,
+   "new": "publisher_ar"
+  },
+  {
+   "finding": "RC-6:B4",
+   "sheet": "34_EVIDENCE_PASSPORTS",
+   "row": 5,
+   "col": 13,
+   "field": "EP-FINDEX-2022-ACCOUNT.publisher_ar",
+   "old": null,
+   "new": "البنك الدولي، المؤشر العالمي للشمول المالي (Global Findex)"
+  },
+  {
+   "finding": "RC-6:B4",
+   "sheet": "34_EVIDENCE_PASSPORTS",
+   "row": 6,
+   "col": 13,
+   "field": "EP-CBY-POS-MONTHLY.publisher_ar",
+   "old": null,
+   "new": "البنك المركزي اليمني – عدن"
+  },
+  {
+   "finding": "RC-6:B4",
+   "sheet": "34_EVIDENCE_PASSPORTS",
+   "row": 8,
+   "col": 13,
+   "field": "EP-REMITTANCE-MACRO.publisher_ar",
+   "old": null,
+   "new": "صندوق النقد الدولي / السلطات اليمنية"
+  },
+  {
+   "finding": "RC-6:B4",
+   "sheet": "34_EVIDENCE_PASSPORTS",
+   "row": 9,
+   "col": 13,
+   "field": "EP-FIRM-2022.publisher_ar",
+   "old": null,
+   "new": "مسح المنشآت في اليمن لعام 2022 الذي أجراه البنك الدولي"
+  },
+  {
+   "finding": "RC-6:B4",
+   "sheet": "34_EVIDENCE_PASSPORTS",
+   "row": 26,
+   "col": 13,
+   "field": "EP-CBY-PAY-H1-2025.publisher_ar",
+   "old": null,
+   "new": "البنك المركزي اليمني – عدن"
+  },
+  {
+   "finding": "RC-6:B4",
+   "sheet": "34_EVIDENCE_PASSPORTS",
+   "row": 39,
+   "col": 13,
+   "field": "EP-CBY-REMITTANCE-VINTAGE-K04.publisher_ar",
+   "old": null,
+   "new": "البنك المركزي اليمني – عدن"
+  },
+  {
+   "finding": "RC-6:B4",
+   "sheet": "34_EVIDENCE_PASSPORTS",
+   "row": 51,
+   "col": 13,
+   "field": "EP-WB-RPW-KSA-YEM-K04.publisher_ar",
+   "old": null,
+   "new": "قاعدة بيانات البنك الدولي لأسعار الحوالات حول العالم (Remittance Prices Worldwide)"
+  }
+ ]
+}

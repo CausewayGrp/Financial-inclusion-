@@ -1,0 +1,143 @@
+{
+ "transaction": "RC-4",
+ "summary": "Part B governed strings given verbatim by the brief: B5, B7, B8, B9",
+ "items": {
+  "B5": "DONE — group heading, scope line and the no-type label added (04), verbatim; the renderer groups the regulatory sources.",
+  "B7": "DONE — sentence added to the Compare intro (03 section 1, before the prompt line) and as UI-JS-COMPARE-NOT-OFFERED for the error note.",
+  "B8": "DONE — UI-DATA-REUSE-TERMS-ONCE added, verbatim; the older directory paragraph UI-DATA-EVERY-SOURCE-HERE-CAN-BE drops its closing 'check the source's own terms' clause in both languages, so the terms are stated once (review finding 5; a deletion, no new words).",
+  "B9": "DONE — UI-PRINT-THIS-PAGE and UI-CITATION-PREVIEW added, verbatim; UI-JS-COPY-CITATION reused; UI-CITE-PAGE-LINE governs the page citation line (the record line without the record name; review finding 4).",
+  "independent_review": {
+   "verdict_before_fixes": "NOT ACCEPTABLE: 1 BLOCKING, 4 SHOULD FIX, 7 OPTIONAL; every string verbatim the brief's in both languages",
+   "applied": [
+    "1 BLOCKING: the Arabic record citation preview ran the record ID and 'CauseWay' together; identifiers and the publisher name are isolated left-to-right in the preview and the print foot",
+    "2: no '.' after a title ending in '?', '؟' or '!' (page and record citations)",
+    "3: the Compare intro splits into paragraphs at its blank line",
+    "4: the page citation line is governed (UI-CITE-PAGE-LINE)",
+    "5: reuse terms stated once (the older paragraph's closing clause removed)",
+    "7 (optional): the link row to the curated regulatory card names the curated group"
+   ],
+   "for_the_owner": [
+    "B5 AR «المتوفرة» / «المتوافرة» and the repeated «هذه»; B5 EN 'evidence base'; B8 AR omits 'own' (brief wording, not changed)",
+    "the record citation carries boundary and sources beyond the brief's field list (publisher, edition, period, population, URL); a shorter citation is an owner choice"
+   ],
+   "recorded": [
+    "6: SRC-CBY-SANAA-C12-2024 and -C14-2024 look like circulars but carry no document_label; outside the group by the brief's rule until read",
+    "8: the supporting group's count now excludes the 22 regulatory sources it also supports",
+    "9: print and copy need JavaScript; the preview shows a relative address until the public origin is set"
+   ]
+  }
+ },
+ "input_master_sha256": "3c6c66beddedb90db6a54b21c5689b0852ec8fd90538df75af628655f5247c39",
+ "output_master_sha256": "0fb6c16de6dbb8ea85698d77fbf2a6f76fe392e7489928c18b33fcc0dc7515d4",
+ "cells_written": 12,
+ "changes": [
+  {
+   "finding": "RC-4:B7",
+   "sheet": "03_PAGE_SECTIONS",
+   "row": 84,
+   "col": 5,
+   "field": "/evidence/compare/#s1.body_en",
+   "old": "Select 2–4 records. Compare definition, period, population or calculation base, geography, unit and method before comparing values. A mismatch is a reason to qualify the comparison, not to hide it; when definitions or populations do not match, “not comparable” is a valid result.\nSelect at least two records.",
+   "new": "Select 2–4 records. Compare definition, period, population or calculation base, geography, unit and method before comparing values. A mismatch is a reason to qualify the comparison, not to hide it; when definitions or populations do not match, “not comparable” is a valid result.\n\nCompare offers a selected set of evidence records in this edition. A record that is not offered here can still be read in full on its own page; its absence from Compare is not a judgement about it.\nSelect at least two records."
+  },
+  {
+   "finding": "RC-4:B7",
+   "sheet": "03_PAGE_SECTIONS",
+   "row": 84,
+   "col": 7,
+   "field": "/evidence/compare/#s1.body_ar",
+   "old": "اختر من 2 إلى 4 سجلات. قارن التعريف والفترة ومجتمع القياس أو قاعدة الاحتساب والنطاق الجغرافي والوحدة والطريقة قبل مقارنة القيم. عدم التطابق سبب لتقييد المقارنة لا لإخفائها، وحين لا تتطابق التعريفات أو المجتمعات يكون الحكم بأنها «غير قابلة للمقارنة» نتيجة صحيحة.\nاختر سجلين على الأقل.",
+   "new": "اختر من 2 إلى 4 سجلات. قارن التعريف والفترة ومجتمع القياس أو قاعدة الاحتساب والنطاق الجغرافي والوحدة والطريقة قبل مقارنة القيم. عدم التطابق سبب لتقييد المقارنة لا لإخفائها، وحين لا تتطابق التعريفات أو المجتمعات يكون الحكم بأنها «غير قابلة للمقارنة» نتيجة صحيحة.\n\nتتيح أداة المقارنة في هذا الإصدار مجموعة مختارة من سجلات الأدلة. ويمكن قراءة أي سجل غير متاح هنا كاملًا في صفحته، وغيابه عن المقارنة ليس حكمًا عليه.\nاختر سجلين على الأقل."
+  },
+  {
+   "finding": "RC-4:B5-B7-B8-B9",
+   "sheet": "04_NAV_UX",
+   "row": null,
+   "col": null,
+   "field": "UI-DATA-GROUP-REGULATORY",
+   "old": null,
+   "new": "Rules, decisions and official lists || القواعد والقرارات والقوائم الرسمية"
+  },
+  {
+   "finding": "RC-4:B5-B7-B8-B9",
+   "sheet": "04_NAV_UX",
+   "row": null,
+   "col": null,
+   "field": "UI-DATA-GROUP-REGULATORY-SCOPE",
+   "old": null,
+   "new": "These are the regulatory documents held in this evidence base, not a complete register of Yemen's financial regulation. || هذه هي الوثائق التنظيمية المتوفرة في قاعدة الأدلة هذه، وليست سجلًا كاملًا للتنظيم المالي في اليمن."
+  },
+  {
+   "finding": "RC-4:B5-B7-B8-B9",
+   "sheet": "04_NAV_UX",
+   "row": null,
+   "col": null,
+   "field": "UI-DATA-DOCUMENT-TYPE-NOT-RECORDED",
+   "old": null,
+   "new": "Document type not recorded || نوع الوثيقة غير مسجّل"
+  },
+  {
+   "finding": "RC-4:B5-B7-B8-B9",
+   "sheet": "04_NAV_UX",
+   "row": null,
+   "col": null,
+   "field": "UI-JS-COMPARE-NOT-OFFERED",
+   "old": null,
+   "new": "Compare offers a selected set of evidence records in this edition. A record that is not offered here can still be read in full on its own page; its absence from Compare is not a judgement about it. || تتيح أداة المقارنة في هذا الإصدار مجموعة مختارة من سجلات الأدلة. ويمكن قراءة أي سجل غير متاح هنا كاملًا في صفحته، وغيابه عن المقارنة ليس حكمًا عليه."
+  },
+  {
+   "finding": "RC-4:B5-B7-B8-B9",
+   "sheet": "04_NAV_UX",
+   "row": null,
+   "col": null,
+   "field": "UI-DATA-REUSE-TERMS-ONCE",
+   "old": null,
+   "new": "This resource links to original sources and quotes them briefly. It has not assessed the reuse terms of any source; check each source's own terms before reusing its content. || يربط هذا المورد بالمصادر الأصلية ويقتبس منها باختصار. ولم يُقيّم شروط إعادة استخدام أي مصدر؛ فتحقّق من شروط كل مصدر قبل إعادة استخدام محتواه."
+  },
+  {
+   "finding": "RC-4:B5-B7-B8-B9",
+   "sheet": "04_NAV_UX",
+   "row": null,
+   "col": null,
+   "field": "UI-CITE-PAGE-LINE",
+   "old": null,
+   "new": "{product}. CauseWay. {version}. || {product}. CauseWay. {version}."
+  },
+  {
+   "finding": "RC-4:B5-B7-B8-B9",
+   "sheet": "04_NAV_UX",
+   "row": null,
+   "col": null,
+   "field": "UI-PRINT-THIS-PAGE",
+   "old": null,
+   "new": "Print this page || اطبع هذه الصفحة"
+  },
+  {
+   "finding": "RC-4:B5-B7-B8-B9",
+   "sheet": "04_NAV_UX",
+   "row": null,
+   "col": null,
+   "field": "UI-CITATION-PREVIEW",
+   "old": null,
+   "new": "Citation preview || معاينة الاستشهاد"
+  },
+  {
+   "finding": "RC-4:B8",
+   "sheet": "04_NAV_UX",
+   "row": 408,
+   "col": 2,
+   "field": "UI-DATA-EVERY-SOURCE-HERE-CAN-BE.label_en",
+   "old": "Every source here can be cited and opened where it was originally published. Each card says whether the source’s reuse terms have been assessed; where they have not, this resource offers no copy of the source for download or republication, so check the source’s own terms before redistributing its material.",
+   "new": "Every source here can be cited and opened where it was originally published. Each card says whether the source’s reuse terms have been assessed; where they have not, this resource offers no copy of the source for download or republication."
+  },
+  {
+   "finding": "RC-4:B8",
+   "sheet": "04_NAV_UX",
+   "row": 408,
+   "col": 3,
+   "field": "UI-DATA-EVERY-SOURCE-HERE-CAN-BE.label_ar",
+   "old": "يمكن الاستشهاد بكل مصدر هنا وفتحه حيث نُشر أصلًا. وتبيّن كل بطاقة ما إذا كانت شروط إعادة استخدام المصدر قد قُيّمت؛ وحيث لم تُقيَّم، لا يقدم هذا المورد نسخة من المصدر للتنزيل أو إعادة النشر، فتحقّق من شروط المصدر نفسه قبل إعادة توزيع مادته.",
+   "new": "يمكن الاستشهاد بكل مصدر هنا وفتحه حيث نُشر أصلًا. وتبيّن كل بطاقة ما إذا كانت شروط إعادة استخدام المصدر قد قُيّمت؛ وحيث لم تُقيَّم، لا يقدم هذا المورد نسخة من المصدر للتنزيل أو إعادة النشر."
+  }
+ ]
+}

@@ -331,7 +331,13 @@ def visual_alternatives() -> list:
 def main() -> int:
     ap = argparse.ArgumentParser()
     ap.add_argument("--axe", default=None)
+    ap.add_argument("--all", action="store_true", help="every route of the built site (B10), not one page per route class")
+    ap.add_argument("--json", default=None, help="also write the raw axe findings with every page and node sample here")
     args = ap.parse_args()
+    global ROUTES
+    if args.all:
+        specs = json.loads((ROOT / "site-src" / "content" / "page_specs.json").read_text(encoding="utf-8"))["page_specs"]
+        ROUTES = sorted({str(s.get("route")) for s in specs if s.get("route")})
     if not (DIST / "en" / "index.html").exists():
         print("ACCESSIBILITY AUDIT: no built site (run python3 scripts/build.py)")
         return 1
@@ -362,6 +368,8 @@ def main() -> int:
                               tags: v.tags.filter(t => t.startsWith('wcag')), n: v.nodes.length,
                               sample: v.nodes[0] ? v.nodes[0].html.slice(0, 140) : ''})); }""", AXE_TAGS)
                         for v in res:
+                            if args.json:
+                                record.setdefault("raw", []).append({"page": f"{lang}{route}@{w}", **v})
                             f = findings[v["id"]]
                             f["nodes"] += v["n"]; f["routes"].add(f"{lang}{route}@{w}")
                             f["help"] = v["help"]; f["tags"] = v["tags"]; f["impact"] = v["impact"]
@@ -376,6 +384,8 @@ def main() -> int:
                                        "pages": len(v["routes"]), "help": v["help"], "sample": v.get("sample", "")}
                                       for k, v in sorted(findings.items(), key=lambda x: -x[1]["nodes"])]
 
+            if args.json:
+                Path(args.json).write_text(json.dumps(record.get("raw", []), ensure_ascii=False, indent=1), encoding="utf-8")
             ctx = ctx_factory(); page = ctx.new_page()
             record["outcomes"]["keyboard"] = {lang: keyboard_walk(page, base, "/evidence/", lang) for lang in ("en", "ar")}
             record["outcomes"]["focus_visible"] = {lang: focus_visible(page, base, lang) for lang in ("en", "ar")}
@@ -394,7 +404,8 @@ def main() -> int:
     small = [t for m in pages.values() for t in m["targets"] if t.get("small") and t["w"] and t["h"]]
     unexcepted = [t for t in small if not t.get("inline") and not t.get("spaced")]
     record["summary"] = {
-        "pages_audited": len(pages), "widths": [w for w, _ in WIDTHS], "languages": ["en", "ar"],
+        "pages_audited": len(pages), "routes": len(ROUTES), "every_route": bool(args.all),
+        "widths": [w for w, _ in WIDTHS], "languages": ["en", "ar"],
         "axe_rules_violated": len(record["axe_findings"]),
         "axe_wcag_violations": [f for f in record["axe_findings"] if f["wcag"]],
         "targets_measured": sum(len(m["targets"]) for m in pages.values()),
@@ -415,6 +426,10 @@ def main() -> int:
                                      for m in pages.values() for c in m["contrast_failures"]}),
         "elements_wider_than_the_viewport": {k: m["wider_than_viewport"] for k, m in pages.items() if m["wider_than_viewport"]},
     }
+    # the record keeps each page's count and only its targets under 24 px (every target measured would be ~3 MB)
+    for m in pages.values():
+        m["targets_measured"] = len(m["targets"])
+        m["targets"] = [t for t in m["targets"] if t.get("small")]
     record["measured_at"] = date.today().isoformat()
     record["build"] = subprocess.run(["git", "rev-parse", "HEAD"], capture_output=True, text=True, cwd=ROOT).stdout.strip()
     record["status"] = ("AUDIT RECORD — NOT A CONFORMANCE CLAIM. Machine-checkable outcomes only. Screen readers in "
@@ -434,7 +449,7 @@ def main() -> int:
     OUT_JSON.write_text(json.dumps(record, ensure_ascii=False, indent=1, default=str) + "\n", encoding="utf-8")
     write_markdown(record)
     s = record["summary"]
-    print(f"ACCESSIBILITY AUDIT WRITTEN: {s['pages_audited']} pages × 2 widths × 2 languages; "
+    print(f"ACCESSIBILITY AUDIT WRITTEN: {s['routes']} routes × 2 languages ({s['pages_audited']} pages) × 2 widths; "
           f"{s['axe_rules_violated']} axe rules violated ({len(s['axe_wcag_violations'])} of them WCAG); "
           f"{s['targets_measured']} targets measured, {s['targets_under_24px']} under 24 px; "
           f"{len(s['contrast_failures'])} contrast failures")
@@ -446,7 +461,8 @@ def write_markdown(r: dict) -> None:
     L = ["# Accessibility audit — the implemented runtime (EAD-02)", "",
          f"**Status:** {r['status']}", "",
          f"Measured {r['measured_at']} on `{r['build'][:12]}`, with `scripts/accessibility_audit.py`: "
-         f"{s['pages_audited']} pages (one per route class, both languages) at {' and '.join(str(w)+' px' for w in s['widths'])}, "
+         f"{s['pages_audited']} pages ({s['routes']} routes in both languages"
+         f"{'' if s.get('every_route') else ', one per route class'}) at {' and '.join(str(w)+' px' for w in s['widths'])}, "
          f"plus a 320 px reflow pass, reduced motion, images off, and a keyboard walk. The general ruleset is "
          f"`{r['axe']. get('package', r['axe'].get('path',''))}` (SHA-256 `{r['axe']['sha256'][:16]}…`).", "",
          "## What the general ruleset found", ""]

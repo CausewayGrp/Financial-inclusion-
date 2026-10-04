@@ -21,9 +21,9 @@
     "current_evidence_en": "The Global Findex 2025 edition contains 2024 observations for many economies, but Yemen's latest representative account-ownership observation remains 11.9% of adults aged 15 and over in the areas surveyed, for 2022 (from the Yemen Findex 2021 study fielded in 2022–2023). Major payment-system and reform changes are more recent. The latest published people-level values for receiving domestic remittances, and through which channels, are from 2014; the 2021-wave microdata contain these questions, but weighted estimates have not yet been produced.",
     "current_evidence_ar": "تتضمن نسخة Global Findex 2025 مشاهدات لعام 2024 في عدد كبير من الاقتصادات، لكن أحدث مشاهدة ممثلة لليمن في امتلاك الحساب ما تزال 11.9% من البالغين بعمر 15 سنة فأكثر في المناطق التي شملها المسح لعام 2022، من دراسة اليمن لموجة Findex 2021 التي نُفذت ميدانيًا خلال 2022–2023. أما التغيرات المهمة في المدفوعات والإصلاحات فهي أحدث من ذلك. كما تعود أحدث القيم المنشورة على مستوى الأفراد بشأن تلقي الحوالات المحلية وقنواتها إلى 2014؛ وتتضمن البيانات الفردية لموجة 2021 هذه الأسئلة، لكن التقديرات الموزونة لم تُنتج بعد.",
     "missing_evidence_en": "New representative Yemen demand-side survey or equivalent approved microdata with weights and clear coverage, including remittance receipt, channel and frequency.",
-    "missing_evidence_ar": "مسح تمثيلي جديد للطلب في اليمن، أو بيانات فردية موزونة ومعتمدة ذات تغطية واضحة، يشمل تلقي الحوالات وقنواته وتكراره.",
+    "missing_evidence_ar": "مسح ممثل جديد للطلب في اليمن، أو بيانات فردية موزونة ومعتمدة ذات تغطية واضحة، يشمل تلقي الحوالات وقنواته وتكراره.",
     "guardrail_en": "The latest representative people-side measure predates the current reform and infrastructure changes. A new measurement must document its population, geographic coverage, fieldwork period and survey weights, and keep core concepts comparable with the previous wave.",
-    "guardrail_ar": "يسبق أحدث قياس سكاني ممثل لجانب الأفراد تغيرات الإصلاح والبنية التحتية الحالية. ويجب أن يوثق القياس الجديد المجتمع المرجعي والتغطية الجغرافية وفترة العمل الميداني وأوزان المسح، وأن يحافظ على مفاهيم أساسية قابلة للمقارنة مع الموجة السابقة.",
+    "guardrail_ar": "يسبق أحدث قياس ممثل لجانب الأفراد تغيرات الإصلاح والبنية التحتية الحالية. ويجب أن يوثق القياس الجديد المجتمع المرجعي والتغطية الجغرافية وفترة العمل الميداني وأوزان المسح، وأن يحافظ على مفاهيم أساسية قابلة للمقارنة مع الموجة السابقة.",
     "unlocked_decision_en": "A current population measure would allow change since the previous wave to be assessed without projecting reform results onto the population.",
     "unlocked_decision_ar": "من شأن هذا القياس أن يسمح بتقييم التغير منذ الموجة السابقة من دون إسقاط نتائج الإصلاح على السكان.",
     "decisions_unlocked_en": "Whether account ownership and use have changed since the latest representative people-side wave.,Which population groups now have lower/higher access and use under a current sampling frame.,Whether recent payment/reform changes coincide with measured population change without inferring causality.",
@@ -71,17 +71,17 @@
     "dimensions_ar": "المستخدم الفريد,التكرار,حداثة الاستخدام,القيمة,مدة الاستمرار,الاستخدام لدى التجار,السحب النقدي,الخمول",
     "current_evidence_en": "Administrative data show registrations, infrastructure and transactions, while historical evidence also records dormancy and one-time or imposed use; unique repeat users are not measured consistently.",
     "current_evidence_ar": "تظهر البيانات الإدارية التسجيلات والبنية والمعاملات، وتوثق الأدلة التاريخية أيضًا الخمول والاستخدام لمرة واحدة أو الاستخدام المفروض؛ لكن المستخدمين الفريدين والمتكررين لا يُقاسون باتساق.",
-    "missing_evidence_en": "Provider/rail administrative data with deduplication rules and/or demand-side active-use measures.",
+    "missing_evidence_en": "Administrative data from providers or payment systems, with deduplication rules, and/or demand-side active-use measures.",
     "missing_evidence_ar": "بيانات إدارية من مقدمي الخدمة أو أنظمة الدفع مع قواعد إزالة الازدواج، أو مقاييس طلب تقيس الاستخدام النشط.",
     "guardrail_en": "Registered accounts, subscribers, terminals or transaction totals cannot stand in for unique active people. Frequency, recency, value and duration of use should be tracked where feasible.",
     "guardrail_ar": "لا تحل أعداد الحسابات المسجلة أو المشتركين أو الأجهزة أو إجمالي المعاملات محل الأشخاص الفريدين النشطين. وينبغي تتبع وتيرة الاستخدام وحداثته وقيمته ومدته حيثما أمكن.",
     "unlocked_decision_en": "This evidence would distinguish registration or temporary activity from repeat use, merchant use and sustained financial use.",
     "unlocked_decision_ar": "من شأن هذا القياس أن يميّز بين التسجيل أو النشاط المؤقت وبين الاستخدام المتكرر والاستخدام لدى التجار والاستخدام المالي المستمر.",
     "decisions_unlocked_en": "Whether digital finance is repeat use rather than registration or one-off activity.,Which channels/providers are associated with sustained use.,How much administrative activity can be interpreted as durable financial use.",
-    "decisions_unlocked_ar": "هل يعكس التمويل الرقمي استخدامًا متكررًا أم مجرد تسجيل أو نشاط لمرة واحدة؟,ما القنوات أو مقدمو الخدمات الذين يرتبطون باستخدام أكثر استمرارية؟,إلى أي مدى يمكن تفسير النشاط الإداري باعتباره استخدامًا ماليًا مستمرًا؟",
+    "decisions_unlocked_ar": "هل يعكس التمويل الرقمي استخدامًا متكررًا أم مجرد تسجيل أو نشاط لمرة واحدة؟,ما القنوات أو مقدمو الخدمات الذين يرتبطون باستخدام أكثر استمرارية؟,إلى أي مدى يمكن تفسير النشاط المسجل في البيانات الإدارية باعتباره استخدامًا ماليًا مستمرًا؟",
     "blocked_evidence_en": "Deduplicated active-user and repeat-use evidence over time.",
     "blocked_evidence_ar": "بيانات خالية من الازدواج عن المستخدمين النشطين والاستخدام المتكرر عبر الزمن.",
-    "feasibility_en": "MEDIUM — possible through provider/rail data if definitions and deduplication rules are agreed; may need demand-side validation.",
+    "feasibility_en": "MEDIUM — possible through provider or payment-system data if definitions and deduplication rules are agreed; may need demand-side validation.",
     "feasibility_ar": "متوسطة — يمكن إنتاجها من بيانات مقدمي الخدمات أو أنظمة الدفع الوطنية إذا اتُفق على التعريفات وقواعد إزالة الازدواج، وقد تحتاج إلى تحقق من جانب الطلب.",
     "priority_basis_en": "P0 within this evidence agenda because digital infrastructure and transaction evidence are expanding while unique repeat use remains unresolved.",
     "priority_basis_ar": "أولوية P0 ضمن أولويات الأدلة في هذا المورد لأن أدلة البنية الرقمية والمعاملات تتوسع بينما يظل عدد المستخدمين الفريدين واستمرار استخدامهم غير محسوم.",
@@ -92,13 +92,15 @@
     "affected_routes": [
       "/payments",
       "/people",
-      "/reforms"
+      "/reforms",
+      "/explore"
     ],
     "domain_ar": "المدفوعات / الأفراد",
     "affected_route_list": [
       "/payments/",
       "/people/",
-      "/reforms/"
+      "/reforms/",
+      "/explore/"
     ]
   },
   {
@@ -145,11 +147,13 @@
     "recommended_visual_ar": "حدود أدلة الفئات: فرق مقاس ← عوامل مرتبطة ← اختبار سببي",
     "affected_routes": [
       "/people",
+      "/",
       "/explore"
     ],
     "domain_ar": "الأفراد / الإنصاف",
     "affected_route_list": [
       "/people/",
+      "/",
       "/explore/"
     ]
   },
@@ -174,8 +178,8 @@
       "geography"
     ],
     "dimensions_ar": "الحاجة إلى التمويل,التقديم,الموافقة,الرفض,الضمانات,الشروط,التمويل غير الرسمي,المدفوعات الرقمية,النوع الاجتماعي,حجم المنشأة,القطاع,الجغرافيا",
-    "current_evidence_en": "A 2022 survey of formal firms in seven governorates and programme evidence from the Small and Micro Enterprise Promotion Service (SMEPS) can each be used within its own scope; neither supplies a current representative national MSME finance baseline.",
-    "current_evidence_ar": "يقدم مسح المنشآت الرسمية الذي شمل سبع محافظات عام 2022 وأدلة برنامج وكالة تنمية المنشآت الصغيرة والأصغر (SMEPS) معلومات مفيدة داخل نطاق كل منهما، ولا يوفر أيٌّ منهما خط أساس وطنيًا حديثًا وممثلًا لمسار تمويل المنشآت الأصغر والصغيرة والمتوسطة.",
+    "current_evidence_en": "The 2022 Yemen Enterprise Survey (formal firms in seven governorates) and programme evidence from the Small and Micro Enterprise Promotion Service (SMEPS) can each be used within its own scope; neither supplies a current representative national MSME finance baseline.",
+    "current_evidence_ar": "يقدم مسح المنشآت في اليمن لعام 2022 (المنشآت الرسمية في سبع محافظات) وأدلة برنامج وكالة تنمية المنشآت الصغيرة والأصغر (SMEPS) معلومات مفيدة داخل نطاق كل منهما، ولا يوفر أيٌّ منهما خط أساس وطنيًا حديثًا وممثلًا لمسار تمويل المنشآت الأصغر والصغيرة والمتوسطة.",
     "missing_evidence_en": "A representative survey of firms/MSMEs, or validated administrative data linked to firm-level data, with explicit definitions, covering finance need, application, approval or rejection, amount, terms, source, use, repayment pressure and outcome.",
     "missing_evidence_ar": "مسح ممثل للمنشآت الأصغر والصغيرة والمتوسطة، أو بيانات إدارية متحقق منها ومربوطة ببيانات على مستوى المنشأة، بتعريفات صريحة، يغطي الحاجة إلى التمويل والتقديم والموافقة أو الرفض والمبلغ والشروط والمصدر والاستخدام وضغوط السداد والنتيجة.",
     "guardrail_en": "The 2013 and 2022 surveys use incompatible sampling frames; do not build a trend between them unless comparability is established variable by variable. SMEPS's own 2024 report adds a programme KPI (19% of supported MSMEs accessed financial services), but this does not replace a current representative MSME demand/use baseline, and the base on which this KPI is calculated is not yet clearly documented.",
@@ -183,7 +187,7 @@
     "unlocked_decision_en": "This evidence would show the finance journey from need and application through approval or rejection, terms, use and repayment pressure, while SMEPS remains a separate programme-evidence layer.",
     "unlocked_decision_ar": "من شأن هذا القياس أن يُظهر مسار التمويل من الحاجة والتقديم إلى الموافقة أو الرفض والشروط والاستخدام وضغوط السداد، مع إبقاء أدلة وكالة SMEPS طبقة أدلة برنامجية منفصلة.",
     "decisions_unlocked_en": "How many firms need finance, apply, are approved/rejected and on what terms.,Which firm types and locations face the largest financing frictions.,Where the finance journey shows the largest measured frictions.",
-    "decisions_unlocked_ar": "كم منشأة تحتاج التمويل، وكم تتقدم، وكم يُقبل أو يُرفض طلبها، وبأي شروط؟,ما أنواع المنشآت والمناطق التي تواجه أكبر احتكاكات في الحصول على التمويل؟,أين تظهر أكبر الاحتكاكات المقاسة على امتداد مسار الحصول على التمويل؟",
+    "decisions_unlocked_ar": "كم منشأة تحتاج التمويل، وكم تتقدم بطلب، وكم يُقبل أو يُرفض طلبها، وبأي شروط؟,ما أنواع المنشآت والمناطق التي تواجه أكبر احتكاكات في الحصول على التمويل؟,أين تظهر أكبر الاحتكاكات المقاسة على امتداد مسار الحصول على التمويل؟",
     "blocked_evidence_en": "A current national firm-finance journey with explicit sampling frame and stage-by-stage bases.",
     "blocked_evidence_ar": "مسار وطني حديث لتمويل المنشآت، بإطار معاينة واضح وقواعد احتساب صريحة في كل مرحلة.",
     "feasibility_en": "MEDIUM — requires a representative firm/MSME survey and/or validated administrative-firm linkage.",
@@ -235,7 +239,7 @@
     "unlocked_decision_en": "This evidence would distinguish listing and licensing from operation and observed access before any access or opportunity map is interpreted.",
     "unlocked_decision_ar": "من شأن هذا القياس أن يميّز بين الإدراج والترخيص من جهة، وبين التشغيل والوصول المرصود من جهة أخرى، قبل تفسير أي خريطة للوصول أو الفرص.",
     "decisions_unlocked_en": "Where operating financial access points are actually available.,Which populations/areas face longer travel or thinner channel coverage.,Which listed/licensed locations cannot yet be verified as operating.",
-    "decisions_unlocked_ar": "أين توجد نقاط وصول مالي عاملة فعليًا؟,ما السكان أو المناطق التي تواجه مسافات أطول أو كثافة أقل في قنوات الخدمة؟,ما المواقع المدرجة أو المرخصة التي لا يمكن بعد التحقق من تشغيلها؟",
+    "decisions_unlocked_ar": "أين توجد نقاط وصول مالي عاملة فعليًا؟,ما الفئات السكانية أو المناطق التي تواجه مسافات أطول أو كثافة أقل في قنوات الخدمة؟,ما المواقع المدرجة أو المرخصة التي لا يمكن بعد التحقق من تشغيلها؟",
     "blocked_evidence_en": "A current register of operating access points, dated by source and subject to documented disclosure rules.",
     "blocked_evidence_ar": "سجل حديث لنقاط الوصول العاملة، يحمل تاريخ المصدر لكل قيد ويخضع لقواعد إفصاح موثقة.",
     "feasibility_en": "MEDIUM-HIGH if regulator/providers can supply point-level status and location under a shared governance rule.",
@@ -249,12 +253,14 @@
     "affected_routes": [
       "/access",
       "/providers",
+      "/",
       "/explore"
     ],
     "domain_ar": "مقدمو الخدمات / الجغرافيا",
     "affected_route_list": [
       "/access/",
       "/providers/",
+      "/",
       "/explore/"
     ]
   },
@@ -335,7 +341,7 @@
     "unlocked_decision_en": "This evidence would identify where users leave or fail the onboarding journey and which frictions are associated with those points.",
     "unlocked_decision_ar": "من شأن هذا القياس أن يحدد أين يترك المستخدمون مسار الانضمام أو يتعثرون فيه، وما الاحتكاكات المرتبطة بتلك النقاط.",
     "decisions_unlocked_en": "Where users abandon onboarding.,Which identity/KYC steps create time/cost/rejection frictions.,Which candidate remedies could be tested against the observed frictions.",
-    "decisions_unlocked_ar": "في أي مرحلة يترك المستخدمون مسار الانضمام؟,ما خطوات الهوية/اعرف عميلك التي تولد أكبر احتكاك في الوقت أو التكلفة أو الرفض؟,ما المعالجات المرشحة التي يمكن اختبارها في مواجهة الاحتكاكات المرصودة؟",
+    "decisions_unlocked_ar": "في أي مرحلة يترك المستخدمون مسار الانضمام؟,ما خطوات التحقق من الهوية وإجراءات «اعرف عميلك» التي تولد احتكاكًا في الوقت أو التكلفة أو الرفض؟,ما المعالجات المرشحة التي يمكن اختبارها في مواجهة الاحتكاكات المرصودة؟",
     "blocked_evidence_en": "Stage-level onboarding attempts, completion, rejection/abandonment, time and cost.",
     "blocked_evidence_ar": "بيانات على مستوى مراحل محاولة الانضمام والإكمال والرفض أو الترك، والوقت والتكلفة.",
     "feasibility_en": "MEDIUM — provider journey logs or structured user research.",
@@ -446,13 +452,15 @@
     "affected_routes": [
       "/payments",
       "/people",
-      "/reforms"
+      "/reforms",
+      "/explore"
     ],
     "domain_ar": "الحماية الاجتماعية / المدفوعات",
     "affected_route_list": [
       "/payments/",
       "/people/",
-      "/reforms/"
+      "/reforms/",
+      "/explore/"
     ]
   },
   {
@@ -484,7 +492,7 @@
     "unlocked_decision_en": "This evidence would show the furthest evidenced state of each reform and the next unmeasured result without treating missing evidence as failure.",
     "unlocked_decision_ar": "من شأن هذا القياس أن يُظهر أبعد مرحلة تثبتها الأدلة لكل إصلاح، والنتيجة التالية التي لم تُقَس بعد، من دون اعتبار غياب الدليل فشلًا.",
     "decisions_unlocked_en": "Which state each reform has actually reached.,Where the transmission chain stops being evidenced.,What next operational/user indicator should be measured.",
-    "decisions_unlocked_ar": "إلى أي مرحلة وصل كل إصلاح فعلًا؟,عند أي حلقة من سلسلة الانتقال تنتهي الأدلة المتاحة؟,ما المؤشر التشغيلي أو المتعلق بالمستخدم الذي ينبغي قياسه تالياً؟",
+    "decisions_unlocked_ar": "إلى أي مرحلة وصل كل إصلاح فعلًا؟,عند أي حلقة من سلسلة الانتقال تنتهي الأدلة المتاحة؟,ما المؤشر التشغيلي أو المتعلق بالمستخدم الذي ينبغي قياسه تاليًا؟",
     "blocked_evidence_en": "Reform-specific operational, access, use, quality and outcome indicators aligned to implementation dates.",
     "blocked_evidence_ar": "مؤشرات خاصة بكل إصلاح للتشغيل والوصول والاستخدام والجودة والنتائج، مرتبطة بتواريخ التنفيذ.",
     "feasibility_en": "MEDIUM — depends on access to the institutions implementing each reform and on indicator definitions.",
@@ -499,14 +507,16 @@
       "/reforms",
       "/payments",
       "/access",
-      "/people"
+      "/people",
+      "/explore"
     ],
     "domain_ar": "الإصلاحات / المدفوعات / الجودة",
     "affected_route_list": [
       "/reforms/",
       "/payments/",
       "/access/",
-      "/people/"
+      "/people/",
+      "/explore/"
     ]
   }
 ]

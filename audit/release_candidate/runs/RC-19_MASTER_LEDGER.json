@@ -1,0 +1,344 @@
+{
+ "transaction": "RC-19",
+ "summary": "Independent review of 70398d1: FMIIP dates (R-01), NEG-EW-011 to CLM-015 (X-ESC-RC17-01), /privacy/ hosting (R-08), no-JavaScript note (R-05)",
+ "input_master_sha256": "c700dc52bf81966939c6d6ec53afe494d1bf699389c04850f74b9dec436ea7e4",
+ "output_master_sha256": "90014e3bd27133c34b8435090230cf5b28a3301dec9f366c6fedf047b5ea2838",
+ "cells_written": 37,
+ "changes": [
+  {
+   "finding": "RC-19:R-01",
+   "sheet": "06_EVIDENCE_OBJECTS",
+   "row": 79,
+   "col": 6,
+   "field": "VIS-PAYMENT-RAILS.c6",
+   "old": "The recorded payment-reform steps from June 2024 to August 2026 sit at separate stages. Rules: Governor's Decision No. 23 of 2024, issued by the Central Bank of Yemen – Aden (CBY-Aden), requiring exchange companies, exchange establishments and money-transfer agents to execute new domestic cash transfers only through the unified money-transfer network (26 June 2024). Project: the World Bank-financed Financial Market Infrastructure and Inclusion Project (FMIIP), which started in July 2025, with components supporting the development of a Fast Payment System (FPS) and the establishment of a Real-Time Gross Settlement system (RTGS). Decisions and institutions: a CBY-Aden board decision on what it calls a mandatory national QR standard (29 March 2026), unified-network integration work (17 June 2026), restructuring of the Unified Money Network company (27 July 2026) and the founding assembly of the Yemeni Payments and Clearing Company (YPCC) on 3 August 2026. The FMIIP baseline for January 2025 records FPS and RTGS as not yet operational, with no participating institutions, and no later operational state is recorded. The only information on use is a January 2026 CBY-Aden statement about activity on the unified network, which is CBY-Aden's own statement, not an independent measurement.",
+   "new": "The recorded payment-reform steps from June 2024 to August 2026 sit at separate stages. Rules: Governor's Decision No. 23 of 2024, issued by the Central Bank of Yemen – Aden (CBY-Aden), requiring exchange companies, exchange establishments and money-transfer agents to execute new domestic cash transfers only through the unified money-transfer network (26 June 2024). Project: the World Bank-financed Financial Market Infrastructure and Inclusion Project (FMIIP), approved by the World Bank's Board on 17 June 2025 and effective from 1 September 2025, with components supporting the development of a Fast Payment System (FPS) and the establishment of a Real-Time Gross Settlement system (RTGS). Decisions and institutions: a CBY-Aden board decision on what it calls a mandatory national QR standard (29 March 2026), unified-network integration work (17 June 2026), restructuring of the Unified Money Network company (27 July 2026) and the founding assembly of the Yemeni Payments and Clearing Company (YPCC) on 3 August 2026. The FMIIP baseline for January 2025 records FPS and RTGS as not yet operational, with no participating institutions, and no later operational state is recorded. The only information on use is a January 2026 CBY-Aden statement about activity on the unified network, which is CBY-Aden's own statement, not an independent measurement."
+  },
+  {
+   "finding": "RC-19:R-01",
+   "sheet": "06_EVIDENCE_OBJECTS",
+   "row": 79,
+   "col": 7,
+   "field": "VIS-PAYMENT-RAILS.c7",
+   "old": "تقع خطوات إصلاح المدفوعات المسجلة من يونيو 2024 إلى أغسطس 2026 في مراحل منفصلة. القواعد: قرار المحافظ رقم (23) لسنة 2024 الصادر عن البنك المركزي اليمني – عدن، الذي يُلزم شركات ومنشآت الصرافة ووكلاء الحوالات بتنفيذ الحوالات النقدية الداخلية الجديدة حصرًا عبر الشبكة الموحدة للحوالات المالية (26 يونيو 2024). المشروع: مشروع البنية التحتية للأسواق المالية والشمول المالي في اليمن (FMIIP) الممول من البنك الدولي، الذي بدأ في يوليو 2025، ويتضمن مكونات لدعم تطوير نظام الدفع السريع (FPS) وإنشاء نظام التسوية الإجمالية الفورية (RTGS). القرارات والمؤسسات: قرار لمجلس إدارة البنك المركزي في عدن بشأن ما يسميه معيارًا وطنيًا إلزاميًا لرمز QR (29 مارس 2026)، وأعمال تكامل الشبكة الموحدة (17 يونيو 2026)، وإعادة هيكلة شركة الشبكة الموحدة للأموال (27 يوليو 2026)، وانعقاد الجمعية التأسيسية للشركة اليمنية للمدفوعات والمقاصة (YPCC) في 3 أغسطس 2026. ويسجل خط أساس مشروع FMIIP في يناير 2025 أن نظامي FPS وRTGS لم يكونا قيد التشغيل بعد ولا مؤسسات مشاركة فيهما، ولا يُسجَّل أي وضع تشغيلي لاحق. والمعلومة الوحيدة عن الاستخدام تصريح للبنك المركزي في عدن في يناير 2026 عن النشاط عبر الشبكة الموحدة، وهو تصريح من البنك المركزي في عدن نفسه، وليس قياسًا مستقلًا.",
+   "new": "تقع خطوات إصلاح المدفوعات المسجلة من يونيو 2024 إلى أغسطس 2026 في مراحل منفصلة. القواعد: قرار المحافظ رقم (23) لسنة 2024 الصادر عن البنك المركزي اليمني – عدن، الذي يُلزم شركات ومنشآت الصرافة ووكلاء الحوالات بتنفيذ الحوالات النقدية الداخلية الجديدة حصرًا عبر الشبكة الموحدة للحوالات المالية (26 يونيو 2024). المشروع: مشروع البنية التحتية للأسواق المالية والشمول المالي في اليمن (FMIIP) الممول من البنك الدولي، الذي أقرّه مجلس البنك الدولي في 17 يونيو 2025 وأصبح نافذًا اعتبارًا من 1 سبتمبر 2025، ويتضمن مكونات لدعم تطوير نظام الدفع السريع (FPS) وإنشاء نظام التسوية الإجمالية الفورية (RTGS). القرارات والمؤسسات: قرار لمجلس إدارة البنك المركزي في عدن بشأن ما يسميه معيارًا وطنيًا إلزاميًا لرمز QR (29 مارس 2026)، وأعمال تكامل الشبكة الموحدة (17 يونيو 2026)، وإعادة هيكلة شركة الشبكة الموحدة للأموال (27 يوليو 2026)، وانعقاد الجمعية التأسيسية للشركة اليمنية للمدفوعات والمقاصة (YPCC) في 3 أغسطس 2026. ويسجل خط أساس مشروع FMIIP في يناير 2025 أن نظامي FPS وRTGS لم يكونا قيد التشغيل بعد ولا مؤسسات مشاركة فيهما، ولا يُسجَّل أي وضع تشغيلي لاحق. والمعلومة الوحيدة عن الاستخدام تصريح للبنك المركزي في عدن في يناير 2026 عن النشاط عبر الشبكة الموحدة، وهو تصريح من البنك المركزي في عدن نفسه، وليس قياسًا مستقلًا."
+  },
+  {
+   "finding": "RC-19:R-01",
+   "sheet": "11_VISUAL_LIBRARY",
+   "row": 26,
+   "col": 21,
+   "field": "VIS-PAYMENT-RAILS.c21",
+   "old": "The recorded payment-reform steps from June 2024 to August 2026 sit at separate stages. Rules: Governor's Decision No. 23 of 2024, issued by the Central Bank of Yemen – Aden (CBY-Aden), requiring exchange companies, exchange establishments and money-transfer agents to execute new domestic cash transfers only through the unified money-transfer network (26 June 2024). Project: the World Bank-financed Financial Market Infrastructure and Inclusion Project (FMIIP), which started in July 2025, with components supporting the development of a Fast Payment System (FPS) and the establishment of a Real-Time Gross Settlement system (RTGS). Decisions and institutions: a CBY-Aden board decision on what it calls a mandatory national QR standard (29 March 2026), unified-network integration work (17 June 2026), restructuring of the Unified Money Network company (27 July 2026) and the founding assembly of the Yemeni Payments and Clearing Company (YPCC) on 3 August 2026. The FMIIP baseline for January 2025 records FPS and RTGS as not yet operational, with no participating institutions, and no later operational state is recorded. The only information on use is a January 2026 CBY-Aden statement about activity on the unified network, which is CBY-Aden's own statement, not an independent measurement.",
+   "new": "The recorded payment-reform steps from June 2024 to August 2026 sit at separate stages. Rules: Governor's Decision No. 23 of 2024, issued by the Central Bank of Yemen – Aden (CBY-Aden), requiring exchange companies, exchange establishments and money-transfer agents to execute new domestic cash transfers only through the unified money-transfer network (26 June 2024). Project: the World Bank-financed Financial Market Infrastructure and Inclusion Project (FMIIP), approved by the World Bank's Board on 17 June 2025 and effective from 1 September 2025, with components supporting the development of a Fast Payment System (FPS) and the establishment of a Real-Time Gross Settlement system (RTGS). Decisions and institutions: a CBY-Aden board decision on what it calls a mandatory national QR standard (29 March 2026), unified-network integration work (17 June 2026), restructuring of the Unified Money Network company (27 July 2026) and the founding assembly of the Yemeni Payments and Clearing Company (YPCC) on 3 August 2026. The FMIIP baseline for January 2025 records FPS and RTGS as not yet operational, with no participating institutions, and no later operational state is recorded. The only information on use is a January 2026 CBY-Aden statement about activity on the unified network, which is CBY-Aden's own statement, not an independent measurement."
+  },
+  {
+   "finding": "RC-19:R-01",
+   "sheet": "11_VISUAL_LIBRARY",
+   "row": 26,
+   "col": 22,
+   "field": "VIS-PAYMENT-RAILS.c22",
+   "old": "تقع خطوات إصلاح المدفوعات المسجلة من يونيو 2024 إلى أغسطس 2026 في مراحل منفصلة. القواعد: قرار المحافظ رقم (23) لسنة 2024 الصادر عن البنك المركزي اليمني – عدن، الذي يُلزم شركات ومنشآت الصرافة ووكلاء الحوالات بتنفيذ الحوالات النقدية الداخلية الجديدة حصرًا عبر الشبكة الموحدة للحوالات المالية (26 يونيو 2024). المشروع: مشروع البنية التحتية للأسواق المالية والشمول المالي في اليمن (FMIIP) الممول من البنك الدولي، الذي بدأ في يوليو 2025، ويتضمن مكونات لدعم تطوير نظام الدفع السريع (FPS) وإنشاء نظام التسوية الإجمالية الفورية (RTGS). القرارات والمؤسسات: قرار لمجلس إدارة البنك المركزي في عدن بشأن ما يسميه معيارًا وطنيًا إلزاميًا لرمز QR (29 مارس 2026)، وأعمال تكامل الشبكة الموحدة (17 يونيو 2026)، وإعادة هيكلة شركة الشبكة الموحدة للأموال (27 يوليو 2026)، وانعقاد الجمعية التأسيسية للشركة اليمنية للمدفوعات والمقاصة (YPCC) في 3 أغسطس 2026. ويسجل خط أساس مشروع FMIIP في يناير 2025 أن نظامي FPS وRTGS لم يكونا قيد التشغيل بعد ولا مؤسسات مشاركة فيهما، ولا يُسجَّل أي وضع تشغيلي لاحق. والمعلومة الوحيدة عن الاستخدام تصريح للبنك المركزي في عدن في يناير 2026 عن النشاط عبر الشبكة الموحدة، وهو تصريح من البنك المركزي في عدن نفسه، وليس قياسًا مستقلًا.",
+   "new": "تقع خطوات إصلاح المدفوعات المسجلة من يونيو 2024 إلى أغسطس 2026 في مراحل منفصلة. القواعد: قرار المحافظ رقم (23) لسنة 2024 الصادر عن البنك المركزي اليمني – عدن، الذي يُلزم شركات ومنشآت الصرافة ووكلاء الحوالات بتنفيذ الحوالات النقدية الداخلية الجديدة حصرًا عبر الشبكة الموحدة للحوالات المالية (26 يونيو 2024). المشروع: مشروع البنية التحتية للأسواق المالية والشمول المالي في اليمن (FMIIP) الممول من البنك الدولي، الذي أقرّه مجلس البنك الدولي في 17 يونيو 2025 وأصبح نافذًا اعتبارًا من 1 سبتمبر 2025، ويتضمن مكونات لدعم تطوير نظام الدفع السريع (FPS) وإنشاء نظام التسوية الإجمالية الفورية (RTGS). القرارات والمؤسسات: قرار لمجلس إدارة البنك المركزي في عدن بشأن ما يسميه معيارًا وطنيًا إلزاميًا لرمز QR (29 مارس 2026)، وأعمال تكامل الشبكة الموحدة (17 يونيو 2026)، وإعادة هيكلة شركة الشبكة الموحدة للأموال (27 يوليو 2026)، وانعقاد الجمعية التأسيسية للشركة اليمنية للمدفوعات والمقاصة (YPCC) في 3 أغسطس 2026. ويسجل خط أساس مشروع FMIIP في يناير 2025 أن نظامي FPS وRTGS لم يكونا قيد التشغيل بعد ولا مؤسسات مشاركة فيهما، ولا يُسجَّل أي وضع تشغيلي لاحق. والمعلومة الوحيدة عن الاستخدام تصريح للبنك المركزي في عدن في يناير 2026 عن النشاط عبر الشبكة الموحدة، وهو تصريح من البنك المركزي في عدن نفسه، وليس قياسًا مستقلًا."
+  },
+  {
+   "finding": "RC-19:R-01",
+   "sheet": "11_VISUAL_LIBRARY",
+   "row": 39,
+   "col": 21,
+   "field": "RV-CWR-009.c21",
+   "old": "The evidence reaches the first steps of the chain only. Rules and programmes are documented: a decision of the Central Bank of Yemen – Aden (CBY-Aden) of 26 June 2024 requiring new domestic cash transfers to go through the unified transfer network, with stated exceptions; the Financial Market Infrastructure and Inclusion Project (FMIIP), which started in July 2025 with components to support a Fast Payment System in areas under the internationally recognized government, a real-time gross settlement system with an upgrade of CBY-Aden core banking, and an access-point database; and a CBY-Aden board decision of 29 March 2026 on a mandatory national QR standard, linking of e-wallets and CBY-Aden's participation as a main shareholder in the Fast Payment System operator company. Institutional steps followed in June–August 2026: unified-network integration work, the restructuring of the Unified Money Network company, and the founding assembly and first board meeting of the Yemeni Payments and Clearing Company (YPCC). The evidence also holds POS figures for June 2026 within CBY-Aden's reporting scope (1,651 terminals; 27,504 transactions) and an attributed CBY-Aden statement on unified-network activity from January 2026. Nothing here measures access by people, use, service quality or outcomes: those steps are open, which means not yet measured, not failed.",
+   "new": "The evidence reaches the first steps of the chain only. Rules and programmes are documented: a decision of the Central Bank of Yemen – Aden (CBY-Aden) of 26 June 2024 requiring new domestic cash transfers to go through the unified transfer network, with stated exceptions; the Financial Market Infrastructure and Inclusion Project (FMIIP), approved by the World Bank's Board on 17 June 2025 and effective from 1 September 2025, with components for a Fast Payment System, a real-time gross settlement system with an upgrade of CBY-Aden core banking, and support for access to and use of the payment infrastructure; and a CBY-Aden board decision of 29 March 2026 on a mandatory national QR standard, linking of e-wallets and CBY-Aden's participation as a main shareholder in the Fast Payment System operator company. Institutional steps followed in June–August 2026: unified-network integration work, the restructuring of the Unified Money Network company, and the founding assembly and first board meeting of the Yemeni Payments and Clearing Company (YPCC). The evidence also holds POS figures for June 2026 within CBY-Aden's reporting scope (1,651 terminals; 27,504 transactions) and an attributed CBY-Aden statement on unified-network activity from January 2026. Nothing here measures access by people, use, service quality or outcomes: those steps are open, which means not yet measured, not failed."
+  },
+  {
+   "finding": "RC-19:R-01",
+   "sheet": "11_VISUAL_LIBRARY",
+   "row": 39,
+   "col": 22,
+   "field": "RV-CWR-009.c22",
+   "old": "لا تصل الأدلة إلا إلى الحلقات الأولى من السلسلة. فالقواعد والبرامج موثقة: قرار البنك المركزي اليمني – عدن في 26 يونيو 2024 بإلزام تنفيذ الحوالات المحلية الجديدة عبر الشبكة الموحدة للحوالات، مع استثناءات منصوص عليها؛ ومشروع البنية التحتية للأسواق المالية والشمول المالي في اليمن (FMIIP) الذي بدأ في يوليو 2025 بمكونات لدعم تطوير نظام للدفع السريع في مناطق الحكومة المعترف بها دوليًا، وإنشاء نظام للتسوية الإجمالية الفورية مع تحديث النظام المصرفي الأساسي للبنك المركزي في عدن، وإنشاء قاعدة بيانات لنقاط الوصول؛ وقرار مجلس إدارة البنك المركزي في عدن في 29 مارس 2026 بشأن معيار وطني إلزامي لرمز الاستجابة السريعة، وربط المحافظ الإلكترونية، ومشاركة البنك المركزي مساهمًا رئيسيًا في الشركة المشغلة لنظام الدفع السريع. ثم تلتها خطوات مؤسسية بين يونيو وأغسطس 2026: أعمال تكامل الشبكة الموحدة، وإعادة هيكلة شركة الشبكة الموحدة، والجمعية التأسيسية وأول اجتماع لمجلس إدارة الشركة اليمنية للمدفوعات والمقاصة. وتتضمن الأدلة كذلك أرقام نقاط البيع ضمن نطاق إبلاغ البنك المركزي في عدن لشهر يونيو 2026 (1,651 جهازًا و27,504 معاملات)، وتصريحًا منسوبًا إلى البنك المركزي في عدن في يناير 2026 عن نشاط الشبكة الموحدة. ولا يقيس أيٌّ من ذلك وصول الأفراد أو استخدامهم أو جودة الخدمة أو النتائج: فهذه الحلقات مفتوحة، أي أنها لم تُقس بعد، لا أنها أخفقت.",
+   "new": "لا تصل الأدلة إلا إلى الحلقات الأولى من السلسلة. فالقواعد والبرامج موثقة: قرار البنك المركزي اليمني – عدن في 26 يونيو 2024 بإلزام تنفيذ الحوالات المحلية الجديدة عبر الشبكة الموحدة للحوالات، مع استثناءات منصوص عليها؛ ومشروع البنية التحتية للأسواق المالية والشمول المالي في اليمن (FMIIP) الذي أقرّه مجلس البنك الدولي في 17 يونيو 2025 وأصبح نافذًا اعتبارًا من 1 سبتمبر 2025، ويتضمن مكونات لتطوير نظام للدفع السريع ونظام للتسوية الإجمالية الفورية مع تحديث النظام المصرفي الأساسي للبنك المركزي اليمني – عدن، ولدعم الوصول إلى البنية التحتية للمدفوعات واستخدامها؛ وقرار مجلس إدارة البنك المركزي اليمني – عدن في 29 مارس 2026 بشأن معيار وطني إلزامي لرمز الاستجابة السريعة، وربط المحافظ الإلكترونية، ومشاركة البنك المركزي مساهمًا رئيسيًا في الشركة المشغلة لنظام الدفع السريع. ثم تلتها خطوات مؤسسية بين يونيو وأغسطس 2026: أعمال تكامل الشبكة الموحدة، وإعادة هيكلة شركة الشبكة الموحدة، والجمعية التأسيسية وأول اجتماع لمجلس إدارة الشركة اليمنية للمدفوعات والمقاصة. وتتضمن الأدلة كذلك أرقام نقاط البيع ضمن نطاق إبلاغ البنك المركزي في عدن لشهر يونيو 2026 (1,651 جهازًا و27,504 معاملات)، وتصريحًا منسوبًا إلى البنك المركزي في عدن في يناير 2026 عن نشاط الشبكة الموحدة. ولا يقيس أيٌّ من ذلك وصول الأفراد أو استخدامهم أو جودة الخدمة أو النتائج: فهذه الحلقات مفتوحة، أي أنها لم تُقس بعد، لا أنها أخفقت."
+  },
+  {
+   "finding": "RC-19:R-01",
+   "sheet": "31_REFORMS_REGULATION",
+   "row": 7,
+   "col": 2,
+   "field": "REF-PAY-002.date",
+   "old": "2025-07",
+   "new": "2025-09-01"
+  },
+  {
+   "finding": "RC-19:R-01",
+   "sheet": "31_REFORMS_REGULATION",
+   "row": 7,
+   "col": 4,
+   "field": "REF-PAY-002.event",
+   "old": "FMIIP starts",
+   "new": "FMIIP effective"
+  },
+  {
+   "finding": "RC-19:R-01",
+   "sheet": "31_REFORMS_REGULATION",
+   "row": 7,
+   "col": 5,
+   "field": "REF-PAY-002.normalized_description",
+   "old": "Five-year Yemen Financial Market Infrastructure and Inclusion Project starts, funded by the World Bank and implemented by UNDP, with CBY-Aden as primary beneficiary.",
+   "new": "The World Bank-financed Yemen Financial Market Infrastructure and Inclusion Project (P180708), implemented by UNDP with CBY-Aden as primary beneficiary, became effective on 1 September 2025, after Board approval on 17 June 2025 and signing on 26 June 2025 (World Bank ISR for P180708, sequence 2 (8 April 2026), key dates and components). The report gives no separate start date."
+  },
+  {
+   "finding": "RC-19:R-01",
+   "sheet": "31_REFORMS_REGULATION",
+   "row": 7,
+   "col": 8,
+   "field": "REF-PAY-002.source_url",
+   "old": "https://www.undp.org/yemen/projects/yemen-financial-market-infrastructure-and-inclusion-project",
+   "new": "https://documents.worldbank.org/en/publication/documents-reports/documentdetail/099040826144025755"
+  },
+  {
+   "finding": "RC-19:R-01",
+   "sheet": "31_REFORMS_REGULATION",
+   "row": 8,
+   "col": 2,
+   "field": "REF-PAY-003.date",
+   "old": "2025-07",
+   "new": "2025-06-17"
+  },
+  {
+   "finding": "RC-19:R-01",
+   "sheet": "31_REFORMS_REGULATION",
+   "row": 8,
+   "col": 5,
+   "field": "REF-PAY-003.normalized_description",
+   "old": "Project component supports development of a Fast Payment System (FPS) in IRG-controlled areas as a distinct payment-infrastructure component.",
+   "new": "Project component 'Development of Fast Payment Systems (FPS)', approved with the project on 17 June 2025 (World Bank ISR for P180708, sequence 2 (8 April 2026), key dates and components)."
+  },
+  {
+   "finding": "RC-19:R-01",
+   "sheet": "31_REFORMS_REGULATION",
+   "row": 8,
+   "col": 8,
+   "field": "REF-PAY-003.source_url",
+   "old": "https://www.undp.org/yemen/projects/yemen-financial-market-infrastructure-and-inclusion-project",
+   "new": "https://documents.worldbank.org/en/publication/documents-reports/documentdetail/099040826144025755"
+  },
+  {
+   "finding": "RC-19:R-01",
+   "sheet": "31_REFORMS_REGULATION",
+   "row": 9,
+   "col": 2,
+   "field": "REF-PAY-004.date",
+   "old": "2025-07",
+   "new": "2025-06-17"
+  },
+  {
+   "finding": "RC-19:R-01",
+   "sheet": "31_REFORMS_REGULATION",
+   "row": 9,
+   "col": 5,
+   "field": "REF-PAY-004.normalized_description",
+   "old": "Project component supports establishment of a Real-Time Gross Settlement system (RTGS) managed by CBY-Aden, alongside upgrading CBY-Aden core banking; the project describes RTGS as foundational payment infrastructure.",
+   "new": "Project component 'Development of a Real Time Gross Settlement System and upgrading Core Banking for CBY Aden', approved with the project on 17 June 2025 (World Bank ISR for P180708, sequence 2 (8 April 2026), key dates and components)."
+  },
+  {
+   "finding": "RC-19:R-01",
+   "sheet": "31_REFORMS_REGULATION",
+   "row": 9,
+   "col": 8,
+   "field": "REF-PAY-004.source_url",
+   "old": "https://www.undp.org/yemen/projects/yemen-financial-market-infrastructure-and-inclusion-project",
+   "new": "https://documents.worldbank.org/en/publication/documents-reports/documentdetail/099040826144025755"
+  },
+  {
+   "finding": "RC-19:R-01",
+   "sheet": "31_REFORMS_REGULATION",
+   "row": 10,
+   "col": 2,
+   "field": "REF-PAY-005.date",
+   "old": "2025-07",
+   "new": "2025-06-17"
+  },
+  {
+   "finding": "RC-19:R-01",
+   "sheet": "31_REFORMS_REGULATION",
+   "row": 10,
+   "col": 5,
+   "field": "REF-PAY-005.normalized_description",
+   "old": "Project includes geographically distributed access-point database, FI/PSP capacity building, merchant onboarding support in underserved areas and outreach.",
+   "new": "Project component 'Supporting access and usage of the payment's infrastructure', approved with the project on 17 June 2025 (World Bank ISR for P180708, sequence 2 (8 April 2026), key dates and components); its results indicators are merchants accepting electronic payments, active bank and e-wallet accounts and agents. The UNDP description of an access-point database is not read here."
+  },
+  {
+   "finding": "RC-19:R-01",
+   "sheet": "31_REFORMS_REGULATION",
+   "row": 10,
+   "col": 8,
+   "field": "REF-PAY-005.source_url",
+   "old": "https://www.undp.org/yemen/projects/yemen-financial-market-infrastructure-and-inclusion-project",
+   "new": "https://documents.worldbank.org/en/publication/documents-reports/documentdetail/099040826144025755"
+  },
+  {
+   "finding": "RC-19:R-01",
+   "sheet": "04_NAV_UX",
+   "row": 182,
+   "col": 2,
+   "field": "UI-VIS-CAT-EVT-FPS.label_en",
+   "old": "FMIIP component: support for developing a Fast Payment System",
+   "new": "FMIIP component, approved with the project: support for developing a Fast Payment System"
+  },
+  {
+   "finding": "RC-19:R-01",
+   "sheet": "04_NAV_UX",
+   "row": 182,
+   "col": 3,
+   "field": "UI-VIS-CAT-EVT-FPS.label_ar",
+   "old": "مكوّن في مشروع FMIIP: دعم تطوير نظام الدفع السريع",
+   "new": "مكوّن أُقرّ مع مشروع FMIIP: دعم تطوير نظام الدفع السريع"
+  },
+  {
+   "finding": "RC-19:R-01",
+   "sheet": "04_NAV_UX",
+   "row": 183,
+   "col": 2,
+   "field": "UI-VIS-CAT-EVT-RTGS-CORE.label_en",
+   "old": "FMIIP component: support for establishing a real-time gross settlement (RTGS) system and upgrading CBY-Aden core banking",
+   "new": "FMIIP component, approved with the project: support for developing a real-time gross settlement (RTGS) system and upgrading CBY-Aden core banking"
+  },
+  {
+   "finding": "RC-19:R-01",
+   "sheet": "04_NAV_UX",
+   "row": 183,
+   "col": 3,
+   "field": "UI-VIS-CAT-EVT-RTGS-CORE.label_ar",
+   "old": "مكوّن في مشروع FMIIP: دعم إنشاء نظام التسوية الإجمالية الفورية (RTGS) وتحديث النظام المصرفي الأساسي للبنك المركزي اليمني – عدن",
+   "new": "مكوّن أُقرّ مع مشروع FMIIP: دعم تطوير نظام التسوية الإجمالية الفورية (RTGS) وتحديث النظام المصرفي الأساسي للبنك المركزي اليمني – عدن"
+  },
+  {
+   "finding": "RC-19",
+   "sheet": "04_NAV_UX",
+   "row": 180,
+   "col": 2,
+   "field": "UI-VIS-CAT-EVT-FMIIP-START.label_en",
+   "old": "FMIIP starts",
+   "new": "FMIIP effective"
+  },
+  {
+   "finding": "RC-19",
+   "sheet": "04_NAV_UX",
+   "row": 180,
+   "col": 3,
+   "field": "UI-VIS-CAT-EVT-FMIIP-START.label_ar",
+   "old": "بدء مشروع FMIIP",
+   "new": "بدء نفاذ مشروع FMIIP"
+  },
+  {
+   "finding": "RC-19",
+   "sheet": "04_NAV_UX",
+   "row": 180,
+   "col": 4,
+   "field": "UI-VIS-CAT-EVT-FMIIP-START.use_rule",
+   "old": "Pre-Tranche-C P4 (V-D5). Chart label: event value 'FMIIP starts'.",
+   "new": "Pre-Tranche-C P4 (V-D5); RC-19 R-01. Chart label: event value 'FMIIP effective' (World Bank ISR: effectiveness 1 September 2025)."
+  },
+  {
+   "finding": "RC-19",
+   "sheet": "04_NAV_UX",
+   "row": 184,
+   "col": 2,
+   "field": "UI-VIS-CAT-EVT-ACCESS-DB.label_en",
+   "old": "FMIIP component: access-point database",
+   "new": "FMIIP component, approved with the project: support for access to and use of the payment infrastructure"
+  },
+  {
+   "finding": "RC-19",
+   "sheet": "04_NAV_UX",
+   "row": 184,
+   "col": 3,
+   "field": "UI-VIS-CAT-EVT-ACCESS-DB.label_ar",
+   "old": "مكوّن في مشروع FMIIP: قاعدة بيانات لنقاط الوصول",
+   "new": "مكوّن أُقرّ مع مشروع FMIIP: دعم الوصول إلى البنية التحتية للمدفوعات واستخدامها"
+  },
+  {
+   "finding": "RC-19",
+   "sheet": "04_NAV_UX",
+   "row": 257,
+   "col": 2,
+   "field": "UI-NOSCRIPT-NOTE.label_en",
+   "old": "Search, Compare and the copy buttons need JavaScript. Every page of evidence remains readable without it.",
+   "new": "Search, Compare and the copy and print buttons need JavaScript. Every other page, the menu and the language switch work without it."
+  },
+  {
+   "finding": "RC-19",
+   "sheet": "04_NAV_UX",
+   "row": 257,
+   "col": 3,
+   "field": "UI-NOSCRIPT-NOTE.label_ar",
+   "old": "يحتاج البحث والمقارنة وأزرار النسخ إلى JavaScript، وتبقى كل صفحات الأدلة قابلة للقراءة من دونه.",
+   "new": "يحتاج البحث والمقارنة وأزرار النسخ والطباعة إلى JavaScript، وتعمل سائر الصفحات والقائمة وتبديل اللغة من دونه."
+  },
+  {
+   "finding": "RC-19",
+   "sheet": "04_NAV_UX",
+   "row": 257,
+   "col": 4,
+   "field": "UI-NOSCRIPT-NOTE.use_rule",
+   "old": "Tranche C TC-F (TOOL-17).",
+   "new": "Tranche C TC-F (TOOL-17); RC-19 R-05: the language switch and the menu are links, so they work without JavaScript."
+  },
+  {
+   "finding": "RC-19:X-ESC-RC17-01",
+   "sheet": "04_NAV_UX",
+   "row": null,
+   "col": null,
+   "field": "UI-MOVED-RECORD-TITLE",
+   "old": null,
+   "new": "This record is no longer published on its own || لم يعد هذا السجل منشورًا بمفرده"
+  },
+  {
+   "finding": "RC-19:X-ESC-RC17-01",
+   "sheet": "04_NAV_UX",
+   "row": null,
+   "col": null,
+   "field": "UI-MOVED-RECORD-BODY",
+   "old": null,
+   "new": "This address now leads to the record of the Central Bank of Yemen – Aden (CBY-Aden) circular of 26 June 2024. Names from the regulator's lists are not reproduced here. || يُحيل هذا الرابط الآن إلى سجل التعميم المؤرخ في 26 يونيو 2024 والصادر عن البنك المركزي اليمني – عدن. ولا تُذكر هنا الأسماء الواردة في قوائم الجهة الرقابية."
+  },
+  {
+   "finding": "RC-19:R-08",
+   "sheet": "03_PAGE_SECTIONS",
+   "row": 212,
+   "col": 5,
+   "field": "/privacy/#s3.body_en",
+   "old": "The hosting service may keep limited technical logs needed to deliver, secure and diagnose the site. Which fields are kept, for how long and by which service providers will be stated here once the hosting arrangements are confirmed.",
+   "new": "This resource is hosted on DigitalOcean App Platform. Readers reach it through causewaygrp.com, CauseWay's own website, which passes each request for these pages on to it. The causewaygrp.com website therefore receives the technical details that come with every request, such as the page address, the time of the request, the IP address and the browser type; if the browser holds the cookie that the causewaygrp.com website sets, that cookie is sent to the website with each request. App Platform, including the content-delivery network it serves through, receives each request as it is passed on. Either may keep such details in logs. Which details are kept, for what purpose, for how long and by which provider has not yet been confirmed; it will be stated here once it is."
+  },
+  {
+   "finding": "RC-19:R-08",
+   "sheet": "03_PAGE_SECTIONS",
+   "row": 212,
+   "col": 7,
+   "field": "/privacy/#s3.body_ar",
+   "old": "قد تحتفظ خدمة الاستضافة بقدر محدود من السجلات التقنية اللازمة لتقديم الموقع وتأمينه وتشخيص أعطاله. وستُذكر هنا الحقول التي تُحفظ ومدة الاحتفاظ بها ومقدمو الخدمة المعنيون بمجرد تأكيد ترتيبات الاستضافة.",
+   "new": "يُستضاف هذا المورد على خدمة App Platform من DigitalOcean، ويصل إليه القرّاء عبر causewaygrp.com، وهو موقع CauseWay الإلكتروني الذي يمرّر إليه كل طلب لهذه الصفحات. ولذلك يتلقى موقع causewaygrp.com البيانات التقنية المصاحبة لكل طلب، مثل رابط الصفحة ووقت الطلب وعنوان IP ونوع المتصفح؛ وإذا كان المتصفح يحتفظ بملف تعريف الارتباط الذي يضعه موقع causewaygrp.com، فإنه يرسله إلى ذلك الموقع مع كل طلب. وتتلقى App Platform، بما فيها شبكة توصيل المحتوى التي تقدّم الصفحات عبرها، كل طلب كما يُمرَّر إليها. وقد يحتفظ أيٌّ منهما بهذه البيانات في سجلات. ولم يُؤكَّد بعدُ أيّ البيانات تُحفظ، ولا الغرض من حفظها، ولا مدة حفظها، ولا الجهة التي تحفظها؛ وسيُذكر ذلك هنا عند تأكيده."
+  },
+  {
+   "finding": "RC-19:X-ESC-RC17-01",
+   "sheet": "06_EVIDENCE_OBJECTS",
+   "row": 34,
+   "col": null,
+   "field": "NEG-EW-011",
+   "old": "row",
+   "new": null,
+   "note": "row removed: the record is no longer published on its own (owner decision of 3 October 2026, 23:54 Aden)"
+  },
+  {
+   "finding": "RC-19:X-ESC-RC17-01",
+   "sheet": "02_SITE_MAP",
+   "row": 78,
+   "col": null,
+   "field": "/evidence/NEG-EW-011/",
+   "old": "row",
+   "new": null,
+   "note": "row removed: the record is no longer published on its own (owner decision of 3 October 2026, 23:54 Aden)"
+  }
+ ]
+}

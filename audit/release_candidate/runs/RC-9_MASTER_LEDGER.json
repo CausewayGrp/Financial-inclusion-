@@ -1,0 +1,84 @@
+{
+ "transaction": "RC-9",
+ "summary": "Part B B6: measurement linkage",
+ "items": {
+  "B6": "five bindings; two labels; MA-010 spelling"
+ },
+ "input_master_sha256": "d52dfc53cef8500b50a2873c68b6c3d13f2763c5ec0ed8af6d93c59f28b612ee",
+ "output_master_sha256": "26a97c34d5178640ad716b6b7a3536beec26c795f9ea799d6d8506c1c1e3902e",
+ "cells_written": 8,
+ "changes": [
+  {
+   "finding": "RC-9:B6",
+   "sheet": "08_READINGS",
+   "row": 5,
+   "col": 20,
+   "field": "CWR-001.measurement_bindings",
+   "old": "[]",
+   "new": "[\"MA-001\"]"
+  },
+  {
+   "finding": "RC-9:B6",
+   "sheet": "08_READINGS",
+   "row": 7,
+   "col": 20,
+   "field": "CWR-003.measurement_bindings",
+   "old": "[\"MA-005\"]",
+   "new": "[\"MA-005\",\"MA-002\"]"
+  },
+  {
+   "finding": "RC-9:B6",
+   "sheet": "08_READINGS",
+   "row": 10,
+   "col": 20,
+   "field": "CWR-006.measurement_bindings",
+   "old": "[]",
+   "new": "[\"MA-005\"]"
+  },
+  {
+   "finding": "RC-9:B6",
+   "sheet": "08_READINGS",
+   "row": 11,
+   "col": 20,
+   "field": "CWR-007.measurement_bindings",
+   "old": "[\"MA-003\"]",
+   "new": "[\"MA-003\",\"MA-007\"]"
+  },
+  {
+   "finding": "RC-9:B6",
+   "sheet": "08_READINGS",
+   "row": 13,
+   "col": 20,
+   "field": "CWR-009.measurement_bindings",
+   "old": "[\"MA-010\"]",
+   "new": "[\"MA-010\",\"MA-006\"]"
+  },
+  {
+   "finding": "RC-9:B6",
+   "sheet": "10_MEASUREMENT_AGENDA",
+   "row": 14,
+   "col": 17,
+   "field": "MA-010.decisions_unlocked_ar",
+   "old": "إلى أي مرحلة وصل كل إصلاح فعلًا؟,عند أي حلقة من سلسلة الانتقال تنتهي الأدلة المتاحة؟,ما المؤشر التشغيلي أو المتعلق بالمستخدم الذي ينبغي قياسه تالياً؟",
+   "new": "إلى أي مرحلة وصل كل إصلاح فعلًا؟,عند أي حلقة من سلسلة الانتقال تنتهي الأدلة المتاحة؟,ما المؤشر التشغيلي أو المتعلق بالمستخدم الذي ينبغي قياسه تاليًا؟"
+  },
+  {
+   "finding": "RC-9:B6",
+   "sheet": "04_NAV_UX",
+   "row": null,
+   "col": null,
+   "field": "UI-MA-DECISIONS",
+   "old": null,
+   "new": "Questions it would answer: || الأسئلة التي سيجيب عنها القياس:"
+  },
+  {
+   "finding": "RC-9:B6",
+   "sheet": "04_NAV_UX",
+   "row": null,
+   "col": null,
+   "field": "UI-MA-BLOCKED",
+   "old": null,
+   "new": "Evidence that cannot be produced without it: || الأدلة التي لا يمكن إنتاجها من دونه:"
+  }
+ ]
+}

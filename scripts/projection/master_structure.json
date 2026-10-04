@@ -21,7 +21,12 @@
     "col12",
     "col13"
    ],
-   "blocks": [],
+   "blocks": [
+    {
+     "title": "EVIDENCE LANDSCAPE / مشهد الأدلة",
+     "header": true
+    }
+   ],
    "numeric_text_columns": {
     "__main__": [
      3,
@@ -296,7 +301,9 @@
     "relationship_type",
     "linked_routes",
     "interpretation_note",
-    "period_ar"
+    "period_ar",
+    "verification_note_en",
+    "verification_note_ar"
    ],
    "blocks": []
   },
@@ -883,7 +890,8 @@
     "critical_limit",
     "authority_class",
     "route",
-    "display_requirements"
+    "display_requirements",
+    "publisher_ar"
    ],
    "blocks": []
   },

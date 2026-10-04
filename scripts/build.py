@@ -2,7 +2,22 @@
 # -*- coding: utf-8 -*-
 """The production build: site-src/content/** -> dist/, through the one renderer (EAD-01).
 
-  python3 scripts/build.py
+  python3 scripts/build.py                                   # dist/: the review build every gate reads
+  python3 scripts/build.py --out build/site                  # the site as it is published
+  python3 scripts/build.py --origin https://causewaygrp.com/financial-inclusion-evidence --out /tmp/site
+
+The public origin may carry a path (owner decision B1: https://causewaygrp.com/financial-inclusion-evidence); the site is
+then served under that path. Two outputs, one renderer:
+
+- `dist/` is the review build. Its own links stay root-relative, so every gate serves and reads it at a server root as
+  it always has; its discovery addresses (canonical, hreflang, Open Graph, structured data, sitemap) are absolute from
+  the origin, path included, as soon as one is set. With no origin (today) it is byte for byte what it was before the
+  base path existed.
+- `--out DIR` writes the site as it is published: after the pages are written, `scripts/base_path.py` moves every
+  root-absolute reference under the origin's base path (nothing, when the origin has none). `--origin URL` builds for
+  another origin, for that one build only. site-src/deployment.json and dist/ are not touched.
+  `scripts/tests/test_base_path.py` builds the decided origin this way and serves it under the path; the deploy
+  workflow publishes this output (docs/RELEASE_RUNBOOK.md, "Hosting").
 
 Writes the complete static site a host serves: every controlled route in both languages as real,
 deep-link-safe HTML, the neutral root entry, the bilingual 404, `robots.txt` and — once the owner sets
@@ -27,6 +42,7 @@ package — content bundles, export frames, social frames — are not part of a 
 """
 from __future__ import annotations
 
+import argparse
 import shutil
 import sys
 from pathlib import Path
@@ -35,6 +51,8 @@ ROOT = Path(__file__).resolve().parents[1]
 SRC = ROOT / "site-src"
 DIST = ROOT / "dist"
 sys.path.insert(0, str(ROOT / "scripts"))
+import base_path  # noqa: E402
+import discovery  # noqa: E402
 from yfie import content as C, render  # noqa: E402
 
 # The faces theme.FONT_FACES declares, and only those: three weights per family (08_ASSET_MAP.md §2). The licence
@@ -48,7 +66,9 @@ FONT_FILES = {
 def copy_assets(out: Path) -> None:
     (out / "assets").mkdir(parents=True)
     (out / "static-data").mkdir()
-    shutil.copy2(SRC / "assets/CauseWay_Master_Logo.png", out / "assets/CauseWay_Master_Logo.png")
+    # 4.5 (owner note, 11:15): the 10 MB master logo is not shipped — no published page loads it (gate RC-G4), and
+    # scripts/social_images.py stages its own copy for the social template
+    shutil.copytree(SRC / "assets/logo", out / "assets/logo", ignore=shutil.ignore_patterns("INDEX.json"))   # EAD-03: the web-size derivatives every page serves (scripts/logo_derivatives.py)
     shutil.copy2(SRC / "app.js", out / "assets/app.js")                      # the tools runtime: search, compare, cite, menu, language
     shutil.copy2(SRC / "lang-redirect.js", out / "assets/lang-redirect.js")  # the neutral root entry (F6)
     shutil.copy2(SRC / "content/content/search_index.json", out / "static-data/search_index.json")
@@ -64,23 +84,59 @@ def copy_assets(out: Path) -> None:
         (out / "assets/fonts" / folder).mkdir(parents=True)
         for name in names:
             shutil.copy2(ROOT / "vendor/fonts" / folder / name, out / "assets/fonts" / folder / name)
+    # B14 b: the host headers (security policy and cache rules) for hosts that read `_headers` from the publish root
+    shutil.copy2(SRC / "hosting/_headers", out / "_headers")
 
 
-def main() -> int:
-    if DIST.exists():
-        shutil.rmtree(DIST)
-    copy_assets(DIST)
-    render.assets(DIST)                      # assets/yfie.css — the one stylesheet, from theme.py
+def output_dir(arg: str | None) -> Path:
+    """dist/ by default. Another directory must be new or empty, and outside the repository's own folders (build/ is
+    the exception, and is not tracked), so that a mistyped path can never be emptied by the build."""
+    if not arg:
+        return DIST
+    out = Path(arg).resolve()
+    if out == DIST:
+        raise SystemExit("--out dist: dist/ is the review build and is written without --out")
+    if out == ROOT or ROOT in out.parents and out.relative_to(ROOT).parts[0] != "build":
+        raise SystemExit(f"--out {arg}: use dist/ (the default), a folder under build/, or a directory outside the repository")
+    if out.exists() and (not out.is_dir() or any(out.iterdir())):
+        raise SystemExit(f"--out {arg}: the directory exists and is not empty")
+    return out
+
+
+def main(argv: list[str] | None = None) -> int:
+    ap = argparse.ArgumentParser(description="Build the static site.")
+    ap.add_argument("--origin", help="build for this public origin instead of site-src/deployment.json's (this build only)")
+    ap.add_argument("--out", help="write the site as published (under the origin's base path) into this new or empty directory")
+    args = ap.parse_args(argv)
+    if args.origin is not None:
+        discovery.override(public_origin=args.origin)
+    out = output_dir(args.out)
+    if out.exists():
+        shutil.rmtree(out)
+    copy_assets(out)
+    render.assets(out)                       # assets/yfie.css — the one stylesheet, from theme.py
     content = C.load()
     routes = content.routes()
     for lang in ("ar", "en"):
         for route in routes:
             html = render.render(content.page(route, lang), content.shell(lang, route))
-            d = DIST / lang / route.strip("/")
+            d = out / lang / route.strip("/")
             d.mkdir(parents=True, exist_ok=True)
             (d / "index.html").write_text(html, encoding="utf-8")
-    extra = render.render_site_files(DIST, content)   # the root entry, the bilingual 404, robots.txt, sitemap.xml with an origin
-    print(f"Built {len(routes) * 2 + extra} HTML files from {len(routes)} controlled page specs.")
+    extra = render.render_site_files(out, content)   # the root entry, the bilingual 404, robots.txt, sitemap.xml with an origin
+    # B14 a: the data exports are published only when the owner turns the switch on (site-src/deployment.json)
+    if discovery.deployment().get("public_downloads") is True:
+        exports = ROOT / "build" / "exports"
+        if not (exports / "MANIFEST.json").exists():
+            raise SystemExit("public_downloads is on but build/exports/ is missing: run python3 scripts/exports.py first")
+        shutil.copytree(exports, out / "downloads")
+    # Owner decision B1: the published site (--out) is served under the origin's path, so every root-absolute reference
+    # moves under it. dist/, the review build, keeps root-relative links; with no path nothing runs at all.
+    base = discovery.base_path(discovery.origin()) if out != DIST else ""
+    moved = base_path.relocate(out, base)
+    where = "" if out == DIST else f" into {out}"
+    under = f", served under {base}/ ({moved} files relocated)" if base else ""
+    print(f"Built {len(routes) * 2 + extra} HTML files from {len(routes)} controlled page specs{where}{under}.")
     return 0
 
 

@@ -4,9 +4,9 @@
   "authority_scope": "NAVIGATION_AND_INTERACTION_ONLY",
   "semantic_authority": "Production Master via current Page Specs; this contract cannot alter facts, claims, values, units, universes, periods, methods, sources, rights, evidence class or publication state.",
   "authority_binding": {
-    "master_sha256": "17db032b15da16fc4b5b3c3b49f19aebf2ecb4ec46634613fe8505d0f038690b",
-    "page_specs_sha256": "d45748046ea56fd0e67fdf112f9888de65b3fe7fab46ce6f51de3a80824b69aa",
-    "page_spec_count": 143
+    "master_sha256": "90014e3bd27133c34b8435090230cf5b28a3301dec9f366c6fedf047b5ea2838",
+    "page_specs_sha256": "0298a3c6b5c72ab9da1fa99667f79303475f39e12bbe41c2f6f581459f8a2b86",
+    "page_spec_count": 142
   },
   "experience_principle": "UNDERSTAND → EXPLORE → VERIFY",
   "global_navigation": [
@@ -268,7 +268,7 @@
     },
     {
       "page_family": "Evidence Record",
-      "route_count": 110,
+      "route_count": 109,
       "unique_user_value_role": "CANONICAL_PUBLIC_VERIFICATION_ENDPOINT",
       "primary_next_action_policy": "SOURCE_RELATED_CORRECTION_OR_REUSE",
       "depth_role": "VERIFICATION",
@@ -451,7 +451,7 @@
         "footer",
         "search"
       ],
-      "search_record_count": 152,
+      "search_record_count": 157,
       "unique_value_role": "SOURCE_AND_DATA_DIRECTORY",
       "value_basis": "CURRENT_PAGE_SPEC_AND_BOUND_GOVERNED_OBJECTS",
       "next_action_policy": "SOURCE_TO_DEPENDENT_EVIDENCE",
@@ -1790,26 +1790,6 @@
       "page_class": "evidence_detail",
       "page_family": "Evidence Record",
       "stable_object_id": "MFI-SPINE-2015-Q4",
-      "entry_modes": [
-        "deep_link",
-        "search",
-        "verification_link_or_search"
-      ],
-      "search_record_count": 2,
-      "unique_value_role": "CANONICAL_PUBLIC_VERIFICATION_ENDPOINT",
-      "value_basis": "CURRENT_PAGE_SPEC_AND_BOUND_GOVERNED_OBJECTS",
-      "next_action_policy": "SOURCE_RELATED_CORRECTION_OR_REUSE",
-      "explicit_next_actions": [],
-      "deletion_disposition": "KEEP",
-      "deletion_reason_code": "STABLE_VERIFICATION_ENDPOINT",
-      "depth_role": "VERIFICATION",
-      "navigation_prominence": "ADDRESSABLE_VERIFICATION"
-    },
-    {
-      "route": "/evidence/NEG-EW-011/",
-      "page_class": "evidence_detail",
-      "page_family": "Evidence Record",
-      "stable_object_id": "NEG-EW-011",
       "entry_modes": [
         "deep_link",
         "search",
@@ -3639,7 +3619,7 @@
       "No archive factual proposition changes current controlled evidence in R4."
     ]
   },
-  "public_search_record_count": 435,
+  "public_search_record_count": 438,
   "r6_information_design_contract": {
     "status": "R6_CLOSED",
     "principle": "ONE_TRUTH__MULTIPLE_DEPTHS__TASK_LED_ENTRY__VERIFICATION_ALWAYS_AVAILABLE",
@@ -3965,5 +3945,21 @@
       "label_en": "Contact",
       "label_ar": "التواصل"
     }
-  ]
+  ],
+  "mobile_menu": {
+    "decided_by": "Owner decisions of 3 October 2026, 09:05 Cairo point 3 and 09:50 Cairo A.3 (findings A-12, C-6, C-8): the session designated programme steward for this one patch (audit/OWNER_DECISIONS_2026-10-02.md)",
+    "applies_below_px": 900,
+    "after_global_navigation": [
+      {
+        "source": "trust_navigation",
+        "order": "as listed, About first"
+      },
+      {
+        "source": "utilities",
+        "id": "cite"
+      }
+    ],
+    "labels": "existing governed labels only: each trust_navigation label, the footer group label that holds /about/, and the utilities 'cite' label",
+    "header": "unchanged: the cite control is added inside the opened menu, not to the header, so the 320 px header carries no extra load"
+  }
 }

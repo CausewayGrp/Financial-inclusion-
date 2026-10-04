@@ -1,0 +1,284 @@
+{
+ "transaction": "RC-11",
+ "summary": "B10 corner labels; B11 frame note; RC-10 review",
+ "items": {
+  "B10b": 8,
+  "B11": 1,
+  "RC-10b": 20
+ },
+ "input_master_sha256": "ed004282e0570618bbcc628a112cd325634ed39d8faf9e4e6cb7c2688bb6ded8",
+ "output_master_sha256": "36a61f8d5429f740e583f826f4209f263b117469e16005e471983b72a2330df0",
+ "cells_written": 30,
+ "changes": [
+  {
+   "finding": "RC-11:B10",
+   "sheet": "04_NAV_UX",
+   "row": null,
+   "col": null,
+   "field": "UI-VIS-TH-PERIOD",
+   "old": null,
+   "new": "Period || الفترة"
+  },
+  {
+   "finding": "RC-11:B10",
+   "sheet": "04_NAV_UX",
+   "row": null,
+   "col": null,
+   "field": "UI-VIS-TH-GROUP",
+   "old": null,
+   "new": "Group || الفئة"
+  },
+  {
+   "finding": "RC-11:B10",
+   "sheet": "04_NAV_UX",
+   "row": null,
+   "col": null,
+   "field": "UI-VIS-TH-CORRIDOR",
+   "old": null,
+   "new": "Corridor and amount || الممر والمبلغ"
+  },
+  {
+   "finding": "RC-11:B10",
+   "sheet": "04_NAV_UX",
+   "row": null,
+   "col": null,
+   "field": "UI-VIS-TH-OBJECT",
+   "old": null,
+   "new": "What is counted || ما يُعدّ"
+  },
+  {
+   "finding": "RC-11:B10",
+   "sheet": "04_NAV_UX",
+   "row": null,
+   "col": null,
+   "field": "UI-VIS-TH-STEP",
+   "old": null,
+   "new": "Step || الخطوة"
+  },
+  {
+   "finding": "RC-11:B10",
+   "sheet": "04_NAV_UX",
+   "row": null,
+   "col": null,
+   "field": "UI-VIS-TH-DIMENSION",
+   "old": null,
+   "new": "Dimension || البُعد"
+  },
+  {
+   "finding": "RC-11:B10",
+   "sheet": "04_NAV_UX",
+   "row": null,
+   "col": null,
+   "field": "UI-VIS-TH-DATE",
+   "old": null,
+   "new": "Date || التاريخ"
+  },
+  {
+   "finding": "RC-11:B10",
+   "sheet": "04_NAV_UX",
+   "row": null,
+   "col": null,
+   "field": "UI-VIS-TH-ITEM",
+   "old": null,
+   "new": "Item || البند"
+  },
+  {
+   "finding": "RC-11:B11",
+   "sheet": "04_NAV_UX",
+   "row": null,
+   "col": null,
+   "field": "UI-VIS-NOTE-POS-H1-WITHHELD",
+   "old": null,
+   "new": "The payment-system report for the first half of 2025 also gives a POS-transaction total for that half-year. It is withheld here because its definition and period need a methodology note before public use. The monthly releases are shown because each reports the same POS measures for one month within the same reporting scope, so consecutive months are comparable. || يذكر تقرير نظام المدفوعات للنصف الأول من 2025 أيضًا إجماليًا لمعاملات نقاط البيع في ذلك النصف، وهو محجوب هنا لأن تعريفه وفترته يحتاجان إلى ملاحظة منهجية قبل النشر. أما الإصدارات الشهرية فتُعرض لأن كلًّا منها يذكر مقاييس نقاط البيع نفسها لشهر واحد ضمن نطاق الإبلاغ نفسه، فتكون الأشهر المتتالية قابلة للمقارنة."
+  },
+  {
+   "finding": "RC-10b",
+   "sheet": "04_NAV_UX",
+   "row": null,
+   "col": null,
+   "field": "UI-LAND-NO-NEXT",
+   "old": null,
+   "new": "No domain page or measurement priority in this base || لا توجد صفحة مجال ولا أولوية قياس في قاعدة الأدلة هذه"
+  },
+  {
+   "finding": "RC-10b",
+   "sheet": "00_MASTER",
+   "row": 60,
+   "col": 4,
+   "field": "ELS-009.dimension_ar",
+   "old": "النوع الاجتماعي",
+   "new": "الجنس"
+  },
+  {
+   "finding": "RC-10b",
+   "sheet": "00_MASTER",
+   "row": 69,
+   "col": 4,
+   "field": "ELS-018.dimension_ar",
+   "old": "الاستخدام الفعلي ومدى تكراره",
+   "new": "الاستخدام النشط ومدى تكراره"
+  },
+  {
+   "finding": "RC-10b",
+   "sheet": "00_MASTER",
+   "row": 69,
+   "col": 7,
+   "field": "ELS-018.record_ids",
+   "old": "[\"CLM-050\"]",
+   "new": "[\"CLM-050\", \"FMIIP-BASELINE-2025-01\"]"
+  },
+  {
+   "finding": "RC-10b",
+   "sheet": "00_MASTER",
+   "row": 69,
+   "col": 5,
+   "field": "ELS-018.evidence_class",
+   "old": "SURVEY;ANALYTICAL;PROGRAMME",
+   "new": "ANALYTICAL;PROGRAMME"
+  },
+  {
+   "finding": "RC-10b",
+   "sheet": "00_MASTER",
+   "row": 70,
+   "col": 3,
+   "field": "ELS-019.dimension_en",
+   "old": "Payment infrastructure",
+   "new": "Payment infrastructure (POS, CBY-Aden reporting scope)"
+  },
+  {
+   "finding": "RC-10b",
+   "sheet": "00_MASTER",
+   "row": 70,
+   "col": 4,
+   "field": "ELS-019.dimension_ar",
+   "old": "البنية التحتية للمدفوعات",
+   "new": "البنية التحتية للمدفوعات (نقاط البيع، ضمن نطاق إبلاغ البنك المركزي اليمني – عدن)"
+  },
+  {
+   "finding": "RC-10b",
+   "sheet": "00_MASTER",
+   "row": 71,
+   "col": 5,
+   "field": "ELS-020.evidence_class",
+   "old": "REGULATORY;SURVEY",
+   "new": "REGULATORY"
+  },
+  {
+   "finding": "RC-10b",
+   "sheet": "00_MASTER",
+   "row": 73,
+   "col": 3,
+   "field": "ELS-022.dimension_en",
+   "old": "Remittances received by households",
+   "new": "Remittances received by people"
+  },
+  {
+   "finding": "RC-10b",
+   "sheet": "00_MASTER",
+   "row": 73,
+   "col": 4,
+   "field": "ELS-022.dimension_ar",
+   "old": "التحويلات التي تتلقاها الأسر",
+   "new": "التحويلات التي يتلقاها الأفراد"
+  },
+  {
+   "finding": "RC-10b",
+   "sheet": "00_MASTER",
+   "row": 77,
+   "col": 7,
+   "field": "ELS-026.record_ids",
+   "old": "[]",
+   "new": "[\"CLM-015\"]"
+  },
+  {
+   "finding": "RC-10b",
+   "sheet": "00_MASTER",
+   "row": 77,
+   "col": 5,
+   "field": "ELS-026.evidence_class",
+   "old": null,
+   "new": "REGULATORY"
+  },
+  {
+   "finding": "RC-10b",
+   "sheet": "00_MASTER",
+   "row": 77,
+   "col": 6,
+   "field": "ELS-026.coverage_state",
+   "old": "NO_EVIDENCE",
+   "new": "MEASUREMENT_GAP"
+  },
+  {
+   "finding": "RC-10b",
+   "sheet": "00_MASTER",
+   "row": 77,
+   "col": 8,
+   "field": "ELS-026.verify_routes",
+   "old": "[]",
+   "new": "[\"/providers/\"]"
+  },
+  {
+   "finding": "RC-10b",
+   "sheet": "00_MASTER",
+   "row": 78,
+   "col": 7,
+   "field": "ELS-027.record_ids",
+   "old": "[\"CLM-053\"]",
+   "new": "[\"CLM-053\", \"CLM-054\"]"
+  },
+  {
+   "finding": "RC-10b",
+   "sheet": "00_MASTER",
+   "row": 83,
+   "col": 3,
+   "field": "ELS-032.dimension_en",
+   "old": "Reach of programmes for small firms",
+   "new": "Reach of programmes for MSMEs"
+  },
+  {
+   "finding": "RC-10b",
+   "sheet": "00_MASTER",
+   "row": 83,
+   "col": 4,
+   "field": "ELS-032.dimension_ar",
+   "old": "وصول البرامج إلى المنشآت الصغيرة",
+   "new": "وصول البرامج إلى المنشآت الأصغر والصغيرة والمتوسطة"
+  },
+  {
+   "finding": "RC-10b",
+   "sheet": "04_NAV_UX",
+   "row": 527,
+   "col": 3,
+   "field": "UI-LAND-COL-NEXT.label_ar",
+   "old": "أين يُتحقق منه · ما الذي سيغيّره",
+   "new": "أين يُتحقق منه · ما الذي قد يغيّره"
+  },
+  {
+   "finding": "RC-10b",
+   "sheet": "06_EVIDENCE_OBJECTS",
+   "row": 12,
+   "col": 24,
+   "field": "VIS-EVIDENCE-FRESHNESS.source_dependencies",
+   "old": null,
+   "new": "CLM-001; CLM-025; CLM-029; CLM-031; CLM-028; CLM-013; VIS-FL-EVIDENCE-LADDER; VIS-FINDEX-RESILIENCE; CLM-002; VIS-FINDEX-GAPS; XW-FMIIP-005; CLM-052; CLM-050; FMIIP-BASELINE-2025-01; CLM-003; CLM-017; CLM-012; CLM-045; CLM-030; CLM-007; CLM-032; VIS-REMITTANCE-COST; CLM-008; CLM-009; CLM-019; CLM-015; CLM-053; CLM-054; CLM-033; CLM-038; CLM-005; CLM-006; CLM-059; CLM-060; CLM-011; DS-FCP-ARCH; CLM-018"
+  },
+  {
+   "finding": "RC-10b",
+   "sheet": "06_EVIDENCE_OBJECTS",
+   "row": 12,
+   "col": 22,
+   "field": "VIS-EVIDENCE-FRESHNESS.verification_en",
+   "old": "This view summarises other evidence records, which are not yet linked individually here. Before reusing a figure, open the evidence record that reports it and check that record against its own source.",
+   "new": "This view assembles other evidence records. Check each linked record against its own source."
+  },
+  {
+   "finding": "RC-10b",
+   "sheet": "06_EVIDENCE_OBJECTS",
+   "row": 12,
+   "col": 23,
+   "field": "VIS-EVIDENCE-FRESHNESS.verification_ar",
+   "old": "يلخص هذا العرض سجلات أدلة أخرى لم تُربط بعدُ هنا كلٌّ على حدة. وقبل إعادة استخدام أي رقم، افتح سجل الدليل الذي يورده وطابِقه مع مصدره.",
+   "new": "يجمع هذا العرض سجلات أدلة أخرى، فطابِق كل سجل مرتبط مع مصدره."
+  }
+ ]
+}

@@ -331,15 +331,12 @@ def baseline_question_sets(ui_by_en):
 
     These were recovered by scraping the baseline renderer's own HTML out of `dist/`, which made the build an input to
     itself: EAD-01 removed that renderer and the scrape then reported four empty clusters, so Explore rendered with no
-    questions. They are read from the renderer's own named sets now (`scripts/yfie/question_sets.py`), and each
-    destination from the question's governed `primary_route` — no markup is parsed. The sets belong in a governed
-    contract; that is EAD-11, and it is the steward's to land."""
-    sys.path.insert(0, str(ROOT / "scripts"))
-    from yfie import question_sets   # noqa: PLC0415
-
-    home = list(question_sets.HOME_STARTING_QUESTION_IDS)
+    questions. They are read from the presentation contract now (`question_sets`, EAD-11), the same source the renderer
+    reads, and each destination from the question's governed `primary_route` — no markup is parsed."""
+    sets = {str(e.get("route")): e for e in load(C / "presentation_priority.json").get("question_sets") or []}
+    home = list(sets["/"]["starting_question_ids"])
     groups = [OrderedDict([("heading_ui_id", g["heading_ui_id"]), ("question_ids", list(g["question_ids"]))])
-              for g in question_sets.EXPLORE_QUESTION_GROUPS]
+              for g in sets["/explore/"]["question_groups"]]
     routes = {}
     for q in load(C / "content" / "questions.json"):
         route = "/" + str(q.get("primary_route") or "/").strip("/") + "/"

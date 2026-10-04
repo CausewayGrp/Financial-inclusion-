@@ -144,7 +144,9 @@ class Generation(unittest.TestCase):
         o = self.ctx.out
         self.assertEqual(inv["evidence_records"], len(o["evidence/evidence_objects.json"]))
         self.assertEqual(inv["public_claims"], len(o["evidence/public_claims.json"]))
-        self.assertEqual(inv["chronology_events"], len(o["visuals/system_chronology.json"]))
+        # RC-2: "Dated events in the system chronology" — the analytical rule row (event_class SYSTEM_INTERPRETATION) is not an event
+        self.assertEqual(inv["chronology_events"], sum(1 for r in o["visuals/system_chronology.json"] if r.get("event_class") != "SYSTEM_INTERPRETATION"))
+        self.assertEqual(len(o["visuals/system_chronology.json"]) - inv["chronology_events"], 1)
         self.assertEqual(inv["sources"], len(o["sources/source_library.json"]))
         self.assertEqual(inv["public_locators"], sum(1 for s in o["sources/source_reference_map.json"]
                                                      if str(s["primary_url"] or "").lower().startswith(("http://", "https://"))))
@@ -210,6 +212,29 @@ class Generation(unittest.TestCase):
         finally:
             self.ctx.inputs["visual_design_contract"] = base
 
+
+    def test_question_sets_guards(self):
+        """EAD-11: the presentation contract's question sets name only governed questions and headings, Explore's groups
+        hold every question once, and Home starts from distinct questions; anything else stops generation."""
+        import copy
+        from projection import derived
+        from projection.structure import StructureError
+        base = derived._load_contract(self.ctx, {"path": "presentation_priority.json"})
+        self.assertEqual(derived.presentation_contract(self.ctx, {"path": "presentation_priority.json"})["question_sets"], base["question_sets"])
+        orig = derived._load_contract
+        try:
+            for mutate in (lambda c: c["question_sets"][0]["starting_question_ids"].append("QE-999"),
+                           lambda c: c["question_sets"][0]["starting_question_ids"].append(c["question_sets"][0]["starting_question_ids"][0]),
+                           lambda c: c["question_sets"][1]["question_groups"][0].update({"heading_ui_id": "UI-QUESTIONS-NO-SUCH-HEADING"}),
+                           lambda c: c["question_sets"][1]["question_groups"][0]["question_ids"].pop(),
+                           lambda c: c["question_sets"].pop()):
+                bad = copy.deepcopy(base)
+                mutate(bad)
+                derived._load_contract = lambda ctx, e, bad=bad: bad
+                with self.assertRaises(StructureError):
+                    derived.presentation_contract(self.ctx, {"path": "presentation_priority.json"})
+        finally:
+            derived._load_contract = orig
 
     def test_visual_display_labels(self):
         """P4 (V-D5/V-D6): every printed chart value carries a governed bilingual label; an unlabelled value stops generation;

@@ -18,8 +18,11 @@ function closeMenu(returnFocus=false){
   if(n)n.classList.remove('open');
   if(b){b.setAttribute('aria-expanded','false'); if(returnFocus)b.focus();}
 }
-$$('[data-menu]').forEach(b=>b.addEventListener('click',()=>{
+// R-05: the menu is a link to the footer navigation, so it works without JavaScript; here it becomes the disclosure button.
+$$('[data-menu]').forEach(b=>{if(b.tagName==='A')b.setAttribute('role','button');});
+$$('[data-menu]').forEach(b=>b.addEventListener('click',e=>{
   const n=$('#primary-nav'); if(!n)return;
+  e.preventDefault();
   const open=n.classList.toggle('open');
   b.setAttribute('aria-expanded',String(open));
   if(open){
@@ -34,10 +37,11 @@ document.addEventListener('focusin',e=>{const n=$('#primary-nav'),b=$('[data-men
 window.addEventListener('resize',()=>{if(window.innerWidth>960)closeMenu(false);});
 document.addEventListener('click',e=>{const n=$('#primary-nav'),b=$('[data-menu]');if(!n?.classList.contains('open'))return;if(n.contains(e.target)||b?.contains(e.target))return;closeMenu(false);});
 
+// R-05: the switch is a link to the same route in the other edition; here it also keeps the query and the anchor
+// (a Compare selection, a section) and stores the choice.
 $$('[data-lang]').forEach(b=>b.addEventListener('click',()=>{
   const target=b.dataset.lang; try{localStorage.setItem('yfie-lang',target);}catch(e){}   // TOOL-07: storage may be blocked
-  let p=location.pathname.replace(/^\/(ar|en)/,''); if(!p.startsWith('/'))p='/'+p;
-  location.href='/'+target+p+location.search+location.hash;
+  if(b.href){const u=new URL(b.href,location.href); u.search=location.search; u.hash=location.hash; b.href=u.toString();}
 }));
 
 function announceUtility(message){
@@ -55,12 +59,35 @@ async function copyText(text,button,promptLabel){
   }
   catch(e){prompt(promptLabel,text);}
 }
+// B9 (release candidate): one citation per page, shown in its preview before it is copied; every cite control copies
+// exactly the preview's text, with the page's own canonical address written into it.
+const canonicalHref=$('link[rel="canonical"]')?.href||location.href;
+$$('[data-cite-url]').forEach(e=>{e.textContent=canonicalHref;});
 $$('[data-cite]').forEach(b=>b.addEventListener('click',async()=>{
-  const canonical=$('link[rel="canonical"]')?.href||location.href;
+  const preview=$('[data-cite-text]');
   const governed=$('meta[name="yfie-citation"]')?.content?.trim();
-  const text=governed ? governed+' '+T('UI-JS-CURRENT-RECORD')+canonical : document.title+' — '+canonical;
+  const lines=preview ? [...preview.querySelectorAll('[data-cite-line]')] : [];
+  const text=lines.length ? lines.map(l=>l.textContent.replace(/\s+/g,' ').trim()).filter(Boolean).join('\n')
+    : preview ? preview.textContent.replace(/\s+/g,' ').trim()
+    : (governed ? governed+' '+T('UI-JS-CURRENT-RECORD')+canonicalHref : document.title+' — '+canonicalHref);
   await copyText(text,b,T('UI-JS-COPY-CITATION'));
 }));
+// RC-15 (B15 e, U1): share a record — its governed title, period, population and what not to conclude, never cut,
+// with its link. Web Share where the device offers it; otherwise the same text is copied.
+$$('[data-share]').forEach(b=>b.addEventListener('click',async()=>{
+  const text=(b.dataset.shareText||'').trim(); if(!text)return;
+  if(navigator.share){
+    try{await navigator.share({title:document.title,text,url:canonicalHref});return;}
+    catch(e){if(e&&e.name==='AbortError')return;}
+  }
+  await copyText(text+'\n'+canonicalHref,b,T('UI-JS-SHARE-RECORD'));
+}));
+// RC-15 (B15 d, C-2; OWN-04): the long form of a record's citation is copied as it is previewed
+$$('[data-cite-long]').forEach(b=>b.addEventListener('click',async()=>{
+  const long=$('[data-cite-long-text]'); if(!long)return;
+  await copyText(long.textContent.replace(/\s+/g,' ').trim(),b,T('UI-JS-COPY-LONG-CITATION'));
+}));
+$$('[data-print]').forEach(b=>b.addEventListener('click',()=>window.print()));
 $$('[data-source-cite]').forEach(b=>b.addEventListener('click',async()=>{
   const text=(b.dataset.sourceCitation||'').trim(); if(!text)return;
   await copyText(text,b,T('UI-JS-COPY-SOURCE-REFERENCE'));
@@ -68,7 +95,9 @@ $$('[data-source-cite]').forEach(b=>b.addEventListener('click',async()=>{
 
 let searchIndexPromise=null;
 function loadSearch(){
-  if(!searchIndexPromise) searchIndexPromise=fetch('/static-data/search_index.json').then(r=>{if(!r.ok)throw new Error('search index');return r.json();}).then(x=>Array.isArray(x)?x:(x.records||[]));
+  // B15 (A-1): a failed load is not kept, so the next search tries again (a dropped connection must not break search
+  // until the page is reloaded)
+  if(!searchIndexPromise) searchIndexPromise=fetch('/static-data/search_index.json').then(r=>{if(!r.ok)throw new Error('search index');return r.json();}).then(x=>Array.isArray(x)?x:(x.records||[])).catch(e=>{searchIndexPromise=null;throw e;});
   return searchIndexPromise;
 }
 function esc(s){return String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));}
@@ -77,27 +106,46 @@ function esc(s){return String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&l
 // swapped and a plain signed value with its sign at the wrong end. Every page isolates those runs in its own text
 // layer; anything this file writes into a page must read the same way. The expression is the renderer's own, character
 // for character — scripts/yfie/text.py LTR_RUN — and scripts/validate.py fails if the two ever drift apart.
-const LTR_RUN=/(?:(?<![\d.,])(?:\d{4}(?:-\d{2}(?:-\d{2})?)?[–-]\d{4}(?:-\d{2}(?:-\d{2})?)?|\d{1,3}–\d{1,3})(?![\d.,]))|(?:(?<![\d-])\d{4}-\d{2}(?:-\d{2})?(?![\d-]))|(?:(?<![\w\u0600-\u06FF-])[+\u2212\u2013-]\d[\d,]*(?:\.\d+)?%?(?![\w]))/g;
-function iso(s){return esc(s).replace(LTR_RUN,m=>`<bdi dir="ltr" class="nw">${m}</bdi>`);}
+const LTR_RUN=/(?:(?<![A-Za-z0-9_.,-])(?:\d{4}(?:-\d{2}(?:-\d{2})?)?[–-]\d{4}(?:-\d{2}(?:-\d{2})?)?|\d{1,3}(?:,\d{3})+–\d{1,3}(?:,\d{3})+|\d{1,3}–\d{1,3})(?!\d|[.,]\d))|(?:(?<![A-Za-z0-9_-])\d{4}-\d{2}(?:-\d{2})?(?![\d-]))|(?:(?<![\w\u0600-\u06FF-])[+\u2212\u2013-]\d[\d,]*(?:\.\d+)?%?(?![\w]))/g;
+const ID_RUN=/(?<![A-Za-z0-9_-])(?=[A-Z][A-Za-z0-9-]*\d)[A-Z][A-Z0-9]*(?:-[A-Za-z0-9]+)+(?![A-Za-z0-9_-])/g;   // identifiers: isolated too, but breakable (scripts/yfie/text.py ID_RUN)
+function iso(s){return esc(s).replace(LTR_RUN,m=>`<bdi dir="ltr" class="nw">${m}</bdi>`).split(/(<[^>]+>)/).map((p,k)=>k%2?p:p.replace(ID_RUN,m=>`<bdi dir="ltr">${m}</bdi>`)).join('');}
 // Tranche C (TOOL-12): Arabic-Indic and Persian digits read as Western digits. Mirrored in scripts/validate.py (_r4norm).
-function normalize(s){return String(s||'').toLocaleLowerCase().normalize('NFKD').replace(/[\u0660-\u0669]/g,d=>String(d.charCodeAt(0)-0x0660)).replace(/[\u06F0-\u06F9]/g,d=>String(d.charCodeAt(0)-0x06F0)).replace(/[\u064B-\u065F\u0670]/g,'').replace(/[إأآٱ]/g,'ا').replace(/ى/g,'ي').replace(/ة/g,'ه').replace(/ؤ/g,'و').replace(/ئ/g,'ي');}
+function normalize(s){return String(s||'').toLocaleLowerCase().normalize('NFKD').replace(/[\u0660-\u0669]/g,d=>String(d.charCodeAt(0)-0x0660)).replace(/[\u06F0-\u06F9]/g,d=>String(d.charCodeAt(0)-0x06F0)).replace(/[\u064B-\u065F\u0670]/g,'').replace(/[إأآٱ]/g,'ا').replace(/ى/g,'ي').replace(/ة/g,'ه').replace(/ؤ/g,'و').replace(/ئ/g,'ي')
+  .replace(/(\d)[,\u066C](?=\d{3}(?!\d))/g,'$1').replace(/(\d)\u066B(?=\d)/g,'$1.');}   // B15 (C-5): "6,245" = "6245"; Arabic separators
 // Tranche C (JRN-05): a typed question is reduced to its content words: punctuation, one-letter tokens and a short
 // bilingual stop-word list are dropped. Mirrored in scripts/validate.py (_r4tokens).
 const STOP=new Set(['what','do','does','we','is','are','the','and','of','in','about','how','which','who','a','an','to','for','on','there','ما','ماذا','هل','في','من','على','عن','و','التي','الذي','هو','هي','كم','كيف']);
-function queryTokens(term){return term.replace(/[?,.;:!—–"“”«»()؟،؛'’]/g,' ').split(/\s+/).filter(t=>t.length>1&&!STOP.has(t)).map(queryToken);}
+function queryTokens(term){return term.replace(/[?,;:!—–"“”«»()؟،؛'’]/g,' ').replace(/(?<!\d)\.|\.(?!\d)/g,' ').split(/\s+/).filter(t=>t.length>1&&!STOP.has(t)).map(queryToken);}
+// B15 (C-5, A-2): a number matches only as a whole number; a word only from the start of a word (after the Arabic
+// proclitics و ف ب ل ك and the article), and a word of three letters or fewer only whole; an identifier still matches
+// inside a reference (TOOL-10). Mirrored in scripts/validate.py (_r4re).
+const WCH='a-z0-9\u0621-\u064A';
+function tokenRe(t){
+  const e=t.replace(/[.*+?^${}()|[\]\\]/g,'\\$&');
+  if(/^\d+(?:\.\d+)?%?$/.test(t))return new RegExp(`(?<![0-9.,])${e}(?![0-9]|[.,][0-9])`);
+  if(/[-\d]/.test(t))return null;
+  const ar=/[\u0621-\u064A]/.test(t);
+  const pre=ar?'(?:[وفبلك])?(?:ال|لل)?':'';
+  const tail=t.length<=3?(ar?`(?:ه|ي|ات)?(?![${WCH}])`:`s?(?![${WCH}])`):'';
+  return new RegExp(`(?<![${WCH}])${pre}${e}${tail}`);
+}
+function hasTok(text,t,re){return re?re.test(text):text.includes(t);}
 // PB-0491: light query-token normalisation (Arabic definite article; English plural/verb endings). Mirrored in scripts/validate.py.
 function queryToken(t){if(/^ال/.test(t)&&t.length>3)return t.slice(2);if(/^[a-z]+$/.test(t)&&t.length>4){if(/ies$/.test(t))return t.slice(0,-3)+'y';if(/ing$/.test(t))return t.slice(0,-3);if(/ed$/.test(t))return t.slice(0,-2);if(/s$/.test(t)&&!/ss$/.test(t))return t.slice(0,-1);}return t;}
 const DOMAIN_ROUTES=new Set(['/people/','/firms/','/finance/','/providers/','/payments/','/remittances/','/access/','/reforms/','/measurement/']);
 let aliasPromise=null;
-function loadAliases(){if(!aliasPromise)aliasPromise=fetch('/static-data/search_aliases.json').then(r=>r.ok?r.json():[]).catch(()=>[]);return aliasPromise;}
+function loadAliases(){if(!aliasPromise)aliasPromise=fetch('/static-data/search_aliases.json').then(r=>{if(!r.ok)throw new Error('aliases');return r.json();}).catch(()=>{aliasPromise=null;return [];});return aliasPromise;}   // B15 (A-1): retried after a failure
 function aliasFor(term,aliases){const q=term.split(/\s+/).filter(Boolean).map(queryToken).join(' ');for(const a of aliases){const terms=String((isAr?a.terms_ar:a.terms_en)||'').split(';').concat(String((isAr?a.terms_en:a.terms_ar)||'').split(';')).map(x=>normalize(x.trim()).split(/\s+/).filter(Boolean).map(queryToken).join(' ')).filter(Boolean);if(terms.includes(q))return a;}return null;}
+function aliasPhrases(a){return String(a.terms_en||'').split(';').concat(String(a.terms_ar||'').split(';')).map(x=>normalize(x.trim()).split(/\s+/).filter(t=>t.length>1&&!STOP.has(t)).map(queryToken)).filter(p=>p.length);}
 function scoreRecord(x,tokens,phraseTokens,alias){
   const title=normalize(isAr?(x.title_ar||''):(x.title_en||''));const summary=normalize(isAr?(x.summary_ar||''):(x.summary_en||''));const text=normalize(isAr?(x.search_text_ar||''):(x.search_text_en||''));
   const boundary=normalize(isAr?(x.boundary_text_ar||''):(x.boundary_text_en||''));const stable=normalize([x.id,x.source_id,x.object_id,x.claim_id,x.reading_id].filter(Boolean).join(' '));
   let score=0;tokens.forEach(t=>{if(stable===t)score+=12;else if(/[-\d]/.test(t)&&stable.includes(t))score+=7;   // TOOL-10: a word is not matched inside opaque references
-    if(title.includes(t))score+=6;if(summary.includes(t))score+=3;if(text.includes(t))score+=1;if(boundary.includes(t))score+=0.5;});
+    const re=tokenRe(t);if(hasTok(title,t,re))score+=6;if(hasTok(summary,t,re))score+=3;if(hasTok(text,t,re))score+=1;if(hasTok(boundary,t,re))score+=0.5;});
+  // B15 (A-3): a query that is a governed alias term also finds the group's other terms, ranked below literal hits
+  if(alias){aliasPhrases(alias).forEach(ph=>{const all=f=>ph.every(t=>hasTok(f,t,tokenRe(t)));if(all(title))score+=3;else if(all(summary))score+=1.5;else if(all(text))score+=0.5;});}
   const route=String(x.route||'');
-  if(score>0&&x.type==='page'&&DOMAIN_ROUTES.has(route)&&phraseTokens.length&&phraseTokens.every(t=>title.includes(t)))score+=20;
+  if(score>0&&x.type==='page'&&DOMAIN_ROUTES.has(route)&&phraseTokens.length&&phraseTokens.every(t=>hasTok(title,t,tokenRe(t))))score+=20;
   if(alias){String(alias.targets||'').split('|').map(v=>v.trim()).forEach(tg=>{if(tg.startsWith('route:')&&x.type==='page'&&route===tg.slice(6))score+=25;if(tg.startsWith('document_type:')&&x.document_type===tg.slice(14))score+=10;});}
   return [score,title];
 }
@@ -109,7 +157,10 @@ function typeLabel(type){
 // TOOL-23: summaries are shortened at a word boundary before escaping, with an ellipsis.
 function clip(s,n){s=String(s||'');if(s.length<=n)return s;const cut=s.slice(0,n);const sp=cut.lastIndexOf(' ');return (sp>n*0.6?cut.slice(0,sp):cut).replace(/[\s,;:،؛]+$/,'')+'…';}
 function renderHits(hits){
-  if(!hits.length) return '<div class="empty" data-search-empty>'+T('UI-JS-SEARCH-NO-RESULT')+'</div>';
+  // RC-17 (owner decisions of 3 October 2026, point 2): names from the regulator's lists and enforcement decisions are
+  // not in the index; the empty state says so once and points to the original documents on Data & sources
+  if(!hits.length) return '<div class="empty" data-search-empty>'+T('UI-JS-SEARCH-NO-RESULT')
+    +'<p class="small" data-search-names-note><a href="'+prefix+'/data/#regulatory">'+esc(T('UI-JS-SEARCH-NAMES-NOTE'))+'</a></p></div>';
   return hits.map(x=>{
     const title=(isAr?(x.title_ar||x.question_ar||x.label_ar):(x.title_en||x.question_en||x.label_en))||x.id||'Evidence';
     const summary=(isAr?(x.summary_ar||''):(x.summary_en||''));
@@ -122,18 +173,31 @@ function renderHits(hits){
 // EAD-06 (handoff §2: "tool state that matters — Compare records, filters, search query — is URL-addressable,
 // reloadable and survives a language switch"). Only the page's OWN search writes the URL. The dialog is an overlay
 // over whatever page the reader is on, and rewriting that page's address as they type would change what they share.
-function writeSearchUrl(term){
-  const next=location.pathname+(term?`?q=${encodeURIComponent(term)}`:'')+location.hash;
+function writeSearchUrl(term,type){
+  const qs=new URLSearchParams();if(term)qs.set('q',term);if(term&&type)qs.set('type',type);
+  const next=location.pathname+(qs.toString()?`?${qs}`:'')+location.hash;
   if(next!==location.pathname+location.search+location.hash)history.replaceState(null,'',next);
+}
+// RC-3 / EAD-06: the result-type filter (governed name and no-type state; the option labels are the governed type labels).
+function typeFacet(input){
+  const sel=document.createElement('select');
+  sel.className='search-type';sel.setAttribute('data-search-type','');sel.setAttribute('aria-label',T('UI-JS-SEARCH-TYPE-FACET'));
+  sel.innerHTML=`<option value="">${esc(T('UI-JS-SEARCH-TYPE-ALL'))}</option>`+Object.keys(TYPE_LABEL_UI).map(k=>`<option value="${k}">${esc(typeLabel(k))}</option>`).join('');
+  input.insertAdjacentElement('afterend',sel);
+  return sel;
 }
 function bindSearch(input,box,status,urlState){
   if(!input||!box)return;
   let timer;
+  const facet=typeFacet(input);
+  const cap=urlState?Infinity:10;   // the dialog shows ten; the Evidence directory's own search shows every match
+  facet.addEventListener('change',()=>input.dispatchEvent(new Event('input')));
   input.addEventListener('input',()=>{
     clearTimeout(timer);
     timer=setTimeout(async()=>{
       const term=normalize(input.value.trim());
-      if(urlState)writeSearchUrl(input.value.trim());
+      const type=facet.value;
+      if(urlState)writeSearchUrl(input.value.trim(),type);
       if(term.length<2){box.innerHTML=''; if(status)status.textContent=''; return;}
       if(status)status.textContent=T('UI-JS-SEARCHING');
       try{
@@ -153,10 +217,15 @@ function bindSearch(input,box,status,urlState){
           const nextType=String(x.type||x.object_type||'');
           if(currentType==='page'&&nextType!=='page')unique[pos]=x;
         });
-        const scored=unique.slice(0,10);
+        const matching=type?unique.filter(x=>String(x.object_type||x.type||'').toLowerCase()===type):unique;
+        const scored=matching.slice(0,cap);
         const note=alias&&(isAr?alias.boundary_note_ar:alias.boundary_note_en);
-        box.innerHTML=(note?`<p class="search-boundary-note">${esc(note)}</p>`:'')+renderHits(scored);
-        if(status)status.textContent=TF(scored.length===1?'UI-JS-SEARCH-RESULT-ONE':'UI-JS-SEARCH-RESULTS',{n:scored.length});   // TOOL-19
+        // A6 / C7: when fewer hits are shown than match, say so with the true total and carry the query to the Evidence directory (?q=, EAD-06)
+        const capped=scored.length<matching.length;
+        const seeAll=capped?`<p class="search-see-all"><a href="${prefix}/evidence/?q=${encodeURIComponent(input.value.trim())}&amp;type=evidence">${esc(T('UI-JS-SEARCH-SEE-ALL-EVIDENCE'))}</a></p>`:'';
+        box.innerHTML=(note?`<p class="search-boundary-note">${esc(note)}</p>`:'')+renderHits(scored)+seeAll;
+        if(status)status.textContent=capped?TF('UI-JS-SEARCH-RESULTS-OF',{n:scored.length,m:matching.length})
+          :TF(scored.length===1?'UI-JS-SEARCH-RESULT-ONE':'UI-JS-SEARCH-RESULTS',{n:scored.length});   // TOOL-19
       }catch(e){
         box.innerHTML='<div class="empty">'+T('UI-JS-SEARCH-UNAVAILABLE-COPY')+'</div>';
         if(status)status.textContent=T('UI-JS-SEARCH-UNAVAILABLE');
@@ -172,7 +241,9 @@ $$('[data-search-input]').forEach(input=>{
   const urlState=input.hasAttribute('data-search-url-state');
   bindSearch(input,box,status,urlState);
   if(urlState){
-    const q=new URLSearchParams(location.search).get('q');
+    const q=new URLSearchParams(location.search).get('q'), type=new URLSearchParams(location.search).get('type');
+    const facet=input.parentElement?.querySelector('[data-search-type]');
+    if(facet&&type&&Object.prototype.hasOwnProperty.call(TYPE_LABEL_UI,type))facet.value=type;
     if(q!==null&&q!==''){input.value=q;input.dispatchEvent(new Event('input'));}
   }
 });
@@ -200,14 +271,40 @@ const sourceInput=$('[data-source-filter]');
 if(sourceInput){
   const records=$$('[data-source-record]');
   const status=$('[data-source-filter-status]'), noResults=$('[data-source-no-results]'), locatorDetails=$('.source-locator-details');
+  // RC-12 (B13 a): filters by document type, publisher, year and the domain page that uses a source, an order by
+  // document date, and the whole state in the URL so a filtered list can be shared; the controls appear only here, so
+  // without JavaScript the full list is unchanged
+  const facetBox=$('[data-source-facets]'), facets=$$('[data-source-facet]'), sortSel=$('[data-source-sort]');
+  const facetOk=r=>facets.every(f=>!f.value||(f.dataset.sourceFacet==='domain'?(r.dataset.fDomain||'').split(' ').includes(f.value):r.dataset['f'+f.dataset.sourceFacet[0].toUpperCase()+f.dataset.sourceFacet.slice(1)]===f.value));
+  records.forEach((r,i)=>{r.dataset.order=i;});
+  const reorder=()=>{const newest=sortSel&&sortSel.value==='newest';
+    new Set(records.map(r=>r.parentElement)).forEach(box=>{const kids=records.filter(r=>r.parentElement===box);
+      kids.sort((a,b)=>newest?((b.dataset.fDate||'').localeCompare(a.dataset.fDate||'')||(a.dataset.order-b.dataset.order)):(a.dataset.order-b.dataset.order));
+      kids.forEach(k=>box.appendChild(k));});};
+  const share=()=>{const q=new URLSearchParams(location.search);
+    facets.forEach(f=>{if(f.value)q.set(f.dataset.sourceFacet,f.value);else q.delete(f.dataset.sourceFacet);});
+    if(sortSel&&sortSel.value)q.set('sort',sortSel.value);else q.delete('sort');
+    if(sourceInput.value.trim()&&!q.has('source'))q.set('q',sourceInput.value.trim());else q.delete('q');
+    const s=q.toString();history.replaceState(null,'',location.pathname+(s?'?'+s:'')+location.hash);};
   const apply=()=>{
     const term=normalize(sourceInput.value.trim()); let shown=0, visibleLocators=0;
-    records.forEach(r=>{const ok=!term||normalize(r.dataset.sourceSearch||'').includes(term);r.hidden=!ok;if(ok){shown++;if(r.classList.contains('source-locator'))visibleLocators++;}});
-    if(term&&visibleLocators&&locatorDetails)locatorDetails.open=true;
+    const filtering=!!term||facets.some(f=>f.value);
+    records.forEach(r=>{const ok=(!term||normalize(r.dataset.sourceSearch||'').includes(term))&&facetOk(r);r.hidden=!ok;if(ok){shown++;if(r.classList.contains('source-locator'))visibleLocators++;if(filtering){const d=r.closest('details');if(d)d.open=true;}}});
+    $$('[data-source-also]').forEach(r=>{r.hidden=!((!term||normalize(r.dataset.sourceSearch||'').includes(term))&&facetOk(r));});   // B5: a link row, never counted
+    if(filtering&&visibleLocators&&locatorDetails&&!locatorDetails.open)locatorDetails.open=true;
     if(noResults)noResults.hidden=shown!==0;
     if(status)status.textContent=TF(shown===1?'UI-JS-SOURCES-SHOWN-ONE':'UI-JS-SOURCES-SHOWN',{n:shown});   // TOOL-19
   };
-  sourceInput.addEventListener('input',apply);
+  sourceInput.addEventListener('input',()=>{apply();share();});
+  if(facetBox){
+    const params=new URLSearchParams(location.search);
+    facets.forEach(f=>{const v=params.get(f.dataset.sourceFacet);if(v&&[...f.options].some(o=>o.value===v))f.value=v;f.addEventListener('change',()=>{apply();share();});});
+    if(sortSel){if(params.get('sort')==='newest')sortSel.value='newest';sortSel.addEventListener('change',()=>{reorder();share();});}
+    if(params.get('q')&&!params.get('source'))sourceInput.value=params.get('q');
+    const clear=$('[data-source-facets-clear]');
+    if(clear)clear.addEventListener('click',()=>{facets.forEach(f=>{f.value='';});if(sortSel)sortSel.value='';sourceInput.value='';reorder();apply();share();});
+    facetBox.hidden=false; reorder();
+  }
   const requested=new URLSearchParams(location.search).get('source');
   const target=requested?document.getElementById('source-'+requested):null;
   if(requested&&target){
@@ -292,7 +389,8 @@ if(compareSelects.length>=2&&out){
   };
   const showUrlError=r=>{
     const detail=r.reason==='count'?errorText.count:r.reason==='unknown'?errorText.unknown+(r.ids||[]).join(', '):errorText.malformed;
-    out.innerHTML=`<div class="compare-url-error" role="alert" data-compare-url-error="${esc(r.reason)}"><h3>${esc(errorText.title)}</h3><p>${esc(detail)}</p><p>${esc(errorText.note)}</p></div>`;
+    const offered=r.reason==='unknown'?`<p data-compare-not-offered>${esc(T('UI-JS-COMPARE-NOT-OFFERED'))}</p>`:'';   // B7
+    out.innerHTML=`<div class="compare-url-error" role="alert" data-compare-url-error="${esc(r.reason)}"><h3>${esc(errorText.title)}</h3><p>${esc(detail)}</p><p>${esc(errorText.note)}</p>${offered}</div>`;
     if(compareStatus)compareStatus.textContent='';
     const cb=$('[data-compare-copy]'); if(cb)cb.disabled=true;   // TOOL-18: never copy a comparison the page is not showing
   };
@@ -300,6 +398,7 @@ if(compareSelects.length>=2&&out){
     const records=compareSelects.map(sel=>data.find(x=>x.id===sel.value)).filter(Boolean);
     writeUrl();
     const cb=$('[data-compare-copy]'); if(cb)cb.disabled=records.length<2;
+    const prompt=$('[data-compare-prompt]'); if(prompt)prompt.hidden=records.length>=2;   // G4: the prompt only while fewer than two are selected
     if(records.length<2){out.innerHTML='';return;}
     const rows=dimensions.map(field=>({field,...assessMany(records,field)}));
     const v=verdict(records,rows);
@@ -307,7 +406,7 @@ if(compareSelects.length>=2&&out){
     const body=rows.map(r=>`<tr data-compare-state="${esc(r.state)}"><th scope="row">${esc(labels[r.field]||r.field)}</th>${records.map(x=>`<td>${iso(x[r.field]||'—')}</td>`).join('')}<td><span class="compare-state">${esc(r.label)}</span></td></tr>`).join('');
     const boundaries=records.some(x=>x.boundary)?`<div class="compare-boundaries">${records.map(x=>`<article><strong>${iso(x.title)}</strong><p>${iso(x.boundary||'—')}</p></article>`).join('')}</div>`:'';
     out.innerHTML=`<section class="compare-verdict" data-compare-verdict="${esc(v.state)}" data-noncolour-semantic="text-label-structure"><div class="eyebrow">${esc(labels.assessment)}</div><h3>${esc(v.title)}</h3><p>${esc(v.copy)}</p><p class="compare-no-merge">${esc(labels.noMerge)}</p></section><div class="table-wrap" tabindex="0" role="region" aria-label="${esc(labels.table)}" data-noncolour-semantic="caption-headers-text-labels"><table class="compare-table"><caption class="sr-only">${esc(labels.table)}</caption><thead><tr><th scope="col">${esc(labels.dimension)}</th>${head}<th scope="col">${esc(labels.assessment)}</th></tr></thead><tbody>${body}</tbody></table></div>${boundaries}<div class="compare-record-actions">${records.map(recordLink).join('')}</div>`;
-    if(compareStatus)compareStatus.textContent=`${v.title}. ${records.length} ${labels.selected}.`;
+    if(compareStatus)compareStatus.textContent=`${v.title}. ${TF('UI-JS-COMPARE-SELECTED',{n:records.length})}`;   // RC-3: label-value form ("Records selected: 2")
   };
   compareSelects.forEach(sel=>sel.addEventListener('change',draw));
   const requested=parseRecordsParam(new URLSearchParams(location.search).get('records'));

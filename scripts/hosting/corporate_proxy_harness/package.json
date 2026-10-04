@@ -1,0 +1,7 @@
+{
+  "name": "yfie-corporate-proxy-harness",
+  "private": true,
+  "type": "module",
+  "scripts": {"build": "nitropack build"},
+  "devDependencies": {"nitropack": "2.13.4", "h3": "1.15.11"}
+}

@@ -15,6 +15,7 @@ import json
 import re
 import sys
 from pathlib import Path
+from urllib.parse import urlparse
 
 ROOT = Path(__file__).resolve().parents[2]
 sys.path.insert(0, str(ROOT / "scripts"))
@@ -29,7 +30,7 @@ GROUP_STARTS = ("In the same survey", "Separately,", "These are different measur
 RESOLUTION = ("These are different measures", "هذه مقاييس مختلفة")
 
 
-from .text import bdi, esc, isolate_document, isolate_iso as iso  # noqa: E402  (one text layer for every renderer, D6; `iso` takes escaped text)
+from .text import ID_RUN, bdi, esc, isolate_document, isolate_iso as iso, isolate_plain  # noqa: E402  (one text layer for every renderer, D6; `iso` takes escaped text)
 
 
 def paras(items, cls: str = "") -> str:
@@ -52,7 +53,7 @@ def head(page: dict, shell: dict, route: str, kind: str = "website", extra: str 
     lang = shell["lang"]
     origin = DISC.origin()
     return (f'<!doctype html><html lang="{lang}" dir="{shell["dir"]}"><head><meta charset="utf-8">'
-            f'<meta name="viewport" content="width=device-width,initial-scale=1"><title>{esc(page["title"])} — {esc(shell["product"])}</title>'
+            f'<meta name="viewport" content="width=device-width,initial-scale=1">{DISC.robots_meta()}<link rel="icon" type="image/png" sizes="32x32" href="/assets/logo/CauseWay_logo_32.png"><title>{esc(page["title"])} — {esc(shell["product"])}</title>'
             f'<meta name="description" content="{esc(page.get("meta_description"))}">{extra}<link rel="stylesheet" href="/assets/yfie.css">{font_preloads(lang)}'
             f'{DISC.head_links(route, lang, origin)}{DISC.social_meta(page["title"], page.get("meta_description") or "", lang, route, shell["product"], kind, origin)}'
             f"{structured_data(page, shell, route)}</head><body>")
@@ -86,8 +87,17 @@ def structured_data(page: dict, shell: dict, route: str) -> str:
     return "".join(DISC.ld_script(x) for x in out)
 
 
-def logo(px: int) -> str:
-    return f'<img src="/assets/CauseWay_Master_Logo.png" alt="CauseWay" width="{px}" height="{px}">'
+LOGO_SIZES = (32, 40, 48, 64, 72, 80, 96, 144)   # scripts/logo_derivatives.py: pure resamples of the unchanged master (EAD-03)
+
+
+def logo(px: int, sizes: str = "") -> str:
+    """The canonical mark at an interface size: a web-size derivative (EAD-03, owner decision of 2 October 2026) — the
+    1× file as src and the 1× and 2× files of every size the surface can take in srcset, so a phone never downloads the
+    10 MB master. `sizes` names the surface's CSS widths where they change (the product bar: 40 px, 48 px from 900 px)."""
+    widths = sorted({w for w in LOGO_SIZES if w in (px, px * 2)} | ({w for s in (40, 48) for w in (s, s * 2)} if sizes else set()))
+    srcset = ", ".join(f"/assets/logo/CauseWay_logo_{w}.png {w}w" for w in widths)
+    return (f'<img src="/assets/logo/CauseWay_logo_{px}.png" srcset="{srcset}" sizes="{sizes or f"{px}px"}" '
+            f'alt="CauseWay" width="{px}" height="{px}">')
 
 
 def header(shell: dict) -> str:
@@ -100,14 +110,25 @@ def header(shell: dict) -> str:
             nav.append(f'<span class="group" role="group" aria-label="{esc(item["label"])}"><span class="glabel">{esc(item["label"])}</span>{kids}</span>')
         else:
             nav.append(f'<a href="{item["href"]}"{CUR if item.get("active") else ""}>{esc(item["label"])}</a>')
+    # Owner decisions of 3 October 2026, point 3 (A-12, C-6, C-8; navigation contract `mobile_menu`): below 900 px the
+    # opened menu carries the trust links, About first, under the footer's governed group label, and the governed cite
+    # control. The header itself is unchanged; above 900 px the bar shows these in their usual places.
+    if shell.get("mobile_menu"):
+        trust_label = next((g["label"] for g in shell["footer"] if any(l["href"].endswith("/about/") for l in g["links"])), L["trust_nav"])
+        trust = "".join(f'<a href="{t["href"]}"{CUR if t.get("active") else ""}>{esc(t["label"])}</a>' for t in shell["trust"])
+        nav.append(f'<span class="group m-only" role="group" aria-label="{esc(trust_label)}" data-menu-trust><span class="glabel">{esc(trust_label)}</span>{trust}</span>'
+                   f'<button type="button" class="tbtn m-only" data-cite data-menu-cite>{esc(L["cite"])}</button>')
     return (f'<noscript><div class="noscript">{esc(L["noscript"])}</div></noscript><a class="skip" href="#main">{esc(L["skip"])}</a>'
-            f'<header class="bar"><div class="bar-in"><a class="brand" href="{shell["home_href"]}" aria-label="CauseWay — {esc(shell["product"])}">{logo(40)}<span class="brand-text"><span class="brand-pub" dir="ltr">CauseWay</span><span class="brand-name">{esc(shell["product"])}</span></span></a>'
+            f'<header class="bar"><div class="bar-in"><a class="brand" href="{shell["home_href"]}" aria-label="CauseWay — {esc(shell["product"])}">{logo(40, "(min-width: 900px) 48px, 40px")}<span class="brand-text"><span class="brand-pub" dir="ltr">CauseWay</span><span class="brand-name">{esc(shell["product"])}</span></span></a>'
             f'<nav id="primary-nav" class="nav" aria-label="{esc(L["primary_nav"])}">{"".join(nav)}</nav>'
             f'<div class="controls"><button type="button" class="tbtn" data-search-open aria-label="{esc(L["search"])}">{esc(L["search"])}</button>'
             f'<button type="button" class="tbtn cite" data-cite aria-label="{esc(L["cite"])}">{esc(L["cite"])}</button>'
             f'<a class="report" href="{shell["contact_href"]}">{esc(L["report"])}</a>'
-            f'<button type="button" class="tbtn lang" data-lang="{other}" aria-label="{esc(L["lang_switch_action"])}" lang="{other}" dir="{"ltr" if other == "en" else "rtl"}">{esc(L["lang_switch_name"])}</button>'
-            f'<button type="button" class="tbtn menu" data-menu aria-label="{esc(L["menu"])}" aria-controls="primary-nav" aria-expanded="false">{esc(L["menu"])}</button></div>'
+            # R-05 (independent review of 70398d1): the language switch and the menu are links, so both work without
+            # JavaScript. The switch opens the same route in the other edition; the menu opens the footer, which carries
+            # every navigation and trust link. The runtime enhances the menu into a disclosure button (app.js).
+            f'<a class="tbtn lang" href="{shell["other_href"]}" hreflang="{other}" data-lang="{other}" aria-label="{esc(L["lang_switch_action"])}" lang="{other}" dir="{"ltr" if other == "en" else "rtl"}">{esc(L["lang_switch_name"])}</a>'
+            f'<a class="tbtn menu" href="#site-footer" data-menu aria-label="{esc(L["menu"])}" aria-controls="primary-nav" aria-expanded="false">{esc(L["menu"])}</a></div>'
             f'<div id="utility-status" class="sr-only" role="status" aria-live="polite" aria-atomic="true" data-copied-label="{esc(L["copied"])}"></div></div></header>'
             f'{search_dialog(shell)}<main id="main"><div class="page">')
 
@@ -127,7 +148,7 @@ def footer(shell: dict, tail: str = "") -> str:
     trust_label = next((g["label"] for g in shell["footer"] if any(l["href"].endswith("/about/") for l in g["links"])), L["trust_nav"])
     groups = "".join(f'<div><strong>{esc(g["label"])}</strong>' + "".join(f'<a href="{l["href"]}">{esc(l["label"])}</a>' for l in g["links"]) + "</div>"
                      for g in shell["footer"] if not any(l["href"].endswith("/about/") for l in g["links"]))
-    return (f'</div></main><footer class="inst"><div class="inst-in"><div class="trust"><h3>{esc(trust_label)}</h3><nav aria-label="{esc(L["trust_nav"])}">{trust}</nav></div>'
+    return (f'</div></main><footer id="site-footer" class="inst"><div class="inst-in"><div class="trust"><h3>{esc(trust_label)}</h3><nav aria-label="{esc(L["trust_nav"])}">{trust}</nav></div>'
             f'<div class="id">{logo(40)}<p>{esc(L["footer_strapline"])}</p></div><nav class="groups" aria-label="{esc(L["footer_nav"])}">{groups}</nav>'
             f'<div class="fine">© 2026 CauseWay · {esc(L["footer_rights"])} · {esc(shell["edition"])}</div></div>{tail}</footer>'
             f'{json_block("yfie-ui", shell["ui_json"])}<script src="/assets/app.js" defer></script></body></html>')
@@ -137,6 +158,37 @@ def footer(shell: dict, tail: str = "") -> str:
 def rubric(t, n: int | None = None, tag: str = "span", cls: str = "rubric") -> str:
     num_ = f'<span class="n">{n:02d}</span>' if n else ""
     return f'<{tag} class="{cls}">{num_}{esc(t)}</{tag}>'
+
+
+# 4.1 (owner note of 3 October 2026, 11:15): the figure is set in its own governed sentence, in the figure weight — never
+# lifted out of it (D7 Design Intent Lock §4.1.1: no lifted figures, no stat tiles). A value is a percentage, a decimal, a
+# number with thousands separators, or a whole number of three digits or more that is not a year; dates, identifiers and
+# ranges (hyphenated, slashed or already isolated) are left as they are. Applied to text outside tags only.
+_FIG = re.compile(r'(?<![\d.,/:\-])(\d{1,3}(?:,\d{3})+(?:\.\d+)?%?|\d+\.\d+%?|\d+%|(?!(?:19|20)\d\d(?!\d))\d{3,})(?![\d/:\-]|[.,]\d)')
+
+
+# R-10 (independent review of 70398d1): only the figures of the first sentence — the finding — are emphasised. A later
+# sentence qualifies it (coverage, exclusion, derivation, a source's own discrepancy), and the same weight would make
+# its figure read as a second finding ("11.9% … 23%"). A sentence ends at . ! ? or ؟ before a space or the end of the
+# text, except after "No" or "p"/"pp" (an instrument or page number continues the sentence).
+_SENT_END = re.compile(r'(?<!\bNo)(?<!\bpp)(?<!\bp)[.!?؟](?=\s|$)')
+
+
+def fig_emph(html_text: str) -> str:
+    parts = re.split(r'(<[^>]+>)', html_text)
+    out, in_bdi, done = [], 0, False
+    for p in parts:
+        if p.startswith("<"):
+            in_bdi += 1 if p.startswith("<bdi") else (-1 if p.startswith("</bdi") else 0)
+            out.append(p)
+        elif in_bdi or done:
+            out.append(p)
+        else:
+            m = _SENT_END.search(p)
+            head, tail = (p[:m.end()], p[m.end():]) if m else (p, "")
+            out.append(_FIG.sub(r'<b class="fnum">\1</b>', head) + tail)
+            done = bool(m)
+    return "".join(out)
 
 
 def clock(label, value_escaped: str) -> str:
@@ -156,7 +208,12 @@ def source_card(s: dict) -> str:
     head_ = (f'<strong dir="auto">{esc(s["title"])}</strong><span class="kind" dir="auto">{esc(s["kind_line"])}</span>{ref}' if s["display_ready"] and s["title"]
              else f'<strong>{esc(s["untitled_label"])}</strong>{ref}')
     rights = f'<p class="rights">{esc(s["rights_note"])}</p>' if s["rights_note"] else ""
-    return (f'<article class="src" data-evidence-source="{esc(s["id"])}">{head_}<div class="acts"><a href="{s["data_href"]}">{esc(L["open_source_record"])}</a>'
+    # RC-15 (B15 d, C-1): the series this record uses, where they differ from the source's main locator (link text: the
+    # locator's own series code)
+    series = (f'<p class="small" data-series-used><b>{esc(L["series_used"])}</b> '
+              + " · ".join(f'<a href="{esc(u)}" rel="noopener noreferrer" target="_blank"><bdi dir="ltr">{esc(urlparse(u).path.rstrip("/").rsplit("/", 1)[-1])}</bdi></a>' for u in s["series"])
+              + "</p>") if s.get("series") else ""
+    return (f'<article class="src" data-evidence-source="{esc(s["id"])}">{head_}{series}<div class="acts"><a href="{s["data_href"]}">{esc(L["open_source_record"])}</a>'
             f'<a class="source-locator" href="{esc(s["url"])}" rel="noopener noreferrer" target="_blank">{esc(L["open_original"])}</a>'
             f'<button type="button" class="tbtn" data-source-cite data-source-citation="{esc(s["cite_payload"])}">{esc(L["copy_reference"])}</button></div>{rights}</article>')
 
@@ -183,7 +240,9 @@ def spine(index: list, edges: list, foot: bool = False, foot_index: bool = True)
     edge group by its own governed heading — no label is authored (D2, closes DEBT-006)."""
     sfx = "f" if foot else "s"
     idx = "".join(f'<li><a href="#{a}"><span class="n">{i+1:02d}</span><span>{esc(t)}</span></a></li>' for i, (a, t) in enumerate(index))
-    ed = "".join(f'<nav class="edges" aria-labelledby="edge-{sfx}{n}"><h3 id="edge-{sfx}{n}">{esc(e[0])}</h3>' + (f'<p class="small">{esc(e[2])}</p>' if len(e) > 2 and e[2] else "") + "<ul>" + "".join(f"<li>{x}</li>" for x in e[1]) + "</ul></nav>"
+    # B10 a: an edge group is named by its heading and the page's h1, so it never shares a name with the page's own
+    # next-actions landmark ("Continue from here"); both are governed text already on the page
+    ed = "".join(f'<nav class="edges" aria-labelledby="edge-{sfx}{n} page-title"><h3 id="edge-{sfx}{n}">{esc(e[0])}</h3>' + (f'<p class="small">{esc(e[2])}</p>' if len(e) > 2 and e[2] else "") + "<ul>" + "".join(f"<li>{x}</li>" for x in e[1]) + "</ul></nav>"
                  for n, e in enumerate(edges) if e[1])
     cls = "spine foot-spine" if foot else "spine"
     index_html = f'<nav class="index" aria-labelledby="page-title"><ul>{idx}</ul></nav>' if (not foot or foot_index) else ""
@@ -216,10 +275,11 @@ def evidence_record(page: dict, shell: dict) -> str:
     L = page["labels"]
     meta = f'<meta name="yfie-citation" content="{esc(page["citation"])}"><meta name="yfie-record-id" content="{esc(page["id"])}">'
     index = [("q1", L["establishes"]), ("q2", L["measures"]), ("q3", L["applies"]), ("q4", L["currentness"]), ("q5", L["does_not_establish"]), ("q6", L["source"]), ("q7", L["more"])]
-    head_ = (f'<div class="head">{crumb(page["breadcrumb"], shell)}{rubric(L["family"])}{clock(L["period"], esc(page["period"]))}<h1 id="page-title">{esc(page["title"])}</h1>'
+    for_whom = clock(L["applies"], esc(page["universe"])) if page.get("universe") else ""   # 4.1: WHEN, then FOR WHOM, before the claim
+    head_ = (f'<div class="head">{crumb(page["breadcrumb"], shell)}{rubric(L["family"])}{clock(L["period"], esc(page["period"]))}{for_whom}<h1 id="page-title">{esc(page["title"])}</h1>'
              + (f'<p class="st">{esc(page["lead"])}</p>' if page["lead"] else "") + "</div>")
-    own_fig = (f'<span class="rubric mt18">{esc(L["visual_eyebrow"])}</span>' + figure(page["visual"], shell["labels"]["cite"], DISC.origin(), heading="h3")) if page.get("visual") and page["visual"].get("tier") != "RETIRE_FROM_DESIGN" else ""
-    qa = [f'<div class="qa first" id="q1">{rubric(L["establishes"], 1, "h2")}<div class="st"><p>{esc(page["summary"])}</p></div>{own_fig}</div>' + strip(index),
+    own_fig = (f'<span class="rubric mt18">{esc(L["visual_eyebrow"])}</span>' + figure({**page["visual"], "here": True}, shell["labels"]["cite"], DISC.origin(), heading="h3")) if page.get("visual") and page["visual"].get("tier") != "RETIRE_FROM_DESIGN" else ""
+    qa = [f'<div class="qa first" id="q1">{rubric(L["establishes"], 1, "h2")}<div class="st"><p>{fig_emph(iso(esc(page["summary"])))}</p></div>{own_fig}</div>' + strip(index),
           f'<div class="qa" id="q2">{rubric(L["measures"], 2, "h2")}<div class="body"><p>{esc(page["definition"])}</p></div></div>',
           f'<div class="qa" id="q3">{rubric(L["applies"], 3, "h2")}<div class="body"><p>{esc(page["universe"])}</p></div></div>',
           f'<div class="qa" id="q4">{rubric(L["currentness"], 4, "h2")}<div class="body"><p>{esc(page["currentness"])}</p></div></div>']
@@ -248,7 +308,8 @@ def evidence_record(page: dict, shell: dict) -> str:
         more += f'<div class="qa"><h3 class="rubric">{esc(L["reading_guidance"])}</h3><div class="body">{paras(page["reading_guidance"]["paragraphs"])}</div></div>'
     qa.append(f'<div class="qa" id="q7">{rubric(L["more"], 7, "h2")}<details class="more"><summary>{esc(L["more_intro"])}</summary>{more}</details></div>')
     util = (f'<section class="util" data-record-id="{esc(page["id"])}"><div class="ref"><b>{esc(L["reference"])}</b> {bdi(page["id"])}</div>'
-            f'<div class="actions"><button type="button" class="tbtn evidence-cite-button" data-cite>{esc(L["cite"])}</button>'
+            f'<div class="actions">{cite_tools(shell, page["route"], page["citation_short"], record=True, long_form=page["citation"])}'
+            f'<button type="button" class="tbtn" data-share data-share-text="{esc(isolate_plain(page["share_text"]) if shell["lang"] == "ar" else page["share_text"])}">{esc(shell["labels"]["share_record"])}</button>'
             + (f'<a href="{page["compare_href"]}" data-compare-entry>{esc(L["compare"])}</a>' if page.get("compare_href") else "")
             + f'<a href="{page["hrefs"]["rights"]}">{esc(L["reuse"])}</a>'
             f'<a href="{page["hrefs"]["corrections"]}">{esc(L["history"])}</a><a href="{page["hrefs"]["report"]}">{esc(L["report"])}</a></div><p class="small">{esc(L["reuse_note"])}</p></section>')
@@ -271,7 +332,7 @@ def home(page: dict, shell: dict) -> str:
     recs = list(page["records"])
     demo = []
     for res, html_ in paced_groups(S[3]["body"]):
-        demo.append(html_)
+        demo.append(fig_emph(html_))
         if recs and not res:
             demo.append(compact(recs.pop(0), L, L["open_evidence_record"], cls="compact bound"))
     def h2(sec):   # governed kicker (role) above the governed heading
@@ -285,25 +346,33 @@ def home(page: dict, shell: dict) -> str:
     v = page["system_visual"]
     # the records not behind a figure (the framing record) belong to the system-context section they frame, not to a
     # group labelled "behind these figures" (D3 test: the label promised four and showed one)
+    # 4.2 (owner note, 11:15): the section describes the chain from rule to result; its drawn chain (VIS-PAYMENT-RAILS,
+    # on /reforms/) is offered first, then the framing record
+    recs = ([page["chain_record"]] if page.get("chain_record") else []) + recs
     rest = f'<div class="objs mt18">{"".join(compact(r, L, L["open_evidence_record"]) for r in recs)}</div>' if recs else ""
     parts.append(f'<section class="qa" id="s6"><div>{rubric(S[6]["role"])}<h2 id="system" tabindex="-1">{esc(S[6]["heading"])}</h2></div><div><div class="body">{paras(S[6]["paragraphs"])}</div>{rest}'
                  f'<span class="rubric mt18">{esc(L["visual_eyebrow"])}</span>{figure(v, shell["labels"]["cite"], DISC.origin(), heading="h3", boundary_label=L["boundary"], open_label=L["open_record"])}</div></section>')
+    # RC-15 (B15 d, A-8): the gaps section links the measurement priorities bound to Home, by their governed titles
+    gp = page.get("gap_priorities") or []
+    gaps = (f'<h3 class="mt18">{esc(L["gaps_heading"])}</h3><p class="small">{esc(L["gaps_note"])}</p><ul class="rlist" data-home-gap-priorities>'
+            + "".join(f'<li><a href="{m["href"]}">{esc(m["title"])}</a></li>' for m in gp) + "</ul>") if gp else ""
     for o, i in ((7, "s7"), (8, "s8")):
-        parts.append(f'<section class="qa" id="{i}"><div>{h2(S[o])}</div><div class="body">{paras(S[o]["paragraphs"])}</div></section>')
+        parts.append(f'<section class="qa" id="{i}"><div>{h2(S[o])}</div><div class="body">{paras(S[o]["paragraphs"])}{gaps if o == 7 else ""}</div></section>')
     f = page["featured"]
     if f:
         parts.append(f'<section class="qa" id="sf">{rubric(L["featured"], tag="h2")}<div><article class="compact first-obj">{clock(L["evidence_period"], esc(f["evidence_period"]))}<div class="q"><a href="{f["href"]}">{esc(f["title"])}</a></div><div class="st"><p>{esc(f["thesis"])}</p></div><div class="open"><a href="{f["href"]}">{esc(L["open_reading"])}</a> · <a href="{page["hrefs"]["readings"]}">{esc(L["all_readings"])}</a></div></article></div></section>')
     parts.insert(2, strip(index))   # the phone's in-page navigation after the first figure group; the foot spine keeps only the edges (DEBT-014)
     edges = [(f'{L["records_heading"]} ({len(page["records"])})', [f'<a href="{r["href"]}">{esc(r["title"])}</a>' for r in page["records"]]),
              (L["flow"], [f'<a href="{h}">{esc(t)}</a><br><span class="small">{esc(d)}</span>' for h, t, d in ((page["hrefs"]["readings"], L["readings_nav"], L["cta_readings"]), (page["hrefs"]["measurement"], L["measurement_nav"], L["cta_measurement"]), (page["hrefs"]["data"], L["data_nav"], L["cta_data"]))], L["side"])]
-    body = f'<article class="obj page-obj">{"".join(parts)}{page_util(shell)}</article>{spine(index, edges)}{spine(index, edges, foot=True, foot_index=False)}'
+    body = f'<article class="obj page-obj">{"".join(parts)}{page_util(shell, page)}</article>{spine(index, edges)}{spine(index, edges, foot=True, foot_index=False)}'
     return head(page, shell, "/") + header(shell) + body + footer(shell, print_foot(shell, "/", page["title"]))
 
 
 def reading(page: dict, shell: dict) -> str:
     L = page["labels"]; SL = shell["labels"]
     origin = DISC.origin()
-    index = [(f's-{s["section_id"]}', s["heading"]) for s in page["sections"] if s["heading"]] + [("trace", L["trace"]), ("sources", L["sources"]), ("related", L["related"])]
+    index = ([(f's-{s["section_id"]}', s["heading"]) for s in page["sections"] if s["heading"]] + [("trace", L["trace"]), ("sources", L["sources"])]
+             + ([("measure", L["measurement"])] if page.get("measurement") else []) + [("related", L["related"])])
     head_ = (f'<div class="head">{crumb(page["breadcrumb"], shell)}{rubric(L["eyebrow"])}<p class="q">{esc(page["question"])}</p><h1 id="page-title">{esc(page["title"])}</h1><div class="st"><p>{esc(page["thesis"])}</p></div>'
              f'<div class="clocks">{clock(L["evidence_period"], esc(page["evidence_period"]))}<div class="clock"><span class="k">{esc(L["last_reviewed"])}</span><span class="v"><time datetime="{esc(page["last_reviewed_iso"])}">{esc(page["last_reviewed"])}</time></span></div></div></div>')
     bnd = f'<section class="bnd" data-reading-boundary>{rubric(L["do_not_infer"], tag="h2")}<p>{esc(page["prohibited_inference"])}</p></section>'
@@ -318,7 +387,9 @@ def reading(page: dict, shell: dict) -> str:
                 blocks.append(f'<blockquote class="pull"><p>{esc(b["text"])}</p></blockquote>')
             else:
                 blocks.append('<ul class="rlist">' + "".join(f"<li>{esc(x)}</li>" for x in b["items"]) + "</ul>")
-        figs = "".join(figure(v, SL["cite"], origin) for v in page["visuals"]) if i == 0 else ""
+        # RC-15 (B15 d, C-9): a Reading's own figure does not link the Reading to itself on screen
+        here = DISC.localized(page["route"], shell["lang"])
+        figs = "".join(figure({**v, "here": v.get("canonical_href") == here}, SL["cite"], origin) for v in page["visuals"]) if i == 0 else ""
         essay.append(f'<section data-reading-section="{esc(s["section_id"])}">{h}<div class="{"st" if i == 0 else "read"}">{"".join(blocks)}</div>{figs}</section>')
     steps = []
     for x in page["trace"]:
@@ -336,15 +407,61 @@ def reading(page: dict, shell: dict) -> str:
     related = f'<section class="qa" id="related" data-reading-related><h2>{esc(L["related"])}</h2><div><div class="objs">{rel}</div><p class="small mt12"><a href="{L["readings_index_href"]}">{esc(L["all"])}</a></p></div></section>' if page["related"] else ""
     edges = [(L["trace"], [f'<a href="{x["href"]}">{esc(x["proposition"])}</a>' for x in page["trace"]]),
              (L["return"], [f'<a href="{b["href"]}">{esc(b["label"])}</a>' for b in page["return_to"]])]
-    body = f'<article class="obj page-obj">{head_}{bnd}{strip(index)}<div class="essay">{"".join(essay)}</div>{trace}{sources}{related}{page_util(shell)}</article>{spine(index, edges)}{spine(index, edges, foot=True, foot_index=False)}'   # the strip after the boundary is the phone's map of the essay (DEBT-014)
+    from .families import measure_obj   # noqa: PLC0415  (families imports this module)
+    measure = (f'<section class="qa" id="measure" data-reading-measurement><h2>{esc(L["measurement"])}</h2><div><p class="small">{esc(L["measurement_note"])}</p><div class="objs">'
+               f'{"".join(measure_obj(m) for m in page["measurement"])}</div></div></section>') if page.get("measurement") else ""   # B6
+    body = f'<article class="obj page-obj">{head_}{bnd}{strip(index)}<div class="essay">{"".join(essay)}</div>{trace}{sources}{measure}{related}{page_util(shell, page)}</article>{spine(index, edges)}{spine(index, edges, foot=True, foot_index=False)}'   # the strip after the boundary is the phone's map of the essay (DEBT-014)
     return head(page, shell, page["route"], kind="article") + header(shell) + body + footer(shell, print_foot(shell, page["route"], page["title"]))
 
 
-def page_util(shell: dict) -> str:
-    """The page's own actions at the foot of its object (cite, report), reachable at every width — the product bar
-    shows them only on wide screens."""
+# every locator (RC-15, C-2: the short citation names each original source's URL), every identifier (the text layer's
+# ID_RUN) and the publisher; a URL is matched first, so an identifier inside it is not isolated twice
+_CITE_LTR = re.compile(f'(https?://[^\\s<؛،]*[^\\s<؛،.,;)]|{ID_RUN.pattern}|(?<![\\w-])CauseWay(?![\\w-]))')
+
+
+def cite_isolate(html_text: str) -> str:
+    """B9 review (blocking): in an Arabic citation a record or source identifier next to "CauseWay" ran as one
+    left-to-right run ("CLM-001. CauseWay."), so the publisher read before the record. Each identifier and the publisher's
+    name is isolated, as the text layer isolates dates; the copied text is unchanged. Applied to escaped text outside tags."""
+    parts = re.split(r'(<[^>]+>)', html_text)
+    # G0 (owner instructions of 3 October 2026, 09:50): only a URL may wrap inside a citation; an identifier stays whole
+    # (an Arabic citation showed "-CLM … 001" when the record ID broke at its hyphen)
+    return "".join(p if p.startswith("<") else _CITE_LTR.sub(lambda m: f'<bdi dir="ltr" class="nw{" url" if m.group(1).startswith("http") else ""}">{m.group(1)}</bdi>', p) for p in parts)
+
+
+def page_citation(shell: dict, title: str) -> str:
+    """B9: the citation of a page that is not an Evidence Record — its governed title, then the governed page line
+    UI-CITE-PAGE-LINE (product, publisher, edition; the record line UI-CITE-RECORD-LINE without the record name). The
+    record citation adds its period, population, boundary and sources; the canonical URL follows either."""
+    t = str(title or "").strip().rstrip(".")
+    return f'{t if t.endswith(("?", "؟", "!")) else t + "."} {shell["cite_page_line"]}'   # never "?." after a question title
+
+
+def cite_tools(shell: dict, route: str, citation: str, record: bool = False, long_form: str = "") -> str:
+    """B9: the citation preview (what "Copy citation" copies, shown before copying) and the print control. The canonical
+    URL is the build's (absolute once the origin is set); the runtime writes the page's own canonical into it."""
     L = shell["labels"]
-    return (f'<section class="util"><div class="actions"><button type="button" class="tbtn" data-cite>{esc(L["cite"])}</button>'
+    canon = DISC.url(DISC.localized(route, shell["lang"]), DISC.origin())
+    lead = f' {esc(L["current_record"])}' if record else ""
+    cls = "tbtn evidence-cite-button" if record else "tbtn"
+    # RC-15 (B15 d, C-2; OWN-04): a record copies its short citation; the long form, with the period, population and
+    # limits, is one disclosure away and copies on its own
+    long_ = (f'<details class="cite-long"><summary>{esc(L["cite_long"])}</summary><p class="cite-text" data-cite-long-text>{cite_isolate(iso(esc(long_form)))}{lead}'
+             f' <bdi dir="ltr" data-cite-url>{esc(canon)}</bdi></p><button type="button" class="tbtn" data-cite-long>{esc(L["copy_long"])}</button></details>') if long_form else ""
+    # a record's short citation has two lines: this resource (ending with the page address), then the original sources
+    line1, _, line2 = str(citation).partition("\n")
+    second = f'<br><span class="cite-l2" data-cite-line>{cite_isolate(iso(esc(line2)))}</span>' if line2 else ""
+    return (f'<div class="cite-preview"><p class="cite-h">{esc(L["cite_preview"])}</p><p class="cite-text" data-cite-text><span data-cite-line>{cite_isolate(iso(esc(line1)))}{lead}'
+            f' <bdi dir="ltr" data-cite-url>{esc(canon)}</bdi></span>{second}</p>{long_}</div><button type="button" class="{cls}" data-cite>{esc(L["copy_citation"])}</button>'
+            f'<button type="button" class="tbtn" data-print>{esc(L["print"])}</button>')
+
+
+def page_util(shell: dict, page: dict | None = None) -> str:
+    """The page's own actions at the foot of its object (cite, print, report), reachable at every width — the product
+    bar shows them only on wide screens."""
+    L = shell["labels"]
+    tools = cite_tools(shell, page["route"], page_citation(shell, page.get("title"))) if page else f'<button type="button" class="tbtn" data-cite>{esc(L["cite"])}</button>'
+    return (f'<section class="util"><div class="actions">{tools}'
             f'<a href="{shell["contact_href"]}">{esc(L["report"])}</a></div></section>')
 
 
@@ -355,7 +472,7 @@ def print_foot(shell: dict, route: str, title: str, citation: str = "") -> str:
     by the print system only (hidden on screen); no word is authored."""
     origin = DISC.origin()
     canon = DISC.url(DISC.localized(route, shell["lang"]), origin)
-    cite = iso(esc(citation)) if citation else f'{iso(esc(title))} — {esc(shell["product"])} — <bdi dir="ltr">{esc(canon)}</bdi>'
+    cite = cite_isolate(iso(esc(citation))) if citation else f'{cite_isolate(iso(esc(page_citation(shell, title))))} <bdi dir="ltr">{esc(canon)}</bdi>'   # B9: the one template
     return (f'<div class="print-foot"><p><b>{esc(shell["product"])}</b> · {esc(shell["edition"])} · <bdi dir="ltr" class="canon">{esc(canon)}</bdi></p>'
             f'<p class="cite">{cite}</p></div>')
 
@@ -363,12 +480,30 @@ def print_foot(shell: dict, route: str, title: str, citation: str = "") -> str:
 RENDERERS = {"Orientation": home, "Evidence Record": evidence_record, "Reading": reading}
 
 
+_NEW_TAB_LINK = re.compile(r'(<a\b[^>]*\btarget="_blank"[^>]*>)(.*?)(</a>)', re.S)
+
+
+def mark_new_tab(html: str, cue: str) -> str:
+    """Release candidate G4 (D5 escalation; UI-EXTERNAL-NEW-TAB): every link that opens a new tab says so to assistive
+    technology — a visually hidden cue inside the link, or, where the link is named by aria-label, at the end of that name."""
+    if not cue:
+        return html
+
+    def one(m):
+        open_, inner, close = m.groups()
+        if 'aria-label="' in open_:
+            return re.sub(r'aria-label="([^"]*)"', lambda a: f'aria-label="{a.group(1)} {esc(cue)}"', open_, count=1) + inner + close
+        return f'{open_}{inner}<span class="sr-only"> {esc(cue)}</span>{close}'
+    return _NEW_TAB_LINK.sub(one, html)
+
+
 def render(page: dict, shell: dict, variant: str = "") -> str:
     _COMPACT_N[0] = 0   # ids restart per page (deterministic output whatever the route order)
     if page["family"] in RENDERERS:
-        return isolate_document(RENDERERS[page["family"]](page, shell))
+        return mark_new_tab(isolate_document(RENDERERS[page["family"]](page, shell)), shell["labels"].get("new_tab", ""))
     from . import families   # the D2 families share this module's objects and shell
-    return isolate_document(families.RENDERERS[page["family"]](page, shell))   # the one isolation pass (text.py): no date or range leaves plain
+    # the one isolation pass (text.py): no date or range leaves plain; then every new-tab link carries its cue
+    return mark_new_tab(isolate_document(families.RENDERERS[page["family"]](page, shell)), shell["labels"].get("new_tab", ""))
 
 
 def render_site_files(out: Path, content) -> int:
@@ -377,7 +512,42 @@ def render_site_files(out: Path, content) -> int:
     origin = DISC.origin()
     (out / "index.html").write_text(isolate_document(families.root_page(content.shell("ar", "/"), content.shell("en", "/"))), encoding="utf-8")
     (out / "404.html").write_text(isolate_document(families.not_found(content.not_found(), content.shell("ar", "/"))), encoding="utf-8")
+    for r in moved_routes():
+        for lang in ("ar", "en"):
+            dest = out / lang / r["from"].strip("/") / "index.html"
+            dest.parent.mkdir(parents=True, exist_ok=True)
+            dest.write_text(isolate_document(moved_page(content, lang, r)), encoding="utf-8")
     (out / "robots.txt").write_text(DISC.robots_txt(origin), encoding="utf-8")
     if origin:
         (out / "sitemap.xml").write_text(DISC.sitemap_xml(content.routes(), origin), encoding="utf-8")
-    return 2
+    return 2 + 2 * len(moved_routes())
+
+
+# ------------------------------------------------------------------------------------------------ retired addresses
+# Owner decision of 3 October 2026, 23:54 Aden (X-ESC-RC17-01): a record that is no longer published on its own keeps
+# its address, which leads to the record that now covers it. The map is site-src/hosting/moved_routes.json (hosting
+# configuration, like _headers). The page is never indexed, names the target as its canonical address, says why in two
+# governed labels (UI-MOVED-RECORD-*), links the target by its governed title and moves the reader on at once; it works
+# without JavaScript. Checked by RC-19 (scripts/validate.py).
+MOVED_ROUTES = Path(__file__).resolve().parents[2] / "site-src" / "hosting" / "moved_routes.json"
+
+
+def moved_routes() -> list[dict]:
+    return json.loads(MOVED_ROUTES.read_text(encoding="utf-8"))["moved"] if MOVED_ROUTES.exists() else []
+
+
+def moved_page(content, lang: str, r: dict) -> str:
+    shell = content.shell(lang, r["from"])
+    target = content.href(r["to"], lang)
+    title = content.loc(content.spec_by_route[r["to"]], "title", lang)
+    heading, body = content.t("UI-MOVED-RECORD-TITLE", lang), content.t("UI-MOVED-RECORD-BODY", lang)
+    origin = DISC.origin()
+    return (f'<!doctype html><html lang="{lang}" dir="{shell["dir"]}"><head><meta charset="utf-8">'
+            f'<meta name="viewport" content="width=device-width,initial-scale=1">{DISC.robots_meta("noindex")}'
+            f'<meta http-equiv="refresh" content="0;url={target}">'
+            f'<link rel="icon" type="image/png" sizes="32x32" href="/assets/logo/CauseWay_logo_32.png"><title>{esc(heading)} — {esc(shell["product"])}</title>'
+            f'<meta name="description" content="{esc(body)}"><link rel="stylesheet" href="/assets/yfie.css">{font_preloads(lang)}'
+            f'{DISC.head_links(r["to"], lang, origin)}</head><body>'
+            f'{header(shell)}<article class="obj page-obj" data-moved-to="{r["to"].strip("/")}"><h1 id="page-title">{esc(heading)}</h1>'
+            f'<p class="st">{esc(body)}</p><div class="actions"><a href="{target}">{esc(title)}</a></div></article>'
+            f'{footer(shell)}')

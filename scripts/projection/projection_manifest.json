@@ -532,7 +532,7 @@
       "rule_id": "public_inventory",
       "sheet": "05, 06, 07, 08, 10, 11, 14, 15, 34 (via projections) + controlled input public_inventory_contract",
       "stable_key": "key",
-      "transformation": "One record per count declared in controlled_inputs/public_inventory_contract.json, in contract order: key, value (derived from the named projection by the declared rule: count_records, count_where_http_primary_url, count_where_true or spec_count), projection, rule, public_token, definition. Public copy may reference only counts with public_token true, as {{n:key}}.",
+      "transformation": "One record per count declared in controlled_inputs/public_inventory_contract.json, in contract order: key, value (derived from the named projection by the declared rule: count_records, count_where_http_primary_url, count_where_true, count_where_not_in or spec_count), projection, rule, public_token, definition. Public copy may reference only counts with public_token true, as {{n:key}}.",
       "dependencies": [
         "evidence/evidence_objects.json",
         "evidence/public_claims.json",
@@ -569,8 +569,10 @@
       "rule_id": "presentation_contract",
       "sheet": "(none — presentation depth contract)",
       "stable_key": "route",
-      "transformation": "Hand-governed presentation-depth contract maintained in place (NOT generated from the Master). The generator validates every referenced section (route, section_order) against 03 and every referenced visual against 11, and fails otherwise.",
+      "transformation": "Hand-governed presentation-depth contract maintained in place (NOT generated from the Master). The generator validates every referenced section (route, section_order) against 03 every referenced visual against 11, and every question set (EAD-11) against the governed questions and the UI-QUESTIONS-* headings, and fails otherwise.",
       "dependencies": [
+        "content/questions.json",
+        "content/interface_copy.json",
         "content/page_sections.json",
         "visuals/visual_library.json"
       ],

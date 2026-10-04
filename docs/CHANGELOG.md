@@ -1,5 +1,1218 @@
 # Repository Change Log
 
+## 2026-10-04 — RC-19: the fix batch from the independent review of 70398d1
+
+Master `c700dc52bf81…` → `90014e3bd27133c34b8435090230cf5b28a3301dec9f366c6fedf047b5ea2838` through `run_stage.py`
+(`audit/release_candidate/rc_19_independent_review.py`; ledger and report in `audit/release_candidate/runs/RC-19_*`).
+Owner message of 4 October 2026, about 00:10 Aden (the freeze lifted for this batch only), and the owner decision of
+3 October 2026, 23:54 Aden. English and Arabic changed together.
+- **R-01, the FMIIP dates.** "Started in July 2025" came from the UNDP project page, which refuses automated requests
+  and was never read here. The World Bank's ISR (sequence 2, SRC-WB-FMIIP-ISR2-2026-001, read on 4 October 2026; the
+  same in sequence 1) gives Board approval 17 June 2025, signing 26 June 2025 and effectiveness 1 September 2025, and no
+  start date. The prose of VIS-PAYMENT-RAILS and RV-CWR-009 now gives approval and effectiveness. The event
+  REF-PAY-002 is "FMIIP effective", 2025-09-01; the three components are dated 2025-06-17, labelled "approved with the
+  project". All four are bound to the ISR. The access component carries the ISR's name ("support for access to and use
+  of the payment infrastructure"); "access-point database" and the IRG-areas qualifier, which only the UNDP page gave,
+  are dropped from the public text.
+- **X-ESC-RC17-01, owner decision of 3 October 2026, 23:54 Aden.** /evidence/NEG-EW-011/ is no longer published as its
+  own record: its 02 and 06 rows are removed, with its design-intent entry and its route in the navigation contract
+  (steward patch under the owner's decision). Its address leads to CLM-015 through a page that is never indexed, names
+  CLM-015 as canonical, says why in two governed labels and moves on without JavaScript
+  (`site-src/hosting/moved_routes.json`, `render.moved_page`). Its two social images are removed. The circular's names
+  stay non-public lineage in 22_PROVIDERS_DATA, where RC-NAMES reads them. No other published per-entity record has an
+  ID equal to an item number of a document it links (PSE-011's ID is the programme's own). Counts: 142 page specs, 109
+  Evidence Records, 438 search records, 284 social images.
+- **R-08, /privacy/ section 3.** It now says what is decided: hosted on DigitalOcean App Platform, reached through
+  causewaygrp.com, which receives each request (and the corporate cookie, if the browser holds it) and passes it on.
+  Which details are kept, for what purpose, for how long and by whom stays open. Runbook step 9a re-confirms it.
+- **R-05, no JavaScript.** The language switch is a link to the same route in the other edition; the menu is a link to
+  the footer, which carries every navigation and trust link; the runtime enhances both. The note now names exactly what
+  needs JavaScript (search, Compare, the copy and print buttons). New browser test `scripts/tests/test_no_javascript.py`
+  with its own negative control; in CI.
+- **R-10.** Only the first sentence's figures are emphasised (`render.fig_emph`): the 23% coverage figure on Home is set
+  like the text around it.
+- **R-04.** `deploy.yml` starts only after the workflow "Verify" has succeeded on a push to `main`, and deploys the
+  commit Verify proved; a manual run calls the reusable Verify first.
+- **R-07.** `scripts/do_deploy.py` changes only the image tag of the app's live specification, and refuses to deploy
+  while a rollback is pinned.
+- **R-09.** `scripts/tests/test_corporate_proxy.py` runs the runbook's forwarding middleware, extracted from the runbook,
+  in a pinned Nitro 2.13.4 harness (`scripts/hosting/corporate_proxy_harness/`) in front of our nginx block: every page
+  under the header test, no corporate header or cookie, the cookie never upstream, with a negative control. It found
+  that the bare-path 301 still carried the corporate headers; the runbook's middleware now removes them there too.
+  Not in CI (it installs from npm). The runbook's step 8 adds the web administrator's check of where those headers
+  originate.
+- **R-17.** The App Platform image is pinned to `nginx:1.24.0-alpine@sha256:77e5d4a6…`, the nginx version the gates
+  prove; `test_digitalocean_hosting.py --image` runs every header check against that image, in CI.
+- **Gate RC-19** (`scripts/validate.py`), with six negative controls, 6 of 6 caught: FMIIP never dated to July 2025;
+  the retired address (page, links, search, social image); the switch and the menu are links; first-sentence emphasis;
+  the deploy gating and the digest pin are asserted too. The header test waits for a page that moves on.
+- **Records.** The owner decision of 23:54 recorded verbatim; the 13:00 note, whose quotation was empty (R-03),
+  appended as a dated erratum; R-02's three section-5 reasons, R-13, R-14 and the next-edition items (R-11, R-15, R-16,
+  the unprojected sheets) appended to `OPEN_ITEMS_DISPOSITION.md`; X-ESC-RC17-01 closed in `design/ESCALATIONS.md`;
+  runbook step 2 rewritten (R-12).
+- **Reviews.** One bilingual reviewer read the changed pairs, Arabic first: four NOT ACCEPTABLE with replacements, all
+  folded; it then re-read the three pairs the adversarial review changed (the Reading's FMIIP clause, the component
+  labels, /privacy/) and returned three more exact replacements ("development", as the World Bank says, not
+  "establishing"; «ملف تعريف الارتباط»; the bank's house name), all folded. The adversarial reviewer read the FMIIP
+  dates, NEG-EW-011 and /privacy/; its findings are folded, except two recorded in the pull request with their reasons.
+  The transaction was then run once, from the committed state.
+
+## 2026-10-03 — B16: every open item dispositioned; G0 in the browser; 4.3 and 4.4 to the next edition
+
+- `audit/release_candidate/OPEN_ITEMS_DISPOSITION.md` (new, with an `audit/INDEX.md` row) is built by
+  `audit/release_candidate/b16/make_disposition.py`. It has 221 items: 93 DONE, 18 RELEASE, 88 NEXT EDITION and 22
+  REJECTED, with none undecided.
+  - It adds the owner note of 11:15 (4.1–4.6 and G0), section 5's seven topics with one line each (correspondent
+    banking, de-risking, SWIFT, liquidity, hawala, G2P, guarantees), the three rejections reopened for challenge, and
+    the G0 findings.
+  - Commit placeholders are resolved against the live ancestry. POST-LAUNCH is printed as NEXT EDITION.
+  - One earlier DONE is corrected: Dataset structured data was never prepared, and F6-G04 still forbids it, so it is
+    NEXT EDITION.
+- **4.3 (Findex waves): NEXT EDITION.** No governed contract takes the three waves, and RV-CWR-004's people lane is
+  governed as 2022–23 fieldwork; adding 2011 and 2014 would widen it. The record already prints all three
+  observations, with the 2011 definition limit and the 2022 coverage, on /people/.
+- **4.4 (the two ladders): NEXT EDITION.** The B12 inputs are still missing: the recipients' reference period, a data
+  projection, and governed Arabic step labels.
+- **G0.** 22 views at 390 px in Arabic and 1440 px in English. There is no release defect beyond the inline-figure box
+  already fixed. CWR-005 is bounded. The regulation path names the instrument, the authority, the date and the stage
+  the evidence reaches. 29 of 30 ordinary searches land right ("ID" is next edition). The guided paths resolve.
+- Each item's own record gains one dated, append-only block pointing here: `design/ESCALATIONS.md`,
+  `FINAL_OPEN_ITEMS_REGISTER.md` and `design/DESIGN_DEBT.md`.
+
+## 2026-10-03 — RC-1115: the inline-figure defect fixed and the presentation gate; 4.6 records; DigitalOcean hosting
+
+**B.0, a release defect from RC-18 (`f7deaac`).** RC-18 emphasised inline figures as `<b class="fig">`, but `.fig` is
+the figure frame in the stylesheet (background, padding, margin, a 3 px top border). Every emphasised figure therefore
+rendered as a padded box that covered the line above it: on Home at 390 px in Arabic, the 5.44% box hid «الرجال» and
+the 23% box overprinted «البنك الدولي 2022)»; on CLM-001 at 1440 px in English, the 11.9% box covered "ownership". The
+browser suites passed, because nothing tested for it.
+- **Reproduced first.** `audit/tranche_c/checks/viewport_acceptance.py` now fails when an inline `<b>` in `<main>`
+  carries box styling, or an emphasised figure is taller than its line. On the unfixed build: 18 of 168 page-width
+  checks failed, on Home and CLM-001, in both languages and at all four widths.
+- **Fixed in its owning layer** (no Master change): the renderer emphasises a figure with its own class, `b.fnum`
+  (`scripts/yfie/render.py`), and the stylesheet styles that class with weight and size only
+  (`scripts/yfie/theme.py`). The `.fig` frame rules are untouched. 168 of 168 pass, and Home in Arabic at 390 px and
+  CLM-001 in English at 1440 px were checked by eye.
+
+**RC-1115, the presentation gate** (`scripts/validate.py`), with one negative control per assertion
+(`scripts/tests/test_gate_negative_controls.py`; 8 of 8 caught):
+1. `b.fnum` carries no padding, margin, border, background or container type; no element except a `<figure>` carries
+   the `.fig` class (the B.0 regression); the first sentence of Home's first figure group opens its figures with an
+   emphasised one, in English and Arabic. The handoff's assertion of `<b class="fig">` would have locked the defect in,
+   so it was replaced.
+2. Every Evidence Record with a q3 section names FOR WHOM in its head, before the h1, with the same label and value.
+3. Home section 6 links `/evidence/VIS-PAYMENT-RAILS/`.
+4. Every HTML page has exactly one icon link, to `/assets/logo/CauseWay_logo_32.png`.
+5. `CauseWay_Master_Logo.png` is not in `dist/`.
+6. `/measurement/` prints `data-ma-dimensions` on the same cards in English and Arabic, with equal item counts.
+
+**4.6, current-state records.**
+- `OPENAI_REENTRY_CHECKPOINT.md` §7: the tag command for `checkpoint/design-handoff-ready` printed the *current*
+  Master hash, which is wrong for that commit and which every rebind rewrites. It now reads the hash from the tagged
+  commit itself (`git show "$C":authority/…xlsx | sha256sum`) and says what to expect (`17db032b15da…`). No 64-hex
+  literal is added, so the P4-G04 gate and `scripts/rebind_authority.py` need no lineage entry. The lineage entry that
+  the handoff planned is therefore not added: once nothing prints that hash, nothing needs to whitelist it.
+- `authority/YFI_CURRENT_PROJECT_CONTEXT.json`: `programme_state` names pull request #8 ("code: the production runtime —
+  EAD-01 to EAD-11") as merged into `main` at `38a9a97` on 2 October 2026, and pull request #9 as the release
+  candidate. It no longer says that the runtime "is pull request #8".
+- `README.md`: the present-state rows (Now, Next, Owner actions; six merged branches).
+
+**Hosting: DigitalOcean** (owner decision of 3 October 2026, 22:36 Aden; recorded in
+`audit/OWNER_DECISIONS_2026-10-02.md`).
+- Verified again with one read-only request: `causewaygrp.com` is not on App Platform. It resolves to the single
+  DigitalOcean address `206.189.57.121` and sends no Cloudflare edge headers. An App Platform static-site component
+  cannot send our security headers. So the route is our own App Platform app running an nginx **service**, reached
+  through the corporate site's proxy middleware, which was already adversarially tested.
+- `scripts/hosting_nginx.py` writes the nginx server block from the published site's `_headers`, so the header
+  contract stays one file. `scripts/tests/test_digitalocean_hosting.py` runs that block in a real nginx and loads
+  every page through `test_security_headers.py --base`: 288 pages, 0 problems. It also checks the relative 301s,
+  every `Cache-Control`, the sitemap's type and a 404 outside the path, and its negative control (X-Frame-Options
+  removed) is caught. It runs in CI's browser job.
+- `site-src/hosting/digitalocean/` holds the Dockerfile and the app specification. `scripts/do_deploy.py` and
+  `.github/workflows/deploy.yml` are retargeted from Cloudflare Pages to the DigitalOcean Container Registry and App
+  Platform. The workflow is still inactive until the owner switches it on, and still refuses a null origin or an
+  unconfirmed licence text.
+- `docs/RELEASE_RUNBOOK.md`: DigitalOcean is route 1. The same nginx block on the corporate Droplet is route 2. The
+  rejected static-site component is recorded with its reason. A subdomain on the same app is the fallback. Cloudflare
+  Pages is removed.
+- The stale `_headers` rule for the master logo, which is no longer shipped, is removed.
+
+## 2026-10-03 — CI: the negative controls split across six runners; the validator 38 s → 25 s; one control re-aimed
+
+The first CI run of the parallel harness (run 37117577689, on `f7deaac`) did not go green:
+- "Gate negative controls" was cancelled at its new 30-minute limit after 54 of 70 controls. The other two jobs
+  passed.
+- On that 2-CPU runner, one validator run took 30.5 s in the gates job, but two faults side by side took 65 s per
+  pair. Workers on one runner gain nothing there.
+- One control was NOT CAUGHT: "a governed first-load field is dropped".
+
+Fixed, without weakening anything:
+- **Six runners** (`.github/workflows/verify.yml`). A matrix of six shards, `--shard K/6 --jobs 1`, each on its own
+  runner. Shard K runs every sixth control from the K-th, so together the shards run each control exactly once. An
+  aggregate job, still named "Gate negative controls", is green only when every shard passed. The required check
+  keeps its name, and a skipped or cancelled shard turns it red. Each shard's limit is 20 minutes.
+- **A faster validator, with the same results** (`scripts/validate.py`):
+  - The search mirror's token test checks the literal first: every token pattern contains its token, so a text
+    without it cannot match.
+  - The secret scan is split. Its case-sensitive key forms each start with a fixed literal. Its case-insensitive
+    assignment needs one of its keywords; the keyword test covers the four non-ASCII letters Python folds under
+    IGNORECASE. A text holding neither is not searched.
+  - Planted secrets of both kinds (an AKIA key, `PassWord = "…"`) are still reported.
+  - 38 s → 25 s locally.
+- **The uncaught control was the control's fault, not the gate's.** Since RC-18, a record's head prints the universe
+  (FOR WHOM) as well as its third answer. So blanking `#q3` no longer removed that field from the first screen, and
+  S04.1 rightly stayed silent. The control now blanks the definition (`#q2`), which is printed once, and S04.1
+  catches it ("… /evidence/CLM-002/ en definition").
+- **Local proof:** the six shards in turn, 70 of 70 caught (12, 12, 12, 12, 11 and 11 per shard, about 110 s each on 4 local workers).
+
+## 2026-10-03 — RC-18: figure first inside D7; /corrections/ invites source institutions; citizen aliases; dimensions; favicon
+
+Master `433f38bf…` → `c700dc52bf81966939c6d6ec53afe494d1bf699389c04850f74b9dec436ea7e4` through `run_stage.py` (script
+`audit/release_candidate/rc_18_figure_first.py`; ledger and report in `audit/release_candidate/runs/RC-18_*`). Owner
+note of 3 October 2026, about 11:15, sections 4.1, 4.2 and 4.5. English and Arabic changed together.
+- **4.1, figure first, inside D7.** D7's Design Intent Lock forbids lifted figures and stat tiles, and keeps Home's
+  product statement first. So the figure leads where D7 allows it, rather than as the separate key-figure field the
+  triage first proposed:
+  - Home's product statement is two sentences.
+  - Home's first figure group opens with its figure ("11.9% of adults aged 15 and over …, according to the latest
+    representative population measure: …").
+  - Every figure in Home's paced groups, and in a record's first answer, is set in the figure weight inside its own
+    sentence (`fig_emph` in `scripts/yfie/render.py`; dates, identifiers, ranges and isolated values left alone).
+  - A record's head now gives WHEN and then FOR WHOM ("Who or what does it apply to?") before its title.
+- **4.2.**
+  - /corrections/ invites the institutions whose documents or data are used to request corrections by the same route
+    as any reader.
+  - Three aliases cover words citizens type that landed wrong or nowhere: 031 «قرض / قروض / سلفة» → /finance/ and
+    /people/; 032 transfers abroad → /remittances/, with a boundary note that the evidence covers money sent to and
+    within Yemen, not money sent abroad; 033 «كاش», cash-out → /payments/.
+  - /measurement/ prints each priority's governed dimensions after a new label, UI-MA-DIMENSIONS ("Dimensions it would
+    cover:" / «الأبعاد التي سيغطيها القياس:»).
+  - Home's section 6 links the drawn payment-rails chain (VIS-PAYMENT-RAILS) first.
+- **4.5.** Every page declares the 32 px logo derivative as its icon, so the console 404 and the request outside the
+  base path are gone. `scripts/build.py` no longer copies the unreferenced 9.6 MB master logo into `dist/`; it stays in
+  the repository, unchanged.
+- **Reviews.** One bilingual reviewer read only the changed pairs and returned NOT ACCEPTABLE with exact replacements.
+  All are folded:
+  - the dimensions label;
+  - alias 032's extra Arabic terms and its boundary note;
+  - Home's first sentence ("For each figure, … when and for whom the figure applies") and «تثبته»;
+  - "according to the latest …";
+  - «سلفة»;
+  - alias 033's terms.
+  The script records why «كاش» is safe as a search term: RC-NAMES matches the circular's names only with their other
+  words.
+- **A checker fix.** The first run rolled back on RP-G06 (CLM-043). The figure tag, stripped to a space, left a double
+  space, and the Arabic «مليار دولار» rule then read a false "1". `audit/tranche_c/checks/bilingual_invariance.py` now
+  collapses whitespace after stripping tags; with that fix, 0 pairs differ.
+- **Gates.** Every gate passes:
+  - validator; content parity (286); bilingual invariance (143 pairs); literal audit (13,410, 0 unresolved);
+    determinism; lineage; diagrams; social images; logo derivatives; exports;
+  - public tools 35/36 (1 not applicable); viewport 168/168; security headers (2,712 responses); base path (644
+    requests, no favicon request at the domain root).
+  The runbook's favicon line is updated. A gate of its own for these presentation rules (RC-1115) is still to come;
+  see the pull request's RESUME POINT.
+
+## 2026-10-03 — The base-path work after its adversarial verification: runbook route 1, release checks, counsel step
+
+The adversarial verification of the base-path and noindex commits found the build side sound. `dist/` is
+byte-identical apart from the noindex meta; there are no escapes; the controls fail for the right reason. It found the
+hosting runbook not ready. Every major finding and every minor one is folded in here. Code, gates and records only:
+no Master change, and no public page changes.
+- **Route 1 is one server middleware, not `routeRules`** (`docs/RELEASE_RUNBOOK.md`). The verifier ran the earlier
+  snippet in a real Nitro 2.13.4 server and found three faults:
+  - the bare-path redirect also matched the address with its slash, so the release address redirected to itself;
+  - a route-rule proxy cannot strip the corporate `session` cookie, `x-robots-tag` or `x-powered-by`;
+  - it follows our host's redirects itself.
+  The verified middleware replaces it, with the nginx equivalent. The `script-src 'self'` sentence is corrected: under
+  route 1, `'self'` is the corporate origin, and the unchanged body is the guarantee. A service-worker check is added
+  for the web administrator.
+- **A one-page "Deploy and verify"** at the top of the runbook, written for a stranger:
+  - prerequisites;
+  - each command with the last line it must print;
+  - the ten-minute check (a curl list over eight addresses, the bare address, the slashless redirect, the noindex
+    count, the sitemap, the header and tool tests);
+  - rollback in three lines.
+- **The release check now proves absence** (`scripts/tests/test_security_headers.py`). Every response is read with
+  all its headers, through `all_headers()`, because Playwright's `headers` leaves cookies out. The test fails on:
+  - any `Set-Cookie`, `X-Robots-Tag` or `X-Powered-By`;
+  - any cookie the browser holds after the walk;
+  - with `--base`, a missing page that does not answer 404, and a bare address that does not answer one permanent
+    redirect (301 from the route, 308 from Pages) to the address with its slash.
+  Injecting a `Set-Cookie` into the local server's headers makes it fail, as it must.
+- **Counsel before the first deploy.**
+  - New runbook step 7a.
+  - `site-src/deployment.json` gains `licence_text_confirmed: false`, with its rule. The deploy workflow refuses to
+    publish until it is true, because the first deploy makes /rights/ public at the Pages address. RC-B14 requires it
+    to be a boolean.
+  - `docs/DEPLOYMENT.md` says the same.
+- **Addresses built by concatenation are now seen** (`scripts/base_path.py`, `scripts/tests/test_base_path.py`). After
+  the runtime patches, every slash-leading string literal outside the base path must be a listed route key, at its
+  listed count (`JS_ROUTE_KEYS`: 16 in `app.js`, 1 in `lang-redirect.js`). That covers single, double and back quotes,
+  templates included. Anything else stops the build, and the sweep applies the same rule. The verifier had shown that
+  `'/'+lang+'/about/'` and `` `/${lang}/about/` `` passed the earlier rule ("a literal naming a top-level folder"). A
+  second negative control appends `'/'+'en'+'/about/'` to the runtime, and the sweep must report it.
+- **Minor.**
+  - Route 2: edge caching cannot be turned off for static sites.
+  - Route 3: add the custom domain to Pages before the CNAME (otherwise error 522), and give the 301 in middleware form.
+  - The noindex covers pages only; the sitemap, search data and images are accepted without an `X-Robots-Tag`, with
+    the reason recorded.
+
+## 2026-10-03 — CI: the negative controls run side by side on isolated copies; owner note of 13:00 recorded
+
+- **The controls job could not go green** (owner note of 3 October 2026, 13:00, point 1). "Gate negative controls"
+  was cancelled at its 45-minute limit on `da63bfb`: one full validator run per control, run one after another. The
+  validator was already cut from 83 s to 38 s (`d06f8bd`). The harness now runs the controls in parallel, each on its
+  own copy of the tree (`scripts/tests/test_gate_negative_controls.py`):
+  - **Isolated copies.** It makes one full copy of the work tree per worker: every file Git tracks or would track,
+    `dist/` included, copied rather than hard-linked. A fault is written and its gate run only inside one copy, so
+    no fault can reach another or the repository.
+  - **Workers.** There is one worker per CPU (`--jobs N`). `--shard K/N` splits the controls for a job matrix, with
+    nothing dropped.
+  - **Stronger than before.** Before any fault, every gate a control relies on runs once on the clean copies and must
+    pass. No control's expected message may already appear in that clean output: a message the clean tree prints
+    would prove nothing. The old harness checked neither.
+  - **CI.** `.github/workflows/verify.yml` runs the controls with `--jobs "$(nproc)"`, inside the same single job, so
+    the required check keeps its name and no runner minutes go on extra jobs. Its timeout goes from 45 to 30 minutes.
+  - **Local proof.** On 4 CPUs, all 67 controls of `80da278` ran on 4 copies: 67 of 67 caught in 11 min 41 s of wall-clock time (39 min of CPU), against about 42 minutes run one after
+    another; the clean copies passed first. The full run of this head,
+    70 controls, is in the pull-request log.
+- **`providers_data.json` is non-public lineage, and RC-NAMES would catch a renderer that printed it** (13:00, point
+  3). Confirmed:
+  - `site-src/content/data/providers_data.json` is the generator's projection of the Master sheet 22_PROVIDERS_DATA.
+  - It is read only by the generator's tests, the handoff inventory, the validator (RC-NAMES takes its patterns from
+    the lineage labels) and these controls. No renderer, export or social-image script reads it, and `scripts/build.py`
+    copies only `search_index.json` and `search_aliases.json` into `static-data/`.
+  - The NEG-EW-011 name occurs in no other file under `site-src/` (one English and one Arabic label in this file).
+  - Three controls now prove the second half, so it no longer rests on reading the code:
+    - a renderer that prints NEG-EW-011's English lineage label, escaped as a page would print it, is caught;
+    - so is one that prints the Arabic label;
+    - a build that copies the whole projection into `static-data/` is caught.
+    The third control first appended the projection to an existing JSON file. That made the file invalid, the
+    validator stopped before RC-NAMES ran, and the harness reported the control NOT CAUGHT, which is its job.
+    A control may now add a file the build never writes (`static-data/providers_data.json`); the file is removed
+    afterwards.
+- **Records.** The owner note of 13:00 is recorded verbatim, append-only, in `audit/OWNER_DECISIONS_2026-10-02.md`,
+  with the owner's acceptance of the /about/ wording "against the sources it names".
+
+## 2026-10-03 — Owner B3: every page says noindex, nofollow until release
+
+Crawlers ignore a `robots.txt` that sits under a path, so until release the pages say it themselves (owner decision B3).
+- **The flag.** `site-src/deployment.json` gains `"pre_release": true`, with its rule. `scripts/discovery.py` gives
+  one robots meta. While the flag is true, every page carries `<meta name="robots" content="noindex, nofollow">` in
+  its head: the 286 localized pages, the root entry and the 404, whose `noindex` becomes `noindex, nofollow`.
+  `dist/` changes by exactly that meta in each of its 288 HTML files, and in nothing else (checked file by file).
+- **Release.** At release the flag goes false: the meta disappears and the 404 keeps its own `noindex`. The runbook's
+  step 13 now does this after the owner's acceptance, together with the web administrator's sitemap step. Step 3
+  keeps the flag true. `docs/DEPLOYMENT.md` states it, and the deploy workflow prints it.
+- **Gate RC-NOINDEX** (`scripts/validate.py`). `pre_release` must be a boolean. While it is true, every built page
+  carries exactly one robots meta, the pre-release one, in its head. Once it is false, no page but the 404 says
+  noindex. F6-G05 accepts either form of the 404's noindex. The new negative control, "a page loses its pre-release
+  noindex", is caught.
+
+## 2026-10-03 — Owner B1, B2, B5: the site under https://causewaygrp.com/financial-inclusion-evidence/
+
+Code, gate and runbook; no Master change and no public page changes. `dist/` was built before and after and all 598
+files keep their sha256.
+- **The origin may carry a path** (B1). `scripts/discovery.py` accepts `https://<host>` with an optional path of
+  lowercase segments of a-z, 0-9 and "-", with no trailing slash, query or fragment, and derives the base path from it.
+  `public_origin` stays null (B8); `site-src/deployment.json` states the rule.
+- **The published site honours the base path.** `scripts/build.py --out DIR [--origin URL]` writes the site as it is
+  published, without touching `site-src/deployment.json` or `dist/`. After the pages are written,
+  `scripts/base_path.py` moves every root-absolute reference under the path:
+  - links, images, srcset, the stylesheet and font preloads, and the root entry's refresh;
+  - the stylesheet's `url()`;
+  - the runtime's two fetches, its language prefix (search results, Compare, corrections) and the language switch;
+  - the root redirect and its stored choice;
+  - the `_headers` path patterns.
+  Each runtime address is listed and must occur as often as stated, or the build stops. Canonical, hreflang, `og:url`,
+  `og:image`, structured data, the sitemap and the printed canonical addresses already carry the path through the
+  origin. Under a path, `robots.txt` says that crawlers read only the domain's own file.
+- **`dist/` stays the review build.** Its links stay root-relative, so every gate keeps reading it at a server root.
+  This was checked: a scratch run of the validator on a base-path `dist/` reported 1,870 errors. On the same build with
+  root-relative links it reported only S04.1's language-alternate check, which expected root-relative `hreflang` for
+  any origin. That check now uses discovery's address; its result is unchanged while the origin is null.
+- **Gate (B2).** `scripts/tests/test_base_path.py` builds the decided origin into a temporary directory and serves it
+  under `/financial-inclusion-evidence/`, with its own `_headers` applied by full path and a 404 page at any depth.
+  - (a) It sweeps 296 files and 22,025 addresses.
+  - (b) In Chromium, at 390 and 1440 px in both languages, it loads the root entry, Home, /payments/, a record, /data/,
+    the three-measure Compare and a deep 404. It uses search, Compare, Copy citation, Share, print and the language
+    switch, and records every request (60 page loads, 584 requests).
+  - (c) It checks every discovery address.
+  - Its negative control injects `href="/en/about/"` into one page: the sweep and the browser both report it.
+  - It runs once, in CI's "Browser acceptance" job. Against a build left unrelocated it fails at once.
+  - Noted, not failed: browsers ask the domain root for `/favicon.ico` because no page declares an icon.
+- **Live runs under a path.** Three `test_public_tools.py` tests join server-relative links to the base correctly. The
+  live run bypasses the page policy, which `test_security_headers.py` tests; under the strict policy, Playwright's
+  evaluated waits were refused. Both suites pass against the base-path build served under the path: 35 of 36 tools,
+  one not applicable, and 288 pages under the relocated headers.
+- **Deploy.** `.github/workflows/deploy.yml` (still inactive) publishes `scripts/build.py --out` and sweeps it under its
+  path. Its publish root holds the site under the path and `_headers` at the root.
+- **Runbook (B4, B5).** `docs/RELEASE_RUNBOOK.md` "Hosting" is rewritten around the owner's three routes, with the B4
+  facts confirmed by one read-only request and a DNS lookup:
+  - preferred: our Pages project behind a Nitro `routeRules` proxy, which is guidance for CauseWay's frontend repository;
+  - App Platform: a static-site component cannot send custom response headers, so the proxy route stands;
+  - fallback: `evidence.causewaygrp.com` with a 301.
+  Each route states how the headers survive, that no corporate robots header, script or cookie reaches our responses,
+  and how it rolls back. It adds the web administrator's sitemap step, and the warning that HSTS is a whole-domain
+  decision. `docs/DEPLOYMENT.md` and CONTRIBUTING §5 follow.
+
+## 2026-10-03 — The validator in half the time; the negative-control job back inside its limit
+
+CI's "Gate negative controls" job was cancelled at its 45-minute limit on `ab380cf`. It runs the full validator once per
+control (66 controls). The validator had grown to 83 s locally.
+- **RC-NAMES** (hardened in RC-17) ran 122 patterns over every built text and social frame: 76,000 regex searches,
+  about 36 s. Each pattern now carries a literal needle, its core word, and its regex runs only on texts that contain
+  it. Every match of a pattern contains its needle; for the circular's patterns this is proved on their own lineage
+  labels at each run. Results are unchanged: 37 of 37 variants caught, 13 of 13 ordinary-vocabulary strings clean, 0
+  hits on the site.
+- **The search-smoke mirror** normalised the same texts again for each of its 102 queries. `_r4norm` and `_r4re`, both
+  pure functions, are now cached, and the digit mapping is one `str.translate` with the same result.
+- **Result:** 83 s to 38 s locally, still PASS. The five search controls and the seven name controls are caught. The
+  job's limit is unchanged.
+
+## 2026-10-03 — Owner note of 11:15 recorded; the B16 inputs and the session's check scripts made safe
+
+Records only (the owner's note of 3 October 2026, about 11:15 Cairo, section 0):
+- `audit/OWNER_DECISIONS_2026-10-02.md`: the note recorded verbatim, append-only. The session's reading follows it. One
+  part is flagged to the owner: the single truth change in the /about/ pair (3.5) stands, with the one-cell way back.
+- `audit/release_candidate/b16/`: the B16 disposition generator and its inputs.
+  - The read-only extraction at `c055abc`: 126 open items.
+  - The updates since then, and the items B16 adds.
+  - The head and tail text.
+  Until now these lived only in the session. Running `python3 audit/release_candidate/b16/make_disposition.py`
+  rebuilds the disposition table.
+- `audit/release_candidate/checks/`: the session's browser checks.
+  - `check_menu.py` and `reach.py`: the opened mobile menu at 320 and 390 px.
+  - `g0_shots.py`: the presentation pass's screenshots and first-screen text.
+  - `rc_names_variants.py`: the hardened RC-NAMES matcher on 50 variant and ordinary-vocabulary strings.
+
+## 2026-10-03 — "How numbers are presented" once; the citation in two lines; the exports carry the licence
+
+Code, from the owner's instructions of 3 October 2026, 09:50 (C5 and E), plus one presentation fix found on the way.
+- **C5.** The reading rule ("How numbers are presented" and its governed sentence) was a block under every domain
+  heading. It is now printed once, on /methodology/, as its first section (#how-numbers). Each domain answer links to
+  it once from its spine, under the governed "Methodology" heading. The domain head keeps its two governed actions.
+- **The citation in two lines (E1; Addendum 2 lesson).** A record's short citation now previews and copies as two lines:
+  - first, this resource: the title, the product, the record, CauseWay, the edition and the page address;
+  - second, the original sources: publisher, title, year and link.
+  The public tools test reads the clipboard and checks both lines.
+- **Arabic citations (presentation).**
+  - Record IDs no longer break at their hyphen; "-CLM … 001" is gone.
+  - Each URL is its own left-to-right block, so a wrapped address reads in order.
+- **Exports (E3).** When the switch is on, the exports carry the licence: LICENCE.txt holds the governed /rights/ licence
+  section verbatim in both languages, and MANIFEST.json names CC-BY-4.0. `public_downloads` stays false; the switch
+  waits on counsel's confirmation of the CC BY 4.0 text.
+- **E4.** "The licence decision" is replaced in the owner's open list by "counsel confirms the CC BY 4.0 text": README,
+  roadmap §2, DEPLOYMENT.md, the RC-B14 message and the frames docstring. The runbook and deployment.json follow with
+  the hosting work.
+- **Gates.**
+  - **RC-0950:** the reading rule is printed on /methodology/ only and linked once from each domain answer; every record
+    citation that names a source is two lines, with the page address ending the first.
+  - **Negative controls:** two new ones.
+  - **test_exports:** checks the licence.
+
+## 2026-10-03 — Steward patch: About, the trust links and "Cite this page" in the opened mobile menu (A-12, C-6, C-8)
+
+One patch to the controlled contract `site-src/content/content/navigation_interaction.json`, by this session as
+designated programme steward for that patch only (owner decisions of 3 October 2026, 09:05 point 3 and 09:50 A.3).
+- **Contract.** One key, `mobile_menu`, appended in the file's own JSON style; every earlier byte is unchanged. It names
+  the decision, the scope (below 900 px), the order (the trust links as listed, About first; then the utilities' cite
+  control) and the rule: existing governed labels only, and the header unchanged.
+- **Renderer** (`render.py`, `content.py`, `theme.py`). The opened menu carries the trust links under the footer's
+  governed group label ("Trust and responsible use"), then the cite control. Both are hidden from 900 px, where the bar
+  and the footer already show them.
+- **Checked in a browser:**
+  - 320 and 390 px, English and Arabic, on Home and a record: 7 links, About first.
+  - The cite control is reachable by scrolling, because the header is static.
+  - No horizontal overflow.
+  - Header heights are unchanged: 100, 68, 68 and 66 px.
+- **Gate RC-NAV.** Every built page's opened menu carries the contract's trust links, About first, and the governed
+  cite control, and the header's controls are unchanged. A negative control drops About from one Arabic record and is
+  caught.
+- **All gates pass:**
+  - the validator, content parity, public tools 35/36 (one not applicable), viewport 168/168;
+  - security headers, the projection check, bilingual invariance, social images.
+
+## 2026-10-03 — Release candidate RC-17: names withheld; Addendum 2 governed improvements; who publishes this; CC BY 4.0
+
+One Master transaction (e24fe737… → 433f38bf…, 150 cells; `audit/release_candidate/rc_17_addendum2.py`), with its
+code. It covers Owner Addendum 2's improvements that were still open and the governed parts of the owner's decisions of
+3 October 2026 (`audit/OWNER_DECISIONS_2026-10-02.md`): 09:05, points 1 and 2, and the consolidated note of 09:50,
+recorded verbatim, which governs (A.1–A.2, C1–C4, D, E and B7). English and Arabic change together.
+- **Who publishes this (09:50 D).**
+  - /about/, in "CauseWay's role", carries the owner's paragraph on what CauseWay is, before the funding paragraph,
+    which is byte-identical. "CauseWay" stays in Latin script in Arabic.
+  - One truth change was made, and is recorded in the decisions file: records are checked "against the sources it
+    names", because seventeen records have no single original source.
+- **Licence (09:50 E).**
+  - /rights/ opens with the licence. A new last section states it: CC BY 4.0 for the content CauseWay owns, with the
+    logo excluded.
+  - It does not cover third-party material, which stays under its publishers' terms; the resource hosts no copies of
+    their files.
+  - CauseWay asks for a two-line credit: this resource, then the original source the record names.
+  - It makes no claim of rights clearance.
+  - /terms/ points to it and gives the same citation rule.
+  - `public_downloads` stays false.
+  - The public-literal audit allows the licence version, "4.0", on those two routes only, as an identifier.
+- **/payments/ headline (09:50 C2).** The title, og title and search title is now short: "Payments: reported POS
+  terminals rose between March 2025 and June 2026; how many people use them is not measured". The full sentence, with
+  561 → 1,651 and the reporting scope, opens the page as its lead.
+- **/privacy/ (09:50 B7).** One sentence, in both languages: the resource sets no cookies. At its public address on
+  causewaygrp.com, browsers may also send a cookie that the causewaygrp.com website sets for all its pages, and the
+  resource does not read it. The runbook makes the proxy strip that cookie in both directions.
+- **Names withheld (points 1 and 2).**
+  - All twelve names of the June 2024 e-wallet circular are withheld alike.
+    - NEG-EW-011 keeps its ID, route and count of 12, its date boundary, its "does not establish" text and its link to
+      the circular. It now reads as one wallet service among twelve; its page description changes the same way.
+    - The search empty state carries one governed sentence: names from the regulator's lists and enforcement
+      decisions are not reproduced here, and the originals are linked from Data & sources.
+  - No governed field now allows an enforcement-decision name:
+    - every status event's `public_use`;
+    - the `public_claim_rule` and note of the 30 enforcement-subject rows;
+    - the provider-status passport's display requirement;
+    - the status events' own text, which now names each subject by its entity ID.
+  - CLM-015's method and /providers/ section 6 now say that the names are kept in internal source records and are not
+    reproduced.
+- **RC-NAMES, hardened.**
+  - **One normaliser:** tags, entities, percent and \u escapes, NFKC, Arabic marks and letter forms, hyphens and
+    no-break spaces.
+  - **Matching:** each name is matched on its distinctive core, with an optional Arabic prefix, whether spaced or
+    joined. Ordinary vocabulary is matched only beside its class word.
+  - **Coverage:** branch rows, every text file in the built site and every social-image frame. Failures name the record
+    ID, never the name.
+  - **Negative controls:** four new ones (a short form, a joined spelling, an Arabic prefix, «محفظة» with a one-word
+    name) on top of the earlier three.
+- **Regulatory findability (improvement 1).**
+  - The circular is typed as an instruction/circular, and the 2025 e-money amendment as a regulatory decision.
+  - The search alias "decision" / «قرار» targets regulatory decisions.
+  - /reforms/ names the amendment as Governor's Decision No. 4 of 2025.
+  - VIS-PAYMENT-RAILS names the 26 June 2024 rule as Governor's Decision No. 23 of 2024, binding exchange companies,
+    exchange establishments and money-transfer agents to the unified network only. Both were read in the signed scans.
+  - /data/'s regulatory group is in document-date order, newest first. "Verify it yourself" on /reforms/ and
+    /providers/ opens it.
+- **Search (improvement 2).** New aliases for Findex / «فيندكس» and PSP / «مزوّد خدمات الدفع». Alias 007 says that
+  «محفظة» means both an e-wallet and a loan portfolio. A whole-phrase ranking bonus was built, then withdrawn: it lifted
+  records above the governed primary routes in the search smoke tests. It is now post-launch.
+- **Compare presets (improvement 5).** /evidence/compare/ and /remittances/ offer a preset comparison, with governed
+  link labels.
+- **Copy, counts, currentness (improvements 9–11, a lesson).**
+  - The /payments/ title is shorter and makes the same claim within the same scope.
+  - The self-description counts are taken from the sheets: 165 sources and 97 payment observations, stored as numbers.
+  - "resolve … resolve" on Home and Explore is gone.
+  - Four 2021-wave records say that the Global Findex 2025 edition adds no newer Yemen observation.
+- **Gates.** RC-ADD2 is new, with checks for date order, the regulatory link, the presets, alias 002 and the
+  empty-state sentence.
+- **Review.** Two rounds, each folded into the one rerun.
+  - **First round:**
+    - **Bilingual reviewer:** ACCEPTABLE with nine minor findings, all folded.
+    - **Adversarial reviewer (entity and regulatory statements):** NOT ACCEPTABLE. Its findings were folded: the gates,
+      the remaining governed fields, the related public text and the decision's scope.
+  - **Second round, on the 09:50 copy:**
+    - **Bilingual reviewer:** NOT ACCEPTABLE. It found that "does not host" third-party data was false, and that
+      «عنوان الصفحة» reads as "page title". It also flagged the Creative Commons Arabic name, «ملفات البيانات المُصدَّرة»,
+      a URL bidi glitch, the internal-records term, and a connective.
+    - **Hostile reviewer:** NOT ACCEPTABLE. It found that "as each record's citation does" was false, that the logo was
+      inside the grant, that /providers/ claimed every decision is recorded where it shows a selection, and that the
+      owner copy's "its original source" was not true of every record. It also asked for a dated headline and for the
+      cookie stripping and release check, which are in the runbook.
+    - All were fixed.
+  - **Escalated:** NEG-EW-011's ID is the circular's own item number, so withholding the name does not withhold the
+    identity. This goes to the owner (`design/ESCALATIONS.md`, raised at RC-17).
+- **Records.**
+  - In `design/ESCALATIONS.md`, RC-8, B-2, C-10, B-7, the exports item and C-6 are closed by dated lines pointing to the
+    decisions file.
+  - The domain strip is in `docs/ROADMAP_V1_1.md` as item 27.
+
+## 2026-10-03 — Release candidate RC-16: no undated "latest"; survey coverage stated; one base disclosed
+
+One Master transaction (ebfb929c… → e24fe737…, 38 cells; `audit/release_candidate/rc_16_as_of.py`). It applies two
+"lessons from comparable products" of Owner Addendum 2, where governed fields exist, and closes two items. English and
+Arabic change together.
+- **No undated "latest".** A label that calls a measure "the latest" goes stale silently the day a newer one appears.
+  - Record titles and /people/ headings now name the wave: for example, "Account ownership: the representative measure
+    from the Global Findex 2021 wave".
+  - Page descriptions that keep the claim now say when it was checked ("As checked on 3 October 2026, …"), as CLM-017's
+    already did.
+  - A new gate, RC-LATEST, with a negative control, fails any title, description or h1 that says "latest" without a
+    check date. A denial of a single latest year still passes.
+- **Coverage.** Four 2021-wave indicator records now name the areas the survey excluded (about 23% of the population),
+  in CLM-025's governed words.
+- **B15 condition, VIS-MFI-SPINE.** The title no longer promises a view of gaps it does not draw.
+- **Register item, VIS-FIRM-FINANCE-SEVERITY.** The World Bank diagnostic, read again at p. 145, introduces its
+  tabulation "when asking for the reasons of not applying". The base may therefore be narrower than the record said.
+  The record's measurement limitation now says so, and that the base is not established
+  (`ORIGINAL_SOURCE_VERIFICATION.md` §9).
+- **Short citation.** It gives each original source's year when the source's title does not.
+- **Review.** One bilingual reviewer, NOT ACCEPTABLE at the first run:
+  - "When each function was last measured" was false: saving and borrowing were measured in 2021, but have no weighted
+    values yet.
+  - The vintage ladder's description, without "latest", changed its claim.
+  Both were corrected, with the minor findings, in one rerun.
+
+## 2026-10-03 — B15 d: figures print governed precision and link their record by name, never to themselves
+
+Code only (`scripts/yfie/visuals.py`, `render.py`, `theme.py`), from the product challenge (`PRODUCT_CHALLENGE.md`).
+- **A-9, A-10, C-16.** A difference drawn in a figure prints at the precision of the published values it is calculated
+  from, as the governed text prints it. The gender-gap chart read "9" and "11.1" where the text reads "9.0" and "11.10";
+  it now reads 9.0 and 11.10, which also settles the Arabic «9 نقطة مئوية».
+- **A-17, C-9.** On screen, a figure's foot links its record with the governed label "Open evidence record" /
+  «افتح سجل الدليل», instead of a raw left-to-right path in Arabic text. A figure on its own record page, or a Reading's
+  own figure, carries no link to itself. In print and detached frames, "Full record:" with the path is kept.
+- **Gates.** RC-B15 now also fails a figure that links its own record page, with a negative control. The visual contract
+  checks pass (2,850 assertions, 133 print checks, 0 failures).
+
+## 2026-10-03 — Release candidate RC-15: the product challenge's governed copy and data, the short citation, sharing a record
+
+One Master transaction (4282c50b… → ebfb929c…, 44 cells; `audit/release_candidate/rc_15_b15_copy.py`). It carries the
+changes the B15 red team allowed, ranked in `audit/release_candidate/PRODUCT_CHALLENGE.md`, and the code that renders
+their bindings. English and Arabic change together. One bilingual reviewer and one adversarial reviewer both returned
+NOT ACCEPTABLE at the first run; every finding was folded into one rerun.
+- **B-1, truth.** CLM-019, CLM-009, VIS-PROVIDER-TIME and the site-map description said the 2026 decisions "are matched"
+  with the roster. The Master marks every subject not yet reconciled. They now say the matching with the roster would
+  have to be done and has not been; each decision stays attached to the entities it names.
+- **A-8, B-5.** Home lists, under its gaps section, the three priorities bound to it (MA-001, MA-003, MA-005) by their
+  governed titles, with a line saying a link is not a claim to close or explain a gap. Explore shows every P0 priority
+  and says so. /measurement/ lists P0 then P1, each in ID order.
+- **B-6.** CLM-026 (32 measures specified; estimates not yet published) is bound to /measurement/.
+- **C-1.** CLM-002 links the two World Bank series it subtracts, on its source card.
+- **C-2, OWN-04.** An Evidence Record previews and copies a short citation: title, record ID, CauseWay, edition, then
+  each original source as publisher, title and locator, then the record's address. The long form stays one disclosure
+  away and copies on its own. A citation isolates each URL as it isolates identifiers.
+- **U1, game-changer.** "Share this record" sends the title, period, population and what not to conclude, verbatim,
+  with the link. It uses Web Share where the device offers it and copies the same text elsewhere; the Arabic text
+  isolates its dates and identifiers.
+- **Copy.**
+  - B-3: CLM-007 "gives a higher value", not "shows materially higher".
+  - B-10: CLM-015 says Decision No. 23 of 2024 is a separate instrument of the same date and lists it as a context source.
+  - B-12: /payments/ says what the transaction series does support, and the POS chart note no longer asserts one
+    reporting scope.
+  - C-3: Compare's description names the rows it shows.
+- **Search.** Alias 026 gains "cash assistance" / «المساعدات النقدية». A new alias 028 maps internet to connectivity.
+- **Not done.** Surfacing CWR-010 on /payments/ was not done: an answer page carries at most two Readings. That is in
+  the roadmap.
+- **Records.** `PRODUCT_CHALLENGE.md` (new, indexed); `docs/ROADMAP_V1_1.md` §3 filled; seven escalations to the steward
+  and the owner in `design/ESCALATIONS.md`.
+- **Gates.** RC-B15 checks Home, Explore, the /measurement/ order, the matching wording (the withdrawn first wording is
+  banned too), the short and long citations, the share control and CLM-002's series. A negative control checks that
+  Home keeps its bound priorities. The browser test for a record's citation now copies the short form and the long form;
+  a new test shares a record.
+
+## 2026-10-03 — B15 d: search matches numbers whole, Arabic words from their start, and governed aliases
+
+From the product challenge, these were ranked first by the red team (`PRODUCT_CHALLENGE.md`). All are code only, in
+`site-src/app.js`, mirrored in `scripts/validate.py`, whose search smoke tests and canonical probe still pass.
+- **C-5, numbers.** "6,245", "6245" and «٦٬٢٤٥» are now the same query. A decimal point stays inside a number, and a
+  number matches only as a whole number. Before, "6245" found nothing, "6,245" was searched as "245", and "11.9%"
+  surfaced an enforcement decision before the Findex records.
+- **A-2, words.** A word matches from the start of a word, after the Arabic proclitics و ف ب ل ك and the article. A
+  word of three letters or fewer matches only whole. Identifiers still match inside references (TOOL-10).
+  - «تعز» no longer returns «تعزيز…».
+  - «الريف» returns 1 result instead of 131.
+- **A-3, aliases.** A query that is a term of a governed alias group also finds the group's other terms, ranked below
+  literal hits. «المرأة» now returns 15 results, CLM-002 among them, instead of 2.
+- A browser test covers all three, and public tools pass 34/35 (1 n/a).
+
+## 2026-10-03 — B15 d, first improvements: search recovers after a failed load; two layout fixes
+
+From the product challenge's panel findings (`audit/release_candidate/PRODUCT_CHALLENGE.md`, written once the red team
+reports):
+- **A-1.** If the search index or the aliases fail to load once (a dropped connection), the failure is no longer kept.
+  The next search tries again. Before, search stayed broken until the page was reloaded.
+- **A-15, C-16.** The search input no longer overruns its dialog's padding (`box-sizing`).
+- **C-4.** At 1,200 px and wider, the Compare tool uses its section's full width. A four-record table now fits its
+  region (840 px) instead of scrolling inside a 584 px column. The scrolling region stays for narrower screens.
+
+## 2026-10-03 — Roadmap for version 1.1, first draft (B15 f)
+
+`docs/ROADMAP_V1_1.md` puts first, as the brief asks, international context from same-source aggregates, with Yemen's
+coverage caveats, and then public downloads after the licence decision. It lists the items Owner Addendum 2 sends to the
+roadmap, the inputs that would complete the 17 text-first visuals, and the library and currentness items. The product
+challenge's deferred findings are added after B15 d.
+
+## 2026-10-03 — Release candidate RC-14: first screens and drawn figures re-read; one date corrected
+
+Transaction `audit/release_candidate/rc_14_bank_list_date.py` through `run_stage.py` (Master `6568e6e6fcbb` →
+`4282c50b9bbd`; 27 cells).
+- **The re-read.** A reader who wrote none of this work re-read 65 first-screen and drawn numbers in their originals:
+  Findex, the CBY-Aden annual reports, the H1 2025 payment report, the provider matrix, the dated events, and the
+  /finance/, /reforms/ and /access/ leads.
+  - 42 match. Every English and Arabic first screen prints the same numbers.
+  - One date did not match: the provider matrix printed the bank list as "26 · 2026-09-07". The list carries no
+    printed date and was re-read on 3 October 2026, so the universe count and the 26 bank rows now carry 2026-10-03.
+    The count is unchanged. RC-8 had missed this ISO-format field.
+  - 22 values (IMF tables, RPW, UNDP dates, one SFD figure) cannot be read from here today. They are recorded for a
+    person with a browser at release: `ORIGINAL_SOURCE_VERIFICATION.md` §8 and the register.
+
+## 2026-10-03 — Six reverse traces (Owner Addendum 2, before B16)
+
+`audit/release_candidate/REVERSE_TRACES.md` traces six public objects to their locators: Home's headline claims,
+VIS-FINDEX-GAPS, VIS-POS-VALUE, RV-CWR-001, the /reforms/ chain and IMF-attributed event YSC-014. Each goes from public
+object to record, to source, to locator, and each locator was requested.
+- Six of six are unbroken, so nothing needed fixing.
+- The one locator not verifiable from here is the UNDP project page, whose CDN refuses automated requests.
+
+## 2026-10-03 — B14 e and f: the currentness re-run as one command; the release runbook
+
+- **Currentness re-run (B14 e).** `scripts/currentness_rerun.py` reads every watch point in its original and compares it
+  with what the Master holds: CBY-Aden's POS releases, its decisions and its regulation page, the World Bank's FMIIP
+  status reports, Global Findex for Yemen, and the hosts that refuse automated requests. `--append` adds the dated
+  result to `audit/FINAL_CURRENTNESS_CUTOFF.md`; it was run on 3 October 2026.
+  - Nothing newer: POS releases to June 2026, decisions to No. 18, the ISR of 8 April 2026, and Findex's 2022 data year.
+  - IMF, Remittance Prices Worldwide and the CBY Sana'a host are "check by hand".
+  - Nine CBY-Aden regulatory documents on its regulation page are not held. The /data/ group already says it is not a
+    complete register. They go to B16 (register).
+  - The signed-scan dates were RC-13.
+- **Release runbook (B14 f).** `docs/RELEASE_RUNBOOK.md` gives fourteen steps from "the owner has a hosting account and
+  a domain" to "live", each naming who does it: origin, currentness at the release date, every gate, credentials, the
+  inactive deploy switch, HTTPS and HSTS, the live checks, optional cookieless counts behind the Privacy page, open items,
+  the owner's acceptance and the tag.
+  - Cloudflare Pages is recommended, with Netlify as the alternative and the reasons stated. Neither has been tested
+    from inside Yemen, and the runbook says so.
+  - `test_security_headers.py --base` and `YFIE_BASE_URL` for `test_public_tools.py` run the same checks against the
+    live host.
+
+## 2026-10-03 — Fix: the header test no longer counts a navigation's aborted requests
+
+CI's browser job failed once on `4a90371`, in `scripts/tests/test_security_headers.py`. Six `net::ERR_ABORTED` font
+requests were listed as failures of three Evidence Records. They were the previous page's font preloads, still in flight
+when the next page started loading, and the test credited them to the page that followed. The next head passed, which
+does not make it a flake.
+
+The test now ignores `ERR_ABORTED` only. A request the policy blocks reports `ERR_BLOCKED_BY_CSP` and still fails the
+test, and violations are caught by their own event. All 288 pages pass.
+
+## 2026-10-03 — B14 c and d: an inactive deploy workflow; the performance budget
+
+- **Deploy workflow (B14 c).** `.github/workflows/deploy.yml` deploys `dist/` to Cloudflare Pages. It runs only when the
+  owner sets the repository variable `YFIE_DEPLOY_ENABLED` to `true`; until then every run is skipped. It refuses a
+  build whose `public_origin` is null, runs CI's gates, proves `dist/` is a fresh build, then deploys with a pinned
+  `wrangler`. Secrets and variables are named in the file; the host choice and the steps go to the runbook (B14 f).
+- **Performance budget (B14 d).** `scripts/performance_budget.py` serves `dist/` as a host would under `dist/_headers`
+  (gzip and the cache rules). It loads the twelve page families in English and Arabic, cold and warm, on Lighthouse's
+  mobile profile: 150 ms RTT, 1.6 Mbit/s, CPU ×4.
+  - A cold page transfers 227–304 KB in 7 requests. First paint is 0.78–2.3 s and load 1.4–2.9 s.
+  - A second visit transfers 0 bytes.
+  - Without compression a page would be about 370 KB; the 10 MB pages of 29 September went with the logo derivatives.
+  - The largest remaining cost is the three canonical font faces of the page's script (71–87 %). They are not changed.
+  - A provisional budget is recorded in `docs/SUSTAINABILITY_IMPLEMENTED_RUNTIME.json` (`release_candidate_b14d`):
+    350 KB, 8 requests, LCP 2.5 s, load 3 s. Every family meets it.
+  - Gate RC-PERF holds the byte part on every build, from the files themselves; its negative control is caught.
+    Nothing here is an operational or carbon figure.
+
+## 2026-10-03 — Release candidate RC-13: the signed-scan dates of the 2026 enforcement decisions (B14 e)
+
+Transaction `audit/release_candidate/rc_13_decision_dates.py` through `run_stage.py` (Master `efb5a7c2ce38` →
+`6568e6e6fcbb`; 32 cells).
+- **Decisions read.** The twelve 2026 decisions whose dates came from CBY-Aden's news pages were checked against the
+  signed scan each page links. Ten match.
+- **Two corrected.** Decision No. 13 was signed on 5 August 2026 and Decision No. 14 on 19 August 2026, each the day
+  before its news page. Both sources (titles in English and Arabic, document dates) and their status events (PSE-003,
+  PSE-004) now carry the instrument's date, as Decision No. 10 has since RC-8.
+- **Scans recorded.** Every decision records its scan as an additional locator, with the check date.
+- **Records.** `ORIGINAL_SOURCE_VERIFICATION.md` §7 holds every reading. The register item is closed.
+
+## 2026-10-03 — B14 a and b: data exports prepared and switched off; host headers
+
+- **Exports (B14 a).** `scripts/exports.py` writes the Evidence Records (110), public claims (60), sources (156), visual
+  rows (130), chronology (24) and Measurement Agenda (10) to `build/exports/`, never to `dist/`. Each is CSV (UTF-8 with a
+  BOM) and JSON, with a bilingual codebook and provenance on every row: record ID, source IDs, public locators and the
+  Master's SHA-256. A source without a public locator is never named.
+  - `scripts/tests/test_exports.py` checks every value against the projections by a separate path, and proves itself on
+    a planted wrong value.
+  - CI attaches the files as the artefact `yfie-data-exports`; `/build/` is ignored.
+  - Publishing is the switch `public_downloads` in `site-src/deployment.json`. It stays `false` until the owner's licence
+    decision; `build.py` copies the exports only when it is true.
+  - The codebook's wording is a draft, to be reviewed bilingually before the switch is turned on.
+- **Host headers (B14 b).** `site-src/hosting/_headers` is copied unchanged to `dist/_headers`, read by Cloudflare Pages
+  and Netlify. It carries the policy of `docs/DEPLOYMENT.md`: CSP with `frame-ancestors 'none'`, `nosniff`,
+  Referrer-Policy, Permissions-Policy, COOP and `X-Frame-Options`. Cache rules are short for HTML and search data, an
+  hour for unfingerprinted assets and thirty days for the canonical fonts. HSTS stays commented out until HTTPS is
+  confirmed on the release domain. GitHub Pages cannot set headers, and the deployment page says so.
+  - `scripts/tests/test_security_headers.py` serves `dist/` under those headers and loads all 288 pages in headless
+    Chromium: 0 policy violations, 0 failed requests, 0 script errors. CI's browser job runs it.
+- **Gate RC-B14.** `dist/_headers` matches its source, and `public_origin` and `public_downloads` stay off.
+
+## 2026-10-03 — Release candidate RC-12: B12 text-first tables, B13 research library and link check, two reviews
+
+Transaction `audit/release_candidate/rc_12_b12_b13.py` through `run_stage.py` (Master `36a61f8d5429` → `efb5a7c2ce38`;
+65 cells). `rc_12_stage_inputs.py` binds the two tables in the contract.
+
+- **RC-11's review (RC-11b), NOT ACCEPTABLE on one string; all applied.**
+  - The /payments/ frame note no longer gives OBS-00036 a half-year period, which its caveat leaves open. It no longer
+    calls consecutive months comparable without qualification either: three releases' displayed percentages contradict
+    the published totals, and the note now says that each mismatch is recorded as a discrepancy within the source.
+  - Arabic «الحلقة» for the chain's step column.
+  - "Group or gap" and "Date or period" headings.
+  - The landscape's empty-row label names what is empty.
+  - A governed "Source" corner label for the source-comparison table, replacing the prefix "Source:".
+- **B12.** The two text-first contracts whose rationale describes a table now render it from governed rows inside the
+  text frame:
+  - VIS-TARGET-RESULT-STATE shows baseline, target, and a result row saying "No observed result is held in the evidence
+    base — not zero". The World Bank ISR's placeholder "0" is not bound.
+  - VIS-FIRM-FINANCE-PATH shows each base as a row group ("Out of 328 formal establishments surveyed", "Out of 18 valid
+    loan-source responses"), with a governed marker: it is not established that the 18 come from the 31.
+
+  The generator gains `_vdc_text_table`: governed rows only, `must_equal` guards, governed headings and row headers, and
+  only on the text-first tiers. A new gate, RC-B12, checks every row header and every number on both record pages.
+  `audit/release_candidate/B12_TEXT_FIRST_DISPOSITIONS.md` disposes all 23 text-only contracts: 2 bound, 4 complete as
+  designed, and 17 with the missing Master input named.
+- **B13 a–c, the research library on /data/.**
+  - Filters by document type, publisher, document year and the domain page that uses the source, plus an order by
+    document date.
+  - The state travels in the URL (`?type=&publisher=&year=&domain=&sort=&q=`), so a filtered list can be shared.
+  - The controls appear only when the runtime runs, so without JavaScript the full list is unchanged.
+  - Each source lists the Evidence Readings that use it, besides its records.
+  - The methods and international references shelf is addressable and in the page index.
+
+  Two filters the brief names cannot be offered. The language of a source is not a governed field. Every listed source
+  already has a public original, because the publication firewall lists no other. Gate RC-B13 checks the filters, the
+  keys and the archived labels; a browser test checks filtering, the shared URL and clearing.
+- **B13 d, the link check** (`audit/release_candidate/LINK_CHECK.md`): all 156 public locators were requested.
+  - 129 OK.
+  - Five SFD newsletters had moved to the publisher's new file names; each was read and holds the values the Master
+    cites, and its locator now points to the new address.
+  - Four have no current address. Their locator is now the web.archive.org copy of the original address, and the site
+    labels it "Open archived copy (web.archive.org)".
+  - Issue 62's current file is another edition, with different table totals: a register item.
+  - 14 are refused by the publisher's CDN, which is not a broken link.
+  - One is unresolved, one host is down, one has a TLS failure and one needs sign-in.
+- **RC-12's own review, NOT ACCEPTABLE on two strings; folded in before commit.**
+  - The frame note's last sentence names the published monthly totals.
+  - The 18 responses keep the governed Arabic term «استجابة».
+  - Three Arabic should-fix items.
+- Negative controls added for RC-B12 (one) and RC-B13 (two); each is caught.
+
+## 2026-10-03 — B10 closed: the full-site accessibility audit record, the keyboard walk, one corner label
+
+- **Audit record (B10 c).** `scripts/accessibility_audit.py --all` over 143 routes × English and Arabic × 1,440 and
+  390 px (286 pages, 572 page-widths), axe-core 4.10.2. Results:
+  - 0 axe rules violated, and 0 contrast failures.
+  - 18,966 targets measured; 302 are under 24 × 24 px, of which 284 meet the inline exception and 18 the spacing
+    exception, so 0 meet neither.
+  - No unnamed interactive element, landmark or control; one `h1` per page; no heading jumps; no image without `alt`;
+    nothing wider than the viewport.
+
+  `docs/ACCESSIBILITY_AUDIT.md` and `.json` are an audit record and claim no conformance. Screen-reader passes and every
+  human judgement stay outstanding. The JSON now keeps each page's target count and only its targets under 24 px; every
+  measured target would take 3.7 MB. The summary line counts routes and pages exactly.
+- **The last empty corner cell.** The year column of the source-comparison tables on the Reading "Same year, different
+  number" is now headed by the governed period label (`visuals.rv001_tables`).
+- **Keyboard walk (B10 c).** `scripts/tests/test_public_tools.py` gains a browser test in both languages. Search, the
+  language switch, print, cite, the source filter and Compare are each reached by Tab and work from the keyboard.
+  Public tools: 32/33 pass (1 not applicable to the current data).
+- **Negative controls.**
+  - RC-LAND's control is caught.
+  - RC-B6's control was not caught: the priority card links MA-006 twice, and the control removed only the first link.
+    It now removes both, and the fault is caught. The gate itself was not changed.
+
+## 2026-10-03 — Release candidate RC-11: B10 accessibility, B11 /payments/ note, RC-10's review
+
+Transaction `audit/release_candidate/rc_11_b10_b11.py` through `run_stage.py` (Master `ed004282e057` → `36a61f8d5429`;
+30 cells). `rc_11_stage_inputs.py` binds the B11 frame note in the contract.
+
+- **B10 a.** Each edge group in the verification spine is now named by its own heading plus the page's `h1`. It no longer
+  shares the name "Continue from here" with the page's next-actions landmark. axe `landmark-unique` had flagged this on
+  44 page-widths.
+- **B10 b (NCC-02).** Every fallback table now names its row-header column with a governed label: period, group,
+  corridor and amount, what is counted, step, dimension, date or item. axe `empty-table-header` had flagged 128 nodes on
+  76 page-widths.
+- **B10 c.** The axe audit runs over all 286 documents at 1440 and 390 px (`--all`), with the record in
+  `docs/ACCESSIBILITY_AUDIT.md`. A new browser test walks search, language switch, print, cite, source filter and Compare
+  from the keyboard in both languages. No conformance is claimed.
+- **B11.** VIS-POS-TRANSACTIONS gains one frame note, written only from governed fields. It names the withheld
+  first-half-2025 POS-transaction total and says why the monthly series is shown beside it.
+- **RC-10b** (RC-10's review was ACCEPTABLE; all eleven should-fix items applied):
+  - Arabic terms «الجنس» and «النشط».
+  - Payment infrastructure states its scope.
+  - Remittances received by people, not households.
+  - Programmes for MSMEs.
+  - Evidence types now match the linked records; CLM-015, CLM-054 and the FMIIP baseline are linked.
+  - «قد» in the column heading.
+  - A governed label replaces a lone "·".
+  - No doubled punctuation.
+  - VIS-EVIDENCE-FRESHNESS lists its member records, so its verification reads as a composite of linked records.
+
+## 2026-10-03 — Accessibility audit over every page (B10 c, tooling)
+
+`scripts/accessibility_audit.py` gains `--all`, which audits every route of the built site in both languages instead of
+one page per route class (Part B B10 c asks for all pages). It also gains `--json`, which writes the raw axe findings
+with the page and a node sample for each. No page changes.
+
+## 2026-10-03 — Release candidate RC-10: the evidence landscape; RC-9's review; long time axes
+
+Transaction `audit/release_candidate/rc_10_evidence_landscape.py` through `run_stage.py` (Master `26a97c34d517` →
+`ed004282e057`), with `rc_10_stage_inputs.py` declaring the new 00_MASTER block in `master_structure.json`.
+
+- **Evidence landscape** (Owner Addendum 2, improvement 3, for VIS-EVIDENCE-FRESHNESS).
+  - The 34 dimensions of `audit/INDICATOR_COVERAGE_MATRIX.csv` are governed rows of a new 00_MASTER block, "EVIDENCE
+    LANDSCAPE".
+  - They render as a table inside the VIS-EVIDENCE-FRESHNESS frame (its record page and /evidence/), grouped by the
+    eight domains, with five columns: dimension; latest evidence in this base, with its period (the linked records'
+    titles and periods); evidence type; coverage; where to verify and what would change it (the domain page and the
+    Measurement Agenda priority).
+  - Every cell is governed text or a categorical label. There are no colour ramps, totals, roll-ups or process notes.
+  - A row with nothing says "No evidence in this base".
+  - Differences from the audit matrix: Education and Age are sufficient for their question (their gaps are on /people/
+    since RC-1), and Income links VIS-FINDEX-GAPS.
+  - Gate RC-LAND has a negative control. Links in the table meet the 24 px target.
+- **RC-9's independent review (RC-9b).**
+  - CWR-001 → MA-001 is removed: balance-of-payments inflows are not MA-001's domestic household receipt. CWR-001 is
+    recorded as a gap in `MEASUREMENT_LINKS.md`.
+  - Reading pages say what a link to a priority means.
+  - Four Arabic fixes in the priorities' decision lists.
+- **Roster total completed.** The provider matrix's limit label and INS-016 said 429; they now say 442, the roster
+  total since RC-8b. `design/reference/check_visuals.py` found it (values_printed).
+- **Long time axes.** Since RC-8 the POS panels have sixteen months, and their month and value labels collided at
+  every width in both languages (`check_visuals.py`, labels_clear; that check is not in CI). A series longer than
+  twelve periods now:
+  - labels alternate months only;
+  - prints value labels for its landmarks only: first, last, flagged months and the series high;
+  - lets the table name every value.
+
+  The label placer also allows for the wider digits of the Arabic font.
+
+## 2026-10-03 — Release candidate RC-9: Part B item B6, measurement linkage
+
+Transaction `audit/release_candidate/rc_9_b6_measurement.py` through `run_stage.py` (Master `d52dfc53cef8` → `26a97c34d517`;
+8 cells). Every link is justified in `audit/release_candidate/MEASUREMENT_LINKS.md` (new; INDEX row), quoting both sides
+in both languages.
+
+- Five Reading → priority bindings added (CWR-001 → MA-001; CWR-003 → MA-002; CWR-006 → MA-005; CWR-007 → MA-007;
+  CWR-009 → MA-006), and the seven existing ones kept. CWR-002 stays unlinked: no priority covers reconciling a restated
+  official series, and the gap is recorded rather than filled.
+- Each Reading page now shows its priorities under "Related measurement priorities" (`scripts/yfie/content.py`,
+  `render.py`). Every priority, MA-009 included, is reachable from a Reading or from a domain page.
+- /measurement/ shows each priority's governed `decisions_unlocked` (as a list) and `blocked_evidence`, under two new
+  labels (`UI-MA-DECISIONS`, `UI-MA-BLOCKED`). MA-010's Arabic now spells «تاليًا».
+- Gate RC-B6 in `scripts/validate.py` checks that every binding is linked on its Reading page in both languages, and that
+  each priority's decision list has the same number of items in both languages. It has a negative control.
+- P1-G06 (no repeated sentence on a flagship page) now treats the "This gap is examined in" link list like the other link
+  lists it already sets aside, because one Reading can now serve two priorities. Nothing else in the gate changes.
+- The Findex 2025 non-coverage and the Findex exclusions (about 23% of the population) were checked for this item: both
+  are already stated (MATCH).
+
+## 2026-10-03 — Release candidate RC-8b: the independent reviews of RC-8, in one rerun
+
+Transaction `audit/release_candidate/rc_8b_review_fixes.py` through `run_stage.py` (Master `8385ede6ebd9` → `d52dfc53cef8`;
+86 cells), with `rc_8b_stage_inputs.py` installing the contract change. Findings and the originals re-read are in
+`audit/release_candidate/ORIGINAL_SOURCE_VERIFICATION.md` §5.
+
+- **POS value unit (blocking).** RC-8 said the series is read in YER million "because only that reading reconciles with the
+  printed changes". That reason was false, because a percentage change cannot tell millions from billions. The releases
+  write the decimal mark as a comma. From January 2026 they give the value in billions: "1,262" billion is 1.262 billion,
+  i.e. YER 1,262 million. The disclosure now says so in both languages, in the summaries, chart note, passport and
+  observation caveats.
+- **Exchange and remittance roster (blocking).** CBY-Aden replaced the roster file. The one linked on 3 October 2026
+  (created 22 September 2026) lists 100 companies, 231 establishments and 111 remittance agents (442 rows), where the
+  19 August file listed 98, 225 and 106 (429). Counts, copy, contract pins, the validator's /providers/ signature and the
+  locator follow the new file. CLM-009 says the file has been replaced during 2026.
+- **CLM-019 (blocking).** The method no longer says names come "from the signed decisions"; only Decisions 10 and 18 have
+  scans.
+- **Should-fix.**
+  - "Payments page" is used consistently.
+  - The reporting-scope boundary appears where 1,651 is printed.
+  - The site's "Data & sources" page is named correctly.
+  - The evidence base holds "no law as a source document".
+  - The English uses "do not yield".
+  - The February percentage differences are "under 0.1 point, recorded, not flagged".
+  - The bank list has "no printed date".
+  - The value rows' `source_value_as_reported` carries «مليار».
+- **New open item.** The other 2026 decision dates are news-page dates; their signed scans are to be read at B14e
+  (`FINAL_OPEN_ITEMS_REGISTER.md`).
+
+## 2026-10-03 — Gate RC-NAMES: no enforcement-decision entity name is published
+
+`scripts/validate.py` gains gate RC-NAMES (owner note of 3 October 2026, point 1). It reads every provider row known only
+from a CBY-Aden status event (`PRV-*-E*`, 31 rows, English and Arabic) and fails if any core name appears in a built page,
+data file or script under `dist/`. It passes on the current build: no name appears in any of 295 files. Negative control
+"an enforcement-decision entity name is published" added to `scripts/tests/test_gate_negative_controls.py`. The bilingual
+review of RC-8 suggested this gate; no Master or page change.
+
+## 2026-10-03 — Release candidate RC-8: truth and currentness (A1, A2, POS to June 2026, Decisions 10 and 18, locators, edition)
+
+One merged transaction, as the owner's note of 3 October 2026 allows: `audit/release_candidate/rc_8_truth_currentness.py`
+(with `rc_8_pos_copy.py` for the POS copy) through `run_stage.py` (Master `5c0688d3d29d` → `8385ede6ebd9`; ledger and run
+report in `audit/release_candidate/runs/`), with `rc_8_stage_inputs.py` installing the contract change. Every original is
+recorded in `audit/release_candidate/ORIGINAL_SOURCE_VERIFICATION.md` §4.
+
+- **POS series to June 2026.** The February–June 2026 releases of CBY-Aden are listed on its Arabic payments page only;
+  the 26 September check had read the English page, which still ends at January 2026. Fifteen observations
+  (OBS-00083..00097), five source records, and every surface that named the January endpoint: Home, /access/,
+  /payments/, CLM-003, CLM-017, the three POS panels, the Readings and the chain figure RV-CWR-009 (contract and
+  `scripts/yfie/visuals.py` move to the June rows; `scripts/validate.py` pins 1,651). The May release contradicts itself
+  (+2.4% terminals, +9.9% transactions against totals that do not give them): per the owner, the totals and the
+  displayed percentages are printed, no change is derived for that month, and the chart marks May like January. The
+  YER value tile is labelled «مليار» from January 2026; the series stays in YER million, disclosed.
+- **A1** (Owner Addendum 2): the text alternative and record answer of VIS-PAYMENT-RAILS no longer name two steps the
+  drawing lacks; new gate RC-A1 in `scripts/validate.py` with a negative control.
+- **A2**: the search alias for "law" / «قانون» carries a boundary note; the /data/ regulatory scope line names the
+  issuer and says that the evidence base holds no laws.
+- **Decision No. 10** (EXT-02 closed): dated 8 June 2026 on the signed instrument; PSE-012 and the source record follow.
+- **Decision No. 18** (EXT-03 closed): the four entity names are non-public lineage only, printed nowhere; PSE-015 prints
+  as the other decisions; CLM-019 states the rule; the class label reads "Exchange company, establishments and
+  remittance agent". The five other status events whose governed `public_use` still allows a subject are escalated
+  (`design/ESCALATIONS.md`); nothing prints a name.
+- **Locators and edition.** The licensed-bank list moves to the newer Arabic file (July 2026; 26 banks, names
+  unchanged), checked 3 October 2026; the POS publication-page record lists the Arabic POS page; the January re-issue
+  is listed. The edition moves to 3 October 2026 (`audit/FINAL_CURRENTNESS_CUTOFF.md`, appended); all 286 social images
+  are regenerated because each carries the edition label. README counts follow (165 source records, 440 search records).
+
+## 2026-10-03 — Release candidate RC-7: Part A items 3 and 6 on Path A (originals read)
+
+Transaction `audit/release_candidate/rc_7_path_a.py` through `run_stage.py` (Master `97f37eccc1a9` → `5c0688d3d29d`;
+180 cells; ledger and run report in `audit/release_candidate/runs/`), with `rc_7_stage_inputs.py` installing the VIS-FIRM-CONSTRAINTS contract change. Every
+check is recorded in `audit/release_candidate/ORIGINAL_SOURCE_VERIFICATION.md`.
+
+- **Item 3, IMF Country Report No. 26/80** (read in full from the IMF eLibrary). YSC-008 confirmed. YSC-014's values
+  are confirmed against the staff report's text and now attributed to it as the banking sector's ratios, ending at
+  2.5; a note says the report's FSI table gives other values and that neither states a unit or the ratios' coverage.
+  YSC-015 takes the report's wording; YSC-017 reads US$350 million (not "about"), with a note that the report's debt
+  sustainability analysis dates the same amount to June 2025. The four "not yet checked" notes are removed; EXT-01 is
+  closed in the register.
+- **Item 6, World Bank, Yemen Financial Sector Diagnostics (2024), Table 8.** All sixteen values match; rows 9–16 are
+  drawn with eight new labels in the source's item wording, and the partial-list note is gone. The survey is named as
+  the source names it, "the 2022 Yemen Enterprise Survey" ("custom" is not the source's word), in both languages.
+  The method cites Table 8, discloses that Figure 108 and the source's other tabulations (Figure 83; p. 145) differ,
+  and names the formal-firm sample; the boundary against the "biggest obstacle" indicator rests on the indicator and is
+  stated on CLM-005 too. The report's Arabic title is written one way.
+- Independent reviews before commit: one reviewer (ACCEPTABLE, ten should-fix) and a three-lens workflow with
+  adversarial checks (English and Arabic lenses NOT ACCEPTABLE before fixes); every blocking and should-fix finding
+  applied (ledger `independent_review`).
+- `audit/OWNER_DECISIONS_2026-10-02.md` gains the owner's note of 3 October 2026, 03:10 (Decision 18 names withheld;
+  POS update conditions; review depth and order by release value), verbatim, append only.
+
+## 2026-10-03 — Release candidate RC-6: Part B item B4, Arabic credit lines
+
+Transaction `audit/release_candidate/rc_6_arabic_credits.py` through `run_stage.py` (Master `2b609e1928f8` → `97f37eccc1a9`;
+9 cells; ledger and run report in `audit/release_candidate/runs/`), with `rc_6_stage_inputs.py` installing the new `34_EVIDENCE_PASSPORTS` column
+`publisher_ar` in `scripts/projection/master_structure.json`. Every drawn figure's credit line now prints in the page's
+language: the Arabic edition gives the institutions' Arabic names, taken from the forms the Master already uses, with
+a product name that Arabic writes in English (Global Findex, Remittance Prices Worldwide) in parentheses. The generator
+(`scripts/projection/derived.py`) credits each institution once. A bare institution name folds into one of its
+products only when its source's governed title names that product; otherwise the bare name is printed once. The Arabic
+detached caption credits in Arabic too. Independent bilingual review: NOT ACCEPTABLE as first staged (blocking: the
+World Bank's FMIIP record was credited to the Global Findex on RV-CWR-004), every finding applied and re-reviewed
+ACCEPTABLE. The survey behind VIS-FIRM-CONSTRAINTS is credited as its source names it, "World Bank 2022 Yemen
+Enterprise Survey" (read in the original); `design/reference/check_visuals.py` checks each credit in its own language
+and direction.
+
+## 2026-10-02 — Release candidate: Arabic dates isolated, systemically (owner request after RC-5)
+
+The Arabic reviewer's blocking finding in RC-5 (ISO dates displayed reversed) treated as a class. Every Arabic page was
+swept (`audit/release_candidate/ARABIC_DATE_ISOLATION_SWEEP.md`): 114 digit-hyphen-digit runs on 44 pages were printed
+without left-to-right isolation (26 in prose, 42 in citations, 8 in tables, 2 in titles, 36 in meta content), and the
+runtime wrote 16 such text nodes into search results and Compare. All are fixed; no governed word changed.
+
+- `scripts/yfie/text.py`: `NUM_RANGE` isolates a range at the end of a sentence and a range of thousands, and neither it
+  nor `ISO_DATE` starts inside an identifier; a new `ID_RUN` isolates identifiers (citations use it in place of a
+  prefix list); in a right-to-left document the title and the displayed meta content take the Unicode isolates.
+- `site-src/app.js`: `iso()` uses the renderer's revised `LTR_RUN` and isolates identifiers with the same `ID_RUN`.
+- B2c: no ISO date is left in Arabic running prose; ISO stays, isolated, in tables, data cells, citations and the
+  governed period lines.
+- Gate `RC-DATES` in `scripts/validate.py`, a browser test for the runtime, and three negative controls (each caught).
+  Ten social images regenerated (their frame text holds such a run); 276 unchanged.
+
+## 2026-10-02 — Release candidate: Owner Addendum 2 saved
+
+`audit/release_candidate/INSTRUCTIONS_ADDENDUM_2026-10-02.md` (with its `audit/INDEX.md` row) holds the owner's second
+addendum to the release-candidate brief, verbatim from its BEGIN to its END marker. It adds release defects A1
+(VIS-PAYMENT-RAILS: the text alternative names a step its drawing and table lack) and A2 (search for "law" / «قانون»
+needs a boundary note; the B5 scope line names what is not held), improvements 1–11 inside B15d, and items for B12,
+B13d, B14e and B16. Nothing is applied in this commit; the pull request's checklist carries the items under "Addendum 2".
+
+## 2026-10-02 — Release candidate RC-5: Part B editorial passes B2 (Arabic) and B3 (English)
+
+Transaction `audit/release_candidate/rc_5_editorial.py` through `run_stage.py` (Master `0fb6c16de6db` → `2b609e1928f8`;
+454 cells; ledger and run report in `audit/release_candidate/runs/`), with `rc_5_stage_inputs.py` installing the Arabic
+period mappings of the provider matrix in the visual design contract. Every change is listed with FROM, TO and reason in
+`audit/release_candidate/ARABIC_EDITORIAL_LEDGER.md` (B2: 122 applied) and `ENGLISH_EDITORIAL_LEDGER.md` (B3: 150 applied,
+135 with their Arabic pair); no number, unit, period, universe or limit changed. Independent review before commit, Arabic
+and English: both NOT ACCEPTABLE before fixes (Arabic: 1 blocking, ISO period cells displayed reversed on `/ar/providers/`;
+English: 1 blocking, governorates called districts), every blocking and should-fix finding applied; English finding 15
+(a gloss for "P0") is deferred to B15.
+
+- **B2 a–e:** the Arabic observations recorded in `design/ESCALATIONS.md`; one Arabic term per concept; ISO dates in
+  Arabic prose; one form of the Findex fieldwork window; further defects on the main pages.
+- **B2 f (A3 escalation):** accessible summaries that restated their figure's boundary drop the restating sentence.
+- **B2 g, h:** the provider matrix prints Arabic periods and states (new `22_PROVIDERS_DATA` columns
+  `reference_state_ar`, `reference_period_ar`) and a governed context lead-in (UI-VIS-MATRIX-CONTEXT, "Context:" / «السياق:»).
+- **B3:** the English pass — plain register, consistent terms, and meta descriptions written as sentences of 155
+  characters or fewer.
+- Renderer: the matrix's Arabic dates (`date_ar`) and context lead-in; the citation preview wraps long isolated identifiers at 320 px.
+  13 social images regenerated (their frame text changed); the rest stay byte-identical.
+
+## 2026-10-02 — Release candidate RC-4: Part B items B5, B7, B8, B9
+
+Transaction `audit/release_candidate/rc_4_partb_strings.py` through `run_stage.py` (Master `3c6c66beddedb` → `0fb6c16de6db`;
+ledger and run report in `audit/release_candidate/runs/`). Every string is the brief's wording, English and Arabic; one
+governed citation line (UI-CITE-PAGE-LINE) re-uses the record line's words. Independent review: NOT ACCEPTABLE before fixes
+(1 blocking, 4 should-fix), all applied before commit (ledger `independent_review`).
+
+- **B5 /data/:** "Rules, decisions and official lists" groups the 23 sources whose governed type is an enforcement decision,
+  circular or instruction, regulatory decision, regulation, or official list (the one curated card linked, not duplicated),
+  with its scope line; sources with no governed type show "Document type not recorded" (EAD-07).
+- **B7 Compare:** the "selected set" sentence in the intro and under the "record not available for comparison" error.
+- **B8 /data/:** the reuse terms stated once above the source list; the older directory paragraph drops its closing
+  reuse clause (each card keeps its label).
+- **B9 every page:** a visible citation preview (the record's governed citation, or the page title and UI-CITE-PAGE-LINE,
+  with the canonical address), "Copy citation" copying exactly that text, and "Print this page". In Arabic the record and
+  source identifiers and the publisher's name are isolated left-to-right (the review's blocking finding); no "?." after a
+  question title; the Compare intro keeps its paragraphs.
+- Validator RC-GB, two negative controls and a browser test hold all four.
+
+## 2026-10-02 — Release candidate Part B, B1: method text on the 13 table-only records
+
+`scripts/yfie/content.py` no longer suppresses the governed method text of the 13 `NO_GOVERNED_CONTRACT__TABLE_ONLY`
+records (owner decision A4 / C6 revised): each record page, and each frame that prints its record's method, shows it in
+both languages. All 13 were read in full and are reader-facing method statements; none was withheld. Validator PB-0401,
+which forbade the text as a "draft encoding note", now requires it like every other record's method (negative control
+added). Register EAD-12 carries a dated line; table rows for the 13 stay post-launch.
+
+## 2026-10-02 — Release candidate Part B, B0: the owner's Part B decisions recorded
+
+`audit/OWNER_DECISIONS_2026-10-02.md` gains the dated section "Addendum — 2 October 2026 (Part B)" (append only): A4 / C6
+revised (the 13 table-only records' method text is rendered), the human accessibility audit replaced by the extended
+automated audit (no conformance claimed), the Part B steward and editor designation, the static architecture, the Arabic
+default at the neutral root, the unchanged product name, and the owner rules on numbers, pages and closed decisions,
+verbatim.
+
+## 2026-10-02 — Release candidate G5: records reconciliation
+
+`audit/RECORDS_RECONCILIATION_2026-10-02.md` (with its `audit/INDEX.md` row): one row per item of the brief's G5 list —
+`implementation_target.ui` names the Python renderer (C9); the context's sustainability pointer names the implemented-runtime
+measurement (C9); DEBT-008 reclassified as not blocking release (C8, A8); checkpoint §4 no longer names Design as next;
+EAD-07's label request raised; historical ledgers left as they are, register §8 governing; the master logo's byte count
+corrected in `docs/SUSTAINABILITY_METHOD.md`; `site-src/deployment.json` state `PRE_RELEASE_PRODUCTION_RUNTIME`
+(`public_origin` still null); README's IBM Plex lines checked against the shipped fonts (no change); README status for
+after this pull request. The four files inside the runner's snapshot went through `run_stage.py --install`
+(`audit/release_candidate/g5_stage_records.py`). C1–C5 confirmed still holding.
+
+**Erratum to the entry of 29 September 2026 (EAD-01, "Every gate keeps its assertion …").** That entry says it "corrects the
+planning appendix of 29 September". No such appendix is in the repository: it was the implementing session's working plan
+and was never committed. The statement being corrected — that Explore's clusters "already come governed, through the
+handoff inventory's `question_groups`" — is described in the EAD-11 escalation in `design/ESCALATIONS.md`. The entry
+itself is left as written.
+
+## 2026-10-02 — Release candidate G4 (part 2): EAD-03 — the logo's web-size derivatives
+
+Owner decision EAD-03 (`audit/OWNER_DECISIONS_2026-10-02.md`). `scripts/logo_derivatives.py` writes eight pure Lanczos
+resamples of the unchanged master to `site-src/assets/logo/` (32, 40, 48, 64, 72, 80, 96, 144 px; 36,699 bytes in all) and its
+`--check` compares each one's pixels with a fresh resample (new CI step; CONTRIBUTING.md §5; Pillow 11.3.0 pinned in
+`requirements.txt`). `render.logo()` serves them with `srcset`/`sizes` on the product bar, the institutional band and the
+404 head; the export identity line uses 32/64; the social-image template keeps the master, so the 286 images are unchanged.
+Validator RC-G4 fails a page that loads the master or names a missing derivative (negative control added). Cold page weight,
+EAD-10 method: 10.31–10.71 MB before, 0.30–0.69 MB after (`audit/release_candidate/page_weight/PAGE_WEIGHT_EAD-03.md`).
+DEBT-016 closed; `design/08_ASSET_MAP.md` §1 and the register carry dated lines.
+
+## 2026-10-02 — Release candidate G4 (part 1): search, A3, A5, shipped features, Arabic counts
+
+Code only; no Master or contract change. Every behaviour has a validator check (RC-G4, P2-G02) with a negative control, and
+the browser suite covers the tools.
+
+- **Search** (item 1, A6 / C7; EAD-06): when the dialog caps its ten hits, the status gives the true total
+  (UI-JS-SEARCH-RESULTS-OF, "Showing 10 of {m} results") and a link carries the query to the Evidence directory filtered to
+  evidence records (`/evidence/?q=…&type=evidence`); the directory shows every match. A result-type filter
+  (UI-JS-SEARCH-TYPE-FACET / -ALL, the governed type labels) narrows both searches; on the directory it is URL-addressable.
+- **A3 / C3, the double boundary** (item 4): on the page a figure's text alternative — and the Compare standfirst — is the
+  governed accessible summary; the boundary prints once, in the foot. Export frames keep the full alt text (`_detached`).
+  `check_visuals.py` boundary_once_in_foot and `check_site.py` boundary_once_per_frame now count the visible text
+  alternative too; they report eight frames whose governed summary restates its boundary (escalated for the Part B
+  editorial pass in `design/ESCALATIONS.md`).
+- **A5 / C4, the retired frame** (item 5): the RETIRE_FROM_DESIGN tier is excluded from the domain depth frames;
+  `/reforms/` no longer shows VIS-CAPITAL-CONTEXT and keeps its record link; `never_drawn` rejects a text frame;
+  `design/06_VISUAL_TABLE_SYSTEM.md` §1 records the removal.
+- **Shipped features** (item 6): every link that opens a new tab carries UI-EXTERNAL-NEW-TAB (visually hidden, or at the end
+  of its aria-label); fallback tables whose rows carry different units head the value column with
+  UI-VIS-VALUE-UNIT-PER-ROW (VIS-FINDEX-GAPS); the Compare prompt ("Select at least two records.") stands beside the
+  controls and shows only while fewer than two records are selected; the Compare status is in label-value form (RC-3).
+- **Arabic counts in visuals** (item 7): a count printed with its unit noun reads «العدد: 561», «شركات الصرافة: 98».
+- Item 3 (every remaining code FAIL / CONDITION of `audit/PR8_INDEPENDENT_ACCEPTANCE.md`) is A3, A5 and A6, all above.
+
+## 2026-10-02 — Release candidate G3: EAD-11 — the question sets move into the presentation contract
+
+Steward patch by owner decision (`audit/OWNER_DECISIONS_2026-10-02.md`, EAD-11), installed through `run_stage.py`
+(`audit/release_candidate/g3_stage_presentation.py`; Master unchanged). The two entries recorded under EAD-11 in
+`design/ESCALATIONS.md` — Home's four starting questions and Explore's four groups — sit, values unchanged, under
+`question_sets` in `site-src/content/presentation_priority.json`. The generator rejects an unknown question or heading and a
+missing or repeated question (`derived.presentation_contract`; unit test `test_question_sets_guards`); the renderer
+(`scripts/yfie/content.py`) and the handoff inventory read the sets there, and `scripts/yfie/question_sets.py` is deleted.
+Home and Explore are byte-identical before and after in both languages, as is the handoff inventory (hashes in
+`audit/release_candidate/runs/G3-EAD-11_RUN_REPORT.json`). EAD-11 closed in the register and in `design/ESCALATIONS.md`.
+
+## 2026-10-02 — Release candidate RC-3: governed interface strings (items 11, 12, 18, 19, 20)
+
+Transaction `audit/release_candidate/rc_3_interface_strings.py` through `run_stage.py` (Master `ecc228beec41` → `3c6c66beddedb`;
+ledger and run report in `audit/release_candidate/runs/`). Every label is the brief's own wording, English and Arabic together.
+
+- **New strings** (04): UI-JS-SEARCH-RESULTS-OF (item 11); the five provider-matrix headings and UI-VIS-CAT-PRV-CLASS-PSO
+  (item 18); UI-JS-SEARCH-TYPE-FACET, UI-JS-SEARCH-TYPE-ALL, UI-JS-SEARCH-SEE-ALL-EVIDENCE, UI-EXTERNAL-NEW-TAB and
+  UI-VIS-VALUE-UNIT-PER-ROW (item 19). Their runtime and renderer use ships in G4.
+- **Changed strings**: UI-JS-COMPARE-SELECTED in label-value form, "Records selected: {n}" / «السجلات المختارة: {n}», with the
+  Compare status line in `site-src/app.js` filling it (item 19); UI-VIS-UNIT-PP Arabic «نقطة مئوية» (item 20); four source
+  records' resource category "Measurement methods and international references" / «مناهج القياس ومراجع دولية» (item 12).
+- **Provider observability matrix** (VIS-PROVIDER-OBSERVABILITY, /providers/ and its record): drawn now that its six labels
+  are governed (DL-D7-001). The payment-system-operators row prints UNKNOWN in every dimension, the three institution
+  events following as context in the status cell and its fallback table (the contract's `known_gap`; `scripts/yfie/visuals.py`).
+- **Independent review**: ACCEPTABLE. Two findings need governed content and are escalated in `design/ESCALATIONS.md`: Arabic
+  text for four English-only period values the Arabic matrix now shows, and a lead-in marking the operators' context events.
+
+## 2026-10-02 — Release candidate RC-2: trust copy (items 9, 10, 13, 14, 15)
+
+Transaction `audit/release_candidate/rc_2_trust_copy.py` through `run_stage.py` (Master `ebf03d6fe4cf` → `ecc228beec41`;
+ledger and run report in `audit/release_candidate/runs/`), with `rc_2_stage_inputs.py` staging the public inventory contract,
+the projection manifest and `README.md` (`--install`). Independent bilingual review: ACCEPTABLE; its two should-fix findings
+applied before commit (below), two owner-wording notes recorded in the ledger.
+
+- **/about/** §6: the owner-approved funding paragraph, verbatim, after "CauseWay’s role" (item 9; OWN-01).
+- **/corrections/** "How history works": the edition statement, cut-off 26 September 2026 (item 10; UI-CONTENT-VERSION unchanged).
+- **YSC-012** cites the two 26 June 2024 CBY-Aden instruments; the public count *chronology_events* follows its definition
+  ("Dated events") through the new generator rule `count_where_not_in` — 23, YSC-020 (the analytical rule) excluded — with the
+  same rule in the validator's recount, `scripts/rebind_authority.py` and the generator unit test (item 13).
+- **Sheets 00 and 37**: count statements set to the derived values; the seven COUNTA formula cells keep their formulas and only
+  their cached results change (`rc_lib.set_formula_cache`), so the 37 READY/REVIEW checks still compare a live count (item 14).
+- **Publisher name**: no Arabic transliteration of CauseWay in any Master cell (item 15; no write).
+
+## 2026-10-02 — Release candidate RC-1: Master truth fixes (items 1–8, 16, 17)
+
+Transaction `audit/release_candidate/rc_1_truth_fixes.py` through `run_stage.py` (Master `17db032b15da` → `ebf03d6fe4cf`;
+ledger and run report in `audit/release_candidate/runs/`), with `rc_1_stage_inputs.py` staging the visual design contract and
+`master_structure.json` (`--install`). English and Arabic together; an independent bilingual review (1 blocking, 6 should-fix,
+8 optional) was applied before commit, its deferrals recorded in the ledger.
+
+- **/people/** §3–4 extend to the education and age gaps that VIS-FINDEX-GAPS draws (item 1); the VIS-SOURCE-COMPARISON
+  summaries take the brief's wording (item 2).
+- **Methodology and EXT-01, Path B** (item 3): no source host is reachable from this session; the lead sentence is replaced and
+  YSC-008/014/015/017 print a verification note (new 14 columns `verification_note_en/_ar`). EXT-01 stays open.
+- **Units** (items 4, 17): VIS-POS-VALUE displays whole YER million; remittance prose in USD million; YSC-004, the CBY-Aden rate
+  and the SFD savers count in one notation. Sweep and dispositions: `audit/release_candidate/FOUR_DIGIT_UNIT_CHECK.md`.
+- **CBY-Aden scope** on the RV-CWR-004 lane and RV-CWR-009 rows (item 5); **VIS-FIRM-CONSTRAINTS** partial-list note, Path B
+  (item 6); the disagreement legend, CLM-003 and the POS summaries describe only what is drawn (item 7).
+- **Firewall adjudications** (item 8): RV-CWR-009 OPERATION KEEP; VIS-REMITTANCE-COST rpw MEASURED → REPORTED; RV-CWR-001
+  IMF staff path KEEP.
+- **use_rule pointers** to `scripts/yfie/content.py` (item 16; PR #8 acceptance A7 item 8 / C9).
+- **Code**: the renderer prints the chronology verification note and the POS scope; `firm_constraints` prints frame labels.
+- **Gates**: `scripts/tests/test_content_parity.py` is the standing content gate (CI step, two negative controls); the cutover
+  parity test exits 2 ("pinned") once the Master moves past its oracle. Validator S05.1 signature updated for the Reading's new
+  unit. Methodology social images regenerated.
+- **Register**: dated EXT-01 and VIS-FIRM-CONSTRAINTS lines in `FINAL_OPEN_ITEMS_REGISTER.md` §3.
+
+## 2026-10-02 — Release candidate G1: the owner's decisions recorded under the register rows they affect
+
+`FINAL_OPEN_ITEMS_REGISTER.md` (append only, per its §9 rule): one dated "owner decision, see `audit/OWNER_DECISIONS_2026-10-02.md`"
+line under OWN-01, OWN-02, OWN-03, OWN-04 and OWN-05 (§5), under EAD-11 and for D7 (§1; EAD-03 already had its line from the
+before-merge commit), and the new item **EAD-12** for A4 / C6 — the 13 `NO_GOVERNED_CONTRACT__TABLE_ONLY` records; post-launch;
+no change in this edition. No Master, projection, `dist/` or controlled-contract byte changes.
+
+## 2026-10-02 — Release candidate: start (G0)
+
+Branch `code/release-candidate-fixes` from `main` at `38a9a97` (pull request #8 merged; its before-merge conditions met). Baseline
+green: checksums current, `WEBSITE REPOSITORY VALIDATION PASS`; Production Master SHA-256 `17db032b…8690b`, Page Specs
+`d4574804…b69aa`, both as found. This commit saves the owner's brief verbatim as `audit/release_candidate/INSTRUCTIONS.md`
+(indexed in `audit/INDEX.md`; the folder is classed `CURRENT_PROGRAMME_RECORD`) and changes nothing else. The pull request
+description carries the checklist of every Part A and Part B item and the progress log.
+
+Not declared: PUBLIC RELEASE READY. Not claimed: WCAG conformance.
+
 ## 2026-10-02 — Pull request #8: the before-merge conditions C1–C5 met, in records only
 
 `audit/PR8_INDEPENDENT_ACCEPTANCE.md` returned MERGE AFTER CONDITIONS on the production runtime (head `74d79a1`). This commit

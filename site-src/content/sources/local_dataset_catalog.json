@@ -11,7 +11,7 @@
     "dataset_id": "LOCAL-PAYMENTS",
     "file": "data/payments_data.json",
     "domain": "Payments and digital-finance administrative evidence",
-    "record_rows": 85,
+    "record_rows": 100,
     "runtime_role": "LOCAL_STATIC_INPUT",
     "future_adapter_rule": "Future APIs/connectors must emit the same semantic fields and stable IDs; UI meaning and evidence state may not change silently."
   },
@@ -35,7 +35,7 @@
     "dataset_id": "LOCAL-PROVIDERS",
     "file": "data/providers_data.json",
     "domain": "Provider identity/status evidence",
-    "record_rows": 141,
+    "record_rows": 145,
     "runtime_role": "LOCAL_STATIC_INPUT",
     "future_adapter_rule": "Future APIs/connectors must emit the same semantic fields and stable IDs; UI meaning and evidence state may not change silently."
   },

@@ -23,6 +23,19 @@ def plain_num(x, year: bool = False) -> str:
     return esc(x)
 
 
+def decimals(x) -> int:
+    """The number of decimals a governed value is published with (16.11 → 2, 12.6 → 1, 5 → 0)."""
+    if isinstance(x, float) and not x.is_integer():
+        return len(repr(x).split(".")[1])
+    return 0
+
+
+def at_precision(x, dec: int) -> str:
+    """RC-15 (B15 d, A-9/C-16): a difference printed at the precision of the published values it is calculated from, as
+    the governed text prints it (16.11 − 5.01 = 11.10, not 11.1; 12.6 − 3.6 = 9.0, not 9)."""
+    return f"{x:,.{dec}f}" if isinstance(x, (int, float)) and not isinstance(x, bool) and dec > 0 else plain_num(x)
+
+
 def num(x, year: bool = False) -> str:
     """plain_num, isolated as a left-to-right run for HTML text (never inside SVG <text>)."""
     return f'<bdi dir="ltr">{plain_num(x, year)}</bdi>'
@@ -37,19 +50,31 @@ def sep(v: dict, kind: str = "semi") -> str:
     return JOINERS[kind]["ar" if v.get("lang") == "ar" else "en"]
 
 
-def val_unit(y, unit) -> str:
+def label_value(v: dict | None, unit: str) -> bool:
+    """G4 item 7 (release candidate): in the Arabic edition a count printed with its unit noun inside a visual takes the
+    label-value form the public inventory sets for Arabic counts («العدد: 561», «شركات الصرافة: 98»); English keeps
+    "561 Number". A count's unit is the governed count label (UI-VIS-UNIT-COUNT) or, on the provider matrix, the
+    count's own noun (the caller says so by passing unit=None and checking the language itself)."""
+    return bool(v) and v.get("lang") == "ar" and bool(unit) and unit == v.get("count_unit")
+
+
+def val_unit(y, unit, v: dict | None = None) -> str:
     """A value with its governed unit for HTML text. A unit that opens with "%" travels inside the value's isolate
     ("11.9%": separated from its digits the sign sits on the wrong side after Arabic letters, and the prose writes it
-    closed); any other unit follows the value after a space ("561 Number")."""
+    closed); any other unit follows the value after a space ("561 Number") — in Arabic a count is "label: value"."""
     u = "" if unit is None else str(unit)
     if u.startswith("%"):
         return f'<bdi dir="ltr">{plain_num(y)}%</bdi>{esc(u[1:])}'
+    if label_value(v, u):
+        return f"{esc(u)}: {num(y)}"
     return f"{num(y)} {esc(u)}"
 
 
-def val_unit_plain(y, unit) -> str:
+def val_unit_plain(y, unit, v: dict | None = None) -> str:
     """val_unit for plain text that the caller escapes as a whole (alt text, text-built table cells)."""
     u = "" if unit is None else str(unit)
+    if label_value(v, u):
+        return f"{u}: {plain_num(y)}"
     return f"{plain_num(y)}{u}" if u.startswith("%") else f"{plain_num(y)} {u}"
 
 
@@ -84,7 +109,7 @@ def rv001_tables(d: dict, v: dict, cls: str = "rvtab") -> str:
     group with its own source. Scoped headers; caption with title, period and universe."""
     L = v["labels"]
     cap = f'{esc(v["title"])} — {esc(v["period"])} — {esc(v["universe"])}'
-    t1 = (f'<table class="{cls}"><caption>{cap} — {num(d["panel1"][0]["x"], year=True)} · {esc(d["unit_usd"])} · {esc(L["reported"])}</caption><thead><tr><th scope="col">{esc(L["source"])}</th><th scope="col">{esc(d["unit_usd"])}</th></tr></thead><tbody>'
+    t1 = (f'<table class="{cls}"><caption>{cap} — {num(d["panel1"][0]["x"], year=True)} · {esc(d["unit_usd"])} · {esc(L["reported"])}</caption><thead><tr><th scope="col">{esc(th(v, "source"))}</th><th scope="col">{esc(d["unit_usd"])}</th></tr></thead><tbody>'
           + "".join(f'<tr><th scope="row">{esc(r["series_label"])}</th><td class="num">{num(r["y"])}</td></tr>' for r in d["panel1"])
           + f'<tr><td colspan="2" class="marker">{esc(L["same_year_revision"])}</td></tr></tbody></table>')
     # Panel 2: one table per lane. The two indexed paths are separate series that never share a value axis (Lock §4.1.5),
@@ -94,7 +119,7 @@ def rv001_tables(d: dict, v: dict, cls: str = "rvtab") -> str:
     for label, series, index in ((d["label_cby"], d["cby"], d["cby_index"]), (d["label_imf"], d["imf"], d["imf_index"])):
         rows = "".join(f'<tr><th scope="row">{yr}</th><td class="num">{num(next(r for r in series if r["x"] == yr)["y"])}</td><td class="num">{num(index[yr]["value"])}</td></tr>' for yr in (2021, 2022, 2023, 2024))
         lanes.append(f'<table class="{cls}"><caption>{cap} — <span dir="auto">{esc(label)}</span> — {esc(d["unit_index"])} · {esc(L["derived"])}</caption><thead>'
-                     f'<tr><th scope="col"></th><th scope="col">{esc(d["unit_usd"])}</th><th scope="col">{esc(d["unit_index"])}</th></tr></thead><tbody>{rows}</tbody></table>')
+                     f'<tr><th scope="col">{esc(th(v, "period"))}</th><th scope="col">{esc(d["unit_usd"])}</th><th scope="col">{esc(d["unit_index"])}</th></tr></thead><tbody>{rows}</tbody></table>')
     return t1 + lanes[0] + f'<p class="marker between-tables">{esc(L["not_comparable"])}</p>' + lanes[1]
 
 
@@ -192,10 +217,12 @@ def frame_foot(v: dict, cite_label: str, origin: str | None, open_label: str | N
     L = v["labels"]
     canon = (origin or "") + v["canonical_href"]
     credit = f'<p>{credit_line(v)}</p>' if v.get("credit") else ""
-    link = (f'<a class="canon" dir="ltr" href="{esc(v["canonical_href"])}">{esc(canon)}</a>' if not open_label
-            else f'<a class="canon-l" href="{esc(v["canonical_href"])}">{esc(open_label)}</a>')
+    # RC-15 (B15 d, A-17): on screen the record link reads as the governed open-record label, and the record's own page
+    # carries none (no self-link); "Full record:" with the path stays in print, export and detached frames
+    path = f'<span class="canon-p">{esc(L["full_record"])} <a class="canon" dir="ltr" href="{esc(v["canonical_href"])}">{esc(canon)}</a> ·\u00a0</span>'
+    screen = "" if v.get("here") else f'<span class="canon-s"><a class="canon-l" href="{esc(v["canonical_href"])}">{esc(open_label or L["open_record"])}</a> ·\u00a0</span>'
     return (f'<div class="foot"><p class="b"><b>{esc(L["what_not_to_conclude"])}:</b> {iso_run(v["prohibited_inference"])}</p>{credit}'
-            f'<p>{esc(L["full_record"])} {link} ·\u00a0<span class="ed">{esc(v.get("edition") or "")}</span>'
+            f'<p>{path}{screen}<span class="ed">{esc(v.get("edition") or "")}</span>'
             f'<span class="cite-sep"> ·\u00a0<button type="button" class="tbtn" data-cite>{esc(cite_label)}</button></span></p></div>')
 
 
@@ -214,7 +241,7 @@ def rv001_figure(v: dict, cite_label: str, origin: str | None, heading: str = "h
             f'<div class="lane"><{sub}>{esc(d["label_imf"])}</{sub}><p class="ph">{esc(d["unit_index"])} · {esc(v["labels"]["derived"])}</p>{base(d["imf"])}{lane(d["imf_index"], "diamond")}</div></div><p class="cap note">{esc(f["note"])}</p></div></div>'
             + frame_foot(v, cite_label, origin)
             + f'<div class="alt" data-visual-fallback="ordered-text"><{sub} class="alt-h">{esc(v["labels"]["text_alternative"])}</{sub}>'
-            f'<p class="small"><b>{esc(v["labels"]["what_it_shows"])}</b> {iso_run(v["alt_text"])}</p><p class="small"><b>{esc(v["labels"]["scope"])}:</b> {iso_run(f["scope"])}</p>'
+            f'<p class="small"><b>{esc(v["labels"]["what_it_shows"])}</b> {iso_run(text_alt(v))}</p><p class="small"><b>{esc(v["labels"]["scope"])}:</b> {iso_run(f["scope"])}</p>'
             + table_region(v, rv001_tables(d, v)) + "</div>"
             + f'<figcaption class="sr-only">{iso_run(v["title"])}</figcaption></figure>')
 
@@ -222,9 +249,20 @@ def rv001_figure(v: dict, cite_label: str, origin: str | None, heading: str = "h
 FIGURES = {"RV-CWR-001": rv001_figure}
 
 
+def text_alt(v: dict) -> str:
+    """The text alternative a frame prints (A3 / C3, owner decision of 2 October 2026). On the page: the governed accessible
+    summary, which ends before the boundary — the boundary prints once, in the frame foot. In a detached frame (an
+    export frame, `_detached`), which leaves the page: the full governed alt text, ending with the boundary."""
+    if v.get("_detached") or not v.get("summary"):
+        return v.get("alt_text") or ""
+    return v["summary"]
+
+
 def credit_line(v: dict) -> str:
-    """The governed credit. Publisher names are governed in English only; Arabic frames print them as isolated
-    left-to-right runs (the contract's `credit.language_note`)."""
+    """The governed credit in the page's language (B4: the Arabic edition prints the institutions' Arabic names, an
+    acronym the English uses kept in parentheses; the contract's `credit.language_note`)."""
+    if v.get("lang") == "ar":
+        return f'{esc(v["labels"]["source"])} <span dir="rtl">{esc(v.get("credit") or "")}</span>'
     return f'{esc(v["labels"]["source"])} <bdi dir="ltr" lang="en">{esc(v.get("credit") or "")}</bdi>'
 
 
@@ -249,9 +287,65 @@ def text_frame(v: dict, cite_label: str, origin: str | None, heading: str = "h2"
     # the label itself is escalated — ESCALATIONS.md, text-first tiers). The foot is the detached frame's (D6).
     return (f'<figure class="fig fig-text" data-visual-id="{esc(v["id"])}" {FIG_ATTRS}><span class="rubric">{esc(rub)}</span><{heading} class="fig-t">{esc(v["title"])}</{heading}>'
             f'<p class="cap">{esc(v["question"])}</p>'
-            f'<div class="alt alt-body" data-visual-fallback="ordered-text"><{sub_heading(heading)} class="alt-h sr-only">{esc(v["labels"]["text_alternative"])}</{sub_heading(heading)}><p class="body"><b>{esc(v["labels"]["what_it_shows"])}</b> {iso_run(v["alt_text"])}</p>'
+            f'<div class="alt alt-body" data-visual-fallback="ordered-text"><{sub_heading(heading)} class="alt-h sr-only">{esc(v["labels"]["text_alternative"])}</{sub_heading(heading)}><p class="body"><b>{esc(v["labels"]["what_it_shows"])}</b> {iso_run(text_alt(v))}</p>'
             + (f'<p class="small"><b>{esc(v["labels"]["scope"])}:</b> {iso_run(scope)}</p>' if scope else "")
+            + (landscape_table(v) if v.get("landscape") else "") + (text_table(v) if v.get("text_table") else "")
             + '</div>' + frame_foot(v, cite_label, origin, open_label) + '</figure>')
+
+
+def text_table(v: dict) -> str:
+    """RC-12 (B12): the table a text-first contract's rationale describes, from governed rows only (the generator's
+    `table`): a governed heading on every column, governed row headers, numbers through the one number rule, a governed
+    string spanning cells where no value is held, and a governed marker row across the table."""
+    t = v["text_table"]
+    n = len(t["head"])
+    if any(not str(h).strip() for h in t["head"]):
+        raise ValueError(f"a text-first table has an unnamed column: {t['head']}")
+    def td(c: dict) -> str:
+        span = f' colspan="{c["span"]}"' if c.get("span", 1) > 1 else ""
+        if "number" in c:
+            body = num(c["number"]) + (f' {esc(c["unit"])}' if c.get("unit") else "")
+            return f'<td class="num"{span}>{body}</td>' if not c.get("unit") else f"<td{span}>{body}</td>"
+        return f'<td{span}>{iso_run(c["text"])}</td>'
+    bodies, cur = [], []
+    for r in t["rows"]:
+        if "group" in r:   # a row group opened by its base (the design's row-group pattern, `grouped_table`)
+            if cur:
+                bodies.append(cur)
+            g = r["group"]
+            cur = [f'<tr><th scope="rowgroup" colspan="{n}" class="rg">{esc(g["lead"])} {num(g["number"])} {esc(g["unit"])}</th></tr>']
+        elif "marker" in r:
+            if cur:
+                bodies.append(cur)
+            bodies.append([f'<tr><td colspan="{n}" class="marker">{esc(r["marker"])}</td></tr>'])
+            cur = []
+        else:
+            cur.append(f'<tr><th scope="row">{esc(r["head"])}</th>{"".join(td(c) for c in r["cells"])}</tr>')
+    if cur:
+        bodies.append(cur)
+    head = "".join(f'<th scope="col">{esc(h)}</th>' for h in t["head"])
+    tbl = (f'<table class="rvtab"><caption>{caption_of(v, esc(qual(*t["caption"])))}</caption><thead><tr>{head}</tr></thead>'
+           + "".join(f'<tbody>{"".join(b)}</tbody>' for b in bodies) + '</table>')
+    return f'<div data-text-first-table>{table_region(v, tbl)}</div>'
+
+
+def landscape_table(v: dict) -> str:
+    """RC-10: the evidence landscape as a grouped table (one tbody per domain, five governed column headings), inside
+    the text frame of VIS-EVIDENCE-FRESHNESS; categorical states only, no colour, totals or roll-ups. Declared wide:
+    five columns scroll inside their named region on a phone."""
+    ls = v["landscape"]
+    sep = "؛ " if v.get("lang") == "ar" else "; "
+    groups = []
+    for g in ls["groups"]:
+        rows = []
+        for r in g["rows"]:
+            ev = sep.join(f'<a href="{esc(x["href"])}">{esc(x["title"])}</a>' + (f' · {iso_run(x["period"].rstrip().rstrip(".").rstrip())}' if x["period"] else "") for x in r["records"]) or esc(r["empty"])
+            nxt = " · ".join([f'<a href="{esc(x["href"])}">{esc(x["label"])}</a>' for x in r["verify"]] + [f'<a href="{esc(x["href"])}">{esc(x["title"])}</a>' for x in r["priorities"]])
+            rows.append([esc(r["dimension"]), ev, esc(sep.join(r["classes"])), f'<span data-coverage>{esc(r["coverage"])}</span>', nxt or esc(ls["no_next"])])
+        groups.append((esc(g["label"]), rows))
+    t = grouped_table(caption_of(v, esc(ls["note"])), [esc(h) for h in ls["head"]], groups, cls="rvtab wide")
+    return f'<div data-evidence-landscape>{table_region(v, t)}</div>'
+
 
 
 # ================================================================================================ D2 drawings
@@ -293,12 +387,18 @@ def frame_close(v: dict, cite_label: str, origin: str | None, tables: str, notes
     # cold-reader test; D6: one foot for every figure and export).
     return (f'{key}{notes}{frame_notes}' + frame_foot(v, cite_label, origin)
             + f'<div class="alt" data-visual-fallback="ordered-text"><{sub} class="alt-h">{esc(L["text_alternative"])}</{sub}>'
-            f'<p class="small"><b>{esc(L["what_it_shows"])}</b> {iso_run(v["alt_text"])}</p><p class="small"><b>{esc(L["scope"])}:</b> {iso_run(scope)}</p>'
+            f'<p class="small"><b>{esc(L["what_it_shows"])}</b> {iso_run(text_alt(v))}</p><p class="small"><b>{esc(L["scope"])}:</b> {iso_run(scope)}</p>'
             f'{table_html}</div>'
             f'<figcaption class="sr-only">{iso_run(v["title"])}</figcaption></figure>')   # the figure's name is its governed title; the visible alt block is its description
 
 
 NUMERIC = __import__("re").compile(r'^(?:<bdi dir="ltr">)?[\d,.]+(?:</bdi>)?$')
+
+
+def th(v: dict, kind: str) -> str:
+    """B10 (NCC-02): the governed heading of a table's row-header column — period, group, corridor, object, step,
+    dimension, date or item — so no corner cell is empty."""
+    return (v.get("labels") or {}).get("th", {}).get(kind, "")
 
 
 def table(caption: str, head: list, rows: list, cls: str = "rvtab", foot: str = "") -> str:
@@ -372,6 +472,15 @@ def axis_row(vmax: float, step: float, height: int = 22) -> str:
     return f'<div class="row ax-row"><div></div><svg class="ax" width="100%" height="{height}" aria-hidden="true" focusable="false" direction="ltr"><line class="axis" x1="1%" y1="0.5" x2="88%" y2="0.5"/>{tk}</svg></div>'
 
 
+def value_head(v: dict, vals: list, unit: str) -> tuple[str, bool]:
+    """The value column's header of a fallback table: the panel unit when every row shares it; the governed neutral header
+    UI-VIS-VALUE-UNIT-PER-ROW when rows carry different units (release candidate G4; D6 escalation), every row then
+    printing its own unit in its cell. Returns (escaped header, whether each row prints its unit)."""
+    mixed = any(r.get("unit") != unit for r in vals)
+    per_row = (v.get("labels") or {}).get("value_unit_per_row")
+    return (esc(per_row), True) if mixed and per_row else (esc(unit), False)
+
+
 def findex_gaps(v: dict, cite_label: str, origin: str | None, heading: str = "h2") -> str:
     vals = v["series"][0]["values"]
     by_id = {r["id"]: r for r in vals}
@@ -383,17 +492,19 @@ def findex_gaps(v: dict, cite_label: str, origin: str | None, heading: str = "h2
     common_unit = vals[0]["unit"]
     html_ = [f'<div class="panel bars"><p class="ph">{esc(common_unit)} · {esc(state_label(v, "MEASURED"))}</p>']
     html_.append('<div class="p1">' + bar_rows([r for r in vals if r["id"] not in paired], vmax) + "</div>")
+    gap_text = {d["id"]: at_precision(d["value"], max(decimals(a["y"]), decimals(b["y"]))) for d, a, b in pairs}
     for d, a, b in pairs:
         pair_rows = [b, a] if vals.index(b) < vals.index(a) else [a, b]   # governed order of the contract (women before men, …)
         own_unit = any(r["unit"] != common_unit for r in pair_rows)
         html_.append(f'<div class="pair"><div class="p1">{bar_rows(pair_rows, vmax, unit_col=own_unit)}</div>'
-                     f'<p class="gap"><span class="bracket" aria-hidden="true"></span>{esc(derived_label)} · {val_unit(d["value"], d["unit"])}</p></div>')
+                     f'<p class="gap"><span class="bracket" aria-hidden="true"></span>{esc(derived_label)} · {val_unit(gap_text[d["id"]], d["unit"])}</p></div>')
     html_.append('<div class="p1">' + axis_row(vmax, step) + "</div></div>")
     state = uniform(vals, lambda r: r["state"])
-    rows = [[esc(r["x_text"]), qual(num(r["y"]), esc(r["unit"]) if r["unit"] != common_unit else "", "" if state else esc(state_label(v, r["state"])))] for r in vals]
+    head, per_row = value_head(v, vals, common_unit)
+    rows = [[esc(r["x_text"]), qual(num(r["y"]), esc(r["unit"]) if (per_row or r["unit"] != common_unit) else "", "" if state else esc(state_label(v, r["state"])))] for r in vals]
     gap_unit = uniform([d for d, _, _ in pairs], lambda d: d.get("unit")) or ""
-    gaps = [[esc(f'{by_id[d["from"][0]]["x_text"]} − {by_id[d["from"][1]]["x_text"]}'), qual(num(d["value"]), "" if gap_unit else esc(d.get("unit") or ""))] for d, _, _ in pairs]
-    tbl = grouped_table(caption_of(v, qual(esc(common_unit), esc(state_label(v, state)) if state else "")), ["", esc(common_unit)],
+    gaps = [[esc(f'{by_id[d["from"][0]]["x_text"]} − {by_id[d["from"][1]]["x_text"]}'), qual(num(gap_text[d["id"]]), "" if gap_unit else esc(d.get("unit") or ""))] for d, _, _ in pairs]
+    tbl = grouped_table(caption_of(v, qual("" if per_row else esc(common_unit), esc(state_label(v, state)) if state else "")), [esc(th(v, "group")), head],
                         [(None, rows), (qual(esc(gap_unit), esc(derived_label)), gaps)])   # the gaps: their own unit and the DERIVED state as the group's header, the pair as the row
     return frame_open(v, heading) + f'<div class="panels">{"".join(html_)}</div>' + frame_close(v, cite_label, origin, tbl, heading=heading)
 
@@ -401,7 +512,8 @@ def findex_gaps(v: dict, cite_label: str, origin: str | None, heading: str = "h2
 # ------------------------------------------------------------------------------------------------ time-series lines
 LABEL_ROWS = (12, 26, 40)   # rows above the mark, 14 px apart: a value label's ink (digits, no descender) is 9 px tall at 12.5 px, so labels on neighbouring rows keep 5 px of air
 LABEL_LINE = 13             # the vertical clearance two labels need when they overlap horizontally (ink 9 px + 4 px)
-LABEL_REGIMES = {"wide": (5.36, 6.4), "narrow": (2.56, 5.4)}   # px per 1 % of the panel and px per character, measured: the 600 px viewport (536 px panel, 12.5 px labels) where every label shows; the 320 px one (256 px panel, 10.5 px labels) where only the landmarks show
+LABEL_REGIMES = {"wide": (5.36, 6.4), "narrow": (2.56, 5.4)}
+LABEL_CPX_SCALE = {"ar": 1.15}   # RC-10: the Arabic edition sets its Latin digits in IBM Plex Sans Arabic, about 15 % wider than Plex Sans   # px per 1 % of the panel and px per character, measured: the 600 px viewport (536 px panel, 12.5 px labels) where every label shows; the 320 px one (256 px panel, 10.5 px labels) where only the landmarks show
 
 
 def label_span(x_pct: float, anchor: str, text: str, ppp: float, cpx: float) -> tuple[float, float]:
@@ -410,7 +522,7 @@ def label_span(x_pct: float, anchor: str, text: str, ppp: float, cpx: float) -> 
     return (cx, cx + w) if anchor == "start" else ((cx - w, cx) if anchor == "end" else (cx - w / 2, cx + w / 2))
 
 
-def place_label(placed: list, x: float, y: float, text: str, keep: bool, anchor: str) -> float:
+def place_label(placed: list, x: float, y: float, text: str, keep: bool, anchor: str, cscale: float = 1.0) -> float:
     """The baseline of a value label: the first row above its mark (12, 26 or 40 px) at which its ink keeps clear of
     every earlier label it could touch horizontally — checked in the wide regime (every label visible, the
     narrowest panel that shows them) and, for a landmark label, in the narrow regime too (landmarks only, the 320 px
@@ -424,6 +536,7 @@ def place_label(placed: list, x: float, y: float, text: str, keep: bool, anchor:
                 if name == "narrow" and not pkeep:
                     continue
                 ppp, cpx = LABEL_REGIMES[name]
+                cpx *= cscale
                 a0, a1 = label_span(x, anchor, text, ppp, cpx); b0, b1 = label_span(px, panchor, ptext, ppp, cpx)
                 if min(a1, b1) - max(a0, b0) > -2:
                     return False
@@ -467,12 +580,19 @@ def line_panel(v: dict, series: dict, panel_id: str, height: int = 200) -> tuple
     g.append(f'<text class="lbl origin" x="10.5%" y="{hi+4}" text-anchor="end">0</text>')
     for i, x in enumerate(xs):
         cls = "lbl" if (i in (0, (len(xs) // 2) // 2 * 2, len(xs) - 1) or len(xs) <= 7) else ("lbl alt2" if i % 2 == 0 else "lbl alt")
+        if len(xs) > 12 and cls != "lbl" and (i % 2 == 1 or (i == len(xs) - 2 and (len(xs) - 1) % 2 == 1)):
+            cls = "lbl alt3"   # RC-10: beyond twelve periods alternate labels only, at every width (the table names every period)
         g.append(f'<text class="{cls}" x="{X(x):.2f}%" y="{hi+18}" text-anchor="middle">{esc(x)}</text>')
     missing = {str(m["x"]): m.get("marker") for m in series.get("missing_x") or []}
     break_before = {i for i, r in enumerate(valued) if any(m.startswith("BREAK") for m in r["markers"])}
     notes = []
     prev = None
     dense = len(vals) > 8
+    # RC-10: beyond twelve points (the POS panels since RC-8: sixteen months) even the 600 px panel cannot hold every
+    # value label on three rows; such a series labels only its landmarks — first, last, flagged and the series high —
+    # at every width, and its table carries every value
+    very_dense = len(vals) > 12
+    y_high = max((r["y"] for r in vals if r.get("y") is not None), default=None)
     placed: list = []   # (x %, anchor, text, landmark?, baseline) of every label on the panel
     state_texts = []
     if band:
@@ -501,7 +621,7 @@ def line_panel(v: dict, series: dict, panel_id: str, height: int = 200) -> tuple
             mark += f'<circle class="ring" cx="{x:.2f}%" cy="{y:.1f}" r="9"/>'
         g.append(mark)
         own_marks = [m for m in r["markers"] if m not in (series.get("markers") or [])]   # a series-wide marker (NOMINAL) marks no point
-        keep = bool(i == 0 or i == len(valued) - 1 or own_marks or (prev is not None and prev["state"] != r["state"]))
+        keep = bool(i == 0 or i == len(valued) - 1 or own_marks or (prev is not None and prev["state"] != r["state"]) or (very_dense and r["y"] == y_high))
         anchor, dx = "middle", 0.0
         if i == 0:
             anchor, dx = "start", -0.8
@@ -512,7 +632,10 @@ def line_panel(v: dict, series: dict, panel_id: str, height: int = 200) -> tuple
         elif i in break_before:
             anchor, dx = "start", -0.8
         text = plain_num(r["y"])
-        ly = place_label(placed, x + dx, y, text, keep or not dense, anchor)
+        if very_dense and not keep:
+            prev = r
+            continue
+        ly = place_label(placed, x + dx, y, text, keep or not dense, anchor, LABEL_CPX_SCALE.get(v.get("lang"), 1.0))
         placed.append((x + dx, anchor, text, keep or not dense, ly))
         g.append(f'<text class="val{" dense" if dense and not keep else ""}" x="{x + dx:.2f}%" y="{ly:.1f}" text-anchor="{anchor}">{text}</text>')
         prev = r
@@ -580,7 +703,7 @@ def ts_table(v: dict, series: dict, unit: str) -> str:
                                   f'<span dir="auto">{esc(r["series_label"])}</span>' if r.get("series_label") and not doc else "")])
     caption = caption_of(v, qual(esc(unit), esc(state_label(v, state)) if state else "", f'<span dir="auto">{esc(doc)}</span>' if doc else "",
                                  esc(sep(v).join(marker_label(v, m) for m in sorted(shared) if marker_label(v, m)))))
-    return table(caption, ["", esc(unit)], rows)
+    return table(caption, [esc(th(v, "period")), esc(unit)], rows)
 
 
 def remittance_macro(v: dict, cite_label: str, origin: str | None, heading: str = "h2") -> str:
@@ -609,7 +732,8 @@ def remittance_cost(v: dict, cite_label: str, origin: str | None, heading: str =
     vmax, step = axis_scale([r["y"] for r in vals])
     corridors = list(dict.fromkeys(r["x_text"] for r in vals))
     shapes = {}
-    html_ = [f'<div class="panel bars"><p class="ph">{esc(vals[0]["unit"])} · {esc(state_label(v, "MEASURED"))}</p>']
+    head_state = uniform(vals, lambda r: r["state"]) or vals[0]["state"]
+    html_ = [f'<div class="panel bars"><p class="ph">{esc(vals[0]["unit"])} · {esc(state_label(v, head_state))}</p>']
     for c in corridors:
         rows = []
         for r in [x for x in vals if x["x_text"] == c]:
@@ -621,7 +745,7 @@ def remittance_cost(v: dict, cite_label: str, origin: str | None, heading: str =
     html_.append('<div class="p1">' + axis_row(vmax, step) + "</div></div>")
     state = uniform(vals, lambda r: r["state"])
     rows = [[f'{esc(r["x_text"])} — {esc(r["group_text"])}', qual(num(r["y"]), "" if state else esc(state_label(v, r["state"])))] for r in vals]
-    tbl = table(caption_of(v, qual(esc(vals[0]["unit"]), esc(state_label(v, state)) if state else "")), ["", esc(vals[0]["unit"])], rows)
+    tbl = table(caption_of(v, qual(esc(vals[0]["unit"]), esc(state_label(v, state)) if state else "")), [esc(th(v, "corridor")), esc(vals[0]["unit"])], rows)
     return frame_open(v, heading) + f'<div class="panels">{"".join(html_)}</div>' + frame_close(v, cite_label, origin, tbl, heading=heading)
 
 
@@ -641,18 +765,20 @@ def payment_anatomy(v: dict, cite_label: str, origin: str | None, heading: str =
         items.append(f'<li class="obj-card"><span class="rubric">{esc(r["x_text"])}</span><div class="v">{value}</div><p class="cl2">{iso_run(v.get("period") or "")} · {esc(state_label(v, "ADMINISTRATIVE"))}</p><div class="isnot">{esc(r["is_not_text"])}</div>{marks_html}</li>')
     panel = f'<div class="panels"><div class="panel"><p class="ph">{esc(vals[0]["unit"])} · {esc(state_label(v, "ADMINISTRATIVE"))}</p><ol class="anatomy">{"".join(items)}</ol></div></div>'
     shared_marks = set.intersection(*[{m for m in r["markers"] if m != "WITHHELD"} for r in vals]) if vals else set()   # a marker every object carries stands once in the caption
-    rows = [[esc(r["x_text"]), qual(esc(withheld_label) if r.get("withheld") or r.get("y") is None else num(r["y"]), esc(r["unit"]) if r["unit"] != vals[0]["unit"] else "", esc(r["is_not_text"]),
+    head, per_row = value_head(v, vals, vals[0]["unit"])
+    rows = [[esc(r["x_text"]), qual(esc(withheld_label) if r.get("withheld") or r.get("y") is None else num(r["y"]), esc(r["unit"]) if (per_row or r["unit"] != vals[0]["unit"]) else "", esc(r["is_not_text"]),
                                     esc(sep(v).join(marker_label(v, m) for m in r["markers"] if m != "WITHHELD" and m not in shared_marks)))] for r in vals]
-    tbl = table(caption_of(v, qual(esc(vals[0]["unit"]), esc(state_label(v, "ADMINISTRATIVE")), esc(sep(v).join(marker_label(v, m) for m in sorted(shared_marks))))), ["", esc(vals[0]["unit"])], rows)
+    tbl = table(caption_of(v, qual("" if per_row else esc(vals[0]["unit"]), esc(state_label(v, "ADMINISTRATIVE")), esc(sep(v).join(marker_label(v, m) for m in sorted(shared_marks))))), [esc(th(v, "object")), head], rows)
     return frame_open(v, heading) + panel + frame_close(v, cite_label, origin, tbl, heading=heading)
 
 
 # ------------------------------------------------------------------------------------------------ the chain (RV-CWR-009, VIS-PAYMENT-RAILS)
 CHAIN_STEPS = ["RULE", "IMPLEMENTATION", "OPERATION", "ACCESS", "USE", "QUALITY", "OUTCOME"]
+POS_SCOPE_KEY = "UI-VIS-NOTE-POS-SCOPE"   # RC-1 item 5: the VIS-POS-* universe qualifier, bound to RV-CWR-004 and RV-CWR-009 as a frame label
 # The governed step mapping of RV-CWR-009 (`contract.step_mapping`), read as event class → chain step.
 CLASS_STEP = {"NETWORK_RULE": "RULE", "PAYMENTS_ARCHITECTURE_DECISION": "RULE", "PROJECT_START": "RULE", "PAYMENT_RAIL_COMPONENT": "RULE", "ACCESS_USAGE_COMPONENT": "RULE",
               "NETWORK_INTEGRATION": "IMPLEMENTATION", "UNIFIED_NETWORK_COMPANY": "IMPLEMENTATION", "YPCC": "IMPLEMENTATION", "NETWORK_ACTIVITY_SIGNAL": "OPERATION"}
-ACTIVITY_STEP = {"OBS-00080": "IMPLEMENTATION", "OBS-00081": "OPERATION"}
+ACTIVITY_STEP = {"OBS-00095": "IMPLEMENTATION", "OBS-00096": "OPERATION"}   # June 2026 terminal stock and transactions (RC-8)
 
 
 def chain_steps(chain_src: dict, include_activity: bool) -> list[dict]:
@@ -671,6 +797,9 @@ def chain_figure(v: dict, chain_src: dict, cite_label: str, origin: str | None, 
     locator) or OPEN (never a failure, never a percentage); the first open step after the evidenced ones is where the
     evidence stops and is set in the boundary voice."""
     L = v["chain_labels"]; sub = sub_heading(heading)
+    FLD = v.get("frame_labels") or {}
+    scope = FLD.get(POS_SCOPE_KEY) or ""   # RC-1 item 5: the CBY-Aden reporting-scope qualifier travels with every POS activity row
+    v = {**v, "frame_labels": {k: t for k, t in FLD.items() if k != POS_SCOPE_KEY}}   # printed with the rows, not again as a frame note
     steps = chain_steps(chain_src, include_activity)
     first_open = next((i for i, s in enumerate(steps) if not s["evidenced"]), None)
     items = []
@@ -685,17 +814,18 @@ def chain_figure(v: dict, chain_src: dict, cite_label: str, origin: str | None, 
                         + (f'\u00a0<a class="source-locator" href="{esc(e["source"])}" rel="noopener noreferrer" target="_blank" aria-label="{esc(v["labels"]["source"])} {esc(e["label_text"])}">↗</a>' if str(e.get("source", "")).startswith("http") else "")
                         + "</span></li>")
             else:
-                evs += f'<li><span class="clock"><span class="v">{bdi(when)}</span></span><span class="ev">{esc(e["label_text"])} · {val_unit(e["y"], e["unit"])}</span></li>'
+                evs += f'<li><span class="clock"><span class="v">{bdi(when)}</span></span><span class="ev">{esc(e["label_text"])} · {val_unit(e["y"], e["unit"], v)}{(" · " + esc(scope)) if scope else ""}</span></li>'
         items.append(f'<li class="{cls}"><div class="st-head"><span class="glyph" aria-hidden="true">{"■" if s["evidenced"] else "□"}</span><{sub}>{esc(L[s["step"]])}</{sub}><span class="st-state">{esc(state)}</span></div>'
                      + (f'<ul class="evs">{evs}</ul>' if evs else "") + "</li>")
     panel = f'<div class="panels"><div class="panel"><ol class="chain">{"".join(items)}</ol></div></div>'
     rows = []
     for s in steps:
         state = L["EVIDENCED"] if s["evidenced"] else L["OPEN"]
-        entries = sorted([(str(e.get("date")), f'{e.get("date")} {e["label_text"]}') for e in s["events"]] + [(str(a.get("x")), f'{a.get("x")} {a["label_text"]} {val_unit_plain(a["y"], a["unit"])}') for a in s["activity"]])
+        entries = sorted([(str(e.get("date")), f'{e.get("date")} {e["label_text"]}') for e in s["events"]]
+                         + [(str(a.get("x")), f'{a.get("x")} {a["label_text"]} {val_unit_plain(a["y"], a["unit"], v)}' + (f" · {scope}" if scope else "")) for a in s["activity"]])
         ev_text = sep(v).join(t for _, t in entries)
         rows.append([esc(L[s["step"]]), qual(esc(state), iso_run(ev_text))])
-    tbl = table(caption_of(v), ["", esc(v["labels"]["what_it_shows"])], rows)
+    tbl = table(caption_of(v), [esc(th(v, "step")), esc(v["labels"]["what_it_shows"])], rows)
     return frame_open(v, heading) + panel + frame_close(v, cite_label, origin, tbl, heading=heading)
 
 
@@ -763,7 +893,7 @@ def provider_matrix(v: dict, cite_label: str, origin: str | None, heading: str =
     """SIGNATURE · one row per provider class, five dimensions in the contract's column order (issuing authority or
     source; dated named universe or count; status events; negative authority; evidence of operation). Cells hold
     governed words and dates, never dots; a dimension with no governed row is UNKNOWN in the state grammar (never
-    zero, never 'none exist'); counts only as governed: the roster by category (never 429 as providers), the wallet
+    zero, never 'none exist'); counts only as governed: the roster by category (never the 442-row total as providers), the wallet
     counts listed by date and wording (never one number). Every dated cell links its source record. The five column
     headings and the fifth row's class label are not governed yet (escalated): they render as placeholders, each cell
     keeps its own governed label as well, and the payment-system-operators row — the contract's known gap — is always
@@ -771,10 +901,12 @@ def provider_matrix(v: dict, cite_label: str, origin: str | None, heading: str =
     the dimensions stacked. Fallback: one two-column table per class, dimension by dimension (the same words).
     Until the five column headings and the fifth row's class label are governed (ESCALATIONS.md, D6), the matrix is
     unshipped: the contract renders as its text frame — the governed alt text, scope and detached frame — with no
-    placeholder (D7, DL-D7-001); the day the six labels are governed, this form draws unchanged."""
+    placeholder (D7, DL-D7-001). The six labels were governed in RC-3 (2 October 2026) and the form draws; the one change made then:
+    the payment-system-operators status cell prints UNKNOWN before its context events, as the contract's known_gap states."""
     if not matrix_governed(v):
         return text_frame(v, cite_label, origin, heading)
     L = v["labels"]; O = v["objects"]; sub = sub_heading(heading)
+    ar = v.get("lang") == "ar"   # G4 item 7: Arabic counts in label-value form («شركات الصرافة: 98»)
     universe = {r["id"]: r for r in O.get("universe") or []}
     roster = O.get("roster_counts") or []
     status = sorted(O.get("status_events") or [], key=lambda e: str(e.get("date")))
@@ -828,10 +960,12 @@ def provider_matrix(v: dict, cite_label: str, origin: str | None, heading: str =
         c1 = cell(0, "<ul class=\"srcs\">" + "".join(f"<li>{x}</li>" for x in srcs) + "</ul>" if srcs else unknown)
         # 2 · dated named universe or count
         if pid == "PUC-EXCH-2026-01":
-            counts = "".join(f'<li><b class="n">{num(r["count"])}</b> <span dir="auto">{esc(r["label_text"])}</span>{joined(["", esc(r["unit_text"]), date_token(r.get("date"))])}</li>' for r in roster)
+            counts = "".join((f'<li><span dir="auto">{esc(r["label_text"])}</span>: <b class="n">{num(r["count"])}</b>' if ar else f'<li><b class="n">{num(r["count"])}</b> <span dir="auto">{esc(r["label_text"])}</span>')
+                             + f'{joined(["", esc(r["unit_text"]), date_token(r.get("date"))])}</li>' for r in roster)
             body = f'<ul class="counts">{counts}</ul>'
         elif pid == "PUC-WALLET-2025-01":
-            counts = "".join(f'<li><b class="n">{bdi(r["count"])}</b> {esc(r["unit_text"])}{joined(["", esc(r["state_text"]), date_token(r.get("date"))])} {source_link(r, L)}</li>' for r in wallets)
+            counts = "".join((f'<li>{esc(r["unit_text"])}: <b class="n">{bdi(r["count"])}</b>' if ar else f'<li><b class="n">{bdi(r["count"])}</b> {esc(r["unit_text"])}')
+                             + f'{joined(["", esc(r["state_text"]), date_token(r.get("date"))])} {source_link(r, L)}</li>' for r in wallets)
             body = f'<ul class="counts">{counts}</ul>'
         elif u.get("count") is not None:
             body = f'<p class="cnt"><b class="n">{num(u["count"])}</b>{joined(["", date_token(u.get("date"))])}</p>'
@@ -860,7 +994,9 @@ def provider_matrix(v: dict, cite_label: str, origin: str | None, heading: str =
         ctx_label = f'<span dir="auto">{esc(e["label_text"])}</span>'
         ctx_link = f'\u00a0<a class="source-locator" href="{esc(e["source"])}" rel="noopener noreferrer" target="_blank" aria-label="{esc(L["source"])} {esc(e["label_text"])}">↗</a>' if str(e.get("source", "")).startswith("http") else ""
         ctx_html += f'<li>{bdi(e.get("date"))}{joined(["", ctx_label])}{ctx_link}</li>'
-    ctx_cell = f'<ul class="evl ctx">{ctx_html}</ul>' if ctx else unknown
+    # UNKNOWN first, then the institution events as context (the contract's known_gap: never a named universe)
+    ctx_lead = f'<p class="cl ctx-l">{esc(L["context"])}</p>' if L.get("context") else ""   # RC-5 (B2 h): the governed lead-in
+    ctx_cell = unknown + (f'{ctx_lead}<ul class="evl ctx">{ctx_html}</ul>' if ctx else "")
     rows.append(f'<li class="prow pso" data-provider-class="PSO"><{sub} class="cls">{pso_label}</{sub}><div class="cells">{cell(0, unknown)}{cell(1, unknown)}'
                 f'{cell(2, ctx_cell)}{cell(3, unknown)}{cell(4, unknown)}</div></li>')
     authorities = list(dict.fromkeys(e["authority_text"] for e in status + negative if e.get("authority_text")))
@@ -875,9 +1011,11 @@ def provider_matrix(v: dict, cite_label: str, origin: str | None, heading: str =
             continue
         auth = sep(v).join(dict.fromkeys(iso_run(r["source_title"]) for r in sources_of(u) if r.get("source_title"))) or unk
         if pid == "PUC-EXCH-2026-01":
-            cnt = sep(v).join(f'{num(r["count"])} <span dir="auto">{esc(r["label_text"])}</span> ({esc(r["unit_text"])}{sep(v, "comma")}{date_token(r.get("date"))})' for r in roster)
+            cnt = sep(v).join((f'<span dir="auto">{esc(r["label_text"])}</span>: {num(r["count"])}' if ar else f'{num(r["count"])} <span dir="auto">{esc(r["label_text"])}</span>')
+                              + f' ({esc(r["unit_text"])}{sep(v, "comma")}{date_token(r.get("date"))})' for r in roster)
         elif pid == "PUC-WALLET-2025-01":
-            cnt = sep(v).join(f'{bdi(r["count"])} {esc(r["unit_text"])} ({esc(r["state_text"])}{sep(v, "comma")}{date_token(r.get("date"))})' for r in wallets)
+            cnt = sep(v).join((f'{esc(r["unit_text"])}: {bdi(r["count"])}' if ar else f'{bdi(r["count"])} {esc(r["unit_text"])}')
+                              + f' ({esc(r["state_text"])}{sep(v, "comma")}{date_token(r.get("date"))})' for r in wallets)
         else:
             cnt = (f'{num(u["count"])} ({date_token(u.get("date"))})' if u.get("count") is not None else date_token(u.get("date")))
         evs = [e for e in status if any(e.get("class", "").startswith(k) for k in STATUS_CLASS.get(pid, ()))]
@@ -885,9 +1023,10 @@ def provider_matrix(v: dict, cite_label: str, origin: str | None, heading: str =
         neg_txt = f'{date_token(negative[0].get("date"))} <span dir="auto">{esc(negative[0]["authority_text"])}</span>: {esc(negative[0]["state_text"])}' if (pid == "PUC-WALLET-2025-01" and negative) else unk
         trows = [[dim(0), auth], [dim(1), f'{esc(u["count_state_text"])}: {cnt}. {iso_run(u["named_text"])}'],
                  [dim(2), esc(u["events_text"]) + (f': {ev_txt}' if ev_txt else "")], [dim(3), neg_txt], [dim(4), unk]]
-        tables.append(table(caption_of(v, esc(u["class_text"])), ["", esc(L["what_it_shows"])], trows))
-    ctx_txt = sep(v).join(f'{bdi(e.get("date"))} <span dir="auto">{esc(e["label_text"])}</span>' for e in ctx) or unk
-    tables.append(table(caption_of(v, pso_label), ["", esc(L["what_it_shows"])],
+        tables.append(table(caption_of(v, esc(u["class_text"])), [esc(th(v, "dimension")), esc(L["what_it_shows"])], trows))
+    ctx_items = [f'{bdi(e.get("date"))} <span dir="auto">{esc(e["label_text"])}</span>' for e in ctx]
+    ctx_txt = unk + ((sep(v) + esc(L["context"]) + " " + sep(v, "comma").join(ctx_items)) if ctx_items and L.get("context") else "".join(sep(v) + x for x in ctx_items))
+    tables.append(table(caption_of(v, pso_label), [esc(th(v, "dimension")), esc(L["what_it_shows"])],
                         [[dim(0), unk], [dim(1), unk], [dim(2), ctx_txt], [dim(3), unk], [dim(4), unk]]))
     return frame_open(v, heading) + panel + frame_close(v, cite_label, origin, "".join(tables), heading=heading)
 
@@ -915,6 +1054,7 @@ def dated_lanes(v: dict, cite_label: str, origin: str | None, heading: str = "h2
     The table: one group per lane, its dated rows."""
     L = v["labels"]; FLD = v.get("frame_labels") or {}; CL = v["chain_labels"]; sub = sub_heading(heading)
     FL = [FLD.get(k) or "" for k in LANE_KEYS]
+    scope = FLD.get(POS_SCOPE_KEY) or ""   # RC-1 item 5: printed after the POS object label on the lane and in its table rows
     if not all(FL):   # the three lane titles by their governed keys; positional only if a key is absent
         FL = list(FLD.values())[:3]
     v = {**v, "_frame_notes_drawn": True}   # the three governed frame labels are the lane titles
@@ -940,7 +1080,7 @@ def dated_lanes(v: dict, cite_label: str, origin: str | None, heading: str = "h2
     lane1 = strip(f'<line class="span" x1="{x_a:.2f}%" y1="20" x2="{x_b:.2f}%" y2="20"/>' + svg_mark("circle", mid, 20, 5))
     period_txt = iso_run(span.get("text") or "")
     period_html = f'<a href="{esc(span["href"])}">{period_txt}</a>' if span.get("href") else period_txt
-    lane1_txt = (f'<p class="ln"><b>{esc(p0["series_label_text"])}</b> · {val_unit(p0["y"], p0["unit_text"])} · <span dir="auto">{esc(p0["group_text"])}</span> · {esc(state_label(v, "MEASURED"))}</p>'
+    lane1_txt = (f'<p class="ln"><b>{esc(p0["series_label_text"])}</b> · {val_unit(p0["y"], p0["unit_text"], v)} · <span dir="auto">{esc(p0["group_text"])}</span> · {esc(state_label(v, "MEASURED"))}</p>'
                  f'<div class="clock ln"><span class="k">{esc(L["period"])}</span><span class="v">{period_html}</span></div>')
     # lane 2 · infrastructure: monthly presence, first and latest labelled (outside the span when it is short)
     vals = infra["values"]
@@ -954,7 +1094,7 @@ def dated_lanes(v: dict, cite_label: str, origin: str | None, heading: str = "h2
         labels = (f'<text class="val" x="{xf:.2f}%" y="10" text-anchor="start">{plain_num(first["y"])}</text>'
                   f'<text class="val" x="{xl:.2f}%" y="10" text-anchor="end">{plain_num(last["y"])}</text>')
     lane2 = strip(marks + labels)
-    lane2_txt = (f'<p class="ln"><b>{esc(first["label_text"])}</b> · {bdi(first["x"])} · {val_unit(first["y"], first["unit_text"])} — {bdi(last["x"])} · {val_unit(last["y"], last["unit_text"])} · {esc(state_label(v, "ADMINISTRATIVE"))}</p>')
+    lane2_txt = (f'<p class="ln"><b>{esc(first["label_text"])}</b>{(" · " + esc(scope)) if scope else ""} · {bdi(first["x"])} · {val_unit(first["y"], first["unit_text"], v)} — {bdi(last["x"])} · {val_unit(last["y"], last["unit_text"], v)} · {esc(state_label(v, "ADMINISTRATIVE"))}</p>')
     # lane 3 · institutions and reforms: dated events keyed 1..n
     ev_marks = "".join(svg_mark("circle", f"{X(str(e['date'])):.2f}%", 20, 4) for e in inst)
     clusters: list[list[int]] = []   # events closer than 4 % of the axis share one bracketed key ("3–6")
@@ -980,11 +1120,11 @@ def dated_lanes(v: dict, cite_label: str, origin: str | None, heading: str = "h2
              f'<div class="lane"><{sub}>{esc(FL[2])}</{sub}>{lane3}<ol class="evs keyed">{ev_list}</ol></div>'
              f'<div class="lane outcome"><{sub}>{esc(CL["OUTCOME"])}</{sub}><span class="st-state">{esc(CL["OPEN"])}</span>{lane4}</div>'
              f'{axis_svg}</div></div>')
-    groups = [(esc(FL[0]), [[period_txt, esc(f'{p0["series_label_text"]} · {val_unit_plain(p0["y"], p0["unit_text"])} · {p0["group_text"]} · {state_label(v, "MEASURED")}')]]),
-              (esc(FL[1]), [[bdi(r["x"]), esc(f'{r["label_text"]} · {val_unit_plain(r["y"], r["unit_text"])} · {state_label(v, "ADMINISTRATIVE")}')] for r in vals]),
+    groups = [(esc(FL[0]), [[period_txt, esc(f'{p0["series_label_text"]} · {val_unit_plain(p0["y"], p0["unit_text"], v)} · {p0["group_text"]} · {state_label(v, "MEASURED")}')]]),
+              (esc(FL[1]), [[bdi(r["x"]), esc(f'{r["label_text"]}{(" · " + scope) if scope else ""} · {val_unit_plain(r["y"], r["unit_text"], v)} · {state_label(v, "ADMINISTRATIVE")}')] for r in vals]),
               (esc(FL[2]), [[bdi(e["date"]), esc(e["label_text"])] for e in inst]),
               (None, [[esc(CL["OUTCOME"]), esc(CL["OPEN"])]])]
-    tbl = grouped_table(caption_of(v), ["", esc(v["labels"]["what_it_shows"])], groups)
+    tbl = grouped_table(caption_of(v), [esc(th(v, "date")), esc(v["labels"]["what_it_shows"])], groups)
     return frame_open(v, heading) + panel + frame_close(v, cite_label, origin, tbl, heading=heading)
 
 
@@ -992,18 +1132,21 @@ def dated_lanes(v: dict, cite_label: str, origin: str | None, heading: str = "h2
 def firm_constraints(v: dict, cite_label: str, origin: str | None, heading: str = "h2") -> str:
     """CORE · horizontal bars from zero, in the contract's descending order without rank numbers; the record's
     governed measurement limitation (firms could name more than one challenge; the base is not held) in the frame;
-    the table lists the eight governed rows the contract resolves (the contract names sixteen; the other eight are
-    requested Master-first — ESCALATIONS.md)."""
+    the table lists the eight governed rows the contract resolves (the contract names sixteen; the other eight stay
+    unbound until they are checked against the original — ESCALATIONS.md; RC-1 item 6 Path B), so the governed frame
+    note UI-VIS-NOTE-FIRM-CONSTRAINTS-PARTIAL says the list is partial."""
     vals = v["series"][0]["values"]
     vmax, step = axis_scale([r["y"] for r in vals])
     unit = vals[0]["unit"]
     v = {**v, "_frame_notes_drawn": True}
     note = f'<p class="cap note">{esc(v.get("record_limit") or "")}</p>' if v.get("record_limit") else ""
+    note += "".join(f'<p class="cap note">{esc(t)}</p>' for k, t in (v.get("frame_labels") or {}).items() if t)
     panel = (f'<div class="panels"><div class="panel bars"><p class="ph">{esc(unit)} · {esc(state_label(v, "MEASURED"))}</p>'
              f'<div class="p1 noranks">{bar_rows(vals, vmax)}{axis_row(vmax, step)}</div>{note}</div></div>')
     state = uniform(vals, lambda r: r["state"])
-    rows = [[esc(r["x_text"]), qual(num(r["y"]), esc(r["unit"]) if r["unit"] != unit else "", "" if state else esc(state_label(v, r["state"])))] for r in vals]
-    tbl = table(caption_of(v, qual(esc(unit), esc(state_label(v, state)) if state else "")), ["", esc(unit)], rows)
+    head, per_row = value_head(v, vals, unit)
+    rows = [[esc(r["x_text"]), qual(num(r["y"]), esc(r["unit"]) if (per_row or r["unit"] != unit) else "", "" if state else esc(state_label(v, r["state"])))] for r in vals]
+    tbl = table(caption_of(v, qual("" if per_row else esc(unit), esc(state_label(v, state)) if state else "")), [esc(th(v, "item")), head], rows)
     return frame_open(v, heading) + panel + frame_close(v, cite_label, origin, tbl, heading=heading)
 
 

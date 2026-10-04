@@ -14,8 +14,8 @@
     "question_ar": "من هم الأقل وصولًا، وأين تظهر الفجوات المقاسة؟",
     "primary_route": "/people",
     "answer_mode": "EQUITY_DIAGNOSIS",
-    "user_gets_en": "Population measures, same-wave disparities and what the evidence cannot explain.",
-    "user_gets_ar": "القياسات السكانية، والفجوات داخل الموجة نفسها، وما لا تستطيع الأدلة تفسيره."
+    "user_gets_en": "Population measures, disparities within the same wave (survey round) and what the evidence cannot explain.",
+    "user_gets_ar": "القياسات السكانية، والفجوات داخل الموجة نفسها (جولة المسح)، وما لا تستطيع الأدلة تفسيره."
   },
   {
     "question_id": "QE-003",
@@ -47,11 +47,11 @@
   {
     "question_id": "QE-006",
     "question_en": "How are borrower reach, savers/depositors, nominal portfolio and provider structure changing in microfinance?",
-    "question_ar": "كيف تتغير قاعدة المقترضين والمدخرين أو المودعين والمحفظة الاسمية وهيكل مقدمي الخدمات في التمويل الأصغر؟",
+    "question_ar": "كيف تتغير قاعدة المقترضين والمدخرين أو المودعين ومحفظة القروض الاسمية وهيكل مقدمي الخدمات في التمويل الأصغر؟",
     "primary_route": "/finance",
     "answer_mode": "MICROFINANCE_MULTI_METRIC_DIAGNOSIS",
     "user_gets_en": "Borrower reach, savers/depositors, nominal portfolio and provider structure remain separate measures rather than one inclusion measure.",
-    "user_gets_ar": "تُقرأ قاعدة المقترضين، والمدخرون أو المودعون، والمحفظة الاسمية، وهيكل مقدمي الخدمات كمقاييس منفصلة، لا كمقياس واحد للشمول."
+    "user_gets_ar": "تُقرأ قاعدة المقترضين، والمدخرون أو المودعون، ومحفظة القروض الاسمية، وهيكل مقدمي الخدمات كمقاييس منفصلة، لا كمقياس واحد للشمول."
   },
   {
     "question_id": "QE-007",

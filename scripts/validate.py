@@ -59,7 +59,7 @@ for lang,dirv in [('ar','rtl'),('en','ltr')]:
                 rr=href.split('?',1)[0].split('#',1)[0].strip('/'); bits=rr.split('/',1); lf=DIST/bits[0]/(bits[1] if len(bits)>1 else '')/'index.html'
                 if not lf.exists(): errors.append(f'broken internal link {href} in {f}')
 home=(DIST/'ar/index.html').read_text(encoding='utf-8')
-for token in ['11.9%','12.91','561','1,473']:
+for token in ['11.9%','12.91','561','1,651']:
     if token not in home: errors.append('home semantic token missing '+token)
 for f in DIST.rglob('*.html'):
     t=f.read_text(encoding='utf-8')
@@ -189,7 +189,7 @@ if authority_dir.exists():
 repo_xlsx=[]
 for p in ROOT.rglob('*.xlsx'):
     rel=p.relative_to(ROOT)
-    if rel.parts and rel.parts[0] in {'dist','98_TEMPORARY__NONAUTHORITATIVE'}:
+    if rel.parts and rel.parts[0] in {'dist','98_TEMPORARY__NONAUTHORITATIVE','.claude'}:   # .claude/: local agent worktrees, git-ignored, never part of the repository
         continue
     repo_xlsx.append(p)
 if repo_xlsx!=[master_path]:
@@ -584,6 +584,7 @@ _n_evidence_objects=len(json.load(open(C/'evidence/evidence_objects.json',encodi
 if len(evidence_specs)!=_n_evidence_objects:          # one public Evidence Record page per 06 record (derived, not frozen)
     errors.append(f'S04.1 Evidence Record pages ({len(evidence_specs)}) differ from 06 records ({_n_evidence_objects})')
 object_to_spec={}
+sys.path.insert(0,str(ROOT/'scripts')); import discovery as _DISC_S041   # one implementation of the language alternates
 source_dependents={sid:set() for sid in public_source_ids}
 for spec in evidence_specs:
     route=str(spec.get('route') or '')
@@ -644,10 +645,9 @@ for spec in evidence_specs:
         if ' | ' in _lim and _lim in text:
             errors.append(f'P4-G02 boundary printed with its internal delimiter {route} {lang}')
         for field in ['method','change_trigger','verification']:
-            if field=='method' and obj.get('visual_contract_state'):
-                if _norm(obj.get(f'method_{lang}') or '') and _norm(obj.get(f'method_{lang}')) in text:
-                    errors.append(f'PB-0401 draft encoding note rendered while no governed contract exists {route} {lang}')
-                continue
+            # PB-0401 revised (release candidate B1; owner decision A4 / C6 revised, 2 October 2026): the 13
+            # NO_GOVERNED_CONTRACT__TABLE_ONLY records' method text is reader-facing governed method and is printed like
+            # every other record's — the check below now requires it on their pages too (it used to forbid it)
             value=_norm(obj.get(f'{field}_{lang}') or obj.get(field) or '')
             if value and value not in text:
                 errors.append(f'S04.1 progressive evidence field missing {route} {lang} {field}')
@@ -669,8 +669,9 @@ for spec in evidence_specs:
         for leak in ['LOCATOR_ONLY','DISPLAY_READY','NO_PUBLIC_LOCATOR','OBJECT_LEVEL_OR_UNSPECIFIED','rights_display_state','metadata_state']:
             if leak in raw: errors.append(f'S04.1 internal source/publication state leaked {route} {lang} {leak}')
         # Language equivalent must remain at the same Evidence Record route (header JS preserves query/hash globally).
+        # The address is discovery's (scripts/discovery.py): root-relative today, absolute once the owner sets the origin.
         other='en' if lang=='ar' else 'ar'
-        if f'hreflang="{other}" href="/{other}/{route.strip("/")}/"' not in raw:
+        if f'hreflang="{other}" href="{_DISC_S041.url(_DISC_S041.localized(route,other),_DISC_S041.origin())}"' not in raw:
             errors.append(f'S04.1 Evidence Record language alternate mismatch {route} {lang}')
     # Source references must resolve to controlled source records. Public locators link through Data + original; no-public-locator stays suppressed.
     for ref in spec.get('source_references') or []:
@@ -724,7 +725,7 @@ for lang in ('ar','en'):
             errors.append(f'S04.1 no-public-locator source gained dependent public navigation {lang} {sid}')
 
 # app.js already owns context-preserving language switching and source focus; S04.1 must not regress them.
-for token,label in [("location.href='/'+target+p+location.search+location.hash",'same-route language switch'),("new URLSearchParams(location.search).get('source')",'query-aware source focus')]:
+for token,label in [("u.search=location.search; u.hash=location.hash",'same-route language switch (R-05: a link to the same route; the runtime keeps the query and the anchor)'),("new URLSearchParams(location.search).get('source')",'query-aware source focus')]:
     if token not in js: errors.append('S04.1 missing '+label)
 
 
@@ -1049,18 +1050,21 @@ for spec in specs:
 
 # Representative numeric signatures prove that material numbers survive both public editions.
 s05_numeric_signatures={
-    '/':['11.9%','12.91','561','1,473'],
+    '/':['11.9%','12.91','561','1,651'],
     '/people/':['11.9%','12.91'],
     '/firms/':['22%','50%','46%'],
-    '/payments/':['561','1,473'],
-    '/providers/':['98','225','106'],
+    '/payments/':['561','1,651'],
+    '/providers/':['100','231','111'],
     # Tranche C TC-A (EN-30): the limitation says "more than a quarter" without the redundant "(1/4)".
     '/evidence/CLM-001/':['11.9%','2022-11-07','2023-01-09','23%'],
     '/evidence/CLM-060/':['19%','15%','40%','2024','2021'],
     '/evidence/CLM-032/':['2020','2025'],
-    # Tranche B PB-0362/PB-0363 (CWR-001): the restated 2024 value is published at source-appropriate precision (USD 3.42 billion), not six figures.
+    # Tranche B PB-0362/PB-0363 (CWR-001) printed the restated 2024 value as "USD 3.42 billion" beside a table in USD million.
+    # Release candidate RC-1 item 4 (audit/release_candidate/INSTRUCTIONS.md): prose and table use one unit, so the Reading
+    # prints the governed values in USD million (6,245 and 3,422.16, the rows RMO-CBY-2024-AR2024 / -AR2025). Same check, same
+    # strength: the two values must still survive in both editions, now in the table's own unit and digits.
     # Pre-Tranche-C P4 (V-D1): the residual-model estimate rests only on material without a public locator; its value is withheld (S04.3).
-    '/readings/same-year-different-number/':['6.245','3.42','0.0032','33%','1.838'],
+    '/readings/same-year-different-number/':['6,245','3,422.16','0.0032','33%','1.838'],
 }
 for _lang in ('ar','en'):
     for _route in ('readings/same-year-different-number','evidence/CLM-044'):
@@ -1108,11 +1112,11 @@ _ar_record=(DIST/'ar/evidence/CLM-003/index.html').read_text(encoding='utf-8')
 if '<bdi dir="ltr"' not in _ar_record or 'unicode-bidi:isolate' not in css:
     errors.append('S05.1 stable Latin identifier bidi isolation missing')
 for token,label in [
-    ("location.pathname.replace(/^\\/(ar|en)/",'language switch equivalent route preservation'),
-    ('location.search+location.hash','language switch query/hash preservation'),
+    ('u.search=location.search','language switch query preservation (R-05; the same route is the link itself, RC-19)'),
+    ('u.hash=location.hash','language switch anchor preservation'),
     ('"domain_ar"','Arabic Measurement domain localization'),
 ]:
-    target=js if token.startswith('location.') else build_src
+    target=js if token.startswith(('location.','u.')) else build_src
     if token not in target: errors.append('S05.1 missing '+label)
 
 
@@ -1308,9 +1312,15 @@ if 'function iso(s){return esc(s).replace(LTR_RUN' not in js:
     errors.append('S05.3 the runtime has no isolation helper for the governed text it writes')
 # EAD-06 (handoff §2): the search query is tool state that matters, so it is in the URL, reloadable, and carried across
 # the language switch — and only the page's own search writes it, never the dialog floating over another page.
-for _tok,_lbl in [("function writeSearchUrl(term)",'search query written to the URL'),
+for _tok,_lbl in [("function writeSearchUrl(term,type)",'search query written to the URL'),
                   ("new URLSearchParams(location.search).get('q')",'search query read back from the URL'),
-                  ("input.hasAttribute('data-search-url-state')",'only the page\'s own search owns the page address')]:
+                  ("new URLSearchParams(location.search).get('type')",'search result type read back from the URL'),
+                  ("input.hasAttribute('data-search-url-state')",'only the page\'s own search owns the page address'),
+                  # release candidate G4 (A6 / C7, EAD-06): the true total when fewer hits are shown, the way on to the
+                  # Evidence directory, and the governed result-type filter
+                  ("TF('UI-JS-SEARCH-RESULTS-OF',{n:scored.length,m:matching.length})",'search status with the true total when hits are capped'),
+                  ("T('UI-JS-SEARCH-SEE-ALL-EVIDENCE')",'the way on to the Evidence directory when hits are capped'),
+                  ("T('UI-JS-SEARCH-TYPE-FACET')",'the result-type filter with its governed name')]:
     if _tok not in js: errors.append(f'P2-G02 missing runtime contract: {_lbl}')
 for _lang in ('ar','en'):
     _dir=(DIST/_lang/'evidence/index.html').read_text(encoding='utf-8')
@@ -1483,12 +1493,33 @@ for trust in ('/privacy/','/rights/','/terms/'):
         errors.append('R4 trust route remains search-only '+trust)
 
 # Search smoke tests reproduce the browser's current scoring logic closely enough to catch journey regressions.
+_R4_DIGITS=str.maketrans({**{chr(0x0660+i):str(i) for i in range(10)},**{chr(0x06F0+i):str(i) for i in range(10)}})
+@__import__('functools').lru_cache(maxsize=None)   # the same texts are normalised once per query; a pure function, so cached
 def _r4norm(value):
     value=str(value or '').casefold()
-    value=''.join(str(ord(c)-0x0660) if '\u0660'<=c<='\u0669' else str(ord(c)-0x06F0) if '\u06F0'<=c<='\u06F9' else c for c in value)   # Tranche C TOOL-12
+    value=value.translate(_R4_DIGITS)   # Tranche C TOOL-12: Arabic-Indic and Persian digits to ASCII, as before
     value=re.sub(r'[\u064B-\u065F\u0670]','',value)
     value=value.replace('إ','ا').replace('أ','ا').replace('آ','ا').replace('ٱ','ا').replace('ى','ي').replace('ة','ه').replace('ؤ','و').replace('ئ','ي')
+    value=re.sub(r'(\d)[,\u066C](?=\d{3}(?!\d))',r'\1',value)   # B15 (C-5), identical to app.js normalize()
+    value=re.sub(r'(\d)\u066B(?=\d)',r'\1.',value)
     return value
+_R4_WCH='a-z0-9\u0621-\u064A'
+@__import__('functools').lru_cache(maxsize=None)
+def _r4re(t):
+    # B15 (C-5, A-2): identical to site-src/app.js tokenRe()
+    e=re.escape(t)
+    if re.fullmatch(r'\d+(?:\.\d+)?%?',t): return re.compile(rf'(?<![0-9.,]){e}(?![0-9]|[.,][0-9])')
+    if re.search(r'[-\d]',t): return None
+    ar=bool(re.search(r'[\u0621-\u064A]',t))
+    pre='(?:[وفبلك])?(?:ال|لل)?' if ar else ''
+    tail=((rf'(?:ه|ي|ات)?(?![{_R4_WCH}])' if ar else rf's?(?![{_R4_WCH}])') if len(t)<=3 else '')
+    return re.compile(rf'(?<![{_R4_WCH}]){pre}{e}{tail}')
+def _r4has(text,t):
+    # Every token pattern contains the token itself as a literal, so a text without it cannot match: the substring test
+    # decides most calls without the regular expression, with the same result (owner note of 3 October 2026, 13:00, 1).
+    if t not in text: return False
+    rx=_r4re(t)
+    return bool(rx.search(text)) if rx else True
 def _r4qtok(t):
     # PB-0491 light query-token normalisation, identical to site-src/app.js queryToken().
     if t.startswith('ال') and len(t)>3: return t[2:]
@@ -1511,7 +1542,13 @@ def _r4alias(term,lang):
         if q in [t for t in terms if t]: return a
     return None
 _R4_STOP={'what','do','does','we','is','are','the','and','of','in','about','how','which','who','a','an','to','for','on','there','ما','ماذا','هل','في','من','على','عن','و','التي','الذي','هو','هي','كم','كيف'}
-_R4_PUNCT=re.compile(r'[?,.;:!—–"“”«»()؟،؛\'’]')
+_R4_PUNCT=re.compile(r'[?,;:!—–"“”«»()؟،؛\'’]|(?<!\d)\.|\.(?!\d)')   # B15 (C-5): a decimal point inside a number is kept
+def _r4phrases(a):
+    out=[]
+    for x in str(a.get('terms_en') or '').split(';')+str(a.get('terms_ar') or '').split(';'):
+        ph=[_r4qtok(t) for t in _r4norm(x.strip()).split() if len(t)>1 and t not in _R4_STOP]
+        if ph: out.append(ph)
+    return out
 def _r4search(query,lang,limit=10):
     # Tranche C (JRN-05/TOOL-10): identical to site-src/app.js queryTokens() and result de-duplication by destination.
     term=_r4norm(query.strip())
@@ -1528,12 +1565,17 @@ def _r4search(query,lang,limit=10):
         for tok in tokens:
             if stable==tok: score+=12
             elif re.search(r'[-\d]',tok) and tok in stable: score+=7
-            if tok in title: score+=6
-            if tok in summary: score+=3
-            if tok in textv: score+=1
-            if tok in boundary: score+=0.5
+            if _r4has(title,tok): score+=6
+            if _r4has(summary,tok): score+=3
+            if _r4has(textv,tok): score+=1
+            if _r4has(boundary,tok): score+=0.5
+        if alias:   # B15 (A-3): identical to app.js aliasPhrases()
+            for ph in _r4phrases(alias):
+                if all(_r4has(title,t) for t in ph): score+=3
+                elif all(_r4has(summary,t) for t in ph): score+=1.5
+                elif all(_r4has(textv,t) for t in ph): score+=0.5
         xr=str(x.get('route') or '')
-        if score>0 and x.get('type')=='page' and xr in _R4_DOMAIN and tokens and all(t in title for t in tokens): score+=20
+        if score>0 and x.get('type')=='page' and xr in _R4_DOMAIN and tokens and all(_r4has(title,t) for t in tokens): score+=20
         if alias:
             for tg in [v.strip() for v in str(alias.get('targets') or '').split('|')]:
                 if tg.startswith('route:') and x.get('type')=='page' and xr==tg[6:]: score+=25
@@ -1626,7 +1668,9 @@ _P1_NAV_LAYERS=((r'<aside class="spine[^"]*">','aside'),          # the side and
                 (r'<details class="more mt12">','details'),        # "all evidence records on this question" (the baseline's all-records list)
                 (r'<section class="qa" id="related">','section'),  # the related-questions list
                 (r'<article class="compact[^"]*"[^>]*>','article'), # a bound object: its clock, title, universe, summary and boundary belong to the record it opens
-                (r'<li class="compact[^"]*"[^>]*>','li'))          # a chronology event and its sources line (the baseline's chronology-sources)
+                (r'<li class="compact[^"]*"[^>]*>','li'),          # a chronology event and its sources line (the baseline's chronology-sources)
+                (r'<div class="cite-preview">','div'),             # B9: the citation preview quotes the page's own title (and a record's governed citation) by design
+                (r'<p class="small" data-measurement-readings>','p'))   # B6: the Readings a priority is examined in — a link list; one Reading may serve two priorities
 # A figure is its own layer: its panel clocks, state labels, governed alt text, table and frame foot are the non-visual
 # equivalent of a drawing, asserted against the visual contract by P3-G02 and design/reference/check_visuals.py — a
 # different job, as the baseline's own exclusion said. Governed text that a contract's alt_text restates verbatim is a
@@ -1667,7 +1711,9 @@ try:
     def _n(p): return len(json.load(open(C/p,encoding='utf-8')))
     _srm=json.load(open(C/'sources/source_reference_map.json',encoding='utf-8'))
     _expect={'evidence_records':_n('evidence/evidence_objects.json'),'public_claims':_n('evidence/public_claims.json'),
-             'chronology_events':_n('visuals/system_chronology.json'),'sources':_n('sources/source_library.json'),
+             # RC-2: "Dated events in the system chronology" — the analytical rule row (event_class SYSTEM_INTERPRETATION) is not an event
+             'chronology_events':sum(1 for r in json.load(open(C/'visuals/system_chronology.json',encoding='utf-8')) if r.get('event_class')!='SYSTEM_INTERPRETATION'),
+             'sources':_n('sources/source_library.json'),
              'public_locators':sum(1 for s in _srm if str(s.get('primary_url') or '').strip().lower().startswith(('http://','https://'))),
              'curated_resources':sum(1 for s in _srm if s.get('standalone_resource_card_eligible') is True),
              'readings':_n('content/readings.json'),'measurement_priorities':_n('content/measurement_agenda.json'),
@@ -2401,11 +2447,11 @@ try:
     elif _sm.exists(): errors.append('F6-G03 sitemap.xml written without a public origin')
     _test=_DISC.sitemap_xml(_routes6,'https://example.org')
     _locs=re.findall(r'<loc>([^<]+)</loc>',_test)
-    _pages={('https://example.org/'+str(p.relative_to(DIST).parent).replace('\\','/')+'/') for L in ('en','ar') for p in (DIST/L).rglob('index.html')}
+    _pages={('https://example.org/'+str(p.relative_to(DIST).parent).replace('\\','/')+'/') for L in ('en','ar') for p in (DIST/L).rglob('index.html') if 'data-moved-to=' not in p.read_text(encoding='utf-8')}   # RC-19: a retired address is not a page
     if len(_locs)!=len(set(_locs)) or set(_locs)!=_pages: errors.append(f'F6-G03 sitemap coverage: {len(set(_locs))} locations for {len(_pages)} pages')
     if _test.count('hreflang="x-default"')!=len(_locs) or _test.count('<xhtml:link')!=3*len(_locs): errors.append('F6-G03 sitemap alternates incomplete')
     _nf=(DIST/'404.html').read_text(encoding='utf-8')
-    if '<meta name="robots" content="noindex">' not in _nf: errors.append('F6-G05 404 page is indexable')
+    if _DISC.robots_meta('noindex') not in _nf: errors.append('F6-G05 404 page is indexable')
     _root=(DIST/'index.html').read_text(encoding='utf-8')
     if 'hreflang="x-default" href="'+_DISC.url('/',_org)+'"' not in _root or re.search(r'<script>(?!\s*$)',_root): errors.append('F6-G05 root entry route: x-default links or inline script')
     for _f in DIST.rglob('*.html'):
@@ -2424,16 +2470,33 @@ try:
     import checksums as _CS   # F9: git ls-files, or every file of an extracted archive (the same set SHA256SUMS.txt covers)
     _tracked=_CS.tracked_files()
     _secret=re.compile(r'AKIA[0-9A-Z]{16}|-----BEGIN (?:RSA |EC |OPENSSH |DSA )?PRIVATE KEY-----|\bghp_[A-Za-z0-9]{36}\b|\bgithub_pat_[A-Za-z0-9_]{40,}|\bxox[baprs]-[A-Za-z0-9-]{10,}|\bsk-[A-Za-z0-9]{32,}|\bAIza[0-9A-Za-z_\-]{35}\b|(?i:\b(?:password|passwd|secret|api[_-]?key|access[_-]?token)\s*[:=]\s*["\'][^"\'\s]{8,}["\'])')
+    # The scan is split in two, with the same result as the single pattern above: each case-sensitive key form starts with
+    # a fixed literal, and the case-insensitive assignment needs one of its keywords; a text holding neither is not
+    # searched. Under IGNORECASE Python also folds four non-ASCII letters to ASCII (U+0130, U+0131, U+017F, U+212A);
+    # lower() and the two replacements below cover them, so the keyword test is never narrower than the pattern.
+    _sec_i=_secret.pattern.index('|(?i:')
+    _secret_cs,_secret_ci=re.compile(_secret.pattern[:_sec_i]),re.compile(_secret.pattern[_sec_i+1:])
+    _SEC_LIT=('AKIA','-----BEGIN ','ghp_','github_pat_','xox','sk-','AIza')
+    _SEC_KW=('password','passwd','secret','apikey','api_key','api-key','accesstoken','access_token','access-token')
+    def _secret_search(_tx):
+        if any(_l in _tx for _l in _SEC_LIT):
+            _m=_secret_cs.search(_tx)
+            if _m: return _secret.search(_tx)   # the first match of the whole pattern, as before
+        _lo=_tx.lower()
+        if 'ı' in _lo or 'ſ' in _lo: _lo=_lo.replace('ı','i').replace('ſ','s')
+        if any(_k in _lo for _k in _SEC_KW):
+            return _secret.search(_tx)
+        return None
     _docs=re.compile(r'\.(?:pdf|docx?|xlsx?|pptx?|zip|7z|rar|gz|tar)$',re.I)
     for _p in _tracked:
         if not _p: continue
         if _docs.search(_p) and _p!='authority/Yemen_Financial_Inclusion_Evidence_Master.xlsx': errors.append(f'F6-G07 bundled document {_p}')
         # woff2: the self-hosted IBM Plex faces the stylesheet declares (EAD-08). Still no office, PDF or archive file.
-        if _p.startswith('dist/') and not re.search(r'\.(?:html|css|js|json|png|txt|xml|woff2)$',_p): errors.append(f'F6-G07 non-web file in dist {_p}')
+        if _p.startswith('dist/') and not re.search(r'\.(?:html|css|js|json|png|txt|xml|woff2)$',_p) and _p!='dist/_headers': errors.append(f'F6-G07 non-web file in dist {_p}')   # B14 b: the host headers file
         if re.search(r'\.(?:png|xlsx|jpg|jpeg|gif|ico|woff2?)$',_p,re.I): continue
         try: _tx=(ROOT/_p).read_text(encoding='utf-8')
         except Exception: continue
-        _m=_secret.search(_tx)
+        _m=_secret_search(_tx)
         if _m: errors.append(f'F6-G06 secret-like pattern in {_p}: {_m.group(0)[:12]}…')
     for _r in json.load(open(C/'sources/source_library.json',encoding='utf-8')):
         if not (_r.get('rights_state') and _r.get('public_card_state')): errors.append(f'F6-G08 source {_r.get("source_id")} lacks rights or card state')
@@ -2495,6 +2558,851 @@ try:
                 errors.append(f'R86-G04 {_f.relative_to(ROOT)} names a path that does not exist: {_c}')
 except Exception as _x:
     errors.append('R86-G unreadable '+repr(_x))
+
+# RC-G4 (release candidate, Part A G4): the shipped behaviours the owner decisions and the governed labels unlocked.
+try:
+    _ui4={r['ui_id']:r for r in json.load(open(C/'content/interface_copy.json',encoding='utf-8'))}
+    _vdc4=json.load(open(C/'visuals/visual_design_contracts.json',encoding='utf-8'))['visuals']
+    _retired={v['visual_id'] for v in _vdc4 if v['tier']=='RETIRE_FROM_DESIGN'}
+    _blank=re.compile(r'(<a\b[^>]*\btarget="_blank"[^>]*>)(.*?)</a>',re.S)
+    for _lang in ('en','ar'):
+        _cue=_html.escape(_ui4['UI-EXTERNAL-NEW-TAB'][f'label_{_lang}'],quote=False)
+        _full=[(v['visual_id'],_html.escape(v['governed'].get(f'alt_text_{_lang}') or '',quote=False)) for v in _vdc4]
+        for _f in sorted((DIST/_lang).rglob('index.html')):
+            _h=_f.read_text(encoding='utf-8'); _rel=_f.relative_to(DIST)
+            # D5: every link that opens a new tab says so (a visually hidden cue, or at the end of its aria-label)
+            for _m in _blank.finditer(_h):
+                if f'<span class="sr-only"> {_cue}</span>' not in _m.group(2) and not re.search(r'aria-label="[^"]* '+re.escape(_cue)+'"',_m.group(1)):
+                    errors.append(f'RC-G4 new-tab link without its cue {_rel}'); break
+            # A5 / C4: a retired contract is framed nowhere but its own record page
+            for _vid in _retired:
+                if f'data-visual-id="{_vid}"' in _h and f'/evidence/{_vid}/' not in str(_rel).replace('\\','/')+'/':
+                    errors.append(f'RC-G4 retired contract {_vid} framed on {_rel}')
+            # A3 / C3: no page prints a figure's full alt text (summary · label · inference); the boundary prints once, in the foot
+            for _vid,_alt in _full:
+                if _alt and _alt in _h:
+                    errors.append(f'RC-G4 the full alt text of {_vid} (ending with its boundary) is printed on {_rel}'); break
+        _cmp=(DIST/_lang/'evidence/compare/index.html').read_text(encoding='utf-8')
+        if 'data-compare-prompt' not in _cmp: errors.append(f'RC-G4 the Compare prompt is not marked for the runtime {_lang}')
+    # EAD-03: every page serves the web-size derivatives, never the 10 MB master; every derivative it names exists
+    _logos={x['file'] for x in json.load(open(ROOT/'site-src/assets/logo/INDEX.json',encoding='utf-8'))['derivatives']}
+    for _f in sorted(DIST.rglob('*.html')):
+        if '_export' in _f.parts or '_social' in _f.parts: continue
+        _h=_f.read_text(encoding='utf-8')
+        if 'CauseWay_Master_Logo.png' in _h: errors.append(f'RC-G4 a page loads the master logo instead of a derivative: {_f.relative_to(DIST)}'); break
+        _bad=sorted(set(re.findall(r'/assets/logo/(CauseWay_logo_\d+\.png)',_h))-_logos)
+        if _bad: errors.append(f'RC-G4 a page names a logo derivative that does not exist: {_f.relative_to(DIST)} {_bad}'); break
+    _js4=(ROOT/'site-src/app.js').read_text(encoding='utf-8')
+    if "prompt.hidden=records.length>=2" not in _js4: errors.append('RC-G4 missing runtime contract: the Compare prompt only while fewer than two records are selected')
+except Exception as _x:
+    errors.append('RC-G4 unreadable '+repr(_x))
+
+# RC-GB (release candidate, Part B B5, B7, B8, B9): the governed strings the brief gives are where they belong.
+try:
+    _uiB={r['ui_id']:r for r in json.load(open(C/'content/interface_copy.json',encoding='utf-8'))}
+    _srcB=json.load(open(C/'sources/source_reference_map.json',encoding='utf-8'))
+    _regB={'Enforcement decision','Circular or instruction','Regulatory decision','Regulation','Official list or roster'}
+    _nreg=sum(1 for s in _srcB if s.get('document_label') in _regB and str(s.get('primary_url') or '').startswith('http'))
+    for _lang in ('en','ar'):
+        _d=(DIST/_lang/'data/index.html').read_text(encoding='utf-8')
+        _lab=lambda k: _html.escape(_uiB[k][f'label_{_lang}'],quote=False)
+        if f'<p class="small reuse-once" data-reuse-terms>{_uiB["UI-DATA-REUSE-TERMS-ONCE"][f"label_{_lang}"]}</p>' not in _html.unescape(_d): errors.append(f'RC-GB B8 the reuse terms are not stated above the source list {_lang}')
+        _m=re.search(r'<details class="source-locator-details source-regulatory-details grp" id="regulatory" open><summary>([^<]*) <span class="count">\(<bdi dir="ltr">(\d+)</bdi>\)',_d)
+        if not _m or _m.group(1)!=_lab('UI-DATA-GROUP-REGULATORY') or int(_m.group(2))!=_nreg: errors.append(f'RC-GB B5 the regulatory group is missing or does not hold all {_nreg} regulatory sources {_lang}')
+        if _uiB['UI-DATA-GROUP-REGULATORY-SCOPE'][f'label_{_lang}'] not in _html.unescape(_d): errors.append(f'RC-GB B5 the regulatory group has no scope line {_lang}')
+        _c=(DIST/_lang/'evidence/compare/index.html').read_text(encoding='utf-8')
+        if _uiB['UI-JS-COMPARE-NOT-OFFERED'][f'label_{_lang}'] not in _html.unescape(_c.split('id="yfie-ui"')[0]): errors.append(f'RC-GB B7 the Compare intro does not carry the selected-set sentence {_lang}')
+        for _f in sorted((DIST/_lang).rglob('index.html')):
+            _h=_f.read_text(encoding='utf-8')
+            if 'data-moved-to=' in _h: continue   # RC-19: a retired address leads on to its record; it is not a citable page
+            if 'data-cite-text' not in _h or 'data-print' not in _h:
+                errors.append(f'RC-GB B9 page without its citation preview or print control {_f.relative_to(DIST)}'); break
+    _jsB=(ROOT/'site-src/app.js').read_text(encoding='utf-8')
+    for _tok,_lbl in (("T('UI-JS-COMPARE-NOT-OFFERED')",'B7 the selected-set sentence under the unknown-record error'),
+                      ("preview.textContent.replace(/\\s+/g,' ').trim()",'B9 the copied citation is the previewed one'),
+                      ("$$('[data-print]').forEach(b=>b.addEventListener('click',()=>window.print()))",'B9 the print control prints')):
+        if _tok not in _jsB: errors.append(f'RC-GB missing runtime contract: {_lbl}')
+except Exception as _x:
+    errors.append('RC-GB unreadable '+repr(_x))
+
+# RC-DATES (owner request of 2 October 2026, after RC-5): after Arabic letters a digit-hyphen-digit run (an ISO date, a
+# date or number range, an identifier's dated tail) displays with its parts reversed unless it is isolated left to right.
+# Every Arabic page: each such run in printed text sits inside an element with dir="ltr" (an SVG drawing: direction="ltr"),
+# and in text that cannot carry markup (the title, the displayed meta content, alt, title and placeholder attributes)
+# between the Unicode isolates LRI and PDI. aria-label is spoken, not printed, and is not read here.
+from html.parser import HTMLParser as _HP   # noqa: E402
+_DASH_RUN=re.compile(r'\d[-‐‑–−]\d')
+_SHOWN_META={'description','og:title','og:description','og:image:alt','twitter:title','twitter:description','twitter:image:alt'}
+class _DateScan(_HP):
+    def __init__(self):
+        super().__init__(convert_charrefs=True); self.stack=[]; self.bad=[]
+    def _plain(self,where,v):
+        if _DASH_RUN.search(re.sub('⁦[^⁩]*⁩','',v or '')): self.bad.append((where,v))
+    def handle_starttag(self,t,a,void=False):
+        a=dict(a)
+        for k in ('alt','title','placeholder'):
+            if k in a: self._plain(f'{t}@{k}',a[k])
+        if t=='meta' and (a.get('name') in _SHOWN_META or a.get('property') in _SHOWN_META): self._plain(f'meta {a.get("name") or a.get("property")}',a.get('content'))
+        if void or t in ('area','base','br','col','embed','hr','img','input','link','meta','param','source','track','wbr'): return
+        self.stack.append((t, t!='html' and (a.get('dir')=='ltr' or a.get('direction')=='ltr'), t in ('script','style','template')))
+    def handle_startendtag(self,t,a): self.handle_starttag(t,a,void=True)
+    def handle_endtag(self,t):
+        for i in range(len(self.stack)-1,-1,-1):
+            if self.stack[i][0]==t: del self.stack[i:]; break
+    def handle_data(self,d):
+        if any(x[2] for x in self.stack) or not _DASH_RUN.search(d): return
+        if self.stack and self.stack[-1][0]=='title': self._plain('title',d); return
+        if not any(x[1] for x in self.stack): self.bad.append(('/'.join(x[0] for x in self.stack[-3:]),d.strip()[:90]))
+try:
+    _nd=0
+    for _f in sorted((DIST/'ar').rglob('*.html')):
+        _p=_DateScan(); _p.feed(_f.read_text(encoding='utf-8')); _nd+=1
+        for _w,_v in _p.bad[:3]: errors.append(f'RC-DATES an Arabic page prints a digit-hyphen-digit run outside an isolate {_f.relative_to(DIST)} [{_w}] {_v!r}')
+    if _nd<140: errors.append(f'RC-DATES read only {_nd} Arabic pages')
+    from yfie.text import ID_RUN as _ID_RUN   # noqa: E402
+    if f'const ID_RUN=/{_ID_RUN.pattern}/g;' not in js:
+        errors.append('RC-DATES the runtime\'s identifier isolation is not the renderer\'s expression (scripts/yfie/text.py ID_RUN)')
+    if ".replace(ID_RUN,m=>`<bdi dir=\"ltr\">${m}</bdi>`)" not in js:
+        errors.append('RC-DATES the runtime does not isolate the identifiers it writes')
+except Exception as _x:
+    errors.append('RC-DATES unreadable '+repr(_x))
+
+# RC-A1 (Owner Addendum 2, A1): a chain figure's text alternative may not name a dated step its drawing lacks. On every
+# page that draws RV-CWR-009 or VIS-PAYMENT-RAILS, each day-precise date the text description names ("26 June 2024",
+# «26 يونيو 2024») is the date of a drawn step of the same figure.
+_MONTHS = {m: i for i, m in enumerate(("January", "February", "March", "April", "May", "June", "July", "August", "September",
+                                       "October", "November", "December"), 1)}
+_MONTHS.update({m: i for i, m in enumerate(("يناير", "فبراير", "مارس", "أبريل", "مايو", "يونيو", "يوليو", "أغسطس", "سبتمبر",
+                                            "أكتوبر", "نوفمبر", "ديسمبر"), 1)})
+_DAY_DATE = re.compile(r"(?<!\d)(\d{1,2}) (" + "|".join(_MONTHS) + r") (\d{4})")
+try:
+    _na1 = 0
+    for _lang in ("en", "ar"):
+        for _f in sorted((DIST / _lang).rglob("index.html")):
+            _h = _f.read_text(encoding="utf-8")
+            for _vid in ("RV-CWR-009", "VIS-PAYMENT-RAILS"):
+                for _m in re.finditer(r'<figure class="fig[^"]*"[^>]*data-visual-id="' + _vid + r'".*?</figure>', _h, re.S):
+                    _fig = _m.group(0)
+                    _alt = re.search(r'<div class="alt"[^>]*>(.*?)</div>', _fig, re.S)
+                    if not _alt:
+                        continue
+                    _na1 += 1
+                    _drawn = set(re.findall(r'<bdi dir="ltr" class="nw">(\d{4}-\d{2}-\d{2})</bdi>', _fig.replace(_alt.group(0), "")))
+                    _text = _html.unescape(re.sub(r"<[^>]+>", "", _alt.group(1)))
+                    for _d, _mo, _y in _DAY_DATE.findall(_text):
+                        _iso = f"{_y}-{_MONTHS[_mo]:02d}-{int(_d):02d}"
+                        if _iso not in _drawn:
+                            errors.append(f"RC-A1 a chain figure's text alternative names a step its drawing lacks {_f.relative_to(DIST)} {_vid} {_d} {_mo} {_y}")
+    if _na1 < 4:
+        errors.append(f"RC-A1 read only {_na1} chain-figure text alternatives")
+except Exception as _x:
+    errors.append("RC-A1 unreadable " + repr(_x))
+
+# RC-NAMES (owner note of 3 October 2026, 03:10, point 1; owner decisions of 3 October 2026, 09:05, points 1 and 2;
+# hardened after the RC-17 adversarial review). Two sets of names are non-public lineage and print nowhere: the entities
+# and branches named in CBY-Aden enforcement decisions (22_PROVIDERS_DATA, PRV-*-E* and PRV-*-B* rows, both languages),
+# and the twelve names of the June 2024 e-wallet circular (NEG-EW-001…012). Every text file in the built site (pages,
+# data, the search index, scripts, styles, SVG, headers) and every social-image frame is read through one normaliser:
+# tags and entities, percent and \u escapes, NFKC, Arabic diacritics, tatweel, bidi and zero-width marks, letter forms
+# (alef, hamza, ta marbuta, alef maqsura, Persian kaf and yeh), hyphens and no-break spaces. A name is matched on its
+# distinctive core, with an optional Arabic proclitic (و ب ل ف ك) and article, whether its words are spaced, hyphenated
+# or joined ("WeCash", «ويكاش»). A core that is ordinary vocabulary (Arabic «الشامل», «الاتحاد», English "money" …) is
+# matched only beside its class word («شركه الشامل», «الشامل للصرافه»), so the words stay usable in prose. The circular's
+# names are matched by patterns kept here, each tested against its own lineage label so that none can drift from it.
+# Failures name the record ID, never the name.
+import unicodedata as _ud
+from urllib.parse import unquote as _unquote
+_AR = "ء-ي"
+def _rcn_norm(s):
+    s = _html.unescape(str(s or ""))
+    s = re.sub(r"\\u([0-9a-fA-F]{4})", lambda m: chr(int(m.group(1), 16)), s)
+    if "%" in s:
+        s = _unquote(s)
+    s = re.sub(r"<[^>]{0,400}>", " ", s)
+    s = _ud.normalize("NFKC", s)
+    s = re.sub(r"[ً-ْٰـ​-‏‪-‮⁦-⁩﻿­]", "", s)
+    s = re.sub("[إأآٱ]", "ا", s).replace("ة", "ه").replace("ى", "ي").replace("ک", "ك").replace("ی", "ي").replace("ؤ", "و").replace("ئ", "ي")
+    s = re.sub(r"[  -   \s_\-‐-―]+", " ", s)
+    return s.lower()
+def _rcn_en_strip(s):   # the English article never distinguishes a name
+    return re.sub(r"(?<![a-z])(al|el) ", "", s)
+def _rcn_ar(core):      # an Arabic core with optional proclitic and article, its words spaced or joined
+    toks = [re.sub(r"^ال", "", w) for w in core.split()]
+    return r"(?<![" + _AR + r"])(?:[وبلفك])?(?:ال)?" + r"\s*(?:ال)?".join(map(re.escape, toks)) + r"(?![" + _AR + r"])"
+def _rcn_en(core):
+    toks = [w for w in _rcn_en_strip(core).split()]
+    return r"(?<![a-z])" + r"\s*".join(map(re.escape, toks)) + r"(?![a-z])"
+_RCN_NEEDLES = {   # NEG-EW id: (English needles, Arabic needles): a literal every match of its patterns contains
+    "NEG-EW-001": (("wallet",), ("كاش",)), "NEG-EW-002": (("dawli",), ("دولي",)), "NEG-EW-003": (("jaw",), ("جوالي",)),
+    "NEG-EW-004": (("floos",), ("فلوسك",)), "NEG-EW-005": (("saba",), ("سبا",)), "NEG-EW-006": (("wallet",), ("موبايل",)),
+    "NEG-EW-007": (("wallet",), ("والت",)), "NEG-EW-008": (("rial", "riyal"), ("ريال",)), "NEG-EW-009": (("mobile",), ("موبايل",)),
+    "NEG-EW-010": (("jaib",), ("جيب",)), "NEG-EW-011": (("cash",), ("كاش",)), "NEG-EW-012": (("mutakamil",), ("متكامله",)),
+}
+_RCN_CIRCULAR = {   # NEG-EW id: (English patterns, Arabic patterns), on normalised text (_rcn_norm, then the article dropped)
+    "NEG-EW-001": ([r"(?<![a-z])cash\s*wallet"], [r"محفظه\s*كاش(?![" + _AR + r"])"]),
+    "NEG-EW-002": ([r"(?<![a-z])dawli\s*money"], [r"(?<![" + _AR + r"])(?:[وبلفك])?(?:ال)?دولي\s*موني"]),
+    "NEG-EW-003": ([r"(?<![a-z])jaw+al[iy](?![a-z])"], [r"(?<![" + _AR + r"])(?:[وبلفك])?(?:ال)?جوالي(?![" + _AR + r"])"]),
+    "NEG-EW-004": ([r"(?<![a-z])floos[a-z]*"], [r"(?<![" + _AR + r"])(?:[وبلفك])?فلوسك(?![" + _AR + r"])"]),
+    "NEG-EW-005": ([r"(?<![a-z])saba\s*cash"], [r"(?<![" + _AR + r"])(?:[وبلفك])?سبا\s*كاش"]),
+    "NEG-EW-006": ([r"(?<![a-z])mobile\s*money\s*wallet"], [r"محفظه\s*موبايل\s*موني"]),
+    "NEG-EW-007": ([r"(?<![a-z])yemen\s*wallet"], [r"(?<![" + _AR + r"])(?:[وبلفك])?يمن\s*والت"]),
+    "NEG-EW-008": ([r"(?<![a-z])(?:electronic|e)\s*riy?al(?![a-z])"], [r"(?<![" + _AR + r"])(?:[وبلفك])?(?:ال)?ريال\s*(?:ال)?الكتروني"]),
+    "NEG-EW-009": ([r"(?<![a-z])riy?al\s*mobile"], [r"(?<![" + _AR + r"])(?:[وبلفك])?ريال\s*موبايل"]),
+    "NEG-EW-010": ([r"(?<![a-z])jaib(?![a-z])"], [r"محفظه\s*(?:ال)?جيب(?![" + _AR + r"])"]),
+    "NEG-EW-011": ([r"(?<![a-z])we\s*cash"], [r"(?<![" + _AR + r"])(?:[وبلفك])?وي\s*كاش"]),
+    "NEG-EW-012": ([r"(?<![a-z])mutakamil[a-z]*"], [r"محفظه\s*(?:ال)?متكامله"]),
+}
+_RCN_GENERIC_EN = {"exchange", "company", "establishment", "and", "transfers", "transfer", "branch", "remittance", "agent", "the", "of", "for"}
+_RCN_COMMON_EN = {"money", "express", "ahmed", "ali", "abu", "saleh", "omar", "khalid", "sadiq", "amin", "alam", "sarafah", "bin", "saddam", "marta"}
+_RCN_GENERIC_AR = {"شركه", "منشاه", "فرع", "للصرافه", "الصرافه", "صرافه", "والتحويلات", "للتحويلات", "التحويلات", "وكيل", "حواله", "حوالات"}
+_RCN_COMMON_AR = {"الشامل", "الخضر", "سهيل", "الثور", "الطيار", "المتحدون", "الاحقاف", "البراق", "الابرق", "عالم", "الاتحاد", "صادق",
+                  "علي", "احمد", "خالد", "صدام", "عمر", "موني", "اكسبرس", "اكسبريس", "ابو", "صالح", "امين", "بن"}
+try:
+    _pdr = json.loads((C / "data" / "providers_data.json").read_text(encoding="utf-8"))["rows"]
+    _rcn = []   # (record id, compiled pattern, applies to: "en" text or "ar" text)
+    # 1 · the enforcement-decision subjects, their cores derived from the lineage labels
+    _ent = [r for r in _pdr if r and isinstance(r[0], str) and re.match(r"^PRV-[A-Z]+-[EB]\d+[A-Z]?$", r[0])]
+    for _r in _ent:
+        _en_l, _ar_l = str(_r[1] or ""), str(_r[2] or "")
+        if "named in" in _en_l or "مسمى في" in _ar_l:
+            continue   # a row that describes an unnamed individual carries no name
+        _en_c = _rcn_en_strip(_rcn_norm(re.split(r"\s+[-—–]\s+", re.sub(r"\s*\(.*?\)\s*", " ", _en_l).strip())[0]))
+        _en_t = [w for w in _en_c.replace("'", "").split() if w not in _RCN_GENERIC_EN]
+        _ar_c = _rcn_norm(re.split(r"\s+[-—–]\s+", re.sub(r"\s*\(.*?\)\s*", " ", _ar_l).strip())[0])
+        _ar_t = [w for w in _ar_c.split() if w not in _RCN_GENERIC_AR]
+        if not _en_t or not _ar_t:
+            errors.append(f"RC-NAMES {_r[0]} has no distinctive core")
+            continue
+        if len(_en_t) > 1:   # the whole core; a one-word core is matched below, word by word
+            _rcn.append((_r[0], re.compile(_rcn_en(" ".join(_en_t))), "en", (max(_en_t, key=len),)))
+        if len(_ar_t) > 1:
+            _rcn.append((_r[0], re.compile(_rcn_ar(" ".join(_ar_t))), "ar", (max((re.sub(r"^ال", "", w) for w in _ar_t), key=len),)))
+        for _w in _en_t:
+            if _w not in _RCN_COMMON_EN and (len(_w) >= 4 or len(_en_t) == 1):
+                _rcn.append((_r[0], re.compile(_rcn_en(_w)), "en", (_w,)))
+        _cls = r"(?:شركه|منشاه|فرع|وكيل)"
+        for _w in _ar_t:
+            _wx = _rcn_ar(_w)
+            if _w in _RCN_COMMON_AR:   # ordinary vocabulary: a one-word core only beside its class word; in a longer core,
+                if len(_ar_t) == 1:      # only as part of the whole core (above)
+                    _wb = _wx.split(r"(?:[وبلفك])?", 1)[1]
+                    _nd = (re.sub(r"^ال", "", _w),)
+                    _rcn.append((_r[0], re.compile(_cls + r"\s*(?:ال)?" + _wb.replace("(?:ال)?", "", 1)), "ar", _nd))
+                    _rcn.append((_r[0], re.compile(_wx[:-len(r"(?![" + _AR + r"])")] + r"\s*لل(?:صرافه|تحويلات)"), "ar", _nd))
+            elif len(_w) >= 4 or len(_ar_t) == 1:
+                _rcn.append((_r[0], re.compile(_wx), "ar", (re.sub(r"^ال", "", _w),)))
+    if len({x[0] for x in _rcn}) < 33:
+        errors.append(f"RC-NAMES read only {len({x[0] for x in _rcn})} enforcement-decision subjects")
+    # 2 · the circular's twelve names: each pattern must match its own lineage label
+    _neg = {r[0]: r for r in _pdr if r and isinstance(r[0], str) and re.match(r"^NEG-EW-\d{3}$", r[0])}
+    if sorted(_neg) != sorted(_RCN_CIRCULAR):
+        errors.append(f"RC-NAMES the 2024 circular has {len(_neg)} lineage rows; the gate knows {len(_RCN_CIRCULAR)}")
+    for _id, (_ens, _ars) in _RCN_CIRCULAR.items():
+        _row = _neg.get(_id) or [None] * 6
+        _lab_en, _lab_ar = _rcn_en_strip(_rcn_norm(_row[5])), _rcn_norm(_row[4])
+        if not all(any(_nd in _lab for _nd in _nds) for _lab, _nds in ((_lab_en, _RCN_NEEDLES[_id][0]), (_lab_ar, _RCN_NEEDLES[_id][1]))):
+            errors.append(f"RC-NAMES the gate's needle for {_id} is missing from its own lineage label")
+        for _p in _ens:
+            if not re.search(_p, _lab_en):
+                errors.append(f"RC-NAMES the gate's pattern for {_id} no longer matches its English lineage label")
+            _rcn.append((_id, re.compile(_p), "en", _RCN_NEEDLES[_id][0]))
+        for _p in _ars:
+            if not re.search(_p, _lab_ar):
+                errors.append(f"RC-NAMES the gate's pattern for {_id} no longer matches its Arabic lineage label")
+            _rcn.append((_id, re.compile(_p), "ar", _RCN_NEEDLES[_id][1]))
+    # 3 · every published text, and every social-image frame
+    _texts = []
+    for _f in sorted(DIST.rglob("*")):
+        if not _f.is_file() or _f.suffix.lower() in (".png", ".jpg", ".jpeg", ".webp", ".gif", ".ico", ".woff", ".woff2", ".ttf", ".otf", ".pdf", ".zip", ".gz", ".br"):
+            continue
+        try:
+            _texts.append((str(_f.relative_to(DIST)), _f.read_bytes().decode("utf-8")))
+        except UnicodeDecodeError:
+            continue
+    try:
+        sys.path.insert(0, str(ROOT / "scripts"))
+        import social_images as _soc
+        _texts += [("social frame " + k, v) for k, v in _soc.frames().items()]
+    except Exception as _x:
+        errors.append("RC-NAMES could not read the social-image frames " + repr(_x))
+    if len(_texts) < 500:
+        errors.append(f"RC-NAMES read only {len(_texts)} texts")
+    for _where, _t in _texts:
+        _n = _rcn_norm(_t)
+        _ne = _rcn_en_strip(_n)
+        _hit = set()
+        for _id, _x, _l, _nds in _rcn:
+            _tx = _ne if _l == "en" else _n
+            if _id not in _hit and any(_nd in _tx for _nd in _nds) and _x.search(_tx):
+                _hit.add(_id)
+                _kind = "a name from the 2024 e-wallet circular" if _id.startswith("NEG-") else "an enforcement-decision entity name"
+                errors.append(f"RC-NAMES {_kind} is published {_where} {_id}")
+except Exception as _x:
+    errors.append("RC-NAMES unreadable " + repr(_x))
+
+# RC-B6 (Part B B6): each Reading page links, in both languages, to every Measurement Agenda priority its governed
+# measurement_bindings name; /measurement/ shows each priority's governed decisions_unlocked as a list (the same number
+# of items in English and Arabic, at least one) and its blocked_evidence.
+try:
+    _specs = json.loads((C / "page_specs.json").read_text(encoding="utf-8"))["page_specs"]
+    _nb = 0
+    for _sp in _specs:
+        for _rd in _sp.get("governed_readings") or []:
+            _route = _sp.get("route") or ""
+            if not _route.startswith("/readings/") or _route == "/readings/":   # domain and index pages may feature a Reading; the bindings render on the Reading itself
+                continue
+            for _lang in ("en", "ar"):
+                _f = DIST / _lang / _route.strip("/") / "index.html"
+                if not _f.exists():
+                    continue
+                _h = _f.read_text(encoding="utf-8")
+                _sec = re.search(r"<section[^>]*data-reading-measurement.*?</section>", _h, re.S)
+                for _mid in _rd.get("measurement_bindings") or []:
+                    _nb += 1
+                    if not _sec or f'href="/{_lang}/measurement/#{_mid}"' not in _sec.group(0):
+                        errors.append(f"RC-B6 a Reading page does not link its measurement priority {_lang}{_route} {_mid}")
+    if _nb < 22:
+        errors.append(f"RC-B6 read only {_nb} Reading measurement bindings")
+    _counts = {}
+    for _lang in ("en", "ar"):
+        _h = (DIST / _lang / "measurement" / "index.html").read_text(encoding="utf-8")
+        for _m in re.finditer(r'<article class="obj prio" id="(MA-\d+)".*?</article>', _h, re.S):
+            _a = _m.group(0)
+            _d = re.search(r"<div data-ma-decisions>.*?</ul></div>", _a, re.S)
+            _counts.setdefault(_m.group(1), {})[_lang] = _d.group(0).count("<li>") if _d else 0
+            if "data-ma-blocked" not in _a:
+                errors.append(f"RC-B6 /measurement/ priority without its blocked evidence {_lang} {_m.group(1)}")
+    if len(_counts) < 10:
+        errors.append(f"RC-B6 read only {len(_counts)} measurement priorities")
+    for _mid, _c in sorted(_counts.items()):
+        if not _c.get("en") or _c.get("en") != _c.get("ar"):
+            errors.append(f"RC-B6 /measurement/ decisions differ between languages or are missing {_mid} {_c}")
+except Exception as _x:
+    errors.append("RC-B6 unreadable " + repr(_x))
+
+# RC-LAND (Owner Addendum 2, improvement 3): the evidence landscape on VIS-EVIDENCE-FRESHNESS's record page prints every
+# governed row (00_MASTER "EVIDENCE LANDSCAPE") in both languages, grouped by the eight domains, with a categorical
+# coverage state from the governed four and never the word "none".
+try:
+    _mp = json.loads((C / "content" / "master_principles.json").read_text(encoding="utf-8"))["rows"]
+    _hi = next(i for i, r in enumerate(_mp) if r and r[0] == "landscape_id")
+    _nrows = 0
+    for _r in _mp[_hi + 1:]:
+        if not _r or not _r[0]:
+            break
+        _nrows += 1
+    _ic = json.loads((C / "content" / "interface_copy.json").read_text(encoding="utf-8"))
+    _icl = _ic["labels"] if isinstance(_ic, dict) and "labels" in _ic else _ic
+    _icm = _icl if isinstance(_icl, dict) else {x.get("ui_id"): x for x in _icl}
+    for _lang in ("en", "ar"):
+        _covs = {(_icm.get(f"UI-LAND-COV-{k}") or {}).get(f"label_{_lang}") for k in ("SUFFICIENT_FOR_QUESTION", "PARTIAL", "MEASUREMENT_GAP", "NO_EVIDENCE")}
+        _h = (DIST / _lang / "evidence" / "VIS-EVIDENCE-FRESHNESS" / "index.html").read_text(encoding="utf-8")
+        _t = re.search(r"<div data-evidence-landscape>.*?</table>", _h, re.S)
+        if not _t:
+            errors.append(f"RC-LAND the evidence landscape is missing {_lang}")
+            continue
+        _t = _t.group(0)
+        _rowsn = len(re.findall(r'<th scope="row">', _t))
+        if _rowsn != _nrows or _nrows < 12:
+            errors.append(f"RC-LAND the evidence landscape prints {_rowsn} of {_nrows} governed rows {_lang}")
+        if _t.count('scope="rowgroup"') != 8:
+            errors.append(f"RC-LAND the evidence landscape is not grouped by the eight domains {_lang}")
+        for _c in re.findall(r"<span data-coverage>([^<]*)</span>", _t):
+            if _html.unescape(_c) not in _covs:
+                errors.append(f"RC-LAND an ungoverned coverage state {_lang} {_c!r}")
+        if re.search(r">\s*(none|None|لا شيء)\s*<", _t):
+            errors.append(f"RC-LAND the evidence landscape prints 'none' {_lang}")
+except Exception as _x:
+    errors.append("RC-LAND unreadable " + repr(_x))
+
+# RC-B12 (Part B B12): a text-first contract that binds a table from governed rows prints it on its record page in both
+# languages, with every governed row header and every bound number, and no other number.
+try:
+    _vdc = json.loads((C / "visuals" / "visual_design_contracts.json").read_text(encoding="utf-8"))
+    _tabled = [v for v in _vdc["visuals"] if v.get("table")]
+    if len(_tabled) < 2:
+        errors.append(f"RC-B12 only {len(_tabled)} text-first contracts bind a table")
+    for _v in _tabled:
+        _nums = sorted([str(c["number"]) for r in _v["table"]["rows"] for c in r.get("cells", []) if "number" in c]
+                       + [str(r["group"]["number"]) for r in _v["table"]["rows"] if "group" in r])
+        for _lang in ("en", "ar"):
+            _h = (DIST / _lang / "evidence" / _v["visual_id"] / "index.html").read_text(encoding="utf-8")
+            _t = re.search(r"<div data-text-first-table>.*?</table>", _h, re.S)
+            if not _t:
+                errors.append(f"RC-B12 a bound text-first table is missing {_lang} {_v['visual_id']}")
+                continue
+            _body = _t.group(0).split("</caption>", 1)[-1]
+            _heads = [_html.unescape(x) for x in re.findall(r'<th scope="row">([^<]*)</th>', _body)]
+            _want = [r["head"][_lang] for r in _v["table"]["rows"] if "head" in r]
+            if _heads != _want:
+                errors.append(f"RC-B12 the row headers differ from the governed rows {_lang} {_v['visual_id']}")
+            _got = sorted(x.replace(",", "") for x in re.findall(r'<bdi dir="ltr">([\d,.]+)</bdi>', _body))
+            if _got != _nums:
+                errors.append(f"RC-B12 the table's numbers differ from the bound rows {_lang} {_v['visual_id']} {_got} != {_nums}")
+except Exception as _x:
+    errors.append("RC-B12 unreadable " + repr(_x))
+
+# RC-B14 (Part B B14 a, b): the host headers ship unchanged with the site, and nothing release-only is switched on —
+# no public origin, no published download — until the owner decides (site-src/deployment.json).
+try:
+    _hdr_src, _hdr_out = ROOT / "site-src" / "hosting" / "_headers", DIST / "_headers"
+    if not _hdr_out.exists() or _hdr_out.read_bytes() != _hdr_src.read_bytes():
+        errors.append("RC-B14 dist/_headers is missing or differs from site-src/hosting/_headers")
+    elif "Content-Security-Policy:" not in _hdr_src.read_text(encoding="utf-8") or "frame-ancestors 'none'" not in _hdr_src.read_text(encoding="utf-8"):
+        errors.append("RC-B14 the host headers lost the security policy")
+    _dep14 = json.loads((ROOT / "site-src" / "deployment.json").read_text(encoding="utf-8"))
+    if _dep14.get("public_origin") is not None:
+        errors.append("RC-B14 public_origin is set: a release-only decision")
+    if _dep14.get("public_downloads") is not False:
+        errors.append("RC-B14 public_downloads is not false: publishing the exports waits on counsel's confirmation of the CC BY 4.0 text")
+    if (DIST / "downloads").exists():
+        errors.append("RC-B14 dist/downloads exists while downloads are switched off")
+    # the deploy workflow refuses to publish until counsel has confirmed the CC BY 4.0 text (docs/RELEASE_RUNBOOK.md, 7a);
+    # the switch is the owner's, set in the same commit as the dated line that records the confirmation
+    if not isinstance(_dep14.get("licence_text_confirmed"), bool):
+        errors.append("RC-B14 site-src/deployment.json: licence_text_confirmed must be true or false")
+except Exception as _x:
+    errors.append("RC-B14 unreadable " + repr(_x))
+
+# RC-NOINDEX (owner decision B3, 3 October 2026): until release every page — the root entry and the 404 included —
+# carries one robots meta, "noindex, nofollow", in its head, because under a path crawlers ignore the robots.txt the
+# build writes. pre_release in site-src/deployment.json is a boolean; at release it is false, and then no page but the
+# 404 says noindex.
+try:
+    import discovery as _DISC_NI
+    _dep_ni = json.loads((ROOT / "site-src" / "deployment.json").read_text(encoding="utf-8"))
+    if not isinstance(_dep_ni.get("pre_release"), bool):
+        errors.append("RC-NOINDEX site-src/deployment.json: pre_release must be true or false")
+    _want_ni = '<meta name="robots" content="' + _DISC_NI.PRE_RELEASE_ROBOTS + '">'
+    _pages_ni = sorted(DIST.rglob("*.html"))
+    for _f in _pages_ni:
+        _t = _f.read_text(encoding="utf-8")
+        _hd = _t[:_t.find("</head>")] if "</head>" in _t else ""
+        _metas = re.findall(r'<meta name="robots"[^>]*>', _t)
+        _rel = _f.relative_to(DIST).as_posix()
+        if _DISC_NI.pre_release():
+            if _metas != [_want_ni] or _want_ni not in _hd:
+                errors.append(f"RC-NOINDEX {_rel} lacks the pre-release noindex, nofollow meta in its head ({len(_metas)} robots metas)")
+        elif _rel != "404.html" and _metas:
+            errors.append(f"RC-NOINDEX {_rel} still says {_metas[0]} after release")
+    if len(_pages_ni) < 288:
+        errors.append(f"RC-NOINDEX only {len(_pages_ni)} pages were checked")
+except Exception as _x:
+    errors.append("RC-NOINDEX unreadable " + repr(_x))
+
+# RC-PERF (Part B B14 d): the byte part of the provisional performance budget, from the files themselves. A cold page of
+# each of the twelve page families, in each language, transfers its HTML, the stylesheet and the runtime compressed,
+# the three faces of its script and the header logo; together they stay within 350 KB
+# (docs/SUSTAINABILITY_IMPLEMENTED_RUNTIME.json, release_candidate_b14d; timings: scripts/performance_budget.py).
+try:
+    import gzip as _gz
+    _budget = 350 * 1024
+    _gzs = lambda p: len(_gz.compress(p.read_bytes(), 6, mtime=0))  # noqa: E731
+    _shared = _gzs(DIST / "assets" / "yfie.css") + _gzs(DIST / "assets" / "app.js") + (DIST / "assets" / "logo" / "CauseWay_logo_40.png").stat().st_size
+    _faces = {"en": sum(f.stat().st_size for f in (DIST / "assets" / "fonts" / "ibm-plex-sans").glob("*.woff2")),
+              "ar": sum(f.stat().st_size for f in (DIST / "assets" / "fonts" / "ibm-plex-sans-arabic").glob("*.woff2"))}
+    for _r in ("", "explore", "people", "evidence", "evidence/CLM-001", "evidence/compare", "data", "readings",
+               "readings/same-year-different-number", "methodology", "measurement", "about"):
+        for _lang in ("en", "ar"):
+            _n = _gzs(DIST / _lang / _r / "index.html") + _shared + _faces[_lang]
+            if _n > _budget:
+                errors.append(f"RC-PERF a cold /{_lang}/{_r} page needs {_n // 1024} KB, over the 350 KB budget")
+except Exception as _x:
+    errors.append("RC-PERF unreadable " + repr(_x))
+
+# RC-B15 (Part B B15 d; RC-15): the product challenge's allowed changes stay in place.
+# - Home lists, under the gaps section, every measurement priority bound to "/" by its governed title.
+# - Explore shows exactly the priorities the agenda marks P0, as its governed line says; /measurement/ lists P0 before P1.
+# - No record says the 2026 decisions "are matched" with the roster: the Master marks every subject not yet reconciled.
+# - An Evidence Record previews its short citation (OWN-04) and keeps the long form; CLM-002 links the two series it uses.
+# - A figure on its own record page carries no link to itself.
+try:
+    _ma15 = json.loads((C / "content" / "measurement_agenda.json").read_text(encoding="utf-8"))
+    _ui15 = {x["ui_id"]: x for x in json.loads((C / "content" / "interface_copy.json").read_text(encoding="utf-8"))}
+    _p0 = [m["measurement_id"] for m in _ma15 if m.get("priority") == "P0"]
+    _home15 = [m["measurement_id"] for m in _ma15 if "/" in (m.get("affected_route_list") or [])]
+    _expl15 = [m["measurement_id"] for m in _ma15 if "/explore/" in (m.get("affected_route_list") or [])]
+    if sorted(_expl15) != sorted(_p0):
+        errors.append(f"RC-B15 Explore's priorities {_expl15} are not the P0 set {_p0} its governed line names")
+    _order15 = [m["measurement_id"] for m in sorted(_ma15, key=lambda m: (str(m.get("priority") or ""), m["measurement_id"]))]
+    for _lang in ("en", "ar"):
+        _h = (DIST / _lang / "index.html").read_text(encoding="utf-8")
+        _blk = _h.split("data-home-gap-priorities", 1)[1].split("</ul>", 1)[0] if "data-home-gap-priorities" in _h else ""
+        for _m in _home15:
+            if f'/{_lang}/measurement/#{_m}"' not in _blk:
+                errors.append(f"RC-B15 Home ({_lang}) does not link the bound priority {_m} under the gaps section")
+        if _ui15["UI-HOME-GAPS-NOTE"][f"label_{_lang}"] not in _html.unescape(_h):
+            errors.append(f"RC-B15 Home ({_lang}) lost the line under its gap priorities")
+        _e = _html.unescape((DIST / _lang / "explore" / "index.html").read_text(encoding="utf-8"))
+        if _ui15["UI-EXPLORE-MA-BASIS"][f"label_{_lang}"] not in _e:
+            errors.append(f"RC-B15 Explore ({_lang}) does not say which priorities it shows")
+        _ms = (DIST / _lang / "measurement" / "index.html").read_text(encoding="utf-8")
+        _seen = [m for m in re.findall(r'<article class="obj prio" id="(MA-\d+)"', _ms)]
+        if _seen != _order15:
+            errors.append(f"RC-B15 /{_lang}/measurement/ lists {_seen}, not P0 then P1 in ID order")
+        _r = (DIST / _lang / "evidence" / "CLM-001" / "index.html").read_text(encoding="utf-8")
+        if "data-cite-long-text" not in _r or "data-cite-long" not in _r:
+            errors.append(f"RC-B15 /{_lang}/evidence/CLM-001/ lost the long form of its citation")
+        _pv = _html.unescape(re.sub(r"<[^>]+>", "", _r.split("data-cite-text>", 1)[1].split("</p>", 1)[0])) if "data-cite-text>" in _r else ""
+        if "CLM-001" not in _pv or _ui15["UI-CITE-ORIGINAL-SOURCES"][f"label_{_lang}"] not in _pv or "https://" not in _pv:
+            errors.append(f"RC-B15 /{_lang}/evidence/CLM-001/ does not preview its short citation (record ID, original source and locator)")
+        _sh = re.search(r'data-share data-share-text="([^"]*)"', _r)
+        _bd = _html.unescape(_sh.group(1)).replace("\u2066", "").replace("\u2069", "") if _sh else ""   # the Arabic share text isolates its dates and IDs
+        _ev1 = next((o for o in json.loads((C / "evidence" / "evidence_objects.json").read_text(encoding="utf-8")) if o.get("object_id") == "CLM-001"), {})
+        _lim1 = str(_ev1.get(f"does_not_establish_{_lang}") or _ev1.get(f"limitations_{_lang}") or "").split(" | ")[0].strip()
+        if not _sh or _ui15["UI-JS-SHARE-RECORD"][f"label_{_lang}"] not in _html.unescape(_r) or (_lim1 and _lim1 not in _bd):
+            errors.append(f"RC-B15 /{_lang}/evidence/CLM-001/ has no share control carrying its boundary verbatim")
+        _c2 = (DIST / _lang / "evidence" / "CLM-002" / "index.html").read_text(encoding="utf-8")
+        for _code in ("FX.OWN.TOTL.MA.ZS", "FX.OWN.TOTL.FE.ZS"):
+            if f"/indicator/{_code}?locations=YE" not in _c2:
+                errors.append(f"RC-B15 /{_lang}/evidence/CLM-002/ does not link the series {_code} it is calculated from")
+        for _f in sorted((DIST / _lang / "evidence").glob("VIS-*/index.html")):
+            _vid = _f.parent.name
+            if f'<a class="canon-l" href="/{_lang}/evidence/{_vid}/">' in _f.read_text(encoding="utf-8"):
+                errors.append(f"RC-B15 /{_lang}/evidence/{_vid}/ links its own figure to itself"); break
+    for _f in ("evidence/evidence_objects.json", "evidence/public_claims.json"):
+        _txt = (C / _f).read_text(encoding="utf-8")
+        # the first RC-15 wording, withdrawn after review, is banned too: decisions ARE attached to the entities they name
+        if any(_p in _txt for _p in ("are matched with", "matched to it entity by entity, because", "تُطابَق معها جهةً جهة،",
+                                     "each decision would have to be matched to named entities", "يلزم مطابقة كل قرار مع الجهات المسماة")):
+            errors.append(f"RC-B15 {_f} says the 2026 decisions are matched with the roster; the matching has not been done")
+except Exception as _x:
+    errors.append("RC-B15 unreadable " + repr(_x))
+
+# RC-LATEST (Owner Addendum 2, "Lessons from comparable products"; RC-16): no title, page description or h1 calls
+# anything "latest" without saying when — a label that goes stale silently the day a newer measure appears. A use
+# that carries its own check date ("as checked on 3 October 2026", "both checked 3 October 2026") or that denies a
+# single latest year is kept. Checked on the English edition; the Arabic changes with it (EN and AR are co-authoritative).
+try:
+    _LATEST = re.compile(r"\blatest\b", re.I)
+    _DATED = re.compile(r"\b(?:as (?:checked on|of)|checked(?: on)?) \d{1,2} [A-Z][a-z]+ \d{4}|\bno (?:single|common) latest\b", re.I)
+    _HEADS = re.compile(r'<meta (?:name|property)="(?:description|og:title|og:description|twitter:title|twitter:description)" content="([^"]*)"')
+    for _f in sorted((DIST / "en").rglob("index.html")):
+        _h = _f.read_text(encoding="utf-8")
+        _head = _h.split("</head>", 1)[0]
+        for _t in re.findall(r"<title>(.*?)</title>", _head, re.S) + _HEADS.findall(_head) + re.findall(r"<h1[^>]*>(.*?)</h1>", _h, re.S):
+            _s = _html.unescape(re.sub(r"<[^>]+>", "", _t))
+            if _LATEST.search(_s) and not _DATED.search(_s):
+                errors.append(f"RC-LATEST an undated 'latest' in a title or description {_f.relative_to(DIST)}: {_s[:90]}")
+                break
+except Exception as _x:
+    errors.append("RC-LATEST unreadable " + repr(_x))
+
+# RC-ADD2 (Owner Addendum 2, improvements 1, 2 and 5; RC-17): the regulatory group on /data/ is in document-date order,
+# newest first; "Verify it yourself" on /reforms/ and /providers/ opens it; the two preset comparisons are offered;
+# "decision" targets the regulatory decisions; the search empty state says that names are not reproduced.
+try:
+    _ui17 = {x["ui_id"]: x for x in json.loads((C / "content" / "interface_copy.json").read_text(encoding="utf-8"))}
+    for _lang in ("en", "ar"):
+        _d = (DIST / _lang / "data" / "index.html").read_text(encoding="utf-8")
+        _reg = _d.split('id="regulatory"', 1)[1].split("</details>", 1)[0] if 'id="regulatory"' in _d else ""
+        _dates = [x for x in re.findall(r'data-f-date="([^"]*)"', _reg)]
+        _dated = [x for x in _dates if x]
+        if not _dated or _dated != sorted(_dated, reverse=True) or ("" in _dates and _dates.index("") < len(_dated)):
+            errors.append(f"RC-ADD2 the regulatory group on /{_lang}/data/ is not in document-date order, newest first")
+        for _r in ("reforms", "providers"):
+            if f'href="/{_lang}/data/#regulatory"' not in (DIST / _lang / _r / "index.html").read_text(encoding="utf-8"):
+                errors.append(f"RC-ADD2 /{_lang}/{_r}/ does not open Data & sources at the regulatory group")
+        for _r, _ids in (("evidence/compare", "CLM-001,CLM-054,FMIIP-BASELINE-2025-01"), ("remittances", "CLM-032,CLM-037,CLM-041")):
+            _h = (DIST / _lang / _r / "index.html").read_text(encoding="utf-8")
+            _lab = "UI-COMPARE-PRESET-REMITTANCES" if _r == "remittances" else "UI-COMPARE-PRESET"
+            if f'href="/{_lang}/evidence/compare/?records={_ids}"' not in _h or _ui17[_lab][f"label_{_lang}"] not in _html.unescape(_h):
+                errors.append(f"RC-ADD2 /{_lang}/{_r}/ lost its preset comparison")
+    _a2 = next((a for a in _R4_ALIASES if a.get("alias_id") == "SEARCH-ALIAS-002"), {})
+    if "document_type:regulatory decision" not in str(_a2.get("targets") or ""):
+        errors.append("RC-ADD2 alias 002 ('decision') no longer targets the regulatory decisions")
+    if "T('UI-JS-SEARCH-NAMES-NOTE')" not in (ROOT / "site-src" / "app.js").read_text(encoding="utf-8") or "UI-JS-SEARCH-NAMES-NOTE" not in _ui17:
+        errors.append("RC-ADD2 the search empty state lost its governed sentence on names")
+except Exception as _x:
+    errors.append("RC-ADD2 unreadable " + repr(_x))
+
+# RC-NAV (owner decisions of 3 October 2026, point 3; findings A-12, C-6, C-8): below 900 px the opened menu holds the
+# governed trust links, About first, in the contract's order, and the governed "Cite this page" control; the header is
+# unchanged. Read from the navigation contract's `mobile_menu` key and the built pages.
+try:
+    _nv = json.loads((C / "content" / "navigation_interaction.json").read_text(encoding="utf-8"))
+    if not _nv.get("mobile_menu"):
+        errors.append("RC-NAV the navigation contract has no mobile_menu")
+    _tn = [x["route"] for x in _nv.get("trust_navigation", [])]
+    if not _tn or not _tn[0].rstrip("/").endswith("/about"):
+        errors.append("RC-NAV the contract's trust links do not start with About")
+    _ucite = {l: next(u[f"label_{l}"] for u in _nv.get("utilities", []) if u.get("id") == "cite") for l in ("en", "ar")}
+    _nnav = 0
+    for _f in sorted(DIST.rglob("index.html")):
+        _rel = _f.relative_to(DIST).parts
+        if not _rel or _rel[0] not in ("en", "ar"):
+            continue
+        _l = _rel[0]
+        _h = _f.read_text(encoding="utf-8")
+        _nav = _h.split('id="primary-nav"', 1)[1].split("</nav>", 1)[0] if 'id="primary-nav"' in _h else ""
+        _tr = _nav.split("data-menu-trust", 1)[1].split("<button", 1)[0] if "data-menu-trust" in _nav else ""
+        _hrefs = [re.sub(r"^/(en|ar)", "", x) for x in re.findall(r'href="([^"]+)"', _tr)]
+        if _hrefs != _tn:
+            errors.append(f"RC-NAV {_f.relative_to(DIST)} the opened menu does not carry the trust links, About first: {_hrefs[:3]}")
+        _mc = re.search(r'<button[^>]*data-menu-cite[^>]*>([^<]*)</button>', _nav)
+        if not _mc or _html.unescape(_mc.group(1)) != _ucite[_l]:
+            errors.append(f"RC-NAV {_f.relative_to(DIST)} the opened menu lacks the governed cite control")
+        _ctl = _h.split('<div class="controls">', 1)[1].split("</div>", 1)[0] if '<div class="controls">' in _h else ""
+        if _ctl.count("data-cite") != 1 or "data-menu" in _ctl.replace("data-menu aria", ""):
+            errors.append(f"RC-NAV {_f.relative_to(DIST)} the header's controls changed")
+        _nnav += 1
+    if _nnav < 100:
+        errors.append(f"RC-NAV read only {_nnav} pages")
+except Exception as _x:
+    errors.append("RC-NAV unreadable " + repr(_x))
+
+# RC-0950 (owner instructions of 3 October 2026, 09:50): C5 — "How numbers are presented" is printed once, on
+# /methodology/ (#how-numbers), and each domain answer links to it once from its spine instead of printing it under its
+# heading; E1 — a record's short citation is two lines, this resource (ending with the page address) then the original
+# sources it names.
+try:
+    _ui0950 = {x["ui_id"]: x for x in json.loads((C / "content" / "interface_copy.json").read_text(encoding="utf-8"))}
+    _domains = [r["route"] for r in json.loads((C / "presentation_priority.json").read_text(encoding="utf-8"))["routes"] if r.get("page_family") == "Domain Answer"]
+    if len(_domains) != 8:
+        errors.append(f"RC-0950 read {len(_domains)} domain answers, not 8")
+    for _lang in ("en", "ar"):
+        _copy = _html.escape(_ui0950["UI-DOM-EVERY-CONSEQUENTIAL-NUMBER-STAYS-ATTACHED"][f"label_{_lang}"], quote=False)
+        _m = (DIST / _lang / "methodology" / "index.html").read_text(encoding="utf-8")
+        if _m.count('id="how-numbers"') != 1 or _copy not in _m:
+            errors.append(f"RC-0950 /{_lang}/methodology/ does not print the reading rule once at #how-numbers")
+        for _f in sorted((DIST / _lang).rglob("index.html")):
+            _h = _f.read_text(encoding="utf-8")
+            _rel = "/" + str(_f.parent.relative_to(DIST / _lang)).replace("\\", "/").strip(".") + "/"
+            _rel = "/" if _rel in ("//", "/./") else _rel.replace("//", "/")
+            if _rel != "/methodology/" and _copy in _h:
+                errors.append(f"RC-0950 /{_lang}{_rel} prints the reading rule; it belongs on /methodology/ only")
+        for _r in _domains:
+            _h = (DIST / _lang / _r.strip("/") / "index.html").read_text(encoding="utf-8")
+            if len(set(re.findall(rf'<a href="/{_lang}/methodology/#how-numbers" data-reading-rule>', _h))) != 1:
+                errors.append(f"RC-0950 /{_lang}{_r} does not link the reading rule from its spine")
+    _two = 0
+    for _f in sorted(DIST.glob("*/evidence/*/index.html")):
+        _h = _f.read_text(encoding="utf-8")
+        _pv = _h.split("data-cite-text>", 1)[1].split("</p>", 1)[0] if "data-cite-text>" in _h else ""
+        _lines = _pv.count("data-cite-line")
+        _src = ("Original sources" in _pv) or ("المصادر الأصلية" in _pv)
+        if _src and (_lines != 2 or "data-cite-url" not in _pv.split("<br>", 1)[0]):
+            errors.append(f"RC-0950 {_f.relative_to(DIST)} the citation is not two lines with the page address ending the first")
+        _two += _src
+    if _two < 150:
+        errors.append(f"RC-0950 only {_two} record citations name an original source")
+except Exception as _x:
+    errors.append("RC-0950 unreadable " + repr(_x))
+
+# RC-B13 (Part B B13): the research library on /data/. Its filters stay hidden until the runtime runs (the list is
+# complete without JavaScript); every listed source carries its filter keys; every option of a filter matches at least
+# one source; a locator that is a web.archive.org copy is never offered as the original.
+try:
+    _ic13 = json.loads((C / "content" / "interface_copy.json").read_text(encoding="utf-8"))
+    _ic13 = {x.get("ui_id"): x for x in (_ic13["labels"] if isinstance(_ic13, dict) and "labels" in _ic13 else _ic13)}
+    for _lang in ("en", "ar"):
+        _h = (DIST / _lang / "data" / "index.html").read_text(encoding="utf-8")
+        if not re.search(r'<div class="source-facets" data-source-facets hidden>', _h):
+            errors.append(f"RC-B13 the library's filters are missing or shown without the runtime {_lang}")
+        _recs = re.findall(r"<article [^>]*data-source-record[^>]*>", _h)
+        _keys = {k: [] for k in ("type", "publisher", "year", "domain")}
+        for _a in _recs:
+            for _k in _keys:
+                _m = re.search(rf'data-f-{_k}="([^"]*)"', _a)
+                if not _m or not _m.group(1):
+                    _sid = re.search(r'id="([^"]+)"', _a)
+                    errors.append(f"RC-B13 a listed source has no {_k} key {_lang} {_sid.group(1) if _sid else '?'}")
+                else:
+                    _keys[_k] += _m.group(1).split(" ") if _k == "domain" else [_m.group(1)]
+        if len(_recs) < 150:
+            errors.append(f"RC-B13 only {len(_recs)} listed sources {_lang}")
+        for _k, _vals in _keys.items():
+            _sel = re.search(rf'<select data-source-facet="{_k}">(.*?)</select>', _h, re.S)
+            if not _sel:
+                errors.append(f"RC-B13 the {_k} filter is missing {_lang}")
+                continue
+            for _o in re.findall(r'<option value="([^"]+)">', _sel.group(1)):
+                if _o not in _vals:
+                    errors.append(f"RC-B13 the {_k} filter offers {_o!r}, which no listed source carries {_lang}")
+        _orig = _ic13["UI-EVID-OPEN-ORIGINAL-SOURCE"][f"label_{_lang}"]
+        for _a in re.findall(r'<a class="source-locator" href="https://web\.archive\.org/[^"]*"[^>]*>([^<]*)', _h):   # the link text, before its "opens in a new tab" span
+            if _html.unescape(_a).strip() == _orig.strip():
+                errors.append(f"RC-B13 an archived copy is offered as the original {_lang}")
+        if not re.search(r'<a class="source-locator" href="https://web\.archive\.org/', _h):
+            errors.append(f"RC-B13 no archived locator is labelled {_lang}")
+except Exception as _x:
+    errors.append("RC-B13 unreadable " + repr(_x))
+
+# RC-1115 (owner note of 3 October 2026, 11:15, points 4.1, 4.2 and 4.5; RC-18): the presentation rules RC-18 built.
+# (1) An inline figure is emphasised with its own class, b.fnum, which carries no box styling — never the .fig figure
+#     frame (the B.0 defect: padding, margin, border and background covered the line above) — and Home's first figure
+#     group opens its first sentence's figures with an emphasised one, in both languages; (2) a record with a q3 section names FOR WHOM in its head,
+#     before its h1; (3) Home section 6 links the drawn payment chain; (4) every page has exactly one icon link, to the
+#     32 px derivative; (5) the master logo is not shipped; (6) /measurement/ prints the dimensions on the same cards in
+#     English and Arabic, with equal item counts. The browser half of (1) is in viewport_acceptance.py.
+try:
+    _css = (DIST / "assets" / "yfie.css").read_text(encoding="utf-8")
+    for _sel, _body in re.findall(r'([^{}]*\.fnum\b[^{}]*)\{([^{}]*)\}', _css):
+        if re.search(r'(^|;)\s*(padding|margin|border|background|container-type)', _body):
+            errors.append(f"RC-1115 the inline figure emphasis carries box styling: {_sel.strip()[:60]}")
+    if not re.search(r'(^|[}\s,])b\.fnum\{', _css):
+        errors.append("RC-1115 the stylesheet has no b.fnum rule")
+    _nfr = 0
+    for _f in sorted(DIST.rglob("*.html")):
+        _h = _f.read_text(encoding="utf-8")
+        if re.search(r'<(?!figure\b)[a-z]+ class="(?:[^"]* )?fig(?: [^"]*)?"', _h):
+            errors.append(f"RC-1115 {_f.relative_to(DIST)} an element other than a figure carries the .fig frame class")
+        _ic = re.findall(r'<link rel="[^"]*icon[^"]*"[^>]*>', _h)
+        if len(_ic) != 1 or 'href="/assets/logo/CauseWay_logo_32.png"' not in _ic[0]:
+            errors.append(f"RC-1115 {_f.relative_to(DIST)} does not carry exactly one icon link to the 32 px logo")
+        _nfr += 1
+    if _nfr < 280:
+        errors.append(f"RC-1115 read only {_nfr} pages")
+    if list(DIST.rglob("CauseWay_Master_Logo.png")):
+        errors.append("RC-1115 the master logo is shipped in dist/")
+    _ma = {}
+    for _lang in ("en", "ar"):
+        _h = (DIST / _lang / "index.html").read_text(encoding="utf-8")
+        _s3 = _h.split('id="s3"', 1)[1].split("</section>", 1)[0] if 'id="s3"' in _h else ""
+        _first = re.search(r'<p class="sent">(.*?)</p>', _s3, re.S)
+        _d1 = re.search(r'(?:^|>)[^<]*?\d', _first.group(1)) if _first else None   # the sentence's first figure
+        if not _d1 or not _first.group(1)[:_d1.start() + 1].endswith('<b class="fnum">'):
+            errors.append(f"RC-1115 /{_lang}/ Home's first figure group does not carry an emphasised figure")
+        _s6 = _h.split('id="s6"', 1)[1].split("</section>", 1)[0] if 'id="s6"' in _h else ""
+        if f'href="/{_lang}/evidence/VIS-PAYMENT-RAILS/"' not in _s6:
+            errors.append(f"RC-1115 /{_lang}/ Home section 6 does not link the drawn payment chain")
+        _m = (DIST / _lang / "measurement" / "index.html").read_text(encoding="utf-8")
+        _ma[_lang] = {_cid: len(re.split(r"[,،]", _d.group(1)))
+                      for _cid, _b in re.findall(r'<article class="obj prio" id="([^"]+)"(.*?)</article>', _m, re.S)
+                      for _d in [re.search(r'<p data-ma-dimensions><b>[^<]*</b>(.*?)</p>', _b)] if _d}
+    if not _ma["en"] or _ma["en"] != _ma["ar"]:
+        errors.append(f"RC-1115 /measurement/ does not print the dimensions on the same cards with equal counts: en {_ma['en']} ar {_ma['ar']}")
+    _nq3 = 0
+    for _f in sorted(DIST.glob("*/evidence/*/index.html")):
+        _h = _f.read_text(encoding="utf-8")
+        _q3 = re.search(r'id="q3"><h2 class="rubric"><span class="n">03</span>([^<]*)</h2><div class="body"><p>(.*?)</p>', _h)
+        if not _q3 or not _q3.group(2).strip():
+            continue
+        _nq3 += 1
+        _head = _h.split('<div class="head">', 1)[1].split('<h1', 1)[0] if '<div class="head">' in _h else ""
+        if f'<div class="clock"><span class="k">{_q3.group(1)}</span><span class="v">{_q3.group(2)}</span></div>' not in _head:
+            errors.append(f"RC-1115 {_f.relative_to(DIST)} has a q3 section but no FOR WHOM clock before its h1")
+    if _nq3 < 200:
+        errors.append(f"RC-1115 only {_nq3} records with a q3 section")
+except Exception as _x:
+    errors.append("RC-1115 unreadable " + repr(_x))
+
+# RC-19 (independent review of 70398d1, owner message of 4 October 2026; owner decision of 3 October 2026, 23:54 Aden).
+# (1) R-01: no published text dates FMIIP to July 2025 ("started in July 2025" came from an unread UNDP page; the World
+#     Bank's ISR gives approval 17 June 2025 and effectiveness 1 September 2025): no "July 2025", «يوليو 2025» or
+#     "2025-07" within 250 characters of the project's name, in any page or data file.
+# (2) X-ESC-RC17-01: a retired record address (site-src/hosting/moved_routes.json) has no page spec, no search record
+#     and no link from another page; in both languages its page refreshes to the target, names the target as canonical,
+#     is never indexed and prints the governed heading.
+# (3) R-05: on every page with the product header, the language switch is a link to the same route in the other edition
+#     and the menu is a link to the footer, which carries id="site-footer"; neither is a button.
+# (4) R-10: in Home's figure groups and a record's first answer, only the first sentence's figures are emphasised.
+try:
+    _jul = r"(?:July 2025|يوليو 2025|2025-07(?!\d))"
+    # the project dated by the date: its name, then the date within the same clause, or the date just before its name
+    _fmj = re.compile(r"(?:FMIIP|Financial Market Infrastructure and Inclusion|البنية التحتية للأسواق المالية)[^.;؛]{0,90}?" + _jul
+                      + r"|" + _jul + r"[^.;؛]{0,40}?(?:FMIIP|Financial Market Infrastructure and Inclusion|البنية التحتية للأسواق المالية)")
+    def _units(_f):   # one sentence of one block (a paragraph, cell, item or heading) or of one JSON string
+        _r = _f.read_text(encoding="utf-8")
+        if _f.suffix == ".json":
+            def _walk(_o):
+                if isinstance(_o, str):
+                    yield _o
+                elif isinstance(_o, dict):
+                    for _v in _o.values():
+                        yield from _walk(_v)
+                elif isinstance(_o, list):
+                    for _v in _o:
+                        yield from _walk(_v)
+            _bl = list(_walk(json.loads(_r)))
+        else:
+            _bl = re.split(r"</(?:p|li|td|th|h\d|div|dd|dt|figcaption|caption|summary)>", _r)
+        for _b in _bl:
+            for _s in re.split(r"(?<=[.!?؟])\s", re.sub(r"<[^>]+>", " ", _html.unescape(_b))):
+                yield _s
+    for _f in sorted(list(DIST.rglob("*.html")) + list(DIST.rglob("*.json"))):
+        if any(_fmj.search(_s) for _s in _units(_f)):
+            errors.append(f"RC-19 {_f.relative_to(DIST)} dates FMIIP to July 2025")
+    _moved = json.loads((ROOT / "site-src" / "hosting" / "moved_routes.json").read_text(encoding="utf-8"))["moved"]
+    if not _moved:
+        errors.append("RC-19 no retired record address is listed")
+    _routes = {s.get("route") for s in json.loads((C / "page_specs.json").read_text(encoding="utf-8"))["page_specs"]}
+    _uic = {u["ui_id"]: u for u in json.loads((C / "content" / "interface_copy.json").read_text(encoding="utf-8"))}
+    _sidx = (DIST / "static-data" / "search_index.json").read_text(encoding="utf-8")
+    for _mv in _moved:
+        _fr, _to = _mv["from"], _mv["to"]
+        _oid = _fr.strip("/").split("/")[-1]
+        if _fr in _routes or _to not in _routes:
+            errors.append(f"RC-19 {_fr} still has a page spec, or its target {_to} has none")
+        if f'"{_oid}"' in _sidx or _fr in _sidx:
+            errors.append(f"RC-19 the search index still carries {_oid}")
+        for _lang in ("en", "ar"):
+            _pf = DIST / _lang / _fr.strip("/") / "index.html"
+            if not _pf.exists():
+                errors.append(f"RC-19 /{_lang}{_fr} has no page")
+                continue
+            _h = _pf.read_text(encoding="utf-8")
+            _tg = f"/{_lang}{_to}"
+            _ok = (f'<meta http-equiv="refresh" content="0;url={_tg}">' in _h and re.search(r'<link rel="canonical" href="[^"]*' + re.escape(_tg) + '"', _h)
+                   and re.search(r'<meta name="robots" content="noindex', _h) and f'data-moved-to="{_to.strip("/")}"' in _h
+                   and f'<h1 id="page-title">{_html.escape((_uic.get("UI-MOVED-RECORD-TITLE") or {}).get(f"label_{_lang}", "?"), quote=False)}</h1>' in _h)
+            if not _ok:
+                errors.append(f"RC-19 /{_lang}{_fr} is not the moved-record page for {_to}")
+            _soc = _fr.strip("/").replace("/", "_") + f"__{_lang}"
+            if list((DIST / "assets" / "social").glob(_soc + ".*")) or _soc in (ROOT / "site-src/assets/social/INDEX.json").read_text(encoding="utf-8"):
+                errors.append(f"RC-19 a social image still stands for the retired address {_fr} ({_lang})")
+            for _g in sorted((DIST / _lang).rglob("index.html")):
+                if _g != _pf and f'href="/{_lang}{_fr}"' in _g.read_text(encoding="utf-8"):
+                    errors.append(f"RC-19 {_g.relative_to(DIST)} still links the retired address {_fr}")
+                    break
+    _nlang = 0
+    for _f in sorted(DIST.glob("*/**/index.html")):
+        _rel = _f.relative_to(DIST).as_posix()
+        _h = _f.read_text(encoding="utf-8")
+        if '<header class="bar">' not in _h:
+            continue
+        _lang = _rel.split("/", 1)[0]; _oth = "en" if _lang == "ar" else "ar"
+        _route = "/" + _rel.split("/", 1)[1][:-len("index.html")]
+        _ctl = _h.split('<div class="controls">', 1)[1].split("</div>", 1)[0] if '<div class="controls">' in _h else ""
+        if re.search(r"<button[^>]*data-(?:lang|menu)\b", _ctl) \
+                or not re.search(r'<a class="tbtn lang" href="/' + _oth + re.escape(_route if _route != "/" else "/") + r'"[^>]*data-lang="' + _oth + '"', _ctl) \
+                or not re.search(r'<a class="tbtn menu" href="#site-footer"[^>]*data-menu', _ctl) or 'id="site-footer"' not in _h:
+            errors.append(f"RC-19 {_rel} the language switch or the menu is not a working link")
+        _nlang += 1
+    if _nlang < 280:
+        errors.append(f"RC-19 read only {_nlang} pages with the product header")
+    _send = re.compile(r"(?<!\bNo)(?<!\bpp)(?<!\bp)[.!?؟](?=\s|$)")
+    _blocks = []
+    for _lang in ("en", "ar"):
+        _h = (DIST / _lang / "index.html").read_text(encoding="utf-8")
+        _s3 = _h.split('id="s3"', 1)[1].split("</section>", 1)[0] if 'id="s3"' in _h else ""
+        _blocks += [(f"/{_lang}/ Home", b) for b in re.findall(r'<p class="sent[^"]*">(.*?)</p>', _s3, re.S)]
+    for _f in sorted(DIST.glob("*/evidence/*/index.html")):
+        _q1 = re.search(r'<div class="qa first" id="q1">.*?<div class="st"><p>(.*?)</p>', _f.read_text(encoding="utf-8"), re.S)
+        if _q1:
+            _blocks.append((str(_f.relative_to(DIST)), _q1.group(1)))
+    for _where, _b in _blocks:
+        _txt = re.sub(r'<b class="fnum">', "\x01", _b)
+        _txt = re.sub(r"<bdi\b.*?</bdi>", "x", _txt, flags=re.S)
+        _txt = re.sub(r"<[^>]+>", "", _txt)
+        _end = _send.search(_txt)
+        if _end and "\x01" in _txt[_end.end():]:
+            errors.append(f"RC-19 {_where}: a figure after the first sentence is emphasised like the finding")
+    if len(_blocks) < 100:
+        errors.append(f"RC-19 read only {len(_blocks)} figure blocks")
+    # (5) R-04: the deploy workflow deploys only a commit the full Verify workflow proved (no push trigger of its own;
+    #     a manual run calls the reusable Verify first); (6) R-17: the image's nginx is pinned by digest.
+    _dy = (ROOT / ".github/workflows/deploy.yml").read_text(encoding="utf-8")
+    _on = _dy.split("\non:", 1)[1].split("\njobs:", 1)[0] if "\non:" in _dy else ""
+    if re.search(r"^\s+push:", _on, re.M) or "workflows: [Verify]" not in _on or "uses: ./.github/workflows/verify.yml" not in _dy \
+            or "needs: verify" not in _dy or "github.event.workflow_run.conclusion == 'success'" not in _dy \
+            or "needs.verify.result == 'success'" not in _dy:
+        errors.append("RC-19 the deploy workflow can deploy a commit the full verification has not passed")
+    _dk = (ROOT / "site-src/hosting/digitalocean/Dockerfile").read_text(encoding="utf-8")
+    if not re.search(r"^FROM nginx:[\w.\-]+@sha256:[0-9a-f]{64}$", _dk, re.M):
+        errors.append("RC-19 the App Platform image's nginx base is not pinned by digest")
+except Exception as _x:
+    errors.append("RC-19 unreadable " + repr(_x))
 
 print(f'HTML={len(list(DIST.rglob("*.html")))} ERRORS={len(errors)} WARN={len(warns)}')
 if warns:

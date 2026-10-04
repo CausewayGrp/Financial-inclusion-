@@ -45,7 +45,7 @@
       "researchers"
     ],
     "prohibited_inference_en": "No single series is the correct level; no single scale factor — such as the roughly constant ratio of 1.838 between the CBY-Aden and IMF remittance series, or the 33% population share the IMF used for areas administered from Aden — is a universal conversion; net errors and omissions are not hidden remittances; and a residual-model estimate is not a baseline.",
-    "prohibited_inference_ar": "لا توجد سلسلة تمثل وحدها المستوى الصحيح؛ ولا يصلح معامل واحد — مثل النسبة شبه الثابتة البالغة 1.838 بين سلسلتي التحويلات لدى البنك المركزي اليمني – عدن وصندوق النقد الدولي، أو حصة السكان البالغة 33% التي استخدمها الصندوق للمناطق التي تُدار من عدن — معاملَ تحويل موحّدًا ينطبق على كل السلاسل؛ ولا يمثل صافي السهو والخطأ تحويلات مخفية؛ ولا يُعتمد تقدير ناتج عن نموذج القيمة المتبقية خطَّ أساس.",
+    "prohibited_inference_ar": "لا توجد سلسلة تمثل وحدها المستوى الصحيح؛ ولا يصلح معامل واحد — مثل النسبة شبه الثابتة البالغة 1.838 بين سلسلتي التحويلات لدى البنك المركزي اليمني – عدن وصندوق النقد الدولي، أو حصة السكان البالغة 33% التي استخدمها الصندوق للمناطق التي تُدار من عدن — معاملَ تحويل موحّدًا ينطبق على كل السلاسل؛ ولا يمثل صافي السهو والخطأ تحويلات مخفية؛ ولا يُعتمد تقدير ناتج عن نموذج متبقي ميزان المدفوعات خطَّ أساس.",
     "verification_bindings": {
       "claim_ids": [
         "CLM-032",
@@ -225,11 +225,12 @@
       "CWR-008"
     ],
     "measurement_bindings": [
-      "MA-005"
+      "MA-005",
+      "MA-002"
     ],
-    "evidence_period_en": "Global Findex fieldwork 2022–2023 · POS counts March 2025 – January 2026 · project baseline January 2025, target 2030",
-    "evidence_period_ar": "العمل الميداني لمسح Findex العالمي 2022–2023 · أعداد نقاط البيع مارس 2025 – يناير 2026 · خط أساس المشروع يناير 2025 ومستهدفه 2030",
-    "last_reviewed": "2026-09-26",
+    "evidence_period_en": "Global Findex fieldwork 2022–2023 · point-of-sale (POS) counts March 2025 – June 2026 · project baseline January 2025, target 2030",
+    "evidence_period_ar": "العمل الميداني لمسح Findex العالمي 2022–2023 · أعداد نقاط البيع مارس 2025 – يونيو 2026 · خط أساس المشروع يناير 2025 ومستهدفه 2030",
+    "last_reviewed": "2026-10-03",
     "featured": null
   },
   {
@@ -297,9 +298,9 @@
     "measurement_bindings": [
       "MA-001"
     ],
-    "evidence_period_en": "Global Findex fieldwork November 2022 – January 2023 · POS counts March 2025 – January 2026 · institutional records June–August 2026",
-    "evidence_period_ar": "العمل الميداني لمسح Findex العالمي نوفمبر 2022 – يناير 2023 · أعداد نقاط البيع مارس 2025 – يناير 2026 · سجلات مؤسسية يونيو–أغسطس 2026",
-    "last_reviewed": "2026-09-26",
+    "evidence_period_en": "Global Findex fieldwork November 2022 – January 2023 · point-of-sale (POS) counts March 2025 – June 2026 · institutional records June–August 2026",
+    "evidence_period_ar": "العمل الميداني لمسح Findex العالمي نوفمبر 2022 – يناير 2023 · أعداد نقاط البيع مارس 2025 – يونيو 2026 · سجلات مؤسسية يونيو–أغسطس 2026",
+    "last_reviewed": "2026-10-03",
     "featured": "FEATURED"
   },
   {
@@ -375,9 +376,9 @@
     "title_en": "What exactly do we mean by microfinance growth?",
     "title_ar": "ماذا نعني تحديدًا بنمو التمويل الأصغر؟",
     "question_en": "What does the microfinance record show when borrower counts, saver/depositor measures and nominal portfolio do not move together?",
-    "question_ar": "ماذا يظهر سجل التمويل الأصغر عندما لا تتحرك أعداد المقترضين ومقاييس المدخرين أو المودعين والمحفظة الاسمية في الاتجاه نفسه؟",
+    "question_ar": "ماذا يظهر سجل التمويل الأصغر عندما لا تتحرك أعداد المقترضين ومقاييس المدخرين أو المودعين ومحفظة القروض الاسمية في الاتجاه نفسه؟",
     "thesis_en": "Yemen’s microfinance record does not move on one axis. Borrower counts, saver or depositor measures, nominal portfolios and institutional form are not the same measure, and they do not yet form one harmonised growth series.",
-    "thesis_ar": "لا يتحرك سجل التمويل الأصغر في اليمن على محور واحد. فأعداد المقترضين، ومقاييس المدخرين أو المودعين، والمحافظ الاسمية، والشكل المؤسسي ليست مقياسًا واحدًا، ولا تشكل حتى الآن سلسلة نمو موحدة.",
+    "thesis_ar": "لا يتحرك سجل التمويل الأصغر في اليمن على محور واحد. فأعداد المقترضين، ومقاييس المدخرين أو المودعين، ومحافظ القروض الاسمية، والشكل المؤسسي ليست مقياسًا واحدًا، ولا تشكل حتى الآن سلسلة نمو موحدة.",
     "claim_bindings": [
       "CLM-054",
       "CLM-055",
@@ -411,7 +412,7 @@
       "researchers"
     ],
     "prohibited_inference_en": "Changes in saver or depositor counts, nominal portfolio or provider structure do not, on their own, establish broader inclusion, real credit deepening, market dominance, growth in unique people or improved borrower outcomes, and the borrower, saver and portfolio observations do not form one harmonised trend.",
-    "prohibited_inference_ar": "لا يثبت التغير في أعداد المدخرين أو المودعين، أو في المحفظة الاسمية، أو في هيكل مقدمي الخدمة، في حد ذاته اتساع الشمول أو تعمق الائتمان الحقيقي أو الهيمنة السوقية أو نمو عدد الأشخاص الفريدين أو تحسن نتائج المقترضين، ولا تشكل مشاهدات المقترضين والمدخرين والمحفظة اتجاهًا واحدًا موحدًا.",
+    "prohibited_inference_ar": "لا يثبت التغير في أعداد المدخرين أو المودعين، أو في محفظة القروض الاسمية، أو في هيكل مقدمي الخدمة، في حد ذاته اتساع الشمول أو تعمق الائتمان الحقيقي أو الهيمنة السوقية أو نمو عدد الأشخاص الفريدين أو تحسن نتائج المقترضين، ولا تشكل مشاهدات المقترضين والمدخرين ومحفظة القروض اتجاهًا واحدًا موحدًا.",
     "verification_bindings": {
       "claim_ids": [
         "CLM-054",
@@ -440,9 +441,11 @@
       "CWR-002",
       "CWR-003"
     ],
-    "measurement_bindings": [],
-    "evidence_period_en": "Borrower, saver and portfolio observations for end-2015, end-2020 and 2023 · licensed-bank list checked on 7 September 2026",
-    "evidence_period_ar": "مشاهدات المقترضين والمدخرين والمحافظ لنهاية 2015 ونهاية 2020 وعام 2023 · قائمة البنوك المرخصة كما رُوجعت في 7 سبتمبر 2026",
+    "measurement_bindings": [
+      "MA-005"
+    ],
+    "evidence_period_en": "Borrower, saver and portfolio observations for end-2015, end-2020 and 2023 · licensed-bank list checked on 3 October 2026",
+    "evidence_period_ar": "مشاهدات المقترضين والمدخرين ومحافظ القروض لنهاية 2015 ونهاية 2020 وعام 2023 · قائمة البنوك المرخصة كما اطُّلع عليها في 3 أكتوبر 2026",
     "last_reviewed": "2026-09-26",
     "featured": null
   },
@@ -506,7 +509,8 @@
       "CWR-004"
     ],
     "measurement_bindings": [
-      "MA-003"
+      "MA-003",
+      "MA-007"
     ],
     "evidence_period_en": "Global Findex, Yemen fieldwork 7 November 2022 – 9 January 2023",
     "evidence_period_ar": "مسح Findex العالمي، العمل الميداني في اليمن 7 نوفمبر 2022 – 9 يناير 2023",
@@ -585,8 +589,8 @@
     "measurement_bindings": [
       "MA-004"
     ],
-    "evidence_period_en": "World Bank custom enterprise survey, September 2022, seven governorates · SMEPS programme report for 2024",
-    "evidence_period_ar": "مسح مخصص للمنشآت أجراه البنك الدولي في سبتمبر 2022 في سبع محافظات · تقرير وكالة تنمية المنشآت الصغيرة والأصغر لعام 2024",
+    "evidence_period_en": "World Bank Yemen Enterprise Survey, September 2022, seven governorates · SMEPS programme report for 2024",
+    "evidence_period_ar": "مسح البنك الدولي للمنشآت في اليمن، سبتمبر 2022، في سبع محافظات · تقرير وكالة تنمية المنشآت الصغيرة والأصغر لعام 2024",
     "last_reviewed": "2026-09-26",
     "featured": null
   },
@@ -652,11 +656,12 @@
       "CWR-010"
     ],
     "measurement_bindings": [
-      "MA-010"
+      "MA-010",
+      "MA-006"
     ],
-    "evidence_period_en": "POS counts March 2025 – January 2026 · institutional records June–August 2026 · project results framework January 2025",
-    "evidence_period_ar": "أعداد نقاط البيع مارس 2025 – يناير 2026 · سجلات مؤسسية يونيو–أغسطس 2026 · إطار نتائج المشروع يناير 2025",
-    "last_reviewed": "2026-09-26",
+    "evidence_period_en": "Point-of-sale (POS) counts March 2025 – June 2026 · institutional records June–August 2026 · project results framework January 2025",
+    "evidence_period_ar": "أعداد نقاط البيع مارس 2025 – يونيو 2026 · سجلات مؤسسية يونيو–أغسطس 2026 · إطار نتائج المشروع يناير 2025",
+    "last_reviewed": "2026-10-03",
     "featured": null
   },
   {
@@ -666,7 +671,7 @@
     "title_en": "The payment arrived. What happened next?",
     "title_ar": "وصلت الدفعة. ماذا حدث بعدها؟",
     "question_en": "When a cash transfer is paid into an account, what would show that the account became part of the recipient’s financial life?",
-    "question_ar": "حين تُدفع تحويلة نقدية إلى حساب، ما الذي يثبت أن الحساب أصبح جزءًا من الحياة المالية للمستفيد؟",
+    "question_ar": "حين يُدفع تحويل نقدي إلى حساب، ما الذي يثبت أن الحساب أصبح جزءًا من الحياة المالية للمستفيد؟",
     "thesis_en": "Material on Yemen’s digital-payment pilot describes transfers paid into fully functional accounts, with recipient choice, for 45,460 recipients. That is an important step in delivery. It is not yet evidence that the accounts stayed part of recipients’ financial lives after the payments.",
     "thesis_ar": "تصف مواد تجربة الدفع الرقمي في اليمن دفع التحويلات إلى حسابات كاملة الوظائف، مع إتاحة الاختيار للمستفيدين، لصالح 45,460 مستفيدًا. وهذه خطوة مهمة في إيصال الدفعات، لكنها ليست بعدُ دليلًا على أن الحسابات بقيت جزءًا من الحياة المالية للمستفيدين بعد وصول الدفعات.",
     "claim_bindings": [

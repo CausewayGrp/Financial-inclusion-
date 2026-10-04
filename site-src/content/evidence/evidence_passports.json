@@ -12,6 +12,7 @@
     "authority_class": "PRIMARY_PUBLIC",
     "route": "/people/",
     "display_requirements": "Show source, year/wave, fieldwork, geography, weight method, subgroup definition.",
+    "publisher_ar": "البنك الدولي، المؤشر العالمي للشمول المالي (Global Findex)",
     "route_list": [
       "/people/"
     ],
@@ -23,13 +24,14 @@
     "object": "POS monthly observations",
     "publisher": "Central Bank of Yemen — Aden",
     "metric_or_scope": "IND-0002/0003/0004",
-    "reference_period": "Mar-2025–Jan-2026",
+    "reference_period": "Mar-2025–Jun-2026",
     "universe": "CBY payment-system reporting scope",
     "method": "Administrative source-reported totals",
-    "critical_limit": "The September 2025 POS transaction-value observation in YER is missing; the September terminal count itself is present at 1,060. For December 2025→January 2026, terminal totals 1,357→1,473 imply approximately +8.55% while the January source graphic displays +11%; transaction totals 21,099→24,026 imply approximately +13.87% while the January source graphic displays +4.9%. A smaller source-internal mismatch also appears in June 2025: 733→791 terminals imply approximately +7.91%, while the June graphic displays +7.6%. Keep raw totals and source-displayed percentages distinct rather than silently reconciling them.",
+    "critical_limit": "The September 2025 POS transaction-value observation in YER is missing; the September terminal count itself is present at 1,060. For December 2025→January 2026, terminal totals 1,357→1,473 imply approximately +8.55% while the January source graphic displays +11%; transaction totals 21,099→24,026 imply approximately +13.87% while the January source graphic displays +4.9%. For April 2026→May 2026, the May source graphic displays +2.4% for terminals and +9.9% for transactions, which the published totals (1,583→1,636; 30,559→36,201) do not yield; because the source contradicts itself, no change is derived for that month (owner note, 3 October 2026). A smaller source-internal mismatch also appears in June 2025: 733→791 terminals imply approximately +7.91%, while the June graphic displays +7.6%. The February 2026 release displays +1.9% for terminals and −2.3% for value where the totals give about +1.97% and −2.38%; these differences are under 0.1 point and are recorded, not flagged. From the January 2026 release onward the YER value tile is labelled “billion” (مليار), while earlier releases state million YER. Every release writes the decimal mark as a comma (April 2025 prints 317,639 under million: 317.639 million; January 2026 prints 1,262 under billion: 1.262 billion = YER 1,262 million), so the series is kept in YER million. Month-on-month percentages cannot tell the two scales apart; the comma reading, and a value per transaction close to the Q3 2024 report's (about YER 52,500), do. The February–June 2026 releases are listed on the Arabic payments page only. Keep raw totals and source-displayed percentages distinct rather than silently reconciling them.",
     "authority_class": "PRIMARY_OFFICIAL",
     "route": "/payments/",
-    "display_requirements": "Keep the raw monthly totals and the publisher-displayed percentages visible together where they disagree. Do not silently overwrite either element. Preserve unit, month, source locator and the distinction between terminals, transactions, merchants and users. Show the January 2026 discrepancies prominently; retain the June 2025 mismatch in the evidence detail/method note. Keep the September 2025 gap only on the YER transaction-value series, not on terminal counts.",
+    "display_requirements": "Keep the raw monthly totals and the publisher-displayed percentages visible together where they disagree. Do not silently overwrite either element. Preserve unit, month, source locator and the distinction between terminals, transactions, merchants and users. Show the January 2026 and May 2026 discrepancies prominently; retain the June 2025 mismatch in the evidence detail/method note. Keep the September 2025 gap only on the YER transaction-value series, not on terminal counts.",
+    "publisher_ar": "البنك المركزي اليمني – عدن",
     "route_list": [
       "/payments/"
     ],
@@ -48,6 +50,7 @@
     "authority_class": "PRIMARY_TABLE_BUT_MEMBER_NETWORK",
     "route": "/finance/",
     "display_requirements": "Never label as national-sector census.",
+    "publisher_ar": null,
     "route_list": [
       "/finance/"
     ],
@@ -66,6 +69,7 @@
     "authority_class": "PRIMARY_OFFICIAL_MACRO",
     "route": "/remittances/",
     "display_requirements": "Reported-history, estimate and projection states must be visually separate, and the line breaks where the source document changes.",
+    "publisher_ar": "صندوق النقد الدولي / السلطات اليمنية",
     "route_list": [
       "/remittances/"
     ],
@@ -75,15 +79,16 @@
     "passport_id": "EP-FIRM-2022",
     "object_type": "Survey",
     "object": "Formal enterprise finance evidence",
-    "publisher": "World Bank 2022 custom enterprise survey",
+    "publisher": "World Bank 2022 Yemen Enterprise Survey",
     "metric_or_scope": "FFM-001..007",
     "reference_period": "2022-09",
     "universe": "Formal enterprises in seven selected governorates",
-    "method": "Custom enterprise survey",
+    "method": "Enterprise survey (formal and informal samples, seven governorates); tabulations as reported in Yemen Financial Sector Diagnostics (2024), Annex III",
     "critical_limit": "Not national; some tables have small conditional denominators; obstacle tabulation has filtered denominator",
     "authority_class": "PRIMARY_SURVEY",
     "route": "/firms/",
     "display_requirements": "Every chart shows sample/universe/denominator.",
+    "publisher_ar": "مسح البنك الدولي للمنشآت في اليمن لعام 2022",
     "route_list": [
       "/firms/"
     ],
@@ -102,6 +107,7 @@
     "authority_class": "OFFICIAL_SECONDARY",
     "route": "/reforms/",
     "display_requirements": "Recommendation ≠ implementation; primary source governs current regulatory truth.",
+    "publisher_ar": null,
     "route_list": [
       "/reforms/",
       "/evidence/"
@@ -123,6 +129,7 @@
     "authority_class": "ACADEMIC_SECONDARY_EMPLOYEE_PERCEPTION",
     "route": "/evidence/",
     "display_requirements": "Always display respondent universe, n=180, study method, author-reported nature of findings and the primary-source verification boundary.",
+    "publisher_ar": null,
     "route_list": [
       "/evidence/"
     ],
@@ -141,6 +148,7 @@
     "authority_class": "PRIMARY_OFFICIAL_PROGRAMME_ACTIVITY",
     "route": "/people/",
     "display_requirements": "Always distinguish activity/output from measured capability; show each source year and target wording; never join to OECD/INFE as a causal series.",
+    "publisher_ar": null,
     "route_list": [
       "/people/",
       "/reforms/"
@@ -162,6 +170,7 @@
     "authority_class": "PRIMARY_OFFICIAL_REGULATORY_INSTRUMENT",
     "route": "/reforms/",
     "display_requirements": "Display separate badges: INSTRUMENT EXISTS; OFFICIAL REDRESS ARCHITECTURE AVAILABLE; PERFORMANCE EVIDENCE OPEN. Do not merge these states.",
+    "publisher_ar": null,
     "route_list": [
       "/reforms/",
       "/evidence/"
@@ -183,6 +192,7 @@
     "authority_class": "PRIMARY_OFFICIAL_GUIDANCE",
     "route": "/reforms/",
     "display_requirements": "Show each step/time window and end the path with an explicit PERFORMANCE EVIDENCE OPEN node.",
+    "publisher_ar": null,
     "route_list": [
       "/reforms/",
       "/evidence/"
@@ -204,6 +214,7 @@
     "authority_class": "PRIMARY_OFFICIAL_REGULATORY_BUNDLE",
     "route": "/payments/",
     "display_requirements": "Show regulatory ceilings as ceilings, never as activity; keep the completeness of named-provider evidence and usage status visibly separate.",
+    "publisher_ar": null,
     "route_list": [
       "/payments/",
       "/reforms/"
@@ -225,6 +236,7 @@
     "authority_class": "PRIMARY_WEIGHTED_PUBLIC_AGGREGATES",
     "route": "/people/",
     "display_requirements": "Observed waves only; show source precision, concept note, 2022–23 fieldwork and geographic coverage, and no invented 2017/2024 node.",
+    "publisher_ar": null,
     "route_list": [
       "/people/"
     ],
@@ -243,6 +255,7 @@
     "authority_class": "PRIMARY_WEIGHTED_PUBLIC_COUNTRY_PROFILE",
     "route": "/people/",
     "display_requirements": "Show date and denominator; non-additive badge; conditional-denominator transition; World Bank attribution/license/adaptation notice.",
+    "publisher_ar": null,
     "route_list": [
       "/people/",
       "/remittances/"
@@ -264,6 +277,7 @@
     "authority_class": "PRIMARY_OFFICIAL_NEGATIVE_AUTHORITY",
     "route": "/providers/",
     "display_requirements": "Show source date, authority state and explicit 'does not define current licensed universe' note.",
+    "publisher_ar": null,
     "route_list": [
       "/providers/",
       "/payments/"
@@ -285,6 +299,7 @@
     "authority_class": "PRIMARY_OFFICIAL_ROSTER",
     "route": "/providers/",
     "display_requirements": "Display 2025 prominently and label 382 as category entries, not a current provider census.",
+    "publisher_ar": null,
     "route_list": [
       "/providers/"
     ],
@@ -303,6 +318,7 @@
     "authority_class": "PRIMARY_OFFICIAL_INSTITUTIONAL_EVENTS",
     "route": "/payments/",
     "display_requirements": "Show exact event dates/state and an explicit usage/outcome evidence-open boundary.",
+    "publisher_ar": null,
     "route_list": [
       "/payments/",
       "/reforms/"
@@ -323,7 +339,8 @@
     "critical_limit": "Later enforcement events are not subtracted mechanically from the 2026 annual roster. A current count of operating providers would require entity-by-entity reconciliation, a defined status date and a clear operating criterion. Silence about another provider does not establish that it is active or compliant.",
     "authority_class": "PRIMARY_OFFICIAL_STATUS_EVENTS",
     "route": "/providers/",
-    "display_requirements": "Show the decision date, named entity or branch type, action, annual-roster context and the fact that current operation requires entity-level reconciliation.",
+    "display_requirements": "Show the decision date, decision number, entity class or branch type, and action, with the annual-roster context and the fact that current operation requires entity-level reconciliation. Entity names are non-public lineage and are not shown.",
+    "publisher_ar": null,
     "route_list": [
       "/providers/",
       "/evidence/"
@@ -345,6 +362,7 @@
     "authority_class": "PRIMARY_OFFICIAL_INSTITUTIONAL_HISTORY",
     "route": "/finance/",
     "display_requirements": "Label each milestone by layer/source class; never collapse to one 'birth date'.",
+    "publisher_ar": null,
     "route_list": [
       "/finance/"
     ],
@@ -363,6 +381,7 @@
     "authority_class": "PRIMARY_ADMINISTRATIVE_WITH_CONTRADICTION",
     "route": "/finance/",
     "display_requirements": "Show exact snapshot dates, reporting-universe caveat, no interpolation, and portfolio contradiction at year-end.",
+    "publisher_ar": null,
     "route_list": [
       "/finance/"
     ],
@@ -381,6 +400,7 @@
     "authority_class": "PRIMARY_CURRENT_AUTHORITY_ROSTER",
     "route": "/providers/",
     "display_requirements": "Show authority/source state and an explicit LISTED/LICENSED ≠ OPERATING boundary.",
+    "publisher_ar": null,
     "route_list": [
       "/providers/"
     ],
@@ -399,6 +419,7 @@
     "authority_class": "PRIMARY_OFFICIAL_ADMINISTRATIVE",
     "route": "/finance/",
     "display_requirements": "Show exact period/unit/source and source-vs-derived flag; no bank-level distress or causal crowding-out inference.",
+    "publisher_ar": null,
     "route_list": [
       "/finance/",
       "/firms/"
@@ -420,6 +441,7 @@
     "authority_class": "PRIMARY_OFFICIAL_ADMINISTRATIVE",
     "route": "/payments/",
     "display_requirements": "Metric Anatomy required; carry DN-CBY-001/002/004/005 as applicable.",
+    "publisher_ar": "البنك المركزي اليمني – عدن",
     "route_list": [
       "/payments/",
       "/people/",
@@ -443,6 +465,7 @@
     "authority_class": "PRIMARY_OFFICIAL_ADMINISTRATIVE",
     "route": "/payments/",
     "display_requirements": "Show quarter/source wording; cross-publication comparison carries DN-CBY-005.",
+    "publisher_ar": null,
     "route_list": [
       "/payments/",
       "/evidence/"
@@ -464,6 +487,7 @@
     "authority_class": "PRIMARY_OFFICIAL_MACRO",
     "route": "/remittances/",
     "display_requirements": "Show accounting lens, years, USD unit and DN-CBY-014; no corridor/household/hawala inference.",
+    "publisher_ar": null,
     "route_list": [
       "/remittances/",
       "/finance/"
@@ -485,6 +509,7 @@
     "authority_class": "PRIMARY_OFFICIAL_ADMINISTRATIVE",
     "route": "/finance/",
     "display_requirements": "Always show both measurement lenses together and exact date; DN-CBY-012.",
+    "publisher_ar": null,
     "route_list": [
       "/finance/",
       "/evidence/compare/"
@@ -506,6 +531,7 @@
     "authority_class": "PROVENANCE_CONTROL",
     "route": "/evidence/",
     "display_requirements": "Show issuer and publication stream, original source versus carrier, observation/publication/review dates and conflict-sensitive nomenclature. Do not expose internal acquisition-state labels as user-facing copy.",
+    "publisher_ar": null,
     "route_list": [
       "/evidence/",
       "/methodology/"
@@ -527,6 +553,7 @@
     "authority_class": "PRIMARY_OFFICIAL_LEGAL_TEXT_WITH_BOUNDED_CORROBORATION",
     "route": "/reforms/",
     "display_requirements": "Always show instrument date/amendment state/source locator; never imply implementation or outcome; law-number discrepancies DN-CBY-018/019 must travel with affected citations.",
+    "publisher_ar": null,
     "route_list": [
       "/reforms/",
       "/providers/",
@@ -554,6 +581,7 @@
     "authority_class": "MULTI_OFFICIAL_PUBLIC_SOURCE_CONCORDANCE",
     "route": "/evidence/compare/",
     "display_requirements": "Show both source identities, exact dates/locators and resolution condition; no winner badge until authoritative legal-source verification.",
+    "publisher_ar": null,
     "route_list": [
       "/evidence/compare/",
       "/reforms/"
@@ -575,6 +603,7 @@
     "authority_class": "PRIMARY_OFFICIAL_PROCEDURE",
     "route": "/firms/",
     "display_requirements": "Show REVIEWED ON and CONTENT DATE NOT DISPLAYED; distinguish procedure from measured barrier; do not convert requirements into prevalence.",
+    "publisher_ar": null,
     "route_list": [
       "/firms/",
       "/payments/",
@@ -598,6 +627,7 @@
     "authority_class": "PRIMARY_OFFICIAL_ADMIN_INTERFACE",
     "route": "/providers/",
     "display_requirements": "Show interface existence and review date only; no provider/current-status inference.",
+    "publisher_ar": null,
     "route_list": [
       "/providers/",
       "/reforms/",
@@ -621,6 +651,7 @@
     "authority_class": "PRIMARY_OFFICIAL_INSTITUTIONAL_COMMUNICATION",
     "route": "/people/",
     "display_requirements": "Attribute objectives/campaigns to CBY; never state source explanations of behavior as measured causes.",
+    "publisher_ar": null,
     "route_list": [
       "/people/",
       "/reforms/",
@@ -644,6 +675,7 @@
     "authority_class": "PRIMARY_OFFICIAL_DATED_INSTITUTIONAL_EVENT",
     "route": "/finance/",
     "display_requirements": "Pair with legal-source identity passport; show event date and 'framework completion ongoing' boundary.",
+    "publisher_ar": null,
     "route_list": [
       "/finance/",
       "/reforms/",
@@ -667,6 +699,7 @@
     "authority_class": "PRIMARY_OFFICIAL_MULTI_VINTAGE",
     "route": "/firms/",
     "display_requirements": "Show each state/date/source class separately; no arrow implying uninterrupted operation or causal access effect.",
+    "publisher_ar": null,
     "route_list": [
       "/firms/",
       "/finance/",
@@ -692,6 +725,7 @@
     "authority_class": "PRIMARY_OFFICIAL_MULTI_VINTAGE",
     "route": "/evidence/",
     "display_requirements": "Always show reference year and report vintage; latest-vintage default must retain access to earlier published values; no mixed-vintage trend.",
+    "publisher_ar": null,
     "route_list": [
       "/evidence/",
       "/methodology/"
@@ -713,6 +747,7 @@
     "authority_class": "PRIMARY_OFFICIAL_MULTI_SOURCE_METHOD_RECONSTRUCTION_PLUS_DERIVATION",
     "route": "/remittances/",
     "display_requirements": "Show reference year, CBY report vintage, IMF scope, normalized trajectory where cross-source comparison is made, and an explicit 'exact mapping open' badge. DN-CBY-021/022 travel with historical charts.",
+    "publisher_ar": "البنك المركزي اليمني – عدن",
     "route_list": [
       "/remittances/",
       "/evidence/compare/",
@@ -736,6 +771,7 @@
     "authority_class": "PRIMARY_OFFICIAL_METHOD_BREAK",
     "route": "/finance/",
     "display_requirements": "Use before/after same-year bars; never connect AR2022 value to AR2023-restated 2022 as time growth.",
+    "publisher_ar": null,
     "route_list": [
       "/finance/",
       "/firms/",
@@ -759,6 +795,7 @@
     "authority_class": "PRIMARY_OFFICIAL_METHOD_AND_PRODUCTION_AUTHORITY",
     "route": "/remittances/",
     "display_requirements": "Separate documented method, numerical concordance and unresolved level/scope mapping.",
+    "publisher_ar": null,
     "route_list": [
       "/remittances/",
       "/methodology/",
@@ -782,6 +819,7 @@
     "authority_class": "PRIMARY_OFFICIAL_MULTI_VINTAGE_METHOD_LINEAGE",
     "route": "/finance/",
     "display_requirements": "Use a two-era timeline and say 'contemporary January-2023 change'; never claim first-ever market valuation.",
+    "publisher_ar": null,
     "route_list": [
       "/finance/",
       "/firms/",
@@ -807,6 +845,7 @@
     "authority_class": "WORLD_BANK_PUBLIC_INTERFACE_AND_VERSION_CONTROL",
     "route": "/remittances/",
     "display_requirements": "Preserve exact URL/retrieval date and never silently backfill/reconcile interfaces.",
+    "publisher_ar": null,
     "route_list": [
       "/remittances/",
       "/evidence/",
@@ -830,6 +869,7 @@
     "authority_class": "PRIMARY_MULTI_SOURCE_PLUS_REPRODUCIBLE_DERIVATION",
     "route": "/remittances/",
     "display_requirements": "Never apply one scalar across BOP; use 191 classification.",
+    "publisher_ar": null,
     "route_list": [
       "/remittances/",
       "/finance/",
@@ -853,6 +893,7 @@
     "authority_class": "PRIMARY_OFFICIAL_PLUS_DERIVATION",
     "route": "/remittances/",
     "display_requirements": "Residual ≠ hidden remittance; no source-quality ranking from residual size alone.",
+    "publisher_ar": null,
     "route_list": [
       "/remittances/",
       "/finance/",
@@ -876,6 +917,7 @@
     "authority_class": "SECONDARY_MODEL_BASED",
     "route": "/evidence/CLM-044/",
     "display_requirements": "Never replace official baselines. The value and the producer are not shown until the material has a public locator (Master-first).",
+    "publisher_ar": null,
     "route_list": [
       "/evidence/CLM-044/"
     ],
@@ -894,6 +936,7 @@
     "authority_class": "PRIMARY_STANDARD_METHOD__INPUTS_OPEN",
     "route": "/remittances/",
     "display_requirements": "Do not infer transactions from stock changes or publish blank/template rows as observations.",
+    "publisher_ar": null,
     "route_list": [
       "/remittances/",
       "/finance/",
@@ -917,6 +960,7 @@
     "authority_class": "OPERATIONAL_EVIDENCE_REQUEST",
     "route": "/evidence/",
     "display_requirements": "Do not describe requested/internal documents as obtained until receipt and provenance verification.",
+    "publisher_ar": null,
     "route_list": [
       "/evidence/",
       "/methodology/"
@@ -938,6 +982,7 @@
     "authority_class": "MULTI_SOURCE_BOUNDED_FUSION",
     "route": "/payments/",
     "display_requirements": "Cash receipt ≠ inclusion; project target ≠ outcome; local association ≠ national causality.",
+    "publisher_ar": null,
     "route_list": [
       "/payments/",
       "/people/"
@@ -959,6 +1004,7 @@
     "authority_class": "MULTI_SOURCE_FLOW_STATE_LEDGER",
     "route": "/evidence/",
     "display_requirements": "Never add unlike states; custody ≠ availability; downstream auction use ≠ new external support.",
+    "publisher_ar": null,
     "route_list": [
       "/evidence/"
     ],
@@ -977,6 +1023,7 @@
     "authority_class": "PRIMARY_STANDARDIZED_PRICE_DATA",
     "route": "/remittances/",
     "display_requirements": "Display quarter, amount and product/service characteristics; never call corridor average universal.",
+    "publisher_ar": "قاعدة بيانات البنك الدولي لأسعار الحوالات حول العالم (Remittance Prices Worldwide)",
     "route_list": [
       "/remittances/"
     ],
@@ -995,6 +1042,7 @@
     "authority_class": "PRIMARY_SECTOR_STUDY__HISTORICAL",
     "route": "/payments/",
     "display_requirements": null,
+    "publisher_ar": null,
     "route_list": [
       "/payments/",
       "/people/",
@@ -1020,6 +1068,7 @@
     "authority_class": "PRIMARY_TABLE_PLUS_APPROVED_DERIVATION",
     "route": "/payments/",
     "display_requirements": null,
+    "publisher_ar": null,
     "route_list": [
       "/payments/",
       "/evidence/compare/"
@@ -1041,6 +1090,7 @@
     "authority_class": "PRIMARY_SECTOR_STUDY__HISTORICAL",
     "route": "/people/",
     "display_requirements": null,
+    "publisher_ar": null,
     "route_list": [
       "/people/",
       "/payments/",
@@ -1064,6 +1114,7 @@
     "authority_class": "T2_STRONG_SECONDARY_WITH_T1_LOCATOR",
     "route": "/finance/",
     "display_requirements": "Display end-2023 period, evidence tier, primary-locator-open badge and borrower object; no interpolation to June or 2026.",
+    "publisher_ar": null,
     "route_list": [
       "/finance/",
       "/methodology/"
@@ -1085,6 +1136,7 @@
     "authority_class": "T2_STRONG_SECONDARY__DEFINITION_OPEN",
     "route": "/finance/",
     "display_requirements": "Show object label, source period, denominator/uniqueness warning and contradiction link; no '3.3m financially included Yemenis' wording.",
+    "publisher_ar": null,
     "route_list": [
       "/finance/",
       "/people/"
@@ -1106,6 +1158,7 @@
     "authority_class": "T2_VALUE_WITH_T1_LOCATOR",
     "route": "/finance/",
     "display_requirements": "Display nominal YER, approximate/lower-bound wording, exact period/source tier and no real-growth inference.",
+    "publisher_ar": null,
     "route_list": [
       "/finance/",
       "/evidence/compare/"
@@ -1127,6 +1180,7 @@
     "authority_class": "PRIMARY_PROGRAMME_REPORT",
     "route": "/firms/",
     "display_requirements": "Show programme universe, period, output/funding state and source; never relabel programme reach as national financial inclusion.",
+    "publisher_ar": null,
     "route_list": [
       "/firms/"
     ],
@@ -1145,6 +1199,7 @@
     "authority_class": "PRIMARY_PROGRAMME_REPORT__METHOD_DETAIL_OPEN",
     "route": "/firms/",
     "display_requirements": "Display exact source label, programme universe, observed-vs-target state and denominator-detail-open note. Do not present as Yemen-wide MSME financial-access prevalence or causal programme impact.",
+    "publisher_ar": null,
     "route_list": [
       "/firms/",
       "/evidence/"

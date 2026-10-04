@@ -1,0 +1,256 @@
+{
+ "transaction": "RC-14",
+ "summary": "bank list check date in the provider matrix",
+ "items": {
+  "universe_count": 1,
+  "bank_rows": 26
+ },
+ "input_master_sha256": "6568e6e6fcbbc1795805a950d0ff769a224cc1579182de0f80f2a868ee3d9fd3",
+ "output_master_sha256": "4282c50b9bbd8c28d751cd795b932266b1760454c030965221fdc2e539880f53",
+ "cells_written": 27,
+ "changes": [
+  {
+   "finding": "RC-14:BANK-DATE",
+   "sheet": "22_PROVIDERS_DATA",
+   "row": 69,
+   "col": 3,
+   "field": "PUC-BANK-2026-01.reference_state",
+   "old": "2026-09-07",
+   "new": "2026-10-03"
+  },
+  {
+   "finding": "RC-14:BANK-DATE",
+   "sheet": "22_PROVIDERS_DATA",
+   "row": 5,
+   "col": 8,
+   "field": "PRV-BANK-001.current_state_as_of",
+   "old": "2026-09-07",
+   "new": "2026-10-03"
+  },
+  {
+   "finding": "RC-14:BANK-DATE",
+   "sheet": "22_PROVIDERS_DATA",
+   "row": 6,
+   "col": 8,
+   "field": "PRV-BANK-002.current_state_as_of",
+   "old": "2026-09-07",
+   "new": "2026-10-03"
+  },
+  {
+   "finding": "RC-14:BANK-DATE",
+   "sheet": "22_PROVIDERS_DATA",
+   "row": 7,
+   "col": 8,
+   "field": "PRV-BANK-003.current_state_as_of",
+   "old": "2026-09-07",
+   "new": "2026-10-03"
+  },
+  {
+   "finding": "RC-14:BANK-DATE",
+   "sheet": "22_PROVIDERS_DATA",
+   "row": 8,
+   "col": 8,
+   "field": "PRV-BANK-004.current_state_as_of",
+   "old": "2026-09-07",
+   "new": "2026-10-03"
+  },
+  {
+   "finding": "RC-14:BANK-DATE",
+   "sheet": "22_PROVIDERS_DATA",
+   "row": 9,
+   "col": 8,
+   "field": "PRV-BANK-005.current_state_as_of",
+   "old": "2026-09-07",
+   "new": "2026-10-03"
+  },
+  {
+   "finding": "RC-14:BANK-DATE",
+   "sheet": "22_PROVIDERS_DATA",
+   "row": 10,
+   "col": 8,
+   "field": "PRV-BANK-006.current_state_as_of",
+   "old": "2026-09-07",
+   "new": "2026-10-03"
+  },
+  {
+   "finding": "RC-14:BANK-DATE",
+   "sheet": "22_PROVIDERS_DATA",
+   "row": 11,
+   "col": 8,
+   "field": "PRV-BANK-007.current_state_as_of",
+   "old": "2026-09-07",
+   "new": "2026-10-03"
+  },
+  {
+   "finding": "RC-14:BANK-DATE",
+   "sheet": "22_PROVIDERS_DATA",
+   "row": 12,
+   "col": 8,
+   "field": "PRV-BANK-008.current_state_as_of",
+   "old": "2026-09-07",
+   "new": "2026-10-03"
+  },
+  {
+   "finding": "RC-14:BANK-DATE",
+   "sheet": "22_PROVIDERS_DATA",
+   "row": 13,
+   "col": 8,
+   "field": "PRV-BANK-009.current_state_as_of",
+   "old": "2026-09-07",
+   "new": "2026-10-03"
+  },
+  {
+   "finding": "RC-14:BANK-DATE",
+   "sheet": "22_PROVIDERS_DATA",
+   "row": 14,
+   "col": 8,
+   "field": "PRV-BANK-010.current_state_as_of",
+   "old": "2026-09-07",
+   "new": "2026-10-03"
+  },
+  {
+   "finding": "RC-14:BANK-DATE",
+   "sheet": "22_PROVIDERS_DATA",
+   "row": 15,
+   "col": 8,
+   "field": "PRV-BANK-011.current_state_as_of",
+   "old": "2026-09-07",
+   "new": "2026-10-03"
+  },
+  {
+   "finding": "RC-14:BANK-DATE",
+   "sheet": "22_PROVIDERS_DATA",
+   "row": 16,
+   "col": 8,
+   "field": "PRV-BANK-012.current_state_as_of",
+   "old": "2026-09-07",
+   "new": "2026-10-03"
+  },
+  {
+   "finding": "RC-14:BANK-DATE",
+   "sheet": "22_PROVIDERS_DATA",
+   "row": 17,
+   "col": 8,
+   "field": "PRV-BANK-013.current_state_as_of",
+   "old": "2026-09-07",
+   "new": "2026-10-03"
+  },
+  {
+   "finding": "RC-14:BANK-DATE",
+   "sheet": "22_PROVIDERS_DATA",
+   "row": 18,
+   "col": 8,
+   "field": "PRV-BANK-014.current_state_as_of",
+   "old": "2026-09-07",
+   "new": "2026-10-03"
+  },
+  {
+   "finding": "RC-14:BANK-DATE",
+   "sheet": "22_PROVIDERS_DATA",
+   "row": 19,
+   "col": 8,
+   "field": "PRV-BANK-015.current_state_as_of",
+   "old": "2026-09-07",
+   "new": "2026-10-03"
+  },
+  {
+   "finding": "RC-14:BANK-DATE",
+   "sheet": "22_PROVIDERS_DATA",
+   "row": 20,
+   "col": 8,
+   "field": "PRV-BANK-016.current_state_as_of",
+   "old": "2026-09-07",
+   "new": "2026-10-03"
+  },
+  {
+   "finding": "RC-14:BANK-DATE",
+   "sheet": "22_PROVIDERS_DATA",
+   "row": 21,
+   "col": 8,
+   "field": "PRV-BANK-017.current_state_as_of",
+   "old": "2026-09-07",
+   "new": "2026-10-03"
+  },
+  {
+   "finding": "RC-14:BANK-DATE",
+   "sheet": "22_PROVIDERS_DATA",
+   "row": 22,
+   "col": 8,
+   "field": "PRV-BANK-018.current_state_as_of",
+   "old": "2026-09-07",
+   "new": "2026-10-03"
+  },
+  {
+   "finding": "RC-14:BANK-DATE",
+   "sheet": "22_PROVIDERS_DATA",
+   "row": 23,
+   "col": 8,
+   "field": "PRV-BANK-019.current_state_as_of",
+   "old": "2026-09-07",
+   "new": "2026-10-03"
+  },
+  {
+   "finding": "RC-14:BANK-DATE",
+   "sheet": "22_PROVIDERS_DATA",
+   "row": 24,
+   "col": 8,
+   "field": "PRV-BANK-020.current_state_as_of",
+   "old": "2026-09-07",
+   "new": "2026-10-03"
+  },
+  {
+   "finding": "RC-14:BANK-DATE",
+   "sheet": "22_PROVIDERS_DATA",
+   "row": 25,
+   "col": 8,
+   "field": "PRV-BANK-021.current_state_as_of",
+   "old": "2026-09-07",
+   "new": "2026-10-03"
+  },
+  {
+   "finding": "RC-14:BANK-DATE",
+   "sheet": "22_PROVIDERS_DATA",
+   "row": 26,
+   "col": 8,
+   "field": "PRV-BANK-022.current_state_as_of",
+   "old": "2026-09-07",
+   "new": "2026-10-03"
+  },
+  {
+   "finding": "RC-14:BANK-DATE",
+   "sheet": "22_PROVIDERS_DATA",
+   "row": 27,
+   "col": 8,
+   "field": "PRV-BANK-023.current_state_as_of",
+   "old": "2026-09-07",
+   "new": "2026-10-03"
+  },
+  {
+   "finding": "RC-14:BANK-DATE",
+   "sheet": "22_PROVIDERS_DATA",
+   "row": 28,
+   "col": 8,
+   "field": "PRV-BANK-024.current_state_as_of",
+   "old": "2026-09-07",
+   "new": "2026-10-03"
+  },
+  {
+   "finding": "RC-14:BANK-DATE",
+   "sheet": "22_PROVIDERS_DATA",
+   "row": 29,
+   "col": 8,
+   "field": "PRV-BANK-025.current_state_as_of",
+   "old": "2026-09-07",
+   "new": "2026-10-03"
+  },
+  {
+   "finding": "RC-14:BANK-DATE",
+   "sheet": "22_PROVIDERS_DATA",
+   "row": 30,
+   "col": 8,
+   "field": "PRV-BANK-026.current_state_as_of",
+   "old": "2026-09-07",
+   "new": "2026-10-03"
+  }
+ ]
+}

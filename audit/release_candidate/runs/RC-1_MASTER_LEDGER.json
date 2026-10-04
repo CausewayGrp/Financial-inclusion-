@@ -1,0 +1,1137 @@
+{
+ "transaction": "RC-1",
+ "summary": "Release-candidate truth fixes: items 1–8, 16, 17 of audit/release_candidate/INSTRUCTIONS.md Part A G2",
+ "environment_note": "The original could not be read in this session: the execution environment's network policy refuses every external host (HTTP CONNECT 403 for imf.org, elibrary.imf.org, documents.worldbank.org, remittanceprices.worldbank.org, cby-ye.com and web.archive.org). Path B of the brief applies.",
+ "items": {
+  "item_1": "DONE — section 3 heading and body, and the section-4 boundary, extended to the education gap VIS-FINDEX-GAPS binds (WB-FINDEX-OBS-2022-006/-007, SRC-WB-FINDEX-AGG-2022).",
+  "item_2": "DONE — both governed cells in each language (the FROM sentence occurs once in each).",
+  "item_3": "PATH B — The original could not be read in this session: the execution environment's network policy refuses every external host (HTTP CONNECT 403 for imf.org, elibrary.imf.org, documents.worldbank.org, remittanceprices.worldbank.org, cby-ye.com and web.archive.org). Path B of the brief applies. The Methodology lead sentence is replaced and YSC-008, YSC-014, YSC-015 and YSC-017 carry the flag in the new 14 columns verification_note_en/_ar (scripts/projection/master_structure.json installed with --install; rendered with each event). Register EXT-01 stays open until a primary read; the flag is removed Master-first when it happens.",
+  "item_4": {
+   "decision": "The VIS-POS-VALUE series (nominal YER million) is displayed to whole YER million: no value in the series now carries a decimal point, so none can be misread against the thousands comma of 1,262; the unit label (UI-VIS-UNIT-YER-MILLION) heads every value and the prose writes the unit beside the value in both languages (YER 1,262 million / 1,262 مليون ريال). Source-native values stay in source_value_as_reported, normalized_value and this ledger; each changed row's caveats cell records the display rule.",
+   "series_display": [
+    {
+     "observation": "OBS-00053",
+     "month": "2025-03",
+     "source_native": "320 million YER",
+     "master_value_before": 320,
+     "displayed": 320,
+     "unit": "YER million (nominal)"
+    },
+    {
+     "observation": "OBS-00056",
+     "month": "2025-04",
+     "source_native": "317.639 million YER",
+     "master_value_before": 317.639,
+     "displayed": 318,
+     "unit": "YER million (nominal)"
+    },
+    {
+     "observation": "OBS-00059",
+     "month": "2025-05",
+     "source_native": "386.792 million YER",
+     "master_value_before": 386.792,
+     "displayed": 387,
+     "unit": "YER million (nominal)"
+    },
+    {
+     "observation": "OBS-00062",
+     "month": "2025-06",
+     "source_native": "535.189 million YER",
+     "master_value_before": 535.189,
+     "displayed": 535,
+     "unit": "YER million (nominal)"
+    },
+    {
+     "observation": "OBS-00065",
+     "month": "2025-07",
+     "source_native": "490.759",
+     "master_value_before": 490.759,
+     "displayed": 491,
+     "unit": "YER million (nominal)"
+    },
+    {
+     "observation": "OBS-00068",
+     "month": "2025-08",
+     "source_native": "580.021",
+     "master_value_before": 580.021,
+     "displayed": 580,
+     "unit": "YER million (nominal)"
+    },
+    {
+     "observation": "OBS-00073",
+     "month": "2025-10",
+     "source_native": "795.006",
+     "master_value_before": 795.006,
+     "displayed": 795,
+     "unit": "YER million (nominal)"
+    },
+    {
+     "observation": "OBS-00076",
+     "month": "2025-11",
+     "source_native": "783.583",
+     "master_value_before": 783.583,
+     "displayed": 784,
+     "unit": "YER million (nominal)"
+    },
+    {
+     "observation": "OBS-00079",
+     "month": "2025-12",
+     "source_native": "910.688",
+     "master_value_before": 910.688,
+     "displayed": 911,
+     "unit": "YER million (nominal)"
+    },
+    {
+     "observation": "OBS-00082",
+     "month": "2026-01",
+     "source_native": "1262.0",
+     "master_value_before": 1262,
+     "displayed": 1262,
+     "unit": "YER million (nominal)"
+    }
+   ],
+   "remittances": "The CBY-Aden 2024 vintages (RMO-CBY-2024-AR2024 = 6,245; RMO-CBY-2024-AR2025 = 3,422.16 US$ million) are unchanged; the prose that cited them in billions (USD 6.245 billion / about USD 3.42 billion; 6.245 مليار دولار / 3.42 مليار دولار تقريبًا) now uses the table's unit and digits (USD 6,245 million / USD 3,422.16 million) on /remittances/ §1, §3, §9, the Reading same-year-different-number §2 and CLM-032. Every value of the series carries the thousands comma, so no point-only value exists to be misread; the derived claims of CLM-037 (0.0032 pp; 1.838) keep their exact inputs.",
+   "kept": [
+    "CLM-034 / /remittances/ residual prose (US$7.117 billion against US$3.614 billion; 1.97): a prose-only pair in one unit and one precision; the 2025 remittance row (3,614.05) is context-only and drawn in no table, so no table/prose split exists.",
+    "MFI portfolio prose (YER 6.741 / 33.379 / 44 billion): one unit, three-decimal precision, no table counterpart (TABLE_TEXT_FIRST contracts without rows)."
+   ]
+  },
+  "item_7": "DONE — the legend UI-VIS-DISAGREEMENT, CLM-003 and the VIS-POS-TERMINALS / VIS-POS-TRANSACTIONS summaries (06 and 11) now say that the published totals are drawn and that the release's percentage is stated in the record's method text (which the disagreement note prints under the terminals panel). No row added; the method texts, which already give both figures, are unchanged.",
+  "item_16": "DONE — 20 use_rule cells now point to scripts/yfie/content.py _DOMAIN_LABELS (audit/PR8_INDEPENDENT_ACCEPTANCE.md A7 item 8, C9).",
+  "item_17_display": [
+   {
+    "series": "CBY-Aden average market rate, rials per US dollar (CLM-054; /finance/)",
+    "source_native": [
+     "792.69 (December 2020; 18_CBY_MONETARY OBS-CBY-00621)",
+     "1529.4 (December 2023; OBS-CBY-00657)"
+    ],
+    "displayed": [
+     "793",
+     "1,529"
+    ],
+    "rule": "whole rials; the 18 rows keep the exact values"
+   },
+   {
+    "series": "SFD savers/depositors (VIS-MFI-DIVERGENCE; CLM-054; /finance/; Reading microfinance-structural-divergence)",
+    "source_native": [
+     "509,590 (end-2015)",
+     "1,611,206 (end-2020; 21_MFI_DATA, SRC-SFD-Q4-2020-001)"
+    ],
+    "displayed": [
+     "509,590",
+     "1,611,206"
+    ],
+    "rule": "the source-native count in place of the rounded '1.611 million', so both values of the series share one notation"
+   },
+   {
+    "series": "Currency outside banks, YER billion (YSC-004)",
+    "source_native": [
+     "810.9 (2014)",
+     "1,673 (end-2017)"
+    ],
+    "displayed": [
+     "811",
+     "1,673"
+    ],
+    "rule": "whole YER billion; the source value is kept in the row's interpretation_note"
+   }
+  ],
+  "item_17": "DONE — audit/release_candidate/four_digit_unit_check.py swept every public figure of four or more digits (report in audit/release_candidate/FOUR_DIGIT_UNIT_CHECK.md). True instances: the VIS-POS-VALUE series (item 4), the remittance prose/table unit split (item 4), YSC-004 (YER 810.9 billion beside YER 1,673 billion; whole YER billion, the source value kept in the row's interpretation_note), the CBY-Aden average market rate (792.69 beside 1,529.4; whole rials) and the SFD savers series ('1.611 million' beside 509,590; the source-native count 1,611,206). Not instances: axis and index labels, table cells whose unit is their column header, percentages, figures of different series in one sentence, identifiers and project numbers (see the report).",
+  "item_5": "DONE — UI-VIS-NOTE-POS-SCOPE carries the VIS-POS-* universe qualifier verbatim; bound to RV-CWR-004 and RV-CWR-009 through the controlled visual design contract (frame_labels, installed with --install) and printed by the renderer after the POS object label on the infrastructure lane, the activity rows and their fallback tables. The two alt texts already carried the qualifier (RV-CWR-004: 'within the reporting scope of the Central Bank of Yemen – Aden (CBY-Aden)'; RV-CWR-009: 'within CBY-Aden's reporting scope') and are unchanged.",
+  "item_6": "PATH B — The original could not be read in this session: the execution environment's network policy refuses every external host (HTTP CONNECT 403 for imf.org, elibrary.imf.org, documents.worldbank.org, remittanceprices.worldbank.org, cby-ye.com and web.archive.org). Path B of the brief applies. FFO-2022-CH-09…16 stay unbound (their values exist in 20_FIRM_FINANCE with the locator 'Annex III, Table 8 / Figure 108, p.146' but were not checked against that page); the governed frame note UI-VIS-NOTE-FIRM-CONSTRAINTS-PARTIAL is bound to VIS-FIRM-CONSTRAINTS and printed in frame.",
+  "item_8": {
+   "a_RV-CWR-009_VIS-PAYMENT-RAILS_NETWORK_ACTIVITY_SIGNAL": {
+    "verdict": "KEEP",
+    "reason": "The OPERATION step of the chain is defined by the contract as 'activity counts evidence operation, not use' and already holds the POS transaction counts (OBS-00081). REF-PAY-009 is an attributed CBY-Aden statement about activity on the unified network (January 2026): it is evidence that the network was operating at that date in the sense the chain uses (recorded activity), and nothing stronger. Both contracts guard the reading: the step is labelled with its governed state, the alt texts call it 'an attributed CBY-Aden statement' / 'CBY-Aden's own statement, not an independent measurement', ACCESS and USE stay OPEN, and the prohibited inference says a go-live or event does not show access, use, quality or outcome. Licence ≠ operation is kept: the event is not placed at RULE or IMPLEMENTATION as if a licence proved operation, and it is not promoted to ACCESS or USE. Mapping it lower would present recorded activity as a rule, which the source does not say. The specialist's proposal to qualify the event's governed label (UI-VIS-CAT-EVT-EXHIBITION) with '— a statement, not recorded activity' is new interface copy, which Part A does not author; it is recorded for the Part B editorial pass, together with the VIS-PAYMENT-RAILS alt-text phrase 'the only information on use' (the grammar maps activity to operation, not use)."
+   },
+   "b_VIS-REMITTANCE-COST_MEASURED": {
+    "verdict": "CHANGE — series state MEASURED → REPORTED (controlled visual design contract, installed with --install; the renderer's panel header follows the series state instead of a literal)",
+    "reason": "The governed grammar defines MEASURED ('Measured in a survey' / 'مقيس في مسح') by its use_rule 'Value from a survey measure of the stated population', and REPORTED ('Reported by the source' / 'وارد في المصدر') as 'Official statistics reported by a source that are neither a survey measure nor an administrative count'. The four RPW values are averages the World Bank publishes from a standardised collection of provider price quotes (23_REMITTANCES: period_state OBSERVED_QUOTE_COLLECTION_PERIOD, calculation_state SOURCE_PUBLISHED_AVERAGE; the record's method: 'from standardized collection of provider price quotes'; passport EP-WB-RPW-KSA-YEM-K04: 'Standardized primary price collection'). Their universe is a set of listed products in two corridors, not a population of people or firms, and no governed field calls the collection a survey. MEASURED is the token this product reserves for population-survey measures (Findex, the 2022 firm survey); lending it to price quotes weakens the people-side meaning the semantic firewall depends on. REPORTED is the exact governed fit; the mark and line do not change (both states draw a filled circle), only the printed state label. The governed frame note 'Average of quotes for this amount — not the cost of all remittances' and the record text stay.",
+    "edits": [
+     "scripts/projection/controlled_inputs/visual_design_contract.json: VIS-REMITTANCE-COST contract.series[rpw].state MEASURED → REPORTED (installed)",
+     "scripts/yfie/visuals.py remittance_cost(): the panel header prints the series' state label, not a literal MEASURED"
+    ],
+    "needs_original": "Whether the RPW methodology page itself uses the word 'survey' could not be read here; it does not change the governed definition that decides this verdict."
+   },
+   "c_RV-CWR-001_imf_staff_path_REPORTED": {
+    "verdict": "KEEP",
+    "reason": "The IMF rows for 2018–2024 (RMO-IMF-*-HIST) carry period_state HISTORICAL_REPORTED and calculation_state SOURCE_REPORTED__IMF_STAFF_CALCULATIONS: the staff report publishes them as its external-sector table values for past years, which the resource reports as the source reports them; the 2025 value is ESTIMATE and 2026–2030 PROJECTION, and VIS-REMITTANCE-MACRO draws those states hollow and dashed. The Reading's prose describes the IMF path as a staff reconstruction with a modelled personal-transfers component — that is a statement about how the source built its series, and the record's universe already says the series is 'on the IMF's analytical scope for areas under the internationally recognized government'. REPORTED ('Reported by the source') is the governed state for a value a source publishes as data, whether or not the source derived it; ESTIMATED ('Estimate — not an observation') is reserved for values the source itself labels estimates. Changing 2018–2024 to ESTIMATED would contradict the IMF table's own presentation as read at ingestion, and the original cannot be re-read here to settle it; the Reading's wording stands as the place where the reconstruction is explained. The specialist's companion proposal — the RV-CWR-001 universe to carry '(reported history based on staff calculations)' as VIS-REMITTANCE-MACRO and CLM-007 already do — is a wording improvement, not a state correction; recorded for Part B."
+   },
+   "cells_written": 0
+  },
+  "independent_review": {
+   "reviewer": "independent subagent that did not write the transaction (senior Arab economic editor and senior institutional English editor lenses)",
+   "verdict_before_fixes": "NOT ACCEPTABLE AS-IS: 1 BLOCKING, 6 SHOULD FIX, 8 OPTIONAL",
+   "applied": [
+    "1 BLOCKING Methodology lead (brief's Path B TO conflicts with the site's own flags; corrected wording applied, conflict recorded)",
+    "2 legend wording",
+    "3 POS summaries name the chart note",
+    "4 CLM-003 names its own section",
+    "5 Arabic counted nouns after 1,611,206",
+    "6 Arabic accusative after 1,529",
+    "7 rounding disclosed (about …; VIS-POS-VALUE method)",
+    "8 two use_rule pointers to visual()",
+    "9 verification note names its subject",
+    "10 'challenges' in the partial-list note",
+    "11 the age gap on /people/ (governed in VIS-FINDEX-GAPS)",
+    "12 Arabic parallelism «بين فئتي التعليم»",
+    "13 «كل سجل دليل»"
+   ],
+   "not_applied": [
+    "14 CLM-032 'balance of payments' qualifier: pre-existing asymmetry, recorded for the Part B Arabic/English editorial pass",
+    "15 «السلسلة الزمنية» → «التسلسل الزمني» programme-wide: Part B, B2 (one Arabic term per concept)",
+    "10 follow-up: /firms/ §2 prose reads as a complete list — Part B"
+   ]
+  }
+ },
+ "input_master_sha256": "17db032b15da16fc4b5b3c3b49f19aebf2ecb4ec46634613fe8505d0f038690b",
+ "output_master_sha256": "ebf03d6fe4cf7fbba1e3be82ca1f0075c3f0e3f44af62069e51d294ad9e05e5e",
+ "cells_written": 105,
+ "changes": [
+  {
+   "finding": "RC-1:ITEM-01",
+   "sheet": "03_PAGE_SECTIONS",
+   "row": 192,
+   "col": 4,
+   "field": "/people/#s3.heading_en",
+   "old": "Measured gaps by sex and income — not yet explanations",
+   "new": "Measured gaps by sex, income, education and age — not yet explanations"
+  },
+  {
+   "finding": "RC-1:ITEM-01",
+   "sheet": "03_PAGE_SECTIONS",
+   "row": 192,
+   "col": 5,
+   "field": "/people/#s3.body_en",
+   "old": "In the same wave, 5.44% of women and 18.35% of men have an account — a difference of 12.91 percentage points. Adults in the richest 60% by household income (15.5%) and in the poorest 40% (6.5%) differ by about 9.0 percentage points. Among adults with primary education or less, 6.98% have an account; the matching figure for adults with more education is not in the evidence base, so no education gap is stated. Because each comparison is within one survey wave, the disparities can be described; their causes cannot be established from these differences alone, and they are not 2026 estimates.",
+   "new": "In the same wave, 5.44% of women and 18.35% of men have an account — a difference of 12.91 percentage points. Adults in the richest 60% by household income (15.5%) and in the poorest 40% (6.5%) differ by about 9.0 percentage points. Among adults with primary education or less, 6.98% have an account, compared with 19.53% of adults with secondary education or more: a gap of 12.55 percentage points. Adults aged 15–24 (5.01%) and adults aged 25 and over (16.11%) differ by 11.10 percentage points. Because each comparison is within one survey wave, the disparities can be described; their causes cannot be established from these differences alone, and they are not 2026 estimates."
+  },
+  {
+   "finding": "RC-1:ITEM-01",
+   "sheet": "03_PAGE_SECTIONS",
+   "row": 193,
+   "col": 6,
+   "field": "/people/#s3.heading_ar",
+   "old": "فجوات مقاسة بحسب الجنس والدخل — من دون افتراض أسبابها",
+   "new": "فجوات مقاسة بحسب الجنس والدخل والتعليم والعمر — من دون افتراض أسبابها"
+  },
+  {
+   "finding": "RC-1:ITEM-01",
+   "sheet": "03_PAGE_SECTIONS",
+   "row": 193,
+   "col": 7,
+   "field": "/people/#s3.body_ar",
+   "old": "في الموجة نفسها تملك 5.44% من النساء و18.35% من الرجال حسابًا، بفارق 12.91 نقطة مئوية. ويبلغ الفارق بين البالغين في أغنى 60% بحسب دخل الأسرة (15.5%) وفي أفقر 40% (6.5%) نحو 9.0 نقاط مئوية. وتبلغ نسبة امتلاك الحساب 6.98% بين البالغين الذين لم يتجاوز تعليمهم المرحلة الابتدائية، بينما لا تتضمن قاعدة الأدلة الرقم المقابل لمن تلقوا تعليمًا أعلى، ولذلك لا تُذكر فجوة بحسب التعليم. وهذه مقارنات داخل موجة مسح واحدة: يمكن وصف الفروق، لكن لا يمكن استنتاج أسبابها منها وحدها، ولا تمثل تقديرات لعام 2026.",
+   "new": "في الموجة نفسها تملك 5.44% من النساء و18.35% من الرجال حسابًا، بفارق 12.91 نقطة مئوية. ويبلغ الفارق بين البالغين في أغنى 60% بحسب دخل الأسرة (15.5%) وفي أفقر 40% (6.5%) نحو 9.0 نقاط مئوية. وتبلغ نسبة امتلاك الحساب 6.98% بين البالغين الذين لم يتجاوز تعليمهم المرحلة الابتدائية، مقابل 19.53% بين الحاصلين على تعليم ثانوي فأعلى، أي بفارق 12.55 نقطة مئوية. ويبلغ الفارق بين الشباب بعمر 15–24 سنة (5.01%) والبالغين بعمر 25 سنة فأكثر (16.11%) 11.10 نقطة مئوية. وهذه مقارنات داخل موجة مسح واحدة: يمكن وصف الفروق، لكن لا يمكن استنتاج أسبابها منها وحدها، ولا تمثل تقديرات لعام 2026."
+  },
+  {
+   "finding": "RC-1:ITEM-01",
+   "sheet": "03_PAGE_SECTIONS",
+   "row": 194,
+   "col": 5,
+   "field": "/people/#s4.body_en",
+   "old": "The 11.9% measure is not a 2026 rate and cannot be mapped by governorate from this wave. The 12.91-point gender difference and the 9.0-point income difference do not establish their causes. Administrative counts of accounts, wallets, savers, transactions or devices cannot substitute for a weighted people-level measure. The evidence base does not include confidence intervals for these subgroup values, and none are calculated here, so small differences between subgroups should not be over-read.",
+   "new": "The 11.9% measure is not a 2026 rate and cannot be mapped by governorate from this wave. The 12.91-point gender difference, the 9.0-point income difference, the 12.55-point education difference and the 11.10-point age difference do not establish their causes. Administrative counts of accounts, wallets, savers, transactions or devices cannot substitute for a weighted people-level measure. The evidence base does not include confidence intervals for these subgroup values, and none are calculated here, so small differences between subgroups should not be over-read."
+  },
+  {
+   "finding": "RC-1:ITEM-01",
+   "sheet": "03_PAGE_SECTIONS",
+   "row": 195,
+   "col": 7,
+   "field": "/people/#s4.body_ar",
+   "old": "نسبة 11.9% ليست معدلًا لعام 2026 ولا تسمح هذه الموجة برسم خريطة حسب المحافظات. كما أن فارق 12.91 نقطة بين الرجال والنساء وفارق 9.0 نقاط بين فئتي الدخل لا يثبتان أسبابهما. ولا يجوز استخدام أعداد الحسابات أو المحافظ الإلكترونية أو المدخرين أو المعاملات أو الأجهزة بدل قياس سكاني موزون للأشخاص. ولا تتضمن قاعدة الأدلة فترات ثقة لقيم هذه الفئات، ولا تُحسب هنا، لذلك لا ينبغي تحميل الفروق الصغيرة بين الفئات أكثر مما تحتمل.",
+   "new": "نسبة 11.9% ليست معدلًا لعام 2026 ولا تسمح هذه الموجة برسم خريطة حسب المحافظات. كما أن فارق 12.91 نقطة بين الرجال والنساء وفارق 9.0 نقاط بين فئتي الدخل وفارق 12.55 نقطة بين فئتي التعليم وفارق 11.10 نقطة بين فئتي العمر لا تثبت أسبابها. ولا يجوز استخدام أعداد الحسابات أو المحافظ الإلكترونية أو المدخرين أو المعاملات أو الأجهزة بدل قياس سكاني موزون للأشخاص. ولا تتضمن قاعدة الأدلة فترات ثقة لقيم هذه الفئات، ولا تُحسب هنا، لذلك لا ينبغي تحميل الفروق الصغيرة بين الفئات أكثر مما تحتمل."
+  },
+  {
+   "finding": "RC-1:ITEM-02",
+   "sheet": "06_EVIDENCE_OBJECTS",
+   "row": 13,
+   "col": 6,
+   "field": "VIS-SOURCE-COMPARISON.summary_en",
+   "old": "The comparison table sets the selected records side by side on definition, period, population or calculation base, source scope and method, and on geography and unit where these are recorded. Terms such as accounts, active accounts, subscribers, beneficiaries, merchants and POS terminals may sound related but are not interchangeable. Material mismatches remain visible and prevent a false common scale or combined result.",
+   "new": "The comparison table sets the selected records side by side on definition, population or calculation base, period, method, source and currentness. Check geography and unit in each evidence record before comparing values. Terms such as accounts, active accounts, subscribers, beneficiaries, merchants and POS terminals may sound related but are not interchangeable. Material mismatches remain visible and prevent a false common scale or combined result."
+  },
+  {
+   "finding": "RC-1:ITEM-02",
+   "sheet": "06_EVIDENCE_OBJECTS",
+   "row": 13,
+   "col": 7,
+   "field": "VIS-SOURCE-COMPARISON.summary_ar",
+   "old": "يضع جدول المقارنة السجلات المختارة جنبًا إلى جنب من حيث التعريف والفترة والمجتمع أو قاعدة الاحتساب ونطاق المصدر والطريقة، ومن حيث الجغرافيا والوحدة حيث تكون مسجلة. قد تبدو مصطلحات مثل الحسابات والحسابات النشطة والمشتركين والمستفيدين والتجار وأجهزة نقاط البيع متقاربة، لكنها ليست قابلة للاستبدال. وتبقى أوجه عدم التوافق الجوهرية ظاهرة وتمنع إنشاء مقياس مشترك أو نتيجة مدمجة زائفة.",
+   "new": "يضع جدول المقارنة السجلات المختارة جنبًا إلى جنب من حيث التعريف والمجتمع أو قاعدة الاحتساب والفترة والطريقة والمصدر ومدى الحداثة. وتحقّق من النطاق الجغرافي والوحدة في كل سجل دليل قبل المقارنة بين القيم. قد تبدو مصطلحات مثل الحسابات والحسابات النشطة والمشتركين والمستفيدين والتجار وأجهزة نقاط البيع متقاربة، لكنها ليست قابلة للاستبدال. وتبقى أوجه عدم التوافق الجوهرية ظاهرة وتمنع إنشاء مقياس مشترك أو نتيجة مدمجة زائفة."
+  },
+  {
+   "finding": "RC-1:ITEM-02",
+   "sheet": "11_VISUAL_LIBRARY",
+   "row": 20,
+   "col": 21,
+   "field": "VIS-SOURCE-COMPARISON.accessible_summary_en",
+   "old": "The comparison table sets the selected records side by side on definition, period, population or calculation base, source scope and method, and on geography and unit where these are recorded. Terms such as accounts, active accounts, subscribers, beneficiaries, merchants and POS terminals may sound related but are not interchangeable. Material mismatches remain visible and prevent a false common scale or combined result.",
+   "new": "The comparison table sets the selected records side by side on definition, population or calculation base, period, method, source and currentness. Check geography and unit in each evidence record before comparing values. Terms such as accounts, active accounts, subscribers, beneficiaries, merchants and POS terminals may sound related but are not interchangeable. Material mismatches remain visible and prevent a false common scale or combined result."
+  },
+  {
+   "finding": "RC-1:ITEM-02",
+   "sheet": "11_VISUAL_LIBRARY",
+   "row": 20,
+   "col": 22,
+   "field": "VIS-SOURCE-COMPARISON.accessible_summary_ar",
+   "old": "يضع جدول المقارنة السجلات المختارة جنبًا إلى جنب من حيث التعريف والفترة والمجتمع أو قاعدة الاحتساب ونطاق المصدر والطريقة، ومن حيث الجغرافيا والوحدة حيث تكون مسجلة. قد تبدو مصطلحات مثل الحسابات والحسابات النشطة والمشتركين والمستفيدين والتجار وأجهزة نقاط البيع متقاربة، لكنها ليست قابلة للاستبدال. وتبقى أوجه عدم التوافق الجوهرية ظاهرة وتمنع إنشاء مقياس مشترك أو نتيجة مدمجة زائفة.",
+   "new": "يضع جدول المقارنة السجلات المختارة جنبًا إلى جنب من حيث التعريف والمجتمع أو قاعدة الاحتساب والفترة والطريقة والمصدر ومدى الحداثة. وتحقّق من النطاق الجغرافي والوحدة في كل سجل دليل قبل المقارنة بين القيم. قد تبدو مصطلحات مثل الحسابات والحسابات النشطة والمشتركين والمستفيدين والتجار وأجهزة نقاط البيع متقاربة، لكنها ليست قابلة للاستبدال. وتبقى أوجه عدم التوافق الجوهرية ظاهرة وتمنع إنشاء مقياس مشترك أو نتيجة مدمجة زائفة."
+  },
+  {
+   "finding": "RC-1:ITEM-03",
+   "sheet": "03_PAGE_SECTIONS",
+   "row": 155,
+   "col": 5,
+   "field": "/methodology/#s1.body_en",
+   "old": "Every published figure has been checked against the source it is attributed to. A figure that could not be verified is withheld, and a figure known only from a secondary source is labelled as secondary. Each figure keeps its unit, population, period and geography; derived figures can be recomputed from recorded inputs; and material corrections are recorded. The method exists to prevent one common failure: treating different people, accounts, providers, periods, geographies and programme records as if they measured the same thing.",
+   "new": "Every figure on this resource's pages and in its evidence records is checked against the source it is attributed to, and any exception is marked where the figure appears: an evidence record with an input not yet linked to a specific original source says so, and a dated event in the system chronology that has not yet been checked against its original document carries a note saying so. A figure that was checked and could not be verified is withheld, and a figure known only from a secondary source is labelled as secondary. Each figure keeps its unit, population, period and geography; derived figures can be recomputed from recorded inputs; and material corrections are recorded. The method exists to prevent one common failure: treating different people, accounts, providers, periods, geographies and programme records as if they measured the same thing."
+  },
+  {
+   "finding": "RC-1:ITEM-03",
+   "sheet": "03_PAGE_SECTIONS",
+   "row": 155,
+   "col": 7,
+   "field": "/methodology/#s1.body_ar",
+   "old": "رُوجِع كل رقم منشور هنا مقابل المصدر المنسوب إليه. ويُحجب الرقم الذي تعذّر التحقق منه، ويوسم الرقم الذي لا يُعرف إلا من مصدر ثانوي بأنه ثانوي. ويبقى كل رقم مقترنًا بوحدته والمجتمع الذي يغطيه وفترته وجغرافيته، ويمكن إعادة احتساب القيم المشتقة من مدخلاتها المسجلة، وتُسجَّل التصحيحات الجوهرية. وتهدف المنهجية إلى منع خطأ شائع: التعامل مع الأشخاص والحسابات ومقدمي الخدمات والفترات والجغرافيا وسجلات البرامج المختلفة وكأنها تقيس الشيء نفسه.",
+   "new": "يُراجَع كل رقم في صفحات هذا المورد وسجلات أدلته مقابل المصدر المنسوب إليه، ويُشار إلى أي استثناء حيث يظهر الرقم: فسجل الدليل الذي لم يُربط أحد مدخلاته بعدُ بمصدر أصلي محدد يذكر ذلك، والحدث المؤرخ في السلسلة الزمنية الذي لم يُراجَع بعدُ مقابل وثيقته الأصلية تُرفق به ملاحظة بذلك. ويُحجب الرقم الذي رُوجع وتعذّر التحقق منه، ويوسم الرقم الذي لا يُعرف إلا من مصدر ثانوي بأنه ثانوي. ويبقى كل رقم مقترنًا بوحدته والمجتمع الذي يغطيه وفترته وجغرافيته، ويمكن إعادة احتساب القيم المشتقة من مدخلاتها المسجلة، وتُسجَّل التصحيحات الجوهرية. وتهدف المنهجية إلى منع خطأ شائع: التعامل مع الأشخاص والحسابات ومقدمي الخدمات والفترات والجغرافيا وسجلات البرامج المختلفة وكأنها تقيس الشيء نفسه."
+  },
+  {
+   "finding": "RC-1:ITEM-03",
+   "sheet": "14_SYSTEM_CHRONOLOGY",
+   "row": 4,
+   "col": 18,
+   "field": "14 header",
+   "old": null,
+   "new": "verification_note_en"
+  },
+  {
+   "finding": "RC-1:ITEM-03",
+   "sheet": "14_SYSTEM_CHRONOLOGY",
+   "row": 4,
+   "col": 19,
+   "field": "14 header",
+   "old": null,
+   "new": "verification_note_ar"
+  },
+  {
+   "finding": "RC-1:ITEM-03",
+   "sheet": "14_SYSTEM_CHRONOLOGY",
+   "row": 12,
+   "col": 18,
+   "field": "YSC-008.verification_note_en",
+   "old": null,
+   "new": "This event has not yet been checked against the original source document."
+  },
+  {
+   "finding": "RC-1:ITEM-03",
+   "sheet": "14_SYSTEM_CHRONOLOGY",
+   "row": 12,
+   "col": 19,
+   "field": "YSC-008.verification_note_ar",
+   "old": null,
+   "new": "لم يُراجَع هذا الحدث بعدُ مقابل وثيقة المصدر الأصلية."
+  },
+  {
+   "finding": "RC-1:ITEM-03",
+   "sheet": "14_SYSTEM_CHRONOLOGY",
+   "row": 19,
+   "col": 18,
+   "field": "YSC-014.verification_note_en",
+   "old": null,
+   "new": "This event has not yet been checked against the original source document."
+  },
+  {
+   "finding": "RC-1:ITEM-03",
+   "sheet": "14_SYSTEM_CHRONOLOGY",
+   "row": 19,
+   "col": 19,
+   "field": "YSC-014.verification_note_ar",
+   "old": null,
+   "new": "لم يُراجَع هذا الحدث بعدُ مقابل وثيقة المصدر الأصلية."
+  },
+  {
+   "finding": "RC-1:ITEM-03",
+   "sheet": "14_SYSTEM_CHRONOLOGY",
+   "row": 21,
+   "col": 18,
+   "field": "YSC-015.verification_note_en",
+   "old": null,
+   "new": "This event has not yet been checked against the original source document."
+  },
+  {
+   "finding": "RC-1:ITEM-03",
+   "sheet": "14_SYSTEM_CHRONOLOGY",
+   "row": 21,
+   "col": 19,
+   "field": "YSC-015.verification_note_ar",
+   "old": null,
+   "new": "لم يُراجَع هذا الحدث بعدُ مقابل وثيقة المصدر الأصلية."
+  },
+  {
+   "finding": "RC-1:ITEM-03",
+   "sheet": "14_SYSTEM_CHRONOLOGY",
+   "row": 23,
+   "col": 18,
+   "field": "YSC-017.verification_note_en",
+   "old": null,
+   "new": "This event has not yet been checked against the original source document."
+  },
+  {
+   "finding": "RC-1:ITEM-03",
+   "sheet": "14_SYSTEM_CHRONOLOGY",
+   "row": 23,
+   "col": 19,
+   "field": "YSC-017.verification_note_ar",
+   "old": null,
+   "new": "لم يُراجَع هذا الحدث بعدُ مقابل وثيقة المصدر الأصلية."
+  },
+  {
+   "finding": "RC-1:ITEM-04",
+   "sheet": "19_PAYMENTS_DATA",
+   "row": 60,
+   "col": 3,
+   "field": "OBS-00056.value",
+   "old": "317.639",
+   "new": 318
+  },
+  {
+   "finding": "RC-1:ITEM-04",
+   "sheet": "19_PAYMENTS_DATA",
+   "row": 60,
+   "col": 15,
+   "field": "OBS-00056.caveats",
+   "old": "YER value mapping validated by month-to-month percentage changes displayed in source.",
+   "new": "YER value mapping validated by month-to-month percentage changes displayed in source. Displayed to whole YER million (RC-1, item 4: one unit and one display precision for the series); the source value as reported is kept in source_value_as_reported."
+  },
+  {
+   "finding": "RC-1:ITEM-04",
+   "sheet": "19_PAYMENTS_DATA",
+   "row": 63,
+   "col": 3,
+   "field": "OBS-00059.value",
+   "old": "386.792",
+   "new": 387
+  },
+  {
+   "finding": "RC-1:ITEM-04",
+   "sheet": "19_PAYMENTS_DATA",
+   "row": 63,
+   "col": 15,
+   "field": "OBS-00059.caveats",
+   "old": "YER value mapping validated by month-to-month percentage changes displayed in source.",
+   "new": "YER value mapping validated by month-to-month percentage changes displayed in source. Displayed to whole YER million (RC-1, item 4: one unit and one display precision for the series); the source value as reported is kept in source_value_as_reported."
+  },
+  {
+   "finding": "RC-1:ITEM-04",
+   "sheet": "19_PAYMENTS_DATA",
+   "row": 66,
+   "col": 3,
+   "field": "OBS-00062.value",
+   "old": "535.189",
+   "new": 535
+  },
+  {
+   "finding": "RC-1:ITEM-04",
+   "sheet": "19_PAYMENTS_DATA",
+   "row": 66,
+   "col": 15,
+   "field": "OBS-00062.caveats",
+   "old": "YER value mapping validated by month-to-month percentage changes displayed in source.",
+   "new": "YER value mapping validated by month-to-month percentage changes displayed in source. Displayed to whole YER million (RC-1, item 4: one unit and one display precision for the series); the source value as reported is kept in source_value_as_reported."
+  },
+  {
+   "finding": "RC-1:ITEM-04",
+   "sheet": "19_PAYMENTS_DATA",
+   "row": 69,
+   "col": 3,
+   "field": "OBS-00065.value",
+   "old": "490.759",
+   "new": 491
+  },
+  {
+   "finding": "RC-1:ITEM-04",
+   "sheet": "19_PAYMENTS_DATA",
+   "row": 69,
+   "col": 15,
+   "field": "OBS-00065.caveats",
+   "old": "Normalized to YER millions; source infographic unit/value mapping validated by adjacent month percentages and labels.",
+   "new": "Normalized to YER millions; source infographic unit/value mapping validated by adjacent month percentages and labels. Displayed to whole YER million (RC-1, item 4: one unit and one display precision for the series); the source value as reported is kept in source_value_as_reported."
+  },
+  {
+   "finding": "RC-1:ITEM-04",
+   "sheet": "19_PAYMENTS_DATA",
+   "row": 72,
+   "col": 3,
+   "field": "OBS-00068.value",
+   "old": "580.021",
+   "new": 580
+  },
+  {
+   "finding": "RC-1:ITEM-04",
+   "sheet": "19_PAYMENTS_DATA",
+   "row": 72,
+   "col": 15,
+   "field": "OBS-00068.caveats",
+   "old": "Normalized to YER millions; source infographic unit/value mapping validated by adjacent month percentages and labels.",
+   "new": "Normalized to YER millions; source infographic unit/value mapping validated by adjacent month percentages and labels. Displayed to whole YER million (RC-1, item 4: one unit and one display precision for the series); the source value as reported is kept in source_value_as_reported."
+  },
+  {
+   "finding": "RC-1:ITEM-04",
+   "sheet": "19_PAYMENTS_DATA",
+   "row": 77,
+   "col": 3,
+   "field": "OBS-00073.value",
+   "old": "795.006",
+   "new": 795
+  },
+  {
+   "finding": "RC-1:ITEM-04",
+   "sheet": "19_PAYMENTS_DATA",
+   "row": 77,
+   "col": 15,
+   "field": "OBS-00073.caveats",
+   "old": "Normalized to YER millions; source infographic unit/value mapping validated by adjacent month percentages and labels.",
+   "new": "Normalized to YER millions; source infographic unit/value mapping validated by adjacent month percentages and labels. Displayed to whole YER million (RC-1, item 4: one unit and one display precision for the series); the source value as reported is kept in source_value_as_reported."
+  },
+  {
+   "finding": "RC-1:ITEM-04",
+   "sheet": "19_PAYMENTS_DATA",
+   "row": 80,
+   "col": 3,
+   "field": "OBS-00076.value",
+   "old": "783.583",
+   "new": 784
+  },
+  {
+   "finding": "RC-1:ITEM-04",
+   "sheet": "19_PAYMENTS_DATA",
+   "row": 80,
+   "col": 15,
+   "field": "OBS-00076.caveats",
+   "old": "Normalized to YER millions; source infographic unit/value mapping validated by adjacent month percentages and labels.",
+   "new": "Normalized to YER millions; source infographic unit/value mapping validated by adjacent month percentages and labels. Displayed to whole YER million (RC-1, item 4: one unit and one display precision for the series); the source value as reported is kept in source_value_as_reported."
+  },
+  {
+   "finding": "RC-1:ITEM-04",
+   "sheet": "19_PAYMENTS_DATA",
+   "row": 83,
+   "col": 3,
+   "field": "OBS-00079.value",
+   "old": "910.688",
+   "new": 911
+  },
+  {
+   "finding": "RC-1:ITEM-04",
+   "sheet": "19_PAYMENTS_DATA",
+   "row": 83,
+   "col": 15,
+   "field": "OBS-00079.caveats",
+   "old": "Normalized to YER millions; source infographic unit/value mapping validated by adjacent month percentages and labels.",
+   "new": "Normalized to YER millions; source infographic unit/value mapping validated by adjacent month percentages and labels. Displayed to whole YER million (RC-1, item 4: one unit and one display precision for the series); the source value as reported is kept in source_value_as_reported."
+  },
+  {
+   "finding": "RC-1:ITEM-04",
+   "sheet": "03_PAGE_SECTIONS",
+   "row": 175,
+   "col": 5,
+   "field": "/payments/#s2.body_en",
+   "old": "Within the reporting scope of the Central Bank of Yemen – Aden (CBY-Aden), reported POS terminals rose from 561 to 1,473 between March 2025 and January 2026, transaction counts from 8,015 to 24,026 (after a high of 27,187 in July 2025) and nominal transaction value from YER 320 million to YER 1.262 billion. This page keeps these three measures separate. A terminal is infrastructure, a transaction is an event and transaction value is a nominal monetary amount; none equals a person.",
+   "new": "Within the reporting scope of the Central Bank of Yemen – Aden (CBY-Aden), reported POS terminals rose from 561 to 1,473 between March 2025 and January 2026, transaction counts from 8,015 to 24,026 (after a high of 27,187 in July 2025) and nominal transaction value from YER 320 million to YER 1,262 million. This page keeps these three measures separate. A terminal is infrastructure, a transaction is an event and transaction value is a nominal monetary amount; none equals a person."
+  },
+  {
+   "finding": "RC-1:ITEM-04",
+   "sheet": "06_EVIDENCE_OBJECTS",
+   "row": 68,
+   "col": 6,
+   "field": "VIS-POS-VALUE.summary_en",
+   "old": "The nominal value of POS transactions reported by the Central Bank of Yemen – Aden (CBY-Aden) rose from YER 320 million in March 2025 to YER 1.262 billion in January 2026, within CBY-Aden's reporting scope. The September 2025 value is missing because no verified value is available for that month. The series is nominal and does not establish real-value growth, purchasing-power change, unique-user growth or financial-inclusion impact.",
+   "new": "The nominal value of POS transactions reported by the Central Bank of Yemen – Aden (CBY-Aden) rose from YER 320 million in March 2025 to YER 1,262 million in January 2026, within CBY-Aden's reporting scope. The September 2025 value is missing because no verified value is available for that month. The series is nominal and does not establish real-value growth, purchasing-power change, unique-user growth or financial-inclusion impact."
+  },
+  {
+   "finding": "RC-1:ITEM-04",
+   "sheet": "11_VISUAL_LIBRARY",
+   "row": 18,
+   "col": 21,
+   "field": "VIS-POS-VALUE.accessible_summary_en",
+   "old": "The nominal value of POS transactions reported by the Central Bank of Yemen – Aden (CBY-Aden) rose from YER 320 million in March 2025 to YER 1.262 billion in January 2026, within CBY-Aden's reporting scope. The September 2025 value is missing because no verified value is available for that month. The series is nominal and does not establish real-value growth, purchasing-power change, unique-user growth or financial-inclusion impact.",
+   "new": "The nominal value of POS transactions reported by the Central Bank of Yemen – Aden (CBY-Aden) rose from YER 320 million in March 2025 to YER 1,262 million in January 2026, within CBY-Aden's reporting scope. The September 2025 value is missing because no verified value is available for that month. The series is nominal and does not establish real-value growth, purchasing-power change, unique-user growth or financial-inclusion impact."
+  },
+  {
+   "finding": "RC-1:ITEM-04",
+   "sheet": "03_PAGE_SECTIONS",
+   "row": 176,
+   "col": 7,
+   "field": "/payments/#s2.body_ar",
+   "old": "ضمن نطاق بيانات البنك المركزي اليمني – عدن، ارتفع بين مارس 2025 ويناير 2026 العدد المنشور لأجهزة نقاط البيع من 561 إلى 1,473 جهازًا، وعدد المعاملات من 8,015 إلى 24,026 (بعد ذروة بلغت 27,187 معاملة في يوليو 2025)، والقيمة الاسمية للمعاملات من 320 مليون ريال إلى 1.262 مليار ريال. وتُبقي هذه الصفحة المقاييس الثلاثة منفصلة: الجهاز بنية تحتية، والمعاملة حدث، وقيمة المعاملة مبلغ مالي اسمي؛ ولا يساوي أي منها شخصًا.",
+   "new": "ضمن نطاق بيانات البنك المركزي اليمني – عدن، ارتفع بين مارس 2025 ويناير 2026 العدد المنشور لأجهزة نقاط البيع من 561 إلى 1,473 جهازًا، وعدد المعاملات من 8,015 إلى 24,026 (بعد ذروة بلغت 27,187 معاملة في يوليو 2025)، والقيمة الاسمية للمعاملات من 320 مليون ريال إلى 1,262 مليون ريال. وتُبقي هذه الصفحة المقاييس الثلاثة منفصلة: الجهاز بنية تحتية، والمعاملة حدث، وقيمة المعاملة مبلغ مالي اسمي؛ ولا يساوي أي منها شخصًا."
+  },
+  {
+   "finding": "RC-1:ITEM-04",
+   "sheet": "06_EVIDENCE_OBJECTS",
+   "row": 68,
+   "col": 7,
+   "field": "VIS-POS-VALUE.summary_ar",
+   "old": "ارتفعت القيمة الاسمية لمعاملات نقاط البيع التي يُبلغ عنها البنك المركزي اليمني – عدن من 320 مليون ريال يمني في مارس 2025 إلى 1.262 مليار ريال في يناير 2026، ضمن نطاق الإبلاغ لديه. وقيمة سبتمبر 2025 مفقودة لعدم توفر قيمة متحقق منها لذلك الشهر. والسلسلة اسمية ولا تثبت نموًا بالقيمة الحقيقية أو تغيرًا في القوة الشرائية أو زيادة عدد المستخدمين الفريدين أو أثرًا على الشمول المالي.",
+   "new": "ارتفعت القيمة الاسمية لمعاملات نقاط البيع التي يُبلغ عنها البنك المركزي اليمني – عدن من 320 مليون ريال يمني في مارس 2025 إلى 1,262 مليون ريال في يناير 2026، ضمن نطاق الإبلاغ لديه. وقيمة سبتمبر 2025 مفقودة لعدم توفر قيمة متحقق منها لذلك الشهر. والسلسلة اسمية ولا تثبت نموًا بالقيمة الحقيقية أو تغيرًا في القوة الشرائية أو زيادة عدد المستخدمين الفريدين أو أثرًا على الشمول المالي."
+  },
+  {
+   "finding": "RC-1:ITEM-04",
+   "sheet": "11_VISUAL_LIBRARY",
+   "row": 18,
+   "col": 22,
+   "field": "VIS-POS-VALUE.accessible_summary_ar",
+   "old": "ارتفعت القيمة الاسمية لمعاملات نقاط البيع التي يُبلغ عنها البنك المركزي اليمني – عدن من 320 مليون ريال يمني في مارس 2025 إلى 1.262 مليار ريال في يناير 2026، ضمن نطاق الإبلاغ لديه. وقيمة سبتمبر 2025 مفقودة لعدم توفر قيمة متحقق منها لذلك الشهر. والسلسلة اسمية ولا تثبت نموًا بالقيمة الحقيقية أو تغيرًا في القوة الشرائية أو زيادة عدد المستخدمين الفريدين أو أثرًا على الشمول المالي.",
+   "new": "ارتفعت القيمة الاسمية لمعاملات نقاط البيع التي يُبلغ عنها البنك المركزي اليمني – عدن من 320 مليون ريال يمني في مارس 2025 إلى 1,262 مليون ريال في يناير 2026، ضمن نطاق الإبلاغ لديه. وقيمة سبتمبر 2025 مفقودة لعدم توفر قيمة متحقق منها لذلك الشهر. والسلسلة اسمية ولا تثبت نموًا بالقيمة الحقيقية أو تغيرًا في القوة الشرائية أو زيادة عدد المستخدمين الفريدين أو أثرًا على الشمول المالي."
+  },
+  {
+   "finding": "RC-1:ITEM-04",
+   "sheet": "03_PAGE_SECTIONS",
+   "row": 285,
+   "col": 5,
+   "field": "/readings/same-year-different-number/#s2.body_en",
+   "old": "Two annual reports of the Central Bank of Yemen – Aden (CBY-Aden) give markedly different remittance values for the same reference year. The 2024 report put remittances in 2024 at USD 6.245 billion; the 2025 report restated 2024 at about USD 3.42 billion.\nThe gap is large, but it does not show that remittances collapsed. Both values describe 2024. Before the difference can be read as economic movement, the change in statistical vintage, scope or method has to be understood.",
+   "new": "Two annual reports of the Central Bank of Yemen – Aden (CBY-Aden) give markedly different remittance values for the same reference year. The 2024 report put remittances in 2024 at USD 6,245 million; the 2025 report restated 2024 at USD 3,422.16 million.\nThe gap is large, but it does not show that remittances collapsed. Both values describe 2024. Before the difference can be read as economic movement, the change in statistical vintage, scope or method has to be understood."
+  },
+  {
+   "finding": "RC-1:ITEM-04",
+   "sheet": "03_PAGE_SECTIONS",
+   "row": 285,
+   "col": 7,
+   "field": "/readings/same-year-different-number/#s2.body_ar",
+   "old": "يورد تقريران سنويان للبنك المركزي اليمني – عدن قيمتين متباينتين تباينًا واضحًا للتحويلات في السنة المرجعية نفسها. فقد قدّر تقرير 2024 التحويلات في عام 2024 بمبلغ 6.245 مليار دولار، ثم أعاد تقرير 2025 عرض قيمة عام 2024 عند 3.42 مليار دولار تقريبًا.\nالفرق كبير، لكنه لا يثبت أن التحويلات انهارت؛ فالقيمتان تصفان عام 2024 نفسه. وقبل قراءة الفرق حركةً في الاقتصاد، ينبغي فهم ما تغيّر في نسخة النشر أو نطاق الإحصاء أو منهجه.",
+   "new": "يورد تقريران سنويان للبنك المركزي اليمني – عدن قيمتين متباينتين تباينًا واضحًا للتحويلات في السنة المرجعية نفسها. فقد قدّر تقرير 2024 التحويلات في عام 2024 بمبلغ 6,245 مليون دولار، ثم أعاد تقرير 2025 عرض قيمة عام 2024 عند 3,422.16 مليون دولار.\nالفرق كبير، لكنه لا يثبت أن التحويلات انهارت؛ فالقيمتان تصفان عام 2024 نفسه. وقبل قراءة الفرق حركةً في الاقتصاد، ينبغي فهم ما تغيّر في نسخة النشر أو نطاق الإحصاء أو منهجه."
+  },
+  {
+   "finding": "RC-1:ITEM-04",
+   "sheet": "03_PAGE_SECTIONS",
+   "row": 313,
+   "col": 5,
+   "field": "/remittances/#s1.body_en",
+   "old": "For the 2024 reference year, the 2024 annual report of the Central Bank of Yemen – Aden (CBY-Aden) gave remittances of US$6.245 billion, and its 2025 annual report restated the same year at about US$3.42 billion: a revision of the same year, not a fall. Macro inflows, corridor prices and household receipt channels answer different questions, so this resource keeps these evidence records separate and makes revisions visible.",
+   "new": "For the 2024 reference year, the 2024 annual report of the Central Bank of Yemen – Aden (CBY-Aden) gave remittances of US$6,245 million, and its 2025 annual report restated the same year at US$3,422.16 million: a revision of the same year, not a fall. Macro inflows, corridor prices and household receipt channels answer different questions, so this resource keeps these evidence records separate and makes revisions visible."
+  },
+  {
+   "finding": "RC-1:ITEM-04",
+   "sheet": "03_PAGE_SECTIONS",
+   "row": 313,
+   "col": 7,
+   "field": "/remittances/#s1.body_ar",
+   "old": "عن السنة المرجعية 2024، أورد التقرير السنوي 2024 للبنك المركزي اليمني – عدن تحويلات قدرها 6.245 مليار دولار، ثم أعاد تقريره السنوي 2025 عرض السنة نفسها عند نحو 3.42 مليار دولار: وهذه مراجعة للسنة نفسها، لا هبوط. وتجيب التدفقات الكلية وأسعار الممرات وقنوات استلام الأسر عن أسئلة مختلفة، ولذلك يُبقي هذا المورد سجلات الأدلة هذه منفصلة ويُظهر المراجعات.",
+   "new": "عن السنة المرجعية 2024، أورد التقرير السنوي 2024 للبنك المركزي اليمني – عدن تحويلات قدرها 6,245 مليون دولار، ثم أعاد تقريره السنوي 2025 عرض السنة نفسها عند 3,422.16 مليون دولار: وهذه مراجعة للسنة نفسها، لا هبوط. وتجيب التدفقات الكلية وأسعار الممرات وقنوات استلام الأسر عن أسئلة مختلفة، ولذلك يُبقي هذا المورد سجلات الأدلة هذه منفصلة ويُظهر المراجعات."
+  },
+  {
+   "finding": "RC-1:ITEM-04",
+   "sheet": "03_PAGE_SECTIONS",
+   "row": 316,
+   "col": 5,
+   "field": "/remittances/#s3.body_en",
+   "old": "For the 2024 reference year, the 2024 annual report of the Central Bank of Yemen – Aden (CBY-Aden) gave US$6.245 billion, while its 2025 annual report restated 2024 at about US$3.42 billion. That is a same-year source revision, not a year-on-year fall. The later path also shows unusually similar growth rates across overlapping years; that invites method scrutiny but does not establish smoothing or interpolation.",
+   "new": "For the 2024 reference year, the 2024 annual report of the Central Bank of Yemen – Aden (CBY-Aden) gave US$6,245 million, while its 2025 annual report restated 2024 at US$3,422.16 million. That is a same-year source revision, not a year-on-year fall. The later path also shows unusually similar growth rates across overlapping years; that invites method scrutiny but does not establish smoothing or interpolation."
+  },
+  {
+   "finding": "RC-1:ITEM-04",
+   "sheet": "03_PAGE_SECTIONS",
+   "row": 317,
+   "col": 7,
+   "field": "/remittances/#s3.body_ar",
+   "old": "وعن السنة المرجعية 2024، أورد التقرير السنوي 2024 للبنك المركزي اليمني – عدن قيمة قدرها 6.245 مليار دولار، بينما أعاد تقرير 2025 عرض 2024 عند 3.42 مليار دولار تقريبًا. هذه مراجعة في المصدر للسنة نفسها، ولا يجوز رسمها كهبوط بين عامين. كما يظهر في المسار اللاحق تقارب لافت في معدلات النمو عبر السنوات المتداخلة؛ وهو ما يستدعي فحص المنهج لكنه لا يثبت التمهيد الإحصائي أو الاستيفاء.",
+   "new": "وعن السنة المرجعية 2024، أورد التقرير السنوي 2024 للبنك المركزي اليمني – عدن قيمة قدرها 6,245 مليون دولار، بينما أعاد تقرير 2025 عرض 2024 عند 3,422.16 مليون دولار. هذه مراجعة في المصدر للسنة نفسها، ولا يجوز رسمها كهبوط بين عامين. كما يظهر في المسار اللاحق تقارب لافت في معدلات النمو عبر السنوات المتداخلة؛ وهو ما يستدعي فحص المنهج لكنه لا يثبت التمهيد الإحصائي أو الاستيفاء."
+  },
+  {
+   "finding": "RC-1:ITEM-04",
+   "sheet": "03_PAGE_SECTIONS",
+   "row": 328,
+   "col": 5,
+   "field": "/remittances/#s9.body_en",
+   "old": "The exact public crosswalk between key external-sector series of the Central Bank of Yemen – Aden (CBY-Aden) and the IMF remains open. For 2024, CBY-Aden’s 2025 annual report gives remittances of about US$3.42 billion, while the IMF’s 2025 Article IV staff report gives US$1,861.7 million on the IMF’s analytical scope for areas under the internationally recognized government. Over 2021–2024 the two series differ by a roughly constant ratio of 1.838 and their indexed growth paths almost coincide; what that ratio represents is not established, so neither level can be converted into the other. Current household receipt and channel behaviour, and the scale of informal channels, are also not established by the macro and corridor evidence.",
+   "new": "The exact public crosswalk between key external-sector series of the Central Bank of Yemen – Aden (CBY-Aden) and the IMF remains open. For 2024, CBY-Aden’s 2025 annual report gives remittances of US$3,422.16 million, while the IMF’s 2025 Article IV staff report gives US$1,861.7 million on the IMF’s analytical scope for areas under the internationally recognized government. Over 2021–2024 the two series differ by a roughly constant ratio of 1.838 and their indexed growth paths almost coincide; what that ratio represents is not established, so neither level can be converted into the other. Current household receipt and channel behaviour, and the scale of informal channels, are also not established by the macro and corridor evidence."
+  },
+  {
+   "finding": "RC-1:ITEM-04",
+   "sheet": "03_PAGE_SECTIONS",
+   "row": 329,
+   "col": 7,
+   "field": "/remittances/#s9.body_ar",
+   "old": "ما تزال المطابقة العامة الدقيقة بين أهم سلاسل القطاع الخارجي لدى البنك المركزي اليمني – عدن وصندوق النقد الدولي غير محسومة. فعن عام 2024 يورد التقرير السنوي 2025 للبنك المركزي اليمني – عدن تحويلات بنحو 3.42 مليار دولار، بينما يورد تقرير خبراء صندوق النقد الدولي لمشاورات المادة الرابعة لعام 2025 قيمة 1,861.7 مليون دولار ضمن النطاق التحليلي للصندوق الخاص بمناطق الحكومة المعترف بها دوليًا. وخلال 2021–2024 تختلف السلسلتان بنسبة شبه ثابتة قدرها 1.838، ويكاد مسارا نموهما بعد تحويلهما إلى رقم قياسي يتطابقان؛ ولم يثبت ما تمثله هذه النسبة، ولذلك لا يمكن تحويل أي من المستويين إلى الآخر. كما أن سلوك الأسر الحالي في استلام الحوالات واختيار القنوات، وحجم القنوات غير الرسمية، لا تثبته أدلة الاقتصاد الكلي والممرات.",
+   "new": "ما تزال المطابقة العامة الدقيقة بين أهم سلاسل القطاع الخارجي لدى البنك المركزي اليمني – عدن وصندوق النقد الدولي غير محسومة. فعن عام 2024 يورد التقرير السنوي 2025 للبنك المركزي اليمني – عدن تحويلات قدرها 3,422.16 مليون دولار، بينما يورد تقرير خبراء صندوق النقد الدولي لمشاورات المادة الرابعة لعام 2025 قيمة 1,861.7 مليون دولار ضمن النطاق التحليلي للصندوق الخاص بمناطق الحكومة المعترف بها دوليًا. وخلال 2021–2024 تختلف السلسلتان بنسبة شبه ثابتة قدرها 1.838، ويكاد مسارا نموهما بعد تحويلهما إلى رقم قياسي يتطابقان؛ ولم يثبت ما تمثله هذه النسبة، ولذلك لا يمكن تحويل أي من المستويين إلى الآخر. كما أن سلوك الأسر الحالي في استلام الحوالات واختيار القنوات، وحجم القنوات غير الرسمية، لا تثبته أدلة الاقتصاد الكلي والممرات."
+  },
+  {
+   "finding": "RC-1:ITEM-04",
+   "sheet": "06_EVIDENCE_OBJECTS",
+   "row": 68,
+   "col": 14,
+   "field": "VIS-POS-VALUE.method_en",
+   "old": "Monthly values in Yemeni rials as published in the monthly POS releases of the Central Bank of Yemen – Aden (CBY-Aden), normalised to millions of rials; the values are nominal and are not adjusted for inflation or exchange-rate changes. No value is available for September 2025, and none is interpolated.",
+   "new": "Monthly values in Yemeni rials as published in the monthly POS releases of the Central Bank of Yemen – Aden (CBY-Aden), normalised to millions of rials; the values are nominal and are not adjusted for inflation or exchange-rate changes. No value is available for September 2025, and none is interpolated. Each value is shown to the nearest million rials (for example, 317.639 million is shown as 318)."
+  },
+  {
+   "finding": "RC-1:ITEM-04",
+   "sheet": "06_EVIDENCE_OBJECTS",
+   "row": 68,
+   "col": 15,
+   "field": "VIS-POS-VALUE.method_ar",
+   "old": "قيم شهرية بالريال اليمني كما نشرها البنك المركزي اليمني – عدن في إصداراته الشهرية عن نقاط البيع، موحّدة بملايين الريالات؛ وهي قيم اسمية غير معدلة لأثر التضخم أو تغيرات سعر الصرف. ولا تتوفر قيمة لشهر سبتمبر 2025، ولا تُقدَّر بالاستيفاء.",
+   "new": "قيم شهرية بالريال اليمني كما نشرها البنك المركزي اليمني – عدن في إصداراته الشهرية عن نقاط البيع، موحّدة بملايين الريالات؛ وهي قيم اسمية غير معدلة لأثر التضخم أو تغيرات سعر الصرف. ولا تتوفر قيمة لشهر سبتمبر 2025، ولا تُقدَّر بالاستيفاء. وتُعرض كل قيمة مقرّبة إلى أقرب مليون ريال (فمثلًا تُعرض 317.639 مليون ريال على أنها 318)."
+  },
+  {
+   "finding": "RC-1:ITEM-04",
+   "sheet": "06_EVIDENCE_OBJECTS",
+   "row": 103,
+   "col": 6,
+   "field": "CLM-032.summary_en",
+   "old": "Annual reports of the Central Bank of Yemen – Aden (CBY-Aden) publish materially different remittance values for the same reference year. For 2024, the 2024 annual report gave USD 6.245 billion, while the 2025 annual report restated 2024 at USD 3.42 billion. This is a same-year restatement, not evidence of economic movement between years.",
+   "new": "Annual reports of the Central Bank of Yemen – Aden (CBY-Aden) publish materially different remittance values for the same reference year. For 2024, the 2024 annual report gave USD 6,245 million, while the 2025 annual report restated 2024 at USD 3,422.16 million. This is a same-year restatement, not evidence of economic movement between years."
+  },
+  {
+   "finding": "RC-1:ITEM-04",
+   "sheet": "06_EVIDENCE_OBJECTS",
+   "row": 103,
+   "col": 7,
+   "field": "CLM-032.summary_ar",
+   "old": "تنشر التقارير السنوية للبنك المركزي اليمني – عدن قيمًا مختلفة بصورة جوهرية للتحويلات الواردة في ميزان المدفوعات عن السنة المرجعية نفسها. فقد أورد التقرير السنوي 2024 قيمة عام 2024 عند 6.245 مليار دولار، بينما أعاد التقرير السنوي 2025 عرض عام 2024 عند 3.42 مليار دولار. وهذه إعادة عرض للسنة نفسها، وليست دليلًا على حركة اقتصادية بين عامين.",
+   "new": "تنشر التقارير السنوية للبنك المركزي اليمني – عدن قيمًا مختلفة بصورة جوهرية للتحويلات الواردة في ميزان المدفوعات عن السنة المرجعية نفسها. فقد أورد التقرير السنوي 2024 قيمة عام 2024 عند 6,245 مليون دولار، بينما أعاد التقرير السنوي 2025 عرض عام 2024 عند 3,422.16 مليون دولار. وهذه إعادة عرض للسنة نفسها، وليست دليلًا على حركة اقتصادية بين عامين."
+  },
+  {
+   "finding": "RC-1:ITEM-07",
+   "sheet": "04_NAV_UX",
+   "row": 104,
+   "col": 2,
+   "field": "UI-VIS-DISAGREEMENT.label_en",
+   "old": "Source figures disagree — both are shown",
+   "new": "Source figures disagree — the published total is plotted; the percentage the release displays is given in the chart note"
+  },
+  {
+   "finding": "RC-1:ITEM-07",
+   "sheet": "04_NAV_UX",
+   "row": 104,
+   "col": 3,
+   "field": "UI-VIS-DISAGREEMENT.label_ar",
+   "old": "أرقام المصدر غير متسقة — يُعرض الرقمان",
+   "new": "أرقام المصدر غير متسقة — يعرض الرسم البياني الإجمالي المنشور، أما النسبة التي يوردها الإصدار فمذكورة في ملاحظة الرسم"
+  },
+  {
+   "finding": "RC-1:ITEM-07",
+   "sheet": "06_EVIDENCE_OBJECTS",
+   "row": 6,
+   "col": 6,
+   "field": "CLM-003.summary_en",
+   "old": "POS terminals reported by the Central Bank of Yemen – Aden (CBY-Aden) rose from 561 in March 2025 to 1,473 in January 2026, within CBY-Aden's reporting scope. The December 2025 total of 1,357 and the January 2026 total of 1,473 imply growth of 8.55%, while the January source graphic displays +11%; both are shown, and the difference is recorded as an inconsistency within the source.",
+   "new": "POS terminals reported by the Central Bank of Yemen – Aden (CBY-Aden) rose from 561 in March 2025 to 1,473 in January 2026, within CBY-Aden's reporting scope. The December 2025 total of 1,357 and the January 2026 total of 1,473 imply growth of 8.55%, while the January source graphic displays +11%; the POS terminals chart plots the published totals, the +11% is stated under 'How was it produced?' in this record, and the difference is recorded as an inconsistency within the source."
+  },
+  {
+   "finding": "RC-1:ITEM-07",
+   "sheet": "06_EVIDENCE_OBJECTS",
+   "row": 6,
+   "col": 7,
+   "field": "CLM-003.summary_ar",
+   "old": "ارتفع عدد أجهزة نقاط البيع التي يُبلغ عنها البنك المركزي اليمني – عدن من 561 جهازًا في مارس 2025 إلى 1,473 جهازًا في يناير 2026، ضمن نطاق الإبلاغ لدى البنك المركزي في عدن. ويعطي الانتقال من 1,357 جهازًا في ديسمبر 2025 إلى 1,473 جهازًا في يناير 2026 نموًا نسبته 8.55%، بينما يعرض رسم المصدر لشهر يناير +11%؛ وتُعرض القيمتان معًا بوصفهما تعارضًا داخل المصدر نفسه.",
+   "new": "ارتفع عدد أجهزة نقاط البيع التي يُبلغ عنها البنك المركزي اليمني – عدن من 561 جهازًا في مارس 2025 إلى 1,473 جهازًا في يناير 2026، ضمن نطاق الإبلاغ لدى البنك المركزي في عدن. ويعطي الانتقال من 1,357 جهازًا في ديسمبر 2025 إلى 1,473 جهازًا في يناير 2026 نموًا نسبته 8.55%، بينما يعرض رسم المصدر لشهر يناير +11%؛ ويعرض الرسم البياني لأجهزة نقاط البيع الإجماليات المنشورة، وتُذكر نسبة +11% تحت «كيف أُنتج؟» في هذا السجل، ويُسجَّل الفرق بوصفه تعارضًا داخل المصدر نفسه."
+  },
+  {
+   "finding": "RC-1:ITEM-07",
+   "sheet": "06_EVIDENCE_OBJECTS",
+   "row": 66,
+   "col": 6,
+   "field": "VIS-POS-TERMINALS.summary_en",
+   "old": "POS terminals reported by the Central Bank of Yemen – Aden (CBY-Aden) rose from 561 in March 2025 to 1,473 in January 2026, within CBY-Aden's reporting scope. Between December 2025 (1,357) and January 2026 (1,473), the raw totals imply growth of 8.55%, while the January source graphic displays +11%; both the reported totals and the publisher's displayed percentage are shown, and the mismatch is recorded as a discrepancy within the source. Terminal counts are devices, not merchants, unique users or an inclusion outcome.",
+   "new": "POS terminals reported by the Central Bank of Yemen – Aden (CBY-Aden) rose from 561 in March 2025 to 1,473 in January 2026, within CBY-Aden's reporting scope. Between December 2025 (1,357) and January 2026 (1,473), the raw totals imply growth of 8.55%, while the January source graphic displays +11%; the chart plots the reported totals, the publisher's displayed percentage is given in the chart note, and the mismatch is recorded as a discrepancy within the source. Terminal counts are devices, not merchants, unique users or an inclusion outcome."
+  },
+  {
+   "finding": "RC-1:ITEM-07",
+   "sheet": "11_VISUAL_LIBRARY",
+   "row": 16,
+   "col": 21,
+   "field": "VIS-POS-TERMINALS.accessible_summary_en",
+   "old": "POS terminals reported by the Central Bank of Yemen – Aden (CBY-Aden) rose from 561 in March 2025 to 1,473 in January 2026, within CBY-Aden's reporting scope. Between December 2025 (1,357) and January 2026 (1,473), the raw totals imply growth of 8.55%, while the January source graphic displays +11%; both the reported totals and the publisher's displayed percentage are shown, and the mismatch is recorded as a discrepancy within the source. Terminal counts are devices, not merchants, unique users or an inclusion outcome.",
+   "new": "POS terminals reported by the Central Bank of Yemen – Aden (CBY-Aden) rose from 561 in March 2025 to 1,473 in January 2026, within CBY-Aden's reporting scope. Between December 2025 (1,357) and January 2026 (1,473), the raw totals imply growth of 8.55%, while the January source graphic displays +11%; the chart plots the reported totals, the publisher's displayed percentage is given in the chart note, and the mismatch is recorded as a discrepancy within the source. Terminal counts are devices, not merchants, unique users or an inclusion outcome."
+  },
+  {
+   "finding": "RC-1:ITEM-07",
+   "sheet": "06_EVIDENCE_OBJECTS",
+   "row": 66,
+   "col": 7,
+   "field": "VIS-POS-TERMINALS.summary_ar",
+   "old": "ارتفع عدد أجهزة نقاط البيع التي يُبلغ عنها البنك المركزي اليمني – عدن من 561 جهازًا في مارس 2025 إلى 1,473 جهازًا في يناير 2026، ضمن نطاق الإبلاغ لديه. وبين ديسمبر 2025 (1,357) ويناير 2026 (1,473) تعطي الإجماليات الخام نموًا نسبته 8.55%، بينما يعرض الرسم المنشور في مصدر يناير نسبة +11%؛ وتُعرض الإجماليات المنشورة والنسبة التي عرضها الناشر معًا، ويُسجَّل الفرق بينهما بوصفه اختلافًا داخل المصدر. وعدد الأجهزة لا يساوي عدد التجار أو المستخدمين الفريدين ولا يثبت نتيجة في الشمول المالي.",
+   "new": "ارتفع عدد أجهزة نقاط البيع التي يُبلغ عنها البنك المركزي اليمني – عدن من 561 جهازًا في مارس 2025 إلى 1,473 جهازًا في يناير 2026، ضمن نطاق الإبلاغ لديه. وبين ديسمبر 2025 (1,357) ويناير 2026 (1,473) تعطي الإجماليات الخام نموًا نسبته 8.55%، بينما يعرض الرسم المنشور في مصدر يناير نسبة +11%؛ ويعرض الرسم البياني الإجماليات المنشورة، وتُذكر في ملاحظة الرسم النسبةُ التي عرضها الناشر، ويُسجَّل الفرق بينهما بوصفه اختلافًا داخل المصدر. وعدد الأجهزة لا يساوي عدد التجار أو المستخدمين الفريدين ولا يثبت نتيجة في الشمول المالي."
+  },
+  {
+   "finding": "RC-1:ITEM-07",
+   "sheet": "11_VISUAL_LIBRARY",
+   "row": 16,
+   "col": 22,
+   "field": "VIS-POS-TERMINALS.accessible_summary_ar",
+   "old": "ارتفع عدد أجهزة نقاط البيع التي يُبلغ عنها البنك المركزي اليمني – عدن من 561 جهازًا في مارس 2025 إلى 1,473 جهازًا في يناير 2026، ضمن نطاق الإبلاغ لديه. وبين ديسمبر 2025 (1,357) ويناير 2026 (1,473) تعطي الإجماليات الخام نموًا نسبته 8.55%، بينما يعرض الرسم المنشور في مصدر يناير نسبة +11%؛ وتُعرض الإجماليات المنشورة والنسبة التي عرضها الناشر معًا، ويُسجَّل الفرق بينهما بوصفه اختلافًا داخل المصدر. وعدد الأجهزة لا يساوي عدد التجار أو المستخدمين الفريدين ولا يثبت نتيجة في الشمول المالي.",
+   "new": "ارتفع عدد أجهزة نقاط البيع التي يُبلغ عنها البنك المركزي اليمني – عدن من 561 جهازًا في مارس 2025 إلى 1,473 جهازًا في يناير 2026، ضمن نطاق الإبلاغ لديه. وبين ديسمبر 2025 (1,357) ويناير 2026 (1,473) تعطي الإجماليات الخام نموًا نسبته 8.55%، بينما يعرض الرسم المنشور في مصدر يناير نسبة +11%؛ ويعرض الرسم البياني الإجماليات المنشورة، وتُذكر في ملاحظة الرسم النسبةُ التي عرضها الناشر، ويُسجَّل الفرق بينهما بوصفه اختلافًا داخل المصدر. وعدد الأجهزة لا يساوي عدد التجار أو المستخدمين الفريدين ولا يثبت نتيجة في الشمول المالي."
+  },
+  {
+   "finding": "RC-1:ITEM-07",
+   "sheet": "06_EVIDENCE_OBJECTS",
+   "row": 67,
+   "col": 6,
+   "field": "VIS-POS-TRANSACTIONS.summary_en",
+   "old": "POS transactions reported by the Central Bank of Yemen – Aden (CBY-Aden) rose from 8,015 in March 2025 to 24,026 in January 2026, within CBY-Aden's reporting scope, but not steadily: the monthly high was 27,187 in July 2025. Between December 2025 (21,099) and January 2026 (24,026), the raw totals imply growth of 13.87%, while the January source graphic displays +4.9%; both are shown, and the mismatch is recorded as a discrepancy within the source. Transactions are events, not unique users or merchants, so the series does not measure how many people or businesses used POS services.",
+   "new": "POS transactions reported by the Central Bank of Yemen – Aden (CBY-Aden) rose from 8,015 in March 2025 to 24,026 in January 2026, within CBY-Aden's reporting scope, but not steadily: the monthly high was 27,187 in July 2025. Between December 2025 (21,099) and January 2026 (24,026), the raw totals imply growth of 13.87%, while the January source graphic displays +4.9%; the chart plots the reported totals, the +4.9% is given in the chart note, and the mismatch is recorded as a discrepancy within the source. Transactions are events, not unique users or merchants, so the series does not measure how many people or businesses used POS services."
+  },
+  {
+   "finding": "RC-1:ITEM-07",
+   "sheet": "11_VISUAL_LIBRARY",
+   "row": 17,
+   "col": 21,
+   "field": "VIS-POS-TRANSACTIONS.accessible_summary_en",
+   "old": "POS transactions reported by the Central Bank of Yemen – Aden (CBY-Aden) rose from 8,015 in March 2025 to 24,026 in January 2026, within CBY-Aden's reporting scope, but not steadily: the monthly high was 27,187 in July 2025. Between December 2025 (21,099) and January 2026 (24,026), the raw totals imply growth of 13.87%, while the January source graphic displays +4.9%; both are shown, and the mismatch is recorded as a discrepancy within the source. Transactions are events, not unique users or merchants, so the series does not measure how many people or businesses used POS services.",
+   "new": "POS transactions reported by the Central Bank of Yemen – Aden (CBY-Aden) rose from 8,015 in March 2025 to 24,026 in January 2026, within CBY-Aden's reporting scope, but not steadily: the monthly high was 27,187 in July 2025. Between December 2025 (21,099) and January 2026 (24,026), the raw totals imply growth of 13.87%, while the January source graphic displays +4.9%; the chart plots the reported totals, the +4.9% is given in the chart note, and the mismatch is recorded as a discrepancy within the source. Transactions are events, not unique users or merchants, so the series does not measure how many people or businesses used POS services."
+  },
+  {
+   "finding": "RC-1:ITEM-07",
+   "sheet": "06_EVIDENCE_OBJECTS",
+   "row": 67,
+   "col": 7,
+   "field": "VIS-POS-TRANSACTIONS.summary_ar",
+   "old": "ارتفع عدد معاملات نقاط البيع التي يُبلغ عنها البنك المركزي اليمني – عدن من 8,015 معاملة في مارس 2025 إلى 24,026 معاملة في يناير 2026، ضمن نطاق الإبلاغ لديه، ولكن ليس بصورة مطردة: فقد بلغ أعلى مستوى شهري 27,187 معاملة في يوليو 2025. وبين ديسمبر 2025 (21,099) ويناير 2026 (24,026) تعطي الإجماليات الخام نموًا نسبته 13.87%، بينما يعرض رسم مصدر يناير نسبة +4.9%؛ وتُعرض القيمتان معًا، ويُسجَّل الفرق بينهما بوصفه اختلافًا داخل المصدر. والمعاملة حدث وليست مستخدمًا أو تاجرًا فريدًا، لذلك لا تقيس السلسلة عدد الأشخاص أو المنشآت التي استخدمت نقاط البيع.",
+   "new": "ارتفع عدد معاملات نقاط البيع التي يُبلغ عنها البنك المركزي اليمني – عدن من 8,015 معاملة في مارس 2025 إلى 24,026 معاملة في يناير 2026، ضمن نطاق الإبلاغ لديه، ولكن ليس بصورة مطردة: فقد بلغ أعلى مستوى شهري 27,187 معاملة في يوليو 2025. وبين ديسمبر 2025 (21,099) ويناير 2026 (24,026) تعطي الإجماليات الخام نموًا نسبته 13.87%، بينما يعرض رسم مصدر يناير نسبة +4.9%؛ ويعرض الرسم البياني الإجماليات المنشورة، وتُذكر نسبة +4.9% في ملاحظة الرسم، ويُسجَّل الفرق بينهما بوصفه اختلافًا داخل المصدر. والمعاملة حدث وليست مستخدمًا أو تاجرًا فريدًا، لذلك لا تقيس السلسلة عدد الأشخاص أو المنشآت التي استخدمت نقاط البيع."
+  },
+  {
+   "finding": "RC-1:ITEM-07",
+   "sheet": "11_VISUAL_LIBRARY",
+   "row": 17,
+   "col": 22,
+   "field": "VIS-POS-TRANSACTIONS.accessible_summary_ar",
+   "old": "ارتفع عدد معاملات نقاط البيع التي يُبلغ عنها البنك المركزي اليمني – عدن من 8,015 معاملة في مارس 2025 إلى 24,026 معاملة في يناير 2026، ضمن نطاق الإبلاغ لديه، ولكن ليس بصورة مطردة: فقد بلغ أعلى مستوى شهري 27,187 معاملة في يوليو 2025. وبين ديسمبر 2025 (21,099) ويناير 2026 (24,026) تعطي الإجماليات الخام نموًا نسبته 13.87%، بينما يعرض رسم مصدر يناير نسبة +4.9%؛ وتُعرض القيمتان معًا، ويُسجَّل الفرق بينهما بوصفه اختلافًا داخل المصدر. والمعاملة حدث وليست مستخدمًا أو تاجرًا فريدًا، لذلك لا تقيس السلسلة عدد الأشخاص أو المنشآت التي استخدمت نقاط البيع.",
+   "new": "ارتفع عدد معاملات نقاط البيع التي يُبلغ عنها البنك المركزي اليمني – عدن من 8,015 معاملة في مارس 2025 إلى 24,026 معاملة في يناير 2026، ضمن نطاق الإبلاغ لديه، ولكن ليس بصورة مطردة: فقد بلغ أعلى مستوى شهري 27,187 معاملة في يوليو 2025. وبين ديسمبر 2025 (21,099) ويناير 2026 (24,026) تعطي الإجماليات الخام نموًا نسبته 13.87%، بينما يعرض رسم مصدر يناير نسبة +4.9%؛ ويعرض الرسم البياني الإجماليات المنشورة، وتُذكر نسبة +4.9% في ملاحظة الرسم، ويُسجَّل الفرق بينهما بوصفه اختلافًا داخل المصدر. والمعاملة حدث وليست مستخدمًا أو تاجرًا فريدًا، لذلك لا تقيس السلسلة عدد الأشخاص أو المنشآت التي استخدمت نقاط البيع."
+  },
+  {
+   "finding": "RC-1:ITEM-16",
+   "sheet": "04_NAV_UX",
+   "row": 293,
+   "col": 4,
+   "field": "UI-DOM-SCOPE-AND-TIME.use_rule",
+   "old": "build.py _domain_labels['scope']",
+   "new": "scripts/yfie/content.py _DOMAIN_LABELS['scope']"
+  },
+  {
+   "finding": "RC-1:ITEM-16",
+   "sheet": "04_NAV_UX",
+   "row": 294,
+   "col": 4,
+   "field": "UI-DOM-WHAT-NOT-TO-CONCLUDE.use_rule",
+   "old": "build.py _domain_labels['boundary']",
+   "new": "scripts/yfie/content.py _DOMAIN_LABELS['boundary']"
+  },
+  {
+   "finding": "RC-1:ITEM-16",
+   "sheet": "04_NAV_UX",
+   "row": 295,
+   "col": 4,
+   "field": "UI-DOM-WHAT-REMAINS-UNKNOWN.use_rule",
+   "old": "build.py _domain_labels['unknown']",
+   "new": "scripts/yfie/content.py _DOMAIN_LABELS['unknown']"
+  },
+  {
+   "finding": "RC-1:ITEM-16",
+   "sheet": "04_NAV_UX",
+   "row": 296,
+   "col": 4,
+   "field": "UI-DOM-COVERAGE-LIMIT.use_rule",
+   "old": "build.py _domain_labels['coverage']",
+   "new": "scripts/yfie/content.py _DOMAIN_LABELS['coverage']"
+  },
+  {
+   "finding": "RC-1:ITEM-16",
+   "sheet": "04_NAV_UX",
+   "row": 297,
+   "col": 4,
+   "field": "UI-DOM-A-VIEW-THAT-CHANGES-UNDERSTANDING.use_rule",
+   "old": "build.py _domain_labels['visual']",
+   "new": "scripts/yfie/content.py _DOMAIN_LABELS['visual']"
+  },
+  {
+   "finding": "RC-1:ITEM-16",
+   "sheet": "04_NAV_UX",
+   "row": 298,
+   "col": 4,
+   "field": "UI-DOM-MORE-EVIDENCE-AND-CONTEXT.use_rule",
+   "old": "build.py _domain_labels['more']",
+   "new": "scripts/yfie/content.py _DOMAIN_LABELS['more']"
+  },
+  {
+   "finding": "RC-1:ITEM-16",
+   "sheet": "04_NAV_UX",
+   "row": 299,
+   "col": 4,
+   "field": "UI-DOM-ADDITIONAL-CONTROLLED-DETAIL-FROM-THIS.use_rule",
+   "old": "build.py _domain_labels['more_intro']",
+   "new": "scripts/yfie/content.py _DOMAIN_LABELS['more_intro']"
+  },
+  {
+   "finding": "RC-1:ITEM-16",
+   "sheet": "04_NAV_UX",
+   "row": 300,
+   "col": 4,
+   "field": "UI-DOM-WHAT-MEASUREMENT-WOULD-CHANGE-THE.use_rule",
+   "old": "build.py _domain_labels['measure']",
+   "new": "scripts/yfie/content.py _DOMAIN_LABELS['measure']"
+  },
+  {
+   "finding": "RC-1:ITEM-16",
+   "sheet": "04_NAV_UX",
+   "row": 301,
+   "col": 4,
+   "field": "UI-DOM-VERIFY-IT-YOURSELF.use_rule",
+   "old": "build.py _domain_labels['verify']",
+   "new": "scripts/yfie/content.py _DOMAIN_LABELS['verify']"
+  },
+  {
+   "finding": "RC-1:ITEM-16",
+   "sheet": "04_NAV_UX",
+   "row": 302,
+   "col": 4,
+   "field": "UI-DOM-OPEN-THE-EVIDENCE-RECORD-BEHIND.use_rule",
+   "old": "build.py _domain_labels['verify_intro']",
+   "new": "scripts/yfie/content.py _DOMAIN_LABELS['verify_intro']"
+  },
+  {
+   "finding": "RC-1:ITEM-16",
+   "sheet": "04_NAV_UX",
+   "row": 303,
+   "col": 4,
+   "field": "UI-DOM-OPEN-EVIDENCE.use_rule",
+   "old": "build.py _domain_labels['evidence']",
+   "new": "scripts/yfie/content.py _DOMAIN_LABELS['evidence']"
+  },
+  {
+   "finding": "RC-1:ITEM-16",
+   "sheet": "04_NAV_UX",
+   "row": 304,
+   "col": 4,
+   "field": "UI-DOM-METHODOLOGY.use_rule",
+   "old": "build.py _domain_labels['method']",
+   "new": "scripts/yfie/content.py _DOMAIN_LABELS['method']"
+  },
+  {
+   "finding": "RC-1:ITEM-16",
+   "sheet": "04_NAV_UX",
+   "row": 305,
+   "col": 4,
+   "field": "UI-DOM-OPEN-EVIDENCE-RECORD.use_rule",
+   "old": "build.py _domain_labels['open_record']",
+   "new": "scripts/yfie/content.py _DOMAIN_LABELS['open_record']"
+  },
+  {
+   "finding": "RC-1:ITEM-16",
+   "sheet": "04_NAV_UX",
+   "row": 306,
+   "col": 4,
+   "field": "UI-DOM-DO-NOT-INFER.use_rule",
+   "old": "build.py _domain_labels['do_not']",
+   "new": "scripts/yfie/content.py _DOMAIN_LABELS['do_not']"
+  },
+  {
+   "finding": "RC-1:ITEM-16",
+   "sheet": "04_NAV_UX",
+   "row": 307,
+   "col": 4,
+   "field": "UI-DOM-ANALYTICAL-QUESTION.use_rule",
+   "old": "build.py _domain_labels['visual_question']",
+   "new": "scripts/yfie/content.py visual() labels['analytical_question']"
+  },
+  {
+   "finding": "RC-1:ITEM-16",
+   "sheet": "04_NAV_UX",
+   "row": 308,
+   "col": 4,
+   "field": "UI-DOM-ANALYTICAL-TEXT-ALTERNATIVE.use_rule",
+   "old": "build.py _domain_labels['text_alternative']",
+   "new": "scripts/yfie/content.py visual() labels['text_alternative']"
+  },
+  {
+   "finding": "RC-1:ITEM-16",
+   "sheet": "04_NAV_UX",
+   "row": 309,
+   "col": 4,
+   "field": "UI-DOM-UNDERSTAND-EXPLORE-VERIFY.use_rule",
+   "old": "build.py _domain_labels['question_flow']",
+   "new": "scripts/yfie/content.py _DOMAIN_LABELS['question_flow']"
+  },
+  {
+   "finding": "RC-1:ITEM-16",
+   "sheet": "04_NAV_UX",
+   "row": 310,
+   "col": 4,
+   "field": "UI-DOM-READING-RULE.use_rule",
+   "old": "build.py _domain_labels['reading_rule']",
+   "new": "scripts/yfie/content.py _DOMAIN_LABELS['reading_rule']"
+  },
+  {
+   "finding": "RC-1:ITEM-16",
+   "sheet": "04_NAV_UX",
+   "row": 311,
+   "col": 4,
+   "field": "UI-DOM-EVERY-CONSEQUENTIAL-NUMBER-STAYS-ATTACHED.use_rule",
+   "old": "build.py _domain_labels['reading_rule_copy']",
+   "new": "scripts/yfie/content.py _DOMAIN_LABELS['reading_rule_copy']"
+  },
+  {
+   "finding": "RC-1:ITEM-16",
+   "sheet": "04_NAV_UX",
+   "row": 312,
+   "col": 4,
+   "field": "UI-DOM-EXPLORE-QUESTIONS.use_rule",
+   "old": "build.py _domain_labels['start']",
+   "new": "scripts/yfie/content.py _DOMAIN_LABELS['start']"
+  },
+  {
+   "finding": "RC-1:ITEM-17",
+   "sheet": "14_SYSTEM_CHRONOLOGY",
+   "row": 8,
+   "col": 4,
+   "field": "YSC-004.fact_en",
+   "old": "World Bank monitoring estimated that currency outside banks rose from YER810.9 billion in 2014 to YER1,673 billion by end-2017, alongside large issuance of new banknotes, and expected rapid money-supply growth in 2018.",
+   "new": "World Bank monitoring estimated that currency outside banks rose from about YER 811 billion in 2014 to YER 1,673 billion by end-2017, alongside large issuance of new banknotes, and expected rapid money-supply growth in 2018."
+  },
+  {
+   "finding": "RC-1:ITEM-17",
+   "sheet": "14_SYSTEM_CHRONOLOGY",
+   "row": 8,
+   "col": 5,
+   "field": "YSC-004.fact_ar",
+   "old": "قدرت متابعة البنك الدولي ارتفاع النقد المتداول خارج البنوك من 810.9 مليار ريال في 2014 إلى 1,673 مليار ريال بنهاية 2017، بالتزامن مع إصدار كبير لأوراق نقدية جديدة وتسارع متوقع في نمو عرض النقود خلال 2018.",
+   "new": "قدرت متابعة البنك الدولي ارتفاع النقد المتداول خارج البنوك من نحو 811 مليار ريال في 2014 إلى 1,673 مليار ريال بنهاية 2017، بالتزامن مع إصدار كبير لأوراق نقدية جديدة وتسارع متوقع في نمو عرض النقود خلال 2018."
+  },
+  {
+   "finding": "RC-1:ITEM-17",
+   "sheet": "14_SYSTEM_CHRONOLOGY",
+   "row": 8,
+   "col": 16,
+   "field": "YSC-004.interpretation_note",
+   "old": null,
+   "new": "RC-1 item 17: the source value YER 810.9 billion (2014) is displayed as YER 811 billion so that the two values of this series share one display precision (whole YER billion); the 2017 value 1,673 is as published."
+  },
+  {
+   "finding": "RC-1:ITEM-17",
+   "sheet": "03_PAGE_SECTIONS",
+   "row": 99,
+   "col": 5,
+   "field": "/finance/#s3.body_en",
+   "old": "Among providers reporting to the Social Fund for Development (SFD), verified primary tables record 93,118 active borrowers at end-2015 and 88,445 at end-2020. A 2024 policy paper citing SFD/SMED data reports 78,686 for end-2023; the set of providers it covers has not yet been verified. That paper also reports what it calls 3.3 million “active savers” and a nominal portfolio of about YER 44 billion in 2023. The verified 2020 figures are 1.611 million savers/depositors and YER 33.379 billion; “active savers” and “savers/depositors” have not been shown to be the same measure. Both portfolio figures are nominal rials. Between December 2020 and December 2023 the average market rate published by the Central Bank of Yemen – Aden (CBY-Aden) moved from 792.69 to 1,529.4 rials per US dollar, and the evidence base does not record which rial valuation, across Yemen's divided monetary areas, the portfolio figures use. No real or US-dollar change can be derived from the two figures. With the 2023 primary source document, provider coverage, saver definition and the link between the two periods also unresolved, these values are separate data points, not a trend.",
+   "new": "Among providers reporting to the Social Fund for Development (SFD), verified primary tables record 93,118 active borrowers at end-2015 and 88,445 at end-2020. A 2024 policy paper citing SFD/SMED data reports 78,686 for end-2023; the set of providers it covers has not yet been verified. That paper also reports what it calls 3.3 million “active savers” and a nominal portfolio of about YER 44 billion in 2023. The verified 2020 figures are 1.611 million savers/depositors and YER 33.379 billion; “active savers” and “savers/depositors” have not been shown to be the same measure. Both portfolio figures are nominal rials. Between December 2020 and December 2023 the average market rate published by the Central Bank of Yemen – Aden (CBY-Aden) moved from about 793 to about 1,529 rials per US dollar, and the evidence base does not record which rial valuation, across Yemen's divided monetary areas, the portfolio figures use. No real or US-dollar change can be derived from the two figures. With the 2023 primary source document, provider coverage, saver definition and the link between the two periods also unresolved, these values are separate data points, not a trend."
+  },
+  {
+   "finding": "RC-1:ITEM-17",
+   "sheet": "03_PAGE_SECTIONS",
+   "row": 100,
+   "col": 7,
+   "field": "/finance/#s3.body_ar",
+   "old": "من بين مقدمي الخدمة الذين يرفعون تقاريرهم إلى الصندوق الاجتماعي للتنمية (SFD)، تسجل الجداول الأولية المتحقق منها 93,118 مقترضًا نشطًا في نهاية 2015 و88,445 في نهاية 2020. وتورد ورقة سياسات منشورة في 2024 تستند إلى بيانات SFD/SMED عددًا قدره 78,686 لنهاية 2023، ولم يُتحقق بعد من مجموعة مقدمي الخدمة التي يغطيها. وتورد الورقة نفسها ما تسميه 3.3 مليون «مدخر نشط» ومحفظة اسمية تقارب 44 مليار ريال في 2023. أما النقاط المرجعية الموثقة لعام 2020 فهي 1.611 مليون مدخر/مودع ومحفظة قدرها 33.379 مليار ريال، ولم يثبت أن «المدخر النشط» و«المدخر/المودع» مقياس واحد. وقيمتا المحفظة اسميتان بالريال: فبين ديسمبر 2020 وديسمبر 2023 انتقل متوسط سعر الصرف في السوق الذي ينشره البنك المركزي اليمني – عدن من 792.69 إلى 1,529.4 ريال للدولار، ولا تسجل قاعدة الأدلة أساس التقييم بالريال الذي تستخدمه أرقام المحفظة في ظل انقسام المناطق النقدية في اليمن. لذلك لا يمكن استخلاص تغير حقيقي أو تغير بالدولار من هذين الرقمين. ومع بقاء الوثيقة الأصلية لمصدر 2023 ونطاق مقدمي الخدمة وتعريف المدخرين والربط بين الفترتين دون حسم، تُقرأ هذه القيم كنقاط مرجعية منفصلة ومقيدة، لا كاتجاه واحد.",
+   "new": "من بين مقدمي الخدمة الذين يرفعون تقاريرهم إلى الصندوق الاجتماعي للتنمية (SFD)، تسجل الجداول الأولية المتحقق منها 93,118 مقترضًا نشطًا في نهاية 2015 و88,445 في نهاية 2020. وتورد ورقة سياسات منشورة في 2024 تستند إلى بيانات SFD/SMED عددًا قدره 78,686 لنهاية 2023، ولم يُتحقق بعد من مجموعة مقدمي الخدمة التي يغطيها. وتورد الورقة نفسها ما تسميه 3.3 مليون «مدخر نشط» ومحفظة اسمية تقارب 44 مليار ريال في 2023. أما النقاط المرجعية الموثقة لعام 2020 فهي 1.611 مليون مدخر/مودع ومحفظة قدرها 33.379 مليار ريال، ولم يثبت أن «المدخر النشط» و«المدخر/المودع» مقياس واحد. وقيمتا المحفظة اسميتان بالريال: فبين ديسمبر 2020 وديسمبر 2023 انتقل متوسط سعر الصرف في السوق الذي ينشره البنك المركزي اليمني – عدن من نحو 793 إلى نحو 1,529 ريالًا للدولار، ولا تسجل قاعدة الأدلة أساس التقييم بالريال الذي تستخدمه أرقام المحفظة في ظل انقسام المناطق النقدية في اليمن. لذلك لا يمكن استخلاص تغير حقيقي أو تغير بالدولار من هذين الرقمين. ومع بقاء الوثيقة الأصلية لمصدر 2023 ونطاق مقدمي الخدمة وتعريف المدخرين والربط بين الفترتين دون حسم، تُقرأ هذه القيم كنقاط مرجعية منفصلة ومقيدة، لا كاتجاه واحد."
+  },
+  {
+   "finding": "RC-1:ITEM-17",
+   "sheet": "06_EVIDENCE_OBJECTS",
+   "row": 98,
+   "col": 6,
+   "field": "CLM-054.summary_en",
+   "old": "Among providers reporting to the Social Fund for Development (SFD), verified primary tables record 93,118 active borrowers at end-2015 and 88,445 at end-2020. A 2024 policy paper citing SFD/SMED data reports 78,686 at end-2023; the set of providers it covers has not been verified. The same paper reports what it calls 3.3 million “active savers” in 2023 and a nominal portfolio of about YER44 billion; the verified 2020 anchors are 1.611 million savers/depositors and YER33.379 billion. “Active savers” and “savers/depositors” have not been shown to be the same measure, and both portfolio figures are nominal rials: between December 2020 and December 2023 the average market rate published by the Central Bank of Yemen – Aden (CBY-Aden) moved from 792.69 to 1,529.4 rials per US dollar, and the evidence base does not record which rial valuation, across Yemen's divided monetary areas, the portfolio figures use, so no real or US-dollar change can be derived from them. Because the 2023 primary source document, the exact set of providers covered, saver definition/deduplication and period bridge are not yet available in the evidence base for direct verification, these are separate reference points, each with stated limits, not a trend. Together they do not establish unique people, real credit growth, broader inclusion, improved borrower outcomes or causality.",
+   "new": "Among providers reporting to the Social Fund for Development (SFD), verified primary tables record 93,118 active borrowers at end-2015 and 88,445 at end-2020. A 2024 policy paper citing SFD/SMED data reports 78,686 at end-2023; the set of providers it covers has not been verified. The same paper reports what it calls 3.3 million “active savers” in 2023 and a nominal portfolio of about YER44 billion; the verified 2020 anchors are 1.611 million savers/depositors and YER33.379 billion. “Active savers” and “savers/depositors” have not been shown to be the same measure, and both portfolio figures are nominal rials: between December 2020 and December 2023 the average market rate published by the Central Bank of Yemen – Aden (CBY-Aden) moved from about 793 to about 1,529 rials per US dollar, and the evidence base does not record which rial valuation, across Yemen's divided monetary areas, the portfolio figures use, so no real or US-dollar change can be derived from them. Because the 2023 primary source document, the exact set of providers covered, saver definition/deduplication and period bridge are not yet available in the evidence base for direct verification, these are separate reference points, each with stated limits, not a trend. Together they do not establish unique people, real credit growth, broader inclusion, improved borrower outcomes or causality."
+  },
+  {
+   "finding": "RC-1:ITEM-17",
+   "sheet": "06_EVIDENCE_OBJECTS",
+   "row": 98,
+   "col": 7,
+   "field": "CLM-054.summary_ar",
+   "old": "لدى مقدمي الخدمات الذين يرفعون بياناتهم إلى الصندوق الاجتماعي للتنمية، تسجل الجداول الأصلية الموثقة 93,118 مقترضًا نشطًا في نهاية 2015 و88,445 في نهاية 2020. وتورد ورقة سياسات منشورة في 2024 تستند إلى بيانات SFD/SMED عدد 78,686 مقترضًا لنهاية 2023، ولم يُتحقق بعد من مجموعة مقدمي الخدمات التي يغطيها. وتورد الورقة نفسها ما تسميه 3.3 مليون «مدخر نشط» في 2023 ومحفظة اسمية تقارب 44 مليار ريال، مقابل نقاط مرجعية موثقة لعام 2020 قدرها 1.611 مليون مدخر/مودع و33.379 مليار ريال. ولم يثبت أن «المدخر النشط» و«المدخر/المودع» مقياس واحد، وقيمتا المحفظة اسميتان بالريال: فبين ديسمبر 2020 وديسمبر 2023 انتقل متوسط سعر الصرف في السوق الذي ينشره البنك المركزي اليمني – عدن من 792.69 إلى 1,529.4 ريال للدولار، ولا تسجل قاعدة الأدلة أساس التقييم بالريال الذي تستخدمه أرقام المحفظة في ظل انقسام المناطق النقدية في اليمن، ولذلك لا يمكن استخلاص تغير حقيقي أو تغير بالدولار منهما. ولأن المصدر الأصلي لعام 2023، ونطاق مقدمي الخدمات، وتعريف المدخرين وإزالة الازدواج، والربط بين الفترات لم تُتح بعد في قاعدة الأدلة للتحقق المباشر، فهذه نقاط مرجعية منفصلة لكلٍّ منها حدوده، لا اتجاه واحد. ولا تثبت عددًا من الأشخاص الفريدين، أو نموًا حقيقيًا للائتمان، أو اتساع الشمول، أو تحسن نتائج المقترضين، أو علاقة سببية.",
+   "new": "لدى مقدمي الخدمات الذين يرفعون بياناتهم إلى الصندوق الاجتماعي للتنمية، تسجل الجداول الأصلية الموثقة 93,118 مقترضًا نشطًا في نهاية 2015 و88,445 في نهاية 2020. وتورد ورقة سياسات منشورة في 2024 تستند إلى بيانات SFD/SMED عدد 78,686 مقترضًا لنهاية 2023، ولم يُتحقق بعد من مجموعة مقدمي الخدمات التي يغطيها. وتورد الورقة نفسها ما تسميه 3.3 مليون «مدخر نشط» في 2023 ومحفظة اسمية تقارب 44 مليار ريال، مقابل نقاط مرجعية موثقة لعام 2020 قدرها 1.611 مليون مدخر/مودع و33.379 مليار ريال. ولم يثبت أن «المدخر النشط» و«المدخر/المودع» مقياس واحد، وقيمتا المحفظة اسميتان بالريال: فبين ديسمبر 2020 وديسمبر 2023 انتقل متوسط سعر الصرف في السوق الذي ينشره البنك المركزي اليمني – عدن من نحو 793 إلى نحو 1,529 ريالًا للدولار، ولا تسجل قاعدة الأدلة أساس التقييم بالريال الذي تستخدمه أرقام المحفظة في ظل انقسام المناطق النقدية في اليمن، ولذلك لا يمكن استخلاص تغير حقيقي أو تغير بالدولار منهما. ولأن المصدر الأصلي لعام 2023، ونطاق مقدمي الخدمات، وتعريف المدخرين وإزالة الازدواج، والربط بين الفترات لم تُتح بعد في قاعدة الأدلة للتحقق المباشر، فهذه نقاط مرجعية منفصلة لكلٍّ منها حدوده، لا اتجاه واحد. ولا تثبت عددًا من الأشخاص الفريدين، أو نموًا حقيقيًا للائتمان، أو اتساع الشمول، أو تحسن نتائج المقترضين، أو علاقة سببية."
+  },
+  {
+   "finding": "RC-1:ITEM-17",
+   "sheet": "03_PAGE_SECTIONS",
+   "row": 99,
+   "col": 5,
+   "field": "/finance/#s3.body_en",
+   "old": "Among providers reporting to the Social Fund for Development (SFD), verified primary tables record 93,118 active borrowers at end-2015 and 88,445 at end-2020. A 2024 policy paper citing SFD/SMED data reports 78,686 for end-2023; the set of providers it covers has not yet been verified. That paper also reports what it calls 3.3 million “active savers” and a nominal portfolio of about YER 44 billion in 2023. The verified 2020 figures are 1.611 million savers/depositors and YER 33.379 billion; “active savers” and “savers/depositors” have not been shown to be the same measure. Both portfolio figures are nominal rials. Between December 2020 and December 2023 the average market rate published by the Central Bank of Yemen – Aden (CBY-Aden) moved from about 793 to about 1,529 rials per US dollar, and the evidence base does not record which rial valuation, across Yemen's divided monetary areas, the portfolio figures use. No real or US-dollar change can be derived from the two figures. With the 2023 primary source document, provider coverage, saver definition and the link between the two periods also unresolved, these values are separate data points, not a trend.",
+   "new": "Among providers reporting to the Social Fund for Development (SFD), verified primary tables record 93,118 active borrowers at end-2015 and 88,445 at end-2020. A 2024 policy paper citing SFD/SMED data reports 78,686 for end-2023; the set of providers it covers has not yet been verified. That paper also reports what it calls 3.3 million “active savers” and a nominal portfolio of about YER 44 billion in 2023. The verified 2020 figures are 1,611,206 savers/depositors and YER 33.379 billion; “active savers” and “savers/depositors” have not been shown to be the same measure. Both portfolio figures are nominal rials. Between December 2020 and December 2023 the average market rate published by the Central Bank of Yemen – Aden (CBY-Aden) moved from about 793 to about 1,529 rials per US dollar, and the evidence base does not record which rial valuation, across Yemen's divided monetary areas, the portfolio figures use. No real or US-dollar change can be derived from the two figures. With the 2023 primary source document, provider coverage, saver definition and the link between the two periods also unresolved, these values are separate data points, not a trend."
+  },
+  {
+   "finding": "RC-1:ITEM-17",
+   "sheet": "03_PAGE_SECTIONS",
+   "row": 100,
+   "col": 7,
+   "field": "/finance/#s3.body_ar",
+   "old": "من بين مقدمي الخدمة الذين يرفعون تقاريرهم إلى الصندوق الاجتماعي للتنمية (SFD)، تسجل الجداول الأولية المتحقق منها 93,118 مقترضًا نشطًا في نهاية 2015 و88,445 في نهاية 2020. وتورد ورقة سياسات منشورة في 2024 تستند إلى بيانات SFD/SMED عددًا قدره 78,686 لنهاية 2023، ولم يُتحقق بعد من مجموعة مقدمي الخدمة التي يغطيها. وتورد الورقة نفسها ما تسميه 3.3 مليون «مدخر نشط» ومحفظة اسمية تقارب 44 مليار ريال في 2023. أما النقاط المرجعية الموثقة لعام 2020 فهي 1.611 مليون مدخر/مودع ومحفظة قدرها 33.379 مليار ريال، ولم يثبت أن «المدخر النشط» و«المدخر/المودع» مقياس واحد. وقيمتا المحفظة اسميتان بالريال: فبين ديسمبر 2020 وديسمبر 2023 انتقل متوسط سعر الصرف في السوق الذي ينشره البنك المركزي اليمني – عدن من نحو 793 إلى نحو 1,529 ريالًا للدولار، ولا تسجل قاعدة الأدلة أساس التقييم بالريال الذي تستخدمه أرقام المحفظة في ظل انقسام المناطق النقدية في اليمن. لذلك لا يمكن استخلاص تغير حقيقي أو تغير بالدولار من هذين الرقمين. ومع بقاء الوثيقة الأصلية لمصدر 2023 ونطاق مقدمي الخدمة وتعريف المدخرين والربط بين الفترتين دون حسم، تُقرأ هذه القيم كنقاط مرجعية منفصلة ومقيدة، لا كاتجاه واحد.",
+   "new": "من بين مقدمي الخدمة الذين يرفعون تقاريرهم إلى الصندوق الاجتماعي للتنمية (SFD)، تسجل الجداول الأولية المتحقق منها 93,118 مقترضًا نشطًا في نهاية 2015 و88,445 في نهاية 2020. وتورد ورقة سياسات منشورة في 2024 تستند إلى بيانات SFD/SMED عددًا قدره 78,686 لنهاية 2023، ولم يُتحقق بعد من مجموعة مقدمي الخدمة التي يغطيها. وتورد الورقة نفسها ما تسميه 3.3 مليون «مدخر نشط» ومحفظة اسمية تقارب 44 مليار ريال في 2023. أما النقاط المرجعية الموثقة لعام 2020 فهي 1,611,206 من المدخرين/المودعين ومحفظة قدرها 33.379 مليار ريال، ولم يثبت أن «المدخر النشط» و«المدخر/المودع» مقياس واحد. وقيمتا المحفظة اسميتان بالريال: فبين ديسمبر 2020 وديسمبر 2023 انتقل متوسط سعر الصرف في السوق الذي ينشره البنك المركزي اليمني – عدن من نحو 793 إلى نحو 1,529 ريالًا للدولار، ولا تسجل قاعدة الأدلة أساس التقييم بالريال الذي تستخدمه أرقام المحفظة في ظل انقسام المناطق النقدية في اليمن. لذلك لا يمكن استخلاص تغير حقيقي أو تغير بالدولار من هذين الرقمين. ومع بقاء الوثيقة الأصلية لمصدر 2023 ونطاق مقدمي الخدمة وتعريف المدخرين والربط بين الفترتين دون حسم، تُقرأ هذه القيم كنقاط مرجعية منفصلة ومقيدة، لا كاتجاه واحد."
+  },
+  {
+   "finding": "RC-1:ITEM-17",
+   "sheet": "03_PAGE_SECTIONS",
+   "row": 276,
+   "col": 5,
+   "field": "/readings/microfinance-structural-divergence/#s4.body_en",
+   "old": "The verified 2020 record shows about 1.611 million savers or depositors. The same 2024 paper reports what it calls 3.3 million “active savers” in 2023.\nThe two labels are not assumed to describe the same measure: the provider universe, the definition of an active saver and the de-duplication rule have not been harmonised across the evidence. The later figure therefore remains a bounded secondary observation. It is not 3.3 million unique people, and it is not a national savings rate.",
+   "new": "The verified 2020 record shows 1,611,206 savers or depositors. The same 2024 paper reports what it calls 3.3 million “active savers” in 2023.\nThe two labels are not assumed to describe the same measure: the provider universe, the definition of an active saver and the de-duplication rule have not been harmonised across the evidence. The later figure therefore remains a bounded secondary observation. It is not 3.3 million unique people, and it is not a national savings rate."
+  },
+  {
+   "finding": "RC-1:ITEM-17",
+   "sheet": "03_PAGE_SECTIONS",
+   "row": 276,
+   "col": 7,
+   "field": "/readings/microfinance-structural-divergence/#s4.body_ar",
+   "old": "تسجل النقطة المتحقق منها لعام 2020 نحو 1.611 مليون مدخر أو مودع. وتورد الورقة نفسها الصادرة في 2024 ما تسميه 3.3 ملايين «مدخر نشط» في 2023.\nولا نفترض أن التسميتين تصفان المقياس نفسه؛ فمجتمع مقدمي الخدمة، وتعريف المدخر النشط، وقاعدة إزالة الازدواج لم تُوحَّد عبر الأدلة. ولذلك يبقى الرقم اللاحق ملاحظة ثانوية محدودة الدلالة؛ فهو ليس 3.3 ملايين شخص فريد، وليس معدلًا وطنيًا للادخار.",
+   "new": "تسجل النقطة المتحقق منها لعام 2020 عددًا قدره 1,611,206 من المدخرين أو المودعين. وتورد الورقة نفسها الصادرة في 2024 ما تسميه 3.3 ملايين «مدخر نشط» في 2023.\nولا نفترض أن التسميتين تصفان المقياس نفسه؛ فمجتمع مقدمي الخدمة، وتعريف المدخر النشط، وقاعدة إزالة الازدواج لم تُوحَّد عبر الأدلة. ولذلك يبقى الرقم اللاحق ملاحظة ثانوية محدودة الدلالة؛ فهو ليس 3.3 ملايين شخص فريد، وليس معدلًا وطنيًا للادخار."
+  },
+  {
+   "finding": "RC-1:ITEM-17",
+   "sheet": "06_EVIDENCE_OBJECTS",
+   "row": 98,
+   "col": 6,
+   "field": "CLM-054.summary_en",
+   "old": "Among providers reporting to the Social Fund for Development (SFD), verified primary tables record 93,118 active borrowers at end-2015 and 88,445 at end-2020. A 2024 policy paper citing SFD/SMED data reports 78,686 at end-2023; the set of providers it covers has not been verified. The same paper reports what it calls 3.3 million “active savers” in 2023 and a nominal portfolio of about YER44 billion; the verified 2020 anchors are 1.611 million savers/depositors and YER33.379 billion. “Active savers” and “savers/depositors” have not been shown to be the same measure, and both portfolio figures are nominal rials: between December 2020 and December 2023 the average market rate published by the Central Bank of Yemen – Aden (CBY-Aden) moved from about 793 to about 1,529 rials per US dollar, and the evidence base does not record which rial valuation, across Yemen's divided monetary areas, the portfolio figures use, so no real or US-dollar change can be derived from them. Because the 2023 primary source document, the exact set of providers covered, saver definition/deduplication and period bridge are not yet available in the evidence base for direct verification, these are separate reference points, each with stated limits, not a trend. Together they do not establish unique people, real credit growth, broader inclusion, improved borrower outcomes or causality.",
+   "new": "Among providers reporting to the Social Fund for Development (SFD), verified primary tables record 93,118 active borrowers at end-2015 and 88,445 at end-2020. A 2024 policy paper citing SFD/SMED data reports 78,686 at end-2023; the set of providers it covers has not been verified. The same paper reports what it calls 3.3 million “active savers” in 2023 and a nominal portfolio of about YER44 billion; the verified 2020 anchors are 1,611,206 savers/depositors and YER33.379 billion. “Active savers” and “savers/depositors” have not been shown to be the same measure, and both portfolio figures are nominal rials: between December 2020 and December 2023 the average market rate published by the Central Bank of Yemen – Aden (CBY-Aden) moved from about 793 to about 1,529 rials per US dollar, and the evidence base does not record which rial valuation, across Yemen's divided monetary areas, the portfolio figures use, so no real or US-dollar change can be derived from them. Because the 2023 primary source document, the exact set of providers covered, saver definition/deduplication and period bridge are not yet available in the evidence base for direct verification, these are separate reference points, each with stated limits, not a trend. Together they do not establish unique people, real credit growth, broader inclusion, improved borrower outcomes or causality."
+  },
+  {
+   "finding": "RC-1:ITEM-17",
+   "sheet": "06_EVIDENCE_OBJECTS",
+   "row": 98,
+   "col": 7,
+   "field": "CLM-054.summary_ar",
+   "old": "لدى مقدمي الخدمات الذين يرفعون بياناتهم إلى الصندوق الاجتماعي للتنمية، تسجل الجداول الأصلية الموثقة 93,118 مقترضًا نشطًا في نهاية 2015 و88,445 في نهاية 2020. وتورد ورقة سياسات منشورة في 2024 تستند إلى بيانات SFD/SMED عدد 78,686 مقترضًا لنهاية 2023، ولم يُتحقق بعد من مجموعة مقدمي الخدمات التي يغطيها. وتورد الورقة نفسها ما تسميه 3.3 مليون «مدخر نشط» في 2023 ومحفظة اسمية تقارب 44 مليار ريال، مقابل نقاط مرجعية موثقة لعام 2020 قدرها 1.611 مليون مدخر/مودع و33.379 مليار ريال. ولم يثبت أن «المدخر النشط» و«المدخر/المودع» مقياس واحد، وقيمتا المحفظة اسميتان بالريال: فبين ديسمبر 2020 وديسمبر 2023 انتقل متوسط سعر الصرف في السوق الذي ينشره البنك المركزي اليمني – عدن من نحو 793 إلى نحو 1,529 ريالًا للدولار، ولا تسجل قاعدة الأدلة أساس التقييم بالريال الذي تستخدمه أرقام المحفظة في ظل انقسام المناطق النقدية في اليمن، ولذلك لا يمكن استخلاص تغير حقيقي أو تغير بالدولار منهما. ولأن المصدر الأصلي لعام 2023، ونطاق مقدمي الخدمات، وتعريف المدخرين وإزالة الازدواج، والربط بين الفترات لم تُتح بعد في قاعدة الأدلة للتحقق المباشر، فهذه نقاط مرجعية منفصلة لكلٍّ منها حدوده، لا اتجاه واحد. ولا تثبت عددًا من الأشخاص الفريدين، أو نموًا حقيقيًا للائتمان، أو اتساع الشمول، أو تحسن نتائج المقترضين، أو علاقة سببية.",
+   "new": "لدى مقدمي الخدمات الذين يرفعون بياناتهم إلى الصندوق الاجتماعي للتنمية، تسجل الجداول الأصلية الموثقة 93,118 مقترضًا نشطًا في نهاية 2015 و88,445 في نهاية 2020. وتورد ورقة سياسات منشورة في 2024 تستند إلى بيانات SFD/SMED عدد 78,686 مقترضًا لنهاية 2023، ولم يُتحقق بعد من مجموعة مقدمي الخدمات التي يغطيها. وتورد الورقة نفسها ما تسميه 3.3 مليون «مدخر نشط» في 2023 ومحفظة اسمية تقارب 44 مليار ريال، مقابل نقاط مرجعية موثقة لعام 2020 قدرها 1,611,206 من المدخرين/المودعين و33.379 مليار ريال. ولم يثبت أن «المدخر النشط» و«المدخر/المودع» مقياس واحد، وقيمتا المحفظة اسميتان بالريال: فبين ديسمبر 2020 وديسمبر 2023 انتقل متوسط سعر الصرف في السوق الذي ينشره البنك المركزي اليمني – عدن من نحو 793 إلى نحو 1,529 ريالًا للدولار، ولا تسجل قاعدة الأدلة أساس التقييم بالريال الذي تستخدمه أرقام المحفظة في ظل انقسام المناطق النقدية في اليمن، ولذلك لا يمكن استخلاص تغير حقيقي أو تغير بالدولار منهما. ولأن المصدر الأصلي لعام 2023، ونطاق مقدمي الخدمات، وتعريف المدخرين وإزالة الازدواج، والربط بين الفترات لم تُتح بعد في قاعدة الأدلة للتحقق المباشر، فهذه نقاط مرجعية منفصلة لكلٍّ منها حدوده، لا اتجاه واحد. ولا تثبت عددًا من الأشخاص الفريدين، أو نموًا حقيقيًا للائتمان، أو اتساع الشمول، أو تحسن نتائج المقترضين، أو علاقة سببية."
+  },
+  {
+   "finding": "RC-1:ITEM-17",
+   "sheet": "11_VISUAL_LIBRARY",
+   "row": 30,
+   "col": 21,
+   "field": "VIS-MFI-DIVERGENCE.accessible_summary_en",
+   "old": "Among providers reporting to the Social Fund for Development (SFD), verified tables record 93,118 active borrowers and 509,590 savers at end-2015, and 88,445 borrowers and 1.611 million savers/depositors at end-2020. The loan portfolio is YER 6.741 billion at end-2015 in the provider table (the source narrative gives a figure near YER 9 billion) and YER 33.379 billion at end-2020. A 2024 policy paper by the Sana’a Center for Strategic Studies, citing SFD/SMED loan-portfolio data, reports 78,686 borrowers, what it calls 3.3 million “active savers” and a nominal portfolio of about YER 44 billion for end-2023; the set of providers it covers has not been verified. “Active savers” and “savers/depositors” have not been shown to be the same measure, and the evidence base does not record which rial valuation, across Yemen’s divided monetary areas, the portfolio figures use. The figures are therefore separate dated anchors: they do not show a trend or a divergence, and they do not establish unique people, real credit deepening or a US-dollar change.",
+   "new": "Among providers reporting to the Social Fund for Development (SFD), verified tables record 93,118 active borrowers and 509,590 savers at end-2015, and 88,445 borrowers and 1,611,206 savers/depositors at end-2020. The loan portfolio is YER 6.741 billion at end-2015 in the provider table (the source narrative gives a figure near YER 9 billion) and YER 33.379 billion at end-2020. A 2024 policy paper by the Sana’a Center for Strategic Studies, citing SFD/SMED loan-portfolio data, reports 78,686 borrowers, what it calls 3.3 million “active savers” and a nominal portfolio of about YER 44 billion for end-2023; the set of providers it covers has not been verified. “Active savers” and “savers/depositors” have not been shown to be the same measure, and the evidence base does not record which rial valuation, across Yemen’s divided monetary areas, the portfolio figures use. The figures are therefore separate dated anchors: they do not show a trend or a divergence, and they do not establish unique people, real credit deepening or a US-dollar change."
+  },
+  {
+   "finding": "RC-1:ITEM-17",
+   "sheet": "11_VISUAL_LIBRARY",
+   "row": 30,
+   "col": 22,
+   "field": "VIS-MFI-DIVERGENCE.accessible_summary_ar",
+   "old": "لدى مقدمي الخدمات الذين يرفعون بياناتهم إلى الصندوق الاجتماعي للتنمية، تسجل الجداول الموثقة 93,118 مقترضًا نشطًا و509,590 مدخرًا في نهاية 2015، و88,445 مقترضًا و1.611 مليون مدخر/مودع في نهاية 2020. وتبلغ محفظة القروض 6.741 مليار ريال في نهاية 2015 وفق جدول مقدمي الخدمات، بينما يورد السرد في المصدر نفسه رقمًا يقارب 9 مليارات ريال، وتبلغ 33.379 مليار ريال في نهاية 2020. وتورد ورقة سياسات صادرة عام 2024 عن مركز صنعاء للدراسات الاستراتيجية (Sana’a Center for Strategic Studies)، مستندةً إلى بيانات محفظة التمويل لدى SFD/SMED، عدد 78,686 مقترضًا، وما تسميه 3.3 مليون «مدخر نشط»، ومحفظة اسمية تقارب 44 مليار ريال في نهاية 2023، ولم يُتحقق من مجموعة مقدمي الخدمات التي تغطيها. ولم يثبت أن «المدخر النشط» و«المدخر/المودع» مقياس واحد، ولا تسجل قاعدة الأدلة أساس التقييم بالريال الذي تستخدمه أرقام المحفظة في ظل انقسام المناطق النقدية في اليمن. لذلك تبقى هذه الأرقام نقاطًا مرجعية مؤرخة ومنفصلة: لا تُظهر اتجاهًا ولا تباعدًا، ولا تثبت عددًا من الأشخاص الفريدين أو تعمقًا حقيقيًا للائتمان أو تغيرًا بالدولار.",
+   "new": "لدى مقدمي الخدمات الذين يرفعون بياناتهم إلى الصندوق الاجتماعي للتنمية، تسجل الجداول الموثقة 93,118 مقترضًا نشطًا و509,590 مدخرًا في نهاية 2015، و88,445 مقترضًا و1,611,206 من المدخرين/المودعين في نهاية 2020. وتبلغ محفظة القروض 6.741 مليار ريال في نهاية 2015 وفق جدول مقدمي الخدمات، بينما يورد السرد في المصدر نفسه رقمًا يقارب 9 مليارات ريال، وتبلغ 33.379 مليار ريال في نهاية 2020. وتورد ورقة سياسات صادرة عام 2024 عن مركز صنعاء للدراسات الاستراتيجية (Sana’a Center for Strategic Studies)، مستندةً إلى بيانات محفظة التمويل لدى SFD/SMED، عدد 78,686 مقترضًا، وما تسميه 3.3 مليون «مدخر نشط»، ومحفظة اسمية تقارب 44 مليار ريال في نهاية 2023، ولم يُتحقق من مجموعة مقدمي الخدمات التي تغطيها. ولم يثبت أن «المدخر النشط» و«المدخر/المودع» مقياس واحد، ولا تسجل قاعدة الأدلة أساس التقييم بالريال الذي تستخدمه أرقام المحفظة في ظل انقسام المناطق النقدية في اليمن. لذلك تبقى هذه الأرقام نقاطًا مرجعية مؤرخة ومنفصلة: لا تُظهر اتجاهًا ولا تباعدًا، ولا تثبت عددًا من الأشخاص الفريدين أو تعمقًا حقيقيًا للائتمان أو تغيرًا بالدولار."
+  },
+  {
+   "finding": "RC-1:ITEM-05",
+   "sheet": "04_NAV_UX",
+   "row": null,
+   "col": null,
+   "field": "UI-VIS-NOTE-POS-SCOPE",
+   "old": null,
+   "new": "within the payment-system reporting scope of the Central Bank of Yemen – Aden (CBY-Aden) || ضمن نطاق الإبلاغ عن نظام المدفوعات لدى البنك المركزي اليمني – عدن"
+  },
+  {
+   "finding": "RC-1:ITEM-06",
+   "sheet": "04_NAV_UX",
+   "row": null,
+   "col": null,
+   "field": "UI-VIS-NOTE-FIRM-CONSTRAINTS-PARTIAL",
+   "old": null,
+   "new": "Partial list: 8 of the 16 challenges recorded in the source are shown. || قائمة جزئية: تُعرض 8 من أصل 16 تحديًا مسجّلًا في المصدر."
+  }
+ ]
+}

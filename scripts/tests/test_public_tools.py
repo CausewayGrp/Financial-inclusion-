@@ -8,8 +8,8 @@ Serves dist/ (or the directory named by YFIE_SITE_DIR, relative to the repositor
 (handoff/ENGINEERING_HANDOFF_EXPECTATIONS.md; site-src/content/content/navigation_interaction.json "interaction_tools").
 Exit code 0 = all tests pass; 1 = a behaviour regressed; 2 = the browser harness is unavailable.
 """
-import functools, http.server, json, os, socket, sys, threading, traceback
-from urllib.parse import quote
+import functools, http.server, json, os, re, socket, sys, threading, traceback
+from urllib.parse import quote, urljoin, urlsplit
 
 ROOT = os.path.abspath(os.path.join(os.path.dirname(__file__), "..", ".."))
 DIST = os.path.join(ROOT, os.environ.get("YFIE_SITE_DIR") or "dist")   # F9: the reference implementation is tested unchanged
@@ -214,6 +214,60 @@ def t_search_url_state(page, base):
     assert page.evaluate("location.search") == "", page.url
 
 
+@test("search: capped hits state the true total and lead to the Evidence directory; the result-type filter narrows and is URL-addressable")
+def t_search_capped_and_typed(page, base):
+    """A6 / C7 and EAD-06 (release candidate G4): the dialog shows ten hits; when more match, the status gives the true
+    total in the governed form and a link carries the query to the Evidence directory filtered to evidence records,
+    where every match is shown and the result type is read back from the address."""
+    page.goto(base + "/en/people/")
+    page.click("[data-search-open]")
+    page.fill("#global-search-dialog", "remittances")
+    page.wait_for_selector("#search-dialog .search-see-all a")
+    shown = page.evaluate("document.querySelectorAll('#search-dialog .search-hit').length")
+    status = page.inner_text("#search-dialog [data-search-status]")
+    m = re.fullmatch(r"Showing (\d+) of (\d+) results", status.strip())
+    assert m and int(m.group(1)) == shown == 10 and int(m.group(2)) > 10, status
+    href = page.get_attribute("#search-dialog .search-see-all a", "href")
+    assert href == urlsplit(base).path + "/en/evidence/?q=remittances&type=evidence", href   # a live origin may carry a path (B1)
+    page.goto(urljoin(base, href))
+    page.wait_for_selector("#search-results .search-hit")
+    assert page.input_value("#global-search + [data-search-type]") == "evidence"
+    types = page.evaluate("[...document.querySelectorAll('#search-results .search-hit .meta')].map(e=>e.textContent.split(' · ')[0])")
+    assert types and set(types) == {"Evidence record"}, set(types)
+    assert page.evaluate("document.querySelectorAll('#search-results .search-see-all').length") == 0   # the directory shows every match
+    page.select_option("#global-search + [data-search-type]", "")
+    page.wait_for_function("new URLSearchParams(location.search).get('type')===null")
+    page.goto(base + "/ar/evidence/?q=remittances&type=evidence")   # the same state in the other edition
+    page.wait_for_selector("#search-results .search-hit")
+    assert page.get_attribute("#global-search + [data-search-type]", "aria-label") == "نوع النتيجة"
+
+
+@test("compare: the 'select at least two' prompt shows only while fewer than two records are selected")
+def t_compare_prompt(page, base):
+    """Release candidate G4 item 6: the governed prompt stands beside the controls and is hidden once a comparison shows."""
+    page.goto(base + "/en/evidence/compare/")
+    page.wait_for_selector("#compare-output .compare-verdict")
+    assert page.evaluate("document.querySelector('[data-compare-prompt]').hidden") is True
+    page.goto(base + "/en/evidence/compare/?records=NOT-A-RECORD,ALSO-NOT")   # an input error: no comparison is shown
+    page.wait_for_selector("[data-compare-url-error]")
+    assert page.evaluate("document.querySelector('[data-compare-prompt]').hidden") is False
+
+
+@test("citation and print: the copied citation is exactly the visible preview; every page has a print control")
+def t_cite_preview(page, base):
+    """Part B B9: one citation template, previewed before copying; the canonical address is written into the preview."""
+    page.context.grant_permissions(["clipboard-read", "clipboard-write"])
+    for route in ("/en/people/", "/ar/evidence/CLM-001/"):
+        page.goto(base + route)
+        preview = page.inner_text("[data-cite-text]").strip()
+        assert page.locator("[data-print]").count() >= 1, route
+        assert route in preview, preview                       # the canonical address is in the preview
+        page.click("section.util [data-cite]")
+        page.wait_for_function("navigator.clipboard.readText().then(t=>t.length>0)")
+        copied = page.evaluate("navigator.clipboard.readText()")
+        assert " ".join(copied.split()) == " ".join(preview.split()), (copied, preview)
+
+
 @test("search: a query from the URL is rendered as text, never as markup")
 def t_search_url_state_is_escaped(page, base):
     page.goto(base + "/en/evidence/?q=" + quote('<img src=x onerror=alert(1)>'))
@@ -240,7 +294,7 @@ def t_measurement_anchor(page, base):
     hrefs = page.evaluate("[...document.querySelectorAll('#search-results .search-hit')].map(a=>a.getAttribute('href'))")
     anchored = [h for h in hrefs if "/measurement/#MA-" in h]
     assert anchored, hrefs
-    page.goto(base + anchored[0])
+    page.goto(urljoin(base, anchored[0]))
     assert page.evaluate(f"!!document.getElementById('{anchored[0].split('#')[1]}')"), "anchor missing on /measurement/"
 
 
@@ -266,6 +320,45 @@ def t_source_nomatch(page, base):
     page.goto(base + "/en/data/")
     page.fill("[data-source-filter]", "zzqqxxnomatch")
     assert page.is_visible("[data-source-no-results]") and "does not mean" in page.inner_text("[data-source-no-results]")
+
+
+@test("sources: library filters narrow the list, travel in the URL, and a shared link restores them (B13)")
+def t_source_library(page, base):
+    for lang in ("en", "ar"):
+        page.goto(f"{base}/{lang}/data/")
+        assert page.is_visible("[data-source-facets]"), "filters hidden with the runtime running"
+        total = page.evaluate("document.querySelectorAll('[data-source-record]:not([hidden])').length")
+        year = page.evaluate("[...document.querySelectorAll('[data-source-facet=year] option')].map(o => o.value).find(v => /^\\d{4}$/.test(v))")
+        page.select_option("[data-source-facet=year]", year)
+        shown = page.evaluate("document.querySelectorAll('[data-source-record]:not([hidden])').length")
+        want = page.evaluate(f"document.querySelectorAll('[data-source-record][data-f-year=\"{year}\"]').length")
+        assert 0 < shown == want < total, (shown, want, total)
+        assert f"year={year}" in page.url, page.url
+        page.select_option("[data-source-sort]", "newest")
+        assert "sort=newest" in page.url
+        shared = page.url
+        page.goto(shared)
+        assert page.evaluate(f"document.querySelector('[data-source-facet=year]').value") == year
+        assert page.evaluate("document.querySelectorAll('[data-source-record]:not([hidden])').length") == want
+        page.click("[data-source-facets-clear]")
+        assert page.evaluate("document.querySelectorAll('[data-source-record]:not([hidden])').length") == total
+        assert "year=" not in page.url
+
+
+@test("search: numbers with or without separators, Arabic words from their start, governed aliases widen the query (B15)")
+def t_search_matching(page, base):
+    def hits(lang, q):
+        page.goto(f"{base}/{lang}/")
+        page.click("[data-search-open]")
+        page.fill("[data-search-input]", q)
+        page.wait_for_function("document.querySelector('[data-search-status]') && document.querySelector('[data-search-status]').textContent.trim().length > 0")
+        page.wait_for_timeout(300)
+        return page.evaluate("[...document.querySelectorAll('[data-search-results] a')].map(a => [a.getAttribute('href'), a.textContent])")
+    plain, grouped = hits("en", "6245"), hits("en", "6,245")
+    assert plain and [h for h, _ in plain] == [h for h, _ in grouped], (plain[:3], grouped[:3])
+    assert hits("ar", "٦٬٢٤٥"), "an Arabic-Indic number with its separator finds nothing"
+    assert not any("تعزيز" in t for _, t in hits("ar", "تعز")), "a short Arabic word matched inside a longer one"
+    assert any("CLM-002" in (h or "") for h, _ in hits("ar", "المرأة")), "the governed alias group did not widen «المرأة»"
 
 
 @test("language switch keeps route, query and hash")
@@ -297,7 +390,7 @@ def t_report_issue(page, base):
     for lang in ("en", "ar"):
         page.goto(f"{base}/{lang}/evidence/CLM-010/")
         href = page.get_attribute("a[href*='/contact/?record=']", "href")
-        page.goto(base + href)
+        page.goto(urljoin(base, href))
         assert "CLM-010" in page.inner_text("[data-correction-record]")
         assert page.is_visible("[data-correction-mail]")
         mail = page.get_attribute("[data-correction-mail]", "href")
@@ -308,17 +401,47 @@ def t_report_issue(page, base):
     assert not page.is_visible("[data-correction-mail]"), "mail action must not carry an unknown reference"
 
 
-@test("cite: an Evidence Record copies its governed citation plus the record link, in both languages")
+@test("cite: an Evidence Record copies its short citation plus the record link, and its governed long form on request, in both languages")
 def t_cite_record(page, base):
+    """RC-15 (B15 d, C-2; OWN-04): the short citation (title, record ID, edition, original source and locator) is the
+    default; the long form, with the period, population and limits, is the governed citation and copies on its own."""
     page.context.grant_permissions(["clipboard-read", "clipboard-write"], origin=base)
     for lang in ("en", "ar"):
         page.goto(f"{base}/{lang}/evidence/CLM-001/")
         governed = page.evaluate("document.querySelector('meta[name=\"yfie-citation\"]')?.content?.trim()||''")
+        short = " ".join(page.inner_text("[data-cite-text]").split())
         page.click(".evidence-cite-button")
-        page.wait_for_function("document.querySelector('#utility-status').textContent.length>0")
+        page.wait_for_function("navigator.clipboard.readText().then(t=>t.length>0)")
+        text = " ".join(page.evaluate("navigator.clipboard.readText()").split())
+        assert text == short and "CLM-001" in text and "/evidence/CLM-001/" in text, (short[:80], text[:80])
+        # two lines: this resource with the page address, then the original sources (owner instructions, 3 October 2026, E1)
+        lines = page.evaluate("navigator.clipboard.readText()").split("\n")
+        assert len(lines) == 2 and "/evidence/CLM-001/" in lines[0] and lines[1].startswith(("Original sources", "المصادر الأصلية")), lines
+        assert len(text) < len(governed), "the short citation is not shorter than the long form"
+        page.evaluate("navigator.clipboard.writeText('')")
+        page.click(".cite-long summary")
+        page.click("[data-cite-long]")
+        page.wait_for_function("navigator.clipboard.readText().then(t=>t.length>0)")
+        long_ = " ".join(page.evaluate("navigator.clipboard.readText()").split())
+        assert governed and long_.startswith(" ".join(governed.split())), (governed[:60], long_[:80])
+        assert "/evidence/CLM-001/" in long_, long_
+
+
+@test("share: a record shares its title, period, population and boundary verbatim, with its link (copied where Web Share is absent)")
+def t_share_record(page, base):
+    """RC-15 (B15 e, U1): without Web Share (a desktop browser) the share text is copied; it carries the governed
+    boundary of the record whole and the record's address."""
+    page.context.grant_permissions(["clipboard-read", "clipboard-write"], origin=base)
+    page.add_init_script("Object.defineProperty(navigator,'share',{value:undefined,configurable:true})")
+    for lang in ("en", "ar"):
+        page.goto(f"{base}/{lang}/evidence/CLM-002/")
+        want = page.get_attribute("[data-share]", "data-share-text")
+        page.evaluate("navigator.clipboard.writeText('')")
+        page.click("[data-share]")
+        page.wait_for_function("navigator.clipboard.readText().then(t=>t.length>0)")
         text = page.evaluate("navigator.clipboard.readText()")
-        assert governed and text.startswith(governed), (governed[:60], text[:80])
-        assert "/evidence/CLM-001/" in text, text
+        assert want and text.startswith(want.strip()), (want[:60], text[:80])
+        assert f"/{lang}/evidence/CLM-002/" in text, text
 
 
 @test("cite: a locator-only source is cited by reference and locator, never with the reference repeated as a title")
@@ -333,6 +456,29 @@ def t_cite_source(page, base):
 
 
 # ------------------------------------------------------------------------------------------------ Accessibility baseline (P2.4)
+# RC-DATES (owner request, after RC-5): what the runtime writes into an Arabic page — search results, the Compare table,
+# its boundaries and source lists — isolates every date, range and identifier left to right, as the rendered page does.
+_UNISOLATED_JS = r"""() => { const re=/\d[-\u2010\u2011\u2013\u2212]\d/, out=[];
+  const w=document.createTreeWalker(document.body,NodeFilter.SHOW_TEXT); let n;
+  while((n=w.nextNode())){ const p=n.parentElement; if(!p||p.closest('script,style,svg')||!re.test(n.data)) continue;
+    const i=p.closest('[dir="ltr"]'); if(i&&i!==document.documentElement) continue; out.push(n.data.trim().slice(0,90)); }
+  return out; }"""
+
+
+@test("bidi: Arabic search results and Compare print every date, range and identifier isolated")
+def t_ar_runtime_isolation(page, base):
+    seen = []
+    for q in ("2022", "2024", "2026"):
+        page.goto(base + "/ar/evidence/?q=" + q)
+        page.wait_for_selector(".search-hit", timeout=5000)
+        seen += page.evaluate(_UNISOLATED_JS)
+    for recs in ("CLM-001,CLM-010,CLM-032", "CLM-033,CLM-035,CLM-037", "CLM-054,CLM-056,FMIIP-BASELINE-2025-01"):
+        page.goto(base + "/ar/evidence/compare/?records=" + recs)
+        page.wait_for_selector("[data-compare-verdict]", timeout=5000)
+        seen += page.evaluate(_UNISOLATED_JS)
+    assert not seen, f"{len(seen)} un-isolated runs, e.g. {seen[0]!r}"
+
+
 @test("a11y: skip link is first in tab order and moves focus into main")
 def t_skip(page, base):
     page.goto(base + "/ar/people/")
@@ -353,6 +499,40 @@ def t_menu(page, base):
     assert page.evaluate("document.activeElement.matches('[data-menu]')")
 
 
+def tab_to(page, selector: str, limit: int = 900) -> bool:
+    """Press Tab until the focused element matches `selector` (B10 c: every tool is reached from the keyboard)."""
+    for _ in range(limit):
+        page.keyboard.press("Tab")
+        if page.evaluate("(s) => !!document.activeElement && document.activeElement.matches(s)", selector):
+            return True
+    return False
+
+
+@test("a11y: keyboard walk — search, language switch, print, cite, source filter and Compare are reached by Tab and work from the keyboard")
+def t_keyboard_walk(page, base):
+    for lang in ("en", "ar"):
+        page.goto(f"{base}/{lang}/people/")
+        assert tab_to(page, "[data-search-open]"), "search opener not reached"
+        page.keyboard.press("Enter")
+        page.wait_for_function("document.activeElement && document.activeElement.matches('[data-search-input]')")
+        page.keyboard.press("Escape")
+        page.goto(f"{base}/{lang}/people/")
+        assert tab_to(page, "[data-lang]"), "language switch not reached"
+        for sel in ("[data-print]", "[data-cite]"):
+            page.goto(f"{base}/{lang}/evidence/CLM-001/")
+            assert tab_to(page, sel), f"{sel} not reached"
+            assert page.evaluate("(s) => { const e = document.activeElement; return (e.getAttribute('aria-label') || e.textContent).trim().length > 0 }", sel)
+        page.goto(f"{base}/{lang}/data/")
+        assert tab_to(page, "[data-source-filter]"), "source filter not reached"
+        page.keyboard.type("CBY")
+        page.wait_for_function("document.querySelector('[data-source-filter-status]').textContent.trim().length > 0")
+        page.goto(f"{base}/{lang}/evidence/compare/?records=CLM-001,CLM-054")
+        before = page.evaluate("new URLSearchParams(location.search).get('records')")
+        assert tab_to(page, "#compare-b"), "Compare selector not reached"
+        page.keyboard.press("ArrowDown")
+        page.wait_for_function("(b) => new URLSearchParams(location.search).get('records') !== b", arg=before)
+
+
 @test("a11y: technical-error and status regions are announced (role/aria-live)")
 def t_announce(page, base):
     page.goto(base + "/en/evidence/compare/?records=CLM-001")
@@ -369,14 +549,18 @@ def main():
         print("HARNESS UNAVAILABLE: python playwright not installed"); sys.exit(2)
     if not os.path.exists(os.path.join(DIST, "en", "index.html")):
         print(f"site not built: {DIST} has no index.html (run scripts/build.py, or set YFIE_SITE_DIR to your built site)"); sys.exit(2)
-    httpd, base = serve()
+    # the release runbook (step 10) runs the same tests against the live host: YFIE_BASE_URL=https://<domain>
+    live = os.environ.get("YFIE_BASE_URL", "").rstrip("/")
+    httpd, base = (None, live) if live else serve()
     tests = [v for v in globals().values() if callable(v) and hasattr(v, "__test_name__")]
     failed = 0
     with sync_playwright() as pw:
         exe = os.environ.get("YFIE_CHROMIUM")
         browser = pw.chromium.launch(**({"executable_path": exe} if exe else {}))
         for t in tests:
-            ctx = browser.new_context()
+            # A live host sends the strict policy (script-src 'self'), which forbids the evaluated predicates these tests
+            # wait on; the policy itself is test_security_headers.py's, so the tools are tested here with it bypassed.
+            ctx = browser.new_context(**({"bypass_csp": True} if live else {}))
             page = ctx.new_page()
             errors = []
             page.on("pageerror", lambda e: errors.append(str(e)))
@@ -391,7 +575,8 @@ def main():
             finally:
                 ctx.close()
         browser.close()
-    httpd.shutdown()
+    if httpd:
+        httpd.shutdown()
     for r in RESULTS:
         print(" | ".join(r))
     skipped = sum(1 for r in RESULTS if r[0] == "SKIP")

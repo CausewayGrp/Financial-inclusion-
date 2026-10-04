@@ -169,8 +169,8 @@
   },
   {
     "ui_id": "UI-VIS-DISAGREEMENT",
-    "label_en": "Source figures disagree — both are shown",
-    "label_ar": "أرقام المصدر غير متسقة — يُعرض الرقمان",
+    "label_en": "Source figures disagree — the published total is plotted; the percentage the release displays is given in the chart note",
+    "label_ar": "أرقام المصدر غير متسقة — يعرض الرسم البياني الإجمالي المنشور، أما النسبة التي يوردها الإصدار فمذكورة في ملاحظة الرسم",
     "use_rule": "Pre-Tranche-C P3 visual grammar. A published figure and the figure implied by the same source's totals differ."
   },
   {
@@ -404,7 +404,7 @@
   {
     "ui_id": "UI-VIS-UNIT-PP",
     "label_en": "Percentage points",
-    "label_ar": "نقاط مئوية",
+    "label_ar": "نقطة مئوية",
     "use_rule": "Pre-Tranche-C P4 (V-D5). Chart label: unit value 'percentage points'."
   },
   {
@@ -595,8 +595,8 @@
   },
   {
     "ui_id": "UI-VIS-CAT-FIRM-CH-INFORMAL",
-    "label_en": "Practices of informal competitors",
-    "label_ar": "ممارسات المنافسين غير الرسميين",
+    "label_en": "Practices of competitors in the informal sector",
+    "label_ar": "ممارسات المنافسين في القطاع غير الرسمي",
     "use_rule": "Pre-Tranche-C P4 (V-D5). Chart label: firm_challenge value 'Business challenge: Informal competitor practices'."
   },
   {
@@ -625,9 +625,9 @@
   },
   {
     "ui_id": "UI-VIS-CAT-EVT-FMIIP-START",
-    "label_en": "FMIIP starts",
-    "label_ar": "بدء مشروع FMIIP",
-    "use_rule": "Pre-Tranche-C P4 (V-D5). Chart label: event value 'FMIIP starts'."
+    "label_en": "FMIIP effective",
+    "label_ar": "بدء نفاذ مشروع FMIIP",
+    "use_rule": "Pre-Tranche-C P4 (V-D5); RC-19 R-01. Chart label: event value 'FMIIP effective' (World Bank ISR: effectiveness 1 September 2025)."
   },
   {
     "ui_id": "UI-VIS-CAT-EVT-FMIIP-APPROVAL",
@@ -637,20 +637,20 @@
   },
   {
     "ui_id": "UI-VIS-CAT-EVT-FPS",
-    "label_en": "FMIIP component: support for developing a Fast Payment System",
-    "label_ar": "مكوّن في مشروع FMIIP: دعم تطوير نظام الدفع السريع",
+    "label_en": "FMIIP component, approved with the project: support for developing a Fast Payment System",
+    "label_ar": "مكوّن أُقرّ مع مشروع FMIIP: دعم تطوير نظام الدفع السريع",
     "use_rule": "Pre-Tranche-C P4 (V-D5). Chart label: event value 'Fast Payment System'."
   },
   {
     "ui_id": "UI-VIS-CAT-EVT-RTGS-CORE",
-    "label_en": "FMIIP component: support for establishing a real-time gross settlement (RTGS) system and upgrading CBY-Aden core banking",
-    "label_ar": "مكوّن في مشروع FMIIP: دعم إنشاء نظام التسوية الإجمالية الفورية (RTGS) وتحديث النظام المصرفي الأساسي للبنك المركزي اليمني – عدن",
+    "label_en": "FMIIP component, approved with the project: support for developing a real-time gross settlement (RTGS) system and upgrading CBY-Aden core banking",
+    "label_ar": "مكوّن أُقرّ مع مشروع FMIIP: دعم تطوير نظام التسوية الإجمالية الفورية (RTGS) وتحديث النظام المصرفي الأساسي للبنك المركزي اليمني – عدن",
     "use_rule": "Pre-Tranche-C P4 (V-D5). Chart label: event value 'RTGS + CBY core banking'."
   },
   {
     "ui_id": "UI-VIS-CAT-EVT-ACCESS-DB",
-    "label_en": "FMIIP component: access-point database",
-    "label_ar": "مكوّن في مشروع FMIIP: قاعدة بيانات لنقاط الوصول",
+    "label_en": "FMIIP component, approved with the project: support for access to and use of the payment infrastructure",
+    "label_ar": "مكوّن أُقرّ مع مشروع FMIIP: دعم الوصول إلى البنية التحتية للمدفوعات واستخدامها",
     "use_rule": "Pre-Tranche-C P4 (V-D5). Chart label: event value 'Access-point database and usage support'."
   },
   {
@@ -729,7 +729,7 @@
     "ui_id": "UI-VIS-CAT-PRV-COUNT-LISTED-ROWS",
     "label_en": "Rows listed in the source, by category (companies, establishments, remittance agents)",
     "label_ar": "صفوف مدرجة في المصدر حسب الفئة (شركات ومنشآت ووكلاء حوالات)",
-    "use_rule": "Pre-Tranche-C P4 (V-D5). Chart label: provider_count_state value 'SOURCE_LISTED_ROWS__98_COMPANIES__225_ESTABLISHMENTS__106_REMITTANCE_AGENTS'."
+    "use_rule": "Pre-Tranche-C P4 (V-D5). Chart label: provider_count_state value 'SOURCE_LISTED_ROWS__100_COMPANIES__231_ESTABLISHMENTS__111_REMITTANCE_AGENTS'."
   },
   {
     "ui_id": "UI-VIS-CAT-PRV-COUNT-SEVERAL",
@@ -799,14 +799,14 @@
   },
   {
     "ui_id": "UI-VIS-CAT-PRV-LIMIT-EXCHANGE",
-    "label_en": "429 is the arithmetic sum of rows listed in the source across three classes, not a count of unique providers or of operating providers.",
-    "label_ar": "الرقم 429 مجموع حسابي لصفوف مدرجة في المصدر عبر ثلاث فئات، وليس عددًا لمقدمي خدمات فريدين ولا لمقدمي خدمات عاملين.",
-    "use_rule": "Pre-Tranche-C P4 (V-D5). Chart label: provider_limit value '429 is the arithmetic sum of source-listed rows across three classes, not a deduplicated unique-provider or currently operating-provider count.'."
+    "label_en": "442 is the arithmetic sum of rows listed in the source across three classes, not a count of unique providers or of operating providers.",
+    "label_ar": "الرقم 442 مجموع حسابي لصفوف مدرجة في المصدر عبر ثلاث فئات، وليس عددًا لمقدمي خدمات فريدين ولا لمقدمي خدمات عاملين.",
+    "use_rule": "Pre-Tranche-C P4 (V-D5). Chart label: provider_limit value '442 is the arithmetic sum of source-listed rows across three classes, not a deduplicated unique-provider or currently operating-provider count.'."
   },
   {
     "ui_id": "UI-VIS-CAT-PRV-LIMIT-EWALLETS",
-    "label_en": "Official sources report 7 e-wallets (2024 Q3), 9 e-wallets (2025 H1), 8 licensed e-wallets (2025-09-10) and more than 9 event participants (2026-01-22). The counts stay separate; no named current list of licensed wallets and payment service providers has yet been established.",
-    "label_ar": "تورد المصادر الرسمية 7 محافظ إلكترونية (الربع الثالث 2024)، و9 محافظ (النصف الأول 2025)، و8 محافظ مرخصة (2025-09-10)، وأكثر من 9 مشاركين في فعالية (2026-01-22). وتبقى هذه الأعداد منفصلة، ولم تُحسم بعد قائمة حالية بأسماء المحافظ ومقدمي خدمات الدفع المرخصين.",
+    "label_en": "Official sources report 7 e-wallets (2024 Q3), 9 e-wallets (2025 H1), 8 licensed e-wallets (10 September 2025) and more than 9 event participants (22 January 2026). The counts stay separate; no named current list of licensed wallets and payment service providers has yet been established.",
+    "label_ar": "تورد المصادر الرسمية 7 محافظ إلكترونية (الربع الثالث 2024)، و9 محافظ (النصف الأول 2025)، و8 محافظ مرخصة (10 سبتمبر 2025)، وأكثر من 9 مشاركين في فعالية (22 يناير 2026). وتبقى هذه الأعداد منفصلة، ولم تُحسم بعد قائمة حالية بأسماء المحافظ ومقدمي خدمات الدفع المرخصين.",
     "use_rule": "Pre-Tranche-C P4 (V-D5). Chart label: provider_limit value 'Official objects report 7 e-wallets (2024 Q3), 9 e-wallets (2025 H1), 8 licensed e-wallets (2025-09-10), and >9 event participants (2026-01-22). Preserve separately; named positive current wallet/PSP universe remains open.'."
   },
   {
@@ -865,8 +865,8 @@
   },
   {
     "ui_id": "UI-VIS-CAT-PRV-EVCLASS-COMPANY-ESTS-AGENT",
-    "label_en": "Exchange company establishments and remittance agent",
-    "label_ar": "منشآت شركة صرافة ووكيل حوالات",
+    "label_en": "Exchange company, establishments and remittance agent",
+    "label_ar": "شركة صرافة ومنشآت صرافة ووكيل حوالات",
     "use_rule": "Pre-Tranche-C P4 (V-D5). Chart label: provider_event_class value 'EXCHANGE_COMPANY_ESTABLISHMENTS_AND_REMITTANCE_AGENT'."
   },
   {
@@ -968,7 +968,7 @@
   {
     "ui_id": "UI-VIS-UNIT-INDEX-2021",
     "label_en": "Index, 2021 = 100",
-    "label_ar": "مؤشر، 2021 = 100",
+    "label_ar": "رقم قياسي، 2021 = 100",
     "use_rule": "Pre-Tranche-C P5.3. Unit of an indexed path (each series divided by its own 2021 value, × 100)."
   },
   {
@@ -1081,15 +1081,15 @@
   },
   {
     "ui_id": "UI-CONTENT-VERSION",
-    "label_en": "Edition of 26 September 2026",
-    "label_ar": "إصدار 26 سبتمبر 2026",
+    "label_en": "Edition of 3 October 2026",
+    "label_ar": "إصدار 3 أكتوبر 2026",
     "use_rule": "Tranche C TC-F (VER-07/TOOL-14). Content version cited with every record; changes only with a governed release."
   },
   {
     "ui_id": "UI-NOSCRIPT-NOTE",
-    "label_en": "Search, Compare and the copy buttons need JavaScript. Every page of evidence remains readable without it.",
-    "label_ar": "يحتاج البحث والمقارنة وأزرار النسخ إلى JavaScript، وتبقى كل صفحات الأدلة قابلة للقراءة من دونه.",
-    "use_rule": "Tranche C TC-F (TOOL-17)."
+    "label_en": "Search, Compare and the copy and print buttons need JavaScript. Every other page, the menu and the language switch work without it.",
+    "label_ar": "يحتاج البحث والمقارنة وأزرار النسخ والطباعة إلى JavaScript، وتعمل سائر الصفحات والقائمة وتبديل اللغة من دونه.",
+    "use_rule": "Tranche C TC-F (TOOL-17); RC-19 R-05: the language switch and the menu are links, so they work without JavaScript."
   },
   {
     "ui_id": "UI-ANSWER-CRUMB-LABEL",
@@ -1305,121 +1305,121 @@
     "ui_id": "UI-DOM-SCOPE-AND-TIME",
     "label_en": "Scope and time",
     "label_ar": "النطاق والزمن",
-    "use_rule": "build.py _domain_labels['scope']"
+    "use_rule": "scripts/yfie/content.py _DOMAIN_LABELS['scope']"
   },
   {
     "ui_id": "UI-DOM-WHAT-NOT-TO-CONCLUDE",
     "label_en": "What not to conclude",
     "label_ar": "ما لا يُستنتج",
-    "use_rule": "build.py _domain_labels['boundary']"
+    "use_rule": "scripts/yfie/content.py _DOMAIN_LABELS['boundary']"
   },
   {
     "ui_id": "UI-DOM-WHAT-REMAINS-UNKNOWN",
     "label_en": "What remains unknown",
     "label_ar": "ما لا يزال غير معروف",
-    "use_rule": "build.py _domain_labels['unknown']"
+    "use_rule": "scripts/yfie/content.py _DOMAIN_LABELS['unknown']"
   },
   {
     "ui_id": "UI-DOM-COVERAGE-LIMIT",
     "label_en": "Coverage limit",
     "label_ar": "قيد التغطية",
-    "use_rule": "build.py _domain_labels['coverage']"
+    "use_rule": "scripts/yfie/content.py _DOMAIN_LABELS['coverage']"
   },
   {
     "ui_id": "UI-DOM-A-VIEW-THAT-CHANGES-UNDERSTANDING",
     "label_en": "Another view of the evidence",
     "label_ar": "زاوية أخرى للنظر في الأدلة",
-    "use_rule": "build.py _domain_labels['visual']"
+    "use_rule": "scripts/yfie/content.py _DOMAIN_LABELS['visual']"
   },
   {
     "ui_id": "UI-DOM-MORE-EVIDENCE-AND-CONTEXT",
     "label_en": "More evidence and context",
     "label_ar": "مزيد من الأدلة والسياق",
-    "use_rule": "build.py _domain_labels['more']"
+    "use_rule": "scripts/yfie/content.py _DOMAIN_LABELS['more']"
   },
   {
     "ui_id": "UI-DOM-ADDITIONAL-CONTROLLED-DETAIL-FROM-THIS",
     "label_en": "More detail on this question, each item with its own period and limits.",
     "label_ar": "مزيد من التفاصيل حول هذا السؤال، ولكل منها فترته وحدوده.",
-    "use_rule": "build.py _domain_labels['more_intro']"
+    "use_rule": "scripts/yfie/content.py _DOMAIN_LABELS['more_intro']"
   },
   {
     "ui_id": "UI-DOM-WHAT-MEASUREMENT-WOULD-CHANGE-THE",
     "label_en": "What measurement would change the decision?",
     "label_ar": "ما القياس الذي سيغيّر القرار؟",
-    "use_rule": "build.py _domain_labels['measure']"
+    "use_rule": "scripts/yfie/content.py _DOMAIN_LABELS['measure']"
   },
   {
     "ui_id": "UI-DOM-VERIFY-IT-YOURSELF",
     "label_en": "Verify it yourself",
     "label_ar": "تحقق بنفسك",
-    "use_rule": "build.py _domain_labels['verify']"
+    "use_rule": "scripts/yfie/content.py _DOMAIN_LABELS['verify']"
   },
   {
     "ui_id": "UI-DOM-OPEN-THE-EVIDENCE-RECORD-BEHIND",
     "label_en": "Open the evidence record behind each answer, or go to the sources or the methodology.",
     "label_ar": "افتح سجل الدليل الذي تستند إليه كل إجابة، أو انتقل إلى المصادر أو المنهجية.",
-    "use_rule": "build.py _domain_labels['verify_intro']"
+    "use_rule": "scripts/yfie/content.py _DOMAIN_LABELS['verify_intro']"
   },
   {
     "ui_id": "UI-DOM-OPEN-EVIDENCE",
     "label_en": "Open evidence",
     "label_ar": "افتح الأدلة",
-    "use_rule": "build.py _domain_labels['evidence']"
+    "use_rule": "scripts/yfie/content.py _DOMAIN_LABELS['evidence']"
   },
   {
     "ui_id": "UI-DOM-METHODOLOGY",
     "label_en": "Methodology",
     "label_ar": "المنهجية",
-    "use_rule": "build.py _domain_labels['method']"
+    "use_rule": "scripts/yfie/content.py _DOMAIN_LABELS['method']"
   },
   {
     "ui_id": "UI-DOM-OPEN-EVIDENCE-RECORD",
     "label_en": "Open evidence record →",
     "label_ar": "افتح سجل الدليل ←",
-    "use_rule": "build.py _domain_labels['open_record']"
+    "use_rule": "scripts/yfie/content.py _DOMAIN_LABELS['open_record']"
   },
   {
     "ui_id": "UI-DOM-DO-NOT-INFER",
     "label_en": "Do not infer:",
     "label_ar": "لا يُستنتج:",
-    "use_rule": "build.py _domain_labels['do_not']"
+    "use_rule": "scripts/yfie/content.py _DOMAIN_LABELS['do_not']"
   },
   {
     "ui_id": "UI-DOM-ANALYTICAL-QUESTION",
     "label_en": "Analytical question",
     "label_ar": "السؤال التحليلي",
-    "use_rule": "build.py _domain_labels['visual_question']"
+    "use_rule": "scripts/yfie/content.py visual() labels['analytical_question']"
   },
   {
     "ui_id": "UI-DOM-ANALYTICAL-TEXT-ALTERNATIVE",
     "label_en": "Text description of this view",
     "label_ar": "وصف نصي لهذا العرض",
-    "use_rule": "build.py _domain_labels['text_alternative']"
+    "use_rule": "scripts/yfie/content.py visual() labels['text_alternative']"
   },
   {
     "ui_id": "UI-DOM-UNDERSTAND-EXPLORE-VERIFY",
     "label_en": "Understand → Explore → Verify",
     "label_ar": "افهم ← استكشف ← تحقّق",
-    "use_rule": "build.py _domain_labels['question_flow']"
+    "use_rule": "scripts/yfie/content.py _DOMAIN_LABELS['question_flow']"
   },
   {
     "ui_id": "UI-DOM-READING-RULE",
     "label_en": "How numbers are presented",
     "label_ar": "كيف تُعرض الأرقام",
-    "use_rule": "build.py _domain_labels['reading_rule']"
+    "use_rule": "scripts/yfie/content.py _DOMAIN_LABELS['reading_rule']"
   },
   {
     "ui_id": "UI-DOM-EVERY-CONSEQUENTIAL-NUMBER-STAYS-ATTACHED",
     "label_en": "Every consequential number stays attached to its unit, scope, time and limitation. Evidence measured at different times is never presented as if it described the same moment.",
     "label_ar": "يبقى كل رقم جوهري مرتبطًا بوحدته ونطاقه وفترته وحدوده. ولا تعامل الأدلة ذات تواريخ القياس المختلفة كما لو كانت تصف اللحظة نفسها.",
-    "use_rule": "build.py _domain_labels['reading_rule_copy']"
+    "use_rule": "scripts/yfie/content.py _DOMAIN_LABELS['reading_rule_copy']"
   },
   {
     "ui_id": "UI-DOM-EXPLORE-QUESTIONS",
     "label_en": "Explore questions",
     "label_ar": "استكشف الأسئلة",
-    "use_rule": "build.py _domain_labels['start']"
+    "use_rule": "scripts/yfie/content.py _DOMAIN_LABELS['start']"
   },
   {
     "ui_id": "UI-EVID-EVIDENCE-RECORD",
@@ -1717,8 +1717,8 @@
   },
   {
     "ui_id": "UI-HERO-THIS-RESOURCE-PRESENTS-THE-STRONGEST",
-    "label_en": "This resource presents the strongest defensible answer while keeping scope, limits and source visible.",
-    "label_ar": "يعرض هذا المورد أقوى إجابة تسندها الأدلة، مع إبقاء النطاق والحدود والمصدر ظاهرة.",
+    "label_en": "This resource gives the answer the evidence best supports and shows its scope, limits and source, so you can verify it.",
+    "label_ar": "يقدّم هذا المورد الإجابة التي تسندها الأدلة أكثر من سواها، ويُظهر نطاقها وحدودها ومصدرها لتتمكن من التحقق منها.",
     "use_rule": "build.py hero()"
   },
   {
@@ -1843,8 +1843,8 @@
   },
   {
     "ui_id": "UI-MA-PRIORITY",
-    "label_en": "Priority",
-    "label_ar": "الأولوية",
+    "label_en": "Measurement priority",
+    "label_ar": "أولوية القياس",
     "use_rule": "build.py measurement_cards()"
   },
   {
@@ -1993,8 +1993,8 @@
   },
   {
     "ui_id": "UI-DATA-EVERY-SOURCE-HERE-CAN-BE",
-    "label_en": "Every source here can be cited and opened where it was originally published. Each card says whether the source’s reuse terms have been assessed; where they have not, this resource offers no copy of the source for download or republication, so check the source’s own terms before redistributing its material.",
-    "label_ar": "يمكن الاستشهاد بكل مصدر هنا وفتحه حيث نُشر أصلًا. وتبيّن كل بطاقة ما إذا كانت شروط إعادة استخدام المصدر قد قُيّمت؛ وحيث لم تُقيَّم، لا يقدم هذا المورد نسخة من المصدر للتنزيل أو إعادة النشر، فتحقّق من شروط المصدر نفسه قبل إعادة توزيع مادته.",
+    "label_en": "Every source here can be cited and opened where it was originally published. Each card says whether the source’s reuse terms have been assessed; where they have not, this resource offers no copy of the source for download or republication.",
+    "label_ar": "يمكن الاستشهاد بكل مصدر هنا وفتحه حيث نُشر أصلًا. وتبيّن كل بطاقة ما إذا كانت شروط إعادة استخدام المصدر قد قُيّمت؛ وحيث لم تُقيَّم، لا يقدم هذا المورد نسخة من المصدر للتنزيل أو إعادة النشر.",
     "use_rule": "build.py source_directory()"
   },
   {
@@ -2353,8 +2353,8 @@
   },
   {
     "ui_id": "UI-JS-COMPARE-SELECTED",
-    "label_en": "records selected",
-    "label_ar": "سجلات مختارة",
+    "label_en": "Records selected: {n}",
+    "label_ar": "السجلات المختارة: {n}",
     "use_rule": "site-src/app.js COMPARE_LABEL_UI['selected']"
   },
   {
@@ -2482,5 +2482,605 @@
     "label_en": "Switch to English",
     "label_ar": "التبديل إلى العربية",
     "use_rule": "Language switch, accessible name. Written in the language it switches to and rendered with that language (build.py header)."
+  },
+  {
+    "ui_id": "UI-VIS-NOTE-POS-SCOPE",
+    "label_en": "within the payment-system reporting scope of the Central Bank of Yemen – Aden (CBY-Aden)",
+    "label_ar": "ضمن نطاق الإبلاغ عن نظام المدفوعات لدى البنك المركزي اليمني – عدن",
+    "use_rule": "RC-1 item 5 (design/ESCALATIONS.md, D6: RV-CWR-004 infrastructure lane and RV-CWR-009 activity rows). The reporting-scope qualifier of the VIS-POS-* universe, printed after the POS object label on the lane and the activity rows and in their fallback tables (scripts/yfie/visuals.py dated_lanes, chain_figure); bound through the contracts' frame_labels."
+  },
+  {
+    "ui_id": "UI-VIS-NOTE-FIRM-CONSTRAINTS-PARTIAL",
+    "label_en": "Partial list: 8 of the 16 challenges recorded in the source are shown.",
+    "label_ar": "قائمة جزئية: تُعرض 8 من أصل 16 تحديًا مسجّلًا في المصدر.",
+    "use_rule": "RC-1 item 6, Path B (design/ESCALATIONS.md, D6: VIS-FIRM-CONSTRAINTS names sixteen challenges and resolves eight rows). Frame note printed by scripts/yfie/visuals.py firm_constraints through the contract's frame_labels; removed the day FFO-2022-CH-09…16 are verified against the original and bound."
+  },
+  {
+    "ui_id": "UI-JS-SEARCH-RESULTS-OF",
+    "label_en": "Showing {n} of {m} results",
+    "label_ar": "النتائج المعروضة: {n} من {m}",
+    "use_rule": "RC-3 item 11. site-src/app.js search status when fewer hits are shown than match ({n} shown, {m} matching); UI-JS-SEARCH-RESULTS stays for when all hits are shown."
+  },
+  {
+    "ui_id": "UI-VIS-MATRIX-AUTHORITY",
+    "label_en": "Issuing authority or source",
+    "label_ar": "الجهة المصدرة أو المصدر",
+    "use_rule": "RC-3 item 18. VIS-PROVIDER-OBSERVABILITY matrix dimension heading (scripts/yfie/visuals.py provider_matrix); wording from the contract's governed alt text."
+  },
+  {
+    "ui_id": "UI-VIS-MATRIX-UNIVERSE",
+    "label_en": "Dated list or count",
+    "label_ar": "القائمة أو العدد المؤرخ",
+    "use_rule": "RC-3 item 18. VIS-PROVIDER-OBSERVABILITY matrix dimension heading."
+  },
+  {
+    "ui_id": "UI-VIS-MATRIX-STATUS",
+    "label_en": "Dated status decisions",
+    "label_ar": "قرارات الوضع المؤرخة",
+    "use_rule": "RC-3 item 18. VIS-PROVIDER-OBSERVABILITY matrix dimension heading."
+  },
+  {
+    "ui_id": "UI-VIS-MATRIX-NEGATIVE",
+    "label_en": "Official lists of unlicensed names",
+    "label_ar": "قوائم رسمية بالأسماء غير المرخصة",
+    "use_rule": "RC-3 item 18. VIS-PROVIDER-OBSERVABILITY matrix dimension heading."
+  },
+  {
+    "ui_id": "UI-VIS-MATRIX-OPERATION",
+    "label_en": "Evidence of operation",
+    "label_ar": "أدلة التشغيل",
+    "use_rule": "RC-3 item 18. VIS-PROVIDER-OBSERVABILITY matrix dimension heading."
+  },
+  {
+    "ui_id": "UI-VIS-CAT-PRV-CLASS-PSO",
+    "label_en": "Payment-system operators",
+    "label_ar": "مشغلو أنظمة الدفع",
+    "use_rule": "RC-3 item 18. VIS-PROVIDER-OBSERVABILITY fifth class row (UNKNOWN in every dimension; no governed universe row)."
+  },
+  {
+    "ui_id": "UI-JS-SEARCH-TYPE-FACET",
+    "label_en": "Result type",
+    "label_ar": "نوع النتيجة",
+    "use_rule": "RC-3 item 19. site-src/app.js accessible name of the search result-type filter (EAD-06)."
+  },
+  {
+    "ui_id": "UI-JS-SEARCH-TYPE-ALL",
+    "label_en": "All types",
+    "label_ar": "كل الأنواع",
+    "use_rule": "RC-3 item 19. site-src/app.js the result-type filter's no-type state."
+  },
+  {
+    "ui_id": "UI-JS-SEARCH-SEE-ALL-EVIDENCE",
+    "label_en": "See all matching evidence records",
+    "label_ar": "اعرض كل سجلات الأدلة المطابقة",
+    "use_rule": "RC-3 item 19. site-src/app.js the way on when hits are capped: the query carried to the Evidence directory (?q=, EAD-06)."
+  },
+  {
+    "ui_id": "UI-EXTERNAL-NEW-TAB",
+    "label_en": "(opens in a new tab)",
+    "label_ar": "(يُفتح في علامة تبويب جديدة)",
+    "use_rule": "RC-3 item 19. Visually hidden inside every external source link that opens a new tab (scripts/yfie; D5 escalation)."
+  },
+  {
+    "ui_id": "UI-VIS-VALUE-UNIT-PER-ROW",
+    "label_en": "Value (unit given in each row)",
+    "label_ar": "القيمة (الوحدة مذكورة في كل صف)",
+    "use_rule": "RC-3 item 19. Header of a fallback-table value column whose rows carry different units (scripts/yfie/visuals.py; D6 escalation)."
+  },
+  {
+    "ui_id": "UI-DATA-GROUP-REGULATORY",
+    "label_en": "Rules, decisions and official lists",
+    "label_ar": "القواعد والقرارات والقوائم الرسمية",
+    "use_rule": "RC-4 (Part B B5). /data/ heading of the group of sources whose document_label is Enforcement decision, Circular or instruction, Regulatory decision, Regulation, or Official list or roster (scripts/yfie/families.py data_sources)."
+  },
+  {
+    "ui_id": "UI-DATA-GROUP-REGULATORY-SCOPE",
+    "label_en": "These are the regulatory documents held in this evidence base, not a complete register of Yemen's financial regulation. All were issued by the Central Bank of Yemen – Aden. The evidence base holds no law as a source document, and this group holds no instrument issued in Sana'a.",
+    "label_ar": "هذه هي الوثائق التنظيمية المتوفرة في قاعدة الأدلة هذه، وليست سجلًا كاملًا للتنظيم المالي في اليمن. وقد أصدرها جميعًا البنك المركزي اليمني – عدن. ولا تضم قاعدة الأدلة أي قانون بوصفه وثيقة مصدرية، ولا تضم هذه المجموعة أي وثيقة صادرة في صنعاء.",
+    "use_rule": "RC-4 (Part B B5). /data/ the regulatory group's one scope line."
+  },
+  {
+    "ui_id": "UI-DATA-DOCUMENT-TYPE-NOT-RECORDED",
+    "label_en": "Document type not recorded",
+    "label_ar": "نوع الوثيقة غير مسجّل",
+    "use_rule": "RC-4 (Part B B5; EAD-07). The document type shown, and the type-filter group, for a listed source with no governed document_label."
+  },
+  {
+    "ui_id": "UI-JS-COMPARE-NOT-OFFERED",
+    "label_en": "Compare offers a selected set of evidence records in this edition. A record that is not offered here can still be read in full on its own page; its absence from Compare is not a judgement about it.",
+    "label_ar": "تتيح أداة المقارنة في هذا الإصدار مجموعة مختارة من سجلات الأدلة. ويمكن قراءة أي سجل غير متاح هنا كاملًا في صفحته، وغيابه عن المقارنة ليس حكمًا عليه.",
+    "use_rule": "RC-4 (Part B B7). site-src/app.js: printed under the Compare error for a record not available for comparison (reason 'unknown'); the same sentence stands in the Compare intro (03 /evidence/compare/ section 1)."
+  },
+  {
+    "ui_id": "UI-DATA-REUSE-TERMS-ONCE",
+    "label_en": "This resource links to original sources and quotes them briefly. It has not assessed the reuse terms of any source; check each source's own terms before reusing its content.",
+    "label_ar": "يربط هذا المورد بالمصادر الأصلية ويقتبس منها باختصار. ولم يُقيّم شروط إعادة استخدام أي مصدر؛ فتحقّق من شروط كل مصدر قبل إعادة استخدام محتواه.",
+    "use_rule": "RC-4 (Part B B8). /data/ stated once above the source list; each card keeps its own reuse-terms label."
+  },
+  {
+    "ui_id": "UI-CITE-PAGE-LINE",
+    "label_en": "{product}. CauseWay. {version}.",
+    "label_ar": "{product}. CauseWay. {version}.",
+    "use_rule": "RC-4 (Part B B9; review finding 4). The citation line of a page that is not an Evidence Record, after its title: the record line UI-CITE-RECORD-LINE without the record name — product, publisher, edition; no new words (scripts/yfie/render.py page_citation)."
+  },
+  {
+    "ui_id": "UI-PRINT-THIS-PAGE",
+    "label_en": "Print this page",
+    "label_ar": "اطبع هذه الصفحة",
+    "use_rule": "RC-4 (Part B B9). The visible print control on every page (scripts/yfie/render.py page_util); the runtime calls the browser's print."
+  },
+  {
+    "ui_id": "UI-CITATION-PREVIEW",
+    "label_en": "Citation preview",
+    "label_ar": "معاينة الاستشهاد",
+    "use_rule": "RC-4 (Part B B9). The visible preview of the page's or record's citation before it is copied (UI-JS-COPY-CITATION copies it)."
+  },
+  {
+    "ui_id": "UI-VIS-MATRIX-CONTEXT",
+    "label_en": "Context:",
+    "label_ar": "السياق:",
+    "use_rule": "RC-5 (Part B B2 h; RC-3 review escalation). VIS-PROVIDER-OBSERVABILITY: printed before the payment-system operators' institution events (REF-PAY-011…013) in the status dimension and its fallback cell, so they read as context, not as status decisions (scripts/yfie/visuals.py provider_matrix)."
+  },
+  {
+    "ui_id": "UI-VIS-CAT-FIRM-CH-LABOUR",
+    "label_en": "Labour regulations",
+    "label_ar": "لوائح العمل",
+    "use_rule": "RC-7 (Part A item 6, Path A). VIS-FIRM-CONSTRAINTS bar and table label for a row of Table 8, Annex III, p. 146 of Yemen Financial Sector Diagnostics (World Bank, 2024), in the source's own item wording, checked against the original on 3 October 2026."
+  },
+  {
+    "ui_id": "UI-VIS-CAT-FIRM-CH-CUSTOMS",
+    "label_en": "Customs and trade regulation",
+    "label_ar": "الجمارك ولوائح التجارة",
+    "use_rule": "RC-7 (Part A item 6, Path A). VIS-FIRM-CONSTRAINTS bar and table label for a row of Table 8, Annex III, p. 146 of Yemen Financial Sector Diagnostics (World Bank, 2024), in the source's own item wording, checked against the original on 3 October 2026."
+  },
+  {
+    "ui_id": "UI-VIS-CAT-FIRM-CH-CORRUPTION",
+    "label_en": "Corruption",
+    "label_ar": "الفساد",
+    "use_rule": "RC-7 (Part A item 6, Path A). VIS-FIRM-CONSTRAINTS bar and table label for a row of Table 8, Annex III, p. 146 of Yemen Financial Sector Diagnostics (World Bank, 2024), in the source's own item wording, checked against the original on 3 October 2026."
+  },
+  {
+    "ui_id": "UI-VIS-CAT-FIRM-CH-LAND",
+    "label_en": "Access to land",
+    "label_ar": "الحصول على الأراضي",
+    "use_rule": "RC-7 (Part A item 6, Path A). VIS-FIRM-CONSTRAINTS bar and table label for a row of Table 8, Annex III, p. 146 of Yemen Financial Sector Diagnostics (World Bank, 2024), in the source's own item wording, checked against the original on 3 October 2026."
+  },
+  {
+    "ui_id": "UI-VIS-CAT-FIRM-CH-LICENSING",
+    "label_en": "Business licensing and permits",
+    "label_ar": "تراخيص الأعمال والتصاريح",
+    "use_rule": "RC-7 (Part A item 6, Path A). VIS-FIRM-CONSTRAINTS bar and table label for a row of Table 8, Annex III, p. 146 of Yemen Financial Sector Diagnostics (World Bank, 2024), in the source's own item wording, checked against the original on 3 October 2026."
+  },
+  {
+    "ui_id": "UI-VIS-CAT-FIRM-CH-WORKFORCE",
+    "label_en": "Inadequately educated workers",
+    "label_ar": "العمالة التي تفتقر إلى التعليم الكافي",
+    "use_rule": "RC-7 (Part A item 6, Path A). VIS-FIRM-CONSTRAINTS bar and table label for a row of Table 8, Annex III, p. 146 of Yemen Financial Sector Diagnostics (World Bank, 2024), in the source's own item wording, checked against the original on 3 October 2026."
+  },
+  {
+    "ui_id": "UI-VIS-CAT-FIRM-CH-COURTS",
+    "label_en": "Courts",
+    "label_ar": "المحاكم",
+    "use_rule": "RC-7 (Part A item 6, Path A). VIS-FIRM-CONSTRAINTS bar and table label for a row of Table 8, Annex III, p. 146 of Yemen Financial Sector Diagnostics (World Bank, 2024), in the source's own item wording, checked against the original on 3 October 2026."
+  },
+  {
+    "ui_id": "UI-VIS-CAT-FIRM-CH-CRIME",
+    "label_en": "Crime, theft and disorder",
+    "label_ar": "الجريمة والسرقة والاضطرابات",
+    "use_rule": "RC-7 (Part A item 6, Path A). VIS-FIRM-CONSTRAINTS bar and table label for a row of Table 8, Annex III, p. 146 of Yemen Financial Sector Diagnostics (World Bank, 2024), in the source's own item wording, checked against the original on 3 October 2026."
+  },
+  {
+    "ui_id": "UI-MA-DECISIONS",
+    "label_en": "Questions it would answer:",
+    "label_ar": "الأسئلة التي سيجيب عنها القياس:",
+    "use_rule": "RC-9 (Part B B6). /measurement/ label before a priority's governed decisions_unlocked items."
+  },
+  {
+    "ui_id": "UI-MA-BLOCKED",
+    "label_en": "Evidence that cannot be produced without it:",
+    "label_ar": "الأدلة التي لا يمكن إنتاجها من دونه:",
+    "use_rule": "RC-9 (Part B B6). /measurement/ label before a priority's governed blocked_evidence."
+  },
+  {
+    "ui_id": "UI-LAND-COL-DIMENSION",
+    "label_en": "Dimension",
+    "label_ar": "البُعد",
+    "use_rule": "RC-10 (Owner Addendum 2, improvement 3). Evidence landscape table on VIS-EVIDENCE-FRESHNESS."
+  },
+  {
+    "ui_id": "UI-LAND-COL-EVIDENCE",
+    "label_en": "Latest evidence in this base, with its period",
+    "label_ar": "أحدث دليل في قاعدة الأدلة هذه، مع فترته",
+    "use_rule": "RC-10 (Owner Addendum 2, improvement 3). Evidence landscape table on VIS-EVIDENCE-FRESHNESS."
+  },
+  {
+    "ui_id": "UI-LAND-COL-CLASS",
+    "label_en": "Evidence type",
+    "label_ar": "نوع الدليل",
+    "use_rule": "RC-10 (Owner Addendum 2, improvement 3). Evidence landscape table on VIS-EVIDENCE-FRESHNESS."
+  },
+  {
+    "ui_id": "UI-LAND-COL-COVERAGE",
+    "label_en": "Coverage",
+    "label_ar": "مدى التغطية",
+    "use_rule": "RC-10 (Owner Addendum 2, improvement 3). Evidence landscape table on VIS-EVIDENCE-FRESHNESS."
+  },
+  {
+    "ui_id": "UI-LAND-COL-NEXT",
+    "label_en": "Where to verify · what would change it",
+    "label_ar": "أين يُتحقق منه · ما الذي قد يغيّره",
+    "use_rule": "RC-10 (Owner Addendum 2, improvement 3). Evidence landscape table on VIS-EVIDENCE-FRESHNESS."
+  },
+  {
+    "ui_id": "UI-LAND-DOM-PEOPLE",
+    "label_en": "People",
+    "label_ar": "الأفراد",
+    "use_rule": "RC-10 (Owner Addendum 2, improvement 3). Evidence landscape table on VIS-EVIDENCE-FRESHNESS."
+  },
+  {
+    "ui_id": "UI-LAND-DOM-ACCESS",
+    "label_en": "Access",
+    "label_ar": "الوصول",
+    "use_rule": "RC-10 (Owner Addendum 2, improvement 3). Evidence landscape table on VIS-EVIDENCE-FRESHNESS."
+  },
+  {
+    "ui_id": "UI-LAND-DOM-PAYMENTS",
+    "label_en": "Payments",
+    "label_ar": "المدفوعات",
+    "use_rule": "RC-10 (Owner Addendum 2, improvement 3). Evidence landscape table on VIS-EVIDENCE-FRESHNESS."
+  },
+  {
+    "ui_id": "UI-LAND-DOM-REMITTANCES",
+    "label_en": "Remittances",
+    "label_ar": "التحويلات",
+    "use_rule": "RC-10 (Owner Addendum 2, improvement 3). Evidence landscape table on VIS-EVIDENCE-FRESHNESS."
+  },
+  {
+    "ui_id": "UI-LAND-DOM-PROVIDERS",
+    "label_en": "Providers",
+    "label_ar": "مقدمو الخدمات",
+    "use_rule": "RC-10 (Owner Addendum 2, improvement 3). Evidence landscape table on VIS-EVIDENCE-FRESHNESS."
+  },
+  {
+    "ui_id": "UI-LAND-DOM-FINANCE",
+    "label_en": "Finance",
+    "label_ar": "التمويل",
+    "use_rule": "RC-10 (Owner Addendum 2, improvement 3). Evidence landscape table on VIS-EVIDENCE-FRESHNESS."
+  },
+  {
+    "ui_id": "UI-LAND-DOM-FIRMS",
+    "label_en": "Firms",
+    "label_ar": "المنشآت",
+    "use_rule": "RC-10 (Owner Addendum 2, improvement 3). Evidence landscape table on VIS-EVIDENCE-FRESHNESS."
+  },
+  {
+    "ui_id": "UI-LAND-DOM-REFORMS",
+    "label_en": "Reforms",
+    "label_ar": "الإصلاحات",
+    "use_rule": "RC-10 (Owner Addendum 2, improvement 3). Evidence landscape table on VIS-EVIDENCE-FRESHNESS."
+  },
+  {
+    "ui_id": "UI-LAND-CLASS-SURVEY",
+    "label_en": "Survey",
+    "label_ar": "مسح",
+    "use_rule": "RC-10 (Owner Addendum 2, improvement 3). Evidence landscape table on VIS-EVIDENCE-FRESHNESS."
+  },
+  {
+    "ui_id": "UI-LAND-CLASS-ADMINISTRATIVE",
+    "label_en": "Administrative record",
+    "label_ar": "سجل إداري",
+    "use_rule": "RC-10 (Owner Addendum 2, improvement 3). Evidence landscape table on VIS-EVIDENCE-FRESHNESS."
+  },
+  {
+    "ui_id": "UI-LAND-CLASS-REGULATORY",
+    "label_en": "Regulatory material",
+    "label_ar": "مادة تنظيمية",
+    "use_rule": "RC-10 (Owner Addendum 2, improvement 3). Evidence landscape table on VIS-EVIDENCE-FRESHNESS."
+  },
+  {
+    "ui_id": "UI-LAND-CLASS-PROGRAMME",
+    "label_en": "Programme record",
+    "label_ar": "سجل برنامج",
+    "use_rule": "RC-10 (Owner Addendum 2, improvement 3). Evidence landscape table on VIS-EVIDENCE-FRESHNESS."
+  },
+  {
+    "ui_id": "UI-LAND-CLASS-ANALYTICAL",
+    "label_en": "Secondary analysis",
+    "label_ar": "تحليل ثانوي",
+    "use_rule": "RC-10 (Owner Addendum 2, improvement 3). Evidence landscape table on VIS-EVIDENCE-FRESHNESS."
+  },
+  {
+    "ui_id": "UI-LAND-CLASS-CONTEXT",
+    "label_en": "Context source",
+    "label_ar": "مصدر سياقي",
+    "use_rule": "RC-10 (Owner Addendum 2, improvement 3). Evidence landscape table on VIS-EVIDENCE-FRESHNESS."
+  },
+  {
+    "ui_id": "UI-LAND-CLASS-OTHER",
+    "label_en": "Other source",
+    "label_ar": "مصدر آخر",
+    "use_rule": "RC-10 (Owner Addendum 2, improvement 3). Evidence landscape table on VIS-EVIDENCE-FRESHNESS."
+  },
+  {
+    "ui_id": "UI-LAND-COV-SUFFICIENT_FOR_QUESTION",
+    "label_en": "Sufficient for its question",
+    "label_ar": "كافٍ لسؤاله",
+    "use_rule": "RC-10 (Owner Addendum 2, improvement 3). Evidence landscape table on VIS-EVIDENCE-FRESHNESS."
+  },
+  {
+    "ui_id": "UI-LAND-COV-PARTIAL",
+    "label_en": "Partial",
+    "label_ar": "جزئي",
+    "use_rule": "RC-10 (Owner Addendum 2, improvement 3). Evidence landscape table on VIS-EVIDENCE-FRESHNESS."
+  },
+  {
+    "ui_id": "UI-LAND-COV-MEASUREMENT_GAP",
+    "label_en": "Measurement gap",
+    "label_ar": "فجوة قياس",
+    "use_rule": "RC-10 (Owner Addendum 2, improvement 3). Evidence landscape table on VIS-EVIDENCE-FRESHNESS."
+  },
+  {
+    "ui_id": "UI-LAND-COV-NO_EVIDENCE",
+    "label_en": "No evidence in this base",
+    "label_ar": "لا توجد أدلة في قاعدة الأدلة هذه",
+    "use_rule": "RC-10 (Owner Addendum 2, improvement 3). Evidence landscape table on VIS-EVIDENCE-FRESHNESS."
+  },
+  {
+    "ui_id": "UI-LAND-NO-PUBLIC-RECORD",
+    "label_en": "No public record in this base",
+    "label_ar": "لا يوجد سجل منشور في قاعدة الأدلة هذه",
+    "use_rule": "RC-10 (Owner Addendum 2, improvement 3). Evidence landscape table on VIS-EVIDENCE-FRESHNESS."
+  },
+  {
+    "ui_id": "UI-LAND-NOTE",
+    "label_en": "Categorical states only: no scores and no totals.",
+    "label_ar": "حالات وصفية فقط: لا درجات ولا مجاميع.",
+    "use_rule": "RC-10 (Owner Addendum 2, improvement 3). Evidence landscape table on VIS-EVIDENCE-FRESHNESS."
+  },
+  {
+    "ui_id": "UI-READING-MEASUREMENT-NOTE",
+    "label_en": "Each priority below would supply evidence that this Reading says is missing; the link does not mean the priority would settle the Reading.",
+    "label_ar": "من شأن كل أولوية أدناه أن توفر أدلةً تقول هذه القراءة إنها ناقصة، ولا يعني هذا الربط أن الأولوية ستحسم القراءة.",
+    "use_rule": "RC-9b (Part B B6, independent review S1). Reading pages: the line under 'Related measurement priorities'."
+  },
+  {
+    "ui_id": "UI-VIS-TH-PERIOD",
+    "label_en": "Period",
+    "label_ar": "الفترة",
+    "use_rule": "RC-11 (Part B B10 b, NCC-02). The heading of a fallback table's row-header column; no corner cell is empty."
+  },
+  {
+    "ui_id": "UI-VIS-TH-GROUP",
+    "label_en": "Group or gap",
+    "label_ar": "الفئة أو الفجوة",
+    "use_rule": "RC-11 (Part B B10 b, NCC-02). The heading of a fallback table's row-header column; no corner cell is empty."
+  },
+  {
+    "ui_id": "UI-VIS-TH-CORRIDOR",
+    "label_en": "Corridor and amount",
+    "label_ar": "الممر والمبلغ",
+    "use_rule": "RC-11 (Part B B10 b, NCC-02). The heading of a fallback table's row-header column; no corner cell is empty."
+  },
+  {
+    "ui_id": "UI-VIS-TH-OBJECT",
+    "label_en": "What is counted",
+    "label_ar": "ما يُعدّ",
+    "use_rule": "RC-11 (Part B B10 b, NCC-02). The heading of a fallback table's row-header column; no corner cell is empty."
+  },
+  {
+    "ui_id": "UI-VIS-TH-STEP",
+    "label_en": "Step",
+    "label_ar": "الحلقة",
+    "use_rule": "RC-11 (Part B B10 b, NCC-02). The heading of a fallback table's row-header column; no corner cell is empty."
+  },
+  {
+    "ui_id": "UI-VIS-TH-DIMENSION",
+    "label_en": "Dimension",
+    "label_ar": "البُعد",
+    "use_rule": "RC-11 (Part B B10 b, NCC-02). The heading of a fallback table's row-header column; no corner cell is empty."
+  },
+  {
+    "ui_id": "UI-VIS-TH-DATE",
+    "label_en": "Date or period",
+    "label_ar": "التاريخ أو الفترة",
+    "use_rule": "RC-11 (Part B B10 b, NCC-02). The heading of a fallback table's row-header column; no corner cell is empty."
+  },
+  {
+    "ui_id": "UI-VIS-TH-ITEM",
+    "label_en": "Item",
+    "label_ar": "البند",
+    "use_rule": "RC-11 (Part B B10 b, NCC-02). The heading of a fallback table's row-header column; no corner cell is empty."
+  },
+  {
+    "ui_id": "UI-VIS-NOTE-POS-H1-WITHHELD",
+    "label_en": "The first-half 2025 payment report also gives an aggregate figure for POS transactions. It is withheld here because its definition and period need a methodology note before public use. The monthly releases are shown because each reports POS transactions for a single month, so their published totals can be read side by side; whether the reporting scope stayed the same across the change of release format in July 2025 has not been verified. Where a release's displayed percentage change does not match the published monthly totals, the mismatch is recorded as a discrepancy within the source.",
+    "label_ar": "يذكر تقرير المدفوعات للنصف الأول من 2025 أيضًا رقمًا إجماليًا لمعاملات نقاط البيع، وهو محجوب هنا لأن تعريفه وفترته يحتاجان إلى ملاحظة منهجية قبل النشر. أما الإصدارات الشهرية فتُعرض لأن كلًّا منها يذكر معاملات نقاط البيع لشهر واحد، فيمكن قراءة إجمالياتها المنشورة جنبًا إلى جنب؛ ولم يُتحقق من استمرارية نطاق الإبلاغ عند تغيّر شكل الإصدار في يوليو 2025. وحيث لا تتفق نسبة التغير المعروضة في إصدارٍ ما مع الإجماليات الشهرية المنشورة، يُسجَّل الفرق بوصفه اختلافًا داخل المصدر.",
+    "use_rule": "RC-11 (Part B B11). Frame note of VIS-POS-TRANSACTIONS: the withheld H1 2025 transaction total (OBS-00036) and why the monthly series is admissible; from governed fields only."
+  },
+  {
+    "ui_id": "UI-LAND-NO-NEXT",
+    "label_en": "No page in this base to verify it, and no measurement priority",
+    "label_ar": "لا توجد في قاعدة الأدلة هذه صفحة للتحقق منه ولا أولوية قياس",
+    "use_rule": "RC-10b. Evidence landscape: the last cell of a row that has neither a domain page nor a priority."
+  },
+  {
+    "ui_id": "UI-VIS-TH-SOURCE",
+    "label_en": "Source",
+    "label_ar": "المصدر",
+    "use_rule": "RC-11b. The heading of a row-header column whose rows are publications (the source-comparison table)."
+  },
+  {
+    "ui_id": "UI-VIS-RESULT-NOT-HELD",
+    "label_en": "No observed result is held in the evidence base — not zero",
+    "label_ar": "لا تتضمن قاعدة الأدلة نتيجة مرصودة — ليست صفرًا",
+    "use_rule": "RC-12 (Part B B12). A governed string of a text-first contract's table, bound from governed rows."
+  },
+  {
+    "ui_id": "UI-VIS-TH-BASE",
+    "label_en": "Out of",
+    "label_ar": "من أصل",
+    "use_rule": "RC-12 (Part B B12). A governed string of a text-first contract's table, bound from governed rows."
+  },
+  {
+    "ui_id": "UI-VIS-UNIT-FIRMS-SURVEYED",
+    "label_en": "formal establishments surveyed",
+    "label_ar": "منشأة رسمية شملها المسح",
+    "use_rule": "RC-12 (Part B B12). A governed string of a text-first contract's table, bound from governed rows."
+  },
+  {
+    "ui_id": "UI-VIS-UNIT-VALID-RESPONSES",
+    "label_en": "valid loan-source responses",
+    "label_ar": "استجابة صالحة لسؤال مصدر القرض",
+    "use_rule": "RC-12 (Part B B12). A governed string of a text-first contract's table, bound from governed rows."
+  },
+  {
+    "ui_id": "UI-VIS-NOTE-FIRM-LOAN-SUBSET",
+    "label_en": "Not established: whether the loan-source responses below come from the establishments with a line of credit above.",
+    "label_ar": "لم يثبت ما إذا كانت الاستجابات لسؤال مصدر القرض أدناه صادرة عن المنشآت التي أفادت بامتلاك خط ائتمان أعلاه.",
+    "use_rule": "RC-12 (Part B B12). A governed string of a text-first contract's table, bound from governed rows."
+  },
+  {
+    "ui_id": "UI-DATA-FILTER-TYPE",
+    "label_en": "Document type",
+    "label_ar": "نوع الوثيقة",
+    "use_rule": "RC-12 (Part B B13). The research library on /data/: filters, order, backlinks and locator labels."
+  },
+  {
+    "ui_id": "UI-DATA-FILTER-PUBLISHER",
+    "label_en": "Publisher",
+    "label_ar": "الناشر",
+    "use_rule": "RC-12 (Part B B13). The research library on /data/: filters, order, backlinks and locator labels."
+  },
+  {
+    "ui_id": "UI-DATA-FILTER-YEAR",
+    "label_en": "Year of the document",
+    "label_ar": "سنة الوثيقة",
+    "use_rule": "RC-12 (Part B B13). The research library on /data/: filters, order, backlinks and locator labels."
+  },
+  {
+    "ui_id": "UI-DATA-FILTER-DOMAIN",
+    "label_en": "Used on",
+    "label_ar": "مستخدم في",
+    "use_rule": "RC-12 (Part B B13). The research library on /data/: filters, order, backlinks and locator labels."
+  },
+  {
+    "ui_id": "UI-DATA-FILTER-ANY",
+    "label_en": "Any",
+    "label_ar": "الكل",
+    "use_rule": "RC-12 (Part B B13). The research library on /data/: filters, order, backlinks and locator labels."
+  },
+  {
+    "ui_id": "UI-DATA-FILTER-NOT-RECORDED",
+    "label_en": "Not recorded",
+    "label_ar": "غير مسجّل",
+    "use_rule": "RC-12 (Part B B13). The research library on /data/: filters, order, backlinks and locator labels."
+  },
+  {
+    "ui_id": "UI-DATA-FILTER-CLEAR",
+    "label_en": "Clear filters",
+    "label_ar": "مسح عوامل التصفية",
+    "use_rule": "RC-12 (Part B B13). The research library on /data/: filters, order, backlinks and locator labels."
+  },
+  {
+    "ui_id": "UI-DATA-SORT",
+    "label_en": "Order",
+    "label_ar": "الترتيب",
+    "use_rule": "RC-12 (Part B B13). The research library on /data/: filters, order, backlinks and locator labels."
+  },
+  {
+    "ui_id": "UI-DATA-SORT-GROUPED",
+    "label_en": "As grouped",
+    "label_ar": "حسب المجموعات",
+    "use_rule": "RC-12 (Part B B13). The research library on /data/: filters, order, backlinks and locator labels."
+  },
+  {
+    "ui_id": "UI-DATA-SORT-NEWEST",
+    "label_en": "Newest document first",
+    "label_ar": "الوثائق الأحدث أولًا",
+    "use_rule": "RC-12 (Part B B13). The research library on /data/: filters, order, backlinks and locator labels."
+  },
+  {
+    "ui_id": "UI-DATA-READINGS-USING-SOURCE",
+    "label_en": "Evidence Readings using this source",
+    "label_ar": "قراءات الأدلة التي تستخدم هذا المصدر",
+    "use_rule": "RC-12 (Part B B13). The research library on /data/: filters, order, backlinks and locator labels."
+  },
+  {
+    "ui_id": "UI-EVID-OPEN-ARCHIVED-COPY",
+    "label_en": "Open archived copy (web.archive.org)",
+    "label_ar": "افتح النسخة المؤرشفة (web.archive.org)",
+    "use_rule": "RC-12 (Part B B13). The research library on /data/: filters, order, backlinks and locator labels."
+  },
+  {
+    "ui_id": "UI-HOME-GAPS-NOTE",
+    "label_en": "Each priority below describes evidence that is still missing for one of these gaps. Listing it here does not claim that collecting that evidence would close the gap or explain it.",
+    "label_ar": "تصف كل أولوية أدناه أدلةً ما زالت مفقودة تتصل بإحدى هذه الفجوات. ولا يعني إدراجها هنا أن جمع تلك الأدلة سيسدّ الفجوة أو يفسّرها.",
+    "use_rule": "RC-15 (Part B B15 d, A-8). Home: the line under the measurement priorities bound to the gaps section."
+  },
+  {
+    "ui_id": "UI-EXPLORE-MA-BASIS",
+    "label_en": "These are the priorities the Measurement Agenda marks P0. The full agenda, including its P1 items, is on the Measurement Agenda page.",
+    "label_ar": "هذه هي البنود المصنفة P0 في أولويات القياس. وتعرض صفحة أولويات القياس القائمة الكاملة، بما فيها البنود المصنفة P1.",
+    "use_rule": "RC-15 (Part B B15 d, B-5). Explore: the line under 'What the evidence cannot yet answer'; the gate RC-B15 keeps the set equal to the P0 items."
+  },
+  {
+    "ui_id": "UI-EVID-SERIES-USED",
+    "label_en": "Series this record uses",
+    "label_ar": "السلاسل التي يستخدمها هذا السجل",
+    "use_rule": "RC-15 (Part B B15 d, C-1). Evidence Record source card: the record's own series locators, where they differ from the source's main locator."
+  },
+  {
+    "ui_id": "UI-CITE-LONG-FORM",
+    "label_en": "Long form, with the period, population and limits",
+    "label_ar": "الصيغة المطوّلة، مع الفترة والمجتمع والحدود",
+    "use_rule": "RC-15 (Part B B15 d, C-2; OWN-04). Evidence Record: the disclosure that holds the long citation under the short one."
+  },
+  {
+    "ui_id": "UI-JS-COPY-LONG-CITATION",
+    "label_en": "Copy long form",
+    "label_ar": "انسخ الصيغة المطوّلة",
+    "use_rule": "RC-15 (Part B B15 d, C-2). Evidence Record: copies the long citation."
+  },
+  {
+    "ui_id": "UI-JS-SHARE-RECORD",
+    "label_en": "Share this record",
+    "label_ar": "شارك هذا السجل",
+    "use_rule": "RC-15 (Part B B15 e, U1). Evidence Record: shares the record's title, period, population, what not to conclude and its link — Web Share where the device offers it, otherwise the same text is copied."
+  },
+  {
+    "ui_id": "UI-JS-SEARCH-NAMES-NOTE",
+    "label_en": "Names of entities from the regulator's lists and enforcement decisions are not reproduced here; the original documents are linked from Data & sources.",
+    "label_ar": "لا تُذكر هنا أسماء الجهات الواردة في قوائم الجهة الرقابية وقرارات الإنفاذ؛ ويمكن الوصول إلى الوثائق الأصلية من صفحة البيانات والمصادر.",
+    "use_rule": "RC-17 (owner decisions of 3 October 2026, point 2). Search: the governed sentence under the empty result."
+  },
+  {
+    "ui_id": "UI-COMPARE-PRESET-REMITTANCES",
+    "label_en": "Compare the CBY-Aden and IMF remittance records side by side",
+    "label_ar": "قارن سجلات التحويلات لدى البنك المركزي اليمني – عدن وصندوق النقد الدولي جنبًا إلى جنب",
+    "use_rule": "RC-17 (Owner Addendum 2, improvement 5; bilingual review). /remittances/ 'Verify it yourself': the preset CLM-032, CLM-037, CLM-041, which the page's cards do not all show, so the label names them."
+  },
+  {
+    "ui_id": "UI-COMPARE-PRESET",
+    "label_en": "Compare these records side by side",
+    "label_ar": "قارن هذه السجلات جنبًا إلى جنب",
+    "use_rule": "RC-17 (Owner Addendum 2, improvement 5). A preset Compare link under a governed paragraph or a page's verify actions; the records are named in code (scripts/yfie)."
+  },
+  {
+    "ui_id": "UI-MA-DIMENSIONS",
+    "label_en": "Dimensions it would cover:",
+    "label_ar": "الأبعاد التي سيغطيها القياس:",
+    "use_rule": "RC-18 (owner note of 3 October 2026, 11:15, 4.2). /measurement/: the label before a priority's governed dimensions_en/dimensions_ar."
+  },
+  {
+    "ui_id": "UI-MOVED-RECORD-TITLE",
+    "label_en": "This record is no longer published on its own",
+    "label_ar": "لم يعد هذا السجل منشورًا بمفرده",
+    "use_rule": "RC-19 (owner decision of 3 October 2026, 23:54 Aden, X-ESC-RC17-01). Heading of the page at a retired record address."
+  },
+  {
+    "ui_id": "UI-MOVED-RECORD-BODY",
+    "label_en": "This address now leads to the record of the Central Bank of Yemen – Aden (CBY-Aden) circular of 26 June 2024. Names from the regulator's lists are not reproduced here.",
+    "label_ar": "يُحيل هذا الرابط الآن إلى سجل التعميم المؤرخ في 26 يونيو 2024 والصادر عن البنك المركزي اليمني – عدن. ولا تُذكر هنا الأسماء الواردة في قوائم الجهة الرقابية.",
+    "use_rule": "RC-19 (owner decision of 3 October 2026, 23:54 Aden). Body of the page at a retired record address; the link that follows is the target record's governed title."
   }
 ]

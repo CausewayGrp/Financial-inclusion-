@@ -1,7 +1,7 @@
 {
   "schema_version": "1.0",
   "contract_id": "PUBLIC-INVENTORY-COUNTS",
-  "authority_master_sha256": "17db032b15da16fc4b5b3c3b49f19aebf2ecb4ec46634613fe8505d0f038690b",
+  "authority_master_sha256": "90014e3bd27133c34b8435090230cf5b28a3301dec9f366c6fedf047b5ea2838",
   "rule": "A repository inventory count is never typed into public copy. Master copy may carry a token {{n:<key>}}; the generator replaces it with the count derived from the named projection, and raises an error for an unknown key, a key not cleared for public display, or any template token left unresolved. Arabic copy uses label-value form ('label: N') so that no counted-noun agreement depends on the number.",
   "token_pattern": "\\{\\{n:([a-z_]+)\\}\\}",
   "unresolved_token_pattern": "\\{\\{[^{}]*\\}\\}|\\{[A-Z][A-Z0-9_]{1,40}\\}",
@@ -9,7 +9,7 @@
   "counts": [
     {
       "key": "evidence_records",
-      "value": 110,
+      "value": 109,
       "projection": "evidence/evidence_objects.json",
       "rule": "count_records",
       "public_token": true,
@@ -25,15 +25,15 @@
     },
     {
       "key": "chronology_events",
-      "value": 24,
+      "value": 23,
       "projection": "visuals/system_chronology.json",
-      "rule": "count_records",
+      "rule": "count_where_not_in",
       "public_token": true,
       "definition_en": "Dated events in the system chronology (14_SYSTEM_CHRONOLOGY)."
     },
     {
       "key": "sources",
-      "value": 160,
+      "value": 165,
       "projection": "sources/source_library.json",
       "rule": "count_records",
       "public_token": true,
@@ -41,7 +41,7 @@
     },
     {
       "key": "public_locators",
-      "value": 151,
+      "value": 156,
       "projection": "sources/source_reference_map.json",
       "rule": "count_where_http_primary_url",
       "public_token": true,
@@ -97,7 +97,7 @@
     },
     {
       "key": "search_records",
-      "value": 435,
+      "value": 438,
       "projection": "content/search_index.json",
       "rule": "count_records",
       "public_token": false,
@@ -105,7 +105,7 @@
     },
     {
       "key": "page_specs",
-      "value": 143,
+      "value": 142,
       "projection": "page_specs.json",
       "rule": "spec_count",
       "public_token": false,

@@ -21,7 +21,11 @@
     },
     "chronology_events": {
       "projection": "visuals/system_chronology.json",
-      "rule": "count_records",
+      "rule": "count_where_not_in",
+      "field": "event_class",
+      "exclude": [
+        "SYSTEM_INTERPRETATION"
+      ],
       "public_token": true,
       "definition_en": "Dated events in the system chronology (14_SYSTEM_CHRONOLOGY)."
     },

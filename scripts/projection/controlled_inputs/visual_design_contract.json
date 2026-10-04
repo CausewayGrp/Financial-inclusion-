@@ -241,7 +241,15 @@
     "Business challenge: Political instability": "UI-VIS-CAT-FIRM-CH-POLITICAL",
     "Business challenge: Access to finance": "UI-VIS-CAT-FIRM-CH-FINANCE",
     "Business challenge: Siege": "UI-VIS-CAT-FIRM-CH-SIEGE",
-    "Business challenge: Informal competitor practices": "UI-VIS-CAT-FIRM-CH-INFORMAL"
+    "Business challenge: Informal competitor practices": "UI-VIS-CAT-FIRM-CH-INFORMAL",
+    "Business challenge: Labor regulations": "UI-VIS-CAT-FIRM-CH-LABOUR",
+    "Business challenge: Customs/trade regulation": "UI-VIS-CAT-FIRM-CH-CUSTOMS",
+    "Business challenge: Corruption": "UI-VIS-CAT-FIRM-CH-CORRUPTION",
+    "Business challenge: Land": "UI-VIS-CAT-FIRM-CH-LAND",
+    "Business challenge: Business licensing": "UI-VIS-CAT-FIRM-CH-LICENSING",
+    "Business challenge: Inadequately educated workforce": "UI-VIS-CAT-FIRM-CH-WORKFORCE",
+    "Business challenge: Courts": "UI-VIS-CAT-FIRM-CH-COURTS",
+    "Business challenge: Crime/theft/disorder": "UI-VIS-CAT-FIRM-CH-CRIME"
    },
    "mfi_lane": {
     "borrowers": "UI-VIS-CAT-MFI-BORROWERS",
@@ -250,7 +258,7 @@
    },
    "event": {
     "Unified domestic transfer network": "UI-VIS-CAT-EVT-UNIFIED-NETWORK",
-    "FMIIP starts": "UI-VIS-CAT-EVT-FMIIP-START",
+    "FMIIP effective": "UI-VIS-CAT-EVT-FMIIP-START",
     "FMIIP approved": "UI-VIS-CAT-EVT-FMIIP-APPROVAL",
     "Fast Payment System": "UI-VIS-CAT-EVT-FPS",
     "RTGS + CBY core banking": "UI-VIS-CAT-EVT-RTGS-CORE",
@@ -273,7 +281,7 @@
    },
    "provider_count_state": {
     "PRIMARY_CURRENT_LIST_VERIFIED": "UI-VIS-CAT-PRV-COUNT-CURRENT-LIST",
-    "SOURCE_LISTED_ROWS__98_COMPANIES__225_ESTABLISHMENTS__106_REMITTANCE_AGENTS": "UI-VIS-CAT-PRV-COUNT-LISTED-ROWS",
+    "SOURCE_LISTED_ROWS__100_COMPANIES__231_ESTABLISHMENTS__111_REMITTANCE_AGENTS": "UI-VIS-CAT-PRV-COUNT-LISTED-ROWS",
     "MULTIPLE_PRIMARY_DATED_COUNTS_WITH_DIFFERENT_WORDING": "UI-VIS-CAT-PRV-COUNT-SEVERAL",
     "MEMBERSHIP_PAGES_ONLY": "UI-VIS-CAT-PRV-COUNT-MEMBERSHIP"
    },
@@ -291,7 +299,7 @@
    },
    "provider_limit": {
     "List presence proves licensing/listing only; operation is not inferred.": "UI-VIS-CAT-PRV-LIMIT-BANKS",
-    "429 is the arithmetic sum of source-listed rows across three classes, not a deduplicated unique-provider or currently operating-provider count.": "UI-VIS-CAT-PRV-LIMIT-EXCHANGE",
+    "442 is the arithmetic sum of source-listed rows across three classes, not a deduplicated unique-provider or currently operating-provider count.": "UI-VIS-CAT-PRV-LIMIT-EXCHANGE",
     "Official objects report 7 e-wallets (2024 Q3), 9 e-wallets (2025 H1), 8 licensed e-wallets (2025-09-10), and >9 event participants (2026-01-22). Preserve separately; named positive current wallet/PSP universe remains open.": "UI-VIS-CAT-PRV-LIMIT-EWALLETS",
     "YMN membership presence is not licence or operation verification and is not a complete national universe.": "UI-VIS-CAT-PRV-LIMIT-MFI"
    },
@@ -581,8 +589,8 @@
        "file": "data/payments_data.json",
        "header_key": "observation_id",
        "ids": [
-        "OBS-00080",
-        "OBS-00081"
+        "OBS-00095",
+        "OBS-00096"
        ]
       },
       "fields": {
@@ -601,8 +609,8 @@
     ],
     "step_mapping": {
      "UI-VIS-CHAIN-RULE": "NETWORK_RULE and PAYMENTS_ARCHITECTURE_DECISION events, and the funded project steps PROJECT_START, PAYMENT_RAIL_COMPONENT and ACCESS_USAGE_COMPONENT (a project component is a programme, not implementation)",
-     "UI-VIS-CHAIN-IMPLEMENTATION": "NETWORK_INTEGRATION, UNIFIED_NETWORK_COMPANY and YPCC events, and the POS terminal stock (OBS-00080)",
-     "UI-VIS-CHAIN-OPERATION": "POS transactions (OBS-00081) and NETWORK_ACTIVITY_SIGNAL; activity counts evidence operation, not use",
+     "UI-VIS-CHAIN-IMPLEMENTATION": "NETWORK_INTEGRATION, UNIFIED_NETWORK_COMPANY and YPCC events, and the POS terminal stock (OBS-00095, June 2026)",
+     "UI-VIS-CHAIN-OPERATION": "POS transactions (OBS-00096, June 2026) and NETWORK_ACTIVITY_SIGNAL; activity counts evidence operation, not use",
      "UI-VIS-CHAIN-ACCESS": "OPEN (the FMIIP access-point baseline is a project metric, not access by people)",
      "UI-VIS-CHAIN-USE": "OPEN",
      "UI-VIS-CHAIN-QUALITY": "OPEN",
@@ -621,7 +629,10 @@
     },
     "mobile": "Native vertical list; one card per step.",
     "rtl": "Top to bottom in both languages; no horizontal arrows.",
-    "fallback": "Ordered list of steps with state, dated events and links."
+    "fallback": "Ordered list of steps with state, dated events and links.",
+    "frame_labels": [
+     "UI-VIS-NOTE-POS-SCOPE"
+    ]
    }
   },
   {
@@ -646,6 +657,7 @@
       "fields": {
        "class": "provider_class",
        "date": "reference_state",
+       "date_ar": "reference_state_ar",
        "source": "authoritative_source_id",
        "count": "universe_count",
        "count_state": "count_state",
@@ -681,9 +693,9 @@
        "source": "source_id"
       },
       "must_equal": {
-       "CBY-ROSTER-2026-COMP": 98,
-       "CBY-ROSTER-2026-EST": 225,
-       "CBY-ROSTER-2026-AGT": 106
+       "CBY-ROSTER-2026-COMP": 100,
+       "CBY-ROSTER-2026-EST": 231,
+       "CBY-ROSTER-2026-AGT": 111
       },
       "label_fields": {
        "unit": "unit"
@@ -745,6 +757,7 @@
       },
       "fields": {
        "date": "reference_period",
+       "date_ar": "reference_period_ar",
        "count": "reported_value",
        "unit": "unit",
        "state": "semantic_state",
@@ -757,7 +770,7 @@
      }
     ],
     "ordering": "Rows: banks, exchange and remittance actors, wallets and e-money, microfinance (non-bank), payment-system operators (UNKNOWN). Columns in the order above.",
-    "transformation": "Counts only as governed; the 429 roster total is not shown as a number of providers. Wallet counts appear as 'counts differ by source and date' with the dated values listed, never one number.",
+    "transformation": "Counts only as governed; the 442 roster total is not shown as a number of providers. Wallet counts appear as 'counts differ by source and date' with the dated values listed, never one number.",
     "missing": "A dimension with no governed row is UNKNOWN (UI-VIS-STATE-UNKNOWN), e.g. negative authority for classes other than wallets ('none held', not 'none exist'); operation evidence for every class.",
     "breaks": "None.",
     "annotation": "UI-VIS-ISSUER-SCOPE in frame for the rows whose authority is Central Bank of Yemen — Aden (authority field of the status and negative-authority rows); the microfinance row's source is the Yemen Microfinance Network's membership pages.",
@@ -975,12 +988,19 @@
        "2025-10",
        "2025-11",
        "2025-12",
-       "2026-01"
+       "2026-01",
+       "2026-02",
+       "2026-03",
+       "2026-04",
+       "2026-05",
+       "2026-06"
       ],
       "must_equal": {
        "OBS-00051": 561,
        "OBS-00077": 1357,
-       "OBS-00080": 1473
+       "OBS-00080": 1473,
+       "OBS-00092": 1636,
+       "OBS-00095": 1651
       },
       "label_fields": {
        "unit": "unit"
@@ -1004,7 +1024,7 @@
    "visual_id": "VIS-POS-TRANSACTIONS",
    "tier": "CORE_ANALYTICAL",
    "family": "POS_MONTHLY_SMALL_MULTIPLE",
-   "rationale": "Panel 2 of the POS small multiple. The path is not steady (July 2025 high), which endpoint framing hid.",
+   "rationale": "Panel 2 of the POS small multiple. The path is not steady (May 2026 high), which endpoint framing hid.",
    "contract": {
     "form": "Line of monthly transaction counts; panel 2 of the POS small multiple.",
     "series": [
@@ -1041,12 +1061,19 @@
        "2025-10",
        "2025-11",
        "2025-12",
-       "2026-01"
+       "2026-01",
+       "2026-02",
+       "2026-03",
+       "2026-04",
+       "2026-05",
+       "2026-06"
       ],
       "must_equal": {
        "OBS-00052": 8015,
        "OBS-00064": 27187,
-       "OBS-00081": 24026
+       "OBS-00081": 24026,
+       "OBS-00093": 36201,
+       "OBS-00096": 27504
       },
       "label_fields": {
        "unit": "unit"
@@ -1063,7 +1090,10 @@
     },
     "mobile": "Stacked panel.",
     "rtl": "Time axis left to right.",
-    "fallback": "Table: month, value, note."
+    "fallback": "Table: month, value, note.",
+    "frame_labels": [
+     "UI-VIS-NOTE-POS-H1-WITHHELD"
+    ]
    }
   },
   {
@@ -1110,11 +1140,18 @@
        "2025-10",
        "2025-11",
        "2025-12",
-       "2026-01"
+       "2026-01",
+       "2026-02",
+       "2026-03",
+       "2026-04",
+       "2026-05",
+       "2026-06"
       ],
       "must_equal": {
        "OBS-00053": 320,
-       "OBS-00082": 1262
+       "OBS-00082": 1262,
+       "OBS-00094": 1579,
+       "OBS-00097": 1045
       },
       "must_be_missing": [
        "2025-09"
@@ -1229,7 +1266,7 @@
        "metric_label_en": "metric_label_en",
        "metric_label_ar": "metric_label_ar"
       },
-      "state": "MEASURED",
+      "state": "REPORTED",
       "must_equal": {
        "RMO-RPW-SA-2025Q3-200": 2.7,
        "RMO-RPW-UAE-2025Q3-200": 7.53
@@ -1267,7 +1304,134 @@
    "visual_id": "VIS-FIRM-FINANCE-PATH",
    "tier": "TABLE_TEXT_FIRST",
    "rationale": "The 31 firms with a line of credit out of 328 (FFO-2022-004) and the 18 valid loan-source responses (FFO-2022-LS-01..04) are rendered as a table (stage, count, base). Two stages drawn in sequence would read as a funnel, which requires the 18 responses to come from the 31 firms; the Master does not establish that.",
-   "promotion_requires": "The Master states whether the 18 loan-source responses are a subset of the 31 firms with a line of credit."
+   "promotion_requires": "The Master states whether the 18 loan-source responses are a subset of the 31 firms with a line of credit.",
+   "table": {
+    "form": "Item and number under each base (a row group opened by \"Out of\" and the base), in the source's order. A governed marker separates the establishments with a line of credit from the loan-source responses: the Master does not establish that the 18 come from the 31, so nothing is drawn or read as a funnel.",
+    "objects": [
+     {
+      "id": "firm",
+      "rows": {
+       "file": "data/firm_finance.json",
+       "header_key": "observation_id",
+       "ids": [
+        "FFO-2022-004",
+        "FFO-2022-LS-01",
+        "FFO-2022-LS-02",
+        "FFO-2022-LS-03",
+        "FFO-2022-LS-04"
+       ]
+      },
+      "fields": {
+       "metric_label": "metric_label",
+       "breakdown_value": "breakdown_value",
+       "value": "value",
+       "denominator_n": "denominator_n",
+       "source": "source_id"
+      },
+      "must_equal": {
+       "FFO-2022-004": {
+        "value": 31,
+        "denominator_n": 328
+       },
+       "FFO-2022-LS-01": {
+        "value": 10,
+        "denominator_n": 18
+       },
+       "FFO-2022-LS-02": {
+        "value": 1,
+        "denominator_n": 18
+       },
+       "FFO-2022-LS-03": {
+        "value": 5,
+        "denominator_n": 18
+       },
+       "FFO-2022-LS-04": {
+        "value": 2,
+        "denominator_n": 18
+       }
+      }
+     }
+    ],
+    "head": [
+     "UI-VIS-TH-ITEM",
+     "UI-VIS-UNIT-COUNT"
+    ],
+    "caption": [],
+    "rows": [
+     {
+      "group": {
+       "lead": "UI-VIS-TH-BASE",
+       "ref": "firm.FFO-2022-004.denominator_n",
+       "unit": "UI-VIS-UNIT-FIRMS-SURVEYED"
+      }
+     },
+     {
+      "head": {
+       "ref": "firm.FFO-2022-004.metric_label",
+       "ns": "firm_finance"
+      },
+      "cells": [
+       {
+        "ref": "firm.FFO-2022-004.value"
+       }
+      ]
+     },
+     {
+      "marker": "UI-VIS-NOTE-FIRM-LOAN-SUBSET"
+     },
+     {
+      "group": {
+       "lead": "UI-VIS-TH-BASE",
+       "ref": "firm.FFO-2022-LS-01.denominator_n",
+       "unit": "UI-VIS-UNIT-VALID-RESPONSES"
+      }
+     },
+     {
+      "head": {
+       "ref": "firm.FFO-2022-LS-01.breakdown_value",
+       "ns": "firm_finance"
+      },
+      "cells": [
+       {
+        "ref": "firm.FFO-2022-LS-01.value"
+       }
+      ]
+     },
+     {
+      "head": {
+       "ref": "firm.FFO-2022-LS-02.breakdown_value",
+       "ns": "firm_finance"
+      },
+      "cells": [
+       {
+        "ref": "firm.FFO-2022-LS-02.value"
+       }
+      ]
+     },
+     {
+      "head": {
+       "ref": "firm.FFO-2022-LS-03.breakdown_value",
+       "ns": "firm_finance"
+      },
+      "cells": [
+       {
+        "ref": "firm.FFO-2022-LS-03.value"
+       }
+      ]
+     },
+     {
+      "head": {
+       "ref": "firm.FFO-2022-LS-04.breakdown_value",
+       "ns": "firm_finance"
+      },
+      "cells": [
+       {
+        "ref": "firm.FFO-2022-LS-04.value"
+       }
+      ]
+     }
+    ]
+   }
   },
   {
    "visual_id": "VIS-FIRM-CONSTRAINTS",
@@ -1289,7 +1453,15 @@
         "FFO-2022-CH-05",
         "FFO-2022-CH-06",
         "FFO-2022-CH-07",
-        "FFO-2022-CH-08"
+        "FFO-2022-CH-08",
+        "FFO-2022-CH-09",
+        "FFO-2022-CH-10",
+        "FFO-2022-CH-11",
+        "FFO-2022-CH-12",
+        "FFO-2022-CH-13",
+        "FFO-2022-CH-14",
+        "FFO-2022-CH-15",
+        "FFO-2022-CH-16"
        ]
       },
       "fields": {
@@ -1311,7 +1483,7 @@
      }
     ],
     "ordering": "By share, descending, without rank numbers.",
-    "transformation": "None. The eight items named in the governed contract are drawn; the other eight governed items (FFO-2022-CH-09..16) appear in the table fallback.",
+    "transformation": "None. All sixteen items of the source's Table 8 (Annex III, p. 146) are drawn and listed (FFO-2022-CH-01..16), each checked against the original on 3 October 2026 (RC-7).",
     "missing": "The base for this question is not held; stated in frame.",
     "breaks": "None.",
     "annotation": "Firms could name more than one challenge (shares add to more than 100%); seven-governorate survey; not a national ranking.",
@@ -1333,7 +1505,82 @@
    "visual_id": "VIS-TARGET-RESULT-STATE",
    "tier": "TABLE_TEXT_FIRST",
    "rationale": "The FMIIP access-point baseline and target (FMIIP-RF-004) and the result, which is not held, are rendered as a three-row table (state, date, value). Two markers on a dated axis would invite a trajectory that no observation supports.",
-   "promotion_requires": "An observed result for the same indicator under the project's own definition (FMIIP-RF-004), Master-first."
+   "promotion_requires": "An observed result for the same indicator under the project's own definition (FMIIP-RF-004), Master-first.",
+   "table": {
+    "form": "Three rows (state, date, value): the project's baseline, its target, and the result, which the evidence base does not hold. No dated axis, no percentage of the target, no comparison with administrative counts.",
+    "objects": [
+     {
+      "id": "fmiip",
+      "rows": {
+       "file": "data/reforms_regulation.json",
+       "header_key": "metric_id",
+       "ids": [
+        "FMIIP-RF-004"
+       ]
+      },
+      "fields": {
+       "baseline_period": "baseline_period",
+       "baseline_value": "baseline_value",
+       "target_period": "target_period",
+       "target_value": "target_value",
+       "source": "source_id"
+      },
+      "month_year_fields": [
+       "baseline_period",
+       "target_period"
+      ],
+      "must_equal": {
+       "FMIIP-RF-004": {
+        "baseline_value": 817,
+        "target_value": 1021
+       }
+      }
+     }
+    ],
+    "head": [
+     "UI-VIS-TH-ITEM",
+     "UI-VIS-TH-DATE",
+     "UI-VIS-UNIT-PROJECT-ACCESS-POINTS"
+    ],
+    "caption": [
+     "UI-VIS-STATE-PROGRAMME"
+    ],
+    "rows": [
+     {
+      "head": "UI-VIS-BASELINE",
+      "cells": [
+       {
+        "ref": "fmiip.FMIIP-RF-004.baseline_period_iso",
+        "as": "month"
+       },
+       {
+        "ref": "fmiip.FMIIP-RF-004.baseline_value"
+       }
+      ]
+     },
+     {
+      "head": "UI-VIS-TARGET",
+      "cells": [
+       {
+        "ref": "fmiip.FMIIP-RF-004.target_period_iso",
+        "as": "month"
+       },
+       {
+        "ref": "fmiip.FMIIP-RF-004.target_value"
+       }
+      ]
+     },
+     {
+      "head": "UI-VIS-RESULT",
+      "cells": [
+       {
+        "ui": "UI-VIS-RESULT-NOT-HELD",
+        "span": 2
+       }
+      ]
+     }
+    ]
+   }
   },
   {
    "visual_id": "RV-CWR-004",
@@ -1442,7 +1689,8 @@
     "frame_labels": [
      "UI-VIS-CAT-LANE-PEOPLE-SURVEY",
      "UI-VIS-CAT-LANE-PAYMENT-INFRA-ADMIN",
-     "UI-VIS-CAT-LANE-INSTITUTIONS-REFORMS"
+     "UI-VIS-CAT-LANE-INSTITUTIONS-REFORMS",
+     "UI-VIS-NOTE-POS-SCOPE"
     ]
    }
   },

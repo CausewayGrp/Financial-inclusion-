@@ -1,0 +1,94 @@
+{
+ "stage": "G5-RECORDS",
+ "staged_master_sha256": "3c6c66beddedb90db6a54b21c5689b0852ec8fd90538df75af628655f5247c39",
+ "installed": [
+  "handoff/IMPLEMENTATION_MANIFEST.json",
+  "authority/YFI_CURRENT_PROJECT_CONTEXT.json",
+  "OPENAI_REENTRY_CHECKPOINT.md",
+  "README.md"
+ ],
+ "steps": [
+  {
+   "step": "generate",
+   "exit": 0,
+   "tail": [
+    "  \"presentation_priority.json\",",
+    "  \"visuals/visual_design_contracts.json\"",
+    " ],",
+    " \"output_sha256\": 39",
+    "}",
+    "PROJECTIONS GENERATED"
+   ]
+  },
+  {
+   "step": "rebind",
+   "exit": 0,
+   "tail": [
+    " \"files\": [",
+    "  \"authority/AUTHORITY.json\",",
+    "  \"authority/YFI_CURRENT_PROJECT_CONTEXT.json\",",
+    "  \"handoff/IMPLEMENTATION_MANIFEST.json\"",
+    " ]",
+    "}"
+   ]
+  },
+  {
+   "step": "build",
+   "exit": 0,
+   "tail": [
+    "Built 288 HTML files from 143 controlled page specs."
+   ]
+  },
+  {
+   "step": "public_literal_audit",
+   "exit": 0,
+   "tail": [
+    "PUBLIC_LITERAL_CLOSURE records=12792 unresolved=0"
+   ]
+  },
+  {
+   "step": "architecture_diagrams",
+   "exit": 0,
+   "tail": [
+    "ARCHITECTURE DIAGRAMS WRITTEN: YFIE_PUBLIC_SITE_MAP.svg, YFIE_PAGE_FAMILY_STATE_MAP.svg, YFIE_FULL_STACK_SYSTEM_ARCHITECTURE.svg"
+   ]
+  },
+  {
+   "step": "handoff_inventory",
+   "exit": 0,
+   "tail": [
+    "HANDOFF INVENTORY WRITTEN: 143 routes"
+   ]
+  },
+  {
+   "step": "repository_manifest",
+   "exit": 0,
+   "tail": [
+    "REPOSITORY MANIFEST WRITTEN: 1843 files in 24 classes"
+   ]
+  },
+  {
+   "step": "validate",
+   "exit": 0,
+   "tail": [
+    "HTML=288 ERRORS=0 WARN=0",
+    "WEBSITE REPOSITORY VALIDATION PASS"
+   ]
+  },
+  {
+   "step": "generator_idempotence",
+   "exit": 0,
+   "tail": [
+    " \"master_sha256\": \"3c6c66beddedb90db6a54b21c5689b0852ec8fd90538df75af628655f5247c39\",",
+    " \"outputs\": 39,",
+    " \"differences\": [],",
+    " \"output_sha256\": 39",
+    "}",
+    "PROJECTION CHECK PASS"
+   ]
+  }
+ ],
+ "result": "COMMITTED",
+ "master_sha256": "3c6c66beddedb90db6a54b21c5689b0852ec8fd90538df75af628655f5247c39",
+ "page_specs_sha256": "d0e21e25b5bcfd0ebdac577b9a54aec9e5c07c5e07d0a791aab7e477c66a1485"
+}

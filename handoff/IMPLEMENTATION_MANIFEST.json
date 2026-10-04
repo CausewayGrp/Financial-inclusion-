@@ -17,10 +17,10 @@
   "authority": {
     "master_path": "authority/Yemen_Financial_Inclusion_Evidence_Master.xlsx",
     "master_drive_id": "1xAbdDHJd5bYo0Pzo_a6dR6HsZ056LzJU",
-    "master_sha256": "17db032b15da16fc4b5b3c3b49f19aebf2ecb4ec46634613fe8505d0f038690b",
+    "master_sha256": "90014e3bd27133c34b8435090230cf5b28a3301dec9f366c6fedf047b5ea2838",
     "page_specs_path": "site-src/content/page_specs.json",
     "page_specs_drive_id": "1jWAKnjH4lJ3XdrsG_USX7UtWDKIXLkEU",
-    "page_specs_sha256": "d45748046ea56fd0e67fdf112f9888de65b3fe7fab46ce6f51de3a80824b69aa",
+    "page_specs_sha256": "0298a3c6b5c72ab9da1fa99667f79303475f39e12bbe41c2f6f581459f8a2b86",
     "presentation_priority_path": "site-src/content/presentation_priority.json",
     "precedence": [
       "authority/Yemen_Financial_Inclusion_Evidence_Master.xlsx",
@@ -37,26 +37,26 @@
     "page_specs_external_repository_sync_state": "EXTERNAL_REPOSITORY_SYNC_PENDING"
   },
   "controlled_counts": {
-    "page_specs": 143,
-    "generated_locale_pages": 286,
-    "generated_html_total_including_root_and_404": 288,
-    "page_sections": 574,
+    "page_specs": 142,
+    "generated_locale_pages": 284,
+    "generated_html_total_including_root_and_404": 286,
+    "page_sections": 573,
     "questions": 11,
-    "evidence_objects": 110,
+    "evidence_objects": 109,
     "public_claims": 60,
     "evidence_passports": 55,
     "readings": 10,
     "reading_sections": 68,
     "measurement_priorities": 10,
     "visual_contracts": 36,
-    "sources": 160,
-    "publicly_addressable_sources": 151,
+    "sources": 165,
+    "publicly_addressable_sources": 156,
     "curated_source_report_cards": 28,
     "indicators": 216,
-    "public_search_records": 435,
-    "public_object_source_closure_records": 226,
+    "public_search_records": 438,
+    "public_object_source_closure_records": 225,
     "sources_without_public_locator": 9,
-    "chronology_events": 24
+    "chronology_events": 23
   },
   "runtime_contract": {
     "mode": "STATIC_FIRST_FULLY_LOCAL_PUBLIC_RUNTIME",
@@ -90,8 +90,8 @@
     "typography_rule": "Required: IBM Plex Sans (English) and IBM Plex Sans Arabic (Arabic), self-hosted from vendor/fonts/ (unchanged woff2 files of @ibm/plex-sans@1.1.0 and @ibm/plex-sans-arabic@1.1.0, OFL-1.1, Reserved Font Name \"Plex\"). Other IBM Plex family members (Serif, Mono, Sans Condensed) may be added for a defined role with a written rationale in the design package. No typeface outside the IBM Plex family; no font CDN; no font for novelty."
   },
   "implementation_target": {
-    "ui": "React static pre-render/export",
-    "route_requirement": "All 143 controlled routes in Arabic and English must be real deep-link-safe static output.",
+    "ui": "Python production renderer in scripts/yfie (driven by scripts/build.py): static, pre-rendered HTML for every controlled route, with the one runtime site-src/app.js",
+    "route_requirement": "All 142 controlled routes in Arabic and English must be real deep-link-safe static output.",
     "single_runtime_rule": "No permanent parallel legacy/new runtime. Migration may use temporary parity work, then obsolete presentation code is removed after acceptance.",
     "future_api_rule": "Future APIs must sit behind adapters and feed the same controlled schemas. They are not required for the first complete build."
   },
@@ -412,10 +412,6 @@
       "page_class": "evidence_detail"
     },
     {
-      "route": "/evidence/NEG-EW-011/",
-      "page_class": "evidence_detail"
-    },
-    {
       "route": "/evidence/PSE-011/",
       "page_class": "evidence_detail"
     },
@@ -723,7 +719,7 @@
   "navigation_contract": {
     "path": "site-src/content/content/navigation_interaction.json",
     "authority_scope": "NAVIGATION_AND_INTERACTION_ONLY",
-    "controlled_route_coverage": 143,
+    "controlled_route_coverage": 142,
     "page_family_count": 11,
     "journey_tests": 13,
     "search_smoke_tests": 21,

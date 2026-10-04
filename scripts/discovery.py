@@ -7,6 +7,11 @@ domain (a release-only decision). With no origin the reference build is a pre-re
 robots.txt disallows crawling and no sitemap is written. With an origin every link is absolute, robots.txt allows
 crawling and points to sitemap.xml, and the sitemap lists every localized page with its language alternates.
 
+The origin may carry a path (owner decision B1, 3 October 2026: https://causewaygrp.com/financial-inclusion-evidence).
+Every absolute URL here is the origin plus the page's path, so it carries that path already; `base_path()` names it for
+`scripts/base_path.py`, which relocates the build's root-absolute references under it. `override()` lets one build
+(`scripts/build.py --origin URL --out DIR`) use another origin without touching site-src/deployment.json.
+
 Nothing here invents metadata: no author (the Readings' authorship is not governed), no publication or modification
 date, and no Dataset type (the resource publishes evidence records and a source directory, not datasets). The one
 image is the page's own governed social image (EAD-09), rasterised from the design's template by
@@ -14,7 +19,9 @@ image is the page's own governed social image (EAD-09), rasterised from the desi
 """
 import html
 import json
+import re
 from pathlib import Path
+from urllib.parse import urlsplit
 from xml.sax.saxutils import escape as xml_escape
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -22,18 +29,61 @@ DEPLOYMENT = ROOT / "site-src" / "deployment.json"
 LANGS = ("en", "ar")
 PUBLISHER = {"@type": "Organization", "name": "CauseWay"}
 
+# https://, a lowercase host (and port), then an optional path of lowercase segments of a-z, 0-9 and "-"; no trailing
+# slash, no query, no fragment, no user information.
+_LABEL = r"[a-z0-9](?:[a-z0-9-]*[a-z0-9])?"
+ORIGIN_RULE = re.compile(rf"https://{_LABEL}(?:\.{_LABEL})*(?::[0-9]{{1,5}})?(?:/[a-z0-9-]+)*")
+ORIGIN_RULE_TEXT = ("public_origin must be null or https://<host> with an optional path of lowercase segments "
+                    "(a-z, 0-9 and '-'), with no trailing slash, query or fragment")
+_OVERRIDE: dict = {}
+
+
+def check_origin(value, where="site-src/deployment.json"):
+    """The origin rule, for the deployment file and for `scripts/build.py --origin`."""
+    if value is not None and not (isinstance(value, str) and ORIGIN_RULE.fullmatch(value)):
+        raise SystemExit(f"{where}: {ORIGIN_RULE_TEXT} (got {value!r})")
+    return value
+
+
+def override(**values):
+    """For one build only (scripts/build.py --origin): the deployment file is read as if it held these values."""
+    if "public_origin" in values:
+        check_origin(values["public_origin"], "--origin")
+    _OVERRIDE.update(values)
+
 
 def deployment():
     d = json.loads(DEPLOYMENT.read_text(encoding="utf-8"))
-    origin = d.get("public_origin")
-    if origin is not None:
-        if not (isinstance(origin, str) and origin.startswith("https://") and not origin.endswith("/")):
-            raise SystemExit("site-src/deployment.json: public_origin must be null or an https:// origin without a trailing slash")
+    d.update(_OVERRIDE)
+    check_origin(d.get("public_origin"))
     return d
 
 
 def origin():
     return deployment().get("public_origin")
+
+
+PRE_RELEASE_ROBOTS = "noindex, nofollow"
+
+
+def pre_release():
+    """Until release no page is to be indexed and no link followed (owner decision B3). Under a path the build's own
+    robots.txt is not read by crawlers, so every page says it itself. Only an explicit false in site-src/deployment.json
+    switches it off, at release."""
+    return deployment().get("pre_release") is not False
+
+
+def robots_meta(release_value=None):
+    """The page's robots meta: the pre-release rule on every page until release; afterwards `release_value` (the 404's
+    own noindex) or none."""
+    value = PRE_RELEASE_ROBOTS if pre_release() else release_value
+    return f'<meta name="robots" content="{value}">' if value else ""
+
+
+def base_path(org=None):
+    """The path the site is served under: "" with no origin or an origin at a domain root, otherwise the origin's path
+    ("/financial-inclusion-evidence"), with no trailing slash."""
+    return urlsplit(org).path if org else ""
 
 
 def url(path, org=None):
@@ -62,7 +112,14 @@ def robots_txt(org=None):
                 "# At release the owner sets public_origin in site-src/deployment.json; the build then allows crawling\n"
                 "# and writes sitemap.xml.\n"
                 "User-agent: *\nDisallow: /\n")
-    return f"User-agent: *\nAllow: /\n\nSitemap: {org}/sitemap.xml\n"
+    base = base_path(org)
+    if not base:
+        return f"User-agent: *\nAllow: /\n\nSitemap: {org}/sitemap.xml\n"
+    # Under a path this file is not where crawlers look: they read only the domain's own /robots.txt. It is written for
+    # completeness; the web administrator names the sitemap there, or in Search Console (docs/RELEASE_RUNBOOK.md).
+    return (f"# This site is served under {base}/. Crawlers read only the domain's root /robots.txt, which names the\n"
+            f"# sitemap below (or the sitemap is submitted in Search Console): docs/RELEASE_RUNBOOK.md, \"Hosting\".\n"
+            f"User-agent: *\nAllow: {base}/\n\nSitemap: {org}/sitemap.xml\n")
 
 
 def sitemap_xml(routes, org):

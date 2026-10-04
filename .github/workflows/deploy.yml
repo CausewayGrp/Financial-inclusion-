@@ -1,0 +1,137 @@
+# Deploy the site to DigitalOcean App Platform (owner decision of 3 October 2026: production hosting is DigitalOcean, at
+# https://causewaygrp.com/financial-inclusion-evidence/; the published build, under the origin's path, from
+# scripts/build.py --out). Prepared and inactive: the job runs only when the owner has set the repository variable
+# YFIE_DEPLOY_ENABLED to "true", and it refuses to deploy a build whose public_origin is still null or whose licence
+# text counsel has not confirmed. Until then every run is skipped and nothing is sent anywhere. The route, its reasons
+# and the corporate side are in docs/RELEASE_RUNBOOK.md ("Hosting"): an nginx service in our own App Platform app,
+# serving the header contract of _headers (scripts/hosting_nginx.py), reached through the corporate site's proxy.
+#
+# What the owner sets, once a DigitalOcean account with a container registry exists (Settings → Secrets and variables):
+#   variable  YFIE_DEPLOY_ENABLED         "true" to switch deployment on (absent or anything else: off)
+#   variable  YFIE_DO_REGISTRY            the DigitalOcean Container Registry name
+#   variable  YFIE_DO_APP_ID              the App Platform app id (the first run creates the app and prints it)
+#   secret    DIGITALOCEAN_ACCESS_TOKEN   a token with write access to that registry and to App Platform
+name: Deploy to DigitalOcean (inactive until the owner switches it on)
+
+# R-04 (independent review of 70398d1): nothing deploys before the full verification has passed on the commit being
+# deployed — governance gates, browser acceptance and every negative-control shard (workflow "Verify"). A push to main
+# runs Verify; this workflow then starts on Verify's completion and deploys only the commit Verify proved, only when
+# Verify succeeded on a push to main. A manual run first runs the same verification itself (the reusable workflow).
+on:
+  workflow_run:
+    workflows: [Verify]
+    types: [completed]
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: deploy-production
+  cancel-in-progress: false
+
+jobs:
+  verify:
+    # A manual run proves its own commit first, with every job of Verify (browser and controls included).
+    name: Full verification (manual runs)
+    if: ${{ github.event_name == 'workflow_dispatch' && vars.YFIE_DEPLOY_ENABLED == 'true' }}
+    uses: ./.github/workflows/verify.yml
+
+  deploy:
+    name: Build, gate and deploy the published site
+    needs: verify
+    # Runs only when deployment is switched on, and only on a verified commit: after Verify succeeded on a push to main,
+    # or after the verification job above succeeded on a manual run. A skipped or failed verification never deploys.
+    if: ${{ always() && vars.YFIE_DEPLOY_ENABLED == 'true' && ((github.event_name == 'workflow_run' && github.event.workflow_run.conclusion == 'success' && github.event.workflow_run.event == 'push' && github.event.workflow_run.head_branch == 'main') || (github.event_name == 'workflow_dispatch' && needs.verify.result == 'success')) }}
+    runs-on: ubuntu-24.04
+    timeout-minutes: 30
+    environment: production
+    env:
+      DEPLOY_SHA: ${{ github.event.workflow_run.head_sha || github.sha }}
+    steps:
+      - name: Check out the verified commit
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          ref: ${{ github.event.workflow_run.head_sha || github.sha }}
+          persist-credentials: false
+
+      - name: Set up Python 3.11
+        uses: actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97 # v7.0.0
+        with:
+          python-version: "3.11"
+          cache: pip
+          cache-dependency-path: requirements.txt
+
+      - name: Install the pinned toolchain
+        run: python -m pip install --disable-pip-version-check -r requirements.txt
+
+      - name: Refuse a pre-release build (public_origin set, licence text confirmed by counsel, downloads only by the owner's switch)
+        run: |
+          python3 - <<'PY'
+          import json, sys
+          d = json.load(open("site-src/deployment.json", encoding="utf-8"))
+          if not d.get("public_origin"):
+              sys.exit("public_origin is null: set it to the release domain first (docs/RELEASE_RUNBOOK.md, step 'Origin')")
+          if d.get("licence_text_confirmed") is not True:
+              sys.exit("licence_text_confirmed is not true: counsel confirms the CC BY 4.0 text on /rights/ and /terms/ first "
+                       "(docs/RELEASE_RUNBOOK.md, step 7a)")
+          print("public_origin:", d["public_origin"], "| pre_release:", d.get("pre_release"), "| public_downloads:",
+                d.get("public_downloads"), "| licence_text_confirmed:", d.get("licence_text_confirmed"))
+          PY
+
+      - name: Gates (the same as CI's)
+        run: |
+          python3 scripts/checksums.py --check
+          python3 scripts/generate_projections.py --check
+          python3 scripts/validate.py
+          python3 scripts/tests/test_content_parity.py
+          python3 scripts/tests/test_exports.py --out build/exports
+
+      - name: The committed dist/ is a fresh build
+        run: |
+          python3 scripts/build.py
+          if [ -n "$(git status --porcelain --untracked-files=all -- dist)" ]; then
+            git status --short -- dist | head -20
+            echo "::error::dist/ differs from a fresh build; commit the build before deploying."
+            exit 1
+          fi
+
+      # Owner decision B1: the published site is `scripts/build.py --out`, which moves every root-absolute address under
+      # the origin's path (dist/ keeps root-relative links for the gates). nginx serves it at that same path with the
+      # header contract written from its _headers (scripts/hosting_nginx.py); the corporate site forwards the path
+      # unchanged (docs/RELEASE_RUNBOOK.md, "Hosting"). The block is proved in a real nginx before the image is built.
+      - name: Build, sweep and stage the published site
+        run: |
+          ORIGIN="$(python3 -c 'import json; print(json.load(open("site-src/deployment.json", encoding="utf-8"))["public_origin"])')"
+          BASE="$(python3 -c 'import sys; sys.path.insert(0, "scripts"); import discovery as d; print(d.base_path(d.origin()))')"
+          rm -rf build/site build/do
+          python3 scripts/build.py --out build/site
+          if [ -n "$BASE" ]; then
+            python3 scripts/tests/test_base_path.py --site build/site --origin "$ORIGIN" --no-browser
+          fi
+          python3 -m playwright install chromium
+          sudo apt-get install -y -q nginx-light >/dev/null 2>&1 || command -v nginx
+          python3 scripts/tests/test_digitalocean_hosting.py --site build/site
+          python3 scripts/hosting_nginx.py --site build/site --out build/do/default.conf
+          mkdir -p build/do/site && cp -R build/site/. build/do/site/ && rm -f build/do/site/_headers
+          echo "BASE=${BASE#/}" >> "$GITHUB_ENV"
+          echo "Publishing ${ORIGIN}/ from build/do/site/"
+
+      - name: Build and push the image to the DigitalOcean Container Registry
+        env:
+          DIGITALOCEAN_ACCESS_TOKEN: ${{ secrets.DIGITALOCEAN_ACCESS_TOKEN }}
+          REGISTRY: ${{ vars.YFIE_DO_REGISTRY }}
+        run: |
+          test -n "$DIGITALOCEAN_ACCESS_TOKEN" && test -n "$REGISTRY" \
+            || { echo "::error::DIGITALOCEAN_ACCESS_TOKEN and YFIE_DO_REGISTRY must both be set"; exit 1; }
+          IMAGE="registry.digitalocean.com/${REGISTRY}/yfie-site:${DEPLOY_SHA}"
+          docker build --pull -f site-src/hosting/digitalocean/Dockerfile --build-arg "BASE=${BASE}" -t "$IMAGE" build/do
+          echo "$DIGITALOCEAN_ACCESS_TOKEN" | docker login registry.digitalocean.com -u "$DIGITALOCEAN_ACCESS_TOKEN" --password-stdin
+          docker push "$IMAGE"
+
+      - name: Deploy the image to App Platform and wait until it is live
+        env:
+          DIGITALOCEAN_ACCESS_TOKEN: ${{ secrets.DIGITALOCEAN_ACCESS_TOKEN }}
+          APP_ID: ${{ vars.YFIE_DO_APP_ID }}
+        run: python3 scripts/do_deploy.py --tag "$DEPLOY_SHA" --app-id "$APP_ID"

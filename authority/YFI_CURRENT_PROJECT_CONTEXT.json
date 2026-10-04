@@ -1,14 +1,14 @@
 {
   "schema": "YFI_CURRENT_PROJECT_CONTEXT/1.0",
   "role": "COMPACT_PROJECTION_NOT_AUTHORITY",
-  "generated_at": "2026-09-27T08:08:00+03:00",
+  "generated_at": "2026-10-03T22:08:21Z",
   "system": {
     "name_en": "Yemen Financial Inclusion Evidence",
     "name_ar": "أدلة الشمول المالي في اليمن",
     "organising_question": "What does the evidence mean for financial inclusion in Yemen, and how do we know?"
   },
   "programme_state": {
-    "as_of": "2026-09-27",
+    "as_of": "2026-10-03",
     "r_programme": "R0–R8.3 CLOSED / PASS; R8.4 CLOSED / PASS including the Evidence Readings (F2); R8.5 CLOSED (F4, audit/R8_5_REPOSITORY_SUBTRACTION_CLOSURE.md); R8.6 CLOSED — DESIGN HANDOFF READY (F8 freeze, audit/R8_6_DESIGN_HANDOFF_FREEZE_CLOSURE.md; F9 clean-room acceptance, audit/FINAL_CLEAN_ROOM_ACCEPTANCE.md)",
     "tranches": "Tranche A CLOSED; Tranche B specification CLOSED; Tranche B execution CLOSED; Tranche C COMPLETE and accepted by OpenAI (26 Sep 2026, recipient verification 31/31); final integration F0–F9 CLOSED (R8.5 closed; whole public corpus accepted; discovery, accessibility, rights and security contract in place; sustainability baseline recorded; Design handoff frozen; clean-room accepted by three cold recipients)",
     "pre_tranche_c": "Sessions P1–P4 CLOSED and independently accepted with three narrow corrections; P5 corrections CLOSED",
@@ -16,16 +16,24 @@
     "not_declared": [
       "PUBLIC RELEASE READY"
     ],
-    "design_prompt_status": "DESIGN HANDOFF READY — executable; start path handoff/README_FIRST.md → handoff/CLAUDE_DESIGN_MASTER_PROMPT.md (tightened 27 Sep 2026 by the post-F9 correction and the design-enablement control pass); the Design package is accepted (owner's final D7 visual acceptance recorded 2 Oct 2026, audit/OWNER_DECISIONS_2026-10-02.md) and Claude Code has started: the production runtime is pull request #8, EAD states in FINAL_OPEN_ITEMS_REGISTER.md section 1",
+    "design_prompt_status": "DESIGN HANDOFF READY — executable; start path handoff/README_FIRST.md → handoff/CLAUDE_DESIGN_MASTER_PROMPT.md (tightened 27 Sep 2026 by the post-F9 correction and the design-enablement control pass); the Design package is accepted (owner's final D7 visual acceptance recorded 2 Oct 2026, audit/OWNER_DECISIONS_2026-10-02.md) and the production runtime is merged: pull request #8 (EAD-01 to EAD-11), merged into main at 38a9a97 on 2 October 2026, EAD states in FINAL_OPEN_ITEMS_REGISTER.md section 1; the release candidate is pull request #9 (branch code/release-candidate-fixes), not a public release",
+    "production_runtime": {
+      "pull_request": 8,
+      "title": "code: the production runtime — EAD-01 to EAD-11",
+      "state": "MERGED",
+      "merge_commit": "38a9a97",
+      "merged_on": "2026-10-02",
+      "release_candidate": "pull request #9, branch code/release-candidate-fixes"
+    },
     "checkpoint": "OPENAI_REENTRY_CHECKPOINT.md",
     "tranche_c": {
       "closure": "audit/TRANCHE_C_FINAL_ACCEPTANCE.md",
       "findings_ledger": "audit/TRANCHE_C_FINDINGS_LEDGER.csv",
-      "currentness_cutoff": "audit/FINAL_CURRENTNESS_CUTOFF.md — 26 September 2026",
+      "currentness_cutoff": "audit/FINAL_CURRENTNESS_CUTOFF.md — 26 September 2026; release-candidate recheck of 3 October 2026 appended (edition of 3 October 2026)",
       "reading_portfolio": "audit/READING_PORTFOLIO_FINAL_ADJUDICATION.md — ten Readings integrated Master-first (RP-F2); BIL-05 CLOSED (bilingual invariance 0)",
       "public_corpus": "audit/F5_PUBLIC_CORPUS_ACCEPTANCE.md — every public text reviewed in Arabic, English and parity (667 findings; ledger audit/F5_CORPUS_FINDINGS_LEDGER.csv)",
       "discovery_accessibility_security": "audit/F6_DISCOVERY_ACCESSIBILITY_RIGHTS_SECURITY_ACCEPTANCE.md — pre-Design contract and gates F6-G01…G08; public origin null until the owner sets it (site-src/deployment.json)",
-      "sustainability": "docs/SUSTAINABILITY_METHOD.md; audit/SUSTAINABILITY_PRE_DESIGN_BASELINE.json (pre-design reference build; remeasure after Design and deployment)",
+      "sustainability": "docs/SUSTAINABILITY_METHOD.md; audit/SUSTAINABILITY_PRE_DESIGN_BASELINE.json (pre-design reference build); docs/SUSTAINABILITY_IMPLEMENTED_RUNTIME.json (the implemented runtime, remeasured 29 September 2026; the logo derivatives' effect in audit/release_candidate/page_weight/PAGE_WEIGHT_EAD-03.md); only the host remains to be measured",
       "handoff_freeze": "audit/R8_6_DESIGN_HANDOFF_FREEZE_CLOSURE.md — one start file, one Design prompt, route/content/state inventory, acceptance criteria, Design-to-Code contract; gates R86-G01…G04",
       "open_items": "FINAL_OPEN_ITEMS_REGISTER.md — 47 items in six classes; zero DESIGN_BLOCKER (OWN-07 and OWN-08 closed by the post-F9 correction, 27 Sep 2026)",
       "clean_room_acceptance": "audit/FINAL_CLEAN_ROOM_ACCEPTANCE.md — three cold-recipient runs, archive test from an empty directory, final gates and scans",
@@ -37,7 +45,7 @@
   "production_master": {
     "path": "authority/Yemen_Financial_Inclusion_Evidence_Master.xlsx",
     "drive_id": "1xAbdDHJd5bYo0Pzo_a6dR6HsZ056LzJU",
-    "sha256": "17db032b15da16fc4b5b3c3b49f19aebf2ecb4ec46634613fe8505d0f038690b",
+    "sha256": "90014e3bd27133c34b8435090230cf5b28a3301dec9f366c6fedf047b5ea2838",
     "is_sole_authority": true,
     "authority_dimensions": [
       "semantic",
@@ -51,26 +59,26 @@
   },
   "controlled_projection": {
     "page_specs_path": "site-src/content/page_specs.json",
-    "page_specs_sha256": "d45748046ea56fd0e67fdf112f9888de65b3fe7fab46ce6f51de3a80824b69aa",
-    "page_specs": 143,
+    "page_specs_sha256": "0298a3c6b5c72ab9da1fa99667f79303475f39e12bbe41c2f6f581459f8a2b86",
+    "page_specs": 142,
     "all_page_specs_master_hash_match": true,
     "page_specs_index_master_hash_match": true
   },
   "controlled_scale": {
-    "page_specs": 143,
-    "page_sections": 574,
+    "page_specs": 142,
+    "page_sections": 573,
     "entry_questions": 11,
-    "evidence_objects": 110,
+    "evidence_objects": 109,
     "public_claims": 60,
     "evidence_passports": 55,
     "readings": 10,
     "measurement_priorities": 10,
     "visual_contracts": 36,
-    "search_records": 435,
-    "sources": 160,
-    "publicly_addressable_sources": 151,
+    "search_records": 438,
+    "sources": 165,
+    "publicly_addressable_sources": 156,
     "curated_source_report_cards": 28,
-    "chronology_events": 24,
+    "chronology_events": 23,
     "reading_sections": 68
   },
   "public_navigation": {
@@ -190,7 +198,7 @@
     ]
   },
   "validation": {
-    "master_sha256_recorded": "17db032b15da16fc4b5b3c3b49f19aebf2ecb4ec46634613fe8505d0f038690b",
+    "master_sha256_recorded": "90014e3bd27133c34b8435090230cf5b28a3301dec9f366c6fedf047b5ea2838",
     "projection_hash_binding": "PASS",
     "schema_required_keys": [
       "schema",

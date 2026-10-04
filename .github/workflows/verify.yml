@@ -80,12 +80,35 @@ jobs:
 
       - name: Social images cover every route and match the governed text they were made from
         run: python3 scripts/social_images.py --check
+      - name: Logo derivatives are pure resamples of the unchanged master (EAD-03)
+        run: python3 scripts/logo_derivatives.py --check
 
       - name: Bilingual numeric invariance (every English/Arabic page pair prints the same numbers)
         run: python3 audit/tranche_c/checks/bilingual_invariance.py
 
-      - name: Cutover parity (the runtime prints everything the pre-design renderer printed)
-        run: python3 scripts/tests/test_cutover_parity.py
+      - name: Content parity (every page prints its governed copy and no ungoverned number)
+        run: python3 scripts/tests/test_content_parity.py
+
+      - name: Cutover parity (the runtime prints everything the pre-design renderer printed, while the frozen oracle is current)
+        # Exit 2 means the oracle is pinned to projections a later Master transaction moved: the cutover comparison can no
+        # longer be made and the content-parity step above is the standing gate (scripts/tests/test_cutover_parity.py docstring).
+        run: |
+          set +e
+          python3 scripts/tests/test_cutover_parity.py
+          rc=$?
+          if [ "$rc" -eq 2 ]; then echo "::notice::Cutover oracle pinned to earlier projections; content parity is the standing gate."; exit 0; fi
+          exit "$rc"
+
+      - name: Data exports (B14 a; prepared and switched off, every value proved against the projections)
+        run: python3 scripts/tests/test_exports.py --out build/exports
+
+      - name: Attach the exports as an artefact (publishing waits on the owner's licence decision)
+        uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a # v7.0.1
+        with:
+          name: yfie-data-exports
+          path: build/exports/
+          if-no-files-found: error
+          retention-days: 30
 
       - name: Gates leave the working tree clean
         run: |
@@ -124,14 +147,38 @@ jobs:
       - name: Viewport acceptance (EN/AR at 320, 390, 640 and 1440 px)
         run: python3 audit/tranche_c/checks/viewport_acceptance.py
 
+      - name: Security headers (B14 b; every page served under dist/_headers, no policy violation)
+        run: python3 scripts/tests/test_security_headers.py
+
+      - name: Base path (owner B2; built for https://causewaygrp.com/financial-inclusion-evidence, served under the path; negative control included)
+        run: python3 scripts/tests/test_base_path.py
+
+      - name: DigitalOcean route (owner decision of 3 October 2026; the nginx block of _headers in a real nginx, every page under the header test; negative control included)
+        run: |
+          command -v nginx || sudo apt-get install -y -q nginx-light
+          python3 scripts/tests/test_digitalocean_hosting.py
+
+      - name: DigitalOcean image (R-17; the pinned nginx image of site-src/hosting/digitalocean/Dockerfile, every page under the header test)
+        run: python3 scripts/tests/test_digitalocean_hosting.py --image
+
+      - name: No JavaScript (R-05; the note, the language switch and the menu with JavaScript off; negative control included)
+        run: python3 scripts/tests/test_no_javascript.py
+
   controls:
     # Every gate that finds its evidence in the built site is proved to still fail on the fault it was written to catch
     # (EAD-01: the cutover re-pointed those selectors, and a selector that silently matches nothing would pass the
-    # suites). One full validator run per fault, so this is the slow job; it runs beside the browser one, not before it.
-    name: Gate negative controls
+    # suites). One full gate run per fault, on its own copy of the tree after the clean copy has passed, so this is the
+    # slow work. It is split across six runners (owner note of 3 October 2026, 13:00, point 1): run serially, it had
+    # grown past 45 minutes, and on one 2-CPU runner two faults side by side took as long as two in a row (run
+    # 37117577689). Shard K runs every sixth control from the K-th, so together the shards run each control exactly once.
+    name: Gate negative controls (${{ matrix.shard }}/6)
     needs: gates
     runs-on: ubuntu-24.04
-    timeout-minutes: 45
+    timeout-minutes: 20
+    strategy:
+      fail-fast: false
+      matrix:
+        shard: [1, 2, 3, 4, 5, 6]
     steps:
       - name: Check out
         uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
@@ -148,7 +195,23 @@ jobs:
       - name: Install the pinned toolchain
         run: python -m pip install --disable-pip-version-check -r requirements.txt
 
-      - name: Every gate still fails on the fault it was written to catch
+      - name: Every gate still fails on the fault it was written to catch (this shard)
         run: |
           python3 scripts/build.py
-          python3 scripts/tests/test_gate_negative_controls.py
+          python3 scripts/tests/test_gate_negative_controls.py --shard "${{ matrix.shard }}/6" --jobs 1
+
+  controls-result:
+    # The one required check for the controls: green only when every shard ran and caught every one of its faults.
+    name: Gate negative controls
+    needs: controls
+    if: always()
+    runs-on: ubuntu-24.04
+    timeout-minutes: 5
+    steps:
+      - name: Every shard passed
+        run: |
+          if [ "${{ needs.controls.result }}" != "success" ]; then
+            echo "::error::A negative-control shard did not pass (result: ${{ needs.controls.result }})."
+            exit 1
+          fi
+          echo "All six shards passed: every control ran once and caught its fault."
