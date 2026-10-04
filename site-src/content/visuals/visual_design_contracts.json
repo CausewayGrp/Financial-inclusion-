@@ -1,7 +1,7 @@
 {
   "schema_version": "1.0",
   "contract_id": "VISUAL-DESIGN-CONTRACT",
-  "authority_master_sha256": "51a7f1930fcd21e514d608785abdb2a8887eeb6d4e2d591629477b87ebb7da75",
+  "authority_master_sha256": "39d06c358abdfb06ef350014e6a3407e7a91871918f7af1e5a2b105ea183f514",
   "rule": "Design-layer controlled input. It assigns every governed visual contract (Master 11) a design tier and, for SIGNATURE and CORE_ANALYTICAL visuals, declares which governed rows a chart binds to and how they are drawn. It never carries a fact, number, label or sentence: values come from Master data rows, text from Master contract/evidence fields, and legend labels from the governed interface copy (UI-VIS-*). The generator resolves every binding and fails on any unresolved ID, any value that disagrees with its guard, or any visual left untiered.",
   "tiers": {
     "SIGNATURE": "Distinctive to this product, decision-useful, drawable from governed rows and safe when detached. Designed first; gets a full data contract.",
@@ -2073,13 +2073,13 @@
         "title_en": "Account ownership and measured gaps: Global Findex 2021 wave (Yemen fieldwork 2022–23)",
         "question_en": "What does the latest representative evidence say about account ownership and measured gaps?",
         "prohibited_inference_en": "These are values from one survey wave, not an annual series and not a 2026 rate. They cannot be mapped to governorates, they are not comparable with account counts reported by the Central Bank of Yemen – Aden (CBY-Aden), and the differences between groups do not establish their causes.",
-        "alt_text_en": "In the 2021 Global Findex wave for Yemen (fieldwork 7 November 2022 to 9 January 2023; World Bank data year 2022), 11.9% of adults aged 15 and over in the areas the survey covered had an account at a financial institution or with a mobile-money provider. Within the same wave: 5.44% of women and 18.35% of men had an account, a difference of 12.91 percentage points; 6.5% of adults in the poorest 40% and 15.5% in the richest 60% by household income, a difference of about 9.0 percentage points; 6.98% of adults with primary education or less and 19.53% of those with secondary education or more, a difference of 12.55 percentage points; and 5.01% of adults aged 15–24 and 16.11% of those aged 25 and over, a difference of 11.10 percentage points. The survey frame excludes areas the source says represent about 23% of the population. These figures are not a 2026 rate and cannot be mapped to governorates. Does not establish: These are values from one survey wave, not an annual series and not a 2026 rate. They cannot be mapped to governorates, they are not comparable with account counts reported by the Central Bank of Yemen – Aden (CBY-Aden), and the differences between groups do not establish their causes.",
+        "alt_text_en": "In the 2021 Global Findex wave for Yemen (fieldwork 7 November 2022 to 9 January 2023; World Bank data year 2022), 11.9% of adults aged 15 and over in the areas the survey covered had an account at a financial institution or with a mobile-money provider. Within the same wave: 5.4% of women and 18.3% of men had an account, a difference of 12.9 percentage points; 6.5% of adults in the poorest 40% and 15.5% in the richest 60% by household income, a difference of 9.0 percentage points; 7.0% of adults with primary education or less and 19.5% of those with secondary education or more, a difference of 12.5 percentage points; and 5.0% of adults aged 15–24 and 16.1% of those aged 25 and over, a difference of 11.1 percentage points. The survey frame excludes areas the source says represent about 23% of the population. These figures are not a 2026 rate and cannot be mapped to governorates. Does not establish: These are values from one survey wave, not an annual series and not a 2026 rate. They cannot be mapped to governorates, they are not comparable with account counts reported by the Central Bank of Yemen – Aden (CBY-Aden), and the differences between groups do not establish their causes.",
         "period_en": "World Bank reporting year 2022; Global Findex 2021 study; Yemen fieldwork 2022-11-07 to 2023-01-09",
         "universe_en": "Adults aged 15 and over in the areas the survey covered (the survey frame excludes areas with about 23% of the population); subgroups as defined within the same wave.",
         "title_ar": "امتلاك الحساب والفجوات المقاسة: موجة Global Findex 2021 (العمل الميداني في اليمن 2022–2023)",
         "question_ar": "ماذا تقول أحدث الأدلة السكانية الممثلة عن امتلاك الحساب والفجوات المقاسة؟",
         "prohibited_inference_ar": "هذه قيم من موجة مسحية واحدة، وليست سلسلة سنوية ولا معدلًا لعام 2026. ولا يمكن إسقاطها على المحافظات، ولا تُقارن بأعداد الحسابات التي يُبلغ عنها البنك المركزي اليمني – عدن، ولا تثبت الفروق بين الفئات أسبابها.",
-        "alt_text_ar": "في موجة 2021 من المؤشر العالمي للشمول المالي (Global Findex) الخاصة باليمن (العمل الميداني من 7 نوفمبر 2022 إلى 9 يناير 2023؛ سنة البيانات لدى البنك الدولي 2022)، بلغت نسبة البالغين بعمر 15 سنة فأكثر في المناطق التي شملها المسح ممن يملكون حسابًا لدى مؤسسة مالية أو لدى مقدم خدمة أموال عبر الهاتف المحمول 11.9%. وفي الموجة نفسها: 5.44% بين النساء و18.35% بين الرجال، بفارق 12.91 نقطة مئوية؛ و6.5% بين البالغين في أفقر 40% و15.5% في أغنى 60% بحسب دخل الأسرة، بفارق يقارب 9.0 نقاط مئوية؛ و6.98% بين من لم يتجاوز تعليمهم المرحلة الابتدائية و19.53% بين الحاصلين على تعليم ثانوي فأعلى، بفارق 12.55 نقطة مئوية؛ و5.01% بين الشباب بعمر 15–24 سنة و16.11% بين البالغين بعمر 25 سنة فأكثر، بفارق 11.10 نقطة مئوية. ويستبعد إطار المسح مناطق يذكر المصدر أنها تضم نحو 23% من السكان. ولا تمثل هذه الأرقام معدلًا لعام 2026 ولا يمكن إسقاطها على المحافظات. لا يثبت: هذه قيم من موجة مسحية واحدة، وليست سلسلة سنوية ولا معدلًا لعام 2026. ولا يمكن إسقاطها على المحافظات، ولا تُقارن بأعداد الحسابات التي يُبلغ عنها البنك المركزي اليمني – عدن، ولا تثبت الفروق بين الفئات أسبابها.",
+        "alt_text_ar": "في موجة 2021 من المؤشر العالمي للشمول المالي (Global Findex) الخاصة باليمن (العمل الميداني من 7 نوفمبر 2022 إلى 9 يناير 2023؛ سنة البيانات لدى البنك الدولي 2022)، بلغت نسبة البالغين بعمر 15 سنة فأكثر في المناطق التي شملها المسح ممن يملكون حسابًا لدى مؤسسة مالية أو لدى مقدم خدمة أموال عبر الهاتف المحمول 11.9%. وفي الموجة نفسها: 5.4% بين النساء و18.3% بين الرجال، بفارق 12.9 نقطة مئوية؛ و6.5% بين البالغين في أفقر 40% و15.5% في أغنى 60% بحسب دخل الأسرة، بفارق 9.0 نقطة مئوية؛ و7.0% بين من لم يتجاوز تعليمهم المرحلة الابتدائية و19.5% بين الحاصلين على تعليم ثانوي فأعلى، بفارق 12.5 نقطة مئوية؛ و5.0% بين الشباب بعمر 15–24 سنة و16.1% بين البالغين بعمر 25 سنة فأكثر، بفارق 11.1 نقطة مئوية. ويستبعد إطار المسح مناطق يذكر المصدر أنها تضم نحو 23% من السكان. ولا تمثل هذه الأرقام معدلًا لعام 2026 ولا يمكن إسقاطها على المحافظات. لا يثبت: هذه قيم من موجة مسحية واحدة، وليست سلسلة سنوية ولا معدلًا لعام 2026. ولا يمكن إسقاطها على المحافظات، ولا تُقارن بأعداد الحسابات التي يُبلغ عنها البنك المركزي اليمني – عدن، ولا تثبت الفروق بين الفئات أسبابها.",
         "period_ar": "سنة الإبلاغ في بيانات البنك الدولي: 2022؛ دراسة Global Findex 2021؛ العمل الميداني في اليمن من 2022-11-07 إلى 2023-01-09",
         "universe_ar": "البالغون بعمر 15 سنة فأكثر في المناطق التي شملها المسح (يستبعد إطار المسح مناطق تضم نحو 23% من السكان)، وفق تعريفات الفئات الفرعية داخل الموجة نفسها.",
         "canonical_route": "/evidence/VIS-FINDEX-GAPS/",
@@ -2143,7 +2143,7 @@
                 "unit": "percent of population ages 15+",
                 "flag": "PUBLIC_PRIMARY_AGGREGATE",
                 "source": "https://data.worldbank.org/indicator/FX.OWN.TOTL.FE.ZS?locations=YE",
-                "y": 5.44,
+                "y": 5.4,
                 "grammar_state": "MEASURED",
                 "markers": [],
                 "unit_label": {
@@ -2163,7 +2163,7 @@
                 "unit": "percent of population ages 15+",
                 "flag": "PUBLIC_PRIMARY_AGGREGATE",
                 "source": "https://data.worldbank.org/indicator/FX.OWN.TOTL.MA.ZS?locations=YE",
-                "y": 18.35,
+                "y": 18.3,
                 "grammar_state": "MEASURED",
                 "markers": [],
                 "unit_label": {
@@ -2223,7 +2223,7 @@
                 "unit": "percent of population ages 15+",
                 "flag": "PUBLIC_PRIMARY_AGGREGATE",
                 "source": "https://data.worldbank.org/indicator/FX.OWN.TOTL.PL.ZS?locations=YE",
-                "y": 6.98,
+                "y": 7.0,
                 "grammar_state": "MEASURED",
                 "markers": [],
                 "unit_label": {
@@ -2243,7 +2243,7 @@
                 "unit": "percent of population ages 15+",
                 "flag": "PUBLIC_PRIMARY_AGGREGATE",
                 "source": "https://data.worldbank.org/indicator/FX.OWN.TOTL.SO.ZS?locations=YE",
-                "y": 19.53,
+                "y": 19.5,
                 "grammar_state": "MEASURED",
                 "markers": [],
                 "unit_label": {
@@ -2263,7 +2263,7 @@
                 "unit": "percent of population ages 15-24",
                 "flag": "PUBLIC_PRIMARY_AGGREGATE",
                 "source": "https://data.worldbank.org/indicator/FX.OWN.TOTL.YG.ZS?locations=YE",
-                "y": 5.01,
+                "y": 5.0,
                 "grammar_state": "MEASURED",
                 "markers": [],
                 "unit_label": {
@@ -2283,7 +2283,7 @@
                 "unit": "percent of population ages 25+",
                 "flag": "PUBLIC_PRIMARY_AGGREGATE",
                 "source": "https://data.worldbank.org/indicator/FX.OWN.TOTL.OL.ZS?locations=YE",
-                "y": 16.11,
+                "y": 16.1,
                 "grammar_state": "MEASURED",
                 "markers": [],
                 "unit_label": {
@@ -2308,7 +2308,7 @@
         "derived": [
           {
             "id": "gender_gap_pp",
-            "value": 12.91,
+            "value": 12.9,
             "unit": "percentage points",
             "from": [
               "WB-FINDEX-OBS-2022-003",
@@ -2338,7 +2338,7 @@
           },
           {
             "id": "education_gap_pp",
-            "value": 12.55,
+            "value": 12.5,
             "unit": "percentage points",
             "from": [
               "WB-FINDEX-OBS-2022-007",
@@ -5509,13 +5509,13 @@
         "title_en": "A measured gap, mechanisms still to test",
         "question_en": "What is measured about the gender gap, and what remains hypothesis?",
         "prohibited_inference_en": "The measured same-wave gap does not establish its causes, its size in 2026 or differences between governorates.",
-        "alt_text_en": "In the Global Findex 2021 wave for Yemen (fieldwork 7 November 2022 to 9 January 2023), 5.44% of women and 18.35% of men aged 15 and over in the survey's coverage had an account, a difference of 12.91 percentage points; the survey excluded areas holding about 23% of the population. Possible mechanisms such as identity, mobile-phone access, income, distance and trust are hypotheses still to be tested, not measured causes. The wave is not a 2026 estimate and not a map of differences by governorate. Does not establish: The measured same-wave gap does not establish its causes, its size in 2026 or differences between governorates.",
+        "alt_text_en": "In the Global Findex 2021 wave for Yemen (fieldwork 7 November 2022 to 9 January 2023), 5.4% of women and 18.3% of men aged 15 and over in the survey's coverage had an account, a difference of 12.9 percentage points; the survey excluded areas holding about 23% of the population. Possible mechanisms such as identity, mobile-phone access, income, distance and trust are hypotheses still to be tested, not measured causes. The wave is not a 2026 estimate and not a map of differences by governorate. Does not establish: The measured same-wave gap does not establish its causes, its size in 2026 or differences between governorates.",
         "period_en": "2021 wave; Yemen fieldwork 2022–23",
         "universe_en": "Adults in the Findex survey coverage; same-wave male/female comparison",
         "title_ar": "فجوة مقاسة وآليات ما تزال بحاجة إلى اختبار",
         "question_ar": "ما الذي قيس في الفجوة بين الجنسين وما الذي ما يزال فرضية؟",
         "prohibited_inference_ar": "لا تثبت الفجوة المقاسة داخل الموجة نفسها أسبابَها ولا حجمها في 2026 ولا اختلافها بين المحافظات.",
-        "alt_text_ar": "في موجة 2021 من المؤشر العالمي للشمول المالي (Global Findex) لليمن (العمل الميداني من 7 نوفمبر 2022 إلى 9 يناير 2023)، امتلكت 5.44% من النساء و18.35% من الرجال بعمر 15 سنة فأكثر ضمن تغطية المسح حسابًا، بفارق 12.91 نقطة مئوية؛ وقد استبعد المسح مناطق يقطنها نحو 23% من السكان. أما الآليات المحتملة، مثل الهوية والوصول إلى الهاتف المحمول والدخل والمسافة والثقة، ففرضيات لم تُختبر بعد، لا أسباب مقاسة. ولا تمثل الموجة تقديرًا لعام 2026 ولا خريطة للفروق بين المحافظات. لا يثبت: لا تثبت الفجوة المقاسة داخل الموجة نفسها أسبابَها ولا حجمها في 2026 ولا اختلافها بين المحافظات.",
+        "alt_text_ar": "في موجة 2021 من المؤشر العالمي للشمول المالي (Global Findex) لليمن (العمل الميداني من 7 نوفمبر 2022 إلى 9 يناير 2023)، امتلكت 5.4% من النساء و18.3% من الرجال بعمر 15 سنة فأكثر ضمن تغطية المسح حسابًا، بفارق 12.9 نقطة مئوية؛ وقد استبعد المسح مناطق يقطنها نحو 23% من السكان. أما الآليات المحتملة، مثل الهوية والوصول إلى الهاتف المحمول والدخل والمسافة والثقة، ففرضيات لم تُختبر بعد، لا أسباب مقاسة. ولا تمثل الموجة تقديرًا لعام 2026 ولا خريطة للفروق بين المحافظات. لا يثبت: لا تثبت الفجوة المقاسة داخل الموجة نفسها أسبابَها ولا حجمها في 2026 ولا اختلافها بين المحافظات.",
         "period_ar": "موجة 2021؛ العمل الميداني في اليمن 2022–2023",
         "universe_ar": "البالغون ضمن تغطية مسح Findex؛ مقارنة بين الرجال والنساء داخل الموجة نفسها",
         "canonical_route": "/readings/gender-gap-measured-causes-open/",

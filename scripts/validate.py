@@ -59,7 +59,7 @@ for lang,dirv in [('ar','rtl'),('en','ltr')]:
                 rr=href.split('?',1)[0].split('#',1)[0].strip('/'); bits=rr.split('/',1); lf=DIST/bits[0]/(bits[1] if len(bits)>1 else '')/'index.html'
                 if not lf.exists(): errors.append(f'broken internal link {href} in {f}')
 home=(DIST/'ar/index.html').read_text(encoding='utf-8')
-for token in ['11.9%','12.91','561','1,651']:
+for token in ['11.9%','12.9','561','1,651']:
     if token not in home: errors.append('home semantic token missing '+token)
 for f in DIST.rglob('*.html'):
     t=f.read_text(encoding='utf-8')
@@ -1050,8 +1050,8 @@ for spec in specs:
 
 # Representative numeric signatures prove that material numbers survive both public editions.
 s05_numeric_signatures={
-    '/':['11.9%','12.91','561','1,651'],
-    '/people/':['11.9%','12.91'],
+    '/':['11.9%','12.9','561','1,651'],
+    '/people/':['11.9%','12.9'],
     '/firms/':['22%','50%','46%'],
     '/payments/':['561','1,651'],
     '/providers/':['100','231','111'],
@@ -1946,9 +1946,11 @@ def _p3_rows(vid):
 def _p3_numtext(x):
     return ('%f'%x).rstrip('0').rstrip('.') if isinstance(x,float) else str(x)
 def _p3_nums(fragment):
+    # E2-2: a value printed at its published precision with trailing zeros (7.0 for a governed 7.0) is the same value;
+    # trailing zeros after the decimal mark are dropped before comparing, never a significant digit
     _tmp=DIST/'.p3-figure.html'
     _tmp.write_text('<main>'+fragment+'</main>',encoding='utf-8')
-    try: return set(_BI.nums(str(_tmp)))
+    try: return {re.sub(r'(\.\d*?)0+$',r'\1',n).rstrip('.') if re.fullmatch(r'[\d,]+\.\d+',n) else n for n in _BI.nums(str(_tmp))}
     finally: _tmp.unlink()
 _p3_drawn={}
 for _f in sorted(DIST.rglob('*.html')):
@@ -3403,6 +3405,64 @@ try:
         errors.append("RC-19 the App Platform image's nginx base is not pinned by digest")
 except Exception as _x:
     errors.append("RC-19 unreadable " + repr(_x))
+
+# E2-PREC (edition 2, candidate b; finding R-11): one display precision for every Global Findex figure. Shares are
+# printed to one decimal place, rounded from the World Bank's unrounded values, and a gap is the difference of the
+# printed shares (/methodology/ section 7). Asserted on what a reader sees (visible text: headings, prose, tables,
+# chart labels and text alternatives; attributes are not text), in both languages:
+# (1) on every Evidence Record whose sources include a Global Findex source, on /people/ and on the gender-gap Reading,
+#     no number prints with two or more decimal places;
+# (2) on every page, no number with two or more decimal places lies within 0.05 of a governed 2022 Findex share or of a
+#     same-dimension gap between two of them (this reaches Home, /measurement/, Readings and search-led pages).
+_PREC_ANY = re.compile(r"(?<![\d.,])\d+\.\d{2,}(?![\d])")
+def _visible(_p):
+    _h = re.sub(r"<(script|style)\b[^>]*>.*?</\1>", " ", _p.read_text(encoding="utf-8"), flags=re.S)
+    return re.sub(r"\s+", " ", _html.unescape(re.sub(r"<[^>]+>", " ", _h)))
+try:
+    _fx = [o["object_id"] for o in json.load(open(ROOT / "site-src/content/evidence/evidence_objects.json", encoding="utf-8"))
+           if "FINDEX" in str(o.get("source_dependencies") or "").upper()]
+    _fb = json.load(open(ROOT / "site-src/content/data/findex_baseline.json", encoding="utf-8"))
+    _fb = _fb["rows"]
+    _hi = next(i for i, r in enumerate(_fb) if r and r[0] == "observation_id")
+    _fb = [dict(zip(_fb[_hi], r)) for r in _fb[_hi + 1:] if r and r[0]]
+    _lv = {r["group"]: float(r["value"]) for r in _fb if isinstance(r, dict) and str(r.get("observation_id", "")).startswith("WB-FINDEX-OBS-2022")
+           and isinstance(r.get("value"), (int, float))}
+    _pairs = (("male", "female"), ("richest 60%", "poorest 40%"), ("secondary education or more", "primary education or less"),
+              ("ages 25+", "ages 15-24"))
+    _targets = list(_lv.values()) + [_lv[a] - _lv[b] for a, b in _pairs if a in _lv and b in _lv]
+    if len(_targets) < 13:
+        errors.append(f"E2-PREC read only {len(_targets)} Findex shares and gaps")
+    _np = 0
+    _strict = {f"{_l}/evidence/{_i}/index.html" for _l in ("en", "ar") for _i in _fx} | \
+              {f"{_l}/{_r}" for _l in ("en", "ar") for _r in ("people/index.html", "readings/gender-gap-measured-causes-open/index.html")}
+    for _f in sorted(DIST.glob("*/**/index.html")) + sorted(DIST.glob("*/index.html")):
+        _rel = str(_f.relative_to(DIST))
+        if not _rel.startswith(("en/", "ar/")):
+            continue
+        _txt = _visible(_f)
+        _strictp = _rel in _strict
+        _np += _strictp
+        for _m in _PREC_ANY.finditer(_txt):
+            _v = float(_m.group(0))
+            if _strictp or any(abs(_v - _t) < 0.05 for _t in _targets):
+                errors.append(f"E2-PREC {_rel} prints a Findex share or gap to two decimals: {_m.group(0)}")
+    if _np < 30:
+        errors.append(f"E2-PREC read only {_np} Findex pages")
+    # (3) the drawing prints every share and gap at the same one-decimal precision as the text (7.0, never 7), in its bars
+    #     and in its table, wherever VIS-FINDEX-GAPS is drawn
+    _nv = 0
+    for _f in sorted(DIST.glob("*/**/index.html")):
+        for _m in re.finditer(r'<figure class="fig[^"]*"[^>]*data-visual-id="VIS-FINDEX-GAPS".*?</figure>', _f.read_text(encoding="utf-8"), re.S):
+            _vals = re.findall(r'<text class="val"[^>]*>([^<]*)</text>', _m.group(0)) + \
+                    re.findall(r'<td[^>]*>(?:<span[^>]*>)?<bdi dir="ltr">([^<]*)</bdi>', _m.group(0))
+            _nv += len(_vals)
+            for _s in _vals:
+                if not re.fullmatch(r"\d+\.\d", _s.strip()):
+                    errors.append(f"E2-PREC {_f.relative_to(DIST)} VIS-FINDEX-GAPS prints {_s.strip()!r}, not one decimal place")
+    if _nv < 40:
+        errors.append(f"E2-PREC read only {_nv} drawn Findex values")
+except Exception as _x:
+    errors.append("E2-PREC unreadable " + repr(_x))
 
 print(f'HTML={len(list(DIST.rglob("*.html")))} ERRORS={len(errors)} WARN={len(warns)}')
 if warns:

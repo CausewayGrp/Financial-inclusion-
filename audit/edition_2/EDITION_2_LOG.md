@@ -29,3 +29,22 @@
   wording was half right: "no later state" is false, because the same report records a later procurement state, so the
   text keeps "no later operational state". Reviewer F1–F6 folded in as E2-1b; F1's dated wording would break RC-A1, so
   the text alternative says "measured the day before it became effective" instead.
+- **b, E2-2 / E2-2b (Findex precision) — BUILT.** Rule: one decimal, from the World Bank's unrounded values, gaps
+  as differences of printed shares. Why not whole points: it breaks the match with the World Bank's own Yemen table a
+  reader verifies against, and prints 2014's 0.4% and 0.0% as "0%", which reads as nobody (missing ≠ zero). Why not
+  two: no source and no sample supports it. Intervals: not computable here (no published margin of error for Yemen's
+  2022 survey: the 2021 report predates its fieldwork and the 2025 methodology table covers the 2024 surveys; the
+  microdata needs a login). Reviewer findings 1–3 folded in as E2-2b. Reader gain: a reader no longer meets a
+  precision the survey does not have, and can match every figure to the World Bank's table.
+- **b, follow-on — RECORDED.** The same false precision exists outside Findex: the firm survey (91.84%, 68.71%,
+  23.13%, 69.12% … on /firms/ and its records) and CLM-051 (57.03%, 29.97%, 2.41%). Remittance prices (two decimals,
+  as Remittance Prices Worldwide publishes them) and POS growth (exact arithmetic on counts) are not the same problem.
+  Not folded into b: a different source with its own published precision to be read first, and "91.84%" is in a
+  Reading's governed title. See the closing list for its disposition.
+- **c — finding before building.** The World Bank's Findex 2021-wave aggregates (Global Findex Database 2025 file,
+  rows "Low income" and "Middle East & North Africa (excluding high income)", year 2021) are adult-population-weighted
+  means that include Yemen's 2022 observation: reproduced exactly here (Low income 35.182% over 19 economies with
+  Yemen; MENA excluding high income 45.413% over 10 economies with Yemen, on the FY24 regions, without Afghanistan and
+  Pakistan). This corrects the first reply's challenge: the regional series does not include Afghanistan and
+  Pakistan, although the World Bank's indicator API now labels it with the new region name. The Little Data Book
+  (p. 159) already printed Yemen beside its region and income group: the World Bank's own presentation.

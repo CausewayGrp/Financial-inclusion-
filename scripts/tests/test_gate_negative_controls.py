@@ -357,6 +357,16 @@ CONTROLS = [
     ("a chain figure's text alternative names a step its drawing lacks", "en/evidence/VIS-PAYMENT-RAILS/index.html",
      sub_once(r'(<div class="alt"[^>]*>.*?<p class="small">)', r'\1The mobile e-money amendment (9 July 2025). '),
      "RC-A1 a chain figure's text alternative names a step its drawing lacks en/evidence/VIS-PAYMENT-RAILS/index.html"),
+    # E2-PREC (edition 2, R-11): every Global Findex share and gap a reader sees prints to one decimal place.
+    ("a Findex share prints to two decimals again", "en/people/index.html",
+     replace("18.3%", "18.35%"),
+     "E2-PREC en/people/index.html prints a Findex share or gap to two decimals: 18.35"),
+    ("a Findex gap prints to two decimals in a table cell", "ar/evidence/VIS-FINDEX-GAPS/index.html",
+     replace(">12.9</bdi></td>", ">12.91</bdi></td>"),
+     "E2-PREC ar/evidence/VIS-FINDEX-GAPS/index.html prints a Findex share or gap to two decimals: 12.91"),
+    ("a Findex gap prints to two decimals on Home", "en/index.html",
+     replace('<b class="fnum">12.9</b>', '<b class="fnum">12.91</b>'),
+     "E2-PREC en/index.html prints a Findex share or gap to two decimals: 12.91"),
     # RC-NOINDEX (owner decision B3): until release every page carries the pre-release noindex meta.
     ("a page loses its pre-release noindex", "en/people/index.html",
      replace('<meta name="robots" content="noindex, nofollow">', ""),

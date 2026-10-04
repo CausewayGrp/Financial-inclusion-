@@ -1,5 +1,28 @@
 # Repository Change Log
 
+## 2026-10-04 — E2-2, E2-2b: one display precision for every Global Findex figure (edition 2, candidate b)
+
+Master `51a7f1930fcd…` → `d0bd9324c18e…` (E2-2) → `39d06c358abdfb06ef350014e6a3407e7a91871918f7af1e5a2b105ea183f514`
+(E2-2b, the independent review folded in) through `run_stage.py` (`audit/edition_2/e2_2_findex_precision.py`,
+`audit/edition_2/e2_2b_review_fixes.py`). Finding R-11 of the independent review of `70398d1` (X-ESC-D3-03b).
+- **The rule** (/methodology/ section 7, English and Arabic): every Global Findex share prints to one decimal place,
+  rounded from the World Bank's unrounded values, and a gap is the difference of the printed shares. One decimal
+  matches the World Bank's own Yemen table (The Little Data Book on Financial Inclusion 2015, p. 159); the page says it
+  is a display convention, not a claim of accuracy to a tenth of a point.
+- **Values** from the Global Findex Database 2025 file (unrounded, read on 4 October 2026): women 5.4, men 18.3 (the
+  old 18.35 was itself a rounding of 18.345; rounding it again would have given 18.4), primary or less 7.0, secondary
+  or more 19.5, ages 15–24 5.0, ages 25+ 16.1; gaps 12.9, 12.5, 11.1, 9.0. 31 text cells in 02, 03, 06, 10 and 11, six
+  values in 25_FINDEX_BASELINE, the VIS-FINDEX-GAPS guards in `controlled_inputs/visual_design_contract.json`.
+  "About 9.0" lost its hedge (the gap is exact under the rule); Arabic «نقطة» after a decimal.
+- **Intervals:** none is published for Yemen's 2022 survey and the microdata needs a login, so none is computed; the
+  limitations already say so. Owner input: the microdata file (audit/edition_2/EDITION_2_LOG.md).
+- **Renderer:** VIS-FINDEX-GAPS prints every value at the panel's published precision (7.0, not 7), in the bars and the
+  table (`scripts/yfie/visuals.py`). P3-G02 compares values with trailing zeros dropped (7.0 = 7).
+- **Gate E2-PREC** (validator) asserts what a reader sees: no Findex share or gap with two decimals on any Findex
+  record, /people/ or the gender-gap Reading; no two-decimal number within 0.05 of a Findex share or gap on any page;
+  every drawn Findex value at one decimal. Three negative controls, all caught. The home and /people/ numeric
+  signatures read 12.9.
+
 ## 2026-10-04 — E2-1, E2-1b: FPS and RTGS at 31 August 2025 (edition 2, first transaction)
 
 Master `90014e3bd271…` → `594abed998bb…` (E2-1) → `51a7f1930fcd21e514d608785abdb2a8887eeb6d4e2d591629477b87ebb7da75`
