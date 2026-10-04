@@ -1,5 +1,35 @@
 # Repository Change Log
 
+## 2026-10-04 — FC-1, FC-1b: margins of error for every published Global Findex figure
+
+Master `f3e06fb935d0…` → `9d059c07309a…` (FC-1) → `2713c086b7f98c0145e48a21d31812cdefebef7e90cd1364de51954b078e968e`
+(FC-1b), through `run_stage.py` (`audit/final_content/fc_1_findex_margins.py`, `fc_1b_gap_bases.py`).
+
+The owner supplied the Yemen Global Findex respondent file with the message of 4 October 2026, under the World Bank
+Microdata Research License, with the decision to publish aggregate statistics only. Edition 2 (E2-2) had recorded that
+no interval could be computed because the file needed a login, and left the public text saying the uncertainty "is not
+quantified here". That sentence is now gone from both editions.
+
+- **Method, recorded as a CauseWay derivation:** Hájek ratio estimator on the published weight `wgt`, design-based
+  variance by Taylor linearisation, 95% interval. The public-use file carries no PSU or stratum identifier, so
+  clustering is not captured and the true interval may be wider, never narrower — stated publicly, not buried.
+- **Reconciled against the publisher before publishing:** all nine published World Bank values for Yemen, and the three
+  other 2022 indicators of the same wave, reproduce from the file to the World Bank's own unrounded values. No
+  difference to record. Two base definitions were settled by that reconciliation and are recorded: "ages 25+" is the
+  complement of 15-24 (n = 770), and `female` is coded 1 = female, 2 = male — which releases the owner's hold on
+  by-sex figures on two independent confirmations.
+- **Published:** 17 derivation rows `CW-FINDEX-MOE-2022-001`…`-017` in `25_FINDEX_BASELINE`, each with its point
+  estimate, interval, base, design effect and method; the intervals printed on `CLM-002` and `VIS-FINDEX-GAPS` in both
+  languages; the method on `/methodology/` section 7.
+- **Design effect stated honestly:** 0.82 to 1.82 across the fourteen estimates — for two small domains a binomial
+  standard error slightly *overstates* the uncertainty, so no single direction is claimed.
+- **Rights:** `28_METHODS_RIGHTS` records the custody rule (`respondent_microdata_controlled` NO → YES; aggregate
+  statistics only; never redistributed, never committed), and `SRC-WB-FINDEX-001` carries the licence and the citation
+  the licence requires. The respondent file is not in this repository, `dist/` or the site.
+- **Gate:** `FC-MOE` in `scripts/validate.py` — the intervals asserted on what a reader sees, their attribution to this
+  resource, their clustering limit, and the arithmetic of every derivation row; four negative controls.
+- **Records:** `audit/final_content/FINAL_CONTENT_LOG.md` (with the findings the reconciliation opened), `audit/INDEX.md`.
+
 ## 2026-10-04 — E2-8, E2-7b, E2-7c: chronology states, gates E2-READ and E2-DATES, the review folded in
 
 Master `332a942f6685…` → `6d10b18d6c00…` (E2-8) → `7222cb53d2ce…` (E2-7b) →

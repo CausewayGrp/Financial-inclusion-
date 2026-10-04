@@ -2473,10 +2473,10 @@
     "period_ar": "موجة Findex 2021 (جولة المسح)؛ العمل الميداني في اليمن من 2022-11-07 إلى 2023-01-09",
     "universe_en": "Adults 15+ in survey coverage",
     "universe_ar": "الأشخاص بعمر 15 سنة فأكثر ضمن التغطية التي شملها المسح.",
-    "method_en": "Calculated by this resource as the difference between two weighted estimates published by the World Bank for the same wave: men 18.3% minus women 5.4% (World Bank series FX.OWN.TOTL.MA.ZS minus FX.OWN.TOTL.FE.ZS, data year 2022).",
-    "method_ar": "احتسبه هذا المورد بوصفه الفارق بين تقديرين موزونين نشرهما البنك الدولي للموجة نفسها: 18.3% للرجال ناقص 5.4% للنساء (سلسلة البنك الدولي FX.OWN.TOTL.MA.ZS ناقص FX.OWN.TOTL.FE.ZS، سنة البيانات 2022).",
-    "limitations_en": "It does not establish why the gap exists, and it is not the gender gap in 2026. | The survey frame excludes areas holding about 23% of the population, and more than a quarter of primary sampling units were replaced. No standard errors or confidence intervals are published with these values; the Yemen sample is 1,000 respondents, so subgroup values and the gap carry sampling uncertainty that is not quantified here.",
-    "limitations_ar": "لا يثبت هذا الدليل سبب الفجوة بين الرجال والنساء، ولا يمثل الفجوة القائمة في عام 2026. | يستبعد إطار المسح مناطق يقطنها نحو 23% من السكان، كما استُبدل أكثر من ربع وحدات المعاينة الأولية. ولا تُنشر مع هذه القيم أخطاء معيارية أو فترات ثقة؛ وتبلغ عينة اليمن 1,000 مستجيب، لذلك تنطوي قيم الفئات الفرعية والفجوة بينها على عدم يقين ناتج عن المعاينة لا يُقدَّر كميًا هنا.",
+    "method_en": "Calculated by this resource as the difference between two weighted estimates published by the World Bank for the same wave: men 18.3% minus women 5.4% (World Bank series FX.OWN.TOTL.MA.ZS minus FX.OWN.TOTL.FE.ZS, data year 2022). The 95% intervals shown with these values are derived by this resource from the survey's own weights (a design-based interval for a weighted share), not published by the World Bank.",
+    "method_ar": "احتسبه هذا المورد بوصفه الفارق بين تقديرين موزونين نشرهما البنك الدولي للموجة نفسها: 18.3% للرجال ناقص 5.4% للنساء (سلسلة البنك الدولي FX.OWN.TOTL.MA.ZS ناقص FX.OWN.TOTL.FE.ZS، سنة البيانات 2022). وفترات الثقة 95% المعروضة مع هذه القيم يستخرجها هذا المورد من أوزان المسح نفسها (فترة قائمة على تصميم المسح لنسبة موزونة)، ولم ينشرها البنك الدولي.",
+    "limitations_en": "It does not establish why the gap exists, and it is not the gender gap in 2026. | The survey frame excludes areas holding about 23% of the population, and more than a quarter of primary sampling units were replaced. The World Bank publishes no standard error or confidence interval with these values, so this resource derives them from the survey's own weights: on a sample of 1,000 respondents the 95% interval runs from 3.2% to 7.7% for women and from 14.6% to 22.1% for men, and from 8.5 to 17.3 points for the gap. The file open to researchers carries no sampling-unit identifier, so clustering is not captured and the true intervals may be wider, never narrower.",
+    "limitations_ar": "لا يثبت هذا الدليل سبب الفجوة بين الرجال والنساء، ولا يمثل الفجوة القائمة في عام 2026. | يستبعد إطار المسح مناطق يقطنها نحو 23% من السكان، كما استُبدل أكثر من ربع وحدات المعاينة الأولية. ولا ينشر البنك الدولي مع هذه القيم خطأً معياريًا ولا فترة ثقة، لذلك يستخرجها هذا المورد من أوزان المسح نفسها: ففي عينة من 1,000 مستجيب تمتد فترة الثقة 95% من 3.2% إلى 7.7% للنساء، ومن 14.6% إلى 22.1% للرجال، ومن 8.5 إلى 17.3 نقطة للفجوة. ولا يحمل الملف المتاح للباحثين معرّف وحدة المعاينة، لذلك لا تُحتسب آثار التجمّع العنقودي، وقد تكون الفترات الحقيقية أوسع لا أضيق.",
     "currentness_en": "The gap refers to the 2021 Findex wave, with Yemen fieldwork from 7 November 2022 to 9 January 2023; the Global Findex 2025 edition adds no newer Yemen observation. It should not be read as describing a later period unless a newer comparable observation is published.",
     "currentness_ar": "تعود هذه الفجوة إلى موجة 2021 من مسح Findex، التي نُفذ عملها الميداني في اليمن من 7 نوفمبر 2022 إلى 9 يناير 2023، ولا تضيف نسخة Global Findex 2025 مشاهدة أحدث لليمن. ولا تُقرأ على أنها تصف فترة لاحقة ما لم تُنشر مشاهدة أحدث قابلة للمقارنة.",
     "change_trigger_en": "This record is updated when an authoritative source is revised or replaced, a newer comparable observation becomes available, the definition, population or method changes, or the conditions for public use change.",
@@ -2603,6 +2603,53 @@
         "s": "READ",
         "src": "SRC-WB-FINDEX-001",
         "loc": "microdata.worldbank.org/index.php/catalog/5862/study-description > Data collection > Dates of Data Collection: End 2023-01-09"
+      },
+      {
+        "t": "3.2%",
+        "k": "v",
+        "s": "DERIVED",
+        "src": "SRC-WB-FINDEX-001",
+        "loc": "CauseWay derivation FC-1 from micro_yem.dta (YEM_2022_FINDEX_v01_M, 334,544 bytes), held under the World Bank Microdata Research License and never redistributed; Hajek ratio estimator with Taylor-linearization variance on the survey weight wgt; the method, the point estimate, the interval, the base and the design effect of every figure are recorded in 25_FINDEX_BASELINE rows CW-FINDEX-MOE-2022-*"
+      },
+      {
+        "t": "7.7%",
+        "k": "v",
+        "s": "DERIVED",
+        "src": "SRC-WB-FINDEX-001",
+        "loc": "CauseWay derivation FC-1 from micro_yem.dta (YEM_2022_FINDEX_v01_M, 334,544 bytes), held under the World Bank Microdata Research License and never redistributed; Hajek ratio estimator with Taylor-linearization variance on the survey weight wgt; the method, the point estimate, the interval, the base and the design effect of every figure are recorded in 25_FINDEX_BASELINE rows CW-FINDEX-MOE-2022-*"
+      },
+      {
+        "t": "14.6%",
+        "k": "v",
+        "s": "DERIVED",
+        "src": "SRC-WB-FINDEX-001",
+        "loc": "CauseWay derivation FC-1 from micro_yem.dta (YEM_2022_FINDEX_v01_M, 334,544 bytes), held under the World Bank Microdata Research License and never redistributed; Hajek ratio estimator with Taylor-linearization variance on the survey weight wgt; the method, the point estimate, the interval, the base and the design effect of every figure are recorded in 25_FINDEX_BASELINE rows CW-FINDEX-MOE-2022-*"
+      },
+      {
+        "t": "22.1%",
+        "k": "v",
+        "s": "DERIVED",
+        "src": "SRC-WB-FINDEX-001",
+        "loc": "CauseWay derivation FC-1 from micro_yem.dta (YEM_2022_FINDEX_v01_M, 334,544 bytes), held under the World Bank Microdata Research License and never redistributed; Hajek ratio estimator with Taylor-linearization variance on the survey weight wgt; the method, the point estimate, the interval, the base and the design effect of every figure are recorded in 25_FINDEX_BASELINE rows CW-FINDEX-MOE-2022-*"
+      },
+      {
+        "t": "8.5",
+        "k": "v",
+        "s": "DERIVED",
+        "src": "SRC-WB-FINDEX-001",
+        "loc": "CauseWay derivation FC-1 from micro_yem.dta (YEM_2022_FINDEX_v01_M, 334,544 bytes), held under the World Bank Microdata Research License and never redistributed; Hajek ratio estimator with Taylor-linearization variance on the survey weight wgt; the method, the point estimate, the interval, the base and the design effect of every figure are recorded in 25_FINDEX_BASELINE rows CW-FINDEX-MOE-2022-*"
+      },
+      {
+        "t": "17.3",
+        "k": "v",
+        "s": "DERIVED",
+        "src": "SRC-WB-FINDEX-001",
+        "loc": "CauseWay derivation FC-1 from micro_yem.dta (YEM_2022_FINDEX_v01_M, 334,544 bytes), held under the World Bank Microdata Research License and never redistributed; Hajek ratio estimator with Taylor-linearization variance on the survey weight wgt; the method, the point estimate, the interval, the base and the design effect of every figure are recorded in 25_FINDEX_BASELINE rows CW-FINDEX-MOE-2022-*"
+      },
+      {
+        "t": "95%",
+        "k": "v",
+        "s": "SITE"
       }
     ],
     "public_route_list": [
@@ -2611,8 +2658,8 @@
     ],
     "does_not_establish_en": "It does not establish why the gap exists, and it is not the gender gap in 2026.",
     "does_not_establish_ar": "لا يثبت هذا الدليل سبب الفجوة بين الرجال والنساء، ولا يمثل الفجوة القائمة في عام 2026.",
-    "measurement_limitation_en": "The survey frame excludes areas holding about 23% of the population, and more than a quarter of primary sampling units were replaced. No standard errors or confidence intervals are published with these values; the Yemen sample is 1,000 respondents, so subgroup values and the gap carry sampling uncertainty that is not quantified here.",
-    "measurement_limitation_ar": "يستبعد إطار المسح مناطق يقطنها نحو 23% من السكان، كما استُبدل أكثر من ربع وحدات المعاينة الأولية. ولا تُنشر مع هذه القيم أخطاء معيارية أو فترات ثقة؛ وتبلغ عينة اليمن 1,000 مستجيب، لذلك تنطوي قيم الفئات الفرعية والفجوة بينها على عدم يقين ناتج عن المعاينة لا يُقدَّر كميًا هنا."
+    "measurement_limitation_en": "The survey frame excludes areas holding about 23% of the population, and more than a quarter of primary sampling units were replaced. The World Bank publishes no standard error or confidence interval with these values, so this resource derives them from the survey's own weights: on a sample of 1,000 respondents the 95% interval runs from 3.2% to 7.7% for women and from 14.6% to 22.1% for men, and from 8.5 to 17.3 points for the gap. The file open to researchers carries no sampling-unit identifier, so clustering is not captured and the true intervals may be wider, never narrower.",
+    "measurement_limitation_ar": "يستبعد إطار المسح مناطق يقطنها نحو 23% من السكان، كما استُبدل أكثر من ربع وحدات المعاينة الأولية. ولا ينشر البنك الدولي مع هذه القيم خطأً معياريًا ولا فترة ثقة، لذلك يستخرجها هذا المورد من أوزان المسح نفسها: ففي عينة من 1,000 مستجيب تمتد فترة الثقة 95% من 3.2% إلى 7.7% للنساء، ومن 14.6% إلى 22.1% للرجال، ومن 8.5 إلى 17.3 نقطة للفجوة. ولا يحمل الملف المتاح للباحثين معرّف وحدة المعاينة، لذلك لا تُحتسب آثار التجمّع العنقودي، وقد تكون الفترات الحقيقية أوسع لا أضيق."
   },
   {
     "object_id": "CLM-007",
@@ -5628,10 +5675,10 @@
     "period_ar": "سنة الإبلاغ في بيانات البنك الدولي: 2022؛ دراسة Global Findex 2021؛ العمل الميداني في اليمن من 2022-11-07 إلى 2023-01-09",
     "universe_en": "Adults aged 15 and over in the areas the survey covered (the survey frame excludes areas with about 23% of the population); subgroups as defined within the same wave.",
     "universe_ar": "البالغون بعمر 15 سنة فأكثر في المناطق التي شملها المسح (يستبعد إطار المسح مناطق تضم نحو 23% من السكان)، وفق تعريفات الفئات الفرعية داخل الموجة نفسها.",
-    "method_en": "Weighted estimates published by the World Bank from the Global Findex survey of Yemen (1,000 respondents; fieldwork 7 November 2022 to 9 January 2023; World Bank data year 2022) for all adults and for subgroups by sex, household income, education and age. Each of the four differences is calculated by this resource by subtracting the lower published value in a pair from the higher one.",
-    "method_ar": "تقديرات موزونة نشرها البنك الدولي من مسح المؤشر العالمي للشمول المالي (Global Findex) في اليمن (1,000 مستجيب؛ العمل الميداني من 7 نوفمبر 2022 إلى 9 يناير 2023؛ سنة البيانات لدى البنك الدولي 2022) لجميع البالغين وللفئات الفرعية بحسب الجنس ودخل الأسرة والتعليم والعمر. ويحتسب هذا المورد كلًّا من الفروق الأربعة بطرح القيمة المنشورة الأدنى في كل زوج من القيمة الأعلى.",
-    "limitations_en": "These are values from one survey wave, not an annual series and not a 2026 rate. They cannot be mapped to governorates, they are not comparable with account counts reported by the Central Bank of Yemen – Aden (CBY-Aden), and the differences between groups do not establish their causes. | The survey frame excludes areas holding about 23% of the population, and more than a quarter of primary sampling units were replaced. No standard errors or confidence intervals are published with these values; the Yemen sample is 1,000 respondents, so subgroup values and the gaps carry sampling uncertainty that is not quantified here.",
-    "limitations_ar": "هذه قيم من موجة مسحية واحدة، وليست سلسلة سنوية ولا معدلًا لعام 2026. ولا يمكن إسقاطها على المحافظات، ولا تُقارن بأعداد الحسابات التي يُبلغ عنها البنك المركزي اليمني – عدن، ولا تثبت الفروق بين الفئات أسبابها. | يستبعد إطار المسح مناطق يقطنها نحو 23% من السكان، كما استُبدل أكثر من ربع وحدات المعاينة الأولية. ولا تُنشر مع هذه القيم أخطاء معيارية أو فترات ثقة؛ وتبلغ عينة اليمن 1,000 مستجيب، لذلك تنطوي قيم الفئات الفرعية والفجوات بينها على عدم يقين ناتج عن المعاينة لا يُقدَّر كميًا هنا.",
+    "method_en": "Weighted estimates published by the World Bank from the Global Findex survey of Yemen (1,000 respondents; fieldwork 7 November 2022 to 9 January 2023; World Bank data year 2022) for all adults and for subgroups by sex, household income, education and age. Each of the four differences is calculated by this resource by subtracting the lower published value in a pair from the higher one. The 95% intervals shown with these values are derived by this resource from the survey's own weights (a design-based interval for a weighted share), not published by the World Bank.",
+    "method_ar": "تقديرات موزونة نشرها البنك الدولي من مسح المؤشر العالمي للشمول المالي (Global Findex) في اليمن (1,000 مستجيب؛ العمل الميداني من 7 نوفمبر 2022 إلى 9 يناير 2023؛ سنة البيانات لدى البنك الدولي 2022) لجميع البالغين وللفئات الفرعية بحسب الجنس ودخل الأسرة والتعليم والعمر. ويحتسب هذا المورد كلًّا من الفروق الأربعة بطرح القيمة المنشورة الأدنى في كل زوج من القيمة الأعلى. وفترات الثقة 95% المعروضة مع هذه القيم يستخرجها هذا المورد من أوزان المسح نفسها (فترة قائمة على تصميم المسح لنسبة موزونة)، ولم ينشرها البنك الدولي.",
+    "limitations_en": "These are values from one survey wave, not an annual series and not a 2026 rate. They cannot be mapped to governorates, they are not comparable with account counts reported by the Central Bank of Yemen – Aden (CBY-Aden), and the differences between groups do not establish their causes. | The survey frame excludes areas holding about 23% of the population, and more than a quarter of primary sampling units were replaced. The World Bank publishes no standard error or confidence interval with these values, so this resource derives them from the survey's own weights: on a sample of 1,000 respondents, and fewer in each group, the 95% margin of error is 2.2 points on the figure for all adults, between 2.2 and 3.9 points on each group's share, and between 4.0 and 4.6 points on each of the four differences. Each interval is printed with its figure on that figure's own record. The file open to researchers carries no sampling-unit identifier, so clustering is not captured and the true intervals may be wider, never narrower.",
+    "limitations_ar": "هذه قيم من موجة مسحية واحدة، وليست سلسلة سنوية ولا معدلًا لعام 2026. ولا يمكن إسقاطها على المحافظات، ولا تُقارن بأعداد الحسابات التي يُبلغ عنها البنك المركزي اليمني – عدن، ولا تثبت الفروق بين الفئات أسبابها. | يستبعد إطار المسح مناطق يقطنها نحو 23% من السكان، كما استُبدل أكثر من ربع وحدات المعاينة الأولية. ولا ينشر البنك الدولي مع هذه القيم خطأً معياريًا ولا فترة ثقة، لذلك يستخرجها هذا المورد من أوزان المسح نفسها: ففي عينة من 1,000 مستجيب، وبعدد أقل في كل فئة، يبلغ هامش الخطأ عند ثقة 95% نحو 2.2 نقطة على القيمة الخاصة بجميع البالغين، وبين 2.2 و3.9 نقطة على نسبة كل فئة، وبين 4.0 و4.6 نقطة على كل فرق من الفروق الأربعة. وتُعرض كل فترة مع قيمتها في سجل تلك القيمة. ولا يحمل الملف المتاح للباحثين معرّف وحدة المعاينة، لذلك لا تُحتسب آثار التجمّع العنقودي، وقد تكون الفترات الحقيقية أوسع لا أضيق.",
     "currentness_en": "These are the latest observations available for Yemen: World Bank Data reports them for 2022, from the Global Findex 2021 study fielded from 7 November 2022 to 9 January 2023. The Global Findex 2025 edition adds 2024 observations for many economies but no newer observation for Yemen, so the values do not describe 2024, 2025 or 2026.",
     "currentness_ar": "هذه أحدث المشاهدات المتاحة لليمن: يعرضها موقع بيانات البنك الدولي لسنة 2022، وهي مستمدة من دراسة Global Findex 2021 التي نُفذ عملها الميداني من 7 نوفمبر 2022 إلى 9 يناير 2023. وتضيف نسخة Global Findex 2025 مشاهدات لعام 2024 في اقتصادات عديدة، لكنها لا تتضمن مشاهدة أحدث لليمن؛ لذلك لا تصف هذه القيم عام 2024 أو 2025 أو 2026.",
     "change_trigger_en": "This record is updated when an authoritative source is revised or replaced, a newer comparable observation becomes available, the definition, population or method changes, or the conditions for public use change.",
@@ -5886,6 +5933,39 @@
         "s": "READ",
         "src": "SRC-WB-FINDEX-001",
         "loc": "microdata.worldbank.org/index.php/catalog/5862/study-description > Data collection > Dates of Data Collection: End 2023-01-09"
+      },
+      {
+        "t": "2.2",
+        "k": "v",
+        "s": "DERIVED",
+        "src": "SRC-WB-FINDEX-001",
+        "loc": "CauseWay derivation FC-1 from micro_yem.dta (YEM_2022_FINDEX_v01_M, 334,544 bytes), held under the World Bank Microdata Research License and never redistributed; Hajek ratio estimator with Taylor-linearization variance on the survey weight wgt; the method, the point estimate, the interval, the base and the design effect of every figure are recorded in 25_FINDEX_BASELINE rows CW-FINDEX-MOE-2022-*"
+      },
+      {
+        "t": "3.9",
+        "k": "v",
+        "s": "DERIVED",
+        "src": "SRC-WB-FINDEX-001",
+        "loc": "CauseWay derivation FC-1 from micro_yem.dta (YEM_2022_FINDEX_v01_M, 334,544 bytes), held under the World Bank Microdata Research License and never redistributed; Hajek ratio estimator with Taylor-linearization variance on the survey weight wgt; the method, the point estimate, the interval, the base and the design effect of every figure are recorded in 25_FINDEX_BASELINE rows CW-FINDEX-MOE-2022-*"
+      },
+      {
+        "t": "4.0",
+        "k": "v",
+        "s": "DERIVED",
+        "src": "SRC-WB-FINDEX-001",
+        "loc": "CauseWay derivation FC-1 from micro_yem.dta (YEM_2022_FINDEX_v01_M, 334,544 bytes), held under the World Bank Microdata Research License and never redistributed; Hajek ratio estimator with Taylor-linearization variance on the survey weight wgt; the method, the point estimate, the interval, the base and the design effect of every figure are recorded in 25_FINDEX_BASELINE rows CW-FINDEX-MOE-2022-*"
+      },
+      {
+        "t": "4.6",
+        "k": "v",
+        "s": "DERIVED",
+        "src": "SRC-WB-FINDEX-001",
+        "loc": "CauseWay derivation FC-1 from micro_yem.dta (YEM_2022_FINDEX_v01_M, 334,544 bytes), held under the World Bank Microdata Research License and never redistributed; Hajek ratio estimator with Taylor-linearization variance on the survey weight wgt; the method, the point estimate, the interval, the base and the design effect of every figure are recorded in 25_FINDEX_BASELINE rows CW-FINDEX-MOE-2022-*"
+      },
+      {
+        "t": "95%",
+        "k": "v",
+        "s": "SITE"
       }
     ],
     "public_route_list": [
@@ -5893,8 +5973,8 @@
     ],
     "does_not_establish_en": "These are values from one survey wave, not an annual series and not a 2026 rate. They cannot be mapped to governorates, they are not comparable with account counts reported by the Central Bank of Yemen – Aden (CBY-Aden), and the differences between groups do not establish their causes.",
     "does_not_establish_ar": "هذه قيم من موجة مسحية واحدة، وليست سلسلة سنوية ولا معدلًا لعام 2026. ولا يمكن إسقاطها على المحافظات، ولا تُقارن بأعداد الحسابات التي يُبلغ عنها البنك المركزي اليمني – عدن، ولا تثبت الفروق بين الفئات أسبابها.",
-    "measurement_limitation_en": "The survey frame excludes areas holding about 23% of the population, and more than a quarter of primary sampling units were replaced. No standard errors or confidence intervals are published with these values; the Yemen sample is 1,000 respondents, so subgroup values and the gaps carry sampling uncertainty that is not quantified here.",
-    "measurement_limitation_ar": "يستبعد إطار المسح مناطق يقطنها نحو 23% من السكان، كما استُبدل أكثر من ربع وحدات المعاينة الأولية. ولا تُنشر مع هذه القيم أخطاء معيارية أو فترات ثقة؛ وتبلغ عينة اليمن 1,000 مستجيب، لذلك تنطوي قيم الفئات الفرعية والفجوات بينها على عدم يقين ناتج عن المعاينة لا يُقدَّر كميًا هنا."
+    "measurement_limitation_en": "The survey frame excludes areas holding about 23% of the population, and more than a quarter of primary sampling units were replaced. The World Bank publishes no standard error or confidence interval with these values, so this resource derives them from the survey's own weights: on a sample of 1,000 respondents, and fewer in each group, the 95% margin of error is 2.2 points on the figure for all adults, between 2.2 and 3.9 points on each group's share, and between 4.0 and 4.6 points on each of the four differences. Each interval is printed with its figure on that figure's own record. The file open to researchers carries no sampling-unit identifier, so clustering is not captured and the true intervals may be wider, never narrower.",
+    "measurement_limitation_ar": "يستبعد إطار المسح مناطق يقطنها نحو 23% من السكان، كما استُبدل أكثر من ربع وحدات المعاينة الأولية. ولا ينشر البنك الدولي مع هذه القيم خطأً معياريًا ولا فترة ثقة، لذلك يستخرجها هذا المورد من أوزان المسح نفسها: ففي عينة من 1,000 مستجيب، وبعدد أقل في كل فئة، يبلغ هامش الخطأ عند ثقة 95% نحو 2.2 نقطة على القيمة الخاصة بجميع البالغين، وبين 2.2 و3.9 نقطة على نسبة كل فئة، وبين 4.0 و4.6 نقطة على كل فرق من الفروق الأربعة. وتُعرض كل فترة مع قيمتها في سجل تلك القيمة. ولا يحمل الملف المتاح للباحثين معرّف وحدة المعاينة، لذلك لا تُحتسب آثار التجمّع العنقودي، وقد تكون الفترات الحقيقية أوسع لا أضيق."
   },
   {
     "object_id": "VIS-POS-TERMINALS",

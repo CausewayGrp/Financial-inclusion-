@@ -1,21 +1,21 @@
 {
   "schema": "YFIE_PUBLIC_LITERAL_CLOSURE/2.0",
   "audit_version": "2.0 — token-bounded, token-level classification (Pre-Tranche-C P1-D); v1 substring and paragraph-keyword rules removed",
-  "authority_master_sha256": "f3e06fb935d0181211cc73f648eff588388ddda41a4c8f7eb2406b8396333514",
-  "page_specs_sha256": "016ca988b57f63419c4685d0b8b2eb31be7984a0554ae5318796f9e64481b12e",
+  "authority_master_sha256": "2713c086b7f98c0145e48a21d31812cdefebef7e90cd1364de51954b078e968e",
+  "page_specs_sha256": "5821a53750083a2e64eeab8674fd0f01970e8b4e2dcd61c6015e8a6b2ad373da",
   "scope": "Reader-facing Page Spec titles/sections plus governed-copy numeric inventory. Every substantive public numeral must resolve to a governed source-closed object or be explicitly classified as date/period, stable technical identifier, or non-observation system/method metadata.",
   "classification_rule": "UNRESOLVED_SUBSTANTIVE_PUBLIC_NUMBER is a hard validation failure. Route/source presence without an object-level source-closed trace is not sufficient.",
-  "record_count": 14215,
+  "record_count": 14291,
   "summary": {
     "STABLE_ID_OR_TECHNICAL_STANDARD": 21,
     "ROUTE_SOURCE_CLOSED__OBJECT_TRACE_AVAILABLE": 1035,
-    "DATE_OR_PERIOD": 1760,
-    "GOVERNED_OBJECT_SOURCE_CLOSED": 11118,
+    "DATE_OR_PERIOD": 1762,
+    "GOVERNED_OBJECT_SOURCE_CLOSED": 11190,
     "INVENTORY_COUNT_FROM_CONTRACT": 14,
     "CONTROLLED_DATASET_INVENTORY_OR_METHOD_METADATA": 153,
     "ROUTE_PARTIAL_TRACE__PARTIAL_STATE_SHOWN": 10,
     "ROUTE_COMPOSITE_TRACE__MEMBERS_LISTED": 16,
-    "ALLOWED_METHOD_OR_TOOL_CONSTANT": 10,
+    "ALLOWED_METHOD_OR_TOOL_CONSTANT": 12,
     "READING_BOUND_RECORD_TRACE": 78
   },
   "unresolved_substantive_count": 0,
@@ -4401,7 +4401,7 @@
       "field": "method_en",
       "token": "18.3%",
       "category": "GOVERNED_OBJECT_SOURCE_CLOSED",
-      "context": "Calculated by this resource as the difference between two weighted estimates published by the World Bank for the same wave: men 18.3% minus women 5.4% (World Bank series FX.OWN.TOTL.MA.ZS minus FX.OWN.TOTL.FE.ZS, data year 2022).",
+      "context": "Calculated by this resource as the difference between two weighted estimates published by the World Bank for the same wave: men 18.3% minus women 5.4% (World Bank series FX.OWN.TOTL.MA.ZS minus FX.OWN.TOTL.FE.ZS, data year 2022). The 95% intervals shown with these values are derived by this resource from the survey's own weights (a design-based interval for a weighted share), not published by the World Bank.",
       "source_object": "CLM-002"
     },
     {
@@ -4410,7 +4410,7 @@
       "field": "method_en",
       "token": "5.4%",
       "category": "GOVERNED_OBJECT_SOURCE_CLOSED",
-      "context": "Calculated by this resource as the difference between two weighted estimates published by the World Bank for the same wave: men 18.3% minus women 5.4% (World Bank series FX.OWN.TOTL.MA.ZS minus FX.OWN.TOTL.FE.ZS, data year 2022).",
+      "context": "Calculated by this resource as the difference between two weighted estimates published by the World Bank for the same wave: men 18.3% minus women 5.4% (World Bank series FX.OWN.TOTL.MA.ZS minus FX.OWN.TOTL.FE.ZS, data year 2022). The 95% intervals shown with these values are derived by this resource from the survey's own weights (a design-based interval for a weighted share), not published by the World Bank.",
       "source_object": "CLM-002"
     },
     {
@@ -4419,7 +4419,16 @@
       "field": "method_en",
       "token": "2022",
       "category": "GOVERNED_OBJECT_SOURCE_CLOSED",
-      "context": "Calculated by this resource as the difference between two weighted estimates published by the World Bank for the same wave: men 18.3% minus women 5.4% (World Bank series FX.OWN.TOTL.MA.ZS minus FX.OWN.TOTL.FE.ZS, data year 2022).",
+      "context": "Calculated by this resource as the difference between two weighted estimates published by the World Bank for the same wave: men 18.3% minus women 5.4% (World Bank series FX.OWN.TOTL.MA.ZS minus FX.OWN.TOTL.FE.ZS, data year 2022). The 95% intervals shown with these values are derived by this resource from the survey's own weights (a design-based interval for a weighted share), not published by the World Bank.",
+      "source_object": "CLM-002"
+    },
+    {
+      "route": "/evidence/CLM-002/",
+      "surface": "governed_numeric_inventory",
+      "field": "method_en",
+      "token": "95%",
+      "category": "GOVERNED_OBJECT_SOURCE_CLOSED",
+      "context": "Calculated by this resource as the difference between two weighted estimates published by the World Bank for the same wave: men 18.3% minus women 5.4% (World Bank series FX.OWN.TOTL.MA.ZS minus FX.OWN.TOTL.FE.ZS, data year 2022). The 95% intervals shown with these values are derived by this resource from the survey's own weights (a design-based interval for a weighted share), not published by the World Bank.",
       "source_object": "CLM-002"
     },
     {
@@ -4428,7 +4437,7 @@
       "field": "method_ar",
       "token": "18.3%",
       "category": "GOVERNED_OBJECT_SOURCE_CLOSED",
-      "context": "احتسبه هذا المورد بوصفه الفارق بين تقديرين موزونين نشرهما البنك الدولي للموجة نفسها: 18.3% للرجال ناقص 5.4% للنساء (سلسلة البنك الدولي FX.OWN.TOTL.MA.ZS ناقص FX.OWN.TOTL.FE.ZS، سنة البيانات 2022).",
+      "context": "احتسبه هذا المورد بوصفه الفارق بين تقديرين موزونين نشرهما البنك الدولي للموجة نفسها: 18.3% للرجال ناقص 5.4% للنساء (سلسلة البنك الدولي FX.OWN.TOTL.MA.ZS ناقص FX.OWN.TOTL.FE.ZS، سنة البيانات 2022). وفترات الثقة 95% المعروضة مع هذه القيم يستخرجها هذا المورد من أوزان المسح نفسها (فترة قائمة على تصميم المسح لنسبة موزونة)، ولم ينشرها البنك الدولي.",
       "source_object": "CLM-002"
     },
     {
@@ -4437,7 +4446,7 @@
       "field": "method_ar",
       "token": "5.4%",
       "category": "GOVERNED_OBJECT_SOURCE_CLOSED",
-      "context": "احتسبه هذا المورد بوصفه الفارق بين تقديرين موزونين نشرهما البنك الدولي للموجة نفسها: 18.3% للرجال ناقص 5.4% للنساء (سلسلة البنك الدولي FX.OWN.TOTL.MA.ZS ناقص FX.OWN.TOTL.FE.ZS، سنة البيانات 2022).",
+      "context": "احتسبه هذا المورد بوصفه الفارق بين تقديرين موزونين نشرهما البنك الدولي للموجة نفسها: 18.3% للرجال ناقص 5.4% للنساء (سلسلة البنك الدولي FX.OWN.TOTL.MA.ZS ناقص FX.OWN.TOTL.FE.ZS، سنة البيانات 2022). وفترات الثقة 95% المعروضة مع هذه القيم يستخرجها هذا المورد من أوزان المسح نفسها (فترة قائمة على تصميم المسح لنسبة موزونة)، ولم ينشرها البنك الدولي.",
       "source_object": "CLM-002"
     },
     {
@@ -4446,7 +4455,16 @@
       "field": "method_ar",
       "token": "2022",
       "category": "GOVERNED_OBJECT_SOURCE_CLOSED",
-      "context": "احتسبه هذا المورد بوصفه الفارق بين تقديرين موزونين نشرهما البنك الدولي للموجة نفسها: 18.3% للرجال ناقص 5.4% للنساء (سلسلة البنك الدولي FX.OWN.TOTL.MA.ZS ناقص FX.OWN.TOTL.FE.ZS، سنة البيانات 2022).",
+      "context": "احتسبه هذا المورد بوصفه الفارق بين تقديرين موزونين نشرهما البنك الدولي للموجة نفسها: 18.3% للرجال ناقص 5.4% للنساء (سلسلة البنك الدولي FX.OWN.TOTL.MA.ZS ناقص FX.OWN.TOTL.FE.ZS، سنة البيانات 2022). وفترات الثقة 95% المعروضة مع هذه القيم يستخرجها هذا المورد من أوزان المسح نفسها (فترة قائمة على تصميم المسح لنسبة موزونة)، ولم ينشرها البنك الدولي.",
+      "source_object": "CLM-002"
+    },
+    {
+      "route": "/evidence/CLM-002/",
+      "surface": "governed_numeric_inventory",
+      "field": "method_ar",
+      "token": "95%",
+      "category": "GOVERNED_OBJECT_SOURCE_CLOSED",
+      "context": "احتسبه هذا المورد بوصفه الفارق بين تقديرين موزونين نشرهما البنك الدولي للموجة نفسها: 18.3% للرجال ناقص 5.4% للنساء (سلسلة البنك الدولي FX.OWN.TOTL.MA.ZS ناقص FX.OWN.TOTL.FE.ZS، سنة البيانات 2022). وفترات الثقة 95% المعروضة مع هذه القيم يستخرجها هذا المورد من أوزان المسح نفسها (فترة قائمة على تصميم المسح لنسبة موزونة)، ولم ينشرها البنك الدولي.",
       "source_object": "CLM-002"
     },
     {
@@ -4455,7 +4473,7 @@
       "field": "limitations_en",
       "token": "2026",
       "category": "GOVERNED_OBJECT_SOURCE_CLOSED",
-      "context": "It does not establish why the gap exists, and it is not the gender gap in 2026. | The survey frame excludes areas holding about 23% of the population, and more than a quarter of primary sampling units were replaced. No standard errors or confidence intervals are published with these values; the Yemen sample is 1,000 respondents, so subgroup values and the gap carry sampling uncertainty that is not quantified here.",
+      "context": "It does not establish why the gap exists, and it is not the gender gap in 2026. | The survey frame excludes areas holding about 23% of the population, and more than a quarter of primary sampling units were replaced. The World Bank publishes no standard error or confidence interval with these values, so this resource derives them from the survey's own weights: on a sample of 1,000 respondents the 95% interval runs from 3.2% to 7.7% for women and from 14.6% to 22.1% for men, and from 8.5 to 17.3 points for the gap. The file open to researchers carries no sampling-unit identifier, so clustering is not captured and the true intervals may be wider, never narrower.",
       "source_object": "CLM-002"
     },
     {
@@ -4464,7 +4482,7 @@
       "field": "limitations_en",
       "token": "23%",
       "category": "GOVERNED_OBJECT_SOURCE_CLOSED",
-      "context": "It does not establish why the gap exists, and it is not the gender gap in 2026. | The survey frame excludes areas holding about 23% of the population, and more than a quarter of primary sampling units were replaced. No standard errors or confidence intervals are published with these values; the Yemen sample is 1,000 respondents, so subgroup values and the gap carry sampling uncertainty that is not quantified here.",
+      "context": "It does not establish why the gap exists, and it is not the gender gap in 2026. | The survey frame excludes areas holding about 23% of the population, and more than a quarter of primary sampling units were replaced. The World Bank publishes no standard error or confidence interval with these values, so this resource derives them from the survey's own weights: on a sample of 1,000 respondents the 95% interval runs from 3.2% to 7.7% for women and from 14.6% to 22.1% for men, and from 8.5 to 17.3 points for the gap. The file open to researchers carries no sampling-unit identifier, so clustering is not captured and the true intervals may be wider, never narrower.",
       "source_object": "CLM-002"
     },
     {
@@ -4473,7 +4491,70 @@
       "field": "limitations_en",
       "token": "1,000",
       "category": "GOVERNED_OBJECT_SOURCE_CLOSED",
-      "context": "It does not establish why the gap exists, and it is not the gender gap in 2026. | The survey frame excludes areas holding about 23% of the population, and more than a quarter of primary sampling units were replaced. No standard errors or confidence intervals are published with these values; the Yemen sample is 1,000 respondents, so subgroup values and the gap carry sampling uncertainty that is not quantified here.",
+      "context": "It does not establish why the gap exists, and it is not the gender gap in 2026. | The survey frame excludes areas holding about 23% of the population, and more than a quarter of primary sampling units were replaced. The World Bank publishes no standard error or confidence interval with these values, so this resource derives them from the survey's own weights: on a sample of 1,000 respondents the 95% interval runs from 3.2% to 7.7% for women and from 14.6% to 22.1% for men, and from 8.5 to 17.3 points for the gap. The file open to researchers carries no sampling-unit identifier, so clustering is not captured and the true intervals may be wider, never narrower.",
+      "source_object": "CLM-002"
+    },
+    {
+      "route": "/evidence/CLM-002/",
+      "surface": "governed_numeric_inventory",
+      "field": "limitations_en",
+      "token": "95%",
+      "category": "GOVERNED_OBJECT_SOURCE_CLOSED",
+      "context": "It does not establish why the gap exists, and it is not the gender gap in 2026. | The survey frame excludes areas holding about 23% of the population, and more than a quarter of primary sampling units were replaced. The World Bank publishes no standard error or confidence interval with these values, so this resource derives them from the survey's own weights: on a sample of 1,000 respondents the 95% interval runs from 3.2% to 7.7% for women and from 14.6% to 22.1% for men, and from 8.5 to 17.3 points for the gap. The file open to researchers carries no sampling-unit identifier, so clustering is not captured and the true intervals may be wider, never narrower.",
+      "source_object": "CLM-002"
+    },
+    {
+      "route": "/evidence/CLM-002/",
+      "surface": "governed_numeric_inventory",
+      "field": "limitations_en",
+      "token": "3.2%",
+      "category": "GOVERNED_OBJECT_SOURCE_CLOSED",
+      "context": "It does not establish why the gap exists, and it is not the gender gap in 2026. | The survey frame excludes areas holding about 23% of the population, and more than a quarter of primary sampling units were replaced. The World Bank publishes no standard error or confidence interval with these values, so this resource derives them from the survey's own weights: on a sample of 1,000 respondents the 95% interval runs from 3.2% to 7.7% for women and from 14.6% to 22.1% for men, and from 8.5 to 17.3 points for the gap. The file open to researchers carries no sampling-unit identifier, so clustering is not captured and the true intervals may be wider, never narrower.",
+      "source_object": "CLM-002"
+    },
+    {
+      "route": "/evidence/CLM-002/",
+      "surface": "governed_numeric_inventory",
+      "field": "limitations_en",
+      "token": "7.7%",
+      "category": "GOVERNED_OBJECT_SOURCE_CLOSED",
+      "context": "It does not establish why the gap exists, and it is not the gender gap in 2026. | The survey frame excludes areas holding about 23% of the population, and more than a quarter of primary sampling units were replaced. The World Bank publishes no standard error or confidence interval with these values, so this resource derives them from the survey's own weights: on a sample of 1,000 respondents the 95% interval runs from 3.2% to 7.7% for women and from 14.6% to 22.1% for men, and from 8.5 to 17.3 points for the gap. The file open to researchers carries no sampling-unit identifier, so clustering is not captured and the true intervals may be wider, never narrower.",
+      "source_object": "CLM-002"
+    },
+    {
+      "route": "/evidence/CLM-002/",
+      "surface": "governed_numeric_inventory",
+      "field": "limitations_en",
+      "token": "14.6%",
+      "category": "GOVERNED_OBJECT_SOURCE_CLOSED",
+      "context": "It does not establish why the gap exists, and it is not the gender gap in 2026. | The survey frame excludes areas holding about 23% of the population, and more than a quarter of primary sampling units were replaced. The World Bank publishes no standard error or confidence interval with these values, so this resource derives them from the survey's own weights: on a sample of 1,000 respondents the 95% interval runs from 3.2% to 7.7% for women and from 14.6% to 22.1% for men, and from 8.5 to 17.3 points for the gap. The file open to researchers carries no sampling-unit identifier, so clustering is not captured and the true intervals may be wider, never narrower.",
+      "source_object": "CLM-002"
+    },
+    {
+      "route": "/evidence/CLM-002/",
+      "surface": "governed_numeric_inventory",
+      "field": "limitations_en",
+      "token": "22.1%",
+      "category": "GOVERNED_OBJECT_SOURCE_CLOSED",
+      "context": "It does not establish why the gap exists, and it is not the gender gap in 2026. | The survey frame excludes areas holding about 23% of the population, and more than a quarter of primary sampling units were replaced. The World Bank publishes no standard error or confidence interval with these values, so this resource derives them from the survey's own weights: on a sample of 1,000 respondents the 95% interval runs from 3.2% to 7.7% for women and from 14.6% to 22.1% for men, and from 8.5 to 17.3 points for the gap. The file open to researchers carries no sampling-unit identifier, so clustering is not captured and the true intervals may be wider, never narrower.",
+      "source_object": "CLM-002"
+    },
+    {
+      "route": "/evidence/CLM-002/",
+      "surface": "governed_numeric_inventory",
+      "field": "limitations_en",
+      "token": "8.5",
+      "category": "GOVERNED_OBJECT_SOURCE_CLOSED",
+      "context": "It does not establish why the gap exists, and it is not the gender gap in 2026. | The survey frame excludes areas holding about 23% of the population, and more than a quarter of primary sampling units were replaced. The World Bank publishes no standard error or confidence interval with these values, so this resource derives them from the survey's own weights: on a sample of 1,000 respondents the 95% interval runs from 3.2% to 7.7% for women and from 14.6% to 22.1% for men, and from 8.5 to 17.3 points for the gap. The file open to researchers carries no sampling-unit identifier, so clustering is not captured and the true intervals may be wider, never narrower.",
+      "source_object": "CLM-002"
+    },
+    {
+      "route": "/evidence/CLM-002/",
+      "surface": "governed_numeric_inventory",
+      "field": "limitations_en",
+      "token": "17.3",
+      "category": "GOVERNED_OBJECT_SOURCE_CLOSED",
+      "context": "It does not establish why the gap exists, and it is not the gender gap in 2026. | The survey frame excludes areas holding about 23% of the population, and more than a quarter of primary sampling units were replaced. The World Bank publishes no standard error or confidence interval with these values, so this resource derives them from the survey's own weights: on a sample of 1,000 respondents the 95% interval runs from 3.2% to 7.7% for women and from 14.6% to 22.1% for men, and from 8.5 to 17.3 points for the gap. The file open to researchers carries no sampling-unit identifier, so clustering is not captured and the true intervals may be wider, never narrower.",
       "source_object": "CLM-002"
     },
     {
@@ -4482,7 +4563,7 @@
       "field": "limitations_ar",
       "token": "2026",
       "category": "GOVERNED_OBJECT_SOURCE_CLOSED",
-      "context": "لا يثبت هذا الدليل سبب الفجوة بين الرجال والنساء، ولا يمثل الفجوة القائمة في عام 2026. | يستبعد إطار المسح مناطق يقطنها نحو 23% من السكان، كما استُبدل أكثر من ربع وحدات المعاينة الأولية. ولا تُنشر مع هذه القيم أخطاء معيارية أو فترات ثقة؛ وتبلغ عينة اليمن 1,000 مستجيب، لذلك تنطوي قيم الفئات الفرعية والفجوة بينها على عدم يقين ناتج عن المعاينة لا يُقدَّر كميًا هنا.",
+      "context": "لا يثبت هذا الدليل سبب الفجوة بين الرجال والنساء، ولا يمثل الفجوة القائمة في عام 2026. | يستبعد إطار المسح مناطق يقطنها نحو 23% من السكان، كما استُبدل أكثر من ربع وحدات المعاينة الأولية. ولا ينشر البنك الدولي مع هذه القيم خطأً معياريًا ولا فترة ثقة، لذلك يستخرجها هذا المورد من أوزان المسح نفسها: ففي عينة من 1,000 مستجيب تمتد فترة الثقة 95% من 3.2% إلى 7.7% للنساء، ومن 14.6% إلى 22.1% للرجال، ومن 8.5 إلى 17.3 نقطة للفجوة. ولا يحمل الملف المتاح للباحثين معرّف وحدة المعاينة، لذلك لا تُحتسب آثار التجمّع العنقودي، وقد تكون الفترات الحقيقية أوسع لا أضيق.",
       "source_object": "CLM-002"
     },
     {
@@ -4491,7 +4572,7 @@
       "field": "limitations_ar",
       "token": "23%",
       "category": "GOVERNED_OBJECT_SOURCE_CLOSED",
-      "context": "لا يثبت هذا الدليل سبب الفجوة بين الرجال والنساء، ولا يمثل الفجوة القائمة في عام 2026. | يستبعد إطار المسح مناطق يقطنها نحو 23% من السكان، كما استُبدل أكثر من ربع وحدات المعاينة الأولية. ولا تُنشر مع هذه القيم أخطاء معيارية أو فترات ثقة؛ وتبلغ عينة اليمن 1,000 مستجيب، لذلك تنطوي قيم الفئات الفرعية والفجوة بينها على عدم يقين ناتج عن المعاينة لا يُقدَّر كميًا هنا.",
+      "context": "لا يثبت هذا الدليل سبب الفجوة بين الرجال والنساء، ولا يمثل الفجوة القائمة في عام 2026. | يستبعد إطار المسح مناطق يقطنها نحو 23% من السكان، كما استُبدل أكثر من ربع وحدات المعاينة الأولية. ولا ينشر البنك الدولي مع هذه القيم خطأً معياريًا ولا فترة ثقة، لذلك يستخرجها هذا المورد من أوزان المسح نفسها: ففي عينة من 1,000 مستجيب تمتد فترة الثقة 95% من 3.2% إلى 7.7% للنساء، ومن 14.6% إلى 22.1% للرجال، ومن 8.5 إلى 17.3 نقطة للفجوة. ولا يحمل الملف المتاح للباحثين معرّف وحدة المعاينة، لذلك لا تُحتسب آثار التجمّع العنقودي، وقد تكون الفترات الحقيقية أوسع لا أضيق.",
       "source_object": "CLM-002"
     },
     {
@@ -4500,7 +4581,70 @@
       "field": "limitations_ar",
       "token": "1,000",
       "category": "GOVERNED_OBJECT_SOURCE_CLOSED",
-      "context": "لا يثبت هذا الدليل سبب الفجوة بين الرجال والنساء، ولا يمثل الفجوة القائمة في عام 2026. | يستبعد إطار المسح مناطق يقطنها نحو 23% من السكان، كما استُبدل أكثر من ربع وحدات المعاينة الأولية. ولا تُنشر مع هذه القيم أخطاء معيارية أو فترات ثقة؛ وتبلغ عينة اليمن 1,000 مستجيب، لذلك تنطوي قيم الفئات الفرعية والفجوة بينها على عدم يقين ناتج عن المعاينة لا يُقدَّر كميًا هنا.",
+      "context": "لا يثبت هذا الدليل سبب الفجوة بين الرجال والنساء، ولا يمثل الفجوة القائمة في عام 2026. | يستبعد إطار المسح مناطق يقطنها نحو 23% من السكان، كما استُبدل أكثر من ربع وحدات المعاينة الأولية. ولا ينشر البنك الدولي مع هذه القيم خطأً معياريًا ولا فترة ثقة، لذلك يستخرجها هذا المورد من أوزان المسح نفسها: ففي عينة من 1,000 مستجيب تمتد فترة الثقة 95% من 3.2% إلى 7.7% للنساء، ومن 14.6% إلى 22.1% للرجال، ومن 8.5 إلى 17.3 نقطة للفجوة. ولا يحمل الملف المتاح للباحثين معرّف وحدة المعاينة، لذلك لا تُحتسب آثار التجمّع العنقودي، وقد تكون الفترات الحقيقية أوسع لا أضيق.",
+      "source_object": "CLM-002"
+    },
+    {
+      "route": "/evidence/CLM-002/",
+      "surface": "governed_numeric_inventory",
+      "field": "limitations_ar",
+      "token": "95%",
+      "category": "GOVERNED_OBJECT_SOURCE_CLOSED",
+      "context": "لا يثبت هذا الدليل سبب الفجوة بين الرجال والنساء، ولا يمثل الفجوة القائمة في عام 2026. | يستبعد إطار المسح مناطق يقطنها نحو 23% من السكان، كما استُبدل أكثر من ربع وحدات المعاينة الأولية. ولا ينشر البنك الدولي مع هذه القيم خطأً معياريًا ولا فترة ثقة، لذلك يستخرجها هذا المورد من أوزان المسح نفسها: ففي عينة من 1,000 مستجيب تمتد فترة الثقة 95% من 3.2% إلى 7.7% للنساء، ومن 14.6% إلى 22.1% للرجال، ومن 8.5 إلى 17.3 نقطة للفجوة. ولا يحمل الملف المتاح للباحثين معرّف وحدة المعاينة، لذلك لا تُحتسب آثار التجمّع العنقودي، وقد تكون الفترات الحقيقية أوسع لا أضيق.",
+      "source_object": "CLM-002"
+    },
+    {
+      "route": "/evidence/CLM-002/",
+      "surface": "governed_numeric_inventory",
+      "field": "limitations_ar",
+      "token": "3.2%",
+      "category": "GOVERNED_OBJECT_SOURCE_CLOSED",
+      "context": "لا يثبت هذا الدليل سبب الفجوة بين الرجال والنساء، ولا يمثل الفجوة القائمة في عام 2026. | يستبعد إطار المسح مناطق يقطنها نحو 23% من السكان، كما استُبدل أكثر من ربع وحدات المعاينة الأولية. ولا ينشر البنك الدولي مع هذه القيم خطأً معياريًا ولا فترة ثقة، لذلك يستخرجها هذا المورد من أوزان المسح نفسها: ففي عينة من 1,000 مستجيب تمتد فترة الثقة 95% من 3.2% إلى 7.7% للنساء، ومن 14.6% إلى 22.1% للرجال، ومن 8.5 إلى 17.3 نقطة للفجوة. ولا يحمل الملف المتاح للباحثين معرّف وحدة المعاينة، لذلك لا تُحتسب آثار التجمّع العنقودي، وقد تكون الفترات الحقيقية أوسع لا أضيق.",
+      "source_object": "CLM-002"
+    },
+    {
+      "route": "/evidence/CLM-002/",
+      "surface": "governed_numeric_inventory",
+      "field": "limitations_ar",
+      "token": "7.7%",
+      "category": "GOVERNED_OBJECT_SOURCE_CLOSED",
+      "context": "لا يثبت هذا الدليل سبب الفجوة بين الرجال والنساء، ولا يمثل الفجوة القائمة في عام 2026. | يستبعد إطار المسح مناطق يقطنها نحو 23% من السكان، كما استُبدل أكثر من ربع وحدات المعاينة الأولية. ولا ينشر البنك الدولي مع هذه القيم خطأً معياريًا ولا فترة ثقة، لذلك يستخرجها هذا المورد من أوزان المسح نفسها: ففي عينة من 1,000 مستجيب تمتد فترة الثقة 95% من 3.2% إلى 7.7% للنساء، ومن 14.6% إلى 22.1% للرجال، ومن 8.5 إلى 17.3 نقطة للفجوة. ولا يحمل الملف المتاح للباحثين معرّف وحدة المعاينة، لذلك لا تُحتسب آثار التجمّع العنقودي، وقد تكون الفترات الحقيقية أوسع لا أضيق.",
+      "source_object": "CLM-002"
+    },
+    {
+      "route": "/evidence/CLM-002/",
+      "surface": "governed_numeric_inventory",
+      "field": "limitations_ar",
+      "token": "14.6%",
+      "category": "GOVERNED_OBJECT_SOURCE_CLOSED",
+      "context": "لا يثبت هذا الدليل سبب الفجوة بين الرجال والنساء، ولا يمثل الفجوة القائمة في عام 2026. | يستبعد إطار المسح مناطق يقطنها نحو 23% من السكان، كما استُبدل أكثر من ربع وحدات المعاينة الأولية. ولا ينشر البنك الدولي مع هذه القيم خطأً معياريًا ولا فترة ثقة، لذلك يستخرجها هذا المورد من أوزان المسح نفسها: ففي عينة من 1,000 مستجيب تمتد فترة الثقة 95% من 3.2% إلى 7.7% للنساء، ومن 14.6% إلى 22.1% للرجال، ومن 8.5 إلى 17.3 نقطة للفجوة. ولا يحمل الملف المتاح للباحثين معرّف وحدة المعاينة، لذلك لا تُحتسب آثار التجمّع العنقودي، وقد تكون الفترات الحقيقية أوسع لا أضيق.",
+      "source_object": "CLM-002"
+    },
+    {
+      "route": "/evidence/CLM-002/",
+      "surface": "governed_numeric_inventory",
+      "field": "limitations_ar",
+      "token": "22.1%",
+      "category": "GOVERNED_OBJECT_SOURCE_CLOSED",
+      "context": "لا يثبت هذا الدليل سبب الفجوة بين الرجال والنساء، ولا يمثل الفجوة القائمة في عام 2026. | يستبعد إطار المسح مناطق يقطنها نحو 23% من السكان، كما استُبدل أكثر من ربع وحدات المعاينة الأولية. ولا ينشر البنك الدولي مع هذه القيم خطأً معياريًا ولا فترة ثقة، لذلك يستخرجها هذا المورد من أوزان المسح نفسها: ففي عينة من 1,000 مستجيب تمتد فترة الثقة 95% من 3.2% إلى 7.7% للنساء، ومن 14.6% إلى 22.1% للرجال، ومن 8.5 إلى 17.3 نقطة للفجوة. ولا يحمل الملف المتاح للباحثين معرّف وحدة المعاينة، لذلك لا تُحتسب آثار التجمّع العنقودي، وقد تكون الفترات الحقيقية أوسع لا أضيق.",
+      "source_object": "CLM-002"
+    },
+    {
+      "route": "/evidence/CLM-002/",
+      "surface": "governed_numeric_inventory",
+      "field": "limitations_ar",
+      "token": "8.5",
+      "category": "GOVERNED_OBJECT_SOURCE_CLOSED",
+      "context": "لا يثبت هذا الدليل سبب الفجوة بين الرجال والنساء، ولا يمثل الفجوة القائمة في عام 2026. | يستبعد إطار المسح مناطق يقطنها نحو 23% من السكان، كما استُبدل أكثر من ربع وحدات المعاينة الأولية. ولا ينشر البنك الدولي مع هذه القيم خطأً معياريًا ولا فترة ثقة، لذلك يستخرجها هذا المورد من أوزان المسح نفسها: ففي عينة من 1,000 مستجيب تمتد فترة الثقة 95% من 3.2% إلى 7.7% للنساء، ومن 14.6% إلى 22.1% للرجال، ومن 8.5 إلى 17.3 نقطة للفجوة. ولا يحمل الملف المتاح للباحثين معرّف وحدة المعاينة، لذلك لا تُحتسب آثار التجمّع العنقودي، وقد تكون الفترات الحقيقية أوسع لا أضيق.",
+      "source_object": "CLM-002"
+    },
+    {
+      "route": "/evidence/CLM-002/",
+      "surface": "governed_numeric_inventory",
+      "field": "limitations_ar",
+      "token": "17.3",
+      "category": "GOVERNED_OBJECT_SOURCE_CLOSED",
+      "context": "لا يثبت هذا الدليل سبب الفجوة بين الرجال والنساء، ولا يمثل الفجوة القائمة في عام 2026. | يستبعد إطار المسح مناطق يقطنها نحو 23% من السكان، كما استُبدل أكثر من ربع وحدات المعاينة الأولية. ولا ينشر البنك الدولي مع هذه القيم خطأً معياريًا ولا فترة ثقة، لذلك يستخرجها هذا المورد من أوزان المسح نفسها: ففي عينة من 1,000 مستجيب تمتد فترة الثقة 95% من 3.2% إلى 7.7% للنساء، ومن 14.6% إلى 22.1% للرجال، ومن 8.5 إلى 17.3 نقطة للفجوة. ولا يحمل الملف المتاح للباحثين معرّف وحدة المعاينة، لذلك لا تُحتسب آثار التجمّع العنقودي، وقد تكون الفترات الحقيقية أوسع لا أضيق.",
       "source_object": "CLM-002"
     },
     {
@@ -32804,7 +32948,7 @@
       "field": "method_en",
       "token": "1,000",
       "category": "GOVERNED_OBJECT_SOURCE_CLOSED",
-      "context": "Weighted estimates published by the World Bank from the Global Findex survey of Yemen (1,000 respondents; fieldwork 7 November 2022 to 9 January 2023; World Bank data year 2022) for all adults and for subgroups by sex, household income, education and age. Each of the four differences is calculated by this resource by subtracting the lower published value in a pair from the higher one.",
+      "context": "Weighted estimates published by the World Bank from the Global Findex survey of Yemen (1,000 respondents; fieldwork 7 November 2022 to 9 January 2023; World Bank data year 2022) for all adults and for subgroups by sex, household income, education and age. Each of the four differences is calculated by this resource by subtracting the lower published value in a pair from the higher one. The 95% intervals shown with these values are derived by this resource from the survey's own weights (a design-based interval for a weighted share), not published by the World Bank.",
       "source_object": "VIS-FINDEX-GAPS"
     },
     {
@@ -32813,7 +32957,7 @@
       "field": "method_en",
       "token": "7",
       "category": "GOVERNED_OBJECT_SOURCE_CLOSED",
-      "context": "Weighted estimates published by the World Bank from the Global Findex survey of Yemen (1,000 respondents; fieldwork 7 November 2022 to 9 January 2023; World Bank data year 2022) for all adults and for subgroups by sex, household income, education and age. Each of the four differences is calculated by this resource by subtracting the lower published value in a pair from the higher one.",
+      "context": "Weighted estimates published by the World Bank from the Global Findex survey of Yemen (1,000 respondents; fieldwork 7 November 2022 to 9 January 2023; World Bank data year 2022) for all adults and for subgroups by sex, household income, education and age. Each of the four differences is calculated by this resource by subtracting the lower published value in a pair from the higher one. The 95% intervals shown with these values are derived by this resource from the survey's own weights (a design-based interval for a weighted share), not published by the World Bank.",
       "source_object": "VIS-FINDEX-GAPS"
     },
     {
@@ -32822,7 +32966,7 @@
       "field": "method_en",
       "token": "2022",
       "category": "GOVERNED_OBJECT_SOURCE_CLOSED",
-      "context": "Weighted estimates published by the World Bank from the Global Findex survey of Yemen (1,000 respondents; fieldwork 7 November 2022 to 9 January 2023; World Bank data year 2022) for all adults and for subgroups by sex, household income, education and age. Each of the four differences is calculated by this resource by subtracting the lower published value in a pair from the higher one.",
+      "context": "Weighted estimates published by the World Bank from the Global Findex survey of Yemen (1,000 respondents; fieldwork 7 November 2022 to 9 January 2023; World Bank data year 2022) for all adults and for subgroups by sex, household income, education and age. Each of the four differences is calculated by this resource by subtracting the lower published value in a pair from the higher one. The 95% intervals shown with these values are derived by this resource from the survey's own weights (a design-based interval for a weighted share), not published by the World Bank.",
       "source_object": "VIS-FINDEX-GAPS"
     },
     {
@@ -32831,7 +32975,7 @@
       "field": "method_en",
       "token": "9",
       "category": "GOVERNED_OBJECT_SOURCE_CLOSED",
-      "context": "Weighted estimates published by the World Bank from the Global Findex survey of Yemen (1,000 respondents; fieldwork 7 November 2022 to 9 January 2023; World Bank data year 2022) for all adults and for subgroups by sex, household income, education and age. Each of the four differences is calculated by this resource by subtracting the lower published value in a pair from the higher one.",
+      "context": "Weighted estimates published by the World Bank from the Global Findex survey of Yemen (1,000 respondents; fieldwork 7 November 2022 to 9 January 2023; World Bank data year 2022) for all adults and for subgroups by sex, household income, education and age. Each of the four differences is calculated by this resource by subtracting the lower published value in a pair from the higher one. The 95% intervals shown with these values are derived by this resource from the survey's own weights (a design-based interval for a weighted share), not published by the World Bank.",
       "source_object": "VIS-FINDEX-GAPS"
     },
     {
@@ -32840,7 +32984,16 @@
       "field": "method_en",
       "token": "2023",
       "category": "GOVERNED_OBJECT_SOURCE_CLOSED",
-      "context": "Weighted estimates published by the World Bank from the Global Findex survey of Yemen (1,000 respondents; fieldwork 7 November 2022 to 9 January 2023; World Bank data year 2022) for all adults and for subgroups by sex, household income, education and age. Each of the four differences is calculated by this resource by subtracting the lower published value in a pair from the higher one.",
+      "context": "Weighted estimates published by the World Bank from the Global Findex survey of Yemen (1,000 respondents; fieldwork 7 November 2022 to 9 January 2023; World Bank data year 2022) for all adults and for subgroups by sex, household income, education and age. Each of the four differences is calculated by this resource by subtracting the lower published value in a pair from the higher one. The 95% intervals shown with these values are derived by this resource from the survey's own weights (a design-based interval for a weighted share), not published by the World Bank.",
+      "source_object": "VIS-FINDEX-GAPS"
+    },
+    {
+      "route": "/evidence/VIS-FINDEX-GAPS/",
+      "surface": "governed_numeric_inventory",
+      "field": "method_en",
+      "token": "95%",
+      "category": "GOVERNED_OBJECT_SOURCE_CLOSED",
+      "context": "Weighted estimates published by the World Bank from the Global Findex survey of Yemen (1,000 respondents; fieldwork 7 November 2022 to 9 January 2023; World Bank data year 2022) for all adults and for subgroups by sex, household income, education and age. Each of the four differences is calculated by this resource by subtracting the lower published value in a pair from the higher one. The 95% intervals shown with these values are derived by this resource from the survey's own weights (a design-based interval for a weighted share), not published by the World Bank.",
       "source_object": "VIS-FINDEX-GAPS"
     },
     {
@@ -32849,7 +33002,7 @@
       "field": "method_ar",
       "token": "1,000",
       "category": "GOVERNED_OBJECT_SOURCE_CLOSED",
-      "context": "تقديرات موزونة نشرها البنك الدولي من مسح المؤشر العالمي للشمول المالي (Global Findex) في اليمن (1,000 مستجيب؛ العمل الميداني من 7 نوفمبر 2022 إلى 9 يناير 2023؛ سنة البيانات لدى البنك الدولي 2022) لجميع البالغين وللفئات الفرعية بحسب الجنس ودخل الأسرة والتعليم والعمر. ويحتسب هذا المورد كلًّا من الفروق الأربعة بطرح القيمة المنشورة الأدنى في كل زوج من القيمة الأعلى.",
+      "context": "تقديرات موزونة نشرها البنك الدولي من مسح المؤشر العالمي للشمول المالي (Global Findex) في اليمن (1,000 مستجيب؛ العمل الميداني من 7 نوفمبر 2022 إلى 9 يناير 2023؛ سنة البيانات لدى البنك الدولي 2022) لجميع البالغين وللفئات الفرعية بحسب الجنس ودخل الأسرة والتعليم والعمر. ويحتسب هذا المورد كلًّا من الفروق الأربعة بطرح القيمة المنشورة الأدنى في كل زوج من القيمة الأعلى. وفترات الثقة 95% المعروضة مع هذه القيم يستخرجها هذا المورد من أوزان المسح نفسها (فترة قائمة على تصميم المسح لنسبة موزونة)، ولم ينشرها البنك الدولي.",
       "source_object": "VIS-FINDEX-GAPS"
     },
     {
@@ -32858,7 +33011,7 @@
       "field": "method_ar",
       "token": "7",
       "category": "GOVERNED_OBJECT_SOURCE_CLOSED",
-      "context": "تقديرات موزونة نشرها البنك الدولي من مسح المؤشر العالمي للشمول المالي (Global Findex) في اليمن (1,000 مستجيب؛ العمل الميداني من 7 نوفمبر 2022 إلى 9 يناير 2023؛ سنة البيانات لدى البنك الدولي 2022) لجميع البالغين وللفئات الفرعية بحسب الجنس ودخل الأسرة والتعليم والعمر. ويحتسب هذا المورد كلًّا من الفروق الأربعة بطرح القيمة المنشورة الأدنى في كل زوج من القيمة الأعلى.",
+      "context": "تقديرات موزونة نشرها البنك الدولي من مسح المؤشر العالمي للشمول المالي (Global Findex) في اليمن (1,000 مستجيب؛ العمل الميداني من 7 نوفمبر 2022 إلى 9 يناير 2023؛ سنة البيانات لدى البنك الدولي 2022) لجميع البالغين وللفئات الفرعية بحسب الجنس ودخل الأسرة والتعليم والعمر. ويحتسب هذا المورد كلًّا من الفروق الأربعة بطرح القيمة المنشورة الأدنى في كل زوج من القيمة الأعلى. وفترات الثقة 95% المعروضة مع هذه القيم يستخرجها هذا المورد من أوزان المسح نفسها (فترة قائمة على تصميم المسح لنسبة موزونة)، ولم ينشرها البنك الدولي.",
       "source_object": "VIS-FINDEX-GAPS"
     },
     {
@@ -32867,7 +33020,7 @@
       "field": "method_ar",
       "token": "2022",
       "category": "GOVERNED_OBJECT_SOURCE_CLOSED",
-      "context": "تقديرات موزونة نشرها البنك الدولي من مسح المؤشر العالمي للشمول المالي (Global Findex) في اليمن (1,000 مستجيب؛ العمل الميداني من 7 نوفمبر 2022 إلى 9 يناير 2023؛ سنة البيانات لدى البنك الدولي 2022) لجميع البالغين وللفئات الفرعية بحسب الجنس ودخل الأسرة والتعليم والعمر. ويحتسب هذا المورد كلًّا من الفروق الأربعة بطرح القيمة المنشورة الأدنى في كل زوج من القيمة الأعلى.",
+      "context": "تقديرات موزونة نشرها البنك الدولي من مسح المؤشر العالمي للشمول المالي (Global Findex) في اليمن (1,000 مستجيب؛ العمل الميداني من 7 نوفمبر 2022 إلى 9 يناير 2023؛ سنة البيانات لدى البنك الدولي 2022) لجميع البالغين وللفئات الفرعية بحسب الجنس ودخل الأسرة والتعليم والعمر. ويحتسب هذا المورد كلًّا من الفروق الأربعة بطرح القيمة المنشورة الأدنى في كل زوج من القيمة الأعلى. وفترات الثقة 95% المعروضة مع هذه القيم يستخرجها هذا المورد من أوزان المسح نفسها (فترة قائمة على تصميم المسح لنسبة موزونة)، ولم ينشرها البنك الدولي.",
       "source_object": "VIS-FINDEX-GAPS"
     },
     {
@@ -32876,7 +33029,7 @@
       "field": "method_ar",
       "token": "9",
       "category": "GOVERNED_OBJECT_SOURCE_CLOSED",
-      "context": "تقديرات موزونة نشرها البنك الدولي من مسح المؤشر العالمي للشمول المالي (Global Findex) في اليمن (1,000 مستجيب؛ العمل الميداني من 7 نوفمبر 2022 إلى 9 يناير 2023؛ سنة البيانات لدى البنك الدولي 2022) لجميع البالغين وللفئات الفرعية بحسب الجنس ودخل الأسرة والتعليم والعمر. ويحتسب هذا المورد كلًّا من الفروق الأربعة بطرح القيمة المنشورة الأدنى في كل زوج من القيمة الأعلى.",
+      "context": "تقديرات موزونة نشرها البنك الدولي من مسح المؤشر العالمي للشمول المالي (Global Findex) في اليمن (1,000 مستجيب؛ العمل الميداني من 7 نوفمبر 2022 إلى 9 يناير 2023؛ سنة البيانات لدى البنك الدولي 2022) لجميع البالغين وللفئات الفرعية بحسب الجنس ودخل الأسرة والتعليم والعمر. ويحتسب هذا المورد كلًّا من الفروق الأربعة بطرح القيمة المنشورة الأدنى في كل زوج من القيمة الأعلى. وفترات الثقة 95% المعروضة مع هذه القيم يستخرجها هذا المورد من أوزان المسح نفسها (فترة قائمة على تصميم المسح لنسبة موزونة)، ولم ينشرها البنك الدولي.",
       "source_object": "VIS-FINDEX-GAPS"
     },
     {
@@ -32885,7 +33038,16 @@
       "field": "method_ar",
       "token": "2023",
       "category": "GOVERNED_OBJECT_SOURCE_CLOSED",
-      "context": "تقديرات موزونة نشرها البنك الدولي من مسح المؤشر العالمي للشمول المالي (Global Findex) في اليمن (1,000 مستجيب؛ العمل الميداني من 7 نوفمبر 2022 إلى 9 يناير 2023؛ سنة البيانات لدى البنك الدولي 2022) لجميع البالغين وللفئات الفرعية بحسب الجنس ودخل الأسرة والتعليم والعمر. ويحتسب هذا المورد كلًّا من الفروق الأربعة بطرح القيمة المنشورة الأدنى في كل زوج من القيمة الأعلى.",
+      "context": "تقديرات موزونة نشرها البنك الدولي من مسح المؤشر العالمي للشمول المالي (Global Findex) في اليمن (1,000 مستجيب؛ العمل الميداني من 7 نوفمبر 2022 إلى 9 يناير 2023؛ سنة البيانات لدى البنك الدولي 2022) لجميع البالغين وللفئات الفرعية بحسب الجنس ودخل الأسرة والتعليم والعمر. ويحتسب هذا المورد كلًّا من الفروق الأربعة بطرح القيمة المنشورة الأدنى في كل زوج من القيمة الأعلى. وفترات الثقة 95% المعروضة مع هذه القيم يستخرجها هذا المورد من أوزان المسح نفسها (فترة قائمة على تصميم المسح لنسبة موزونة)، ولم ينشرها البنك الدولي.",
+      "source_object": "VIS-FINDEX-GAPS"
+    },
+    {
+      "route": "/evidence/VIS-FINDEX-GAPS/",
+      "surface": "governed_numeric_inventory",
+      "field": "method_ar",
+      "token": "95%",
+      "category": "GOVERNED_OBJECT_SOURCE_CLOSED",
+      "context": "تقديرات موزونة نشرها البنك الدولي من مسح المؤشر العالمي للشمول المالي (Global Findex) في اليمن (1,000 مستجيب؛ العمل الميداني من 7 نوفمبر 2022 إلى 9 يناير 2023؛ سنة البيانات لدى البنك الدولي 2022) لجميع البالغين وللفئات الفرعية بحسب الجنس ودخل الأسرة والتعليم والعمر. ويحتسب هذا المورد كلًّا من الفروق الأربعة بطرح القيمة المنشورة الأدنى في كل زوج من القيمة الأعلى. وفترات الثقة 95% المعروضة مع هذه القيم يستخرجها هذا المورد من أوزان المسح نفسها (فترة قائمة على تصميم المسح لنسبة موزونة)، ولم ينشرها البنك الدولي.",
       "source_object": "VIS-FINDEX-GAPS"
     },
     {
@@ -32894,7 +33056,7 @@
       "field": "limitations_en",
       "token": "2026",
       "category": "GOVERNED_OBJECT_SOURCE_CLOSED",
-      "context": "These are values from one survey wave, not an annual series and not a 2026 rate. They cannot be mapped to governorates, they are not comparable with account counts reported by the Central Bank of Yemen – Aden (CBY-Aden), and the differences between groups do not establish their causes. | The survey frame excludes areas holding about 23% of the population, and more than a quarter of primary sampling units were replaced. No standard errors or confidence intervals are published with these values; the Yemen sample is 1,000 respondents, so subgroup values and the gaps carry sampling uncertainty that is not quantified here.",
+      "context": "These are values from one survey wave, not an annual series and not a 2026 rate. They cannot be mapped to governorates, they are not comparable with account counts reported by the Central Bank of Yemen – Aden (CBY-Aden), and the differences between groups do not establish their causes. | The survey frame excludes areas holding about 23% of the population, and more than a quarter of primary sampling units were replaced. The World Bank publishes no standard error or confidence interval with these values, so this resource derives them from the survey's own weights: on a sample of 1,000 respondents, and fewer in each group, the 95% margin of error is 2.2 points on the figure for all adults, between 2.2 and 3.9 points on each group's share, and between 4.0 and 4.6 points on each of the four differences. Each interval is printed with its figure on that figure's own record. The file open to researchers carries no sampling-unit identifier, so clustering is not captured and the true intervals may be wider, never narrower.",
       "source_object": "VIS-FINDEX-GAPS"
     },
     {
@@ -32903,7 +33065,7 @@
       "field": "limitations_en",
       "token": "23%",
       "category": "GOVERNED_OBJECT_SOURCE_CLOSED",
-      "context": "These are values from one survey wave, not an annual series and not a 2026 rate. They cannot be mapped to governorates, they are not comparable with account counts reported by the Central Bank of Yemen – Aden (CBY-Aden), and the differences between groups do not establish their causes. | The survey frame excludes areas holding about 23% of the population, and more than a quarter of primary sampling units were replaced. No standard errors or confidence intervals are published with these values; the Yemen sample is 1,000 respondents, so subgroup values and the gaps carry sampling uncertainty that is not quantified here.",
+      "context": "These are values from one survey wave, not an annual series and not a 2026 rate. They cannot be mapped to governorates, they are not comparable with account counts reported by the Central Bank of Yemen – Aden (CBY-Aden), and the differences between groups do not establish their causes. | The survey frame excludes areas holding about 23% of the population, and more than a quarter of primary sampling units were replaced. The World Bank publishes no standard error or confidence interval with these values, so this resource derives them from the survey's own weights: on a sample of 1,000 respondents, and fewer in each group, the 95% margin of error is 2.2 points on the figure for all adults, between 2.2 and 3.9 points on each group's share, and between 4.0 and 4.6 points on each of the four differences. Each interval is printed with its figure on that figure's own record. The file open to researchers carries no sampling-unit identifier, so clustering is not captured and the true intervals may be wider, never narrower.",
       "source_object": "VIS-FINDEX-GAPS"
     },
     {
@@ -32912,7 +33074,52 @@
       "field": "limitations_en",
       "token": "1,000",
       "category": "GOVERNED_OBJECT_SOURCE_CLOSED",
-      "context": "These are values from one survey wave, not an annual series and not a 2026 rate. They cannot be mapped to governorates, they are not comparable with account counts reported by the Central Bank of Yemen – Aden (CBY-Aden), and the differences between groups do not establish their causes. | The survey frame excludes areas holding about 23% of the population, and more than a quarter of primary sampling units were replaced. No standard errors or confidence intervals are published with these values; the Yemen sample is 1,000 respondents, so subgroup values and the gaps carry sampling uncertainty that is not quantified here.",
+      "context": "These are values from one survey wave, not an annual series and not a 2026 rate. They cannot be mapped to governorates, they are not comparable with account counts reported by the Central Bank of Yemen – Aden (CBY-Aden), and the differences between groups do not establish their causes. | The survey frame excludes areas holding about 23% of the population, and more than a quarter of primary sampling units were replaced. The World Bank publishes no standard error or confidence interval with these values, so this resource derives them from the survey's own weights: on a sample of 1,000 respondents, and fewer in each group, the 95% margin of error is 2.2 points on the figure for all adults, between 2.2 and 3.9 points on each group's share, and between 4.0 and 4.6 points on each of the four differences. Each interval is printed with its figure on that figure's own record. The file open to researchers carries no sampling-unit identifier, so clustering is not captured and the true intervals may be wider, never narrower.",
+      "source_object": "VIS-FINDEX-GAPS"
+    },
+    {
+      "route": "/evidence/VIS-FINDEX-GAPS/",
+      "surface": "governed_numeric_inventory",
+      "field": "limitations_en",
+      "token": "95%",
+      "category": "GOVERNED_OBJECT_SOURCE_CLOSED",
+      "context": "These are values from one survey wave, not an annual series and not a 2026 rate. They cannot be mapped to governorates, they are not comparable with account counts reported by the Central Bank of Yemen – Aden (CBY-Aden), and the differences between groups do not establish their causes. | The survey frame excludes areas holding about 23% of the population, and more than a quarter of primary sampling units were replaced. The World Bank publishes no standard error or confidence interval with these values, so this resource derives them from the survey's own weights: on a sample of 1,000 respondents, and fewer in each group, the 95% margin of error is 2.2 points on the figure for all adults, between 2.2 and 3.9 points on each group's share, and between 4.0 and 4.6 points on each of the four differences. Each interval is printed with its figure on that figure's own record. The file open to researchers carries no sampling-unit identifier, so clustering is not captured and the true intervals may be wider, never narrower.",
+      "source_object": "VIS-FINDEX-GAPS"
+    },
+    {
+      "route": "/evidence/VIS-FINDEX-GAPS/",
+      "surface": "governed_numeric_inventory",
+      "field": "limitations_en",
+      "token": "2.2",
+      "category": "GOVERNED_OBJECT_SOURCE_CLOSED",
+      "context": "These are values from one survey wave, not an annual series and not a 2026 rate. They cannot be mapped to governorates, they are not comparable with account counts reported by the Central Bank of Yemen – Aden (CBY-Aden), and the differences between groups do not establish their causes. | The survey frame excludes areas holding about 23% of the population, and more than a quarter of primary sampling units were replaced. The World Bank publishes no standard error or confidence interval with these values, so this resource derives them from the survey's own weights: on a sample of 1,000 respondents, and fewer in each group, the 95% margin of error is 2.2 points on the figure for all adults, between 2.2 and 3.9 points on each group's share, and between 4.0 and 4.6 points on each of the four differences. Each interval is printed with its figure on that figure's own record. The file open to researchers carries no sampling-unit identifier, so clustering is not captured and the true intervals may be wider, never narrower.",
+      "source_object": "VIS-FINDEX-GAPS"
+    },
+    {
+      "route": "/evidence/VIS-FINDEX-GAPS/",
+      "surface": "governed_numeric_inventory",
+      "field": "limitations_en",
+      "token": "3.9",
+      "category": "GOVERNED_OBJECT_SOURCE_CLOSED",
+      "context": "These are values from one survey wave, not an annual series and not a 2026 rate. They cannot be mapped to governorates, they are not comparable with account counts reported by the Central Bank of Yemen – Aden (CBY-Aden), and the differences between groups do not establish their causes. | The survey frame excludes areas holding about 23% of the population, and more than a quarter of primary sampling units were replaced. The World Bank publishes no standard error or confidence interval with these values, so this resource derives them from the survey's own weights: on a sample of 1,000 respondents, and fewer in each group, the 95% margin of error is 2.2 points on the figure for all adults, between 2.2 and 3.9 points on each group's share, and between 4.0 and 4.6 points on each of the four differences. Each interval is printed with its figure on that figure's own record. The file open to researchers carries no sampling-unit identifier, so clustering is not captured and the true intervals may be wider, never narrower.",
+      "source_object": "VIS-FINDEX-GAPS"
+    },
+    {
+      "route": "/evidence/VIS-FINDEX-GAPS/",
+      "surface": "governed_numeric_inventory",
+      "field": "limitations_en",
+      "token": "4.0",
+      "category": "GOVERNED_OBJECT_SOURCE_CLOSED",
+      "context": "These are values from one survey wave, not an annual series and not a 2026 rate. They cannot be mapped to governorates, they are not comparable with account counts reported by the Central Bank of Yemen – Aden (CBY-Aden), and the differences between groups do not establish their causes. | The survey frame excludes areas holding about 23% of the population, and more than a quarter of primary sampling units were replaced. The World Bank publishes no standard error or confidence interval with these values, so this resource derives them from the survey's own weights: on a sample of 1,000 respondents, and fewer in each group, the 95% margin of error is 2.2 points on the figure for all adults, between 2.2 and 3.9 points on each group's share, and between 4.0 and 4.6 points on each of the four differences. Each interval is printed with its figure on that figure's own record. The file open to researchers carries no sampling-unit identifier, so clustering is not captured and the true intervals may be wider, never narrower.",
+      "source_object": "VIS-FINDEX-GAPS"
+    },
+    {
+      "route": "/evidence/VIS-FINDEX-GAPS/",
+      "surface": "governed_numeric_inventory",
+      "field": "limitations_en",
+      "token": "4.6",
+      "category": "GOVERNED_OBJECT_SOURCE_CLOSED",
+      "context": "These are values from one survey wave, not an annual series and not a 2026 rate. They cannot be mapped to governorates, they are not comparable with account counts reported by the Central Bank of Yemen – Aden (CBY-Aden), and the differences between groups do not establish their causes. | The survey frame excludes areas holding about 23% of the population, and more than a quarter of primary sampling units were replaced. The World Bank publishes no standard error or confidence interval with these values, so this resource derives them from the survey's own weights: on a sample of 1,000 respondents, and fewer in each group, the 95% margin of error is 2.2 points on the figure for all adults, between 2.2 and 3.9 points on each group's share, and between 4.0 and 4.6 points on each of the four differences. Each interval is printed with its figure on that figure's own record. The file open to researchers carries no sampling-unit identifier, so clustering is not captured and the true intervals may be wider, never narrower.",
       "source_object": "VIS-FINDEX-GAPS"
     },
     {
@@ -32921,7 +33128,7 @@
       "field": "limitations_ar",
       "token": "2026",
       "category": "GOVERNED_OBJECT_SOURCE_CLOSED",
-      "context": "هذه قيم من موجة مسحية واحدة، وليست سلسلة سنوية ولا معدلًا لعام 2026. ولا يمكن إسقاطها على المحافظات، ولا تُقارن بأعداد الحسابات التي يُبلغ عنها البنك المركزي اليمني – عدن، ولا تثبت الفروق بين الفئات أسبابها. | يستبعد إطار المسح مناطق يقطنها نحو 23% من السكان، كما استُبدل أكثر من ربع وحدات المعاينة الأولية. ولا تُنشر مع هذه القيم أخطاء معيارية أو فترات ثقة؛ وتبلغ عينة اليمن 1,000 مستجيب، لذلك تنطوي قيم الفئات الفرعية والفجوات بينها على عدم يقين ناتج عن المعاينة لا يُقدَّر كميًا هنا.",
+      "context": "هذه قيم من موجة مسحية واحدة، وليست سلسلة سنوية ولا معدلًا لعام 2026. ولا يمكن إسقاطها على المحافظات، ولا تُقارن بأعداد الحسابات التي يُبلغ عنها البنك المركزي اليمني – عدن، ولا تثبت الفروق بين الفئات أسبابها. | يستبعد إطار المسح مناطق يقطنها نحو 23% من السكان، كما استُبدل أكثر من ربع وحدات المعاينة الأولية. ولا ينشر البنك الدولي مع هذه القيم خطأً معياريًا ولا فترة ثقة، لذلك يستخرجها هذا المورد من أوزان المسح نفسها: ففي عينة من 1,000 مستجيب، وبعدد أقل في كل فئة، يبلغ هامش الخطأ عند ثقة 95% نحو 2.2 نقطة على القيمة الخاصة بجميع البالغين، وبين 2.2 و3.9 نقطة على نسبة كل فئة، وبين 4.0 و4.6 نقطة على كل فرق من الفروق الأربعة. وتُعرض كل فترة مع قيمتها في سجل تلك القيمة. ولا يحمل الملف المتاح للباحثين معرّف وحدة المعاينة، لذلك لا تُحتسب آثار التجمّع العنقودي، وقد تكون الفترات الحقيقية أوسع لا أضيق.",
       "source_object": "VIS-FINDEX-GAPS"
     },
     {
@@ -32930,7 +33137,7 @@
       "field": "limitations_ar",
       "token": "23%",
       "category": "GOVERNED_OBJECT_SOURCE_CLOSED",
-      "context": "هذه قيم من موجة مسحية واحدة، وليست سلسلة سنوية ولا معدلًا لعام 2026. ولا يمكن إسقاطها على المحافظات، ولا تُقارن بأعداد الحسابات التي يُبلغ عنها البنك المركزي اليمني – عدن، ولا تثبت الفروق بين الفئات أسبابها. | يستبعد إطار المسح مناطق يقطنها نحو 23% من السكان، كما استُبدل أكثر من ربع وحدات المعاينة الأولية. ولا تُنشر مع هذه القيم أخطاء معيارية أو فترات ثقة؛ وتبلغ عينة اليمن 1,000 مستجيب، لذلك تنطوي قيم الفئات الفرعية والفجوات بينها على عدم يقين ناتج عن المعاينة لا يُقدَّر كميًا هنا.",
+      "context": "هذه قيم من موجة مسحية واحدة، وليست سلسلة سنوية ولا معدلًا لعام 2026. ولا يمكن إسقاطها على المحافظات، ولا تُقارن بأعداد الحسابات التي يُبلغ عنها البنك المركزي اليمني – عدن، ولا تثبت الفروق بين الفئات أسبابها. | يستبعد إطار المسح مناطق يقطنها نحو 23% من السكان، كما استُبدل أكثر من ربع وحدات المعاينة الأولية. ولا ينشر البنك الدولي مع هذه القيم خطأً معياريًا ولا فترة ثقة، لذلك يستخرجها هذا المورد من أوزان المسح نفسها: ففي عينة من 1,000 مستجيب، وبعدد أقل في كل فئة، يبلغ هامش الخطأ عند ثقة 95% نحو 2.2 نقطة على القيمة الخاصة بجميع البالغين، وبين 2.2 و3.9 نقطة على نسبة كل فئة، وبين 4.0 و4.6 نقطة على كل فرق من الفروق الأربعة. وتُعرض كل فترة مع قيمتها في سجل تلك القيمة. ولا يحمل الملف المتاح للباحثين معرّف وحدة المعاينة، لذلك لا تُحتسب آثار التجمّع العنقودي، وقد تكون الفترات الحقيقية أوسع لا أضيق.",
       "source_object": "VIS-FINDEX-GAPS"
     },
     {
@@ -32939,7 +33146,52 @@
       "field": "limitations_ar",
       "token": "1,000",
       "category": "GOVERNED_OBJECT_SOURCE_CLOSED",
-      "context": "هذه قيم من موجة مسحية واحدة، وليست سلسلة سنوية ولا معدلًا لعام 2026. ولا يمكن إسقاطها على المحافظات، ولا تُقارن بأعداد الحسابات التي يُبلغ عنها البنك المركزي اليمني – عدن، ولا تثبت الفروق بين الفئات أسبابها. | يستبعد إطار المسح مناطق يقطنها نحو 23% من السكان، كما استُبدل أكثر من ربع وحدات المعاينة الأولية. ولا تُنشر مع هذه القيم أخطاء معيارية أو فترات ثقة؛ وتبلغ عينة اليمن 1,000 مستجيب، لذلك تنطوي قيم الفئات الفرعية والفجوات بينها على عدم يقين ناتج عن المعاينة لا يُقدَّر كميًا هنا.",
+      "context": "هذه قيم من موجة مسحية واحدة، وليست سلسلة سنوية ولا معدلًا لعام 2026. ولا يمكن إسقاطها على المحافظات، ولا تُقارن بأعداد الحسابات التي يُبلغ عنها البنك المركزي اليمني – عدن، ولا تثبت الفروق بين الفئات أسبابها. | يستبعد إطار المسح مناطق يقطنها نحو 23% من السكان، كما استُبدل أكثر من ربع وحدات المعاينة الأولية. ولا ينشر البنك الدولي مع هذه القيم خطأً معياريًا ولا فترة ثقة، لذلك يستخرجها هذا المورد من أوزان المسح نفسها: ففي عينة من 1,000 مستجيب، وبعدد أقل في كل فئة، يبلغ هامش الخطأ عند ثقة 95% نحو 2.2 نقطة على القيمة الخاصة بجميع البالغين، وبين 2.2 و3.9 نقطة على نسبة كل فئة، وبين 4.0 و4.6 نقطة على كل فرق من الفروق الأربعة. وتُعرض كل فترة مع قيمتها في سجل تلك القيمة. ولا يحمل الملف المتاح للباحثين معرّف وحدة المعاينة، لذلك لا تُحتسب آثار التجمّع العنقودي، وقد تكون الفترات الحقيقية أوسع لا أضيق.",
+      "source_object": "VIS-FINDEX-GAPS"
+    },
+    {
+      "route": "/evidence/VIS-FINDEX-GAPS/",
+      "surface": "governed_numeric_inventory",
+      "field": "limitations_ar",
+      "token": "95%",
+      "category": "GOVERNED_OBJECT_SOURCE_CLOSED",
+      "context": "هذه قيم من موجة مسحية واحدة، وليست سلسلة سنوية ولا معدلًا لعام 2026. ولا يمكن إسقاطها على المحافظات، ولا تُقارن بأعداد الحسابات التي يُبلغ عنها البنك المركزي اليمني – عدن، ولا تثبت الفروق بين الفئات أسبابها. | يستبعد إطار المسح مناطق يقطنها نحو 23% من السكان، كما استُبدل أكثر من ربع وحدات المعاينة الأولية. ولا ينشر البنك الدولي مع هذه القيم خطأً معياريًا ولا فترة ثقة، لذلك يستخرجها هذا المورد من أوزان المسح نفسها: ففي عينة من 1,000 مستجيب، وبعدد أقل في كل فئة، يبلغ هامش الخطأ عند ثقة 95% نحو 2.2 نقطة على القيمة الخاصة بجميع البالغين، وبين 2.2 و3.9 نقطة على نسبة كل فئة، وبين 4.0 و4.6 نقطة على كل فرق من الفروق الأربعة. وتُعرض كل فترة مع قيمتها في سجل تلك القيمة. ولا يحمل الملف المتاح للباحثين معرّف وحدة المعاينة، لذلك لا تُحتسب آثار التجمّع العنقودي، وقد تكون الفترات الحقيقية أوسع لا أضيق.",
+      "source_object": "VIS-FINDEX-GAPS"
+    },
+    {
+      "route": "/evidence/VIS-FINDEX-GAPS/",
+      "surface": "governed_numeric_inventory",
+      "field": "limitations_ar",
+      "token": "2.2",
+      "category": "GOVERNED_OBJECT_SOURCE_CLOSED",
+      "context": "هذه قيم من موجة مسحية واحدة، وليست سلسلة سنوية ولا معدلًا لعام 2026. ولا يمكن إسقاطها على المحافظات، ولا تُقارن بأعداد الحسابات التي يُبلغ عنها البنك المركزي اليمني – عدن، ولا تثبت الفروق بين الفئات أسبابها. | يستبعد إطار المسح مناطق يقطنها نحو 23% من السكان، كما استُبدل أكثر من ربع وحدات المعاينة الأولية. ولا ينشر البنك الدولي مع هذه القيم خطأً معياريًا ولا فترة ثقة، لذلك يستخرجها هذا المورد من أوزان المسح نفسها: ففي عينة من 1,000 مستجيب، وبعدد أقل في كل فئة، يبلغ هامش الخطأ عند ثقة 95% نحو 2.2 نقطة على القيمة الخاصة بجميع البالغين، وبين 2.2 و3.9 نقطة على نسبة كل فئة، وبين 4.0 و4.6 نقطة على كل فرق من الفروق الأربعة. وتُعرض كل فترة مع قيمتها في سجل تلك القيمة. ولا يحمل الملف المتاح للباحثين معرّف وحدة المعاينة، لذلك لا تُحتسب آثار التجمّع العنقودي، وقد تكون الفترات الحقيقية أوسع لا أضيق.",
+      "source_object": "VIS-FINDEX-GAPS"
+    },
+    {
+      "route": "/evidence/VIS-FINDEX-GAPS/",
+      "surface": "governed_numeric_inventory",
+      "field": "limitations_ar",
+      "token": "9",
+      "category": "GOVERNED_OBJECT_SOURCE_CLOSED",
+      "context": "هذه قيم من موجة مسحية واحدة، وليست سلسلة سنوية ولا معدلًا لعام 2026. ولا يمكن إسقاطها على المحافظات، ولا تُقارن بأعداد الحسابات التي يُبلغ عنها البنك المركزي اليمني – عدن، ولا تثبت الفروق بين الفئات أسبابها. | يستبعد إطار المسح مناطق يقطنها نحو 23% من السكان، كما استُبدل أكثر من ربع وحدات المعاينة الأولية. ولا ينشر البنك الدولي مع هذه القيم خطأً معياريًا ولا فترة ثقة، لذلك يستخرجها هذا المورد من أوزان المسح نفسها: ففي عينة من 1,000 مستجيب، وبعدد أقل في كل فئة، يبلغ هامش الخطأ عند ثقة 95% نحو 2.2 نقطة على القيمة الخاصة بجميع البالغين، وبين 2.2 و3.9 نقطة على نسبة كل فئة، وبين 4.0 و4.6 نقطة على كل فرق من الفروق الأربعة. وتُعرض كل فترة مع قيمتها في سجل تلك القيمة. ولا يحمل الملف المتاح للباحثين معرّف وحدة المعاينة، لذلك لا تُحتسب آثار التجمّع العنقودي، وقد تكون الفترات الحقيقية أوسع لا أضيق.",
+      "source_object": "VIS-FINDEX-GAPS"
+    },
+    {
+      "route": "/evidence/VIS-FINDEX-GAPS/",
+      "surface": "governed_numeric_inventory",
+      "field": "limitations_ar",
+      "token": "4.0",
+      "category": "GOVERNED_OBJECT_SOURCE_CLOSED",
+      "context": "هذه قيم من موجة مسحية واحدة، وليست سلسلة سنوية ولا معدلًا لعام 2026. ولا يمكن إسقاطها على المحافظات، ولا تُقارن بأعداد الحسابات التي يُبلغ عنها البنك المركزي اليمني – عدن، ولا تثبت الفروق بين الفئات أسبابها. | يستبعد إطار المسح مناطق يقطنها نحو 23% من السكان، كما استُبدل أكثر من ربع وحدات المعاينة الأولية. ولا ينشر البنك الدولي مع هذه القيم خطأً معياريًا ولا فترة ثقة، لذلك يستخرجها هذا المورد من أوزان المسح نفسها: ففي عينة من 1,000 مستجيب، وبعدد أقل في كل فئة، يبلغ هامش الخطأ عند ثقة 95% نحو 2.2 نقطة على القيمة الخاصة بجميع البالغين، وبين 2.2 و3.9 نقطة على نسبة كل فئة، وبين 4.0 و4.6 نقطة على كل فرق من الفروق الأربعة. وتُعرض كل فترة مع قيمتها في سجل تلك القيمة. ولا يحمل الملف المتاح للباحثين معرّف وحدة المعاينة، لذلك لا تُحتسب آثار التجمّع العنقودي، وقد تكون الفترات الحقيقية أوسع لا أضيق.",
+      "source_object": "VIS-FINDEX-GAPS"
+    },
+    {
+      "route": "/evidence/VIS-FINDEX-GAPS/",
+      "surface": "governed_numeric_inventory",
+      "field": "limitations_ar",
+      "token": "6",
+      "category": "GOVERNED_OBJECT_SOURCE_CLOSED",
+      "context": "هذه قيم من موجة مسحية واحدة، وليست سلسلة سنوية ولا معدلًا لعام 2026. ولا يمكن إسقاطها على المحافظات، ولا تُقارن بأعداد الحسابات التي يُبلغ عنها البنك المركزي اليمني – عدن، ولا تثبت الفروق بين الفئات أسبابها. | يستبعد إطار المسح مناطق يقطنها نحو 23% من السكان، كما استُبدل أكثر من ربع وحدات المعاينة الأولية. ولا ينشر البنك الدولي مع هذه القيم خطأً معياريًا ولا فترة ثقة، لذلك يستخرجها هذا المورد من أوزان المسح نفسها: ففي عينة من 1,000 مستجيب، وبعدد أقل في كل فئة، يبلغ هامش الخطأ عند ثقة 95% نحو 2.2 نقطة على القيمة الخاصة بجميع البالغين، وبين 2.2 و3.9 نقطة على نسبة كل فئة، وبين 4.0 و4.6 نقطة على كل فرق من الفروق الأربعة. وتُعرض كل فترة مع قيمتها في سجل تلك القيمة. ولا يحمل الملف المتاح للباحثين معرّف وحدة المعاينة، لذلك لا تُحتسب آثار التجمّع العنقودي، وقد تكون الفترات الحقيقية أوسع لا أضيق.",
       "source_object": "VIS-FINDEX-GAPS"
     },
     {
@@ -75017,7 +75269,7 @@
       "field": "method_en",
       "token": "18.3%",
       "category": "GOVERNED_OBJECT_SOURCE_CLOSED",
-      "context": "Calculated by this resource as the difference between two weighted estimates published by the World Bank for the same wave: men 18.3% minus women 5.4% (World Bank series FX.OWN.TOTL.MA.ZS minus FX.OWN.TOTL.FE.ZS, data year 2022).",
+      "context": "Calculated by this resource as the difference between two weighted estimates published by the World Bank for the same wave: men 18.3% minus women 5.4% (World Bank series FX.OWN.TOTL.MA.ZS minus FX.OWN.TOTL.FE.ZS, data year 2022). The 95% intervals shown with these values are derived by this resource from the survey's own weights (a design-based interval for a weighted share), not published by the World Bank.",
       "source_object": "CLM-002"
     },
     {
@@ -75026,7 +75278,7 @@
       "field": "method_en",
       "token": "5.4%",
       "category": "GOVERNED_OBJECT_SOURCE_CLOSED",
-      "context": "Calculated by this resource as the difference between two weighted estimates published by the World Bank for the same wave: men 18.3% minus women 5.4% (World Bank series FX.OWN.TOTL.MA.ZS minus FX.OWN.TOTL.FE.ZS, data year 2022).",
+      "context": "Calculated by this resource as the difference between two weighted estimates published by the World Bank for the same wave: men 18.3% minus women 5.4% (World Bank series FX.OWN.TOTL.MA.ZS minus FX.OWN.TOTL.FE.ZS, data year 2022). The 95% intervals shown with these values are derived by this resource from the survey's own weights (a design-based interval for a weighted share), not published by the World Bank.",
       "source_object": "CLM-002"
     },
     {
@@ -75035,7 +75287,16 @@
       "field": "method_en",
       "token": "2022",
       "category": "GOVERNED_OBJECT_SOURCE_CLOSED",
-      "context": "Calculated by this resource as the difference between two weighted estimates published by the World Bank for the same wave: men 18.3% minus women 5.4% (World Bank series FX.OWN.TOTL.MA.ZS minus FX.OWN.TOTL.FE.ZS, data year 2022).",
+      "context": "Calculated by this resource as the difference between two weighted estimates published by the World Bank for the same wave: men 18.3% minus women 5.4% (World Bank series FX.OWN.TOTL.MA.ZS minus FX.OWN.TOTL.FE.ZS, data year 2022). The 95% intervals shown with these values are derived by this resource from the survey's own weights (a design-based interval for a weighted share), not published by the World Bank.",
+      "source_object": "CLM-002"
+    },
+    {
+      "route": "/",
+      "surface": "governed_numeric_inventory",
+      "field": "method_en",
+      "token": "95%",
+      "category": "GOVERNED_OBJECT_SOURCE_CLOSED",
+      "context": "Calculated by this resource as the difference between two weighted estimates published by the World Bank for the same wave: men 18.3% minus women 5.4% (World Bank series FX.OWN.TOTL.MA.ZS minus FX.OWN.TOTL.FE.ZS, data year 2022). The 95% intervals shown with these values are derived by this resource from the survey's own weights (a design-based interval for a weighted share), not published by the World Bank.",
       "source_object": "CLM-002"
     },
     {
@@ -75044,7 +75305,7 @@
       "field": "method_ar",
       "token": "18.3%",
       "category": "GOVERNED_OBJECT_SOURCE_CLOSED",
-      "context": "احتسبه هذا المورد بوصفه الفارق بين تقديرين موزونين نشرهما البنك الدولي للموجة نفسها: 18.3% للرجال ناقص 5.4% للنساء (سلسلة البنك الدولي FX.OWN.TOTL.MA.ZS ناقص FX.OWN.TOTL.FE.ZS، سنة البيانات 2022).",
+      "context": "احتسبه هذا المورد بوصفه الفارق بين تقديرين موزونين نشرهما البنك الدولي للموجة نفسها: 18.3% للرجال ناقص 5.4% للنساء (سلسلة البنك الدولي FX.OWN.TOTL.MA.ZS ناقص FX.OWN.TOTL.FE.ZS، سنة البيانات 2022). وفترات الثقة 95% المعروضة مع هذه القيم يستخرجها هذا المورد من أوزان المسح نفسها (فترة قائمة على تصميم المسح لنسبة موزونة)، ولم ينشرها البنك الدولي.",
       "source_object": "CLM-002"
     },
     {
@@ -75053,7 +75314,7 @@
       "field": "method_ar",
       "token": "5.4%",
       "category": "GOVERNED_OBJECT_SOURCE_CLOSED",
-      "context": "احتسبه هذا المورد بوصفه الفارق بين تقديرين موزونين نشرهما البنك الدولي للموجة نفسها: 18.3% للرجال ناقص 5.4% للنساء (سلسلة البنك الدولي FX.OWN.TOTL.MA.ZS ناقص FX.OWN.TOTL.FE.ZS، سنة البيانات 2022).",
+      "context": "احتسبه هذا المورد بوصفه الفارق بين تقديرين موزونين نشرهما البنك الدولي للموجة نفسها: 18.3% للرجال ناقص 5.4% للنساء (سلسلة البنك الدولي FX.OWN.TOTL.MA.ZS ناقص FX.OWN.TOTL.FE.ZS، سنة البيانات 2022). وفترات الثقة 95% المعروضة مع هذه القيم يستخرجها هذا المورد من أوزان المسح نفسها (فترة قائمة على تصميم المسح لنسبة موزونة)، ولم ينشرها البنك الدولي.",
       "source_object": "CLM-002"
     },
     {
@@ -75062,7 +75323,16 @@
       "field": "method_ar",
       "token": "2022",
       "category": "GOVERNED_OBJECT_SOURCE_CLOSED",
-      "context": "احتسبه هذا المورد بوصفه الفارق بين تقديرين موزونين نشرهما البنك الدولي للموجة نفسها: 18.3% للرجال ناقص 5.4% للنساء (سلسلة البنك الدولي FX.OWN.TOTL.MA.ZS ناقص FX.OWN.TOTL.FE.ZS، سنة البيانات 2022).",
+      "context": "احتسبه هذا المورد بوصفه الفارق بين تقديرين موزونين نشرهما البنك الدولي للموجة نفسها: 18.3% للرجال ناقص 5.4% للنساء (سلسلة البنك الدولي FX.OWN.TOTL.MA.ZS ناقص FX.OWN.TOTL.FE.ZS، سنة البيانات 2022). وفترات الثقة 95% المعروضة مع هذه القيم يستخرجها هذا المورد من أوزان المسح نفسها (فترة قائمة على تصميم المسح لنسبة موزونة)، ولم ينشرها البنك الدولي.",
+      "source_object": "CLM-002"
+    },
+    {
+      "route": "/",
+      "surface": "governed_numeric_inventory",
+      "field": "method_ar",
+      "token": "95%",
+      "category": "GOVERNED_OBJECT_SOURCE_CLOSED",
+      "context": "احتسبه هذا المورد بوصفه الفارق بين تقديرين موزونين نشرهما البنك الدولي للموجة نفسها: 18.3% للرجال ناقص 5.4% للنساء (سلسلة البنك الدولي FX.OWN.TOTL.MA.ZS ناقص FX.OWN.TOTL.FE.ZS، سنة البيانات 2022). وفترات الثقة 95% المعروضة مع هذه القيم يستخرجها هذا المورد من أوزان المسح نفسها (فترة قائمة على تصميم المسح لنسبة موزونة)، ولم ينشرها البنك الدولي.",
       "source_object": "CLM-002"
     },
     {
@@ -75071,7 +75341,7 @@
       "field": "limitations_en",
       "token": "2026",
       "category": "GOVERNED_OBJECT_SOURCE_CLOSED",
-      "context": "It does not establish why the gap exists, and it is not the gender gap in 2026. | The survey frame excludes areas holding about 23% of the population, and more than a quarter of primary sampling units were replaced. No standard errors or confidence intervals are published with these values; the Yemen sample is 1,000 respondents, so subgroup values and the gap carry sampling uncertainty that is not quantified here.",
+      "context": "It does not establish why the gap exists, and it is not the gender gap in 2026. | The survey frame excludes areas holding about 23% of the population, and more than a quarter of primary sampling units were replaced. The World Bank publishes no standard error or confidence interval with these values, so this resource derives them from the survey's own weights: on a sample of 1,000 respondents the 95% interval runs from 3.2% to 7.7% for women and from 14.6% to 22.1% for men, and from 8.5 to 17.3 points for the gap. The file open to researchers carries no sampling-unit identifier, so clustering is not captured and the true intervals may be wider, never narrower.",
       "source_object": "CLM-002"
     },
     {
@@ -75080,7 +75350,7 @@
       "field": "limitations_en",
       "token": "23%",
       "category": "GOVERNED_OBJECT_SOURCE_CLOSED",
-      "context": "It does not establish why the gap exists, and it is not the gender gap in 2026. | The survey frame excludes areas holding about 23% of the population, and more than a quarter of primary sampling units were replaced. No standard errors or confidence intervals are published with these values; the Yemen sample is 1,000 respondents, so subgroup values and the gap carry sampling uncertainty that is not quantified here.",
+      "context": "It does not establish why the gap exists, and it is not the gender gap in 2026. | The survey frame excludes areas holding about 23% of the population, and more than a quarter of primary sampling units were replaced. The World Bank publishes no standard error or confidence interval with these values, so this resource derives them from the survey's own weights: on a sample of 1,000 respondents the 95% interval runs from 3.2% to 7.7% for women and from 14.6% to 22.1% for men, and from 8.5 to 17.3 points for the gap. The file open to researchers carries no sampling-unit identifier, so clustering is not captured and the true intervals may be wider, never narrower.",
       "source_object": "CLM-002"
     },
     {
@@ -75089,7 +75359,70 @@
       "field": "limitations_en",
       "token": "1,000",
       "category": "GOVERNED_OBJECT_SOURCE_CLOSED",
-      "context": "It does not establish why the gap exists, and it is not the gender gap in 2026. | The survey frame excludes areas holding about 23% of the population, and more than a quarter of primary sampling units were replaced. No standard errors or confidence intervals are published with these values; the Yemen sample is 1,000 respondents, so subgroup values and the gap carry sampling uncertainty that is not quantified here.",
+      "context": "It does not establish why the gap exists, and it is not the gender gap in 2026. | The survey frame excludes areas holding about 23% of the population, and more than a quarter of primary sampling units were replaced. The World Bank publishes no standard error or confidence interval with these values, so this resource derives them from the survey's own weights: on a sample of 1,000 respondents the 95% interval runs from 3.2% to 7.7% for women and from 14.6% to 22.1% for men, and from 8.5 to 17.3 points for the gap. The file open to researchers carries no sampling-unit identifier, so clustering is not captured and the true intervals may be wider, never narrower.",
+      "source_object": "CLM-002"
+    },
+    {
+      "route": "/",
+      "surface": "governed_numeric_inventory",
+      "field": "limitations_en",
+      "token": "95%",
+      "category": "GOVERNED_OBJECT_SOURCE_CLOSED",
+      "context": "It does not establish why the gap exists, and it is not the gender gap in 2026. | The survey frame excludes areas holding about 23% of the population, and more than a quarter of primary sampling units were replaced. The World Bank publishes no standard error or confidence interval with these values, so this resource derives them from the survey's own weights: on a sample of 1,000 respondents the 95% interval runs from 3.2% to 7.7% for women and from 14.6% to 22.1% for men, and from 8.5 to 17.3 points for the gap. The file open to researchers carries no sampling-unit identifier, so clustering is not captured and the true intervals may be wider, never narrower.",
+      "source_object": "CLM-002"
+    },
+    {
+      "route": "/",
+      "surface": "governed_numeric_inventory",
+      "field": "limitations_en",
+      "token": "3.2%",
+      "category": "GOVERNED_OBJECT_SOURCE_CLOSED",
+      "context": "It does not establish why the gap exists, and it is not the gender gap in 2026. | The survey frame excludes areas holding about 23% of the population, and more than a quarter of primary sampling units were replaced. The World Bank publishes no standard error or confidence interval with these values, so this resource derives them from the survey's own weights: on a sample of 1,000 respondents the 95% interval runs from 3.2% to 7.7% for women and from 14.6% to 22.1% for men, and from 8.5 to 17.3 points for the gap. The file open to researchers carries no sampling-unit identifier, so clustering is not captured and the true intervals may be wider, never narrower.",
+      "source_object": "CLM-002"
+    },
+    {
+      "route": "/",
+      "surface": "governed_numeric_inventory",
+      "field": "limitations_en",
+      "token": "7.7%",
+      "category": "GOVERNED_OBJECT_SOURCE_CLOSED",
+      "context": "It does not establish why the gap exists, and it is not the gender gap in 2026. | The survey frame excludes areas holding about 23% of the population, and more than a quarter of primary sampling units were replaced. The World Bank publishes no standard error or confidence interval with these values, so this resource derives them from the survey's own weights: on a sample of 1,000 respondents the 95% interval runs from 3.2% to 7.7% for women and from 14.6% to 22.1% for men, and from 8.5 to 17.3 points for the gap. The file open to researchers carries no sampling-unit identifier, so clustering is not captured and the true intervals may be wider, never narrower.",
+      "source_object": "CLM-002"
+    },
+    {
+      "route": "/",
+      "surface": "governed_numeric_inventory",
+      "field": "limitations_en",
+      "token": "14.6%",
+      "category": "GOVERNED_OBJECT_SOURCE_CLOSED",
+      "context": "It does not establish why the gap exists, and it is not the gender gap in 2026. | The survey frame excludes areas holding about 23% of the population, and more than a quarter of primary sampling units were replaced. The World Bank publishes no standard error or confidence interval with these values, so this resource derives them from the survey's own weights: on a sample of 1,000 respondents the 95% interval runs from 3.2% to 7.7% for women and from 14.6% to 22.1% for men, and from 8.5 to 17.3 points for the gap. The file open to researchers carries no sampling-unit identifier, so clustering is not captured and the true intervals may be wider, never narrower.",
+      "source_object": "CLM-002"
+    },
+    {
+      "route": "/",
+      "surface": "governed_numeric_inventory",
+      "field": "limitations_en",
+      "token": "22.1%",
+      "category": "GOVERNED_OBJECT_SOURCE_CLOSED",
+      "context": "It does not establish why the gap exists, and it is not the gender gap in 2026. | The survey frame excludes areas holding about 23% of the population, and more than a quarter of primary sampling units were replaced. The World Bank publishes no standard error or confidence interval with these values, so this resource derives them from the survey's own weights: on a sample of 1,000 respondents the 95% interval runs from 3.2% to 7.7% for women and from 14.6% to 22.1% for men, and from 8.5 to 17.3 points for the gap. The file open to researchers carries no sampling-unit identifier, so clustering is not captured and the true intervals may be wider, never narrower.",
+      "source_object": "CLM-002"
+    },
+    {
+      "route": "/",
+      "surface": "governed_numeric_inventory",
+      "field": "limitations_en",
+      "token": "8.5",
+      "category": "GOVERNED_OBJECT_SOURCE_CLOSED",
+      "context": "It does not establish why the gap exists, and it is not the gender gap in 2026. | The survey frame excludes areas holding about 23% of the population, and more than a quarter of primary sampling units were replaced. The World Bank publishes no standard error or confidence interval with these values, so this resource derives them from the survey's own weights: on a sample of 1,000 respondents the 95% interval runs from 3.2% to 7.7% for women and from 14.6% to 22.1% for men, and from 8.5 to 17.3 points for the gap. The file open to researchers carries no sampling-unit identifier, so clustering is not captured and the true intervals may be wider, never narrower.",
+      "source_object": "CLM-002"
+    },
+    {
+      "route": "/",
+      "surface": "governed_numeric_inventory",
+      "field": "limitations_en",
+      "token": "17.3",
+      "category": "GOVERNED_OBJECT_SOURCE_CLOSED",
+      "context": "It does not establish why the gap exists, and it is not the gender gap in 2026. | The survey frame excludes areas holding about 23% of the population, and more than a quarter of primary sampling units were replaced. The World Bank publishes no standard error or confidence interval with these values, so this resource derives them from the survey's own weights: on a sample of 1,000 respondents the 95% interval runs from 3.2% to 7.7% for women and from 14.6% to 22.1% for men, and from 8.5 to 17.3 points for the gap. The file open to researchers carries no sampling-unit identifier, so clustering is not captured and the true intervals may be wider, never narrower.",
       "source_object": "CLM-002"
     },
     {
@@ -75098,7 +75431,7 @@
       "field": "limitations_ar",
       "token": "2026",
       "category": "GOVERNED_OBJECT_SOURCE_CLOSED",
-      "context": "لا يثبت هذا الدليل سبب الفجوة بين الرجال والنساء، ولا يمثل الفجوة القائمة في عام 2026. | يستبعد إطار المسح مناطق يقطنها نحو 23% من السكان، كما استُبدل أكثر من ربع وحدات المعاينة الأولية. ولا تُنشر مع هذه القيم أخطاء معيارية أو فترات ثقة؛ وتبلغ عينة اليمن 1,000 مستجيب، لذلك تنطوي قيم الفئات الفرعية والفجوة بينها على عدم يقين ناتج عن المعاينة لا يُقدَّر كميًا هنا.",
+      "context": "لا يثبت هذا الدليل سبب الفجوة بين الرجال والنساء، ولا يمثل الفجوة القائمة في عام 2026. | يستبعد إطار المسح مناطق يقطنها نحو 23% من السكان، كما استُبدل أكثر من ربع وحدات المعاينة الأولية. ولا ينشر البنك الدولي مع هذه القيم خطأً معياريًا ولا فترة ثقة، لذلك يستخرجها هذا المورد من أوزان المسح نفسها: ففي عينة من 1,000 مستجيب تمتد فترة الثقة 95% من 3.2% إلى 7.7% للنساء، ومن 14.6% إلى 22.1% للرجال، ومن 8.5 إلى 17.3 نقطة للفجوة. ولا يحمل الملف المتاح للباحثين معرّف وحدة المعاينة، لذلك لا تُحتسب آثار التجمّع العنقودي، وقد تكون الفترات الحقيقية أوسع لا أضيق.",
       "source_object": "CLM-002"
     },
     {
@@ -75107,7 +75440,7 @@
       "field": "limitations_ar",
       "token": "23%",
       "category": "GOVERNED_OBJECT_SOURCE_CLOSED",
-      "context": "لا يثبت هذا الدليل سبب الفجوة بين الرجال والنساء، ولا يمثل الفجوة القائمة في عام 2026. | يستبعد إطار المسح مناطق يقطنها نحو 23% من السكان، كما استُبدل أكثر من ربع وحدات المعاينة الأولية. ولا تُنشر مع هذه القيم أخطاء معيارية أو فترات ثقة؛ وتبلغ عينة اليمن 1,000 مستجيب، لذلك تنطوي قيم الفئات الفرعية والفجوة بينها على عدم يقين ناتج عن المعاينة لا يُقدَّر كميًا هنا.",
+      "context": "لا يثبت هذا الدليل سبب الفجوة بين الرجال والنساء، ولا يمثل الفجوة القائمة في عام 2026. | يستبعد إطار المسح مناطق يقطنها نحو 23% من السكان، كما استُبدل أكثر من ربع وحدات المعاينة الأولية. ولا ينشر البنك الدولي مع هذه القيم خطأً معياريًا ولا فترة ثقة، لذلك يستخرجها هذا المورد من أوزان المسح نفسها: ففي عينة من 1,000 مستجيب تمتد فترة الثقة 95% من 3.2% إلى 7.7% للنساء، ومن 14.6% إلى 22.1% للرجال، ومن 8.5 إلى 17.3 نقطة للفجوة. ولا يحمل الملف المتاح للباحثين معرّف وحدة المعاينة، لذلك لا تُحتسب آثار التجمّع العنقودي، وقد تكون الفترات الحقيقية أوسع لا أضيق.",
       "source_object": "CLM-002"
     },
     {
@@ -75116,7 +75449,70 @@
       "field": "limitations_ar",
       "token": "1,000",
       "category": "GOVERNED_OBJECT_SOURCE_CLOSED",
-      "context": "لا يثبت هذا الدليل سبب الفجوة بين الرجال والنساء، ولا يمثل الفجوة القائمة في عام 2026. | يستبعد إطار المسح مناطق يقطنها نحو 23% من السكان، كما استُبدل أكثر من ربع وحدات المعاينة الأولية. ولا تُنشر مع هذه القيم أخطاء معيارية أو فترات ثقة؛ وتبلغ عينة اليمن 1,000 مستجيب، لذلك تنطوي قيم الفئات الفرعية والفجوة بينها على عدم يقين ناتج عن المعاينة لا يُقدَّر كميًا هنا.",
+      "context": "لا يثبت هذا الدليل سبب الفجوة بين الرجال والنساء، ولا يمثل الفجوة القائمة في عام 2026. | يستبعد إطار المسح مناطق يقطنها نحو 23% من السكان، كما استُبدل أكثر من ربع وحدات المعاينة الأولية. ولا ينشر البنك الدولي مع هذه القيم خطأً معياريًا ولا فترة ثقة، لذلك يستخرجها هذا المورد من أوزان المسح نفسها: ففي عينة من 1,000 مستجيب تمتد فترة الثقة 95% من 3.2% إلى 7.7% للنساء، ومن 14.6% إلى 22.1% للرجال، ومن 8.5 إلى 17.3 نقطة للفجوة. ولا يحمل الملف المتاح للباحثين معرّف وحدة المعاينة، لذلك لا تُحتسب آثار التجمّع العنقودي، وقد تكون الفترات الحقيقية أوسع لا أضيق.",
+      "source_object": "CLM-002"
+    },
+    {
+      "route": "/",
+      "surface": "governed_numeric_inventory",
+      "field": "limitations_ar",
+      "token": "95%",
+      "category": "GOVERNED_OBJECT_SOURCE_CLOSED",
+      "context": "لا يثبت هذا الدليل سبب الفجوة بين الرجال والنساء، ولا يمثل الفجوة القائمة في عام 2026. | يستبعد إطار المسح مناطق يقطنها نحو 23% من السكان، كما استُبدل أكثر من ربع وحدات المعاينة الأولية. ولا ينشر البنك الدولي مع هذه القيم خطأً معياريًا ولا فترة ثقة، لذلك يستخرجها هذا المورد من أوزان المسح نفسها: ففي عينة من 1,000 مستجيب تمتد فترة الثقة 95% من 3.2% إلى 7.7% للنساء، ومن 14.6% إلى 22.1% للرجال، ومن 8.5 إلى 17.3 نقطة للفجوة. ولا يحمل الملف المتاح للباحثين معرّف وحدة المعاينة، لذلك لا تُحتسب آثار التجمّع العنقودي، وقد تكون الفترات الحقيقية أوسع لا أضيق.",
+      "source_object": "CLM-002"
+    },
+    {
+      "route": "/",
+      "surface": "governed_numeric_inventory",
+      "field": "limitations_ar",
+      "token": "3.2%",
+      "category": "GOVERNED_OBJECT_SOURCE_CLOSED",
+      "context": "لا يثبت هذا الدليل سبب الفجوة بين الرجال والنساء، ولا يمثل الفجوة القائمة في عام 2026. | يستبعد إطار المسح مناطق يقطنها نحو 23% من السكان، كما استُبدل أكثر من ربع وحدات المعاينة الأولية. ولا ينشر البنك الدولي مع هذه القيم خطأً معياريًا ولا فترة ثقة، لذلك يستخرجها هذا المورد من أوزان المسح نفسها: ففي عينة من 1,000 مستجيب تمتد فترة الثقة 95% من 3.2% إلى 7.7% للنساء، ومن 14.6% إلى 22.1% للرجال، ومن 8.5 إلى 17.3 نقطة للفجوة. ولا يحمل الملف المتاح للباحثين معرّف وحدة المعاينة، لذلك لا تُحتسب آثار التجمّع العنقودي، وقد تكون الفترات الحقيقية أوسع لا أضيق.",
+      "source_object": "CLM-002"
+    },
+    {
+      "route": "/",
+      "surface": "governed_numeric_inventory",
+      "field": "limitations_ar",
+      "token": "7.7%",
+      "category": "GOVERNED_OBJECT_SOURCE_CLOSED",
+      "context": "لا يثبت هذا الدليل سبب الفجوة بين الرجال والنساء، ولا يمثل الفجوة القائمة في عام 2026. | يستبعد إطار المسح مناطق يقطنها نحو 23% من السكان، كما استُبدل أكثر من ربع وحدات المعاينة الأولية. ولا ينشر البنك الدولي مع هذه القيم خطأً معياريًا ولا فترة ثقة، لذلك يستخرجها هذا المورد من أوزان المسح نفسها: ففي عينة من 1,000 مستجيب تمتد فترة الثقة 95% من 3.2% إلى 7.7% للنساء، ومن 14.6% إلى 22.1% للرجال، ومن 8.5 إلى 17.3 نقطة للفجوة. ولا يحمل الملف المتاح للباحثين معرّف وحدة المعاينة، لذلك لا تُحتسب آثار التجمّع العنقودي، وقد تكون الفترات الحقيقية أوسع لا أضيق.",
+      "source_object": "CLM-002"
+    },
+    {
+      "route": "/",
+      "surface": "governed_numeric_inventory",
+      "field": "limitations_ar",
+      "token": "14.6%",
+      "category": "GOVERNED_OBJECT_SOURCE_CLOSED",
+      "context": "لا يثبت هذا الدليل سبب الفجوة بين الرجال والنساء، ولا يمثل الفجوة القائمة في عام 2026. | يستبعد إطار المسح مناطق يقطنها نحو 23% من السكان، كما استُبدل أكثر من ربع وحدات المعاينة الأولية. ولا ينشر البنك الدولي مع هذه القيم خطأً معياريًا ولا فترة ثقة، لذلك يستخرجها هذا المورد من أوزان المسح نفسها: ففي عينة من 1,000 مستجيب تمتد فترة الثقة 95% من 3.2% إلى 7.7% للنساء، ومن 14.6% إلى 22.1% للرجال، ومن 8.5 إلى 17.3 نقطة للفجوة. ولا يحمل الملف المتاح للباحثين معرّف وحدة المعاينة، لذلك لا تُحتسب آثار التجمّع العنقودي، وقد تكون الفترات الحقيقية أوسع لا أضيق.",
+      "source_object": "CLM-002"
+    },
+    {
+      "route": "/",
+      "surface": "governed_numeric_inventory",
+      "field": "limitations_ar",
+      "token": "22.1%",
+      "category": "GOVERNED_OBJECT_SOURCE_CLOSED",
+      "context": "لا يثبت هذا الدليل سبب الفجوة بين الرجال والنساء، ولا يمثل الفجوة القائمة في عام 2026. | يستبعد إطار المسح مناطق يقطنها نحو 23% من السكان، كما استُبدل أكثر من ربع وحدات المعاينة الأولية. ولا ينشر البنك الدولي مع هذه القيم خطأً معياريًا ولا فترة ثقة، لذلك يستخرجها هذا المورد من أوزان المسح نفسها: ففي عينة من 1,000 مستجيب تمتد فترة الثقة 95% من 3.2% إلى 7.7% للنساء، ومن 14.6% إلى 22.1% للرجال، ومن 8.5 إلى 17.3 نقطة للفجوة. ولا يحمل الملف المتاح للباحثين معرّف وحدة المعاينة، لذلك لا تُحتسب آثار التجمّع العنقودي، وقد تكون الفترات الحقيقية أوسع لا أضيق.",
+      "source_object": "CLM-002"
+    },
+    {
+      "route": "/",
+      "surface": "governed_numeric_inventory",
+      "field": "limitations_ar",
+      "token": "8.5",
+      "category": "GOVERNED_OBJECT_SOURCE_CLOSED",
+      "context": "لا يثبت هذا الدليل سبب الفجوة بين الرجال والنساء، ولا يمثل الفجوة القائمة في عام 2026. | يستبعد إطار المسح مناطق يقطنها نحو 23% من السكان، كما استُبدل أكثر من ربع وحدات المعاينة الأولية. ولا ينشر البنك الدولي مع هذه القيم خطأً معياريًا ولا فترة ثقة، لذلك يستخرجها هذا المورد من أوزان المسح نفسها: ففي عينة من 1,000 مستجيب تمتد فترة الثقة 95% من 3.2% إلى 7.7% للنساء، ومن 14.6% إلى 22.1% للرجال، ومن 8.5 إلى 17.3 نقطة للفجوة. ولا يحمل الملف المتاح للباحثين معرّف وحدة المعاينة، لذلك لا تُحتسب آثار التجمّع العنقودي، وقد تكون الفترات الحقيقية أوسع لا أضيق.",
+      "source_object": "CLM-002"
+    },
+    {
+      "route": "/",
+      "surface": "governed_numeric_inventory",
+      "field": "limitations_ar",
+      "token": "17.3",
+      "category": "GOVERNED_OBJECT_SOURCE_CLOSED",
+      "context": "لا يثبت هذا الدليل سبب الفجوة بين الرجال والنساء، ولا يمثل الفجوة القائمة في عام 2026. | يستبعد إطار المسح مناطق يقطنها نحو 23% من السكان، كما استُبدل أكثر من ربع وحدات المعاينة الأولية. ولا ينشر البنك الدولي مع هذه القيم خطأً معياريًا ولا فترة ثقة، لذلك يستخرجها هذا المورد من أوزان المسح نفسها: ففي عينة من 1,000 مستجيب تمتد فترة الثقة 95% من 3.2% إلى 7.7% للنساء، ومن 14.6% إلى 22.1% للرجال، ومن 8.5 إلى 17.3 نقطة للفجوة. ولا يحمل الملف المتاح للباحثين معرّف وحدة المعاينة، لذلك لا تُحتسب آثار التجمّع العنقودي، وقد تكون الفترات الحقيقية أوسع لا أضيق.",
       "source_object": "CLM-002"
     },
     {
@@ -76335,9 +76731,25 @@
       "route": "/methodology/",
       "surface": "section",
       "field": "body_en",
+      "token": "2021",
+      "category": "DATE_OR_PERIOD",
+      "context": "Survey estimates carry sampling and coverage uncertainty. Where a source publishes a confidence interval or standard error, it is reported with the estimate. Where it does not, no interval, standard error or significance test is added unless it can be reproduced from the survey's own weights and design. For the Global Findex 2021 wave in Yemen this resource does reproduce it: the respondent file published for researchers carries the survey weight, so a 95% interval is derived for each published share by the design-based method for a weighted share, and shown with the figure. That file carries no sampling-unit identifier, so clustering is not captured and the derived intervals may be wider in reality, never narrower; the method and every interval are recorded with their figures, and the respondent file itself is never republished. A derived value, such as the difference between two percentages, keeps the precision of its inputs, with no added decimal places, and small differences between estimates are not read as a ranking. Global Findex shares are printed to one decimal place, rounded from the World Bank's unrounded values, and a gap between two groups is the difference of the two printed shares. One decimal place matches the World Bank's own country table for Yemen in The Little Data Book on Financial Inclusion 2015. It is a display convention, not a claim of accuracy to a tenth of a point: with a sample of about 1,000 adults, and fewer in each group, sampling error is far larger than that."
+    },
+    {
+      "route": "/methodology/",
+      "surface": "section",
+      "field": "body_en",
+      "token": "95%",
+      "category": "ALLOWED_METHOD_OR_TOOL_CONSTANT",
+      "context": "Survey estimates carry sampling and coverage uncertainty. Where a source publishes a confidence interval or standard error, it is reported with the estimate. Where it does not, no interval, standard error or significance test is added unless it can be reproduced from the survey's own weights and design. For the Global Findex 2021 wave in Yemen this resource does reproduce it: the respondent file published for researchers carries the survey weight, so a 95% interval is derived for each published share by the design-based method for a weighted share, and shown with the figure. That file carries no sampling-unit identifier, so clustering is not captured and the derived intervals may be wider in reality, never narrower; the method and every interval are recorded with their figures, and the respondent file itself is never republished. A derived value, such as the difference between two percentages, keeps the precision of its inputs, with no added decimal places, and small differences between estimates are not read as a ranking. Global Findex shares are printed to one decimal place, rounded from the World Bank's unrounded values, and a gap between two groups is the difference of the two printed shares. One decimal place matches the World Bank's own country table for Yemen in The Little Data Book on Financial Inclusion 2015. It is a display convention, not a claim of accuracy to a tenth of a point: with a sample of about 1,000 adults, and fewer in each group, sampling error is far larger than that."
+    },
+    {
+      "route": "/methodology/",
+      "surface": "section",
+      "field": "body_en",
       "token": "2015",
       "category": "DATE_OR_PERIOD",
-      "context": "Survey estimates carry sampling and coverage uncertainty. Where a source publishes a confidence interval or standard error, it is reported with the estimate. Where it does not, no interval, standard error or significance test is added unless it can be reproduced from the survey's own weights and design. A derived value, such as the difference between two percentages, keeps the precision of its inputs, with no added decimal places, and small differences between estimates are not read as a ranking. Global Findex shares are printed to one decimal place, rounded from the World Bank's unrounded values, and a gap between two groups is the difference of the two printed shares. One decimal place matches the World Bank's own country table for Yemen in The Little Data Book on Financial Inclusion 2015. It is a display convention, not a claim of accuracy to a tenth of a point: with a sample of about 1,000 adults, and fewer in each group, sampling error is far larger than that."
+      "context": "Survey estimates carry sampling and coverage uncertainty. Where a source publishes a confidence interval or standard error, it is reported with the estimate. Where it does not, no interval, standard error or significance test is added unless it can be reproduced from the survey's own weights and design. For the Global Findex 2021 wave in Yemen this resource does reproduce it: the respondent file published for researchers carries the survey weight, so a 95% interval is derived for each published share by the design-based method for a weighted share, and shown with the figure. That file carries no sampling-unit identifier, so clustering is not captured and the derived intervals may be wider in reality, never narrower; the method and every interval are recorded with their figures, and the respondent file itself is never republished. A derived value, such as the difference between two percentages, keeps the precision of its inputs, with no added decimal places, and small differences between estimates are not read as a ranking. Global Findex shares are printed to one decimal place, rounded from the World Bank's unrounded values, and a gap between two groups is the difference of the two printed shares. One decimal place matches the World Bank's own country table for Yemen in The Little Data Book on Financial Inclusion 2015. It is a display convention, not a claim of accuracy to a tenth of a point: with a sample of about 1,000 adults, and fewer in each group, sampling error is far larger than that."
     },
     {
       "route": "/methodology/",
@@ -76345,8 +76757,24 @@
       "field": "body_en",
       "token": "1,000",
       "category": "ROUTE_SOURCE_CLOSED__OBJECT_TRACE_AVAILABLE",
-      "context": "Survey estimates carry sampling and coverage uncertainty. Where a source publishes a confidence interval or standard error, it is reported with the estimate. Where it does not, no interval, standard error or significance test is added unless it can be reproduced from the survey's own weights and design. A derived value, such as the difference between two percentages, keeps the precision of its inputs, with no added decimal places, and small differences between estimates are not read as a ranking. Global Findex shares are printed to one decimal place, rounded from the World Bank's unrounded values, and a gap between two groups is the difference of the two printed shares. One decimal place matches the World Bank's own country table for Yemen in The Little Data Book on Financial Inclusion 2015. It is a display convention, not a claim of accuracy to a tenth of a point: with a sample of about 1,000 adults, and fewer in each group, sampling error is far larger than that.",
+      "context": "Survey estimates carry sampling and coverage uncertainty. Where a source publishes a confidence interval or standard error, it is reported with the estimate. Where it does not, no interval, standard error or significance test is added unless it can be reproduced from the survey's own weights and design. For the Global Findex 2021 wave in Yemen this resource does reproduce it: the respondent file published for researchers carries the survey weight, so a 95% interval is derived for each published share by the design-based method for a weighted share, and shown with the figure. That file carries no sampling-unit identifier, so clustering is not captured and the derived intervals may be wider in reality, never narrower; the method and every interval are recorded with their figures, and the respondent file itself is never republished. A derived value, such as the difference between two percentages, keeps the precision of its inputs, with no added decimal places, and small differences between estimates are not read as a ranking. Global Findex shares are printed to one decimal place, rounded from the World Bank's unrounded values, and a gap between two groups is the difference of the two printed shares. One decimal place matches the World Bank's own country table for Yemen in The Little Data Book on Financial Inclusion 2015. It is a display convention, not a claim of accuracy to a tenth of a point: with a sample of about 1,000 adults, and fewer in each group, sampling error is far larger than that.",
       "source_object": "CLM-023"
+    },
+    {
+      "route": "/methodology/",
+      "surface": "section",
+      "field": "body_ar",
+      "token": "2021",
+      "category": "DATE_OR_PERIOD",
+      "context": "تنطوي تقديرات المسوح على قدر من عدم اليقين مصدره المعاينة ونطاق التغطية. فإذا نشر المصدر فترة ثقة أو خطأً معياريًا عُرض مع التقدير، وإذا لم ينشره فلا تُضاف فترة ثقة ولا خطأ معياري ولا اختبار دلالة ما لم يمكن إعادة احتسابها من أوزان المسح وتصميمه. وفي موجة Global Findex 2021 في اليمن يعيد هذا المورد احتسابها فعلًا: فملف المستجيبين المنشور للباحثين يحمل وزن المسح، ومن ثَمّ تُستخرج فترة ثقة 95% لكل نسبة منشورة بالطريقة القائمة على تصميم المسح لنسبة موزونة، وتُعرض مع القيمة. ولا يحمل ذلك الملف معرّف وحدة المعاينة، لذلك لا تُحتسب آثار التجمّع العنقودي وقد تكون الفترات المستخرجة أوسع في الواقع لا أضيق؛ والطريقة وكل فترة مسجّلتان مع قيمتهما، ولا يُعاد نشر ملف المستجيبين نفسه أبدًا. وتحتفظ القيمة المشتقة، كالفرق بين نسبتين، بدقة مدخلاتها من دون منازل عشرية إضافية، ولا تُقرأ الفروق الطفيفة بين التقديرات على أنها ترتيب. وتُعرض نسب المؤشر العالمي للشمول المالي (Global Findex) بمنزلة عشرية واحدة، مقرّبةً من القيم غير المقرّبة لدى البنك الدولي، والفجوة بين فئتين هي الفرق بين النسبتين المعروضتين. وتطابق المنزلة العشرية الواحدة جدول البنك الدولي نفسه الخاص باليمن في كتيّب البيانات الموجز عن الشمول المالي (The Little Data Book on Financial Inclusion) لعام 2015. وهي اصطلاح في العرض، لا ادعاء بدقة تبلغ عُشر النقطة؛ ففي عينة من نحو 1,000 بالغ، وبعدد أقل في كل فئة، يتجاوز خطأ المعاينة ذلك بكثير."
+    },
+    {
+      "route": "/methodology/",
+      "surface": "section",
+      "field": "body_ar",
+      "token": "95%",
+      "category": "ALLOWED_METHOD_OR_TOOL_CONSTANT",
+      "context": "تنطوي تقديرات المسوح على قدر من عدم اليقين مصدره المعاينة ونطاق التغطية. فإذا نشر المصدر فترة ثقة أو خطأً معياريًا عُرض مع التقدير، وإذا لم ينشره فلا تُضاف فترة ثقة ولا خطأ معياري ولا اختبار دلالة ما لم يمكن إعادة احتسابها من أوزان المسح وتصميمه. وفي موجة Global Findex 2021 في اليمن يعيد هذا المورد احتسابها فعلًا: فملف المستجيبين المنشور للباحثين يحمل وزن المسح، ومن ثَمّ تُستخرج فترة ثقة 95% لكل نسبة منشورة بالطريقة القائمة على تصميم المسح لنسبة موزونة، وتُعرض مع القيمة. ولا يحمل ذلك الملف معرّف وحدة المعاينة، لذلك لا تُحتسب آثار التجمّع العنقودي وقد تكون الفترات المستخرجة أوسع في الواقع لا أضيق؛ والطريقة وكل فترة مسجّلتان مع قيمتهما، ولا يُعاد نشر ملف المستجيبين نفسه أبدًا. وتحتفظ القيمة المشتقة، كالفرق بين نسبتين، بدقة مدخلاتها من دون منازل عشرية إضافية، ولا تُقرأ الفروق الطفيفة بين التقديرات على أنها ترتيب. وتُعرض نسب المؤشر العالمي للشمول المالي (Global Findex) بمنزلة عشرية واحدة، مقرّبةً من القيم غير المقرّبة لدى البنك الدولي، والفجوة بين فئتين هي الفرق بين النسبتين المعروضتين. وتطابق المنزلة العشرية الواحدة جدول البنك الدولي نفسه الخاص باليمن في كتيّب البيانات الموجز عن الشمول المالي (The Little Data Book on Financial Inclusion) لعام 2015. وهي اصطلاح في العرض، لا ادعاء بدقة تبلغ عُشر النقطة؛ ففي عينة من نحو 1,000 بالغ، وبعدد أقل في كل فئة، يتجاوز خطأ المعاينة ذلك بكثير."
     },
     {
       "route": "/methodology/",
@@ -76354,7 +76782,7 @@
       "field": "body_ar",
       "token": "2015",
       "category": "DATE_OR_PERIOD",
-      "context": "تنطوي تقديرات المسوح على قدر من عدم اليقين مصدره المعاينة ونطاق التغطية. فإذا نشر المصدر فترة ثقة أو خطأً معياريًا عُرض مع التقدير، وإذا لم ينشره فلا تُضاف فترة ثقة ولا خطأ معياري ولا اختبار دلالة ما لم يمكن إعادة احتسابها من أوزان المسح وتصميمه. وتحتفظ القيمة المشتقة، كالفرق بين نسبتين، بدقة مدخلاتها من دون منازل عشرية إضافية، ولا تُقرأ الفروق الطفيفة بين التقديرات على أنها ترتيب. وتُعرض نسب المؤشر العالمي للشمول المالي (Global Findex) بمنزلة عشرية واحدة، مقرّبةً من القيم غير المقرّبة لدى البنك الدولي، والفجوة بين فئتين هي الفرق بين النسبتين المعروضتين. وتطابق المنزلة العشرية الواحدة جدول البنك الدولي نفسه الخاص باليمن في كتيّب البيانات الموجز عن الشمول المالي (The Little Data Book on Financial Inclusion) لعام 2015. وهي اصطلاح في العرض، لا ادعاء بدقة تبلغ عُشر النقطة؛ ففي عينة من نحو 1,000 بالغ، وبعدد أقل في كل فئة، يتجاوز خطأ المعاينة ذلك بكثير."
+      "context": "تنطوي تقديرات المسوح على قدر من عدم اليقين مصدره المعاينة ونطاق التغطية. فإذا نشر المصدر فترة ثقة أو خطأً معياريًا عُرض مع التقدير، وإذا لم ينشره فلا تُضاف فترة ثقة ولا خطأ معياري ولا اختبار دلالة ما لم يمكن إعادة احتسابها من أوزان المسح وتصميمه. وفي موجة Global Findex 2021 في اليمن يعيد هذا المورد احتسابها فعلًا: فملف المستجيبين المنشور للباحثين يحمل وزن المسح، ومن ثَمّ تُستخرج فترة ثقة 95% لكل نسبة منشورة بالطريقة القائمة على تصميم المسح لنسبة موزونة، وتُعرض مع القيمة. ولا يحمل ذلك الملف معرّف وحدة المعاينة، لذلك لا تُحتسب آثار التجمّع العنقودي وقد تكون الفترات المستخرجة أوسع في الواقع لا أضيق؛ والطريقة وكل فترة مسجّلتان مع قيمتهما، ولا يُعاد نشر ملف المستجيبين نفسه أبدًا. وتحتفظ القيمة المشتقة، كالفرق بين نسبتين، بدقة مدخلاتها من دون منازل عشرية إضافية، ولا تُقرأ الفروق الطفيفة بين التقديرات على أنها ترتيب. وتُعرض نسب المؤشر العالمي للشمول المالي (Global Findex) بمنزلة عشرية واحدة، مقرّبةً من القيم غير المقرّبة لدى البنك الدولي، والفجوة بين فئتين هي الفرق بين النسبتين المعروضتين. وتطابق المنزلة العشرية الواحدة جدول البنك الدولي نفسه الخاص باليمن في كتيّب البيانات الموجز عن الشمول المالي (The Little Data Book on Financial Inclusion) لعام 2015. وهي اصطلاح في العرض، لا ادعاء بدقة تبلغ عُشر النقطة؛ ففي عينة من نحو 1,000 بالغ، وبعدد أقل في كل فئة، يتجاوز خطأ المعاينة ذلك بكثير."
     },
     {
       "route": "/methodology/",
@@ -76362,7 +76790,7 @@
       "field": "body_ar",
       "token": "1,000",
       "category": "ROUTE_SOURCE_CLOSED__OBJECT_TRACE_AVAILABLE",
-      "context": "تنطوي تقديرات المسوح على قدر من عدم اليقين مصدره المعاينة ونطاق التغطية. فإذا نشر المصدر فترة ثقة أو خطأً معياريًا عُرض مع التقدير، وإذا لم ينشره فلا تُضاف فترة ثقة ولا خطأ معياري ولا اختبار دلالة ما لم يمكن إعادة احتسابها من أوزان المسح وتصميمه. وتحتفظ القيمة المشتقة، كالفرق بين نسبتين، بدقة مدخلاتها من دون منازل عشرية إضافية، ولا تُقرأ الفروق الطفيفة بين التقديرات على أنها ترتيب. وتُعرض نسب المؤشر العالمي للشمول المالي (Global Findex) بمنزلة عشرية واحدة، مقرّبةً من القيم غير المقرّبة لدى البنك الدولي، والفجوة بين فئتين هي الفرق بين النسبتين المعروضتين. وتطابق المنزلة العشرية الواحدة جدول البنك الدولي نفسه الخاص باليمن في كتيّب البيانات الموجز عن الشمول المالي (The Little Data Book on Financial Inclusion) لعام 2015. وهي اصطلاح في العرض، لا ادعاء بدقة تبلغ عُشر النقطة؛ ففي عينة من نحو 1,000 بالغ، وبعدد أقل في كل فئة، يتجاوز خطأ المعاينة ذلك بكثير.",
+      "context": "تنطوي تقديرات المسوح على قدر من عدم اليقين مصدره المعاينة ونطاق التغطية. فإذا نشر المصدر فترة ثقة أو خطأً معياريًا عُرض مع التقدير، وإذا لم ينشره فلا تُضاف فترة ثقة ولا خطأ معياري ولا اختبار دلالة ما لم يمكن إعادة احتسابها من أوزان المسح وتصميمه. وفي موجة Global Findex 2021 في اليمن يعيد هذا المورد احتسابها فعلًا: فملف المستجيبين المنشور للباحثين يحمل وزن المسح، ومن ثَمّ تُستخرج فترة ثقة 95% لكل نسبة منشورة بالطريقة القائمة على تصميم المسح لنسبة موزونة، وتُعرض مع القيمة. ولا يحمل ذلك الملف معرّف وحدة المعاينة، لذلك لا تُحتسب آثار التجمّع العنقودي وقد تكون الفترات المستخرجة أوسع في الواقع لا أضيق؛ والطريقة وكل فترة مسجّلتان مع قيمتهما، ولا يُعاد نشر ملف المستجيبين نفسه أبدًا. وتحتفظ القيمة المشتقة، كالفرق بين نسبتين، بدقة مدخلاتها من دون منازل عشرية إضافية، ولا تُقرأ الفروق الطفيفة بين التقديرات على أنها ترتيب. وتُعرض نسب المؤشر العالمي للشمول المالي (Global Findex) بمنزلة عشرية واحدة، مقرّبةً من القيم غير المقرّبة لدى البنك الدولي، والفجوة بين فئتين هي الفرق بين النسبتين المعروضتين. وتطابق المنزلة العشرية الواحدة جدول البنك الدولي نفسه الخاص باليمن في كتيّب البيانات الموجز عن الشمول المالي (The Little Data Book on Financial Inclusion) لعام 2015. وهي اصطلاح في العرض، لا ادعاء بدقة تبلغ عُشر النقطة؛ ففي عينة من نحو 1,000 بالغ، وبعدد أقل في كل فئة، يتجاوز خطأ المعاينة ذلك بكثير.",
       "source_object": "CLM-023"
     },
     {
@@ -93744,7 +94172,7 @@
       "field": "method_en",
       "token": "18.3%",
       "category": "GOVERNED_OBJECT_SOURCE_CLOSED",
-      "context": "Calculated by this resource as the difference between two weighted estimates published by the World Bank for the same wave: men 18.3% minus women 5.4% (World Bank series FX.OWN.TOTL.MA.ZS minus FX.OWN.TOTL.FE.ZS, data year 2022).",
+      "context": "Calculated by this resource as the difference between two weighted estimates published by the World Bank for the same wave: men 18.3% minus women 5.4% (World Bank series FX.OWN.TOTL.MA.ZS minus FX.OWN.TOTL.FE.ZS, data year 2022). The 95% intervals shown with these values are derived by this resource from the survey's own weights (a design-based interval for a weighted share), not published by the World Bank.",
       "source_object": "CLM-002"
     },
     {
@@ -93753,7 +94181,7 @@
       "field": "method_en",
       "token": "5.4%",
       "category": "GOVERNED_OBJECT_SOURCE_CLOSED",
-      "context": "Calculated by this resource as the difference between two weighted estimates published by the World Bank for the same wave: men 18.3% minus women 5.4% (World Bank series FX.OWN.TOTL.MA.ZS minus FX.OWN.TOTL.FE.ZS, data year 2022).",
+      "context": "Calculated by this resource as the difference between two weighted estimates published by the World Bank for the same wave: men 18.3% minus women 5.4% (World Bank series FX.OWN.TOTL.MA.ZS minus FX.OWN.TOTL.FE.ZS, data year 2022). The 95% intervals shown with these values are derived by this resource from the survey's own weights (a design-based interval for a weighted share), not published by the World Bank.",
       "source_object": "CLM-002"
     },
     {
@@ -93762,7 +94190,16 @@
       "field": "method_en",
       "token": "2022",
       "category": "GOVERNED_OBJECT_SOURCE_CLOSED",
-      "context": "Calculated by this resource as the difference between two weighted estimates published by the World Bank for the same wave: men 18.3% minus women 5.4% (World Bank series FX.OWN.TOTL.MA.ZS minus FX.OWN.TOTL.FE.ZS, data year 2022).",
+      "context": "Calculated by this resource as the difference between two weighted estimates published by the World Bank for the same wave: men 18.3% minus women 5.4% (World Bank series FX.OWN.TOTL.MA.ZS minus FX.OWN.TOTL.FE.ZS, data year 2022). The 95% intervals shown with these values are derived by this resource from the survey's own weights (a design-based interval for a weighted share), not published by the World Bank.",
+      "source_object": "CLM-002"
+    },
+    {
+      "route": "/people/",
+      "surface": "governed_numeric_inventory",
+      "field": "method_en",
+      "token": "95%",
+      "category": "GOVERNED_OBJECT_SOURCE_CLOSED",
+      "context": "Calculated by this resource as the difference between two weighted estimates published by the World Bank for the same wave: men 18.3% minus women 5.4% (World Bank series FX.OWN.TOTL.MA.ZS minus FX.OWN.TOTL.FE.ZS, data year 2022). The 95% intervals shown with these values are derived by this resource from the survey's own weights (a design-based interval for a weighted share), not published by the World Bank.",
       "source_object": "CLM-002"
     },
     {
@@ -93771,7 +94208,7 @@
       "field": "method_ar",
       "token": "18.3%",
       "category": "GOVERNED_OBJECT_SOURCE_CLOSED",
-      "context": "احتسبه هذا المورد بوصفه الفارق بين تقديرين موزونين نشرهما البنك الدولي للموجة نفسها: 18.3% للرجال ناقص 5.4% للنساء (سلسلة البنك الدولي FX.OWN.TOTL.MA.ZS ناقص FX.OWN.TOTL.FE.ZS، سنة البيانات 2022).",
+      "context": "احتسبه هذا المورد بوصفه الفارق بين تقديرين موزونين نشرهما البنك الدولي للموجة نفسها: 18.3% للرجال ناقص 5.4% للنساء (سلسلة البنك الدولي FX.OWN.TOTL.MA.ZS ناقص FX.OWN.TOTL.FE.ZS، سنة البيانات 2022). وفترات الثقة 95% المعروضة مع هذه القيم يستخرجها هذا المورد من أوزان المسح نفسها (فترة قائمة على تصميم المسح لنسبة موزونة)، ولم ينشرها البنك الدولي.",
       "source_object": "CLM-002"
     },
     {
@@ -93780,7 +94217,7 @@
       "field": "method_ar",
       "token": "5.4%",
       "category": "GOVERNED_OBJECT_SOURCE_CLOSED",
-      "context": "احتسبه هذا المورد بوصفه الفارق بين تقديرين موزونين نشرهما البنك الدولي للموجة نفسها: 18.3% للرجال ناقص 5.4% للنساء (سلسلة البنك الدولي FX.OWN.TOTL.MA.ZS ناقص FX.OWN.TOTL.FE.ZS، سنة البيانات 2022).",
+      "context": "احتسبه هذا المورد بوصفه الفارق بين تقديرين موزونين نشرهما البنك الدولي للموجة نفسها: 18.3% للرجال ناقص 5.4% للنساء (سلسلة البنك الدولي FX.OWN.TOTL.MA.ZS ناقص FX.OWN.TOTL.FE.ZS، سنة البيانات 2022). وفترات الثقة 95% المعروضة مع هذه القيم يستخرجها هذا المورد من أوزان المسح نفسها (فترة قائمة على تصميم المسح لنسبة موزونة)، ولم ينشرها البنك الدولي.",
       "source_object": "CLM-002"
     },
     {
@@ -93789,7 +94226,16 @@
       "field": "method_ar",
       "token": "2022",
       "category": "GOVERNED_OBJECT_SOURCE_CLOSED",
-      "context": "احتسبه هذا المورد بوصفه الفارق بين تقديرين موزونين نشرهما البنك الدولي للموجة نفسها: 18.3% للرجال ناقص 5.4% للنساء (سلسلة البنك الدولي FX.OWN.TOTL.MA.ZS ناقص FX.OWN.TOTL.FE.ZS، سنة البيانات 2022).",
+      "context": "احتسبه هذا المورد بوصفه الفارق بين تقديرين موزونين نشرهما البنك الدولي للموجة نفسها: 18.3% للرجال ناقص 5.4% للنساء (سلسلة البنك الدولي FX.OWN.TOTL.MA.ZS ناقص FX.OWN.TOTL.FE.ZS، سنة البيانات 2022). وفترات الثقة 95% المعروضة مع هذه القيم يستخرجها هذا المورد من أوزان المسح نفسها (فترة قائمة على تصميم المسح لنسبة موزونة)، ولم ينشرها البنك الدولي.",
+      "source_object": "CLM-002"
+    },
+    {
+      "route": "/people/",
+      "surface": "governed_numeric_inventory",
+      "field": "method_ar",
+      "token": "95%",
+      "category": "GOVERNED_OBJECT_SOURCE_CLOSED",
+      "context": "احتسبه هذا المورد بوصفه الفارق بين تقديرين موزونين نشرهما البنك الدولي للموجة نفسها: 18.3% للرجال ناقص 5.4% للنساء (سلسلة البنك الدولي FX.OWN.TOTL.MA.ZS ناقص FX.OWN.TOTL.FE.ZS، سنة البيانات 2022). وفترات الثقة 95% المعروضة مع هذه القيم يستخرجها هذا المورد من أوزان المسح نفسها (فترة قائمة على تصميم المسح لنسبة موزونة)، ولم ينشرها البنك الدولي.",
       "source_object": "CLM-002"
     },
     {
@@ -93798,7 +94244,7 @@
       "field": "limitations_en",
       "token": "2026",
       "category": "GOVERNED_OBJECT_SOURCE_CLOSED",
-      "context": "It does not establish why the gap exists, and it is not the gender gap in 2026. | The survey frame excludes areas holding about 23% of the population, and more than a quarter of primary sampling units were replaced. No standard errors or confidence intervals are published with these values; the Yemen sample is 1,000 respondents, so subgroup values and the gap carry sampling uncertainty that is not quantified here.",
+      "context": "It does not establish why the gap exists, and it is not the gender gap in 2026. | The survey frame excludes areas holding about 23% of the population, and more than a quarter of primary sampling units were replaced. The World Bank publishes no standard error or confidence interval with these values, so this resource derives them from the survey's own weights: on a sample of 1,000 respondents the 95% interval runs from 3.2% to 7.7% for women and from 14.6% to 22.1% for men, and from 8.5 to 17.3 points for the gap. The file open to researchers carries no sampling-unit identifier, so clustering is not captured and the true intervals may be wider, never narrower.",
       "source_object": "CLM-002"
     },
     {
@@ -93807,7 +94253,7 @@
       "field": "limitations_en",
       "token": "23%",
       "category": "GOVERNED_OBJECT_SOURCE_CLOSED",
-      "context": "It does not establish why the gap exists, and it is not the gender gap in 2026. | The survey frame excludes areas holding about 23% of the population, and more than a quarter of primary sampling units were replaced. No standard errors or confidence intervals are published with these values; the Yemen sample is 1,000 respondents, so subgroup values and the gap carry sampling uncertainty that is not quantified here.",
+      "context": "It does not establish why the gap exists, and it is not the gender gap in 2026. | The survey frame excludes areas holding about 23% of the population, and more than a quarter of primary sampling units were replaced. The World Bank publishes no standard error or confidence interval with these values, so this resource derives them from the survey's own weights: on a sample of 1,000 respondents the 95% interval runs from 3.2% to 7.7% for women and from 14.6% to 22.1% for men, and from 8.5 to 17.3 points for the gap. The file open to researchers carries no sampling-unit identifier, so clustering is not captured and the true intervals may be wider, never narrower.",
       "source_object": "CLM-002"
     },
     {
@@ -93816,7 +94262,70 @@
       "field": "limitations_en",
       "token": "1,000",
       "category": "GOVERNED_OBJECT_SOURCE_CLOSED",
-      "context": "It does not establish why the gap exists, and it is not the gender gap in 2026. | The survey frame excludes areas holding about 23% of the population, and more than a quarter of primary sampling units were replaced. No standard errors or confidence intervals are published with these values; the Yemen sample is 1,000 respondents, so subgroup values and the gap carry sampling uncertainty that is not quantified here.",
+      "context": "It does not establish why the gap exists, and it is not the gender gap in 2026. | The survey frame excludes areas holding about 23% of the population, and more than a quarter of primary sampling units were replaced. The World Bank publishes no standard error or confidence interval with these values, so this resource derives them from the survey's own weights: on a sample of 1,000 respondents the 95% interval runs from 3.2% to 7.7% for women and from 14.6% to 22.1% for men, and from 8.5 to 17.3 points for the gap. The file open to researchers carries no sampling-unit identifier, so clustering is not captured and the true intervals may be wider, never narrower.",
+      "source_object": "CLM-002"
+    },
+    {
+      "route": "/people/",
+      "surface": "governed_numeric_inventory",
+      "field": "limitations_en",
+      "token": "95%",
+      "category": "GOVERNED_OBJECT_SOURCE_CLOSED",
+      "context": "It does not establish why the gap exists, and it is not the gender gap in 2026. | The survey frame excludes areas holding about 23% of the population, and more than a quarter of primary sampling units were replaced. The World Bank publishes no standard error or confidence interval with these values, so this resource derives them from the survey's own weights: on a sample of 1,000 respondents the 95% interval runs from 3.2% to 7.7% for women and from 14.6% to 22.1% for men, and from 8.5 to 17.3 points for the gap. The file open to researchers carries no sampling-unit identifier, so clustering is not captured and the true intervals may be wider, never narrower.",
+      "source_object": "CLM-002"
+    },
+    {
+      "route": "/people/",
+      "surface": "governed_numeric_inventory",
+      "field": "limitations_en",
+      "token": "3.2%",
+      "category": "GOVERNED_OBJECT_SOURCE_CLOSED",
+      "context": "It does not establish why the gap exists, and it is not the gender gap in 2026. | The survey frame excludes areas holding about 23% of the population, and more than a quarter of primary sampling units were replaced. The World Bank publishes no standard error or confidence interval with these values, so this resource derives them from the survey's own weights: on a sample of 1,000 respondents the 95% interval runs from 3.2% to 7.7% for women and from 14.6% to 22.1% for men, and from 8.5 to 17.3 points for the gap. The file open to researchers carries no sampling-unit identifier, so clustering is not captured and the true intervals may be wider, never narrower.",
+      "source_object": "CLM-002"
+    },
+    {
+      "route": "/people/",
+      "surface": "governed_numeric_inventory",
+      "field": "limitations_en",
+      "token": "7.7%",
+      "category": "GOVERNED_OBJECT_SOURCE_CLOSED",
+      "context": "It does not establish why the gap exists, and it is not the gender gap in 2026. | The survey frame excludes areas holding about 23% of the population, and more than a quarter of primary sampling units were replaced. The World Bank publishes no standard error or confidence interval with these values, so this resource derives them from the survey's own weights: on a sample of 1,000 respondents the 95% interval runs from 3.2% to 7.7% for women and from 14.6% to 22.1% for men, and from 8.5 to 17.3 points for the gap. The file open to researchers carries no sampling-unit identifier, so clustering is not captured and the true intervals may be wider, never narrower.",
+      "source_object": "CLM-002"
+    },
+    {
+      "route": "/people/",
+      "surface": "governed_numeric_inventory",
+      "field": "limitations_en",
+      "token": "14.6%",
+      "category": "GOVERNED_OBJECT_SOURCE_CLOSED",
+      "context": "It does not establish why the gap exists, and it is not the gender gap in 2026. | The survey frame excludes areas holding about 23% of the population, and more than a quarter of primary sampling units were replaced. The World Bank publishes no standard error or confidence interval with these values, so this resource derives them from the survey's own weights: on a sample of 1,000 respondents the 95% interval runs from 3.2% to 7.7% for women and from 14.6% to 22.1% for men, and from 8.5 to 17.3 points for the gap. The file open to researchers carries no sampling-unit identifier, so clustering is not captured and the true intervals may be wider, never narrower.",
+      "source_object": "CLM-002"
+    },
+    {
+      "route": "/people/",
+      "surface": "governed_numeric_inventory",
+      "field": "limitations_en",
+      "token": "22.1%",
+      "category": "GOVERNED_OBJECT_SOURCE_CLOSED",
+      "context": "It does not establish why the gap exists, and it is not the gender gap in 2026. | The survey frame excludes areas holding about 23% of the population, and more than a quarter of primary sampling units were replaced. The World Bank publishes no standard error or confidence interval with these values, so this resource derives them from the survey's own weights: on a sample of 1,000 respondents the 95% interval runs from 3.2% to 7.7% for women and from 14.6% to 22.1% for men, and from 8.5 to 17.3 points for the gap. The file open to researchers carries no sampling-unit identifier, so clustering is not captured and the true intervals may be wider, never narrower.",
+      "source_object": "CLM-002"
+    },
+    {
+      "route": "/people/",
+      "surface": "governed_numeric_inventory",
+      "field": "limitations_en",
+      "token": "8.5",
+      "category": "GOVERNED_OBJECT_SOURCE_CLOSED",
+      "context": "It does not establish why the gap exists, and it is not the gender gap in 2026. | The survey frame excludes areas holding about 23% of the population, and more than a quarter of primary sampling units were replaced. The World Bank publishes no standard error or confidence interval with these values, so this resource derives them from the survey's own weights: on a sample of 1,000 respondents the 95% interval runs from 3.2% to 7.7% for women and from 14.6% to 22.1% for men, and from 8.5 to 17.3 points for the gap. The file open to researchers carries no sampling-unit identifier, so clustering is not captured and the true intervals may be wider, never narrower.",
+      "source_object": "CLM-002"
+    },
+    {
+      "route": "/people/",
+      "surface": "governed_numeric_inventory",
+      "field": "limitations_en",
+      "token": "17.3",
+      "category": "GOVERNED_OBJECT_SOURCE_CLOSED",
+      "context": "It does not establish why the gap exists, and it is not the gender gap in 2026. | The survey frame excludes areas holding about 23% of the population, and more than a quarter of primary sampling units were replaced. The World Bank publishes no standard error or confidence interval with these values, so this resource derives them from the survey's own weights: on a sample of 1,000 respondents the 95% interval runs from 3.2% to 7.7% for women and from 14.6% to 22.1% for men, and from 8.5 to 17.3 points for the gap. The file open to researchers carries no sampling-unit identifier, so clustering is not captured and the true intervals may be wider, never narrower.",
       "source_object": "CLM-002"
     },
     {
@@ -93825,7 +94334,7 @@
       "field": "limitations_ar",
       "token": "2026",
       "category": "GOVERNED_OBJECT_SOURCE_CLOSED",
-      "context": "لا يثبت هذا الدليل سبب الفجوة بين الرجال والنساء، ولا يمثل الفجوة القائمة في عام 2026. | يستبعد إطار المسح مناطق يقطنها نحو 23% من السكان، كما استُبدل أكثر من ربع وحدات المعاينة الأولية. ولا تُنشر مع هذه القيم أخطاء معيارية أو فترات ثقة؛ وتبلغ عينة اليمن 1,000 مستجيب، لذلك تنطوي قيم الفئات الفرعية والفجوة بينها على عدم يقين ناتج عن المعاينة لا يُقدَّر كميًا هنا.",
+      "context": "لا يثبت هذا الدليل سبب الفجوة بين الرجال والنساء، ولا يمثل الفجوة القائمة في عام 2026. | يستبعد إطار المسح مناطق يقطنها نحو 23% من السكان، كما استُبدل أكثر من ربع وحدات المعاينة الأولية. ولا ينشر البنك الدولي مع هذه القيم خطأً معياريًا ولا فترة ثقة، لذلك يستخرجها هذا المورد من أوزان المسح نفسها: ففي عينة من 1,000 مستجيب تمتد فترة الثقة 95% من 3.2% إلى 7.7% للنساء، ومن 14.6% إلى 22.1% للرجال، ومن 8.5 إلى 17.3 نقطة للفجوة. ولا يحمل الملف المتاح للباحثين معرّف وحدة المعاينة، لذلك لا تُحتسب آثار التجمّع العنقودي، وقد تكون الفترات الحقيقية أوسع لا أضيق.",
       "source_object": "CLM-002"
     },
     {
@@ -93834,7 +94343,7 @@
       "field": "limitations_ar",
       "token": "23%",
       "category": "GOVERNED_OBJECT_SOURCE_CLOSED",
-      "context": "لا يثبت هذا الدليل سبب الفجوة بين الرجال والنساء، ولا يمثل الفجوة القائمة في عام 2026. | يستبعد إطار المسح مناطق يقطنها نحو 23% من السكان، كما استُبدل أكثر من ربع وحدات المعاينة الأولية. ولا تُنشر مع هذه القيم أخطاء معيارية أو فترات ثقة؛ وتبلغ عينة اليمن 1,000 مستجيب، لذلك تنطوي قيم الفئات الفرعية والفجوة بينها على عدم يقين ناتج عن المعاينة لا يُقدَّر كميًا هنا.",
+      "context": "لا يثبت هذا الدليل سبب الفجوة بين الرجال والنساء، ولا يمثل الفجوة القائمة في عام 2026. | يستبعد إطار المسح مناطق يقطنها نحو 23% من السكان، كما استُبدل أكثر من ربع وحدات المعاينة الأولية. ولا ينشر البنك الدولي مع هذه القيم خطأً معياريًا ولا فترة ثقة، لذلك يستخرجها هذا المورد من أوزان المسح نفسها: ففي عينة من 1,000 مستجيب تمتد فترة الثقة 95% من 3.2% إلى 7.7% للنساء، ومن 14.6% إلى 22.1% للرجال، ومن 8.5 إلى 17.3 نقطة للفجوة. ولا يحمل الملف المتاح للباحثين معرّف وحدة المعاينة، لذلك لا تُحتسب آثار التجمّع العنقودي، وقد تكون الفترات الحقيقية أوسع لا أضيق.",
       "source_object": "CLM-002"
     },
     {
@@ -93843,7 +94352,70 @@
       "field": "limitations_ar",
       "token": "1,000",
       "category": "GOVERNED_OBJECT_SOURCE_CLOSED",
-      "context": "لا يثبت هذا الدليل سبب الفجوة بين الرجال والنساء، ولا يمثل الفجوة القائمة في عام 2026. | يستبعد إطار المسح مناطق يقطنها نحو 23% من السكان، كما استُبدل أكثر من ربع وحدات المعاينة الأولية. ولا تُنشر مع هذه القيم أخطاء معيارية أو فترات ثقة؛ وتبلغ عينة اليمن 1,000 مستجيب، لذلك تنطوي قيم الفئات الفرعية والفجوة بينها على عدم يقين ناتج عن المعاينة لا يُقدَّر كميًا هنا.",
+      "context": "لا يثبت هذا الدليل سبب الفجوة بين الرجال والنساء، ولا يمثل الفجوة القائمة في عام 2026. | يستبعد إطار المسح مناطق يقطنها نحو 23% من السكان، كما استُبدل أكثر من ربع وحدات المعاينة الأولية. ولا ينشر البنك الدولي مع هذه القيم خطأً معياريًا ولا فترة ثقة، لذلك يستخرجها هذا المورد من أوزان المسح نفسها: ففي عينة من 1,000 مستجيب تمتد فترة الثقة 95% من 3.2% إلى 7.7% للنساء، ومن 14.6% إلى 22.1% للرجال، ومن 8.5 إلى 17.3 نقطة للفجوة. ولا يحمل الملف المتاح للباحثين معرّف وحدة المعاينة، لذلك لا تُحتسب آثار التجمّع العنقودي، وقد تكون الفترات الحقيقية أوسع لا أضيق.",
+      "source_object": "CLM-002"
+    },
+    {
+      "route": "/people/",
+      "surface": "governed_numeric_inventory",
+      "field": "limitations_ar",
+      "token": "95%",
+      "category": "GOVERNED_OBJECT_SOURCE_CLOSED",
+      "context": "لا يثبت هذا الدليل سبب الفجوة بين الرجال والنساء، ولا يمثل الفجوة القائمة في عام 2026. | يستبعد إطار المسح مناطق يقطنها نحو 23% من السكان، كما استُبدل أكثر من ربع وحدات المعاينة الأولية. ولا ينشر البنك الدولي مع هذه القيم خطأً معياريًا ولا فترة ثقة، لذلك يستخرجها هذا المورد من أوزان المسح نفسها: ففي عينة من 1,000 مستجيب تمتد فترة الثقة 95% من 3.2% إلى 7.7% للنساء، ومن 14.6% إلى 22.1% للرجال، ومن 8.5 إلى 17.3 نقطة للفجوة. ولا يحمل الملف المتاح للباحثين معرّف وحدة المعاينة، لذلك لا تُحتسب آثار التجمّع العنقودي، وقد تكون الفترات الحقيقية أوسع لا أضيق.",
+      "source_object": "CLM-002"
+    },
+    {
+      "route": "/people/",
+      "surface": "governed_numeric_inventory",
+      "field": "limitations_ar",
+      "token": "3.2%",
+      "category": "GOVERNED_OBJECT_SOURCE_CLOSED",
+      "context": "لا يثبت هذا الدليل سبب الفجوة بين الرجال والنساء، ولا يمثل الفجوة القائمة في عام 2026. | يستبعد إطار المسح مناطق يقطنها نحو 23% من السكان، كما استُبدل أكثر من ربع وحدات المعاينة الأولية. ولا ينشر البنك الدولي مع هذه القيم خطأً معياريًا ولا فترة ثقة، لذلك يستخرجها هذا المورد من أوزان المسح نفسها: ففي عينة من 1,000 مستجيب تمتد فترة الثقة 95% من 3.2% إلى 7.7% للنساء، ومن 14.6% إلى 22.1% للرجال، ومن 8.5 إلى 17.3 نقطة للفجوة. ولا يحمل الملف المتاح للباحثين معرّف وحدة المعاينة، لذلك لا تُحتسب آثار التجمّع العنقودي، وقد تكون الفترات الحقيقية أوسع لا أضيق.",
+      "source_object": "CLM-002"
+    },
+    {
+      "route": "/people/",
+      "surface": "governed_numeric_inventory",
+      "field": "limitations_ar",
+      "token": "7.7%",
+      "category": "GOVERNED_OBJECT_SOURCE_CLOSED",
+      "context": "لا يثبت هذا الدليل سبب الفجوة بين الرجال والنساء، ولا يمثل الفجوة القائمة في عام 2026. | يستبعد إطار المسح مناطق يقطنها نحو 23% من السكان، كما استُبدل أكثر من ربع وحدات المعاينة الأولية. ولا ينشر البنك الدولي مع هذه القيم خطأً معياريًا ولا فترة ثقة، لذلك يستخرجها هذا المورد من أوزان المسح نفسها: ففي عينة من 1,000 مستجيب تمتد فترة الثقة 95% من 3.2% إلى 7.7% للنساء، ومن 14.6% إلى 22.1% للرجال، ومن 8.5 إلى 17.3 نقطة للفجوة. ولا يحمل الملف المتاح للباحثين معرّف وحدة المعاينة، لذلك لا تُحتسب آثار التجمّع العنقودي، وقد تكون الفترات الحقيقية أوسع لا أضيق.",
+      "source_object": "CLM-002"
+    },
+    {
+      "route": "/people/",
+      "surface": "governed_numeric_inventory",
+      "field": "limitations_ar",
+      "token": "14.6%",
+      "category": "GOVERNED_OBJECT_SOURCE_CLOSED",
+      "context": "لا يثبت هذا الدليل سبب الفجوة بين الرجال والنساء، ولا يمثل الفجوة القائمة في عام 2026. | يستبعد إطار المسح مناطق يقطنها نحو 23% من السكان، كما استُبدل أكثر من ربع وحدات المعاينة الأولية. ولا ينشر البنك الدولي مع هذه القيم خطأً معياريًا ولا فترة ثقة، لذلك يستخرجها هذا المورد من أوزان المسح نفسها: ففي عينة من 1,000 مستجيب تمتد فترة الثقة 95% من 3.2% إلى 7.7% للنساء، ومن 14.6% إلى 22.1% للرجال، ومن 8.5 إلى 17.3 نقطة للفجوة. ولا يحمل الملف المتاح للباحثين معرّف وحدة المعاينة، لذلك لا تُحتسب آثار التجمّع العنقودي، وقد تكون الفترات الحقيقية أوسع لا أضيق.",
+      "source_object": "CLM-002"
+    },
+    {
+      "route": "/people/",
+      "surface": "governed_numeric_inventory",
+      "field": "limitations_ar",
+      "token": "22.1%",
+      "category": "GOVERNED_OBJECT_SOURCE_CLOSED",
+      "context": "لا يثبت هذا الدليل سبب الفجوة بين الرجال والنساء، ولا يمثل الفجوة القائمة في عام 2026. | يستبعد إطار المسح مناطق يقطنها نحو 23% من السكان، كما استُبدل أكثر من ربع وحدات المعاينة الأولية. ولا ينشر البنك الدولي مع هذه القيم خطأً معياريًا ولا فترة ثقة، لذلك يستخرجها هذا المورد من أوزان المسح نفسها: ففي عينة من 1,000 مستجيب تمتد فترة الثقة 95% من 3.2% إلى 7.7% للنساء، ومن 14.6% إلى 22.1% للرجال، ومن 8.5 إلى 17.3 نقطة للفجوة. ولا يحمل الملف المتاح للباحثين معرّف وحدة المعاينة، لذلك لا تُحتسب آثار التجمّع العنقودي، وقد تكون الفترات الحقيقية أوسع لا أضيق.",
+      "source_object": "CLM-002"
+    },
+    {
+      "route": "/people/",
+      "surface": "governed_numeric_inventory",
+      "field": "limitations_ar",
+      "token": "8.5",
+      "category": "GOVERNED_OBJECT_SOURCE_CLOSED",
+      "context": "لا يثبت هذا الدليل سبب الفجوة بين الرجال والنساء، ولا يمثل الفجوة القائمة في عام 2026. | يستبعد إطار المسح مناطق يقطنها نحو 23% من السكان، كما استُبدل أكثر من ربع وحدات المعاينة الأولية. ولا ينشر البنك الدولي مع هذه القيم خطأً معياريًا ولا فترة ثقة، لذلك يستخرجها هذا المورد من أوزان المسح نفسها: ففي عينة من 1,000 مستجيب تمتد فترة الثقة 95% من 3.2% إلى 7.7% للنساء، ومن 14.6% إلى 22.1% للرجال، ومن 8.5 إلى 17.3 نقطة للفجوة. ولا يحمل الملف المتاح للباحثين معرّف وحدة المعاينة، لذلك لا تُحتسب آثار التجمّع العنقودي، وقد تكون الفترات الحقيقية أوسع لا أضيق.",
+      "source_object": "CLM-002"
+    },
+    {
+      "route": "/people/",
+      "surface": "governed_numeric_inventory",
+      "field": "limitations_ar",
+      "token": "17.3",
+      "category": "GOVERNED_OBJECT_SOURCE_CLOSED",
+      "context": "لا يثبت هذا الدليل سبب الفجوة بين الرجال والنساء، ولا يمثل الفجوة القائمة في عام 2026. | يستبعد إطار المسح مناطق يقطنها نحو 23% من السكان، كما استُبدل أكثر من ربع وحدات المعاينة الأولية. ولا ينشر البنك الدولي مع هذه القيم خطأً معياريًا ولا فترة ثقة، لذلك يستخرجها هذا المورد من أوزان المسح نفسها: ففي عينة من 1,000 مستجيب تمتد فترة الثقة 95% من 3.2% إلى 7.7% للنساء، ومن 14.6% إلى 22.1% للرجال، ومن 8.5 إلى 17.3 نقطة للفجوة. ولا يحمل الملف المتاح للباحثين معرّف وحدة المعاينة، لذلك لا تُحتسب آثار التجمّع العنقودي، وقد تكون الفترات الحقيقية أوسع لا أضيق.",
       "source_object": "CLM-002"
     },
     {
@@ -100746,7 +101318,7 @@
       "field": "method_en",
       "token": "1,000",
       "category": "GOVERNED_OBJECT_SOURCE_CLOSED",
-      "context": "Weighted estimates published by the World Bank from the Global Findex survey of Yemen (1,000 respondents; fieldwork 7 November 2022 to 9 January 2023; World Bank data year 2022) for all adults and for subgroups by sex, household income, education and age. Each of the four differences is calculated by this resource by subtracting the lower published value in a pair from the higher one.",
+      "context": "Weighted estimates published by the World Bank from the Global Findex survey of Yemen (1,000 respondents; fieldwork 7 November 2022 to 9 January 2023; World Bank data year 2022) for all adults and for subgroups by sex, household income, education and age. Each of the four differences is calculated by this resource by subtracting the lower published value in a pair from the higher one. The 95% intervals shown with these values are derived by this resource from the survey's own weights (a design-based interval for a weighted share), not published by the World Bank.",
       "source_object": "VIS-FINDEX-GAPS"
     },
     {
@@ -100755,7 +101327,7 @@
       "field": "method_en",
       "token": "7",
       "category": "GOVERNED_OBJECT_SOURCE_CLOSED",
-      "context": "Weighted estimates published by the World Bank from the Global Findex survey of Yemen (1,000 respondents; fieldwork 7 November 2022 to 9 January 2023; World Bank data year 2022) for all adults and for subgroups by sex, household income, education and age. Each of the four differences is calculated by this resource by subtracting the lower published value in a pair from the higher one.",
+      "context": "Weighted estimates published by the World Bank from the Global Findex survey of Yemen (1,000 respondents; fieldwork 7 November 2022 to 9 January 2023; World Bank data year 2022) for all adults and for subgroups by sex, household income, education and age. Each of the four differences is calculated by this resource by subtracting the lower published value in a pair from the higher one. The 95% intervals shown with these values are derived by this resource from the survey's own weights (a design-based interval for a weighted share), not published by the World Bank.",
       "source_object": "VIS-FINDEX-GAPS"
     },
     {
@@ -100764,7 +101336,7 @@
       "field": "method_en",
       "token": "2022",
       "category": "GOVERNED_OBJECT_SOURCE_CLOSED",
-      "context": "Weighted estimates published by the World Bank from the Global Findex survey of Yemen (1,000 respondents; fieldwork 7 November 2022 to 9 January 2023; World Bank data year 2022) for all adults and for subgroups by sex, household income, education and age. Each of the four differences is calculated by this resource by subtracting the lower published value in a pair from the higher one.",
+      "context": "Weighted estimates published by the World Bank from the Global Findex survey of Yemen (1,000 respondents; fieldwork 7 November 2022 to 9 January 2023; World Bank data year 2022) for all adults and for subgroups by sex, household income, education and age. Each of the four differences is calculated by this resource by subtracting the lower published value in a pair from the higher one. The 95% intervals shown with these values are derived by this resource from the survey's own weights (a design-based interval for a weighted share), not published by the World Bank.",
       "source_object": "VIS-FINDEX-GAPS"
     },
     {
@@ -100773,7 +101345,7 @@
       "field": "method_en",
       "token": "9",
       "category": "GOVERNED_OBJECT_SOURCE_CLOSED",
-      "context": "Weighted estimates published by the World Bank from the Global Findex survey of Yemen (1,000 respondents; fieldwork 7 November 2022 to 9 January 2023; World Bank data year 2022) for all adults and for subgroups by sex, household income, education and age. Each of the four differences is calculated by this resource by subtracting the lower published value in a pair from the higher one.",
+      "context": "Weighted estimates published by the World Bank from the Global Findex survey of Yemen (1,000 respondents; fieldwork 7 November 2022 to 9 January 2023; World Bank data year 2022) for all adults and for subgroups by sex, household income, education and age. Each of the four differences is calculated by this resource by subtracting the lower published value in a pair from the higher one. The 95% intervals shown with these values are derived by this resource from the survey's own weights (a design-based interval for a weighted share), not published by the World Bank.",
       "source_object": "VIS-FINDEX-GAPS"
     },
     {
@@ -100782,7 +101354,16 @@
       "field": "method_en",
       "token": "2023",
       "category": "GOVERNED_OBJECT_SOURCE_CLOSED",
-      "context": "Weighted estimates published by the World Bank from the Global Findex survey of Yemen (1,000 respondents; fieldwork 7 November 2022 to 9 January 2023; World Bank data year 2022) for all adults and for subgroups by sex, household income, education and age. Each of the four differences is calculated by this resource by subtracting the lower published value in a pair from the higher one.",
+      "context": "Weighted estimates published by the World Bank from the Global Findex survey of Yemen (1,000 respondents; fieldwork 7 November 2022 to 9 January 2023; World Bank data year 2022) for all adults and for subgroups by sex, household income, education and age. Each of the four differences is calculated by this resource by subtracting the lower published value in a pair from the higher one. The 95% intervals shown with these values are derived by this resource from the survey's own weights (a design-based interval for a weighted share), not published by the World Bank.",
+      "source_object": "VIS-FINDEX-GAPS"
+    },
+    {
+      "route": "/people/",
+      "surface": "governed_numeric_inventory",
+      "field": "method_en",
+      "token": "95%",
+      "category": "GOVERNED_OBJECT_SOURCE_CLOSED",
+      "context": "Weighted estimates published by the World Bank from the Global Findex survey of Yemen (1,000 respondents; fieldwork 7 November 2022 to 9 January 2023; World Bank data year 2022) for all adults and for subgroups by sex, household income, education and age. Each of the four differences is calculated by this resource by subtracting the lower published value in a pair from the higher one. The 95% intervals shown with these values are derived by this resource from the survey's own weights (a design-based interval for a weighted share), not published by the World Bank.",
       "source_object": "VIS-FINDEX-GAPS"
     },
     {
@@ -100791,7 +101372,7 @@
       "field": "method_ar",
       "token": "1,000",
       "category": "GOVERNED_OBJECT_SOURCE_CLOSED",
-      "context": "تقديرات موزونة نشرها البنك الدولي من مسح المؤشر العالمي للشمول المالي (Global Findex) في اليمن (1,000 مستجيب؛ العمل الميداني من 7 نوفمبر 2022 إلى 9 يناير 2023؛ سنة البيانات لدى البنك الدولي 2022) لجميع البالغين وللفئات الفرعية بحسب الجنس ودخل الأسرة والتعليم والعمر. ويحتسب هذا المورد كلًّا من الفروق الأربعة بطرح القيمة المنشورة الأدنى في كل زوج من القيمة الأعلى.",
+      "context": "تقديرات موزونة نشرها البنك الدولي من مسح المؤشر العالمي للشمول المالي (Global Findex) في اليمن (1,000 مستجيب؛ العمل الميداني من 7 نوفمبر 2022 إلى 9 يناير 2023؛ سنة البيانات لدى البنك الدولي 2022) لجميع البالغين وللفئات الفرعية بحسب الجنس ودخل الأسرة والتعليم والعمر. ويحتسب هذا المورد كلًّا من الفروق الأربعة بطرح القيمة المنشورة الأدنى في كل زوج من القيمة الأعلى. وفترات الثقة 95% المعروضة مع هذه القيم يستخرجها هذا المورد من أوزان المسح نفسها (فترة قائمة على تصميم المسح لنسبة موزونة)، ولم ينشرها البنك الدولي.",
       "source_object": "VIS-FINDEX-GAPS"
     },
     {
@@ -100800,7 +101381,7 @@
       "field": "method_ar",
       "token": "7",
       "category": "GOVERNED_OBJECT_SOURCE_CLOSED",
-      "context": "تقديرات موزونة نشرها البنك الدولي من مسح المؤشر العالمي للشمول المالي (Global Findex) في اليمن (1,000 مستجيب؛ العمل الميداني من 7 نوفمبر 2022 إلى 9 يناير 2023؛ سنة البيانات لدى البنك الدولي 2022) لجميع البالغين وللفئات الفرعية بحسب الجنس ودخل الأسرة والتعليم والعمر. ويحتسب هذا المورد كلًّا من الفروق الأربعة بطرح القيمة المنشورة الأدنى في كل زوج من القيمة الأعلى.",
+      "context": "تقديرات موزونة نشرها البنك الدولي من مسح المؤشر العالمي للشمول المالي (Global Findex) في اليمن (1,000 مستجيب؛ العمل الميداني من 7 نوفمبر 2022 إلى 9 يناير 2023؛ سنة البيانات لدى البنك الدولي 2022) لجميع البالغين وللفئات الفرعية بحسب الجنس ودخل الأسرة والتعليم والعمر. ويحتسب هذا المورد كلًّا من الفروق الأربعة بطرح القيمة المنشورة الأدنى في كل زوج من القيمة الأعلى. وفترات الثقة 95% المعروضة مع هذه القيم يستخرجها هذا المورد من أوزان المسح نفسها (فترة قائمة على تصميم المسح لنسبة موزونة)، ولم ينشرها البنك الدولي.",
       "source_object": "VIS-FINDEX-GAPS"
     },
     {
@@ -100809,7 +101390,7 @@
       "field": "method_ar",
       "token": "2022",
       "category": "GOVERNED_OBJECT_SOURCE_CLOSED",
-      "context": "تقديرات موزونة نشرها البنك الدولي من مسح المؤشر العالمي للشمول المالي (Global Findex) في اليمن (1,000 مستجيب؛ العمل الميداني من 7 نوفمبر 2022 إلى 9 يناير 2023؛ سنة البيانات لدى البنك الدولي 2022) لجميع البالغين وللفئات الفرعية بحسب الجنس ودخل الأسرة والتعليم والعمر. ويحتسب هذا المورد كلًّا من الفروق الأربعة بطرح القيمة المنشورة الأدنى في كل زوج من القيمة الأعلى.",
+      "context": "تقديرات موزونة نشرها البنك الدولي من مسح المؤشر العالمي للشمول المالي (Global Findex) في اليمن (1,000 مستجيب؛ العمل الميداني من 7 نوفمبر 2022 إلى 9 يناير 2023؛ سنة البيانات لدى البنك الدولي 2022) لجميع البالغين وللفئات الفرعية بحسب الجنس ودخل الأسرة والتعليم والعمر. ويحتسب هذا المورد كلًّا من الفروق الأربعة بطرح القيمة المنشورة الأدنى في كل زوج من القيمة الأعلى. وفترات الثقة 95% المعروضة مع هذه القيم يستخرجها هذا المورد من أوزان المسح نفسها (فترة قائمة على تصميم المسح لنسبة موزونة)، ولم ينشرها البنك الدولي.",
       "source_object": "VIS-FINDEX-GAPS"
     },
     {
@@ -100818,7 +101399,7 @@
       "field": "method_ar",
       "token": "9",
       "category": "GOVERNED_OBJECT_SOURCE_CLOSED",
-      "context": "تقديرات موزونة نشرها البنك الدولي من مسح المؤشر العالمي للشمول المالي (Global Findex) في اليمن (1,000 مستجيب؛ العمل الميداني من 7 نوفمبر 2022 إلى 9 يناير 2023؛ سنة البيانات لدى البنك الدولي 2022) لجميع البالغين وللفئات الفرعية بحسب الجنس ودخل الأسرة والتعليم والعمر. ويحتسب هذا المورد كلًّا من الفروق الأربعة بطرح القيمة المنشورة الأدنى في كل زوج من القيمة الأعلى.",
+      "context": "تقديرات موزونة نشرها البنك الدولي من مسح المؤشر العالمي للشمول المالي (Global Findex) في اليمن (1,000 مستجيب؛ العمل الميداني من 7 نوفمبر 2022 إلى 9 يناير 2023؛ سنة البيانات لدى البنك الدولي 2022) لجميع البالغين وللفئات الفرعية بحسب الجنس ودخل الأسرة والتعليم والعمر. ويحتسب هذا المورد كلًّا من الفروق الأربعة بطرح القيمة المنشورة الأدنى في كل زوج من القيمة الأعلى. وفترات الثقة 95% المعروضة مع هذه القيم يستخرجها هذا المورد من أوزان المسح نفسها (فترة قائمة على تصميم المسح لنسبة موزونة)، ولم ينشرها البنك الدولي.",
       "source_object": "VIS-FINDEX-GAPS"
     },
     {
@@ -100827,7 +101408,16 @@
       "field": "method_ar",
       "token": "2023",
       "category": "GOVERNED_OBJECT_SOURCE_CLOSED",
-      "context": "تقديرات موزونة نشرها البنك الدولي من مسح المؤشر العالمي للشمول المالي (Global Findex) في اليمن (1,000 مستجيب؛ العمل الميداني من 7 نوفمبر 2022 إلى 9 يناير 2023؛ سنة البيانات لدى البنك الدولي 2022) لجميع البالغين وللفئات الفرعية بحسب الجنس ودخل الأسرة والتعليم والعمر. ويحتسب هذا المورد كلًّا من الفروق الأربعة بطرح القيمة المنشورة الأدنى في كل زوج من القيمة الأعلى.",
+      "context": "تقديرات موزونة نشرها البنك الدولي من مسح المؤشر العالمي للشمول المالي (Global Findex) في اليمن (1,000 مستجيب؛ العمل الميداني من 7 نوفمبر 2022 إلى 9 يناير 2023؛ سنة البيانات لدى البنك الدولي 2022) لجميع البالغين وللفئات الفرعية بحسب الجنس ودخل الأسرة والتعليم والعمر. ويحتسب هذا المورد كلًّا من الفروق الأربعة بطرح القيمة المنشورة الأدنى في كل زوج من القيمة الأعلى. وفترات الثقة 95% المعروضة مع هذه القيم يستخرجها هذا المورد من أوزان المسح نفسها (فترة قائمة على تصميم المسح لنسبة موزونة)، ولم ينشرها البنك الدولي.",
+      "source_object": "VIS-FINDEX-GAPS"
+    },
+    {
+      "route": "/people/",
+      "surface": "governed_numeric_inventory",
+      "field": "method_ar",
+      "token": "95%",
+      "category": "GOVERNED_OBJECT_SOURCE_CLOSED",
+      "context": "تقديرات موزونة نشرها البنك الدولي من مسح المؤشر العالمي للشمول المالي (Global Findex) في اليمن (1,000 مستجيب؛ العمل الميداني من 7 نوفمبر 2022 إلى 9 يناير 2023؛ سنة البيانات لدى البنك الدولي 2022) لجميع البالغين وللفئات الفرعية بحسب الجنس ودخل الأسرة والتعليم والعمر. ويحتسب هذا المورد كلًّا من الفروق الأربعة بطرح القيمة المنشورة الأدنى في كل زوج من القيمة الأعلى. وفترات الثقة 95% المعروضة مع هذه القيم يستخرجها هذا المورد من أوزان المسح نفسها (فترة قائمة على تصميم المسح لنسبة موزونة)، ولم ينشرها البنك الدولي.",
       "source_object": "VIS-FINDEX-GAPS"
     },
     {
@@ -100836,7 +101426,7 @@
       "field": "limitations_en",
       "token": "2026",
       "category": "GOVERNED_OBJECT_SOURCE_CLOSED",
-      "context": "These are values from one survey wave, not an annual series and not a 2026 rate. They cannot be mapped to governorates, they are not comparable with account counts reported by the Central Bank of Yemen – Aden (CBY-Aden), and the differences between groups do not establish their causes. | The survey frame excludes areas holding about 23% of the population, and more than a quarter of primary sampling units were replaced. No standard errors or confidence intervals are published with these values; the Yemen sample is 1,000 respondents, so subgroup values and the gaps carry sampling uncertainty that is not quantified here.",
+      "context": "These are values from one survey wave, not an annual series and not a 2026 rate. They cannot be mapped to governorates, they are not comparable with account counts reported by the Central Bank of Yemen – Aden (CBY-Aden), and the differences between groups do not establish their causes. | The survey frame excludes areas holding about 23% of the population, and more than a quarter of primary sampling units were replaced. The World Bank publishes no standard error or confidence interval with these values, so this resource derives them from the survey's own weights: on a sample of 1,000 respondents, and fewer in each group, the 95% margin of error is 2.2 points on the figure for all adults, between 2.2 and 3.9 points on each group's share, and between 4.0 and 4.6 points on each of the four differences. Each interval is printed with its figure on that figure's own record. The file open to researchers carries no sampling-unit identifier, so clustering is not captured and the true intervals may be wider, never narrower.",
       "source_object": "VIS-FINDEX-GAPS"
     },
     {
@@ -100845,7 +101435,7 @@
       "field": "limitations_en",
       "token": "23%",
       "category": "GOVERNED_OBJECT_SOURCE_CLOSED",
-      "context": "These are values from one survey wave, not an annual series and not a 2026 rate. They cannot be mapped to governorates, they are not comparable with account counts reported by the Central Bank of Yemen – Aden (CBY-Aden), and the differences between groups do not establish their causes. | The survey frame excludes areas holding about 23% of the population, and more than a quarter of primary sampling units were replaced. No standard errors or confidence intervals are published with these values; the Yemen sample is 1,000 respondents, so subgroup values and the gaps carry sampling uncertainty that is not quantified here.",
+      "context": "These are values from one survey wave, not an annual series and not a 2026 rate. They cannot be mapped to governorates, they are not comparable with account counts reported by the Central Bank of Yemen – Aden (CBY-Aden), and the differences between groups do not establish their causes. | The survey frame excludes areas holding about 23% of the population, and more than a quarter of primary sampling units were replaced. The World Bank publishes no standard error or confidence interval with these values, so this resource derives them from the survey's own weights: on a sample of 1,000 respondents, and fewer in each group, the 95% margin of error is 2.2 points on the figure for all adults, between 2.2 and 3.9 points on each group's share, and between 4.0 and 4.6 points on each of the four differences. Each interval is printed with its figure on that figure's own record. The file open to researchers carries no sampling-unit identifier, so clustering is not captured and the true intervals may be wider, never narrower.",
       "source_object": "VIS-FINDEX-GAPS"
     },
     {
@@ -100854,7 +101444,52 @@
       "field": "limitations_en",
       "token": "1,000",
       "category": "GOVERNED_OBJECT_SOURCE_CLOSED",
-      "context": "These are values from one survey wave, not an annual series and not a 2026 rate. They cannot be mapped to governorates, they are not comparable with account counts reported by the Central Bank of Yemen – Aden (CBY-Aden), and the differences between groups do not establish their causes. | The survey frame excludes areas holding about 23% of the population, and more than a quarter of primary sampling units were replaced. No standard errors or confidence intervals are published with these values; the Yemen sample is 1,000 respondents, so subgroup values and the gaps carry sampling uncertainty that is not quantified here.",
+      "context": "These are values from one survey wave, not an annual series and not a 2026 rate. They cannot be mapped to governorates, they are not comparable with account counts reported by the Central Bank of Yemen – Aden (CBY-Aden), and the differences between groups do not establish their causes. | The survey frame excludes areas holding about 23% of the population, and more than a quarter of primary sampling units were replaced. The World Bank publishes no standard error or confidence interval with these values, so this resource derives them from the survey's own weights: on a sample of 1,000 respondents, and fewer in each group, the 95% margin of error is 2.2 points on the figure for all adults, between 2.2 and 3.9 points on each group's share, and between 4.0 and 4.6 points on each of the four differences. Each interval is printed with its figure on that figure's own record. The file open to researchers carries no sampling-unit identifier, so clustering is not captured and the true intervals may be wider, never narrower.",
+      "source_object": "VIS-FINDEX-GAPS"
+    },
+    {
+      "route": "/people/",
+      "surface": "governed_numeric_inventory",
+      "field": "limitations_en",
+      "token": "95%",
+      "category": "GOVERNED_OBJECT_SOURCE_CLOSED",
+      "context": "These are values from one survey wave, not an annual series and not a 2026 rate. They cannot be mapped to governorates, they are not comparable with account counts reported by the Central Bank of Yemen – Aden (CBY-Aden), and the differences between groups do not establish their causes. | The survey frame excludes areas holding about 23% of the population, and more than a quarter of primary sampling units were replaced. The World Bank publishes no standard error or confidence interval with these values, so this resource derives them from the survey's own weights: on a sample of 1,000 respondents, and fewer in each group, the 95% margin of error is 2.2 points on the figure for all adults, between 2.2 and 3.9 points on each group's share, and between 4.0 and 4.6 points on each of the four differences. Each interval is printed with its figure on that figure's own record. The file open to researchers carries no sampling-unit identifier, so clustering is not captured and the true intervals may be wider, never narrower.",
+      "source_object": "VIS-FINDEX-GAPS"
+    },
+    {
+      "route": "/people/",
+      "surface": "governed_numeric_inventory",
+      "field": "limitations_en",
+      "token": "2.2",
+      "category": "GOVERNED_OBJECT_SOURCE_CLOSED",
+      "context": "These are values from one survey wave, not an annual series and not a 2026 rate. They cannot be mapped to governorates, they are not comparable with account counts reported by the Central Bank of Yemen – Aden (CBY-Aden), and the differences between groups do not establish their causes. | The survey frame excludes areas holding about 23% of the population, and more than a quarter of primary sampling units were replaced. The World Bank publishes no standard error or confidence interval with these values, so this resource derives them from the survey's own weights: on a sample of 1,000 respondents, and fewer in each group, the 95% margin of error is 2.2 points on the figure for all adults, between 2.2 and 3.9 points on each group's share, and between 4.0 and 4.6 points on each of the four differences. Each interval is printed with its figure on that figure's own record. The file open to researchers carries no sampling-unit identifier, so clustering is not captured and the true intervals may be wider, never narrower.",
+      "source_object": "VIS-FINDEX-GAPS"
+    },
+    {
+      "route": "/people/",
+      "surface": "governed_numeric_inventory",
+      "field": "limitations_en",
+      "token": "3.9",
+      "category": "GOVERNED_OBJECT_SOURCE_CLOSED",
+      "context": "These are values from one survey wave, not an annual series and not a 2026 rate. They cannot be mapped to governorates, they are not comparable with account counts reported by the Central Bank of Yemen – Aden (CBY-Aden), and the differences between groups do not establish their causes. | The survey frame excludes areas holding about 23% of the population, and more than a quarter of primary sampling units were replaced. The World Bank publishes no standard error or confidence interval with these values, so this resource derives them from the survey's own weights: on a sample of 1,000 respondents, and fewer in each group, the 95% margin of error is 2.2 points on the figure for all adults, between 2.2 and 3.9 points on each group's share, and between 4.0 and 4.6 points on each of the four differences. Each interval is printed with its figure on that figure's own record. The file open to researchers carries no sampling-unit identifier, so clustering is not captured and the true intervals may be wider, never narrower.",
+      "source_object": "VIS-FINDEX-GAPS"
+    },
+    {
+      "route": "/people/",
+      "surface": "governed_numeric_inventory",
+      "field": "limitations_en",
+      "token": "4.0",
+      "category": "GOVERNED_OBJECT_SOURCE_CLOSED",
+      "context": "These are values from one survey wave, not an annual series and not a 2026 rate. They cannot be mapped to governorates, they are not comparable with account counts reported by the Central Bank of Yemen – Aden (CBY-Aden), and the differences between groups do not establish their causes. | The survey frame excludes areas holding about 23% of the population, and more than a quarter of primary sampling units were replaced. The World Bank publishes no standard error or confidence interval with these values, so this resource derives them from the survey's own weights: on a sample of 1,000 respondents, and fewer in each group, the 95% margin of error is 2.2 points on the figure for all adults, between 2.2 and 3.9 points on each group's share, and between 4.0 and 4.6 points on each of the four differences. Each interval is printed with its figure on that figure's own record. The file open to researchers carries no sampling-unit identifier, so clustering is not captured and the true intervals may be wider, never narrower.",
+      "source_object": "VIS-FINDEX-GAPS"
+    },
+    {
+      "route": "/people/",
+      "surface": "governed_numeric_inventory",
+      "field": "limitations_en",
+      "token": "4.6",
+      "category": "GOVERNED_OBJECT_SOURCE_CLOSED",
+      "context": "These are values from one survey wave, not an annual series and not a 2026 rate. They cannot be mapped to governorates, they are not comparable with account counts reported by the Central Bank of Yemen – Aden (CBY-Aden), and the differences between groups do not establish their causes. | The survey frame excludes areas holding about 23% of the population, and more than a quarter of primary sampling units were replaced. The World Bank publishes no standard error or confidence interval with these values, so this resource derives them from the survey's own weights: on a sample of 1,000 respondents, and fewer in each group, the 95% margin of error is 2.2 points on the figure for all adults, between 2.2 and 3.9 points on each group's share, and between 4.0 and 4.6 points on each of the four differences. Each interval is printed with its figure on that figure's own record. The file open to researchers carries no sampling-unit identifier, so clustering is not captured and the true intervals may be wider, never narrower.",
       "source_object": "VIS-FINDEX-GAPS"
     },
     {
@@ -100863,7 +101498,7 @@
       "field": "limitations_ar",
       "token": "2026",
       "category": "GOVERNED_OBJECT_SOURCE_CLOSED",
-      "context": "هذه قيم من موجة مسحية واحدة، وليست سلسلة سنوية ولا معدلًا لعام 2026. ولا يمكن إسقاطها على المحافظات، ولا تُقارن بأعداد الحسابات التي يُبلغ عنها البنك المركزي اليمني – عدن، ولا تثبت الفروق بين الفئات أسبابها. | يستبعد إطار المسح مناطق يقطنها نحو 23% من السكان، كما استُبدل أكثر من ربع وحدات المعاينة الأولية. ولا تُنشر مع هذه القيم أخطاء معيارية أو فترات ثقة؛ وتبلغ عينة اليمن 1,000 مستجيب، لذلك تنطوي قيم الفئات الفرعية والفجوات بينها على عدم يقين ناتج عن المعاينة لا يُقدَّر كميًا هنا.",
+      "context": "هذه قيم من موجة مسحية واحدة، وليست سلسلة سنوية ولا معدلًا لعام 2026. ولا يمكن إسقاطها على المحافظات، ولا تُقارن بأعداد الحسابات التي يُبلغ عنها البنك المركزي اليمني – عدن، ولا تثبت الفروق بين الفئات أسبابها. | يستبعد إطار المسح مناطق يقطنها نحو 23% من السكان، كما استُبدل أكثر من ربع وحدات المعاينة الأولية. ولا ينشر البنك الدولي مع هذه القيم خطأً معياريًا ولا فترة ثقة، لذلك يستخرجها هذا المورد من أوزان المسح نفسها: ففي عينة من 1,000 مستجيب، وبعدد أقل في كل فئة، يبلغ هامش الخطأ عند ثقة 95% نحو 2.2 نقطة على القيمة الخاصة بجميع البالغين، وبين 2.2 و3.9 نقطة على نسبة كل فئة، وبين 4.0 و4.6 نقطة على كل فرق من الفروق الأربعة. وتُعرض كل فترة مع قيمتها في سجل تلك القيمة. ولا يحمل الملف المتاح للباحثين معرّف وحدة المعاينة، لذلك لا تُحتسب آثار التجمّع العنقودي، وقد تكون الفترات الحقيقية أوسع لا أضيق.",
       "source_object": "VIS-FINDEX-GAPS"
     },
     {
@@ -100872,7 +101507,7 @@
       "field": "limitations_ar",
       "token": "23%",
       "category": "GOVERNED_OBJECT_SOURCE_CLOSED",
-      "context": "هذه قيم من موجة مسحية واحدة، وليست سلسلة سنوية ولا معدلًا لعام 2026. ولا يمكن إسقاطها على المحافظات، ولا تُقارن بأعداد الحسابات التي يُبلغ عنها البنك المركزي اليمني – عدن، ولا تثبت الفروق بين الفئات أسبابها. | يستبعد إطار المسح مناطق يقطنها نحو 23% من السكان، كما استُبدل أكثر من ربع وحدات المعاينة الأولية. ولا تُنشر مع هذه القيم أخطاء معيارية أو فترات ثقة؛ وتبلغ عينة اليمن 1,000 مستجيب، لذلك تنطوي قيم الفئات الفرعية والفجوات بينها على عدم يقين ناتج عن المعاينة لا يُقدَّر كميًا هنا.",
+      "context": "هذه قيم من موجة مسحية واحدة، وليست سلسلة سنوية ولا معدلًا لعام 2026. ولا يمكن إسقاطها على المحافظات، ولا تُقارن بأعداد الحسابات التي يُبلغ عنها البنك المركزي اليمني – عدن، ولا تثبت الفروق بين الفئات أسبابها. | يستبعد إطار المسح مناطق يقطنها نحو 23% من السكان، كما استُبدل أكثر من ربع وحدات المعاينة الأولية. ولا ينشر البنك الدولي مع هذه القيم خطأً معياريًا ولا فترة ثقة، لذلك يستخرجها هذا المورد من أوزان المسح نفسها: ففي عينة من 1,000 مستجيب، وبعدد أقل في كل فئة، يبلغ هامش الخطأ عند ثقة 95% نحو 2.2 نقطة على القيمة الخاصة بجميع البالغين، وبين 2.2 و3.9 نقطة على نسبة كل فئة، وبين 4.0 و4.6 نقطة على كل فرق من الفروق الأربعة. وتُعرض كل فترة مع قيمتها في سجل تلك القيمة. ولا يحمل الملف المتاح للباحثين معرّف وحدة المعاينة، لذلك لا تُحتسب آثار التجمّع العنقودي، وقد تكون الفترات الحقيقية أوسع لا أضيق.",
       "source_object": "VIS-FINDEX-GAPS"
     },
     {
@@ -100881,7 +101516,52 @@
       "field": "limitations_ar",
       "token": "1,000",
       "category": "GOVERNED_OBJECT_SOURCE_CLOSED",
-      "context": "هذه قيم من موجة مسحية واحدة، وليست سلسلة سنوية ولا معدلًا لعام 2026. ولا يمكن إسقاطها على المحافظات، ولا تُقارن بأعداد الحسابات التي يُبلغ عنها البنك المركزي اليمني – عدن، ولا تثبت الفروق بين الفئات أسبابها. | يستبعد إطار المسح مناطق يقطنها نحو 23% من السكان، كما استُبدل أكثر من ربع وحدات المعاينة الأولية. ولا تُنشر مع هذه القيم أخطاء معيارية أو فترات ثقة؛ وتبلغ عينة اليمن 1,000 مستجيب، لذلك تنطوي قيم الفئات الفرعية والفجوات بينها على عدم يقين ناتج عن المعاينة لا يُقدَّر كميًا هنا.",
+      "context": "هذه قيم من موجة مسحية واحدة، وليست سلسلة سنوية ولا معدلًا لعام 2026. ولا يمكن إسقاطها على المحافظات، ولا تُقارن بأعداد الحسابات التي يُبلغ عنها البنك المركزي اليمني – عدن، ولا تثبت الفروق بين الفئات أسبابها. | يستبعد إطار المسح مناطق يقطنها نحو 23% من السكان، كما استُبدل أكثر من ربع وحدات المعاينة الأولية. ولا ينشر البنك الدولي مع هذه القيم خطأً معياريًا ولا فترة ثقة، لذلك يستخرجها هذا المورد من أوزان المسح نفسها: ففي عينة من 1,000 مستجيب، وبعدد أقل في كل فئة، يبلغ هامش الخطأ عند ثقة 95% نحو 2.2 نقطة على القيمة الخاصة بجميع البالغين، وبين 2.2 و3.9 نقطة على نسبة كل فئة، وبين 4.0 و4.6 نقطة على كل فرق من الفروق الأربعة. وتُعرض كل فترة مع قيمتها في سجل تلك القيمة. ولا يحمل الملف المتاح للباحثين معرّف وحدة المعاينة، لذلك لا تُحتسب آثار التجمّع العنقودي، وقد تكون الفترات الحقيقية أوسع لا أضيق.",
+      "source_object": "VIS-FINDEX-GAPS"
+    },
+    {
+      "route": "/people/",
+      "surface": "governed_numeric_inventory",
+      "field": "limitations_ar",
+      "token": "95%",
+      "category": "GOVERNED_OBJECT_SOURCE_CLOSED",
+      "context": "هذه قيم من موجة مسحية واحدة، وليست سلسلة سنوية ولا معدلًا لعام 2026. ولا يمكن إسقاطها على المحافظات، ولا تُقارن بأعداد الحسابات التي يُبلغ عنها البنك المركزي اليمني – عدن، ولا تثبت الفروق بين الفئات أسبابها. | يستبعد إطار المسح مناطق يقطنها نحو 23% من السكان، كما استُبدل أكثر من ربع وحدات المعاينة الأولية. ولا ينشر البنك الدولي مع هذه القيم خطأً معياريًا ولا فترة ثقة، لذلك يستخرجها هذا المورد من أوزان المسح نفسها: ففي عينة من 1,000 مستجيب، وبعدد أقل في كل فئة، يبلغ هامش الخطأ عند ثقة 95% نحو 2.2 نقطة على القيمة الخاصة بجميع البالغين، وبين 2.2 و3.9 نقطة على نسبة كل فئة، وبين 4.0 و4.6 نقطة على كل فرق من الفروق الأربعة. وتُعرض كل فترة مع قيمتها في سجل تلك القيمة. ولا يحمل الملف المتاح للباحثين معرّف وحدة المعاينة، لذلك لا تُحتسب آثار التجمّع العنقودي، وقد تكون الفترات الحقيقية أوسع لا أضيق.",
+      "source_object": "VIS-FINDEX-GAPS"
+    },
+    {
+      "route": "/people/",
+      "surface": "governed_numeric_inventory",
+      "field": "limitations_ar",
+      "token": "2.2",
+      "category": "GOVERNED_OBJECT_SOURCE_CLOSED",
+      "context": "هذه قيم من موجة مسحية واحدة، وليست سلسلة سنوية ولا معدلًا لعام 2026. ولا يمكن إسقاطها على المحافظات، ولا تُقارن بأعداد الحسابات التي يُبلغ عنها البنك المركزي اليمني – عدن، ولا تثبت الفروق بين الفئات أسبابها. | يستبعد إطار المسح مناطق يقطنها نحو 23% من السكان، كما استُبدل أكثر من ربع وحدات المعاينة الأولية. ولا ينشر البنك الدولي مع هذه القيم خطأً معياريًا ولا فترة ثقة، لذلك يستخرجها هذا المورد من أوزان المسح نفسها: ففي عينة من 1,000 مستجيب، وبعدد أقل في كل فئة، يبلغ هامش الخطأ عند ثقة 95% نحو 2.2 نقطة على القيمة الخاصة بجميع البالغين، وبين 2.2 و3.9 نقطة على نسبة كل فئة، وبين 4.0 و4.6 نقطة على كل فرق من الفروق الأربعة. وتُعرض كل فترة مع قيمتها في سجل تلك القيمة. ولا يحمل الملف المتاح للباحثين معرّف وحدة المعاينة، لذلك لا تُحتسب آثار التجمّع العنقودي، وقد تكون الفترات الحقيقية أوسع لا أضيق.",
+      "source_object": "VIS-FINDEX-GAPS"
+    },
+    {
+      "route": "/people/",
+      "surface": "governed_numeric_inventory",
+      "field": "limitations_ar",
+      "token": "9",
+      "category": "GOVERNED_OBJECT_SOURCE_CLOSED",
+      "context": "هذه قيم من موجة مسحية واحدة، وليست سلسلة سنوية ولا معدلًا لعام 2026. ولا يمكن إسقاطها على المحافظات، ولا تُقارن بأعداد الحسابات التي يُبلغ عنها البنك المركزي اليمني – عدن، ولا تثبت الفروق بين الفئات أسبابها. | يستبعد إطار المسح مناطق يقطنها نحو 23% من السكان، كما استُبدل أكثر من ربع وحدات المعاينة الأولية. ولا ينشر البنك الدولي مع هذه القيم خطأً معياريًا ولا فترة ثقة، لذلك يستخرجها هذا المورد من أوزان المسح نفسها: ففي عينة من 1,000 مستجيب، وبعدد أقل في كل فئة، يبلغ هامش الخطأ عند ثقة 95% نحو 2.2 نقطة على القيمة الخاصة بجميع البالغين، وبين 2.2 و3.9 نقطة على نسبة كل فئة، وبين 4.0 و4.6 نقطة على كل فرق من الفروق الأربعة. وتُعرض كل فترة مع قيمتها في سجل تلك القيمة. ولا يحمل الملف المتاح للباحثين معرّف وحدة المعاينة، لذلك لا تُحتسب آثار التجمّع العنقودي، وقد تكون الفترات الحقيقية أوسع لا أضيق.",
+      "source_object": "VIS-FINDEX-GAPS"
+    },
+    {
+      "route": "/people/",
+      "surface": "governed_numeric_inventory",
+      "field": "limitations_ar",
+      "token": "4.0",
+      "category": "GOVERNED_OBJECT_SOURCE_CLOSED",
+      "context": "هذه قيم من موجة مسحية واحدة، وليست سلسلة سنوية ولا معدلًا لعام 2026. ولا يمكن إسقاطها على المحافظات، ولا تُقارن بأعداد الحسابات التي يُبلغ عنها البنك المركزي اليمني – عدن، ولا تثبت الفروق بين الفئات أسبابها. | يستبعد إطار المسح مناطق يقطنها نحو 23% من السكان، كما استُبدل أكثر من ربع وحدات المعاينة الأولية. ولا ينشر البنك الدولي مع هذه القيم خطأً معياريًا ولا فترة ثقة، لذلك يستخرجها هذا المورد من أوزان المسح نفسها: ففي عينة من 1,000 مستجيب، وبعدد أقل في كل فئة، يبلغ هامش الخطأ عند ثقة 95% نحو 2.2 نقطة على القيمة الخاصة بجميع البالغين، وبين 2.2 و3.9 نقطة على نسبة كل فئة، وبين 4.0 و4.6 نقطة على كل فرق من الفروق الأربعة. وتُعرض كل فترة مع قيمتها في سجل تلك القيمة. ولا يحمل الملف المتاح للباحثين معرّف وحدة المعاينة، لذلك لا تُحتسب آثار التجمّع العنقودي، وقد تكون الفترات الحقيقية أوسع لا أضيق.",
+      "source_object": "VIS-FINDEX-GAPS"
+    },
+    {
+      "route": "/people/",
+      "surface": "governed_numeric_inventory",
+      "field": "limitations_ar",
+      "token": "6",
+      "category": "GOVERNED_OBJECT_SOURCE_CLOSED",
+      "context": "هذه قيم من موجة مسحية واحدة، وليست سلسلة سنوية ولا معدلًا لعام 2026. ولا يمكن إسقاطها على المحافظات، ولا تُقارن بأعداد الحسابات التي يُبلغ عنها البنك المركزي اليمني – عدن، ولا تثبت الفروق بين الفئات أسبابها. | يستبعد إطار المسح مناطق يقطنها نحو 23% من السكان، كما استُبدل أكثر من ربع وحدات المعاينة الأولية. ولا ينشر البنك الدولي مع هذه القيم خطأً معياريًا ولا فترة ثقة، لذلك يستخرجها هذا المورد من أوزان المسح نفسها: ففي عينة من 1,000 مستجيب، وبعدد أقل في كل فئة، يبلغ هامش الخطأ عند ثقة 95% نحو 2.2 نقطة على القيمة الخاصة بجميع البالغين، وبين 2.2 و3.9 نقطة على نسبة كل فئة، وبين 4.0 و4.6 نقطة على كل فرق من الفروق الأربعة. وتُعرض كل فترة مع قيمتها في سجل تلك القيمة. ولا يحمل الملف المتاح للباحثين معرّف وحدة المعاينة، لذلك لا تُحتسب آثار التجمّع العنقودي، وقد تكون الفترات الحقيقية أوسع لا أضيق.",
       "source_object": "VIS-FINDEX-GAPS"
     },
     {
