@@ -8,7 +8,7 @@
     "organising_question": "What does the evidence mean for financial inclusion in Yemen, and how do we know?"
   },
   "programme_state": {
-    "as_of": "2026-10-03",
+    "as_of": "2026-10-04",
     "r_programme": "R0–R8.3 CLOSED / PASS; R8.4 CLOSED / PASS including the Evidence Readings (F2); R8.5 CLOSED (F4, audit/R8_5_REPOSITORY_SUBTRACTION_CLOSURE.md); R8.6 CLOSED — DESIGN HANDOFF READY (F8 freeze, audit/R8_6_DESIGN_HANDOFF_FREEZE_CLOSURE.md; F9 clean-room acceptance, audit/FINAL_CLEAN_ROOM_ACCEPTANCE.md)",
     "tranches": "Tranche A CLOSED; Tranche B specification CLOSED; Tranche B execution CLOSED; Tranche C COMPLETE and accepted by OpenAI (26 Sep 2026, recipient verification 31/31); final integration F0–F9 CLOSED (R8.5 closed; whole public corpus accepted; discovery, accessibility, rights and security contract in place; sustainability baseline recorded; Design handoff frozen; clean-room accepted by three cold recipients)",
     "pre_tranche_c": "Sessions P1–P4 CLOSED and independently accepted with three narrow corrections; P5 corrections CLOSED",
@@ -16,14 +16,14 @@
     "not_declared": [
       "PUBLIC RELEASE READY"
     ],
-    "design_prompt_status": "DESIGN HANDOFF READY — executable; start path handoff/README_FIRST.md → handoff/CLAUDE_DESIGN_MASTER_PROMPT.md (tightened 27 Sep 2026 by the post-F9 correction and the design-enablement control pass); the Design package is accepted (owner's final D7 visual acceptance recorded 2 Oct 2026, audit/OWNER_DECISIONS_2026-10-02.md) and the production runtime is merged: pull request #8 (EAD-01 to EAD-11), merged into main at 38a9a97 on 2 October 2026, EAD states in FINAL_OPEN_ITEMS_REGISTER.md section 1; the release candidate is pull request #9 (branch code/release-candidate-fixes), not a public release",
+    "design_prompt_status": "DESIGN HANDOFF READY — executable; start path handoff/README_FIRST.md → handoff/CLAUDE_DESIGN_MASTER_PROMPT.md (tightened 27 Sep 2026 by the post-F9 correction and the design-enablement control pass); the Design package is accepted (owner's final D7 visual acceptance recorded 2 Oct 2026, audit/OWNER_DECISIONS_2026-10-02.md) and the production runtime is merged: pull request #8 (EAD-01 to EAD-11), merged into main at 38a9a97 on 2 October 2026, EAD states in FINAL_OPEN_ITEMS_REGISTER.md section 1; pull requests #9 and #10 are merged; the open content pass is pull request #11 (branch code/final-content), not a public release and not declared content-complete",
     "production_runtime": {
       "pull_request": 8,
       "title": "code: the production runtime — EAD-01 to EAD-11",
       "state": "MERGED",
       "merge_commit": "38a9a97",
       "merged_on": "2026-10-02",
-      "release_candidate": "pull request #9, branch code/release-candidate-fixes"
+      "release_candidate": "merged as pull request #9; open content pass is pull request #11, not a release"
     },
     "checkpoint": "OPENAI_REENTRY_CHECKPOINT.md",
     "tranche_c": {

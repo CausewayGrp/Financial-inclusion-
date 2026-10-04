@@ -1,5 +1,12 @@
 # Repository Change Log
 
+## 2026-10-04 — B3 decision, Batch C held, Batch D records
+
+- **B3.** The 24 chronology events are not search results. They have no event route and no search-eligibility field. Search stays evidence, measurement and source.
+- **Batch C.** C1 (typed difference block), C2 (dedicated guarantee record) and C3 (public contradiction register) stay unbuilt. Each needs a new surface. The existing public forms stand.
+- **Batch D.** Programme records no longer call pull request #9 the current release candidate. Pull requests #9 and #10 are merged. The open content pass is pull request #11. Not declared: content complete, or public release ready.
+
+
 ## 2026-10-04 — FC-2, FC-3, FC-3b: source locators; a false "no later value" claim removed
 
 Master `2713c086b7f9…` → `1fa11bad82ed…` (FC-2) → `439fdce82563…` (FC-3) →

@@ -132,3 +132,28 @@ undone.
 | # | Finding | Disposition |
 |---|---|---|
 | FC-A-04 | The World Bank's 2014 value for borrowing any money is 65.982360 in its current database (66.0 at one decimal) but 65.9 on its own printed 2014 country page. Both are the publisher's; they disagree. | Each record keeps the value from the source it was read in, and no difference between the two vintages is computed. Recorded, not repaired. |
+
+
+## Batch B — tools
+
+B1 and B2 landed on `code/final-content` after Batch A. B1 gives the Used on filter the Not recorded option its sibling filters already had, so the 44 sources with no domain use are reachable. B2 loads a single valid Compare entry into the first slot; a verdict still needs two records.
+
+### B3 · chronology in search
+
+Decision: the 24 chronology events do not become standalone search results.
+
+They have no event route, no publication or search-eligibility field, and `linked_routes` are domain pages, not event destinations. Search admits evidence, measurement and source records only. A chronology hit would need a new result type and a destination this pass does not have. The events stay in `system_chronology.json` and on the pages that already cite them. No search template, index or route was added.
+
+## Batch C — the three steward-contract items
+
+C1, C2 and C3 are the three items Edition 2 recorded as needing a steward contract. None is built in this pass. Each needs a new surface, and this pass does not open one.
+
+| Item | What it is | Why it stays unbuilt |
+|---|---|---|
+| C1 | A typed difference block (revision, non-comparability, method break, universe, unresolved conflict) | Needs a new presentation tier and a Master relation table. The E2-4 paragraphs remain the public form. |
+| C2 | A dedicated guarantee record | Needs a navigation-contract route. CLM-059 remains the public home of the volumes. |
+| C3 | A public contradiction register | Needs a methodology tier. The register stays in `audit/edition_2/CONTRADICTION_REGISTER.md`. |
+
+## Batch D — records agree
+
+Programme records that still named pull request #9 as the current release candidate are corrected to the merged history: #9 and #10 are on `main`; the open content pass is pull request #11. This does not declare the content pass complete, and it does not declare public release readiness. The home-page pilot is not in this commit.
