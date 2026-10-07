@@ -446,7 +446,9 @@ def t_share_record(page, base):
         page.evaluate("navigator.clipboard.writeText('')")
         page.click("[data-share]")
         page.wait_for_function("navigator.clipboard.readText().then(t=>t.length>0)")
-        text = page.evaluate("navigator.clipboard.readText()")
+        # The Windows clipboard serializes line breaks as CRLF. Preserve every
+        # character except that native newline encoding; do not collapse whitespace.
+        text = page.evaluate("navigator.clipboard.readText()").replace("\r\n", "\n")
         assert want and text.startswith(want.strip()), (want[:60], text[:80])
         assert f"/{lang}/evidence/CLM-002/" in text, text
 

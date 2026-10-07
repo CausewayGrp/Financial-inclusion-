@@ -53,6 +53,9 @@ jobs:
       - name: Generator unit tests
         run: python3 -m unittest discover -s scripts/projection/tests -t .
 
+      - name: Windows and POSIX path identities, deterministic writers, strict parity policy
+        run: python3 scripts/tests/test_windows_portability.py
+
       - name: Rebuild the public site and the public-literal closure
         run: |
           python3 scripts/build.py

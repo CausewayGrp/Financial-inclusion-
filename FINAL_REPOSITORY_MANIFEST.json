@@ -25,7 +25,7 @@
   "AUTHORITY_MASTER": 1,
   "AUTHORITY_POINTER": 2,
   "AUTHORITY_RULES": 1,
-  "BUILD_AND_GATES": 41,
+  "BUILD_AND_GATES": 43,
   "CONTROLLED_CONTRACT": 2,
   "CURRENT_DOCUMENT": 13,
   "CURRENT_PROGRAMME_RECORD": 156,
@@ -41,7 +41,7 @@
   "PROJECTION_CONTRACT": 11,
   "PROJECTION_GENERATOR": 13,
   "RECIPIENT_HANDOFF": 11,
-  "REPOSITORY_ENGINEERING": 10,
+  "REPOSITORY_ENGINEERING": 11,
   "RUNTIME_SOURCE": 7,
   "STANDING_POLICY": 5,
   "VENDORED_FONTS": 27
@@ -6348,6 +6348,10 @@
    "class": "RECIPIENT_HANDOFF"
   },
   {
+   "path": "package-lock.json",
+   "class": "REPOSITORY_ENGINEERING"
+  },
+  {
    "path": "package.json",
    "class": "REPOSITORY_ENGINEERING"
   },
@@ -6596,7 +6600,15 @@
    "class": "BUILD_AND_GATES"
   },
   {
+   "path": "scripts/tests/test_release_parity.py",
+   "class": "BUILD_AND_GATES"
+  },
+  {
    "path": "scripts/tests/test_security_headers.py",
+   "class": "BUILD_AND_GATES"
+  },
+  {
+   "path": "scripts/tests/test_windows_portability.py",
    "class": "BUILD_AND_GATES"
   },
   {

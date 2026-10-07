@@ -105,7 +105,7 @@ def generate() -> int:
     with tempfile.TemporaryDirectory(prefix="yfie-social-") as tmp:
         stage = Path(tmp)
         (stage / "assets").mkdir()
-        (stage / "assets" / "yfie.css").write_text(theme.FONT_FACES + "\n" + theme.CSS + "\n" + theme.CSS_D2 + "\n" + theme.CSS_D6, encoding="utf-8")
+        (stage / "assets" / "yfie.css").write_text(theme.FONT_FACES + "\n" + theme.CSS + "\n" + theme.CSS_D2 + "\n" + theme.CSS_D6, encoding="utf-8", newline="\n")
         shutil.copy2(ROOT / "site-src/assets/CauseWay_Master_Logo.png", stage / "assets/CauseWay_Master_Logo.png")
         import build as B   # the one list of the faces the stylesheet declares
         for folder, names in B.FONT_FILES.items():
@@ -113,7 +113,7 @@ def generate() -> int:
             for name in names:
                 shutil.copy2(ROOT / "vendor/fonts" / folder / name, stage / "assets/fonts" / folder / name)
         for key, html in built.items():
-            (stage / f"{key}.html").write_text(html, encoding="utf-8")
+            (stage / f"{key}.html").write_text(html, encoding="utf-8", newline="\n")
 
         httpd, port = serve(stage)
         if OUT.exists():
@@ -143,7 +143,7 @@ def generate() -> int:
         "width": WIDTH, "height": HEIGHT,
         "images": {k: {"frame_sha256": hashlib.sha256(v.encode("utf-8")).hexdigest()} for k, v in sorted(built.items())},
     }
-    INDEX.write_text(json.dumps(index, ensure_ascii=False, indent=1, sort_keys=True) + "\n", encoding="utf-8")
+    INDEX.write_text(json.dumps(index, ensure_ascii=False, indent=1, sort_keys=True) + "\n", encoding="utf-8", newline="\n")
     total = sum(p.stat().st_size for p in OUT.glob("*.png"))
     print(f"SOCIAL IMAGES WRITTEN: {len(built)} PNG ({total / 1024 / 1024:.1f} MB) in {OUT.relative_to(ROOT)}")
     return 0

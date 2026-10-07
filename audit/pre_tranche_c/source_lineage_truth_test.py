@@ -107,7 +107,7 @@ def main():
                        ("closure_state_counts_by_object_type", {k: dict(v) for k, v in by_type.items()}),
                        ("records_not_closed_to_source", open_records), ("assertions", asserts),
                        ("historical_baseline", "audit/tranche_b_execution/SOURCE_LINEAGE_TRUTH_TEST.json (Tranche B; not rewritten)")])
-    with open(OUT, "w", encoding="utf-8") as fh:
+    with open(OUT, "w", encoding="utf-8", newline="\n") as fh:
         json.dump(rep, fh, ensure_ascii=False, indent=1)
         fh.write("\n")
     for a in asserts:

@@ -17,7 +17,7 @@ def load(p):
     return json.load(open(p,encoding='utf-8'))
 
 def dump(p,obj):
-    p.write_text(json.dumps(obj,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
+    p.write_text(json.dumps(obj,ensure_ascii=False,indent=2)+'\n',encoding="utf-8", newline="\n")
 
 auth=load(ROOT/'authority/AUTHORITY.json')
 master_path=ROOT/auth['production_master']['path'] if not str(auth['production_master']['path']).startswith('authority/') else ROOT/auth['production_master']['path']

@@ -59,7 +59,7 @@ def load_master() -> tuple[Image.Image, str]:
 def write() -> int:
     master, master_sha = load_master()
     OUT.mkdir(parents=True, exist_ok=True)
-    index = {"master": {"path": str(MASTER.relative_to(ROOT)), "sha256": master_sha, "size_px": master.size[0]},
+    index = {"master": {"path": MASTER.relative_to(ROOT).as_posix(), "sha256": master_sha, "size_px": master.size[0]},
              "method": "Pillow LANCZOS resample of the whole RGBA master to a square; PNG, optimize=True; nothing else",
              "rule": "scripts/logo_derivatives.py --check compares each derivative's decoded pixels with a fresh resample",
              "derivatives": []}
@@ -67,7 +67,7 @@ def write() -> int:
         b = png_bytes(resample(master, px))
         (OUT / name(px)).write_bytes(b)
         index["derivatives"].append({"file": name(px), "px": px, "bytes": len(b), "sha256": sha(b)})
-    (OUT / "INDEX.json").write_text(json.dumps(index, indent=1, ensure_ascii=False) + "\n", encoding="utf-8")
+    (OUT / "INDEX.json").write_text(json.dumps(index, indent=1, ensure_ascii=False) + "\n", encoding="utf-8", newline="\n")
     print(f"LOGO DERIVATIVES WRITTEN: {len(SIZES)} sizes ({', '.join(map(str, SIZES))} px), "
           f"{sum(d['bytes'] for d in index['derivatives']):,} bytes in all; master unchanged ({master_sha[:12]})")
     return 0

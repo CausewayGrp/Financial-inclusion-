@@ -45,7 +45,7 @@ def json_block(id_: str, data) -> str:
 # ------------------------------------------------------------------------------------------------ build hook
 def assets(out: Path, variant: str = "") -> None:
     """Write the stylesheet. Fonts and the logo are copied unchanged by the build."""
-    (out / "assets" / "yfie.css").write_text(theme.FONT_FACES + "\n" + theme.CSS + "\n" + theme.CSS_D2 + "\n" + theme.CSS_D6, encoding="utf-8")
+    (out / "assets" / "yfie.css").write_text(theme.FONT_FACES + "\n" + theme.CSS + "\n" + theme.CSS_D2 + "\n" + theme.CSS_D6, encoding="utf-8", newline="\n")
 
 
 # ------------------------------------------------------------------------------------------------ shell
@@ -510,16 +510,16 @@ def render_site_files(out: Path, content) -> int:
     """The neutral root entry, the bilingual 404 and the discovery files (F6: one implementation in scripts/discovery.py)."""
     from . import families
     origin = DISC.origin()
-    (out / "index.html").write_text(isolate_document(families.root_page(content.shell("ar", "/"), content.shell("en", "/"))), encoding="utf-8")
-    (out / "404.html").write_text(isolate_document(families.not_found(content.not_found(), content.shell("ar", "/"))), encoding="utf-8")
+    (out / "index.html").write_text(isolate_document(families.root_page(content.shell("ar", "/"), content.shell("en", "/"))), encoding="utf-8", newline="\n")
+    (out / "404.html").write_text(isolate_document(families.not_found(content.not_found(), content.shell("ar", "/"))), encoding="utf-8", newline="\n")
     for r in moved_routes():
         for lang in ("ar", "en"):
             dest = out / lang / r["from"].strip("/") / "index.html"
             dest.parent.mkdir(parents=True, exist_ok=True)
-            dest.write_text(isolate_document(moved_page(content, lang, r)), encoding="utf-8")
-    (out / "robots.txt").write_text(DISC.robots_txt(origin), encoding="utf-8")
+            dest.write_text(isolate_document(moved_page(content, lang, r)), encoding="utf-8", newline="\n")
+    (out / "robots.txt").write_text(DISC.robots_txt(origin), encoding="utf-8", newline="\n")
     if origin:
-        (out / "sitemap.xml").write_text(DISC.sitemap_xml(content.routes(), origin), encoding="utf-8")
+        (out / "sitemap.xml").write_text(DISC.sitemap_xml(content.routes(), origin), encoding="utf-8", newline="\n")
     return 2 + 2 * len(moved_routes())
 
 

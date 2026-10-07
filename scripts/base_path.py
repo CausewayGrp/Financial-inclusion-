@@ -157,6 +157,6 @@ def relocate(out: Path, base: str) -> int:
         old = f.read_text(encoding="utf-8")
         new = fn(old)
         if new != old:
-            f.write_text(new, encoding="utf-8")
+            f.write_text(new, encoding="utf-8", newline="\n")
             changed += 1
     return changed
