@@ -87,9 +87,16 @@ def t_lang(page, base):
     assert records_param(page) == ",".join(s), "Arabic page did not keep the same URL state"
 
 
-@test("compare: wrong ID count is a technical input error, not a verdict")
+@test("compare: one valid reader record loads, and five IDs stay a count error")
 def t_count(page, base):
     page.goto(base + "/en/evidence/compare/?records=CLM-001")
+    assert page.query_selector("[data-compare-url-error]") is None
+    assert page.evaluate("document.querySelector('#compare-a').value") == "CLM-001"
+    assert verdict(page) is None
+    page.goto(base + "/ar/evidence/compare/?records=CLM-001")
+    assert page.query_selector("[data-compare-url-error]") is None
+    assert page.evaluate("document.querySelector('#compare-a').value") == "CLM-001"
+    page.goto(base + "/en/evidence/compare/?records=CLM-001,CLM-054,CLM-010,CLM-041,CLM-042")
     el = page.query_selector("[data-compare-url-error]")
     assert el and el.get_attribute("data-compare-url-error") == "count" and el.get_attribute("role") == "alert"
     assert verdict(page) is None
@@ -535,7 +542,7 @@ def t_keyboard_walk(page, base):
 
 @test("a11y: technical-error and status regions are announced (role/aria-live)")
 def t_announce(page, base):
-    page.goto(base + "/en/evidence/compare/?records=CLM-001")
+    page.goto(base + "/en/evidence/compare/?records=CLM-001,CLM-054,CLM-010,CLM-041,CLM-042")
     assert page.get_attribute("[data-compare-url-error]", "role") == "alert"
     page.goto(base + "/en/evidence/")
     assert page.evaluate("document.querySelector('#search-results').getAttribute('aria-live')") == "polite"

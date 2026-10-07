@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 300" role="img" aria-labelledby="t d">
+  <title id="t">Public path</title>
+  <desc id="d">Understand, explore, then verify. Current governed surfaces only. Search and Compare do not invent a result the records do not already hold.</desc>
+  <style>
+    text { font-family: "IBM Plex Sans", "Segoe UI", sans-serif; fill: #1c242b; }
+    .h { font-size: 14px; font-weight: 600; }
+    .s { font-size: 12px; fill: #3d4a54; }
+    .k { font-size: 11px; letter-spacing: .08em; fill: #5c6b76; }
+  </style>
+  <rect width="880" height="300" fill="#f7f5f1"/>
+  <text class="k" x="36" y="36">UNDERSTAND</text>
+  <text class="k" x="330" y="36">EXPLORE</text>
+  <text class="k" x="624" y="36">VERIFY</text>
+  <rect x="36" y="52" width="250" height="100" fill="#fff" stroke="#1c242b"/>
+  <text class="h" x="52" y="84">Home</text>
+  <text class="s" x="52" y="108">A question, then the strongest</text>
+  <text class="s" x="52" y="126">answer the evidence supports.</text>
+  <rect x="330" y="52" width="250" height="100" fill="#fff" stroke="#1c242b"/>
+  <text class="h" x="346" y="84">Explore</text>
+  <text class="s" x="346" y="108">People, firms, finance, providers,</text>
+  <text class="s" x="346" y="126">payments, reforms.</text>
+  <rect x="624" y="52" width="220" height="100" fill="#fff" stroke="#1c242b"/>
+  <text class="h" x="640" y="84">Evidence and sources</text>
+  <text class="s" x="640" y="108">Record, reading, data,</text>
+  <text class="s" x="640" y="126">method, original publisher.</text>
+  <path d="M286 102 H330" stroke="#1c242b" fill="none"/>
+  <path d="M580 102 H624" stroke="#1c242b" fill="none"/>
+  <text class="s" x="36" y="190">Also governed: Evidence Readings · Methodology · Measurement Agenda · Search · Compare · About · Corrections · Rights.</text>
+  <text class="s" x="36" y="218">Compare refuses a pair that is not comparable. Search returns evidence, measurement and source records only.</text>
+  <text class="s" x="36" y="246">Chronology stays on the pages that cite it. It is not a search family.</text>
+  <text class="s" x="36" y="274">Missing is not zero. Disagreement is not automatically an error.</text>
+</svg>

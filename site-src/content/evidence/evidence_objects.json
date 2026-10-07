@@ -2473,10 +2473,10 @@
     "period_ar": "موجة Findex 2021 (جولة المسح)؛ العمل الميداني في اليمن من 2022-11-07 إلى 2023-01-09",
     "universe_en": "Adults 15+ in survey coverage",
     "universe_ar": "الأشخاص بعمر 15 سنة فأكثر ضمن التغطية التي شملها المسح.",
-    "method_en": "Calculated by this resource as the difference between two weighted estimates published by the World Bank for the same wave: men 18.3% minus women 5.4% (World Bank series FX.OWN.TOTL.MA.ZS minus FX.OWN.TOTL.FE.ZS, data year 2022).",
-    "method_ar": "احتسبه هذا المورد بوصفه الفارق بين تقديرين موزونين نشرهما البنك الدولي للموجة نفسها: 18.3% للرجال ناقص 5.4% للنساء (سلسلة البنك الدولي FX.OWN.TOTL.MA.ZS ناقص FX.OWN.TOTL.FE.ZS، سنة البيانات 2022).",
-    "limitations_en": "It does not establish why the gap exists, and it is not the gender gap in 2026. | The survey frame excludes areas holding about 23% of the population, and more than a quarter of primary sampling units were replaced. No standard errors or confidence intervals are published with these values; the Yemen sample is 1,000 respondents, so subgroup values and the gap carry sampling uncertainty that is not quantified here.",
-    "limitations_ar": "لا يثبت هذا الدليل سبب الفجوة بين الرجال والنساء، ولا يمثل الفجوة القائمة في عام 2026. | يستبعد إطار المسح مناطق يقطنها نحو 23% من السكان، كما استُبدل أكثر من ربع وحدات المعاينة الأولية. ولا تُنشر مع هذه القيم أخطاء معيارية أو فترات ثقة؛ وتبلغ عينة اليمن 1,000 مستجيب، لذلك تنطوي قيم الفئات الفرعية والفجوة بينها على عدم يقين ناتج عن المعاينة لا يُقدَّر كميًا هنا.",
+    "method_en": "Calculated by this resource as the difference between two weighted estimates published by the World Bank for the same wave: men 18.3% minus women 5.4% (World Bank series FX.OWN.TOTL.MA.ZS minus FX.OWN.TOTL.FE.ZS, data year 2022). The 95% intervals shown with these values are derived by this resource from the survey's own weights (a design-based interval for a weighted share), not published by the World Bank.",
+    "method_ar": "احتسبه هذا المورد بوصفه الفارق بين تقديرين موزونين نشرهما البنك الدولي للموجة نفسها: 18.3% للرجال ناقص 5.4% للنساء (سلسلة البنك الدولي FX.OWN.TOTL.MA.ZS ناقص FX.OWN.TOTL.FE.ZS، سنة البيانات 2022). وفترات الثقة 95% المعروضة مع هذه القيم يستخرجها هذا المورد من أوزان المسح نفسها (فترة قائمة على تصميم المسح لنسبة موزونة)، ولم ينشرها البنك الدولي.",
+    "limitations_en": "It does not establish why the gap exists, and it is not the gender gap in 2026. | The survey frame excludes areas holding about 23% of the population, and more than a quarter of primary sampling units were replaced. The World Bank publishes no standard error or confidence interval with these values, so this resource derives them from the survey's own weights: on a sample of 1,000 respondents the 95% interval runs from 3.2% to 7.7% for women and from 14.6% to 22.1% for men, and from 8.5 to 17.3 points for the gap. The file open to researchers carries no sampling-unit identifier, so clustering is not captured and the true intervals may be wider, never narrower.",
+    "limitations_ar": "لا يثبت هذا الدليل سبب الفجوة بين الرجال والنساء، ولا يمثل الفجوة القائمة في عام 2026. | يستبعد إطار المسح مناطق يقطنها نحو 23% من السكان، كما استُبدل أكثر من ربع وحدات المعاينة الأولية. ولا ينشر البنك الدولي مع هذه القيم خطأً معياريًا ولا فترة ثقة، لذلك يستخرجها هذا المورد من أوزان المسح نفسها: ففي عينة من 1,000 مستجيب تمتد فترة الثقة 95% من 3.2% إلى 7.7% للنساء، ومن 14.6% إلى 22.1% للرجال، ومن 8.5 إلى 17.3 نقطة للفجوة. ولا يحمل الملف المتاح للباحثين معرّف وحدة المعاينة، لذلك لا تُحتسب آثار التجمّع العنقودي، وقد تكون الفترات الحقيقية أوسع لا أضيق.",
     "currentness_en": "The gap refers to the 2021 Findex wave, with Yemen fieldwork from 7 November 2022 to 9 January 2023; the Global Findex 2025 edition adds no newer Yemen observation. It should not be read as describing a later period unless a newer comparable observation is published.",
     "currentness_ar": "تعود هذه الفجوة إلى موجة 2021 من مسح Findex، التي نُفذ عملها الميداني في اليمن من 7 نوفمبر 2022 إلى 9 يناير 2023، ولا تضيف نسخة Global Findex 2025 مشاهدة أحدث لليمن. ولا تُقرأ على أنها تصف فترة لاحقة ما لم تُنشر مشاهدة أحدث قابلة للمقارنة.",
     "change_trigger_en": "This record is updated when an authoritative source is revised or replaced, a newer comparable observation becomes available, the definition, population or method changes, or the conditions for public use change.",
@@ -2603,6 +2603,53 @@
         "s": "READ",
         "src": "SRC-WB-FINDEX-001",
         "loc": "microdata.worldbank.org/index.php/catalog/5862/study-description > Data collection > Dates of Data Collection: End 2023-01-09"
+      },
+      {
+        "t": "3.2%",
+        "k": "v",
+        "s": "DERIVED",
+        "src": "SRC-WB-FINDEX-001",
+        "loc": "CauseWay derivation FC-1 from micro_yem.dta (YEM_2022_FINDEX_v01_M, 334,544 bytes), held under the World Bank Microdata Research License and never redistributed; Hajek ratio estimator with Taylor-linearization variance on the survey weight wgt; the method, the point estimate, the interval, the base and the design effect of every figure are recorded in 25_FINDEX_BASELINE rows CW-FINDEX-MOE-2022-*"
+      },
+      {
+        "t": "7.7%",
+        "k": "v",
+        "s": "DERIVED",
+        "src": "SRC-WB-FINDEX-001",
+        "loc": "CauseWay derivation FC-1 from micro_yem.dta (YEM_2022_FINDEX_v01_M, 334,544 bytes), held under the World Bank Microdata Research License and never redistributed; Hajek ratio estimator with Taylor-linearization variance on the survey weight wgt; the method, the point estimate, the interval, the base and the design effect of every figure are recorded in 25_FINDEX_BASELINE rows CW-FINDEX-MOE-2022-*"
+      },
+      {
+        "t": "14.6%",
+        "k": "v",
+        "s": "DERIVED",
+        "src": "SRC-WB-FINDEX-001",
+        "loc": "CauseWay derivation FC-1 from micro_yem.dta (YEM_2022_FINDEX_v01_M, 334,544 bytes), held under the World Bank Microdata Research License and never redistributed; Hajek ratio estimator with Taylor-linearization variance on the survey weight wgt; the method, the point estimate, the interval, the base and the design effect of every figure are recorded in 25_FINDEX_BASELINE rows CW-FINDEX-MOE-2022-*"
+      },
+      {
+        "t": "22.1%",
+        "k": "v",
+        "s": "DERIVED",
+        "src": "SRC-WB-FINDEX-001",
+        "loc": "CauseWay derivation FC-1 from micro_yem.dta (YEM_2022_FINDEX_v01_M, 334,544 bytes), held under the World Bank Microdata Research License and never redistributed; Hajek ratio estimator with Taylor-linearization variance on the survey weight wgt; the method, the point estimate, the interval, the base and the design effect of every figure are recorded in 25_FINDEX_BASELINE rows CW-FINDEX-MOE-2022-*"
+      },
+      {
+        "t": "8.5",
+        "k": "v",
+        "s": "DERIVED",
+        "src": "SRC-WB-FINDEX-001",
+        "loc": "CauseWay derivation FC-1 from micro_yem.dta (YEM_2022_FINDEX_v01_M, 334,544 bytes), held under the World Bank Microdata Research License and never redistributed; Hajek ratio estimator with Taylor-linearization variance on the survey weight wgt; the method, the point estimate, the interval, the base and the design effect of every figure are recorded in 25_FINDEX_BASELINE rows CW-FINDEX-MOE-2022-*"
+      },
+      {
+        "t": "17.3",
+        "k": "v",
+        "s": "DERIVED",
+        "src": "SRC-WB-FINDEX-001",
+        "loc": "CauseWay derivation FC-1 from micro_yem.dta (YEM_2022_FINDEX_v01_M, 334,544 bytes), held under the World Bank Microdata Research License and never redistributed; Hajek ratio estimator with Taylor-linearization variance on the survey weight wgt; the method, the point estimate, the interval, the base and the design effect of every figure are recorded in 25_FINDEX_BASELINE rows CW-FINDEX-MOE-2022-*"
+      },
+      {
+        "t": "95%",
+        "k": "v",
+        "s": "SITE"
       }
     ],
     "public_route_list": [
@@ -2611,8 +2658,8 @@
     ],
     "does_not_establish_en": "It does not establish why the gap exists, and it is not the gender gap in 2026.",
     "does_not_establish_ar": "لا يثبت هذا الدليل سبب الفجوة بين الرجال والنساء، ولا يمثل الفجوة القائمة في عام 2026.",
-    "measurement_limitation_en": "The survey frame excludes areas holding about 23% of the population, and more than a quarter of primary sampling units were replaced. No standard errors or confidence intervals are published with these values; the Yemen sample is 1,000 respondents, so subgroup values and the gap carry sampling uncertainty that is not quantified here.",
-    "measurement_limitation_ar": "يستبعد إطار المسح مناطق يقطنها نحو 23% من السكان، كما استُبدل أكثر من ربع وحدات المعاينة الأولية. ولا تُنشر مع هذه القيم أخطاء معيارية أو فترات ثقة؛ وتبلغ عينة اليمن 1,000 مستجيب، لذلك تنطوي قيم الفئات الفرعية والفجوة بينها على عدم يقين ناتج عن المعاينة لا يُقدَّر كميًا هنا."
+    "measurement_limitation_en": "The survey frame excludes areas holding about 23% of the population, and more than a quarter of primary sampling units were replaced. The World Bank publishes no standard error or confidence interval with these values, so this resource derives them from the survey's own weights: on a sample of 1,000 respondents the 95% interval runs from 3.2% to 7.7% for women and from 14.6% to 22.1% for men, and from 8.5 to 17.3 points for the gap. The file open to researchers carries no sampling-unit identifier, so clustering is not captured and the true intervals may be wider, never narrower.",
+    "measurement_limitation_ar": "يستبعد إطار المسح مناطق يقطنها نحو 23% من السكان، كما استُبدل أكثر من ربع وحدات المعاينة الأولية. ولا ينشر البنك الدولي مع هذه القيم خطأً معياريًا ولا فترة ثقة، لذلك يستخرجها هذا المورد من أوزان المسح نفسها: ففي عينة من 1,000 مستجيب تمتد فترة الثقة 95% من 3.2% إلى 7.7% للنساء، ومن 14.6% إلى 22.1% للرجال، ومن 8.5 إلى 17.3 نقطة للفجوة. ولا يحمل الملف المتاح للباحثين معرّف وحدة المعاينة، لذلك لا تُحتسب آثار التجمّع العنقودي، وقد تكون الفترات الحقيقية أوسع لا أضيق."
   },
   {
     "object_id": "CLM-007",
@@ -3663,20 +3710,20 @@
     ],
     "title_en": "Demand-side measures defined; custom estimates not yet published",
     "title_ar": "مقاييس جانب الطلب محددة، والتقديرات المخصصة لم تُنشر بعد",
-    "summary_en": "A 32-metric demand-side panel has been specified across access, barriers, digital use, saving, borrowing, resilience, remittances, income flows, financial worry and connectivity. Custom weighted estimates are not published yet because they require authorized respondent-level data, correct survey weights and successful reproduction of the official benchmark values.",
-    "summary_ar": "حُدِّدت مجموعة من 32 مقياسًا لجانب الطلب تغطي الوصول والعوائق والاستخدام الرقمي والادخار والاقتراض والقدرة على الصمود والحوالات وتدفقات الدخل والقلق المالي والاتصال. ولم تُنشر التقديرات الموزونة المخصصة بعد، لأنها تتطلب بيانات على مستوى المستجيبين مصرحًا باستخدامها، وأوزان المسح الصحيحة، وإعادة إنتاج القيم المرجعية الرسمية بنجاح.",
-    "definition_en": "This record describes a set of 32 defined people-side measures for the Yemen Findex 2021 study whose weighted estimates have not yet been produced; it reports no value.",
-    "definition_ar": "يصف هذا السجل مجموعة من 32 مقياسًا محددًا على جانب الأفراد لدراسة Findex 2021 الخاصة باليمن، لم تُنتج بعد تقديراتها الموزونة، ولا يعرض أي قيمة.",
+    "summary_en": "A 32-metric demand-side panel has been specified across access, barriers, digital use, saving, borrowing, resilience, remittances, income flows, financial worry and connectivity. Three of its measures now have published values for the 2021 wave, each reproduced from the respondent file: 21.6% of adults saved any money in the past year, 51.3% borrowed any money, and 9.3% made or received a digital payment. The other measures remain unpublished: a published value to reproduce is what they lack, not access to the data.",
+    "summary_ar": "حُدِّدت مجموعة من 32 مقياسًا لجانب الطلب تغطي الوصول والعوائق والاستخدام الرقمي والادخار والاقتراض والقدرة على الصمود والحوالات وتدفقات الدخل والقلق المالي والاتصال. وأصبحت لـسـتة من مقاييسها — بل لـثلاثة منها — قيم منشورة لموجة 2021، أُعيد احتساب كل منها من ملف المستجيبين: فقد ادخر 21.6% من البالغين أي مبلغ خلال السنة الماضية، واقترض 51.3% أي مبلغ، وأجرى 9.3% مدفوعة رقمية أو تلقاها. وتبقى المقاييس الأخرى غير منشورة: فما ينقصها قيمة منشورة يُعاد احتسابها، لا الوصول إلى البيانات.",
+    "definition_en": "This record describes a set of 32 defined people-side measures for the Yemen Findex 2021 study, and carries the three of them that have a published value for the wave: saving any money in the past year, borrowing any money in the past year, and making or receiving a digital payment, each as a share of adults aged 15 and over in the areas the survey covered.",
+    "definition_ar": "يصف هذا السجل مجموعة من 32 مقياسًا محددًا على جانب الأفراد لدراسة Findex 2021 الخاصة باليمن، ويحمل الثلاثة منها التي لها قيمة منشورة للموجة: ادخار أي مبلغ خلال السنة الماضية، واقتراض أي مبلغ خلالها، وإجراء مدفوعة رقمية أو تلقيها، وكل منها نسبة من البالغين بعمر 15 سنة فأكثر في المناطق التي شملها المسح.",
     "period_en": "Current demand-side specification for the Yemen Findex 2021 study; custom weighted estimates are not yet public.",
     "period_ar": "المواصفة الحالية لمقاييس جانب الطلب في دراسة اليمن ضمن Findex 2021؛ ولم تُنشر بعد التقديرات الموزونة المخصصة.",
     "universe_en": "A pre-specified 32-metric panel to be estimated from authorized respondent-level data using the survey weights; metric definitions exist, while the custom estimates still require computation and validation.",
     "universe_ar": "مجموعة محددة مسبقًا من 32 مقياسًا تُقدَّر من بيانات المستجيبين المصرح باستخدامها وبأوزان المسح؛ التعريفات جاهزة، بينما ما تزال التقديرات المخصصة تحتاج إلى الاحتساب والتحقق.",
-    "method_en": "The variables, definitions and derivations were specified in advance. Numeric estimates are published only after authorized respondent-level data are available, the correct survey weights are applied and the official benchmark values are reproduced.",
-    "method_ar": "تُحدد المتغيرات والتعريفات وطريقة الاحتساب مسبقًا. ولا تُنشر التقديرات الرقمية إلا بعد توفر بيانات المستجيبين المصرح باستخدامها، وتطبيق أوزان المسح الصحيحة، وإعادة إنتاج القيم المرجعية الرسمية.",
-    "limitations_en": "The 32 specified measures are planned, not measured: none is yet a published indicator, because the weighted estimates have not been reproduced and checked against official benchmarks.",
-    "limitations_ar": "المقاييس المحددة، وعددها 32 مقياسًا، مخططة وليست مقاسة: فلا يمثل أي منها مؤشرًا منشورًا بعد، لأن تقديراتها الموزونة لم يُعَد إنتاجها ولم يُتحقق منها مقابل القيم المرجعية الرسمية.",
-    "currentness_en": "The panel specification applies to the Yemen Findex 2021 study. Numeric estimates remain unpublished until the weighted calculations are reproduced and validated; a newer wave would require an updated panel.",
-    "currentness_ar": "تنطبق مواصفة هذه المجموعة على دراسة اليمن ضمن Findex 2021. وتبقى التقديرات الرقمية غير منشورة حتى تُعاد الحسابات الموزونة ويُتحقق منها؛ وتحتاج أي موجة أحدث إلى تحديث مجموعة المقاييس.",
+    "method_en": "The variables, definitions and derivations were specified in advance, and a numeric estimate is published only after authorized respondent-level data are available, the correct survey weights are applied and the official benchmark values are reproduced. For these three measures all three conditions are met: the respondent file was supplied under the World Bank Microdata Research License, the published survey weight was used, and each measure's weighted estimate reproduces the World Bank's own published value for Yemen in 2022. The 95% interval beside each is derived by this resource from the same weights (18.4% to 24.9% for saving, 47.1% to 55.5% for borrowing, 7.4% to 11.3% for digital payments); the World Bank publishes none.",
+    "method_ar": "تُحدد المتغيرات والتعريفات وطريقة الاحتساب مسبقًا، ولا يُنشر تقدير رقمي إلا بعد توفر بيانات المستجيبين المصرح باستخدامها، وتطبيق أوزان المسح الصحيحة، وإعادة إنتاج القيم المرجعية الرسمية. ولهذه المقاييس الثلاثة استوفيت الشروط الثلاثة: فقد أُتيح ملف المستجيبين بموجب رخصة البحث للبيانات الجزئية لدى البنك الدولي، واستُخدم وزن المسح المنشور، ويعيد التقدير الموزون لكل مقياس إنتاج القيمة التي نشرها البنك الدولي نفسه لليمن في 2022. وفترة الثقة 95% بجانب كل قيمة يستخرجها هذا المورد من الأوزان نفسها (من 18.4% إلى 24.9% للادخار، ومن 47.1% إلى 55.5% للاقتراض، ومن 7.4% إلى 11.3% للمدفوعات الرقمية)؛ ولا ينشر البنك الدولي أي منها.",
+    "limitations_en": "Twenty-nine of the 32 specified measures are planned, not measured: none of them is a published indicator, because there is no published value for this wave to reproduce a weighted estimate against. | The three that are published are shares of all adults in the areas the survey covered, each on its own question base. They do not add up and are not stages of one process: borrowing any money includes borrowing from family and friends, which needs no provider, and making or receiving a digital payment does not require owning an account.",
+    "limitations_ar": "تسعة وعشرون من المقاييس المحددة البالغة 32 مخططة وليست مقاسة: فلا يمثل أي منها مؤشرًا منشورًا، لأنه لا توجد قيمة منشورة لهذه الموجة يُقارن بها التقدير الموزون. | والمقاييس الثلاثة المنشورة نسب من جميع البالغين في المناطق التي شملها المسح، ولكل منها قاعدة سؤاله الخاصة. ولا تُجمع هذه النسب ولا تمثل مراحل في مسار واحد: فاقتراض أي مبلغ يشمل الاقتراض من الأسرة والأصدقاء وهو لا يحتاج مقدم خدمة، وإجراء مدفوعة رقمية أو تلقيها لا يستلزم امتلاك حساب.",
+    "currentness_en": "The panel specification and the three published values apply to the Yemen Findex 2021 study, whose fieldwork ran from 7 November 2022 to 9 January 2023 and which the World Bank reports for 2022. The remaining measures stay unpublished until a published value exists to reproduce them against; a newer wave would require an updated panel.",
+    "currentness_ar": "تنطبق مواصفة المجموعة والقيم الثلاث المنشورة على دراسة اليمن ضمن Findex 2021، التي نُفذ عملها الميداني من 7 نوفمبر 2022 إلى 9 يناير 2023 ويعرضها البنك الدولي لسنة 2022. وتبقى المقاييس الأخرى غير منشورة حتى توجد قيمة منشورة يُعاد احتسابها مقابلها؛ وتحتاج أي موجة أحدث إلى تحديث مجموعة المقاييس.",
     "change_trigger_en": "This record is updated when an authoritative source is revised or replaced, a newer comparable observation becomes available, the definition, population or method changes, or the conditions for public use change.",
     "change_trigger_ar": "يُحدَّث هذا السجل عند مراجعة المصدر المعتمد أو استبداله، أو توفر مشاهدة أحدث قابلة للمقارنة، أو تغير التعريف أو المجتمع أو الطريقة، أو تغير شروط الاستخدام العام.",
     "verification_en": "This record is drawn from the source(s) listed on this page. Open a source record to reach the original document, and check that the definition, period, population and geography match what is stated here.",
@@ -3694,6 +3741,93 @@
         "t": "32",
         "k": "v",
         "s": "SITE"
+      },
+      {
+        "t": "21.6%",
+        "k": "v",
+        "s": "READ",
+        "src": "SRC-WB-FINDEX-AGG-2022",
+        "loc": "api.worldbank.org/v2/country/YEM/indicator/save.any.t.d?source=28 (Global Financial Inclusion), date 2022, read 4 October 2026"
+      },
+      {
+        "t": "51.3%",
+        "k": "v",
+        "s": "READ",
+        "src": "SRC-WB-FINDEX-AGG-2022",
+        "loc": "api.worldbank.org/v2/country/YEM/indicator/borrow.any.t.d?source=28 (Global Financial Inclusion), date 2022, read 4 October 2026"
+      },
+      {
+        "t": "9.3%",
+        "k": "v",
+        "s": "READ",
+        "src": "SRC-WB-FINDEX-AGG-2022",
+        "loc": "api.worldbank.org/v2/country/YEM/indicator/g20.any?source=28 (Global Financial Inclusion), date 2022, read 4 October 2026"
+      },
+      {
+        "t": "18.4%",
+        "k": "v",
+        "s": "DERIVED",
+        "src": "SRC-WB-FINDEX-001",
+        "loc": "CauseWay derivation FC-1 from the Global Findex 2021 Yemen respondent file; method, base and design effect in 25_FINDEX_BASELINE row CW-FINDEX-MOE-2022-015"
+      },
+      {
+        "t": "24.9%",
+        "k": "v",
+        "s": "DERIVED",
+        "src": "SRC-WB-FINDEX-001",
+        "loc": "CauseWay derivation FC-1 from the Global Findex 2021 Yemen respondent file; method, base and design effect in 25_FINDEX_BASELINE row CW-FINDEX-MOE-2022-015"
+      },
+      {
+        "t": "47.1%",
+        "k": "v",
+        "s": "DERIVED",
+        "src": "SRC-WB-FINDEX-001",
+        "loc": "CauseWay derivation FC-1 from the Global Findex 2021 Yemen respondent file; method, base and design effect in 25_FINDEX_BASELINE row CW-FINDEX-MOE-2022-016"
+      },
+      {
+        "t": "55.5%",
+        "k": "v",
+        "s": "DERIVED",
+        "src": "SRC-WB-FINDEX-001",
+        "loc": "CauseWay derivation FC-1 from the Global Findex 2021 Yemen respondent file; method, base and design effect in 25_FINDEX_BASELINE row CW-FINDEX-MOE-2022-016"
+      },
+      {
+        "t": "7.4%",
+        "k": "v",
+        "s": "DERIVED",
+        "src": "SRC-WB-FINDEX-001",
+        "loc": "CauseWay derivation FC-1 from the Global Findex 2021 Yemen respondent file; method, base and design effect in 25_FINDEX_BASELINE row CW-FINDEX-MOE-2022-017"
+      },
+      {
+        "t": "11.3%",
+        "k": "v",
+        "s": "DERIVED",
+        "src": "SRC-WB-FINDEX-001",
+        "loc": "CauseWay derivation FC-1 from the Global Findex 2021 Yemen respondent file; method, base and design effect in 25_FINDEX_BASELINE row CW-FINDEX-MOE-2022-017"
+      },
+      {
+        "t": "95%",
+        "k": "v",
+        "s": "SITE"
+      },
+      {
+        "t": "15",
+        "k": "v",
+        "s": "TRIVIAL"
+      },
+      {
+        "t": "7 November 2022",
+        "k": "d",
+        "s": "READ",
+        "src": "SRC-WB-FINDEX-001",
+        "loc": "microdata.worldbank.org/index.php/catalog/5862/study-description > Data collection > Dates of Data Collection: Start 2022-11-07"
+      },
+      {
+        "t": "9 January 2023",
+        "k": "d",
+        "s": "READ",
+        "src": "SRC-WB-FINDEX-001",
+        "loc": "microdata.worldbank.org/index.php/catalog/5862/study-description > Data collection > Dates of Data Collection: End 2023-01-09"
       }
     ],
     "public_route_list": [
@@ -3701,10 +3835,10 @@
       "/methodology/",
       "/measurement/"
     ],
-    "does_not_establish_en": "The 32 specified measures are planned, not measured: none is yet a published indicator, because the weighted estimates have not been reproduced and checked against official benchmarks.",
-    "does_not_establish_ar": "المقاييس المحددة، وعددها 32 مقياسًا، مخططة وليست مقاسة: فلا يمثل أي منها مؤشرًا منشورًا بعد، لأن تقديراتها الموزونة لم يُعَد إنتاجها ولم يُتحقق منها مقابل القيم المرجعية الرسمية.",
-    "measurement_limitation_en": null,
-    "measurement_limitation_ar": null
+    "does_not_establish_en": "Twenty-nine of the 32 specified measures are planned, not measured: none of them is a published indicator, because there is no published value for this wave to reproduce a weighted estimate against.",
+    "does_not_establish_ar": "تسعة وعشرون من المقاييس المحددة البالغة 32 مخططة وليست مقاسة: فلا يمثل أي منها مؤشرًا منشورًا، لأنه لا توجد قيمة منشورة لهذه الموجة يُقارن بها التقدير الموزون.",
+    "measurement_limitation_en": "The three that are published are shares of all adults in the areas the survey covered, each on its own question base. They do not add up and are not stages of one process: borrowing any money includes borrowing from family and friends, which needs no provider, and making or receiving a digital payment does not require owning an account.",
+    "measurement_limitation_ar": "والمقاييس الثلاثة المنشورة نسب من جميع البالغين في المناطق التي شملها المسح، ولكل منها قاعدة سؤاله الخاصة. ولا تُجمع هذه النسب ولا تمثل مراحل في مسار واحد: فاقتراض أي مبلغ يشمل الاقتراض من الأسرة والأصدقاء وهو لا يحتاج مقدم خدمة، وإجراء مدفوعة رقمية أو تلقيها لا يستلزم امتلاك حساب."
   },
   {
     "object_id": "VIS-FINDEX-SAMPLE-SUPPORT",
@@ -3804,20 +3938,20 @@
     ],
     "title_en": "Account ownership, account use and digital use: three separate measures",
     "title_ar": "امتلاك الحساب واستخدامه والاستخدام الرقمي: ثلاثة مقاييس منفصلة",
-    "summary_en": "In the 2021 Global Findex wave for Yemen (fieldwork 7 November 2022 to 9 January 2023), 11.9% of adults aged 15 and over in the areas the survey covered had an account. Weighted estimates of how many adults used an account, or used one digitally, have not yet been produced for this wave, so ownership is the only level available; owning an account does not show that it is used.",
-    "summary_ar": "في موجة 2021 من المؤشر العالمي للشمول المالي (Global Findex) الخاصة باليمن (العمل الميداني من 7 نوفمبر 2022 إلى 9 يناير 2023)، بلغت نسبة البالغين بعمر 15 سنة فأكثر في المناطق التي شملها المسح ممن يملكون حسابًا 11.9%. ولم تُنتج بعد لهذه الموجة تقديرات موزونة لنسبة من استخدموا حسابًا أو استخدموه رقميًا، لذلك يبقى امتلاك الحساب المستوى الوحيد المتاح؛ وامتلاك الحساب لا يدل على استخدامه.",
+    "summary_en": "In the 2021 Global Findex wave for Yemen (fieldwork 7 November 2022 to 9 January 2023), 11.9% of adults aged 15 and over in the areas the survey covered had an account. Weighted estimates of how many adults used an account, or used one digitally, have not been produced for this wave, so ownership is the only level of this ladder available; owning an account does not show that it is used. A different measure of the same wave is published: 9.3% of adults made or received a digital payment (95% interval 7.4% to 11.3%). That is not account use, because a payment can be made or received without an account.",
+    "summary_ar": "في موجة 2021 من المؤشر العالمي للشمول المالي (Global Findex) الخاصة باليمن (العمل الميداني من 7 نوفمبر 2022 إلى 9 يناير 2023)، بلغت نسبة البالغين بعمر 15 سنة فأكثر في المناطق التي شملها المسح ممن يملكون حسابًا 11.9%. ولم تُنتج لهذه الموجة تقديرات موزونة لنسبة من استخدموا حسابًا أو استخدموه رقميًا، لذلك يبقى امتلاك الحساب المستوى الوحيد المتاح في هذا التدرج؛ وامتلاك الحساب لا يدل على استخدامه. ويُنشر مقياس مختلف من الموجة نفسها: فقد أجرى 9.3% من البالغين مدفوعة رقمية أو تلقوها (فترة ثقة 95% من 7.4% إلى 11.3%). وهذا ليس استخدامًا للحساب، لأن المدفوعة الرقمية يمكن إجراءها أو تلقيها دون حساب.",
     "definition_en": "Three separate Findex measures for adults aged 15 and over in the areas the survey covered in the 2021 wave: account ownership, account use and digital use, each with its own population base; only account ownership has a published value.",
     "definition_ar": "ثلاثة مقاييس منفصلة في مسح Findex للبالغين بعمر 15 سنة فأكثر في المناطق التي شملها المسح في موجة 2021: امتلاك الحساب، واستخدام الحساب، والاستخدام الرقمي، ولكل منها قاعدة سكانية خاصة؛ ولا تتوفر قيمة منشورة إلا لامتلاك الحساب.",
     "period_en": "2021 wave / Yemen fieldwork 2022-11 to 2023-01",
     "period_ar": "موجة 2021 / العمل الميداني في اليمن من 2022-11 إلى 2023-01",
     "universe_en": "Findex account-ownership, account-use and digital-use indicators, each indicator with its own population and measurement base. The survey frame excludes Al Baydaa, Al Jawf, Mareb, Sadah, Socotra and several districts elsewhere: areas with about 23% of the population.",
     "universe_ar": "مؤشرات امتلاك الحساب واستخدامه والاستخدام الرقمي في Findex، مع مجتمع وقاعدة قياس منفصلين لكل مؤشر. ويستبعد إطار المسح محافظات البيضاء والجوف ومأرب وصعدة وسقطرى وعددًا من المديريات في محافظات أخرى، وهي مناطق تضم نحو 23% من السكان.",
-    "method_en": "Account ownership is the weighted estimate published by the World Bank for the 2021 wave (data year 2022). Account-use and digital-use estimates require weighted calculation from the respondent-level data, which has not yet been completed.",
-    "method_ar": "امتلاك الحساب هو التقدير الموزون الذي نشره البنك الدولي لموجة 2021 (سنة البيانات 2022). أما تقديرات استخدام الحساب والاستخدام الرقمي فتتطلب احتسابًا موزونًا من بيانات المستجيبين، ولم يُستكمل هذا الاحتساب بعد.",
+    "method_en": "Account ownership is the weighted estimate published by the World Bank for the 2021 wave (data year 2022). Account-use and digital-use estimates require weighted calculation from the respondent-level data, which has not been completed. The digital-payment share is the World Bank's own published value for the wave, reproduced from the respondent file, with its 95% interval derived from the survey weights.",
+    "method_ar": "امتلاك الحساب هو التقدير الموزون الذي نشره البنك الدولي لموجة 2021 (سنة البيانات 2022). أما تقديرات استخدام الحساب والاستخدام الرقمي فتتطلب احتسابًا موزونًا من بيانات المستجيبين، ولم يُستكمل هذا الاحتساب. ونسبة المدفوعات الرقمية هي القيمة التي نشرها البنك الدولي نفسه للموجة، وأُعيد احتسابها من ملف المستجيبين، مع استخراج فترة الثقة 95% من أوزان المسح.",
     "limitations_en": "Owning an account does not establish that it is used, and use does not establish digital use. The three measures have different population bases, and it is not established that each group sits inside the previous one, so they are not stages of a single funnel. Raw case percentages from the study documentation are not population estimates.",
     "limitations_ar": "امتلاك الحساب لا يثبت استخدامه، والاستخدام لا يثبت الاستخدام الرقمي. ولكل من المقاييس الثلاثة قاعدة سكانية مختلفة، ولم يثبت أن كل فئة تندرج ضمن الفئة السابقة لها، لذلك لا تمثل مراحل في مسار واحد متتابع. ونسب الحالات الخام الواردة في توثيق الدراسة ليست تقديرات سكانية.",
-    "currentness_en": "The ownership value refers to the 2021 Findex wave, reported by the World Bank for 2022, with Yemen fieldwork from 7 November 2022 to 9 January 2023; the Global Findex 2025 edition adds no newer Yemen observation. Account-use and digital-use values have not yet been produced.",
-    "currentness_ar": "تعود قيمة امتلاك الحساب إلى موجة Findex 2021، التي نشر البنك الدولي قيمتها لسنة 2022، ونُفذ عملها الميداني في اليمن من 7 نوفمبر 2022 إلى 9 يناير 2023، ولا تضيف نسخة Global Findex 2025 مشاهدة أحدث لليمن. أما قيم استخدام الحساب والاستخدام الرقمي فلم تُنتج بعد.",
+    "currentness_en": "The ownership value refers to the 2021 Findex wave, reported by the World Bank for 2022, with Yemen fieldwork from 7 November 2022 to 9 January 2023; the Global Findex 2025 edition adds no newer Yemen observation. Account-use and digital-use values have not been produced. The digital-payment value refers to the same wave.",
+    "currentness_ar": "تعود قيمة امتلاك الحساب إلى موجة Findex 2021، التي نشر البنك الدولي قيمتها لسنة 2022، ونُفذ عملها الميداني في اليمن من 7 نوفمبر 2022 إلى 9 يناير 2023، ولا تضيف نسخة Global Findex 2025 مشاهدة أحدث لليمن. أما قيم استخدام الحساب والاستخدام الرقمي فلم تُنتج. وتعود قيمة المدفوعات الرقمية إلى الموجة نفسها.",
     "change_trigger_en": "This record is updated when an authoritative source is revised or replaced, a newer comparable observation becomes available, the definition, population or method changes, or the conditions for public use change.",
     "change_trigger_ar": "يُحدَّث هذا السجل عند مراجعة المصدر المعتمد أو استبداله، أو توفر مشاهدة أحدث قابلة للمقارنة، أو تغير التعريف أو المجتمع أو الطريقة، أو تغير شروط الاستخدام العام.",
     "verification_en": "This record is drawn from the source(s) listed on this page. Open a source record to reach the original document, and check that the definition, period, population and geography match what is stated here.",
@@ -3883,6 +4017,32 @@
         "s": "READ",
         "src": "SRC-WB-FINDEX-001",
         "loc": "microdata.worldbank.org/index.php/catalog/5862/study-description > Data collection > Dates of Data Collection: End 2023-01-09"
+      },
+      {
+        "t": "9.3%",
+        "k": "v",
+        "s": "READ",
+        "src": "SRC-WB-FINDEX-AGG-2022",
+        "loc": "api.worldbank.org/v2/country/YEM/indicator/g20.any?source=28 (Global Financial Inclusion), date 2022, read 4 October 2026"
+      },
+      {
+        "t": "7.4%",
+        "k": "v",
+        "s": "DERIVED",
+        "src": "SRC-WB-FINDEX-001",
+        "loc": "CauseWay derivation FC-1 from the Global Findex 2021 Yemen respondent file; method, base and design effect in 25_FINDEX_BASELINE row CW-FINDEX-MOE-2022-017"
+      },
+      {
+        "t": "11.3%",
+        "k": "v",
+        "s": "DERIVED",
+        "src": "SRC-WB-FINDEX-001",
+        "loc": "CauseWay derivation FC-1 from the Global Findex 2021 Yemen respondent file; method, base and design effect in 25_FINDEX_BASELINE row CW-FINDEX-MOE-2022-017"
+      },
+      {
+        "t": "95%",
+        "k": "v",
+        "s": "SITE"
       }
     ],
     "public_route_list": [
@@ -4302,8 +4462,8 @@
     "method_ar": "إجماليات موزونة منشورة رسميًا في ملف الدولة.",
     "limitations_en": "The indicators overlap and are shares of all adults, not of borrowers: they cannot be added up to 100% or read as a breakdown of borrowers, and they do not describe borrowing today. | These are historical values, not current ones. In the source, '..' means no observation. Saving and borrowing indicators can overlap.",
     "limitations_ar": "مؤشرات مصادر الاقتراض متداخلة، وهي نسب من جميع البالغين لا من المقترضين؛ فلا تُجمع لتبلغ 100% ولا تُقرأ توزيعًا للمقترضين، ولا تصف الاقتراض في الوقت الحالي. | هذه قيم تاريخية لا راهنة؛ والرمز «..» في المصدر يعني عدم وجود مشاهدة. ويمكن أن تتداخل مؤشرات الادخار والاقتراض.",
-    "currentness_en": "The values refer to 2014, from the World Bank's 2014 country profile for Yemen. No weighted value from a later Yemen wave is available in this resource for these measures, so they should not be read as describing a later period unless a newer comparable observation is published.",
-    "currentness_ar": "تعود هذه القيم إلى عام 2014، وهي مأخوذة من الملف القطري لليمن الذي نشره البنك الدولي لعام 2014. ولا تتوفر في هذا المورد قيمة موزونة لهذه المقاييس من موجة يمنية لاحقة، لذلك لا تُقرأ على أنها تصف فترة لاحقة ما لم تُنشر مشاهدة أحدث قابلة للمقارنة.",
+    "currentness_en": "The values refer to 2014, from the World Bank's 2014 country profile for Yemen. A later observation does exist: the World Bank's own series gives a 2022 value for the same measure from the 2021 Findex wave, shown on this resource at /people/ with its interval. The two are not subtracted from one another here, because the 2014 value on this record was read from the printed 2014 country page and the database gives a slightly different 2014 value for the same indicator; a difference between the two would be a difference between two vintages of the publisher, not a measured change.",
+    "currentness_ar": "تعود هذه القيم إلى عام 2014، وهي مأخوذة من الملف القطري لليمن الذي نشره البنك الدولي لعام 2014. وتوجد مشاهدة لاحقة بالفعل: فسلسلة البنك الدولي نفسها تعطي قيمة لعام 2022 للمقياس نفسه من موجة Findex 2021، وتُعرض في هذا المورد على صفحة /people/ مع فترتها. ولا تُطرح القيمتان إحداهما من الأخرى هنا، لأن قيمة 2014 في هذا السجل قُرئت من الصفحة القطرية المطبوعة لعام 2014، بينما تعطي قاعدة البيانات قيمة مختلفة قليلاً لعام 2014 للمؤشر نفسه؛ وأي فرق بينهما سيكون فرقاً بين نسختي نشر لدى الناشر، وليس تغيراً مقاساً.",
     "change_trigger_en": "This record is updated when an authoritative source is revised or replaced, a newer comparable observation becomes available, the definition, population or method changes, or the conditions for public use change.",
     "change_trigger_ar": "يُحدَّث هذا السجل عند مراجعة المصدر المعتمد أو استبداله، أو توفر مشاهدة أحدث قابلة للمقارنة، أو تغير التعريف أو المجتمع أو الطريقة، أو تغير شروط الاستخدام العام.",
     "verification_en": "This record is drawn from the source(s) listed on this page. Open a source record to reach the original document, and check that the definition, period, population and geography match what is stated here.",
@@ -4393,8 +4553,8 @@
     "method_ar": "إجماليات موزونة منشورة رسميًا في ملف الدولة.",
     "limitations_en": "The gap between saving any money and saving at a financial institution is not an 'informal saving share', and the saving methods are not a complete breakdown of savers. | These are historical values, not current ones. In the source, '..' means no observation, and saving and borrowing indicators can overlap.",
     "limitations_ar": "لا يمثل الفرق بين ادخار أي مبلغ والادخار لدى مؤسسة مالية «حصة الادخار غير الرسمي»، ولا تمثل طرق الادخار توزيعًا شاملًا لكل المدخرين. | هذه قيم تاريخية لا راهنة؛ والرمز «..» في المصدر يعني عدم وجود مشاهدة، ويمكن أن تتداخل مؤشرات الادخار والاقتراض.",
-    "currentness_en": "The values refer to 2014, from the World Bank's 2014 country profile for Yemen. No weighted value from a later Yemen wave is available in this resource for these measures, so they should not be read as describing a later period unless a newer comparable observation is published.",
-    "currentness_ar": "تعود هذه القيم إلى عام 2014، وهي مأخوذة من الملف القطري لليمن الذي نشره البنك الدولي لعام 2014. ولا تتوفر في هذا المورد قيمة موزونة لهذه المقاييس من موجة يمنية لاحقة، لذلك لا تُقرأ على أنها تصف فترة لاحقة ما لم تُنشر مشاهدة أحدث قابلة للمقارنة.",
+    "currentness_en": "The values refer to 2014, from the World Bank's 2014 country profile for Yemen. A later observation does exist: the World Bank's own series gives a 2022 value for the same measure from the 2021 Findex wave, shown on this resource at /people/ with its interval. The two are not subtracted from one another here, because the 2014 value on this record was read from the printed 2014 country page and the database gives a slightly different 2014 value for the same indicator; a difference between the two would be a difference between two vintages of the publisher, not a measured change.",
+    "currentness_ar": "تعود هذه القيم إلى عام 2014، وهي مأخوذة من الملف القطري لليمن الذي نشره البنك الدولي لعام 2014. وتوجد مشاهدة لاحقة بالفعل: فسلسلة البنك الدولي نفسها تعطي قيمة لعام 2022 للمقياس نفسه من موجة Findex 2021، وتُعرض في هذا المورد على صفحة /people/ مع فترتها. ولا تُطرح القيمتان إحداهما من الأخرى هنا، لأن قيمة 2014 في هذا السجل قُرئت من الصفحة القطرية المطبوعة لعام 2014، بينما تعطي قاعدة البيانات قيمة مختلفة قليلاً لعام 2014 للمؤشر نفسه؛ وأي فرق بينهما سيكون فرقاً بين نسختي نشر لدى الناشر، وليس تغيراً مقاساً.",
     "change_trigger_en": "This record is updated when an authoritative source is revised or replaced, a newer comparable observation becomes available, the definition, population or method changes, or the conditions for public use change.",
     "change_trigger_ar": "يُحدَّث هذا السجل عند مراجعة المصدر المعتمد أو استبداله، أو توفر مشاهدة أحدث قابلة للمقارنة، أو تغير التعريف أو المجتمع أو الطريقة، أو تغير شروط الاستخدام العام.",
     "verification_en": "This record is drawn from the source(s) listed on this page. Open a source record to reach the original document, and check that the definition, period, population and geography match what is stated here.",
@@ -4468,8 +4628,8 @@
     "method_ar": "إجماليات موزونة منشورة رسميًا في ملف الدولة.",
     "limitations_en": "The channel values are shares of adults who received domestic remittances, not of all adults; they do not show what share of the money flowed through each channel, and the profile does not describe the current situation. | These are historical values, not current ones. In the source, '..' means no observation, and remittance-channel values are shares of a sub-group, not of all adults.",
     "limitations_ar": "قيم القنوات نسب من البالغين الذين تلقوا حوالات محلية لا من جميع البالغين؛ ولا تبين حصة الأموال التي مرت عبر كل قناة، ولا يصف هذا الملف الوضع الراهن. | هذه قيم تاريخية لا راهنة؛ والرمز «..» في المصدر يعني عدم وجود مشاهدة، وقيم قنوات الحوالات نسب من فئة فرعية مشروطة لا من جميع البالغين.",
-    "currentness_en": "The values refer to 2014, from the World Bank's 2014 country profile for Yemen. No weighted value from a later Yemen wave is available in this resource for these measures, so they should not be read as describing a later period unless a newer comparable observation is published.",
-    "currentness_ar": "تعود هذه القيم إلى عام 2014، وهي مأخوذة من الملف القطري لليمن الذي نشره البنك الدولي لعام 2014. ولا تتوفر في هذا المورد قيمة موزونة لهذه المقاييس من موجة يمنية لاحقة، لذلك لا تُقرأ على أنها تصف فترة لاحقة ما لم تُنشر مشاهدة أحدث قابلة للمقارنة.",
+    "currentness_en": "The values refer to 2014, from the World Bank's 2014 country profile for Yemen. The World Bank's current series for received domestic remittances does carry a 2022 value from the 2021 Findex wave, but it carries no 2014 value at all, while the figure on this record comes from the 2014 country profile. A series that does not hold the earlier year cannot establish a change against it, so no later value is published here and the two are not read as a trend. What it would take to compare them is a measurement question, not a presentation one.",
+    "currentness_ar": "تعود هذه القيم إلى عام 2014، وهي مأخوذة من الملف القطري لليمن الذي نشره البنك الدولي لعام 2014. وسلسلة البنك الدولي الحالية لتلقي الحوالات المحلية تحمل بالفعل قيمة لعام 2022 من موجة Findex 2021، لكنها لا تحمل أي قيمة لعام 2014، في حين أن القيمة في هذا السجل مأخوذة من الملف القطري لعام 2014. والسلسلة التي لا تحمل السنة الأقدم لا تستطيع إظهار تغير مقابلها، لذلك لا تُنشر هنا قيمة أحدث ولا تُقرأ القيمتان اتجاهاً. وما يلزم لمقارنتهما مسألة قياس، لا مسألة عرض.",
     "change_trigger_en": "This record is updated when an authoritative source is revised or replaced, a newer comparable observation becomes available, the definition, population or method changes, or the conditions for public use change.",
     "change_trigger_ar": "يُحدَّث هذا السجل عند مراجعة المصدر المعتمد أو استبداله، أو توفر مشاهدة أحدث قابلة للمقارنة، أو تغير التعريف أو المجتمع أو الطريقة، أو تغير شروط الاستخدام العام.",
     "verification_en": "This record is drawn from the source(s) listed on this page. Open a source record to reach the original document, and check that the definition, period, population and geography match what is stated here.",
@@ -4728,8 +4888,8 @@
     ],
     "title_en": "Year of the last weighted value for each people-side financial function",
     "title_ar": "سنة آخر قيمة موزونة لكل وظيفة مالية على جانب الأفراد",
-    "summary_en": "The latest weighted evidence differs by financial function: account ownership has a value from the 2021 Findex wave (11.9%, reported for 2022), while the latest weighted values for saving, borrowing and domestic remittances date from 2014 (20.6% of adults saved any money, 65.9% borrowed any money and 18.3% received domestic remittances), and weighted estimates of resilience and of the reasons for not having an account have not yet been calculated for the 2021 wave.",
-    "summary_ar": "يختلف أحدث دليل موزون بحسب الوظيفة المالية: فلامتلاك الحساب قيمة من موجة Findex 2021 (11.9%، منشورة لسنة 2022)، بينما تعود أحدث القيم الموزونة للادخار والاقتراض والحوالات المحلية إلى 2014 (ادخر 20.6% من البالغين أي مبلغ، واقترض 65.9% أي مبلغ، وتلقى 18.3% حوالات محلية)، ولا تزال تقديرات الصمود المالي وأسباب عدم امتلاك الحساب لموجة 2021 بانتظار الاحتساب.",
+    "summary_en": "The latest weighted evidence differs by financial function: the 2021 Findex wave gives 2022 values for account ownership (11.9%), for saving (21.6%) and borrowing (51.3%) any money and for making or receiving a digital payment (9.3%); the latest weighted value this resource publishes for domestic remittances is from 2014 (18.3% received them), because the World Bank's current series for that measure holds no 2014 value to read it against; and weighted estimates of resilience and of the reasons for not having an account have not yet been calculated for the 2021 wave.",
+    "summary_ar": "يختلف أحدث دليل موزون بحسب الوظيفة المالية: فموجة Findex 2021 تعطي قيماً لعام 2022 لامتلاك الحساب (11.9%)، ولادخار أي مبلغ (21.6%) واقتراضه (51.3%)، ولإجراء مدفوعة رقمية أو تلقيها (9.3%)؛ أما أحدث قيمة موزونة ينشرها هذا المورد للحوالات المحلية فهي من 2014 (تلقاها 18.3%)، لأن سلسلة البنك الدولي الحالية لهذا المقياس لا تحمل قيمة لعام 2014 تُقارن بها؛ ولا تزال تقديرات الصمود المالي وأسباب عدم امتلاك الحساب لموجة 2021 بانتظار الاحتساب.",
     "definition_en": "The latest observation period available for each people-side financial function (account ownership, saving, borrowing, domestic remittances, resilience and reasons for not having an account), drawn from the Global Findex evidence for Yemen.",
     "definition_ar": "أحدث فترة مشاهدة متاحة لكل وظيفة مالية على جانب الأفراد (امتلاك الحساب، والادخار، والاقتراض، والحوالات المحلية، والصمود المالي، وأسباب عدم امتلاك الحساب)، مستمدة من أدلة المؤشر العالمي للشمول المالي (Global Findex) الخاصة باليمن.",
     "period_en": "2014 to 2022; no weighted values yet for some measures in the 2021 wave",
@@ -4740,8 +4900,8 @@
     "method_ar": "مجمّع من سجلات الأدلة المدرجة في هذه الصفحة: تُربط كل وظيفة بأحدث دليل موزون خاص بها من مسح Findex، ولا تُنقل قيمة أو تاريخ من وظيفة إلى أخرى.",
     "limitations_en": "It is not a composite inclusion score. There is no single latest year for people-side evidence, and a recent date for one function does not make the evidence for another function current.",
     "limitations_ar": "ليس هذا درجة مركبة للشمول المالي. ولا توجد سنة واحدة هي الأحدث لأدلة جانب الأفراد، وحداثة تاريخ وظيفة ما لا تجعل أدلة وظيفة أخرى حديثة.",
-    "currentness_en": "The latest observations differ by function: 2022 for account ownership (2021 Findex wave, fieldwork 7 November 2022 to 9 January 2023) and 2014 for saving, borrowing and domestic remittances; resilience and reasons for not having an account have no weighted value yet. None of them describes a later period unless a newer comparable observation is published.",
-    "currentness_ar": "تختلف أحدث المشاهدات بحسب الوظيفة: 2022 لامتلاك الحساب (موجة Findex 2021، والعمل الميداني من 7 نوفمبر 2022 إلى 9 يناير 2023)، و2014 للادخار والاقتراض والحوالات المحلية؛ ولا توجد بعد قيمة موزونة للصمود المالي ولأسباب عدم امتلاك الحساب. ولا يصف أي منها فترة لاحقة ما لم تُنشر مشاهدة أحدث قابلة للمقارنة.",
+    "currentness_en": "The latest observations differ by function: 2022 for account ownership, saving, borrowing and digital payments (2021 Findex wave, fieldwork 7 November 2022 to 9 January 2023) and 2014 for domestic remittances; resilience and reasons for not having an account have no weighted value yet. None of them describes a later period unless a newer comparable observation is published.",
+    "currentness_ar": "تختلف أحدث المشاهدات بحسب الوظيفة: 2022 لامتلاك الحساب والادخار والاقتراض والمدفوعات الرقمية (موجة Findex 2021، والعمل الميداني من 7 نوفمبر 2022 إلى 9 يناير 2023)، و2014 للحوالات المحلية؛ ولا توجد بعد قيمة موزونة للصمود المالي ولأسباب عدم امتلاك الحساب. ولا يصف أي منها فترة لاحقة ما لم تُنشر مشاهدة أحدث قابلة للمقارنة.",
     "change_trigger_en": "This record is updated when an authoritative source is revised or replaced, a newer comparable observation becomes available, the definition, population or method changes, or the conditions for public use change.",
     "change_trigger_ar": "يُحدَّث هذا السجل عند مراجعة المصدر المعتمد أو استبداله، أو توفر مشاهدة أحدث قابلة للمقارنة، أو تغير التعريف أو المجتمع أو الطريقة، أو تغير شروط الاستخدام العام.",
     "verification_en": "This view assembles other evidence records. Check each linked record against its own source.",
@@ -4811,6 +4971,27 @@
         "s": "READ",
         "src": "SRC-WB-FINDEX-001",
         "loc": "microdata.worldbank.org/index.php/catalog/5862/study-description > Data collection > Dates of Data Collection: End 2023-01-09"
+      },
+      {
+        "t": "21.6%",
+        "k": "v",
+        "s": "READ",
+        "src": "SRC-WB-FINDEX-AGG-2022",
+        "loc": "api.worldbank.org/v2/country/YEM/indicator/save.any.t.d?source=28 (Global Financial Inclusion), date 2022, read 4 October 2026"
+      },
+      {
+        "t": "51.3%",
+        "k": "v",
+        "s": "READ",
+        "src": "SRC-WB-FINDEX-AGG-2022",
+        "loc": "api.worldbank.org/v2/country/YEM/indicator/borrow.any.t.d?source=28 (Global Financial Inclusion), date 2022, read 4 October 2026"
+      },
+      {
+        "t": "9.3%",
+        "k": "v",
+        "s": "READ",
+        "src": "SRC-WB-FINDEX-AGG-2022",
+        "loc": "api.worldbank.org/v2/country/YEM/indicator/g20.any?source=28 (Global Financial Inclusion), date 2022, read 4 October 2026"
       }
     ],
     "public_route_list": [
@@ -4842,8 +5023,8 @@
     "method_ar": "إجماليات موزونة منشورة في الملف القطري لليمن الذي أصدره البنك الدولي لعام 2014 (The Little Data Book on Financial Inclusion 2015)؛ وكل مؤشر نسبة من جميع البالغين.",
     "limitations_en": "Each source is a separate share of all adults, not of borrowers. The shares overlap, so they do not add up to a total or to 100%, and no 'informal borrowing share' can be derived by subtracting one from another.",
     "limitations_ar": "كل مصدر نسبة مستقلة من جميع البالغين لا من المقترضين. والنسب متداخلة، فلا تُجمع للحصول على إجمالي أو على 100%، ولا يمكن استخلاص «حصة للاقتراض غير الرسمي» بطرح إحداها من الأخرى.",
-    "currentness_en": "The values refer to 2014, from the World Bank's 2014 country profile for Yemen. No weighted value from a later Yemen wave is available in this resource for these measures, so they should not be read as describing a later period unless a newer comparable observation is published.",
-    "currentness_ar": "تعود هذه القيم إلى عام 2014، وهي مأخوذة من الملف القطري لليمن الذي نشره البنك الدولي لعام 2014. ولا تتوفر في هذا المورد قيمة موزونة لهذه المقاييس من موجة يمنية لاحقة، لذلك لا تُقرأ على أنها تصف فترة لاحقة ما لم تُنشر مشاهدة أحدث قابلة للمقارنة.",
+    "currentness_en": "The values refer to 2014, from the World Bank's 2014 country profile for Yemen. A later observation does exist: the World Bank's own series gives a 2022 value for the same measure from the 2021 Findex wave, shown on this resource at /people/ with its interval. The two are not subtracted from one another here, because the 2014 value on this record was read from the printed 2014 country page and the database gives a slightly different 2014 value for the same indicator; a difference between the two would be a difference between two vintages of the publisher, not a measured change.",
+    "currentness_ar": "تعود هذه القيم إلى عام 2014، وهي مأخوذة من الملف القطري لليمن الذي نشره البنك الدولي لعام 2014. وتوجد مشاهدة لاحقة بالفعل: فسلسلة البنك الدولي نفسها تعطي قيمة لعام 2022 للمقياس نفسه من موجة Findex 2021، وتُعرض في هذا المورد على صفحة /people/ مع فترتها. ولا تُطرح القيمتان إحداهما من الأخرى هنا، لأن قيمة 2014 في هذا السجل قُرئت من الصفحة القطرية المطبوعة لعام 2014، بينما تعطي قاعدة البيانات قيمة مختلفة قليلاً لعام 2014 للمؤشر نفسه؛ وأي فرق بينهما سيكون فرقاً بين نسختي نشر لدى الناشر، وليس تغيراً مقاساً.",
     "change_trigger_en": "This record is updated when an authoritative source is revised or replaced, a newer comparable observation becomes available, the definition, population or method changes, or the conditions for public use change.",
     "change_trigger_ar": "يُحدَّث هذا السجل عند مراجعة المصدر المعتمد أو استبداله، أو توفر مشاهدة أحدث قابلة للمقارنة، أو تغير التعريف أو المجتمع أو الطريقة، أو تغير شروط الاستخدام العام.",
     "verification_en": "This record is drawn from the source(s) listed on this page. Open a source record to reach the original document, and check that the definition, period, population and geography match what is stated here.",
@@ -4939,8 +5120,8 @@
     "method_ar": "إجماليات موزونة من الملف القطري لليمن الذي أصدره البنك الدولي لعام 2014 (The Little Data Book on Financial Inclusion 2015): الإرسال والاستلام نسبتان من جميع البالغين، وقيم القنوات نسب من البالغين الذين أرسلوا حوالات محلية أو تلقوها. وتُسجل قيم القنوات التي لا يوردها المصدر بوصفها غير متاحة لا صفرًا.",
     "limitations_en": "Shares of all adults and channel shares among recipients use different bases and cannot be read on one scale. They do not show how much money flowed through each channel or the composition of remittances in the economy as a whole.",
     "limitations_ar": "تقوم نسب جميع البالغين ونسب القنوات بين المتلقين على قاعدتين مختلفتين، فلا تُقرأ على مقياس واحد. ولا تبين حجم الأموال التي مرت عبر كل قناة ولا تركيب التحويلات على المستوى الكلي.",
-    "currentness_en": "The values refer to 2014, from the World Bank's 2014 country profile for Yemen. No weighted value from a later Yemen wave is available in this resource for these measures, so they should not be read as describing a later period unless a newer comparable observation is published.",
-    "currentness_ar": "تعود هذه القيم إلى عام 2014، وهي مأخوذة من الملف القطري لليمن الذي نشره البنك الدولي لعام 2014. ولا تتوفر في هذا المورد قيمة موزونة لهذه المقاييس من موجة يمنية لاحقة، لذلك لا تُقرأ على أنها تصف فترة لاحقة ما لم تُنشر مشاهدة أحدث قابلة للمقارنة.",
+    "currentness_en": "The values refer to 2014, from the World Bank's 2014 country profile for Yemen. The World Bank's current series for received domestic remittances does carry a 2022 value from the 2021 Findex wave, but it carries no 2014 value at all, while the figure on this record comes from the 2014 country profile. A series that does not hold the earlier year cannot establish a change against it, so no later value is published here and the two are not read as a trend. What it would take to compare them is a measurement question, not a presentation one.",
+    "currentness_ar": "تعود هذه القيم إلى عام 2014، وهي مأخوذة من الملف القطري لليمن الذي نشره البنك الدولي لعام 2014. وسلسلة البنك الدولي الحالية لتلقي الحوالات المحلية تحمل بالفعل قيمة لعام 2022 من موجة Findex 2021، لكنها لا تحمل أي قيمة لعام 2014، في حين أن القيمة في هذا السجل مأخوذة من الملف القطري لعام 2014. والسلسلة التي لا تحمل السنة الأقدم لا تستطيع إظهار تغير مقابلها، لذلك لا تُنشر هنا قيمة أحدث ولا تُقرأ القيمتان اتجاهاً. وما يلزم لمقارنتهما مسألة قياس، لا مسألة عرض.",
     "change_trigger_en": "This record is updated when an authoritative source is revised or replaced, a newer comparable observation becomes available, the definition, population or method changes, or the conditions for public use change.",
     "change_trigger_ar": "يُحدَّث هذا السجل عند مراجعة المصدر المعتمد أو استبداله، أو توفر مشاهدة أحدث قابلة للمقارنة، أو تغير التعريف أو المجتمع أو الطريقة، أو تغير شروط الاستخدام العام.",
     "verification_en": "This record is drawn from the source(s) listed on this page. Open a source record to reach the original document, and check that the definition, period, population and geography match what is stated here.",
@@ -5628,10 +5809,10 @@
     "period_ar": "سنة الإبلاغ في بيانات البنك الدولي: 2022؛ دراسة Global Findex 2021؛ العمل الميداني في اليمن من 2022-11-07 إلى 2023-01-09",
     "universe_en": "Adults aged 15 and over in the areas the survey covered (the survey frame excludes areas with about 23% of the population); subgroups as defined within the same wave.",
     "universe_ar": "البالغون بعمر 15 سنة فأكثر في المناطق التي شملها المسح (يستبعد إطار المسح مناطق تضم نحو 23% من السكان)، وفق تعريفات الفئات الفرعية داخل الموجة نفسها.",
-    "method_en": "Weighted estimates published by the World Bank from the Global Findex survey of Yemen (1,000 respondents; fieldwork 7 November 2022 to 9 January 2023; World Bank data year 2022) for all adults and for subgroups by sex, household income, education and age. Each of the four differences is calculated by this resource by subtracting the lower published value in a pair from the higher one.",
-    "method_ar": "تقديرات موزونة نشرها البنك الدولي من مسح المؤشر العالمي للشمول المالي (Global Findex) في اليمن (1,000 مستجيب؛ العمل الميداني من 7 نوفمبر 2022 إلى 9 يناير 2023؛ سنة البيانات لدى البنك الدولي 2022) لجميع البالغين وللفئات الفرعية بحسب الجنس ودخل الأسرة والتعليم والعمر. ويحتسب هذا المورد كلًّا من الفروق الأربعة بطرح القيمة المنشورة الأدنى في كل زوج من القيمة الأعلى.",
-    "limitations_en": "These are values from one survey wave, not an annual series and not a 2026 rate. They cannot be mapped to governorates, they are not comparable with account counts reported by the Central Bank of Yemen – Aden (CBY-Aden), and the differences between groups do not establish their causes. | The survey frame excludes areas holding about 23% of the population, and more than a quarter of primary sampling units were replaced. No standard errors or confidence intervals are published with these values; the Yemen sample is 1,000 respondents, so subgroup values and the gaps carry sampling uncertainty that is not quantified here.",
-    "limitations_ar": "هذه قيم من موجة مسحية واحدة، وليست سلسلة سنوية ولا معدلًا لعام 2026. ولا يمكن إسقاطها على المحافظات، ولا تُقارن بأعداد الحسابات التي يُبلغ عنها البنك المركزي اليمني – عدن، ولا تثبت الفروق بين الفئات أسبابها. | يستبعد إطار المسح مناطق يقطنها نحو 23% من السكان، كما استُبدل أكثر من ربع وحدات المعاينة الأولية. ولا تُنشر مع هذه القيم أخطاء معيارية أو فترات ثقة؛ وتبلغ عينة اليمن 1,000 مستجيب، لذلك تنطوي قيم الفئات الفرعية والفجوات بينها على عدم يقين ناتج عن المعاينة لا يُقدَّر كميًا هنا.",
+    "method_en": "Weighted estimates published by the World Bank from the Global Findex survey of Yemen (1,000 respondents; fieldwork 7 November 2022 to 9 January 2023; World Bank data year 2022) for all adults and for subgroups by sex, household income, education and age. Each of the four differences is calculated by this resource by subtracting the lower published value in a pair from the higher one. The 95% intervals shown with these values are derived by this resource from the survey's own weights (a design-based interval for a weighted share), not published by the World Bank.",
+    "method_ar": "تقديرات موزونة نشرها البنك الدولي من مسح المؤشر العالمي للشمول المالي (Global Findex) في اليمن (1,000 مستجيب؛ العمل الميداني من 7 نوفمبر 2022 إلى 9 يناير 2023؛ سنة البيانات لدى البنك الدولي 2022) لجميع البالغين وللفئات الفرعية بحسب الجنس ودخل الأسرة والتعليم والعمر. ويحتسب هذا المورد كلًّا من الفروق الأربعة بطرح القيمة المنشورة الأدنى في كل زوج من القيمة الأعلى. وفترات الثقة 95% المعروضة مع هذه القيم يستخرجها هذا المورد من أوزان المسح نفسها (فترة قائمة على تصميم المسح لنسبة موزونة)، ولم ينشرها البنك الدولي.",
+    "limitations_en": "These are values from one survey wave, not an annual series and not a 2026 rate. They cannot be mapped to governorates, they are not comparable with account counts reported by the Central Bank of Yemen – Aden (CBY-Aden), and the differences between groups do not establish their causes. | The survey frame excludes areas holding about 23% of the population, and more than a quarter of primary sampling units were replaced. The World Bank publishes no standard error or confidence interval with these values, so this resource derives them from the survey's own weights: on a sample of 1,000 respondents, and fewer in each group, the 95% margin of error is 2.2 points on the figure for all adults, between 2.2 and 3.9 points on each group's share, and between 4.0 and 4.6 points on each of the four differences. Each interval is printed with its figure on that figure's own record. The file open to researchers carries no sampling-unit identifier, so clustering is not captured and the true intervals may be wider, never narrower.",
+    "limitations_ar": "هذه قيم من موجة مسحية واحدة، وليست سلسلة سنوية ولا معدلًا لعام 2026. ولا يمكن إسقاطها على المحافظات، ولا تُقارن بأعداد الحسابات التي يُبلغ عنها البنك المركزي اليمني – عدن، ولا تثبت الفروق بين الفئات أسبابها. | يستبعد إطار المسح مناطق يقطنها نحو 23% من السكان، كما استُبدل أكثر من ربع وحدات المعاينة الأولية. ولا ينشر البنك الدولي مع هذه القيم خطأً معياريًا ولا فترة ثقة، لذلك يستخرجها هذا المورد من أوزان المسح نفسها: ففي عينة من 1,000 مستجيب، وبعدد أقل في كل فئة، يبلغ هامش الخطأ عند ثقة 95% نحو 2.2 نقطة على القيمة الخاصة بجميع البالغين، وبين 2.2 و3.9 نقطة على نسبة كل فئة، وبين 4.0 و4.6 نقطة على كل فرق من الفروق الأربعة. وتُعرض كل فترة مع قيمتها في سجل تلك القيمة. ولا يحمل الملف المتاح للباحثين معرّف وحدة المعاينة، لذلك لا تُحتسب آثار التجمّع العنقودي، وقد تكون الفترات الحقيقية أوسع لا أضيق.",
     "currentness_en": "These are the latest observations available for Yemen: World Bank Data reports them for 2022, from the Global Findex 2021 study fielded from 7 November 2022 to 9 January 2023. The Global Findex 2025 edition adds 2024 observations for many economies but no newer observation for Yemen, so the values do not describe 2024, 2025 or 2026.",
     "currentness_ar": "هذه أحدث المشاهدات المتاحة لليمن: يعرضها موقع بيانات البنك الدولي لسنة 2022، وهي مستمدة من دراسة Global Findex 2021 التي نُفذ عملها الميداني من 7 نوفمبر 2022 إلى 9 يناير 2023. وتضيف نسخة Global Findex 2025 مشاهدات لعام 2024 في اقتصادات عديدة، لكنها لا تتضمن مشاهدة أحدث لليمن؛ لذلك لا تصف هذه القيم عام 2024 أو 2025 أو 2026.",
     "change_trigger_en": "This record is updated when an authoritative source is revised or replaced, a newer comparable observation becomes available, the definition, population or method changes, or the conditions for public use change.",
@@ -5886,6 +6067,39 @@
         "s": "READ",
         "src": "SRC-WB-FINDEX-001",
         "loc": "microdata.worldbank.org/index.php/catalog/5862/study-description > Data collection > Dates of Data Collection: End 2023-01-09"
+      },
+      {
+        "t": "2.2",
+        "k": "v",
+        "s": "DERIVED",
+        "src": "SRC-WB-FINDEX-001",
+        "loc": "CauseWay derivation FC-1 from micro_yem.dta (YEM_2022_FINDEX_v01_M, 334,544 bytes), held under the World Bank Microdata Research License and never redistributed; Hajek ratio estimator with Taylor-linearization variance on the survey weight wgt; the method, the point estimate, the interval, the base and the design effect of every figure are recorded in 25_FINDEX_BASELINE rows CW-FINDEX-MOE-2022-*"
+      },
+      {
+        "t": "3.9",
+        "k": "v",
+        "s": "DERIVED",
+        "src": "SRC-WB-FINDEX-001",
+        "loc": "CauseWay derivation FC-1 from micro_yem.dta (YEM_2022_FINDEX_v01_M, 334,544 bytes), held under the World Bank Microdata Research License and never redistributed; Hajek ratio estimator with Taylor-linearization variance on the survey weight wgt; the method, the point estimate, the interval, the base and the design effect of every figure are recorded in 25_FINDEX_BASELINE rows CW-FINDEX-MOE-2022-*"
+      },
+      {
+        "t": "4.0",
+        "k": "v",
+        "s": "DERIVED",
+        "src": "SRC-WB-FINDEX-001",
+        "loc": "CauseWay derivation FC-1 from micro_yem.dta (YEM_2022_FINDEX_v01_M, 334,544 bytes), held under the World Bank Microdata Research License and never redistributed; Hajek ratio estimator with Taylor-linearization variance on the survey weight wgt; the method, the point estimate, the interval, the base and the design effect of every figure are recorded in 25_FINDEX_BASELINE rows CW-FINDEX-MOE-2022-*"
+      },
+      {
+        "t": "4.6",
+        "k": "v",
+        "s": "DERIVED",
+        "src": "SRC-WB-FINDEX-001",
+        "loc": "CauseWay derivation FC-1 from micro_yem.dta (YEM_2022_FINDEX_v01_M, 334,544 bytes), held under the World Bank Microdata Research License and never redistributed; Hajek ratio estimator with Taylor-linearization variance on the survey weight wgt; the method, the point estimate, the interval, the base and the design effect of every figure are recorded in 25_FINDEX_BASELINE rows CW-FINDEX-MOE-2022-*"
+      },
+      {
+        "t": "95%",
+        "k": "v",
+        "s": "SITE"
       }
     ],
     "public_route_list": [
@@ -5893,8 +6107,8 @@
     ],
     "does_not_establish_en": "These are values from one survey wave, not an annual series and not a 2026 rate. They cannot be mapped to governorates, they are not comparable with account counts reported by the Central Bank of Yemen – Aden (CBY-Aden), and the differences between groups do not establish their causes.",
     "does_not_establish_ar": "هذه قيم من موجة مسحية واحدة، وليست سلسلة سنوية ولا معدلًا لعام 2026. ولا يمكن إسقاطها على المحافظات، ولا تُقارن بأعداد الحسابات التي يُبلغ عنها البنك المركزي اليمني – عدن، ولا تثبت الفروق بين الفئات أسبابها.",
-    "measurement_limitation_en": "The survey frame excludes areas holding about 23% of the population, and more than a quarter of primary sampling units were replaced. No standard errors or confidence intervals are published with these values; the Yemen sample is 1,000 respondents, so subgroup values and the gaps carry sampling uncertainty that is not quantified here.",
-    "measurement_limitation_ar": "يستبعد إطار المسح مناطق يقطنها نحو 23% من السكان، كما استُبدل أكثر من ربع وحدات المعاينة الأولية. ولا تُنشر مع هذه القيم أخطاء معيارية أو فترات ثقة؛ وتبلغ عينة اليمن 1,000 مستجيب، لذلك تنطوي قيم الفئات الفرعية والفجوات بينها على عدم يقين ناتج عن المعاينة لا يُقدَّر كميًا هنا."
+    "measurement_limitation_en": "The survey frame excludes areas holding about 23% of the population, and more than a quarter of primary sampling units were replaced. The World Bank publishes no standard error or confidence interval with these values, so this resource derives them from the survey's own weights: on a sample of 1,000 respondents, and fewer in each group, the 95% margin of error is 2.2 points on the figure for all adults, between 2.2 and 3.9 points on each group's share, and between 4.0 and 4.6 points on each of the four differences. Each interval is printed with its figure on that figure's own record. The file open to researchers carries no sampling-unit identifier, so clustering is not captured and the true intervals may be wider, never narrower.",
+    "measurement_limitation_ar": "يستبعد إطار المسح مناطق يقطنها نحو 23% من السكان، كما استُبدل أكثر من ربع وحدات المعاينة الأولية. ولا ينشر البنك الدولي مع هذه القيم خطأً معياريًا ولا فترة ثقة، لذلك يستخرجها هذا المورد من أوزان المسح نفسها: ففي عينة من 1,000 مستجيب، وبعدد أقل في كل فئة، يبلغ هامش الخطأ عند ثقة 95% نحو 2.2 نقطة على القيمة الخاصة بجميع البالغين، وبين 2.2 و3.9 نقطة على نسبة كل فئة، وبين 4.0 و4.6 نقطة على كل فرق من الفروق الأربعة. وتُعرض كل فترة مع قيمتها في سجل تلك القيمة. ولا يحمل الملف المتاح للباحثين معرّف وحدة المعاينة، لذلك لا تُحتسب آثار التجمّع العنقودي، وقد تكون الفترات الحقيقية أوسع لا أضيق."
   },
   {
     "object_id": "VIS-POS-TERMINALS",

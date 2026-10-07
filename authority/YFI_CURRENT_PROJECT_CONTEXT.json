@@ -1,14 +1,14 @@
 {
   "schema": "YFI_CURRENT_PROJECT_CONTEXT/1.0",
   "role": "COMPACT_PROJECTION_NOT_AUTHORITY",
-  "generated_at": "2026-10-04T10:23:19Z",
+  "generated_at": "2026-10-04T17:12:05Z",
   "system": {
     "name_en": "Yemen Financial Inclusion Evidence",
     "name_ar": "أدلة الشمول المالي في اليمن",
     "organising_question": "What does the evidence mean for financial inclusion in Yemen, and how do we know?"
   },
   "programme_state": {
-    "as_of": "2026-10-03",
+    "as_of": "2026-10-04",
     "r_programme": "R0–R8.3 CLOSED / PASS; R8.4 CLOSED / PASS including the Evidence Readings (F2); R8.5 CLOSED (F4, audit/R8_5_REPOSITORY_SUBTRACTION_CLOSURE.md); R8.6 CLOSED — DESIGN HANDOFF READY (F8 freeze, audit/R8_6_DESIGN_HANDOFF_FREEZE_CLOSURE.md; F9 clean-room acceptance, audit/FINAL_CLEAN_ROOM_ACCEPTANCE.md)",
     "tranches": "Tranche A CLOSED; Tranche B specification CLOSED; Tranche B execution CLOSED; Tranche C COMPLETE and accepted by OpenAI (26 Sep 2026, recipient verification 31/31); final integration F0–F9 CLOSED (R8.5 closed; whole public corpus accepted; discovery, accessibility, rights and security contract in place; sustainability baseline recorded; Design handoff frozen; clean-room accepted by three cold recipients)",
     "pre_tranche_c": "Sessions P1–P4 CLOSED and independently accepted with three narrow corrections; P5 corrections CLOSED",
@@ -16,14 +16,14 @@
     "not_declared": [
       "PUBLIC RELEASE READY"
     ],
-    "design_prompt_status": "DESIGN HANDOFF READY — executable; start path handoff/README_FIRST.md → handoff/CLAUDE_DESIGN_MASTER_PROMPT.md (tightened 27 Sep 2026 by the post-F9 correction and the design-enablement control pass); the Design package is accepted (owner's final D7 visual acceptance recorded 2 Oct 2026, audit/OWNER_DECISIONS_2026-10-02.md) and the production runtime is merged: pull request #8 (EAD-01 to EAD-11), merged into main at 38a9a97 on 2 October 2026, EAD states in FINAL_OPEN_ITEMS_REGISTER.md section 1; the release candidate is pull request #9 (branch code/release-candidate-fixes), not a public release",
+    "design_prompt_status": "DESIGN HANDOFF READY — executable; start path handoff/README_FIRST.md → handoff/CLAUDE_DESIGN_MASTER_PROMPT.md (tightened 27 Sep 2026 by the post-F9 correction and the design-enablement control pass); the Design package is accepted (owner's final D7 visual acceptance recorded 2 Oct 2026, audit/OWNER_DECISIONS_2026-10-02.md) and the production runtime is merged: pull request #8 (EAD-01 to EAD-11), merged into main at 38a9a97 on 2 October 2026, EAD states in FINAL_OPEN_ITEMS_REGISTER.md section 1; non-design v1 product is complete on pull request #11 (draft, branch code/final-content); current phase is design / presentation integration; C1, C2 and C3 are post-v1; public release is not declared",
     "production_runtime": {
       "pull_request": 8,
       "title": "code: the production runtime — EAD-01 to EAD-11",
       "state": "MERGED",
       "merge_commit": "38a9a97",
       "merged_on": "2026-10-02",
-      "release_candidate": "pull request #9, branch code/release-candidate-fixes"
+      "release_candidate": "not the current phase; non-design v1 is complete on draft pull request #11; public release is not declared"
     },
     "checkpoint": "OPENAI_REENTRY_CHECKPOINT.md",
     "tranche_c": {
@@ -45,7 +45,7 @@
   "production_master": {
     "path": "authority/Yemen_Financial_Inclusion_Evidence_Master.xlsx",
     "drive_id": "1xAbdDHJd5bYo0Pzo_a6dR6HsZ056LzJU",
-    "sha256": "f3e06fb935d0181211cc73f648eff588388ddda41a4c8f7eb2406b8396333514",
+    "sha256": "fdb24bdfeae5c2604e326dd19effb4d79a783d44272f4dc08da2373979893999",
     "is_sole_authority": true,
     "authority_dimensions": [
       "semantic",
@@ -59,7 +59,7 @@
   },
   "controlled_projection": {
     "page_specs_path": "site-src/content/page_specs.json",
-    "page_specs_sha256": "016ca988b57f63419c4685d0b8b2eb31be7984a0554ae5318796f9e64481b12e",
+    "page_specs_sha256": "6c1d39df01cc31240f14ddab51f7cd761536a700f0328f7972fcaaee8b51be7b",
     "page_specs": 142,
     "all_page_specs_master_hash_match": true,
     "page_specs_index_master_hash_match": true
@@ -74,9 +74,9 @@
     "readings": 10,
     "measurement_priorities": 10,
     "visual_contracts": 36,
-    "search_records": 438,
-    "sources": 165,
-    "publicly_addressable_sources": 156,
+    "search_records": 440,
+    "sources": 167,
+    "publicly_addressable_sources": 158,
     "curated_source_report_cards": 28,
     "chronology_events": 23,
     "reading_sections": 68
@@ -198,7 +198,7 @@
     ]
   },
   "validation": {
-    "master_sha256_recorded": "f3e06fb935d0181211cc73f648eff588388ddda41a4c8f7eb2406b8396333514",
+    "master_sha256_recorded": "fdb24bdfeae5c2604e326dd19effb4d79a783d44272f4dc08da2373979893999",
     "projection_hash_binding": "PASS",
     "schema_required_keys": [
       "schema",

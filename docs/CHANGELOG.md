@@ -1,5 +1,72 @@
 # Repository Change Log
 
+## 2026-10-04 — Non-design v1 front door
+
+README, the current-state projection and the re-entry checkpoint now say the non-design v1 product is complete, the current phase is design / presentation integration, and C1–C3 are post-v1. Public release is not declared. Three documentation diagrams added. No Master or product change.
+
+
+## 2026-10-04 — B3 decision, Batch C held, Batch D records
+
+- **B3.** The 24 chronology events are not search results. They have no event route and no search-eligibility field. Search stays evidence, measurement and source.
+- **Batch C.** C1 (typed difference block), C2 (dedicated guarantee record) and C3 (public contradiction register) stay unbuilt. Each needs a new surface. The existing public forms stand.
+- **Batch D.** Programme records no longer call pull request #9 the current release candidate. Pull requests #9 and #10 are merged. The open content pass is pull request #11. Not declared: content complete, or public release ready.
+
+
+## 2026-10-04 — FC-2, FC-3, FC-3b: source locators; a false "no later value" claim removed
+
+Master `2713c086b7f9…` → `1fa11bad82ed…` (FC-2) → `439fdce82563…` (FC-3) →
+`fdb24bdfeae5c2604e326dd19effb4d79a783d44272f4dc08da2373979893999` (FC-3b), through `run_stage.py`.
+
+- **FC-2 — locators.** Two broken links fixed: `SRC-CBY-SANAA-C14-2024` pointed at the *wrong document* (the 537-page
+  UN Panel of Experts report, not the circular — the circular is reproduced inside it at printed page 114), and
+  `SRC-CBY-SANAA-C12-2024` returned HTTP 404. The CBY-Aden monetary series' own index, the bank's regulations and
+  publications pages and its **thirteen 2021–2022 issues** now stand beside the single May 2026 issue that all 686
+  monetary observations had been traced to. Two Yemen e-money and microfinance papers added; the two IGC documents
+  added to the record that held only their landing page. The SFD newsletters and the IGC paper were **already
+  present**, contrary to the brief's premise, so they were not duplicated. What could not be opened — the SDRPY
+  notice, the OECD youth paper, the World Bank FASTT paper, the UNDP FMIIP page — is recorded with its reason and
+  carried to the handover; nothing is published from any of them.
+- **FC-3 / FC-3b — currentness.** Five records and one page section claimed, in both languages, that no weighted value
+  later than 2014 existed for saving, borrowing and domestic remittances. The World Bank publishes 2022 values in the
+  same series and the respondent file reproduces them exactly, so the claim was false. `CLM-026` — whose three stated
+  preconditions for publishing a weighted estimate are now all met — carries 21.6% saving, 51.3% borrowing and 9.3%
+  digital payments with their derived intervals; `/people/` leads with them and keeps the 2014 source-and-method
+  detail below, named as 2014.
+- **Three restraints kept:** no 2014→2022 difference is computed (the publisher's own two vintages disagree, 65.9 vs
+  66.0 — finding FC-A-04); no 2022 domestic-remittance value is published (that series holds no 2014 value to read it
+  against); and a digital *payment* is not account *use*, so the access/use ladder is unchanged.
+- **Records:** `audit/final_content/FINAL_CONTENT_LOG.md`.
+
+## 2026-10-04 — FC-1, FC-1b: margins of error for every published Global Findex figure
+
+Master `f3e06fb935d0…` → `9d059c07309a…` (FC-1) → `2713c086b7f98c0145e48a21d31812cdefebef7e90cd1364de51954b078e968e`
+(FC-1b), through `run_stage.py` (`audit/final_content/fc_1_findex_margins.py`, `fc_1b_gap_bases.py`).
+
+The owner supplied the Yemen Global Findex respondent file with the message of 4 October 2026, under the World Bank
+Microdata Research License, with the decision to publish aggregate statistics only. Edition 2 (E2-2) had recorded that
+no interval could be computed because the file needed a login, and left the public text saying the uncertainty "is not
+quantified here". That sentence is now gone from both editions.
+
+- **Method, recorded as a CauseWay derivation:** Hájek ratio estimator on the published weight `wgt`, design-based
+  variance by Taylor linearisation, 95% interval. The public-use file carries no PSU or stratum identifier, so
+  clustering is not captured and the true interval may be wider, never narrower — stated publicly, not buried.
+- **Reconciled against the publisher before publishing:** all nine published World Bank values for Yemen, and the three
+  other 2022 indicators of the same wave, reproduce from the file to the World Bank's own unrounded values. No
+  difference to record. Two base definitions were settled by that reconciliation and are recorded: "ages 25+" is the
+  complement of 15-24 (n = 770), and `female` is coded 1 = female, 2 = male — which releases the owner's hold on
+  by-sex figures on two independent confirmations.
+- **Published:** 17 derivation rows `CW-FINDEX-MOE-2022-001`…`-017` in `25_FINDEX_BASELINE`, each with its point
+  estimate, interval, base, design effect and method; the intervals printed on `CLM-002` and `VIS-FINDEX-GAPS` in both
+  languages; the method on `/methodology/` section 7.
+- **Design effect stated honestly:** 0.82 to 1.82 across the fourteen estimates — for two small domains a binomial
+  standard error slightly *overstates* the uncertainty, so no single direction is claimed.
+- **Rights:** `28_METHODS_RIGHTS` records the custody rule (`respondent_microdata_controlled` NO → YES; aggregate
+  statistics only; never redistributed, never committed), and `SRC-WB-FINDEX-001` carries the licence and the citation
+  the licence requires. The respondent file is not in this repository, `dist/` or the site.
+- **Gate:** `FC-MOE` in `scripts/validate.py` — the intervals asserted on what a reader sees, their attribution to this
+  resource, their clustering limit, and the arithmetic of every derivation row; four negative controls.
+- **Records:** `audit/final_content/FINAL_CONTENT_LOG.md` (with the findings the reconciliation opened), `audit/INDEX.md`.
+
 ## 2026-10-04 — E2-8, E2-7b, E2-7c: chronology states, gates E2-READ and E2-DATES, the review folded in
 
 Master `332a942f6685…` → `6d10b18d6c00…` (E2-8) → `7222cb53d2ce…` (E2-7b) →

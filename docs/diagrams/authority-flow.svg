@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 420" role="img" aria-labelledby="t d">
+  <title id="t">Authority flow</title>
+  <desc id="d">The Production Master is the only semantic authority. Projections, the public site and this README are derived or descriptive. Audit records verify lineage and are not authority.</desc>
+  <style>
+    text { font-family: "IBM Plex Sans", "Segoe UI", sans-serif; fill: #1c242b; }
+    .h { font-size: 15px; font-weight: 600; }
+    .s { font-size: 12px; fill: #3d4a54; }
+    .k { font-size: 11px; letter-spacing: .08em; fill: #5c6b76; }
+  </style>
+  <rect width="880" height="420" fill="#f7f5f1"/>
+  <text class="k" x="36" y="36">AUTHORITY</text>
+  <rect x="36" y="48" width="250" height="92" fill="#fff" stroke="#1c242b"/>
+  <text class="h" x="52" y="80">Production Master</text>
+  <text class="s" x="52" y="102">Evidence, sources, rights,</text>
+  <text class="s" x="52" y="120">publication state</text>
+  <text class="k" x="320" y="36">DERIVED</text>
+  <rect x="320" y="48" width="250" height="92" fill="#fff" stroke="#8a8176"/>
+  <text class="h" x="336" y="80">Projections and site</text>
+  <text class="s" x="336" y="102">Context, page specs, dist/</text>
+  <text class="s" x="336" y="120">Regenerated, never hand-edited</text>
+  <text class="k" x="604" y="36">ORIENTATION</text>
+  <rect x="604" y="48" width="240" height="92" fill="#fff" stroke="#8a8176"/>
+  <text class="h" x="620" y="80">README</text>
+  <text class="s" x="620" y="102">Describes the repository.</text>
+  <text class="s" x="620" y="120">Does not govern it.</text>
+  <path d="M286 94 H320" stroke="#1c242b" fill="none"/>
+  <path d="M570 94 H604" stroke="#8a8176" fill="none"/>
+  <text class="k" x="36" y="188">PUBLIC PRODUCT — SAME EVIDENCE, TWO EDITIONS</text>
+  <rect x="36" y="204" width="808" height="168" fill="#fff" stroke="#d7d1c7"/>
+  <text class="h" x="56" y="236">Question → strongest defensible answer → boundary → wider context → what remains unknown</text>
+  <text class="s" x="56" y="268">Explore · Evidence records · Readings · Data and sources · Methodology · Measurement Agenda</text>
+  <text class="s" x="56" y="292">Search and Compare test reach and comparability. They do not create a new fact.</text>
+  <text class="s" x="56" y="316">Arabic and English are co-authoritative. A number keeps its universe, period and source.</text>
+  <text class="s" x="56" y="348">CauseWay stewards the synthesis. Original publishers remain the publishers of their facts.</text>
+</svg>

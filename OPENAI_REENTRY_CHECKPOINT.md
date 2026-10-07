@@ -1,5 +1,8 @@
 # OpenAI re-entry checkpoint — Yemen Financial Inclusion Evidence
 
+**Current state, 4 October 2026.** Non-design v1 product complete. Current phase: design / presentation integration. C1, C2 and C3 are post-v1 owner decisions, not release blockers. Public release is not declared. The active front door is `README.md`. The text below is the September checkpoint and is history.
+
+
 **Programme:** Final integration to the Design handoff — directive D7 (`audit/directives/`), sessions F0–F9.
 **Position (current):** OpenAI accepted the Tranche C checkpoint on 26 September 2026 (recipient verification 31/31) and
 supplied the independent ten-Reading package with directive D7. Sessions F0–F9 are closed: the Reading portfolio is
@@ -30,8 +33,8 @@ so that a cold Design recipient can run D0–D7 from the repository alone.
 
 | Item | Value |
 |---|---|
-| Production Master | `authority/Yemen_Financial_Inclusion_Evidence_Master.xlsx` — SHA-256 `f3e06fb935d0181211cc73f648eff588388ddda41a4c8f7eb2406b8396333514` |
-| Page Specs | `site-src/content/page_specs.json` — SHA-256 `016ca988b57f63419c4685d0b8b2eb31be7984a0554ae5318796f9e64481b12e` |
+| Production Master | `authority/Yemen_Financial_Inclusion_Evidence_Master.xlsx` — SHA-256 `fdb24bdfeae5c2604e326dd19effb4d79a783d44272f4dc08da2373979893999` |
+| Page Specs | `site-src/content/page_specs.json` — SHA-256 `6c1d39df01cc31240f14ddab51f7cd761536a700f0328f7972fcaaee8b51be7b` |
 | Entry state recorded with the Drive IDs (lineage, not current) | Master `e69804106e04d093098688f2d01cea51e13191f255d774a090f3e5dd8dec9bc7`; Page Specs `ff2b0f559cde5fede3fe31d7dfb2539a00921e8b00b816c2863790cd9de49007` |
 | Master lineage in D7 | `f0150122…` (entry) → `caabff47…` (RP-F2) → `0e8730c2…` / `69899ae2…` (RL-F3, RL-F3b) → `2a7fd52b…` / `440614d7…` (R85-A, R85-B) → `168a0ad8…` / `ed3c5796…` (RF5, RF5b) |
 | Canonical repository | GitHub `CausewayGrp/Financial-inclusion-`, branch `main` — the only working copy. The last state OpenAI reviewed is commit `f726bda` (tree byte-identical to `…TRANCHE_C_COMPLETE_READING_HOLD.zip`, SHA-256 `63612dea…`); its tag and the Design-handoff tag are owner actions (§7) |

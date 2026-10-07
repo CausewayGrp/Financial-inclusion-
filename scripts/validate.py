@@ -3218,9 +3218,13 @@ try:
             if not _sel:
                 errors.append(f"RC-B13 the {_k} filter is missing {_lang}")
                 continue
-            for _o in re.findall(r'<option value="([^"]+)">', _sel.group(1)):
+            _offered = re.findall(r'<option value="([^"]+)">', _sel.group(1))
+            for _o in _offered:
                 if _o not in _vals:
                     errors.append(f"RC-B13 the {_k} filter offers {_o!r}, which no listed source carries {_lang}")
+            for _val in sorted(set(_vals)):
+                if _val not in _offered:
+                    errors.append(f"RC-B13 the {_k} filter has no option for {_val!r}, so a listed source is unreachable {_lang}")
         _orig = _ic13["UI-EVID-OPEN-ORIGINAL-SOURCE"][f"label_{_lang}"]
         for _a in re.findall(r'<a class="source-locator" href="https://web\.archive\.org/[^"]*"[^>]*>([^<]*)', _h):   # the link text, before its "opens in a new tab" span
             if _html.unescape(_a).strip() == _orig.strip():
@@ -3463,6 +3467,80 @@ try:
         errors.append(f"E2-PREC read only {_nv} drawn Findex values")
 except Exception as _x:
     errors.append("E2-PREC unreadable " + repr(_x))
+
+# FC-MOE (final content pass, FC-1; owner message of 4 October 2026, block A): the uncertainty of every published
+# Global Findex figure is quantified, printed at the same one-decimal precision as the figure itself, and never
+# presented as the publisher's own. This is the precision gate extended to the intervals, asserted on what a reader
+# sees and on the derivation rows the Master holds:
+# (1) edition 2's "not quantified here" is gone from every built page, in both languages;
+# (2) the two records that carried it print their derived interval, and say in their own language that this resource
+#     derived it and that clustering is not captured (an interval presented as the World Bank's would misattribute it);
+# (3) every CW-FINDEX-MOE-2022-* row carries a margin of error in percentage points, at one decimal place, with a
+#     point estimate, an interval that brackets that point estimate, and a base; and
+# (4) no interval bound a reader sees is printed to two or more decimal places.
+_FC_GONE = ("not quantified here", "\u0644\u0627 \u064a\u064f\u0642\u062f\u064e\u0631 \u0643\u0645\u064a\u064b\u0627 \u0647\u0646\u0627")
+_FC_SHOW = {"en": ("this resource derives them", "clustering is not captured"),
+            "ar": ("\u064a\u0633\u062a\u062e\u0631\u062c\u0647\u0627 \u0647\u0630\u0627 \u0627\u0644\u0645\u0648\u0631\u062f", "\u0644\u0627 \u062a\u064f\u062d\u062a\u0633\u0628 \u0622\u062b\u0627\u0631 \u0627\u0644\u062a\u062c\u0645\u0651\u0639 \u0627\u0644\u0639\u0646\u0642\u0648\u062f\u064a")}
+# the bounds each record must print, as the derivation computed them (one decimal place)
+_FC_BOUNDS = {"CLM-002": ("3.2", "7.7", "14.6", "22.1", "8.5", "17.3"),
+              "VIS-FINDEX-GAPS": ("2.2", "3.9", "4.0", "4.6")}
+try:
+    for _f in sorted(DIST.glob("*/**/index.html")) + sorted(DIST.glob("*/index.html")):
+        _rel = str(_f.relative_to(DIST))
+        if not _rel.startswith(("en/", "ar/")):
+            continue
+        _txt = _visible(_f)
+        for _g in _FC_GONE:
+            if _g in _txt:
+                errors.append(f"FC-MOE {_rel} still says the Findex uncertainty is not quantified: {_g!r}")
+    _nfc = 0
+    for _rid, _bounds in _FC_BOUNDS.items():
+        for _lang in ("en", "ar"):
+            _f = DIST / _lang / "evidence" / _rid / "index.html"
+            if not _f.exists():
+                errors.append(f"FC-MOE {_lang}/evidence/{_rid}/ is not built")
+                continue
+            _nfc += 1
+            _txt = _visible(_f).replace("\u2066", "").replace("\u2069", "")
+            for _b in _bounds:
+                if not re.search(r"(?<![\d,.])" + re.escape(_b) + r"(?![\d,])", _txt):
+                    errors.append(f"FC-MOE {_lang}/evidence/{_rid}/ does not print the derived bound {_b}")
+            for _s in _FC_SHOW[_lang]:
+                if _s not in _txt:
+                    errors.append(f"FC-MOE {_lang}/evidence/{_rid}/ prints a derived interval without saying {_s!r}")
+    if _nfc != 4:
+        errors.append(f"FC-MOE read only {_nfc} of the 4 record pages that carry a derived interval")
+    _fbr = json.load(open(ROOT / "site-src/content/data/findex_baseline.json", encoding="utf-8"))["rows"]
+    _fhi = next(i for i, r in enumerate(_fbr) if r and r[0] == "observation_id")
+    _moe = [dict(zip(_fbr[_fhi], r)) for r in _fbr[_fhi + 1:]
+            if r and str(r[0]).startswith("CW-FINDEX-MOE-2022-")]
+    if len(_moe) != 17:
+        errors.append(f"FC-MOE the Master holds {len(_moe)} derivation rows, expected 17")
+    for _r in _moe:
+        _id = _r["observation_id"]
+        if "percentage points" not in str(_r.get("unit") or ""):
+            errors.append(f"FC-MOE {_id} does not state its unit as percentage points")
+        if "CauseWay" not in str(_r.get("publisher") or ""):
+            errors.append(f"FC-MOE {_id} does not name CauseWay as the publisher of the derivation")
+        if not re.fullmatch(r"\d+\.\d", str(_r.get("value"))):
+            errors.append(f"FC-MOE {_id} margin of error {_r.get('value')!r} is not one decimal place")
+        _cv = str(_r.get("caveat") or "")
+        _pt = re.search(r"(?:Point estimate|Difference of the two printed shares) (\d+\.\d)", _cv)
+        _ci = re.search(r"95% confidence interval (\d+\.\d)%? to (\d+\.\d)%?", _cv)
+        if not _pt or not _ci:
+            errors.append(f"FC-MOE {_id} does not record a point estimate and a 95% interval")
+            continue
+        _p, _lo, _hi = float(_pt.group(1)), float(_ci.group(1)), float(_ci.group(2))
+        if not _lo < _p < _hi:
+            errors.append(f"FC-MOE {_id} interval {_lo}-{_hi} does not bracket its point estimate {_p}")
+        if abs((_hi - _lo) / 2 - float(_r["value"])) > 0.1:
+            errors.append(f"FC-MOE {_id} margin of error {_r['value']} does not match its interval {_lo}-{_hi}")
+        if "base" not in _cv and "respondents" not in _cv:
+            errors.append(f"FC-MOE {_id} does not state the base the interval was computed on")
+        if "clustering is not captured" not in _cv:
+            errors.append(f"FC-MOE {_id} does not state that clustering is not captured")
+except Exception as _x:
+    errors.append("FC-MOE unreadable " + repr(_x))
 
 # E2-CTX (edition 2, candidate c; REOPEN-INTL): the one same-source context figure beside Yemen's account ownership,
 # the World Bank's low-income aggregate for the same Findex wave (35.2%), is never shown bare. Asserted on what a reader
