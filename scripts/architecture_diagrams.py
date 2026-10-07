@@ -214,7 +214,7 @@ def render(check=False):
         if have != svg:
             diffs.append(name)
             if not check:
-                with open(p, "w", encoding="utf-8") as fh:
+                with open(p, "w", encoding="utf-8", newline="\n") as fh:
                     fh.write(svg)
     return want, diffs
 

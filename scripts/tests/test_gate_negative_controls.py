@@ -43,8 +43,9 @@ DIST = ROOT / "dist"
 
 
 def _run(tree: Path, script: str) -> tuple[int, str]:
-    r = subprocess.run([sys.executable, str(tree / script)], capture_output=True, text=True,
-                       cwd=tree, env={"PYTHONDONTWRITEBYTECODE": "1", "PATH": "/usr/bin:/bin"})
+    r = subprocess.run([sys.executable, str(tree / script)], capture_output=True, text=True, encoding="utf-8",
+                       cwd=tree, env={**os.environ, "PYTHONDONTWRITEBYTECODE": "1", "PYTHONUTF8": "1",
+                                      "YFIE_SITE_DIR": str(tree / "dist")})
     return r.returncode, r.stdout + r.stderr
 
 
@@ -131,9 +132,42 @@ def edit_states(oid: str, edit):
 # name, the file to break, how to break it, the gate text that must appear.
 # The text must be a substring of the real message: several gates interpolate a route or a visual id into the middle of
 # theirs, so a control that names the gate and then the wording would never match (found by running these).
-# A path under `site-src/` or `scripts/` is a source file; anything else is a page of the built site.
-SOURCE_PREFIXES = ("site-src/", "scripts/", "audit/")   # audit/: the generated literal closure (E2-DIFF)
+# Source contracts and audit records are rooted in the repository; other paths are under dist/.
+SOURCE_PREFIXES = ("site-src/", "scripts/", "audit/", "handoff/")   # audit/: the generated literal closure (E2-DIFF)
+
+
+def visual_title(vid: str, lang: str) -> str:
+    """A title repeats in a figure's heading and table caption: remove every copy for this control."""
+    import html, json
+    visuals = json.loads((ROOT / "site-src/content/visuals/visual_design_contracts.json").read_text(encoding="utf-8"))["visuals"]
+    return html.escape(next(v for v in visuals if v["visual_id"] == vid)["governed"][f"title_{lang}"], quote=False)
+
+
 CONTROLS = [
+    ("portability: Arabic drawing loses its governed title", "ar/remittances/index.html",
+     lambda t: t.replace(visual_title("VIS-REMITTANCE-MACRO", "ar"), "missing title"),
+     "P3-G02 VIS-REMITTANCE-MACRO drawn without its governed title in ar/remittances/index.html"),
+    ("portability: English page has an Arabic placeholder", "en/people/index.html",
+     insert_after('<main id="main">', '<input placeholder="\u0628\u062d\u062b">'),
+     "P2-G03 Arabic placeholder on an English page en/people/index.html"),
+    ("portability: Arabic page has a Latin month", "ar/people/index.html",
+     insert_after('<main id="main">', '<p>January</p>'),
+     "R85-G08 Latin month name on an Arabic page ar/people/index.html"),
+    ("portability: Arabic Findex precision drifts", "ar/people/index.html",
+     replace("18.3%", "18.35%"),
+     "E2-PREC ar/people/index.html prints a Findex share or gap to two decimals: 18.35"),
+    ("portability: Arabic uncertainty becomes unquantified", "ar/people/index.html",
+     insert_after('<main id="main">', '<p>\u0644\u0627 \u064a\u064f\u0642\u062f\u064e\u0631 \u0643\u0645\u064a\u064b\u0627 \u0647\u0646\u0627</p>'),
+     "FC-MOE ar/people/index.html still says the Findex uncertainty is not quantified"),
+    ("portability: context figure reaches Arabic Home", "ar/index.html",
+     insert_after('<main id="main">', '<p>35.2% in 19 low-income economies</p>'),
+     "E2-CTX ar/index.html prints the low-income context figure on Home"),
+    ("portability: Arabic guarantee volume loses its boundary", "ar/firms/index.html",
+     replace("\u0644\u0627 \u0639\u062f\u062f \u0627\u0644\u0645\u0646\u0634\u0622\u062a", "guarantee volume", 0),
+     "E2-YLG ar/firms/index.html prints the guarantee volume without saying it is not firms' access to finance"),
+    ("portability: handoff inventory is stale", "handoff/ROUTE_CONTENT_AND_STATE_INVENTORY.json",
+     replace('"schema": "YFIE_ROUTE_CONTENT_AND_STATE_INVENTORY/1.3"', '"schema": "broken"'),
+     "R86-G02 HANDOFF INVENTORY STALE"),
     ("active navigation loses its aria-current", "en/evidence/CLM-001/index.html",
      replace('<a href="/en/evidence/" aria-current="page">', '<a href="/en/evidence/">'),
      "active navigation missing aria-current"),
@@ -506,19 +540,21 @@ def run_control(tree: Path, control) -> tuple[bool, str, float]:
     page = tree / rel if rel.startswith(SOURCE_PREFIXES) else tree / "dist" / rel
     started = time.monotonic()
     existed = page.exists()            # a control may add a file the build never writes; it is removed afterwards
-    original = page.read_text(encoding="utf-8") if existed else ""
+    original_bytes = page.read_bytes() if existed else b""
+    original = original_bytes.decode("utf-8")
     note = ""
     try:
         broken = mutate(original)
         if broken == original:
             raise AssertionError("the control changed nothing — its selector no longer matches the page")
-        page.write_text(broken, encoding="utf-8")
-        fired = gate in _run(tree, script)[1]
+        page.write_text(broken, encoding="utf-8", newline="\n")
+        rc, output = _run(tree, script)
+        fired = rc != 0 and gate in output
     except Exception as exc:                 # a control that cannot break the page proves nothing either
         fired, note = False, f" — {exc}"
     finally:
         if existed:
-            page.write_text(original, encoding="utf-8")
+            page.write_bytes(original_bytes)
         else:
             page.unlink(missing_ok=True)
     return fired, note, time.monotonic() - started

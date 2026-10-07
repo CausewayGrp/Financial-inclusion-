@@ -59,7 +59,7 @@ RULES = [
                           "FINAL_OPEN_ITEMS_REGISTER.md", "docs/CHANGELOG.md", "docs/PRODUCTION_REPOSITORY_PROTOCOL.md",
                           "docs/DEPLOYMENT.md", "docs/SUSTAINABILITY_METHOD.md", "docs/SUSTAINABILITY_IMPLEMENTED_RUNTIME.json",
                           "docs/ACCESSIBILITY_AUDIT.md", "docs/ACCESSIBILITY_AUDIT.json"]),
-    ("REPOSITORY_ENGINEERING", [".github/*", ".github/**/*", ".gitattributes", ".gitignore", "package.json",
+    ("REPOSITORY_ENGINEERING", [".github/*", ".github/**/*", ".gitattributes", ".gitignore", "package.json", "package-lock.json",
                                 "requirements.txt", "SHA256SUMS.txt"]),
     ("CURRENT_PROGRAMME_RECORD", ["audit/INDEX.md", "audit/READING_PORTFOLIO_*", "audit/F3_*", "audit/R8_5_*", "audit/F5_*",
                                   "audit/F6_*", "audit/R8_6_*", "audit/SUSTAINABILITY_*", "audit/FINAL_*_ACCEPTANCE*",
@@ -131,7 +131,7 @@ def main():
             sys.exit(1)
         print(f"REPOSITORY MANIFEST CURRENT: {len(doc['files'])} files in {len(doc['class_counts'])} classes")
         return
-    OUT.write_text(text, encoding="utf-8")
+    OUT.write_text(text, encoding="utf-8", newline="\n")
     print(f"REPOSITORY MANIFEST WRITTEN: {len(doc['files'])} files in {len(doc['class_counts'])} classes")
 
 

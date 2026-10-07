@@ -211,7 +211,7 @@ def licence_section() -> dict:
 
 
 def write(out: Path, name: str, rows: list[OrderedDict]) -> None:
-    (out / f"{name}.json").write_text(json.dumps(rows, ensure_ascii=False, indent=1) + "\n", encoding="utf-8")
+    (out / f"{name}.json").write_text(json.dumps(rows, ensure_ascii=False, indent=1) + "\n", encoding="utf-8", newline="\n")
     with (out / f"{name}.csv").open("w", encoding="utf-8-sig", newline="") as fh:
         w = csv.DictWriter(fh, fieldnames=list(rows[0].keys()) if rows else [], lineterminator="\n")
         w.writeheader()
@@ -226,13 +226,13 @@ def build(out: Path) -> dict:
         write(out, n, rows)
     write(out, "codebook", codebook(data))
     lic = licence_section()
-    (out / "LICENCE.txt").write_text("\n\n".join(lic[k] for k in ("heading_en", "body_en", "heading_ar", "body_ar")) + "\n", encoding="utf-8")
+    (out / "LICENCE.txt").write_text("\n\n".join(lic[k] for k in ("heading_en", "body_en", "heading_ar", "body_ar")) + "\n", encoding="utf-8", newline="\n")
     manifest = OrderedDict([("schema", "YFIE_EXPORTS/1.0"), ("master_sha256", sha), ("published", False),
                             ("switch", "site-src/deployment.json public_downloads (false until CauseWay's counsel confirms the CC BY 4.0 text)"),
                             ("licence", OrderedDict([("id", "CC-BY-4.0"), ("url", LICENCE_URL), ("text", "LICENCE.txt"),
                                                      ("covers", "CauseWay's own content; third-party source material is not covered and stays under its publishers' terms")])),
                             ("datasets", OrderedDict((n, len(r)) for n, r in data.items()))])
-    (out / "MANIFEST.json").write_text(json.dumps(manifest, indent=1) + "\n", encoding="utf-8")
+    (out / "MANIFEST.json").write_text(json.dumps(manifest, indent=1) + "\n", encoding="utf-8", newline="\n")
     return manifest
 
 

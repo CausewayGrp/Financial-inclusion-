@@ -58,7 +58,7 @@ def main() -> int:
     bundles = list((site / "_bundle").glob("*.json"))
     if len(bundles) != 2 * n_spec:
         bad.append(f"bundles {len(bundles)}, expected {2 * n_spec}")
-    shipped = sorted(str(p.relative_to(site)) for p in site.rglob("*.json") if not any(part.startswith("_") for part in p.relative_to(site).parts))   # underscore paths (_bundle, _review, _export, _social) are not the site
+    shipped = sorted(p.relative_to(site).as_posix() for p in site.rglob("*.json") if not any(part.startswith("_") for part in p.relative_to(site).parts))   # underscore paths (_bundle, _review, _export, _social) are not the site
     allowed = {"static-data/search_index.json", "static-data/search_aliases.json"}
     extra = [s for s in shipped if s not in allowed]
     if extra:

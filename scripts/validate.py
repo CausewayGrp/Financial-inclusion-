@@ -170,7 +170,7 @@ try:
         if not hp.exists(): continue
         htxt=hp.read_text(encoding='utf-8')
         for h in re.findall(r'\b[0-9a-f]{64}\b',htxt):
-            if h not in allowed_hashes: errors.append(f'stale/unrecognized authority hash in recipient-facing file {hp.relative_to(ROOT)}: {h}')
+            if h not in allowed_hashes: errors.append(f'stale/unrecognized authority hash in recipient-facing file {hp.relative_to(ROOT).as_posix()}: {h}')
     root_readme=(ROOT/'README.md').read_text(encoding='utf-8')
     if str(master_sha) not in root_readme or str(actual_page_specs_sha) not in root_readme:
         errors.append('root README does not identify current Master and Page Specs hashes')
@@ -1011,7 +1011,7 @@ for _lang in ('ar','en'):
     for _f in (DIST/_lang/'readings').glob('*/index.html'):
         _t=_html.unescape(_f.read_text(encoding='utf-8'))
         if _unl in _t and f'>{_plain}<' in _t:
-            errors.append(f'S04.3 Reading path claims complete named sources while a record rests on unlisted material {_f.relative_to(DIST)}')
+            errors.append(f'S04.3 Reading path claims complete named sources while a record rests on unlisted material {_f.relative_to(DIST).as_posix()}')
 
 
 # S05.1 — Arabic/English semantic + typographic QA.
@@ -1690,7 +1690,7 @@ def _p1_main_text(raw,drop_text_alternatives=False,drop_link_lists=False):
 for f in DIST.rglob('*.html'):
     raw=re.sub(r'<script.*?</script>','',f.read_text(encoding='utf-8'),flags=re.S)
     m=UNRESOLVED_TOKEN.search(_html.unescape(raw))
-    if m: errors.append(f'P1-G01 unresolved template token {m.group(0)!r} in {f.relative_to(DIST)}')
+    if m: errors.append(f'P1-G01 unresolved template token {m.group(0)!r} in {f.relative_to(DIST).as_posix()}')
 def _p1_walk(x,where):
     if isinstance(x,str):
         m=UNRESOLVED_TOKEN.search(x)
@@ -1852,7 +1852,7 @@ for lang in ('en','ar'):
     if dh.count('data-rights-state')<len([s for s in _srm if str(s.get("primary_url") or "").startswith("http")])-1:
         errors.append(f'P2-G02 /data/ source cards lack their reuse-terms state {lang}')
 for f in DIST.rglob('*.html'):
-    raw=f.read_text(encoding='utf-8'); rel=str(f.relative_to(DIST))
+    raw=f.read_text(encoding='utf-8'); rel=f.relative_to(DIST).as_posix()
     if re.search(r'''<a\b(?:[^>"']|"[^"]*"|'[^']*')*\sdownload(?=[\s=>/])''',raw): errors.append(f'P2-G02 download offered while reuse terms are not assessed: {rel}')
     for m in re.finditer(r'<div class="eyebrow">([^<]+)</div>\s*<h[1-3][^>]*>([^<]+)</h[1-3]>',raw):
         if m.group(1).strip()==m.group(2).strip(): errors.append(f'P2-G03 label repeated as eyebrow and heading (read twice) {rel}: {m.group(1)[:40]}')
@@ -1954,7 +1954,7 @@ def _p3_nums(fragment):
     finally: _tmp.unlink()
 _p3_drawn={}
 for _f in sorted(DIST.rglob('*.html')):
-    _raw=_f.read_text(encoding='utf-8'); _rel=str(_f.relative_to(DIST))
+    _raw=_f.read_text(encoding='utf-8'); _rel=_f.relative_to(DIST).as_posix()
     _lang='ar' if _rel.startswith('ar/') else 'en'
     _figs=_p3_figures(_raw)
     # Nothing may draw outside a figure bound to a governed visual: that was this gate's original job and it keeps it.
@@ -2050,11 +2050,11 @@ for f in (DIST/'en').rglob('index.html'):
     if not af.exists(): continue
     en_s,ar_s=_scope_map(f.read_text(encoding='utf-8')),_scope_map(af.read_text(encoding='utf-8'))
     for vid,has in en_s.items():
-        if has and not ar_s.get(vid): errors.append(f'P3-G03 Arabic text alternative lacks the scope line English shows: {vid} {af.relative_to(DIST)}')
+        if has and not ar_s.get(vid): errors.append(f'P3-G03 Arabic text alternative lacks the scope line English shows: {vid} {af.relative_to(DIST).as_posix()}')
 for f in (DIST/'ar').rglob('*.html'):
     txt=re.sub(r'<[^>]+>',' ',f.read_text(encoding='utf-8'))
     # U+2192 is not mirrored in right-to-left text, so between numbers it points against the reading order; U+2190 reads correctly.
-    if re.search(r'\d[\d,.]*\s*\u2192\s*\d',txt): errors.append(f'P3-G04 right-pointing arrow between numbers in Arabic text: {f.relative_to(DIST)}')
+    if re.search(r'\d[\d,.]*\s*\u2192\s*\d',txt): errors.append(f'P3-G04 right-pointing arrow between numbers in Arabic text: {f.relative_to(DIST).as_posix()}')
 
 # ---------------------------------------------------------------------------------------------------------------------
 # Pre-Tranche-C P4 gates: one current-state story. Count statements in current-state documents must equal the derived
@@ -2162,9 +2162,9 @@ except Exception as _e:
 # P2-G03 (P4 re-verification N1/N2): no empty heading element; numbered sections start at 01 and run without gaps.
 for _f in DIST.rglob('*.html'):
     _raw=_f.read_text(encoding='utf-8')
-    if re.search(r'<h[1-6][^>]*>\s*</h[1-6]>',_raw): errors.append(f'P2-G03 empty heading element {_f.relative_to(DIST)}')
+    if re.search(r'<h[1-6][^>]*>\s*</h[1-6]>',_raw): errors.append(f'P2-G03 empty heading element {_f.relative_to(DIST).as_posix()}')
     _nums=[int(x) for x in re.findall(r'<div class="section-number">(\d+)</div>',_raw)]
-    if _nums and _nums!=list(range(1,len(_nums)+1)): errors.append(f'P2-G03 section numbering is not 01..n {_f.relative_to(DIST)}: {_nums[:4]}')
+    if _nums and _nums!=list(range(1,len(_nums)+1)): errors.append(f'P2-G03 section numbering is not 01..n {_f.relative_to(DIST).as_posix()}: {_nums[:4]}')
 
 # P2-G03 (P4 extension, V-D10): within one section the eyebrow never repeats a heading, adjacent or not.
 for _f in DIST.rglob('*.html'):
@@ -2173,7 +2173,7 @@ for _f in DIST.rglob('*.html'):
         _eb={_html.unescape(x).strip().rstrip('?؟').strip() for x in re.findall(r'<div class="eyebrow">([^<]+)</div>',_sec)}
         _hs={_html.unescape(x).strip().rstrip('?؟').strip() for x in re.findall(r'<h[1-3][^>]*>([^<]+)</h[1-3]>',_sec)}
         for _x in _eb & _hs:
-            errors.append(f'P2-G03 eyebrow repeats a heading in the same section {_f.relative_to(DIST)}: {_x[:40]}')
+            errors.append(f'P2-G03 eyebrow repeats a heading in the same section {_f.relative_to(DIST).as_posix()}: {_x[:40]}')
 
 # Tranche C permanent gates (TC-G01..TC-G05).
 # TC-G01 one owner, A == prohibited inference: a visual that is also an Evidence Record has one title and one "does not
@@ -2227,7 +2227,7 @@ try:
     _bad=[]
     for _p in C.rglob('*.json'):
         _s=_p.read_text(encoding='utf-8')
-        if _ud.normalize('NFC',_s)!=_s: _bad.append(str(_p.relative_to(ROOT)))
+        if _ud.normalize('NFC',_s)!=_s: _bad.append(_p.relative_to(ROOT).as_posix())
     if _bad: errors.append(f'R85-G04 governed content is not Unicode NFC: {_bad[:5]}')
 except Exception as _x:
     errors.append('R85-G04 unreadable '+repr(_x))
@@ -2241,18 +2241,18 @@ try:
     _priv=re.compile(r'sharepoint\.com|drive\.google\.com|docs\.google\.com|file://|/home/|/Users/|[A-Z]:\\\\|onedrive\.|dropbox\.|localhost|127\.0\.0\.1|1xAbdDHJd5bYo0Pzo|1iAxWukk1xeAXDPibmXXwGlaUXDcr_XvA',re.I)
     _mon=re.compile(r'\b(?:January|February|March|April|May|June|July|August|September|October|November|December)\b')
     for _f in list(DIST.rglob('*.html'))+list(DIST.rglob('*.json')):
-        _t=_f.read_text(encoding='utf-8'); _rel=_f.relative_to(DIST)
+        _t=_f.read_text(encoding='utf-8'); _rel=_f.relative_to(DIST).as_posix()
         _vis=_html.unescape(re.sub(r'<[^>]+>',' ',re.sub(r'<script.*?</script>','',_t,flags=re.S))) if _f.suffix=='.html' else _t
         for _rx,_g in ((_auth,'R85-G05 authoring/template token'),(_intl,'R85-G06 internal finding or transaction code'),(_priv,'R85-G07 private locator or machine path')):
             _m=_rx.search(_vis if _g.startswith('R85-G06') else re.sub(r'<script type="application/ld\+json">.*?</script>','',_t,flags=re.S))
             if _m: errors.append(f'{_g} in public build {_rel}: {_m.group(0)}')
-        if _f.suffix=='.html' and str(_rel).startswith('ar/'):
+        if _f.suffix=='.html' and _rel.startswith('ar/'):
             _mm=re.search(r'<main.*?</main>',re.sub(r'<script.*?</script>','',_t,flags=re.S),re.S)
             _mt=_mon.search(_html.unescape(re.sub(r'<[^>]+>',' ',_mm.group(0) if _mm else '')))
             if _mt: errors.append(f'R85-G08 Latin month name on an Arabic page {_rel}: {_mt.group(0)}')
     for _f in C.rglob('*.json'):
         _m=_priv.search(_f.read_text(encoding='utf-8'))
-        if _m: errors.append(f'R85-G07 private locator or machine path in governed content {_f.relative_to(ROOT)}: {_m.group(0)}')
+        if _m: errors.append(f'R85-G07 private locator or machine path in governed content {_f.relative_to(ROOT).as_posix()}: {_m.group(0)}')
     import subprocess as _sp2
     _r=_sp2.run([sys.executable,str(ROOT/'scripts/repository_manifest.py'),'--check'],capture_output=True,text=True)
     if _r.returncode!=0: errors.append('R85-G09 '+(_r.stdout.strip().splitlines() or ['repository manifest check failed'])[0])
@@ -2315,7 +2315,7 @@ try:
         if 'class="reading-card' in _idx: errors.append(f'RP-G02 Readings index renders a card wall {_L}')
         for _f in (DIST/_L).glob('*/index.html'):
             if _f.read_text(encoding='utf-8').count('data-domain-reading=')>2:
-                errors.append(f'RP-G04 more than two Readings on {_f.relative_to(DIST)}')
+                errors.append(f'RP-G04 more than two Readings on {_f.relative_to(DIST).as_posix()}')
     _bound={}
     for _r in _rds:
         for _x in (_r.get('claim_bindings') or [])+(_r.get('evidence_bindings') or [])+((_r.get('verification_bindings') or {}).get('claim_ids') or []):
@@ -2337,7 +2337,7 @@ try:
     for _p in _hay:
         _t=_p.read_text(encoding='utf-8')
         for _s in _RETIRED:
-            if _s in _t: errors.append(f'RP-G05 retired Reading copy "{_s[:50]}" in {_p.relative_to(ROOT) if str(_p).startswith(str(ROOT)) else _p}')
+            if _s in _t: errors.append(f'RP-G05 retired Reading copy "{_s[:50]}" in {_p.relative_to(ROOT).as_posix() if _p.is_relative_to(ROOT) else _p.as_posix()}')
     import subprocess as _sp
     _inv=_sp.run([sys.executable,str(ROOT/'audit/tranche_c/checks/bilingual_invariance.py')],capture_output=True,text=True)
     if _inv.returncode!=0: errors.append('RP-G06 bilingual numeric invariance: '+(_inv.stdout.strip().splitlines() or ['?'])[0])
@@ -2349,7 +2349,7 @@ for _L in ('en','ar'):
     for _f in (DIST/_L/'evidence').rglob('index.html'):
         _raw=_f.read_text(encoding='utf-8')
         if re.search(r'<article class="evidence-source-item"[^>]*><strong>SRC-',_raw):
-            errors.append(f'TC-G03 source named by its reference {_f.relative_to(DIST)}')
+            errors.append(f'TC-G03 source named by its reference {_f.relative_to(DIST).as_posix()}')
 # TC-G04 no generic imperative limitation in public "what not to conclude" fields (EN-07): part A of every record is declarative.
 for _oid,_e in (_tc_eo.items() if '_tc_eo' in dir() else []):
     _a=(_e.get('does_not_establish_en') or '').strip()
@@ -2449,7 +2449,7 @@ try:
     elif _sm.exists(): errors.append('F6-G03 sitemap.xml written without a public origin')
     _test=_DISC.sitemap_xml(_routes6,'https://example.org')
     _locs=re.findall(r'<loc>([^<]+)</loc>',_test)
-    _pages={('https://example.org/'+str(p.relative_to(DIST).parent).replace('\\','/')+'/') for L in ('en','ar') for p in (DIST/L).rglob('index.html') if 'data-moved-to=' not in p.read_text(encoding='utf-8')}   # RC-19: a retired address is not a page
+    _pages={('https://example.org/'+p.relative_to(DIST).parent.as_posix()+'/') for L in ('en','ar') for p in (DIST/L).rglob('index.html') if 'data-moved-to=' not in p.read_text(encoding='utf-8')}   # RC-19: a retired address is not a page
     if len(_locs)!=len(set(_locs)) or set(_locs)!=_pages: errors.append(f'F6-G03 sitemap coverage: {len(set(_locs))} locations for {len(_pages)} pages')
     if _test.count('hreflang="x-default"')!=len(_locs) or _test.count('<xhtml:link')!=3*len(_locs): errors.append('F6-G03 sitemap alternates incomplete')
     _nf=(DIST/'404.html').read_text(encoding='utf-8')
@@ -2457,7 +2457,7 @@ try:
     _root=(DIST/'index.html').read_text(encoding='utf-8')
     if 'hreflang="x-default" href="'+_DISC.url('/',_org)+'"' not in _root or re.search(r'<script>(?!\s*$)',_root): errors.append('F6-G05 root entry route: x-default links or inline script')
     for _f in DIST.rglob('*.html'):
-        _t=_f.read_text(encoding='utf-8'); _rel=_f.relative_to(DIST)
+        _t=_f.read_text(encoding='utf-8'); _rel=_f.relative_to(DIST).as_posix()
         for _rx,_why in ((r'<script[^>]+src="(?:https?:)?//',"external script"),(r'<link[^>]+rel="stylesheet"[^>]+href="(?:https?:)?//',"external stylesheet"),
                          (r'<img[^>]+src="(?:https?:)?//',"external image"),(r'<iframe',"frame"),(r'<form[\s>]',"form"),(r'@import|fonts\.googleapis|fonts\.gstatic',"external font"),
                          (r'\son[a-z]+="',"inline event handler"),(r'href="javascript:',"javascript: URL"),
@@ -2557,7 +2557,7 @@ try:
             if _skip(_c) or not re.search(r'/|\.(?:md|json|py|js|css|png|svg|xlsx|txt|yml|csv)$',_c): continue
             if '/' not in _c and _c in _names: continue          # a bare file name that exists in the repository
             if not ((ROOT/_c).exists() or (_f.parent/_c).exists() or (ROOT/'dist'/_c).exists()):
-                errors.append(f'R86-G04 {_f.relative_to(ROOT)} names a path that does not exist: {_c}')
+                errors.append(f'R86-G04 {_f.relative_to(ROOT).as_posix()} names a path that does not exist: {_c}')
 except Exception as _x:
     errors.append('R86-G unreadable '+repr(_x))
 
@@ -2571,14 +2571,14 @@ try:
         _cue=_html.escape(_ui4['UI-EXTERNAL-NEW-TAB'][f'label_{_lang}'],quote=False)
         _full=[(v['visual_id'],_html.escape(v['governed'].get(f'alt_text_{_lang}') or '',quote=False)) for v in _vdc4]
         for _f in sorted((DIST/_lang).rglob('index.html')):
-            _h=_f.read_text(encoding='utf-8'); _rel=_f.relative_to(DIST)
+            _h=_f.read_text(encoding='utf-8'); _rel=_f.relative_to(DIST).as_posix()
             # D5: every link that opens a new tab says so (a visually hidden cue, or at the end of its aria-label)
             for _m in _blank.finditer(_h):
                 if f'<span class="sr-only"> {_cue}</span>' not in _m.group(2) and not re.search(r'aria-label="[^"]* '+re.escape(_cue)+'"',_m.group(1)):
                     errors.append(f'RC-G4 new-tab link without its cue {_rel}'); break
             # A5 / C4: a retired contract is framed nowhere but its own record page
             for _vid in _retired:
-                if f'data-visual-id="{_vid}"' in _h and f'/evidence/{_vid}/' not in str(_rel).replace('\\','/')+'/':
+                if f'data-visual-id="{_vid}"' in _h and f'/evidence/{_vid}/' not in _rel+'/':
                     errors.append(f'RC-G4 retired contract {_vid} framed on {_rel}')
             # A3 / C3: no page prints a figure's full alt text (summary · label · inference); the boundary prints once, in the foot
             for _vid,_alt in _full:
@@ -2591,9 +2591,9 @@ try:
     for _f in sorted(DIST.rglob('*.html')):
         if '_export' in _f.parts or '_social' in _f.parts: continue
         _h=_f.read_text(encoding='utf-8')
-        if 'CauseWay_Master_Logo.png' in _h: errors.append(f'RC-G4 a page loads the master logo instead of a derivative: {_f.relative_to(DIST)}'); break
+        if 'CauseWay_Master_Logo.png' in _h: errors.append(f'RC-G4 a page loads the master logo instead of a derivative: {_f.relative_to(DIST).as_posix()}'); break
         _bad=sorted(set(re.findall(r'/assets/logo/(CauseWay_logo_\d+\.png)',_h))-_logos)
-        if _bad: errors.append(f'RC-G4 a page names a logo derivative that does not exist: {_f.relative_to(DIST)} {_bad}'); break
+        if _bad: errors.append(f'RC-G4 a page names a logo derivative that does not exist: {_f.relative_to(DIST).as_posix()} {_bad}'); break
     _js4=(ROOT/'site-src/app.js').read_text(encoding='utf-8')
     if "prompt.hidden=records.length>=2" not in _js4: errors.append('RC-G4 missing runtime contract: the Compare prompt only while fewer than two records are selected')
 except Exception as _x:
@@ -2618,7 +2618,7 @@ try:
             _h=_f.read_text(encoding='utf-8')
             if 'data-moved-to=' in _h: continue   # RC-19: a retired address leads on to its record; it is not a citable page
             if 'data-cite-text' not in _h or 'data-print' not in _h:
-                errors.append(f'RC-GB B9 page without its citation preview or print control {_f.relative_to(DIST)}'); break
+                errors.append(f'RC-GB B9 page without its citation preview or print control {_f.relative_to(DIST).as_posix()}'); break
     _jsB=(ROOT/'site-src/app.js').read_text(encoding='utf-8')
     for _tok,_lbl in (("T('UI-JS-COMPARE-NOT-OFFERED')",'B7 the selected-set sentence under the unknown-record error'),
                       ("preview.textContent.replace(/\\s+/g,' ').trim()",'B9 the copied citation is the previewed one'),
@@ -2659,7 +2659,7 @@ try:
     _nd=0
     for _f in sorted((DIST/'ar').rglob('*.html')):
         _p=_DateScan(); _p.feed(_f.read_text(encoding='utf-8')); _nd+=1
-        for _w,_v in _p.bad[:3]: errors.append(f'RC-DATES an Arabic page prints a digit-hyphen-digit run outside an isolate {_f.relative_to(DIST)} [{_w}] {_v!r}')
+        for _w,_v in _p.bad[:3]: errors.append(f'RC-DATES an Arabic page prints a digit-hyphen-digit run outside an isolate {_f.relative_to(DIST).as_posix()} [{_w}] {_v!r}')
     if _nd<140: errors.append(f'RC-DATES read only {_nd} Arabic pages')
     from yfie.text import ID_RUN as _ID_RUN   # noqa: E402
     if f'const ID_RUN=/{_ID_RUN.pattern}/g;' not in js:
@@ -2694,7 +2694,7 @@ try:
                     for _d, _mo, _y in _DAY_DATE.findall(_text):
                         _iso = f"{_y}-{_MONTHS[_mo]:02d}-{int(_d):02d}"
                         if _iso not in _drawn:
-                            errors.append(f"RC-A1 a chain figure's text alternative names a step its drawing lacks {_f.relative_to(DIST)} {_vid} {_d} {_mo} {_y}")
+                            errors.append(f"RC-A1 a chain figure's text alternative names a step its drawing lacks {_f.relative_to(DIST).as_posix()} {_vid} {_d} {_mo} {_y}")
     if _na1 < 4:
         errors.append(f"RC-A1 read only {_na1} chain-figure text alternatives")
 except Exception as _x:
@@ -2818,7 +2818,7 @@ try:
         if not _f.is_file() or _f.suffix.lower() in (".png", ".jpg", ".jpeg", ".webp", ".gif", ".ico", ".woff", ".woff2", ".ttf", ".otf", ".pdf", ".zip", ".gz", ".br"):
             continue
         try:
-            _texts.append((str(_f.relative_to(DIST)), _f.read_bytes().decode("utf-8")))
+            _texts.append((_f.relative_to(DIST).as_posix(), _f.read_bytes().decode("utf-8")))
         except UnicodeDecodeError:
             continue
     try:
@@ -3085,7 +3085,7 @@ try:
         for _t in re.findall(r"<title>(.*?)</title>", _head, re.S) + _HEADS.findall(_head) + re.findall(r"<h1[^>]*>(.*?)</h1>", _h, re.S):
             _s = _html.unescape(re.sub(r"<[^>]+>", "", _t))
             if _LATEST.search(_s) and not _DATED.search(_s):
-                errors.append(f"RC-LATEST an undated 'latest' in a title or description {_f.relative_to(DIST)}: {_s[:90]}")
+                errors.append(f"RC-LATEST an undated 'latest' in a title or description {_f.relative_to(DIST).as_posix()}: {_s[:90]}")
                 break
 except Exception as _x:
     errors.append("RC-LATEST unreadable " + repr(_x))
@@ -3140,13 +3140,13 @@ try:
         _tr = _nav.split("data-menu-trust", 1)[1].split("<button", 1)[0] if "data-menu-trust" in _nav else ""
         _hrefs = [re.sub(r"^/(en|ar)", "", x) for x in re.findall(r'href="([^"]+)"', _tr)]
         if _hrefs != _tn:
-            errors.append(f"RC-NAV {_f.relative_to(DIST)} the opened menu does not carry the trust links, About first: {_hrefs[:3]}")
+            errors.append(f"RC-NAV {_f.relative_to(DIST).as_posix()} the opened menu does not carry the trust links, About first: {_hrefs[:3]}")
         _mc = re.search(r'<button[^>]*data-menu-cite[^>]*>([^<]*)</button>', _nav)
         if not _mc or _html.unescape(_mc.group(1)) != _ucite[_l]:
-            errors.append(f"RC-NAV {_f.relative_to(DIST)} the opened menu lacks the governed cite control")
+            errors.append(f"RC-NAV {_f.relative_to(DIST).as_posix()} the opened menu lacks the governed cite control")
         _ctl = _h.split('<div class="controls">', 1)[1].split("</div>", 1)[0] if '<div class="controls">' in _h else ""
         if _ctl.count("data-cite") != 1 or "data-menu" in _ctl.replace("data-menu aria", ""):
-            errors.append(f"RC-NAV {_f.relative_to(DIST)} the header's controls changed")
+            errors.append(f"RC-NAV {_f.relative_to(DIST).as_posix()} the header's controls changed")
         _nnav += 1
     if _nnav < 100:
         errors.append(f"RC-NAV read only {_nnav} pages")
@@ -3169,7 +3169,7 @@ try:
             errors.append(f"RC-0950 /{_lang}/methodology/ does not print the reading rule once at #how-numbers")
         for _f in sorted((DIST / _lang).rglob("index.html")):
             _h = _f.read_text(encoding="utf-8")
-            _rel = "/" + str(_f.parent.relative_to(DIST / _lang)).replace("\\", "/").strip(".") + "/"
+            _rel = "/" + _f.parent.relative_to(DIST / _lang).as_posix().strip(".") + "/"
             _rel = "/" if _rel in ("//", "/./") else _rel.replace("//", "/")
             if _rel != "/methodology/" and _copy in _h:
                 errors.append(f"RC-0950 /{_lang}{_rel} prints the reading rule; it belongs on /methodology/ only")
@@ -3184,7 +3184,7 @@ try:
         _lines = _pv.count("data-cite-line")
         _src = ("Original sources" in _pv) or ("المصادر الأصلية" in _pv)
         if _src and (_lines != 2 or "data-cite-url" not in _pv.split("<br>", 1)[0]):
-            errors.append(f"RC-0950 {_f.relative_to(DIST)} the citation is not two lines with the page address ending the first")
+            errors.append(f"RC-0950 {_f.relative_to(DIST).as_posix()} the citation is not two lines with the page address ending the first")
         _two += _src
     if _two < 150:
         errors.append(f"RC-0950 only {_two} record citations name an original source")
@@ -3252,10 +3252,10 @@ try:
     for _f in sorted(DIST.rglob("*.html")):
         _h = _f.read_text(encoding="utf-8")
         if re.search(r'<(?!figure\b)[a-z]+ class="(?:[^"]* )?fig(?: [^"]*)?"', _h):
-            errors.append(f"RC-1115 {_f.relative_to(DIST)} an element other than a figure carries the .fig frame class")
+            errors.append(f"RC-1115 {_f.relative_to(DIST).as_posix()} an element other than a figure carries the .fig frame class")
         _ic = re.findall(r'<link rel="[^"]*icon[^"]*"[^>]*>', _h)
         if len(_ic) != 1 or 'href="/assets/logo/CauseWay_logo_32.png"' not in _ic[0]:
-            errors.append(f"RC-1115 {_f.relative_to(DIST)} does not carry exactly one icon link to the 32 px logo")
+            errors.append(f"RC-1115 {_f.relative_to(DIST).as_posix()} does not carry exactly one icon link to the 32 px logo")
         _nfr += 1
     if _nfr < 280:
         errors.append(f"RC-1115 read only {_nfr} pages")
@@ -3287,7 +3287,7 @@ try:
         _nq3 += 1
         _head = _h.split('<div class="head">', 1)[1].split('<h1', 1)[0] if '<div class="head">' in _h else ""
         if f'<div class="clock"><span class="k">{_q3.group(1)}</span><span class="v">{_q3.group(2)}</span></div>' not in _head:
-            errors.append(f"RC-1115 {_f.relative_to(DIST)} has a q3 section but no FOR WHOM clock before its h1")
+            errors.append(f"RC-1115 {_f.relative_to(DIST).as_posix()} has a q3 section but no FOR WHOM clock before its h1")
     if _nq3 < 200:
         errors.append(f"RC-1115 only {_nq3} records with a q3 section")
 except Exception as _x:
@@ -3328,7 +3328,7 @@ try:
                 yield _s
     for _f in sorted(list(DIST.rglob("*.html")) + list(DIST.rglob("*.json"))):
         if any(_fmj.search(_s) for _s in _units(_f)):
-            errors.append(f"RC-19 {_f.relative_to(DIST)} dates FMIIP to July 2025")
+            errors.append(f"RC-19 {_f.relative_to(DIST).as_posix()} dates FMIIP to July 2025")
     _moved = json.loads((ROOT / "site-src" / "hosting" / "moved_routes.json").read_text(encoding="utf-8"))["moved"]
     if not _moved:
         errors.append("RC-19 no retired record address is listed")
@@ -3359,7 +3359,7 @@ try:
                 errors.append(f"RC-19 a social image still stands for the retired address {_fr} ({_lang})")
             for _g in sorted((DIST / _lang).rglob("index.html")):
                 if _g != _pf and f'href="/{_lang}{_fr}"' in _g.read_text(encoding="utf-8"):
-                    errors.append(f"RC-19 {_g.relative_to(DIST)} still links the retired address {_fr}")
+                    errors.append(f"RC-19 {_g.relative_to(DIST).as_posix()} still links the retired address {_fr}")
                     break
     _nlang = 0
     for _f in sorted(DIST.glob("*/**/index.html")):
@@ -3386,7 +3386,7 @@ try:
     for _f in sorted(DIST.glob("*/evidence/*/index.html")):
         _q1 = re.search(r'<div class="qa first" id="q1">.*?<div class="st"><p>(.*?)</p>', _f.read_text(encoding="utf-8"), re.S)
         if _q1:
-            _blocks.append((str(_f.relative_to(DIST)), _q1.group(1)))
+            _blocks.append((_f.relative_to(DIST).as_posix(), _q1.group(1)))
     for _where, _b in _blocks:
         _txt = re.sub(r'<b class="fnum">', "\x01", _b)
         _txt = re.sub(r"<bdi\b.*?</bdi>", "x", _txt, flags=re.S)
@@ -3440,7 +3440,7 @@ try:
     _strict = {f"{_l}/evidence/{_i}/index.html" for _l in ("en", "ar") for _i in _fx} | \
               {f"{_l}/{_r}" for _l in ("en", "ar") for _r in ("people/index.html", "readings/gender-gap-measured-causes-open/index.html")}
     for _f in sorted(DIST.glob("*/**/index.html")) + sorted(DIST.glob("*/index.html")):
-        _rel = str(_f.relative_to(DIST))
+        _rel = _f.relative_to(DIST).as_posix()
         if not _rel.startswith(("en/", "ar/")):
             continue
         _txt = _visible(_f)
@@ -3462,7 +3462,7 @@ try:
             _nv += len(_vals)
             for _s in _vals:
                 if not re.fullmatch(r"\d+\.\d", _s.strip()):
-                    errors.append(f"E2-PREC {_f.relative_to(DIST)} VIS-FINDEX-GAPS prints {_s.strip()!r}, not one decimal place")
+                    errors.append(f"E2-PREC {_f.relative_to(DIST).as_posix()} VIS-FINDEX-GAPS prints {_s.strip()!r}, not one decimal place")
     if _nv < 40:
         errors.append(f"E2-PREC read only {_nv} drawn Findex values")
 except Exception as _x:
@@ -3486,7 +3486,7 @@ _FC_BOUNDS = {"CLM-002": ("3.2", "7.7", "14.6", "22.1", "8.5", "17.3"),
               "VIS-FINDEX-GAPS": ("2.2", "3.9", "4.0", "4.6")}
 try:
     for _f in sorted(DIST.glob("*/**/index.html")) + sorted(DIST.glob("*/index.html")):
-        _rel = str(_f.relative_to(DIST))
+        _rel = _f.relative_to(DIST).as_posix()
         if not _rel.startswith(("en/", "ar/")):
             continue
         _txt = _visible(_f)
@@ -3549,7 +3549,7 @@ except Exception as _x:
 try:
     _nctx = 0
     for _f in sorted(DIST.glob("*/**/index.html")) + sorted(DIST.glob("*/index.html")):
-        _rel = str(_f.relative_to(DIST))
+        _rel = _f.relative_to(DIST).as_posix()
         if not _rel.startswith(("en/", "ar/")):
             continue
         _h = re.sub(r"<(script|style)\b[^>]*>.*?</\1>", " ", _f.read_text(encoding="utf-8"), flags=re.S)
@@ -3622,7 +3622,7 @@ try:
     _ny = 0
     _ylg = {"en": "not how many firms could borrow", "ar": "لا عدد المنشآت التي تمكنت من الاقتراض"}
     for _f in sorted(DIST.glob("*/**/index.html")) + sorted(DIST.glob("*/index.html")):
-        _rel = str(_f.relative_to(DIST))
+        _rel = _f.relative_to(DIST).as_posix()
         if not _rel.startswith(("en/", "ar/")):
             continue
         _h = re.sub(r"<(script|style)\b[^>]*>.*?</\1>", " ", _f.read_text(encoding="utf-8"), flags=re.S)
@@ -3737,7 +3737,7 @@ try:
             _t = re.sub(r"\s+", " ", _html.unescape(re.sub(r"<[^>]+>", " ", re.sub(r"<(script|style)\b[^>]*>.*?</\1>", " ", _f.read_text(encoding="utf-8"), flags=re.S))))
             for _d in sorted(set(_e2_dates(_t.replace("⁦", "").replace("⁩", ""), _months))):
                 if _d not in _stated and _d not in _srcd:
-                    errors.append(f"E2-DATES {_f.relative_to(DIST)} prints the date {_d}, which no record, event or source states")
+                    errors.append(f"E2-DATES {_f.relative_to(DIST).as_posix()} prints the date {_d}, which no record, event or source states")
     if _np < 280:
         errors.append(f"E2-DATES read only {_np} pages")
 except Exception as _x:

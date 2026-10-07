@@ -157,7 +157,7 @@ def build():
     home_qs, explore_groups, question_dest = baseline_question_sets(ui_by_en)
 
     # Every projection file is classified.
-    have = sorted(str(p.relative_to(C)) for p in C.rglob("*.json"))
+    have = sorted(p.relative_to(C).as_posix() for p in C.rglob("*.json"))
     unclassified = [p for p in have if p not in PROJECTION_ROLES]
     missing = [p for p in PROJECTION_ROLES if p not in have]
     if unclassified or missing:
@@ -375,7 +375,7 @@ def main():
             sys.exit(1)
         print("HANDOFF INVENTORY CURRENT")
         return
-    OUT.write_text(text, encoding="utf-8")
+    OUT.write_text(text, encoding="utf-8", newline="\n")
     print(f"HANDOFF INVENTORY WRITTEN: {len(json.loads(text)['routes'])} routes")
 
 
