@@ -395,9 +395,10 @@ def data_sources(page: dict, shell: dict) -> str:
     regulatory = "".join(source_row(c, L) for c in page.get("regulatory") or [])
     reg_n = len(page.get("regulatory") or []) + len(page.get("regulatory_also") or [])
     reference = "".join(source_row(c, L) for c in page["reference"])
-    tool = (f'<section class="qa first" id="directory"><div>{rubric(L["directory"], tag="h2")}</div><div><p class="small">{esc(L["intro"])}</p><p class="small">{esc(L["rights_note"])}</p>'
+    tool = (f'<section class="qa first" id="directory"><div>{rubric(L["directory"], tag="h2")}</div><div>'
             f'<div class="search-inline"><input data-source-filter class="search-input" type="search" placeholder="{esc(L["filter_placeholder"])}" aria-label="{esc(L["filter"])}">'
             f'<div class="search-status" data-source-filter-status role="status" aria-live="polite"></div></div>'
+            f'<p class="small">{esc(L["intro"])}</p><p class="small">{esc(L["rights_note"])}</p>'
             + library_controls(page, L) +
             f'<p class="small reuse-once" data-reuse-terms>{esc(L["reuse_once"])}</p>'   # B8: the reuse terms, stated once above the list
             f'<h3 class="grp" id="curated">{esc(L["curated"])} <span class="count">({bdi(page["curated_count"])})</span></h3><div class="curated">{curated}</div>'

@@ -199,16 +199,53 @@ class Content:
     # ------------------------------------------------------------------------------------------------ shell
     def shell(self, lang: str, route: str) -> dict:
         other = "en" if lang == "ar" else "ar"
+        global_items = {item.get("route"): item for item in self.nav.get("global_navigation", []) if item.get("route")}
+
+        def nav_link(target: str, label: str, fragment: str = "") -> dict:
+            if target not in self.spec_by_route:
+                raise ValueError(f"Navigation route is not in the Page Specs: {target}")
+            return {"route": target, "label": label, "href": self.href(target, lang) + fragment,
+                    "active": route == target and not fragment}
+
+        explore_labels = (
+            ("/people/", "UI-LAND-DOM-PEOPLE"), ("/firms/", "UI-LAND-DOM-FIRMS"),
+            ("/finance/", "UI-LAND-DOM-FINANCE"), ("/payments/", "UI-LAND-DOM-PAYMENTS"),
+            ("/providers/", "UI-LAND-DOM-PROVIDERS"), ("/remittances/", "UI-LAND-DOM-REMITTANCES"),
+            ("/access/", "UI-LAND-DOM-ACCESS"), ("/reforms/", "UI-LAND-DOM-REFORMS"),
+        )
+        reading_links = []
+        for reading in self.readings:
+            target = str(reading.get("route") or "")
+            label = self.nav_label(target, lang)
+            if re.search(r"\d", label):
+                label = str(reading.get("reading_id") or label)
+            reading_links.append(nav_link(target, label))
+        nav_families = (
+            ("/explore/", [nav_link("/explore/", self.nav_label("/explore/", lang))] +
+             [nav_link(target, self.t(ui_id, lang)) for target, ui_id in explore_labels]),
+            ("/evidence/", [
+                nav_link("/evidence/", self.nav_label("/evidence/", lang)),
+                nav_link("/evidence/", self.t("UI-HUB-ALL-RECORDS", lang), "#all"),
+                nav_link("/evidence/compare/", self.loc(self.spec_by_route["/evidence/compare/"], "title", lang)),
+            ]),
+            ("/readings/", [nav_link("/readings/", self.nav_label("/readings/", lang))] +
+             reading_links),
+            ("/data/", [
+                nav_link("/data/", self.nav_label("/data/", lang)),
+                nav_link("/measurement/", self.nav_label("/measurement/", lang)),
+                nav_link("/methodology/", self.nav_label("/methodology/", lang)),
+            ]),
+        )
         nav = []
-        for item in self.nav.get("global_navigation", []):
-            kids = item.get("children") or []
-            entry = {"label": item.get(f"label_{lang}"), "route": item.get("route"), "children": [
-                {"label": k.get(f"label_{lang}"), "route": k.get("route"), "href": self.href(k.get("route"), lang),
-                 "active": self._active(k.get("route"), route)} for k in kids]}
-            if item.get("route"):
-                entry["href"] = self.href(item.get("route"), lang)
-                entry["active"] = self._active(item.get("route"), route)
-            nav.append(entry)
+        for root, children in nav_families:
+            item = global_items.get(root)
+            if item is None:
+                raise ValueError(f"Navigation family is missing from the navigation contract: {root}")
+            active = (route == "/" and root == "/explore/") or any(
+                self._active(child["route"], route) for child in children
+            )
+            nav.append({"route": root, "href": self.href(root, lang), "label": item.get(f"label_{lang}"),
+                        "active": active, "children": children})
         trust = [{"label": t.get(f"label_{lang}"), "href": self.href(t.get("route"), lang), "active": self._active(t.get("route"), route)}
                  for t in self.nav.get("trust_navigation", [])]
         footer = [{"label": g.get(f"label_{lang}"), "links": [{"label": l.get(f"label_{lang}"), "href": self.href(l.get("route"), lang)}

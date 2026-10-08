@@ -8,10 +8,12 @@ sys.path.insert(0,str(ROOT/'audit/tranche_c/checks'))
 import bilingual_invariance as _BI   # one number-normalisation rule for every content and visual check
 errors=[]; warns=[]
 class P(HTMLParser):
-    def __init__(self): super().__init__(); self.links=[]; self.lang=None; self.dir=None; self.current=set()
+    def __init__(self): super().__init__(); self.links=[]; self.lang=None; self.dir=None; self.current=set(); self.locations=set()
     def handle_starttag(self,tag,attrs):
         a=dict(attrs)
         if tag=='html': self.lang=a.get('lang'); self.dir=a.get('dir')
+        if tag=='summary' and a.get('aria-current')=='location' and a.get('data-nav-route'):
+            self.locations.add(a['data-nav-route'])
         if tag=='a' and a.get('href'):
             self.links.append(a['href'])
             # The active destination, read as an attribute pair rather than as one literal string: attribute order is
@@ -50,8 +52,12 @@ for lang,dirv in [('ar','rtl'),('en','ltr')]:
         title=o.get('title_'+lang) or ''
         if title and title not in _html.unescape(t): errors.append(f'title missing {o.get("route")} {lang}')
         top=str(o.get('route','/')).strip('/').split('/',1)[0]
-        if top in {'explore','evidence','readings','data','methodology','about'} and f'/{lang}/{top}/' not in p.current:
-            errors.append(f'active navigation missing aria-current {o.get("route")} {lang}')
+        if top in {'explore','evidence','readings','data','methodology','measurement'}:
+            family='data' if top in {'data','methodology','measurement'} else top
+            if f'/{lang}/{family}/' not in p.locations:
+                errors.append(f'active navigation family missing aria-current {o.get("route")} {lang}')
+        elif top=='about' and f'/{lang}/{top}/' not in p.current:
+            errors.append(f'active trust navigation missing aria-current {o.get("route")} {lang}')
         for x in ['NOT_STARTED__','governed_claims','governed_evidence_objects','INTERNAL_ONLY','WITHHOLD']:
             if x in t: errors.append(f'backend/control leak {x} in {f}')
         for href in p.links:
@@ -1175,7 +1181,7 @@ if re.search(r'\.controls\s*\{[^}]*display\s*:\s*none',css) or re.search(r'\.con
     errors.append('S05.2 header utilities hidden by the stylesheet at some width')
 
 for token,label in [
-    ("if(open){\n    const first=n.querySelector('a[href],button:not([disabled])');",'menu focus-forward on open'),
+    ("if(open){\n    const first=n.querySelector('.nav-family > summary')||n.querySelector('a[href],button:not([disabled])');",'menu focus-forward on open'),
     ("if(e.key==='Escape'",'Escape menu close/return path'),
     ("dialog.addEventListener('close'",'search return-focus path'),
     ('announceUtility(copied)','copy-action assistive feedback'),

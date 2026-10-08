@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-"""Tranche C public-tool acceptance at 320, 390, 640 (≈ 200% zoom of 1280) and 1440 CSS px, in both languages.
+"""Tranche C public-tool acceptance at narrow, transition, tablet and desktop widths, in both languages.
 
   python3 audit/tranche_c/checks/viewport_acceptance.py [out.json]
   YFIE_SITE_DIR=design/reference/out python3 audit/tranche_c/checks/viewport_acceptance.py   (another built site)
@@ -12,9 +12,9 @@ import functools, http.server, json, os, socket, sys, threading
 ROOT = os.path.abspath(os.path.join(os.path.dirname(__file__), "..", "..", ".."))
 DIST = os.path.join(ROOT, os.environ.get("YFIE_SITE_DIR") or "dist")   # F9: the reference implementation is tested unchanged
 PAGES = ["/", "/explore/", "/people/", "/payments/", "/remittances/", "/providers/", "/access/", "/finance/", "/firms/", "/reforms/",
-         "/evidence/", "/evidence/CLM-001/", "/evidence/CLM-019/", "/evidence/VIS-PAYMENT-ANATOMY/", "/evidence/compare/", "/data/",
+         "/evidence/", "/evidence/CLM-001/", "/evidence/CLM-019/", "/evidence/VIS-PAYMENT-ANATOMY/", "/evidence/compare/", "/data/", "/rights/",
          "/readings/same-year-different-number/", "/readings/from-rail-to-result-missing-middle/", "/methodology/", "/measurement/", "/about/"]
-WIDTHS = [320, 390, 640, 1440]
+WIDTHS = [320, 390, 640, 900, 960, 1100, 1440]
 
 
 def serve():
@@ -41,6 +41,14 @@ def main():
                     res = page.evaluate("""() => {
                       const d=document.documentElement;
                       const over=d.scrollWidth-d.clientWidth;
+                      const bar=document.querySelector('.bar-in');
+                      const br=bar.getBoundingClientRect();
+                      const headerOverflow=[...bar.children].some(e=>{
+                        if(getComputedStyle(e).display==='none')return false;
+                        const r=e.getBoundingClientRect();
+                        return r.left<br.left-1||r.right>br.right+1;
+                      })||[...bar.querySelectorAll('.nav,.controls')].some(e=>
+                        getComputedStyle(e).display!=='none'&&e.scrollWidth>e.clientWidth+1);
                       const imgs=[...document.images].filter(i=>!i.hasAttribute('alt')).length;
                       const h1=document.querySelectorAll('h1').length;
                       const dir=d.getAttribute('dir');
@@ -54,12 +62,13 @@ def main():
                         const box=['paddingTop','paddingBottom','paddingLeft','paddingRight','marginTop','marginBottom','borderTopWidth','borderBottomWidth'].some(k=>parseFloat(c[k])>0)||c.backgroundColor!=='rgba(0, 0, 0, 0)'||c.backgroundImage!=='none';
                         const tall=e.classList.contains('fnum')&&[...e.getClientRects()].some(r=>r.height>lh*1.25+2);
                         return box||tall;}).slice(0,3).map(e=>e.className+':'+e.textContent.trim().slice(0,20));
-                      return {over,imgs,h1,dir,sb,wide,boxed};
+                      return {over,headerOverflow,imgs,h1,dir,sb,wide,boxed};
                     }""")
+                    page.evaluate("document.activeElement.blur()")
                     page.keyboard.press("Tab")
                     first = page.evaluate("document.activeElement && document.activeElement.className")
                     rows.append({"width": w, "lang": lang, "route": r, **res, "first_tab": first,
-                                 "ok": res["over"] <= 1 and res["imgs"] == 0 and not res["boxed"] and res["h1"] == 1 and first == "skip"
+                                 "ok": res["over"] <= 1 and not res["headerOverflow"] and res["imgs"] == 0 and not res["boxed"] and res["h1"] == 1 and first == "skip"
                                        and (res["dir"] == ("rtl" if lang == "ar" else "ltr"))})
             ctx.close()
         b.close()

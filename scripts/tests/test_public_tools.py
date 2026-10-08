@@ -306,6 +306,16 @@ def t_measurement_anchor(page, base):
 
 
 # ------------------------------------------------------------------------------------------------ Sources, language, records
+@test("sources: directory search precedes explanatory detail")
+def t_source_search_first(page, base):
+    page.goto(base + "/en/data/")
+    assert page.evaluate("""() => {
+      const input=document.querySelector('#directory [data-source-filter]');
+      const copy=document.querySelector('#directory .small');
+      return !!input&&!!copy&&!!(input.compareDocumentPosition(copy)&Node.DOCUMENT_POSITION_FOLLOWING);
+    }""")
+
+
 @test("sources: a deep link opens and focuses its source card")
 def t_source_deeplink(page, base):
     page.goto(base + "/en/data/")
@@ -506,6 +516,74 @@ def t_menu(page, base):
     page.keyboard.press("Escape")
     assert page.get_attribute("[data-menu]", "aria-expanded") == "false"
     assert page.evaluate("document.activeElement.matches('[data-menu]')")
+    page.keyboard.press("Space")
+    assert page.get_attribute("[data-menu]", "aria-expanded") == "true"
+    page.keyboard.press("Escape")
+    assert page.get_attribute("[data-menu]", "aria-expanded") == "false"
+
+
+@test("a11y: mobile menu closes when desktop navigation breakpoint is crossed")
+def t_menu_breakpoint(page, base):
+    page.set_viewport_size({"width": 899, "height": 844})
+    page.goto(base + "/en/")
+    page.click("[data-menu]")
+    assert page.get_attribute("[data-menu]", "aria-expanded") == "true"
+    page.set_viewport_size({"width": 900, "height": 844})
+    assert page.get_attribute("[data-menu]", "aria-expanded") == "false"
+    assert not page.evaluate("document.querySelector('#primary-nav').classList.contains('open')")
+
+
+@test("navigation: four hierarchical families use existing routes in both editions")
+def t_navigation_families(page, base):
+    expected = {
+        "en": ["Explore", "Evidence", "Evidence Readings", "Data & sources"],
+        "ar": ["استكشف", "الأدلة", "قراءات الأدلة", "البيانات والمصادر"],
+    }
+    for lang, labels in expected.items():
+        page.goto(f"{base}/{lang}/")
+        groups = page.locator("#primary-nav > .nav-family")
+        assert groups.count() == 4, groups.count()
+        assert groups.locator("summary").all_text_contents() == labels
+        for group in groups.all():
+            for link in group.locator(".nav-submenu a").all():
+                href = urlsplit(link.get_attribute("href")).path
+                assert href.startswith(f"/{lang}/"), href
+                response = page.request.get(urljoin(base, href))
+                assert response.status == 200, (lang, href, response.status)
+        evidence = groups.nth(1).locator(".nav-submenu a").evaluate_all(
+            "(links) => links.map(a => a.getAttribute('href'))"
+        )
+        assert evidence[0].endswith("/evidence/") and evidence[1].endswith("/evidence/#all")
+        assert evidence[2].endswith("/evidence/compare/")
+
+
+@test("navigation: sticky header, active family, dropdown and Escape work without overflow")
+def t_navigation_desktop(page, base):
+    for lang, route in (("en", "people/"), ("ar", "people/")):
+        page.goto(f"{base}/{lang}/{route}")
+        for width in (1440, 1200, 1100, 960, 900, 390):
+            page.set_viewport_size({"width": width, "height": 844})
+            metrics = page.evaluate("""() => ({
+              overflow: document.documentElement.scrollWidth > document.documentElement.clientWidth,
+              position: getComputedStyle(document.querySelector('.bar')).position,
+              direction: getComputedStyle(document.documentElement).direction,
+              active: document.querySelector('.nav-family > summary[aria-current="location"]')?.textContent.trim()
+            })""")
+            assert not metrics["overflow"], (lang, width, metrics)
+            assert metrics["position"] == "sticky", (lang, width, metrics)
+            assert metrics["direction"] == ("rtl" if lang == "ar" else "ltr"), metrics
+            assert metrics["active"], metrics
+        page.set_viewport_size({"width": 1440, "height": 844})
+        summary = page.locator("#primary-nav .nav-family").first.locator("summary")
+        summary.focus()
+        page.keyboard.press("Enter")
+        assert page.locator("#primary-nav .nav-family").first.get_attribute("open") is not None
+        page.keyboard.press("Escape")
+        assert page.locator("#primary-nav .nav-family[open]").count() == 0
+        assert summary.evaluate("(e) => e === document.activeElement")
+        page.keyboard.press("Space")
+        assert page.locator("#primary-nav .nav-family[open]").count() == 1
+        page.keyboard.press("Escape")
 
 
 def tab_to(page, selector: str, limit: int = 900) -> bool:

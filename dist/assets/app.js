@@ -15,27 +15,58 @@ const TYPE_LABEL_UI={"page": "UI-JS-TYPE-PAGE", "question": "UI-JS-TYPE-QUESTION
 
 function closeMenu(returnFocus=false){
   const n=$('#primary-nav'), b=$('[data-menu]');
+  closeNavFamilies();
   if(n)n.classList.remove('open');
   if(b){b.setAttribute('aria-expanded','false'); if(returnFocus)b.focus();}
 }
+function closeNavFamilies(except=null){
+  $$('#primary-nav .nav-family[open]').forEach(d=>{if(d!==except)d.open=false;});
+}
 // R-05: the menu is a link to the footer navigation, so it works without JavaScript; here it becomes the disclosure button.
 $$('[data-menu]').forEach(b=>{if(b.tagName==='A')b.setAttribute('role','button');});
+$$('[data-menu]').forEach(b=>b.addEventListener('keydown',e=>{
+  if(e.key!=='Enter'&&e.key!==' ')return;
+  e.preventDefault();
+  b.click();
+}));
 $$('[data-menu]').forEach(b=>b.addEventListener('click',e=>{
   const n=$('#primary-nav'); if(!n)return;
   e.preventDefault();
   const open=n.classList.toggle('open');
   b.setAttribute('aria-expanded',String(open));
   if(open){
-    const first=n.querySelector('a[href],button:not([disabled])');
+    const first=n.querySelector('.nav-family > summary')||n.querySelector('a[href],button:not([disabled])');
     if(first)requestAnimationFrame(()=>first.focus());
   }
 }));
+$$('#primary-nav .nav-family > summary').forEach(s=>s.addEventListener('keydown',e=>{
+  if(e.key!=='Enter')return;
+  e.preventDefault();
+  s.click();
+}));
+$$('#primary-nav .nav-family').forEach(d=>d.addEventListener('toggle',()=>{if(d.open)closeNavFamilies(d);}));
 $$('#primary-nav a').forEach(a=>a.addEventListener('click',()=>closeMenu(false)));
-document.addEventListener('keydown',e=>{if(e.key==='Escape'&&$('#primary-nav')?.classList.contains('open'))closeMenu(true);});
+document.addEventListener('keydown',e=>{
+  if(e.key==='Escape'){
+    const n=$('#primary-nav'),open=$$('#primary-nav .nav-family[open]');
+    if(n?.classList.contains('open')){closeNavFamilies();closeMenu(true);return;}
+    if(open.length){closeNavFamilies();open[0].querySelector('summary')?.focus();}
+  }
+});
 // TOOL-04: the open menu closes when focus leaves it and its button.
-document.addEventListener('focusin',e=>{const n=$('#primary-nav'),b=$('[data-menu]');if(!n?.classList.contains('open'))return;if(n.contains(e.target)||b?.contains(e.target))return;closeMenu(false);});
-window.addEventListener('resize',()=>{if(window.innerWidth>960)closeMenu(false);});
-document.addEventListener('click',e=>{const n=$('#primary-nav'),b=$('[data-menu]');if(!n?.classList.contains('open'))return;if(n.contains(e.target)||b?.contains(e.target))return;closeMenu(false);});
+document.addEventListener('focusin',e=>{
+  const n=$('#primary-nav'),b=$('[data-menu]');
+  if(n?.classList.contains('open')&&!n.contains(e.target)&&!b?.contains(e.target))closeMenu(false);
+  const open=$$('#primary-nav .nav-family[open]');
+  if(open.length&&!open.some(d=>d.contains(e.target)))closeNavFamilies();
+});
+window.addEventListener('resize',()=>{if(window.innerWidth>=900)closeMenu(false);});
+document.addEventListener('click',e=>{
+  const n=$('#primary-nav'),b=$('[data-menu]');
+  if(!n?.contains(e.target))closeNavFamilies();
+  if(!n?.classList.contains('open')||n.contains(e.target)||b?.contains(e.target))return;
+  closeMenu(false);
+});
 
 // R-05: the switch is a link to the same route in the other edition; here it also keeps the query and the anchor
 // (a Compare selection, a section) and stores the choice.
