@@ -675,3 +675,31 @@ Process note — V1 branch name (2026-10-09): V1 is developed and pushed on `cla
 branch this execution environment may push, created at `main` `7557866e99c390a6db2fd63ca4a5c63a86ef7e3e`, instead of the
 `design/integration-v1` name the owner's message plans; the convention of D1–D7. One gate, one branch, one pull
 request. No design meaning attaches to the name. Acceptance is the owner's.
+
+## Raised at V1 phase 2 (9 October 2026)
+
+Raised by the V1 gate's phase 2 (`DESIGN_INTEGRATION_V1.md`, DL-V1-009…012): each would let disclosure go further than
+the present contracts allow. None is applied; no controlled contract or Master row is edited.
+
+- `ESCALATE_TO_STEWARD (controlled contract, proposal not applied) — presentation_priority.json — Home (/) has no
+  Orientation entry, so no disclosure tier exists for it; a renderer-only tier would be a second contract. Proposed
+  minimal addition (section orders as Home renders them today): {"route": "/", "page_family": "Orientation",
+  "primary": [{"kind":"section","section_order":3},{"kind":"section","section_order":9}], "supporting":
+  [{"kind":"section","section_order":4}], "always_visible_boundaries": [{"kind":"section","section_order":4}],
+  "progressive": [{"kind":"section","section_order":5},{"kind":"section","section_order":6},
+  {"kind":"section","section_order":7},{"kind":"section","section_order":8}], "first_load_exclusions": (the same four),
+  "mobile_priority": [{"kind":"lead"},{"kind":"primary","position":1},{"kind":"supporting","position":1}]} — with the
+  validator's Orientation shape check and the renderer reading it (Code, after the steward's change). Section 4 ("What
+  should not be inferred?") stays always visible: it is a boundary, and the owner's message listing it among the named
+  disclosures conflicts with the semantic firewall; the owner decides. Estimated effect on a phone: about −4 screens.`
+- `NEEDS_CONTROLLED_CONTENT — /finance/ — a summary label for the chronology list (EN/AR, e.g. a count phrase of
+  "dated events") distinct from UI-CHRONOLOGY-H, which is already the section's heading there — with it the 24-event list
+  becomes the same disclosure as on /data/ (about −15 screens on a phone).`
+- `NEEDS_CONTROLLED_CONTENT — /data/ source register — a summary label for a source row's detail (EN/AR, e.g. "About this
+  source") — with it a row on a phone shows title, publisher, reference, the boundary line and the cite controls, and the
+  description opens on demand; DEBT-011's locator-only path stays outside any disclosure. The steward also decides
+  whether a source's "Does not establish" line may sit inside that detail (proposed: no).`
+- `ESCALATE_TO_STEWARD (controlled contract, question) — presentation_priority.json — domain answers: the always-visible
+  band (supporting tier) and the primary figure are first-load by contract; on /people/ they are ≈ 1.3 and ≈ 4.6 phone
+  screens. Shorter first loads need a contract decision (for instance, the band's second boundary as progressive), not a
+  renderer choice.`

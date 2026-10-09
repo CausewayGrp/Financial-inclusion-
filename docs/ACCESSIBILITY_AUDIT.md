@@ -2,7 +2,7 @@
 
 **Status:** AUDIT RECORD — NOT A CONFORMANCE CLAIM. Machine-checkable outcomes only. Screen readers in Arabic and English, and every judgement a person must make, are outstanding (see 'outstanding_for_a_human_auditor'). The Accessibility page states no result.
 
-Measured 2026-10-09 on `7557866e99c3`, with `scripts/accessibility_audit.py`: 284 pages (142 routes in both languages) at 1440 px and 390 px, plus a 320 px reflow pass, reduced motion, images off, and a keyboard walk. The general ruleset is `axe-core@4.10.2` (SHA-256 `b511cd9dec01c76f…`).
+Measured 2026-10-09 on `6f2b10d41d7f`, with `scripts/accessibility_audit.py`: 284 pages (142 routes in both languages) at 1440 px and 390 px, plus a 320 px reflow pass, reduced motion, images off, and a keyboard walk. The general ruleset is `axe-core@4.10.2` (SHA-256 `b511cd9dec01c76f…`).
 
 ## What the general ruleset found
 
@@ -14,7 +14,7 @@ Nothing.
 |---|---|---|
 | Keyboard access | 2.1.1, 2.1.2, 2.4.3 | skip link first and moves focus into `main`; menu and dialog close on Escape and return focus; no keyboard trap |
 | Visible focus | 2.4.7, 2.4.11 | `3px` outline, offset `3px`; focused target clear of the sticky bar |
-| Target size | 2.5.8 | 20054 measured; 393 under 24 × 24 px, of which 280 meet the criterion's inline exception and 113 its spacing exception — **0** meet neither |
+| Target size | 2.5.8 | 20062 measured; 393 under 24 × 24 px, of which 280 meet the criterion's inline exception and 113 its spacing exception — **0** meet neither |
 | Reflow | 1.4.4, 1.4.10 | 320 px (400 % of 1280 px): 0 routes overflow in English, 0 in Arabic |
 | Names | 4.1.2, 1.3.1, 2.4.6 | 0 interactive elements and 0 landmarks without a name |
 | Labels | 3.3.1, 3.3.2 | 0 controls without a label |

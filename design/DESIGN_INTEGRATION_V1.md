@@ -1,6 +1,6 @@
 # V1 design integration — gate record
 
-Status: **V1 PHASE 1 (SCREEN STYLESHEET) BUILT — FOR THE OWNER'S VISUAL REVIEW — NOT ACCEPTED.** The D7 package remains
+Status: **V1 PHASE 1 (SCREEN STYLESHEET) AND PHASE 2 (DISCLOSURE AND DENSITY) BUILT — FOR THE OWNER'S VISUAL REVIEW — NOT ACCEPTED.** The D7 package remains
 the accepted design (`audit/OWNER_DECISIONS_2026-10-02.md`, row D7). This gate changes the presentation of that
 accepted structure; it does not inherit D7's acceptance. Acceptance is the owner's, recorded by the owner in a dated
 `audit/OWNER_DECISIONS_*.md` record when it is given. Nothing here declares DESIGN HANDOFF READY anew, PUBLIC RELEASE
@@ -94,6 +94,38 @@ plans — the convention of D1–D7 (`ESCALATIONS.md`, process notes). One gate,
 - The dependency disclosures of `/data/` measured 22 px with close neighbours (12 targets meeting neither 2.5.8
   exception, present on `main` too); they take the 24 px minimum the D2 rule already gives their siblings.
 
+### DL-V1-009 · Phase 2: disclosure where the renderer owns the depth, with governed labels only
+- The owner's mission of 9 October 2026 (content-page redesign with progressive disclosure) authorises renderer and
+  HTML changes that keep every governed text, route, ID, hook and contract tier. The section tiers of
+  `presentation_priority.json` (primary, always-visible band, the one progressive disclosure) are the steward's and are
+  untouched; the validator's S03 and S04.1 shape checks still pass unchanged.
+- Domain answers: the depth figures (`#views`, the views beside no first-screen answer, placed by the renderer's own
+  `SMALL_MULTIPLES` and the bound visuals) are one disclosure. Its summary is the governed label that used to head them
+  (`UI-DOM-A-VIEW-THAT-CHANGES-UNDERSTANDING`) with the number of views; the contract's primary visual stays first-load.
+  Every figure keeps its visible text alternative once opened, and prints in full (D6).
+- `/data/`: the dated chronology list is one disclosure; its summary is the governed heading already printed there
+  (`UI-CHRONOLOGY-H`) with the number of events, and the section heading and body stay first-load. The source register
+  is not collapsed: the locator-only path of DEBT-011 stays reachable without opening anything.
+- No new public literal (`audit/PUBLIC_LITERAL_CLOSURE.json` unchanged: 14,563 records, 0 unresolved).
+
+### DL-V1-010 · One disclosure pattern
+- Every governed disclosure (the new folds, the domain and record `details.more`, the hub, group and dependency
+  disclosures) reads the same: a named bar at least 44–48 px high whose whole width is the control, a `+`/`−` box in
+  green-700 (decorative; its alternative text is empty), sage-100 when open or hovered, focus as everywhere else. The
+  native `details` element keeps keyboard operation, the exposed expanded state and no-JavaScript behaviour.
+
+### DL-V1-011 · Orientation on a phone
+- Below 900 px the in-page index (`nav.strip`, the same links in the same order) becomes one horizontally scrolling row
+  of chips under the head instead of a vertical list; each label is clamped to two lines in the chip and stays whole in
+  the section it opens. The document never scrolls sideways (the row scrolls within itself).
+
+### DL-V1-012 · Density by width
+- Tablet (600–899 px, still one column): bound records, measurement cards and Readings sit two to a row.
+- Desktop (≥ 1200 px): a source in the register reads as a row — title, publisher, reference and reuse state on the
+  left; what it is for, what it does not establish and how to reach it on the right; its dependency disclosures below.
+- Desktop keeps the sticky index beside the page; nothing on desktop is collapsed that is open on a phone, and nothing
+  is open on a phone that is hidden on desktop (one DOM, one disclosure state for every width).
+
 ## 3. Not built in this phase, and why
 
 | Brief item | Blocked by | Where |
@@ -106,6 +138,9 @@ plans — the convention of D1–D7 (`ESCALATIONS.md`, process notes). One gate,
 | "≠" between Home's figure cards | A governed glyph or label | same |
 | Latin display serif; Arabic Bold 700 | Font rules (owner); the Arabic cold-page budget (A1) | same |
 | Methodology dark rule cards; Explore green rail; Evidence directory facets and Compare tray | Markup and governed facet fields (EAD-07) | same |
+| Home's named disclosures ("different moments", "rule to result", "gaps", "challenge") | No Orientation entry in `presentation_priority.json` (steward); a renderer-only tier would be a second contract | `ESCALATIONS.md`, V1 phase 2 |
+| `/finance/` chronology as a disclosure | Its heading is `UI-CHRONOLOGY-H` itself; a summary needs a second governed label | same |
+| A shorter source row on phones (description on demand) | A governed summary label for the row's detail | same |
 
 ## 4. Evidence
 
@@ -121,3 +156,28 @@ plans — the convention of D1–D7 (`ESCALATIONS.md`, process notes). One gate,
   widths; 0 axe rules violated; 0 contrast failures; 2.5.8: 0 targets meeting neither exception; 320 px reflow: 0
   routes overflow. No conformance is claimed.
 - Gates: see `ESCALATIONS.md`, V1, and the pull request for the run on the final commit.
+
+## 5. Phase 2 evidence (9 October 2026)
+
+Conditions: Chromium 141.0.7390.37 (Playwright 1.56, `chromium-1194`), the built `dist/` served locally, self-hosted fonts
+loaded (`document.fonts.ready`), JavaScript on, every disclosure in its default state; page height ÷ viewport height.
+"main" is `7557866`, "P1" is phase 1 (`6f2b10d`), "now" is phase 2.
+
+| Route | 390 × 844 main → P1 → now | 768 × 1024 main → P1 → now | 1440 × 900 main → P1 → now |
+|---|---|---|---|
+| `/ar/` | 10.8 → 10.9 → 10.5 | 6.4 → 6.4 → 6.1 | 6.5 → 6.6 → 6.6 |
+| `/en/` | 10.3 → 10.7 → 10.3 | 5.9 → 6.0 → 5.8 | 6.3 → 6.5 → 6.5 |
+| `/ar/people/` | 16.9 → 17.0 → 15.3 | 9.5 → 9.6 → 8.6 | 10.7 → 10.8 → 10.2 |
+| `/en/people/` | 15.6 → 15.9 → 14.2 | 8.6 → 8.7 → 7.9 | 9.9 → 10.0 → 9.4 |
+| `/ar/data/` | 77.8 → 73.5 → 57.2 | 50.9 → 47.8 → 39.4 | 65.6 → 62.0 → 44.5 |
+| `/en/data/` | 72.5 → 71.1 → 55.6 | 45.5 → 44.3 → 36.5 | 59.6 → 58.3 → 42.0 |
+| `/ar/payments/` | 30.9 → 31.0 → 19.9 | 18.1 → 18.0 → 11.5 | 20.9 → 20.8 → 13.5 |
+| `/ar/firms/` | 20.5 → 20.4 → 16.7 | 11.4 → 11.4 → 9.7 | 13.5 → 13.6 → 11.6 |
+| `/ar/finance/` | 31.9 → 31.9 → 31.0 | 17.2 → 17.1 → 16.5 | 25.9 → 25.8 → 25.7 |
+| `/ar/evidence/CLM-001/` | 8.0 → 7.8 → 7.5 | 4.6 → 4.5 → 4.4 | 4.4 → 4.4 → 4.4 |
+
+The brief's targets (Home ≤ 5, domains ≤ 6 before the disclosures, `/data/` ≤ 8 phone screens) are not reached and
+cannot be inside the present contracts: Home has no disclosure tier, a domain's always-visible band and primary figure
+are first-load by contract, and `/data/`'s register must stay open (DEBT-011). The proposals that would reach further
+are in `ESCALATIONS.md`, "Raised at V1 phase 2".
+

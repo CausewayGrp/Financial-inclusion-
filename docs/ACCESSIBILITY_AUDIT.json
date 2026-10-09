@@ -231,7 +231,7 @@
    "dir": "ltr",
    "lang": "en",
    "contrast_failures": [],
-   "targets_measured": 915
+   "targets_measured": 916
   },
   "en/evidence/": {
    "targets": [],
@@ -5550,7 +5550,7 @@
    "dir": "ltr",
    "lang": "en",
    "contrast_failures": [],
-   "targets_measured": 88
+   "targets_measured": 89
   },
   "en/measurement/": {
    "targets": [],
@@ -5674,7 +5674,7 @@
    "dir": "ltr",
    "lang": "en",
    "contrast_failures": [],
-   "targets_measured": 106
+   "targets_measured": 107
   },
   "en/people/": {
    "targets": [],
@@ -5712,7 +5712,7 @@
    "dir": "ltr",
    "lang": "en",
    "contrast_failures": [],
-   "targets_measured": 101
+   "targets_measured": 102
   },
   "en/privacy/": {
    "targets": [
@@ -6515,7 +6515,7 @@
    "dir": "rtl",
    "lang": "ar",
    "contrast_failures": [],
-   "targets_measured": 915
+   "targets_measured": 916
   },
   "ar/evidence/": {
    "targets": [],
@@ -10374,7 +10374,7 @@
    "dir": "rtl",
    "lang": "ar",
    "contrast_failures": [],
-   "targets_measured": 88
+   "targets_measured": 89
   },
   "ar/measurement/": {
    "targets": [],
@@ -10487,7 +10487,7 @@
    "dir": "rtl",
    "lang": "ar",
    "contrast_failures": [],
-   "targets_measured": 106
+   "targets_measured": 107
   },
   "ar/people/": {
    "targets": [],
@@ -10525,7 +10525,7 @@
    "dir": "rtl",
    "lang": "ar",
    "contrast_failures": [],
-   "targets_measured": 101
+   "targets_measured": 102
   },
   "ar/privacy/": {
    "targets": [],
@@ -11410,7 +11410,7 @@
   ],
   "axe_rules_violated": 0,
   "axe_wcag_violations": [],
-  "targets_measured": 20054,
+  "targets_measured": 20062,
   "targets_under_24px": 393,
   "targets_under_24px_meeting_the_inline_exception": 280,
   "targets_under_24px_meeting_the_spacing_exception": 113,
@@ -11477,7 +11477,7 @@
   "elements_wider_than_the_viewport": {}
  },
  "measured_at": "2026-10-09",
- "build": "7557866e99c390a6db2fd63ca4a5c63a86ef7e3e",
+ "build": "6f2b10d41d7f2ed7916cd44bf9b5359d1c682e4c",
  "status": "AUDIT RECORD — NOT A CONFORMANCE CLAIM. Machine-checkable outcomes only. Screen readers in Arabic and English, and every judgement a person must make, are outstanding (see 'outstanding_for_a_human_auditor'). The Accessibility page states no result.",
  "outstanding_for_a_human_auditor": [
   "Screen-reader passes in Arabic and in English (at least one of NVDA/JAWS and VoiceOver), on a record, a Reading, Compare, the source directory and a domain answer: is what is announced the truth the page states?",

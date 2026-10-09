@@ -1322,6 +1322,6 @@ not public release (REL-01…04 remain).
 
 ### DL-V1-000 · V1 · 2026-10-09 · After D7: the V1 design integration (not accepted)
 - The owner's design-integration message of 9 October 2026 opens a presentation pass on the accepted D7 structure.
-  Its decisions (DL-V1-001…008), what it does not build and why, and its evidence are in
+  Its decisions (DL-V1-001…012), what it does not build and why, and its evidence are in
   [`DESIGN_INTEGRATION_V1.md`](DESIGN_INTEGRATION_V1.md); its escalations under "Raised at V1" in `ESCALATIONS.md`.
 - The status line above stays true: D7 is the accepted design. V1 is accepted only when the owner records it.
