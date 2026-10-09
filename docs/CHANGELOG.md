@@ -1,5 +1,19 @@
 # Repository Change Log
 
+## 2026-10-09 — B-c: page tools under the title, the full phone menu, the hub numerals (owner decision B-c)
+
+Navigation contract (`navigation_interaction.json`: new keys `hub_numerals` and `page_tools`, `mobile_menu` rewritten,
+`utilities` placed), changed by the steward under the owner's decision B-c, and the renderer that reads it; the generator
+validates that each hub has exactly one governed numeral. Cite and Report leave the header for one page-tools row directly under each page's title, at
+every width; on an Evidence Record the report link now carries the record (`/contact/?record=<ID>`). The header keeps
+search, the language switch and the menu. Below 900 px the menu opens the full map: the five hubs with their governed
+numerals 01–05 (V1B-1), the eight domain answers under Explore by their governed names, the trust links, the language
+switch and the cite control. The numerals also mark the hubs on wide screens and the parent hub in breadcrumbs; they are
+printed from a `data-hub-num` attribute with empty alternative text, so every link keeps its navigation label as its
+accessible name. Gate RC-NAV reads the new contract keys (six negative controls added, with CS-01's). No text, link,
+ID or hook is lost: `data-cite`, `a.report` and `data-menu-cite` remain on every page.
+
+
 ## 2026-10-09 — V1B-1: interface labels for design integration Phase B (owner decision B-b)
 
 One Master transaction, labels only, English and Arabic together (`audit/design_integration/`): the summary label of

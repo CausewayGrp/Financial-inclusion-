@@ -200,9 +200,12 @@ class Content:
     def shell(self, lang: str, route: str) -> dict:
         other = "en" if lang == "ar" else "ar"
         nav = []
+        hub_num = {tuple(x.get("routes") or []): x.get("numeral_ui_id") for x in (self.nav.get("hub_numerals") or {}).get("items") or []}
         for item in self.nav.get("global_navigation", []):
             kids = item.get("children") or []
-            entry = {"label": item.get(f"label_{lang}"), "route": item.get("route"), "children": [
+            # B-c (owner decisions of 9 October 2026): each hub carries its governed numeral (V1B-1, UI-NAV-HUB-0n)
+            entry = {"label": item.get(f"label_{lang}"), "route": item.get("route"),
+                     "num": self._hub_num(hub_num, item, lang), "children": [
                 {"label": k.get(f"label_{lang}"), "route": k.get("route"), "href": self.href(k.get("route"), lang),
                  "active": self._active(k.get("route"), route)} for k in kids]}
             if item.get("route"):
@@ -213,6 +216,11 @@ class Content:
                  for t in self.nav.get("trust_navigation", [])]
         footer = [{"label": g.get(f"label_{lang}"), "links": [{"label": l.get(f"label_{lang}"), "href": self.href(l.get("route"), lang)}
                                                               for l in g.get("links", [])]} for g in self.nav.get("footer_groups", [])]
+        # B-c: the full phone menu names the eight domain answers by their governed domain names, under the Explore hub
+        mm = self.nav.get("mobile_menu") or {}
+        dom = mm.get("domains") or {}
+        domains = [{"label": self.t(u, lang), "href": self.href(rt, lang), "active": self._active(rt, route)}
+                   for rt, u in zip(dom.get("routes") or [], dom.get("label_ui_ids") or [])]
         return {
             "lang": lang, "dir": "rtl" if lang == "ar" else "ltr", "other_lang": other,
             "other_href": self.href(route, other),   # R-05: the language switch is a link to the same route in the other edition
@@ -242,7 +250,14 @@ class Content:
             "nav": nav, "trust": trust, "footer": footer, "home_href": self.href("/", lang), "contact_href": self.href("/contact/", lang),
             "ui_json": self.ui_json(lang),
             "mobile_menu": self.nav.get("mobile_menu") or None,   # owner decisions of 3 October 2026, point 3
+            "domains": domains, "domains_under": dom.get("under"),
+            # B-c: cite and report sit in the page-tools row under the h1 instead of the header
+            "page_tools": bool((self.nav.get("page_tools") or {}).get("items")),
         }
+
+    def _hub_num(self, hub_num: dict, item: dict, lang: str) -> str:
+        key = tuple([item["route"]] if item.get("route") else [k.get("route") for k in item.get("children") or []])
+        return self.t(hub_num[key], lang) if hub_num.get(key) else ""
 
     @staticmethod
     def _active(target, route) -> bool:

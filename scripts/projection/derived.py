@@ -1051,6 +1051,17 @@ def navigation_contract(ctx, e):
             trust.append(OrderedDict([("route", r_), ("label_en", rec["label_en"]), ("label_ar", rec["label_ar"])]))
         n["trust_navigation"] = trust
     _align_navigation_contract(n)
+    # B-b/B-c (owner decisions of 9 October 2026): each hub carries exactly one governed numeral, matched by its route or,
+    # for a grouping node, by its children's routes
+    if n.get("hub_numerals"):
+        ui = {r.get("ui_id") for r in ctx.out["content/interface_copy.json"]}
+        keys = [tuple([it["route"]] if it.get("route") else [c["route"] for c in it.get("children") or []]) for it in nav]
+        got = [tuple(x.get("routes") or []) for x in n["hub_numerals"].get("items") or []]
+        if sorted(got) != sorted(keys) or len(set(got)) != len(got):
+            raise StructureError(f"navigation contract hub_numerals {got} do not match the hubs {keys}")
+        for x in n["hub_numerals"]["items"]:
+            if x.get("numeral_ui_id") not in ui:
+                raise StructureError(f"navigation contract hub_numerals: unknown label {x.get('numeral_ui_id')}")
     ps_text = serialize(ctx.out["page_specs.json"], True)
     n["authority_binding"] = OrderedDict([("master_sha256", ctx.master_sha256),
                                           ("page_specs_sha256", hashlib.sha256(ps_text.encode("utf-8")).hexdigest()),

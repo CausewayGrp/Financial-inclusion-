@@ -3174,35 +3174,82 @@ try:
 except Exception as _x:
     errors.append("RC-ADD2 unreadable " + repr(_x))
 
-# RC-NAV (owner decisions of 3 October 2026, point 3; findings A-12, C-6, C-8): below 900 px the opened menu holds the
-# governed trust links, About first, in the contract's order, and the governed "Cite this page" control; the header is
-# unchanged. Read from the navigation contract's `mobile_menu` key and the built pages.
+# RC-NAV (owner decisions of 3 October 2026, point 3, findings A-12, C-6, C-8; and of 9 October 2026, B-c): below 900 px
+# the opened menu holds the five hubs with their governed numerals, the eight domain answers under Explore by their
+# governed names in the contract's order, the governed trust links (About first, in the contract's order), the language
+# switch and the governed "Cite this page" control. Cite and report sit in one page-tools row directly under the h1 of
+# every page (an Evidence Record's report link carries its record); the header keeps search, language and menu only.
+# Read from the navigation contract's `page_tools` and `mobile_menu` keys and the built pages.
 try:
     _nv = json.loads((C / "content" / "navigation_interaction.json").read_text(encoding="utf-8"))
-    if not _nv.get("mobile_menu"):
+    _uin = {x["ui_id"]: x for x in json.loads((C / "content" / "interface_copy.json").read_text(encoding="utf-8"))}
+    _mm = _nv.get("mobile_menu") or {}
+    if not _mm:
         errors.append("RC-NAV the navigation contract has no mobile_menu")
+    _pt = _nv.get("page_tools") or {}
+    if _pt.get("items") != ["cite", "report_issue"] or _pt.get("position") != "UNDER_H1":
+        errors.append("RC-NAV the navigation contract's page_tools is not cite and report under the h1")
     _tn = [x["route"] for x in _nv.get("trust_navigation", [])]
     if not _tn or not _tn[0].rstrip("/").endswith("/about"):
         errors.append("RC-NAV the contract's trust links do not start with About")
     _ucite = {l: next(u[f"label_{l}"] for u in _nv.get("utilities", []) if u.get("id") == "cite") for l in ("en", "ar")}
+    _urep = {l: _uin[next(u["label_ui_id"] for u in _nv.get("utilities", []) if u.get("id") == "report_issue")][f"label_{l}"] for l in ("en", "ar")}
+    _hubs = []
+    _hn = {tuple(x.get("routes") or []): x.get("numeral_ui_id") for x in (_nv.get("hub_numerals") or {}).get("items") or []}
+    for _g in _nv.get("global_navigation", []):
+        _key = tuple([_g["route"]] if _g.get("route") else [k.get("route") for k in _g.get("children") or []])
+        _num = (_uin.get(_hn.get(_key) or "") or {})
+        if not _num.get("label_en") or _num.get("label_en") != _num.get("label_ar"):
+            errors.append(f"RC-NAV hub {_g.get('label_en')} has no governed numeral")
+        _hubs.append((_g.get("route"), {l: _html.escape(_g.get(f"label_{l}") or "", quote=False) for l in ("en", "ar")}, _num.get("label_en") or ""))
+    if [h[2] for h in _hubs] != [f"{i:02d}" for i in range(1, 6)]:
+        errors.append(f"RC-NAV the hub numerals are not 01-05 in navigation order: {[h[2] for h in _hubs]}")
+    _dm = _mm.get("domains") or {}
+    _droutes = list(_dm.get("routes") or [])
+    _pdom = [r["route"] for r in json.loads((C / "presentation_priority.json").read_text(encoding="utf-8"))["routes"] if r.get("page_family") == "Domain Answer"]
+    if sorted(_droutes) != sorted(_pdom) or len(_droutes) != 8 or len(_dm.get("label_ui_ids") or []) != 8 or _dm.get("under") != "/explore/":
+        errors.append("RC-NAV the menu's domains are not the eight domain answers under Explore")
     _nnav = 0
     for _f in sorted(DIST.rglob("index.html")):
         _rel = _f.relative_to(DIST).parts
         if not _rel or _rel[0] not in ("en", "ar"):
             continue
-        _l = _rel[0]
+        _l = _rel[0]; _p = _f.relative_to(DIST).as_posix()
         _h = _f.read_text(encoding="utf-8")
         _nav = _h.split('id="primary-nav"', 1)[1].split("</nav>", 1)[0] if 'id="primary-nav"' in _h else ""
-        _tr = _nav.split("data-menu-trust", 1)[1].split("<button", 1)[0] if "data-menu-trust" in _nav else ""
+        _tr = re.split(r'<a class="m-only mlang"|<button', _nav.split("data-menu-trust", 1)[1], maxsplit=1)[0] if "data-menu-trust" in _nav else ""
         _hrefs = [re.sub(r"^/(en|ar)", "", x) for x in re.findall(r'href="([^"]+)"', _tr)]
         if _hrefs != _tn:
-            errors.append(f"RC-NAV {_f.relative_to(DIST).as_posix()} the opened menu does not carry the trust links, About first: {_hrefs[:3]}")
+            errors.append(f"RC-NAV {_p} the opened menu does not carry the trust links, About first: {_hrefs[:3]}")
         _mc = re.search(r'<button[^>]*data-menu-cite[^>]*>([^<]*)</button>', _nav)
         if not _mc or _html.unescape(_mc.group(1)) != _ucite[_l]:
-            errors.append(f"RC-NAV {_f.relative_to(DIST).as_posix()} the opened menu lacks the governed cite control")
+            errors.append(f"RC-NAV {_p} the opened menu lacks the governed cite control")
+        for _route, _lab, _num in _hubs:
+            _tok = (f'<a href="/{_l}{_route}" data-hub-num="{_num}"' if _route else f'<span class="glabel" data-hub-num="{_num}">{_lab[_l]}</span>')
+            if _tok not in _nav:
+                errors.append(f"RC-NAV {_p} hub {_route or _lab['en']} lacks its numeral {_num}")
+        _dg = re.search(r'data-menu-domains>(.*?)</span>', _nav, re.S)
+        _want = [(f"/{_l}{r}", _uin[u][f"label_{_l}"]) for r, u in zip(_droutes, _dm.get("label_ui_ids") or [])]
+        _got = [(a, _html.unescape(b)) for a, b in re.findall(r'<a href="([^"]+)"[^>]*>([^<]*)</a>', _dg.group(1))] if _dg else []
+        if _got != _want:
+            errors.append(f"RC-NAV {_p} the opened menu does not list the eight domain answers in order")
+        _ml = re.search(r'<a class="m-only mlang" href="([^"]+)"[^>]*data-menu-lang>', _nav)
+        _hl = re.search(r'<a class="tbtn lang" href="([^"]+)"', _h)
+        if not _ml or not _hl or _ml.group(1) != _hl.group(1):
+            errors.append(f"RC-NAV {_p} the opened menu lacks the language switch")
         _ctl = _h.split('<div class="controls">', 1)[1].split("</div>", 1)[0] if '<div class="controls">' in _h else ""
-        if _ctl.count("data-cite") != 1 or "data-menu" in _ctl.replace("data-menu aria", ""):
-            errors.append(f"RC-NAV {_f.relative_to(DIST).as_posix()} the header's controls changed")
+        if "data-cite" in _ctl or 'class="report"' in _ctl or not all(t in _ctl for t in ("data-search-open", "data-lang=", "data-menu ")):
+            errors.append(f"RC-NAV {_p} the header's controls are not search, language and menu")
+        _pts = re.findall(r'</h1><div class="page-tools" data-page-tools><button type="button" class="tbtn cite" data-cite>([^<]*)</button><a class="report" href="([^"]+)">([^<]*)</a></div>', _h)
+        if len(_pts) != 1 or _h.count("data-page-tools") != 1 or _h.count("<h1") != 1:
+            errors.append(f"RC-NAV {_p} has no single page-tools row under its h1")
+        else:
+            _c, _rh, _r = _pts[0]
+            if _html.unescape(_c) != _ucite[_l] or _html.unescape(_r) != _urep[_l]:
+                errors.append(f"RC-NAV {_p} the page-tools row does not carry the governed cite and report labels")
+            _rid = _rel[2] if len(_rel) == 4 and _rel[1] == "evidence" and _rel[2] != "compare" and "data-moved-to" not in _h else None
+            if _rh != (f"/{_l}/contact/?record={quote(_rid)}" if _rid else f"/{_l}/contact/"):
+                errors.append(f"RC-NAV {_p} the page-tools report link is {_rh}")
         _nnav += 1
     if _nnav < 100:
         errors.append(f"RC-NAV read only {_nnav} pages")

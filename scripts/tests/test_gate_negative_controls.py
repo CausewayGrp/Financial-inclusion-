@@ -407,6 +407,27 @@ CONTROLS = [
     ("the mobile menu drops About", "ar/evidence/CLM-002/index.html",
      sub_once(r'(data-menu-trust>.*?)<a href="/ar/about/"[^>]*>[^<]*</a>', r'\1'),
      "RC-NAV ar/evidence/CLM-002/index.html the opened menu does not carry the trust links, About first"),
+    # RC-NAV (owner decisions of 9 October 2026, B-c): the page-tools row under the h1, the hubs' numerals, the eight
+    # domain answers in the opened menu, a header of search, language and menu only, and a record's report context.
+    ("the page-tools row leaves the h1", "en/people/index.html",
+     sub_once(r'(</h1>)(<div class="page-tools" data-page-tools>.*?</div>)', r'\1<p></p>\2'),
+     "RC-NAV en/people/index.html has no single page-tools row under its h1"),
+    ("a hub loses its numeral", "ar/data/index.html",
+     replace(' data-hub-num="03"', ''),
+     "RC-NAV ar/data/index.html hub /readings/ lacks its numeral 03"),
+    ("the opened menu drops a domain answer", "en/evidence/CLM-001/index.html",
+     sub_once(r'(data-menu-domains>.*?)<a href="/en/firms/"[^>]*>[^<]*</a>', r'\1'),
+     "RC-NAV en/evidence/CLM-001/index.html the opened menu does not list the eight domain answers in order"),
+    ("cite returns to the header", "ar/readings/index.html",
+     replace('<div class="controls"><button type="button" class="tbtn" data-search-open', '<div class="controls"><button type="button" class="tbtn cite" data-cite>x</button><button type="button" class="tbtn" data-search-open'),
+     "RC-NAV ar/readings/index.html the header's controls are not search, language and menu"),
+    ("a record's report link loses its record", "en/evidence/CLM-010/index.html",
+     replace('<a class="report" href="/en/contact/?record=CLM-010">', '<a class="report" href="/en/contact/">'),
+     "RC-NAV en/evidence/CLM-010/index.html the page-tools report link is /en/contact/"),
+    # CS-01 (owner decision B-b, transaction V1B-1): the strip's date is the date /corrections/ section 3 states
+    ("the edition's check date drifts from /corrections/", "site-src/content/content/interface_copy.json",
+     replace('"label_en": "3 October 2026"', '"label_en": "4 October 2026"'),
+     "CS-01 the checked date is not the date /corrections/ section 3 states en"),
     # RC-A1 (Owner Addendum 2, A1): the text alternative of a chain figure names only steps the drawing has.
     ("a chain figure's text alternative names a step its drawing lacks", "en/evidence/VIS-PAYMENT-RAILS/index.html",
      sub_once(r'(<div class="alt"[^>]*>.*?<p class="small">)', r'\1The mobile e-money amendment (9 July 2025). '),

@@ -105,11 +105,18 @@ def header(shell: dict) -> str:
     other = shell["other_lang"]
     nav = []
     for item in shell["nav"]:
+        # B-c: the hub's governed numeral is an attribute the stylesheet prints with empty alternative text, so the
+        # link's accessible name stays the hub's navigation label
+        num_ = f' data-hub-num="{esc(item["num"])}"' if item.get("num") else ""
         if item.get("children"):
             kids = "".join(f'<a href="{k["href"]}"{CUR if k["active"] else ""}>{esc(k["label"])}</a>' for k in item["children"])
-            nav.append(f'<span class="group" role="group" aria-label="{esc(item["label"])}"><span class="glabel">{esc(item["label"])}</span>{kids}</span>')
+            nav.append(f'<span class="group" role="group" aria-label="{esc(item["label"])}"><span class="glabel"{num_}>{esc(item["label"])}</span>{kids}</span>')
         else:
-            nav.append(f'<a href="{item["href"]}"{CUR if item.get("active") else ""}>{esc(item["label"])}</a>')
+            nav.append(f'<a href="{item["href"]}"{num_}{CUR if item.get("active") else ""}>{esc(item["label"])}</a>')
+            # B-c: below 900 px the opened menu lists the eight domain answers under the Explore hub
+            if shell.get("mobile_menu") and shell.get("domains") and item.get("route") == shell.get("domains_under"):
+                doms = "".join(f'<a href="{d["href"]}"{CUR if d["active"] else ""}>{esc(d["label"])}</a>' for d in shell["domains"])
+                nav.append(f'<span class="group m-only mdoms" role="group" aria-label="{esc(item["label"])}" data-menu-domains>{doms}</span>')
     # Owner decisions of 3 October 2026, point 3 (A-12, C-6, C-8; navigation contract `mobile_menu`): below 900 px the
     # opened menu carries the trust links, About first, under the footer's governed group label, and the governed cite
     # control. The header itself is unchanged; above 900 px the bar shows these in their usual places.
@@ -117,13 +124,18 @@ def header(shell: dict) -> str:
         trust_label = next((g["label"] for g in shell["footer"] if any(l["href"].endswith("/about/") for l in g["links"])), L["trust_nav"])
         trust = "".join(f'<a href="{t["href"]}"{CUR if t.get("active") else ""}>{esc(t["label"])}</a>' for t in shell["trust"])
         nav.append(f'<span class="group m-only" role="group" aria-label="{esc(trust_label)}" data-menu-trust><span class="glabel">{esc(trust_label)}</span>{trust}</span>'
-                   f'<button type="button" class="tbtn m-only" data-cite data-menu-cite>{esc(L["cite"])}</button>')
+                   # B-c: the language switch inside the opened menu, the same link as the header's
+                   + (f'<a class="m-only mlang" href="{shell["other_href"]}" hreflang="{other}" lang="{other}" dir="{"ltr" if other == "en" else "rtl"}" data-menu-lang>{esc(L["lang_switch_action"])}</a>'
+                      if shell.get("page_tools") else "")
+                   + f'<button type="button" class="tbtn m-only" data-cite data-menu-cite>{esc(L["cite"])}</button>')
+    # B-c (owner decisions of 9 October 2026): with the page-tools row, cite and report leave the header
+    tools_ = "" if shell.get("page_tools") else (f'<button type="button" class="tbtn cite" data-cite aria-label="{esc(L["cite"])}">{esc(L["cite"])}</button>'
+                                                 f'<a class="report" href="{shell["contact_href"]}">{esc(L["report"])}</a>')
     return (f'<noscript><div class="noscript">{esc(L["noscript"])}</div></noscript><a class="skip" href="#main">{esc(L["skip"])}</a>'
             f'<header class="bar"><div class="bar-in"><a class="brand" href="{shell["home_href"]}" aria-label="CauseWay — {esc(shell["product"])}">{logo(40, "(min-width: 900px) 48px, 40px")}<span class="brand-text"><span class="brand-pub" dir="ltr">CauseWay</span><span class="brand-name">{esc(shell["product"])}</span></span></a>'
             f'<nav id="primary-nav" class="nav" aria-label="{esc(L["primary_nav"])}">{"".join(nav)}</nav>'
             f'<div class="controls"><button type="button" class="tbtn" data-search-open aria-label="{esc(L["search"])}">{esc(L["search"])}</button>'
-            f'<button type="button" class="tbtn cite" data-cite aria-label="{esc(L["cite"])}">{esc(L["cite"])}</button>'
-            f'<a class="report" href="{shell["contact_href"]}">{esc(L["report"])}</a>'
+            f'{tools_}'
             # R-05 (independent review of 70398d1): the language switch and the menu are links, so both work without
             # JavaScript. The switch opens the same route in the other edition; the menu opens the footer, which carries
             # every navigation and trust link. The runtime enhances the menu into a disclosure button (app.js).
@@ -199,7 +211,18 @@ def crumb(bc: dict | None, shell: dict) -> str:
     if not bc:
         return ""
     cur = bdi(bc["current"]) if bc["mode"] == "STABLE_OBJECT_ID" else esc(bc["current"])
-    return f'<nav class="crumb" aria-label="{esc(shell["labels"]["breadcrumb"])}"><a href="{bc["parent_href"]}">{esc(bc["parent_label"])}</a> / <span aria-current="page">{cur}</span></nav>'
+    num_ = next((f' data-hub-num="{esc(n["num"])}"' for n in shell.get("nav") or [] if n.get("num") and n.get("href") == bc["parent_href"]), "")   # B-c
+    return f'<nav class="crumb" aria-label="{esc(shell["labels"]["breadcrumb"])}"><a href="{bc["parent_href"]}"{num_}>{esc(bc["parent_label"])}</a> / <span aria-current="page">{cur}</span></nav>'
+
+
+def page_tools(shell: dict, report_href: str = "") -> str:
+    """B-c (owner decisions of 9 October 2026; navigation contract `page_tools`): the governed cite and report controls in
+    one row under the h1, at every width. The citation preview, copy and print controls stay in the page's foot tools."""
+    if not shell.get("page_tools"):
+        return ""
+    L = shell["labels"]
+    return (f'<div class="page-tools" data-page-tools><button type="button" class="tbtn cite" data-cite>{esc(L["cite"])}</button>'
+            f'<a class="report" href="{report_href or shell["contact_href"]}">{esc(L["report"])}</a></div>')
 
 
 def source_card(s: dict) -> str:
@@ -276,7 +299,7 @@ def evidence_record(page: dict, shell: dict) -> str:
     meta = f'<meta name="yfie-citation" content="{esc(page["citation"])}"><meta name="yfie-record-id" content="{esc(page["id"])}">'
     index = [("q1", L["establishes"]), ("q2", L["measures"]), ("q3", L["applies"]), ("q4", L["currentness"]), ("q5", L["does_not_establish"]), ("q6", L["source"]), ("q7", L["more"])]
     for_whom = clock(L["applies"], esc(page["universe"])) if page.get("universe") else ""   # 4.1: WHEN, then FOR WHOM, before the claim
-    head_ = (f'<div class="head">{crumb(page["breadcrumb"], shell)}{rubric(L["family"])}{clock(L["period"], esc(page["period"]))}{for_whom}<h1 id="page-title">{esc(page["title"])}</h1>'
+    head_ = (f'<div class="head">{crumb(page["breadcrumb"], shell)}{rubric(L["family"])}{clock(L["period"], esc(page["period"]))}{for_whom}<h1 id="page-title">{esc(page["title"])}</h1>{page_tools(shell, (page.get("hrefs") or {}).get("report", ""))}'
              + (f'<p class="st">{esc(page["lead"])}</p>' if page["lead"] else "") + "</div>")
     own_fig = (f'<span class="rubric mt18">{esc(L["visual_eyebrow"])}</span>' + figure({**page["visual"], "here": True}, shell["labels"]["cite"], DISC.origin(), heading="h3")) if page.get("visual") and page["visual"].get("tier") != "RETIRE_FROM_DESIGN" else ""
     qa = [f'<div class="qa first" id="q1">{rubric(L["establishes"], 1, "h2")}<div class="st"><p>{fig_emph(iso(esc(page["summary"])))}</p></div>{own_fig}</div>' + strip(index),
@@ -327,7 +350,7 @@ def home(page: dict, shell: dict) -> str:
     # The product's statement (section 1) and its two governed actions sit in the head, under the headline and before
     # the first figure: four cold readers (EN/AR × 390/1440, D3) reached the third screen before learning what the
     # product is. The product rubric is kept for the wide head; the masthead already names the product on a phone.
-    parts = [f'<div class="head">{rubric(L["product"], cls="rubric product")}<h1 id="page-title">{esc(page["title"])}</h1><div class="st" id="s1">{paras(S[1]["paragraphs"])}</div>'
+    parts = [f'<div class="head">{rubric(L["product"], cls="rubric product")}<h1 id="page-title">{esc(page["title"])}</h1>{page_tools(shell)}<div class="st" id="s1">{paras(S[1]["paragraphs"])}</div>'
              f'<div class="actions"><a href="{page["hrefs"]["explore"]}">{esc(L["start"])}</a><a href="{page["hrefs"]["evidence"]}">{esc(L["verify"])}</a></div></div>']
     recs = list(page["records"])
     demo = []
@@ -383,7 +406,7 @@ def reading(page: dict, shell: dict) -> str:
     origin = DISC.origin()
     index = ([(f's-{s["section_id"]}', s["heading"]) for s in page["sections"] if s["heading"]] + [("trace", L["trace"]), ("sources", L["sources"])]
              + ([("measure", L["measurement"])] if page.get("measurement") else []) + [("related", L["related"])])
-    head_ = (f'<div class="head">{crumb(page["breadcrumb"], shell)}{rubric(L["eyebrow"])}<p class="q">{esc(page["question"])}</p><h1 id="page-title">{esc(page["title"])}</h1><div class="st"><p>{esc(page["thesis"])}</p></div>'
+    head_ = (f'<div class="head">{crumb(page["breadcrumb"], shell)}{rubric(L["eyebrow"])}<p class="q">{esc(page["question"])}</p><h1 id="page-title">{esc(page["title"])}</h1>{page_tools(shell)}<div class="st"><p>{esc(page["thesis"])}</p></div>'
              f'<div class="clocks">{clock(L["evidence_period"], esc(page["evidence_period"]))}<div class="clock"><span class="k">{esc(L["last_reviewed"])}</span><span class="v"><time datetime="{esc(page["last_reviewed_iso"])}">{esc(page["last_reviewed"])}</time></span></div></div></div>')
     bnd = f'<section class="bnd" data-reading-boundary>{rubric(L["do_not_infer"], tag="h2")}<p>{esc(page["prohibited_inference"])}</p></section>'
     essay = []
@@ -558,6 +581,6 @@ def moved_page(content, lang: str, r: dict) -> str:
             f'<link rel="icon" type="image/png" sizes="32x32" href="/assets/logo/CauseWay_logo_32.png"><title>{esc(heading)} — {esc(shell["product"])}</title>'
             f'<meta name="description" content="{esc(body)}"><link rel="stylesheet" href="/assets/yfie.css">{font_preloads(lang)}'
             f'{DISC.head_links(r["to"], lang, origin)}</head><body>'
-            f'{header(shell)}<article class="obj page-obj" data-moved-to="{r["to"].strip("/")}"><h1 id="page-title">{esc(heading)}</h1>'
+            f'{header(shell)}<article class="obj page-obj" data-moved-to="{r["to"].strip("/")}"><h1 id="page-title">{esc(heading)}</h1>{page_tools(shell)}'
             f'<p class="st">{esc(body)}</p><div class="actions"><a href="{target}">{esc(title)}</a></div></article>'
             f'{footer(shell)}')

@@ -862,3 +862,24 @@ ol.objs.chron,.curated .objs,.source-locator-details .objs{display:flex;flex-dir
 .src.card>details.deps,.src.card>*:not(h4):not(.kind):not(.rref):not(.rights):not(.small):not(.acts):not(details){grid-column:1 / -1}
 }
 }
+/* ---- V1 Phase B (owner decisions of 9 October 2026, B-c): the hubs' governed numerals, the page-tools row under the
+   h1, the full phone menu. The numeral is the hub's own attribute (UI-NAV-HUB-0n), printed with empty alternative
+   text so a link's accessible name stays its navigation label. ---- */
+@media screen{
+[data-hub-num]::before{content:attr(data-hub-num);content:attr(data-hub-num) / "";display:inline-block;margin-inline-end:.5em;font-size:.8em;font-weight:600;line-height:1;color:var(--brass-700);font-variant-numeric:tabular-nums;letter-spacing:.02em}
+.nav a[aria-current=page][data-hub-num]::before,.nav a[data-hub-num]:hover::before{color:var(--green-700)}
+.nav .glabel[data-hub-num]::before{font-size:1em}
+/* the page's own tools, one quiet row under its title, at every width */
+.page-tools{display:flex;flex-wrap:wrap;gap:8px 10px;margin:12px 0 2px}
+.page-tools>.tbtn,.page-tools>a{display:inline-flex;align-items:center;min-height:44px;box-sizing:border-box;padding:0 14px;border:1px solid var(--sage-400);border-radius:2px;background:var(--white);color:var(--green-900);text-decoration:none;font-size:var(--fs-src);font-weight:500;line-height:1.2}
+.page-tools>.tbtn:hover,.page-tools>a:hover{background:var(--sage-100);border-color:var(--green-700)}
+.head .page-tools+.st,.head .page-tools+p.st{margin-top:14px}
+/* the full phone menu: five numbered hubs, the eight domain answers under Explore, trust, language and cite */
+.nav.open{max-height:calc(100vh - 72px);max-height:calc(100dvh - 72px);overflow-y:auto;overscroll-behavior:contain}
+.nav.open>a[data-hub-num]{font-weight:600}
+.nav.open .group.mdoms{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));column-gap:18px;padding:2px 0 8px;padding-inline-start:1.9em;border-bottom:1px solid var(--rule)}
+.nav.open .group.mdoms a{border-bottom:0;padding:9px 0;min-height:24px;font-size:.94em;color:var(--ink-2)}
+.nav.open .group.mdoms a[aria-current=page]{color:var(--green-700);text-decoration:underline;text-underline-offset:3px}
+.nav.open .mlang{display:block;margin-top:6px}
+}
+@media print{.page-tools{display:none!important}[data-hub-num]::before{content:none}}
