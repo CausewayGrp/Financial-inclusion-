@@ -1075,6 +1075,20 @@ def presentation_contract(ctx, e):
                     raise StructureError(f"presentation contract {r['route']} {tier}: section {item['section_order']} does not exist in 03")
                 if item.get("kind") == "visual" and item["object_id"] not in vis:
                     raise StructureError(f"presentation contract {r['route']}: unknown visual {item['object_id']}")
+    # Owner decision B-a (9 October 2026): Home's Orientation tiers name only governed sections; a boundary stays
+    # always visible and is never progressive
+    for r in p.get("orientation_routes") or []:
+        if r.get("route") != "/" or r.get("page_family") != "Orientation":
+            raise StructureError(f"presentation contract orientation_routes: unexpected entry {r.get('route')} {r.get('page_family')}")
+        for tier in ("primary", "supporting", "progressive", "always_visible_boundaries", "first_load_exclusions"):
+            for item in r.get(tier, []):
+                if item.get("kind") == "section" and ("/", item["section_order"]) not in secs:
+                    raise StructureError(f"presentation contract / {tier}: section {item['section_order']} does not exist in 03")
+        prog = {x["section_order"] for x in r.get("progressive", [])}
+        if prog & {x["section_order"] for x in r.get("always_visible_boundaries", [])}:
+            raise StructureError("presentation contract /: an always-visible boundary cannot be progressive")
+        if prog != {x["section_order"] for x in r.get("first_load_exclusions", [])}:
+            raise StructureError("presentation contract /: first-load exclusions must equal the progressive sections")
     # EAD-11: Home's starting questions and Explore's groups — every question ID and heading label must be governed
     qids = [str(q.get("question_id")) for q in ctx.out["content/questions.json"]]
     ui = {r.get("ui_id") for r in ctx.out["content/interface_copy.json"]}

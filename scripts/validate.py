@@ -533,6 +533,46 @@ for route,e in route_entries.items():
         errors.append(f'S03 AR/EN structural parity regression {route}')
 
 
+# O-01 (owner decision B-a, 9 October 2026): Home's Orientation tiers, as `presentation_priority.json`
+# (`orientation_routes`) states them. The always-visible boundary and the primary sections are first-load and outside
+# every disclosure; each progressive section is one named disclosure whose summary holds its own governed heading; no
+# governed paragraph of a boundary or progressive section is lost.
+try:
+    _or=[e for e in (presentation.get('orientation_routes') or []) if isinstance(e,dict) and e.get('route')=='/']
+    if len(_or)!=1:
+        errors.append('O-01 presentation contract has no single Orientation entry for /')
+    else:
+        _sec=lambda t:[x.get('section_order') for x in (_or[0].get(t) or []) if isinstance(x,dict) and x.get('kind')=='section']
+        _prog,_prim,_bnd=_sec('progressive'),_sec('primary'),_sec('always_visible_boundaries')
+        if set(_prog)&set(_bnd):
+            errors.append('O-01 an always-visible Home boundary is listed as progressive')
+        _rows=[x for x in json.load(open(C/'content/page_sections.json',encoding='utf-8')) if x.get('route')=='/']
+        for lang in ('ar','en'):
+            _raw=(DIST/lang/'index.html').read_text(encoding='utf-8')
+            _txt=_vistext(_raw)
+            for o in _bnd+_prim:
+                _m=re.search(rf'<section class="[^"]*" id="s{o}">',_raw)
+                if not _m:
+                    errors.append(f'O-01 Home section {o} missing {lang}'); continue
+                _pre=_raw[:_m.start()]
+                if _pre.count('<details')>_pre.count('</details>') or _raw[_m.end():_m.end()+40].startswith('<details'):
+                    errors.append(f'O-01 Home always-visible section {o} not first-load {lang}')
+            for o in _prog:
+                _m=re.search(rf'<section class="qa fold-sec" id="s{o}"><details class="fold home-fold"><summary>(.*?)</summary>',_raw,re.S)
+                _h=next((r.get(f'heading_{lang}') for r in _rows if r.get('section_order')==o and r.get(f'heading_{lang}')),'')
+                if not _m:
+                    errors.append(f'O-01 Home progressive section {o} is not a named disclosure {lang}')
+                elif _h and _norm(_h) not in _norm(_html.unescape(re.sub(r'<[^>]+>',' ',_m.group(1)))):
+                    errors.append(f'O-01 Home disclosure {o} does not carry its governed heading {lang}')
+            for o in _bnd+_prog:
+                for _r in (r for r in _rows if r.get('section_order')==o and r.get(f'body_{lang}')):
+                    for _para in [_norm(x) for x in str(_r.get(f'body_{lang}')).split('\n') if x.strip()]:
+                        if _para not in _norm(_txt):
+                            errors.append(f'O-01 Home governed section lost {lang} order={o}'); break
+except Exception as _x:
+    errors.append('O-01 unreadable '+repr(_x))
+
+
 # S04.1 Evidence Record family: intentional verification hierarchy and multi-entry discovery journey.
 evidence_contract=(presentation.get('family_contracts') or {}).get('Evidence Record') if isinstance(presentation,dict) else None
 if not isinstance(evidence_contract,dict):

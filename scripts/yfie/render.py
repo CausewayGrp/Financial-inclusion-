@@ -338,11 +338,20 @@ def home(page: dict, shell: dict) -> str:
     def h2(sec):   # governed kicker (role) above the governed heading
         return (f'<span class="rubric">{esc(sec["role"])}</span>' if sec.get("role") else "") + f'<h2>{esc(sec["heading"])}</h2>'
     parts.append(f'<section class="qa first" id="s3"><div>{h2(S[3])}</div><div class="paced">{"".join(demo)}</div></section>')
+    prog = set(page["tiers"]["progressive"])
+    assert 4 not in prog, "Home's boundary (section 4) is always visible and cannot be progressive"
     parts.append(f'<section class="bnd" id="s4">{rubric(S[4]["role"])}<h2>{esc(S[4]["heading"])}</h2><div class="mt8">{paras(S[4]["paragraphs"])}</div></section>')
     # the governed instruction and the section's body read as one paragraph (three restatements in a row, D3 test)
     qs = "".join(f'<li><div><div class="q"><a href="{q["href"]}">{esc(q["question"])}</a></div><div class="gets small">{esc(q["gets"])}</div></div></li>' for q in page["starting_questions"])
     parts.append(f'<section class="qa" id="s9"><div><span class="rubric">{esc(L["questions_eyebrow"])}</span><h2>{esc(S[9]["heading"])}</h2></div><div><p class="body"><b>{esc(L["questions_title"])}.</b> {esc(S[9]["body"])}</p><ol class="qlist">{qs}</ol><p class="small mt12"><a href="{page["hrefs"]["explore"]}">{esc(L["view_all"])}</a></p></div></section>')
-    parts.append(f'<section class="qa" id="s5"><div>{h2(S[5])}</div><div class="body">{paras(S[5]["paragraphs"])}</div></section>')
+    def section(o: int, id_: str, head_html: str, body_html: str) -> str:
+        # Owner decision B-a (9 October 2026; presentation contract, orientation_routes): a progressive section is a
+        # named disclosure; its summary holds the section's own governed kicker and heading (headings are allowed in a
+        # summary), so the heading stays in the outline and any link to it lands on a visible target
+        if o in prog:
+            return f'<section class="qa fold-sec" id="{id_}"><details class="fold home-fold"><summary>{head_html}</summary><div class="fold-body">{body_html}</div></details></section>'
+        return f'<section class="qa" id="{id_}"><div>{head_html}</div>{body_html}</section>'
+    parts.append(section(5, "s5", h2(S[5]), f'<div class="body">{paras(S[5]["paragraphs"])}</div>'))
     v = page["system_visual"]
     # the records not behind a figure (the framing record) belong to the system-context section they frame, not to a
     # group labelled "behind these figures" (D3 test: the label promised four and showed one)
@@ -350,14 +359,15 @@ def home(page: dict, shell: dict) -> str:
     # on /reforms/) is offered first, then the framing record
     recs = ([page["chain_record"]] if page.get("chain_record") else []) + recs
     rest = f'<div class="objs mt18">{"".join(compact(r, L, L["open_evidence_record"]) for r in recs)}</div>' if recs else ""
-    parts.append(f'<section class="qa" id="s6"><div>{rubric(S[6]["role"])}<h2 id="system" tabindex="-1">{esc(S[6]["heading"])}</h2></div><div><div class="body">{paras(S[6]["paragraphs"])}</div>{rest}'
-                 f'<span class="rubric mt18">{esc(L["visual_eyebrow"])}</span>{figure(v, shell["labels"]["cite"], DISC.origin(), heading="h3", boundary_label=L["boundary"], open_label=L["open_record"])}</div></section>')
+    parts.append(section(6, "s6", f'{rubric(S[6]["role"])}<h2 id="system" tabindex="-1">{esc(S[6]["heading"])}</h2>',
+                         f'<div><div class="body">{paras(S[6]["paragraphs"])}</div>{rest}'
+                         f'<span class="rubric mt18">{esc(L["visual_eyebrow"])}</span>{figure(v, shell["labels"]["cite"], DISC.origin(), heading="h3", boundary_label=L["boundary"], open_label=L["open_record"])}</div>'))
     # RC-15 (B15 d, A-8): the gaps section links the measurement priorities bound to Home, by their governed titles
     gp = page.get("gap_priorities") or []
     gaps = (f'<h3 class="mt18">{esc(L["gaps_heading"])}</h3><p class="small">{esc(L["gaps_note"])}</p><ul class="rlist" data-home-gap-priorities>'
             + "".join(f'<li><a href="{m["href"]}">{esc(m["title"])}</a></li>' for m in gp) + "</ul>") if gp else ""
     for o, i in ((7, "s7"), (8, "s8")):
-        parts.append(f'<section class="qa" id="{i}"><div>{h2(S[o])}</div><div class="body">{paras(S[o]["paragraphs"])}{gaps if o == 7 else ""}</div></section>')
+        parts.append(section(o, i, h2(S[o]), f'<div class="body">{paras(S[o]["paragraphs"])}{gaps if o == 7 else ""}</div>'))
     f = page["featured"]
     if f:
         parts.append(f'<section class="qa" id="sf">{rubric(L["featured"], tag="h2")}<div><article class="compact first-obj">{clock(L["evidence_period"], esc(f["evidence_period"]))}<div class="q"><a href="{f["href"]}">{esc(f["title"])}</a></div><div class="st"><p>{esc(f["thesis"])}</p></div><div class="open"><a href="{f["href"]}">{esc(L["open_reading"])}</a> · <a href="{page["hrefs"]["readings"]}">{esc(L["all_readings"])}</a></div></article></div></section>')

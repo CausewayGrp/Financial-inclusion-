@@ -183,6 +183,13 @@ CONTROLS = [
     ("a page loses its search utility", "en/about/index.html",
      replace("data-search-open", "data-search-x"),
      "S05.2 missing search utility reachable"),
+    # O-01 (owner decision B-a, 9 October 2026): Home's boundary is never put behind a disclosure
+    ("Home's boundary goes behind a disclosure", "en/index.html",
+     replace('<section class="bnd" id="s4">', '<details class="fold home-fold"><summary>x</summary><section class="bnd" id="s4">'),
+     "O-01 Home always-visible section 4 not first-load en"),
+    ("a progressive Home section loses its disclosure", "ar/index.html",
+     replace('<section class="qa fold-sec" id="s7"><details class="fold home-fold">', '<section class="qa fold-sec" id="s7"><div>'),
+     "O-01 Home progressive section 7 is not a named disclosure ar"),
     ("a record's boundary stops being first-load", "en/evidence/CLM-001/index.html",
      replace("data-evidence-boundary-first-load", "data-evidence-boundary-later"),
      "S04.1 Evidence Record structural family mismatch"),

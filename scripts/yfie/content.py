@@ -819,8 +819,12 @@ class Content:
         # under the section that names the three gaps
         gaps = [{"id": str(m.get("measurement_id")), "title": self.loc(m, "title", lang),
                  "href": f"/{lang}/measurement/#{quote(str(m.get('measurement_id')))}"} for m in spec.get("governed_measurement_priorities") or []]
+        # Owner decision B-a (9 October 2026): Home's depth comes from the contract's Orientation entry, not the renderer
+        orient = next(e for e in self.presentation.get("orientation_routes") or [] if e.get("route") == "/")
+        tiers = {t: [x["section_order"] for x in orient.get(t) or [] if x.get("kind") == "section"]
+                 for t in ("primary", "supporting", "progressive", "always_visible_boundaries", "first_load_exclusions")}
         return {
-            "family": "Orientation", "route": "/", "lang": lang, "gap_priorities": gaps,
+            "family": "Orientation", "route": "/", "lang": lang, "gap_priorities": gaps, "tiers": tiers,
             "title": self.loc(spec, "title", lang), "meta_description": self.loc(spec, "meta_description", lang),
             "sections": secs, "starting_questions": starting, "records": records, "featured": featured, "system_visual": system, "chain_record": chain,
             "question_count": self.inventory["entry_questions"],

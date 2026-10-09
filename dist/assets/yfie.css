@@ -827,6 +827,13 @@ details.grp>summary{display:flex;align-items:center;min-height:48px;box-sizing:b
 details.fold>.multiple,details.fold>figure{margin-top:16px}
 details.chron-fold>p.small{margin:14px 0 4px}
 .qa.fold-sec{display:block}
+/* Home's named disclosures (owner decision B-a): the control beside the section's own kicker and heading */
+details.home-fold{margin-top:6px}
+details.home-fold>summary{display:grid;grid-template-columns:22px minmax(0,1fr);column-gap:12px;row-gap:2px;align-items:center;padding:12px 16px}
+details.home-fold>summary::before{grid-row:1 / span 2;align-self:center}
+details.home-fold>summary>.rubric,details.home-fold>summary>h2{grid-column:2;margin:0}
+details.home-fold>summary>h2{font-size:var(--fs-q);line-height:var(--lh-q)}
+details.home-fold>.fold-body{padding:16px 0 4px}
 /* the chronology as a dated list: the period as the line's key, the event as its text */
 ol.chron>li.compact{padding:14px 0}
 ol.chron .clock .v{color:var(--green-900)}
