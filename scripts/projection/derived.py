@@ -663,6 +663,23 @@ def search_index(ctx, e):
         for L in ("en", "ar"):
             rec["search_text_" + L] = _ws(" ".join(str(o.get(f + "_" + L) or "") for f in ma_fields))
         out.append(rec)
+    # FC-4 (B, tool audit): the chronology is a public governed family — 23 events, each with its own anchor on
+    # /finance/ and /data/, its governed fact, relevance and boundary — and it had no search record at all, so a word
+    # a reader had just read on the page ("banknotes") found nothing. It is indexed here on the same anchor-and-
+    # fragment pattern the measurement priorities already use. An event carries no governed title of its own, so the
+    # record is named by the controlled wording plus its governed period, as the page itself labels it.
+    ch_fields = t["chronology_search_fields"]
+    ch_title = t["chronology"]
+    for o in ctx.out["visuals/system_chronology.json"]:
+        rec = OrderedDict([("id", o["event_id"]), ("type", "chronology"),
+                           ("route", t["chronology_route"].format(id=o["event_id"]))])
+        for L in ("en", "ar"):
+            rec["title_" + L] = ch_title["title_" + L].format(period=o.get("period_" + L) or o.get("period_en") or "")
+        for L in ("en", "ar"):
+            rec["summary_" + L] = _ws(o.get("fact_" + L) or "")
+            rec["search_text_" + L] = _ws(" ".join(str(o.get(f + "_" + L) or "") for f in ch_fields))
+            rec["meta_" + L] = _ws(o.get("period_" + L) or "")
+        out.append(rec)
     for s in ctx.out["sources/source_reference_map.json"]:
         if not str(s.get("primary_url") or "").strip().lower().startswith(("http://", "https://")):
             continue                                    # only an http(s) URL is a public original locator

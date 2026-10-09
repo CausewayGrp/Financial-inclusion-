@@ -1165,6 +1165,14 @@ class Content:
                 facet_opts[fk].setdefault(card["facets"][fk], label)
             for rt in doms:   # the domain's governed name, as the evidence landscape prints it (RC-10)
                 facet_opts["domain"].setdefault(rt.strip("/"), L("UI-LAND-DOM-" + rt.strip("/").upper()))
+            # FC-4 (B, tool audit): "used on" was the only one of the four filters with no option for a source that
+            # no domain answer uses, because the loop above registers an option per domain a source HAS. Forty-four of
+            # the listed sources have none, twelve of them curated cards, so they could not be isolated and vanished
+            # under every value of that filter. The other three filters already offer this option; now so does this
+            # one. The key is only ever registered for a source that really carries it, so no option can return
+            # nothing. It is not added as a composite: a source used on several domains registers each of them above.
+            if card["facets"]["domain"] == "none":
+                facet_opts["domain"].setdefault("none", L("UI-DATA-FILTER-NOT-RECORDED"))
             card["regulatory"] = r.get("document_label") in REGULATORY_LABELS
             card["kind_line"] = " · ".join(x for x in [card["publisher"], card["kind"], card["date"]] if x)
             if display_ready and r.get("standalone_resource_card_eligible"):

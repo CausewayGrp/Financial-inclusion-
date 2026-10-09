@@ -3082,5 +3082,11 @@
     "label_en": "This address now leads to the record of the Central Bank of Yemen – Aden (CBY-Aden) circular of 26 June 2024. Names from the regulator's lists are not reproduced here.",
     "label_ar": "يُحيل هذا الرابط الآن إلى سجل التعميم المؤرخ في 26 يونيو 2024 والصادر عن البنك المركزي اليمني – عدن. ولا تُذكر هنا الأسماء الواردة في قوائم الجهة الرقابية.",
     "use_rule": "RC-19 (owner decision of 3 October 2026, 23:54 Aden). Body of the page at a retired record address; the link that follows is the target record's governed title."
+  },
+  {
+    "ui_id": "UI-JS-TYPE-CHRONOLOGY",
+    "label_en": "Chronology event",
+    "label_ar": "حدث في التسلسل الزمني",
+    "use_rule": "site-src/app.js TYPE_LABEL_UI['chronology']"
   }
 ]

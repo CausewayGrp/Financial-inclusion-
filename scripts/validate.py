@@ -218,7 +218,9 @@ try:
     idx=json.load(open(DIST/'static-data/search_index.json',encoding='utf-8'))
     idx=idx if isinstance(idx,list) else idx.get('records',[])
     search_records=idx
-    allowed={'page','question','evidence','reading','measurement','source','source_locator'}   # Tranche C JRN-05: governed questions
+    # FC-4 (B, tool audit): 'chronology' joins them. The 23 public chronology events had no search record at
+    # all, so a word a reader had just read on /finance/ found nothing.
+    allowed={'page','question','evidence','reading','measurement','source','source_locator','chronology'}   # Tranche C JRN-05: governed questions
     for rec in idx:
         typ=rec.get('type') or rec.get('object_type')
         if typ not in allowed: errors.append('unexpected public search type '+str(typ))
@@ -3218,9 +3220,17 @@ try:
             if not _sel:
                 errors.append(f"RC-B13 the {_k} filter is missing {_lang}")
                 continue
-            for _o in re.findall(r'<option value="([^"]+)">', _sel.group(1)):
+            _offered = re.findall(r'<option value="([^"]+)">', _sel.group(1))
+            for _o in _offered:
                 if _o not in _vals:
                     errors.append(f"RC-B13 the {_k} filter offers {_o!r}, which no listed source carries {_lang}")
+            # FC-4 (B, tool audit): the other direction, which is how the "used on" filter came to leave 44 listed
+            # sources unreachable under every one of its values. A filter that offers no option for a key a record
+            # carries hides that record from itself, so the check runs both ways from now on.
+            for _v in dict.fromkeys(_vals):
+                if _v not in _offered:
+                    errors.append(f"RC-B13 a listed source carries the {_k} key {_v!r}, which the filter does not "
+                                  f"offer, so that source cannot be found by {_k} {_lang}")
         _orig = _ic13["UI-EVID-OPEN-ORIGINAL-SOURCE"][f"label_{_lang}"]
         for _a in re.findall(r'<a class="source-locator" href="https://web\.archive\.org/[^"]*"[^>]*>([^<]*)', _h):   # the link text, before its "opens in a new tab" span
             if _html.unescape(_a).strip() == _orig.strip():

@@ -89,10 +89,25 @@ def t_lang(page, base):
 
 @test("compare: wrong ID count is a technical input error, not a verdict")
 def t_count(page, base):
-    page.goto(base + "/en/evidence/compare/?records=CLM-001")
+    # FC-4 (B): more records than the tool takes. This assertion used to use a single record, which is in fact the
+    # entry point every comparable record page offers, so it asserted the defect rather than the rule.
+    page.goto(base + "/en/evidence/compare/?records=CLM-001,CLM-010,CLM-032,CLM-033,CLM-035")
     el = page.query_selector("[data-compare-url-error]")
     assert el and el.get_attribute("data-compare-url-error") == "count" and el.get_attribute("role") == "alert"
     assert verdict(page) is None
+
+
+@test("compare: the entry link from a record pre-selects that record and asks for a second")
+def t_single_entry(page, base):
+    # The link the record pages carry. It must not be read as a malformed comparison (FC-4).
+    page.goto(base + "/en/evidence/compare/?records=CLM-033")
+    assert page.query_selector("[data-compare-url-error]") is None, "the product's own Compare button is refused"
+    assert selection(page) == ["CLM-033"], selection(page)
+    assert verdict(page) is None, "one record is not a comparison"
+    prompt = page.query_selector("[data-compare-prompt]")
+    assert prompt and prompt.is_visible(), "the prompt for a second record is not shown"
+    copy = page.query_selector("[data-compare-copy]")
+    assert copy and copy.is_disabled(), "a one-record selection must not be copyable as a comparison"
 
 
 @test("compare: unknown ID is a technical input error naming the ID")
@@ -122,7 +137,7 @@ def t_duplicate(page, base):
 
 @test("compare: an error clears once the reader chooses records")
 def t_recover(page, base):
-    page.goto(base + "/en/evidence/compare/?records=CLM-001")
+    page.goto(base + "/en/evidence/compare/?records=CLM-001,CLM-010,CLM-032,CLM-033,CLM-035")
     opts = page.evaluate("[...document.querySelectorAll('#compare-b option')].map(o=>o.value)")
     page.select_option("#compare-b", opts[1])
     assert page.query_selector("[data-compare-url-error]") is None and verdict(page)
@@ -535,7 +550,7 @@ def t_keyboard_walk(page, base):
 
 @test("a11y: technical-error and status regions are announced (role/aria-live)")
 def t_announce(page, base):
-    page.goto(base + "/en/evidence/compare/?records=CLM-001")
+    page.goto(base + "/en/evidence/compare/?records=CLM-001,CLM-010,CLM-032,CLM-033,CLM-035")
     assert page.get_attribute("[data-compare-url-error]", "role") == "alert"
     page.goto(base + "/en/evidence/")
     assert page.evaluate("document.querySelector('#search-results').getAttribute('aria-live')") == "polite"

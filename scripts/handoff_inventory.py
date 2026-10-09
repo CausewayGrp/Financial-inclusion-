@@ -72,7 +72,12 @@ ROLE_RULES = OrderedDict([
 
 # Technical (not evidence) states the static baseline already implements and tests (scripts/tests/test_public_tools.py).
 TECHNICAL_STATES = [
-    ("compare_wrong_count", "/{L}/evidence/compare/?records=CLM-001", "Announced technical input error; no verdict is drawn"),
+    # FC-4 (B): a single record is the entry point from a record page, not a wrong count, so the wrong-count state is
+    # reached with more records than the tool takes. The single-record entry is its own state below.
+    ("compare_wrong_count", "/{L}/evidence/compare/?records=CLM-001,CLM-010,CLM-032,CLM-033,CLM-035",
+     "Announced technical input error; no verdict is drawn"),
+    ("compare_single_record_entry", "/{L}/evidence/compare/?records=CLM-033",
+     "The record is pre-selected in the first slot, the second is empty, the governed prompt asks for it; no error, no verdict"),
     ("compare_unknown_id", "/{L}/evidence/compare/?records=CLM-001,NOT-A-RECORD", "Technical input error naming the unknown reference"),
     ("compare_not_comparable_record", "/{L}/evidence/compare/?records=CLM-001,CLM-003", "A real record outside the comparable set: announced as not available for comparison here (a link error, not a finding)"),
     ("compare_malformed", "/{L}/evidence/compare/?records=,,", "Technical input error"),

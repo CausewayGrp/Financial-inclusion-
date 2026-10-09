@@ -1,5 +1,27 @@
 # Repository Change Log
 
+## 2026-10-04 — FC-4: three tool defects fixed; the chronology made discoverable
+
+Master `fdb24bdfeae5…` → `8bf7e5aae3a80b21ebc3bb56248015f6dfd0a76c8efaf19c1ac86b93ecef08e1`, through `run_stage.py`
+(`audit/final_content/fc_4_chronology_search.py`).
+
+- **Compare entry.** On all 13 comparable records, in both languages, the product's own "Compare evidence" button
+  links `?records=<one id>` and the runtime answered it with the malformed-link alert, then selected two unrelated
+  records. A single valid comparable id is now a pre-selection: first slot filled, second empty, governed prompt
+  shown, no error, no verdict. Zero or more than four is still the count error; an unknown reference still errors.
+- **The chronology is searchable.** 23 public events, each rendering on `/finance/` and `/data/` with its own anchor
+  and governed text, had no search record, so a word a reader had just read found nothing. Indexed on the
+  anchor-and-fragment pattern the measurement priorities use; 440 → 464 records. FC-4 adds the governed label the
+  result-type filter needs for the new type.
+- **The `/data/` "used on" filter** hid 44 of 158 sources under every one of its values. It now offers the
+  "Not recorded" option its three sibling filters already carried — **and gate RC-B13, which checked only
+  option → record, now checks record → option too**, which is how this escaped.
+- **A test assertion corrected:** `test_public_tools.py` asserted the single-record Compare URL produces an error,
+  which asserted the defect rather than the rule. It now uses a genuine wrong count, and a new test covers the entry
+  pre-selection.
+- **Records:** `audit/final_content/FINAL_CONTENT_LOG.md`, `docs/HANDOVER_TO_DEVELOPER.md` (what remains for a human,
+  and plainly what this window did not finish).
+
 ## 2026-10-04 — FC-2, FC-3, FC-3b: source locators; a false "no later value" claim removed
 
 Master `2713c086b7f9…` → `1fa11bad82ed…` (FC-2) → `439fdce82563…` (FC-3) →

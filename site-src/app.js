@@ -11,7 +11,7 @@ const TF=(k,o)=>T(k).replace(/\{(\w+)\}/g,(m,n)=>(n in o?String(o[n]):m));
 const labelsFrom=table=>Object.fromEntries(Object.entries(table).map(([k,v])=>[k,T(v)]));
 const COMPARE_ERROR_UI={"title": "UI-JS-COMPARE-LINK-TITLE", "count": "UI-JS-COMPARE-LINK-COUNT", "malformed": "UI-JS-COMPARE-LINK-MALFORMED", "unknown": "UI-JS-COMPARE-LINK-UNKNOWN", "note": "UI-JS-COMPARE-LINK-NOTE"};
 const COMPARE_LABEL_UI={"definition": "UI-JS-COMPARE-DEFINITION", "universe": "UI-JS-COMPARE-UNIVERSE", "period": "UI-JS-COMPARE-PERIOD", "method": "UI-JS-COMPARE-METHOD", "source": "UI-JS-COMPARE-SOURCE", "currentness": "UI-JS-COMPARE-CURRENTNESS", "boundary": "UI-JS-COMPARE-BOUNDARY", "same": "UI-JS-COMPARE-SAME", "different": "UI-JS-COMPARE-DIFFERENT", "missing": "UI-JS-COMPARE-MISSING", "informational": "UI-JS-COMPARE-INFORMATIONAL", "sameRecord": "UI-JS-COMPARE-SAME-RECORD", "notDirect": "UI-JS-COMPARE-NOT-DIRECT", "unresolved": "UI-JS-COMPARE-UNRESOLVED", "qualified": "UI-JS-COMPARE-QUALIFIED", "aligned": "UI-JS-COMPARE-ALIGNED", "sameRecordCopy": "UI-JS-COMPARE-SAME-RECORD-COPY", "notDirectCopy": "UI-JS-COMPARE-NOT-DIRECT-COPY", "unresolvedCopy": "UI-JS-COMPARE-UNRESOLVED-COPY", "qualifiedCopy": "UI-JS-COMPARE-QUALIFIED-COPY", "alignedCopy": "UI-JS-COMPARE-ALIGNED-COPY", "dimension": "UI-JS-COMPARE-DIMENSION", "assessment": "UI-JS-COMPARE-ASSESSMENT", "openRecord": "UI-JS-COMPARE-OPEN-RECORD", "noMerge": "UI-JS-COMPARE-NO-MERGE", "table": "UI-JS-COMPARE-TABLE", "selected": "UI-JS-COMPARE-SELECTED"};
-const TYPE_LABEL_UI={"page": "UI-JS-TYPE-PAGE", "question": "UI-JS-TYPE-QUESTION", "evidence": "UI-JS-TYPE-EVIDENCE", "reading": "UI-JS-TYPE-READING", "measurement": "UI-JS-TYPE-MEASUREMENT", "source": "UI-JS-TYPE-SOURCE", "source_locator": "UI-JS-TYPE-SOURCE-LOCATOR"};
+const TYPE_LABEL_UI={"page": "UI-JS-TYPE-PAGE", "question": "UI-JS-TYPE-QUESTION", "evidence": "UI-JS-TYPE-EVIDENCE", "reading": "UI-JS-TYPE-READING", "measurement": "UI-JS-TYPE-MEASUREMENT", "source": "UI-JS-TYPE-SOURCE", "source_locator": "UI-JS-TYPE-SOURCE-LOCATOR", "chronology": "UI-JS-TYPE-CHRONOLOGY"};
 
 function closeMenu(returnFocus=false){
   const n=$('#primary-nav'), b=$('[data-menu]');
@@ -375,10 +375,16 @@ if(compareSelects.length>=2&&out){
     const parts=raw.split(',');
     if(!raw.trim()||parts.some(p=>!p.trim()))return {state:'error',reason:'malformed'};
     const ids=parts.map(p=>p.trim());
-    if(ids.length<2||ids.length>4)return {state:'error',reason:'count'};
     if(ids.some(id=>!/^[A-Za-z0-9._+-]+$/.test(id)))return {state:'error',reason:'malformed'};
     const unknown=ids.filter(id=>!validIds.has(id));
     if(unknown.length)return {state:'error',reason:'unknown',ids:unknown};
+    if(ids.length>4)return {state:'error',reason:'count'};
+    // FC-4 (B, tool audit): one comparable record is the entry point every one of those record pages offers
+    // ("Compare evidence" -> ?records=<that id>), so it is a pre-selection, not a malformed link. Until this fix the
+    // tool answered its own product's button with the input-error panel and selected two unrelated records instead.
+    // The record is put in the first slot, the second is left empty and the governed prompt asks for it. Zero or more
+    // than four is still the count error, and an unknown or badly formed reference is still checked first.
+    if(ids.length===1)return {state:'seed',ids};
     return {state:'ok',ids};
   };
   const serialize=()=>compareSelects.map(sel=>sel.value).filter(Boolean).map(encodeURIComponent).join(',');
@@ -410,9 +416,9 @@ if(compareSelects.length>=2&&out){
   };
   compareSelects.forEach(sel=>sel.addEventListener('change',draw));
   const requested=parseRecordsParam(new URLSearchParams(location.search).get('records'));
-  if(requested.state==='ok'){
+  if(requested.state==='ok'||requested.state==='seed'){
     compareSelects.forEach((sel,i)=>{sel.value=requested.ids[i]||'';});   // duplicates stay selected: the verdict shows them as invalid
-    draw();
+    draw();   // with one record: no table, no verdict, the prompt visible (FC-4)
   }else{
     if(compareSelects[1]?.options.length>1)compareSelects[1].selectedIndex=1;
     if(requested.state==='error')showUrlError(requested); else draw();

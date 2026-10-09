@@ -132,3 +132,33 @@ undone.
 | # | Finding | Disposition |
 |---|---|---|
 | FC-A-04 | The World Bank's 2014 value for borrowing any money is 65.982360 in its current database (66.0 at one decimal) but 65.9 on its own printed 2014 country page. Both are the publisher's; they disagree. | Each record keeps the value from the source it was read in, and no difference between the two vintages is computed. Recorded, not repaired. |
+
+## Batch B — the tools (finding FC-4:B-TOOLS)
+
+An audit of the `/data/` source filter, search, Compare and the guided-discovery links. Each defect below was
+reproduced in the built site before it was fixed, and each fix was verified in both editions.
+
+| # | Defect, as a reader meets it | Verified | Fix |
+|---|---|---|---|
+| 1 | **The product's own Compare button was refused by its own tool.** On all 13 comparable records, in both languages, "Compare evidence" links to `?records=<that id>`, and the runtime answered a single id with the malformed-link alert panel — then primed the tool with two unrelated default records. `FINAL_OPEN_ITEMS_REGISTER.md` (EAD-06) recorded the opposite as shipped. | `dist/en/evidence/CLM-033/` carries `href=".../compare/?records=CLM-033"`; `site-src/app.js:378` rejected `ids.length<2` | A single **valid, comparable** id is now a pre-selection, not an error: it fills the first slot, the second stays empty and the governed prompt asks for it. Zero or more than four is still the count error, and an unknown or badly formed reference is still checked first and still errors. |
+| 2 | **23 public chronology events were in no tool at all.** Each renders on `/finance/` and `/data/` with its own anchor, governed fact, relevance and boundary — and none had a search record, nor did its text reach the index through its host page. A reader who searched "banknotes", a word printed on `/en/finance/`, got the empty state. | 440 search records, 0 mentioning `YSC`, against 24 chronology rows | Indexed on the same anchor-and-fragment pattern the measurement priorities already use (`/finance/#YSC-0xx`). 464 records now. An event carries no governed title of its own, so the record is named by controlled wording plus its governed period, as the page itself labels it, and its summary is the governed fact. The result-type filter needed a governed label for the new type (FC-4), or it would have offered no option for a type the index carries — the same asymmetry as defect 3. |
+| 3 | **The `/data/` "used on" filter hid 44 of 158 sources under every one of its values**, twelve of them curated cards. It was the only one of the four filters with no option for a source that no domain answer uses; the other three carry "Not recorded" precisely so that no record is unreachable. | 44 records carry `data-f-domain="none"`; the domain `<select>` offered 9 options, none of them `none` | One option added, from the existing governed label `UI-DATA-FILTER-NOT-RECORDED`. **And the gate that let this through was fixed:** `RC-B13` checked only option → record, never record → option, so a filter that hid a record from itself passed. It now checks both directions. |
+
+**Checked and found correct, so recorded rather than changed:** no facet value in either edition returns zero records;
+English and Arabic offer identical facet keys and identical per-value counts; all 42 governed search smoke assertions
+pass; every zero-result query found was a word genuinely absent from the corpus, answered by the governed empty state;
+`SEARCH-ALIAS-001`'s unmatched `document_type:law` target exists precisely to tell a reader no law is held; the nine
+sources without a public locator are correctly suppressed everywhere; and 18,754 internal links and every search
+destination resolve in both editions with no broken route and no missing fragment.
+
+**One test assertion was corrected, not weakened.** `scripts/tests/test_public_tools.py` asserted that
+`?records=CLM-001` produces the count error — which is the entry link every record page carries, so the test asserted
+the defect rather than the rule. It now uses five records, a genuine wrong count, and a new test asserts the
+single-record entry pre-selects the record, shows the prompt, draws no verdict and leaves the copy button disabled.
+
+## What this window did NOT do
+
+Batches C, D and E of the owner's message were not started. The research for C is complete and is recorded in
+`docs/HANDOVER_TO_DEVELOPER.md` §7 so the next window does not repeat it; D is fully mapped there too. The programme
+status in `README.md`, the checkpoint and the project context is therefore **unchanged and still stale**, and
+correcting it is the first thing the next window should do.
