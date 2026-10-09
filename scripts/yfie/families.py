@@ -213,7 +213,10 @@ def domain(page: dict, shell: dict) -> str:
             continue
         depth += fig(vid)
     if depth:
-        parts.append(f'<section class="qa figs" id="views"><div>{rubric(L["visual"])}</div><div>{depth}</div></section>')
+        # V1 (DL-V1-009): the depth figures are views a reader opens, not the page's answer; the governed label that headed
+        # them becomes the disclosure's summary, with the number of views. The primary visual above stays first-load.
+        n_views = depth.count("<figure ")
+        parts.append(f'<section class="qa figs fold-sec" id="views"><details class="fold views-fold"><summary>{esc(L["visual"])} <span class="count">({bdi(n_views)})</span></summary>{depth}</details></section>')
         index.append(("views", L["visual"]))
     if page["progressive"]:
         more = "".join(f'<div class="qa"><div><span class="rubric">{esc(s.get("role") or "")}</span></div><div><h3>{esc(s["heading"])}</h3><div class="body">{body_paras(s["paragraphs"])}</div></div></div>' for s in page["progressive"])
@@ -428,7 +431,7 @@ def data_sources(page: dict, shell: dict) -> str:
                           + (f'<div class="small"><b>{esc(CL["sources"])}</b> {src}</div>' if src else "")
                           + (f'<div class="small vnote">{esc(e["verification_note"])}</div>' if e.get("verification_note") else "") + "</li>")
             parts.append(f'<section class="qa" id="chronology"><div>{rubric(s.get("role") or "")}<h2>{esc(s["heading"])}</h2></div><div><div class="body">{body_paras(s["paragraphs"])}</div>'
-                         f'<p class="small mt12"><b>{esc(ch["heading"])}</b> · {esc(ch["intro"])}</p><ol class="objs chron">{"".join(ev)}</ol></div></section>')
+                         f'<details class="fold chron-fold"><summary>{esc(ch["heading"])} <span class="count">({bdi(len(ev))})</span></summary><p class="small">{esc(ch["intro"])}</p><ol class="objs chron">{"".join(ev)}</ol></details></div></section>')
             index.append(("chronology", s["heading"]))
             continue
         else:

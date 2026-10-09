@@ -1,5 +1,26 @@
 # Repository Change Log
 
+## 2026-10-09 — V1 design integration, phase 2 (disclosure and density; not accepted)
+
+Renderer and stylesheet, no governed text or contract changed (`design/DESIGN_INTEGRATION_V1.md`, DL-V1-009…012): the
+depth figures of the domain answers and the dated chronology list on `/data/` become disclosures named by their existing
+governed labels; one disclosure pattern for every governed `details`; the phone's in-page index as a row of chips; two
+cards to a row on tablets; source rows on wide screens. Phone length (Arabic, 390 px): `/data/` 77.8 → 57.2 screens,
+`/payments/` 30.9 → 19.9, `/firms/` 20.5 → 16.7, `/people/` 16.9 → 15.3. Home and `/finance/` need a contract tier or a
+governed label first (`design/ESCALATIONS.md`, V1 phase 2). Not accepted: acceptance is the owner's.
+
+
+## 2026-10-09 — V1 design integration, phase 1 (screen stylesheet; not accepted)
+
+The owner's palette and hierarchy on the accepted D7 structure (`design/DESIGN_INTEGRATION_V1.md`, DL-V1-001…008):
+warm paper, one green, sage and brass; a one-row product bar; a deep-green colophon with the logo on a paper tile; key
+figures, numerals and calls to action in green; "does not establish" as a sage panel under a brass double rule; white
+figure plates; one filter-bar pattern. Screen only: the 288 documents are byte-identical and print is unchanged. No
+content, Master, controlled contract, `app.js`, test or gate changed; no font added. Three accessibility defects the
+full audit found are fixed in the stylesheet; the social images are regenerated. What needs copy or a contract is
+escalated (`design/ESCALATIONS.md`, V1). Not accepted: acceptance is the owner's. Public release is not declared.
+
+
 ## 2026-10-04 — Non-design v1 front door
 
 README, the current-state projection and the re-entry checkpoint now say the non-design v1 product is complete, the current phase is design / presentation integration, and C1–C3 are post-v1. Public release is not declared. Three documentation diagrams added. No Master or product change.
