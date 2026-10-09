@@ -380,6 +380,12 @@ CONTROLS = [
     ("a Findex gap prints to two decimals on Home", "en/index.html",
      replace('<b class="fnum">12.9</b>', '<b class="fnum">12.91</b>'),
      "E2-PREC en/index.html prints a Findex share or gap to two decimals: 12.91"),
+    # RC-B13, the direction added by FC-4 (B, tool audit): a filter must offer an option for every key a listed
+    # source carries, or it hides that record from itself. This is the fault that left 44 of 158 sources unreachable
+    # under every value of the "used on" filter while the gate passed, because the gate only checked the other way.
+    ("a source filter stops offering an option for a key its records carry", "en/data/index.html",
+     sub_once(r'(<select data-source-facet="domain">.*?)<option value="none">[^<]*</option>', r'\1'),
+     "RC-B13 a listed source carries the domain key 'none', which the filter does not offer"),
     # FC-MOE (final content pass, FC-1): the derived interval of a Findex figure is printed, attributed to this
     # resource, and carries its clustering limit. One governed field renders several times on a record page, so each
     # control removes its target everywhere (count=0): a partial loss cannot happen from one governed cell.
