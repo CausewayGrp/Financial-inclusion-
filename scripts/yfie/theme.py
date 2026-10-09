@@ -59,12 +59,12 @@ p{margin:0 0 .85em}p:last-child{margin-bottom:0}
 .brand img{width:40px;height:40px}
 .brand-text{display:flex;flex-direction:column;gap:2px;min-width:0}
 .brand-pub{font-weight:600;font-size:11.5px;line-height:1;letter-spacing:.02em;color:var(--ochre)}
-.brand-name{font-weight:600;font-size:13px;line-height:1.25;max-width:22ch}
+.brand-name{font-weight:600;font-size:13px;line-height:1.25;max-width:22ch;overflow-wrap:anywhere}
 .nav{display:none}
 .controls{display:flex;align-items:center;gap:12px;font-size:var(--fs-nav);font-weight:500;white-space:nowrap}
 .controls .tbtn,.controls a{text-decoration:none}
-.controls .lang{display:inline-flex;width:36px;height:36px;justify-content:center;padding:0;border:1px solid var(--rule-2);border-radius:50%;color:var(--ink-2)}
-.controls .lang svg{display:block;width:19px;height:19px;fill:none;stroke:currentColor;stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round}
+.controls .lang{display:inline-flex;align-items:center;justify-content:center;min-height:44px;padding:0 10px;border:1px solid var(--rule-2);border-radius:3px;color:var(--ink-2)}
+@media (max-width:899px){.js .controls .lang{display:none}}
 /* R-05: the language switch and the menu are links; they keep the box the buttons had (44 px including padding and border) */
 .controls a.tbtn{display:inline-flex;align-items:center;box-sizing:border-box}
 .controls .cite,.controls .report{display:none}
@@ -200,11 +200,17 @@ svg.rv2{display:block;overflow:visible;font-family:var(--font)}
 .nav.open{display:flex;flex-direction:column;gap:0;position:absolute;inset-inline:0;top:100%;max-height:calc(100vh - 72px);overflow-y:auto;overscroll-behavior:contain;background:var(--plaster);border-bottom:1px solid var(--rule-2);padding:8px 16px;z-index:50;font-size:var(--fs-nav);font-weight:500}
 .nav.open .nav-family{display:block}
 .nav.open .nav-family>summary{display:block;padding:11px 0;border-bottom:1px solid var(--rule);font-weight:600}
-.nav.open .nav-submenu{position:static;display:none;min-width:0;max-width:none;max-height:none;overflow:visible;margin:0;padding:0 12px 8px;border:0;background:transparent}
+.nav.open>.nav-link{display:block;padding:11px 0;border-bottom:1px solid var(--rule);font-weight:600;text-decoration:none}
+.nav.open>.nav-link[aria-current=page]{text-decoration:underline;text-decoration-color:var(--ochre-line);text-decoration-thickness:2px}
+.nav.open .nav-submenu{position:static;display:none;flex-direction:column;min-width:0;max-width:none;max-height:none;overflow:visible;list-style:none;margin:0;padding:0 12px 8px;border:0;background:transparent;box-shadow:none}
 .nav.open .nav-family[open]>.nav-submenu{display:flex}
 .nav.open .nav-submenu a{display:block;padding:9px 0;text-decoration:none;border-bottom:1px solid var(--rule)}
 .nav.open .nav-submenu li:last-child a{border-bottom:0}
-.nav.open .tbtn.m-only{align-self:flex-start;margin-top:10px}
+.nav.open [data-menu-trust]{display:flex;flex-direction:column;align-items:stretch;gap:0}
+.nav.open [data-menu-trust] a{display:flex;align-items:center;min-height:44px;padding:9px 0;border-bottom:1px solid var(--rule);text-decoration:none}
+.nav.open [data-menu-trust] a:last-child{border-bottom:0}
+.nav.open .tbtn.m-only{align-self:flex-start;min-height:44px;margin-top:10px}
+.nav.open .lang.m-only{display:inline-flex;align-self:flex-start;align-items:center;min-height:44px;margin-top:10px}
 .nav.open .glabel{color:var(--mute);font-size:12px;font-weight:600;padding:10px 0 2px}
 [dir=ltr] .nav.open .glabel{text-transform:uppercase;letter-spacing:.08em}
 .controls .tbtn,.controls a{min-height:44px}
@@ -247,21 +253,24 @@ b.fnum{font-weight:700;font-size:1.08em;font-variant-numeric:lining-nums}
 html[dir=rtl]{--fs-display:42px;--fs-q:24px;--fs-st:22px;--fs-body:18px;--fs-read:20px;--fs-bnd:20px}
 .bar-in{display:grid;grid-template-columns:auto minmax(0,1fr) auto;padding:12px 32px;column-gap:clamp(28px,3vw,48px);row-gap:12px}
 .brand{flex-shrink:0}
-.brand img{width:48px;height:48px}.brand-name{font-size:14px;max-width:none}.brand-pub{font-size:12.5px}
+.brand img{width:48px;height:48px}.brand-name{font-size:14px}.brand-pub{font-size:12.5px}
 .brand{margin-inline-end:0}
 .nav{display:flex;flex-wrap:wrap;justify-content:center;gap:4px clamp(10px,1.35vw,20px);min-width:0;font-size:var(--fs-nav);font-weight:500;align-items:center}
 .nav-family{position:relative;min-width:0}
-.nav-family>summary{cursor:pointer;list-style:none;white-space:nowrap;padding:8px 0;border-bottom:2px solid transparent}
+.nav-family>summary{cursor:pointer;list-style:none;white-space:normal;text-wrap:balance;padding:8px 0;border-bottom:2px solid transparent}
 .nav-family>summary::-webkit-details-marker{display:none}
 .nav-family>summary::after{content:"";display:inline-block;width:5px;height:5px;margin-inline-start:8px;vertical-align:3px;border-inline-end:1px solid currentColor;border-bottom:1px solid currentColor;transform:rotate(45deg)}
 .nav-family[open]>summary::after{transform:rotate(225deg);vertical-align:0}
 .nav-family.active>summary{border-bottom-color:var(--ochre-line)}
-.nav-submenu{box-sizing:border-box;display:none;position:absolute;inset-block-start:calc(100% + 8px);inset-inline-start:0;z-index:60;min-width:min(280px,85vw);width:max-content;max-width:min(360px,85vw);max-height:min(70vh,620px);overflow:auto;overscroll-behavior:contain;list-style:none;margin:0;padding:7px 16px;background:var(--paper);border:1px solid var(--rule-2)}
+.nav>.nav-link{display:block;align-self:center;max-width:100%;padding:8px 0;border-bottom:2px solid transparent;font-weight:500;text-decoration:none;text-wrap:balance;overflow-wrap:anywhere}
+.nav>.nav-link[aria-current=page]{font-weight:600;border-bottom-color:var(--ochre-line)}
+.nav-submenu{box-sizing:border-box;display:none;position:absolute;inset-block-start:calc(100% + 8px);inset-inline-start:0;z-index:60;min-width:min(280px,85vw);width:max-content;max-width:min(360px,85vw);max-height:min(70vh,620px);overflow:auto;overscroll-behavior:contain;list-style:none;margin:0;padding:7px 16px;background:var(--paper);border:1px solid var(--rule-2);border-top:2px solid var(--ochre-line);box-shadow:0 8px 22px rgba(23,33,43,.14)}
 .nav-family[open]>.nav-submenu{display:flex;flex-direction:column}
 #primary-nav .nav-family:last-of-type>.nav-submenu{inset-inline-start:auto;inset-inline-end:0}
 .nav-submenu li{border-bottom:1px solid var(--rule)}
 .nav-submenu li:last-child{border-bottom:0}
 .nav-submenu a{display:block;padding:9px 0;min-height:24px;text-decoration:none}
+.nav-submenu a:hover{background:var(--plaster)}
 .nav-submenu a[aria-current=page]{font-weight:600;text-decoration:underline;text-decoration-color:var(--ochre-line);text-decoration-thickness:2px}
 .controls{gap:16px}
 .controls .cite,.controls .report{display:inline;color:var(--ink-2)}

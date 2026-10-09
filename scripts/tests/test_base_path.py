@@ -209,6 +209,11 @@ class Sweep:
                     w = f"{rel} <{tag} {name}>"
                     if name in URL_ATTRS:
                         sweep.url(w, value, page_url)
+                    elif name == "data-nav-route":
+                        if lang and value.startswith(f"/{lang}/"):
+                            sweep.route(w, value[len(f"/{lang}"):])
+                        else:
+                            sweep.fail(w, f"invalid localized route key {value!r}")
                     elif name in ("srcset", "imagesrcset"):
                         for cand in value.split(","):
                             if cand.strip():
@@ -565,6 +570,10 @@ def browser_checks(site: Site, server: str, chromium: str | None) -> tuple[list[
                     check(urlsplit(page.url).path == f"{site.base}/{lang}/", f"{tag} 404 home link opened {page.url}")
                     # the language switch keeps the page, and the root entry then honours the stored choice
                     page.goto(f"{B}/{lang}/payments/?x=1#s1", wait_until="load"); loads += 1
+                    if width == 390:
+                        visible(page, "[data-menu]").click()
+                        check(page.get_attribute("[data-menu]", "aria-expanded") == "true",
+                              f"{tag} mobile menu did not open before the language switch")
                     visible(page, "[data-lang]").click()
                     page.wait_for_url(f"{B}/{other}/payments/?x=1#s1", timeout=5000); loads += 1
                     check(page.evaluate("localStorage.getItem('yfie-lang')") == other, f"{tag} the language choice was not stored")

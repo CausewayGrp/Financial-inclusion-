@@ -13,6 +13,8 @@ from urllib.parse import quote, urljoin, urlsplit
 
 ROOT = os.path.abspath(os.path.join(os.path.dirname(__file__), "..", ".."))
 DIST = os.path.join(ROOT, os.environ.get("YFIE_SITE_DIR") or "dist")   # F9: the reference implementation is tested unchanged
+sys.path.insert(0, os.path.join(ROOT, "scripts"))
+from yfie.render import navigation_item
 RESULTS = []
 
 
@@ -81,7 +83,7 @@ def t_lang(page, base):
     opts = page.evaluate("[...document.querySelectorAll('#compare-d option')].map(o=>o.value).filter(Boolean)")
     page.select_option("#compare-d", opts[-1])
     s, v = selection(page), verdict(page)
-    page.click("[data-lang]")
+    page.click("[data-lang]:visible")
     page.wait_for_url("**/ar/evidence/compare/**")
     assert selection(page) == s and verdict(page) == v, (selection(page), s)
     assert records_param(page) == ",".join(s), "Arabic page did not keep the same URL state"
@@ -204,7 +206,7 @@ def t_search_url_state(page, base):
     page.wait_for_selector("#search-results .search-hit")
     assert page.input_value("#global-search") == "remittances"
 
-    page.click("[data-lang]")                                 # and it survives the switch to the other edition
+    page.click("[data-lang]:visible")                          # and it survives the switch to the other edition
     page.wait_for_url("**/ar/evidence/**")
     page.wait_for_selector("#search-results .search-hit")
     assert page.evaluate("new URLSearchParams(location.search).get('q')") == "remittances", page.url
@@ -381,10 +383,10 @@ def t_search_matching(page, base):
 @test("language switch keeps route, query and hash")
 def t_lang_state(page, base):
     page.goto(base + "/en/measurement/#MA-003")
-    page.click("[data-lang]")
+    page.click("[data-lang]:visible")
     page.wait_for_url("**/ar/measurement/#MA-003")
     page.goto(base + "/ar/data/?source=SRC-WB-FSD-2024-001#source-SRC-WB-FSD-2024-001")
-    page.click("[data-lang]")
+    page.click("[data-lang]:visible")
     page.wait_for_url("**/en/data/?source=SRC-WB-FSD-2024-001#source-SRC-WB-FSD-2024-001")
 
 
@@ -511,8 +513,10 @@ def t_skip(page, base):
 def t_menu(page, base):
     page.set_viewport_size({"width": 390, "height": 844})
     page.goto(base + "/en/")
+    assert not page.locator("header .controls [data-lang]").is_visible()
     page.click("[data-menu]")
     assert page.get_attribute("[data-menu]", "aria-expanded") == "true"
+    assert page.locator("#primary-nav [data-lang]").is_visible()
     page.keyboard.press("Escape")
     assert page.get_attribute("[data-menu]", "aria-expanded") == "false"
     assert page.evaluate("document.activeElement.matches('[data-menu]')")
@@ -529,8 +533,32 @@ def t_menu_breakpoint(page, base):
     page.click("[data-menu]")
     assert page.get_attribute("[data-menu]", "aria-expanded") == "true"
     page.set_viewport_size({"width": 900, "height": 844})
+    page.wait_for_function("document.querySelector('[data-menu]').getAttribute('aria-expanded') === 'false'")
     assert page.get_attribute("[data-menu]", "aria-expanded") == "false"
     assert not page.evaluate("document.querySelector('#primary-nav').classList.contains('open')")
+
+
+@test("navigation: mobile dropdown and trust links stack without overlap in both directions")
+def t_mobile_navigation_stacks(page, base):
+        for lang in ("en", "ar"):
+                page.set_viewport_size({"width": 390, "height": 844})
+                page.goto(f"{base}/{lang}/people/")
+                page.click("[data-menu]")
+                page.locator("#primary-nav .nav-family summary").first.click()
+                metrics = page.evaluate("""() => {
+                    const boxes = selector => [...document.querySelectorAll(selector)].map(e => {
+                        const r=e.getBoundingClientRect(); return {top:r.top,bottom:r.bottom};
+                    });
+                    return {overflow:document.documentElement.scrollWidth>document.documentElement.clientWidth,
+                        direction:getComputedStyle(document.documentElement).direction,
+                        dropdown:boxes('#primary-nav .nav-family[open] .nav-submenu a'),
+                        trust:boxes('#primary-nav [data-menu-trust] a')};
+                }""")
+                assert metrics["direction"] == ("rtl" if lang == "ar" else "ltr"), metrics
+                assert not metrics["overflow"], metrics
+                for group in ("dropdown", "trust"):
+                        boxes = metrics[group]
+                        assert boxes and all(boxes[i]["top"] >= boxes[i - 1]["bottom"] - 1 for i in range(1, len(boxes))), (lang, group, boxes)
 
 
 @test("navigation: four hierarchical families use existing routes in both editions")
@@ -555,6 +583,29 @@ def t_navigation_families(page, base):
         )
         assert evidence[0].endswith("/evidence/") and evidence[1].endswith("/evidence/#all")
         assert evidence[2].endswith("/evidence/compare/")
+
+
+@test("navigation: items without children stay ordinary links with current-page semantics")
+def t_navigation_leaf_link(page, base):
+    rendered = navigation_item({"href": "/en/plain/", "label": "Plain link", "active": True, "children": []})
+    assert rendered == '<a class="nav-link" href="/en/plain/" data-nav-route="/en/plain/" aria-current="page">Plain link</a>'
+
+
+@test("information: progressive details reveal existing text once and toggle by keyboard in both editions")
+def t_more_details(page, base):
+    for lang in ("en", "ar"):
+        page.set_viewport_size({"width": 390, "height": 844})
+        page.goto(f"{base}/{lang}/people/")
+        details = page.locator("#more details.more").first
+        summary = details.locator("summary")
+        assert details.count() == 1 and not details.evaluate("e => e.open")
+        original_text = details.evaluate("e => e.textContent")
+        summary.focus()
+        page.keyboard.press("Enter")
+        assert details.evaluate("e => e.open")
+        assert details.evaluate("e => e.textContent") == original_text
+        page.keyboard.press("Enter")
+        assert not details.evaluate("e => e.open")
 
 
 @test("navigation: sticky header, active family, dropdown and Escape work without overflow")

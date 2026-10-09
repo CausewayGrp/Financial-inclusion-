@@ -14,6 +14,8 @@ class P(HTMLParser):
         if tag=='html': self.lang=a.get('lang'); self.dir=a.get('dir')
         if tag=='summary' and a.get('aria-current')=='location' and a.get('data-nav-route'):
             self.locations.add(a['data-nav-route'])
+        if tag=='a' and a.get('aria-current')=='page' and a.get('data-nav-route'):
+            self.locations.add(a['data-nav-route'])
         if tag=='a' and a.get('href'):
             self.links.append(a['href'])
             # The active destination, read as an attribute pair rather than as one literal string: attribute order is

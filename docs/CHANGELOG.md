@@ -1,5 +1,9 @@
 # Repository Change Log
 
+## 2026-10-08 — Responsive navigation and child-aware dropdowns
+
+Navigation items with children render as native dropdowns; items without children render as direct links with current-page semantics. Desktop dropdowns now have clearer boundaries and fit the available viewport; direct links are styled consistently in the desktop bar and mobile menu. Search, citation, language and menu runtime hooks remain unchanged.
+
 ## 2026-10-04 — Non-design v1 front door
 
 README, the current-state projection and the re-entry checkpoint now say the non-design v1 product is complete, the current phase is design / presentation integration, and C1–C3 are post-v1. Public release is not declared. Three documentation diagrams added. No Master or product change.

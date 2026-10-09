@@ -1,4 +1,5 @@
 (function(){
+document.documentElement.classList.add('js');
 const $=(s,c=document)=>c.querySelector(s), $$=(s,c=document)=>[...c.querySelectorAll(s)];
 const prefix=location.pathname.startsWith('/en/')?'/en':'/ar';
 const isAr=document.documentElement.lang==='ar';

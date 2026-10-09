@@ -100,35 +100,49 @@ def logo(px: int, sizes: str = "") -> str:
             f'alt="CauseWay" width="{px}" height="{px}">')
 
 
+def navigation_item(item: dict) -> str:
+    children = item.get("children") or []
+    if not children:
+        current = CUR if item.get("active") else ""
+        return (f'<a class="nav-link" href="{item["href"]}" data-nav-route="{item["href"]}"{current}>'
+                f'{esc(item["label"])}</a>')
+    kids = "".join(f'<li><a href="{k["href"]}"{CUR if k["active"] else ""}>{esc(k["label"])}</a></li>'
+                   for k in children)
+    current = ' aria-current="location"' if item.get("active") else ""
+    active = " active" if item.get("active") else ""
+    return (f'<details class="nav-family{active}"><summary data-nav-route="{item["href"]}"{current}>'
+            f'{esc(item["label"])}</summary><ul class="nav-submenu">{kids}</ul></details>')
+
+
+def language_switch(shell: dict, mobile: bool = False) -> str:
+    L = shell["labels"]
+    other = shell["other_lang"]
+    mobile_class = " m-only" if mobile else ""
+    visual = f'<span>{esc(L["lang_switch_name"])}</span>'
+    return (f'<a class="tbtn lang{mobile_class}" href="{shell["other_href"]}" hreflang="{other}" data-lang="{other}" '
+            f'aria-label="{esc(L["lang_switch_action"])}" lang="{other}" dir="{"ltr" if other == "en" else "rtl"}">'
+            f'{visual}</a>')
+
+
 def header(shell: dict) -> str:
     L = shell["labels"]
     other = shell["other_lang"]
-    nav = []
-    for item in shell["nav"]:
-        kids = "".join(f'<li><a href="{k["href"]}"{CUR if k["active"] else ""}>{esc(k["label"])}</a></li>'
-                       for k in item["children"])
-        current = ' aria-current="location"' if item.get("active") else ""
-        active = " active" if item.get("active") else ""
-        nav.append(f'<details class="nav-family{active}"><summary data-nav-route="{item["href"]}"{current}>{esc(item["label"])}</summary>'
-                   f'<ul class="nav-submenu">{kids}</ul></details>')
+    nav = [navigation_item(item) for item in shell["nav"]]
     # Below 900 px the existing menu also carries trust links and the governed cite action; desktop keeps them in controls.
     if shell.get("mobile_menu"):
         trust_label = next((g["label"] for g in shell["footer"] if any(l["href"].endswith("/about/") for l in g["links"])), L["trust_nav"])
         trust = "".join(f'<a href="{t["href"]}"{CUR if t.get("active") else ""}>{esc(t["label"])}</a>' for t in shell["trust"])
         nav.append(f'<span class="group m-only" role="group" aria-label="{esc(trust_label)}" data-menu-trust><span class="glabel">{esc(trust_label)}</span>{trust}</span>'
-                   f'<button type="button" class="tbtn m-only" data-cite data-menu-cite>{esc(L["cite"])}</button>')
+                   f'<button type="button" class="tbtn m-only" data-cite data-menu-cite>{esc(L["cite"])}</button>'
+                   f'{language_switch(shell, mobile=True)}')
     return (f'<noscript><div class="noscript">{esc(L["noscript"])}</div></noscript><a class="skip" href="#main">{esc(L["skip"])}</a>'
             f'<header class="bar"><div class="bar-in"><a class="brand" href="{shell["home_href"]}" aria-label="CauseWay — {esc(shell["product"])}">{logo(40, "(min-width: 900px) 48px, 40px")}<span class="brand-text"><span class="brand-pub" dir="ltr">CauseWay</span><span class="brand-name">{esc(shell["product"])}</span></span></a>'
             f'<nav id="primary-nav" class="nav" aria-label="{esc(L["primary_nav"])}">{"".join(nav)}</nav>'
             f'<div class="controls"><button type="button" class="tbtn" data-search-open aria-label="{esc(L["search"])}">{esc(L["search"])}</button>'
             f'<button type="button" class="tbtn cite" data-cite aria-label="{esc(L["cite"])}">{esc(L["cite"])}</button>'
             f'<a class="report" href="{shell["contact_href"]}">{esc(L["report"])}</a>'
-            # R-05 (independent review of 70398d1): the language switch and the menu are links, so both work without
-            # JavaScript. The switch opens the same route in the other edition; the menu opens the footer, which carries
-            # every navigation and trust link. The runtime enhances the menu into a disclosure button (app.js).
-            f'<a class="tbtn lang" href="{shell["other_href"]}" hreflang="{other}" data-lang="{other}" aria-label="{esc(L["lang_switch_action"])}" lang="{other}" dir="{"ltr" if other == "en" else "rtl"}">'
-            f'<svg aria-hidden="true" viewBox="0 0 24 24" focusable="false"><circle cx="12" cy="12" r="9"></circle><path d="M3 12h18M12 3a15 15 0 0 1 0 18M12 3a15 15 0 0 0 0 18"></path></svg>'
-            f'<span class="sr-only">{esc(L["lang_switch_name"])}</span></a>'
+            # R-05: both controls remain links without JavaScript; the runtime uses the mobile copy in its disclosure.
+            f'{language_switch(shell)}'
             f'<a class="tbtn menu" href="#site-footer" data-menu aria-label="{esc(L["menu"])}" aria-controls="primary-nav" aria-expanded="false">{esc(L["menu"])}</a></div>'
             f'<div id="utility-status" class="sr-only" role="status" aria-live="polite" aria-atomic="true" data-copied-label="{esc(L["copied"])}"></div></div></header>'
             f'{search_dialog(shell)}<main id="main"><div class="page">')
