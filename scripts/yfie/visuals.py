@@ -448,8 +448,10 @@ def uniform(rows: list, key) -> str | None:
 def table_region(v: dict, tables: str) -> str:
     """The named region a fallback table sits in; focusable only when the table is declared wide and can scroll (a
     table that fits its column is never an idle tab stop)."""
-    tab = ' tabindex="0"' if 'class="rvtab wide"' in tables else ""
-    return f'<div class="table-wrap"{tab} role="region" aria-label="{esc(v["labels"]["text_alternative"])}: {esc(v["title"])}">{tables}</div>'
+    wide = 'class="rvtab wide"' in tables
+    tab = ' tabindex="0"' if wide else ""
+    cls = "table-wrap scrollable-table" if wide else "table-wrap"
+    return f'<div class="{cls}"{tab} role="region" aria-label="{esc(v["labels"]["text_alternative"])}: {esc(v["title"])}">{tables}</div>'
 
 
 # ------------------------------------------------------------------------------------------------ bars (VIS-FINDEX-GAPS)

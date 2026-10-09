@@ -540,25 +540,106 @@ def t_menu_breakpoint(page, base):
 
 @test("navigation: mobile dropdown and trust links stack without overlap in both directions")
 def t_mobile_navigation_stacks(page, base):
-        for lang in ("en", "ar"):
-                page.set_viewport_size({"width": 390, "height": 844})
-                page.goto(f"{base}/{lang}/people/")
+    for lang in ("en", "ar"):
+        page.set_viewport_size({"width": 390, "height": 844})
+        page.goto(f"{base}/{lang}/people/")
+        page.click("[data-menu]")
+        page.locator("#primary-nav .nav-family summary").first.click()
+        metrics = page.evaluate("""() => {
+          const boxes = selector => [...document.querySelectorAll(selector)].map(e => {
+            const r=e.getBoundingClientRect(); return {top:r.top,bottom:r.bottom};
+          });
+          return {overflow:document.documentElement.scrollWidth>document.documentElement.clientWidth,
+            direction:getComputedStyle(document.documentElement).direction,
+            dropdown:boxes('#primary-nav .nav-family[open] .nav-submenu a'),
+            trust:boxes('#primary-nav [data-menu-trust] a')};
+        }""")
+        assert metrics["direction"] == ("rtl" if lang == "ar" else "ltr"), metrics
+        assert not metrics["overflow"], metrics
+        for group in ("dropdown", "trust"):
+            boxes = metrics[group]
+            assert boxes and all(boxes[i]["top"] >= boxes[i - 1]["bottom"] - 1 for i in range(1, len(boxes))), (lang, group, boxes)
+
+
+@test("navigation: brand, triggers and visible controls share a centerline and 44px targets")
+def t_navigation_alignment(page, base):
+    for lang in ("en", "ar"):
+        for width in (1440, 1366, 1280, 1200, 768, 390):
+            page.set_viewport_size({"width": width, "height": 844})
+            page.goto(f"{base}/{lang}/people/")
+            if width < 900:
                 page.click("[data-menu]")
-                page.locator("#primary-nav .nav-family summary").first.click()
-                metrics = page.evaluate("""() => {
-                    const boxes = selector => [...document.querySelectorAll(selector)].map(e => {
-                        const r=e.getBoundingClientRect(); return {top:r.top,bottom:r.bottom};
-                    });
-                    return {overflow:document.documentElement.scrollWidth>document.documentElement.clientWidth,
-                        direction:getComputedStyle(document.documentElement).direction,
-                        dropdown:boxes('#primary-nav .nav-family[open] .nav-submenu a'),
-                        trust:boxes('#primary-nav [data-menu-trust] a')};
-                }""")
-                assert metrics["direction"] == ("rtl" if lang == "ar" else "ltr"), metrics
-                assert not metrics["overflow"], metrics
-                for group in ("dropdown", "trust"):
-                        boxes = metrics[group]
-                        assert boxes and all(boxes[i]["top"] >= boxes[i - 1]["bottom"] - 1 for i in range(1, len(boxes))), (lang, group, boxes)
+            metrics = page.evaluate("""() => {
+              const rect = e => { const r=e.getBoundingClientRect(); return {top:r.top,height:r.height,center:r.top+r.height/2}; };
+              const brand=rect(document.querySelector('.brand'));
+              const controls=[...document.querySelectorAll('.controls > *')].filter(e=>getComputedStyle(e).display!=='none').map(rect);
+              const trigger=document.querySelector('#primary-nav .nav-family summary');
+              const nav=getComputedStyle(document.querySelector('#primary-nav')).display==='none'?null:rect(trigger);
+              return {brand,controls,nav,overflow:document.documentElement.scrollWidth>document.documentElement.clientWidth,
+                direction:getComputedStyle(document.documentElement).direction};
+            }""")
+            expected = "rtl" if lang == "ar" else "ltr"
+            assert metrics["direction"] == expected, metrics
+            assert not metrics["overflow"], (lang, width, metrics)
+            centers = [metrics["brand"]["center"], *(c["center"] for c in metrics["controls"])]
+            if width >= 1280:
+                assert metrics["nav"], (lang, width, metrics)
+                centers.append(metrics["nav"]["center"])
+                assert metrics["nav"]["height"] >= 44, (lang, width, metrics)
+            elif width >= 900:
+                assert metrics["nav"]["top"] >= max(metrics["brand"]["top"] + metrics["brand"]["height"],
+                                                       max(c["top"] + c["height"] for c in metrics["controls"])) - 1, (lang, width, metrics)
+            assert max(centers) - min(centers) <= 1.5, (lang, width, metrics)
+            assert all(c["height"] >= 44 for c in metrics["controls"]), (lang, width, metrics)
+
+
+@test("home: headline and statement compose side by side on wide screens and stack on mobile")
+def t_home_composition(page, base):
+    for lang in ("en", "ar"):
+        for width in (1440, 1280, 768, 390):
+            page.set_viewport_size({"width": width, "height": 844})
+            page.goto(f"{base}/{lang}/")
+            metrics = page.evaluate("""() => {
+              const h=document.querySelector('.home-head'), title=h.querySelector('h1'), statement=h.querySelector('.st'), actions=h.querySelector('.actions');
+              const box=e=>{const r=e.getBoundingClientRect();return {left:r.left,right:r.right,top:r.top,bottom:r.bottom}};
+              return {direction:getComputedStyle(document.documentElement).direction,columns:getComputedStyle(h).gridTemplateColumns,
+                title:box(title),statement:box(statement),actions:box(actions),overflow:document.documentElement.scrollWidth>innerWidth};
+            }""")
+            assert not metrics["overflow"], (lang, width, metrics)
+            assert metrics["direction"] == ("rtl" if lang == "ar" else "ltr"), metrics
+            if width >= 1200:
+                assert abs(metrics["title"]["top"] - metrics["statement"]["top"]) <= 1, (lang, width, metrics)
+                if lang == "en":
+                    assert metrics["title"]["right"] <= metrics["statement"]["left"] + 1, (lang, width, metrics)
+                else:
+                    assert metrics["statement"]["right"] <= metrics["title"]["left"] + 1, (lang, width, metrics)
+                assert abs(metrics["statement"]["left"] - metrics["actions"]["left"]) <= 1 if lang == "en" else abs(metrics["statement"]["right"] - metrics["actions"]["right"]) <= 1
+            else:
+                assert metrics["title"]["bottom"] <= metrics["statement"]["top"] + 1, (lang, width, metrics)
+                assert metrics["statement"]["bottom"] <= metrics["actions"]["top"] + 1, (lang, width, metrics)
+
+
+@test("tables: declared-wide tables use a labelled scroll region with sticky headers in both editions")
+def t_wide_table_presentation(page, base):
+    for lang in ("en", "ar"):
+        page.set_viewport_size({"width": 390, "height": 844})
+        page.goto(f"{base}/{lang}/evidence/")
+        region = page.locator(".table-wrap.scrollable-table").first
+        assert region.count() == 1
+        details = region.evaluate("""e => {
+          const table=e.querySelector('table.rvtab.wide'), head=table?.querySelector('thead th');
+          const before=table?.querySelectorAll('tr').length;
+          e.scrollTop=120;
+          return {role:e.getAttribute('role'),name:e.getAttribute('aria-label'),tabindex:e.getAttribute('tabindex'),
+            maxHeight:getComputedStyle(e).maxHeight,overflow:getComputedStyle(e).overflow,
+            headerPosition:head&&getComputedStyle(head).position,rows:before,headerTop:head?.getBoundingClientRect().top,
+            regionTop:e.getBoundingClientRect().top,documentOverflow:document.documentElement.scrollWidth>document.documentElement.clientWidth};
+        }""")
+        assert details["role"] == "region" and details["name"] and details["tabindex"] == "0", details
+        assert details["maxHeight"] != "none" and details["overflow"] == "auto", details
+        assert details["headerPosition"] == "sticky" and details["rows"] > 1, details
+        assert details["headerTop"] >= details["regionTop"] - 1, details
+        assert not details["documentOverflow"], details
 
 
 @test("navigation: four hierarchical families use existing routes in both editions")
@@ -606,6 +687,23 @@ def t_more_details(page, base):
         assert details.evaluate("e => e.textContent") == original_text
         page.keyboard.press("Enter")
         assert not details.evaluate("e => e.open")
+
+
+@test("information: expandable evidence lists retain every row and text in both editions")
+def t_hub_list_details(page, base):
+    for lang in ("en", "ar"):
+        page.goto(f"{base}/{lang}/evidence/")
+        details = page.locator("#all details.hub").evaluate_all("es=>es.map(e=>({e,n:e.querySelectorAll('li').length}))")
+        selected = max(details, key=lambda item: item["n"])
+        disclosure = page.locator("#all details.hub").nth(details.index(selected))
+        before = disclosure.evaluate("e=>({text:e.textContent,rows:e.querySelectorAll('li').length})")
+        summary = disclosure.locator("summary")
+        summary.focus()
+        page.keyboard.press("Enter")
+        after = disclosure.evaluate("e=>({text:e.textContent,rows:e.querySelectorAll('li').length,open:e.open})")
+        assert after["open"] and after["text"] == before["text"] and after["rows"] == before["rows"] == selected["n"], (lang, before, after)
+        page.keyboard.press("Enter")
+        assert not disclosure.evaluate("e=>e.open")
 
 
 @test("navigation: sticky header, active family, dropdown and Escape work without overflow")

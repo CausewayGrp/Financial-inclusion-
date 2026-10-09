@@ -42,10 +42,18 @@ def json_block(id_: str, data) -> str:
     return f'<script type="application/json" id="{id_}">' + json.dumps(data, ensure_ascii=False).replace("</", "<\\/") + "</script>"
 
 
+def _write_text(path: Path, text: str) -> None:
+    with path.open("w", encoding="utf-8", newline="\n") as fh:
+        fh.write(text)
+
+
 # ------------------------------------------------------------------------------------------------ build hook
 def assets(out: Path, variant: str = "") -> None:
     """Write the stylesheet. Fonts and the logo are copied unchanged by the build."""
-    (out / "assets" / "yfie.css").write_text(theme.FONT_FACES + "\n" + theme.CSS + "\n" + theme.CSS_D2 + "\n" + theme.CSS_D6, encoding="utf-8", newline="\n")
+    _write_text(
+    out / "assets" / "yfie.css",
+    theme.FONT_FACES + "\n" + theme.CSS + "\n" + theme.CSS_D2 + "\n" + theme.CSS_D6,
+)
 
 
 # ------------------------------------------------------------------------------------------------ shell
@@ -342,7 +350,7 @@ def home(page: dict, shell: dict) -> str:
     # The product's statement (section 1) and its two governed actions sit in the head, under the headline and before
     # the first figure: four cold readers (EN/AR × 390/1440, D3) reached the third screen before learning what the
     # product is. The product rubric is kept for the wide head; the masthead already names the product on a phone.
-    parts = [f'<div class="head">{rubric(L["product"], cls="rubric product")}<h1 id="page-title">{esc(page["title"])}</h1><div class="st" id="s1">{paras(S[1]["paragraphs"])}</div>'
+    parts = [f'<div class="head home-head">{rubric(L["product"], cls="rubric product")}<h1 id="page-title">{esc(page["title"])}</h1><div class="st" id="s1">{paras(S[1]["paragraphs"])}</div>'
              f'<div class="actions"><a href="{page["hrefs"]["explore"]}">{esc(L["start"])}</a><a href="{page["hrefs"]["evidence"]}">{esc(L["verify"])}</a></div></div>']
     recs = list(page["records"])
     demo = []
@@ -379,7 +387,7 @@ def home(page: dict, shell: dict) -> str:
     parts.insert(2, strip(index))   # the phone's in-page navigation after the first figure group; the foot spine keeps only the edges (DEBT-014)
     edges = [(f'{L["records_heading"]} ({len(page["records"])})', [f'<a href="{r["href"]}">{esc(r["title"])}</a>' for r in page["records"]]),
              (L["flow"], [f'<a href="{h}">{esc(t)}</a><br><span class="small">{esc(d)}</span>' for h, t, d in ((page["hrefs"]["readings"], L["readings_nav"], L["cta_readings"]), (page["hrefs"]["measurement"], L["measurement_nav"], L["cta_measurement"]), (page["hrefs"]["data"], L["data_nav"], L["cta_data"]))], L["side"])]
-    body = f'<article class="obj page-obj">{"".join(parts)}{page_util(shell, page)}</article>{spine(index, edges)}{spine(index, edges, foot=True, foot_index=False)}'
+    body = f'<article class="obj page-obj home-obj">{"".join(parts)}{page_util(shell, page)}</article>{spine(index, edges)}{spine(index, edges, foot=True, foot_index=False)}'
     return head(page, shell, "/") + header(shell) + body + footer(shell, print_foot(shell, "/", page["title"]))
 
 
@@ -525,16 +533,16 @@ def render_site_files(out: Path, content) -> int:
     """The neutral root entry, the bilingual 404 and the discovery files (F6: one implementation in scripts/discovery.py)."""
     from . import families
     origin = DISC.origin()
-    (out / "index.html").write_text(isolate_document(families.root_page(content.shell("ar", "/"), content.shell("en", "/"))), encoding="utf-8", newline="\n")
-    (out / "404.html").write_text(isolate_document(families.not_found(content.not_found(), content.shell("ar", "/"))), encoding="utf-8", newline="\n")
+    _write_text(out / "index.html", isolate_document(families.root_page(content.shell("ar", "/"), content.shell("en", "/"))))
+    _write_text(out / "404.html", isolate_document(families.not_found(content.not_found(), content.shell("ar", "/"))))
     for r in moved_routes():
         for lang in ("ar", "en"):
             dest = out / lang / r["from"].strip("/") / "index.html"
             dest.parent.mkdir(parents=True, exist_ok=True)
-            dest.write_text(isolate_document(moved_page(content, lang, r)), encoding="utf-8", newline="\n")
-    (out / "robots.txt").write_text(DISC.robots_txt(origin), encoding="utf-8", newline="\n")
+            _write_text(dest, isolate_document(moved_page(content, lang, r)))
+    _write_text(out / "robots.txt", DISC.robots_txt(origin))
     if origin:
-        (out / "sitemap.xml").write_text(DISC.sitemap_xml(content.routes(), origin), encoding="utf-8", newline="\n")
+        _write_text(out / "sitemap.xml", DISC.sitemap_xml(content.routes(), origin))
     return 2 + 2 * len(moved_routes())
 
 

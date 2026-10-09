@@ -122,7 +122,8 @@ def main(argv: list[str] | None = None) -> int:
             html = render.render(content.page(route, lang), content.shell(lang, route))
             d = out / lang / route.strip("/")
             d.mkdir(parents=True, exist_ok=True)
-            (d / "index.html").write_text(html, encoding="utf-8", newline="\n")
+            with (d / "index.html").open("w", encoding="utf-8", newline="\n") as fh:
+                fh.write(html)
     extra = render.render_site_files(out, content)   # the root entry, the bilingual 404, robots.txt, sitemap.xml with an origin
     # B14 a: the data exports are published only when the owner turns the switch on (site-src/deployment.json)
     if discovery.deployment().get("public_downloads") is True:
