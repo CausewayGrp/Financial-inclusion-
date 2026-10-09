@@ -585,6 +585,46 @@ try:
             errors.append(f'CS-01 the checked date is not the edition label date {lang}')
         if _lead+_d not in str(_corr.get(f'body_{lang}') or ''):
             errors.append(f'CS-01 the checked date is not the date /corrections/ section 3 states {lang}')
+    # every page: the strip prints the governed line and the edition, linked to /corrections/ section 3; the colophon
+    # prints the edition, the checked date and the abridged SHA-256 of the Production Master the site was built from
+    _fp=hashlib.sha256((ROOT/'authority/Yemen_Financial_Inclusion_Evidence_Master.xlsx').read_bytes()).hexdigest()[:12]
+    _ncs=0
+    for _f in sorted(DIST.rglob('index.html')):
+        _rp=_f.relative_to(DIST).parts
+        if not _rp or _rp[0] not in ('en','ar'): continue
+        lang=_rp[0]; _h=_f.read_text(encoding='utf-8'); _p=_f.relative_to(DIST).as_posix()
+        _line=_html.escape(_uics['UI-CURRENTNESS-STRIP'][f'label_{lang}'].replace('{date}',_uics['UI-EDITION-CHECKED-DATE'][f'label_{lang}']),quote=False)
+        _ed=_html.escape(_uics['UI-CONTENT-VERSION'][f'label_{lang}'],quote=False)
+        _st=re.findall(r'<div class="cstrip" data-currentness><p class="cstrip-in"><span class="cs-line">(.*?)</span><span class="cs-sep" aria-hidden="true"></span><a href="([^"]+)">(.*?)</a></p></div></header>',_h)
+        if len(_st)!=1 or _vistext(_st[0][0]).strip()!=_vistext(_line).strip() or _st[0][1]!=f'/{lang}/corrections/#s3' or _vistext(_st[0][2]).strip()!=_vistext(_ed).strip():
+            errors.append(f'CS-01 {_p} the currentness strip is missing or does not print the governed date and edition')
+        _co=re.search(r'<section class="colophon"[^>]*data-colophon>(.*?)</section>',_h,re.S)
+        if not _co or f'<code dir="ltr" data-master-fp>{_fp}</code>' not in _co.group(1) or _html.escape(_uics['UI-COLOPHON-SINGLE-MASTER'][f'label_{lang}'],quote=False) not in _co.group(1):
+            errors.append(f'CS-01 {_p} the colophon is missing or does not print the Master fingerprint')
+        elif 'href="#cite-tools"' in _co.group(1) and _h.count('id="cite-tools"')!=1:
+            errors.append(f'CS-01 {_p} the colophon links to citation tools the page does not have')
+        _ncs+=1
+    if _ncs<280: errors.append(f'CS-01 read only {_ncs} pages')
+    # CS-02 (owner decision B-b): the /finance/ dated list is one disclosure named by UI-CHRONOLOGY-LIST-SUMMARY with the
+    # number of events, its heading and intro first-load; on /data/ a curated source's description sits under "About this
+    # source", and its "Does not establish" line never does.
+    for lang in ('en','ar'):
+        _fin=(DIST/lang/'finance'/'index.html').read_text(encoding='utf-8')
+        _sec=re.search(r'<section class="qa" id="chronology">(.*?)</section>',_fin,re.S)
+        _sum=_html.escape(_uics['UI-CHRONOLOGY-LIST-SUMMARY'][f'label_{lang}'],quote=False)
+        _m=re.search(r'<details class="fold chron-fold"><summary>'+re.escape(_sum)+r' <span class="count">\((?:<bdi[^>]*>)?(\d+)(?:</bdi>)?\)</span></summary><ol class="objs chron">(.*?)</ol></details>',_sec.group(1) if _sec else '',re.S)
+        if not _sec or not _m or int(_m.group(1))!=_m.group(2).count('<li ') or '<h2>' not in _sec.group(1).split('<details',1)[0]:
+            errors.append(f'CS-02 /{lang}/finance/ the dated list is not one named disclosure under a first-load heading')
+        _dat=(DIST/lang/'data'/'index.html').read_text(encoding='utf-8')
+        _ab=_html.escape(_uics['UI-DATA-ABOUT-THIS-SOURCE'][f'label_{lang}'],quote=False)
+        _cards=re.findall(r'<article class="src card"[^>]*>(.*?)</article>',_dat,re.S)
+        _with=[c for c in _cards if 'data-source-about' in c]
+        if len(_with)<10:
+            errors.append(f'CS-02 /{lang}/data/ only {len(_with)} curated sources carry "About this source"')
+        for c in _with:
+            _d=re.search(r'<details class="about" data-source-about><summary>(.*?)</summary>(.*?)</details>',c,re.S)
+            if not _d or _d.group(1)!=_ab or 'bnd-line' in _d.group(2):
+                errors.append(f'CS-02 /{lang}/data/ a source description is not under "About this source" alone'); break
 except Exception as _x:
     errors.append('CS-01 unreadable '+repr(_x))
 

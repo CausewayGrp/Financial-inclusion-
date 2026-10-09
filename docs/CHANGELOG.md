@@ -1,5 +1,19 @@
 # Repository Change Log
 
+## 2026-10-09 — Phase B build: currentness strip, Evidence Colophon, two disclosures, better search and filters
+
+What V1B-1 and B-c unlock, in the renderer, stylesheet and runtime (`design/DESIGN_INTEGRATION_V1.md`, DL-V1-013…018).
+A currentness strip under the product bar on every page ("Sources checked up to 3 October 2026 · Edition of 3 October
+2026", the edition linking to `/corrections/` §3). An Evidence Colophon in the footer: the single-Master statement, the
+edition, the check date, the abridged SHA-256 of the Production Master the page was built from, and a link to the page's
+citation tools. `/finance/`: the 24 dated events behind one disclosure named "List of dated events", heading and intro
+first-load. `/data/`: a curated source's description under "About this source" on phones (open on wide screens where
+supported); its "Does not establish" line, reference and cite controls stay outside. Search marks the query's words in
+each result (words only, so dates and references keep their isolation), keeps the query field in view while results
+scroll, and a filter that is set looks set. A link to a target inside a closed disclosure opens it. Gates CS-01 (pages)
+and CS-02 added, with four negative controls, all caught. No governed text removed; no hook renamed.
+
+
 ## 2026-10-09 — B-c: page tools under the title, the full phone menu, the hub numerals (owner decision B-c)
 
 Navigation contract (`navigation_interaction.json`: new keys `hub_numerals` and `page_tools`, `mobile_menu` rewritten,

@@ -141,8 +141,33 @@ def header(shell: dict) -> str:
             # every navigation and trust link. The runtime enhances the menu into a disclosure button (app.js).
             f'<a class="tbtn lang" href="{shell["other_href"]}" hreflang="{other}" data-lang="{other}" aria-label="{esc(L["lang_switch_action"])}" lang="{other}" dir="{"ltr" if other == "en" else "rtl"}">{esc(L["lang_switch_name"])}</a>'
             f'<a class="tbtn menu" href="#site-footer" data-menu aria-label="{esc(L["menu"])}" aria-controls="primary-nav" aria-expanded="false">{esc(L["menu"])}</a></div>'
-            f'<div id="utility-status" class="sr-only" role="status" aria-live="polite" aria-atomic="true" data-copied-label="{esc(L["copied"])}"></div></div></header>'
+            f'<div id="utility-status" class="sr-only" role="status" aria-live="polite" aria-atomic="true" data-copied-label="{esc(L["copied"])}"></div></div>'
+            f'{currentness_strip(shell)}</header>'
             f'{search_dialog(shell)}<main id="main"><div class="page">')
+
+
+def currentness_strip(shell: dict) -> str:
+    """B-b (owner decisions of 9 October 2026): one quiet line under the product bar on every page — the date up to which
+    this edition's sources were checked and the edition, which links to /corrections/ section 3 (what an edition is)."""
+    c = shell.get("currentness")
+    if not c:
+        return ""
+    return (f'<div class="cstrip" data-currentness><p class="cstrip-in"><span class="cs-line">{esc(c["line"])}</span>'
+            f'<span class="cs-sep" aria-hidden="true"></span><a href="{c["href"]}">{esc(shell["edition"])}</a></p></div>')
+
+
+def colophon(shell: dict, cite: bool = True) -> str:
+    """B-b: the Evidence Colophon — the single-Master statement, the edition, the date its sources were checked to, the
+    abridged fingerprint of the Production Master the page was built from, and a link to the page's citation tools."""
+    c = shell.get("colophon")
+    if not c:
+        return ""
+    row = lambda k, v: f'<div><dt>{esc(k)}</dt><dd>{v}</dd></div>'   # noqa: E731
+    link = f'<p class="col-cite"><a href="#cite-tools">{esc(c["cite"])}</a></p>' if cite else ""
+    fp = f'<code dir="ltr" data-master-fp>{esc(c["fp"])}</code>'
+    return (f'<section class="colophon" aria-labelledby="colophon-h" data-colophon><h3 id="colophon-h">{esc(c["heading"])}</h3>'
+            f'<p class="col-st">{esc(c["statement"])}</p><dl>{row(c["edition_label"], esc(shell["edition"]))}{row(c["checked_label"], esc(c["checked"]))}'
+            f'{row(c["fp_label"], fp)}</dl>{link}</section>')
 
 
 def search_dialog(shell: dict) -> str:
@@ -162,7 +187,7 @@ def footer(shell: dict, tail: str = "") -> str:
                      for g in shell["footer"] if not any(l["href"].endswith("/about/") for l in g["links"]))
     return (f'</div></main><footer id="site-footer" class="inst"><div class="inst-in"><div class="trust"><h3>{esc(trust_label)}</h3><nav aria-label="{esc(L["trust_nav"])}">{trust}</nav></div>'
             f'<div class="id">{logo(40)}<p>{esc(L["footer_strapline"])}</p></div><nav class="groups" aria-label="{esc(L["footer_nav"])}">{groups}</nav>'
-            f'<div class="fine">© 2026 CauseWay · {esc(L["footer_rights"])} · {esc(shell["edition"])}</div></div>{tail}</footer>'
+            f'{colophon(shell, cite=bool(tail))}<div class="fine">© 2026 CauseWay · {esc(L["footer_rights"])} · {esc(shell["edition"])}</div></div>{tail}</footer>'
             f'{json_block("yfie-ui", shell["ui_json"])}<script src="/assets/app.js" defer></script></body></html>')
 
 
@@ -330,7 +355,7 @@ def evidence_record(page: dict, shell: dict) -> str:
     if page["reading_guidance"]:
         more += f'<div class="qa"><h3 class="rubric">{esc(L["reading_guidance"])}</h3><div class="body">{paras(page["reading_guidance"]["paragraphs"])}</div></div>'
     qa.append(f'<div class="qa" id="q7">{rubric(L["more"], 7, "h2")}<details class="more"><summary>{esc(L["more_intro"])}</summary>{more}</details></div>')
-    util = (f'<section class="util" data-record-id="{esc(page["id"])}"><div class="ref"><b>{esc(L["reference"])}</b> {bdi(page["id"])}</div>'
+    util = (f'<section class="util" data-record-id="{esc(page["id"])}" id="cite-tools"><div class="ref"><b>{esc(L["reference"])}</b> {bdi(page["id"])}</div>'
             f'<div class="actions">{cite_tools(shell, page["route"], page["citation_short"], record=True, long_form=page["citation"])}'
             f'<button type="button" class="tbtn" data-share data-share-text="{esc(isolate_plain(page["share_text"]) if shell["lang"] == "ar" else page["share_text"])}">{esc(shell["labels"]["share_record"])}</button>'
             + (f'<a href="{page["compare_href"]}" data-compare-entry>{esc(L["compare"])}</a>' if page.get("compare_href") else "")
@@ -494,7 +519,7 @@ def page_util(shell: dict, page: dict | None = None) -> str:
     bar shows them only on wide screens."""
     L = shell["labels"]
     tools = cite_tools(shell, page["route"], page_citation(shell, page.get("title"))) if page else f'<button type="button" class="tbtn" data-cite>{esc(L["cite"])}</button>'
-    return (f'<section class="util"><div class="actions">{tools}'
+    return (f'<section class="util" id="cite-tools"><div class="actions">{tools}'
             f'<a href="{shell["contact_href"]}">{esc(L["report"])}</a></div></section>')
 
 

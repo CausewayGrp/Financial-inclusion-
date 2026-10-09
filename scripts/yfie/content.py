@@ -12,6 +12,7 @@ display beyond what a contract states (presentation_priority tiers, Page Spec se
 """
 from __future__ import annotations
 
+import hashlib
 import json
 import re
 from pathlib import Path
@@ -66,6 +67,9 @@ class Content:
         self.spec_by_route = {s["route"]: s for s in self.specs}
         self.ui = {r["ui_id"]: r for r in _load("content/interface_copy.json")}
         self.nav = _load("content/navigation_interaction.json")
+        # B-b: the Evidence Colophon prints the abridged SHA-256 of the Production Master this build was made from
+        _auth = json.loads((ROOT / "authority" / "AUTHORITY.json").read_text(encoding="utf-8"))["production_master"]
+        self.master_sha = hashlib.sha256((ROOT / _auth["path"]).read_bytes()).hexdigest()
         self.presentation = _load("presentation_priority.json")
         self.questions = _load("content/questions.json")
         self.readings = _load("content/readings.json")
@@ -251,6 +255,13 @@ class Content:
             "ui_json": self.ui_json(lang),
             "mobile_menu": self.nav.get("mobile_menu") or None,   # owner decisions of 3 October 2026, point 3
             "domains": domains, "domains_under": dom.get("under"),
+            # B-b (owner decisions of 9 October 2026; transaction V1B-1): the currentness strip and the Evidence Colophon
+            "currentness": {"line": self.tf("UI-CURRENTNESS-STRIP", lang, date=self.t("UI-EDITION-CHECKED-DATE", lang)),
+                            "href": self.href("/corrections/", lang) + "#s3"},
+            "colophon": {"heading": self.t("UI-COLOPHON-H", lang), "statement": self.t("UI-COLOPHON-SINGLE-MASTER", lang),
+                         "edition_label": self.t("UI-COLOPHON-EDITION", lang), "checked_label": self.t("UI-COLOPHON-CHECKED", lang),
+                         "checked": self.t("UI-EDITION-CHECKED-DATE", lang), "fp_label": self.t("UI-COLOPHON-FINGERPRINT", lang),
+                         "fp": self.master_sha[:12], "cite": self.t("UI-COLOPHON-CITATION", lang)},
             # B-c: cite and report sit in the page-tools row under the h1 instead of the header
             "page_tools": bool((self.nav.get("page_tools") or {}).get("items")),
         }
@@ -970,7 +981,8 @@ class Content:
             return None
         L = lambda k: self.t(k, lang)  # noqa: E731
         return {"heading": L("UI-CHRONOLOGY-H"), "intro": L("UI-CHRONOLOGY-INTRO"), "items": items,
-                "labels": {"relevance": L("UI-CHRONOLOGY-RELEVANCE"), "sources": L("UI-CHRONOLOGY-SOURCES"), "does_not_establish": self.grammar_labels["UI-VIS-DOES-NOT-ESTABLISH"][lang]}}
+                "labels": {"relevance": L("UI-CHRONOLOGY-RELEVANCE"), "sources": L("UI-CHRONOLOGY-SOURCES"), "does_not_establish": self.grammar_labels["UI-VIS-DOES-NOT-ESTABLISH"][lang],
+                           "list_summary": L("UI-CHRONOLOGY-LIST-SUMMARY")}}   # V1B-1: the summary of the list's disclosure on /finance/
 
     def reading_object(self, r: dict, lang: str) -> dict:
         full = next((x for x in self.readings if x.get("reading_id") == r.get("reading_id")), r)
@@ -1215,6 +1227,7 @@ class Content:
                            "reference_intro": L("UI-DATA-THESE-REFERENCES-ARE-AVAILABLE-FOR"), "filter": L("UI-DATA-FIND-A-SOURCE-BY-TITLE"), "filter_placeholder": L("UI-DATA-E-G-SRC-CBY"),
                            "no_results": L("UI-DATA-NO-SOURCES-MATCH-THIS-SEARCH"), "rights_note": L("UI-DATA-EVERY-SOURCE-HERE-CAN-BE"), "open_original": L("UI-EVID-OPEN-ORIGINAL-SOURCE"),
                            "copy_reference": L("UI-EVID-COPY-SOURCE-REFERENCE"), "dependents": L("UI-EVID-EVIDENCE-RECORDS-USING-THIS-SOURCE"), "untitled": L("UI-SOURCE-UNTITLED"),
+                           "about_source": L("UI-DATA-ABOUT-THIS-SOURCE"),   # V1B-1 (owner decision B-b): a curated source's description on demand
                            "record": L("UI-SOURCES-SOURCE-RECORD"), "regulatory": L("UI-DATA-GROUP-REGULATORY"),
                            "regulatory_scope": L("UI-DATA-GROUP-REGULATORY-SCOPE"), "reuse_once": L("UI-DATA-REUSE-TERMS-ONCE"),
                            # RC-12 (B13): the research library's filters, order and backlinks

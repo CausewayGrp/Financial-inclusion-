@@ -261,7 +261,11 @@ def chronology_block(ch: dict, L: dict, id_: str) -> str:
                      + (f'<div class="small bnd-line"><b>{esc(CL["does_not_establish"])}</b> {esc(e["does_not_establish"])}</div>' if e["does_not_establish"] else "")
                      + (f'<div class="small"><b>{esc(CL["sources"])}</b> {src}</div>' if src else "")
                      + (f'<div class="small vnote">{esc(e["verification_note"])}</div>' if e.get("verification_note") else "") + "</li>")
-    return f'<section class="qa" id="{id_}"><div><h2>{esc(ch["heading"])}</h2></div><div><p class="small">{esc(ch["intro"])}</p><ol class="objs chron">{"".join(items)}</ol></div></section>'
+    # V1B-1 (owner decision B-b): the dated list is a disclosure named by its own governed label and the number of events,
+    # as on /data/; the section's heading and the intro (order is not causation) stay first-load
+    return (f'<section class="qa" id="{id_}"><div><h2>{esc(ch["heading"])}</h2></div><div><p class="small">{esc(ch["intro"])}</p>'
+            f'<details class="fold chron-fold"><summary>{esc(CL["list_summary"])} <span class="count">({bdi(len(items))})</span></summary>'
+            f'<ol class="objs chron">{"".join(items)}</ol></details></div></section>')
 
 
 # ------------------------------------------------------------------------------------------------ Evidence Directory
@@ -376,7 +380,9 @@ def source_row(c: dict, L: dict, curated: bool = False) -> str:
     common = f'id="source-{esc(c["id"])}" data-source-record data-source-search="{esc(c["search"])}" tabindex="-1"' + facet_attrs(c)
     if curated:
         return (f'<article class="src card" {common}><h4 dir="auto">{esc(c["title"])}</h4><span class="kind" dir="auto">{esc(c["kind_line"])}</span>{ref}'
-                + (f'<p class="small">{esc(c["why"])}</p>' if c["why"] else "")
+                # V1B-1 (owner decision B-b): the description opens on demand under "About this source"; the boundary line,
+                # the reference and the cite controls stay outside the disclosure
+                + (f'<details class="about" data-source-about><summary>{esc(L["about_source"])}</summary><p class="small">{esc(c["why"])}</p></details>' if c["why"] else "")
                 + (f'<p class="small bnd-line"><b>{esc(L["does_not_establish"])}</b> {esc(c["does_not_establish"])}</p>' if c["does_not_establish"] else "")
                 + f'<div class="acts">{open_}{cite}</div>{rights}{deps}</article>')
     if c["display_ready"] and c["title"]:
