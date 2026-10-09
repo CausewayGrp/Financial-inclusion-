@@ -1,5 +1,23 @@
 # Repository Change Log
 
+## 2026-10-09 — the handover document, and a control for the RC-B13 direction that had none
+
+No Master change; no public page changes.
+
+- **`docs/HANDOVER_TO_DEVELOPER.md`.** What a human must still do after the final content pass: the hosting
+  configuration, the two counsel formalities, the six sources that need a person with a browser, the phone check from
+  Yemen, and OpenAI's acceptance review. Section 7 states plainly what that pass did **not** finish — batches C, D and
+  E — and carries the completed IMF Country Report 26/80 research (Table 5, printed p. 31, with the three proofs that
+  its 2014–2019 `0.0` cells are unreported periods rather than zeros, so only Dec-20 → Dec-24 plus an Aug-25
+  part-year observation is publishable) and the map of the remaining stale-status work. It also records the one open
+  disagreement between the two sessions that worked that pass: whether the 23 public chronology events belong in
+  search.
+- **A negative control for RC-B13's second direction.** That direction — a filter must offer an option for every key a
+  listed source carries — was added without a control, so nothing proved it fires, and it is the direction that
+  matters most: it is the gap that let the `/data/` "used on" filter leave 44 of 158 listed sources, twelve of them
+  curated cards, unreachable under every one of its values while the gate passed. The control removes the option from
+  the built page and requires the gate to say a listed source is unreachable. 111 controls now.
+
 ## 2026-10-04 — Non-design v1 front door
 
 README, the current-state projection and the re-entry checkpoint now say the non-design v1 product is complete, the current phase is design / presentation integration, and C1–C3 are post-v1. Public release is not declared. Three documentation diagrams added. No Master or product change.
