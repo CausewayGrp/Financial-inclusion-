@@ -169,7 +169,8 @@ CONTROLS = [
      replace('"schema": "YFIE_ROUTE_CONTENT_AND_STATE_INVENTORY/1.3"', '"schema": "broken"'),
      "R86-G02 HANDOFF INVENTORY STALE"),
     ("active navigation loses its aria-current", "en/evidence/CLM-001/index.html",
-     replace('<a href="/en/evidence/" aria-current="page">', '<a href="/en/evidence/">'),
+     # B-c: the hub link carries its numeral attribute before aria-current; the fault is the same, the markup moved
+     replace('<a href="/en/evidence/" data-hub-num="02" aria-current="page">', '<a href="/en/evidence/" data-hub-num="02">'),
      "active navigation missing aria-current"),
     ("a record loses its breadcrumb", "en/evidence/CLM-001/index.html",
      sub_once(r'<nav class="crumb".*?</nav>', ""),

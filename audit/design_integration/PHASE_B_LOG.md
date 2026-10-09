@@ -35,3 +35,15 @@ later edition may be released after the day its sources were last checked.
 
 **Not added.** A "next review" label (no review date is governed) and a separator between Home's figure records (not
 part of B-b).
+
+## B-c · navigation contract (finding V1-ESC-NAV)
+
+`site-src/content/content/navigation_interaction.json`: new keys `page_tools` (Cite and Report under each h1) and
+`hub_numerals` (each hub matched by route to UI-NAV-HUB-0n; validated by the generator, because `global_navigation` is
+generated from 04), `mobile_menu` rewritten (five hubs with numerals, the eight domain answers under Explore, trust
+links, language, cite), `utilities` given their placement. Gate RC-NAV reads the new keys.
+
+## Built on B-a, B-b and B-c
+
+Currentness strip, Evidence Colophon, the `/finance/` and `/data/` disclosures, search and filter quality. Gates CS-01
+and CS-02. Design record: `design/DESIGN_INTEGRATION_V1.md` §6 (DL-V1-013…018), with the re-measured phone screens.

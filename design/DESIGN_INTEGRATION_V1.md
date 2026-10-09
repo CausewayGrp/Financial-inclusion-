@@ -181,3 +181,92 @@ cannot be inside the present contracts: Home has no disclosure tier, a domain's 
 are first-load by contract, and `/data/`'s register must stay open (DEBT-011). The proposals that would reach further
 are in `ESCALATIONS.md`, "Raised at V1 phase 2".
 
+
+## 6. Phase B (owner decisions of 9 October 2026)
+
+The owner's decisions of 9 October 2026 (`audit/OWNER_DECISIONS_2026-10-09.md`) approved three steward changes, each
+committed on its own and naming its finding — B-a, Home's Orientation tier in `presentation_priority.json`; B-b, one
+Master transaction for interface labels only (V1B-1, `audit/design_integration/`); B-c, the navigation contract — and
+asked for what they unlock to be built, the phone screens re-measured, and the search, filter and source tools improved.
+Fonts unchanged (no Latin serif; Arabic SemiBold 600). The rights choice was left open and nothing about rights changed.
+
+### DL-V1-013 · Home's named disclosures (B-a)
+
+Sections 5–8 of Home ("different moments", "rule to result", "gaps", "challenge") are each one disclosure whose summary
+holds the section's own kicker and heading (`details.home-fold`); section 4, "What should not be inferred?", stays
+always visible — a boundary, as the owner's decision confirms. `/#system` (Explore's links) still lands on section 6's
+heading, which sits inside the summary, and the runtime opens it (DL-V1-018). Gate O-01.
+
+### DL-V1-014 · Page tools under the title; the header (B-c)
+
+Cite and Report leave the header for one row of two tool buttons directly under each page's h1, at every width; on an
+Evidence Record, Report carries the record (`/contact/?record=<ID>`). The header keeps Search, the language switch and
+the menu, so the 320 px bar carries three controls. The foot tools (citation preview, copy, print, report) are unchanged.
+
+### DL-V1-015 · The full phone menu and the hub numerals (B-b, B-c)
+
+Below 900 px the menu opens the five hubs, each with its governed numeral 01–05 (brass, tabular), the eight domain
+answers under Explore in a two-column list by their governed domain names, the trust links, the language switch and the
+cite control; it scrolls inside the viewport. The numerals also mark the hubs on wide screens and the parent hub in a
+breadcrumb. They are printed from a `data-hub-num` attribute with empty alternative text (`content: attr() / ""`), so
+every link's accessible name stays its navigation label and gate P4-G03 still reads it. The binding is the contract's
+`hub_numerals` key, matched by route; `global_navigation` stays generated from 04.
+
+### DL-V1-016 · Currentness strip and Evidence Colophon (B-b)
+
+A one-line strip under the product bar on every page: a green dot, "Sources checked up to 3 October 2026", and the
+edition label linked to `/corrections/` §3, which says what an edition is. The colophon is a band of the footer: the
+single-Master statement, the edition, the check date, the abridged SHA-256 of the Production Master the page was built
+from (computed by the build from the file itself), and a link to the page's citation tools (`#cite-tools`). Neither is
+printed; the printed provenance block is unchanged. Gate CS-01 holds the check date equal to `/corrections/` §3 and the
+edition label, and every page's strip and fingerprint to the governed values.
+
+### DL-V1-017 · Two disclosures with their own labels (B-b)
+
+`/finance/`: the 24 dated events behind one disclosure, "List of dated events (24)"; the section heading and the intro
+(the order of events is not causation) stay first-load. `/data/`: a curated source's description behind "About this
+source"; its "Does not establish" line, reference, locator and cite controls stay outside. On a wide screen the
+description stays open in the card's right column where `::details-content` is supported (behind `@supports`, so a
+browser without it keeps the working disclosure). DEBT-011's locator-only path is untouched. Gate CS-02.
+
+### DL-V1-018 · Search, filter and fragment quality (owner latitude)
+
+Search results mark the query's words in the title and summary (`<mark>`), matched on the same normalised text the
+ranking uses; only word tokens are marked, never a number or identifier, so dates and references keep their isolation.
+In the dialog the query field and type filter stay in view while results scroll. A source filter or search-type filter
+that is set shows it (green border, bold value, a dot on its label). A link to a target inside a closed disclosure (a
+dated event, a Home section) opens every disclosure around it. No control, label or hook changed.
+
+### Phase B evidence
+
+Conditions as in §5 (Chromium 141.0.7390.37, Playwright 1.56, fonts loaded, JavaScript on, disclosures in their default
+state; page height ÷ viewport height). "P2" is the "now" column of §5 (`main` at `b323a441`).
+
+| Route | 390 × 844 P2 → B | 768 × 1024 P2 → B | 1440 × 900 P2 → B |
+|---|---|---|---|
+| `/ar/` | 10.5 → 8.0 | 6.1 → 5.0 | 6.6 → 5.3 |
+| `/en/` | 10.3 → 7.7 | 5.8 → 4.7 | 6.5 → 5.0 |
+| `/ar/people/` | 15.3 → 15.8 | 8.6 → 8.9 | 10.2 → 10.5 |
+| `/en/people/` | 14.2 → 14.8 | 7.9 → 8.2 | 9.4 → 9.7 |
+| `/ar/data/` | 57.2 → 55.0 | 39.4 → 38.9 | 44.5 → 44.7 |
+| `/en/data/` | 55.6 → 53.3 | 36.5 → 35.9 | 42.0 → 42.1 |
+| `/ar/payments/` | 19.9 → 20.4 | 11.5 → 11.8 | 13.5 → 13.8 |
+| `/ar/firms/` | 16.7 → 17.2 | 9.7 → 10.1 | 11.6 → 12.0 |
+| `/ar/finance/` | 31.0 → 15.9 | 16.5 → 8.7 | 25.7 → 10.3 |
+| `/ar/evidence/CLM-001/` | 7.5 → 8.0 | 4.4 → 4.7 | 4.4 → 4.7 |
+
+Home and `/finance/` gain most (−2.5 and −15.1 phone screens). Every other page carries about half a phone screen more:
+the strip, the tools row and the colophon. The brief's targets (Home ≤ 5, domains ≤ 6, `/data/` ≤ 8) are still not met;
+what remains is the contract question on the domain band (`ESCALATIONS.md`, V1 phase 2, last entry) and DEBT-011.
+
+- Documents: 288 built. Against `main`, no ID, link, `data-*` hook or word is missing from any page (script over every
+  page; scratch output, not committed).
+- Weight (RC-PERF method): `yfie.css` 16.3 KB and `app.js` 12.6 KB compressed; heaviest cold page 276.4 KB English and
+  308.0 KB Arabic (`/data/`), budget 350 KB; no font added.
+- Accessibility (`scripts/accessibility_audit.py --all`): 284 pages × 2 widths, 0 axe rules violated, 0 contrast
+  failures; 2.5.8: 393 targets under 24 px, as before, 0 meeting neither exception. No conformance is claimed.
+- Gates: checksums, projection check (and its unit tests), build clean, literal audit, validator, manifest, literal
+  determinism, source lineage, diagrams, social images, logo derivatives, bilingual invariance, content parity,
+  public tools (35/36, 1 not applicable), viewport acceptance (168/168), security headers, base path, nginx hosting,
+  no-JavaScript, exports, Windows portability: pass. Negative controls: 122 of 122 caught (one fault string updated to
+  the hub link's new attribute order; its gate unchanged).

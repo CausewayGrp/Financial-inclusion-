@@ -915,6 +915,7 @@ ol.objs.chron,.curated .objs,.source-locator-details .objs{display:flex;flex-dir
 .colophon .col-cite{margin:0}
 .colophon .col-cite a{display:inline-block;padding:3px 0;min-height:24px;box-sizing:border-box}
 }
+@media screen and (max-width:599px){.colophon{gap:8px;padding-top:14px}.colophon dl{grid-template-columns:repeat(2,minmax(0,1fr));column-gap:16px}.colophon dl>div:last-child{grid-column:1 / -1}}
 @media screen and (min-width:600px){.colophon dl{grid-template-columns:repeat(3,minmax(0,max-content));column-gap:40px}}
 @media screen and (min-width:900px){.colophon{grid-column:1 / -1;grid-template-columns:minmax(0,1.3fr) minmax(0,2fr);column-gap:48px;align-items:start}.colophon h3,.colophon .col-st{grid-column:1}.colophon dl,.colophon .col-cite{grid-column:2}.colophon dl{grid-row:1 / span 2}.cstrip-in{padding-inline:32px}}
 @media print{.cstrip,.colophon{display:none!important}}

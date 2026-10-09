@@ -703,3 +703,27 @@ the present contracts allow. None is applied; no controlled contract or Master r
   band (supporting tier) and the primary figure are first-load by contract; on /people/ they are ≈ 1.3 and ≈ 4.6 phone
   screens. Shorter first loads need a contract decision (for instance, the band's second boundary as progressive), not a
   renderer choice.`
+
+## Closed at Phase B (9 October 2026)
+
+The owner's decisions of 9 October 2026 (`audit/OWNER_DECISIONS_2026-10-09.md`) disposed of the V1 and V1 phase 2
+escalations above as follows. The entries above are kept as raised.
+
+- Currentness strip, Evidence Colophon, hub numerals, `/finance/` chronology summary, `/data/` source-row summary
+  (NEEDS_CONTROLLED_CONTENT) — **CLOSED** by Master transaction V1B-1 (B-b) and built (`DESIGN_INTEGRATION_V1.md`,
+  DL-V1-015…017). The steward's question on the source row is answered as proposed: "Does not establish" stays outside.
+- `navigation_interaction.json` — utilities and mobile menu (ESCALATE_TO_STEWARD) — **CLOSED** by B-c: keys
+  `page_tools`, `hub_numerals`, `mobile_menu` (DL-V1-014, DL-V1-015).
+- `presentation_priority.json` — Home has no Orientation entry — **CLOSED** by B-a as proposed; section 4 stays always
+  visible (DL-V1-013).
+- Typography — the Latin display serif — **CLOSED, not adopted**: no Latin serif, IBM Plex stays, Arabic stays at
+  SemiBold 600.
+- Rights — the two records that disagree — **OPEN**: the owner left the choice open; no rights record or `/rights/`
+  text changed.
+- Still open, unchanged: the separator between Home's figure records (not part of B-b); the two-tone headline (design
+  debt); the domain answers' always-visible band and primary figure (contract question, V1 phase 2, last entry);
+  `/data/` DEBT-011.
+
+Process note — Phase B branch (2026-10-09): Phase B is developed on `claude/design-review-constraints-l9au89`, restarted
+from `main` at `b323a441` after pull request #15 merged, and goes to a new pull request; the convention of D1–D7.
+Pull request #13 is untouched. Acceptance is the owner's.
