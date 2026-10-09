@@ -1,5 +1,15 @@
 # Repository Change Log
 
+## 2026-10-09 — V1B-1: interface labels for design integration Phase B (owner decision B-b)
+
+One Master transaction, labels only, English and Arabic together (`audit/design_integration/`): the summary label of
+the `/finance/` chronology list, "About this source" for a `/data/` source row, the currentness strip ("Sources checked
+up to {date}") with the edition's check date, the Evidence Colophon labels and the hub numerals 01–05. No figure, unit,
+period, universe, source or record changed; no page changes until the renderer uses them. Gate CS-01 holds the check
+date equal to the date `/corrections/` section 3 states and to the edition label, in both languages. Master
+`fdb24bdfeae5` → `cf5254825da8`.
+
+
 ## 2026-10-09 — V1 design integration, phase 2 (disclosure and density; not accepted)
 
 Renderer and stylesheet, no governed text or contract changed (`design/DESIGN_INTEGRATION_V1.md`, DL-V1-009…012): the

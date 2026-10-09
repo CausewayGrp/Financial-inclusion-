@@ -573,6 +573,22 @@ except Exception as _x:
     errors.append('O-01 unreadable '+repr(_x))
 
 
+# CS-01 (owner decision B-b, 9 October 2026; transaction V1B-1): the date the currentness strip and the colophon print,
+# UI-EDITION-CHECKED-DATE, is the date the Master states for the edition in /corrections/ section 3 ("… up to <date>",
+# «… حتى <date>») and the date in the edition's own label, UI-CONTENT-VERSION, in both languages.
+try:
+    _uics={r['ui_id']:r for r in json.load(open(C/'content/interface_copy.json',encoding='utf-8'))}
+    _corr=next((r for r in json.load(open(C/'content/page_sections.json',encoding='utf-8')) if r.get('route')=='/corrections/' and r.get('section_order')==3),{})
+    for lang,_lead in (('en','up to '),('ar','حتى ')):
+        _d=_uics['UI-EDITION-CHECKED-DATE'][f'label_{lang}']
+        if not _d or _d not in _uics['UI-CONTENT-VERSION'][f'label_{lang}']:
+            errors.append(f'CS-01 the checked date is not the edition label date {lang}')
+        if _lead+_d not in str(_corr.get(f'body_{lang}') or ''):
+            errors.append(f'CS-01 the checked date is not the date /corrections/ section 3 states {lang}')
+except Exception as _x:
+    errors.append('CS-01 unreadable '+repr(_x))
+
+
 # S04.1 Evidence Record family: intentional verification hierarchy and multi-entry discovery journey.
 evidence_contract=(presentation.get('family_contracts') or {}).get('Evidence Record') if isinstance(presentation,dict) else None
 if not isinstance(evidence_contract,dict):
