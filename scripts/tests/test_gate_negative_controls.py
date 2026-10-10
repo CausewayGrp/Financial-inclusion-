@@ -615,6 +615,14 @@ CONTROLS = [
     ("RC-19: a social image stands for the retired address", "assets/social/evidence_NEG-EW-011__en.png",
      lambda t: t + "an image",
      "RC-19 a social image still stands for the retired address /evidence/NEG-EW-011/ (en)"),
+    # Close-out (brief of 10 October 2026). CO-G01: the Master's self-counts drift from the governed records again (OWN-10).
+    # CO-G02: a quarantined row reaches a public output (CR-12).
+    ("CO-G01: 00_MASTER states a stale Readings count", "site-src/content/content/master_principles.json",
+     sub_once(r'("Readings",\s*)(\d+)(,\s*)(\d+)', lambda m: f"{m.group(1)}{int(m.group(2)) - 1}{m.group(3)}{int(m.group(4)) - 1}"),
+     "CO-G01 00_MASTER 'Readings' states"),
+    ("CO-G02: a quarantined pseudo-codebook variable reaches a page", "en/people/index.html",
+     sub_once(r'(<main[^>]*>)', r'\1<p>account_mob</p>'),
+     "CO-G02 en/people/index.html prints the quarantined 'account_mob'"),
     # The standing content gate (release candidate, RC-1): a governed sentence dropped from a page, and a number no governed
     # record or contract holds, must each be reported by scripts/tests/test_content_parity.py.
     ("a domain answer drops a governed sentence", "en/people/index.html",
