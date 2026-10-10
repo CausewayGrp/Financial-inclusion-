@@ -1,0 +1,35 @@
+{
+  "review_date": "2026-10-10",
+  "github_repo": "CausewayGrp/Financial-inclusion-",
+  "verified_main_sha_at_review": "2ddbfb611bb139d9597aec9b6b79153699cc4d94",
+  "recorded_master_sha256_NOT_INDEPENDENTLY_RECOMPUTED": "58b8f3ec5ac1324dfafc7eb6b4015b88da0cb9c241078903be82fe0f6492421b",
+  "exact_field_rows": 38,
+  "alternative_texts": 37,
+  "decision_summary": {
+    "MASTER_FIRST_DEFINITION_CORRECTION": 1,
+    "ACCEPT_CONDITIONAL": 17,
+    "SOURCE_DEFINITION_CHECK": 3,
+    "MASTER_FIRST_RIGHTS_CLARIFICATION": 2,
+    "REVISE_AND_VALIDATE": 6,
+    "MASTER_FIRST_PROVIDER_CLASSIFICATION": 2,
+    "RETAIN_CURRENT": 1,
+    "MASTER_FIRST_HEADING_CORRECTION": 1,
+    "ACCEPT_GRAMMAR_OWNER_ACK": 1,
+    "MASTER_FIRST_STATISTICAL_METHOD": 1,
+    "MASTER_FIRST_TEMPORAL_PRECISION": 1,
+    "MASTER_FIRST_CLAIM_BOUNDARY": 1,
+    "MASTER_FIRST_COMPARABILITY_RULE": 1
+  },
+  "new_source_sensitive_challenges": [
+    "Findex account definition",
+    "cluster uncertainty",
+    "provider rosters",
+    "reuse rights",
+    "balance sheet inference",
+    "comparison authority"
+  ],
+  "github_changed": false,
+  "live_browser_acceptance_test": false,
+  "independent_legal_opinion": false,
+  "complete_manual_review_of_144_pages": false
+}

@@ -1,5 +1,20 @@
 # Repository Change Log
 
+## 2026-10-10 — Close-out inputs: the brief, the adjudicated Arabic review and the house style (Stage A, inputs)
+
+No Master transaction and no public page changed. `dist/` is unchanged.
+
+- **Brief:** the final close-out brief, version 5 (10 October 2026), is committed unchanged as
+  `audit/close_out/BRIEF.md`; version 4, which it supersedes, is kept as `audit/close_out/BRIEF_v4.md` for lineage. The
+  owner decisions D1–D15 of version 5 are recorded verbatim in `audit/OWNER_DECISIONS_2026-10-10.md` §5. The brief comes with its append-only progress log `audit/close_out/PROGRESS.md` and the key-migration
+  record `audit/close_out/KEY_MIGRATION.csv`.
+- **Arabic review:** the lead adjudication and the accepted edit register (39 rows) go to `audit/arabic_review/`; the
+  OpenAI package (its SHA256SUMS verified, 10 of 10) goes to `audit/arabic_review/openai_2026-10-10/` as lineage.
+- **House style:** `audit/naming/ARABIC_HOUSE_STYLE.md` (byte-identical to the package's file 03), adopted as guidance
+  under the Master terminology register (D11).
+- **Manifest:** the new paths are classified `CURRENT_PROGRAMME_RECORD` (close-out and review) and `STANDING_POLICY`
+  (house style), and listed in `audit/INDEX.md`. None of them is projected to a public page.
+
 ## 2026-10-10 — Content-complete checkpoint: consistency, release readiness and handover (orchestration step 7)
 
 No Master transaction and no public page changed. `dist/` is unchanged.

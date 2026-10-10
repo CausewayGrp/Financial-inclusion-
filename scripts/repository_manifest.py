@@ -65,9 +65,13 @@ RULES = [
                                   "audit/F6_*", "audit/R8_6_*", "audit/SUSTAINABILITY_*", "audit/FINAL_*_ACCEPTANCE*",
                                   "audit/directives/D7_*", "audit/directives/D8_*", "audit/directives/D9_*", "audit/directives/README.md", "audit/reading_integration/*", "audit/reading_integration/**/*",
                                   "audit/final_integration/*", "audit/final_integration/**/*",
-                                  "audit/release_candidate/*", "audit/release_candidate/**/*"]),
+                                  "audit/release_candidate/*", "audit/release_candidate/**/*",
+                                  # The close-out programme (brief of 10 October 2026): its brief, progress and key migration,
+                                  # and the adjudicated Arabic review with the OpenAI package as lineage. Never projected.
+                                  "audit/close_out/*", "audit/close_out/**/*", "audit/arabic_review/*", "audit/arabic_review/**/*"]),
     ("STANDING_POLICY", ["audit/ARABIC_TERMINOLOGY_AND_STYLE_LEDGER.md", "audit/BENCHMARK_AND_COMPARATOR_POLICY.md",
-                         "audit/ECONOMIC_CONTEXT_USAGE_POLICY.md", "audit/FINAL_CURRENTNESS_CUTOFF.md", "audit/tranche_c/DRAFTING_RULES.md"]),
+                         "audit/ECONOMIC_CONTEXT_USAGE_POLICY.md", "audit/FINAL_CURRENTNESS_CUTOFF.md", "audit/tranche_c/DRAFTING_RULES.md",
+                         "audit/naming/ARABIC_HOUSE_STYLE.md"]),   # D11: adopted under the Master terminology register
     ("AUDIT_HISTORY", ["audit/*", "audit/**/*", "docs/*"]),
 ]
 START_PATH = ["README.md", "handoff/README_FIRST.md", "handoff/CLAUDE_DESIGN_MASTER_PROMPT.md"]

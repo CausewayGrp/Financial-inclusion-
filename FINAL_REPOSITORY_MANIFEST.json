@@ -28,7 +28,7 @@
   "BUILD_AND_GATES": 43,
   "CONTROLLED_CONTRACT": 2,
   "CURRENT_DOCUMENT": 13,
-  "CURRENT_PROGRAMME_RECORD": 156,
+  "CURRENT_PROGRAMME_RECORD": 173,
   "DESIGN_PACKAGE": 447,
   "GENERATED_DIAGRAMS": 9,
   "GENERATED_LITERAL_CLOSURE": 1,
@@ -43,7 +43,7 @@
   "RECIPIENT_HANDOFF": 11,
   "REPOSITORY_ENGINEERING": 11,
   "RUNTIME_SOURCE": 7,
-  "STANDING_POLICY": 5,
+  "STANDING_POLICY": 6,
   "VENDORED_FONTS": 27
  },
  "files": [
@@ -396,6 +396,58 @@
    "class": "AUDIT_HISTORY"
   },
   {
+   "path": "audit/arabic_review/ARABIC_REVIEW_ADJUDICATION_2026-10-10.md",
+   "class": "CURRENT_PROGRAMME_RECORD"
+  },
+  {
+   "path": "audit/arabic_review/YFIE_ARABIC_ACCEPTED_EDIT_REGISTER_2026-10-10.csv",
+   "class": "CURRENT_PROGRAMME_RECORD"
+  },
+  {
+   "path": "audit/arabic_review/openai_2026-10-10/00_FINAL_EDITORIAL_JUDGEMENT_AR.md",
+   "class": "CURRENT_PROGRAMME_RECORD"
+  },
+  {
+   "path": "audit/arabic_review/openai_2026-10-10/01_EXACT_ARABIC_FIELD_DECISIONS.csv",
+   "class": "CURRENT_PROGRAMME_RECORD"
+  },
+  {
+   "path": "audit/arabic_review/openai_2026-10-10/02_MASTER_FIRST_SEMANTIC_DECISIONS_AR.md",
+   "class": "CURRENT_PROGRAMME_RECORD"
+  },
+  {
+   "path": "audit/arabic_review/openai_2026-10-10/03_ARABIC_HOUSE_STYLE_AND_TERMS_AR.md",
+   "class": "CURRENT_PROGRAMME_RECORD"
+  },
+  {
+   "path": "audit/arabic_review/openai_2026-10-10/04_FIVE_COMPLETE_EDITORIAL_REWRITES_AR.md",
+   "class": "CURRENT_PROGRAMME_RECORD"
+  },
+  {
+   "path": "audit/arabic_review/openai_2026-10-10/05_QA_COVERAGE_AND_ACCEPTANCE_AR.md",
+   "class": "CURRENT_PROGRAMME_RECORD"
+  },
+  {
+   "path": "audit/arabic_review/openai_2026-10-10/06_COPY_TO_CLAUDE_FINAL_HANDOFF.md",
+   "class": "CURRENT_PROGRAMME_RECORD"
+  },
+  {
+   "path": "audit/arabic_review/openai_2026-10-10/07_CLAUDE_CODE_EXECUTION_CONTRACT.md",
+   "class": "CURRENT_PROGRAMME_RECORD"
+  },
+  {
+   "path": "audit/arabic_review/openai_2026-10-10/08_DELIVERY_QA_MANIFEST.json",
+   "class": "CURRENT_PROGRAMME_RECORD"
+  },
+  {
+   "path": "audit/arabic_review/openai_2026-10-10/README_FIRST_AR.md",
+   "class": "CURRENT_PROGRAMME_RECORD"
+  },
+  {
+   "path": "audit/arabic_review/openai_2026-10-10/SHA256SUMS.txt",
+   "class": "CURRENT_PROGRAMME_RECORD"
+  },
+  {
    "path": "audit/chronology_search/cs_1_dated_event_label.py",
    "class": "AUDIT_HISTORY"
   },
@@ -406,6 +458,22 @@
   {
    "path": "audit/chronology_search/runs/CS-1_RUN_REPORT.json",
    "class": "AUDIT_HISTORY"
+  },
+  {
+   "path": "audit/close_out/BRIEF.md",
+   "class": "CURRENT_PROGRAMME_RECORD"
+  },
+  {
+   "path": "audit/close_out/BRIEF_v4.md",
+   "class": "CURRENT_PROGRAMME_RECORD"
+  },
+  {
+   "path": "audit/close_out/KEY_MIGRATION.csv",
+   "class": "CURRENT_PROGRAMME_RECORD"
+  },
+  {
+   "path": "audit/close_out/PROGRESS.md",
+   "class": "CURRENT_PROGRAMME_RECORD"
   },
   {
    "path": "audit/design_integration/PHASE_B_LOG.md",
@@ -910,6 +978,10 @@
   {
    "path": "audit/legacy_followthrough/runs/LA-C_RUN_REPORT.json",
    "class": "AUDIT_HISTORY"
+  },
+  {
+   "path": "audit/naming/ARABIC_HOUSE_STYLE.md",
+   "class": "STANDING_POLICY"
   },
   {
    "path": "audit/naming/NAMING_DECISIONS_2026-10-10.md",
