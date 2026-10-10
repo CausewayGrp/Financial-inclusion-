@@ -1,4 +1,6 @@
-> STATUS: **DESIGN HANDOFF READY.** Executable. Read `handoff/README_FIRST.md` first; this is step 2 of its reading order.
+> STATUS: SUPERSEDED (10 October 2026) — not for execution. See `handoff/README_FIRST.md`; design is executed in the repository under audit/close_out/BRIEF.md (W4).
+>
+> Until 10 October 2026 the status line of this file read, verbatim: "DESIGN HANDOFF READY. Executable. Read `handoff/README_FIRST.md` first; this is step 2 of its reading order." It is kept here as history; nothing in this file is executed.
 
 # Claude Design — master brief
 ## Yemen Financial Inclusion Evidence · أدلة الشمول المالي في اليمن

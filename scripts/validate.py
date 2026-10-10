@@ -2628,7 +2628,12 @@ except Exception as _x:
 #  R86-G04 every repository path the handoff documents name exists (Design's future outputs under design/, npm package
 #          names and environment assignments excepted)
 _R86_STATES={'R8_6_FREEZE_CANDIDATE__PENDING_CLEAN_ROOM_ACCEPTANCE':'R8.6 FREEZE CANDIDATE — PENDING FINAL CLEAN-ROOM ACCEPTANCE',
-             'DESIGN_HANDOFF_READY':'DESIGN HANDOFF READY'}
+             'DESIGN_HANDOFF_READY':'DESIGN HANDOFF READY',
+             # Close-out brief v5, W2 (owner decision D7, 10 October 2026): handoff/ is superseded and never executed; design
+             # is executed in the repository (W4). In this state the gate asserts the superseded status everywhere the old
+             # one was current, and that the start file no longer claims DESIGN HANDOFF READY. History stays intact.
+             'SUPERSEDED':'SUPERSEDED'}
+_R86_SUPERSEDED_LINE='> STATUS: SUPERSEDED (10 October 2026) — not for execution. Design is executed in the repository under audit/close_out/BRIEF.md (W4). These files are historical reference.'
 _R86_FILES={'README_FIRST.md','CLAUDE_DESIGN_MASTER_PROMPT.md','ROUTE_CONTENT_AND_STATE_INVENTORY.json','DESIGN_ACCEPTANCE_CRITERIA.md',
             'DESIGN_TO_CODE_CONTRACT.md','VISUAL_DESIGN_CONTRACT.md','ENGINEERING_HANDOFF_EXPECTATIONS.md','DESIGN_STARTING_TOKENS.json',
             'IMPLEMENTATION_MANIFEST.json','CLAUDE_CODE_MASTER_PROMPT.md','SUPPORT_AND_PARTNERSHIP_READINESS.md'}
@@ -2639,6 +2644,25 @@ try:
     _first=lambda p:((ROOT/p).read_text(encoding='utf-8').splitlines() or [''])[0]
     if not _tok:
         errors.append(f'R86-G01 Context handoff_readiness {_hr!r} is not an R8.6 state')
+    elif _tok=='SUPERSEDED':
+        # The runner never writes these status lines (rebind_authority.py only rebinds hashes and copies the Context state
+        # into the handoff manifest), and this gate runs inside every transaction, so a transaction cannot bring the old
+        # status back without rolling back.
+        if _first('handoff/README_FIRST.md')!=_R86_SUPERSEDED_LINE:
+            errors.append('R86-G01 handoff/README_FIRST.md first line is not the SUPERSEDED status line')
+        if 'DESIGN HANDOFF READY' in '\n'.join((ROOT/'handoff/README_FIRST.md').read_text(encoding='utf-8').splitlines()[:5]):
+            errors.append('R86-G01 handoff/README_FIRST.md claims DESIGN HANDOFF READY in its status block')
+        for _p in ('handoff/CLAUDE_DESIGN_MASTER_PROMPT.md','handoff/CLAUDE_CODE_MASTER_PROMPT.md'):
+            if not _first(_p).startswith('> STATUS: SUPERSEDED (10 October 2026) — not for execution.'):
+                errors.append(f'R86-G01 {_p} status line is not SUPERSEDED')
+        if not re.search(r'\| \*\*Position\*\* \| \*\*DESIGN HANDOFF SUPERSEDED\*\*',(ROOT/'README.md').read_text(encoding='utf-8')):
+            errors.append('R86-G01 README position does not read DESIGN HANDOFF SUPERSEDED')
+        if '**Status: DESIGN HANDOFF SUPERSEDED' not in (ROOT/'OPENAI_REENTRY_CHECKPOINT.md').read_text(encoding='utf-8'):
+            errors.append('R86-G01 checkpoint status does not read DESIGN HANDOFF SUPERSEDED')
+        for _p,_pat in (('README.md',r'\| \*\*Position\*\* \| \*\*DESIGN HANDOFF READY'),('OPENAI_REENTRY_CHECKPOINT.md',r'\*\*Status: DESIGN HANDOFF READY')):
+            if re.search(_pat,(ROOT/_p).read_text(encoding='utf-8')): errors.append(f'R86-G01 {_p} still states DESIGN HANDOFF READY as the current status')
+        if ((json.load(open(ROOT/'handoff/IMPLEMENTATION_MANIFEST.json',encoding='utf-8')).get('release_boundaries') or {}).get('handoff_readiness'))!=_hr:
+            errors.append('R86-G01 handoff manifest readiness differs from the Context')
     else:
         for _p in ('handoff/README_FIRST.md','handoff/CLAUDE_DESIGN_MASTER_PROMPT.md'):
             if f'STATUS: **{_tok}' not in _first(_p): errors.append(f'R86-G01 {_p} status line does not read {_tok}')
@@ -2648,7 +2672,7 @@ try:
         if f'**Status: {_tok}' not in (ROOT/'OPENAI_REENTRY_CHECKPOINT.md').read_text(encoding='utf-8'): errors.append(f'R86-G01 checkpoint status does not read {_tok}')
         if ((json.load(open(ROOT/'handoff/IMPLEMENTATION_MANIFEST.json',encoding='utf-8')).get('release_boundaries') or {}).get('handoff_readiness'))!=_hr:
             errors.append('R86-G01 handoff manifest readiness differs from the Context')
-    if 'WAITING FOR THE DESIGN PACKAGE' not in _first('handoff/CLAUDE_CODE_MASTER_PROMPT.md'): errors.append('R86-G01 the Code prompt must wait for the Design package')
+    if _tok!='SUPERSEDED' and 'WAITING FOR THE DESIGN PACKAGE' not in _first('handoff/CLAUDE_CODE_MASTER_PROMPT.md'): errors.append('R86-G01 the Code prompt must wait for the Design package')
     for _p in ['README.md','OPENAI_REENTRY_CHECKPOINT.md']+[f'handoff/{x.name}' for x in (ROOT/'handoff').glob('*.md')]:
         if re.search(r'(?:STATUS|Status|Position)[^\n]{0,20}\*\*PUBLIC RELEASE READY',(ROOT/_p).read_text(encoding='utf-8')): errors.append(f'R86-G01 {_p} declares PUBLIC RELEASE READY')
     _ic=_sp8.run([sys.executable,str(ROOT/'scripts/handoff_inventory.py'),'--check'],capture_output=True,text=True)
