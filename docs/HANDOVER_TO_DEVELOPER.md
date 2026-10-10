@@ -187,13 +187,11 @@ transaction that changes a record's governed copy makes that route's two images 
 fails on it. Run `python3 scripts/social_images.py` and commit the PNGs **after the last** Master transaction of a
 batch, not before.
 
-### The chronology in search — settled, and not open
+### The chronology in search — an open disagreement, for the owner
 
-**Settled on 10 October 2026: the events stay out of search.** The owner closed pull request #13, which carried the
-opposite implementation, without merging it. The decision recorded in commit `cf1b28d4` — *"The 24 chronology events
-stay out of search: no event route and no eligibility field"* — therefore stands, and nothing here is waiting on a
-decision. The two readings are kept below so that nobody reopens the question without seeing what was weighed, and so
-that the argument for indexing is on the record rather than lost with the closed branch.
+The two sessions split on this and it is still unresolved. Commit `cf1b28d4` records: *"The 24 chronology events stay
+out of search: no event route and no eligibility field."* The other session implemented the opposite and it is **not**
+on `main`.
 
 **For leaving them out:** the Master gives a chronology event no route of its own and no eligibility field, so
 indexing one means inventing both. That is a real publication-boundary argument.
@@ -207,8 +205,5 @@ the event's **governed period**, exactly as the page labels it, and its summary 
 one governed interface label (`UI-JS-TYPE-CHRONOLOGY`) so the result-type filter offers an option for the new type.
 
 That implementation is preserved on branch `code/final-content-chronology-and-gates` (its Master transaction would
-need replaying on the then-current `main`, per `CONTRIBUTING.md` §3), and it is **not** to be revived without a fresh
-owner decision. **Nothing depends on the outcome** — the rest of this pass stands either way. What a future window
-should take from this is the narrower, undisputed point: a reader searching a word that a public page prints gets the
-governed empty state, and whether that is acceptable is a question about the chronology's publication boundary, not a
-defect in search.
+need replaying on the then-current `main`, per `CONTRIBUTING.md` §3). **Nothing depends on the decision** — the rest of
+this pass stands either way.
