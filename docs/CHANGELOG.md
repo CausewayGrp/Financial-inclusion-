@@ -1,5 +1,52 @@
 # Repository Change Log
 
+## 2026-10-10 — CLOSE-3B: the held payment values, the cash-transfer, provider, women's and measurement evidence (Stage A, W3c, U2, U3, U6, U8–U14, CR-06, AR-004)
+
+Master `52fb937a4f50` → `d2cd2ad16bd8`, 312 cells (`audit/close_out/close_3b.py`; ledger and run report in
+`audit/close_out/runs/`), plus the controlled visual contract (VIS-PAYMENT-ANATOMY gains its second panel). Every
+original was read (`audit/close_out/w0/A3_cby.md`, `A4_projects.md`, `A2_imf_yem.md`, the third-quarter 2024 bulletin
+against its page images, the World Bank Microdata catalogue entry 5999 as metadata only). An independent red-team (1
+blocker, 11 should-fix) and an Arabic editor (3 must-fix, 14 should-fix) read the text before the run; applied, except
+where a reading disagreed (recorded in PROGRESS).
+
+- **U2 / CR-06.** VIS-PAYMENT-ANATOMY prints the 5,202,019 accounts of the first half of 2025 with CLM-010's caveat
+  (no published definition; accounts, not people), as the pages already did. The 58,512 POS transactions stay held:
+  no January or February 2025 monthly release exists, and the report's value tile does not equal the monthly sum.
+- **U6.** The third-quarter 2024 bulletin is a second panel, apart from 2025 and never compared: POS terminals (151,
+  checked against the page image) and transactions, ATMs and the amounts withdrawn in rials, dollars and Saudi riyals,
+  cheques (CBY main centre and three branches only) and local SWIFT transfers. Its page locators are corrected (PDF
+  and printed pages). Every row kept back says why (bank set changed between quarters; latest quarter only; the 2024
+  POS value series unexplained; e-money stock or flow not stated; card types and ATM shares without a defined base).
+  The H1-2025 sex-composition shares are printed in CLM-027 and the gender Reading as shares whose base the
+  infographic does not define, never as a gap estimate.
+- **U3, U12.** Three Cash Consortium of Yemen reports get public locators. CLM-045 and CWR-010: the 2026 cash-duration
+  study (three against six monthly transfers; no randomised design, no unassisted group; savings could not be
+  compared), the programme's own monitoring on e-wallet uptake (CNL PAD ¶47), no UCT payment cycle since January 2025
+  (ESPECRP ISR 10, 30 June 2026; closing 31 December 2026), and the Cash for Nutrition and Livelihoods Project
+  (financing agreement 2 September 2026), which is designed to pay a different benefit and does not restore the
+  transfers.
+- **U8.** MA-005: the IMF Financial Access Survey's last Yemen values (2015), from WDI, as dated context.
+- **U9.** FMIIP PAD: its locator added; FPS design rule (registered clients only; walk-in and over-the-counter
+  transactions excluded until a National Risk Assessment and risk mitigation) in CLM-018 and /payments/; the 2018
+  survey of 141 firms in CLM-062 and /firms/; "19 operating banks, four of them microfinance banks" beside the CBY-Aden
+  list (26) and IGC's 31 in CLM-008 and /providers/; the 876 → 3,244 pair (branches in the PAD, entities in IGC) in
+  CLM-016, now on /evidence/compare/, and /providers/. Not added, with reasons: the 10 km sentence (a monitoring
+  ceiling, not the FMIIP population) and the access-point compare case (no coincidence with the Aide Memoire total).
+- **U10, AR-004.** The gender Reading's concordance counts four figures, two of them measurements (the FSD 2024
+  statement added: p.15, "99% of women", not p.25); register row AR-004 applied in its conditional final form, its
+  English per the register's instruction. YMN 2021 (34% printed in the total row; providers 11% to 73%), SMEPS 2024
+  (44% of 8,217, programme), ACAPS Mahram (hypothesis only).
+- **U11.** CLM-043 and CWR-001: 38.6% of GDP in 2024 (Spring 2025) and "around one quarter of GDP", with no year
+  (Spring 2026); 2024 GDP revised from USD 17,580 million to 19,046 million between editions.
+- **U13, U14.** MA-001: MICS 2022–23 (22 governorates by design; one household bank-account item, not tabulated) and
+  the World Bank's 2022 mobile phone survey (1,297 adults with phones; records area of control); MA-009: the same survey
+  as an existing instrument in both areas. Catalogue metadata only; no microdata.
+- **Sources.** Six new (WDI FAS, ACAPS Mahram, YEM Spring 2025, ESPECRP ISR 10, MICS, the 2022 phone-survey catalogue
+  entry); three promoted (CCY SAM, Cash Duration, ISP); 174 source records, 167 with a public locator.
+- **Renderer.** `payment_anatomy` draws each contract series as its own headed panel with its own table.
+- **Gate.** CO-G05: every 19_PAYMENTS_DATA row is drawn or says why; a row said to be in the 2024 panel is drawn
+  there; the 2024 panel draws only bulletin rows (+3 negative controls).
+
 ## 2026-10-10 — CLOSE-3A: the Global Findex values the World Bank publishes for Yemen (Stage A, W3c, U1 and CR-03)
 
 Master `7c70b5f766b8` → `52fb937a4f50`, 2,235 cells (`audit/close_out/close_3a.py`; ledger and run report in

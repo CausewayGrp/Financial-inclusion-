@@ -638,18 +638,22 @@
     "citation_behavior": "Use the original locator and object-level controlled citation/source text; do not infer missing bibliographic or rights metadata.",
     "linked_evidence_object_ids": [
       "CLM-010",
+      "CLM-027",
       "VIS-PAYMENT-ANATOMY",
       "XW-FMIIP-005"
     ],
     "linked_claim_ids": [
-      "CLM-010"
+      "CLM-010",
+      "CLM-027"
     ],
     "linked_reading_ids": [
       "CWR-003",
+      "CWR-007",
       "CWR-009"
     ],
     "linked_visual_ids": [
       "RV-CWR-003",
+      "RV-CWR-007",
       "RV-CWR-009",
       "VIS-PAYMENT-ANATOMY"
     ],
@@ -1575,6 +1579,7 @@
     "linked_evidence_object_ids": [
       "CLM-005",
       "CLM-006",
+      "CLM-027",
       "CLM-058",
       "CLM-062",
       "VIS-FIRM-CONSTRAINTS",
@@ -1584,15 +1589,18 @@
     "linked_claim_ids": [
       "CLM-005",
       "CLM-006",
+      "CLM-027",
       "CLM-058",
       "CLM-062"
     ],
     "linked_reading_ids": [
       "CWR-006",
+      "CWR-007",
       "CWR-008"
     ],
     "linked_visual_ids": [
       "RV-CWR-006",
+      "RV-CWR-007",
       "RV-CWR-008",
       "VIS-FIRM-CONSTRAINTS",
       "VIS-FIRM-FINANCE-PATH",
@@ -1736,13 +1744,19 @@
     "citation_behavior": "Use the original locator and object-level controlled citation/source text; do not infer missing bibliographic or rights metadata.",
     "linked_evidence_object_ids": [
       "CLM-022",
+      "CLM-027",
       "VIS-MFI-SPINE"
     ],
     "linked_claim_ids": [
-      "CLM-022"
+      "CLM-022",
+      "CLM-027"
     ],
-    "linked_reading_ids": [],
-    "linked_visual_ids": [],
+    "linked_reading_ids": [
+      "CWR-007"
+    ],
+    "linked_visual_ids": [
+      "RV-CWR-007"
+    ],
     "linked_measurement_ids": [],
     "rule": "DISPLAY_READY fields come only from the Production Master. LOCATOR_ONLY preserves the locator without inventing missing bibliography or rights metadata."
   },
@@ -4149,8 +4163,14 @@
     "evidence_roles": null,
     "rights_display_state": "OBJECT_LEVEL_OR_UNSPECIFIED",
     "citation_behavior": "Use the original locator and object-level controlled citation/source text; do not infer missing bibliographic or rights metadata.",
-    "linked_evidence_object_ids": [],
-    "linked_claim_ids": [],
+    "linked_evidence_object_ids": [
+      "CLM-008",
+      "CLM-016"
+    ],
+    "linked_claim_ids": [
+      "CLM-008",
+      "CLM-016"
+    ],
     "linked_reading_ids": [],
     "linked_visual_ids": [],
     "linked_measurement_ids": [],
@@ -4593,19 +4613,19 @@
   },
   {
     "source_id": "SRC-CCY-SAM-2024",
-    "primary_url": null,
+    "primary_url": "https://www.calpnetwork.org/wp-content/uploads/2024/11/SAM_Multiplie-Effect-of-Cash-Study.pdf",
     "additional_urls": null,
     "datasets_or_use": "DS-K04-SOURCE-DEEP-INTAKE,DS-K04-CASH-FIN-TRANSMISSION",
     "row_count": 2,
-    "metadata_state": "LOCATOR_ONLY",
+    "metadata_state": "DISPLAY_READY",
     "standalone_resource_card_eligible": false,
-    "display_title": null,
-    "display_title_ar": null,
-    "publisher": null,
-    "publisher_ar": null,
-    "document_label": null,
-    "document_label_ar": null,
-    "document_date": null,
+    "display_title": "The Multiplier Effect of Multipurpose Cash Assistance in Ad' Dhali and Ja'ar Sub-districts in Yemen (2024)",
+    "display_title_ar": "الأثر المضاعف للمساعدات النقدية متعددة الأغراض في عزلتَي الضالع وجعار باليمن (2024)",
+    "publisher": "Cash Consortium of Yemen (CCY)",
+    "publisher_ar": "Cash Consortium of Yemen (CCY)",
+    "document_label": "Research or policy paper",
+    "document_label_ar": "ورقة بحثية أو سياساتية",
+    "document_date": "2024",
     "resource_category": null,
     "resource_category_ar": null,
     "why_it_matters": null,
@@ -4635,19 +4655,19 @@
   },
   {
     "source_id": "SRC-CCY-CASH-DURATION-2026",
-    "primary_url": null,
+    "primary_url": "https://www.calpnetwork.org/gf-uploads/2026/06/Cash-Duration-Report_CCY_2026.06.22.pdf",
     "additional_urls": null,
     "datasets_or_use": "DS-K04-SOURCE-DEEP-INTAKE,DS-K04-CASH-FIN-TRANSMISSION",
     "row_count": 2,
-    "metadata_state": "LOCATOR_ONLY",
+    "metadata_state": "DISPLAY_READY",
     "standalone_resource_card_eligible": false,
-    "display_title": null,
-    "display_title_ar": null,
-    "publisher": null,
-    "publisher_ar": null,
-    "document_label": null,
-    "document_label_ar": null,
-    "document_date": null,
+    "display_title": "The More the Merrier? Comparing Outcomes and Preferences for Three- vs. Six-Month Cash Transfers (2026)",
+    "display_title_ar": "كلما زاد كان أفضل؟ مقارنة النتائج والتفضيلات بين التحويلات النقدية لثلاثة أشهر ولستة أشهر (2026)",
+    "publisher": "Cash Consortium of Yemen (CCY)",
+    "publisher_ar": "Cash Consortium of Yemen (CCY)",
+    "document_label": "Research or policy paper",
+    "document_label_ar": "ورقة بحثية أو سياساتية",
+    "document_date": "2026",
     "resource_category": null,
     "resource_category_ar": null,
     "why_it_matters": null,
@@ -4660,29 +4680,36 @@
     "rights_display_state": "OBJECT_LEVEL_OR_UNSPECIFIED",
     "citation_behavior": "Use the original locator and object-level controlled citation/source text; do not infer missing bibliographic or rights metadata.",
     "linked_evidence_object_ids": [
+      "CLM-045",
       "DS-QUAL-EVIDENCE"
     ],
-    "linked_claim_ids": [],
-    "linked_reading_ids": [],
-    "linked_visual_ids": [],
+    "linked_claim_ids": [
+      "CLM-045"
+    ],
+    "linked_reading_ids": [
+      "CWR-010"
+    ],
+    "linked_visual_ids": [
+      "RV-CWR-010"
+    ],
     "linked_measurement_ids": [],
     "rule": "DISPLAY_READY fields come only from the Production Master. LOCATOR_ONLY preserves the locator without inventing missing bibliography or rights metadata."
   },
   {
     "source_id": "SRC-CCY-ISP-2024",
-    "primary_url": null,
-    "additional_urls": null,
+    "primary_url": "https://reliefweb.int/report/yemen/unseen-assistance-measuring-informal-social-protection-yemen",
+    "additional_urls": "[\"https://reliefweb.int/attachments/0e243818-f7a7-4d4e-bc03-dcec416b645b/The%20Unseen%20Assistance_Measuring%20Informal%20Social%20Protection%20in%20Yemen.pdf\"]",
     "datasets_or_use": "DS-K04-SOURCE-DEEP-INTAKE,DS-K04-CASH-FIN-TRANSMISSION",
     "row_count": 2,
-    "metadata_state": "LOCATOR_ONLY",
+    "metadata_state": "DISPLAY_READY",
     "standalone_resource_card_eligible": false,
-    "display_title": null,
-    "display_title_ar": null,
-    "publisher": null,
-    "publisher_ar": null,
-    "document_label": null,
-    "document_label_ar": null,
-    "document_date": null,
+    "display_title": "The Unseen Assistance: Measuring Informal Social Protection in Yemen (November 2024)",
+    "display_title_ar": "المساعدة غير المرئية: قياس الحماية الاجتماعية غير الرسمية في اليمن (نوفمبر 2024)",
+    "publisher": "Cash Consortium of Yemen (CCY)",
+    "publisher_ar": "Cash Consortium of Yemen (CCY)",
+    "document_label": "Research or policy paper",
+    "document_label_ar": "ورقة بحثية أو سياساتية",
+    "document_date": "2024-11-14",
     "resource_category": null,
     "resource_category_ar": null,
     "why_it_matters": null,
@@ -5390,17 +5417,21 @@
     "rights_display_state": "OBJECT_LEVEL_OR_UNSPECIFIED",
     "citation_behavior": "Use the original locator and object-level controlled citation/source text; do not infer missing bibliographic or rights metadata.",
     "linked_evidence_object_ids": [
+      "CLM-027",
       "CLM-059",
       "CLM-060"
     ],
     "linked_claim_ids": [
+      "CLM-027",
       "CLM-059",
       "CLM-060"
     ],
     "linked_reading_ids": [
+      "CWR-007",
       "CWR-008"
     ],
     "linked_visual_ids": [
+      "RV-CWR-007",
       "RV-CWR-008"
     ],
     "linked_measurement_ids": [],
@@ -5813,7 +5844,7 @@
   {
     "source_id": "SRC-WB-FMIIP-P180708",
     "primary_url": "https://maps.worldbank.org/projects/wb/pid/P180708?status=active",
-    "additional_urls": "[\"https://www.worldbank.org/en/news/press-release/2025/06/17/world-bank-approves-us-30-million-to-support-financial-inclusion-and-education-in-yemen\", \"https://documents1.worldbank.org/curated/en/099092225124020645/pdf/P180708-5de900d7-912a-4077-a4f4-f1664228ab67.pdf\"]",
+    "additional_urls": "[\"https://www.worldbank.org/en/news/press-release/2025/06/17/world-bank-approves-us-30-million-to-support-financial-inclusion-and-education-in-yemen\", \"https://documents1.worldbank.org/curated/en/099092225124020645/pdf/P180708-5de900d7-912a-4077-a4f4-f1664228ab67.pdf\", \"https://documents.worldbank.org/curated/en/099052825174515006/pdf/BOSIB-524dd7c7-d52c-4876-80ed-1e3ea9df2463.pdf\"]",
     "datasets_or_use": "DS-FMIIP-PROJECT-RESULTS",
     "row_count": 24,
     "metadata_state": "DISPLAY_READY",
@@ -5838,23 +5869,30 @@
     "citation_behavior": "Use the original locator and object-level controlled citation/source text; do not infer missing bibliographic or rights metadata.",
     "linked_evidence_object_ids": [
       "CBY-BANKS-2026-05",
+      "CLM-008",
+      "CLM-016",
       "CLM-018",
       "CLM-027",
       "CLM-045",
+      "CLM-062",
       "FMIIP-BASELINE-2025-01",
       "VIS-PAYMENT-RAILS",
       "VIS-TARGET-RESULT-STATE",
       "XW-FMIIP-005"
     ],
     "linked_claim_ids": [
+      "CLM-008",
+      "CLM-016",
       "CLM-018",
       "CLM-027",
-      "CLM-045"
+      "CLM-045",
+      "CLM-062"
     ],
     "linked_reading_ids": [
       "CWR-003",
       "CWR-004",
       "CWR-007",
+      "CWR-008",
       "CWR-009",
       "CWR-010",
       "CWR-011"
@@ -5863,6 +5901,7 @@
       "RV-CWR-003",
       "RV-CWR-004",
       "RV-CWR-007",
+      "RV-CWR-008",
       "RV-CWR-009",
       "RV-CWR-010",
       "VIS-PAYMENT-RAILS",
@@ -6236,7 +6275,7 @@
   {
     "source_id": "SRC-WB-YEM-CNL-2026-001",
     "primary_url": "https://www.worldbank.org/en/news/press-release/2026/06/30/improving-human-capital-and-building-livelihoods-for-vulnerable-families-in-yemen",
-    "additional_urls": null,
+    "additional_urls": "[\"https://projects.worldbank.org/en/projects-operations/project-detail/P514855\", \"https://documents.worldbank.org/curated/en/099061026114019678/pdf/BOSIB-24b35177-1756-452c-a8c5-602402705683.pdf\", \"https://documents.worldbank.org/curated/en/099090226095598089/pdf/P514855-f2c338ed-4910-4743-9b3b-564bebfa4be3.pdf\"]",
     "datasets_or_use": "RESOURCE_LIBRARY_ONLY__CURRENT_YEMEN_CASH_IDENTITY_CONTEXT",
     "row_count": 0,
     "metadata_state": "DISPLAY_READY",
@@ -6259,10 +6298,18 @@
     "evidence_roles": null,
     "rights_display_state": "OBJECT_LEVEL_OR_UNSPECIFIED",
     "citation_behavior": "Use the original locator and object-level controlled citation/source text; do not infer missing bibliographic or rights metadata.",
-    "linked_evidence_object_ids": [],
-    "linked_claim_ids": [],
-    "linked_reading_ids": [],
-    "linked_visual_ids": [],
+    "linked_evidence_object_ids": [
+      "CLM-045"
+    ],
+    "linked_claim_ids": [
+      "CLM-045"
+    ],
+    "linked_reading_ids": [
+      "CWR-010"
+    ],
+    "linked_visual_ids": [
+      "RV-CWR-010"
+    ],
     "linked_measurement_ids": [],
     "rule": "DISPLAY_READY fields come only from the Production Master. LOCATOR_ONLY preserves the locator without inventing missing bibliography or rights metadata."
   },
@@ -6591,6 +6638,228 @@
     "linked_claim_ids": [
       "CLM-049"
     ],
+    "linked_reading_ids": [],
+    "linked_visual_ids": [],
+    "linked_measurement_ids": [],
+    "rule": "DISPLAY_READY fields come only from the Production Master. LOCATOR_ONLY preserves the locator without inventing missing bibliography or rights metadata."
+  },
+  {
+    "source_id": "SRC-WB-WDI-FAS-YEM-001",
+    "primary_url": "https://data.worldbank.org/indicator/FB.ATM.TOTL.P5?locations=YE",
+    "additional_urls": "[\"https://data.worldbank.org/indicator/FB.CBK.BRCH.P5?locations=YE\", \"https://data.worldbank.org/indicator/FB.CBK.DPTR.P3?locations=YE\"]",
+    "datasets_or_use": "RESOURCE_LIBRARY_ONLY__MEASUREMENT_AGENDA_CONTEXT",
+    "row_count": 0,
+    "metadata_state": "DISPLAY_READY",
+    "standalone_resource_card_eligible": false,
+    "display_title": "World Development Indicators: IMF Financial Access Survey series for Yemen (ATMs, commercial bank branches, depositors; last year 2015)",
+    "display_title_ar": "مؤشرات التنمية العالمية: سلاسل مسح الوصول المالي لصندوق النقد الدولي لليمن (أجهزة الصراف الآلي وفروع البنوك التجارية والمودعون؛ آخر سنة 2015)",
+    "publisher": "World Bank",
+    "publisher_ar": "البنك الدولي",
+    "document_label": "Survey dataset or indicator",
+    "document_label_ar": "مسح أو مؤشر",
+    "document_date": "2026-10-08",
+    "resource_category": null,
+    "resource_category_ar": null,
+    "why_it_matters": null,
+    "why_it_matters_ar": null,
+    "does_not_establish": null,
+    "does_not_establish_ar": null,
+    "rights_state": "NOT_ASSESSED",
+    "document_type": null,
+    "evidence_roles": null,
+    "rights_display_state": "OBJECT_LEVEL_OR_UNSPECIFIED",
+    "citation_behavior": "Use the original locator and object-level controlled citation/source text; do not infer missing bibliographic or rights metadata.",
+    "linked_evidence_object_ids": [],
+    "linked_claim_ids": [],
+    "linked_reading_ids": [],
+    "linked_visual_ids": [],
+    "linked_measurement_ids": [],
+    "rule": "DISPLAY_READY fields come only from the Production Master. LOCATOR_ONLY preserves the locator without inventing missing bibliography or rights metadata."
+  },
+  {
+    "source_id": "SRC-ACAPS-MAHRAM-2023-001",
+    "primary_url": "https://www.acaps.org/fileadmin/Data_Product/Main_media/20231214_ACAPS_Yemen_Analysis_Hub_Dynamics_and_effects_of_the_Mahram_practice_in_Yemen_01.pdf",
+    "additional_urls": "[\"https://acaps.org/en/countries/archives/detail/yemen-dynamics-and-effects-of-the-mahram-practice-in-yemen\"]",
+    "datasets_or_use": "RESOURCE_LIBRARY_ONLY__GENDER_HYPOTHESIS_CONTEXT",
+    "row_count": 0,
+    "metadata_state": "DISPLAY_READY",
+    "standalone_resource_card_eligible": false,
+    "display_title": "Yemen: dynamics and effects of the Mahram practice (December 2023)",
+    "display_title_ar": "اليمن: ديناميات ممارسة المَحرم وآثارها (ديسمبر 2023)",
+    "publisher": "ACAPS (Yemen Analysis Hub)",
+    "publisher_ar": "ACAPS (مركز تحليل اليمن)",
+    "document_label": "Research or policy paper",
+    "document_label_ar": "ورقة بحثية أو سياساتية",
+    "document_date": "2023-12-14",
+    "resource_category": null,
+    "resource_category_ar": null,
+    "why_it_matters": null,
+    "why_it_matters_ar": null,
+    "does_not_establish": null,
+    "does_not_establish_ar": null,
+    "rights_state": "NOT_ASSESSED",
+    "document_type": null,
+    "evidence_roles": null,
+    "rights_display_state": "OBJECT_LEVEL_OR_UNSPECIFIED",
+    "citation_behavior": "Use the original locator and object-level controlled citation/source text; do not infer missing bibliographic or rights metadata.",
+    "linked_evidence_object_ids": [
+      "CLM-027"
+    ],
+    "linked_claim_ids": [
+      "CLM-027"
+    ],
+    "linked_reading_ids": [
+      "CWR-007"
+    ],
+    "linked_visual_ids": [
+      "RV-CWR-007"
+    ],
+    "linked_measurement_ids": [],
+    "rule": "DISPLAY_READY fields come only from the Production Master. LOCATOR_ONLY preserves the locator without inventing missing bibliography or rights metadata."
+  },
+  {
+    "source_id": "SRC-WB-YEM-ECON-MONITOR-2025-SPRING-001",
+    "primary_url": "https://documents.worldbank.org/curated/en/099822505292530706",
+    "additional_urls": "[\"https://documents.worldbank.org/curated/en/099822505292530706/pdf/IDU-7009880b-d070-472d-9bf2-5cc72a3fc75d.pdf\", \"https://documents.worldbank.org/curated/en/099103206302561755/pdf/IDU-7e9c81f8-af50-45f0-b454-e73ae077727e.pdf\"]",
+    "datasets_or_use": "RESOURCE_LIBRARY_ONLY__CURRENT_YEMEN_MACRO_CONTEXT",
+    "row_count": 0,
+    "metadata_state": "DISPLAY_READY",
+    "standalone_resource_card_eligible": false,
+    "display_title": "Yemen Economic Monitor, Spring 2025: Persistent Fragility amid Rising Risks",
+    "display_title_ar": "المرصد الاقتصادي لليمن، ربيع 2025: هشاشة مستمرة وسط تصاعد المخاطر",
+    "publisher": "World Bank",
+    "publisher_ar": "البنك الدولي",
+    "document_label": "Research or policy paper",
+    "document_label_ar": "ورقة بحثية أو سياساتية",
+    "document_date": "2025-05-29",
+    "resource_category": null,
+    "resource_category_ar": null,
+    "why_it_matters": null,
+    "why_it_matters_ar": null,
+    "does_not_establish": null,
+    "does_not_establish_ar": null,
+    "rights_state": "NOT_ASSESSED",
+    "document_type": null,
+    "evidence_roles": null,
+    "rights_display_state": "OBJECT_LEVEL_OR_UNSPECIFIED",
+    "citation_behavior": "Use the original locator and object-level controlled citation/source text; do not infer missing bibliographic or rights metadata.",
+    "linked_evidence_object_ids": [
+      "CLM-043"
+    ],
+    "linked_claim_ids": [
+      "CLM-043"
+    ],
+    "linked_reading_ids": [
+      "CWR-001"
+    ],
+    "linked_visual_ids": [
+      "RV-CWR-001"
+    ],
+    "linked_measurement_ids": [],
+    "rule": "DISPLAY_READY fields come only from the Production Master. LOCATOR_ONLY preserves the locator without inventing missing bibliography or rights metadata."
+  },
+  {
+    "source_id": "SRC-WB-ESPECRP-ISR10-2026-001",
+    "primary_url": "https://documents.worldbank.org/curated/en/099063026134041997/pdf/P173582-a6512878-8a11-454d-98f2-213c6f4df820.pdf",
+    "additional_urls": "[\"https://projects.worldbank.org/en/projects-operations/project-detail/P173582\"]",
+    "datasets_or_use": "RESOURCE_LIBRARY_ONLY__CURRENT_YEMEN_CASH_IDENTITY_CONTEXT",
+    "row_count": 0,
+    "metadata_state": "DISPLAY_READY",
+    "standalone_resource_card_eligible": false,
+    "display_title": "Yemen Emergency Social Protection Enhancement and COVID-19 Response Project (ESPECRP, P173582): Implementation Status and Results Report, sequence 10 (30 June 2026)",
+    "display_title_ar": "المشروع الطارئ لتعزيز الحماية الاجتماعية والاستجابة لجائحة كوفيد-19 في اليمن (ESPECRP، P173582): تقرير حالة التنفيذ والنتائج، التسلسل 10 (30 يونيو 2026)",
+    "publisher": "World Bank",
+    "publisher_ar": "البنك الدولي",
+    "document_label": "Project document",
+    "document_label_ar": "وثيقة مشروع",
+    "document_date": "2026-06-30",
+    "resource_category": null,
+    "resource_category_ar": null,
+    "why_it_matters": null,
+    "why_it_matters_ar": null,
+    "does_not_establish": null,
+    "does_not_establish_ar": null,
+    "rights_state": "NOT_ASSESSED",
+    "document_type": null,
+    "evidence_roles": null,
+    "rights_display_state": "OBJECT_LEVEL_OR_UNSPECIFIED",
+    "citation_behavior": "Use the original locator and object-level controlled citation/source text; do not infer missing bibliographic or rights metadata.",
+    "linked_evidence_object_ids": [
+      "CLM-045"
+    ],
+    "linked_claim_ids": [
+      "CLM-045"
+    ],
+    "linked_reading_ids": [
+      "CWR-010"
+    ],
+    "linked_visual_ids": [
+      "RV-CWR-010"
+    ],
+    "linked_measurement_ids": [],
+    "rule": "DISPLAY_READY fields come only from the Production Master. LOCATOR_ONLY preserves the locator without inventing missing bibliography or rights metadata."
+  },
+  {
+    "source_id": "SRC-UNICEF-MICS-YEM-2022-001",
+    "primary_url": "https://www.unicef.org/yemen/documents/yemen-mics-multiple-indicator-cluster-survey",
+    "additional_urls": "[\"https://www.unicef.org/yemen/media/9006/file/YEMEN%20MICS%20MULTIPLE%20INDICATOR%20CLUSTER%20SURVEY.pdf\"]",
+    "datasets_or_use": "RESOURCE_LIBRARY_ONLY__MEASUREMENT_AGENDA_CONTEXT",
+    "row_count": 0,
+    "metadata_state": "DISPLAY_READY",
+    "standalone_resource_card_eligible": false,
+    "display_title": "Yemen Multiple Indicator Cluster Survey (MICS) 2022–2023: Survey Findings Report",
+    "display_title_ar": "المسح العنقودي متعدد المؤشرات في اليمن (MICS) 2022–2023: تقرير نتائج المسح",
+    "publisher": "Central Statistical Organization and UNICEF",
+    "publisher_ar": "الجهاز المركزي للإحصاء واليونيسف",
+    "document_label": "Statistical release",
+    "document_label_ar": "إصدار إحصائي",
+    "document_date": null,
+    "resource_category": null,
+    "resource_category_ar": null,
+    "why_it_matters": null,
+    "why_it_matters_ar": null,
+    "does_not_establish": null,
+    "does_not_establish_ar": null,
+    "rights_state": "NOT_ASSESSED",
+    "document_type": null,
+    "evidence_roles": null,
+    "rights_display_state": "OBJECT_LEVEL_OR_UNSPECIFIED",
+    "citation_behavior": "Use the original locator and object-level controlled citation/source text; do not infer missing bibliographic or rights metadata.",
+    "linked_evidence_object_ids": [],
+    "linked_claim_ids": [],
+    "linked_reading_ids": [],
+    "linked_visual_ids": [],
+    "linked_measurement_ids": [],
+    "rule": "DISPLAY_READY fields come only from the Production Master. LOCATOR_ONLY preserves the locator without inventing missing bibliography or rights metadata."
+  },
+  {
+    "source_id": "SRC-WB-YMPS-R1-2022-001",
+    "primary_url": "https://microdata.worldbank.org/index.php/catalog/5999",
+    "additional_urls": "[\"https://doi.org/10.48529/3na0-xa83\", \"https://documents.worldbank.org/en/publication/documents-reports/documentdetail/099082223171029962\"]",
+    "datasets_or_use": "RESOURCE_LIBRARY_ONLY__MEASUREMENT_AGENDA_CONTEXT",
+    "row_count": 0,
+    "metadata_state": "DISPLAY_READY",
+    "standalone_resource_card_eligible": false,
+    "display_title": "Yemen Mobile Phone Survey Monitoring, Round I (August–September 2022): Monitoring Food Insecurity and Employment in Yemen, catalogue entry",
+    "display_title_ar": "مسح الهاتف المحمول في اليمن، الجولة الأولى (أغسطس–سبتمبر 2022): رصد انعدام الأمن الغذائي والعمالة في اليمن، قيد الفهرس",
+    "publisher": "World Bank",
+    "publisher_ar": "البنك الدولي",
+    "document_label": "Survey dataset or indicator",
+    "document_label_ar": "مسح أو مؤشر",
+    "document_date": "2023-09-07",
+    "resource_category": null,
+    "resource_category_ar": null,
+    "why_it_matters": null,
+    "why_it_matters_ar": null,
+    "does_not_establish": null,
+    "does_not_establish_ar": null,
+    "rights_state": "NOT_ASSESSED",
+    "document_type": null,
+    "evidence_roles": null,
+    "rights_display_state": "OBJECT_LEVEL_OR_UNSPECIFIED",
+    "citation_behavior": "Use the original locator and object-level controlled citation/source text; do not infer missing bibliographic or rights metadata.",
+    "linked_evidence_object_ids": [],
+    "linked_claim_ids": [],
     "linked_reading_ids": [],
     "linked_visual_ids": [],
     "linked_measurement_ids": [],

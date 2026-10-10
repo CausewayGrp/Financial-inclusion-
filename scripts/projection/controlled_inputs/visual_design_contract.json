@@ -207,7 +207,10 @@
         "YER_million": "UI-VIS-UNIT-YER-MILLION",
         "index, 2021 = 100": "UI-VIS-UNIT-INDEX-2021",
         "percent of population ages 15-24": "UI-VIS-UNIT-PCT-AGES-15-24",
-        "percent of population ages 25+": "UI-VIS-UNIT-PCT-AGES-25-PLUS"
+        "percent of population ages 25+": "UI-VIS-UNIT-PCT-AGES-25-PLUS",
+        "YER_billion": "UI-VIS-UNIT-YER-BILLION",
+        "USD_million": "UI-VIS-UNIT-USD-MILLION",
+        "SAR_million": "UI-VIS-UNIT-SAR-MILLION"
       },
       "corridor": {
         "Saudi Arabia": "UI-VIS-CAT-CORRIDOR-SA",
@@ -224,7 +227,14 @@
         "IND-0006": "UI-VIS-CAT-PAY-ATMS",
         "IND-0010": "UI-VIS-CAT-PAY-EWALLETS",
         "IND-0011": "UI-VIS-CAT-PAY-EWALLET-SUBSCRIBERS",
-        "IND-0017": "UI-VIS-CAT-PAY-ACCOUNTS"
+        "IND-0017": "UI-VIS-CAT-PAY-ACCOUNTS",
+        "IND-0007": "UI-VIS-CAT-PAY-ATM-WITHDRAWALS-YER",
+        "IND-0008": "UI-VIS-CAT-PAY-ATM-WITHDRAWALS-USD",
+        "IND-0009": "UI-VIS-CAT-PAY-ATM-WITHDRAWALS-SAR",
+        "IND-0013": "UI-VIS-CAT-PAY-CHEQUES",
+        "IND-0014": "UI-VIS-CAT-PAY-CHEQUE-VALUE",
+        "IND-0015": "UI-VIS-CAT-PAY-SWIFT-LOCAL",
+        "IND-0016": "UI-VIS-CAT-PAY-SWIFT-LOCAL-VALUE"
       },
       "firm_finance": {
         "Formal establishments reporting a line of credit": "UI-VIS-CAT-FIRM-CREDIT-LINE",
@@ -330,7 +340,14 @@
         "IND-0011": "UI-VIS-NOT-PAY-EWALLET-SUBSCRIBERS",
         "IND-0006": "UI-VIS-NOT-PAY-ATMS",
         "IND-0002": "UI-VIS-NOT-PAY-POS-TERMINALS",
-        "IND-0003": "UI-VIS-NOT-PAY-POS-TRANSACTIONS"
+        "IND-0003": "UI-VIS-NOT-PAY-POS-TRANSACTIONS",
+        "IND-0007": "UI-VIS-NOT-PAY-ATM-WITHDRAWALS",
+        "IND-0008": "UI-VIS-NOT-PAY-ATM-WITHDRAWALS",
+        "IND-0009": "UI-VIS-NOT-PAY-ATM-WITHDRAWALS",
+        "IND-0013": "UI-VIS-NOT-PAY-CHEQUES",
+        "IND-0014": "UI-VIS-NOT-PAY-CHEQUES",
+        "IND-0015": "UI-VIS-NOT-PAY-SWIFT-LOCAL",
+        "IND-0016": "UI-VIS-NOT-PAY-SWIFT-LOCAL"
       },
       "findex_metric": {
         "Account ownership at a financial institution or with a mobile-money-service provider": "UI-VIS-CAT-METRIC-ACCOUNT-OWNERSHIP",
@@ -1177,9 +1194,9 @@
     {
       "visual_id": "VIS-PAYMENT-ANATOMY",
       "tier": "CORE_ANALYTICAL",
-      "rationale": "Keeps cards, accounts, subscribers, terminals and transactions as different objects before any comparison. Card-first; no totals.",
+      "rationale": "Keeps cards, accounts, subscribers, terminals, transactions, withdrawals, cheques and transfers as different objects, and the 2025 report apart from the 2024 bulletin, before any comparison. Card-first; no totals.",
       "contract": {
-        "form": "One card per measurement object, each with its 'is not' line; no totals row, no population denominator.",
+        "form": "Two panels, one per publication: the first-half 2025 payment report and the third-quarter 2024 payments bulletin. One card per measurement object, each with its 'is not' line; no totals row, no population denominator and no comparison across the panels.",
         "series": [
           {
             "id": "h1_objects",
@@ -1222,21 +1239,68 @@
             "encoding_only_fields": [
               "caveat"
             ]
+          },
+          {
+            "id": "q3_2024_channels",
+            "rows": {
+              "file": "data/payments_data.json",
+              "header_key": "observation_id",
+              "ids": [
+                "OBS-00009",
+                "OBS-00005",
+                "OBS-00010",
+                "OBS-00011",
+                "OBS-00012",
+                "OBS-00013",
+                "OBS-00024",
+                "OBS-00023",
+                "OBS-00029",
+                "OBS-00030"
+              ]
+            },
+            "fields": {
+              "x": "indicator_id",
+              "y": "value",
+              "unit": "unit",
+              "flag": "comparability_state",
+              "source": "source_id",
+              "caveat": "caveats"
+            },
+            "state": "ADMINISTRATIVE",
+            "flag_markers": {
+              "BREAK_IN_SERIES": "NOT_COMPARABLE"
+            },
+            "withhold_when_caveat_matches": "require methodology note before public use",
+            "label_fields": {
+              "x": "payment_object",
+              "unit": "unit"
+            },
+            "derived_labels": {
+              "is_not": {
+                "field": "x",
+                "namespace": "payment_object_not"
+              }
+            },
+            "encoding_only_fields": [
+              "caveat"
+            ]
           }
         ],
-        "ordering": "Series order: cards, ATMs, e-wallets, e-wallet subscribers, POS terminals, POS transactions, accounts.",
-        "transformation": "None. No card is summed with another or divided by population.",
-        "missing": "Values whose governed caveat requires a methodology note before public use are withheld (UI-VIS-WITHHELD): the object card shows what it counts, not the number.",
-        "breaks": "Flagged objects carry NOT_COMPARABLE and the card note UI-VIS-NOTE-NOT-COMPARABLE-2024Q3: no comparison with the 2024 Q3 bulletin is drawn. Cards have no line, so no line-break marker is printed.",
-        "annotation": "Each card prints its governed object label (x_label) and its governed 'is not' line (is_not_label). The caveat field is an internal comparability note and is not printed; the frame prints the governed marker labels instead.",
+        "ordering": "Panel 1 (2025 H1): cards, ATMs, e-wallets, e-wallet subscribers, POS terminals, POS transactions, accounts. Panel 2 (2024 Q3): POS terminals, POS transactions, ATMs, ATM withdrawals in rials, US dollars and Saudi riyals, cheques and their value, local SWIFT transfers and their value.",
+        "transformation": "None. No card is summed with another, divided by population or set against a card in the other panel.",
+        "missing": "Values whose governed caveat requires a methodology note before public use are withheld (UI-VIS-WITHHELD): the object card shows what it counts, not the number. Rows of the 2024 bulletin that are not drawn carry their reason in their caveat (19_PAYMENTS_DATA).",
+        "breaks": "Flagged objects carry NOT_COMPARABLE and the frame note UI-VIS-NOTE-NOT-COMPARABLE-2024Q3. The two panels are separate publications whose reporting scope and definitions have not been reconciled, so no comparison is drawn between them. Cards have no line, so no line-break marker is printed.",
+        "annotation": "Each panel is headed by its governed panel label (UI-VIS-PANEL-PAY-2025H1, UI-VIS-PANEL-PAY-2024Q3). Each card prints its governed object label (x_label) and its governed 'is not' line (is_not_label). The caveat field is an internal comparability note and is not printed; the frame prints the governed marker labels instead.",
         "credit": {
           "passport_id": "EP-CBY-PAY-H1-2025"
         },
-        "mobile": "Cards stack.",
-        "rtl": "Card order mirrors.",
-        "fallback": "Table: object, value or withheld state, what it is not.",
+        "mobile": "Panels and cards stack.",
+        "rtl": "Card order mirrors; the 2025 panel stays first.",
+        "fallback": "One table per panel: object, value or withheld state, what it is not.",
         "frame_labels": [
-          "UI-VIS-NOTE-NOT-COMPARABLE-2024Q3"
+          "UI-VIS-NOTE-NOT-COMPARABLE-2024Q3",
+          "UI-VIS-PANEL-PAY-2025H1",
+          "UI-VIS-PANEL-PAY-2024Q3"
         ]
       }
     },

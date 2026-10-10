@@ -1670,6 +1670,7 @@
     "object_id": "CLM-016",
     "object_class": "CLAIM",
     "public_routes": [
+      "/evidence/compare/",
       "/providers/"
     ],
     "title_en": "Historical exchange and remittance roster baseline",
@@ -1684,8 +1685,8 @@
     "universe_ar": "القيود الواردة في كل فئة من فئات القائمة الرسمية لعام 2025؛ ولا يثبت الدليل أن هذه القيود تمثل كيانات قانونية فريدة عبر الأقسام.",
     "method_en": "Entries were counted by class from the official 2025 roster of the Central Bank of Yemen – Aden (CBY-Aden), using where the numbering in each class ends and the row sequence in the published document; 382 is the sum of the three class counts (79 + 195 + 108).",
     "method_ar": "عُدّت القيود بحسب الفئة من القائمة الرسمية لعام 2025 الصادرة عن البنك المركزي اليمني – عدن، اعتمادًا على نهاية الترقيم في كل فئة وتسلسل الصفوف في الوثيقة المنشورة؛ والرقم 382 مجموع أعداد الفئات الثلاث (79 + 195 + 108).",
-    "limitations_en": "382 is not the 2026 count, a count of unique current firms or active providers, or a measure of branch footprint. Why the numbers differ: the 2026 roster (record CLM-009) lists more entries in each of its three classes. The higher 2026 entries cannot be read as new providers entering the market: both rosters count entries by class rather than unique firms, this evidence base has not compared the two rosters entry by entry, and the 2026 roster states no issue date. | The figure is the sum of category entries on the 2025 roster, which the 2026 roster supersedes; entries are counted as listed, not as distinct operating firms.",
-    "limitations_ar": "ليس الرقم 382 عدد عام 2026، ولا عددًا لشركات فريدة حالية أو لمقدمي خدمات عاملين، ولا مقياسًا لشبكة الفروع. لماذا تختلف الأرقام: تُدرج قائمة 2026 (السجل CLM-009) قيودًا أكثر في كل فئة من فئاتها الثلاث. ولا تُقرأ الأعداد الأعلى في قائمة 2026 دخولًا لمقدمي خدمات جدد إلى السوق: فالقائمتان تحصيان القيود بحسب الفئة لا الشركات الفريدة، ولم تقارن قاعدة الأدلة هذه بين القائمتين قيدًا قيدًا، ولا تذكر قائمة 2026 تاريخ صدورها. | الرقم مجموع القيود في قائمة 2025 حسب الفئة، وقد حلت محلها قائمة 2026؛ وتُعدّ القيود كما وردت، لا بوصفها شركات عاملة مستقلة.",
+    "limitations_en": "382 is not the 2026 count, a count of unique current firms or active providers, or a measure of branch footprint. Why the numbers differ: the 2026 roster (record CLM-009) lists more entries in each of its three classes. The higher 2026 entries cannot be read as new providers entering the market: both rosters count entries by class rather than unique firms, this evidence base has not compared the two rosters entry by entry, and the 2026 roster states no issue date. Older counts are not comparable either: the FMIIP appraisal document (May 2025) reports money-exchanger branches rising from 876 in 2017 to 3,244 in 2019, citing no source, while an International Growth Centre report (February 2026) presents the same pair as World Bank estimates of entities, including exchange firms and microfinance institutions. One pair of numbers carries two labels, branches or entities, and neither is a roster count, so neither is compared with the 382 entries here. | The figure is the sum of category entries on the 2025 roster, which the 2026 roster supersedes; entries are counted as listed, not as distinct operating firms.",
+    "limitations_ar": "ليس الرقم 382 عدد عام 2026، ولا عددًا لشركات فريدة حالية أو لمقدمي خدمات عاملين، ولا مقياسًا لشبكة الفروع. لماذا تختلف الأرقام: تُدرج قائمة 2026 (السجل CLM-009) قيودًا أكثر في كل فئة من فئاتها الثلاث. ولا تُقرأ الأعداد الأعلى في قائمة 2026 دخولًا لمقدمي خدمات جدد إلى السوق: فالقائمتان تحصيان القيود بحسب الفئة لا الشركات الفريدة، ولم تقارن قاعدة الأدلة هذه بين القائمتين قيدًا قيدًا، ولا تذكر قائمة 2026 تاريخ صدورها. ولا تُقارن بها أعداد أقدم أيضًا: إذ تذكر وثيقة تقييم مشروع FMIIP (مايو 2025) أن فروع شركات الصرافة ارتفعت من 876 في 2017 إلى 3,244 في 2019، من دون ذكر مصدر، بينما يعرض تقرير للمركز الدولي للنمو (فبراير 2026) الزوج نفسه من الأرقام بوصفه تقديرات للبنك الدولي لعدد الكيانات، بما فيها شركات الصرافة ومؤسسات التمويل الأصغر. فالزوج الواحد من الأرقام يحمل وصفين، فروعًا أو كيانات، ولا يمثل أيٌّ منهما عدًّا من قائمة رسمية، لذلك لا يُقارن أيٌّ منهما بالقيود الـ382 هنا. | الرقم مجموع القيود في قائمة 2025 حسب الفئة، وقد حلت محلها قائمة 2026؛ وتُعدّ القيود كما وردت، لا بوصفها شركات عاملة مستقلة.",
     "currentness_en": "The counts refer to the 2025 roster, which the 2026 roster supersedes. They describe 2025 only.",
     "currentness_ar": "تعود الأعداد إلى قائمة 2025 التي حلت محلها قائمة 2026، ولا تصف إلا عام 2025.",
     "change_trigger_en": "This record is updated when an authoritative source is revised or replaced, a newer comparable observation becomes available, the definition, population or method changes, or the conditions for public use change.",
@@ -1693,7 +1694,9 @@
     "verification_en": "This record is drawn from the source(s) listed on this page. Open a source record to reach the original document, and check that the definition, period, population and geography match what is stated here.",
     "verification_ar": "يستند هذا السجل إلى المصدر أو المصادر المدرجة في هذه الصفحة. افتح سجل المصدر للوصول إلى الوثيقة الأصلية، وتحقق من تطابق التعريف والفترة والمجتمع والنطاق الجغرافي مع ما يرد هنا.",
     "source_dependencies": [
-      "SRC-CBY-EXCH-LIST-2025-001"
+      "SRC-CBY-EXCH-LIST-2025-001",
+      "SRC-WB-FMIIP-P180708",
+      "SRC-IGC-AIDDATA-REMIT-YEM-2026"
     ],
     "source_links": [],
     "lineage_state": "BOUND_EXACT",
@@ -1732,13 +1735,42 @@
         "s": "READ",
         "src": "SRC-CBY-EXCH-LIST-2025-001",
         "loc": "roster 69561aafe8942.pdf (10 PDF pages, no printed page numbers; main heading «شركات ومنشآت الصرافة ووكلاء الحوالات المرخصين للعام 2025م»), section «أولا: الشركات المرخصة ...للعام 2025م» PDF p.1-2, serials 1..79 contiguous, row 79 on PDF p."
+      },
+      {
+        "t": "876",
+        "k": "v",
+        "s": "READ",
+        "src": "SRC-WB-FMIIP-P180708",
+        "loc": "PAD (Report No. PADHI00396, 22 May 2025), paragraph 7, printed p.2 (PDF p.12): \"the expansion of money exchangers branches from 876 in 2017 to 3,244 in 2019\" (no source); the International Growth Centre report YEM-24338 (February 2026), section 3.4, printed p.32, presents the same pair as World Bank estimates of entities, including exchange firms and microfinance institutions; read 10 October 2026"
+      },
+      {
+        "t": "3,244",
+        "k": "v",
+        "s": "READ",
+        "src": "SRC-WB-FMIIP-P180708",
+        "loc": "PAD (Report No. PADHI00396, 22 May 2025), paragraph 7, printed p.2 (PDF p.12): \"the expansion of money exchangers branches from 876 in 2017 to 3,244 in 2019\" (no source); the International Growth Centre report YEM-24338 (February 2026), section 3.4, printed p.32, presents the same pair as World Bank estimates of entities, including exchange firms and microfinance institutions; read 10 October 2026"
+      },
+      {
+        "t": "May 2025",
+        "k": "d",
+        "s": "READ",
+        "src": "SRC-WB-FMIIP-P180708",
+        "loc": "PAD (Report No. PADHI00396, 22 May 2025), date of the appraisal document"
+      },
+      {
+        "t": "February 2026",
+        "k": "d",
+        "s": "READ",
+        "src": "SRC-IGC-AIDDATA-REMIT-YEM-2026",
+        "loc": "International Growth Centre final report YEM-24338, cover date February 2026"
       }
     ],
     "public_route_list": [
+      "/evidence/compare/",
       "/providers/"
     ],
-    "does_not_establish_en": "382 is not the 2026 count, a count of unique current firms or active providers, or a measure of branch footprint. Why the numbers differ: the 2026 roster (record CLM-009) lists more entries in each of its three classes. The higher 2026 entries cannot be read as new providers entering the market: both rosters count entries by class rather than unique firms, this evidence base has not compared the two rosters entry by entry, and the 2026 roster states no issue date.",
-    "does_not_establish_ar": "ليس الرقم 382 عدد عام 2026، ولا عددًا لشركات فريدة حالية أو لمقدمي خدمات عاملين، ولا مقياسًا لشبكة الفروع. لماذا تختلف الأرقام: تُدرج قائمة 2026 (السجل CLM-009) قيودًا أكثر في كل فئة من فئاتها الثلاث. ولا تُقرأ الأعداد الأعلى في قائمة 2026 دخولًا لمقدمي خدمات جدد إلى السوق: فالقائمتان تحصيان القيود بحسب الفئة لا الشركات الفريدة، ولم تقارن قاعدة الأدلة هذه بين القائمتين قيدًا قيدًا، ولا تذكر قائمة 2026 تاريخ صدورها.",
+    "does_not_establish_en": "382 is not the 2026 count, a count of unique current firms or active providers, or a measure of branch footprint. Why the numbers differ: the 2026 roster (record CLM-009) lists more entries in each of its three classes. The higher 2026 entries cannot be read as new providers entering the market: both rosters count entries by class rather than unique firms, this evidence base has not compared the two rosters entry by entry, and the 2026 roster states no issue date. Older counts are not comparable either: the FMIIP appraisal document (May 2025) reports money-exchanger branches rising from 876 in 2017 to 3,244 in 2019, citing no source, while an International Growth Centre report (February 2026) presents the same pair as World Bank estimates of entities, including exchange firms and microfinance institutions. One pair of numbers carries two labels, branches or entities, and neither is a roster count, so neither is compared with the 382 entries here.",
+    "does_not_establish_ar": "ليس الرقم 382 عدد عام 2026، ولا عددًا لشركات فريدة حالية أو لمقدمي خدمات عاملين، ولا مقياسًا لشبكة الفروع. لماذا تختلف الأرقام: تُدرج قائمة 2026 (السجل CLM-009) قيودًا أكثر في كل فئة من فئاتها الثلاث. ولا تُقرأ الأعداد الأعلى في قائمة 2026 دخولًا لمقدمي خدمات جدد إلى السوق: فالقائمتان تحصيان القيود بحسب الفئة لا الشركات الفريدة، ولم تقارن قاعدة الأدلة هذه بين القائمتين قيدًا قيدًا، ولا تذكر قائمة 2026 تاريخ صدورها. ولا تُقارن بها أعداد أقدم أيضًا: إذ تذكر وثيقة تقييم مشروع FMIIP (مايو 2025) أن فروع شركات الصرافة ارتفعت من 876 في 2017 إلى 3,244 في 2019، من دون ذكر مصدر، بينما يعرض تقرير للمركز الدولي للنمو (فبراير 2026) الزوج نفسه من الأرقام بوصفه تقديرات للبنك الدولي لعدد الكيانات، بما فيها شركات الصرافة ومؤسسات التمويل الأصغر. فالزوج الواحد من الأرقام يحمل وصفين، فروعًا أو كيانات، ولا يمثل أيٌّ منهما عدًّا من قائمة رسمية، لذلك لا يُقارن أيٌّ منهما بالقيود الـ382 هنا.",
     "measurement_limitation_en": "The figure is the sum of category entries on the 2025 roster, which the 2026 roster supersedes; entries are counted as listed, not as distinct operating firms.",
     "measurement_limitation_ar": "الرقم مجموع القيود في قائمة 2025 حسب الفئة، وقد حلت محلها قائمة 2026؛ وتُعدّ القيود كما وردت، لا بوصفها شركات عاملة مستقلة."
   },
@@ -1850,8 +1882,8 @@
     "universe_ar": "المؤسسات والأحداث التي يحددها المصدر؛ وليس مجتمعًا للمستخدمين أو المعاملات ولا قياسًا لإتاحة النظام.",
     "method_en": "Official news records of the Central Bank of Yemen – Aden (CBY-Aden) on each event, arranged by date, institution and the stage reached.",
     "method_ar": "سجلات أخبار رسمية للبنك المركزي اليمني – عدن عن كل حدث، مرتبة بحسب التاريخ والمؤسسة والمرحلة التي بلغها.",
-    "limitations_en": "It does not show that the Yemeni Payments and Clearing Company (YPCC), the Fast Payment System (FPS) or the Real-Time Gross Settlement system (RTGS) is operating: YPCC is an institution that has been established, not a system in operation, and the results framework of the Financial Market Infrastructure and Inclusion Project (FMIIP) records FPS and RTGS as not yet developed or operational in January 2025, with no participating institutions, and the World Bank's implementation report of 8 April 2026 reports both as not operational at 31 August 2025, the day before the project became effective; no later operational state is recorded here. It does not establish adoption, transaction coverage, reliability or any effect on financial inclusion. | The evidence records institutional and implementation states only; it contains no measure of participation, reliability, adoption or transaction coverage for these systems.",
-    "limitations_ar": "لا يثبت هذا الدليل أن الشركة اليمنية للمدفوعات والمقاصة (YPCC) أو نظام الدفع السريع (FPS) أو نظام التسوية الإجمالية الفورية (RTGS) قيد التشغيل: فالشركة مؤسسة جرى تأسيسها وليست نظامًا قيد التشغيل، ويسجل إطار نتائج مشروع البنية التحتية للأسواق المالية والشمول المالي في اليمن (FMIIP) أن نظامي FPS وRTGS لم يكونا مطوَّرين أو قيد التشغيل في يناير 2025، ولا مؤسسات مشاركة فيهما، ويفيد تقرير التنفيذ الصادر عن البنك الدولي والمؤرخ 8 أبريل 2026 بأنه لم يكن أيٌّ منهما قيد التشغيل في 31 أغسطس 2025، أي قبل يوم من نفاذ المشروع، ولا يسجل هذا الدليل أي وضع تشغيلي لاحق. ولا يثبت التبني أو تغطية المعاملات أو الموثوقية أو أي أثر على الشمول المالي. | يسجل الدليل حالات مؤسسية وتنفيذية فقط، ولا يتضمن أي قياس للمشاركة أو الموثوقية أو التبني أو تغطية المعاملات في هذه الأنظمة.",
+    "limitations_en": "It does not show that the Yemeni Payments and Clearing Company (YPCC), the Fast Payment System (FPS) or the Real-Time Gross Settlement system (RTGS) is operating: YPCC is an institution that has been established, not a system in operation, and the results framework of the Financial Market Infrastructure and Inclusion Project (FMIIP) records FPS and RTGS as not yet developed or operational in January 2025, with no participating institutions, and the World Bank's implementation report of 8 April 2026 reports both as not operational at 31 August 2025, the day before the project became effective; no later operational state is recorded here. The project's appraisal document (May 2025) also sets a design rule for FPS: all users must be registered clients of financial institutions regulated by CBY-Aden, and walk-in and over-the-counter transactions, in which the sender or the recipient holds no account at a regulated institution, are excluded until a National Risk Assessment is completed and risk-mitigation measures are adopted. This is a design condition, not evidence of operation, and it means that people without such an account could not use FPS. It does not establish adoption, transaction coverage, reliability or any effect on financial inclusion. | The evidence records institutional and implementation states only; it contains no measure of participation, reliability, adoption or transaction coverage for these systems.",
+    "limitations_ar": "لا يثبت هذا الدليل أن الشركة اليمنية للمدفوعات والمقاصة (YPCC) أو نظام الدفع السريع (FPS) أو نظام التسوية الإجمالية الفورية (RTGS) قيد التشغيل: فالشركة مؤسسة جرى تأسيسها وليست نظامًا قيد التشغيل، ويسجل إطار نتائج مشروع البنية التحتية للأسواق المالية والشمول المالي في اليمن (FMIIP) أن نظامي FPS وRTGS لم يكونا مطوَّرين أو قيد التشغيل في يناير 2025، ولا مؤسسات مشاركة فيهما، ويفيد تقرير التنفيذ الصادر عن البنك الدولي والمؤرخ 8 أبريل 2026 بأنه لم يكن أيٌّ منهما قيد التشغيل في 31 أغسطس 2025، أي قبل يوم من نفاذ المشروع، ولا يسجل هذا الدليل أي وضع تشغيلي لاحق. وتضع وثيقة تقييم المشروع (مايو 2025) أيضًا قاعدة تصميم لنظام الدفع السريع: أن يكون جميع مستخدميه عملاء مسجلين لدى مؤسسات مالية خاضعة لتنظيم البنك المركزي اليمني – عدن، وأن تُستبعد معاملات العملاء العابرين والمعاملات عبر الشبّاك، أي تلك التي لا يملك فيها المرسل أو المستلم حسابًا لدى مؤسسة خاضعة للتنظيم، إلى أن يُستكمل التقييم الوطني للمخاطر وتُعتمد تدابير للحد منها. وهذا شرط تصميم لا دليل على التشغيل، ويعني أن من لا يملك مثل هذا الحساب لن يستطيع استخدام النظام. ولا يثبت التبني أو تغطية المعاملات أو الموثوقية أو أي أثر على الشمول المالي. | يسجل الدليل حالات مؤسسية وتنفيذية فقط، ولا يتضمن أي قياس للمشاركة أو الموثوقية أو التبني أو تغطية المعاملات في هذه الأنظمة.",
     "currentness_en": "The latest event in this record is the first board meeting of the Yemeni Payments and Clearing Company (YPCC) on 4 August 2026; the record covers 17 June to 4 August 2026. It should not be read as describing a later state unless a newer official record is published.",
     "currentness_ar": "أحدث حدث في هذا السجل هو أول اجتماع لمجلس إدارة الشركة اليمنية للمدفوعات والمقاصة في 4 أغسطس 2026، ويغطي السجل الفترة من 17 يونيو إلى 4 أغسطس 2026. ولا يُقرأ على أنه يصف وضعًا لاحقًا ما لم يُنشر سجل رسمي أحدث.",
     "change_trigger_en": "This record is updated when an authoritative source is revised or replaced, a newer comparable observation becomes available, the definition, population or method changes, or the conditions for public use change.",
@@ -1989,14 +2021,21 @@
         "s": "READ",
         "src": "SRC-CBY-UNIFIED-NET-2026-001",
         "loc": "https://cby-ye.com/news/957, date line"
+      },
+      {
+        "t": "May 2025",
+        "k": "d",
+        "s": "READ",
+        "src": "SRC-WB-FMIIP-P180708",
+        "loc": "PAD (Report No. PADHI00396, 22 May 2025), paragraph 26, printed p.8 (PDF p.18): \"All users of the FPS must be registered clients of regulated financial institutions by CBY Aden\" ... \"Walk-in and over-the-counter transactions ... will be excluded from FPS usage until a comprehensive National Risk Assessment is completed\"; read 10 October 2026"
       }
     ],
     "public_route_list": [
       "/payments/",
       "/reforms/"
     ],
-    "does_not_establish_en": "It does not show that the Yemeni Payments and Clearing Company (YPCC), the Fast Payment System (FPS) or the Real-Time Gross Settlement system (RTGS) is operating: YPCC is an institution that has been established, not a system in operation, and the results framework of the Financial Market Infrastructure and Inclusion Project (FMIIP) records FPS and RTGS as not yet developed or operational in January 2025, with no participating institutions, and the World Bank's implementation report of 8 April 2026 reports both as not operational at 31 August 2025, the day before the project became effective; no later operational state is recorded here. It does not establish adoption, transaction coverage, reliability or any effect on financial inclusion.",
-    "does_not_establish_ar": "لا يثبت هذا الدليل أن الشركة اليمنية للمدفوعات والمقاصة (YPCC) أو نظام الدفع السريع (FPS) أو نظام التسوية الإجمالية الفورية (RTGS) قيد التشغيل: فالشركة مؤسسة جرى تأسيسها وليست نظامًا قيد التشغيل، ويسجل إطار نتائج مشروع البنية التحتية للأسواق المالية والشمول المالي في اليمن (FMIIP) أن نظامي FPS وRTGS لم يكونا مطوَّرين أو قيد التشغيل في يناير 2025، ولا مؤسسات مشاركة فيهما، ويفيد تقرير التنفيذ الصادر عن البنك الدولي والمؤرخ 8 أبريل 2026 بأنه لم يكن أيٌّ منهما قيد التشغيل في 31 أغسطس 2025، أي قبل يوم من نفاذ المشروع، ولا يسجل هذا الدليل أي وضع تشغيلي لاحق. ولا يثبت التبني أو تغطية المعاملات أو الموثوقية أو أي أثر على الشمول المالي.",
+    "does_not_establish_en": "It does not show that the Yemeni Payments and Clearing Company (YPCC), the Fast Payment System (FPS) or the Real-Time Gross Settlement system (RTGS) is operating: YPCC is an institution that has been established, not a system in operation, and the results framework of the Financial Market Infrastructure and Inclusion Project (FMIIP) records FPS and RTGS as not yet developed or operational in January 2025, with no participating institutions, and the World Bank's implementation report of 8 April 2026 reports both as not operational at 31 August 2025, the day before the project became effective; no later operational state is recorded here. The project's appraisal document (May 2025) also sets a design rule for FPS: all users must be registered clients of financial institutions regulated by CBY-Aden, and walk-in and over-the-counter transactions, in which the sender or the recipient holds no account at a regulated institution, are excluded until a National Risk Assessment is completed and risk-mitigation measures are adopted. This is a design condition, not evidence of operation, and it means that people without such an account could not use FPS. It does not establish adoption, transaction coverage, reliability or any effect on financial inclusion.",
+    "does_not_establish_ar": "لا يثبت هذا الدليل أن الشركة اليمنية للمدفوعات والمقاصة (YPCC) أو نظام الدفع السريع (FPS) أو نظام التسوية الإجمالية الفورية (RTGS) قيد التشغيل: فالشركة مؤسسة جرى تأسيسها وليست نظامًا قيد التشغيل، ويسجل إطار نتائج مشروع البنية التحتية للأسواق المالية والشمول المالي في اليمن (FMIIP) أن نظامي FPS وRTGS لم يكونا مطوَّرين أو قيد التشغيل في يناير 2025، ولا مؤسسات مشاركة فيهما، ويفيد تقرير التنفيذ الصادر عن البنك الدولي والمؤرخ 8 أبريل 2026 بأنه لم يكن أيٌّ منهما قيد التشغيل في 31 أغسطس 2025، أي قبل يوم من نفاذ المشروع، ولا يسجل هذا الدليل أي وضع تشغيلي لاحق. وتضع وثيقة تقييم المشروع (مايو 2025) أيضًا قاعدة تصميم لنظام الدفع السريع: أن يكون جميع مستخدميه عملاء مسجلين لدى مؤسسات مالية خاضعة لتنظيم البنك المركزي اليمني – عدن، وأن تُستبعد معاملات العملاء العابرين والمعاملات عبر الشبّاك، أي تلك التي لا يملك فيها المرسل أو المستلم حسابًا لدى مؤسسة خاضعة للتنظيم، إلى أن يُستكمل التقييم الوطني للمخاطر وتُعتمد تدابير للحد منها. وهذا شرط تصميم لا دليل على التشغيل، ويعني أن من لا يملك مثل هذا الحساب لن يستطيع استخدام النظام. ولا يثبت التبني أو تغطية المعاملات أو الموثوقية أو أي أثر على الشمول المالي.",
     "measurement_limitation_en": "The evidence records institutional and implementation states only; it contains no measure of participation, reliability, adoption or transaction coverage for these systems.",
     "measurement_limitation_ar": "يسجل الدليل حالات مؤسسية وتنفيذية فقط، ولا يتضمن أي قياس للمشاركة أو الموثوقية أو التبني أو تغطية المعاملات في هذه الأنظمة."
   },
@@ -4717,8 +4756,8 @@
     "universe_ar": "الأشخاص بعمر 15 سنة فأكثر ضمن التغطية الخاصة بكل موجة مسحية.",
     "method_en": "Official weighted public aggregates; no annual interpolation",
     "method_ar": "إجماليات عامة موزونة ورسمية؛ من دون استيفاء سنوي بين الموجات.",
-    "limitations_en": "It does not establish values for the years between waves or a smooth growth path, and 11.9% is not a 2026 rate. | The 2011 comparator counts accounts at financial institutions only; the later definition also counts mobile-money use, but Yemen's 2021 study did not ask the mobile-money questions, so its 11.9% also reflects accounts at financial institutions; the 2014 values are rounded; the 2022 value comes from fieldwork conducted from 7 November 2022 to 9 January 2023 that excluded areas holding about 23% of the population. For women, the 2014 wave records 1.7%; the waves are not joined into a trend. The FMIIP appraisal document (May 2025) says that “two percent” of women hold a bank account, with no date and no source; that is a statement, not a measurement.",
-    "limitations_ar": "لا يثبت هذا الدليل قيمًا للسنوات الواقعة بين الموجات ولا مسار نمو سلسًا، وليست نسبة 11.9% معدلًا لعام 2026. | يقتصر مقياس 2011 على الحسابات لدى المؤسسات المالية؛ ويشمل التعريف اللاحق أيضًا استخدام خدمات الأموال عبر الهاتف المحمول، لكن دراسة اليمن لعام 2021 لم تطرح أسئلة هذه الخدمات، فتعكس نسبة 11.9% فيها كذلك الحسابات لدى المؤسسات المالية؛ وقيم 2014 مقرّبة؛ وتأتي قيمة 2022 من عمل ميداني نُفذ من 7 نوفمبر 2022 إلى 9 يناير 2023 واستبعد مناطق يقطنها نحو 23% من السكان. وتسجل موجة 2014 للنساء نسبة 1.7%، ولا يُربط بين الموجتين في اتجاه. وتذكر وثيقة تقييم مشروع FMIIP (مايو 2025) أن «اثنين في المئة» من النساء يملكن حسابًا مصرفيًا، من دون تاريخ ولا مصدر؛ وهذا تصريح لا قياس.",
+    "limitations_en": "It does not establish values for the years between waves or a smooth growth path, and 11.9% is not a 2026 rate. | The 2011 comparator counts accounts at financial institutions only; the later definition also counts mobile-money use, but Yemen's 2021 study did not ask the mobile-money questions, so its 11.9% also reflects accounts at financial institutions; the 2014 values are rounded; the 2022 value comes from fieldwork conducted from 7 November 2022 to 9 January 2023 that excluded areas holding about 23% of the population. For women, the 2014 wave records 1.7%; the waves are not joined into a trend. The FMIIP appraisal document (May 2025) says that “two percent” of women hold a bank account, and the World Bank's Yemen Financial Sector Diagnostics (2024) that the population is “almost entirely unbanked, including about 90% of men and 99% of women”; neither gives a date or a source, so these are statements, not measurements. Other records give women's shares of particular services; they are not account-ownership rates and are not compared with the Findex waves. The first-half 2025 payment report of the Central Bank of Yemen – Aden shows, in its accounts panel, 81% men, 18% women and 1% companies, shares whose base it does not define (the panel counts accounts, its caption speaks of citizens, and one category is companies), and, among e-wallet subscribers, 84% men and 16% women; none of these is a share of people. A Yemen Microfinance Network table prints 34% as women's share in its total row for the 89,733 active borrowers of nine microfinance providers in February 2021; the providers' own shares range from 11% to 73%. The Small and Micro Enterprise Promotion Service (SMEPS) reports that 44% of the 8,217 enterprises it supported in 2024 were female-owned, a programme figure, not a national one. ACAPS (December 2023) documents the mahram requirement in areas under the de facto authorities, but not its effect on financial services, so mobility rules remain a hypothesis.",
+    "limitations_ar": "لا يثبت هذا الدليل قيمًا للسنوات الواقعة بين الموجات ولا مسار نمو سلسًا، وليست نسبة 11.9% معدلًا لعام 2026. | يقتصر مقياس 2011 على الحسابات لدى المؤسسات المالية؛ ويشمل التعريف اللاحق أيضًا استخدام خدمات الأموال عبر الهاتف المحمول، لكن دراسة اليمن لعام 2021 لم تطرح أسئلة هذه الخدمات، فتعكس نسبة 11.9% فيها كذلك الحسابات لدى المؤسسات المالية؛ وقيم 2014 مقرّبة؛ وتأتي قيمة 2022 من عمل ميداني نُفذ من 7 نوفمبر 2022 إلى 9 يناير 2023 واستبعد مناطق يقطنها نحو 23% من السكان. وتسجل موجة 2014 للنساء نسبة 1.7%، ولا يُربط بين الموجتين في اتجاه. وتذكر وثيقة تقييم مشروع FMIIP (مايو 2025) أن «اثنين في المئة» من النساء يملكن حسابًا مصرفيًا، ويذكر تشخيص القطاع المالي في اليمن الصادر عن البنك الدولي (2024) أن السكان «خارج النظام المصرفي بالكامل تقريبًا، بمن فيهم نحو 90% من الرجال و99% من النساء»؛ ولا يذكر أيٌّ منهما تاريخًا ولا مصدرًا، فهذان تصريحان لا قياسان. وتعطي سجلات أخرى حصص النساء في خدمات بعينها؛ وهي ليست معدلات لامتلاك الحساب، ولا تُقارن بموجات Findex. فتقرير المدفوعات للنصف الأول من 2025 الصادر عن البنك المركزي اليمني – عدن يُظهر في لوحة الحسابات 81% للرجال و18% للنساء و1% للشركات، وهي حصص لا يحدد التقرير أساسها (فاللوحة تعدّ حسابات، وتعليقها يتحدث عن المواطنين، وإحدى الفئات هي الشركات)، ويُظهر بين مشتركي المحافظ الإلكترونية 84% للرجال و16% للنساء؛ وليس أيٌّ منها حصة من الأشخاص. ويطبع جدول لشبكة اليمن للتمويل الأصغر نسبة 34% بوصفها حصة النساء في صفّ الإجمالي لـ89,733 مقترضًا نشطًا لدى تسعة مقدمي خدمات تمويل أصغر في فبراير 2021؛ وتتراوح حصص مقدمي الخدمات أنفسهم بين 11% و73%. وتفيد وكالة تنمية المنشآت الصغيرة والأصغر (SMEPS) بأن 44% من المنشآت الـ8,217 التي دعمتها في 2024 مملوكة لنساء، وهو رقم برنامجي لا وطني. ويوثّق تقرير ACAPS (ديسمبر 2023) اشتراط المَحرم في المناطق الخاضعة لسلطات الأمر الواقع، لا أثره على الخدمات المالية، فتبقى قيود التنقل فرضية.",
     "currentness_en": "The latest of the three waves is the 2021 Findex wave, reported by the World Bank for 2022 (Yemen fieldwork 7 November 2022 to 9 January 2023); the Global Findex 2025 edition adds no newer Yemen observation. The series should not be read as describing any later year.",
     "currentness_ar": "أحدث الموجات الثلاث هي موجة Findex 2021، التي نشر البنك الدولي قيمتها لسنة 2022 (العمل الميداني في اليمن من 7 نوفمبر 2022 إلى 9 يناير 2023)، ولا تضيف نسخة Global Findex 2025 مشاهدة أحدث لليمن. ولا تُقرأ هذه القيم على أنها تصف أي سنة لاحقة.",
     "change_trigger_en": "This record is updated when an authoritative source is revised or replaced, a newer comparable observation becomes available, the definition, population or method changes, or the conditions for public use change.",
@@ -4729,7 +4768,12 @@
       "SRC-WB-FINDEX-LDB-2015-001",
       "SRC-WB-FINDEX-AGG-2022",
       "SRC-WB-FINDEX-001",
-      "SRC-WB-FMIIP-P180708"
+      "SRC-WB-FMIIP-P180708",
+      "SRC-WB-FSD-2024-001",
+      "SRC-CBY-PAYREPORT-H1-2025",
+      "SRC-YMN-IMPACT-2021-001",
+      "SRC-SMEPS-AR2024-2025",
+      "SRC-ACAPS-MAHRAM-2023-001"
     ],
     "source_links": [],
     "lineage_state": "BOUND_EXACT",
@@ -4823,6 +4867,111 @@
         "s": "READ",
         "src": "SRC-WB-FMIIP-P180708",
         "loc": "PAD (Report No. PADHI00396, 22 May 2025), date of the appraisal document"
+      },
+      {
+        "t": "90%",
+        "k": "v",
+        "s": "READ",
+        "src": "SRC-WB-FSD-2024-001",
+        "loc": "Yemen Financial Sector Diagnostics (2024), Executive Summary, printed p.15 (PDF p.15): \"The population is almost entirely unbanked, including about 90% of men and 99% of women.\" No year or footnote on the sentence (the brief's p.25 and '1% of women' were not found); read 10 October 2026"
+      },
+      {
+        "t": "99%",
+        "k": "v",
+        "s": "READ",
+        "src": "SRC-WB-FSD-2024-001",
+        "loc": "Yemen Financial Sector Diagnostics (2024), Executive Summary, printed p.15 (PDF p.15): \"The population is almost entirely unbanked, including about 90% of men and 99% of women.\" No year or footnote on the sentence (the brief's p.25 and '1% of women' were not found); read 10 October 2026"
+      },
+      {
+        "t": "81%",
+        "k": "v",
+        "s": "READ",
+        "src": "SRC-CBY-PAYREPORT-H1-2025",
+        "loc": "page 1, «الحسابات» (Accounts) panel, bottom left: bars ذكر 81% / أنثى 18% / شركات 1%, caption «نسبة عدد المواطنين الذين يمتلكون حسابات بنكية وفق النوع»; re-read 10 October 2026 (close-out CR-13)"
+      },
+      {
+        "t": "18%",
+        "k": "v",
+        "s": "READ",
+        "src": "SRC-CBY-PAYREPORT-H1-2025",
+        "loc": "page 1, «الحسابات» (Accounts) panel, bottom left: bars ذكر 81% / أنثى 18% / شركات 1%, caption «نسبة عدد المواطنين الذين يمتلكون حسابات بنكية وفق النوع»; re-read 10 October 2026 (close-out CR-13)"
+      },
+      {
+        "t": "1%",
+        "k": "v",
+        "s": "READ",
+        "src": "SRC-CBY-PAYREPORT-H1-2025",
+        "loc": "page 1, «الحسابات» (Accounts) panel, bottom left: bars ذكر 81% / أنثى 18% / شركات 1%, caption «نسبة عدد المواطنين الذين يمتلكون حسابات بنكية وفق النوع»; re-read 10 October 2026 (close-out CR-13)"
+      },
+      {
+        "t": "84%",
+        "k": "v",
+        "s": "READ",
+        "src": "SRC-CBY-PAYREPORT-H1-2025",
+        "loc": "page 1, «المحافظ الإلكترونية» (E-wallets) panel, bottom right (NO. of Subscribers 2,102,484): donut 84% male / 16% female, caption «نسبة عدد المشتركين وفق النوع»; re-read 10 October 2026 (close-out CR-13)"
+      },
+      {
+        "t": "16%",
+        "k": "v",
+        "s": "READ",
+        "src": "SRC-CBY-PAYREPORT-H1-2025",
+        "loc": "page 1, «المحافظ الإلكترونية» (E-wallets) panel, bottom right (NO. of Subscribers 2,102,484): donut 84% male / 16% female, caption «نسبة عدد المشتركين وفق النوع»; re-read 10 October 2026 (close-out CR-13)"
+      },
+      {
+        "t": "89,733",
+        "k": "v",
+        "s": "READ",
+        "src": "SRC-YMN-IMPACT-2021-001",
+        "loc": "Table 5, printed p.22 (PDF p.22): total row, column «نساء (%)» under the borrowers «المقترضون» = 34%; active borrowers 89,733; nine providers (two microfinance banks and seven institutions or programmes); data to February 2021 (table source: SFD); provider shares from 11% to 73%; read 10 October 2026"
+      },
+      {
+        "t": "34%",
+        "k": "v",
+        "s": "READ",
+        "src": "SRC-YMN-IMPACT-2021-001",
+        "loc": "Table 5, printed p.22 (PDF p.22): total row, column «نساء (%)» under the borrowers «المقترضون» = 34%; active borrowers 89,733; nine providers (two microfinance banks and seven institutions or programmes); data to February 2021 (table source: SFD); provider shares from 11% to 73%; read 10 October 2026"
+      },
+      {
+        "t": "11%",
+        "k": "v",
+        "s": "READ",
+        "src": "SRC-YMN-IMPACT-2021-001",
+        "loc": "Table 5, printed p.22 (PDF p.22): total row, column «نساء (%)» under the borrowers «المقترضون» = 34%; active borrowers 89,733; nine providers (two microfinance banks and seven institutions or programmes); data to February 2021 (table source: SFD); provider shares from 11% to 73%; read 10 October 2026"
+      },
+      {
+        "t": "73%",
+        "k": "v",
+        "s": "READ",
+        "src": "SRC-YMN-IMPACT-2021-001",
+        "loc": "Table 5, printed p.22 (PDF p.22): total row, column «نساء (%)» under the borrowers «المقترضون» = 34%; active borrowers 89,733; nine providers (two microfinance banks and seven institutions or programmes); data to February 2021 (table source: SFD); provider shares from 11% to 73%; read 10 October 2026"
+      },
+      {
+        "t": "February 2021",
+        "k": "d",
+        "s": "READ",
+        "src": "SRC-YMN-IMPACT-2021-001",
+        "loc": "Table 5, printed p.22 (PDF p.22): total row, column «نساء (%)» under the borrowers «المقترضون» = 34%; active borrowers 89,733; nine providers (two microfinance banks and seven institutions or programmes); data to February 2021 (table source: SFD); provider shares from 11% to 73%; read 10 October 2026"
+      },
+      {
+        "t": "8,217",
+        "k": "v",
+        "s": "READ",
+        "src": "SRC-SMEPS-AR2024-2025",
+        "loc": "SMEPS Annual Report 2024 (published 8 October 2025), Executive Summary, PDF p.4: \"supporting 8,217 MSMEs, of which 44% were female-owned\"; read 10 October 2026"
+      },
+      {
+        "t": "44%",
+        "k": "v",
+        "s": "READ",
+        "src": "SRC-SMEPS-AR2024-2025",
+        "loc": "SMEPS Annual Report 2024 (published 8 October 2025), Executive Summary, PDF p.4: \"supporting 8,217 MSMEs, of which 44% were female-owned\"; read 10 October 2026"
+      },
+      {
+        "t": "December 2023",
+        "k": "d",
+        "s": "READ",
+        "src": "SRC-ACAPS-MAHRAM-2023-001",
+        "loc": "ACAPS, 'Yemen: dynamics and effects of the Mahram practice', 14 December 2023 (5 pp.): mahram requirements enforced from early 2022 in areas under the de facto authorities; secondary review and 17 key informant interviews; the text does not mention financial services; read 10 October 2026"
       }
     ],
     "public_route_list": [
@@ -4830,8 +4979,8 @@
     ],
     "does_not_establish_en": "It does not establish values for the years between waves or a smooth growth path, and 11.9% is not a 2026 rate.",
     "does_not_establish_ar": "لا يثبت هذا الدليل قيمًا للسنوات الواقعة بين الموجات ولا مسار نمو سلسًا، وليست نسبة 11.9% معدلًا لعام 2026.",
-    "measurement_limitation_en": "The 2011 comparator counts accounts at financial institutions only; the later definition also counts mobile-money use, but Yemen's 2021 study did not ask the mobile-money questions, so its 11.9% also reflects accounts at financial institutions; the 2014 values are rounded; the 2022 value comes from fieldwork conducted from 7 November 2022 to 9 January 2023 that excluded areas holding about 23% of the population. For women, the 2014 wave records 1.7%; the waves are not joined into a trend. The FMIIP appraisal document (May 2025) says that “two percent” of women hold a bank account, with no date and no source; that is a statement, not a measurement.",
-    "measurement_limitation_ar": "يقتصر مقياس 2011 على الحسابات لدى المؤسسات المالية؛ ويشمل التعريف اللاحق أيضًا استخدام خدمات الأموال عبر الهاتف المحمول، لكن دراسة اليمن لعام 2021 لم تطرح أسئلة هذه الخدمات، فتعكس نسبة 11.9% فيها كذلك الحسابات لدى المؤسسات المالية؛ وقيم 2014 مقرّبة؛ وتأتي قيمة 2022 من عمل ميداني نُفذ من 7 نوفمبر 2022 إلى 9 يناير 2023 واستبعد مناطق يقطنها نحو 23% من السكان. وتسجل موجة 2014 للنساء نسبة 1.7%، ولا يُربط بين الموجتين في اتجاه. وتذكر وثيقة تقييم مشروع FMIIP (مايو 2025) أن «اثنين في المئة» من النساء يملكن حسابًا مصرفيًا، من دون تاريخ ولا مصدر؛ وهذا تصريح لا قياس."
+    "measurement_limitation_en": "The 2011 comparator counts accounts at financial institutions only; the later definition also counts mobile-money use, but Yemen's 2021 study did not ask the mobile-money questions, so its 11.9% also reflects accounts at financial institutions; the 2014 values are rounded; the 2022 value comes from fieldwork conducted from 7 November 2022 to 9 January 2023 that excluded areas holding about 23% of the population. For women, the 2014 wave records 1.7%; the waves are not joined into a trend. The FMIIP appraisal document (May 2025) says that “two percent” of women hold a bank account, and the World Bank's Yemen Financial Sector Diagnostics (2024) that the population is “almost entirely unbanked, including about 90% of men and 99% of women”; neither gives a date or a source, so these are statements, not measurements. Other records give women's shares of particular services; they are not account-ownership rates and are not compared with the Findex waves. The first-half 2025 payment report of the Central Bank of Yemen – Aden shows, in its accounts panel, 81% men, 18% women and 1% companies, shares whose base it does not define (the panel counts accounts, its caption speaks of citizens, and one category is companies), and, among e-wallet subscribers, 84% men and 16% women; none of these is a share of people. A Yemen Microfinance Network table prints 34% as women's share in its total row for the 89,733 active borrowers of nine microfinance providers in February 2021; the providers' own shares range from 11% to 73%. The Small and Micro Enterprise Promotion Service (SMEPS) reports that 44% of the 8,217 enterprises it supported in 2024 were female-owned, a programme figure, not a national one. ACAPS (December 2023) documents the mahram requirement in areas under the de facto authorities, but not its effect on financial services, so mobility rules remain a hypothesis.",
+    "measurement_limitation_ar": "يقتصر مقياس 2011 على الحسابات لدى المؤسسات المالية؛ ويشمل التعريف اللاحق أيضًا استخدام خدمات الأموال عبر الهاتف المحمول، لكن دراسة اليمن لعام 2021 لم تطرح أسئلة هذه الخدمات، فتعكس نسبة 11.9% فيها كذلك الحسابات لدى المؤسسات المالية؛ وقيم 2014 مقرّبة؛ وتأتي قيمة 2022 من عمل ميداني نُفذ من 7 نوفمبر 2022 إلى 9 يناير 2023 واستبعد مناطق يقطنها نحو 23% من السكان. وتسجل موجة 2014 للنساء نسبة 1.7%، ولا يُربط بين الموجتين في اتجاه. وتذكر وثيقة تقييم مشروع FMIIP (مايو 2025) أن «اثنين في المئة» من النساء يملكن حسابًا مصرفيًا، ويذكر تشخيص القطاع المالي في اليمن الصادر عن البنك الدولي (2024) أن السكان «خارج النظام المصرفي بالكامل تقريبًا، بمن فيهم نحو 90% من الرجال و99% من النساء»؛ ولا يذكر أيٌّ منهما تاريخًا ولا مصدرًا، فهذان تصريحان لا قياسان. وتعطي سجلات أخرى حصص النساء في خدمات بعينها؛ وهي ليست معدلات لامتلاك الحساب، ولا تُقارن بموجات Findex. فتقرير المدفوعات للنصف الأول من 2025 الصادر عن البنك المركزي اليمني – عدن يُظهر في لوحة الحسابات 81% للرجال و18% للنساء و1% للشركات، وهي حصص لا يحدد التقرير أساسها (فاللوحة تعدّ حسابات، وتعليقها يتحدث عن المواطنين، وإحدى الفئات هي الشركات)، ويُظهر بين مشتركي المحافظ الإلكترونية 84% للرجال و16% للنساء؛ وليس أيٌّ منها حصة من الأشخاص. ويطبع جدول لشبكة اليمن للتمويل الأصغر نسبة 34% بوصفها حصة النساء في صفّ الإجمالي لـ89,733 مقترضًا نشطًا لدى تسعة مقدمي خدمات تمويل أصغر في فبراير 2021؛ وتتراوح حصص مقدمي الخدمات أنفسهم بين 11% و73%. وتفيد وكالة تنمية المنشآت الصغيرة والأصغر (SMEPS) بأن 44% من المنشآت الـ8,217 التي دعمتها في 2024 مملوكة لنساء، وهو رقم برنامجي لا وطني. ويوثّق تقرير ACAPS (ديسمبر 2023) اشتراط المَحرم في المناطق الخاضعة لسلطات الأمر الواقع، لا أثره على الخدمات المالية، فتبقى قيود التنقل فرضية."
   },
   {
     "object_id": "CLM-028",
@@ -6058,8 +6207,8 @@
     "universe_ar": "البنوك الواردة في قائمة البنوك المرخصة لدى البنك المركزي اليمني – عدن؛ والظهور في القائمة لا يثبت التشغيل الحالي أو شبكة الفروع أو توافر المنتجات أو الحصة السوقية.",
     "method_en": "A count of the banks named on the licensed-bank list published by the Central Bank of Yemen – Aden (CBY-Aden), as checked on 3 October 2026. The list establishes listing or licensing by CBY-Aden; it does not by itself establish current operation, service availability or geographic reach.",
     "method_ar": "عدّ البنوك الواردة في قائمة البنوك المرخصة التي ينشرها البنك المركزي اليمني – عدن، كما اطُّلع عليها في 3 أكتوبر 2026. وتثبت القائمة الإدراج أو الترخيص لدى البنك المركزي اليمني – عدن، ولا تثبت بذاتها التشغيل الحالي أو توفر الخدمة أو الانتشار الجغرافي.",
-    "limitations_en": "It does not establish which branches are active, which products are offered, market share or participation in payment systems. | Appearing on the list establishes listing or licensing in that source only; it does not establish operation, all branches, participation, or national coverage beyond the scope of the issuing authority.",
-    "limitations_ar": "لا يثبت هذا الدليل أي الفروع عاملة، ولا المنتجات المتاحة، ولا الحصة السوقية، ولا المشاركة في أنظمة الدفع. | الظهور في القائمة يثبت الإدراج/الترخيص في المصدر فقط، ولا يثبت التشغيل أو جميع الفروع أو المشاركة أو التغطية الوطنية خارج نطاق سلطة المصدر.",
+    "limitations_en": "It does not establish which branches are active, which products are offered, market share or participation in payment systems. Two other publishers give other counts, neither taken from a dated list: the appraisal document of the World Bank-financed FMIIP project (May 2025) states that “there are 19 operating banks registered in Yemen, four of which are microfinance banks”, citing no source, the same number of operating banks that an International Growth Centre report gives for 2015; and that report (February 2026) cites government CBY data for 31 registered banks, without a date. The appraisal document's four microfinance banks are not reconciled with the 12 that this resource identifies by name on the CBY-Aden list. They count different things at different dates, and none of the three counts establishes which banks operate. | Appearing on the list establishes listing or licensing in that source only; it does not establish operation, all branches, participation, or national coverage beyond the scope of the issuing authority.",
+    "limitations_ar": "لا يثبت هذا الدليل أي الفروع عاملة، ولا المنتجات المتاحة، ولا الحصة السوقية، ولا المشاركة في أنظمة الدفع. ويورد ناشران آخران عددين آخرين، لا يستند أيٌّ منهما إلى قائمة مؤرخة: إذ تذكر وثيقة تقييم مشروع FMIIP الممول من البنك الدولي (مايو 2025) أن «هناك 19 بنكًا عاملًا مسجلًا في اليمن، أربعة منها بنوك تمويل أصغر»، من دون ذكر مصدر، وهو العدد نفسه من البنوك العاملة الذي يورده تقرير للمركز الدولي للنمو لعام 2015؛ ويستشهد ذلك التقرير (فبراير 2026) ببيانات البنك المركزي اليمني التابع للحكومة عن 31 بنكًا مسجلًا، من دون تاريخ. ولا تُطابَق بنوك التمويل الأصغر الأربعة في وثيقة التقييم مع البنوك الـ12 التي يحددها هذا المورد بالاسم في قائمة البنك المركزي اليمني – عدن. وهي أعداد لأشياء مختلفة في تواريخ مختلفة، ولا يثبت أيٌّ من الأعداد الثلاثة أي البنوك تعمل. | الظهور في القائمة يثبت الإدراج/الترخيص في المصدر فقط، ولا يثبت التشغيل أو جميع الفروع أو المشاركة أو التغطية الوطنية خارج نطاق سلطة المصدر.",
     "currentness_en": "This record reflects the licensed-bank list of the Central Bank of Yemen – Aden (CBY-Aden) as checked on 3 October 2026. It should not be read as describing a later date unless a newer version of the list is checked.",
     "currentness_ar": "يعكس هذا السجل قائمة البنوك المرخصة لدى البنك المركزي اليمني – عدن كما اطُّلع عليها في 3 أكتوبر 2026، ولا يُقرأ على أنه يصف تاريخًا لاحقًا ما لم يُطّلع على نسخة أحدث من القائمة.",
     "change_trigger_en": "This record is updated when an authoritative source is revised or replaced, a newer comparable observation becomes available, the definition, population or method changes, or the conditions for public use change.",
@@ -6067,7 +6216,9 @@
     "verification_en": "This record is drawn from the source(s) listed on this page. Open a source record to reach the original document, and check that the definition, period, population and geography match what is stated here.",
     "verification_ar": "يستند هذا السجل إلى المصدر أو المصادر المدرجة في هذه الصفحة. افتح سجل المصدر للوصول إلى الوثيقة الأصلية، وتحقق من تطابق التعريف والفترة والمجتمع والنطاق الجغرافي مع ما يرد هنا.",
     "source_dependencies": [
-      "SRC-CBY-BANKLIST-AR-2026-001"
+      "SRC-CBY-BANKLIST-AR-2026-001",
+      "SRC-WB-FMIIP-P180708",
+      "SRC-IGC-AIDDATA-REMIT-YEM-2026"
     ],
     "source_links": [],
     "lineage_state": "BOUND_EXACT",
@@ -6090,14 +6241,47 @@
         "t": "3 October 2026",
         "k": "d",
         "s": "SITE"
+      },
+      {
+        "t": "19",
+        "k": "v",
+        "s": "READ",
+        "src": "SRC-WB-FMIIP-P180708",
+        "loc": "PAD (Report No. PADHI00396, 22 May 2025), paragraph 7, printed p.2 (PDF p.12): \"Currently, there are 19 operating banks registered in Yemen, four of which are microfinance banks.\" No source or count date; read 10 October 2026"
+      },
+      {
+        "t": "31",
+        "k": "v",
+        "s": "READ",
+        "src": "SRC-IGC-AIDDATA-REMIT-YEM-2026",
+        "loc": "International Growth Centre final report YEM-24338 (February 2026), section 3.1, printed p.22: \"In 2015, Yemen had 19 operating banks, excluding the National Bank of Commerce and Investment, which was under liquidation. More recent data from Government CBY indicate an increase in the number of registered banks to 31\"; no date; read 10 October 2026"
+      },
+      {
+        "t": "12",
+        "k": "v",
+        "s": "SEE:CLM-055"
+      },
+      {
+        "t": "May 2025",
+        "k": "d",
+        "s": "READ",
+        "src": "SRC-WB-FMIIP-P180708",
+        "loc": "PAD (Report No. PADHI00396, 22 May 2025), date of the appraisal document"
+      },
+      {
+        "t": "February 2026",
+        "k": "d",
+        "s": "READ",
+        "src": "SRC-IGC-AIDDATA-REMIT-YEM-2026",
+        "loc": "International Growth Centre final report YEM-24338, cover date February 2026"
       }
     ],
     "public_route_list": [
       "/providers/",
       "/access/"
     ],
-    "does_not_establish_en": "It does not establish which branches are active, which products are offered, market share or participation in payment systems.",
-    "does_not_establish_ar": "لا يثبت هذا الدليل أي الفروع عاملة، ولا المنتجات المتاحة، ولا الحصة السوقية، ولا المشاركة في أنظمة الدفع.",
+    "does_not_establish_en": "It does not establish which branches are active, which products are offered, market share or participation in payment systems. Two other publishers give other counts, neither taken from a dated list: the appraisal document of the World Bank-financed FMIIP project (May 2025) states that “there are 19 operating banks registered in Yemen, four of which are microfinance banks”, citing no source, the same number of operating banks that an International Growth Centre report gives for 2015; and that report (February 2026) cites government CBY data for 31 registered banks, without a date. The appraisal document's four microfinance banks are not reconciled with the 12 that this resource identifies by name on the CBY-Aden list. They count different things at different dates, and none of the three counts establishes which banks operate.",
+    "does_not_establish_ar": "لا يثبت هذا الدليل أي الفروع عاملة، ولا المنتجات المتاحة، ولا الحصة السوقية، ولا المشاركة في أنظمة الدفع. ويورد ناشران آخران عددين آخرين، لا يستند أيٌّ منهما إلى قائمة مؤرخة: إذ تذكر وثيقة تقييم مشروع FMIIP الممول من البنك الدولي (مايو 2025) أن «هناك 19 بنكًا عاملًا مسجلًا في اليمن، أربعة منها بنوك تمويل أصغر»، من دون ذكر مصدر، وهو العدد نفسه من البنوك العاملة الذي يورده تقرير للمركز الدولي للنمو لعام 2015؛ ويستشهد ذلك التقرير (فبراير 2026) ببيانات البنك المركزي اليمني التابع للحكومة عن 31 بنكًا مسجلًا، من دون تاريخ. ولا تُطابَق بنوك التمويل الأصغر الأربعة في وثيقة التقييم مع البنوك الـ12 التي يحددها هذا المورد بالاسم في قائمة البنك المركزي اليمني – عدن. وهي أعداد لأشياء مختلفة في تواريخ مختلفة، ولا يثبت أيٌّ من الأعداد الثلاثة أي البنوك تعمل.",
     "measurement_limitation_en": "Appearing on the list establishes listing or licensing in that source only; it does not establish operation, all branches, participation, or national coverage beyond the scope of the issuing authority.",
     "measurement_limitation_ar": "الظهور في القائمة يثبت الإدراج/الترخيص في المصدر فقط، ولا يثبت التشغيل أو جميع الفروع أو المشاركة أو التغطية الوطنية خارج نطاق سلطة المصدر."
   },
@@ -7260,20 +7444,20 @@
     ],
     "title_en": "What does the payment system actually count?",
     "title_ar": "ما الذي يقيسه نظام المدفوعات فعلًا؟",
-    "summary_en": "The first-half 2025 payment report of the Central Bank of Yemen – Aden (CBY-Aden) counts cards, ATMs, POS terminals, POS transactions, e-wallets, e-wallet subscribers and accounts. Each uses its own unit: accounts and subscribers are not necessarily unique people, transactions are events, and terminals are equipment. They cannot be combined into a people-level inclusion rate, because no documented method exists for matching and deduplicating them.",
-    "summary_ar": "يعدّ تقرير المدفوعات للنصف الأول من 2025 الصادر عن البنك المركزي اليمني – عدن البطاقات وأجهزة الصراف الآلي وأجهزة نقاط البيع ومعاملات نقاط البيع والمحافظ الإلكترونية ومشتركيها والحسابات. ولكلٍّ منها وحدته: فالحسابات والمشتركون ليسوا بالضرورة أشخاصًا فريدين، والمعاملات أحداث، والأجهزة معدات. ولا يمكن دمجها في نسبة شمول على مستوى الأشخاص، لعدم وجود طريقة موثقة للمطابقة وإزالة التكرار.",
-    "definition_en": "Counts of payment-system items — cards, ATMs, POS terminals, POS transactions, e-wallets, e-wallet subscribers and accounts — reported by the Central Bank of Yemen – Aden (CBY-Aden) for the first half of 2025, each in its own unit.",
-    "definition_ar": "أعداد عناصر نظام المدفوعات، أي البطاقات وأجهزة الصراف الآلي وأجهزة نقاط البيع ومعاملات نقاط البيع والمحافظ الإلكترونية ومشتركيها والحسابات، التي أبلغ عنها البنك المركزي اليمني – عدن للنصف الأول من 2025، كلٌّ بوحدته.",
-    "period_en": "2025 H1",
-    "period_ar": "النصف الأول من 2025",
-    "universe_en": "Cards, ATMs, POS terminals, transactions, e-wallets, subscribers and accounts within the payment-system reporting scope of the Central Bank of Yemen – Aden (CBY-Aden), first half of 2025; each has its own unit.",
-    "universe_ar": "البطاقات وأجهزة الصراف الآلي ونقاط البيع والمعاملات والمحافظ والمشتركون والحسابات ضمن نطاق الإبلاغ عن نظام المدفوعات لدى البنك المركزي اليمني – عدن في النصف الأول من 2025، كلٌّ بوحدته وقاعدة قياسه.",
-    "method_en": "Each count is taken as published in the first-half 2025 payment report (an infographic) of the Central Bank of Yemen – Aden (CBY-Aden) and kept in its own unit; the counts are not added together or combined into an index.",
-    "method_ar": "يؤخذ كل عدد كما نُشر في تقرير المدفوعات للنصف الأول من 2025 (إنفوغرافيك) الصادر عن البنك المركزي اليمني – عدن، ويبقى بوحدته؛ ولا تُجمع الأعداد ولا تُدمج في مؤشر مركّب.",
-    "limitations_en": "Cards, accounts, subscribers, transactions and terminals are not people, and they cannot be combined into a single digital-inclusion score. The first-half 2025 counts are not comparable with the third-quarter 2024 payments bulletin until the reporting scope and definitions of the two publications are reconciled.",
-    "limitations_ar": "البطاقات والحسابات والمشتركون والمعاملات والأجهزة ليست أشخاصًا، ولا يمكن دمجها في درجة واحدة للشمول الرقمي. ولا تُقارن أعداد النصف الأول من 2025 بنشرة المدفوعات للربع الثالث من 2024 إلى أن يُطابَق نطاق الإبلاغ والتعريفات بين الإصدارين.",
-    "currentness_en": "The counts refer to the first half of 2025. They should not be read as describing a later period unless a newer comparable payment report is published.",
-    "currentness_ar": "تعود الأعداد إلى النصف الأول من 2025، ولا تُقرأ على أنها تصف فترة لاحقة ما لم يُنشر تقرير مدفوعات أحدث قابل للمقارنة.",
+    "summary_en": "The first-half 2025 payment report of the Central Bank of Yemen – Aden (CBY-Aden) counts cards, ATMs, POS terminals, POS transactions, e-wallets, e-wallet subscribers and accounts; its third-quarter 2024 payments bulletin, a separate publication shown in its own panel, counts POS terminals and transactions, ATMs and the amounts withdrawn from them, cheques at the CBY main centre and three of its branches, and local SWIFT transfers. Each uses its own unit: accounts and subscribers are not necessarily unique people, transactions are events, amounts are nominal, and terminals are equipment. They cannot be combined into a people-level inclusion rate, because no documented method exists for matching and deduplicating them, and the two publications are not compared, because their reporting scope and definitions have not been reconciled.",
+    "summary_ar": "يعدّ تقرير المدفوعات للنصف الأول من 2025 الصادر عن البنك المركزي اليمني – عدن البطاقات وأجهزة الصراف الآلي وأجهزة نقاط البيع ومعاملات نقاط البيع والمحافظ الإلكترونية ومشتركيها والحسابات؛ أما نشرة المدفوعات للربع الثالث من 2024، وهي إصدار منفصل يُعرض في لوحة مستقلة، فتعدّ أجهزة نقاط البيع ومعاملاتها، وأجهزة الصراف الآلي والمبالغ المسحوبة منها، والشيكات في المركز الرئيسي للبنك المركزي وثلاثة من فروعه، والتحويلات المحلية عبر SWIFT. ولكلٍّ منها وحدته: فالحسابات والمشتركون ليسوا بالضرورة أشخاصًا فريدين، والمعاملات أحداث، والمبالغ اسمية، والأجهزة معدات. ولا يمكن دمجها في نسبة شمول على مستوى الأشخاص، لعدم وجود طريقة موثقة للمطابقة وإزالة التكرار، ولا يُقارن الإصداران، لأن نطاق الإبلاغ والتعريفات فيهما لم يُطابَقا.",
+    "definition_en": "Counts and amounts of payment-system items reported by the Central Bank of Yemen – Aden (CBY-Aden), each in its own unit: cards, ATMs, POS terminals, POS transactions, e-wallets, e-wallet subscribers and accounts for the first half of 2025; and POS terminals and transactions, ATMs, the amounts withdrawn from ATMs by currency, cheques and local SWIFT transfers for the third quarter of 2024.",
+    "definition_ar": "أعداد عناصر نظام المدفوعات ومبالغها كما أبلغ عنها البنك المركزي اليمني – عدن، كلٌّ بوحدته: البطاقات وأجهزة الصراف الآلي وأجهزة نقاط البيع ومعاملات نقاط البيع والمحافظ الإلكترونية ومشتركوها والحسابات للنصف الأول من 2025؛ وأجهزة نقاط البيع ومعاملاتها وأجهزة الصراف الآلي والمبالغ المسحوبة منها بحسب العملة والشيكات والتحويلات المحلية عبر SWIFT للربع الثالث من 2024.",
+    "period_en": "2025 H1; 2024 Q3 (a separate publication)",
+    "period_ar": "النصف الأول من 2025؛ والربع الثالث من 2024 (إصدار منفصل)",
+    "universe_en": "Payment-system items within the reporting scope of the Central Bank of Yemen – Aden (CBY-Aden) in each publication, each in its own unit; the 2024 cheques cover the CBY main centre and its Mukalla, Seiyun and Taiz branches only, and the local SWIFT transfers are transfers between local banks and government institutions.",
+    "universe_ar": "عناصر نظام المدفوعات ضمن نطاق الإبلاغ لدى البنك المركزي اليمني – عدن في كل إصدار، كلٌّ بوحدته؛ وتقتصر شيكات 2024 على المركز الرئيسي للبنك المركزي وفروعه في المكلا وسيئون وتعز، والتحويلات المحلية عبر SWIFT تحويلات بين البنوك المحلية والجهات الحكومية.",
+    "method_en": "Each count or amount is taken as published — in the first-half 2025 payment report (an infographic) and the third-quarter 2024 payments bulletin of the Central Bank of Yemen – Aden (CBY-Aden) — and kept in its own unit and panel; nothing is added together or combined into an index. A figure whose definition or period cannot be confirmed is held back with its reason, as the 2025 POS transaction count and the 2024 POS value series are.",
+    "method_ar": "يؤخذ كل عدد أو مبلغ كما نُشر — في تقرير المدفوعات للنصف الأول من 2025 (إنفوغرافيك) وفي نشرة المدفوعات للربع الثالث من 2024 الصادرين عن البنك المركزي اليمني – عدن — ويبقى بوحدته وفي لوحته؛ ولا يُجمع شيء ولا يُدمج في مؤشر مركّب. ويُحجب الرقم الذي لا يمكن التحقق من تعريفه أو فترته مع ذكر السبب، كما هو حال عدد معاملات نقاط البيع لعام 2025 وسلسلة قيمة معاملات نقاط البيع لعام 2024.",
+    "limitations_en": "Cards, accounts, subscribers, transactions, amounts withdrawn and terminals are not people, and they cannot be combined into a single digital-inclusion score. The first-half 2025 counts are not compared with the third-quarter 2024 bulletin until the reporting scope and definitions of the two publications are reconciled; the bulletin's cheques cover the CBY main centre and three of its branches only, and the 2025 accounts count has no published definition.",
+    "limitations_ar": "البطاقات والحسابات والمشتركون والمعاملات والمبالغ المسحوبة والأجهزة ليست أشخاصًا، ولا يمكن دمجها في درجة واحدة للشمول الرقمي. ولا تُقارن أعداد النصف الأول من 2025 بنشرة الربع الثالث من 2024 إلى أن يُطابَق نطاق الإبلاغ والتعريفات بين الإصدارين؛ وتقتصر شيكات النشرة على المركز الرئيسي للبنك المركزي وثلاثة من فروعه، ولا تعريف منشورًا لعدد الحسابات في 2025.",
+    "currentness_en": "The counts refer to the first half of 2025 and, in a separate panel, to the third quarter of 2024. They should not be read as describing a later period unless a newer comparable payment report is published.",
+    "currentness_ar": "تعود الأعداد إلى النصف الأول من 2025، وفي لوحة منفصلة إلى الربع الثالث من 2024. ولا تُقرأ على أنها تصف فترة لاحقة ما لم يُنشر تقرير مدفوعات أحدث قابل للمقارنة.",
     "change_trigger_en": "This record is updated when an authoritative source is revised or replaced, a newer comparable observation becomes available, the definition, population or method changes, or the conditions for public use change.",
     "change_trigger_ar": "يُحدَّث هذا السجل عند مراجعة المصدر المعتمد أو استبداله، أو توفر مشاهدة أحدث قابلة للمقارنة، أو تغير التعريف أو المجتمع أو الطريقة، أو تغير شروط الاستخدام العام.",
     "verification_en": "This record is drawn from the source(s) listed on this page. Open a source record to reach the original document, and check that the definition, period, population and geography match what is stated here.",
@@ -7289,8 +7473,8 @@
     "public_route_list": [
       "/payments/"
     ],
-    "does_not_establish_en": "Cards, accounts, subscribers, transactions and terminals are not people, and they cannot be combined into a single digital-inclusion score. The first-half 2025 counts are not comparable with the third-quarter 2024 payments bulletin until the reporting scope and definitions of the two publications are reconciled.",
-    "does_not_establish_ar": "البطاقات والحسابات والمشتركون والمعاملات والأجهزة ليست أشخاصًا، ولا يمكن دمجها في درجة واحدة للشمول الرقمي. ولا تُقارن أعداد النصف الأول من 2025 بنشرة المدفوعات للربع الثالث من 2024 إلى أن يُطابَق نطاق الإبلاغ والتعريفات بين الإصدارين.",
+    "does_not_establish_en": "Cards, accounts, subscribers, transactions, amounts withdrawn and terminals are not people, and they cannot be combined into a single digital-inclusion score. The first-half 2025 counts are not compared with the third-quarter 2024 bulletin until the reporting scope and definitions of the two publications are reconciled; the bulletin's cheques cover the CBY main centre and three of its branches only, and the 2025 accounts count has no published definition.",
+    "does_not_establish_ar": "البطاقات والحسابات والمشتركون والمعاملات والمبالغ المسحوبة والأجهزة ليست أشخاصًا، ولا يمكن دمجها في درجة واحدة للشمول الرقمي. ولا تُقارن أعداد النصف الأول من 2025 بنشرة الربع الثالث من 2024 إلى أن يُطابَق نطاق الإبلاغ والتعريفات بين الإصدارين؛ وتقتصر شيكات النشرة على المركز الرئيسي للبنك المركزي وثلاثة من فروعه، ولا تعريف منشورًا لعدد الحسابات في 2025.",
     "measurement_limitation_en": null,
     "measurement_limitation_ar": null
   },
@@ -9095,8 +9279,8 @@
     "universe_ar": "نطاق ميزان المدفوعات كما يعرفه كل مصدر على حدة.",
     "method_en": "Values from the balance-of-payments table of the Central Bank of Yemen – Aden (CBY-Aden) Annual Report 2025. The ratio is computed by this resource as net errors and omissions divided by the remittance line (2025: 7.117 divided by 3.614 gives 1.97). Net errors and omissions is read as the balancing item defined in the IMF balance-of-payments manual.",
     "method_ar": "قيم من جدول ميزان المدفوعات في التقرير السنوي 2025 للبنك المركزي اليمني – عدن. واحتسب هذا المورد النسبة بقسمة صافي السهو والخطأ على بند الحوالات (2025: 7.117 مقسومًا على 3.614 يساوي 1.97). ويُقرأ صافي السهو والخطأ بوصفه البند الموازِن كما يعرّفه دليل ميزان المدفوعات الصادر عن صندوق النقد الدولي.",
-    "limitations_en": "Net errors and omissions are not hidden remittances or an observed flow, and no established decomposition shows the residual to be unrecorded capital. | Errors and omissions is a net balancing residual; it cannot identify a missing component or gross offsetting errors.",
-    "limitations_ar": "ليس صافي السهو والخطأ حوالات مخفية ولا تدفقًا مرصودًا، ولا يوجد تفكيك مثبت يبين أن المتبقي رأسُ مال غير مسجل. | صافي السهو والخطأ بندٌ موازِن صافٍ، ولا يحدد مكونًا مفقودًا بعينه ولا الأخطاء الإجمالية المتقابلة.",
+    "limitations_en": "Net errors and omissions are not hidden remittances or an observed flow, and no established decomposition shows the residual to be unrecorded capital. Ratios to GDP move with their basis too: the World Bank's Yemen Economic Monitor put remittances at 38.6% of GDP in 2024 in its Spring 2025 edition, and at “around one quarter of GDP”, with no year, in Spring 2026; between the two editions its estimate of 2024 GDP rose from USD 17,580 million to USD 19,046 million. Neither edition states, beside its ratio, the remittance value or area it rests on, and the 2026 edition does not relate its statement to the earlier figure. | Errors and omissions is a net balancing residual; it cannot identify a missing component or gross offsetting errors.",
+    "limitations_ar": "ليس صافي السهو والخطأ حوالات مخفية ولا تدفقًا مرصودًا، ولا يوجد تفكيك مثبت يبين أن المتبقي رأسُ مال غير مسجل. وتتغير النسب إلى الناتج المحلي الإجمالي بتغير أساسها أيضًا: فقد قدّر المرصد الاقتصادي لليمن الصادر عن البنك الدولي الحوالات بنسبة 38.6% من الناتج المحلي الإجمالي في 2024 في إصدار ربيع 2025، وبنحو «ربع الناتج المحلي الإجمالي»، من دون ذكر سنة، في إصدار ربيع 2026؛ وبين الإصدارين ارتفع تقديره للناتج المحلي الإجمالي لعام 2024 من 17,580 مليون دولار إلى 19,046 مليون دولار. ولا يذكر أيٌّ من الإصدارين، بجانب نسبته، قيمة الحوالات أو النطاق الجغرافي الذي تستند إليه، ولا يربط إصدار 2026 تصريحه بالرقم السابق. | صافي السهو والخطأ بندٌ موازِن صافٍ، ولا يحدد مكونًا مفقودًا بعينه ولا الأخطاء الإجمالية المتقابلة.",
     "currentness_en": "The latest year in this record is 2025, from the CBY-Aden Annual Report 2025. It should not be read as describing a later year unless a newer comparable observation is published. The World Bank's Yemen Economic Monitor, Spring 2026, states that “the CBY has discontinued remittance data production”, without saying which series or publication it means; the CBY-Aden Annual Report 2025 used here still prints a remittance line for 2025, and whether that line will continue is not established.",
     "currentness_ar": "آخر سنة في هذا السجل هي 2025، من التقرير السنوي 2025 للبنك المركزي اليمني – عدن، ولا تُقرأ على أنها تصف سنة لاحقة ما لم تُنشر مشاهدة أحدث قابلة للمقارنة. ويذكر المرصد الاقتصادي لليمن الصادر عن البنك الدولي (ربيع 2026) أن البنك المركزي اليمني توقف عن إنتاج بيانات الحوالات، من دون أن يحدد السلسلة أو المنشور المقصود؛ ولا يزال التقرير السنوي 2025 للبنك المركزي اليمني – عدن المستخدم هنا يورد بند الحوالات لعام 2025، ولم يثبت ما إذا كان هذا البند سيستمر.",
     "change_trigger_en": "This record is updated when an authoritative source is revised or replaced, a newer comparable observation becomes available, the definition, population or method changes, or the conditions for public use change.",
@@ -9106,7 +9290,8 @@
     "source_dependencies": [
       "SRC-CBY-AR2025-BOP",
       "EP-YEM-BOP-RESIDUAL-K04",
-      "SRC-WB-YEM-ECON-MONITOR-2026-SPRING-001"
+      "SRC-WB-YEM-ECON-MONITOR-2026-SPRING-001",
+      "SRC-WB-YEM-ECON-MONITOR-2025-SPRING-001"
     ],
     "source_links": [],
     "lineage_state": "BOUND_EXACT",
@@ -9147,13 +9332,41 @@
         "s": "DERIVED",
         "src": "SRC-CBY-AR2025-BOP",
         "loc": "CBY-Aden Annual Report 2025, Table 4-1 \"Balance of Payments\" (USD million), PDF/printed p.44 (2024-2025), and statistical annex \"Balance of Payments\" (USD million) PDF/printed p.52 (2021-2025)"
+      },
+      {
+        "t": "38.6%",
+        "k": "v",
+        "s": "READ",
+        "src": "SRC-WB-YEM-ECON-MONITOR-2025-SPRING-001",
+        "loc": "Yemen Economic Monitor, Spring 2025 (29 May 2025), Box 3.1 'Impacts of FTO Designation on Yemen's Economy', printed p.19 (PDF p.31): \"Remittances, accounting for 38.6 percent of GDP in 2024, may also be affected.\" The sentence names no remittance value, source or area; read 10 October 2026 (Arabic edition, June 2025, printed p.27: «التي كانت تشكل 38.6% من إجمالي الناتج المحلي في عام 2024»)"
+      },
+      {
+        "t": "around one quarter of GDP",
+        "k": "v",
+        "s": "READ",
+        "src": "SRC-WB-YEM-ECON-MONITOR-2026-SPRING-001",
+        "loc": "Yemen Economic Monitor, Spring 2026 (19 May 2026), Outlook and Risks, printed p.15 (PDF p.27): \"As the primary source of household income, accounting for around one quarter of GDP\"; no year, source or area stated; read 10 October 2026"
+      },
+      {
+        "t": "17,580",
+        "k": "v",
+        "s": "READ",
+        "src": "SRC-WB-YEM-ECON-MONITOR-2025-SPRING-001",
+        "loc": "Yemen Economic Monitor, Spring 2025, Table 1.1, printed p.16 (PDF p.28), 'GDP nominal in US$ (millions)', 2024 = 17,580; read 10 October 2026"
+      },
+      {
+        "t": "19,046",
+        "k": "v",
+        "s": "READ",
+        "src": "SRC-WB-YEM-ECON-MONITOR-2026-SPRING-001",
+        "loc": "Yemen Economic Monitor, Spring 2026, Table 1.1 (continued), printed p.10 (PDF p.22), 'GDP nominal in USD (millions)', 2024 = 19,046; read 10 October 2026"
       }
     ],
     "public_route_list": [
       "/remittances/"
     ],
-    "does_not_establish_en": "Net errors and omissions are not hidden remittances or an observed flow, and no established decomposition shows the residual to be unrecorded capital.",
-    "does_not_establish_ar": "ليس صافي السهو والخطأ حوالات مخفية ولا تدفقًا مرصودًا، ولا يوجد تفكيك مثبت يبين أن المتبقي رأسُ مال غير مسجل.",
+    "does_not_establish_en": "Net errors and omissions are not hidden remittances or an observed flow, and no established decomposition shows the residual to be unrecorded capital. Ratios to GDP move with their basis too: the World Bank's Yemen Economic Monitor put remittances at 38.6% of GDP in 2024 in its Spring 2025 edition, and at “around one quarter of GDP”, with no year, in Spring 2026; between the two editions its estimate of 2024 GDP rose from USD 17,580 million to USD 19,046 million. Neither edition states, beside its ratio, the remittance value or area it rests on, and the 2026 edition does not relate its statement to the earlier figure.",
+    "does_not_establish_ar": "ليس صافي السهو والخطأ حوالات مخفية ولا تدفقًا مرصودًا، ولا يوجد تفكيك مثبت يبين أن المتبقي رأسُ مال غير مسجل. وتتغير النسب إلى الناتج المحلي الإجمالي بتغير أساسها أيضًا: فقد قدّر المرصد الاقتصادي لليمن الصادر عن البنك الدولي الحوالات بنسبة 38.6% من الناتج المحلي الإجمالي في 2024 في إصدار ربيع 2025، وبنحو «ربع الناتج المحلي الإجمالي»، من دون ذكر سنة، في إصدار ربيع 2026؛ وبين الإصدارين ارتفع تقديره للناتج المحلي الإجمالي لعام 2024 من 17,580 مليون دولار إلى 19,046 مليون دولار. ولا يذكر أيٌّ من الإصدارين، بجانب نسبته، قيمة الحوالات أو النطاق الجغرافي الذي تستند إليه، ولا يربط إصدار 2026 تصريحه بالرقم السابق.",
     "measurement_limitation_en": "Errors and omissions is a net balancing residual; it cannot identify a missing component or gross offsetting errors.",
     "measurement_limitation_ar": "صافي السهو والخطأ بندٌ موازِن صافٍ، ولا يحدد مكونًا مفقودًا بعينه ولا الأخطاء الإجمالية المتقابلة."
   },
@@ -9221,10 +9434,10 @@
     "universe_ar": "النطاقات المحلية أو البرنامجية أو الخاصة بالمشروعات كما يحددها كل مصدر.",
     "method_en": "A synthesis of programme and research evidence on each step from cash delivery to continued use, including World Bank/G2Px material on the pilot; no national prevalence figure is constructed.",
     "method_ar": "تجميع لأدلة برامجية وبحثية عن كل حلقة من إيصال النقد إلى استمرار الاستخدام، بما فيها مواد البنك الدولي/مبادرة G2Px عن التجربة؛ ولا يُبنى أي معدل انتشار وطني.",
-    "limitations_en": "Cash-transfer beneficiaries, village savings and loan associations (VSLAs), identity targets and opened accounts are not measures of durable financial use. The 45,460 figure is a programme-reported number of recipients, not a count of people who kept using an account. The FMIIP appraisal document (May 2025) reports, for a pilot it does not identify with this one, that by the end of payment cycle 18 (16 September–17 October 2024) 10,761 wallets had been opened with cash transfers paid into them, with take-up of 40% to 70% across pilot districts; it differs in document, date and unit, and no ratio to 45,460 is drawn. | Evidence exists for several intermediate links; durable use of an account or wallet after the transfer remains unobserved.",
-    "limitations_ar": "ليس مستفيدو التحويلات النقدية ولا مجموعات الادخار والإقراض ولا مستهدفات الهوية ولا الحسابات المفتوحة مقاييس للاستخدام المالي المستمر. والرقم 45,460 عدد للمستفيدين يفيد به البرنامج، وليس عددًا لمن واصلوا استخدام حساب. وتذكر وثيقة تقييم مشروع FMIIP (مايو 2025)، عن تجربة لا تحدد ما إذا كانت هي هذه التجربة نفسها، أن 10,761 محفظة إلكترونية فُتحت وأُودعت فيها تحويلات نقدية بنهاية دورة الدفع 18 (16 سبتمبر–17 أكتوبر 2024)، وأن نسبة الإقبال تراوحت بين 40% و70% في مديريات التجربة؛ وهي تختلف عنه في الوثيقة والتاريخ والوحدة، ولا تُحسب منها نسبة إلى 45,460. | توجد أدلة مفيدة على حلقات وسيطة، لكن الاستخدام المستمر للحساب/المحفظة بعد التحويل ما يزال غير مرصود.",
-    "currentness_en": "The latest evidence in this record was published in 2026; the pilot material dates from May 2024. The record should not be read as describing later programme reach or use unless newer evidence is published.",
-    "currentness_ar": "نُشرت أحدث الأدلة في هذا السجل في 2026، أما مواد التجربة فصادرة في مايو 2024. ولا يُقرأ السجل على أنه يصف نطاقًا لاحقًا للبرنامج أو استخدامًا لاحقًا ما لم تُنشر أدلة أحدث.",
+    "limitations_en": "Cash-transfer beneficiaries, village savings and loan associations (VSLAs), identity targets and opened accounts are not measures of durable financial use. The 45,460 figure is a programme-reported number of recipients, not a count of people who kept using an account. The FMIIP appraisal document (May 2025) reports, for a pilot it does not identify with this one, that by the end of payment cycle 18 (16 September–17 October 2024) 10,761 wallets had been opened with cash transfers paid into them, with take-up of 40% to 70% across pilot districts; it differs in document, date and unit, and no ratio to 45,460 is drawn. A Cash Consortium of Yemen study (2026) compared three and six monthly transfers using programme data, with no randomised design and no group of households that received no assistance: the extra three transfers brought modest further gains in food security and less negative coping, and savings could not be compared, because only three households, all of them on six transfers, reported putting any money aside. The appraisal document of the Cash for Nutrition and Livelihoods Project (June 2026) reports from the cash-transfer programme's monitoring that “high transaction costs and long distances to financial service points severely impeded e-wallet uptake”, and plans for recipients to cash out through agents hired by financial service providers, given the scarcity of bank branches and ATMs. | Evidence exists for several intermediate links; durable use of an account or wallet after the transfer remains unobserved.",
+    "limitations_ar": "ليس مستفيدو التحويلات النقدية ولا مجموعات الادخار والإقراض ولا مستهدفات الهوية ولا الحسابات المفتوحة مقاييس للاستخدام المالي المستمر. والرقم 45,460 عدد للمستفيدين يفيد به البرنامج، وليس عددًا لمن واصلوا استخدام حساب. وتذكر وثيقة تقييم مشروع FMIIP (مايو 2025)، عن تجربة لا تحدد ما إذا كانت هي هذه التجربة نفسها، أن 10,761 محفظة إلكترونية فُتحت وأُودعت فيها تحويلات نقدية بنهاية دورة الدفع 18 (16 سبتمبر–17 أكتوبر 2024)، وأن نسبة الإقبال تراوحت بين 40% و70% في مديريات التجربة؛ وهي تختلف عنه في الوثيقة والتاريخ والوحدة، ولا تُحسب منها نسبة إلى 45,460. وقارنت دراسة لتحالف النقد في اليمن (Cash Consortium of Yemen، 2026) بين ثلاثة تحويلات شهرية وستة باستخدام بيانات البرنامج، من دون تصميم قائم على التوزيع العشوائي ولا مجموعة من الأسر لم تتلقَّ أي مساعدة: فأتت التحويلات الثلاثة الإضافية بمكاسب أخرى محدودة في الأمن الغذائي وبتراجع في استراتيجيات التكيّف السلبية، ولم يتسنَّ مقارنة الادخار، لأن ثلاث أسر فقط، كلها من متلقي التحويلات الستة، أفادت بادخار أي مبلغ. وتذكر وثيقة تقييم مشروع النقد مقابل التغذية وسبل العيش (يونيو 2026)، استنادًا إلى رصد برنامج التحويلات النقدية، أن «ارتفاع تكاليف المعاملات وبُعد المسافات عن نقاط الخدمات المالية أعاقا بشدة الإقبال على المحافظ الإلكترونية»، وتخطط لأن يسحب المستفيدون النقد عبر وكلاء يتعاقد معهم مقدمو الخدمات المالية، نظرًا إلى ندرة فروع البنوك وأجهزة الصراف الآلي. | توجد أدلة مفيدة على حلقات وسيطة، لكن الاستخدام المستمر للحساب/المحفظة بعد التحويل ما يزال غير مرصود.",
+    "currentness_en": "The latest evidence in this record was published in 2026; the pilot material dates from May 2024. The programme the pilot belonged to has run no payment cycle since January 2025, for lack of funds, according to the World Bank's implementation report on the emergency social protection project that finances it (ESPECRP), archived on 30 June 2026; the project is due to close on 31 December 2026. The Cash for Nutrition and Livelihoods Project, whose financing agreement was signed on 2 September 2026, builds on ESPECRP's delivery systems but is designed to pay a different benefit, six months of cash for nutrition to pregnant women and mothers of children under two; it does not restore the unconditional transfers. The record should not be read as describing later programme reach or use unless newer evidence is published.",
+    "currentness_ar": "نُشرت أحدث الأدلة في هذا السجل في 2026، أما مواد التجربة فصادرة في مايو 2024. ولم يُجرِ البرنامج الذي جرت ضمنه التجربة أي دورة دفع منذ يناير 2025 بسبب نقص التمويل، وفق تقرير التنفيذ الصادر عن البنك الدولي لمشروع الحماية الاجتماعية الطارئ الذي يموّله (ESPECRP)، المؤرشف في 30 يونيو 2026؛ ومن المقرر أن يُغلق المشروع في 31 ديسمبر 2026. أما مشروع النقد مقابل التغذية وسبل العيش، الذي وُقّعت اتفاقية تمويله في 2 سبتمبر 2026، فيبني على أنظمة الإيصال في مشروع الحماية الاجتماعية الطارئ لكنه مصمَّم لصرف منفعة مختلفة، هي نقد مقابل التغذية لمدة ستة أشهر للحوامل وأمهات الأطفال دون سن الثانية؛ ولا يعيد التحويلات غير المشروطة. ولا يُقرأ السجل على أنه يصف نطاقًا لاحقًا للبرنامج أو استخدامًا لاحقًا ما لم تُنشر أدلة أحدث.",
     "change_trigger_en": "This record is updated when an authoritative source is revised or replaced, a newer comparable observation becomes available, the definition, population or method changes, or the conditions for public use change.",
     "change_trigger_ar": "يُحدَّث هذا السجل عند مراجعة المصدر المعتمد أو استبداله، أو توفر مشاهدة أحدث قابلة للمقارنة، أو تغير التعريف أو المجتمع أو الطريقة، أو تغير شروط الاستخدام العام.",
     "verification_en": "This record is drawn from the source(s) listed on this page. Open a source record to reach the original document, and check that the definition, period, population and geography match what is stated here.",
@@ -9234,7 +9447,10 @@
       "SRC-WB-FMIIP-P180708",
       "SRC-CCY-SAM-2024",
       "SRC-CCY-ISP-2024",
-      "EP-YEM-CASH-FIN-TRANSMISSION-K04"
+      "EP-YEM-CASH-FIN-TRANSMISSION-K04",
+      "SRC-CCY-CASH-DURATION-2026",
+      "SRC-WB-ESPECRP-ISR10-2026-001",
+      "SRC-WB-YEM-CNL-2026-001"
     ],
     "source_links": [
       {
@@ -9323,14 +9539,56 @@
         "s": "READ",
         "src": "SRC-WB-FMIIP-P180708",
         "loc": "PAD (Report No. PADHI00396, 22 May 2025), paragraph 14: from September 16 to October 17, 2024"
+      },
+      {
+        "t": "30 June 2026",
+        "k": "d",
+        "s": "READ",
+        "src": "SRC-WB-ESPECRP-ISR10-2026-001",
+        "loc": "ESPECRP ISR sequence 10 (ISR08077), archived 30-Jun-2026, report header and footer"
+      },
+      {
+        "t": "January 2025",
+        "k": "d",
+        "s": "READ",
+        "src": "SRC-WB-ESPECRP-ISR10-2026-001",
+        "loc": "ESPECRP ISR sequence 10 (ISR08077), archived 30-Jun-2026, PDF p.4-5, section 6.1, comment on the UCT beneficiary indicators: \"No PCs conducted since Jan 2025 due to lack of funds.\""
+      },
+      {
+        "t": "31 December 2026",
+        "k": "d",
+        "s": "READ",
+        "src": "SRC-WB-ESPECRP-ISR10-2026-001",
+        "loc": "ESPECRP ISR sequence 10 (ISR08077), archived 30-Jun-2026, PDF p.17-18, section 8: \"Operation Closing/Cancellation 31-Dec-2026\""
+      },
+      {
+        "t": "2 September 2026",
+        "k": "d",
+        "s": "READ",
+        "src": "SRC-WB-YEM-CNL-2026-001",
+        "loc": "Financing Agreement, Grant E734-RY, signature block (UNICEF 28-Aug-2026; IDA 02-Sep-2026), https://documents.worldbank.org/curated/en/099090226095598089/pdf/P514855-f2c338ed-4910-4743-9b3b-564bebfa4be3.pdf; project page https://projects.worldbank.org/en/projects-operations/project-detail/P514855: 'Effective Date September 2, 2026'"
+      },
+      {
+        "t": "June 2026",
+        "k": "d",
+        "s": "READ",
+        "src": "SRC-WB-YEM-CNL-2026-001",
+        "loc": "Cash for Nutrition and Livelihoods Project PAD (9 June 2026), https://documents.worldbank.org/curated/en/099061026114019678/pdf/BOSIB-24b35177-1756-452c-a8c5-602402705683.pdf, date of the appraisal document; paragraph 47 (e-wallet uptake) and paragraph 38 (cash-out through agents hired by financial service providers)"
+      },
+      {
+        "t": "three households",
+        "k": "v",
+        "s": "READ",
+        "src": "SRC-CCY-CASH-DURATION-2026",
+        "loc": "Cash Consortium of Yemen, 'The More the Merrier?' (2026), key findings p.1 (three vs six monthly transfers); p.3 (no unassisted control group); p.18 (savings: \"only three HHs, all of whom received six monthly transfers, reported a non-zero allocation to savings at endline\"); read 10 October 2026"
       }
     ],
     "public_route_list": [
       "/payments/",
       "/people/"
     ],
-    "does_not_establish_en": "Cash-transfer beneficiaries, village savings and loan associations (VSLAs), identity targets and opened accounts are not measures of durable financial use. The 45,460 figure is a programme-reported number of recipients, not a count of people who kept using an account. The FMIIP appraisal document (May 2025) reports, for a pilot it does not identify with this one, that by the end of payment cycle 18 (16 September–17 October 2024) 10,761 wallets had been opened with cash transfers paid into them, with take-up of 40% to 70% across pilot districts; it differs in document, date and unit, and no ratio to 45,460 is drawn.",
-    "does_not_establish_ar": "ليس مستفيدو التحويلات النقدية ولا مجموعات الادخار والإقراض ولا مستهدفات الهوية ولا الحسابات المفتوحة مقاييس للاستخدام المالي المستمر. والرقم 45,460 عدد للمستفيدين يفيد به البرنامج، وليس عددًا لمن واصلوا استخدام حساب. وتذكر وثيقة تقييم مشروع FMIIP (مايو 2025)، عن تجربة لا تحدد ما إذا كانت هي هذه التجربة نفسها، أن 10,761 محفظة إلكترونية فُتحت وأُودعت فيها تحويلات نقدية بنهاية دورة الدفع 18 (16 سبتمبر–17 أكتوبر 2024)، وأن نسبة الإقبال تراوحت بين 40% و70% في مديريات التجربة؛ وهي تختلف عنه في الوثيقة والتاريخ والوحدة، ولا تُحسب منها نسبة إلى 45,460.",
+    "does_not_establish_en": "Cash-transfer beneficiaries, village savings and loan associations (VSLAs), identity targets and opened accounts are not measures of durable financial use. The 45,460 figure is a programme-reported number of recipients, not a count of people who kept using an account. The FMIIP appraisal document (May 2025) reports, for a pilot it does not identify with this one, that by the end of payment cycle 18 (16 September–17 October 2024) 10,761 wallets had been opened with cash transfers paid into them, with take-up of 40% to 70% across pilot districts; it differs in document, date and unit, and no ratio to 45,460 is drawn. A Cash Consortium of Yemen study (2026) compared three and six monthly transfers using programme data, with no randomised design and no group of households that received no assistance: the extra three transfers brought modest further gains in food security and less negative coping, and savings could not be compared, because only three households, all of them on six transfers, reported putting any money aside. The appraisal document of the Cash for Nutrition and Livelihoods Project (June 2026) reports from the cash-transfer programme's monitoring that “high transaction costs and long distances to financial service points severely impeded e-wallet uptake”, and plans for recipients to cash out through agents hired by financial service providers, given the scarcity of bank branches and ATMs.",
+    "does_not_establish_ar": "ليس مستفيدو التحويلات النقدية ولا مجموعات الادخار والإقراض ولا مستهدفات الهوية ولا الحسابات المفتوحة مقاييس للاستخدام المالي المستمر. والرقم 45,460 عدد للمستفيدين يفيد به البرنامج، وليس عددًا لمن واصلوا استخدام حساب. وتذكر وثيقة تقييم مشروع FMIIP (مايو 2025)، عن تجربة لا تحدد ما إذا كانت هي هذه التجربة نفسها، أن 10,761 محفظة إلكترونية فُتحت وأُودعت فيها تحويلات نقدية بنهاية دورة الدفع 18 (16 سبتمبر–17 أكتوبر 2024)، وأن نسبة الإقبال تراوحت بين 40% و70% في مديريات التجربة؛ وهي تختلف عنه في الوثيقة والتاريخ والوحدة، ولا تُحسب منها نسبة إلى 45,460. وقارنت دراسة لتحالف النقد في اليمن (Cash Consortium of Yemen، 2026) بين ثلاثة تحويلات شهرية وستة باستخدام بيانات البرنامج، من دون تصميم قائم على التوزيع العشوائي ولا مجموعة من الأسر لم تتلقَّ أي مساعدة: فأتت التحويلات الثلاثة الإضافية بمكاسب أخرى محدودة في الأمن الغذائي وبتراجع في استراتيجيات التكيّف السلبية، ولم يتسنَّ مقارنة الادخار، لأن ثلاث أسر فقط، كلها من متلقي التحويلات الستة، أفادت بادخار أي مبلغ. وتذكر وثيقة تقييم مشروع النقد مقابل التغذية وسبل العيش (يونيو 2026)، استنادًا إلى رصد برنامج التحويلات النقدية، أن «ارتفاع تكاليف المعاملات وبُعد المسافات عن نقاط الخدمات المالية أعاقا بشدة الإقبال على المحافظ الإلكترونية»، وتخطط لأن يسحب المستفيدون النقد عبر وكلاء يتعاقد معهم مقدمو الخدمات المالية، نظرًا إلى ندرة فروع البنوك وأجهزة الصراف الآلي.",
     "measurement_limitation_en": "Evidence exists for several intermediate links; durable use of an account or wallet after the transfer remains unobserved.",
     "measurement_limitation_ar": "توجد أدلة مفيدة على حلقات وسيطة، لكن الاستخدام المستمر للحساب/المحفظة بعد التحويل ما يزال غير مرصود."
   },
@@ -11296,8 +11554,8 @@
     "universe_ar": "عينتان منفصلتان في سبع محافظات مختارة: 328 منشأة رسمية (تشمل منشآت أصغر يقل عدد العاملين فيها عن خمسة)، و217 منشأة غير رسمية سُحبت عينتها من قوائم للأنشطة والمواقع. ولا تمثل أيٌّ من العينتين جميع المنشآت في اليمن.",
     "method_en": "Tabulations reported by the source for the World Bank's 2022 Yemen Enterprise Survey (September 2022), in Yemen Financial Sector Diagnostics (2024), Annex III: formal firms' account holding, with its numerator and base, Figure 104 (p. 143); average working-capital source shares, Figure 110 (p. 148); financial intermediaries used, a multiple-response question, Figure 109 ('Financial Intermediaries Used', p. 147); and informal firms' account holding, Figure 114 (p. 151), whose base of 217 informal firms is stated on pp. 139 and 141.",
     "method_ar": "جداول أوردها المصدر لمسح البنك الدولي للمنشآت في اليمن لعام 2022 (سبتمبر 2022)، في «تشخيص القطاع المالي في اليمن (2024)»، الملحق الثالث: امتلاك المنشآت الرسمية للحسابات مع البسط والقاعدة، الشكل 104 (ص 143)؛ ومتوسط حصص مصادر رأس المال العامل، الشكل 110 (ص 148)؛ والوسطاء الماليون المستخدمون، وهو سؤال متعدد الإجابات، الشكل 109 («الوسطاء الماليون المستخدمون»، ص 147)؛ وامتلاك المنشآت غير الرسمية للحسابات، الشكل 114 (ص 151)، وقاعدته 217 منشأة غير رسمية كما ترد في الصفحتين 139 و141.",
-    "limitations_en": "The evidence base does not record the number of firms behind the working-capital averages or the intermediary question. An average working-capital share is not a share of firms, and multiple-response percentages are not market shares. Holding an account does not show that a firm uses bank credit. The formal and informal samples use different frames, so they cannot be added together or compared with the 2013 survey. Firms are not people, so these shares are not comparable with the Findex account-ownership rate.",
-    "limitations_ar": "لا تتضمن قاعدة الأدلة عدد المنشآت التي تستند إليها متوسطات رأس المال العامل ولا عدد المجيبين عن سؤال الوسطاء. ومتوسط حصة رأس المال العامل ليس نسبة من المنشآت، ونسب الأسئلة متعددة الإجابات ليست حصصًا سوقية. وامتلاك المنشأة حسابًا لا يثبت أنها تستخدم الائتمان المصرفي. ويختلف إطار العينتين الرسمية وغير الرسمية، فلا يمكن جمعهما ولا مقارنتهما بمسح 2013. والمنشآت ليست أفرادًا، فلا تُقارن هذه النسب بنسبة امتلاك الحساب في المؤشر العالمي للشمول المالي (Global Findex).",
+    "limitations_en": "The evidence base does not record the number of firms behind the working-capital averages or the intermediary question. An average working-capital share is not a share of firms, and multiple-response percentages are not market shares. Holding an account does not show that a firm uses bank credit. The formal and informal samples use different frames, so they cannot be added together or compared with the 2013 survey. Firms are not people, so these shares are not comparable with the Findex account-ownership rate. An older figure is not comparable either: the appraisal document of the World Bank-financed FMIIP project (May 2025) cites a 2018 World Bank Group survey of 141 firms in which less than 50% of large enterprises, 18.5% of medium-sized businesses and 6.1% of small firms reported access to a functioning bank branch, and 38.8% reported no access to any bank branch. The document does not name the survey further, and its question and sample differ from the 2022 survey's.",
+    "limitations_ar": "لا تتضمن قاعدة الأدلة عدد المنشآت التي تستند إليها متوسطات رأس المال العامل ولا عدد المجيبين عن سؤال الوسطاء. ومتوسط حصة رأس المال العامل ليس نسبة من المنشآت، ونسب الأسئلة متعددة الإجابات ليست حصصًا سوقية. وامتلاك المنشأة حسابًا لا يثبت أنها تستخدم الائتمان المصرفي. ويختلف إطار العينتين الرسمية وغير الرسمية، فلا يمكن جمعهما ولا مقارنتهما بمسح 2013. والمنشآت ليست أفرادًا، فلا تُقارن هذه النسب بنسبة امتلاك الحساب في المؤشر العالمي للشمول المالي (Global Findex). ولا يقارَن بها رقم أقدم أيضًا: فوثيقة تقييم مشروع FMIIP الممول من البنك الدولي (مايو 2025) تستشهد بمسح أجرته مجموعة البنك الدولي في 2018 وشمل 141 منشأة، أفاد فيه أقل من 50% من المنشآت الكبيرة و18.5% من المنشآت المتوسطة و6.1% من المنشآت الصغيرة بإمكانية الوصول إلى فرع مصرفي يعمل، وأفاد 38.8% بعدم الوصول إلى أي فرع مصرفي. ولا تسمّي الوثيقة المسح بأكثر من ذلك، ويختلف سؤاله وعينته عن سؤال مسح 2022 وعينته.",
     "currentness_en": "The latest observation in this record refers to the 2022 survey (September 2022), published in 2024. It should not be read as describing a later period unless a newer comparable observation is published.",
     "currentness_ar": "تعود أحدث مشاهدة في هذا السجل إلى مسح 2022 (سبتمبر 2022) الذي نُشر في 2024، ولا تُقرأ على أنها تصف فترة لاحقة ما لم تُنشر مشاهدة أحدث قابلة للمقارنة.",
     "change_trigger_en": "This record is updated when an authoritative source is revised or replaced, a newer comparable observation becomes available, the definition, population or method changes, or the conditions for public use change.",
@@ -11305,7 +11563,8 @@
     "verification_en": "This record is drawn from the source(s) listed on this page. Open a source record to reach the original document, and check that the definition, period, population and geography match what is stated here.",
     "verification_ar": "يستند هذا السجل إلى المصدر أو المصادر المدرجة في هذه الصفحة. افتح سجل المصدر للوصول إلى الوثيقة الأصلية، وتحقق من تطابق التعريف والفترة والمجتمع والنطاق الجغرافي مع ما يرد هنا.",
     "source_dependencies": [
-      "SRC-WB-FSD-2024-001"
+      "SRC-WB-FSD-2024-001",
+      "SRC-WB-FMIIP-P180708"
     ],
     "source_links": [
       {
@@ -11507,14 +11766,49 @@
         "t": "141",
         "k": "v",
         "s": "LOCATOR"
+      },
+      {
+        "t": "less than 50%",
+        "k": "v",
+        "s": "READ",
+        "src": "SRC-WB-FMIIP-P180708",
+        "loc": "PAD (Report No. PADHI00396, 22 May 2025), paragraph 10, printed p.3 (PDF p.13): \"According to a 2018 World Bank Group survey involving 141 firms, less than 50 percent of large enterprises, 18.5 percent of medium-sized businesses, and 6.1 percent of small firms reported having access to a functioning bank branch. Alarmingly, 38.8 percent indicated having no access to any bank branch whatsoever.\"; read 10 October 2026"
+      },
+      {
+        "t": "18.5%",
+        "k": "v",
+        "s": "READ",
+        "src": "SRC-WB-FMIIP-P180708",
+        "loc": "PAD (Report No. PADHI00396, 22 May 2025), paragraph 10, printed p.3 (PDF p.13): \"According to a 2018 World Bank Group survey involving 141 firms, less than 50 percent of large enterprises, 18.5 percent of medium-sized businesses, and 6.1 percent of small firms reported having access to a functioning bank branch. Alarmingly, 38.8 percent indicated having no access to any bank branch whatsoever.\"; read 10 October 2026"
+      },
+      {
+        "t": "6.1%",
+        "k": "v",
+        "s": "READ",
+        "src": "SRC-WB-FMIIP-P180708",
+        "loc": "PAD (Report No. PADHI00396, 22 May 2025), paragraph 10, printed p.3 (PDF p.13): \"According to a 2018 World Bank Group survey involving 141 firms, less than 50 percent of large enterprises, 18.5 percent of medium-sized businesses, and 6.1 percent of small firms reported having access to a functioning bank branch. Alarmingly, 38.8 percent indicated having no access to any bank branch whatsoever.\"; read 10 October 2026"
+      },
+      {
+        "t": "38.8%",
+        "k": "v",
+        "s": "READ",
+        "src": "SRC-WB-FMIIP-P180708",
+        "loc": "PAD (Report No. PADHI00396, 22 May 2025), paragraph 10, printed p.3 (PDF p.13): \"According to a 2018 World Bank Group survey involving 141 firms, less than 50 percent of large enterprises, 18.5 percent of medium-sized businesses, and 6.1 percent of small firms reported having access to a functioning bank branch. Alarmingly, 38.8 percent indicated having no access to any bank branch whatsoever.\"; read 10 October 2026"
+      },
+      {
+        "t": "May 2025",
+        "k": "d",
+        "s": "READ",
+        "src": "SRC-WB-FMIIP-P180708",
+        "loc": "PAD (Report No. PADHI00396, 22 May 2025), date of the appraisal document"
       }
     ],
     "public_route_list": [
       "/firms/",
       "/evidence/"
     ],
-    "does_not_establish_en": "The evidence base does not record the number of firms behind the working-capital averages or the intermediary question. An average working-capital share is not a share of firms, and multiple-response percentages are not market shares. Holding an account does not show that a firm uses bank credit. The formal and informal samples use different frames, so they cannot be added together or compared with the 2013 survey. Firms are not people, so these shares are not comparable with the Findex account-ownership rate.",
-    "does_not_establish_ar": "لا تتضمن قاعدة الأدلة عدد المنشآت التي تستند إليها متوسطات رأس المال العامل ولا عدد المجيبين عن سؤال الوسطاء. ومتوسط حصة رأس المال العامل ليس نسبة من المنشآت، ونسب الأسئلة متعددة الإجابات ليست حصصًا سوقية. وامتلاك المنشأة حسابًا لا يثبت أنها تستخدم الائتمان المصرفي. ويختلف إطار العينتين الرسمية وغير الرسمية، فلا يمكن جمعهما ولا مقارنتهما بمسح 2013. والمنشآت ليست أفرادًا، فلا تُقارن هذه النسب بنسبة امتلاك الحساب في المؤشر العالمي للشمول المالي (Global Findex).",
+    "does_not_establish_en": "The evidence base does not record the number of firms behind the working-capital averages or the intermediary question. An average working-capital share is not a share of firms, and multiple-response percentages are not market shares. Holding an account does not show that a firm uses bank credit. The formal and informal samples use different frames, so they cannot be added together or compared with the 2013 survey. Firms are not people, so these shares are not comparable with the Findex account-ownership rate. An older figure is not comparable either: the appraisal document of the World Bank-financed FMIIP project (May 2025) cites a 2018 World Bank Group survey of 141 firms in which less than 50% of large enterprises, 18.5% of medium-sized businesses and 6.1% of small firms reported access to a functioning bank branch, and 38.8% reported no access to any bank branch. The document does not name the survey further, and its question and sample differ from the 2022 survey's.",
+    "does_not_establish_ar": "لا تتضمن قاعدة الأدلة عدد المنشآت التي تستند إليها متوسطات رأس المال العامل ولا عدد المجيبين عن سؤال الوسطاء. ومتوسط حصة رأس المال العامل ليس نسبة من المنشآت، ونسب الأسئلة متعددة الإجابات ليست حصصًا سوقية. وامتلاك المنشأة حسابًا لا يثبت أنها تستخدم الائتمان المصرفي. ويختلف إطار العينتين الرسمية وغير الرسمية، فلا يمكن جمعهما ولا مقارنتهما بمسح 2013. والمنشآت ليست أفرادًا، فلا تُقارن هذه النسب بنسبة امتلاك الحساب في المؤشر العالمي للشمول المالي (Global Findex). ولا يقارَن بها رقم أقدم أيضًا: فوثيقة تقييم مشروع FMIIP الممول من البنك الدولي (مايو 2025) تستشهد بمسح أجرته مجموعة البنك الدولي في 2018 وشمل 141 منشأة، أفاد فيه أقل من 50% من المنشآت الكبيرة و18.5% من المنشآت المتوسطة و6.1% من المنشآت الصغيرة بإمكانية الوصول إلى فرع مصرفي يعمل، وأفاد 38.8% بعدم الوصول إلى أي فرع مصرفي. ولا تسمّي الوثيقة المسح بأكثر من ذلك، ويختلف سؤاله وعينته عن سؤال مسح 2022 وعينته.",
     "measurement_limitation_en": null,
     "measurement_limitation_ar": null
   },
