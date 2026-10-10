@@ -747,6 +747,8 @@ class Content:
                     o["text"] = self.date_words(c["month"], lang)
                 else:
                     o["number"] = c["number"]
+                    if c.get("dp"):   # the governed display precision travels with the number (27.0, never 27)
+                        o["dp"] = c["dp"]
                 if c.get("unit"):
                     o["unit"] = c["unit"][lang]
                 return o

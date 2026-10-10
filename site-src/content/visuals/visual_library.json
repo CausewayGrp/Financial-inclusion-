@@ -1150,5 +1150,103 @@
     "public_route_list": [
       "/readings/after-transfer-persistence"
     ]
+  },
+  {
+    "visual_id": "VIS-FINDEX-ACCESS-USE",
+    "title_en": "Account ownership, saving and borrowing, by group",
+    "title_ar": "امتلاك الحساب والادخار والاقتراض بحسب الفئة",
+    "visual_form": "TABLE_TEXT_FIRST",
+    "question_en": "How do account ownership, saving and borrowing differ across groups of adults in the World Bank's published values?",
+    "question_ar": "كيف يختلف امتلاك الحساب والادخار والاقتراض بين فئات البالغين في القيم التي ينشرها البنك الدولي؟",
+    "what_it_shows_en": "World Bank published shares of adults who have an account, an account at a financial institution, saved any money, borrowed any money and borrowed from family or friends, for all adults and by sex, age, education, income and labour-force status.",
+    "what_it_shows_ar": "النسب التي ينشرها البنك الدولي للبالغين الذين يملكون حسابًا، أو حسابًا لدى مؤسسة مالية، أو ادخروا أي مبلغ، أو اقترضوا أي مبلغ، أو اقترضوا من الأسرة أو الأصدقاء، لجميع البالغين وبحسب الجنس والعمر والتعليم والدخل والمشاركة في قوة العمل.",
+    "decision_value_en": "Shows where the published shares differ by group in the same wave, without intervals or causes, so that a gap is read as a description, not an explanation.",
+    "decision_value_ar": "يبين مواضع اختلاف النسب المنشورة بين الفئات في الموجة نفسها، من دون فترات ثقة أو أسباب، حتى تُقرأ الفجوة وصفًا لا تفسيرًا.",
+    "source_period": "World Bank reporting year 2022; Global Findex 2021 study; Yemen fieldwork 2022-11-07 to 2023-01-09",
+    "evidence_strength": "HIGH_PUBLISHED_SURVEY_AGGREGATE__GROUP_SAMPLES_SMALLER",
+    "freshness_profile": "Global Findex 2021 wave; Yemen fieldwork 7 November 2022 to 9 January 2023",
+    "data_inputs": "25_FINDEX_BASELINE WB-FINDEX-OBS-2022 rows (World Bank open API, source 28)",
+    "unit_or_object": "percent of adults in each group",
+    "denominator_universe": "Adults aged 15 and over in the areas the survey covered; each group as the World Bank defines it",
+    "period": "World Bank reporting year 2022; Global Findex 2021 study; Yemen fieldwork 2022-11-07 to 2023-01-09",
+    "encoding_contract": "Table: one row per group, one column per measure, values as the World Bank publishes them (one decimal); no gap column, no interval, no ranking.",
+    "prohibited_inference_en": "A difference between groups does not establish its cause, and no interval is published here for a group value; group values rest on smaller samples than the value for all adults. Owning an account does not establish that it is used, and the table shows no measure of account use; a digital payment is a different measure again. The five measures have their own question bases and are not stages of one process.",
+    "prohibited_inference_ar": "الفرق بين الفئات لا يثبت سببه، ولا تُنشر هنا فترة ثقة لقيمة أي فئة؛ وتستند قيم الفئات إلى عينات أصغر من عينة القيمة الخاصة بجميع البالغين. وامتلاك الحساب لا يثبت استخدامه، ولا يعرض الجدول أي مقياس لاستخدام الحساب؛ والمدفوعة الرقمية مقياس مختلف آخر. ولكل من المقاييس الخمسة قاعدة سؤاله الخاصة، ولا تمثل مراحل في مسار واحد.",
+    "accessible_summary_en": "World Bank published values for Yemen's Global Findex 2021 wave: 11.9% of adults had an account (the same share at a financial institution), 21.6% saved any money, 51.3% borrowed any money and 41.1% borrowed from family or friends. The table gives each share for women and men, two age groups, two education groups, adults in the poorest 40% and the richest 60% of households by income, and adults in and out of the labour force; no interval is published here for a group value, groups rest on smaller samples, and a difference between groups is not a cause. A different measure of the same wave: 9.3% of adults made or received a digital payment (95% interval 6.8% to 11.8%, computed by CauseWay from the World Bank's published value and design effect); it is a separate measure of payments, shown for all adults only, and not a measure of account ownership.",
+    "accessible_summary_ar": "قيم ينشرها البنك الدولي لموجة 2021 من Global Findex الخاصة باليمن: كان لدى 11.9% من البالغين حساب (والنسبة نفسها لحساب لدى مؤسسة مالية)، وادخر 21.6% أي مبلغ، واقترض 51.3% أي مبلغ، واقترض 41.1% من الأسرة أو الأصدقاء. ويعرض الجدول كل نسبة للنساء والرجال، ولفئتين عمريتين، وفئتين تعليميتين، وللبالغين في أفقر 40% وأغنى 60% من الأسر بحسب الدخل، وللبالغين داخل قوة العمل وخارجها؛ ولا تُنشر هنا فترة ثقة لقيمة أي فئة، وتستند الفئات إلى عينات أصغر، والفرق بين الفئات ليس سببًا. ومقياس مختلف من الموجة نفسها: أجرى 9.3% من البالغين مدفوعة رقمية أو تلقوها (فترة ثقة 95% من 6.8% إلى 11.8%، من احتساب CauseWay من القيمة التي ينشرها البنك الدولي ومن أثر التصميم)؛ وهو مقياس منفصل للمدفوعات، يُعرض لجميع البالغين فقط، وليس مقياسًا لامتلاك الحساب.",
+    "public_routes": [
+      "/people"
+    ],
+    "period_ar": "سنة الإبلاغ في بيانات البنك الدولي: 2022؛ دراسة Global Findex 2021؛ العمل الميداني في اليمن من 2022-11-07 إلى 2023-01-09",
+    "universe_ar": "البالغون بعمر 15 سنة فأكثر في المناطق التي شملها المسح؛ وكل فئة كما يعرّفها البنك الدولي",
+    "public_route_list": [
+      "/people"
+    ]
+  },
+  {
+    "visual_id": "VIS-FINDEX-RESILIENCE",
+    "title_en": "Coming up with emergency funds within 30 days, by group",
+    "title_ar": "تدبير أموال للطوارئ خلال 30 يومًا بحسب الفئة",
+    "visual_form": "TABLE_TEXT_FIRST",
+    "question_en": "Did adults say they could come up with emergency funds within 30 days, and how difficult it would be, by group?",
+    "question_ar": "هل قال البالغون إن بإمكانهم تدبير أموال للطوارئ خلال 30 يومًا، وما مدى صعوبة ذلك، بحسب الفئة؟",
+    "what_it_shows_en": "The World Bank's published shares of adults who said that coming up with emergency funds within 30 days would not be possible (with those who did not know or did not answer), or would be possible but very difficult, somewhat difficult, or not difficult at all, for all adults and by group.",
+    "what_it_shows_ar": "النسب التي ينشرها البنك الدولي للبالغين الذين قالوا إن تدبير أموال للطوارئ خلال 30 يومًا سيكون غير ممكن (ومعهم من لم يعرفوا أو لم يجيبوا)، أو ممكنًا بصعوبة بالغة، أو ببعض الصعوبة، أو دون أي صعوبة، لجميع البالغين وبحسب الفئة.",
+    "decision_value_en": "Keeps the survey's own answer categories, including saying the money could not be raised, so that resilience is not reduced to a single score.",
+    "decision_value_ar": "يحافظ على فئات الإجابة كما وردت في المسح، بما فيها القول بتعذر تدبير المال، حتى لا يُختزل الصمود في درجة واحدة.",
+    "source_period": "World Bank reporting year 2022; Global Findex 2021 study; Yemen fieldwork 2022-11-07 to 2023-01-09",
+    "evidence_strength": "HIGH_PUBLISHED_SURVEY_AGGREGATE__GROUP_SAMPLES_SMALLER",
+    "freshness_profile": "Global Findex 2021 wave; Yemen fieldwork 7 November 2022 to 9 January 2023",
+    "data_inputs": "25_FINDEX_BASELINE WB-FINDEX-OBS-2022 rows (World Bank open API, source 28)",
+    "unit_or_object": "percent of adults in each group",
+    "denominator_universe": "Adults aged 15 and over in the areas the survey covered; each group as the World Bank defines it",
+    "period": "World Bank reporting year 2022; Global Findex 2021 study; Yemen fieldwork 2022-11-07 to 2023-01-09",
+    "encoding_contract": "Table: one row per group, the four answer categories as columns, values as the World Bank publishes them (one decimal); the categories are not summed into a score, and a row need not add up to all adults.",
+    "prohibited_inference_en": "The answers are self-assessments of a hypothetical emergency, not observed events, and the ordered categories do not form a resilience score; no method for combining them is used here. A difference between groups does not establish its cause, and no interval is published here for a group value. Saying the money could be raised does not show where it would come from: it may be borrowed, including from family and friends.",
+    "prohibited_inference_ar": "الإجابات تقديرات ذاتية لحالة طارئة افتراضية، لا أحداث مرصودة، ولا تشكّل فئات الإجابة المرتبة درجة مركبة للصمود، ولا تُستخدم هنا أي طريقة لدمجها. والفرق بين الفئات لا يثبت سببه، ولا تُنشر هنا فترة ثقة لقيمة أي فئة. والقول بإمكان تدبير المال لا يبين مصدره: فقد يكون مقترضًا، بما في ذلك من الأسرة والأصدقاء.",
+    "accessible_summary_en": "World Bank published values for Yemen's Global Findex 2021 wave: 10.8% of adults said that coming up with emergency funds within 30 days would not be possible, or did not know or did not answer (the World Bank counts these together); 25.1% said it would be possible but very difficult, 40.4% somewhat difficult and 23.2% not difficult at all. The table gives the same four answers by sex, age, education, income and labour-force status; the shares in a row do not quite add up to all adults, because a few adults who said it was possible did not say how difficult. No interval is published here for a group value, groups rest on smaller samples, and a difference between groups is not a cause.",
+    "accessible_summary_ar": "قيم ينشرها البنك الدولي لموجة 2021 من Global Findex الخاصة باليمن: قال 10.8% من البالغين إن تدبير أموال للطوارئ خلال 30 يومًا سيكون غير ممكن، أو لم يعرفوا أو لم يجيبوا (ويحتسب البنك الدولي هذه الإجابات معًا)؛ وقال 25.1% إنه سيكون ممكنًا بصعوبة بالغة، و40.4% ببعض الصعوبة، و23.2% دون أي صعوبة. ويعرض الجدول الإجابات الأربع نفسها بحسب الجنس والعمر والتعليم والدخل والمشاركة في قوة العمل؛ ولا تبلغ الحصص في كل صف مجموع البالغين تمامًا، لأن قلة ممن قالوا إن ذلك ممكن لم يذكروا مدى صعوبته. ولا تُنشر هنا فترة ثقة لقيمة أي فئة، وتستند الفئات إلى عينات أصغر، والفرق بين الفئات ليس سببًا.",
+    "public_routes": [
+      "/people"
+    ],
+    "period_ar": "سنة الإبلاغ في بيانات البنك الدولي: 2022؛ دراسة Global Findex 2021؛ العمل الميداني في اليمن من 2022-11-07 إلى 2023-01-09",
+    "universe_ar": "البالغون بعمر 15 سنة فأكثر في المناطق التي شملها المسح؛ وكل فئة كما يعرّفها البنك الدولي",
+    "public_route_list": [
+      "/people"
+    ]
+  },
+  {
+    "visual_id": "VIS-FINDEX-FLOW-CHANNELS",
+    "title_en": "Wages, agricultural payments and domestic remittances, by group",
+    "title_ar": "الأجور والمدفوعات الزراعية والحوالات المحلية بحسب الفئة",
+    "visual_form": "TABLE_TEXT_FIRST",
+    "question_en": "Which adults received wages or agricultural payments, or sent or received domestic remittances, in the World Bank's published values?",
+    "question_ar": "من هم البالغون الذين تلقوا أجورًا أو مدفوعات زراعية، أو أرسلوا حوالات محلية أو تلقوها، في القيم التي ينشرها البنك الدولي؟",
+    "what_it_shows_en": "The World Bank's published shares of adults who received wages, received payments for agricultural sales, sent domestic remittances, received them, or did either, for all adults and by group.",
+    "what_it_shows_ar": "النسب التي ينشرها البنك الدولي للبالغين الذين تلقوا أجورًا، أو تلقوا مدفوعات عن مبيعات زراعية، أو أرسلوا حوالات محلية، أو تلقوها، أو قاموا بأيٍّ من الأمرين، لجميع البالغين وبحسب الفئة.",
+    "decision_value_en": "Shows how common each kind of payment received or sent is, as a share of all adults in each group, so that receiving money is not mistaken for financial use or for a payment volume.",
+    "decision_value_ar": "يبين مدى شيوع كل نوع من المدفوعات المتلقاة أو المرسلة، بوصفه نسبة من جميع البالغين في كل فئة، حتى لا يُقرأ تلقي المال استخدامًا ماليًا أو حجمًا للمدفوعات.",
+    "source_period": "World Bank reporting year 2022; Global Findex 2021 study; Yemen fieldwork 2022-11-07 to 2023-01-09",
+    "evidence_strength": "HIGH_PUBLISHED_SURVEY_AGGREGATE__GROUP_SAMPLES_SMALLER",
+    "freshness_profile": "Global Findex 2021 wave; Yemen fieldwork 7 November 2022 to 9 January 2023",
+    "data_inputs": "25_FINDEX_BASELINE WB-FINDEX-OBS-2022 rows (World Bank open API, source 28)",
+    "unit_or_object": "percent of adults in each group",
+    "denominator_universe": "Adults aged 15 and over in the areas the survey covered; each group as the World Bank defines it",
+    "period": "World Bank reporting year 2022; Global Findex 2021 study; Yemen fieldwork 2022-11-07 to 2023-01-09",
+    "encoding_contract": "Table: one row per group, one column per payment type, values as the World Bank publishes them (one decimal), each a share of all adults in the group; channels are not shown.",
+    "prohibited_inference_en": "Each value is a share of all adults, not of recipients, and does not measure payment volumes, programme outcomes or remittance flows for the economy as a whole. The channels through which money was paid, sent or received are not shown: the World Bank publishes most channel values for all adults only, and Yemen's survey did not ask the mobile-money questions. A difference between groups does not establish its cause.",
+    "prohibited_inference_ar": "كل قيمة نسبة من جميع البالغين لا من المتلقين، ولا تقيس أحجام المدفوعات ولا نتائج البرامج ولا تدفقات الحوالات على مستوى الاقتصاد ككل. ولا تُعرض القنوات التي دُفعت أو أُرسلت أو استُلمت عبرها الأموال: فالبنك الدولي ينشر معظم قيم القنوات لجميع البالغين فقط، ولم يطرح مسح اليمن أسئلة خدمات الأموال عبر الهاتف. والفرق بين الفئات لا يثبت سببه.",
+    "accessible_summary_en": "World Bank published values for Yemen's Global Findex 2021 wave: 12.4% of adults received wages, 28.9% received payments for agricultural sales, 17.7% sent domestic remittances, 31.9% received them and 37.8% did either. The table gives each share by sex, age, education, income and labour-force status. Each is a share of all adults in the group; no interval is published here for a group value, and a difference between groups is not a cause.",
+    "accessible_summary_ar": "قيم ينشرها البنك الدولي لموجة 2021 من Global Findex الخاصة باليمن: تلقى 12.4% من البالغين أجورًا، وتلقى 28.9% مدفوعات عن مبيعات زراعية، وأرسل 17.7% حوالات محلية، وتلقاها 31.9%، وقام 37.8% بأيٍّ من الأمرين. ويعرض الجدول كل نسبة بحسب الجنس والعمر والتعليم والدخل والمشاركة في قوة العمل. وكل منها نسبة من جميع البالغين في الفئة؛ ولا تُنشر هنا فترة ثقة لقيمة أي فئة، والفرق بين الفئات ليس سببًا.",
+    "public_routes": [
+      "/people",
+      "/remittances"
+    ],
+    "period_ar": "سنة الإبلاغ في بيانات البنك الدولي: 2022؛ دراسة Global Findex 2021؛ العمل الميداني في اليمن من 2022-11-07 إلى 2023-01-09",
+    "universe_ar": "البالغون بعمر 15 سنة فأكثر في المناطق التي شملها المسح؛ وكل فئة كما يعرّفها البنك الدولي",
+    "public_route_list": [
+      "/people",
+      "/remittances"
+    ]
   }
 ]

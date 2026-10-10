@@ -59,7 +59,7 @@
     "dataset_id": "LOCAL-FINDEX-BASELINE",
     "file": "data/findex_baseline.json",
     "domain": "Demand-side representative baseline",
-    "record_rows": 34,
+    "record_rows": 181,
     "runtime_role": "LOCAL_STATIC_INPUT",
     "future_adapter_rule": "Future APIs/connectors must emit the same semantic fields and stable IDs; UI meaning and evidence state may not change silently."
   },

@@ -45,7 +45,7 @@ RULES = [
     ("BUILD_AND_GATES", ["scripts/build.py", "scripts/validate.py", "scripts/audit_public_literals.py",
                          "scripts/architecture_diagrams.py", "scripts/checksums.py", "scripts/repository_manifest.py", "scripts/discovery.py", "scripts/base_path.py",
                          "scripts/handoff_inventory.py", "scripts/social_images.py", "scripts/logo_derivatives.py", "scripts/hosting_nginx.py", "scripts/do_deploy.py", "scripts/accessibility_audit.py",
-                         "scripts/exports.py", "scripts/performance_budget.py", "scripts/currentness_rerun.py",
+                         "scripts/exports.py", "scripts/performance_budget.py", "scripts/currentness_rerun.py", "scripts/findex_api_snapshot.py",
                          "scripts/literal_audit_allowances.json", "scripts/search_canonical_probe.json", "scripts/tests/*",
                          "scripts/hosting/*",   # R-09: the corporate proxy harness that scripts/tests/test_corporate_proxy.py runs
                          "audit/tranche_c/checks/*.py", "audit/pre_tranche_c/source_lineage_truth_test.py"]),

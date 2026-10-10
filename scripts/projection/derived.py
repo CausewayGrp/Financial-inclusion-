@@ -1192,6 +1192,8 @@ def _vdc_text_table(ctx, t, ui, dl, where):
             else:
                 raise IntegrityError(f"{where}: unknown cell kind {kind!r}")
             out["ref"] = c["ref"]
+            if c.get("dp") is not None:   # a governed display precision (Findex shares: one decimal, 27.0 not 27)
+                out["dp"] = int(c["dp"])
             if c.get("unit"):
                 out["unit"] = lab(c["unit"])
         if c.get("span"):

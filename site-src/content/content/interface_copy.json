@@ -3196,5 +3196,143 @@
     "label_en": "Dated event",
     "label_ar": "حدث مؤرخ",
     "use_rule": "Owner decision of 10 October 2026 (chronology events indexed in search). The search result type of a dated event of the system chronology, and its option in the result-type filter (site-src/app.js TYPE_LABEL_UI['chronology'])."
+  },
+  {
+    "ui_id": "UI-VIS-CAT-FINDEX-IN-LABOUR-FORCE",
+    "label_en": "Adults in the labour force",
+    "label_ar": "البالغون داخل قوة العمل",
+    "use_rule": "Close-out U1. Findex group row (World Bank: in laborforce)."
+  },
+  {
+    "ui_id": "UI-VIS-CAT-FINDEX-OUT-LABOUR-FORCE",
+    "label_en": "Adults out of the labour force",
+    "label_ar": "البالغون خارج قوة العمل",
+    "use_rule": "Close-out U1. Findex group row (World Bank: out of laborforce)."
+  },
+  {
+    "ui_id": "UI-VIS-TH-FINDEX-ADULTS",
+    "label_en": "Adults",
+    "label_ar": "البالغون",
+    "use_rule": "Close-out U1. Findex group tables: first column."
+  },
+  {
+    "ui_id": "UI-VIS-TH-FINDEX-ACCOUNT",
+    "label_en": "Has an account",
+    "label_ar": "يملك حسابًا",
+    "use_rule": "Close-out U1. Column, account.t.d."
+  },
+  {
+    "ui_id": "UI-VIS-TH-FINDEX-ACCOUNT-FI",
+    "label_en": "Account at a financial institution",
+    "label_ar": "حساب لدى مؤسسة مالية",
+    "use_rule": "Close-out U1. Column, fiaccount.t.d."
+  },
+  {
+    "ui_id": "UI-VIS-TH-FINDEX-SAVED",
+    "label_en": "Saved any money",
+    "label_ar": "ادّخر أي مبلغ",
+    "use_rule": "Close-out U1. Column, save.any.t.d."
+  },
+  {
+    "ui_id": "UI-VIS-TH-FINDEX-BORROWED",
+    "label_en": "Borrowed any money",
+    "label_ar": "اقترض أي مبلغ",
+    "use_rule": "Close-out U1. Column, borrow.any.t.d."
+  },
+  {
+    "ui_id": "UI-VIS-TH-FINDEX-BORROWED-FAMILY",
+    "label_en": "Borrowed from family or friends",
+    "label_ar": "اقترض من الأسرة أو الأصدقاء",
+    "use_rule": "Close-out U1. Column, fin22b."
+  },
+  {
+    "ui_id": "UI-VIS-TH-FINDEX-EMERG-NOT-POSSIBLE",
+    "label_en": "Not possible, or don't know or no answer",
+    "label_ar": "غير ممكن، أو لا يعرف أو لا إجابة",
+    "use_rule": "Close-out U1. Column, fin24aN (the World Bank counts don't know and refused with not possible)."
+  },
+  {
+    "ui_id": "UI-VIS-TH-FINDEX-EMERG-VERY",
+    "label_en": "Possible, very difficult",
+    "label_ar": "ممكن بصعوبة بالغة",
+    "use_rule": "Close-out U1. Column, fin24aVD."
+  },
+  {
+    "ui_id": "UI-VIS-TH-FINDEX-EMERG-SOMEWHAT",
+    "label_en": "Possible, somewhat difficult",
+    "label_ar": "ممكن ببعض الصعوبة",
+    "use_rule": "Close-out U1. Column, fin24aSD."
+  },
+  {
+    "ui_id": "UI-VIS-TH-FINDEX-EMERG-NOT-DIFFICULT",
+    "label_en": "Possible, not difficult at all",
+    "label_ar": "ممكن دون أي صعوبة",
+    "use_rule": "Close-out U1. Column, fin24aND."
+  },
+  {
+    "ui_id": "UI-VIS-TH-FINDEX-WAGES",
+    "label_en": "Received wages",
+    "label_ar": "تلقى أجورًا",
+    "use_rule": "Close-out U1. Column, fin32."
+  },
+  {
+    "ui_id": "UI-VIS-TH-FINDEX-AGRI",
+    "label_en": "Received payments for agricultural sales",
+    "label_ar": "تلقى مدفوعات عن مبيعات زراعية",
+    "use_rule": "Close-out U1. Column, fin42."
+  },
+  {
+    "ui_id": "UI-VIS-TH-FINDEX-REMIT-SENT",
+    "label_en": "Sent domestic remittances",
+    "label_ar": "أرسل حوالات محلية",
+    "use_rule": "Close-out U1. Column, fh1."
+  },
+  {
+    "ui_id": "UI-VIS-TH-FINDEX-REMIT-RECEIVED",
+    "label_en": "Received domestic remittances",
+    "label_ar": "تلقى حوالات محلية",
+    "use_rule": "Close-out U1. Column, fh2."
+  },
+  {
+    "ui_id": "UI-VIS-TH-FINDEX-REMIT-ANY",
+    "label_en": "Sent or received domestic remittances",
+    "label_ar": "أرسل حوالات محلية أو تلقاها",
+    "use_rule": "Close-out U1. Column, fh1.fh2."
+  },
+  {
+    "ui_id": "UI-VIS-UNIT-PCT-ADULTS-IN-GROUP",
+    "label_en": "% of adults in each group, as published by the World Bank",
+    "label_ar": "% من البالغين في كل فئة، كما ينشرها البنك الدولي",
+    "use_rule": "Close-out U1. Caption of the Findex group tables."
+  },
+  {
+    "ui_id": "UI-VIS-NOTE-FINDEX-EMERG-30",
+    "label_en": "Coming up with emergency funds within 30 days",
+    "label_ar": "تدبير أموال للطوارئ خلال 30 يومًا",
+    "use_rule": "Close-out U1. Caption, VIS-FINDEX-RESILIENCE."
+  },
+  {
+    "ui_id": "UI-VIS-NOTE-FINDEX-GROUPS",
+    "label_en": "World Bank published values, shown without an interval: no interval is published here for a group value, each group rests on fewer than the 1,000 interviews, and a difference between groups is not a cause.",
+    "label_ar": "قيم ينشرها البنك الدولي، تُعرض دون فترة ثقة: لا تُنشر هنا فترة ثقة لقيمة أي فئة، وتستند كل فئة إلى أقل من مقابلات العينة البالغة 1,000، والفرق بين الفئات ليس سببًا.",
+    "use_rule": "Close-out U1. Marker row, Findex group tables."
+  },
+  {
+    "ui_id": "UI-VIS-NOTE-FINDEX-ACCOUNT-FI",
+    "label_en": "Yemen's survey did not ask the mobile-money questions, so the World Bank's values for an account at a financial institution are the same as for any account.",
+    "label_ar": "لم تُطرح أسئلة خدمات الأموال عبر الهاتف في مسح اليمن، لذلك تطابق قيمُ البنك الدولي لحساب لدى مؤسسة مالية قيمَه لأي حساب.",
+    "use_rule": "Close-out U1 (CR-01). Marker row, VIS-FINDEX-ACCESS-USE."
+  },
+  {
+    "ui_id": "UI-VIS-NOTE-FINDEX-EMERG-CATS",
+    "label_en": "The four answers are adults' own assessments, in the survey's categories, and are not combined into a score. \"Not possible\" includes adults who did not know or did not answer, as the World Bank counts them; the shares in a row do not quite add up to all adults, because a few adults who said it was possible did not say how difficult. The survey also asked about 7 days, but the World Bank publishes no value for that question.",
+    "label_ar": "الإجابات الأربع تقديرات البالغين أنفسهم، بفئات المسح، ولا تُدمج في درجة واحدة. وتشمل فئة «غير ممكن» البالغين الذين لم يعرفوا أو لم يجيبوا، كما يحتسبهم البنك الدولي؛ ولا تبلغ الحصص في كل صف مجموع البالغين تمامًا، لأن قلة ممن قالوا إن ذلك ممكن لم يذكروا مدى صعوبته. وسأل المسح أيضًا عن مهلة 7 أيام، لكن البنك الدولي لا ينشر قيمة لذلك السؤال.",
+    "use_rule": "Close-out U1. Marker row, VIS-FINDEX-RESILIENCE."
+  },
+  {
+    "ui_id": "UI-VIS-NOTE-FINDEX-FLOWS",
+    "label_en": "Each value is a share of all adults in the group, not of those who received or sent the money; the channels through which it was paid, sent or received are not shown.",
+    "label_ar": "كل قيمة نسبة من جميع البالغين في الفئة، لا ممن تلقوا الأموال أو أرسلوها؛ ولا تُعرض القنوات التي دُفعت أو أُرسلت أو استُلمت عبرها.",
+    "use_rule": "Close-out U1. Marker row, VIS-FINDEX-FLOW-CHANNELS."
   }
 ]

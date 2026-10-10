@@ -1,7 +1,7 @@
 {
   "schema_version": "1.0",
   "contract_id": "VISUAL-DESIGN-CONTRACT",
-  "authority_master_sha256": "7c70b5f766b8ebb0e2a075b64137586cc95623c3c072e38f48a2a036d8e511c9",
+  "authority_master_sha256": "52fb937a4f50f0971b0b495a393b2ae6c648c4b4ee5f77456768fb0907a0053a",
   "rule": "Design-layer controlled input. It assigns every governed visual contract (Master 11) a design tier and, for SIGNATURE and CORE_ANALYTICAL visuals, declares which governed rows a chart binds to and how they are drawn. It never carries a fact, number, label or sentence: values come from Master data rows, text from Master contract/evidence fields, and legend labels from the governed interface copy (UI-VIS-*). The generator resolves every binding and fails on any unresolved ID, any value that disagrees with its guard, or any visual left untiered.",
   "tiers": {
     "SIGNATURE": "Distinctive to this product, decision-useful, drawable from governed rows and safe when detached. Designed first; gets a full data contract.",
@@ -14,7 +14,7 @@
     "SIGNATURE": 3,
     "CORE_ANALYTICAL": 9,
     "SUPPORTING": 12,
-    "TABLE_TEXT_FIRST": 11,
+    "TABLE_TEXT_FIRST": 14,
     "RETIRE_FROM_DESIGN": 1
   },
   "grammar": {
@@ -5779,6 +5779,1320 @@
         "canonical_route": "/evidence/VIS-CAPITAL-CONTEXT/",
         "public_routes": [
           "/reforms"
+        ]
+      }
+    },
+    {
+      "visual_id": "VIS-FINDEX-ACCESS-USE",
+      "tier": "TABLE_TEXT_FIRST",
+      "rationale": "The World Bank's published shares for account ownership, saving and borrowing, all adults and by group, as a table: no interval is published here for a group value, so a drawn gap would suggest a precision the evidence does not carry.",
+      "promotion_requires": "A drawn comparison of groups needs an interval for each group value; none is published here (EXT-07 held), and this resource does not compute one from respondent-level data (OWN-09).",
+      "governed": {
+        "title_en": "Account ownership, saving and borrowing, by group",
+        "question_en": "How do account ownership, saving and borrowing differ across groups of adults in the World Bank's published values?",
+        "prohibited_inference_en": "A difference between groups does not establish its cause, and no interval is published here for a group value; group values rest on smaller samples than the value for all adults. Owning an account does not establish that it is used, and the table shows no measure of account use; a digital payment is a different measure again. The five measures have their own question bases and are not stages of one process.",
+        "alt_text_en": "World Bank published values for Yemen's Global Findex 2021 wave: 11.9% of adults had an account (the same share at a financial institution), 21.6% saved any money, 51.3% borrowed any money and 41.1% borrowed from family or friends. The table gives each share for women and men, two age groups, two education groups, adults in the poorest 40% and the richest 60% of households by income, and adults in and out of the labour force; no interval is published here for a group value, groups rest on smaller samples, and a difference between groups is not a cause. A different measure of the same wave: 9.3% of adults made or received a digital payment (95% interval 6.8% to 11.8%, computed by CauseWay from the World Bank's published value and design effect); it is a separate measure of payments, shown for all adults only, and not a measure of account ownership. Does not establish: A difference between groups does not establish its cause, and no interval is published here for a group value; group values rest on smaller samples than the value for all adults. Owning an account does not establish that it is used, and the table shows no measure of account use; a digital payment is a different measure again. The five measures have their own question bases and are not stages of one process.",
+        "period_en": "World Bank reporting year 2022; Global Findex 2021 study; Yemen fieldwork 2022-11-07 to 2023-01-09",
+        "universe_en": "Adults aged 15 and over in the areas the survey covered, and the groups by sex, age, education, income and labour-force status as the World Bank defines them. The survey frame excludes Al Baydaa, Al Jawf, Mareb, Sadah, Socotra and several districts elsewhere: areas with about 23% of the population.",
+        "title_ar": "امتلاك الحساب والادخار والاقتراض بحسب الفئة",
+        "question_ar": "كيف يختلف امتلاك الحساب والادخار والاقتراض بين فئات البالغين في القيم التي ينشرها البنك الدولي؟",
+        "prohibited_inference_ar": "الفرق بين الفئات لا يثبت سببه، ولا تُنشر هنا فترة ثقة لقيمة أي فئة؛ وتستند قيم الفئات إلى عينات أصغر من عينة القيمة الخاصة بجميع البالغين. وامتلاك الحساب لا يثبت استخدامه، ولا يعرض الجدول أي مقياس لاستخدام الحساب؛ والمدفوعة الرقمية مقياس مختلف آخر. ولكل من المقاييس الخمسة قاعدة سؤاله الخاصة، ولا تمثل مراحل في مسار واحد.",
+        "alt_text_ar": "قيم ينشرها البنك الدولي لموجة 2021 من Global Findex الخاصة باليمن: كان لدى 11.9% من البالغين حساب (والنسبة نفسها لحساب لدى مؤسسة مالية)، وادخر 21.6% أي مبلغ، واقترض 51.3% أي مبلغ، واقترض 41.1% من الأسرة أو الأصدقاء. ويعرض الجدول كل نسبة للنساء والرجال، ولفئتين عمريتين، وفئتين تعليميتين، وللبالغين في أفقر 40% وأغنى 60% من الأسر بحسب الدخل، وللبالغين داخل قوة العمل وخارجها؛ ولا تُنشر هنا فترة ثقة لقيمة أي فئة، وتستند الفئات إلى عينات أصغر، والفرق بين الفئات ليس سببًا. ومقياس مختلف من الموجة نفسها: أجرى 9.3% من البالغين مدفوعة رقمية أو تلقوها (فترة ثقة 95% من 6.8% إلى 11.8%، من احتساب CauseWay من القيمة التي ينشرها البنك الدولي ومن أثر التصميم)؛ وهو مقياس منفصل للمدفوعات، يُعرض لجميع البالغين فقط، وليس مقياسًا لامتلاك الحساب. لا يثبت: الفرق بين الفئات لا يثبت سببه، ولا تُنشر هنا فترة ثقة لقيمة أي فئة؛ وتستند قيم الفئات إلى عينات أصغر من عينة القيمة الخاصة بجميع البالغين. وامتلاك الحساب لا يثبت استخدامه، ولا يعرض الجدول أي مقياس لاستخدام الحساب؛ والمدفوعة الرقمية مقياس مختلف آخر. ولكل من المقاييس الخمسة قاعدة سؤاله الخاصة، ولا تمثل مراحل في مسار واحد.",
+        "period_ar": "سنة الإبلاغ في بيانات البنك الدولي: 2022؛ دراسة Global Findex 2021؛ العمل الميداني في اليمن من 2022-11-07 إلى 2023-01-09",
+        "universe_ar": "البالغون بعمر 15 سنة فأكثر في المناطق التي شملها المسح، والفئات بحسب الجنس والعمر والتعليم والدخل والمشاركة في قوة العمل كما يعرّفها البنك الدولي. ويستبعد إطار المسح محافظات البيضاء والجوف ومأرب وصعدة وسقطرى وعددًا من المديريات في محافظات أخرى، وهي مناطق تضم نحو 23% من السكان.",
+        "canonical_route": "/evidence/VIS-FINDEX-ACCESS-USE/",
+        "public_routes": [
+          "/people"
+        ]
+      },
+      "table": {
+        "form": "One row per group (all adults first), one column per measure; values as the World Bank publishes them, to one decimal; governed notes close the table. No gap column, no interval, no ranking.",
+        "head": [
+          {
+            "en": "Adults",
+            "ar": "البالغون",
+            "ui_id": "UI-VIS-TH-FINDEX-ADULTS"
+          },
+          {
+            "en": "Has an account",
+            "ar": "يملك حسابًا",
+            "ui_id": "UI-VIS-TH-FINDEX-ACCOUNT"
+          },
+          {
+            "en": "Account at a financial institution",
+            "ar": "حساب لدى مؤسسة مالية",
+            "ui_id": "UI-VIS-TH-FINDEX-ACCOUNT-FI"
+          },
+          {
+            "en": "Saved any money",
+            "ar": "ادّخر أي مبلغ",
+            "ui_id": "UI-VIS-TH-FINDEX-SAVED"
+          },
+          {
+            "en": "Borrowed any money",
+            "ar": "اقترض أي مبلغ",
+            "ui_id": "UI-VIS-TH-FINDEX-BORROWED"
+          },
+          {
+            "en": "Borrowed from family or friends",
+            "ar": "اقترض من الأسرة أو الأصدقاء",
+            "ui_id": "UI-VIS-TH-FINDEX-BORROWED-FAMILY"
+          }
+        ],
+        "caption": [
+          {
+            "en": "% of adults in each group, as published by the World Bank",
+            "ar": "% من البالغين في كل فئة، كما ينشرها البنك الدولي",
+            "ui_id": "UI-VIS-UNIT-PCT-ADULTS-IN-GROUP"
+          }
+        ],
+        "rows": [
+          {
+            "head": {
+              "en": "All adults (ages 15+)",
+              "ar": "جميع البالغين (15 سنة فأكثر)",
+              "ui_id": "UI-VIS-CAT-FINDEX-TOTAL"
+            },
+            "cells": [
+              {
+                "number": 11.9,
+                "ref": "fx.WB-FINDEX-OBS-2022-001.value",
+                "dp": 1
+              },
+              {
+                "number": 11.9,
+                "ref": "fx.WB-FINDEX-OBS-2022-015.value",
+                "dp": 1
+              },
+              {
+                "number": 21.6,
+                "ref": "fx.WB-FINDEX-OBS-2022-010.value",
+                "dp": 1
+              },
+              {
+                "number": 51.3,
+                "ref": "fx.WB-FINDEX-OBS-2022-011.value",
+                "dp": 1
+              },
+              {
+                "number": 41.1,
+                "ref": "fx.WB-FINDEX-OBS-2022-028.value",
+                "dp": 1
+              }
+            ]
+          },
+          {
+            "head": {
+              "en": "Women",
+              "ar": "النساء",
+              "ui_id": "UI-VIS-CAT-FINDEX-FEMALE"
+            },
+            "cells": [
+              {
+                "number": 5.4,
+                "ref": "fx.WB-FINDEX-OBS-2022-002.value",
+                "dp": 1
+              },
+              {
+                "number": 5.4,
+                "ref": "fx.WB-FINDEX-OBS-2022-016.value",
+                "dp": 1
+              },
+              {
+                "number": 16.2,
+                "ref": "fx.WB-FINDEX-OBS-2022-128.value",
+                "dp": 1
+              },
+              {
+                "number": 48.2,
+                "ref": "fx.WB-FINDEX-OBS-2022-138.value",
+                "dp": 1
+              },
+              {
+                "number": 41.1,
+                "ref": "fx.WB-FINDEX-OBS-2022-029.value",
+                "dp": 1
+              }
+            ]
+          },
+          {
+            "head": {
+              "en": "Men",
+              "ar": "الرجال",
+              "ui_id": "UI-VIS-CAT-FINDEX-MALE"
+            },
+            "cells": [
+              {
+                "number": 18.3,
+                "ref": "fx.WB-FINDEX-OBS-2022-003.value",
+                "dp": 1
+              },
+              {
+                "number": 18.3,
+                "ref": "fx.WB-FINDEX-OBS-2022-017.value",
+                "dp": 1
+              },
+              {
+                "number": 27.0,
+                "ref": "fx.WB-FINDEX-OBS-2022-129.value",
+                "dp": 1
+              },
+              {
+                "number": 54.4,
+                "ref": "fx.WB-FINDEX-OBS-2022-139.value",
+                "dp": 1
+              },
+              {
+                "number": 41.0,
+                "ref": "fx.WB-FINDEX-OBS-2022-030.value",
+                "dp": 1
+              }
+            ]
+          },
+          {
+            "head": {
+              "en": "Young adults (ages 15–24)",
+              "ar": "الشباب (15–24 سنة)",
+              "ui_id": "UI-VIS-CAT-FINDEX-AGE-15-24"
+            },
+            "cells": [
+              {
+                "number": 5.0,
+                "ref": "fx.WB-FINDEX-OBS-2022-008.value",
+                "dp": 1
+              },
+              {
+                "number": 5.0,
+                "ref": "fx.WB-FINDEX-OBS-2022-018.value",
+                "dp": 1
+              },
+              {
+                "number": 24.5,
+                "ref": "fx.WB-FINDEX-OBS-2022-130.value",
+                "dp": 1
+              },
+              {
+                "number": 42.4,
+                "ref": "fx.WB-FINDEX-OBS-2022-140.value",
+                "dp": 1
+              },
+              {
+                "number": 28.1,
+                "ref": "fx.WB-FINDEX-OBS-2022-031.value",
+                "dp": 1
+              }
+            ]
+          },
+          {
+            "head": {
+              "en": "Adults aged 25 and over",
+              "ar": "البالغون بعمر 25 سنة فأكثر",
+              "ui_id": "UI-VIS-CAT-FINDEX-AGE-25-PLUS"
+            },
+            "cells": [
+              {
+                "number": 16.1,
+                "ref": "fx.WB-FINDEX-OBS-2022-009.value",
+                "dp": 1
+              },
+              {
+                "number": 16.1,
+                "ref": "fx.WB-FINDEX-OBS-2022-019.value",
+                "dp": 1
+              },
+              {
+                "number": 19.9,
+                "ref": "fx.WB-FINDEX-OBS-2022-131.value",
+                "dp": 1
+              },
+              {
+                "number": 56.7,
+                "ref": "fx.WB-FINDEX-OBS-2022-141.value",
+                "dp": 1
+              },
+              {
+                "number": 49.0,
+                "ref": "fx.WB-FINDEX-OBS-2022-032.value",
+                "dp": 1
+              }
+            ]
+          },
+          {
+            "head": {
+              "en": "Adults with primary education or less",
+              "ar": "البالغون الحاصلون على تعليم ابتدائي أو أقل",
+              "ui_id": "UI-VIS-CAT-FINDEX-PRIMARY-EDU"
+            },
+            "cells": [
+              {
+                "number": 7.0,
+                "ref": "fx.WB-FINDEX-OBS-2022-006.value",
+                "dp": 1
+              },
+              {
+                "number": 7.0,
+                "ref": "fx.WB-FINDEX-OBS-2022-020.value",
+                "dp": 1
+              },
+              {
+                "number": 13.4,
+                "ref": "fx.WB-FINDEX-OBS-2022-132.value",
+                "dp": 1
+              },
+              {
+                "number": 49.7,
+                "ref": "fx.WB-FINDEX-OBS-2022-142.value",
+                "dp": 1
+              },
+              {
+                "number": 41.8,
+                "ref": "fx.WB-FINDEX-OBS-2022-033.value",
+                "dp": 1
+              }
+            ]
+          },
+          {
+            "head": {
+              "en": "Adults with secondary education or more",
+              "ar": "البالغون الحاصلون على تعليم ثانوي أو أعلى",
+              "ui_id": "UI-VIS-CAT-FINDEX-SECONDARY-EDU"
+            },
+            "cells": [
+              {
+                "number": 19.5,
+                "ref": "fx.WB-FINDEX-OBS-2022-007.value",
+                "dp": 1
+              },
+              {
+                "number": 19.5,
+                "ref": "fx.WB-FINDEX-OBS-2022-021.value",
+                "dp": 1
+              },
+              {
+                "number": 34.4,
+                "ref": "fx.WB-FINDEX-OBS-2022-133.value",
+                "dp": 1
+              },
+              {
+                "number": 53.7,
+                "ref": "fx.WB-FINDEX-OBS-2022-143.value",
+                "dp": 1
+              },
+              {
+                "number": 39.8,
+                "ref": "fx.WB-FINDEX-OBS-2022-034.value",
+                "dp": 1
+              }
+            ]
+          },
+          {
+            "head": {
+              "en": "Adults in the poorest 40% of households",
+              "ar": "البالغون في أفقر 40% من الأسر",
+              "ui_id": "UI-VIS-CAT-FINDEX-POOREST40"
+            },
+            "cells": [
+              {
+                "number": 6.5,
+                "ref": "fx.WB-FINDEX-OBS-2022-004.value",
+                "dp": 1
+              },
+              {
+                "number": 6.5,
+                "ref": "fx.WB-FINDEX-OBS-2022-022.value",
+                "dp": 1
+              },
+              {
+                "number": 13.1,
+                "ref": "fx.WB-FINDEX-OBS-2022-134.value",
+                "dp": 1
+              },
+              {
+                "number": 56.4,
+                "ref": "fx.WB-FINDEX-OBS-2022-144.value",
+                "dp": 1
+              },
+              {
+                "number": 48.4,
+                "ref": "fx.WB-FINDEX-OBS-2022-035.value",
+                "dp": 1
+              }
+            ]
+          },
+          {
+            "head": {
+              "en": "Adults in the richest 60% of households",
+              "ar": "البالغون في أغنى 60% من الأسر",
+              "ui_id": "UI-VIS-CAT-FINDEX-RICHEST60"
+            },
+            "cells": [
+              {
+                "number": 15.5,
+                "ref": "fx.WB-FINDEX-OBS-2022-005.value",
+                "dp": 1
+              },
+              {
+                "number": 15.5,
+                "ref": "fx.WB-FINDEX-OBS-2022-023.value",
+                "dp": 1
+              },
+              {
+                "number": 27.4,
+                "ref": "fx.WB-FINDEX-OBS-2022-135.value",
+                "dp": 1
+              },
+              {
+                "number": 47.9,
+                "ref": "fx.WB-FINDEX-OBS-2022-145.value",
+                "dp": 1
+              },
+              {
+                "number": 36.2,
+                "ref": "fx.WB-FINDEX-OBS-2022-036.value",
+                "dp": 1
+              }
+            ]
+          },
+          {
+            "head": {
+              "en": "Adults in the labour force",
+              "ar": "البالغون داخل قوة العمل",
+              "ui_id": "UI-VIS-CAT-FINDEX-IN-LABOUR-FORCE"
+            },
+            "cells": [
+              {
+                "number": 23.5,
+                "ref": "fx.WB-FINDEX-OBS-2022-013.value",
+                "dp": 1
+              },
+              {
+                "number": 23.5,
+                "ref": "fx.WB-FINDEX-OBS-2022-024.value",
+                "dp": 1
+              },
+              {
+                "number": 33.6,
+                "ref": "fx.WB-FINDEX-OBS-2022-136.value",
+                "dp": 1
+              },
+              {
+                "number": 62.8,
+                "ref": "fx.WB-FINDEX-OBS-2022-146.value",
+                "dp": 1
+              },
+              {
+                "number": 49.3,
+                "ref": "fx.WB-FINDEX-OBS-2022-037.value",
+                "dp": 1
+              }
+            ]
+          },
+          {
+            "head": {
+              "en": "Adults out of the labour force",
+              "ar": "البالغون خارج قوة العمل",
+              "ui_id": "UI-VIS-CAT-FINDEX-OUT-LABOUR-FORCE"
+            },
+            "cells": [
+              {
+                "number": 7.0,
+                "ref": "fx.WB-FINDEX-OBS-2022-014.value",
+                "dp": 1
+              },
+              {
+                "number": 7.0,
+                "ref": "fx.WB-FINDEX-OBS-2022-025.value",
+                "dp": 1
+              },
+              {
+                "number": 16.6,
+                "ref": "fx.WB-FINDEX-OBS-2022-137.value",
+                "dp": 1
+              },
+              {
+                "number": 46.4,
+                "ref": "fx.WB-FINDEX-OBS-2022-147.value",
+                "dp": 1
+              },
+              {
+                "number": 37.6,
+                "ref": "fx.WB-FINDEX-OBS-2022-038.value",
+                "dp": 1
+              }
+            ]
+          },
+          {
+            "marker": {
+              "en": "Yemen's survey did not ask the mobile-money questions, so the World Bank's values for an account at a financial institution are the same as for any account.",
+              "ar": "لم تُطرح أسئلة خدمات الأموال عبر الهاتف في مسح اليمن، لذلك تطابق قيمُ البنك الدولي لحساب لدى مؤسسة مالية قيمَه لأي حساب.",
+              "ui_id": "UI-VIS-NOTE-FINDEX-ACCOUNT-FI"
+            }
+          },
+          {
+            "marker": {
+              "en": "World Bank published values, shown without an interval: no interval is published here for a group value, each group rests on fewer than the 1,000 interviews, and a difference between groups is not a cause.",
+              "ar": "قيم ينشرها البنك الدولي، تُعرض دون فترة ثقة: لا تُنشر هنا فترة ثقة لقيمة أي فئة، وتستند كل فئة إلى أقل من مقابلات العينة البالغة 1,000، والفرق بين الفئات ليس سببًا.",
+              "ui_id": "UI-VIS-NOTE-FINDEX-GROUPS"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "visual_id": "VIS-FINDEX-RESILIENCE",
+      "tier": "TABLE_TEXT_FIRST",
+      "rationale": "The four published answer categories on emergency funds within 30 days, all adults and by group, as a table: the categories are not a score, and no interval is published here for a group value.",
+      "promotion_requires": "A drawn comparison of groups needs an interval for each group value; none is published here (EXT-07 held), and this resource does not compute one from respondent-level data (OWN-09).",
+      "governed": {
+        "title_en": "Coming up with emergency funds within 30 days, by group",
+        "question_en": "Did adults say they could come up with emergency funds within 30 days, and how difficult it would be, by group?",
+        "prohibited_inference_en": "The answers are self-assessments of a hypothetical emergency, not observed events, and the ordered categories do not form a resilience score; no method for combining them is used here. A difference between groups does not establish its cause, and no interval is published here for a group value. Saying the money could be raised does not show where it would come from: it may be borrowed, including from family and friends.",
+        "alt_text_en": "World Bank published values for Yemen's Global Findex 2021 wave: 10.8% of adults said that coming up with emergency funds within 30 days would not be possible, or did not know or did not answer (the World Bank counts these together); 25.1% said it would be possible but very difficult, 40.4% somewhat difficult and 23.2% not difficult at all. The table gives the same four answers by sex, age, education, income and labour-force status; the shares in a row do not quite add up to all adults, because a few adults who said it was possible did not say how difficult. No interval is published here for a group value, groups rest on smaller samples, and a difference between groups is not a cause. Does not establish: The answers are self-assessments of a hypothetical emergency, not observed events, and the ordered categories do not form a resilience score; no method for combining them is used here. A difference between groups does not establish its cause, and no interval is published here for a group value. Saying the money could be raised does not show where it would come from: it may be borrowed, including from family and friends.",
+        "period_en": "World Bank reporting year 2022; Global Findex 2021 study; Yemen fieldwork 2022-11-07 to 2023-01-09",
+        "universe_en": "Adults aged 15 and over in the areas the survey covered, and the groups by sex, age, education, income and labour-force status as the World Bank defines them. The survey frame excludes Al Baydaa, Al Jawf, Mareb, Sadah, Socotra and several districts elsewhere: areas with about 23% of the population.",
+        "title_ar": "تدبير أموال للطوارئ خلال 30 يومًا بحسب الفئة",
+        "question_ar": "هل قال البالغون إن بإمكانهم تدبير أموال للطوارئ خلال 30 يومًا، وما مدى صعوبة ذلك، بحسب الفئة؟",
+        "prohibited_inference_ar": "الإجابات تقديرات ذاتية لحالة طارئة افتراضية، لا أحداث مرصودة، ولا تشكّل فئات الإجابة المرتبة درجة مركبة للصمود، ولا تُستخدم هنا أي طريقة لدمجها. والفرق بين الفئات لا يثبت سببه، ولا تُنشر هنا فترة ثقة لقيمة أي فئة. والقول بإمكان تدبير المال لا يبين مصدره: فقد يكون مقترضًا، بما في ذلك من الأسرة والأصدقاء.",
+        "alt_text_ar": "قيم ينشرها البنك الدولي لموجة 2021 من Global Findex الخاصة باليمن: قال 10.8% من البالغين إن تدبير أموال للطوارئ خلال 30 يومًا سيكون غير ممكن، أو لم يعرفوا أو لم يجيبوا (ويحتسب البنك الدولي هذه الإجابات معًا)؛ وقال 25.1% إنه سيكون ممكنًا بصعوبة بالغة، و40.4% ببعض الصعوبة، و23.2% دون أي صعوبة. ويعرض الجدول الإجابات الأربع نفسها بحسب الجنس والعمر والتعليم والدخل والمشاركة في قوة العمل؛ ولا تبلغ الحصص في كل صف مجموع البالغين تمامًا، لأن قلة ممن قالوا إن ذلك ممكن لم يذكروا مدى صعوبته. ولا تُنشر هنا فترة ثقة لقيمة أي فئة، وتستند الفئات إلى عينات أصغر، والفرق بين الفئات ليس سببًا. لا يثبت: الإجابات تقديرات ذاتية لحالة طارئة افتراضية، لا أحداث مرصودة، ولا تشكّل فئات الإجابة المرتبة درجة مركبة للصمود، ولا تُستخدم هنا أي طريقة لدمجها. والفرق بين الفئات لا يثبت سببه، ولا تُنشر هنا فترة ثقة لقيمة أي فئة. والقول بإمكان تدبير المال لا يبين مصدره: فقد يكون مقترضًا، بما في ذلك من الأسرة والأصدقاء.",
+        "period_ar": "سنة الإبلاغ في بيانات البنك الدولي: 2022؛ دراسة Global Findex 2021؛ العمل الميداني في اليمن من 2022-11-07 إلى 2023-01-09",
+        "universe_ar": "البالغون بعمر 15 سنة فأكثر في المناطق التي شملها المسح، والفئات بحسب الجنس والعمر والتعليم والدخل والمشاركة في قوة العمل كما يعرّفها البنك الدولي. ويستبعد إطار المسح محافظات البيضاء والجوف ومأرب وصعدة وسقطرى وعددًا من المديريات في محافظات أخرى، وهي مناطق تضم نحو 23% من السكان.",
+        "canonical_route": "/evidence/VIS-FINDEX-RESILIENCE/",
+        "public_routes": [
+          "/people"
+        ]
+      },
+      "table": {
+        "form": "One row per group (all adults first), one column per measure; values as the World Bank publishes them, to one decimal; governed notes close the table. No gap column, no interval, no ranking.",
+        "head": [
+          {
+            "en": "Adults",
+            "ar": "البالغون",
+            "ui_id": "UI-VIS-TH-FINDEX-ADULTS"
+          },
+          {
+            "en": "Not possible, or don't know or no answer",
+            "ar": "غير ممكن، أو لا يعرف أو لا إجابة",
+            "ui_id": "UI-VIS-TH-FINDEX-EMERG-NOT-POSSIBLE"
+          },
+          {
+            "en": "Possible, very difficult",
+            "ar": "ممكن بصعوبة بالغة",
+            "ui_id": "UI-VIS-TH-FINDEX-EMERG-VERY"
+          },
+          {
+            "en": "Possible, somewhat difficult",
+            "ar": "ممكن ببعض الصعوبة",
+            "ui_id": "UI-VIS-TH-FINDEX-EMERG-SOMEWHAT"
+          },
+          {
+            "en": "Possible, not difficult at all",
+            "ar": "ممكن دون أي صعوبة",
+            "ui_id": "UI-VIS-TH-FINDEX-EMERG-NOT-DIFFICULT"
+          }
+        ],
+        "caption": [
+          {
+            "en": "Coming up with emergency funds within 30 days",
+            "ar": "تدبير أموال للطوارئ خلال 30 يومًا",
+            "ui_id": "UI-VIS-NOTE-FINDEX-EMERG-30"
+          },
+          {
+            "en": "% of adults in each group, as published by the World Bank",
+            "ar": "% من البالغين في كل فئة، كما ينشرها البنك الدولي",
+            "ui_id": "UI-VIS-UNIT-PCT-ADULTS-IN-GROUP"
+          }
+        ],
+        "rows": [
+          {
+            "head": {
+              "en": "All adults (ages 15+)",
+              "ar": "جميع البالغين (15 سنة فأكثر)",
+              "ui_id": "UI-VIS-CAT-FINDEX-TOTAL"
+            },
+            "cells": [
+              {
+                "number": 10.8,
+                "ref": "fx.WB-FINDEX-OBS-2022-039.value",
+                "dp": 1
+              },
+              {
+                "number": 25.1,
+                "ref": "fx.WB-FINDEX-OBS-2022-050.value",
+                "dp": 1
+              },
+              {
+                "number": 40.4,
+                "ref": "fx.WB-FINDEX-OBS-2022-061.value",
+                "dp": 1
+              },
+              {
+                "number": 23.2,
+                "ref": "fx.WB-FINDEX-OBS-2022-072.value",
+                "dp": 1
+              }
+            ]
+          },
+          {
+            "head": {
+              "en": "Women",
+              "ar": "النساء",
+              "ui_id": "UI-VIS-CAT-FINDEX-FEMALE"
+            },
+            "cells": [
+              {
+                "number": 13.9,
+                "ref": "fx.WB-FINDEX-OBS-2022-040.value",
+                "dp": 1
+              },
+              {
+                "number": 25.3,
+                "ref": "fx.WB-FINDEX-OBS-2022-051.value",
+                "dp": 1
+              },
+              {
+                "number": 40.8,
+                "ref": "fx.WB-FINDEX-OBS-2022-062.value",
+                "dp": 1
+              },
+              {
+                "number": 19.4,
+                "ref": "fx.WB-FINDEX-OBS-2022-073.value",
+                "dp": 1
+              }
+            ]
+          },
+          {
+            "head": {
+              "en": "Men",
+              "ar": "الرجال",
+              "ui_id": "UI-VIS-CAT-FINDEX-MALE"
+            },
+            "cells": [
+              {
+                "number": 7.8,
+                "ref": "fx.WB-FINDEX-OBS-2022-041.value",
+                "dp": 1
+              },
+              {
+                "number": 24.8,
+                "ref": "fx.WB-FINDEX-OBS-2022-052.value",
+                "dp": 1
+              },
+              {
+                "number": 40.0,
+                "ref": "fx.WB-FINDEX-OBS-2022-063.value",
+                "dp": 1
+              },
+              {
+                "number": 27.0,
+                "ref": "fx.WB-FINDEX-OBS-2022-074.value",
+                "dp": 1
+              }
+            ]
+          },
+          {
+            "head": {
+              "en": "Young adults (ages 15–24)",
+              "ar": "الشباب (15–24 سنة)",
+              "ui_id": "UI-VIS-CAT-FINDEX-AGE-15-24"
+            },
+            "cells": [
+              {
+                "number": 10.5,
+                "ref": "fx.WB-FINDEX-OBS-2022-042.value",
+                "dp": 1
+              },
+              {
+                "number": 21.4,
+                "ref": "fx.WB-FINDEX-OBS-2022-053.value",
+                "dp": 1
+              },
+              {
+                "number": 45.9,
+                "ref": "fx.WB-FINDEX-OBS-2022-064.value",
+                "dp": 1
+              },
+              {
+                "number": 21.3,
+                "ref": "fx.WB-FINDEX-OBS-2022-075.value",
+                "dp": 1
+              }
+            ]
+          },
+          {
+            "head": {
+              "en": "Adults aged 25 and over",
+              "ar": "البالغون بعمر 25 سنة فأكثر",
+              "ui_id": "UI-VIS-CAT-FINDEX-AGE-25-PLUS"
+            },
+            "cells": [
+              {
+                "number": 11.0,
+                "ref": "fx.WB-FINDEX-OBS-2022-043.value",
+                "dp": 1
+              },
+              {
+                "number": 27.3,
+                "ref": "fx.WB-FINDEX-OBS-2022-054.value",
+                "dp": 1
+              },
+              {
+                "number": 37.0,
+                "ref": "fx.WB-FINDEX-OBS-2022-065.value",
+                "dp": 1
+              },
+              {
+                "number": 24.4,
+                "ref": "fx.WB-FINDEX-OBS-2022-076.value",
+                "dp": 1
+              }
+            ]
+          },
+          {
+            "head": {
+              "en": "Adults with primary education or less",
+              "ar": "البالغون الحاصلون على تعليم ابتدائي أو أقل",
+              "ui_id": "UI-VIS-CAT-FINDEX-PRIMARY-EDU"
+            },
+            "cells": [
+              {
+                "number": 15.9,
+                "ref": "fx.WB-FINDEX-OBS-2022-044.value",
+                "dp": 1
+              },
+              {
+                "number": 30.8,
+                "ref": "fx.WB-FINDEX-OBS-2022-055.value",
+                "dp": 1
+              },
+              {
+                "number": 37.1,
+                "ref": "fx.WB-FINDEX-OBS-2022-066.value",
+                "dp": 1
+              },
+              {
+                "number": 15.5,
+                "ref": "fx.WB-FINDEX-OBS-2022-077.value",
+                "dp": 1
+              }
+            ]
+          },
+          {
+            "head": {
+              "en": "Adults with secondary education or more",
+              "ar": "البالغون الحاصلون على تعليم ثانوي أو أعلى",
+              "ui_id": "UI-VIS-CAT-FINDEX-SECONDARY-EDU"
+            },
+            "cells": [
+              {
+                "number": 3.0,
+                "ref": "fx.WB-FINDEX-OBS-2022-045.value",
+                "dp": 1
+              },
+              {
+                "number": 16.2,
+                "ref": "fx.WB-FINDEX-OBS-2022-056.value",
+                "dp": 1
+              },
+              {
+                "number": 45.5,
+                "ref": "fx.WB-FINDEX-OBS-2022-067.value",
+                "dp": 1
+              },
+              {
+                "number": 35.1,
+                "ref": "fx.WB-FINDEX-OBS-2022-078.value",
+                "dp": 1
+              }
+            ]
+          },
+          {
+            "head": {
+              "en": "Adults in the poorest 40% of households",
+              "ar": "البالغون في أفقر 40% من الأسر",
+              "ui_id": "UI-VIS-CAT-FINDEX-POOREST40"
+            },
+            "cells": [
+              {
+                "number": 15.7,
+                "ref": "fx.WB-FINDEX-OBS-2022-046.value",
+                "dp": 1
+              },
+              {
+                "number": 33.1,
+                "ref": "fx.WB-FINDEX-OBS-2022-057.value",
+                "dp": 1
+              },
+              {
+                "number": 39.1,
+                "ref": "fx.WB-FINDEX-OBS-2022-068.value",
+                "dp": 1
+              },
+              {
+                "number": 11.5,
+                "ref": "fx.WB-FINDEX-OBS-2022-079.value",
+                "dp": 1
+              }
+            ]
+          },
+          {
+            "head": {
+              "en": "Adults in the richest 60% of households",
+              "ar": "البالغون في أغنى 60% من الأسر",
+              "ui_id": "UI-VIS-CAT-FINDEX-RICHEST60"
+            },
+            "cells": [
+              {
+                "number": 7.6,
+                "ref": "fx.WB-FINDEX-OBS-2022-047.value",
+                "dp": 1
+              },
+              {
+                "number": 19.7,
+                "ref": "fx.WB-FINDEX-OBS-2022-058.value",
+                "dp": 1
+              },
+              {
+                "number": 41.2,
+                "ref": "fx.WB-FINDEX-OBS-2022-069.value",
+                "dp": 1
+              },
+              {
+                "number": 31.0,
+                "ref": "fx.WB-FINDEX-OBS-2022-080.value",
+                "dp": 1
+              }
+            ]
+          },
+          {
+            "head": {
+              "en": "Adults in the labour force",
+              "ar": "البالغون داخل قوة العمل",
+              "ui_id": "UI-VIS-CAT-FINDEX-IN-LABOUR-FORCE"
+            },
+            "cells": [
+              {
+                "number": 2.7,
+                "ref": "fx.WB-FINDEX-OBS-2022-048.value",
+                "dp": 1
+              },
+              {
+                "number": 22.8,
+                "ref": "fx.WB-FINDEX-OBS-2022-059.value",
+                "dp": 1
+              },
+              {
+                "number": 38.7,
+                "ref": "fx.WB-FINDEX-OBS-2022-070.value",
+                "dp": 1
+              },
+              {
+                "number": 35.7,
+                "ref": "fx.WB-FINDEX-OBS-2022-081.value",
+                "dp": 1
+              }
+            ]
+          },
+          {
+            "head": {
+              "en": "Adults out of the labour force",
+              "ar": "البالغون خارج قوة العمل",
+              "ui_id": "UI-VIS-CAT-FINDEX-OUT-LABOUR-FORCE"
+            },
+            "cells": [
+              {
+                "number": 14.3,
+                "ref": "fx.WB-FINDEX-OBS-2022-049.value",
+                "dp": 1
+              },
+              {
+                "number": 26.0,
+                "ref": "fx.WB-FINDEX-OBS-2022-060.value",
+                "dp": 1
+              },
+              {
+                "number": 41.1,
+                "ref": "fx.WB-FINDEX-OBS-2022-071.value",
+                "dp": 1
+              },
+              {
+                "number": 17.9,
+                "ref": "fx.WB-FINDEX-OBS-2022-082.value",
+                "dp": 1
+              }
+            ]
+          },
+          {
+            "marker": {
+              "en": "The four answers are adults' own assessments, in the survey's categories, and are not combined into a score. \"Not possible\" includes adults who did not know or did not answer, as the World Bank counts them; the shares in a row do not quite add up to all adults, because a few adults who said it was possible did not say how difficult. The survey also asked about 7 days, but the World Bank publishes no value for that question.",
+              "ar": "الإجابات الأربع تقديرات البالغين أنفسهم، بفئات المسح، ولا تُدمج في درجة واحدة. وتشمل فئة «غير ممكن» البالغين الذين لم يعرفوا أو لم يجيبوا، كما يحتسبهم البنك الدولي؛ ولا تبلغ الحصص في كل صف مجموع البالغين تمامًا، لأن قلة ممن قالوا إن ذلك ممكن لم يذكروا مدى صعوبته. وسأل المسح أيضًا عن مهلة 7 أيام، لكن البنك الدولي لا ينشر قيمة لذلك السؤال.",
+              "ui_id": "UI-VIS-NOTE-FINDEX-EMERG-CATS"
+            }
+          },
+          {
+            "marker": {
+              "en": "World Bank published values, shown without an interval: no interval is published here for a group value, each group rests on fewer than the 1,000 interviews, and a difference between groups is not a cause.",
+              "ar": "قيم ينشرها البنك الدولي، تُعرض دون فترة ثقة: لا تُنشر هنا فترة ثقة لقيمة أي فئة، وتستند كل فئة إلى أقل من مقابلات العينة البالغة 1,000، والفرق بين الفئات ليس سببًا.",
+              "ui_id": "UI-VIS-NOTE-FINDEX-GROUPS"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "visual_id": "VIS-FINDEX-FLOW-CHANNELS",
+      "tier": "TABLE_TEXT_FIRST",
+      "rationale": "The World Bank's published shares of adults receiving wages or agricultural payments and sending or receiving domestic remittances, all adults and by group, as a table; channels are not shown.",
+      "promotion_requires": "A drawn comparison of groups needs an interval for each group value; none is published here (EXT-07 held), and this resource does not compute one from respondent-level data (OWN-09).",
+      "governed": {
+        "title_en": "Wages, agricultural payments and domestic remittances, by group",
+        "question_en": "Which adults received wages or agricultural payments, or sent or received domestic remittances, in the World Bank's published values?",
+        "prohibited_inference_en": "Each value is a share of all adults, not of recipients, and does not measure payment volumes, programme outcomes or remittance flows for the economy as a whole. The channels through which money was paid, sent or received are not shown: the World Bank publishes most channel values for all adults only, and Yemen's survey did not ask the mobile-money questions. A difference between groups does not establish its cause.",
+        "alt_text_en": "World Bank published values for Yemen's Global Findex 2021 wave: 12.4% of adults received wages, 28.9% received payments for agricultural sales, 17.7% sent domestic remittances, 31.9% received them and 37.8% did either. The table gives each share by sex, age, education, income and labour-force status. Each is a share of all adults in the group; no interval is published here for a group value, and a difference between groups is not a cause. Does not establish: Each value is a share of all adults, not of recipients, and does not measure payment volumes, programme outcomes or remittance flows for the economy as a whole. The channels through which money was paid, sent or received are not shown: the World Bank publishes most channel values for all adults only, and Yemen's survey did not ask the mobile-money questions. A difference between groups does not establish its cause.",
+        "period_en": "World Bank reporting year 2022; Global Findex 2021 study; Yemen fieldwork 2022-11-07 to 2023-01-09",
+        "universe_en": "Adults aged 15 and over in the areas the survey covered, and the groups by sex, age, education, income and labour-force status as the World Bank defines them. The survey frame excludes Al Baydaa, Al Jawf, Mareb, Sadah, Socotra and several districts elsewhere: areas with about 23% of the population.",
+        "title_ar": "الأجور والمدفوعات الزراعية والحوالات المحلية بحسب الفئة",
+        "question_ar": "من هم البالغون الذين تلقوا أجورًا أو مدفوعات زراعية، أو أرسلوا حوالات محلية أو تلقوها، في القيم التي ينشرها البنك الدولي؟",
+        "prohibited_inference_ar": "كل قيمة نسبة من جميع البالغين لا من المتلقين، ولا تقيس أحجام المدفوعات ولا نتائج البرامج ولا تدفقات الحوالات على مستوى الاقتصاد ككل. ولا تُعرض القنوات التي دُفعت أو أُرسلت أو استُلمت عبرها الأموال: فالبنك الدولي ينشر معظم قيم القنوات لجميع البالغين فقط، ولم يطرح مسح اليمن أسئلة خدمات الأموال عبر الهاتف. والفرق بين الفئات لا يثبت سببه.",
+        "alt_text_ar": "قيم ينشرها البنك الدولي لموجة 2021 من Global Findex الخاصة باليمن: تلقى 12.4% من البالغين أجورًا، وتلقى 28.9% مدفوعات عن مبيعات زراعية، وأرسل 17.7% حوالات محلية، وتلقاها 31.9%، وقام 37.8% بأيٍّ من الأمرين. ويعرض الجدول كل نسبة بحسب الجنس والعمر والتعليم والدخل والمشاركة في قوة العمل. وكل منها نسبة من جميع البالغين في الفئة؛ ولا تُنشر هنا فترة ثقة لقيمة أي فئة، والفرق بين الفئات ليس سببًا. لا يثبت: كل قيمة نسبة من جميع البالغين لا من المتلقين، ولا تقيس أحجام المدفوعات ولا نتائج البرامج ولا تدفقات الحوالات على مستوى الاقتصاد ككل. ولا تُعرض القنوات التي دُفعت أو أُرسلت أو استُلمت عبرها الأموال: فالبنك الدولي ينشر معظم قيم القنوات لجميع البالغين فقط، ولم يطرح مسح اليمن أسئلة خدمات الأموال عبر الهاتف. والفرق بين الفئات لا يثبت سببه.",
+        "period_ar": "سنة الإبلاغ في بيانات البنك الدولي: 2022؛ دراسة Global Findex 2021؛ العمل الميداني في اليمن من 2022-11-07 إلى 2023-01-09",
+        "universe_ar": "البالغون بعمر 15 سنة فأكثر في المناطق التي شملها المسح، والفئات بحسب الجنس والعمر والتعليم والدخل والمشاركة في قوة العمل كما يعرّفها البنك الدولي. ويستبعد إطار المسح محافظات البيضاء والجوف ومأرب وصعدة وسقطرى وعددًا من المديريات في محافظات أخرى، وهي مناطق تضم نحو 23% من السكان.",
+        "canonical_route": "/evidence/VIS-FINDEX-FLOW-CHANNELS/",
+        "public_routes": [
+          "/people",
+          "/remittances"
+        ]
+      },
+      "table": {
+        "form": "One row per group (all adults first), one column per measure; values as the World Bank publishes them, to one decimal; governed notes close the table. No gap column, no interval, no ranking.",
+        "head": [
+          {
+            "en": "Adults",
+            "ar": "البالغون",
+            "ui_id": "UI-VIS-TH-FINDEX-ADULTS"
+          },
+          {
+            "en": "Received wages",
+            "ar": "تلقى أجورًا",
+            "ui_id": "UI-VIS-TH-FINDEX-WAGES"
+          },
+          {
+            "en": "Received payments for agricultural sales",
+            "ar": "تلقى مدفوعات عن مبيعات زراعية",
+            "ui_id": "UI-VIS-TH-FINDEX-AGRI"
+          },
+          {
+            "en": "Sent domestic remittances",
+            "ar": "أرسل حوالات محلية",
+            "ui_id": "UI-VIS-TH-FINDEX-REMIT-SENT"
+          },
+          {
+            "en": "Received domestic remittances",
+            "ar": "تلقى حوالات محلية",
+            "ui_id": "UI-VIS-TH-FINDEX-REMIT-RECEIVED"
+          },
+          {
+            "en": "Sent or received domestic remittances",
+            "ar": "أرسل حوالات محلية أو تلقاها",
+            "ui_id": "UI-VIS-TH-FINDEX-REMIT-ANY"
+          }
+        ],
+        "caption": [
+          {
+            "en": "% of adults in each group, as published by the World Bank",
+            "ar": "% من البالغين في كل فئة، كما ينشرها البنك الدولي",
+            "ui_id": "UI-VIS-UNIT-PCT-ADULTS-IN-GROUP"
+          }
+        ],
+        "rows": [
+          {
+            "head": {
+              "en": "All adults (ages 15+)",
+              "ar": "جميع البالغين (15 سنة فأكثر)",
+              "ui_id": "UI-VIS-CAT-FINDEX-TOTAL"
+            },
+            "cells": [
+              {
+                "number": 12.4,
+                "ref": "fx.WB-FINDEX-OBS-2022-105.value",
+                "dp": 1
+              },
+              {
+                "number": 28.9,
+                "ref": "fx.WB-FINDEX-OBS-2022-117.value",
+                "dp": 1
+              },
+              {
+                "number": 17.7,
+                "ref": "fx.WB-FINDEX-OBS-2022-083.value",
+                "dp": 1
+              },
+              {
+                "number": 31.9,
+                "ref": "fx.WB-FINDEX-OBS-2022-094.value",
+                "dp": 1
+              },
+              {
+                "number": 37.8,
+                "ref": "fx.WB-FINDEX-OBS-2022-148.value",
+                "dp": 1
+              }
+            ]
+          },
+          {
+            "head": {
+              "en": "Women",
+              "ar": "النساء",
+              "ui_id": "UI-VIS-CAT-FINDEX-FEMALE"
+            },
+            "cells": [
+              {
+                "number": 5.9,
+                "ref": "fx.WB-FINDEX-OBS-2022-106.value",
+                "dp": 1
+              },
+              {
+                "number": 24.0,
+                "ref": "fx.WB-FINDEX-OBS-2022-118.value",
+                "dp": 1
+              },
+              {
+                "number": 8.6,
+                "ref": "fx.WB-FINDEX-OBS-2022-084.value",
+                "dp": 1
+              },
+              {
+                "number": 25.5,
+                "ref": "fx.WB-FINDEX-OBS-2022-095.value",
+                "dp": 1
+              },
+              {
+                "number": 27.8,
+                "ref": "fx.WB-FINDEX-OBS-2022-149.value",
+                "dp": 1
+              }
+            ]
+          },
+          {
+            "head": {
+              "en": "Men",
+              "ar": "الرجال",
+              "ui_id": "UI-VIS-CAT-FINDEX-MALE"
+            },
+            "cells": [
+              {
+                "number": 18.8,
+                "ref": "fx.WB-FINDEX-OBS-2022-107.value",
+                "dp": 1
+              },
+              {
+                "number": 33.8,
+                "ref": "fx.WB-FINDEX-OBS-2022-119.value",
+                "dp": 1
+              },
+              {
+                "number": 26.7,
+                "ref": "fx.WB-FINDEX-OBS-2022-085.value",
+                "dp": 1
+              },
+              {
+                "number": 38.3,
+                "ref": "fx.WB-FINDEX-OBS-2022-096.value",
+                "dp": 1
+              },
+              {
+                "number": 47.7,
+                "ref": "fx.WB-FINDEX-OBS-2022-150.value",
+                "dp": 1
+              }
+            ]
+          },
+          {
+            "head": {
+              "en": "Young adults (ages 15–24)",
+              "ar": "الشباب (15–24 سنة)",
+              "ui_id": "UI-VIS-CAT-FINDEX-AGE-15-24"
+            },
+            "cells": [
+              {
+                "number": 9.7,
+                "ref": "fx.WB-FINDEX-OBS-2022-108.value",
+                "dp": 1
+              },
+              {
+                "number": 23.5,
+                "ref": "fx.WB-FINDEX-OBS-2022-120.value",
+                "dp": 1
+              },
+              {
+                "number": 15.6,
+                "ref": "fx.WB-FINDEX-OBS-2022-086.value",
+                "dp": 1
+              },
+              {
+                "number": 26.7,
+                "ref": "fx.WB-FINDEX-OBS-2022-097.value",
+                "dp": 1
+              },
+              {
+                "number": 33.7,
+                "ref": "fx.WB-FINDEX-OBS-2022-151.value",
+                "dp": 1
+              }
+            ]
+          },
+          {
+            "head": {
+              "en": "Adults aged 25 and over",
+              "ar": "البالغون بعمر 25 سنة فأكثر",
+              "ui_id": "UI-VIS-CAT-FINDEX-AGE-25-PLUS"
+            },
+            "cells": [
+              {
+                "number": 14.0,
+                "ref": "fx.WB-FINDEX-OBS-2022-109.value",
+                "dp": 1
+              },
+              {
+                "number": 32.2,
+                "ref": "fx.WB-FINDEX-OBS-2022-121.value",
+                "dp": 1
+              },
+              {
+                "number": 18.9,
+                "ref": "fx.WB-FINDEX-OBS-2022-087.value",
+                "dp": 1
+              },
+              {
+                "number": 35.1,
+                "ref": "fx.WB-FINDEX-OBS-2022-098.value",
+                "dp": 1
+              },
+              {
+                "number": 40.2,
+                "ref": "fx.WB-FINDEX-OBS-2022-152.value",
+                "dp": 1
+              }
+            ]
+          },
+          {
+            "head": {
+              "en": "Adults with primary education or less",
+              "ar": "البالغون الحاصلون على تعليم ابتدائي أو أقل",
+              "ui_id": "UI-VIS-CAT-FINDEX-PRIMARY-EDU"
+            },
+            "cells": [
+              {
+                "number": 6.9,
+                "ref": "fx.WB-FINDEX-OBS-2022-110.value",
+                "dp": 1
+              },
+              {
+                "number": 28.5,
+                "ref": "fx.WB-FINDEX-OBS-2022-122.value",
+                "dp": 1
+              },
+              {
+                "number": 9.7,
+                "ref": "fx.WB-FINDEX-OBS-2022-088.value",
+                "dp": 1
+              },
+              {
+                "number": 25.2,
+                "ref": "fx.WB-FINDEX-OBS-2022-099.value",
+                "dp": 1
+              },
+              {
+                "number": 28.4,
+                "ref": "fx.WB-FINDEX-OBS-2022-153.value",
+                "dp": 1
+              }
+            ]
+          },
+          {
+            "head": {
+              "en": "Adults with secondary education or more",
+              "ar": "البالغون الحاصلون على تعليم ثانوي أو أعلى",
+              "ui_id": "UI-VIS-CAT-FINDEX-SECONDARY-EDU"
+            },
+            "cells": [
+              {
+                "number": 20.8,
+                "ref": "fx.WB-FINDEX-OBS-2022-111.value",
+                "dp": 1
+              },
+              {
+                "number": 29.5,
+                "ref": "fx.WB-FINDEX-OBS-2022-123.value",
+                "dp": 1
+              },
+              {
+                "number": 30.1,
+                "ref": "fx.WB-FINDEX-OBS-2022-089.value",
+                "dp": 1
+              },
+              {
+                "number": 42.4,
+                "ref": "fx.WB-FINDEX-OBS-2022-100.value",
+                "dp": 1
+              },
+              {
+                "number": 52.3,
+                "ref": "fx.WB-FINDEX-OBS-2022-154.value",
+                "dp": 1
+              }
+            ]
+          },
+          {
+            "head": {
+              "en": "Adults in the poorest 40% of households",
+              "ar": "البالغون في أفقر 40% من الأسر",
+              "ui_id": "UI-VIS-CAT-FINDEX-POOREST40"
+            },
+            "cells": [
+              {
+                "number": 10.3,
+                "ref": "fx.WB-FINDEX-OBS-2022-112.value",
+                "dp": 1
+              },
+              {
+                "number": 27.8,
+                "ref": "fx.WB-FINDEX-OBS-2022-124.value",
+                "dp": 1
+              },
+              {
+                "number": 9.9,
+                "ref": "fx.WB-FINDEX-OBS-2022-090.value",
+                "dp": 1
+              },
+              {
+                "number": 24.7,
+                "ref": "fx.WB-FINDEX-OBS-2022-101.value",
+                "dp": 1
+              },
+              {
+                "number": 28.7,
+                "ref": "fx.WB-FINDEX-OBS-2022-155.value",
+                "dp": 1
+              }
+            ]
+          },
+          {
+            "head": {
+              "en": "Adults in the richest 60% of households",
+              "ar": "البالغون في أغنى 60% من الأسر",
+              "ui_id": "UI-VIS-CAT-FINDEX-RICHEST60"
+            },
+            "cells": [
+              {
+                "number": 13.7,
+                "ref": "fx.WB-FINDEX-OBS-2022-113.value",
+                "dp": 1
+              },
+              {
+                "number": 29.7,
+                "ref": "fx.WB-FINDEX-OBS-2022-125.value",
+                "dp": 1
+              },
+              {
+                "number": 22.8,
+                "ref": "fx.WB-FINDEX-OBS-2022-091.value",
+                "dp": 1
+              },
+              {
+                "number": 36.8,
+                "ref": "fx.WB-FINDEX-OBS-2022-102.value",
+                "dp": 1
+              },
+              {
+                "number": 43.8,
+                "ref": "fx.WB-FINDEX-OBS-2022-156.value",
+                "dp": 1
+              }
+            ]
+          },
+          {
+            "head": {
+              "en": "Adults in the labour force",
+              "ar": "البالغون داخل قوة العمل",
+              "ui_id": "UI-VIS-CAT-FINDEX-IN-LABOUR-FORCE"
+            },
+            "cells": [
+              {
+                "number": 28.9,
+                "ref": "fx.WB-FINDEX-OBS-2022-114.value",
+                "dp": 1
+              },
+              {
+                "number": 41.9,
+                "ref": "fx.WB-FINDEX-OBS-2022-126.value",
+                "dp": 1
+              },
+              {
+                "number": 37.6,
+                "ref": "fx.WB-FINDEX-OBS-2022-092.value",
+                "dp": 1
+              },
+              {
+                "number": 45.0,
+                "ref": "fx.WB-FINDEX-OBS-2022-103.value",
+                "dp": 1
+              },
+              {
+                "number": 58.3,
+                "ref": "fx.WB-FINDEX-OBS-2022-157.value",
+                "dp": 1
+              }
+            ]
+          },
+          {
+            "head": {
+              "en": "Adults out of the labour force",
+              "ar": "البالغون خارج قوة العمل",
+              "ui_id": "UI-VIS-CAT-FINDEX-OUT-LABOUR-FORCE"
+            },
+            "cells": [
+              {
+                "number": 5.4,
+                "ref": "fx.WB-FINDEX-OBS-2022-115.value",
+                "dp": 1
+              },
+              {
+                "number": 23.4,
+                "ref": "fx.WB-FINDEX-OBS-2022-127.value",
+                "dp": 1
+              },
+              {
+                "number": 9.2,
+                "ref": "fx.WB-FINDEX-OBS-2022-093.value",
+                "dp": 1
+              },
+              {
+                "number": 26.4,
+                "ref": "fx.WB-FINDEX-OBS-2022-104.value",
+                "dp": 1
+              },
+              {
+                "number": 29.1,
+                "ref": "fx.WB-FINDEX-OBS-2022-158.value",
+                "dp": 1
+              }
+            ]
+          },
+          {
+            "marker": {
+              "en": "Each value is a share of all adults in the group, not of those who received or sent the money; the channels through which it was paid, sent or received are not shown.",
+              "ar": "كل قيمة نسبة من جميع البالغين في الفئة، لا ممن تلقوا الأموال أو أرسلوها؛ ولا تُعرض القنوات التي دُفعت أو أُرسلت أو استُلمت عبرها.",
+              "ui_id": "UI-VIS-NOTE-FINDEX-FLOWS"
+            }
+          },
+          {
+            "marker": {
+              "en": "World Bank published values, shown without an interval: no interval is published here for a group value, each group rests on fewer than the 1,000 interviews, and a difference between groups is not a cause.",
+              "ar": "قيم ينشرها البنك الدولي، تُعرض دون فترة ثقة: لا تُنشر هنا فترة ثقة لقيمة أي فئة، وتستند كل فئة إلى أقل من مقابلات العينة البالغة 1,000، والفرق بين الفئات ليس سببًا.",
+              "ui_id": "UI-VIS-NOTE-FINDEX-GROUPS"
+            }
+          }
         ]
       }
     }

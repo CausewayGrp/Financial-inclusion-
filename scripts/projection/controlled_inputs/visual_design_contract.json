@@ -1803,6 +1803,1541 @@
       "visual_id": "VIS-CAPITAL-CONTEXT",
       "tier": "RETIRE_FROM_DESIGN",
       "rationale": "Its data (35 OCHA FTS flows) are governed HUMANITARIAN_CONTEXT_ONLY and 'backend/context only'; a public relationship graph would present context-only data as a public analytical object. The Evidence Record text stays."
+    },
+    {
+      "visual_id": "VIS-FINDEX-ACCESS-USE",
+      "tier": "TABLE_TEXT_FIRST",
+      "rationale": "The World Bank's published shares for account ownership, saving and borrowing, all adults and by group, as a table: no interval is published here for a group value, so a drawn gap would suggest a precision the evidence does not carry.",
+      "promotion_requires": "A drawn comparison of groups needs an interval for each group value; none is published here (EXT-07 held), and this resource does not compute one from respondent-level data (OWN-09).",
+      "table": {
+        "form": "One row per group (all adults first), one column per measure; values as the World Bank publishes them, to one decimal; governed notes close the table. No gap column, no interval, no ranking.",
+        "objects": [
+          {
+            "id": "fx",
+            "rows": {
+              "file": "data/findex_baseline.json",
+              "header_key": "observation_id",
+              "ids": [
+                "WB-FINDEX-OBS-2022-001",
+                "WB-FINDEX-OBS-2022-015",
+                "WB-FINDEX-OBS-2022-010",
+                "WB-FINDEX-OBS-2022-011",
+                "WB-FINDEX-OBS-2022-028",
+                "WB-FINDEX-OBS-2022-002",
+                "WB-FINDEX-OBS-2022-016",
+                "WB-FINDEX-OBS-2022-128",
+                "WB-FINDEX-OBS-2022-138",
+                "WB-FINDEX-OBS-2022-029",
+                "WB-FINDEX-OBS-2022-003",
+                "WB-FINDEX-OBS-2022-017",
+                "WB-FINDEX-OBS-2022-129",
+                "WB-FINDEX-OBS-2022-139",
+                "WB-FINDEX-OBS-2022-030",
+                "WB-FINDEX-OBS-2022-008",
+                "WB-FINDEX-OBS-2022-018",
+                "WB-FINDEX-OBS-2022-130",
+                "WB-FINDEX-OBS-2022-140",
+                "WB-FINDEX-OBS-2022-031",
+                "WB-FINDEX-OBS-2022-009",
+                "WB-FINDEX-OBS-2022-019",
+                "WB-FINDEX-OBS-2022-131",
+                "WB-FINDEX-OBS-2022-141",
+                "WB-FINDEX-OBS-2022-032",
+                "WB-FINDEX-OBS-2022-006",
+                "WB-FINDEX-OBS-2022-020",
+                "WB-FINDEX-OBS-2022-132",
+                "WB-FINDEX-OBS-2022-142",
+                "WB-FINDEX-OBS-2022-033",
+                "WB-FINDEX-OBS-2022-007",
+                "WB-FINDEX-OBS-2022-021",
+                "WB-FINDEX-OBS-2022-133",
+                "WB-FINDEX-OBS-2022-143",
+                "WB-FINDEX-OBS-2022-034",
+                "WB-FINDEX-OBS-2022-004",
+                "WB-FINDEX-OBS-2022-022",
+                "WB-FINDEX-OBS-2022-134",
+                "WB-FINDEX-OBS-2022-144",
+                "WB-FINDEX-OBS-2022-035",
+                "WB-FINDEX-OBS-2022-005",
+                "WB-FINDEX-OBS-2022-023",
+                "WB-FINDEX-OBS-2022-135",
+                "WB-FINDEX-OBS-2022-145",
+                "WB-FINDEX-OBS-2022-036",
+                "WB-FINDEX-OBS-2022-013",
+                "WB-FINDEX-OBS-2022-024",
+                "WB-FINDEX-OBS-2022-136",
+                "WB-FINDEX-OBS-2022-146",
+                "WB-FINDEX-OBS-2022-037",
+                "WB-FINDEX-OBS-2022-014",
+                "WB-FINDEX-OBS-2022-025",
+                "WB-FINDEX-OBS-2022-137",
+                "WB-FINDEX-OBS-2022-147",
+                "WB-FINDEX-OBS-2022-038"
+              ]
+            },
+            "fields": {
+              "value": "value",
+              "group": "group",
+              "source": "source_url"
+            },
+            "must_equal": {
+              "WB-FINDEX-OBS-2022-001": {
+                "value": 11.9
+              },
+              "WB-FINDEX-OBS-2022-015": {
+                "value": 11.9
+              },
+              "WB-FINDEX-OBS-2022-010": {
+                "value": 21.6
+              },
+              "WB-FINDEX-OBS-2022-011": {
+                "value": 51.3
+              },
+              "WB-FINDEX-OBS-2022-028": {
+                "value": 41.1
+              },
+              "WB-FINDEX-OBS-2022-002": {
+                "value": 5.4
+              },
+              "WB-FINDEX-OBS-2022-016": {
+                "value": 5.4
+              },
+              "WB-FINDEX-OBS-2022-128": {
+                "value": 16.2
+              },
+              "WB-FINDEX-OBS-2022-138": {
+                "value": 48.2
+              },
+              "WB-FINDEX-OBS-2022-029": {
+                "value": 41.1
+              },
+              "WB-FINDEX-OBS-2022-003": {
+                "value": 18.3
+              },
+              "WB-FINDEX-OBS-2022-017": {
+                "value": 18.3
+              },
+              "WB-FINDEX-OBS-2022-129": {
+                "value": 27.0
+              },
+              "WB-FINDEX-OBS-2022-139": {
+                "value": 54.4
+              },
+              "WB-FINDEX-OBS-2022-030": {
+                "value": 41.0
+              },
+              "WB-FINDEX-OBS-2022-008": {
+                "value": 5.0
+              },
+              "WB-FINDEX-OBS-2022-018": {
+                "value": 5.0
+              },
+              "WB-FINDEX-OBS-2022-130": {
+                "value": 24.5
+              },
+              "WB-FINDEX-OBS-2022-140": {
+                "value": 42.4
+              },
+              "WB-FINDEX-OBS-2022-031": {
+                "value": 28.1
+              },
+              "WB-FINDEX-OBS-2022-009": {
+                "value": 16.1
+              },
+              "WB-FINDEX-OBS-2022-019": {
+                "value": 16.1
+              },
+              "WB-FINDEX-OBS-2022-131": {
+                "value": 19.9
+              },
+              "WB-FINDEX-OBS-2022-141": {
+                "value": 56.7
+              },
+              "WB-FINDEX-OBS-2022-032": {
+                "value": 49.0
+              },
+              "WB-FINDEX-OBS-2022-006": {
+                "value": 7.0
+              },
+              "WB-FINDEX-OBS-2022-020": {
+                "value": 7.0
+              },
+              "WB-FINDEX-OBS-2022-132": {
+                "value": 13.4
+              },
+              "WB-FINDEX-OBS-2022-142": {
+                "value": 49.7
+              },
+              "WB-FINDEX-OBS-2022-033": {
+                "value": 41.8
+              },
+              "WB-FINDEX-OBS-2022-007": {
+                "value": 19.5
+              },
+              "WB-FINDEX-OBS-2022-021": {
+                "value": 19.5
+              },
+              "WB-FINDEX-OBS-2022-133": {
+                "value": 34.4
+              },
+              "WB-FINDEX-OBS-2022-143": {
+                "value": 53.7
+              },
+              "WB-FINDEX-OBS-2022-034": {
+                "value": 39.8
+              },
+              "WB-FINDEX-OBS-2022-004": {
+                "value": 6.5
+              },
+              "WB-FINDEX-OBS-2022-022": {
+                "value": 6.5
+              },
+              "WB-FINDEX-OBS-2022-134": {
+                "value": 13.1
+              },
+              "WB-FINDEX-OBS-2022-144": {
+                "value": 56.4
+              },
+              "WB-FINDEX-OBS-2022-035": {
+                "value": 48.4
+              },
+              "WB-FINDEX-OBS-2022-005": {
+                "value": 15.5
+              },
+              "WB-FINDEX-OBS-2022-023": {
+                "value": 15.5
+              },
+              "WB-FINDEX-OBS-2022-135": {
+                "value": 27.4
+              },
+              "WB-FINDEX-OBS-2022-145": {
+                "value": 47.9
+              },
+              "WB-FINDEX-OBS-2022-036": {
+                "value": 36.2
+              },
+              "WB-FINDEX-OBS-2022-013": {
+                "value": 23.5
+              },
+              "WB-FINDEX-OBS-2022-024": {
+                "value": 23.5
+              },
+              "WB-FINDEX-OBS-2022-136": {
+                "value": 33.6
+              },
+              "WB-FINDEX-OBS-2022-146": {
+                "value": 62.8
+              },
+              "WB-FINDEX-OBS-2022-037": {
+                "value": 49.3
+              },
+              "WB-FINDEX-OBS-2022-014": {
+                "value": 7.0
+              },
+              "WB-FINDEX-OBS-2022-025": {
+                "value": 7.0
+              },
+              "WB-FINDEX-OBS-2022-137": {
+                "value": 16.6
+              },
+              "WB-FINDEX-OBS-2022-147": {
+                "value": 46.4
+              },
+              "WB-FINDEX-OBS-2022-038": {
+                "value": 37.6
+              }
+            }
+          }
+        ],
+        "head": [
+          "UI-VIS-TH-FINDEX-ADULTS",
+          "UI-VIS-TH-FINDEX-ACCOUNT",
+          "UI-VIS-TH-FINDEX-ACCOUNT-FI",
+          "UI-VIS-TH-FINDEX-SAVED",
+          "UI-VIS-TH-FINDEX-BORROWED",
+          "UI-VIS-TH-FINDEX-BORROWED-FAMILY"
+        ],
+        "caption": [
+          "UI-VIS-UNIT-PCT-ADULTS-IN-GROUP"
+        ],
+        "rows": [
+          {
+            "head": "UI-VIS-CAT-FINDEX-TOTAL",
+            "cells": [
+              {
+                "ref": "fx.WB-FINDEX-OBS-2022-001.value",
+                "dp": 1
+              },
+              {
+                "ref": "fx.WB-FINDEX-OBS-2022-015.value",
+                "dp": 1
+              },
+              {
+                "ref": "fx.WB-FINDEX-OBS-2022-010.value",
+                "dp": 1
+              },
+              {
+                "ref": "fx.WB-FINDEX-OBS-2022-011.value",
+                "dp": 1
+              },
+              {
+                "ref": "fx.WB-FINDEX-OBS-2022-028.value",
+                "dp": 1
+              }
+            ]
+          },
+          {
+            "head": "UI-VIS-CAT-FINDEX-FEMALE",
+            "cells": [
+              {
+                "ref": "fx.WB-FINDEX-OBS-2022-002.value",
+                "dp": 1
+              },
+              {
+                "ref": "fx.WB-FINDEX-OBS-2022-016.value",
+                "dp": 1
+              },
+              {
+                "ref": "fx.WB-FINDEX-OBS-2022-128.value",
+                "dp": 1
+              },
+              {
+                "ref": "fx.WB-FINDEX-OBS-2022-138.value",
+                "dp": 1
+              },
+              {
+                "ref": "fx.WB-FINDEX-OBS-2022-029.value",
+                "dp": 1
+              }
+            ]
+          },
+          {
+            "head": "UI-VIS-CAT-FINDEX-MALE",
+            "cells": [
+              {
+                "ref": "fx.WB-FINDEX-OBS-2022-003.value",
+                "dp": 1
+              },
+              {
+                "ref": "fx.WB-FINDEX-OBS-2022-017.value",
+                "dp": 1
+              },
+              {
+                "ref": "fx.WB-FINDEX-OBS-2022-129.value",
+                "dp": 1
+              },
+              {
+                "ref": "fx.WB-FINDEX-OBS-2022-139.value",
+                "dp": 1
+              },
+              {
+                "ref": "fx.WB-FINDEX-OBS-2022-030.value",
+                "dp": 1
+              }
+            ]
+          },
+          {
+            "head": "UI-VIS-CAT-FINDEX-AGE-15-24",
+            "cells": [
+              {
+                "ref": "fx.WB-FINDEX-OBS-2022-008.value",
+                "dp": 1
+              },
+              {
+                "ref": "fx.WB-FINDEX-OBS-2022-018.value",
+                "dp": 1
+              },
+              {
+                "ref": "fx.WB-FINDEX-OBS-2022-130.value",
+                "dp": 1
+              },
+              {
+                "ref": "fx.WB-FINDEX-OBS-2022-140.value",
+                "dp": 1
+              },
+              {
+                "ref": "fx.WB-FINDEX-OBS-2022-031.value",
+                "dp": 1
+              }
+            ]
+          },
+          {
+            "head": "UI-VIS-CAT-FINDEX-AGE-25-PLUS",
+            "cells": [
+              {
+                "ref": "fx.WB-FINDEX-OBS-2022-009.value",
+                "dp": 1
+              },
+              {
+                "ref": "fx.WB-FINDEX-OBS-2022-019.value",
+                "dp": 1
+              },
+              {
+                "ref": "fx.WB-FINDEX-OBS-2022-131.value",
+                "dp": 1
+              },
+              {
+                "ref": "fx.WB-FINDEX-OBS-2022-141.value",
+                "dp": 1
+              },
+              {
+                "ref": "fx.WB-FINDEX-OBS-2022-032.value",
+                "dp": 1
+              }
+            ]
+          },
+          {
+            "head": "UI-VIS-CAT-FINDEX-PRIMARY-EDU",
+            "cells": [
+              {
+                "ref": "fx.WB-FINDEX-OBS-2022-006.value",
+                "dp": 1
+              },
+              {
+                "ref": "fx.WB-FINDEX-OBS-2022-020.value",
+                "dp": 1
+              },
+              {
+                "ref": "fx.WB-FINDEX-OBS-2022-132.value",
+                "dp": 1
+              },
+              {
+                "ref": "fx.WB-FINDEX-OBS-2022-142.value",
+                "dp": 1
+              },
+              {
+                "ref": "fx.WB-FINDEX-OBS-2022-033.value",
+                "dp": 1
+              }
+            ]
+          },
+          {
+            "head": "UI-VIS-CAT-FINDEX-SECONDARY-EDU",
+            "cells": [
+              {
+                "ref": "fx.WB-FINDEX-OBS-2022-007.value",
+                "dp": 1
+              },
+              {
+                "ref": "fx.WB-FINDEX-OBS-2022-021.value",
+                "dp": 1
+              },
+              {
+                "ref": "fx.WB-FINDEX-OBS-2022-133.value",
+                "dp": 1
+              },
+              {
+                "ref": "fx.WB-FINDEX-OBS-2022-143.value",
+                "dp": 1
+              },
+              {
+                "ref": "fx.WB-FINDEX-OBS-2022-034.value",
+                "dp": 1
+              }
+            ]
+          },
+          {
+            "head": "UI-VIS-CAT-FINDEX-POOREST40",
+            "cells": [
+              {
+                "ref": "fx.WB-FINDEX-OBS-2022-004.value",
+                "dp": 1
+              },
+              {
+                "ref": "fx.WB-FINDEX-OBS-2022-022.value",
+                "dp": 1
+              },
+              {
+                "ref": "fx.WB-FINDEX-OBS-2022-134.value",
+                "dp": 1
+              },
+              {
+                "ref": "fx.WB-FINDEX-OBS-2022-144.value",
+                "dp": 1
+              },
+              {
+                "ref": "fx.WB-FINDEX-OBS-2022-035.value",
+                "dp": 1
+              }
+            ]
+          },
+          {
+            "head": "UI-VIS-CAT-FINDEX-RICHEST60",
+            "cells": [
+              {
+                "ref": "fx.WB-FINDEX-OBS-2022-005.value",
+                "dp": 1
+              },
+              {
+                "ref": "fx.WB-FINDEX-OBS-2022-023.value",
+                "dp": 1
+              },
+              {
+                "ref": "fx.WB-FINDEX-OBS-2022-135.value",
+                "dp": 1
+              },
+              {
+                "ref": "fx.WB-FINDEX-OBS-2022-145.value",
+                "dp": 1
+              },
+              {
+                "ref": "fx.WB-FINDEX-OBS-2022-036.value",
+                "dp": 1
+              }
+            ]
+          },
+          {
+            "head": "UI-VIS-CAT-FINDEX-IN-LABOUR-FORCE",
+            "cells": [
+              {
+                "ref": "fx.WB-FINDEX-OBS-2022-013.value",
+                "dp": 1
+              },
+              {
+                "ref": "fx.WB-FINDEX-OBS-2022-024.value",
+                "dp": 1
+              },
+              {
+                "ref": "fx.WB-FINDEX-OBS-2022-136.value",
+                "dp": 1
+              },
+              {
+                "ref": "fx.WB-FINDEX-OBS-2022-146.value",
+                "dp": 1
+              },
+              {
+                "ref": "fx.WB-FINDEX-OBS-2022-037.value",
+                "dp": 1
+              }
+            ]
+          },
+          {
+            "head": "UI-VIS-CAT-FINDEX-OUT-LABOUR-FORCE",
+            "cells": [
+              {
+                "ref": "fx.WB-FINDEX-OBS-2022-014.value",
+                "dp": 1
+              },
+              {
+                "ref": "fx.WB-FINDEX-OBS-2022-025.value",
+                "dp": 1
+              },
+              {
+                "ref": "fx.WB-FINDEX-OBS-2022-137.value",
+                "dp": 1
+              },
+              {
+                "ref": "fx.WB-FINDEX-OBS-2022-147.value",
+                "dp": 1
+              },
+              {
+                "ref": "fx.WB-FINDEX-OBS-2022-038.value",
+                "dp": 1
+              }
+            ]
+          },
+          {
+            "marker": "UI-VIS-NOTE-FINDEX-ACCOUNT-FI"
+          },
+          {
+            "marker": "UI-VIS-NOTE-FINDEX-GROUPS"
+          }
+        ]
+      }
+    },
+    {
+      "visual_id": "VIS-FINDEX-RESILIENCE",
+      "tier": "TABLE_TEXT_FIRST",
+      "rationale": "The four published answer categories on emergency funds within 30 days, all adults and by group, as a table: the categories are not a score, and no interval is published here for a group value.",
+      "promotion_requires": "A drawn comparison of groups needs an interval for each group value; none is published here (EXT-07 held), and this resource does not compute one from respondent-level data (OWN-09).",
+      "table": {
+        "form": "One row per group (all adults first), one column per measure; values as the World Bank publishes them, to one decimal; governed notes close the table. No gap column, no interval, no ranking.",
+        "objects": [
+          {
+            "id": "fx",
+            "rows": {
+              "file": "data/findex_baseline.json",
+              "header_key": "observation_id",
+              "ids": [
+                "WB-FINDEX-OBS-2022-039",
+                "WB-FINDEX-OBS-2022-050",
+                "WB-FINDEX-OBS-2022-061",
+                "WB-FINDEX-OBS-2022-072",
+                "WB-FINDEX-OBS-2022-040",
+                "WB-FINDEX-OBS-2022-051",
+                "WB-FINDEX-OBS-2022-062",
+                "WB-FINDEX-OBS-2022-073",
+                "WB-FINDEX-OBS-2022-041",
+                "WB-FINDEX-OBS-2022-052",
+                "WB-FINDEX-OBS-2022-063",
+                "WB-FINDEX-OBS-2022-074",
+                "WB-FINDEX-OBS-2022-042",
+                "WB-FINDEX-OBS-2022-053",
+                "WB-FINDEX-OBS-2022-064",
+                "WB-FINDEX-OBS-2022-075",
+                "WB-FINDEX-OBS-2022-043",
+                "WB-FINDEX-OBS-2022-054",
+                "WB-FINDEX-OBS-2022-065",
+                "WB-FINDEX-OBS-2022-076",
+                "WB-FINDEX-OBS-2022-044",
+                "WB-FINDEX-OBS-2022-055",
+                "WB-FINDEX-OBS-2022-066",
+                "WB-FINDEX-OBS-2022-077",
+                "WB-FINDEX-OBS-2022-045",
+                "WB-FINDEX-OBS-2022-056",
+                "WB-FINDEX-OBS-2022-067",
+                "WB-FINDEX-OBS-2022-078",
+                "WB-FINDEX-OBS-2022-046",
+                "WB-FINDEX-OBS-2022-057",
+                "WB-FINDEX-OBS-2022-068",
+                "WB-FINDEX-OBS-2022-079",
+                "WB-FINDEX-OBS-2022-047",
+                "WB-FINDEX-OBS-2022-058",
+                "WB-FINDEX-OBS-2022-069",
+                "WB-FINDEX-OBS-2022-080",
+                "WB-FINDEX-OBS-2022-048",
+                "WB-FINDEX-OBS-2022-059",
+                "WB-FINDEX-OBS-2022-070",
+                "WB-FINDEX-OBS-2022-081",
+                "WB-FINDEX-OBS-2022-049",
+                "WB-FINDEX-OBS-2022-060",
+                "WB-FINDEX-OBS-2022-071",
+                "WB-FINDEX-OBS-2022-082"
+              ]
+            },
+            "fields": {
+              "value": "value",
+              "group": "group",
+              "source": "source_url"
+            },
+            "must_equal": {
+              "WB-FINDEX-OBS-2022-039": {
+                "value": 10.8
+              },
+              "WB-FINDEX-OBS-2022-050": {
+                "value": 25.1
+              },
+              "WB-FINDEX-OBS-2022-061": {
+                "value": 40.4
+              },
+              "WB-FINDEX-OBS-2022-072": {
+                "value": 23.2
+              },
+              "WB-FINDEX-OBS-2022-040": {
+                "value": 13.9
+              },
+              "WB-FINDEX-OBS-2022-051": {
+                "value": 25.3
+              },
+              "WB-FINDEX-OBS-2022-062": {
+                "value": 40.8
+              },
+              "WB-FINDEX-OBS-2022-073": {
+                "value": 19.4
+              },
+              "WB-FINDEX-OBS-2022-041": {
+                "value": 7.8
+              },
+              "WB-FINDEX-OBS-2022-052": {
+                "value": 24.8
+              },
+              "WB-FINDEX-OBS-2022-063": {
+                "value": 40.0
+              },
+              "WB-FINDEX-OBS-2022-074": {
+                "value": 27.0
+              },
+              "WB-FINDEX-OBS-2022-042": {
+                "value": 10.5
+              },
+              "WB-FINDEX-OBS-2022-053": {
+                "value": 21.4
+              },
+              "WB-FINDEX-OBS-2022-064": {
+                "value": 45.9
+              },
+              "WB-FINDEX-OBS-2022-075": {
+                "value": 21.3
+              },
+              "WB-FINDEX-OBS-2022-043": {
+                "value": 11.0
+              },
+              "WB-FINDEX-OBS-2022-054": {
+                "value": 27.3
+              },
+              "WB-FINDEX-OBS-2022-065": {
+                "value": 37.0
+              },
+              "WB-FINDEX-OBS-2022-076": {
+                "value": 24.4
+              },
+              "WB-FINDEX-OBS-2022-044": {
+                "value": 15.9
+              },
+              "WB-FINDEX-OBS-2022-055": {
+                "value": 30.8
+              },
+              "WB-FINDEX-OBS-2022-066": {
+                "value": 37.1
+              },
+              "WB-FINDEX-OBS-2022-077": {
+                "value": 15.5
+              },
+              "WB-FINDEX-OBS-2022-045": {
+                "value": 3.0
+              },
+              "WB-FINDEX-OBS-2022-056": {
+                "value": 16.2
+              },
+              "WB-FINDEX-OBS-2022-067": {
+                "value": 45.5
+              },
+              "WB-FINDEX-OBS-2022-078": {
+                "value": 35.1
+              },
+              "WB-FINDEX-OBS-2022-046": {
+                "value": 15.7
+              },
+              "WB-FINDEX-OBS-2022-057": {
+                "value": 33.1
+              },
+              "WB-FINDEX-OBS-2022-068": {
+                "value": 39.1
+              },
+              "WB-FINDEX-OBS-2022-079": {
+                "value": 11.5
+              },
+              "WB-FINDEX-OBS-2022-047": {
+                "value": 7.6
+              },
+              "WB-FINDEX-OBS-2022-058": {
+                "value": 19.7
+              },
+              "WB-FINDEX-OBS-2022-069": {
+                "value": 41.2
+              },
+              "WB-FINDEX-OBS-2022-080": {
+                "value": 31.0
+              },
+              "WB-FINDEX-OBS-2022-048": {
+                "value": 2.7
+              },
+              "WB-FINDEX-OBS-2022-059": {
+                "value": 22.8
+              },
+              "WB-FINDEX-OBS-2022-070": {
+                "value": 38.7
+              },
+              "WB-FINDEX-OBS-2022-081": {
+                "value": 35.7
+              },
+              "WB-FINDEX-OBS-2022-049": {
+                "value": 14.3
+              },
+              "WB-FINDEX-OBS-2022-060": {
+                "value": 26.0
+              },
+              "WB-FINDEX-OBS-2022-071": {
+                "value": 41.1
+              },
+              "WB-FINDEX-OBS-2022-082": {
+                "value": 17.9
+              }
+            }
+          }
+        ],
+        "head": [
+          "UI-VIS-TH-FINDEX-ADULTS",
+          "UI-VIS-TH-FINDEX-EMERG-NOT-POSSIBLE",
+          "UI-VIS-TH-FINDEX-EMERG-VERY",
+          "UI-VIS-TH-FINDEX-EMERG-SOMEWHAT",
+          "UI-VIS-TH-FINDEX-EMERG-NOT-DIFFICULT"
+        ],
+        "caption": [
+          "UI-VIS-NOTE-FINDEX-EMERG-30",
+          "UI-VIS-UNIT-PCT-ADULTS-IN-GROUP"
+        ],
+        "rows": [
+          {
+            "head": "UI-VIS-CAT-FINDEX-TOTAL",
+            "cells": [
+              {
+                "ref": "fx.WB-FINDEX-OBS-2022-039.value",
+                "dp": 1
+              },
+              {
+                "ref": "fx.WB-FINDEX-OBS-2022-050.value",
+                "dp": 1
+              },
+              {
+                "ref": "fx.WB-FINDEX-OBS-2022-061.value",
+                "dp": 1
+              },
+              {
+                "ref": "fx.WB-FINDEX-OBS-2022-072.value",
+                "dp": 1
+              }
+            ]
+          },
+          {
+            "head": "UI-VIS-CAT-FINDEX-FEMALE",
+            "cells": [
+              {
+                "ref": "fx.WB-FINDEX-OBS-2022-040.value",
+                "dp": 1
+              },
+              {
+                "ref": "fx.WB-FINDEX-OBS-2022-051.value",
+                "dp": 1
+              },
+              {
+                "ref": "fx.WB-FINDEX-OBS-2022-062.value",
+                "dp": 1
+              },
+              {
+                "ref": "fx.WB-FINDEX-OBS-2022-073.value",
+                "dp": 1
+              }
+            ]
+          },
+          {
+            "head": "UI-VIS-CAT-FINDEX-MALE",
+            "cells": [
+              {
+                "ref": "fx.WB-FINDEX-OBS-2022-041.value",
+                "dp": 1
+              },
+              {
+                "ref": "fx.WB-FINDEX-OBS-2022-052.value",
+                "dp": 1
+              },
+              {
+                "ref": "fx.WB-FINDEX-OBS-2022-063.value",
+                "dp": 1
+              },
+              {
+                "ref": "fx.WB-FINDEX-OBS-2022-074.value",
+                "dp": 1
+              }
+            ]
+          },
+          {
+            "head": "UI-VIS-CAT-FINDEX-AGE-15-24",
+            "cells": [
+              {
+                "ref": "fx.WB-FINDEX-OBS-2022-042.value",
+                "dp": 1
+              },
+              {
+                "ref": "fx.WB-FINDEX-OBS-2022-053.value",
+                "dp": 1
+              },
+              {
+                "ref": "fx.WB-FINDEX-OBS-2022-064.value",
+                "dp": 1
+              },
+              {
+                "ref": "fx.WB-FINDEX-OBS-2022-075.value",
+                "dp": 1
+              }
+            ]
+          },
+          {
+            "head": "UI-VIS-CAT-FINDEX-AGE-25-PLUS",
+            "cells": [
+              {
+                "ref": "fx.WB-FINDEX-OBS-2022-043.value",
+                "dp": 1
+              },
+              {
+                "ref": "fx.WB-FINDEX-OBS-2022-054.value",
+                "dp": 1
+              },
+              {
+                "ref": "fx.WB-FINDEX-OBS-2022-065.value",
+                "dp": 1
+              },
+              {
+                "ref": "fx.WB-FINDEX-OBS-2022-076.value",
+                "dp": 1
+              }
+            ]
+          },
+          {
+            "head": "UI-VIS-CAT-FINDEX-PRIMARY-EDU",
+            "cells": [
+              {
+                "ref": "fx.WB-FINDEX-OBS-2022-044.value",
+                "dp": 1
+              },
+              {
+                "ref": "fx.WB-FINDEX-OBS-2022-055.value",
+                "dp": 1
+              },
+              {
+                "ref": "fx.WB-FINDEX-OBS-2022-066.value",
+                "dp": 1
+              },
+              {
+                "ref": "fx.WB-FINDEX-OBS-2022-077.value",
+                "dp": 1
+              }
+            ]
+          },
+          {
+            "head": "UI-VIS-CAT-FINDEX-SECONDARY-EDU",
+            "cells": [
+              {
+                "ref": "fx.WB-FINDEX-OBS-2022-045.value",
+                "dp": 1
+              },
+              {
+                "ref": "fx.WB-FINDEX-OBS-2022-056.value",
+                "dp": 1
+              },
+              {
+                "ref": "fx.WB-FINDEX-OBS-2022-067.value",
+                "dp": 1
+              },
+              {
+                "ref": "fx.WB-FINDEX-OBS-2022-078.value",
+                "dp": 1
+              }
+            ]
+          },
+          {
+            "head": "UI-VIS-CAT-FINDEX-POOREST40",
+            "cells": [
+              {
+                "ref": "fx.WB-FINDEX-OBS-2022-046.value",
+                "dp": 1
+              },
+              {
+                "ref": "fx.WB-FINDEX-OBS-2022-057.value",
+                "dp": 1
+              },
+              {
+                "ref": "fx.WB-FINDEX-OBS-2022-068.value",
+                "dp": 1
+              },
+              {
+                "ref": "fx.WB-FINDEX-OBS-2022-079.value",
+                "dp": 1
+              }
+            ]
+          },
+          {
+            "head": "UI-VIS-CAT-FINDEX-RICHEST60",
+            "cells": [
+              {
+                "ref": "fx.WB-FINDEX-OBS-2022-047.value",
+                "dp": 1
+              },
+              {
+                "ref": "fx.WB-FINDEX-OBS-2022-058.value",
+                "dp": 1
+              },
+              {
+                "ref": "fx.WB-FINDEX-OBS-2022-069.value",
+                "dp": 1
+              },
+              {
+                "ref": "fx.WB-FINDEX-OBS-2022-080.value",
+                "dp": 1
+              }
+            ]
+          },
+          {
+            "head": "UI-VIS-CAT-FINDEX-IN-LABOUR-FORCE",
+            "cells": [
+              {
+                "ref": "fx.WB-FINDEX-OBS-2022-048.value",
+                "dp": 1
+              },
+              {
+                "ref": "fx.WB-FINDEX-OBS-2022-059.value",
+                "dp": 1
+              },
+              {
+                "ref": "fx.WB-FINDEX-OBS-2022-070.value",
+                "dp": 1
+              },
+              {
+                "ref": "fx.WB-FINDEX-OBS-2022-081.value",
+                "dp": 1
+              }
+            ]
+          },
+          {
+            "head": "UI-VIS-CAT-FINDEX-OUT-LABOUR-FORCE",
+            "cells": [
+              {
+                "ref": "fx.WB-FINDEX-OBS-2022-049.value",
+                "dp": 1
+              },
+              {
+                "ref": "fx.WB-FINDEX-OBS-2022-060.value",
+                "dp": 1
+              },
+              {
+                "ref": "fx.WB-FINDEX-OBS-2022-071.value",
+                "dp": 1
+              },
+              {
+                "ref": "fx.WB-FINDEX-OBS-2022-082.value",
+                "dp": 1
+              }
+            ]
+          },
+          {
+            "marker": "UI-VIS-NOTE-FINDEX-EMERG-CATS"
+          },
+          {
+            "marker": "UI-VIS-NOTE-FINDEX-GROUPS"
+          }
+        ]
+      }
+    },
+    {
+      "visual_id": "VIS-FINDEX-FLOW-CHANNELS",
+      "tier": "TABLE_TEXT_FIRST",
+      "rationale": "The World Bank's published shares of adults receiving wages or agricultural payments and sending or receiving domestic remittances, all adults and by group, as a table; channels are not shown.",
+      "promotion_requires": "A drawn comparison of groups needs an interval for each group value; none is published here (EXT-07 held), and this resource does not compute one from respondent-level data (OWN-09).",
+      "table": {
+        "form": "One row per group (all adults first), one column per measure; values as the World Bank publishes them, to one decimal; governed notes close the table. No gap column, no interval, no ranking.",
+        "objects": [
+          {
+            "id": "fx",
+            "rows": {
+              "file": "data/findex_baseline.json",
+              "header_key": "observation_id",
+              "ids": [
+                "WB-FINDEX-OBS-2022-105",
+                "WB-FINDEX-OBS-2022-117",
+                "WB-FINDEX-OBS-2022-083",
+                "WB-FINDEX-OBS-2022-094",
+                "WB-FINDEX-OBS-2022-148",
+                "WB-FINDEX-OBS-2022-106",
+                "WB-FINDEX-OBS-2022-118",
+                "WB-FINDEX-OBS-2022-084",
+                "WB-FINDEX-OBS-2022-095",
+                "WB-FINDEX-OBS-2022-149",
+                "WB-FINDEX-OBS-2022-107",
+                "WB-FINDEX-OBS-2022-119",
+                "WB-FINDEX-OBS-2022-085",
+                "WB-FINDEX-OBS-2022-096",
+                "WB-FINDEX-OBS-2022-150",
+                "WB-FINDEX-OBS-2022-108",
+                "WB-FINDEX-OBS-2022-120",
+                "WB-FINDEX-OBS-2022-086",
+                "WB-FINDEX-OBS-2022-097",
+                "WB-FINDEX-OBS-2022-151",
+                "WB-FINDEX-OBS-2022-109",
+                "WB-FINDEX-OBS-2022-121",
+                "WB-FINDEX-OBS-2022-087",
+                "WB-FINDEX-OBS-2022-098",
+                "WB-FINDEX-OBS-2022-152",
+                "WB-FINDEX-OBS-2022-110",
+                "WB-FINDEX-OBS-2022-122",
+                "WB-FINDEX-OBS-2022-088",
+                "WB-FINDEX-OBS-2022-099",
+                "WB-FINDEX-OBS-2022-153",
+                "WB-FINDEX-OBS-2022-111",
+                "WB-FINDEX-OBS-2022-123",
+                "WB-FINDEX-OBS-2022-089",
+                "WB-FINDEX-OBS-2022-100",
+                "WB-FINDEX-OBS-2022-154",
+                "WB-FINDEX-OBS-2022-112",
+                "WB-FINDEX-OBS-2022-124",
+                "WB-FINDEX-OBS-2022-090",
+                "WB-FINDEX-OBS-2022-101",
+                "WB-FINDEX-OBS-2022-155",
+                "WB-FINDEX-OBS-2022-113",
+                "WB-FINDEX-OBS-2022-125",
+                "WB-FINDEX-OBS-2022-091",
+                "WB-FINDEX-OBS-2022-102",
+                "WB-FINDEX-OBS-2022-156",
+                "WB-FINDEX-OBS-2022-114",
+                "WB-FINDEX-OBS-2022-126",
+                "WB-FINDEX-OBS-2022-092",
+                "WB-FINDEX-OBS-2022-103",
+                "WB-FINDEX-OBS-2022-157",
+                "WB-FINDEX-OBS-2022-115",
+                "WB-FINDEX-OBS-2022-127",
+                "WB-FINDEX-OBS-2022-093",
+                "WB-FINDEX-OBS-2022-104",
+                "WB-FINDEX-OBS-2022-158"
+              ]
+            },
+            "fields": {
+              "value": "value",
+              "group": "group",
+              "source": "source_url"
+            },
+            "must_equal": {
+              "WB-FINDEX-OBS-2022-105": {
+                "value": 12.4
+              },
+              "WB-FINDEX-OBS-2022-117": {
+                "value": 28.9
+              },
+              "WB-FINDEX-OBS-2022-083": {
+                "value": 17.7
+              },
+              "WB-FINDEX-OBS-2022-094": {
+                "value": 31.9
+              },
+              "WB-FINDEX-OBS-2022-148": {
+                "value": 37.8
+              },
+              "WB-FINDEX-OBS-2022-106": {
+                "value": 5.9
+              },
+              "WB-FINDEX-OBS-2022-118": {
+                "value": 24.0
+              },
+              "WB-FINDEX-OBS-2022-084": {
+                "value": 8.6
+              },
+              "WB-FINDEX-OBS-2022-095": {
+                "value": 25.5
+              },
+              "WB-FINDEX-OBS-2022-149": {
+                "value": 27.8
+              },
+              "WB-FINDEX-OBS-2022-107": {
+                "value": 18.8
+              },
+              "WB-FINDEX-OBS-2022-119": {
+                "value": 33.8
+              },
+              "WB-FINDEX-OBS-2022-085": {
+                "value": 26.7
+              },
+              "WB-FINDEX-OBS-2022-096": {
+                "value": 38.3
+              },
+              "WB-FINDEX-OBS-2022-150": {
+                "value": 47.7
+              },
+              "WB-FINDEX-OBS-2022-108": {
+                "value": 9.7
+              },
+              "WB-FINDEX-OBS-2022-120": {
+                "value": 23.5
+              },
+              "WB-FINDEX-OBS-2022-086": {
+                "value": 15.6
+              },
+              "WB-FINDEX-OBS-2022-097": {
+                "value": 26.7
+              },
+              "WB-FINDEX-OBS-2022-151": {
+                "value": 33.7
+              },
+              "WB-FINDEX-OBS-2022-109": {
+                "value": 14.0
+              },
+              "WB-FINDEX-OBS-2022-121": {
+                "value": 32.2
+              },
+              "WB-FINDEX-OBS-2022-087": {
+                "value": 18.9
+              },
+              "WB-FINDEX-OBS-2022-098": {
+                "value": 35.1
+              },
+              "WB-FINDEX-OBS-2022-152": {
+                "value": 40.2
+              },
+              "WB-FINDEX-OBS-2022-110": {
+                "value": 6.9
+              },
+              "WB-FINDEX-OBS-2022-122": {
+                "value": 28.5
+              },
+              "WB-FINDEX-OBS-2022-088": {
+                "value": 9.7
+              },
+              "WB-FINDEX-OBS-2022-099": {
+                "value": 25.2
+              },
+              "WB-FINDEX-OBS-2022-153": {
+                "value": 28.4
+              },
+              "WB-FINDEX-OBS-2022-111": {
+                "value": 20.8
+              },
+              "WB-FINDEX-OBS-2022-123": {
+                "value": 29.5
+              },
+              "WB-FINDEX-OBS-2022-089": {
+                "value": 30.1
+              },
+              "WB-FINDEX-OBS-2022-100": {
+                "value": 42.4
+              },
+              "WB-FINDEX-OBS-2022-154": {
+                "value": 52.3
+              },
+              "WB-FINDEX-OBS-2022-112": {
+                "value": 10.3
+              },
+              "WB-FINDEX-OBS-2022-124": {
+                "value": 27.8
+              },
+              "WB-FINDEX-OBS-2022-090": {
+                "value": 9.9
+              },
+              "WB-FINDEX-OBS-2022-101": {
+                "value": 24.7
+              },
+              "WB-FINDEX-OBS-2022-155": {
+                "value": 28.7
+              },
+              "WB-FINDEX-OBS-2022-113": {
+                "value": 13.7
+              },
+              "WB-FINDEX-OBS-2022-125": {
+                "value": 29.7
+              },
+              "WB-FINDEX-OBS-2022-091": {
+                "value": 22.8
+              },
+              "WB-FINDEX-OBS-2022-102": {
+                "value": 36.8
+              },
+              "WB-FINDEX-OBS-2022-156": {
+                "value": 43.8
+              },
+              "WB-FINDEX-OBS-2022-114": {
+                "value": 28.9
+              },
+              "WB-FINDEX-OBS-2022-126": {
+                "value": 41.9
+              },
+              "WB-FINDEX-OBS-2022-092": {
+                "value": 37.6
+              },
+              "WB-FINDEX-OBS-2022-103": {
+                "value": 45.0
+              },
+              "WB-FINDEX-OBS-2022-157": {
+                "value": 58.3
+              },
+              "WB-FINDEX-OBS-2022-115": {
+                "value": 5.4
+              },
+              "WB-FINDEX-OBS-2022-127": {
+                "value": 23.4
+              },
+              "WB-FINDEX-OBS-2022-093": {
+                "value": 9.2
+              },
+              "WB-FINDEX-OBS-2022-104": {
+                "value": 26.4
+              },
+              "WB-FINDEX-OBS-2022-158": {
+                "value": 29.1
+              }
+            }
+          }
+        ],
+        "head": [
+          "UI-VIS-TH-FINDEX-ADULTS",
+          "UI-VIS-TH-FINDEX-WAGES",
+          "UI-VIS-TH-FINDEX-AGRI",
+          "UI-VIS-TH-FINDEX-REMIT-SENT",
+          "UI-VIS-TH-FINDEX-REMIT-RECEIVED",
+          "UI-VIS-TH-FINDEX-REMIT-ANY"
+        ],
+        "caption": [
+          "UI-VIS-UNIT-PCT-ADULTS-IN-GROUP"
+        ],
+        "rows": [
+          {
+            "head": "UI-VIS-CAT-FINDEX-TOTAL",
+            "cells": [
+              {
+                "ref": "fx.WB-FINDEX-OBS-2022-105.value",
+                "dp": 1
+              },
+              {
+                "ref": "fx.WB-FINDEX-OBS-2022-117.value",
+                "dp": 1
+              },
+              {
+                "ref": "fx.WB-FINDEX-OBS-2022-083.value",
+                "dp": 1
+              },
+              {
+                "ref": "fx.WB-FINDEX-OBS-2022-094.value",
+                "dp": 1
+              },
+              {
+                "ref": "fx.WB-FINDEX-OBS-2022-148.value",
+                "dp": 1
+              }
+            ]
+          },
+          {
+            "head": "UI-VIS-CAT-FINDEX-FEMALE",
+            "cells": [
+              {
+                "ref": "fx.WB-FINDEX-OBS-2022-106.value",
+                "dp": 1
+              },
+              {
+                "ref": "fx.WB-FINDEX-OBS-2022-118.value",
+                "dp": 1
+              },
+              {
+                "ref": "fx.WB-FINDEX-OBS-2022-084.value",
+                "dp": 1
+              },
+              {
+                "ref": "fx.WB-FINDEX-OBS-2022-095.value",
+                "dp": 1
+              },
+              {
+                "ref": "fx.WB-FINDEX-OBS-2022-149.value",
+                "dp": 1
+              }
+            ]
+          },
+          {
+            "head": "UI-VIS-CAT-FINDEX-MALE",
+            "cells": [
+              {
+                "ref": "fx.WB-FINDEX-OBS-2022-107.value",
+                "dp": 1
+              },
+              {
+                "ref": "fx.WB-FINDEX-OBS-2022-119.value",
+                "dp": 1
+              },
+              {
+                "ref": "fx.WB-FINDEX-OBS-2022-085.value",
+                "dp": 1
+              },
+              {
+                "ref": "fx.WB-FINDEX-OBS-2022-096.value",
+                "dp": 1
+              },
+              {
+                "ref": "fx.WB-FINDEX-OBS-2022-150.value",
+                "dp": 1
+              }
+            ]
+          },
+          {
+            "head": "UI-VIS-CAT-FINDEX-AGE-15-24",
+            "cells": [
+              {
+                "ref": "fx.WB-FINDEX-OBS-2022-108.value",
+                "dp": 1
+              },
+              {
+                "ref": "fx.WB-FINDEX-OBS-2022-120.value",
+                "dp": 1
+              },
+              {
+                "ref": "fx.WB-FINDEX-OBS-2022-086.value",
+                "dp": 1
+              },
+              {
+                "ref": "fx.WB-FINDEX-OBS-2022-097.value",
+                "dp": 1
+              },
+              {
+                "ref": "fx.WB-FINDEX-OBS-2022-151.value",
+                "dp": 1
+              }
+            ]
+          },
+          {
+            "head": "UI-VIS-CAT-FINDEX-AGE-25-PLUS",
+            "cells": [
+              {
+                "ref": "fx.WB-FINDEX-OBS-2022-109.value",
+                "dp": 1
+              },
+              {
+                "ref": "fx.WB-FINDEX-OBS-2022-121.value",
+                "dp": 1
+              },
+              {
+                "ref": "fx.WB-FINDEX-OBS-2022-087.value",
+                "dp": 1
+              },
+              {
+                "ref": "fx.WB-FINDEX-OBS-2022-098.value",
+                "dp": 1
+              },
+              {
+                "ref": "fx.WB-FINDEX-OBS-2022-152.value",
+                "dp": 1
+              }
+            ]
+          },
+          {
+            "head": "UI-VIS-CAT-FINDEX-PRIMARY-EDU",
+            "cells": [
+              {
+                "ref": "fx.WB-FINDEX-OBS-2022-110.value",
+                "dp": 1
+              },
+              {
+                "ref": "fx.WB-FINDEX-OBS-2022-122.value",
+                "dp": 1
+              },
+              {
+                "ref": "fx.WB-FINDEX-OBS-2022-088.value",
+                "dp": 1
+              },
+              {
+                "ref": "fx.WB-FINDEX-OBS-2022-099.value",
+                "dp": 1
+              },
+              {
+                "ref": "fx.WB-FINDEX-OBS-2022-153.value",
+                "dp": 1
+              }
+            ]
+          },
+          {
+            "head": "UI-VIS-CAT-FINDEX-SECONDARY-EDU",
+            "cells": [
+              {
+                "ref": "fx.WB-FINDEX-OBS-2022-111.value",
+                "dp": 1
+              },
+              {
+                "ref": "fx.WB-FINDEX-OBS-2022-123.value",
+                "dp": 1
+              },
+              {
+                "ref": "fx.WB-FINDEX-OBS-2022-089.value",
+                "dp": 1
+              },
+              {
+                "ref": "fx.WB-FINDEX-OBS-2022-100.value",
+                "dp": 1
+              },
+              {
+                "ref": "fx.WB-FINDEX-OBS-2022-154.value",
+                "dp": 1
+              }
+            ]
+          },
+          {
+            "head": "UI-VIS-CAT-FINDEX-POOREST40",
+            "cells": [
+              {
+                "ref": "fx.WB-FINDEX-OBS-2022-112.value",
+                "dp": 1
+              },
+              {
+                "ref": "fx.WB-FINDEX-OBS-2022-124.value",
+                "dp": 1
+              },
+              {
+                "ref": "fx.WB-FINDEX-OBS-2022-090.value",
+                "dp": 1
+              },
+              {
+                "ref": "fx.WB-FINDEX-OBS-2022-101.value",
+                "dp": 1
+              },
+              {
+                "ref": "fx.WB-FINDEX-OBS-2022-155.value",
+                "dp": 1
+              }
+            ]
+          },
+          {
+            "head": "UI-VIS-CAT-FINDEX-RICHEST60",
+            "cells": [
+              {
+                "ref": "fx.WB-FINDEX-OBS-2022-113.value",
+                "dp": 1
+              },
+              {
+                "ref": "fx.WB-FINDEX-OBS-2022-125.value",
+                "dp": 1
+              },
+              {
+                "ref": "fx.WB-FINDEX-OBS-2022-091.value",
+                "dp": 1
+              },
+              {
+                "ref": "fx.WB-FINDEX-OBS-2022-102.value",
+                "dp": 1
+              },
+              {
+                "ref": "fx.WB-FINDEX-OBS-2022-156.value",
+                "dp": 1
+              }
+            ]
+          },
+          {
+            "head": "UI-VIS-CAT-FINDEX-IN-LABOUR-FORCE",
+            "cells": [
+              {
+                "ref": "fx.WB-FINDEX-OBS-2022-114.value",
+                "dp": 1
+              },
+              {
+                "ref": "fx.WB-FINDEX-OBS-2022-126.value",
+                "dp": 1
+              },
+              {
+                "ref": "fx.WB-FINDEX-OBS-2022-092.value",
+                "dp": 1
+              },
+              {
+                "ref": "fx.WB-FINDEX-OBS-2022-103.value",
+                "dp": 1
+              },
+              {
+                "ref": "fx.WB-FINDEX-OBS-2022-157.value",
+                "dp": 1
+              }
+            ]
+          },
+          {
+            "head": "UI-VIS-CAT-FINDEX-OUT-LABOUR-FORCE",
+            "cells": [
+              {
+                "ref": "fx.WB-FINDEX-OBS-2022-115.value",
+                "dp": 1
+              },
+              {
+                "ref": "fx.WB-FINDEX-OBS-2022-127.value",
+                "dp": 1
+              },
+              {
+                "ref": "fx.WB-FINDEX-OBS-2022-093.value",
+                "dp": 1
+              },
+              {
+                "ref": "fx.WB-FINDEX-OBS-2022-104.value",
+                "dp": 1
+              },
+              {
+                "ref": "fx.WB-FINDEX-OBS-2022-158.value",
+                "dp": 1
+              }
+            ]
+          },
+          {
+            "marker": "UI-VIS-NOTE-FINDEX-FLOWS"
+          },
+          {
+            "marker": "UI-VIS-NOTE-FINDEX-GROUPS"
+          }
+        ]
+      }
     }
   ]
 }

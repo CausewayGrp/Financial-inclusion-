@@ -306,7 +306,7 @@ CONTROLS = [
      replace('src="/assets/logo/CauseWay_logo_40.png"', 'src="/assets/CauseWay_Master_Logo.png"'),
      "RC-G4 a page loads the master logo instead of a derivative"),
     ("a table-only record hides its governed method text again", "en/evidence/VIS-FINDEX-BARRIERS/index.html",
-     replace("with adults who do not have an account as the base", "", 0),
+     replace("for every series on the reasons for not having an account", "", 0),
      "S04.1 progressive evidence field missing /evidence/VIS-FINDEX-BARRIERS/ en method"),
     ("the reuse terms disappear from /data/", "ar/data/index.html",
      sub_once(r'<p class="small reuse-once" data-reuse-terms>[^<]*</p>', ""),
@@ -357,7 +357,7 @@ CONTROLS = [
     # LA-A (owner instruction 2a): a number written in words that disagrees between the languages (CLM-026's Arabic
     # once said "six" where the English says "three"); the digit check cannot see it, the number-word check must.
     ("an Arabic page writes a different number in words", "ar/evidence/CLM-026/index.html",
-     replace("ويحمل الثلاثة منها", "ويحمل الستة منها"),
+     replace("ولستة عشر من مقاييسها", "ولسبعة عشر من مقاييسها"),
      "NUMBER WORDS evidence/CLM-026/index.html", "bilingual"),
     # CS-1 (owner decision of 10 October 2026): an indexed dated event must keep its anchor, and the result-type filter
     # must offer every type the index carries.
@@ -618,6 +618,26 @@ CONTROLS = [
      "RC-19 a social image still stands for the retired address /evidence/NEG-EW-011/ (en)"),
     # Close-out (brief of 10 October 2026). CO-G01: the Master's self-counts drift from the governed records again (OWN-10).
     # CO-G02: a quarantined row reaches a public output (CR-12).
+    # CO-G04 (close-out U1): a published Findex value drifts from the dated API snapshot; a withheld subgroup row loses
+    # the reason it stays unpublished.
+    ("CO-G04: a Findex value drifts from the World Bank's published value", "site-src/content/data/findex_baseline.json",
+     sub_once(r'("save\.any\.t\.d\.1",\s*"[^"]*",\s*"female",\s*2022,\s*)16\.2,', r'\g<1>16.3,'),
+     "the World Bank publishes 16.2 (save.any.t.d.1)"),
+    ("CO-G04: a withheld subgroup row loses its reason", "site-src/content/data/findex_subgroups.json",
+     sub_once(r'licensed microdata \(OWN-09\), which', 'licensed microdata, which'),
+     "stays unpublished without its reason (OWN-09)"),
+    ("CO-G04: a question Yemen's survey did not ask is held as if it were computable",
+     "site-src/content/data/findex_subgroups.json",
+     sub_once(r"Yemen's survey did not ask this question", "Yemen's survey left this question unpublished"),
+     "was not asked in Yemen's survey and does not say so"),
+    ("CO-G04: a question Yemen's survey did not ask is put back among the computable rows",
+     "site-src/content/data/findex_subgroups.json",
+     sub_once(r'"NOT_ASKED_IN_SURVEY"', '"CONTROLLED_MICRODATA_WEIGHTED_COMPUTE_REQUIRED"'),
+     "but the public DDI metadata print 0 valid cases"),
+    ("CO-G04: an all-adults-only reason names a series the World Bank publishes by group",
+     "site-src/content/data/findex_subgroups.json",
+     sub_once(r'\(series fin17a\)', '(series fin22b)'),
+     "says only the all-adults value is published; fin22b."),
     ("CO-G01: 00_MASTER states a stale Readings count", "site-src/content/content/master_principles.json",
      sub_once(r'("Readings",\s*)(\d+)(,\s*)(\d+)', lambda m: f"{m.group(1)}{int(m.group(2)) - 1}{m.group(3)}{int(m.group(4)) - 1}"),
      "CO-G01 00_MASTER 'Readings' states"),

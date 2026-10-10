@@ -303,8 +303,9 @@ def text_table(v: dict) -> str:
         raise ValueError(f"a text-first table has an unnamed column: {t['head']}")
     def td(c: dict) -> str:
         span = f' colspan="{c["span"]}"' if c.get("span", 1) > 1 else ""
-        if "number" in c:
-            body = num(c["number"]) + (f' {esc(c["unit"])}' if c.get("unit") else "")
+        if "number" in c:   # at the governed precision when the cell carries one (one decimal: 27.0, never 27)
+            shown = f'<bdi dir="ltr">{at_precision(c["number"], c["dp"])}</bdi>' if c.get("dp") else num(c["number"])
+            body = shown + (f' {esc(c["unit"])}' if c.get("unit") else "")
             return f'<td class="num"{span}>{body}</td>' if not c.get("unit") else f"<td{span}>{body}</td>"
         return f'<td{span}>{iso_run(c["text"])}</td>'
     bodies, cur = [], []
