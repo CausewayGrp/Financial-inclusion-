@@ -2,8 +2,8 @@
 
 ## 2026-10-10 — CLAUDE.md: multi-agent skill for multi-step tasks
 
-`CLAUDE.md` now tells Claude agents to load the `multi-agent-m` skill first for any multi-step task. Claude-only; no
-change to `AGENTS.md`, the Master, content, the site or any gate.
+`CLAUDE.md` now reads "For any multi-step task, load the multi-agent-m skill first." Claude-only; no change to
+`AGENTS.md`, the Master, content, the site or any gate.
 
 
 ## 2026-10-09 — V1 design integration, phase 2 (disclosure and density; not accepted)
