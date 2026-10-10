@@ -23,17 +23,20 @@ specifies. Follow [`docs/RELEASE_RUNBOOK.md`](RELEASE_RUNBOOK.md) and [`docs/DEP
 | 1.4 | The corporate proxy forwarding rule | `scripts/tests/test_corporate_proxy.py` proves it once the route exists |
 | 1.5 | The public origin, which is `null` until the owner sets it | `site-src/deployment.json`; the sitemap derives from it |
 
-## 2. Counsel formalities
+## 2. Licence formalities (updated 10 October 2026: the owner confirms; no counsel review is required)
 
-Both are formalities that do not block any work in the repository, and both are already applied as decisions.
+Neither blocks any work in the repository, and both are already applied as decisions.
 
 - **CC BY 4.0** for CauseWay's own content. The owner adopted it on 3 October 2026 and every CauseWay-content
-  download and export stays switched off until counsel confirms the licence text.
+  download and export stays switched off until the owner switches the downloads on. The owner confirmed the CC BY 4.0
+  text on /rights/, /terms/ and the footer on 10 October 2026, after RIGHTS-FINAL (`audit/OWNER_DECISIONS_2026-10-10.md`
+  §4); `licence_text_confirmed` is `true`. No legal review is claimed.
 - **The World Bank Microdata Research License** on the Global Findex respondent file. The owner's decision of
   4 October 2026 — publish aggregate statistics only, cite the dataset, never commit or publish the raw file — is
   applied throughout and recorded in the Master (`28_METHODS_RIGHTS`) and in `SRC-WB-FINDEX-001`. The respondent file
-  is not in this repository, in `dist/` or on the site. Counsel's confirmation of the licence text is the only thing
-  outstanding. The required citation is already carried on the source record: Demirgüç-Kunt, Klapper, Singer & Ansar
+  is not in this repository, in `dist/` or on the site. Nothing is outstanding; optionally, the owner may ask the World Bank
+  Microdata Library to confirm in writing that publishing the CLM-026 aggregate intervals is consistent with the Research
+  License (`FINAL_OPEN_ITEMS_REGISTER.md`; the /rights/ text no longer depends on it). The required citation is already carried on the source record: Demirgüç-Kunt, Klapper, Singer & Ansar
   (2022), *The Global Findex Database 2021*, World Bank.
 
 ## 3. Sources that need a person with a browser

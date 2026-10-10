@@ -130,7 +130,7 @@ def check(out: Path) -> list[str]:
                 problems.append("sources: the firewall does not hold (a source without a public locator, or a public one missing)")
     dep = json.loads((ROOT / "site-src" / "deployment.json").read_text(encoding="utf-8"))
     if dep.get("public_downloads") is not False:
-        problems.append("deployment.json: public_downloads must stay false until CauseWay's counsel confirms the CC BY 4.0 text")
+        problems.append("deployment.json: public_downloads must stay false until the owner switches the downloads on (docs/RELEASE_RUNBOOK.md, step 2)")
     if (ROOT / "dist" / "downloads").exists():
         problems.append("dist/downloads exists while downloads are switched off")
     return problems

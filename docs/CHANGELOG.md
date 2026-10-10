@@ -1,5 +1,33 @@
 # Repository Change Log
 
+## 2026-10-10 — RIGHTS-FINAL: the CC BY 4.0 text endorsed with two corrections; the owner confirms it
+
+The owner's decision of 10 October 2026 (`audit/OWNER_DECISIONS_2026-10-10.md` §4); the rights question is closed
+permanently. Master `66d4ce356d47` → `58b8f3ec5ac1`, 4 cells (/rights/ section 6, EN and AR).
+
+- **(a) The microdata sentence states facts only.** The CLM-026 intervals are computed from a file CauseWay obtained
+  under the World Bank Microdata Research License, and only aggregate estimates are published, never respondent-level
+  data. It no longer states what the licence "permits". The independent Arabic editor removed one word from the owner's
+  Arabic («منها»).
+- **(b) After the "Covered:" list:** for figures CauseWay calculates from other publishers' data, the licence covers the
+  calculation and presentation; the underlying data stay under their publishers' terms.
+- **The owner confirms the licence text, and no counsel review is required.** `licence_text_confirmed` is `true`.
+  "Counsel confirms" became "the owner confirms" in `deployment.json`, runbook step 7a, the deploy workflow,
+  RC-B14, README, the checkpoint, the Context, the handover, DEPLOYMENT.md, the exports and the partnership readiness
+  note.
+- **RC-B14** now fails if `licence_text_confirmed` is true without the owner's dated line.
+- `public_downloads` stays `false`; the deploy workflow stays inactive.
+- **Open items:** OWN-09 (optional): the World Bank Microdata Library's written confirmation. No legal review is claimed.
+- **Gate PN-G01** (specification handed over on pull request #21, retargeted to this build): every content page carries
+  `<link rel="license">` to the official deed in its language and prints the governed footer licence line exactly. The
+  exemptions are literal: the root and the 404, and, for the head link only, the two retired-address redirects. It must
+  read at least 280 pages.
+- **Gate PN-G02:** no retired label is printed in a page's header, navigation, footer or title; every retired word
+  reaches its page through a search alias; and every rename alias (SEARCH-ALIAS-034…045) is exercised by a search
+  smoke test. Eleven smoke tests were added as a steward edit to `navigation_interaction.json`.
+- **Nine negative controls:** five for PN-G01, three for PN-G02 and one for RC-B14. All are caught; the suite now has
+  135.
+
 ## 2026-10-10 — CS-1: the dated events of the chronology are indexed in search
 
 The owner's decision on pull request #13 (orchestration step 6), re-implemented on the current main from FC-4 (commit

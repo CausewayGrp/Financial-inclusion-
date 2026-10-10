@@ -4,8 +4,8 @@
   "authority_scope": "NAVIGATION_AND_INTERACTION_ONLY",
   "semantic_authority": "Production Master via current Page Specs; this contract cannot alter facts, claims, values, units, universes, periods, methods, sources, rights, evidence class or publication state.",
   "authority_binding": {
-    "master_sha256": "66d4ce356d4707e61880fb08ba5d6b1206008949d287ffa7311fd92cc4b59b06",
-    "page_specs_sha256": "3402a34e58b0388fd2ce51901fc78e3d1cd29ebdd97afe6fd1c8b4367efbb81c",
+    "master_sha256": "58b8f3ec5ac1324dfafc7eb6b4015b88da0cb9c241078903be82fe0f6492421b",
+    "page_specs_sha256": "7467bf55a6702790ceebc34118356b1b552ea5559fd32e928c21d5c907a1ccf7",
     "page_spec_count": 144
   },
   "experience_principle": "UNDERSTAND → EXPLORE → VERIFY",
@@ -3688,6 +3688,96 @@
       ],
       "rule": "PRIMARY_EXPECTED_ROUTE_IN_TOP_3",
       "basis": "PB-0494 (SEARCH_DISCOVERY_CLOSURE.md §2)"
+    },
+    {
+      "query_en": "explore",
+      "query_ar": "استكشف",
+      "expected_routes": [
+        "/explore/"
+      ],
+      "basis": "PN-G02 (owner decision of 10 October 2026, RIGHTS-FINAL): SEARCH-ALIAS-034 carries a label retired by NB-1 to its page"
+    },
+    {
+      "query_en": "evidence readings",
+      "query_ar": "قراءات الأدلة",
+      "expected_routes": [
+        "/readings/"
+      ],
+      "basis": "PN-G02 (owner decision of 10 October 2026, RIGHTS-FINAL): SEARCH-ALIAS-035 carries a label retired by NB-1 to its page"
+    },
+    {
+      "query_en": "data and sources",
+      "query_ar": "البيانات والمصادر",
+      "expected_routes": [
+        "/data/"
+      ],
+      "basis": "PN-G02 (owner decision of 10 October 2026, RIGHTS-FINAL): SEARCH-ALIAS-036 carries a label retired by NB-1 to its page"
+    },
+    {
+      "query_en": "method and measurement",
+      "query_ar": "المنهج والقياس",
+      "expected_routes": [
+        "/methodology/",
+        "/measurement/"
+      ],
+      "basis": "PN-G02 (owner decision of 10 October 2026, RIGHTS-FINAL): SEARCH-ALIAS-037 carries a label retired by NB-1 to its page"
+    },
+    {
+      "query_en": "report an issue",
+      "query_ar": "أبلغ عن مشكلة",
+      "expected_routes": [
+        "/contact/",
+        "/corrections/"
+      ],
+      "basis": "PN-G02 (owner decision of 10 October 2026, RIGHTS-FINAL): SEARCH-ALIAS-038 carries a label retired by NB-1 to its page"
+    },
+    {
+      "query_en": "trust",
+      "query_ar": "عن الموقع",
+      "expected_routes": [
+        "/about/"
+      ],
+      "basis": "PN-G02 (owner decision of 10 October 2026, RIGHTS-FINAL): SEARCH-ALIAS-039 carries a label retired by NB-1 to its page"
+    },
+    {
+      "query_en": "finance",
+      "query_ar": "التمويل",
+      "expected_routes": [
+        "/finance/"
+      ],
+      "basis": "PN-G02 (owner decision of 10 October 2026, RIGHTS-FINAL): SEARCH-ALIAS-040 carries a label retired by NB-1 to its page"
+    },
+    {
+      "query_en": "accessibility",
+      "query_ar": "إتاحة الوصول",
+      "expected_routes": [
+        "/accessibility/"
+      ],
+      "basis": "PN-G02 (owner decision of 10 October 2026, RIGHTS-FINAL): SEARCH-ALIAS-041 carries a label retired by NB-1 to its page"
+    },
+    {
+      "query_en": "access points",
+      "query_ar": "الوصول",
+      "expected_routes": [
+        "/access/"
+      ],
+      "basis": "PN-G02 (owner decision of 10 October 2026, RIGHTS-FINAL): SEARCH-ALIAS-042 carries a label retired by NB-1 to its page"
+    },
+    {
+      "query_en": "providers",
+      "query_ar": "مقدمو الخدمات",
+      "expected_routes": [
+        "/providers/"
+      ],
+      "basis": "PN-G02 (owner decision of 10 October 2026, RIGHTS-FINAL): SEARCH-ALIAS-043 carries a label retired by NB-1 to its page"
+    },
+    {
+      "query_en": "licence withdrawal",
+      "query_ar": "سحب الترخيص",
+      "expected_routes": [
+        "/providers/"
+      ],
+      "basis": "PN-G02 (owner decision of 10 October 2026, RIGHTS-FINAL): SEARCH-ALIAS-045 carries a label retired by NB-1 to its page"
     }
   ],
   "route_deletion_test": {

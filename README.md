@@ -47,13 +47,13 @@ External facts stay attributed to their original publishers. CauseWay attributio
 | Non-design v1 product | Complete |
 | Current phase | Design / presentation integration |
 | Post-v1, owner decision | C1 typed difference block; C2 dedicated guarantee route; C3 public contradiction index |
-| Reuse rights | Decided: CC BY 4.0 for CauseWay's own content (adopted 3 October 2026, closed 10 October 2026). Remaining release step: CauseWay's counsel confirms the licence text |
+| Reuse rights | Decided: CC BY 4.0 for CauseWay's own content (adopted 3 October 2026, closed 10 October 2026). The owner confirmed the licence text on 10 October 2026 (RIGHTS-FINAL; no legal review is claimed); the rights question is closed permanently |
 | Public release ready | No |
 | Open pull request | #11, draft, branch `code/final-content` |
 
 Closed in this product state: governed evidence and content for v1; Used on reaches every source, including those with no domain use recorded; a single valid Compare entry loads the reader's record and still requires two records for a verdict; the 23 dated events of the system chronology are indexed in search, each deep-linking to its own anchor on /finance/ (the analytical rule is not a dated event and is not indexed); the reuse licence for CauseWay's own content (CC BY 4.0, [`audit/OWNER_DECISIONS_2026-10-10.md`](audit/OWNER_DECISIONS_2026-10-10.md)) — a reuse licence is not regulatory licensing, and CauseWay neither holds nor claims the status of a licensed financial institution.
 
-Not closed, and not claimed: design integration; integrated Arabic and English, RTL, mobile, accessibility and browser acceptance after that integration; release-time hosting, security headers, currentness, counsel's confirmation of the CC BY 4.0 licence text and live checks; final owner release approval. The repository's software code is outside the CC BY 4.0 licence and no code licence is decided.
+Not closed, and not claimed: design integration; integrated Arabic and English, RTL, mobile, accessibility and browser acceptance after that integration; release-time hosting, security headers, currentness and live checks; final owner release approval. The repository's software code is outside the CC BY 4.0 licence and no code licence is decided.
 
 Remaining path: non-design v1 complete, then design / presentation integration, then final integrated QA, then release / cutover, then owner release approval. Release-time steps live in [`docs/RELEASE_RUNBOOK.md`](docs/RELEASE_RUNBOOK.md). Open items live in [`FINAL_OPEN_ITEMS_REGISTER.md`](FINAL_OPEN_ITEMS_REGISTER.md). The content-pass ledger is [`audit/final_content/FINAL_CONTENT_LOG.md`](audit/final_content/FINAL_CONTENT_LOG.md).
 
@@ -63,9 +63,9 @@ This is the single production repository. The Production Master is the sole sema
 
 `authority/Yemen_Financial_Inclusion_Evidence_Master.xlsx`
 
-Master SHA-256: `66d4ce356d4707e61880fb08ba5d6b1206008949d287ffa7311fd92cc4b59b06`
+Master SHA-256: `58b8f3ec5ac1324dfafc7eb6b4015b88da0cb9c241078903be82fe0f6492421b`
 
-Page Specs SHA-256: `3402a34e58b0388fd2ce51901fc78e3d1cd29ebdd97afe6fd1c8b4367efbb81c`
+Page Specs SHA-256: `7467bf55a6702790ceebc34118356b1b552ea5559fd32e928c21d5c907a1ccf7`
 
 | Layer | Role |
 |---|---|

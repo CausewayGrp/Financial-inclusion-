@@ -86,9 +86,9 @@ Report what can be observed, never inflate it into outcomes.
   `/rights/` and `/terms/` state it in both languages. The licence covers CauseWay's text, analysis, visual designs, the
   compiled records, and the structure and annotations of the exports. It does not cover third-party material, and no
   licence may be implied for it; it does not cover the CauseWay name, logo and marks. No licence file is added: the
-  licence is governed content, stated on the pages. One release step remains and it is counsel's, not the owner's
-  decision: CauseWay's counsel confirms the CC BY 4.0 text before the first deploy publishes those pages
-  (`docs/RELEASE_RUNBOOK.md` step 7a); `licence_text_confirmed` and `public_downloads` stay false until then. No rights
+  licence is governed content, stated on the pages. The owner confirmed the CC BY 4.0 text on 10 October 2026
+  (`docs/RELEASE_RUNBOOK.md` step 7a; no counsel review was required): `licence_text_confirmed` is true, and
+  `public_downloads` stays false until the owner switches the downloads on. No rights
   clearance, legal review or certification is claimed. This is the **reuse** licence (Arabic رخصة), not **regulatory**
   licensing (Arabic ترخيص): CauseWay is not a licensed financial institution and claims no such status.
 - **Code** (build, generator, gates) is outside the CC BY 4.0 licence and could be released under an open-source

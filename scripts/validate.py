@@ -3070,15 +3070,107 @@ try:
     if _dep14.get("public_origin") is not None:
         errors.append("RC-B14 public_origin is set: a release-only decision")
     if _dep14.get("public_downloads") is not False:
-        errors.append("RC-B14 public_downloads is not false: publishing the exports waits on counsel's confirmation of the CC BY 4.0 text")
+        errors.append("RC-B14 public_downloads is not false: publishing the exports is a separate owner decision (docs/RELEASE_RUNBOOK.md, step 2)")
     if (DIST / "downloads").exists():
         errors.append("RC-B14 dist/downloads exists while downloads are switched off")
-    # the deploy workflow refuses to publish until counsel has confirmed the CC BY 4.0 text (docs/RELEASE_RUNBOOK.md, 7a);
-    # the switch is the owner's, set in the same commit as the dated line that records the confirmation
+    # the deploy workflow refuses to publish until the owner has confirmed the CC BY 4.0 text (docs/RELEASE_RUNBOOK.md, 7a;
+    # owner decision of 10 October 2026: the owner confirms, no counsel review is required). The switch is set in the same
+    # commit as the dated line that records the confirmation, and it may be true only while that line exists.
     if not isinstance(_dep14.get("licence_text_confirmed"), bool):
         errors.append("RC-B14 site-src/deployment.json: licence_text_confirmed must be true or false")
+    elif _dep14.get("licence_text_confirmed") is True and not any(
+            "The owner has read and confirms the CC BY 4.0 text" in _od.read_text(encoding="utf-8")
+            for _od in (ROOT / "audit").glob("OWNER_DECISIONS_*.md")):
+        errors.append("RC-B14 licence_text_confirmed is true but no dated owner line in audit/OWNER_DECISIONS_*.md confirms the CC BY 4.0 text")
 except Exception as _x:
     errors.append("RC-B14 unreadable " + repr(_x))
+
+# PN-G01 (owner decision of 10 October 2026, RIGHTS-FINAL; specification handed over on pull request #21, retargeted to
+# this build): every content page declares the licence, for a reader and for a machine. The footer line and the head link
+# are governed copy (UI-FOOTER-LICENCE, UI-LICENCE-NAME, UI-LICENCE-DEED-URL, NB-1); each language links its own official
+# deed. The exemptions are a literal set, so a further document losing the line is a failure, not a widened rule: the
+# neutral root (a language redirect) and the 404 carry neither, and the two pages at the retired address carry the
+# footer line but, being zero-second redirects, no head link.
+try:
+    _ui_pn = {u["ui_id"]: u for u in json.load(open(C / "content/interface_copy.json", encoding="utf-8"))}
+    _PN_CANON = "https://creativecommons.org/licenses/by/4.0/"
+    _PN_DEED = {"en": _PN_CANON, "ar": _PN_CANON + "deed.ar"}
+    _PN_NO_LINE = {"404.html", "index.html"}
+    _PN_NO_LINK = _PN_NO_LINE | {"en/evidence/NEG-EW-011/index.html", "ar/evidence/NEG-EW-011/index.html"}
+    for _L in ("en", "ar"):
+        if "{licence}" not in str((_ui_pn.get("UI-FOOTER-LICENCE") or {}).get("label_" + _L) or ""):
+            errors.append(f"PN-G01 UI-FOOTER-LICENCE does not carry the {{licence}} placeholder in {_L}")
+        if str((_ui_pn.get("UI-LICENCE-DEED-URL") or {}).get("label_" + _L) or "") != _PN_DEED[_L]:
+            errors.append(f"PN-G01 UI-LICENCE-DEED-URL is not the official licence deed URL in {_L}")
+    if "UI-LICENCE-NAME" not in _ui_pn:
+        errors.append("PN-G01 UI-LICENCE-NAME is missing")
+    _pn_line = {_L: _norm(str(_ui_pn["UI-FOOTER-LICENCE"]["label_" + _L]).replace(
+        "{licence}", str(_ui_pn["UI-LICENCE-NAME"]["label_" + _L]))) for _L in ("en", "ar")}
+    _pn_n = 0
+    for _f in sorted(DIST.rglob("*.html")):
+        _rel = _f.relative_to(DIST).as_posix()
+        if _rel in _PN_NO_LINE:
+            continue
+        _pn_n += 1
+        _t = _f.read_text(encoding="utf-8")
+        _L = "ar" if _rel.startswith("ar/") else "en"
+        if _rel not in _PN_NO_LINK and f'<link rel="license" href="{_PN_DEED[_L]}">' not in _t.split("</head>", 1)[0]:
+            errors.append(f"PN-G01 {_rel} has no machine-readable licence link")
+        _lines = re.findall(r'<p class="fine lic">(.*?)</p>', _t, re.S)
+        if len(_lines) != 1 or _norm(_vistext(_lines[0])) != _pn_line[_L]:
+            errors.append(f"PN-G01 {_rel} does not print the governed footer licence line")
+    if _pn_n < 280:
+        errors.append(f"PN-G01 read only {_pn_n} pages")
+except Exception as _x:
+    errors.append("PN-G01 unreadable " + repr(_x))
+
+# PN-G02 (same decision and specification): a rename is never menu-only. (1) No retired label is printed in a label
+# position — the header, navigation and footer of a page, its title, and their accessible names. Body text is not
+# swept: «إتاحة الوصول» is still correct prose in its other sense (making a service reachable), and "Explore" /
+# «استكشف» live on as the verb. (2) Every retired word a reader may still type reaches its page through a search alias.
+# (3) Every alias added for the rename (SEARCH-ALIAS-034…045) is exercised by a search smoke test, which the validator
+# runs (R4), so each is proved rather than merely present.
+try:
+    _PN_RETIRED = ["Data & sources", "Measurement Agenda", "Evidence Readings", "Method & Measurement", "Report an issue",
+                   "Trust and responsible use", "Trust links", "Product and trust links", "Rights & reuse",
+                   "Evidence colophon", "البيانات والمصادر", "قراءات الأدلة", "أبلغ عن مشكلة", "إتاحة الوصول",
+                   "الثقة والاستخدام المسؤول", "روابط الثقة", "بيان الأدلة"]
+    _pn_hits = {}
+    for _f in sorted(DIST.rglob("*.html")):
+        _rel = _f.relative_to(DIST).as_posix()
+        _t = _f.read_text(encoding="utf-8")
+        _regions = re.findall(r"<title>.*?</title>|<header\b.*?</header>|<nav\b.*?</nav>|<footer\b.*?</footer>", _t, re.S)
+        _blob = _html.unescape(" ".join(_regions))
+        for _lab in _PN_RETIRED:
+            if _lab in _blob:
+                _pn_hits.setdefault(_lab, []).append(_rel)
+    for _lab, _pages in sorted(_pn_hits.items()):
+        errors.append(f"PN-G02 the retired label '{_lab}' is still printed on {len(_pages)} page(s), e.g. {_pages[0]}")
+    _al_pn = {a["alias_id"]: a for a in json.load(open(C / "content/search_aliases.json", encoding="utf-8"))}
+    def _pn_terms(a):
+        return {x.strip().casefold() for k in ("terms_en", "terms_ar") for x in str(a.get(k) or "").split(";") if x.strip()}
+    def _pn_routes(a):
+        return {x.strip()[len("route:"):] for x in str(a.get("targets") or "").split("|") if x.strip().startswith("route:")}
+    _PN_WORDS = [("explore", "/explore/"), ("استكشف", "/explore/"), ("evidence readings", "/readings/"),
+                 ("قراءات الأدلة", "/readings/"), ("data and sources", "/data/"), ("البيانات والمصادر", "/data/"),
+                 ("method and measurement", "/methodology/"), ("report an issue", "/contact/"),
+                 ("أبلغ عن مشكلة", "/contact/"), ("trust", "/about/"), ("عن الموقع", "/about/"), ("finance", "/finance/"),
+                 ("التمويل", "/finance/"), ("إتاحة الوصول", "/accessibility/"), ("الوصول", "/access/"),
+                 ("مقدمو الخدمات", "/providers/"), ("الحوالات", "/remittances/")]
+    for _w, _route in _PN_WORDS:
+        if not any(_w.casefold() in _pn_terms(a) and _route in _pn_routes(a) for a in _al_pn.values()):
+            errors.append(f"PN-G02 the retired word '{_w}' is not carried by any search alias to {_route}")
+    _nav_pn = json.load(open(C / "content/navigation_interaction.json", encoding="utf-8"))
+    _pn_queries = {str(s.get(k) or "").strip().casefold() for s in _nav_pn.get("search_smoke_tests", [])
+                   for k in ("query_en", "query_ar")} - {""}
+    for _n in range(34, 46):
+        _aid = f"SEARCH-ALIAS-{_n:03d}"
+        if _aid not in _al_pn:
+            errors.append(f"PN-G02 {_aid} is missing")
+        elif not (_pn_terms(_al_pn[_aid]) & _pn_queries):
+            errors.append(f"PN-G02 {_aid} has no search smoke test, so it ships unverified")
+except Exception as _x:
+    errors.append("PN-G02 retired-label sweep failed " + repr(_x))
 
 # RC-NOINDEX (owner decision B3, 3 October 2026): until release every page — the root entry and the 404 included —
 # carries one robots meta, "noindex, nofollow", in its head, because under a path crawlers ignore the robots.txt the

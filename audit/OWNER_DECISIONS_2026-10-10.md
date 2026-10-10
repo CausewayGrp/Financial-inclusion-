@@ -67,3 +67,19 @@ Recorded by the orchestration session (programme steward) as the owner gave them
 | OWN-2f | The rights work covers the Findex Microdata Research License for the three derived 95% intervals: they are cited as that licence requires, and the page states that CC BY does not extend to the underlying data. |
 | OWN-3 | Before every merge the session confirms that every commit on the branch came from this session. |
 | OWN-NAME-03 | The labels of pull request #19 (transactions NB-1 and NB-2) are **approved** as built. Pull request #19 is merged; steps 5, 6 and 7 of the orchestration follow. |
+
+## 4. The CC BY 4.0 text: endorsed with two corrections; the rights question closed permanently (10 October 2026)
+
+The owner's decision of 10 October 2026, given after pull request #22 merged and carried out as transaction RIGHTS-FINAL
+(`audit/rights_final/`). Appended; nothing above is edited.
+
+| ID | Decision |
+|---|---|
+| OWN-RF-01 | **The CC BY 4.0 text is endorsed with two corrections, and the rights question is closed permanently.** |
+| OWN-RF-02 | **/rights/, correction (a).** The microdata sentence no longer states a legal reading of the licence ("which permits publishing aggregate statistics…"). It states facts only: the CLM-026 confidence intervals are computed from a file CauseWay obtained under the World Bank Microdata Research License, and only aggregate estimates are published, never respondent-level data. The citation sentence and "CC BY 4.0 does not extend to the underlying microdata" are unchanged. The owner's Arabic was reviewed by the independent Arabic editor, who removed one word («منها») because it had no valid referent and added a meaning the English lacks. |
+| OWN-RF-03 | **/rights/, correction (b).** Directly after the "Covered:" list: for figures CauseWay calculates from other publishers' data, the licence covers CauseWay's calculation and presentation, and the underlying data stay under their publishers' terms. No other rights wording changes; /terms/ and the footer are unchanged. |
+| OWN-RF-04 | **Licence-text confirmation: the owner confirms it, and no counsel review is required.** The release rule changes from "CauseWay's counsel confirms" to "the owner confirms" in `site-src/deployment.json`, `docs/RELEASE_RUNBOOK.md` step 7a, the deploy workflow's refusal message, validator RC-B14, README, the checkpoint, the Context and the handover. `licence_text_confirmed` is set to `true`. `public_downloads` stays `false`, as a separate owner decision. The deploy workflow stays inactive until the owner switches it on. |
+| OWN-RF-05 | Optional and not blocking: the owner may request written confirmation from the World Bank Microdata Library that publishing the CLM-026 aggregate intervals is consistent with the Research License. The text no longer depends on it (`FINAL_OPEN_ITEMS_REGISTER.md`, OWN-09). |
+| OWN-RF-06 | The licence gates PN-G01 (every content page declares the licence, for a reader and for a machine) and PN-G02 (a rename is never menu-only) land in the same pull request, so the corrected text is guarded from the moment it lands. |
+
+**Owner's confirmation, 10 October 2026:** The owner has read and confirms the CC BY 4.0 text on /rights/, /terms/ and the footer, in both languages, as corrected in RIGHTS-FINAL. No legal review is claimed.
