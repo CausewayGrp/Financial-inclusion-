@@ -1,7 +1,7 @@
 {
   "schema": "YFI_CURRENT_PROJECT_CONTEXT/1.0",
   "role": "COMPACT_PROJECTION_NOT_AUTHORITY",
-  "generated_at": "2026-10-10T13:52:59Z",
+  "generated_at": "2026-10-10T17:53:33Z",
   "system": {
     "name_en": "Yemen Financial Inclusion Evidence",
     "name_ar": "أدلة الشمول المالي في اليمن",
@@ -65,7 +65,7 @@
   "production_master": {
     "path": "authority/Yemen_Financial_Inclusion_Evidence_Master.xlsx",
     "drive_id": "1xAbdDHJd5bYo0Pzo_a6dR6HsZ056LzJU",
-    "sha256": "58b8f3ec5ac1324dfafc7eb6b4015b88da0cb9c241078903be82fe0f6492421b",
+    "sha256": "190b148abf2d46b1a9e5f5d50ec4e45c0bca7afde19b3fe0b76444af3421c83f",
     "is_sole_authority": true,
     "authority_dimensions": [
       "semantic",
@@ -79,7 +79,7 @@
   },
   "controlled_projection": {
     "page_specs_path": "site-src/content/page_specs.json",
-    "page_specs_sha256": "7467bf55a6702790ceebc34118356b1b552ea5559fd32e928c21d5c907a1ccf7",
+    "page_specs_sha256": "bf8f5c721222a60d11c9ad2609dcdf140ac6adc88bbc5d20a1d189f5a010927a",
     "page_specs": 144,
     "all_page_specs_master_hash_match": true,
     "page_specs_index_master_hash_match": true
@@ -94,9 +94,9 @@
     "readings": 11,
     "measurement_priorities": 10,
     "visual_contracts": 36,
-    "search_records": 466,
+    "search_records": 465,
     "sources": 167,
-    "publicly_addressable_sources": 157,
+    "publicly_addressable_sources": 156,
     "curated_source_report_cards": 28,
     "chronology_events": 23,
     "reading_sections": 74
@@ -214,7 +214,7 @@
     "not_covered": [
       "third-party material, which stays under its owners' terms",
       "the CauseWay name, logo and marks",
-      "the repository's software code — outside this licence, and no code licence is decided"
+      "the repository's software code — outside this licence and not openly licensed; CauseWay reserves all rights in it (owner decision D3, 10 October 2026)"
     ],
     "regulatory_licensing": "CauseWay is not a licensed financial institution and claims no such status. A reuse licence (Arabic رخصة) is not regulatory licensing (Arabic ترخيص).",
     "not_claimed": [
@@ -238,7 +238,7 @@
     ]
   },
   "validation": {
-    "master_sha256_recorded": "58b8f3ec5ac1324dfafc7eb6b4015b88da0cb9c241078903be82fe0f6492421b",
+    "master_sha256_recorded": "190b148abf2d46b1a9e5f5d50ec4e45c0bca7afde19b3fe0b76444af3421c83f",
     "projection_hash_binding": "PASS",
     "schema_required_keys": [
       "schema",
