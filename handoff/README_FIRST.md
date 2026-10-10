@@ -81,9 +81,9 @@ and Measurement experience, is in the brief §6. `DESIGN_STARTING_TOKENS.json` i
 
 ## 7. What is unknown
 
-Nothing that blocks Design. The open items — the release domain, contact-mailbox confirmation, CauseWay's identity and
-funding statement, the content licence that gates downloads and exports, web-size logo derivatives, eleven source checks
-that leave today's text unchanged until the source is read, and eight known evidence frontiers — are listed with their
+Nothing that blocks Design. The open items — the release origin, counsel's confirmation of the CC BY 4.0 text (which
+gates downloads and exports), the source checks that leave today's text unchanged until the source is read, and the
+known evidence frontiers — are listed with their
 class, where they show and who owns them in `FINAL_OPEN_ITEMS_REGISTER.md`. Design the honest state each page already
 has; never fill one. No visual board, colour board or homepage mockup binds you unless it is in this repository: say at
 D0 whether one was supplied (brief §0).

@@ -8,7 +8,28 @@
     "organising_question": "What does the evidence mean for financial inclusion in Yemen, and how do we know?"
   },
   "programme_state": {
-    "as_of": "2026-10-04",
+    "as_of": "2026-10-10",
+    "content_complete": {
+      "date": "2026-10-10",
+      "tag": "checkpoint/2026-10-10-content-complete (annotated; on the final main of 10 Oct 2026, or the owner pushes it: docs/HANDOVER_TO_DEVELOPER.md §9)",
+      "pull_requests": "#11–#22 resolved except #21: #13 closed without merge (owner decision INDEX, OWN-14-R); every other merged (#22 is CS-1)",
+      "since_2026_10_04": "final content pass; design integration; public naming NB-1/NB-2 (labels approved by the owner); legacy-audit follow-through LA-A/LA-B/LA-C (CBY-BANKS-2026-05, CWR-011); dated chronology events in search (CS-1)",
+      "open_pull_requests": "#21 (draft, opened 10 October 2026 by another session): an alternative public-naming Part B, based on the branch of the merged #16. The owner approved the labels of #19, which is merged. Closing or reconciling #21 is the owner's call"
+    },
+    "release_readiness": {
+      "declared": "NOT DECLARED — nothing is deployed",
+      "blockers": [
+        "DigitalOcean App Platform hosting: owner account, registry, token, repository variables; web administrator proxy route; public origin (docs/RELEASE_RUNBOOK.md steps 1–9a)",
+        "Counsel confirms the CC BY 4.0 text; licence_text_confirmed stays false (the owner's choice) and the deploy workflow refuses to publish until a dated line records it (step 7a)",
+        "public_downloads stays false until that confirmation and the owner switch (step 2)",
+        "Seven sources need a person with a browser (docs/HANDOVER_TO_DEVELOPER.md §4)",
+        "A phone check of the live site from Yemen (handover §5)",
+        "OpenAI's independent acceptance review (handover §6)",
+        "The owner's release approval and tag (steps 13–14)"
+      ],
+      "handover": "docs/HANDOVER_TO_DEVELOPER.md",
+      "open_items": "FINAL_OPEN_ITEMS_REGISTER.md §10"
+    },
     "r_programme": "R0–R8.3 CLOSED / PASS; R8.4 CLOSED / PASS including the Evidence Readings (F2); R8.5 CLOSED (F4, audit/R8_5_REPOSITORY_SUBTRACTION_CLOSURE.md); R8.6 CLOSED — DESIGN HANDOFF READY (F8 freeze, audit/R8_6_DESIGN_HANDOFF_FREEZE_CLOSURE.md; F9 clean-room acceptance, audit/FINAL_CLEAN_ROOM_ACCEPTANCE.md)",
     "tranches": "Tranche A CLOSED; Tranche B specification CLOSED; Tranche B execution CLOSED; Tranche C COMPLETE and accepted by OpenAI (26 Sep 2026, recipient verification 31/31); final integration F0–F9 CLOSED (R8.5 closed; whole public corpus accepted; discovery, accessibility, rights and security contract in place; sustainability baseline recorded; Design handoff frozen; clean-room accepted by three cold recipients)",
     "pre_tranche_c": "Sessions P1–P4 CLOSED and independently accepted with three narrow corrections; P5 corrections CLOSED",
@@ -16,14 +37,14 @@
     "not_declared": [
       "PUBLIC RELEASE READY"
     ],
-    "design_prompt_status": "DESIGN HANDOFF READY — executable; start path handoff/README_FIRST.md → handoff/CLAUDE_DESIGN_MASTER_PROMPT.md (tightened 27 Sep 2026 by the post-F9 correction and the design-enablement control pass); the Design package is accepted (owner's final D7 visual acceptance recorded 2 Oct 2026, audit/OWNER_DECISIONS_2026-10-02.md) and the production runtime is merged: pull request #8 (EAD-01 to EAD-11), merged into main at 38a9a97 on 2 October 2026, EAD states in FINAL_OPEN_ITEMS_REGISTER.md section 1; non-design v1 product is complete on pull request #11 (draft, branch code/final-content); current phase is design / presentation integration; C1, C2 and C3 are post-v1; public release is not declared",
+    "design_prompt_status": "DESIGN HANDOFF READY — executable; start path handoff/README_FIRST.md → handoff/CLAUDE_DESIGN_MASTER_PROMPT.md (tightened 27 Sep 2026 by the post-F9 correction and the design-enablement control pass); the Design package is accepted (owner's final D7 visual acceptance recorded 2 Oct 2026, audit/OWNER_DECISIONS_2026-10-02.md) and the production runtime is merged: pull request #8 (EAD-01 to EAD-11), merged into main at 38a9a97 on 2 October 2026, EAD states in FINAL_OPEN_ITEMS_REGISTER.md section 1; non-design v1 product is complete and merged (pull request #11, df5e2026); content complete on main at checkpoint/2026-10-10-content-complete (10 Oct 2026); current phase is design / presentation integration; C1, C2 and C3 are post-v1; public release is not declared",
     "production_runtime": {
       "pull_request": 8,
       "title": "code: the production runtime — EAD-01 to EAD-11",
       "state": "MERGED",
       "merge_commit": "38a9a97",
       "merged_on": "2026-10-02",
-      "release_candidate": "not the current phase; non-design v1 is complete on draft pull request #11; public release is not declared"
+      "release_candidate": "not the current phase; content is complete on main (checkpoint/2026-10-10-content-complete, 10 Oct 2026); public release is not declared"
     },
     "checkpoint": "OPENAI_REENTRY_CHECKPOINT.md",
     "tranche_c": {

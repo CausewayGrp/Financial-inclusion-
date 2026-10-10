@@ -145,6 +145,10 @@ Counts (inventory `counts`): 143 Page Specs → 286 edition pages + neutral root
 110 Evidence Records; 10 Readings; 10 Measurement priorities; 11 entry questions; 160 sources (151 with public locator);
 28 curated resources; 36 visual contracts; 24 chronology events; 435 search records.
 
+These counts are as at D0. The current ones are in the inventory `counts`. At the content-complete checkpoint of
+10 October 2026: 144 Page Specs (292 documents with the root, the 404 and two retired-address pages), 110 Evidence
+Records, 11 Readings, 167 sources (157 with a public locator), 23 dated events and 466 search records.
+
 | Family | Routes | Governed inputs | Components (to be designed) | States carried |
 |---|---|---|---|---|
 | Orientation | 1 (`/`) | Page Spec; `collection.starting_question_ids` (QE-002/003/005/011); 1 Featured Reading; section 3 + its 3 records | identity, question entry list, snapshot-as-authored, featured Reading, `#system` visual anchor | none extracted; no figure strip, no state badge (§4.4) |

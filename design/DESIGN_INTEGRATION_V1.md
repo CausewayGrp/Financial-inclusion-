@@ -270,3 +270,10 @@ what remains is the contract question on the domain band (`ESCALATIONS.md`, V1 p
   public tools (35/36, 1 not applicable), viewport acceptance (168/168), security headers, base path, nginx hosting,
   no-JavaScript, exports, Windows portability: pass. Negative controls: 122 of 122 caught (one fault string updated to
   the hub link's new attribute order; its gate unchanged).
+
+---
+
+Cross-reference (2026-10-10, content-complete checkpoint): this integration is merged into `main` through pull request
+#16 (merge commit `22a7f84`, 10 October 2026). Pull request #13, which the table above says "stays open", was closed
+without merge the same day (`audit/OWNER_DECISIONS_2026-10-10.md` §3, OWN-14-R). The status line above is kept as
+written at the time.

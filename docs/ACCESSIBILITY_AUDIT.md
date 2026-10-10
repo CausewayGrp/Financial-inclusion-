@@ -2,7 +2,7 @@
 
 **Status:** AUDIT RECORD — NOT A CONFORMANCE CLAIM. Machine-checkable outcomes only. Screen readers in Arabic and English, and every judgement a person must make, are outstanding (see 'outstanding_for_a_human_auditor'). The Accessibility page states no result.
 
-Measured 2026-10-09 on `a04f18cce92c`, with `scripts/accessibility_audit.py`: 284 pages (142 routes in both languages) at 1440 px and 390 px, plus a 320 px reflow pass, reduced motion, images off, and a keyboard walk. The general ruleset is `axe-core@4.10.2` (SHA-256 `b511cd9dec01c76f…`).
+Measured 2026-10-10 on `99d03a3e4fc2`, with `scripts/accessibility_audit.py`: 288 pages (144 routes in both languages) at 1440 px and 390 px, plus a 320 px reflow pass, reduced motion, images off, and a keyboard walk. The general ruleset is `axe-core@4.10.2` (SHA-256 `b511cd9dec01c76f…`).
 
 ## What the general ruleset found
 
@@ -14,7 +14,7 @@ Nothing.
 |---|---|---|
 | Keyboard access | 2.1.1, 2.1.2, 2.4.3 | skip link first and moves focus into `main`; menu and dialog close on Escape and return focus; no keyboard trap |
 | Visible focus | 2.4.7, 2.4.11 | `3px` outline, offset `3px`; focused target clear of the sticky bar |
-| Target size | 2.5.8 | 20640 measured; 393 under 24 × 24 px, of which 280 meet the criterion's inline exception and 113 its spacing exception — **0** meet neither |
+| Target size | 2.5.8 | 21286 measured; 688 under 24 × 24 px, of which 574 meet the criterion's inline exception and 114 its spacing exception — **0** meet neither |
 | Reflow | 1.4.4, 1.4.10 | 320 px (400 % of 1280 px): 0 routes overflow in English, 0 in Arabic |
 | Names | 4.1.2, 1.3.1, 2.4.6 | 0 interactive elements and 0 landmarks without a name |
 | Labels | 3.3.1, 3.3.2 | 0 controls without a label |
@@ -22,7 +22,7 @@ Nothing.
 | Text alternatives | 1.1.1, 1.3.1 | 0 images without `alt`; every drawn visual's alternative listed below |
 | Reduced motion | 2.3.3 | `scroll-behavior: auto`, 0 animated elements |
 | Headings | 1.3.1, 2.4.6 | pages with other than one `h1`: 0; heading-level jumps: 0 |
-| Images off | 1.1.1 | main text still 15,448 characters in English, 14,525 in Arabic |
+| Images off | 1.1.1 | main text still 15,421 characters in English, 14,527 in Arabic |
 
 ## Text alternative for every drawn visual
 
@@ -30,7 +30,7 @@ What a reader gets instead of the picture, from the governed contract.
 
 | Visual | Tier | Rows | Alternative (EN / AR characters) | Boundary stated | Fallback form |
 |---|---|---|---|---|---|
-| `RV-CWR-001` | SIGNATURE | 3 | 957 / 937 | yes | Panel 1: two-row table (publication, reference year, value in USD million, sourc |
+| `RV-CWR-001` | SIGNATURE | 3 | 957 / 936 | yes | Panel 1: two-row table (publication, reference year, value in USD million, sourc |
 | `RV-CWR-004` | CORE_ANALYTICAL | 3 | 1090 / 1022 | yes | Table: lane, date, what is recorded. |
 | `RV-CWR-009` | SIGNATURE | 2 | 1620 / 1463 | yes | Ordered list of steps with state, dated events and links. |
 | `VIS-FINDEX-GAPS` | CORE_ANALYTICAL | 1 | 1198 / 1037 | yes | Table: group, value (%), note. |
@@ -40,9 +40,9 @@ What a reader gets instead of the picture, from the governed contract.
 | `VIS-POS-TERMINALS` | CORE_ANALYTICAL | 1 | 1327 / 1191 | yes | Table: month, value, note. |
 | `VIS-POS-TRANSACTIONS` | CORE_ANALYTICAL | 1 | 1386 / 1198 | yes | Table: month, value, note. |
 | `VIS-POS-VALUE` | CORE_ANALYTICAL | 1 | 1216 / 1061 | yes | Table: month, value (YER million) or 'no verified value'. |
-| `VIS-PROVIDER-OBSERVABILITY` | SIGNATURE | 5 | 1499 / 1219 | yes | Table with caption, one row per class, scoped headers. |
+| `VIS-PROVIDER-OBSERVABILITY` | SIGNATURE | 5 | 1499 / 1221 | yes | Table with caption, one row per class, scoped headers. |
 | `VIS-REMITTANCE-COST` | CORE_ANALYTICAL | 1 | 719 / 661 | yes | Table: corridor, amount, cost (%). |
-| `VIS-REMITTANCE-MACRO` | CORE_ANALYTICAL | 1 | 939 / 827 | yes | Table: year, value, state, source document. |
+| `VIS-REMITTANCE-MACRO` | CORE_ANALYTICAL | 1 | 939 / 826 | yes | Table: year, value, state, source document. |
 
 ## What a person still has to do
 

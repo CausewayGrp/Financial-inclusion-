@@ -744,3 +744,8 @@ rights escalation is **CLOSED** (see its closure line under "Raised at V1"). The
 Cross-reference (2026-10-10, NB-1): the label half of C-10 ("'Data & sources' holds no data", raised at D6 above) is
 closed by the naming transaction NB-1 — the hub is "Sources / المصادر" while nothing is downloadable
 (`audit/naming/NAMING_DECISIONS_2026-10-10.md`). The domain-strip half stays as raised. The entries above are kept as raised.
+
+Cross-reference (2026-10-10, content-complete checkpoint): pull request #13, "untouched" in the entry above, was closed
+without merge on 10 October 2026. The owner decided its open question (the chronology in search) as INDEX
+(`audit/OWNER_DECISIONS_2026-10-10.md` §3, OWN-14-R), and transaction CS-1 implemented it. The entries above are kept
+as raised.
