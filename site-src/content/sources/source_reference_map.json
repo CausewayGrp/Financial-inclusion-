@@ -26,15 +26,21 @@
     "rights_display_state": "OBJECT_LEVEL_OR_UNSPECIFIED",
     "citation_behavior": "Use the original locator and object-level controlled citation/source text; do not infer missing bibliographic or rights metadata.",
     "linked_evidence_object_ids": [
+      "CBY-BANKS-2026-05",
+      "CLM-033",
       "CLM-054"
     ],
     "linked_claim_ids": [
+      "CLM-033",
       "CLM-054"
     ],
     "linked_reading_ids": [
-      "CWR-006"
+      "CWR-002",
+      "CWR-006",
+      "CWR-011"
     ],
     "linked_visual_ids": [
+      "RV-CWR-002",
       "RV-CWR-006"
     ],
     "linked_measurement_ids": [],
@@ -3731,8 +3737,12 @@
       "CLM-029",
       "CLM-030"
     ],
-    "linked_reading_ids": [],
-    "linked_visual_ids": [],
+    "linked_reading_ids": [
+      "CWR-007"
+    ],
+    "linked_visual_ids": [
+      "RV-CWR-007"
+    ],
     "linked_measurement_ids": [],
     "rule": "DISPLAY_READY fields come only from the Production Master. LOCATOR_ONLY preserves the locator without inventing missing bibliography or rights metadata."
   },
@@ -4754,18 +4764,11 @@
     "rights_display_state": "OBJECT_LEVEL_OR_UNSPECIFIED",
     "citation_behavior": "Use the original locator and object-level controlled citation/source text; do not infer missing bibliographic or rights metadata.",
     "linked_evidence_object_ids": [
-      "CLM-045",
       "DS-QUAL-EVIDENCE"
     ],
-    "linked_claim_ids": [
-      "CLM-045"
-    ],
-    "linked_reading_ids": [
-      "CWR-010"
-    ],
-    "linked_visual_ids": [
-      "RV-CWR-010"
-    ],
+    "linked_claim_ids": [],
+    "linked_reading_ids": [],
+    "linked_visual_ids": [],
     "linked_measurement_ids": [],
     "rule": "DISPLAY_READY fields come only from the Production Master. LOCATOR_ONLY preserves the locator without inventing missing bibliography or rights metadata."
   },
@@ -4809,7 +4812,7 @@
   },
   {
     "source_id": "SRC-LIT-XIDIAN-YEM-FI-2025",
-    "primary_url": "https://www.researchgate.net/publication/393091523_The_Reality_of_Financial_Inclusion_and_Crucial_Issues_in_Yemen",
+    "primary_url": null,
     "additional_urls": null,
     "datasets_or_use": "DS-K04-SOURCE-DEEP-INTAKE,DS-K04-LITERATURE-SOURCE-AUDIT",
     "row_count": 2,
@@ -5826,24 +5829,34 @@
     "rights_display_state": "OBJECT_LEVEL_OR_UNSPECIFIED",
     "citation_behavior": "Use the original locator and object-level controlled citation/source text; do not infer missing bibliographic or rights metadata.",
     "linked_evidence_object_ids": [
+      "CBY-BANKS-2026-05",
       "CLM-018",
+      "CLM-027",
+      "CLM-045",
       "FMIIP-BASELINE-2025-01",
       "VIS-PAYMENT-RAILS",
       "VIS-TARGET-RESULT-STATE",
       "XW-FMIIP-005"
     ],
     "linked_claim_ids": [
-      "CLM-018"
+      "CLM-018",
+      "CLM-027",
+      "CLM-045"
     ],
     "linked_reading_ids": [
       "CWR-003",
       "CWR-004",
-      "CWR-009"
+      "CWR-007",
+      "CWR-009",
+      "CWR-010",
+      "CWR-011"
     ],
     "linked_visual_ids": [
       "RV-CWR-003",
       "RV-CWR-004",
+      "RV-CWR-007",
       "RV-CWR-009",
+      "RV-CWR-010",
       "VIS-PAYMENT-RAILS",
       "VIS-TARGET-RESULT-STATE"
     ],
@@ -5952,7 +5965,8 @@
     ],
     "linked_reading_ids": [
       "CWR-001",
-      "CWR-002"
+      "CWR-002",
+      "CWR-011"
     ],
     "linked_visual_ids": [
       "RV-CWR-001",
@@ -5999,7 +6013,8 @@
     ],
     "linked_reading_ids": [
       "CWR-001",
-      "CWR-002"
+      "CWR-002",
+      "CWR-011"
     ],
     "linked_visual_ids": [
       "RV-CWR-001",

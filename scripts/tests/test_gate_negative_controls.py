@@ -50,7 +50,8 @@ def _run(tree: Path, script: str) -> tuple[int, str]:
 
 
 # A control may name the gate that must catch it; the default is the repository validator. Each runs inside a copy.
-GATE_SCRIPTS = {"validate": "scripts/validate.py", "content_parity": "scripts/tests/test_content_parity.py"}
+GATE_SCRIPTS = {"validate": "scripts/validate.py", "content_parity": "scripts/tests/test_content_parity.py",
+                "bilingual": "audit/tranche_c/checks/bilingual_invariance.py"}
 
 
 def tree_files() -> list[str]:
@@ -352,6 +353,11 @@ CONTROLS = [
     ("a source filter stops offering an option for a key its records carry", "en/data/index.html",
      sub_once(r'(<select data-source-facet="domain">.*?)<option value="none">[^<]*</option>', r'\1'),
      "RC-B13 the domain filter has no option for 'none', so a listed source is unreachable en"),
+    # LA-A (owner instruction 2a): a number written in words that disagrees between the languages (CLM-026's Arabic
+    # once said "six" where the English says "three"); the digit check cannot see it, the number-word check must.
+    ("an Arabic page writes a different number in words", "ar/evidence/CLM-026/index.html",
+     replace("ويحمل الثلاثة منها", "ويحمل الستة منها"),
+     "NUMBER WORDS evidence/CLM-026/index.html", "bilingual"),
     # RC-LATEST (Owner Addendum 2, lessons; RC-16): no title or description calls anything "latest" without its date.
     ("a page title calls a measure 'latest' without saying when", "en/people/index.html",
      sub_once(r'(<title>)', r'\1Latest '),

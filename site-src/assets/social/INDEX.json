@@ -37,6 +37,12 @@
   "data__en": {
    "frame_sha256": "349a180b15b462501c715be56f8d64bbe67ae5f6363389cecdf1a9c2cf405dce"
   },
+  "evidence_CBY-BANKS-2026-05__ar": {
+   "frame_sha256": "3450c44fad3a16d7dabd9177c1060097d9852df767a05c987da0561ad3a28f15"
+  },
+  "evidence_CBY-BANKS-2026-05__en": {
+   "frame_sha256": "393cb95274e3357393a7cd0547522d65a17491319f9726fb247564612351ca65"
+  },
   "evidence_CLM-001__ar": {
    "frame_sha256": "60b213efc42600fcc4a2c4f3b20847714837509a1ad2a4df1ba6ccbd711257fd"
   },
@@ -92,10 +98,10 @@
    "frame_sha256": "f2170148edddd61c58d40b8842d2a5c3d9cfd494a65160fcf1a83ad8e829bbf9"
   },
   "evidence_CLM-010__ar": {
-   "frame_sha256": "362c1819018f9ad7d85b7c54ff757e19c40cdd3022ba1243ee44c28602308c9b"
+   "frame_sha256": "ea7272e7ac47718aa452b07a218c5adc4f49c6e1a11f870174771a05c7b5b092"
   },
   "evidence_CLM-010__en": {
-   "frame_sha256": "9d828e096306c697bf6f5aaa9ea9c70650e33d61264b6b9a2bec1ec82c31bb75"
+   "frame_sha256": "1eec3b32d8c0a1634a6bb8d6208c21cbd9c23aedb552d050870ddf7f211cf8b8"
   },
   "evidence_CLM-011__ar": {
    "frame_sha256": "1266603d311c77a40dfe56280e490b1d330107ead3c3956f20a63f0559d0ceec"
@@ -302,10 +308,10 @@
    "frame_sha256": "6a3e2e804e33f7daf0738f41e44c0b8eaf4e54e01ad63010002313098199b177"
   },
   "evidence_CLM-045__ar": {
-   "frame_sha256": "5b34413b041982ab44acc45f06092098d5f243bc3e37bb8b58df0292172d51eb"
+   "frame_sha256": "0c164935db9408b490453e16ed4e770ea60290c9f252c6c343a0a4caf8e6174e"
   },
   "evidence_CLM-045__en": {
-   "frame_sha256": "067c3e6bbb53185511855c836b6668559ca1d6c7d718455ed21c564b5ad94d52"
+   "frame_sha256": "1ee34f199eb30f2cd9f1073c414387d40618a65e67cef333ea0742bd265d5235"
   },
   "evidence_CLM-046__ar": {
    "frame_sha256": "5b52001ba062fcaeed208383716345ec3b81744d41136962b0aa50321a07c34c"
@@ -434,10 +440,10 @@
    "frame_sha256": "4eeab353c221549428988f6b60adfc1414697063ba2336fe3efd2be02daba015"
   },
   "evidence_FMIIP-BASELINE-2025-01__ar": {
-   "frame_sha256": "65ad01a7d6e4ef0b7b308b2b2df39ad855e88ff94db3e6072364a97cc20b4759"
+   "frame_sha256": "e0f714d69e8fb8c6bfaf4d78f19f6abbefdc9af341fa0cb797dc8875a3865c1e"
   },
   "evidence_FMIIP-BASELINE-2025-01__en": {
-   "frame_sha256": "4ec7e68cc4851ad4577909f2df593c625c8fd8922fc9d17c95fc049542ba0516"
+   "frame_sha256": "2aed7019ca221c11554678d8ccceb1edc7e58040b8fe69255a48c63e79e3a9d0"
   },
   "evidence_MF-ORIG-001+002__ar": {
    "frame_sha256": "49813b2b0654d42a96b8582d22c5fd09794c79c7aa476f3d252a06aad7f917a1"
@@ -828,6 +834,12 @@
   },
   "readings_same-year-different-number__en": {
    "frame_sha256": "5a30af1aafd6c50ef9316be8b2d545184cdd6d88b7b2aa8d089b2bfb941261ff"
+  },
+  "readings_where-bank-balance-sheets-sit__ar": {
+   "frame_sha256": "62efb56836fa477949dc71e026809a4661fe3d71bf73f927afe1d3c2489eb23c"
+  },
+  "readings_where-bank-balance-sheets-sit__en": {
+   "frame_sha256": "07c5e3f305432dcf59fbdcd43e82b84ed7df944795455cfeb03d605d9fc6dd40"
   },
   "reforms__ar": {
    "frame_sha256": "62ac9e1b8fbefc79a3052575b1c1d4b97a1d51e470881bdbb5b45c10e2e67c9e"

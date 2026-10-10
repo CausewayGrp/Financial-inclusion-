@@ -2,24 +2,24 @@
  "schema": "YFIE_ROUTE_CONTENT_AND_STATE_INVENTORY/1.3",
  "purpose": "Design recipient's map of every route, its family, bindings, collections, next actions and the states Design must cover. Derived; not authority.",
  "generated_from": {
-  "production_master_sha256": "370d72a4cb40b75dc72aa0320d1dba984de07d200e6d19889d7ca3dc61413d37",
-  "page_specs_sha256": "9dd5fd3bbd9a981d9651cce408e6170d2e9dc4de6f714f976a08427545c059da",
+  "production_master_sha256": "90b66c04f23aa75e8bb04dea044409b724dfb35eed717db4ed4a935d52af5e9d",
+  "page_specs_sha256": "2e88b24bf61fc44db0025c5aeab5c70878c2da89e34c865772070a0536b3a0df",
   "generator": "scripts/handoff_inventory.py"
  },
  "counts": {
-  "evidence_records": 109,
+  "evidence_records": 110,
   "public_claims": 60,
   "chronology_events": 23,
   "sources": 167,
-  "public_locators": 158,
+  "public_locators": 157,
   "curated_resources": 28,
-  "readings": 10,
+  "readings": 11,
   "measurement_priorities": 10,
   "entry_questions": 11,
   "visual_contracts": 36,
   "evidence_passports": 55,
-  "search_records": 440,
-  "page_specs": 142
+  "search_records": 443,
+  "page_specs": 144
  },
  "projection_roles": {
   "rules": {
@@ -107,7 +107,7 @@
   },
   {
    "page_family": "Evidence Record",
-   "route_count": 109,
+   "route_count": 110,
    "unique_user_value_role": "CANONICAL_PUBLIC_VERIFICATION_ENDPOINT",
    "primary_next_action_policy": "SOURCE_RELATED_CORRECTION_OR_REUSE",
    "depth_role": "VERIFICATION",
@@ -131,7 +131,7 @@
   },
   {
    "page_family": "Reading",
-   "route_count": 10,
+   "route_count": 11,
    "unique_user_value_role": "BOUNDED_CROSS_SOURCE_SYNTHESIS",
    "primary_next_action_policy": "VERIFY_BOUND_EVIDENCE_RECORDS",
    "depth_role": "SYNTHESIS",
@@ -508,7 +508,6 @@
      "SRC-IMF-BPM7-IMPLEMENTATION",
      "SRC-IMF-YEM-SMP-2026",
      "SRC-AIDDATA-SAUDI-YEM-2015",
-     "SRC-LIT-XIDIAN-YEM-FI-2025",
      "SRC-LIT-INVEST-ISLAMIC-FI-2024",
      "SRC-LIT-OEB-FX-PRICES-2025",
      "SRC-SANAA-MF-2020",
@@ -559,7 +558,6 @@
      "SRC-CBY-AR2015-HIST-001",
      "SRC-CBY-SANAA-C12-2024",
      "SRC-CBY-SANAA-C14-2024",
-     "SRC-LIT-XIDIAN-YEM-FI-2025",
      "SRC-LIT-INVEST-ISLAMIC-FI-2024",
      "SRC-LIT-OEB-FX-PRICES-2025",
      "SRC-ADEN-CBY-LIQ-2016"
@@ -681,6 +679,7 @@
    "next_action_policy": "OPEN_EVIDENCE_RECORD_OR_COMPARE",
    "collection": {
     "evidence_record_ids": [
+     "CBY-BANKS-2026-05",
      "CLM-001",
      "CLM-002",
      "CLM-003",
@@ -793,6 +792,37 @@
     ]
    },
    "structured_data": [],
+   "hard_state_acceptance": []
+  },
+  {
+   "route": "/evidence/CBY-BANKS-2026-05/",
+   "page_family": "Evidence Record",
+   "page_class": "evidence_detail",
+   "stable_object_id": "CBY-BANKS-2026-05",
+   "html": {
+    "en": "dist/en/evidence/CBY-BANKS-2026-05/index.html",
+    "ar": "dist/ar/evidence/CBY-BANKS-2026-05/index.html"
+   },
+   "title_en": "Commercial and Islamic banks: consolidated assets at the end of May 2026",
+   "title_ar": "البنوك التجارية والإسلامية: الأصول المجمعة في نهاية مايو 2026",
+   "sections": 2,
+   "section_rows_split_by_language": false,
+   "evidence_ids": [
+    "CBY-BANKS-2026-05"
+   ],
+   "visual_ids": [],
+   "reading_ids": [],
+   "measurement_ids": [],
+   "source_ids": [],
+   "source_references": 2,
+   "next_actions": [],
+   "next_action_policy": "SOURCE_RELATED_CORRECTION_OR_REUSE",
+   "lineage_state": "BOUND_EXACT",
+   "verification_state": "SOURCES_LISTED",
+   "public_sources_listed": 2,
+   "structured_data": [
+    "BreadcrumbList"
+   ],
    "hard_state_acceptance": []
   },
   {
@@ -1625,12 +1655,12 @@
    "reading_ids": [],
    "measurement_ids": [],
    "source_ids": [],
-   "source_references": 3,
+   "source_references": 4,
    "next_actions": [],
    "next_action_policy": "SOURCE_RELATED_CORRECTION_OR_REUSE",
    "lineage_state": "BOUND_EXACT",
    "verification_state": "SOURCES_LISTED",
-   "public_sources_listed": 3,
+   "public_sources_listed": 4,
    "structured_data": [
     "BreadcrumbList"
    ],
@@ -1811,12 +1841,12 @@
    "reading_ids": [],
    "measurement_ids": [],
    "source_ids": [],
-   "source_references": 2,
+   "source_references": 3,
    "next_actions": [],
    "next_action_policy": "SOURCE_RELATED_CORRECTION_OR_REUSE",
    "lineage_state": "BOUND_EXACT",
    "verification_state": "SOURCES_LISTED",
-   "public_sources_listed": 2,
+   "public_sources_listed": 3,
    "structured_data": [
     "BreadcrumbList"
    ],
@@ -2188,7 +2218,7 @@
    "next_action_policy": "SOURCE_RELATED_CORRECTION_OR_REUSE",
    "lineage_state": "BOUND_EXACT",
    "verification_state": "SOURCES_LISTED_SOME_WITHOUT_PUBLIC_LOCATOR",
-   "public_sources_listed": 1,
+   "public_sources_listed": 2,
    "structured_data": [
     "BreadcrumbList"
    ],
@@ -4401,6 +4431,7 @@
    "sections": 13,
    "section_rows_split_by_language": true,
    "evidence_ids": [
+    "CBY-BANKS-2026-05",
     "CLM-020",
     "CLM-021",
     "CLM-022",
@@ -4433,7 +4464,7 @@
     "MA-008"
    ],
    "source_ids": [],
-   "source_references": 39,
+   "source_references": 40,
    "next_actions": [
     "/evidence/CLM-022/"
    ],
@@ -4476,14 +4507,15 @@
     "VIS-FIRM-FINANCE-SEVERITY"
    ],
    "reading_ids": [
-    "CWR-008"
+    "CWR-008",
+    "CWR-011"
    ],
    "measurement_ids": [
     "MA-004",
     "MA-008"
    ],
    "source_ids": [],
-   "source_references": 6,
+   "source_references": 8,
    "next_actions": [
     "/evidence/CLM-005/"
    ],
@@ -4641,7 +4673,7 @@
     "MA-010"
    ],
    "source_ids": [],
-   "source_references": 38,
+   "source_references": 37,
    "next_actions": [
     "/evidence/CLM-003/"
    ],
@@ -4715,7 +4747,7 @@
     "MA-010"
    ],
    "source_ids": [],
-   "source_references": 29,
+   "source_references": 28,
    "next_actions": [
     "/evidence/CLM-001/"
    ],
@@ -4829,7 +4861,8 @@
     "CWR-007",
     "CWR-008",
     "CWR-009",
-    "CWR-010"
+    "CWR-010",
+    "CWR-011"
    ],
    "measurement_ids": [],
    "source_ids": [],
@@ -4850,7 +4883,8 @@
      "CWR-007",
      "CWR-008",
      "CWR-009",
-     "CWR-010"
+     "CWR-010",
+     "CWR-011"
     ]
    },
    "structured_data": [],
@@ -4926,7 +4960,7 @@
     "SRC-CBY-AR2023-001",
     "SRC-IMF-YEM-EGDDS-VAL-1996"
    ],
-   "source_references": 3,
+   "source_references": 4,
    "next_actions": [],
    "next_action_policy": "VERIFY_BOUND_EVIDENCE_RECORDS",
    "structured_data": [
@@ -4956,6 +4990,7 @@
     "CLM-024",
     "CLM-025",
     "CLM-026",
+    "FMIIP-BASELINE-2025-01",
     "XW-FMIIP-005"
    ],
    "visual_ids": [
@@ -5121,6 +5156,7 @@
     "CLM-001",
     "CLM-002",
     "CLM-025",
+    "CLM-027",
     "VIS-FINDEX-GAPS"
    ],
    "visual_ids": [
@@ -5136,7 +5172,7 @@
     "MA-007"
    ],
    "source_ids": [],
-   "source_references": 3,
+   "source_references": 5,
    "next_actions": [],
    "next_action_policy": "VERIFY_BOUND_EVIDENCE_RECORDS",
    "structured_data": [
@@ -5278,6 +5314,42 @@
    ]
   },
   {
+   "route": "/readings/where-bank-balance-sheets-sit/",
+   "page_family": "Reading",
+   "page_class": "reading_detail",
+   "stable_object_id": "where-bank-balance-sheets-sit",
+   "html": {
+    "en": "dist/en/readings/where-bank-balance-sheets-sit/index.html",
+    "ar": "dist/ar/readings/where-bank-balance-sheets-sit/index.html"
+   },
+   "title_en": "Where bank balance sheets sit",
+   "title_ar": "أين تتركز أصول البنوك",
+   "sections": 5,
+   "section_rows_split_by_language": false,
+   "evidence_ids": [
+    "CBY-BANKS-2026-05",
+    "CLM-033"
+   ],
+   "visual_ids": [],
+   "reading_ids": [
+    "CWR-002",
+    "CWR-011"
+   ],
+   "measurement_ids": [],
+   "source_ids": [
+    "SRC-CBY-001",
+    "SRC-WB-FMIIP-P180708"
+   ],
+   "source_references": 4,
+   "next_actions": [],
+   "next_action_policy": "VERIFY_BOUND_EVIDENCE_RECORDS",
+   "structured_data": [
+    "BreadcrumbList",
+    "Article"
+   ],
+   "hard_state_acceptance": []
+  },
+  {
    "route": "/reforms/",
    "page_family": "Domain Answer",
    "page_class": "static",
@@ -5325,7 +5397,7 @@
     "MA-010"
    ],
    "source_ids": [],
-   "source_references": 41,
+   "source_references": 40,
    "next_actions": [
     "/evidence/CLM-011/"
    ],
@@ -5665,7 +5737,7 @@
    }
   ],
   "evidence_lineage_states": {
-   "BOUND_EXACT": 92,
+   "BOUND_EXACT": 93,
    "BOUND_PARTIAL": 3,
    "COMPOSITE_OF_OBJECTS": 13,
    "FRAMING_NO_FACT": 1
@@ -5678,6 +5750,7 @@
      "UI-EVID-OPEN-ORIGINAL-SOURCE"
     ],
     "records": [
+     "CBY-BANKS-2026-05",
      "CLM-001",
      "CLM-002",
      "CLM-003",

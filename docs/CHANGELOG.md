@@ -1,5 +1,58 @@
 # Repository Change Log
 
+## 2026-10-10 — LA-C: the May 2026 bank balance-sheet record and Reading CWR-011
+
+Transaction C of the same brief, included because its values bind to the original (owner correction OWN-2d). Master
+`ecb18e4f2bdf` → `90b66c04f23a`; 2 new public routes (4 HTML documents: 292 from 144 Page Specs).
+
+- **New Evidence Record CBY-BANKS-2026-05:** the consolidated balance sheet of commercial and Islamic banks at the end
+  of May 2026 from CBY-Aden "Monetary and Financial Developments" No. 54, Table 4, p. 15 (total assets 13,362.1, loans
+  and advances to government 2,145.0, claims on the private sector 1,350.4, foreign assets 4,448.0, reserves 2,538.8,
+  YER billion). The bulletin does not state the territory its figures cover, and the record says so.
+- **New Reading CWR-011 "Where bank balance sheets sit" / «أين تتركز أصول البنوك»:** a hypothesis, not a finding;
+  four other explanations that fit the same numbers; where the evidence stops; what would change the reading. The
+  government's share of loans and advances in December 2022 is given as 85.1% on the earlier basis and 59.5% at market
+  exchange rates; "76% → 61%" is not used.
+- **Steward edit to `navigation_interaction.json`** (finding LA-C:CWR-011): two route entries appended for the new
+  routes, copied from the existing Reading and Evidence Record entries. `page_spec_design_intent.json` gains the same
+  two routes; the build counts in the checkpoint and `handoff/README_FIRST.md` follow.
+
+## 2026-10-10 — LA-B: legacy-audit follow-through, four Readings strengthened
+
+Transaction B of the same brief. Master `0087c312c061` → `ecb18e4f2bdf`, 33 cells, English and Arabic together. No new
+object; each new number is bound, with its locator, to a record the Reading cites.
+
+- **CWR-003:** a target inherits every property of its baseline; the five declarations a baseline needs; the FMIIP
+  results-framework baseline of 10,761 matches the 10,761 wallets of PAD ¶14 (an inference, stated as one); the PAD's
+  GIS database includes money exchangers, which the access-point definition does not name. FMIIP-BASELINE-2025-01 is
+  bound to CWR-003.
+- **CWR-002:** across the 2022 revaluation (CBY-Aden bulletin No. 54, Table 4, p. 15) private-sector credit
+  338.0 → 1,301.6 and foreign assets 904.5 → 2,669.0, while loans to government barely moved (1,926.8 → 1,913.2):
+  consistent with revaluing foreign-currency items, not new lending. Bound through CLM-033.
+- **CWR-007:** a concordance of the women's account-ownership figures: 5.4% (2021 wave, fieldwork 2022–23), 1.7% (2014
+  wave, Little Data Book 2015, p. 160) and the PAD's undated "two percent" (¶9), which is not a measurement. CLM-027 is
+  bound to CWR-007.
+- **CWR-010:** the PAD reports 10,761 wallets opened in a pilot and take-up of 40% to 70%; it does not say this is the
+  pilot the Reading describes, and no ratio against 45,460 is drawn.
+
+## 2026-10-10 — LA-A: legacy-audit follow-through, corrections to our own copy
+
+Owner brief "Legacy-audit follow-through", transaction A, with the owner's corrections of the same day
+(`audit/OWNER_DECISIONS_2026-10-10.md` §3). Master `370d72a4cb40` → `0087c312c061`, 28 cells, English and Arabic
+together. Every locator was read in the original (`audit/legacy_followthrough/SOURCE_VERIFICATION_2026-10-10.md`).
+
+- **The FMIIP access-point definition is published** (PAD PADHI00396, Annex 1, p. 26): the pages that said it is not
+  documented now state its four components and that no de-duplication rule is published.
+- **The FMIIP "active" definitions are published** (PAD Annex 1, p. 28: 90 days for an e-wallet, one year for a bank
+  current account); CBY-Aden publishes no definition of a "subscriber". The four notes are split accordingly, and the
+  bank pair (5,202,019 accounts, CBY-Aden H1 2025; 1,062,441 active bank accounts, FMIIP January 2025) is shown with
+  different unit, universe and date and no ratio.
+- **SRC-LIT-XIDIAN-YEM-FI-2025** (no claim; hijacked venue) is non-public and leaves /data/.
+- **SRC-CCY-PRESSURE-2026** (no publisher) is unbound from CLM-045.
+- **CLM-026's Arabic summary** said six measures and then three; it now says three, as the English does.
+- **Gate:** bilingual invariance now compares number words (three to ninety-nine) as well as digits, with a negative
+  control. A scan of the whole Arabic corpus found no other disagreement.
+
 ## 2026-10-10 — NB-2: fixes from the independent review of NB-1
 
 An independent reviewer read every cell NB-1 changed and the built pages in both languages, and found no blocker. Its

@@ -17,10 +17,10 @@
   "authority": {
     "master_path": "authority/Yemen_Financial_Inclusion_Evidence_Master.xlsx",
     "master_drive_id": "1xAbdDHJd5bYo0Pzo_a6dR6HsZ056LzJU",
-    "master_sha256": "370d72a4cb40b75dc72aa0320d1dba984de07d200e6d19889d7ca3dc61413d37",
+    "master_sha256": "90b66c04f23aa75e8bb04dea044409b724dfb35eed717db4ed4a935d52af5e9d",
     "page_specs_path": "site-src/content/page_specs.json",
     "page_specs_drive_id": "1jWAKnjH4lJ3XdrsG_USX7UtWDKIXLkEU",
-    "page_specs_sha256": "9dd5fd3bbd9a981d9651cce408e6170d2e9dc4de6f714f976a08427545c059da",
+    "page_specs_sha256": "2e88b24bf61fc44db0025c5aeab5c70878c2da89e34c865772070a0536b3a0df",
     "presentation_priority_path": "site-src/content/presentation_priority.json",
     "precedence": [
       "authority/Yemen_Financial_Inclusion_Evidence_Master.xlsx",
@@ -37,25 +37,25 @@
     "page_specs_external_repository_sync_state": "EXTERNAL_REPOSITORY_SYNC_PENDING"
   },
   "controlled_counts": {
-    "page_specs": 142,
-    "generated_locale_pages": 284,
-    "generated_html_total_including_root_and_404": 286,
-    "page_sections": 573,
+    "page_specs": 144,
+    "generated_locale_pages": 288,
+    "generated_html_total_including_root_and_404": 290,
+    "page_sections": 580,
     "questions": 11,
-    "evidence_objects": 109,
+    "evidence_objects": 110,
     "public_claims": 60,
     "evidence_passports": 55,
-    "readings": 10,
-    "reading_sections": 68,
+    "readings": 11,
+    "reading_sections": 74,
     "measurement_priorities": 10,
     "visual_contracts": 36,
     "sources": 167,
-    "publicly_addressable_sources": 158,
+    "publicly_addressable_sources": 157,
     "curated_source_report_cards": 28,
     "indicators": 216,
-    "public_search_records": 440,
-    "public_object_source_closure_records": 225,
-    "sources_without_public_locator": 9,
+    "public_search_records": 443,
+    "public_object_source_closure_records": 227,
+    "sources_without_public_locator": 10,
     "chronology_events": 23
   },
   "runtime_contract": {
@@ -91,7 +91,7 @@
   },
   "implementation_target": {
     "ui": "Python production renderer in scripts/yfie (driven by scripts/build.py): static, pre-rendered HTML for every controlled route, with the one runtime site-src/app.js",
-    "route_requirement": "All 142 controlled routes in Arabic and English must be real deep-link-safe static output.",
+    "route_requirement": "All 144 controlled routes in Arabic and English must be real deep-link-safe static output.",
     "single_runtime_rule": "No permanent parallel legacy/new runtime. Migration may use temporary parity work, then obsolete presentation code is removed after acceptance.",
     "future_api_rule": "Future APIs must sit behind adapters and feed the same controlled schemas. They are not required for the first complete build."
   },
@@ -134,6 +134,10 @@
     {
       "route": "/evidence/",
       "page_class": "static"
+    },
+    {
+      "route": "/evidence/CBY-BANKS-2026-05/",
+      "page_class": "evidence_detail"
     },
     {
       "route": "/evidence/CLM-001/",
@@ -656,6 +660,10 @@
       "page_class": "reading_detail"
     },
     {
+      "route": "/readings/where-bank-balance-sheets-sit/",
+      "page_class": "reading_detail"
+    },
+    {
       "route": "/reforms/",
       "page_class": "static"
     },
@@ -719,7 +727,7 @@
   "navigation_contract": {
     "path": "site-src/content/content/navigation_interaction.json",
     "authority_scope": "NAVIGATION_AND_INTERACTION_ONLY",
-    "controlled_route_coverage": 142,
+    "controlled_route_coverage": 144,
     "page_family_count": 11,
     "journey_tests": 13,
     "search_smoke_tests": 21,

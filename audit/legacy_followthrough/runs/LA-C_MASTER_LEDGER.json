@@ -1,0 +1,54 @@
+{
+ "transaction": "LA-C",
+ "summary": "Legacy-audit follow-through C: Reading CWR-011 and its bound record CBY-BANKS-2026-05",
+ "input_master_sha256": "ecb18e4f2bdf5163f10d1d76f5f64ba318216845085c165cfe3f9713c9dadb07",
+ "output_master_sha256": "90b66c04f23aa75e8bb04dea044409b724dfb35eed717db4ed4a935d52af5e9d",
+ "cells_written": 5,
+ "changes": [
+  {
+   "finding": "LA-C:CWR-011",
+   "sheet": "06_EVIDENCE_OBJECTS",
+   "row": 114,
+   "col": null,
+   "field": "CBY-BANKS-2026-05",
+   "old": null,
+   "new": "{\"object_id\": \"CBY-BANKS-2026-05\", \"object_class\": \"TEMPORAL_OBSERVATION\", \"public_routes\": \"/finance/\", \"title_en\": \"Commercial and Islamic banks: consolidated assets at the end of May 2026\", \"title_ar\": \"البنوك التجارية والإسلامية: الأصول المجمعة في نهاية مايو 2026\", \"summary_en\": \"At the end of May 2026 the consolidated balance sheet of commercial and Islamic banks published by the Central Bank"
+  },
+  {
+   "finding": "LA-C:CWR-011",
+   "sheet": "08_READINGS",
+   "row": 15,
+   "col": null,
+   "field": "CWR-011",
+   "old": null,
+   "new": "{\"reading_id\": \"CWR-011\", \"slug\": \"where-bank-balance-sheets-sit\", \"route\": \"/readings/where-bank-balance-sheets-sit\", \"title_en\": \"Where bank balance sheets sit\", \"title_ar\": \"أين تتركز أصول البنوك\", \"question_en\": \"Do Yemen’s banks lend to firms, or hold claims on the state and assets abroad?\", \"question_ar\": \"هل تُقرض البنوك في اليمن المنشآت، أم تحتفظ بحقوق على الدولة وأصول في الخارج؟\", \"thesis"
+  },
+  {
+   "finding": "LA-C:CWR-011",
+   "sheet": "09 rows",
+   "row": null,
+   "col": null,
+   "field": "CWR-011",
+   "old": null,
+   "new": "appended"
+  },
+  {
+   "finding": "LA-C:CWR-011",
+   "sheet": "03 rows",
+   "row": null,
+   "col": null,
+   "field": "CWR-011",
+   "old": null,
+   "new": "appended"
+  },
+  {
+   "finding": "LA-C:CWR-011",
+   "sheet": "02 rows",
+   "row": null,
+   "col": null,
+   "field": "CWR-011",
+   "old": null,
+   "new": "appended"
+  }
+ ]
+}
