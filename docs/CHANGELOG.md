@@ -1,5 +1,43 @@
 # Repository Change Log
 
+## 2026-10-10 — CLOSE-4: regulation and chronology (Stage A, W3d, Appendix C)
+
+Master `c447171006a8` → `c24791d6fd22`, 545 cells (`audit/close_out/close_4.py`; ledger and run report in
+`audit/close_out/runs/`), plus one generator change: /data/ points to the chronology on /finance/ instead of repeating
+it. Every instrument was read in its original on cby-ye.com, the Arabic scans as page images. File names there carry
+the upload time, so every date is the one the instrument prints, or a posting date where the text says so. An
+independent red-team (2 blockers, 6 should-fix, 7 nits) and an Arabic editor (5 must-fix, 10 should-fix, 13 nits)
+read every string before the run; applied, with the exceptions recorded in PROGRESS.
+
+- **Sources.** 23 new: thirteen CBY-Aden rules (decisions, circulars, instructions and the two credit-information
+  pages), two enforcement sources (Decision No. 20 of 2024; the eleven 2025 decisions as one source), five CBY-Aden
+  news releases, the bank balance-sheet report to December 2022, the statement of the Office of the UN Special Envoy
+  for Yemen of 23 July 2024, and the copy of Law No. 21 of 2008 that CBY-Aden hosts. 199 source records, 192 with a
+  public locator. The nine files of the CBY-Aden licensing page that the 3 October re-run listed as not held are now
+  held (`audit/FINAL_CURRENTNESS_CUTOFF.md`, appended).
+- **Rules.** 12 entries in 31_REFORMS_REGULATION (REF-REG-001 to 012), and 15 new documents in the /data/ regulatory
+  group. Each entry says what the instrument requires, never that it is applied.
+- **Dated events.** Six in 14_SYSTEM_CHRONOLOGY, shown on /finance/:
+  - the Buna connection (14 September 2023) and the first phase of the national switch (7 and 28 March 2024);
+  - Decision No. 20 of 2024, the agreement the UN Special Envoy's office announced on 23 July 2024, and CBY-Aden's
+    cancellation notice of 6 August 2024. The wording is neutral, and the event says what the sources do not report:
+    whether or when the other side's measures were cancelled;
+  - the decision to relocate the Deposit Insurance Institution's head office (20 July 2025). The law copy and the
+    decision's recital cite different law numbers;
+  - the 2025 exchange-sector enforcement decisions: counts only, no names (11 decisions, 51 licences: 44 suspended, 7
+    withdrawn);
+  - the launch of the defaulters registry (5 August 2026). Launch is not coverage.
+- **One chronology.** The /data/ section now says in one line where the chronology is and links to
+  /finance/#chronology. The 24 earlier events are unchanged.
+- **CWR-006.** Section 6 explains that a microfinance bank licensed by converting an exchange company can be an
+  existing business reclassified, not new inclusion. The Reading now binds the two Board decisions it cites.
+- **/data/ scope line.** The line said the evidence base holds no law. The law copy is labelled Law, with the
+  Republic of Yemen as its issuer, and sits outside the group of CBY-Aden instruments; the line now says where it is.
+- **Passport.** EP-CBY-CREDIT-INFO-SPINE-K04 names its locators.
+- **Not found (FRONTIER).** Governor's Decisions Nos. 8, 12 and 16 of 2026; the February 2026 exchange-rate pricing
+  decision; the text of Decision No. 4 of 1991 (cited, not published); a July 2024 licence revocation (the 2024 bank
+  measure held is Decision No. 20 of 2024); news items 709, 722 and 731 (server errors).
+
 ## 2026-10-10 — CLOSE-3D: the cost of sending money to Yemen (Stage A, W3c, U7; closes FRN-09)
 
 Master `49de81b3bc53` → `c447171006a8`, 180 cells (`audit/close_out/close_3d.py`; ledger and run report in

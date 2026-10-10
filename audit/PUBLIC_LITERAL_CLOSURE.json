@@ -1,15 +1,15 @@
 {
   "schema": "YFIE_PUBLIC_LITERAL_CLOSURE/2.0",
   "audit_version": "2.0 — token-bounded, token-level classification (Pre-Tranche-C P1-D); v1 substring and paragraph-keyword rules removed",
-  "authority_master_sha256": "c447171006a8d1be4e684c36e90f29ea5db9295c649bf747083ec81914d0ae13",
-  "page_specs_sha256": "d5789ead5b70b7192df7b9564bf3aabb60e857ce4756ea7df29c9f252befd7c6",
+  "authority_master_sha256": "c24791d6fd22b127f9f5109f93a91b7d50b942303799993d0fb3ab5510100852",
+  "page_specs_sha256": "a7b7611be6590dad528d62702f22cf721340886830a78adf2953f08a88431eaf",
   "scope": "Reader-facing Page Spec titles/sections plus governed-copy numeric inventory. Every substantive public numeral must resolve to a governed source-closed object or be explicitly classified as date/period, stable technical identifier, or non-observation system/method metadata.",
   "classification_rule": "UNRESOLVED_SUBSTANTIVE_PUBLIC_NUMBER is a hard validation failure. Route/source presence without an object-level source-closed trace is not sufficient.",
-  "record_count": 16806,
+  "record_count": 16812,
   "summary": {
     "STABLE_ID_OR_TECHNICAL_STANDARD": 27,
     "ROUTE_SOURCE_CLOSED__OBJECT_TRACE_AVAILABLE": 1202,
-    "DATE_OR_PERIOD": 1705,
+    "DATE_OR_PERIOD": 1711,
     "GOVERNED_OBJECT_SOURCE_CLOSED": 13492,
     "INVENTORY_COUNT_FROM_CONTRACT": 16,
     "ROUTE_COMPOSITE_TRACE__MEMBERS_LISTED": 28,
@@ -3117,15 +3117,15 @@
       "field": "body_en",
       "token": "110",
       "category": "INVENTORY_COUNT_FROM_CONTRACT",
-      "context": "Public Evidence Records: 110\nDocumented chronology events: 23\nPublic claims (each is also an Evidence Record): 60\nRegistered source records: 176\nSource records with a public link to the original: 169\nCurated source and report cards: 28\nReadings: 11\nMeasurement priorities: 10"
+      "context": "Public Evidence Records: 110\nDocumented chronology events: 29\nPublic claims (each is also an Evidence Record): 60\nRegistered source records: 199\nSource records with a public link to the original: 192\nCurated source and report cards: 28\nReadings: 11\nMeasurement priorities: 10"
     },
     {
       "route": "/data/",
       "surface": "section",
       "field": "body_en",
-      "token": "23",
+      "token": "29",
       "category": "INVENTORY_COUNT_FROM_CONTRACT",
-      "context": "Public Evidence Records: 110\nDocumented chronology events: 23\nPublic claims (each is also an Evidence Record): 60\nRegistered source records: 176\nSource records with a public link to the original: 169\nCurated source and report cards: 28\nReadings: 11\nMeasurement priorities: 10"
+      "context": "Public Evidence Records: 110\nDocumented chronology events: 29\nPublic claims (each is also an Evidence Record): 60\nRegistered source records: 199\nSource records with a public link to the original: 192\nCurated source and report cards: 28\nReadings: 11\nMeasurement priorities: 10"
     },
     {
       "route": "/data/",
@@ -3133,23 +3133,23 @@
       "field": "body_en",
       "token": "60",
       "category": "INVENTORY_COUNT_FROM_CONTRACT",
-      "context": "Public Evidence Records: 110\nDocumented chronology events: 23\nPublic claims (each is also an Evidence Record): 60\nRegistered source records: 176\nSource records with a public link to the original: 169\nCurated source and report cards: 28\nReadings: 11\nMeasurement priorities: 10"
+      "context": "Public Evidence Records: 110\nDocumented chronology events: 29\nPublic claims (each is also an Evidence Record): 60\nRegistered source records: 199\nSource records with a public link to the original: 192\nCurated source and report cards: 28\nReadings: 11\nMeasurement priorities: 10"
     },
     {
       "route": "/data/",
       "surface": "section",
       "field": "body_en",
-      "token": "176",
+      "token": "199",
       "category": "INVENTORY_COUNT_FROM_CONTRACT",
-      "context": "Public Evidence Records: 110\nDocumented chronology events: 23\nPublic claims (each is also an Evidence Record): 60\nRegistered source records: 176\nSource records with a public link to the original: 169\nCurated source and report cards: 28\nReadings: 11\nMeasurement priorities: 10"
+      "context": "Public Evidence Records: 110\nDocumented chronology events: 29\nPublic claims (each is also an Evidence Record): 60\nRegistered source records: 199\nSource records with a public link to the original: 192\nCurated source and report cards: 28\nReadings: 11\nMeasurement priorities: 10"
     },
     {
       "route": "/data/",
       "surface": "section",
       "field": "body_en",
-      "token": "169",
+      "token": "192",
       "category": "INVENTORY_COUNT_FROM_CONTRACT",
-      "context": "Public Evidence Records: 110\nDocumented chronology events: 23\nPublic claims (each is also an Evidence Record): 60\nRegistered source records: 176\nSource records with a public link to the original: 169\nCurated source and report cards: 28\nReadings: 11\nMeasurement priorities: 10"
+      "context": "Public Evidence Records: 110\nDocumented chronology events: 29\nPublic claims (each is also an Evidence Record): 60\nRegistered source records: 199\nSource records with a public link to the original: 192\nCurated source and report cards: 28\nReadings: 11\nMeasurement priorities: 10"
     },
     {
       "route": "/data/",
@@ -3157,7 +3157,7 @@
       "field": "body_en",
       "token": "28",
       "category": "INVENTORY_COUNT_FROM_CONTRACT",
-      "context": "Public Evidence Records: 110\nDocumented chronology events: 23\nPublic claims (each is also an Evidence Record): 60\nRegistered source records: 176\nSource records with a public link to the original: 169\nCurated source and report cards: 28\nReadings: 11\nMeasurement priorities: 10"
+      "context": "Public Evidence Records: 110\nDocumented chronology events: 29\nPublic claims (each is also an Evidence Record): 60\nRegistered source records: 199\nSource records with a public link to the original: 192\nCurated source and report cards: 28\nReadings: 11\nMeasurement priorities: 10"
     },
     {
       "route": "/data/",
@@ -3165,7 +3165,7 @@
       "field": "body_en",
       "token": "11",
       "category": "INVENTORY_COUNT_FROM_CONTRACT",
-      "context": "Public Evidence Records: 110\nDocumented chronology events: 23\nPublic claims (each is also an Evidence Record): 60\nRegistered source records: 176\nSource records with a public link to the original: 169\nCurated source and report cards: 28\nReadings: 11\nMeasurement priorities: 10"
+      "context": "Public Evidence Records: 110\nDocumented chronology events: 29\nPublic claims (each is also an Evidence Record): 60\nRegistered source records: 199\nSource records with a public link to the original: 192\nCurated source and report cards: 28\nReadings: 11\nMeasurement priorities: 10"
     },
     {
       "route": "/data/",
@@ -3173,7 +3173,7 @@
       "field": "body_en",
       "token": "10",
       "category": "INVENTORY_COUNT_FROM_CONTRACT",
-      "context": "Public Evidence Records: 110\nDocumented chronology events: 23\nPublic claims (each is also an Evidence Record): 60\nRegistered source records: 176\nSource records with a public link to the original: 169\nCurated source and report cards: 28\nReadings: 11\nMeasurement priorities: 10"
+      "context": "Public Evidence Records: 110\nDocumented chronology events: 29\nPublic claims (each is also an Evidence Record): 60\nRegistered source records: 199\nSource records with a public link to the original: 192\nCurated source and report cards: 28\nReadings: 11\nMeasurement priorities: 10"
     },
     {
       "route": "/data/",
@@ -3181,15 +3181,15 @@
       "field": "body_ar",
       "token": "110",
       "category": "INVENTORY_COUNT_FROM_CONTRACT",
-      "context": "سجلات الأدلة العامة: 110\nأحداث السلسلة الزمنية الموثقة: 23\nالخلاصات العامة (وكل منها سجل دليل أيضًا): 60\nسجلات المصادر المسجلة: 176\nسجلات المصادر التي لها رابط أصلي عام: 169\nبطاقات المصادر والتقارير المنتقاة: 28\nالقراءات التحليلية: 11\nأولويات القياس: 10"
+      "context": "سجلات الأدلة العامة: 110\nأحداث السلسلة الزمنية الموثقة: 29\nالخلاصات العامة (وكل منها سجل دليل أيضًا): 60\nسجلات المصادر المسجلة: 199\nسجلات المصادر التي لها رابط أصلي عام: 192\nبطاقات المصادر والتقارير المنتقاة: 28\nالقراءات التحليلية: 11\nأولويات القياس: 10"
     },
     {
       "route": "/data/",
       "surface": "section",
       "field": "body_ar",
-      "token": "23",
+      "token": "29",
       "category": "INVENTORY_COUNT_FROM_CONTRACT",
-      "context": "سجلات الأدلة العامة: 110\nأحداث السلسلة الزمنية الموثقة: 23\nالخلاصات العامة (وكل منها سجل دليل أيضًا): 60\nسجلات المصادر المسجلة: 176\nسجلات المصادر التي لها رابط أصلي عام: 169\nبطاقات المصادر والتقارير المنتقاة: 28\nالقراءات التحليلية: 11\nأولويات القياس: 10"
+      "context": "سجلات الأدلة العامة: 110\nأحداث السلسلة الزمنية الموثقة: 29\nالخلاصات العامة (وكل منها سجل دليل أيضًا): 60\nسجلات المصادر المسجلة: 199\nسجلات المصادر التي لها رابط أصلي عام: 192\nبطاقات المصادر والتقارير المنتقاة: 28\nالقراءات التحليلية: 11\nأولويات القياس: 10"
     },
     {
       "route": "/data/",
@@ -3197,23 +3197,23 @@
       "field": "body_ar",
       "token": "60",
       "category": "INVENTORY_COUNT_FROM_CONTRACT",
-      "context": "سجلات الأدلة العامة: 110\nأحداث السلسلة الزمنية الموثقة: 23\nالخلاصات العامة (وكل منها سجل دليل أيضًا): 60\nسجلات المصادر المسجلة: 176\nسجلات المصادر التي لها رابط أصلي عام: 169\nبطاقات المصادر والتقارير المنتقاة: 28\nالقراءات التحليلية: 11\nأولويات القياس: 10"
+      "context": "سجلات الأدلة العامة: 110\nأحداث السلسلة الزمنية الموثقة: 29\nالخلاصات العامة (وكل منها سجل دليل أيضًا): 60\nسجلات المصادر المسجلة: 199\nسجلات المصادر التي لها رابط أصلي عام: 192\nبطاقات المصادر والتقارير المنتقاة: 28\nالقراءات التحليلية: 11\nأولويات القياس: 10"
     },
     {
       "route": "/data/",
       "surface": "section",
       "field": "body_ar",
-      "token": "176",
+      "token": "199",
       "category": "INVENTORY_COUNT_FROM_CONTRACT",
-      "context": "سجلات الأدلة العامة: 110\nأحداث السلسلة الزمنية الموثقة: 23\nالخلاصات العامة (وكل منها سجل دليل أيضًا): 60\nسجلات المصادر المسجلة: 176\nسجلات المصادر التي لها رابط أصلي عام: 169\nبطاقات المصادر والتقارير المنتقاة: 28\nالقراءات التحليلية: 11\nأولويات القياس: 10"
+      "context": "سجلات الأدلة العامة: 110\nأحداث السلسلة الزمنية الموثقة: 29\nالخلاصات العامة (وكل منها سجل دليل أيضًا): 60\nسجلات المصادر المسجلة: 199\nسجلات المصادر التي لها رابط أصلي عام: 192\nبطاقات المصادر والتقارير المنتقاة: 28\nالقراءات التحليلية: 11\nأولويات القياس: 10"
     },
     {
       "route": "/data/",
       "surface": "section",
       "field": "body_ar",
-      "token": "169",
+      "token": "192",
       "category": "INVENTORY_COUNT_FROM_CONTRACT",
-      "context": "سجلات الأدلة العامة: 110\nأحداث السلسلة الزمنية الموثقة: 23\nالخلاصات العامة (وكل منها سجل دليل أيضًا): 60\nسجلات المصادر المسجلة: 176\nسجلات المصادر التي لها رابط أصلي عام: 169\nبطاقات المصادر والتقارير المنتقاة: 28\nالقراءات التحليلية: 11\nأولويات القياس: 10"
+      "context": "سجلات الأدلة العامة: 110\nأحداث السلسلة الزمنية الموثقة: 29\nالخلاصات العامة (وكل منها سجل دليل أيضًا): 60\nسجلات المصادر المسجلة: 199\nسجلات المصادر التي لها رابط أصلي عام: 192\nبطاقات المصادر والتقارير المنتقاة: 28\nالقراءات التحليلية: 11\nأولويات القياس: 10"
     },
     {
       "route": "/data/",
@@ -3221,7 +3221,7 @@
       "field": "body_ar",
       "token": "28",
       "category": "INVENTORY_COUNT_FROM_CONTRACT",
-      "context": "سجلات الأدلة العامة: 110\nأحداث السلسلة الزمنية الموثقة: 23\nالخلاصات العامة (وكل منها سجل دليل أيضًا): 60\nسجلات المصادر المسجلة: 176\nسجلات المصادر التي لها رابط أصلي عام: 169\nبطاقات المصادر والتقارير المنتقاة: 28\nالقراءات التحليلية: 11\nأولويات القياس: 10"
+      "context": "سجلات الأدلة العامة: 110\nأحداث السلسلة الزمنية الموثقة: 29\nالخلاصات العامة (وكل منها سجل دليل أيضًا): 60\nسجلات المصادر المسجلة: 199\nسجلات المصادر التي لها رابط أصلي عام: 192\nبطاقات المصادر والتقارير المنتقاة: 28\nالقراءات التحليلية: 11\nأولويات القياس: 10"
     },
     {
       "route": "/data/",
@@ -3229,7 +3229,7 @@
       "field": "body_ar",
       "token": "11",
       "category": "INVENTORY_COUNT_FROM_CONTRACT",
-      "context": "سجلات الأدلة العامة: 110\nأحداث السلسلة الزمنية الموثقة: 23\nالخلاصات العامة (وكل منها سجل دليل أيضًا): 60\nسجلات المصادر المسجلة: 176\nسجلات المصادر التي لها رابط أصلي عام: 169\nبطاقات المصادر والتقارير المنتقاة: 28\nالقراءات التحليلية: 11\nأولويات القياس: 10"
+      "context": "سجلات الأدلة العامة: 110\nأحداث السلسلة الزمنية الموثقة: 29\nالخلاصات العامة (وكل منها سجل دليل أيضًا): 60\nسجلات المصادر المسجلة: 199\nسجلات المصادر التي لها رابط أصلي عام: 192\nبطاقات المصادر والتقارير المنتقاة: 28\nالقراءات التحليلية: 11\nأولويات القياس: 10"
     },
     {
       "route": "/data/",
@@ -3237,7 +3237,7 @@
       "field": "body_ar",
       "token": "10",
       "category": "INVENTORY_COUNT_FROM_CONTRACT",
-      "context": "سجلات الأدلة العامة: 110\nأحداث السلسلة الزمنية الموثقة: 23\nالخلاصات العامة (وكل منها سجل دليل أيضًا): 60\nسجلات المصادر المسجلة: 176\nسجلات المصادر التي لها رابط أصلي عام: 169\nبطاقات المصادر والتقارير المنتقاة: 28\nالقراءات التحليلية: 11\nأولويات القياس: 10"
+      "context": "سجلات الأدلة العامة: 110\nأحداث السلسلة الزمنية الموثقة: 29\nالخلاصات العامة (وكل منها سجل دليل أيضًا): 60\nسجلات المصادر المسجلة: 199\nسجلات المصادر التي لها رابط أصلي عام: 192\nبطاقات المصادر والتقارير المنتقاة: 28\nالقراءات التحليلية: 11\nأولويات القياس: 10"
     },
     {
       "route": "/evidence/CLM-001/",
@@ -129646,7 +129646,7 @@
       "field": "body_en",
       "token": "3",
       "category": "DATE_OR_PERIOD",
-      "context": "Institutional form matters too. The licensed-bank list of the Central Bank of Yemen – Aden, as checked on 3 October 2026, names 26 banks, 12 of which this resource classifies as microfinance banks from their names. A listing or licence establishes an institutional status. It does not establish current operation, geographic reach, client mix or outreach, so institutional change can matter without answering the inclusion question."
+      "context": "Institutional form matters too. The licensed-bank list of the Central Bank of Yemen – Aden, as checked on 3 October 2026, names 26 banks, 12 of which this resource classifies as microfinance banks from their names. A listing or licence establishes an institutional status. It does not establish current operation, geographic reach, client mix or outreach, so institutional change can matter without answering the inclusion question.\nThe rules on microfinance banks make the point concrete. A 2022 decision of the Board of Directors of CBY-Aden barred combining exchange and microfinance activity, and let the owners of an exchange company apply for a microfinance bank only by converting that company; a 2023 decision raised the minimum capital of microfinance banks, with a deadline at the end of 2025. A microfinance bank licensed through such a conversion can be an existing business reclassified, not new inclusion."
     },
     {
       "route": "/readings/microfinance-structural-divergence/",
@@ -129654,7 +129654,7 @@
       "field": "body_en",
       "token": "2026",
       "category": "DATE_OR_PERIOD",
-      "context": "Institutional form matters too. The licensed-bank list of the Central Bank of Yemen – Aden, as checked on 3 October 2026, names 26 banks, 12 of which this resource classifies as microfinance banks from their names. A listing or licence establishes an institutional status. It does not establish current operation, geographic reach, client mix or outreach, so institutional change can matter without answering the inclusion question."
+      "context": "Institutional form matters too. The licensed-bank list of the Central Bank of Yemen – Aden, as checked on 3 October 2026, names 26 banks, 12 of which this resource classifies as microfinance banks from their names. A listing or licence establishes an institutional status. It does not establish current operation, geographic reach, client mix or outreach, so institutional change can matter without answering the inclusion question.\nThe rules on microfinance banks make the point concrete. A 2022 decision of the Board of Directors of CBY-Aden barred combining exchange and microfinance activity, and let the owners of an exchange company apply for a microfinance bank only by converting that company; a 2023 decision raised the minimum capital of microfinance banks, with a deadline at the end of 2025. A microfinance bank licensed through such a conversion can be an existing business reclassified, not new inclusion."
     },
     {
       "route": "/readings/microfinance-structural-divergence/",
@@ -129662,7 +129662,7 @@
       "field": "body_en",
       "token": "26",
       "category": "READING_BOUND_RECORD_TRACE",
-      "context": "Institutional form matters too. The licensed-bank list of the Central Bank of Yemen – Aden, as checked on 3 October 2026, names 26 banks, 12 of which this resource classifies as microfinance banks from their names. A listing or licence establishes an institutional status. It does not establish current operation, geographic reach, client mix or outreach, so institutional change can matter without answering the inclusion question.",
+      "context": "Institutional form matters too. The licensed-bank list of the Central Bank of Yemen – Aden, as checked on 3 October 2026, names 26 banks, 12 of which this resource classifies as microfinance banks from their names. A listing or licence establishes an institutional status. It does not establish current operation, geographic reach, client mix or outreach, so institutional change can matter without answering the inclusion question.\nThe rules on microfinance banks make the point concrete. A 2022 decision of the Board of Directors of CBY-Aden barred combining exchange and microfinance activity, and let the owners of an exchange company apply for a microfinance bank only by converting that company; a 2023 decision raised the minimum capital of microfinance banks, with a deadline at the end of 2025. A microfinance bank licensed through such a conversion can be an existing business reclassified, not new inclusion.",
       "source_object": "CLM-055"
     },
     {
@@ -129671,8 +129671,32 @@
       "field": "body_en",
       "token": "12",
       "category": "READING_BOUND_RECORD_TRACE",
-      "context": "Institutional form matters too. The licensed-bank list of the Central Bank of Yemen – Aden, as checked on 3 October 2026, names 26 banks, 12 of which this resource classifies as microfinance banks from their names. A listing or licence establishes an institutional status. It does not establish current operation, geographic reach, client mix or outreach, so institutional change can matter without answering the inclusion question.",
+      "context": "Institutional form matters too. The licensed-bank list of the Central Bank of Yemen – Aden, as checked on 3 October 2026, names 26 banks, 12 of which this resource classifies as microfinance banks from their names. A listing or licence establishes an institutional status. It does not establish current operation, geographic reach, client mix or outreach, so institutional change can matter without answering the inclusion question.\nThe rules on microfinance banks make the point concrete. A 2022 decision of the Board of Directors of CBY-Aden barred combining exchange and microfinance activity, and let the owners of an exchange company apply for a microfinance bank only by converting that company; a 2023 decision raised the minimum capital of microfinance banks, with a deadline at the end of 2025. A microfinance bank licensed through such a conversion can be an existing business reclassified, not new inclusion.",
       "source_object": "CLM-055"
+    },
+    {
+      "route": "/readings/microfinance-structural-divergence/",
+      "surface": "section",
+      "field": "body_en",
+      "token": "2022",
+      "category": "DATE_OR_PERIOD",
+      "context": "Institutional form matters too. The licensed-bank list of the Central Bank of Yemen – Aden, as checked on 3 October 2026, names 26 banks, 12 of which this resource classifies as microfinance banks from their names. A listing or licence establishes an institutional status. It does not establish current operation, geographic reach, client mix or outreach, so institutional change can matter without answering the inclusion question.\nThe rules on microfinance banks make the point concrete. A 2022 decision of the Board of Directors of CBY-Aden barred combining exchange and microfinance activity, and let the owners of an exchange company apply for a microfinance bank only by converting that company; a 2023 decision raised the minimum capital of microfinance banks, with a deadline at the end of 2025. A microfinance bank licensed through such a conversion can be an existing business reclassified, not new inclusion."
+    },
+    {
+      "route": "/readings/microfinance-structural-divergence/",
+      "surface": "section",
+      "field": "body_en",
+      "token": "2023",
+      "category": "DATE_OR_PERIOD",
+      "context": "Institutional form matters too. The licensed-bank list of the Central Bank of Yemen – Aden, as checked on 3 October 2026, names 26 banks, 12 of which this resource classifies as microfinance banks from their names. A listing or licence establishes an institutional status. It does not establish current operation, geographic reach, client mix or outreach, so institutional change can matter without answering the inclusion question.\nThe rules on microfinance banks make the point concrete. A 2022 decision of the Board of Directors of CBY-Aden barred combining exchange and microfinance activity, and let the owners of an exchange company apply for a microfinance bank only by converting that company; a 2023 decision raised the minimum capital of microfinance banks, with a deadline at the end of 2025. A microfinance bank licensed through such a conversion can be an existing business reclassified, not new inclusion."
+    },
+    {
+      "route": "/readings/microfinance-structural-divergence/",
+      "surface": "section",
+      "field": "body_en",
+      "token": "2025",
+      "category": "DATE_OR_PERIOD",
+      "context": "Institutional form matters too. The licensed-bank list of the Central Bank of Yemen – Aden, as checked on 3 October 2026, names 26 banks, 12 of which this resource classifies as microfinance banks from their names. A listing or licence establishes an institutional status. It does not establish current operation, geographic reach, client mix or outreach, so institutional change can matter without answering the inclusion question.\nThe rules on microfinance banks make the point concrete. A 2022 decision of the Board of Directors of CBY-Aden barred combining exchange and microfinance activity, and let the owners of an exchange company apply for a microfinance bank only by converting that company; a 2023 decision raised the minimum capital of microfinance banks, with a deadline at the end of 2025. A microfinance bank licensed through such a conversion can be an existing business reclassified, not new inclusion."
     },
     {
       "route": "/readings/microfinance-structural-divergence/",
@@ -129680,7 +129704,7 @@
       "field": "body_ar",
       "token": "3",
       "category": "DATE_OR_PERIOD",
-      "context": "والشكل المؤسسي مهم أيضًا. فقائمة البنوك المرخصة لدى البنك المركزي اليمني – عدن، كما اطُّلع عليها في 3 أكتوبر 2026، تضم 26 بنكًا، يصنّف هذا المورد 12 منها بنوكَ تمويل أصغر استنادًا إلى أسمائها. ويثبت الإدراج أو الترخيص وضعًا مؤسسيًا، لكنه لا يثبت التشغيل الحالي ولا الانتشار الجغرافي ولا تركيبة العملاء ولا حجم الوصول؛ ولذلك قد يكون التغير المؤسسي مهمًا من دون أن يجيب عن سؤال الشمول."
+      "context": "والشكل المؤسسي مهم أيضًا. فقائمة البنوك المرخصة لدى البنك المركزي اليمني – عدن، كما اطُّلع عليها في 3 أكتوبر 2026، تضم 26 بنكًا، يصنّف هذا المورد 12 منها بنوكَ تمويل أصغر استنادًا إلى أسمائها. ويثبت الإدراج أو الترخيص وضعًا مؤسسيًا، لكنه لا يثبت التشغيل الحالي ولا الانتشار الجغرافي ولا تركيبة العملاء ولا حجم الوصول؛ ولذلك قد يكون التغير المؤسسي مهمًا من دون أن يجيب عن سؤال الشمول.\nوتجسّد القواعد الخاصة ببنوك التمويل الأصغر هذه النقطة. فقد منع قرار لمجلس إدارة البنك المركزي اليمني – عدن صدر عام 2022 الجمع بين نشاط الصرافة ونشاط التمويل الأصغر، ولم يُجز لمالكي شركة صرافة التقدم بطلب إنشاء بنك تمويل أصغر إلا بتحويل تلك الشركة؛ ورفع قرار صدر عام 2023 الحد الأدنى لرأس مال بنوك التمويل الأصغر، على أن يكتمل ذلك بنهاية 2025. وقد يكون بنك التمويل الأصغر المرخّص عبر مثل هذا التحويل نشاطًا قائمًا أُعيد تصنيفه، لا شمولًا جديدًا."
     },
     {
       "route": "/readings/microfinance-structural-divergence/",
@@ -129688,7 +129712,7 @@
       "field": "body_ar",
       "token": "2026",
       "category": "DATE_OR_PERIOD",
-      "context": "والشكل المؤسسي مهم أيضًا. فقائمة البنوك المرخصة لدى البنك المركزي اليمني – عدن، كما اطُّلع عليها في 3 أكتوبر 2026، تضم 26 بنكًا، يصنّف هذا المورد 12 منها بنوكَ تمويل أصغر استنادًا إلى أسمائها. ويثبت الإدراج أو الترخيص وضعًا مؤسسيًا، لكنه لا يثبت التشغيل الحالي ولا الانتشار الجغرافي ولا تركيبة العملاء ولا حجم الوصول؛ ولذلك قد يكون التغير المؤسسي مهمًا من دون أن يجيب عن سؤال الشمول."
+      "context": "والشكل المؤسسي مهم أيضًا. فقائمة البنوك المرخصة لدى البنك المركزي اليمني – عدن، كما اطُّلع عليها في 3 أكتوبر 2026، تضم 26 بنكًا، يصنّف هذا المورد 12 منها بنوكَ تمويل أصغر استنادًا إلى أسمائها. ويثبت الإدراج أو الترخيص وضعًا مؤسسيًا، لكنه لا يثبت التشغيل الحالي ولا الانتشار الجغرافي ولا تركيبة العملاء ولا حجم الوصول؛ ولذلك قد يكون التغير المؤسسي مهمًا من دون أن يجيب عن سؤال الشمول.\nوتجسّد القواعد الخاصة ببنوك التمويل الأصغر هذه النقطة. فقد منع قرار لمجلس إدارة البنك المركزي اليمني – عدن صدر عام 2022 الجمع بين نشاط الصرافة ونشاط التمويل الأصغر، ولم يُجز لمالكي شركة صرافة التقدم بطلب إنشاء بنك تمويل أصغر إلا بتحويل تلك الشركة؛ ورفع قرار صدر عام 2023 الحد الأدنى لرأس مال بنوك التمويل الأصغر، على أن يكتمل ذلك بنهاية 2025. وقد يكون بنك التمويل الأصغر المرخّص عبر مثل هذا التحويل نشاطًا قائمًا أُعيد تصنيفه، لا شمولًا جديدًا."
     },
     {
       "route": "/readings/microfinance-structural-divergence/",
@@ -129696,7 +129720,7 @@
       "field": "body_ar",
       "token": "26",
       "category": "READING_BOUND_RECORD_TRACE",
-      "context": "والشكل المؤسسي مهم أيضًا. فقائمة البنوك المرخصة لدى البنك المركزي اليمني – عدن، كما اطُّلع عليها في 3 أكتوبر 2026، تضم 26 بنكًا، يصنّف هذا المورد 12 منها بنوكَ تمويل أصغر استنادًا إلى أسمائها. ويثبت الإدراج أو الترخيص وضعًا مؤسسيًا، لكنه لا يثبت التشغيل الحالي ولا الانتشار الجغرافي ولا تركيبة العملاء ولا حجم الوصول؛ ولذلك قد يكون التغير المؤسسي مهمًا من دون أن يجيب عن سؤال الشمول.",
+      "context": "والشكل المؤسسي مهم أيضًا. فقائمة البنوك المرخصة لدى البنك المركزي اليمني – عدن، كما اطُّلع عليها في 3 أكتوبر 2026، تضم 26 بنكًا، يصنّف هذا المورد 12 منها بنوكَ تمويل أصغر استنادًا إلى أسمائها. ويثبت الإدراج أو الترخيص وضعًا مؤسسيًا، لكنه لا يثبت التشغيل الحالي ولا الانتشار الجغرافي ولا تركيبة العملاء ولا حجم الوصول؛ ولذلك قد يكون التغير المؤسسي مهمًا من دون أن يجيب عن سؤال الشمول.\nوتجسّد القواعد الخاصة ببنوك التمويل الأصغر هذه النقطة. فقد منع قرار لمجلس إدارة البنك المركزي اليمني – عدن صدر عام 2022 الجمع بين نشاط الصرافة ونشاط التمويل الأصغر، ولم يُجز لمالكي شركة صرافة التقدم بطلب إنشاء بنك تمويل أصغر إلا بتحويل تلك الشركة؛ ورفع قرار صدر عام 2023 الحد الأدنى لرأس مال بنوك التمويل الأصغر، على أن يكتمل ذلك بنهاية 2025. وقد يكون بنك التمويل الأصغر المرخّص عبر مثل هذا التحويل نشاطًا قائمًا أُعيد تصنيفه، لا شمولًا جديدًا.",
       "source_object": "CLM-055"
     },
     {
@@ -129705,8 +129729,32 @@
       "field": "body_ar",
       "token": "12",
       "category": "READING_BOUND_RECORD_TRACE",
-      "context": "والشكل المؤسسي مهم أيضًا. فقائمة البنوك المرخصة لدى البنك المركزي اليمني – عدن، كما اطُّلع عليها في 3 أكتوبر 2026، تضم 26 بنكًا، يصنّف هذا المورد 12 منها بنوكَ تمويل أصغر استنادًا إلى أسمائها. ويثبت الإدراج أو الترخيص وضعًا مؤسسيًا، لكنه لا يثبت التشغيل الحالي ولا الانتشار الجغرافي ولا تركيبة العملاء ولا حجم الوصول؛ ولذلك قد يكون التغير المؤسسي مهمًا من دون أن يجيب عن سؤال الشمول.",
+      "context": "والشكل المؤسسي مهم أيضًا. فقائمة البنوك المرخصة لدى البنك المركزي اليمني – عدن، كما اطُّلع عليها في 3 أكتوبر 2026، تضم 26 بنكًا، يصنّف هذا المورد 12 منها بنوكَ تمويل أصغر استنادًا إلى أسمائها. ويثبت الإدراج أو الترخيص وضعًا مؤسسيًا، لكنه لا يثبت التشغيل الحالي ولا الانتشار الجغرافي ولا تركيبة العملاء ولا حجم الوصول؛ ولذلك قد يكون التغير المؤسسي مهمًا من دون أن يجيب عن سؤال الشمول.\nوتجسّد القواعد الخاصة ببنوك التمويل الأصغر هذه النقطة. فقد منع قرار لمجلس إدارة البنك المركزي اليمني – عدن صدر عام 2022 الجمع بين نشاط الصرافة ونشاط التمويل الأصغر، ولم يُجز لمالكي شركة صرافة التقدم بطلب إنشاء بنك تمويل أصغر إلا بتحويل تلك الشركة؛ ورفع قرار صدر عام 2023 الحد الأدنى لرأس مال بنوك التمويل الأصغر، على أن يكتمل ذلك بنهاية 2025. وقد يكون بنك التمويل الأصغر المرخّص عبر مثل هذا التحويل نشاطًا قائمًا أُعيد تصنيفه، لا شمولًا جديدًا.",
       "source_object": "CLM-055"
+    },
+    {
+      "route": "/readings/microfinance-structural-divergence/",
+      "surface": "section",
+      "field": "body_ar",
+      "token": "2022",
+      "category": "DATE_OR_PERIOD",
+      "context": "والشكل المؤسسي مهم أيضًا. فقائمة البنوك المرخصة لدى البنك المركزي اليمني – عدن، كما اطُّلع عليها في 3 أكتوبر 2026، تضم 26 بنكًا، يصنّف هذا المورد 12 منها بنوكَ تمويل أصغر استنادًا إلى أسمائها. ويثبت الإدراج أو الترخيص وضعًا مؤسسيًا، لكنه لا يثبت التشغيل الحالي ولا الانتشار الجغرافي ولا تركيبة العملاء ولا حجم الوصول؛ ولذلك قد يكون التغير المؤسسي مهمًا من دون أن يجيب عن سؤال الشمول.\nوتجسّد القواعد الخاصة ببنوك التمويل الأصغر هذه النقطة. فقد منع قرار لمجلس إدارة البنك المركزي اليمني – عدن صدر عام 2022 الجمع بين نشاط الصرافة ونشاط التمويل الأصغر، ولم يُجز لمالكي شركة صرافة التقدم بطلب إنشاء بنك تمويل أصغر إلا بتحويل تلك الشركة؛ ورفع قرار صدر عام 2023 الحد الأدنى لرأس مال بنوك التمويل الأصغر، على أن يكتمل ذلك بنهاية 2025. وقد يكون بنك التمويل الأصغر المرخّص عبر مثل هذا التحويل نشاطًا قائمًا أُعيد تصنيفه، لا شمولًا جديدًا."
+    },
+    {
+      "route": "/readings/microfinance-structural-divergence/",
+      "surface": "section",
+      "field": "body_ar",
+      "token": "2023",
+      "category": "DATE_OR_PERIOD",
+      "context": "والشكل المؤسسي مهم أيضًا. فقائمة البنوك المرخصة لدى البنك المركزي اليمني – عدن، كما اطُّلع عليها في 3 أكتوبر 2026، تضم 26 بنكًا، يصنّف هذا المورد 12 منها بنوكَ تمويل أصغر استنادًا إلى أسمائها. ويثبت الإدراج أو الترخيص وضعًا مؤسسيًا، لكنه لا يثبت التشغيل الحالي ولا الانتشار الجغرافي ولا تركيبة العملاء ولا حجم الوصول؛ ولذلك قد يكون التغير المؤسسي مهمًا من دون أن يجيب عن سؤال الشمول.\nوتجسّد القواعد الخاصة ببنوك التمويل الأصغر هذه النقطة. فقد منع قرار لمجلس إدارة البنك المركزي اليمني – عدن صدر عام 2022 الجمع بين نشاط الصرافة ونشاط التمويل الأصغر، ولم يُجز لمالكي شركة صرافة التقدم بطلب إنشاء بنك تمويل أصغر إلا بتحويل تلك الشركة؛ ورفع قرار صدر عام 2023 الحد الأدنى لرأس مال بنوك التمويل الأصغر، على أن يكتمل ذلك بنهاية 2025. وقد يكون بنك التمويل الأصغر المرخّص عبر مثل هذا التحويل نشاطًا قائمًا أُعيد تصنيفه، لا شمولًا جديدًا."
+    },
+    {
+      "route": "/readings/microfinance-structural-divergence/",
+      "surface": "section",
+      "field": "body_ar",
+      "token": "2025",
+      "category": "DATE_OR_PERIOD",
+      "context": "والشكل المؤسسي مهم أيضًا. فقائمة البنوك المرخصة لدى البنك المركزي اليمني – عدن، كما اطُّلع عليها في 3 أكتوبر 2026، تضم 26 بنكًا، يصنّف هذا المورد 12 منها بنوكَ تمويل أصغر استنادًا إلى أسمائها. ويثبت الإدراج أو الترخيص وضعًا مؤسسيًا، لكنه لا يثبت التشغيل الحالي ولا الانتشار الجغرافي ولا تركيبة العملاء ولا حجم الوصول؛ ولذلك قد يكون التغير المؤسسي مهمًا من دون أن يجيب عن سؤال الشمول.\nوتجسّد القواعد الخاصة ببنوك التمويل الأصغر هذه النقطة. فقد منع قرار لمجلس إدارة البنك المركزي اليمني – عدن صدر عام 2022 الجمع بين نشاط الصرافة ونشاط التمويل الأصغر، ولم يُجز لمالكي شركة صرافة التقدم بطلب إنشاء بنك تمويل أصغر إلا بتحويل تلك الشركة؛ ورفع قرار صدر عام 2023 الحد الأدنى لرأس مال بنوك التمويل الأصغر، على أن يكتمل ذلك بنهاية 2025. وقد يكون بنك التمويل الأصغر المرخّص عبر مثل هذا التحويل نشاطًا قائمًا أُعيد تصنيفه، لا شمولًا جديدًا."
     },
     {
       "route": "/readings/microfinance-structural-divergence/",

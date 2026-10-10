@@ -87,3 +87,24 @@ updated.
 
 A result covers only the page named; "CHECK BY HAND" is not "nothing newer". A newer item enters the Master
 only through a transaction after it is read in its original.
+
+## CLOSE-4 — 2026-10-10 (brief v5 W3d; appended)
+
+The nine files of the CBY-Aden licensing and regulation page (https://cby-ye.com/pages/14) that the re-run of 3
+October 2026 listed as NOT HELD are held from Master `c24791d6fd22` on. Each was read in its original:
+
+| File | Source record | Date printed on the document |
+|---|---|---|
+| 64bada99e708e.pdf | SRC-CBY-BANKS-BS-2022 (context only) | none |
+| 65806fe2b3757.pdf | SRC-CBY-EKYC-2023 | 9 November 2023 |
+| 663c8ad5cafdc.pdf | SRC-CBY-CIRC-01-2024 | 29 April 2024 |
+| 6653499a7181b.pdf | SRC-CBY-DEC-19-2024 | 23 May 2024 |
+| 68dcd80cd12b9.pdf | SRC-CBY-CIRC-02-2025 | 24 September 2025 |
+| 690e0e07d4981.pdf | SRC-CBY-CIRC-03-2025 | 2 November 2025 |
+| 690e0e39ce5d9.pdf | SRC-CBY-CIRC-04-2025 | 2 November 2025 |
+| 69dcac86e3520.pdf | SRC-CBY-DEC-07-2026 | 9 April 2026 |
+| 6aaa38b226baa.pdf | SRC-CBY-CIRC-01-2026 | 15 September 2026 |
+
+For these nine the watch point now reads HELD. Governor's Decisions Nos. 8, 12 and 16 of 2026 were searched for on 10
+October 2026 and not found; they are FRONTIER items in `audit/close_out/PROGRESS.md`. A later re-run appends its own
+result here.

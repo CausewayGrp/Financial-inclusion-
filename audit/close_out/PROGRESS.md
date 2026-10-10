@@ -126,3 +126,28 @@ Format: `date · session · workstream · ID · outcome · PR · merge SHA · no
   (the 26 September 2026 date state stays: other pages print that date). Arabic editor: 2 must-fix (TERM-021, «لا يعني
   صفرًا») and 9 should-fix applied; second read 3 should-fix applied. Renderer: remittance_cost draws each series as a
   headed panel on one axis (one series unchanged).
+- 2026-10-10 · A · W3c · PR #34 merged at `69263241` (9/9 CI; negative controls 6/6 shards). Closed: U7, FRN-09.
+- 2026-10-10 · A · W3d · CLOSE-4 run (runner COMMITTED; Master `c447171006a8` → `c24791d6fd22`, 545 cells): Appendix C.
+  23 sources (199 records, 192 with a public locator); the nine files of cby-ye.com/pages/14 that the 3 October re-run
+  listed as not held are held. 12 rules in 31 (REF-REG-001…012); 6 events in 14 (YSC-025…030: Buna, national switch,
+  the 2024 bank measures and the agreement the UN Special Envoy's office announced, the Deposit Insurance Institution
+  relocation decision, the 2025 enforcement wave as counts, the defaulters registry launch). /data/ s9 is a one-line
+  pointer to /finance/#chronology (generator: content.py, families.py). CWR-006 s6 on licence conversion, with the two
+  Board decisions it cites bound. Passport EP-CBY-CREDIT-INFO-SPINE-K04 names its locators. Found by the author after
+  both reviews: the /data/ regulatory scope line said the evidence base holds no law; the law copy is labelled Law
+  (publisher Republic of Yemen), outside the group, and the line says where it is and that the credit-information pages
+  cite older instructions. Dates: the brief's 18 December 2023 (e-KYC) and 23 March 2022 (capital reset) are upload
+  times in the file names; the instruments print 9 November 2023 and 21 March 2022 (the 2022 decision carries the YER 5
+  billion capital minimum). Decision No. 6 of 2025 has letterhead 16/7/2025 and is signed 20 July 2025 (the signature
+  date is used). The UN item: the parties' text is Arabic and has no «جميع»; the UN's English is an informal
+  translation that adds "all"; neither edition of the event says "all". Reviews: red-team 2 blockers (YSC-027 said the
+  other side's decisions were cancelled; CWR-006 named two decisions without their locators), 6 should-fix, 7 nits;
+  Arabic editor 5 must-fix, 10 should-fix, 13 nits; second read 0 must-fix, 3 should-fix, 6 nits (+1 scope point).
+  Applied, except: the enforcement source keeps its first posting date as its card date (the title gives the range);
+  REF-REG-012 keeps a non-ISO date, as the existing "2025 onward" does (31 rows are not rendered on any page); the
+  letterhead date is recorded here, not in a locator; Eastern Arabic digits stay in one verbatim internal locator; no
+  date state was added for the range start "23 July" (the gates read the range through the event's period).
+  FRONTIER (not found on 10 October 2026; W3a cards): Governor's Decisions Nos. 8, 12 and 16 of 2026 (not on the news
+  or files pages read); the February 2026 SAR repricing decision (nearest item news/918, the Board meeting of 12
+  February 2026); the text of Decision No. 4 of 1991 (cited by publications/149, not published); a July 2024 licence
+  revocation (the 2024 bank measure held is Decision No. 20 of 2024); news/709, /722 and /731 (HTTP 500).
