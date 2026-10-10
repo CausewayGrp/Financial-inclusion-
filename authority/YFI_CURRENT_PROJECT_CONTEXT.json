@@ -1,7 +1,7 @@
 {
   "schema": "YFI_CURRENT_PROJECT_CONTEXT/1.0",
   "role": "COMPACT_PROJECTION_NOT_AUTHORITY",
-  "generated_at": "2026-10-09T19:16:12Z",
+  "generated_at": "20261010T130339Z",
   "system": {
     "name_en": "Yemen Financial Inclusion Evidence",
     "name_ar": "أدلة الشمول المالي في اليمن",
@@ -45,7 +45,7 @@
   "production_master": {
     "path": "authority/Yemen_Financial_Inclusion_Evidence_Master.xlsx",
     "drive_id": "1xAbdDHJd5bYo0Pzo_a6dR6HsZ056LzJU",
-    "sha256": "cf5254825da8b06e8812ee0c033382270b731e1001c40bf6ad929f843f27278a",
+    "sha256": "85593e5a4f604604daf0139de5e3dc55ed98afaa50265859d594fb7565e841d1",
     "is_sole_authority": true,
     "authority_dimensions": [
       "semantic",
@@ -59,7 +59,7 @@
   },
   "controlled_projection": {
     "page_specs_path": "site-src/content/page_specs.json",
-    "page_specs_sha256": "f0816b90ec014dc255b5f58a580c0445844ad10b1337a6c9331c56fda5e242dd",
+    "page_specs_sha256": "1f6a7d57286dd8db457fd602dee0d076e858f6d1bfebb98a8be84ae3fb760e63",
     "page_specs": 142,
     "all_page_specs_master_hash_match": true,
     "page_specs_index_master_hash_match": true
@@ -85,8 +85,8 @@
     "rule": "Derived from site-src/content/content/navigation_interaction.json by scripts/rebind_authority.py.",
     "primary": [
       {
-        "label_en": "Explore",
-        "label_ar": "استكشف",
+        "label_en": "Key questions",
+        "label_ar": "الأسئلة الرئيسية",
         "route": "/explore/"
       },
       {
@@ -95,17 +95,17 @@
         "route": "/evidence/"
       },
       {
-        "label_en": "Evidence Readings",
+        "label_en": "Evidence readings",
         "label_ar": "قراءات الأدلة",
         "route": "/readings/"
       },
       {
-        "label_en": "Data & sources",
-        "label_ar": "البيانات والمصادر",
+        "label_en": "Sources",
+        "label_ar": "المصادر",
         "route": "/data/"
       },
       {
-        "label_en": "Method & Measurement",
+        "label_en": "Method and measurement",
         "label_ar": "المنهج والقياس",
         "children": [
           {
@@ -114,7 +114,7 @@
             "route": "/methodology/"
           },
           {
-            "label_en": "Measurement Agenda",
+            "label_en": "Measurement priorities",
             "label_ar": "أولويات القياس",
             "route": "/measurement/"
           }
@@ -133,7 +133,7 @@
         "route": "/corrections/"
       },
       {
-        "label_en": "Rights & reuse",
+        "label_en": "Rights and reuse",
         "label_ar": "الحقوق وإعادة الاستخدام",
         "route": "/rights/"
       },
@@ -198,7 +198,7 @@
     ]
   },
   "validation": {
-    "master_sha256_recorded": "cf5254825da8b06e8812ee0c033382270b731e1001c40bf6ad929f843f27278a",
+    "master_sha256_recorded": "85593e5a4f604604daf0139de5e3dc55ed98afaa50265859d594fb7565e841d1",
     "projection_hash_binding": "PASS",
     "schema_required_keys": [
       "schema",

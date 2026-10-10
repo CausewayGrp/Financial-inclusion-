@@ -42,6 +42,13 @@ def json_block(id_: str, data) -> str:
     return f'<script type="application/json" id="{id_}">' + json.dumps(data, ensure_ascii=False).replace("</", "<\\/") + "</script>"
 
 
+# PN-2 (the owner's brief of 10 October 2026, B4): the machine-readable form of the licence CauseWay applies to its own
+# content, in every page's head. This is the licence deed's own canonical URL — no language and no legalcode suffix —
+# so one URI serves both editions. The human-readable line is UI-FOOTER-LICENCE in the footer, and /rights/ states the
+# scope. It declares the licence; it claims no rights clearance.
+LICENCE_URI = "https://creativecommons.org/licenses/by/4.0/"
+
+
 # ------------------------------------------------------------------------------------------------ build hook
 def assets(out: Path, variant: str = "") -> None:
     """Write the stylesheet. Fonts and the logo are copied unchanged by the build."""
@@ -54,7 +61,8 @@ def head(page: dict, shell: dict, route: str, kind: str = "website", extra: str 
     origin = DISC.origin()
     return (f'<!doctype html><html lang="{lang}" dir="{shell["dir"]}"><head><meta charset="utf-8">'
             f'<meta name="viewport" content="width=device-width,initial-scale=1">{DISC.robots_meta()}<link rel="icon" type="image/png" sizes="32x32" href="/assets/logo/CauseWay_logo_32.png"><title>{esc(page["title"])} — {esc(shell["product"])}</title>'
-            f'<meta name="description" content="{esc(page.get("meta_description"))}">{extra}<link rel="stylesheet" href="/assets/yfie.css">{font_preloads(lang)}'
+            f'<meta name="description" content="{esc(page.get("meta_description"))}">{extra}<link rel="license" href="{LICENCE_URI}">'
+            f'<link rel="stylesheet" href="/assets/yfie.css">{font_preloads(lang)}'
             f'{DISC.head_links(route, lang, origin)}{DISC.social_meta(page["title"], page.get("meta_description") or "", lang, route, shell["product"], kind, origin)}'
             f"{structured_data(page, shell, route)}</head><body>")
 
@@ -187,7 +195,8 @@ def footer(shell: dict, tail: str = "") -> str:
                      for g in shell["footer"] if not any(l["href"].endswith("/about/") for l in g["links"]))
     return (f'</div></main><footer id="site-footer" class="inst"><div class="inst-in"><div class="trust"><h3>{esc(trust_label)}</h3><nav aria-label="{esc(L["trust_nav"])}">{trust}</nav></div>'
             f'<div class="id">{logo(40)}<p>{esc(L["footer_strapline"])}</p></div><nav class="groups" aria-label="{esc(L["footer_nav"])}">{groups}</nav>'
-            f'{colophon(shell, cite=bool(tail))}<div class="fine">© 2026 CauseWay · {esc(L["footer_rights"])} · {esc(shell["edition"])}</div></div>{tail}</footer>'
+            f'{colophon(shell, cite=bool(tail))}<div class="fine">© 2026 CauseWay · {esc(L["footer_rights"])} · {esc(shell["edition"])}</div>'
+            f'<div class="fine licence" data-licence>{esc(L["footer_licence"])}</div></div>{tail}</footer>'
             f'{json_block("yfie-ui", shell["ui_json"])}<script src="/assets/app.js" defer></script></body></html>')
 
 

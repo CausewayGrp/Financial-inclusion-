@@ -1,0 +1,730 @@
+{
+ "transaction": "PN-1",
+ "summary": "Public naming and terminology (the owner's brief of 10 October 2026, Part B): navigation, trust and footer labels, accessible names, the eight domain names, object-type names, search facets, the 404, domain title prefixes, five search aliases and a governed terminology register. English and Arabic together; language only.",
+ "items": {
+  "nav_items": 4,
+  "route_surfaces": 13,
+  "trust_items": 1,
+  "interface_labels": 19,
+  "titles": 4,
+  "page_section_bodies": 1,
+  "search_aliases": 5,
+  "register_terms": 11
+ },
+ "input_master_sha256": "cf5254825da8b06e8812ee0c033382270b731e1001c40bf6ad929f843f27278a",
+ "output_master_sha256": "849bc562dc3be1740f543fda676713cfa0a0d270e58cc19a4071e80e7b818324",
+ "cells_written": 79,
+ "changes": [
+  {
+   "finding": "PN-1:NAMING",
+   "sheet": "04_NAV_UX",
+   "row": 6,
+   "col": 2,
+   "field": "04!nav6.label_en",
+   "old": "Explore",
+   "new": "Key questions"
+  },
+  {
+   "finding": "PN-1:NAMING",
+   "sheet": "04_NAV_UX",
+   "row": 6,
+   "col": 3,
+   "field": "04!nav6.label_ar",
+   "old": "استكشف",
+   "new": "الأسئلة الرئيسية"
+  },
+  {
+   "finding": "PN-1:NAMING",
+   "sheet": "04_NAV_UX",
+   "row": 6,
+   "col": 4,
+   "field": "04!nav6.route_or_group",
+   "old": "{\"id\":\"NAV-EXPLORE\",\"label\":{\"en\":\"Explore\",\"ar\":\"استكشف\"},\"route\":\"/explore\",\"kind\":\"DIRECT\"}",
+   "new": "{\"id\":\"NAV-EXPLORE\",\"label\":{\"en\":\"Key questions\",\"ar\":\"الأسئلة الرئيسية\"},\"route\":\"/explore\",\"kind\":\"DIRECT\"}"
+  },
+  {
+   "finding": "PN-1:NAMING",
+   "sheet": "04_NAV_UX",
+   "row": 8,
+   "col": 2,
+   "field": "04!nav8.label_en",
+   "old": "Evidence Readings",
+   "new": "Evidence readings"
+  },
+  {
+   "finding": "PN-1:NAMING",
+   "sheet": "04_NAV_UX",
+   "row": 8,
+   "col": 4,
+   "field": "04!nav8.route_or_group",
+   "old": "{\"id\":\"NAV-READINGS\",\"label\":{\"en\":\"Evidence Readings\",\"ar\":\"قراءات الأدلة\"},\"route\":\"/readings\",\"kind\":\"DIRECT\"}",
+   "new": "{\"id\":\"NAV-READINGS\",\"label\":{\"en\":\"Evidence readings\",\"ar\":\"قراءات الأدلة\"},\"route\":\"/readings\",\"kind\":\"DIRECT\"}"
+  },
+  {
+   "finding": "PN-1:NAMING",
+   "sheet": "04_NAV_UX",
+   "row": 9,
+   "col": 2,
+   "field": "04!nav9.label_en",
+   "old": "Data & sources",
+   "new": "Sources"
+  },
+  {
+   "finding": "PN-1:NAMING",
+   "sheet": "04_NAV_UX",
+   "row": 9,
+   "col": 3,
+   "field": "04!nav9.label_ar",
+   "old": "البيانات والمصادر",
+   "new": "المصادر"
+  },
+  {
+   "finding": "PN-1:NAMING",
+   "sheet": "04_NAV_UX",
+   "row": 9,
+   "col": 4,
+   "field": "04!nav9.route_or_group",
+   "old": "{\"id\":\"NAV-DATA\",\"label\":{\"en\":\"Data & sources\",\"ar\":\"البيانات والمصادر\"},\"route\":\"/data\",\"kind\":\"DIRECT\"}",
+   "new": "{\"id\":\"NAV-DATA\",\"label\":{\"en\":\"Sources\",\"ar\":\"المصادر\"},\"route\":\"/data\",\"kind\":\"DIRECT\"}"
+  },
+  {
+   "finding": "PN-1:NAMING",
+   "sheet": "04_NAV_UX",
+   "row": 10,
+   "col": 2,
+   "field": "04!nav10.label_en",
+   "old": "Method & Measurement",
+   "new": "Method and measurement"
+  },
+  {
+   "finding": "PN-1:NAMING",
+   "sheet": "04_NAV_UX",
+   "row": 10,
+   "col": 4,
+   "field": "04!nav10.route_or_group",
+   "old": "{\"id\":\"NAV-METHOD-MEASUREMENT\",\"label\":{\"en\":\"Method & Measurement\",\"ar\":\"المنهج والقياس\"},\"kind\":\"GROUP\",\"children\":[{\"id\":\"NAV-METHODOLOGY\",\"label\":{\"en\":\"Methodology\",\"ar\":\"المنهجية\"},\"route\":\"/methodology\"},{\"id\":\"NAV-MEASUREMENT\",\"label\":{\"en\":\"Measurement Agenda\",\"ar\":\"أولويات القياس\"},\"route\":\"/measurement\"}]}",
+   "new": "{\"id\":\"NAV-METHOD-MEASUREMENT\",\"label\":{\"en\":\"Method and measurement\",\"ar\":\"المنهج والقياس\"},\"kind\":\"GROUP\",\"children\":[{\"id\":\"NAV-METHODOLOGY\",\"label\":{\"en\":\"Methodology\",\"ar\":\"المنهجية\"},\"route\":\"/methodology\"},{\"id\":\"NAV-MEASUREMENT\",\"label\":{\"en\":\"Measurement priorities\",\"ar\":\"أولويات القياس\"},\"route\":\"/measurement\"}]}"
+  },
+  {
+   "finding": "PN-1:NAMING",
+   "sheet": "04_NAV_UX",
+   "row": 16,
+   "col": 3,
+   "field": "04!route16.surface_en",
+   "old": "Explore",
+   "new": "Key questions"
+  },
+  {
+   "finding": "PN-1:NAMING",
+   "sheet": "04_NAV_UX",
+   "row": 16,
+   "col": 4,
+   "field": "04!route16.surface_ar",
+   "old": "استكشف",
+   "new": "الأسئلة الرئيسية"
+  },
+  {
+   "finding": "PN-1:NAMING",
+   "sheet": "04_NAV_UX",
+   "row": 17,
+   "col": 3,
+   "field": "04!route17.surface_en",
+   "old": "People & Needs",
+   "new": "People and needs"
+  },
+  {
+   "finding": "PN-1:NAMING",
+   "sheet": "04_NAV_UX",
+   "row": 17,
+   "col": 4,
+   "field": "04!route17.surface_ar",
+   "old": "الناس والاحتياجات",
+   "new": "الأفراد والاحتياجات"
+  },
+  {
+   "finding": "PN-1:NAMING",
+   "sheet": "04_NAV_UX",
+   "row": 18,
+   "col": 3,
+   "field": "04!route18.surface_en",
+   "old": "Firms & Finance",
+   "new": "Firms and finance"
+  },
+  {
+   "finding": "PN-1:NAMING",
+   "sheet": "04_NAV_UX",
+   "row": 19,
+   "col": 3,
+   "field": "04!route19.surface_en",
+   "old": "Finance & Institutions",
+   "new": "Finance and institutions"
+  },
+  {
+   "finding": "PN-1:NAMING",
+   "sheet": "04_NAV_UX",
+   "row": 20,
+   "col": 4,
+   "field": "04!route20.surface_ar",
+   "old": "مقدمو الخدمات",
+   "new": "مقدمو الخدمات المالية"
+  },
+  {
+   "finding": "PN-1:NAMING",
+   "sheet": "04_NAV_UX",
+   "row": 21,
+   "col": 3,
+   "field": "04!route21.surface_en",
+   "old": "Payments & Flows",
+   "new": "Payments and flows"
+  },
+  {
+   "finding": "PN-1:NAMING",
+   "sheet": "04_NAV_UX",
+   "row": 23,
+   "col": 3,
+   "field": "04!route23.surface_en",
+   "old": "Access & Infrastructure",
+   "new": "Access and infrastructure"
+  },
+  {
+   "finding": "PN-1:NAMING",
+   "sheet": "04_NAV_UX",
+   "row": 24,
+   "col": 3,
+   "field": "04!route24.surface_en",
+   "old": "Reforms & Programmes",
+   "new": "Reforms and programmes"
+  },
+  {
+   "finding": "PN-1:NAMING",
+   "sheet": "04_NAV_UX",
+   "row": 27,
+   "col": 3,
+   "field": "04!route27.surface_en",
+   "old": "Compare Evidence",
+   "new": "Compare evidence"
+  },
+  {
+   "finding": "PN-1:NAMING",
+   "sheet": "04_NAV_UX",
+   "row": 28,
+   "col": 3,
+   "field": "04!route28.surface_en",
+   "old": "Evidence Readings",
+   "new": "Evidence readings"
+  },
+  {
+   "finding": "PN-1:NAMING",
+   "sheet": "04_NAV_UX",
+   "row": 29,
+   "col": 3,
+   "field": "04!route29.surface_en",
+   "old": "Reading detail",
+   "new": "Reading"
+  },
+  {
+   "finding": "PN-1:NAMING",
+   "sheet": "04_NAV_UX",
+   "row": 29,
+   "col": 4,
+   "field": "04!route29.surface_ar",
+   "old": "تفاصيل القراءة",
+   "new": "قراءة"
+  },
+  {
+   "finding": "PN-1:NAMING",
+   "sheet": "04_NAV_UX",
+   "row": 30,
+   "col": 3,
+   "field": "04!route30.surface_en",
+   "old": "Measurement Agenda",
+   "new": "Measurement priorities"
+  },
+  {
+   "finding": "PN-1:NAMING",
+   "sheet": "04_NAV_UX",
+   "row": 31,
+   "col": 3,
+   "field": "04!route31.surface_en",
+   "old": "Data & sources",
+   "new": "Sources"
+  },
+  {
+   "finding": "PN-1:NAMING",
+   "sheet": "04_NAV_UX",
+   "row": 31,
+   "col": 4,
+   "field": "04!route31.surface_ar",
+   "old": "البيانات والمصادر",
+   "new": "المصادر"
+  },
+  {
+   "finding": "PN-1:NAMING",
+   "sheet": "04_NAV_UX",
+   "row": 610,
+   "col": 2,
+   "field": "04!trust610.label_en",
+   "old": "Rights & reuse",
+   "new": "Rights and reuse"
+  },
+  {
+   "finding": "PN-1:NAMING",
+   "sheet": "04_NAV_UX",
+   "row": 356,
+   "col": 2,
+   "field": "UI-HEADER-REPORT-AN-ISSUE.label_en",
+   "old": "Report an issue",
+   "new": "Report an error"
+  },
+  {
+   "finding": "PN-1:NAMING",
+   "sheet": "04_NAV_UX",
+   "row": 356,
+   "col": 3,
+   "field": "UI-HEADER-REPORT-AN-ISSUE.label_ar",
+   "old": "أبلغ عن مشكلة",
+   "new": "أبلغ عن خطأ"
+  },
+  {
+   "finding": "PN-1:NAMING",
+   "sheet": "04_NAV_UX",
+   "row": 335,
+   "col": 2,
+   "field": "UI-EVID-REPORT-AN-ISSUE.label_en",
+   "old": "Report an issue",
+   "new": "Report an error"
+  },
+  {
+   "finding": "PN-1:NAMING",
+   "sheet": "04_NAV_UX",
+   "row": 335,
+   "col": 3,
+   "field": "UI-EVID-REPORT-AN-ISSUE.label_ar",
+   "old": "أبلغ عن مشكلة",
+   "new": "أبلغ عن خطأ"
+  },
+  {
+   "finding": "PN-1:NAMING",
+   "sheet": "04_NAV_UX",
+   "row": 281,
+   "col": 2,
+   "field": "UI-READING-EYEBROW.label_en",
+   "old": "Evidence Reading",
+   "new": "Reading"
+  },
+  {
+   "finding": "PN-1:NAMING",
+   "sheet": "04_NAV_UX",
+   "row": 281,
+   "col": 3,
+   "field": "UI-READING-EYEBROW.label_ar",
+   "old": "قراءة أدلة",
+   "new": "قراءة"
+  },
+  {
+   "finding": "PN-1:NAMING",
+   "sheet": "04_NAV_UX",
+   "row": 289,
+   "col": 2,
+   "field": "UI-READING-ALL-H.label_en",
+   "old": "All Evidence Readings",
+   "new": "All Evidence readings"
+  },
+  {
+   "finding": "PN-1:NAMING",
+   "sheet": "04_NAV_UX",
+   "row": 291,
+   "col": 2,
+   "field": "UI-EVIDENCE-USED-IN-READINGS.label_en",
+   "old": "Used in these Evidence Readings",
+   "new": "Used in these Evidence readings"
+  },
+  {
+   "finding": "PN-1:NAMING",
+   "sheet": "04_NAV_UX",
+   "row": 367,
+   "col": 2,
+   "field": "UI-DOM-EVIDENCE-READINGS-ON-THIS-QUESTION.label_en",
+   "old": "Evidence Readings on this question",
+   "new": "Evidence readings on this question"
+  },
+  {
+   "finding": "PN-1:NAMING",
+   "sheet": "04_NAV_UX",
+   "row": 576,
+   "col": 2,
+   "field": "UI-DATA-READINGS-USING-SOURCE.label_en",
+   "old": "Evidence Readings using this source",
+   "new": "Evidence readings using this source"
+  },
+  {
+   "finding": "PN-1:NAMING",
+   "sheet": "04_NAV_UX",
+   "row": 531,
+   "col": 3,
+   "field": "UI-LAND-DOM-REMITTANCES.label_ar",
+   "old": "التحويلات",
+   "new": "الحوالات"
+  },
+  {
+   "finding": "PN-1:NAMING",
+   "sheet": "04_NAV_UX",
+   "row": 532,
+   "col": 3,
+   "field": "UI-LAND-DOM-PROVIDERS.label_ar",
+   "old": "مقدمو الخدمات",
+   "new": "مقدمو الخدمات المالية"
+  },
+  {
+   "finding": "PN-1:NAMING",
+   "sheet": "04_NAV_UX",
+   "row": 529,
+   "col": 3,
+   "field": "UI-LAND-DOM-ACCESS.label_ar",
+   "old": "الوصول",
+   "new": "الوصول إلى الخدمات المالية"
+  },
+  {
+   "finding": "PN-1:NAMING",
+   "sheet": "04_NAV_UX",
+   "row": 351,
+   "col": 2,
+   "field": "UI-HEADER-TRUST-LINKS.label_en",
+   "old": "Trust links",
+   "new": "About and policy links"
+  },
+  {
+   "finding": "PN-1:NAMING",
+   "sheet": "04_NAV_UX",
+   "row": 351,
+   "col": 3,
+   "field": "UI-HEADER-TRUST-LINKS.label_ar",
+   "old": "روابط الثقة",
+   "new": "روابط المعلومات والسياسات"
+  },
+  {
+   "finding": "PN-1:NAMING",
+   "sheet": "04_NAV_UX",
+   "row": 359,
+   "col": 2,
+   "field": "UI-FOOTER-PRODUCT-AND-TRUST-LINKS.label_en",
+   "old": "Product and trust links",
+   "new": "Site and policy links"
+  },
+  {
+   "finding": "PN-1:NAMING",
+   "sheet": "04_NAV_UX",
+   "row": 359,
+   "col": 3,
+   "field": "UI-FOOTER-PRODUCT-AND-TRUST-LINKS.label_ar",
+   "old": "روابط المنتج والثقة",
+   "new": "روابط الموقع والسياسات"
+  },
+  {
+   "finding": "PN-1:NAMING",
+   "sheet": "04_NAV_UX",
+   "row": 599,
+   "col": 3,
+   "field": "UI-COLOPHON-CITATION.label_ar",
+   "old": "الاستشهاد بهذه الصفحة",
+   "new": "استشهد بهذه الصفحة"
+  },
+  {
+   "finding": "PN-1:NAMING",
+   "sheet": "04_NAV_UX",
+   "row": 569,
+   "col": 2,
+   "field": "UI-DATA-FILTER-DOMAIN.label_en",
+   "old": "Used on",
+   "new": "Where it is used"
+  },
+  {
+   "finding": "PN-1:NAMING",
+   "sheet": "04_NAV_UX",
+   "row": 569,
+   "col": 3,
+   "field": "UI-DATA-FILTER-DOMAIN.label_ar",
+   "old": "مستخدم في",
+   "new": "مجال الاستخدام"
+  },
+  {
+   "finding": "PN-1:NAMING",
+   "sheet": "04_NAV_UX",
+   "row": 485,
+   "col": 2,
+   "field": "UI-404-EXPLORE.label_en",
+   "old": "Explore",
+   "new": "Key questions"
+  },
+  {
+   "finding": "PN-1:NAMING",
+   "sheet": "04_NAV_UX",
+   "row": 485,
+   "col": 3,
+   "field": "UI-404-EXPLORE.label_ar",
+   "old": "استكشف",
+   "new": "الأسئلة الرئيسية"
+  },
+  {
+   "finding": "PN-1:NAMING",
+   "sheet": "04_NAV_UX",
+   "row": 327,
+   "col": 2,
+   "field": "UI-EVID-DATA-SOURCES.label_en",
+   "old": "Data & sources",
+   "new": "Sources"
+  },
+  {
+   "finding": "PN-1:NAMING",
+   "sheet": "04_NAV_UX",
+   "row": 327,
+   "col": 3,
+   "field": "UI-EVID-DATA-SOURCES.label_ar",
+   "old": "البيانات والمصادر",
+   "new": "المصادر"
+  },
+  {
+   "finding": "PN-1:NAMING",
+   "sheet": "04_NAV_UX",
+   "row": 579,
+   "col": 2,
+   "field": "UI-EXPLORE-MA-BASIS.label_en",
+   "old": "These are the priorities the Measurement Agenda marks P0. The full agenda, including its P1 items, is on the Measurement Agenda page.",
+   "new": "These are the priorities the Measurement priorities page marks P0. The full list, including its P1 items, is on the Measurement priorities page."
+  },
+  {
+   "finding": "PN-1:NAMING",
+   "sheet": "04_NAV_UX",
+   "row": 584,
+   "col": 2,
+   "field": "UI-JS-SEARCH-NAMES-NOTE.label_en",
+   "old": "Names of entities from the regulator's lists and enforcement decisions are not reproduced here; the original documents are linked from Data & sources.",
+   "new": "Names of entities from the regulator's lists and enforcement decisions are not reproduced here; the original documents are linked from Sources."
+  },
+  {
+   "finding": "PN-1:NAMING",
+   "sheet": "04_NAV_UX",
+   "row": 584,
+   "col": 3,
+   "field": "UI-JS-SEARCH-NAMES-NOTE.label_ar",
+   "old": "لا تُذكر هنا أسماء الجهات الواردة في قوائم الجهة الرقابية وقرارات الإنفاذ؛ ويمكن الوصول إلى الوثائق الأصلية من صفحة البيانات والمصادر.",
+   "new": "لا تُذكر هنا أسماء الجهات الواردة في قوائم الجهة الرقابية وقرارات الإنفاذ؛ ويمكن الوصول إلى الوثائق الأصلية من صفحة المصادر."
+  },
+  {
+   "finding": "PN-1:NAMING",
+   "sheet": "04_NAV_UX",
+   "row": 349,
+   "col": 2,
+   "field": "UI-SEARCH-SEARCH-QUESTIONS-EVIDENCE-READINGS-AND.label_en",
+   "old": "Search questions, evidence, readings and sources...",
+   "new": "Search questions, evidence, readings and sources"
+  },
+  {
+   "finding": "PN-1:NAMING",
+   "sheet": "04_NAV_UX",
+   "row": 349,
+   "col": 3,
+   "field": "UI-SEARCH-SEARCH-QUESTIONS-EVIDENCE-READINGS-AND.label_ar",
+   "old": "ابحث في الأسئلة والأدلة والقراءات والمصادر...",
+   "new": "ابحث في الأسئلة والأدلة والقراءات والمصادر"
+  },
+  {
+   "finding": "PN-1:NAMING",
+   "sheet": "02_SITE_MAP",
+   "row": 6,
+   "col": 6,
+   "field": "/access/.title_ar",
+   "old": "نعرف أجزاءً من شبكة الوصول إلى الخدمات المالية، لكننا لا نملك بعد خريطة وطنية موثوقة لما يعمل فعليًا على الأرض.",
+   "new": "الوصول إلى الخدمات المالية: نعرف أجزاءً من الشبكة، لكننا لا نملك بعد خريطة وطنية موثوقة لما يعمل فعليًا على الأرض"
+  },
+  {
+   "finding": "PN-1:NAMING",
+   "sheet": "02_SITE_MAP",
+   "row": 129,
+   "col": 6,
+   "field": "/providers/.title_ar",
+   "old": "قائمة مقدمي الخدمات تثبت وضعًا رسميًا في تاريخ محدد، لكنها لا تثبت التشغيل بذاتها.",
+   "new": "مقدمو الخدمات المالية: القائمة الرسمية تثبت وضعًا رسميًا في تاريخ محدد، لكنها لا تثبت التشغيل بذاتها"
+  },
+  {
+   "finding": "PN-1:NAMING",
+   "sheet": "02_SITE_MAP",
+   "row": 141,
+   "col": 5,
+   "field": "/reforms/.title_en",
+   "old": "A reform can be real before its outcome is known.",
+   "new": "Reforms: a reform can be real before its outcome is known"
+  },
+  {
+   "finding": "PN-1:NAMING",
+   "sheet": "02_SITE_MAP",
+   "row": 141,
+   "col": 6,
+   "field": "/reforms/.title_ar",
+   "old": "قد يقع الإصلاح فعلًا وتبقى نتيجته مجهولة.",
+   "new": "الإصلاحات: قد يقع الإصلاح فعلًا وتبقى نتيجته مجهولة"
+  },
+  {
+   "finding": "PN-1:NAMING",
+   "sheet": "02_SITE_MAP",
+   "row": 137,
+   "col": 5,
+   "field": "/readings/.title_en",
+   "old": "Evidence Readings",
+   "new": "Evidence readings"
+  },
+  {
+   "finding": "PN-1:NAMING",
+   "sheet": "03_PAGE_SECTIONS",
+   "row": 79,
+   "col": 5,
+   "field": "03!/data/.8.body_en",
+   "old": "Public Evidence Records: {{n:evidence_records}}\nDocumented chronology events: {{n:chronology_events}}\nPublic claims (each is also an Evidence Record): {{n:public_claims}}\nRegistered source records: {{n:sources}}\nSource records with a public link to the original: {{n:public_locators}}\nCurated source and report cards: {{n:curated_resources}}\nEvidence Readings: {{n:readings}}\nMeasurement Agenda priorities: {{n:measurement_priorities}}",
+   "new": "Public Evidence Records: {{n:evidence_records}}\nDocumented chronology events: {{n:chronology_events}}\nPublic claims (each is also an Evidence Record): {{n:public_claims}}\nRegistered source records: {{n:sources}}\nSource records with a public link to the original: {{n:public_locators}}\nCurated source and report cards: {{n:curated_resources}}\nEvidence readings: {{n:readings}}\nMeasurement priorities: {{n:measurement_priorities}}"
+  },
+  {
+   "finding": "PN-1:NAMING",
+   "sheet": "04_NAV_UX",
+   "row": null,
+   "col": null,
+   "field": "SEARCH-ALIAS-034",
+   "old": null,
+   "new": "explore; explore the questions || استكشف; الاستكشاف -> route:/explore/"
+  },
+  {
+   "finding": "PN-1:NAMING",
+   "sheet": "04_NAV_UX",
+   "row": null,
+   "col": null,
+   "field": "SEARCH-ALIAS-035",
+   "old": null,
+   "new": "data; dataset; datasets; download; downloads; data and sources || البيانات; بيانات; تنزيل; تحميل; البيانات والمصادر -> route:/data/"
+  },
+  {
+   "finding": "PN-1:NAMING",
+   "sheet": "04_NAV_UX",
+   "row": null,
+   "col": null,
+   "field": "SEARCH-ALIAS-036",
+   "old": null,
+   "new": "issue; report an issue; problem || مشكلة; الإبلاغ عن مشكلة; بلاغ -> route:/contact/ | route:/corrections/"
+  },
+  {
+   "finding": "PN-1:NAMING",
+   "sheet": "04_NAV_UX",
+   "row": null,
+   "col": null,
+   "field": "SEARCH-ALIAS-037",
+   "old": null,
+   "new": "access; access to services || الوصول; الوصول إلى الخدمات -> route:/access/"
+  },
+  {
+   "finding": "PN-1:NAMING",
+   "sheet": "04_NAV_UX",
+   "row": null,
+   "col": null,
+   "field": "SEARCH-ALIAS-038",
+   "old": null,
+   "new": "service providers; financial service providers || مقدمو الخدمات; مقدمي الخدمات; مقدمو الخدمات المالية -> route:/providers/"
+  },
+  {
+   "finding": "PN-1:NAMING",
+   "sheet": "04_NAV_UX",
+   "row": null,
+   "col": null,
+   "field": "TERM-REMIT",
+   "old": null,
+   "new": "remittances || الحوالات"
+  },
+  {
+   "finding": "PN-1:NAMING",
+   "sheet": "04_NAV_UX",
+   "row": null,
+   "col": null,
+   "field": "TERM-CASH-TRANSFER",
+   "old": null,
+   "new": "cash transfers || التحويلات النقدية"
+  },
+  {
+   "finding": "PN-1:NAMING",
+   "sheet": "04_NAV_UX",
+   "row": null,
+   "col": null,
+   "field": "TERM-LICENCE-REUSE",
+   "old": null,
+   "new": "licence (reuse) || رخصة"
+  },
+  {
+   "finding": "PN-1:NAMING",
+   "sheet": "04_NAV_UX",
+   "row": null,
+   "col": null,
+   "field": "TERM-LICENSING",
+   "old": null,
+   "new": "licensing (regulatory) || ترخيص"
+  },
+  {
+   "finding": "PN-1:NAMING",
+   "sheet": "04_NAV_UX",
+   "row": null,
+   "col": null,
+   "field": "TERM-SOURCES",
+   "old": null,
+   "new": "Sources || المصادر"
+  },
+  {
+   "finding": "PN-1:NAMING",
+   "sheet": "04_NAV_UX",
+   "row": null,
+   "col": null,
+   "field": "TERM-QUESTIONS",
+   "old": null,
+   "new": "Key questions || الأسئلة الرئيسية"
+  },
+  {
+   "finding": "PN-1:NAMING",
+   "sheet": "04_NAV_UX",
+   "row": null,
+   "col": null,
+   "field": "TERM-MEASUREMENT-PRIORITY",
+   "old": null,
+   "new": "measurement priority || أولوية القياس"
+  },
+  {
+   "finding": "PN-1:NAMING",
+   "sheet": "04_NAV_UX",
+   "row": null,
+   "col": null,
+   "field": "TERM-EVIDENCE-READING",
+   "old": null,
+   "new": "Evidence Reading || قراءة الأدلة"
+  },
+  {
+   "finding": "PN-1:NAMING",
+   "sheet": "04_NAV_UX",
+   "row": null,
+   "col": null,
+   "field": "TERM-RESOURCE-SELF",
+   "old": null,
+   "new": "this resource || هذا المورد"
+  },
+  {
+   "finding": "PN-1:NAMING",
+   "sheet": "04_NAV_UX",
+   "row": null,
+   "col": null,
+   "field": "TERM-ACCESS",
+   "old": null,
+   "new": "Access || الوصول إلى الخدمات المالية"
+  },
+  {
+   "finding": "PN-1:NAMING",
+   "sheet": "04_NAV_UX",
+   "row": null,
+   "col": null,
+   "field": "TERM-PROVIDERS",
+   "old": null,
+   "new": "Providers || مقدمو الخدمات المالية"
+  }
+ ]
+}

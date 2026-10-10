@@ -17,10 +17,10 @@
   "authority": {
     "master_path": "authority/Yemen_Financial_Inclusion_Evidence_Master.xlsx",
     "master_drive_id": "1xAbdDHJd5bYo0Pzo_a6dR6HsZ056LzJU",
-    "master_sha256": "cf5254825da8b06e8812ee0c033382270b731e1001c40bf6ad929f843f27278a",
+    "master_sha256": "85593e5a4f604604daf0139de5e3dc55ed98afaa50265859d594fb7565e841d1",
     "page_specs_path": "site-src/content/page_specs.json",
     "page_specs_drive_id": "1jWAKnjH4lJ3XdrsG_USX7UtWDKIXLkEU",
-    "page_specs_sha256": "f0816b90ec014dc255b5f58a580c0445844ad10b1337a6c9331c56fda5e242dd",
+    "page_specs_sha256": "1f6a7d57286dd8db457fd602dee0d076e858f6d1bfebb98a8be84ae3fb760e63",
     "presentation_priority_path": "site-src/content/presentation_priority.json",
     "precedence": [
       "authority/Yemen_Financial_Inclusion_Evidence_Master.xlsx",
@@ -722,7 +722,7 @@
     "controlled_route_coverage": 142,
     "page_family_count": 11,
     "journey_tests": 13,
-    "search_smoke_tests": 21,
+    "search_smoke_tests": 26,
     "rule": "The navigation contract may control discovery, grouping, breadcrumbs, next actions and journey acceptance only. It cannot change semantic/evidence/source/rights/publication truth.",
     "drive_id": "1liMr1dd2Pv-L6J5SZdHtNUBvYijQ-P3d"
   },
@@ -730,11 +730,11 @@
     "experience_principle": "UNDERSTAND → EXPLORE → VERIFY",
     "page_family_count": 11,
     "global_primary_navigation": [
-      "Explore",
+      "Key questions",
       "Evidence",
-      "Evidence Readings",
-      "Data & sources",
-      "Method & Measurement (Methodology · Measurement Agenda)"
+      "Evidence readings",
+      "Sources",
+      "Method and measurement (Methodology · Measurement priorities)"
     ],
     "interaction_contract_path": "site-src/content/content/navigation_interaction.json",
     "architecture_assets": [
@@ -749,7 +749,7 @@
     "trust_navigation": [
       "About",
       "Corrections",
-      "Rights & reuse",
+      "Rights and reuse",
       "Accessibility",
       "Privacy",
       "Terms",

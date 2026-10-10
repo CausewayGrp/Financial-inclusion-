@@ -402,12 +402,12 @@ not one that only works on the trio.
 | Evidence Record (110) | the seven questions verbatim; records with fewer fields simply have fewer answers | composite / framing / thin records must not look weaker: the object is the same, the answers shorter |
 | Comparison | compare slots as compact objects; the compatibility table as a figure object whose boundary row is the boundary voice | four columns at 320 px (EAD-06) — a recomposition, not a shrink |
 | Reading index, Readings (10) | Reading page-object as on the trio; figures per contract tier (TABLE_TEXT_FIRST never a chart) | longest Reading — the spine index must stay usable at 40+ headings |
-| Data & sources | source cards as compact objects with locator actions; the nine without locator never named | 151 cards: paging or grouping by `resource_category`, not a link wall |
-| Measurement Agenda | priority objects (decision constrained / known / unknown / measurement that would change it) | must not read as a ranking; equal weight, no numbering that implies order |
+| Sources | source cards as compact objects with locator actions; the nine without locator never named | 151 cards: paging or grouping by `resource_category`, not a link wall |
+| Measurement priorities | priority objects (decision constrained / known / unknown / measurement that would change it) | must not read as a ranking; equal weight, no numbering that implies order |
 | Trust and service (8), 404, search states | the page-object with the boundary voice unused; calm intensity | technical states must not look like evidence gaps and vice versa |
 
 Conclusion of the paper test: no family requires a second grammar; two require a deliberate recomposition (Compare at
-320 px; the Data & sources register). This does not decide convergence; the lens critique and the adversarial tests
+320 px; the Sources register). This does not decide convergence; the lens critique and the adversarial tests
 do.
 
 **D2 result (27 September 2026, addendum).** The paper test held in rendered code: one grammar carries all eleven

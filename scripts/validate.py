@@ -573,6 +573,97 @@ except Exception as _x:
     errors.append('O-01 unreadable '+repr(_x))
 
 
+# PN-G02 (the owner's brief of 10 October 2026, Part B; transaction PN-1): a rename is never menu-only. No retired
+# public label may reappear anywhere in the built site, and every retired word a reader might still type must be
+# carried by a search alias so no habit breaks. The register that governs each pair is the Master's "Governed
+# terminology register" block, mirrored in audit/ARABIC_TERMINOLOGY_AND_STYLE_LEDGER.md §9.
+_PN_RETIRED = [
+    ("Data &amp; sources", "data", "/data/"),
+    ("Measurement Agenda", "measurement agenda", "/measurement/"),
+    ("Evidence Readings", None, None),               # the collection takes sentence case
+    ("Report an issue", "issue", "/contact/"),
+    ("Trust and responsible use", None, None),
+    ("Trust links", None, None),
+    ("Product and trust links", None, None),
+    ("Used on", None, None),
+    ("&#x627;&#x644;&#x62A;&#x62D;&#x648;&#x64A;&#x644;&#x627;&#x62A;", None, None),   # never asserted: see below
+]
+try:
+    _pn_aliases = json.load(open(C / 'content/search_aliases.json', encoding='utf-8'))
+    _pn_nav = json.load(open(C / 'content/navigation_interaction.json', encoding='utf-8'))
+    _pn_alias_terms = set()
+    for _a in _pn_aliases:
+        for _k in ("terms_en", "terms_ar"):
+            for _t in str(_a.get(_k) or "").split(";"):
+                if _t.strip():
+                    _pn_alias_terms.add(_t.strip().casefold())
+    _pn_html = {}
+    for _f in sorted(DIST.rglob("*.html")):
+        _pn_html[_f.relative_to(DIST).as_posix()] = _f.read_text(encoding="utf-8")
+    for _lbl, _alias, _route in _PN_RETIRED:
+        if _lbl.startswith("&#x"):
+            continue                                  # the Arabic remittance term is governed per sense, not retired
+        _hits = sorted(p for p, h in _pn_html.items() if _lbl in h)
+        if _hits:
+            errors.append(f"PN-G02 the retired label {_lbl!r} is still printed on {len(_hits)} page(s), e.g. {_hits[0]}")
+        if _alias and _alias.casefold() not in _pn_alias_terms:
+            errors.append(f"PN-G02 the retired word {_alias!r} is not carried by any search alias to {_route}")
+    # the Arabic strings a reader may still type for a renamed page
+    for _term, _route in (("البيانات والمصادر", "/data/"),
+                          ("استكشف", "/explore/"),
+                          ("الوصول", "/access/"),
+                          ("مقدمو الخدمات", "/providers/")):
+        if _term.casefold() not in _pn_alias_terms:
+            errors.append(f"PN-G02 the retired Arabic term {_term!r} is not carried by any search alias to {_route}")
+    # every search alias is exercised by a smoke test, or it ships unverified
+    _pn_smoke = _pn_nav.get("search_smoke_tests") or []
+    _pn_sq = {str(s.get("query_en") or "").casefold() for s in _pn_smoke} | \
+             {str(s.get("query_ar") or "").casefold() for s in _pn_smoke}
+    for _new in ("SEARCH-ALIAS-034", "SEARCH-ALIAS-035", "SEARCH-ALIAS-036", "SEARCH-ALIAS-037", "SEARCH-ALIAS-038"):
+        _a = next((a for a in _pn_aliases if a.get("alias_id") == _new), None)
+        if not _a:
+            errors.append(f"PN-G02 {_new} is missing")
+            continue
+        _terms = {t.strip().casefold() for _k in ("terms_en", "terms_ar") for t in str(_a.get(_k) or "").split(";") if t.strip()}
+        if not (_terms & _pn_sq):
+            errors.append(f"PN-G02 {_new} has no search smoke test, so it ships unverified")
+except Exception as e:
+    errors.append("PN-G02 retired-label sweep failed " + str(e))
+
+# PN-G01 (the owner's brief of 10 October 2026, B4; transaction PN-2): every content page states the licence twice —
+# once for a reader, as the governed footer line UI-FOOTER-LICENCE in that page's language, and once for a machine, as
+# <link rel="license"> pointing at the licence deed's own canonical URL. The three excluded documents are redirects
+# with no licensable content: the root language redirect and the two NEG-EW-011 stubs. The gate asserts the licence is
+# declared; it asserts nothing about rights clearance, which this repository never claims.
+try:
+    _uicl = {r['ui_id']: r for r in json.load(open(C / 'content/interface_copy.json', encoding='utf-8'))}
+    _LIC_URI = 'https://creativecommons.org/licenses/by/4.0/'
+    if _LIC_URI not in _uicl['UI-FOOTER-LICENCE']['use_rule']:
+        errors.append('PN-G01 UI-FOOTER-LICENCE does not record the canonical licence URI in its use rule')
+    for lang in ('en', 'ar'):
+        if 'CC BY 4.0' not in _uicl['UI-FOOTER-LICENCE'][f'label_{lang}']:
+            errors.append(f'PN-G01 the footer licence line does not name CC BY 4.0 in {lang}')
+    _npn = 0
+    for _f in sorted(DIST.rglob('*.html')):
+        _p = _f.relative_to(DIST).as_posix()
+        if _p in ('index.html', 'ar/evidence/NEG-EW-011/index.html', 'en/evidence/NEG-EW-011/index.html'):
+            continue
+        _h = _f.read_text(encoding='utf-8')
+        if f'<link rel="license" href="{_LIC_URI}">' not in _h:
+            errors.append(f'PN-G01 {_p} has no machine-readable licence link')
+        if _p == '404.html':
+            _npn += 1
+            continue                                        # the bilingual 404 carries the link, not the footer band
+        lang = _p.split('/')[0]
+        _ln = re.search(r'<div class="fine licence" data-licence>(.*?)</div>', _h, re.S)
+        if not _ln or _vistext(_ln.group(1)).strip() != _vistext(_html.escape(_uicl['UI-FOOTER-LICENCE'][f'label_{lang}'], quote=False)).strip():
+            errors.append(f'PN-G01 {_p} does not print the governed footer licence line')
+        _npn += 1
+    if _npn < 280:
+        errors.append(f'PN-G01 read only {_npn} pages')
+except Exception as e:
+    errors.append('PN-G01 licence presentation unreadable ' + str(e))
+
 # CS-01 (owner decision B-b, 9 October 2026; transaction V1B-1): the date the currentness strip and the colophon print,
 # UI-EDITION-CHECKED-DATE, is the date the Master states for the edition in /corrections/ section 3 ("… up to <date>",
 # «… حتى <date>») and the date in the edition's own label, UI-CONTENT-VERSION, in both languages.

@@ -1,5 +1,63 @@
 # Repository Change Log
 
+## 2026-10-10 — Public naming, terminology and rights presentation (not accepted: the owner approves names)
+
+The owner's brief of 10 October 2026, Part B, under the steward designation of
+`audit/OWNER_DECISIONS_2026-10-10.md` (OWN-NAME-01). Language only: no route, URL or feature changed, no change to the
+meaning of evidence, and no number, period, universe, limit or source moved. English and Arabic moved together.
+Decided by five independent reviews — an Arabic editor, an English editor, an information-architecture lead, a red team
+over five reader personas, and an institutional benchmark of the World Bank, IMF, BIS, Our World in Data, CGAP,
+Eurostat, the UK ONS and the GOV.UK style guide — with the lead deciding and every dissent recorded
+(`audit/public_naming/PUBLIC_NAMING_LOG.md`).
+
+**Transaction PN-1, 79 cells.** Navigation: "Explore / استكشف" → "Key questions / الأسئلة الرئيسية" (the only
+imperative among five nouns); "Data & sources / البيانات والمصادر" → "Sources / المصادر" (nothing on the page is
+downloadable); "Measurement Agenda" → "Measurement priorities" (the Arabic, the object type and the search facet
+already said priorities); "Method & Measurement" → "Method and measurement"; "Evidence Readings" → "Evidence
+readings". Trust: "Rights & reuse" → "Rights and reuse"; the footer group "Trust and responsible use / الثقة
+والاستخدام المسؤول" → "About and policies / عن الموقع وسياساته". Utilities: "Report an issue / أبلغ عن مشكلة" →
+"Report an error / أبلغ عن خطأ", which the `/contact/` page's own copy already said twice; the colophon's second
+Arabic form of "Cite this page" aligned to the header's. Accessible names: "Trust links" → "About and policy links";
+"Product and trust links" → "Site and policy links". Arabic domain labels: «التحويلات» → «الحوالات» (the page already
+had two Arabic names), «مقدمو الخدمات» → «مقدمو الخدمات المالية», «الوصول» → «الوصول إلى الخدمات المالية» — all three
+English labels unchanged. The Reading item's eyebrow "Evidence Reading / قراءة أدلة" → "Reading / قراءة". House rule:
+sentence case and "and" for "&" on every label, with the named object types exempt in prose. Prefix parity: all eight
+domain titles now name their domain in their first two words, in both languages, and none ends in a full stop. Five
+search aliases and five search smoke tests, so no retired word stops finding its page. A **governed terminology
+register** added as a new declared block of `04_NAV_UX`, eleven terms with their definitions, do-not-use variants and
+rules, mirrored in `audit/ARABIC_TERMINOLOGY_AND_STYLE_LEDGER.md` §9.
+
+**Transaction PN-2, 4 cells.** A licence line in every page's footer (text only, no badge) and
+`<link rel="license" href="https://creativecommons.org/licenses/by/4.0/">` in every content page's head — 285 of 288
+documents; the three without it are zero-second redirects with no licensable content. `/rights/` section 6 restated
+with an exact covered and not-covered scope: the CauseWay **name and marks** as well as the logo, the repository's
+**software code** (outside this licence, nothing decided about it), and **figures derived from the World Bank Findex
+microdata**, with the statement that CC BY does not extend to that underlying data. The legal code is linked beside
+the deed, and the official Arabic legal code beside it, with the English named as the reference text. Attribution
+follows CC's TASL practice, with "changes made" added as one governed label.
+
+**Rejected, with reasons** (`PUBLIC_NAMING_LOG.md` §4): "Evidence Readings" → "Analysis / التحليلات", because
+"Analysis" / «التحليل» already names a section role on 31 page sections, «التحليلات» already names analytics on
+`/privacy/`, and the word would promise interpretation beyond the evidence; "Finance" → "Credit and savings", because
+the page also carries bank balances, external-support stages and the 24-event chronology, and no institution
+benchmarked uses either word as a topic label; a governed sweep of «التحويلات» → «الحوالات», because the corpus
+already works that distinction deliberately and a sweep would change governed concept names; and "About" → «عن
+المورد», because unvocalised «المورد» reads as *muwarrid*, "supplier".
+
+**Escalated, not done** (`design/ESCALATIONS.md`): splitting the page title from the page heading, which needs a
+second governed field, four code paths and 284 regenerated images, so it is proposed for the edition that turns
+downloads on; whether the World Bank Microdata Research License permits publishing the confidence intervals derived
+from the Findex microdata, which is a legal question for the owner and counsel and on which no figure was changed or
+withdrawn; «إتاحة الوصول» versus «إمكانية الوصول» for Accessibility; and the three adopted changes the red team
+judged fatal, recorded so the owner can reverse any of them.
+
+**Gates.** Two new gates with eight negative controls: PN-G01 (every content page declares the licence for a reader
+and for a machine) and PN-G02 (no retired label reappears anywhere in the built site, every retired word is carried by
+a search alias, and every new alias is exercised by a smoke test). No existing gate's logic changed. `licence_text_confirmed`
+and `public_downloads` stay `false`. Nothing here declares DESIGN HANDOFF READY anew or PUBLIC RELEASE READY, and
+nothing claims WCAG conformance, legal review, rights clearance, native-language certification or a security guarantee.
+
+
 ## 2026-10-09 — Phase B build: currentness strip, Evidence Colophon, two disclosures, better search and filters
 
 What V1B-1 and B-c unlock, in the renderer, stylesheet and runtime (`design/DESIGN_INTEGRATION_V1.md`, DL-V1-013…018).

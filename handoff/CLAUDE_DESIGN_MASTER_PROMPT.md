@@ -100,8 +100,8 @@ regulation, programmes, constraints — and the numbers exist to reveal that sys
 
 | Layer | Path | Role |
 |---|---|---|
-| Production Master | `authority/Yemen_Financial_Inclusion_Evidence_Master.xlsx` (SHA-256 `cf5254825da8b06e8812ee0c033382270b731e1001c40bf6ad929f843f27278a`) | The only semantic, evidence, source, rights and publication authority |
-| Page Specs | `site-src/content/page_specs.json` (SHA-256 `f0816b90ec014dc255b5f58a580c0445844ad10b1337a6c9331c56fda5e242dd`) | Every route: titles, descriptions, sections, bound objects, prohibited inferences, render rules |
+| Production Master | `authority/Yemen_Financial_Inclusion_Evidence_Master.xlsx` (SHA-256 `85593e5a4f604604daf0139de5e3dc55ed98afaa50265859d594fb7565e841d1`) | The only semantic, evidence, source, rights and publication authority |
+| Page Specs | `site-src/content/page_specs.json` (SHA-256 `1f6a7d57286dd8db457fd602dee0d076e858f6d1bfebb98a8be84ae3fb760e63`) | Every route: titles, descriptions, sections, bound objects, prohibited inferences, render rules |
 | Interface copy | `site-src/content/content/interface_copy.json` | Every interface label in both languages (`UI-*` IDs). With the navigation labels below (primary, trust and footer, which the generator writes from the Master's navigation rows into `navigation_interaction.json`), the only source of interface wording |
 | Presentation depth (contract) | `site-src/content/presentation_priority.json` | For the Domain Answer, Evidence Record and Comparison families: what shows first, what may be disclosed later, how many Measurement cards a domain page shows |
 | Navigation and interaction (contract) | `site-src/content/content/navigation_interaction.json` | Navigation, trust layer, footer, breadcrumbs, next actions, page families, journeys, tools, hard-state cases |
@@ -185,7 +185,7 @@ describe the system; they are not an instruction to show everything at once.
 | Evidence Directory | `/evidence/` | Discovery into verification records; entry to Compare |
 | Evidence Record | `/evidence/<ID>/` (one per Evidence Record) | The canonical verification endpoint: summary, definition, population, period, currentness, boundary, method, source, Readings that use it |
 | Comparison | `/evidence/compare/` | A comparability test for 2–4 records |
-| Reading Index | `/readings/` | The ten Evidence Readings as a curated analytical index |
+| Reading Index | `/readings/` | The ten Evidence readings as a curated analytical index |
 | Reading | `/readings/<slug>/` | A serious public-evidence essay |
 | Data & Source | `/data/` | The full original-source register, the curated Resource Library, the system chronology |
 | Measurement | `/measurement/` | Ten decision-linked evidence priorities |
@@ -196,12 +196,14 @@ edition (otherwise Arabic); there is a bilingual 404. The route set is frozen; t
 
 ### 4.2 Navigation (governed labels — use them verbatim)
 
-Primary: **Explore / استكشف · Evidence / الأدلة · Evidence Readings / قراءات الأدلة · Data & sources / البيانات
-والمصادر · Method & Measurement / المنهج والقياس** (a family with two destinations: Methodology / المنهجية and Measurement
-Agenda / أولويات القياس). Home is reached through the identity.
+Primary: **Key questions / الأسئلة الرئيسية · Evidence / الأدلة · Evidence readings / قراءات الأدلة · Sources /
+المصادر · Method and measurement / المنهج والقياس** (a family with two destinations: Methodology / المنهجية and
+Measurement priorities / أولويات القياس). Home is reached through the identity. These labels are the ones transaction
+PN-1 set on 10 October 2026 (`audit/public_naming/PUBLIC_NAMING_LOG.md`); the owner approves names, so read them from
+`navigation_interaction.json` rather than from this paragraph if the two ever differ.
 
-Trust layer (prominent, secondary): **About · Corrections · Rights & reuse · Accessibility · Privacy · Terms · Contact**.
-Utilities: **Search · Language · Cite this page · Report an issue**. Footer groups and breadcrumbs are in
+Trust layer (prominent, secondary): **About · Corrections · Rights and reuse · Accessibility · Privacy · Terms ·
+Contact**. Utilities: **Search · Language · Cite this page · Report an error**. Footer groups and breadcrumbs are in
 `navigation_interaction.json`. The grouping and prominence you give them are yours; the labels and destinations are not.
 
 ### 4.3 First-screen contract (every reader-facing page)
@@ -294,7 +296,7 @@ palette within contrast and identity constraints; component form; the visual gra
 where several forms satisfy the visual contract; how navigation, menus and the trust layer behave (labels and
 destinations are governed, §4.2); progressive disclosure (never hiding a limitation, §4.3); interaction choreography;
 motion; mobile behaviour; Arabic spatial composition; the presentation of search, sources and citation; the experience
-of Evidence Records, Readings, Methodology and the Measurement Agenda; the download and export interaction; editorial
+of Evidence Records, Readings, Methodology and the Measurement priorities; the download and export interaction; editorial
 pacing. Challenge the inherited presentation in all of these.
 
 **Who owns what.** Design owns the visual and interaction solution and the runnable reference site. Code owns the
@@ -393,7 +395,7 @@ Design and build every one of these, in both languages, desktop, tablet and mobi
   panels); and one whose visual is not drawn from data, `/readings/banking-jump-measurement-basis/` (RV-CWR-002,
   SUPPORTING — its values are not held as rows, so the governed text carries it); the second signature chain,
   `/readings/from-rail-to-result-missing-middle/`, is also required at D6);
-  **Data/sources/Resource Library** (with the chronology); **Measurement Agenda**; **Methodology**; **About** and every
+  **Data/sources/Resource Library** (with the chronology); **Measurement priorities**; **Methodology**; **About** and every
   **trust** route; **corrections/report-issue** journey; **404**.
 - **Hard evidence states** (§5), **all visual families** (§12), the **social/OG system** (§16), **mobile**, **RTL** and
   **accessibility states** (focus, error, status, reduced motion, forced colours, zoom).
@@ -461,13 +463,13 @@ These are outcomes to test; the composition is yours.
 - **Readings** are one editorial family, not clones: pacing can follow the argument; long-form typography, inline
   evidence, source verification, print, Arabic and mobile are designed; "What would change this reading?" is the
   family's intellectual signature (§11).
-- **Data & sources** makes provenance inspection easy for professionals and usable for non-specialists; the source
+- **Sources** makes provenance inspection easy for professionals and usable for non-specialists; the source
   owner stays visibly distinct from CauseWay's synthesis and presentation.
 - **Methodology** is a learning experience, not a long document: a first-time reader first grasps how the product
   decides what it is safe to say, then goes deeper — authority flow, populations and units, calculation bases, evidence
   clocks, survey versus administrative evidence, observed/estimated/projected, programme versus population,
   uncertainty, corrections and editions — using the governed examples its Page Spec already carries.
-- **The Measurement Agenda** shows, for each priority, the decision or question it constrains, what is known, what is
+- **The Measurement priorities** shows, for each priority, the decision or question it constrains, what is known, what is
   not, and what measurement would change it. Unknowns look intentional and analytically useful, never like missing web
   content.
 - **About and trust** answer why the product exists, what CauseWay adds and does not do, who owns the source evidence,
@@ -524,7 +526,7 @@ All tools run on local packaged data; none may need a network call. Their accept
   `NEEDS_CONTROLLED_CONTENT` — never a synthesised type.
 - **Cite**: copies the governed citation plus the canonical link; a locator-only source is cited as "reference ·
   locator"; the edition line is governed ("Edition of 26 September 2026").
-- **Report an issue** (`UI-HEADER-REPORT-AN-ISSUE`): opens `/{lang}/contact/`, from a record `/{lang}/contact/?record=<ID>`,
+- **Report an error** (`UI-HEADER-REPORT-AN-ISSUE`): opens `/{lang}/contact/`, from a record `/{lang}/contact/?record=<ID>`,
   carrying the originating record and route; Contact offers a mail action to the governed address with the reference in
   the subject and links to Corrections, which accepts the same `?record=`; bad references are technical errors; a report
   never changes the record. You may design a richer reporting intent — for example choosing what kind of problem it is
@@ -546,7 +548,7 @@ All tools run on local packaged data; none may need a network call. Their accept
   are never offered for download: a public URL is not redistribution permission. Downloads are not conversion buttons:
   design per object only the formats that serve it — a Reading as print and PDF; an Evidence Record as print, a citation
   file (for example RIS or BibTeX) and its governed fields as CSV; a chart as a framed image (PNG or SVG) with its
-  governed data table as CSV; a table as CSV or XLSX; Methodology and the Measurement Agenda as print; a source as its
+  governed data table as CSV; a table as CSV or XLSX; Methodology and the Measurement priorities as print; a source as its
   citation and its original-source link, never its document. Arabic exports are first-class: Arabic headings and
   labels, right-to-left layout, correct encoding. Every portable object carries its title, period, population, source,
   key boundary, edition, canonical link, suggested citation and a reuse line (governed copy that follows the licence
@@ -605,7 +607,7 @@ Page data travels in JSON blocks (`<script type="application/json" id="yfie-ui">
 
 ---
 
-## 11. The Evidence Readings — the flagship editorial family
+## 11. The Evidence readings — the flagship editorial family
 
 A Reading is a **serious public-evidence essay**, not a blog post, a report page, a database record or a card.
 

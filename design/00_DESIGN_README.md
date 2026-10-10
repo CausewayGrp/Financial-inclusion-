@@ -51,7 +51,7 @@ was accepted by the owner's merge (`main` at `851f496078776356b38892c946d40d154c
 developed on `claude/epic-cori-60fpeb` (created from that exact `main`) and landed through one draft pull request
 (https://github.com/CausewayGrp/Financial-inclusion-/pull/4). At that merge every one of the 288 documents renders from
 the one content path (`design/reference/build.py`); Explore, the five hard domain answers, the Evidence directory, the
-§9.1 record set, Compare and Data & sources are composed in the T4 grammar and each §9.2 hard state on those routes is
+§9.1 record set, Compare and Sources are composed in the T4 grammar and each §9.2 hard state on those routes is
 asserted on the rendered DOM (`design/reference/check_site.py`); the two repository browser suites, bilingual invariance
 and content parity pass on the reference site; the five D1 residuals are reconciled (DL-D2-002). At D3 (same branch and
 pull request, process note in `ESCALATIONS.md`) the Reading index, the ten Readings, Measurement, Methodology, the eight
@@ -520,7 +520,7 @@ not public release (REL-01…04 remain).
   with composition rules per family and intensity that follows the evidence structure: Explore is a numbered question
   index; the domain answers open on their contract's always-visible limits and vary by `presentation_family`; the
   directory is search plus a question-grouped register of 110 rows; Compare leads with the boundary and recomposes its
-  table at 320 px as numbered slot blocks; Data & sources is a register of curated categories and dependency groups.
+  table at 320 px as numbered slot blocks; Sources is a register of curated categories and dependency groups.
   Where a bound visual sits is a recorded table, not a per-route guess.
 - Arabic / responsive / a11y: Arabic composed on its own tokens throughout; identifiers, dates and codes isolated; axes
   left-to-right; one column below 600 px, the spine from 900 px, the rubric column from 1200 px; every landmark named.
@@ -569,7 +569,7 @@ not public release (REL-01…04 remain).
   the value column (escalated); dense labels rely on the table below 600 px (DEBT-012).
 
 ### DL-D2-006 · D2 · 2026-09-27 · Compare and the source register: tools composed, runtime untouched
-- Problem: give Compare and Data & sources the T4 grammar while keeping `site-src/app.js` and every test hook unchanged,
+- Problem: give Compare and Sources the T4 grammar while keeping `site-src/app.js` and every test hook unchanged,
   and prove compare_unlike and source_scale.
 - Evidence: `test_public_tools.py` 25/26 on the reference site; `check_site.py` (boundary before controls, verdict
   before table and in the boundary voice, no numeric columns, text-labelled states; 151 sources, 28 curated in 6

@@ -188,6 +188,8 @@ svg.rv2{display:block;overflow:visible;font-family:var(--font)}
 .inst .id{display:flex;gap:12px;align-items:center;font-size:var(--fs-src);color:var(--ink-2)}
 .inst .id img{width:40px;height:40px}
 .inst .fine{border-top:1px solid var(--rule-2);padding-top:12px;font-size:var(--fs-clock);color:var(--mute)}
+/* PN-2: the licence line sits under the copyright line without a second rule between them */
+.inst .fine.licence{border-top:0;padding-top:4px;max-width:78ch}
 /* ---- shell mechanics (brief §19): skip link, focus, screen-reader text, table wrap, menu, search dialog ---- */
 .skip{position:absolute;inset-inline-start:16px;top:-200px;padding:12px 16px;background:var(--paper);color:var(--ink);border:3px double var(--counter);z-index:1000;text-decoration:none;font-weight:600}
 .skip:focus{top:12px}

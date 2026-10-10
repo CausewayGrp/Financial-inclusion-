@@ -2,8 +2,8 @@
  "schema": "YFIE_ROUTE_CONTENT_AND_STATE_INVENTORY/1.3",
  "purpose": "Design recipient's map of every route, its family, bindings, collections, next actions and the states Design must cover. Derived; not authority.",
  "generated_from": {
-  "production_master_sha256": "cf5254825da8b06e8812ee0c033382270b731e1001c40bf6ad929f843f27278a",
-  "page_specs_sha256": "f0816b90ec014dc255b5f58a580c0445844ad10b1337a6c9331c56fda5e242dd",
+  "production_master_sha256": "85593e5a4f604604daf0139de5e3dc55ed98afaa50265859d594fb7565e841d1",
+  "page_specs_sha256": "1f6a7d57286dd8db457fd602dee0d076e858f6d1bfebb98a8be84ae3fb760e63",
   "generator": "scripts/handoff_inventory.py"
  },
  "counts": {
@@ -249,7 +249,7 @@
     "ar": "dist/ar/access/index.html"
    },
    "title_en": "Access: where services can be reached is only partly mapped",
-   "title_ar": "نعرف أجزاءً من شبكة الوصول إلى الخدمات المالية، لكننا لا نملك بعد خريطة وطنية موثوقة لما يعمل فعليًا على الأرض.",
+   "title_ar": "الوصول إلى الخدمات المالية: نعرف أجزاءً من الشبكة، لكننا لا نملك بعد خريطة وطنية موثوقة لما يعمل فعليًا على الأرض",
    "sections": 9,
    "section_rows_split_by_language": true,
    "evidence_ids": [
@@ -4765,7 +4765,7 @@
     "ar": "dist/ar/providers/index.html"
    },
    "title_en": "Providers: official lists show formal status on a date; operation needs other evidence",
-   "title_ar": "قائمة مقدمي الخدمات تثبت وضعًا رسميًا في تاريخ محدد، لكنها لا تثبت التشغيل بذاتها.",
+   "title_ar": "مقدمو الخدمات المالية: القائمة الرسمية تثبت وضعًا رسميًا في تاريخ محدد، لكنها لا تثبت التشغيل بذاتها",
    "sections": 10,
    "section_rows_split_by_language": true,
    "evidence_ids": [
@@ -4812,7 +4812,7 @@
     "en": "dist/en/readings/index.html",
     "ar": "dist/ar/readings/index.html"
    },
-   "title_en": "Evidence Readings",
+   "title_en": "Evidence readings",
    "title_ar": "قراءات الأدلة",
    "sections": 1,
    "section_rows_split_by_language": false,
@@ -5285,8 +5285,8 @@
     "en": "dist/en/reforms/index.html",
     "ar": "dist/ar/reforms/index.html"
    },
-   "title_en": "A reform can be real before its outcome is known.",
-   "title_ar": "قد يقع الإصلاح فعلًا وتبقى نتيجته مجهولة.",
+   "title_en": "Reforms: a reform can be real before its outcome is known",
+   "title_ar": "الإصلاحات: قد يقع الإصلاح فعلًا وتبقى نتيجته مجهولة",
    "sections": 11,
    "section_rows_split_by_language": true,
    "evidence_ids": [

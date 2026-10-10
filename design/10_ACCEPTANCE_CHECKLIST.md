@@ -71,7 +71,7 @@ readers (English; Arabic) read the checkpoint tree (§K.4).
   `one_h1`, `language_switch_present`, `footer_trust:<route>` × 7 trust routes (label and link in the page's
   language), `html_lang_dir`; `check_site.py` hooks present per render. PNG: `design/evidence/d7/review-home-{en,ar}-{1440,390}.png`.
 - [x] Home · Explore · eight domain routes · Evidence index · the §9.1 record set · Compare · Readings index · the
-  Reading stress cases · Data & sources with the chronology · Measurement · Methodology · About and every trust route ·
+  Reading stress cases · Sources with the chronology · Measurement · Methodology · About and every trust route ·
   corrections/report journey · 404. — Each is a route row of `design/COVERAGE.csv` (route × EN/AR × 320/390/640/1440,
   `VERIFIED` with its check; `ACCEPTED` is written at acceptance); `check_site.py --gate d2` (Explore, the five hard domains, the Evidence directory,
   CLM-004, CLM-044, Compare, `/data/`), `--gate d3` (Home, the Readings, Measurement, Methodology, About, Contact,

@@ -4,16 +4,16 @@
   "authority_scope": "NAVIGATION_AND_INTERACTION_ONLY",
   "semantic_authority": "Production Master via current Page Specs; this contract cannot alter facts, claims, values, units, universes, periods, methods, sources, rights, evidence class or publication state.",
   "authority_binding": {
-    "master_sha256": "cf5254825da8b06e8812ee0c033382270b731e1001c40bf6ad929f843f27278a",
-    "page_specs_sha256": "f0816b90ec014dc255b5f58a580c0445844ad10b1337a6c9331c56fda5e242dd",
+    "master_sha256": "85593e5a4f604604daf0139de5e3dc55ed98afaa50265859d594fb7565e841d1",
+    "page_specs_sha256": "1f6a7d57286dd8db457fd602dee0d076e858f6d1bfebb98a8be84ae3fb760e63",
     "page_spec_count": 142
   },
   "experience_principle": "UNDERSTAND → EXPLORE → VERIFY",
   "global_navigation": [
     {
       "route": "/explore/",
-      "label_en": "Explore",
-      "label_ar": "استكشف"
+      "label_en": "Key questions",
+      "label_ar": "الأسئلة الرئيسية"
     },
     {
       "route": "/evidence/",
@@ -22,16 +22,16 @@
     },
     {
       "route": "/readings/",
-      "label_en": "Evidence Readings",
+      "label_en": "Evidence readings",
       "label_ar": "قراءات الأدلة"
     },
     {
       "route": "/data/",
-      "label_en": "Data & sources",
-      "label_ar": "البيانات والمصادر"
+      "label_en": "Sources",
+      "label_ar": "المصادر"
     },
     {
-      "label_en": "Method & Measurement",
+      "label_en": "Method and measurement",
       "label_ar": "المنهج والقياس",
       "children": [
         {
@@ -41,7 +41,7 @@
         },
         {
           "route": "/measurement/",
-          "label_en": "Measurement Agenda",
+          "label_en": "Measurement priorities",
           "label_ar": "أولويات القياس"
         }
       ]
@@ -101,8 +101,8 @@
       "id": "report_issue",
       "route": "/contact/",
       "record_context": "?record=<ID> from an Evidence Record; Contact links on to /corrections/, which accepts the same ?record=",
-      "label_en": "Report an issue",
-      "label_ar": "أبلغ عن مشكلة",
+      "label_en": "Report an error",
+      "label_ar": "أبلغ عن خطأ",
       "label_ui_id": "UI-HEADER-REPORT-AN-ISSUE",
       "placement": "PAGE_TOOLS"
     },
@@ -133,8 +133,8 @@
       "links": [
         {
           "route": "/explore/",
-          "label_en": "Explore",
-          "label_ar": "استكشف"
+          "label_en": "Key questions",
+          "label_ar": "الأسئلة الرئيسية"
         },
         {
           "route": "/evidence/",
@@ -143,19 +143,19 @@
         },
         {
           "route": "/readings/",
-          "label_en": "Evidence Readings",
+          "label_en": "Evidence readings",
           "label_ar": "قراءات الأدلة"
         },
         {
           "route": "/data/",
-          "label_en": "Data & sources",
-          "label_ar": "البيانات والمصادر"
+          "label_en": "Sources",
+          "label_ar": "المصادر"
         }
       ]
     },
     {
       "id": "method_measure",
-      "label_en": "Method & Measurement",
+      "label_en": "Method and measurement",
       "label_ar": "المنهج والقياس",
       "links": [
         {
@@ -165,15 +165,15 @@
         },
         {
           "route": "/measurement/",
-          "label_en": "Measurement Agenda",
+          "label_en": "Measurement priorities",
           "label_ar": "أولويات القياس"
         }
       ]
     },
     {
       "id": "trust_use",
-      "label_en": "Trust and responsible use",
-      "label_ar": "الثقة والاستخدام المسؤول",
+      "label_en": "About and policies",
+      "label_ar": "عن الموقع وسياساته",
       "links": [
         {
           "route": "/about/",
@@ -197,7 +197,7 @@
         },
         {
           "route": "/rights/",
-          "label_en": "Rights & reuse",
+          "label_en": "Rights and reuse",
           "label_ar": "الحقوق وإعادة الاستخدام"
         },
         {
@@ -222,7 +222,7 @@
     },
     "Reading": {
       "parent_route": "/readings/",
-      "parent_label_en": "Evidence Readings",
+      "parent_label_en": "Evidence readings",
       "parent_label_ar": "قراءات الأدلة",
       "current_label_mode": "GOVERNED_TITLE"
     }
@@ -3648,6 +3648,52 @@
       ],
       "rule": "PRIMARY_EXPECTED_ROUTE_IN_TOP_3",
       "basis": "PB-0494 (SEARCH_DISCOVERY_CLOSURE.md §2)"
+    },
+    {
+      "query_en": "explore",
+      "query_ar": "استكشف",
+      "expected_routes": [
+        "/explore/"
+      ],
+      "rule": "PRIMARY_EXPECTED_ROUTE_IN_TOP_3",
+      "basis": "PN-1 (the owner's brief of 10 October 2026, Part B): the retired name of the questions hub still finds it (SEARCH-ALIAS-034)"
+    },
+    {
+      "query_en": "data and sources",
+      "query_ar": "البيانات والمصادر",
+      "expected_routes": [
+        "/data/"
+      ],
+      "rule": "PRIMARY_EXPECTED_ROUTE_IN_TOP_3",
+      "basis": "PN-1 (the owner's brief of 10 October 2026, Part B): the retired name of the Sources page still finds it (SEARCH-ALIAS-035)"
+    },
+    {
+      "query_en": "report an issue",
+      "query_ar": "الإبلاغ عن مشكلة",
+      "expected_routes": [
+        "/contact/",
+        "/corrections/"
+      ],
+      "rule": "PRIMARY_EXPECTED_ROUTE_IN_TOP_3",
+      "basis": "PN-1 (the owner's brief of 10 October 2026, Part B): the retired wording of the error-reporting control still finds it (SEARCH-ALIAS-036)"
+    },
+    {
+      "query_en": "access",
+      "query_ar": "الوصول",
+      "expected_routes": [
+        "/access/"
+      ],
+      "rule": "PRIMARY_EXPECTED_ROUTE_IN_TOP_3",
+      "basis": "PN-1 (the owner's brief of 10 October 2026, Part B): the retired bare Arabic domain label still finds it, and is kept apart from the accessibility statement (SEARCH-ALIAS-037)"
+    },
+    {
+      "query_en": "service providers",
+      "query_ar": "مقدمو الخدمات",
+      "expected_routes": [
+        "/providers/"
+      ],
+      "rule": "PRIMARY_EXPECTED_ROUTE_IN_TOP_3",
+      "basis": "PN-1 (the owner's brief of 10 October 2026, Part B): the retired bare Arabic domain label still finds it (SEARCH-ALIAS-038)"
     }
   ],
   "route_deletion_test": {
@@ -3976,7 +4022,7 @@
     },
     {
       "route": "/rights/",
-      "label_en": "Rights & reuse",
+      "label_en": "Rights and reuse",
       "label_ar": "الحقوق وإعادة الاستخدام"
     },
     {

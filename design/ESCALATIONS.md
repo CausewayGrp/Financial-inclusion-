@@ -371,6 +371,12 @@ around them meanwhile.
 - `ESCALATE_TO_STEWARD (navigation contract) — a domain strip (C-10) — there is no direct route across the eight domain
   answers, and "Data & sources" holds no data. Needed: a decision on a domain strip; the labels follow Master-first.`
   Open.
+  - **The label half is CLOSED 2026-10-10** by transaction PN-1 (the owner's brief of 10 October 2026, Part B;
+    `audit/public_naming/PUBLIC_NAMING_LOG.md`): the page is named "Sources / المصادر", Master-first, while nothing on
+    it is downloadable, and the register's TERM-SOURCES states when it may become "Sources and data / المصادر
+    والبيانات". The **domain strip stays open**: a direct route across the eight domain answers is a new navigation
+    element, which the naming brief excludes. The eight answers remain reachable under the questions hub in the phone
+    menu.
 - `ESCALATE_TO_OWNER — a naming rule for the 2024 e-wallet circular (B-2) — one of its 12 names prints (NEG-EW-011) and
   eleven do not. The red team advises against naming the other eleven (the list is dated 2024 and marked
   DO_NOT_CARRY_FORWARD; a fairness risk). Needed: the owner's rule for all twelve alike, either withhold all or
@@ -727,3 +733,56 @@ escalations above as follows. The entries above are kept as raised.
 Process note — Phase B branch (2026-10-09): Phase B is developed on `claude/design-review-constraints-l9au89`, restarted
 from `main` at `b323a441` after pull request #15 merged, and goes to a new pull request; the convention of D1–D7.
 Pull request #13 is untouched. Acceptance is the owner's.
+
+## Raised at the public naming and terminology change (10 October 2026)
+
+Raised by transaction PN-1 and its review panel (the owner's brief of 10 October 2026, Part B;
+`audit/public_naming/PUBLIC_NAMING_LOG.md`). None is applied; `presentation_priority.json` is not touched.
+
+- `ESCALATE_TO_STEWARD (schema and renderer, not changed) — the page title and the page heading are one governed field
+  — every institution benchmarked gives a topic page a stable <title> (a section name plus the site name) and never a
+  thesis sentence, and the eight domain pages carry a dated thesis in both. The cause is that page["title"] is one
+  field feeding <title>, og:title, twitter:title, the BreadcrumbList and Article structured data, the print foot and
+  the social frame. Splitting it needs a second governed field in the Master and in the page-spec projection, read in
+  scripts/yfie/render.py head(), scripts/discovery.py social_meta(), the breadcrumb structured data and
+  scripts/yfie/frames.py, plus 284 regenerated social images and a structure change — none of which is the language-
+  only scope of this brief. A breadcrumb for the eight domain pages would also be a new navigation element
+  (navigation_interaction.json breadcrumbs covers only Evidence Record and Reading). Proposed for the edition that
+  turns public_downloads on, so the renderer change, the schema change and the image regeneration are paid once. The
+  cheap half is DONE in PN-1: all eight domain titles now name their domain in their first two words, in both
+  languages, and none ends in a full stop.`
+- `ESCALATE_TO_OWNER (rights, for counsel; nothing changed and no figure withheld) — whether the World Bank Microdata
+  Research License permits publishing the confidence intervals derived from the Global Findex microdata. Published
+  figures do derive from it: the three 95% intervals on /evidence/CLM-026/ are CauseWay derivations (FC-1) from
+  micro_yem.dta (YEM_2022_FINDEX_v01_M), using the published survey weight, and the record already states this
+  publicly and that the file is never redistributed. The Microdata Library terms say the data will be "used solely for
+  generating, and perhaps reporting, aggregated information" and that publications "will cite the source", and forbid
+  redistribution without prior written agreement — but they say nothing about survey weights, confidence intervals or
+  the licence of published results, and the study's own pages do not state its access category (the Licensed category
+  carries an extra clause requiring expected outputs to be identified in advance). Whether the licence permits it is
+  therefore not unambiguous and is a legal determination this session may not make. What PN-2 does state on /rights/
+  is only what is true on any reading: CC BY 4.0 does not extend to the underlying microdata or to figures derived
+  from it. The citation the World Bank requires is recorded in audit/public_naming/RIGHTS_PRESENTATION.md §3. No
+  rights clearance, legal review or certification is claimed.`
+- `ESCALATE_TO_STEWARD (Arabic, not changed) — «إتاحة الوصول» for Accessibility. The independent Arabic editor judges
+  «إمكانية الوصول» the settled Arabic term for digital accessibility, and it already has 11 governed uses elsewhere in
+  the corpus; «إتاحة الوصول» has 47. The information-architecture review argues the opposite way: keeping the two
+  apart is what stops bare «الوصول» doing three jobs now that the /access/ domain label is «الوصول إلى الخدمات
+  المالية». Deferred for a native Arabic certifier, with the ledger's standing status
+  (EXTERNAL_HUMAN_CERTIFICATION_NOT_PERFORMED).`
+- `ESCALATE_TO_OWNER — three adopted Arabic and footer changes the red team judged fatal, recorded so the owner can
+  reverse any of them on its reasoning alone: «مقدمو الخدمات المالية» (it holds that naming them financial service
+  providers upgrades a dated roster into a regulatory category); «الوصول إلى الخدمات المالية» (it holds that the
+  longer form asserts a completed relation between a person and a service); and the footer group "About and policies /
+  عن الموقع وسياساته" (it holds that "policies" names instruments the resource does not have, and that dropping
+  "responsible use" removes a warning). The lead overruled all three — the English labels are unchanged, the Arabic
+  strings are ones the Master already governs or that name a subject rather than a status, and the pages' own governed
+  text still states that a listing or a licence does not establish operation and that the access map is incomplete —
+  with the reasons in audit/public_naming/PUBLIC_NAMING_LOG.md §4. The owner approves names.`
+
+Process note — Part B branch (2026-10-10): the public naming and terminology change is developed on
+`claude/public-naming-terminology-part-b`, created at pull request #16's head
+`9f53874775693a29f5a48cb87f5cde0e731b07ae` so that nothing has to be re-run after #16 merges, and goes to its own pull
+request with #16's branch as its base. Pull requests #13, #14 and #16 are untouched. If #16 is rejected, Part B rebases
+onto `main` and re-runs PN-1 and PN-2 unchanged. Acceptance is the owner's: the owner approves names, and this pull
+request is not merged by the session.

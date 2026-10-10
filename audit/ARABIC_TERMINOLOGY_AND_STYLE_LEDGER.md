@@ -124,3 +124,91 @@ The Arabic specialist judged these as reading natively. They were **not rewritte
 ## 8. Certification
 
 The decisions and every Arabic row are `VERIFIED_BY_CLAUDE_TEAM`. Native-speaker certification by an external Arab financial editor was **not performed** (`EXTERNAL_HUMAN_CERTIFICATION_NOT_PERFORMED`). A certifier should start with D1, D3 and §5, since those are the highest-frequency changes.
+
+## 9. Appended 10 October 2026 — the governed terminology register (extends §6; nothing above is rewritten)
+
+The owner's brief of 10 October 2026, Part B, under the steward designation of
+`audit/OWNER_DECISIONS_2026-10-10.md` (OWN-NAME-01). The authoritative copy of this register is the Master, in a new
+declared block of `04_NAV_UX`, "Governed terminology register / سجل المصطلحات الخاضعة للحوكمة", written by transaction
+PN-1 and declared in `scripts/projection/master_structure.json`. It is mirrored here because this is where an Arabic
+editor looks first. The full reasoning, the dissents and the hypotheses that were overturned are in
+`audit/public_naming/PUBLIC_NAMING_LOG.md`. Certification status is unchanged: `EXTERNAL_HUMAN_CERTIFICATION_NOT_PERFORMED`.
+
+### 9.1 Remittances — the gap §6 left open
+
+§6 has no entry for remittances, and both «الحوالات» and «التحويلات» were in use, including for the same page. They
+are **not** drift and are **not** collapsed into one term. The corpus already works the distinction deliberately:
+«سلسلة التحويلات الكلية لا تقيس حجم الحوالة غير الرسمية» — the published series in one word, the individual remittance
+in the other, in one sentence, correctly.
+
+| English | Arabic (governed) | Do not use | Rule |
+|---|---|---|---|
+| remittances (the operation: the flow, the corridor, the channel, the method, the cost, the agent, the recipient) | **الحوالات** (sing. «حوالة») | «التحويلات» as the generic word for remittances; «تحويلات العاملين» as a generic term (it is a pre-BPM6 concept — source captions only) | «الحوالات» names the operation. «وكيل حوالات» for a remittance agent is unchanged (§6). |
+| a published balance-of-payments or national-accounts remittance series, aggregate, revision, vintage or scope | **التحويلات**; **التحويلات الشخصية** only where the source's caption says personal transfers | «الحوالات» | The concept name belongs to the source. A changed concept name is a changed universe. |
+| cash transfers (humanitarian or social assistance) | **التحويلات النقدية** | «الحوالات»; "remittances" in English | The payer is a programme, not a person. 102 governed occurrences; none was changed. |
+| domestic cash remittance transfers under CBY-Aden Governor's Decision (23) of 2024 | **الحوالات النقدية الداخلية** | — | Already correct; one word from «التحويلات النقدية», so never touched by a sweep. |
+| a transfer instruction between accounts | **تحويل مصرفي** / **حوالة مصرفية**, as the source has it | a substitution of either | Never substituted. |
+
+**No mechanical replacement is permitted.** Substituting «التحويلات» with «الحوالات» is allowed only when the token
+stands alone (not followed by «النقدية»، «الحكومية»، «الشخصية»، «المالية»، «الداخلية»، «المصرفية»، «الواردة»), the
+sentence is about money sent rather than about a series, and the string is not inside a quoted source title, a chart
+or source caption, a decision title, a filter value, a search alias or a clause attributing the word to a source. Any
+doubt: do not replace. PN-1 replaced **one label and one title prefix** and left all 1,451 governed occurrences of
+«التحويلات» in prose untouched.
+
+### 9.2 Licence — the two senses
+
+| English | Arabic (governed) | Do not use | Rule |
+|---|---|---|---|
+| licence (reuse / copyright) | **رخصة** | «ترخيص» for the reuse licence | The instrument content is made available under; here CC BY 4.0 for CauseWay's own content. |
+| licensing (regulatory) | **ترخيص** | «رخصة» for regulatory licensing | The act and status of being licensed by a financial authority, as that authority recorded it on a date. A licence or a listing does not establish operation (the semantic firewall, and §6's «الإدراج أو الترخيص ≠ التشغيل»). |
+
+The public copy was already right: `/rights/` uses «رخصة المشاع الإبداعي» and «الرخصة» for the reuse instrument, and
+every «مرخص / مرخصة / الترخيص» in the interface copy and the visual contracts is regulatory. **CauseWay is not a
+licensed financial institution and claims no such status** (`audit/OWNER_DECISIONS_2026-10-10.md`, OWN-04-R-a).
+Nothing was changed under this rule; it is recorded so it cannot drift.
+
+Note on institutional practice: the World Bank's own Arabic terms-of-use page uses both «رخصة المشاع الإبداعي» and
+«مرخصة بموجب الترخيص» for a copyright licence. This rule is therefore clearer than institutional practice, not a copy
+of it.
+
+### 9.3 Labels retired on 10 October 2026, and what replaced them
+
+Each retired Arabic string is kept working by a search alias, so no reader's typed word stops finding its page.
+
+| Retired | Replaced by | Alias that keeps the retired word working |
+|---|---|---|
+| «استكشف» as the questions hub's name (it stays a verb elsewhere) | «الأسئلة الرئيسية» | SEARCH-ALIAS-034 |
+| «البيانات والمصادر» | «المصادر» | SEARCH-ALIAS-035 |
+| «أبلغ عن مشكلة» | «أبلغ عن خطأ» | SEARCH-ALIAS-036 |
+| «الوصول» (bare, as the /access/ domain label) | «الوصول إلى الخدمات المالية» | SEARCH-ALIAS-037 |
+| «مقدمو الخدمات» (bare) | «مقدمو الخدمات المالية» | SEARCH-ALIAS-038 |
+| «التحويلات» as the /remittances/ domain label | «الحوالات» | SEARCH-ALIAS-005, 016, 032 (already in place) |
+| «الثقة والاستخدام المسؤول» (footer group) · «روابط الثقة» · «روابط المنتج والثقة» | «عن الموقع وسياساته» · «روابط المعلومات والسياسات» · «روابط الموقع والسياسات» | not search targets |
+| «قراءة أدلة» (the item's eyebrow) | «قراءة» | SEARCH-ALIAS-005 is unrelated; the Reading routes are found by title |
+| «الاستشهاد بهذه الصفحة» (the colophon's second form) | «استشهد بهذه الصفحة», the one form | not a search target |
+| «مستخدم في» (a /data/ facet) | «مجال الاستخدام» | not a search target |
+
+### 9.4 Corrections to §6, recorded not rewritten
+
+- §6's row "Measurement Agenda | أجندة القياس" is **stale against executed content**. The Arabic is
+  «أولويات القياس» (23 governed occurrences against 2 for «أجندة القياس», both of which are search-alias terms kept so
+  the retired word still finds the page), and from 10 October 2026 the English is "Measurement priorities". The object
+  type is «أولوية القياس».
+- §6's row "Data & sources | البيانات والمصادر" is superseded: the page is "Sources / المصادر" (§9.3). It becomes
+  "Sources and data / المصادر والبيانات" only when a machine-readable file of the published evidence is downloadable
+  from this site and reachable from that page.
+- §6's row "Evidence Readings | قراءات الأدلة" stands in Arabic. The English takes sentence case, "Evidence readings",
+  and the **item's** eyebrow becomes "Reading / قراءة". The collection is never called "Analysis" or «التحليلات»:
+  «التحليلات» already names analytics on `/privacy/`, and "Analysis" / «التحليل» already names a section role on 31
+  page sections.
+
+### 9.5 Left open for a native certifier
+
+- **«إتاحة الوصول» for Accessibility.** The independent Arabic editor judges «إمكانية الوصول» the settled Arabic term,
+  and it has 11 governed uses elsewhere; «إتاحة الوصول» has 47. The information-architecture review argues the other
+  way, because keeping the two apart is what stops bare «الوصول» doing three jobs. Not changed; escalated
+  (`design/ESCALATIONS.md`, 10 October 2026).
+- **«مقدمو الخدمات المالية» and «الوصول إلى الخدمات المالية».** Adopted over a red-team objection that each may be
+  read as a status or a completed relation. Both are strings the Master already governed elsewhere, and both English
+  labels are unchanged. The owner may reverse either.

@@ -1231,8 +1231,8 @@
   },
   {
     "ui_id": "UI-READING-EYEBROW",
-    "label_en": "Evidence Reading",
-    "label_ar": "قراءة أدلة",
+    "label_en": "Reading",
+    "label_ar": "قراءة",
     "use_rule": "Eyebrow above a Reading title (Reading page, featured Reading)."
   },
   {
@@ -1279,7 +1279,7 @@
   },
   {
     "ui_id": "UI-READING-ALL-H",
-    "label_en": "All Evidence Readings",
+    "label_en": "All Evidence readings",
     "label_ar": "كل قراءات الأدلة",
     "use_rule": "Heading of the editorial list on the Readings index; link label to the index elsewhere."
   },
@@ -1291,7 +1291,7 @@
   },
   {
     "ui_id": "UI-EVIDENCE-USED-IN-READINGS",
-    "label_en": "Used in these Evidence Readings",
+    "label_en": "Used in these Evidence readings",
     "label_ar": "يُستخدم هذا الدليل في قراءات الأدلة الآتية",
     "use_rule": "Evidence Record: the Readings whose evidence path includes this record (derived from 08)."
   },
@@ -1507,8 +1507,8 @@
   },
   {
     "ui_id": "UI-EVID-DATA-SOURCES",
-    "label_en": "Data & sources",
-    "label_ar": "البيانات والمصادر",
+    "label_en": "Sources",
+    "label_ar": "المصادر",
     "use_rule": "build.py _evidence_labels['data']"
   },
   {
@@ -1555,8 +1555,8 @@
   },
   {
     "ui_id": "UI-EVID-REPORT-AN-ISSUE",
-    "label_en": "Report an issue",
-    "label_ar": "أبلغ عن مشكلة",
+    "label_en": "Report an error",
+    "label_ar": "أبلغ عن خطأ",
     "use_rule": "build.py _evidence_labels['report']"
   },
   {
@@ -1639,8 +1639,8 @@
   },
   {
     "ui_id": "UI-SEARCH-SEARCH-QUESTIONS-EVIDENCE-READINGS-AND",
-    "label_en": "Search questions, evidence, readings and sources...",
-    "label_ar": "ابحث في الأسئلة والأدلة والقراءات والمصادر...",
+    "label_en": "Search questions, evidence, readings and sources",
+    "label_ar": "ابحث في الأسئلة والأدلة والقراءات والمصادر",
     "use_rule": "build.py search_dialog()"
   },
   {
@@ -1651,8 +1651,8 @@
   },
   {
     "ui_id": "UI-HEADER-TRUST-LINKS",
-    "label_en": "Trust links",
-    "label_ar": "روابط الثقة",
+    "label_en": "About and policy links",
+    "label_ar": "روابط المعلومات والسياسات",
     "use_rule": "build.py header()"
   },
   {
@@ -1681,8 +1681,8 @@
   },
   {
     "ui_id": "UI-HEADER-REPORT-AN-ISSUE",
-    "label_en": "Report an issue",
-    "label_ar": "أبلغ عن مشكلة",
+    "label_en": "Report an error",
+    "label_ar": "أبلغ عن خطأ",
     "use_rule": "build.py header()"
   },
   {
@@ -1699,8 +1699,8 @@
   },
   {
     "ui_id": "UI-FOOTER-PRODUCT-AND-TRUST-LINKS",
-    "label_en": "Product and trust links",
-    "label_ar": "روابط المنتج والثقة",
+    "label_en": "Site and policy links",
+    "label_ar": "روابط الموقع والسياسات",
     "use_rule": "build.py footer()"
   },
   {
@@ -1747,7 +1747,7 @@
   },
   {
     "ui_id": "UI-DOM-EVIDENCE-READINGS-ON-THIS-QUESTION",
-    "label_en": "Evidence Readings on this question",
+    "label_en": "Evidence readings on this question",
     "label_ar": "قراءات الأدلة المتعلقة بهذا السؤال",
     "use_rule": "build.py domain_readings()"
   },
@@ -2455,8 +2455,8 @@
   },
   {
     "ui_id": "UI-404-EXPLORE",
-    "label_en": "Explore",
-    "label_ar": "استكشف",
+    "label_en": "Key questions",
+    "label_ar": "الأسئلة الرئيسية",
     "use_rule": "build.py 404 page"
   },
   {
@@ -2720,7 +2720,7 @@
   {
     "ui_id": "UI-LAND-DOM-ACCESS",
     "label_en": "Access",
-    "label_ar": "الوصول",
+    "label_ar": "الوصول إلى الخدمات المالية",
     "use_rule": "RC-10 (Owner Addendum 2, improvement 3). Evidence landscape table on VIS-EVIDENCE-FRESHNESS."
   },
   {
@@ -2732,13 +2732,13 @@
   {
     "ui_id": "UI-LAND-DOM-REMITTANCES",
     "label_en": "Remittances",
-    "label_ar": "التحويلات",
+    "label_ar": "الحوالات",
     "use_rule": "RC-10 (Owner Addendum 2, improvement 3). Evidence landscape table on VIS-EVIDENCE-FRESHNESS."
   },
   {
     "ui_id": "UI-LAND-DOM-PROVIDERS",
     "label_en": "Providers",
-    "label_ar": "مقدمو الخدمات",
+    "label_ar": "مقدمو الخدمات المالية",
     "use_rule": "RC-10 (Owner Addendum 2, improvement 3). Evidence landscape table on VIS-EVIDENCE-FRESHNESS."
   },
   {
@@ -2959,8 +2959,8 @@
   },
   {
     "ui_id": "UI-DATA-FILTER-DOMAIN",
-    "label_en": "Used on",
-    "label_ar": "مستخدم في",
+    "label_en": "Where it is used",
+    "label_ar": "مجال الاستخدام",
     "use_rule": "RC-12 (Part B B13). The research library on /data/: filters, order, backlinks and locator labels."
   },
   {
@@ -3001,7 +3001,7 @@
   },
   {
     "ui_id": "UI-DATA-READINGS-USING-SOURCE",
-    "label_en": "Evidence Readings using this source",
+    "label_en": "Evidence readings using this source",
     "label_ar": "قراءات الأدلة التي تستخدم هذا المصدر",
     "use_rule": "RC-12 (Part B B13). The research library on /data/: filters, order, backlinks and locator labels."
   },
@@ -3019,7 +3019,7 @@
   },
   {
     "ui_id": "UI-EXPLORE-MA-BASIS",
-    "label_en": "These are the priorities the Measurement Agenda marks P0. The full agenda, including its P1 items, is on the Measurement Agenda page.",
+    "label_en": "These are the priorities the Measurement priorities page marks P0. The full list, including its P1 items, is on the Measurement priorities page.",
     "label_ar": "هذه هي البنود المصنفة P0 في أولويات القياس. وتعرض صفحة أولويات القياس القائمة الكاملة، بما فيها البنود المصنفة P1.",
     "use_rule": "RC-15 (Part B B15 d, B-5). Explore: the line under 'What the evidence cannot yet answer'; the gate RC-B15 keeps the set equal to the P0 items."
   },
@@ -3049,8 +3049,8 @@
   },
   {
     "ui_id": "UI-JS-SEARCH-NAMES-NOTE",
-    "label_en": "Names of entities from the regulator's lists and enforcement decisions are not reproduced here; the original documents are linked from Data & sources.",
-    "label_ar": "لا تُذكر هنا أسماء الجهات الواردة في قوائم الجهة الرقابية وقرارات الإنفاذ؛ ويمكن الوصول إلى الوثائق الأصلية من صفحة البيانات والمصادر.",
+    "label_en": "Names of entities from the regulator's lists and enforcement decisions are not reproduced here; the original documents are linked from Sources.",
+    "label_ar": "لا تُذكر هنا أسماء الجهات الواردة في قوائم الجهة الرقابية وقرارات الإنفاذ؛ ويمكن الوصول إلى الوثائق الأصلية من صفحة المصادر.",
     "use_rule": "RC-17 (owner decisions of 3 October 2026, point 2). Search: the governed sentence under the empty result."
   },
   {
@@ -3140,7 +3140,7 @@
   {
     "ui_id": "UI-COLOPHON-CITATION",
     "label_en": "Cite this page",
-    "label_ar": "الاستشهاد بهذه الصفحة",
+    "label_ar": "استشهد بهذه الصفحة",
     "use_rule": "Design integration V1, owner decisions of 9 October 2026, B-b. Evidence Colophon: a link to the page's own citation preview and copy control (section.util), which stays the one place a citation is copied."
   },
   {
@@ -3172,5 +3172,17 @@
     "label_en": "05",
     "label_ar": "05",
     "use_rule": "Design integration V1, owner decisions of 9 October 2026, B-b. Numeral of the hub Method & Measurement (/methodology/, /measurement/), bound by navigation_interaction.json."
+  },
+  {
+    "ui_id": "UI-FOOTER-LICENCE",
+    "label_en": "Text, analysis and visual designs © 2026 CauseWay, licensed under CC BY 4.0 unless otherwise noted; third-party material remains under its owners' terms. See Rights and reuse.",
+    "label_ar": "النصوص والتحليلات والتصاميم المرئية © 2026 CauseWay، وتُتاح بموجب رخصة CC BY 4.0 ما لم يُذكر خلاف ذلك؛ وتبقى مواد الجهات الأخرى خاضعة لشروط أصحابها. انظر صفحة الحقوق وإعادة الاستخدام.",
+    "use_rule": "PN-2. The owner's brief of 10 October 2026, Part B4 (rights presentation). The licence line in the footer of every page, beside the copyright and edition line. Text only, no badge image. The machine-readable form is <link rel=\"license\" href=\"https://creativecommons.org/licenses/by/4.0/\"> in every page's head — the licence deed's own canonical URL. It states the licence; it claims no rights clearance."
+  },
+  {
+    "ui_id": "UI-RIGHTS-ATTRIBUTION-NOTE",
+    "label_en": "Where you have changed what you reused — recalculated, reformatted, translated, cropped or combined it — say so, so a reader can tell your version from this one.",
+    "label_ar": "وإذا غيّرت ما أعدت استخدامه — بإعادة الحساب أو إعادة التنسيق أو الترجمة أو الاقتطاع أو الدمج — فاذكر ذلك، ليتمكن القارئ من التمييز بين نسختك وهذه النسخة.",
+    "use_rule": "PN-2. The owner's brief of 10 October 2026, Part B4 (rights presentation). /rights/: the 'changes made' element of CC's recommended attribution practice (title, author, source, licence), stated once beside the existing two-line citation format rather than lengthening it."
   }
 ]

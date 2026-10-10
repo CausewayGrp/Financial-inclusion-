@@ -248,6 +248,9 @@ class Content:
                 "copied": self.t("UI-HEADER-COPIED", lang),
                 "lang_switch_name": self.t("UI-LANG-SWITCH-NAME", other), "lang_switch_action": self.t("UI-LANG-SWITCH-ACTION", other),
                 "footer_strapline": self.t("UI-FOOTER-STRAPLINE", lang), "footer_rights": self.t("UI-FOOTER-PUBLISHED-EVIDENCE-REMAINS-ATTRIBUTED-TO", lang),
+                # PN-2 (the owner's brief of 10 October 2026, B4): the licence line every page's footer carries, text
+                # only; its machine-readable form is <link rel="license"> in the head (render.py head()).
+                "footer_licence": self.t("UI-FOOTER-LICENCE", lang),
                 "footer_nav": self.t("UI-FOOTER-PRODUCT-AND-TRUST-LINKS", lang), "noscript": self.t("UI-NOSCRIPT-NOTE", lang),
                 "breadcrumb": self.t("UI-CRUMB-BREADCRUMB", lang), "understand_explore_verify": self.t("UI-DOM-UNDERSTAND-EXPLORE-VERIFY", lang),
             },

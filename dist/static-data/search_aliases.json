@@ -262,5 +262,45 @@
     "targets": "route:/payments/",
     "boundary_note_en": null,
     "boundary_note_ar": null
+  },
+  {
+    "alias_id": "SEARCH-ALIAS-034",
+    "terms_en": "explore; explore the questions",
+    "terms_ar": "استكشف; الاستكشاف",
+    "targets": "route:/explore/",
+    "boundary_note_en": "Discovery aid only: the questions hub is named \"Key questions\".",
+    "boundary_note_ar": "أداة اكتشاف فقط: اسم صفحة الأسئلة هو «الأسئلة الرئيسية»."
+  },
+  {
+    "alias_id": "SEARCH-ALIAS-035",
+    "terms_en": "data; dataset; datasets; download; downloads; data and sources",
+    "terms_ar": "البيانات; بيانات; تنزيل; تحميل; البيانات والمصادر",
+    "targets": "route:/data/",
+    "boundary_note_en": "Discovery aid only: no dataset is downloadable here. The Sources page is a directory of the original sources behind each figure, each linked where it was published.",
+    "boundary_note_ar": "أداة اكتشاف فقط: لا تتوفر هنا أي مجموعة بيانات للتنزيل. وصفحة المصادر فهرس للمصادر الأصلية التي يستند إليها كل رقم، وكل منها مرتبط بموضع نشره."
+  },
+  {
+    "alias_id": "SEARCH-ALIAS-036",
+    "terms_en": "issue; report an issue; problem",
+    "terms_ar": "مشكلة; الإبلاغ عن مشكلة; بلاغ",
+    "targets": "route:/contact/ | route:/corrections/",
+    "boundary_note_en": "Discovery aid only: the control is named \"Report an error\".",
+    "boundary_note_ar": "أداة اكتشاف فقط: اسم الزر هو «أبلغ عن خطأ»."
+  },
+  {
+    "alias_id": "SEARCH-ALIAS-037",
+    "terms_en": "access; access to services",
+    "terms_ar": "الوصول; الوصول إلى الخدمات",
+    "targets": "route:/access/",
+    "boundary_note_en": "Discovery aid only: this is the evidence on where financial services can be reached, which is only partly mapped. For this resource's own accessibility statement, see /accessibility/.",
+    "boundary_note_ar": "أداة اكتشاف فقط: هذه أدلة الوصول إلى الخدمات المالية، وهي شبكة غير ممسوحة بالكامل. أما بيان إتاحة الوصول الخاص بهذا المورد فهو في صفحة إتاحة الوصول."
+  },
+  {
+    "alias_id": "SEARCH-ALIAS-038",
+    "terms_en": "service providers; financial service providers",
+    "terms_ar": "مقدمو الخدمات; مقدمي الخدمات; مقدمو الخدمات المالية",
+    "targets": "route:/providers/",
+    "boundary_note_en": "Discovery aid only: a listing or a licence does not establish operation.",
+    "boundary_note_ar": "أداة اكتشاف فقط: الإدراج أو الترخيص لا يثبت التشغيل."
   }
 ]

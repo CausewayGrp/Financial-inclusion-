@@ -558,7 +558,8 @@ def not_found(page: dict, shell_ar: dict) -> str:
                 f'<div class="actions"><a href="/{lang}/">{esc(s["home"])}</a><a href="/{lang}/explore/">{esc(s["explore"])}</a><a href="/{lang}/evidence/">{esc(s["evidence"])}</a>'
                 f'<button type="button" class="tbtn" data-search-open>{esc(s["search"])}</button></div></section>')
     return (f'<!doctype html><html lang="ar" dir="rtl"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><link rel="icon" type="image/png" sizes="32x32" href="/assets/logo/CauseWay_logo_32.png">'
-            f'<title>{esc(page["title"]["ar"])} — {esc(page["product"]["en"])}</title>{R.DISC.robots_meta("noindex")}<link rel="stylesheet" href="/assets/yfie.css"></head><body>'
+            f'<title>{esc(page["title"]["ar"])} — {esc(page["product"]["en"])}</title>{R.DISC.robots_meta("noindex")}'
+            f'<link rel="license" href="{R.LICENCE_URI}"><link rel="stylesheet" href="/assets/yfie.css"></head><body>'
             f'<main id="main"><div class="page"><article class="obj page-obj"><div class="head">{R.logo(48)}<span class="rubric">404 · {esc(page["title"]["ar"])} / <span dir="ltr">{esc(page["title"]["en"])}</span></span></div>'
             f'{section("ar")}{section("en")}</article></div></main>{R.search_dialog(shell_ar)}{json_block("yfie-ui", shell_ar["ui_json"])}<script src="/assets/app.js" defer></script></body></html>')
 
