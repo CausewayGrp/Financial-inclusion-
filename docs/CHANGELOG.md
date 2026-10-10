@@ -1,5 +1,24 @@
 # Repository Change Log
 
+## 2026-10-10 — RIGHTS-FINAL: the CC BY 4.0 text endorsed with two corrections; the owner confirms it
+
+The owner's decision of 10 October 2026 (`audit/OWNER_DECISIONS_2026-10-10.md` §4); the rights question is closed
+permanently. Master `66d4ce356d47` → `58b8f3ec5ac1`, 4 cells (/rights/ section 6, EN and AR).
+
+- **(a) The microdata sentence states facts only.** The CLM-026 intervals are computed from a file CauseWay obtained
+  under the World Bank Microdata Research License, and only aggregate estimates are published, never respondent-level
+  data. It no longer states what the licence "permits". The independent Arabic editor removed one word from the owner's
+  Arabic («منها»).
+- **(b) After the "Covered:" list:** for figures CauseWay calculates from other publishers' data, the licence covers the
+  calculation and presentation; the underlying data stay under their publishers' terms.
+- **The owner confirms the licence text, and no counsel review is required.** `licence_text_confirmed` is `true`.
+  "Counsel confirms" became "the owner confirms" in `deployment.json`, runbook step 7a, the deploy workflow,
+  RC-B14, README, the checkpoint, the Context, the handover, DEPLOYMENT.md, the exports and the partnership readiness
+  note.
+- **RC-B14** now fails if `licence_text_confirmed` is true without the owner's dated line.
+- `public_downloads` stays `false`; the deploy workflow stays inactive.
+- **Open items:** OWN-09 (optional): the World Bank Microdata Library's written confirmation. No legal review is claimed.
+
 ## 2026-10-10 — CS-1: the dated events of the chronology are indexed in search
 
 The owner's decision on pull request #13 (orchestration step 6), re-implemented on the current main from FC-4 (commit

@@ -97,6 +97,11 @@ affects, part of the scope Design and Code already receive, or needed only for p
   **CauseWay's counsel confirms the CC BY 4.0 text** that those two pages print, in both languages, before the first deploy makes them public (`docs/RELEASE_RUNBOOK.md` step 7a).
   Until a dated line in `audit/OWNER_DECISIONS_*.md` records that confirmation, `licence_text_confirmed` and `public_downloads` stay `false` in `site-src/deployment.json` and the deploy
   workflow refuses to publish. REL-02 is unchanged and separate: it is about the **original sources'** reuse terms, not CauseWay's own content.
+- 2026-10-10, later the same day: **the owner confirms the CC BY 4.0 text, and no counsel review is required.** The owner endorsed
+  the text with two corrections to /rights/ (transaction RIGHTS-FINAL) and confirmed it on /rights/, /terms/ and the footer, in both languages
+  (`audit/OWNER_DECISIONS_2026-10-10.md` §4). `licence_text_confirmed` is now `true`; `public_downloads` stays `false` as a separate owner
+  decision; the deploy workflow stays inactive until the owner sets `YFIE_DEPLOY_ENABLED`. The rights question is closed permanently. The
+  dated line above is kept as written. No legal review is claimed.
 
 ## 3. EXTERNAL_EVIDENCE_DEPENDENCY
 
@@ -248,6 +253,10 @@ must never fill them with an estimate, a proxy or a colour.
   CauseWay's counsel confirming the CC BY 4.0 text (`docs/RELEASE_RUNBOOK.md` step 7a; §2, the dated line of 2026-10-10). `licence_text_confirmed` and `public_downloads` stay `false` until then, and no
   licence file is added. The **code** licence is a separate question: the repository's software code is outside CC BY 4.0 and nothing is decided about it. No rights clearance, legal
   review or certification is claimed. The 2026-10-02 line above is history and is not rewritten.
+
+- 2026-10-10 — **OWN-09 (optional, not blocking):** written confirmation from the World Bank Microdata Library that publishing the
+  CLM-026 aggregate intervals is consistent with the Research License. The owner may request it; the /rights/ text no longer depends on it
+  (RIGHTS-FINAL states facts only). Owner: the owner. Origin: owner decision of 10 October 2026 (`audit/OWNER_DECISIONS_2026-10-10.md` §4).
 
 ## 6. REJECTED / NO ACTION
 

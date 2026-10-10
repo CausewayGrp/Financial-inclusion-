@@ -96,11 +96,11 @@ codebook and provenance on every row: record ID, source IDs, public locators and
 `scripts/tests/test_exports.py` proves every value against the projections. CI attaches the files as the artefact
 `yfie-data-exports`.
 
-Publishing them is one switch: `public_downloads` in `site-src/deployment.json`. It stays `false` until CauseWay's
-counsel confirms the CC BY 4.0 text (the owner adopted the licence on 3 October 2026). While it is false, the validator (RC-B14) fails if a download appears in `dist/`.
-The same confirmation comes before any deploy at all, because /rights/ and /terms/ print the licence text:
-`licence_text_confirmed` in `site-src/deployment.json` stays `false` until counsel confirms it, and the deploy
-workflow refuses to publish until it is `true` (`docs/RELEASE_RUNBOOK.md`, step 7a).
+Publishing them is one switch: `public_downloads` in `site-src/deployment.json`. It stays `false` until the owner
+switches the downloads on, a separate owner decision (the owner adopted the licence on 3 October 2026 and confirmed its text on 10 October 2026). While it is false, the validator (RC-B14) fails if a download appears in `dist/`.
+The licence-text confirmation comes before any deploy at all, because /rights/ and /terms/ print the licence text:
+`licence_text_confirmed` in `site-src/deployment.json` is `true` only while the owner's dated confirmation is recorded
+(10 October 2026), and the deploy workflow refuses to publish while it is `false` (`docs/RELEASE_RUNBOOK.md`, step 7a).
 
 - **Rendering.** `app.js` builds result and comparison markup from governed JSON and escapes every value (`esc`); Code
   must keep escaping (or Trusted Types) for anything rendered from data, and must not render source text as HTML.

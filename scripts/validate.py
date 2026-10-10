@@ -3070,13 +3070,18 @@ try:
     if _dep14.get("public_origin") is not None:
         errors.append("RC-B14 public_origin is set: a release-only decision")
     if _dep14.get("public_downloads") is not False:
-        errors.append("RC-B14 public_downloads is not false: publishing the exports waits on counsel's confirmation of the CC BY 4.0 text")
+        errors.append("RC-B14 public_downloads is not false: publishing the exports is a separate owner decision (docs/RELEASE_RUNBOOK.md, step 2)")
     if (DIST / "downloads").exists():
         errors.append("RC-B14 dist/downloads exists while downloads are switched off")
-    # the deploy workflow refuses to publish until counsel has confirmed the CC BY 4.0 text (docs/RELEASE_RUNBOOK.md, 7a);
-    # the switch is the owner's, set in the same commit as the dated line that records the confirmation
+    # the deploy workflow refuses to publish until the owner has confirmed the CC BY 4.0 text (docs/RELEASE_RUNBOOK.md, 7a;
+    # owner decision of 10 October 2026: the owner confirms, no counsel review is required). The switch is set in the same
+    # commit as the dated line that records the confirmation, and it may be true only while that line exists.
     if not isinstance(_dep14.get("licence_text_confirmed"), bool):
         errors.append("RC-B14 site-src/deployment.json: licence_text_confirmed must be true or false")
+    elif _dep14.get("licence_text_confirmed") is True and not any(
+            "The owner has read and confirms the CC BY 4.0 text" in _od.read_text(encoding="utf-8")
+            for _od in (ROOT / "audit").glob("OWNER_DECISIONS_*.md")):
+        errors.append("RC-B14 licence_text_confirmed is true but no dated owner line in audit/OWNER_DECISIONS_*.md confirms the CC BY 4.0 text")
 except Exception as _x:
     errors.append("RC-B14 unreadable " + repr(_x))
 

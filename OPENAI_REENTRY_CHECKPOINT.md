@@ -2,7 +2,7 @@
 
 **Current state, 4 October 2026.** Non-design v1 product complete. Current phase: design / presentation integration. C1, C2 and C3 are post-v1 owner decisions, not release blockers. Public release is not declared. The active front door is `README.md`. The text below is the September checkpoint and is history.
 
-**Rights, 10 October 2026.** Reuse rights are decided and the question is closed: CC BY 4.0 covers the content CauseWay owns in this resource (adopted 3 October 2026, closed 10 October 2026 — `audit/OWNER_DECISIONS_2026-10-10.md`). The one remaining release step is CauseWay's counsel confirming the CC BY 4.0 text (`docs/RELEASE_RUNBOOK.md` step 7a); `licence_text_confirmed` and `public_downloads` stay `false` until then. A reuse licence is not regulatory licensing: CauseWay is not a licensed financial institution and claims no such status. The repository's software code is outside the CC BY 4.0 licence and no code licence is decided. No rights clearance, legal review or certification is claimed.
+**Rights, 10 October 2026.** Reuse rights are decided and the question is closed: CC BY 4.0 covers the content CauseWay owns in this resource (adopted 3 October 2026, closed 10 October 2026 — `audit/OWNER_DECISIONS_2026-10-10.md`). The owner endorsed the CC BY 4.0 text with two corrections (transaction RIGHTS-FINAL) and confirmed it on 10 October 2026; no counsel review is required (`docs/RELEASE_RUNBOOK.md` step 7a). `licence_text_confirmed` is `true`; `public_downloads` stays `false`, a separate owner decision. The rights question is closed permanently. A reuse licence is not regulatory licensing: CauseWay is not a licensed financial institution and claims no such status. The repository's software code is outside the CC BY 4.0 licence and no code licence is decided. No rights clearance, legal review or certification is claimed.
 
 
 **Programme:** Final integration to the Design handoff — directive D7 (`audit/directives/`), sessions F0–F9.
@@ -35,8 +35,8 @@ so that a cold Design recipient can run D0–D7 from the repository alone.
 
 | Item | Value |
 |---|---|
-| Production Master | `authority/Yemen_Financial_Inclusion_Evidence_Master.xlsx` — SHA-256 `66d4ce356d4707e61880fb08ba5d6b1206008949d287ffa7311fd92cc4b59b06` |
-| Page Specs | `site-src/content/page_specs.json` — SHA-256 `3402a34e58b0388fd2ce51901fc78e3d1cd29ebdd97afe6fd1c8b4367efbb81c` |
+| Production Master | `authority/Yemen_Financial_Inclusion_Evidence_Master.xlsx` — SHA-256 `58b8f3ec5ac1324dfafc7eb6b4015b88da0cb9c241078903be82fe0f6492421b` |
+| Page Specs | `site-src/content/page_specs.json` — SHA-256 `7467bf55a6702790ceebc34118356b1b552ea5559fd32e928c21d5c907a1ccf7` |
 | Entry state recorded with the Drive IDs (lineage, not current) | Master `e69804106e04d093098688f2d01cea51e13191f255d774a090f3e5dd8dec9bc7`; Page Specs `ff2b0f559cde5fede3fe31d7dfb2539a00921e8b00b816c2863790cd9de49007` |
 | Master lineage in D7 | `f0150122…` (entry) → `caabff47…` (RP-F2) → `0e8730c2…` / `69899ae2…` (RL-F3, RL-F3b) → `2a7fd52b…` / `440614d7…` (R85-A, R85-B) → `168a0ad8…` / `ed3c5796…` (RF5, RF5b) |
 | Canonical repository | GitHub `CausewayGrp/Financial-inclusion-`, branch `main` — the only working copy. The last state OpenAI reviewed is commit `f726bda` (tree byte-identical to `…TRANCHE_C_COMPLETE_READING_HOLD.zip`, SHA-256 `63612dea…`); its tag and the Design-handoff tag are owner actions (§7) |

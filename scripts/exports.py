@@ -15,8 +15,8 @@ re-worded. The publication firewall holds: a source without a public locator is 
 source carries no title. `scripts/tests/test_exports.py` proves every exported value against the projections.
 
 Publishing is one switch, `public_downloads` in `site-src/deployment.json`. The owner adopted CC BY 4.0 for CauseWay's
-own content on 3 October 2026 (audit/OWNER_DECISIONS_2026-10-02.md, 09:50, E); the switch stays false until CauseWay's
-counsel confirms the licence text (docs/RELEASE_RUNBOOK.md). The exports carry the licence: LICENCE.txt holds the
+own content on 3 October 2026 (audit/OWNER_DECISIONS_2026-10-02.md, 09:50, E); the owner confirmed the licence text on 10 October
+2026 (docs/RELEASE_RUNBOOK.md, step 7a), and the switch stays false until the owner turns the downloads on (step 2). The exports carry the licence: LICENCE.txt holds the
 governed /rights/ licence section, verbatim in both languages, and MANIFEST.json names it. While it is false, nothing here reaches `dist/`, and
 the validator fails if a download is found there. The codebook's wording is a draft: it needs the bilingual review that
 governed copy receives before the switch is turned on.
@@ -228,7 +228,7 @@ def build(out: Path) -> dict:
     lic = licence_section()
     (out / "LICENCE.txt").write_text("\n\n".join(lic[k] for k in ("heading_en", "body_en", "heading_ar", "body_ar")) + "\n", encoding="utf-8", newline="\n")
     manifest = OrderedDict([("schema", "YFIE_EXPORTS/1.0"), ("master_sha256", sha), ("published", False),
-                            ("switch", "site-src/deployment.json public_downloads (false until CauseWay's counsel confirms the CC BY 4.0 text)"),
+                            ("switch", "site-src/deployment.json public_downloads (false until the owner switches the downloads on)"),
                             ("licence", OrderedDict([("id", "CC-BY-4.0"), ("url", LICENCE_URL), ("text", "LICENCE.txt"),
                                                      ("covers", "CauseWay's own content; third-party source material is not covered and stays under its publishers' terms")])),
                             ("datasets", OrderedDict((n, len(r)) for n, r in data.items()))])
