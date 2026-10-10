@@ -156,7 +156,25 @@ function typeLabel(type){
 }
 // TOOL-23: summaries are shortened at a word boundary before escaping, with an ellipsis.
 function clip(s,n){s=String(s||'');if(s.length<=n)return s;const cut=s.slice(0,n);const sp=cut.lastIndexOf(' ');return (sp>n*0.6?cut.slice(0,sp):cut).replace(/[\s,;:،؛]+$/,'')+'…';}
-function renderHits(hits){
+// V1 Phase B: the words of the query marked in a result's title and summary. Matching runs on the same normalised text
+// the ranking uses (a per-character map leads back to the original); only word tokens are marked, never a number or
+// identifier, so a date or reference keeps its left-to-right isolation whole.
+function markTerms(text,tokens){
+  const s=String(text||''); if(!s||!tokens||!tokens.length)return iso(s);
+  let norm='';const map=[];
+  for(let i=0;i<s.length;i++){const n=normalize(s[i]);for(let k=0;k<n.length;k++){norm+=n[k];map.push(i);}}
+  const spans=[];
+  tokens.filter(t=>/[a-z\u0621-\u064A]/.test(t)&&!/[-\d]/.test(t)).forEach(t=>{
+    const re=tokenRe(t); if(!re)return; const g=new RegExp(re.source,'g'); let m;
+    while((m=g.exec(norm))){if(!m[0].length){g.lastIndex++;continue;}spans.push([map[m.index],map[m.index+m[0].length-1]+1]);}
+  });
+  if(!spans.length)return iso(s);
+  spans.sort((x,y)=>x[0]-y[0]);
+  const merged=[];spans.forEach(sp=>{const l=merged[merged.length-1];if(l&&sp[0]<=l[1])l[1]=Math.max(l[1],sp[1]);else merged.push(sp.slice());});
+  let out='',at=0;merged.forEach(([a,b])=>{out+=iso(s.slice(at,a))+'<mark>'+esc(s.slice(a,b))+'</mark>';at=b;});
+  return out+iso(s.slice(at));
+}
+function renderHits(hits,tokens=[]){
   // RC-17 (owner decisions of 3 October 2026, point 2): names from the regulator's lists and enforcement decisions are
   // not in the index; the empty state says so once and points to the original documents on Data & sources
   if(!hits.length) return '<div class="empty" data-search-empty>'+T('UI-JS-SEARCH-NO-RESULT')
@@ -167,7 +185,7 @@ function renderHits(hits){
     let route=x.route||x.primary_route||x.public_route||'/evidence/'; route=String(route).replace(/^\/(ar|en)/,''); if(!route.startsWith('/'))route='/'+route;
     const type=typeLabel(x.object_type||x.type||'');
     const meta=(isAr?(x.meta_ar||''):(x.meta_en||''));   // PB-0493(c): period or document kind, in the reader's language (TOOL-10)
-    return `<a class="search-hit" href="${prefix}${route}"><div><h4>${iso(title)}</h4>${summary?`<p>${iso(clip(summary,220))}</p>`:''}</div>${type?`<span class="meta">${esc(type)}${meta?' · '+iso(meta):''}</span>`:''}</a>`;
+    return `<a class="search-hit" href="${prefix}${route}"><div><h4>${markTerms(title,tokens)}</h4>${summary?`<p>${markTerms(clip(summary,220),tokens)}</p>`:''}</div>${type?`<span class="meta">${esc(type)}${meta?' · '+iso(meta):''}</span>`:''}</a>`;
   }).join('');
 }
 // EAD-06 (handoff §2: "tool state that matters — Compare records, filters, search query — is URL-addressable,
@@ -223,7 +241,7 @@ function bindSearch(input,box,status,urlState){
         // A6 / C7: when fewer hits are shown than match, say so with the true total and carry the query to the Evidence directory (?q=, EAD-06)
         const capped=scored.length<matching.length;
         const seeAll=capped?`<p class="search-see-all"><a href="${prefix}/evidence/?q=${encodeURIComponent(input.value.trim())}&amp;type=evidence">${esc(T('UI-JS-SEARCH-SEE-ALL-EVIDENCE'))}</a></p>`:'';
-        box.innerHTML=(note?`<p class="search-boundary-note">${esc(note)}</p>`:'')+renderHits(scored)+seeAll;
+        box.innerHTML=(note?`<p class="search-boundary-note">${esc(note)}</p>`:'')+renderHits(scored,tokens)+seeAll;
         if(status)status.textContent=capped?TF('UI-JS-SEARCH-RESULTS-OF',{n:scored.length,m:matching.length})
           :TF(scored.length===1?'UI-JS-SEARCH-RESULT-ONE':'UI-JS-SEARCH-RESULTS',{n:scored.length});   // TOOL-19
       }catch(e){
@@ -423,4 +441,14 @@ if(compareSelects.length>=2&&out){
   const copyBtn=$('[data-compare-copy]');
   if(copyBtn)copyBtn.addEventListener('click',async()=>{writeUrl();await copyText(location.href,copyBtn,copyBtn.textContent);});
 }
+// V1 Phase B: a link to a target inside a closed disclosure (Home's /#system, a dated event, a source's detail) opens
+// every disclosure around it, so a fragment never lands on hidden content.
+function revealHash(){
+  let id='';try{id=decodeURIComponent(location.hash.slice(1));}catch(e){return;}
+  const t=id?document.getElementById(id):null; if(!t)return;
+  let d=t.closest('details'),opened=false;
+  while(d){if(!d.open){d.open=true;opened=true;}d=d.parentElement?d.parentElement.closest('details'):null;}
+  if(opened)requestAnimationFrame(()=>t.scrollIntoView({block:'start'}));
+}
+revealHash(); window.addEventListener('hashchange',revealHash);
 })();

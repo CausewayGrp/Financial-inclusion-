@@ -11,12 +11,16 @@
  },
  "colour": {
   "--paper": {
-   "value": "#FFFFFF",
+   "value": "#F7F5F0",
    "role": "surface of objects and the page"
   },
+  "--white": {
+   "value": "#FFFFFF",
+   "role": "surface of figure plates, cards, fields and tables (V1)"
+  },
   "--plaster": {
-   "value": "#F5F1E9",
-   "role": "surface of figure insets and the institutional band"
+   "value": "#FFFFFF",
+   "role": "surface of figure insets (white since V1; the institutional band is --green-900)"
   },
   "--ink": {
    "value": "#17212B",
@@ -43,12 +47,44 @@
    "role": "rubrics and the figure-group line (from the logo)"
   },
   "--ochre-line": {
-   "value": "#D6B86A",
+   "value": "#B8975A",
    "role": "the ochre hairline"
   },
   "--counter": {
-   "value": "#1E5650",
-   "role": "the boundary voice and the not-comparable divider (from the logo)"
+   "value": "#005A44",
+   "role": "the boundary voice and the not-comparable divider (from the logo); the primary green since V1"
+  },
+  "--green-700": {
+   "value": "#005A44",
+   "role": "primary: links, active navigation, key figures and numerals, primary action (V1)"
+  },
+  "--green-900": {
+   "value": "#0C3B2E",
+   "role": "deep structure: object and figure rules, chart primary marks, the colophon band (V1)"
+  },
+  "--sage-600": {
+   "value": "#5F7357",
+   "role": "borders of fields and selects; quiet text on paper (V1)"
+  },
+  "--sage-400": {
+   "value": "#8A9A82",
+   "role": "decoration only: underlines, chip and tool borders, hairlines (V1; never text)"
+  },
+  "--sage-100": {
+   "value": "#E7ECE4",
+   "role": "tint panels: what this does not establish, filter bars, table heads (V1)"
+  },
+  "--brass-700": {
+   "value": "#7A5A1D",
+   "role": "eyebrow labels and the boundary panel's double rule (V1; the value of --ochre)"
+  },
+  "--brass-300": {
+   "value": "#B8975A",
+   "role": "hairlines and ornament only (V1; never text; the value of --ochre-line)"
+  },
+  "--gold-300": {
+   "value": "#D6B86A",
+   "role": "accent on --green-900 only: colophon headings and focus (V1)"
   }
  },
  "type": {
@@ -137,7 +173,7 @@
    },
    "wide (≥900px)": {
     "--fs-display": {
-     "value": "46px",
+     "value": "52px",
      "role": "display (h1)"
     },
     "--fs-q": {
@@ -169,7 +205,7 @@
      "role": "body"
     },
     "--lh-body": {
-     "value": "1.9",
+     "value": "1.75",
      "role": "body leading"
     },
     "--fs-display": {
@@ -247,7 +283,7 @@
    },
    "wide (≥900px)": {
     "--fs-display": {
-     "value": "42px",
+     "value": "44px",
      "role": "display (h1)"
     },
     "--fs-q": {
@@ -294,9 +330,9 @@
  "rules": {
   "hairline": "1px var(--rule) between answers; 1px var(--rule-2) in the spine and tables",
   "object start": "3px solid var(--ink)",
-  "boundary": "3px double var(--counter)",
-  "figure inset": "3px solid var(--ink) top on var(--plaster)",
-  "institutional band": "3px solid var(--ink) top on var(--plaster)"
+  "boundary": "3px double var(--counter); on screen since V1 a --sage-100 panel under a 3px double --brass-700 rule",
+  "figure inset": "3px solid var(--ink) top on var(--plaster); on screen since V1 a white plate, 1px var(--rule) frame, 3px var(--green-900) top",
+  "institutional band": "on screen since V1 var(--green-900) with paper text, --gold-300 headings and the logo on a paper tile; print unchanged"
  },
  "space": {
   "page gutter narrow": "16px",
@@ -322,7 +358,7 @@
   "sticky spine": "top 20px, max-height calc(100vh - 40px), overflow auto"
  },
  "focus": {
-  "visible": "3px double var(--counter), offset 3px",
+  "visible": "3px double var(--counter), offset 3px; --gold-300 on the colophon (V1)",
   "skip link": "first focusable; shown on focus at top-start"
  },
  "motion": "none by design; prefers-reduced-motion honoured (no transitions or animations anywhere)",

@@ -81,10 +81,18 @@ Report what can be observed, never inflate it into outcomes.
 
 - **Original sources** keep their own terms. Their reuse terms have not been assessed (`rights_state: NOT_ASSESSED` on
   every source record); the site links to sources and does not republish them.
-- **CauseWay's own synthesis, derivations and analysis** could be licensed openly (for example CC BY 4.0) — an owner
-  decision not yet taken. No licence is declared in the repository today, and no licence may be implied for third-party
-  material.
-- **Code** (build, generator, gates) could be released under an open-source licence — also an owner decision.
+- **CauseWay's own synthesis, derivations and analysis** are licensed under CC BY 4.0: the owner adopted it on
+  3 October 2026 and closed the rights question on 10 October 2026 (`audit/OWNER_DECISIONS_2026-10-10.md`, OWN-04-R).
+  `/rights/` and `/terms/` state it in both languages. The licence covers CauseWay's text, analysis, visual designs, the
+  compiled records, and the structure and annotations of the exports. It does not cover third-party material, and no
+  licence may be implied for it; it does not cover the CauseWay name, logo and marks. No licence file is added: the
+  licence is governed content, stated on the pages. One release step remains and it is counsel's, not the owner's
+  decision: CauseWay's counsel confirms the CC BY 4.0 text before the first deploy publishes those pages
+  (`docs/RELEASE_RUNBOOK.md` step 7a); `licence_text_confirmed` and `public_downloads` stay false until then. No rights
+  clearance, legal review or certification is claimed. This is the **reuse** licence (Arabic رخصة), not **regulatory**
+  licensing (Arabic ترخيص): CauseWay is not a licensed financial institution and claims no such status.
+- **Code** (build, generator, gates) is outside the CC BY 4.0 licence and could be released under an open-source
+  licence — still an owner decision, and nothing is decided about it.
 - **Sensitive material** is never published: no personal data, no beneficiary-level records, no precise sensitive
   locations, no private locators.
 
@@ -96,7 +104,7 @@ may make DPG status inappropriate for parts of the content; that is acceptable.
 | DPG indicator | State | Gap |
 |---|---|---|
 | 1. Relevance to the SDGs | Plausible (financial inclusion relates to SDG targets such as 1.4 and 8.10) | Formal mapping not written |
-| 2. Use of approved open licences | **Not met** — no licence declared for code or CauseWay content | Owner decision on open licences (§7) |
+| 2. Use of approved open licences | **Partly met** — CauseWay's own content is CC BY 4.0, an approved open licence (§7); the code carries no licence | An open-source licence for the code, if the owner wants one (§7); the content side needs only counsel's confirmation of the CC BY 4.0 text before release |
 | 3. Clear ownership | CauseWay develops and maintains the resource | Public ownership and funding statement pending (TRUST-09) |
 | 4. Platform independence | Static files, no proprietary runtime or service dependency | None known |
 | 5. Documentation | Extensive repository documentation (README, CONTRIBUTING, method, deployment) | Public-facing documentation of reuse |

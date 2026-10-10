@@ -12,6 +12,7 @@ display beyond what a contract states (presentation_priority tiers, Page Spec se
 """
 from __future__ import annotations
 
+import hashlib
 import json
 import re
 from pathlib import Path
@@ -66,6 +67,9 @@ class Content:
         self.spec_by_route = {s["route"]: s for s in self.specs}
         self.ui = {r["ui_id"]: r for r in _load("content/interface_copy.json")}
         self.nav = _load("content/navigation_interaction.json")
+        # B-b: the Evidence Colophon prints the abridged SHA-256 of the Production Master this build was made from
+        _auth = json.loads((ROOT / "authority" / "AUTHORITY.json").read_text(encoding="utf-8"))["production_master"]
+        self.master_sha = hashlib.sha256((ROOT / _auth["path"]).read_bytes()).hexdigest()
         self.presentation = _load("presentation_priority.json")
         self.questions = _load("content/questions.json")
         self.readings = _load("content/readings.json")
@@ -200,9 +204,12 @@ class Content:
     def shell(self, lang: str, route: str) -> dict:
         other = "en" if lang == "ar" else "ar"
         nav = []
+        hub_num = {tuple(x.get("routes") or []): x.get("numeral_ui_id") for x in (self.nav.get("hub_numerals") or {}).get("items") or []}
         for item in self.nav.get("global_navigation", []):
             kids = item.get("children") or []
-            entry = {"label": item.get(f"label_{lang}"), "route": item.get("route"), "children": [
+            # B-c (owner decisions of 9 October 2026): each hub carries its governed numeral (V1B-1, UI-NAV-HUB-0n)
+            entry = {"label": item.get(f"label_{lang}"), "route": item.get("route"),
+                     "num": self._hub_num(hub_num, item, lang), "children": [
                 {"label": k.get(f"label_{lang}"), "route": k.get("route"), "href": self.href(k.get("route"), lang),
                  "active": self._active(k.get("route"), route)} for k in kids]}
             if item.get("route"):
@@ -213,6 +220,11 @@ class Content:
                  for t in self.nav.get("trust_navigation", [])]
         footer = [{"label": g.get(f"label_{lang}"), "links": [{"label": l.get(f"label_{lang}"), "href": self.href(l.get("route"), lang)}
                                                               for l in g.get("links", [])]} for g in self.nav.get("footer_groups", [])]
+        # B-c: the full phone menu names the eight domain answers by their governed domain names, under the Explore hub
+        mm = self.nav.get("mobile_menu") or {}
+        dom = mm.get("domains") or {}
+        domains = [{"label": self.t(u, lang), "href": self.href(rt, lang), "active": self._active(rt, route)}
+                   for rt, u in zip(dom.get("routes") or [], dom.get("label_ui_ids") or [])]
         return {
             "lang": lang, "dir": "rtl" if lang == "ar" else "ltr", "other_lang": other,
             "other_href": self.href(route, other),   # R-05: the language switch is a link to the same route in the other edition
@@ -242,7 +254,21 @@ class Content:
             "nav": nav, "trust": trust, "footer": footer, "home_href": self.href("/", lang), "contact_href": self.href("/contact/", lang),
             "ui_json": self.ui_json(lang),
             "mobile_menu": self.nav.get("mobile_menu") or None,   # owner decisions of 3 October 2026, point 3
+            "domains": domains, "domains_under": dom.get("under"),
+            # B-b (owner decisions of 9 October 2026; transaction V1B-1): the currentness strip and the Evidence Colophon
+            "currentness": {"line": self.tf("UI-CURRENTNESS-STRIP", lang, date=self.t("UI-EDITION-CHECKED-DATE", lang)),
+                            "href": self.href("/corrections/", lang) + "#s3"},
+            "colophon": {"heading": self.t("UI-COLOPHON-H", lang), "statement": self.t("UI-COLOPHON-SINGLE-MASTER", lang),
+                         "edition_label": self.t("UI-COLOPHON-EDITION", lang), "checked_label": self.t("UI-COLOPHON-CHECKED", lang),
+                         "checked": self.t("UI-EDITION-CHECKED-DATE", lang), "fp_label": self.t("UI-COLOPHON-FINGERPRINT", lang),
+                         "fp": self.master_sha[:12], "cite": self.t("UI-COLOPHON-CITATION", lang)},
+            # B-c: cite and report sit in the page-tools row under the h1 instead of the header
+            "page_tools": bool((self.nav.get("page_tools") or {}).get("items")),
         }
+
+    def _hub_num(self, hub_num: dict, item: dict, lang: str) -> str:
+        key = tuple([item["route"]] if item.get("route") else [k.get("route") for k in item.get("children") or []])
+        return self.t(hub_num[key], lang) if hub_num.get(key) else ""
 
     @staticmethod
     def _active(target, route) -> bool:
@@ -819,8 +845,12 @@ class Content:
         # under the section that names the three gaps
         gaps = [{"id": str(m.get("measurement_id")), "title": self.loc(m, "title", lang),
                  "href": f"/{lang}/measurement/#{quote(str(m.get('measurement_id')))}"} for m in spec.get("governed_measurement_priorities") or []]
+        # Owner decision B-a (9 October 2026): Home's depth comes from the contract's Orientation entry, not the renderer
+        orient = next(e for e in self.presentation.get("orientation_routes") or [] if e.get("route") == "/")
+        tiers = {t: [x["section_order"] for x in orient.get(t) or [] if x.get("kind") == "section"]
+                 for t in ("primary", "supporting", "progressive", "always_visible_boundaries", "first_load_exclusions")}
         return {
-            "family": "Orientation", "route": "/", "lang": lang, "gap_priorities": gaps,
+            "family": "Orientation", "route": "/", "lang": lang, "gap_priorities": gaps, "tiers": tiers,
             "title": self.loc(spec, "title", lang), "meta_description": self.loc(spec, "meta_description", lang),
             "sections": secs, "starting_questions": starting, "records": records, "featured": featured, "system_visual": system, "chain_record": chain,
             "question_count": self.inventory["entry_questions"],
@@ -951,7 +981,8 @@ class Content:
             return None
         L = lambda k: self.t(k, lang)  # noqa: E731
         return {"heading": L("UI-CHRONOLOGY-H"), "intro": L("UI-CHRONOLOGY-INTRO"), "items": items,
-                "labels": {"relevance": L("UI-CHRONOLOGY-RELEVANCE"), "sources": L("UI-CHRONOLOGY-SOURCES"), "does_not_establish": self.grammar_labels["UI-VIS-DOES-NOT-ESTABLISH"][lang]}}
+                "labels": {"relevance": L("UI-CHRONOLOGY-RELEVANCE"), "sources": L("UI-CHRONOLOGY-SOURCES"), "does_not_establish": self.grammar_labels["UI-VIS-DOES-NOT-ESTABLISH"][lang],
+                           "list_summary": L("UI-CHRONOLOGY-LIST-SUMMARY")}}   # V1B-1: the summary of the list's disclosure on /finance/
 
     def reading_object(self, r: dict, lang: str) -> dict:
         full = next((x for x in self.readings if x.get("reading_id") == r.get("reading_id")), r)
@@ -1196,6 +1227,7 @@ class Content:
                            "reference_intro": L("UI-DATA-THESE-REFERENCES-ARE-AVAILABLE-FOR"), "filter": L("UI-DATA-FIND-A-SOURCE-BY-TITLE"), "filter_placeholder": L("UI-DATA-E-G-SRC-CBY"),
                            "no_results": L("UI-DATA-NO-SOURCES-MATCH-THIS-SEARCH"), "rights_note": L("UI-DATA-EVERY-SOURCE-HERE-CAN-BE"), "open_original": L("UI-EVID-OPEN-ORIGINAL-SOURCE"),
                            "copy_reference": L("UI-EVID-COPY-SOURCE-REFERENCE"), "dependents": L("UI-EVID-EVIDENCE-RECORDS-USING-THIS-SOURCE"), "untitled": L("UI-SOURCE-UNTITLED"),
+                           "about_source": L("UI-DATA-ABOUT-THIS-SOURCE"),   # V1B-1 (owner decision B-b): a curated source's description on demand
                            "record": L("UI-SOURCES-SOURCE-RECORD"), "regulatory": L("UI-DATA-GROUP-REGULATORY"),
                            "regulatory_scope": L("UI-DATA-GROUP-REGULATORY-SCOPE"), "reuse_once": L("UI-DATA-REUSE-TERMS-ONCE"),
                            # RC-12 (B13): the research library's filters, order and backlinks

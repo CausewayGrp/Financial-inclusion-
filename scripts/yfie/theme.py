@@ -11,9 +11,10 @@ FONT_FACES = """@font-face{font-family:'IBM Plex Sans';font-style:normal;font-we
 @font-face{font-family:'IBM Plex Sans Arabic';font-style:normal;font-weight:600;font-display:swap;src:url('/assets/fonts/ibm-plex-sans-arabic/IBMPlexSansArabic-SemiBold.woff2') format('woff2')}"""
 
 CSS = r"""/* Yemen Financial Inclusion Evidence — reference stylesheet (D1, direction T4 · Instrument). Generated once from the converged composer, then maintained here. No inline style anywhere in the site. */
-:root{--paper:#FFFFFF;--plaster:#F5F1E9;--ink:#17212B;--ink-2:#3D4954;--mute:#646F79;--rule:#D8DDE2;--rule-2:#AEB7BF;--ochre:#7A5A1D;--ochre-line:#D6B86A;--counter:#1E5650;
+:root{--paper:#F7F5F0;--white:#FFFFFF;--plaster:#FFFFFF;--ink:#17212B;--ink-2:#3D4954;--mute:#646F79;--rule:#D8DDE2;--rule-2:#AEB7BF;--ochre:#7A5A1D;--ochre-line:#B8975A;--counter:#005A44;
+--green-700:#005A44;--green-900:#0C3B2E;--sage-600:#5F7357;--sage-400:#8A9A82;--sage-100:#E7ECE4;--brass-700:#7A5A1D;--brass-300:#B8975A;--gold-300:#D6B86A;
 --fs-body:17px;--lh-body:1.6;--fs-display:32px;--lh-display:1.1;--fs-q:20px;--lh-q:1.4;--fs-st:19px;--lh-st:1.5;--fs-bnd:18px;--lh-bnd:1.55;--fs-clock:13.5px;--lh-clock:1.4;--fs-rubric:12px;--fs-src:14.5px;--lh-src:1.5;--fs-nav:15px;--fs-read:18px;--lh-read:1.65;--measure:64ch;--font:'IBM Plex Sans',sans-serif}
-html[dir=rtl]{--fs-body:18px;--lh-body:1.9;--fs-display:30px;--lh-display:1.35;--fs-q:21px;--lh-q:1.7;--fs-st:20px;--lh-st:1.7;--fs-bnd:19px;--lh-bnd:1.8;--fs-clock:14.5px;--lh-clock:1.7;--fs-rubric:14px;--fs-src:15.5px;--lh-src:1.75;--fs-nav:16px;--fs-read:19.5px;--lh-read:1.95;--measure:34em;--font:'IBM Plex Sans Arabic',sans-serif}
+html[dir=rtl]{--fs-body:18px;--lh-body:1.75;--fs-display:30px;--lh-display:1.35;--fs-q:21px;--lh-q:1.7;--fs-st:20px;--lh-st:1.7;--fs-bnd:19px;--lh-bnd:1.8;--fs-clock:14.5px;--lh-clock:1.7;--fs-rubric:14px;--fs-src:15.5px;--lh-src:1.75;--fs-nav:16px;--fs-read:19.5px;--lh-read:1.95;--measure:34em;--font:'IBM Plex Sans Arabic',sans-serif}
 html{background:var(--paper);color:var(--ink);font-family:var(--font);font-size:var(--fs-body);line-height:var(--lh-body);font-variant-numeric:tabular-nums}
 body{margin:0}
 a{color:inherit;text-decoration:underline;text-decoration-thickness:1px;text-underline-offset:.16em;text-decoration-color:var(--rule-2)}
@@ -237,8 +238,8 @@ b.fnum{font-weight:700;font-size:1.08em;font-variant-numeric:lining-nums}
 .strip{grid-template-columns:minmax(0,1fr) minmax(0,1fr);column-gap:24px}
 }
 @media (min-width:900px){
-:root{--fs-display:46px;--fs-q:23px;--fs-st:21px;--fs-body:17px;--fs-read:19px;--fs-bnd:19px}
-html[dir=rtl]{--fs-display:42px;--fs-q:24px;--fs-st:22px;--fs-body:18px;--fs-read:20px;--fs-bnd:20px}
+:root{--fs-display:52px;--fs-q:23px;--fs-st:21px;--fs-body:17px;--fs-read:19px;--fs-bnd:19px}
+html[dir=rtl]{--fs-display:44px;--fs-q:24px;--fs-st:22px;--fs-body:18px;--fs-read:20px;--fs-bnd:20px}
 .bar-in{padding:14px 32px;gap:32px}
 .brand{flex-shrink:0}
 .brand img{width:48px;height:48px}.brand-name{font-size:14px;max-width:none}.brand-pub{font-size:12.5px}
@@ -697,4 +698,259 @@ svg.ts .val.dense,svg.ts .lbl.alt{display:block}
 #trace,#sources{break-before:auto}
 #trace .objs .compact{padding:6pt 0}
 }
+/* ---- V1 design integration (9 October 2026; design/DESIGN_INTEGRATION_V1.md): the owner's palette and hierarchy on
+   the accepted structure. Screen only, so the D6 print system above is unchanged; no markup, copy, hook or behaviour
+   changes. Colour carries no meaning that shape, rule or label does not already carry. ---- */
+@media screen{
+html{font-synthesis:none}
+/* reflow: a long unbroken string in governed prose (a URL, an identifier) wraps instead of widening the page at 320 px */
+.obj p,.obj li,.obj dd{overflow-wrap:break-word}
+body{background:var(--paper)}
+a{text-decoration-color:var(--sage-400)}
+a:hover{text-decoration-thickness:2px;text-decoration-color:currentColor}
+.body a,.small a,div.open a,.actions a,.rlist a,.crumb a,.src .acts a,.src .source-url,.fig .foot a,.gets a,.hublist a,.chain a,.evs.keyed a,.ctx a,.correction-origin a,details.deps a,.compare-record-actions a,.search-see-all a{color:var(--green-700)}
+.q a{color:var(--ink);text-decoration-color:var(--brass-300)}.q a:hover{color:var(--green-700)}
+button:disabled,.tbtn:disabled{color:var(--ink-2);cursor:not-allowed;text-decoration:none}
+:focus-visible{outline-color:var(--green-700)}
+/* product bar: one quiet row on paper, ruled in the primary green */
+.bar{background:var(--paper);border-bottom:2px solid var(--green-700)}
+.brand-name{color:var(--ink)}
+.nav a:hover,.controls .tbtn:hover,.controls a:hover{color:var(--green-700)}
+.controls .lang{border-color:var(--sage-600);border-radius:2px}
+.controls .lang:hover{background:var(--sage-100)}
+.nav.open{border-bottom:2px solid var(--green-700)}
+.nav.open .glabel{color:var(--brass-700)}
+/* page head: the title states the finding; two calls to action, one primary */
+.obj.page-obj{border-top:0}
+.head .rubric{color:var(--brass-700)}
+.head .st{color:var(--ink-2)}
+.head .st b{color:var(--ink)}
+[dir=ltr] h1{letter-spacing:-.02em}
+.head .actions,.head-rule .actions{gap:10px 12px}
+.head .actions a,.head-rule .actions a{display:inline-flex;align-items:center;min-height:44px;box-sizing:border-box;padding:0 20px;border:2px solid var(--green-700);border-radius:2px;color:var(--green-700);background:var(--white);text-decoration:none}
+.head .actions a:first-child,.head-rule .actions a:first-child{background:var(--green-700);color:var(--white)}
+.head .actions a:hover,.head-rule .actions a:hover{background:var(--green-900);border-color:var(--green-900);color:var(--white)}
+/* page tools: the existing cite, print, share and report controls as one quiet row of tool buttons */
+.util .actions{gap:8px 10px}
+.util .actions>.tbtn,.util .actions>a{display:inline-flex;align-items:center;min-height:36px;box-sizing:border-box;padding:0 12px;border:1px solid var(--sage-400);border-radius:2px;background:var(--white);color:var(--green-900);text-decoration:none;font-size:var(--fs-src)}
+.util .actions>.tbtn:hover,.util .actions>a:hover{background:var(--sage-100);border-color:var(--green-700)}
+/* chart marks: primary marks in the deep green; axes, labels and the not-comparable marks unchanged */
+svg .bar,.mark.a{fill:var(--green-900)}.lane-svg .span,.mark.b,.path{stroke:var(--green-900)}
+/* breadcrumbs: green and underlined, so a link never differs from its text by colour alone (1.4.1) */
+.crumb a{text-decoration:underline;text-decoration-color:var(--sage-400)}
+/* objects and answers: deep-green structure rules, brass eyebrows, green numerals */
+.obj,.spine,.cluster h3,h3.grp,details.grp summary,.obj.prio:first-child,.prow,.fig{border-top-color:var(--green-900)}
+.qa .rubric,.spine h3,.cat h3,.kv dt,.prow .dim,.inst .trust h3{color:var(--brass-700)}
+.rubric .n,.strip a .n,.spine .index .n{color:var(--green-700)}
+.qa .rubric .n{display:inline-block;min-width:1.6em;font-size:1.5em;line-height:1;letter-spacing:0;vertical-align:-.12em}
+.qlist{counter-reset:q}
+.qlist li{grid-template-columns:44px minmax(0,1fr)}
+.qlist li::before{font-size:22px;line-height:1.25;padding-top:0;color:var(--green-700);letter-spacing:-.01em}
+/* key figures: the value in the primary green, larger, never boxed (RC-1115) */
+.paced .sent b.fnum,.qa.first .st b.fnum{color:var(--green-700);font-size:1.22em}
+.paced .sent.res{border-top-color:var(--brass-300)}
+.paced .compact.bound{background:var(--white);border:1px solid var(--rule);border-inline-start:3px solid var(--green-700);padding:14px 16px 12px;margin:6px 0 24px;border-radius:0 2px 2px 0}
+[dir=rtl] .paced .compact.bound{padding:14px 16px 12px;border-radius:2px 0 0 2px}
+.paced .compact.bound .q{font-weight:600}
+.obj-card .v,.prow .n{color:var(--green-700)}
+/* what this does not establish: a sage panel under a brass double rule; the boundary voice stays in its own colour */
+.bnd,.compare-verdict,.compare-boundaries{background:var(--sage-100);border-top:3px double var(--brass-700);padding:16px 18px 18px}
+.bnd .rubric,.compare-verdict .eyebrow{color:var(--brass-700)}
+.bnd .rubric .n,.bnd .ref,.bnd .clock .k,.bnd .count,.compare-boundaries .count{color:var(--ink-2)}
+[data-compare-verdict=same-record]{background:none;padding-inline:0;border-top:1px dashed var(--rule-2)}
+.prow .lim{border-top-color:var(--brass-700)}
+/* figures: a white plate under a deep-green rule */
+.fig{background:var(--white);border:1px solid var(--rule);border-top:3px solid var(--green-900);padding:20px 20px 18px;border-radius:0 0 2px 2px}
+.multiple .fig{border-top-width:1px}.multiple .fig:first-child{border-top-width:3px}
+.fig .foot{border-top:1px solid var(--rule);padding-top:10px}
+/* tables */
+.rvtab{background:var(--white)}
+.rvtab thead th,.compare-table thead th{background:var(--sage-100);border-top:2px solid var(--green-900);color:var(--ink)}
+.rvtab th.rg{background:var(--sage-100);border-top-color:var(--green-900)}
+.inventory dd{color:var(--green-900)}
+/* tools: one filter-bar pattern (search field and facets on sage), chips, disclosures */
+.search-input{background:var(--white);border:1px solid var(--sage-600);border-radius:2px}
+.search-input:focus-visible{outline-offset:2px}
+.source-facets:not([hidden]){background:var(--sage-100);padding:14px 16px 16px;max-width:none;border-radius:2px}
+.source-facets .facet>span{font-size:var(--fs-clock);font-weight:600;color:var(--ink)}
+.source-facets select,.slot select,.search-type{background:var(--white);border:1px solid var(--sage-600);border-radius:2px;padding:8px 10px;color:var(--ink)}
+.chip{background:var(--white);border-color:var(--sage-400);border-radius:2px;color:var(--green-900)}
+.chip:hover{background:var(--sage-100);border-color:var(--green-700)}
+details.more summary::before,details.hub summary::before,details.grp summary::before,details.deps summary::before{color:var(--green-700);font-weight:600}
+/* 2.5.8: the dependency disclosures of /data/ measured 22 px with close neighbours; the D2 minimum, applied where it was missed */
+details.deps>summary{padding:3px 0;min-height:24px;box-sizing:border-box}
+details.more summary:hover,details.hub summary:hover,details.grp summary:hover,details.deps summary:hover{color:var(--green-700)}
+.hublist li,.gap,.pull{border-inline-start-color:var(--brass-300)}
+.mks .mk,.compare-state{border-inline-start-color:var(--green-700)}
+dialog.search{border-top:3px solid var(--green-700)}
+.search-results a:hover h4,.search-results a:hover{color:var(--green-700)}
+.cite-preview{border-top-color:var(--rule)}
+/* the institutional colophon: deep green; the canonical logo on a paper tile, never on the dark field */
+.inst{background:var(--green-900);color:var(--paper);border-top:0;margin-top:40px}
+.inst a{color:var(--paper);text-decoration-color:var(--sage-400)}
+.inst a:hover{color:var(--gold-300);text-decoration-color:var(--gold-300)}
+.inst .trust h3,.inst .groups strong{color:var(--gold-300)}
+.inst .id{color:var(--sage-100)}
+.inst .id img{background:var(--paper);padding:6px;border-radius:2px}
+.inst .fine{border-top-color:var(--sage-600);color:var(--sage-100)}
+.inst :focus-visible{outline-color:var(--gold-300)}
+/* the social and export frames share the deep-green structure rule */
+body.social-doc main{border-top-color:var(--green-900)}
+body.export-doc .exp{border-top-color:var(--green-900)}
+}
+@media screen and (min-width:900px){
+.bar-in{max-width:1440px}
+.nav a{white-space:nowrap}
+.nav a[aria-current=page]{border-bottom-color:var(--green-700);color:var(--green-700)}
+.nav .group:not(.m-only){display:inline-grid;grid-template-columns:auto auto;column-gap:16px;align-items:baseline}
+.nav .group:not(.m-only) .glabel{grid-column:1 / -1;padding:0;font-size:11px;line-height:1.2;color:var(--brass-700)}
+.controls .cite,.controls .report{font-size:13.5px}
+.controls .report{display:inline-flex;align-items:center;min-height:44px}
+.nav{align-items:last baseline}
+.spine{border-inline-start-color:var(--rule)}
+.spine .index a{border-inline-start:2px solid transparent;margin-inline-start:-21px;padding-inline-start:19px}
+.spine .index a:hover{color:var(--green-700)}
+.spine .index a[aria-current]{border-inline-start-color:var(--green-700);color:var(--green-700)}
+.inst-in{padding:44px 32px 28px}
+}
+@media screen and (min-width:1280px){
+.bar-in{flex-wrap:nowrap}
+.brand-name{max-width:15ch}
+.nav{flex-wrap:nowrap;gap:4px 22px;align-items:center}
+}
+/* ---- V1 phase 2 (DL-V1-009…012): one disclosure pattern, orientation on a phone, density by width. Screen only;
+   every governed region keeps its place, and nothing is hidden that a disclosure does not name. ---- */
+@media screen{
+/* one disclosure pattern: a named bar with a + / − control; the governed summary is the whole hit area */
+details.fold{border-top:3px solid var(--green-900);margin-top:4px}
+details.fold>summary{display:flex;align-items:center;gap:12px;min-height:48px;box-sizing:border-box;padding:10px 14px;cursor:pointer;list-style:none;background:var(--white);border:1px solid var(--rule);border-top:0;font-weight:600;font-size:var(--fs-body);line-height:1.35;color:var(--ink)}
+details.fold>summary::-webkit-details-marker,details.more>summary::-webkit-details-marker,details.hub>summary::-webkit-details-marker,details.grp>summary::-webkit-details-marker{display:none}
+details.fold>summary .count{color:var(--ink-2);font-weight:500}
+details.fold>summary:hover{background:var(--sage-100);color:var(--green-900)}
+details.fold[open]>summary{background:var(--sage-100)}
+details.fold>summary::before,details.more>summary::before,details.hub>summary::before,details.grp>summary::before{content:"+";content:"+" / "";flex:0 0 auto;display:inline-flex;align-items:center;justify-content:center;width:22px;height:22px;box-sizing:border-box;border:1.5px solid var(--green-700);border-radius:2px;color:var(--green-700);font-weight:600;font-size:16px;line-height:1;margin-inline-end:10px;vertical-align:-4px;background:var(--white)}
+details.fold>summary::before{margin-inline-end:0}
+details.fold[open]>summary::before,details.more[open]>summary::before,details.hub[open]>summary::before,details.grp[open]>summary::before{content:"−";content:"−" / "";background:var(--green-700);color:var(--white)}
+details.more>summary,details.hub>summary{display:flex;align-items:center;min-height:44px;box-sizing:border-box}
+details.more>summary{min-height:48px;padding:10px 14px;background:var(--white);border:1px solid var(--rule);font-size:var(--fs-src)}
+details.more>summary:hover,details.more[open]>summary{background:var(--sage-100);color:var(--green-900)}
+details.more[open]>summary{margin-bottom:6px}
+details.grp>summary{display:flex;align-items:center;min-height:48px;box-sizing:border-box}
+details.fold>.multiple,details.fold>figure{margin-top:16px}
+details.chron-fold>p.small{margin:14px 0 4px}
+.qa.fold-sec{display:block}
+/* Home's named disclosures (owner decision B-a): the control beside the section's own kicker and heading */
+details.home-fold{margin-top:6px}
+details.home-fold>summary{display:grid;grid-template-columns:22px minmax(0,1fr);column-gap:12px;row-gap:2px;align-items:center;padding:12px 16px}
+details.home-fold>summary::before{grid-row:1 / span 2;align-self:center}
+details.home-fold>summary>.rubric,details.home-fold>summary>h2{grid-column:2;margin:0}
+details.home-fold>summary>h2{font-size:var(--fs-q);line-height:var(--lh-q)}
+details.home-fold>.fold-body{padding:16px 0 4px}
+/* the chronology as a dated list: the period as the line's key, the event as its text */
+ol.chron>li.compact{padding:14px 0}
+ol.chron .clock .v{color:var(--green-900)}
+/* phone and small tablet: the in-page index becomes one row of chips under the head — the same links, in order */
+@media (max-width:899px){
+.strip{display:flex;gap:8px;overflow-x:auto;overscroll-behavior-x:contain;scroll-snap-type:x proximity;padding:10px 0 12px;border-top:0;border-bottom:1px solid var(--rule);scrollbar-width:thin}
+.strip a{flex:0 0 auto;max-width:15rem;scroll-snap-align:start;align-items:center;gap:8px;padding:8px 12px;min-height:44px;box-sizing:border-box;background:var(--white);border:1px solid var(--rule);border-radius:2px;font-size:var(--fs-clock);line-height:1.3}
+.strip a .n{min-width:0}
+.strip a span:last-child{display:-webkit-box;-webkit-box-orient:vertical;-webkit-line-clamp:2;overflow:hidden}
+.strip a:hover{border-color:var(--green-700)}
+}
+/* tablet: bound records, measurement cards and Readings sit two to a row while the page is still one column */
+@media (min-width:600px) and (max-width:899px){
+.objs{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));column-gap:20px;border-top:0}
+.objs>.compact,.objs>.compact:first-child{border-top:1px solid var(--rule)}
+ol.objs.chron,.curated .objs,.source-locator-details .objs{display:flex;flex-direction:column}
+}
+/* the source register on a wide screen: what the source is on the left, what it is for and how to reach it on the right */
+@media (min-width:1200px){
+.src.card{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.45fr);column-gap:28px;row-gap:4px;align-items:start}
+.src.card>h4,.src.card>.kind,.src.card>.rref,.src.card>.rights{grid-column:1}
+.src.card>h4{grid-row:1}.src.card>.kind{grid-row:2}.src.card>.rref{grid-row:3}.src.card>.rights{grid-row:4}
+.src.card>.small:not(.bnd-line){grid-column:2;grid-row:1 / span 2}
+.src.card>.bnd-line{grid-column:2;grid-row:3}
+.src.card>.acts{grid-column:2;grid-row:4}
+.src.card>details.deps,.src.card>*:not(h4):not(.kind):not(.rref):not(.rights):not(.small):not(.acts):not(details){grid-column:1 / -1}
+}
+}
+/* ---- V1 Phase B (owner decisions of 9 October 2026, B-c): the hubs' governed numerals, the page-tools row under the
+   h1, the full phone menu. The numeral is the hub's own attribute (UI-NAV-HUB-0n), printed with empty alternative
+   text so a link's accessible name stays its navigation label. ---- */
+@media screen{
+[data-hub-num]::before{content:attr(data-hub-num);content:attr(data-hub-num) / "";display:inline-block;margin-inline-end:.5em;font-size:.8em;font-weight:600;line-height:1;color:var(--brass-700);font-variant-numeric:tabular-nums;letter-spacing:.02em}
+.nav a[aria-current=page][data-hub-num]::before,.nav a[data-hub-num]:hover::before{color:var(--green-700)}
+.nav .glabel[data-hub-num]::before{font-size:1em}
+/* the page's own tools, one quiet row under its title, at every width */
+.page-tools{display:flex;flex-wrap:wrap;gap:8px 10px;margin:12px 0 2px}
+.page-tools>.tbtn,.page-tools>a{display:inline-flex;align-items:center;min-height:44px;box-sizing:border-box;padding:0 14px;border:1px solid var(--sage-400);border-radius:2px;background:var(--white);color:var(--green-900);text-decoration:none;font-size:var(--fs-src);font-weight:500;line-height:1.2}
+.page-tools>.tbtn:hover,.page-tools>a:hover{background:var(--sage-100);border-color:var(--green-700)}
+.head .page-tools+.st,.head .page-tools+p.st{margin-top:14px}
+/* the full phone menu: five numbered hubs, the eight domain answers under Explore, trust, language and cite */
+.nav.open{max-height:calc(100vh - 72px);max-height:calc(100dvh - 72px);overflow-y:auto;overscroll-behavior:contain}
+.nav.open>a[data-hub-num]{font-weight:600}
+.nav.open .group.mdoms{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));column-gap:18px;padding:2px 0 8px;padding-inline-start:1.9em;border-bottom:1px solid var(--rule)}
+.nav.open .group.mdoms a{border-bottom:0;padding:9px 0;min-height:24px;font-size:.94em;color:var(--ink-2)}
+.nav.open .group.mdoms a[aria-current=page]{color:var(--green-700);text-decoration:underline;text-underline-offset:3px}
+.nav.open .mlang{display:block;margin-top:6px}
+}
+@media print{.page-tools{display:none!important}[data-hub-num]::before{content:none}}
+/* ---- V1 Phase B (owner decision B-b): the currentness strip and the Evidence Colophon ---- */
+@media screen{
+.cstrip{border-top:1px solid var(--rule);background:var(--sage-100)}
+.cstrip-in{max-width:1440px;margin:0 auto;padding:5px 16px;display:flex;flex-wrap:wrap;align-items:center;gap:2px 10px;font-size:var(--fs-clock);line-height:1.4;color:var(--ink-2)}
+.cs-line::before{content:"";display:inline-block;width:7px;height:7px;border-radius:50%;background:var(--green-700);margin-inline-end:8px;vertical-align:.08em}
+.cs-sep{display:inline-block;width:1px;height:12px;background:var(--sage-400)}
+.cstrip a{display:inline-block;padding:3px 0;min-height:24px;box-sizing:border-box;color:var(--green-900);text-decoration:underline;text-decoration-color:var(--sage-400);text-underline-offset:3px}
+.cstrip a:hover{color:var(--green-700);text-decoration-color:currentColor}
+.colophon{border-top:1px solid var(--sage-600);padding-top:18px;display:grid;gap:10px}
+.colophon h3{font-size:var(--fs-rubric);color:var(--gold-300);margin:0}
+[dir=ltr] .colophon h3{text-transform:uppercase;letter-spacing:.1em}
+.colophon .col-st{margin:0;max-width:62ch;color:var(--paper);font-size:var(--fs-src)}
+.colophon dl{margin:0;display:grid;grid-template-columns:minmax(0,1fr);gap:8px}
+.colophon dl>div{display:flex;flex-direction:column;gap:1px}
+.colophon dt{font-size:var(--fs-clock);color:var(--sage-100)}
+.colophon dd{margin:0;font-weight:600;color:var(--paper)}
+.colophon code{font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;font-size:.95em;letter-spacing:.04em;font-weight:500}
+.colophon .col-cite{margin:0}
+.colophon .col-cite a{display:inline-block;padding:3px 0;min-height:24px;box-sizing:border-box}
+}
+@media screen and (max-width:599px){.colophon{gap:8px;padding-top:14px}.colophon dl{grid-template-columns:repeat(2,minmax(0,1fr));column-gap:16px}.colophon dl>div:last-child{grid-column:1 / -1}}
+@media screen and (min-width:600px){.colophon dl{grid-template-columns:repeat(3,minmax(0,max-content));column-gap:40px}}
+@media screen and (min-width:900px){.colophon{grid-column:1 / -1;grid-template-columns:minmax(0,1.3fr) minmax(0,2fr);column-gap:48px;align-items:start}.colophon h3,.colophon .col-st{grid-column:1}.colophon dl,.colophon .col-cite{grid-column:2}.colophon dl{grid-row:1 / span 2}.cstrip-in{padding-inline:32px}}
+@media print{.cstrip,.colophon{display:none!important}}
+/* ---- V1 Phase B (owner decision B-b): a curated source's description on demand, "About this source", in the same
+   quiet disclosure as the records and Readings that use it; on a wide screen it stays open where supported ---- */
+@media screen{
+details.about{margin:4px 0 2px}
+details.about>summary{cursor:pointer;list-style:none;display:inline-block;padding:3px 0;min-height:24px;box-sizing:border-box;font-size:var(--fs-clock);font-weight:600;color:var(--ink-2)}
+details.about>summary::-webkit-details-marker{display:none}
+details.about>summary::before{content:"+ ";color:var(--green-700);font-weight:600}
+details.about[open]>summary::before{content:"− "}
+details.about>summary:hover{color:var(--green-700)}
+details.about>p.small{margin:4px 0 2px}
+}
+@media screen and (min-width:1200px){
+.src.card>details.about{grid-column:2;grid-row:1 / span 2;margin:0}
+@supports selector(::details-content){
+.src.card>details.about>summary{display:none}
+.src.card>details.about::details-content{content-visibility:visible;display:block}
+.src.card>details.about>p.small{margin:0}
+}
+}
+@media print{details.about>summary{display:none}details.about::details-content{content-visibility:visible;display:block}}
+/* ---- V1 Phase B: the search and filter tools. The query field stays in view while results scroll; the query's words
+   are marked in each result; a filter that is set looks set. No control, label or hook changes. ---- */
+@media screen{
+dialog.search{overflow:hidden}
+dialog.search .search-panel{box-sizing:border-box;max-height:calc(100vh - 2em - 6px);max-height:calc(100dvh - 2em - 6px)}
+dialog.search [data-search-results]{flex:1 1 auto;min-height:0;overflow-y:auto;overscroll-behavior:contain;margin-inline:-6px;padding-inline:6px}
+.search-results .search-hit mark,[data-search-results] .search-hit mark{background:var(--sage-100);color:inherit;box-shadow:inset 0 -2px 0 var(--brass-300);padding:0 1px;border-radius:1px}
+.search-results .search-hit:hover h4,[data-search-results] .search-hit:hover h4{color:var(--green-700);text-decoration:underline;text-decoration-color:var(--sage-400);text-underline-offset:3px}
+.search-results .search-hit:focus-visible{outline-offset:2px}
+.source-facets select:has(option:checked:not([value=""])),.search-type:has(option:checked:not([value=""])){border-color:var(--green-700);box-shadow:inset 0 0 0 1px var(--green-700);font-weight:600;color:var(--green-900)}
+.source-facets .facet:has(option:checked:not([value=""]))>span{color:var(--green-700)}
+.source-facets .facet:has(option:checked:not([value=""]))>span::before{content:"";display:inline-block;width:6px;height:6px;border-radius:50%;background:var(--green-700);margin-inline-end:6px;vertical-align:.1em}
+}
+@media (forced-colors:active){.search-hit mark{background:Mark;color:MarkText;box-shadow:none}}
 """

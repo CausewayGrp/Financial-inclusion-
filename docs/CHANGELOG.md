@@ -1,5 +1,32 @@
 # Repository Change Log
 
+## 2026-10-10 — Rights: the owner's decision recorded, and the rights escalation closed
+
+The owner's decision of 10 October 2026 is recorded in `audit/OWNER_DECISIONS_2026-10-10.md`: **CC BY 4.0 for
+CauseWay's own content stands**, as adopted on 3 October 2026, and the rights question is closed. The owner's message of
+9 October 2026 ("we have no licence / لا نملك ترخيص") was about **regulatory** licensing — CauseWay is not a licensed
+financial institution and claims no such status — and never referred to the reuse licence. The escalation
+`ESCALATE_TO_STEWARD (records disagree) — rights` in `design/ESCALATIONS.md` is closed by a dated line that cites the new
+record; the B16 disposition it questioned was right and stands, and the "Rights: Not decided" row of
+`audit/OWNER_DECISIONS_2026-10-09.md` (pull request #16) is superseded, not edited. The live statements of programme
+state now agree: `README.md`, `OPENAI_REENTRY_CHECKPOINT.md`, `authority/YFI_CURRENT_PROJECT_CONTEXT.json`
+(`reuse_licence_state`), `FINAL_OPEN_ITEMS_REGISTER.md` (dated lines under §2 and §5, no cell rewritten),
+`docs/RELEASE_RUNBOOK.md`, `site-src/deployment.json` and `handoff/SUPPORT_AND_PARTNERSHIP_READINESS.md`. "Owner decides
+the licence" appears nowhere as open. **Unchanged:** the release step "counsel confirms the CC BY 4.0 text";
+`licence_text_confirmed` and `public_downloads` stay `false`. The repository's software code stays outside the licence
+and nothing is decided about it. No Master transaction, no projection, no public page and no gate changed: `/rights/`
+and `/terms/` already print CC BY 4.0 in both languages, and no public copy claims a regulatory status CauseWay does not
+hold. The same record carries the owner's steward designation for the public naming and terminology change
+(`navigation_interaction.json` only; `presentation_priority.json` out of scope). No rights clearance, legal review or
+certification is claimed.
+
+
+## 2026-10-10 — CLAUDE.md: multi-agent skill for multi-step tasks
+
+`CLAUDE.md` now reads "For any multi-step task, load the multi-agent-m skill first." Claude-only; no change to
+`AGENTS.md`, the Master, content, the site or any gate.
+
+
 ## 2026-10-09 — the handover document, and a control for the RC-B13 direction that had none
 
 No Master change; no public page changes.
@@ -17,6 +44,66 @@ No Master change; no public page changes.
   matters most: it is the gap that let the `/data/` "used on" filter leave 44 of 158 listed sources, twelve of them
   curated cards, unreachable under every one of its values while the gate passed. The control removes the option from
   the built page and requires the gate to say a listed source is unreachable. 111 controls now.
+
+
+## 2026-10-09 — Phase B build: currentness strip, Evidence Colophon, two disclosures, better search and filters
+
+What V1B-1 and B-c unlock, in the renderer, stylesheet and runtime (`design/DESIGN_INTEGRATION_V1.md`, DL-V1-013…018).
+A currentness strip under the product bar on every page ("Sources checked up to 3 October 2026 · Edition of 3 October
+2026", the edition linking to `/corrections/` §3). An Evidence Colophon in the footer: the single-Master statement, the
+edition, the check date, the abridged SHA-256 of the Production Master the page was built from, and a link to the page's
+citation tools. `/finance/`: the 24 dated events behind one disclosure named "List of dated events", heading and intro
+first-load. `/data/`: a curated source's description under "About this source" on phones (open on wide screens where
+supported); its "Does not establish" line, reference and cite controls stay outside. Search marks the query's words in
+each result (words only, so dates and references keep their isolation), keeps the query field in view while results
+scroll, and a filter that is set looks set. A link to a target inside a closed disclosure opens it. Gates CS-01 (pages)
+and CS-02 added, with four negative controls, all caught. No governed text removed; no hook renamed.
+
+
+## 2026-10-09 — B-c: page tools under the title, the full phone menu, the hub numerals (owner decision B-c)
+
+Navigation contract (`navigation_interaction.json`: new keys `hub_numerals` and `page_tools`, `mobile_menu` rewritten,
+`utilities` placed), changed by the steward under the owner's decision B-c, and the renderer that reads it; the generator
+validates that each hub has exactly one governed numeral. Cite and Report leave the header for one page-tools row directly under each page's title, at
+every width; on an Evidence Record the report link now carries the record (`/contact/?record=<ID>`). The header keeps
+search, the language switch and the menu. Below 900 px the menu opens the full map: the five hubs with their governed
+numerals 01–05 (V1B-1), the eight domain answers under Explore by their governed names, the trust links, the language
+switch and the cite control. The numerals also mark the hubs on wide screens and the parent hub in breadcrumbs; they are
+printed from a `data-hub-num` attribute with empty alternative text, so every link keeps its navigation label as its
+accessible name. Gate RC-NAV reads the new contract keys (six negative controls added, with CS-01's). No text, link,
+ID or hook is lost: `data-cite`, `a.report` and `data-menu-cite` remain on every page.
+
+
+## 2026-10-09 — V1B-1: interface labels for design integration Phase B (owner decision B-b)
+
+One Master transaction, labels only, English and Arabic together (`audit/design_integration/`): the summary label of
+the `/finance/` chronology list, "About this source" for a `/data/` source row, the currentness strip ("Sources checked
+up to {date}") with the edition's check date, the Evidence Colophon labels and the hub numerals 01–05. No figure, unit,
+period, universe, source or record changed; no page changes until the renderer uses them. Gate CS-01 holds the check
+date equal to the date `/corrections/` section 3 states and to the edition label, in both languages. Master
+`fdb24bdfeae5` → `cf5254825da8`.
+
+
+## 2026-10-09 — V1 design integration, phase 2 (disclosure and density; not accepted)
+
+Renderer and stylesheet, no governed text or contract changed (`design/DESIGN_INTEGRATION_V1.md`, DL-V1-009…012): the
+depth figures of the domain answers and the dated chronology list on `/data/` become disclosures named by their existing
+governed labels; one disclosure pattern for every governed `details`; the phone's in-page index as a row of chips; two
+cards to a row on tablets; source rows on wide screens. Phone length (Arabic, 390 px): `/data/` 77.8 → 57.2 screens,
+`/payments/` 30.9 → 19.9, `/firms/` 20.5 → 16.7, `/people/` 16.9 → 15.3. Home and `/finance/` need a contract tier or a
+governed label first (`design/ESCALATIONS.md`, V1 phase 2). Not accepted: acceptance is the owner's.
+
+
+## 2026-10-09 — V1 design integration, phase 1 (screen stylesheet; not accepted)
+
+The owner's palette and hierarchy on the accepted D7 structure (`design/DESIGN_INTEGRATION_V1.md`, DL-V1-001…008):
+warm paper, one green, sage and brass; a one-row product bar; a deep-green colophon with the logo on a paper tile; key
+figures, numerals and calls to action in green; "does not establish" as a sage panel under a brass double rule; white
+figure plates; one filter-bar pattern. Screen only: the 288 documents are byte-identical and print is unchanged. No
+content, Master, controlled contract, `app.js`, test or gate changed; no font added. Three accessibility defects the
+full audit found are fixed in the stylesheet; the social images are regenerated. What needs copy or a contract is
+escalated (`design/ESCALATIONS.md`, V1). Not accepted: acceptance is the owner's. Public release is not declared.
+
 
 ## 2026-10-04 — Non-design v1 front door
 
