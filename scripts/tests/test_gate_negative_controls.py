@@ -159,7 +159,7 @@ CONTROLS = [
      "E2-PREC ar/people/index.html prints a Findex share or gap to two decimals: 18.35"),
     ("portability: Arabic uncertainty becomes unquantified", "ar/people/index.html",
      insert_after('<main id="main">', '<p>\u0644\u0627 \u064a\u064f\u0642\u062f\u064e\u0631 \u0643\u0645\u064a\u064b\u0627 \u0647\u0646\u0627</p>'),
-     "FC-MOE ar/people/index.html still says the Findex uncertainty is not quantified"),
+     "CO-G03 ar/people/index.html carries a retired Findex-uncertainty claim"),
     ("portability: context figure reaches Arabic Home", "ar/index.html",
      insert_after('<main id="main">', '<p>35.2% in 19 low-income economies</p>'),
      "E2-CTX ar/index.html prints the low-income context figure on Home"),
@@ -507,24 +507,21 @@ CONTROLS = [
     ("a Findex gap prints to two decimals on Home", "en/index.html",
      replace('<b class="fnum">12.9</b>', '<b class="fnum">12.91</b>'),
      "E2-PREC en/index.html prints a Findex share or gap to two decimals: 12.91"),
-    # FC-MOE (final content pass, FC-1): the derived interval of a Findex figure is printed, attributed to this
-    # resource, and carries its clustering limit. One governed field renders several times on a record page, so each
-    # control removes its target everywhere (count=0): a partial loss cannot happen from one governed cell.
-    ("a derived Findex interval loses a bound", "en/evidence/CLM-002/index.html",
-     replace("from 14.6% to 22.1% for men", "for men", 0),
-     "FC-MOE en/evidence/CLM-002/ does not print the derived bound 14.6"),
-    ("a derived Findex interval stops saying who derived it", "ar/evidence/CLM-002/index.html",
-     replace("\u064a\u0633\u062a\u062e\u0631\u062c\u0647\u0627 \u0647\u0630\u0627 \u0627\u0644\u0645\u0648\u0631\u062f",
-             "\u0646\u064f\u0634\u0650\u0631\u062a", 0),
-     "FC-MOE ar/evidence/CLM-002/ prints a derived interval without saying"),
-    ("a derived Findex interval drops its clustering limit", "en/evidence/VIS-FINDEX-GAPS/index.html",
-     replace("so clustering is not captured and the true intervals may be wider, never narrower",
-             "so the intervals are exact", 0),
-     "FC-MOE en/evidence/VIS-FINDEX-GAPS/ prints a derived interval without saying 'clustering is not captured'"),
-    ("a page says the Findex uncertainty is not quantified again", "en/evidence/CLM-002/index.html",
-     replace("The file open to researchers carries no sampling-unit identifier",
-             "The sampling uncertainty is not quantified here", 0),
-     "FC-MOE en/evidence/CLM-002/index.html still says the Findex uncertainty is not quantified"),
+    # CO-G03 (close-out CR-02, replacing FC-MOE): national Findex shares carry an interval computed by CauseWay from the
+    # World Bank's published design effect; group intervals are withdrawn; the FC-1 claims are retired. One governed field
+    # renders several times on a record page, so a removal targets every copy (count=0).
+    ("a computed Findex interval loses a bound", "en/evidence/CLM-026/index.html",
+     replace("47.0% to 55.6%", "47.0%", 0),
+     "CO-G03 en/evidence/CLM-026/ does not print the computed bound 55.6"),
+    ("a computed Findex interval stops saying who computed it", "ar/evidence/VIS-FINDEX-ACCESS-USE/index.html",
+     lambda t: t.replace("من احتساب CauseWay", "").replace("وتحتسب CauseWay", "وتُحتسب"),
+     "CO-G03 ar/evidence/VIS-FINDEX-ACCESS-USE/ prints a computed interval without saying"),
+    ("a retired FC-1 claim returns: never narrower", "en/evidence/VIS-FINDEX-GAPS/index.html",
+     sub_once(r'(<main[^>]*>)', r'\1<p>The true intervals may be wider, never narrower.</p>'),
+     "CO-G03 en/evidence/VIS-FINDEX-GAPS/index.html carries a retired Findex-uncertainty claim: 'never narrower'"),
+    ("a withdrawn group interval is printed again", "en/evidence/CLM-002/index.html",
+     sub_once(r'(<main[^>]*>)', r'\1<p>The interval runs from 3.2% to 7.7% for women.</p>'),
+     "CO-G03 en/evidence/CLM-002/index.html prints a withdrawn Findex interval: '3.2% to 7.7%'"),
     # E2-CTX (edition 2, REOPEN-INTL): the low-income context figure is never bare and never on Home.
     ("the low-income context figure loses what it averages", "en/people/index.html",
      replace("across the 19 low-income economies surveyed in it, Yemen among them, is 35.2%",

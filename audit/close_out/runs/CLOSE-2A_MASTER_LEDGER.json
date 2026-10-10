@@ -1,0 +1,1143 @@
+{
+ "transaction": "CLOSE-2A",
+ "summary": "CR-01 (mobile-money questions not asked in Yemen's Findex study), CR-02 (World Bank design effect 1.9 / margin 4.3: national intervals restated, group intervals withdrawn), CR-14 verified; register rows AR-001, AR-042, ED-034, AR-NEW-001",
+ "intervals": {
+  "account": {
+   "p": 11.9033656433415,
+   "lo": 9.1,
+   "hi": 14.7,
+   "moe": 2.8
+  },
+  "saved": {
+   "p": 21.6445272422787,
+   "lo": 18.1,
+   "hi": 25.2,
+   "moe": 3.5
+  },
+  "borrowed": {
+   "p": 51.2811034475895,
+   "lo": 47.0,
+   "hi": 55.6,
+   "moe": 4.3
+  },
+  "digital": {
+   "p": 9.33455931917802,
+   "lo": 6.8,
+   "hi": 11.8,
+   "moe": 2.5
+  }
+ },
+ "self_counts": {
+  "site_pages": 144,
+  "bilingual_sections": 237,
+  "questions": 11,
+  "evidence_objects": 110,
+  "public_claims": 60,
+  "readings": 11,
+  "measurement": 10,
+  "visuals": 36,
+  "relationships": 26,
+  "dated_events": 23,
+  "sources": 167,
+  "datasets": 211,
+  "indicators": 216,
+  "cby_monetary": 686,
+  "payments": 97,
+  "firm_finance": 84,
+  "remittances": 23
+ },
+ "input_master_sha256": "250586ce71ee56a7b73350cbc3f8f5ae5a904dffcc22d2658dff1f0f3ef3b2b4",
+ "output_master_sha256": "eaa603586d7600e639f569b85cf72a535598bc6062148c9a03bb3c43cee39150",
+ "cells_written": 121,
+ "changes": [
+  {
+   "finding": "CLOSE-2A:R33:AR-001",
+   "sheet": "03_PAGE_SECTIONS",
+   "row": 9,
+   "col": 7,
+   "field": "03_PAGE_SECTIONS!R9C7",
+   "old": "كان لدى 11.9% من البالغين بعمر 15 سنة فأكثر في المناطق التي شملها المسح حساب لدى مؤسسة مالية أو لدى مقدم خدمة أموال عبر الهاتف المحمول، وفق أحدث قياس ممثل للسكان: مسح المؤشر العالمي للشمول المالي (Global Findex) لعام 2021 في اليمن، الصادر عن البنك الدولي (نُفذ العمل الميداني من 7 نوفمبر 2022 إلى 9 يناير 2023؛ وسنة البيانات لدى البنك الدولي 2022). ولم يشمل المسح مناطق يسكنها نحو 23% من السكان. وفي المسح نفسه، كان لدى 18.3% من الرجال و5.4% من النساء حساب، بفارق 12.9 نقطة مئوية. وبصورة منفصلة، ارتفع عدد أجهزة نقاط البيع التي يُبلغ عنها البنك المركزي اليمني – عدن من 561 في مارس 2025 إلى 1,651 في يونيو 2026، ضمن نطاق إبلاغه. هذه مقاييس مختلفة: أشخاص، وفجوة داخل مسح واحد، وبنية تحتية؛ ولا يحل أي منها محل الآخر.",
+   "new": "لا تكفي نسبة واحدة لفهم الشمول المالي في اليمن؛ فكل مقياس يجيب عن سؤال مختلف. وفق مسح المؤشر العالمي للشمول المالي (Global Findex) لعام 2021 الخاص باليمن، بلغت نسبة امتلاك الحساب 11.9% بين البالغين بعمر 15 سنة فأكثر في المناطق التي شملها المسح. ويشمل تعريف البنك الدولي لهذا المؤشر الحساب لدى مؤسسة مالية واستخدام خدمة الأموال عبر الهاتف المحمول شخصيًا خلال الأشهر الـ12 السابقة، غير أن أسئلة خدمات الأموال عبر الهاتف لم تُطرح في مسح اليمن، فالنسبة هنا تعكس الحسابات لدى المؤسسات المالية. نُفذ العمل الميداني من 7 نوفمبر 2022 إلى 9 يناير 2023، وسنة البيانات لدى البنك الدولي 2022، ولم يشمل المسح مناطق يسكنها نحو 23% من السكان.\n\nوفي المسح نفسه، بلغت النسبة 18.3% بين الرجال و5.4% بين النساء، بفجوة مقدارها 12.9 نقطة مئوية. وفي بيانات إدارية منفصلة، ارتفع عدد أجهزة نقاط البيع التي يبلّغ عنها البنك المركزي اليمني – عدن من 561 في مارس 2025 إلى 1,651 في يونيو 2026، ضمن نطاق إبلاغه.\n\nالمقياس الأول يخص بالغين شملهم المسح، والثاني فجوة بين فئتين في المسح نفسه، والثالث أجهزة مسجلة في بيانات إدارية. ولا يثبت نمو عدد الأجهزة أن امتلاك الحساب أو استخدامه بين السكان قد ارتفع."
+  },
+  {
+   "finding": "CLOSE-2A:R33:AR-001",
+   "sheet": "03_PAGE_SECTIONS",
+   "row": 8,
+   "col": 5,
+   "field": "03_PAGE_SECTIONS!R8C5",
+   "old": "11.9% of adults aged 15 and over in the areas surveyed had an account at a financial institution or with a mobile-money provider, according to the latest representative population measure: the World Bank’s Global Findex 2021 survey of Yemen (fieldwork 7 November 2022 to 9 January 2023; World Bank data year 2022). Areas holding about 23% of the population were not surveyed. In the same survey, 18.3% of men and 5.4% of women had an account, a gap of 12.9 percentage points. Separately, point-of-sale (POS) terminals reported by the Central Bank of Yemen – Aden (CBY-Aden) rose from 561 in March 2025 to 1,651 in June 2026, within CBY-Aden’s reporting scope. These are different measures: people, a disparity within one survey, and infrastructure. None substitutes for another.",
+   "new": "No single figure is enough to understand financial inclusion in Yemen; each measure answers a different question. In the World Bank's Global Findex 2021 survey of Yemen, account ownership was 11.9% among adults aged 15 and over in the areas surveyed. The World Bank's definition of this indicator covers an account at a financial institution and personal use of a mobile-money service in the past 12 months, but the mobile-money questions were not asked in Yemen's survey, so the figure here reflects accounts at financial institutions. Fieldwork ran from 7 November 2022 to 9 January 2023 (World Bank data year 2022), and areas holding about 23% of the population were not surveyed.\n\nIn the same survey, the share was 18.3% among men and 5.4% among women, a gap of 12.9 percentage points. In separate administrative data, point-of-sale (POS) terminals reported by the Central Bank of Yemen – Aden (CBY-Aden) rose from 561 in March 2025 to 1,651 in June 2026, within CBY-Aden's reporting scope.\n\nThe first measure concerns surveyed adults, the second a gap between two groups in the same survey, and the third devices recorded in administrative data. Growth in the number of terminals does not show that account ownership or use among the population has risen."
+  },
+  {
+   "finding": "CLOSE-2A:R33:AR-042",
+   "sheet": "06_EVIDENCE_OBJECTS",
+   "row": 5,
+   "col": 7,
+   "field": "06_EVIDENCE_OBJECTS!R5C7",
+   "old": "تظل أحدث مشاهدة سكانية ممثلة ينشرها البنك الدولي لامتلاك الحساب في اليمن عند 11.9%. ويعرضها موقع بيانات البنك الدولي لسنة 2022، وهي مستمدة من دراسة اليمن ضمن موجة Global Findex 2021 التي نُفذت ميدانيًا من 7 نوفمبر 2022 إلى 9 يناير 2023. وتضيف نسخة Global Findex 2025 مشاهدات لعام 2024 في اقتصادات عديدة، لكنها لا تضيف مشاهدة أحدث لليمن. وللسياق، يبلغ رقم البنك الدولي لموجة المسح نفسها في الاقتصادات منخفضة الدخل الـ19 التي شملتها الموجة، ومنها اليمن، 35.2%.",
+   "new": "بحسب أحدث تقدير مسحي ينشره البنك الدولي، بلغت نسبة امتلاك الحساب 11.9% بين البالغين في المناطق التي شملها مسح اليمن، وهي تعكس الحسابات لدى المؤسسات المالية، لأن أسئلة خدمات الأموال عبر الهاتف لم تُطرح في هذا المسح. ويعرضها موقع بيانات البنك الدولي لسنة 2022، وهي مستمدة من دراسة اليمن ضمن موجة Global Findex 2021 التي نُفذت ميدانيًا من 7 نوفمبر 2022 إلى 9 يناير 2023. وتضيف نسخة Global Findex 2025 مشاهدات لعام 2024 في اقتصادات عديدة، لكنها لا تضيف مشاهدة أحدث لليمن. وللسياق، يبلغ رقم البنك الدولي لموجة المسح نفسها في الاقتصادات منخفضة الدخل الـ19 التي شملتها الموجة، ومنها اليمن، 35.2%."
+  },
+  {
+   "finding": "CLOSE-2A:R33:AR-042",
+   "sheet": "06_EVIDENCE_OBJECTS",
+   "row": 5,
+   "col": 6,
+   "field": "06_EVIDENCE_OBJECTS!R5C6",
+   "old": "The latest representative observation of account ownership in Yemen published by the World Bank remains 11.9%. World Bank Data reports it for 2022; it comes from the Yemen Global Findex 2021 study, fielded from 7 November 2022 to 9 January 2023. The Global Findex 2025 edition adds 2024 observations for many economies, but no newer Yemen observation. For context, the World Bank's figure for the same survey wave across the 19 low-income economies surveyed in it, Yemen among them, is 35.2%.",
+   "new": "The latest survey estimate published by the World Bank puts account ownership at 11.9% of adults in the areas covered by Yemen's survey; it reflects accounts at financial institutions, because the mobile-money questions were not asked in this survey. World Bank Data reports it for 2022; it comes from the Yemen Global Findex 2021 study, fielded from 7 November 2022 to 9 January 2023. The Global Findex 2025 edition adds 2024 observations for many economies, but no newer Yemen observation. For context, the World Bank's figure for the same survey wave across the 19 low-income economies surveyed in it, Yemen among them, is 35.2%."
+  },
+  {
+   "finding": "CLOSE-2A",
+   "sheet": "06_EVIDENCE_OBJECTS",
+   "row": 5,
+   "col": 8,
+   "field": "CLM-001.definition_en",
+   "old": "Account ownership as defined by Global Findex: the share of adults aged 15 and over in the areas the survey covered who report having an account, alone or with someone else, at a bank or another type of financial institution, or who report personally using a mobile-money service in the past 12 months (2021 Findex wave, fieldwork 7 November 2022 to 9 January 2023).",
+   "new": "Account ownership as defined by Global Findex: the share of adults aged 15 and over in the areas the survey covered who report having an account, alone or with someone else, at a bank or another type of financial institution, or who report personally using a mobile-money service in the past 12 months (2021 Findex wave, fieldwork 7 November 2022 to 9 January 2023). In Yemen's survey the mobile-money questions were not asked, so the figure reflects accounts at banks and other financial institutions."
+  },
+  {
+   "finding": "CLOSE-2A",
+   "sheet": "06_EVIDENCE_OBJECTS",
+   "row": 5,
+   "col": 9,
+   "field": "CLM-001.definition_ar",
+   "old": "امتلاك الحساب وفق تعريف المؤشر العالمي للشمول المالي (Global Findex): نسبة البالغين بعمر 15 سنة فأكثر في المناطق التي شملها المسح الذين أفادوا بامتلاك حساب، منفردين أو بالاشتراك مع غيرهم، لدى بنك أو نوع آخر من المؤسسات المالية، أو باستخدامهم الشخصي خدمة أموال عبر الهاتف المحمول خلال الاثني عشر شهرًا السابقة، كما قيس في موجة 2021 من مسح Findex (العمل الميداني من 7 نوفمبر 2022 إلى 9 يناير 2023).",
+   "new": "امتلاك الحساب وفق تعريف المؤشر العالمي للشمول المالي (Global Findex): نسبة البالغين بعمر 15 سنة فأكثر في المناطق التي شملها المسح الذين أفادوا بامتلاك حساب، منفردين أو بالاشتراك مع غيرهم، لدى بنك أو نوع آخر من المؤسسات المالية، أو باستخدامهم الشخصي خدمة أموال عبر الهاتف المحمول خلال الاثني عشر شهرًا السابقة، كما قيس في موجة 2021 من مسح Findex (العمل الميداني من 7 نوفمبر 2022 إلى 9 يناير 2023). ولم تُطرح أسئلة خدمات الأموال عبر الهاتف في مسح اليمن، لذلك تعكس النسبة الحسابات لدى البنوك والمؤسسات المالية الأخرى."
+  },
+  {
+   "finding": "CLOSE-2A",
+   "sheet": "06_EVIDENCE_OBJECTS",
+   "row": 5,
+   "col": 14,
+   "field": "CLM-001.method_en",
+   "old": "Weighted survey estimate. The low-income context figure, 35.2%, is the World Bank's own aggregate for the same wave and indicator; this resource reproduced it as the average of the published values of the 19 low-income economies surveyed in the wave, weighted by their adult populations.",
+   "new": "Weighted survey estimate. The low-income context figure, 35.2%, is the World Bank's own aggregate for the same wave and indicator; this resource reproduced it as the average of the published values of the 19 low-income economies surveyed in the wave, weighted by their adult populations. In Yemen's survey the mobile-money questions were not asked: in the World Bank's public data for the study, none of them has a valid answer, the World Bank's mobile-money account series has no value for Yemen, and its series for accounts at a financial institution equals its account-ownership series (11.9%)."
+  },
+  {
+   "finding": "CLOSE-2A",
+   "sheet": "06_EVIDENCE_OBJECTS",
+   "row": 5,
+   "col": 15,
+   "field": "CLM-001.method_ar",
+   "old": "تقدير مسحي موزون وفق تصميم المسح وأوزانه. ورقم السياق للاقتصادات منخفضة الدخل، 35.2%، هو التجميع الذي ينشره البنك الدولي نفسه للموجة والمؤشر ذاتيهما؛ وقد أعاد هذا المورد احتسابه متوسطًا للقيم المنشورة للاقتصادات منخفضة الدخل الـ19 التي شملتها الموجة، مرجّحًا بعدد البالغين في كل منها.",
+   "new": "تقدير مسحي موزون وفق تصميم المسح وأوزانه. ورقم السياق للاقتصادات منخفضة الدخل، 35.2%، هو التجميع الذي ينشره البنك الدولي نفسه للموجة والمؤشر ذاتيهما؛ وقد أعاد هذا المورد احتسابه متوسطًا للقيم المنشورة للاقتصادات منخفضة الدخل الـ19 التي شملتها الموجة، مرجّحًا بعدد البالغين في كل منها. ولم تُطرح أسئلة خدمات الأموال عبر الهاتف في مسح اليمن: ففي البيانات العامة التي نشرها البنك الدولي لهذه الدراسة لا توجد إجابة صالحة عن أي منها، وسلسلة البنك الدولي الخاصة بحسابات الأموال عبر الهاتف لا تتضمن أي قيمة لليمن، وسلسلته الخاصة بالحساب لدى مؤسسة مالية مساوية لسلسلة امتلاك الحساب (11.9%)."
+  },
+  {
+   "finding": "CLOSE-2A",
+   "sheet": "06_EVIDENCE_OBJECTS",
+   "row": 5,
+   "col": 16,
+   "field": "CLM-001.limitations_en",
+   "old": "It is not a 2026 rate, and it cannot be broken down or mapped by governorate. It is not the share of adults with a bank account: accounts at other financial institutions and personal use of a mobile-money service also count. | The survey frame excludes areas holding about 23% of the population, and more than a quarter of primary sampling units were replaced. The low-income figure is context, not a benchmark, a target or a ranking: it averages economies in very different conditions, includes Yemen itself and uses the income classification in the Global Findex Database 2025, while Yemen's own figure covers only the areas its survey reached.",
+   "new": "It is not a 2026 rate, and it cannot be broken down or mapped by governorate. It is not the share of adults with a bank account only: accounts at other financial institutions also count. Personal use of a mobile-money service, which the World Bank's definition also counts, was not measured in Yemen's survey. | The survey frame excludes areas holding about 23% of the population, and more than a quarter of primary sampling units were replaced. The low-income figure is context, not a benchmark, a target or a ranking: it averages economies in very different conditions, includes Yemen itself and uses the income classification in the Global Findex Database 2025, while Yemen's own figure covers only the areas its survey reached."
+  },
+  {
+   "finding": "CLOSE-2A",
+   "sheet": "06_EVIDENCE_OBJECTS",
+   "row": 5,
+   "col": 17,
+   "field": "CLM-001.limitations_ar",
+   "old": "ليست هذه النسبة معدلًا لعام 2026، ولا يمكن تجزئتها أو إسقاطها على المحافظات. وليست نسبة من يملكون حسابًا مصرفيًا فحسب، إذ تُحتسب أيضًا الحسابات لدى المؤسسات المالية الأخرى والاستخدام الشخصي لخدمة أموال عبر الهاتف المحمول. | يستبعد إطار المسح مناطق يقطنها نحو 23% من السكان، كما استُبدل أكثر من ربع وحدات المعاينة الأولية. ورقم الاقتصادات منخفضة الدخل للسياق فقط، وليس معيارًا ولا هدفًا ولا ترتيبًا: فهو متوسط لاقتصادات ذات ظروف متباينة جدًا، ويشمل اليمن نفسه، ويستند إلى تصنيف الدخل المعتمد في قاعدة بيانات Global Findex 2025، في حين يقتصر رقم اليمن على المناطق التي بلغها المسح.",
+   "new": "ليست هذه النسبة معدلًا لعام 2026، ولا يمكن تجزئتها أو إسقاطها على المحافظات. وليست نسبة من يملكون حسابًا مصرفيًا فحسب، إذ تُحتسب أيضًا الحسابات لدى المؤسسات المالية الأخرى. أما الاستخدام الشخصي لخدمة أموال عبر الهاتف المحمول، الذي يشمله تعريف البنك الدولي أيضًا، فلم يُقس في مسح اليمن. | يستبعد إطار المسح مناطق يقطنها نحو 23% من السكان، كما استُبدل أكثر من ربع وحدات المعاينة الأولية. ورقم الاقتصادات منخفضة الدخل للسياق فقط، وليس معيارًا ولا هدفًا ولا ترتيبًا: فهو متوسط لاقتصادات ذات ظروف متباينة جدًا، ويشمل اليمن نفسه، ويستند إلى تصنيف الدخل المعتمد في قاعدة بيانات Global Findex 2025، في حين يقتصر رقم اليمن على المناطق التي بلغها المسح."
+  },
+  {
+   "finding": "CLOSE-2A",
+   "sheet": "06_EVIDENCE_OBJECTS",
+   "row": 5,
+   "col": 20,
+   "field": "CLM-001.change_trigger_en",
+   "old": "This record is updated when an authoritative source is revised or replaced, a newer comparable observation becomes available, the definition, population or method changes, or the conditions for public use change.",
+   "new": "This record is updated when an authoritative source is revised or replaced, a newer comparable observation becomes available, the definition, population or method changes, or the conditions for public use change. A later survey of Yemen that asks the mobile-money questions may show a rise caused by the change of questionnaire, not by a real change in account ownership."
+  },
+  {
+   "finding": "CLOSE-2A",
+   "sheet": "06_EVIDENCE_OBJECTS",
+   "row": 5,
+   "col": 21,
+   "field": "CLM-001.change_trigger_ar",
+   "old": "يُحدَّث هذا السجل عند مراجعة المصدر المعتمد أو استبداله، أو توفر مشاهدة أحدث قابلة للمقارنة، أو تغير التعريف أو المجتمع أو الطريقة، أو تغير شروط الاستخدام العام.",
+   "new": "يُحدَّث هذا السجل عند مراجعة المصدر المعتمد أو استبداله، أو توفر مشاهدة أحدث قابلة للمقارنة، أو تغير التعريف أو المجتمع أو الطريقة، أو تغير شروط الاستخدام العام. وقد يُظهر مسح لاحق لليمن يطرح أسئلة خدمات الأموال عبر الهاتف ارتفاعًا سببه تغيّر الاستبيان، لا تغيّر فعلي في امتلاك الحساب."
+  },
+  {
+   "finding": "CLOSE-2A",
+   "sheet": "06_EVIDENCE_OBJECTS",
+   "row": 46,
+   "col": 16,
+   "field": "CLM-027.limitations_en",
+   "old": "It does not establish values for the years between waves or a smooth growth path, and 11.9% is not a 2026 rate. | The 2011 comparator counts accounts at financial institutions only, which differs from the later account definition that also counts mobile-money use; the 2014 values are rounded; the 2022 value comes from fieldwork conducted from 7 November 2022 to 9 January 2023 that excluded areas holding about 23% of the population. For women, the 2014 wave records 1.7%; the waves are not joined into a trend. The FMIIP appraisal document (May 2025) says that “two percent” of women hold a bank account, with no date and no source; that is a statement, not a measurement.",
+   "new": "It does not establish values for the years between waves or a smooth growth path, and 11.9% is not a 2026 rate. | The 2011 comparator counts accounts at financial institutions only; the later definition also counts mobile-money use, but Yemen's 2021 study did not ask the mobile-money questions, so its 11.9% also reflects accounts at financial institutions; the 2014 values are rounded; the 2022 value comes from fieldwork conducted from 7 November 2022 to 9 January 2023 that excluded areas holding about 23% of the population. For women, the 2014 wave records 1.7%; the waves are not joined into a trend. The FMIIP appraisal document (May 2025) says that “two percent” of women hold a bank account, with no date and no source; that is a statement, not a measurement."
+  },
+  {
+   "finding": "CLOSE-2A",
+   "sheet": "06_EVIDENCE_OBJECTS",
+   "row": 46,
+   "col": 17,
+   "field": "CLM-027.limitations_ar",
+   "old": "لا يثبت هذا الدليل قيمًا للسنوات الواقعة بين الموجات ولا مسار نمو سلسًا، وليست نسبة 11.9% معدلًا لعام 2026. | يقتصر مقياس 2011 على الحسابات لدى المؤسسات المالية، ويختلف بذلك عن تعريف الحساب اللاحق الذي يشمل أيضًا استخدام خدمات الأموال عبر الهاتف المحمول؛ وقيم 2014 مقرّبة؛ وتأتي قيمة 2022 من عمل ميداني نُفذ من 7 نوفمبر 2022 إلى 9 يناير 2023 واستبعد مناطق يقطنها نحو 23% من السكان. وتسجل موجة 2014 للنساء نسبة 1.7%، ولا يُربط بين الموجتين في اتجاه. وتذكر وثيقة تقييم مشروع FMIIP (مايو 2025) أن «اثنين في المئة» من النساء يملكن حسابًا مصرفيًا، من دون تاريخ ولا مصدر؛ وهذا تصريح لا قياس.",
+   "new": "لا يثبت هذا الدليل قيمًا للسنوات الواقعة بين الموجات ولا مسار نمو سلسًا، وليست نسبة 11.9% معدلًا لعام 2026. | يقتصر مقياس 2011 على الحسابات لدى المؤسسات المالية؛ ويشمل التعريف اللاحق أيضًا استخدام خدمات الأموال عبر الهاتف المحمول، لكن دراسة اليمن لعام 2021 لم تطرح أسئلة هذه الخدمات، فتعكس نسبة 11.9% فيها كذلك الحسابات لدى المؤسسات المالية؛ وقيم 2014 مقرّبة؛ وتأتي قيمة 2022 من عمل ميداني نُفذ من 7 نوفمبر 2022 إلى 9 يناير 2023 واستبعد مناطق يقطنها نحو 23% من السكان. وتسجل موجة 2014 للنساء نسبة 1.7%، ولا يُربط بين الموجتين في اتجاه. وتذكر وثيقة تقييم مشروع FMIIP (مايو 2025) أن «اثنين في المئة» من النساء يملكن حسابًا مصرفيًا، من دون تاريخ ولا مصدر؛ وهذا تصريح لا قياس."
+  },
+  {
+   "finding": "CLOSE-2A",
+   "sheet": "06_EVIDENCE_OBJECTS",
+   "row": 64,
+   "col": 6,
+   "field": "VIS-FINDEX-GAPS.summary_en",
+   "old": "In the 2021 Global Findex wave for Yemen (fieldwork 7 November 2022 to 9 January 2023; World Bank data year 2022), 11.9% of adults aged 15 and over in the areas the survey covered had an account at a financial institution or with a mobile-money provider. Within the same wave: 5.4% of women and 18.3% of men had an account, a difference of 12.9 percentage points; 6.5% of adults in the poorest 40% and 15.5% in the richest 60% by household income, a difference of 9.0 percentage points; 7.0% of adults with primary education or less and 19.5% of those with secondary education or more, a difference of 12.5 percentage points; and 5.0% of adults aged 15–24 and 16.1% of those aged 25 and over, a difference of 11.1 percentage points. The survey frame excludes areas the source says represent about 23% of the population. These figures are not a 2026 rate and cannot be mapped to governorates.",
+   "new": "In the 2021 Global Findex wave for Yemen (fieldwork 7 November 2022 to 9 January 2023; World Bank data year 2022), 11.9% of adults aged 15 and over in the areas the survey covered had an account at a financial institution (the survey did not ask the mobile-money questions). Within the same wave: 5.4% of women and 18.3% of men had an account, a difference of 12.9 percentage points; 6.5% of adults in the poorest 40% and 15.5% in the richest 60% by household income, a difference of 9.0 percentage points; 7.0% of adults with primary education or less and 19.5% of those with secondary education or more, a difference of 12.5 percentage points; and 5.0% of adults aged 15–24 and 16.1% of those aged 25 and over, a difference of 11.1 percentage points. The survey frame excludes areas the source says represent about 23% of the population. These figures are not a 2026 rate and cannot be mapped to governorates."
+  },
+  {
+   "finding": "CLOSE-2A",
+   "sheet": "06_EVIDENCE_OBJECTS",
+   "row": 64,
+   "col": 7,
+   "field": "VIS-FINDEX-GAPS.summary_ar",
+   "old": "في موجة 2021 من المؤشر العالمي للشمول المالي (Global Findex) الخاصة باليمن (العمل الميداني من 7 نوفمبر 2022 إلى 9 يناير 2023؛ سنة البيانات لدى البنك الدولي 2022)، بلغت نسبة البالغين بعمر 15 سنة فأكثر في المناطق التي شملها المسح ممن يملكون حسابًا لدى مؤسسة مالية أو لدى مقدم خدمة أموال عبر الهاتف المحمول 11.9%. وفي الموجة نفسها: 5.4% بين النساء و18.3% بين الرجال، بفارق 12.9 نقطة مئوية؛ و6.5% بين البالغين في أفقر 40% و15.5% في أغنى 60% بحسب دخل الأسرة، بفارق 9.0 نقطة مئوية؛ و7.0% بين من لم يتجاوز تعليمهم المرحلة الابتدائية و19.5% بين الحاصلين على تعليم ثانوي فأعلى، بفارق 12.5 نقطة مئوية؛ و5.0% بين الشباب بعمر 15–24 سنة و16.1% بين البالغين بعمر 25 سنة فأكثر، بفارق 11.1 نقطة مئوية. ويستبعد إطار المسح مناطق يذكر المصدر أنها تضم نحو 23% من السكان. ولا تمثل هذه الأرقام معدلًا لعام 2026 ولا يمكن إسقاطها على المحافظات.",
+   "new": "في موجة 2021 من المؤشر العالمي للشمول المالي (Global Findex) الخاصة باليمن (العمل الميداني من 7 نوفمبر 2022 إلى 9 يناير 2023؛ سنة البيانات لدى البنك الدولي 2022)، بلغت نسبة البالغين بعمر 15 سنة فأكثر في المناطق التي شملها المسح ممن يملكون حسابًا لدى مؤسسة مالية 11.9% (لم يطرح المسح أسئلة خدمات الأموال عبر الهاتف). وفي الموجة نفسها: 5.4% بين النساء و18.3% بين الرجال، بفارق 12.9 نقطة مئوية؛ و6.5% بين البالغين في أفقر 40% و15.5% في أغنى 60% بحسب دخل الأسرة، بفارق 9.0 نقطة مئوية؛ و7.0% بين من لم يتجاوز تعليمهم المرحلة الابتدائية و19.5% بين الحاصلين على تعليم ثانوي فأعلى، بفارق 12.5 نقطة مئوية؛ و5.0% بين الشباب بعمر 15–24 سنة و16.1% بين البالغين بعمر 25 سنة فأكثر، بفارق 11.1 نقطة مئوية. ويستبعد إطار المسح مناطق يذكر المصدر أنها تضم نحو 23% من السكان. ولا تمثل هذه الأرقام معدلًا لعام 2026 ولا يمكن إسقاطها على المحافظات."
+  },
+  {
+   "finding": "CLOSE-2A",
+   "sheet": "06_EVIDENCE_OBJECTS",
+   "row": 64,
+   "col": 8,
+   "field": "VIS-FINDEX-GAPS.definition_en",
+   "old": "Account ownership as defined by Global Findex (the share of adults aged 15 and over in the areas the survey covered who report having an account, alone or with someone else, at a bank or another type of financial institution, or who report personally using a mobile-money service in the past 12 months), for all adults and by sex, household income, education and age (2021 Findex wave, fieldwork 7 November 2022 to 9 January 2023).",
+   "new": "Account ownership as defined by Global Findex (the share of adults aged 15 and over in the areas the survey covered who report having an account, alone or with someone else, at a bank or another type of financial institution, or who report personally using a mobile-money service in the past 12 months), for all adults and by sex, household income, education and age (2021 Findex wave, fieldwork 7 November 2022 to 9 January 2023). In Yemen's survey the mobile-money questions were not asked, so the values reflect accounts at financial institutions."
+  },
+  {
+   "finding": "CLOSE-2A",
+   "sheet": "06_EVIDENCE_OBJECTS",
+   "row": 64,
+   "col": 9,
+   "field": "VIS-FINDEX-GAPS.definition_ar",
+   "old": "امتلاك الحساب وفق تعريف المؤشر العالمي للشمول المالي (Global Findex)، أي نسبة البالغين بعمر 15 سنة فأكثر في المناطق التي شملها المسح الذين أفادوا بامتلاك حساب، منفردين أو بالاشتراك مع غيرهم، لدى بنك أو نوع آخر من المؤسسات المالية، أو باستخدامهم الشخصي خدمة أموال عبر الهاتف المحمول خلال الاثني عشر شهرًا السابقة، لجميع البالغين وبحسب الجنس ودخل الأسرة والتعليم والعمر (موجة 2021 من مسح Findex، والعمل الميداني من 7 نوفمبر 2022 إلى 9 يناير 2023).",
+   "new": "امتلاك الحساب وفق تعريف المؤشر العالمي للشمول المالي (Global Findex)، أي نسبة البالغين بعمر 15 سنة فأكثر في المناطق التي شملها المسح الذين أفادوا بامتلاك حساب، منفردين أو بالاشتراك مع غيرهم، لدى بنك أو نوع آخر من المؤسسات المالية، أو باستخدامهم الشخصي خدمة أموال عبر الهاتف المحمول خلال الاثني عشر شهرًا السابقة، لجميع البالغين وبحسب الجنس ودخل الأسرة والتعليم والعمر (موجة 2021 من مسح Findex، والعمل الميداني من 7 نوفمبر 2022 إلى 9 يناير 2023). ولم تُطرح أسئلة خدمات الأموال عبر الهاتف في مسح اليمن، لذلك تعكس القيم الحسابات لدى المؤسسات المالية."
+  },
+  {
+   "finding": "CLOSE-2A",
+   "sheet": "06_EVIDENCE_OBJECTS",
+   "row": 64,
+   "col": 14,
+   "field": "VIS-FINDEX-GAPS.method_en",
+   "old": "Weighted estimates published by the World Bank from the Global Findex survey of Yemen (1,000 respondents; fieldwork 7 November 2022 to 9 January 2023; World Bank data year 2022) for all adults and for subgroups by sex, household income, education and age. Each of the four differences is calculated by this resource by subtracting the lower published value in a pair from the higher one. The 95% intervals shown with these values are derived by this resource from the survey's own weights (a design-based interval for a weighted share), not published by the World Bank.",
+   "new": "Weighted estimates published by the World Bank from the Global Findex survey of Yemen (1,000 respondents; fieldwork 7 November 2022 to 9 January 2023; World Bank data year 2022) for all adults and for subgroups by sex, household income, education and age. Each of the four differences is calculated by this resource by subtracting the lower published value in a pair from the higher one. The margin of error of the figure for all adults is computed by CauseWay with the World Bank's own formula and the design effect the World Bank publishes for the survey; no interval is computed for the groups or for the differences."
+  },
+  {
+   "finding": "CLOSE-2A",
+   "sheet": "06_EVIDENCE_OBJECTS",
+   "row": 64,
+   "col": 15,
+   "field": "VIS-FINDEX-GAPS.method_ar",
+   "old": "تقديرات موزونة نشرها البنك الدولي من مسح المؤشر العالمي للشمول المالي (Global Findex) في اليمن (1,000 مستجيب؛ العمل الميداني من 7 نوفمبر 2022 إلى 9 يناير 2023؛ سنة البيانات لدى البنك الدولي 2022) لجميع البالغين وللفئات الفرعية بحسب الجنس ودخل الأسرة والتعليم والعمر. ويحتسب هذا المورد كلًّا من الفروق الأربعة بطرح القيمة المنشورة الأدنى في كل زوج من القيمة الأعلى. وفترات الثقة 95% المعروضة مع هذه القيم يستخرجها هذا المورد من أوزان المسح نفسها (فترة قائمة على تصميم المسح لنسبة موزونة)، ولم ينشرها البنك الدولي.",
+   "new": "تقديرات موزونة نشرها البنك الدولي من مسح المؤشر العالمي للشمول المالي (Global Findex) في اليمن (1,000 مستجيب؛ العمل الميداني من 7 نوفمبر 2022 إلى 9 يناير 2023؛ سنة البيانات لدى البنك الدولي 2022) لجميع البالغين وللفئات الفرعية بحسب الجنس ودخل الأسرة والتعليم والعمر. ويحتسب هذا المورد كلًّا من الفروق الأربعة بطرح القيمة المنشورة الأدنى في كل زوج من القيمة الأعلى. وتحتسب CauseWay هامش الخطأ للقيمة الخاصة بجميع البالغين بمعادلة البنك الدولي نفسها وبأثر التصميم الذي ينشره البنك الدولي للمسح؛ ولا تُحتسب فترة ثقة للفئات ولا للفروق."
+  },
+  {
+   "finding": "CLOSE-2A",
+   "sheet": "06_EVIDENCE_OBJECTS",
+   "row": 64,
+   "col": 16,
+   "field": "VIS-FINDEX-GAPS.limitations_en",
+   "old": "These are values from one survey wave, not an annual series and not a 2026 rate. They cannot be mapped to governorates, they are not comparable with account counts reported by the Central Bank of Yemen – Aden (CBY-Aden), and the differences between groups do not establish their causes. | The survey frame excludes areas holding about 23% of the population, and more than a quarter of primary sampling units were replaced. The World Bank publishes no standard error or confidence interval with these values, so this resource derives them from the survey's own weights: on a sample of 1,000 respondents, and fewer in each group, the 95% margin of error is 2.2 points on the figure for all adults, between 2.2 and 3.9 points on each group's share, and between 4.0 and 4.6 points on each of the four differences. Each interval is printed with its figure on that figure's own record. The file open to researchers carries no sampling-unit identifier, so clustering is not captured and the true intervals may be wider, never narrower.",
+   "new": "These are values from one survey wave, not an annual series and not a 2026 rate. They cannot be mapped to governorates, they are not comparable with account counts reported by the Central Bank of Yemen – Aden (CBY-Aden), and the differences between groups do not establish their causes. | The survey frame excludes areas holding about 23% of the population, and more than a quarter of primary sampling units were replaced. For the whole sample of 1,000 interviews the World Bank publishes a design effect of 1.9 and a maximum margin of error of 4.3 percentage points at the 95% level, for a share of 50%. With that design effect, the margin of error on the figure for all adults (11.9%) is about 2.8 percentage points, computed by CauseWay. No interval is computed for the group shares or for the four differences: each group is a smaller sample, with a larger margin of error, and the World Bank publishes its design effect for the whole sample only. Small differences between groups should not be over-read."
+  },
+  {
+   "finding": "CLOSE-2A",
+   "sheet": "06_EVIDENCE_OBJECTS",
+   "row": 64,
+   "col": 17,
+   "field": "VIS-FINDEX-GAPS.limitations_ar",
+   "old": "هذه قيم من موجة مسحية واحدة، وليست سلسلة سنوية ولا معدلًا لعام 2026. ولا يمكن إسقاطها على المحافظات، ولا تُقارن بأعداد الحسابات التي يُبلغ عنها البنك المركزي اليمني – عدن، ولا تثبت الفروق بين الفئات أسبابها. | يستبعد إطار المسح مناطق يقطنها نحو 23% من السكان، كما استُبدل أكثر من ربع وحدات المعاينة الأولية. ولا ينشر البنك الدولي مع هذه القيم خطأً معياريًا ولا فترة ثقة، لذلك يستخرجها هذا المورد من أوزان المسح نفسها: ففي عينة من 1,000 مستجيب، وبعدد أقل في كل فئة، يبلغ هامش الخطأ عند ثقة 95% نحو 2.2 نقطة على القيمة الخاصة بجميع البالغين، وبين 2.2 و3.9 نقطة على نسبة كل فئة، وبين 4.0 و4.6 نقطة على كل فرق من الفروق الأربعة. وتُعرض كل فترة مع قيمتها في سجل تلك القيمة. ولا يحمل الملف المتاح للباحثين معرّف وحدة المعاينة، لذلك لا تُحتسب آثار التجمّع العنقودي، وقد تكون الفترات الحقيقية أوسع لا أضيق.",
+   "new": "هذه قيم من موجة مسحية واحدة، وليست سلسلة سنوية ولا معدلًا لعام 2026. ولا يمكن إسقاطها على المحافظات، ولا تُقارن بأعداد الحسابات التي يُبلغ عنها البنك المركزي اليمني – عدن، ولا تثبت الفروق بين الفئات أسبابها. | يستبعد إطار المسح مناطق يقطنها نحو 23% من السكان، كما استُبدل أكثر من ربع وحدات المعاينة الأولية. وينشر البنك الدولي للعينة كلها (1,000 مقابلة) أثر تصميم قدره 1.9 وهامش خطأ أقصى قدره 4.3 نقطة مئوية عند مستوى ثقة 95% لنسبة قدرها 50%. وبأثر التصميم هذا يبلغ هامش الخطأ في القيمة الخاصة بجميع البالغين (11.9%) نحو 2.8 نقطة مئوية، من احتساب CauseWay. ولا تُحتسب فترة ثقة لنسب الفئات ولا للفروق الأربعة: فكل فئة عينةٌ أصغر، وهامش خطئها أكبر، ولا ينشر البنك الدولي أثر التصميم إلا للعينة كلها. ولا ينبغي تحميل الفروق الصغيرة بين الفئات أكثر مما تحتمل."
+  },
+  {
+   "finding": "CLOSE-2A",
+   "sheet": "06_EVIDENCE_OBJECTS",
+   "row": 28,
+   "col": 14,
+   "field": "CLM-002.method_en",
+   "old": "Calculated by this resource as the difference between two weighted estimates published by the World Bank for the same wave: men 18.3% minus women 5.4% (World Bank series FX.OWN.TOTL.MA.ZS minus FX.OWN.TOTL.FE.ZS, data year 2022). The 95% intervals shown with these values are derived by this resource from the survey's own weights (a design-based interval for a weighted share), not published by the World Bank.",
+   "new": "Calculated by this resource as the difference between two weighted estimates published by the World Bank for the same wave: men 18.3% minus women 5.4% (World Bank series FX.OWN.TOTL.MA.ZS minus FX.OWN.TOTL.FE.ZS, data year 2022). The gap is the arithmetic difference of the two published shares; no interval or test of significance is computed here for it or for the two shares."
+  },
+  {
+   "finding": "CLOSE-2A",
+   "sheet": "06_EVIDENCE_OBJECTS",
+   "row": 28,
+   "col": 15,
+   "field": "CLM-002.method_ar",
+   "old": "احتسبه هذا المورد بوصفه الفارق بين تقديرين موزونين نشرهما البنك الدولي للموجة نفسها: 18.3% للرجال ناقص 5.4% للنساء (سلسلة البنك الدولي FX.OWN.TOTL.MA.ZS ناقص FX.OWN.TOTL.FE.ZS، سنة البيانات 2022). وفترات الثقة 95% المعروضة مع هذه القيم يستخرجها هذا المورد من أوزان المسح نفسها (فترة قائمة على تصميم المسح لنسبة موزونة)، ولم ينشرها البنك الدولي.",
+   "new": "احتسبه هذا المورد بوصفه الفارق بين تقديرين موزونين نشرهما البنك الدولي للموجة نفسها: 18.3% للرجال ناقص 5.4% للنساء (سلسلة البنك الدولي FX.OWN.TOTL.MA.ZS ناقص FX.OWN.TOTL.FE.ZS، سنة البيانات 2022). والفجوة فرق حسابي بين النسبتين المنشورتين؛ ولا تُحتسب هنا فترة ثقة، ولا يُجرى اختبار دلالة، لها ولا للنسبتين."
+  },
+  {
+   "finding": "CLOSE-2A",
+   "sheet": "06_EVIDENCE_OBJECTS",
+   "row": 28,
+   "col": 16,
+   "field": "CLM-002.limitations_en",
+   "old": "It does not establish why the gap exists, and it is not the gender gap in 2026. | The survey frame excludes areas holding about 23% of the population, and more than a quarter of primary sampling units were replaced. The World Bank publishes no standard error or confidence interval with these values, so this resource derives them from the survey's own weights: on a sample of 1,000 respondents the 95% interval runs from 3.2% to 7.7% for women and from 14.6% to 22.1% for men, and from 8.5 to 17.3 points for the gap. The file open to researchers carries no sampling-unit identifier, so clustering is not captured and the true intervals may be wider, never narrower.",
+   "new": "It does not establish why the gap exists, and it is not the gender gap in 2026. | The survey frame excludes areas holding about 23% of the population, and more than a quarter of primary sampling units were replaced. The World Bank publishes a design effect (1.9) and a maximum margin of error (4.3 percentage points at the 95% level, for a share of 50%) for the whole sample of 1,000 interviews, not for women or men separately. Each group is a smaller sample, so its margin of error is larger; no interval is computed here for the two shares or the gap, and the gap should not be read as precise to a single percentage point."
+  },
+  {
+   "finding": "CLOSE-2A",
+   "sheet": "06_EVIDENCE_OBJECTS",
+   "row": 28,
+   "col": 17,
+   "field": "CLM-002.limitations_ar",
+   "old": "لا يثبت هذا الدليل سبب الفجوة بين الرجال والنساء، ولا يمثل الفجوة القائمة في عام 2026. | يستبعد إطار المسح مناطق يقطنها نحو 23% من السكان، كما استُبدل أكثر من ربع وحدات المعاينة الأولية. ولا ينشر البنك الدولي مع هذه القيم خطأً معياريًا ولا فترة ثقة، لذلك يستخرجها هذا المورد من أوزان المسح نفسها: ففي عينة من 1,000 مستجيب تمتد فترة الثقة 95% من 3.2% إلى 7.7% للنساء، ومن 14.6% إلى 22.1% للرجال، ومن 8.5 إلى 17.3 نقطة للفجوة. ولا يحمل الملف المتاح للباحثين معرّف وحدة المعاينة، لذلك لا تُحتسب آثار التجمّع العنقودي، وقد تكون الفترات الحقيقية أوسع لا أضيق.",
+   "new": "لا يثبت هذا الدليل سبب الفجوة بين الرجال والنساء، ولا يمثل الفجوة القائمة في عام 2026. | يستبعد إطار المسح مناطق يقطنها نحو 23% من السكان، كما استُبدل أكثر من ربع وحدات المعاينة الأولية. وينشر البنك الدولي أثر تصميم (1.9) وهامش خطأ أقصى (4.3 نقطة مئوية عند مستوى ثقة 95%، لنسبة قدرها 50%) للعينة كلها البالغة 1,000 مقابلة، لا للنساء والرجال كلٍّ على حدة. وكل فئة عينة أصغر، فهامش خطئها أكبر؛ ولا تُحتسب هنا فترة ثقة للنسبتين ولا للفجوة، ولا ينبغي قراءة الفجوة على أنها دقيقة إلى حدّ النقطة المئوية الواحدة."
+  },
+  {
+   "finding": "CLOSE-2A",
+   "sheet": "06_EVIDENCE_OBJECTS",
+   "row": 40,
+   "col": 14,
+   "field": "CLM-026.method_en",
+   "old": "The variables, definitions and derivations were specified in advance, and a numeric estimate is published only after authorized respondent-level data are available, the correct survey weights are applied and the official benchmark values are reproduced. For these three measures all three conditions are met: the respondent file was supplied under the World Bank Microdata Research License, the published survey weight was used, and each measure's weighted estimate reproduces the World Bank's own published value for Yemen in 2022. The 95% interval beside each is derived by this resource from the same weights (18.4% to 24.9% for saving, 47.1% to 55.5% for borrowing, 7.4% to 11.3% for digital payments); the World Bank publishes none.",
+   "new": "The variables, definitions and derivations were specified in advance, and a numeric estimate is published only after authorized respondent-level data are available, the correct survey weights are applied and the official benchmark values are reproduced. For these three measures all three conditions are met: the respondent file was supplied under the World Bank Microdata Research License, the published survey weight was used, and each measure's weighted estimate reproduces the World Bank's own published value for Yemen in 2022. The 95% interval beside each is computed by CauseWay from the published value with the World Bank's own formula and the design effect the World Bank publishes for Yemen's survey (1.9, for a sample of 1,000 interviews; its maximum margin of error is 4.3 percentage points, for a share of 50%): 18.1% to 25.2% for saving, 47.0% to 55.6% for borrowing and 6.8% to 11.8% for digital payments."
+  },
+  {
+   "finding": "CLOSE-2A",
+   "sheet": "06_EVIDENCE_OBJECTS",
+   "row": 40,
+   "col": 15,
+   "field": "CLM-026.method_ar",
+   "old": "تُحدد المتغيرات والتعريفات وطريقة الاحتساب مسبقًا، ولا يُنشر تقدير رقمي إلا بعد توفر بيانات المستجيبين المصرح باستخدامها، وتطبيق أوزان المسح الصحيحة، وإعادة إنتاج القيم المرجعية الرسمية. ولهذه المقاييس الثلاثة استوفيت الشروط الثلاثة: فقد أُتيح ملف المستجيبين بموجب رخصة البحث للبيانات الجزئية لدى البنك الدولي، واستُخدم وزن المسح المنشور، ويعيد التقدير الموزون لكل مقياس إنتاج القيمة التي نشرها البنك الدولي نفسه لليمن في 2022. وفترة الثقة 95% بجانب كل قيمة يستخرجها هذا المورد من الأوزان نفسها (من 18.4% إلى 24.9% للادخار، ومن 47.1% إلى 55.5% للاقتراض، ومن 7.4% إلى 11.3% للمدفوعات الرقمية)؛ ولا ينشر البنك الدولي أي منها.",
+   "new": "تُحدد المتغيرات والتعريفات وطريقة الاحتساب مسبقًا، ولا يُنشر تقدير رقمي إلا بعد توفر بيانات المستجيبين المصرح باستخدامها، وتطبيق أوزان المسح الصحيحة، وإعادة إنتاج القيم المرجعية الرسمية. ولهذه المقاييس الثلاثة استوفيت الشروط الثلاثة: فقد أُتيح ملف المستجيبين بموجب رخصة البحث للبيانات الجزئية لدى البنك الدولي، واستُخدم وزن المسح المنشور، ويعيد التقدير الموزون لكل مقياس إنتاج القيمة التي نشرها البنك الدولي نفسه لليمن في 2022. وفترة الثقة 95% بجانب كل قيمة تحتسبها CauseWay من القيمة المنشورة بمعادلة البنك الدولي نفسها وبأثر التصميم الذي ينشره البنك الدولي لمسح اليمن (1.9، لعينة من 1,000 مقابلة؛ ويبلغ هامش الخطأ الأقصى 4.3 نقطة مئوية لنسبة قدرها 50%): من 18.1% إلى 25.2% للادخار، ومن 47.0% إلى 55.6% للاقتراض، ومن 6.8% إلى 11.8% للمدفوعات الرقمية."
+  },
+  {
+   "finding": "CLOSE-2A",
+   "sheet": "06_EVIDENCE_OBJECTS",
+   "row": 42,
+   "col": 6,
+   "field": "VIS-FINDEX-ACCESS-USE.summary_en",
+   "old": "In the 2021 Global Findex wave for Yemen (fieldwork 7 November 2022 to 9 January 2023), 11.9% of adults aged 15 and over in the areas the survey covered had an account. Weighted estimates of how many adults used an account, or used one digitally, have not been produced for this wave, so ownership is the only level of this ladder available; owning an account does not show that it is used. A different measure of the same wave is published: 9.3% of adults made or received a digital payment (95% interval 7.4% to 11.3%). That is not account use, because a payment can be made or received without an account.",
+   "new": "In the 2021 Global Findex wave for Yemen (fieldwork 7 November 2022 to 9 January 2023), 11.9% of adults aged 15 and over in the areas the survey covered had an account. Weighted estimates of how many adults used an account, or used one digitally, have not been produced for this wave, so ownership is the only level of this ladder available; owning an account does not show that it is used. A different measure of the same wave is published: 9.3% of adults made or received a digital payment (95% interval 6.8% to 11.8%, computed by CauseWay). That is not account use, because a payment can be made or received without an account."
+  },
+  {
+   "finding": "CLOSE-2A",
+   "sheet": "06_EVIDENCE_OBJECTS",
+   "row": 42,
+   "col": 7,
+   "field": "VIS-FINDEX-ACCESS-USE.summary_ar",
+   "old": "في موجة 2021 من المؤشر العالمي للشمول المالي (Global Findex) الخاصة باليمن (العمل الميداني من 7 نوفمبر 2022 إلى 9 يناير 2023)، بلغت نسبة البالغين بعمر 15 سنة فأكثر في المناطق التي شملها المسح ممن يملكون حسابًا 11.9%. ولم تُنتج لهذه الموجة تقديرات موزونة لنسبة من استخدموا حسابًا أو استخدموه رقميًا، لذلك يبقى امتلاك الحساب المستوى الوحيد المتاح في هذا التدرج؛ وامتلاك الحساب لا يدل على استخدامه. ويُنشر مقياس مختلف من الموجة نفسها: فقد أجرى 9.3% من البالغين مدفوعة رقمية أو تلقوها (فترة ثقة 95% من 7.4% إلى 11.3%). وهذا ليس استخدامًا للحساب، لأن المدفوعة الرقمية يمكن إجراءها أو تلقيها دون حساب.",
+   "new": "في موجة 2021 من المؤشر العالمي للشمول المالي (Global Findex) الخاصة باليمن (العمل الميداني من 7 نوفمبر 2022 إلى 9 يناير 2023)، بلغت نسبة البالغين بعمر 15 سنة فأكثر في المناطق التي شملها المسح ممن يملكون حسابًا 11.9%. ولم تُنتج لهذه الموجة تقديرات موزونة لنسبة من استخدموا حسابًا أو استخدموه رقميًا، لذلك يبقى امتلاك الحساب المستوى الوحيد المتاح في هذا التدرج؛ وامتلاك الحساب لا يدل على استخدامه. ويُنشر مقياس مختلف من الموجة نفسها: فقد أجرى 9.3% من البالغين مدفوعة رقمية أو تلقوها (فترة ثقة 95% من 6.8% إلى 11.8%، من احتساب CauseWay). وهذا ليس استخدامًا للحساب، لأن المدفوعة الرقمية يمكن إجراءها أو تلقيها دون حساب."
+  },
+  {
+   "finding": "CLOSE-2A",
+   "sheet": "06_EVIDENCE_OBJECTS",
+   "row": 42,
+   "col": 14,
+   "field": "VIS-FINDEX-ACCESS-USE.method_en",
+   "old": "Account ownership is the weighted estimate published by the World Bank for the 2021 wave (data year 2022). Account-use and digital-use estimates require weighted calculation from the respondent-level data, which has not been completed. The digital-payment share is the World Bank's own published value for the wave, reproduced from the respondent file, with its 95% interval derived from the survey weights.",
+   "new": "Account ownership is the weighted estimate published by the World Bank for the 2021 wave (data year 2022). Account-use and digital-use estimates require weighted calculation from the respondent-level data, which has not been completed. The digital-payment share is the World Bank's own published value for the wave; its 95% interval is computed by CauseWay from that value and the design effect the World Bank publishes for the survey."
+  },
+  {
+   "finding": "CLOSE-2A",
+   "sheet": "06_EVIDENCE_OBJECTS",
+   "row": 42,
+   "col": 15,
+   "field": "VIS-FINDEX-ACCESS-USE.method_ar",
+   "old": "امتلاك الحساب هو التقدير الموزون الذي نشره البنك الدولي لموجة 2021 (سنة البيانات 2022). أما تقديرات استخدام الحساب والاستخدام الرقمي فتتطلب احتسابًا موزونًا من بيانات المستجيبين، ولم يُستكمل هذا الاحتساب. ونسبة المدفوعات الرقمية هي القيمة التي نشرها البنك الدولي نفسه للموجة، وأُعيد احتسابها من ملف المستجيبين، مع استخراج فترة الثقة 95% من أوزان المسح.",
+   "new": "امتلاك الحساب هو التقدير الموزون الذي نشره البنك الدولي لموجة 2021 (سنة البيانات 2022). أما تقديرات استخدام الحساب والاستخدام الرقمي فتتطلب احتسابًا موزونًا من بيانات المستجيبين، ولم يُستكمل هذا الاحتساب. ونسبة المدفوعات الرقمية هي القيمة التي نشرها البنك الدولي نفسه للموجة، وتحتسب CauseWay فترة الثقة 95% لها من هذه القيمة ومن أثر التصميم الذي ينشره البنك الدولي للمسح."
+  },
+  {
+   "finding": "CLOSE-2A",
+   "sheet": "11_VISUAL_LIBRARY",
+   "row": 10,
+   "col": 21,
+   "field": "VIS-FINDEX-GAPS.accessible_summary_en",
+   "old": "In the 2021 Global Findex wave for Yemen (fieldwork 7 November 2022 to 9 January 2023; World Bank data year 2022), 11.9% of adults aged 15 and over in the areas the survey covered had an account at a financial institution or with a mobile-money provider. Within the same wave: 5.4% of women and 18.3% of men had an account, a difference of 12.9 percentage points; 6.5% of adults in the poorest 40% and 15.5% in the richest 60% by household income, a difference of 9.0 percentage points; 7.0% of adults with primary education or less and 19.5% of those with secondary education or more, a difference of 12.5 percentage points; and 5.0% of adults aged 15–24 and 16.1% of those aged 25 and over, a difference of 11.1 percentage points. The survey frame excludes areas the source says represent about 23% of the population. These figures are not a 2026 rate and cannot be mapped to governorates.",
+   "new": "In the 2021 Global Findex wave for Yemen (fieldwork 7 November 2022 to 9 January 2023; World Bank data year 2022), 11.9% of adults aged 15 and over in the areas the survey covered had an account at a financial institution (the survey did not ask the mobile-money questions). Within the same wave: 5.4% of women and 18.3% of men had an account, a difference of 12.9 percentage points; 6.5% of adults in the poorest 40% and 15.5% in the richest 60% by household income, a difference of 9.0 percentage points; 7.0% of adults with primary education or less and 19.5% of those with secondary education or more, a difference of 12.5 percentage points; and 5.0% of adults aged 15–24 and 16.1% of those aged 25 and over, a difference of 11.1 percentage points. The survey frame excludes areas the source says represent about 23% of the population. These figures are not a 2026 rate and cannot be mapped to governorates."
+  },
+  {
+   "finding": "CLOSE-2A",
+   "sheet": "11_VISUAL_LIBRARY",
+   "row": 10,
+   "col": 22,
+   "field": "VIS-FINDEX-GAPS.accessible_summary_ar",
+   "old": "في موجة 2021 من المؤشر العالمي للشمول المالي (Global Findex) الخاصة باليمن (العمل الميداني من 7 نوفمبر 2022 إلى 9 يناير 2023؛ سنة البيانات لدى البنك الدولي 2022)، بلغت نسبة البالغين بعمر 15 سنة فأكثر في المناطق التي شملها المسح ممن يملكون حسابًا لدى مؤسسة مالية أو لدى مقدم خدمة أموال عبر الهاتف المحمول 11.9%. وفي الموجة نفسها: 5.4% بين النساء و18.3% بين الرجال، بفارق 12.9 نقطة مئوية؛ و6.5% بين البالغين في أفقر 40% و15.5% في أغنى 60% بحسب دخل الأسرة، بفارق 9.0 نقطة مئوية؛ و7.0% بين من لم يتجاوز تعليمهم المرحلة الابتدائية و19.5% بين الحاصلين على تعليم ثانوي فأعلى، بفارق 12.5 نقطة مئوية؛ و5.0% بين الشباب بعمر 15–24 سنة و16.1% بين البالغين بعمر 25 سنة فأكثر، بفارق 11.1 نقطة مئوية. ويستبعد إطار المسح مناطق يذكر المصدر أنها تضم نحو 23% من السكان. ولا تمثل هذه الأرقام معدلًا لعام 2026 ولا يمكن إسقاطها على المحافظات.",
+   "new": "في موجة 2021 من المؤشر العالمي للشمول المالي (Global Findex) الخاصة باليمن (العمل الميداني من 7 نوفمبر 2022 إلى 9 يناير 2023؛ سنة البيانات لدى البنك الدولي 2022)، بلغت نسبة البالغين بعمر 15 سنة فأكثر في المناطق التي شملها المسح ممن يملكون حسابًا لدى مؤسسة مالية 11.9% (لم يطرح المسح أسئلة خدمات الأموال عبر الهاتف). وفي الموجة نفسها: 5.4% بين النساء و18.3% بين الرجال، بفارق 12.9 نقطة مئوية؛ و6.5% بين البالغين في أفقر 40% و15.5% في أغنى 60% بحسب دخل الأسرة، بفارق 9.0 نقطة مئوية؛ و7.0% بين من لم يتجاوز تعليمهم المرحلة الابتدائية و19.5% بين الحاصلين على تعليم ثانوي فأعلى، بفارق 12.5 نقطة مئوية؛ و5.0% بين الشباب بعمر 15–24 سنة و16.1% بين البالغين بعمر 25 سنة فأكثر، بفارق 11.1 نقطة مئوية. ويستبعد إطار المسح مناطق يذكر المصدر أنها تضم نحو 23% من السكان. ولا تمثل هذه الأرقام معدلًا لعام 2026 ولا يمكن إسقاطها على المحافظات."
+  },
+  {
+   "finding": "CLOSE-2A",
+   "sheet": "06_EVIDENCE_OBJECTS",
+   "row": 28,
+   "col": 29,
+   "field": "CLM-002.value_states",
+   "old": "[{\"t\":\"18.3%\",\"k\":\"v\",\"s\":\"READ\",\"src\":\"SRC-WB-FINDEX-AGG-2022\",\"loc\":\"api.worldbank.org/v2/country/YEM/indicator/FX.OWN.TOTL.MA.ZS (lastupdated 2026-07-13), date 2022\"},{\"t\":\"5.4%\",\"k\":\"v\",\"s\":\"READ\",\"src\":\"SRC-WB-FINDEX-AGG-2022\",\"loc\":\"api.worldbank.org/v2/country/YEM/indicator/FX.OWN.TOTL.FE.ZS (lastupdated 2026-07-13), date 2022\"},{\"t\":\"12.9\",\"k\":\"v\",\"s\":\"DERIVED\",\"src\":\"SRC-WB-FINDEX-AGG-2022\",\"loc\":\"FX.OWN.TOTL.MA.ZS minus FX.OWN.TOTL.FE.ZS, 2022\"},{\"t\":\"12.9 percentage points\",\"k\":\"v\",\"s\":\"DERIVED\",\"src\":\"SRC-WB-FINDEX-AGG-2022\",\"loc\":\"FX.OWN.TOTL.MA.ZS minus FX.OWN.TOTL.FE.ZS, 2022\"},{\"t\":\"1,000\",\"k\":\"v\",\"s\":\"READ\",\"src\":\"SRC-WB-FINDEX-001\",\"loc\":\"microdata.worldbank.org/index.php/catalog/5862/study-description > Sampling > \\\"Sample size for Yemen, Rep. is 1000.\\\"; data-dictionary page: micro_yem.dta Cases 1000\"},{\"t\":\"23%\",\"k\":\"v\",\"s\":\"READ\",\"src\":\"SRC-WB-FINDEX-001\",\"loc\":\"microdata.worldbank.org/index.php/catalog/5862/study-description > Coverage > Geographic Coverage\"},{\"t\":\"15\",\"k\":\"v\",\"s\":\"TRIVIAL\"},{\"t\":\"4%\",\"k\":\"v\",\"s\":\"TRIVIAL\"},{\"t\":\"01\",\"k\":\"v\",\"s\":\"TRIVIAL\"},{\"t\":\"07\",\"k\":\"v\",\"s\":\"TRIVIAL\"},{\"t\":\"09\",\"k\":\"v\",\"s\":\"TRIVIAL\"},{\"t\":\"11\",\"k\":\"v\",\"s\":\"TRIVIAL\"},{\"t\":\"7\",\"k\":\"v\",\"s\":\"TRIVIAL\"},{\"t\":\"9\",\"k\":\"v\",\"s\":\"TRIVIAL\"},{\"t\":\"7 November 2022\",\"k\":\"d\",\"s\":\"READ\",\"src\":\"SRC-WB-FINDEX-001\",\"loc\":\"microdata.worldbank.org/index.php/catalog/5862/study-description > Data collection > Dates of Data Collection: Start 2022-11-07\"},{\"t\":\"9 January 2023\",\"k\":\"d\",\"s\":\"READ\",\"src\":\"SRC-WB-FINDEX-001\",\"loc\":\"microdata.worldbank.org/index.php/catalog/5862/study-description > Data collection > Dates of Data Collection: End 2023-01-09\"},{\"t\":\"3.2%\",\"k\":\"v\",\"s\":\"DERIVED\",\"src\":\"SRC-WB-FINDEX-001\",\"loc\":\"CauseWay derivation FC-1 from micro_yem.dta (YEM_2022_FINDEX_v01_M, 334,544 bytes), held under the World Bank Microdata Research License and never redistributed; Hajek ratio estimator with Taylor-linearization variance on the survey weight wgt; the method, the point estimate, the interval, the base and the design effect of every figure are recorded in 25_FINDEX_BASELINE rows CW-FINDEX-MOE-2022-*\"},{\"t\":\"7.7%\",\"k\":\"v\",\"s\":\"DERIVED\",\"src\":\"SRC-WB-FINDEX-001\",\"loc\":\"CauseWay derivation FC-1 from micro_yem.dta (YEM_2022_FINDEX_v01_M, 334,544 bytes), held under the World Bank Microdata Research License and never redistributed; Hajek ratio estimator with Taylor-linearization variance on the survey weight wgt; the method, the point estimate, the interval, the base and the design effect of every figure are recorded in 25_FINDEX_BASELINE rows CW-FINDEX-MOE-2022-*\"},{\"t\":\"14.6%\",\"k\":\"v\",\"s\":\"DERIVED\",\"src\":\"SRC-WB-FINDEX-001\",\"loc\":\"CauseWay derivation FC-1 from micro_yem.dta (YEM_2022_FINDEX_v01_M, 334,544 bytes), held under the World Bank Microdata Research License and never redistributed; Hajek ratio estimator with Taylor-linearization variance on the survey weight wgt; the method, the point estimate, the interval, the base and the design effect of every figure are recorded in 25_FINDEX_BASELINE rows CW-FINDEX-MOE-2022-*\"},{\"t\":\"22.1%\",\"k\":\"v\",\"s\":\"DERIVED\",\"src\":\"SRC-WB-FINDEX-001\",\"loc\":\"CauseWay derivation FC-1 from micro_yem.dta (YEM_2022_FINDEX_v01_M, 334,544 bytes), held under the World Bank Microdata Research License and never redistributed; Hajek ratio estimator with Taylor-linearization variance on the survey weight wgt; the method, the point estimate, the interval, the base and the design effect of every figure are recorded in 25_FINDEX_BASELINE rows CW-FINDEX-MOE-2022-*\"},{\"t\":\"8.5\",\"k\":\"v\",\"s\":\"DERIVED\",\"src\":\"SRC-WB-FINDEX-001\",\"loc\":\"CauseWay derivation FC-1 from micro_yem.dta (YEM_2022_FINDEX_v01_M, 334,544 bytes), held under the World Bank Microdata Research License and never redistributed; Hajek ratio estimator with Taylor-linearization variance on the survey weight wgt; the method, the point estimate, the interval, the base and the design effect of every figure are recorded in 25_FINDEX_BASELINE rows CW-FINDEX-MOE-2022-*\"},{\"t\":\"17.3\",\"k\":\"v\",\"s\":\"DERIVED\",\"src\":\"SRC-WB-FINDEX-001\",\"loc\":\"CauseWay derivation FC-1 from micro_yem.dta (YEM_2022_FINDEX_v01_M, 334,544 bytes), held under the World Bank Microdata Research License and never redistributed; Hajek ratio estimator with Taylor-linearization variance on the survey weight wgt; the method, the point estimate, the interval, the base and the design effect of every figure are recorded in 25_FINDEX_BASELINE rows CW-FINDEX-MOE-2022-*\"},{\"t\":\"95%\",\"k\":\"v\",\"s\":\"SITE\"}]",
+   "new": "[{\"t\":\"18.3%\",\"k\":\"v\",\"s\":\"READ\",\"src\":\"SRC-WB-FINDEX-AGG-2022\",\"loc\":\"api.worldbank.org/v2/country/YEM/indicator/FX.OWN.TOTL.MA.ZS (lastupdated 2026-07-13), date 2022\"},{\"t\":\"5.4%\",\"k\":\"v\",\"s\":\"READ\",\"src\":\"SRC-WB-FINDEX-AGG-2022\",\"loc\":\"api.worldbank.org/v2/country/YEM/indicator/FX.OWN.TOTL.FE.ZS (lastupdated 2026-07-13), date 2022\"},{\"t\":\"12.9\",\"k\":\"v\",\"s\":\"DERIVED\",\"src\":\"SRC-WB-FINDEX-AGG-2022\",\"loc\":\"FX.OWN.TOTL.MA.ZS minus FX.OWN.TOTL.FE.ZS, 2022\"},{\"t\":\"12.9 percentage points\",\"k\":\"v\",\"s\":\"DERIVED\",\"src\":\"SRC-WB-FINDEX-AGG-2022\",\"loc\":\"FX.OWN.TOTL.MA.ZS minus FX.OWN.TOTL.FE.ZS, 2022\"},{\"t\":\"1,000\",\"k\":\"v\",\"s\":\"READ\",\"src\":\"SRC-WB-FINDEX-001\",\"loc\":\"microdata.worldbank.org/index.php/catalog/5862/study-description > Sampling > \\\"Sample size for Yemen, Rep. is 1000.\\\"; data-dictionary page: micro_yem.dta Cases 1000\"},{\"t\":\"23%\",\"k\":\"v\",\"s\":\"READ\",\"src\":\"SRC-WB-FINDEX-001\",\"loc\":\"microdata.worldbank.org/index.php/catalog/5862/study-description > Coverage > Geographic Coverage\"},{\"t\":\"15\",\"k\":\"v\",\"s\":\"TRIVIAL\"},{\"t\":\"4%\",\"k\":\"v\",\"s\":\"TRIVIAL\"},{\"t\":\"01\",\"k\":\"v\",\"s\":\"TRIVIAL\"},{\"t\":\"07\",\"k\":\"v\",\"s\":\"TRIVIAL\"},{\"t\":\"09\",\"k\":\"v\",\"s\":\"TRIVIAL\"},{\"t\":\"11\",\"k\":\"v\",\"s\":\"TRIVIAL\"},{\"t\":\"7\",\"k\":\"v\",\"s\":\"TRIVIAL\"},{\"t\":\"9\",\"k\":\"v\",\"s\":\"TRIVIAL\"},{\"t\":\"7 November 2022\",\"k\":\"d\",\"s\":\"READ\",\"src\":\"SRC-WB-FINDEX-001\",\"loc\":\"microdata.worldbank.org/index.php/catalog/5862/study-description > Data collection > Dates of Data Collection: Start 2022-11-07\"},{\"t\":\"9 January 2023\",\"k\":\"d\",\"s\":\"READ\",\"src\":\"SRC-WB-FINDEX-001\",\"loc\":\"microdata.worldbank.org/index.php/catalog/5862/study-description > Data collection > Dates of Data Collection: End 2023-01-09\"},{\"t\":\"95%\",\"k\":\"v\",\"s\":\"SITE\"},{\"t\":\"1.9\",\"k\":\"v\",\"s\":\"READ\",\"src\":\"SRC-WB-FINDEX-001\",\"loc\":\"The Global Findex Database 2021, Appendix A 'Survey Methodology', Table A.1, Yemen row, printed p.17 (thedocs.worldbank.org/en/doc/fe026d04da1eb78f5ce8bb5e1529d60b-0430062023/original/Findex2021-22-Methodology.pdf): 1,000 interviews; design effect 1.9; margin of error 4.3 (footnote c: maximum, at a reported 50%, sqrt(0.25/N) x 1.96 x sqrt(DE)); read 10 October 2026\"},{\"t\":\"4.3\",\"k\":\"v\",\"s\":\"READ\",\"src\":\"SRC-WB-FINDEX-001\",\"loc\":\"The Global Findex Database 2021, Appendix A 'Survey Methodology', Table A.1, Yemen row, printed p.17 (thedocs.worldbank.org/en/doc/fe026d04da1eb78f5ce8bb5e1529d60b-0430062023/original/Findex2021-22-Methodology.pdf): 1,000 interviews; design effect 1.9; margin of error 4.3 (footnote c: maximum, at a reported 50%, sqrt(0.25/N) x 1.96 x sqrt(DE)); read 10 October 2026\"},{\"t\":\"50%\",\"k\":\"v\",\"s\":\"READ\",\"src\":\"SRC-WB-FINDEX-001\",\"loc\":\"The Global Findex Database 2021, Appendix A 'Survey Methodology', Table A.1, Yemen row, printed p.17 (thedocs.worldbank.org/en/doc/fe026d04da1eb78f5ce8bb5e1529d60b-0430062023/original/Findex2021-22-Methodology.pdf): 1,000 interviews; design effect 1.9; margin of error 4.3 (footnote c: maximum, at a reported 50%, sqrt(0.25/N) x 1.96 x sqrt(DE)); read 10 October 2026\"}]"
+  },
+  {
+   "finding": "CLOSE-2A",
+   "sheet": "06_EVIDENCE_OBJECTS",
+   "row": 64,
+   "col": 29,
+   "field": "VIS-FINDEX-GAPS.value_states",
+   "old": "[{\"t\":\"11.9%\",\"k\":\"v\",\"s\":\"READ\",\"src\":\"SRC-WB-FINDEX-AGG-2022\",\"loc\":\"api.worldbank.org/v2/country/YEM/indicator/FX.OWN.TOTL.ZS (lastupdated 2026-07-13), date 2022\"},{\"t\":\"5.4%\",\"k\":\"v\",\"s\":\"READ\",\"src\":\"SRC-WB-FINDEX-AGG-2022\",\"loc\":\"api.worldbank.org/v2/country/YEM/indicator/FX.OWN.TOTL.FE.ZS (lastupdated 2026-07-13), date 2022\"},{\"t\":\"18.3%\",\"k\":\"v\",\"s\":\"READ\",\"src\":\"SRC-WB-FINDEX-AGG-2022\",\"loc\":\"api.worldbank.org/v2/country/YEM/indicator/FX.OWN.TOTL.MA.ZS (lastupdated 2026-07-13), date 2022\"},{\"t\":\"12.9\",\"k\":\"v\",\"s\":\"DERIVED\",\"src\":\"SRC-WB-FINDEX-AGG-2022\",\"loc\":\"FX.OWN.TOTL.MA.ZS minus FX.OWN.TOTL.FE.ZS, 2022\"},{\"t\":\"12.9 percentage points\",\"k\":\"v\",\"s\":\"DERIVED\",\"src\":\"SRC-WB-FINDEX-AGG-2022\",\"loc\":\"FX.OWN.TOTL.MA.ZS minus FX.OWN.TOTL.FE.ZS, 2022\"},{\"t\":\"6.5%\",\"k\":\"v\",\"s\":\"READ\",\"src\":\"SRC-WB-FINDEX-AGG-2022\",\"loc\":\"api.worldbank.org/v2/country/YEM/indicator/FX.OWN.TOTL.40.ZS (lastupdated 2026-07-13), date 2022\"},{\"t\":\"15.5%\",\"k\":\"v\",\"s\":\"READ\",\"src\":\"SRC-WB-FINDEX-AGG-2022\",\"loc\":\"api.worldbank.org/v2/country/YEM/indicator/FX.OWN.TOTL.60.ZS (lastupdated 2026-07-13), date 2022\"},{\"t\":\"9.0\",\"k\":\"v\",\"s\":\"DERIVED\",\"src\":\"SRC-WB-FINDEX-AGG-2022\",\"loc\":\"FX.OWN.TOTL.60.ZS - FX.OWN.TOTL.40.ZS, 2022\"},{\"t\":\"9.0 percentage points\",\"k\":\"v\",\"s\":\"DERIVED\",\"src\":\"SRC-WB-FINDEX-AGG-2022\",\"loc\":\"FX.OWN.TOTL.60.ZS - FX.OWN.TOTL.40.ZS, 2022\"},{\"t\":\"7.0%\",\"k\":\"v\",\"s\":\"READ\",\"src\":\"SRC-WB-FINDEX-AGG-2022\",\"loc\":\"api.worldbank.org/v2/country/YEM/indicator/FX.OWN.TOTL.PL.ZS (lastupdated 2026-07-13), date 2022\"},{\"t\":\"19.5%\",\"k\":\"v\",\"s\":\"READ\",\"src\":\"SRC-WB-FINDEX-AGG-2022\",\"loc\":\"api.worldbank.org/v2/country/YEM/indicator/FX.OWN.TOTL.SO.ZS (lastupdated 2026-07-13), date 2022\"},{\"t\":\"12.5\",\"k\":\"v\",\"s\":\"DERIVED\",\"src\":\"SRC-WB-FINDEX-AGG-2022\",\"loc\":\"FX.OWN.TOTL.SO.ZS - FX.OWN.TOTL.PL.ZS, 2022\"},{\"t\":\"12.5 percentage points\",\"k\":\"v\",\"s\":\"DERIVED\",\"src\":\"SRC-WB-FINDEX-AGG-2022\",\"loc\":\"FX.OWN.TOTL.SO.ZS - FX.OWN.TOTL.PL.ZS, 2022\"},{\"t\":\"5.0%\",\"k\":\"v\",\"s\":\"READ\",\"src\":\"SRC-WB-FINDEX-AGG-2022\",\"loc\":\"api.worldbank.org/v2/country/YEM/indicator/FX.OWN.TOTL.YG.ZS (lastupdated 2026-07-13), date 2022\"},{\"t\":\"16.1%\",\"k\":\"v\",\"s\":\"READ\",\"src\":\"SRC-WB-FINDEX-AGG-2022\",\"loc\":\"api.worldbank.org/v2/country/YEM/indicator/FX.OWN.TOTL.OL.ZS (lastupdated 2026-07-13), date 2022\"},{\"t\":\"11.1\",\"k\":\"v\",\"s\":\"DERIVED\",\"src\":\"SRC-WB-FINDEX-AGG-2022\",\"loc\":\"FX.OWN.TOTL.OL.ZS - FX.OWN.TOTL.YG.ZS, 2022\"},{\"t\":\"11.1 percentage points\",\"k\":\"v\",\"s\":\"DERIVED\",\"src\":\"SRC-WB-FINDEX-AGG-2022\",\"loc\":\"FX.OWN.TOTL.OL.ZS - FX.OWN.TOTL.YG.ZS, 2022\"},{\"t\":\"40%\",\"k\":\"v\",\"s\":\"READ\",\"src\":\"SRC-WB-FINDEX-AGG-2022\",\"loc\":\"Indicator name FX.OWN.TOTL.40.ZS: \\\"poorest 40% (% of population ages 15+)\\\"\"},{\"t\":\"60%\",\"k\":\"v\",\"s\":\"READ\",\"src\":\"SRC-WB-FINDEX-AGG-2022\",\"loc\":\"Indicator name FX.OWN.TOTL.60.ZS: \\\"richest 60%\\\"\"},{\"t\":\"24\",\"k\":\"v\",\"s\":\"READ\",\"src\":\"SRC-WB-FINDEX-AGG-2022\",\"loc\":\"Indicator name FX.OWN.TOTL.YG.ZS: \\\"young adults (% of population ages 15-24)\\\"\"},{\"t\":\"25\",\"k\":\"v\",\"s\":\"READ\",\"src\":\"SRC-WB-FINDEX-AGG-2022\",\"loc\":\"Indicator name FX.OWN.TOTL.OL.ZS: \\\"older adults (% of population ages 25+)\\\"\"},{\"t\":\"23%\",\"k\":\"v\",\"s\":\"READ\",\"src\":\"SRC-WB-FINDEX-001\",\"loc\":\"microdata.worldbank.org/index.php/catalog/5862/study-description > Coverage > Geographic Coverage\"},{\"t\":\"1,000\",\"k\":\"v\",\"s\":\"READ\",\"src\":\"SRC-WB-FINDEX-001\",\"loc\":\"microdata.worldbank.org/index.php/catalog/5862/study-description > Sampling > \\\"Sample size for Yemen, Rep. is 1000.\\\"; data-dictionary page: micro_yem.dta Cases 1000\"},{\"t\":\"23\",\"k\":\"v\",\"s\":\"TRIVIAL\"},{\"t\":\"12 m\",\"k\":\"v\",\"s\":\"TRIVIAL\"},{\"t\":\"15\",\"k\":\"v\",\"s\":\"TRIVIAL\"},{\"t\":\"0%\",\"k\":\"v\",\"s\":\"TRIVIAL\"},{\"t\":\"1%\",\"k\":\"v\",\"s\":\"TRIVIAL\"},{\"t\":\"3%\",\"k\":\"v\",\"s\":\"TRIVIAL\"},{\"t\":\"5%\",\"k\":\"v\",\"s\":\"TRIVIAL\"},{\"t\":\"01\",\"k\":\"v\",\"s\":\"TRIVIAL\"},{\"t\":\"07\",\"k\":\"v\",\"s\":\"TRIVIAL\"},{\"t\":\"09\",\"k\":\"v\",\"s\":\"TRIVIAL\"},{\"t\":\"11\",\"k\":\"v\",\"s\":\"TRIVIAL\"},{\"t\":\"7\",\"k\":\"v\",\"s\":\"TRIVIAL\"},{\"t\":\"9\",\"k\":\"v\",\"s\":\"TRIVIAL\"},{\"t\":\"7 November 2022\",\"k\":\"d\",\"s\":\"READ\",\"src\":\"SRC-WB-FINDEX-001\",\"loc\":\"microdata.worldbank.org/index.php/catalog/5862/study-description > Data collection > Dates of Data Collection: Start 2022-11-07\"},{\"t\":\"9 January 2023\",\"k\":\"d\",\"s\":\"READ\",\"src\":\"SRC-WB-FINDEX-001\",\"loc\":\"microdata.worldbank.org/index.php/catalog/5862/study-description > Data collection > Dates of Data Collection: End 2023-01-09\"},{\"t\":\"2.2\",\"k\":\"v\",\"s\":\"DERIVED\",\"src\":\"SRC-WB-FINDEX-001\",\"loc\":\"CauseWay derivation FC-1 from micro_yem.dta (YEM_2022_FINDEX_v01_M, 334,544 bytes), held under the World Bank Microdata Research License and never redistributed; Hajek ratio estimator with Taylor-linearization variance on the survey weight wgt; the method, the point estimate, the interval, the base and the design effect of every figure are recorded in 25_FINDEX_BASELINE rows CW-FINDEX-MOE-2022-*\"},{\"t\":\"3.9\",\"k\":\"v\",\"s\":\"DERIVED\",\"src\":\"SRC-WB-FINDEX-001\",\"loc\":\"CauseWay derivation FC-1 from micro_yem.dta (YEM_2022_FINDEX_v01_M, 334,544 bytes), held under the World Bank Microdata Research License and never redistributed; Hajek ratio estimator with Taylor-linearization variance on the survey weight wgt; the method, the point estimate, the interval, the base and the design effect of every figure are recorded in 25_FINDEX_BASELINE rows CW-FINDEX-MOE-2022-*\"},{\"t\":\"4.0\",\"k\":\"v\",\"s\":\"DERIVED\",\"src\":\"SRC-WB-FINDEX-001\",\"loc\":\"CauseWay derivation FC-1 from micro_yem.dta (YEM_2022_FINDEX_v01_M, 334,544 bytes), held under the World Bank Microdata Research License and never redistributed; Hajek ratio estimator with Taylor-linearization variance on the survey weight wgt; the method, the point estimate, the interval, the base and the design effect of every figure are recorded in 25_FINDEX_BASELINE rows CW-FINDEX-MOE-2022-*\"},{\"t\":\"4.6\",\"k\":\"v\",\"s\":\"DERIVED\",\"src\":\"SRC-WB-FINDEX-001\",\"loc\":\"CauseWay derivation FC-1 from micro_yem.dta (YEM_2022_FINDEX_v01_M, 334,544 bytes), held under the World Bank Microdata Research License and never redistributed; Hajek ratio estimator with Taylor-linearization variance on the survey weight wgt; the method, the point estimate, the interval, the base and the design effect of every figure are recorded in 25_FINDEX_BASELINE rows CW-FINDEX-MOE-2022-*\"},{\"t\":\"95%\",\"k\":\"v\",\"s\":\"SITE\"}]",
+   "new": "[{\"t\":\"11.9%\",\"k\":\"v\",\"s\":\"READ\",\"src\":\"SRC-WB-FINDEX-AGG-2022\",\"loc\":\"api.worldbank.org/v2/country/YEM/indicator/FX.OWN.TOTL.ZS (lastupdated 2026-07-13), date 2022\"},{\"t\":\"5.4%\",\"k\":\"v\",\"s\":\"READ\",\"src\":\"SRC-WB-FINDEX-AGG-2022\",\"loc\":\"api.worldbank.org/v2/country/YEM/indicator/FX.OWN.TOTL.FE.ZS (lastupdated 2026-07-13), date 2022\"},{\"t\":\"18.3%\",\"k\":\"v\",\"s\":\"READ\",\"src\":\"SRC-WB-FINDEX-AGG-2022\",\"loc\":\"api.worldbank.org/v2/country/YEM/indicator/FX.OWN.TOTL.MA.ZS (lastupdated 2026-07-13), date 2022\"},{\"t\":\"12.9\",\"k\":\"v\",\"s\":\"DERIVED\",\"src\":\"SRC-WB-FINDEX-AGG-2022\",\"loc\":\"FX.OWN.TOTL.MA.ZS minus FX.OWN.TOTL.FE.ZS, 2022\"},{\"t\":\"12.9 percentage points\",\"k\":\"v\",\"s\":\"DERIVED\",\"src\":\"SRC-WB-FINDEX-AGG-2022\",\"loc\":\"FX.OWN.TOTL.MA.ZS minus FX.OWN.TOTL.FE.ZS, 2022\"},{\"t\":\"6.5%\",\"k\":\"v\",\"s\":\"READ\",\"src\":\"SRC-WB-FINDEX-AGG-2022\",\"loc\":\"api.worldbank.org/v2/country/YEM/indicator/FX.OWN.TOTL.40.ZS (lastupdated 2026-07-13), date 2022\"},{\"t\":\"15.5%\",\"k\":\"v\",\"s\":\"READ\",\"src\":\"SRC-WB-FINDEX-AGG-2022\",\"loc\":\"api.worldbank.org/v2/country/YEM/indicator/FX.OWN.TOTL.60.ZS (lastupdated 2026-07-13), date 2022\"},{\"t\":\"9.0\",\"k\":\"v\",\"s\":\"DERIVED\",\"src\":\"SRC-WB-FINDEX-AGG-2022\",\"loc\":\"FX.OWN.TOTL.60.ZS - FX.OWN.TOTL.40.ZS, 2022\"},{\"t\":\"9.0 percentage points\",\"k\":\"v\",\"s\":\"DERIVED\",\"src\":\"SRC-WB-FINDEX-AGG-2022\",\"loc\":\"FX.OWN.TOTL.60.ZS - FX.OWN.TOTL.40.ZS, 2022\"},{\"t\":\"7.0%\",\"k\":\"v\",\"s\":\"READ\",\"src\":\"SRC-WB-FINDEX-AGG-2022\",\"loc\":\"api.worldbank.org/v2/country/YEM/indicator/FX.OWN.TOTL.PL.ZS (lastupdated 2026-07-13), date 2022\"},{\"t\":\"19.5%\",\"k\":\"v\",\"s\":\"READ\",\"src\":\"SRC-WB-FINDEX-AGG-2022\",\"loc\":\"api.worldbank.org/v2/country/YEM/indicator/FX.OWN.TOTL.SO.ZS (lastupdated 2026-07-13), date 2022\"},{\"t\":\"12.5\",\"k\":\"v\",\"s\":\"DERIVED\",\"src\":\"SRC-WB-FINDEX-AGG-2022\",\"loc\":\"FX.OWN.TOTL.SO.ZS - FX.OWN.TOTL.PL.ZS, 2022\"},{\"t\":\"12.5 percentage points\",\"k\":\"v\",\"s\":\"DERIVED\",\"src\":\"SRC-WB-FINDEX-AGG-2022\",\"loc\":\"FX.OWN.TOTL.SO.ZS - FX.OWN.TOTL.PL.ZS, 2022\"},{\"t\":\"5.0%\",\"k\":\"v\",\"s\":\"READ\",\"src\":\"SRC-WB-FINDEX-AGG-2022\",\"loc\":\"api.worldbank.org/v2/country/YEM/indicator/FX.OWN.TOTL.YG.ZS (lastupdated 2026-07-13), date 2022\"},{\"t\":\"16.1%\",\"k\":\"v\",\"s\":\"READ\",\"src\":\"SRC-WB-FINDEX-AGG-2022\",\"loc\":\"api.worldbank.org/v2/country/YEM/indicator/FX.OWN.TOTL.OL.ZS (lastupdated 2026-07-13), date 2022\"},{\"t\":\"11.1\",\"k\":\"v\",\"s\":\"DERIVED\",\"src\":\"SRC-WB-FINDEX-AGG-2022\",\"loc\":\"FX.OWN.TOTL.OL.ZS - FX.OWN.TOTL.YG.ZS, 2022\"},{\"t\":\"11.1 percentage points\",\"k\":\"v\",\"s\":\"DERIVED\",\"src\":\"SRC-WB-FINDEX-AGG-2022\",\"loc\":\"FX.OWN.TOTL.OL.ZS - FX.OWN.TOTL.YG.ZS, 2022\"},{\"t\":\"40%\",\"k\":\"v\",\"s\":\"READ\",\"src\":\"SRC-WB-FINDEX-AGG-2022\",\"loc\":\"Indicator name FX.OWN.TOTL.40.ZS: \\\"poorest 40% (% of population ages 15+)\\\"\"},{\"t\":\"60%\",\"k\":\"v\",\"s\":\"READ\",\"src\":\"SRC-WB-FINDEX-AGG-2022\",\"loc\":\"Indicator name FX.OWN.TOTL.60.ZS: \\\"richest 60%\\\"\"},{\"t\":\"24\",\"k\":\"v\",\"s\":\"READ\",\"src\":\"SRC-WB-FINDEX-AGG-2022\",\"loc\":\"Indicator name FX.OWN.TOTL.YG.ZS: \\\"young adults (% of population ages 15-24)\\\"\"},{\"t\":\"25\",\"k\":\"v\",\"s\":\"READ\",\"src\":\"SRC-WB-FINDEX-AGG-2022\",\"loc\":\"Indicator name FX.OWN.TOTL.OL.ZS: \\\"older adults (% of population ages 25+)\\\"\"},{\"t\":\"23%\",\"k\":\"v\",\"s\":\"READ\",\"src\":\"SRC-WB-FINDEX-001\",\"loc\":\"microdata.worldbank.org/index.php/catalog/5862/study-description > Coverage > Geographic Coverage\"},{\"t\":\"1,000\",\"k\":\"v\",\"s\":\"READ\",\"src\":\"SRC-WB-FINDEX-001\",\"loc\":\"microdata.worldbank.org/index.php/catalog/5862/study-description > Sampling > \\\"Sample size for Yemen, Rep. is 1000.\\\"; data-dictionary page: micro_yem.dta Cases 1000\"},{\"t\":\"23\",\"k\":\"v\",\"s\":\"TRIVIAL\"},{\"t\":\"12 m\",\"k\":\"v\",\"s\":\"TRIVIAL\"},{\"t\":\"15\",\"k\":\"v\",\"s\":\"TRIVIAL\"},{\"t\":\"0%\",\"k\":\"v\",\"s\":\"TRIVIAL\"},{\"t\":\"1%\",\"k\":\"v\",\"s\":\"TRIVIAL\"},{\"t\":\"3%\",\"k\":\"v\",\"s\":\"TRIVIAL\"},{\"t\":\"5%\",\"k\":\"v\",\"s\":\"TRIVIAL\"},{\"t\":\"01\",\"k\":\"v\",\"s\":\"TRIVIAL\"},{\"t\":\"07\",\"k\":\"v\",\"s\":\"TRIVIAL\"},{\"t\":\"09\",\"k\":\"v\",\"s\":\"TRIVIAL\"},{\"t\":\"11\",\"k\":\"v\",\"s\":\"TRIVIAL\"},{\"t\":\"7\",\"k\":\"v\",\"s\":\"TRIVIAL\"},{\"t\":\"9\",\"k\":\"v\",\"s\":\"TRIVIAL\"},{\"t\":\"7 November 2022\",\"k\":\"d\",\"s\":\"READ\",\"src\":\"SRC-WB-FINDEX-001\",\"loc\":\"microdata.worldbank.org/index.php/catalog/5862/study-description > Data collection > Dates of Data Collection: Start 2022-11-07\"},{\"t\":\"9 January 2023\",\"k\":\"d\",\"s\":\"READ\",\"src\":\"SRC-WB-FINDEX-001\",\"loc\":\"microdata.worldbank.org/index.php/catalog/5862/study-description > Data collection > Dates of Data Collection: End 2023-01-09\"},{\"t\":\"95%\",\"k\":\"v\",\"s\":\"SITE\"},{\"t\":\"1.9\",\"k\":\"v\",\"s\":\"READ\",\"src\":\"SRC-WB-FINDEX-001\",\"loc\":\"The Global Findex Database 2021, Appendix A 'Survey Methodology', Table A.1, Yemen row, printed p.17 (thedocs.worldbank.org/en/doc/fe026d04da1eb78f5ce8bb5e1529d60b-0430062023/original/Findex2021-22-Methodology.pdf): 1,000 interviews; design effect 1.9; margin of error 4.3 (footnote c: maximum, at a reported 50%, sqrt(0.25/N) x 1.96 x sqrt(DE)); read 10 October 2026\"},{\"t\":\"4.3\",\"k\":\"v\",\"s\":\"READ\",\"src\":\"SRC-WB-FINDEX-001\",\"loc\":\"The Global Findex Database 2021, Appendix A 'Survey Methodology', Table A.1, Yemen row, printed p.17 (thedocs.worldbank.org/en/doc/fe026d04da1eb78f5ce8bb5e1529d60b-0430062023/original/Findex2021-22-Methodology.pdf): 1,000 interviews; design effect 1.9; margin of error 4.3 (footnote c: maximum, at a reported 50%, sqrt(0.25/N) x 1.96 x sqrt(DE)); read 10 October 2026\"},{\"t\":\"50%\",\"k\":\"v\",\"s\":\"READ\",\"src\":\"SRC-WB-FINDEX-001\",\"loc\":\"The Global Findex Database 2021, Appendix A 'Survey Methodology', Table A.1, Yemen row, printed p.17 (thedocs.worldbank.org/en/doc/fe026d04da1eb78f5ce8bb5e1529d60b-0430062023/original/Findex2021-22-Methodology.pdf): 1,000 interviews; design effect 1.9; margin of error 4.3 (footnote c: maximum, at a reported 50%, sqrt(0.25/N) x 1.96 x sqrt(DE)); read 10 October 2026\"},{\"t\":\"2.8\",\"k\":\"v\",\"s\":\"DERIVED\",\"src\":\"SRC-WB-FINDEX-AGG-2022\",\"loc\":\"CauseWay computation, close-out CR-02 (10 October 2026): the World Bank's published unrounded value p (api.worldbank.org/v2, source 28) +/- 1.96 x sqrt(1.9) x sqrt(p(1-p)/1,000), the World Bank's own margin-of-error formula with its published design effect for the survey (Findex 2021 Appendix A, Table A.1, footnote c); 25_FINDEX_BASELINE row CW-FINDEX-MOE-2022-001; no respondent-level data used\"}]"
+  },
+  {
+   "finding": "CLOSE-2A",
+   "sheet": "06_EVIDENCE_OBJECTS",
+   "row": 40,
+   "col": 29,
+   "field": "CLM-026.value_states",
+   "old": "[{\"t\":\"32\",\"k\":\"v\",\"s\":\"SITE\"},{\"t\":\"21.6%\",\"k\":\"v\",\"s\":\"READ\",\"src\":\"SRC-WB-FINDEX-AGG-2022\",\"loc\":\"api.worldbank.org/v2/country/YEM/indicator/save.any.t.d?source=28 (Global Financial Inclusion), date 2022, read 4 October 2026\"},{\"t\":\"51.3%\",\"k\":\"v\",\"s\":\"READ\",\"src\":\"SRC-WB-FINDEX-AGG-2022\",\"loc\":\"api.worldbank.org/v2/country/YEM/indicator/borrow.any.t.d?source=28 (Global Financial Inclusion), date 2022, read 4 October 2026\"},{\"t\":\"9.3%\",\"k\":\"v\",\"s\":\"READ\",\"src\":\"SRC-WB-FINDEX-AGG-2022\",\"loc\":\"api.worldbank.org/v2/country/YEM/indicator/g20.any?source=28 (Global Financial Inclusion), date 2022, read 4 October 2026\"},{\"t\":\"18.4%\",\"k\":\"v\",\"s\":\"DERIVED\",\"src\":\"SRC-WB-FINDEX-001\",\"loc\":\"CauseWay derivation FC-1 from the Global Findex 2021 Yemen respondent file; method, base and design effect in 25_FINDEX_BASELINE row CW-FINDEX-MOE-2022-015\"},{\"t\":\"24.9%\",\"k\":\"v\",\"s\":\"DERIVED\",\"src\":\"SRC-WB-FINDEX-001\",\"loc\":\"CauseWay derivation FC-1 from the Global Findex 2021 Yemen respondent file; method, base and design effect in 25_FINDEX_BASELINE row CW-FINDEX-MOE-2022-015\"},{\"t\":\"47.1%\",\"k\":\"v\",\"s\":\"DERIVED\",\"src\":\"SRC-WB-FINDEX-001\",\"loc\":\"CauseWay derivation FC-1 from the Global Findex 2021 Yemen respondent file; method, base and design effect in 25_FINDEX_BASELINE row CW-FINDEX-MOE-2022-016\"},{\"t\":\"55.5%\",\"k\":\"v\",\"s\":\"DERIVED\",\"src\":\"SRC-WB-FINDEX-001\",\"loc\":\"CauseWay derivation FC-1 from the Global Findex 2021 Yemen respondent file; method, base and design effect in 25_FINDEX_BASELINE row CW-FINDEX-MOE-2022-016\"},{\"t\":\"7.4%\",\"k\":\"v\",\"s\":\"DERIVED\",\"src\":\"SRC-WB-FINDEX-001\",\"loc\":\"CauseWay derivation FC-1 from the Global Findex 2021 Yemen respondent file; method, base and design effect in 25_FINDEX_BASELINE row CW-FINDEX-MOE-2022-017\"},{\"t\":\"11.3%\",\"k\":\"v\",\"s\":\"DERIVED\",\"src\":\"SRC-WB-FINDEX-001\",\"loc\":\"CauseWay derivation FC-1 from the Global Findex 2021 Yemen respondent file; method, base and design effect in 25_FINDEX_BASELINE row CW-FINDEX-MOE-2022-017\"},{\"t\":\"95%\",\"k\":\"v\",\"s\":\"SITE\"},{\"t\":\"15\",\"k\":\"v\",\"s\":\"TRIVIAL\"},{\"t\":\"7 November 2022\",\"k\":\"d\",\"s\":\"READ\",\"src\":\"SRC-WB-FINDEX-001\",\"loc\":\"microdata.worldbank.org/index.php/catalog/5862/study-description > Data collection > Dates of Data Collection: Start 2022-11-07\"},{\"t\":\"9 January 2023\",\"k\":\"d\",\"s\":\"READ\",\"src\":\"SRC-WB-FINDEX-001\",\"loc\":\"microdata.worldbank.org/index.php/catalog/5862/study-description > Data collection > Dates of Data Collection: End 2023-01-09\"}]",
+   "new": "[{\"t\":\"32\",\"k\":\"v\",\"s\":\"SITE\"},{\"t\":\"21.6%\",\"k\":\"v\",\"s\":\"READ\",\"src\":\"SRC-WB-FINDEX-AGG-2022\",\"loc\":\"api.worldbank.org/v2/country/YEM/indicator/save.any.t.d?source=28 (Global Financial Inclusion), date 2022, read 4 October 2026\"},{\"t\":\"51.3%\",\"k\":\"v\",\"s\":\"READ\",\"src\":\"SRC-WB-FINDEX-AGG-2022\",\"loc\":\"api.worldbank.org/v2/country/YEM/indicator/borrow.any.t.d?source=28 (Global Financial Inclusion), date 2022, read 4 October 2026\"},{\"t\":\"9.3%\",\"k\":\"v\",\"s\":\"READ\",\"src\":\"SRC-WB-FINDEX-AGG-2022\",\"loc\":\"api.worldbank.org/v2/country/YEM/indicator/g20.any?source=28 (Global Financial Inclusion), date 2022, read 4 October 2026\"},{\"t\":\"95%\",\"k\":\"v\",\"s\":\"SITE\"},{\"t\":\"15\",\"k\":\"v\",\"s\":\"TRIVIAL\"},{\"t\":\"7 November 2022\",\"k\":\"d\",\"s\":\"READ\",\"src\":\"SRC-WB-FINDEX-001\",\"loc\":\"microdata.worldbank.org/index.php/catalog/5862/study-description > Data collection > Dates of Data Collection: Start 2022-11-07\"},{\"t\":\"9 January 2023\",\"k\":\"d\",\"s\":\"READ\",\"src\":\"SRC-WB-FINDEX-001\",\"loc\":\"microdata.worldbank.org/index.php/catalog/5862/study-description > Data collection > Dates of Data Collection: End 2023-01-09\"},{\"t\":\"18.1%\",\"k\":\"v\",\"s\":\"DERIVED\",\"src\":\"SRC-WB-FINDEX-AGG-2022\",\"loc\":\"CauseWay computation, close-out CR-02 (10 October 2026): the World Bank's published unrounded value p (api.worldbank.org/v2, source 28) +/- 1.96 x sqrt(1.9) x sqrt(p(1-p)/1,000), the World Bank's own margin-of-error formula with its published design effect for the survey (Findex 2021 Appendix A, Table A.1, footnote c); 25_FINDEX_BASELINE row CW-FINDEX-MOE-2022-015; no respondent-level data used\"},{\"t\":\"25.2%\",\"k\":\"v\",\"s\":\"DERIVED\",\"src\":\"SRC-WB-FINDEX-AGG-2022\",\"loc\":\"CauseWay computation, close-out CR-02 (10 October 2026): the World Bank's published unrounded value p (api.worldbank.org/v2, source 28) +/- 1.96 x sqrt(1.9) x sqrt(p(1-p)/1,000), the World Bank's own margin-of-error formula with its published design effect for the survey (Findex 2021 Appendix A, Table A.1, footnote c); 25_FINDEX_BASELINE row CW-FINDEX-MOE-2022-015; no respondent-level data used\"},{\"t\":\"47.0%\",\"k\":\"v\",\"s\":\"DERIVED\",\"src\":\"SRC-WB-FINDEX-AGG-2022\",\"loc\":\"CauseWay computation, close-out CR-02 (10 October 2026): the World Bank's published unrounded value p (api.worldbank.org/v2, source 28) +/- 1.96 x sqrt(1.9) x sqrt(p(1-p)/1,000), the World Bank's own margin-of-error formula with its published design effect for the survey (Findex 2021 Appendix A, Table A.1, footnote c); 25_FINDEX_BASELINE row CW-FINDEX-MOE-2022-016; no respondent-level data used\"},{\"t\":\"55.6%\",\"k\":\"v\",\"s\":\"DERIVED\",\"src\":\"SRC-WB-FINDEX-AGG-2022\",\"loc\":\"CauseWay computation, close-out CR-02 (10 October 2026): the World Bank's published unrounded value p (api.worldbank.org/v2, source 28) +/- 1.96 x sqrt(1.9) x sqrt(p(1-p)/1,000), the World Bank's own margin-of-error formula with its published design effect for the survey (Findex 2021 Appendix A, Table A.1, footnote c); 25_FINDEX_BASELINE row CW-FINDEX-MOE-2022-016; no respondent-level data used\"},{\"t\":\"6.8%\",\"k\":\"v\",\"s\":\"DERIVED\",\"src\":\"SRC-WB-FINDEX-AGG-2022\",\"loc\":\"CauseWay computation, close-out CR-02 (10 October 2026): the World Bank's published unrounded value p (api.worldbank.org/v2, source 28) +/- 1.96 x sqrt(1.9) x sqrt(p(1-p)/1,000), the World Bank's own margin-of-error formula with its published design effect for the survey (Findex 2021 Appendix A, Table A.1, footnote c); 25_FINDEX_BASELINE row CW-FINDEX-MOE-2022-017; no respondent-level data used\"},{\"t\":\"11.8%\",\"k\":\"v\",\"s\":\"DERIVED\",\"src\":\"SRC-WB-FINDEX-AGG-2022\",\"loc\":\"CauseWay computation, close-out CR-02 (10 October 2026): the World Bank's published unrounded value p (api.worldbank.org/v2, source 28) +/- 1.96 x sqrt(1.9) x sqrt(p(1-p)/1,000), the World Bank's own margin-of-error formula with its published design effect for the survey (Findex 2021 Appendix A, Table A.1, footnote c); 25_FINDEX_BASELINE row CW-FINDEX-MOE-2022-017; no respondent-level data used\"},{\"t\":\"1.9\",\"k\":\"v\",\"s\":\"READ\",\"src\":\"SRC-WB-FINDEX-001\",\"loc\":\"The Global Findex Database 2021, Appendix A 'Survey Methodology', Table A.1, Yemen row, printed p.17 (thedocs.worldbank.org/en/doc/fe026d04da1eb78f5ce8bb5e1529d60b-0430062023/original/Findex2021-22-Methodology.pdf): 1,000 interviews; design effect 1.9; margin of error 4.3 (footnote c: maximum, at a reported 50%, sqrt(0.25/N) x 1.96 x sqrt(DE)); read 10 October 2026\"},{\"t\":\"4.3\",\"k\":\"v\",\"s\":\"READ\",\"src\":\"SRC-WB-FINDEX-001\",\"loc\":\"The Global Findex Database 2021, Appendix A 'Survey Methodology', Table A.1, Yemen row, printed p.17 (thedocs.worldbank.org/en/doc/fe026d04da1eb78f5ce8bb5e1529d60b-0430062023/original/Findex2021-22-Methodology.pdf): 1,000 interviews; design effect 1.9; margin of error 4.3 (footnote c: maximum, at a reported 50%, sqrt(0.25/N) x 1.96 x sqrt(DE)); read 10 October 2026\"},{\"t\":\"50%\",\"k\":\"v\",\"s\":\"READ\",\"src\":\"SRC-WB-FINDEX-001\",\"loc\":\"The Global Findex Database 2021, Appendix A 'Survey Methodology', Table A.1, Yemen row, printed p.17 (thedocs.worldbank.org/en/doc/fe026d04da1eb78f5ce8bb5e1529d60b-0430062023/original/Findex2021-22-Methodology.pdf): 1,000 interviews; design effect 1.9; margin of error 4.3 (footnote c: maximum, at a reported 50%, sqrt(0.25/N) x 1.96 x sqrt(DE)); read 10 October 2026\"},{\"t\":\"1,000\",\"k\":\"v\",\"s\":\"READ\",\"src\":\"SRC-WB-FINDEX-001\",\"loc\":\"The Global Findex Database 2021, Appendix A 'Survey Methodology', Table A.1, Yemen row, printed p.17 (thedocs.worldbank.org/en/doc/fe026d04da1eb78f5ce8bb5e1529d60b-0430062023/original/Findex2021-22-Methodology.pdf): 1,000 interviews; design effect 1.9; margin of error 4.3 (footnote c: maximum, at a reported 50%, sqrt(0.25/N) x 1.96 x sqrt(DE)); read 10 October 2026\"}]"
+  },
+  {
+   "finding": "CLOSE-2A",
+   "sheet": "06_EVIDENCE_OBJECTS",
+   "row": 42,
+   "col": 29,
+   "field": "VIS-FINDEX-ACCESS-USE.value_states",
+   "old": "[{\"t\":\"11.9%\",\"k\":\"v\",\"s\":\"READ\",\"src\":\"SRC-WB-FINDEX-AGG-2022\",\"loc\":\"api.worldbank.org/v2/country/YEM/indicator/FX.OWN.TOTL.ZS (lastupdated 2026-07-13), date 2022\"},{\"t\":\"23%\",\"k\":\"v\",\"s\":\"READ\",\"src\":\"SRC-WB-FINDEX-001\",\"loc\":\"microdata.worldbank.org/index.php/catalog/5862/study-description > Coverage > Geographic Coverage\"},{\"t\":\"15\",\"k\":\"v\",\"s\":\"TRIVIAL\"},{\"t\":\"01\",\"k\":\"v\",\"s\":\"TRIVIAL\"},{\"t\":\"11\",\"k\":\"v\",\"s\":\"TRIVIAL\"},{\"t\":\"7\",\"k\":\"v\",\"s\":\"TRIVIAL\"},{\"t\":\"9\",\"k\":\"v\",\"s\":\"TRIVIAL\"},{\"t\":\"7 November 2022\",\"k\":\"d\",\"s\":\"READ\",\"src\":\"SRC-WB-FINDEX-001\",\"loc\":\"microdata.worldbank.org/index.php/catalog/5862/study-description > Data collection > Dates of Data Collection: Start 2022-11-07\"},{\"t\":\"9 January 2023\",\"k\":\"d\",\"s\":\"READ\",\"src\":\"SRC-WB-FINDEX-001\",\"loc\":\"microdata.worldbank.org/index.php/catalog/5862/study-description > Data collection > Dates of Data Collection: End 2023-01-09\"},{\"t\":\"9.3%\",\"k\":\"v\",\"s\":\"READ\",\"src\":\"SRC-WB-FINDEX-AGG-2022\",\"loc\":\"api.worldbank.org/v2/country/YEM/indicator/g20.any?source=28 (Global Financial Inclusion), date 2022, read 4 October 2026\"},{\"t\":\"7.4%\",\"k\":\"v\",\"s\":\"DERIVED\",\"src\":\"SRC-WB-FINDEX-001\",\"loc\":\"CauseWay derivation FC-1 from the Global Findex 2021 Yemen respondent file; method, base and design effect in 25_FINDEX_BASELINE row CW-FINDEX-MOE-2022-017\"},{\"t\":\"11.3%\",\"k\":\"v\",\"s\":\"DERIVED\",\"src\":\"SRC-WB-FINDEX-001\",\"loc\":\"CauseWay derivation FC-1 from the Global Findex 2021 Yemen respondent file; method, base and design effect in 25_FINDEX_BASELINE row CW-FINDEX-MOE-2022-017\"},{\"t\":\"95%\",\"k\":\"v\",\"s\":\"SITE\"}]",
+   "new": "[{\"t\":\"11.9%\",\"k\":\"v\",\"s\":\"READ\",\"src\":\"SRC-WB-FINDEX-AGG-2022\",\"loc\":\"api.worldbank.org/v2/country/YEM/indicator/FX.OWN.TOTL.ZS (lastupdated 2026-07-13), date 2022\"},{\"t\":\"23%\",\"k\":\"v\",\"s\":\"READ\",\"src\":\"SRC-WB-FINDEX-001\",\"loc\":\"microdata.worldbank.org/index.php/catalog/5862/study-description > Coverage > Geographic Coverage\"},{\"t\":\"15\",\"k\":\"v\",\"s\":\"TRIVIAL\"},{\"t\":\"01\",\"k\":\"v\",\"s\":\"TRIVIAL\"},{\"t\":\"11\",\"k\":\"v\",\"s\":\"TRIVIAL\"},{\"t\":\"7\",\"k\":\"v\",\"s\":\"TRIVIAL\"},{\"t\":\"9\",\"k\":\"v\",\"s\":\"TRIVIAL\"},{\"t\":\"7 November 2022\",\"k\":\"d\",\"s\":\"READ\",\"src\":\"SRC-WB-FINDEX-001\",\"loc\":\"microdata.worldbank.org/index.php/catalog/5862/study-description > Data collection > Dates of Data Collection: Start 2022-11-07\"},{\"t\":\"9 January 2023\",\"k\":\"d\",\"s\":\"READ\",\"src\":\"SRC-WB-FINDEX-001\",\"loc\":\"microdata.worldbank.org/index.php/catalog/5862/study-description > Data collection > Dates of Data Collection: End 2023-01-09\"},{\"t\":\"9.3%\",\"k\":\"v\",\"s\":\"READ\",\"src\":\"SRC-WB-FINDEX-AGG-2022\",\"loc\":\"api.worldbank.org/v2/country/YEM/indicator/g20.any?source=28 (Global Financial Inclusion), date 2022, read 4 October 2026\"},{\"t\":\"95%\",\"k\":\"v\",\"s\":\"SITE\"},{\"t\":\"6.8%\",\"k\":\"v\",\"s\":\"DERIVED\",\"src\":\"SRC-WB-FINDEX-AGG-2022\",\"loc\":\"CauseWay computation, close-out CR-02 (10 October 2026): the World Bank's published unrounded value p (api.worldbank.org/v2, source 28) +/- 1.96 x sqrt(1.9) x sqrt(p(1-p)/1,000), the World Bank's own margin-of-error formula with its published design effect for the survey (Findex 2021 Appendix A, Table A.1, footnote c); 25_FINDEX_BASELINE row CW-FINDEX-MOE-2022-017; no respondent-level data used\"},{\"t\":\"11.8%\",\"k\":\"v\",\"s\":\"DERIVED\",\"src\":\"SRC-WB-FINDEX-AGG-2022\",\"loc\":\"CauseWay computation, close-out CR-02 (10 October 2026): the World Bank's published unrounded value p (api.worldbank.org/v2, source 28) +/- 1.96 x sqrt(1.9) x sqrt(p(1-p)/1,000), the World Bank's own margin-of-error formula with its published design effect for the survey (Findex 2021 Appendix A, Table A.1, footnote c); 25_FINDEX_BASELINE row CW-FINDEX-MOE-2022-017; no respondent-level data used\"}]"
+  },
+  {
+   "finding": "CLOSE-2A",
+   "sheet": "03_PAGE_SECTIONS",
+   "row": 198,
+   "col": 5,
+   "field": "/people/#s6.body_en",
+   "old": "The same 2021 wave measures more than account ownership. In it, 21.6% of adults reported saving any money in the past year (95% interval 18.4% to 24.9%), 51.3% reported borrowing any money (47.1% to 55.5%) and 9.3% reported making or receiving a digital payment (7.4% to 11.3%). Borrowing is far more common than saving, and both are far more common than having an account — borrowing here includes borrowing from family or friends, which needs no provider at all. The intervals are derived by this resource from the survey's own weights; the World Bank publishes none. For the sources people borrowed from and the methods they saved by, the latest values this resource holds are older, from the World Bank's 2014 country profile: 51.7% of adults borrowed from family or friends, 15.0% from a private informal lender and 0.4% from a financial institution, while 0.9% saved at a financial institution and 4.5% through a savings club or a person outside the family. Those categories are not additive, each percentage applies to the all-adult base used by its question, and they are not subtracted from the 2022 figures above.",
+   "new": "The same 2021 wave measures more than account ownership. In it, 21.6% of adults reported saving any money in the past year (95% interval 18.1% to 25.2%), 51.3% reported borrowing any money (47.1% to 55.5%) and 9.3% reported making or receiving a digital payment (7.4% to 11.3%). Borrowing is far more common than saving, and both are far more common than having an account — borrowing here includes borrowing from family or friends, which needs no provider at all. The intervals are derived by this resource from the survey's own weights; the World Bank publishes none. For the sources people borrowed from and the methods they saved by, the latest values this resource holds are older, from the World Bank's 2014 country profile: 51.7% of adults borrowed from family or friends, 15.0% from a private informal lender and 0.4% from a financial institution, while 0.9% saved at a financial institution and 4.5% through a savings club or a person outside the family. Those categories are not additive, each percentage applies to the all-adult base used by its question, and they are not subtracted from the 2022 figures above."
+  },
+  {
+   "finding": "CLOSE-2A",
+   "sheet": "03_PAGE_SECTIONS",
+   "row": 198,
+   "col": 5,
+   "field": "/people/#s6.body_en",
+   "old": "The same 2021 wave measures more than account ownership. In it, 21.6% of adults reported saving any money in the past year (95% interval 18.1% to 25.2%), 51.3% reported borrowing any money (47.1% to 55.5%) and 9.3% reported making or receiving a digital payment (7.4% to 11.3%). Borrowing is far more common than saving, and both are far more common than having an account — borrowing here includes borrowing from family or friends, which needs no provider at all. The intervals are derived by this resource from the survey's own weights; the World Bank publishes none. For the sources people borrowed from and the methods they saved by, the latest values this resource holds are older, from the World Bank's 2014 country profile: 51.7% of adults borrowed from family or friends, 15.0% from a private informal lender and 0.4% from a financial institution, while 0.9% saved at a financial institution and 4.5% through a savings club or a person outside the family. Those categories are not additive, each percentage applies to the all-adult base used by its question, and they are not subtracted from the 2022 figures above.",
+   "new": "The same 2021 wave measures more than account ownership. In it, 21.6% of adults reported saving any money in the past year (95% interval 18.1% to 25.2%), 51.3% reported borrowing any money (47.0% to 55.6%) and 9.3% reported making or receiving a digital payment (7.4% to 11.3%). Borrowing is far more common than saving, and both are far more common than having an account — borrowing here includes borrowing from family or friends, which needs no provider at all. The intervals are derived by this resource from the survey's own weights; the World Bank publishes none. For the sources people borrowed from and the methods they saved by, the latest values this resource holds are older, from the World Bank's 2014 country profile: 51.7% of adults borrowed from family or friends, 15.0% from a private informal lender and 0.4% from a financial institution, while 0.9% saved at a financial institution and 4.5% through a savings club or a person outside the family. Those categories are not additive, each percentage applies to the all-adult base used by its question, and they are not subtracted from the 2022 figures above."
+  },
+  {
+   "finding": "CLOSE-2A",
+   "sheet": "03_PAGE_SECTIONS",
+   "row": 198,
+   "col": 5,
+   "field": "/people/#s6.body_en",
+   "old": "The same 2021 wave measures more than account ownership. In it, 21.6% of adults reported saving any money in the past year (95% interval 18.1% to 25.2%), 51.3% reported borrowing any money (47.0% to 55.6%) and 9.3% reported making or receiving a digital payment (7.4% to 11.3%). Borrowing is far more common than saving, and both are far more common than having an account — borrowing here includes borrowing from family or friends, which needs no provider at all. The intervals are derived by this resource from the survey's own weights; the World Bank publishes none. For the sources people borrowed from and the methods they saved by, the latest values this resource holds are older, from the World Bank's 2014 country profile: 51.7% of adults borrowed from family or friends, 15.0% from a private informal lender and 0.4% from a financial institution, while 0.9% saved at a financial institution and 4.5% through a savings club or a person outside the family. Those categories are not additive, each percentage applies to the all-adult base used by its question, and they are not subtracted from the 2022 figures above.",
+   "new": "The same 2021 wave measures more than account ownership. In it, 21.6% of adults reported saving any money in the past year (95% interval 18.1% to 25.2%), 51.3% reported borrowing any money (47.0% to 55.6%) and 9.3% reported making or receiving a digital payment (6.8% to 11.8%). Borrowing is far more common than saving, and both are far more common than having an account — borrowing here includes borrowing from family or friends, which needs no provider at all. The intervals are derived by this resource from the survey's own weights; the World Bank publishes none. For the sources people borrowed from and the methods they saved by, the latest values this resource holds are older, from the World Bank's 2014 country profile: 51.7% of adults borrowed from family or friends, 15.0% from a private informal lender and 0.4% from a financial institution, while 0.9% saved at a financial institution and 4.5% through a savings club or a person outside the family. Those categories are not additive, each percentage applies to the all-adult base used by its question, and they are not subtracted from the 2022 figures above."
+  },
+  {
+   "finding": "CLOSE-2A",
+   "sheet": "03_PAGE_SECTIONS",
+   "row": 198,
+   "col": 5,
+   "field": "/people/#s6.body_en",
+   "old": "The same 2021 wave measures more than account ownership. In it, 21.6% of adults reported saving any money in the past year (95% interval 18.1% to 25.2%), 51.3% reported borrowing any money (47.0% to 55.6%) and 9.3% reported making or receiving a digital payment (6.8% to 11.8%). Borrowing is far more common than saving, and both are far more common than having an account — borrowing here includes borrowing from family or friends, which needs no provider at all. The intervals are derived by this resource from the survey's own weights; the World Bank publishes none. For the sources people borrowed from and the methods they saved by, the latest values this resource holds are older, from the World Bank's 2014 country profile: 51.7% of adults borrowed from family or friends, 15.0% from a private informal lender and 0.4% from a financial institution, while 0.9% saved at a financial institution and 4.5% through a savings club or a person outside the family. Those categories are not additive, each percentage applies to the all-adult base used by its question, and they are not subtracted from the 2022 figures above.",
+   "new": "The same 2021 wave measures more than account ownership. In it, 21.6% of adults reported saving any money in the past year (95% interval 18.1% to 25.2%), 51.3% reported borrowing any money (47.0% to 55.6%) and 9.3% reported making or receiving a digital payment (6.8% to 11.8%). Borrowing is far more common than saving, and both are far more common than having an account — borrowing here includes borrowing from family or friends, which needs no provider at all. The intervals are computed by CauseWay from these published values with the design effect the World Bank publishes for Yemen's survey; they are not the World Bank's own. For the sources people borrowed from and the methods they saved by, the latest values this resource holds are older, from the World Bank's 2014 country profile: 51.7% of adults borrowed from family or friends, 15.0% from a private informal lender and 0.4% from a financial institution, while 0.9% saved at a financial institution and 4.5% through a savings club or a person outside the family. Those categories are not additive, each percentage applies to the all-adult base used by its question, and they are not subtracted from the 2022 figures above."
+  },
+  {
+   "finding": "CLOSE-2A",
+   "sheet": "03_PAGE_SECTIONS",
+   "row": 199,
+   "col": 7,
+   "field": "/people/#s6.body_ar",
+   "old": "تقيس موجة 2021 نفسها أكثر من امتلاك الحساب. ففيها أفاد 21.6% من البالغين بأنهم ادخروا أي مبلغ خلال السنة الماضية (فترة ثقة 95% من 18.4% إلى 24.9%)، وأفاد 51.3% بأنهم اقترضوا أي مبلغ (من 47.1% إلى 55.5%)، و9.3% بأنهم أجروا مدفوعة رقمية أو تلقوها (من 7.4% إلى 11.3%). والاقتراض أشيع بكثير من الادخار، وكلاهما أشيع بكثير من امتلاك حساب — فالاقتراض هنا يشمل الاقتراض من الأسرة أو الأصدقاء وهو لا يحتاج مقدم خدمة أبدًا. والفترات يستخرجها هذا المورد من أوزان المسح نفسها؛ ولا ينشر البنك الدولي أي منها. أما جهات الاقتراض وأساليب الادخار فأحدث ما يحمله هذا المورد عنها أقدم، من الملف القطري للبنك الدولي لعام 2014: فقد اقترض 51.7% من البالغين من الأسرة أو الأصدقاء، و15.0% من مقرض خاص غير رسمي، و0.4% من مؤسسة مالية، بينما ادخر 0.9% لدى مؤسسة مالية و4.5% عبر جمعية ادخار أو شخص من خارج الأسرة. وهذه الفئات غير قابلة للجمع، وكل نسبة تنطبق على قاعدة جميع البالغين المستخدمة في سؤالها، ولا تُطرح من أرقام 2022 أعلاه.",
+   "new": "تقيس موجة 2021 نفسها أكثر من امتلاك الحساب. ففيها أفاد 21.6% من البالغين بأنهم ادخروا أي مبلغ خلال السنة الماضية (فترة ثقة 95% من 18.1% إلى 25.2%)، وأفاد 51.3% بأنهم اقترضوا أي مبلغ (من 47.1% إلى 55.5%)، و9.3% بأنهم أجروا مدفوعة رقمية أو تلقوها (من 7.4% إلى 11.3%). والاقتراض أشيع بكثير من الادخار، وكلاهما أشيع بكثير من امتلاك حساب — فالاقتراض هنا يشمل الاقتراض من الأسرة أو الأصدقاء وهو لا يحتاج مقدم خدمة أبدًا. والفترات يستخرجها هذا المورد من أوزان المسح نفسها؛ ولا ينشر البنك الدولي أي منها. أما جهات الاقتراض وأساليب الادخار فأحدث ما يحمله هذا المورد عنها أقدم، من الملف القطري للبنك الدولي لعام 2014: فقد اقترض 51.7% من البالغين من الأسرة أو الأصدقاء، و15.0% من مقرض خاص غير رسمي، و0.4% من مؤسسة مالية، بينما ادخر 0.9% لدى مؤسسة مالية و4.5% عبر جمعية ادخار أو شخص من خارج الأسرة. وهذه الفئات غير قابلة للجمع، وكل نسبة تنطبق على قاعدة جميع البالغين المستخدمة في سؤالها، ولا تُطرح من أرقام 2022 أعلاه."
+  },
+  {
+   "finding": "CLOSE-2A",
+   "sheet": "03_PAGE_SECTIONS",
+   "row": 199,
+   "col": 7,
+   "field": "/people/#s6.body_ar",
+   "old": "تقيس موجة 2021 نفسها أكثر من امتلاك الحساب. ففيها أفاد 21.6% من البالغين بأنهم ادخروا أي مبلغ خلال السنة الماضية (فترة ثقة 95% من 18.1% إلى 25.2%)، وأفاد 51.3% بأنهم اقترضوا أي مبلغ (من 47.1% إلى 55.5%)، و9.3% بأنهم أجروا مدفوعة رقمية أو تلقوها (من 7.4% إلى 11.3%). والاقتراض أشيع بكثير من الادخار، وكلاهما أشيع بكثير من امتلاك حساب — فالاقتراض هنا يشمل الاقتراض من الأسرة أو الأصدقاء وهو لا يحتاج مقدم خدمة أبدًا. والفترات يستخرجها هذا المورد من أوزان المسح نفسها؛ ولا ينشر البنك الدولي أي منها. أما جهات الاقتراض وأساليب الادخار فأحدث ما يحمله هذا المورد عنها أقدم، من الملف القطري للبنك الدولي لعام 2014: فقد اقترض 51.7% من البالغين من الأسرة أو الأصدقاء، و15.0% من مقرض خاص غير رسمي، و0.4% من مؤسسة مالية، بينما ادخر 0.9% لدى مؤسسة مالية و4.5% عبر جمعية ادخار أو شخص من خارج الأسرة. وهذه الفئات غير قابلة للجمع، وكل نسبة تنطبق على قاعدة جميع البالغين المستخدمة في سؤالها، ولا تُطرح من أرقام 2022 أعلاه.",
+   "new": "تقيس موجة 2021 نفسها أكثر من امتلاك الحساب. ففيها أفاد 21.6% من البالغين بأنهم ادخروا أي مبلغ خلال السنة الماضية (فترة ثقة 95% من 18.1% إلى 25.2%)، وأفاد 51.3% بأنهم اقترضوا أي مبلغ (من 47.0% إلى 55.6%)، و9.3% بأنهم أجروا مدفوعة رقمية أو تلقوها (من 7.4% إلى 11.3%). والاقتراض أشيع بكثير من الادخار، وكلاهما أشيع بكثير من امتلاك حساب — فالاقتراض هنا يشمل الاقتراض من الأسرة أو الأصدقاء وهو لا يحتاج مقدم خدمة أبدًا. والفترات يستخرجها هذا المورد من أوزان المسح نفسها؛ ولا ينشر البنك الدولي أي منها. أما جهات الاقتراض وأساليب الادخار فأحدث ما يحمله هذا المورد عنها أقدم، من الملف القطري للبنك الدولي لعام 2014: فقد اقترض 51.7% من البالغين من الأسرة أو الأصدقاء، و15.0% من مقرض خاص غير رسمي، و0.4% من مؤسسة مالية، بينما ادخر 0.9% لدى مؤسسة مالية و4.5% عبر جمعية ادخار أو شخص من خارج الأسرة. وهذه الفئات غير قابلة للجمع، وكل نسبة تنطبق على قاعدة جميع البالغين المستخدمة في سؤالها، ولا تُطرح من أرقام 2022 أعلاه."
+  },
+  {
+   "finding": "CLOSE-2A",
+   "sheet": "03_PAGE_SECTIONS",
+   "row": 199,
+   "col": 7,
+   "field": "/people/#s6.body_ar",
+   "old": "تقيس موجة 2021 نفسها أكثر من امتلاك الحساب. ففيها أفاد 21.6% من البالغين بأنهم ادخروا أي مبلغ خلال السنة الماضية (فترة ثقة 95% من 18.1% إلى 25.2%)، وأفاد 51.3% بأنهم اقترضوا أي مبلغ (من 47.0% إلى 55.6%)، و9.3% بأنهم أجروا مدفوعة رقمية أو تلقوها (من 7.4% إلى 11.3%). والاقتراض أشيع بكثير من الادخار، وكلاهما أشيع بكثير من امتلاك حساب — فالاقتراض هنا يشمل الاقتراض من الأسرة أو الأصدقاء وهو لا يحتاج مقدم خدمة أبدًا. والفترات يستخرجها هذا المورد من أوزان المسح نفسها؛ ولا ينشر البنك الدولي أي منها. أما جهات الاقتراض وأساليب الادخار فأحدث ما يحمله هذا المورد عنها أقدم، من الملف القطري للبنك الدولي لعام 2014: فقد اقترض 51.7% من البالغين من الأسرة أو الأصدقاء، و15.0% من مقرض خاص غير رسمي، و0.4% من مؤسسة مالية، بينما ادخر 0.9% لدى مؤسسة مالية و4.5% عبر جمعية ادخار أو شخص من خارج الأسرة. وهذه الفئات غير قابلة للجمع، وكل نسبة تنطبق على قاعدة جميع البالغين المستخدمة في سؤالها، ولا تُطرح من أرقام 2022 أعلاه.",
+   "new": "تقيس موجة 2021 نفسها أكثر من امتلاك الحساب. ففيها أفاد 21.6% من البالغين بأنهم ادخروا أي مبلغ خلال السنة الماضية (فترة ثقة 95% من 18.1% إلى 25.2%)، وأفاد 51.3% بأنهم اقترضوا أي مبلغ (من 47.0% إلى 55.6%)، و9.3% بأنهم أجروا مدفوعة رقمية أو تلقوها (من 6.8% إلى 11.8%). والاقتراض أشيع بكثير من الادخار، وكلاهما أشيع بكثير من امتلاك حساب — فالاقتراض هنا يشمل الاقتراض من الأسرة أو الأصدقاء وهو لا يحتاج مقدم خدمة أبدًا. والفترات يستخرجها هذا المورد من أوزان المسح نفسها؛ ولا ينشر البنك الدولي أي منها. أما جهات الاقتراض وأساليب الادخار فأحدث ما يحمله هذا المورد عنها أقدم، من الملف القطري للبنك الدولي لعام 2014: فقد اقترض 51.7% من البالغين من الأسرة أو الأصدقاء، و15.0% من مقرض خاص غير رسمي، و0.4% من مؤسسة مالية، بينما ادخر 0.9% لدى مؤسسة مالية و4.5% عبر جمعية ادخار أو شخص من خارج الأسرة. وهذه الفئات غير قابلة للجمع، وكل نسبة تنطبق على قاعدة جميع البالغين المستخدمة في سؤالها، ولا تُطرح من أرقام 2022 أعلاه."
+  },
+  {
+   "finding": "CLOSE-2A",
+   "sheet": "03_PAGE_SECTIONS",
+   "row": 199,
+   "col": 7,
+   "field": "/people/#s6.body_ar",
+   "old": "تقيس موجة 2021 نفسها أكثر من امتلاك الحساب. ففيها أفاد 21.6% من البالغين بأنهم ادخروا أي مبلغ خلال السنة الماضية (فترة ثقة 95% من 18.1% إلى 25.2%)، وأفاد 51.3% بأنهم اقترضوا أي مبلغ (من 47.0% إلى 55.6%)، و9.3% بأنهم أجروا مدفوعة رقمية أو تلقوها (من 6.8% إلى 11.8%). والاقتراض أشيع بكثير من الادخار، وكلاهما أشيع بكثير من امتلاك حساب — فالاقتراض هنا يشمل الاقتراض من الأسرة أو الأصدقاء وهو لا يحتاج مقدم خدمة أبدًا. والفترات يستخرجها هذا المورد من أوزان المسح نفسها؛ ولا ينشر البنك الدولي أي منها. أما جهات الاقتراض وأساليب الادخار فأحدث ما يحمله هذا المورد عنها أقدم، من الملف القطري للبنك الدولي لعام 2014: فقد اقترض 51.7% من البالغين من الأسرة أو الأصدقاء، و15.0% من مقرض خاص غير رسمي، و0.4% من مؤسسة مالية، بينما ادخر 0.9% لدى مؤسسة مالية و4.5% عبر جمعية ادخار أو شخص من خارج الأسرة. وهذه الفئات غير قابلة للجمع، وكل نسبة تنطبق على قاعدة جميع البالغين المستخدمة في سؤالها، ولا تُطرح من أرقام 2022 أعلاه.",
+   "new": "تقيس موجة 2021 نفسها أكثر من امتلاك الحساب. ففيها أفاد 21.6% من البالغين بأنهم ادخروا أي مبلغ خلال السنة الماضية (فترة ثقة 95% من 18.1% إلى 25.2%)، وأفاد 51.3% بأنهم اقترضوا أي مبلغ (من 47.0% إلى 55.6%)، و9.3% بأنهم أجروا مدفوعة رقمية أو تلقوها (من 6.8% إلى 11.8%). والاقتراض أشيع بكثير من الادخار، وكلاهما أشيع بكثير من امتلاك حساب — فالاقتراض هنا يشمل الاقتراض من الأسرة أو الأصدقاء وهو لا يحتاج مقدم خدمة أبدًا. والفترات تحتسبها CauseWay من هذه القيم المنشورة بأثر التصميم الذي ينشره البنك الدولي لمسح اليمن، وليست فترات نشرها البنك الدولي. أما جهات الاقتراض وأساليب الادخار فأحدث ما يحمله هذا المورد عنها أقدم، من الملف القطري للبنك الدولي لعام 2014: فقد اقترض 51.7% من البالغين من الأسرة أو الأصدقاء، و15.0% من مقرض خاص غير رسمي، و0.4% من مؤسسة مالية، بينما ادخر 0.9% لدى مؤسسة مالية و4.5% عبر جمعية ادخار أو شخص من خارج الأسرة. وهذه الفئات غير قابلة للجمع، وكل نسبة تنطبق على قاعدة جميع البالغين المستخدمة في سؤالها، ولا تُطرح من أرقام 2022 أعلاه."
+  },
+  {
+   "finding": "CLOSE-2A",
+   "sheet": "03_PAGE_SECTIONS",
+   "row": 361,
+   "col": 5,
+   "field": "/methodology/#s7.body_en",
+   "old": "Survey estimates carry sampling and coverage uncertainty. Where a source publishes a confidence interval or standard error, it is reported with the estimate. Where it does not, no interval, standard error or significance test is added unless it can be reproduced from the survey's own weights and design. For the Global Findex 2021 wave in Yemen this resource does reproduce it: the respondent file published for researchers carries the survey weight, so a 95% interval is derived for each published share by the design-based method for a weighted share, and shown with the figure. That file carries no sampling-unit identifier, so clustering is not captured and the derived intervals may be wider in reality, never narrower; the method and every interval are recorded with their figures, and the respondent file itself is never republished. A derived value, such as the difference between two percentages, keeps the precision of its inputs, with no added decimal places, and small differences between estimates are not read as a ranking. Global Findex shares are printed to one decimal place, rounded from the World Bank's unrounded values, and a gap between two groups is the difference of the two printed shares. One decimal place matches the World Bank's own country table for Yemen in The Little Data Book on Financial Inclusion 2015. It is a display convention, not a claim of accuracy to a tenth of a point: with a sample of about 1,000 adults, and fewer in each group, sampling error is far larger than that.",
+   "new": "Survey estimates carry sampling and coverage uncertainty. Where a source publishes a confidence interval or standard error, it is reported with the estimate. Where it does not, no interval, standard error or significance test is added unless it can be computed from what the publisher states about its own survey design. For the Global Findex 2021 wave in Yemen, the World Bank publishes a design effect of 1.9 and a maximum margin of error of 4.3 percentage points at the 95% level, for a share of 50% on 1,000 interviews. For each published national share, CauseWay computes a 95% interval with the World Bank's own formula and that design effect, and shows it with the figure as computed by CauseWay; the method and every interval are recorded with their figures. No interval is computed for the shares of population groups or for the differences between them: the published design effect describes the whole sample, and each group is a smaller one. A derived value, such as the difference between two percentages, keeps the precision of its inputs, with no added decimal places, and small differences between estimates are not read as a ranking. Global Findex shares are printed to one decimal place, rounded from the World Bank's unrounded values, and a gap between two groups is the difference of the two printed shares. One decimal place matches the World Bank's own country table for Yemen in The Little Data Book on Financial Inclusion 2015. It is a display convention, not a claim of accuracy to a tenth of a point: with a sample of about 1,000 adults, and fewer in each group, sampling error is far larger than that."
+  },
+  {
+   "finding": "CLOSE-2A",
+   "sheet": "03_PAGE_SECTIONS",
+   "row": 362,
+   "col": 7,
+   "field": "/methodology/#s7.body_ar",
+   "old": "تنطوي تقديرات المسوح على قدر من عدم اليقين مصدره المعاينة ونطاق التغطية. فإذا نشر المصدر فترة ثقة أو خطأً معياريًا عُرض مع التقدير، وإذا لم ينشره فلا تُضاف فترة ثقة ولا خطأ معياري ولا اختبار دلالة ما لم يمكن إعادة احتسابها من أوزان المسح وتصميمه. وفي موجة Global Findex 2021 في اليمن يعيد هذا المورد احتسابها فعلًا: فملف المستجيبين المنشور للباحثين يحمل وزن المسح، ومن ثَمّ تُستخرج فترة ثقة 95% لكل نسبة منشورة بالطريقة القائمة على تصميم المسح لنسبة موزونة، وتُعرض مع القيمة. ولا يحمل ذلك الملف معرّف وحدة المعاينة، لذلك لا تُحتسب آثار التجمّع العنقودي وقد تكون الفترات المستخرجة أوسع في الواقع لا أضيق؛ والطريقة وكل فترة مسجّلتان مع قيمتهما، ولا يُعاد نشر ملف المستجيبين نفسه أبدًا. وتحتفظ القيمة المشتقة، كالفرق بين نسبتين، بدقة مدخلاتها من دون منازل عشرية إضافية، ولا تُقرأ الفروق الطفيفة بين التقديرات على أنها ترتيب. وتُعرض نسب المؤشر العالمي للشمول المالي (Global Findex) بمنزلة عشرية واحدة، مقرّبةً من القيم غير المقرّبة لدى البنك الدولي، والفجوة بين فئتين هي الفرق بين النسبتين المعروضتين. وتطابق المنزلة العشرية الواحدة جدول البنك الدولي نفسه الخاص باليمن في كتيّب البيانات الموجز عن الشمول المالي (The Little Data Book on Financial Inclusion) لعام 2015. وهي اصطلاح في العرض، لا ادعاء بدقة تبلغ عُشر النقطة؛ ففي عينة من نحو 1,000 بالغ، وبعدد أقل في كل فئة، يتجاوز خطأ المعاينة ذلك بكثير.",
+   "new": "تنطوي تقديرات المسوح على قدر من عدم اليقين مصدره المعاينة ونطاق التغطية. فإذا نشر المصدر فترة ثقة أو خطأً معياريًا عُرض مع التقدير، وإذا لم ينشره فلا تُضاف فترة ثقة ولا خطأ معياري ولا اختبار دلالة ما لم يمكن احتسابها مما ينشره المصدر عن تصميم مسحه. وفي موجة Global Findex 2021 في اليمن، ينشر البنك الدولي أثر تصميم قدره 1.9 وهامش خطأ أقصى قدره 4.3 نقطة مئوية عند مستوى ثقة 95%، لنسبة قدرها 50% في 1,000 مقابلة. ولكل نسبة وطنية منشورة تحتسب CauseWay فترة ثقة 95% بمعادلة البنك الدولي نفسها وبأثر التصميم هذا، وتُعرض مع الرقم بوصفها من احتساب CauseWay؛ والطريقة وكل فترة مسجّلتان مع قيمتهما. ولا تُحتسب فترة لنسب الفئات السكانية ولا للفروق بينها: فأثر التصميم المنشور يخص العينة كلها، وكل فئة عينة أصغر منها. وتحتفظ القيمة المشتقة، كالفرق بين نسبتين، بدقة مدخلاتها من دون منازل عشرية إضافية، ولا تُقرأ الفروق الطفيفة بين التقديرات على أنها ترتيب. وتُعرض نسب المؤشر العالمي للشمول المالي (Global Findex) بمنزلة عشرية واحدة، مقرّبةً من القيم غير المقرّبة لدى البنك الدولي، والفجوة بين فئتين هي الفرق بين النسبتين المعروضتين. وتطابق المنزلة العشرية الواحدة جدول البنك الدولي نفسه الخاص باليمن في كتيّب البيانات الموجز عن الشمول المالي (The Little Data Book on Financial Inclusion) لعام 2015. وهي اصطلاح في العرض، لا ادعاء بدقة تبلغ عُشر النقطة؛ ففي عينة من نحو 1,000 بالغ، وبعدد أقل في كل فئة، يتجاوز خطأ المعاينة ذلك بكثير."
+  },
+  {
+   "finding": "CLOSE-2A:AR-NEW-001",
+   "sheet": "03_PAGE_SECTIONS",
+   "row": 363,
+   "col": 5,
+   "field": "/rights/#s6.body_en",
+   "old": "CauseWay licenses the content it owns in this resource under the Creative Commons Attribution 4.0 International licence (CC BY 4.0; deed https://creativecommons.org/licenses/by/4.0/, legal code https://creativecommons.org/licenses/by/4.0/legalcode.en). Covered: CauseWay's text and analysis in English and Arabic, its visual designs, the compiled evidence records and the figures CauseWay calculates, and the structure and annotations of the data exports when they are published. For figures CauseWay calculates from other publishers' data, the licence covers CauseWay's calculation and presentation; the underlying data stay under their publishers' terms. Not covered: material published by others — documents, data, tables, figures and text remain under their publishers' terms, including where this resource reports, quotes or translates them, and this resource does not host copies of their files; the CauseWay name, logo and marks; and the software code of the repository that builds this resource, which is outside this licence: the code is not openly licensed, and CauseWay reserves all rights in it. Figures derived from survey microdata: the confidence intervals this resource derives from the Global Findex respondent file for Yemen (evidence record CLM-026) are computed from a file CauseWay obtained under the World Bank Microdata Research License; only aggregate estimates are published, never respondent-level data. Cite the data as that licence requires: Demirgüç-Kunt, Klapper, Singer and Ansar (2022), The Global Findex Database 2021: Financial Inclusion, Digital Payments, and Resilience in the Age of COVID-19, Washington, DC: World Bank. CC BY 4.0 does not extend to the underlying microdata, which this resource does not host or redistribute. You may share and adapt CauseWay's content for any purpose, provided you credit CauseWay, link to the licence and indicate whether you made changes: give the title, the author (CauseWay), the source (this resource and the page address), the licence (CC BY 4.0) and the changes made. For a reused figure, use two lines: first this resource (Yemen Financial Inclusion Evidence, the record, CauseWay, the edition and the page address), then the original source that the record names (publisher, title, year and link). This page states the licence CauseWay applies to its own content; it does not state that any third-party rights have been cleared.",
+   "new": "CauseWay licenses the content it owns in this resource under the Creative Commons Attribution 4.0 International licence (CC BY 4.0; deed https://creativecommons.org/licenses/by/4.0/, legal code https://creativecommons.org/licenses/by/4.0/legalcode.en). Covered: CauseWay's text and analysis in English and Arabic, its visual designs, the compiled evidence records and the figures CauseWay calculates, and the structure and annotations of the data exports when they are published. For figures CauseWay calculates from other publishers' data, the licence covers CauseWay's calculation and presentation; the underlying data stay under their publishers' terms. Not covered: material published by others — documents, data, tables, figures and text remain under their publishers' terms, including where this resource reports, quotes or translates them, and this resource does not host copies of their files; the CauseWay name, logo and marks; and the software code of the repository that builds this resource, which is outside this licence: the code is not openly licensed, and CauseWay reserves all rights in it. Survey uncertainty: the intervals shown with Global Findex shares for Yemen are computed by CauseWay from the World Bank's published values and the design effect the World Bank publishes for the survey, not from respondent-level data; this resource publishes no respondent-level data. Cite the Global Findex data as the World Bank asks: Demirgüç-Kunt, Klapper, Singer and Ansar (2022), The Global Findex Database 2021: Financial Inclusion, Digital Payments, and Resilience in the Age of COVID-19, Washington, DC: World Bank. CC BY 4.0 does not extend to the underlying microdata, which this resource does not host or redistribute. You may share and adapt CauseWay's content for any purpose, provided you credit CauseWay, link to the licence and indicate whether you made changes: give the title, the author (CauseWay), the source (this resource and the page address), the licence (CC BY 4.0) and the changes made. For a reused figure, use two lines: first this resource (Yemen Financial Inclusion Evidence, the record, CauseWay, the edition and the page address), then the original source that the record names (publisher, title, year and link). This page states the licence CauseWay applies to its own content; it does not state that any third-party rights have been cleared."
+  },
+  {
+   "finding": "CLOSE-2A:AR-NEW-001",
+   "sheet": "03_PAGE_SECTIONS",
+   "row": 363,
+   "col": 5,
+   "field": "/rights/#s6.body_en",
+   "old": "CauseWay licenses the content it owns in this resource under the Creative Commons Attribution 4.0 International licence (CC BY 4.0; deed https://creativecommons.org/licenses/by/4.0/, legal code https://creativecommons.org/licenses/by/4.0/legalcode.en). Covered: CauseWay's text and analysis in English and Arabic, its visual designs, the compiled evidence records and the figures CauseWay calculates, and the structure and annotations of the data exports when they are published. For figures CauseWay calculates from other publishers' data, the licence covers CauseWay's calculation and presentation; the underlying data stay under their publishers' terms. Not covered: material published by others — documents, data, tables, figures and text remain under their publishers' terms, including where this resource reports, quotes or translates them, and this resource does not host copies of their files; the CauseWay name, logo and marks; and the software code of the repository that builds this resource, which is outside this licence: the code is not openly licensed, and CauseWay reserves all rights in it. Survey uncertainty: the intervals shown with Global Findex shares for Yemen are computed by CauseWay from the World Bank's published values and the design effect the World Bank publishes for the survey, not from respondent-level data; this resource publishes no respondent-level data. Cite the Global Findex data as the World Bank asks: Demirgüç-Kunt, Klapper, Singer and Ansar (2022), The Global Findex Database 2021: Financial Inclusion, Digital Payments, and Resilience in the Age of COVID-19, Washington, DC: World Bank. CC BY 4.0 does not extend to the underlying microdata, which this resource does not host or redistribute. You may share and adapt CauseWay's content for any purpose, provided you credit CauseWay, link to the licence and indicate whether you made changes: give the title, the author (CauseWay), the source (this resource and the page address), the licence (CC BY 4.0) and the changes made. For a reused figure, use two lines: first this resource (Yemen Financial Inclusion Evidence, the record, CauseWay, the edition and the page address), then the original source that the record names (publisher, title, year and link). This page states the licence CauseWay applies to its own content; it does not state that any third-party rights have been cleared.",
+   "new": "CauseWay licenses the content it owns in this resource under the Creative Commons Attribution 4.0 International licence (CC BY 4.0; deed https://creativecommons.org/licenses/by/4.0/, legal code https://creativecommons.org/licenses/by/4.0/legalcode.en). Covered: CauseWay's text and analysis in English and Arabic, its visual designs, the compiled evidence records and the figures CauseWay calculates, and the structure and annotations of the data exports when they are published. For figures CauseWay calculates from other publishers' data, the licence covers CauseWay's calculation and presentation; the underlying data stay under their publishers' terms. Not covered: material published by others — documents, data, tables, figures and text remain under their publishers' terms, including where this resource reports, quotes or translates them, and this resource does not host copies of their files; the CauseWay name, logo and marks; and the software code of the repository that builds this resource, which is outside this licence: the code is not openly licensed, and CauseWay reserves all rights in it. Survey uncertainty: the intervals shown with Global Findex shares for Yemen are computed by CauseWay from the World Bank's published values and the design effect the World Bank publishes for the survey, not from respondent-level data; this resource publishes no respondent-level data. Cite the Global Findex data as the World Bank asks: Demirgüç-Kunt, Klapper, Singer and Ansar (2022), The Global Findex Database 2021: Financial Inclusion, Digital Payments, and Resilience in the Age of COVID-19, Washington, DC: World Bank. CC BY 4.0 does not extend to the World Bank's data, and this resource does not host or redistribute any survey microdata. You may share and adapt CauseWay's content for any purpose, provided you credit CauseWay, link to the licence and indicate whether you made changes: give the title, the author (CauseWay), the source (this resource and the page address), the licence (CC BY 4.0) and the changes made. For a reused figure, use two lines: first this resource (Yemen Financial Inclusion Evidence, the record, CauseWay, the edition and the page address), then the original source that the record names (publisher, title, year and link). This page states the licence CauseWay applies to its own content; it does not state that any third-party rights have been cleared."
+  },
+  {
+   "finding": "CLOSE-2A:R33:AR-NEW-001",
+   "sheet": "03_PAGE_SECTIONS",
+   "row": 363,
+   "col": 7,
+   "field": "03_PAGE_SECTIONS!R363C7",
+   "old": "تتيح CauseWay المحتوى الذي تملكه في هذا المورد بموجب رخصة المشاع الإبداعي «نَسب المُصنَّف 4.0 دولي» (CC BY 4.0؛ صك الرخصة https://creativecommons.org/licenses/by/4.0/deed.ar، والنص القانوني https://creativecommons.org/licenses/by/4.0/legalcode.ar). تشمل الرخصة: نصوص CauseWay وتحليلاتها بالعربية والإنجليزية، وتصاميمها المرئية، وسجلات الأدلة المجمَّعة والأرقام التي تحتسبها CauseWay، وبنية ملفات البيانات المُصدَّرة وشروحها عند نشرها. وفي الأرقام التي تحتسبها CauseWay من بيانات جهات أخرى، تشمل الرخصة عملية الاحتساب وطريقة العرض، وتبقى البيانات الأصلية خاضعة لشروط ناشريها. ولا تشمل الرخصة: مواد الجهات الأخرى، فالوثائق والبيانات والجداول والرسوم والنصوص التي تنشرها جهات أخرى تبقى خاضعة لشروط ناشريها، بما في ذلك حين يوردها هذا المورد أو يقتبسها أو يترجمها، ولا يستضيف هذا المورد نسخًا من ملفاتها؛ واسم CauseWay وشعارها وعلاماتها؛ والشيفرة البرمجية للمستودع الذي يبني هذا المورد، فهي خارج نطاق هذه الرخصة: إذ لا تُتاح الشيفرة بأي رخصة مفتوحة، وتحتفظ CauseWay بجميع الحقوق فيها. الأرقام المشتقة من البيانات الجزئية للمسوح: فترات الثقة التي يستخرجها هذا المورد من ملف المستجيبين في مسح Global Findex لليمن (سجل الدليل CLM-026) محسوبة من ملف حصلت عليه CauseWay بموجب رخصة البحث للبيانات الجزئية لدى البنك الدولي؛ ولا يُنشر إلا تقديرات تجميعية، ولا تُنشر أي بيانات على مستوى المستجيبين. استشهد بالبيانات كما تشترط تلك الرخصة: Demirgüç-Kunt وKlapper وSinger وAnsar (2022)، The Global Findex Database 2021: Financial Inclusion, Digital Payments, and Resilience in the Age of COVID-19، واشنطن العاصمة: البنك الدولي. ولا تمتد رخصة CC BY 4.0 إلى البيانات الجزئية الأصلية، التي لا يستضيفها هذا المورد ولا يعيد توزيعها. ويجوز لك مشاركة محتوى CauseWay وتعديله لأي غرض، بشرط أن تنسبه إلى CauseWay، وأن تضع رابطًا إلى الرخصة، وأن تبيّن ما إذا كنت قد أجريت تغييرات: اذكر العنوان، والمؤلف (CauseWay)، والمصدر (هذا المورد ورابط الصفحة)، والرخصة (CC BY 4.0)، والتغييرات التي أجريتها. وعند إعادة استخدام رقم، استعمل سطرين: أولًا هذا المورد (أدلة الشمول المالي في اليمن، والسجل، وCauseWay، والإصدار، ورابط الصفحة)، ثم المصدر الأصلي الذي يسمّيه السجل (الناشر، والعنوان، والسنة، والرابط). وتذكر هذه الصفحة الرخصة التي تطبقها CauseWay على محتواها الخاص، ولا تفيد بأن أي حقوق لجهات أخرى قد سُوّيت.",
+   "new": "تتيح CauseWay المحتوى الذي تملكه في هذا المورد بموجب رخصة المشاع الإبداعي «نَسب المُصنَّف 4.0 دولي» (CC BY 4.0؛ صك الرخصة https://creativecommons.org/licenses/by/4.0/deed.ar، والنص القانوني https://creativecommons.org/licenses/by/4.0/legalcode.ar). تشمل الرخصة: نصوص CauseWay وتحليلاتها بالعربية والإنجليزية، وتصاميمها المرئية، وسجلات الأدلة المجمَّعة والأرقام التي تحتسبها CauseWay، وبنية ملفات البيانات المُصدَّرة وشروحها عند نشرها. وفي الأرقام التي تحتسبها CauseWay من بيانات جهات أخرى، تشمل الرخصة عملية الاحتساب وطريقة العرض، وتبقى البيانات الأصلية خاضعة لشروط ناشريها. ولا تشمل الرخصة: مواد الجهات الأخرى، فالوثائق والبيانات والجداول والرسوم والنصوص التي تنشرها جهات أخرى تبقى خاضعة لشروط ناشريها، بما في ذلك حين يوردها هذا المورد أو يقتبسها أو يترجمها، ولا يستضيف هذا المورد نسخًا من ملفاتها؛ واسم CauseWay وشعارها وعلاماتها؛ والشيفرة البرمجية للمستودع الذي يبني هذا المورد، فهي خارج نطاق هذه الرخصة: إذ لا تُتاح الشيفرة بأي رخصة مفتوحة، وتحتفظ CauseWay بجميع الحقوق فيها. عدم اليقين في المسوح: فترات الثقة المعروضة مع نسب المؤشر العالمي للشمول المالي (Global Findex) لليمن تحتسبها CauseWay من القيم التي نشرها البنك الدولي ومن أثر التصميم الذي ينشره للمسح، لا من بيانات على مستوى المستجيبين؛ ولا ينشر هذا المورد أي بيانات على مستوى المستجيبين. استشهد ببيانات Global Findex كما يطلب البنك الدولي: Demirgüç-Kunt وKlapper وSinger وAnsar (2022)، The Global Findex Database 2021: Financial Inclusion, Digital Payments, and Resilience in the Age of COVID-19، واشنطن العاصمة: البنك الدولي. ولا تمتد رخصة CC BY 4.0 إلى بيانات البنك الدولي، ولا يستضيف هذا المورد أي بيانات جزئية للمسوح ولا يعيد توزيعها. ويجوز لك مشاركة محتوى CauseWay وتعديله لأي غرض، بشرط أن تنسبه إلى CauseWay، وأن تضع رابطًا إلى الرخصة، وأن تبيّن ما إذا كنت قد أجريت تغييرات: اذكر العنوان، والمؤلف (CauseWay)، والمصدر (هذا المورد ورابط الصفحة)، والرخصة (CC BY 4.0)، والتغييرات التي أجريتها. وعند إعادة استخدام رقم، استعمل سطرين: أولًا هذا المورد (أدلة الشمول المالي في اليمن، والسجل، وCauseWay، والإصدار، ورابط الصفحة)، ثم المصدر الأصلي الذي يسمّيه السجل (الناشر، والعنوان، والسنة، والرابط). وتذكر هذه الصفحة الرخصة التي تطبقها CauseWay على محتواها الخاص، ولا تفيد بأن أي حقوق لجهات أخرى قد سُوّيت."
+  },
+  {
+   "finding": "CLOSE-2A:CR-01",
+   "sheet": "10_MEASUREMENT_AGENDA",
+   "row": 5,
+   "col": 12,
+   "field": "MA-001.guardrail_en",
+   "old": "The latest representative people-side measure predates the current reform and infrastructure changes. A new measurement must document its population, geographic coverage, fieldwork period and survey weights, and keep core concepts comparable with the previous wave.",
+   "new": "The latest representative people-side measure predates the current reform and infrastructure changes. A new measurement must document its population, geographic coverage, fieldwork period and survey weights, and keep core concepts comparable with the previous wave. Yemen's 2021 study did not ask the mobile-money questions: if a new survey asks them, part of any rise in account ownership may come from the wider questionnaire, not from real change, so the two definitions must be reported separately."
+  },
+  {
+   "finding": "CLOSE-2A:CR-01",
+   "sheet": "10_MEASUREMENT_AGENDA",
+   "row": 5,
+   "col": 13,
+   "field": "MA-001.guardrail_ar",
+   "old": "يسبق أحدث قياس ممثل لجانب الأفراد تغيرات الإصلاح والبنية التحتية الحالية. ويجب أن يوثق القياس الجديد المجتمع المرجعي والتغطية الجغرافية وفترة العمل الميداني وأوزان المسح، وأن يحافظ على مفاهيم أساسية قابلة للمقارنة مع الموجة السابقة.",
+   "new": "يسبق أحدث قياس ممثل لجانب الأفراد تغيرات الإصلاح والبنية التحتية الحالية. ويجب أن يوثق القياس الجديد المجتمع المرجعي والتغطية الجغرافية وفترة العمل الميداني وأوزان المسح، وأن يحافظ على مفاهيم أساسية قابلة للمقارنة مع الموجة السابقة. ولم تطرح دراسة اليمن لعام 2021 أسئلة خدمات الأموال عبر الهاتف: فإذا طرحها مسح جديد فقد يأتي جزء من أي ارتفاع في امتلاك الحساب من اتساع الاستبيان لا من تغيّر فعلي، لذلك يجب عرض التعريفين كلٍّ على حدة."
+  },
+  {
+   "finding": "CLOSE-2A:CR-02",
+   "sheet": "25_FINDEX_BASELINE",
+   "row": 15,
+   "col": 6,
+   "field": "CW-FINDEX-MOE-2022-001.value",
+   "old": "2.2",
+   "new": 2.8
+  },
+  {
+   "finding": "CLOSE-2A:CR-02",
+   "sheet": "25_FINDEX_BASELINE",
+   "row": 15,
+   "col": 7,
+   "field": "CW-FINDEX-MOE-2022-001.unit",
+   "old": "percentage points (95% margin of error, design-based)",
+   "new": "percentage points (95% margin of error, from the published design effect)"
+  },
+  {
+   "finding": "CLOSE-2A:CR-02",
+   "sheet": "25_FINDEX_BASELINE",
+   "row": 15,
+   "col": 8,
+   "field": "CW-FINDEX-MOE-2022-001.publisher",
+   "old": "CauseWay derivation from World Bank Global Findex 2021 Yemen microdata",
+   "new": "CauseWay computation from World Bank published values and design effect"
+  },
+  {
+   "finding": "CLOSE-2A:CR-02",
+   "sheet": "25_FINDEX_BASELINE",
+   "row": 15,
+   "col": 9,
+   "field": "CW-FINDEX-MOE-2022-001.source_url",
+   "old": "https://microdata.worldbank.org/catalog/5862",
+   "new": "https://thedocs.worldbank.org/en/doc/fe026d04da1eb78f5ce8bb5e1529d60b-0430062023/original/Findex2021-22-Methodology.pdf"
+  },
+  {
+   "finding": "CLOSE-2A:CR-02",
+   "sheet": "25_FINDEX_BASELINE",
+   "row": 15,
+   "col": 10,
+   "field": "CW-FINDEX-MOE-2022-001.evidence_state",
+   "old": "CAUSEWAY_DERIVED_INTERVAL",
+   "new": "CAUSEWAY_COMPUTED_INTERVAL"
+  },
+  {
+   "finding": "CLOSE-2A:CR-02",
+   "sheet": "25_FINDEX_BASELINE",
+   "row": 15,
+   "col": 11,
+   "field": "CW-FINDEX-MOE-2022-001.caveat",
+   "old": "Point estimate 11.9%; 95% confidence interval 9.7% to 14.1%; base 1000 respondents; design effect 1.16. CauseWay derivation: Hajek ratio estimator with Taylor-linearization variance on the published survey weight (wgt) only. The public-use file carries no PSU or stratum identifier, so clustering is not captured and the true interval may be wider, never narrower. A simple binomial standard error is not used. The respondent file is held under the World Bank Microdata Research License and is never redistributed, committed to this repository or published.",
+   "new": "Point estimate 11.9%; 95% confidence interval 9.1% to 14.7%; base 1,000 interviews (the whole sample); design effect 1.9, the value the World Bank publishes for Yemen's survey (The Global Findex Database 2021, Appendix A, Table A.1, printed p.17). CauseWay computation (close-out CR-02, 10 October 2026): margin = 1.96 x sqrt(1.9) x sqrt(p(1-p)/1,000), the World Bank's own margin-of-error formula (Table A.1, footnote c), applied to the World Bank's published unrounded value p (11.9033656433415). No respondent-level data are used. This replaces the earlier derivation from the respondent file (FC-1), withdrawn under brief v5. Previous record: Point estimate 11.9%; 95% confidence interval 9.7% to 14.1%; base 1000 respondents; design effect 1.16. CauseWay derivation: Hajek ratio estimator with Taylor-linearization variance on the published survey weight (wgt) only. The public-use file carries no PSU or stratum identifier, so clustering is not captured and the true interval may be wider, never narrower. A simple binomial standard error is not used. The respondent file is held under the World Bank Microdata Research License and is never redistributed, committed to this repository or published."
+  },
+  {
+   "finding": "CLOSE-2A:CR-02",
+   "sheet": "25_FINDEX_BASELINE",
+   "row": 28,
+   "col": 6,
+   "field": "CW-FINDEX-MOE-2022-014.value",
+   "old": "2.2",
+   "new": 2.8
+  },
+  {
+   "finding": "CLOSE-2A:CR-02",
+   "sheet": "25_FINDEX_BASELINE",
+   "row": 28,
+   "col": 7,
+   "field": "CW-FINDEX-MOE-2022-014.unit",
+   "old": "percentage points (95% margin of error, design-based)",
+   "new": "percentage points (95% margin of error, from the published design effect)"
+  },
+  {
+   "finding": "CLOSE-2A:CR-02",
+   "sheet": "25_FINDEX_BASELINE",
+   "row": 28,
+   "col": 8,
+   "field": "CW-FINDEX-MOE-2022-014.publisher",
+   "old": "CauseWay derivation from World Bank Global Findex 2021 Yemen microdata",
+   "new": "CauseWay computation from World Bank published values and design effect"
+  },
+  {
+   "finding": "CLOSE-2A:CR-02",
+   "sheet": "25_FINDEX_BASELINE",
+   "row": 28,
+   "col": 9,
+   "field": "CW-FINDEX-MOE-2022-014.source_url",
+   "old": "https://microdata.worldbank.org/catalog/5862",
+   "new": "https://thedocs.worldbank.org/en/doc/fe026d04da1eb78f5ce8bb5e1529d60b-0430062023/original/Findex2021-22-Methodology.pdf"
+  },
+  {
+   "finding": "CLOSE-2A:CR-02",
+   "sheet": "25_FINDEX_BASELINE",
+   "row": 28,
+   "col": 10,
+   "field": "CW-FINDEX-MOE-2022-014.evidence_state",
+   "old": "CAUSEWAY_DERIVED_INTERVAL",
+   "new": "CAUSEWAY_COMPUTED_INTERVAL"
+  },
+  {
+   "finding": "CLOSE-2A:CR-02",
+   "sheet": "25_FINDEX_BASELINE",
+   "row": 28,
+   "col": 11,
+   "field": "CW-FINDEX-MOE-2022-014.caveat",
+   "old": "Point estimate 11.9%; 95% confidence interval 9.7% to 14.1%; base 1,000 respondents; design effect 1.16. Reproduces the World Bank's published unrounded value for Yemen 2022 (indicator fin_account_t_d). CauseWay derivation: Hajek ratio estimator with Taylor-linearization variance on the published survey weight (wgt) only. The public-use file carries no PSU or stratum identifier, so clustering is not captured and the true interval may be wider, never narrower. A simple binomial standard error is not used. The respondent file is held under the World Bank Microdata Research License and is never redistributed, committed to this repository or published.",
+   "new": "Point estimate 11.9%; 95% confidence interval 9.1% to 14.7%; base 1,000 interviews (the whole sample); design effect 1.9, the value the World Bank publishes for Yemen's survey (The Global Findex Database 2021, Appendix A, Table A.1, printed p.17). CauseWay computation (close-out CR-02, 10 October 2026): margin = 1.96 x sqrt(1.9) x sqrt(p(1-p)/1,000), the World Bank's own margin-of-error formula (Table A.1, footnote c), applied to the World Bank's published unrounded value p (11.9033656433415). No respondent-level data are used. This replaces the earlier derivation from the respondent file (FC-1), withdrawn under brief v5. Previous record: Point estimate 11.9%; 95% confidence interval 9.7% to 14.1%; base 1,000 respondents; design effect 1.16. Reproduces the World Bank's published unrounded value for Yemen 2022 (indicator fin_account_t_d). CauseWay derivation: Hajek ratio estimator with Taylor-linearization variance on the published survey weight (wgt) only. The public-use file carries no PSU or stratum identifier, so clustering is not captured and the true interval may be wider, never narrower. A simple binomial standard error is not used. The respondent file is held under the World Bank Microdata Research License and is never redistributed, committed to this repository or published."
+  },
+  {
+   "finding": "CLOSE-2A:CR-02",
+   "sheet": "25_FINDEX_BASELINE",
+   "row": 29,
+   "col": 6,
+   "field": "CW-FINDEX-MOE-2022-015.value",
+   "old": "3.2",
+   "new": 3.5
+  },
+  {
+   "finding": "CLOSE-2A:CR-02",
+   "sheet": "25_FINDEX_BASELINE",
+   "row": 29,
+   "col": 7,
+   "field": "CW-FINDEX-MOE-2022-015.unit",
+   "old": "percentage points (95% margin of error, design-based)",
+   "new": "percentage points (95% margin of error, from the published design effect)"
+  },
+  {
+   "finding": "CLOSE-2A:CR-02",
+   "sheet": "25_FINDEX_BASELINE",
+   "row": 29,
+   "col": 8,
+   "field": "CW-FINDEX-MOE-2022-015.publisher",
+   "old": "CauseWay derivation from World Bank Global Findex 2021 Yemen microdata",
+   "new": "CauseWay computation from World Bank published values and design effect"
+  },
+  {
+   "finding": "CLOSE-2A:CR-02",
+   "sheet": "25_FINDEX_BASELINE",
+   "row": 29,
+   "col": 9,
+   "field": "CW-FINDEX-MOE-2022-015.source_url",
+   "old": "https://microdata.worldbank.org/catalog/5862",
+   "new": "https://thedocs.worldbank.org/en/doc/fe026d04da1eb78f5ce8bb5e1529d60b-0430062023/original/Findex2021-22-Methodology.pdf"
+  },
+  {
+   "finding": "CLOSE-2A:CR-02",
+   "sheet": "25_FINDEX_BASELINE",
+   "row": 29,
+   "col": 10,
+   "field": "CW-FINDEX-MOE-2022-015.evidence_state",
+   "old": "CAUSEWAY_DERIVED_INTERVAL",
+   "new": "CAUSEWAY_COMPUTED_INTERVAL"
+  },
+  {
+   "finding": "CLOSE-2A:CR-02",
+   "sheet": "25_FINDEX_BASELINE",
+   "row": 29,
+   "col": 11,
+   "field": "CW-FINDEX-MOE-2022-015.caveat",
+   "old": "Point estimate 21.6%; 95% confidence interval 18.4% to 24.9%; base 1,000 respondents; design effect 1.58. Reproduces the World Bank's published unrounded value for Yemen 2022 (indicator save.any.t.d). CauseWay derivation: Hajek ratio estimator with Taylor-linearization variance on the published survey weight (wgt) only. The public-use file carries no PSU or stratum identifier, so clustering is not captured and the true interval may be wider, never narrower. A simple binomial standard error is not used. The respondent file is held under the World Bank Microdata Research License and is never redistributed, committed to this repository or published.",
+   "new": "Point estimate 21.6%; 95% confidence interval 18.1% to 25.2%; base 1,000 interviews (the whole sample); design effect 1.9, the value the World Bank publishes for Yemen's survey (The Global Findex Database 2021, Appendix A, Table A.1, printed p.17). CauseWay computation (close-out CR-02, 10 October 2026): margin = 1.96 x sqrt(1.9) x sqrt(p(1-p)/1,000), the World Bank's own margin-of-error formula (Table A.1, footnote c), applied to the World Bank's published unrounded value p (21.6445272422787). No respondent-level data are used. This replaces the earlier derivation from the respondent file (FC-1), withdrawn under brief v5. Previous record: Point estimate 21.6%; 95% confidence interval 18.4% to 24.9%; base 1,000 respondents; design effect 1.58. Reproduces the World Bank's published unrounded value for Yemen 2022 (indicator save.any.t.d). CauseWay derivation: Hajek ratio estimator with Taylor-linearization variance on the published survey weight (wgt) only. The public-use file carries no PSU or stratum identifier, so clustering is not captured and the true interval may be wider, never narrower. A simple binomial standard error is not used. The respondent file is held under the World Bank Microdata Research License and is never redistributed, committed to this repository or published."
+  },
+  {
+   "finding": "CLOSE-2A:CR-02",
+   "sheet": "25_FINDEX_BASELINE",
+   "row": 30,
+   "col": 6,
+   "field": "CW-FINDEX-MOE-2022-016.value",
+   "old": "4.2",
+   "new": 4.3
+  },
+  {
+   "finding": "CLOSE-2A:CR-02",
+   "sheet": "25_FINDEX_BASELINE",
+   "row": 30,
+   "col": 7,
+   "field": "CW-FINDEX-MOE-2022-016.unit",
+   "old": "percentage points (95% margin of error, design-based)",
+   "new": "percentage points (95% margin of error, from the published design effect)"
+  },
+  {
+   "finding": "CLOSE-2A:CR-02",
+   "sheet": "25_FINDEX_BASELINE",
+   "row": 30,
+   "col": 8,
+   "field": "CW-FINDEX-MOE-2022-016.publisher",
+   "old": "CauseWay derivation from World Bank Global Findex 2021 Yemen microdata",
+   "new": "CauseWay computation from World Bank published values and design effect"
+  },
+  {
+   "finding": "CLOSE-2A:CR-02",
+   "sheet": "25_FINDEX_BASELINE",
+   "row": 30,
+   "col": 9,
+   "field": "CW-FINDEX-MOE-2022-016.source_url",
+   "old": "https://microdata.worldbank.org/catalog/5862",
+   "new": "https://thedocs.worldbank.org/en/doc/fe026d04da1eb78f5ce8bb5e1529d60b-0430062023/original/Findex2021-22-Methodology.pdf"
+  },
+  {
+   "finding": "CLOSE-2A:CR-02",
+   "sheet": "25_FINDEX_BASELINE",
+   "row": 30,
+   "col": 10,
+   "field": "CW-FINDEX-MOE-2022-016.evidence_state",
+   "old": "CAUSEWAY_DERIVED_INTERVAL",
+   "new": "CAUSEWAY_COMPUTED_INTERVAL"
+  },
+  {
+   "finding": "CLOSE-2A:CR-02",
+   "sheet": "25_FINDEX_BASELINE",
+   "row": 30,
+   "col": 11,
+   "field": "CW-FINDEX-MOE-2022-016.caveat",
+   "old": "Point estimate 51.3%; 95% confidence interval 47.1% to 55.5%; base 1,000 respondents; design effect 1.82. Reproduces the World Bank's published unrounded value for Yemen 2022 (indicator borrow.any.t.d). CauseWay derivation: Hajek ratio estimator with Taylor-linearization variance on the published survey weight (wgt) only. The public-use file carries no PSU or stratum identifier, so clustering is not captured and the true interval may be wider, never narrower. A simple binomial standard error is not used. The respondent file is held under the World Bank Microdata Research License and is never redistributed, committed to this repository or published.",
+   "new": "Point estimate 51.3%; 95% confidence interval 47.0% to 55.6%; base 1,000 interviews (the whole sample); design effect 1.9, the value the World Bank publishes for Yemen's survey (The Global Findex Database 2021, Appendix A, Table A.1, printed p.17). CauseWay computation (close-out CR-02, 10 October 2026): margin = 1.96 x sqrt(1.9) x sqrt(p(1-p)/1,000), the World Bank's own margin-of-error formula (Table A.1, footnote c), applied to the World Bank's published unrounded value p (51.2811034475895). No respondent-level data are used. This replaces the earlier derivation from the respondent file (FC-1), withdrawn under brief v5. Previous record: Point estimate 51.3%; 95% confidence interval 47.1% to 55.5%; base 1,000 respondents; design effect 1.82. Reproduces the World Bank's published unrounded value for Yemen 2022 (indicator borrow.any.t.d). CauseWay derivation: Hajek ratio estimator with Taylor-linearization variance on the published survey weight (wgt) only. The public-use file carries no PSU or stratum identifier, so clustering is not captured and the true interval may be wider, never narrower. A simple binomial standard error is not used. The respondent file is held under the World Bank Microdata Research License and is never redistributed, committed to this repository or published."
+  },
+  {
+   "finding": "CLOSE-2A:CR-02",
+   "sheet": "25_FINDEX_BASELINE",
+   "row": 31,
+   "col": 6,
+   "field": "CW-FINDEX-MOE-2022-017.value",
+   "old": "1.9",
+   "new": 2.5
+  },
+  {
+   "finding": "CLOSE-2A:CR-02",
+   "sheet": "25_FINDEX_BASELINE",
+   "row": 31,
+   "col": 7,
+   "field": "CW-FINDEX-MOE-2022-017.unit",
+   "old": "percentage points (95% margin of error, design-based)",
+   "new": "percentage points (95% margin of error, from the published design effect)"
+  },
+  {
+   "finding": "CLOSE-2A:CR-02",
+   "sheet": "25_FINDEX_BASELINE",
+   "row": 31,
+   "col": 8,
+   "field": "CW-FINDEX-MOE-2022-017.publisher",
+   "old": "CauseWay derivation from World Bank Global Findex 2021 Yemen microdata",
+   "new": "CauseWay computation from World Bank published values and design effect"
+  },
+  {
+   "finding": "CLOSE-2A:CR-02",
+   "sheet": "25_FINDEX_BASELINE",
+   "row": 31,
+   "col": 9,
+   "field": "CW-FINDEX-MOE-2022-017.source_url",
+   "old": "https://microdata.worldbank.org/catalog/5862",
+   "new": "https://thedocs.worldbank.org/en/doc/fe026d04da1eb78f5ce8bb5e1529d60b-0430062023/original/Findex2021-22-Methodology.pdf"
+  },
+  {
+   "finding": "CLOSE-2A:CR-02",
+   "sheet": "25_FINDEX_BASELINE",
+   "row": 31,
+   "col": 10,
+   "field": "CW-FINDEX-MOE-2022-017.evidence_state",
+   "old": "CAUSEWAY_DERIVED_INTERVAL",
+   "new": "CAUSEWAY_COMPUTED_INTERVAL"
+  },
+  {
+   "finding": "CLOSE-2A:CR-02",
+   "sheet": "25_FINDEX_BASELINE",
+   "row": 31,
+   "col": 11,
+   "field": "CW-FINDEX-MOE-2022-017.caveat",
+   "old": "Point estimate 9.3%; 95% confidence interval 7.4% to 11.3%; base 1,000 respondents; design effect 1.17. Reproduces the World Bank's published unrounded value for Yemen 2022 (indicator g20.any). CauseWay derivation: Hajek ratio estimator with Taylor-linearization variance on the published survey weight (wgt) only. The public-use file carries no PSU or stratum identifier, so clustering is not captured and the true interval may be wider, never narrower. A simple binomial standard error is not used. The respondent file is held under the World Bank Microdata Research License and is never redistributed, committed to this repository or published.",
+   "new": "Point estimate 9.3%; 95% confidence interval 6.8% to 11.8%; base 1,000 interviews (the whole sample); design effect 1.9, the value the World Bank publishes for Yemen's survey (The Global Findex Database 2021, Appendix A, Table A.1, printed p.17). CauseWay computation (close-out CR-02, 10 October 2026): margin = 1.96 x sqrt(1.9) x sqrt(p(1-p)/1,000), the World Bank's own margin-of-error formula (Table A.1, footnote c), applied to the World Bank's published unrounded value p (9.33455931917802). No respondent-level data are used. This replaces the earlier derivation from the respondent file (FC-1), withdrawn under brief v5. Previous record: Point estimate 9.3%; 95% confidence interval 7.4% to 11.3%; base 1,000 respondents; design effect 1.17. Reproduces the World Bank's published unrounded value for Yemen 2022 (indicator g20.any). CauseWay derivation: Hajek ratio estimator with Taylor-linearization variance on the published survey weight (wgt) only. The public-use file carries no PSU or stratum identifier, so clustering is not captured and the true interval may be wider, never narrower. A simple binomial standard error is not used. The respondent file is held under the World Bank Microdata Research License and is never redistributed, committed to this repository or published."
+  },
+  {
+   "finding": "CLOSE-2A:CR-02",
+   "sheet": "25_FINDEX_BASELINE",
+   "row": 16,
+   "col": 6,
+   "field": "CW-FINDEX-MOE-2022-002.value",
+   "old": "2.2",
+   "new": null
+  },
+  {
+   "finding": "CLOSE-2A:CR-02",
+   "sheet": "25_FINDEX_BASELINE",
+   "row": 16,
+   "col": 10,
+   "field": "CW-FINDEX-MOE-2022-002.evidence_state",
+   "old": "CAUSEWAY_DERIVED_INTERVAL",
+   "new": "WITHDRAWN__NO_PUBLISHED_GROUP_DESIGN"
+  },
+  {
+   "finding": "CLOSE-2A:CR-02",
+   "sheet": "25_FINDEX_BASELINE",
+   "row": 16,
+   "col": 11,
+   "field": "CW-FINDEX-MOE-2022-002.caveat",
+   "old": "Point estimate 5.4%; 95% confidence interval 3.2% to 7.7%; base 500 respondents; design effect 1.28. CauseWay derivation: Hajek ratio estimator with Taylor-linearization variance on the published survey weight (wgt) only. The public-use file carries no PSU or stratum identifier, so clustering is not captured and the true interval may be wider, never narrower. A simple binomial standard error is not used. The respondent file is held under the World Bank Microdata Research License and is never redistributed, committed to this repository or published.",
+   "new": "Withdrawn (close-out CR-02, 10 October 2026): the World Bank publishes its design effect and sample size for the whole sample only, so no interval is computed for population groups or for the differences between them, and none is published. Previous record: Point estimate 5.4%; 95% confidence interval 3.2% to 7.7%; base 500 respondents; design effect 1.28. CauseWay derivation: Hajek ratio estimator with Taylor-linearization variance on the published survey weight (wgt) only. The public-use file carries no PSU or stratum identifier, so clustering is not captured and the true interval may be wider, never narrower. A simple binomial standard error is not used. The respondent file is held under the World Bank Microdata Research License and is never redistributed, committed to this repository or published."
+  },
+  {
+   "finding": "CLOSE-2A:CR-02",
+   "sheet": "25_FINDEX_BASELINE",
+   "row": 17,
+   "col": 6,
+   "field": "CW-FINDEX-MOE-2022-003.value",
+   "old": "3.7",
+   "new": null
+  },
+  {
+   "finding": "CLOSE-2A:CR-02",
+   "sheet": "25_FINDEX_BASELINE",
+   "row": 17,
+   "col": 10,
+   "field": "CW-FINDEX-MOE-2022-003.evidence_state",
+   "old": "CAUSEWAY_DERIVED_INTERVAL",
+   "new": "WITHDRAWN__NO_PUBLISHED_GROUP_DESIGN"
+  },
+  {
+   "finding": "CLOSE-2A:CR-02",
+   "sheet": "25_FINDEX_BASELINE",
+   "row": 17,
+   "col": 11,
+   "field": "CW-FINDEX-MOE-2022-003.caveat",
+   "old": "Point estimate 18.3%; 95% confidence interval 14.6% to 22.1%; base 500 respondents; design effect 1.21. CauseWay derivation: Hajek ratio estimator with Taylor-linearization variance on the published survey weight (wgt) only. The public-use file carries no PSU or stratum identifier, so clustering is not captured and the true interval may be wider, never narrower. A simple binomial standard error is not used. The respondent file is held under the World Bank Microdata Research License and is never redistributed, committed to this repository or published.",
+   "new": "Withdrawn (close-out CR-02, 10 October 2026): the World Bank publishes its design effect and sample size for the whole sample only, so no interval is computed for population groups or for the differences between them, and none is published. Previous record: Point estimate 18.3%; 95% confidence interval 14.6% to 22.1%; base 500 respondents; design effect 1.21. CauseWay derivation: Hajek ratio estimator with Taylor-linearization variance on the published survey weight (wgt) only. The public-use file carries no PSU or stratum identifier, so clustering is not captured and the true interval may be wider, never narrower. A simple binomial standard error is not used. The respondent file is held under the World Bank Microdata Research License and is never redistributed, committed to this repository or published."
+  },
+  {
+   "finding": "CLOSE-2A:CR-02",
+   "sheet": "25_FINDEX_BASELINE",
+   "row": 18,
+   "col": 6,
+   "field": "CW-FINDEX-MOE-2022-004.value",
+   "old": "2.4",
+   "new": null
+  },
+  {
+   "finding": "CLOSE-2A:CR-02",
+   "sheet": "25_FINDEX_BASELINE",
+   "row": 18,
+   "col": 10,
+   "field": "CW-FINDEX-MOE-2022-004.evidence_state",
+   "old": "CAUSEWAY_DERIVED_INTERVAL",
+   "new": "WITHDRAWN__NO_PUBLISHED_GROUP_DESIGN"
+  },
+  {
+   "finding": "CLOSE-2A:CR-02",
+   "sheet": "25_FINDEX_BASELINE",
+   "row": 18,
+   "col": 11,
+   "field": "CW-FINDEX-MOE-2022-004.caveat",
+   "old": "Point estimate 6.5%; 95% confidence interval 4.1% to 8.9%; base 366 respondents; design effect 0.93. CauseWay derivation: Hajek ratio estimator with Taylor-linearization variance on the published survey weight (wgt) only. The public-use file carries no PSU or stratum identifier, so clustering is not captured and the true interval may be wider, never narrower. A simple binomial standard error is not used. The respondent file is held under the World Bank Microdata Research License and is never redistributed, committed to this repository or published.",
+   "new": "Withdrawn (close-out CR-02, 10 October 2026): the World Bank publishes its design effect and sample size for the whole sample only, so no interval is computed for population groups or for the differences between them, and none is published. Previous record: Point estimate 6.5%; 95% confidence interval 4.1% to 8.9%; base 366 respondents; design effect 0.93. CauseWay derivation: Hajek ratio estimator with Taylor-linearization variance on the published survey weight (wgt) only. The public-use file carries no PSU or stratum identifier, so clustering is not captured and the true interval may be wider, never narrower. A simple binomial standard error is not used. The respondent file is held under the World Bank Microdata Research License and is never redistributed, committed to this repository or published."
+  },
+  {
+   "finding": "CLOSE-2A:CR-02",
+   "sheet": "25_FINDEX_BASELINE",
+   "row": 19,
+   "col": 6,
+   "field": "CW-FINDEX-MOE-2022-005.value",
+   "old": "3.2",
+   "new": null
+  },
+  {
+   "finding": "CLOSE-2A:CR-02",
+   "sheet": "25_FINDEX_BASELINE",
+   "row": 19,
+   "col": 10,
+   "field": "CW-FINDEX-MOE-2022-005.evidence_state",
+   "old": "CAUSEWAY_DERIVED_INTERVAL",
+   "new": "WITHDRAWN__NO_PUBLISHED_GROUP_DESIGN"
+  },
+  {
+   "finding": "CLOSE-2A:CR-02",
+   "sheet": "25_FINDEX_BASELINE",
+   "row": 19,
+   "col": 11,
+   "field": "CW-FINDEX-MOE-2022-005.caveat",
+   "old": "Point estimate 15.5%; 95% confidence interval 12.3% to 18.7%; base 634 respondents; design effect 1.28. CauseWay derivation: Hajek ratio estimator with Taylor-linearization variance on the published survey weight (wgt) only. The public-use file carries no PSU or stratum identifier, so clustering is not captured and the true interval may be wider, never narrower. A simple binomial standard error is not used. The respondent file is held under the World Bank Microdata Research License and is never redistributed, committed to this repository or published.",
+   "new": "Withdrawn (close-out CR-02, 10 October 2026): the World Bank publishes its design effect and sample size for the whole sample only, so no interval is computed for population groups or for the differences between them, and none is published. Previous record: Point estimate 15.5%; 95% confidence interval 12.3% to 18.7%; base 634 respondents; design effect 1.28. CauseWay derivation: Hajek ratio estimator with Taylor-linearization variance on the published survey weight (wgt) only. The public-use file carries no PSU or stratum identifier, so clustering is not captured and the true interval may be wider, never narrower. A simple binomial standard error is not used. The respondent file is held under the World Bank Microdata Research License and is never redistributed, committed to this repository or published."
+  },
+  {
+   "finding": "CLOSE-2A:CR-02",
+   "sheet": "25_FINDEX_BASELINE",
+   "row": 20,
+   "col": 6,
+   "field": "CW-FINDEX-MOE-2022-006.value",
+   "old": "2.5",
+   "new": null
+  },
+  {
+   "finding": "CLOSE-2A:CR-02",
+   "sheet": "25_FINDEX_BASELINE",
+   "row": 20,
+   "col": 10,
+   "field": "CW-FINDEX-MOE-2022-006.evidence_state",
+   "old": "CAUSEWAY_DERIVED_INTERVAL",
+   "new": "WITHDRAWN__NO_PUBLISHED_GROUP_DESIGN"
+  },
+  {
+   "finding": "CLOSE-2A:CR-02",
+   "sheet": "25_FINDEX_BASELINE",
+   "row": 20,
+   "col": 11,
+   "field": "CW-FINDEX-MOE-2022-006.caveat",
+   "old": "Point estimate 7.0%; 95% confidence interval 4.5% to 9.5%; base 430 respondents; design effect 1.07. CauseWay derivation: Hajek ratio estimator with Taylor-linearization variance on the published survey weight (wgt) only. The public-use file carries no PSU or stratum identifier, so clustering is not captured and the true interval may be wider, never narrower. A simple binomial standard error is not used. The respondent file is held under the World Bank Microdata Research License and is never redistributed, committed to this repository or published.",
+   "new": "Withdrawn (close-out CR-02, 10 October 2026): the World Bank publishes its design effect and sample size for the whole sample only, so no interval is computed for population groups or for the differences between them, and none is published. Previous record: Point estimate 7.0%; 95% confidence interval 4.5% to 9.5%; base 430 respondents; design effect 1.07. CauseWay derivation: Hajek ratio estimator with Taylor-linearization variance on the published survey weight (wgt) only. The public-use file carries no PSU or stratum identifier, so clustering is not captured and the true interval may be wider, never narrower. A simple binomial standard error is not used. The respondent file is held under the World Bank Microdata Research License and is never redistributed, committed to this repository or published."
+  },
+  {
+   "finding": "CLOSE-2A:CR-02",
+   "sheet": "25_FINDEX_BASELINE",
+   "row": 21,
+   "col": 6,
+   "field": "CW-FINDEX-MOE-2022-007.value",
+   "old": "3.9",
+   "new": null
+  },
+  {
+   "finding": "CLOSE-2A:CR-02",
+   "sheet": "25_FINDEX_BASELINE",
+   "row": 21,
+   "col": 10,
+   "field": "CW-FINDEX-MOE-2022-007.evidence_state",
+   "old": "CAUSEWAY_DERIVED_INTERVAL",
+   "new": "WITHDRAWN__NO_PUBLISHED_GROUP_DESIGN"
+  },
+  {
+   "finding": "CLOSE-2A:CR-02",
+   "sheet": "25_FINDEX_BASELINE",
+   "row": 21,
+   "col": 11,
+   "field": "CW-FINDEX-MOE-2022-007.caveat",
+   "old": "Point estimate 19.5%; 95% confidence interval 15.7% to 23.4%; base 569 respondents; design effect 1.40. CauseWay derivation: Hajek ratio estimator with Taylor-linearization variance on the published survey weight (wgt) only. The public-use file carries no PSU or stratum identifier, so clustering is not captured and the true interval may be wider, never narrower. A simple binomial standard error is not used. The respondent file is held under the World Bank Microdata Research License and is never redistributed, committed to this repository or published.",
+   "new": "Withdrawn (close-out CR-02, 10 October 2026): the World Bank publishes its design effect and sample size for the whole sample only, so no interval is computed for population groups or for the differences between them, and none is published. Previous record: Point estimate 19.5%; 95% confidence interval 15.7% to 23.4%; base 569 respondents; design effect 1.40. CauseWay derivation: Hajek ratio estimator with Taylor-linearization variance on the published survey weight (wgt) only. The public-use file carries no PSU or stratum identifier, so clustering is not captured and the true interval may be wider, never narrower. A simple binomial standard error is not used. The respondent file is held under the World Bank Microdata Research License and is never redistributed, committed to this repository or published."
+  },
+  {
+   "finding": "CLOSE-2A:CR-02",
+   "sheet": "25_FINDEX_BASELINE",
+   "row": 22,
+   "col": 6,
+   "field": "CW-FINDEX-MOE-2022-008.value",
+   "old": "2.6",
+   "new": null
+  },
+  {
+   "finding": "CLOSE-2A:CR-02",
+   "sheet": "25_FINDEX_BASELINE",
+   "row": 22,
+   "col": 10,
+   "field": "CW-FINDEX-MOE-2022-008.evidence_state",
+   "old": "CAUSEWAY_DERIVED_INTERVAL",
+   "new": "WITHDRAWN__NO_PUBLISHED_GROUP_DESIGN"
+  },
+  {
+   "finding": "CLOSE-2A:CR-02",
+   "sheet": "25_FINDEX_BASELINE",
+   "row": 22,
+   "col": 11,
+   "field": "CW-FINDEX-MOE-2022-008.caveat",
+   "old": "Point estimate 5.0%; 95% confidence interval 2.5% to 7.6%; base 230 respondents; design effect 0.82. CauseWay derivation: Hajek ratio estimator with Taylor-linearization variance on the published survey weight (wgt) only. The public-use file carries no PSU or stratum identifier, so clustering is not captured and the true interval may be wider, never narrower. A simple binomial standard error is not used. The respondent file is held under the World Bank Microdata Research License and is never redistributed, committed to this repository or published.",
+   "new": "Withdrawn (close-out CR-02, 10 October 2026): the World Bank publishes its design effect and sample size for the whole sample only, so no interval is computed for population groups or for the differences between them, and none is published. Previous record: Point estimate 5.0%; 95% confidence interval 2.5% to 7.6%; base 230 respondents; design effect 0.82. CauseWay derivation: Hajek ratio estimator with Taylor-linearization variance on the published survey weight (wgt) only. The public-use file carries no PSU or stratum identifier, so clustering is not captured and the true interval may be wider, never narrower. A simple binomial standard error is not used. The respondent file is held under the World Bank Microdata Research License and is never redistributed, committed to this repository or published."
+  },
+  {
+   "finding": "CLOSE-2A:CR-02",
+   "sheet": "25_FINDEX_BASELINE",
+   "row": 23,
+   "col": 6,
+   "field": "CW-FINDEX-MOE-2022-009.value",
+   "old": "3.1",
+   "new": null
+  },
+  {
+   "finding": "CLOSE-2A:CR-02",
+   "sheet": "25_FINDEX_BASELINE",
+   "row": 23,
+   "col": 10,
+   "field": "CW-FINDEX-MOE-2022-009.evidence_state",
+   "old": "CAUSEWAY_DERIVED_INTERVAL",
+   "new": "WITHDRAWN__NO_PUBLISHED_GROUP_DESIGN"
+  },
+  {
+   "finding": "CLOSE-2A:CR-02",
+   "sheet": "25_FINDEX_BASELINE",
+   "row": 23,
+   "col": 11,
+   "field": "CW-FINDEX-MOE-2022-009.caveat",
+   "old": "Point estimate 16.1%; 95% confidence interval 13.1% to 19.2%; base 770 respondents; design effect 1.38. CauseWay derivation: Hajek ratio estimator with Taylor-linearization variance on the published survey weight (wgt) only. The public-use file carries no PSU or stratum identifier, so clustering is not captured and the true interval may be wider, never narrower. A simple binomial standard error is not used. The respondent file is held under the World Bank Microdata Research License and is never redistributed, committed to this repository or published.",
+   "new": "Withdrawn (close-out CR-02, 10 October 2026): the World Bank publishes its design effect and sample size for the whole sample only, so no interval is computed for population groups or for the differences between them, and none is published. Previous record: Point estimate 16.1%; 95% confidence interval 13.1% to 19.2%; base 770 respondents; design effect 1.38. CauseWay derivation: Hajek ratio estimator with Taylor-linearization variance on the published survey weight (wgt) only. The public-use file carries no PSU or stratum identifier, so clustering is not captured and the true interval may be wider, never narrower. A simple binomial standard error is not used. The respondent file is held under the World Bank Microdata Research License and is never redistributed, committed to this repository or published."
+  },
+  {
+   "finding": "CLOSE-2A:CR-02",
+   "sheet": "25_FINDEX_BASELINE",
+   "row": 24,
+   "col": 6,
+   "field": "CW-FINDEX-MOE-2022-010.value",
+   "old": "4.4",
+   "new": null
+  },
+  {
+   "finding": "CLOSE-2A:CR-02",
+   "sheet": "25_FINDEX_BASELINE",
+   "row": 24,
+   "col": 10,
+   "field": "CW-FINDEX-MOE-2022-010.evidence_state",
+   "old": "CAUSEWAY_DERIVED_INTERVAL",
+   "new": "WITHDRAWN__NO_PUBLISHED_GROUP_DESIGN"
+  },
+  {
+   "finding": "CLOSE-2A:CR-02",
+   "sheet": "25_FINDEX_BASELINE",
+   "row": 24,
+   "col": 11,
+   "field": "CW-FINDEX-MOE-2022-010.caveat",
+   "old": "Difference of the two printed shares 12.9 points; 95% confidence interval 8.5 to 17.3 points. The two groups are disjoint samples, so the standard error of the difference is the root of the sum of their squared standard errors. The two bases are 500 and 500 respondents. CauseWay derivation: Hajek ratio estimator with Taylor-linearization variance on the published survey weight (wgt) only. The public-use file carries no PSU or stratum identifier, so clustering is not captured and the true interval may be wider, never narrower. A simple binomial standard error is not used. The respondent file is held under the World Bank Microdata Research License and is never redistributed, committed to this repository or published.",
+   "new": "Withdrawn (close-out CR-02, 10 October 2026): the World Bank publishes its design effect and sample size for the whole sample only, so no interval is computed for population groups or for the differences between them, and none is published. Previous record: Difference of the two printed shares 12.9 points; 95% confidence interval 8.5 to 17.3 points. The two groups are disjoint samples, so the standard error of the difference is the root of the sum of their squared standard errors. The two bases are 500 and 500 respondents. CauseWay derivation: Hajek ratio estimator with Taylor-linearization variance on the published survey weight (wgt) only. The public-use file carries no PSU or stratum identifier, so clustering is not captured and the true interval may be wider, never narrower. A simple binomial standard error is not used. The respondent file is held under the World Bank Microdata Research License and is never redistributed, committed to this repository or published."
+  },
+  {
+   "finding": "CLOSE-2A:CR-02",
+   "sheet": "25_FINDEX_BASELINE",
+   "row": 25,
+   "col": 6,
+   "field": "CW-FINDEX-MOE-2022-011.value",
+   "old": "4.0",
+   "new": null
+  },
+  {
+   "finding": "CLOSE-2A:CR-02",
+   "sheet": "25_FINDEX_BASELINE",
+   "row": 25,
+   "col": 10,
+   "field": "CW-FINDEX-MOE-2022-011.evidence_state",
+   "old": "CAUSEWAY_DERIVED_INTERVAL",
+   "new": "WITHDRAWN__NO_PUBLISHED_GROUP_DESIGN"
+  },
+  {
+   "finding": "CLOSE-2A:CR-02",
+   "sheet": "25_FINDEX_BASELINE",
+   "row": 25,
+   "col": 11,
+   "field": "CW-FINDEX-MOE-2022-011.caveat",
+   "old": "Difference of the two printed shares 9.0 points; 95% confidence interval 5.0 to 13.0 points. The two groups are disjoint samples, so the standard error of the difference is the root of the sum of their squared standard errors. The two bases are 366 and 634 respondents. CauseWay derivation: Hajek ratio estimator with Taylor-linearization variance on the published survey weight (wgt) only. The public-use file carries no PSU or stratum identifier, so clustering is not captured and the true interval may be wider, never narrower. A simple binomial standard error is not used. The respondent file is held under the World Bank Microdata Research License and is never redistributed, committed to this repository or published.",
+   "new": "Withdrawn (close-out CR-02, 10 October 2026): the World Bank publishes its design effect and sample size for the whole sample only, so no interval is computed for population groups or for the differences between them, and none is published. Previous record: Difference of the two printed shares 9.0 points; 95% confidence interval 5.0 to 13.0 points. The two groups are disjoint samples, so the standard error of the difference is the root of the sum of their squared standard errors. The two bases are 366 and 634 respondents. CauseWay derivation: Hajek ratio estimator with Taylor-linearization variance on the published survey weight (wgt) only. The public-use file carries no PSU or stratum identifier, so clustering is not captured and the true interval may be wider, never narrower. A simple binomial standard error is not used. The respondent file is held under the World Bank Microdata Research License and is never redistributed, committed to this repository or published."
+  },
+  {
+   "finding": "CLOSE-2A:CR-02",
+   "sheet": "25_FINDEX_BASELINE",
+   "row": 26,
+   "col": 6,
+   "field": "CW-FINDEX-MOE-2022-012.value",
+   "old": "4.6",
+   "new": null
+  },
+  {
+   "finding": "CLOSE-2A:CR-02",
+   "sheet": "25_FINDEX_BASELINE",
+   "row": 26,
+   "col": 10,
+   "field": "CW-FINDEX-MOE-2022-012.evidence_state",
+   "old": "CAUSEWAY_DERIVED_INTERVAL",
+   "new": "WITHDRAWN__NO_PUBLISHED_GROUP_DESIGN"
+  },
+  {
+   "finding": "CLOSE-2A:CR-02",
+   "sheet": "25_FINDEX_BASELINE",
+   "row": 26,
+   "col": 11,
+   "field": "CW-FINDEX-MOE-2022-012.caveat",
+   "old": "Difference of the two printed shares 12.5 points; 95% confidence interval 7.9 to 17.1 points. The two groups are disjoint samples, so the standard error of the difference is the root of the sum of their squared standard errors. The two bases are 430 and 569 respondents. CauseWay derivation: Hajek ratio estimator with Taylor-linearization variance on the published survey weight (wgt) only. The public-use file carries no PSU or stratum identifier, so clustering is not captured and the true interval may be wider, never narrower. A simple binomial standard error is not used. The respondent file is held under the World Bank Microdata Research License and is never redistributed, committed to this repository or published.",
+   "new": "Withdrawn (close-out CR-02, 10 October 2026): the World Bank publishes its design effect and sample size for the whole sample only, so no interval is computed for population groups or for the differences between them, and none is published. Previous record: Difference of the two printed shares 12.5 points; 95% confidence interval 7.9 to 17.1 points. The two groups are disjoint samples, so the standard error of the difference is the root of the sum of their squared standard errors. The two bases are 430 and 569 respondents. CauseWay derivation: Hajek ratio estimator with Taylor-linearization variance on the published survey weight (wgt) only. The public-use file carries no PSU or stratum identifier, so clustering is not captured and the true interval may be wider, never narrower. A simple binomial standard error is not used. The respondent file is held under the World Bank Microdata Research License and is never redistributed, committed to this repository or published."
+  },
+  {
+   "finding": "CLOSE-2A:CR-02",
+   "sheet": "25_FINDEX_BASELINE",
+   "row": 27,
+   "col": 6,
+   "field": "CW-FINDEX-MOE-2022-013.value",
+   "old": "4.0",
+   "new": null
+  },
+  {
+   "finding": "CLOSE-2A:CR-02",
+   "sheet": "25_FINDEX_BASELINE",
+   "row": 27,
+   "col": 10,
+   "field": "CW-FINDEX-MOE-2022-013.evidence_state",
+   "old": "CAUSEWAY_DERIVED_INTERVAL",
+   "new": "WITHDRAWN__NO_PUBLISHED_GROUP_DESIGN"
+  },
+  {
+   "finding": "CLOSE-2A:CR-02",
+   "sheet": "25_FINDEX_BASELINE",
+   "row": 27,
+   "col": 11,
+   "field": "CW-FINDEX-MOE-2022-013.caveat",
+   "old": "Difference of the two printed shares 11.1 points; 95% confidence interval 7.1 to 15.1 points. The two groups are disjoint samples, so the standard error of the difference is the root of the sum of their squared standard errors. The two bases are 770 and 230 respondents. CauseWay derivation: Hajek ratio estimator with Taylor-linearization variance on the published survey weight (wgt) only. The public-use file carries no PSU or stratum identifier, so clustering is not captured and the true interval may be wider, never narrower. A simple binomial standard error is not used. The respondent file is held under the World Bank Microdata Research License and is never redistributed, committed to this repository or published.",
+   "new": "Withdrawn (close-out CR-02, 10 October 2026): the World Bank publishes its design effect and sample size for the whole sample only, so no interval is computed for population groups or for the differences between them, and none is published. Previous record: Difference of the two printed shares 11.1 points; 95% confidence interval 7.1 to 15.1 points. The two groups are disjoint samples, so the standard error of the difference is the root of the sum of their squared standard errors. The two bases are 770 and 230 respondents. CauseWay derivation: Hajek ratio estimator with Taylor-linearization variance on the published survey weight (wgt) only. The public-use file carries no PSU or stratum identifier, so clustering is not captured and the true interval may be wider, never narrower. A simple binomial standard error is not used. The respondent file is held under the World Bank Microdata Research License and is never redistributed, committed to this repository or published."
+  },
+  {
+   "finding": "CLOSE-2A:CR-01",
+   "sheet": "25_FINDEX_BASELINE",
+   "row": 5,
+   "col": 11,
+   "field": "WB-FINDEX-OBS-2022-001.caveat",
+   "old": "Latest Yemen year is 2022; do not label as 2021 calendar-year fieldwork.",
+   "new": "Latest Yemen year is 2022; do not label as 2021 calendar-year fieldwork. In Yemen's survey the mobile-money questions were not asked: fiaccount.t.d equals account.t.d (11.9033656433415) and mobileaccount.t.d is empty for Yemen (open API, source 28, read 10 October 2026)."
+  },
+  {
+   "finding": "CLOSE-2A:CR-02",
+   "sheet": "15_SOURCE_LIBRARY",
+   "row": 50,
+   "col": 3,
+   "field": "SRC-WB-FINDEX-001.additional_urls",
+   "old": null,
+   "new": "[\"https://thedocs.worldbank.org/en/doc/fe026d04da1eb78f5ce8bb5e1529d60b-0430062023/original/Findex2021-22-Methodology.pdf\"]"
+  }
+ ]
+}

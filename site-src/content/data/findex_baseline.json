@@ -64,7 +64,7 @@
       "World Bank Global Findex",
       "https://data.worldbank.org/indicator/FX.OWN.TOTL.ZS?locations=YE",
       "PUBLIC_PRIMARY_AGGREGATE",
-      "Latest Yemen year is 2022; do not label as 2021 calendar-year fieldwork."
+      "Latest Yemen year is 2022; do not label as 2021 calendar-year fieldwork. In Yemen's survey the mobile-money questions were not asked: fiaccount.t.d equals account.t.d (11.9033656433415) and mobileaccount.t.d is empty for Yemen (open API, source 28, read 10 October 2026)."
     ],
     [
       "WB-FINDEX-OBS-2022-002",
@@ -189,12 +189,12 @@
       "Account ownership (any) - 95% margin of error",
       "total",
       2022,
-      2.2,
-      "percentage points (95% margin of error, design-based)",
-      "CauseWay derivation from World Bank Global Findex 2021 Yemen microdata",
-      "https://microdata.worldbank.org/catalog/5862",
-      "CAUSEWAY_DERIVED_INTERVAL",
-      "Point estimate 11.9%; 95% confidence interval 9.7% to 14.1%; base 1000 respondents; design effect 1.16. CauseWay derivation: Hajek ratio estimator with Taylor-linearization variance on the published survey weight (wgt) only. The public-use file carries no PSU or stratum identifier, so clustering is not captured and the true interval may be wider, never narrower. A simple binomial standard error is not used. The respondent file is held under the World Bank Microdata Research License and is never redistributed, committed to this repository or published."
+      2.8,
+      "percentage points (95% margin of error, from the published design effect)",
+      "CauseWay computation from World Bank published values and design effect",
+      "https://thedocs.worldbank.org/en/doc/fe026d04da1eb78f5ce8bb5e1529d60b-0430062023/original/Findex2021-22-Methodology.pdf",
+      "CAUSEWAY_COMPUTED_INTERVAL",
+      "Point estimate 11.9%; 95% confidence interval 9.1% to 14.7%; base 1,000 interviews (the whole sample); design effect 1.9, the value the World Bank publishes for Yemen's survey (The Global Findex Database 2021, Appendix A, Table A.1, printed p.17). CauseWay computation (close-out CR-02, 10 October 2026): margin = 1.96 x sqrt(1.9) x sqrt(p(1-p)/1,000), the World Bank's own margin-of-error formula (Table A.1, footnote c), applied to the World Bank's published unrounded value p (11.9033656433415). No respondent-level data are used. This replaces the earlier derivation from the respondent file (FC-1), withdrawn under brief v5. Previous record: Point estimate 11.9%; 95% confidence interval 9.7% to 14.1%; base 1000 respondents; design effect 1.16. CauseWay derivation: Hajek ratio estimator with Taylor-linearization variance on the published survey weight (wgt) only. The public-use file carries no PSU or stratum identifier, so clustering is not captured and the true interval may be wider, never narrower. A simple binomial standard error is not used. The respondent file is held under the World Bank Microdata Research License and is never redistributed, committed to this repository or published."
     ],
     [
       "CW-FINDEX-MOE-2022-002",
@@ -202,12 +202,12 @@
       "Account ownership (any) - 95% margin of error",
       "female",
       2022,
-      2.2,
+      null,
       "percentage points (95% margin of error, design-based)",
       "CauseWay derivation from World Bank Global Findex 2021 Yemen microdata",
       "https://microdata.worldbank.org/catalog/5862",
-      "CAUSEWAY_DERIVED_INTERVAL",
-      "Point estimate 5.4%; 95% confidence interval 3.2% to 7.7%; base 500 respondents; design effect 1.28. CauseWay derivation: Hajek ratio estimator with Taylor-linearization variance on the published survey weight (wgt) only. The public-use file carries no PSU or stratum identifier, so clustering is not captured and the true interval may be wider, never narrower. A simple binomial standard error is not used. The respondent file is held under the World Bank Microdata Research License and is never redistributed, committed to this repository or published."
+      "WITHDRAWN__NO_PUBLISHED_GROUP_DESIGN",
+      "Withdrawn (close-out CR-02, 10 October 2026): the World Bank publishes its design effect and sample size for the whole sample only, so no interval is computed for population groups or for the differences between them, and none is published. Previous record: Point estimate 5.4%; 95% confidence interval 3.2% to 7.7%; base 500 respondents; design effect 1.28. CauseWay derivation: Hajek ratio estimator with Taylor-linearization variance on the published survey weight (wgt) only. The public-use file carries no PSU or stratum identifier, so clustering is not captured and the true interval may be wider, never narrower. A simple binomial standard error is not used. The respondent file is held under the World Bank Microdata Research License and is never redistributed, committed to this repository or published."
     ],
     [
       "CW-FINDEX-MOE-2022-003",
@@ -215,12 +215,12 @@
       "Account ownership (any) - 95% margin of error",
       "male",
       2022,
-      3.7,
+      null,
       "percentage points (95% margin of error, design-based)",
       "CauseWay derivation from World Bank Global Findex 2021 Yemen microdata",
       "https://microdata.worldbank.org/catalog/5862",
-      "CAUSEWAY_DERIVED_INTERVAL",
-      "Point estimate 18.3%; 95% confidence interval 14.6% to 22.1%; base 500 respondents; design effect 1.21. CauseWay derivation: Hajek ratio estimator with Taylor-linearization variance on the published survey weight (wgt) only. The public-use file carries no PSU or stratum identifier, so clustering is not captured and the true interval may be wider, never narrower. A simple binomial standard error is not used. The respondent file is held under the World Bank Microdata Research License and is never redistributed, committed to this repository or published."
+      "WITHDRAWN__NO_PUBLISHED_GROUP_DESIGN",
+      "Withdrawn (close-out CR-02, 10 October 2026): the World Bank publishes its design effect and sample size for the whole sample only, so no interval is computed for population groups or for the differences between them, and none is published. Previous record: Point estimate 18.3%; 95% confidence interval 14.6% to 22.1%; base 500 respondents; design effect 1.21. CauseWay derivation: Hajek ratio estimator with Taylor-linearization variance on the published survey weight (wgt) only. The public-use file carries no PSU or stratum identifier, so clustering is not captured and the true interval may be wider, never narrower. A simple binomial standard error is not used. The respondent file is held under the World Bank Microdata Research License and is never redistributed, committed to this repository or published."
     ],
     [
       "CW-FINDEX-MOE-2022-004",
@@ -228,12 +228,12 @@
       "Account ownership (any) - 95% margin of error",
       "poorest 40%",
       2022,
-      2.4,
+      null,
       "percentage points (95% margin of error, design-based)",
       "CauseWay derivation from World Bank Global Findex 2021 Yemen microdata",
       "https://microdata.worldbank.org/catalog/5862",
-      "CAUSEWAY_DERIVED_INTERVAL",
-      "Point estimate 6.5%; 95% confidence interval 4.1% to 8.9%; base 366 respondents; design effect 0.93. CauseWay derivation: Hajek ratio estimator with Taylor-linearization variance on the published survey weight (wgt) only. The public-use file carries no PSU or stratum identifier, so clustering is not captured and the true interval may be wider, never narrower. A simple binomial standard error is not used. The respondent file is held under the World Bank Microdata Research License and is never redistributed, committed to this repository or published."
+      "WITHDRAWN__NO_PUBLISHED_GROUP_DESIGN",
+      "Withdrawn (close-out CR-02, 10 October 2026): the World Bank publishes its design effect and sample size for the whole sample only, so no interval is computed for population groups or for the differences between them, and none is published. Previous record: Point estimate 6.5%; 95% confidence interval 4.1% to 8.9%; base 366 respondents; design effect 0.93. CauseWay derivation: Hajek ratio estimator with Taylor-linearization variance on the published survey weight (wgt) only. The public-use file carries no PSU or stratum identifier, so clustering is not captured and the true interval may be wider, never narrower. A simple binomial standard error is not used. The respondent file is held under the World Bank Microdata Research License and is never redistributed, committed to this repository or published."
     ],
     [
       "CW-FINDEX-MOE-2022-005",
@@ -241,12 +241,12 @@
       "Account ownership (any) - 95% margin of error",
       "richest 60%",
       2022,
-      3.2,
+      null,
       "percentage points (95% margin of error, design-based)",
       "CauseWay derivation from World Bank Global Findex 2021 Yemen microdata",
       "https://microdata.worldbank.org/catalog/5862",
-      "CAUSEWAY_DERIVED_INTERVAL",
-      "Point estimate 15.5%; 95% confidence interval 12.3% to 18.7%; base 634 respondents; design effect 1.28. CauseWay derivation: Hajek ratio estimator with Taylor-linearization variance on the published survey weight (wgt) only. The public-use file carries no PSU or stratum identifier, so clustering is not captured and the true interval may be wider, never narrower. A simple binomial standard error is not used. The respondent file is held under the World Bank Microdata Research License and is never redistributed, committed to this repository or published."
+      "WITHDRAWN__NO_PUBLISHED_GROUP_DESIGN",
+      "Withdrawn (close-out CR-02, 10 October 2026): the World Bank publishes its design effect and sample size for the whole sample only, so no interval is computed for population groups or for the differences between them, and none is published. Previous record: Point estimate 15.5%; 95% confidence interval 12.3% to 18.7%; base 634 respondents; design effect 1.28. CauseWay derivation: Hajek ratio estimator with Taylor-linearization variance on the published survey weight (wgt) only. The public-use file carries no PSU or stratum identifier, so clustering is not captured and the true interval may be wider, never narrower. A simple binomial standard error is not used. The respondent file is held under the World Bank Microdata Research License and is never redistributed, committed to this repository or published."
     ],
     [
       "CW-FINDEX-MOE-2022-006",
@@ -254,12 +254,12 @@
       "Account ownership (any) - 95% margin of error",
       "primary education or less",
       2022,
-      2.5,
+      null,
       "percentage points (95% margin of error, design-based)",
       "CauseWay derivation from World Bank Global Findex 2021 Yemen microdata",
       "https://microdata.worldbank.org/catalog/5862",
-      "CAUSEWAY_DERIVED_INTERVAL",
-      "Point estimate 7.0%; 95% confidence interval 4.5% to 9.5%; base 430 respondents; design effect 1.07. CauseWay derivation: Hajek ratio estimator with Taylor-linearization variance on the published survey weight (wgt) only. The public-use file carries no PSU or stratum identifier, so clustering is not captured and the true interval may be wider, never narrower. A simple binomial standard error is not used. The respondent file is held under the World Bank Microdata Research License and is never redistributed, committed to this repository or published."
+      "WITHDRAWN__NO_PUBLISHED_GROUP_DESIGN",
+      "Withdrawn (close-out CR-02, 10 October 2026): the World Bank publishes its design effect and sample size for the whole sample only, so no interval is computed for population groups or for the differences between them, and none is published. Previous record: Point estimate 7.0%; 95% confidence interval 4.5% to 9.5%; base 430 respondents; design effect 1.07. CauseWay derivation: Hajek ratio estimator with Taylor-linearization variance on the published survey weight (wgt) only. The public-use file carries no PSU or stratum identifier, so clustering is not captured and the true interval may be wider, never narrower. A simple binomial standard error is not used. The respondent file is held under the World Bank Microdata Research License and is never redistributed, committed to this repository or published."
     ],
     [
       "CW-FINDEX-MOE-2022-007",
@@ -267,12 +267,12 @@
       "Account ownership (any) - 95% margin of error",
       "secondary education or more",
       2022,
-      3.9,
+      null,
       "percentage points (95% margin of error, design-based)",
       "CauseWay derivation from World Bank Global Findex 2021 Yemen microdata",
       "https://microdata.worldbank.org/catalog/5862",
-      "CAUSEWAY_DERIVED_INTERVAL",
-      "Point estimate 19.5%; 95% confidence interval 15.7% to 23.4%; base 569 respondents; design effect 1.40. CauseWay derivation: Hajek ratio estimator with Taylor-linearization variance on the published survey weight (wgt) only. The public-use file carries no PSU or stratum identifier, so clustering is not captured and the true interval may be wider, never narrower. A simple binomial standard error is not used. The respondent file is held under the World Bank Microdata Research License and is never redistributed, committed to this repository or published."
+      "WITHDRAWN__NO_PUBLISHED_GROUP_DESIGN",
+      "Withdrawn (close-out CR-02, 10 October 2026): the World Bank publishes its design effect and sample size for the whole sample only, so no interval is computed for population groups or for the differences between them, and none is published. Previous record: Point estimate 19.5%; 95% confidence interval 15.7% to 23.4%; base 569 respondents; design effect 1.40. CauseWay derivation: Hajek ratio estimator with Taylor-linearization variance on the published survey weight (wgt) only. The public-use file carries no PSU or stratum identifier, so clustering is not captured and the true interval may be wider, never narrower. A simple binomial standard error is not used. The respondent file is held under the World Bank Microdata Research License and is never redistributed, committed to this repository or published."
     ],
     [
       "CW-FINDEX-MOE-2022-008",
@@ -280,12 +280,12 @@
       "Account ownership (any) - 95% margin of error",
       "ages 15-24",
       2022,
-      2.6,
+      null,
       "percentage points (95% margin of error, design-based)",
       "CauseWay derivation from World Bank Global Findex 2021 Yemen microdata",
       "https://microdata.worldbank.org/catalog/5862",
-      "CAUSEWAY_DERIVED_INTERVAL",
-      "Point estimate 5.0%; 95% confidence interval 2.5% to 7.6%; base 230 respondents; design effect 0.82. CauseWay derivation: Hajek ratio estimator with Taylor-linearization variance on the published survey weight (wgt) only. The public-use file carries no PSU or stratum identifier, so clustering is not captured and the true interval may be wider, never narrower. A simple binomial standard error is not used. The respondent file is held under the World Bank Microdata Research License and is never redistributed, committed to this repository or published."
+      "WITHDRAWN__NO_PUBLISHED_GROUP_DESIGN",
+      "Withdrawn (close-out CR-02, 10 October 2026): the World Bank publishes its design effect and sample size for the whole sample only, so no interval is computed for population groups or for the differences between them, and none is published. Previous record: Point estimate 5.0%; 95% confidence interval 2.5% to 7.6%; base 230 respondents; design effect 0.82. CauseWay derivation: Hajek ratio estimator with Taylor-linearization variance on the published survey weight (wgt) only. The public-use file carries no PSU or stratum identifier, so clustering is not captured and the true interval may be wider, never narrower. A simple binomial standard error is not used. The respondent file is held under the World Bank Microdata Research License and is never redistributed, committed to this repository or published."
     ],
     [
       "CW-FINDEX-MOE-2022-009",
@@ -293,12 +293,12 @@
       "Account ownership (any) - 95% margin of error",
       "ages 25+",
       2022,
-      3.1,
+      null,
       "percentage points (95% margin of error, design-based)",
       "CauseWay derivation from World Bank Global Findex 2021 Yemen microdata",
       "https://microdata.worldbank.org/catalog/5862",
-      "CAUSEWAY_DERIVED_INTERVAL",
-      "Point estimate 16.1%; 95% confidence interval 13.1% to 19.2%; base 770 respondents; design effect 1.38. CauseWay derivation: Hajek ratio estimator with Taylor-linearization variance on the published survey weight (wgt) only. The public-use file carries no PSU or stratum identifier, so clustering is not captured and the true interval may be wider, never narrower. A simple binomial standard error is not used. The respondent file is held under the World Bank Microdata Research License and is never redistributed, committed to this repository or published."
+      "WITHDRAWN__NO_PUBLISHED_GROUP_DESIGN",
+      "Withdrawn (close-out CR-02, 10 October 2026): the World Bank publishes its design effect and sample size for the whole sample only, so no interval is computed for population groups or for the differences between them, and none is published. Previous record: Point estimate 16.1%; 95% confidence interval 13.1% to 19.2%; base 770 respondents; design effect 1.38. CauseWay derivation: Hajek ratio estimator with Taylor-linearization variance on the published survey weight (wgt) only. The public-use file carries no PSU or stratum identifier, so clustering is not captured and the true interval may be wider, never narrower. A simple binomial standard error is not used. The respondent file is held under the World Bank Microdata Research License and is never redistributed, committed to this repository or published."
     ],
     [
       "CW-FINDEX-MOE-2022-010",
@@ -306,12 +306,12 @@
       "Account ownership (any) - 95% margin of error of a measured difference",
       "sex: male minus female",
       2022,
-      4.4,
+      null,
       "percentage points (95% margin of error, design-based)",
       "CauseWay derivation from World Bank Global Findex 2021 Yemen microdata",
       "https://microdata.worldbank.org/catalog/5862",
-      "CAUSEWAY_DERIVED_INTERVAL",
-      "Difference of the two printed shares 12.9 points; 95% confidence interval 8.5 to 17.3 points. The two groups are disjoint samples, so the standard error of the difference is the root of the sum of their squared standard errors. The two bases are 500 and 500 respondents. CauseWay derivation: Hajek ratio estimator with Taylor-linearization variance on the published survey weight (wgt) only. The public-use file carries no PSU or stratum identifier, so clustering is not captured and the true interval may be wider, never narrower. A simple binomial standard error is not used. The respondent file is held under the World Bank Microdata Research License and is never redistributed, committed to this repository or published."
+      "WITHDRAWN__NO_PUBLISHED_GROUP_DESIGN",
+      "Withdrawn (close-out CR-02, 10 October 2026): the World Bank publishes its design effect and sample size for the whole sample only, so no interval is computed for population groups or for the differences between them, and none is published. Previous record: Difference of the two printed shares 12.9 points; 95% confidence interval 8.5 to 17.3 points. The two groups are disjoint samples, so the standard error of the difference is the root of the sum of their squared standard errors. The two bases are 500 and 500 respondents. CauseWay derivation: Hajek ratio estimator with Taylor-linearization variance on the published survey weight (wgt) only. The public-use file carries no PSU or stratum identifier, so clustering is not captured and the true interval may be wider, never narrower. A simple binomial standard error is not used. The respondent file is held under the World Bank Microdata Research License and is never redistributed, committed to this repository or published."
     ],
     [
       "CW-FINDEX-MOE-2022-011",
@@ -319,12 +319,12 @@
       "Account ownership (any) - 95% margin of error of a measured difference",
       "income: richest 60% minus poorest 40%",
       2022,
-      4.0,
+      null,
       "percentage points (95% margin of error, design-based)",
       "CauseWay derivation from World Bank Global Findex 2021 Yemen microdata",
       "https://microdata.worldbank.org/catalog/5862",
-      "CAUSEWAY_DERIVED_INTERVAL",
-      "Difference of the two printed shares 9.0 points; 95% confidence interval 5.0 to 13.0 points. The two groups are disjoint samples, so the standard error of the difference is the root of the sum of their squared standard errors. The two bases are 366 and 634 respondents. CauseWay derivation: Hajek ratio estimator with Taylor-linearization variance on the published survey weight (wgt) only. The public-use file carries no PSU or stratum identifier, so clustering is not captured and the true interval may be wider, never narrower. A simple binomial standard error is not used. The respondent file is held under the World Bank Microdata Research License and is never redistributed, committed to this repository or published."
+      "WITHDRAWN__NO_PUBLISHED_GROUP_DESIGN",
+      "Withdrawn (close-out CR-02, 10 October 2026): the World Bank publishes its design effect and sample size for the whole sample only, so no interval is computed for population groups or for the differences between them, and none is published. Previous record: Difference of the two printed shares 9.0 points; 95% confidence interval 5.0 to 13.0 points. The two groups are disjoint samples, so the standard error of the difference is the root of the sum of their squared standard errors. The two bases are 366 and 634 respondents. CauseWay derivation: Hajek ratio estimator with Taylor-linearization variance on the published survey weight (wgt) only. The public-use file carries no PSU or stratum identifier, so clustering is not captured and the true interval may be wider, never narrower. A simple binomial standard error is not used. The respondent file is held under the World Bank Microdata Research License and is never redistributed, committed to this repository or published."
     ],
     [
       "CW-FINDEX-MOE-2022-012",
@@ -332,12 +332,12 @@
       "Account ownership (any) - 95% margin of error of a measured difference",
       "education: secondary or more minus primary or less",
       2022,
-      4.6,
+      null,
       "percentage points (95% margin of error, design-based)",
       "CauseWay derivation from World Bank Global Findex 2021 Yemen microdata",
       "https://microdata.worldbank.org/catalog/5862",
-      "CAUSEWAY_DERIVED_INTERVAL",
-      "Difference of the two printed shares 12.5 points; 95% confidence interval 7.9 to 17.1 points. The two groups are disjoint samples, so the standard error of the difference is the root of the sum of their squared standard errors. The two bases are 430 and 569 respondents. CauseWay derivation: Hajek ratio estimator with Taylor-linearization variance on the published survey weight (wgt) only. The public-use file carries no PSU or stratum identifier, so clustering is not captured and the true interval may be wider, never narrower. A simple binomial standard error is not used. The respondent file is held under the World Bank Microdata Research License and is never redistributed, committed to this repository or published."
+      "WITHDRAWN__NO_PUBLISHED_GROUP_DESIGN",
+      "Withdrawn (close-out CR-02, 10 October 2026): the World Bank publishes its design effect and sample size for the whole sample only, so no interval is computed for population groups or for the differences between them, and none is published. Previous record: Difference of the two printed shares 12.5 points; 95% confidence interval 7.9 to 17.1 points. The two groups are disjoint samples, so the standard error of the difference is the root of the sum of their squared standard errors. The two bases are 430 and 569 respondents. CauseWay derivation: Hajek ratio estimator with Taylor-linearization variance on the published survey weight (wgt) only. The public-use file carries no PSU or stratum identifier, so clustering is not captured and the true interval may be wider, never narrower. A simple binomial standard error is not used. The respondent file is held under the World Bank Microdata Research License and is never redistributed, committed to this repository or published."
     ],
     [
       "CW-FINDEX-MOE-2022-013",
@@ -345,12 +345,12 @@
       "Account ownership (any) - 95% margin of error of a measured difference",
       "age: ages 25+ minus ages 15-24",
       2022,
-      4.0,
+      null,
       "percentage points (95% margin of error, design-based)",
       "CauseWay derivation from World Bank Global Findex 2021 Yemen microdata",
       "https://microdata.worldbank.org/catalog/5862",
-      "CAUSEWAY_DERIVED_INTERVAL",
-      "Difference of the two printed shares 11.1 points; 95% confidence interval 7.1 to 15.1 points. The two groups are disjoint samples, so the standard error of the difference is the root of the sum of their squared standard errors. The two bases are 770 and 230 respondents. CauseWay derivation: Hajek ratio estimator with Taylor-linearization variance on the published survey weight (wgt) only. The public-use file carries no PSU or stratum identifier, so clustering is not captured and the true interval may be wider, never narrower. A simple binomial standard error is not used. The respondent file is held under the World Bank Microdata Research License and is never redistributed, committed to this repository or published."
+      "WITHDRAWN__NO_PUBLISHED_GROUP_DESIGN",
+      "Withdrawn (close-out CR-02, 10 October 2026): the World Bank publishes its design effect and sample size for the whole sample only, so no interval is computed for population groups or for the differences between them, and none is published. Previous record: Difference of the two printed shares 11.1 points; 95% confidence interval 7.1 to 15.1 points. The two groups are disjoint samples, so the standard error of the difference is the root of the sum of their squared standard errors. The two bases are 770 and 230 respondents. CauseWay derivation: Hajek ratio estimator with Taylor-linearization variance on the published survey weight (wgt) only. The public-use file carries no PSU or stratum identifier, so clustering is not captured and the true interval may be wider, never narrower. A simple binomial standard error is not used. The respondent file is held under the World Bank Microdata Research License and is never redistributed, committed to this repository or published."
     ],
     [
       "CW-FINDEX-MOE-2022-014",
@@ -358,12 +358,12 @@
       "Account at a financial institution - 95% margin of error",
       "total",
       2022,
-      2.2,
-      "percentage points (95% margin of error, design-based)",
-      "CauseWay derivation from World Bank Global Findex 2021 Yemen microdata",
-      "https://microdata.worldbank.org/catalog/5862",
-      "CAUSEWAY_DERIVED_INTERVAL",
-      "Point estimate 11.9%; 95% confidence interval 9.7% to 14.1%; base 1,000 respondents; design effect 1.16. Reproduces the World Bank's published unrounded value for Yemen 2022 (indicator fin_account_t_d). CauseWay derivation: Hajek ratio estimator with Taylor-linearization variance on the published survey weight (wgt) only. The public-use file carries no PSU or stratum identifier, so clustering is not captured and the true interval may be wider, never narrower. A simple binomial standard error is not used. The respondent file is held under the World Bank Microdata Research License and is never redistributed, committed to this repository or published."
+      2.8,
+      "percentage points (95% margin of error, from the published design effect)",
+      "CauseWay computation from World Bank published values and design effect",
+      "https://thedocs.worldbank.org/en/doc/fe026d04da1eb78f5ce8bb5e1529d60b-0430062023/original/Findex2021-22-Methodology.pdf",
+      "CAUSEWAY_COMPUTED_INTERVAL",
+      "Point estimate 11.9%; 95% confidence interval 9.1% to 14.7%; base 1,000 interviews (the whole sample); design effect 1.9, the value the World Bank publishes for Yemen's survey (The Global Findex Database 2021, Appendix A, Table A.1, printed p.17). CauseWay computation (close-out CR-02, 10 October 2026): margin = 1.96 x sqrt(1.9) x sqrt(p(1-p)/1,000), the World Bank's own margin-of-error formula (Table A.1, footnote c), applied to the World Bank's published unrounded value p (11.9033656433415). No respondent-level data are used. This replaces the earlier derivation from the respondent file (FC-1), withdrawn under brief v5. Previous record: Point estimate 11.9%; 95% confidence interval 9.7% to 14.1%; base 1,000 respondents; design effect 1.16. Reproduces the World Bank's published unrounded value for Yemen 2022 (indicator fin_account_t_d). CauseWay derivation: Hajek ratio estimator with Taylor-linearization variance on the published survey weight (wgt) only. The public-use file carries no PSU or stratum identifier, so clustering is not captured and the true interval may be wider, never narrower. A simple binomial standard error is not used. The respondent file is held under the World Bank Microdata Research License and is never redistributed, committed to this repository or published."
     ],
     [
       "CW-FINDEX-MOE-2022-015",
@@ -371,12 +371,12 @@
       "Saved any money in the past year - 95% margin of error",
       "total",
       2022,
-      3.2,
-      "percentage points (95% margin of error, design-based)",
-      "CauseWay derivation from World Bank Global Findex 2021 Yemen microdata",
-      "https://microdata.worldbank.org/catalog/5862",
-      "CAUSEWAY_DERIVED_INTERVAL",
-      "Point estimate 21.6%; 95% confidence interval 18.4% to 24.9%; base 1,000 respondents; design effect 1.58. Reproduces the World Bank's published unrounded value for Yemen 2022 (indicator save.any.t.d). CauseWay derivation: Hajek ratio estimator with Taylor-linearization variance on the published survey weight (wgt) only. The public-use file carries no PSU or stratum identifier, so clustering is not captured and the true interval may be wider, never narrower. A simple binomial standard error is not used. The respondent file is held under the World Bank Microdata Research License and is never redistributed, committed to this repository or published."
+      3.5,
+      "percentage points (95% margin of error, from the published design effect)",
+      "CauseWay computation from World Bank published values and design effect",
+      "https://thedocs.worldbank.org/en/doc/fe026d04da1eb78f5ce8bb5e1529d60b-0430062023/original/Findex2021-22-Methodology.pdf",
+      "CAUSEWAY_COMPUTED_INTERVAL",
+      "Point estimate 21.6%; 95% confidence interval 18.1% to 25.2%; base 1,000 interviews (the whole sample); design effect 1.9, the value the World Bank publishes for Yemen's survey (The Global Findex Database 2021, Appendix A, Table A.1, printed p.17). CauseWay computation (close-out CR-02, 10 October 2026): margin = 1.96 x sqrt(1.9) x sqrt(p(1-p)/1,000), the World Bank's own margin-of-error formula (Table A.1, footnote c), applied to the World Bank's published unrounded value p (21.6445272422787). No respondent-level data are used. This replaces the earlier derivation from the respondent file (FC-1), withdrawn under brief v5. Previous record: Point estimate 21.6%; 95% confidence interval 18.4% to 24.9%; base 1,000 respondents; design effect 1.58. Reproduces the World Bank's published unrounded value for Yemen 2022 (indicator save.any.t.d). CauseWay derivation: Hajek ratio estimator with Taylor-linearization variance on the published survey weight (wgt) only. The public-use file carries no PSU or stratum identifier, so clustering is not captured and the true interval may be wider, never narrower. A simple binomial standard error is not used. The respondent file is held under the World Bank Microdata Research License and is never redistributed, committed to this repository or published."
     ],
     [
       "CW-FINDEX-MOE-2022-016",
@@ -384,12 +384,12 @@
       "Borrowed any money in the past year - 95% margin of error",
       "total",
       2022,
-      4.2,
-      "percentage points (95% margin of error, design-based)",
-      "CauseWay derivation from World Bank Global Findex 2021 Yemen microdata",
-      "https://microdata.worldbank.org/catalog/5862",
-      "CAUSEWAY_DERIVED_INTERVAL",
-      "Point estimate 51.3%; 95% confidence interval 47.1% to 55.5%; base 1,000 respondents; design effect 1.82. Reproduces the World Bank's published unrounded value for Yemen 2022 (indicator borrow.any.t.d). CauseWay derivation: Hajek ratio estimator with Taylor-linearization variance on the published survey weight (wgt) only. The public-use file carries no PSU or stratum identifier, so clustering is not captured and the true interval may be wider, never narrower. A simple binomial standard error is not used. The respondent file is held under the World Bank Microdata Research License and is never redistributed, committed to this repository or published."
+      4.3,
+      "percentage points (95% margin of error, from the published design effect)",
+      "CauseWay computation from World Bank published values and design effect",
+      "https://thedocs.worldbank.org/en/doc/fe026d04da1eb78f5ce8bb5e1529d60b-0430062023/original/Findex2021-22-Methodology.pdf",
+      "CAUSEWAY_COMPUTED_INTERVAL",
+      "Point estimate 51.3%; 95% confidence interval 47.0% to 55.6%; base 1,000 interviews (the whole sample); design effect 1.9, the value the World Bank publishes for Yemen's survey (The Global Findex Database 2021, Appendix A, Table A.1, printed p.17). CauseWay computation (close-out CR-02, 10 October 2026): margin = 1.96 x sqrt(1.9) x sqrt(p(1-p)/1,000), the World Bank's own margin-of-error formula (Table A.1, footnote c), applied to the World Bank's published unrounded value p (51.2811034475895). No respondent-level data are used. This replaces the earlier derivation from the respondent file (FC-1), withdrawn under brief v5. Previous record: Point estimate 51.3%; 95% confidence interval 47.1% to 55.5%; base 1,000 respondents; design effect 1.82. Reproduces the World Bank's published unrounded value for Yemen 2022 (indicator borrow.any.t.d). CauseWay derivation: Hajek ratio estimator with Taylor-linearization variance on the published survey weight (wgt) only. The public-use file carries no PSU or stratum identifier, so clustering is not captured and the true interval may be wider, never narrower. A simple binomial standard error is not used. The respondent file is held under the World Bank Microdata Research License and is never redistributed, committed to this repository or published."
     ],
     [
       "CW-FINDEX-MOE-2022-017",
@@ -397,12 +397,12 @@
       "Made or received a digital payment - 95% margin of error",
       "total",
       2022,
-      1.9,
-      "percentage points (95% margin of error, design-based)",
-      "CauseWay derivation from World Bank Global Findex 2021 Yemen microdata",
-      "https://microdata.worldbank.org/catalog/5862",
-      "CAUSEWAY_DERIVED_INTERVAL",
-      "Point estimate 9.3%; 95% confidence interval 7.4% to 11.3%; base 1,000 respondents; design effect 1.17. Reproduces the World Bank's published unrounded value for Yemen 2022 (indicator g20.any). CauseWay derivation: Hajek ratio estimator with Taylor-linearization variance on the published survey weight (wgt) only. The public-use file carries no PSU or stratum identifier, so clustering is not captured and the true interval may be wider, never narrower. A simple binomial standard error is not used. The respondent file is held under the World Bank Microdata Research License and is never redistributed, committed to this repository or published."
+      2.5,
+      "percentage points (95% margin of error, from the published design effect)",
+      "CauseWay computation from World Bank published values and design effect",
+      "https://thedocs.worldbank.org/en/doc/fe026d04da1eb78f5ce8bb5e1529d60b-0430062023/original/Findex2021-22-Methodology.pdf",
+      "CAUSEWAY_COMPUTED_INTERVAL",
+      "Point estimate 9.3%; 95% confidence interval 6.8% to 11.8%; base 1,000 interviews (the whole sample); design effect 1.9, the value the World Bank publishes for Yemen's survey (The Global Findex Database 2021, Appendix A, Table A.1, printed p.17). CauseWay computation (close-out CR-02, 10 October 2026): margin = 1.96 x sqrt(1.9) x sqrt(p(1-p)/1,000), the World Bank's own margin-of-error formula (Table A.1, footnote c), applied to the World Bank's published unrounded value p (9.33455931917802). No respondent-level data are used. This replaces the earlier derivation from the respondent file (FC-1), withdrawn under brief v5. Previous record: Point estimate 9.3%; 95% confidence interval 7.4% to 11.3%; base 1,000 respondents; design effect 1.17. Reproduces the World Bank's published unrounded value for Yemen 2022 (indicator g20.any). CauseWay derivation: Hajek ratio estimator with Taylor-linearization variance on the published survey weight (wgt) only. The public-use file carries no PSU or stratum identifier, so clustering is not captured and the true interval may be wider, never narrower. A simple binomial standard error is not used. The respondent file is held under the World Bank Microdata Research License and is never redistributed, committed to this repository or published."
     ],
     [
       "WB-FINDEX-OBS-2022-010",
