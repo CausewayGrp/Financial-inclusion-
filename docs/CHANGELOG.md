@@ -1,5 +1,23 @@
 # Repository Change Log
 
+## 2026-10-10 — LA-B: legacy-audit follow-through, four Readings strengthened
+
+Transaction B of the same brief. Master `0087c312c061` → `ecb18e4f2bdf`, 33 cells, English and Arabic together. No new
+object; each new number is bound, with its locator, to a record the Reading cites.
+
+- **CWR-003:** a target inherits every property of its baseline; the five declarations a baseline needs; the FMIIP
+  results-framework baseline of 10,761 matches the 10,761 wallets of PAD ¶14 (an inference, stated as one); the PAD's
+  GIS database includes money exchangers, which the access-point definition does not name. FMIIP-BASELINE-2025-01 is
+  bound to CWR-003.
+- **CWR-002:** across the 2022 revaluation (CBY-Aden bulletin No. 54, Table 4, p. 15) private-sector credit
+  338.0 → 1,301.6 and foreign assets 904.5 → 2,669.0, while loans to government barely moved (1,926.8 → 1,913.2):
+  consistent with revaluing foreign-currency items, not new lending. Bound through CLM-033.
+- **CWR-007:** a concordance of the women's account-ownership figures: 5.4% (2021 wave, fieldwork 2022–23), 1.7% (2014
+  wave, Little Data Book 2015, p. 160) and the PAD's undated "two percent" (¶9), which is not a measurement. CLM-027 is
+  bound to CWR-007.
+- **CWR-010:** the PAD reports 10,761 wallets opened in a pilot and take-up of 40% to 70%; it does not say this is the
+  pilot the Reading describes, and no ratio against 45,460 is drawn.
+
 ## 2026-10-10 — LA-A: legacy-audit follow-through, corrections to our own copy
 
 Owner brief "Legacy-audit follow-through", transaction A, with the owner's corrections of the same day

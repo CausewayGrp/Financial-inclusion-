@@ -1,7 +1,7 @@
 {
   "schema": "YFI_CURRENT_PROJECT_CONTEXT/1.0",
   "role": "COMPACT_PROJECTION_NOT_AUTHORITY",
-  "generated_at": "2026-10-10T12:54:49Z",
+  "generated_at": "2026-10-10T13:00:46Z",
   "system": {
     "name_en": "Yemen Financial Inclusion Evidence",
     "name_ar": "أدلة الشمول المالي في اليمن",
@@ -45,7 +45,7 @@
   "production_master": {
     "path": "authority/Yemen_Financial_Inclusion_Evidence_Master.xlsx",
     "drive_id": "1xAbdDHJd5bYo0Pzo_a6dR6HsZ056LzJU",
-    "sha256": "0087c312c061647aeade1e8eda3a3dce423478afa3d998639e938db24828f96b",
+    "sha256": "ecb18e4f2bdf5163f10d1d76f5f64ba318216845085c165cfe3f9713c9dadb07",
     "is_sole_authority": true,
     "authority_dimensions": [
       "semantic",
@@ -59,7 +59,7 @@
   },
   "controlled_projection": {
     "page_specs_path": "site-src/content/page_specs.json",
-    "page_specs_sha256": "486252f0d2fdea987b303111905cf43b210c824683745c806b8f48b2239eac2f",
+    "page_specs_sha256": "c76c7b0d7f097f131968b63d7d0a3a7fd005abebcac8c8625b7d1eb3f4289c51",
     "page_specs": 142,
     "all_page_specs_master_hash_match": true,
     "page_specs_index_master_hash_match": true
@@ -216,7 +216,7 @@
     ]
   },
   "validation": {
-    "master_sha256_recorded": "0087c312c061647aeade1e8eda3a3dce423478afa3d998639e938db24828f96b",
+    "master_sha256_recorded": "ecb18e4f2bdf5163f10d1d76f5f64ba318216845085c165cfe3f9713c9dadb07",
     "projection_hash_binding": "PASS",
     "schema_required_keys": [
       "schema",

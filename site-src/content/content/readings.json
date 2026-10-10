@@ -158,8 +158,8 @@
     "title_ar": "حين تتغير وحدة القياس، تتغير القصة",
     "question_en": "Are we counting people, accounts, active accounts, subscribers, wallets, terminals or transactions?",
     "question_ar": "هل نعد الأشخاص أم الحسابات أم الحسابات النشطة أم المشتركين أم المحافظ الإلكترونية أم الأجهزة الطرفية أم المعاملات؟",
-    "thesis_en": "People, accounts, subscribers, terminals and transactions all describe parts of Yemen’s financial system. They are not interchangeable measures of financial inclusion, and a target or a trend is only as sound as the unit it keeps.",
-    "thesis_ar": "يصف الأشخاص والحسابات والمشتركون والأجهزة الطرفية والمعاملات جميعًا أجزاءً من المنظومة المالية في اليمن، لكنها ليست مقاييس للشمول المالي يحل بعضها محل بعض؛ ولا يكون المستهدف أو الاتجاه سليمًا إلا بقدر ثبات الوحدة التي يقيسها.",
+    "thesis_en": "People, accounts, subscribers, terminals and transactions all describe parts of Yemen’s financial system. They are not interchangeable measures of financial inclusion, and a target inherits every property of its baseline: its unit, its universe, its date, its instrument and its definition of “active”.",
+    "thesis_ar": "يصف الأشخاص والحسابات والمشتركون والأجهزة الطرفية والمعاملات جميعًا أجزاءً من المنظومة المالية في اليمن، لكنها ليست مقاييس للشمول المالي يحل بعضها محل بعض؛ والمستهدف يرث كل خصائص خط أساسه: وحدته، والمجتمع الذي ينطبق عليه، وتاريخه، وأداة قياسه، وتعريفه لما هو «نشط».",
     "claim_bindings": [
       "CLM-004",
       "CLM-023",
@@ -168,7 +168,8 @@
       "CLM-026",
       "CLM-001",
       "CLM-003",
-      "XW-FMIIP-005"
+      "XW-FMIIP-005",
+      "FMIIP-BASELINE-2025-01"
     ],
     "evidence_bindings": [
       "CLM-004",
@@ -178,7 +179,8 @@
       "CLM-026",
       "CLM-001",
       "CLM-003",
-      "XW-FMIIP-005"
+      "XW-FMIIP-005",
+      "FMIIP-BASELINE-2025-01"
     ],
     "source_bindings": [
       "CTR-006",
@@ -206,7 +208,8 @@
         "CLM-026",
         "XW-FMIIP-005",
         "CLM-001",
-        "CLM-003"
+        "CLM-003",
+        "FMIIP-BASELINE-2025-01"
       ],
       "direct_source_ids": [
         "SRC-WB-FINDEX-001"
@@ -463,13 +466,15 @@
       "CLM-002",
       "CLM-001",
       "CLM-025",
-      "VIS-FINDEX-GAPS"
+      "VIS-FINDEX-GAPS",
+      "CLM-027"
     ],
     "evidence_bindings": [
       "CLM-002",
       "CLM-001",
       "CLM-025",
-      "VIS-FINDEX-GAPS"
+      "VIS-FINDEX-GAPS",
+      "CLM-027"
     ],
     "source_bindings": [
       "DA-001",
@@ -492,7 +497,8 @@
         "CLM-002",
         "CLM-001",
         "CLM-025",
-        "VIS-FINDEX-GAPS"
+        "VIS-FINDEX-GAPS",
+        "CLM-027"
       ],
       "direct_source_ids": [],
       "dependency_ids": [

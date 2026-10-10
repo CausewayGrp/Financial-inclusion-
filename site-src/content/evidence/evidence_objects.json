@@ -4355,8 +4355,8 @@
     "universe_ar": "الأشخاص بعمر 15 سنة فأكثر ضمن التغطية الخاصة بكل موجة مسحية.",
     "method_en": "Official weighted public aggregates; no annual interpolation",
     "method_ar": "إجماليات عامة موزونة ورسمية؛ من دون استيفاء سنوي بين الموجات.",
-    "limitations_en": "It does not establish values for the years between waves or a smooth growth path, and 11.9% is not a 2026 rate. | The 2011 comparator counts accounts at financial institutions only, which differs from the later account definition that also counts mobile-money use; the 2014 values are rounded; the 2022 value comes from fieldwork conducted from 7 November 2022 to 9 January 2023 that excluded areas holding about 23% of the population.",
-    "limitations_ar": "لا يثبت هذا الدليل قيمًا للسنوات الواقعة بين الموجات ولا مسار نمو سلسًا، وليست نسبة 11.9% معدلًا لعام 2026. | يقتصر مقياس 2011 على الحسابات لدى المؤسسات المالية، ويختلف بذلك عن تعريف الحساب اللاحق الذي يشمل أيضًا استخدام خدمات الأموال عبر الهاتف المحمول؛ وقيم 2014 مقرّبة؛ وتأتي قيمة 2022 من عمل ميداني نُفذ من 7 نوفمبر 2022 إلى 9 يناير 2023 واستبعد مناطق يقطنها نحو 23% من السكان.",
+    "limitations_en": "It does not establish values for the years between waves or a smooth growth path, and 11.9% is not a 2026 rate. | The 2011 comparator counts accounts at financial institutions only, which differs from the later account definition that also counts mobile-money use; the 2014 values are rounded; the 2022 value comes from fieldwork conducted from 7 November 2022 to 9 January 2023 that excluded areas holding about 23% of the population. For women, the 2014 wave records 1.7%; the waves are not joined into a trend. The FMIIP appraisal document (May 2025) says that “two percent” of women hold a bank account, with no date and no source; that is a statement, not a measurement.",
+    "limitations_ar": "لا يثبت هذا الدليل قيمًا للسنوات الواقعة بين الموجات ولا مسار نمو سلسًا، وليست نسبة 11.9% معدلًا لعام 2026. | يقتصر مقياس 2011 على الحسابات لدى المؤسسات المالية، ويختلف بذلك عن تعريف الحساب اللاحق الذي يشمل أيضًا استخدام خدمات الأموال عبر الهاتف المحمول؛ وقيم 2014 مقرّبة؛ وتأتي قيمة 2022 من عمل ميداني نُفذ من 7 نوفمبر 2022 إلى 9 يناير 2023 واستبعد مناطق يقطنها نحو 23% من السكان. وتسجل موجة 2014 للنساء نسبة 1.7%، ولا يُربط بين الموجتين في اتجاه. وتذكر وثيقة تقييم مشروع FMIIP (مايو 2025) أن «اثنين في المئة» من النساء يملكن حسابًا مصرفيًا، من دون تاريخ ولا مصدر؛ وهذا تصريح لا قياس.",
     "currentness_en": "The latest of the three waves is the 2021 Findex wave, reported by the World Bank for 2022 (Yemen fieldwork 7 November 2022 to 9 January 2023); the Global Findex 2025 edition adds no newer Yemen observation. The series should not be read as describing any later year.",
     "currentness_ar": "أحدث الموجات الثلاث هي موجة Findex 2021، التي نشر البنك الدولي قيمتها لسنة 2022 (العمل الميداني في اليمن من 7 نوفمبر 2022 إلى 9 يناير 2023)، ولا تضيف نسخة Global Findex 2025 مشاهدة أحدث لليمن. ولا تُقرأ هذه القيم على أنها تصف أي سنة لاحقة.",
     "change_trigger_en": "This record is updated when an authoritative source is revised or replaced, a newer comparable observation becomes available, the definition, population or method changes, or the conditions for public use change.",
@@ -4366,7 +4366,8 @@
     "source_dependencies": [
       "SRC-WB-FINDEX-LDB-2015-001",
       "SRC-WB-FINDEX-AGG-2022",
-      "SRC-WB-FINDEX-001"
+      "SRC-WB-FINDEX-001",
+      "SRC-WB-FMIIP-P180708"
     ],
     "source_links": [],
     "lineage_state": "BOUND_EXACT",
@@ -4439,6 +4440,27 @@
         "s": "READ",
         "src": "SRC-WB-FINDEX-001",
         "loc": "microdata.worldbank.org/index.php/catalog/5862/study-description > Data collection > Dates of Data Collection: End 2023-01-09"
+      },
+      {
+        "t": "1.7%",
+        "k": "v",
+        "s": "READ",
+        "src": "SRC-WB-FINDEX-LDB-2015-001",
+        "loc": "Little Data Book on Financial Inclusion 2015, Yemen, Rep. country page, printed p. 160 (PDF p. 170), Account (% age 15+), Women = 1.7; read 10 October 2026"
+      },
+      {
+        "t": "two percent",
+        "k": "v",
+        "s": "READ",
+        "src": "SRC-WB-FMIIP-P180708",
+        "loc": "PAD (Report No. PADHI00396, 22 May 2025), paragraph 9, printed p. 2 (PDF p. 12): \"with just two percent holding a bank account\" — no year, no footnote; read 10 October 2026"
+      },
+      {
+        "t": "May 2025",
+        "k": "d",
+        "s": "READ",
+        "src": "SRC-WB-FMIIP-P180708",
+        "loc": "PAD (Report No. PADHI00396, 22 May 2025), date of the appraisal document"
       }
     ],
     "public_route_list": [
@@ -4446,8 +4468,8 @@
     ],
     "does_not_establish_en": "It does not establish values for the years between waves or a smooth growth path, and 11.9% is not a 2026 rate.",
     "does_not_establish_ar": "لا يثبت هذا الدليل قيمًا للسنوات الواقعة بين الموجات ولا مسار نمو سلسًا، وليست نسبة 11.9% معدلًا لعام 2026.",
-    "measurement_limitation_en": "The 2011 comparator counts accounts at financial institutions only, which differs from the later account definition that also counts mobile-money use; the 2014 values are rounded; the 2022 value comes from fieldwork conducted from 7 November 2022 to 9 January 2023 that excluded areas holding about 23% of the population.",
-    "measurement_limitation_ar": "يقتصر مقياس 2011 على الحسابات لدى المؤسسات المالية، ويختلف بذلك عن تعريف الحساب اللاحق الذي يشمل أيضًا استخدام خدمات الأموال عبر الهاتف المحمول؛ وقيم 2014 مقرّبة؛ وتأتي قيمة 2022 من عمل ميداني نُفذ من 7 نوفمبر 2022 إلى 9 يناير 2023 واستبعد مناطق يقطنها نحو 23% من السكان."
+    "measurement_limitation_en": "The 2011 comparator counts accounts at financial institutions only, which differs from the later account definition that also counts mobile-money use; the 2014 values are rounded; the 2022 value comes from fieldwork conducted from 7 November 2022 to 9 January 2023 that excluded areas holding about 23% of the population. For women, the 2014 wave records 1.7%; the waves are not joined into a trend. The FMIIP appraisal document (May 2025) says that “two percent” of women hold a bank account, with no date and no source; that is a statement, not a measurement.",
+    "measurement_limitation_ar": "يقتصر مقياس 2011 على الحسابات لدى المؤسسات المالية، ويختلف بذلك عن تعريف الحساب اللاحق الذي يشمل أيضًا استخدام خدمات الأموال عبر الهاتف المحمول؛ وقيم 2014 مقرّبة؛ وتأتي قيمة 2022 من عمل ميداني نُفذ من 7 نوفمبر 2022 إلى 9 يناير 2023 واستبعد مناطق يقطنها نحو 23% من السكان. وتسجل موجة 2014 للنساء نسبة 1.7%، ولا يُربط بين الموجتين في اتجاه. وتذكر وثيقة تقييم مشروع FMIIP (مايو 2025) أن «اثنين في المئة» من النساء يملكن حسابًا مصرفيًا، من دون تاريخ ولا مصدر؛ وهذا تصريح لا قياس."
   },
   {
     "object_id": "CLM-028",
@@ -8779,8 +8801,8 @@
     "universe_ar": "النطاقات المحلية أو البرنامجية أو الخاصة بالمشروعات كما يحددها كل مصدر.",
     "method_en": "A synthesis of programme and research evidence on each step from cash delivery to continued use, including World Bank/G2Px material on the pilot; no national prevalence figure is constructed.",
     "method_ar": "تجميع لأدلة برامجية وبحثية عن كل حلقة من إيصال النقد إلى استمرار الاستخدام، بما فيها مواد البنك الدولي/مبادرة G2Px عن التجربة؛ ولا يُبنى أي معدل انتشار وطني.",
-    "limitations_en": "Cash-transfer beneficiaries, village savings and loan associations (VSLAs), identity targets and opened accounts are not measures of durable financial use. The 45,460 figure is a programme-reported number of recipients, not a count of people who kept using an account. | Evidence exists for several intermediate links; durable use of an account or wallet after the transfer remains unobserved.",
-    "limitations_ar": "ليس مستفيدو التحويلات النقدية ولا مجموعات الادخار والإقراض ولا مستهدفات الهوية ولا الحسابات المفتوحة مقاييس للاستخدام المالي المستمر. والرقم 45,460 عدد للمستفيدين يفيد به البرنامج، وليس عددًا لمن واصلوا استخدام حساب. | توجد أدلة مفيدة على حلقات وسيطة، لكن الاستخدام المستمر للحساب/المحفظة بعد التحويل ما يزال غير مرصود.",
+    "limitations_en": "Cash-transfer beneficiaries, village savings and loan associations (VSLAs), identity targets and opened accounts are not measures of durable financial use. The 45,460 figure is a programme-reported number of recipients, not a count of people who kept using an account. The FMIIP appraisal document (May 2025) reports, for a pilot it does not identify with this one, that by the end of payment cycle 18 (16 September–17 October 2024) 10,761 wallets had been opened with cash transfers paid into them, with take-up of 40% to 70% across pilot districts; it differs in document, date and unit, and no ratio to 45,460 is drawn. | Evidence exists for several intermediate links; durable use of an account or wallet after the transfer remains unobserved.",
+    "limitations_ar": "ليس مستفيدو التحويلات النقدية ولا مجموعات الادخار والإقراض ولا مستهدفات الهوية ولا الحسابات المفتوحة مقاييس للاستخدام المالي المستمر. والرقم 45,460 عدد للمستفيدين يفيد به البرنامج، وليس عددًا لمن واصلوا استخدام حساب. وتذكر وثيقة تقييم مشروع FMIIP (مايو 2025)، عن تجربة لا تحدد ما إذا كانت هي هذه التجربة نفسها، أن 10,761 محفظة إلكترونية فُتحت وأُودعت فيها تحويلات نقدية بنهاية دورة الدفع 18 (16 سبتمبر–17 أكتوبر 2024)، وأن نسبة الإقبال تراوحت بين 40% و70% في مديريات التجربة؛ وهي تختلف عنه في الوثيقة والتاريخ والوحدة، ولا تُحسب منها نسبة إلى 45,460. | توجد أدلة مفيدة على حلقات وسيطة، لكن الاستخدام المستمر للحساب/المحفظة بعد التحويل ما يزال غير مرصود.",
     "currentness_en": "The latest evidence in this record was published in 2026; the pilot material dates from May 2024. The record should not be read as describing later programme reach or use unless newer evidence is published.",
     "currentness_ar": "نُشرت أحدث الأدلة في هذا السجل في 2026، أما مواد التجربة فصادرة في مايو 2024. ولا يُقرأ السجل على أنه يصف نطاقًا لاحقًا للبرنامج أو استخدامًا لاحقًا ما لم تُنشر أدلة أحدث.",
     "change_trigger_en": "This record is updated when an authoritative source is revised or replaced, a newer comparable observation becomes available, the definition, population or method changes, or the conditions for public use change.",
@@ -8789,6 +8811,7 @@
     "verification_ar": "يستند هذا السجل إلى المصدر أو المصادر المدرجة في هذه الصفحة. افتح سجل المصدر للوصول إلى الوثيقة الأصلية، وتحقق من تطابق التعريف والفترة والمجتمع والنطاق الجغرافي مع ما يرد هنا.",
     "source_dependencies": [
       "SRC-WB-G2PX-YEM-UCT-2024-001",
+      "SRC-WB-FMIIP-P180708",
       "SRC-CCY-SAM-2024",
       "SRC-CCY-ISP-2024",
       "EP-YEM-CASH-FIN-TRANSMISSION-K04"
@@ -8817,14 +8840,77 @@
         "s": "READ",
         "src": "SRC-WB-G2PX-YEM-UCT-2024-001",
         "loc": "event page 'Event Details: Date: May 30, 2024'"
+      },
+      {
+        "t": "10,761",
+        "k": "v",
+        "s": "READ",
+        "src": "SRC-WB-FMIIP-P180708",
+        "loc": "PAD (Report No. PADHI00396, 22 May 2025), paragraph 14, printed p. 4 (PDF p. 14): \"10,761 wallets had been opened with cash transfers rendered into them\"; read 10 October 2026"
+      },
+      {
+        "t": "18",
+        "k": "v",
+        "s": "READ",
+        "src": "SRC-WB-FMIIP-P180708",
+        "loc": "PAD (Report No. PADHI00396, 22 May 2025), paragraph 14: \"payment cycle 18\""
+      },
+      {
+        "t": "40%",
+        "k": "v",
+        "s": "READ",
+        "src": "SRC-WB-FMIIP-P180708",
+        "loc": "PAD (Report No. PADHI00396, 22 May 2025), paragraph 14: \"take-up rates ranged from 40 to 70 percent\""
+      },
+      {
+        "t": "70%",
+        "k": "v",
+        "s": "READ",
+        "src": "SRC-WB-FMIIP-P180708",
+        "loc": "PAD (Report No. PADHI00396, 22 May 2025), paragraph 14: \"take-up rates ranged from 40 to 70 percent\""
+      },
+      {
+        "t": "May 2025",
+        "k": "d",
+        "s": "READ",
+        "src": "SRC-WB-FMIIP-P180708",
+        "loc": "PAD (Report No. PADHI00396, 22 May 2025), date of the appraisal document"
+      },
+      {
+        "t": "October 2024",
+        "k": "d",
+        "s": "READ",
+        "src": "SRC-WB-FMIIP-P180708",
+        "loc": "PAD (Report No. PADHI00396, 22 May 2025), paragraph 14"
+      },
+      {
+        "t": "September 2024",
+        "k": "d",
+        "s": "READ",
+        "src": "SRC-WB-FMIIP-P180708",
+        "loc": "PAD (Report No. PADHI00396, 22 May 2025), paragraph 14"
+      },
+      {
+        "t": "16 September 2024",
+        "k": "d",
+        "s": "READ",
+        "src": "SRC-WB-FMIIP-P180708",
+        "loc": "PAD (Report No. PADHI00396, 22 May 2025), paragraph 14: from September 16 to October 17, 2024"
+      },
+      {
+        "t": "17 October 2024",
+        "k": "d",
+        "s": "READ",
+        "src": "SRC-WB-FMIIP-P180708",
+        "loc": "PAD (Report No. PADHI00396, 22 May 2025), paragraph 14: from September 16 to October 17, 2024"
       }
     ],
     "public_route_list": [
       "/payments/",
       "/people/"
     ],
-    "does_not_establish_en": "Cash-transfer beneficiaries, village savings and loan associations (VSLAs), identity targets and opened accounts are not measures of durable financial use. The 45,460 figure is a programme-reported number of recipients, not a count of people who kept using an account.",
-    "does_not_establish_ar": "ليس مستفيدو التحويلات النقدية ولا مجموعات الادخار والإقراض ولا مستهدفات الهوية ولا الحسابات المفتوحة مقاييس للاستخدام المالي المستمر. والرقم 45,460 عدد للمستفيدين يفيد به البرنامج، وليس عددًا لمن واصلوا استخدام حساب.",
+    "does_not_establish_en": "Cash-transfer beneficiaries, village savings and loan associations (VSLAs), identity targets and opened accounts are not measures of durable financial use. The 45,460 figure is a programme-reported number of recipients, not a count of people who kept using an account. The FMIIP appraisal document (May 2025) reports, for a pilot it does not identify with this one, that by the end of payment cycle 18 (16 September–17 October 2024) 10,761 wallets had been opened with cash transfers paid into them, with take-up of 40% to 70% across pilot districts; it differs in document, date and unit, and no ratio to 45,460 is drawn.",
+    "does_not_establish_ar": "ليس مستفيدو التحويلات النقدية ولا مجموعات الادخار والإقراض ولا مستهدفات الهوية ولا الحسابات المفتوحة مقاييس للاستخدام المالي المستمر. والرقم 45,460 عدد للمستفيدين يفيد به البرنامج، وليس عددًا لمن واصلوا استخدام حساب. وتذكر وثيقة تقييم مشروع FMIIP (مايو 2025)، عن تجربة لا تحدد ما إذا كانت هي هذه التجربة نفسها، أن 10,761 محفظة إلكترونية فُتحت وأُودعت فيها تحويلات نقدية بنهاية دورة الدفع 18 (16 سبتمبر–17 أكتوبر 2024)، وأن نسبة الإقبال تراوحت بين 40% و70% في مديريات التجربة؛ وهي تختلف عنه في الوثيقة والتاريخ والوحدة، ولا تُحسب منها نسبة إلى 45,460.",
     "measurement_limitation_en": "Evidence exists for several intermediate links; durable use of an account or wallet after the transfer remains unobserved.",
     "measurement_limitation_ar": "توجد أدلة مفيدة على حلقات وسيطة، لكن الاستخدام المستمر للحساب/المحفظة بعد التحويل ما يزال غير مرصود."
   },
@@ -9959,8 +10045,8 @@
     "period_ar": "مراكز عام 2022 كما نُشرت في التقرير السنوي 2022 وكما أُعيد عرضها ابتداءً من التقرير السنوي 2023",
     "universe_en": "Consolidated commercial and Islamic bank balance-sheet stocks",
     "universe_ar": "أرصدة الميزانيات المجمعة للبنوك التجارية والإسلامية.",
-    "method_en": "Annual reports of the Central Bank of Yemen – Aden (CBY-Aden) for 2022 and for 2023 onward; the 2023 annual report contains an explicit note on valuing foreign-currency positions at the market exchange rate.",
-    "method_ar": "التقارير السنوية للبنك المركزي اليمني – عدن لعام 2022 ولعام 2023 وما بعده؛ ويتضمن التقرير السنوي 2023 ملاحظة صريحة عن تقييم المراكز بالعملات الأجنبية بسعر الصرف السوقي.",
+    "method_en": "Annual reports of the Central Bank of Yemen – Aden (CBY-Aden) for 2022 and for 2023 onward; the 2023 annual report contains an explicit note on valuing foreign-currency positions at the market exchange rate. The monthly bulletin Monetary and Financial Developments (Issue No. 54, May 2026, Table 4) prints December 2022 twice for commercial and Islamic banks, on the earlier basis and at market exchange rates: private-sector credit 338.0 and 1,301.6, foreign assets 904.5 and 2,669.0, and loans and advances to government 1,926.8 and 1,913.2 (billion rials).",
+    "method_ar": "التقارير السنوية للبنك المركزي اليمني – عدن لعام 2022 ولعام 2023 وما بعده؛ ويتضمن التقرير السنوي 2023 ملاحظة صريحة عن تقييم المراكز بالعملات الأجنبية بسعر الصرف السوقي. وتعرض النشرة الشهرية «التطورات النقدية والمالية» (العدد رقم 54، مايو 2026، الجدول 4) ديسمبر 2022 مرتين للبنوك التجارية والإسلامية، على الأساس السابق وبسعر الصرف السوقي: الائتمان الممنوح للقطاع الخاص 338.0 و1,301.6، والأصول الخارجية 904.5 و2,669.0، والقروض والسلفيات للحكومة 1,926.8 و1,913.2 (مليار ريال).",
     "limitations_en": "The restatement is not evidence of an asset, deposit or credit boom, or of any change in solvency. | A method or valuation break materially changes the values for the same reference year; changes in individual lines can be attributed to valuation only as far as the documented valuation note supports.",
     "limitations_ar": "لا تمثل إعادة العرض دليلًا على طفرة في الأصول أو الودائع أو الائتمان، ولا على أي تغير في الملاءة. | يغيّر الانقطاع في المنهج أو أسلوب التقييم قيم السنة المرجعية نفسها بصورة جوهرية، ويظل إسناد التغيرات التفصيلية إلى ملاحظة التقييم ضمن الحدود التي يثبتها المصدر.",
     "currentness_en": "This record applies to the 2022 positions as published in the 2022 annual report and as restated from the 2023 annual report onward. It should not be read as describing later positions.",
@@ -9972,6 +10058,7 @@
     "source_dependencies": [
       "SRC-CBY-AR2022-001",
       "SRC-CBY-AR2023-001",
+      "SRC-CBY-001",
       "K04-CBY-061",
       "AVA-005..008",
       "EP-CBY-BANKING-REVAL-K04"
@@ -9997,6 +10084,72 @@
         "s": "READ",
         "src": "SRC-CBY-AR2023-001",
         "loc": "CBY Annual Report 2023, p. 23 (PDF p. 23), section 2 'Consolidated Balance Sheets of Commercial and Islamic Banks'; also p. 29 note to Table 2-3"
+      },
+      {
+        "t": "338.0",
+        "k": "v",
+        "s": "READ",
+        "src": "SRC-CBY-001",
+        "loc": "CBY-Aden, Monetary and Financial Developments, Issue No. 54 (May 2026), Table 4 \"Consolidated Balance Sheet of Commercial & Islamic Banks - Assets\", printed p. 15 (PDF p. 16), YER billion, Loans & Advances: Private Sector, Dec 2022; read 10 October 2026"
+      },
+      {
+        "t": "1,301.6",
+        "k": "v",
+        "s": "READ",
+        "src": "SRC-CBY-001",
+        "loc": "CBY-Aden, Monetary and Financial Developments, Issue No. 54 (May 2026), Table 4 \"Consolidated Balance Sheet of Commercial & Islamic Banks - Assets\", printed p. 15 (PDF p. 16), YER billion, Loans & Advances: Private Sector, Dec *2022 (*Based on market exchange rates); read 10 October 2026"
+      },
+      {
+        "t": "904.5",
+        "k": "v",
+        "s": "READ",
+        "src": "SRC-CBY-001",
+        "loc": "CBY-Aden, Monetary and Financial Developments, Issue No. 54 (May 2026), Table 4 \"Consolidated Balance Sheet of Commercial & Islamic Banks - Assets\", printed p. 15 (PDF p. 16), YER billion, Foreign Assets, Dec 2022; read 10 October 2026"
+      },
+      {
+        "t": "2,669.0",
+        "k": "v",
+        "s": "READ",
+        "src": "SRC-CBY-001",
+        "loc": "CBY-Aden, Monetary and Financial Developments, Issue No. 54 (May 2026), Table 4 \"Consolidated Balance Sheet of Commercial & Islamic Banks - Assets\", printed p. 15 (PDF p. 16), YER billion, Foreign Assets, Dec *2022 (*Based on market exchange rates); read 10 October 2026"
+      },
+      {
+        "t": "1,926.8",
+        "k": "v",
+        "s": "READ",
+        "src": "SRC-CBY-001",
+        "loc": "CBY-Aden, Monetary and Financial Developments, Issue No. 54 (May 2026), Table 4 \"Consolidated Balance Sheet of Commercial & Islamic Banks - Assets\", printed p. 15 (PDF p. 16), YER billion, Loans & Advances: Government, Dec 2022; read 10 October 2026"
+      },
+      {
+        "t": "1,913.2",
+        "k": "v",
+        "s": "READ",
+        "src": "SRC-CBY-001",
+        "loc": "CBY-Aden, Monetary and Financial Developments, Issue No. 54 (May 2026), Table 4 \"Consolidated Balance Sheet of Commercial & Islamic Banks - Assets\", printed p. 15 (PDF p. 16), YER billion, Loans & Advances: Government, Dec *2022 (*Based on market exchange rates); read 10 October 2026"
+      },
+      {
+        "t": "4",
+        "k": "v",
+        "s": "TRIVIAL"
+      },
+      {
+        "t": "54",
+        "k": "v",
+        "s": "TRIVIAL"
+      },
+      {
+        "t": "May 2026",
+        "k": "d",
+        "s": "READ",
+        "src": "SRC-CBY-001",
+        "loc": "CBY-Aden, Monetary and Financial Developments, Issue No. 54 (May 2026), Table 4 \"Consolidated Balance Sheet of Commercial & Islamic Banks - Assets\", printed p. 15 (PDF p. 16), YER billion"
+      },
+      {
+        "t": "December 2022",
+        "k": "d",
+        "s": "READ",
+        "src": "SRC-CBY-001",
+        "loc": "CBY-Aden, Monetary and Financial Developments, Issue No. 54 (May 2026), Table 4 \"Consolidated Balance Sheet of Commercial & Islamic Banks - Assets\", printed p. 15 (PDF p. 16), YER billion"
       }
     ],
     "public_route_list": [
@@ -10925,8 +11078,8 @@
     "title_ar": "خطوط الأساس لمشروع FMIIP في يناير 2025 تعدّ الحسابات ونقاط الوصول والتجار والوكلاء، لا الأشخاص",
     "summary_en": "The results framework of the World Bank-financed Yemen Financial Market Infrastructure and Inclusion Project (FMIIP, P180708) records January 2025 baselines for its own project-defined indicators: 1,062,441 active bank accounts (200,898 of them owned by women), 375,252 active e-wallet accounts, 817 financial access points, 170 merchants accepting electronic payments and 65 agents of licensed financial institutions. These are project baselines that count accounts, access points, merchants and agents — not people.",
     "summary_ar": "يسجل إطار نتائج مشروع البنية التحتية للأسواق المالية والشمول المالي في اليمن (FMIIP، P180708) الممول من البنك الدولي خطوط أساس في يناير 2025 لمؤشراته المعرّفة داخل المشروع: 1,062,441 حسابًا مصرفيًا نشطًا (منها 200,898 حسابًا مملوكًا لنساء)، و375,252 حساب محفظة إلكترونية نشطًا، و817 نقطة وصول مالي، و170 تاجرًا يقبلون المدفوعات الإلكترونية، و65 وكيلًا لمؤسسات مالية مرخصة. وهذه خطوط أساس للمشروع تعدّ الحسابات ونقاط الوصول والتجار والوكلاء، لا الأشخاص.",
-    "definition_en": "January 2025 baseline values recorded in the results framework of the Financial Market Infrastructure and Inclusion Project (FMIIP) for indicators the project itself defines; a baseline is the project's starting reference, not an independent measurement of the financial system.",
-    "definition_ar": "قيم خط الأساس لشهر يناير 2025 المسجلة في إطار نتائج مشروع البنية التحتية للأسواق المالية والشمول المالي في اليمن (FMIIP) لمؤشرات يعرّفها المشروع نفسه؛ وخط الأساس نقطة انطلاق مرجعية للمشروع، لا قياس مستقل للنظام المالي.",
+    "definition_en": "January 2025 baseline values recorded in the results framework of the Financial Market Infrastructure and Inclusion Project (FMIIP) for indicators the project itself defines; a baseline is the project's starting reference, not an independent measurement of the financial system. The framework also sets a January 2025 baseline of 10,761 for its development-objective indicator, beneficiaries who received or made payments through electronic channels; the same document reports 10,761 wallets opened, with cash transfers paid into them, in a pilot, by the end of payment cycle 18 (16 September–17 October 2024), and does not state whether the two are the same count.",
+    "definition_ar": "قيم خط الأساس لشهر يناير 2025 المسجلة في إطار نتائج مشروع البنية التحتية للأسواق المالية والشمول المالي في اليمن (FMIIP) لمؤشرات يعرّفها المشروع نفسه؛ وخط الأساس نقطة انطلاق مرجعية للمشروع، لا قياس مستقل للنظام المالي. ويحدد الإطار كذلك خط أساس في يناير 2025 قدره 10,761 لمؤشر الهدف الإنمائي للمشروع، أي المستفيدين الذين تلقوا مدفوعات أو أجروها عبر قنوات إلكترونية؛ وتذكر الوثيقة نفسها أن 10,761 محفظة إلكترونية فُتحت وأُودعت فيها تحويلات نقدية، في إطار تجربة، بنهاية دورة الدفع 18 (16 سبتمبر–17 أكتوبر 2024)، ولا تذكر ما إذا كان الرقمان عدًّا واحدًا.",
     "period_en": "January 2025 (project baseline)",
     "period_ar": "يناير 2025 (خط أساس المشروع)",
     "universe_en": "Project-defined indicators of the FMIIP results framework. Each indicator is defined by the project in its appraisal document (monitoring and evaluation annex); the counting rules and reporting scope behind each baseline, such as any removal of duplicates, are not published.",
@@ -11027,6 +11180,48 @@
         "s": "READ",
         "src": "SRC-WB-FMIIP-P180708",
         "loc": "PAD (Report No. PADHI00396, 22 May 2025), Annex 1, printed p. 28 (PDF p. 38): active e-wallet accounts \"used to perform at least one financial transaction within the last 90 days\"; active bank accounts: one transaction \"within at least one year\" (current accounts); read 10 October 2026"
+      },
+      {
+        "t": "10,761",
+        "k": "v",
+        "s": "READ",
+        "src": "SRC-WB-FMIIP-P180708",
+        "loc": "PAD (Report No. PADHI00396, 22 May 2025), Annex 1 results framework, printed p. 23 (PDF p. 33): PDO indicator baseline Jan/2025 10,761; and paragraph 14, printed p. 4 (PDF p. 14): \"10,761 wallets had been opened with cash transfers rendered into them\"; read 10 October 2026"
+      },
+      {
+        "t": "18",
+        "k": "v",
+        "s": "READ",
+        "src": "SRC-WB-FMIIP-P180708",
+        "loc": "PAD (Report No. PADHI00396, 22 May 2025), paragraph 14, printed p. 4: \"By the end of the payment cycle 18\""
+      },
+      {
+        "t": "October 2024",
+        "k": "d",
+        "s": "READ",
+        "src": "SRC-WB-FMIIP-P180708",
+        "loc": "PAD (Report No. PADHI00396, 22 May 2025), paragraph 14"
+      },
+      {
+        "t": "September 2024",
+        "k": "d",
+        "s": "READ",
+        "src": "SRC-WB-FMIIP-P180708",
+        "loc": "PAD (Report No. PADHI00396, 22 May 2025), paragraph 14"
+      },
+      {
+        "t": "16 September 2024",
+        "k": "d",
+        "s": "READ",
+        "src": "SRC-WB-FMIIP-P180708",
+        "loc": "PAD (Report No. PADHI00396, 22 May 2025), paragraph 14: from September 16 to October 17, 2024"
+      },
+      {
+        "t": "17 October 2024",
+        "k": "d",
+        "s": "READ",
+        "src": "SRC-WB-FMIIP-P180708",
+        "loc": "PAD (Report No. PADHI00396, 22 May 2025), paragraph 14: from September 16 to October 17, 2024"
       }
     ],
     "public_route_list": [

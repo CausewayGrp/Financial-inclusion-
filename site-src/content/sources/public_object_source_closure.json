@@ -1914,17 +1914,20 @@
     "dependency_ids": [
       "SRC-WB-FINDEX-LDB-2015-001",
       "SRC-WB-FINDEX-AGG-2022",
-      "SRC-WB-FINDEX-001"
+      "SRC-WB-FINDEX-001",
+      "SRC-WB-FMIIP-P180708"
     ],
     "direct_source_ids": [
       "SRC-WB-FINDEX-LDB-2015-001",
       "SRC-WB-FINDEX-AGG-2022",
-      "SRC-WB-FINDEX-001"
+      "SRC-WB-FINDEX-001",
+      "SRC-WB-FMIIP-P180708"
     ],
     "resolved_source_ids": [
       "SRC-WB-FINDEX-LDB-2015-001",
       "SRC-WB-FINDEX-AGG-2022",
-      "SRC-WB-FINDEX-001"
+      "SRC-WB-FINDEX-001",
+      "SRC-WB-FMIIP-P180708"
     ],
     "resolved_via_object_ids": [],
     "context_reference_ids": [],
@@ -1943,6 +1946,11 @@
       {
         "source_id": "SRC-WB-FINDEX-001",
         "primary_url": "https://microdata.worldbank.org/catalog/5862",
+        "metadata_state": "DISPLAY_READY"
+      },
+      {
+        "source_id": "SRC-WB-FMIIP-P180708",
+        "primary_url": "https://maps.worldbank.org/projects/wb/pid/P180708?status=active",
         "metadata_state": "DISPLAY_READY"
       }
     ],
@@ -3819,17 +3827,20 @@
     "lineage_state": "BOUND_EXACT",
     "dependency_ids": [
       "SRC-WB-G2PX-YEM-UCT-2024-001",
+      "SRC-WB-FMIIP-P180708",
       "SRC-CCY-SAM-2024",
       "SRC-CCY-ISP-2024",
       "EP-YEM-CASH-FIN-TRANSMISSION-K04"
     ],
     "direct_source_ids": [
       "SRC-WB-G2PX-YEM-UCT-2024-001",
+      "SRC-WB-FMIIP-P180708",
       "SRC-CCY-SAM-2024",
       "SRC-CCY-ISP-2024"
     ],
     "resolved_source_ids": [
       "SRC-WB-G2PX-YEM-UCT-2024-001",
+      "SRC-WB-FMIIP-P180708",
       "SRC-CCY-SAM-2024",
       "SRC-CCY-ISP-2024"
     ],
@@ -3842,6 +3853,11 @@
       {
         "source_id": "SRC-WB-G2PX-YEM-UCT-2024-001",
         "primary_url": "https://www.worldbank.org/en/events/2024/05/30/digitalizing-g2p-payments-in-yemen",
+        "metadata_state": "DISPLAY_READY"
+      },
+      {
+        "source_id": "SRC-WB-FMIIP-P180708",
+        "primary_url": "https://maps.worldbank.org/projects/wb/pid/P180708?status=active",
         "metadata_state": "DISPLAY_READY"
       },
       {
@@ -4453,17 +4469,20 @@
     "dependency_ids": [
       "SRC-CBY-AR2022-001",
       "SRC-CBY-AR2023-001",
+      "SRC-CBY-001",
       "K04-CBY-061",
       "AVA-005..008",
       "EP-CBY-BANKING-REVAL-K04"
     ],
     "direct_source_ids": [
       "SRC-CBY-AR2022-001",
-      "SRC-CBY-AR2023-001"
+      "SRC-CBY-AR2023-001",
+      "SRC-CBY-001"
     ],
     "resolved_source_ids": [
       "SRC-CBY-AR2022-001",
-      "SRC-CBY-AR2023-001"
+      "SRC-CBY-AR2023-001",
+      "SRC-CBY-001"
     ],
     "resolved_via_object_ids": [],
     "context_reference_ids": [
@@ -4481,6 +4500,11 @@
       {
         "source_id": "SRC-CBY-AR2023-001",
         "primary_url": "https://www.english.cby-ye.com/files/66e7e260be038.pdf",
+        "metadata_state": "DISPLAY_READY"
+      },
+      {
+        "source_id": "SRC-CBY-001",
+        "primary_url": "https://english.cby-ye.com/files/6a5a2e6bcc3cd.pdf",
         "metadata_state": "DISPLAY_READY"
       }
     ],
@@ -6197,12 +6221,14 @@
     "direct_source_ids": [
       "SRC-WB-FINDEX-LDB-2015-001",
       "SRC-WB-FINDEX-AGG-2022",
-      "SRC-WB-FINDEX-001"
+      "SRC-WB-FINDEX-001",
+      "SRC-WB-FMIIP-P180708"
     ],
     "resolved_source_ids": [
       "SRC-WB-FINDEX-LDB-2015-001",
       "SRC-WB-FINDEX-AGG-2022",
-      "SRC-WB-FINDEX-001"
+      "SRC-WB-FINDEX-001",
+      "SRC-WB-FMIIP-P180708"
     ],
     "resolved_via_object_ids": [],
     "context_reference_ids": [],
@@ -6221,6 +6247,11 @@
       {
         "source_id": "SRC-WB-FINDEX-001",
         "primary_url": "https://microdata.worldbank.org/catalog/5862",
+        "metadata_state": "DISPLAY_READY"
+      },
+      {
+        "source_id": "SRC-WB-FMIIP-P180708",
+        "primary_url": "https://maps.worldbank.org/projects/wb/pid/P180708?status=active",
         "metadata_state": "DISPLAY_READY"
       }
     ],
@@ -6436,11 +6467,13 @@
     ],
     "direct_source_ids": [
       "SRC-CBY-AR2022-001",
-      "SRC-CBY-AR2023-001"
+      "SRC-CBY-AR2023-001",
+      "SRC-CBY-001"
     ],
     "resolved_source_ids": [
       "SRC-CBY-AR2022-001",
-      "SRC-CBY-AR2023-001"
+      "SRC-CBY-AR2023-001",
+      "SRC-CBY-001"
     ],
     "resolved_via_object_ids": [],
     "context_reference_ids": [
@@ -6458,6 +6491,11 @@
       {
         "source_id": "SRC-CBY-AR2023-001",
         "primary_url": "https://www.english.cby-ye.com/files/66e7e260be038.pdf",
+        "metadata_state": "DISPLAY_READY"
+      },
+      {
+        "source_id": "SRC-CBY-001",
+        "primary_url": "https://english.cby-ye.com/files/6a5a2e6bcc3cd.pdf",
         "metadata_state": "DISPLAY_READY"
       }
     ],
@@ -6887,11 +6925,13 @@
     ],
     "direct_source_ids": [
       "SRC-WB-G2PX-YEM-UCT-2024-001",
+      "SRC-WB-FMIIP-P180708",
       "SRC-CCY-SAM-2024",
       "SRC-CCY-ISP-2024"
     ],
     "resolved_source_ids": [
       "SRC-WB-G2PX-YEM-UCT-2024-001",
+      "SRC-WB-FMIIP-P180708",
       "SRC-CCY-SAM-2024",
       "SRC-CCY-ISP-2024"
     ],
@@ -6904,6 +6944,11 @@
       {
         "source_id": "SRC-WB-G2PX-YEM-UCT-2024-001",
         "primary_url": "https://www.worldbank.org/en/events/2024/05/30/digitalizing-g2p-payments-in-yemen",
+        "metadata_state": "DISPLAY_READY"
+      },
+      {
+        "source_id": "SRC-WB-FMIIP-P180708",
+        "primary_url": "https://maps.worldbank.org/projects/wb/pid/P180708?status=active",
         "metadata_state": "DISPLAY_READY"
       },
       {
@@ -7693,7 +7738,8 @@
     "resolved_source_ids": [
       "SRC-CBY-AR2022-001",
       "SRC-CBY-AR2023-001",
-      "SRC-IMF-YEM-EGDDS-VAL-1996"
+      "SRC-IMF-YEM-EGDDS-VAL-1996",
+      "SRC-CBY-001"
     ],
     "resolved_via_object_ids": [
       "CLM-033",
@@ -7721,6 +7767,11 @@
         "source_id": "SRC-IMF-YEM-EGDDS-VAL-1996",
         "primary_url": "https://dsbb.imf.org/e-gdds/dqaf-base/country/YEM/category/AAB00",
         "metadata_state": "DISPLAY_READY"
+      },
+      {
+        "source_id": "SRC-CBY-001",
+        "primary_url": "https://english.cby-ye.com/files/6a5a2e6bcc3cd.pdf",
+        "metadata_state": "DISPLAY_READY"
       }
     ],
     "closure_state": "CLOSED_TO_SOURCE_ID",
@@ -7744,7 +7795,8 @@
       "CLM-026",
       "CLM-001",
       "CLM-003",
-      "XW-FMIIP-005"
+      "XW-FMIIP-005",
+      "FMIIP-BASELINE-2025-01"
     ],
     "direct_source_ids": [
       "SRC-WB-FINDEX-001"
@@ -7773,7 +7825,8 @@
       "CLM-026",
       "CLM-001",
       "CLM-003",
-      "XW-FMIIP-005"
+      "XW-FMIIP-005",
+      "FMIIP-BASELINE-2025-01"
     ],
     "context_reference_ids": [
       "CTR-006",
@@ -8154,19 +8207,23 @@
       "CLM-002",
       "CLM-001",
       "CLM-025",
-      "VIS-FINDEX-GAPS"
+      "VIS-FINDEX-GAPS",
+      "CLM-027"
     ],
     "direct_source_ids": [],
     "resolved_source_ids": [
       "SRC-WB-FINDEX-AGG-2022",
       "SRC-WB-FINDEX-001",
-      "SRC-WB-FINDEX-2025-EDITION"
+      "SRC-WB-FINDEX-2025-EDITION",
+      "SRC-WB-FINDEX-LDB-2015-001",
+      "SRC-WB-FMIIP-P180708"
     ],
     "resolved_via_object_ids": [
       "CLM-002",
       "CLM-001",
       "CLM-025",
-      "VIS-FINDEX-GAPS"
+      "VIS-FINDEX-GAPS",
+      "CLM-027"
     ],
     "context_reference_ids": [
       "DA-001",
@@ -8187,6 +8244,16 @@
       {
         "source_id": "SRC-WB-FINDEX-2025-EDITION",
         "primary_url": "https://www.worldbank.org/en/publication/globalfindex/download-data",
+        "metadata_state": "DISPLAY_READY"
+      },
+      {
+        "source_id": "SRC-WB-FINDEX-LDB-2015-001",
+        "primary_url": "https://documents1.worldbank.org/curated/en/621891468329460041/pdf/956790PUB097810til0Apr170at011300am.pdf",
+        "metadata_state": "DISPLAY_READY"
+      },
+      {
+        "source_id": "SRC-WB-FMIIP-P180708",
+        "primary_url": "https://maps.worldbank.org/projects/wb/pid/P180708?status=active",
         "metadata_state": "DISPLAY_READY"
       }
     ],
@@ -8396,6 +8463,7 @@
     ],
     "resolved_source_ids": [
       "SRC-WB-G2PX-YEM-UCT-2024-001",
+      "SRC-WB-FMIIP-P180708",
       "SRC-CCY-SAM-2024",
       "SRC-CCY-ISP-2024"
     ],
@@ -8410,6 +8478,11 @@
       {
         "source_id": "SRC-WB-G2PX-YEM-UCT-2024-001",
         "primary_url": "https://www.worldbank.org/en/events/2024/05/30/digitalizing-g2p-payments-in-yemen",
+        "metadata_state": "DISPLAY_READY"
+      },
+      {
+        "source_id": "SRC-WB-FMIIP-P180708",
+        "primary_url": "https://maps.worldbank.org/projects/wb/pid/P180708?status=active",
         "metadata_state": "DISPLAY_READY"
       },
       {
@@ -9764,7 +9837,8 @@
     "resolved_source_ids": [
       "SRC-CBY-AR2022-001",
       "SRC-CBY-AR2023-001",
-      "SRC-IMF-YEM-EGDDS-VAL-1996"
+      "SRC-IMF-YEM-EGDDS-VAL-1996",
+      "SRC-CBY-001"
     ],
     "resolved_via_object_ids": [
       "CLM-033",
@@ -9791,6 +9865,11 @@
       {
         "source_id": "SRC-IMF-YEM-EGDDS-VAL-1996",
         "primary_url": "https://dsbb.imf.org/e-gdds/dqaf-base/country/YEM/category/AAB00",
+        "metadata_state": "DISPLAY_READY"
+      },
+      {
+        "source_id": "SRC-CBY-001",
+        "primary_url": "https://english.cby-ye.com/files/6a5a2e6bcc3cd.pdf",
         "metadata_state": "DISPLAY_READY"
       }
     ],
@@ -9841,7 +9920,8 @@
       "CLM-026",
       "CLM-001",
       "CLM-003",
-      "XW-FMIIP-005"
+      "XW-FMIIP-005",
+      "FMIIP-BASELINE-2025-01"
     ],
     "context_reference_ids": [
       "CTR-006",
@@ -10225,13 +10305,16 @@
     "resolved_source_ids": [
       "SRC-WB-FINDEX-AGG-2022",
       "SRC-WB-FINDEX-001",
-      "SRC-WB-FINDEX-2025-EDITION"
+      "SRC-WB-FINDEX-2025-EDITION",
+      "SRC-WB-FINDEX-LDB-2015-001",
+      "SRC-WB-FMIIP-P180708"
     ],
     "resolved_via_object_ids": [
       "CLM-002",
       "CLM-001",
       "CLM-025",
-      "VIS-FINDEX-GAPS"
+      "VIS-FINDEX-GAPS",
+      "CLM-027"
     ],
     "context_reference_ids": [
       "DA-001",
@@ -10252,6 +10335,16 @@
       {
         "source_id": "SRC-WB-FINDEX-2025-EDITION",
         "primary_url": "https://www.worldbank.org/en/publication/globalfindex/download-data",
+        "metadata_state": "DISPLAY_READY"
+      },
+      {
+        "source_id": "SRC-WB-FINDEX-LDB-2015-001",
+        "primary_url": "https://documents1.worldbank.org/curated/en/621891468329460041/pdf/956790PUB097810til0Apr170at011300am.pdf",
+        "metadata_state": "DISPLAY_READY"
+      },
+      {
+        "source_id": "SRC-WB-FMIIP-P180708",
+        "primary_url": "https://maps.worldbank.org/projects/wb/pid/P180708?status=active",
         "metadata_state": "DISPLAY_READY"
       }
     ],
@@ -10458,6 +10551,7 @@
     ],
     "resolved_source_ids": [
       "SRC-WB-G2PX-YEM-UCT-2024-001",
+      "SRC-WB-FMIIP-P180708",
       "SRC-CCY-SAM-2024",
       "SRC-CCY-ISP-2024"
     ],
@@ -10472,6 +10566,11 @@
       {
         "source_id": "SRC-WB-G2PX-YEM-UCT-2024-001",
         "primary_url": "https://www.worldbank.org/en/events/2024/05/30/digitalizing-g2p-payments-in-yemen",
+        "metadata_state": "DISPLAY_READY"
+      },
+      {
+        "source_id": "SRC-WB-FMIIP-P180708",
+        "primary_url": "https://maps.worldbank.org/projects/wb/pid/P180708?status=active",
         "metadata_state": "DISPLAY_READY"
       },
       {

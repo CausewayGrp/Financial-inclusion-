@@ -2,8 +2,8 @@
  "schema": "YFIE_ROUTE_CONTENT_AND_STATE_INVENTORY/1.3",
  "purpose": "Design recipient's map of every route, its family, bindings, collections, next actions and the states Design must cover. Derived; not authority.",
  "generated_from": {
-  "production_master_sha256": "0087c312c061647aeade1e8eda3a3dce423478afa3d998639e938db24828f96b",
-  "page_specs_sha256": "486252f0d2fdea987b303111905cf43b210c824683745c806b8f48b2239eac2f",
+  "production_master_sha256": "ecb18e4f2bdf5163f10d1d76f5f64ba318216845085c165cfe3f9713c9dadb07",
+  "page_specs_sha256": "c76c7b0d7f097f131968b63d7d0a3a7fd005abebcac8c8625b7d1eb3f4289c51",
   "generator": "scripts/handoff_inventory.py"
  },
  "counts": {
@@ -1623,12 +1623,12 @@
    "reading_ids": [],
    "measurement_ids": [],
    "source_ids": [],
-   "source_references": 3,
+   "source_references": 4,
    "next_actions": [],
    "next_action_policy": "SOURCE_RELATED_CORRECTION_OR_REUSE",
    "lineage_state": "BOUND_EXACT",
    "verification_state": "SOURCES_LISTED",
-   "public_sources_listed": 3,
+   "public_sources_listed": 4,
    "structured_data": [
     "BreadcrumbList"
    ],
@@ -1809,12 +1809,12 @@
    "reading_ids": [],
    "measurement_ids": [],
    "source_ids": [],
-   "source_references": 2,
+   "source_references": 3,
    "next_actions": [],
    "next_action_policy": "SOURCE_RELATED_CORRECTION_OR_REUSE",
    "lineage_state": "BOUND_EXACT",
    "verification_state": "SOURCES_LISTED",
-   "public_sources_listed": 2,
+   "public_sources_listed": 3,
    "structured_data": [
     "BreadcrumbList"
    ],
@@ -2181,12 +2181,12 @@
    "reading_ids": [],
    "measurement_ids": [],
    "source_ids": [],
-   "source_references": 3,
+   "source_references": 4,
    "next_actions": [],
    "next_action_policy": "SOURCE_RELATED_CORRECTION_OR_REUSE",
    "lineage_state": "BOUND_EXACT",
    "verification_state": "SOURCES_LISTED_SOME_WITHOUT_PUBLIC_LOCATOR",
-   "public_sources_listed": 1,
+   "public_sources_listed": 2,
    "structured_data": [
     "BreadcrumbList"
    ],
@@ -4481,7 +4481,7 @@
     "MA-008"
    ],
    "source_ids": [],
-   "source_references": 6,
+   "source_references": 7,
    "next_actions": [
     "/evidence/CLM-005/"
    ],
@@ -4831,7 +4831,7 @@
    ],
    "measurement_ids": [],
    "source_ids": [],
-   "source_references": 42,
+   "source_references": 43,
    "next_actions": [
     "/measurement/",
     "/evidence/"
@@ -4884,7 +4884,7 @@
    "source_ids": [
     "SRC-WB-G2PX-YEM-UCT-2024-001"
    ],
-   "source_references": 3,
+   "source_references": 4,
    "next_actions": [],
    "next_action_policy": "VERIFY_BOUND_EVIDENCE_RECORDS",
    "structured_data": [
@@ -4924,7 +4924,7 @@
     "SRC-CBY-AR2023-001",
     "SRC-IMF-YEM-EGDDS-VAL-1996"
    ],
-   "source_references": 3,
+   "source_references": 4,
    "next_actions": [],
    "next_action_policy": "VERIFY_BOUND_EVIDENCE_RECORDS",
    "structured_data": [
@@ -4954,6 +4954,7 @@
     "CLM-024",
     "CLM-025",
     "CLM-026",
+    "FMIIP-BASELINE-2025-01",
     "XW-FMIIP-005"
    ],
    "visual_ids": [
@@ -5119,6 +5120,7 @@
     "CLM-001",
     "CLM-002",
     "CLM-025",
+    "CLM-027",
     "VIS-FINDEX-GAPS"
    ],
    "visual_ids": [
@@ -5134,7 +5136,7 @@
     "MA-007"
    ],
    "source_ids": [],
-   "source_references": 3,
+   "source_references": 5,
    "next_actions": [],
    "next_action_policy": "VERIFY_BOUND_EVIDENCE_RECORDS",
    "structured_data": [
