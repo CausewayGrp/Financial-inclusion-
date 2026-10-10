@@ -192,8 +192,12 @@ class Generation(unittest.TestCase):
         macro = by["VIS-REMITTANCE-MACRO"]["contract"]["series"][0]["values"]
         self.assertEqual([v["id"] for v in macro if "BREAK_VINTAGE" in v["markers"]], ["RMO-IMF-2025-REV"])
         self.assertTrue(all(v["grammar_state"] in ("REPORTED", "ESTIMATED", "PROJECTED") for v in macro))
-        withheld = [v["id"] for v in by["VIS-PAYMENT-ANATOMY"]["contract"]["series"][0]["values"] if v.get("withheld")]
-        self.assertEqual(sorted(withheld), ["OBS-00036", "OBS-00037"])
+        anatomy = by["VIS-PAYMENT-ANATOMY"]["contract"]["series"]
+        withheld = [v["id"] for s in anatomy for v in s["values"] if v.get("withheld")]
+        self.assertEqual(sorted(withheld), ["OBS-00036"])   # close-out CR-06: the H1-2025 accounts count prints with its caveat
+        # close-out U6: the third-quarter 2024 bulletin is its own series (panel), every value drawn, none compared
+        self.assertEqual([s["id"] for s in anatomy], ["h1_objects", "q3_2024_channels"])
+        self.assertTrue(all(v.get("y") is not None for v in anatomy[1]["values"]))
 
     def test_visual_design_contract_guards(self):
         """A binding that no longer resolves, or a value that no longer equals its guard, stops generation."""
@@ -257,9 +261,9 @@ class Generation(unittest.TestCase):
                         lab = it.get(f + "_label") or {}
                         self.assertTrue(lab.get("en") and lab.get("ar"), f"{v['visual_id']} {grp['id']} {it.get('id')} {f}")
         by = {v["visual_id"]: v for v in d["visuals"]}
-        anatomy = by["VIS-PAYMENT-ANATOMY"]["contract"]["series"][0]
-        self.assertTrue(all(x.get("is_not_label", {}).get("ar") for x in anatomy["values"]))
-        self.assertIn("caveat", anatomy.get("encoding_only_fields", []))
+        for anatomy in by["VIS-PAYMENT-ANATOMY"]["contract"]["series"]:
+            self.assertTrue(all(x.get("is_not_label", {}).get("ar") for x in anatomy["values"]))
+            self.assertIn("caveat", anatomy.get("encoding_only_fields", []))
         self.assertTrue(by["VIS-REMITTANCE-COST"]["contract"]["frame_labels"]["UI-VIS-RPW-AVERAGE-NOTE"]["ar"])
         # Tranche C (VIS-03/11/12): non-comparable anchors and unestablished nesting are tables, with a stated promotion condition
         for vid in ("VIS-MFI-DIVERGENCE", "VIS-FIRM-FINANCE-PATH", "VIS-TARGET-RESULT-STATE"):

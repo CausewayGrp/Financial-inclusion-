@@ -3957,6 +3957,46 @@ try:
 except Exception as _x:
     errors.append("CO-G04 unreadable " + repr(_x))
 
+# CO-G05 (close-out W3c, U2, U6 and CR-06, 10 October 2026): nothing in 19_PAYMENTS_DATA is unpublished by default. A row
+# is drawn when a governed visual contract selects it (by id, or by its where-filter) and the contract's caveat rule does
+# not withhold it; every other row, and every withheld row, says why in its caveat ("Held (close-out …", "Kept held
+# (close-out …" or "Published as text in …"). One object, one state: a row whose caveat says it is shown in the
+# third-quarter 2024 panel of VIS-PAYMENT-ANATOMY is drawn there, and that panel draws no row of another publication.
+_CO5_REASON = ("Held (close-out", "Kept held (close-out", "Published as text in")
+try:
+    _p5 = json.loads((C / "data/payments_data.json").read_text(encoding="utf-8"))["rows"]
+    _h5 = next(i for i, _r in enumerate(_p5) if _r and _r[0] == "observation_id")
+    _pr5 = [dict(zip(_p5[_h5], _r)) for _r in _p5[_h5 + 1:] if _r and str(_r[0] or "").startswith("OBS-")]
+    _vdc5 = json.loads((ROOT / "scripts/projection/controlled_inputs/visual_design_contract.json").read_text(encoding="utf-8"))
+    _drawn5, _panel5 = set(), set()
+    for _v in _vdc5["visuals"]:
+        for _s in ((_v.get("contract") or {}).get("series") or []) + ((_v.get("contract") or {}).get("objects") or []):
+            _rs = _s.get("rows") or {}
+            if _rs.get("file") != "data/payments_data.json":
+                continue
+            for _r in _pr5:
+                if "ids" in _rs:
+                    _sel = _r["observation_id"] in _rs["ids"]
+                else:
+                    _sel = all(re.search(_rx, str(_r.get(_f) or "")) for _f, _rx in (_rs.get("where") or {}).items())
+                _w = _s.get("withhold_when_caveat_matches")
+                if _sel and not (_w and _w in str(_r.get("caveats") or "")):
+                    _drawn5.add(_r["observation_id"])
+                    if _v["visual_id"] == "VIS-PAYMENT-ANATOMY" and _s.get("id") == "q3_2024_channels":
+                        _panel5.add(_r["observation_id"])
+    for _r in _pr5:
+        _id, _cav = _r["observation_id"], str(_r.get("caveats") or "")
+        if _id not in _drawn5 and not any(_m in _cav for _m in _CO5_REASON):
+            errors.append(f"CO-G05 {_id} is not drawn and its caveat gives no reason")
+        if "Shown in the third-quarter 2024 panel" in _cav and _id not in _panel5:
+            errors.append(f"CO-G05 {_id} says it is shown in the third-quarter 2024 panel, which does not draw it")
+        if _id in _panel5 and _r.get("source_id") != "SRC-CBY-PAYREPORT-Q3-2024":
+            errors.append(f"CO-G05 the third-quarter 2024 panel draws {_id}, a row of another publication")
+    if len(_pr5) < 90:
+        errors.append(f"CO-G05 read only {len(_pr5)} payment rows")
+except Exception as _x:
+    errors.append("CO-G05 unreadable " + repr(_x))
+
 # E2-CTX (edition 2, candidate c; REOPEN-INTL): the one same-source context figure beside Yemen's account ownership,
 # the World Bank's low-income aggregate for the same Findex wave (35.2%), is never shown bare. Asserted on what a reader
 # sees: every paragraph, list item or table cell that prints it also names what it averages (low-income economies and
