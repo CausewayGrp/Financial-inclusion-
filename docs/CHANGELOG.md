@@ -1,5 +1,26 @@
 # Repository Change Log
 
+## 2026-10-10 — NB-2: fixes from the independent review of NB-1
+
+An independent reviewer read every cell NB-1 changed and the built pages in both languages, and found no blocker. Its
+should-fix items and most nits are applied: Master `e444320569ae` → `370d72a4cb40`, 38 cells.
+
+- **Arabic licence line:** CauseWay takes feminine agreement, as elsewhere.
+- **Three labels NB-1 missed:** the /measurement/ rubric and the priority rationales; /ar/terms/.
+- **A grammar slip** on /measurement/.
+- **CLM-035's meta description** keeps the bank's label.
+- **The Findex citation** gains its year and place.
+- **The CC deed and legal-code addresses on /rights/ are links.** This is a renderer rule for those addresses only.
+- **The rights page title** is "Rights and reuse / حقوق إعادة الاستخدام".
+- **Informal hawala is named as a system.**
+- **Two substitutions whose English did not say "remittance"** were reworded.
+- **"Missing is not zero" wording** in 6 more cells; "Do not infer" is «لا تستنتج».
+- **Arabic h1s of /access/ and /providers/** no longer repeat the domain name.
+- **The register's remittance rule** is narrowed to what was applied.
+- **One alias** is paired across the languages.
+
+No figure, unit, period, universe, source, route or identifier changed.
+
 ## 2026-10-10 — NB-1: public naming and terminology, and the rights presentation (owner brief Part B; awaiting the owner's approval of the labels)
 
 One Master transaction, labels and governed term substitutions only, English and Arabic together. The decisions record

@@ -1,15 +1,15 @@
 {
   "schema": "YFIE_PUBLIC_LITERAL_CLOSURE/2.0",
   "audit_version": "2.0 — token-bounded, token-level classification (Pre-Tranche-C P1-D); v1 substring and paragraph-keyword rules removed",
-  "authority_master_sha256": "e444320569aed354d3903e30081cfb0b7eea9544110463eb72d43d3f2a3702d9",
-  "page_specs_sha256": "14601150e4e360900c985a2d6f95d8409272c4e9e870f6ef68348311c1a86c91",
+  "authority_master_sha256": "370d72a4cb40b75dc72aa0320d1dba984de07d200e6d19889d7ca3dc61413d37",
+  "page_specs_sha256": "9dd5fd3bbd9a981d9651cce408e6170d2e9dc4de6f714f976a08427545c059da",
   "scope": "Reader-facing Page Spec titles/sections plus governed-copy numeric inventory. Every substantive public numeral must resolve to a governed source-closed object or be explicitly classified as date/period, stable technical identifier, or non-observation system/method metadata.",
   "classification_rule": "UNRESOLVED_SUBSTANTIVE_PUBLIC_NUMBER is a hard validation failure. Route/source presence without an object-level source-closed trace is not sufficient.",
-  "record_count": 14569,
+  "record_count": 14571,
   "summary": {
     "STABLE_ID_OR_TECHNICAL_STANDARD": 25,
     "ROUTE_SOURCE_CLOSED__OBJECT_TRACE_AVAILABLE": 1067,
-    "DATE_OR_PERIOD": 1770,
+    "DATE_OR_PERIOD": 1772,
     "GOVERNED_OBJECT_SOURCE_CLOSED": 11418,
     "INVENTORY_COUNT_FROM_CONTRACT": 14,
     "CONTROLLED_DATASET_INVENTORY_OR_METHOD_METADATA": 159,
@@ -16814,7 +16814,7 @@
       "field": "universe_ar",
       "token": "2025",
       "category": "GOVERNED_OBJECT_SOURCE_CLOSED",
-      "context": "سلسلة الحوالات كما عرّفها ونشرها التقرير السنوي 2025 للبنك المركزي، وليست جميع قنوات التحويل أو حوالات الأسر المستلمة.",
+      "context": "سلسلة الحوالات كما عرّفها ونشرها التقرير السنوي 2025 للبنك المركزي، وليست جميع قنوات التحويل أو ما تتسلمه الأسر من حوالات.",
       "source_object": "CLM-034"
     },
     {
@@ -28857,7 +28857,7 @@
       "field": "body_ar",
       "token": "2014",
       "category": "DATE_OR_PERIOD",
-      "context": "في 2014 أفاد 18.3% من البالغين بأنهم تلقوا حوالات محلية. ومن بين هؤلاء المتلقين، تلقاها 31.1% عبر مشغل تحويل أموال، و2.0% عبر مؤسسة مالية، و0.0% عبر الهاتف المحمول. ولا يورد المصدر قيمًا لقنوات البالغين الذين أرسلوا حوالات، فهي غير متاحة وليست صفرًا."
+      "context": "في 2014 أفاد 18.3% من البالغين بأنهم تلقوا حوالات محلية. ومن بين هؤلاء المتلقين، تلقاها 31.1% عبر مشغل تحويل أموال، و2.0% عبر مؤسسة مالية، و0.0% عبر الهاتف المحمول. ولا يورد المصدر قيمًا لقنوات البالغين الذين أرسلوا حوالات، فهي غير متاحة، وهذا لا يعني صفرًا."
     },
     {
       "route": "/evidence/VIS-DOMESTIC-REMITTANCE-PATH-2014/",
@@ -28865,7 +28865,7 @@
       "field": "body_ar",
       "token": "18.3%",
       "category": "ROUTE_SOURCE_CLOSED__OBJECT_TRACE_AVAILABLE",
-      "context": "في 2014 أفاد 18.3% من البالغين بأنهم تلقوا حوالات محلية. ومن بين هؤلاء المتلقين، تلقاها 31.1% عبر مشغل تحويل أموال، و2.0% عبر مؤسسة مالية، و0.0% عبر الهاتف المحمول. ولا يورد المصدر قيمًا لقنوات البالغين الذين أرسلوا حوالات، فهي غير متاحة وليست صفرًا.",
+      "context": "في 2014 أفاد 18.3% من البالغين بأنهم تلقوا حوالات محلية. ومن بين هؤلاء المتلقين، تلقاها 31.1% عبر مشغل تحويل أموال، و2.0% عبر مؤسسة مالية، و0.0% عبر الهاتف المحمول. ولا يورد المصدر قيمًا لقنوات البالغين الذين أرسلوا حوالات، فهي غير متاحة، وهذا لا يعني صفرًا.",
       "source_object": "VIS-DOMESTIC-REMITTANCE-PATH-2014"
     },
     {
@@ -28874,7 +28874,7 @@
       "field": "body_ar",
       "token": "31.1%",
       "category": "ROUTE_SOURCE_CLOSED__OBJECT_TRACE_AVAILABLE",
-      "context": "في 2014 أفاد 18.3% من البالغين بأنهم تلقوا حوالات محلية. ومن بين هؤلاء المتلقين، تلقاها 31.1% عبر مشغل تحويل أموال، و2.0% عبر مؤسسة مالية، و0.0% عبر الهاتف المحمول. ولا يورد المصدر قيمًا لقنوات البالغين الذين أرسلوا حوالات، فهي غير متاحة وليست صفرًا.",
+      "context": "في 2014 أفاد 18.3% من البالغين بأنهم تلقوا حوالات محلية. ومن بين هؤلاء المتلقين، تلقاها 31.1% عبر مشغل تحويل أموال، و2.0% عبر مؤسسة مالية، و0.0% عبر الهاتف المحمول. ولا يورد المصدر قيمًا لقنوات البالغين الذين أرسلوا حوالات، فهي غير متاحة، وهذا لا يعني صفرًا.",
       "source_object": "VIS-DOMESTIC-REMITTANCE-PATH-2014"
     },
     {
@@ -28883,7 +28883,7 @@
       "field": "body_ar",
       "token": "2.0%",
       "category": "ROUTE_SOURCE_CLOSED__OBJECT_TRACE_AVAILABLE",
-      "context": "في 2014 أفاد 18.3% من البالغين بأنهم تلقوا حوالات محلية. ومن بين هؤلاء المتلقين، تلقاها 31.1% عبر مشغل تحويل أموال، و2.0% عبر مؤسسة مالية، و0.0% عبر الهاتف المحمول. ولا يورد المصدر قيمًا لقنوات البالغين الذين أرسلوا حوالات، فهي غير متاحة وليست صفرًا.",
+      "context": "في 2014 أفاد 18.3% من البالغين بأنهم تلقوا حوالات محلية. ومن بين هؤلاء المتلقين، تلقاها 31.1% عبر مشغل تحويل أموال، و2.0% عبر مؤسسة مالية، و0.0% عبر الهاتف المحمول. ولا يورد المصدر قيمًا لقنوات البالغين الذين أرسلوا حوالات، فهي غير متاحة، وهذا لا يعني صفرًا.",
       "source_object": "VIS-DOMESTIC-REMITTANCE-PATH-2014"
     },
     {
@@ -28892,7 +28892,7 @@
       "field": "body_ar",
       "token": "0.0%",
       "category": "ROUTE_SOURCE_CLOSED__OBJECT_TRACE_AVAILABLE",
-      "context": "في 2014 أفاد 18.3% من البالغين بأنهم تلقوا حوالات محلية. ومن بين هؤلاء المتلقين، تلقاها 31.1% عبر مشغل تحويل أموال، و2.0% عبر مؤسسة مالية، و0.0% عبر الهاتف المحمول. ولا يورد المصدر قيمًا لقنوات البالغين الذين أرسلوا حوالات، فهي غير متاحة وليست صفرًا.",
+      "context": "في 2014 أفاد 18.3% من البالغين بأنهم تلقوا حوالات محلية. ومن بين هؤلاء المتلقين، تلقاها 31.1% عبر مشغل تحويل أموال، و2.0% عبر مؤسسة مالية، و0.0% عبر الهاتف المحمول. ولا يورد المصدر قيمًا لقنوات البالغين الذين أرسلوا حوالات، فهي غير متاحة، وهذا لا يعني صفرًا.",
       "source_object": "VIS-DOMESTIC-REMITTANCE-PATH-2014"
     },
     {
@@ -28964,7 +28964,7 @@
       "field": "summary_ar",
       "token": "2014",
       "category": "GOVERNED_OBJECT_SOURCE_CLOSED",
-      "context": "في 2014 أفاد 18.3% من البالغين بأنهم تلقوا حوالات محلية. ومن بين هؤلاء المتلقين، تلقاها 31.1% عبر مشغل تحويل أموال، و2.0% عبر مؤسسة مالية، و0.0% عبر الهاتف المحمول. ولا يورد المصدر قيمًا لقنوات البالغين الذين أرسلوا حوالات، فهي غير متاحة وليست صفرًا.",
+      "context": "في 2014 أفاد 18.3% من البالغين بأنهم تلقوا حوالات محلية. ومن بين هؤلاء المتلقين، تلقاها 31.1% عبر مشغل تحويل أموال، و2.0% عبر مؤسسة مالية، و0.0% عبر الهاتف المحمول. ولا يورد المصدر قيمًا لقنوات البالغين الذين أرسلوا حوالات، فهي غير متاحة، وهذا لا يعني صفرًا.",
       "source_object": "VIS-DOMESTIC-REMITTANCE-PATH-2014"
     },
     {
@@ -28973,7 +28973,7 @@
       "field": "summary_ar",
       "token": "18.3%",
       "category": "GOVERNED_OBJECT_SOURCE_CLOSED",
-      "context": "في 2014 أفاد 18.3% من البالغين بأنهم تلقوا حوالات محلية. ومن بين هؤلاء المتلقين، تلقاها 31.1% عبر مشغل تحويل أموال، و2.0% عبر مؤسسة مالية، و0.0% عبر الهاتف المحمول. ولا يورد المصدر قيمًا لقنوات البالغين الذين أرسلوا حوالات، فهي غير متاحة وليست صفرًا.",
+      "context": "في 2014 أفاد 18.3% من البالغين بأنهم تلقوا حوالات محلية. ومن بين هؤلاء المتلقين، تلقاها 31.1% عبر مشغل تحويل أموال، و2.0% عبر مؤسسة مالية، و0.0% عبر الهاتف المحمول. ولا يورد المصدر قيمًا لقنوات البالغين الذين أرسلوا حوالات، فهي غير متاحة، وهذا لا يعني صفرًا.",
       "source_object": "VIS-DOMESTIC-REMITTANCE-PATH-2014"
     },
     {
@@ -28982,7 +28982,7 @@
       "field": "summary_ar",
       "token": "31.1%",
       "category": "GOVERNED_OBJECT_SOURCE_CLOSED",
-      "context": "في 2014 أفاد 18.3% من البالغين بأنهم تلقوا حوالات محلية. ومن بين هؤلاء المتلقين، تلقاها 31.1% عبر مشغل تحويل أموال، و2.0% عبر مؤسسة مالية، و0.0% عبر الهاتف المحمول. ولا يورد المصدر قيمًا لقنوات البالغين الذين أرسلوا حوالات، فهي غير متاحة وليست صفرًا.",
+      "context": "في 2014 أفاد 18.3% من البالغين بأنهم تلقوا حوالات محلية. ومن بين هؤلاء المتلقين، تلقاها 31.1% عبر مشغل تحويل أموال، و2.0% عبر مؤسسة مالية، و0.0% عبر الهاتف المحمول. ولا يورد المصدر قيمًا لقنوات البالغين الذين أرسلوا حوالات، فهي غير متاحة، وهذا لا يعني صفرًا.",
       "source_object": "VIS-DOMESTIC-REMITTANCE-PATH-2014"
     },
     {
@@ -28991,7 +28991,7 @@
       "field": "summary_ar",
       "token": "0%",
       "category": "GOVERNED_OBJECT_SOURCE_CLOSED",
-      "context": "في 2014 أفاد 18.3% من البالغين بأنهم تلقوا حوالات محلية. ومن بين هؤلاء المتلقين، تلقاها 31.1% عبر مشغل تحويل أموال، و2.0% عبر مؤسسة مالية، و0.0% عبر الهاتف المحمول. ولا يورد المصدر قيمًا لقنوات البالغين الذين أرسلوا حوالات، فهي غير متاحة وليست صفرًا.",
+      "context": "في 2014 أفاد 18.3% من البالغين بأنهم تلقوا حوالات محلية. ومن بين هؤلاء المتلقين، تلقاها 31.1% عبر مشغل تحويل أموال، و2.0% عبر مؤسسة مالية، و0.0% عبر الهاتف المحمول. ولا يورد المصدر قيمًا لقنوات البالغين الذين أرسلوا حوالات، فهي غير متاحة، وهذا لا يعني صفرًا.",
       "source_object": "VIS-DOMESTIC-REMITTANCE-PATH-2014"
     },
     {
@@ -30383,7 +30383,7 @@
       "field": "body_ar",
       "token": "3",
       "category": "DATE_OR_PERIOD",
-      "context": "فجوات الأدلة المسجلة في هذا المورد وفق إصدار هذا المورد المؤرخ في 3 أكتوبر 2026 من الأنواع التالية: فترة مفقودة، أو قاعدة احتساب غير موثقة، أو ملف أصلي غير متاح، أو طبقة مكانية لا يمكن بناؤها بعد، أو نطاق مصدر غير محسوم. وقد تُغلق الفجوة عند وصول دليل جديد؛ والفراغ أو غياب الرصد ليس صفرًا وليس دليلًا على عدم الوجود."
+      "context": "فجوات الأدلة المسجلة في هذا المورد وفق إصدار هذا المورد المؤرخ في 3 أكتوبر 2026 من الأنواع التالية: فترة مفقودة، أو قاعدة احتساب غير موثقة، أو ملف أصلي غير متاح، أو طبقة مكانية لا يمكن بناؤها بعد، أو نطاق مصدر غير محسوم. وقد تُغلق الفجوة عند وصول دليل جديد؛ والفراغ أو غياب الرصد لا يعني صفرًا ولا يدل على عدم الوجود."
     },
     {
       "route": "/evidence/VIS-EVIDENCE-GAPS/",
@@ -30391,7 +30391,7 @@
       "field": "body_ar",
       "token": "2026",
       "category": "DATE_OR_PERIOD",
-      "context": "فجوات الأدلة المسجلة في هذا المورد وفق إصدار هذا المورد المؤرخ في 3 أكتوبر 2026 من الأنواع التالية: فترة مفقودة، أو قاعدة احتساب غير موثقة، أو ملف أصلي غير متاح، أو طبقة مكانية لا يمكن بناؤها بعد، أو نطاق مصدر غير محسوم. وقد تُغلق الفجوة عند وصول دليل جديد؛ والفراغ أو غياب الرصد ليس صفرًا وليس دليلًا على عدم الوجود."
+      "context": "فجوات الأدلة المسجلة في هذا المورد وفق إصدار هذا المورد المؤرخ في 3 أكتوبر 2026 من الأنواع التالية: فترة مفقودة، أو قاعدة احتساب غير موثقة، أو ملف أصلي غير متاح، أو طبقة مكانية لا يمكن بناؤها بعد، أو نطاق مصدر غير محسوم. وقد تُغلق الفجوة عند وصول دليل جديد؛ والفراغ أو غياب الرصد لا يعني صفرًا ولا يدل على عدم الوجود."
     },
     {
       "route": "/evidence/VIS-EVIDENCE-GAPS/",
@@ -30417,7 +30417,7 @@
       "field": "summary_ar",
       "token": "3",
       "category": "CONTROLLED_DATASET_INVENTORY_OR_METHOD_METADATA",
-      "context": "فجوات الأدلة المسجلة في هذا المورد وفق إصدار هذا المورد المؤرخ في 3 أكتوبر 2026 من الأنواع التالية: فترة مفقودة، أو قاعدة احتساب غير موثقة، أو ملف أصلي غير متاح، أو طبقة مكانية لا يمكن بناؤها بعد، أو نطاق مصدر غير محسوم. وقد تُغلق الفجوة عند وصول دليل جديد؛ والفراغ أو غياب الرصد ليس صفرًا وليس دليلًا على عدم الوجود.",
+      "context": "فجوات الأدلة المسجلة في هذا المورد وفق إصدار هذا المورد المؤرخ في 3 أكتوبر 2026 من الأنواع التالية: فترة مفقودة، أو قاعدة احتساب غير موثقة، أو ملف أصلي غير متاح، أو طبقة مكانية لا يمكن بناؤها بعد، أو نطاق مصدر غير محسوم. وقد تُغلق الفجوة عند وصول دليل جديد؛ والفراغ أو غياب الرصد لا يعني صفرًا ولا يدل على عدم الوجود.",
       "source_object": "VIS-EVIDENCE-GAPS"
     },
     {
@@ -30426,7 +30426,7 @@
       "field": "summary_ar",
       "token": "2026",
       "category": "DATE_OR_PERIOD",
-      "context": "فجوات الأدلة المسجلة في هذا المورد وفق إصدار هذا المورد المؤرخ في 3 أكتوبر 2026 من الأنواع التالية: فترة مفقودة، أو قاعدة احتساب غير موثقة، أو ملف أصلي غير متاح، أو طبقة مكانية لا يمكن بناؤها بعد، أو نطاق مصدر غير محسوم. وقد تُغلق الفجوة عند وصول دليل جديد؛ والفراغ أو غياب الرصد ليس صفرًا وليس دليلًا على عدم الوجود.",
+      "context": "فجوات الأدلة المسجلة في هذا المورد وفق إصدار هذا المورد المؤرخ في 3 أكتوبر 2026 من الأنواع التالية: فترة مفقودة، أو قاعدة احتساب غير موثقة، أو ملف أصلي غير متاح، أو طبقة مكانية لا يمكن بناؤها بعد، أو نطاق مصدر غير محسوم. وقد تُغلق الفجوة عند وصول دليل جديد؛ والفراغ أو غياب الرصد لا يعني صفرًا ولا يدل على عدم الوجود.",
       "source_object": "VIS-EVIDENCE-GAPS"
     },
     {
@@ -30543,7 +30543,7 @@
       "field": "accessible_summary_ar",
       "token": "3",
       "category": "CONTROLLED_DATASET_INVENTORY_OR_METHOD_METADATA",
-      "context": "فجوات الأدلة المسجلة في هذا المورد وفق إصدار هذا المورد المؤرخ في 3 أكتوبر 2026 من الأنواع التالية: فترة مفقودة، أو قاعدة احتساب غير موثقة، أو ملف أصلي غير متاح، أو طبقة مكانية لا يمكن بناؤها بعد، أو نطاق مصدر غير محسوم. وقد تُغلق الفجوة عند وصول دليل جديد؛ والفراغ أو غياب الرصد ليس صفرًا وليس دليلًا على عدم الوجود.",
+      "context": "فجوات الأدلة المسجلة في هذا المورد وفق إصدار هذا المورد المؤرخ في 3 أكتوبر 2026 من الأنواع التالية: فترة مفقودة، أو قاعدة احتساب غير موثقة، أو ملف أصلي غير متاح، أو طبقة مكانية لا يمكن بناؤها بعد، أو نطاق مصدر غير محسوم. وقد تُغلق الفجوة عند وصول دليل جديد؛ والفراغ أو غياب الرصد لا يعني صفرًا ولا يدل على عدم الوجود.",
       "source_object": "VIS-EVIDENCE-GAPS"
     },
     {
@@ -30552,7 +30552,7 @@
       "field": "accessible_summary_ar",
       "token": "2026",
       "category": "DATE_OR_PERIOD",
-      "context": "فجوات الأدلة المسجلة في هذا المورد وفق إصدار هذا المورد المؤرخ في 3 أكتوبر 2026 من الأنواع التالية: فترة مفقودة، أو قاعدة احتساب غير موثقة، أو ملف أصلي غير متاح، أو طبقة مكانية لا يمكن بناؤها بعد، أو نطاق مصدر غير محسوم. وقد تُغلق الفجوة عند وصول دليل جديد؛ والفراغ أو غياب الرصد ليس صفرًا وليس دليلًا على عدم الوجود.",
+      "context": "فجوات الأدلة المسجلة في هذا المورد وفق إصدار هذا المورد المؤرخ في 3 أكتوبر 2026 من الأنواع التالية: فترة مفقودة، أو قاعدة احتساب غير موثقة، أو ملف أصلي غير متاح، أو طبقة مكانية لا يمكن بناؤها بعد، أو نطاق مصدر غير محسوم. وقد تُغلق الفجوة عند وصول دليل جديد؛ والفراغ أو غياب الرصد لا يعني صفرًا ولا يدل على عدم الوجود.",
       "source_object": "VIS-EVIDENCE-GAPS"
     },
     {
@@ -77641,7 +77641,7 @@
       "field": "summary_ar",
       "token": "3",
       "category": "CONTROLLED_DATASET_INVENTORY_OR_METHOD_METADATA",
-      "context": "فجوات الأدلة المسجلة في هذا المورد وفق إصدار هذا المورد المؤرخ في 3 أكتوبر 2026 من الأنواع التالية: فترة مفقودة، أو قاعدة احتساب غير موثقة، أو ملف أصلي غير متاح، أو طبقة مكانية لا يمكن بناؤها بعد، أو نطاق مصدر غير محسوم. وقد تُغلق الفجوة عند وصول دليل جديد؛ والفراغ أو غياب الرصد ليس صفرًا وليس دليلًا على عدم الوجود.",
+      "context": "فجوات الأدلة المسجلة في هذا المورد وفق إصدار هذا المورد المؤرخ في 3 أكتوبر 2026 من الأنواع التالية: فترة مفقودة، أو قاعدة احتساب غير موثقة، أو ملف أصلي غير متاح، أو طبقة مكانية لا يمكن بناؤها بعد، أو نطاق مصدر غير محسوم. وقد تُغلق الفجوة عند وصول دليل جديد؛ والفراغ أو غياب الرصد لا يعني صفرًا ولا يدل على عدم الوجود.",
       "source_object": "VIS-EVIDENCE-GAPS"
     },
     {
@@ -77650,7 +77650,7 @@
       "field": "summary_ar",
       "token": "2026",
       "category": "DATE_OR_PERIOD",
-      "context": "فجوات الأدلة المسجلة في هذا المورد وفق إصدار هذا المورد المؤرخ في 3 أكتوبر 2026 من الأنواع التالية: فترة مفقودة، أو قاعدة احتساب غير موثقة، أو ملف أصلي غير متاح، أو طبقة مكانية لا يمكن بناؤها بعد، أو نطاق مصدر غير محسوم. وقد تُغلق الفجوة عند وصول دليل جديد؛ والفراغ أو غياب الرصد ليس صفرًا وليس دليلًا على عدم الوجود.",
+      "context": "فجوات الأدلة المسجلة في هذا المورد وفق إصدار هذا المورد المؤرخ في 3 أكتوبر 2026 من الأنواع التالية: فترة مفقودة، أو قاعدة احتساب غير موثقة، أو ملف أصلي غير متاح، أو طبقة مكانية لا يمكن بناؤها بعد، أو نطاق مصدر غير محسوم. وقد تُغلق الفجوة عند وصول دليل جديد؛ والفراغ أو غياب الرصد لا يعني صفرًا ولا يدل على عدم الوجود.",
       "source_object": "VIS-EVIDENCE-GAPS"
     },
     {
@@ -77767,7 +77767,7 @@
       "field": "accessible_summary_ar",
       "token": "3",
       "category": "CONTROLLED_DATASET_INVENTORY_OR_METHOD_METADATA",
-      "context": "فجوات الأدلة المسجلة في هذا المورد وفق إصدار هذا المورد المؤرخ في 3 أكتوبر 2026 من الأنواع التالية: فترة مفقودة، أو قاعدة احتساب غير موثقة، أو ملف أصلي غير متاح، أو طبقة مكانية لا يمكن بناؤها بعد، أو نطاق مصدر غير محسوم. وقد تُغلق الفجوة عند وصول دليل جديد؛ والفراغ أو غياب الرصد ليس صفرًا وليس دليلًا على عدم الوجود.",
+      "context": "فجوات الأدلة المسجلة في هذا المورد وفق إصدار هذا المورد المؤرخ في 3 أكتوبر 2026 من الأنواع التالية: فترة مفقودة، أو قاعدة احتساب غير موثقة، أو ملف أصلي غير متاح، أو طبقة مكانية لا يمكن بناؤها بعد، أو نطاق مصدر غير محسوم. وقد تُغلق الفجوة عند وصول دليل جديد؛ والفراغ أو غياب الرصد لا يعني صفرًا ولا يدل على عدم الوجود.",
       "source_object": "VIS-EVIDENCE-GAPS"
     },
     {
@@ -77776,7 +77776,7 @@
       "field": "accessible_summary_ar",
       "token": "2026",
       "category": "DATE_OR_PERIOD",
-      "context": "فجوات الأدلة المسجلة في هذا المورد وفق إصدار هذا المورد المؤرخ في 3 أكتوبر 2026 من الأنواع التالية: فترة مفقودة، أو قاعدة احتساب غير موثقة، أو ملف أصلي غير متاح، أو طبقة مكانية لا يمكن بناؤها بعد، أو نطاق مصدر غير محسوم. وقد تُغلق الفجوة عند وصول دليل جديد؛ والفراغ أو غياب الرصد ليس صفرًا وليس دليلًا على عدم الوجود.",
+      "context": "فجوات الأدلة المسجلة في هذا المورد وفق إصدار هذا المورد المؤرخ في 3 أكتوبر 2026 من الأنواع التالية: فترة مفقودة، أو قاعدة احتساب غير موثقة، أو ملف أصلي غير متاح، أو طبقة مكانية لا يمكن بناؤها بعد، أو نطاق مصدر غير محسوم. وقد تُغلق الفجوة عند وصول دليل جديد؛ والفراغ أو غياب الرصد لا يعني صفرًا ولا يدل على عدم الوجود.",
       "source_object": "VIS-EVIDENCE-GAPS"
     },
     {
@@ -81668,7 +81668,7 @@
       "field": "universe_ar",
       "token": "2025",
       "category": "GOVERNED_OBJECT_SOURCE_CLOSED",
-      "context": "سلسلة الحوالات كما عرّفها ونشرها التقرير السنوي 2025 للبنك المركزي، وليست جميع قنوات التحويل أو حوالات الأسر المستلمة.",
+      "context": "سلسلة الحوالات كما عرّفها ونشرها التقرير السنوي 2025 للبنك المركزي، وليست جميع قنوات التحويل أو ما تتسلمه الأسر من حوالات.",
       "source_object": "CLM-034"
     },
     {
@@ -102097,7 +102097,7 @@
       "field": "summary_ar",
       "token": "2014",
       "category": "GOVERNED_OBJECT_SOURCE_CLOSED",
-      "context": "في 2014 أفاد 18.3% من البالغين بأنهم تلقوا حوالات محلية. ومن بين هؤلاء المتلقين، تلقاها 31.1% عبر مشغل تحويل أموال، و2.0% عبر مؤسسة مالية، و0.0% عبر الهاتف المحمول. ولا يورد المصدر قيمًا لقنوات البالغين الذين أرسلوا حوالات، فهي غير متاحة وليست صفرًا.",
+      "context": "في 2014 أفاد 18.3% من البالغين بأنهم تلقوا حوالات محلية. ومن بين هؤلاء المتلقين، تلقاها 31.1% عبر مشغل تحويل أموال، و2.0% عبر مؤسسة مالية، و0.0% عبر الهاتف المحمول. ولا يورد المصدر قيمًا لقنوات البالغين الذين أرسلوا حوالات، فهي غير متاحة، وهذا لا يعني صفرًا.",
       "source_object": "VIS-DOMESTIC-REMITTANCE-PATH-2014"
     },
     {
@@ -102106,7 +102106,7 @@
       "field": "summary_ar",
       "token": "18.3%",
       "category": "GOVERNED_OBJECT_SOURCE_CLOSED",
-      "context": "في 2014 أفاد 18.3% من البالغين بأنهم تلقوا حوالات محلية. ومن بين هؤلاء المتلقين، تلقاها 31.1% عبر مشغل تحويل أموال، و2.0% عبر مؤسسة مالية، و0.0% عبر الهاتف المحمول. ولا يورد المصدر قيمًا لقنوات البالغين الذين أرسلوا حوالات، فهي غير متاحة وليست صفرًا.",
+      "context": "في 2014 أفاد 18.3% من البالغين بأنهم تلقوا حوالات محلية. ومن بين هؤلاء المتلقين، تلقاها 31.1% عبر مشغل تحويل أموال، و2.0% عبر مؤسسة مالية، و0.0% عبر الهاتف المحمول. ولا يورد المصدر قيمًا لقنوات البالغين الذين أرسلوا حوالات، فهي غير متاحة، وهذا لا يعني صفرًا.",
       "source_object": "VIS-DOMESTIC-REMITTANCE-PATH-2014"
     },
     {
@@ -102115,7 +102115,7 @@
       "field": "summary_ar",
       "token": "31.1%",
       "category": "GOVERNED_OBJECT_SOURCE_CLOSED",
-      "context": "في 2014 أفاد 18.3% من البالغين بأنهم تلقوا حوالات محلية. ومن بين هؤلاء المتلقين، تلقاها 31.1% عبر مشغل تحويل أموال، و2.0% عبر مؤسسة مالية، و0.0% عبر الهاتف المحمول. ولا يورد المصدر قيمًا لقنوات البالغين الذين أرسلوا حوالات، فهي غير متاحة وليست صفرًا.",
+      "context": "في 2014 أفاد 18.3% من البالغين بأنهم تلقوا حوالات محلية. ومن بين هؤلاء المتلقين، تلقاها 31.1% عبر مشغل تحويل أموال، و2.0% عبر مؤسسة مالية، و0.0% عبر الهاتف المحمول. ولا يورد المصدر قيمًا لقنوات البالغين الذين أرسلوا حوالات، فهي غير متاحة، وهذا لا يعني صفرًا.",
       "source_object": "VIS-DOMESTIC-REMITTANCE-PATH-2014"
     },
     {
@@ -102124,7 +102124,7 @@
       "field": "summary_ar",
       "token": "0%",
       "category": "GOVERNED_OBJECT_SOURCE_CLOSED",
-      "context": "في 2014 أفاد 18.3% من البالغين بأنهم تلقوا حوالات محلية. ومن بين هؤلاء المتلقين، تلقاها 31.1% عبر مشغل تحويل أموال، و2.0% عبر مؤسسة مالية، و0.0% عبر الهاتف المحمول. ولا يورد المصدر قيمًا لقنوات البالغين الذين أرسلوا حوالات، فهي غير متاحة وليست صفرًا.",
+      "context": "في 2014 أفاد 18.3% من البالغين بأنهم تلقوا حوالات محلية. ومن بين هؤلاء المتلقين، تلقاها 31.1% عبر مشغل تحويل أموال، و2.0% عبر مؤسسة مالية، و0.0% عبر الهاتف المحمول. ولا يورد المصدر قيمًا لقنوات البالغين الذين أرسلوا حوالات، فهي غير متاحة، وهذا لا يعني صفرًا.",
       "source_object": "VIS-DOMESTIC-REMITTANCE-PATH-2014"
     },
     {
@@ -120607,7 +120607,7 @@
       "field": "body_ar",
       "token": "2018",
       "category": "DATE_OR_PERIOD",
-      "context": "يورد تقرير خبراء صندوق النقد قيم 2018–2024 بوصفها قيمًا تاريخية تستند إلى حسابات خبراء الصندوق، ويورد ملحق لاحق للمشاورات نفسها قيمة 2025 كتقدير وقيم 2026–2030 كتوقعات. وتُفصل السلسلة عند تغير الوثيقة المصدر، فلا تُمد القيم التاريخية عبر التوقعات كما لو كانت السنوات كلها من النوع نفسه. مراجعة التوقع ليست تغيرًا اقتصاديًا مرصودًا، كما أن سلسلة التحويلات الكلية لا تقيس حجم الحوالة غير الرسمية."
+      "context": "يورد تقرير خبراء صندوق النقد قيم 2018–2024 بوصفها قيمًا تاريخية تستند إلى حسابات خبراء الصندوق، ويورد ملحق لاحق للمشاورات نفسها قيمة 2025 كتقدير وقيم 2026–2030 كتوقعات. وتُفصل السلسلة عند تغير الوثيقة المصدر، فلا تُمد القيم التاريخية عبر التوقعات كما لو كانت السنوات كلها من النوع نفسه. مراجعة التوقع ليست تغيرًا اقتصاديًا مرصودًا، كما أن سلسلة الحوالات الكلية لا تقيس حجم التحويلات عبر نظام الحوالة غير الرسمي."
     },
     {
       "route": "/remittances/",
@@ -120615,7 +120615,7 @@
       "field": "body_ar",
       "token": "2024",
       "category": "DATE_OR_PERIOD",
-      "context": "يورد تقرير خبراء صندوق النقد قيم 2018–2024 بوصفها قيمًا تاريخية تستند إلى حسابات خبراء الصندوق، ويورد ملحق لاحق للمشاورات نفسها قيمة 2025 كتقدير وقيم 2026–2030 كتوقعات. وتُفصل السلسلة عند تغير الوثيقة المصدر، فلا تُمد القيم التاريخية عبر التوقعات كما لو كانت السنوات كلها من النوع نفسه. مراجعة التوقع ليست تغيرًا اقتصاديًا مرصودًا، كما أن سلسلة التحويلات الكلية لا تقيس حجم الحوالة غير الرسمية."
+      "context": "يورد تقرير خبراء صندوق النقد قيم 2018–2024 بوصفها قيمًا تاريخية تستند إلى حسابات خبراء الصندوق، ويورد ملحق لاحق للمشاورات نفسها قيمة 2025 كتقدير وقيم 2026–2030 كتوقعات. وتُفصل السلسلة عند تغير الوثيقة المصدر، فلا تُمد القيم التاريخية عبر التوقعات كما لو كانت السنوات كلها من النوع نفسه. مراجعة التوقع ليست تغيرًا اقتصاديًا مرصودًا، كما أن سلسلة الحوالات الكلية لا تقيس حجم التحويلات عبر نظام الحوالة غير الرسمي."
     },
     {
       "route": "/remittances/",
@@ -120623,7 +120623,7 @@
       "field": "body_ar",
       "token": "2025",
       "category": "DATE_OR_PERIOD",
-      "context": "يورد تقرير خبراء صندوق النقد قيم 2018–2024 بوصفها قيمًا تاريخية تستند إلى حسابات خبراء الصندوق، ويورد ملحق لاحق للمشاورات نفسها قيمة 2025 كتقدير وقيم 2026–2030 كتوقعات. وتُفصل السلسلة عند تغير الوثيقة المصدر، فلا تُمد القيم التاريخية عبر التوقعات كما لو كانت السنوات كلها من النوع نفسه. مراجعة التوقع ليست تغيرًا اقتصاديًا مرصودًا، كما أن سلسلة التحويلات الكلية لا تقيس حجم الحوالة غير الرسمية."
+      "context": "يورد تقرير خبراء صندوق النقد قيم 2018–2024 بوصفها قيمًا تاريخية تستند إلى حسابات خبراء الصندوق، ويورد ملحق لاحق للمشاورات نفسها قيمة 2025 كتقدير وقيم 2026–2030 كتوقعات. وتُفصل السلسلة عند تغير الوثيقة المصدر، فلا تُمد القيم التاريخية عبر التوقعات كما لو كانت السنوات كلها من النوع نفسه. مراجعة التوقع ليست تغيرًا اقتصاديًا مرصودًا، كما أن سلسلة الحوالات الكلية لا تقيس حجم التحويلات عبر نظام الحوالة غير الرسمي."
     },
     {
       "route": "/remittances/",
@@ -120631,7 +120631,7 @@
       "field": "body_ar",
       "token": "2026",
       "category": "DATE_OR_PERIOD",
-      "context": "يورد تقرير خبراء صندوق النقد قيم 2018–2024 بوصفها قيمًا تاريخية تستند إلى حسابات خبراء الصندوق، ويورد ملحق لاحق للمشاورات نفسها قيمة 2025 كتقدير وقيم 2026–2030 كتوقعات. وتُفصل السلسلة عند تغير الوثيقة المصدر، فلا تُمد القيم التاريخية عبر التوقعات كما لو كانت السنوات كلها من النوع نفسه. مراجعة التوقع ليست تغيرًا اقتصاديًا مرصودًا، كما أن سلسلة التحويلات الكلية لا تقيس حجم الحوالة غير الرسمية."
+      "context": "يورد تقرير خبراء صندوق النقد قيم 2018–2024 بوصفها قيمًا تاريخية تستند إلى حسابات خبراء الصندوق، ويورد ملحق لاحق للمشاورات نفسها قيمة 2025 كتقدير وقيم 2026–2030 كتوقعات. وتُفصل السلسلة عند تغير الوثيقة المصدر، فلا تُمد القيم التاريخية عبر التوقعات كما لو كانت السنوات كلها من النوع نفسه. مراجعة التوقع ليست تغيرًا اقتصاديًا مرصودًا، كما أن سلسلة الحوالات الكلية لا تقيس حجم التحويلات عبر نظام الحوالة غير الرسمي."
     },
     {
       "route": "/remittances/",
@@ -120639,7 +120639,7 @@
       "field": "body_ar",
       "token": "2030",
       "category": "DATE_OR_PERIOD",
-      "context": "يورد تقرير خبراء صندوق النقد قيم 2018–2024 بوصفها قيمًا تاريخية تستند إلى حسابات خبراء الصندوق، ويورد ملحق لاحق للمشاورات نفسها قيمة 2025 كتقدير وقيم 2026–2030 كتوقعات. وتُفصل السلسلة عند تغير الوثيقة المصدر، فلا تُمد القيم التاريخية عبر التوقعات كما لو كانت السنوات كلها من النوع نفسه. مراجعة التوقع ليست تغيرًا اقتصاديًا مرصودًا، كما أن سلسلة التحويلات الكلية لا تقيس حجم الحوالة غير الرسمية."
+      "context": "يورد تقرير خبراء صندوق النقد قيم 2018–2024 بوصفها قيمًا تاريخية تستند إلى حسابات خبراء الصندوق، ويورد ملحق لاحق للمشاورات نفسها قيمة 2025 كتقدير وقيم 2026–2030 كتوقعات. وتُفصل السلسلة عند تغير الوثيقة المصدر، فلا تُمد القيم التاريخية عبر التوقعات كما لو كانت السنوات كلها من النوع نفسه. مراجعة التوقع ليست تغيرًا اقتصاديًا مرصودًا، كما أن سلسلة الحوالات الكلية لا تقيس حجم التحويلات عبر نظام الحوالة غير الرسمي."
     },
     {
       "route": "/remittances/",
@@ -121078,7 +121078,7 @@
       "field": "body_ar",
       "token": "2021",
       "category": "DATE_OR_PERIOD",
-      "context": "لا تساوي سلسلة الحوالات الواردة في ميزان المدفوعات حجمَ الحوالة غير الرسمية أو توزيعها على الأسر. ومراجعة المصدر ليست هبوطًا اقتصاديًا. كما أن تشابه المسارين بعد تحويل السلسلتين إلى رقم قياسي (2021 = 100) لا يثبت أن السلسلتين الخام تغطيان النطاق نفسه، ولا يكشف معامل تحويل بينهما. وأسعار الممرات ليست متوسطًا وطنيًا للتكلفة. كذلك فإن تغير رصيد خارجي لا يساوي تلقائيًا معاملة، ولا تعيد الطبعة السابعة من دليل ميزان المدفوعات (BPM7) كتابة سلاسل اليمن التاريخية بأثر رجعي من دون تحويل صريح."
+      "context": "لا تساوي سلسلة الحوالات الواردة في ميزان المدفوعات حجمَ التحويلات عبر نظام الحوالة غير الرسمي أو توزيعها على الأسر. ومراجعة المصدر ليست هبوطًا اقتصاديًا. كما أن تشابه المسارين بعد تحويل السلسلتين إلى رقم قياسي (2021 = 100) لا يثبت أن السلسلتين الخام تغطيان النطاق نفسه، ولا يكشف معامل تحويل بينهما. وأسعار الممرات ليست متوسطًا وطنيًا للتكلفة. كذلك فإن تغير رصيد خارجي لا يساوي تلقائيًا معاملة، ولا تعيد الطبعة السابعة من دليل ميزان المدفوعات (BPM7) كتابة سلاسل اليمن التاريخية بأثر رجعي من دون تحويل صريح."
     },
     {
       "route": "/remittances/",
@@ -121086,7 +121086,7 @@
       "field": "body_ar",
       "token": "100",
       "category": "ROUTE_SOURCE_CLOSED__OBJECT_TRACE_AVAILABLE",
-      "context": "لا تساوي سلسلة الحوالات الواردة في ميزان المدفوعات حجمَ الحوالة غير الرسمية أو توزيعها على الأسر. ومراجعة المصدر ليست هبوطًا اقتصاديًا. كما أن تشابه المسارين بعد تحويل السلسلتين إلى رقم قياسي (2021 = 100) لا يثبت أن السلسلتين الخام تغطيان النطاق نفسه، ولا يكشف معامل تحويل بينهما. وأسعار الممرات ليست متوسطًا وطنيًا للتكلفة. كذلك فإن تغير رصيد خارجي لا يساوي تلقائيًا معاملة، ولا تعيد الطبعة السابعة من دليل ميزان المدفوعات (BPM7) كتابة سلاسل اليمن التاريخية بأثر رجعي من دون تحويل صريح.",
+      "context": "لا تساوي سلسلة الحوالات الواردة في ميزان المدفوعات حجمَ التحويلات عبر نظام الحوالة غير الرسمي أو توزيعها على الأسر. ومراجعة المصدر ليست هبوطًا اقتصاديًا. كما أن تشابه المسارين بعد تحويل السلسلتين إلى رقم قياسي (2021 = 100) لا يثبت أن السلسلتين الخام تغطيان النطاق نفسه، ولا يكشف معامل تحويل بينهما. وأسعار الممرات ليست متوسطًا وطنيًا للتكلفة. كذلك فإن تغير رصيد خارجي لا يساوي تلقائيًا معاملة، ولا تعيد الطبعة السابعة من دليل ميزان المدفوعات (BPM7) كتابة سلاسل اليمن التاريخية بأثر رجعي من دون تحويل صريح.",
       "source_object": "CLM-037"
     },
     {
@@ -123465,7 +123465,7 @@
       "field": "summary_ar",
       "token": "2014",
       "category": "GOVERNED_OBJECT_SOURCE_CLOSED",
-      "context": "في 2014 أفاد 18.3% من البالغين بأنهم تلقوا حوالات محلية. ومن بين هؤلاء المتلقين، تلقاها 31.1% عبر مشغل تحويل أموال، و2.0% عبر مؤسسة مالية، و0.0% عبر الهاتف المحمول. ولا يورد المصدر قيمًا لقنوات البالغين الذين أرسلوا حوالات، فهي غير متاحة وليست صفرًا.",
+      "context": "في 2014 أفاد 18.3% من البالغين بأنهم تلقوا حوالات محلية. ومن بين هؤلاء المتلقين، تلقاها 31.1% عبر مشغل تحويل أموال، و2.0% عبر مؤسسة مالية، و0.0% عبر الهاتف المحمول. ولا يورد المصدر قيمًا لقنوات البالغين الذين أرسلوا حوالات، فهي غير متاحة، وهذا لا يعني صفرًا.",
       "source_object": "VIS-DOMESTIC-REMITTANCE-PATH-2014"
     },
     {
@@ -123474,7 +123474,7 @@
       "field": "summary_ar",
       "token": "18.3%",
       "category": "GOVERNED_OBJECT_SOURCE_CLOSED",
-      "context": "في 2014 أفاد 18.3% من البالغين بأنهم تلقوا حوالات محلية. ومن بين هؤلاء المتلقين، تلقاها 31.1% عبر مشغل تحويل أموال، و2.0% عبر مؤسسة مالية، و0.0% عبر الهاتف المحمول. ولا يورد المصدر قيمًا لقنوات البالغين الذين أرسلوا حوالات، فهي غير متاحة وليست صفرًا.",
+      "context": "في 2014 أفاد 18.3% من البالغين بأنهم تلقوا حوالات محلية. ومن بين هؤلاء المتلقين، تلقاها 31.1% عبر مشغل تحويل أموال، و2.0% عبر مؤسسة مالية، و0.0% عبر الهاتف المحمول. ولا يورد المصدر قيمًا لقنوات البالغين الذين أرسلوا حوالات، فهي غير متاحة، وهذا لا يعني صفرًا.",
       "source_object": "VIS-DOMESTIC-REMITTANCE-PATH-2014"
     },
     {
@@ -123483,7 +123483,7 @@
       "field": "summary_ar",
       "token": "31.1%",
       "category": "GOVERNED_OBJECT_SOURCE_CLOSED",
-      "context": "في 2014 أفاد 18.3% من البالغين بأنهم تلقوا حوالات محلية. ومن بين هؤلاء المتلقين، تلقاها 31.1% عبر مشغل تحويل أموال، و2.0% عبر مؤسسة مالية، و0.0% عبر الهاتف المحمول. ولا يورد المصدر قيمًا لقنوات البالغين الذين أرسلوا حوالات، فهي غير متاحة وليست صفرًا.",
+      "context": "في 2014 أفاد 18.3% من البالغين بأنهم تلقوا حوالات محلية. ومن بين هؤلاء المتلقين، تلقاها 31.1% عبر مشغل تحويل أموال، و2.0% عبر مؤسسة مالية، و0.0% عبر الهاتف المحمول. ولا يورد المصدر قيمًا لقنوات البالغين الذين أرسلوا حوالات، فهي غير متاحة، وهذا لا يعني صفرًا.",
       "source_object": "VIS-DOMESTIC-REMITTANCE-PATH-2014"
     },
     {
@@ -123492,7 +123492,7 @@
       "field": "summary_ar",
       "token": "0%",
       "category": "GOVERNED_OBJECT_SOURCE_CLOSED",
-      "context": "في 2014 أفاد 18.3% من البالغين بأنهم تلقوا حوالات محلية. ومن بين هؤلاء المتلقين، تلقاها 31.1% عبر مشغل تحويل أموال، و2.0% عبر مؤسسة مالية، و0.0% عبر الهاتف المحمول. ولا يورد المصدر قيمًا لقنوات البالغين الذين أرسلوا حوالات، فهي غير متاحة وليست صفرًا.",
+      "context": "في 2014 أفاد 18.3% من البالغين بأنهم تلقوا حوالات محلية. ومن بين هؤلاء المتلقين، تلقاها 31.1% عبر مشغل تحويل أموال، و2.0% عبر مؤسسة مالية، و0.0% عبر الهاتف المحمول. ولا يورد المصدر قيمًا لقنوات البالغين الذين أرسلوا حوالات، فهي غير متاحة، وهذا لا يعني صفرًا.",
       "source_object": "VIS-DOMESTIC-REMITTANCE-PATH-2014"
     },
     {
@@ -127029,7 +127029,7 @@
       "field": "universe_ar",
       "token": "2025",
       "category": "GOVERNED_OBJECT_SOURCE_CLOSED",
-      "context": "سلسلة الحوالات كما عرّفها ونشرها التقرير السنوي 2025 للبنك المركزي، وليست جميع قنوات التحويل أو حوالات الأسر المستلمة.",
+      "context": "سلسلة الحوالات كما عرّفها ونشرها التقرير السنوي 2025 للبنك المركزي، وليست جميع قنوات التحويل أو ما تتسلمه الأسر من حوالات.",
       "source_object": "CLM-034"
     },
     {
@@ -128763,7 +128763,7 @@
       "field": "body_en",
       "token": "4.0",
       "category": "ALLOWED_METHOD_OR_TOOL_CONSTANT",
-      "context": "CauseWay licenses the content it owns in this resource under the Creative Commons Attribution 4.0 International licence (CC BY 4.0; deed https://creativecommons.org/licenses/by/4.0/, legal code https://creativecommons.org/licenses/by/4.0/legalcode.en). Covered: CauseWay's text and analysis in English and Arabic, its visual designs, the compiled evidence records and the figures CauseWay calculates, and the structure and annotations of the data exports when they are published. Not covered: material published by others — documents, data, tables, figures and text remain under their publishers' terms, including where this resource reports, quotes or translates them, and this resource does not host copies of their files; the CauseWay name, logo and marks; and the software code of the repository that builds this resource, which is outside this licence. Figures derived from survey microdata: the confidence intervals this resource derives from the Global Findex respondent file for Yemen (evidence record CLM-026) are computed under the World Bank Microdata Research License, which permits publishing aggregate statistics with the data cited. Cite the data as that licence requires: Demirgüç-Kunt, Klapper, Singer and Ansar, The Global Findex Database 2021: Financial Inclusion, Digital Payments, and Resilience in the Age of COVID-19, World Bank. CC BY 4.0 does not extend to the underlying microdata, which this resource does not host or redistribute. You may share and adapt CauseWay's content for any purpose, provided you credit CauseWay, link to the licence and indicate whether you made changes: give the title, the author (CauseWay), the source (this resource and the page address), the licence (CC BY 4.0) and the changes made. For a reused figure, use two lines: first this resource (Yemen Financial Inclusion Evidence, the record, CauseWay, the edition and the page address), then the original source that the record names (publisher, title, year and link). This page states the licence CauseWay applies to its own content; it does not state that any third-party rights have been cleared."
+      "context": "CauseWay licenses the content it owns in this resource under the Creative Commons Attribution 4.0 International licence (CC BY 4.0; deed https://creativecommons.org/licenses/by/4.0/, legal code https://creativecommons.org/licenses/by/4.0/legalcode.en). Covered: CauseWay's text and analysis in English and Arabic, its visual designs, the compiled evidence records and the figures CauseWay calculates, and the structure and annotations of the data exports when they are published. Not covered: material published by others — documents, data, tables, figures and text remain under their publishers' terms, including where this resource reports, quotes or translates them, and this resource does not host copies of their files; the CauseWay name, logo and marks; and the software code of the repository that builds this resource, which is outside this licence. Figures derived from survey microdata: the confidence intervals this resource derives from the Global Findex respondent file for Yemen (evidence record CLM-026) are computed under the World Bank Microdata Research License, which permits publishing aggregate statistics with the data cited. Cite the data as that licence requires: Demirgüç-Kunt, Klapper, Singer and Ansar (2022), The Global Findex Database 2021: Financial Inclusion, Digital Payments, and Resilience in the Age of COVID-19, Washington, DC: World Bank. CC BY 4.0 does not extend to the underlying microdata, which this resource does not host or redistribute. You may share and adapt CauseWay's content for any purpose, provided you credit CauseWay, link to the licence and indicate whether you made changes: give the title, the author (CauseWay), the source (this resource and the page address), the licence (CC BY 4.0) and the changes made. For a reused figure, use two lines: first this resource (Yemen Financial Inclusion Evidence, the record, CauseWay, the edition and the page address), then the original source that the record names (publisher, title, year and link). This page states the licence CauseWay applies to its own content; it does not state that any third-party rights have been cleared."
     },
     {
       "route": "/rights/",
@@ -128771,7 +128771,15 @@
       "field": "body_en",
       "token": "026",
       "category": "STABLE_ID_OR_TECHNICAL_STANDARD",
-      "context": "CauseWay licenses the content it owns in this resource under the Creative Commons Attribution 4.0 International licence (CC BY 4.0; deed https://creativecommons.org/licenses/by/4.0/, legal code https://creativecommons.org/licenses/by/4.0/legalcode.en). Covered: CauseWay's text and analysis in English and Arabic, its visual designs, the compiled evidence records and the figures CauseWay calculates, and the structure and annotations of the data exports when they are published. Not covered: material published by others — documents, data, tables, figures and text remain under their publishers' terms, including where this resource reports, quotes or translates them, and this resource does not host copies of their files; the CauseWay name, logo and marks; and the software code of the repository that builds this resource, which is outside this licence. Figures derived from survey microdata: the confidence intervals this resource derives from the Global Findex respondent file for Yemen (evidence record CLM-026) are computed under the World Bank Microdata Research License, which permits publishing aggregate statistics with the data cited. Cite the data as that licence requires: Demirgüç-Kunt, Klapper, Singer and Ansar, The Global Findex Database 2021: Financial Inclusion, Digital Payments, and Resilience in the Age of COVID-19, World Bank. CC BY 4.0 does not extend to the underlying microdata, which this resource does not host or redistribute. You may share and adapt CauseWay's content for any purpose, provided you credit CauseWay, link to the licence and indicate whether you made changes: give the title, the author (CauseWay), the source (this resource and the page address), the licence (CC BY 4.0) and the changes made. For a reused figure, use two lines: first this resource (Yemen Financial Inclusion Evidence, the record, CauseWay, the edition and the page address), then the original source that the record names (publisher, title, year and link). This page states the licence CauseWay applies to its own content; it does not state that any third-party rights have been cleared."
+      "context": "CauseWay licenses the content it owns in this resource under the Creative Commons Attribution 4.0 International licence (CC BY 4.0; deed https://creativecommons.org/licenses/by/4.0/, legal code https://creativecommons.org/licenses/by/4.0/legalcode.en). Covered: CauseWay's text and analysis in English and Arabic, its visual designs, the compiled evidence records and the figures CauseWay calculates, and the structure and annotations of the data exports when they are published. Not covered: material published by others — documents, data, tables, figures and text remain under their publishers' terms, including where this resource reports, quotes or translates them, and this resource does not host copies of their files; the CauseWay name, logo and marks; and the software code of the repository that builds this resource, which is outside this licence. Figures derived from survey microdata: the confidence intervals this resource derives from the Global Findex respondent file for Yemen (evidence record CLM-026) are computed under the World Bank Microdata Research License, which permits publishing aggregate statistics with the data cited. Cite the data as that licence requires: Demirgüç-Kunt, Klapper, Singer and Ansar (2022), The Global Findex Database 2021: Financial Inclusion, Digital Payments, and Resilience in the Age of COVID-19, Washington, DC: World Bank. CC BY 4.0 does not extend to the underlying microdata, which this resource does not host or redistribute. You may share and adapt CauseWay's content for any purpose, provided you credit CauseWay, link to the licence and indicate whether you made changes: give the title, the author (CauseWay), the source (this resource and the page address), the licence (CC BY 4.0) and the changes made. For a reused figure, use two lines: first this resource (Yemen Financial Inclusion Evidence, the record, CauseWay, the edition and the page address), then the original source that the record names (publisher, title, year and link). This page states the licence CauseWay applies to its own content; it does not state that any third-party rights have been cleared."
+    },
+    {
+      "route": "/rights/",
+      "surface": "section",
+      "field": "body_en",
+      "token": "2022",
+      "category": "DATE_OR_PERIOD",
+      "context": "CauseWay licenses the content it owns in this resource under the Creative Commons Attribution 4.0 International licence (CC BY 4.0; deed https://creativecommons.org/licenses/by/4.0/, legal code https://creativecommons.org/licenses/by/4.0/legalcode.en). Covered: CauseWay's text and analysis in English and Arabic, its visual designs, the compiled evidence records and the figures CauseWay calculates, and the structure and annotations of the data exports when they are published. Not covered: material published by others — documents, data, tables, figures and text remain under their publishers' terms, including where this resource reports, quotes or translates them, and this resource does not host copies of their files; the CauseWay name, logo and marks; and the software code of the repository that builds this resource, which is outside this licence. Figures derived from survey microdata: the confidence intervals this resource derives from the Global Findex respondent file for Yemen (evidence record CLM-026) are computed under the World Bank Microdata Research License, which permits publishing aggregate statistics with the data cited. Cite the data as that licence requires: Demirgüç-Kunt, Klapper, Singer and Ansar (2022), The Global Findex Database 2021: Financial Inclusion, Digital Payments, and Resilience in the Age of COVID-19, Washington, DC: World Bank. CC BY 4.0 does not extend to the underlying microdata, which this resource does not host or redistribute. You may share and adapt CauseWay's content for any purpose, provided you credit CauseWay, link to the licence and indicate whether you made changes: give the title, the author (CauseWay), the source (this resource and the page address), the licence (CC BY 4.0) and the changes made. For a reused figure, use two lines: first this resource (Yemen Financial Inclusion Evidence, the record, CauseWay, the edition and the page address), then the original source that the record names (publisher, title, year and link). This page states the licence CauseWay applies to its own content; it does not state that any third-party rights have been cleared."
     },
     {
       "route": "/rights/",
@@ -128779,7 +128787,7 @@
       "field": "body_en",
       "token": "2021",
       "category": "DATE_OR_PERIOD",
-      "context": "CauseWay licenses the content it owns in this resource under the Creative Commons Attribution 4.0 International licence (CC BY 4.0; deed https://creativecommons.org/licenses/by/4.0/, legal code https://creativecommons.org/licenses/by/4.0/legalcode.en). Covered: CauseWay's text and analysis in English and Arabic, its visual designs, the compiled evidence records and the figures CauseWay calculates, and the structure and annotations of the data exports when they are published. Not covered: material published by others — documents, data, tables, figures and text remain under their publishers' terms, including where this resource reports, quotes or translates them, and this resource does not host copies of their files; the CauseWay name, logo and marks; and the software code of the repository that builds this resource, which is outside this licence. Figures derived from survey microdata: the confidence intervals this resource derives from the Global Findex respondent file for Yemen (evidence record CLM-026) are computed under the World Bank Microdata Research License, which permits publishing aggregate statistics with the data cited. Cite the data as that licence requires: Demirgüç-Kunt, Klapper, Singer and Ansar, The Global Findex Database 2021: Financial Inclusion, Digital Payments, and Resilience in the Age of COVID-19, World Bank. CC BY 4.0 does not extend to the underlying microdata, which this resource does not host or redistribute. You may share and adapt CauseWay's content for any purpose, provided you credit CauseWay, link to the licence and indicate whether you made changes: give the title, the author (CauseWay), the source (this resource and the page address), the licence (CC BY 4.0) and the changes made. For a reused figure, use two lines: first this resource (Yemen Financial Inclusion Evidence, the record, CauseWay, the edition and the page address), then the original source that the record names (publisher, title, year and link). This page states the licence CauseWay applies to its own content; it does not state that any third-party rights have been cleared."
+      "context": "CauseWay licenses the content it owns in this resource under the Creative Commons Attribution 4.0 International licence (CC BY 4.0; deed https://creativecommons.org/licenses/by/4.0/, legal code https://creativecommons.org/licenses/by/4.0/legalcode.en). Covered: CauseWay's text and analysis in English and Arabic, its visual designs, the compiled evidence records and the figures CauseWay calculates, and the structure and annotations of the data exports when they are published. Not covered: material published by others — documents, data, tables, figures and text remain under their publishers' terms, including where this resource reports, quotes or translates them, and this resource does not host copies of their files; the CauseWay name, logo and marks; and the software code of the repository that builds this resource, which is outside this licence. Figures derived from survey microdata: the confidence intervals this resource derives from the Global Findex respondent file for Yemen (evidence record CLM-026) are computed under the World Bank Microdata Research License, which permits publishing aggregate statistics with the data cited. Cite the data as that licence requires: Demirgüç-Kunt, Klapper, Singer and Ansar (2022), The Global Findex Database 2021: Financial Inclusion, Digital Payments, and Resilience in the Age of COVID-19, Washington, DC: World Bank. CC BY 4.0 does not extend to the underlying microdata, which this resource does not host or redistribute. You may share and adapt CauseWay's content for any purpose, provided you credit CauseWay, link to the licence and indicate whether you made changes: give the title, the author (CauseWay), the source (this resource and the page address), the licence (CC BY 4.0) and the changes made. For a reused figure, use two lines: first this resource (Yemen Financial Inclusion Evidence, the record, CauseWay, the edition and the page address), then the original source that the record names (publisher, title, year and link). This page states the licence CauseWay applies to its own content; it does not state that any third-party rights have been cleared."
     },
     {
       "route": "/rights/",
@@ -128787,7 +128795,7 @@
       "field": "body_en",
       "token": "19",
       "category": "STABLE_ID_OR_TECHNICAL_STANDARD",
-      "context": "CauseWay licenses the content it owns in this resource under the Creative Commons Attribution 4.0 International licence (CC BY 4.0; deed https://creativecommons.org/licenses/by/4.0/, legal code https://creativecommons.org/licenses/by/4.0/legalcode.en). Covered: CauseWay's text and analysis in English and Arabic, its visual designs, the compiled evidence records and the figures CauseWay calculates, and the structure and annotations of the data exports when they are published. Not covered: material published by others — documents, data, tables, figures and text remain under their publishers' terms, including where this resource reports, quotes or translates them, and this resource does not host copies of their files; the CauseWay name, logo and marks; and the software code of the repository that builds this resource, which is outside this licence. Figures derived from survey microdata: the confidence intervals this resource derives from the Global Findex respondent file for Yemen (evidence record CLM-026) are computed under the World Bank Microdata Research License, which permits publishing aggregate statistics with the data cited. Cite the data as that licence requires: Demirgüç-Kunt, Klapper, Singer and Ansar, The Global Findex Database 2021: Financial Inclusion, Digital Payments, and Resilience in the Age of COVID-19, World Bank. CC BY 4.0 does not extend to the underlying microdata, which this resource does not host or redistribute. You may share and adapt CauseWay's content for any purpose, provided you credit CauseWay, link to the licence and indicate whether you made changes: give the title, the author (CauseWay), the source (this resource and the page address), the licence (CC BY 4.0) and the changes made. For a reused figure, use two lines: first this resource (Yemen Financial Inclusion Evidence, the record, CauseWay, the edition and the page address), then the original source that the record names (publisher, title, year and link). This page states the licence CauseWay applies to its own content; it does not state that any third-party rights have been cleared."
+      "context": "CauseWay licenses the content it owns in this resource under the Creative Commons Attribution 4.0 International licence (CC BY 4.0; deed https://creativecommons.org/licenses/by/4.0/, legal code https://creativecommons.org/licenses/by/4.0/legalcode.en). Covered: CauseWay's text and analysis in English and Arabic, its visual designs, the compiled evidence records and the figures CauseWay calculates, and the structure and annotations of the data exports when they are published. Not covered: material published by others — documents, data, tables, figures and text remain under their publishers' terms, including where this resource reports, quotes or translates them, and this resource does not host copies of their files; the CauseWay name, logo and marks; and the software code of the repository that builds this resource, which is outside this licence. Figures derived from survey microdata: the confidence intervals this resource derives from the Global Findex respondent file for Yemen (evidence record CLM-026) are computed under the World Bank Microdata Research License, which permits publishing aggregate statistics with the data cited. Cite the data as that licence requires: Demirgüç-Kunt, Klapper, Singer and Ansar (2022), The Global Findex Database 2021: Financial Inclusion, Digital Payments, and Resilience in the Age of COVID-19, Washington, DC: World Bank. CC BY 4.0 does not extend to the underlying microdata, which this resource does not host or redistribute. You may share and adapt CauseWay's content for any purpose, provided you credit CauseWay, link to the licence and indicate whether you made changes: give the title, the author (CauseWay), the source (this resource and the page address), the licence (CC BY 4.0) and the changes made. For a reused figure, use two lines: first this resource (Yemen Financial Inclusion Evidence, the record, CauseWay, the edition and the page address), then the original source that the record names (publisher, title, year and link). This page states the licence CauseWay applies to its own content; it does not state that any third-party rights have been cleared."
     },
     {
       "route": "/rights/",
@@ -128803,7 +128811,7 @@
       "field": "body_ar",
       "token": "4.0",
       "category": "ALLOWED_METHOD_OR_TOOL_CONSTANT",
-      "context": "تتيح CauseWay المحتوى الذي تملكه في هذا المورد بموجب رخصة المشاع الإبداعي «نَسب المُصنَّف 4.0 دولي» (CC BY 4.0؛ صك الرخصة https://creativecommons.org/licenses/by/4.0/deed.ar، والنص القانوني https://creativecommons.org/licenses/by/4.0/legalcode.ar). تشمل الرخصة: نصوص CauseWay وتحليلاتها بالعربية والإنجليزية، وتصاميمها المرئية، وسجلات الأدلة المجمَّعة والأرقام التي تحتسبها CauseWay، وبنية ملفات البيانات المُصدَّرة وشروحها عند نشرها. ولا تشمل الرخصة: مواد الجهات الأخرى، فالوثائق والبيانات والجداول والرسوم والنصوص التي تنشرها جهات أخرى تبقى خاضعة لشروط ناشريها، بما في ذلك حين يوردها هذا المورد أو يقتبسها أو يترجمها، ولا يستضيف هذا المورد نسخًا من ملفاتها؛ واسم CauseWay وشعارها وعلاماتها؛ والشيفرة البرمجية للمستودع الذي يبني هذا المورد، فهي خارج نطاق هذه الرخصة. الأرقام المشتقة من البيانات الجزئية للمسوح: تُحتسب فترات الثقة التي يستخرجها هذا المورد من ملف المستجيبين في مسح Global Findex لليمن (سجل الدليل CLM-026) بموجب رخصة البحث للبيانات الجزئية لدى البنك الدولي، التي تجيز نشر الإحصاءات التجميعية مع الاستشهاد بالبيانات. استشهد بالبيانات كما تشترط تلك الرخصة: Demirgüç-Kunt وKlapper وSinger وAnsar، The Global Findex Database 2021: Financial Inclusion, Digital Payments, and Resilience in the Age of COVID-19، البنك الدولي. ولا تمتد رخصة CC BY 4.0 إلى البيانات الجزئية الأصلية، التي لا يستضيفها هذا المورد ولا يعيد توزيعها. ويجوز لك مشاركة محتوى CauseWay وتعديله لأي غرض، بشرط أن تنسبه إلى CauseWay، وأن تضع رابطًا إلى الرخصة، وأن تبيّن ما إذا كنت قد أجريت تغييرات: اذكر العنوان، والمؤلف (CauseWay)، والمصدر (هذا المورد ورابط الصفحة)، والرخصة (CC BY 4.0)، والتغييرات التي أجريتها. وعند إعادة استخدام رقم، استعمل سطرين: أولًا هذا المورد (أدلة الشمول المالي في اليمن، والسجل، وCauseWay، والإصدار، ورابط الصفحة)، ثم المصدر الأصلي الذي يسمّيه السجل (الناشر، والعنوان، والسنة، والرابط). وتذكر هذه الصفحة الرخصة التي تطبقها CauseWay على محتواها الخاص، ولا تفيد بأن أي حقوق لجهات أخرى قد سُوّيت."
+      "context": "تتيح CauseWay المحتوى الذي تملكه في هذا المورد بموجب رخصة المشاع الإبداعي «نَسب المُصنَّف 4.0 دولي» (CC BY 4.0؛ صك الرخصة https://creativecommons.org/licenses/by/4.0/deed.ar، والنص القانوني https://creativecommons.org/licenses/by/4.0/legalcode.ar). تشمل الرخصة: نصوص CauseWay وتحليلاتها بالعربية والإنجليزية، وتصاميمها المرئية، وسجلات الأدلة المجمَّعة والأرقام التي تحتسبها CauseWay، وبنية ملفات البيانات المُصدَّرة وشروحها عند نشرها. ولا تشمل الرخصة: مواد الجهات الأخرى، فالوثائق والبيانات والجداول والرسوم والنصوص التي تنشرها جهات أخرى تبقى خاضعة لشروط ناشريها، بما في ذلك حين يوردها هذا المورد أو يقتبسها أو يترجمها، ولا يستضيف هذا المورد نسخًا من ملفاتها؛ واسم CauseWay وشعارها وعلاماتها؛ والشيفرة البرمجية للمستودع الذي يبني هذا المورد، فهي خارج نطاق هذه الرخصة. الأرقام المشتقة من البيانات الجزئية للمسوح: تُحتسب فترات الثقة التي يستخرجها هذا المورد من ملف المستجيبين في مسح Global Findex لليمن (سجل الدليل CLM-026) بموجب رخصة البحث للبيانات الجزئية لدى البنك الدولي، التي تجيز نشر الإحصاءات التجميعية مع الاستشهاد بالبيانات. استشهد بالبيانات كما تشترط تلك الرخصة: Demirgüç-Kunt وKlapper وSinger وAnsar (2022)، The Global Findex Database 2021: Financial Inclusion, Digital Payments, and Resilience in the Age of COVID-19، واشنطن العاصمة: البنك الدولي. ولا تمتد رخصة CC BY 4.0 إلى البيانات الجزئية الأصلية، التي لا يستضيفها هذا المورد ولا يعيد توزيعها. ويجوز لك مشاركة محتوى CauseWay وتعديله لأي غرض، بشرط أن تنسبه إلى CauseWay، وأن تضع رابطًا إلى الرخصة، وأن تبيّن ما إذا كنت قد أجريت تغييرات: اذكر العنوان، والمؤلف (CauseWay)، والمصدر (هذا المورد ورابط الصفحة)، والرخصة (CC BY 4.0)، والتغييرات التي أجريتها. وعند إعادة استخدام رقم، استعمل سطرين: أولًا هذا المورد (أدلة الشمول المالي في اليمن، والسجل، وCauseWay، والإصدار، ورابط الصفحة)، ثم المصدر الأصلي الذي يسمّيه السجل (الناشر، والعنوان، والسنة، والرابط). وتذكر هذه الصفحة الرخصة التي تطبقها CauseWay على محتواها الخاص، ولا تفيد بأن أي حقوق لجهات أخرى قد سُوّيت."
     },
     {
       "route": "/rights/",
@@ -128811,7 +128819,15 @@
       "field": "body_ar",
       "token": "026",
       "category": "STABLE_ID_OR_TECHNICAL_STANDARD",
-      "context": "تتيح CauseWay المحتوى الذي تملكه في هذا المورد بموجب رخصة المشاع الإبداعي «نَسب المُصنَّف 4.0 دولي» (CC BY 4.0؛ صك الرخصة https://creativecommons.org/licenses/by/4.0/deed.ar، والنص القانوني https://creativecommons.org/licenses/by/4.0/legalcode.ar). تشمل الرخصة: نصوص CauseWay وتحليلاتها بالعربية والإنجليزية، وتصاميمها المرئية، وسجلات الأدلة المجمَّعة والأرقام التي تحتسبها CauseWay، وبنية ملفات البيانات المُصدَّرة وشروحها عند نشرها. ولا تشمل الرخصة: مواد الجهات الأخرى، فالوثائق والبيانات والجداول والرسوم والنصوص التي تنشرها جهات أخرى تبقى خاضعة لشروط ناشريها، بما في ذلك حين يوردها هذا المورد أو يقتبسها أو يترجمها، ولا يستضيف هذا المورد نسخًا من ملفاتها؛ واسم CauseWay وشعارها وعلاماتها؛ والشيفرة البرمجية للمستودع الذي يبني هذا المورد، فهي خارج نطاق هذه الرخصة. الأرقام المشتقة من البيانات الجزئية للمسوح: تُحتسب فترات الثقة التي يستخرجها هذا المورد من ملف المستجيبين في مسح Global Findex لليمن (سجل الدليل CLM-026) بموجب رخصة البحث للبيانات الجزئية لدى البنك الدولي، التي تجيز نشر الإحصاءات التجميعية مع الاستشهاد بالبيانات. استشهد بالبيانات كما تشترط تلك الرخصة: Demirgüç-Kunt وKlapper وSinger وAnsar، The Global Findex Database 2021: Financial Inclusion, Digital Payments, and Resilience in the Age of COVID-19، البنك الدولي. ولا تمتد رخصة CC BY 4.0 إلى البيانات الجزئية الأصلية، التي لا يستضيفها هذا المورد ولا يعيد توزيعها. ويجوز لك مشاركة محتوى CauseWay وتعديله لأي غرض، بشرط أن تنسبه إلى CauseWay، وأن تضع رابطًا إلى الرخصة، وأن تبيّن ما إذا كنت قد أجريت تغييرات: اذكر العنوان، والمؤلف (CauseWay)، والمصدر (هذا المورد ورابط الصفحة)، والرخصة (CC BY 4.0)، والتغييرات التي أجريتها. وعند إعادة استخدام رقم، استعمل سطرين: أولًا هذا المورد (أدلة الشمول المالي في اليمن، والسجل، وCauseWay، والإصدار، ورابط الصفحة)، ثم المصدر الأصلي الذي يسمّيه السجل (الناشر، والعنوان، والسنة، والرابط). وتذكر هذه الصفحة الرخصة التي تطبقها CauseWay على محتواها الخاص، ولا تفيد بأن أي حقوق لجهات أخرى قد سُوّيت."
+      "context": "تتيح CauseWay المحتوى الذي تملكه في هذا المورد بموجب رخصة المشاع الإبداعي «نَسب المُصنَّف 4.0 دولي» (CC BY 4.0؛ صك الرخصة https://creativecommons.org/licenses/by/4.0/deed.ar، والنص القانوني https://creativecommons.org/licenses/by/4.0/legalcode.ar). تشمل الرخصة: نصوص CauseWay وتحليلاتها بالعربية والإنجليزية، وتصاميمها المرئية، وسجلات الأدلة المجمَّعة والأرقام التي تحتسبها CauseWay، وبنية ملفات البيانات المُصدَّرة وشروحها عند نشرها. ولا تشمل الرخصة: مواد الجهات الأخرى، فالوثائق والبيانات والجداول والرسوم والنصوص التي تنشرها جهات أخرى تبقى خاضعة لشروط ناشريها، بما في ذلك حين يوردها هذا المورد أو يقتبسها أو يترجمها، ولا يستضيف هذا المورد نسخًا من ملفاتها؛ واسم CauseWay وشعارها وعلاماتها؛ والشيفرة البرمجية للمستودع الذي يبني هذا المورد، فهي خارج نطاق هذه الرخصة. الأرقام المشتقة من البيانات الجزئية للمسوح: تُحتسب فترات الثقة التي يستخرجها هذا المورد من ملف المستجيبين في مسح Global Findex لليمن (سجل الدليل CLM-026) بموجب رخصة البحث للبيانات الجزئية لدى البنك الدولي، التي تجيز نشر الإحصاءات التجميعية مع الاستشهاد بالبيانات. استشهد بالبيانات كما تشترط تلك الرخصة: Demirgüç-Kunt وKlapper وSinger وAnsar (2022)، The Global Findex Database 2021: Financial Inclusion, Digital Payments, and Resilience in the Age of COVID-19، واشنطن العاصمة: البنك الدولي. ولا تمتد رخصة CC BY 4.0 إلى البيانات الجزئية الأصلية، التي لا يستضيفها هذا المورد ولا يعيد توزيعها. ويجوز لك مشاركة محتوى CauseWay وتعديله لأي غرض، بشرط أن تنسبه إلى CauseWay، وأن تضع رابطًا إلى الرخصة، وأن تبيّن ما إذا كنت قد أجريت تغييرات: اذكر العنوان، والمؤلف (CauseWay)، والمصدر (هذا المورد ورابط الصفحة)، والرخصة (CC BY 4.0)، والتغييرات التي أجريتها. وعند إعادة استخدام رقم، استعمل سطرين: أولًا هذا المورد (أدلة الشمول المالي في اليمن، والسجل، وCauseWay، والإصدار، ورابط الصفحة)، ثم المصدر الأصلي الذي يسمّيه السجل (الناشر، والعنوان، والسنة، والرابط). وتذكر هذه الصفحة الرخصة التي تطبقها CauseWay على محتواها الخاص، ولا تفيد بأن أي حقوق لجهات أخرى قد سُوّيت."
+    },
+    {
+      "route": "/rights/",
+      "surface": "section",
+      "field": "body_ar",
+      "token": "2022",
+      "category": "DATE_OR_PERIOD",
+      "context": "تتيح CauseWay المحتوى الذي تملكه في هذا المورد بموجب رخصة المشاع الإبداعي «نَسب المُصنَّف 4.0 دولي» (CC BY 4.0؛ صك الرخصة https://creativecommons.org/licenses/by/4.0/deed.ar، والنص القانوني https://creativecommons.org/licenses/by/4.0/legalcode.ar). تشمل الرخصة: نصوص CauseWay وتحليلاتها بالعربية والإنجليزية، وتصاميمها المرئية، وسجلات الأدلة المجمَّعة والأرقام التي تحتسبها CauseWay، وبنية ملفات البيانات المُصدَّرة وشروحها عند نشرها. ولا تشمل الرخصة: مواد الجهات الأخرى، فالوثائق والبيانات والجداول والرسوم والنصوص التي تنشرها جهات أخرى تبقى خاضعة لشروط ناشريها، بما في ذلك حين يوردها هذا المورد أو يقتبسها أو يترجمها، ولا يستضيف هذا المورد نسخًا من ملفاتها؛ واسم CauseWay وشعارها وعلاماتها؛ والشيفرة البرمجية للمستودع الذي يبني هذا المورد، فهي خارج نطاق هذه الرخصة. الأرقام المشتقة من البيانات الجزئية للمسوح: تُحتسب فترات الثقة التي يستخرجها هذا المورد من ملف المستجيبين في مسح Global Findex لليمن (سجل الدليل CLM-026) بموجب رخصة البحث للبيانات الجزئية لدى البنك الدولي، التي تجيز نشر الإحصاءات التجميعية مع الاستشهاد بالبيانات. استشهد بالبيانات كما تشترط تلك الرخصة: Demirgüç-Kunt وKlapper وSinger وAnsar (2022)، The Global Findex Database 2021: Financial Inclusion, Digital Payments, and Resilience in the Age of COVID-19، واشنطن العاصمة: البنك الدولي. ولا تمتد رخصة CC BY 4.0 إلى البيانات الجزئية الأصلية، التي لا يستضيفها هذا المورد ولا يعيد توزيعها. ويجوز لك مشاركة محتوى CauseWay وتعديله لأي غرض، بشرط أن تنسبه إلى CauseWay، وأن تضع رابطًا إلى الرخصة، وأن تبيّن ما إذا كنت قد أجريت تغييرات: اذكر العنوان، والمؤلف (CauseWay)، والمصدر (هذا المورد ورابط الصفحة)، والرخصة (CC BY 4.0)، والتغييرات التي أجريتها. وعند إعادة استخدام رقم، استعمل سطرين: أولًا هذا المورد (أدلة الشمول المالي في اليمن، والسجل، وCauseWay، والإصدار، ورابط الصفحة)، ثم المصدر الأصلي الذي يسمّيه السجل (الناشر، والعنوان، والسنة، والرابط). وتذكر هذه الصفحة الرخصة التي تطبقها CauseWay على محتواها الخاص، ولا تفيد بأن أي حقوق لجهات أخرى قد سُوّيت."
     },
     {
       "route": "/rights/",
@@ -128819,7 +128835,7 @@
       "field": "body_ar",
       "token": "2021",
       "category": "DATE_OR_PERIOD",
-      "context": "تتيح CauseWay المحتوى الذي تملكه في هذا المورد بموجب رخصة المشاع الإبداعي «نَسب المُصنَّف 4.0 دولي» (CC BY 4.0؛ صك الرخصة https://creativecommons.org/licenses/by/4.0/deed.ar، والنص القانوني https://creativecommons.org/licenses/by/4.0/legalcode.ar). تشمل الرخصة: نصوص CauseWay وتحليلاتها بالعربية والإنجليزية، وتصاميمها المرئية، وسجلات الأدلة المجمَّعة والأرقام التي تحتسبها CauseWay، وبنية ملفات البيانات المُصدَّرة وشروحها عند نشرها. ولا تشمل الرخصة: مواد الجهات الأخرى، فالوثائق والبيانات والجداول والرسوم والنصوص التي تنشرها جهات أخرى تبقى خاضعة لشروط ناشريها، بما في ذلك حين يوردها هذا المورد أو يقتبسها أو يترجمها، ولا يستضيف هذا المورد نسخًا من ملفاتها؛ واسم CauseWay وشعارها وعلاماتها؛ والشيفرة البرمجية للمستودع الذي يبني هذا المورد، فهي خارج نطاق هذه الرخصة. الأرقام المشتقة من البيانات الجزئية للمسوح: تُحتسب فترات الثقة التي يستخرجها هذا المورد من ملف المستجيبين في مسح Global Findex لليمن (سجل الدليل CLM-026) بموجب رخصة البحث للبيانات الجزئية لدى البنك الدولي، التي تجيز نشر الإحصاءات التجميعية مع الاستشهاد بالبيانات. استشهد بالبيانات كما تشترط تلك الرخصة: Demirgüç-Kunt وKlapper وSinger وAnsar، The Global Findex Database 2021: Financial Inclusion, Digital Payments, and Resilience in the Age of COVID-19، البنك الدولي. ولا تمتد رخصة CC BY 4.0 إلى البيانات الجزئية الأصلية، التي لا يستضيفها هذا المورد ولا يعيد توزيعها. ويجوز لك مشاركة محتوى CauseWay وتعديله لأي غرض، بشرط أن تنسبه إلى CauseWay، وأن تضع رابطًا إلى الرخصة، وأن تبيّن ما إذا كنت قد أجريت تغييرات: اذكر العنوان، والمؤلف (CauseWay)، والمصدر (هذا المورد ورابط الصفحة)، والرخصة (CC BY 4.0)، والتغييرات التي أجريتها. وعند إعادة استخدام رقم، استعمل سطرين: أولًا هذا المورد (أدلة الشمول المالي في اليمن، والسجل، وCauseWay، والإصدار، ورابط الصفحة)، ثم المصدر الأصلي الذي يسمّيه السجل (الناشر، والعنوان، والسنة، والرابط). وتذكر هذه الصفحة الرخصة التي تطبقها CauseWay على محتواها الخاص، ولا تفيد بأن أي حقوق لجهات أخرى قد سُوّيت."
+      "context": "تتيح CauseWay المحتوى الذي تملكه في هذا المورد بموجب رخصة المشاع الإبداعي «نَسب المُصنَّف 4.0 دولي» (CC BY 4.0؛ صك الرخصة https://creativecommons.org/licenses/by/4.0/deed.ar، والنص القانوني https://creativecommons.org/licenses/by/4.0/legalcode.ar). تشمل الرخصة: نصوص CauseWay وتحليلاتها بالعربية والإنجليزية، وتصاميمها المرئية، وسجلات الأدلة المجمَّعة والأرقام التي تحتسبها CauseWay، وبنية ملفات البيانات المُصدَّرة وشروحها عند نشرها. ولا تشمل الرخصة: مواد الجهات الأخرى، فالوثائق والبيانات والجداول والرسوم والنصوص التي تنشرها جهات أخرى تبقى خاضعة لشروط ناشريها، بما في ذلك حين يوردها هذا المورد أو يقتبسها أو يترجمها، ولا يستضيف هذا المورد نسخًا من ملفاتها؛ واسم CauseWay وشعارها وعلاماتها؛ والشيفرة البرمجية للمستودع الذي يبني هذا المورد، فهي خارج نطاق هذه الرخصة. الأرقام المشتقة من البيانات الجزئية للمسوح: تُحتسب فترات الثقة التي يستخرجها هذا المورد من ملف المستجيبين في مسح Global Findex لليمن (سجل الدليل CLM-026) بموجب رخصة البحث للبيانات الجزئية لدى البنك الدولي، التي تجيز نشر الإحصاءات التجميعية مع الاستشهاد بالبيانات. استشهد بالبيانات كما تشترط تلك الرخصة: Demirgüç-Kunt وKlapper وSinger وAnsar (2022)، The Global Findex Database 2021: Financial Inclusion, Digital Payments, and Resilience in the Age of COVID-19، واشنطن العاصمة: البنك الدولي. ولا تمتد رخصة CC BY 4.0 إلى البيانات الجزئية الأصلية، التي لا يستضيفها هذا المورد ولا يعيد توزيعها. ويجوز لك مشاركة محتوى CauseWay وتعديله لأي غرض، بشرط أن تنسبه إلى CauseWay، وأن تضع رابطًا إلى الرخصة، وأن تبيّن ما إذا كنت قد أجريت تغييرات: اذكر العنوان، والمؤلف (CauseWay)، والمصدر (هذا المورد ورابط الصفحة)، والرخصة (CC BY 4.0)، والتغييرات التي أجريتها. وعند إعادة استخدام رقم، استعمل سطرين: أولًا هذا المورد (أدلة الشمول المالي في اليمن، والسجل، وCauseWay، والإصدار، ورابط الصفحة)، ثم المصدر الأصلي الذي يسمّيه السجل (الناشر، والعنوان، والسنة، والرابط). وتذكر هذه الصفحة الرخصة التي تطبقها CauseWay على محتواها الخاص، ولا تفيد بأن أي حقوق لجهات أخرى قد سُوّيت."
     },
     {
       "route": "/rights/",
@@ -128827,7 +128843,7 @@
       "field": "body_ar",
       "token": "19",
       "category": "STABLE_ID_OR_TECHNICAL_STANDARD",
-      "context": "تتيح CauseWay المحتوى الذي تملكه في هذا المورد بموجب رخصة المشاع الإبداعي «نَسب المُصنَّف 4.0 دولي» (CC BY 4.0؛ صك الرخصة https://creativecommons.org/licenses/by/4.0/deed.ar، والنص القانوني https://creativecommons.org/licenses/by/4.0/legalcode.ar). تشمل الرخصة: نصوص CauseWay وتحليلاتها بالعربية والإنجليزية، وتصاميمها المرئية، وسجلات الأدلة المجمَّعة والأرقام التي تحتسبها CauseWay، وبنية ملفات البيانات المُصدَّرة وشروحها عند نشرها. ولا تشمل الرخصة: مواد الجهات الأخرى، فالوثائق والبيانات والجداول والرسوم والنصوص التي تنشرها جهات أخرى تبقى خاضعة لشروط ناشريها، بما في ذلك حين يوردها هذا المورد أو يقتبسها أو يترجمها، ولا يستضيف هذا المورد نسخًا من ملفاتها؛ واسم CauseWay وشعارها وعلاماتها؛ والشيفرة البرمجية للمستودع الذي يبني هذا المورد، فهي خارج نطاق هذه الرخصة. الأرقام المشتقة من البيانات الجزئية للمسوح: تُحتسب فترات الثقة التي يستخرجها هذا المورد من ملف المستجيبين في مسح Global Findex لليمن (سجل الدليل CLM-026) بموجب رخصة البحث للبيانات الجزئية لدى البنك الدولي، التي تجيز نشر الإحصاءات التجميعية مع الاستشهاد بالبيانات. استشهد بالبيانات كما تشترط تلك الرخصة: Demirgüç-Kunt وKlapper وSinger وAnsar، The Global Findex Database 2021: Financial Inclusion, Digital Payments, and Resilience in the Age of COVID-19، البنك الدولي. ولا تمتد رخصة CC BY 4.0 إلى البيانات الجزئية الأصلية، التي لا يستضيفها هذا المورد ولا يعيد توزيعها. ويجوز لك مشاركة محتوى CauseWay وتعديله لأي غرض، بشرط أن تنسبه إلى CauseWay، وأن تضع رابطًا إلى الرخصة، وأن تبيّن ما إذا كنت قد أجريت تغييرات: اذكر العنوان، والمؤلف (CauseWay)، والمصدر (هذا المورد ورابط الصفحة)، والرخصة (CC BY 4.0)، والتغييرات التي أجريتها. وعند إعادة استخدام رقم، استعمل سطرين: أولًا هذا المورد (أدلة الشمول المالي في اليمن، والسجل، وCauseWay، والإصدار، ورابط الصفحة)، ثم المصدر الأصلي الذي يسمّيه السجل (الناشر، والعنوان، والسنة، والرابط). وتذكر هذه الصفحة الرخصة التي تطبقها CauseWay على محتواها الخاص، ولا تفيد بأن أي حقوق لجهات أخرى قد سُوّيت."
+      "context": "تتيح CauseWay المحتوى الذي تملكه في هذا المورد بموجب رخصة المشاع الإبداعي «نَسب المُصنَّف 4.0 دولي» (CC BY 4.0؛ صك الرخصة https://creativecommons.org/licenses/by/4.0/deed.ar، والنص القانوني https://creativecommons.org/licenses/by/4.0/legalcode.ar). تشمل الرخصة: نصوص CauseWay وتحليلاتها بالعربية والإنجليزية، وتصاميمها المرئية، وسجلات الأدلة المجمَّعة والأرقام التي تحتسبها CauseWay، وبنية ملفات البيانات المُصدَّرة وشروحها عند نشرها. ولا تشمل الرخصة: مواد الجهات الأخرى، فالوثائق والبيانات والجداول والرسوم والنصوص التي تنشرها جهات أخرى تبقى خاضعة لشروط ناشريها، بما في ذلك حين يوردها هذا المورد أو يقتبسها أو يترجمها، ولا يستضيف هذا المورد نسخًا من ملفاتها؛ واسم CauseWay وشعارها وعلاماتها؛ والشيفرة البرمجية للمستودع الذي يبني هذا المورد، فهي خارج نطاق هذه الرخصة. الأرقام المشتقة من البيانات الجزئية للمسوح: تُحتسب فترات الثقة التي يستخرجها هذا المورد من ملف المستجيبين في مسح Global Findex لليمن (سجل الدليل CLM-026) بموجب رخصة البحث للبيانات الجزئية لدى البنك الدولي، التي تجيز نشر الإحصاءات التجميعية مع الاستشهاد بالبيانات. استشهد بالبيانات كما تشترط تلك الرخصة: Demirgüç-Kunt وKlapper وSinger وAnsar (2022)، The Global Findex Database 2021: Financial Inclusion, Digital Payments, and Resilience in the Age of COVID-19، واشنطن العاصمة: البنك الدولي. ولا تمتد رخصة CC BY 4.0 إلى البيانات الجزئية الأصلية، التي لا يستضيفها هذا المورد ولا يعيد توزيعها. ويجوز لك مشاركة محتوى CauseWay وتعديله لأي غرض، بشرط أن تنسبه إلى CauseWay، وأن تضع رابطًا إلى الرخصة، وأن تبيّن ما إذا كنت قد أجريت تغييرات: اذكر العنوان، والمؤلف (CauseWay)، والمصدر (هذا المورد ورابط الصفحة)، والرخصة (CC BY 4.0)، والتغييرات التي أجريتها. وعند إعادة استخدام رقم، استعمل سطرين: أولًا هذا المورد (أدلة الشمول المالي في اليمن، والسجل، وCauseWay، والإصدار، ورابط الصفحة)، ثم المصدر الأصلي الذي يسمّيه السجل (الناشر، والعنوان، والسنة، والرابط). وتذكر هذه الصفحة الرخصة التي تطبقها CauseWay على محتواها الخاص، ولا تفيد بأن أي حقوق لجهات أخرى قد سُوّيت."
     },
     {
       "route": "/terms/",
@@ -128843,7 +128859,7 @@
       "field": "body_ar",
       "token": "4.0",
       "category": "ALLOWED_METHOD_OR_TOOL_CONSTANT",
-      "context": "يضم هذا المورد ملخصات ونتائج مشتقة أعدتها CauseWay إلى جانب مواد صادرة عن جهات أخرى. ويتوقف جواز إعادة استخدام مادة المصدر على شروط الناشر الأصلي؛ ولا يسجل هذا المورد بعدُ شروط إعادة الاستخدام على مستوى العنصر. وإذا لم يُذكر إذن بإعادة توزيع مادة المصدر أو تعديلها، فلا ينبغي افتراض وجوده. وتبقى القيود الخاصة بكل مصدر سارية على البيانات والجداول والرسوم والنصوص الأصلية. ويُتاح محتوى CauseWay الخاص بموجب رخصة CC BY 4.0؛ راجع صفحة «الحقوق وإعادة الاستخدام»."
+      "context": "يضم هذا المورد ملخصات ونتائج مشتقة أعدتها CauseWay إلى جانب مواد صادرة عن جهات أخرى. ويتوقف جواز إعادة استخدام مادة المصدر على شروط الناشر الأصلي؛ ولا يسجل هذا المورد بعدُ شروط إعادة الاستخدام على مستوى العنصر. وإذا لم يُذكر إذن بإعادة توزيع مادة المصدر أو تعديلها، فلا ينبغي افتراض وجوده. وتبقى القيود الخاصة بكل مصدر سارية على البيانات والجداول والرسوم والنصوص الأصلية. ويُتاح محتوى CauseWay الخاص بموجب رخصة CC BY 4.0؛ راجع صفحة «حقوق إعادة الاستخدام»."
     },
     {
       "route": "/evidence/CLM-062/",

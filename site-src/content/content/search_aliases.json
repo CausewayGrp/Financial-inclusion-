@@ -253,7 +253,7 @@
     "terms_ar": "تحويل للخارج; تحويل إلى الخارج; تحويل خارجي; تحويلات خارجية; حوالة خارجية; حوالات خارجية; حوالة من الخارج; تحويل من الخارج; حوالات المغتربين; تحويلات المغتربين; تحويل دولي; حوالة دولية",
     "targets": "route:/remittances/",
     "boundary_note_en": "Discovery aid only: the remittance evidence here is about money sent to Yemen and transfers within Yemen. It does not cover money sent from Yemen to other countries.",
-    "boundary_note_ar": "أداة اكتشاف فقط: تتناول أدلة الحوالات هنا الأموال المرسلة إلى اليمن والحوالات داخل اليمن، ولا تتناول الأموال المرسلة من اليمن إلى الخارج."
+    "boundary_note_ar": "أداة اكتشاف فقط: تتناول أدلة الحوالات هنا الأموال المرسلة إلى اليمن والأموال المحوَّلة داخل اليمن، ولا تتناول الأموال المرسلة من اليمن إلى الخارج."
   },
   {
     "alias_id": "SEARCH-ALIAS-033",
@@ -345,7 +345,7 @@
   },
   {
     "alias_id": "SEARCH-ALIAS-044",
-    "terms_en": "personal remittances; workers' remittances; migrant remittances",
+    "terms_en": "personal remittances; workers' remittances; migrant remittances; remittance fees",
     "terms_ar": "الحوالات; التحويلات الشخصية; تحويلات العاملين; رسوم الحوالات",
     "targets": "route:/remittances/",
     "boundary_note_en": null,

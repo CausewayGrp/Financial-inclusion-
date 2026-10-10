@@ -2680,7 +2680,7 @@
     "method_en": "Values as published by the IMF: 2018–2024 in the 2025 Article IV staff report, based on staff calculations (Table 4, external sector), and 2025–2030 in a later supplement to the same consultation (Supplementary Table 2).",
     "method_ar": "قيم كما نشرها صندوق النقد الدولي: 2018–2024 في تقرير الخبراء لمشاورات المادة الرابعة لعام 2025، استنادًا إلى حسابات الخبراء (الجدول 4، القطاع الخارجي)، و2025–2030 في ملحق لاحق للمشاورات نفسها (الجدول التكميلي 2).",
     "limitations_en": "It does not measure hawala volume, payment-system settlement or how inflows are distributed among households. | This is an external-sector macro concept, not payment-system settlement throughput and not a direct measure of informal hawala volume.",
-    "limitations_ar": "لا يقيس هذا الدليل حجم الحوالة غير الرسمية، ولا التسوية عبر نظام المدفوعات، ولا توزيع التدفقات على الأسر. | هذا مفهوم اقتصادي كلي للقطاع الخارجي، وليس قياسًا لتسوية المدفوعات عبر نظام الدفع ولا قياسًا مباشرًا لحجم الحوالة غير الرسمية.",
+    "limitations_ar": "لا يقيس هذا الدليل حجم التحويلات عبر نظام الحوالة غير الرسمي، ولا التسوية عبر نظام المدفوعات، ولا توزيع التدفقات على الأسر. | هذا مفهوم اقتصادي كلي للقطاع الخارجي، وليس قياسًا لتسوية المدفوعات عبر نظام الدفع ولا قياسًا مباشرًا لحجم التحويلات عبر نظام الحوالة غير الرسمي.",
     "currentness_en": "The latest reported value is for 2024 (staff calculations). The 2025 value is an estimate and the 2026–2030 values are projections; none of them is a later observation. The 2024 value should not be read as a current level unless a newer comparable observation is published.",
     "currentness_ar": "آخر قيمة تاريخية واردة في المصدر هي لعام 2024 (حسابات الخبراء). أما قيمة 2025 فتقدير، وقيم 2026–2030 توقعات، وليست أي منها مشاهدة لاحقة. ولا تُقرأ قيمة 2024 على أنها مستوى حالي ما لم تُنشر مشاهدة أحدث قابلة للمقارنة.",
     "change_trigger_en": "This record is updated when an authoritative source is revised or replaced, a newer comparable observation becomes available, the definition, population or method changes, or the conditions for public use change.",
@@ -2727,9 +2727,9 @@
       "/remittances/"
     ],
     "does_not_establish_en": "It does not measure hawala volume, payment-system settlement or how inflows are distributed among households.",
-    "does_not_establish_ar": "لا يقيس هذا الدليل حجم الحوالة غير الرسمية، ولا التسوية عبر نظام المدفوعات، ولا توزيع التدفقات على الأسر.",
+    "does_not_establish_ar": "لا يقيس هذا الدليل حجم التحويلات عبر نظام الحوالة غير الرسمي، ولا التسوية عبر نظام المدفوعات، ولا توزيع التدفقات على الأسر.",
     "measurement_limitation_en": "This is an external-sector macro concept, not payment-system settlement throughput and not a direct measure of informal hawala volume.",
-    "measurement_limitation_ar": "هذا مفهوم اقتصادي كلي للقطاع الخارجي، وليس قياسًا لتسوية المدفوعات عبر نظام الدفع ولا قياسًا مباشرًا لحجم الحوالة غير الرسمية."
+    "measurement_limitation_ar": "هذا مفهوم اقتصادي كلي للقطاع الخارجي، وليس قياسًا لتسوية المدفوعات عبر نظام الدفع ولا قياسًا مباشرًا لحجم التحويلات عبر نظام الحوالة غير الرسمي."
   },
   {
     "object_id": "PSE-011",
@@ -5109,7 +5109,7 @@
     "title_en": "Domestic remittances in 2014 — population reach vs recipient channels",
     "title_ar": "الحوالات المحلية في 2014: نطاق الإرسال والاستلام وقنوات المستلمين",
     "summary_en": "In 2014, 18.3% of adults reported receiving domestic remittances. Among those recipients, 31.1% received them through a money transfer operator, 2.0% through a financial institution and 0.0% through a mobile phone. The source gives no channel values for adults who sent remittances; these are unavailable, not zero.",
-    "summary_ar": "في 2014 أفاد 18.3% من البالغين بأنهم تلقوا حوالات محلية. ومن بين هؤلاء المتلقين، تلقاها 31.1% عبر مشغل تحويل أموال، و2.0% عبر مؤسسة مالية، و0.0% عبر الهاتف المحمول. ولا يورد المصدر قيمًا لقنوات البالغين الذين أرسلوا حوالات، فهي غير متاحة وليست صفرًا.",
+    "summary_ar": "في 2014 أفاد 18.3% من البالغين بأنهم تلقوا حوالات محلية. ومن بين هؤلاء المتلقين، تلقاها 31.1% عبر مشغل تحويل أموال، و2.0% عبر مؤسسة مالية، و0.0% عبر الهاتف المحمول. ولا يورد المصدر قيمًا لقنوات البالغين الذين أرسلوا حوالات، فهي غير متاحة، وهذا لا يعني صفرًا.",
     "definition_en": "The shares of adults aged 15 and over in Yemen who sent or received domestic remittances in 2014 and, among senders and recipients, the channels they used, as published by the World Bank.",
     "definition_ar": "نسب البالغين بعمر 15 سنة فأكثر في اليمن الذين أرسلوا حوالات محلية أو تلقوها في 2014، والقنوات التي استخدمها المرسلون والمتلقون منهم، كما نشرها البنك الدولي.",
     "period_en": "2014",
@@ -7746,7 +7746,7 @@
     "title_en": "What we still do not know",
     "title_ar": "ما الذي ما زلنا لا نعرفه؟",
     "summary_en": "The evidence gaps recorded in this resource as of the edition of this resource dated 3 October 2026 are of these types: a missing period, a missing calculation base, a missing primary file, a map layer that cannot yet be built, and an unresolved source scope. A gap can close when new evidence arrives; a blank or missing observation is not zero and is not evidence of absence.",
-    "summary_ar": "فجوات الأدلة المسجلة في هذا المورد وفق إصدار هذا المورد المؤرخ في 3 أكتوبر 2026 من الأنواع التالية: فترة مفقودة، أو قاعدة احتساب غير موثقة، أو ملف أصلي غير متاح، أو طبقة مكانية لا يمكن بناؤها بعد، أو نطاق مصدر غير محسوم. وقد تُغلق الفجوة عند وصول دليل جديد؛ والفراغ أو غياب الرصد ليس صفرًا وليس دليلًا على عدم الوجود.",
+    "summary_ar": "فجوات الأدلة المسجلة في هذا المورد وفق إصدار هذا المورد المؤرخ في 3 أكتوبر 2026 من الأنواع التالية: فترة مفقودة، أو قاعدة احتساب غير موثقة، أو ملف أصلي غير متاح، أو طبقة مكانية لا يمكن بناؤها بعد، أو نطاق مصدر غير محسوم. وقد تُغلق الفجوة عند وصول دليل جديد؛ والفراغ أو غياب الرصد لا يعني صفرًا ولا يدل على عدم الوجود.",
     "definition_en": "This record describes the types of evidence gap recorded in this resource; it reports no value.",
     "definition_ar": "يصف هذا السجل أنواع فجوات الأدلة المسجلة في هذا المورد، ولا يورد أي قيمة.",
     "period_en": "As of the edition of this resource dated 3 October 2026",
@@ -7756,7 +7756,7 @@
     "method_en": "Each gap is recorded with an explicit type; a blank or unknown value is recorded as missing, not as zero.",
     "method_ar": "تُسجَّل كل فجوة بنوع صريح، ويُسجَّل الفراغ أو المجهول بوصفه مفقودًا لا صفرًا.",
     "limitations_en": "A gap is not zero, and it is not evidence of absence or failure.",
-    "limitations_ar": "الفجوة ليست صفرًا وليست دليلًا على الغياب أو الفشل.",
+    "limitations_ar": "الفجوة لا تعني صفرًا، ولا تدل على الغياب أو الفشل.",
     "currentness_en": "The gaps are those recorded as of the edition of this resource dated 3 October 2026. A gap closes when new evidence fills it, and the list changes accordingly.",
     "currentness_ar": "الفجوات هي المسجلة وفق إصدار هذا المورد المؤرخ في 3 أكتوبر 2026. وتُغلق الفجوة عندما يسدّها دليل جديد، وتتغير القائمة تبعًا لذلك.",
     "change_trigger_en": "This record is updated when an authoritative source is revised or replaced, a newer comparable observation becomes available, the definition, population or method changes, or the conditions for public use change.",
@@ -7784,7 +7784,7 @@
       "/measurement/"
     ],
     "does_not_establish_en": "A gap is not zero, and it is not evidence of absence or failure.",
-    "does_not_establish_ar": "الفجوة ليست صفرًا وليست دليلًا على الغياب أو الفشل.",
+    "does_not_establish_ar": "الفجوة لا تعني صفرًا، ولا تدل على الغياب أو الفشل.",
     "measurement_limitation_en": null,
     "measurement_limitation_ar": null
   },
@@ -10019,7 +10019,7 @@
     "period_en": "Remittance series for the overlapping years 2021–2025, as published in the CBY-Aden Annual Report 2025.",
     "period_ar": "سلسلة الحوالات للسنوات المتداخلة 2021–2025 كما نُشرت في التقرير السنوي 2025 للبنك المركزي اليمني – عدن.",
     "universe_en": "The remittance series as defined and published within the CBY-Aden Annual Report 2025; not all remittance channels or household receipts.",
-    "universe_ar": "سلسلة الحوالات كما عرّفها ونشرها التقرير السنوي 2025 للبنك المركزي، وليست جميع قنوات التحويل أو حوالات الأسر المستلمة.",
+    "universe_ar": "سلسلة الحوالات كما عرّفها ونشرها التقرير السنوي 2025 للبنك المركزي، وليست جميع قنوات التحويل أو ما تتسلمه الأسر من حوالات.",
     "method_en": "Year-on-year growth rates computed by this resource from the remittance values in one published edition, the Central Bank of Yemen – Aden (CBY-Aden) Annual Report 2025, and compared across years as a check on method.",
     "method_ar": "معدلات نمو سنوية احتسبها هذا المورد من قيم الحوالات في نسخة منشورة واحدة هي التقرير السنوي 2025 للبنك المركزي اليمني – عدن، وقورنت عبر السنوات بوصفها فحصًا منهجيًا.",
     "limitations_en": "The pattern does not establish smoothing, interpolation or low real-world volatility.",

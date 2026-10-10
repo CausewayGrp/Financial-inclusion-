@@ -8,7 +8,7 @@
    "frame_sha256": "98872f79ad56a076b08425958cfaf17ca86a3250823d16b3dd7a0adb0d4dfe0f"
   },
   "access__ar": {
-   "frame_sha256": "3802b54a78bdde8c8b3b959eb55639913ccea68ed1581699d85fc94ae1533579"
+   "frame_sha256": "0576b2dbeac5f5ded0ad4232dfd2830e906c15265951c282a88ec8fbb746d929"
   },
   "access__en": {
    "frame_sha256": "8d16a474d7284fbccd78e466673d8b8d9fc6eb178c99182beaf63567da8129af"
@@ -74,7 +74,7 @@
    "frame_sha256": "fa232facf75c361f7b0a20a73420bdcc61452db906330986fae30a4ebc4ab422"
   },
   "evidence_CLM-007__ar": {
-   "frame_sha256": "ba148dc25c86ba72ee0b73ff8d6bd9d4a113778215da70fbebd09696914563db"
+   "frame_sha256": "022a0f5e7a799a7c5565ffb54590d89e0cc472af8f97f4ba2aee4230141e986d"
   },
   "evidence_CLM-007__en": {
    "frame_sha256": "8be672bc979618e5c78ec8bead26a684ffaf0886be80af3993f84426c0a50ecb"
@@ -236,7 +236,7 @@
    "frame_sha256": "7b0ebe16f59f9b1077f485a845d2e82d50c9f3e4e32ef9a1d4ad1f40ad3cef87"
   },
   "evidence_CLM-034__ar": {
-   "frame_sha256": "1fa916a40316562b8b78ff1dbcaf6dd7c016d572158898d25652c6ff415bd292"
+   "frame_sha256": "d4a18cca7cbb4f5a14019795de5d8eb5b39a3bcfd5dad39b62d64db1acff05ed"
   },
   "evidence_CLM-034__en": {
    "frame_sha256": "457c8a3af7da544f32822f611b955a5353c9d8dbf1e800645d2548a698ddd937"
@@ -506,7 +506,7 @@
    "frame_sha256": "dec3e00706192d4c245ae6850f7d31d205f32f21c08e074ffe61c42cce0eb906"
   },
   "evidence_VIS-EVIDENCE-GAPS__ar": {
-   "frame_sha256": "faae7c4da4113a1d8fa8e9a01d2ac0abe6ddb823be59c8a7ca44b046afe3dfd7"
+   "frame_sha256": "566f0c97f98daef09ace1479c01b4e00d6d5751478be59f29f8603d6b8f95b26"
   },
   "evidence_VIS-EVIDENCE-GAPS__en": {
    "frame_sha256": "837c45551c8448f35a7f64f49b83db5db56fe804bd35c40323d1e5f51d651e56"
@@ -710,13 +710,13 @@
    "frame_sha256": "5dc03be91ce1de8b387bf186d293ded163e91c0ec8f083c7c705f8038fe10f67"
   },
   "finance__ar": {
-   "frame_sha256": "c1ee78d821f0aa26154856c9b3315da6a0031a1802dc4d2a4076e3af702e6291"
+   "frame_sha256": "4348c1584e86fad57a28d99027871b4fe7ff1c4d3f1c9d3128daccf8432820d7"
   },
   "finance__en": {
    "frame_sha256": "27edbfd8b29c044dffa7719a16ce2c044c5787074a0f76175375ed690310fa48"
   },
   "firms__ar": {
-   "frame_sha256": "20220fc53db712e8d24b1d5c175351cbca49b21b600e15ba3f0352703942fbf0"
+   "frame_sha256": "429bb483a256cae40ce03b34fcfe528e597bf413a6b86712683011fa64504dce"
   },
   "firms__en": {
    "frame_sha256": "a8632bee6bb9f8e14e33b594057d4dc7de383a26760e34ffc5078c9a64cffe88"
@@ -740,13 +740,13 @@
    "frame_sha256": "c293fd4b60571cb298cba8d535835ddb8845d64fed2e6b5bdd29c7309f5241c7"
   },
   "payments__ar": {
-   "frame_sha256": "9ad3232fc142501c868352d47d81ffc9b40fbceabf8f007b2fdb920287109ec6"
+   "frame_sha256": "b1df11fbc636457a307e9b79c574d0af2c7579d74862411d846da43eef3ce836"
   },
   "payments__en": {
    "frame_sha256": "62600247c659e3a7016fe7a3e7e480f071901437f7f1cb606d0e8c9588b41f7d"
   },
   "people__ar": {
-   "frame_sha256": "9ade25ab2280566040c26e209fad933fa2cb2cebd3391f2217dc55343535a1b8"
+   "frame_sha256": "91279aaef62ba24da3f793ada0c6c3dfede41c5cb07254b17436e995965dc73c"
   },
   "people__en": {
    "frame_sha256": "7266bf42d95f03409268f43f418db3171e862ce34a4a0b0fb8db6f1840817027"
@@ -758,7 +758,7 @@
    "frame_sha256": "3cebf838c27faf4d6d6fbf4b5226f4ad33bf42e45f47c52f71f71854bc978812"
   },
   "providers__ar": {
-   "frame_sha256": "7f802221076342b9da2d18dc809caa77084a018948c6068f5f736535bcdc38aa"
+   "frame_sha256": "13643aaa5383528c628768c6ffdfa3d208bf24ace2c3440d507c79307d6ac608"
   },
   "providers__en": {
    "frame_sha256": "19108525e656018de0edd040c0535e94c3d052850858dce79206277fdf77756e"
@@ -836,16 +836,16 @@
    "frame_sha256": "4db963290b8b6ea244b9de2ab3be7840a17a0e37a2393e647348b5810a9b73f4"
   },
   "remittances__ar": {
-   "frame_sha256": "253cae17c9c76caaf0208e718d96bebb20a9502e54a2165a4aba3179a553ca7b"
+   "frame_sha256": "d61f9ada9077731e989f7aa492b65c4d62705ec6359d214375f01f158825734b"
   },
   "remittances__en": {
    "frame_sha256": "67844f964e86064e4585255a6f1c6b2ae284cec7be35b9ba34f8f3744e443e08"
   },
   "rights__ar": {
-   "frame_sha256": "f2686f37ec4dc7a8d1138c5ed72fdd69be2f5d85dcd98ad433df7237690ab4a9"
+   "frame_sha256": "f448d11a32fb226dae0600eb986162c2092c36c61c5f58fc8258db7f7cd0a41a"
   },
   "rights__en": {
-   "frame_sha256": "b4230210f3715a0977f8de4a2635aade776583a0a56b71b50beccf312c3feea6"
+   "frame_sha256": "90542ba1319c1dfaff446f8ecffbc15d1dd97dd3661f7f7d6e3ce64450c6e66d"
   },
   "terms__ar": {
    "frame_sha256": "986da8e008fd4f490bff5f8f9e506d97676a7d4b5eb70cc01ba65b83bafbada0"

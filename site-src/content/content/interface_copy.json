@@ -1382,7 +1382,7 @@
   {
     "ui_id": "UI-DOM-DO-NOT-INFER",
     "label_en": "Do not infer:",
-    "label_ar": "لا يُستنتج:",
+    "label_ar": "لا تستنتج:",
     "use_rule": "scripts/yfie/content.py _DOMAIN_LABELS['do_not']"
   },
   {
@@ -3176,7 +3176,7 @@
   {
     "ui_id": "UI-FOOTER-LICENCE",
     "label_en": "CauseWay's own text, analysis and visual designs are licensed under {licence} unless otherwise noted; third-party material remains under its owners' terms.",
-    "label_ar": "يُتاح نص CauseWay الخاص وتحليلاته وتصاميمه المرئية بموجب رخصة {licence} ما لم يُذكر خلاف ذلك، وتبقى مواد الجهات الأخرى خاضعة لشروط أصحابها.",
+    "label_ar": "تُتاح نصوص CauseWay وتحليلاتها وتصاميمها المرئية بموجب رخصة {licence} ما لم يُذكر خلاف ذلك، وتبقى مواد الجهات الأخرى خاضعة لشروط أصحابها.",
     "use_rule": "Owner brief of 10 October 2026, Part B, B4 (rights presentation). Footer licence line on every page; {licence} is UI-LICENCE-NAME linked to UI-LICENCE-DEED-URL. Text only, no badge."
   },
   {

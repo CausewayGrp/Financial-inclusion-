@@ -115,9 +115,9 @@
     "period": "As of the edition of this resource dated 3 October 2026",
     "encoding_contract": "Matrix/timeline with explicit gap types; blank/unknown never plotted as zero.",
     "prohibited_inference_en": "A gap is not zero, and it is not evidence of absence or failure.",
-    "prohibited_inference_ar": "الفجوة ليست صفرًا وليست دليلًا على الغياب أو الفشل.",
+    "prohibited_inference_ar": "الفجوة لا تعني صفرًا، ولا تدل على الغياب أو الفشل.",
     "accessible_summary_en": "The evidence gaps recorded in this resource as of the edition of this resource dated 3 October 2026 are of these types: a missing period, a missing calculation base, a missing primary file, a map layer that cannot yet be built, and an unresolved source scope. A gap can close when new evidence arrives; a blank or missing observation is not zero and is not evidence of absence.",
-    "accessible_summary_ar": "فجوات الأدلة المسجلة في هذا المورد وفق إصدار هذا المورد المؤرخ في 3 أكتوبر 2026 من الأنواع التالية: فترة مفقودة، أو قاعدة احتساب غير موثقة، أو ملف أصلي غير متاح، أو طبقة مكانية لا يمكن بناؤها بعد، أو نطاق مصدر غير محسوم. وقد تُغلق الفجوة عند وصول دليل جديد؛ والفراغ أو غياب الرصد ليس صفرًا وليس دليلًا على عدم الوجود.",
+    "accessible_summary_ar": "فجوات الأدلة المسجلة في هذا المورد وفق إصدار هذا المورد المؤرخ في 3 أكتوبر 2026 من الأنواع التالية: فترة مفقودة، أو قاعدة احتساب غير موثقة، أو ملف أصلي غير متاح، أو طبقة مكانية لا يمكن بناؤها بعد، أو نطاق مصدر غير محسوم. وقد تُغلق الفجوة عند وصول دليل جديد؛ والفراغ أو غياب الرصد لا يعني صفرًا ولا يدل على عدم الوجود.",
     "public_routes": [
       "/measurement"
     ],
@@ -789,7 +789,7 @@
     "prohibited_inference_en": "An area with no observed location is not an area without access, and a listing or licence does not show an operating service point.",
     "prohibited_inference_ar": "المنطقة التي لم يُرصد فيها موقع ليست منطقة بلا وصول، والإدراج في قائمة أو الترخيص لا يثبت وجود نقطة خدمة عاملة.",
     "accessible_summary_en": "The evidence base does not yet establish, consistently across Yemen, which access points operate at a given place and date: it holds no verified, dated register of operating locations. What it holds are official lists, dated status events for providers, payment-infrastructure totals and historical studies of where providers were concentrated; none of these records where services operate on a given date. A location would appear as a point only with a verified source, an observation date, a dated operating status and a permitted level of geographic detail. Places with no observed location are unknown, not zero, and a listed or licensed provider does not by itself establish an operating service point.",
-    "accessible_summary_ar": "لا تثبت قاعدة الأدلة بعدُ، على نحو متسق في أنحاء اليمن، أي نقاط الوصول تعمل في مكان وتاريخ محددين؛ إذ لا تتضمن سجلًا موثقًا ومؤرخًا لمواقع الخدمة العاملة. وما تتضمنه هو قوائم رسمية، وأحداث مؤرخة تخص وضع مقدمي الخدمات، وإجماليات لبنية المدفوعات، ودراسات تاريخية عن أماكن تركز مقدمي الخدمات؛ ولا يسجل أيٌّ منها مكان عمل الخدمة في تاريخ معين. ولا يظهر موقع نقطةً على الخريطة إلا إذا كان له مصدر موثق وتاريخ رصد وتاريخ لوضع التشغيل ومستوى جغرافي مسموح بنشره. والأماكن التي لم يُرصد فيها موقع غير معروفة وليست صفرًا، كما أن إدراج مقدم خدمة أو ترخيصه لا يثبت بذاته وجود نقطة خدمة عاملة.",
+    "accessible_summary_ar": "لا تثبت قاعدة الأدلة بعدُ، على نحو متسق في أنحاء اليمن، أي نقاط الوصول تعمل في مكان وتاريخ محددين؛ إذ لا تتضمن سجلًا موثقًا ومؤرخًا لمواقع الخدمة العاملة. وما تتضمنه هو قوائم رسمية، وأحداث مؤرخة تخص وضع مقدمي الخدمات، وإجماليات لبنية المدفوعات، ودراسات تاريخية عن أماكن تركز مقدمي الخدمات؛ ولا يسجل أيٌّ منها مكان عمل الخدمة في تاريخ معين. ولا يظهر موقع نقطةً على الخريطة إلا إذا كان له مصدر موثق وتاريخ رصد وتاريخ لوضع التشغيل ومستوى جغرافي مسموح بنشره. والأماكن التي لم يُرصد فيها موقع غير معروفة، وهذا لا يعني صفرًا، كما أن إدراج مقدم خدمة أو ترخيصه لا يثبت بذاته وجود نقطة خدمة عاملة.",
     "public_routes": [
       "/access"
     ],

@@ -16,7 +16,7 @@
     "file_name": "Yemen_Financial_Inclusion_Evidence_Master.xlsx",
     "path": "authority/Yemen_Financial_Inclusion_Evidence_Master.xlsx",
     "drive_id": "1xAbdDHJd5bYo0Pzo_a6dR6HsZ056LzJU",
-    "sha256": "e444320569aed354d3903e30081cfb0b7eea9544110463eb72d43d3f2a3702d9",
+    "sha256": "370d72a4cb40b75dc72aa0320d1dba984de07d200e6d19889d7ca3dc61413d37",
     "drive_recorded_sha256": "e69804106e04d093098688f2d01cea51e13191f255d774a090f3e5dd8dec9bc7",
     "external_repository_sync_state": "EXTERNAL_REPOSITORY_SYNC_PENDING"
   },
@@ -25,6 +25,6 @@
   "master_first_correction_rule": "Any material evidence/content correction is made in the Production Master first and then regenerated into subordinate projections.",
   "public_runtime_rule": "The public runtime consumes filtered local governed payloads; it does not parse or ship the Production Master.",
   "release_rule": "Controlled content is not sufficient for live-release readiness; runtime/browser, mobile/RTL, accessibility, publication filtering, security/privacy, rights/legal where applicable, corrections/version behavior and named approval must match the readiness claim.",
-  "generated_at": "2026-10-10T10:30:17Z",
+  "generated_at": "2026-10-10T10:48:51Z",
   "external_repository_sync_rule": "Drive file IDs are lineage references. They are not asserted to contain the bytes bound here until a controlled replacement is performed and verified; until then the state is EXTERNAL_REPOSITORY_SYNC_PENDING."
 }

@@ -98,7 +98,7 @@ Benchmarks fetched on 10 October 2026 (only what was seen is cited):
 
 | Rule | Applied | Count |
 |---|---|---|
-| remittances = الحوالات where the meaning is identical (six conditions T1–T6: person-to-person flow; payer not a government or programme; not the act of transferring; not inside a quoted title or label; the English says "remittance"; nothing but the noun moves) | Master text cells, cell by cell (`nb_1_remittance_substitutions.json`, each with its English counterpart and the six tests) | **102 cells** swapped; 25 kept by ruling (19 balance-of-payments metric labels in 23_REMITTANCES keep the source's concept; CLM-035 keeps the bank's own label; the sheet header row; 04 r531 is the domain label above); 63 further occurrences kept by test (cash transfers 15, government or programme transfers 10, titles and source labels 26, other meaning 8, the act of transferring 4) |
+| remittances = الحوالات where the meaning is identical (six conditions T1–T6: person-to-person flow; payer not a government or programme; not the act of transferring; not inside a quoted title or label; the English says "remittance"; nothing but the noun moves) | Master text cells, cell by cell (`nb_1_remittance_substitutions.json`, each with its English counterpart and the six tests) | **102 cells** swapped (one of them, CLM-035's meta description, restored to the bank's own label by NB-2); 25 kept by ruling (19 balance-of-payments metric labels in 23_REMITTANCES keep the source's concept; CLM-035 keeps the bank's own label; the sheet header row; 04 r531 is the domain label above); 63 further occurrences kept by test (cash transfers 15, government or programme transfers 10, titles and source labels 26, other meaning 8, the act of transferring 4) |
 | regulatory licensing = الترخيص where «الرخصة» meant it ("القائمة أو الرخصة") | CLM-018 (06) and VIS-PROVIDER-OBSERVABILITY (11) | **4 cells** |
 | web accessibility = إمكانية الوصول where «إتاحة الوصول» meant accessibility (not where it means access to services: 03 /explore/ s6 is kept) | /accessibility/, /contact/, the trust link | **8 cells** |
 | missing ≠ zero: «ليس صفرًا» (reads as a stated value) → «لا يعني صفرًا» | four state labels | **4 labels** |
@@ -159,6 +159,45 @@ concepts, each with EN, AR, definition (EN, AR), variants not to use, and the ru
 - **Social images:** 140 cards regenerated. **Diagrams:** the three architecture diagrams are redrawn, and their label literals are updated in `scripts/architecture_diagrams.py`.
 - **Docs:** README, `handoff/CLAUDE_DESIGN_MASTER_PROMPT.md` §4.2 and `handoff/DESIGN_ACCEPTANCE_CRITERIA.md` use the new labels. History records are unchanged.
 - **Unchanged:** routes, URLs, identifiers, `data-*` hooks, every figure, unit, period, universe and source.
+
+## NB-2 — the independent review of NB-1
+
+An independent reviewer who did not build NB-1 read every changed cell and the built pages, in both languages. It found
+**no blocker**; the lead accepted its should-fix items and most of its nits. They were applied in transaction NB-2:
+Master `e444320569ae` → `370d72a4cb40`, 38 cells, plus one renderer change.
+
+- **Footer licence line, Arabic.** Now «تُتاح نصوص CauseWay وتحليلاتها وتصاميمها المرئية…»: CauseWay takes feminine
+  agreement, as in the strapline and on /rights/.
+- **Three labels NB-1 missed:**
+  - /measurement/ section rubric: "Measurement priorities";
+  - "P0/P1 among these measurement priorities" in the ten priority rationales;
+  - /ar/terms/ «حقوق إعادة الاستخدام».
+- **One grammar slip** after NB-1 made the subject plural: "They do not rank…".
+- **CLM-035.** Its Arabic meta description keeps the bank's own label «التحويلات», as its body does.
+- **Findex citation on /rights/.** It now has the year and place the source record's attribution requirement gives:
+  (2022), Washington, DC: World Bank.
+- **Licence addresses on /rights/ are links.** The deed and the legal code, each language's own, now link out. The
+  renderer links only the official creativecommons.org licence addresses and no other address in governed text.
+- **Rights page title.** It is now "Rights and reuse / حقوق إعادة الاستخدام", the name its link carries. It was "Source
+  and data rights / حقوق المصادر والبيانات", and the Arabic over-promised data rights.
+- **Informal hawala named as a system.** Now that «الحوالات» means remittances, the informal hawala system is
+  «التحويلات عبر نظام الحوالة غير الرسمي» in 4 places.
+- **Two substitutions whose English did not say "remittance"** were reworded:
+  - the boundary note of SEARCH-ALIAS-032;
+  - «ما تتسلمه الأسر من حوالات».
+- **Missing ≠ zero in body text (TERM-021).** 6 cells: «لا يعني صفرًا», not «ليس صفرًا».
+- **"Do not infer:"** is «لا تستنتج:», an instruction, as in English.
+- **Arabic h1s of /access/ and /providers/** no longer repeat the domain name after the prefix.
+- **TERM-001's rule** is narrowed to what was applied:
+  - quote a source's own balance-of-payments label;
+  - in running text, remittances = الحوالات.
+- **SEARCH-ALIAS-044** gains "remittance fees", pairing its terms across the languages.
+
+**Not changed, with reasons:**
+- /404.html carries no footer, so it has no licence line.
+- The two NEG-EW-011 redirect stubs have no `<title>` page head to carry `<link rel="license">`.
+- "External sector" is rendered two ways in Arabic in two records (06 r29, r70). That is outside the naming scope and
+  is left to the next editorial pass.
 
 ## If the owner rejects or edits a label
 

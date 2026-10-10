@@ -1,0 +1,351 @@
+{
+ "transaction": "NB-2",
+ "summary": "Fixes from the independent review of NB-1: Arabic licence line, three missed labels, CLM-035 description, the Findex citation, hawala wording, missing-is-not-zero wording, h1 prefixes, the rights title, the register rule",
+ "input_master_sha256": "e444320569aed354d3903e30081cfb0b7eea9544110463eb72d43d3f2a3702d9",
+ "output_master_sha256": "370d72a4cb40b75dc72aa0320d1dba984de07d200e6d19889d7ca3dc61413d37",
+ "cells_written": 38,
+ "changes": [
+  {
+   "finding": "NB-2:REVIEW",
+   "sheet": "04_NAV_UX",
+   "row": 605,
+   "col": 3,
+   "field": "UI-FOOTER-LICENCE.label_ar",
+   "old": "يُتاح نص CauseWay الخاص وتحليلاته وتصاميمه المرئية بموجب رخصة {licence} ما لم يُذكر خلاف ذلك، وتبقى مواد الجهات الأخرى خاضعة لشروط أصحابها.",
+   "new": "تُتاح نصوص CauseWay وتحليلاتها وتصاميمها المرئية بموجب رخصة {licence} ما لم يُذكر خلاف ذلك، وتبقى مواد الجهات الأخرى خاضعة لشروط أصحابها."
+  },
+  {
+   "finding": "NB-2:REVIEW",
+   "sheet": "04_NAV_UX",
+   "row": 306,
+   "col": 3,
+   "field": "UI-DOM-DO-NOT-INFER.label_ar",
+   "old": "لا يُستنتج:",
+   "new": "لا تستنتج:"
+  },
+  {
+   "finding": "NB-2:REVIEW",
+   "sheet": "03_PAGE_SECTIONS",
+   "row": 136,
+   "col": 5,
+   "field": "03_PAGE_SECTIONS!r136c5",
+   "old": "These measurement priorities link evidence gaps to specific decision questions. It does not rank national priorities or use a hidden score. Each item states the decision affected, what evidence is missing, the feasibility and sensitivity constraints, and what would become knowable if that evidence existed. Priority labels describe sequencing within this resource; they are not government, funding or policy rankings.",
+   "new": "These measurement priorities link evidence gaps to specific decision questions. They do not rank national priorities or use a hidden score. Each item states the decision affected, what evidence is missing, the feasibility and sensitivity constraints, and what would become knowable if that evidence existed. Priority labels describe sequencing within this resource; they are not government, funding or policy rankings."
+  },
+  {
+   "finding": "NB-2:REVIEW",
+   "sheet": "03_PAGE_SECTIONS",
+   "row": 153,
+   "col": 3,
+   "field": "03_PAGE_SECTIONS!r153c3",
+   "old": "Measurement agenda",
+   "new": "Measurement priorities"
+  },
+  {
+   "finding": "NB-2:REVIEW",
+   "sheet": "03_PAGE_SECTIONS",
+   "row": 137,
+   "col": 5,
+   "field": "03_PAGE_SECTIONS!r137c5",
+   "old": "A measurement item is an evidence-to-decision record, not a recommendation to government or a wish list. It identifies the pages and decisions affected, the evidence currently missing, feasibility and sensitivity constraints, the basis for its position in this resource’s evidence agenda, and what would change if the evidence became available.",
+   "new": "A measurement item is an evidence-to-decision record, not a recommendation to government or a wish list. It identifies the pages and decisions affected, the evidence currently missing, feasibility and sensitivity constraints, the basis for its position in this resource’s measurement priorities, and what would change if the evidence became available."
+  },
+  {
+   "finding": "NB-2:REVIEW",
+   "sheet": "03_PAGE_SECTIONS",
+   "row": 337,
+   "col": 7,
+   "field": "03_PAGE_SECTIONS!r337c7",
+   "old": "يضم هذا المورد ملخصات ونتائج مشتقة أعدتها CauseWay إلى جانب مواد صادرة عن جهات أخرى. ويتوقف جواز إعادة استخدام مادة المصدر على شروط الناشر الأصلي؛ ولا يسجل هذا المورد بعدُ شروط إعادة الاستخدام على مستوى العنصر. وإذا لم يُذكر إذن بإعادة توزيع مادة المصدر أو تعديلها، فلا ينبغي افتراض وجوده. وتبقى القيود الخاصة بكل مصدر سارية على البيانات والجداول والرسوم والنصوص الأصلية. ويُتاح محتوى CauseWay الخاص بموجب رخصة CC BY 4.0؛ راجع صفحة «الحقوق وإعادة الاستخدام».",
+   "new": "يضم هذا المورد ملخصات ونتائج مشتقة أعدتها CauseWay إلى جانب مواد صادرة عن جهات أخرى. ويتوقف جواز إعادة استخدام مادة المصدر على شروط الناشر الأصلي؛ ولا يسجل هذا المورد بعدُ شروط إعادة الاستخدام على مستوى العنصر. وإذا لم يُذكر إذن بإعادة توزيع مادة المصدر أو تعديلها، فلا ينبغي افتراض وجوده. وتبقى القيود الخاصة بكل مصدر سارية على البيانات والجداول والرسوم والنصوص الأصلية. ويُتاح محتوى CauseWay الخاص بموجب رخصة CC BY 4.0؛ راجع صفحة «حقوق إعادة الاستخدام»."
+  },
+  {
+   "finding": "NB-2:REVIEW",
+   "sheet": "02_SITE_MAP",
+   "row": 45,
+   "col": 8,
+   "field": "02_SITE_MAP!r45c8",
+   "old": "تتغير نسبة الحوالات إلى تمويل المانحين عن عام 2024، في بنود ميزان المدفوعات لدى البنك المركزي اليمني – عدن، بين إصدارات التقرير السنوي.",
+   "new": "تتغير نسبة التحويلات إلى تمويل المانحين عن عام 2024، في بنود ميزان المدفوعات لدى البنك المركزي اليمني – عدن، بين إصدارات التقرير السنوي."
+  },
+  {
+   "finding": "NB-2:REVIEW",
+   "sheet": "03_PAGE_SECTIONS",
+   "row": 363,
+   "col": 5,
+   "field": "03_PAGE_SECTIONS!r363c5",
+   "old": "CauseWay licenses the content it owns in this resource under the Creative Commons Attribution 4.0 International licence (CC BY 4.0; deed https://creativecommons.org/licenses/by/4.0/, legal code https://creativecommons.org/licenses/by/4.0/legalcode.en). Covered: CauseWay's text and analysis in English and Arabic, its visual designs, the compiled evidence records and the figures CauseWay calculates, and the structure and annotations of the data exports when they are published. Not covered: material published by others — documents, data, tables, figures and text remain under their publishers' terms, including where this resource reports, quotes or translates them, and this resource does not host copies of their files; the CauseWay name, logo and marks; and the software code of the repository that builds this resource, which is outside this licence. Figures derived from survey microdata: the confidence intervals this resource derives from the Global Findex respondent file for Yemen (evidence record CLM-026) are computed under the World Bank Microdata Research License, which permits publishing aggregate statistics with the data cited. Cite the data as that licence requires: Demirgüç-Kunt, Klapper, Singer and Ansar, The Global Findex Database 2021: Financial Inclusion, Digital Payments, and Resilience in the Age of COVID-19, World Bank. CC BY 4.0 does not extend to the underlying microdata, which this resource does not host or redistribute. You may share and adapt CauseWay's content for any purpose, provided you credit CauseWay, link to the licence and indicate whether you made changes: give the title, the author (CauseWay), the source (this resource and the page address), the licence (CC BY 4.0) and the changes made. For a reused figure, use two lines: first this resource (Yemen Financial Inclusion Evidence, the record, CauseWay, the edition and the page address), then the original source that the record names (publisher, title, year and link). This page states the licence CauseWay applies to its own content; it does not state that any third-party rights have been cleared.",
+   "new": "CauseWay licenses the content it owns in this resource under the Creative Commons Attribution 4.0 International licence (CC BY 4.0; deed https://creativecommons.org/licenses/by/4.0/, legal code https://creativecommons.org/licenses/by/4.0/legalcode.en). Covered: CauseWay's text and analysis in English and Arabic, its visual designs, the compiled evidence records and the figures CauseWay calculates, and the structure and annotations of the data exports when they are published. Not covered: material published by others — documents, data, tables, figures and text remain under their publishers' terms, including where this resource reports, quotes or translates them, and this resource does not host copies of their files; the CauseWay name, logo and marks; and the software code of the repository that builds this resource, which is outside this licence. Figures derived from survey microdata: the confidence intervals this resource derives from the Global Findex respondent file for Yemen (evidence record CLM-026) are computed under the World Bank Microdata Research License, which permits publishing aggregate statistics with the data cited. Cite the data as that licence requires: Demirgüç-Kunt, Klapper, Singer and Ansar (2022), The Global Findex Database 2021: Financial Inclusion, Digital Payments, and Resilience in the Age of COVID-19, Washington, DC: World Bank. CC BY 4.0 does not extend to the underlying microdata, which this resource does not host or redistribute. You may share and adapt CauseWay's content for any purpose, provided you credit CauseWay, link to the licence and indicate whether you made changes: give the title, the author (CauseWay), the source (this resource and the page address), the licence (CC BY 4.0) and the changes made. For a reused figure, use two lines: first this resource (Yemen Financial Inclusion Evidence, the record, CauseWay, the edition and the page address), then the original source that the record names (publisher, title, year and link). This page states the licence CauseWay applies to its own content; it does not state that any third-party rights have been cleared."
+  },
+  {
+   "finding": "NB-2:REVIEW",
+   "sheet": "03_PAGE_SECTIONS",
+   "row": 363,
+   "col": 7,
+   "field": "03_PAGE_SECTIONS!r363c7",
+   "old": "تتيح CauseWay المحتوى الذي تملكه في هذا المورد بموجب رخصة المشاع الإبداعي «نَسب المُصنَّف 4.0 دولي» (CC BY 4.0؛ صك الرخصة https://creativecommons.org/licenses/by/4.0/deed.ar، والنص القانوني https://creativecommons.org/licenses/by/4.0/legalcode.ar). تشمل الرخصة: نصوص CauseWay وتحليلاتها بالعربية والإنجليزية، وتصاميمها المرئية، وسجلات الأدلة المجمَّعة والأرقام التي تحتسبها CauseWay، وبنية ملفات البيانات المُصدَّرة وشروحها عند نشرها. ولا تشمل الرخصة: مواد الجهات الأخرى، فالوثائق والبيانات والجداول والرسوم والنصوص التي تنشرها جهات أخرى تبقى خاضعة لشروط ناشريها، بما في ذلك حين يوردها هذا المورد أو يقتبسها أو يترجمها، ولا يستضيف هذا المورد نسخًا من ملفاتها؛ واسم CauseWay وشعارها وعلاماتها؛ والشيفرة البرمجية للمستودع الذي يبني هذا المورد، فهي خارج نطاق هذه الرخصة. الأرقام المشتقة من البيانات الجزئية للمسوح: تُحتسب فترات الثقة التي يستخرجها هذا المورد من ملف المستجيبين في مسح Global Findex لليمن (سجل الدليل CLM-026) بموجب رخصة البحث للبيانات الجزئية لدى البنك الدولي، التي تجيز نشر الإحصاءات التجميعية مع الاستشهاد بالبيانات. استشهد بالبيانات كما تشترط تلك الرخصة: Demirgüç-Kunt وKlapper وSinger وAnsar، The Global Findex Database 2021: Financial Inclusion, Digital Payments, and Resilience in the Age of COVID-19، البنك الدولي. ولا تمتد رخصة CC BY 4.0 إلى البيانات الجزئية الأصلية، التي لا يستضيفها هذا المورد ولا يعيد توزيعها. ويجوز لك مشاركة محتوى CauseWay وتعديله لأي غرض، بشرط أن تنسبه إلى CauseWay، وأن تضع رابطًا إلى الرخصة، وأن تبيّن ما إذا كنت قد أجريت تغييرات: اذكر العنوان، والمؤلف (CauseWay)، والمصدر (هذا المورد ورابط الصفحة)، والرخصة (CC BY 4.0)، والتغييرات التي أجريتها. وعند إعادة استخدام رقم، استعمل سطرين: أولًا هذا المورد (أدلة الشمول المالي في اليمن، والسجل، وCauseWay، والإصدار، ورابط الصفحة)، ثم المصدر الأصلي الذي يسمّيه السجل (الناشر، والعنوان، والسنة، والرابط). وتذكر هذه الصفحة الرخصة التي تطبقها CauseWay على محتواها الخاص، ولا تفيد بأن أي حقوق لجهات أخرى قد سُوّيت.",
+   "new": "تتيح CauseWay المحتوى الذي تملكه في هذا المورد بموجب رخصة المشاع الإبداعي «نَسب المُصنَّف 4.0 دولي» (CC BY 4.0؛ صك الرخصة https://creativecommons.org/licenses/by/4.0/deed.ar، والنص القانوني https://creativecommons.org/licenses/by/4.0/legalcode.ar). تشمل الرخصة: نصوص CauseWay وتحليلاتها بالعربية والإنجليزية، وتصاميمها المرئية، وسجلات الأدلة المجمَّعة والأرقام التي تحتسبها CauseWay، وبنية ملفات البيانات المُصدَّرة وشروحها عند نشرها. ولا تشمل الرخصة: مواد الجهات الأخرى، فالوثائق والبيانات والجداول والرسوم والنصوص التي تنشرها جهات أخرى تبقى خاضعة لشروط ناشريها، بما في ذلك حين يوردها هذا المورد أو يقتبسها أو يترجمها، ولا يستضيف هذا المورد نسخًا من ملفاتها؛ واسم CauseWay وشعارها وعلاماتها؛ والشيفرة البرمجية للمستودع الذي يبني هذا المورد، فهي خارج نطاق هذه الرخصة. الأرقام المشتقة من البيانات الجزئية للمسوح: تُحتسب فترات الثقة التي يستخرجها هذا المورد من ملف المستجيبين في مسح Global Findex لليمن (سجل الدليل CLM-026) بموجب رخصة البحث للبيانات الجزئية لدى البنك الدولي، التي تجيز نشر الإحصاءات التجميعية مع الاستشهاد بالبيانات. استشهد بالبيانات كما تشترط تلك الرخصة: Demirgüç-Kunt وKlapper وSinger وAnsar (2022)، The Global Findex Database 2021: Financial Inclusion, Digital Payments, and Resilience in the Age of COVID-19، واشنطن العاصمة: البنك الدولي. ولا تمتد رخصة CC BY 4.0 إلى البيانات الجزئية الأصلية، التي لا يستضيفها هذا المورد ولا يعيد توزيعها. ويجوز لك مشاركة محتوى CauseWay وتعديله لأي غرض، بشرط أن تنسبه إلى CauseWay، وأن تضع رابطًا إلى الرخصة، وأن تبيّن ما إذا كنت قد أجريت تغييرات: اذكر العنوان، والمؤلف (CauseWay)، والمصدر (هذا المورد ورابط الصفحة)، والرخصة (CC BY 4.0)، والتغييرات التي أجريتها. وعند إعادة استخدام رقم، استعمل سطرين: أولًا هذا المورد (أدلة الشمول المالي في اليمن، والسجل، وCauseWay، والإصدار، ورابط الصفحة)، ثم المصدر الأصلي الذي يسمّيه السجل (الناشر، والعنوان، والسنة، والرابط). وتذكر هذه الصفحة الرخصة التي تطبقها CauseWay على محتواها الخاص، ولا تفيد بأن أي حقوق لجهات أخرى قد سُوّيت."
+  },
+  {
+   "finding": "NB-2:REVIEW",
+   "sheet": "03_PAGE_SECTIONS",
+   "row": 315,
+   "col": 7,
+   "field": "03_PAGE_SECTIONS!r315c7",
+   "old": "يورد تقرير خبراء صندوق النقد قيم 2018–2024 بوصفها قيمًا تاريخية تستند إلى حسابات خبراء الصندوق، ويورد ملحق لاحق للمشاورات نفسها قيمة 2025 كتقدير وقيم 2026–2030 كتوقعات. وتُفصل السلسلة عند تغير الوثيقة المصدر، فلا تُمد القيم التاريخية عبر التوقعات كما لو كانت السنوات كلها من النوع نفسه. مراجعة التوقع ليست تغيرًا اقتصاديًا مرصودًا، كما أن سلسلة التحويلات الكلية لا تقيس حجم الحوالة غير الرسمية.",
+   "new": "يورد تقرير خبراء صندوق النقد قيم 2018–2024 بوصفها قيمًا تاريخية تستند إلى حسابات خبراء الصندوق، ويورد ملحق لاحق للمشاورات نفسها قيمة 2025 كتقدير وقيم 2026–2030 كتوقعات. وتُفصل السلسلة عند تغير الوثيقة المصدر، فلا تُمد القيم التاريخية عبر التوقعات كما لو كانت السنوات كلها من النوع نفسه. مراجعة التوقع ليست تغيرًا اقتصاديًا مرصودًا، كما أن سلسلة الحوالات الكلية لا تقيس حجم التحويلات عبر نظام الحوالة غير الرسمي."
+  },
+  {
+   "finding": "NB-2:REVIEW",
+   "sheet": "03_PAGE_SECTIONS",
+   "row": 327,
+   "col": 7,
+   "field": "03_PAGE_SECTIONS!r327c7",
+   "old": "لا تساوي سلسلة الحوالات الواردة في ميزان المدفوعات حجمَ الحوالة غير الرسمية أو توزيعها على الأسر. ومراجعة المصدر ليست هبوطًا اقتصاديًا. كما أن تشابه المسارين بعد تحويل السلسلتين إلى رقم قياسي (2021 = 100) لا يثبت أن السلسلتين الخام تغطيان النطاق نفسه، ولا يكشف معامل تحويل بينهما. وأسعار الممرات ليست متوسطًا وطنيًا للتكلفة. كذلك فإن تغير رصيد خارجي لا يساوي تلقائيًا معاملة، ولا تعيد الطبعة السابعة من دليل ميزان المدفوعات (BPM7) كتابة سلاسل اليمن التاريخية بأثر رجعي من دون تحويل صريح.",
+   "new": "لا تساوي سلسلة الحوالات الواردة في ميزان المدفوعات حجمَ التحويلات عبر نظام الحوالة غير الرسمي أو توزيعها على الأسر. ومراجعة المصدر ليست هبوطًا اقتصاديًا. كما أن تشابه المسارين بعد تحويل السلسلتين إلى رقم قياسي (2021 = 100) لا يثبت أن السلسلتين الخام تغطيان النطاق نفسه، ولا يكشف معامل تحويل بينهما. وأسعار الممرات ليست متوسطًا وطنيًا للتكلفة. كذلك فإن تغير رصيد خارجي لا يساوي تلقائيًا معاملة، ولا تعيد الطبعة السابعة من دليل ميزان المدفوعات (BPM7) كتابة سلاسل اليمن التاريخية بأثر رجعي من دون تحويل صريح."
+  },
+  {
+   "finding": "NB-2:REVIEW",
+   "sheet": "06_EVIDENCE_OBJECTS",
+   "row": 29,
+   "col": 17,
+   "field": "06_EVIDENCE_OBJECTS!r29c17",
+   "old": "لا يقيس هذا الدليل حجم الحوالة غير الرسمية، ولا التسوية عبر نظام المدفوعات، ولا توزيع التدفقات على الأسر. | هذا مفهوم اقتصادي كلي للقطاع الخارجي، وليس قياسًا لتسوية المدفوعات عبر نظام الدفع ولا قياسًا مباشرًا لحجم الحوالة غير الرسمية.",
+   "new": "لا يقيس هذا الدليل حجم التحويلات عبر نظام الحوالة غير الرسمي، ولا التسوية عبر نظام المدفوعات، ولا توزيع التدفقات على الأسر. | هذا مفهوم اقتصادي كلي للقطاع الخارجي، وليس قياسًا لتسوية المدفوعات عبر نظام الدفع ولا قياسًا مباشرًا لحجم الحوالة غير الرسمية."
+  },
+  {
+   "finding": "NB-2:REVIEW",
+   "sheet": "06_EVIDENCE_OBJECTS",
+   "row": 29,
+   "col": 17,
+   "field": "06_EVIDENCE_OBJECTS!r29c17",
+   "old": "لا يقيس هذا الدليل حجم التحويلات عبر نظام الحوالة غير الرسمي، ولا التسوية عبر نظام المدفوعات، ولا توزيع التدفقات على الأسر. | هذا مفهوم اقتصادي كلي للقطاع الخارجي، وليس قياسًا لتسوية المدفوعات عبر نظام الدفع ولا قياسًا مباشرًا لحجم الحوالة غير الرسمية.",
+   "new": "لا يقيس هذا الدليل حجم التحويلات عبر نظام الحوالة غير الرسمي، ولا التسوية عبر نظام المدفوعات، ولا توزيع التدفقات على الأسر. | هذا مفهوم اقتصادي كلي للقطاع الخارجي، وليس قياسًا لتسوية المدفوعات عبر نظام الدفع ولا قياسًا مباشرًا لحجم التحويلات عبر نظام الحوالة غير الرسمي."
+  },
+  {
+   "finding": "NB-2:REVIEW",
+   "sheet": "04_NAV_UX",
+   "row": 652,
+   "col": 6,
+   "field": "04_NAV_UX!r652c6",
+   "old": "أداة اكتشاف فقط: تتناول أدلة الحوالات هنا الأموال المرسلة إلى اليمن والحوالات داخل اليمن، ولا تتناول الأموال المرسلة من اليمن إلى الخارج.",
+   "new": "أداة اكتشاف فقط: تتناول أدلة الحوالات هنا الأموال المرسلة إلى اليمن والأموال المحوَّلة داخل اليمن، ولا تتناول الأموال المرسلة من اليمن إلى الخارج."
+  },
+  {
+   "finding": "NB-2:REVIEW",
+   "sheet": "06_EVIDENCE_OBJECTS",
+   "row": 104,
+   "col": 13,
+   "field": "06_EVIDENCE_OBJECTS!r104c13",
+   "old": "سلسلة الحوالات كما عرّفها ونشرها التقرير السنوي 2025 للبنك المركزي، وليست جميع قنوات التحويل أو حوالات الأسر المستلمة.",
+   "new": "سلسلة الحوالات كما عرّفها ونشرها التقرير السنوي 2025 للبنك المركزي، وليست جميع قنوات التحويل أو ما تتسلمه الأسر من حوالات."
+  },
+  {
+   "finding": "NB-2:REVIEW",
+   "sheet": "06_EVIDENCE_OBJECTS",
+   "row": 54,
+   "col": 7,
+   "field": "06_EVIDENCE_OBJECTS!r54c7",
+   "old": "في 2014 أفاد 18.3% من البالغين بأنهم تلقوا حوالات محلية. ومن بين هؤلاء المتلقين، تلقاها 31.1% عبر مشغل تحويل أموال، و2.0% عبر مؤسسة مالية، و0.0% عبر الهاتف المحمول. ولا يورد المصدر قيمًا لقنوات البالغين الذين أرسلوا حوالات، فهي غير متاحة وليست صفرًا.",
+   "new": "في 2014 أفاد 18.3% من البالغين بأنهم تلقوا حوالات محلية. ومن بين هؤلاء المتلقين، تلقاها 31.1% عبر مشغل تحويل أموال، و2.0% عبر مؤسسة مالية، و0.0% عبر الهاتف المحمول. ولا يورد المصدر قيمًا لقنوات البالغين الذين أرسلوا حوالات، فهي غير متاحة، وهذا لا يعني صفرًا."
+  },
+  {
+   "finding": "NB-2:REVIEW",
+   "sheet": "06_EVIDENCE_OBJECTS",
+   "row": 77,
+   "col": 7,
+   "field": "06_EVIDENCE_OBJECTS!r77c7",
+   "old": "فجوات الأدلة المسجلة في هذا المورد وفق إصدار هذا المورد المؤرخ في 3 أكتوبر 2026 من الأنواع التالية: فترة مفقودة، أو قاعدة احتساب غير موثقة، أو ملف أصلي غير متاح، أو طبقة مكانية لا يمكن بناؤها بعد، أو نطاق مصدر غير محسوم. وقد تُغلق الفجوة عند وصول دليل جديد؛ والفراغ أو غياب الرصد ليس صفرًا وليس دليلًا على عدم الوجود.",
+   "new": "فجوات الأدلة المسجلة في هذا المورد وفق إصدار هذا المورد المؤرخ في 3 أكتوبر 2026 من الأنواع التالية: فترة مفقودة، أو قاعدة احتساب غير موثقة، أو ملف أصلي غير متاح، أو طبقة مكانية لا يمكن بناؤها بعد، أو نطاق مصدر غير محسوم. وقد تُغلق الفجوة عند وصول دليل جديد؛ والفراغ أو غياب الرصد لا يعني صفرًا ولا يدل على عدم الوجود."
+  },
+  {
+   "finding": "NB-2:REVIEW",
+   "sheet": "06_EVIDENCE_OBJECTS",
+   "row": 77,
+   "col": 17,
+   "field": "06_EVIDENCE_OBJECTS!r77c17",
+   "old": "الفجوة ليست صفرًا وليست دليلًا على الغياب أو الفشل.",
+   "new": "الفجوة لا تعني صفرًا، ولا تدل على الغياب أو الفشل."
+  },
+  {
+   "finding": "NB-2:REVIEW",
+   "sheet": "11_VISUAL_LIBRARY",
+   "row": 8,
+   "col": 22,
+   "field": "11_VISUAL_LIBRARY!r8c22",
+   "old": "فجوات الأدلة المسجلة في هذا المورد وفق إصدار هذا المورد المؤرخ في 3 أكتوبر 2026 من الأنواع التالية: فترة مفقودة، أو قاعدة احتساب غير موثقة، أو ملف أصلي غير متاح، أو طبقة مكانية لا يمكن بناؤها بعد، أو نطاق مصدر غير محسوم. وقد تُغلق الفجوة عند وصول دليل جديد؛ والفراغ أو غياب الرصد ليس صفرًا وليس دليلًا على عدم الوجود.",
+   "new": "فجوات الأدلة المسجلة في هذا المورد وفق إصدار هذا المورد المؤرخ في 3 أكتوبر 2026 من الأنواع التالية: فترة مفقودة، أو قاعدة احتساب غير موثقة، أو ملف أصلي غير متاح، أو طبقة مكانية لا يمكن بناؤها بعد، أو نطاق مصدر غير محسوم. وقد تُغلق الفجوة عند وصول دليل جديد؛ والفراغ أو غياب الرصد لا يعني صفرًا ولا يدل على عدم الوجود."
+  },
+  {
+   "finding": "NB-2:REVIEW",
+   "sheet": "11_VISUAL_LIBRARY",
+   "row": 8,
+   "col": 20,
+   "field": "11_VISUAL_LIBRARY!r8c20",
+   "old": "الفجوة ليست صفرًا وليست دليلًا على الغياب أو الفشل.",
+   "new": "الفجوة لا تعني صفرًا، ولا تدل على الغياب أو الفشل."
+  },
+  {
+   "finding": "NB-2:REVIEW",
+   "sheet": "11_VISUAL_LIBRARY",
+   "row": 29,
+   "col": 22,
+   "field": "11_VISUAL_LIBRARY!r29c22",
+   "old": "لا تثبت قاعدة الأدلة بعدُ، على نحو متسق في أنحاء اليمن، أي نقاط الوصول تعمل في مكان وتاريخ محددين؛ إذ لا تتضمن سجلًا موثقًا ومؤرخًا لمواقع الخدمة العاملة. وما تتضمنه هو قوائم رسمية، وأحداث مؤرخة تخص وضع مقدمي الخدمات، وإجماليات لبنية المدفوعات، ودراسات تاريخية عن أماكن تركز مقدمي الخدمات؛ ولا يسجل أيٌّ منها مكان عمل الخدمة في تاريخ معين. ولا يظهر موقع نقطةً على الخريطة إلا إذا كان له مصدر موثق وتاريخ رصد وتاريخ لوضع التشغيل ومستوى جغرافي مسموح بنشره. والأماكن التي لم يُرصد فيها موقع غير معروفة وليست صفرًا، كما أن إدراج مقدم خدمة أو ترخيصه لا يثبت بذاته وجود نقطة خدمة عاملة.",
+   "new": "لا تثبت قاعدة الأدلة بعدُ، على نحو متسق في أنحاء اليمن، أي نقاط الوصول تعمل في مكان وتاريخ محددين؛ إذ لا تتضمن سجلًا موثقًا ومؤرخًا لمواقع الخدمة العاملة. وما تتضمنه هو قوائم رسمية، وأحداث مؤرخة تخص وضع مقدمي الخدمات، وإجماليات لبنية المدفوعات، ودراسات تاريخية عن أماكن تركز مقدمي الخدمات؛ ولا يسجل أيٌّ منها مكان عمل الخدمة في تاريخ معين. ولا يظهر موقع نقطةً على الخريطة إلا إذا كان له مصدر موثق وتاريخ رصد وتاريخ لوضع التشغيل ومستوى جغرافي مسموح بنشره. والأماكن التي لم يُرصد فيها موقع غير معروفة، وهذا لا يعني صفرًا، كما أن إدراج مقدم خدمة أو ترخيصه لا يثبت بذاته وجود نقطة خدمة عاملة."
+  },
+  {
+   "finding": "NB-2:REVIEW",
+   "sheet": "02_SITE_MAP",
+   "row": 6,
+   "col": 6,
+   "field": "02_SITE_MAP!r6c6",
+   "old": "الوصول إلى الخدمات: نعرف أجزاءً من شبكة الوصول إلى الخدمات المالية، لكننا لا نملك بعد خريطة وطنية موثوقة لما يعمل فعليًا على الأرض.",
+   "new": "الوصول إلى الخدمات: نعرف أجزاءً من شبكة الخدمات المالية، لكننا لا نملك بعد خريطة وطنية موثوقة لما يعمل فعليًا على الأرض."
+  },
+  {
+   "finding": "NB-2:REVIEW",
+   "sheet": "02_SITE_MAP",
+   "row": 129,
+   "col": 6,
+   "field": "02_SITE_MAP!r129c6",
+   "old": "مقدمو الخدمات المالية: قائمة مقدمي الخدمات تثبت وضعًا رسميًا في تاريخ محدد، لكنها لا تثبت التشغيل بذاتها.",
+   "new": "مقدمو الخدمات المالية: تثبت القوائم الرسمية وضعًا رسميًا في تاريخ محدد، لكنها لا تثبت التشغيل بذاتها."
+  },
+  {
+   "finding": "NB-2:REVIEW",
+   "sheet": "02_SITE_MAP",
+   "row": 143,
+   "col": 5,
+   "field": "02_SITE_MAP!r143c5",
+   "old": "Source and data rights",
+   "new": "Rights and reuse"
+  },
+  {
+   "finding": "NB-2:REVIEW",
+   "sheet": "02_SITE_MAP",
+   "row": 143,
+   "col": 6,
+   "field": "02_SITE_MAP!r143c6",
+   "old": "حقوق المصادر والبيانات",
+   "new": "حقوق إعادة الاستخدام"
+  },
+  {
+   "finding": "NB-2:REVIEW",
+   "sheet": "10_MEASUREMENT_AGENDA",
+   "row": 5,
+   "col": 22,
+   "field": "10!r5.priority_rationale",
+   "old": "P0 within this evidence agenda because multiple current policy/product questions depend on population outcomes while newer evidence is largely administrative, institutional or programme-based.",
+   "new": "P0 among these measurement priorities because multiple current policy/product questions depend on population outcomes while newer evidence is largely administrative, institutional or programme-based."
+  },
+  {
+   "finding": "NB-2:REVIEW",
+   "sheet": "10_MEASUREMENT_AGENDA",
+   "row": 6,
+   "col": 22,
+   "field": "10!r6.priority_rationale",
+   "old": "P0 within this evidence agenda because digital infrastructure and transaction evidence are expanding while unique repeat use remains unresolved.",
+   "new": "P0 among these measurement priorities because digital infrastructure and transaction evidence are expanding while unique repeat use remains unresolved."
+  },
+  {
+   "finding": "NB-2:REVIEW",
+   "sheet": "10_MEASUREMENT_AGENDA",
+   "row": 7,
+   "col": 22,
+   "field": "10!r7.priority_rationale",
+   "old": "P0 within this evidence agenda because material disparities by sex and by household income are measured within one survey wave, while current age- and displacement-disaggregated evidence and causal explanations remain incomplete; without new measurement, unmeasured subgroup gaps and their causes would remain speculative.",
+   "new": "P0 among these measurement priorities because material disparities by sex and by household income are measured within one survey wave, while current age- and displacement-disaggregated evidence and causal explanations remain incomplete; without new measurement, unmeasured subgroup gaps and their causes would remain speculative."
+  },
+  {
+   "finding": "NB-2:REVIEW",
+   "sheet": "10_MEASUREMENT_AGENDA",
+   "row": 8,
+   "col": 22,
+   "field": "10!r8.priority_rationale",
+   "old": "P0 within this evidence agenda because the current 2022 seven-governorate survey and SMEPS programme evidence answer different bounded questions and cannot supply a national baseline.",
+   "new": "P0 among these measurement priorities because the current 2022 seven-governorate survey and SMEPS programme evidence answer different bounded questions and cannot supply a national baseline."
+  },
+  {
+   "finding": "NB-2:REVIEW",
+   "sheet": "10_MEASUREMENT_AGENDA",
+   "row": 9,
+   "col": 22,
+   "field": "10!r9.priority_rationale",
+   "old": "P0 within this evidence agenda because access decisions and atlas design are blocked by the difference between institutional lists and verified operating presence.",
+   "new": "P0 among these measurement priorities because access decisions and atlas design are blocked by the difference between institutional lists and verified operating presence."
+  },
+  {
+   "finding": "NB-2:REVIEW",
+   "sheet": "10_MEASUREMENT_AGENDA",
+   "row": 10,
+   "col": 22,
+   "field": "10!r10.priority_rationale",
+   "old": "P0 within this evidence agenda because the rules/process are documented but performance cannot be inferred from existence.",
+   "new": "P0 among these measurement priorities because the rules/process are documented but performance cannot be inferred from existence."
+  },
+  {
+   "finding": "NB-2:REVIEW",
+   "sheet": "10_MEASUREMENT_AGENDA",
+   "row": 11,
+   "col": 22,
+   "field": "10!r11.priority_rationale",
+   "old": "P1 within this evidence agenda because rules are known but journey frictions remain unmeasured; important once higher-order baseline/use gaps are addressed.",
+   "new": "P1 among these measurement priorities because rules are known but journey frictions remain unmeasured; important once higher-order baseline/use gaps are addressed."
+  },
+  {
+   "finding": "NB-2:REVIEW",
+   "sheet": "10_MEASUREMENT_AGENDA",
+   "row": 12,
+   "col": 22,
+   "field": "10!r12.priority_rationale",
+   "old": "P1 within this evidence agenda because legal/institutional existence is known but use in lending decisions remains open.",
+   "new": "P1 among these measurement priorities because legal/institutional existence is known but use in lending decisions remains open."
+  },
+  {
+   "finding": "NB-2:REVIEW",
+   "sheet": "10_MEASUREMENT_AGENDA",
+   "row": 13,
+   "col": 22,
+   "field": "10!r13.priority_rationale",
+   "old": "P0 within this evidence agenda because successful delivery and account exposure do not answer whether use persists after the programme transaction.",
+   "new": "P0 among these measurement priorities because successful delivery and account exposure do not answer whether use persists after the programme transaction."
+  },
+  {
+   "finding": "NB-2:REVIEW",
+   "sheet": "10_MEASUREMENT_AGENDA",
+   "row": 14,
+   "col": 22,
+   "field": "10!r14.priority_rationale",
+   "old": "P0 within this evidence agenda because rules, institutions and projects are current while downstream results remain unevenly measured.",
+   "new": "P0 among these measurement priorities because rules, institutions and projects are current while downstream results remain unevenly measured."
+  },
+  {
+   "finding": "NB-2:REVIEW",
+   "sheet": "04_NAV_UX",
+   "row": 664,
+   "col": 2,
+   "field": "SEARCH-ALIAS-044.terms_en",
+   "old": "personal remittances; workers' remittances; migrant remittances",
+   "new": "personal remittances; workers' remittances; migrant remittances; remittance fees"
+  },
+  {
+   "finding": "NB-2:REVIEW",
+   "sheet": "04_NAV_UX",
+   "row": 669,
+   "col": 7,
+   "field": "TERM-001.rule_en",
+   "old": "In balance-of-payments text keep the source's own concept (personal remittances, workers' remittances) and present it as the source's label.",
+   "new": "When naming a source's own balance-of-payments line or indicator, quote its label (for example CBY-Aden «التحويلات»; World Bank 'Personal remittances, received', «التحويلات الشخصية الواردة»); in running text, remittances = الحوالات."
+  },
+  {
+   "finding": "NB-2:REVIEW",
+   "sheet": "04_NAV_UX",
+   "row": 669,
+   "col": 8,
+   "field": "TERM-001.rule_ar",
+   "old": "في نصوص ميزان المدفوعات يُحتفظ بمفهوم المصدر نفسه (التحويلات الشخصية، تحويلات العاملين، تحويلات المغتربين) ويُقدَّم بوصفه تسمية المصدر.",
+   "new": "عند تسمية بند ميزان المدفوعات أو المؤشر كما يسمّيه المصدر يُنقل اسمه كما ورد (مثل «التحويلات» لدى البنك المركزي اليمني – عدن، و«التحويلات الشخصية الواردة» لدى البنك الدولي)؛ وفي النص الجاري: الحوالات."
+  }
+ ]
+}

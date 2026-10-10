@@ -2,8 +2,8 @@
  "schema": "YFIE_ROUTE_CONTENT_AND_STATE_INVENTORY/1.3",
  "purpose": "Design recipient's map of every route, its family, bindings, collections, next actions and the states Design must cover. Derived; not authority.",
  "generated_from": {
-  "production_master_sha256": "e444320569aed354d3903e30081cfb0b7eea9544110463eb72d43d3f2a3702d9",
-  "page_specs_sha256": "14601150e4e360900c985a2d6f95d8409272c4e9e870f6ef68348311c1a86c91",
+  "production_master_sha256": "370d72a4cb40b75dc72aa0320d1dba984de07d200e6d19889d7ca3dc61413d37",
+  "page_specs_sha256": "9dd5fd3bbd9a981d9651cce408e6170d2e9dc4de6f714f976a08427545c059da",
   "generator": "scripts/handoff_inventory.py"
  },
  "counts": {
@@ -250,7 +250,7 @@
     "ar": "dist/ar/access/index.html"
    },
    "title_en": "Access: where services can be reached is only partly mapped",
-   "title_ar": "الوصول إلى الخدمات: نعرف أجزاءً من شبكة الوصول إلى الخدمات المالية، لكننا لا نملك بعد خريطة وطنية موثوقة لما يعمل فعليًا على الأرض.",
+   "title_ar": "الوصول إلى الخدمات: نعرف أجزاءً من شبكة الخدمات المالية، لكننا لا نملك بعد خريطة وطنية موثوقة لما يعمل فعليًا على الأرض.",
    "sections": 9,
    "section_rows_split_by_language": true,
    "evidence_ids": [
@@ -4766,7 +4766,7 @@
     "ar": "dist/ar/providers/index.html"
    },
    "title_en": "Providers: official lists show formal status on a date; operation needs other evidence",
-   "title_ar": "مقدمو الخدمات المالية: قائمة مقدمي الخدمات تثبت وضعًا رسميًا في تاريخ محدد، لكنها لا تثبت التشغيل بذاتها.",
+   "title_ar": "مقدمو الخدمات المالية: تثبت القوائم الرسمية وضعًا رسميًا في تاريخ محدد، لكنها لا تثبت التشغيل بذاتها.",
    "sections": 10,
    "section_rows_split_by_language": true,
    "evidence_ids": [
@@ -5405,8 +5405,8 @@
     "en": "dist/en/rights/index.html",
     "ar": "dist/ar/rights/index.html"
    },
-   "title_en": "Source and data rights",
-   "title_ar": "حقوق المصادر والبيانات",
+   "title_en": "Rights and reuse",
+   "title_ar": "حقوق إعادة الاستخدام",
    "sections": 6,
    "section_rows_split_by_language": false,
    "evidence_ids": [],
