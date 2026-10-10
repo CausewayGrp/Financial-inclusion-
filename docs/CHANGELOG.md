@@ -1,5 +1,68 @@
 # Repository Change Log
 
+## 2026-10-10 — NB-2: fixes from the independent review of NB-1
+
+An independent reviewer read every cell NB-1 changed and the built pages in both languages, and found no blocker. Its
+should-fix items and most nits are applied: Master `e444320569ae` → `370d72a4cb40`, 38 cells.
+
+- **Arabic licence line:** CauseWay takes feminine agreement, as elsewhere.
+- **Three labels NB-1 missed:** the /measurement/ rubric and the priority rationales; /ar/terms/.
+- **A grammar slip** on /measurement/.
+- **CLM-035's meta description** keeps the bank's label.
+- **The Findex citation** gains its year and place.
+- **The CC deed and legal-code addresses on /rights/ are links.** This is a renderer rule for those addresses only.
+- **The rights page title** is "Rights and reuse / حقوق إعادة الاستخدام".
+- **Informal hawala is named as a system.**
+- **Two substitutions whose English did not say "remittance"** were reworded.
+- **"Missing is not zero" wording** in 6 more cells; "Do not infer" is «لا تستنتج».
+- **Arabic h1s of /access/ and /providers/** no longer repeat the domain name.
+- **The register's remittance rule** is narrowed to what was applied.
+- **One alias** is paired across the languages.
+
+No figure, unit, period, universe, source, route or identifier changed.
+
+## 2026-10-10 — NB-1: public naming and terminology, and the rights presentation (owner brief Part B; awaiting the owner's approval of the labels)
+
+One Master transaction, labels and governed term substitutions only, English and Arabic together. The decisions record
+`audit/naming/NAMING_DECISIONS_2026-10-10.md` has the full label table with a reason per label.
+
+- **Who decided:** four independent reviewers (Arabic editor, English editor, information-architecture lead, five-persona
+  red team), then the lead.
+- **Primary navigation:**
+  - Explore → Questions (الأسئلة);
+  - Evidence Readings → Readings (القراءات التحليلية);
+  - Data & sources → Sources (المصادر), becoming "Sources and data" on the day downloads go live;
+  - Method & Measurement → Method and measurement;
+  - Measurement Agenda → Measurement priorities.
+- **Trust layer:**
+  - the footer group is "About and policies / عن هذا المورد وسياساته";
+  - About is «التعريف بهذا المورد»;
+  - Rights and reuse, «حقوق إعادة الاستخدام», «إمكانية الوصول» and "Terms of use".
+- **Report an issue → Report an error (أبلغ عن خطأ).**
+- **Domains:**
+  - Finance → Banks and microfinance (البنوك والتمويل الأصغر);
+  - Arabic «الحوالات», «مقدمو الخدمات المالية» and «الوصول إلى الخدمات»;
+  - domain h1 prefixes in parity in both languages.
+- **Titles:** the `<title>` and og:title of hubs and domains carry the stable name, and the dated thesis stays the h1.
+- **Glossary:**
+  - remittances = الحوالات (102 cells, each passing a six-condition test);
+  - regulatory licensing = الترخيص (4 cells);
+  - web accessibility = إمكانية الوصول (8 cells);
+  - missing ≠ zero wording in 4 state labels.
+- **Register and aliases:** a governed terminology register (04 block, 21 terms) and 12 search aliases that keep the old
+  labels findable.
+- **Rights (B4):**
+  - a footer licence line on every page and `<link rel="license">` in every head;
+  - /rights/ section 6 states the exact scope: covered material; third-party material; name and marks; software code
+    outside the licence;
+  - the Findex microdata-derived intervals are covered by the World Bank Microdata Research License, with its required
+    citation, and CC BY 4.0 does not extend to the underlying microdata;
+  - deed and legal code linked, the Arabic legal code to the official Arabic text;
+  - attribution follows TASL.
+- **No change** to any route, URL, identifier, hook, figure, unit, period, universe or source. No rights clearance, legal
+  review or certification is claimed.
+- **Master** `cf5254825da8` → `e444320569ae`.
+
 ## 2026-10-10 — Rights: the owner's decision recorded, and the rights escalation closed
 
 The owner's decision of 10 October 2026 is recorded in `audit/OWNER_DECISIONS_2026-10-10.md`: **CC BY 4.0 for

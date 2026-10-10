@@ -41,6 +41,7 @@ PROJECTION_ROLES = OrderedDict([
     ("content/measurement_agenda.json", "RENDER"),
     ("content/search_index.json", "RENDER"),
     ("content/search_aliases.json", "RENDER"),
+    ("content/terminology_register.json", "REFERENCE"),
     ("content/public_inventory.json", "RENDER"),
     ("content/page_sections.json", "VIA_SPEC"),
     ("content/site_map.json", "REFERENCE"),

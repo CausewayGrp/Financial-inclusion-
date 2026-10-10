@@ -76,7 +76,7 @@ def site_map(nav, inv, n):
                 f"Complete public route system · {n} controlled Page Specs · Arabic + English co-authoritative · derived from the navigation contract")]
     s.append(t(44, 145, "GLOBAL SHELL", 12, 700, TEAL))
     s.append(box(44, 160, 1912, 64) + t(60, 187, "Identity / Home via logo", 17, 600)
-             + t(60, 209, "Global utilities: Search · Language · Cite this page · Report an issue", 13, 400, MUTED))
+             + t(60, 209, "Global utilities: Search · Language · Cite this page · Report an error", 13, 400, MUTED))
     s.append(t(44, 258, "PRIMARY NAVIGATION", 12, 700, TEAL))
     prim = []
     for it in nav["global_navigation"]:
@@ -98,9 +98,9 @@ def site_map(nav, inv, n):
         ("Evidence hub", ["/evidence/", "Find and inspect public evidence"], None),
         ("Compare", ["/evidence/compare/", "Comparability verdict before values"], None),
         (f"Evidence Records ×{inv['evidence_records']}", ["/evidence/[id]/", "Scope · period · method · limitation · source"], None),
-        (f"Evidence Readings ×{inv['readings']}", ["/readings/[slug]/", "Bounded cross-source analysis"], None),
-        ("Measurement Agenda", ["/measurement/", f"{inv['measurement_priorities']} priorities: unknown → evidence needed"], None),
-        ("Data & sources", ["/data/", f"{inv['public_locators']} public locators · {inv['curated_resources']} curated cards"], None),
+        (f"Readings ×{inv['readings']}", ["/readings/[slug]/", "Bounded cross-source analysis"], None),
+        ("Measurement priorities", ["/measurement/", f"{inv['measurement_priorities']} priorities: unknown → evidence needed"], None),
+        ("Sources", ["/data/", f"{inv['public_locators']} public locators · {inv['curated_resources']} curated cards"], None),
     ], 646, 96, WHITE))
     s.append(t(44, 778, "UNSEEN BUT REQUIRED PUBLIC-SERVICE LAYERS", 12, 700, TEAL))
     s.append(row([
@@ -136,7 +136,7 @@ def family_map(nav, inv, n):
     listed = [x for _, col in FAMILY_COLUMNS for x in col]
     if sorted(listed) != sorted(fams):
         raise SystemExit(f"family map: page families changed ({sorted(set(fams) ^ set(listed))}); update FAMILY_COLUMNS")
-    extra = {"Question Entry": f"{inv['entry_questions']} governed questions", "Reading": f"{inv['readings']} Evidence Readings",
+    extra = {"Question Entry": f"{inv['entry_questions']} governed questions", "Reading": f"{inv['readings']} readings",
              "Measurement": f"{inv['measurement_priorities']} priorities",
              "Data & Source": f"{inv['public_locators']} public locators + {inv['curated_resources']} curated cards",
              "Evidence Record": f"{inv['public_claims']} are public claims"}
@@ -188,8 +188,8 @@ def family_map(nav, inv, n):
 
 def full_stack(inv, n, current):
     rules = [(r"Page Specs ×\d+", f"Page Specs ×{n}"), (r"Visual contracts ×\d+", f"Visual contracts ×{inv['visual_contracts']}"),
-             (r"\d+ localized pages", f"{2 * n} localized pages"), (r"(?<!Evidence )Readings / Measurement<", "Evidence Readings / Measurement<"),
-             (r">Data / Sources<", ">Data &amp; sources<"),
+             (r"\d+ localized pages", f"{2 * n} localized pages"), (r"(?:Evidence )?Readings / Measurement<", "Readings / Measurement<"),
+             (r">Data(?: / Sources| &amp; sources)<", ">Sources<"),
              # F9: the Design package lives in the repository (design/), not in an external design file; no analytics ship
              (r">Design system / Figma<", ">Claude Design package (design/)<"),
              (r">Figma is visual artifact, repository spec remains implementation contract<", ">images illustrate; the repository package is the contract<"),

@@ -25,7 +25,7 @@ Nothing here is a WCAG conformance claim.
 
 ## B. Coverage (both languages; 1440, 640, 390, 320 CSS px)
 
-- [ ] Global shell: header, primary navigation with the Method & Measurement family, trust layer, footer, language switch,
+- [ ] Global shell: header, primary navigation with the Method and measurement family, trust layer, footer, language switch,
       search entry, cite and report utilities, skip link, breadcrumbs.
 - [ ] Home · Explore · all eight domain routes · Evidence index · Evidence Record (dense CLM-003, thin single-source
       CLM-015, conflicted CLM-037, composite with members CLM-031, composite without listed members CLM-014, partial

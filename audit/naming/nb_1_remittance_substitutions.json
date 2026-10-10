@@ -1,0 +1,1940 @@
+[
+ {
+  "sheet": "00_MASTER",
+  "row": 73,
+  "col_letter": "D",
+  "field": "dimension_ar",
+  "old_ar": "التحويلات التي يتلقاها الأفراد",
+  "new_ar": "الحوالات التي يتلقاها الأفراد",
+  "occurrences_changed": 1,
+  "en_counterpart": "Remittances received by people",
+  "tests": {
+   "T1": true,
+   "T2": true,
+   "T3": true,
+   "T4": true,
+   "T5": true,
+   "T6": true
+  },
+  "note": ""
+ },
+ {
+  "sheet": "00_MASTER",
+  "row": 74,
+  "col_letter": "D",
+  "field": "dimension_ar",
+  "old_ar": "تدفقات التحويلات إلى البلد",
+  "new_ar": "تدفقات الحوالات إلى البلد",
+  "occurrences_changed": 1,
+  "en_counterpart": "Remittance flows to the country",
+  "tests": {
+   "T1": true,
+   "T2": true,
+   "T3": true,
+   "T4": true,
+   "T5": true,
+   "T6": true
+  },
+  "note": ""
+ },
+ {
+  "sheet": "00_MASTER",
+  "row": 75,
+  "col_letter": "D",
+  "field": "dimension_ar",
+  "old_ar": "كلفة التحويلات",
+  "new_ar": "كلفة الحوالات",
+  "occurrences_changed": 1,
+  "en_counterpart": "Remittance cost",
+  "tests": {
+   "T1": true,
+   "T2": true,
+   "T3": true,
+   "T4": true,
+   "T5": true,
+   "T6": true
+  },
+  "note": ""
+ },
+ {
+  "sheet": "02_SITE_MAP",
+  "row": 17,
+  "col_letter": "H",
+  "field": "meta_description_ar",
+  "old_ar": "تفصل أرقام صندوق النقد الدولي للتحويلات الواردة بين القيم التاريخية المنشورة وتقدير 2025 وتوقعات 2026–2030؛ ولا تمثل رقمًا لليمن كله.",
+  "new_ar": "تفصل أرقام صندوق النقد الدولي للحوالات الواردة بين القيم التاريخية المنشورة وتقدير 2025 وتوقعات 2026–2030؛ ولا تمثل رقمًا لليمن كله.",
+  "occurrences_changed": 1,
+  "en_counterpart": "IMF figures for remittance inflows keep reported history, the 2025 estimate and 2026–2030 projections separate; they are not a whole-of-Yemen figure.",
+  "tests": {
+   "T1": true,
+   "T2": true,
+   "T3": true,
+   "T4": true,
+   "T5": true,
+   "T6": true
+  },
+  "note": ""
+ },
+ {
+  "sheet": "02_SITE_MAP",
+  "row": 42,
+  "col_letter": "H",
+  "field": "meta_description_ar",
+  "old_ar": "تنشر التقارير السنوية للبنك المركزي اليمني – عدن قيمًا مختلفة بصورة جوهرية للتحويلات الواردة في ميزان المدفوعات عن السنة المرجعية نفسها.",
+  "new_ar": "تنشر التقارير السنوية للبنك المركزي اليمني – عدن قيمًا مختلفة بصورة جوهرية للحوالات الواردة في ميزان المدفوعات عن السنة المرجعية نفسها.",
+  "occurrences_changed": 1,
+  "en_counterpart": "Annual reports of the Central Bank of Yemen – Aden (CBY-Aden) publish materially different remittance values for the same reference year.",
+  "tests": {
+   "T1": true,
+   "T2": true,
+   "T3": true,
+   "T4": true,
+   "T5": true,
+   "T6": true
+  },
+  "note": ""
+ },
+ {
+  "sheet": "02_SITE_MAP",
+  "row": 44,
+  "col_letter": "H",
+  "field": "meta_description_ar",
+  "old_ar": "تُظهر سلسلة التحويلات في التقرير السنوي 2025 للبنك المركزي اليمني – عدن نموًا سنويًا متقاربًا على نحو لافت؛ وهذا سؤال منهجي لا يثبت التنعيم.",
+  "new_ar": "تُظهر سلسلة الحوالات في التقرير السنوي 2025 للبنك المركزي اليمني – عدن نموًا سنويًا متقاربًا على نحو لافت؛ وهذا سؤال منهجي لا يثبت التنعيم.",
+  "occurrences_changed": 1,
+  "en_counterpart": "The 2025 annual report of the Central Bank of Yemen – Aden shows unusually similar annual remittance growth: a methods question, not proof of smoothing.",
+  "tests": {
+   "T1": true,
+   "T2": true,
+   "T3": true,
+   "T4": true,
+   "T5": true,
+   "T6": true
+  },
+  "note": ""
+ },
+ {
+  "sheet": "02_SITE_MAP",
+  "row": 45,
+  "col_letter": "H",
+  "field": "meta_description_ar",
+  "old_ar": "تتغير نسبة التحويلات إلى تمويل المانحين عن عام 2024، في بنود ميزان المدفوعات لدى البنك المركزي اليمني – عدن، بين إصدارات التقرير السنوي.",
+  "new_ar": "تتغير نسبة الحوالات إلى تمويل المانحين عن عام 2024، في بنود ميزان المدفوعات لدى البنك المركزي اليمني – عدن، بين إصدارات التقرير السنوي.",
+  "occurrences_changed": 1,
+  "en_counterpart": "For 2024, the ratio of remittances to donor financing in the balance-of-payments items of the Central Bank of Yemen – Aden changes between editions.",
+  "tests": {
+   "T1": true,
+   "T2": true,
+   "T3": true,
+   "T4": true,
+   "T5": true,
+   "T6": true
+  },
+  "note": ""
+ },
+ {
+  "sheet": "02_SITE_MAP",
+  "row": 46,
+  "col_letter": "H",
+  "field": "meta_description_ar",
+  "old_ar": "يوثق صندوق النقد الدولي إعادة بناء إحصاءات القطاع الخارجي خلال 2024–2025 مع البنك المركزي اليمني – عدن؛ أما صيغة البنك الدقيقة للتحويلات فغير موثقة.",
+  "new_ar": "يوثق صندوق النقد الدولي إعادة بناء إحصاءات القطاع الخارجي خلال 2024–2025 مع البنك المركزي اليمني – عدن؛ أما صيغة البنك الدقيقة للحوالات فغير موثقة.",
+  "occurrences_changed": 1,
+  "en_counterpart": "The IMF documents a 2024–2025 rebuild of external-sector statistics with the Central Bank of Yemen – Aden; the exact remittance formula is not documented.",
+  "tests": {
+   "T1": true,
+   "T2": true,
+   "T3": true,
+   "T4": true,
+   "T5": true,
+   "T6": true
+  },
+  "note": ""
+ },
+ {
+  "sheet": "02_SITE_MAP",
+  "row": 47,
+  "col_letter": "H",
+  "field": "meta_description_ar",
+  "old_ar": "عند تحويلهما إلى رقم قياسي (2021 = 100) تتطابق سلسلتا التحويلات لدى البنك المركزي اليمني – عدن وصندوق النقد الدولي تقريبًا حتى 2024، لكن مستوياتهما مختلفة.",
+  "new_ar": "عند تحويلهما إلى رقم قياسي (2021 = 100) تتطابق سلسلتا الحوالات لدى البنك المركزي اليمني – عدن وصندوق النقد الدولي تقريبًا حتى 2024، لكن مستوياتهما مختلفة.",
+  "occurrences_changed": 1,
+  "en_counterpart": "Indexed to 2021 = 100, the remittance series of the Central Bank of Yemen – Aden and the IMF follow almost the same path to 2024, but their levels differ.",
+  "tests": {
+   "T1": true,
+   "T2": true,
+   "T3": true,
+   "T4": true,
+   "T5": true,
+   "T6": true
+  },
+  "note": ""
+ },
+ {
+  "sheet": "02_SITE_MAP",
+  "row": 52,
+  "col_letter": "H",
+  "field": "meta_description_ar",
+  "old_ar": "خلال 2021–2024 تحافظ سلسلتا التحويلات لدى البنك المركزي اليمني – عدن وصندوق النقد الدولي على نسبة مستقرة؛ ومعناها غير موثق، وليست قاعدة تحويل.",
+  "new_ar": "خلال 2021–2024 تحافظ سلسلتا الحوالات لدى البنك المركزي اليمني – عدن وصندوق النقد الدولي على نسبة مستقرة؛ ومعناها غير موثق، وليست قاعدة تحويل.",
+  "occurrences_changed": 1,
+  "en_counterpart": "Remittance series of the Central Bank of Yemen – Aden and the IMF keep a stable ratio in 2021–2024; its meaning is unknown and it is not a conversion rule.",
+  "tests": {
+   "T1": true,
+   "T2": true,
+   "T3": true,
+   "T4": true,
+   "T5": true,
+   "T6": true
+  },
+  "note": ""
+ },
+ {
+  "sheet": "02_SITE_MAP",
+  "row": 53,
+  "col_letter": "H",
+  "field": "meta_description_ar",
+  "old_ar": "في التقرير السنوي 2025 للبنك المركزي اليمني – عدن، يفوق صافي السهو والخطأ بند التحويلات المنشور في كل سنة من 2021 إلى 2025.",
+  "new_ar": "في التقرير السنوي 2025 للبنك المركزي اليمني – عدن، يفوق صافي السهو والخطأ بند الحوالات المنشور في كل سنة من 2021 إلى 2025.",
+  "occurrences_changed": 1,
+  "en_counterpart": "In the 2025 annual report of the Central Bank of Yemen – Aden, net errors and omissions exceed the published remittance line in every year, 2021–2025.",
+  "tests": {
+   "T1": true,
+   "T2": true,
+   "T3": true,
+   "T4": true,
+   "T5": true,
+   "T6": true
+  },
+  "note": ""
+ },
+ {
+  "sheet": "02_SITE_MAP",
+  "row": 54,
+  "col_letter": "H",
+  "field": "meta_description_ar",
+  "old_ar": "يقدّر نموذج قائم على متبقي ميزان المدفوعات التحويلات بإسناد فرق متبقٍّ مفترض إليها؛ وهو نموذج بديل، لا خط الأساس المعتمد للتحويلات.",
+  "new_ar": "يقدّر نموذج قائم على متبقي ميزان المدفوعات الحوالات بإسناد فرق متبقٍّ مفترض إليها؛ وهو نموذج بديل، لا خط الأساس المعتمد للحوالات.",
+  "occurrences_changed": 2,
+  "en_counterpart": "A balance-of-payments residual model estimates remittances by assigning an assumed residual to them: an alternative model, not the canonical baseline.",
+  "tests": {
+   "T1": true,
+   "T2": true,
+   "T3": true,
+   "T4": true,
+   "T5": true,
+   "T6": true
+  },
+  "note": ""
+ },
+ {
+  "sheet": "02_SITE_MAP",
+  "row": 114,
+  "col_letter": "H",
+  "field": "meta_description_ar",
+  "old_ar": "تفصل أرقام صندوق النقد الدولي للتحويلات في القطاع الخارجي لليمن بين القيم التاريخية للفترة 2018–2024 وتقدير 2025 وتوقعات 2026–2030.",
+  "new_ar": "تفصل أرقام صندوق النقد الدولي للحوالات في القطاع الخارجي لليمن بين القيم التاريخية للفترة 2018–2024 وتقدير 2025 وتوقعات 2026–2030.",
+  "occurrences_changed": 1,
+  "en_counterpart": "IMF remittance figures for Yemen's external sector keep reported history for 2018–2024, a 2025 estimate and 2026–2030 projections apart.",
+  "tests": {
+   "T1": true,
+   "T2": true,
+   "T3": true,
+   "T4": true,
+   "T5": true,
+   "T6": true
+  },
+  "note": ""
+ },
+ {
+  "sheet": "02_SITE_MAP",
+  "row": 140,
+  "col_letter": "H",
+  "field": "meta_description_ar",
+  "old_ar": "يورد تقريران سنويان للبنك المركزي اليمني – عدن قيمتين متباينتين تباينًا واضحًا للتحويلات في السنة المرجعية نفسها.",
+  "new_ar": "يورد تقريران سنويان للبنك المركزي اليمني – عدن قيمتين متباينتين تباينًا واضحًا للحوالات في السنة المرجعية نفسها.",
+  "occurrences_changed": 1,
+  "en_counterpart": "Two annual reports of the Central Bank of Yemen – Aden (CBY-Aden) give markedly different remittance values for the same reference year.",
+  "tests": {
+   "T1": true,
+   "T2": true,
+   "T3": true,
+   "T4": true,
+   "T5": true,
+   "T6": true
+  },
+  "note": ""
+ },
+ {
+  "sheet": "02_SITE_MAP",
+  "row": 142,
+  "col_letter": "F",
+  "field": "title_ar",
+  "old_ar": "التحويلات: كل رقم يتوقف على مصدره ومفهومه والإصدار الذي نُشر فيه",
+  "new_ar": "الحوالات: كل رقم يتوقف على مصدره ومفهومه والإصدار الذي نُشر فيه",
+  "occurrences_changed": 1,
+  "en_counterpart": "Remittances: each figure depends on its source, concept and edition",
+  "tests": {
+   "T1": true,
+   "T2": true,
+   "T3": true,
+   "T4": true,
+   "T5": true,
+   "T6": true
+  },
+  "note": ""
+ },
+ {
+  "sheet": "02_SITE_MAP",
+  "row": 142,
+  "col_letter": "H",
+  "field": "meta_description_ar",
+  "old_ar": "يتوقف رقم التحويلات على مصدره ومفهومه وإصداره: فقد راجع التقرير السنوي 2025 للبنك المركزي اليمني – عدن قيمة عام 2024، وهذه مراجعة لا هبوط.",
+  "new_ar": "يتوقف رقم الحوالات على مصدره ومفهومه وإصداره: فقد راجع التقرير السنوي 2025 للبنك المركزي اليمني – عدن قيمة عام 2024، وهذه مراجعة لا هبوط.",
+  "occurrences_changed": 1,
+  "en_counterpart": "Remittance figures depend on source, concept and edition: the 2025 annual report of the Central Bank of Yemen – Aden revised 2024, which is not a fall.",
+  "tests": {
+   "T1": true,
+   "T2": true,
+   "T3": true,
+   "T4": true,
+   "T5": true,
+   "T6": true
+  },
+  "note": ""
+ },
+ {
+  "sheet": "03_PAGE_SECTIONS",
+  "row": 15,
+  "col_letter": "G",
+  "field": "body_ar",
+  "old_ar": "قد يسهم الإصلاح أو نظام الدفع أو البرنامج في الشمول عبر سلسلة تبدأ بالقاعدة التنظيمية أو الاستثمار، ثم التنفيذ، ثم التشغيل، ثم إتاحة الوصول (أن تكون الخدمة في متناول الناس)، ثم الاستخدام الفعلي، ثم جودة الخدمة والحماية، ثم النتيجة. تتوقف الأدلة عند أبعد مرحلة تسندها فعلًا، ولا تتجاوز حلقة لم تُقَس. وفي الصورة الأوسع يرتبط الناس والقدرات، والمنشآت والدخل، ومقدمو الخدمات، وبنية المدفوعات، وتدفقات التحويلات ورأس المال، والتنظيم وحماية المستهلك، والعوامل الممكِّنة والقيود، لكن أحدها لا يحل محل الآخر. وتوضح الروابط السياق أو الاعتماد أو آليات محتملة عندما تسندها الأدلة؛ ولا تُعرض بوصفها علاقات سببية أو مؤشرًا مركبًا.",
+  "new_ar": "قد يسهم الإصلاح أو نظام الدفع أو البرنامج في الشمول عبر سلسلة تبدأ بالقاعدة التنظيمية أو الاستثمار، ثم التنفيذ، ثم التشغيل، ثم إتاحة الوصول (أن تكون الخدمة في متناول الناس)، ثم الاستخدام الفعلي، ثم جودة الخدمة والحماية، ثم النتيجة. تتوقف الأدلة عند أبعد مرحلة تسندها فعلًا، ولا تتجاوز حلقة لم تُقَس. وفي الصورة الأوسع يرتبط الناس والقدرات، والمنشآت والدخل، ومقدمو الخدمات، وبنية المدفوعات، وتدفقات الحوالات ورأس المال، والتنظيم وحماية المستهلك، والعوامل الممكِّنة والقيود، لكن أحدها لا يحل محل الآخر. وتوضح الروابط السياق أو الاعتماد أو آليات محتملة عندما تسندها الأدلة؛ ولا تُعرض بوصفها علاقات سببية أو مؤشرًا مركبًا.",
+  "occurrences_changed": 1,
+  "en_counterpart": "A reform, new payment rail (payment system) or programme can matter for inclusion through a chain that runs from a rule or investment to implementation, operation, reachable access, actual use, service quality and protection, and finally outcome. The evidence stops at the furthest stage it actually ",
+  "tests": {
+   "T1": true,
+   "T2": true,
+   "T3": true,
+   "T4": true,
+   "T5": true,
+   "T6": true
+  },
+  "note": ""
+ },
+ {
+  "sheet": "03_PAGE_SECTIONS",
+  "row": 108,
+  "col_letter": "G",
+  "field": "body_ar",
+  "old_ar": "تتبع السلسلة الزمنية المعتمدة تحولات مختلفة لا يجوز دمجها في اتجاه واحد: ضغوط الاحتياطيات وتمويل الواردات بحلول 2015–2016؛ وانقسام البنك المركزي في 2016؛ والارتفاع السريع للنقد خارج البنوك بحلول 2017؛ ودعم الاحتياطيات السعودي في 2018 و2023؛ وانقسام دورة النقد والمدفوعات في 2019؛ وصدمة توقف صادرات النفط بعد 2022؛ ومزادات النقد الأجنبي والدعم الخارجي في 2023–2024؛ وضغوط السيولة المصرفية وتدابير النقد الأجنبي وتمويل الواردات في 2025؛ ثم الاستثمار اللاحق في بنية المدفوعات. ويحتفظ كل حدث بنطاقه الجغرافي والمؤسسي؛ وحين يتعلق الحدث بتمويل، تبقى مراحل الاتفاق والإيداع والإتاحة والصرف والاستخدام اللاحق منفصلة ولا تُجمع مبالغها؛ كما تُفصل مراجعات أرقام التحويلات للسنة نفسها عن التغير الاقتصادي الفعلي. تساعد هذه الأحداث على تفسير البيئة التي تعمل فيها الوساطة المالية، لكن تعاقبها لا يثبت أن حدثًا بعينه تسبب في نتيجة للشمول المالي.",
+  "new_ar": "تتبع السلسلة الزمنية المعتمدة تحولات مختلفة لا يجوز دمجها في اتجاه واحد: ضغوط الاحتياطيات وتمويل الواردات بحلول 2015–2016؛ وانقسام البنك المركزي في 2016؛ والارتفاع السريع للنقد خارج البنوك بحلول 2017؛ ودعم الاحتياطيات السعودي في 2018 و2023؛ وانقسام دورة النقد والمدفوعات في 2019؛ وصدمة توقف صادرات النفط بعد 2022؛ ومزادات النقد الأجنبي والدعم الخارجي في 2023–2024؛ وضغوط السيولة المصرفية وتدابير النقد الأجنبي وتمويل الواردات في 2025؛ ثم الاستثمار اللاحق في بنية المدفوعات. ويحتفظ كل حدث بنطاقه الجغرافي والمؤسسي؛ وحين يتعلق الحدث بتمويل، تبقى مراحل الاتفاق والإيداع والإتاحة والصرف والاستخدام اللاحق منفصلة ولا تُجمع مبالغها؛ كما تُفصل مراجعات أرقام الحوالات للسنة نفسها عن التغير الاقتصادي الفعلي. تساعد هذه الأحداث على تفسير البيئة التي تعمل فيها الوساطة المالية، لكن تعاقبها لا يثبت أن حدثًا بعينه تسبب في نتيجة للشمول المالي.",
+  "occurrences_changed": 1,
+  "en_counterpart": "The documented chronology traces several distinct breaks: reserve and import-finance pressure by 2015–16; the 2016 central-bank split; rapid growth of currency outside banks by 2017; Saudi reserve support in 2018 and 2023; the 2019 split in cash circulation and payments; the oil-export shock after 2",
+  "tests": {
+   "T1": true,
+   "T2": true,
+   "T3": true,
+   "T4": true,
+   "T5": true,
+   "T6": true
+  },
+  "note": ""
+ },
+ {
+  "sheet": "03_PAGE_SECTIONS",
+  "row": 284,
+  "col_letter": "G",
+  "field": "body_ar",
+  "old_ar": "قياس جديد ممثل للسكان يحافظ على قابلية المقارنة في امتلاك الحساب، ويضيف:\n- الاستخدام الرقمي النشط والمتكرر؛\n- الادخار والاقتراض؛\n- أغراض المدفوعات؛\n- عوائق فتح الحساب؛\n- القدرة على تحمل الكلفة وموثوقية الخدمة؛\n- الاحتيال والانتصاف؛\n- تلقي التحويلات واستخدامها؛\n- الفجوات بحسب الجنس والدخل؛\n- الجغرافيا والنزوح حيث يسمح الإحصاء بذلك؛\n- الاستمرار بعد المشاركة في برنامج أو تلقي تحويل.\nوإذا قُرئ إلى جانب بيانات إدارية أدق عن المستخدمين الفريدين والتكرار والموثوقية والكلفة والشكاوى، فلن يدمج بيانات المسح والبيانات الإدارية في رقم واحد، بل سيبني الجسر بين ما تغيّر في المنظومة وما تغيّر لدى الناس.",
+  "new_ar": "قياس جديد ممثل للسكان يحافظ على قابلية المقارنة في امتلاك الحساب، ويضيف:\n- الاستخدام الرقمي النشط والمتكرر؛\n- الادخار والاقتراض؛\n- أغراض المدفوعات؛\n- عوائق فتح الحساب؛\n- القدرة على تحمل الكلفة وموثوقية الخدمة؛\n- الاحتيال والانتصاف؛\n- تلقي الحوالات واستخدامها؛\n- الفجوات بحسب الجنس والدخل؛\n- الجغرافيا والنزوح حيث يسمح الإحصاء بذلك؛\n- الاستمرار بعد المشاركة في برنامج أو تلقي تحويل.\nوإذا قُرئ إلى جانب بيانات إدارية أدق عن المستخدمين الفريدين والتكرار والموثوقية والكلفة والشكاوى، فلن يدمج بيانات المسح والبيانات الإدارية في رقم واحد، بل سيبني الجسر بين ما تغيّر في المنظومة وما تغيّر لدى الناس.",
+  "occurrences_changed": 1,
+  "en_counterpart": "A new representative measurement of people that keeps comparability on account ownership and adds:\n- active and repeated digital use;\n- saving and borrowing;\n- the purposes of payments;\n- barriers to opening an account;\n- affordability and reliability;\n- fraud and redress;\n- receipt and use of remit",
+  "tests": {
+   "T1": true,
+   "T2": true,
+   "T3": true,
+   "T4": true,
+   "T5": true,
+   "T6": true
+  },
+  "note": ""
+ },
+ {
+  "sheet": "03_PAGE_SECTIONS",
+  "row": 285,
+  "col_letter": "G",
+  "field": "body_ar",
+  "old_ar": "يورد تقريران سنويان للبنك المركزي اليمني – عدن قيمتين متباينتين تباينًا واضحًا للتحويلات في السنة المرجعية نفسها. فقد قدّر تقرير 2024 التحويلات في عام 2024 بمبلغ 6,245 مليون دولار، ثم أعاد تقرير 2025 عرض قيمة عام 2024 عند 3,422.16 مليون دولار.\nالفرق كبير، لكنه لا يثبت أن التحويلات انهارت؛ فالقيمتان تصفان عام 2024 نفسه. وقبل قراءة الفرق حركةً في الاقتصاد، ينبغي فهم ما تغيّر في نسخة النشر أو نطاق الإحصاء أو منهجه.",
+  "new_ar": "يورد تقريران سنويان للبنك المركزي اليمني – عدن قيمتين متباينتين تباينًا واضحًا للحوالات في السنة المرجعية نفسها. فقد قدّر تقرير 2024 الحوالات في عام 2024 بمبلغ 6,245 مليون دولار، ثم أعاد تقرير 2025 عرض قيمة عام 2024 عند 3,422.16 مليون دولار.\nالفرق كبير، لكنه لا يثبت أن الحوالات انهارت؛ فالقيمتان تصفان عام 2024 نفسه. وقبل قراءة الفرق حركةً في الاقتصاد، ينبغي فهم ما تغيّر في نسخة النشر أو نطاق الإحصاء أو منهجه.",
+  "occurrences_changed": 3,
+  "en_counterpart": "Two annual reports of the Central Bank of Yemen – Aden (CBY-Aden) give markedly different remittance values for the same reference year. The 2024 report put remittances in 2024 at USD 6,245 million; the 2025 report restated 2024 at USD 3,422.16 million.\nThe gap is large, but it does not show that re",
+  "tests": {
+   "T1": true,
+   "T2": true,
+   "T3": true,
+   "T4": true,
+   "T5": true,
+   "T6": true
+  },
+  "note": ""
+ },
+ {
+  "sheet": "03_PAGE_SECTIONS",
+  "row": 286,
+  "col_letter": "G",
+  "field": "body_ar",
+  "old_ar": "المراجعات أمر معتاد في الإحصاءات الاقتصادية، لكنها تصبح ذات أثر حين تكون القيمة المعدلة كبيرة بما يكفي لتغيير خط الأساس الذي يقوم عليه التحليل، وهذه المراجعة من هذا النوع.\nلذلك لا تكفي عبارة «تحويلات 2024» وحدها عندما يعطي إصداران رسميان قيمتين مختلفتين جوهريًا للسنة نفسها؛ إذ ينبغي أن ترافق نسخةُ النشر السنةَ المرجعية أينما ذُكر الرقم.",
+  "new_ar": "المراجعات أمر معتاد في الإحصاءات الاقتصادية، لكنها تصبح ذات أثر حين تكون القيمة المعدلة كبيرة بما يكفي لتغيير خط الأساس الذي يقوم عليه التحليل، وهذه المراجعة من هذا النوع.\nلذلك لا تكفي عبارة «حوالات 2024» وحدها عندما يعطي إصداران رسميان قيمتين مختلفتين جوهريًا للسنة نفسها؛ إذ ينبغي أن ترافق نسخةُ النشر السنةَ المرجعية أينما ذُكر الرقم.",
+  "occurrences_changed": 1,
+  "en_counterpart": "Revisions are normal in economic statistics. They become consequential when the revised value is large enough to change the baseline that analysis depends on, and this one is.\nSo “2024 remittances” is not precise enough on its own when two official publications attach materially different values to ",
+  "tests": {
+   "T1": true,
+   "T2": true,
+   "T3": true,
+   "T4": true,
+   "T5": true,
+   "T6": true
+  },
+  "note": "«تحويلات 2024» is inside guillemets, but it quotes a loose expression (EN “2024 remittances”), not a title or series name; swapped to «حوالات 2024»."
+ },
+ {
+  "sheet": "03_PAGE_SECTIONS",
+  "row": 287,
+  "col_letter": "G",
+  "field": "body_ar",
+  "old_ar": "عند تحويل سلسلة التحويلات في تقرير البنك المركزي اليمني – عدن لعام 2025 وسلسلة صندوق النقد الدولي في مشاورات المادة الرابعة لعام 2025 إلى أرقام قياسية (2021 = 100)، يكاد مساراهما يتطابقان حتى عام 2024؛ إذ لا يتجاوز أكبر فرق في معدل النمو السنوي 0.0032 نقطة مئوية خلال 2022–2024. أما المستويات فلا تتطابق: ففي كل سنة من 2021 إلى 2024 تعادل قيمة البنك المركزي في عدن 1.838 ضعف قيمة الصندوق.\nهذا الانتظام مفيد، إذ يوحي بمسارين متقاربين جُمعا وفق نطاقين أو منهجين مختلفين. لكنه لا يقدم صيغة تحويل، ولا يوجد ما هو منشور يفسر ما تمثله هذه النسبة.\nوتصف وثائق صندوق النقد إعادة بناء إحصاءات القطاع الخارجي في اليمن في ظل قيود شديدة على البيانات، بما في ذلك نموذج لتقدير التحويلات الشخصية حيث كانت المعلومات عن القنوات غير الرسمية محدودة. هذا سياق منهجي، ولا يكشف الصيغة الدقيقة وراء كل قيمة في التقرير السنوي للبنك المركزي.\n> القرينة الإحصائية ليست بعدُ جدول مطابقة موثقًا.",
+  "new_ar": "عند تحويل سلسلة الحوالات في تقرير البنك المركزي اليمني – عدن لعام 2025 وسلسلة صندوق النقد الدولي في مشاورات المادة الرابعة لعام 2025 إلى أرقام قياسية (2021 = 100)، يكاد مساراهما يتطابقان حتى عام 2024؛ إذ لا يتجاوز أكبر فرق في معدل النمو السنوي 0.0032 نقطة مئوية خلال 2022–2024. أما المستويات فلا تتطابق: ففي كل سنة من 2021 إلى 2024 تعادل قيمة البنك المركزي في عدن 1.838 ضعف قيمة الصندوق.\nهذا الانتظام مفيد، إذ يوحي بمسارين متقاربين جُمعا وفق نطاقين أو منهجين مختلفين. لكنه لا يقدم صيغة تحويل، ولا يوجد ما هو منشور يفسر ما تمثله هذه النسبة.\nوتصف وثائق صندوق النقد إعادة بناء إحصاءات القطاع الخارجي في اليمن في ظل قيود شديدة على البيانات، بما في ذلك نموذج لتقدير التحويلات الشخصية حيث كانت المعلومات عن القنوات غير الرسمية محدودة. هذا سياق منهجي، ولا يكشف الصيغة الدقيقة وراء كل قيمة في التقرير السنوي للبنك المركزي.\n> القرينة الإحصائية ليست بعدُ جدول مطابقة موثقًا.",
+  "occurrences_changed": 1,
+  "en_counterpart": "When the remittance series in the 2025 CBY-Aden report and the IMF’s 2025 Article IV series are each indexed to 2021 = 100, their paths through 2024 are almost identical: the largest difference in annual growth over 2022–2024 is 0.0032 percentage points. Their levels are not: in every year from 2021",
+  "tests": {
+   "T1": true,
+   "T2": true,
+   "T3": true,
+   "T4": true,
+   "T5": true,
+   "T6": true
+  },
+  "note": "Swapped 1 of 2; kept: [T4] نموذج لتقدير التحويلات الشخصية حيث"
+ },
+ {
+  "sheet": "03_PAGE_SECTIONS",
+  "row": 288,
+  "col_letter": "G",
+  "field": "body_ar",
+  "old_ar": "تمس التحويلات مستويات عدة في آن واحد: معيشة الأسر، والمعروض من النقد الأجنبي، وتحليل ميزان المدفوعات، والقنوات الرسمية وغير الرسمية التي تنتقل عبرها الأموال. لذلك قد تغيّر مراجعةٌ كبيرة للسلسلة الكلية أكثر من خط أساس تحليلي من دون أن يقع حدث جديد لدى أي أسرة.\nوإذا قُرئت المراجعة الإحصائية من دون السنة المرجعية ونسخة النشر معًا، فقد تُفهم خطأً على أنها نمو أو انهيار. أما حين يُقرأ الرقم بهما معًا، فيصبح السؤال المفيد: ما الذي تغيّر في القياس، وما الذي تغيّر في الاقتصاد، إن كان قد تغيّر شيء؟",
+  "new_ar": "تمس الحوالات مستويات عدة في آن واحد: معيشة الأسر، والمعروض من النقد الأجنبي، وتحليل ميزان المدفوعات، والقنوات الرسمية وغير الرسمية التي تنتقل عبرها الأموال. لذلك قد تغيّر مراجعةٌ كبيرة للسلسلة الكلية أكثر من خط أساس تحليلي من دون أن يقع حدث جديد لدى أي أسرة.\nوإذا قُرئت المراجعة الإحصائية من دون السنة المرجعية ونسخة النشر معًا، فقد تُفهم خطأً على أنها نمو أو انهيار. أما حين يُقرأ الرقم بهما معًا، فيصبح السؤال المفيد: ما الذي تغيّر في القياس، وما الذي تغيّر في الاقتصاد، إن كان قد تغيّر شيء؟",
+  "occurrences_changed": 1,
+  "en_counterpart": "Remittances matter at several levels at once: household livelihoods, the supply of foreign exchange, balance-of-payments analysis and the channels, formal and informal, through which money moves. A large revision to the macro series can therefore shift several analytical baselines without any new ev",
+  "tests": {
+   "T1": true,
+   "T2": true,
+   "T3": true,
+   "T4": true,
+   "T5": true,
+   "T6": true
+  },
+  "note": ""
+ },
+ {
+  "sheet": "03_PAGE_SECTIONS",
+  "row": 289,
+  "col_letter": "G",
+  "field": "body_ar",
+  "old_ar": "لا تبين الأدلة أن إحدى السلسلتين صحيحة لكل غرض والأخرى خاطئة، ولا تقدم معامل تحويل عامًّا بين سلسلتي البنك المركزي في عدن وصندوق النقد. ولا تقول شيئًا عن توزيع التحويلات بين الأسر أو المحافظات أو القنوات. كما لا يجوز إعادة تسمية صافي السهو والخطأ في ميزان المدفوعات تحويلاتٍ غير مسجلة؛ فهو بند موازنة للحسابات، لا تدفق مرصود.",
+  "new_ar": "لا تبين الأدلة أن إحدى السلسلتين صحيحة لكل غرض والأخرى خاطئة، ولا تقدم معامل تحويل عامًّا بين سلسلتي البنك المركزي في عدن وصندوق النقد. ولا تقول شيئًا عن توزيع الحوالات بين الأسر أو المحافظات أو القنوات. كما لا يجوز إعادة تسمية صافي السهو والخطأ في ميزان المدفوعات حوالاتٍ غير مسجلة؛ فهو بند موازنة للحسابات، لا تدفق مرصود.",
+  "occurrences_changed": 2,
+  "en_counterpart": "It does not show that one series is correct for every purpose and the other wrong, and it offers no general conversion factor between the CBY-Aden and IMF series. It says nothing about how remittances are distributed across households, governorates or channels. And net errors and omissions in the ba",
+  "tests": {
+   "T1": true,
+   "T2": true,
+   "T3": true,
+   "T4": true,
+   "T5": true,
+   "T6": true
+  },
+  "note": ""
+ },
+ {
+  "sheet": "03_PAGE_SECTIONS",
+  "row": 313,
+  "col_letter": "G",
+  "field": "body_ar",
+  "old_ar": "عن السنة المرجعية 2024، أورد التقرير السنوي 2024 للبنك المركزي اليمني – عدن تحويلات قدرها 6,245 مليون دولار، ثم أعاد تقريره السنوي 2025 عرض السنة نفسها عند 3,422.16 مليون دولار: وهذه مراجعة للسنة نفسها، لا هبوط. وتجيب التدفقات الكلية وأسعار الممرات وقنوات استلام الأسر عن أسئلة مختلفة، ولذلك يُبقي هذا المورد سجلات الأدلة هذه منفصلة ويُظهر المراجعات.",
+  "new_ar": "عن السنة المرجعية 2024، أورد التقرير السنوي 2024 للبنك المركزي اليمني – عدن حوالات قدرها 6,245 مليون دولار، ثم أعاد تقريره السنوي 2025 عرض السنة نفسها عند 3,422.16 مليون دولار: وهذه مراجعة للسنة نفسها، لا هبوط. وتجيب التدفقات الكلية وأسعار الممرات وقنوات استلام الأسر عن أسئلة مختلفة، ولذلك يُبقي هذا المورد سجلات الأدلة هذه منفصلة ويُظهر المراجعات.",
+  "occurrences_changed": 1,
+  "en_counterpart": "For the 2024 reference year, the 2024 annual report of the Central Bank of Yemen – Aden (CBY-Aden) gave remittances of US$6,245 million, and its 2025 annual report restated the same year at US$3,422.16 million: a revision of the same year, not a fall. Macro inflows, corridor prices and household rec",
+  "tests": {
+   "T1": true,
+   "T2": true,
+   "T3": true,
+   "T4": true,
+   "T5": true,
+   "T6": true
+  },
+  "note": ""
+ },
+ {
+  "sheet": "03_PAGE_SECTIONS",
+  "row": 325,
+  "col_letter": "G",
+  "field": "body_ar",
+  "old_ar": "في التقرير السنوي 2025 للبنك المركزي اليمني – عدن يفوق صافي السهو والخطأ بندَ التحويلات المنشور في كل سنة من 2021 إلى 2025؛ وفي 2025 بلغ المتبقي نحو 7.117 مليار دولار مقابل 3.614 مليار دولار للتحويلات، أي قرابة 1.97 مرة. وصافي السهو والخطأ بندٌ موازِن محاسبيًا، وليس تدفقًا مرصودًا ولا تقديرًا لتحويلات خفية.",
+  "new_ar": "في التقرير السنوي 2025 للبنك المركزي اليمني – عدن يفوق صافي السهو والخطأ بندَ الحوالات المنشور في كل سنة من 2021 إلى 2025؛ وفي 2025 بلغ المتبقي نحو 7.117 مليار دولار مقابل 3.614 مليار دولار للحوالات، أي قرابة 1.97 مرة. وصافي السهو والخطأ بندٌ موازِن محاسبيًا، وليس تدفقًا مرصودًا ولا تقديرًا لحوالات خفية.",
+  "occurrences_changed": 3,
+  "en_counterpart": "In the 2025 annual report of the Central Bank of Yemen – Aden (CBY-Aden), net errors and omissions exceed the published remittance line in every year from 2021 through 2025; in 2025 the residual is about US$7.117 billion against US$3.614 billion in remittances, or 1.97 times the remittance line. Net",
+  "tests": {
+   "T1": true,
+   "T2": true,
+   "T3": true,
+   "T4": true,
+   "T5": true,
+   "T6": true
+  },
+  "note": ""
+ },
+ {
+  "sheet": "03_PAGE_SECTIONS",
+  "row": 327,
+  "col_letter": "F",
+  "field": "heading_ar",
+  "old_ar": "ما الذي لا تثبته أدلة التحويلات؟",
+  "new_ar": "ما الذي لا تثبته أدلة الحوالات؟",
+  "occurrences_changed": 1,
+  "en_counterpart": "What remittance evidence does not establish",
+  "tests": {
+   "T1": true,
+   "T2": true,
+   "T3": true,
+   "T4": true,
+   "T5": true,
+   "T6": true
+  },
+  "note": ""
+ },
+ {
+  "sheet": "03_PAGE_SECTIONS",
+  "row": 327,
+  "col_letter": "G",
+  "field": "body_ar",
+  "old_ar": "لا تساوي سلسلة التحويلات الواردة في ميزان المدفوعات حجمَ الحوالة غير الرسمية أو توزيعها على الأسر. ومراجعة المصدر ليست هبوطًا اقتصاديًا. كما أن تشابه المسارين بعد تحويل السلسلتين إلى رقم قياسي (2021 = 100) لا يثبت أن السلسلتين الخام تغطيان النطاق نفسه، ولا يكشف معامل تحويل بينهما. وأسعار الممرات ليست متوسطًا وطنيًا للتكلفة. كذلك فإن تغير رصيد خارجي لا يساوي تلقائيًا معاملة، ولا تعيد الطبعة السابعة من دليل ميزان المدفوعات (BPM7) كتابة سلاسل اليمن التاريخية بأثر رجعي من دون تحويل صريح.",
+  "new_ar": "لا تساوي سلسلة الحوالات الواردة في ميزان المدفوعات حجمَ الحوالة غير الرسمية أو توزيعها على الأسر. ومراجعة المصدر ليست هبوطًا اقتصاديًا. كما أن تشابه المسارين بعد تحويل السلسلتين إلى رقم قياسي (2021 = 100) لا يثبت أن السلسلتين الخام تغطيان النطاق نفسه، ولا يكشف معامل تحويل بينهما. وأسعار الممرات ليست متوسطًا وطنيًا للتكلفة. كذلك فإن تغير رصيد خارجي لا يساوي تلقائيًا معاملة، ولا تعيد الطبعة السابعة من دليل ميزان المدفوعات (BPM7) كتابة سلاسل اليمن التاريخية بأثر رجعي من دون تحويل صريح.",
+  "occurrences_changed": 1,
+  "en_counterpart": "A macro remittance series does not equal informal hawala volume or household distribution. A source revision is not an economic fall. Similar paths after indexing to 2021 = 100 do not prove that two raw series have the same scope or reveal a conversion factor. Corridor prices are not a national cost",
+  "tests": {
+   "T1": true,
+   "T2": true,
+   "T3": true,
+   "T4": true,
+   "T5": true,
+   "T6": true
+  },
+  "note": ""
+ },
+ {
+  "sheet": "03_PAGE_SECTIONS",
+  "row": 329,
+  "col_letter": "G",
+  "field": "body_ar",
+  "old_ar": "ما تزال المطابقة العامة الدقيقة بين أهم سلاسل القطاع الخارجي لدى البنك المركزي اليمني – عدن وصندوق النقد الدولي غير محسومة. فعن عام 2024 يورد التقرير السنوي 2025 للبنك المركزي اليمني – عدن تحويلات قدرها 3,422.16 مليون دولار، بينما يورد تقرير خبراء صندوق النقد الدولي لمشاورات المادة الرابعة لعام 2025 قيمة 1,861.7 مليون دولار ضمن النطاق التحليلي للصندوق الخاص بمناطق الحكومة المعترف بها دوليًا. وخلال 2021–2024 تختلف السلسلتان بنسبة شبه ثابتة قدرها 1.838، ويكاد مسارا نموهما بعد تحويلهما إلى رقم قياسي يتطابقان؛ ولم يثبت ما تمثله هذه النسبة، ولذلك لا يمكن تحويل أي من المستويين إلى الآخر. كما أن سلوك الأسر الحالي في استلام الحوالات واختيار القنوات، وحجم القنوات غير الرسمية، لا تثبته أدلة الاقتصاد الكلي والممرات.",
+  "new_ar": "ما تزال المطابقة العامة الدقيقة بين أهم سلاسل القطاع الخارجي لدى البنك المركزي اليمني – عدن وصندوق النقد الدولي غير محسومة. فعن عام 2024 يورد التقرير السنوي 2025 للبنك المركزي اليمني – عدن حوالات قدرها 3,422.16 مليون دولار، بينما يورد تقرير خبراء صندوق النقد الدولي لمشاورات المادة الرابعة لعام 2025 قيمة 1,861.7 مليون دولار ضمن النطاق التحليلي للصندوق الخاص بمناطق الحكومة المعترف بها دوليًا. وخلال 2021–2024 تختلف السلسلتان بنسبة شبه ثابتة قدرها 1.838، ويكاد مسارا نموهما بعد تحويلهما إلى رقم قياسي يتطابقان؛ ولم يثبت ما تمثله هذه النسبة، ولذلك لا يمكن تحويل أي من المستويين إلى الآخر. كما أن سلوك الأسر الحالي في استلام الحوالات واختيار القنوات، وحجم القنوات غير الرسمية، لا تثبته أدلة الاقتصاد الكلي والممرات.",
+  "occurrences_changed": 1,
+  "en_counterpart": "The exact public crosswalk between key external-sector series of the Central Bank of Yemen – Aden (CBY-Aden) and the IMF remains open. For 2024, CBY-Aden’s 2025 annual report gives remittances of US$3,422.16 million, while the IMF’s 2025 Article IV staff report gives US$1,861.7 million on the IMF’s ",
+  "tests": {
+   "T1": true,
+   "T2": true,
+   "T3": true,
+   "T4": true,
+   "T5": true,
+   "T6": true
+  },
+  "note": ""
+ },
+ {
+  "sheet": "04_NAV_UX",
+  "row": 585,
+  "col_letter": "C",
+  "field": "label_ar",
+  "old_ar": "قارن سجلات التحويلات لدى البنك المركزي اليمني – عدن وصندوق النقد الدولي جنبًا إلى جنب",
+  "new_ar": "قارن سجلات الحوالات لدى البنك المركزي اليمني – عدن وصندوق النقد الدولي جنبًا إلى جنب",
+  "occurrences_changed": 1,
+  "en_counterpart": "Compare the CBY-Aden and IMF remittance records side by side",
+  "tests": {
+   "T1": true,
+   "T2": true,
+   "T3": true,
+   "T4": true,
+   "T5": true,
+   "T6": true
+  },
+  "note": ""
+ },
+ {
+  "sheet": "04_NAV_UX",
+  "row": 649,
+  "col_letter": "F",
+  "field": "boundary_note_ar",
+  "old_ar": "أداة اكتشاف فقط: تتناول أدلة التحويلات هنا الأموال المرسلة إلى اليمن والحوالات داخل اليمن، ولا تتناول الأموال المرسلة من اليمن إلى الخارج.",
+  "new_ar": "أداة اكتشاف فقط: تتناول أدلة الحوالات هنا الأموال المرسلة إلى اليمن والحوالات داخل اليمن، ولا تتناول الأموال المرسلة من اليمن إلى الخارج.",
+  "occurrences_changed": 1,
+  "en_counterpart": "Discovery aid only: the remittance evidence here is about money sent to Yemen and transfers within Yemen. It does not cover money sent from Yemen to other countries.",
+  "tests": {
+   "T1": true,
+   "T2": true,
+   "T3": true,
+   "T4": true,
+   "T5": true,
+   "T6": true
+  },
+  "note": ""
+ },
+ {
+  "sheet": "05_QUESTIONS",
+  "row": 11,
+  "col_letter": "C",
+  "field": "question_ar",
+  "old_ar": "ماذا تخبرنا التحويلات والتدفقات المالية الأخرى عن صلة الأسر بالنظام المالي؟",
+  "new_ar": "ماذا تخبرنا الحوالات والتدفقات المالية الأخرى عن صلة الأسر بالنظام المالي؟",
+  "occurrences_changed": 1,
+  "en_counterpart": "What do remittances and other money flows tell us about households’ connection to the financial system?",
+  "tests": {
+   "T1": true,
+   "T2": true,
+   "T3": true,
+   "T4": true,
+   "T5": true,
+   "T6": true
+  },
+  "note": ""
+ },
+ {
+  "sheet": "06_EVIDENCE_OBJECTS",
+  "row": 11,
+  "col_letter": "G",
+  "field": "summary_ar",
+  "old_ar": "يصف هذا المورد الشمول المالي في اليمن بوصفه أجزاء مترابطة: الناس والقدرات، والمنشآت والدخل، ومقدمو الخدمات، وبنية المدفوعات، وتدفقات التحويلات ورأس المال، والتنظيم والحماية، والعوامل المُمكِّنة والقيود. وتصف العلاقات الموثقة السياق أو الاعتماد أو آليات محتملة حين تسندها الأدلة؛ ولا تحمل أي علاقة تقديرًا لقوة الدليل، ولا تشكل الأجزاء درجة مركبة، ولا تُظهر أن جزءًا منها سبب لآخر.",
+  "new_ar": "يصف هذا المورد الشمول المالي في اليمن بوصفه أجزاء مترابطة: الناس والقدرات، والمنشآت والدخل، ومقدمو الخدمات، وبنية المدفوعات، وتدفقات الحوالات ورأس المال، والتنظيم والحماية، والعوامل المُمكِّنة والقيود. وتصف العلاقات الموثقة السياق أو الاعتماد أو آليات محتملة حين تسندها الأدلة؛ ولا تحمل أي علاقة تقديرًا لقوة الدليل، ولا تشكل الأجزاء درجة مركبة، ولا تُظهر أن جزءًا منها سبب لآخر.",
+  "occurrences_changed": 1,
+  "en_counterpart": "Financial inclusion in Yemen is described here as connected parts: people and capability, firms and income, providers, payment rails, remittance and capital flows, regulation and protection, and enabling conditions and constraints. The documented relationships describe context, dependency or plausib",
+  "tests": {
+   "T1": true,
+   "T2": true,
+   "T3": true,
+   "T4": true,
+   "T5": true,
+   "T6": true
+  },
+  "note": ""
+ },
+ {
+  "sheet": "06_EVIDENCE_OBJECTS",
+  "row": 29,
+  "col_letter": "E",
+  "field": "title_ar",
+  "old_ar": "سلسلة التحويلات لدى صندوق النقد الدولي: القيم التاريخية المنشورة والتقديرات والتوقعات منفصلة",
+  "new_ar": "سلسلة الحوالات لدى صندوق النقد الدولي: القيم التاريخية المنشورة والتقديرات والتوقعات منفصلة",
+  "occurrences_changed": 1,
+  "en_counterpart": "IMF remittance series: reported history, estimates and projections kept separate",
+  "tests": {
+   "T1": true,
+   "T2": true,
+   "T3": true,
+   "T4": true,
+   "T5": true,
+   "T6": true
+  },
+  "note": ""
+ },
+ {
+  "sheet": "06_EVIDENCE_OBJECTS",
+  "row": 29,
+  "col_letter": "G",
+  "field": "summary_ar",
+  "old_ar": "تورد السلسلة التاريخية في تقرير خبراء صندوق النقد الدولي لمشاورات المادة الرابعة لعام 2025 قيمةً للتحويلات الواردة في ميزان المدفوعات في 2024 أعلى منها في 2018 (والقيمتان من الوثيقة نفسها)، أما تقدير 2025 وتوقعات 2026–2030 فمصدرها ملحق لاحق، وهي تقدير وتوقعات، لا قيم مُبلَّغ عنها. وتغطي سلسلة الصندوق نطاقه التحليلي الخاص بالمناطق الخاضعة للحكومة المعترف بها دوليًا، لذلك لا يمثل مستواها رقمًا لليمن كله، ولا يُقارن مستواها بقيم التقارير السنوية للبنك المركزي اليمني – عدن.",
+  "new_ar": "تورد السلسلة التاريخية في تقرير خبراء صندوق النقد الدولي لمشاورات المادة الرابعة لعام 2025 قيمةً للحوالات الواردة في ميزان المدفوعات في 2024 أعلى منها في 2018 (والقيمتان من الوثيقة نفسها)، أما تقدير 2025 وتوقعات 2026–2030 فمصدرها ملحق لاحق، وهي تقدير وتوقعات، لا قيم مُبلَّغ عنها. وتغطي سلسلة الصندوق نطاقه التحليلي الخاص بالمناطق الخاضعة للحكومة المعترف بها دوليًا، لذلك لا يمثل مستواها رقمًا لليمن كله، ولا يُقارن مستواها بقيم التقارير السنوية للبنك المركزي اليمني – عدن.",
+  "occurrences_changed": 1,
+  "en_counterpart": "The history in the IMF 2025 Article IV staff report gives a higher value for remittance inflows in 2024 than in 2018 (both values from the same document); the 2025 estimate and the 2026–2030 projections come from a later supplement and are estimates and projections, not reported values. The IMF seri",
+  "tests": {
+   "T1": true,
+   "T2": true,
+   "T3": true,
+   "T4": true,
+   "T5": true,
+   "T6": true
+  },
+  "note": ""
+ },
+ {
+  "sheet": "06_EVIDENCE_OBJECTS",
+  "row": 29,
+  "col_letter": "I",
+  "field": "definition_ar",
+  "old_ar": "التحويلات السنوية في الحساب الخارجي بملايين الدولارات الأمريكية في سلسلة صندوق النقد الدولي: قيم تاريخية للفترة 2018–2024، وتقدير لعام 2025، وتوقعات للفترة 2026–2030.",
+  "new_ar": "الحوالات السنوية في الحساب الخارجي بملايين الدولارات الأمريكية في سلسلة صندوق النقد الدولي: قيم تاريخية للفترة 2018–2024، وتقدير لعام 2025، وتوقعات للفترة 2026–2030.",
+  "occurrences_changed": 1,
+  "en_counterpart": "Annual external-sector remittances, in US$ million, in the IMF series: reported history for 2018–2024, an estimate for 2025 and projections for 2026–2030.",
+  "tests": {
+   "T1": true,
+   "T2": true,
+   "T3": true,
+   "T4": true,
+   "T5": true,
+   "T6": true
+  },
+  "note": ""
+ },
+ {
+  "sheet": "06_EVIDENCE_OBJECTS",
+  "row": 45,
+  "col_letter": "Q",
+  "field": "limitations_ar",
+  "old_ar": "حصص القنوات بين المتلقين ليست نسبًا من جميع البالغين، ولا تقيس نتائج البرامج ولا حجم التحويلات على المستوى الكلي.",
+  "new_ar": "حصص القنوات بين المتلقين ليست نسبًا من جميع البالغين، ولا تقيس نتائج البرامج ولا حجم الحوالات على المستوى الكلي.",
+  "occurrences_changed": 1,
+  "en_counterpart": "Channel shares among recipients are not shares of all adults, and they do not measure programme outcomes or remittance volumes for the economy as a whole.",
+  "tests": {
+   "T1": true,
+   "T2": true,
+   "T3": true,
+   "T4": true,
+   "T5": true,
+   "T6": true
+  },
+  "note": ""
+ },
+ {
+  "sheet": "06_EVIDENCE_OBJECTS",
+  "row": 54,
+  "col_letter": "Q",
+  "field": "limitations_ar",
+  "old_ar": "تقوم نسب جميع البالغين ونسب القنوات بين المتلقين على قاعدتين مختلفتين، فلا تُقرأ على مقياس واحد. ولا تبين حجم الأموال التي مرت عبر كل قناة ولا تركيب التحويلات على المستوى الكلي.",
+  "new_ar": "تقوم نسب جميع البالغين ونسب القنوات بين المتلقين على قاعدتين مختلفتين، فلا تُقرأ على مقياس واحد. ولا تبين حجم الأموال التي مرت عبر كل قناة ولا تركيب الحوالات على المستوى الكلي.",
+  "occurrences_changed": 1,
+  "en_counterpart": "Shares of all adults and channel shares among recipients use different bases and cannot be read on one scale. They do not show how much money flowed through each channel or the composition of remittances in the economy as a whole.",
+  "tests": {
+   "T1": true,
+   "T2": true,
+   "T3": true,
+   "T4": true,
+   "T5": true,
+   "T6": true
+  },
+  "note": ""
+ },
+ {
+  "sheet": "06_EVIDENCE_OBJECTS",
+  "row": 70,
+  "col_letter": "E",
+  "field": "title_ar",
+  "old_ar": "التحويلات: القيم التاريخية الواردة في تقارير صندوق النقد الدولي والتقدير والتوقعات",
+  "new_ar": "الحوالات: القيم التاريخية الواردة في تقارير صندوق النقد الدولي والتقدير والتوقعات",
+  "occurrences_changed": 1,
+  "en_counterpart": "Remittances — IMF-reported history, estimate and projections",
+  "tests": {
+   "T1": true,
+   "T2": true,
+   "T3": true,
+   "T4": true,
+   "T5": true,
+   "T6": true
+  },
+  "note": ""
+ },
+ {
+  "sheet": "06_EVIDENCE_OBJECTS",
+  "row": 70,
+  "col_letter": "G",
+  "field": "summary_ar",
+  "old_ar": "في سلسلة التحويلات الواردة في ميزان المدفوعات، يورد تقرير خبراء صندوق النقد الدولي لمشاورات المادة الرابعة لعام 2025 قيم 2018–2024 بوصفها قيمًا تاريخية تستند إلى حسابات خبراء الصندوق، ومنها 1,861.7 مليون دولار في 2024. ويورد ملحق لاحق للمشاورات نفسها تقديرًا قدره 1,977 مليون دولار لعام 2025، وتوقعات ترتفع من 2,159 مليون دولار في 2026 إلى 3,110 مليون دولار في 2030. ولأن الوثيقتين صدرتا في وقتين مختلفين، لا يُوصل الجزءان في سلسلة واحدة متصلة. وتغطي السلسلة النطاق التحليلي للصندوق الخاص بالمناطق الخاضعة للحكومة المعترف بها دوليًا، لا اليمن كله.",
+  "new_ar": "في سلسلة الحوالات الواردة في ميزان المدفوعات، يورد تقرير خبراء صندوق النقد الدولي لمشاورات المادة الرابعة لعام 2025 قيم 2018–2024 بوصفها قيمًا تاريخية تستند إلى حسابات خبراء الصندوق، ومنها 1,861.7 مليون دولار في 2024. ويورد ملحق لاحق للمشاورات نفسها تقديرًا قدره 1,977 مليون دولار لعام 2025، وتوقعات ترتفع من 2,159 مليون دولار في 2026 إلى 3,110 مليون دولار في 2030. ولأن الوثيقتين صدرتا في وقتين مختلفين، لا يُوصل الجزءان في سلسلة واحدة متصلة. وتغطي السلسلة النطاق التحليلي للصندوق الخاص بالمناطق الخاضعة للحكومة المعترف بها دوليًا، لا اليمن كله.",
+  "occurrences_changed": 1,
+  "en_counterpart": "For external-sector remittances, the IMF's 2025 Article IV staff report gives 2018–2024 as reported history based on staff calculations, including US$1,861.7 million in 2024. A later supplement to the same consultation gives US$1,977 million as the 2025 estimate and projections rising from US$2,159 ",
+  "tests": {
+   "T1": true,
+   "T2": true,
+   "T3": true,
+   "T4": true,
+   "T5": true,
+   "T6": true
+  },
+  "note": ""
+ },
+ {
+  "sheet": "06_EVIDENCE_OBJECTS",
+  "row": 70,
+  "col_letter": "I",
+  "field": "definition_ar",
+  "old_ar": "التحويلات السنوية في القطاع الخارجي بملايين الدولارات الأمريكية في سلسلة صندوق النقد الدولي للفترة 2018–2030، مع وسم كل سنة بوصفها قيمة تاريخية (2018–2024) أو تقديرًا (2025) أو توقعًا (2026–2030).",
+  "new_ar": "الحوالات السنوية في القطاع الخارجي بملايين الدولارات الأمريكية في سلسلة صندوق النقد الدولي للفترة 2018–2030، مع وسم كل سنة بوصفها قيمة تاريخية (2018–2024) أو تقديرًا (2025) أو توقعًا (2026–2030).",
+  "occurrences_changed": 1,
+  "en_counterpart": "Annual external-sector remittances, in US$ million, in the IMF series for 2018–2030, with each year labelled as reported history (2018–2024), estimate (2025) or projection (2026–2030).",
+  "tests": {
+   "T1": true,
+   "T2": true,
+   "T3": true,
+   "T4": true,
+   "T5": true,
+   "T6": true
+  },
+  "note": ""
+ },
+ {
+  "sheet": "06_EVIDENCE_OBJECTS",
+  "row": 70,
+  "col_letter": "M",
+  "field": "universe_ar",
+  "old_ar": "سلسلة صندوق النقد الدولي للتحويلات في القطاع الخارجي ضمن النطاق التحليلي للصندوق الخاص بمناطق الحكومة المعترف بها دوليًا، مع نوع الدليل لكل سنة ووثيقة مصدرها.",
+  "new_ar": "سلسلة صندوق النقد الدولي للحوالات في القطاع الخارجي ضمن النطاق التحليلي للصندوق الخاص بمناطق الحكومة المعترف بها دوليًا، مع نوع الدليل لكل سنة ووثيقة مصدرها.",
+  "occurrences_changed": 1,
+  "en_counterpart": "IMF external-sector remittance series on the IMF’s analytical scope for areas under the internationally recognized government; each year labelled as reported history, estimate or projection, with its source document",
+  "tests": {
+   "T1": true,
+   "T2": true,
+   "T3": true,
+   "T4": true,
+   "T5": true,
+   "T6": true
+  },
+  "note": ""
+ },
+ {
+  "sheet": "06_EVIDENCE_OBJECTS",
+  "row": 84,
+  "col_letter": "G",
+  "field": "summary_ar",
+  "old_ar": "عبر مكونات ميزان المدفوعات المنشورة التي اختُبرت للفترة 2021–2024، من التقرير السنوي 2025 للبنك المركزي اليمني – عدن ومن سلسلة صندوق النقد الدولي الخاصة بمناطق الحكومة المعترف بها دوليًا، لا تدعم الأدلة معامل تحويل واحدًا. فنسبة التحويلات شبه ثابتة، لكن نسب الواردات والمنح والحساب الجاري وصافي السهو والخطأ تختلف اختلافًا جوهريًا، كما يوثق الصندوق مصادر ومعالجات إحصائية خاصة بكل مكون. ولا يستبعد ذلك وجود جسور خاصة بمكونات بعينها أو مطابقة رسمية مستقبلًا.",
+  "new_ar": "عبر مكونات ميزان المدفوعات المنشورة التي اختُبرت للفترة 2021–2024، من التقرير السنوي 2025 للبنك المركزي اليمني – عدن ومن سلسلة صندوق النقد الدولي الخاصة بمناطق الحكومة المعترف بها دوليًا، لا تدعم الأدلة معامل تحويل واحدًا. فنسبة الحوالات شبه ثابتة، لكن نسب الواردات والمنح والحساب الجاري وصافي السهو والخطأ تختلف اختلافًا جوهريًا، كما يوثق الصندوق مصادر ومعالجات إحصائية خاصة بكل مكون. ولا يستبعد ذلك وجود جسور خاصة بمكونات بعينها أو مطابقة رسمية مستقبلًا.",
+  "occurrences_changed": 1,
+  "en_counterpart": "Across the public balance-of-payments components tested for 2021–2024, from the Central Bank of Yemen – Aden (CBY-Aden) Annual Report 2025 and from the IMF series for areas under the internationally recognized government, the evidence does not support a single conversion factor. The remittance ratio",
+  "tests": {
+   "T1": true,
+   "T2": true,
+   "T3": true,
+   "T4": true,
+   "T5": true,
+   "T6": true
+  },
+  "note": ""
+ },
+ {
+  "sheet": "06_EVIDENCE_OBJECTS",
+  "row": 84,
+  "col_letter": "Q",
+  "field": "limitations_ar",
+  "old_ar": "لا تنطبق النسبة الثابتة البالغة 1.838 بين سلسلتي التحويلات لدى البنك المركزي اليمني – عدن وصندوق النقد الدولي خلال 2021–2024، ولا حصة السكان البالغة 33% التي استخدمها الصندوق للمناطق الخاضعة للحكومة المعترف بها دوليًا، على مكونات أخرى من ميزان المدفوعات. ولا يثبت الاختبار استحالة التحويل خارج المكونات المنشورة التي اختُبرت.",
+  "new_ar": "لا تنطبق النسبة الثابتة البالغة 1.838 بين سلسلتي الحوالات لدى البنك المركزي اليمني – عدن وصندوق النقد الدولي خلال 2021–2024، ولا حصة السكان البالغة 33% التي استخدمها الصندوق للمناطق الخاضعة للحكومة المعترف بها دوليًا، على مكونات أخرى من ميزان المدفوعات. ولا يثبت الاختبار استحالة التحويل خارج المكونات المنشورة التي اختُبرت.",
+  "occurrences_changed": 1,
+  "en_counterpart": "The constant ratio of 1.838 between the CBY-Aden and IMF remittance series over 2021–2024, and the 33% population share that the IMF used for areas under the internationally recognized government, do not apply to other balance-of-payments components. The test does not show that a conversion is impos",
+  "tests": {
+   "T1": true,
+   "T2": true,
+   "T3": true,
+   "T4": true,
+   "T5": true,
+   "T6": true
+  },
+  "note": ""
+ },
+ {
+  "sheet": "06_EVIDENCE_OBJECTS",
+  "row": 85,
+  "col_letter": "E",
+  "field": "title_ar",
+  "old_ar": "توجد نسبة مستقرة بين سلسلتي التحويلات، لكن معناها ما يزال غير محسوم",
+  "new_ar": "توجد نسبة مستقرة بين سلسلتي الحوالات، لكن معناها ما يزال غير محسوم",
+  "occurrences_changed": 1,
+  "en_counterpart": "A stable remittance ratio exists; its meaning remains unknown",
+  "tests": {
+   "T1": true,
+   "T2": true,
+   "T3": true,
+   "T4": true,
+   "T5": true,
+   "T6": true
+  },
+  "note": ""
+ },
+ {
+  "sheet": "06_EVIDENCE_OBJECTS",
+  "row": 85,
+  "col_letter": "G",
+  "field": "summary_ar",
+  "old_ar": "خلال 2021–2024 تبلغ نسبة سلسلة التحويلات في التقرير السنوي 2025 للبنك المركزي اليمني – عدن إلى سلسلة مشاورات المادة الرابعة لعام 2025 لصندوق النقد الدولي 1.838 في كل سنة، ويكاد مسارا النمو يتطابقان بعد تحويلهما إلى رقم قياسي (2021 = 100). ولا تثبت الأدلة العامة ما تمثله هذه النسبة؛ فهي انتظام رقمي بلا تفسير موثق، وليست قاعدة تحويل.",
+  "new_ar": "خلال 2021–2024 تبلغ نسبة سلسلة الحوالات في التقرير السنوي 2025 للبنك المركزي اليمني – عدن إلى سلسلة مشاورات المادة الرابعة لعام 2025 لصندوق النقد الدولي 1.838 في كل سنة، ويكاد مسارا النمو يتطابقان بعد تحويلهما إلى رقم قياسي (2021 = 100). ولا تثبت الأدلة العامة ما تمثله هذه النسبة؛ فهي انتظام رقمي بلا تفسير موثق، وليست قاعدة تحويل.",
+  "occurrences_changed": 1,
+  "en_counterpart": "Over 2021–2024, the ratio of the remittance series in the Central Bank of Yemen – Aden (CBY-Aden) Annual Report 2025 to the IMF 2025 Article IV series is 1.838 in every year, and the two growth paths are almost identical when indexed to 2021 = 100. The public evidence does not establish what that ra",
+  "tests": {
+   "T1": true,
+   "T2": true,
+   "T3": true,
+   "T4": true,
+   "T5": true,
+   "T6": true
+  },
+  "note": ""
+ },
+ {
+  "sheet": "06_EVIDENCE_OBJECTS",
+  "row": 85,
+  "col_letter": "I",
+  "field": "definition_ar",
+  "old_ar": "نسبة سلسلة التحويلات لدى البنك المركزي اليمني – عدن إلى سلسلة التحويلات لدى صندوق النقد الدولي في كل سنة من 2021 إلى 2024.",
+  "new_ar": "نسبة سلسلة الحوالات لدى البنك المركزي اليمني – عدن إلى سلسلة الحوالات لدى صندوق النقد الدولي في كل سنة من 2021 إلى 2024.",
+  "occurrences_changed": 2,
+  "en_counterpart": "The ratio of the CBY-Aden remittance series to the IMF remittance series in each year from 2021 to 2024.",
+  "tests": {
+   "T1": true,
+   "T2": true,
+   "T3": true,
+   "T4": true,
+   "T5": true,
+   "T6": true
+  },
+  "note": ""
+ },
+ {
+  "sheet": "06_EVIDENCE_OBJECTS",
+  "row": 85,
+  "col_letter": "M",
+  "field": "universe_ar",
+  "old_ar": "نطاق سلسلة التحويلات المنشورة لدى البنك المركزي اليمني – عدن مقابل النطاق التحليلي لصندوق النقد الدولي الخاص بمناطق الحكومة المعترف بها دوليًا.",
+  "new_ar": "نطاق سلسلة الحوالات المنشورة لدى البنك المركزي اليمني – عدن مقابل النطاق التحليلي لصندوق النقد الدولي الخاص بمناطق الحكومة المعترف بها دوليًا.",
+  "occurrences_changed": 1,
+  "en_counterpart": "The CBY-Aden publication scope compared with the IMF's analytical scope for areas under the internationally recognized government",
+  "tests": {
+   "T1": true,
+   "T2": true,
+   "T3": true,
+   "T4": true,
+   "T5": true,
+   "T6": true
+  },
+  "note": ""
+ },
+ {
+  "sheet": "06_EVIDENCE_OBJECTS",
+  "row": 85,
+  "col_letter": "O",
+  "field": "method_ar",
+  "old_ar": "احتسبها هذا المورد من قيم منشورة: سلسلة التحويلات في التقرير السنوي 2025 للبنك المركزي اليمني – عدن (2,900.22؛ 3,066.58؛ 3,240.46؛ 3,422.16 مليون دولار للأعوام 2021–2024)، وسلسلة تقرير خبراء صندوق النقد الدولي لمشاورات المادة الرابعة لعام 2025 (1,577.7؛ 1,668.2؛ 1,762.8؛ 1,861.7 مليون دولار). قُسمت قيمة البنك المركزي في عدن على قيمة الصندوق لكل سنة، فكانت النتيجة 1.838 في كل سنة. ويوثق الملحق الإحصائي لمشاورات المادة الرابعة لعام 2025 (الملحق الرابع) السياق المنهجي.",
+  "new_ar": "احتسبها هذا المورد من قيم منشورة: سلسلة الحوالات في التقرير السنوي 2025 للبنك المركزي اليمني – عدن (2,900.22؛ 3,066.58؛ 3,240.46؛ 3,422.16 مليون دولار للأعوام 2021–2024)، وسلسلة تقرير خبراء صندوق النقد الدولي لمشاورات المادة الرابعة لعام 2025 (1,577.7؛ 1,668.2؛ 1,762.8؛ 1,861.7 مليون دولار). قُسمت قيمة البنك المركزي في عدن على قيمة الصندوق لكل سنة، فكانت النتيجة 1.838 في كل سنة. ويوثق الملحق الإحصائي لمشاورات المادة الرابعة لعام 2025 (الملحق الرابع) السياق المنهجي.",
+  "occurrences_changed": 1,
+  "en_counterpart": "Computed by this resource from published values: the Central Bank of Yemen – Aden (CBY-Aden) Annual Report 2025 remittance series (2,900.22; 3,066.58; 3,240.46; 3,422.16 US$ million for 2021–2024) and the IMF 2025 Article IV staff-report series (1,577.7; 1,668.2; 1,762.8; 1,861.7 US$ million). For e",
+  "tests": {
+   "T1": true,
+   "T2": true,
+   "T3": true,
+   "T4": true,
+   "T5": true,
+   "T6": true
+  },
+  "note": ""
+ },
+ {
+  "sheet": "06_EVIDENCE_OBJECTS",
+  "row": 86,
+  "col_letter": "G",
+  "field": "summary_ar",
+  "old_ar": "في التقرير السنوي 2025 للبنك المركزي اليمني – عدن، يفوق صافي السهو والخطأ بند التحويلات المنشور في كل سنة من 2021 إلى 2025. ففي 2025 بلغ صافي السهو والخطأ 7.117 مليار دولار مقابل 3.614 مليار دولار للتحويلات، أي إن نسبته إلى بند التحويلات 1.97. وصافي السهو والخطأ بندٌ موازِن محاسبيًا، وليس تدفقًا مرصودًا ولا تقديرًا لتحويلات مخفية.",
+  "new_ar": "في التقرير السنوي 2025 للبنك المركزي اليمني – عدن، يفوق صافي السهو والخطأ بند الحوالات المنشور في كل سنة من 2021 إلى 2025. ففي 2025 بلغ صافي السهو والخطأ 7.117 مليار دولار مقابل 3.614 مليار دولار للحوالات، أي إن نسبته إلى بند الحوالات 1.97. وصافي السهو والخطأ بندٌ موازِن محاسبيًا، وليس تدفقًا مرصودًا ولا تقديرًا لحوالات مخفية.",
+  "occurrences_changed": 4,
+  "en_counterpart": "In the Central Bank of Yemen – Aden (CBY-Aden) Annual Report 2025, net errors and omissions are larger than the published remittance line in every year from 2021 to 2025. In 2025 the residual is USD 7.117 billion against USD 3.614 billion for remittances, 1.97 times the remittance line. Net errors a",
+  "tests": {
+   "T1": true,
+   "T2": true,
+   "T3": true,
+   "T4": true,
+   "T5": true,
+   "T6": true
+  },
+  "note": ""
+ },
+ {
+  "sheet": "06_EVIDENCE_OBJECTS",
+  "row": 86,
+  "col_letter": "I",
+  "field": "definition_ar",
+  "old_ar": "صافي السهو والخطأ في ميزان المدفوعات لدى البنك المركزي اليمني – عدن للفترة 2021–2025، مقارنًا من حيث الحجم ببند التحويلات المنشور.",
+  "new_ar": "صافي السهو والخطأ في ميزان المدفوعات لدى البنك المركزي اليمني – عدن للفترة 2021–2025، مقارنًا من حيث الحجم ببند الحوالات المنشور.",
+  "occurrences_changed": 1,
+  "en_counterpart": "Net errors and omissions in the CBY-Aden balance of payments for 2021–2025, compared in size with the published remittance line.",
+  "tests": {
+   "T1": true,
+   "T2": true,
+   "T3": true,
+   "T4": true,
+   "T5": true,
+   "T6": true
+  },
+  "note": ""
+ },
+ {
+  "sheet": "06_EVIDENCE_OBJECTS",
+  "row": 86,
+  "col_letter": "O",
+  "field": "method_ar",
+  "old_ar": "قيم من جدول ميزان المدفوعات في التقرير السنوي 2025 للبنك المركزي اليمني – عدن. واحتسب هذا المورد النسبة بقسمة صافي السهو والخطأ على بند التحويلات (2025: 7.117 مقسومًا على 3.614 يساوي 1.97). ويُقرأ صافي السهو والخطأ بوصفه البند الموازِن كما يعرّفه دليل ميزان المدفوعات الصادر عن صندوق النقد الدولي.",
+  "new_ar": "قيم من جدول ميزان المدفوعات في التقرير السنوي 2025 للبنك المركزي اليمني – عدن. واحتسب هذا المورد النسبة بقسمة صافي السهو والخطأ على بند الحوالات (2025: 7.117 مقسومًا على 3.614 يساوي 1.97). ويُقرأ صافي السهو والخطأ بوصفه البند الموازِن كما يعرّفه دليل ميزان المدفوعات الصادر عن صندوق النقد الدولي.",
+  "occurrences_changed": 1,
+  "en_counterpart": "Values from the balance-of-payments table of the Central Bank of Yemen – Aden (CBY-Aden) Annual Report 2025. The ratio is computed by this resource as net errors and omissions divided by the remittance line (2025: 7.117 divided by 3.614 gives 1.97). Net errors and omissions is read as the balancing ",
+  "tests": {
+   "T1": true,
+   "T2": true,
+   "T3": true,
+   "T4": true,
+   "T5": true,
+   "T6": true
+  },
+  "note": ""
+ },
+ {
+  "sheet": "06_EVIDENCE_OBJECTS",
+  "row": 86,
+  "col_letter": "Q",
+  "field": "limitations_ar",
+  "old_ar": "ليس صافي السهو والخطأ تحويلات مخفية ولا تدفقًا مرصودًا، ولا يوجد تفكيك مثبت يبين أن المتبقي رأسُ مال غير مسجل. | صافي السهو والخطأ بندٌ موازِن صافٍ، ولا يحدد مكونًا مفقودًا بعينه ولا الأخطاء الإجمالية المتقابلة.",
+  "new_ar": "ليس صافي السهو والخطأ حوالات مخفية ولا تدفقًا مرصودًا، ولا يوجد تفكيك مثبت يبين أن المتبقي رأسُ مال غير مسجل. | صافي السهو والخطأ بندٌ موازِن صافٍ، ولا يحدد مكونًا مفقودًا بعينه ولا الأخطاء الإجمالية المتقابلة.",
+  "occurrences_changed": 1,
+  "en_counterpart": "Net errors and omissions are not hidden remittances or an observed flow, and no established decomposition shows the residual to be unrecorded capital. | Errors and omissions is a net balancing residual; it cannot identify a missing component or gross offsetting errors.",
+  "tests": {
+   "T1": true,
+   "T2": true,
+   "T3": true,
+   "T4": true,
+   "T5": true,
+   "T6": true
+  },
+  "note": ""
+ },
+ {
+  "sheet": "06_EVIDENCE_OBJECTS",
+  "row": 87,
+  "col_letter": "E",
+  "field": "title_ar",
+  "old_ar": "نموذج بديل قائم على متبقي ميزان المدفوعات ليس خط الأساس المعتمد للتحويلات",
+  "new_ar": "نموذج بديل قائم على متبقي ميزان المدفوعات ليس خط الأساس المعتمد للحوالات",
+  "occurrences_changed": 1,
+  "en_counterpart": "An alternative residual model is not the canonical remittance baseline",
+  "tests": {
+   "T1": true,
+   "T2": true,
+   "T3": true,
+   "T4": true,
+   "T5": true,
+   "T6": true
+  },
+  "note": ""
+ },
+ {
+  "sheet": "06_EVIDENCE_OBJECTS",
+  "row": 87,
+  "col_letter": "G",
+  "field": "summary_ar",
+  "old_ar": "يقدّر نموذج قائم على متبقي ميزان المدفوعات التحويلات بإسناد فرق متبقٍّ مفترض إليها. ومثل هذا التقدير نموذج بديل، لا مشاهدة مباشرة ولا خط الأساس المعتمد للتحويلات. ويستند التقدير المعني هنا إلى مادة لا يتوافر لها رابط أصلي عام، لذلك لا يعرض هذا المورد، وفق قاعدة النشر المعتمدة فيه، قيمته ولا الجهة التي أعدّته.",
+  "new_ar": "يقدّر نموذج قائم على متبقي ميزان المدفوعات الحوالات بإسناد فرق متبقٍّ مفترض إليها. ومثل هذا التقدير نموذج بديل، لا مشاهدة مباشرة ولا خط الأساس المعتمد للحوالات. ويستند التقدير المعني هنا إلى مادة لا يتوافر لها رابط أصلي عام، لذلك لا يعرض هذا المورد، وفق قاعدة النشر المعتمدة فيه، قيمته ولا الجهة التي أعدّته.",
+  "occurrences_changed": 2,
+  "en_counterpart": "A balance-of-payments residual model estimates remittances by assigning an assumed residual discrepancy to them. Such an estimate is an alternative model, not a direct observation or the canonical remittance baseline. The estimate considered here rests on material with no publicly accessible origina",
+  "tests": {
+   "T1": true,
+   "T2": true,
+   "T3": true,
+   "T4": true,
+   "T5": true,
+   "T6": true
+  },
+  "note": ""
+ },
+ {
+  "sheet": "06_EVIDENCE_OBJECTS",
+  "row": 87,
+  "col_letter": "I",
+  "field": "definition_ar",
+  "old_ar": "تقدير للتحويلات لعام 2024 ناتج عن نموذج متبقي ميزان المدفوعات، يبقى منفصلًا عن خط الأساس المعتمد للتحويلات.",
+  "new_ar": "تقدير للحوالات لعام 2024 ناتج عن نموذج متبقي ميزان المدفوعات، يبقى منفصلًا عن خط الأساس المعتمد للحوالات.",
+  "occurrences_changed": 2,
+  "en_counterpart": "An estimate of 2024 remittances produced by a balance-of-payments residual model, kept separate from the adopted remittance baseline.",
+  "tests": {
+   "T1": true,
+   "T2": true,
+   "T3": true,
+   "T4": true,
+   "T5": true,
+   "T6": true
+  },
+  "note": ""
+ },
+ {
+  "sheet": "06_EVIDENCE_OBJECTS",
+  "row": 87,
+  "col_letter": "Q",
+  "field": "limitations_ar",
+  "old_ar": "ليس أي تقدير ناتج عن نموذج متبقي ميزان المدفوعات قيمة وطنية رسمية أو مرصودة، وليس المتبقي رصدًا مباشرًا للتحويلات عبر القنوات غير الرسمية. | تنتقل أخطاء مكونات ميزان المدفوعات الأخرى، والافتراض المعتمد لصافي السهو والخطأ، إلى متبقي التحويلات؛ والتحويلات عبر القنوات غير الرسمية ليست مرصودة مباشرة.",
+  "new_ar": "ليس أي تقدير ناتج عن نموذج متبقي ميزان المدفوعات قيمة وطنية رسمية أو مرصودة، وليس المتبقي رصدًا مباشرًا للحوالات عبر القنوات غير الرسمية. | تنتقل أخطاء مكونات ميزان المدفوعات الأخرى، والافتراض المعتمد لصافي السهو والخطأ، إلى متبقي الحوالات؛ والحوالات عبر القنوات غير الرسمية ليست مرصودة مباشرة.",
+  "occurrences_changed": 3,
+  "en_counterpart": "A residual-model estimate is not an official or observed national value, and the residual is not a direct observation of informal remittances. | Errors in other balance-of-payments components, and the assumption made about errors and omissions, flow into the remittance residual; informal remittances",
+  "tests": {
+   "T1": true,
+   "T2": true,
+   "T3": true,
+   "T4": true,
+   "T5": true,
+   "T6": true
+  },
+  "note": ""
+ },
+ {
+  "sheet": "06_EVIDENCE_OBJECTS",
+  "row": 102,
+  "col_letter": "G",
+  "field": "summary_ar",
+  "old_ar": "تنشر التقارير السنوية للبنك المركزي اليمني – عدن قيمًا مختلفة بصورة جوهرية للتحويلات الواردة في ميزان المدفوعات عن السنة المرجعية نفسها. فقد أورد التقرير السنوي 2024 قيمة عام 2024 عند 6,245 مليون دولار، بينما أعاد التقرير السنوي 2025 عرض عام 2024 عند 3,422.16 مليون دولار. وهذه إعادة عرض للسنة نفسها، وليست دليلًا على حركة اقتصادية بين عامين. ويصح ذلك على سنوات أسبق أيضًا: فلسنة 2021 المرجعية تورد إصدارات التقرير السنوي لأعوام 2022 و2023 و2024 و2025 القيم 4,043 و5,400.0 و5,625 و2,900.22 مليون دولار، ولسنة 2022 المرجعية القيم 4,454 و6,000 و6,000 و3,066.58 مليون دولار. وهذه قيم إصدارات متعاقبة لسنة واحدة، لا سلسلة زمنية.",
+  "new_ar": "تنشر التقارير السنوية للبنك المركزي اليمني – عدن قيمًا مختلفة بصورة جوهرية للحوالات الواردة في ميزان المدفوعات عن السنة المرجعية نفسها. فقد أورد التقرير السنوي 2024 قيمة عام 2024 عند 6,245 مليون دولار، بينما أعاد التقرير السنوي 2025 عرض عام 2024 عند 3,422.16 مليون دولار. وهذه إعادة عرض للسنة نفسها، وليست دليلًا على حركة اقتصادية بين عامين. ويصح ذلك على سنوات أسبق أيضًا: فلسنة 2021 المرجعية تورد إصدارات التقرير السنوي لأعوام 2022 و2023 و2024 و2025 القيم 4,043 و5,400.0 و5,625 و2,900.22 مليون دولار، ولسنة 2022 المرجعية القيم 4,454 و6,000 و6,000 و3,066.58 مليون دولار. وهذه قيم إصدارات متعاقبة لسنة واحدة، لا سلسلة زمنية.",
+  "occurrences_changed": 1,
+  "en_counterpart": "Annual reports of the Central Bank of Yemen – Aden (CBY-Aden) publish materially different remittance values for the same reference year. For 2024, the 2024 annual report gave USD 6,245 million, while the 2025 annual report restated 2024 at USD 3,422.16 million. This is a same-year restatement, not ",
+  "tests": {
+   "T1": true,
+   "T2": true,
+   "T3": true,
+   "T4": true,
+   "T5": true,
+   "T6": true
+  },
+  "note": ""
+ },
+ {
+  "sheet": "06_EVIDENCE_OBJECTS",
+  "row": 102,
+  "col_letter": "M",
+  "field": "universe_ar",
+  "old_ar": "سلسلة التحويلات في منشورات ميزان المدفوعات للبنك المركزي اليمني – عدن؛ ولا تزال المطابقة الدقيقة من حيث الجغرافيا والمفهوم مع إعادة بناء صندوق النقد الدولي لمناطق الحكومة المعترف بها دوليًا غير محسومة.",
+  "new_ar": "سلسلة الحوالات في منشورات ميزان المدفوعات للبنك المركزي اليمني – عدن؛ ولا تزال المطابقة الدقيقة من حيث الجغرافيا والمفهوم مع إعادة بناء صندوق النقد الدولي لمناطق الحكومة المعترف بها دوليًا غير محسومة.",
+  "occurrences_changed": 1,
+  "en_counterpart": "The remittance series published in the balance of payments of the Central Bank of Yemen – Aden (CBY-Aden); its exact territorial and conceptual mapping to the IMF reconstruction for areas under the internationally recognized government remains open",
+  "tests": {
+   "T1": true,
+   "T2": true,
+   "T3": true,
+   "T4": true,
+   "T5": true,
+   "T6": true
+  },
+  "note": ""
+ },
+ {
+  "sheet": "06_EVIDENCE_OBJECTS",
+  "row": 104,
+  "col_letter": "G",
+  "field": "summary_ar",
+  "old_ar": "تُظهر سلسلة التحويلات المنشورة في التقرير السنوي 2025 للبنك المركزي اليمني – عدن معدلات نمو سنوية متقاربة على نحو لافت عبر السنوات المتداخلة. يفيد هذا النمط في فحص المنهج، لكنه لا يثبت وجود تنعيم أو استيفاء أو انخفاض في التقلب الفعلي للتحويلات.",
+  "new_ar": "تُظهر سلسلة الحوالات المنشورة في التقرير السنوي 2025 للبنك المركزي اليمني – عدن معدلات نمو سنوية متقاربة على نحو لافت عبر السنوات المتداخلة. يفيد هذا النمط في فحص المنهج، لكنه لا يثبت وجود تنعيم أو استيفاء أو انخفاض في التقلب الفعلي للحوالات.",
+  "occurrences_changed": 2,
+  "en_counterpart": "In the CBY-Aden Annual Report 2025, the published remittance series rises with unusually similar annual growth rates across overlapping years. That pattern is useful for method scrutiny, but it does not establish smoothing, interpolation or low real-world volatility.",
+  "tests": {
+   "T1": true,
+   "T2": true,
+   "T3": true,
+   "T4": true,
+   "T5": true,
+   "T6": true
+  },
+  "note": ""
+ },
+ {
+  "sheet": "06_EVIDENCE_OBJECTS",
+  "row": 104,
+  "col_letter": "I",
+  "field": "definition_ar",
+  "old_ar": "معدلات النمو السنوية لسلسلة التحويلات في التقرير السنوي 2025 للبنك المركزي اليمني – عدن، مقارنةً عبر السنوات المتداخلة 2021–2025.",
+  "new_ar": "معدلات النمو السنوية لسلسلة الحوالات في التقرير السنوي 2025 للبنك المركزي اليمني – عدن، مقارنةً عبر السنوات المتداخلة 2021–2025.",
+  "occurrences_changed": 1,
+  "en_counterpart": "The annual growth rates of the remittance series in the Central Bank of Yemen – Aden (CBY-Aden) Annual Report 2025, compared across the overlapping years 2021–2025.",
+  "tests": {
+   "T1": true,
+   "T2": true,
+   "T3": true,
+   "T4": true,
+   "T5": true,
+   "T6": true
+  },
+  "note": ""
+ },
+ {
+  "sheet": "06_EVIDENCE_OBJECTS",
+  "row": 104,
+  "col_letter": "K",
+  "field": "period_ar",
+  "old_ar": "سلسلة التحويلات للسنوات المتداخلة 2021–2025 كما نُشرت في التقرير السنوي 2025 للبنك المركزي اليمني – عدن.",
+  "new_ar": "سلسلة الحوالات للسنوات المتداخلة 2021–2025 كما نُشرت في التقرير السنوي 2025 للبنك المركزي اليمني – عدن.",
+  "occurrences_changed": 1,
+  "en_counterpart": "Remittance series for the overlapping years 2021–2025, as published in the CBY-Aden Annual Report 2025.",
+  "tests": {
+   "T1": true,
+   "T2": true,
+   "T3": true,
+   "T4": true,
+   "T5": true,
+   "T6": true
+  },
+  "note": ""
+ },
+ {
+  "sheet": "06_EVIDENCE_OBJECTS",
+  "row": 104,
+  "col_letter": "M",
+  "field": "universe_ar",
+  "old_ar": "سلسلة التحويلات كما عرّفها ونشرها التقرير السنوي 2025 للبنك المركزي، وليست جميع قنوات التحويل أو تحويلات الأسر المستلمة.",
+  "new_ar": "سلسلة الحوالات كما عرّفها ونشرها التقرير السنوي 2025 للبنك المركزي، وليست جميع قنوات التحويل أو حوالات الأسر المستلمة.",
+  "occurrences_changed": 2,
+  "en_counterpart": "The remittance series as defined and published within the CBY-Aden Annual Report 2025; not all remittance channels or household receipts.",
+  "tests": {
+   "T1": true,
+   "T2": true,
+   "T3": true,
+   "T4": true,
+   "T5": true,
+   "T6": true
+  },
+  "note": "Second occurrence \"تحويلات الأسر المستلمة\" ↔ EN \"household receipts\" (governed by \"remittance\" in \"remittance channels or household receipts\"); swapped as household remittance receipts. قنوات التحويل (singular, channel/act) untouched."
+ },
+ {
+  "sheet": "06_EVIDENCE_OBJECTS",
+  "row": 104,
+  "col_letter": "O",
+  "field": "method_ar",
+  "old_ar": "معدلات نمو سنوية احتسبها هذا المورد من قيم التحويلات في نسخة منشورة واحدة هي التقرير السنوي 2025 للبنك المركزي اليمني – عدن، وقورنت عبر السنوات بوصفها فحصًا منهجيًا.",
+  "new_ar": "معدلات نمو سنوية احتسبها هذا المورد من قيم الحوالات في نسخة منشورة واحدة هي التقرير السنوي 2025 للبنك المركزي اليمني – عدن، وقورنت عبر السنوات بوصفها فحصًا منهجيًا.",
+  "occurrences_changed": 1,
+  "en_counterpart": "Year-on-year growth rates computed by this resource from the remittance values in one published edition, the Central Bank of Yemen – Aden (CBY-Aden) Annual Report 2025, and compared across years as a check on method.",
+  "tests": {
+   "T1": true,
+   "T2": true,
+   "T3": true,
+   "T4": true,
+   "T5": true,
+   "T6": true
+  },
+  "note": ""
+ },
+ {
+  "sheet": "06_EVIDENCE_OBJECTS",
+  "row": 104,
+  "col_letter": "S",
+  "field": "currentness_ar",
+  "old_ar": "يعود النمط إلى سلسلة التحويلات كما نُشرت في التقرير السنوي 2025 للبنك المركزي اليمني – عدن، وقد يتغير إذا راجع البنك المركزي في عدن السلسلة أو نشر تقريرًا سنويًا أحدث.",
+  "new_ar": "يعود النمط إلى سلسلة الحوالات كما نُشرت في التقرير السنوي 2025 للبنك المركزي اليمني – عدن، وقد يتغير إذا راجع البنك المركزي في عدن السلسلة أو نشر تقريرًا سنويًا أحدث.",
+  "occurrences_changed": 1,
+  "en_counterpart": "The pattern refers to the remittance series as published in the Central Bank of Yemen – Aden (CBY-Aden) Annual Report 2025. It may change if CBY-Aden revises the series or publishes a newer annual report.",
+  "tests": {
+   "T1": true,
+   "T2": true,
+   "T3": true,
+   "T4": true,
+   "T5": true,
+   "T6": true
+  },
+  "note": ""
+ },
+ {
+  "sheet": "06_EVIDENCE_OBJECTS",
+  "row": 106,
+  "col_letter": "G",
+  "field": "summary_ar",
+  "old_ar": "يوثق صندوق النقد الدولي جهدًا لإعادة بناء إحصاءات القطاع الخارجي خلال 2024–2025 مع البنك المركزي اليمني – عدن، شمل نموذجًا ديمغرافيًا وسلوكيًا للتحويلات الشخصية في ظل محدودية بيانات القنوات غير الرسمية. يثبت ذلك سياقًا منهجيًا، لكنه لا يثبت الصيغة الدقيقة أو النطاق المستخدم في كل قيمة للتحويلات في تقرير البنك المركزي لعام 2025.",
+  "new_ar": "يوثق صندوق النقد الدولي جهدًا لإعادة بناء إحصاءات القطاع الخارجي خلال 2024–2025 مع البنك المركزي اليمني – عدن، شمل نموذجًا ديمغرافيًا وسلوكيًا للتحويلات الشخصية في ظل محدودية بيانات القنوات غير الرسمية. يثبت ذلك سياقًا منهجيًا، لكنه لا يثبت الصيغة الدقيقة أو النطاق المستخدم في كل قيمة للحوالات في تقرير البنك المركزي لعام 2025.",
+  "occurrences_changed": 1,
+  "en_counterpart": "IMF documents a 2024–2025 external-sector statistical reconstruction effort with CBY-Aden, including a demographic-behavioural personal-transfer model where informal-channel data were limited. This establishes method context, not the exact formula or scope used for every remittance value in the CBY-",
+  "tests": {
+   "T1": true,
+   "T2": true,
+   "T3": true,
+   "T4": true,
+   "T5": true,
+   "T6": true
+  },
+  "note": "Swapped 1 of 2; kept: [T4] ديمغرافيًا وسلوكيًا للتحويلات الشخصية في"
+ },
+ {
+  "sheet": "06_EVIDENCE_OBJECTS",
+  "row": 107,
+  "col_letter": "G",
+  "field": "summary_ar",
+  "old_ar": "عند تحويل سلسلتي التحويلات في التقرير السنوي 2025 للبنك المركزي اليمني – عدن وفي مشاورات المادة الرابعة لعام 2025 لصندوق النقد الدولي إلى رقم قياسي (2021 = 100)، يتطابق المساران تقريبًا حتى 2024: إذ لا يتجاوز أكبر فرق في معدل النمو السنوي خلال 2022–2024 مقدار 0.0032 نقطة مئوية. وخلال 2021–2024 تبلغ نسبة مستوى سلسلة البنك المركزي في عدن إلى مستوى سلسلة الصندوق 1.838 في كل سنة. ويتحرك المساران بعد تحويلهما إلى رقم قياسي بصورة شبه متطابقة، لكن ذلك لا يثبت أن المستويات الخام تغطي النطاق نفسه.",
+  "new_ar": "عند تحويل سلسلتي الحوالات في التقرير السنوي 2025 للبنك المركزي اليمني – عدن وفي مشاورات المادة الرابعة لعام 2025 لصندوق النقد الدولي إلى رقم قياسي (2021 = 100)، يتطابق المساران تقريبًا حتى 2024: إذ لا يتجاوز أكبر فرق في معدل النمو السنوي خلال 2022–2024 مقدار 0.0032 نقطة مئوية. وخلال 2021–2024 تبلغ نسبة مستوى سلسلة البنك المركزي في عدن إلى مستوى سلسلة الصندوق 1.838 في كل سنة. ويتحرك المساران بعد تحويلهما إلى رقم قياسي بصورة شبه متطابقة، لكن ذلك لا يثبت أن المستويات الخام تغطي النطاق نفسه.",
+  "occurrences_changed": 1,
+  "en_counterpart": "When the remittance series in the Central Bank of Yemen – Aden (CBY-Aden) Annual Report 2025 and in the IMF 2025 Article IV consultation are each indexed to 2021 = 100, the two paths are almost identical through 2024: the largest difference in annual growth over 2022–2024 is 0.0032 percentage points",
+  "tests": {
+   "T1": true,
+   "T2": true,
+   "T3": true,
+   "T4": true,
+   "T5": true,
+   "T6": true
+  },
+  "note": ""
+ },
+ {
+  "sheet": "06_EVIDENCE_OBJECTS",
+  "row": 107,
+  "col_letter": "I",
+  "field": "definition_ar",
+  "old_ar": "مسارا النمو السنوي لسلسلتي التحويلات لدى البنك المركزي اليمني – عدن وصندوق النقد الدولي، بعد تحويل كل منهما إلى رقم قياسي (2021 = 100)، مقارنَين خلال 2021–2024.",
+  "new_ar": "مسارا النمو السنوي لسلسلتي الحوالات لدى البنك المركزي اليمني – عدن وصندوق النقد الدولي، بعد تحويل كل منهما إلى رقم قياسي (2021 = 100)، مقارنَين خلال 2021–2024.",
+  "occurrences_changed": 1,
+  "en_counterpart": "The annual growth paths of the CBY-Aden and IMF remittance series, each indexed to 2021 = 100, compared over 2021–2024.",
+  "tests": {
+   "T1": true,
+   "T2": true,
+   "T3": true,
+   "T4": true,
+   "T5": true,
+   "T6": true
+  },
+  "note": ""
+ },
+ {
+  "sheet": "06_EVIDENCE_OBJECTS",
+  "row": 107,
+  "col_letter": "M",
+  "field": "universe_ar",
+  "old_ar": "سلسلة التحويلات المنشورة لدى البنك المركزي اليمني – عدن، وسلسلة صندوق النقد الدولي الخاصة بمناطق الحكومة المعترف بها دوليًا؛ ولا تزال المطابقة الدقيقة بينهما من حيث الجغرافيا والمفهوم غير محسومة.",
+  "new_ar": "سلسلة الحوالات المنشورة لدى البنك المركزي اليمني – عدن، وسلسلة صندوق النقد الدولي الخاصة بمناطق الحكومة المعترف بها دوليًا؛ ولا تزال المطابقة الدقيقة بينهما من حيث الجغرافيا والمفهوم غير محسومة.",
+  "occurrences_changed": 1,
+  "en_counterpart": "The remittance series published by the Central Bank of Yemen – Aden (CBY-Aden) and the IMF series for areas under the internationally recognized government; the exact territorial and conceptual mapping between them remains open",
+  "tests": {
+   "T1": true,
+   "T2": true,
+   "T3": true,
+   "T4": true,
+   "T5": true,
+   "T6": true
+  },
+  "note": ""
+ },
+ {
+  "sheet": "06_EVIDENCE_OBJECTS",
+  "row": 107,
+  "col_letter": "O",
+  "field": "method_ar",
+  "old_ar": "احتسبها هذا المورد من قيم منشورة: سلسلة التحويلات في التقرير السنوي 2025 للبنك المركزي اليمني – عدن (2,900.22؛ 3,066.58؛ 3,240.46؛ 3,422.16 مليون دولار للأعوام 2021–2024)، وسلسلة تقرير خبراء صندوق النقد الدولي لمشاورات المادة الرابعة لعام 2025 (1,577.7؛ 1,668.2؛ 1,762.8؛ 1,861.7 مليون دولار). قُسمت كل سلسلة على قيمتها في 2021 وضُربت في 100، ثم قورنت معدلات النمو السنوية للفترة 2022–2024، وحُسبت نسبة المستوى بقسمة قيمة البنك المركزي في عدن على قيمة الصندوق لكل سنة.",
+  "new_ar": "احتسبها هذا المورد من قيم منشورة: سلسلة الحوالات في التقرير السنوي 2025 للبنك المركزي اليمني – عدن (2,900.22؛ 3,066.58؛ 3,240.46؛ 3,422.16 مليون دولار للأعوام 2021–2024)، وسلسلة تقرير خبراء صندوق النقد الدولي لمشاورات المادة الرابعة لعام 2025 (1,577.7؛ 1,668.2؛ 1,762.8؛ 1,861.7 مليون دولار). قُسمت كل سلسلة على قيمتها في 2021 وضُربت في 100، ثم قورنت معدلات النمو السنوية للفترة 2022–2024، وحُسبت نسبة المستوى بقسمة قيمة البنك المركزي في عدن على قيمة الصندوق لكل سنة.",
+  "occurrences_changed": 1,
+  "en_counterpart": "Computed by this resource from published values: the Central Bank of Yemen – Aden (CBY-Aden) Annual Report 2025 remittance series (2,900.22; 3,066.58; 3,240.46; 3,422.16 US$ million for 2021–2024) and the IMF 2025 Article IV staff-report series (1,577.7; 1,668.2; 1,762.8; 1,861.7 US$ million). Each ",
+  "tests": {
+   "T1": true,
+   "T2": true,
+   "T3": true,
+   "T4": true,
+   "T5": true,
+   "T6": true
+  },
+  "note": ""
+ },
+ {
+  "sheet": "06_EVIDENCE_OBJECTS",
+  "row": 109,
+  "col_letter": "G",
+  "field": "summary_ar",
+  "old_ar": "لا تعرض واجهات البنك الدولي العامة الخاصة بالتحويلات تاريخ اليمن بصورة موحدة. فقد أظهرت واجهةٌ اطُّلع عليها في 10 سبتمبر 2026 نطاقًا أقدم، بينما احتوت واجهات أخرى ونسخ سابقة موثقة جرى الاطلاع عليها على مشاهدات أحدث. هذا اختلاف في ما تعرضه الواجهات وفي تتبع المصدر، وليس دليلًا على غياب البيانات الأحدث من مجموعة البيانات الأساسية.",
+  "new_ar": "لا تعرض واجهات البنك الدولي العامة الخاصة بالحوالات تاريخ اليمن بصورة موحدة. فقد أظهرت واجهةٌ اطُّلع عليها في 10 سبتمبر 2026 نطاقًا أقدم، بينما احتوت واجهات أخرى ونسخ سابقة موثقة جرى الاطلاع عليها على مشاهدات أحدث. هذا اختلاف في ما تعرضه الواجهات وفي تتبع المصدر، وليس دليلًا على غياب البيانات الأحدث من مجموعة البيانات الأساسية.",
+  "occurrences_changed": 1,
+  "en_counterpart": "World Bank public remittance interfaces do not expose Yemen history uniformly. One interface, reviewed on 10 September 2026, showed an older span of years, while other World Bank interfaces and earlier documented retrievals contained later observations. The difference reflects what each interface di",
+  "tests": {
+   "T1": true,
+   "T2": true,
+   "T3": true,
+   "T4": true,
+   "T5": true,
+   "T6": true
+  },
+  "note": ""
+ },
+ {
+  "sheet": "06_EVIDENCE_OBJECTS",
+  "row": 109,
+  "col_letter": "I",
+  "field": "definition_ar",
+  "old_ar": "الفرق، كما اطُّلع عليه في 10 سبتمبر 2026، بين نطاق مشاهدات التحويلات لليمن في إحدى واجهات بيانات البنك الدولي العامة والمشاهدات الأحدث في واجهات أخرى للبنك الدولي وفي نسخ وصول سابقة موثقة.",
+  "new_ar": "الفرق، كما اطُّلع عليه في 10 سبتمبر 2026، بين نطاق مشاهدات الحوالات لليمن في إحدى واجهات بيانات البنك الدولي العامة والمشاهدات الأحدث في واجهات أخرى للبنك الدولي وفي نسخ وصول سابقة موثقة.",
+  "occurrences_changed": 1,
+  "en_counterpart": "The difference, as reviewed on 10 September 2026, between the span of Yemen remittance observations shown on one World Bank public data interface and the later observations on other World Bank interfaces and in earlier documented access.",
+  "tests": {
+   "T1": true,
+   "T2": true,
+   "T3": true,
+   "T4": true,
+   "T5": true,
+   "T6": true
+  },
+  "note": ""
+ },
+ {
+  "sheet": "08_READINGS",
+  "row": 5,
+  "col_letter": "G",
+  "field": "question_ar",
+  "old_ar": "عندما يعطي تقريران رسميان قيمتين مختلفتين للتحويلات في السنة نفسها، ما الذي تغيّر: الاقتصاد أم القياس؟",
+  "new_ar": "عندما يعطي تقريران رسميان قيمتين مختلفتين للحوالات في السنة نفسها، ما الذي تغيّر: الاقتصاد أم القياس؟",
+  "occurrences_changed": 1,
+  "en_counterpart": "When two official reports give different remittance values for the same year, what changed: the economy or the measurement?",
+  "tests": {
+   "T1": true,
+   "T2": true,
+   "T3": true,
+   "T4": true,
+   "T5": true,
+   "T6": true
+  },
+  "note": ""
+ },
+ {
+  "sheet": "08_READINGS",
+  "row": 5,
+  "col_letter": "I",
+  "field": "thesis_ar",
+  "old_ar": "تعطي التقارير السنوية المتتالية للبنك المركزي اليمني – عدن قيمتين متباينتين تباينًا كبيرًا للتحويلات في عام 2024. ومراجعة بهذا الحجم حدثٌ في القياس ينبغي تفسيره قبل أن يُقرأ قصةً اقتصادية.",
+  "new_ar": "تعطي التقارير السنوية المتتالية للبنك المركزي اليمني – عدن قيمتين متباينتين تباينًا كبيرًا للحوالات في عام 2024. ومراجعة بهذا الحجم حدثٌ في القياس ينبغي تفسيره قبل أن يُقرأ قصةً اقتصادية.",
+  "occurrences_changed": 1,
+  "en_counterpart": "Successive annual reports of the Central Bank of Yemen – Aden give very different remittance values for 2024. A revision of this size is a measurement event to be explained before it can be read as an economic story.",
+  "tests": {
+   "T1": true,
+   "T2": true,
+   "T3": true,
+   "T4": true,
+   "T5": true,
+   "T6": true
+  },
+  "note": ""
+ },
+ {
+  "sheet": "08_READINGS",
+  "row": 5,
+  "col_letter": "P",
+  "field": "prohibited_inference_ar",
+  "old_ar": "لا توجد سلسلة تمثل وحدها المستوى الصحيح؛ ولا يصلح معامل واحد — مثل النسبة شبه الثابتة البالغة 1.838 بين سلسلتي التحويلات لدى البنك المركزي اليمني – عدن وصندوق النقد الدولي، أو حصة السكان البالغة 33% التي استخدمها الصندوق للمناطق التي تُدار من عدن — معاملَ تحويل موحّدًا ينطبق على كل السلاسل؛ ولا يمثل صافي السهو والخطأ تحويلات مخفية؛ ولا يُعتمد تقدير ناتج عن نموذج متبقي ميزان المدفوعات خطَّ أساس.",
+  "new_ar": "لا توجد سلسلة تمثل وحدها المستوى الصحيح؛ ولا يصلح معامل واحد — مثل النسبة شبه الثابتة البالغة 1.838 بين سلسلتي الحوالات لدى البنك المركزي اليمني – عدن وصندوق النقد الدولي، أو حصة السكان البالغة 33% التي استخدمها الصندوق للمناطق التي تُدار من عدن — معاملَ تحويل موحّدًا ينطبق على كل السلاسل؛ ولا يمثل صافي السهو والخطأ حوالات مخفية؛ ولا يُعتمد تقدير ناتج عن نموذج متبقي ميزان المدفوعات خطَّ أساس.",
+  "occurrences_changed": 2,
+  "en_counterpart": "No single series is the correct level; no single scale factor — such as the roughly constant ratio of 1.838 between the CBY-Aden and IMF remittance series, or the 33% population share the IMF used for areas administered from Aden — is a universal conversion; net errors and omissions are not hidden r",
+  "tests": {
+   "T1": true,
+   "T2": true,
+   "T3": true,
+   "T4": true,
+   "T5": true,
+   "T6": true
+  },
+  "note": ""
+ },
+ {
+  "sheet": "11_VISUAL_LIBRARY",
+  "row": 12,
+  "col_letter": "H",
+  "field": "what_it_shows_ar",
+  "old_ar": "يعرض العلاقات الموثقة بين الناس والقدرات، والمنشآت والدخل، ومقدمي الخدمات، وبنية المدفوعات، وتدفقات التحويلات ورأس المال، والتنظيم والحماية، والقيود المُمكِّنة أو المعطلة. وتذكر كل علاقة ما تسنده الأدلة وما لا تثبته؛ ولا تحمل أي علاقة تقديرًا لقوة الدليل، ولا توجد درجة مركبة.",
+  "new_ar": "يعرض العلاقات الموثقة بين الناس والقدرات، والمنشآت والدخل، ومقدمي الخدمات، وبنية المدفوعات، وتدفقات الحوالات ورأس المال، والتنظيم والحماية، والقيود المُمكِّنة أو المعطلة. وتذكر كل علاقة ما تسنده الأدلة وما لا تثبته؛ ولا تحمل أي علاقة تقديرًا لقوة الدليل، ولا توجد درجة مركبة.",
+  "occurrences_changed": 1,
+  "en_counterpart": "The documented relationships between people and capability, firms and income, providers, payment rails, remittance and capital flows, regulation and protection, and enabling constraints. Each relationship states what the evidence supports and what it does not establish; no link carries an evidence-s",
+  "tests": {
+   "T1": true,
+   "T2": true,
+   "T3": true,
+   "T4": true,
+   "T5": true,
+   "T6": true
+  },
+  "note": ""
+ },
+ {
+  "sheet": "11_VISUAL_LIBRARY",
+  "row": 12,
+  "col_letter": "V",
+  "field": "accessible_summary_ar",
+  "old_ar": "يصف هذا المورد الشمول المالي في اليمن بوصفه أجزاء مترابطة: الناس والقدرات، والمنشآت والدخل، ومقدمو الخدمات، وبنية المدفوعات، وتدفقات التحويلات ورأس المال، والتنظيم والحماية، والعوامل المُمكِّنة والقيود. وتصف العلاقات الموثقة السياق أو الاعتماد أو آليات محتملة حين تسندها الأدلة؛ ولا تحمل أي علاقة تقديرًا لقوة الدليل، ولا تشكل الأجزاء درجة مركبة، ولا تُظهر أن جزءًا منها سبب لآخر.",
+  "new_ar": "يصف هذا المورد الشمول المالي في اليمن بوصفه أجزاء مترابطة: الناس والقدرات، والمنشآت والدخل، ومقدمو الخدمات، وبنية المدفوعات، وتدفقات الحوالات ورأس المال، والتنظيم والحماية، والعوامل المُمكِّنة والقيود. وتصف العلاقات الموثقة السياق أو الاعتماد أو آليات محتملة حين تسندها الأدلة؛ ولا تحمل أي علاقة تقديرًا لقوة الدليل، ولا تشكل الأجزاء درجة مركبة، ولا تُظهر أن جزءًا منها سبب لآخر.",
+  "occurrences_changed": 1,
+  "en_counterpart": "Financial inclusion in Yemen is described here as connected parts: people and capability, firms and income, providers, payment rails, remittance and capital flows, regulation and protection, and enabling conditions and constraints. The documented relationships describe context, dependency or plausib",
+  "tests": {
+   "T1": true,
+   "T2": true,
+   "T3": true,
+   "T4": true,
+   "T5": true,
+   "T6": true
+  },
+  "note": ""
+ },
+ {
+  "sheet": "11_VISUAL_LIBRARY",
+  "row": 28,
+  "col_letter": "C",
+  "field": "title_ar",
+  "old_ar": "التحويلات: القيم التاريخية الواردة في تقارير صندوق النقد الدولي والتقدير والتوقعات",
+  "new_ar": "الحوالات: القيم التاريخية الواردة في تقارير صندوق النقد الدولي والتقدير والتوقعات",
+  "occurrences_changed": 1,
+  "en_counterpart": "Remittances — IMF-reported history, estimate and projections",
+  "tests": {
+   "T1": true,
+   "T2": true,
+   "T3": true,
+   "T4": true,
+   "T5": true,
+   "T6": true
+  },
+  "note": ""
+ },
+ {
+  "sheet": "11_VISUAL_LIBRARY",
+  "row": 28,
+  "col_letter": "F",
+  "field": "question_ar",
+  "old_ar": "ما الذي يورده صندوق النقد الدولي عن تدفقات التحويلات السابقة، وما الذي يظل تقديرًا أو توقعًا؟",
+  "new_ar": "ما الذي يورده صندوق النقد الدولي عن تدفقات الحوالات السابقة، وما الذي يظل تقديرًا أو توقعًا؟",
+  "occurrences_changed": 1,
+  "en_counterpart": "What does the IMF report for past remittance inflows, and what is only estimated or projected?",
+  "tests": {
+   "T1": true,
+   "T2": true,
+   "T3": true,
+   "T4": true,
+   "T5": true,
+   "T6": true
+  },
+  "note": ""
+ },
+ {
+  "sheet": "11_VISUAL_LIBRARY",
+  "row": 28,
+  "col_letter": "V",
+  "field": "accessible_summary_ar",
+  "old_ar": "في سلسلة التحويلات الواردة في ميزان المدفوعات، يورد تقرير خبراء صندوق النقد الدولي لمشاورات المادة الرابعة لعام 2025 قيم 2018–2024 بوصفها قيمًا تاريخية تستند إلى حسابات خبراء الصندوق، ومنها 1,861.7 مليون دولار في 2024. ويورد ملحق لاحق للمشاورات نفسها تقديرًا قدره 1,977 مليون دولار لعام 2025، وتوقعات ترتفع من 2,159 مليون دولار في 2026 إلى 3,110 مليون دولار في 2030. ولأن الوثيقتين صدرتا في وقتين مختلفين، لا يُوصل الجزءان في سلسلة واحدة متصلة. وتغطي السلسلة النطاق التحليلي للصندوق الخاص بالمناطق الخاضعة للحكومة المعترف بها دوليًا، لا اليمن كله.",
+  "new_ar": "في سلسلة الحوالات الواردة في ميزان المدفوعات، يورد تقرير خبراء صندوق النقد الدولي لمشاورات المادة الرابعة لعام 2025 قيم 2018–2024 بوصفها قيمًا تاريخية تستند إلى حسابات خبراء الصندوق، ومنها 1,861.7 مليون دولار في 2024. ويورد ملحق لاحق للمشاورات نفسها تقديرًا قدره 1,977 مليون دولار لعام 2025، وتوقعات ترتفع من 2,159 مليون دولار في 2026 إلى 3,110 مليون دولار في 2030. ولأن الوثيقتين صدرتا في وقتين مختلفين، لا يُوصل الجزءان في سلسلة واحدة متصلة. وتغطي السلسلة النطاق التحليلي للصندوق الخاص بالمناطق الخاضعة للحكومة المعترف بها دوليًا، لا اليمن كله.",
+  "occurrences_changed": 1,
+  "en_counterpart": "For external-sector remittances, the IMF's 2025 Article IV staff report gives 2018–2024 as reported history based on staff calculations, including US$1,861.7 million in 2024. A later supplement to the same consultation gives US$1,977 million as the 2025 estimate and projections rising from US$2,159 ",
+  "tests": {
+   "T1": true,
+   "T2": true,
+   "T3": true,
+   "T4": true,
+   "T5": true,
+   "T6": true
+  },
+  "note": ""
+ },
+ {
+  "sheet": "11_VISUAL_LIBRARY",
+  "row": 31,
+  "col_letter": "H",
+  "field": "what_it_shows_ar",
+  "old_ar": "يضع قيمة التحويلات الواردة في ميزان المدفوعات لعام 2024 كما نشرها التقرير السنوي للبنك المركزي اليمني – عدن لعام 2024 إلى جانب القيمة المعاد عرضها للسنة نفسها في تقرير 2025، ثم يعرض على حدة مساري البنك المركزي في عدن وصندوق النقد الدولي بعد تحويل كلٍّ منهما إلى رقم قياسي (2021 = 100).",
+  "new_ar": "يضع قيمة الحوالات الواردة في ميزان المدفوعات لعام 2024 كما نشرها التقرير السنوي للبنك المركزي اليمني – عدن لعام 2024 إلى جانب القيمة المعاد عرضها للسنة نفسها في تقرير 2025، ثم يعرض على حدة مساري البنك المركزي في عدن وصندوق النقد الدولي بعد تحويل كلٍّ منهما إلى رقم قياسي (2021 = 100).",
+  "occurrences_changed": 1,
+  "en_counterpart": "The 2024 remittance value published in the 2024 annual report of the Central Bank of Yemen – Aden (CBY-Aden) sits beside the value restated for the same year in its 2025 report; the CBY-Aden and IMF paths, each indexed to 2021 = 100, are shown separately.",
+  "tests": {
+   "T1": true,
+   "T2": true,
+   "T3": true,
+   "T4": true,
+   "T5": true,
+   "T6": true
+  },
+  "note": ""
+ },
+ {
+  "sheet": "11_VISUAL_LIBRARY",
+  "row": 31,
+  "col_letter": "V",
+  "field": "accessible_summary_ar",
+  "old_ar": "نشر التقرير السنوي للبنك المركزي اليمني – عدن لعام 2024 قيمةً للتحويلات الواردة في ميزان المدفوعات لعام 2024 قدرها 6,245 مليون دولار أمريكي، ثم أعاد تقرير 2025 عرض عام 2024 نفسه بقيمة 3,422.16 مليون دولار؛ وهذه إعادة عرض لقيمة السنة نفسها، لا تراجع بين عامين. وعند تحويل مسار تقرير البنك المركزي في عدن لعام 2025 ومسار تقرير خبراء صندوق النقد الدولي لمشاورات المادة الرابعة 2025 إلى رقم قياسي (2021 = 100)، يبلغ كلٌّ منهما نحو 118 في 2024. والمساران شبه متطابقين: لا يتجاوز الفرق في معدل النمو السنوي خلال 2022–2024 نحو 0.0032 نقطة مئوية، ويعادل مستوى البنك المركزي في عدن نحو 1.838 مرة مستوى صندوق النقد طوال 2021–2024. لذلك لا يمكن قراءتهما تأكيدين مستقلين للاتجاه، ولا تتكافأ مستوياتهما الخام.",
+  "new_ar": "نشر التقرير السنوي للبنك المركزي اليمني – عدن لعام 2024 قيمةً للحوالات الواردة في ميزان المدفوعات لعام 2024 قدرها 6,245 مليون دولار أمريكي، ثم أعاد تقرير 2025 عرض عام 2024 نفسه بقيمة 3,422.16 مليون دولار؛ وهذه إعادة عرض لقيمة السنة نفسها، لا تراجع بين عامين. وعند تحويل مسار تقرير البنك المركزي في عدن لعام 2025 ومسار تقرير خبراء صندوق النقد الدولي لمشاورات المادة الرابعة 2025 إلى رقم قياسي (2021 = 100)، يبلغ كلٌّ منهما نحو 118 في 2024. والمساران شبه متطابقين: لا يتجاوز الفرق في معدل النمو السنوي خلال 2022–2024 نحو 0.0032 نقطة مئوية، ويعادل مستوى البنك المركزي في عدن نحو 1.838 مرة مستوى صندوق النقد طوال 2021–2024. لذلك لا يمكن قراءتهما تأكيدين مستقلين للاتجاه، ولا تتكافأ مستوياتهما الخام.",
+  "occurrences_changed": 1,
+  "en_counterpart": "The 2024 annual report of the Central Bank of Yemen – Aden (CBY-Aden) published remittances of US$6,245 million for 2024; the 2025 annual report restated 2024 at US$3,422.16 million. This is a restatement of the same year, not a fall between years. Indexed to 2021 = 100, the CBY-Aden 2025-report pat",
+  "tests": {
+   "T1": true,
+   "T2": true,
+   "T3": true,
+   "T4": true,
+   "T5": true,
+   "T6": true
+  },
+  "note": ""
+ },
+ {
+  "sheet": "11_VISUAL_LIBRARY",
+  "row": 31,
+  "col_letter": "Y",
+  "field": "universe_ar",
+  "old_ar": "التحويلات وفق تعريف كل مصدر: التقريران السنويان للبنك المركزي اليمني – عدن لعامي 2024 و2025؛ وتقرير خبراء صندوق النقد الدولي لمشاورات المادة الرابعة 2025، ضمن النطاق التحليلي للصندوق لمناطق الحكومة المعترف بها دوليًا",
+  "new_ar": "الحوالات وفق تعريف كل مصدر: التقريران السنويان للبنك المركزي اليمني – عدن لعامي 2024 و2025؛ وتقرير خبراء صندوق النقد الدولي لمشاورات المادة الرابعة 2025، ضمن النطاق التحليلي للصندوق لمناطق الحكومة المعترف بها دوليًا",
+  "occurrences_changed": 1,
+  "en_counterpart": "Remittances as defined by each source: annual reports of the Central Bank of Yemen – Aden (CBY-Aden) for 2024 and 2025; IMF 2025 Article IV staff report, on the IMF's analytical scope for areas under the internationally recognized government",
+  "tests": {
+   "T1": true,
+   "T2": true,
+   "T3": true,
+   "T4": true,
+   "T5": true,
+   "T6": true
+  },
+  "note": ""
+ },
+ {
+  "sheet": "14_SYSTEM_CHRONOLOGY",
+  "row": 11,
+  "col_letter": "E",
+  "field": "fact_ar",
+  "old_ar": "أفادت متابعة البنك الدولي بأن الجزء الأكبر من الوديعة السعودية البالغة ملياري دولار لعام 2018 كان قد استُنفد بحلول نهاية يناير 2020، وأبرزت تعدد نظم أسعار الصرف ومخاطر صدمة كوفيد-19 على التحويلات.",
+  "new_ar": "أفادت متابعة البنك الدولي بأن الجزء الأكبر من الوديعة السعودية البالغة ملياري دولار لعام 2018 كان قد استُنفد بحلول نهاية يناير 2020، وأبرزت تعدد نظم أسعار الصرف ومخاطر صدمة كوفيد-19 على الحوالات.",
+  "occurrences_changed": 1,
+  "en_counterpart": "World Bank monitoring reported that the bulk of the 2018 Saudi US$2 billion deposit had been exhausted by end-January 2020 and highlighted multiple exchange-rate regimes and remittance risks from the COVID-19 shock.",
+  "tests": {
+   "T1": true,
+   "T2": true,
+   "T3": true,
+   "T4": true,
+   "T5": true,
+   "T6": true
+  },
+  "note": ""
+ },
+ {
+  "sheet": "14_SYSTEM_CHRONOLOGY",
+  "row": 11,
+  "col_letter": "I",
+  "field": "system_implication_ar",
+  "old_ar": "ازدادت درجة الترابط بين دعم النقد الأجنبي والتحويلات وقدرة الاستيراد في ظل نظم صرف مجزأة.",
+  "new_ar": "ازدادت درجة الترابط بين دعم النقد الأجنبي والحوالات وقدرة الاستيراد في ظل نظم صرف مجزأة.",
+  "occurrences_changed": 1,
+  "en_counterpart": "FX support, remittances and import capacity became increasingly interdependent under fragmented exchange regimes.",
+  "tests": {
+   "T1": true,
+   "T2": true,
+   "T3": true,
+   "T4": true,
+   "T5": true,
+   "T6": true
+  },
+  "note": ""
+ },
+ {
+  "sheet": "14_SYSTEM_CHRONOLOGY",
+  "row": 11,
+  "col_letter": "K",
+  "field": "fi_relevance_ar",
+  "old_ar": "تكتسب التحويلات أهميتها بوصفها تدفقًا يصل إلى الأسر وجزءًا من ظروف النقد الأجنبي والمدفوعات الأوسع.",
+  "new_ar": "تكتسب الحوالات أهميتها بوصفها تدفقًا يصل إلى الأسر وجزءًا من ظروف النقد الأجنبي والمدفوعات الأوسع.",
+  "occurrences_changed": 1,
+  "en_counterpart": "Remittances matter as both household flows and part of broader FX/payment conditions.",
+  "tests": {
+   "T1": true,
+   "T2": true,
+   "T3": true,
+   "T4": true,
+   "T5": true,
+   "T6": true
+  },
+  "note": ""
+ },
+ {
+  "sheet": "14_SYSTEM_CHRONOLOGY",
+  "row": 11,
+  "col_letter": "M",
+  "field": "does_not_establish_ar",
+  "old_ar": "مخاطر تراجع التحويلات لا تعني حدوث انخفاض فعلي ما لم يُقَس بصورة مستقلة.",
+  "new_ar": "مخاطر تراجع الحوالات لا تعني حدوث انخفاض فعلي ما لم يُقَس بصورة مستقلة.",
+  "occurrences_changed": 1,
+  "en_counterpart": "A stated risk to remittances is not an observed decline unless separately measured.",
+  "tests": {
+   "T1": true,
+   "T2": true,
+   "T3": true,
+   "T4": true,
+   "T5": true,
+   "T6": true
+  },
+  "note": ""
+ },
+ {
+  "sheet": "14_SYSTEM_CHRONOLOGY",
+  "row": 15,
+  "col_letter": "E",
+  "field": "fact_ar",
+  "old_ar": "ضمن إطار الاقتصاد الكلي الذي يعده صندوق النقد الدولي للمناطق الخاضعة للحكومة المعترف بها دوليًا، تحسن عجز الحساب الجاري من نحو 40.5% من الناتج المحلي الإجمالي في 2022 إلى متوسط يقارب 14.5% في 2023–2024، بما يعكس ضغط الواردات وقوة التحويلات والمنح الثنائية رغم توقف صادرات النفط.",
+  "new_ar": "ضمن إطار الاقتصاد الكلي الذي يعده صندوق النقد الدولي للمناطق الخاضعة للحكومة المعترف بها دوليًا، تحسن عجز الحساب الجاري من نحو 40.5% من الناتج المحلي الإجمالي في 2022 إلى متوسط يقارب 14.5% في 2023–2024، بما يعكس ضغط الواردات وقوة الحوالات والمنح الثنائية رغم توقف صادرات النفط.",
+  "occurrences_changed": 1,
+  "en_counterpart": "In the IMF’s macroeconomic framework for areas under the internationally recognized government, the current-account deficit improved from about 40.5% of GDP in 2022 to an average of about 14.5% in 2023–24, reflecting import compression, strong remittances and bilateral grants despite the halt in oil",
+  "tests": {
+   "T1": true,
+   "T2": true,
+   "T3": true,
+   "T4": true,
+   "T5": true,
+   "T6": true
+  },
+  "note": ""
+ },
+ {
+  "sheet": "14_SYSTEM_CHRONOLOGY",
+  "row": 15,
+  "col_letter": "K",
+  "field": "fi_relevance_ar",
+  "old_ar": "تتفاعل التحويلات والواردات وأوضاع النقد الأجنبي، لكن الرصيد الكلي لا يبين من استخدم الخدمات الرسمية.",
+  "new_ar": "تتفاعل الحوالات والواردات وأوضاع النقد الأجنبي، لكن الرصيد الكلي لا يبين من استخدم الخدمات الرسمية.",
+  "occurrences_changed": 1,
+  "en_counterpart": "Remittances, imports and FX conditions interact, but the aggregate balance does not reveal who used formal services.",
+  "tests": {
+   "T1": true,
+   "T2": true,
+   "T3": true,
+   "T4": true,
+   "T5": true,
+   "T6": true
+  },
+  "note": ""
+ },
+ {
+  "sheet": "14_SYSTEM_CHRONOLOGY",
+  "row": 18,
+  "col_letter": "E",
+  "field": "fact_ar",
+  "old_ar": "تُظهر مقارنة نسختي التقرير السنوي للبنك المركزي اليمني – عدن أن قيمة التحويلات للسنة نفسها 2024 وردت عند 6,245 مليون دولار في نسخة التقرير السنوي لعام 2024 مقابل 3,422.16 مليون دولار في نسخة 2025، أي مراجعة هبوطية بنحو 45.2%.",
+  "new_ar": "تُظهر مقارنة نسختي التقرير السنوي للبنك المركزي اليمني – عدن أن قيمة الحوالات للسنة نفسها 2024 وردت عند 6,245 مليون دولار في نسخة التقرير السنوي لعام 2024 مقابل 3,422.16 مليون دولار في نسخة 2025، أي مراجعة هبوطية بنحو 45.2%.",
+  "occurrences_changed": 1,
+  "en_counterpart": "The 2024 annual report of the Central Bank of Yemen – Aden (CBY-Aden) gives remittances for 2024 of USD 6,245 million; its 2025 annual report restates the same year at USD 3,422.16 million, a downward revision of about 45.2%.",
+  "tests": {
+   "T1": true,
+   "T2": true,
+   "T3": true,
+   "T4": true,
+   "T5": true,
+   "T6": true
+  },
+  "note": ""
+ },
+ {
+  "sheet": "14_SYSTEM_CHRONOLOGY",
+  "row": 18,
+  "col_letter": "K",
+  "field": "fi_relevance_ar",
+  "old_ar": "يجب أن تعرض قراءات التحويلات تغير النسخة والمنهج قبل استخلاص استنتاجات سلوكية.",
+  "new_ar": "يجب أن تعرض قراءات الحوالات تغير النسخة والمنهج قبل استخلاص استنتاجات سلوكية.",
+  "occurrences_changed": 1,
+  "en_counterpart": "Any analysis of remittance trends must disclose changes between report editions and in method before drawing behavioural conclusions.",
+  "tests": {
+   "T1": true,
+   "T2": true,
+   "T3": true,
+   "T4": true,
+   "T5": true,
+   "T6": true
+  },
+  "note": ""
+ },
+ {
+  "sheet": "14_SYSTEM_CHRONOLOGY",
+  "row": 18,
+  "col_letter": "M",
+  "field": "does_not_establish_ar",
+  "old_ar": "تعديل مستوى 2024 لا يثبت أن التحويلات انهارت بنسبة 45.2% خلال 2024.",
+  "new_ar": "تعديل مستوى 2024 لا يثبت أن الحوالات انهارت بنسبة 45.2% خلال 2024.",
+  "occurrences_changed": 1,
+  "en_counterpart": "A revised 2024 level is not evidence that remittances collapsed by 45.2% during 2024.",
+  "tests": {
+   "T1": true,
+   "T2": true,
+   "T3": true,
+   "T4": true,
+   "T5": true,
+   "T6": true
+  },
+  "note": ""
+ },
+ {
+  "sheet": "14_SYSTEM_CHRONOLOGY",
+  "row": 22,
+  "col_letter": "K",
+  "field": "fi_relevance_ar",
+  "old_ar": "تؤثر أوضاع سعر الصرف في الأسعار وقيمة التحويلات عند صرفها بالعملة المحلية وتكاليف المنشآت وحوافز القنوات المالية.",
+  "new_ar": "تؤثر أوضاع سعر الصرف في الأسعار وقيمة الحوالات عند صرفها بالعملة المحلية وتكاليف المنشآت وحوافز القنوات المالية.",
+  "occurrences_changed": 1,
+  "en_counterpart": "Exchange-rate conditions affect prices, remittance conversion, firm costs and channel incentives.",
+  "tests": {
+   "T1": true,
+   "T2": true,
+   "T3": true,
+   "T4": true,
+   "T5": true,
+   "T6": true
+  },
+  "note": ""
+ },
+ {
+  "sheet": "14_SYSTEM_CHRONOLOGY",
+  "row": 28,
+  "col_letter": "E",
+  "field": "fact_ar",
+  "old_ar": "تعامل السلسلة الزمنية التحويلات والدعم الدولي ومزادات النقد الأجنبي وضغط الواردات وتغير الاحتياطيات وسيولة البنوك والإجراءات التنظيمية وبنية المدفوعات بوصفها أدلة مترابطة لا يحل بعضها محل بعض.",
+  "new_ar": "تعامل السلسلة الزمنية الحوالات والدعم الدولي ومزادات النقد الأجنبي وضغط الواردات وتغير الاحتياطيات وسيولة البنوك والإجراءات التنظيمية وبنية المدفوعات بوصفها أدلة مترابطة لا يحل بعضها محل بعض.",
+  "occurrences_changed": 1,
+  "en_counterpart": "The chronology treats remittances, international support, FX auctions, import compression, reserve changes, bank liquidity, regulatory actions and payment infrastructure as related but non-interchangeable kinds of evidence.",
+  "tests": {
+   "T1": true,
+   "T2": true,
+   "T3": true,
+   "T4": true,
+   "T5": true,
+   "T6": true
+  },
+  "note": ""
+ },
+ {
+  "sheet": "15_SOURCE_LIBRARY",
+  "row": 104,
+  "col_letter": "N",
+  "field": "why_it_matters_ar",
+  "old_ar": "يوفر الإطار الاقتصادي والمالي الأحدث لصندوق النقد في مشاورات المادة الرابعة، وسياق القطاع الخارجي والمصارف، والمعلومات المنهجية المستخدمة لتفسير التحويلات والاحتياطيات وأوضاع القطاع المصرفي وسياق الإصلاح.",
+  "new_ar": "يوفر الإطار الاقتصادي والمالي الأحدث لصندوق النقد في مشاورات المادة الرابعة، وسياق القطاع الخارجي والمصارف، والمعلومات المنهجية المستخدمة لتفسير الحوالات والاحتياطيات وأوضاع القطاع المصرفي وسياق الإصلاح.",
+  "occurrences_changed": 1,
+  "en_counterpart": "Provides the most recent IMF Article IV macro-financial framework, external-sector and banking context, and methodological information used to interpret remittances, reserves, banking conditions and reform context.",
+  "tests": {
+   "T1": true,
+   "T2": true,
+   "T3": true,
+   "T4": true,
+   "T5": true,
+   "T6": true
+  },
+  "note": ""
+ },
+ {
+  "sheet": "15_SOURCE_LIBRARY",
+  "row": 112,
+  "col_letter": "N",
+  "field": "why_it_matters_ar",
+  "old_ar": "يوفر إصدار عام 2025 من التقرير السنوي، المستخدم لفحص التعديلات على قيم التحويلات في ميزان المدفوعات وعلى السلاسل ذات الصلة بالقطاع الخارجي.",
+  "new_ar": "يوفر إصدار عام 2025 من التقرير السنوي، المستخدم لفحص التعديلات على قيم الحوالات في ميزان المدفوعات وعلى السلاسل ذات الصلة بالقطاع الخارجي.",
+  "occurrences_changed": 1,
+  "en_counterpart": "Provides the 2025 edition of the annual report, used to examine revisions to remittance values in the balance of payments and to related external-sector series.",
+  "tests": {
+   "T1": true,
+   "T2": true,
+   "T3": true,
+   "T4": true,
+   "T5": true,
+   "T6": true
+  },
+  "note": ""
+ },
+ {
+  "sheet": "15_SOURCE_LIBRARY",
+  "row": 113,
+  "col_letter": "N",
+  "field": "why_it_matters_ar",
+  "old_ar": "يوفر إصدار عام 2024 من التقرير السنوي، المستخدم لمقارنة قيم التحويلات وبنود ميزان المدفوعات للسنة المرجعية نفسها عبر الإصدارات المتعاقبة للتقرير السنوي.",
+  "new_ar": "يوفر إصدار عام 2024 من التقرير السنوي، المستخدم لمقارنة قيم الحوالات وبنود ميزان المدفوعات للسنة المرجعية نفسها عبر الإصدارات المتعاقبة للتقرير السنوي.",
+  "occurrences_changed": 1,
+  "en_counterpart": "Provides the 2024 edition of the annual report, used to compare remittance and balance-of-payments values for the same reference year across successive annual reports.",
+  "tests": {
+   "T1": true,
+   "T2": true,
+   "T3": true,
+   "T4": true,
+   "T5": true,
+   "T6": true
+  },
+  "note": ""
+ },
+ {
+  "sheet": "23_REMITTANCES",
+  "row": 18,
+  "col_letter": "V",
+  "field": "caveat_ar",
+  "old_ar": "المتوسط خاص بقيمة التحويل المحددة، وقد يختلف باختلاف مقدم الخدمة وأداة الدفع وطريقة الاستلام والرسوم وهامش سعر الصرف. ولا يمثل تكلفة جميع التحويلات الواردة إلى اليمن.",
+  "new_ar": "المتوسط خاص بقيمة التحويل المحددة، وقد يختلف باختلاف مقدم الخدمة وأداة الدفع وطريقة الاستلام والرسوم وهامش سعر الصرف. ولا يمثل تكلفة جميع الحوالات الواردة إلى اليمن.",
+  "occurrences_changed": 1,
+  "en_counterpart": "Average is transaction-amount specific and can vary by provider, payment instrument, receiving method, fee and FX margin. It is not a cost for all remittances into Yemen.",
+  "tests": {
+   "T1": true,
+   "T2": true,
+   "T3": true,
+   "T4": true,
+   "T5": true,
+   "T6": true
+  },
+  "note": ""
+ },
+ {
+  "sheet": "23_REMITTANCES",
+  "row": 19,
+  "col_letter": "V",
+  "field": "caveat_ar",
+  "old_ar": "المتوسط خاص بقيمة التحويل المحددة، وقد يختلف باختلاف مقدم الخدمة وأداة الدفع وطريقة الاستلام والرسوم وهامش سعر الصرف. ولا يمثل تكلفة جميع التحويلات الواردة إلى اليمن.",
+  "new_ar": "المتوسط خاص بقيمة التحويل المحددة، وقد يختلف باختلاف مقدم الخدمة وأداة الدفع وطريقة الاستلام والرسوم وهامش سعر الصرف. ولا يمثل تكلفة جميع الحوالات الواردة إلى اليمن.",
+  "occurrences_changed": 1,
+  "en_counterpart": "Average is transaction-amount specific and can vary by provider, payment instrument, receiving method, fee and FX margin. It is not a cost for all remittances into Yemen.",
+  "tests": {
+   "T1": true,
+   "T2": true,
+   "T3": true,
+   "T4": true,
+   "T5": true,
+   "T6": true
+  },
+  "note": ""
+ },
+ {
+  "sheet": "23_REMITTANCES",
+  "row": 20,
+  "col_letter": "V",
+  "field": "caveat_ar",
+  "old_ar": "المتوسط خاص بقيمة التحويل المحددة، وقد يختلف باختلاف مقدم الخدمة وأداة الدفع وطريقة الاستلام والرسوم وهامش سعر الصرف. ولا يمثل تكلفة جميع التحويلات الواردة إلى اليمن.",
+  "new_ar": "المتوسط خاص بقيمة التحويل المحددة، وقد يختلف باختلاف مقدم الخدمة وأداة الدفع وطريقة الاستلام والرسوم وهامش سعر الصرف. ولا يمثل تكلفة جميع الحوالات الواردة إلى اليمن.",
+  "occurrences_changed": 1,
+  "en_counterpart": "Average is transaction-amount specific and can vary by provider, payment instrument, receiving method, fee and FX margin. It is not a cost for all remittances into Yemen.",
+  "tests": {
+   "T1": true,
+   "T2": true,
+   "T3": true,
+   "T4": true,
+   "T5": true,
+   "T6": true
+  },
+  "note": ""
+ },
+ {
+  "sheet": "23_REMITTANCES",
+  "row": 21,
+  "col_letter": "V",
+  "field": "caveat_ar",
+  "old_ar": "المتوسط خاص بقيمة التحويل المحددة، وقد يختلف باختلاف مقدم الخدمة وأداة الدفع وطريقة الاستلام والرسوم وهامش سعر الصرف. ولا يمثل تكلفة جميع التحويلات الواردة إلى اليمن.",
+  "new_ar": "المتوسط خاص بقيمة التحويل المحددة، وقد يختلف باختلاف مقدم الخدمة وأداة الدفع وطريقة الاستلام والرسوم وهامش سعر الصرف. ولا يمثل تكلفة جميع الحوالات الواردة إلى اليمن.",
+  "occurrences_changed": 1,
+  "en_counterpart": "Average is transaction-amount specific and can vary by provider, payment instrument, receiving method, fee and FX margin. It is not a cost for all remittances into Yemen.",
+  "tests": {
+   "T1": true,
+   "T2": true,
+   "T3": true,
+   "T4": true,
+   "T5": true,
+   "T6": true
+  },
+  "note": ""
+ },
+ {
+  "sheet": "33_ANALYTICS_MASTER",
+  "row": 13,
+  "col_letter": "I",
+  "field": "interpretation_ar",
+  "old_ar": "نمو سلسلة التحويلات في القطاع الخارجي من 2018 إلى 2024 وفق نفس نسخة المصدر.",
+  "new_ar": "نمو سلسلة الحوالات في القطاع الخارجي من 2018 إلى 2024 وفق نفس نسخة المصدر.",
+  "occurrences_changed": 1,
+  "en_counterpart": "Growth in IMF/Yemeni-authorities external-sector remittance series from 2018 to 2024.",
+  "tests": {
+   "T1": true,
+   "T2": true,
+   "T3": true,
+   "T4": true,
+   "T5": true,
+   "T6": true
+  },
+  "note": ""
+ }
+]

@@ -32,9 +32,15 @@ VISUAL_PLACEMENT = {
 SMALL_MULTIPLES = {"/payments/": ["VIS-POS-TERMINALS", "VIS-POS-TRANSACTIONS", "VIS-POS-VALUE"]}
 
 
+# NB-2 (owner brief of 10 October 2026, B4): the official Creative Commons licence addresses that /rights/ states (deed and
+# legal code, each language's own) are links; no other address in governed text is turned into one.
+CC_LICENCE_URL = re.compile(r"https://creativecommons\.org/licenses/by/4\.0/(?:deed\.ar|legalcode\.(?:en|ar))?(?![\w/.-])")
+
+
 def linkify(escaped: str) -> str:
-    """A governed contact address is actionable; the text is unchanged (presentation only)."""
-    return EMAIL.sub(lambda m: f'<a href="mailto:{m.group(0)}" dir="ltr">{m.group(0)}</a>', escaped)
+    """A governed contact address and an official licence address are actionable; the text is unchanged (presentation only)."""
+    out = EMAIL.sub(lambda m: f'<a href="mailto:{m.group(0)}" dir="ltr">{m.group(0)}</a>', escaped)
+    return CC_LICENCE_URL.sub(lambda m: f'<a href="{m.group(0)}" rel="license" dir="ltr">{m.group(0)}</a>', out)
 
 
 def body_paras(paragraphs, cls: str = "") -> str:

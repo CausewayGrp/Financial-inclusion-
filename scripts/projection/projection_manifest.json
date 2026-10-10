@@ -65,6 +65,16 @@
       "trailing_newline": true
     },
     {
+      "path": "content/terminology_register.json",
+      "kind": "GENERATED",
+      "rule_id": "block_projection",
+      "sheet": "04_NAV_UX",
+      "block": "Terminology register",
+      "stable_key": "term_id",
+      "transformation": "One record per row of the 04 titled block 'Terminology register' (NB-1, owner brief of 10 October 2026, Part B, B5): one governed English and Arabic term per concept, its definition, the variants not to use and the rule.",
+      "trailing_newline": true
+    },
+    {
       "path": "evidence/evidence_objects.json",
       "kind": "GENERATED",
       "rule_id": "keyed_projection",

@@ -1,7 +1,7 @@
 {
   "schema_version": "1.0",
   "contract_id": "PUBLIC-INVENTORY-COUNTS",
-  "authority_master_sha256": "cf5254825da8b06e8812ee0c033382270b731e1001c40bf6ad929f843f27278a",
+  "authority_master_sha256": "370d72a4cb40b75dc72aa0320d1dba984de07d200e6d19889d7ca3dc61413d37",
   "rule": "A repository inventory count is never typed into public copy. Master copy may carry a token {{n:<key>}}; the generator replaces it with the count derived from the named projection, and raises an error for an unknown key, a key not cleared for public display, or any template token left unresolved. Arabic copy uses label-value form ('label: N') so that no counted-noun agreement depends on the number.",
   "token_pattern": "\\{\\{n:([a-z_]+)\\}\\}",
   "unresolved_token_pattern": "\\{\\{[^{}]*\\}\\}|\\{[A-Z][A-Z0-9_]{1,40}\\}",

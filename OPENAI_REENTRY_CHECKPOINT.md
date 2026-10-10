@@ -35,8 +35,8 @@ so that a cold Design recipient can run D0–D7 from the repository alone.
 
 | Item | Value |
 |---|---|
-| Production Master | `authority/Yemen_Financial_Inclusion_Evidence_Master.xlsx` — SHA-256 `cf5254825da8b06e8812ee0c033382270b731e1001c40bf6ad929f843f27278a` |
-| Page Specs | `site-src/content/page_specs.json` — SHA-256 `f0816b90ec014dc255b5f58a580c0445844ad10b1337a6c9331c56fda5e242dd` |
+| Production Master | `authority/Yemen_Financial_Inclusion_Evidence_Master.xlsx` — SHA-256 `370d72a4cb40b75dc72aa0320d1dba984de07d200e6d19889d7ca3dc61413d37` |
+| Page Specs | `site-src/content/page_specs.json` — SHA-256 `9dd5fd3bbd9a981d9651cce408e6170d2e9dc4de6f714f976a08427545c059da` |
 | Entry state recorded with the Drive IDs (lineage, not current) | Master `e69804106e04d093098688f2d01cea51e13191f255d774a090f3e5dd8dec9bc7`; Page Specs `ff2b0f559cde5fede3fe31d7dfb2539a00921e8b00b816c2863790cd9de49007` |
 | Master lineage in D7 | `f0150122…` (entry) → `caabff47…` (RP-F2) → `0e8730c2…` / `69899ae2…` (RL-F3, RL-F3b) → `2a7fd52b…` / `440614d7…` (R85-A, R85-B) → `168a0ad8…` / `ed3c5796…` (RF5, RF5b) |
 | Canonical repository | GitHub `CausewayGrp/Financial-inclusion-`, branch `main` — the only working copy. The last state OpenAI reviewed is commit `f726bda` (tree byte-identical to `…TRANCHE_C_COMPLETE_READING_HOLD.zip`, SHA-256 `63612dea…`); its tag and the Design-handoff tag are owner actions (§7) |

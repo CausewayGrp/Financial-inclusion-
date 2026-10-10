@@ -100,8 +100,8 @@ regulation, programmes, constraints — and the numbers exist to reveal that sys
 
 | Layer | Path | Role |
 |---|---|---|
-| Production Master | `authority/Yemen_Financial_Inclusion_Evidence_Master.xlsx` (SHA-256 `cf5254825da8b06e8812ee0c033382270b731e1001c40bf6ad929f843f27278a`) | The only semantic, evidence, source, rights and publication authority |
-| Page Specs | `site-src/content/page_specs.json` (SHA-256 `f0816b90ec014dc255b5f58a580c0445844ad10b1337a6c9331c56fda5e242dd`) | Every route: titles, descriptions, sections, bound objects, prohibited inferences, render rules |
+| Production Master | `authority/Yemen_Financial_Inclusion_Evidence_Master.xlsx` (SHA-256 `370d72a4cb40b75dc72aa0320d1dba984de07d200e6d19889d7ca3dc61413d37`) | The only semantic, evidence, source, rights and publication authority |
+| Page Specs | `site-src/content/page_specs.json` (SHA-256 `9dd5fd3bbd9a981d9651cce408e6170d2e9dc4de6f714f976a08427545c059da`) | Every route: titles, descriptions, sections, bound objects, prohibited inferences, render rules |
 | Interface copy | `site-src/content/content/interface_copy.json` | Every interface label in both languages (`UI-*` IDs). With the navigation labels below (primary, trust and footer, which the generator writes from the Master's navigation rows into `navigation_interaction.json`), the only source of interface wording |
 | Presentation depth (contract) | `site-src/content/presentation_priority.json` | For the Domain Answer, Evidence Record and Comparison families: what shows first, what may be disclosed later, how many Measurement cards a domain page shows |
 | Navigation and interaction (contract) | `site-src/content/content/navigation_interaction.json` | Navigation, trust layer, footer, breadcrumbs, next actions, page families, journeys, tools, hard-state cases |
@@ -196,12 +196,12 @@ edition (otherwise Arabic); there is a bilingual 404. The route set is frozen; t
 
 ### 4.2 Navigation (governed labels — use them verbatim)
 
-Primary: **Explore / استكشف · Evidence / الأدلة · Evidence Readings / قراءات الأدلة · Data & sources / البيانات
-والمصادر · Method & Measurement / المنهج والقياس** (a family with two destinations: Methodology / المنهجية and Measurement
-Agenda / أولويات القياس). Home is reached through the identity.
+Primary: **Questions / الأسئلة · Evidence / الأدلة · Readings / القراءات التحليلية · Sources / المصادر · Method and
+measurement / المنهج والقياس** (a family with two destinations: Methodology / المنهجية and Measurement priorities /
+أولويات القياس). Home is reached through the identity. (Labels renamed by NB-1, 10 October 2026; routes unchanged.)
 
-Trust layer (prominent, secondary): **About · Corrections · Rights & reuse · Accessibility · Privacy · Terms · Contact**.
-Utilities: **Search · Language · Cite this page · Report an issue**. Footer groups and breadcrumbs are in
+Trust layer (prominent, secondary), "About and policies": **About · Corrections · Rights and reuse · Accessibility · Privacy ·
+Terms of use · Contact**. Utilities: **Search · Language · Cite this page · Report an error**. Footer groups and breadcrumbs are in
 `navigation_interaction.json`. The grouping and prominence you give them are yours; the labels and destinations are not.
 
 ### 4.3 First-screen contract (every reader-facing page)
@@ -524,7 +524,7 @@ All tools run on local packaged data; none may need a network call. Their accept
   `NEEDS_CONTROLLED_CONTENT` — never a synthesised type.
 - **Cite**: copies the governed citation plus the canonical link; a locator-only source is cited as "reference ·
   locator"; the edition line is governed ("Edition of 26 September 2026").
-- **Report an issue** (`UI-HEADER-REPORT-AN-ISSUE`): opens `/{lang}/contact/`, from a record `/{lang}/contact/?record=<ID>`,
+- **Report an error** (`UI-HEADER-REPORT-AN-ISSUE`): opens `/{lang}/contact/`, from a record `/{lang}/contact/?record=<ID>`,
   carrying the originating record and route; Contact offers a mail action to the governed address with the reference in
   the subject and links to Corrections, which accepts the same `?record=`; bad references are technical errors; a report
   never changes the record. You may design a richer reporting intent — for example choosing what kind of problem it is
