@@ -479,3 +479,30 @@ acceptance's one-line fix), recorded here for the same reason.
   - ADD2-IMP-L5 — **NEXT EDITION** — Show the dates the governed fields hold together; never 'next update' → 'Next update' appears nowhere (checked). A checked-on date (retrieval_date) beside the period and the document date needs governed labels and code.
   - ADD2-IMP-J1 — **NEXT EDITION** — 18_CBY_MONETARY: a bounded expression on an existing contract → Deferred post-launch (owner instructions of 3 October 2026, 09:50, C7): the January 2023 valuation break and the CBY-Aden scope make a nominal-rial reading easy to misuse, and no existing contract fits without design.
   - ADD2-IMP-J2 — **DONE** — A publisher facet in the library, labelled 'publisher' → Done in B13 (owner instructions of 3 October 2026, 09:50, C7): RC-12 (98f43f5), B13 a, labelled 'publisher'.
+
+## 10. Content-complete checkpoint, 10 October 2026 (appended)
+
+**Current status.** Content is complete on `main` (checkpoint tag `checkpoint/2026-10-10-content-complete`, `docs/HANDOVER_TO_DEVELOPER.md` §9). Public release is not
+declared and nothing is deployed. The class table at the top is the F9 state. Since then, the owner closed OWN-01,
+OWN-02 and OWN-04; for the reuse licence, see the dated line under §2. What a person must still do for release is in
+`docs/HANDOVER_TO_DEVELOPER.md` §1–7. No item below is a DESIGN_BLOCKER.
+
+**Corrections to earlier cells, appended rather than rewritten:**
+
+- REL-02: the original sources' reuse terms are not assessed on all **167** source records (the cell says 160).
+
+**Items added on 10 October 2026.** New IDs continue each class. Every item is stated honestly on the page it affects,
+or is not published.
+
+| ID | Class | Item | Where it shows today | What closes it | Owner |
+|---|---|---|---|---|---|
+| EXT-12 | EXTERNAL_EVIDENCE_DEPENDENCY | **Remittance Prices Worldwide quarter.** VIS-REMITTANCE-COST shows 2025 Q3 | The visual's title and period carry the quarter | Re-read the latest RPW quarter at release (runbook step 4) and replace by transaction if newer | Claude Code at release |
+| EXT-13 | EXTERNAL_EVIDENCE_DEPENDENCY | **IMF Financial Access Survey.** The Yemen series stops at 2015. The IMF website refuses automated requests | Not published (context only, `audit/R8_2_*`) | A person checks the IMF FAS for later Yemen data | A person with a browser |
+| EXT-14 | EXTERNAL_EVIDENCE_DEPENDENCY | **ESPECRP unit of reach.** Whether the implementation-status report's reach figures count households or individuals | Not published (`docs/S06_3_*`, about 1.42m households in the 2024 Aide Memoire) | Read the unit from the original ISR before any reach figure is published | Claude Code |
+| EXT-15 | EXTERNAL_EVIDENCE_DEPENDENCY | **CBY-Aden "subscriber".** No definition is published. Verified on the H1-2025 payments infographic, 10 October 2026 | /payments/ and /reforms/ say no definition is published (LA-A) | A CBY-Aden definition, if one is published | External (CBY-Aden) |
+| EXT-16 | EXTERNAL_EVIDENCE_DEPENDENCY | **The vintage of the PAD's "two percent"** (¶9, p. 2). The sentence gives no year and no source | CWR-007 shows it as what the PAD says, not a measurement (LA-B, OWN-2e) | The World Bank's source for the sentence | External |
+| EXT-17 | EXTERNAL_EVIDENCE_DEPENDENCY | **Cash Consortium of Yemen originals.** SRC-CCY-* are files the user supplied, with no public locator | Non-public source records; the CCY figures that are published rest on them as recorded | The publisher's public originals, or confirmation that none exist | Owner |
+| EXT-18 | EXTERNAL_EVIDENCE_DEPENDENCY | **Provenance of the 26-bank list.** The CBY-Aden list carries no printed date. The locator is the July 2026 Arabic scan | Bank list "as checked on 3 October 2026" | A dated list from CBY-Aden | External (CBY-Aden) |
+| EXT-19 | EXTERNAL_EVIDENCE_DEPENDENCY | **CBY-Aden bulletin currentness.** CBY-BANKS-2026-05 and CWR-011 use Issue No. 54 (May 2026); Issue No. 55 (June 2026) exists | The record and the Reading say May 2026 throughout and claim no later month | At release (runbook step 4), decide whether to roll the record forward by transaction | Claude Code at release |
+| FRN-09 | KNOWN_EVIDENCE_FRONTIER | **SDG 10.c.** The resource holds no record of SDG indicator 10.c.1 (remittance costs as a share of the amount sent) or its 3% target | Not published | A next-edition decision whether to set the target beside VIS-REMITTANCE-COST; a target is not a result | Owner |
+| OWN-10 | OWNER_INPUT | **Internal Master counts.** `00_MASTER` and `37_READINESS_CHECKLIST` hold site pages 143, Readings 10 and sources 165, both as formula caches and as constants; the sheets hold 144, 11 and 167. The definition behind "bilingual page sections 574" was not re-derived | Internal and unprojected; nothing public shows them | A Master transaction following `audit/release_candidate/rc_17_addendum2.py` (`set_formula_cache`) | Programme steward |

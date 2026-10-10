@@ -1,5 +1,144 @@
 # Handover to a human developer
 
+**State, 10 October 2026.** Content is complete on `main`; its checkpoint is the annotated tag
+`checkpoint/2026-10-10-content-complete` (§9). Every gate passes there. **Nothing is deployed, and public release is not
+declared.** What follows is every task that remains for a person; a session cannot do any of them. The handover
+written on 4 October and updated on 9 October 2026 is kept unchanged at the end of this file as a record. Where it and
+this section disagree, this section is current (§8 lists what changed).
+
+---
+
+## 1. Hosting on DigitalOcean App Platform
+
+The host is decided: DigitalOcean (owner decision of 3 October 2026). The site runs as an nginx service in an App
+Platform app, reached through the corporate site at `https://causewaygrp.com/financial-inclusion-evidence`. Nothing in
+the repository is blocked on code; everything below is account-level configuration. Follow
+[`docs/RELEASE_RUNBOOK.md`](RELEASE_RUNBOOK.md) and [`docs/DEPLOYMENT.md`](DEPLOYMENT.md).
+
+| # | What | Who | Where it is read |
+|---|---|---|---|
+| 1.1 | A DigitalOcean account with a Container Registry; the App Platform app is created by the first deploy | Owner | runbook steps 1, 6 |
+| 1.2 | A personal access token with write access to the registry and App Platform, stored as the secret `DIGITALOCEAN_ACCESS_TOKEN`; the variables `YFIE_DO_REGISTRY`, `YFIE_DEPLOY_ENABLED=true` and, after the first deploy, `YFIE_DO_APP_ID` | Owner | runbook steps 6, 7; `site-src/hosting/digitalocean/` |
+| 1.3 | The corporate proxy rule that forwards `/financial-inclusion-evidence` to the app | Web administrator | `scripts/tests/test_corporate_proxy.py` proves it once the route exists |
+| 1.4 | The public origin, `null` in `site-src/deployment.json` until the owner sets it | Owner, then Claude Code | runbook step 3 |
+| 1.5 | The logging facts for /privacy/ (what the corporate server and App Platform keep, and for how long) | Web administrator and owner | runbook step 9a |
+| 1.6 | `Strict-Transport-Security` is the domain's decision | Web administrator | runbook step 9 |
+
+## 2. The licence text (`licence_text_confirmed`): confirmed by the owner, nothing left to do
+
+The reuse licence is decided, and the rights question is closed permanently: CC BY 4.0 for the content CauseWay owns
+(`audit/OWNER_DECISIONS_2026-10-10.md`, OWN-04-R and §4). On 10 October 2026 the owner endorsed the text with two
+corrections to /rights/ (transaction RIGHTS-FINAL) and **confirmed the CC BY 4.0 text on /rights/, /terms/ and the
+footer, in both languages; no counsel review is required** (runbook step 7a). `licence_text_confirmed` is `true` in
+`site-src/deployment.json`. Validator RC-B14 fails if it is true without the owner's dated line, and gates PN-G01 and
+PN-G02 guard the licence declaration on every page. No legal review is claimed.
+
+/rights/ states facts only about the World Bank Microdata Research License: the three derived 95% intervals on
+`CLM-026` are computed from a file CauseWay obtained under it, only aggregate estimates are published, the citation is
+printed, and CC BY does not extend to the underlying microdata. The respondent file is not in this repository, in
+`dist/` or on the site. Optional: the owner may ask the World Bank Microdata Library for written confirmation
+(`FINAL_OPEN_ITEMS_REGISTER.md`, OWN-09); the text no longer depends on it.
+
+## 3. Data downloads stay off (`public_downloads: false`)
+
+The exports are built and gated (`scripts/exports.py`, `scripts/tests/test_exports.py`) but not published. Switching
+`public_downloads` on (runbook step 2) is a separate owner decision; §2 no longer stands in its way. Until then the validator and the export test fail
+if a download appears in `dist/`.
+
+## 4. Sources that need a person with a browser
+
+This session requested each of these and could not read it. None is published, and nothing on the site depends on
+reading them; each would **add** something. They were recorded on 4 October 2026, and this pass did not retry them.
+
+| Source | What blocked it | What a person should do |
+|---|---|---|
+| SDRPY deposit notice | `sdrpy.gov.sa` failed TLS. The Saudi Press Agency item renders its body in JavaScript | Open `https://spa.gov.sa/en/N2234277` and read the deposit's amount, date and recipient. Keep three things apart: a $300m deposit *in the Central Bank of Yemen*, $200m of budget-deficit support, and a $1.2bn pledge. SPA `N2525739` (1 March 2026, SAR 1.3bn) goes to the Ministry of Finance |
+| CBY Sana'a Circular No. 14 of 2024 | No public locator of its own | The record points at UN doc S/2024/731, printed p. 114, Fig. 28.2. **Never cite `cbyemen.com`**, which now serves an unrelated site |
+| OECD, *Advancing the Digital Financial Inclusion of Youth* | Cloudflare challenge | Read the printed publication date |
+| World Bank FASTT fast-payment-systems paper | Cloudflare challenge; JavaScript-only repository shell | Open it in a browser. Do not substitute *Implementation Considerations for Fast Payment Systems*, which is a different document |
+| UNDP Yemen FMIIP project page | 403 bot block (EN and AR) | Open it in a browser |
+| CBY-Aden Quarterly Bulletin, June 2021 | CBY's own link points to a CDN with a TLS hostname mismatch | Ask CBY-Aden, or cite another issue |
+| IMF press release on the proposed Staff-Monitored Program (16 July 2026) | The IMF website refuses automated requests; /finance/ says the entry was not re-read for this edition | Re-read it in a browser and confirm the dated event |
+
+## 5. A phone check of the live site from Yemen
+
+Once the site is live, open it on a phone on a Yemeni network, in Arabic, and read it. The gates check the markup, and
+the viewport checks run at 390 px. Neither is a phone on a real network in the country the product is about.
+
+## 6. OpenAI's independent acceptance review
+
+This is the external gate, and it is not a session's to perform. The recipient starts at `README.md` and
+`OPENAI_REENTRY_CHECKPOINT.md`.
+
+## 7. The owner's release approval, and the release tag
+
+These are runbook steps 13 and 14. The owner reviews the live site and the records and accepts the release. Claude Code
+then sets `pre_release` to `false`, and the owner pushes the release tag. Nothing in this repository declares PUBLIC
+RELEASE READY.
+
+## 8. What changed since the handover of 9 October 2026 (below)
+
+- **The chronology in search is decided and done.** The owner decided INDEX (`audit/OWNER_DECISIONS_2026-10-10.md`
+  §3, OWN-14-R). Pull request #13 was closed without merge. The 23 dated events are indexed (CS-1), with the analytical
+  rule left out. The "open disagreement" section below is history.
+- **Pull requests #11 to #24 are resolved:** #13, #21 (another session's alternative naming, superseded by #19) and #23
+  (an earlier draft of this handover, superseded by RIGHTS-FINAL) were closed without merge; the rest merged.
+- **RIGHTS-FINAL (#24):** the CC BY 4.0 text was endorsed with two corrections and confirmed by the owner; no counsel
+  review is required. The licence gates PN-G01 and PN-G02 landed with it. The status surfaces (README, the checkpoint,
+  the Context) were re-dated to 10 October 2026, and their counts match the build (292 HTML documents from 144 Page
+  Specs: 288 localized, root, 404, and the two retired-address pages).
+- **Public naming and rights presentation** (NB-1, NB-2) were approved by the owner and merged.
+- **Legacy-audit follow-through** (LA-A, LA-B, LA-C) is merged: the published FMIIP definitions are stated, four
+  Readings are strengthened, and there is a new Evidence Record (CBY-BANKS-2026-05) and a new Reading (CWR-011).
+- **Batch C** (IMF FSIs on /finance/, the public contradiction register, the "why the numbers differ" tier) is still
+  **not built**. Its research is preserved below and stays valid. **Batch E** (the home-page presentation pilot) is
+  still not started. Both are next-edition work, not release blockers.
+- **The Master's internal count cells are stale** (`00_MASTER` and `37_READINESS_CHECKLIST`: site pages 143, Readings
+  10, sources 165; the sheets hold 144, 11 and 167). They are not projected or public. Fix them Master-first, with the
+  formula-cache precedent in `audit/release_candidate/rc_17_addendum2.py`. This is recorded in
+  `FINAL_OPEN_ITEMS_REGISTER.md` §10 (OWN-10).
+
+## 9. Repository housekeeping this session could not do
+
+This session's git access pushes only to its own working branch. On 10 October 2026 it was refused (HTTP 403) when it
+tried to delete remote branches, and an earlier session recorded the same refusal for tag pushes. A person with
+write access does the following.
+
+**Delete 16 merged branches.** Each head was checked to be an ancestor of `main` on 10 October 2026, and none is the
+head or base of an open pull request. Re-check before deleting:
+`git merge-base --is-ancestor origin/<branch> origin/main && echo merged`.
+
+```
+git push origin --delete claude/bold-maxwell-r3o015 claude/claude-md-multi-agent-skill claude/dreamy-archimedes-e8qx5v \
+  claude/epic-cori-60fpeb claude/hopeful-mccarthy-jgip83 claude/new-session-giw687 claude/practical-cray-sr26c5 \
+  claude/yfie-pr9-rc-finish-jetvaw code/base-path-hosting code/edition-2 code/final-content code/release-candidate-fixes \
+  code/steward-gate-and-handover design/d0-orientation design/final-presentation-integration-v1 \
+  claude/design-review-constraints-l9au89
+```
+
+**Keep these branches:**
+
+- `main` and `safety/pr11-pre-b1b2-2026-10-04`.
+- `claude/public-naming-terminology-part-b`: the head of the closed #21, with 1 unique commit (its record of the
+  alternative naming, kept for reference).
+- `code/final-content-chronology-and-gates`: 2 unique commits; the branch of the closed #13.
+- `code/navbar-disclosures-integration`: 3 unique commits. **The owner should review it**; no session in this pass
+  wrote it.
+- `claude/new-session-s346lg`: this session's working branch.
+
+**The checkpoint tag.** If `git ls-remote --tags origin` does not list `checkpoint/2026-10-10-content-complete`,
+create it on the merge commit of the pull request that carries this section, which is the final `main` of 10 October
+2026. Never move it once it exists.
+
+```
+git tag -a checkpoint/2026-10-10-content-complete <merge-commit> -m "Content complete, 10 October 2026"
+git push origin checkpoint/2026-10-10-content-complete
+```
+
+---
+
+# Record: the handover of 4 October 2026, updated 9 October 2026 (kept unchanged)
+
 What a person must still do. Everything else in this repository is finished, gated and recorded; the items below are
 the ones a session cannot do, plus — stated plainly in §7 — the content work of the owner's final pass of
 4 October 2026 that this window did **not** finish.

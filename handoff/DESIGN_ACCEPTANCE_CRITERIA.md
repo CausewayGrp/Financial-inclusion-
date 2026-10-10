@@ -16,7 +16,7 @@ Nothing here is a WCAG conformance claim.
 - [ ] The accepted reference site contains no `⟦NCC:…⟧` placeholder and no invented wording: every label it shows is in
       the Master and regenerated into `interface_copy.json`, and every optional feature whose labels are not yet governed
       is unshipped and listed as an exception in `design/09_CODE_HANDOFF.md`.
-- [ ] The withheld CLM-044 value never appears; the nine sources without a public locator are never named or linked;
+- [ ] The withheld CLM-044 value never appears; the sources without a public locator (ten at 10 October 2026) are never named or linked;
       no third-party document is bundled or offered for download.
 - [ ] Evidence Records show the boundary as two labelled parts (does not establish · limits of the measure) where the
       record has both, part A alone where it has no measurement limitation, and never print the internal delimiter.

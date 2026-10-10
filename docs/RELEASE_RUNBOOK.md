@@ -1,6 +1,6 @@
 # Release runbook — from "the owner has a hosting account and a domain" to "live"
 
-**Status, 4 October 2026 (after the independent review of 70398d1):** prepared, not started. Nothing here has been executed. The site is not released; this
+**Status, 10 October 2026 (content complete, `checkpoint/2026-10-10-content-complete`):** prepared, not started; unchanged since the independent review of 70398d1 (4 October 2026). Nothing here has been executed. The site is not released; this
 repository never declares PUBLIC RELEASE READY, and only the owner releases it (step 14). Each step names who does it.
 Every step except the account, the domain, the owner's confirmation of the CC BY 4.0 licence text, the release acceptance
 and the tag is a Claude Code step; the route on `causewaygrp.com` is CauseWay's web administrator's ("Hosting"). The
