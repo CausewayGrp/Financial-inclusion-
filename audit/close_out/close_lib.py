@@ -100,7 +100,9 @@ SELF_COUNT_CELLS = [
 
 def _set_count(s, finding, sheet, row, col, new):
     f = formula_of(s, sheet, row, col)
-    cur = s.ed.get_value(sheet, row, col)
+    cur = s.ed.get_value(sheet, row, col)            # the editor returns cell text ("144"), the new count is an int
+    if str(cur) == str(new):
+        return
     if f is not None:
         set_formula_cache(s, finding, sheet, row, col, new, cur if not isinstance(cur, float) or cur != int(cur) else int(cur),
                           f, f"{sheet}!r{row}c{col}")
