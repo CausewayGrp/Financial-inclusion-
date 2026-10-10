@@ -4,7 +4,7 @@
  "source": 28,
  "date": 2022,
  "endpoint": "https://api.worldbank.org/v2/country/YEM/indicator/<code>?source=28&format=json&date=2022",
- "note": "Open World Bank data API (api.worldbank.org/v2, source 28, Global Findex database) and public DDI study metadata only: no key, no respondent-level data. 'series' holds every series read for a value used by the Master; 'label_query' holds every source-28 series for Yemen, date 2022, as [label, value] (null = no Yemen value), so that each 'no published value' statement is checked by label; 'account_all_years' shows that no later Yemen value exists, and 'received_domestic_remittances_all_years' that the current series holds no 2014 value; 'ddi_valid_cases' records, for the study's variables behind the unpublished measures, the valid and invalid case counts the public metadata print.",
+ "note": "Open World Bank data API (api.worldbank.org/v2, source 28, Global Findex database) and public DDI study metadata only: no key, no respondent-level data. 'series' holds every series read for a value used by the Master; 'label_query' holds every source-28 series for Yemen, date 2022, as [label, value] (null = no Yemen value), so that each 'no published value' statement is checked by label; 'account_all_years' shows that no later Yemen value exists, and 'received_domestic_remittances_all_years' that the current series holds no 2014 value; 'source_notes' holds the World Bank's own definition of the series whose wording the text relies on; 'ddi_valid_cases' records, for the study's variables behind the unpublished measures, the valid and invalid case counts the public metadata print.",
  "series": {
   "account.t.d": {
    "url": "https://api.worldbank.org/v2/country/YEM/indicator/account.t.d?source=28&format=json&date=2022",
@@ -6224,6 +6224,41 @@
     "value": null
    }
   ]
+ },
+ "source_notes": {
+  "retrieved": "2026-10-10",
+  "indicators": {
+   "fin24aN": {
+    "url": "https://api.worldbank.org/v2/sources/28/indicators/fin24aN?format=json",
+    "name": "Coming up with emergency funds in 30 days: not possible  (% age 15+)",
+    "sourceNote": "The percentage of respondents who say it is not possible for them to come up with the emergency funds in 30 days. This includes people who say do not know or refused, (% age 15+)"
+   },
+   "fin24aP": {
+    "url": "https://api.worldbank.org/v2/sources/28/indicators/fin24aP?format=json",
+    "name": "Coming up with emergency funds in 30 days: possible  (% age 15+)",
+    "sourceNote": "The percentage of respondents who say it is possible--whether\"difficult,\"\"somewhat difficult,\"or\"not very difficult\"--for them to come up with the emergency funds in 30 days, (% age 15+)"
+   },
+   "fin24aVD": {
+    "url": "https://api.worldbank.org/v2/sources/28/indicators/fin24aVD?format=json",
+    "name": "Coming up with emergency funds in 30 days: possible and very difficult  (% age 15+)",
+    "sourceNote": "The percentage of respondents who say it is possible and very difficult for them to come up with the emergency funds in 30 days, (% age 15+)"
+   },
+   "g20.any": {
+    "url": "https://api.worldbank.org/v2/sources/28/indicators/g20.any?format=json",
+    "name": "Made or received a digital payment  (% age 15+)",
+    "sourceNote": "The percentage of respondents who report using mobile money, a debit or credit card, or a mobile phone to make a payment from an account--or report using the internet to pay bills or to buy something online or in a store--in the past year. This includes respondents who report paying bills, sending or receiving remittances, receiving payments for agricultural products, receiving government transfers, receiving wages, or receiving a public sector pension directly from or into a bank or similar financial institution account or through a mobile money account in the past year, (% age 15+)"
+   },
+   "fin22b": {
+    "url": "https://api.worldbank.org/v2/sources/28/indicators/fin22b?format=json",
+    "name": "Borrowed from family or friends  (% age 15+)",
+    "sourceNote": "The percentage of respondents who report borrowing any money from family, relatives, or friends in the past year, (% age 15+)"
+   },
+   "fin17a": {
+    "url": "https://api.worldbank.org/v2/sources/28/indicators/fin17a?format=json",
+    "name": "Saved at a bank or similar financial institution  (% age 15+)",
+    "sourceNote": "The percentage of respondents who report saving or setting aside any money at a bank or similar financial institution in the past year, (% age 15+)"
+   }
+  }
  },
  "ddi_valid_cases": {
   "retrieved": "2026-10-10",

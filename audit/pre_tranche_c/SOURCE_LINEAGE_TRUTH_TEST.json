@@ -23,7 +23,7 @@
    "CLOSED_TO_SOURCE_ID": 11
   },
   "visual": {
-   "CLOSED_TO_SOURCE_ID": 27,
+   "CLOSED_TO_SOURCE_ID": 30,
    "COMPOSITE_MEMBERS_NOT_LISTED": 7,
    "COMPOSITE_OF_OBJECTS": 2
   },
@@ -111,7 +111,8 @@
     "CLM-027",
     "CLM-028",
     "CLM-029",
-    "CLM-030"
+    "CLM-030",
+    "CLM-026"
    ]
   },
   "VIS-DEMAND-VINTAGE-LADDER": {
@@ -124,7 +125,8 @@
     "CLM-029",
     "CLM-030",
     "VIS-FINDEX-RESILIENCE",
-    "VIS-FINDEX-BARRIERS"
+    "VIS-FINDEX-BARRIERS",
+    "VIS-FINDEX-FLOW-CHANNELS"
    ]
   },
   "DS-FINDEX-HISTORY-CROSSWALK": {

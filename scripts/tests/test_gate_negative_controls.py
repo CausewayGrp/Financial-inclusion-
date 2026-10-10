@@ -306,7 +306,7 @@ CONTROLS = [
      replace('src="/assets/logo/CauseWay_logo_40.png"', 'src="/assets/CauseWay_Master_Logo.png"'),
      "RC-G4 a page loads the master logo instead of a derivative"),
     ("a table-only record hides its governed method text again", "en/evidence/VIS-FINDEX-BARRIERS/index.html",
-     replace("with adults who do not have an account as the base", "", 0),
+     replace("for every series on the reasons for not having an account", "", 0),
      "S04.1 progressive evidence field missing /evidence/VIS-FINDEX-BARRIERS/ en method"),
     ("the reuse terms disappear from /data/", "ar/data/index.html",
      sub_once(r'<p class="small reuse-once" data-reuse-terms>[^<]*</p>', ""),
@@ -357,7 +357,7 @@ CONTROLS = [
     # LA-A (owner instruction 2a): a number written in words that disagrees between the languages (CLM-026's Arabic
     # once said "six" where the English says "three"); the digit check cannot see it, the number-word check must.
     ("an Arabic page writes a different number in words", "ar/evidence/CLM-026/index.html",
-     replace("ويحمل الثلاثة منها", "ويحمل الستة منها"),
+     replace("ولستة عشر من مقاييسها", "ولسبعة عشر من مقاييسها"),
      "NUMBER WORDS evidence/CLM-026/index.html", "bilingual"),
     # CS-1 (owner decision of 10 October 2026): an indexed dated event must keep its anchor, and the result-type filter
     # must offer every type the index carries.
@@ -630,6 +630,10 @@ CONTROLS = [
      "site-src/content/data/findex_subgroups.json",
      sub_once(r"Yemen's survey did not ask this question", "Yemen's survey left this question unpublished"),
      "was not asked in Yemen's survey and does not say so"),
+    ("CO-G04: a question Yemen's survey did not ask is put back among the computable rows",
+     "site-src/content/data/findex_subgroups.json",
+     sub_once(r'"NOT_ASKED_IN_SURVEY"', '"CONTROLLED_MICRODATA_WEIGHTED_COMPUTE_REQUIRED"'),
+     "but the public DDI metadata print 0 valid cases"),
     ("CO-G04: an all-adults-only reason names a series the World Bank publishes by group",
      "site-src/content/data/findex_subgroups.json",
      sub_once(r'\(series fin17a\)', '(series fin22b)'),

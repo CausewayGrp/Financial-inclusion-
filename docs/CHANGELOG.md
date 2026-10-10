@@ -1,5 +1,35 @@
 # Repository Change Log
 
+## 2026-10-10 — CLOSE-3A: the Global Findex values the World Bank publishes for Yemen (Stage A, W3c, U1 and CR-03)
+
+Master `7c70b5f766b8` → `52fb937a4f50`, 2,235 cells (`audit/close_out/close_3a.py`; ledger and run report in
+`audit/close_out/runs/`), plus the controlled visual contract (three table-first visuals). Source: the open World Bank
+API (source 28, no key) and the study's public DDI metadata only, kept as a dated snapshot
+(`audit/close_out/fixtures/findex_api_2026-10-10.json`: the 354 series used, every one of the 3,313 source-28 series
+for Yemen 2022 by label, the account and received-remittance histories, the World Bank's own series notes, and the
+valid-case counts of 26 study variables). Nothing is computed from respondent-level data. An independent red-team
+(18 findings, then 12) and an Arabic editor (9, then 4) read the text before the run; all applied.
+
+- **U1.** 147 World Bank values added to 25_FINDEX_BASELINE (national values the panel lacked; groups by sex, age,
+  education, income and labour-force status), each with its series URL and caveat. Three records become table-first
+  visuals: VIS-FINDEX-ACCESS-USE and VIS-FINDEX-RESILIENCE on /people/, VIS-FINDEX-FLOW-CHANNELS on /people/ and
+  /remittances/. Values print to one decimal (the governed precision now travels with a text-table cell). "Not
+  possible" on emergency funds includes don't know and refused, as the World Bank counts them.
+- **27_FINDEX_SUBGROUPS.** 51 rows published; the 105 others keep a checked reason: 95 have no World Bank value or
+  only an all-adults value (a value needs licensed microdata, OWN-09), and 10 (mobile-money use and saving) were not
+  asked in Yemen's survey (DDI: 0 valid cases; state `NOT_ASKED_IN_SURVEY`); the 32 rural/urban rows re-checked.
+- **CR-03.** CLM-026 lists its 16 published measures (14 unpublished, 2 not asked) and no longer says values were
+  reproduced from the respondent file. Records and pages that said these values were "not yet produced" now say what
+  is published (VIS-FINDEX-BARRIERS, -SAMPLE-SUPPORT, VIS-DEMAND-VINTAGE-LADDER, CLM-030, CLM-031,
+  VIS-DOMESTIC-REMITTANCE-PATH-2014, DS-DEMAND-VINTAGE-LENS, DS-FINDEX-HISTORY-CROSSWALK, MA-001, /people/ §6–7,
+  /remittances/ §6, /methodology/ §4, page descriptions). The period wording copies CLM-001.
+- **Gates.** CO-G04 extended: the snapshot must read every source-28 series by label; a held row says why, a question
+  not asked says so (checked against the DDI counts), an all-adults-only reason names a series with no group values,
+  and a rural/urban row is held only while no rural or urban series has a Yemen value (+3 negative controls).
+  RC-B12 compares row headers without inner isolation tags and numbers at their governed precision; E2-PREC keeps
+  its 0.05 neighbourhood for the shares governed before U1 and matches the U1 values at two decimals inside Findex
+  blocks only.
+
 ## 2026-10-10 — CLOSE-2B: the rest of Appendix A read in the originals (Stage A, W3b)
 
 Master `eaa603586d76` → `7c70b5f766b8`, 219 cells (`audit/close_out/close_2b.py`; ledger and run report in

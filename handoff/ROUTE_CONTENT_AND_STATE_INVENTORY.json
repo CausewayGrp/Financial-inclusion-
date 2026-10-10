@@ -2,8 +2,8 @@
  "schema": "YFIE_ROUTE_CONTENT_AND_STATE_INVENTORY/1.3",
  "purpose": "Design recipient's map of every route, its family, bindings, collections, next actions and the states Design must cover. Derived; not authority.",
  "generated_from": {
-  "production_master_sha256": "7c70b5f766b8ebb0e2a075b64137586cc95623c3c072e38f48a2a036d8e511c9",
-  "page_specs_sha256": "36fd79caab231cd22ce85ed470ab074931aa3697dadd391cca884ff0f1c2aa04",
+  "production_master_sha256": "52fb937a4f50f0971b0b495a393b2ae6c648c4b4ee5f77456768fb0907a0053a",
+  "page_specs_sha256": "40714de7068a8d1bd9ee00bbc338abf18f1f52211045f1de2e7d7daaaf925504",
   "generator": "scripts/handoff_inventory.py"
  },
  "counts": {
@@ -16,7 +16,7 @@
   "readings": 11,
   "measurement_priorities": 10,
   "entry_questions": 11,
-  "visual_contracts": 36,
+  "visual_contracts": 39,
   "evidence_passports": 55,
   "search_records": 467,
   "page_specs": 144
@@ -1613,8 +1613,8 @@
     "en": "dist/en/evidence/CLM-026/index.html",
     "ar": "dist/ar/evidence/CLM-026/index.html"
    },
-   "title_en": "Demand-side measures defined; custom estimates not yet published",
-   "title_ar": "مقاييس جانب الطلب محددة، والتقديرات المخصصة لم تُنشر بعد",
+   "title_en": "Demand-side panel: 16 of its 32 measures have World Bank published values for Yemen",
+   "title_ar": "مجموعة مقاييس جانب الطلب: لـ16 من مقاييسها الـ32 قيم ينشرها البنك الدولي لليمن",
    "sections": 2,
    "section_rows_split_by_language": false,
    "evidence_ids": [
@@ -3330,14 +3330,16 @@
     "en": "dist/en/evidence/VIS-FINDEX-ACCESS-USE/index.html",
     "ar": "dist/ar/evidence/VIS-FINDEX-ACCESS-USE/index.html"
    },
-   "title_en": "Account ownership, account use and digital use: three separate measures",
-   "title_ar": "امتلاك الحساب واستخدامه والاستخدام الرقمي: ثلاثة مقاييس منفصلة",
+   "title_en": "Account ownership, saving and borrowing, by group",
+   "title_ar": "امتلاك الحساب والادخار والاقتراض بحسب الفئة",
    "sections": 2,
    "section_rows_split_by_language": false,
    "evidence_ids": [
     "VIS-FINDEX-ACCESS-USE"
    ],
-   "visual_ids": [],
+   "visual_ids": [
+    "VIS-FINDEX-ACCESS-USE"
+   ],
    "reading_ids": [],
    "measurement_ids": [],
    "source_ids": [],
@@ -3392,23 +3394,25 @@
     "en": "dist/en/evidence/VIS-FINDEX-FLOW-CHANNELS/index.html",
     "ar": "dist/ar/evidence/VIS-FINDEX-FLOW-CHANNELS/index.html"
    },
-   "title_en": "How money reaches people — wages, government transfers, agricultural payments and domestic remittances",
-   "title_ar": "كيف تصل الأموال إلى الأفراد: الأجور والتحويلات الحكومية والمدفوعات الزراعية والحوالات المحلية",
+   "title_en": "Wages, agricultural payments and domestic remittances, by group",
+   "title_ar": "الأجور والمدفوعات الزراعية والحوالات المحلية بحسب الفئة",
    "sections": 2,
    "section_rows_split_by_language": false,
    "evidence_ids": [
     "VIS-FINDEX-FLOW-CHANNELS"
    ],
-   "visual_ids": [],
+   "visual_ids": [
+    "VIS-FINDEX-FLOW-CHANNELS"
+   ],
    "reading_ids": [],
    "measurement_ids": [],
    "source_ids": [],
-   "source_references": 1,
+   "source_references": 2,
    "next_actions": [],
    "next_action_policy": "SOURCE_RELATED_CORRECTION_OR_REUSE",
    "lineage_state": "BOUND_EXACT",
    "verification_state": "SOURCES_LISTED",
-   "public_sources_listed": 1,
+   "public_sources_listed": 2,
    "structured_data": [
     "BreadcrumbList"
    ],
@@ -3487,23 +3491,25 @@
     "en": "dist/en/evidence/VIS-FINDEX-RESILIENCE/index.html",
     "ar": "dist/ar/evidence/VIS-FINDEX-RESILIENCE/index.html"
    },
-   "title_en": "Can an adult raise emergency funds — in 7 days versus 30?",
-   "title_ar": "هل يستطيع البالغ تدبير أموال للطوارئ خلال 7 أيام مقارنة بـ30 يومًا؟",
+   "title_en": "Coming up with emergency funds within 30 days, by group",
+   "title_ar": "تدبير أموال للطوارئ خلال 30 يومًا بحسب الفئة",
    "sections": 2,
    "section_rows_split_by_language": false,
    "evidence_ids": [
     "VIS-FINDEX-RESILIENCE"
    ],
-   "visual_ids": [],
+   "visual_ids": [
+    "VIS-FINDEX-RESILIENCE"
+   ],
    "reading_ids": [],
    "measurement_ids": [],
    "source_ids": [],
-   "source_references": 1,
+   "source_references": 2,
    "next_actions": [],
    "next_action_policy": "SOURCE_RELATED_CORRECTION_OR_REUSE",
    "lineage_state": "BOUND_EXACT",
    "verification_state": "SOURCES_LISTED",
-   "public_sources_listed": 1,
+   "public_sources_listed": 2,
    "structured_data": [
     "BreadcrumbList"
    ],
@@ -4731,7 +4737,10 @@
     "VIS-FL-EVIDENCE-LADDER"
    ],
    "visual_ids": [
+    "VIS-FINDEX-ACCESS-USE",
+    "VIS-FINDEX-FLOW-CHANNELS",
     "VIS-FINDEX-GAPS",
+    "VIS-FINDEX-RESILIENCE",
     "VIS-FL-EVIDENCE-LADDER"
    ],
    "reading_ids": [
@@ -5444,6 +5453,7 @@
     "VIS-REMITTANCE-MACRO"
    ],
    "visual_ids": [
+    "VIS-FINDEX-FLOW-CHANNELS",
     "VIS-REMITTANCE-COST",
     "VIS-REMITTANCE-MACRO"
    ],
@@ -5454,7 +5464,7 @@
     "MA-001"
    ],
    "source_ids": [],
-   "source_references": 18,
+   "source_references": 19,
    "next_actions": [
     "/evidence/CLM-007/"
    ],
@@ -5534,7 +5544,10 @@
     "data_at_route": {
      "page_family": "Domain Answer",
      "visual_ids": [
+      "VIS-FINDEX-ACCESS-USE",
+      "VIS-FINDEX-FLOW-CHANNELS",
       "VIS-FINDEX-GAPS",
+      "VIS-FINDEX-RESILIENCE",
       "VIS-FL-EVIDENCE-LADDER"
      ],
      "visual_grammar_present": [
@@ -5596,6 +5609,7 @@
     "data_at_route": {
      "page_family": "Domain Answer",
      "visual_ids": [
+      "VIS-FINDEX-FLOW-CHANNELS",
       "VIS-REMITTANCE-COST",
       "VIS-REMITTANCE-MACRO"
      ],
@@ -5962,6 +5976,9 @@
     "VIS-ACCESS-EVIDENCE-LAYER",
     "VIS-EVIDENCE-FRESHNESS",
     "VIS-EVIDENCE-GAPS",
+    "VIS-FINDEX-ACCESS-USE",
+    "VIS-FINDEX-FLOW-CHANNELS",
+    "VIS-FINDEX-RESILIENCE",
     "VIS-FIRM-FINANCE-PATH",
     "VIS-FIRM-FINANCE-SEVERITY",
     "VIS-INCLUSION-TRANSMISSION",

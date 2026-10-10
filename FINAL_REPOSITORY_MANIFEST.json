@@ -3,9 +3,9 @@
  "purpose": "What every tracked file is. One authority -> one projection path -> one runtime content path -> one current recipient start path. Hashes: SHA256SUMS.txt.",
  "authority": {
   "production_master": "authority/Yemen_Financial_Inclusion_Evidence_Master.xlsx",
-  "production_master_sha256": "7c70b5f766b8ebb0e2a075b64137586cc95623c3c072e38f48a2a036d8e511c9",
+  "production_master_sha256": "52fb937a4f50f0971b0b495a393b2ae6c648c4b4ee5f77456768fb0907a0053a",
   "page_specs": "site-src/content/page_specs.json",
-  "page_specs_sha256": "36fd79caab231cd22ce85ed470ab074931aa3697dadd391cca884ff0f1c2aa04",
+  "page_specs_sha256": "40714de7068a8d1bd9ee00bbc338abf18f1f52211045f1de2e7d7daaaf925504",
   "logo": "site-src/assets/CauseWay_Master_Logo.png",
   "logo_sha256": "5830163d50f9badbef3227ec44e7705548e2fcc8a06b2d6ae33d56ade60c6a90",
   "rule": "The Production Master is the only semantic authority. Everything under site-src/content, dist, design/architecture and audit/PUBLIC_LITERAL_CLOSURE.json is generated from it and never edited by hand, except the two CONTROLLED_CONTRACT files, which the programme steward maintains in place and the generator validates against the Master's projections."
@@ -25,10 +25,10 @@
   "AUTHORITY_MASTER": 1,
   "AUTHORITY_POINTER": 2,
   "AUTHORITY_RULES": 1,
-  "BUILD_AND_GATES": 43,
+  "BUILD_AND_GATES": 44,
   "CONTROLLED_CONTRACT": 2,
   "CURRENT_DOCUMENT": 13,
-  "CURRENT_PROGRAMME_RECORD": 194,
+  "CURRENT_PROGRAMME_RECORD": 198,
   "DESIGN_PACKAGE": 447,
   "GENERATED_DIAGRAMS": 9,
   "GENERATED_LITERAL_CLOSURE": 1,
@@ -492,7 +492,15 @@
    "class": "CURRENT_PROGRAMME_RECORD"
   },
   {
+   "path": "audit/close_out/close_3a.py",
+   "class": "CURRENT_PROGRAMME_RECORD"
+  },
+  {
    "path": "audit/close_out/close_lib.py",
+   "class": "CURRENT_PROGRAMME_RECORD"
+  },
+  {
+   "path": "audit/close_out/fixtures/findex_api_2026-10-10.json",
    "class": "CURRENT_PROGRAMME_RECORD"
   },
   {
@@ -533,6 +541,14 @@
   },
   {
    "path": "audit/close_out/runs/CLOSE-2B_RUN_REPORT.json",
+   "class": "CURRENT_PROGRAMME_RECORD"
+  },
+  {
+   "path": "audit/close_out/runs/CLOSE-3A_MASTER_LEDGER.json",
+   "class": "CURRENT_PROGRAMME_RECORD"
+  },
+  {
+   "path": "audit/close_out/runs/CLOSE-3A_RUN_REPORT.json",
    "class": "CURRENT_PROGRAMME_RECORD"
   },
   {
@@ -6717,6 +6733,10 @@
   },
   {
    "path": "scripts/exports.py",
+   "class": "BUILD_AND_GATES"
+  },
+  {
+   "path": "scripts/findex_api_snapshot.py",
    "class": "BUILD_AND_GATES"
   },
   {

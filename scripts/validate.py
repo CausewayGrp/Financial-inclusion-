@@ -3063,7 +3063,8 @@ try:
     if len(_tabled) < 2:
         errors.append(f"RC-B12 only {len(_tabled)} text-first contracts bind a table")
     for _v in _tabled:
-        _nums = sorted([str(c["number"]) for r in _v["table"]["rows"] for c in r.get("cells", []) if "number" in c]
+        _nums = sorted([(f"{c['number']:.{c['dp']}f}" if c.get("dp") else str(c["number"]))
+                        for r in _v["table"]["rows"] for c in r.get("cells", []) if "number" in c]
                        + [str(r["group"]["number"]) for r in _v["table"]["rows"] if "group" in r])
         for _lang in ("en", "ar"):
             _h = (DIST / _lang / "evidence" / _v["visual_id"] / "index.html").read_text(encoding="utf-8")
@@ -3072,7 +3073,8 @@ try:
                 errors.append(f"RC-B12 a bound text-first table is missing {_lang} {_v['visual_id']}")
                 continue
             _body = _t.group(0).split("</caption>", 1)[-1]
-            _heads = [_html.unescape(x) for x in re.findall(r'<th scope="row">([^<]*)</th>', _body)]
+            # a row header may isolate a range as a left-to-right run (15–24): the governed text is compared without tags
+            _heads = [_html.unescape(re.sub(r"<[^>]+>", "", x)) for x in re.findall(r'<th scope="row">(.*?)</th>', _body, re.S)]
             _want = [r["head"][_lang] for r in _v["table"]["rows"] if "head" in r]
             if _heads != _want:
                 errors.append(f"RC-B12 the row headers differ from the governed rows {_lang} {_v['visual_id']}")
@@ -3713,8 +3715,16 @@ try:
     _fb = _fb["rows"]
     _hi = next(i for i, r in enumerate(_fb) if r and r[0] == "observation_id")
     _fb = [dict(zip(_fb[_hi], r)) for r in _fb[_hi + 1:] if r and r[0]]
-    _lv = {r["group"]: float(r["value"]) for r in _fb if isinstance(r, dict) and str(r.get("observation_id", "")).startswith("WB-FINDEX-OBS-2022")
-           and isinstance(r.get("value"), (int, float))}
+    # the shares governed before close-out U1 (rows 001-012: account ownership by group, and saving, borrowing and
+    # digital payments for all adults) and their gaps keep the 0.05 neighbourhood; the 147 values U1 added (rows 013 on)
+    # are matched at their own two-decimal reading (the unrounded value in each row's caveat), and only in a block that
+    # names the Findex (both editions write the name in Latin script), so that an unrelated two-decimal number elsewhere
+    # (a POS growth rate, a remittance price, a firm-survey ratio) is not taken for one of them
+    _wb = [r for r in _fb if isinstance(r, dict) and str(r.get("observation_id", "")).startswith("WB-FINDEX-OBS-2022")
+           and isinstance(r.get("value"), (int, float))]
+    _lv = {r["group"]: float(r["value"]) for r in _wb if int(str(r["observation_id"])[-3:]) <= 12}
+    _u1 = [float(_m.group(1)) for r in _wb if int(str(r["observation_id"])[-3:]) > 12
+           for _m in [re.search(r"unrounded value (\d+(?:\.\d+)?)", str(r.get("caveat") or ""))] if _m]
     _pairs = (("male", "female"), ("richest 60%", "poorest 40%"), ("secondary education or more", "primary education or less"),
               ("ages 25+", "ages 15-24"))
     _targets = list(_lv.values()) + [_lv[a] - _lv[b] for a, b in _pairs if a in _lv and b in _lv]
@@ -3734,6 +3744,15 @@ try:
             _v = float(_m.group(0))
             if _strictp or any(abs(_v - _t) < 0.05 for _t in _targets):
                 errors.append(f"E2-PREC {_rel} prints a Findex share or gap to two decimals: {_m.group(0)}")
+        if not _strictp:
+            _hb = re.sub(r"<(script|style)\b[^>]*>.*?</\1>", " ", _f.read_text(encoding="utf-8"), flags=re.S)
+            for _blk in re.findall(r"<(?:p|li|td|th|dd|figcaption|caption)\b[^>]*>(.*?)</(?:p|li|td|th|dd|figcaption|caption)>", _hb, re.S):
+                _bt = re.sub(r"\s+", " ", _html.unescape(re.sub(r"<[^>]+>", " ", _blk)))
+                if "Findex" not in _bt:
+                    continue
+                for _m in _PREC_ANY.finditer(_bt):
+                    if any(abs(float(_m.group(0)) - _t) < 0.005 for _t in _u1):
+                        errors.append(f"E2-PREC {_rel} prints a Findex share to two decimals: {_m.group(0)}")
     if _np < 30:
         errors.append(f"E2-PREC read only {_np} Findex pages")
     # (3) the drawing prints every share and gap at the same one-decimal precision as the text (7.0, never 7), in its bars
@@ -3904,11 +3923,15 @@ try:
             _st = _r[_sgi["current_state"]]
             if _st == "PUBLIC_WB_PUBLISHED_SAME_WAVE":
                 _pub += 1
-            elif _st == "CONTROLLED_MICRODATA_WEIGHTED_COMPUTE_REQUIRED":
+            elif _st in ("CONTROLLED_MICRODATA_WEIGHTED_COMPUTE_REQUIRED", "NOT_ASKED_IN_SURVEY"):
                 _held += 1
                 _why = str(_r[_sgi["public_behavior"]] or "")
                 _var = _ddi.get(str(_r[_sgi["variable_name"]] or ""))
-                if _var is not None and _var.get("valid") == 0:
+                _unasked = _var is not None and _var.get("valid") == 0
+                if _unasked != (_st == "NOT_ASKED_IN_SURVEY"):
+                    errors.append(f"CO-G04 {_r[0]} is held as {_st}, but the public DDI metadata print "
+                                  f"{None if _var is None else _var.get('valid')} valid cases for its question")
+                if _unasked:
                     if "did not ask" not in _why:
                         errors.append(f"CO-G04 {_r[0]} was not asked in Yemen's survey and does not say so")
                 elif "OWN-09" not in _why:

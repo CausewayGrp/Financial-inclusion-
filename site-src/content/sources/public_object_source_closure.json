@@ -1853,13 +1853,16 @@
     ],
     "lineage_state": "BOUND_EXACT",
     "dependency_ids": [
-      "SRC-WB-FINDEX-001"
+      "SRC-WB-FINDEX-001",
+      "SRC-WB-FINDEX-AGG-2022"
     ],
     "direct_source_ids": [
-      "SRC-WB-FINDEX-001"
+      "SRC-WB-FINDEX-001",
+      "SRC-WB-FINDEX-AGG-2022"
     ],
     "resolved_source_ids": [
-      "SRC-WB-FINDEX-001"
+      "SRC-WB-FINDEX-001",
+      "SRC-WB-FINDEX-AGG-2022"
     ],
     "resolved_via_object_ids": [],
     "context_reference_ids": [],
@@ -1868,6 +1871,11 @@
       {
         "source_id": "SRC-WB-FINDEX-001",
         "primary_url": "https://microdata.worldbank.org/catalog/5862",
+        "metadata_state": "DISPLAY_READY"
+      },
+      {
+        "source_id": "SRC-WB-FINDEX-AGG-2022",
+        "primary_url": "https://data.worldbank.org/indicator/FX.OWN.TOTL.ZS?locations=YE",
         "metadata_state": "DISPLAY_READY"
       }
     ],
@@ -1883,13 +1891,16 @@
     ],
     "lineage_state": "BOUND_EXACT",
     "dependency_ids": [
-      "SRC-WB-FINDEX-001"
+      "SRC-WB-FINDEX-001",
+      "SRC-WB-FINDEX-AGG-2022"
     ],
     "direct_source_ids": [
-      "SRC-WB-FINDEX-001"
+      "SRC-WB-FINDEX-001",
+      "SRC-WB-FINDEX-AGG-2022"
     ],
     "resolved_source_ids": [
-      "SRC-WB-FINDEX-001"
+      "SRC-WB-FINDEX-001",
+      "SRC-WB-FINDEX-AGG-2022"
     ],
     "resolved_via_object_ids": [],
     "context_reference_ids": [],
@@ -1898,6 +1909,11 @@
       {
         "source_id": "SRC-WB-FINDEX-001",
         "primary_url": "https://microdata.worldbank.org/catalog/5862",
+        "metadata_state": "DISPLAY_READY"
+      },
+      {
+        "source_id": "SRC-WB-FINDEX-AGG-2022",
+        "primary_url": "https://data.worldbank.org/indicator/FX.OWN.TOTL.ZS?locations=YE",
         "metadata_state": "DISPLAY_READY"
       }
     ],
@@ -2058,7 +2074,8 @@
       "CLM-027",
       "CLM-028",
       "CLM-029",
-      "CLM-030"
+      "CLM-030",
+      "CLM-026"
     ],
     "direct_source_ids": [],
     "resolved_source_ids": [],
@@ -2067,7 +2084,8 @@
       "CLM-027",
       "CLM-028",
       "CLM-029",
-      "CLM-030"
+      "CLM-030",
+      "CLM-026"
     ],
     "context_reference_ids": [],
     "unresolved_dependency_ids": [],
@@ -2135,7 +2153,8 @@
       "CLM-029",
       "CLM-030",
       "VIS-FINDEX-RESILIENCE",
-      "VIS-FINDEX-BARRIERS"
+      "VIS-FINDEX-BARRIERS",
+      "VIS-FINDEX-FLOW-CHANNELS"
     ],
     "direct_source_ids": [],
     "resolved_source_ids": [],
@@ -2146,7 +2165,8 @@
       "CLM-029",
       "CLM-030",
       "VIS-FINDEX-RESILIENCE",
-      "VIS-FINDEX-BARRIERS"
+      "VIS-FINDEX-BARRIERS",
+      "VIS-FINDEX-FLOW-CHANNELS"
     ],
     "context_reference_ids": [],
     "unresolved_dependency_ids": [],
@@ -6424,7 +6444,8 @@
       "CLM-027",
       "CLM-028",
       "CLM-029",
-      "CLM-030"
+      "CLM-030",
+      "CLM-026"
     ],
     "context_reference_ids": [],
     "unresolved_dependency_ids": [],
@@ -10701,6 +10722,118 @@
     "closure_state": "CLOSED_TO_SOURCE_ID",
     "rule": "Evidence records show only exact bound sources, listed member records, or an explicit unbound or framing state (Tranche B Stage 1, PB-0001/PB-0002). Dataset-level tokens are never expanded into source lists; an input that is not bound to a source stays explicit as unresolved. Never invent a source, title, publisher, date, licence or missing fact.",
     "lineage_from": "CWR-010"
+  },
+  {
+    "object_type": "visual",
+    "object_id": "VIS-FINDEX-ACCESS-USE",
+    "public_routes": [
+      "/people/"
+    ],
+    "lineage_state": "BOUND_EXACT",
+    "dependency_ids": [
+      "25_FINDEX_BASELINE"
+    ],
+    "direct_source_ids": [
+      "SRC-WB-FINDEX-001",
+      "SRC-WB-FINDEX-AGG-2022"
+    ],
+    "resolved_source_ids": [
+      "SRC-WB-FINDEX-001",
+      "SRC-WB-FINDEX-AGG-2022"
+    ],
+    "resolved_via_object_ids": [],
+    "context_reference_ids": [],
+    "unresolved_dependency_ids": [],
+    "source_locators": [
+      {
+        "source_id": "SRC-WB-FINDEX-001",
+        "primary_url": "https://microdata.worldbank.org/catalog/5862",
+        "metadata_state": "DISPLAY_READY"
+      },
+      {
+        "source_id": "SRC-WB-FINDEX-AGG-2022",
+        "primary_url": "https://data.worldbank.org/indicator/FX.OWN.TOTL.ZS?locations=YE",
+        "metadata_state": "DISPLAY_READY"
+      }
+    ],
+    "closure_state": "CLOSED_TO_SOURCE_ID",
+    "rule": "Evidence records show only exact bound sources, listed member records, or an explicit unbound or framing state (Tranche B Stage 1, PB-0001/PB-0002). Dataset-level tokens are never expanded into source lists; an input that is not bound to a source stays explicit as unresolved. Never invent a source, title, publisher, date, licence or missing fact.",
+    "lineage_from": "VIS-FINDEX-ACCESS-USE"
+  },
+  {
+    "object_type": "visual",
+    "object_id": "VIS-FINDEX-RESILIENCE",
+    "public_routes": [
+      "/people/"
+    ],
+    "lineage_state": "BOUND_EXACT",
+    "dependency_ids": [
+      "25_FINDEX_BASELINE"
+    ],
+    "direct_source_ids": [
+      "SRC-WB-FINDEX-001",
+      "SRC-WB-FINDEX-AGG-2022"
+    ],
+    "resolved_source_ids": [
+      "SRC-WB-FINDEX-001",
+      "SRC-WB-FINDEX-AGG-2022"
+    ],
+    "resolved_via_object_ids": [],
+    "context_reference_ids": [],
+    "unresolved_dependency_ids": [],
+    "source_locators": [
+      {
+        "source_id": "SRC-WB-FINDEX-001",
+        "primary_url": "https://microdata.worldbank.org/catalog/5862",
+        "metadata_state": "DISPLAY_READY"
+      },
+      {
+        "source_id": "SRC-WB-FINDEX-AGG-2022",
+        "primary_url": "https://data.worldbank.org/indicator/FX.OWN.TOTL.ZS?locations=YE",
+        "metadata_state": "DISPLAY_READY"
+      }
+    ],
+    "closure_state": "CLOSED_TO_SOURCE_ID",
+    "rule": "Evidence records show only exact bound sources, listed member records, or an explicit unbound or framing state (Tranche B Stage 1, PB-0001/PB-0002). Dataset-level tokens are never expanded into source lists; an input that is not bound to a source stays explicit as unresolved. Never invent a source, title, publisher, date, licence or missing fact.",
+    "lineage_from": "VIS-FINDEX-RESILIENCE"
+  },
+  {
+    "object_type": "visual",
+    "object_id": "VIS-FINDEX-FLOW-CHANNELS",
+    "public_routes": [
+      "/people/",
+      "/remittances/"
+    ],
+    "lineage_state": "BOUND_EXACT",
+    "dependency_ids": [
+      "25_FINDEX_BASELINE"
+    ],
+    "direct_source_ids": [
+      "SRC-WB-FINDEX-001",
+      "SRC-WB-FINDEX-AGG-2022"
+    ],
+    "resolved_source_ids": [
+      "SRC-WB-FINDEX-001",
+      "SRC-WB-FINDEX-AGG-2022"
+    ],
+    "resolved_via_object_ids": [],
+    "context_reference_ids": [],
+    "unresolved_dependency_ids": [],
+    "source_locators": [
+      {
+        "source_id": "SRC-WB-FINDEX-001",
+        "primary_url": "https://microdata.worldbank.org/catalog/5862",
+        "metadata_state": "DISPLAY_READY"
+      },
+      {
+        "source_id": "SRC-WB-FINDEX-AGG-2022",
+        "primary_url": "https://data.worldbank.org/indicator/FX.OWN.TOTL.ZS?locations=YE",
+        "metadata_state": "DISPLAY_READY"
+      }
+    ],
+    "closure_state": "CLOSED_TO_SOURCE_ID",
+    "rule": "Evidence records show only exact bound sources, listed member records, or an explicit unbound or framing state (Tranche B Stage 1, PB-0001/PB-0002). Dataset-level tokens are never expanded into source lists; an input that is not bound to a source stays explicit as unresolved. Never invent a source, title, publisher, date, licence or missing fact.",
+    "lineage_from": "VIS-FINDEX-FLOW-CHANNELS"
   },
   {
     "object_type": "measurement",

@@ -144,7 +144,8 @@ UI = [  # (ui_id, label_en, label_ar, note)
     ("UI-VIS-TH-FINDEX-BORROWED", "Borrowed any money", "اقترض أي مبلغ", "Close-out U1. Column, borrow.any.t.d."),
     ("UI-VIS-TH-FINDEX-BORROWED-FAMILY", "Borrowed from family or friends", "اقترض من الأسرة أو الأصدقاء",
      "Close-out U1. Column, fin22b."),
-    ("UI-VIS-TH-FINDEX-EMERG-NOT-POSSIBLE", "Not possible", "غير ممكن", "Close-out U1. Column, fin24aN."),
+    ("UI-VIS-TH-FINDEX-EMERG-NOT-POSSIBLE", "Not possible, or don't know or no answer", "غير ممكن، أو لا يعرف أو لا إجابة",
+     "Close-out U1. Column, fin24aN (the World Bank counts don't know and refused with not possible)."),
     ("UI-VIS-TH-FINDEX-EMERG-VERY", "Possible, very difficult", "ممكن بصعوبة بالغة", "Close-out U1. Column, fin24aVD."),
     ("UI-VIS-TH-FINDEX-EMERG-SOMEWHAT", "Possible, somewhat difficult", "ممكن ببعض الصعوبة",
      "Close-out U1. Column, fin24aSD."),
@@ -164,8 +165,8 @@ UI = [  # (ui_id, label_en, label_ar, note)
     ("UI-VIS-NOTE-FINDEX-GROUPS",
      "World Bank published values, shown without an interval: no interval is published here for a group value, each "
      "group rests on fewer than the 1,000 interviews, and a difference between groups is not a cause.",
-     "قيم ينشرها البنك الدولي، تُعرض دون فترة ثقة: لا تُنشر هنا فترة ثقة لقيمة أي فئة، وتستند كل فئة إلى أقل من 1,000 "
-     "مقابلة، والفرق بين الفئات لا يدل على سببه.",
+     "قيم ينشرها البنك الدولي، تُعرض دون فترة ثقة: لا تُنشر هنا فترة ثقة لقيمة أي فئة، وتستند كل فئة إلى أقل من مقابلات "
+     "العينة البالغة 1,000، والفرق بين الفئات ليس سببًا.",
      "Close-out U1. Marker row, Findex group tables."),
     ("UI-VIS-NOTE-FINDEX-ACCOUNT-FI",
      "Yemen's survey did not ask the mobile-money questions, so the World Bank's values for an account at a financial "
@@ -174,12 +175,13 @@ UI = [  # (ui_id, label_en, label_ar, note)
      "لأي حساب.",
      "Close-out U1 (CR-01). Marker row, VIS-FINDEX-ACCESS-USE."),
     ("UI-VIS-NOTE-FINDEX-EMERG-CATS",
-     "The four answers are adults' own assessments, in the survey's categories, and are not combined into a score; the "
-     "shares in a row do not quite add up to all adults, because answers such as \"don't know\" are not shown. The survey "
-     "also asked about 7 days, but the World Bank publishes no value for that question.",
-     "الإجابات الأربع تقديرات البالغين أنفسهم، بفئات المسح، ولا تُدمج في درجة واحدة؛ ولا تبلغ الحصص في كل صف مجموع "
-     "البالغين تمامًا، لأن إجابات مثل «لا أعرف» لا تُعرض. وسأل المسح أيضًا عن مهلة 7 أيام، لكن البنك الدولي لا ينشر "
-     "قيمة لذلك السؤال.",
+     "The four answers are adults' own assessments, in the survey's categories, and are not combined into a score. "
+     "\"Not possible\" includes adults who did not know or did not answer, as the World Bank counts them; the shares in "
+     "a row do not quite add up to all adults, because a few adults who said it was possible did not say how difficult. "
+     "The survey also asked about 7 days, but the World Bank publishes no value for that question.",
+     "الإجابات الأربع تقديرات البالغين أنفسهم، بفئات المسح، ولا تُدمج في درجة واحدة. وتشمل فئة «غير ممكن» البالغين الذين "
+     "لم يعرفوا أو لم يجيبوا، كما يحتسبهم البنك الدولي؛ ولا تبلغ الحصص في كل صف مجموع البالغين تمامًا، لأن قلة ممن قالوا "
+     "إن ذلك ممكن لم يذكروا مدى صعوبته. وسأل المسح أيضًا عن مهلة 7 أيام، لكن البنك الدولي لا ينشر قيمة لذلك السؤال.",
      "Close-out U1. Marker row, VIS-FINDEX-RESILIENCE."),
     ("UI-VIS-NOTE-FINDEX-FLOWS",
      "Each value is a share of all adults in the group, not of those who received or sent the money; the channels "
@@ -284,21 +286,23 @@ V["VIS-FINDEX-ACCESS-USE"] = dict(
     prohibited_ar="الفرق بين فئتين ليس سببًا، و" + NO_GROUP_INTERVAL_AR + "؛ وتستند قيم الفئات إلى عينات أصغر من عينة "
                   "القيمة الخاصة بجميع البالغين. وامتلاك الحساب لا يدل على استخدامه، واقتراض أي مبلغ يشمل الاقتراض من "
                   "الأسرة والأصدقاء الذي لا يحتاج إلى مقدم خدمة.",
-    summary_en="World Bank published values for Yemen's Global Findex 2021 wave: 11.9% of adults have an account (the "
+    summary_en="World Bank published values for Yemen's Global Findex 2021 wave: 11.9% of adults had an account (the "
                "same share at a financial institution), 21.6% saved any money, 51.3% borrowed any money and 41.1% "
                "borrowed from family or friends. The table gives each share for women and men, two age groups, two "
                "education groups, adults in the poorest 40% and the richest 60% of households by income, and adults in "
                "and out of the labour force; " + NO_GROUP_INTERVAL_EN + ", groups rest on smaller samples, and a "
                "difference between groups is not a cause. A different measure of the same wave: 9.3% of adults made or "
                "received a digital payment (95% interval 6.8% to 11.8%, computed by CauseWay from the World Bank's "
-               "published value and design effect); it is not a measure of account use.",
-    summary_ar="قيم ينشرها البنك الدولي لموجة 2021 من Global Findex الخاصة باليمن: يملك 11.9% من البالغين حسابًا "
+               "published value and design effect); it is a separate measure of payments, shown for all adults only, and "
+               "not a measure of account ownership.",
+    summary_ar="قيم ينشرها البنك الدولي لموجة 2021 من Global Findex الخاصة باليمن: كان لدى 11.9% من البالغين حساب "
                "(والنسبة نفسها لحساب لدى مؤسسة مالية)، وادخر 21.6% أي مبلغ، واقترض 51.3% أي مبلغ، واقترض 41.1% من "
                "الأسرة أو الأصدقاء. ويعرض الجدول كل نسبة للنساء والرجال، ولفئتين عمريتين، وفئتين تعليميتين، وللبالغين في "
                "أفقر 40% وأغنى 60% من الأسر بحسب الدخل، وللبالغين داخل قوة العمل وخارجها؛ و" + NO_GROUP_INTERVAL_AR +
                "، وتستند الفئات إلى عينات أصغر، والفرق بين الفئات ليس سببًا. ومقياس مختلف من الموجة نفسها: أجرى 9.3% "
                "من البالغين مدفوعة رقمية أو تلقوها (فترة ثقة 95% من 6.8% إلى 11.8%، من احتساب CauseWay من القيمة التي "
-               "ينشرها البنك الدولي ومن أثر التصميم)؛ وهو ليس مقياسًا لاستخدام الحساب.",
+               "ينشرها البنك الدولي ومن أثر التصميم)؛ وهو مقياس منفصل للمدفوعات، يُعرض لجميع البالغين فقط، وليس مقياسًا "
+               "لامتلاك الحساب.",
     definition_en="Five measures for adults aged 15 and over in the areas the survey covered, as the World Bank publishes "
                   "them for Yemen's 2021 wave: having an account, having an account at a financial institution, saving "
                   "any money, borrowing any money and borrowing from family or friends in the past year, each for all "
@@ -326,10 +330,11 @@ V["VIS-FINDEX-RESILIENCE"] = dict(
                 "group?",
     question_ar="هل قال البالغون إن بإمكانهم تدبير أموال للطوارئ خلال 30 يومًا، وما مدى صعوبة ذلك، بحسب الفئة؟",
     shows_en="The World Bank's published shares of adults who said that coming up with emergency funds within 30 days "
-             "would not be possible, or would be possible but very difficult, somewhat difficult, or not difficult at "
-             "all, for all adults and by group.",
-    shows_ar="النسب التي ينشرها البنك الدولي للبالغين الذين قالوا إن تدبير أموال للطوارئ خلال 30 يومًا سيكون غير ممكن، "
-             "أو ممكنًا بصعوبة بالغة، أو ببعض الصعوبة، أو دون أي صعوبة، لجميع البالغين وبحسب الفئة.",
+             "would not be possible (with those who did not know or did not answer), or would be possible but very "
+             "difficult, somewhat difficult, or not difficult at all, for all adults and by group.",
+    shows_ar="النسب التي ينشرها البنك الدولي للبالغين الذين قالوا إن تدبير أموال للطوارئ خلال 30 يومًا سيكون غير ممكن "
+             "(ومعهم من لم يعرفوا أو لم يجيبوا)، أو ممكنًا بصعوبة بالغة، أو ببعض الصعوبة، أو دون أي صعوبة، لجميع البالغين "
+             "وبحسب الفئة.",
     value_en="Keeps the survey's own answer categories, including saying the money could not be raised, so that "
              "resilience is not reduced to a single score.",
     value_ar="يحافظ على فئات الإجابة كما وردت في المسح، بما فيها القول بتعذر تدبير المال، حتى لا يُختزل الصمود في درجة "
@@ -344,24 +349,28 @@ V["VIS-FINDEX-RESILIENCE"] = dict(
                   "والفرق بين الفئات ليس سببًا، و" + NO_GROUP_INTERVAL_AR + ". وسأل المسح أيضًا عن مهلة 7 أيام، لكن البنك "
                   "الدولي لا ينشر قيمة لذلك السؤال، لذلك لا يُقارن الأفقان الزمنيان.",
     summary_en="World Bank published values for Yemen's Global Findex 2021 wave: 10.8% of adults said that coming up "
-               "with emergency funds within 30 days would not be possible; 25.1% said it would be possible but very "
-               "difficult, 40.4% somewhat difficult and 23.2% not difficult at all. The table gives the same four "
-               "answers by sex, age, education, income and labour-force status; the shares in a row do not quite add "
-               "up to all adults, because answers such as \"don't know\" are not shown. " + NO_GROUP_INTERVAL_EN[0].upper()
+               "with emergency funds within 30 days would not be possible, or did not know or did not answer (the World "
+               "Bank counts these together); 25.1% said it would be possible but very difficult, 40.4% somewhat "
+               "difficult and 23.2% not difficult at all. The table gives the same four answers by sex, age, education, "
+               "income and labour-force status; the shares in a row do not quite add up to all adults, because a few "
+               "adults who said it was possible did not say how difficult. " + NO_GROUP_INTERVAL_EN[0].upper()
                + NO_GROUP_INTERVAL_EN[1:] + ", groups rest on smaller samples, and a difference between groups is not a "
                "cause.",
     summary_ar="قيم ينشرها البنك الدولي لموجة 2021 من Global Findex الخاصة باليمن: قال 10.8% من البالغين إن تدبير أموال "
-               "للطوارئ خلال 30 يومًا سيكون غير ممكن، وقال 25.1% إنه ممكن بصعوبة بالغة، و40.4% ببعض الصعوبة، و23.2% دون "
-               "أي صعوبة. ويعرض الجدول الإجابات الأربع نفسها بحسب الجنس والعمر والتعليم والدخل والمشاركة في قوة العمل؛ "
-               "ولا تبلغ الحصص في كل صف مجموع البالغين تمامًا، لأن إجابات مثل «لا أعرف» لا تُعرض. و" + NO_GROUP_INTERVAL_AR
+               "للطوارئ خلال 30 يومًا سيكون غير ممكن، أو لم يعرفوا أو لم يجيبوا (ويحتسب البنك الدولي هذه الإجابات معًا)؛ وقال 25.1% إنه "
+               "سيكون ممكنًا بصعوبة بالغة، و40.4% ببعض الصعوبة، و23.2% دون أي صعوبة. ويعرض الجدول الإجابات الأربع نفسها "
+               "بحسب الجنس والعمر والتعليم والدخل والمشاركة في قوة العمل؛ ولا تبلغ الحصص في كل صف مجموع البالغين تمامًا، "
+               "لأن قلة ممن قالوا إن ذلك ممكن لم يذكروا مدى صعوبته. و" + NO_GROUP_INTERVAL_AR
                + "، وتستند الفئات إلى عينات أصغر، والفرق بين الفئات ليس سببًا.",
     definition_en="What adults aged 15 and over in the areas the survey covered said about coming up with emergency funds "
                   "within 30 days, and how difficult it would be, in the four answer categories the World Bank publishes "
-                  "for Yemen's 2021 wave, for all adults and by group. The survey also asked about 7 days; the World "
-                  "Bank publishes no value for that question.",
-    definition_ar="ما قاله البالغون بعمر 15 سنة فأكثر في المناطق التي شملها المسح عن قدرتهم على تدبير أموال للطوارئ خلال "
+                  "for Yemen's 2021 wave, for all adults and by group; \"not possible\" includes adults who did not know "
+                  "or did not answer, as the World Bank counts them. The survey also asked about 7 days; the World Bank "
+                  "publishes no value for that question.",
+    definition_ar="ما قاله البالغون بعمر 15 سنة فأكثر في المناطق التي شملها المسح عن تدبير أموال للطوارئ خلال "
                   "30 يومًا، ومدى صعوبة ذلك، في فئات الإجابة الأربع التي ينشرها البنك الدولي لموجة 2021 الخاصة باليمن، "
-                  "لجميع البالغين ولكل فئة. وسأل المسح أيضًا عن مهلة 7 أيام، ولا ينشر البنك الدولي قيمة لذلك السؤال.",
+                  "لجميع البالغين ولكل فئة؛ وتشمل فئة «غير ممكن» البالغين الذين لم يعرفوا أو لم يجيبوا، كما يحتسبهم البنك "
+                  "الدولي. وسأل المسح أيضًا عن مهلة 7 أيام، ولا ينشر البنك الدولي قيمة لذلك السؤال.",
     limitations_en="The answers are self-assessments of a hypothetical emergency, not observed events, and the ordered "
                    "categories do not form a resilience score; no method for combining them is used here. A difference "
                    "between groups does not establish its cause, and " + NO_GROUP_INTERVAL_EN + ". Saying the money "
@@ -373,7 +382,7 @@ V["VIS-FINDEX-RESILIENCE"] = dict(
 )
 V["VIS-FINDEX-FLOW-CHANNELS"] = dict(
     title_en="Wages, agricultural payments and domestic remittances, by group",
-    title_ar="الأجور ومدفوعات المبيعات الزراعية والحوالات المحلية بحسب الفئة",
+    title_ar="الأجور والمدفوعات الزراعية والحوالات المحلية بحسب الفئة",
     question_en="Which adults received wages or agricultural payments, or sent or received domestic remittances, in the "
                 "World Bank's published values?",
     question_ar="من هم البالغون الذين تلقوا أجورًا أو مدفوعات زراعية، أو أرسلوا حوالات محلية أو تلقوها، في القيم التي "
@@ -457,7 +466,8 @@ CLM026 = OrderedDict([
      "the World Bank publishes for Yemen in the 2021 wave: an account (11.9% of adults) and an account at a financial "
      "institution (11.9%); saving any money (21.6%) and saving at a financial institution (3.1%); borrowing any money "
      "(51.3%), from a financial institution (1.8%) and from family or friends (41.1%); saying that emergency funds within "
-     "30 days would not be possible (10.8%; the other three answers are in the emergency-funds table on /people/); "
+     "30 days would not be possible, or not knowing or not answering (10.8%; the other three answers are in the "
+     "emergency-funds table on /people/); "
      "sending (17.7%), receiving (31.9%) or either sending or receiving (37.8%) domestic remittances; receiving wages "
      "(12.4%), a government transfer (3.8%) or payments for agricultural sales (28.9%); making or receiving a digital "
      "payment (9.3%); and making a digital merchant payment (0.6%). Of the other 16, two were not asked in Yemen's survey "
@@ -467,18 +477,20 @@ CLM026 = OrderedDict([
      "والحوالات وتدفقات الدخل والقلق المالي والاتصال. ولستة عشر من مقاييسها قيم ينشرها البنك الدولي لليمن في موجة 2021: "
      "امتلاك حساب (11.9% من البالغين) وحساب لدى مؤسسة مالية (11.9%)؛ وادخار أي مبلغ (21.6%) والادخار لدى مؤسسة مالية (3.1%)؛ "
      "واقتراض أي مبلغ (51.3%) والاقتراض من مؤسسة مالية (1.8%) ومن الأسرة أو الأصدقاء (41.1%)؛ والقول بعدم إمكان تدبير أموال "
-     "للطوارئ خلال 30 يومًا (10.8%؛ وترد الإجابات الثلاث الأخرى في جدول أموال الطوارئ في صفحة /people/)؛ وإرسال حوالات محلية "
+     "للطوارئ خلال 30 يومًا، أو عدم المعرفة أو عدم الإجابة (10.8%؛ وترد الإجابات الثلاث الأخرى في جدول أموال الطوارئ في "
+     "صفحة /people/)؛ وإرسال حوالات محلية "
      "(17.7%) وتلقيها (31.9%) أو أيٍّ من الأمرين (37.8%)؛ وتلقي أجور (12.4%) أو تحويل حكومي (3.8%) أو مدفوعات عن مبيعات زراعية "
      "(28.9%)؛ وإجراء مدفوعة رقمية أو تلقيها (9.3%)؛ وإجراء مدفوعة رقمية لتاجر (0.6%). أما المقاييس الـ16 الأخرى، فلم يُطرح "
      "اثنان منها في مسح اليمن، ولا توجد لـ14 منها قيمة ينشرها البنك الدولي لليمن."),
     ("definition_en",
      "This record describes a set of 32 defined people-side measures for the Yemen Findex 2021 study and carries the 16 of "
      "them that the World Bank publishes for Yemen, each as a share of adults aged 15 and over in the areas the survey "
-     "covered; values by group are shown in the three tables of /people/."),
+     "covered; values by group, for the 11 measures the World Bank publishes by group, are shown in the three tables "
+     "of /people/."),
     ("definition_ar",
-     "يصف هذا السجل مجموعة من 32 مقياسًا محددًا على جانب الأفراد لدراسة Findex 2021 الخاصة باليمن، ويحمل الستة عشر منها التي "
+     "يصف هذا السجل مجموعة من 32 مقياسًا محددًا على جانب الأفراد لدراسة Findex 2021 الخاصة باليمن، ويحمل المقاييس الـ16 منها التي "
      "ينشرها البنك الدولي لليمن، وكل منها نسبة من البالغين بعمر 15 سنة فأكثر في المناطق التي شملها المسح؛ وتُعرض القيم بحسب "
-     "الفئة في الجداول الثلاثة في صفحة /people/."),
+     "الفئة، للمقاييس الـ11 التي ينشر البنك الدولي قيمها بحسب الفئة، في الجداول الثلاثة في صفحة /people/."),
     ("universe_en",
      "A pre-specified 32-measure panel: 16 measures with World Bank published values for Yemen; 14 measures the survey "
      "asked but for which the World Bank publishes no Yemen value, so that a value would require computation from "
@@ -490,17 +502,19 @@ CLM026 = OrderedDict([
     ("limitations_en",
      "Of the 32 specified measures, 14 have no World Bank published value for Yemen in this wave and this resource does not "
      "compute them from respondent-level data, so they are planned, not measured; two (using and saving with a mobile-money "
-     "account) were not asked in Yemen's survey, so no value exists for this wave. | Only saving any money, borrowing any "
-     "money and making or receiving a digital payment carry a 95% interval, computed by CauseWay; the other published "
-     "values are shown without one. | The published measures are shares of all adults in the areas the survey covered, "
+     "account) were not asked in Yemen's survey, so no value exists for this wave. | In this record, saving any money, "
+     "borrowing any money and making or receiving a digital payment carry a 95% interval computed by CauseWay "
+     "(account ownership has a margin of error in VIS-FINDEX-GAPS); the other published values, and every group "
+     "value, are shown without one. The published measures are shares of all adults in the areas the survey covered, "
      "each on its own question base. They do not add up and are not stages of one process: borrowing any money includes "
      "borrowing from family and friends, which needs no provider, and making or receiving a digital payment is not a "
      "measure of account ownership."),
     ("limitations_ar",
      "من المقاييس المحددة البالغة 32، لا توجد لـ14 منها قيمة منشورة من البنك الدولي لليمن في هذه الموجة، ولا يحتسبها هذا "
      "المورد من بيانات المستجيبين، لذلك تبقى مخططة لا مقاسة؛ ولم يُطرح سؤالا مقياسين منها (استخدام حساب لخدمات الأموال عبر "
-     "الهاتف والادخار به) في مسح اليمن، لذلك لا توجد لهما قيمة في هذه الموجة. | ولا تحمل فترة ثقة 95%، من احتساب CauseWay، إلا "
-     "قيم ادخار أي مبلغ واقتراض أي مبلغ وإجراء مدفوعة رقمية أو تلقيها؛ وتُعرض القيم المنشورة الأخرى دونها. | والمقاييس "
+     "الهاتف والادخار به) في مسح اليمن، لذلك لا توجد لهما قيمة في هذه الموجة. | وفي هذا السجل، تحمل قيم ادخار أي مبلغ واقتراض أي "
+     "مبلغ وإجراء مدفوعة رقمية أو تلقيها فترة ثقة 95% من احتساب CauseWay (ولامتلاك الحساب هامش خطأ في السجل "
+     "VIS-FINDEX-GAPS)؛ وتُعرض القيم المنشورة الأخرى، وكل قيم الفئات، دونها. والمقاييس "
      "المنشورة نسب من جميع البالغين في المناطق التي شملها المسح، ولكل منها قاعدة سؤاله الخاصة. ولا تُجمع هذه النسب ولا تمثل "
      "مراحل في مسار واحد: فاقتراض أي مبلغ يشمل الاقتراض من الأسرة والأصدقاء وهو لا يحتاج مقدم خدمة، وإجراء مدفوعة رقمية أو "
      "تلقيها ليس مقياسًا لامتلاك الحساب."),
@@ -532,7 +546,7 @@ CLM026_METHOD_NEW_EN = ("The measures were specified in advance. Their values ar
                         "indicator label, never by a questionnaire code. No respondent-level data are used. ")
 CLM026_METHOD_NEW_AR = ("حُدِّدت المقاييس مسبقًا. وقيمها هي التقديرات التي ينشرها البنك الدولي لليمن، قُرئت من واجهة البيانات "
                         "المفتوحة للبنك الدولي (قاعدة بيانات Global Findex، المصدر 28) في 10 أكتوبر 2026 وحُفظت في لقطة مؤرخة؛ "
-                        "وطوبقت كل سلسلة مع مقياسها وفق تسمية المؤشر لدى البنك الدولي نفسه، لا وفق رمز الاستبيان. ولا تُستخدم أي "
+                        "وطوبقت كل سلسلة مع مقياسها وفق تسمية المؤشر لدى البنك الدولي نفسه، ولا تُطابَق أبدًا وفق رمز الاستبيان. ولا تُستخدم أي "
                         "بيانات على مستوى المستجيبين. ")
 CLM026_INTERVAL_OLD_EN = "The 95% interval beside each is computed by CauseWay"
 CLM026_INTERVAL_NEW_EN = "The 95% interval beside saving, borrowing and digital payments is computed by CauseWay"
@@ -583,25 +597,25 @@ SITE_META = OrderedDict([  # route -> (en anchor, ar anchor, new en, new ar)
         "centre on 2014", "تتركز أدلة",
         "People-side evidence has no single latest year: most functions are measured in the 2021 Findex wave (2022), "
         "historical detail is from 2014, and the reasons for not having an account have no value.",
-        "لا توجد سنة حديثة واحدة لأدلة الأفراد: تُقاس معظم الوظائف في موجة Findex 2021 (2022)، وتعود التفاصيل التاريخية إلى "
+        "لا تشترك أدلة الأفراد في سنة واحدة هي الأحدث: تُقاس معظم الوظائف في موجة Findex 2021 (2022)، وتعود التفاصيل التاريخية إلى "
         "2014، ولا توجد قيمة لأسباب عدم امتلاك الحساب.")),
     ("/evidence/VIS-DEMAND-VINTAGE-LADDER/", (
         "from 2014", "من 2014",
         "As checked on 10 October 2026, the latest evidence on people comes from the 2021 Findex wave for most functions; "
         "the World Bank publishes no Yemen value for the reasons for not having an account.",
-        "عند الاطلاع في 10 أكتوبر 2026، يأتي أحدث دليل عن الأفراد من موجة Findex 2021 لمعظم الوظائف؛ ولا ينشر البنك الدولي "
+        "وفق التحقق في 10 أكتوبر 2026، يأتي أحدث دليل عن الأفراد من موجة Findex 2021 لمعظم الوظائف؛ ولا ينشر البنك الدولي "
         "أي قيمة لليمن لأسباب عدم امتلاك الحساب.")),
 ])
 SAMPLE_SUPPORT = OrderedDict([  # field -> (anchor, new)
     ("summary_en", ("have not yet been produced",
                     "No counts are shown here. The 2021-wave values shown on /people/ are the World Bank's published "
                     "estimates; the study's public metadata record, for each question, the number of valid and of "
-                    "missing or invalid answers, but these counts are not yet carried in this resource. Such counts "
+                    "missing or invalid answers, but these counts are not yet shown in this resource. Such counts "
                     "describe the sample and are not population estimates.")),
     ("summary_ar", ("لم تُنتج بعد",
                     "لا تُعرض هنا أي أعداد. والقيم المعروضة لموجة 2021 في صفحة /people/ هي التقديرات التي ينشرها البنك "
                     "الدولي؛ وتسجل البيانات الوصفية العامة للدراسة، لكل سؤال، عدد الإجابات الصالحة وعدد الإجابات المفقودة "
-                    "أو غير الصالحة، لكن هذه الأعداد لم تُنقل بعد إلى هذا المورد. وهذه الأعداد تصف العينة وليست تقديرات "
+                    "أو غير الصالحة، لكن هذه الأعداد لا تُعرض بعد في هذا المورد. وهذه الأعداد تصف العينة وليست تقديرات "
                     "سكانية.")),
     ("currentness_en", ("When they are produced",
                         "No counts are shown yet. They would refer to the 2021 Findex wave, with Yemen fieldwork from 7 "
@@ -616,13 +630,13 @@ LADDER = OrderedDict([
                     "published values, for the year World Bank Data labels 2022, for account ownership (11.9%), saving "
                     "(21.6%) and borrowing (51.3%) any money, making or receiving a digital payment (9.3%), receiving "
                     "domestic remittances (31.9%) and emergency funds within 30 days (10.8% of adults said it would not "
-                    "be possible); the World Bank publishes no Yemen value for the reasons adults give for not having an "
+                    "be possible, or did not know or answer); the World Bank publishes no Yemen value for the reasons adults give for not having an "
                     "account, so that function has none.")),
     ("summary_ar", ("تلقاها 18.3%",
                     "أحدث دليل موزون لكل وظيفة مالية: تعطي موجة Findex 2021 قيمًا ينشرها البنك الدولي، للسنة التي يعرضها "
                     "موقع بيانات البنك الدولي بوصفها 2022، لامتلاك الحساب (11.9%)، ولادخار أي مبلغ (21.6%) واقتراضه "
                     "(51.3%)، ولإجراء مدفوعة رقمية أو تلقيها (9.3%)، ولتلقي الحوالات المحلية (31.9%)، ولأموال الطوارئ خلال "
-                    "30 يومًا (قال 10.8% من البالغين إن ذلك غير ممكن)؛ ولا ينشر البنك الدولي أي قيمة لليمن لأسباب عدم "
+                    "30 يومًا (قال 10.8% من البالغين إن ذلك غير ممكن، أو لم يعرفوا أو لم يجيبوا)؛ ولا ينشر البنك الدولي أي قيمة لليمن لأسباب عدم "
                     "امتلاك البالغين حسابًا، لذلك لا توجد لهذه الوظيفة قيمة.")),
     ("period_en", ("no weighted values yet",
                    "2022 (the 2021 Findex wave); no value for the reasons for not having an account")),
@@ -654,7 +668,7 @@ REMIT_2014_CURRENT = OrderedDict([  # CLM-030 and VIS-DOMESTIC-REMITTANCE-PATH-2
                         "وسلسلة البنك الدولي الحالية لتلقي الحوالات المحلية تحمل قيمة لعام 2022 من موجة Findex 2021 (31.9% "
                         "من البالغين)، تُعرض مع قيم الفئات في صفحتي /people/ و/remittances/، لكنها لا تحمل أي قيمة لعام "
                         "2014، في حين أن القيمة في هذا السجل مأخوذة من الملف القطري لعام 2014. والسلسلة التي لا تحمل السنة "
-                        "الأقدم لا تستطيع إظهار تغير مقابلها، لذلك لا تُقرأ القيمتان اتجاهًا. وما يلزم لمقارنتهما مسألة قياس، "
+                        "الأقدم لا تستطيع إثبات تغير مقابلها، لذلك لا تُقرأ القيمتان اتجاهًا. وما يلزم لمقارنتهما مسألة قياس، "
                         "لا مسألة عرض.")),
 ])
 CLM031 = OrderedDict([
@@ -666,7 +680,7 @@ CLM031 = OrderedDict([
                     "domestic remittances in 2014; and the World Bank publishes no Yemen value for the reasons for not "
                     "having an account. The 2014 and 2021-wave results stay separate and are not read as a trend.")),
     ("summary_ar", ("تتركز الأدلة العامة",
-                    "لا توجد سنة حديثة واحدة لجميع أدلة جانب الأفراد هنا. فموجة Findex 2021 (سنة بيانات البنك الدولي 2022) "
+                    "لا تشترك أدلة جانب الأفراد هنا في سنة واحدة هي الأحدث. فموجة Findex 2021 (سنة بيانات البنك الدولي 2022) "
                     "تعطي قيمًا ينشرها البنك الدولي لامتلاك الحساب والادخار والاقتراض والمدفوعات الرقمية والمدفوعات "
                     "المتلقاة والحوالات المحلية وأموال الطوارئ خلال 30 يومًا؛ ويعطي الملف القطري لعام 2014 التفاصيل "
                     "التاريخية المعروضة هنا عن كيفية اقتراض البالغين وادخارهم وتلقيهم الحوالات المحلية في 2014؛ ولا ينشر "
@@ -720,6 +734,108 @@ SECTION_ADD = [  # (route, order, lang, must contain, sentence appended to the b
      " وترد القيم المنشورة لموجة 2021 عن الحوالات المحلية في جدول الأجور والمدفوعات الزراعية والحوالات المحلية بحسب "
      "الفئة؛ ولا تُقرأ مقابل ملف 2014 هذا اتجاهًا، لأن سلسلة البنك الدولي الحالية لا تحمل قيمة لعام 2014."),
 ]
+
+SECTION_REPLACE = [  # (route, order, lang, old fragment, new fragment): sentences the published values make false
+    ("/people/", 6, "en",
+     "For the sources people borrowed from and the methods they saved by, the latest values this resource holds are "
+     "older, from the World Bank's 2014 country profile: 51.7% of adults borrowed from family or friends, 15.0% from a "
+     "private informal lender and 0.4% from a financial institution, while 0.9% saved at a financial institution and "
+     "4.5% through a savings club or a person outside the family. Those categories are not additive, each percentage "
+     "applies to the all-adult base used by its question, and they are not subtracted from the 2022 figures above.",
+     "For where people borrowed and saved, the same wave also gives World Bank published values: 41.1% of adults "
+     "borrowed from family or friends and 1.8% from a financial institution, and 3.1% saved at a financial institution. "
+     "These categories are not additive, and each percentage applies to the all-adult base used by its question. Older "
+     "detail from the World Bank's 2014 country profile stays in its own records and is not read against the 2021 wave "
+     "as a trend."),
+    ("/people/", 6, "ar",
+     "أما جهات الاقتراض وأساليب الادخار فأحدث ما يحمله هذا المورد عنها أقدم، من الملف القطري للبنك الدولي لعام 2014: فقد "
+     "اقترض 51.7% من البالغين من الأسرة أو الأصدقاء، و15.0% من مقرض خاص غير رسمي، و0.4% من مؤسسة مالية، بينما ادخر 0.9% "
+     "لدى مؤسسة مالية و4.5% عبر جمعية ادخار أو شخص من خارج الأسرة. وهذه الفئات غير قابلة للجمع، وكل نسبة تنطبق على قاعدة "
+     "جميع البالغين المستخدمة في سؤالها، ولا تُطرح من أرقام 2022 أعلاه.",
+     "أما جهات الاقتراض وأماكن الادخار، فتعطي الموجة نفسها عنها أيضًا قيمًا ينشرها البنك الدولي: فقد اقترض 41.1% من "
+     "البالغين من الأسرة أو الأصدقاء و1.8% من مؤسسة مالية، وادخر 3.1% لدى مؤسسة مالية. وهذه الفئات غير قابلة للجمع، وكل "
+     "نسبة تنطبق على قاعدة جميع البالغين المستخدمة في سؤالها. أما التفاصيل الأقدم من الملف القطري للبنك الدولي لعام 2014 "
+     "فتبقى في سجلاتها الخاصة، ولا تُقرأ مقابل موجة 2021 اتجاهًا."),
+    ("/methodology/", 4, "en",
+     "or on 2014 values, and several — frequency of use, financial resilience, digital capability, affordability and "
+     "differences by age — are defined in the 2021 survey data but not yet estimated.",
+     "or on 2014 values; several — frequency of use, digital capability and affordability — are defined in the 2021 "
+     "survey but have no World Bank published value for Yemen, and financial resilience is published only for emergency "
+     "funds within 30 days."),
+    ("/methodology/", 4, "ar",
+     "أو إلى قيم 2014، كما أن عددًا منها — كتكرار الاستخدام والصمود المالي والقدرات الرقمية والقدرة على تحمل التكلفة "
+     "والفروق بحسب العمر — معرَّف في بيانات مسح 2021 لكنه لم يُقدَّر بعد.",
+     "أو إلى قيم 2014؛ كما أن عددًا منها — وهي تكرار الاستخدام والقدرات الرقمية والقدرة على تحمل التكلفة — معرَّف في مسح "
+     "2021 لكن البنك الدولي لا ينشر له قيمة لليمن، ولا تُنشر قيم الصمود المالي إلا لتدبير أموال الطوارئ خلال 30 يومًا."),
+]
+RECORD_REPLACE = OrderedDict([  # (record, field) -> (old fragment, new fragment)
+    (("CLM-031", "method_en"), (
+        "account ownership to the 2021 Findex wave (World Bank data year 2022), and account use, saving, borrowing and "
+        "domestic remittances to the World Bank's 2014 country profile.",
+        "account ownership, saving, borrowing, digital payments, payments received, domestic remittances and emergency "
+        "funds within 30 days to the World Bank's published values for the 2021 Findex wave (World Bank data year 2022), "
+        "and historical detail to the World Bank's 2014 country profile.")),
+    (("CLM-031", "method_ar"), (
+        "امتلاك الحساب بموجة Findex 2021 (سنة البيانات لدى البنك الدولي 2022)، واستخدام الحساب والادخار والاقتراض والحوالات "
+        "المحلية بالملف القطري للبنك الدولي لعام 2014؛",
+        "امتلاك الحساب والادخار والاقتراض والمدفوعات الرقمية والمدفوعات المتلقاة والحوالات المحلية وأموال الطوارئ خلال 30 "
+        "يومًا بالقيم التي ينشرها البنك الدولي لموجة Findex 2021 (سنة بيانات البنك الدولي 2022)، والتفاصيل التاريخية "
+        "بالملف القطري للبنك الدولي لعام 2014؛")),
+    (("DS-DEMAND-VINTAGE-LENS", "period_en"), (
+        "2014 to 2022; no newer weighted values yet",
+        "2022 (the 2021 Findex wave) for most functions; 2014 for historical detail; no value for the reasons for not "
+        "having an account")),
+    (("DS-DEMAND-VINTAGE-LENS", "period_ar"), (
+        "من 2014 إلى 2022؛ ولا توجد بعد قيم موزونة أحدث",
+        "2022 (موجة Findex 2021) لمعظم الوظائف؛ و2014 للتفاصيل التاريخية؛ ولا توجد قيمة لأسباب عدم امتلاك الحساب")),
+    (("DS-DEMAND-VINTAGE-LENS", "currentness_en"), (
+        "The latest evidence differs by function, from 2014 to 2022 (the 2021 Findex wave, fieldwork 7 November 2022 to 9 "
+        "January 2023); for a function with no newer value, the older evidence is not current.",
+        "Most functions refer to the 2021 Findex wave (fieldwork 7 November 2022 to 9 January 2023); historical detail "
+        "refers to 2014, and the reasons for not having an account have no published value. For a function with no "
+        "newer value, the older evidence is not current.")),
+    (("DS-DEMAND-VINTAGE-LENS", "currentness_ar"), (
+        "يختلف أحدث دليل بحسب الوظيفة، من 2014 إلى 2022 (موجة Findex 2021، والعمل الميداني من 7 نوفمبر 2022 إلى 9 يناير "
+        "2023)؛ وأي وظيفة لا تتوفر لها قيمة أحدث يبقى دليلها الأقدم غير حديث.",
+        "تعود معظم الوظائف إلى موجة Findex 2021 (العمل الميداني من 7 نوفمبر 2022 إلى 9 يناير 2023)؛ وتعود التفاصيل "
+        "التاريخية إلى 2014، ولا توجد قيمة منشورة لأسباب عدم امتلاك الحساب. وأي وظيفة لا تتوفر لها قيمة أحدث يبقى دليلها "
+        "الأقدم غير حديث.")),
+    (("DS-FINDEX-HISTORY-CROSSWALK", "summary_en"), (
+        "while separating publishable historical values from latest-wave measures whose required computation is not yet "
+        "complete.",
+        "while separating publishable historical values from the latest-wave measures, 16 of the 32 of which have World "
+        "Bank published values.")),
+    (("DS-FINDEX-HISTORY-CROSSWALK", "summary_ar"), (
+        "بأحدث مجموعة مقاييس مخطط لها، مع الفصل الصريح بين القيم التاريخية القابلة للنشر والمقاييس الأحدث التي لم تُستكمل "
+        "حساباتها المطلوبة بعد.",
+        "بالمقاييس المحددة لأحدث موجة، مع الفصل الصريح بين القيم التاريخية القابلة للنشر ومقاييس أحدث موجة، التي لـ16 من "
+        "مقاييسها الـ32 قيم ينشرها البنك الدولي.")),
+    (("DS-FINDEX-HISTORY-CROSSWALK", "limitations_en"), (
+        "and latest-wave values remain unavailable until the required computation and quality checks are complete.",
+        "and a latest-wave measure without a World Bank published value has no value here.")),
+    (("DS-FINDEX-HISTORY-CROSSWALK", "limitations_ar"), (
+        "ولا تُنشر القيم الأحدث حتى تكتمل الحسابات المطلوبة وتنجح فحوص الجودة.",
+        "ولا قيمة هنا لأي مقياس من أحدث موجة لا ينشر له البنك الدولي قيمة.")),
+])
+META_EXTRA = OrderedDict([
+    ("/evidence/DS-FINDEX-HISTORY-CROSSWALK/", (
+        "keeping publishable values apart from pending ones.", "مع الفصل بين القيم القابلة للنشر والمقاييس التي لم تُستكمل حساباتها.",
+        "This comparability map links historical Findex measures for Yemen to those for the 2021 wave, 16 of whose 32 "
+        "measures have World Bank published values.",
+        "تربط خريطة قابلية المقارنة هذه مقاييس Findex التاريخية لليمن بمقاييس موجة 2021، التي لـ16 من مقاييسها الـ32 قيم "
+        "ينشرها البنك الدولي.")),
+])
+BASELINE_CAVEAT = OrderedDict([  # 25: the FC-1 intervals the caveats still named (CR-02 replaced them)
+    ("WB-FINDEX-OBS-2022-010", ("A 95% interval of 18.4% to 24.9% is derived from the respondent file (CW-FINDEX-MOE-2022-015).",
+                                "A 95% interval of 18.1% to 25.2% is computed by CauseWay from the published value and the design "
+                                "effect the World Bank publishes for the survey (CW-FINDEX-MOE-2022-015).")),
+    ("WB-FINDEX-OBS-2022-011", ("A 95% interval of 47.1% to 55.5% is derived from the respondent file (CW-FINDEX-MOE-2022-016).",
+                                "A 95% interval of 47.0% to 55.6% is computed by CauseWay from the published value and the design "
+                                "effect the World Bank publishes for the survey (CW-FINDEX-MOE-2022-016).")),
+    ("WB-FINDEX-OBS-2022-012", ("A 95% interval of 7.4% to 11.3% is derived from the respondent file (CW-FINDEX-MOE-2022-017).",
+                                "A 95% interval of 6.8% to 11.8% is computed by CauseWay from the published value and the design "
+                                "effect the World Bank publishes for the survey (CW-FINDEX-MOE-2022-017).")),
+])
 
 
 # ================================================================================================ helpers
@@ -909,15 +1025,23 @@ def main():
                    f"valid case for {detail}: valid {d['valid']}, invalid {d['invalid']}; {d['url']}), so the World Bank "
                    "publishes no value and no computation from licensed microdata (OWN-09) could produce one. Checked 10 "
                    "October 2026.")
+            t27.set(F + ":U1", key, "current_state", "NOT_ASKED_IN_SURVEY", state)
+            t27.set(F + ":U1", key, "calculation_requirement",
+                    f"None possible: not asked in Yemen's survey (public DDI metadata, {detail}: valid 0).",
+                    t27.get(key, "calculation_requirement"))
         elif kind == "TOTAL_ONLY":
             why = (f"Contract only: the World Bank publishes only the all-adults value for this measure for Yemen (series "
                    f"{detail}), not a value by {DIM_TEXT[dim]} (open API source 28, checked 10 October 2026); a value by "
                    f"{DIM_TEXT[dim]} requires computation from licensed microdata (OWN-09), which this resource does not "
                    "do.")
+        elif detail == 0:   # the database has no such series at all (religious reasons; the 7-day question)
+            why = ("Contract only: the World Bank's Global Findex database has no series for this measure (all source-28 "
+                   "series checked by label, 10 October 2026), so it publishes no value for Yemen; a value requires "
+                   "computation from licensed microdata (OWN-09), which this resource does not do.")
         else:
-            why = ("Contract only: the World Bank publishes no value for this measure for Yemen (open API source 28, "
-                   f"every series labelled for it checked 10 October 2026: {detail} read, none with a Yemen value); a "
-                   "value requires computation from licensed microdata (OWN-09), which this resource does not do.")
+            why = ("Contract only: the World Bank publishes no value for this measure for Yemen (open API source 28: no "
+                   "series labelled for it has a Yemen value; checked 10 October 2026); a value requires computation from "
+                   "licensed microdata (OWN-09), which this resource does not do.")
         t27.set(F + ":U1", key, "public_behavior", why, t27.get(key, "public_behavior"))
         withheld += 1
     if (pub, withheld, rur) != (51, 105, 32):
@@ -962,7 +1086,7 @@ def main():
             ("denominator_universe", "Adults aged 15 and over in the areas the survey covered; each group as the World Bank "
                                      "defines it"),
             ("period", period_en), ("encoding_contract", tx["encoding"]),
-            ("prohibited_inference_en", tx["prohibited_en"]), ("prohibited_inference_ar", tx["prohibited_ar"]),
+            ("prohibited_inference_en", tx["limitations_en"]), ("prohibited_inference_ar", tx["limitations_ar"]),
             ("accessible_summary_en", tx["summary_en"]), ("accessible_summary_ar", tx["summary_ar"]),
             ("public_routes", json.dumps(routes)), ("period_ar", period_ar),
             ("universe_ar", "البالغون بعمر 15 سنة فأكثر في المناطق التي شملها المسح؛ وكل فئة كما يعرّفها البنك الدولي")]))
@@ -1007,11 +1131,12 @@ def main():
             vs = vs_add(vs, keep)
         t06.set(f1, vid, "value_states", json.dumps(vs, ensure_ascii=False, separators=(",", ":")),
                 t06.get(vid, "value_states"))
-    for field, new in BARRIERS.items():
+    for field, new in list(BARRIERS.items()) + [("period_en", period_en), ("period_ar", period_ar)]:
         t06.set(F + ":U1", "VIS-FINDEX-BARRIERS", field, new, t06.get("VIS-FINDEX-BARRIERS", field))
     cur = t06.get("VIS-FINDEX-BARRIERS", "value_states")
     vs = [e for e in json.loads(cur) if e["t"] not in ("November 2022", "January 2023")]
-    vs = vs_add(vs, [e for e in DATE_VS if e["t"] in ("7 November 2022", "9 January 2023", "10 October 2026", "15", "28")])
+    vs = vs_add(vs, [e for e in DATE_VS if e["t"] in ("7 November 2022", "9 January 2023", "10 October 2026", "15", "28")]
+                + period_vs)
     t06.set(F + ":U1", "VIS-FINDEX-BARRIERS", "value_states", json.dumps(vs, ensure_ascii=False, separators=(",", ":")), cur)
 
     # ---------------------------------------------------------------- CLM-026 (CR-03)
@@ -1079,6 +1204,30 @@ def main():
         if not isinstance(cur, str) or must not in cur or add.strip() in cur:
             raise TxError(f"{f4}: {route} s{order} {lang} is not the text expected")
         s.set(f4, S03, row, COL03["body_" + lang], cur.rstrip() + add, cur, f"{route}#s{order}.body_{lang}")
+    for route, order, lang, old, new in SECTION_REPLACE:
+        s.replace_section(f4, route, order, lang, "body", old, new)
+    for (rec, field), (old, new) in RECORD_REPLACE.items():
+        cur = t06.get(rec, field)
+        if not isinstance(cur, str) or cur.count(old) != 1:
+            raise TxError(f"{f4}: {rec}.{field} does not hold the text expected")
+        t06.set(f4, rec, field, cur.replace(old, new), cur)
+    for rec in ("DS-DEMAND-VINTAGE-LENS", "DS-FINDEX-HISTORY-CROSSWALK"):
+        cur = t06.get(rec, "value_states")
+        vs = vs_add(json.loads(cur or "[]"), [{"t": "16", "k": "v", "s": "SITE"}, {"t": "32", "k": "v", "s": "SITE"}]
+                    if rec == "DS-FINDEX-HISTORY-CROSSWALK" else [])
+        if json.dumps(vs, ensure_ascii=False, separators=(",", ":")) != (cur or "[]"):
+            t06.set(f4, rec, "value_states", json.dumps(vs, ensure_ascii=False, separators=(",", ":")), cur)
+    for route, (a_en, a_ar, n_en, n_ar) in META_EXTRA.items():
+        rewrite(t02, route, "meta_description_en", a_en, n_en, f4)
+        rewrite(t02, route, "meta_description_ar", a_ar, n_ar, f4)
+    for rid, (old, new) in BASELINE_CAVEAT.items():
+        cur = t25.get(rid, "caveat")
+        if not isinstance(cur, str) or cur.count(old) != 1:
+            raise TxError(f"{f4}: {rid} caveat does not hold the FC-1 interval expected")
+        t25.set(f4, rid, "caveat", cur.replace(old, new), cur)
+    t07 = Table(s, "07_PUBLIC_CLAIMS")
+    t07.set(f3, "CLM-026", "evidence_badge", "ANALYTIC_CONTRACT_PLUS_WB_PUBLISHED_VALUES",
+            "ANALYTIC_CONTRACT_PLUS_OPEN_MICRODATA_PENDING")
 
     # ---------------------------------------------------------------- 15: the aggregate source names what it now carries
     t15 = Table(s, "15_SOURCE_LIBRARY")
@@ -1105,7 +1254,7 @@ def main():
                 if rid not in ids:
                     ids.append(rid)
                     must[rid] = OrderedDict([("value", round(ser[code]["value"], 1))])
-                cells.append(OrderedDict([("ref", f"fx.{rid}.value")]))
+                cells.append(OrderedDict([("ref", f"fx.{rid}.value"), ("dp", 1)]))
             rows.append(OrderedDict([("head", ui_row), ("cells", cells)]))
         rows += [OrderedDict([("marker", m)]) for m in markers]
         table = OrderedDict([
