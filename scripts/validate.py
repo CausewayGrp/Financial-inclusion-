@@ -3996,6 +3996,100 @@ try:
 except Exception as _x:
     errors.append("E2-READ/E2-DATES unreadable " + repr(_x))
 
+
+# CO-G01 (close-out OWN-10, 10 October 2026): the Master's own self-description cannot drift again. 00_MASTER (projected as
+# content/master_principles.json) and 37_READINESS_CHECKLIST (read from the Master) state, as "Actual" and "Expected",
+# the number of site pages, sections, questions, records, Readings, sources and so on. Both had gone stale (143 pages,
+# 10 Readings, 165 sources). Each is now compared with the count of the governed records themselves; every close-out
+# transaction recomputes them (audit/close_out/close_lib.refresh_self_counts).
+try:
+    sys.path.insert(0, str(ROOT / "scripts"))
+    from projection.master_reader import Workbook as _COWB
+    def _co_len(rel): return len(json.load(open(C / rel, encoding="utf-8")))
+    _co_chron = json.load(open(C / "visuals/system_chronology.json", encoding="utf-8"))
+    _co_wb = _COWB(str(ROOT / "authority/Yemen_Financial_Inclusion_Evidence_Master.xlsx"))
+    _co_pairs = {}
+    for _r in _co_wb.grid("03_PAGE_SECTIONS"):
+        if _r and isinstance(_r[0], str) and _r[0].startswith("/") and _r[1] not in (None, ""):
+            _k = (_r[0], int(float(_r[1]))); _e, _a = _co_pairs.get(_k, (False, False))
+            _co_pairs[_k] = (_e or bool(_r[3] or _r[4]), _a or bool(_r[5] or _r[6]))
+    def _co_rows(sheet): return sum(1 for _r in _co_wb.grid(sheet)[4:] if _r and _r[0] not in (None, ""))
+    _CO_TRUE = {"site_pages": _co_len("content/site_map.json"), "bilingual_sections": sum(1 for _e, _a in _co_pairs.values() if _e and _a),
+                "questions": _co_len("content/questions.json"), "evidence_objects": _co_len("evidence/evidence_objects.json"),
+                "public_claims": _co_len("evidence/public_claims.json"), "readings": _co_len("content/readings.json"),
+                "measurement": _co_len("content/measurement_agenda.json"), "visuals": _co_len("visuals/visual_library.json"),
+                "relationships": _co_len("visuals/system_relationships.json"),
+                "dated_events": sum(1 for _e in _co_chron if _e.get("event_class") != "SYSTEM_INTERPRETATION"),
+                "sources": _co_len("sources/source_library.json"), "datasets": _co_len("sources/master_dataset_catalog.json"),
+                "indicators": _co_len("sources/indicator_library.json"), "cby_monetary": _co_rows("18_CBY_MONETARY"),
+                "payments": _co_rows("19_PAYMENTS_DATA"), "firm_finance": _co_rows("20_FIRM_FINANCE"),
+                "remittances": _co_rows("23_REMITTANCES")}
+    _CO_00 = {"Site pages": "site_pages", "Bilingual page sections": "bilingual_sections", "Questions": "questions",
+              "Evidence objects": "evidence_objects", "Public claims": "public_claims", "Readings": "readings",
+              "Measurement priorities": "measurement", "Visual objects": "visuals", "System relationships": "relationships",
+              "Chronology events": "dated_events", "Sources": "sources", "Datasets": "datasets", "Indicators": "indicators"}
+    _co_seen = set()
+    for _r in json.load(open(C / "content/master_principles.json", encoding="utf-8"))["rows"]:
+        if _r and _r[0] in _CO_00 and len(_r) > 2 and isinstance(_r[1], (int, float)):
+            _co_seen.add(_r[0]); _want = _CO_TRUE[_CO_00[_r[0]]]
+            if _r[1] != _want or _r[2] != _want:
+                errors.append(f"CO-G01 00_MASTER '{_r[0]}' states {_r[1]}/{_r[2]}, but the governed records number {_want}")
+    if _co_seen != set(_CO_00):
+        errors.append(f"CO-G01 00_MASTER self-count rows missing: {sorted(set(_CO_00) - _co_seen)}")
+    _CO_37 = {"All site pages": "site_pages", "Bilingual page sections": "bilingual_sections", "Question entry system": "questions",
+              "Public evidence objects": "evidence_objects", "Public claims": "public_claims", "Readings": "readings",
+              "Measurement agenda": "measurement", "Visualization objects": "visuals", "System relationships": "relationships",
+              "Chronology events": "dated_events", "Source records": "sources", "Dataset catalogue": "datasets",
+              "Indicator library": "indicators", "CBY monetary observations": "cby_monetary",
+              "Payment observations": "payments", "Firm finance observations": "firm_finance",
+              "Remittance observations": "remittances"}
+    _co_seen = set()
+    for _r in _co_wb.grid("37_READINESS_CHECKLIST"):
+        if _r and len(_r) > 3 and _r[1] in _CO_37:
+            _co_seen.add(_r[1]); _want = _CO_TRUE[_CO_37[_r[1]]]
+            if _r[2] != _want or _r[3] != _want:
+                errors.append(f"CO-G01 37_READINESS_CHECKLIST '{_r[1]}' states {_r[2]}/{_r[3]}, but the governed records number {_want}")
+    if _co_seen != set(_CO_37):
+        errors.append(f"CO-G01 37_READINESS_CHECKLIST self-count rows missing: {sorted(set(_CO_37) - _co_seen)}")
+except Exception as _x:
+    errors.append("CO-G01 unreadable " + repr(_x))
+
+# CO-G02 (close-out CR-12, 10 October 2026): two sets of Master rows are lineage and are never projected to a public
+# output. 29_OECD_BENCHMARKS (an attached benchmark table no OECD/INFE publication contains) is in no projection at all,
+# and every one of its rows says REJECTED__UNTRACEABLE. The predecessor pseudo-codebook in 24_FINDEX_CODEBOOK (invented
+# question wording; variables such as account_mob that the study does not have) stays only in the raw snapshot
+# data/findex_codebook.json, every row marked NON_PUBLIC__ILLUSTRATIVE; none of its variable names or labels reaches a
+# built page or the search index.
+try:
+    _co_man = json.load(open(ROOT / "scripts/projection/projection_manifest.json", encoding="utf-8"))
+    if any("29_OECD_BENCHMARKS" in str(_o.get("sheet")) for _o in _co_man["outputs"]):
+        errors.append("CO-G02 29_OECD_BENCHMARKS is projected")
+    _co_29 = [_r for _r in _co_wb.grid("29_OECD_BENCHMARKS")[5:30] if _r and _r[0] not in (None, "")]   # the benchmark table, rows 6-30
+    if len(_co_29) != 25 or any(_r[12] != "REJECTED__UNTRACEABLE" or not _r[13] for _r in _co_29):
+        errors.append("CO-G02 29_OECD_BENCHMARKS rows are not all REJECTED__UNTRACEABLE with a reason")
+    _co_cb = json.load(open(C / "data/findex_codebook.json", encoding="utf-8"))["rows"]
+    _co_i = next(_i for _i, _r in enumerate(_co_cb) if _r and str(_r[0]).startswith("Uploaded predecessor Findex codebook"))
+    _co_legacy = [_r for _r in _co_cb[_co_i + 1:] if _r and _r[0]]
+    if len(_co_legacy) != 42 or any(_r[8] != "NON_PUBLIC__ILLUSTRATIVE" or not _r[9] for _r in _co_legacy):
+        errors.append("CO-G02 the 24_FINDEX_CODEBOOK legacy rows are not all NON_PUBLIC__ILLUSTRATIVE with a reason")
+    # tokens that exist only in the quarantined rows: the legacy variables the study does not have, and the OECD rows' labels
+    _co_ddi = {str(_r[2]) for _r in _co_cb[4:_co_i] if _r and _r[0]}
+    _co_tokens = sorted({str(_r[0]) for _r in _co_legacy if "_" in str(_r[0]) and str(_r[0]) not in _co_ddi}
+                        | {str(_r[0]) for _r in _co_29 if str(_r[0]).startswith(("Global Average", "Demographics:"))})
+    if len(_co_tokens) < 5:
+        errors.append(f"CO-G02 too few quarantine tokens to test ({len(_co_tokens)})")
+    _co_n = 0
+    for _f in sorted(DIST.rglob("*.html")) + [DIST / "static-data/search_index.json"]:
+        _co_n += 1
+        _t = _f.read_text(encoding="utf-8")
+        for _tok in _co_tokens:
+            if re.search(r"(?<![\w-])" + re.escape(_tok) + r"(?![\w-])", _t):
+                errors.append(f"CO-G02 {_f.relative_to(DIST).as_posix()} prints the quarantined '{_tok}'")
+    if _co_n < 280:
+        errors.append(f"CO-G02 read only {_co_n} files")
+except Exception as _x:
+    errors.append("CO-G02 unreadable " + repr(_x))
+
 print(f'HTML={len(list(DIST.rglob("*.html")))} ERRORS={len(errors)} WARN={len(warns)}')
 if warns:
     for w in warns[:20]: print('WARN',w)

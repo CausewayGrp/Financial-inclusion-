@@ -1,0 +1,2070 @@
+{
+ "transaction": "CLOSE-1",
+ "summary": "D1 independence statement and AR-035 on /about/; D3 code licence on /rights/; OWN-10 self-counts; CR-04 locators; CR-10 NFID non-public; CR-12 quarantines; CR-18 rurality reason",
+ "self_counts": {
+  "site_pages": 144,
+  "bilingual_sections": 237,
+  "questions": 11,
+  "evidence_objects": 110,
+  "public_claims": 60,
+  "readings": 11,
+  "measurement": 10,
+  "visuals": 36,
+  "relationships": 26,
+  "dated_events": 23,
+  "sources": 167,
+  "datasets": 211,
+  "indicators": 216,
+  "cby_monetary": 686,
+  "payments": 97,
+  "firm_finance": 84,
+  "remittances": 23
+ },
+ "input_master_sha256": "58b8f3ec5ac1324dfafc7eb6b4015b88da0cb9c241078903be82fe0f6492421b",
+ "output_master_sha256": "190b148abf2d46b1a9e5f5d50ec4e45c0bca7afde19b3fe0b76444af3421c83f",
+ "cells_written": 226,
+ "changes": [
+  {
+   "finding": "CLOSE-1:D1",
+   "sheet": "03_PAGE_SECTIONS",
+   "row": 31,
+   "col": 5,
+   "field": "/about/#s6.body_en",
+   "old": "CauseWay’s role: CauseWay develops and maintains this resource. It is responsible for how the evidence is organised and linked, for its own synthesis, documented derivations and editorial analysis, and for correcting errors.\n\nCauseWay is a Yemeni institutional advisory firm based in Aden (Commercial Registration No. 26666). It works with financial institutions, public institutions and development partners where finance, governance, regulation and implementation meet. Some of those institutions publish evidence used in this resource. That evidence is selected and presented by the method published here, and every record can be checked against the sources it names and corrected through the published route.\n\nFunding. CauseWay funded the development of this edition entirely from its own resources. No donor, regulator, source institution or external commissioning party funded it. This resource is not a deliverable of any contract or partnership with the institutions whose data it presents.\n\nWho remains authoritative: Original publishers remain authoritative for the data and publications they issue. Organising the evidence does not make CauseWay a regulator, statistical authority or source owner. This resource does not confirm whether any named institution is currently licensed or operating. Nothing on this resource is financial, legal or regulatory advice, or confirmation of any institution’s current status. Attribution to CauseWay covers only its own synthesis, derivations and analysis and does not imply that any original publisher endorses them. Citation, factual use and redistribution are separate permissions.\n\nHow to check or challenge: Each figure is recorded in an evidence record that names its original source wherever that source can be named publicly. Material findings are checked against the source they are attributed to, including its unit, population or calculation base, geography, period and method; a figure known only from a secondary source is labelled as secondary. To report a suspected error, write to office@causewaygrp.com with the record or source reference. When a material public conclusion changes, the evidence record and a correction note are updated together.",
+   "new": "CauseWay’s role: CauseWay develops and maintains this resource. It is responsible for how the evidence is organised and linked, for its own synthesis, documented derivations and editorial analysis, and for correcting errors.\n\nCauseWay is a Yemeni institutional advisory firm based in Aden (Commercial Registration No. 26666). It works with financial institutions, public institutions and development partners where finance, governance, regulation and implementation meet. Some of those institutions publish evidence used in this resource. That evidence is selected and presented by the method published here, and every record can be checked against the sources it names and corrected through the published route.\n\nFunding. CauseWay funded the development of this edition entirely from its own resources. No donor, regulator, source institution or external commissioning party funded it. This resource is not a deliverable of any contract or partnership with the institutions whose data it presents.\n\nIndependence. CauseWay develops and publishes this resource independently. It was not commissioned by, and is not reviewed or endorsed by, any institution whose data it presents.\n\nWho remains authoritative: Original publishers remain authoritative for the data and publications they issue. Organising the evidence does not make CauseWay a regulator, statistical authority or source owner. This resource does not confirm whether any named institution is currently licensed or operating. Nothing on this resource is financial, legal or regulatory advice, or confirmation of any institution’s current status. Attribution to CauseWay covers only its own synthesis, derivations and analysis and does not imply that any original publisher endorses them. Citation, factual use and redistribution are separate permissions.\n\nHow to check or challenge: Each figure is recorded in an evidence record that names its original source wherever that source can be named publicly. Material findings are checked against the source they are attributed to, including its unit, population or calculation base, geography, period and method; a figure known only from a secondary source is labelled as secondary. To report a suspected error, write to office@causewaygrp.com with the record or source reference. When a material public conclusion changes, the evidence record and a correction note are updated together."
+  },
+  {
+   "finding": "CLOSE-1:D1",
+   "sheet": "03_PAGE_SECTIONS",
+   "row": 32,
+   "col": 7,
+   "field": "/about/#s6.body_ar",
+   "old": "دور CauseWay: تطوّر CauseWay هذا المورد وتتولى إدارته. وهي مسؤولة عن كيفية تنظيم الأدلة وربطها، وعن توليفها للأدلة واشتقاقاتها الموثقة وتحليلها التحريري، وعن تصحيح الأخطاء.\n\nCauseWay شركة استشارات مؤسسية يمنية مقرّها عدن (سجل تجاري رقم 26666)، تعمل مع المؤسسات المالية والمؤسسات العامة وشركاء التنمية حيث تلتقي المالية والحوكمة والتنظيم والتنفيذ. وتنشر بعض هذه المؤسسات أدلةً يستخدمها هذا المورد؛ وتُختار هذه الأدلة وتُعرض وفق المنهج المنشور هنا، ويمكن التحقق من كل سجل بالرجوع إلى المصادر التي يسمّيها وتصحيحه عبر المسار المنشور.\n\nالتمويل: موّلت CauseWay تطوير هذا الإصدار بالكامل من مواردها الخاصة، ولم تموّله أي جهة مانحة أو تنظيمية، ولا أي جهة ناشرة لمصدر، ولا أي جهة خارجية كلّفت به. وليس هذا المورد ناتجًا عن أي عقد أو شراكة مع المؤسسات التي يعرض بياناتها.\n\nمن يبقى المرجع: تبقى الجهات الناشرة الأصلية هي المرجع لما تصدره من بيانات ومنشورات، ولا يجعل ترتيب الأدلة وربطها CauseWay جهة تنظيمية أو إحصائية أو مالكة للمصدر. ولا يؤكد هذا المورد ما إذا كانت أي مؤسسة مذكورة بالاسم مرخصة أو عاملة حاليًا. ولا يُعد أي محتوى في هذا المورد مشورة مالية أو قانونية أو تنظيمية، ولا تأكيدًا للوضع الحالي لأي مؤسسة. ولا تشمل نسبة العمل إلى CauseWay إلا ما تنتجه من توليف واشتقاق وتحليل، ولا تعني أن أي ناشر أصلي يؤيده. والاستشهاد والإفادة من الوقائع وإعادة التوزيع أذونات منفصلة.\n\nكيف تتحقق أو تعترض: تُحفظ الأرقام في سجلات الأدلة، ويسمّي كل سجل مصدره الأصلي حيثما أمكن تسميته علنًا. وتُراجَع النتائج الجوهرية مقابل المصدر المنسوبة إليه، بما يشمل الوحدة والمجتمع أو قاعدة الاحتساب والجغرافيا والفترة والمنهج؛ ويوسم الرقم الذي لا يُعرف إلا من مصدر ثانوي بأنه ثانوي. وللإبلاغ عن خطأ محتمل، اكتب إلى office@causewaygrp.com مع مرجع السجل أو المصدر. وعندما يتغير استنتاج عام جوهري، يُحدَّث سجل الدليل وملاحظة التصحيح معًا.",
+   "new": "دور CauseWay: تطوّر CauseWay هذا المورد وتتولى إدارته. وهي مسؤولة عن كيفية تنظيم الأدلة وربطها، وعن توليفها للأدلة واشتقاقاتها الموثقة وتحليلها التحريري، وعن تصحيح الأخطاء.\n\nCauseWay شركة استشارات مؤسسية يمنية مقرّها عدن (سجل تجاري رقم 26666)، تعمل مع المؤسسات المالية والمؤسسات العامة وشركاء التنمية حيث تلتقي المالية والحوكمة والتنظيم والتنفيذ. وتنشر بعض هذه المؤسسات أدلةً يستخدمها هذا المورد؛ وتُختار هذه الأدلة وتُعرض وفق المنهج المنشور هنا، ويمكن التحقق من كل سجل بالرجوع إلى المصادر التي يسمّيها وتصحيحه عبر المسار المنشور.\n\nالتمويل: موّلت CauseWay تطوير هذا الإصدار بالكامل من مواردها الخاصة، ولم تموّله أي جهة مانحة أو تنظيمية، ولا أي جهة ناشرة لمصدر، ولا أي جهة خارجية كلّفت به. وليس هذا المورد ناتجًا عن أي عقد أو شراكة مع المؤسسات التي يعرض بياناتها.\n\nالاستقلال: تطوّر CauseWay هذا المورد وتنشره باستقلال. ولم تكلّف به أي مؤسسة يعرض بياناتها، ولا تراجعه أي منها ولا تؤيده.\n\nمن يبقى المرجع: تبقى الجهات الناشرة الأصلية هي المرجع لما تصدره من بيانات ومنشورات، ولا يجعل ترتيب الأدلة وربطها CauseWay جهة تنظيمية أو إحصائية أو مالكة للمصدر. ولا يؤكد هذا المورد ما إذا كانت أي مؤسسة مذكورة بالاسم مرخصة أو عاملة حاليًا. ولا يُعد أي محتوى في هذا المورد مشورة مالية أو قانونية أو تنظيمية، ولا تأكيدًا للوضع الحالي لأي مؤسسة. ولا تشمل نسبة العمل إلى CauseWay إلا ما تنتجه من توليف واشتقاق وتحليل، ولا تعني أن أي ناشر أصلي يؤيده. والاستشهاد والإفادة من الوقائع وإعادة التوزيع أذونات منفصلة.\n\nكيف تتحقق أو تعترض: تُحفظ الأرقام في سجلات الأدلة، ويسمّي كل سجل مصدره الأصلي حيثما أمكن تسميته علنًا. وتُراجَع النتائج الجوهرية مقابل المصدر المنسوبة إليه، بما يشمل الوحدة والمجتمع أو قاعدة الاحتساب والجغرافيا والفترة والمنهج؛ ويوسم الرقم الذي لا يُعرف إلا من مصدر ثانوي بأنه ثانوي. وللإبلاغ عن خطأ محتمل، اكتب إلى office@causewaygrp.com مع مرجع السجل أو المصدر. وعندما يتغير استنتاج عام جوهري، يُحدَّث سجل الدليل وملاحظة التصحيح معًا."
+  },
+  {
+   "finding": "CLOSE-1:R33:AR-035",
+   "sheet": "03_PAGE_SECTIONS",
+   "row": 22,
+   "col": 7,
+   "field": "03_PAGE_SECTIONS!R22C7",
+   "old": "توضح هذه الصفحة سبب وجود هذا المورد، وما تضيفه CauseWay وما لا تدّعيه، ومن يبقى المرجع للبيانات، وكيف تتحقق مما تجده هنا وتعترض عليه وتعيد استخدامه. ولا يتخذ هذا المورد القرارات نيابة عن المستخدمين ولا يحاكي نتائج السياسات.",
+   "new": "توضح هذه الصفحة سبب وجود هذا المورد، وما تضيفه CauseWay وحدود دورها، والجهات التي تبقى مرجعًا لما نشرته من بيانات، وكيف تتحقق مما تجده هنا، وتبلّغ عن خطأ أو تطلب تصحيحًا، وتعيد استخدام المحتوى وفق شروطه. ولا يتخذ هذا المورد القرارات نيابة عن المستخدمين ولا يحاكي نتائج السياسات."
+  },
+  {
+   "finding": "CLOSE-1:R33:AR-035",
+   "sheet": "03_PAGE_SECTIONS",
+   "row": 22,
+   "col": 5,
+   "field": "03_PAGE_SECTIONS!R22C5",
+   "old": "This page explains why the resource exists, what CauseWay contributes and does not claim, who remains authoritative for the data, and how to check, challenge and reuse what you find here. The resource does not make decisions for users or simulate policy outcomes.",
+   "new": "This page explains why the resource exists, what CauseWay contributes and the limits of its role, which bodies remain authoritative for the data they publish, and how to check what you find here, report an error or request a correction, and reuse the content under its terms. The resource does not make decisions for users or simulate policy outcomes."
+  },
+  {
+   "finding": "CLOSE-1:D3",
+   "sheet": "03_PAGE_SECTIONS",
+   "row": 363,
+   "col": 5,
+   "field": "/rights/#s6.body_en",
+   "old": "CauseWay licenses the content it owns in this resource under the Creative Commons Attribution 4.0 International licence (CC BY 4.0; deed https://creativecommons.org/licenses/by/4.0/, legal code https://creativecommons.org/licenses/by/4.0/legalcode.en). Covered: CauseWay's text and analysis in English and Arabic, its visual designs, the compiled evidence records and the figures CauseWay calculates, and the structure and annotations of the data exports when they are published. For figures CauseWay calculates from other publishers' data, the licence covers CauseWay's calculation and presentation; the underlying data stay under their publishers' terms. Not covered: material published by others — documents, data, tables, figures and text remain under their publishers' terms, including where this resource reports, quotes or translates them, and this resource does not host copies of their files; the CauseWay name, logo and marks; and the software code of the repository that builds this resource, which is outside this licence. Figures derived from survey microdata: the confidence intervals this resource derives from the Global Findex respondent file for Yemen (evidence record CLM-026) are computed from a file CauseWay obtained under the World Bank Microdata Research License; only aggregate estimates are published, never respondent-level data. Cite the data as that licence requires: Demirgüç-Kunt, Klapper, Singer and Ansar (2022), The Global Findex Database 2021: Financial Inclusion, Digital Payments, and Resilience in the Age of COVID-19, Washington, DC: World Bank. CC BY 4.0 does not extend to the underlying microdata, which this resource does not host or redistribute. You may share and adapt CauseWay's content for any purpose, provided you credit CauseWay, link to the licence and indicate whether you made changes: give the title, the author (CauseWay), the source (this resource and the page address), the licence (CC BY 4.0) and the changes made. For a reused figure, use two lines: first this resource (Yemen Financial Inclusion Evidence, the record, CauseWay, the edition and the page address), then the original source that the record names (publisher, title, year and link). This page states the licence CauseWay applies to its own content; it does not state that any third-party rights have been cleared.",
+   "new": "CauseWay licenses the content it owns in this resource under the Creative Commons Attribution 4.0 International licence (CC BY 4.0; deed https://creativecommons.org/licenses/by/4.0/, legal code https://creativecommons.org/licenses/by/4.0/legalcode.en). Covered: CauseWay's text and analysis in English and Arabic, its visual designs, the compiled evidence records and the figures CauseWay calculates, and the structure and annotations of the data exports when they are published. For figures CauseWay calculates from other publishers' data, the licence covers CauseWay's calculation and presentation; the underlying data stay under their publishers' terms. Not covered: material published by others — documents, data, tables, figures and text remain under their publishers' terms, including where this resource reports, quotes or translates them, and this resource does not host copies of their files; the CauseWay name, logo and marks; and the software code of the repository that builds this resource, which is outside this licence: the code is not openly licensed, and CauseWay reserves all rights in it. Figures derived from survey microdata: the confidence intervals this resource derives from the Global Findex respondent file for Yemen (evidence record CLM-026) are computed from a file CauseWay obtained under the World Bank Microdata Research License; only aggregate estimates are published, never respondent-level data. Cite the data as that licence requires: Demirgüç-Kunt, Klapper, Singer and Ansar (2022), The Global Findex Database 2021: Financial Inclusion, Digital Payments, and Resilience in the Age of COVID-19, Washington, DC: World Bank. CC BY 4.0 does not extend to the underlying microdata, which this resource does not host or redistribute. You may share and adapt CauseWay's content for any purpose, provided you credit CauseWay, link to the licence and indicate whether you made changes: give the title, the author (CauseWay), the source (this resource and the page address), the licence (CC BY 4.0) and the changes made. For a reused figure, use two lines: first this resource (Yemen Financial Inclusion Evidence, the record, CauseWay, the edition and the page address), then the original source that the record names (publisher, title, year and link). This page states the licence CauseWay applies to its own content; it does not state that any third-party rights have been cleared."
+  },
+  {
+   "finding": "CLOSE-1:D3",
+   "sheet": "03_PAGE_SECTIONS",
+   "row": 363,
+   "col": 7,
+   "field": "/rights/#s6.body_ar",
+   "old": "تتيح CauseWay المحتوى الذي تملكه في هذا المورد بموجب رخصة المشاع الإبداعي «نَسب المُصنَّف 4.0 دولي» (CC BY 4.0؛ صك الرخصة https://creativecommons.org/licenses/by/4.0/deed.ar، والنص القانوني https://creativecommons.org/licenses/by/4.0/legalcode.ar). تشمل الرخصة: نصوص CauseWay وتحليلاتها بالعربية والإنجليزية، وتصاميمها المرئية، وسجلات الأدلة المجمَّعة والأرقام التي تحتسبها CauseWay، وبنية ملفات البيانات المُصدَّرة وشروحها عند نشرها. وفي الأرقام التي تحتسبها CauseWay من بيانات جهات أخرى، تشمل الرخصة عملية الاحتساب وطريقة العرض، وتبقى البيانات الأصلية خاضعة لشروط ناشريها. ولا تشمل الرخصة: مواد الجهات الأخرى، فالوثائق والبيانات والجداول والرسوم والنصوص التي تنشرها جهات أخرى تبقى خاضعة لشروط ناشريها، بما في ذلك حين يوردها هذا المورد أو يقتبسها أو يترجمها، ولا يستضيف هذا المورد نسخًا من ملفاتها؛ واسم CauseWay وشعارها وعلاماتها؛ والشيفرة البرمجية للمستودع الذي يبني هذا المورد، فهي خارج نطاق هذه الرخصة. الأرقام المشتقة من البيانات الجزئية للمسوح: فترات الثقة التي يستخرجها هذا المورد من ملف المستجيبين في مسح Global Findex لليمن (سجل الدليل CLM-026) محسوبة من ملف حصلت عليه CauseWay بموجب رخصة البحث للبيانات الجزئية لدى البنك الدولي؛ ولا يُنشر إلا تقديرات تجميعية، ولا تُنشر أي بيانات على مستوى المستجيبين. استشهد بالبيانات كما تشترط تلك الرخصة: Demirgüç-Kunt وKlapper وSinger وAnsar (2022)، The Global Findex Database 2021: Financial Inclusion, Digital Payments, and Resilience in the Age of COVID-19، واشنطن العاصمة: البنك الدولي. ولا تمتد رخصة CC BY 4.0 إلى البيانات الجزئية الأصلية، التي لا يستضيفها هذا المورد ولا يعيد توزيعها. ويجوز لك مشاركة محتوى CauseWay وتعديله لأي غرض، بشرط أن تنسبه إلى CauseWay، وأن تضع رابطًا إلى الرخصة، وأن تبيّن ما إذا كنت قد أجريت تغييرات: اذكر العنوان، والمؤلف (CauseWay)، والمصدر (هذا المورد ورابط الصفحة)، والرخصة (CC BY 4.0)، والتغييرات التي أجريتها. وعند إعادة استخدام رقم، استعمل سطرين: أولًا هذا المورد (أدلة الشمول المالي في اليمن، والسجل، وCauseWay، والإصدار، ورابط الصفحة)، ثم المصدر الأصلي الذي يسمّيه السجل (الناشر، والعنوان، والسنة، والرابط). وتذكر هذه الصفحة الرخصة التي تطبقها CauseWay على محتواها الخاص، ولا تفيد بأن أي حقوق لجهات أخرى قد سُوّيت.",
+   "new": "تتيح CauseWay المحتوى الذي تملكه في هذا المورد بموجب رخصة المشاع الإبداعي «نَسب المُصنَّف 4.0 دولي» (CC BY 4.0؛ صك الرخصة https://creativecommons.org/licenses/by/4.0/deed.ar، والنص القانوني https://creativecommons.org/licenses/by/4.0/legalcode.ar). تشمل الرخصة: نصوص CauseWay وتحليلاتها بالعربية والإنجليزية، وتصاميمها المرئية، وسجلات الأدلة المجمَّعة والأرقام التي تحتسبها CauseWay، وبنية ملفات البيانات المُصدَّرة وشروحها عند نشرها. وفي الأرقام التي تحتسبها CauseWay من بيانات جهات أخرى، تشمل الرخصة عملية الاحتساب وطريقة العرض، وتبقى البيانات الأصلية خاضعة لشروط ناشريها. ولا تشمل الرخصة: مواد الجهات الأخرى، فالوثائق والبيانات والجداول والرسوم والنصوص التي تنشرها جهات أخرى تبقى خاضعة لشروط ناشريها، بما في ذلك حين يوردها هذا المورد أو يقتبسها أو يترجمها، ولا يستضيف هذا المورد نسخًا من ملفاتها؛ واسم CauseWay وشعارها وعلاماتها؛ والشيفرة البرمجية للمستودع الذي يبني هذا المورد، فهي خارج نطاق هذه الرخصة: إذ لا تُتاح الشيفرة بأي رخصة مفتوحة، وتحتفظ CauseWay بجميع الحقوق فيها. الأرقام المشتقة من البيانات الجزئية للمسوح: فترات الثقة التي يستخرجها هذا المورد من ملف المستجيبين في مسح Global Findex لليمن (سجل الدليل CLM-026) محسوبة من ملف حصلت عليه CauseWay بموجب رخصة البحث للبيانات الجزئية لدى البنك الدولي؛ ولا يُنشر إلا تقديرات تجميعية، ولا تُنشر أي بيانات على مستوى المستجيبين. استشهد بالبيانات كما تشترط تلك الرخصة: Demirgüç-Kunt وKlapper وSinger وAnsar (2022)، The Global Findex Database 2021: Financial Inclusion, Digital Payments, and Resilience in the Age of COVID-19، واشنطن العاصمة: البنك الدولي. ولا تمتد رخصة CC BY 4.0 إلى البيانات الجزئية الأصلية، التي لا يستضيفها هذا المورد ولا يعيد توزيعها. ويجوز لك مشاركة محتوى CauseWay وتعديله لأي غرض، بشرط أن تنسبه إلى CauseWay، وأن تضع رابطًا إلى الرخصة، وأن تبيّن ما إذا كنت قد أجريت تغييرات: اذكر العنوان، والمؤلف (CauseWay)، والمصدر (هذا المورد ورابط الصفحة)، والرخصة (CC BY 4.0)، والتغييرات التي أجريتها. وعند إعادة استخدام رقم، استعمل سطرين: أولًا هذا المورد (أدلة الشمول المالي في اليمن، والسجل، وCauseWay، والإصدار، ورابط الصفحة)، ثم المصدر الأصلي الذي يسمّيه السجل (الناشر، والعنوان، والسنة، والرابط). وتذكر هذه الصفحة الرخصة التي تطبقها CauseWay على محتواها الخاص، ولا تفيد بأن أي حقوق لجهات أخرى قد سُوّيت."
+  },
+  {
+   "finding": "CLOSE-1:CR-04",
+   "sheet": "25_FINDEX_BASELINE",
+   "row": 32,
+   "col": 9,
+   "field": "WB-FINDEX-OBS-2022-010.source_url",
+   "old": "https://data.worldbank.org/indicator/FX.OWN.TOTL.ZS?locations=YE",
+   "new": "https://api.worldbank.org/v2/country/YEM/indicator/save.any.t.d?source=28"
+  },
+  {
+   "finding": "CLOSE-1:CR-04",
+   "sheet": "25_FINDEX_BASELINE",
+   "row": 33,
+   "col": 9,
+   "field": "WB-FINDEX-OBS-2022-011.source_url",
+   "old": "https://data.worldbank.org/indicator/FX.OWN.TOTL.ZS?locations=YE",
+   "new": "https://api.worldbank.org/v2/country/YEM/indicator/borrow.any.t.d?source=28"
+  },
+  {
+   "finding": "CLOSE-1:CR-04",
+   "sheet": "25_FINDEX_BASELINE",
+   "row": 34,
+   "col": 9,
+   "field": "WB-FINDEX-OBS-2022-012.source_url",
+   "old": "https://data.worldbank.org/indicator/FX.OWN.TOTL.ZS?locations=YE",
+   "new": "https://api.worldbank.org/v2/country/YEM/indicator/g20.any?source=28"
+  },
+  {
+   "finding": "CLOSE-1:CR-10",
+   "sheet": "15_SOURCE_LIBRARY",
+   "row": 97,
+   "col": 2,
+   "field": "SRC-WB-NFID-RFX-2026-001.primary_url",
+   "old": "https://www.worldbank.org/en/about/corporate-procurement/business-opportunities/administrative-procurement",
+   "new": null
+  },
+  {
+   "finding": "CLOSE-1:CR-10",
+   "sheet": "15_SOURCE_LIBRARY",
+   "row": 97,
+   "col": 16,
+   "field": "SRC-WB-NFID-RFX-2026-001.non_public_locator_note",
+   "old": null,
+   "new": "NON_PUBLIC (close-out CR-10, 10 October 2026): a World Bank procurement page; it feeds no public record and no procurement document is cited or named publicly. Address: https://www.worldbank.org/en/about/corporate-procurement/business-opportunities/administrative-procurement"
+  },
+  {
+   "finding": "CLOSE-1:CR-12",
+   "sheet": "29_OECD_BENCHMARKS",
+   "row": 5,
+   "col": 14,
+   "field": "29.header.quarantine_reason",
+   "old": null,
+   "new": "quarantine_reason"
+  },
+  {
+   "finding": "CLOSE-1:CR-12",
+   "sheet": "29_OECD_BENCHMARKS",
+   "row": 6,
+   "col": 13,
+   "field": "Global Average (39 Economies).public_use",
+   "old": "NON_PUBLIC__PROVENANCE_DEFECT",
+   "new": "REJECTED__UNTRACEABLE"
+  },
+  {
+   "finding": "CLOSE-1:CR-12",
+   "sheet": "29_OECD_BENCHMARKS",
+   "row": 6,
+   "col": 14,
+   "field": "Global Average (39 Economies).quarantine_reason",
+   "old": null,
+   "new": "REJECTED__UNTRACEABLE (close-out CR-12, 10 October 2026): an attached table, not an OECD/INFE publication. Its rows cannot be traced to any published OECD/INFE table: the cohort, regional and demographic averages are not figures the OECD published, and the economies listed are not the survey's set. Lineage only; never projected or published."
+  },
+  {
+   "finding": "CLOSE-1:CR-12",
+   "sheet": "29_OECD_BENCHMARKS",
+   "row": 7,
+   "col": 13,
+   "field": "OECD Participating Average.public_use",
+   "old": "NON_PUBLIC__PROVENANCE_DEFECT",
+   "new": "REJECTED__UNTRACEABLE"
+  },
+  {
+   "finding": "CLOSE-1:CR-12",
+   "sheet": "29_OECD_BENCHMARKS",
+   "row": 7,
+   "col": 14,
+   "field": "OECD Participating Average.quarantine_reason",
+   "old": null,
+   "new": "REJECTED__UNTRACEABLE (close-out CR-12, 10 October 2026): an attached table, not an OECD/INFE publication. Its rows cannot be traced to any published OECD/INFE table: the cohort, regional and demographic averages are not figures the OECD published, and the economies listed are not the survey's set. Lineage only; never projected or published."
+  },
+  {
+   "finding": "CLOSE-1:CR-12",
+   "sheet": "29_OECD_BENCHMARKS",
+   "row": 8,
+   "col": 13,
+   "field": "MENA Participating Average.public_use",
+   "old": "NON_PUBLIC__PROVENANCE_DEFECT",
+   "new": "REJECTED__UNTRACEABLE"
+  },
+  {
+   "finding": "CLOSE-1:CR-12",
+   "sheet": "29_OECD_BENCHMARKS",
+   "row": 8,
+   "col": 14,
+   "field": "MENA Participating Average.quarantine_reason",
+   "old": null,
+   "new": "REJECTED__UNTRACEABLE (close-out CR-12, 10 October 2026): an attached table, not an OECD/INFE publication. Its rows cannot be traced to any published OECD/INFE table: the cohort, regional and demographic averages are not figures the OECD published, and the economies listed are not the survey's set. Lineage only; never projected or published."
+  },
+  {
+   "finding": "CLOSE-1:CR-12",
+   "sheet": "29_OECD_BENCHMARKS",
+   "row": 9,
+   "col": 13,
+   "field": "Latin America Participating Avg.public_use",
+   "old": "NON_PUBLIC__PROVENANCE_DEFECT",
+   "new": "REJECTED__UNTRACEABLE"
+  },
+  {
+   "finding": "CLOSE-1:CR-12",
+   "sheet": "29_OECD_BENCHMARKS",
+   "row": 9,
+   "col": 14,
+   "field": "Latin America Participating Avg.quarantine_reason",
+   "old": null,
+   "new": "REJECTED__UNTRACEABLE (close-out CR-12, 10 October 2026): an attached table, not an OECD/INFE publication. Its rows cannot be traced to any published OECD/INFE table: the cohort, regional and demographic averages are not figures the OECD published, and the economies listed are not the survey's set. Lineage only; never projected or published."
+  },
+  {
+   "finding": "CLOSE-1:CR-12",
+   "sheet": "29_OECD_BENCHMARKS",
+   "row": 10,
+   "col": 13,
+   "field": "Southeast Asia Participating Avg.public_use",
+   "old": "NON_PUBLIC__PROVENANCE_DEFECT",
+   "new": "REJECTED__UNTRACEABLE"
+  },
+  {
+   "finding": "CLOSE-1:CR-12",
+   "sheet": "29_OECD_BENCHMARKS",
+   "row": 10,
+   "col": 14,
+   "field": "Southeast Asia Participating Avg.quarantine_reason",
+   "old": null,
+   "new": "REJECTED__UNTRACEABLE (close-out CR-12, 10 October 2026): an attached table, not an OECD/INFE publication. Its rows cannot be traced to any published OECD/INFE table: the cohort, regional and demographic averages are not figures the OECD published, and the economies listed are not the survey's set. Lineage only; never projected or published."
+  },
+  {
+   "finding": "CLOSE-1:CR-12",
+   "sheet": "29_OECD_BENCHMARKS",
+   "row": 11,
+   "col": 13,
+   "field": "Germany.public_use",
+   "old": "NON_PUBLIC__PROVENANCE_DEFECT",
+   "new": "REJECTED__UNTRACEABLE"
+  },
+  {
+   "finding": "CLOSE-1:CR-12",
+   "sheet": "29_OECD_BENCHMARKS",
+   "row": 11,
+   "col": 14,
+   "field": "Germany.quarantine_reason",
+   "old": null,
+   "new": "REJECTED__UNTRACEABLE (close-out CR-12, 10 October 2026): an attached table, not an OECD/INFE publication. Its rows cannot be traced to any published OECD/INFE table: the cohort, regional and demographic averages are not figures the OECD published, and the economies listed are not the survey's set. Lineage only; never projected or published."
+  },
+  {
+   "finding": "CLOSE-1:CR-12",
+   "sheet": "29_OECD_BENCHMARKS",
+   "row": 12,
+   "col": 13,
+   "field": "Austria.public_use",
+   "old": "NON_PUBLIC__PROVENANCE_DEFECT",
+   "new": "REJECTED__UNTRACEABLE"
+  },
+  {
+   "finding": "CLOSE-1:CR-12",
+   "sheet": "29_OECD_BENCHMARKS",
+   "row": 12,
+   "col": 14,
+   "field": "Austria.quarantine_reason",
+   "old": null,
+   "new": "REJECTED__UNTRACEABLE (close-out CR-12, 10 October 2026): an attached table, not an OECD/INFE publication. Its rows cannot be traced to any published OECD/INFE table: the cohort, regional and demographic averages are not figures the OECD published, and the economies listed are not the survey's set. Lineage only; never projected or published."
+  },
+  {
+   "finding": "CLOSE-1:CR-12",
+   "sheet": "29_OECD_BENCHMARKS",
+   "row": 13,
+   "col": 13,
+   "field": "Ireland.public_use",
+   "old": "NON_PUBLIC__PROVENANCE_DEFECT",
+   "new": "REJECTED__UNTRACEABLE"
+  },
+  {
+   "finding": "CLOSE-1:CR-12",
+   "sheet": "29_OECD_BENCHMARKS",
+   "row": 13,
+   "col": 14,
+   "field": "Ireland.quarantine_reason",
+   "old": null,
+   "new": "REJECTED__UNTRACEABLE (close-out CR-12, 10 October 2026): an attached table, not an OECD/INFE publication. Its rows cannot be traced to any published OECD/INFE table: the cohort, regional and demographic averages are not figures the OECD published, and the economies listed are not the survey's set. Lineage only; never projected or published."
+  },
+  {
+   "finding": "CLOSE-1:CR-12",
+   "sheet": "29_OECD_BENCHMARKS",
+   "row": 14,
+   "col": 13,
+   "field": "Italy.public_use",
+   "old": "NON_PUBLIC__PROVENANCE_DEFECT",
+   "new": "REJECTED__UNTRACEABLE"
+  },
+  {
+   "finding": "CLOSE-1:CR-12",
+   "sheet": "29_OECD_BENCHMARKS",
+   "row": 14,
+   "col": 14,
+   "field": "Italy.quarantine_reason",
+   "old": null,
+   "new": "REJECTED__UNTRACEABLE (close-out CR-12, 10 October 2026): an attached table, not an OECD/INFE publication. Its rows cannot be traced to any published OECD/INFE table: the cohort, regional and demographic averages are not figures the OECD published, and the economies listed are not the survey's set. Lineage only; never projected or published."
+  },
+  {
+   "finding": "CLOSE-1:CR-12",
+   "sheet": "29_OECD_BENCHMARKS",
+   "row": 15,
+   "col": 13,
+   "field": "Saudi Arabia.public_use",
+   "old": "NON_PUBLIC__PROVENANCE_DEFECT",
+   "new": "REJECTED__UNTRACEABLE"
+  },
+  {
+   "finding": "CLOSE-1:CR-12",
+   "sheet": "29_OECD_BENCHMARKS",
+   "row": 15,
+   "col": 14,
+   "field": "Saudi Arabia.quarantine_reason",
+   "old": null,
+   "new": "REJECTED__UNTRACEABLE (close-out CR-12, 10 October 2026): an attached table, not an OECD/INFE publication. Its rows cannot be traced to any published OECD/INFE table: the cohort, regional and demographic averages are not figures the OECD published, and the economies listed are not the survey's set. Lineage only; never projected or published."
+  },
+  {
+   "finding": "CLOSE-1:CR-12",
+   "sheet": "29_OECD_BENCHMARKS",
+   "row": 16,
+   "col": 13,
+   "field": "Jordan.public_use",
+   "old": "NON_PUBLIC__PROVENANCE_DEFECT",
+   "new": "REJECTED__UNTRACEABLE"
+  },
+  {
+   "finding": "CLOSE-1:CR-12",
+   "sheet": "29_OECD_BENCHMARKS",
+   "row": 16,
+   "col": 14,
+   "field": "Jordan.quarantine_reason",
+   "old": null,
+   "new": "REJECTED__UNTRACEABLE (close-out CR-12, 10 October 2026): an attached table, not an OECD/INFE publication. Its rows cannot be traced to any published OECD/INFE table: the cohort, regional and demographic averages are not figures the OECD published, and the economies listed are not the survey's set. Lineage only; never projected or published."
+  },
+  {
+   "finding": "CLOSE-1:CR-12",
+   "sheet": "29_OECD_BENCHMARKS",
+   "row": 17,
+   "col": 13,
+   "field": "Egypt.public_use",
+   "old": "NON_PUBLIC__PROVENANCE_DEFECT",
+   "new": "REJECTED__UNTRACEABLE"
+  },
+  {
+   "finding": "CLOSE-1:CR-12",
+   "sheet": "29_OECD_BENCHMARKS",
+   "row": 17,
+   "col": 14,
+   "field": "Egypt.quarantine_reason",
+   "old": null,
+   "new": "REJECTED__UNTRACEABLE (close-out CR-12, 10 October 2026): an attached table, not an OECD/INFE publication. Its rows cannot be traced to any published OECD/INFE table: the cohort, regional and demographic averages are not figures the OECD published, and the economies listed are not the survey's set. Lineage only; never projected or published."
+  },
+  {
+   "finding": "CLOSE-1:CR-12",
+   "sheet": "29_OECD_BENCHMARKS",
+   "row": 18,
+   "col": 13,
+   "field": "Morocco.public_use",
+   "old": "NON_PUBLIC__PROVENANCE_DEFECT",
+   "new": "REJECTED__UNTRACEABLE"
+  },
+  {
+   "finding": "CLOSE-1:CR-12",
+   "sheet": "29_OECD_BENCHMARKS",
+   "row": 18,
+   "col": 14,
+   "field": "Morocco.quarantine_reason",
+   "old": null,
+   "new": "REJECTED__UNTRACEABLE (close-out CR-12, 10 October 2026): an attached table, not an OECD/INFE publication. Its rows cannot be traced to any published OECD/INFE table: the cohort, regional and demographic averages are not figures the OECD published, and the economies listed are not the survey's set. Lineage only; never projected or published."
+  },
+  {
+   "finding": "CLOSE-1:CR-12",
+   "sheet": "29_OECD_BENCHMARKS",
+   "row": 19,
+   "col": 13,
+   "field": "Thailand.public_use",
+   "old": "NON_PUBLIC__PROVENANCE_DEFECT",
+   "new": "REJECTED__UNTRACEABLE"
+  },
+  {
+   "finding": "CLOSE-1:CR-12",
+   "sheet": "29_OECD_BENCHMARKS",
+   "row": 19,
+   "col": 14,
+   "field": "Thailand.quarantine_reason",
+   "old": null,
+   "new": "REJECTED__UNTRACEABLE (close-out CR-12, 10 October 2026): an attached table, not an OECD/INFE publication. Its rows cannot be traced to any published OECD/INFE table: the cohort, regional and demographic averages are not figures the OECD published, and the economies listed are not the survey's set. Lineage only; never projected or published."
+  },
+  {
+   "finding": "CLOSE-1:CR-12",
+   "sheet": "29_OECD_BENCHMARKS",
+   "row": 20,
+   "col": 13,
+   "field": "Malaysia.public_use",
+   "old": "NON_PUBLIC__PROVENANCE_DEFECT",
+   "new": "REJECTED__UNTRACEABLE"
+  },
+  {
+   "finding": "CLOSE-1:CR-12",
+   "sheet": "29_OECD_BENCHMARKS",
+   "row": 20,
+   "col": 14,
+   "field": "Malaysia.quarantine_reason",
+   "old": null,
+   "new": "REJECTED__UNTRACEABLE (close-out CR-12, 10 October 2026): an attached table, not an OECD/INFE publication. Its rows cannot be traced to any published OECD/INFE table: the cohort, regional and demographic averages are not figures the OECD published, and the economies listed are not the survey's set. Lineage only; never projected or published."
+  },
+  {
+   "finding": "CLOSE-1:CR-12",
+   "sheet": "29_OECD_BENCHMARKS",
+   "row": 21,
+   "col": 13,
+   "field": "Brazil.public_use",
+   "old": "NON_PUBLIC__PROVENANCE_DEFECT",
+   "new": "REJECTED__UNTRACEABLE"
+  },
+  {
+   "finding": "CLOSE-1:CR-12",
+   "sheet": "29_OECD_BENCHMARKS",
+   "row": 21,
+   "col": 14,
+   "field": "Brazil.quarantine_reason",
+   "old": null,
+   "new": "REJECTED__UNTRACEABLE (close-out CR-12, 10 October 2026): an attached table, not an OECD/INFE publication. Its rows cannot be traced to any published OECD/INFE table: the cohort, regional and demographic averages are not figures the OECD published, and the economies listed are not the survey's set. Lineage only; never projected or published."
+  },
+  {
+   "finding": "CLOSE-1:CR-12",
+   "sheet": "29_OECD_BENCHMARKS",
+   "row": 22,
+   "col": 13,
+   "field": "Demographics: Male (Global).public_use",
+   "old": "NON_PUBLIC__PROVENANCE_DEFECT",
+   "new": "REJECTED__UNTRACEABLE"
+  },
+  {
+   "finding": "CLOSE-1:CR-12",
+   "sheet": "29_OECD_BENCHMARKS",
+   "row": 22,
+   "col": 14,
+   "field": "Demographics: Male (Global).quarantine_reason",
+   "old": null,
+   "new": "REJECTED__UNTRACEABLE (close-out CR-12, 10 October 2026): an attached table, not an OECD/INFE publication. Its rows cannot be traced to any published OECD/INFE table: the cohort, regional and demographic averages are not figures the OECD published, and the economies listed are not the survey's set. Lineage only; never projected or published."
+  },
+  {
+   "finding": "CLOSE-1:CR-12",
+   "sheet": "29_OECD_BENCHMARKS",
+   "row": 23,
+   "col": 13,
+   "field": "Demographics: Female (Global).public_use",
+   "old": "NON_PUBLIC__PROVENANCE_DEFECT",
+   "new": "REJECTED__UNTRACEABLE"
+  },
+  {
+   "finding": "CLOSE-1:CR-12",
+   "sheet": "29_OECD_BENCHMARKS",
+   "row": 23,
+   "col": 14,
+   "field": "Demographics: Female (Global).quarantine_reason",
+   "old": null,
+   "new": "REJECTED__UNTRACEABLE (close-out CR-12, 10 October 2026): an attached table, not an OECD/INFE publication. Its rows cannot be traced to any published OECD/INFE table: the cohort, regional and demographic averages are not figures the OECD published, and the economies listed are not the survey's set. Lineage only; never projected or published."
+  },
+  {
+   "finding": "CLOSE-1:CR-12",
+   "sheet": "29_OECD_BENCHMARKS",
+   "row": 24,
+   "col": 13,
+   "field": "Demographics: Youth (18-29).public_use",
+   "old": "NON_PUBLIC__PROVENANCE_DEFECT",
+   "new": "REJECTED__UNTRACEABLE"
+  },
+  {
+   "finding": "CLOSE-1:CR-12",
+   "sheet": "29_OECD_BENCHMARKS",
+   "row": 24,
+   "col": 14,
+   "field": "Demographics: Youth (18-29).quarantine_reason",
+   "old": null,
+   "new": "REJECTED__UNTRACEABLE (close-out CR-12, 10 October 2026): an attached table, not an OECD/INFE publication. Its rows cannot be traced to any published OECD/INFE table: the cohort, regional and demographic averages are not figures the OECD published, and the economies listed are not the survey's set. Lineage only; never projected or published."
+  },
+  {
+   "finding": "CLOSE-1:CR-12",
+   "sheet": "29_OECD_BENCHMARKS",
+   "row": 25,
+   "col": 13,
+   "field": "Demographics: Prime (30-59).public_use",
+   "old": "NON_PUBLIC__PROVENANCE_DEFECT",
+   "new": "REJECTED__UNTRACEABLE"
+  },
+  {
+   "finding": "CLOSE-1:CR-12",
+   "sheet": "29_OECD_BENCHMARKS",
+   "row": 25,
+   "col": 14,
+   "field": "Demographics: Prime (30-59).quarantine_reason",
+   "old": null,
+   "new": "REJECTED__UNTRACEABLE (close-out CR-12, 10 October 2026): an attached table, not an OECD/INFE publication. Its rows cannot be traced to any published OECD/INFE table: the cohort, regional and demographic averages are not figures the OECD published, and the economies listed are not the survey's set. Lineage only; never projected or published."
+  },
+  {
+   "finding": "CLOSE-1:CR-12",
+   "sheet": "29_OECD_BENCHMARKS",
+   "row": 26,
+   "col": 13,
+   "field": "Demographics: Elderly (60+).public_use",
+   "old": "NON_PUBLIC__PROVENANCE_DEFECT",
+   "new": "REJECTED__UNTRACEABLE"
+  },
+  {
+   "finding": "CLOSE-1:CR-12",
+   "sheet": "29_OECD_BENCHMARKS",
+   "row": 26,
+   "col": 14,
+   "field": "Demographics: Elderly (60+).quarantine_reason",
+   "old": null,
+   "new": "REJECTED__UNTRACEABLE (close-out CR-12, 10 October 2026): an attached table, not an OECD/INFE publication. Its rows cannot be traced to any published OECD/INFE table: the cohort, regional and demographic averages are not figures the OECD published, and the economies listed are not the survey's set. Lineage only; never projected or published."
+  },
+  {
+   "finding": "CLOSE-1:CR-12",
+   "sheet": "29_OECD_BENCHMARKS",
+   "row": 27,
+   "col": 13,
+   "field": "Demographics: Low Education.public_use",
+   "old": "NON_PUBLIC__PROVENANCE_DEFECT",
+   "new": "REJECTED__UNTRACEABLE"
+  },
+  {
+   "finding": "CLOSE-1:CR-12",
+   "sheet": "29_OECD_BENCHMARKS",
+   "row": 27,
+   "col": 14,
+   "field": "Demographics: Low Education.quarantine_reason",
+   "old": null,
+   "new": "REJECTED__UNTRACEABLE (close-out CR-12, 10 October 2026): an attached table, not an OECD/INFE publication. Its rows cannot be traced to any published OECD/INFE table: the cohort, regional and demographic averages are not figures the OECD published, and the economies listed are not the survey's set. Lineage only; never projected or published."
+  },
+  {
+   "finding": "CLOSE-1:CR-12",
+   "sheet": "29_OECD_BENCHMARKS",
+   "row": 28,
+   "col": 13,
+   "field": "Demographics: High Education.public_use",
+   "old": "NON_PUBLIC__PROVENANCE_DEFECT",
+   "new": "REJECTED__UNTRACEABLE"
+  },
+  {
+   "finding": "CLOSE-1:CR-12",
+   "sheet": "29_OECD_BENCHMARKS",
+   "row": 28,
+   "col": 14,
+   "field": "Demographics: High Education.quarantine_reason",
+   "old": null,
+   "new": "REJECTED__UNTRACEABLE (close-out CR-12, 10 October 2026): an attached table, not an OECD/INFE publication. Its rows cannot be traced to any published OECD/INFE table: the cohort, regional and demographic averages are not figures the OECD published, and the economies listed are not the survey's set. Lineage only; never projected or published."
+  },
+  {
+   "finding": "CLOSE-1:CR-12",
+   "sheet": "29_OECD_BENCHMARKS",
+   "row": 29,
+   "col": 13,
+   "field": "Demographics: Low Income.public_use",
+   "old": "NON_PUBLIC__PROVENANCE_DEFECT",
+   "new": "REJECTED__UNTRACEABLE"
+  },
+  {
+   "finding": "CLOSE-1:CR-12",
+   "sheet": "29_OECD_BENCHMARKS",
+   "row": 29,
+   "col": 14,
+   "field": "Demographics: Low Income.quarantine_reason",
+   "old": null,
+   "new": "REJECTED__UNTRACEABLE (close-out CR-12, 10 October 2026): an attached table, not an OECD/INFE publication. Its rows cannot be traced to any published OECD/INFE table: the cohort, regional and demographic averages are not figures the OECD published, and the economies listed are not the survey's set. Lineage only; never projected or published."
+  },
+  {
+   "finding": "CLOSE-1:CR-12",
+   "sheet": "29_OECD_BENCHMARKS",
+   "row": 30,
+   "col": 13,
+   "field": "Demographics: High Income.public_use",
+   "old": "NON_PUBLIC__PROVENANCE_DEFECT",
+   "new": "REJECTED__UNTRACEABLE"
+  },
+  {
+   "finding": "CLOSE-1:CR-12",
+   "sheet": "29_OECD_BENCHMARKS",
+   "row": 30,
+   "col": 14,
+   "field": "Demographics: High Income.quarantine_reason",
+   "old": null,
+   "new": "REJECTED__UNTRACEABLE (close-out CR-12, 10 October 2026): an attached table, not an OECD/INFE publication. Its rows cannot be traced to any published OECD/INFE table: the cohort, regional and demographic averages are not figures the OECD published, and the economies listed are not the survey's set. Lineage only; never projected or published."
+  },
+  {
+   "finding": "CLOSE-1:CR-12",
+   "sheet": "24_FINDEX_CODEBOOK",
+   "row": 122,
+   "col": 9,
+   "field": "wpid_random.legacy_state",
+   "old": null,
+   "new": "NON_PUBLIC__ILLUSTRATIVE"
+  },
+  {
+   "finding": "CLOSE-1:CR-12",
+   "sheet": "24_FINDEX_CODEBOOK",
+   "row": 122,
+   "col": 10,
+   "field": "wpid_random.legacy_reason",
+   "old": null,
+   "new": "NON_PUBLIC__ILLUSTRATIVE (close-out CR-12, 10 October 2026): a predecessor pseudo-codebook, not the World Bank DDI. Its question wording is invented and some variables (e.g. account_mob) do not exist in the study. Lineage only; never projected to a public page."
+  },
+  {
+   "finding": "CLOSE-1:CR-12",
+   "sheet": "24_FINDEX_CODEBOOK",
+   "row": 123,
+   "col": 9,
+   "field": "wgt.legacy_state",
+   "old": null,
+   "new": "NON_PUBLIC__ILLUSTRATIVE"
+  },
+  {
+   "finding": "CLOSE-1:CR-12",
+   "sheet": "24_FINDEX_CODEBOOK",
+   "row": 123,
+   "col": 10,
+   "field": "wgt.legacy_reason",
+   "old": null,
+   "new": "NON_PUBLIC__ILLUSTRATIVE (close-out CR-12, 10 October 2026): a predecessor pseudo-codebook, not the World Bank DDI. Its question wording is invented and some variables (e.g. account_mob) do not exist in the study. Lineage only; never projected to a public page."
+  },
+  {
+   "finding": "CLOSE-1:CR-12",
+   "sheet": "24_FINDEX_CODEBOOK",
+   "row": 124,
+   "col": 9,
+   "field": "year.legacy_state",
+   "old": null,
+   "new": "NON_PUBLIC__ILLUSTRATIVE"
+  },
+  {
+   "finding": "CLOSE-1:CR-12",
+   "sheet": "24_FINDEX_CODEBOOK",
+   "row": 124,
+   "col": 10,
+   "field": "year.legacy_reason",
+   "old": null,
+   "new": "NON_PUBLIC__ILLUSTRATIVE (close-out CR-12, 10 October 2026): a predecessor pseudo-codebook, not the World Bank DDI. Its question wording is invented and some variables (e.g. account_mob) do not exist in the study. Lineage only; never projected to a public page."
+  },
+  {
+   "finding": "CLOSE-1:CR-12",
+   "sheet": "24_FINDEX_CODEBOOK",
+   "row": 125,
+   "col": 9,
+   "field": "ISO3.legacy_state",
+   "old": null,
+   "new": "NON_PUBLIC__ILLUSTRATIVE"
+  },
+  {
+   "finding": "CLOSE-1:CR-12",
+   "sheet": "24_FINDEX_CODEBOOK",
+   "row": 125,
+   "col": 10,
+   "field": "ISO3.legacy_reason",
+   "old": null,
+   "new": "NON_PUBLIC__ILLUSTRATIVE (close-out CR-12, 10 October 2026): a predecessor pseudo-codebook, not the World Bank DDI. Its question wording is invented and some variables (e.g. account_mob) do not exist in the study. Lineage only; never projected to a public page."
+  },
+  {
+   "finding": "CLOSE-1:CR-12",
+   "sheet": "24_FINDEX_CODEBOOK",
+   "row": 126,
+   "col": 9,
+   "field": "female.legacy_state",
+   "old": null,
+   "new": "NON_PUBLIC__ILLUSTRATIVE"
+  },
+  {
+   "finding": "CLOSE-1:CR-12",
+   "sheet": "24_FINDEX_CODEBOOK",
+   "row": 126,
+   "col": 10,
+   "field": "female.legacy_reason",
+   "old": null,
+   "new": "NON_PUBLIC__ILLUSTRATIVE (close-out CR-12, 10 October 2026): a predecessor pseudo-codebook, not the World Bank DDI. Its question wording is invented and some variables (e.g. account_mob) do not exist in the study. Lineage only; never projected to a public page."
+  },
+  {
+   "finding": "CLOSE-1:CR-12",
+   "sheet": "24_FINDEX_CODEBOOK",
+   "row": 127,
+   "col": 9,
+   "field": "age.legacy_state",
+   "old": null,
+   "new": "NON_PUBLIC__ILLUSTRATIVE"
+  },
+  {
+   "finding": "CLOSE-1:CR-12",
+   "sheet": "24_FINDEX_CODEBOOK",
+   "row": 127,
+   "col": 10,
+   "field": "age.legacy_reason",
+   "old": null,
+   "new": "NON_PUBLIC__ILLUSTRATIVE (close-out CR-12, 10 October 2026): a predecessor pseudo-codebook, not the World Bank DDI. Its question wording is invented and some variables (e.g. account_mob) do not exist in the study. Lineage only; never projected to a public page."
+  },
+  {
+   "finding": "CLOSE-1:CR-12",
+   "sheet": "24_FINDEX_CODEBOOK",
+   "row": 128,
+   "col": 9,
+   "field": "educ.legacy_state",
+   "old": null,
+   "new": "NON_PUBLIC__ILLUSTRATIVE"
+  },
+  {
+   "finding": "CLOSE-1:CR-12",
+   "sheet": "24_FINDEX_CODEBOOK",
+   "row": 128,
+   "col": 10,
+   "field": "educ.legacy_reason",
+   "old": null,
+   "new": "NON_PUBLIC__ILLUSTRATIVE (close-out CR-12, 10 October 2026): a predecessor pseudo-codebook, not the World Bank DDI. Its question wording is invented and some variables (e.g. account_mob) do not exist in the study. Lineage only; never projected to a public page."
+  },
+  {
+   "finding": "CLOSE-1:CR-12",
+   "sheet": "24_FINDEX_CODEBOOK",
+   "row": 129,
+   "col": 9,
+   "field": "inc_q.legacy_state",
+   "old": null,
+   "new": "NON_PUBLIC__ILLUSTRATIVE"
+  },
+  {
+   "finding": "CLOSE-1:CR-12",
+   "sheet": "24_FINDEX_CODEBOOK",
+   "row": 129,
+   "col": 10,
+   "field": "inc_q.legacy_reason",
+   "old": null,
+   "new": "NON_PUBLIC__ILLUSTRATIVE (close-out CR-12, 10 October 2026): a predecessor pseudo-codebook, not the World Bank DDI. Its question wording is invented and some variables (e.g. account_mob) do not exist in the study. Lineage only; never projected to a public page."
+  },
+  {
+   "finding": "CLOSE-1:CR-12",
+   "sheet": "24_FINDEX_CODEBOOK",
+   "row": 130,
+   "col": 9,
+   "field": "urbanicity_f2f.legacy_state",
+   "old": null,
+   "new": "NON_PUBLIC__ILLUSTRATIVE"
+  },
+  {
+   "finding": "CLOSE-1:CR-12",
+   "sheet": "24_FINDEX_CODEBOOK",
+   "row": 130,
+   "col": 10,
+   "field": "urbanicity_f2f.legacy_reason",
+   "old": null,
+   "new": "NON_PUBLIC__ILLUSTRATIVE (close-out CR-12, 10 October 2026): a predecessor pseudo-codebook, not the World Bank DDI. Its question wording is invented and some variables (e.g. account_mob) do not exist in the study. Lineage only; never projected to a public page."
+  },
+  {
+   "finding": "CLOSE-1:CR-12",
+   "sheet": "24_FINDEX_CODEBOOK",
+   "row": 131,
+   "col": 9,
+   "field": "emp_in.legacy_state",
+   "old": null,
+   "new": "NON_PUBLIC__ILLUSTRATIVE"
+  },
+  {
+   "finding": "CLOSE-1:CR-12",
+   "sheet": "24_FINDEX_CODEBOOK",
+   "row": 131,
+   "col": 10,
+   "field": "emp_in.legacy_reason",
+   "old": null,
+   "new": "NON_PUBLIC__ILLUSTRATIVE (close-out CR-12, 10 October 2026): a predecessor pseudo-codebook, not the World Bank DDI. Its question wording is invented and some variables (e.g. account_mob) do not exist in the study. Lineage only; never projected to a public page."
+  },
+  {
+   "finding": "CLOSE-1:CR-12",
+   "sheet": "24_FINDEX_CODEBOOK",
+   "row": 132,
+   "col": 9,
+   "field": "account.legacy_state",
+   "old": null,
+   "new": "NON_PUBLIC__ILLUSTRATIVE"
+  },
+  {
+   "finding": "CLOSE-1:CR-12",
+   "sheet": "24_FINDEX_CODEBOOK",
+   "row": 132,
+   "col": 10,
+   "field": "account.legacy_reason",
+   "old": null,
+   "new": "NON_PUBLIC__ILLUSTRATIVE (close-out CR-12, 10 October 2026): a predecessor pseudo-codebook, not the World Bank DDI. Its question wording is invented and some variables (e.g. account_mob) do not exist in the study. Lineage only; never projected to a public page."
+  },
+  {
+   "finding": "CLOSE-1:CR-12",
+   "sheet": "24_FINDEX_CODEBOOK",
+   "row": 133,
+   "col": 9,
+   "field": "account_fin.legacy_state",
+   "old": null,
+   "new": "NON_PUBLIC__ILLUSTRATIVE"
+  },
+  {
+   "finding": "CLOSE-1:CR-12",
+   "sheet": "24_FINDEX_CODEBOOK",
+   "row": 133,
+   "col": 10,
+   "field": "account_fin.legacy_reason",
+   "old": null,
+   "new": "NON_PUBLIC__ILLUSTRATIVE (close-out CR-12, 10 October 2026): a predecessor pseudo-codebook, not the World Bank DDI. Its question wording is invented and some variables (e.g. account_mob) do not exist in the study. Lineage only; never projected to a public page."
+  },
+  {
+   "finding": "CLOSE-1:CR-12",
+   "sheet": "24_FINDEX_CODEBOOK",
+   "row": 134,
+   "col": 9,
+   "field": "account_mob.legacy_state",
+   "old": null,
+   "new": "NON_PUBLIC__ILLUSTRATIVE"
+  },
+  {
+   "finding": "CLOSE-1:CR-12",
+   "sheet": "24_FINDEX_CODEBOOK",
+   "row": 134,
+   "col": 10,
+   "field": "account_mob.legacy_reason",
+   "old": null,
+   "new": "NON_PUBLIC__ILLUSTRATIVE (close-out CR-12, 10 October 2026): a predecessor pseudo-codebook, not the World Bank DDI. Its question wording is invented and some variables (e.g. account_mob) do not exist in the study. Lineage only; never projected to a public page."
+  },
+  {
+   "finding": "CLOSE-1:CR-12",
+   "sheet": "24_FINDEX_CODEBOOK",
+   "row": 135,
+   "col": 9,
+   "field": "fin2.legacy_state",
+   "old": null,
+   "new": "NON_PUBLIC__ILLUSTRATIVE"
+  },
+  {
+   "finding": "CLOSE-1:CR-12",
+   "sheet": "24_FINDEX_CODEBOOK",
+   "row": 135,
+   "col": 10,
+   "field": "fin2.legacy_reason",
+   "old": null,
+   "new": "NON_PUBLIC__ILLUSTRATIVE (close-out CR-12, 10 October 2026): a predecessor pseudo-codebook, not the World Bank DDI. Its question wording is invented and some variables (e.g. account_mob) do not exist in the study. Lineage only; never projected to a public page."
+  },
+  {
+   "finding": "CLOSE-1:CR-12",
+   "sheet": "24_FINDEX_CODEBOOK",
+   "row": 136,
+   "col": 9,
+   "field": "fin3.legacy_state",
+   "old": null,
+   "new": "NON_PUBLIC__ILLUSTRATIVE"
+  },
+  {
+   "finding": "CLOSE-1:CR-12",
+   "sheet": "24_FINDEX_CODEBOOK",
+   "row": 136,
+   "col": 10,
+   "field": "fin3.legacy_reason",
+   "old": null,
+   "new": "NON_PUBLIC__ILLUSTRATIVE (close-out CR-12, 10 October 2026): a predecessor pseudo-codebook, not the World Bank DDI. Its question wording is invented and some variables (e.g. account_mob) do not exist in the study. Lineage only; never projected to a public page."
+  },
+  {
+   "finding": "CLOSE-1:CR-12",
+   "sheet": "24_FINDEX_CODEBOOK",
+   "row": 137,
+   "col": 9,
+   "field": "fin4.legacy_state",
+   "old": null,
+   "new": "NON_PUBLIC__ILLUSTRATIVE"
+  },
+  {
+   "finding": "CLOSE-1:CR-12",
+   "sheet": "24_FINDEX_CODEBOOK",
+   "row": 137,
+   "col": 10,
+   "field": "fin4.legacy_reason",
+   "old": null,
+   "new": "NON_PUBLIC__ILLUSTRATIVE (close-out CR-12, 10 October 2026): a predecessor pseudo-codebook, not the World Bank DDI. Its question wording is invented and some variables (e.g. account_mob) do not exist in the study. Lineage only; never projected to a public page."
+  },
+  {
+   "finding": "CLOSE-1:CR-12",
+   "sheet": "24_FINDEX_CODEBOOK",
+   "row": 138,
+   "col": 9,
+   "field": "fin11a.legacy_state",
+   "old": null,
+   "new": "NON_PUBLIC__ILLUSTRATIVE"
+  },
+  {
+   "finding": "CLOSE-1:CR-12",
+   "sheet": "24_FINDEX_CODEBOOK",
+   "row": 138,
+   "col": 10,
+   "field": "fin11a.legacy_reason",
+   "old": null,
+   "new": "NON_PUBLIC__ILLUSTRATIVE (close-out CR-12, 10 October 2026): a predecessor pseudo-codebook, not the World Bank DDI. Its question wording is invented and some variables (e.g. account_mob) do not exist in the study. Lineage only; never projected to a public page."
+  },
+  {
+   "finding": "CLOSE-1:CR-12",
+   "sheet": "24_FINDEX_CODEBOOK",
+   "row": 139,
+   "col": 9,
+   "field": "fin11b.legacy_state",
+   "old": null,
+   "new": "NON_PUBLIC__ILLUSTRATIVE"
+  },
+  {
+   "finding": "CLOSE-1:CR-12",
+   "sheet": "24_FINDEX_CODEBOOK",
+   "row": 139,
+   "col": 10,
+   "field": "fin11b.legacy_reason",
+   "old": null,
+   "new": "NON_PUBLIC__ILLUSTRATIVE (close-out CR-12, 10 October 2026): a predecessor pseudo-codebook, not the World Bank DDI. Its question wording is invented and some variables (e.g. account_mob) do not exist in the study. Lineage only; never projected to a public page."
+  },
+  {
+   "finding": "CLOSE-1:CR-12",
+   "sheet": "24_FINDEX_CODEBOOK",
+   "row": 140,
+   "col": 9,
+   "field": "fin11c.legacy_state",
+   "old": null,
+   "new": "NON_PUBLIC__ILLUSTRATIVE"
+  },
+  {
+   "finding": "CLOSE-1:CR-12",
+   "sheet": "24_FINDEX_CODEBOOK",
+   "row": 140,
+   "col": 10,
+   "field": "fin11c.legacy_reason",
+   "old": null,
+   "new": "NON_PUBLIC__ILLUSTRATIVE (close-out CR-12, 10 October 2026): a predecessor pseudo-codebook, not the World Bank DDI. Its question wording is invented and some variables (e.g. account_mob) do not exist in the study. Lineage only; never projected to a public page."
+  },
+  {
+   "finding": "CLOSE-1:CR-12",
+   "sheet": "24_FINDEX_CODEBOOK",
+   "row": 141,
+   "col": 9,
+   "field": "fin11d.legacy_state",
+   "old": null,
+   "new": "NON_PUBLIC__ILLUSTRATIVE"
+  },
+  {
+   "finding": "CLOSE-1:CR-12",
+   "sheet": "24_FINDEX_CODEBOOK",
+   "row": 141,
+   "col": 10,
+   "field": "fin11d.legacy_reason",
+   "old": null,
+   "new": "NON_PUBLIC__ILLUSTRATIVE (close-out CR-12, 10 October 2026): a predecessor pseudo-codebook, not the World Bank DDI. Its question wording is invented and some variables (e.g. account_mob) do not exist in the study. Lineage only; never projected to a public page."
+  },
+  {
+   "finding": "CLOSE-1:CR-12",
+   "sheet": "24_FINDEX_CODEBOOK",
+   "row": 142,
+   "col": 9,
+   "field": "fin11e.legacy_state",
+   "old": null,
+   "new": "NON_PUBLIC__ILLUSTRATIVE"
+  },
+  {
+   "finding": "CLOSE-1:CR-12",
+   "sheet": "24_FINDEX_CODEBOOK",
+   "row": 142,
+   "col": 10,
+   "field": "fin11e.legacy_reason",
+   "old": null,
+   "new": "NON_PUBLIC__ILLUSTRATIVE (close-out CR-12, 10 October 2026): a predecessor pseudo-codebook, not the World Bank DDI. Its question wording is invented and some variables (e.g. account_mob) do not exist in the study. Lineage only; never projected to a public page."
+  },
+  {
+   "finding": "CLOSE-1:CR-12",
+   "sheet": "24_FINDEX_CODEBOOK",
+   "row": 143,
+   "col": 9,
+   "field": "fin11f.legacy_state",
+   "old": null,
+   "new": "NON_PUBLIC__ILLUSTRATIVE"
+  },
+  {
+   "finding": "CLOSE-1:CR-12",
+   "sheet": "24_FINDEX_CODEBOOK",
+   "row": 143,
+   "col": 10,
+   "field": "fin11f.legacy_reason",
+   "old": null,
+   "new": "NON_PUBLIC__ILLUSTRATIVE (close-out CR-12, 10 October 2026): a predecessor pseudo-codebook, not the World Bank DDI. Its question wording is invented and some variables (e.g. account_mob) do not exist in the study. Lineage only; never projected to a public page."
+  },
+  {
+   "finding": "CLOSE-1:CR-12",
+   "sheet": "24_FINDEX_CODEBOOK",
+   "row": 144,
+   "col": 9,
+   "field": "fin11g.legacy_state",
+   "old": null,
+   "new": "NON_PUBLIC__ILLUSTRATIVE"
+  },
+  {
+   "finding": "CLOSE-1:CR-12",
+   "sheet": "24_FINDEX_CODEBOOK",
+   "row": 144,
+   "col": 10,
+   "field": "fin11g.legacy_reason",
+   "old": null,
+   "new": "NON_PUBLIC__ILLUSTRATIVE (close-out CR-12, 10 October 2026): a predecessor pseudo-codebook, not the World Bank DDI. Its question wording is invented and some variables (e.g. account_mob) do not exist in the study. Lineage only; never projected to a public page."
+  },
+  {
+   "finding": "CLOSE-1:CR-12",
+   "sheet": "24_FINDEX_CODEBOOK",
+   "row": 145,
+   "col": 9,
+   "field": "fin14a.legacy_state",
+   "old": null,
+   "new": "NON_PUBLIC__ILLUSTRATIVE"
+  },
+  {
+   "finding": "CLOSE-1:CR-12",
+   "sheet": "24_FINDEX_CODEBOOK",
+   "row": 145,
+   "col": 10,
+   "field": "fin14a.legacy_reason",
+   "old": null,
+   "new": "NON_PUBLIC__ILLUSTRATIVE (close-out CR-12, 10 October 2026): a predecessor pseudo-codebook, not the World Bank DDI. Its question wording is invented and some variables (e.g. account_mob) do not exist in the study. Lineage only; never projected to a public page."
+  },
+  {
+   "finding": "CLOSE-1:CR-12",
+   "sheet": "24_FINDEX_CODEBOOK",
+   "row": 146,
+   "col": 9,
+   "field": "fin14b.legacy_state",
+   "old": null,
+   "new": "NON_PUBLIC__ILLUSTRATIVE"
+  },
+  {
+   "finding": "CLOSE-1:CR-12",
+   "sheet": "24_FINDEX_CODEBOOK",
+   "row": 146,
+   "col": 10,
+   "field": "fin14b.legacy_reason",
+   "old": null,
+   "new": "NON_PUBLIC__ILLUSTRATIVE (close-out CR-12, 10 October 2026): a predecessor pseudo-codebook, not the World Bank DDI. Its question wording is invented and some variables (e.g. account_mob) do not exist in the study. Lineage only; never projected to a public page."
+  },
+  {
+   "finding": "CLOSE-1:CR-12",
+   "sheet": "24_FINDEX_CODEBOOK",
+   "row": 147,
+   "col": 9,
+   "field": "fin14c.legacy_state",
+   "old": null,
+   "new": "NON_PUBLIC__ILLUSTRATIVE"
+  },
+  {
+   "finding": "CLOSE-1:CR-12",
+   "sheet": "24_FINDEX_CODEBOOK",
+   "row": 147,
+   "col": 10,
+   "field": "fin14c.legacy_reason",
+   "old": null,
+   "new": "NON_PUBLIC__ILLUSTRATIVE (close-out CR-12, 10 October 2026): a predecessor pseudo-codebook, not the World Bank DDI. Its question wording is invented and some variables (e.g. account_mob) do not exist in the study. Lineage only; never projected to a public page."
+  },
+  {
+   "finding": "CLOSE-1:CR-12",
+   "sheet": "24_FINDEX_CODEBOOK",
+   "row": 148,
+   "col": 9,
+   "field": "fin14d.legacy_state",
+   "old": null,
+   "new": "NON_PUBLIC__ILLUSTRATIVE"
+  },
+  {
+   "finding": "CLOSE-1:CR-12",
+   "sheet": "24_FINDEX_CODEBOOK",
+   "row": 148,
+   "col": 10,
+   "field": "fin14d.legacy_reason",
+   "old": null,
+   "new": "NON_PUBLIC__ILLUSTRATIVE (close-out CR-12, 10 October 2026): a predecessor pseudo-codebook, not the World Bank DDI. Its question wording is invented and some variables (e.g. account_mob) do not exist in the study. Lineage only; never projected to a public page."
+  },
+  {
+   "finding": "CLOSE-1:CR-12",
+   "sheet": "24_FINDEX_CODEBOOK",
+   "row": 149,
+   "col": 9,
+   "field": "fin14e.legacy_state",
+   "old": null,
+   "new": "NON_PUBLIC__ILLUSTRATIVE"
+  },
+  {
+   "finding": "CLOSE-1:CR-12",
+   "sheet": "24_FINDEX_CODEBOOK",
+   "row": 149,
+   "col": 10,
+   "field": "fin14e.legacy_reason",
+   "old": null,
+   "new": "NON_PUBLIC__ILLUSTRATIVE (close-out CR-12, 10 October 2026): a predecessor pseudo-codebook, not the World Bank DDI. Its question wording is invented and some variables (e.g. account_mob) do not exist in the study. Lineage only; never projected to a public page."
+  },
+  {
+   "finding": "CLOSE-1:CR-12",
+   "sheet": "24_FINDEX_CODEBOOK",
+   "row": 150,
+   "col": 9,
+   "field": "fin14f.legacy_state",
+   "old": null,
+   "new": "NON_PUBLIC__ILLUSTRATIVE"
+  },
+  {
+   "finding": "CLOSE-1:CR-12",
+   "sheet": "24_FINDEX_CODEBOOK",
+   "row": 150,
+   "col": 10,
+   "field": "fin14f.legacy_reason",
+   "old": null,
+   "new": "NON_PUBLIC__ILLUSTRATIVE (close-out CR-12, 10 October 2026): a predecessor pseudo-codebook, not the World Bank DDI. Its question wording is invented and some variables (e.g. account_mob) do not exist in the study. Lineage only; never projected to a public page."
+  },
+  {
+   "finding": "CLOSE-1:CR-12",
+   "sheet": "24_FINDEX_CODEBOOK",
+   "row": 151,
+   "col": 9,
+   "field": "fin16.legacy_state",
+   "old": null,
+   "new": "NON_PUBLIC__ILLUSTRATIVE"
+  },
+  {
+   "finding": "CLOSE-1:CR-12",
+   "sheet": "24_FINDEX_CODEBOOK",
+   "row": 151,
+   "col": 10,
+   "field": "fin16.legacy_reason",
+   "old": null,
+   "new": "NON_PUBLIC__ILLUSTRATIVE (close-out CR-12, 10 October 2026): a predecessor pseudo-codebook, not the World Bank DDI. Its question wording is invented and some variables (e.g. account_mob) do not exist in the study. Lineage only; never projected to a public page."
+  },
+  {
+   "finding": "CLOSE-1:CR-12",
+   "sheet": "24_FINDEX_CODEBOOK",
+   "row": 152,
+   "col": 9,
+   "field": "fin17a.legacy_state",
+   "old": null,
+   "new": "NON_PUBLIC__ILLUSTRATIVE"
+  },
+  {
+   "finding": "CLOSE-1:CR-12",
+   "sheet": "24_FINDEX_CODEBOOK",
+   "row": 152,
+   "col": 10,
+   "field": "fin17a.legacy_reason",
+   "old": null,
+   "new": "NON_PUBLIC__ILLUSTRATIVE (close-out CR-12, 10 October 2026): a predecessor pseudo-codebook, not the World Bank DDI. Its question wording is invented and some variables (e.g. account_mob) do not exist in the study. Lineage only; never projected to a public page."
+  },
+  {
+   "finding": "CLOSE-1:CR-12",
+   "sheet": "24_FINDEX_CODEBOOK",
+   "row": 153,
+   "col": 9,
+   "field": "fin17b.legacy_state",
+   "old": null,
+   "new": "NON_PUBLIC__ILLUSTRATIVE"
+  },
+  {
+   "finding": "CLOSE-1:CR-12",
+   "sheet": "24_FINDEX_CODEBOOK",
+   "row": 153,
+   "col": 10,
+   "field": "fin17b.legacy_reason",
+   "old": null,
+   "new": "NON_PUBLIC__ILLUSTRATIVE (close-out CR-12, 10 October 2026): a predecessor pseudo-codebook, not the World Bank DDI. Its question wording is invented and some variables (e.g. account_mob) do not exist in the study. Lineage only; never projected to a public page."
+  },
+  {
+   "finding": "CLOSE-1:CR-12",
+   "sheet": "24_FINDEX_CODEBOOK",
+   "row": 154,
+   "col": 9,
+   "field": "resilience.legacy_state",
+   "old": null,
+   "new": "NON_PUBLIC__ILLUSTRATIVE"
+  },
+  {
+   "finding": "CLOSE-1:CR-12",
+   "sheet": "24_FINDEX_CODEBOOK",
+   "row": 154,
+   "col": 10,
+   "field": "resilience.legacy_reason",
+   "old": null,
+   "new": "NON_PUBLIC__ILLUSTRATIVE (close-out CR-12, 10 October 2026): a predecessor pseudo-codebook, not the World Bank DDI. Its question wording is invented and some variables (e.g. account_mob) do not exist in the study. Lineage only; never projected to a public page."
+  },
+  {
+   "finding": "CLOSE-1:CR-12",
+   "sheet": "24_FINDEX_CODEBOOK",
+   "row": 155,
+   "col": 9,
+   "field": "emergency_source.legacy_state",
+   "old": null,
+   "new": "NON_PUBLIC__ILLUSTRATIVE"
+  },
+  {
+   "finding": "CLOSE-1:CR-12",
+   "sheet": "24_FINDEX_CODEBOOK",
+   "row": 155,
+   "col": 10,
+   "field": "emergency_source.legacy_reason",
+   "old": null,
+   "new": "NON_PUBLIC__ILLUSTRATIVE (close-out CR-12, 10 October 2026): a predecessor pseudo-codebook, not the World Bank DDI. Its question wording is invented and some variables (e.g. account_mob) do not exist in the study. Lineage only; never projected to a public page."
+  },
+  {
+   "finding": "CLOSE-1:CR-12",
+   "sheet": "24_FINDEX_CODEBOOK",
+   "row": 156,
+   "col": 9,
+   "field": "emergency_7days.legacy_state",
+   "old": null,
+   "new": "NON_PUBLIC__ILLUSTRATIVE"
+  },
+  {
+   "finding": "CLOSE-1:CR-12",
+   "sheet": "24_FINDEX_CODEBOOK",
+   "row": 156,
+   "col": 10,
+   "field": "emergency_7days.legacy_reason",
+   "old": null,
+   "new": "NON_PUBLIC__ILLUSTRATIVE (close-out CR-12, 10 October 2026): a predecessor pseudo-codebook, not the World Bank DDI. Its question wording is invented and some variables (e.g. account_mob) do not exist in the study. Lineage only; never projected to a public page."
+  },
+  {
+   "finding": "CLOSE-1:CR-12",
+   "sheet": "24_FINDEX_CODEBOOK",
+   "row": 157,
+   "col": 9,
+   "field": "fin20.legacy_state",
+   "old": null,
+   "new": "NON_PUBLIC__ILLUSTRATIVE"
+  },
+  {
+   "finding": "CLOSE-1:CR-12",
+   "sheet": "24_FINDEX_CODEBOOK",
+   "row": 157,
+   "col": 10,
+   "field": "fin20.legacy_reason",
+   "old": null,
+   "new": "NON_PUBLIC__ILLUSTRATIVE (close-out CR-12, 10 October 2026): a predecessor pseudo-codebook, not the World Bank DDI. Its question wording is invented and some variables (e.g. account_mob) do not exist in the study. Lineage only; never projected to a public page."
+  },
+  {
+   "finding": "CLOSE-1:CR-12",
+   "sheet": "24_FINDEX_CODEBOOK",
+   "row": 158,
+   "col": 9,
+   "field": "fin21a.legacy_state",
+   "old": null,
+   "new": "NON_PUBLIC__ILLUSTRATIVE"
+  },
+  {
+   "finding": "CLOSE-1:CR-12",
+   "sheet": "24_FINDEX_CODEBOOK",
+   "row": 158,
+   "col": 10,
+   "field": "fin21a.legacy_reason",
+   "old": null,
+   "new": "NON_PUBLIC__ILLUSTRATIVE (close-out CR-12, 10 October 2026): a predecessor pseudo-codebook, not the World Bank DDI. Its question wording is invented and some variables (e.g. account_mob) do not exist in the study. Lineage only; never projected to a public page."
+  },
+  {
+   "finding": "CLOSE-1:CR-12",
+   "sheet": "24_FINDEX_CODEBOOK",
+   "row": 159,
+   "col": 9,
+   "field": "fin21b.legacy_state",
+   "old": null,
+   "new": "NON_PUBLIC__ILLUSTRATIVE"
+  },
+  {
+   "finding": "CLOSE-1:CR-12",
+   "sheet": "24_FINDEX_CODEBOOK",
+   "row": 159,
+   "col": 10,
+   "field": "fin21b.legacy_reason",
+   "old": null,
+   "new": "NON_PUBLIC__ILLUSTRATIVE (close-out CR-12, 10 October 2026): a predecessor pseudo-codebook, not the World Bank DDI. Its question wording is invented and some variables (e.g. account_mob) do not exist in the study. Lineage only; never projected to a public page."
+  },
+  {
+   "finding": "CLOSE-1:CR-12",
+   "sheet": "24_FINDEX_CODEBOOK",
+   "row": 160,
+   "col": 9,
+   "field": "fin21c.legacy_state",
+   "old": null,
+   "new": "NON_PUBLIC__ILLUSTRATIVE"
+  },
+  {
+   "finding": "CLOSE-1:CR-12",
+   "sheet": "24_FINDEX_CODEBOOK",
+   "row": 160,
+   "col": 10,
+   "field": "fin21c.legacy_reason",
+   "old": null,
+   "new": "NON_PUBLIC__ILLUSTRATIVE (close-out CR-12, 10 October 2026): a predecessor pseudo-codebook, not the World Bank DDI. Its question wording is invented and some variables (e.g. account_mob) do not exist in the study. Lineage only; never projected to a public page."
+  },
+  {
+   "finding": "CLOSE-1:CR-12",
+   "sheet": "24_FINDEX_CODEBOOK",
+   "row": 161,
+   "col": 9,
+   "field": "fin21d.legacy_state",
+   "old": null,
+   "new": "NON_PUBLIC__ILLUSTRATIVE"
+  },
+  {
+   "finding": "CLOSE-1:CR-12",
+   "sheet": "24_FINDEX_CODEBOOK",
+   "row": 161,
+   "col": 10,
+   "field": "fin21d.legacy_reason",
+   "old": null,
+   "new": "NON_PUBLIC__ILLUSTRATIVE (close-out CR-12, 10 October 2026): a predecessor pseudo-codebook, not the World Bank DDI. Its question wording is invented and some variables (e.g. account_mob) do not exist in the study. Lineage only; never projected to a public page."
+  },
+  {
+   "finding": "CLOSE-1:CR-12",
+   "sheet": "24_FINDEX_CODEBOOK",
+   "row": 162,
+   "col": 9,
+   "field": "fin21e.legacy_state",
+   "old": null,
+   "new": "NON_PUBLIC__ILLUSTRATIVE"
+  },
+  {
+   "finding": "CLOSE-1:CR-12",
+   "sheet": "24_FINDEX_CODEBOOK",
+   "row": 162,
+   "col": 10,
+   "field": "fin21e.legacy_reason",
+   "old": null,
+   "new": "NON_PUBLIC__ILLUSTRATIVE (close-out CR-12, 10 October 2026): a predecessor pseudo-codebook, not the World Bank DDI. Its question wording is invented and some variables (e.g. account_mob) do not exist in the study. Lineage only; never projected to a public page."
+  },
+  {
+   "finding": "CLOSE-1:CR-12",
+   "sheet": "24_FINDEX_CODEBOOK",
+   "row": 163,
+   "col": 9,
+   "field": "fin22.legacy_state",
+   "old": null,
+   "new": "NON_PUBLIC__ILLUSTRATIVE"
+  },
+  {
+   "finding": "CLOSE-1:CR-12",
+   "sheet": "24_FINDEX_CODEBOOK",
+   "row": 163,
+   "col": 10,
+   "field": "fin22.legacy_reason",
+   "old": null,
+   "new": "NON_PUBLIC__ILLUSTRATIVE (close-out CR-12, 10 October 2026): a predecessor pseudo-codebook, not the World Bank DDI. Its question wording is invented and some variables (e.g. account_mob) do not exist in the study. Lineage only; never projected to a public page."
+  },
+  {
+   "finding": "CLOSE-1:CR-18",
+   "sheet": "27_FINDEX_SUBGROUPS",
+   "row": 10,
+   "col": 11,
+   "field": "FSG-0006.public_behavior",
+   "old": "No rural/urban comparison until exact variable semantics and coverage are reviewed.",
+   "new": "No rural/urban comparison is published. The World Bank publishes no rural/urban split for Yemen for this wave."
+  },
+  {
+   "finding": "CLOSE-1:CR-18",
+   "sheet": "27_FINDEX_SUBGROUPS",
+   "row": 10,
+   "col": 7,
+   "field": "FSG-0006.current_state",
+   "old": "HOLD__MICRODATA_PLUS_RURALITY_METHOD_REVIEW",
+   "new": "DECIDED__NO_PUBLISHED_RURAL_URBAN_SPLIT"
+  },
+  {
+   "finding": "CLOSE-1:CR-18",
+   "sheet": "27_FINDEX_SUBGROUPS",
+   "row": 16,
+   "col": 11,
+   "field": "FSG-0012.public_behavior",
+   "old": "No rural/urban comparison until exact variable semantics and coverage are reviewed.",
+   "new": "No rural/urban comparison is published. The World Bank publishes no rural/urban split for Yemen for this wave."
+  },
+  {
+   "finding": "CLOSE-1:CR-18",
+   "sheet": "27_FINDEX_SUBGROUPS",
+   "row": 16,
+   "col": 7,
+   "field": "FSG-0012.current_state",
+   "old": "HOLD__MICRODATA_PLUS_RURALITY_METHOD_REVIEW",
+   "new": "DECIDED__NO_PUBLISHED_RURAL_URBAN_SPLIT"
+  },
+  {
+   "finding": "CLOSE-1:CR-18",
+   "sheet": "27_FINDEX_SUBGROUPS",
+   "row": 22,
+   "col": 11,
+   "field": "FSG-0018.public_behavior",
+   "old": "No rural/urban comparison until exact variable semantics and coverage are reviewed.",
+   "new": "No rural/urban comparison is published. The World Bank publishes no rural/urban split for Yemen for this wave."
+  },
+  {
+   "finding": "CLOSE-1:CR-18",
+   "sheet": "27_FINDEX_SUBGROUPS",
+   "row": 22,
+   "col": 7,
+   "field": "FSG-0018.current_state",
+   "old": "HOLD__MICRODATA_PLUS_RURALITY_METHOD_REVIEW",
+   "new": "DECIDED__NO_PUBLISHED_RURAL_URBAN_SPLIT"
+  },
+  {
+   "finding": "CLOSE-1:CR-18",
+   "sheet": "27_FINDEX_SUBGROUPS",
+   "row": 28,
+   "col": 11,
+   "field": "FSG-0024.public_behavior",
+   "old": "No rural/urban comparison until exact variable semantics and coverage are reviewed.",
+   "new": "No rural/urban comparison is published. The World Bank publishes no rural/urban split for Yemen for this wave."
+  },
+  {
+   "finding": "CLOSE-1:CR-18",
+   "sheet": "27_FINDEX_SUBGROUPS",
+   "row": 28,
+   "col": 7,
+   "field": "FSG-0024.current_state",
+   "old": "HOLD__MICRODATA_PLUS_RURALITY_METHOD_REVIEW",
+   "new": "DECIDED__NO_PUBLISHED_RURAL_URBAN_SPLIT"
+  },
+  {
+   "finding": "CLOSE-1:CR-18",
+   "sheet": "27_FINDEX_SUBGROUPS",
+   "row": 34,
+   "col": 11,
+   "field": "FSG-0030.public_behavior",
+   "old": "No rural/urban comparison until exact variable semantics and coverage are reviewed.",
+   "new": "No rural/urban comparison is published. The World Bank publishes no rural/urban split for Yemen for this wave."
+  },
+  {
+   "finding": "CLOSE-1:CR-18",
+   "sheet": "27_FINDEX_SUBGROUPS",
+   "row": 34,
+   "col": 7,
+   "field": "FSG-0030.current_state",
+   "old": "HOLD__MICRODATA_PLUS_RURALITY_METHOD_REVIEW",
+   "new": "DECIDED__NO_PUBLISHED_RURAL_URBAN_SPLIT"
+  },
+  {
+   "finding": "CLOSE-1:CR-18",
+   "sheet": "27_FINDEX_SUBGROUPS",
+   "row": 40,
+   "col": 11,
+   "field": "FSG-0036.public_behavior",
+   "old": "No rural/urban comparison until exact variable semantics and coverage are reviewed.",
+   "new": "No rural/urban comparison is published. The World Bank publishes no rural/urban split for Yemen for this wave."
+  },
+  {
+   "finding": "CLOSE-1:CR-18",
+   "sheet": "27_FINDEX_SUBGROUPS",
+   "row": 40,
+   "col": 7,
+   "field": "FSG-0036.current_state",
+   "old": "HOLD__MICRODATA_PLUS_RURALITY_METHOD_REVIEW",
+   "new": "DECIDED__NO_PUBLISHED_RURAL_URBAN_SPLIT"
+  },
+  {
+   "finding": "CLOSE-1:CR-18",
+   "sheet": "27_FINDEX_SUBGROUPS",
+   "row": 46,
+   "col": 11,
+   "field": "FSG-0042.public_behavior",
+   "old": "No rural/urban comparison until exact variable semantics and coverage are reviewed.",
+   "new": "No rural/urban comparison is published. The World Bank publishes no rural/urban split for Yemen for this wave."
+  },
+  {
+   "finding": "CLOSE-1:CR-18",
+   "sheet": "27_FINDEX_SUBGROUPS",
+   "row": 46,
+   "col": 7,
+   "field": "FSG-0042.current_state",
+   "old": "HOLD__MICRODATA_PLUS_RURALITY_METHOD_REVIEW",
+   "new": "DECIDED__NO_PUBLISHED_RURAL_URBAN_SPLIT"
+  },
+  {
+   "finding": "CLOSE-1:CR-18",
+   "sheet": "27_FINDEX_SUBGROUPS",
+   "row": 52,
+   "col": 11,
+   "field": "FSG-0048.public_behavior",
+   "old": "No rural/urban comparison until exact variable semantics and coverage are reviewed.",
+   "new": "No rural/urban comparison is published. The World Bank publishes no rural/urban split for Yemen for this wave."
+  },
+  {
+   "finding": "CLOSE-1:CR-18",
+   "sheet": "27_FINDEX_SUBGROUPS",
+   "row": 52,
+   "col": 7,
+   "field": "FSG-0048.current_state",
+   "old": "HOLD__MICRODATA_PLUS_RURALITY_METHOD_REVIEW",
+   "new": "DECIDED__NO_PUBLISHED_RURAL_URBAN_SPLIT"
+  },
+  {
+   "finding": "CLOSE-1:CR-18",
+   "sheet": "27_FINDEX_SUBGROUPS",
+   "row": 58,
+   "col": 11,
+   "field": "FSG-0054.public_behavior",
+   "old": "No rural/urban comparison until exact variable semantics and coverage are reviewed.",
+   "new": "No rural/urban comparison is published. The World Bank publishes no rural/urban split for Yemen for this wave."
+  },
+  {
+   "finding": "CLOSE-1:CR-18",
+   "sheet": "27_FINDEX_SUBGROUPS",
+   "row": 58,
+   "col": 7,
+   "field": "FSG-0054.current_state",
+   "old": "HOLD__MICRODATA_PLUS_RURALITY_METHOD_REVIEW",
+   "new": "DECIDED__NO_PUBLISHED_RURAL_URBAN_SPLIT"
+  },
+  {
+   "finding": "CLOSE-1:CR-18",
+   "sheet": "27_FINDEX_SUBGROUPS",
+   "row": 64,
+   "col": 11,
+   "field": "FSG-0060.public_behavior",
+   "old": "No rural/urban comparison until exact variable semantics and coverage are reviewed.",
+   "new": "No rural/urban comparison is published. The World Bank publishes no rural/urban split for Yemen for this wave."
+  },
+  {
+   "finding": "CLOSE-1:CR-18",
+   "sheet": "27_FINDEX_SUBGROUPS",
+   "row": 64,
+   "col": 7,
+   "field": "FSG-0060.current_state",
+   "old": "HOLD__MICRODATA_PLUS_RURALITY_METHOD_REVIEW",
+   "new": "DECIDED__NO_PUBLISHED_RURAL_URBAN_SPLIT"
+  },
+  {
+   "finding": "CLOSE-1:CR-18",
+   "sheet": "27_FINDEX_SUBGROUPS",
+   "row": 70,
+   "col": 11,
+   "field": "FSG-0066.public_behavior",
+   "old": "No rural/urban comparison until exact variable semantics and coverage are reviewed.",
+   "new": "No rural/urban comparison is published. The World Bank publishes no rural/urban split for Yemen for this wave."
+  },
+  {
+   "finding": "CLOSE-1:CR-18",
+   "sheet": "27_FINDEX_SUBGROUPS",
+   "row": 70,
+   "col": 7,
+   "field": "FSG-0066.current_state",
+   "old": "HOLD__MICRODATA_PLUS_RURALITY_METHOD_REVIEW",
+   "new": "DECIDED__NO_PUBLISHED_RURAL_URBAN_SPLIT"
+  },
+  {
+   "finding": "CLOSE-1:CR-18",
+   "sheet": "27_FINDEX_SUBGROUPS",
+   "row": 76,
+   "col": 11,
+   "field": "FSG-0072.public_behavior",
+   "old": "No rural/urban comparison until exact variable semantics and coverage are reviewed.",
+   "new": "No rural/urban comparison is published. The World Bank publishes no rural/urban split for Yemen for this wave."
+  },
+  {
+   "finding": "CLOSE-1:CR-18",
+   "sheet": "27_FINDEX_SUBGROUPS",
+   "row": 76,
+   "col": 7,
+   "field": "FSG-0072.current_state",
+   "old": "HOLD__MICRODATA_PLUS_RURALITY_METHOD_REVIEW",
+   "new": "DECIDED__NO_PUBLISHED_RURAL_URBAN_SPLIT"
+  },
+  {
+   "finding": "CLOSE-1:CR-18",
+   "sheet": "27_FINDEX_SUBGROUPS",
+   "row": 82,
+   "col": 11,
+   "field": "FSG-0078.public_behavior",
+   "old": "No rural/urban comparison until exact variable semantics and coverage are reviewed.",
+   "new": "No rural/urban comparison is published. The World Bank publishes no rural/urban split for Yemen for this wave."
+  },
+  {
+   "finding": "CLOSE-1:CR-18",
+   "sheet": "27_FINDEX_SUBGROUPS",
+   "row": 82,
+   "col": 7,
+   "field": "FSG-0078.current_state",
+   "old": "HOLD__MICRODATA_PLUS_RURALITY_METHOD_REVIEW",
+   "new": "DECIDED__NO_PUBLISHED_RURAL_URBAN_SPLIT"
+  },
+  {
+   "finding": "CLOSE-1:CR-18",
+   "sheet": "27_FINDEX_SUBGROUPS",
+   "row": 88,
+   "col": 11,
+   "field": "FSG-0084.public_behavior",
+   "old": "No rural/urban comparison until exact variable semantics and coverage are reviewed.",
+   "new": "No rural/urban comparison is published. The World Bank publishes no rural/urban split for Yemen for this wave."
+  },
+  {
+   "finding": "CLOSE-1:CR-18",
+   "sheet": "27_FINDEX_SUBGROUPS",
+   "row": 88,
+   "col": 7,
+   "field": "FSG-0084.current_state",
+   "old": "HOLD__MICRODATA_PLUS_RURALITY_METHOD_REVIEW",
+   "new": "DECIDED__NO_PUBLISHED_RURAL_URBAN_SPLIT"
+  },
+  {
+   "finding": "CLOSE-1:CR-18",
+   "sheet": "27_FINDEX_SUBGROUPS",
+   "row": 94,
+   "col": 11,
+   "field": "FSG-0090.public_behavior",
+   "old": "No rural/urban comparison until exact variable semantics and coverage are reviewed.",
+   "new": "No rural/urban comparison is published. The World Bank publishes no rural/urban split for Yemen for this wave."
+  },
+  {
+   "finding": "CLOSE-1:CR-18",
+   "sheet": "27_FINDEX_SUBGROUPS",
+   "row": 94,
+   "col": 7,
+   "field": "FSG-0090.current_state",
+   "old": "HOLD__MICRODATA_PLUS_RURALITY_METHOD_REVIEW",
+   "new": "DECIDED__NO_PUBLISHED_RURAL_URBAN_SPLIT"
+  },
+  {
+   "finding": "CLOSE-1:CR-18",
+   "sheet": "27_FINDEX_SUBGROUPS",
+   "row": 100,
+   "col": 11,
+   "field": "FSG-0096.public_behavior",
+   "old": "No rural/urban comparison until exact variable semantics and coverage are reviewed.",
+   "new": "No rural/urban comparison is published. The World Bank publishes no rural/urban split for Yemen for this wave."
+  },
+  {
+   "finding": "CLOSE-1:CR-18",
+   "sheet": "27_FINDEX_SUBGROUPS",
+   "row": 100,
+   "col": 7,
+   "field": "FSG-0096.current_state",
+   "old": "HOLD__MICRODATA_PLUS_RURALITY_METHOD_REVIEW",
+   "new": "DECIDED__NO_PUBLISHED_RURAL_URBAN_SPLIT"
+  },
+  {
+   "finding": "CLOSE-1:CR-18",
+   "sheet": "27_FINDEX_SUBGROUPS",
+   "row": 106,
+   "col": 11,
+   "field": "FSG-0102.public_behavior",
+   "old": "No rural/urban comparison until exact variable semantics and coverage are reviewed.",
+   "new": "No rural/urban comparison is published. The World Bank publishes no rural/urban split for Yemen for this wave."
+  },
+  {
+   "finding": "CLOSE-1:CR-18",
+   "sheet": "27_FINDEX_SUBGROUPS",
+   "row": 106,
+   "col": 7,
+   "field": "FSG-0102.current_state",
+   "old": "HOLD__MICRODATA_PLUS_RURALITY_METHOD_REVIEW",
+   "new": "DECIDED__NO_PUBLISHED_RURAL_URBAN_SPLIT"
+  },
+  {
+   "finding": "CLOSE-1:CR-18",
+   "sheet": "27_FINDEX_SUBGROUPS",
+   "row": 112,
+   "col": 11,
+   "field": "FSG-0108.public_behavior",
+   "old": "No rural/urban comparison until exact variable semantics and coverage are reviewed.",
+   "new": "No rural/urban comparison is published. The World Bank publishes no rural/urban split for Yemen for this wave."
+  },
+  {
+   "finding": "CLOSE-1:CR-18",
+   "sheet": "27_FINDEX_SUBGROUPS",
+   "row": 112,
+   "col": 7,
+   "field": "FSG-0108.current_state",
+   "old": "HOLD__MICRODATA_PLUS_RURALITY_METHOD_REVIEW",
+   "new": "DECIDED__NO_PUBLISHED_RURAL_URBAN_SPLIT"
+  },
+  {
+   "finding": "CLOSE-1:CR-18",
+   "sheet": "27_FINDEX_SUBGROUPS",
+   "row": 118,
+   "col": 11,
+   "field": "FSG-0114.public_behavior",
+   "old": "No rural/urban comparison until exact variable semantics and coverage are reviewed.",
+   "new": "No rural/urban comparison is published. The World Bank publishes no rural/urban split for Yemen for this wave."
+  },
+  {
+   "finding": "CLOSE-1:CR-18",
+   "sheet": "27_FINDEX_SUBGROUPS",
+   "row": 118,
+   "col": 7,
+   "field": "FSG-0114.current_state",
+   "old": "HOLD__MICRODATA_PLUS_RURALITY_METHOD_REVIEW",
+   "new": "DECIDED__NO_PUBLISHED_RURAL_URBAN_SPLIT"
+  },
+  {
+   "finding": "CLOSE-1:CR-18",
+   "sheet": "27_FINDEX_SUBGROUPS",
+   "row": 124,
+   "col": 11,
+   "field": "FSG-0120.public_behavior",
+   "old": "No rural/urban comparison until exact variable semantics and coverage are reviewed.",
+   "new": "No rural/urban comparison is published. The World Bank publishes no rural/urban split for Yemen for this wave."
+  },
+  {
+   "finding": "CLOSE-1:CR-18",
+   "sheet": "27_FINDEX_SUBGROUPS",
+   "row": 124,
+   "col": 7,
+   "field": "FSG-0120.current_state",
+   "old": "HOLD__MICRODATA_PLUS_RURALITY_METHOD_REVIEW",
+   "new": "DECIDED__NO_PUBLISHED_RURAL_URBAN_SPLIT"
+  },
+  {
+   "finding": "CLOSE-1:CR-18",
+   "sheet": "27_FINDEX_SUBGROUPS",
+   "row": 130,
+   "col": 11,
+   "field": "FSG-0126.public_behavior",
+   "old": "No rural/urban comparison until exact variable semantics and coverage are reviewed.",
+   "new": "No rural/urban comparison is published. The World Bank publishes no rural/urban split for Yemen for this wave."
+  },
+  {
+   "finding": "CLOSE-1:CR-18",
+   "sheet": "27_FINDEX_SUBGROUPS",
+   "row": 130,
+   "col": 7,
+   "field": "FSG-0126.current_state",
+   "old": "HOLD__MICRODATA_PLUS_RURALITY_METHOD_REVIEW",
+   "new": "DECIDED__NO_PUBLISHED_RURAL_URBAN_SPLIT"
+  },
+  {
+   "finding": "CLOSE-1:CR-18",
+   "sheet": "27_FINDEX_SUBGROUPS",
+   "row": 136,
+   "col": 11,
+   "field": "FSG-0132.public_behavior",
+   "old": "No rural/urban comparison until exact variable semantics and coverage are reviewed.",
+   "new": "No rural/urban comparison is published. The World Bank publishes no rural/urban split for Yemen for this wave."
+  },
+  {
+   "finding": "CLOSE-1:CR-18",
+   "sheet": "27_FINDEX_SUBGROUPS",
+   "row": 136,
+   "col": 7,
+   "field": "FSG-0132.current_state",
+   "old": "HOLD__MICRODATA_PLUS_RURALITY_METHOD_REVIEW",
+   "new": "DECIDED__NO_PUBLISHED_RURAL_URBAN_SPLIT"
+  },
+  {
+   "finding": "CLOSE-1:CR-18",
+   "sheet": "27_FINDEX_SUBGROUPS",
+   "row": 142,
+   "col": 11,
+   "field": "FSG-0138.public_behavior",
+   "old": "No rural/urban comparison until exact variable semantics and coverage are reviewed.",
+   "new": "No rural/urban comparison is published. The World Bank publishes no rural/urban split for Yemen for this wave."
+  },
+  {
+   "finding": "CLOSE-1:CR-18",
+   "sheet": "27_FINDEX_SUBGROUPS",
+   "row": 142,
+   "col": 7,
+   "field": "FSG-0138.current_state",
+   "old": "HOLD__MICRODATA_PLUS_RURALITY_METHOD_REVIEW",
+   "new": "DECIDED__NO_PUBLISHED_RURAL_URBAN_SPLIT"
+  },
+  {
+   "finding": "CLOSE-1:CR-18",
+   "sheet": "27_FINDEX_SUBGROUPS",
+   "row": 148,
+   "col": 11,
+   "field": "FSG-0144.public_behavior",
+   "old": "No rural/urban comparison until exact variable semantics and coverage are reviewed.",
+   "new": "No rural/urban comparison is published. The World Bank publishes no rural/urban split for Yemen for this wave."
+  },
+  {
+   "finding": "CLOSE-1:CR-18",
+   "sheet": "27_FINDEX_SUBGROUPS",
+   "row": 148,
+   "col": 7,
+   "field": "FSG-0144.current_state",
+   "old": "HOLD__MICRODATA_PLUS_RURALITY_METHOD_REVIEW",
+   "new": "DECIDED__NO_PUBLISHED_RURAL_URBAN_SPLIT"
+  },
+  {
+   "finding": "CLOSE-1:CR-18",
+   "sheet": "27_FINDEX_SUBGROUPS",
+   "row": 154,
+   "col": 11,
+   "field": "FSG-0150.public_behavior",
+   "old": "No rural/urban comparison until exact variable semantics and coverage are reviewed.",
+   "new": "No rural/urban comparison is published. The World Bank publishes no rural/urban split for Yemen for this wave."
+  },
+  {
+   "finding": "CLOSE-1:CR-18",
+   "sheet": "27_FINDEX_SUBGROUPS",
+   "row": 154,
+   "col": 7,
+   "field": "FSG-0150.current_state",
+   "old": "HOLD__MICRODATA_PLUS_RURALITY_METHOD_REVIEW",
+   "new": "DECIDED__NO_PUBLISHED_RURAL_URBAN_SPLIT"
+  },
+  {
+   "finding": "CLOSE-1:CR-18",
+   "sheet": "27_FINDEX_SUBGROUPS",
+   "row": 160,
+   "col": 11,
+   "field": "FSG-0156.public_behavior",
+   "old": "No rural/urban comparison until exact variable semantics and coverage are reviewed.",
+   "new": "No rural/urban comparison is published. The World Bank publishes no rural/urban split for Yemen for this wave."
+  },
+  {
+   "finding": "CLOSE-1:CR-18",
+   "sheet": "27_FINDEX_SUBGROUPS",
+   "row": 160,
+   "col": 7,
+   "field": "FSG-0156.current_state",
+   "old": "HOLD__MICRODATA_PLUS_RURALITY_METHOD_REVIEW",
+   "new": "DECIDED__NO_PUBLISHED_RURAL_URBAN_SPLIT"
+  },
+  {
+   "finding": "CLOSE-1:CR-18",
+   "sheet": "27_FINDEX_SUBGROUPS",
+   "row": 166,
+   "col": 11,
+   "field": "FSG-0162.public_behavior",
+   "old": "No rural/urban comparison until exact variable semantics and coverage are reviewed.",
+   "new": "No rural/urban comparison is published. The World Bank publishes no rural/urban split for Yemen for this wave."
+  },
+  {
+   "finding": "CLOSE-1:CR-18",
+   "sheet": "27_FINDEX_SUBGROUPS",
+   "row": 166,
+   "col": 7,
+   "field": "FSG-0162.current_state",
+   "old": "HOLD__MICRODATA_PLUS_RURALITY_METHOD_REVIEW",
+   "new": "DECIDED__NO_PUBLISHED_RURAL_URBAN_SPLIT"
+  },
+  {
+   "finding": "CLOSE-1:CR-18",
+   "sheet": "27_FINDEX_SUBGROUPS",
+   "row": 172,
+   "col": 11,
+   "field": "FSG-0168.public_behavior",
+   "old": "No rural/urban comparison until exact variable semantics and coverage are reviewed.",
+   "new": "No rural/urban comparison is published. The World Bank publishes no rural/urban split for Yemen for this wave."
+  },
+  {
+   "finding": "CLOSE-1:CR-18",
+   "sheet": "27_FINDEX_SUBGROUPS",
+   "row": 172,
+   "col": 7,
+   "field": "FSG-0168.current_state",
+   "old": "HOLD__MICRODATA_PLUS_RURALITY_METHOD_REVIEW",
+   "new": "DECIDED__NO_PUBLISHED_RURAL_URBAN_SPLIT"
+  },
+  {
+   "finding": "CLOSE-1:CR-18",
+   "sheet": "27_FINDEX_SUBGROUPS",
+   "row": 178,
+   "col": 11,
+   "field": "FSG-0174.public_behavior",
+   "old": "No rural/urban comparison until exact variable semantics and coverage are reviewed.",
+   "new": "No rural/urban comparison is published. The World Bank publishes no rural/urban split for Yemen for this wave."
+  },
+  {
+   "finding": "CLOSE-1:CR-18",
+   "sheet": "27_FINDEX_SUBGROUPS",
+   "row": 178,
+   "col": 7,
+   "field": "FSG-0174.current_state",
+   "old": "HOLD__MICRODATA_PLUS_RURALITY_METHOD_REVIEW",
+   "new": "DECIDED__NO_PUBLISHED_RURAL_URBAN_SPLIT"
+  },
+  {
+   "finding": "CLOSE-1:CR-18",
+   "sheet": "27_FINDEX_SUBGROUPS",
+   "row": 184,
+   "col": 11,
+   "field": "FSG-0180.public_behavior",
+   "old": "No rural/urban comparison until exact variable semantics and coverage are reviewed.",
+   "new": "No rural/urban comparison is published. The World Bank publishes no rural/urban split for Yemen for this wave."
+  },
+  {
+   "finding": "CLOSE-1:CR-18",
+   "sheet": "27_FINDEX_SUBGROUPS",
+   "row": 184,
+   "col": 7,
+   "field": "FSG-0180.current_state",
+   "old": "HOLD__MICRODATA_PLUS_RURALITY_METHOD_REVIEW",
+   "new": "DECIDED__NO_PUBLISHED_RURAL_URBAN_SPLIT"
+  },
+  {
+   "finding": "CLOSE-1:CR-18",
+   "sheet": "27_FINDEX_SUBGROUPS",
+   "row": 190,
+   "col": 11,
+   "field": "FSG-0186.public_behavior",
+   "old": "No rural/urban comparison until exact variable semantics and coverage are reviewed.",
+   "new": "No rural/urban comparison is published. The World Bank publishes no rural/urban split for Yemen for this wave."
+  },
+  {
+   "finding": "CLOSE-1:CR-18",
+   "sheet": "27_FINDEX_SUBGROUPS",
+   "row": 190,
+   "col": 7,
+   "field": "FSG-0186.current_state",
+   "old": "HOLD__MICRODATA_PLUS_RURALITY_METHOD_REVIEW",
+   "new": "DECIDED__NO_PUBLISHED_RURAL_URBAN_SPLIT"
+  },
+  {
+   "finding": "CLOSE-1:CR-18",
+   "sheet": "27_FINDEX_SUBGROUPS",
+   "row": 196,
+   "col": 11,
+   "field": "FSG-0192.public_behavior",
+   "old": "No rural/urban comparison until exact variable semantics and coverage are reviewed.",
+   "new": "No rural/urban comparison is published. The World Bank publishes no rural/urban split for Yemen for this wave."
+  },
+  {
+   "finding": "CLOSE-1:CR-18",
+   "sheet": "27_FINDEX_SUBGROUPS",
+   "row": 196,
+   "col": 7,
+   "field": "FSG-0192.current_state",
+   "old": "HOLD__MICRODATA_PLUS_RURALITY_METHOD_REVIEW",
+   "new": "DECIDED__NO_PUBLISHED_RURAL_URBAN_SPLIT"
+  },
+  {
+   "finding": "CLOSE-1:OWN-10",
+   "sheet": "00_MASTER",
+   "row": 14,
+   "col": 2,
+   "field": "00_MASTER!r14c2",
+   "old": "143",
+   "new": 144,
+   "formula_kept": "=COUNTA('02_SITE_MAP'!A5:A300)",
+   "note": "cached result of the formula updated; the formula is unchanged and computes the same value"
+  },
+  {
+   "finding": "CLOSE-1:OWN-10",
+   "sheet": "00_MASTER",
+   "row": 14,
+   "col": 3,
+   "field": "00_MASTER!r14c3",
+   "old": "143",
+   "new": 144
+  },
+  {
+   "finding": "CLOSE-1:OWN-10",
+   "sheet": "00_MASTER",
+   "row": 15,
+   "col": 2,
+   "field": "00_MASTER!r15c2",
+   "old": "574",
+   "new": 237
+  },
+  {
+   "finding": "CLOSE-1:OWN-10",
+   "sheet": "00_MASTER",
+   "row": 15,
+   "col": 3,
+   "field": "00_MASTER!r15c3",
+   "old": "574",
+   "new": 237
+  },
+  {
+   "finding": "CLOSE-1:OWN-10",
+   "sheet": "00_MASTER",
+   "row": 19,
+   "col": 2,
+   "field": "00_MASTER!r19c2",
+   "old": "10",
+   "new": 11,
+   "formula_kept": "=COUNTA('08_READINGS'!A5:A50)",
+   "note": "cached result of the formula updated; the formula is unchanged and computes the same value"
+  },
+  {
+   "finding": "CLOSE-1:OWN-10",
+   "sheet": "00_MASTER",
+   "row": 19,
+   "col": 3,
+   "field": "00_MASTER!r19c3",
+   "old": "10",
+   "new": 11
+  },
+  {
+   "finding": "CLOSE-1:OWN-10",
+   "sheet": "00_MASTER",
+   "row": 24,
+   "col": 2,
+   "field": "00_MASTER!r24c2",
+   "old": "165",
+   "new": 167
+  },
+  {
+   "finding": "CLOSE-1:OWN-10",
+   "sheet": "00_MASTER",
+   "row": 24,
+   "col": 3,
+   "field": "00_MASTER!r24c3",
+   "old": "165",
+   "new": 167
+  },
+  {
+   "finding": "CLOSE-1:OWN-10",
+   "sheet": "37_READINESS_CHECKLIST",
+   "row": 5,
+   "col": 4,
+   "field": "37_READINESS_CHECKLIST!r5c4",
+   "old": "143",
+   "new": 144,
+   "formula_kept": "=COUNTA('02_SITE_MAP'!A5:A300)",
+   "note": "cached result of the formula updated; the formula is unchanged and computes the same value"
+  },
+  {
+   "finding": "CLOSE-1:OWN-10",
+   "sheet": "37_READINESS_CHECKLIST",
+   "row": 5,
+   "col": 3,
+   "field": "37_READINESS_CHECKLIST!r5c3",
+   "old": "143",
+   "new": 144
+  },
+  {
+   "finding": "CLOSE-1:OWN-10",
+   "sheet": "37_READINESS_CHECKLIST",
+   "row": 6,
+   "col": 4,
+   "field": "37_READINESS_CHECKLIST!r6c4",
+   "old": "574",
+   "new": 237
+  },
+  {
+   "finding": "CLOSE-1:OWN-10",
+   "sheet": "37_READINESS_CHECKLIST",
+   "row": 6,
+   "col": 3,
+   "field": "37_READINESS_CHECKLIST!r6c3",
+   "old": "574",
+   "new": 237
+  },
+  {
+   "finding": "CLOSE-1:OWN-10",
+   "sheet": "37_READINESS_CHECKLIST",
+   "row": 10,
+   "col": 4,
+   "field": "37_READINESS_CHECKLIST!r10c4",
+   "old": "10",
+   "new": 11,
+   "formula_kept": "=COUNTA('08_READINGS'!A5:A50)",
+   "note": "cached result of the formula updated; the formula is unchanged and computes the same value"
+  },
+  {
+   "finding": "CLOSE-1:OWN-10",
+   "sheet": "37_READINESS_CHECKLIST",
+   "row": 10,
+   "col": 3,
+   "field": "37_READINESS_CHECKLIST!r10c3",
+   "old": "10",
+   "new": 11
+  },
+  {
+   "finding": "CLOSE-1:OWN-10",
+   "sheet": "37_READINESS_CHECKLIST",
+   "row": 15,
+   "col": 4,
+   "field": "37_READINESS_CHECKLIST!r15c4",
+   "old": "165",
+   "new": 167
+  },
+  {
+   "finding": "CLOSE-1:OWN-10",
+   "sheet": "37_READINESS_CHECKLIST",
+   "row": 15,
+   "col": 3,
+   "field": "37_READINESS_CHECKLIST!r15c3",
+   "old": "165",
+   "new": 167
+  }
+ ]
+}

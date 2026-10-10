@@ -1,5 +1,36 @@
 # Repository Change Log
 
+## 2026-10-10 — CLOSE-1: decisions and truth fixes that need no new reading (Stage A, W1)
+
+Master `58b8f3ec5ac1` → `190b148abf2d`, 226 cells (`audit/close_out/close_1.py`; ledger and run report in
+`audit/close_out/runs/`). English and Arabic change together; bilingual numeric invariance stays at 0.
+
+- **D1 (OWN-01), /about/ §6:** a labelled "Independence" paragraph after "Funding", the owner's sentence verbatim; the
+  funding text is unchanged. **AR-035** (/about/ §1) rides with it, as its register condition requires; the cell matched
+  `exact_old_ar` and its SHA-256 before it was written.
+- **D3, /rights/ §6:** the software code is not openly licensed and CauseWay reserves all rights in it. README, the
+  checkpoint, the runbook and the Context no longer say that no code licence is decided.
+- **OWN-10:** the self-counts of `00_MASTER` and `37_READINESS_CHECKLIST` are recomputed from the sheets (144 pages, 237
+  bilingual sections, 11 Readings, 167 sources, 23 dated events …; formulas kept, only their cached results move). New
+  gate **CO-G01** compares them with the governed records on every run; every close-out transaction recomputes them.
+- **CR-04:** WB-FINDEX-OBS-2022-010/011/012 point at their own open series (`save.any.t.d`, `borrow.any.t.d`,
+  `g20.any`, source 28) instead of the FX.OWN.TOTL.ZS page.
+- **CR-10:** SRC-WB-NFID-RFX-2026-001, a World Bank procurement page that feeds no public claim, is non-public; its
+  address is kept in the non-public note. It leaves /data/ and search (sources with a public locator 157 → 156; search
+  records 466 → 465). Its one dataset-catalogue binding is internal lineage no public output shows, and stays.
+- **CR-12:** the 25 cross-country rows of `29_OECD_BENCHMARKS` (rows 6–30; the OECD-YEM-* rows untouched) are
+  REJECTED__UNTRACEABLE, and the 42 rows of the predecessor pseudo-codebook in `24_FINDEX_CODEBOOK` are
+  NON_PUBLIC__ILLUSTRATIVE, each with its reason. New gate **CO-G02** keeps both out of every built page and the search
+  index.
+- **CR-18:** after the open API was read (474 rural/urban Findex series, all null for Yemen; fixture
+  `audit/close_out/fixtures/findex_rural_urban_2026-10-10.json`), the 32 rurality rows of `27_FINDEX_SUBGROUPS` read
+  "No rural/urban comparison is published. The World Bank publishes no rural/urban split for Yemen for this wave." and
+  are DECIDED.
+- **Moved by brief v5:** CR-03 (CLM-026) goes to CLOSE-3 with U1, so the corrected sentence never points at values the
+  page does not yet show.
+- **Negative controls:** two new controls, one per new gate.
+- **W0 records:** the read-only original-reading reports of Stage A are in `audit/close_out/w0/`.
+
 ## 2026-10-10 — Close-out inputs: the brief, the adjudicated Arabic review and the house style (Stage A, inputs)
 
 No Master transaction and no public page changed. `dist/` is unchanged.

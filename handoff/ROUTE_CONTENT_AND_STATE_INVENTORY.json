@@ -2,8 +2,8 @@
  "schema": "YFIE_ROUTE_CONTENT_AND_STATE_INVENTORY/1.3",
  "purpose": "Design recipient's map of every route, its family, bindings, collections, next actions and the states Design must cover. Derived; not authority.",
  "generated_from": {
-  "production_master_sha256": "58b8f3ec5ac1324dfafc7eb6b4015b88da0cb9c241078903be82fe0f6492421b",
-  "page_specs_sha256": "7467bf55a6702790ceebc34118356b1b552ea5559fd32e928c21d5c907a1ccf7",
+  "production_master_sha256": "190b148abf2d46b1a9e5f5d50ec4e45c0bca7afde19b3fe0b76444af3421c83f",
+  "page_specs_sha256": "bf8f5c721222a60d11c9ad2609dcdf140ac6adc88bbc5d20a1d189f5a010927a",
   "generator": "scripts/handoff_inventory.py"
  },
  "counts": {
@@ -11,14 +11,14 @@
   "public_claims": 60,
   "chronology_events": 23,
   "sources": 167,
-  "public_locators": 157,
+  "public_locators": 156,
   "curated_resources": 28,
   "readings": 11,
   "measurement_priorities": 10,
   "entry_questions": 11,
   "visual_contracts": 36,
   "evidence_passports": 55,
-  "search_records": 466,
+  "search_records": 465,
   "page_specs": 144
  },
  "projection_roles": {
@@ -486,7 +486,6 @@
      "SRC-WB-FINDEX-003",
      "SRC-WB-FINDEX-2014-001",
      "SRC-WB-FINDEX-LDB-2015-001",
-     "SRC-WB-NFID-RFX-2026-001",
      "SRC-WB-FMIIP-ISR2-2026-001",
      "SRC-CBY-HIST-METHOD-001",
      "SRC-CBY-AR2015-HIST-001",
@@ -554,7 +553,6 @@
     ],
     "displayed_sources_without_document_type": [
      "SRC-SFD-MF-HISTORY-TOR-2012-001",
-     "SRC-WB-NFID-RFX-2026-001",
      "SRC-CBY-AR2015-HIST-001",
      "SRC-CBY-SANAA-C12-2024",
      "SRC-CBY-SANAA-C14-2024",

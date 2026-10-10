@@ -413,7 +413,7 @@
       21.6,
       "percent of population ages 15+",
       "World Bank Global Findex",
-      "https://data.worldbank.org/indicator/FX.OWN.TOTL.ZS?locations=YE",
+      "https://api.worldbank.org/v2/country/YEM/indicator/save.any.t.d?source=28",
       "PUBLIC_PRIMARY_AGGREGATE",
       "Weighted World Bank value for the 2021 Findex wave; the same series also carries a 2014 value (20.6%). A 95% interval of 18.4% to 24.9% is derived from the respondent file (CW-FINDEX-MOE-2022-015)."
     ],
@@ -426,7 +426,7 @@
       51.3,
       "percent of population ages 15+",
       "World Bank Global Findex",
-      "https://data.worldbank.org/indicator/FX.OWN.TOTL.ZS?locations=YE",
+      "https://api.worldbank.org/v2/country/YEM/indicator/borrow.any.t.d?source=28",
       "PUBLIC_PRIMARY_AGGREGATE",
       "Weighted World Bank value for the 2021 Findex wave; the same series also carries a 2014 value (66.0%), which is not the 65.9% printed on the World Bank's own 2014 country page - see finding FC-A-04. A 95% interval of 47.1% to 55.5% is derived from the respondent file (CW-FINDEX-MOE-2022-016)."
     ],
@@ -439,7 +439,7 @@
       9.3,
       "percent of population ages 15+",
       "World Bank Global Findex",
-      "https://data.worldbank.org/indicator/FX.OWN.TOTL.ZS?locations=YE",
+      "https://api.worldbank.org/v2/country/YEM/indicator/g20.any?source=28",
       "PUBLIC_PRIMARY_AGGREGATE",
       "Weighted World Bank value for the 2021 Findex wave; the same series also carries a 2014 value (4.4%). A 95% interval of 7.4% to 11.3% is derived from the respondent file (CW-FINDEX-MOE-2022-017)."
     ],

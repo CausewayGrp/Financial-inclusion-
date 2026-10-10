@@ -17,10 +17,10 @@
   "authority": {
     "master_path": "authority/Yemen_Financial_Inclusion_Evidence_Master.xlsx",
     "master_drive_id": "1xAbdDHJd5bYo0Pzo_a6dR6HsZ056LzJU",
-    "master_sha256": "58b8f3ec5ac1324dfafc7eb6b4015b88da0cb9c241078903be82fe0f6492421b",
+    "master_sha256": "190b148abf2d46b1a9e5f5d50ec4e45c0bca7afde19b3fe0b76444af3421c83f",
     "page_specs_path": "site-src/content/page_specs.json",
     "page_specs_drive_id": "1jWAKnjH4lJ3XdrsG_USX7UtWDKIXLkEU",
-    "page_specs_sha256": "7467bf55a6702790ceebc34118356b1b552ea5559fd32e928c21d5c907a1ccf7",
+    "page_specs_sha256": "bf8f5c721222a60d11c9ad2609dcdf140ac6adc88bbc5d20a1d189f5a010927a",
     "presentation_priority_path": "site-src/content/presentation_priority.json",
     "precedence": [
       "authority/Yemen_Financial_Inclusion_Evidence_Master.xlsx",
@@ -50,12 +50,12 @@
     "measurement_priorities": 10,
     "visual_contracts": 36,
     "sources": 167,
-    "publicly_addressable_sources": 157,
+    "publicly_addressable_sources": 156,
     "curated_source_report_cards": 28,
     "indicators": 216,
-    "public_search_records": 466,
+    "public_search_records": 465,
     "public_object_source_closure_records": 227,
-    "sources_without_public_locator": 10,
+    "sources_without_public_locator": 11,
     "chronology_events": 23
   },
   "runtime_contract": {
@@ -730,7 +730,7 @@
     "controlled_route_coverage": 144,
     "page_family_count": 11,
     "journey_tests": 13,
-    "search_smoke_tests": 21,
+    "search_smoke_tests": 32,
     "rule": "The navigation contract may control discovery, grouping, breadcrumbs, next actions and journey acceptance only. It cannot change semantic/evidence/source/rights/publication truth.",
     "drive_id": "1liMr1dd2Pv-L6J5SZdHtNUBvYijQ-P3d"
   },
