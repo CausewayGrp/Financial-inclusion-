@@ -3,9 +3,9 @@
  "purpose": "What every tracked file is. One authority -> one projection path -> one runtime content path -> one current recipient start path. Hashes: SHA256SUMS.txt.",
  "authority": {
   "production_master": "authority/Yemen_Financial_Inclusion_Evidence_Master.xlsx",
-  "production_master_sha256": "d2cd2ad16bd84f9b4963261f0c2291b4eac8ba621458c3be5734ee2c8599b6a3",
+  "production_master_sha256": "49de81b3bc533aa839cce880109d83b2b06f2b9a8f849842ae13a721b35ce482",
   "page_specs": "site-src/content/page_specs.json",
-  "page_specs_sha256": "42f303019da65ec059e08c9a7bf5d7b4fe85912b8670544e67199617dcc1bc36",
+  "page_specs_sha256": "2e434e794b20c0027f7c8dcf567652aa2f92411f0db1fec1a6dc010a2995d883",
   "logo": "site-src/assets/CauseWay_Master_Logo.png",
   "logo_sha256": "5830163d50f9badbef3227ec44e7705548e2fcc8a06b2d6ae33d56ade60c6a90",
   "rule": "The Production Master is the only semantic authority. Everything under site-src/content, dist, design/architecture and audit/PUBLIC_LITERAL_CLOSURE.json is generated from it and never edited by hand, except the two CONTROLLED_CONTRACT files, which the programme steward maintains in place and the generator validates against the Master's projections."
@@ -28,7 +28,7 @@
   "BUILD_AND_GATES": 44,
   "CONTROLLED_CONTRACT": 2,
   "CURRENT_DOCUMENT": 13,
-  "CURRENT_PROGRAMME_RECORD": 201,
+  "CURRENT_PROGRAMME_RECORD": 207,
   "DESIGN_PACKAGE": 447,
   "GENERATED_DIAGRAMS": 9,
   "GENERATED_LITERAL_CLOSURE": 1,
@@ -500,6 +500,14 @@
    "class": "CURRENT_PROGRAMME_RECORD"
   },
   {
+   "path": "audit/close_out/close_3c.py",
+   "class": "CURRENT_PROGRAMME_RECORD"
+  },
+  {
+   "path": "audit/close_out/close_3c_lineage.py",
+   "class": "CURRENT_PROGRAMME_RECORD"
+  },
+  {
    "path": "audit/close_out/close_lib.py",
    "class": "CURRENT_PROGRAMME_RECORD"
   },
@@ -561,6 +569,22 @@
   },
   {
    "path": "audit/close_out/runs/CLOSE-3B_RUN_REPORT.json",
+   "class": "CURRENT_PROGRAMME_RECORD"
+  },
+  {
+   "path": "audit/close_out/runs/CLOSE-3C-L_MASTER_LEDGER.json",
+   "class": "CURRENT_PROGRAMME_RECORD"
+  },
+  {
+   "path": "audit/close_out/runs/CLOSE-3C-L_RUN_REPORT.json",
+   "class": "CURRENT_PROGRAMME_RECORD"
+  },
+  {
+   "path": "audit/close_out/runs/CLOSE-3C_MASTER_LEDGER.json",
+   "class": "CURRENT_PROGRAMME_RECORD"
+  },
+  {
+   "path": "audit/close_out/runs/CLOSE-3C_RUN_REPORT.json",
    "class": "CURRENT_PROGRAMME_RECORD"
   },
   {

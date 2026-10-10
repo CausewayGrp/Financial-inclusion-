@@ -1,0 +1,91 @@
+{
+ "stage": "CLOSE-3C",
+ "staged_master_sha256": "fb065fa695839be212900cb981c3db6f7825d3b7147a7adbfd44fd844de80125",
+ "installed": [
+  "scripts/projection/controlled_inputs/visual_design_contract.json"
+ ],
+ "steps": [
+  {
+   "step": "generate",
+   "exit": 0,
+   "tail": [
+    "  \"presentation_priority.json\",",
+    "  \"visuals/visual_design_contracts.json\"",
+    " ],",
+    " \"output_sha256\": 40",
+    "}",
+    "PROJECTIONS GENERATED"
+   ]
+  },
+  {
+   "step": "rebind",
+   "exit": 0,
+   "tail": [
+    "  \"README.md\",",
+    "  \"OPENAI_REENTRY_CHECKPOINT.md\",",
+    "  \"handoff/README_FIRST.md\",",
+    "  \"handoff/CLAUDE_DESIGN_MASTER_PROMPT.md\"",
+    " ]",
+    "}"
+   ]
+  },
+  {
+   "step": "build",
+   "exit": 0,
+   "tail": [
+    "Built 292 HTML files from 144 controlled page specs."
+   ]
+  },
+  {
+   "step": "public_literal_audit",
+   "exit": 0,
+   "tail": [
+    "PUBLIC_LITERAL_CLOSURE records=16612 unresolved=0"
+   ]
+  },
+  {
+   "step": "architecture_diagrams",
+   "exit": 0,
+   "tail": [
+    "ARCHITECTURE DIAGRAMS WRITTEN: YFIE_PUBLIC_SITE_MAP.svg, YFIE_PAGE_FAMILY_STATE_MAP.svg, YFIE_FULL_STACK_SYSTEM_ARCHITECTURE.svg"
+   ]
+  },
+  {
+   "step": "handoff_inventory",
+   "exit": 0,
+   "tail": [
+    "HANDOFF INVENTORY WRITTEN: 144 routes"
+   ]
+  },
+  {
+   "step": "repository_manifest",
+   "exit": 0,
+   "tail": [
+    "REPOSITORY MANIFEST WRITTEN: 2114 files in 24 classes"
+   ]
+  },
+  {
+   "step": "validate",
+   "exit": 0,
+   "tail": [
+    "HTML=292 ERRORS=0 WARN=0",
+    "WEBSITE REPOSITORY VALIDATION PASS"
+   ]
+  },
+  {
+   "step": "generator_idempotence",
+   "exit": 0,
+   "tail": [
+    " \"master_sha256\": \"fb065fa695839be212900cb981c3db6f7825d3b7147a7adbfd44fd844de80125\",",
+    " \"outputs\": 40,",
+    " \"differences\": [],",
+    " \"output_sha256\": 40",
+    "}",
+    "PROJECTION CHECK PASS"
+   ]
+  }
+ ],
+ "result": "COMMITTED",
+ "master_sha256": "fb065fa695839be212900cb981c3db6f7825d3b7147a7adbfd44fd844de80125",
+ "page_specs_sha256": "5415ba922ad08e8287fa63f8f7da44ca1365acc13601d2ad72fce10030b4c328"
+}

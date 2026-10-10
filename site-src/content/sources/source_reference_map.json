@@ -1,19 +1,19 @@
 [
   {
     "source_id": "SRC-CBY-001",
-    "primary_url": "https://english.cby-ye.com/files/6a5a2e6bcc3cd.pdf",
-    "additional_urls": "[\"https://cby-ye.com/publicationsandcirculars\", \"https://english.cby-ye.com/publicationsandcirculars\", \"https://cby-ye.com/rulesandregulations\", \"https://english.cby-ye.com/rulesandregulations\", \"https://cby-ye.com/researchandstatistics\", \"https://english.cby-ye.com/researchandstatistics\", \"https://english.cby-ye.com/files/630342f7c26ae.pdf\", \"https://english.cby-ye.com/files/6303431ed26c1.pdf\", \"https://english.cby-ye.com/files/63034338c577c.pdf\", \"https://english.cby-ye.com/files/63033876c3f92.pdf\", \"https://english.cby-ye.com/files/630338c8b5600.pdf\", \"https://english.cby-ye.com/files/6303391a7e9e7.pdf\", \"https://english.cby-ye.com/files/634f8fcb92d5f.pdf\", \"https://english.cby-ye.com/files/634f90085bdcd.pdf\", \"https://english.cby-ye.com/files/634f9042dbb84.pdf\", \"https://english.cby-ye.com/files/63aadf8d70ae1.pdf\", \"https://english.cby-ye.com/files/63aadfbe154e8.pdf\", \"https://english.cby-ye.com/files/63d231418c14b.pdf\", \"https://english.cby-ye.com/files/64115abe770bb.pdf\"]",
+    "primary_url": "https://english.cby-ye.com/files/6ab393186466e.pdf",
+    "additional_urls": "[\"https://english.cby-ye.com/files/6a5a2e6bcc3cd.pdf\", \"https://cby-ye.com/files/6ab390fcaf357.pdf\", \"https://cby-ye.com/publicationsandcirculars\", \"https://english.cby-ye.com/publicationsandcirculars\", \"https://cby-ye.com/rulesandregulations\", \"https://english.cby-ye.com/rulesandregulations\", \"https://cby-ye.com/researchandstatistics\", \"https://english.cby-ye.com/researchandstatistics\", \"https://english.cby-ye.com/files/630342f7c26ae.pdf\", \"https://english.cby-ye.com/files/6303431ed26c1.pdf\", \"https://english.cby-ye.com/files/63034338c577c.pdf\", \"https://english.cby-ye.com/files/63033876c3f92.pdf\", \"https://english.cby-ye.com/files/630338c8b5600.pdf\", \"https://english.cby-ye.com/files/6303391a7e9e7.pdf\", \"https://english.cby-ye.com/files/634f8fcb92d5f.pdf\", \"https://english.cby-ye.com/files/634f90085bdcd.pdf\", \"https://english.cby-ye.com/files/634f9042dbb84.pdf\", \"https://english.cby-ye.com/files/63aadf8d70ae1.pdf\", \"https://english.cby-ye.com/files/63aadfbe154e8.pdf\", \"https://english.cby-ye.com/files/63d231418c14b.pdf\", \"https://english.cby-ye.com/files/64115abe770bb.pdf\"]",
     "datasets_or_use": "DS-CBY-MONETARY",
-    "row_count": 686,
+    "row_count": "696",
     "metadata_state": "DISPLAY_READY",
     "standalone_resource_card_eligible": false,
-    "display_title": "Monetary and Financial Developments, Issue No. 54 (May 2026)",
-    "display_title_ar": "التطورات النقدية والمالية، العدد 54 (مايو 2026)",
+    "display_title": "Monetary and Financial Developments, Issue No. 55 (June 2026)",
+    "display_title_ar": "التطورات النقدية والمالية، العدد 55 (يونيو 2026)",
     "publisher": "Central Bank of Yemen — Aden",
     "publisher_ar": "البنك المركزي اليمني – عدن",
     "document_label": "Periodic statistical report",
     "document_label_ar": "تقرير إحصائي دوري",
-    "document_date": "2026-05",
+    "document_date": "2026-06",
     "resource_category": null,
     "resource_category_ar": null,
     "why_it_matters": null,
@@ -41,7 +41,8 @@
     ],
     "linked_visual_ids": [
       "RV-CWR-002",
-      "RV-CWR-006"
+      "RV-CWR-006",
+      "RV-CWR-011"
     ],
     "linked_measurement_ids": [],
     "rule": "DISPLAY_READY fields come only from the Production Master. LOCATOR_ONLY preserves the locator without inventing missing bibliography or rights metadata."
@@ -5904,6 +5905,7 @@
       "RV-CWR-008",
       "RV-CWR-009",
       "RV-CWR-010",
+      "RV-CWR-011",
       "VIS-PAYMENT-RAILS",
       "VIS-TARGET-RESULT-STATE"
     ],
@@ -6017,7 +6019,8 @@
     ],
     "linked_visual_ids": [
       "RV-CWR-001",
-      "RV-CWR-002"
+      "RV-CWR-002",
+      "RV-CWR-011"
     ],
     "linked_measurement_ids": [],
     "rule": "DISPLAY_READY fields come only from the Production Master. LOCATOR_ONLY preserves the locator without inventing missing bibliography or rights metadata."
@@ -6065,7 +6068,8 @@
     ],
     "linked_visual_ids": [
       "RV-CWR-001",
-      "RV-CWR-002"
+      "RV-CWR-002",
+      "RV-CWR-011"
     ],
     "linked_measurement_ids": [],
     "rule": "DISPLAY_READY fields come only from the Production Master. LOCATOR_ONLY preserves the locator without inventing missing bibliography or rights metadata."

@@ -1,0 +1,55 @@
+{
+ "transaction": "CLOSE-3C-L",
+ "summary": "The three visuals CLOSE-3C added name the Evidence Records that bind their rows (CBY-BANKS-2026-05, CLM-033) in data_inputs, so their lineage closes to SRC-CBY-001.",
+ "self_counts": {
+  "site_pages": 144,
+  "bilingual_sections": 237,
+  "questions": 11,
+  "evidence_objects": 110,
+  "public_claims": 60,
+  "readings": 11,
+  "measurement": 10,
+  "visuals": 42,
+  "relationships": 26,
+  "dated_events": 23,
+  "sources": 174,
+  "datasets": 211,
+  "indicators": 216,
+  "cby_monetary": 696,
+  "payments": 97,
+  "firm_finance": 84,
+  "remittances": 23
+ },
+ "input_master_sha256": "fb065fa695839be212900cb981c3db6f7825d3b7147a7adbfd44fd844de80125",
+ "output_master_sha256": "49de81b3bc533aa839cce880109d83b2b06f2b9a8f849842ae13a721b35ce482",
+ "cells_written": 3,
+ "changes": [
+  {
+   "finding": "CLOSE-3C-L",
+   "sheet": "11_VISUAL_LIBRARY",
+   "row": 44,
+   "col": 14,
+   "field": "VIS-CBY-MONETARY-SNAPSHOT.data_inputs",
+   "old": "18_CBY_MONETARY: market rate, M2, currency in circulation share, FX deposit share, bank total assets, foreign assets, private credit, loans and advances to government (end of 2025 and June 2026)",
+   "new": "CBY-BANKS-2026-05 + CLM-033 + rows of 18_CBY_MONETARY: market rate, M2, currency in circulation share, FX deposit share, bank total assets, foreign assets, private credit, loans and advances to government (end of 2025 and June 2026)"
+  },
+  {
+   "finding": "CLOSE-3C-L",
+   "sheet": "11_VISUAL_LIBRARY",
+   "row": 45,
+   "col": 14,
+   "field": "VIS-YER-MARKET-RATE.data_inputs",
+   "old": "18_CBY_MONETARY YER_USD_MARKET_RATE (Table 6)",
+   "new": "CLM-033 + rows of 18_CBY_MONETARY YER_USD_MARKET_RATE (Table 6)"
+  },
+  {
+   "finding": "CLOSE-3C-L",
+   "sheet": "11_VISUAL_LIBRARY",
+   "row": 46,
+   "col": 14,
+   "field": "RV-CWR-011.data_inputs",
+   "old": "18_CBY_MONETARY T4: the CBY-BANKS-2026-05 rows and the June 2026 rows (Issue No. 55)",
+   "new": "CBY-BANKS-2026-05 + rows of 18_CBY_MONETARY T4: the CBY-BANKS-2026-05 rows and the June 2026 rows (Issue No. 55)"
+  }
+ ]
+}

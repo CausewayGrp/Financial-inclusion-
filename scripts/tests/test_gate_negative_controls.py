@@ -651,6 +651,11 @@ CONTROLS = [
      "scripts/projection/controlled_inputs/visual_design_contract.json",
      sub_once(r'("q3_2024_channels",\s*"rows":\s*\{[^}]*?"ids":\s*\[)', r'\1"OBS-00031", '),
      "the third-quarter 2024 panel draws OBS-00031"),
+    # RC-B12 (close-out U4/U5): a tabled contract without an Evidence Record is checked on its canonical page.
+    ("RC-B12: the /finance/ snapshot table prints a number no governed row holds", "en/finance/index.html",
+     sub_once(r'(data-visual-id="VIS-CBY-MONETARY-SNAPSHOT".*?<div data-text-first-table>.*?)<bdi dir="ltr">11,925.0</bdi>',
+              r'\1<bdi dir="ltr">11,952.0</bdi>'),
+     "RC-B12 the table's numbers differ from the bound rows en VIS-CBY-MONETARY-SNAPSHOT"),
     ("CO-G01: 00_MASTER states a stale Readings count", "site-src/content/content/master_principles.json",
      sub_once(r'("Readings",\s*)(\d+)(,\s*)(\d+)', lambda m: f"{m.group(1)}{int(m.group(2)) - 1}{m.group(3)}{int(m.group(4)) - 1}"),
      "CO-G01 00_MASTER 'Readings' states"),

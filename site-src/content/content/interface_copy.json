@@ -3418,5 +3418,137 @@
     "label_en": "Third quarter of 2024: payments bulletin, a separate publication, not compared",
     "label_ar": "الربع الثالث من 2024: نشرة المدفوعات، وهي إصدار منفصل لا يُقارَن بالإصدار الآخر",
     "use_rule": "Close-out U6. Panel heading, VIS-PAYMENT-ANATOMY series q3_2024_channels."
+  },
+  {
+    "ui_id": "UI-VIS-TH-CBY-ITEM",
+    "label_en": "Indicator (unit)",
+    "label_ar": "المؤشر (الوحدة)",
+    "use_rule": "Close-out U4. Row-header column of the CBY tables."
+  },
+  {
+    "ui_id": "UI-VIS-TH-CBY-END-2025",
+    "label_en": "End of 2025",
+    "label_ar": "نهاية 2025",
+    "use_rule": "Close-out U4. Column: the 2025 year-end values of the bulletin."
+  },
+  {
+    "ui_id": "UI-VIS-TH-CBY-2026-05",
+    "label_en": "May 2026",
+    "label_ar": "مايو 2026",
+    "use_rule": "Close-out U5. Column: May 2026 (record CBY-BANKS-2026-05)."
+  },
+  {
+    "ui_id": "UI-VIS-TH-CBY-2026-06",
+    "label_en": "June 2026",
+    "label_ar": "يونيو 2026",
+    "use_rule": "Close-out U4. Column: June 2026, the latest month published."
+  },
+  {
+    "ui_id": "UI-VIS-ROW-CBY-RATE",
+    "label_en": "Average market rate for the month, rials per US dollar (December 2025; June 2026)",
+    "label_ar": "متوسط سعر الصرف السوقي للشهر، ريال لكل دولار أمريكي (ديسمبر 2025؛ يونيو 2026)",
+    "use_rule": "Close-out U4. Row header."
+  },
+  {
+    "ui_id": "UI-VIS-ROW-CBY-M2",
+    "label_en": "Broad money, M2 (YER billion)",
+    "label_ar": "العرض النقدي الواسع M2 (مليار ريال يمني)",
+    "use_rule": "Close-out U4. Row header."
+  },
+  {
+    "ui_id": "UI-VIS-ROW-CBY-CIC-SHARE",
+    "label_en": "Currency in circulation (% of M2)",
+    "label_ar": "العملة المتداولة (% من M2)",
+    "use_rule": "Close-out U4. Row header."
+  },
+  {
+    "ui_id": "UI-VIS-ROW-CBY-FX-SHARE",
+    "label_en": "Foreign-currency deposits (% of total deposits)",
+    "label_ar": "الودائع بالعملات الأجنبية (% من إجمالي الودائع)",
+    "use_rule": "Close-out U4. Row header."
+  },
+  {
+    "ui_id": "UI-VIS-ROW-CBY-ASSETS",
+    "label_en": "Banks' total assets (YER billion)",
+    "label_ar": "إجمالي أصول البنوك (مليار ريال يمني)",
+    "use_rule": "Close-out U4/U5. Row header."
+  },
+  {
+    "ui_id": "UI-VIS-ROW-CBY-FOREIGN",
+    "label_en": "Banks' foreign assets (YER billion)",
+    "label_ar": "الأصول الخارجية للبنوك (مليار ريال يمني)",
+    "use_rule": "Close-out U4/U5. Row header."
+  },
+  {
+    "ui_id": "UI-VIS-ROW-CBY-PRIVATE",
+    "label_en": "Banks' credit to the private sector (YER billion)",
+    "label_ar": "الائتمان الممنوح من البنوك للقطاع الخاص (مليار ريال يمني)",
+    "use_rule": "Close-out U4/U5. Row header."
+  },
+  {
+    "ui_id": "UI-VIS-ROW-CBY-GOV",
+    "label_en": "Banks' loans and advances to government (YER billion)",
+    "label_ar": "قروض البنوك وسلفياتها للحكومة (مليار ريال يمني)",
+    "use_rule": "Close-out U4/U5. Row header."
+  },
+  {
+    "ui_id": "UI-VIS-CAP-CBY-MFD-55",
+    "label_en": "CBY-Aden, Monetary and Financial Developments, Issue No. 55",
+    "label_ar": "البنك المركزي اليمني – عدن، التطورات النقدية والمالية، العدد 55",
+    "use_rule": "Close-out U4/U5. Table caption."
+  },
+  {
+    "ui_id": "UI-VIS-CAP-CBY-AS-PRINTED",
+    "label_en": "values and shares as the bulletin prints them; rial values are nominal",
+    "label_ar": "القيم والحصص كما ترد في النشرة؛ والقيم بالريال اسمية",
+    "use_rule": "Close-out U4. Table caption."
+  },
+  {
+    "ui_id": "UI-VIS-CAP-CBY-VALUES-AS-PRINTED",
+    "label_en": "values as the bulletin prints them; nominal rials",
+    "label_ar": "القيم كما ترد في النشرة؛ بالريال الاسمي",
+    "use_rule": "Close-out U5. Table caption (RV-CWR-011)."
+  },
+  {
+    "ui_id": "UI-VIS-NOTE-CBY-FIREWALL",
+    "label_en": "Monetary aggregates and bank balance sheets describe the banking system, not people's access to or use of financial services.",
+    "label_ar": "تصف المجاميع النقدية وميزانيات البنوك الجهاز المصرفي، لا وصول الأفراد إلى الخدمات المالية ولا استخدامهم لها.",
+    "use_rule": "Close-out U4. Marker row (firewall line)."
+  },
+  {
+    "ui_id": "UI-VIS-NOTE-CBY-COVERAGE",
+    "label_en": "The bulletin defines banks as the commercial and Islamic banks operating in the Republic of Yemen but does not say which banks and branches report to it; the figures are not shown to cover all of Yemen.",
+    "label_ar": "تُعرِّف النشرة البنوك بأنها البنوك التجارية والإسلامية العاملة في الجمهورية اليمنية، لكنها لا تذكر أيُّ البنوك والفروع تقدم بياناتها إليها؛ ولا يثبت أن الأرقام تغطي اليمن كله.",
+    "use_rule": "Close-out U4/U5. Marker row."
+  },
+  {
+    "ui_id": "UI-VIS-NOTE-CBY-NOT-ALL-LINES",
+    "label_en": "The three lines do not add up to total assets: reserves, loans and advances to public enterprises and other assets are not shown.",
+    "label_ar": "لا يساوي مجموع البنود الثلاثة إجمالي الأصول: فالاحتياطيات والقروض والسلفيات للمؤسسات العامة والأصول الأخرى غير معروضة.",
+    "use_rule": "Close-out U5. Marker row (RV-CWR-011)."
+  },
+  {
+    "ui_id": "UI-VIS-NOTE-CBY-RATE-SOURCE",
+    "label_en": "The rate is the monthly average market rate that CBY-Aden publishes; it is not the rate in Sana'a and not any single day's rate.",
+    "label_ar": "السعر هو متوسط سعر الصرف السوقي الشهري الذي ينشره البنك المركزي اليمني – عدن؛ وهو ليس سعر الصرف في صنعاء، ولا سعر يوم واحد بعينه.",
+    "use_rule": "Close-out U4. Marker row and frame note."
+  },
+  {
+    "ui_id": "UI-VIS-NOTE-RATE-2025-MOVE",
+    "label_en": "The line joins the published monthly averages and adds no smoothing of its own. The average was 2,733.85 rials per US dollar in June 2025, 2,212.7 in July and 1,624.5 in August.",
+    "label_ar": "يصل الخط بين المتوسطات الشهرية المنشورة ولا يضيف إليها أي تنعيم. وكان المتوسط 2,733.85 ريالًا للدولار الأمريكي في يونيو 2025، و2,212.7 في يوليو، و1,624.5 في أغسطس.",
+    "use_rule": "Close-out U4. Frame note of VIS-YER-MARKET-RATE (the annotated move)."
+  },
+  {
+    "ui_id": "UI-VIS-NOTE-POS-RATE-WINDOW",
+    "label_en": "The months shown span the move in the rial's published market rate between June and August 2025; the values are nominal rials, not adjusted for it, and the chart does not show whether the move changed them.",
+    "label_ar": "تشمل الأشهر المعروضة تحرّك سعر الصرف السوقي المنشور للريال بين يونيو وأغسطس 2025؛ والقيم بالريال الاسمي ولا تُعدَّل لمراعاة هذا التحرك، ولا يُظهر الرسم ما إذا كان التحرك قد غيّرها.",
+    "use_rule": "Close-out U4. Frame note of VIS-POS-VALUE."
+  },
+  {
+    "ui_id": "UI-VIS-UNIT-YER-PER-USD",
+    "label_en": "Rials per US dollar (monthly average)",
+    "label_ar": "ريال لكل دولار أمريكي (متوسط شهري)",
+    "use_rule": "Close-out U4. Unit 'YER per USD'."
   }
 ]

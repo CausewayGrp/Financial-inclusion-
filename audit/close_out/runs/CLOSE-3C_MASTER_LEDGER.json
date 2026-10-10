@@ -1,0 +1,2212 @@
+{
+ "transaction": "CLOSE-3C",
+ "summary": "U4: June 2026 (Issue No. 55) values for ten CBY series; SRC-CBY-001 names Issue No. 55; a dated table of eight indicators and the monthly market-rate line on /finance/; the 2025 episode in CLM-033 and CWR-002; VIS-POS-VALUE frame note. U5: RV-CWR-011 bound to CWR-011.",
+ "self_counts": {
+  "site_pages": 144,
+  "bilingual_sections": 237,
+  "questions": 11,
+  "evidence_objects": 110,
+  "public_claims": 60,
+  "readings": 11,
+  "measurement": 10,
+  "visuals": 42,
+  "relationships": 26,
+  "dated_events": 23,
+  "sources": 174,
+  "datasets": 211,
+  "indicators": 216,
+  "cby_monetary": 696,
+  "payments": 97,
+  "firm_finance": 84,
+  "remittances": 23
+ },
+ "input_master_sha256": "d2cd2ad16bd84f9b4963261f0c2291b4eac8ba621458c3be5734ee2c8599b6a3",
+ "output_master_sha256": "fb065fa695839be212900cb981c3db6f7825d3b7147a7adbfd44fd844de80125",
+ "cells_written": 242,
+ "changes": [
+  {
+   "finding": "CLOSE-3C:U4",
+   "sheet": "18_CBY_MONETARY",
+   "row": 691,
+   "col": 1,
+   "field": "OBS-CBY-00687.observation_id",
+   "old": null,
+   "new": "OBS-CBY-00687"
+  },
+  {
+   "finding": "CLOSE-3C:U4",
+   "sheet": "18_CBY_MONETARY",
+   "row": 691,
+   "col": 2,
+   "field": "OBS-CBY-00687.source_id",
+   "old": null,
+   "new": "SRC-CBY-001"
+  },
+  {
+   "finding": "CLOSE-3C:U4",
+   "sheet": "18_CBY_MONETARY",
+   "row": 691,
+   "col": 3,
+   "field": "OBS-CBY-00687.source_table",
+   "old": null,
+   "new": "T1_Monetary_Survey"
+  },
+  {
+   "finding": "CLOSE-3C:U4",
+   "sheet": "18_CBY_MONETARY",
+   "row": 691,
+   "col": 4,
+   "field": "OBS-CBY-00687.indicator_id",
+   "old": null,
+   "new": "M2_BN_YER"
+  },
+  {
+   "finding": "CLOSE-3C:U4",
+   "sheet": "18_CBY_MONETARY",
+   "row": 691,
+   "col": 5,
+   "field": "OBS-CBY-00687.indicator_name",
+   "old": null,
+   "new": "Broad Money Supply (M2)"
+  },
+  {
+   "finding": "CLOSE-3C:U4",
+   "sheet": "18_CBY_MONETARY",
+   "row": 691,
+   "col": 6,
+   "field": "OBS-CBY-00687.period",
+   "old": null,
+   "new": "2026-06"
+  },
+  {
+   "finding": "CLOSE-3C:U4",
+   "sheet": "18_CBY_MONETARY",
+   "row": 691,
+   "col": 7,
+   "field": "OBS-CBY-00687.value",
+   "old": null,
+   "new": 11925.0
+  },
+  {
+   "finding": "CLOSE-3C:U4",
+   "sheet": "18_CBY_MONETARY",
+   "row": 691,
+   "col": 8,
+   "field": "OBS-CBY-00687.unit",
+   "old": null,
+   "new": "YER billion"
+  },
+  {
+   "finding": "CLOSE-3C:U4",
+   "sheet": "18_CBY_MONETARY",
+   "row": 691,
+   "col": 9,
+   "field": "OBS-CBY-00687.geography",
+   "old": null,
+   "new": "Yemen / CBY statistical framework"
+  },
+  {
+   "finding": "CLOSE-3C:U4",
+   "sheet": "18_CBY_MONETARY",
+   "row": 691,
+   "col": 10,
+   "field": "OBS-CBY-00687.comparability_status",
+   "old": null,
+   "new": "SOURCE_DEFINED"
+  },
+  {
+   "finding": "CLOSE-3C:U4",
+   "sheet": "18_CBY_MONETARY",
+   "row": 691,
+   "col": 12,
+   "field": "OBS-CBY-00687.notes",
+   "old": null,
+   "new": "Read in the original on 10 October 2026 (close-out U4): Issue No. 55 (June 2026), Table 1 'Monetary Survey', printed p.10 (PDF p.11), column June 2026. Only the series the close-out objects use are entered for June 2026."
+  },
+  {
+   "finding": "CLOSE-3C:U4",
+   "sheet": "18_CBY_MONETARY",
+   "row": 691,
+   "col": 13,
+   "field": "OBS-CBY-00687.original_url",
+   "old": null,
+   "new": "https://english.cby-ye.com/files/6ab393186466e.pdf"
+  },
+  {
+   "finding": "CLOSE-3C:U4",
+   "sheet": "18_CBY_MONETARY",
+   "row": 692,
+   "col": 1,
+   "field": "OBS-CBY-00688.observation_id",
+   "old": null,
+   "new": "OBS-CBY-00688"
+  },
+  {
+   "finding": "CLOSE-3C:U4",
+   "sheet": "18_CBY_MONETARY",
+   "row": 692,
+   "col": 2,
+   "field": "OBS-CBY-00688.source_id",
+   "old": null,
+   "new": "SRC-CBY-001"
+  },
+  {
+   "finding": "CLOSE-3C:U4",
+   "sheet": "18_CBY_MONETARY",
+   "row": 692,
+   "col": 3,
+   "field": "OBS-CBY-00688.source_table",
+   "old": null,
+   "new": "T1_Monetary_Survey"
+  },
+  {
+   "finding": "CLOSE-3C:U4",
+   "sheet": "18_CBY_MONETARY",
+   "row": 692,
+   "col": 4,
+   "field": "OBS-CBY-00688.indicator_id",
+   "old": null,
+   "new": "CURRENCY_CIRCULATION_BN_YER"
+  },
+  {
+   "finding": "CLOSE-3C:U4",
+   "sheet": "18_CBY_MONETARY",
+   "row": 692,
+   "col": 5,
+   "field": "OBS-CBY-00688.indicator_name",
+   "old": null,
+   "new": "Currency in Circulation"
+  },
+  {
+   "finding": "CLOSE-3C:U4",
+   "sheet": "18_CBY_MONETARY",
+   "row": 692,
+   "col": 6,
+   "field": "OBS-CBY-00688.period",
+   "old": null,
+   "new": "2026-06"
+  },
+  {
+   "finding": "CLOSE-3C:U4",
+   "sheet": "18_CBY_MONETARY",
+   "row": 692,
+   "col": 7,
+   "field": "OBS-CBY-00688.value",
+   "old": null,
+   "new": 3384.3
+  },
+  {
+   "finding": "CLOSE-3C:U4",
+   "sheet": "18_CBY_MONETARY",
+   "row": 692,
+   "col": 8,
+   "field": "OBS-CBY-00688.unit",
+   "old": null,
+   "new": "YER billion"
+  },
+  {
+   "finding": "CLOSE-3C:U4",
+   "sheet": "18_CBY_MONETARY",
+   "row": 692,
+   "col": 9,
+   "field": "OBS-CBY-00688.geography",
+   "old": null,
+   "new": "Yemen / CBY statistical framework"
+  },
+  {
+   "finding": "CLOSE-3C:U4",
+   "sheet": "18_CBY_MONETARY",
+   "row": 692,
+   "col": 10,
+   "field": "OBS-CBY-00688.comparability_status",
+   "old": null,
+   "new": "SOURCE_DEFINED"
+  },
+  {
+   "finding": "CLOSE-3C:U4",
+   "sheet": "18_CBY_MONETARY",
+   "row": 692,
+   "col": 12,
+   "field": "OBS-CBY-00688.notes",
+   "old": null,
+   "new": "Read in the original on 10 October 2026 (close-out U4): Issue No. 55 (June 2026), Table 1 'Monetary Survey', printed p.10 (PDF p.11), column June 2026. Only the series the close-out objects use are entered for June 2026."
+  },
+  {
+   "finding": "CLOSE-3C:U4",
+   "sheet": "18_CBY_MONETARY",
+   "row": 692,
+   "col": 13,
+   "field": "OBS-CBY-00688.original_url",
+   "old": null,
+   "new": "https://english.cby-ye.com/files/6ab393186466e.pdf"
+  },
+  {
+   "finding": "CLOSE-3C:U4",
+   "sheet": "18_CBY_MONETARY",
+   "row": 693,
+   "col": 1,
+   "field": "OBS-CBY-00689.observation_id",
+   "old": null,
+   "new": "OBS-CBY-00689"
+  },
+  {
+   "finding": "CLOSE-3C:U4",
+   "sheet": "18_CBY_MONETARY",
+   "row": 693,
+   "col": 2,
+   "field": "OBS-CBY-00689.source_id",
+   "old": null,
+   "new": "SRC-CBY-001"
+  },
+  {
+   "finding": "CLOSE-3C:U4",
+   "sheet": "18_CBY_MONETARY",
+   "row": 693,
+   "col": 3,
+   "field": "OBS-CBY-00689.source_table",
+   "old": null,
+   "new": "T1_Monetary_Survey"
+  },
+  {
+   "finding": "CLOSE-3C:U4",
+   "sheet": "18_CBY_MONETARY",
+   "row": 693,
+   "col": 4,
+   "field": "OBS-CBY-00689.indicator_id",
+   "old": null,
+   "new": "CURRENCY_CIRCULATION_SHARE_M2_PCT"
+  },
+  {
+   "finding": "CLOSE-3C:U4",
+   "sheet": "18_CBY_MONETARY",
+   "row": 693,
+   "col": 5,
+   "field": "OBS-CBY-00689.indicator_name",
+   "old": null,
+   "new": "Currency in Circulation / Broad Money"
+  },
+  {
+   "finding": "CLOSE-3C:U4",
+   "sheet": "18_CBY_MONETARY",
+   "row": 693,
+   "col": 6,
+   "field": "OBS-CBY-00689.period",
+   "old": null,
+   "new": "2026-06"
+  },
+  {
+   "finding": "CLOSE-3C:U4",
+   "sheet": "18_CBY_MONETARY",
+   "row": 693,
+   "col": 7,
+   "field": "OBS-CBY-00689.value",
+   "old": null,
+   "new": 28.4
+  },
+  {
+   "finding": "CLOSE-3C:U4",
+   "sheet": "18_CBY_MONETARY",
+   "row": 693,
+   "col": 8,
+   "field": "OBS-CBY-00689.unit",
+   "old": null,
+   "new": "percent"
+  },
+  {
+   "finding": "CLOSE-3C:U4",
+   "sheet": "18_CBY_MONETARY",
+   "row": 693,
+   "col": 9,
+   "field": "OBS-CBY-00689.geography",
+   "old": null,
+   "new": "Yemen / CBY statistical framework"
+  },
+  {
+   "finding": "CLOSE-3C:U4",
+   "sheet": "18_CBY_MONETARY",
+   "row": 693,
+   "col": 10,
+   "field": "OBS-CBY-00689.comparability_status",
+   "old": null,
+   "new": "SOURCE_DEFINED"
+  },
+  {
+   "finding": "CLOSE-3C:U4",
+   "sheet": "18_CBY_MONETARY",
+   "row": 693,
+   "col": 12,
+   "field": "OBS-CBY-00689.notes",
+   "old": null,
+   "new": "Read in the original on 10 October 2026 (close-out U4): Issue No. 55 (June 2026), Table 1 'Monetary Survey', printed p.10 (PDF p.11), column June 2026. Only the series the close-out objects use are entered for June 2026."
+  },
+  {
+   "finding": "CLOSE-3C:U4",
+   "sheet": "18_CBY_MONETARY",
+   "row": 693,
+   "col": 13,
+   "field": "OBS-CBY-00689.original_url",
+   "old": null,
+   "new": "https://english.cby-ye.com/files/6ab393186466e.pdf"
+  },
+  {
+   "finding": "CLOSE-3C:U4",
+   "sheet": "18_CBY_MONETARY",
+   "row": 694,
+   "col": 1,
+   "field": "OBS-CBY-00690.observation_id",
+   "old": null,
+   "new": "OBS-CBY-00690"
+  },
+  {
+   "finding": "CLOSE-3C:U4",
+   "sheet": "18_CBY_MONETARY",
+   "row": 694,
+   "col": 2,
+   "field": "OBS-CBY-00690.source_id",
+   "old": null,
+   "new": "SRC-CBY-001"
+  },
+  {
+   "finding": "CLOSE-3C:U4",
+   "sheet": "18_CBY_MONETARY",
+   "row": 694,
+   "col": 3,
+   "field": "OBS-CBY-00690.source_table",
+   "old": null,
+   "new": "T1_Monetary_Survey"
+  },
+  {
+   "finding": "CLOSE-3C:U4",
+   "sheet": "18_CBY_MONETARY",
+   "row": 694,
+   "col": 4,
+   "field": "OBS-CBY-00690.indicator_id",
+   "old": null,
+   "new": "FX_DEPOSITS_BN_YER"
+  },
+  {
+   "finding": "CLOSE-3C:U4",
+   "sheet": "18_CBY_MONETARY",
+   "row": 694,
+   "col": 5,
+   "field": "OBS-CBY-00690.indicator_name",
+   "old": null,
+   "new": "Foreign Currency Deposits"
+  },
+  {
+   "finding": "CLOSE-3C:U4",
+   "sheet": "18_CBY_MONETARY",
+   "row": 694,
+   "col": 6,
+   "field": "OBS-CBY-00690.period",
+   "old": null,
+   "new": "2026-06"
+  },
+  {
+   "finding": "CLOSE-3C:U4",
+   "sheet": "18_CBY_MONETARY",
+   "row": 694,
+   "col": 7,
+   "field": "OBS-CBY-00690.value",
+   "old": null,
+   "new": 5807.6
+  },
+  {
+   "finding": "CLOSE-3C:U4",
+   "sheet": "18_CBY_MONETARY",
+   "row": 694,
+   "col": 8,
+   "field": "OBS-CBY-00690.unit",
+   "old": null,
+   "new": "YER billion"
+  },
+  {
+   "finding": "CLOSE-3C:U4",
+   "sheet": "18_CBY_MONETARY",
+   "row": 694,
+   "col": 9,
+   "field": "OBS-CBY-00690.geography",
+   "old": null,
+   "new": "Yemen / CBY statistical framework"
+  },
+  {
+   "finding": "CLOSE-3C:U4",
+   "sheet": "18_CBY_MONETARY",
+   "row": 694,
+   "col": 10,
+   "field": "OBS-CBY-00690.comparability_status",
+   "old": null,
+   "new": "SOURCE_DEFINED"
+  },
+  {
+   "finding": "CLOSE-3C:U4",
+   "sheet": "18_CBY_MONETARY",
+   "row": 694,
+   "col": 12,
+   "field": "OBS-CBY-00690.notes",
+   "old": null,
+   "new": "Read in the original on 10 October 2026 (close-out U4): Issue No. 55 (June 2026), Table 1 'Monetary Survey', printed p.10 (PDF p.11), column June 2026. Only the series the close-out objects use are entered for June 2026."
+  },
+  {
+   "finding": "CLOSE-3C:U4",
+   "sheet": "18_CBY_MONETARY",
+   "row": 694,
+   "col": 13,
+   "field": "OBS-CBY-00690.original_url",
+   "old": null,
+   "new": "https://english.cby-ye.com/files/6ab393186466e.pdf"
+  },
+  {
+   "finding": "CLOSE-3C:U4",
+   "sheet": "18_CBY_MONETARY",
+   "row": 695,
+   "col": 1,
+   "field": "OBS-CBY-00691.observation_id",
+   "old": null,
+   "new": "OBS-CBY-00691"
+  },
+  {
+   "finding": "CLOSE-3C:U4",
+   "sheet": "18_CBY_MONETARY",
+   "row": 695,
+   "col": 2,
+   "field": "OBS-CBY-00691.source_id",
+   "old": null,
+   "new": "SRC-CBY-001"
+  },
+  {
+   "finding": "CLOSE-3C:U4",
+   "sheet": "18_CBY_MONETARY",
+   "row": 695,
+   "col": 3,
+   "field": "OBS-CBY-00691.source_table",
+   "old": null,
+   "new": "T1_Monetary_Survey"
+  },
+  {
+   "finding": "CLOSE-3C:U4",
+   "sheet": "18_CBY_MONETARY",
+   "row": 695,
+   "col": 4,
+   "field": "OBS-CBY-00691.indicator_id",
+   "old": null,
+   "new": "FX_DEPOSITS_SHARE_TOTAL_DEPOSITS_PCT"
+  },
+  {
+   "finding": "CLOSE-3C:U4",
+   "sheet": "18_CBY_MONETARY",
+   "row": 695,
+   "col": 5,
+   "field": "OBS-CBY-00691.indicator_name",
+   "old": null,
+   "new": "Foreign Currency Deposits / Total Deposits"
+  },
+  {
+   "finding": "CLOSE-3C:U4",
+   "sheet": "18_CBY_MONETARY",
+   "row": 695,
+   "col": 6,
+   "field": "OBS-CBY-00691.period",
+   "old": null,
+   "new": "2026-06"
+  },
+  {
+   "finding": "CLOSE-3C:U4",
+   "sheet": "18_CBY_MONETARY",
+   "row": 695,
+   "col": 7,
+   "field": "OBS-CBY-00691.value",
+   "old": null,
+   "new": 68.0
+  },
+  {
+   "finding": "CLOSE-3C:U4",
+   "sheet": "18_CBY_MONETARY",
+   "row": 695,
+   "col": 8,
+   "field": "OBS-CBY-00691.unit",
+   "old": null,
+   "new": "percent"
+  },
+  {
+   "finding": "CLOSE-3C:U4",
+   "sheet": "18_CBY_MONETARY",
+   "row": 695,
+   "col": 9,
+   "field": "OBS-CBY-00691.geography",
+   "old": null,
+   "new": "Yemen / CBY statistical framework"
+  },
+  {
+   "finding": "CLOSE-3C:U4",
+   "sheet": "18_CBY_MONETARY",
+   "row": 695,
+   "col": 10,
+   "field": "OBS-CBY-00691.comparability_status",
+   "old": null,
+   "new": "SOURCE_DEFINED"
+  },
+  {
+   "finding": "CLOSE-3C:U4",
+   "sheet": "18_CBY_MONETARY",
+   "row": 695,
+   "col": 12,
+   "field": "OBS-CBY-00691.notes",
+   "old": null,
+   "new": "Read in the original on 10 October 2026 (close-out U4): Issue No. 55 (June 2026), Table 1 'Monetary Survey', printed p.10 (PDF p.11), column June 2026. Only the series the close-out objects use are entered for June 2026."
+  },
+  {
+   "finding": "CLOSE-3C:U4",
+   "sheet": "18_CBY_MONETARY",
+   "row": 695,
+   "col": 13,
+   "field": "OBS-CBY-00691.original_url",
+   "old": null,
+   "new": "https://english.cby-ye.com/files/6ab393186466e.pdf"
+  },
+  {
+   "finding": "CLOSE-3C:U4",
+   "sheet": "18_CBY_MONETARY",
+   "row": 696,
+   "col": 1,
+   "field": "OBS-CBY-00692.observation_id",
+   "old": null,
+   "new": "OBS-CBY-00692"
+  },
+  {
+   "finding": "CLOSE-3C:U4",
+   "sheet": "18_CBY_MONETARY",
+   "row": 696,
+   "col": 2,
+   "field": "OBS-CBY-00692.source_id",
+   "old": null,
+   "new": "SRC-CBY-001"
+  },
+  {
+   "finding": "CLOSE-3C:U4",
+   "sheet": "18_CBY_MONETARY",
+   "row": 696,
+   "col": 3,
+   "field": "OBS-CBY-00692.source_table",
+   "old": null,
+   "new": "T4_Bank_Assets"
+  },
+  {
+   "finding": "CLOSE-3C:U4",
+   "sheet": "18_CBY_MONETARY",
+   "row": 696,
+   "col": 4,
+   "field": "OBS-CBY-00692.indicator_id",
+   "old": null,
+   "new": "BANK_TOTAL_ASSETS_BN_YER"
+  },
+  {
+   "finding": "CLOSE-3C:U4",
+   "sheet": "18_CBY_MONETARY",
+   "row": 696,
+   "col": 5,
+   "field": "OBS-CBY-00692.indicator_name",
+   "old": null,
+   "new": "Commercial & Islamic Banks Total Assets"
+  },
+  {
+   "finding": "CLOSE-3C:U4",
+   "sheet": "18_CBY_MONETARY",
+   "row": 696,
+   "col": 6,
+   "field": "OBS-CBY-00692.period",
+   "old": null,
+   "new": "2026-06"
+  },
+  {
+   "finding": "CLOSE-3C:U4",
+   "sheet": "18_CBY_MONETARY",
+   "row": 696,
+   "col": 7,
+   "field": "OBS-CBY-00692.value",
+   "old": null,
+   "new": 13761.2
+  },
+  {
+   "finding": "CLOSE-3C:U4",
+   "sheet": "18_CBY_MONETARY",
+   "row": 696,
+   "col": 8,
+   "field": "OBS-CBY-00692.unit",
+   "old": null,
+   "new": "YER billion"
+  },
+  {
+   "finding": "CLOSE-3C:U4",
+   "sheet": "18_CBY_MONETARY",
+   "row": 696,
+   "col": 9,
+   "field": "OBS-CBY-00692.geography",
+   "old": null,
+   "new": "Yemen / CBY statistical framework"
+  },
+  {
+   "finding": "CLOSE-3C:U4",
+   "sheet": "18_CBY_MONETARY",
+   "row": 696,
+   "col": 10,
+   "field": "OBS-CBY-00692.comparability_status",
+   "old": null,
+   "new": "SOURCE_DEFINED"
+  },
+  {
+   "finding": "CLOSE-3C:U4",
+   "sheet": "18_CBY_MONETARY",
+   "row": 696,
+   "col": 12,
+   "field": "OBS-CBY-00692.notes",
+   "old": null,
+   "new": "Read in the original on 10 October 2026 (close-out U4): Issue No. 55 (June 2026), Table 4 'Consolidated Balance Sheet of Commercial & Islamic Banks - Assets', printed p.15 (PDF p.16), column June 2026. Only the series the close-out objects use are entered for June 2026."
+  },
+  {
+   "finding": "CLOSE-3C:U4",
+   "sheet": "18_CBY_MONETARY",
+   "row": 696,
+   "col": 13,
+   "field": "OBS-CBY-00692.original_url",
+   "old": null,
+   "new": "https://english.cby-ye.com/files/6ab393186466e.pdf"
+  },
+  {
+   "finding": "CLOSE-3C:U4",
+   "sheet": "18_CBY_MONETARY",
+   "row": 697,
+   "col": 1,
+   "field": "OBS-CBY-00693.observation_id",
+   "old": null,
+   "new": "OBS-CBY-00693"
+  },
+  {
+   "finding": "CLOSE-3C:U4",
+   "sheet": "18_CBY_MONETARY",
+   "row": 697,
+   "col": 2,
+   "field": "OBS-CBY-00693.source_id",
+   "old": null,
+   "new": "SRC-CBY-001"
+  },
+  {
+   "finding": "CLOSE-3C:U4",
+   "sheet": "18_CBY_MONETARY",
+   "row": 697,
+   "col": 3,
+   "field": "OBS-CBY-00693.source_table",
+   "old": null,
+   "new": "T4_Bank_Assets"
+  },
+  {
+   "finding": "CLOSE-3C:U4",
+   "sheet": "18_CBY_MONETARY",
+   "row": 697,
+   "col": 4,
+   "field": "OBS-CBY-00693.indicator_id",
+   "old": null,
+   "new": "BANK_FOREIGN_ASSETS_BN_YER"
+  },
+  {
+   "finding": "CLOSE-3C:U4",
+   "sheet": "18_CBY_MONETARY",
+   "row": 697,
+   "col": 5,
+   "field": "OBS-CBY-00693.indicator_name",
+   "old": null,
+   "new": "Commercial & Islamic Banks Foreign Assets"
+  },
+  {
+   "finding": "CLOSE-3C:U4",
+   "sheet": "18_CBY_MONETARY",
+   "row": 697,
+   "col": 6,
+   "field": "OBS-CBY-00693.period",
+   "old": null,
+   "new": "2026-06"
+  },
+  {
+   "finding": "CLOSE-3C:U4",
+   "sheet": "18_CBY_MONETARY",
+   "row": 697,
+   "col": 7,
+   "field": "OBS-CBY-00693.value",
+   "old": null,
+   "new": 4650.0
+  },
+  {
+   "finding": "CLOSE-3C:U4",
+   "sheet": "18_CBY_MONETARY",
+   "row": 697,
+   "col": 8,
+   "field": "OBS-CBY-00693.unit",
+   "old": null,
+   "new": "YER billion"
+  },
+  {
+   "finding": "CLOSE-3C:U4",
+   "sheet": "18_CBY_MONETARY",
+   "row": 697,
+   "col": 9,
+   "field": "OBS-CBY-00693.geography",
+   "old": null,
+   "new": "Yemen / CBY statistical framework"
+  },
+  {
+   "finding": "CLOSE-3C:U4",
+   "sheet": "18_CBY_MONETARY",
+   "row": 697,
+   "col": 10,
+   "field": "OBS-CBY-00693.comparability_status",
+   "old": null,
+   "new": "SOURCE_DEFINED"
+  },
+  {
+   "finding": "CLOSE-3C:U4",
+   "sheet": "18_CBY_MONETARY",
+   "row": 697,
+   "col": 12,
+   "field": "OBS-CBY-00693.notes",
+   "old": null,
+   "new": "Read in the original on 10 October 2026 (close-out U4): Issue No. 55 (June 2026), Table 4 'Consolidated Balance Sheet of Commercial & Islamic Banks - Assets', printed p.15 (PDF p.16), column June 2026. Only the series the close-out objects use are entered for June 2026."
+  },
+  {
+   "finding": "CLOSE-3C:U4",
+   "sheet": "18_CBY_MONETARY",
+   "row": 697,
+   "col": 13,
+   "field": "OBS-CBY-00693.original_url",
+   "old": null,
+   "new": "https://english.cby-ye.com/files/6ab393186466e.pdf"
+  },
+  {
+   "finding": "CLOSE-3C:U4",
+   "sheet": "18_CBY_MONETARY",
+   "row": 698,
+   "col": 1,
+   "field": "OBS-CBY-00694.observation_id",
+   "old": null,
+   "new": "OBS-CBY-00694"
+  },
+  {
+   "finding": "CLOSE-3C:U4",
+   "sheet": "18_CBY_MONETARY",
+   "row": 698,
+   "col": 2,
+   "field": "OBS-CBY-00694.source_id",
+   "old": null,
+   "new": "SRC-CBY-001"
+  },
+  {
+   "finding": "CLOSE-3C:U4",
+   "sheet": "18_CBY_MONETARY",
+   "row": 698,
+   "col": 3,
+   "field": "OBS-CBY-00694.source_table",
+   "old": null,
+   "new": "T4_Bank_Assets"
+  },
+  {
+   "finding": "CLOSE-3C:U4",
+   "sheet": "18_CBY_MONETARY",
+   "row": 698,
+   "col": 4,
+   "field": "OBS-CBY-00694.indicator_id",
+   "old": null,
+   "new": "BANK_CLAIMS_GOV_BN_YER"
+  },
+  {
+   "finding": "CLOSE-3C:U4",
+   "sheet": "18_CBY_MONETARY",
+   "row": 698,
+   "col": 5,
+   "field": "OBS-CBY-00694.indicator_name",
+   "old": null,
+   "new": "Banks Loans & Advances - Government"
+  },
+  {
+   "finding": "CLOSE-3C:U4",
+   "sheet": "18_CBY_MONETARY",
+   "row": 698,
+   "col": 6,
+   "field": "OBS-CBY-00694.period",
+   "old": null,
+   "new": "2026-06"
+  },
+  {
+   "finding": "CLOSE-3C:U4",
+   "sheet": "18_CBY_MONETARY",
+   "row": 698,
+   "col": 7,
+   "field": "OBS-CBY-00694.value",
+   "old": null,
+   "new": 1966.8
+  },
+  {
+   "finding": "CLOSE-3C:U4",
+   "sheet": "18_CBY_MONETARY",
+   "row": 698,
+   "col": 8,
+   "field": "OBS-CBY-00694.unit",
+   "old": null,
+   "new": "YER billion"
+  },
+  {
+   "finding": "CLOSE-3C:U4",
+   "sheet": "18_CBY_MONETARY",
+   "row": 698,
+   "col": 9,
+   "field": "OBS-CBY-00694.geography",
+   "old": null,
+   "new": "Yemen / CBY statistical framework"
+  },
+  {
+   "finding": "CLOSE-3C:U4",
+   "sheet": "18_CBY_MONETARY",
+   "row": 698,
+   "col": 10,
+   "field": "OBS-CBY-00694.comparability_status",
+   "old": null,
+   "new": "SOURCE_DEFINED"
+  },
+  {
+   "finding": "CLOSE-3C:U4",
+   "sheet": "18_CBY_MONETARY",
+   "row": 698,
+   "col": 12,
+   "field": "OBS-CBY-00694.notes",
+   "old": null,
+   "new": "Read in the original on 10 October 2026 (close-out U4): Issue No. 55 (June 2026), Table 4 'Consolidated Balance Sheet of Commercial & Islamic Banks - Assets', printed p.15 (PDF p.16), column June 2026. Only the series the close-out objects use are entered for June 2026."
+  },
+  {
+   "finding": "CLOSE-3C:U4",
+   "sheet": "18_CBY_MONETARY",
+   "row": 698,
+   "col": 13,
+   "field": "OBS-CBY-00694.original_url",
+   "old": null,
+   "new": "https://english.cby-ye.com/files/6ab393186466e.pdf"
+  },
+  {
+   "finding": "CLOSE-3C:U4",
+   "sheet": "18_CBY_MONETARY",
+   "row": 699,
+   "col": 1,
+   "field": "OBS-CBY-00695.observation_id",
+   "old": null,
+   "new": "OBS-CBY-00695"
+  },
+  {
+   "finding": "CLOSE-3C:U4",
+   "sheet": "18_CBY_MONETARY",
+   "row": 699,
+   "col": 2,
+   "field": "OBS-CBY-00695.source_id",
+   "old": null,
+   "new": "SRC-CBY-001"
+  },
+  {
+   "finding": "CLOSE-3C:U4",
+   "sheet": "18_CBY_MONETARY",
+   "row": 699,
+   "col": 3,
+   "field": "OBS-CBY-00695.source_table",
+   "old": null,
+   "new": "T4_Bank_Assets"
+  },
+  {
+   "finding": "CLOSE-3C:U4",
+   "sheet": "18_CBY_MONETARY",
+   "row": 699,
+   "col": 4,
+   "field": "OBS-CBY-00695.indicator_id",
+   "old": null,
+   "new": "BANK_CREDIT_PRIVATE_SECTOR_BN_YER"
+  },
+  {
+   "finding": "CLOSE-3C:U4",
+   "sheet": "18_CBY_MONETARY",
+   "row": 699,
+   "col": 5,
+   "field": "OBS-CBY-00695.indicator_name",
+   "old": null,
+   "new": "Banks Credit to Private Sector"
+  },
+  {
+   "finding": "CLOSE-3C:U4",
+   "sheet": "18_CBY_MONETARY",
+   "row": 699,
+   "col": 6,
+   "field": "OBS-CBY-00695.period",
+   "old": null,
+   "new": "2026-06"
+  },
+  {
+   "finding": "CLOSE-3C:U4",
+   "sheet": "18_CBY_MONETARY",
+   "row": 699,
+   "col": 7,
+   "field": "OBS-CBY-00695.value",
+   "old": null,
+   "new": 1362.9
+  },
+  {
+   "finding": "CLOSE-3C:U4",
+   "sheet": "18_CBY_MONETARY",
+   "row": 699,
+   "col": 8,
+   "field": "OBS-CBY-00695.unit",
+   "old": null,
+   "new": "YER billion"
+  },
+  {
+   "finding": "CLOSE-3C:U4",
+   "sheet": "18_CBY_MONETARY",
+   "row": 699,
+   "col": 9,
+   "field": "OBS-CBY-00695.geography",
+   "old": null,
+   "new": "Yemen / CBY statistical framework"
+  },
+  {
+   "finding": "CLOSE-3C:U4",
+   "sheet": "18_CBY_MONETARY",
+   "row": 699,
+   "col": 10,
+   "field": "OBS-CBY-00695.comparability_status",
+   "old": null,
+   "new": "SOURCE_DEFINED"
+  },
+  {
+   "finding": "CLOSE-3C:U4",
+   "sheet": "18_CBY_MONETARY",
+   "row": 699,
+   "col": 12,
+   "field": "OBS-CBY-00695.notes",
+   "old": null,
+   "new": "Read in the original on 10 October 2026 (close-out U4): Issue No. 55 (June 2026), Table 4 'Consolidated Balance Sheet of Commercial & Islamic Banks - Assets', printed p.15 (PDF p.16), column June 2026. Only the series the close-out objects use are entered for June 2026."
+  },
+  {
+   "finding": "CLOSE-3C:U4",
+   "sheet": "18_CBY_MONETARY",
+   "row": 699,
+   "col": 13,
+   "field": "OBS-CBY-00695.original_url",
+   "old": null,
+   "new": "https://english.cby-ye.com/files/6ab393186466e.pdf"
+  },
+  {
+   "finding": "CLOSE-3C:U4",
+   "sheet": "18_CBY_MONETARY",
+   "row": 700,
+   "col": 1,
+   "field": "OBS-CBY-00696.observation_id",
+   "old": null,
+   "new": "OBS-CBY-00696"
+  },
+  {
+   "finding": "CLOSE-3C:U4",
+   "sheet": "18_CBY_MONETARY",
+   "row": 700,
+   "col": 2,
+   "field": "OBS-CBY-00696.source_id",
+   "old": null,
+   "new": "SRC-CBY-001"
+  },
+  {
+   "finding": "CLOSE-3C:U4",
+   "sheet": "18_CBY_MONETARY",
+   "row": 700,
+   "col": 3,
+   "field": "OBS-CBY-00696.source_table",
+   "old": null,
+   "new": "T6_Market_Exchange_Rates"
+  },
+  {
+   "finding": "CLOSE-3C:U4",
+   "sheet": "18_CBY_MONETARY",
+   "row": 700,
+   "col": 4,
+   "field": "OBS-CBY-00696.indicator_id",
+   "old": null,
+   "new": "YER_USD_MARKET_RATE"
+  },
+  {
+   "finding": "CLOSE-3C:U4",
+   "sheet": "18_CBY_MONETARY",
+   "row": 700,
+   "col": 5,
+   "field": "OBS-CBY-00696.indicator_name",
+   "old": null,
+   "new": "Average Market Exchange Rate"
+  },
+  {
+   "finding": "CLOSE-3C:U4",
+   "sheet": "18_CBY_MONETARY",
+   "row": 700,
+   "col": 6,
+   "field": "OBS-CBY-00696.period",
+   "old": null,
+   "new": "2026-06"
+  },
+  {
+   "finding": "CLOSE-3C:U4",
+   "sheet": "18_CBY_MONETARY",
+   "row": 700,
+   "col": 7,
+   "field": "OBS-CBY-00696.value",
+   "old": null,
+   "new": 1560.95
+  },
+  {
+   "finding": "CLOSE-3C:U4",
+   "sheet": "18_CBY_MONETARY",
+   "row": 700,
+   "col": 8,
+   "field": "OBS-CBY-00696.unit",
+   "old": null,
+   "new": "YER per USD"
+  },
+  {
+   "finding": "CLOSE-3C:U4",
+   "sheet": "18_CBY_MONETARY",
+   "row": 700,
+   "col": 9,
+   "field": "OBS-CBY-00696.geography",
+   "old": null,
+   "new": "Yemen / CBY market-rate series"
+  },
+  {
+   "finding": "CLOSE-3C:U4",
+   "sheet": "18_CBY_MONETARY",
+   "row": 700,
+   "col": 10,
+   "field": "OBS-CBY-00696.comparability_status",
+   "old": null,
+   "new": "SOURCE_DEFINED"
+  },
+  {
+   "finding": "CLOSE-3C:U4",
+   "sheet": "18_CBY_MONETARY",
+   "row": 700,
+   "col": 11,
+   "field": "OBS-CBY-00696.methodology_flag",
+   "old": null,
+   "new": "Monthly average market exchange rate"
+  },
+  {
+   "finding": "CLOSE-3C:U4",
+   "sheet": "18_CBY_MONETARY",
+   "row": 700,
+   "col": 12,
+   "field": "OBS-CBY-00696.notes",
+   "old": null,
+   "new": "Read in the original on 10 October 2026 (close-out U4): Issue No. 55 (June 2026), Table 6 'Average Market Exchange Rates', printed p.17 (PDF p.18), row June, column 2026. Only the series the close-out objects use are entered for June 2026."
+  },
+  {
+   "finding": "CLOSE-3C:U4",
+   "sheet": "18_CBY_MONETARY",
+   "row": 700,
+   "col": 13,
+   "field": "OBS-CBY-00696.original_url",
+   "old": null,
+   "new": "https://english.cby-ye.com/files/6ab393186466e.pdf"
+  },
+  {
+   "finding": "CLOSE-3C:U4",
+   "sheet": "15_SOURCE_LIBRARY",
+   "row": 5,
+   "col": 2,
+   "field": "SRC-CBY-001.primary_url",
+   "old": "https://english.cby-ye.com/files/6a5a2e6bcc3cd.pdf",
+   "new": "https://english.cby-ye.com/files/6ab393186466e.pdf"
+  },
+  {
+   "finding": "CLOSE-3C:U4",
+   "sheet": "15_SOURCE_LIBRARY",
+   "row": 5,
+   "col": 6,
+   "field": "SRC-CBY-001.display_title",
+   "old": "Monetary and Financial Developments, Issue No. 54 (May 2026)",
+   "new": "Monetary and Financial Developments, Issue No. 55 (June 2026)"
+  },
+  {
+   "finding": "CLOSE-3C:U4",
+   "sheet": "15_SOURCE_LIBRARY",
+   "row": 5,
+   "col": 12,
+   "field": "SRC-CBY-001.display_title_ar",
+   "old": "التطورات النقدية والمالية، العدد 54 (مايو 2026)",
+   "new": "التطورات النقدية والمالية، العدد 55 (يونيو 2026)"
+  },
+  {
+   "finding": "CLOSE-3C:U4",
+   "sheet": "15_SOURCE_LIBRARY",
+   "row": 5,
+   "col": 28,
+   "field": "SRC-CBY-001.document_date",
+   "old": "2026-05",
+   "new": "2026-06"
+  },
+  {
+   "finding": "CLOSE-3C:U4",
+   "sheet": "15_SOURCE_LIBRARY",
+   "row": 5,
+   "col": 22,
+   "field": "SRC-CBY-001.retrieval_date",
+   "old": "2026-10-04",
+   "new": "2026-10-10"
+  },
+  {
+   "finding": "CLOSE-3C:U4",
+   "sheet": "15_SOURCE_LIBRARY",
+   "row": 5,
+   "col": 16,
+   "field": "SRC-CBY-001.non_public_locator_note",
+   "old": "The monetary series is a periodical. Every observation of this resource's monetary series is read from the issue recorded as the primary locator, which carries the back-data tables; the thirteen issues for December 2021 to December 2022 are recorded beside it so a reader can also reach the issue that first published a monthly value of those two years, together with the bank's own index of the series and its regulations and publications pages. All nineteen addresses were opened on 4 October 2026. The issue number of each was read from the document itself; the May 2022 issue prints no issue number, so none is stated for it.",
+   "new": "The monetary series is a periodical. Each observation records the issue it was read from: the June 2026 values from Issue No. 55 (June 2026), the primary locator, opened on 10 October 2026 with its Arabic edition, which is recorded beside it; every earlier value, including those for April and May 2026, from Issue No. 54 (May 2026), which carries the back-data tables and is also recorded beside it. Issue No. 55 prints the same end-2025 and May 2026 values for the ten series the close-out tables show. The thirteen issues for December 2021 to December 2022 are recorded so a reader can also reach the issue that first published a monthly value of those two years, together with the bank's own index of the series and its regulations and publications pages. Issue No. 54 and those nineteen addresses were opened on 4 October 2026. The issue number of each was read from the document itself; the May 2022 issue prints no issue number, so none is stated for it."
+  },
+  {
+   "finding": "CLOSE-3C:U4",
+   "sheet": "15_SOURCE_LIBRARY",
+   "row": 5,
+   "col": 3,
+   "field": "SRC-CBY-001.additional_urls",
+   "old": "[\"https://cby-ye.com/publicationsandcirculars\", \"https://english.cby-ye.com/publicationsandcirculars\", \"https://cby-ye.com/rulesandregulations\", \"https://english.cby-ye.com/rulesandregulations\", \"https://cby-ye.com/researchandstatistics\", \"https://english.cby-ye.com/researchandstatistics\", \"https://english.cby-ye.com/files/630342f7c26ae.pdf\", \"https://english.cby-ye.com/files/6303431ed26c1.pdf\", \"https://english.cby-ye.com/files/63034338c577c.pdf\", \"https://english.cby-ye.com/files/63033876c3f92.pdf\", \"https://english.cby-ye.com/files/630338c8b5600.pdf\", \"https://english.cby-ye.com/files/6303391a7e9e7.pdf\", \"https://english.cby-ye.com/files/634f8fcb92d5f.pdf\", \"https://english.cby-ye.com/files/634f90085bdcd.pdf\", \"https://english.cby-ye.com/files/634f9042dbb84.pdf\", \"https://english.cby-ye.com/files/63aadf8d70ae1.pdf\", \"https://english.cby-ye.com/files/63aadfbe154e8.pdf\", \"https://english.cby-ye.com/files/63d231418c14b.pdf\", \"https://english.cby-ye.com/files/64115abe770bb.pdf\"]",
+   "new": "[\"https://english.cby-ye.com/files/6a5a2e6bcc3cd.pdf\", \"https://cby-ye.com/files/6ab390fcaf357.pdf\", \"https://cby-ye.com/publicationsandcirculars\", \"https://english.cby-ye.com/publicationsandcirculars\", \"https://cby-ye.com/rulesandregulations\", \"https://english.cby-ye.com/rulesandregulations\", \"https://cby-ye.com/researchandstatistics\", \"https://english.cby-ye.com/researchandstatistics\", \"https://english.cby-ye.com/files/630342f7c26ae.pdf\", \"https://english.cby-ye.com/files/6303431ed26c1.pdf\", \"https://english.cby-ye.com/files/63034338c577c.pdf\", \"https://english.cby-ye.com/files/63033876c3f92.pdf\", \"https://english.cby-ye.com/files/630338c8b5600.pdf\", \"https://english.cby-ye.com/files/6303391a7e9e7.pdf\", \"https://english.cby-ye.com/files/634f8fcb92d5f.pdf\", \"https://english.cby-ye.com/files/634f90085bdcd.pdf\", \"https://english.cby-ye.com/files/634f9042dbb84.pdf\", \"https://english.cby-ye.com/files/63aadf8d70ae1.pdf\", \"https://english.cby-ye.com/files/63aadfbe154e8.pdf\", \"https://english.cby-ye.com/files/63d231418c14b.pdf\", \"https://english.cby-ye.com/files/64115abe770bb.pdf\"]"
+  },
+  {
+   "finding": "CLOSE-3C:U4",
+   "sheet": "15_SOURCE_LIBRARY",
+   "row": 5,
+   "col": 5,
+   "field": "SRC-CBY-001.row_count",
+   "old": "686",
+   "new": "696"
+  },
+  {
+   "finding": "CLOSE-3C",
+   "sheet": "04_NAV_UX",
+   "row": null,
+   "col": null,
+   "field": "UI-VIS-TH-CBY-ITEM",
+   "old": null,
+   "new": "Indicator (unit) || المؤشر (الوحدة)"
+  },
+  {
+   "finding": "CLOSE-3C",
+   "sheet": "04_NAV_UX",
+   "row": null,
+   "col": null,
+   "field": "UI-VIS-TH-CBY-END-2025",
+   "old": null,
+   "new": "End of 2025 || نهاية 2025"
+  },
+  {
+   "finding": "CLOSE-3C",
+   "sheet": "04_NAV_UX",
+   "row": null,
+   "col": null,
+   "field": "UI-VIS-TH-CBY-2026-05",
+   "old": null,
+   "new": "May 2026 || مايو 2026"
+  },
+  {
+   "finding": "CLOSE-3C",
+   "sheet": "04_NAV_UX",
+   "row": null,
+   "col": null,
+   "field": "UI-VIS-TH-CBY-2026-06",
+   "old": null,
+   "new": "June 2026 || يونيو 2026"
+  },
+  {
+   "finding": "CLOSE-3C",
+   "sheet": "04_NAV_UX",
+   "row": null,
+   "col": null,
+   "field": "UI-VIS-ROW-CBY-RATE",
+   "old": null,
+   "new": "Average market rate for the month, rials per US dollar (December 2025; June 2026) || متوسط سعر الصرف السوقي للشهر، ريال لكل دولار أمريكي (ديسمبر 2025؛ يونيو 2026)"
+  },
+  {
+   "finding": "CLOSE-3C",
+   "sheet": "04_NAV_UX",
+   "row": null,
+   "col": null,
+   "field": "UI-VIS-ROW-CBY-M2",
+   "old": null,
+   "new": "Broad money, M2 (YER billion) || العرض النقدي الواسع M2 (مليار ريال يمني)"
+  },
+  {
+   "finding": "CLOSE-3C",
+   "sheet": "04_NAV_UX",
+   "row": null,
+   "col": null,
+   "field": "UI-VIS-ROW-CBY-CIC-SHARE",
+   "old": null,
+   "new": "Currency in circulation (% of M2) || العملة المتداولة (% من M2)"
+  },
+  {
+   "finding": "CLOSE-3C",
+   "sheet": "04_NAV_UX",
+   "row": null,
+   "col": null,
+   "field": "UI-VIS-ROW-CBY-FX-SHARE",
+   "old": null,
+   "new": "Foreign-currency deposits (% of total deposits) || الودائع بالعملات الأجنبية (% من إجمالي الودائع)"
+  },
+  {
+   "finding": "CLOSE-3C",
+   "sheet": "04_NAV_UX",
+   "row": null,
+   "col": null,
+   "field": "UI-VIS-ROW-CBY-ASSETS",
+   "old": null,
+   "new": "Banks' total assets (YER billion) || إجمالي أصول البنوك (مليار ريال يمني)"
+  },
+  {
+   "finding": "CLOSE-3C",
+   "sheet": "04_NAV_UX",
+   "row": null,
+   "col": null,
+   "field": "UI-VIS-ROW-CBY-FOREIGN",
+   "old": null,
+   "new": "Banks' foreign assets (YER billion) || الأصول الخارجية للبنوك (مليار ريال يمني)"
+  },
+  {
+   "finding": "CLOSE-3C",
+   "sheet": "04_NAV_UX",
+   "row": null,
+   "col": null,
+   "field": "UI-VIS-ROW-CBY-PRIVATE",
+   "old": null,
+   "new": "Banks' credit to the private sector (YER billion) || الائتمان الممنوح من البنوك للقطاع الخاص (مليار ريال يمني)"
+  },
+  {
+   "finding": "CLOSE-3C",
+   "sheet": "04_NAV_UX",
+   "row": null,
+   "col": null,
+   "field": "UI-VIS-ROW-CBY-GOV",
+   "old": null,
+   "new": "Banks' loans and advances to government (YER billion) || قروض البنوك وسلفياتها للحكومة (مليار ريال يمني)"
+  },
+  {
+   "finding": "CLOSE-3C",
+   "sheet": "04_NAV_UX",
+   "row": null,
+   "col": null,
+   "field": "UI-VIS-CAP-CBY-MFD-55",
+   "old": null,
+   "new": "CBY-Aden, Monetary and Financial Developments, Issue No. 55 || البنك المركزي اليمني – عدن، التطورات النقدية والمالية، العدد 55"
+  },
+  {
+   "finding": "CLOSE-3C",
+   "sheet": "04_NAV_UX",
+   "row": null,
+   "col": null,
+   "field": "UI-VIS-CAP-CBY-AS-PRINTED",
+   "old": null,
+   "new": "values and shares as the bulletin prints them; rial values are nominal || القيم والحصص كما ترد في النشرة؛ والقيم بالريال اسمية"
+  },
+  {
+   "finding": "CLOSE-3C",
+   "sheet": "04_NAV_UX",
+   "row": null,
+   "col": null,
+   "field": "UI-VIS-CAP-CBY-VALUES-AS-PRINTED",
+   "old": null,
+   "new": "values as the bulletin prints them; nominal rials || القيم كما ترد في النشرة؛ بالريال الاسمي"
+  },
+  {
+   "finding": "CLOSE-3C",
+   "sheet": "04_NAV_UX",
+   "row": null,
+   "col": null,
+   "field": "UI-VIS-NOTE-CBY-FIREWALL",
+   "old": null,
+   "new": "Monetary aggregates and bank balance sheets describe the banking system, not people's access to or use of financial services. || تصف المجاميع النقدية وميزانيات البنوك الجهاز المصرفي، لا وصول الأفراد إلى الخدمات المالية ولا استخدامهم لها."
+  },
+  {
+   "finding": "CLOSE-3C",
+   "sheet": "04_NAV_UX",
+   "row": null,
+   "col": null,
+   "field": "UI-VIS-NOTE-CBY-COVERAGE",
+   "old": null,
+   "new": "The bulletin defines banks as the commercial and Islamic banks operating in the Republic of Yemen but does not say which banks and branches report to it; the figures are not shown to cover all of Yemen. || تُعرِّف النشرة البنوك بأنها البنوك التجارية والإسلامية العاملة في الجمهورية اليمنية، لكنها لا تذكر أيُّ البنوك والفروع تقدم بياناتها إليها؛ ولا يثبت أن الأرقام تغطي اليمن كله."
+  },
+  {
+   "finding": "CLOSE-3C",
+   "sheet": "04_NAV_UX",
+   "row": null,
+   "col": null,
+   "field": "UI-VIS-NOTE-CBY-NOT-ALL-LINES",
+   "old": null,
+   "new": "The three lines do not add up to total assets: reserves, loans and advances to public enterprises and other assets are not shown. || لا يساوي مجموع البنود الثلاثة إجمالي الأصول: فالاحتياطيات والقروض والسلفيات للمؤسسات العامة والأصول الأخرى غير معروضة."
+  },
+  {
+   "finding": "CLOSE-3C",
+   "sheet": "04_NAV_UX",
+   "row": null,
+   "col": null,
+   "field": "UI-VIS-NOTE-CBY-RATE-SOURCE",
+   "old": null,
+   "new": "The rate is the monthly average market rate that CBY-Aden publishes; it is not the rate in Sana'a and not any single day's rate. || السعر هو متوسط سعر الصرف السوقي الشهري الذي ينشره البنك المركزي اليمني – عدن؛ وهو ليس سعر الصرف في صنعاء، ولا سعر يوم واحد بعينه."
+  },
+  {
+   "finding": "CLOSE-3C",
+   "sheet": "04_NAV_UX",
+   "row": null,
+   "col": null,
+   "field": "UI-VIS-NOTE-RATE-2025-MOVE",
+   "old": null,
+   "new": "The line joins the published monthly averages and adds no smoothing of its own. The average was 2,733.85 rials per US dollar in June 2025, 2,212.7 in July and 1,624.5 in August. || يصل الخط بين المتوسطات الشهرية المنشورة ولا يضيف إليها أي تنعيم. وكان المتوسط 2,733.85 ريالًا للدولار الأمريكي في يونيو 2025، و2,212.7 في يوليو، و1,624.5 في أغسطس."
+  },
+  {
+   "finding": "CLOSE-3C",
+   "sheet": "04_NAV_UX",
+   "row": null,
+   "col": null,
+   "field": "UI-VIS-NOTE-POS-RATE-WINDOW",
+   "old": null,
+   "new": "The months shown span the move in the rial's published market rate between June and August 2025; the values are nominal rials, not adjusted for it, and the chart does not show whether the move changed them. || تشمل الأشهر المعروضة تحرّك سعر الصرف السوقي المنشور للريال بين يونيو وأغسطس 2025؛ والقيم بالريال الاسمي ولا تُعدَّل لمراعاة هذا التحرك، ولا يُظهر الرسم ما إذا كان التحرك قد غيّرها."
+  },
+  {
+   "finding": "CLOSE-3C",
+   "sheet": "04_NAV_UX",
+   "row": null,
+   "col": null,
+   "field": "UI-VIS-UNIT-YER-PER-USD",
+   "old": null,
+   "new": "Rials per US dollar (monthly average) || ريال لكل دولار أمريكي (متوسط شهري)"
+  },
+  {
+   "finding": "CLOSE-3C:U4",
+   "sheet": "11_VISUAL_LIBRARY",
+   "row": 44,
+   "col": 1,
+   "field": "VIS-CBY-MONETARY-SNAPSHOT.visual_id",
+   "old": null,
+   "new": "VIS-CBY-MONETARY-SNAPSHOT"
+  },
+  {
+   "finding": "CLOSE-3C:U4",
+   "sheet": "11_VISUAL_LIBRARY",
+   "row": 44,
+   "col": 2,
+   "field": "VIS-CBY-MONETARY-SNAPSHOT.title_en",
+   "old": null,
+   "new": "Money and bank balance sheets: the end of 2025 and June 2026"
+  },
+  {
+   "finding": "CLOSE-3C:U4",
+   "sheet": "11_VISUAL_LIBRARY",
+   "row": 44,
+   "col": 3,
+   "field": "VIS-CBY-MONETARY-SNAPSHOT.title_ar",
+   "old": null,
+   "new": "النقود وميزانيات البنوك: نهاية 2025 ويونيو 2026"
+  },
+  {
+   "finding": "CLOSE-3C:U4",
+   "sheet": "11_VISUAL_LIBRARY",
+   "row": 44,
+   "col": 4,
+   "field": "VIS-CBY-MONETARY-SNAPSHOT.visual_form",
+   "old": null,
+   "new": "TABLE_TEXT_FIRST"
+  },
+  {
+   "finding": "CLOSE-3C:U4",
+   "sheet": "11_VISUAL_LIBRARY",
+   "row": 44,
+   "col": 5,
+   "field": "VIS-CBY-MONETARY-SNAPSHOT.question_en",
+   "old": null,
+   "new": "What does the latest issue of CBY-Aden's monthly bulletin (June 2026) show for money and bank balance sheets?"
+  },
+  {
+   "finding": "CLOSE-3C:U4",
+   "sheet": "11_VISUAL_LIBRARY",
+   "row": 44,
+   "col": 6,
+   "field": "VIS-CBY-MONETARY-SNAPSHOT.question_ar",
+   "old": null,
+   "new": "ماذا يُظهر أحدث عدد من النشرة الشهرية للبنك المركزي اليمني – عدن (يونيو 2026) عن النقود وميزانيات البنوك؟"
+  },
+  {
+   "finding": "CLOSE-3C:U4",
+   "sheet": "11_VISUAL_LIBRARY",
+   "row": 44,
+   "col": 7,
+   "field": "VIS-CBY-MONETARY-SNAPSHOT.what_it_shows_en",
+   "old": null,
+   "new": "Eight indicators from the monthly bulletin of the Central Bank of Yemen – Aden at the end of 2025 and in June 2026: the average market rate, broad money, the shares of currency in circulation and of foreign-currency deposits, and the banks' total assets, foreign assets, credit to the private sector and loans and advances to government, as the bulletin prints them."
+  },
+  {
+   "finding": "CLOSE-3C:U4",
+   "sheet": "11_VISUAL_LIBRARY",
+   "row": 44,
+   "col": 8,
+   "field": "VIS-CBY-MONETARY-SNAPSHOT.what_it_shows_ar",
+   "old": null,
+   "new": "ثمانية مؤشرات من النشرة الشهرية للبنك المركزي اليمني – عدن في نهاية 2025 وفي يونيو 2026: متوسط سعر الصرف السوقي، والعرض النقدي الواسع، وحصتا العملة المتداولة والودائع بالعملات الأجنبية، وإجمالي أصول البنوك وأصولها الخارجية والائتمان الممنوح منها للقطاع الخاص وقروضها وسلفياتها للحكومة، كما ترد في النشرة."
+  },
+  {
+   "finding": "CLOSE-3C:U4",
+   "sheet": "11_VISUAL_LIBRARY",
+   "row": 44,
+   "col": 9,
+   "field": "VIS-CBY-MONETARY-SNAPSHOT.decision_value_en",
+   "old": null,
+   "new": "Gives two dated positions of the monetary and banking system side by side, in the bulletin's own units, before any reading of change."
+  },
+  {
+   "finding": "CLOSE-3C:U4",
+   "sheet": "11_VISUAL_LIBRARY",
+   "row": 44,
+   "col": 10,
+   "field": "VIS-CBY-MONETARY-SNAPSHOT.decision_value_ar",
+   "old": null,
+   "new": "يضع مركزين مؤرخين للنظام النقدي والمصرفي جنبًا إلى جنب، بوحدات النشرة نفسها، قبل أي قراءة للتغير."
+  },
+  {
+   "finding": "CLOSE-3C:U4",
+   "sheet": "11_VISUAL_LIBRARY",
+   "row": 44,
+   "col": 11,
+   "field": "VIS-CBY-MONETARY-SNAPSHOT.source_period",
+   "old": null,
+   "new": "End of 2025; June 2026 (Issue No. 55)"
+  },
+  {
+   "finding": "CLOSE-3C:U4",
+   "sheet": "11_VISUAL_LIBRARY",
+   "row": 44,
+   "col": 12,
+   "field": "VIS-CBY-MONETARY-SNAPSHOT.evidence_strength",
+   "old": null,
+   "new": "HIGH_ADMIN"
+  },
+  {
+   "finding": "CLOSE-3C:U4",
+   "sheet": "11_VISUAL_LIBRARY",
+   "row": 44,
+   "col": 13,
+   "field": "VIS-CBY-MONETARY-SNAPSHOT.freshness_profile",
+   "old": null,
+   "new": "2025 year-end; 2026-06"
+  },
+  {
+   "finding": "CLOSE-3C:U4",
+   "sheet": "11_VISUAL_LIBRARY",
+   "row": 44,
+   "col": 14,
+   "field": "VIS-CBY-MONETARY-SNAPSHOT.data_inputs",
+   "old": null,
+   "new": "18_CBY_MONETARY: market rate, M2, currency in circulation share, FX deposit share, bank total assets, foreign assets, private credit, loans and advances to government (end of 2025 and June 2026)"
+  },
+  {
+   "finding": "CLOSE-3C:U4",
+   "sheet": "11_VISUAL_LIBRARY",
+   "row": 44,
+   "col": 15,
+   "field": "VIS-CBY-MONETARY-SNAPSHOT.unit_or_object",
+   "old": null,
+   "new": "YER billion; percent; rials per US dollar, each row in its own unit"
+  },
+  {
+   "finding": "CLOSE-3C:U4",
+   "sheet": "11_VISUAL_LIBRARY",
+   "row": 44,
+   "col": 16,
+   "field": "VIS-CBY-MONETARY-SNAPSHOT.denominator_universe",
+   "old": null,
+   "new": "The monetary survey and the consolidated balance sheet of commercial and Islamic banks published by the Central Bank of Yemen – Aden (CBY-Aden) in Monetary and Financial Developments; the bulletin defines banks as those operating in the Republic of Yemen but does not say which banks and branches report to it."
+  },
+  {
+   "finding": "CLOSE-3C:U4",
+   "sheet": "11_VISUAL_LIBRARY",
+   "row": 44,
+   "col": 17,
+   "field": "VIS-CBY-MONETARY-SNAPSHOT.period",
+   "old": null,
+   "new": "End of 2025; June 2026"
+  },
+  {
+   "finding": "CLOSE-3C:U4",
+   "sheet": "11_VISUAL_LIBRARY",
+   "row": 44,
+   "col": 18,
+   "field": "VIS-CBY-MONETARY-SNAPSHOT.encoding_contract",
+   "old": null,
+   "new": "Table: one row per indicator in its own unit; two dated columns; values and shares as printed; no change column and no growth rate."
+  },
+  {
+   "finding": "CLOSE-3C:U4",
+   "sheet": "11_VISUAL_LIBRARY",
+   "row": 44,
+   "col": 19,
+   "field": "VIS-CBY-MONETARY-SNAPSHOT.prohibited_inference_en",
+   "old": null,
+   "new": "Monetary aggregates and bank balance sheets describe the banking system, not people's access to or use of financial services. Money and balance-sheet values are nominal rials, partly valued at market exchange rates, so a change between the two columns cannot be read as real growth; the figures are not shown to cover all of Yemen."
+  },
+  {
+   "finding": "CLOSE-3C:U4",
+   "sheet": "11_VISUAL_LIBRARY",
+   "row": 44,
+   "col": 20,
+   "field": "VIS-CBY-MONETARY-SNAPSHOT.prohibited_inference_ar",
+   "old": null,
+   "new": "تصف المجاميع النقدية وميزانيات البنوك الجهاز المصرفي، لا وصول الأفراد إلى الخدمات المالية ولا استخدامهم لها. وقيم النقود والميزانيات بالريال الاسمي، ويُقيَّم جزء منها بأسعار الصرف السوقية، فلا يمكن قراءة التغير بين العمودين على أنه نمو حقيقي؛ ولا يثبت أن الأرقام تغطي اليمن كله."
+  },
+  {
+   "finding": "CLOSE-3C:U4",
+   "sheet": "11_VISUAL_LIBRARY",
+   "row": 44,
+   "col": 21,
+   "field": "VIS-CBY-MONETARY-SNAPSHOT.accessible_summary_en",
+   "old": null,
+   "new": "From the end of 2025 to June 2026, as the bulletin of the Central Bank of Yemen – Aden prints them: the average market rate went from 1,624.45 to 1,560.95 rials per US dollar (December 2025 and June 2026 monthly averages); broad money from 11,429.3 to 11,925.0 billion rials; currency in circulation from 28.6% to 28.4% of broad money; foreign-currency deposits from 71.0% to 68.0% of total deposits; the banks' total assets from 12,341.8 to 13,761.2 billion rials, their foreign assets from 4,116.5 to 4,650.0 billion, their credit to the private sector from 1,392.3 to 1,362.9 billion and their loans and advances to government from 1,928.8 to 1,966.8 billion. Money and balance-sheet values are in nominal rials; all of these describe the banking system, not people's access or use; the bulletin does not say which banks and branches report to it."
+  },
+  {
+   "finding": "CLOSE-3C:U4",
+   "sheet": "11_VISUAL_LIBRARY",
+   "row": 44,
+   "col": 22,
+   "field": "VIS-CBY-MONETARY-SNAPSHOT.accessible_summary_ar",
+   "old": null,
+   "new": "من نهاية 2025 إلى يونيو 2026، كما ترد في نشرة البنك المركزي اليمني – عدن: انتقل متوسط سعر الصرف السوقي من 1,624.45 إلى 1,560.95 ريالًا للدولار الأمريكي (المتوسطان الشهريان لديسمبر 2025 ويونيو 2026)؛ والعرض النقدي الواسع من 11,429.3 إلى 11,925.0 مليار ريال؛ والعملة المتداولة من 28.6% إلى 28.4% من العرض النقدي الواسع؛ والودائع بالعملات الأجنبية من 71.0% إلى 68.0% من إجمالي الودائع؛ وإجمالي أصول البنوك من 12,341.8 إلى 13,761.2 مليار ريال، وأصولها الخارجية من 4,116.5 إلى 4,650.0 مليار، والائتمان الممنوح منها للقطاع الخاص من 1,392.3 إلى 1,362.9 مليار، وقروضها وسلفياتها للحكومة من 1,928.8 إلى 1,966.8 مليار. وقيم النقود والميزانيات بالريال الاسمي، وكلها تصف الجهاز المصرفي لا وصول الأفراد أو استخدامهم؛ ولا تذكر النشرة أيُّ البنوك والفروع تقدم بياناتها إليها."
+  },
+  {
+   "finding": "CLOSE-3C:U4",
+   "sheet": "11_VISUAL_LIBRARY",
+   "row": 44,
+   "col": 23,
+   "field": "VIS-CBY-MONETARY-SNAPSHOT.public_routes",
+   "old": null,
+   "new": "[\"/finance\"]"
+  },
+  {
+   "finding": "CLOSE-3C:U4",
+   "sheet": "11_VISUAL_LIBRARY",
+   "row": 44,
+   "col": 24,
+   "field": "VIS-CBY-MONETARY-SNAPSHOT.period_ar",
+   "old": null,
+   "new": "نهاية 2025؛ يونيو 2026"
+  },
+  {
+   "finding": "CLOSE-3C:U4",
+   "sheet": "11_VISUAL_LIBRARY",
+   "row": 44,
+   "col": 25,
+   "field": "VIS-CBY-MONETARY-SNAPSHOT.universe_ar",
+   "old": null,
+   "new": "المسح النقدي والميزانية المجمعة للبنوك التجارية والإسلامية كما ينشرهما البنك المركزي اليمني – عدن في نشرته الشهرية «التطورات النقدية والمالية»؛ وتُعرِّف النشرة البنوك بأنها العاملة في الجمهورية اليمنية، لكنها لا تذكر أيُّ البنوك والفروع تقدم بياناتها إليها."
+  },
+  {
+   "finding": "CLOSE-3C:U4",
+   "sheet": "11_VISUAL_LIBRARY",
+   "row": 45,
+   "col": 1,
+   "field": "VIS-YER-MARKET-RATE.visual_id",
+   "old": null,
+   "new": "VIS-YER-MARKET-RATE"
+  },
+  {
+   "finding": "CLOSE-3C:U4",
+   "sheet": "11_VISUAL_LIBRARY",
+   "row": 45,
+   "col": 2,
+   "field": "VIS-YER-MARKET-RATE.title_en",
+   "old": null,
+   "new": "The rial's average market rate published by CBY-Aden, monthly"
+  },
+  {
+   "finding": "CLOSE-3C:U4",
+   "sheet": "11_VISUAL_LIBRARY",
+   "row": 45,
+   "col": 3,
+   "field": "VIS-YER-MARKET-RATE.title_ar",
+   "old": null,
+   "new": "متوسط سعر الصرف السوقي للريال كما ينشره البنك المركزي اليمني – عدن، شهريًا"
+  },
+  {
+   "finding": "CLOSE-3C:U4",
+   "sheet": "11_VISUAL_LIBRARY",
+   "row": 45,
+   "col": 4,
+   "field": "VIS-YER-MARKET-RATE.visual_form",
+   "old": null,
+   "new": "LINE_MONTHLY_ANNOTATED"
+  },
+  {
+   "finding": "CLOSE-3C:U4",
+   "sheet": "11_VISUAL_LIBRARY",
+   "row": 45,
+   "col": 5,
+   "field": "VIS-YER-MARKET-RATE.question_en",
+   "old": null,
+   "new": "How has the average market rate that CBY-Aden publishes moved since 2017?"
+  },
+  {
+   "finding": "CLOSE-3C:U4",
+   "sheet": "11_VISUAL_LIBRARY",
+   "row": 45,
+   "col": 6,
+   "field": "VIS-YER-MARKET-RATE.question_ar",
+   "old": null,
+   "new": "كيف تحرك متوسط سعر الصرف السوقي الذي ينشره البنك المركزي اليمني – عدن منذ 2017؟"
+  },
+  {
+   "finding": "CLOSE-3C:U4",
+   "sheet": "11_VISUAL_LIBRARY",
+   "row": 45,
+   "col": 7,
+   "field": "VIS-YER-MARKET-RATE.what_it_shows_en",
+   "old": null,
+   "new": "The monthly average market rate of the rial against the US dollar that the Central Bank of Yemen – Aden publishes, from January 2017 to June 2026, drawn as published, with the June to August 2025 move annotated rather than smoothed."
+  },
+  {
+   "finding": "CLOSE-3C:U4",
+   "sheet": "11_VISUAL_LIBRARY",
+   "row": 45,
+   "col": 8,
+   "field": "VIS-YER-MARKET-RATE.what_it_shows_ar",
+   "old": null,
+   "new": "متوسط سعر الصرف السوقي الشهري للريال مقابل الدولار الأمريكي الذي ينشره البنك المركزي اليمني – عدن، من يناير 2017 إلى يونيو 2026، مرسومًا كما نُشر، مع تعليق توضيحي على التحرك بين يونيو وأغسطس 2025 بدل تنعيمه."
+  },
+  {
+   "finding": "CLOSE-3C:U4",
+   "sheet": "11_VISUAL_LIBRARY",
+   "row": 45,
+   "col": 9,
+   "field": "VIS-YER-MARKET-RATE.decision_value_en",
+   "old": null,
+   "new": "Puts the published monthly average market rate beside balance-sheet values in rials, so that a move in rial values is checked against the rate before it is read as economic change; the bulletin does not say which rate, or which day's rate, values the banks' foreign-currency items."
+  },
+  {
+   "finding": "CLOSE-3C:U4",
+   "sheet": "11_VISUAL_LIBRARY",
+   "row": 45,
+   "col": 10,
+   "field": "VIS-YER-MARKET-RATE.decision_value_ar",
+   "old": null,
+   "new": "يضع متوسط سعر الصرف السوقي الشهري المنشور بجانب قيم الميزانيات بالريال، حتى يُفحص تحرك القيم بالريال في ضوء السعر قبل أن يُقرأ على أنه تغير اقتصادي؛ ولا تبيّن النشرة بأي سعر، ولا بسعر أي يوم، تُقيَّم البنود المقوّمة بالعملات الأجنبية لدى البنوك."
+  },
+  {
+   "finding": "CLOSE-3C:U4",
+   "sheet": "11_VISUAL_LIBRARY",
+   "row": 45,
+   "col": 11,
+   "field": "VIS-YER-MARKET-RATE.source_period",
+   "old": null,
+   "new": "2017-01→2026-06 monthly"
+  },
+  {
+   "finding": "CLOSE-3C:U4",
+   "sheet": "11_VISUAL_LIBRARY",
+   "row": 45,
+   "col": 12,
+   "field": "VIS-YER-MARKET-RATE.evidence_strength",
+   "old": null,
+   "new": "HIGH_ADMIN"
+  },
+  {
+   "finding": "CLOSE-3C:U4",
+   "sheet": "11_VISUAL_LIBRARY",
+   "row": 45,
+   "col": 13,
+   "field": "VIS-YER-MARKET-RATE.freshness_profile",
+   "old": null,
+   "new": "2017-01→2026-06"
+  },
+  {
+   "finding": "CLOSE-3C:U4",
+   "sheet": "11_VISUAL_LIBRARY",
+   "row": 45,
+   "col": 14,
+   "field": "VIS-YER-MARKET-RATE.data_inputs",
+   "old": null,
+   "new": "18_CBY_MONETARY YER_USD_MARKET_RATE (Table 6)"
+  },
+  {
+   "finding": "CLOSE-3C:U4",
+   "sheet": "11_VISUAL_LIBRARY",
+   "row": 45,
+   "col": 15,
+   "field": "VIS-YER-MARKET-RATE.unit_or_object",
+   "old": null,
+   "new": "rials per US dollar, monthly average"
+  },
+  {
+   "finding": "CLOSE-3C:U4",
+   "sheet": "11_VISUAL_LIBRARY",
+   "row": 45,
+   "col": 16,
+   "field": "VIS-YER-MARKET-RATE.denominator_universe",
+   "old": null,
+   "new": "The monthly average market exchange rate of the rial against the US dollar published by the Central Bank of Yemen – Aden (CBY-Aden) in Monetary and Financial Developments (Table 6), which the English edition of the bulletin calls the parallel-market rate; not the rate in Sana'a and not any single day's rate."
+  },
+  {
+   "finding": "CLOSE-3C:U4",
+   "sheet": "11_VISUAL_LIBRARY",
+   "row": 45,
+   "col": 17,
+   "field": "VIS-YER-MARKET-RATE.period",
+   "old": null,
+   "new": "January 2017 to June 2026"
+  },
+  {
+   "finding": "CLOSE-3C:U4",
+   "sheet": "11_VISUAL_LIBRARY",
+   "row": 45,
+   "col": 18,
+   "field": "VIS-YER-MARKET-RATE.encoding_contract",
+   "old": null,
+   "new": "Monthly line, one point per published month; the June to August 2025 move is annotated in the frame; no smoothing and no trend line."
+  },
+  {
+   "finding": "CLOSE-3C:U4",
+   "sheet": "11_VISUAL_LIBRARY",
+   "row": 45,
+   "col": 19,
+   "field": "VIS-YER-MARKET-RATE.prohibited_inference_en",
+   "old": null,
+   "new": "The line shows the monthly average market rate that CBY-Aden publishes. It is not the rate in Sana'a or any single day's rate; it does not explain why the rate moved, and it does not show that the rate was held or administered."
+  },
+  {
+   "finding": "CLOSE-3C:U4",
+   "sheet": "11_VISUAL_LIBRARY",
+   "row": 45,
+   "col": 20,
+   "field": "VIS-YER-MARKET-RATE.prohibited_inference_ar",
+   "old": null,
+   "new": "يعرض الخط متوسط سعر الصرف السوقي الشهري الذي ينشره البنك المركزي اليمني – عدن. وهو ليس سعر الصرف في صنعاء ولا سعر يوم واحد بعينه؛ ولا يفسر سبب تحرك السعر، ولا يُظهر أن السعر ثُبِّت أو حُدِّد إداريًا."
+  },
+  {
+   "finding": "CLOSE-3C:U4",
+   "sheet": "11_VISUAL_LIBRARY",
+   "row": 45,
+   "col": 21,
+   "field": "VIS-YER-MARKET-RATE.accessible_summary_en",
+   "old": null,
+   "new": "The average market rate of the rial published by the Central Bank of Yemen – Aden went from 315.64 rials per US dollar in January 2017 to 2,733.85 in June 2025, then to 2,212.7 in July and 1,624.5 in August 2025, and stood at 1,560.95 in June 2026. The line joins the published monthly averages and adds no smoothing of its own. It is not the rate in Sana'a or any single day's rate, and it does not explain why the rate moved."
+  },
+  {
+   "finding": "CLOSE-3C:U4",
+   "sheet": "11_VISUAL_LIBRARY",
+   "row": 45,
+   "col": 22,
+   "field": "VIS-YER-MARKET-RATE.accessible_summary_ar",
+   "old": null,
+   "new": "انتقل متوسط سعر الصرف السوقي للريال الذي ينشره البنك المركزي اليمني – عدن من 315.64 ريالًا للدولار الأمريكي في يناير 2017 إلى 2,733.85 في يونيو 2025، ثم إلى 2,212.7 في يوليو و1,624.5 في أغسطس 2025، وبلغ 1,560.95 في يونيو 2026. ويصل الخط بين المتوسطات الشهرية المنشورة ولا يضيف إليها أي تنعيم. وهو ليس سعر الصرف في صنعاء ولا سعر يوم واحد بعينه، ولا يفسر سبب تحرك السعر."
+  },
+  {
+   "finding": "CLOSE-3C:U4",
+   "sheet": "11_VISUAL_LIBRARY",
+   "row": 45,
+   "col": 23,
+   "field": "VIS-YER-MARKET-RATE.public_routes",
+   "old": null,
+   "new": "[\"/finance\"]"
+  },
+  {
+   "finding": "CLOSE-3C:U4",
+   "sheet": "11_VISUAL_LIBRARY",
+   "row": 45,
+   "col": 24,
+   "field": "VIS-YER-MARKET-RATE.period_ar",
+   "old": null,
+   "new": "من يناير 2017 إلى يونيو 2026"
+  },
+  {
+   "finding": "CLOSE-3C:U4",
+   "sheet": "11_VISUAL_LIBRARY",
+   "row": 45,
+   "col": 25,
+   "field": "VIS-YER-MARKET-RATE.universe_ar",
+   "old": null,
+   "new": "متوسط سعر الصرف السوقي الشهري للريال مقابل الدولار الأمريكي كما ينشره البنك المركزي اليمني – عدن في نشرته الشهرية «التطورات النقدية والمالية» (الجدول 6)، وتسميه النسخة الإنجليزية من النشرة سعر السوق الموازية؛ وهو ليس سعر الصرف في صنعاء ولا سعر يوم واحد بعينه."
+  },
+  {
+   "finding": "CLOSE-3C:U5",
+   "sheet": "11_VISUAL_LIBRARY",
+   "row": 46,
+   "col": 1,
+   "field": "RV-CWR-011.visual_id",
+   "old": null,
+   "new": "RV-CWR-011"
+  },
+  {
+   "finding": "CLOSE-3C:U5",
+   "sheet": "11_VISUAL_LIBRARY",
+   "row": 46,
+   "col": 2,
+   "field": "RV-CWR-011.title_en",
+   "old": null,
+   "new": "Where the banks' assets sit: three dated positions"
+  },
+  {
+   "finding": "CLOSE-3C:U5",
+   "sheet": "11_VISUAL_LIBRARY",
+   "row": 46,
+   "col": 3,
+   "field": "RV-CWR-011.title_ar",
+   "old": null,
+   "new": "أين تقع أصول البنوك: ثلاثة مراكز مؤرخة"
+  },
+  {
+   "finding": "CLOSE-3C:U5",
+   "sheet": "11_VISUAL_LIBRARY",
+   "row": 46,
+   "col": 4,
+   "field": "RV-CWR-011.visual_form",
+   "old": null,
+   "new": "TABLE_TEXT_FIRST"
+  },
+  {
+   "finding": "CLOSE-3C:U5",
+   "sheet": "11_VISUAL_LIBRARY",
+   "row": 46,
+   "col": 5,
+   "field": "RV-CWR-011.question_en",
+   "old": null,
+   "new": "How much of the banks' total assets sits in foreign assets, loans and advances to government and credit to the private sector?"
+  },
+  {
+   "finding": "CLOSE-3C:U5",
+   "sheet": "11_VISUAL_LIBRARY",
+   "row": 46,
+   "col": 6,
+   "field": "RV-CWR-011.question_ar",
+   "old": null,
+   "new": "كم من إجمالي أصول البنوك يقع في الأصول الخارجية، وفي القروض والسلفيات للحكومة، وفي الائتمان الممنوح للقطاع الخاص؟"
+  },
+  {
+   "finding": "CLOSE-3C:U5",
+   "sheet": "11_VISUAL_LIBRARY",
+   "row": 46,
+   "col": 7,
+   "field": "RV-CWR-011.what_it_shows_en",
+   "old": null,
+   "new": "The consolidated balance sheet of commercial and Islamic banks at the end of 2025, in May 2026 and in June 2026: total assets, foreign assets, loans and advances to government and credit to the private sector, as the bulletin of the Central Bank of Yemen – Aden prints them."
+  },
+  {
+   "finding": "CLOSE-3C:U5",
+   "sheet": "11_VISUAL_LIBRARY",
+   "row": 46,
+   "col": 8,
+   "field": "RV-CWR-011.what_it_shows_ar",
+   "old": null,
+   "new": "الميزانية المجمعة للبنوك التجارية والإسلامية في نهاية 2025 وفي مايو 2026 ويونيو 2026: إجمالي الأصول والأصول الخارجية والقروض والسلفيات للحكومة والائتمان الممنوح للقطاع الخاص، كما ترد في نشرة البنك المركزي اليمني – عدن."
+  },
+  {
+   "finding": "CLOSE-3C:U5",
+   "sheet": "11_VISUAL_LIBRARY",
+   "row": 46,
+   "col": 9,
+   "field": "RV-CWR-011.decision_value_en",
+   "old": null,
+   "new": "Keeps the composition behind the Reading's hypothesis visible in the bulletin's own figures, so that the hypothesis is read against them and not against a share alone."
+  },
+  {
+   "finding": "CLOSE-3C:U5",
+   "sheet": "11_VISUAL_LIBRARY",
+   "row": 46,
+   "col": 10,
+   "field": "RV-CWR-011.decision_value_ar",
+   "old": null,
+   "new": "يُبقي التوزيع الذي تستند إليه فرضية القراءة ظاهرًا بأرقام النشرة نفسها، حتى تُقرأ الفرضية في ضوئها لا في ضوء حصة منفردة."
+  },
+  {
+   "finding": "CLOSE-3C:U5",
+   "sheet": "11_VISUAL_LIBRARY",
+   "row": 46,
+   "col": 11,
+   "field": "RV-CWR-011.source_period",
+   "old": null,
+   "new": "End of 2025; May 2026; June 2026"
+  },
+  {
+   "finding": "CLOSE-3C:U5",
+   "sheet": "11_VISUAL_LIBRARY",
+   "row": 46,
+   "col": 12,
+   "field": "RV-CWR-011.evidence_strength",
+   "old": null,
+   "new": "HIGH_ADMIN"
+  },
+  {
+   "finding": "CLOSE-3C:U5",
+   "sheet": "11_VISUAL_LIBRARY",
+   "row": 46,
+   "col": 13,
+   "field": "RV-CWR-011.freshness_profile",
+   "old": null,
+   "new": "2025 year-end; 2026-05; 2026-06"
+  },
+  {
+   "finding": "CLOSE-3C:U5",
+   "sheet": "11_VISUAL_LIBRARY",
+   "row": 46,
+   "col": 14,
+   "field": "RV-CWR-011.data_inputs",
+   "old": null,
+   "new": "18_CBY_MONETARY T4: the CBY-BANKS-2026-05 rows and the June 2026 rows (Issue No. 55)"
+  },
+  {
+   "finding": "CLOSE-3C:U5",
+   "sheet": "11_VISUAL_LIBRARY",
+   "row": 46,
+   "col": 15,
+   "field": "RV-CWR-011.unit_or_object",
+   "old": null,
+   "new": "YER billion"
+  },
+  {
+   "finding": "CLOSE-3C:U5",
+   "sheet": "11_VISUAL_LIBRARY",
+   "row": 46,
+   "col": 16,
+   "field": "RV-CWR-011.denominator_universe",
+   "old": null,
+   "new": "The consolidated balance sheet of commercial and Islamic banks published by the Central Bank of Yemen – Aden (CBY-Aden); the bulletin defines banks as those operating in the Republic of Yemen but does not say which banks and branches report to it."
+  },
+  {
+   "finding": "CLOSE-3C:U5",
+   "sheet": "11_VISUAL_LIBRARY",
+   "row": 46,
+   "col": 17,
+   "field": "RV-CWR-011.period",
+   "old": null,
+   "new": "End of 2025; May 2026; June 2026"
+  },
+  {
+   "finding": "CLOSE-3C:U5",
+   "sheet": "11_VISUAL_LIBRARY",
+   "row": 46,
+   "col": 18,
+   "field": "RV-CWR-011.encoding_contract",
+   "old": null,
+   "new": "Table: one row per balance-sheet line, three dated columns, values as printed; no share column and no growth rate; a note says the lines shown do not add up to total assets."
+  },
+  {
+   "finding": "CLOSE-3C:U5",
+   "sheet": "11_VISUAL_LIBRARY",
+   "row": 46,
+   "col": 19,
+   "field": "RV-CWR-011.prohibited_inference_en",
+   "old": null,
+   "new": "The positions do not show why banks hold these assets, a credit allocation decision, or people's access to credit; values are nominal rials, partly valued at market exchange rates."
+  },
+  {
+   "finding": "CLOSE-3C:U5",
+   "sheet": "11_VISUAL_LIBRARY",
+   "row": 46,
+   "col": 20,
+   "field": "RV-CWR-011.prohibited_inference_ar",
+   "old": null,
+   "new": "لا تُظهر هذه المراكز سبب احتفاظ البنوك بهذه الأصول، ولا قرارًا بتخصيص الائتمان، ولا وصول الأفراد إلى الائتمان؛ والقيم بالريال الاسمي، ويُقيَّم جزء منها بأسعار الصرف السوقية."
+  },
+  {
+   "finding": "CLOSE-3C:U5",
+   "sheet": "11_VISUAL_LIBRARY",
+   "row": 46,
+   "col": 21,
+   "field": "RV-CWR-011.accessible_summary_en",
+   "old": null,
+   "new": "As the bulletin of the Central Bank of Yemen – Aden prints them, the banks' total assets were 12,341.8 billion rials at the end of 2025, 13,362.1 billion in May 2026 and 13,761.2 billion in June 2026; foreign assets 4,116.5, 4,448.0 and 4,650.0 billion; loans and advances to government 1,928.8, 2,145.0 and 1,966.8 billion; and credit to the private sector 1,392.3, 1,350.4 and 1,362.9 billion. The three lines do not add up to total assets, and the positions do not show why banks hold these assets or people's access to credit."
+  },
+  {
+   "finding": "CLOSE-3C:U5",
+   "sheet": "11_VISUAL_LIBRARY",
+   "row": 46,
+   "col": 22,
+   "field": "RV-CWR-011.accessible_summary_ar",
+   "old": null,
+   "new": "كما ترد في نشرة البنك المركزي اليمني – عدن، بلغ إجمالي أصول البنوك 12,341.8 مليار ريال في نهاية 2025، و13,362.1 مليار في مايو 2026، و13,761.2 مليار في يونيو 2026؛ والأصول الخارجية 4,116.5 و4,448.0 و4,650.0 مليار؛ والقروض والسلفيات للحكومة 1,928.8 و2,145.0 و1,966.8 مليار؛ والائتمان الممنوح للقطاع الخاص 1,392.3 و1,350.4 و1,362.9 مليار. ولا يساوي مجموع البنود الثلاثة إجمالي الأصول، ولا تُظهر هذه المراكز سبب احتفاظ البنوك بهذه الأصول ولا وصول الأفراد إلى الائتمان."
+  },
+  {
+   "finding": "CLOSE-3C:U5",
+   "sheet": "11_VISUAL_LIBRARY",
+   "row": 46,
+   "col": 23,
+   "field": "RV-CWR-011.public_routes",
+   "old": null,
+   "new": "[\"/readings/where-bank-balance-sheets-sit\"]"
+  },
+  {
+   "finding": "CLOSE-3C:U5",
+   "sheet": "11_VISUAL_LIBRARY",
+   "row": 46,
+   "col": 24,
+   "field": "RV-CWR-011.period_ar",
+   "old": null,
+   "new": "نهاية 2025؛ مايو 2026؛ يونيو 2026"
+  },
+  {
+   "finding": "CLOSE-3C:U5",
+   "sheet": "11_VISUAL_LIBRARY",
+   "row": 46,
+   "col": 25,
+   "field": "RV-CWR-011.universe_ar",
+   "old": null,
+   "new": "الميزانية المجمعة للبنوك التجارية والإسلامية كما ينشرها البنك المركزي اليمني – عدن؛ وتُعرِّف النشرة البنوك بأنها العاملة في الجمهورية اليمنية، لكنها لا تذكر أيُّ البنوك والفروع تقدم بياناتها إليها."
+  },
+  {
+   "finding": "CLOSE-3C:U4",
+   "sheet": "06_EVIDENCE_OBJECTS",
+   "row": 103,
+   "col": 16,
+   "field": "CLM-033.limitations_en",
+   "old": "The restatement is not evidence of an asset, deposit or credit boom, or of any change in solvency. | A method or valuation break materially changes the values for the same reference year; changes in individual lines can be attributed to valuation only as far as the documented valuation note supports.",
+   "new": "The restatement is not evidence of an asset, deposit or credit boom, or of any change in solvency. | A method or valuation break materially changes the values for the same reference year; changes in individual lines can be attributed to valuation only as far as the documented valuation note supports. The same mechanism can run the other way. Between the end of 2024 and the end of 2025 the banks' total assets fell from 15,329.7 to 12,341.8 billion rials and their foreign-currency deposits from 7,999.9 to 5,792.8 billion, while the average market rate that CBY-Aden publishes went from 2,059.2 to 1,624.45 rials per US dollar (December averages). Part of that fall is consistent with revaluing foreign-currency positions at a stronger rial. But the bulletin also states that its monetary and banking data were amended and updated in line with the IMF's Monetary and Financial Statistics Manual (2016) from December 2025, and it publishes no line-by-line bridge, so valuation, the change of method and other movements cannot be separated."
+  },
+  {
+   "finding": "CLOSE-3C:U4",
+   "sheet": "06_EVIDENCE_OBJECTS",
+   "row": 103,
+   "col": 17,
+   "field": "CLM-033.limitations_ar",
+   "old": "لا تمثل إعادة العرض دليلًا على طفرة في الأصول أو الودائع أو الائتمان، ولا على أي تغير في الملاءة. | يغيّر الانقطاع في المنهج أو أسلوب التقييم قيم السنة المرجعية نفسها بصورة جوهرية، ويظل إسناد التغيرات التفصيلية إلى ملاحظة التقييم ضمن الحدود التي يثبتها المصدر.",
+   "new": "لا تمثل إعادة العرض دليلًا على طفرة في الأصول أو الودائع أو الائتمان، ولا على أي تغير في الملاءة. | يغيّر الانقطاع في المنهج أو أسلوب التقييم قيم السنة المرجعية نفسها بصورة جوهرية، ويظل إسناد التغيرات التفصيلية إلى ملاحظة التقييم ضمن الحدود التي يثبتها المصدر. ويمكن أن تعمل الآلية نفسها في الاتجاه المعاكس. فبين نهاية 2024 ونهاية 2025 انخفض إجمالي أصول البنوك من 15,329.7 إلى 12,341.8 مليار ريال، وودائعها بالعملات الأجنبية من 7,999.9 إلى 5,792.8 مليار، بينما انتقل متوسط سعر الصرف السوقي الذي ينشره البنك المركزي اليمني – عدن من 2,059.2 إلى 1,624.45 ريالًا للدولار الأمريكي (متوسطا شهر ديسمبر). ويتسق جزء من هذا الانخفاض مع إعادة تقييم المراكز بالعملات الأجنبية بسعر ريال أقوى. غير أن النشرة تذكر أيضًا أن بياناتها النقدية والمصرفية عُدِّلت وحُدِّثت وفق دليل الإحصاءات النقدية والمالية الصادر عن صندوق النقد الدولي (2016) ابتداءً من ديسمبر 2025، ولا تنشر جسرًا يفصّل ذلك بندًا ببند، فلا يمكن الفصل بين أثر التقييم وأثر تغيير المنهجية والتحركات الأخرى."
+  },
+  {
+   "finding": "CLOSE-3C:U4",
+   "sheet": "06_EVIDENCE_OBJECTS",
+   "row": 103,
+   "col": 18,
+   "field": "CLM-033.currentness_en",
+   "old": "This record applies to the 2022 positions as published in the 2022 annual report and as restated from the 2023 annual report onward. It should not be read as describing later positions.",
+   "new": "This record applies to the 2022 positions as published in the 2022 annual report and as restated from the 2023 annual report onward. Its note on 2025 compares the end of 2024 and the end of 2025 as printed in Issue No. 55 (June 2026) of the monthly bulletin; it should not be read as describing later positions."
+  },
+  {
+   "finding": "CLOSE-3C:U4",
+   "sheet": "06_EVIDENCE_OBJECTS",
+   "row": 103,
+   "col": 19,
+   "field": "CLM-033.currentness_ar",
+   "old": "ينطبق هذا السجل على مراكز عام 2022 كما نُشرت في التقرير السنوي 2022 وكما أُعيد عرضها ابتداءً من التقرير السنوي 2023، ولا يُقرأ على أنه يصف مراكز لاحقة.",
+   "new": "ينطبق هذا السجل على مراكز عام 2022 كما نُشرت في التقرير السنوي 2022 وكما أُعيد عرضها ابتداءً من التقرير السنوي 2023، وتقارن ملاحظته عن 2025 بين نهاية 2024 ونهاية 2025 بالقيم الواردة في العدد 55 (يونيو 2026) من النشرة الشهرية؛ ولا يُقرأ على أنه يصف مراكز لاحقة."
+  },
+  {
+   "finding": "CLOSE-3C:U4",
+   "sheet": "06_EVIDENCE_OBJECTS",
+   "row": 103,
+   "col": 10,
+   "field": "CLM-033.period_en",
+   "old": "2022 positions as published in the 2022 annual report and as restated from the 2023 annual report onward",
+   "new": "2022 positions as published in the 2022 annual report and as restated from the 2023 annual report onward; the end of 2024 and of 2025 (Issue No. 55, June 2026)"
+  },
+  {
+   "finding": "CLOSE-3C:U4",
+   "sheet": "06_EVIDENCE_OBJECTS",
+   "row": 103,
+   "col": 11,
+   "field": "CLM-033.period_ar",
+   "old": "مراكز عام 2022 كما نُشرت في التقرير السنوي 2022 وكما أُعيد عرضها ابتداءً من التقرير السنوي 2023",
+   "new": "مراكز عام 2022 كما نُشرت في التقرير السنوي 2022 وكما أُعيد عرضها ابتداءً من التقرير السنوي 2023؛ ونهاية 2024 ونهاية 2025 (العدد 55، يونيو 2026)"
+  },
+  {
+   "finding": "CLOSE-3C:U4",
+   "sheet": "06_EVIDENCE_OBJECTS",
+   "row": 103,
+   "col": 29,
+   "field": "CLM-033.value_states",
+   "old": "[{\"t\":\"2022 total assets 5,243,513 vs 8,780,498 (million YER)\",\"k\":\"v\",\"s\":\"READ\",\"src\":\"SRC-CBY-AR2022-001\",\"loc\":\"AR2022 p. 42 (PDF), Consolidated Balance Sheet of Commercial & Islamic Banks, col 2022, row Assets; AR2023 consolidated balance sheet, col 2022, row Assets (text line 'Assets ... 8,780,498.0')\"},{\"t\":\"January 2023\",\"k\":\"d\",\"s\":\"READ\",\"src\":\"SRC-CBY-AR2023-001\",\"loc\":\"CBY Annual Report 2023, p. 23 (PDF p. 23), section 2 'Consolidated Balance Sheets of Commercial and Islamic Banks'; also p. 29 note to Table 2-3\"},{\"t\":\"338.0\",\"k\":\"v\",\"s\":\"READ\",\"src\":\"SRC-CBY-001\",\"loc\":\"CBY-Aden, Monetary and Financial Developments, Issue No. 54 (May 2026), Table 4 \\\"Consolidated Balance Sheet of Commercial & Islamic Banks - Assets\\\", printed p. 15 (PDF p. 16), YER billion, Loans & Advances: Private Sector, Dec 2022; read 10 October 2026\"},{\"t\":\"1,301.6\",\"k\":\"v\",\"s\":\"READ\",\"src\":\"SRC-CBY-001\",\"loc\":\"CBY-Aden, Monetary and Financial Developments, Issue No. 54 (May 2026), Table 4 \\\"Consolidated Balance Sheet of Commercial & Islamic Banks - Assets\\\", printed p. 15 (PDF p. 16), YER billion, Loans & Advances: Private Sector, Dec *2022 (*Based on market exchange rates); read 10 October 2026\"},{\"t\":\"904.5\",\"k\":\"v\",\"s\":\"READ\",\"src\":\"SRC-CBY-001\",\"loc\":\"CBY-Aden, Monetary and Financial Developments, Issue No. 54 (May 2026), Table 4 \\\"Consolidated Balance Sheet of Commercial & Islamic Banks - Assets\\\", printed p. 15 (PDF p. 16), YER billion, Foreign Assets, Dec 2022; read 10 October 2026\"},{\"t\":\"2,669.0\",\"k\":\"v\",\"s\":\"READ\",\"src\":\"SRC-CBY-001\",\"loc\":\"CBY-Aden, Monetary and Financial Developments, Issue No. 54 (May 2026), Table 4 \\\"Consolidated Balance Sheet of Commercial & Islamic Banks - Assets\\\", printed p. 15 (PDF p. 16), YER billion, Foreign Assets, Dec *2022 (*Based on market exchange rates); read 10 October 2026\"},{\"t\":\"1,926.8\",\"k\":\"v\",\"s\":\"READ\",\"src\":\"SRC-CBY-001\",\"loc\":\"CBY-Aden, Monetary and Financial Developments, Issue No. 54 (May 2026), Table 4 \\\"Consolidated Balance Sheet of Commercial & Islamic Banks - Assets\\\", printed p. 15 (PDF p. 16), YER billion, Loans & Advances: Government, Dec 2022; read 10 October 2026\"},{\"t\":\"1,913.2\",\"k\":\"v\",\"s\":\"READ\",\"src\":\"SRC-CBY-001\",\"loc\":\"CBY-Aden, Monetary and Financial Developments, Issue No. 54 (May 2026), Table 4 \\\"Consolidated Balance Sheet of Commercial & Islamic Banks - Assets\\\", printed p. 15 (PDF p. 16), YER billion, Loans & Advances: Government, Dec *2022 (*Based on market exchange rates); read 10 October 2026\"},{\"t\":\"4\",\"k\":\"v\",\"s\":\"TRIVIAL\"},{\"t\":\"54\",\"k\":\"v\",\"s\":\"TRIVIAL\"},{\"t\":\"May 2026\",\"k\":\"d\",\"s\":\"READ\",\"src\":\"SRC-CBY-001\",\"loc\":\"CBY-Aden, Monetary and Financial Developments, Issue No. 54 (May 2026), Table 4 \\\"Consolidated Balance Sheet of Commercial & Islamic Banks - Assets\\\", printed p. 15 (PDF p. 16), YER billion\"},{\"t\":\"December 2022\",\"k\":\"d\",\"s\":\"READ\",\"src\":\"SRC-CBY-001\",\"loc\":\"CBY-Aden, Monetary and Financial Developments, Issue No. 54 (May 2026), Table 4 \\\"Consolidated Balance Sheet of Commercial & Islamic Banks - Assets\\\", printed p. 15 (PDF p. 16), YER billion\"}]",
+   "new": "[{\"t\":\"2022 total assets 5,243,513 vs 8,780,498 (million YER)\",\"k\":\"v\",\"s\":\"READ\",\"src\":\"SRC-CBY-AR2022-001\",\"loc\":\"AR2022 p. 42 (PDF), Consolidated Balance Sheet of Commercial & Islamic Banks, col 2022, row Assets; AR2023 consolidated balance sheet, col 2022, row Assets (text line 'Assets ... 8,780,498.0')\"},{\"t\":\"January 2023\",\"k\":\"d\",\"s\":\"READ\",\"src\":\"SRC-CBY-AR2023-001\",\"loc\":\"CBY Annual Report 2023, p. 23 (PDF p. 23), section 2 'Consolidated Balance Sheets of Commercial and Islamic Banks'; also p. 29 note to Table 2-3\"},{\"t\":\"338.0\",\"k\":\"v\",\"s\":\"READ\",\"src\":\"SRC-CBY-001\",\"loc\":\"CBY-Aden, Monetary and Financial Developments, Issue No. 54 (May 2026), Table 4 \\\"Consolidated Balance Sheet of Commercial & Islamic Banks - Assets\\\", printed p. 15 (PDF p. 16), YER billion, Loans & Advances: Private Sector, Dec 2022; read 10 October 2026\"},{\"t\":\"1,301.6\",\"k\":\"v\",\"s\":\"READ\",\"src\":\"SRC-CBY-001\",\"loc\":\"CBY-Aden, Monetary and Financial Developments, Issue No. 54 (May 2026), Table 4 \\\"Consolidated Balance Sheet of Commercial & Islamic Banks - Assets\\\", printed p. 15 (PDF p. 16), YER billion, Loans & Advances: Private Sector, Dec *2022 (*Based on market exchange rates); read 10 October 2026\"},{\"t\":\"904.5\",\"k\":\"v\",\"s\":\"READ\",\"src\":\"SRC-CBY-001\",\"loc\":\"CBY-Aden, Monetary and Financial Developments, Issue No. 54 (May 2026), Table 4 \\\"Consolidated Balance Sheet of Commercial & Islamic Banks - Assets\\\", printed p. 15 (PDF p. 16), YER billion, Foreign Assets, Dec 2022; read 10 October 2026\"},{\"t\":\"2,669.0\",\"k\":\"v\",\"s\":\"READ\",\"src\":\"SRC-CBY-001\",\"loc\":\"CBY-Aden, Monetary and Financial Developments, Issue No. 54 (May 2026), Table 4 \\\"Consolidated Balance Sheet of Commercial & Islamic Banks - Assets\\\", printed p. 15 (PDF p. 16), YER billion, Foreign Assets, Dec *2022 (*Based on market exchange rates); read 10 October 2026\"},{\"t\":\"1,926.8\",\"k\":\"v\",\"s\":\"READ\",\"src\":\"SRC-CBY-001\",\"loc\":\"CBY-Aden, Monetary and Financial Developments, Issue No. 54 (May 2026), Table 4 \\\"Consolidated Balance Sheet of Commercial & Islamic Banks - Assets\\\", printed p. 15 (PDF p. 16), YER billion, Loans & Advances: Government, Dec 2022; read 10 October 2026\"},{\"t\":\"1,913.2\",\"k\":\"v\",\"s\":\"READ\",\"src\":\"SRC-CBY-001\",\"loc\":\"CBY-Aden, Monetary and Financial Developments, Issue No. 54 (May 2026), Table 4 \\\"Consolidated Balance Sheet of Commercial & Islamic Banks - Assets\\\", printed p. 15 (PDF p. 16), YER billion, Loans & Advances: Government, Dec *2022 (*Based on market exchange rates); read 10 October 2026\"},{\"t\":\"4\",\"k\":\"v\",\"s\":\"TRIVIAL\"},{\"t\":\"54\",\"k\":\"v\",\"s\":\"TRIVIAL\"},{\"t\":\"May 2026\",\"k\":\"d\",\"s\":\"READ\",\"src\":\"SRC-CBY-001\",\"loc\":\"CBY-Aden, Monetary and Financial Developments, Issue No. 54 (May 2026), Table 4 \\\"Consolidated Balance Sheet of Commercial & Islamic Banks - Assets\\\", printed p. 15 (PDF p. 16), YER billion\"},{\"t\":\"December 2022\",\"k\":\"d\",\"s\":\"READ\",\"src\":\"SRC-CBY-001\",\"loc\":\"CBY-Aden, Monetary and Financial Developments, Issue No. 54 (May 2026), Table 4 \\\"Consolidated Balance Sheet of Commercial & Islamic Banks - Assets\\\", printed p. 15 (PDF p. 16), YER billion\"},{\"t\":\"15,329.7\",\"k\":\"v\",\"s\":\"READ\",\"src\":\"SRC-CBY-001\",\"loc\":\"CBY-Aden, Monetary and Financial Developments, Issue No. 55 (June 2026), Table 4 (banks' assets), printed p.15 (PDF p.16), https://english.cby-ye.com/files/6ab393186466e.pdf, Total Assets, 2024; read 10 October 2026\"},{\"t\":\"12,341.8\",\"k\":\"v\",\"s\":\"READ\",\"src\":\"SRC-CBY-001\",\"loc\":\"CBY-Aden, Monetary and Financial Developments, Issue No. 55 (June 2026), Table 4 (banks' assets), printed p.15 (PDF p.16), https://english.cby-ye.com/files/6ab393186466e.pdf, Total Assets, 2025; read 10 October 2026\"},{\"t\":\"7,999.9\",\"k\":\"v\",\"s\":\"READ\",\"src\":\"SRC-CBY-001\",\"loc\":\"CBY-Aden, Monetary and Financial Developments, Issue No. 55 (June 2026), Table 5 (banks' liabilities), printed p.16 (PDF p.17), https://english.cby-ye.com/files/6ab393186466e.pdf, Deposits – Foreign Currency, 2024; read 10 October 2026\"},{\"t\":\"5,792.8\",\"k\":\"v\",\"s\":\"READ\",\"src\":\"SRC-CBY-001\",\"loc\":\"CBY-Aden, Monetary and Financial Developments, Issue No. 55 (June 2026), Table 5 (banks' liabilities), printed p.16 (PDF p.17), https://english.cby-ye.com/files/6ab393186466e.pdf, Deposits – Foreign Currency, 2025; read 10 October 2026\"},{\"t\":\"2,059.2\",\"k\":\"v\",\"s\":\"READ\",\"src\":\"SRC-CBY-001\",\"loc\":\"CBY-Aden, Monetary and Financial Developments, Issue No. 55 (June 2026), Table 6 'Average Market Exchange Rates', printed p.17 (PDF p.18), https://english.cby-ye.com/files/6ab393186466e.pdf, December 2024; read 10 October 2026\"},{\"t\":\"1,624.45\",\"k\":\"v\",\"s\":\"READ\",\"src\":\"SRC-CBY-001\",\"loc\":\"CBY-Aden, Monetary and Financial Developments, Issue No. 55 (June 2026), Table 6 'Average Market Exchange Rates', printed p.17 (PDF p.18), https://english.cby-ye.com/files/6ab393186466e.pdf, December 2025; read 10 October 2026\"},{\"t\":\"January 2017\",\"k\":\"d\",\"s\":\"READ\",\"src\":\"SRC-CBY-001\",\"loc\":\"CBY-Aden, Monetary and Financial Developments, Issue No. 55 (June 2026), Table 6 'Average Market Exchange Rates', printed p.17 (PDF p.18), https://english.cby-ye.com/files/6ab393186466e.pdf, January 2017 = 315.64; read 10 October 2026\"},{\"t\":\"June 2025\",\"k\":\"d\",\"s\":\"READ\",\"src\":\"SRC-CBY-001\",\"loc\":\"CBY-Aden, Monetary and Financial Developments, Issue No. 55 (June 2026), Table 6 'Average Market Exchange Rates', printed p.17 (PDF p.18), https://english.cby-ye.com/files/6ab393186466e.pdf, June 2025 = 2,733.85; read 10 October 2026\"},{\"t\":\"August 2025\",\"k\":\"d\",\"s\":\"READ\",\"src\":\"SRC-CBY-001\",\"loc\":\"CBY-Aden, Monetary and Financial Developments, Issue No. 55 (June 2026), Table 6 'Average Market Exchange Rates', printed p.17 (PDF p.18), https://english.cby-ye.com/files/6ab393186466e.pdf, August 2025 = 1,624.5 (Issue No. 54 and No. 55); read 10 October 2026\"},{\"t\":\"December 2025\",\"k\":\"d\",\"s\":\"READ\",\"src\":\"SRC-CBY-001\",\"loc\":\"CBY-Aden, Monetary and Financial Developments, Issue No. 55 (June 2026), Table 6 'Average Market Exchange Rates', printed p.17 (PDF p.18), https://english.cby-ye.com/files/6ab393186466e.pdf, December 2025 = 1,624.45; and the Disclaimer, printed p.23 (PDF p.24): 'Beginning in Dec 2025, monetary and banking data were amended and updated by the Monetary and Financial Statistics Manual (2016) (IMF)'; read 10 October 2026\"},{\"t\":\"June 2026\",\"k\":\"d\",\"s\":\"READ\",\"src\":\"SRC-CBY-001\",\"loc\":\"CBY-Aden, Monetary and Financial Developments, Issue No. 55 (June 2026), Table 6 'Average Market Exchange Rates', printed p.17 (PDF p.18), https://english.cby-ye.com/files/6ab393186466e.pdf, June 2026 = 1,560.95; read 10 October 2026\"},{\"t\":\"55\",\"k\":\"v\",\"s\":\"TRIVIAL\"}]"
+  },
+  {
+   "finding": "CLOSE-3C:U4",
+   "sheet": "03_PAGE_SECTIONS",
+   "row": 241,
+   "col": 5,
+   "field": "/readings/banking-jump-measurement-basis/#s3.body_en",
+   "old": "The restatement shows up across several balance-sheet positions, not in one isolated indicator. That matters, because a simultaneous change in deposits, credit, assets or foreign-currency positions can otherwise be read as an equally large shift in financial intermediation. The current evidence does not support that reading.\nThe valuation note documents a change in treatment. It does not provide a line-by-line bridge showing how much of each restated balance comes from valuation, classification, coverage or economic movement, so that decomposition remains open.\nThe central bank’s own monthly bulletin shows the shape of the break. The consolidated balance sheet of commercial and Islamic banks in the bulletin prints December 2022 twice, on the earlier basis and at market exchange rates: private-sector credit 338.0 and 1,301.6 billion rials and foreign assets 904.5 and 2,669.0 billion, while loans and advances to government — treasury bills, bonds and sukuk, in the bulletin’s definition — stayed almost unchanged at 1,926.8 and 1,913.2 billion. That pattern is consistent with revaluing foreign-currency items, not with new lending; the bulletin does not split any line between valuation and other effects.",
+   "new": "The restatement shows up across several balance-sheet positions, not in one isolated indicator. That matters, because a simultaneous change in deposits, credit, assets or foreign-currency positions can otherwise be read as an equally large shift in financial intermediation. The current evidence does not support that reading.\nThe valuation note documents a change in treatment. It does not provide a line-by-line bridge showing how much of each restated balance comes from valuation, classification, coverage or economic movement, so that decomposition remains open.\nThe central bank’s own monthly bulletin shows the shape of the break. The consolidated balance sheet of commercial and Islamic banks in the bulletin prints December 2022 twice, on the earlier basis and at market exchange rates: private-sector credit 338.0 and 1,301.6 billion rials and foreign assets 904.5 and 2,669.0 billion, while loans and advances to government — treasury bills, bonds and sukuk, in the bulletin’s definition — stayed almost unchanged at 1,926.8 and 1,913.2 billion. That pattern is consistent with revaluing foreign-currency items, not with new lending; the bulletin does not split any line between valuation and other effects.\nThe same mechanism can run the other way. Between the end of 2024 and the end of 2025 the banks’ total assets fell from 15,329.7 to 12,341.8 billion rials and their foreign-currency deposits from 7,999.9 to 5,792.8 billion, while the average market rate that CBY-Aden publishes went from 2,059.2 to 1,624.45 rials per US dollar (December averages). Part of that fall is consistent with revaluing foreign-currency positions at a stronger rial. But the bulletin also states that its monetary and banking data were amended and updated in line with the IMF’s Monetary and Financial Statistics Manual (2016) from December 2025, and it publishes no line-by-line bridge, so valuation, the change of method and other movements cannot be separated."
+  },
+  {
+   "finding": "CLOSE-3C:U4",
+   "sheet": "03_PAGE_SECTIONS",
+   "row": 241,
+   "col": 7,
+   "field": "/readings/banking-jump-measurement-basis/#s3.body_ar",
+   "old": "تظهر إعادة العرض في أكثر من بند من بنود الميزانية، لا في مؤشر منفرد. وهذا مهم، لأن التغير المتزامن في الودائع أو الائتمان أو الأصول أو المراكز بالعملات الأجنبية قد يُقرأ عندئذ على أنه تحول بالحجم نفسه في الوساطة المالية، والأدلة الحالية لا تسند هذه القراءة.\nتوثّق ملاحظة التقييم تغيّرًا في المعالجة، لكنها لا تقدم جسرًا بندًا ببند يبين مقدار ما يعود في كل رصيد معاد عرضه إلى التقييم أو التصنيف أو نطاق التغطية أو الحركة الاقتصادية الفعلية، ولذلك يبقى هذا التفكيك مفتوحًا.\nوتُظهر النشرة الشهرية للبنك المركزي نفسه شكل الانقطاع: فالميزانية المجمعة للبنوك التجارية والإسلامية في النشرة تعرض ديسمبر 2022 مرتين، على الأساس السابق وبسعر الصرف السوقي: الائتمان الممنوح للقطاع الخاص 338.0 و1,301.6 مليار ريال، والأصول الخارجية 904.5 و2,669.0 مليار، أما القروض والسلفيات للحكومة — وهي وفق تعريف النشرة أذون الخزانة والسندات والصكوك — فبقيت شبه ثابتة: 1,926.8 و1,913.2 مليار. وهذا النمط يتسق مع إعادة تقييم البنود المقوّمة بالعملات الأجنبية، لا مع إقراض جديد؛ ولا تفصل النشرة أي بند بين أثر التقييم والآثار الأخرى.",
+   "new": "تظهر إعادة العرض في أكثر من بند من بنود الميزانية، لا في مؤشر منفرد. وهذا مهم، لأن التغير المتزامن في الودائع أو الائتمان أو الأصول أو المراكز بالعملات الأجنبية قد يُقرأ عندئذ على أنه تحول بالحجم نفسه في الوساطة المالية، والأدلة الحالية لا تسند هذه القراءة.\nتوثّق ملاحظة التقييم تغيّرًا في المعالجة، لكنها لا تقدم جسرًا بندًا ببند يبين مقدار ما يعود في كل رصيد معاد عرضه إلى التقييم أو التصنيف أو نطاق التغطية أو الحركة الاقتصادية الفعلية، ولذلك يبقى هذا التفكيك مفتوحًا.\nوتُظهر النشرة الشهرية للبنك المركزي نفسه شكل الانقطاع: فالميزانية المجمعة للبنوك التجارية والإسلامية في النشرة تعرض ديسمبر 2022 مرتين، على الأساس السابق وبسعر الصرف السوقي: الائتمان الممنوح للقطاع الخاص 338.0 و1,301.6 مليار ريال، والأصول الخارجية 904.5 و2,669.0 مليار، أما القروض والسلفيات للحكومة — وهي وفق تعريف النشرة أذون الخزانة والسندات والصكوك — فبقيت شبه ثابتة: 1,926.8 و1,913.2 مليار. وهذا النمط يتسق مع إعادة تقييم البنود المقوّمة بالعملات الأجنبية، لا مع إقراض جديد؛ ولا تفصل النشرة أي بند بين أثر التقييم والآثار الأخرى.\nويمكن أن تعمل الآلية نفسها في الاتجاه المعاكس. فبين نهاية 2024 ونهاية 2025 انخفض إجمالي أصول البنوك من 15,329.7 إلى 12,341.8 مليار ريال، وودائعها بالعملات الأجنبية من 7,999.9 إلى 5,792.8 مليار، بينما انتقل متوسط سعر الصرف السوقي الذي ينشره البنك المركزي اليمني – عدن من 2,059.2 إلى 1,624.45 ريالًا للدولار الأمريكي (متوسطا شهر ديسمبر). ويتسق جزء من هذا الانخفاض مع إعادة تقييم المراكز بالعملات الأجنبية بسعر ريال أقوى. غير أن النشرة تذكر أيضًا أن بياناتها النقدية والمصرفية عُدِّلت وحُدِّثت وفق دليل الإحصاءات النقدية والمالية الصادر عن صندوق النقد الدولي (2016) ابتداءً من ديسمبر 2025، ولا تنشر جسرًا يفصّل ذلك بندًا ببند، فلا يمكن الفصل بين أثر التقييم وأثر تغيير المنهجية والتحركات الأخرى."
+  },
+  {
+   "finding": "CLOSE-3C:U5",
+   "sheet": "08_READINGS",
+   "row": 15,
+   "col": 13,
+   "field": "CWR-011.visual_bindings",
+   "old": "[]",
+   "new": "[\"RV-CWR-011\"]"
+  },
+  {
+   "finding": "CLOSE-3C:OWN-10",
+   "sheet": "00_MASTER",
+   "row": 21,
+   "col": 2,
+   "field": "00_MASTER!r21c2",
+   "old": "39",
+   "new": 42,
+   "formula_kept": "=COUNTA('11_VISUAL_LIBRARY'!A5:A100)",
+   "note": "cached result of the formula updated; the formula is unchanged and computes the same value"
+  },
+  {
+   "finding": "CLOSE-3C:OWN-10",
+   "sheet": "00_MASTER",
+   "row": 21,
+   "col": 3,
+   "field": "00_MASTER!r21c3",
+   "old": "39",
+   "new": 42
+  },
+  {
+   "finding": "CLOSE-3C:OWN-10",
+   "sheet": "37_READINESS_CHECKLIST",
+   "row": 12,
+   "col": 4,
+   "field": "37_READINESS_CHECKLIST!r12c4",
+   "old": "39",
+   "new": 42,
+   "formula_kept": "=COUNTA('11_VISUAL_LIBRARY'!A5:A100)",
+   "note": "cached result of the formula updated; the formula is unchanged and computes the same value"
+  },
+  {
+   "finding": "CLOSE-3C:OWN-10",
+   "sheet": "37_READINESS_CHECKLIST",
+   "row": 12,
+   "col": 3,
+   "field": "37_READINESS_CHECKLIST!r12c3",
+   "old": "39",
+   "new": 42
+  },
+  {
+   "finding": "CLOSE-3C:OWN-10",
+   "sheet": "37_READINESS_CHECKLIST",
+   "row": 18,
+   "col": 4,
+   "field": "37_READINESS_CHECKLIST!r18c4",
+   "old": "686",
+   "new": 696,
+   "formula_kept": "=COUNTA('18_CBY_MONETARY'!A5:A900)",
+   "note": "cached result of the formula updated; the formula is unchanged and computes the same value"
+  },
+  {
+   "finding": "CLOSE-3C:OWN-10",
+   "sheet": "37_READINESS_CHECKLIST",
+   "row": 18,
+   "col": 3,
+   "field": "37_READINESS_CHECKLIST!r18c3",
+   "old": "686",
+   "new": 696
+  }
+ ]
+}
