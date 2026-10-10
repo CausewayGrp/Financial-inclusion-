@@ -21,7 +21,7 @@
   ]
  },
  "class_counts": {
-  "AUDIT_HISTORY": 330,
+  "AUDIT_HISTORY": 331,
   "AUTHORITY_MASTER": 1,
   "AUTHORITY_POINTER": 2,
   "AUTHORITY_RULES": 1,
@@ -6193,6 +6193,10 @@
   },
   {
    "path": "docs/HANDOFF_STATE.json",
+   "class": "AUDIT_HISTORY"
+  },
+  {
+   "path": "docs/HANDOVER_TO_DEVELOPER.md",
    "class": "AUDIT_HISTORY"
   },
   {

@@ -345,6 +345,13 @@ CONTROLS = [
     ("an archived copy is offered as the original", "en/data/index.html",
      sub_once(r'(<a class="source-locator" href="https://web\.archive\.org/[^"]*"[^>]*>)[^<]*', r'\1Open original source ↗'),
      "RC-B13 an archived copy is offered as the original en"),
+    # The second direction of RC-B13 — a filter must offer an option for every key a listed source carries — was
+    # added without a control, so nothing proved it fires. It is the direction that matters most here: it is the
+    # gap that let the "used on" filter leave 44 of 158 listed sources, twelve of them curated cards, unreachable
+    # under every one of its values while the gate passed. Remove the option and the gate must say so.
+    ("a source filter stops offering an option for a key its records carry", "en/data/index.html",
+     sub_once(r'(<select data-source-facet="domain">.*?)<option value="none">[^<]*</option>', r'\1'),
+     "RC-B13 the domain filter has no option for 'none', so a listed source is unreachable en"),
     # RC-LATEST (Owner Addendum 2, lessons; RC-16): no title or description calls anything "latest" without its date.
     ("a page title calls a measure 'latest' without saying when", "en/people/index.html",
      sub_once(r'(<title>)', r'\1Latest '),
