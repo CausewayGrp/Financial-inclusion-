@@ -4064,7 +4064,7 @@ try:
     _co_man = json.load(open(ROOT / "scripts/projection/projection_manifest.json", encoding="utf-8"))
     if any("29_OECD_BENCHMARKS" in str(_o.get("sheet")) for _o in _co_man["outputs"]):
         errors.append("CO-G02 29_OECD_BENCHMARKS is projected")
-    _co_29 = [_r for _r in _co_wb.grid("29_OECD_BENCHMARKS")[5:] if _r and _r[0] not in (None, "")]
+    _co_29 = [_r for _r in _co_wb.grid("29_OECD_BENCHMARKS")[5:30] if _r and _r[0] not in (None, "")]   # the benchmark table, rows 6-30
     if len(_co_29) != 25 or any(_r[12] != "REJECTED__UNTRACEABLE" or not _r[13] for _r in _co_29):
         errors.append("CO-G02 29_OECD_BENCHMARKS rows are not all REJECTED__UNTRACEABLE with a reason")
     _co_cb = json.load(open(C / "data/findex_codebook.json", encoding="utf-8"))["rows"]

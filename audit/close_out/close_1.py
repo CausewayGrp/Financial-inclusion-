@@ -127,8 +127,9 @@ def main():
         s.set(F + ":CR-12", S29, i, 13, OECD_STATE, "NON_PUBLIC__PROVENANCE_DEFECT", f"{r[0]}.public_use")
         s.set(F + ":CR-12", S29, i, 14, OECD_REASON, None, f"{r[0]}.quarantine_reason")
         n29 += 1
-    if any(x and x[0] not in (None, "") for x in g29[30:]):
-        raise TxError(f"{F}:CR-12 29 has rows after row 30")
+    if g29[30] and any(x not in (None, "") for x in g29[30]):
+        raise TxError(f"{F}:CR-12 29 row 31 is not the blank row that ends the benchmark table")
+    # the later blocks of 29 (Yemen values attributed to OECD sources; the 2026 diagnostic) keep their own states
     # 24_FINDEX_CODEBOOK legacy block: title row 121, rows 122–163 (columns 9 and 10 are empty in this block)
     S24 = "24_FINDEX_CODEBOOK"
     g24 = s.grid(S24)
@@ -157,7 +158,6 @@ def main():
     if n18 != 32:
         raise TxError(f"{F}:CR-18 {n18} rurality rows, expected 32")
 
-    s.regenerate_full_copy(F + ":EXF-002")
     counts = refresh_self_counts(s, F + ":OWN-10")
     rep = s.save(out, ledger, OrderedDict([
         ("transaction", F),
