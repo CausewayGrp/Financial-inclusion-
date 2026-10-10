@@ -218,7 +218,7 @@ try:
     idx=json.load(open(DIST/'static-data/search_index.json',encoding='utf-8'))
     idx=idx if isinstance(idx,list) else idx.get('records',[])
     search_records=idx
-    allowed={'page','question','evidence','reading','measurement','source','source_locator'}   # Tranche C JRN-05: governed questions
+    allowed={'page','question','evidence','reading','measurement','source','source_locator','chronology'}   # CS-1: dated events   # Tranche C JRN-05: governed questions
     for rec in idx:
         typ=rec.get('type') or rec.get('object_type')
         if typ not in allowed: errors.append('unexpected public search type '+str(typ))
@@ -1928,7 +1928,25 @@ for lang in ('en','ar'):
 for rec in search_records:
     if rec.get('type')=='measurement' and '#' not in str(rec.get('route')):
         errors.append(f'P2-G02 Measurement search record does not deep-link to its anchor {rec.get("id")}')
+# CS-1 (owner decision of 10 October 2026): every indexed dated event deep-links to an anchor its page carries, in both
+# languages — a record whose anchor is lost would send the reader to the top of /finance/ with nothing to find.
+for rec in search_records:
+    if rec.get('type')!='chronology': continue
+    _r=str(rec.get('route') or '')
+    if '#' not in _r:
+        errors.append(f'P2-G02 Dated-event search record does not deep-link to its anchor {rec.get("id")}'); continue
+    _path,_frag=_r.split('#',1)
+    for lang in ('en','ar'):
+        _p=DIST/lang/_path.strip('/')/'index.html'
+        if not _p.exists() or f'id="{_frag}"' not in _p.read_text(encoding='utf-8'):
+            errors.append(f'P2-G02 Dated-event search record anchor missing {lang} {_path}#{_frag}')
 _js=(DIST/'assets'/'app.js').read_text(encoding='utf-8')
+# CS-1: the result-type filter is built from TYPE_LABEL_UI; it must offer an option for every type the index carries,
+# or a type would be unreachable through the filter (the search counterpart of RC-B13's second direction).
+_tl=re.search(r'const TYPE_LABEL_UI=(\{[^}]*\});',_js)
+_offered_types=set(json.loads(_tl.group(1))) if _tl else set()
+for _typ in sorted({str(r.get('type') or r.get('object_type')) for r in search_records}-_offered_types):
+    errors.append(f'P2-G02 the result-type filter offers no option for the indexed type {_typ!r}')
 for token,label in (("get('records')",'Compare URL state parsing'),('history.replaceState','Compare URL state writing'),('data-compare-url-error','Compare technical input error'),
                     ("DATA('yfie-record-ids')",'record-context validation'),('sourceLinkError','source deep-link technical error')):
     if token not in _js: errors.append('P2-G02 missing runtime contract: '+label)

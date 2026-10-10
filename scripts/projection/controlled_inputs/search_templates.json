@@ -2,11 +2,21 @@
  "schema": "YFI_CONTROLLED_INPUT/1.0",
  "input_id": "search_templates",
  "authority_class": "CONTROLLED_TEMPLATE__NOT_MASTER_OWNED",
- "rule": "Search records carry only Master text (titles, summaries, governed fields) except the generic source-locator record wording below, which is controlled interface copy.",
+ "rule": "Search records carry only Master text (titles, summaries, governed fields) except the generic source-locator and dated-event record wording below, which is controlled interface copy. A dated event has no governed title of its own, so its record is named by that wording plus its governed period, and its summary is the governed fact. The chronology's analytical rule is not a dated event and is not indexed.",
  "page_summary_chars": 1200,
  "evidence_route": "/evidence/{id}/",
  "measurement_route": "/measurement/#{id}",
  "source_route": "/data/?source={id}",
+ "chronology_route": "/finance/#{id}",
+ "chronology_search_fields": [
+  "fact",
+  "system_implication",
+  "fi_relevance",
+  "does_not_establish"
+ ],
+ "chronology_exclude_event_classes": [
+  "SYSTEM_INTERPRETATION"
+ ],
  "evidence_search_fields": [
   "summary",
   "definition",
@@ -27,5 +37,9 @@
   "title_ar": "سجل مصدر — {id}",
   "summary_en": "Original-source locator available in the source directory. Open the record to inspect the available source link and its current public-evidence usage, where applicable.",
   "summary_ar": "يتوفر رابط للمصدر الأصلي في دليل المصادر. افتح السجل للاطلاع على الرابط المتاح واستخدامه الحالي في الأدلة العامة، إن وُجد."
+ },
+ "chronology": {
+  "title_en": "Dated event — {period}",
+  "title_ar": "حدث مؤرخ — {period}"
  }
 }
