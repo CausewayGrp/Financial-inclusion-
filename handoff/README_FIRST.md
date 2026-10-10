@@ -1,4 +1,6 @@
-> STATUS: **DESIGN HANDOFF READY.** Start here. R8.6 closed on 26 September 2026 after a clean-room acceptance by three cold recipients (`audit/FINAL_CLEAN_ROOM_ACCEPTANCE.md`); tightened on 27 September 2026 (post-F9 correction and design-enablement control pass, same record). Not a public release.
+> STATUS: SUPERSEDED (10 October 2026) — not for execution. Design is executed in the repository under audit/close_out/BRIEF.md (W4). These files are historical reference.
+>
+> Note, 10 October 2026: owner decision D7 (`audit/OWNER_DECISIONS_2026-10-10.md` §5) retires the Claude Design route. Design is executed in this repository by Claude Code, under the close-out brief (W4), and design changes follow `design/DESIGN_INTEGRATION_V2.md` (created in W4) and the gates. Nothing in this folder is executed. From 26 September to 10 October 2026 this line recorded the R8.6 handoff status; that history is in `audit/R8_6_DESIGN_HANDOFF_FREEZE_CLOSURE.md` and `audit/FINAL_CLEAN_ROOM_ACCEPTANCE.md`. The rest of this file is unchanged and is historical reference.
 
 # Read this first — Yemen Financial Inclusion Evidence · أدلة الشمول المالي في اليمن
 

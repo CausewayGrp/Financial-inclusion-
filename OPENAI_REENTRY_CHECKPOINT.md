@@ -25,7 +25,7 @@ post-F9 correction (27 September 2026) closed the two remaining maintainer items
 design-enablement control pass the same day (directive D9) strengthened the Design brief, criteria and contract in place
 so that a cold Design recipient can run D0–D7 from the repository alone.
 
-**Status: DESIGN HANDOFF READY.**
+**Status: DESIGN HANDOFF SUPERSEDED (10 October 2026).** The R8.6 handoff closed on 26 September 2026 (F8, F9) and served until owner decision D7 of 10 October 2026: design is now executed in this repository under `audit/close_out/BRIEF.md` (W4), and `handoff/` is historical reference.
 
 - R8.4: CLOSED / PASS, Reading prose included (F2). R8.5: CLOSED (F4). R8.6: CLOSED (F8, F9).
 - This is not PUBLIC RELEASE READY.

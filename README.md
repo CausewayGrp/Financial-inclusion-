@@ -43,9 +43,9 @@ External facts stay attributed to their original publishers. CauseWay attributio
 
 | | |
 |---|---|
-| **Position** | **DESIGN HANDOFF READY** |
+| **Position** | **DESIGN HANDOFF SUPERSEDED** (10 October 2026): design is executed in this repository under the close-out brief (`audit/close_out/BRIEF.md`, W4); `handoff/` is historical reference |
 | Non-design v1 product | Complete |
-| Current phase | Design / presentation integration |
+| Current phase | Close-out (`audit/close_out/BRIEF.md`, version 5): evidence and Arabic (Stage A), structure and design (Stage B), governance and acceptance (Stage C); hosting last. Progress: `audit/close_out/PROGRESS.md` |
 | Post-v1, owner decision | C1 typed difference block; C2 dedicated guarantee route; C3 public contradiction index |
 | Reuse rights | Decided: CC BY 4.0 for CauseWay's own content (adopted 3 October 2026, closed 10 October 2026). The owner confirmed the licence text on 10 October 2026 (RIGHTS-FINAL; no legal review is claimed); the rights question is closed permanently |
 | Public release ready | No |
@@ -110,7 +110,7 @@ If the Master changes, subordinate projections are regenerated. There is no para
 | [`dist/`](dist/) | Generated site, committed so a public change is reviewable |
 | [`audit/`](audit/) | Review and lineage |
 | [`docs/RELEASE_RUNBOOK.md`](docs/RELEASE_RUNBOOK.md) | What release still requires |
-| [`handoff/`](handoff/) | Design and engineering handoff, subordinate to the Master |
+| [`handoff/`](handoff/) | Superseded (10 October 2026); historical reference only, never executed |
 
 ## Public path
 

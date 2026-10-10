@@ -1,5 +1,27 @@
 # Repository Change Log
 
+## 2026-10-10 — W2: the design handoff is retired (Stage A)
+
+No Master transaction and no public page changed. `dist/` is unchanged. Owner decision D7: design is executed in this
+repository by Claude Code (W4); Claude Design is not used.
+
+- **`handoff/README_FIRST.md`:** the first line reads "STATUS: SUPERSEDED (10 October 2026) — not for execution…",
+  followed by a dated note; nothing else in the file is edited. The two prompts carry the same status line, with their
+  former status lines kept verbatim as history.
+- **Current-state claims changed to the superseded status:** README (position, phase, map row), the checkpoint status,
+  CONTRIBUTING (the `handoff/` row and §8), the Context (`handoff_readiness` SUPERSEDED, `design_prompt_status`) and the
+  handoff manifest. `design/00_DESIGN_README.md` carries the same dated note; `design/ESCALATIONS.md` is left for W4.
+- **AGENTS.md:** rule 7 is now "Do not execute any prompt in handoff/. It is superseded. Design changes follow
+  design/DESIGN_INTEGRATION_V2.md (created in W4) and the gates."; rule 2 records D14 (the steward designation for the
+  two controlled contracts, with its scope); the reading-order note no longer sends any agent to `handoff/`.
+- **The runner and `handoff/`:** neither `run_stage.py` nor `rebind_authority.py` writes these status lines. The rebind
+  only replaces the Master and Page Specs hashes the files print and copies the Context state into the handoff manifest;
+  `handoff_inventory.py` regenerates the route inventory. That stays as it is (recorded here and in CONTRIBUTING).
+- **Gate R86-G01:** a SUPERSEDED state is added. In it the gate asserts the superseded status line in the start file
+  and both prompts, the README position, the checkpoint status and the manifest; it fails if README or the checkpoint
+  still state DESIGN HANDOFF READY as current, or if the start file's status block claims it. The gate runs inside every
+  transaction, so the status cannot come back without a rollback. Two negative controls added (both caught).
+
 ## 2026-10-10 — AR-1: the accepted Arabic edits that depend on no factual fix (Stage A)
 
 Master `190b148abf2d` → `250586ce71ee`, 40 cells (`audit/close_out/ar_1.py`; ledger, run report and render check in

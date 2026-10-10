@@ -623,6 +623,13 @@ CONTROLS = [
     ("CO-G02: a quarantined pseudo-codebook variable reaches a page", "en/people/index.html",
      sub_once(r'(<main[^>]*>)', r'\1<p>account_mob</p>'),
      "CO-G02 en/people/index.html prints the quarantined 'account_mob'"),
+    # Close-out W2 (owner decision D7): handoff/ is superseded; its start file may not claim the old status again.
+    ("R86-G01: the handoff start file claims DESIGN HANDOFF READY again", "handoff/README_FIRST.md",
+     sub_once(r'^[^\n]*', '> STATUS: **DESIGN HANDOFF READY.** Start here.'),
+     "R86-G01 handoff/README_FIRST.md first line is not the SUPERSEDED status line"),
+    ("R86-G01: the handoff start file's status block claims DESIGN HANDOFF READY", "handoff/README_FIRST.md",
+     sub_once(r'^([^\n]*\n)', r'\1> Executable again: DESIGN HANDOFF READY.\n'),
+     "R86-G01 handoff/README_FIRST.md claims DESIGN HANDOFF READY in its status block"),
     # The standing content gate (release candidate, RC-1): a governed sentence dropped from a page, and a number no governed
     # record or contract holds, must each be reported by scripts/tests/test_content_parity.py.
     ("a domain answer drops a governed sentence", "en/people/index.html",

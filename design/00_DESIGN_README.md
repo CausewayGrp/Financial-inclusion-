@@ -1,5 +1,7 @@
 # Design package — Yemen Financial Inclusion Evidence · أدلة الشمول المالي في اليمن
 
+> **Note, 10 October 2026 — superseded route.** Owner decision D7 (`audit/OWNER_DECISIONS_2026-10-10.md` §5) retires the Claude Design route and supersedes `handoff/`. Design is executed in this repository by Claude Code under `audit/close_out/BRIEF.md` (W4), and design changes follow `design/DESIGN_INTEGRATION_V2.md` (created in W4) and the gates. This package is the accepted D7 design of 2 October 2026 and stays as the baseline and history; the open items of `design/ESCALATIONS.md` are resolved or recorded as DECIDED in W4.
+
 Status: **D7 ACCEPTED — THE OWNER RECORDED THE FINAL VISUAL ACCEPTANCE ON 2 OCTOBER 2026** (`audit/OWNER_DECISIONS_2026-10-02.md`, row D7;
 the coverage ledger's 1,415 `VERIFIED` rows read `ACCEPTED` from that date, the 18 `DESIGNED` rows unchanged; recorded by
 the session meeting condition C2 of `audit/PR8_INDEPENDENT_ACCEPTANCE.md`, which changes no design decision).

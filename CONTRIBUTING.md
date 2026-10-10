@@ -25,11 +25,11 @@ unpushed clone does not exist yet. ZIPs are *outputs* of checkpoint tags (§6), 
 | `authority/CORE_CONSTITUTION.md` | Durable principles | Rarely, by explicit decision; never mutable state |
 | `authority/AUTHORITY.json`, `authority/YFI_CURRENT_PROJECT_CONTEXT.json` | Current-state pointers | Hashes and counts by `scripts/rebind_authority.py` (the runner calls it); programme state by the steward |
 | `site-src/content/**` | Controlled projections | Never by hand; `scripts/generate_projections.py` writes them from the Master — except the two controlled contracts below |
-| `site-src/content/presentation_priority.json`, `site-src/content/content/navigation_interaction.json` | Controlled contracts (presentation depth; navigation and interaction), class `CONTROLLED_CONTRACT` | Maintained in place by the programme steward only, in a commit naming the finding it closes; the generator validates them against the Master's projections (and writes the navigation labels, counts and bindings it owns); never edited by Claude Design or Claude Code, who escalate |
+| `site-src/content/presentation_priority.json`, `site-src/content/content/navigation_interaction.json` | Controlled contracts (presentation depth; navigation and interaction), class `CONTROLLED_CONTRACT` | Maintained in place by the programme steward only, in a commit naming the finding it closes; the generator validates them against the Master's projections (and writes the navigation labels, counts and bindings it owns); otherwise never edited by Claude Design or Claude Code, who escalate. Owner decision D14 (10 October 2026) makes the Claude Code run of the close-out brief steward for its scoped changes only (`AGENTS.md` rule 2) |
 | `dist/**` | Generated static site | Never by hand; `scripts/build.py`; committed so every public change is reviewable |
 | `audit/PUBLIC_LITERAL_CLOSURE.json` | Generated audit | Never by hand; `scripts/audit_public_literals.py` |
 | `scripts/` (including the renderer `scripts/yfie/`, which holds the stylesheet), `site-src/app.js` | Generator, build, gates, runtime | Directly, with the full gate run |
-| `handoff/` | Design → Code recipient package | Changed only by the programme; DESIGN HANDOFF READY since F9 |
+| `handoff/` | Former Design → Code recipient package | Superseded on 10 October 2026 (owner decision D7) and never executed; historical reference. The runner still rebinds the hashes it prints and regenerates its route inventory; it never writes the status line, which gate R86-G01 holds at SUPERSEDED |
 | `vendor/fonts/` | IBM Plex woff2 files and licence, unchanged | Only by replacing them with a newer unchanged release |
 | `design/architecture/` | Derived diagrams | `scripts/architecture_diagrams.py` |
 | `audit/`, `docs/` | Lineage and records | Append; never rewrite a historical record (add an addendum or erratum) |
@@ -177,9 +177,11 @@ updated from here and never treated as current.
 
 ## 8. Claude Design and Claude Code
 
-The single start path is `handoff/README_FIRST.md` → `handoff/CLAUDE_DESIGN_MASTER_PROMPT.md`. Do not execute the
-prompts in `handoff/` until the first line of `handoff/README_FIRST.md` reads **DESIGN HANDOFF READY** (gate R86-G01
-keeps that line, the Design prompt, `README.md`, the checkpoint and the Context in agreement).
+`handoff/` is superseded (10 October 2026, owner decision D7). Do not execute any prompt in it. Design changes follow
+`design/DESIGN_INTEGRATION_V2.md` (created in W4 of the close-out brief) and the gates. Gate R86-G01 keeps the superseded
+status in agreement across `handoff/README_FIRST.md`, the two prompts, `README.md`, the checkpoint, the Context and the
+handoff manifest, and fails if the start file claims the old handoff status again. The bullets below are the rules of the
+former Design programme (D0–D7), kept as history.
 
 - **The `design/` package** is classified `DESIGN_PACKAGE` by `scripts/repository_manifest.py` (the diagrams under
   `design/architecture/` stay `GENERATED_DIAGRAMS`); regenerate the manifest and checksums with every design commit.
