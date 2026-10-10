@@ -1,5 +1,23 @@
 # Repository Change Log
 
+## 2026-10-10 — LA-A: legacy-audit follow-through, corrections to our own copy
+
+Owner brief "Legacy-audit follow-through", transaction A, with the owner's corrections of the same day
+(`audit/OWNER_DECISIONS_2026-10-10.md` §3). Master `370d72a4cb40` → `0087c312c061`, 28 cells, English and Arabic
+together. Every locator was read in the original (`audit/legacy_followthrough/SOURCE_VERIFICATION_2026-10-10.md`).
+
+- **The FMIIP access-point definition is published** (PAD PADHI00396, Annex 1, p. 26): the pages that said it is not
+  documented now state its four components and that no de-duplication rule is published.
+- **The FMIIP "active" definitions are published** (PAD Annex 1, p. 28: 90 days for an e-wallet, one year for a bank
+  current account); CBY-Aden publishes no definition of a "subscriber". The four notes are split accordingly, and the
+  bank pair (5,202,019 accounts, CBY-Aden H1 2025; 1,062,441 active bank accounts, FMIIP January 2025) is shown with
+  different unit, universe and date and no ratio.
+- **SRC-LIT-XIDIAN-YEM-FI-2025** (no claim; hijacked venue) is non-public and leaves /data/.
+- **SRC-CCY-PRESSURE-2026** (no publisher) is unbound from CLM-045.
+- **CLM-026's Arabic summary** said six measures and then three; it now says three, as the English does.
+- **Gate:** bilingual invariance now compares number words (three to ninety-nine) as well as digits, with a negative
+  control. A scan of the whole Arabic corpus found no other disagreement.
+
 ## 2026-10-10 — NB-2: fixes from the independent review of NB-1
 
 An independent reviewer read every cell NB-1 changed and the built pages in both languages, and found no blocker. Its

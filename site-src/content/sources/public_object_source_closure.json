@@ -3821,20 +3821,17 @@
       "SRC-WB-G2PX-YEM-UCT-2024-001",
       "SRC-CCY-SAM-2024",
       "SRC-CCY-ISP-2024",
-      "SRC-CCY-PRESSURE-2026",
       "EP-YEM-CASH-FIN-TRANSMISSION-K04"
     ],
     "direct_source_ids": [
       "SRC-WB-G2PX-YEM-UCT-2024-001",
       "SRC-CCY-SAM-2024",
-      "SRC-CCY-ISP-2024",
-      "SRC-CCY-PRESSURE-2026"
+      "SRC-CCY-ISP-2024"
     ],
     "resolved_source_ids": [
       "SRC-WB-G2PX-YEM-UCT-2024-001",
       "SRC-CCY-SAM-2024",
-      "SRC-CCY-ISP-2024",
-      "SRC-CCY-PRESSURE-2026"
+      "SRC-CCY-ISP-2024"
     ],
     "resolved_via_object_ids": [],
     "context_reference_ids": [
@@ -3854,11 +3851,6 @@
       },
       {
         "source_id": "SRC-CCY-ISP-2024",
-        "primary_url": null,
-        "metadata_state": "LOCATOR_ONLY"
-      },
-      {
-        "source_id": "SRC-CCY-PRESSURE-2026",
         "primary_url": null,
         "metadata_state": "LOCATOR_ONLY"
       }
@@ -6896,14 +6888,12 @@
     "direct_source_ids": [
       "SRC-WB-G2PX-YEM-UCT-2024-001",
       "SRC-CCY-SAM-2024",
-      "SRC-CCY-ISP-2024",
-      "SRC-CCY-PRESSURE-2026"
+      "SRC-CCY-ISP-2024"
     ],
     "resolved_source_ids": [
       "SRC-WB-G2PX-YEM-UCT-2024-001",
       "SRC-CCY-SAM-2024",
-      "SRC-CCY-ISP-2024",
-      "SRC-CCY-PRESSURE-2026"
+      "SRC-CCY-ISP-2024"
     ],
     "resolved_via_object_ids": [],
     "context_reference_ids": [
@@ -6923,11 +6913,6 @@
       },
       {
         "source_id": "SRC-CCY-ISP-2024",
-        "primary_url": null,
-        "metadata_state": "LOCATOR_ONLY"
-      },
-      {
-        "source_id": "SRC-CCY-PRESSURE-2026",
         "primary_url": null,
         "metadata_state": "LOCATOR_ONLY"
       }
@@ -8412,8 +8397,7 @@
     "resolved_source_ids": [
       "SRC-WB-G2PX-YEM-UCT-2024-001",
       "SRC-CCY-SAM-2024",
-      "SRC-CCY-ISP-2024",
-      "SRC-CCY-PRESSURE-2026"
+      "SRC-CCY-ISP-2024"
     ],
     "resolved_via_object_ids": [
       "CLM-045"
@@ -8435,11 +8419,6 @@
       },
       {
         "source_id": "SRC-CCY-ISP-2024",
-        "primary_url": null,
-        "metadata_state": "LOCATOR_ONLY"
-      },
-      {
-        "source_id": "SRC-CCY-PRESSURE-2026",
         "primary_url": null,
         "metadata_state": "LOCATOR_ONLY"
       }
@@ -10480,8 +10459,7 @@
     "resolved_source_ids": [
       "SRC-WB-G2PX-YEM-UCT-2024-001",
       "SRC-CCY-SAM-2024",
-      "SRC-CCY-ISP-2024",
-      "SRC-CCY-PRESSURE-2026"
+      "SRC-CCY-ISP-2024"
     ],
     "resolved_via_object_ids": [
       "CLM-045"
@@ -10503,11 +10481,6 @@
       },
       {
         "source_id": "SRC-CCY-ISP-2024",
-        "primary_url": null,
-        "metadata_state": "LOCATOR_ONLY"
-      },
-      {
-        "source_id": "SRC-CCY-PRESSURE-2026",
         "primary_url": null,
         "metadata_state": "LOCATOR_ONLY"
       }

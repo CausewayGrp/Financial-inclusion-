@@ -2,8 +2,8 @@
  "schema": "YFIE_ROUTE_CONTENT_AND_STATE_INVENTORY/1.3",
  "purpose": "Design recipient's map of every route, its family, bindings, collections, next actions and the states Design must cover. Derived; not authority.",
  "generated_from": {
-  "production_master_sha256": "370d72a4cb40b75dc72aa0320d1dba984de07d200e6d19889d7ca3dc61413d37",
-  "page_specs_sha256": "9dd5fd3bbd9a981d9651cce408e6170d2e9dc4de6f714f976a08427545c059da",
+  "production_master_sha256": "0087c312c061647aeade1e8eda3a3dce423478afa3d998639e938db24828f96b",
+  "page_specs_sha256": "486252f0d2fdea987b303111905cf43b210c824683745c806b8f48b2239eac2f",
   "generator": "scripts/handoff_inventory.py"
  },
  "counts": {
@@ -11,14 +11,14 @@
   "public_claims": 60,
   "chronology_events": 23,
   "sources": 167,
-  "public_locators": 158,
+  "public_locators": 157,
   "curated_resources": 28,
   "readings": 10,
   "measurement_priorities": 10,
   "entry_questions": 11,
   "visual_contracts": 36,
   "evidence_passports": 55,
-  "search_records": 440,
+  "search_records": 439,
   "page_specs": 142
  },
  "projection_roles": {
@@ -508,7 +508,6 @@
      "SRC-IMF-BPM7-IMPLEMENTATION",
      "SRC-IMF-YEM-SMP-2026",
      "SRC-AIDDATA-SAUDI-YEM-2015",
-     "SRC-LIT-XIDIAN-YEM-FI-2025",
      "SRC-LIT-INVEST-ISLAMIC-FI-2024",
      "SRC-LIT-OEB-FX-PRICES-2025",
      "SRC-SANAA-MF-2020",
@@ -559,7 +558,6 @@
      "SRC-CBY-AR2015-HIST-001",
      "SRC-CBY-SANAA-C12-2024",
      "SRC-CBY-SANAA-C14-2024",
-     "SRC-LIT-XIDIAN-YEM-FI-2025",
      "SRC-LIT-INVEST-ISLAMIC-FI-2024",
      "SRC-LIT-OEB-FX-PRICES-2025",
      "SRC-ADEN-CBY-LIQ-2016"
@@ -2183,7 +2181,7 @@
    "reading_ids": [],
    "measurement_ids": [],
    "source_ids": [],
-   "source_references": 4,
+   "source_references": 3,
    "next_actions": [],
    "next_action_policy": "SOURCE_RELATED_CORRECTION_OR_REUSE",
    "lineage_state": "BOUND_EXACT",
@@ -4641,7 +4639,7 @@
     "MA-010"
    ],
    "source_ids": [],
-   "source_references": 38,
+   "source_references": 37,
    "next_actions": [
     "/evidence/CLM-003/"
    ],
@@ -4715,7 +4713,7 @@
     "MA-010"
    ],
    "source_ids": [],
-   "source_references": 29,
+   "source_references": 28,
    "next_actions": [
     "/evidence/CLM-001/"
    ],
@@ -4833,7 +4831,7 @@
    ],
    "measurement_ids": [],
    "source_ids": [],
-   "source_references": 43,
+   "source_references": 42,
    "next_actions": [
     "/measurement/",
     "/evidence/"
@@ -4886,7 +4884,7 @@
    "source_ids": [
     "SRC-WB-G2PX-YEM-UCT-2024-001"
    ],
-   "source_references": 4,
+   "source_references": 3,
    "next_actions": [],
    "next_action_policy": "VERIFY_BOUND_EVIDENCE_RECORDS",
    "structured_data": [
@@ -5325,7 +5323,7 @@
     "MA-010"
    ],
    "source_ids": [],
-   "source_references": 41,
+   "source_references": 40,
    "next_actions": [
     "/evidence/CLM-011/"
    ],
