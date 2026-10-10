@@ -1,5 +1,11 @@
 # Repository Change Log
 
+## 2026-10-10 — CLAUDE.md: multi-agent skill for multi-step tasks
+
+`CLAUDE.md` now reads "For any multi-step task, load the multi-agent-m skill first." Claude-only; no change to
+`AGENTS.md`, the Master, content, the site or any gate.
+
+
 ## 2026-10-09 — V1 design integration, phase 2 (disclosure and density; not accepted)
 
 Renderer and stylesheet, no governed text or contract changed (`design/DESIGN_INTEGRATION_V1.md`, DL-V1-009…012): the
