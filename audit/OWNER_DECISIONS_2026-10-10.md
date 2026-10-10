@@ -83,3 +83,84 @@ The owner's decision of 10 October 2026, given after pull request #22 merged and
 | OWN-RF-06 | The licence gates PN-G01 (every content page declares the licence, for a reader and for a machine) and PN-G02 (a rename is never menu-only) land in the same pull request, so the corrected text is guarded from the moment it lands. |
 
 **Owner's confirmation, 10 October 2026:** The owner has read and confirms the CC BY 4.0 text on /rights/, /terms/ and the footer, in both languages, as corrected in RIGHTS-FINAL. No legal review is claimed.
+
+## 5. The close-out brief: owner decisions D1–D15 (brief version 5, 10 October 2026)
+
+Recorded verbatim from `audit/close_out/BRIEF.md` §1 (version 5, which supersedes version 4, kept as
+`audit/close_out/BRIEF_v4.md`). The owner's mid-session message of 10 October 2026 named D4, D8 (revised), D9, D11,
+D13, D14 and D15 as the version-5 text to record; the whole section is recorded so that every decision the brief
+cites has one place. Appended; nothing above is edited. Where a decision here and an earlier section differ, this
+section is the later decision.
+
+- **D1 About and funding (OWN-01).** /about/ §6 already says that CauseWay funded this edition from its own
+  resources, and that no donor, regulator, source institution or external commissioning party funded it. Keep that
+  text.
+  - Add one sentence after it, Master-first, in EN and AR: "It was not commissioned by, and is not reviewed or
+    endorsed by, any institution whose data it presents."
+  - Apply the register row AR-035 (the same page, §1) in the same transaction, CLOSE-1.
+- **D2 Contact (OWN-02).** office@causewaygrp.com is monitored. CLOSED.
+- **D3 Code licence.** The software code is not openly licensed: all rights reserved, deliberately.
+  - State it in the README, on /rights/ (Master-first) and in a short LICENSE-CODE note.
+  - CC BY 4.0 covers CauseWay's own content only.
+- **D4 Downloads.** public_downloads stays OFF in v1, deliberately: the reuse terms of third-party sources are not
+  assessed for most sources (166 of 167; ADJ-RG-01), and bulk export is redistribution. This is a decision, not a pending item.
+- **D5 Analytics.**
+  - The build ships no analytics script, no cookie and no third-party tracker.
+  - At hosting only, the owner may switch on host-side aggregate request counts (decision B14): server logs only, no
+    script, no cookie, no profile, no IP address retained in reports.
+  - Draft the /privacy/ wording (EN and AR) as a ready transaction payload in docs/RELEASE_RUNBOOK.md step 11. It is
+    applied Master-first on the day counts are switched on, never before.
+- **D6 Arabic.** No certification is sought or claimed. The external Arabic review is a quality pass, not a release
+  blocker.
+- **D7 Design (owner, 10 October, 19:45).** Design is executed in this programme by Claude Code (W4). Claude Design is
+  not used.
+  - handoff/ and the OpenAI offline design kit are superseded. Their valid quality criteria are carried into W4
+    (Appendix H).
+  - The design direction is chosen by a recorded, criteria-based decision (W4 G1). Before/after screenshots go in the
+    PR so the owner can veto, but approval does not block the work.
+  - IBM Plex Sans and IBM Plex Sans Arabic remain the only families. Weights and sizes may change on measured
+    evidence.
+- **D8 Navigation** (owner delegation of 10 October; it supersedes only the hub-numeral part of B-c).
+  - Remove the hub numerals (01–05): they imply a sequence the product does not have. Edit `hub_numerals` in
+    navigation_interaction.json under D14.
+  - "Method and measurement" becomes one link to /methodology/, so the desktop navigation is one row. /methodology/
+    carries a prominent first-screen link to /measurement/.
+  - This is a Master 04_NAV_UX transaction (run_stage.py), because global_navigation is regenerated from 04_NAV_UX
+    (scripts/projection/derived.py). Never hand-edit it.
+  - Keep each page's own label: the footer link and breadcrumbs for /methodology/ still say "Methodology", and
+    /measurement/ keeps "Measurement priorities". Adjust _align_navigation_contract and gate P4-G03 accordingly, with
+    reasons.
+  - Update the Context public_navigation and any manifest P4-G03 checks.
+  - The phone menu keeps the owner-decided items (A-12, C-6, C-8): hubs, domains, language switch, then the trust
+    links and Cite as a compact secondary group. Only presentation changes.
+  - Hub labels are unchanged. The Arabic review confirmed them:
+    - EN: Questions / Evidence / Readings / Sources / Method and measurement;
+    - AR: الأسئلة / الأدلة / القراءات التحليلية / المصادر / المنهج والقياس.
+    CLOSED.
+- **D9 Scope boundaries.** No new page family, hub or tool route. New detail routes created Master-first are
+  allowed (a Reading such as CWR-012, or /evidence/<ID>/ for a new record or visual), with their
+  navigation-contract route entries.
+  - At most one new Reading (CWR-012, conditional, W3e).
+  - Home and /explore/ keep the R8.4A model: no new task taxonomy.
+  - Python 3.11 is the minimum, with a fail-fast preflight and no 3.9 shims.
+- **D10 Naming providers.** A named provider may carry a figure only when a primary public source (the regulator or
+  the provider itself) states it. Otherwise the provider is described, not named. Enforcement names stay
+  non-public.
+- **D11 Arabic review.** The adjudicated register is final. Rows marked RETAIN are not applied. Conditional rows
+  follow their condition. The house style is adopted under the existing naming register
+  (audit/naming/NAMING_DECISIONS_2026-10-10.md and terminology_register.json).
+- **D12 Environmental footprint (owner, 10 October).** Every page shows a measured, restrained footprint line, and
+  /about/ carries one section on the site's footprint and CauseWay's operations (W4F, Appendix G).
+  - No generic environmental claims ("green", "eco-friendly", "sustainable website", "carbon neutral", "net zero").
+  - CauseWay's operational statements use the exact owner-confirmed wording in Appendix G.
+- **D13 Content preservation.** As in §0: nothing governed is cut or shortened for length.
+- **D14 Steward designation (owner, 10 October: "give Claude Code the freedom to handle things").** This
+  Claude Code run is designated programme steward for the two controlled contracts, for the scoped changes only:
+  - navigation_interaction.json: hub_numerals and the phone-menu presentation (D8, CR-S12), and new detail-route
+    entries (D9);
+  - presentation_priority.json: the measurement-link limit (RD9), and tier groupings if the TOC rule needs them
+    (S10).
+  Each edit is its own commit naming its finding. AGENTS.md rule 2 is amended in W2 to record this designation
+  and its scope.
+- **D15 Site-operation metrics.** The footprint values (Appendix G) are measurements of this website, not evidence.
+  They sit outside AGENTS rule 5, under their own gate. Amend rule 5 in the W4F PR to say so.
