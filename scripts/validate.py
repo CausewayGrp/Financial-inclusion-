@@ -3844,6 +3844,96 @@ try:
 except Exception as _x:
     errors.append("CO-G03 unreadable " + repr(_x))
 
+# CO-G04 (close-out U1, 10 October 2026): the Global Findex values the World Bank publishes for Yemen's 2021 wave are
+# public, and they are the World Bank's. Every World Bank row of 25_FINDEX_BASELINE equals, to the published decimal, the
+# committed dated snapshot of the open API (audit/close_out/fixtures/findex_api_<date>.json; the gate never calls the
+# live API, and refreshing the snapshot is a reviewed change); a new row names its series URL. The snapshot also holds
+# every source-28 series for Yemen as [label, value], so a "no published value" reason is checked, not assumed. Of the
+# 156 subgroup contract rows that wait on a computation, the 51 the World Bank publishes are public and the 105 it does
+# not publish each say why: a question Yemen's survey did not ask (no valid case in the public DDI metadata) says so,
+# and every other row names the computation it would need (OWN-09); a row that says only the all-adults value is
+# published names its series, and no group series of it has a Yemen value. A rural/urban row is held only while no
+# rural or urban series has a Yemen value. CLM-026 no longer says that 29 of its 32 measures have no published value
+# (CR-03).
+_CO4_LEGACY = {"WB-FINDEX-OBS-2022-001": "account.t.d", "WB-FINDEX-OBS-2022-002": "account.t.d.1",
+               "WB-FINDEX-OBS-2022-003": "account.t.d.2", "WB-FINDEX-OBS-2022-004": "account.t.d.7",
+               "WB-FINDEX-OBS-2022-005": "account.t.d.8", "WB-FINDEX-OBS-2022-006": "account.t.d.5",
+               "WB-FINDEX-OBS-2022-007": "account.t.d.6", "WB-FINDEX-OBS-2022-008": "account.t.d.3",
+               "WB-FINDEX-OBS-2022-009": "account.t.d.4", "WB-FINDEX-OBS-2022-010": "save.any.t.d",
+               "WB-FINDEX-OBS-2022-011": "borrow.any.t.d", "WB-FINDEX-OBS-2022-012": "g20.any"}
+try:
+    _fxs = sorted((ROOT / "audit/close_out/fixtures").glob("findex_api_*.json"))
+    if not _fxs:
+        errors.append("CO-G04 no dated World Bank API snapshot is committed")
+    else:
+        _fxall = json.loads(_fxs[-1].read_text(encoding="utf-8"))
+        _fx = _fxall["series"]
+        _lq = (_fxall.get("label_query") or {}).get("series") or {}
+        _ddi = (_fxall.get("ddi_valid_cases") or {}).get("variables") or {}
+        if len(_lq) < 3000:
+            errors.append(f"CO-G04 the snapshot reads {len(_lq)} source-28 series by label; every series must be read")
+        for _code, _rec in _fx.items():
+            if (_lq.get(_code) or [None, "absent"])[1] != _rec.get("value"):
+                errors.append(f"CO-G04 {_code} differs between the series read and the label query of the snapshot")
+        _fbt = json.load(open(ROOT / "site-src/content/data/findex_baseline.json", encoding="utf-8"))["rows"]
+        _fbh = next(r for r in _fbt if r and r[0] == "observation_id")
+        _fbi = {k: i for i, k in enumerate(_fbh)}
+        _co4_n = 0
+        for _r in _fbt[_fbt.index(_fbh) + 1:]:
+            if not _r or not str(_r[0] or "").startswith("WB-FINDEX-OBS-2022-"):
+                continue
+            _code = _CO4_LEGACY.get(_r[0]) or _r[_fbi["indicator_code"]]
+            _s = _fx.get(_code)
+            if not _s or _s.get("value") is None:
+                errors.append(f"CO-G04 {_r[0]} ({_code}) has no published value in the API snapshot")
+                continue
+            _co4_n += 1
+            if abs(float(_r[_fbi["value"]]) - round(float(_s["value"]), 1)) > 1e-9:
+                errors.append(f"CO-G04 {_r[0]} holds {_r[_fbi['value']]}; the World Bank publishes {round(float(_s['value']), 1)} ({_code})")
+            if _r[0] not in _CO4_LEGACY and _r[_fbi["source_url"]] != _s["url"]:
+                errors.append(f"CO-G04 {_r[0]} does not name its series URL")
+        if _co4_n < 150:
+            errors.append(f"CO-G04 read only {_co4_n} World Bank Findex rows")
+        _sgt = json.load(open(ROOT / "site-src/content/data/findex_subgroups.json", encoding="utf-8"))["rows"]
+        _sgh = next(r for r in _sgt if r and r[0] == "subgroup_object_id")
+        _sgi = {k: i for i, k in enumerate(_sgh)}
+        _pub = _held = 0
+        for _r in _sgt[_sgt.index(_sgh) + 1:]:
+            if not _r or not str(_r[0] or "").startswith("FSG-"):
+                continue
+            _st = _r[_sgi["current_state"]]
+            if _st == "PUBLIC_WB_PUBLISHED_SAME_WAVE":
+                _pub += 1
+            elif _st == "CONTROLLED_MICRODATA_WEIGHTED_COMPUTE_REQUIRED":
+                _held += 1
+                _why = str(_r[_sgi["public_behavior"]] or "")
+                _var = _ddi.get(str(_r[_sgi["variable_name"]] or ""))
+                if _var is not None and _var.get("valid") == 0:
+                    if "did not ask" not in _why:
+                        errors.append(f"CO-G04 {_r[0]} was not asked in Yemen's survey and does not say so")
+                elif "OWN-09" not in _why:
+                    errors.append(f"CO-G04 {_r[0]} stays unpublished without its reason (OWN-09)")
+                _only = re.search(r"only the all-adults value .*?\(series ([\w.]+)\)", _why)
+                if _only:
+                    _b = _only.group(1)
+                    if (_lq.get(_b) or [None, None])[1] is None:
+                        errors.append(f"CO-G04 {_r[0]} names {_b} as published for all adults, and it has no value")
+                    for _sx in (".1", ".2", ".3", ".4", ".5", ".6", ".7", ".8", ".11", ".12"):
+                        if (_lq.get(_b + _sx) or [None, None])[1] is not None:
+                            errors.append(f"CO-G04 {_r[0]} says only the all-adults value is published; {_b + _sx} has one")
+            elif _st == "DECIDED__NO_PUBLISHED_RURAL_URBAN_SPLIT":
+                _ru = [c for c, v in _lq.items() if re.search(r", (rural|urban) \(", v[0] or "") and v[1] is not None]
+                if _ru:
+                    errors.append(f"CO-G04 {_r[0]} says no rural/urban split is published; {_ru[0]} has a Yemen value")
+        if (_pub, _held) != (51, 105):
+            errors.append(f"CO-G04 {_pub} subgroup rows are published and {_held} held; U1 counts 51 and 105")
+        _c26 = next(o for o in json.load(open(C / "evidence/evidence_objects.json", encoding="utf-8")) if o["object_id"] == "CLM-026")
+        for _lang, _gone in (("en", "Twenty-nine of the 32"), ("ar", "تسعة وعشرون من المقاييس")):
+            if any(_gone in str(_c26.get(f"{_k}_{_lang}") or "") for _k in ("summary", "definition", "limitations", "method")):
+                errors.append(f"CO-G04 CLM-026 ({_lang}) says again that 29 of its 32 measures have no published value (CR-03)")
+except Exception as _x:
+    errors.append("CO-G04 unreadable " + repr(_x))
+
 # E2-CTX (edition 2, candidate c; REOPEN-INTL): the one same-source context figure beside Yemen's account ownership,
 # the World Bank's low-income aggregate for the same Findex wave (35.2%), is never shown bare. Asserted on what a reader
 # sees: every paragraph, list item or table cell that prints it also names what it averages (low-income economies and

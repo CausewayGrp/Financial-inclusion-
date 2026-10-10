@@ -618,6 +618,22 @@ CONTROLS = [
      "RC-19 a social image still stands for the retired address /evidence/NEG-EW-011/ (en)"),
     # Close-out (brief of 10 October 2026). CO-G01: the Master's self-counts drift from the governed records again (OWN-10).
     # CO-G02: a quarantined row reaches a public output (CR-12).
+    # CO-G04 (close-out U1): a published Findex value drifts from the dated API snapshot; a withheld subgroup row loses
+    # the reason it stays unpublished.
+    ("CO-G04: a Findex value drifts from the World Bank's published value", "site-src/content/data/findex_baseline.json",
+     sub_once(r'("save\.any\.t\.d\.1",\s*"[^"]*",\s*"female",\s*2022,\s*)16\.2,', r'\g<1>16.3,'),
+     "the World Bank publishes 16.2 (save.any.t.d.1)"),
+    ("CO-G04: a withheld subgroup row loses its reason", "site-src/content/data/findex_subgroups.json",
+     sub_once(r'licensed microdata \(OWN-09\), which', 'licensed microdata, which'),
+     "stays unpublished without its reason (OWN-09)"),
+    ("CO-G04: a question Yemen's survey did not ask is held as if it were computable",
+     "site-src/content/data/findex_subgroups.json",
+     sub_once(r"Yemen's survey did not ask this question", "Yemen's survey left this question unpublished"),
+     "was not asked in Yemen's survey and does not say so"),
+    ("CO-G04: an all-adults-only reason names a series the World Bank publishes by group",
+     "site-src/content/data/findex_subgroups.json",
+     sub_once(r'\(series fin17a\)', '(series fin22b)'),
+     "says only the all-adults value is published; fin22b."),
     ("CO-G01: 00_MASTER states a stale Readings count", "site-src/content/content/master_principles.json",
      sub_once(r'("Readings",\s*)(\d+)(,\s*)(\d+)', lambda m: f"{m.group(1)}{int(m.group(2)) - 1}{m.group(3)}{int(m.group(4)) - 1}"),
      "CO-G01 00_MASTER 'Readings' states"),

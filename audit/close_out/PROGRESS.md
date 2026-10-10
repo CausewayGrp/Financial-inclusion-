@@ -53,3 +53,6 @@ Format: `date · session · workstream · ID · outcome · PR · merge SHA · no
   (printed labels), CR-19 CLOSED (provider described, not named), CR-20 CLOSED (Law No. 21 of 2008). Register:
   AR-022, ED-035, ED-036 applied (conditions false). Arabic editor: 9 findings applied. First runs ROLLED_BACK twice
   and fixed: E2-READ label on /finance/ (the July note was its only label), P4-G01 checkpoint source count.
+- 2026-10-10 · A · W3b · PR #30 merged at `f71a327d` (9/9 CI; negative controls 139/139). Closed: CR-01, CR-02,
+  CR-05, CR-07, CR-08, CR-09, CR-11, CR-13 (Master), CR-14, CR-15, CR-16, CR-19, CR-20; register AR-001, AR-042,
+  ED-034, AR-NEW-001, AR-022, ED-035, ED-036.
