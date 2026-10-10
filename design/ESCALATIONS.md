@@ -670,6 +670,15 @@ that a stylesheet alone cannot deliver. None is filled with authored copy, and n
 - `ESCALATE_TO_STEWARD (records disagree; not acted on) — rights — the B16 disposition above records "Licence decided:
   CC BY 4.0 for CauseWay's own content", while the owner's message of 9 October 2026 (D6) states that no reuse licence
   has been issued. Raised so the record that is wrong is corrected by its owner, Master-first.`
+  - **CLOSED 2026-10-10 by the owner** (`audit/OWNER_DECISIONS_2026-10-10.md`, OWN-04-R and OWN-04-R-a). The records
+    did not disagree: the B16 disposition is right and stands. The owner's message of 9 October 2026 (D6, "we have no
+    licence / لا نملك ترخيص") is about **regulatory** licensing — CauseWay is not a licensed financial institution and
+    claims no such status — not about the reuse licence. CC BY 4.0 for CauseWay's own content stands, as adopted on
+    3 October 2026 (`audit/OWNER_DECISIONS_2026-10-02.md`, section E; owner note of about 11:15 Cairo, 3.6). The rights
+    question is closed. Nothing is corrected in the Master, a projection or a page: `/rights/` and `/terms/` already
+    print CC BY 4.0 in both languages. The release step is unchanged — CauseWay's counsel confirms the CC BY 4.0 text
+    (`docs/RELEASE_RUNBOOK.md` step 7a); `licence_text_confirmed` and `public_downloads` stay `false`. In Arabic, رخصة
+    is the copyright licence and ترخيص is regulatory licensing.
 
 Process note — V1 branch name (2026-10-09): V1 is developed and pushed on `claude/design-review-constraints-l9au89`, the
 branch this execution environment may push, created at `main` `7557866e99c390a6db2fd63ca4a5c63a86ef7e3e`, instead of the

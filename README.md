@@ -47,12 +47,13 @@ External facts stay attributed to their original publishers. CauseWay attributio
 | Non-design v1 product | Complete |
 | Current phase | Design / presentation integration |
 | Post-v1, owner decision | C1 typed difference block; C2 dedicated guarantee route; C3 public contradiction index |
+| Reuse rights | Decided: CC BY 4.0 for CauseWay's own content (adopted 3 October 2026, closed 10 October 2026). Remaining release step: CauseWay's counsel confirms the licence text |
 | Public release ready | No |
 | Open pull request | #11, draft, branch `code/final-content` |
 
-Closed in this product state: governed evidence and content for v1; Used on reaches every source, including those with no domain use recorded; a single valid Compare entry loads the reader's record and still requires two records for a verdict; chronology stays contextual and are not a Search family.
+Closed in this product state: governed evidence and content for v1; Used on reaches every source, including those with no domain use recorded; a single valid Compare entry loads the reader's record and still requires two records for a verdict; chronology stays contextual and are not a Search family; the reuse licence for CauseWay's own content (CC BY 4.0, [`audit/OWNER_DECISIONS_2026-10-10.md`](audit/OWNER_DECISIONS_2026-10-10.md)) — a reuse licence is not regulatory licensing, and CauseWay neither holds nor claims the status of a licensed financial institution.
 
-Not closed, and not claimed: design integration; integrated Arabic and English, RTL, mobile, accessibility and browser acceptance after that integration; release-time hosting, security headers, currentness, licence confirmation and live checks; final owner release approval.
+Not closed, and not claimed: design integration; integrated Arabic and English, RTL, mobile, accessibility and browser acceptance after that integration; release-time hosting, security headers, currentness, counsel's confirmation of the CC BY 4.0 licence text and live checks; final owner release approval. The repository's software code is outside the CC BY 4.0 licence and no code licence is decided.
 
 Remaining path: non-design v1 complete, then design / presentation integration, then final integrated QA, then release / cutover, then owner release approval. Release-time steps live in [`docs/RELEASE_RUNBOOK.md`](docs/RELEASE_RUNBOOK.md). Open items live in [`FINAL_OPEN_ITEMS_REGISTER.md`](FINAL_OPEN_ITEMS_REGISTER.md). The content-pass ledger is [`audit/final_content/FINAL_CONTENT_LOG.md`](audit/final_content/FINAL_CONTENT_LOG.md).
 

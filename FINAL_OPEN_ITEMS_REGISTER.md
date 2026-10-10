@@ -92,6 +92,12 @@ affects, part of the scope Design and Code already receive, or needed only for p
 | REL-03 | Native-speaker certification of the Arabic corpus | F5 accepted the corpus in both languages; that acceptance is not a certification and none is claimed | An external certification, if the owner wants one | Owner | F5 §8 |
 | REL-04 | Named release acceptance: deployed mobile, RTL and accessibility checks, publication filtering, correction and version behaviour, legal checks where applicable | README "Release boundary" | A release record naming who accepted what; nothing in this repository declares public release readiness | Owner | README |
 
+- 2026-10-10 — the reuse licence is **not** a release-only open item and no row is added for it: it is decided (CC BY 4.0 for CauseWay's own content, `audit/OWNER_DECISIONS_2026-10-10.md`,
+  OWN-04-R) and `/rights/` and `/terms/` already print it in both languages. One release step remains, and it belongs to the owner and counsel, not to this register's classes:
+  **CauseWay's counsel confirms the CC BY 4.0 text** that those two pages print, in both languages, before the first deploy makes them public (`docs/RELEASE_RUNBOOK.md` step 7a).
+  Until a dated line in `audit/OWNER_DECISIONS_*.md` records that confirmation, `licence_text_confirmed` and `public_downloads` stay `false` in `site-src/deployment.json` and the deploy
+  workflow refuses to publish. REL-02 is unchanged and separate: it is about the **original sources'** reuse terms, not CauseWay's own content.
+
 ## 3. EXTERNAL_EVIDENCE_DEPENDENCY
 
 The public text stays exactly as it is until the source is read; closing any of these is a Master transaction.
@@ -232,6 +238,16 @@ must never fill them with an estimate, a proxy or a colour.
   terms not assessed" wording stays. Not a gate for a link-and-citation launch.
 - 2026-10-02 — owner decision, see `audit/OWNER_DECISIONS_2026-10-02.md` — **OWN-05**: CauseWay maintains the resource; whole-system review at each new edition; no fixed update cadence is
   promised; no analytics ship.
+- 2026-10-03 — owner decision, see `audit/OWNER_DECISIONS_2026-10-02.md` (owner instructions of 3 October 2026, 09:50 Cairo, section E; owner note of about 11:15 Cairo, 3.6) — **OWN-04**:
+  the licence deferral of 2 October is superseded. The owner adopts CC BY 4.0 for the content CauseWay owns in this resource — its text, analysis, visual designs, the compiled records,
+  and the structure and annotations of the exports. "The licence decision" leaves the owner's open list and is replaced by "counsel confirms the CC BY 4.0 text". `public_downloads` stays
+  `false`; the switch is one release step after that confirmation (`docs/RELEASE_RUNBOOK.md` steps 2 and 7a).
+- 2026-10-10 — owner decision, see `audit/OWNER_DECISIONS_2026-10-10.md` — **OWN-04 CLOSED AS A DECISION**: the rights question is closed. CC BY 4.0 for CauseWay's own content stands,
+  as adopted on 3 October 2026. The owner's message of 9 October 2026 ("we have no licence / لا نملك ترخيص") was about **regulatory** licensing — CauseWay is not a licensed financial
+  institution and claims no such status — and never referred to the reuse licence. Nothing is open for the owner to decide about the reuse licence; the remaining release step is
+  CauseWay's counsel confirming the CC BY 4.0 text (`docs/RELEASE_RUNBOOK.md` step 7a; §2, the dated line of 2026-10-10). `licence_text_confirmed` and `public_downloads` stay `false` until then, and no
+  licence file is added. The **code** licence is a separate question: the repository's software code is outside CC BY 4.0 and nothing is decided about it. No rights clearance, legal
+  review or certification is claimed. The 2026-10-02 line above is history and is not rewritten.
 
 ## 6. REJECTED / NO ACTION
 

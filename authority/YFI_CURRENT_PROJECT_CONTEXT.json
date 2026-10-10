@@ -183,6 +183,24 @@
   "source_reference_closure": "public object → canonical evidence/claim → lineage/dependency → Source Library → original locator/authority → rights/publication state → Evidence Passport → public citation",
   "bilingual_rule": "Arabic and English are co-authoritative editions over the same stable objects and release state.",
   "rights_rule": "Public citation, factual use and redistribution are separate permissions.",
+  "reuse_licence_state": {
+    "decided": true,
+    "decision": "CC BY 4.0 (Creative Commons Attribution 4.0 International) for the content CauseWay owns in this resource: its text, analysis, visual designs, the compiled records, and the structure and annotations of the exports",
+    "adopted": "2026-10-03 (audit/OWNER_DECISIONS_2026-10-02.md, owner instructions of 3 October 2026, 09:50 Cairo, section E; owner note of about 11:15 Cairo, 3.6)",
+    "closed": "2026-10-10 (audit/OWNER_DECISIONS_2026-10-10.md, OWN-04-R) — the rights question is closed; the owner's message of 9 October 2026 about having 'no licence' was about regulatory licensing, not the reuse licence",
+    "remaining_release_step": "CauseWay's counsel confirms the CC BY 4.0 text that /rights/ and /terms/ print, in both languages (docs/RELEASE_RUNBOOK.md step 7a); licence_text_confirmed and public_downloads stay false in site-src/deployment.json until then",
+    "not_covered": [
+      "third-party material, which stays under its owners' terms",
+      "the CauseWay name, logo and marks",
+      "the repository's software code — outside this licence, and no code licence is decided"
+    ],
+    "regulatory_licensing": "CauseWay is not a licensed financial institution and claims no such status. A reuse licence (Arabic رخصة) is not regulatory licensing (Arabic ترخيص).",
+    "not_claimed": [
+      "rights clearance",
+      "legal review",
+      "certification"
+    ]
+  },
   "known_unresolved_evidence_frontiers": [
     "exact CBY↔IMF public remittance-series crosswalk",
     "causal/current decomposition of the measured gender gap",
