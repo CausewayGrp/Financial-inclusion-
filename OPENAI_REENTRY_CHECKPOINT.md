@@ -1,9 +1,19 @@
 # OpenAI re-entry checkpoint — Yemen Financial Inclusion Evidence
 
-**Current state, 4 October 2026.** Non-design v1 product complete. Current phase: design / presentation integration. C1, C2 and C3 are post-v1 owner decisions, not release blockers. Public release is not declared. The active front door is `README.md`. The text below is the September checkpoint and is history.
+**Current state, 10 October 2026.** Content is complete on `main`. The checkpoint is the annotated tag `checkpoint/2026-10-10-content-complete`; if it is not on GitHub, the owner pushes it (`docs/HANDOVER_TO_DEVELOPER.md` §9). Since 4 October 2026, pull requests #11 to #24 have been resolved: #13 was closed without merge on the owner's decision, #21 (another session's alternative naming, superseded by #19) and #23 (an earlier draft of this checkpoint, superseded by RIGHTS-FINAL) were closed without merge, and every other one was merged. They brought the final content pass, the design integration, the public naming (approved by the owner), the legacy-audit follow-through (Evidence Record CBY-BANKS-2026-05 and Reading CWR-011 are new), the dated chronology events in search, and RIGHTS-FINAL (the CC BY 4.0 text endorsed with two corrections and confirmed by the owner, guarded by gates PN-G01 and PN-G02). Build: 292 HTML documents from 144 Page Specs (288 localized, root, 404, and the two retired-address pages). The public inventory is 110 Evidence Records, 60 public claims, 11 Readings, 10 measurement priorities, 23 dated events, 167 source records (157 with a public locator) and 466 search records. C1, C2 and C3 are post-v1 owner decisions, not release blockers. Public release is not declared and nothing is deployed. The active front door is `README.md`. The text below the release-readiness section is the September checkpoint and is history; the table in §1 is kept current.
 
 **Rights, 10 October 2026.** Reuse rights are decided and the question is closed: CC BY 4.0 covers the content CauseWay owns in this resource (adopted 3 October 2026, closed 10 October 2026 — `audit/OWNER_DECISIONS_2026-10-10.md`). The owner endorsed the CC BY 4.0 text with two corrections (transaction RIGHTS-FINAL) and confirmed it on 10 October 2026; no counsel review is required (`docs/RELEASE_RUNBOOK.md` step 7a). `licence_text_confirmed` is `true`; `public_downloads` stays `false`, a separate owner decision. The rights question is closed permanently. A reuse licence is not regulatory licensing: CauseWay is not a licensed financial institution and claims no such status. The repository's software code is outside the CC BY 4.0 licence and no code licence is decided. No rights clearance, legal review or certification is claimed.
 
+
+**Release readiness, 10 October 2026.** Every gate passes on `main`. What still stands between the repository and a public site is in `docs/HANDOVER_TO_DEVELOPER.md` §1–7, and each item has an owner:
+- DigitalOcean App Platform hosting: the owner's account, registry, token and repository variables, the web administrator's proxy route and the public origin (`docs/RELEASE_RUNBOOK.md` steps 1–9a).
+- `public_downloads` stays `false`, a separate owner decision. (The CC BY 4.0 text is confirmed by the owner, 10 October 2026: `licence_text_confirmed` is `true`.)
+- Seven sources need a person with a browser.
+- A phone check of the live site from Yemen.
+- OpenAI's independent acceptance review.
+- The owner's release approval and tag.
+
+Open evidence items are in `FINAL_OPEN_ITEMS_REGISTER.md` §10.
 
 **Programme:** Final integration to the Design handoff — directive D7 (`audit/directives/`), sessions F0–F9.
 **Position (current):** OpenAI accepted the Tranche C checkpoint on 26 September 2026 (recipient verification 31/31) and
@@ -43,10 +53,10 @@ so that a cold Design recipient can run D0–D7 from the repository alone.
 | Other copies | None is current. The pre-GitHub Drive folder and the ZIPs exchanged before 26 September 2026 are lineage: they were deliberately left as they were — neither updated nor deleted — and are never synchronised from here. `EXTERNAL_REPOSITORY_SYNC_PENDING` in `authority/AUTHORITY.json` records exactly that state; it is not a sync that is owed |
 | Generator | `scripts/generate_projections.py`; `PROJECTION CHECK PASS`; 21 of 21 unit tests |
 | Build | 290 HTML documents from 144 Page Specs (288 localized + root + 404), and the two pages at the retired address /evidence/NEG-EW-011/ (RC-19) |
-| Public-literal audit | 12,760 records, 0 unresolved; identical bytes under 8 `PYTHONHASHSEED` values |
+| Public-literal audit | 14,983 records, 0 unresolved; identical bytes under 8 `PYTHONHASHSEED` values |
 | Source-lineage truth test | 8 of 8 |
 | Validator | `WEBSITE REPOSITORY VALIDATION PASS`, 0 errors, 0 warnings (gates through R85-G09, RP-G06, F6-G08 and R86-G04) |
-| Browser behaviour tests | `scripts/tests/test_public_tools.py` — 25 passed, 1 not applicable to the current data |
+| Browser behaviour tests | `scripts/tests/test_public_tools.py` — 35 passed, 1 not applicable to the current data |
 | Viewport acceptance | `audit/tranche_c/checks/viewport_acceptance.py` — 168 of 168 |
 | Bilingual numeric invariance | `audit/tranche_c/checks/bilingual_invariance.py` — 0 page pairs differ (CI fails on any difference) |
 | Current counts | `site-src/content/content/public_inventory.json` (derived from the Master; the only source for counts) |
@@ -84,7 +94,7 @@ build, literal audit, diagrams, repository manifest, validate, generator check; 
   (22 requirements, 24 sections, deliverables `design/00`–`10`); the Code prompt waited for the Design package (it no
   longer waits: the package is accepted and Code has started, 2 October 2026, `audit/OWNER_DECISIONS_2026-10-02.md`); the
   route, content and state inventory (`handoff/ROUTE_CONTENT_AND_STATE_INVENTORY.json`, 144 routes, 12 hard-state cases,
-  13 journeys, 14 technical states) generated by `scripts/handoff_inventory.py`; `handoff/DESIGN_ACCEPTANCE_CRITERIA.md`;
+  13 journeys, 15 technical states) generated by `scripts/handoff_inventory.py`; `handoff/DESIGN_ACCEPTANCE_CRITERIA.md`;
   the Design → Code contract; `handoff/ENGINEERING_HANDOFF_EXPECTATIONS.md`; three superseded drafts retired to
   `audit/prior-review-records/handoff-drafts-2026-09-26/`; Open Graph metadata; gates R86-G01…G04; open items classed in
   `FINAL_OPEN_ITEMS_REGISTER.md` with zero DESIGN_BLOCKER (`audit/R8_6_DESIGN_HANDOFF_FREEZE_CLOSURE.md`).

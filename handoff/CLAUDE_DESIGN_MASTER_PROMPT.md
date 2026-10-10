@@ -185,7 +185,7 @@ describe the system; they are not an instruction to show everything at once.
 | Evidence Directory | `/evidence/` | Discovery into verification records; entry to Compare |
 | Evidence Record | `/evidence/<ID>/` (one per Evidence Record) | The canonical verification endpoint: summary, definition, population, period, currentness, boundary, method, source, Readings that use it |
 | Comparison | `/evidence/compare/` | A comparability test for 2–4 records |
-| Reading Index | `/readings/` | The ten Evidence Readings as a curated analytical index |
+| Reading Index | `/readings/` | The Readings (eleven at 10 October 2026) as a curated analytical index |
 | Reading | `/readings/<slug>/` | A serious public-evidence essay |
 | Data & Source | `/data/` | The full original-source register, the curated Resource Library, the system chronology |
 | Measurement | `/measurement/` | Ten decision-linked evidence priorities |
@@ -514,13 +514,13 @@ All tools run on local packaged data; none may need a network call. Their accept
   and a mobile form of the four-column comparison. CLM-044 is in the comparable set; its withheld value never appears.
 - **Source directory and Resource Library** (`/data/`): the full original-source register and the small curated library
   are two jobs; `?source=` deep links open and focus the card; an unknown reference is an announced link error while every
-  source stays visible; the nine sources without a public locator are never named or linked. Links to original sources
+  source stays visible; the sources without a public locator (ten at 10 October 2026) are never named or linked. Links to original sources
   are visibly external (an accessible cue whose words you request as governed copy) and open without an interstitial or
   modal. Group the curated cards by
   their governed `resource_category`. The reader-facing document type is `document_label` / `document_label_ar`
-  (`site-src/content/sources/source_reference_map.json`, both languages): of the 151 displayed sources, 142 have one and 9
-  do not (inventory → `/data/` → `collection.displayed_sources_without_document_type`). A type filter, if you design one,
-  uses only that field and puts those nine in an explicit "type not recorded" group whose label you request as
+  (`site-src/content/sources/source_reference_map.json`, both languages): of the 157 displayed sources, 149 have one and 8
+  do not (counts at 10 October 2026) (inventory → `/data/` → `collection.displayed_sources_without_document_type`). A type filter, if you design one,
+  uses only that field and puts those eight in an explicit "type not recorded" group whose label you request as
   `NEEDS_CONTROLLED_CONTENT` — never a synthesised type.
 - **Cite**: copies the governed citation plus the canonical link; a locator-only source is cited as "reference ·
   locator"; the edition line is governed ("Edition of 26 September 2026").

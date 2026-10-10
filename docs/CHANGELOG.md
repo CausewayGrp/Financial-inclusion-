@@ -1,5 +1,37 @@
 # Repository Change Log
 
+## 2026-10-10 — Content-complete checkpoint: consistency, release readiness and handover (orchestration step 7)
+
+No Master transaction and no public page changed. `dist/` is unchanged.
+
+- **Status surfaces re-dated to 10 October 2026, with counts that match the build:** README (release-readiness
+  section, open pull requests, safe start, search result types), the checkpoint (current state, release readiness, §1
+  table: literal audit 14,983, public tools 35/1, 15 technical states), the Context (`programme_state.content_complete`
+  and `release_readiness`), the runbook status line, `docs/DEPLOYMENT.md` (292 files, sitemap 288, eleven Readings, the
+  dated-event result type), and `handoff/README_FIRST.md` §7. The handoff prompt and acceptance criteria have current
+  counts with dates. The build is 292 HTML documents from 144 Page Specs: 288 localized pages, the root, the 404 and
+  the two retired-address pages.
+- **`docs/HANDOVER_TO_DEVELOPER.md` rewritten around what a person must still do:**
+  - DigitalOcean App Platform hosting;
+  - the licence text, confirmed by the owner (RIGHTS-FINAL);
+  - `public_downloads` off;
+  - seven sources that need a browser;
+  - a phone check from Yemen;
+  - OpenAI's independent acceptance review;
+  - release approval and tag;
+  - housekeeping the session's access refuses.
+
+  The 4–9 October handover is kept unchanged below it as a record.
+- **Open-items register §10 (appended):** EXT-12 to EXT-19, FRN-09 and OWN-10 (the Master's stale internal count
+  cells). REL-02 is corrected to 167.
+- **Design records:** dated cross-references for #13 closed and #16 merged; the D0 counts are marked as at D0.
+- **Accessibility audit re-run on every route:** 288 pages at 1440 and 390 px; 0 axe rules violated; 0 contrast
+  failures; 688 targets under 24 px, every one within a WCAG 2.5.8 exception. This is an audit record, not a
+  conformance claim.
+- **Branch hygiene:** 16 remote branches are merged into `main` and are not the head or base of an open pull request.
+  This session's git access refused their deletion (HTTP 403). The list and the command are in the handover §9.
+  Pull requests #21 (another session's alternative naming Part B) and #23 (an earlier draft of this step) were closed
+  without merge; none is open.
 ## 2026-10-10 — RIGHTS-FINAL: the CC BY 4.0 text endorsed with two corrections; the owner confirms it
 
 The owner's decision of 10 October 2026 (`audit/OWNER_DECISIONS_2026-10-10.md` §4); the rights question is closed
